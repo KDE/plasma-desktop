@@ -54,6 +54,11 @@ KCMUtils.AbstractKCM {
             defaultnessKey: "screenReaderIsDefaults"
         },
         {
+            icon: "view-visible",
+            title: i18nc("Correction for color blindness", "Color Blindness Correction"),
+            defaultnessKey: "colorblindnessCorrectionIsDefaults",
+        },
+        {
             icon: "cursor-arrow",
             title: i18nc("Shake cursor to find it", "Shake Cursor"),
             defaultnessKey: "shakeCursorIsDefaults",
@@ -154,6 +159,7 @@ KCMUtils.AbstractKCM {
                     MouseNavigation {}
                     ActivationShortcuts {}
                     ScreenReader {}
+                    ColorblindnessCorrection {}
                     ShakeCursor {}
                 }
             }

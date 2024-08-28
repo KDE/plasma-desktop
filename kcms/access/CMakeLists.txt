@@ -16,13 +16,14 @@ kconfig_add_kcfg_files(kaccess_settings
     kcmaccessibilityactivationgestures.kcfgc
     kcmaccessibilityscreenreader.kcfgc
     kcmaccessibilityshakecursor.kcfgc
+    kcmaccessibilitycolorblindnesscorrection.kcfgc
     GENERATE_MOC)
 
 kcmutils_generate_module_data(kcm_access
     MODULE_DATA_HEADER kcmaccessibilitydata.h
     MODULE_DATA_CLASS_NAME AccessibilityData
-    SETTINGS_HEADERS kcmaccessibilitybell.h kcmaccessibilitykeyboard.h kcmaccessibilitykeyboardfilters.h kcmaccessibilitymouse.h kcmaccessibilityactivationgestures.h kcmaccessibilityscreenreader.h kcmaccessibilityshakecursor.h
-    SETTINGS_CLASSES BellSettings KeyboardSettings KeyboardFiltersSettings MouseSettings ActivationGesturesSettings ScreenReaderSettings ShakeCursorSettings
+    SETTINGS_HEADERS kcmaccessibilitybell.h kcmaccessibilitykeyboard.h kcmaccessibilitykeyboardfilters.h kcmaccessibilitymouse.h kcmaccessibilityactivationgestures.h kcmaccessibilityscreenreader.h kcmaccessibilityshakecursor.h kcmaccessibilitycolorblindnesscorrection.h
+    SETTINGS_CLASSES BellSettings KeyboardSettings KeyboardFiltersSettings MouseSettings ActivationGesturesSettings ScreenReaderSettings ShakeCursorSettings ColorblindnessCorrectionSettings
 )
 
 target_link_libraries(kcm_access PRIVATE
@@ -48,6 +49,7 @@ install(
         kcmaccessibilitymouse.kcfg
         kcmaccessibilityscreenreader.kcfg
         kcmaccessibilityshakecursor.kcfg
+        kcmaccessibilitycolorblindnesscorrection.kcfg
     DESTINATION
         ${KDE_INSTALL_KCFGDIR}
 )

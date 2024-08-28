@@ -19,6 +19,7 @@ class ActivationGesturesSettings;
 class ScreenReaderSettings;
 class AccessibilityData;
 class ShakeCursorSettings;
+class ColorblindnessCorrectionSettings;
 
 class KAccessConfig : public KQuickManagedConfigModule
 {
@@ -30,6 +31,7 @@ class KAccessConfig : public KQuickManagedConfigModule
     Q_PROPERTY(ActivationGesturesSettings *activationGesturesSettings READ activationGesturesSettings CONSTANT)
     Q_PROPERTY(ScreenReaderSettings *screenReaderSettings READ screenReaderSettings CONSTANT)
     Q_PROPERTY(ShakeCursorSettings *shakeCursorSettings READ shakeCursorSettings CONSTANT)
+    Q_PROPERTY(ColorblindnessCorrectionSettings *colorblindnessCorrectionSettings READ colorblindnessCorrectionSettings CONSTANT)
     Q_PROPERTY(QString orcaLaunchFeedback READ orcaLaunchFeedback WRITE setOrcaLaunchFeedback NOTIFY orcaLaunchFeedbackChanged)
     Q_PROPERTY(QString desktopShortcutInfo MEMBER m_desktopShortcutInfo CONSTANT)
     Q_PROPERTY(bool screenReaderInstalled MEMBER m_screenReaderInstalled CONSTANT)
@@ -40,6 +42,7 @@ class KAccessConfig : public KQuickManagedConfigModule
     Q_PROPERTY(bool activationGesturesIsDefaults READ activationGesturesIsDefaults NOTIFY activationGesturesIsDefaultsChanged)
     Q_PROPERTY(bool screenReaderIsDefaults READ screenReaderIsDefaults NOTIFY screenReaderIsDefaultsChanged)
     Q_PROPERTY(bool shakeCursorIsDefaults READ shakeCursorIsDefaults NOTIFY shakeCursorIsDefaultsChanged)
+    Q_PROPERTY(bool colorblindnessCorrectionIsDefaults READ colorblindnessCorrectionIsDefaults NOTIFY colorblindnessCorrectionIsDefaultsChanged)
 
 public:
     KAccessConfig(QObject *parent, const KPluginMetaData &);
@@ -60,6 +63,7 @@ public:
     ActivationGesturesSettings *activationGesturesSettings() const;
     ScreenReaderSettings *screenReaderSettings() const;
     ShakeCursorSettings *shakeCursorSettings() const;
+    ColorblindnessCorrectionSettings *colorblindnessCorrectionSettings() const;
 
     bool bellIsDefaults() const;
     bool mouseIsDefaults() const;
@@ -68,6 +72,7 @@ public:
     bool activationGesturesIsDefaults() const;
     bool screenReaderIsDefaults() const;
     bool shakeCursorIsDefaults() const;
+    bool colorblindnessCorrectionIsDefaults() const;
 
 Q_SIGNALS:
     void orcaLaunchFeedbackChanged();
@@ -78,6 +83,7 @@ Q_SIGNALS:
     void activationGesturesIsDefaultsChanged();
     void screenReaderIsDefaultsChanged();
     void shakeCursorIsDefaultsChanged();
+    void colorblindnessCorrectionIsDefaultsChanged();
 
 private:
     void setOrcaLaunchFeedback(const QString &value);

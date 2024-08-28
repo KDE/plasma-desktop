@@ -35,6 +35,7 @@
 
 #include "kcmaccessibilityactivationgestures.h"
 #include "kcmaccessibilitybell.h"
+#include "kcmaccessibilitycolorblindnesscorrection.h"
 #include "kcmaccessibilitydata.h"
 #include "kcmaccessibilitykeyboard.h"
 #include "kcmaccessibilitykeyboardfilters.h"
@@ -149,6 +150,7 @@ KAccessConfig::KAccessConfig(QObject *parent, const KPluginMetaData &metaData)
     qmlRegisterAnonymousType<ActivationGesturesSettings>("org.kde.plasma.access.kcm", 0);
     qmlRegisterAnonymousType<ScreenReaderSettings>("org.kde.plasma.access.kcm", 0);
     qmlRegisterAnonymousType<ShakeCursorSettings>("org.kde.plasma.access.kcm", 0);
+    qmlRegisterAnonymousType<ColorblindnessCorrectionSettings>("org.kde.plasma.access.kcm", 0);
 
     int tryOrcaRun = QProcess::execute(QStringLiteral("orca"), {QStringLiteral("--version")});
     m_screenReaderInstalled = tryOrcaRun != -2;
@@ -162,6 +164,10 @@ KAccessConfig::KAccessConfig(QObject *parent, const KPluginMetaData &metaData)
     connect(m_data->keyboardSettings(), &ScreenReaderSettings::configChanged, this, &KAccessConfig::keyboardModifiersIsDefaultsChanged);
     connect(m_data->screenReaderSettings(), &ScreenReaderSettings::configChanged, this, &KAccessConfig::screenReaderIsDefaultsChanged);
     connect(m_data->shakeCursorSettings(), &ShakeCursorSettings::configChanged, this, &KAccessConfig::shakeCursorIsDefaultsChanged);
+    connect(m_data->colorblindnessCorrectionSettings(),
+            &ColorblindnessCorrectionSettings::configChanged,
+            this,
+            &KAccessConfig::colorblindnessCorrectionIsDefaultsChanged);
 }
 
 KAccessConfig::~KAccessConfig()
@@ -199,6 +205,11 @@ void KAccessConfig::save()
     const bool shakeCursorSaveNeeded = m_data->shakeCursorSettings()->findItem(QStringLiteral("ShakeCursor"))->isSaveNeeded();
     const bool shakeCursorMagnificationSaveNeeded = m_data->shakeCursorSettings()->findItem(QStringLiteral("ShakeCursorMagnification"))->isSaveNeeded();
 
+    const bool colorblindnessCorrectionSaveNeeded =
+        m_data->colorblindnessCorrectionSettings()->findItem(QStringLiteral("ColorblindnessCorrection"))->isSaveNeeded();
+    const bool colorblindnessCorrectionSettingsSaveNeeded = m_data->colorblindnessCorrectionSettings()->findItem(QStringLiteral("Mode"))->isSaveNeeded()
+        || m_data->colorblindnessCorrectionSettings()->findItem(QStringLiteral("Intensity"))->isSaveNeeded();
+
     KQuickManagedConfigModule::save();
 
     if (bellSettings()->systemBell() || bellSettings()->customBell() || bellSettings()->visibleBell()) {
@@ -228,6 +239,24 @@ void KAccessConfig::save()
                                                                          QStringLiteral("org.kde.kwin.Effects"),
                                                                          QStringLiteral("reconfigureEffect"));
         reconfigureMessage.setArguments({QStringLiteral("shakecursor")});
+        QDBusConnection::sessionBus().call(reconfigureMessage);
+    }
+
+    if (colorblindnessCorrectionSaveNeeded) {
+        QDBusMessage reloadMessage = QDBusMessage::createMethodCall(
+            QStringLiteral("org.kde.KWin"),
+            QStringLiteral("/Effects"),
+            QStringLiteral("org.kde.kwin.Effects"),
+            colorblindnessCorrectionSettings()->colorblindnessCorrection() ? QStringLiteral("loadEffect") : QStringLiteral("unloadEffect"));
+        reloadMessage.setArguments({QStringLiteral("colorblindnesscorrection")});
+        QDBusConnection::sessionBus().call(reloadMessage);
+    }
+    if (colorblindnessCorrectionSettingsSaveNeeded) {
+        QDBusMessage reconfigureMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
+                                                                         QStringLiteral("/Effects"),
+                                                                         QStringLiteral("org.kde.kwin.Effects"),
+                                                                         QStringLiteral("reconfigureEffect"));
+        reconfigureMessage.setArguments({QStringLiteral("colorblindnesscorrection")});
         QDBusConnection::sessionBus().call(reconfigureMessage);
     }
 }
@@ -287,6 +316,11 @@ ShakeCursorSettings *KAccessConfig::shakeCursorSettings() const
     return m_data->shakeCursorSettings();
 }
 
+ColorblindnessCorrectionSettings *KAccessConfig::colorblindnessCorrectionSettings() const
+{
+    return m_data->colorblindnessCorrectionSettings();
+}
+
 bool KAccessConfig::bellIsDefaults() const
 {
     return bellSettings()->isDefaults();
@@ -320,6 +354,11 @@ bool KAccessConfig::screenReaderIsDefaults() const
 bool KAccessConfig::shakeCursorIsDefaults() const
 {
     return shakeCursorSettings()->isDefaults();
+}
+
+bool KAccessConfig::colorblindnessCorrectionIsDefaults() const
+{
+    return colorblindnessCorrectionSettings()->isDefaults();
 }
 
 #include "kcmaccess.moc"
