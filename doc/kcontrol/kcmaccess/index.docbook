@@ -31,67 +31,82 @@
 
 <title>Introduction</title>
 
-<para>This module is designed to help users who have difficulty hearing
-audible cues, or who have difficulty using a keyboard.  </para>
+<para>
+This module is designed to help users who have difficulty hearing
+audible cues, or who have difficulty using a keyboard.
+</para>
 
 <para>
-The module is divided into six tabs: <link
-linkend="access-bell"><guilabel>Bell</guilabel></link>, <link
-linkend="access-modifier-keys"><guilabel>Modifier keys</guilabel></link>, <link
-linkend="access-keyboard-filters"><guilabel>Keyboard Filters</guilabel></link>, <link
-linkend="access-activation-gestures"><guilabel>Activation Gestures</guilabel></link>, <link
-linkend="mouse-navigation"><guilabel>Mouse Navigation</guilabel></link>, and <link
-linkend="access-screenreader"><guilabel>Screen Reader</guilabel></link>.
+    The module is divided into six pages:
+    <link linkend="access-bell"><guilabel>Sytem Bell</guilabel></link>,
+    <link linkend="access-modifier-keys"><guilabel>Modifier Keys</guilabel></link>,
+    <link linkend="access-keyboard-filters"><guilabel>Keyboard Filters</guilabel></link>,
+    <link linkend="access-activation-shortcuts"><guilabel>Activation Shortcuts</guilabel></link>,
+    <link linkend="mouse-navigation"><guilabel>Mouse Navigation</guilabel></link>, and
+    <link linkend="access-screenreader"><guilabel>Screen Reader</guilabel></link>.
 </para>
 
 <sect3 id="access-bell">
-<title><guilabel>Bell</guilabel></title>
+<title><guilabel>System Bell</guilabel></title>
 
 <para>
-This panel is divided into an <guilabel>Audible Bell</guilabel> section
-and a <guilabel>Visible Bell</guilabel> section.
+    The system bell consists of a way to notify you that a certain event
+    has occurred or that you have pressed specific keys. This notification
+    can be done with sound using the <guilabel>Audible bell</guilabel>
+    (for users with visual impairments) or with a visual cue using the
+    <guilabel>Visual bell</guilabel> (for users with hearing impairments).
 </para>
 
 <para>
-The top check box labeled <guilabel>Use System Bell</guilabel>, determines
-whether the normal System bell rings.  If this option is disabled, the
-System bell will be silenced.
+    The events or key presses that trigger the system bell can be found
+    under the <link linkend="access-modifier-keys"><guilabel>Modifier Keys</guilabel></link>,
+    <link linkend="access-keyboard-filters"><guilabel>Keyboard Filters</guilabel></link>,
+    and <link linkend="access-activation-shortcuts"><guilabel>Activation Shortcuts</guilabel></link> pages.
 </para>
 
 <para>
-The next check box down can be used to play a different sound whenever
-the system bell is triggered.  To activate, place a mark in the check
-box labeled <guilabel>Use customized bell</guilabel>, and enter the
-complete pathname to the sound file in the text box labeled
-<guilabel>Sound to play</guilabel>.  If you want, you can select the
-<guibutton>Browse</guibutton> button to navigate through your filesystem
-to find the exact file.
+    The top check box labeled <guilabel>Audible bell: Enable</guilabel>
+    determines whether the computer will beep or ring a sound when a certain
+    event happens or key is pressed. Examples of this are enabling activation
+    shortcuts, or pressing Ctrl or Caps Lock.
 </para>
 
 <para>
-For those users who have difficulty hearing the System bell, or those
-users who have a silent computer, &kde; offers the <emphasis>visual bell</emphasis>.  This
-provides a visual signal (inverting the screen or flashing a color
-across it) when the system bell would normally sound.
+    If you want to use a different sound for the system bell, enable the
+    <guilabel>Custom sound:</guilabel> check box, and enter the complete
+    pathname to the sound file in the text box next to the check box.
+    If you want, you can select the <guiicon>button next to it containing a folder
+    icon</guiicon> to navigate through your filesystem to find the exact file.
 </para>
 
 <para>
-To use the visual bell, first place a mark in the check box labeled
-<guilabel>Use visual bell</guilabel>.
+    For those users who have difficulty hearing the audible bell, or those
+    users who have a silent computer, &kde; offers the <emphasis>visual bell</emphasis>.
+    This provides a visual signal (inverting the screen or flashing a color
+    across it) instead of ringing a sound. This visual signal lasts for half
+    a second by default, and it is deliberately intrusive to call attention
+    to itself and ensure you notice it.
 </para>
 
 <para>
-You can then select between <guilabel>Invert screen</guilabel>, or
-<guilabel>Flash screen</guilabel>.  If you select <guilabel>Invert
-screen</guilabel>, all colors on the screen will be reversed.  If you
-choose <guilabel>Flash screen</guilabel>, you can choose the color by
-clicking the button to the right of the <guilabel>Flash
-screen</guilabel> selection.
+    To use the visual bell, enable the check box labeled
+    <guilabel>Visual bell: Enabled</guilabel>. You can then choose between
+    <guibutton>Invert screen colors</guibutton> or <guibutton>Flash screen</guibutton>
+    for the visual bell.
 </para>
 
 <para>
-The spin box can be used to adjust the duration of the visible
-bell.  The default value is 500 msec, or half a second.
+    If you select <guilabel>Invert screen colors</guilabel>, all colors on
+    the screen will be reversed. If you choose <guilabel>Flash screen</guilabel>,
+    you can click the button to the right of the <guilabel>Flash screen</guilabel>
+    check box, which opens a color picker that lets you choose a custom color.
+    The default color is red.
+</para>
+
+<para>
+    You can adjust the duration of the visual bell by changing the value of the
+    <guilabel>Duration</guilabel> spin box.
+    The default value is 500 msec, or half a second.
 </para>
 
 </sect3>
@@ -210,7 +225,7 @@ Use system bell whenever a key is rejected
 
 </sect3>
 
-<sect3 id="access-activation-gestures">
+<sect3 id="access-activation-shortcuts">
 <title><guilabel>Activation Gestures</guilabel></title>
 
 <para>There are two sections to this panel.</para>
