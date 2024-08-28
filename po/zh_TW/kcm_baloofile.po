@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-29 00:40+0000\n"
+"POT-Creation-Date: 2024-08-28 00:40+0000\n"
 "PO-Revision-Date: 2024-06-30 11:12+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -137,8 +137,10 @@ msgid "Indexed"
 msgstr "已索引"
 
 #: ui/main.qml:301
-#, kde-format
-msgid "Delete entry"
+#, fuzzy, kde-format
+#| msgid "Delete entry"
+msgctxt "Remove the list item for this filesystem path"
+msgid "Remove entry"
 msgstr "刪除項目"
 
 #: ui/main.qml:316

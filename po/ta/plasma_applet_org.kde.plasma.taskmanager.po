@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-15 00:41+0000\n"
+"POT-Creation-Date: 2024-08-28 00:40+0000\n"
 "PO-Revision-Date: 2024-08-04 16:38+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -64,33 +64,45 @@ msgid "9,999+"
 msgstr "9,999+"
 
 #: package/contents/ui/ConfigAppearance.qml:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "@label for several checkboxes"
 msgid "General:"
 msgstr "பொதுவானவை:"
 
 #: package/contents/ui/ConfigAppearance.qml:47
-#, kde-format
-msgid "Show small window previews when hovering over Tasks"
+#, fuzzy, kde-format
+#| msgid "Show small window previews when hovering over Tasks"
+msgctxt "@option:check section General"
+msgid "Show small window previews when hovering over tasks"
 msgstr "பணிகளின் மீது சுட்டியை வைக்கும்போது சாளரங்களின் முன்னோட்டத்தைக் சிறிய அளவில் காட்டு"
 
 #: package/contents/ui/ConfigAppearance.qml:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Hide other windows when hovering over previews"
+msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over previews"
 msgstr "முன்னோட்டங்களின் மீது சுட்டியை வைக்கும்போது மற்ற சாளரங்களை மறை"
 
 #: package/contents/ui/ConfigAppearance.qml:57
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Mark applications that play audio"
+msgctxt "@option:check section General"
 msgid "Mark applications that play audio"
 msgstr "ஒலியை இயக்கும் செயலிகளை குறி"
 
 #: package/contents/ui/ConfigAppearance.qml:65
-#, kde-format
-msgctxt "@option:check"
-msgid "Fill free space on Panel"
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Fill free space on Panel"
+msgctxt "@option:check section General"
+msgid "Fill free space on panel"
 msgstr "பலகையிலுள்ள காலியிடத்தை நிரப்பு"
 
 #: package/contents/ui/ConfigAppearance.qml:77
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Maximum task width:"
+msgctxt "@label:listbox"
 msgid "Maximum task width:"
 msgstr "உருப்படியின் அதிகபட்ச அகலம்:"
 
@@ -112,126 +124,177 @@ msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Wide"
 msgstr "அகலமானது"
 
-#: package/contents/ui/ConfigAppearance.qml:92
-#, kde-format
-msgctxt "@option: radio"
+#: package/contents/ui/ConfigAppearance.qml:93
+#, fuzzy, kde-format
+#| msgctxt "@option: radio"
+#| msgid "Use multi-column view:"
+msgctxt ""
+"@label for radio button group, completes sentence: … when panel is low on "
+"space etc."
 msgid "Use multi-column view:"
 msgstr "பல நெடுவரிசைகளைப் பயன்படுத்துவது:"
 
-#: package/contents/ui/ConfigAppearance.qml:92
-#, kde-format
-msgctxt "@option:radio"
+#: package/contents/ui/ConfigAppearance.qml:94
+#, fuzzy, kde-format
+#| msgctxt "@option:radio"
+#| msgid "Use multi-row view:"
+msgctxt ""
+"@label for radio button group, completes sentence: … when panel is low on "
+"space etc."
 msgid "Use multi-row view:"
 msgstr "பல வரிசைகளைப் பயன்படுத்துவது:"
 
-#: package/contents/ui/ConfigAppearance.qml:98
-#, kde-format
-msgctxt "Never use multi-column view for Task Manager"
+#: package/contents/ui/ConfigAppearance.qml:100
+#, fuzzy, kde-format
+#| msgctxt "Never use multi-column view for Task Manager"
+#| msgid "Never"
+msgctxt "@option:radio Never use multi-column view for Task Manager"
 msgid "Never"
 msgstr "ஒருபோதும் வேண்டாம்"
 
-#: package/contents/ui/ConfigAppearance.qml:108
-#, kde-format
-msgctxt "When to use multi-row view in Task Manager"
-msgid "When Panel is low on space and thick enough"
+#: package/contents/ui/ConfigAppearance.qml:110
+#, fuzzy, kde-format
+#| msgctxt "When to use multi-row view in Task Manager"
+#| msgid "When Panel is low on space and thick enough"
+msgctxt "@option:radio completes sentence: Use multi-column/row view"
+msgid "When panel is low on space and thick enough"
 msgstr "பலகையில் இடம் குறைவாக இருந்து அதன் அகலம் போதியதாக இருக்கும்போது"
 
-#: package/contents/ui/ConfigAppearance.qml:118
-#, kde-format
-msgctxt "When to use multi-row view in Task Manager"
-msgid "Always when Panel is thick enough"
+#: package/contents/ui/ConfigAppearance.qml:120
+#, fuzzy, kde-format
+#| msgctxt "When to use multi-row view in Task Manager"
+#| msgid "Always when Panel is thick enough"
+msgctxt "@option:radio completes sentence: Use multi-column/row view"
+msgid "Always when panel is thick enough"
 msgstr "பலகையின் அகலம் போதியதாக இருக்கும்போது"
 
-#: package/contents/ui/ConfigAppearance.qml:124
-#, kde-format
-msgctxt "@label:spinbox"
+#: package/contents/ui/ConfigAppearance.qml:127
+#, fuzzy, kde-format
+#| msgctxt "@label:spinbox"
+#| msgid "Maximum columns:"
+msgctxt "@label:spinbox maximum number of columns for tasks"
 msgid "Maximum columns:"
 msgstr "அதிகபட்ச நெடுவரிசைகள்:"
 
-#: package/contents/ui/ConfigAppearance.qml:124
-#, kde-format
-msgctxt "@label:spinbox"
+#: package/contents/ui/ConfigAppearance.qml:128
+#, fuzzy, kde-format
+#| msgctxt "@label:spinbox"
+#| msgid "Maximum rows:"
+msgctxt "@label:spinbox maximum number of rows for tasks"
 msgid "Maximum rows:"
 msgstr "அதிகபட்ச வரிசைகள்:"
 
-#: package/contents/ui/ConfigAppearance.qml:134
-#, kde-format
+#: package/contents/ui/ConfigAppearance.qml:138
+#, fuzzy, kde-format
+#| msgid "Spacing between icons:"
+msgctxt "@label:listbox"
 msgid "Spacing between icons:"
 msgstr "சின்னங்களுக்கிடையேயான இடைவெளி:"
 
-#: package/contents/ui/ConfigAppearance.qml:138
+#: package/contents/ui/ConfigAppearance.qml:142
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "சிறியது"
 
-#: package/contents/ui/ConfigAppearance.qml:142
+#: package/contents/ui/ConfigAppearance.qml:146
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "நடுத்தரமானது"
 
-#: package/contents/ui/ConfigAppearance.qml:146
+#: package/contents/ui/ConfigAppearance.qml:150
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "பெரியது"
 
-#: package/contents/ui/ConfigAppearance.qml:172
-#, kde-format
+#: package/contents/ui/ConfigAppearance.qml:176
+#, fuzzy, kde-format
+#| msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
+#| msgid "Automatically set to Large when in Touch Mode"
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
-msgid "Automatically set to Large when in Touch Mode"
+msgid "Automatically set to Large when in Touch mode"
 msgstr "தொடுதல் பயன்முறையில் இருக்கும்போது தானாக பெரிதாக்கு"
 
 #: package/contents/ui/ConfigBehavior.qml:49
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Group:"
+msgctxt "@label:listbox how to group tasks"
 msgid "Group:"
 msgstr "தொகுத்தல்:"
 
-#: package/contents/ui/ConfigBehavior.qml:52
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:53
+#, fuzzy, kde-format
+#| msgid "Do not group"
+msgctxt "@item:inlistbox how to group tasks"
 msgid "Do not group"
 msgstr "தொகுக்காதே"
 
-#: package/contents/ui/ConfigBehavior.qml:52
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:54
+#, fuzzy, kde-format
+#| msgid "By program name"
+msgctxt "@item:inlistbox how to group tasks"
 msgid "By program name"
 msgstr "செயலியின் பெயரை பொறுத்து"
 
-#: package/contents/ui/ConfigBehavior.qml:57
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:60
+#, fuzzy, kde-format
+#| msgid "Clicking grouped task:"
+msgctxt "@label:listbox completes sentence like: … cycles through tasks"
 msgid "Clicking grouped task:"
 msgstr "தொகுக்கப்பட்ட பணிகளை க்ளிக் செய்தல்:"
 
-#: package/contents/ui/ConfigBehavior.qml:64
-#, kde-format
-msgctxt "Completes the sentence 'Clicking grouped task cycles through tasks' "
+#: package/contents/ui/ConfigBehavior.qml:67
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Completes the sentence 'Clicking grouped task cycles through tasks' "
+#| msgid "Cycles through tasks"
+msgctxt ""
+"@item:inlistbox Completes the sentence 'Clicking grouped task cycles through "
+"tasks' "
 msgid "Cycles through tasks"
 msgstr "பணிகளுக்கிடையே தாவும்"
 
-#: package/contents/ui/ConfigBehavior.qml:65
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:68
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Completes the sentence 'Clicking grouped task shows tooltip window "
+#| "thumbnails' "
+#| msgid "Shows small window previews"
 msgctxt ""
-"Completes the sentence 'Clicking grouped task shows tooltip window "
-"thumbnails' "
+"@item:inlistbox Completes the sentence 'Clicking grouped task shows small "
+"window previews' "
 msgid "Shows small window previews"
 msgstr "சிறய சாளர முன்னோட்டங்களைக் காட்டும்"
 
-#: package/contents/ui/ConfigBehavior.qml:66
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:69
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
+#| msgid "Shows large window previews"
 msgctxt ""
-"Completes the sentence 'Clicking grouped task shows windows side by side' "
+"@item:inlistbox Completes the sentence 'Clicking grouped task shows large "
+"window previews' "
 msgid "Shows large window previews"
 msgstr "பெரிய சாளர முன்னோட்டங்களைக் காட்டும்"
 
-#: package/contents/ui/ConfigBehavior.qml:67
-#, kde-format
-msgctxt "Completes the sentence 'Clicking grouped task shows textual list' "
+#: package/contents/ui/ConfigBehavior.qml:70
+#, fuzzy, kde-format
+#| msgctxt "Completes the sentence 'Clicking grouped task shows textual list' "
+#| msgid "Shows textual list"
+msgctxt ""
+"@item:inlistbox Completes the sentence 'Clicking grouped task shows textual "
+"list' "
 msgid "Shows textual list"
 msgstr "உரைமுறை பட்டியலை காட்டும்"
 
-#: package/contents/ui/ConfigBehavior.qml:78
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:81
+#, fuzzy, kde-format
+#| msgid ""
+#| "The compositor does not support displaying windows side by side, so a "
+#| "textual list will be displayed instead."
+msgctxt "@info displayed as InlineMessage"
 msgid ""
 "The compositor does not support displaying windows side by side, so a "
 "textual list will be displayed instead."
@@ -239,190 +302,277 @@ msgstr ""
 "சாளரங்களைப் பக்கத்துப் பக்கத்தில் காட்டுவதை சாளரநிரல் (compositor) ஆதரிக்காத‍தால், பதிலாக "
 "ஒரு உரைமுறைப் பட்டியல் காட்டப்படும்."
 
-#: package/contents/ui/ConfigBehavior.qml:88
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:91
+#, fuzzy, kde-format
+#| msgid "Combine into single button"
+msgctxt "@option:check grouped task"
 msgid "Combine into single button"
 msgstr "பலவற்றை ஒரே பட்டனாக தொகுத்து காட்டு"
 
-#: package/contents/ui/ConfigBehavior.qml:95
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:98
+#, fuzzy, kde-format
+#| msgid "Group only when the Task Manager is full"
+msgctxt "@option:check grouped task"
 msgid "Group only when the Task Manager is full"
 msgstr "பணி மேலாளரில் காலியிடம் இல்லாதபோது மட்டும் தொகு"
 
-#: package/contents/ui/ConfigBehavior.qml:107
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:110
+#, fuzzy, kde-format
+#| msgid "Sort:"
+msgctxt "@label:listbox sort tasks in grouped task"
 msgid "Sort:"
 msgstr "வரிசைப்படுத்துதல்:"
 
-#: package/contents/ui/ConfigBehavior.qml:110
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:114
+#, fuzzy, kde-format
+#| msgid "Do not sort"
+msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Do not sort"
 msgstr "வரிசைப்படுத்தாதே"
 
-#: package/contents/ui/ConfigBehavior.qml:110
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:115
+#, fuzzy, kde-format
+#| msgid "Manually"
+msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Manually"
 msgstr "கைமுறையாக"
 
-#: package/contents/ui/ConfigBehavior.qml:110
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:116
+#, fuzzy, kde-format
+#| msgid "Alphabetically"
+msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Alphabetically"
 msgstr "அகரவரிசையாக"
 
-#: package/contents/ui/ConfigBehavior.qml:110
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:117
+#, fuzzy, kde-format
+#| msgid "By desktop"
+msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By desktop"
 msgstr "பணிமேடை வாரியாக"
 
-#: package/contents/ui/ConfigBehavior.qml:110
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:118
+#, fuzzy, kde-format
+#| msgid "By activity"
+msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By activity"
 msgstr "செயல்பாடு வாரியாக"
 
-#: package/contents/ui/ConfigBehavior.qml:116
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:125
+#, fuzzy, kde-format
+#| msgid "Keep launchers separate"
+msgctxt "@option:check configure task sorting"
 msgid "Keep launchers separate"
 msgstr "ஏவிகளை தனியாக காட்டு"
 
-#: package/contents/ui/ConfigBehavior.qml:123
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:132
+#, fuzzy, kde-format
+#| msgid "Hide launchers after application startup"
+msgctxt "@option:check for icons-and-text task manager"
 msgid "Hide launchers after application startup"
 msgstr "செயலி துவங்கியபின் அதன் ஏவியை மறை"
 
-#: package/contents/ui/ConfigBehavior.qml:133
-#, kde-format
-msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
+#: package/contents/ui/ConfigBehavior.qml:142
+#, fuzzy, kde-format
+#| msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
+#| msgid "Clicking active task:"
+msgctxt ""
+"@label for checkbox Part of a sentence: 'Clicking active task minimizes the "
+"task'"
 msgid "Clicking active task:"
 msgstr "செயலில் உள்ள பணியை க்ளிக் செய்தல்:"
 
-#: package/contents/ui/ConfigBehavior.qml:134
-#, kde-format
-msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
+#: package/contents/ui/ConfigBehavior.qml:143
+#, fuzzy, kde-format
+#| msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
+#| msgid "Minimizes the task"
+msgctxt ""
+"@option:check Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
 msgstr "பணியை ஒதுக்கும்"
 
-#: package/contents/ui/ConfigBehavior.qml:139
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:148
+#, fuzzy, kde-format
+#| msgid "Middle-clicking any task:"
+msgctxt "@label:listbox completes sentence like: … does nothing"
 msgid "Middle-clicking any task:"
 msgstr "ஏதாவதொரு பணியை க்ளிக் செய்தல்:"
 
-#: package/contents/ui/ConfigBehavior.qml:143
-#, kde-format
-msgctxt "Part of a sentence: 'Middle-clicking any task does nothing'"
+#: package/contents/ui/ConfigBehavior.qml:152
+#, fuzzy, kde-format
+#| msgctxt "Part of a sentence: 'Middle-clicking any task does nothing'"
+#| msgid "Does nothing"
+msgctxt ""
+"@item:inlistbox Part of a sentence: 'Middle-clicking any task does nothing'"
 msgid "Does nothing"
 msgstr "ஒன்றும் செய்யாது"
 
-#: package/contents/ui/ConfigBehavior.qml:144
-#, kde-format
-msgctxt "Part of a sentence: 'Middle-clicking any task closes window or group'"
+#: package/contents/ui/ConfigBehavior.qml:153
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Part of a sentence: 'Middle-clicking any task closes window or group'"
+#| msgid "Closes window or group"
+msgctxt ""
+"@item:inlistbox Part of a sentence: 'Middle-clicking any task closes window "
+"or group'"
 msgid "Closes window or group"
 msgstr "தொகுப்பை அல்லது சாளரத்தை மூடும்"
 
-#: package/contents/ui/ConfigBehavior.qml:145
-#, kde-format
-msgctxt "Part of a sentence: 'Middle-clicking any task opens a new window'"
+#: package/contents/ui/ConfigBehavior.qml:154
+#, fuzzy, kde-format
+#| msgctxt "Part of a sentence: 'Middle-clicking any task opens a new window'"
+#| msgid "Opens a new window"
+msgctxt ""
+"@item:inlistbox Part of a sentence: 'Middle-clicking any task opens a new "
+"window'"
 msgid "Opens a new window"
 msgstr "புதிய சாளரத்தை திறக்கும்"
 
-#: package/contents/ui/ConfigBehavior.qml:146
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:155
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Part of a sentence: 'Middle-clicking any task minimizes/restores window "
+#| "or group'"
+#| msgid "Minimizes/Restores window or group"
 msgctxt ""
-"Part of a sentence: 'Middle-clicking any task minimizes/restores window or "
-"group'"
+"@item:inlistbox Part of a sentence: 'Middle-clicking any task minimizes/"
+"restores window or group'"
 msgid "Minimizes/Restores window or group"
 msgstr "சாளரத்தை அல்லது தொகுப்பை ஒதுக்கும்/மீட்டெடுக்கும்"
 
-#: package/contents/ui/ConfigBehavior.qml:147
-#, kde-format
-msgctxt "Part of a sentence: 'Middle-clicking any task toggles grouping'"
+#: package/contents/ui/ConfigBehavior.qml:156
+#, fuzzy, kde-format
+#| msgctxt "Part of a sentence: 'Middle-clicking any task toggles grouping'"
+#| msgid "Toggles grouping"
+msgctxt ""
+"@item:inlistbox Part of a sentence: 'Middle-clicking any task toggles "
+"grouping'"
 msgid "Toggles grouping"
 msgstr "தொகுத்தலை நிலைமாற்றும்"
 
-#: package/contents/ui/ConfigBehavior.qml:148
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:157
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Part of a sentence: 'Middle-clicking any task brings it to the current "
+#| "virtual desktop'"
+#| msgid "Brings it to the current virtual desktop"
 msgctxt ""
-"Part of a sentence: 'Middle-clicking any task brings it to the current "
-"virtual desktop'"
+"@item:inlistbox Part of a sentence: 'Middle-clicking any task brings it to "
+"the current virtual desktop'"
 msgid "Brings it to the current virtual desktop"
 msgstr "தற்போதைய பணிமேடைக்கு கொண்டுவரும்"
 
-#: package/contents/ui/ConfigBehavior.qml:158
-#, kde-format
-msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
+#: package/contents/ui/ConfigBehavior.qml:167
+#, fuzzy, kde-format
+#| msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
+#| msgid "Mouse wheel:"
+msgctxt ""
+"@label for checkbox Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Mouse wheel:"
 msgstr "சுட்டியின் சக்கரம்:"
 
-#: package/contents/ui/ConfigBehavior.qml:159
-#, kde-format
-msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
+#: package/contents/ui/ConfigBehavior.qml:168
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Completes the sentence 'Clicking grouped task cycles through tasks' "
+#| msgid "Cycles through tasks"
+msgctxt "@option:check Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
 msgstr "பணிகளுக்கிடையே தாவும்"
 
-#: package/contents/ui/ConfigBehavior.qml:168
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:177
+#, fuzzy, kde-format
+#| msgid "Skip minimized tasks"
+msgctxt "@option:check mouse wheel task cycling"
 msgid "Skip minimized tasks"
 msgstr "ஒதுக்கப்பட்டுள்ள பணிகளைத் தவிர்"
 
-#: package/contents/ui/ConfigBehavior.qml:179
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:188
+#, fuzzy, kde-format
+#| msgid "Show only tasks:"
+msgctxt ""
+"@label for checkbox group, completes sentence like: … from current screen"
 msgid "Show only tasks:"
 msgstr "இதிலிருந்து மட்டும் பணிகளை காட்டு:"
 
-#: package/contents/ui/ConfigBehavior.qml:180
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:189
+#, fuzzy, kde-format
+#| msgid "From current screen"
+msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current screen"
 msgstr "தற்போதைய திரை"
 
-#: package/contents/ui/ConfigBehavior.qml:185
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:194
+#, fuzzy, kde-format
+#| msgid "From current desktop"
+msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current desktop"
 msgstr "தற்போதைய பணிமேடை"
 
-#: package/contents/ui/ConfigBehavior.qml:190
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:199
+#, fuzzy, kde-format
+#| msgid "From current activity"
+msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current activity"
 msgstr "தற்போதைய செயல்பாடு"
 
-#: package/contents/ui/ConfigBehavior.qml:195
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:204
+#, fuzzy, kde-format
+#| msgid "That are minimized"
+msgctxt "@option:check completes sentence: show only tasks"
 msgid "That are minimized"
 msgstr "ஒதுக்கப்பட்டிருப்பவை"
 
-#: package/contents/ui/ConfigBehavior.qml:204
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:213
+#, fuzzy, kde-format
+#| msgid "When panel is hidden:"
+msgctxt ""
+"@label for checkbox, completes sentence: … unhide if window wants attention"
 msgid "When panel is hidden:"
 msgstr "பலகை மறைந்திருக்கும்போது:"
 
-#: package/contents/ui/ConfigBehavior.qml:205
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:214
+#, fuzzy, kde-format
+#| msgid "Unhide when a window wants attention"
+msgctxt "@option:check completes sentence: When panel is hidden"
 msgid "Unhide when a window wants attention"
 msgstr "சாளரம் ஒன்று கவனம் கோரும்போது காட்டு"
 
-#: package/contents/ui/ConfigBehavior.qml:217
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:226
+#, fuzzy, kde-format
+#| msgid "New tasks appear:"
+msgctxt "@label for radiobutton group completes sentence like: … on the bottom"
 msgid "New tasks appear:"
 msgstr "புதிய பணிகள் இங்கு காட்டப்படும்:"
 
-#: package/contents/ui/ConfigBehavior.qml:221
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:230
+#, fuzzy, kde-format
+#| msgid "On the bottom"
+msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the bottom"
 msgstr "கீழே"
 
-#: package/contents/ui/ConfigBehavior.qml:225
-#: package/contents/ui/ConfigBehavior.qml:244
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:234
+#: package/contents/ui/ConfigBehavior.qml:253
+#, fuzzy, kde-format
+#| msgid "To the right"
+msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the right"
 msgstr "வலதில்"
 
-#: package/contents/ui/ConfigBehavior.qml:227
-#: package/contents/ui/ConfigBehavior.qml:242
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:236
+#: package/contents/ui/ConfigBehavior.qml:251
+#, fuzzy, kde-format
+#| msgid "To the left"
+msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the left"
 msgstr "இடதில்"
 
-#: package/contents/ui/ConfigBehavior.qml:238
-#, kde-format
-msgid "On the Top"
+#: package/contents/ui/ConfigBehavior.qml:247
+#, fuzzy, kde-format
+#| msgid "On the Top"
+msgctxt "@option:check completes sentence: New tasks appear"
+msgid "On the top"
 msgstr "மேலே"
 
 #: package/contents/ui/ContextMenu.qml:102
@@ -757,6 +907,10 @@ msgstr "சமீப இடங்களை மறந்துவிடு"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "சமீப கோப்புகளை மறந்துவிடு"
+
+#~ msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
+#~ msgid "Cycles through tasks"
+#~ msgstr "பணிகளுக்கிடையே தாவும்"
 
 #~ msgctxt "1 = number of desktop, 2 = desktop name"
 #~ msgid "&%1 %2"

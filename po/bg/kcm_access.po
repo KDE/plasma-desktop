@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-01 00:40+0000\n"
+"POT-Creation-Date: 2024-08-28 00:40+0000\n"
 "PO-Revision-Date: 2024-07-01 22:55+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -284,7 +284,7 @@ msgid "Mouse Key Curve"
 msgstr "Крива на клавиша на мишката"
 
 #. i18n: ectx: label, entry (Enabled), group (ScreenReader)
-#: kcmaccessibilityscreenreader.kcfg:9 ui/ScreenReader.qml:17
+#: kcmaccessibilityscreenreader.kcfg:9
 #, kde-format
 msgid "Enable Screen Reader"
 msgstr "Активиране на четеца на екран"
@@ -301,54 +301,78 @@ msgstr "Дали разклащането на курсора е активир�
 msgid "Magnification"
 msgstr "Увеличение"
 
-#: ui/ActivationGestures.qml:16
-#, kde-format
-msgid "Activation:"
-msgstr "Активиране:"
+#: ui/ActivationShortcuts.qml:17
+#, fuzzy, kde-format
+#| msgid "Activation Gestures"
+msgctxt "@option:check"
+msgid "Activation shortcuts:"
+msgstr "Жестове за активиране"
 
-#: ui/ActivationGestures.qml:17
-#, kde-format
-msgid "Use gestures for activating sticky keys and slow keys"
-msgstr "Използване на жестове за активиране на залепващи и бавни клавиши"
+#: ui/ActivationShortcuts.qml:18
+#, fuzzy, kde-format
+#| msgid "Enable"
+msgctxt "Enable activation shortcuts"
+msgid "Enable"
+msgstr "Активиране"
 
-#: ui/ActivationGestures.qml:29
+#: ui/ActivationShortcuts.qml:30
 #, kde-format
-msgid "Turn sticky keys and slow keys off after inactivity:"
+msgctxt "@label"
+msgid "Press Shift 5 times to enable Sticky Keys"
+msgstr ""
+
+#: ui/ActivationShortcuts.qml:37
+#, kde-format
+msgctxt "@label"
+msgid "Hold Shift for 8 seconds to enable Slow Keys"
+msgstr ""
+
+#: ui/ActivationShortcuts.qml:46
+#, fuzzy, kde-format
+#| msgid "Turn sticky keys and slow keys off after inactivity:"
+msgctxt "@option:check"
+msgid "Disable sticky and slow keys after:"
 msgstr "Изключване на залепващи и бавни клавиши след  период на бездействие:"
 
-#: ui/ActivationGestures.qml:58
+#: ui/ActivationShortcuts.qml:75
 #, kde-format
 msgid "%1 min"
 msgid_plural "%1 min"
 msgstr[0] "%1 мин"
 msgstr[1] "%1 мин"
 
-#: ui/ActivationGestures.qml:62
-#, kde-format
+#: ui/ActivationShortcuts.qml:79
+#, fuzzy, kde-format
+#| msgid "min"
+msgctxt "short for minute(s)"
 msgid "min"
-msgstr "мин"
+msgid_plural "min"
+msgstr[0] "мин"
+msgstr[1] "мин"
 
-#: ui/ActivationGestures.qml:70
-#, kde-format
-msgid "When a gesture is used:"
+#: ui/ActivationShortcuts.qml:88
+#, fuzzy, kde-format
+#| msgid "When a gesture is used:"
+msgid "When a shortcut is used:"
 msgstr "Когато се използва жест:"
 
-#: ui/ActivationGestures.qml:71
+#: ui/ActivationShortcuts.qml:89
 #, kde-format
 msgid "Display a confirmation dialog"
 msgstr "Показване на диалогов прозорец за потвърждение"
 
-#: ui/ActivationGestures.qml:82
-#, kde-format
-msgid "Ring the System Bell"
+#: ui/ActivationShortcuts.qml:100
+#, fuzzy, kde-format
+#| msgid "Ring the System Bell"
+msgid "Ring the system bell"
 msgstr "Задействане на системната сигнализация"
 
-#: ui/ActivationGestures.qml:93
+#: ui/ActivationShortcuts.qml:111
 #, kde-format
 msgid "Show a notification"
 msgstr "Показване на известие"
 
-#: ui/ActivationGestures.qml:104 ui/ModifierKeys.qml:99
+#: ui/ActivationShortcuts.qml:122
 #, kde-format
 msgid "Configure Notifications…"
 msgstr "Конфигуриране на известия…"
@@ -377,274 +401,385 @@ msgstr "Активиране"
 
 #: ui/Bell.qml:42
 #, kde-format
+msgctxt "@label"
+msgid "Emits a sound whenever certain keys are pressed"
+msgstr ""
+
+#: ui/Bell.qml:50
+#, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
 msgstr "Персонализиран звук:"
 
-#: ui/Bell.qml:75
+#: ui/Bell.qml:83
 #, kde-format
 msgid "Search audio file for the system bell"
 msgstr "Търсене на аудио файл за системната сигнализация"
 
-#: ui/Bell.qml:76
+#: ui/Bell.qml:84
 #, kde-format
 msgid "Button search audio file"
 msgstr "Бутон за търсене на аудио файл"
 
-#: ui/Bell.qml:92
+#: ui/Bell.qml:100
 #, kde-format
 msgid "Visual bell:"
 msgstr "Визуална сигнализация:"
 
-#: ui/Bell.qml:93
+#: ui/Bell.qml:101
 #, kde-format
 msgctxt "Enable visual bell"
 msgid "Enable"
 msgstr "Активиране"
 
-#: ui/Bell.qml:107
+#: ui/Bell.qml:113
 #, kde-format
-msgctxt "Invert screen on a system bell"
-msgid "Invert Screen"
+msgctxt "@label"
+msgid "Flashes the screen whenever certain keys are pressed"
+msgstr ""
+
+#: ui/Bell.qml:123
+#, fuzzy, kde-format
+#| msgctxt "Invert screen on a system bell"
+#| msgid "Invert Screen"
+msgctxt "@option:radio Invert screen colors when a system bell is rung"
+msgid "Invert screen colors"
 msgstr "Обръщане на цветовете на екрана"
 
-#: ui/Bell.qml:124
+#: ui/Bell.qml:141
 #, kde-format
-msgctxt "Flash screen on a system bell"
-msgid "Flash"
-msgstr "Присветване"
+msgctxt "@option:radio Flash screen when a system bell is rung"
+msgid "Flash screen"
+msgstr ""
 
-#: ui/Bell.qml:135
+#: ui/Bell.qml:152
 #, kde-format
 msgctxt "Color of the system bell"
 msgid "Color"
 msgstr "Цвят"
 
-#: ui/Bell.qml:149
+#: ui/Bell.qml:166
 #, kde-format
 msgctxt "Duration of the system bell"
 msgid "Duration:"
 msgstr "Продължителност:"
 
-#: ui/KeyboardFilters.qml:18
+#: ui/Bell.qml:181 ui/KeyboardFilters.qml:55 ui/KeyboardFilters.qml:151
+#: ui/MouseNavigation.qml:51 ui/MouseNavigation.qml:73
+#: ui/MouseNavigation.qml:95
+#, fuzzy, kde-format
+#| msgid "%1 min"
+#| msgid_plural "%1 min"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 мин"
+msgstr[1] "%1 мин"
+
+#: ui/Bell.qml:185 ui/KeyboardFilters.qml:59 ui/KeyboardFilters.qml:155
+#: ui/MouseNavigation.qml:55 ui/MouseNavigation.qml:77
+#: ui/MouseNavigation.qml:99
+#, kde-format
+msgctxt "short for millisecond(s)"
+msgid "ms"
+msgid_plural "ms"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ui/KeyboardFilters.qml:17
 #, kde-format
 msgid "Slow keys:"
 msgstr "Бавни клавиши:"
 
-#: ui/KeyboardFilters.qml:19
+#: ui/KeyboardFilters.qml:22
 #, kde-format
 msgctxt "Enable slow keys"
 msgid "Enable"
 msgstr "Активиране"
 
-#: ui/KeyboardFilters.qml:22
+#: ui/KeyboardFilters.qml:33
 #, kde-format
+msgctxt "@info:tooltip"
 msgid ""
-"For a key to be accepted, it has to be held until the set amount of time"
+"For a key to be accepted, it has to be held until the set amount of time. "
+"Useful if you accidentally type more than one key at a time or have "
+"difficulty pressing the key you want the first time."
 msgstr ""
-"За да бъде приет клавишът, той трябва да се задържи за определеното време"
 
-#: ui/KeyboardFilters.qml:37
+#: ui/KeyboardFilters.qml:40
 #, kde-format
 msgctxt "Slow keys Delay"
 msgid "Delay:"
 msgstr "Забавяне:"
 
-#: ui/KeyboardFilters.qml:57
+#: ui/KeyboardFilters.qml:68
 #, kde-format
 msgid "Ring system bell:"
 msgstr "Задействане на системната сигнализация:"
 
-#: ui/KeyboardFilters.qml:58
+#: ui/KeyboardFilters.qml:69
 #, kde-format
 msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
 msgstr "&когато е натиснат който и да е клавиш"
 
-#: ui/KeyboardFilters.qml:72
+#: ui/KeyboardFilters.qml:83
 #, kde-format
 msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
 msgstr "&когато се приеме някой клавиш"
 
-#: ui/KeyboardFilters.qml:86
+#: ui/KeyboardFilters.qml:97
 #, kde-format
 msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
 msgstr "&когато някой клавиш е отхвърлен"
 
-#: ui/KeyboardFilters.qml:103
+#: ui/KeyboardFilters.qml:113
 #, kde-format
 msgid "Bounce keys:"
 msgstr "Забавено повторение на клавиши:"
 
-#: ui/KeyboardFilters.qml:104
+#: ui/KeyboardFilters.qml:118
 #, kde-format
 msgctxt "Bounce keys enable"
 msgid "Enable"
 msgstr "Активиране"
 
-#: ui/KeyboardFilters.qml:107
+#: ui/KeyboardFilters.qml:129
 #, kde-format
-msgid "Ignore rapid, repeated keypresses of the same key"
-msgstr "Игнориране на бързи, многократни натискания на един и същ клавиш"
+msgctxt "@info:tooltip"
+msgid ""
+"Ignore rapid, repeated keypresses of the same key. Useful if you have hand "
+"tremors that cause you to press a key multiple times when you only intend to "
+"press once."
+msgstr ""
 
-#: ui/KeyboardFilters.qml:122
+#: ui/KeyboardFilters.qml:136
 #, kde-format
 msgctxt "Bounce keys delay"
 msgid "Delay:"
 msgstr "Забавяне:"
 
-#: ui/KeyboardFilters.qml:140
+#: ui/KeyboardFilters.qml:162
 #, kde-format
 msgid "Ring system bell when rejected"
 msgstr "Задействане на системната сигнализация при отхвърляне"
 
-#: ui/main.qml:29
-#, kde-format
-msgctxt "System Bell"
-msgid "Bell"
-msgstr "Сигнализация"
+#: ui/main.qml:28
+#, fuzzy, kde-format
+#| msgid "Use System Bell"
+msgctxt "@title Category name in sidebar"
+msgid "System Bell"
+msgstr "Използване на системната сигнализация"
 
-#: ui/main.qml:34
+#: ui/main.qml:33
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr "Модифициращи клавиши"
 
-#: ui/main.qml:39
+#: ui/main.qml:38
 #, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr "Филтри за клавиатура"
 
-#: ui/main.qml:44
+#: ui/main.qml:43
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr "Навигация с мишка"
 
-#: ui/main.qml:49
-#, kde-format
-msgid "Activation Gestures"
+#: ui/main.qml:48
+#, fuzzy, kde-format
+#| msgid "Activation Gestures"
+msgid "Activation Shortcuts"
 msgstr "Жестове за активиране"
 
-#: ui/main.qml:54
+#: ui/main.qml:53
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
 msgstr "Екранен четец"
 
-#: ui/main.qml:59
+#: ui/main.qml:58
 #, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"
 msgstr "Разклащане на курсора"
 
-#: ui/ModifierKeys.qml:16
-#, kde-format
+#: ui/ModifierKeys.qml:17
+#, fuzzy, kde-format
+#| msgid "Sticky keys:"
+msgctxt "@option:check"
 msgid "Sticky keys:"
 msgstr "Залепващи клавиши:"
 
-#: ui/ModifierKeys.qml:18
-#, kde-format
-msgctxt "Enable sticky keys"
+#: ui/ModifierKeys.qml:22
+#, fuzzy, kde-format
+#| msgid "Enable"
+msgctxt "@option:check Enable sticky keys"
 msgid "Enable"
 msgstr "Активиране"
 
-#: ui/ModifierKeys.qml:30
+#: ui/ModifierKeys.qml:33
 #, kde-format
-msgctxt "Lock sticky keys"
-msgid "Lock"
-msgstr "Заключване"
+msgctxt "@info:tooltip"
+msgid ""
+"Modifier keys like Ctrl, Shift, Alt, and the Meta/Super/Windows key act as "
+"though they “stick in place” and no longer need to be held down when typing "
+"a keyboard shortcut."
+msgstr ""
 
-#: ui/ModifierKeys.qml:44
+#: ui/ModifierKeys.qml:39
+#, fuzzy, kde-format
+#| msgid "Lock the sticky keys"
+msgctxt "@option:check"
+msgid "Lock sticky keys"
+msgstr "Заключване на залепващи клавиши"
+
+#: ui/ModifierKeys.qml:51
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Once locked, the “sticky” state of modifier keys will not be disabled until "
+"a keyboard shortcut is finished or until a non-modifier key is pressed."
+msgstr ""
+
+#: ui/ModifierKeys.qml:57
 #, kde-format
 msgid "Disable when two keys are held down"
 msgstr "Деактивиране при задържане на два бутона"
 
-#: ui/ModifierKeys.qml:57
+#: ui/ModifierKeys.qml:70
 #, kde-format
 msgid "Ring system bell when modifier keys are used"
 msgstr ""
 "Задействане на системната сигнализация при използване на модифициращи клавиши"
 
-#: ui/ModifierKeys.qml:74
-#, kde-format
+#: ui/ModifierKeys.qml:88
+#, fuzzy, kde-format
+#| msgid "Feedback:"
+msgctxt "@option:check Feedback options:"
 msgid "Feedback:"
 msgstr "Обратна връзка:"
 
-#: ui/ModifierKeys.qml:76
-#, kde-format
-msgid "Ring system bell when locking keys are toggled"
+#: ui/ModifierKeys.qml:93
+#, fuzzy, kde-format
+#| msgid "Ring system bell when locking keys are toggled"
+msgctxt "@option:check"
+msgid "Ring system bell when locking keys are used"
 msgstr ""
 "Задействане на системната сигнализация при превключване на клавишите за "
 "заключване"
 
-#: ui/ModifierKeys.qml:87
+#: ui/ModifierKeys.qml:104
 #, kde-format
+msgctxt "@info:tooltip"
+msgid "The locking keys are Caps Lock, Num Lock, and Scroll Lock."
+msgstr ""
+
+#: ui/ModifierKeys.qml:108
+#, fuzzy, kde-format
+#| msgid "Show notification when modifier or locking keys are used"
+msgctxt "@option:check"
 msgid "Show notification when modifier or locking keys are used"
 msgstr ""
 "Показване на известие, когато се използват модификатор или заключващи клавиши"
 
-#: ui/MouseNavigation.qml:17
-#, kde-format
+#: ui/ModifierKeys.qml:120
+#, fuzzy, kde-format
+#| msgid "Configure Notifications…"
+msgctxt "@action:button"
+msgid "Configure Notifications…"
+msgstr "Конфигуриране на известия…"
+
+#: ui/MouseNavigation.qml:16
+#, fuzzy, kde-format
+#| msgid "Use number pad to move cursor:"
+msgctxt "@option:check"
 msgid "Use number pad to move cursor:"
 msgstr "Използване на цифровата клавиатура за преместване на курсора:"
 
-#: ui/MouseNavigation.qml:18
-#, kde-format
+#: ui/MouseNavigation.qml:21
+#, fuzzy, kde-format
+#| msgid "Enable"
+msgctxt "@option:check Enable mouse navigation"
 msgid "Enable"
 msgstr "Активиране"
 
-#: ui/MouseNavigation.qml:30
-#, kde-format
+#: ui/MouseNavigation.qml:32
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"The numpad key <shortcut>5</shortcut> functions as a mouse click. The keys "
+"<shortcut>2</shortcut>, <shortcut>4</shortcut>, <shortcut>6</shortcut>, and "
+"<shortcut>8</shortcut> allow for cardinal movement (down, left, right, and "
+"up). The keys <shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</"
+"shortcut>, and <shortcut>9</shortcut> allow for diagonal movement."
+msgstr ""
+
+#: ui/MouseNavigation.qml:37
+#, fuzzy, kde-format
+#| msgid "Acceleration delay:"
+msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
 msgstr "Забавяне на ускорението:"
 
-#: ui/MouseNavigation.qml:44
-#, kde-format
+#: ui/MouseNavigation.qml:59
+#, fuzzy, kde-format
+#| msgid "Repeat interval:"
+msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr "Интервал на повторение:"
 
-#: ui/MouseNavigation.qml:58
-#, kde-format
+#: ui/MouseNavigation.qml:81
+#, fuzzy, kde-format
+#| msgid "Acceleration time:"
+msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "Време за ускорение:"
 
-#: ui/MouseNavigation.qml:72
-#, kde-format
+#: ui/MouseNavigation.qml:103
+#, fuzzy, kde-format
+#| msgid "Maximum speed:"
+msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr "Максимална скорост:"
 
-#: ui/MouseNavigation.qml:86
-#, kde-format
+#: ui/MouseNavigation.qml:117
+#, fuzzy, kde-format
+#| msgid "Pointer acceleration:"
+msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
 msgstr "Ускорение на показалеца:"
 
-#: ui/ScreenReader.qml:28
-#, kde-format
-msgid "Launch Orca Screen Reader Configuration…"
+#: ui/ScreenReader.qml:20
+#, fuzzy, kde-format
+#| msgid "Launch Orca Screen Reader Configuration…"
+msgctxt "@info Placeholder message title"
+msgid "The Orca Screen Reader is not installed"
 msgstr "Стартиране на конфигурацията на Orca Screen Reader…"
 
-#: ui/ScreenReader.qml:42
+#: ui/ScreenReader.qml:21
 #, kde-format
-msgid ""
-"Please note that you may have to log out or reboot once to allow the screen "
-"reader to work properly."
+msgctxt "@info Placeholder message explanation"
+msgid "Please install it, then close and reopen this window"
 msgstr ""
-"Моля, обърнете внимание, че може да се наложи да излезете или рестартирате "
-"веднъж, за да позволите на екранния четец да работи правилно."
 
-#: ui/ScreenReader.qml:43
-#, kde-format
-msgid ""
-"It appears that the Orca Screen Reader is not installed. Please install it "
-"before trying to use this feature, and then log out or reboot"
-msgstr ""
-"Изглежда, че Orca Screen Reader не е инсталиран. Моля, инсталирайте го, "
-"преди да се опитате да използвате тази функция, и след това излезте или "
-"рестартирайте"
+#: ui/ScreenReader.qml:27
+#, fuzzy, kde-format
+#| msgid "Enable Screen Reader"
+msgctxt "@option:check"
+msgid "Enable Screen Reader"
+msgstr "Активиране на четеца на екран"
+
+#: ui/ScreenReader.qml:39
+#, fuzzy, kde-format
+#| msgid "Launch Orca Screen Reader Configuration…"
+msgctxt "@action:button"
+msgid "Launch Orca Screen Reader Configuration…"
+msgstr "Стартиране на конфигурацията на Orca Screen Reader…"
 
 #: ui/ShakeCursor.qml:15
 #, kde-format
@@ -675,3 +810,48 @@ msgstr "Нормален"
 msgctxt "@label Large cursor size"
 msgid "Large"
 msgstr "Голям"
+
+#~ msgid "Activation:"
+#~ msgstr "Активиране:"
+
+#~ msgid "Use gestures for activating sticky keys and slow keys"
+#~ msgstr "Използване на жестове за активиране на залепващи и бавни клавиши"
+
+#~ msgctxt "Flash screen on a system bell"
+#~ msgid "Flash"
+#~ msgstr "Присветване"
+
+#~ msgid ""
+#~ "For a key to be accepted, it has to be held until the set amount of time"
+#~ msgstr ""
+#~ "За да бъде приет клавишът, той трябва да се задържи за определеното време"
+
+#~ msgid "Ignore rapid, repeated keypresses of the same key"
+#~ msgstr "Игнориране на бързи, многократни натискания на един и същ клавиш"
+
+#~ msgctxt "System Bell"
+#~ msgid "Bell"
+#~ msgstr "Сигнализация"
+
+#~ msgctxt "Enable sticky keys"
+#~ msgid "Enable"
+#~ msgstr "Активиране"
+
+#~ msgctxt "Lock sticky keys"
+#~ msgid "Lock"
+#~ msgstr "Заключване"
+
+#~ msgid ""
+#~ "Please note that you may have to log out or reboot once to allow the "
+#~ "screen reader to work properly."
+#~ msgstr ""
+#~ "Моля, обърнете внимание, че може да се наложи да излезете или "
+#~ "рестартирате веднъж, за да позволите на екранния четец да работи правилно."
+
+#~ msgid ""
+#~ "It appears that the Orca Screen Reader is not installed. Please install "
+#~ "it before trying to use this feature, and then log out or reboot"
+#~ msgstr ""
+#~ "Изглежда, че Orca Screen Reader не е инсталиран. Моля, инсталирайте го, "
+#~ "преди да се опитате да използвате тази функция, и след това излезте или "
+#~ "рестартирайте"

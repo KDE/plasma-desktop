@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-29 00:40+0000\n"
+"POT-Creation-Date: 2024-08-28 00:40+0000\n"
 "PO-Revision-Date: 2024-06-29 13:26+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -137,8 +137,10 @@ msgid "Indexed"
 msgstr "İndeksleniyor"
 
 #: ui/main.qml:301
-#, kde-format
-msgid "Delete entry"
+#, fuzzy, kde-format
+#| msgid "Delete entry"
+msgctxt "Remove the list item for this filesystem path"
+msgid "Remove entry"
 msgstr "Girdiyi Sil"
 
 #: ui/main.qml:316

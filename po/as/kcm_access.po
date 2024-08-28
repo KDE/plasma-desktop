@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-01 00:40+0000\n"
+"POT-Creation-Date: 2024-08-28 00:40+0000\n"
 "PO-Revision-Date: 2009-01-13 17:06+0530\n"
 "Last-Translator: Amitakhya Phukan <অমিতাক্ষ ফুকন>\n"
 "Language-Team: Assamese <fedora-trans-as@redhat.com>\n"
@@ -288,7 +288,7 @@ msgid "Mouse Key Curve"
 msgstr ""
 
 #. i18n: ectx: label, entry (Enabled), group (ScreenReader)
-#: kcmaccessibilityscreenreader.kcfg:9 ui/ScreenReader.qml:17
+#: kcmaccessibilityscreenreader.kcfg:9
 #, kde-format
 msgid "Enable Screen Reader"
 msgstr ""
@@ -306,25 +306,40 @@ msgstr ""
 msgid "Magnification"
 msgstr "সূচনা"
 
-#: ui/ActivationGestures.qml:16
+#: ui/ActivationShortcuts.qml:17
 #, fuzzy, kde-format
 #| msgid "Activation Gestures"
-msgid "Activation:"
+msgctxt "@option:check"
+msgid "Activation shortcuts:"
 msgstr "সক্ৰিয় কৰাৰ ঈঙ্গিত"
 
-#: ui/ActivationGestures.qml:17
+#: ui/ActivationShortcuts.qml:18
 #, kde-format
-msgid "Use gestures for activating sticky keys and slow keys"
-msgstr "sticky keys আৰু slow keys সক্ৰিয় কৰিবলৈ ঈঙ্গিত ব্যৱহাৰ কৰক"
+msgctxt "Enable activation shortcuts"
+msgid "Enable"
+msgstr ""
 
-#: ui/ActivationGestures.qml:29
+#: ui/ActivationShortcuts.qml:30
+#, kde-format
+msgctxt "@label"
+msgid "Press Shift 5 times to enable Sticky Keys"
+msgstr ""
+
+#: ui/ActivationShortcuts.qml:37
+#, kde-format
+msgctxt "@label"
+msgid "Hold Shift for 8 seconds to enable Slow Keys"
+msgstr ""
+
+#: ui/ActivationShortcuts.qml:46
 #, fuzzy, kde-format
 #| msgid ""
 #| "Turn sticky keys and slow keys off after a certain period of inactivity."
-msgid "Turn sticky keys and slow keys off after inactivity:"
+msgctxt "@option:check"
+msgid "Disable sticky and slow keys after:"
 msgstr "কাম নোহোৱাৰ কিছু সময়ৰ পিছত sticky keys আৰু slow keys বন্ধ কৰিব ।"
 
-#: ui/ActivationGestures.qml:58
+#: ui/ActivationShortcuts.qml:75
 #, fuzzy, kde-format
 #| msgid " min"
 msgid "%1 min"
@@ -332,35 +347,38 @@ msgid_plural "%1 min"
 msgstr[0] " min"
 msgstr[1] " min"
 
-#: ui/ActivationGestures.qml:62
+#: ui/ActivationShortcuts.qml:79
 #, fuzzy, kde-format
 #| msgid " min"
+msgctxt "short for minute(s)"
 msgid "min"
-msgstr " min"
+msgid_plural "min"
+msgstr[0] " min"
+msgstr[1] " min"
 
-#: ui/ActivationGestures.qml:70
+#: ui/ActivationShortcuts.qml:88
 #, kde-format
-msgid "When a gesture is used:"
+msgid "When a shortcut is used:"
 msgstr ""
 
-#: ui/ActivationGestures.qml:71
+#: ui/ActivationShortcuts.qml:89
 #, kde-format
 msgid "Display a confirmation dialog"
 msgstr ""
 
-#: ui/ActivationGestures.qml:82
+#: ui/ActivationShortcuts.qml:100
 #, fuzzy, kde-format
 #| msgid "Use &system bell"
-msgid "Ring the System Bell"
+msgid "Ring the system bell"
 msgstr "ব্যৱস্থাপ্ৰণালীৰ ঘন্টা ব্যৱহাৰ কৰক (&s)"
 
-#: ui/ActivationGestures.qml:93
+#: ui/ActivationShortcuts.qml:111
 #, fuzzy, kde-format
 #| msgid "Notification"
 msgid "Show a notification"
 msgstr "সূচনা"
 
-#: ui/ActivationGestures.qml:104 ui/ModifierKeys.qml:99
+#: ui/ActivationShortcuts.qml:122
 #, fuzzy, kde-format
 #| msgid "Configure &Notifications..."
 msgid "Configure Notifications…"
@@ -391,288 +409,387 @@ msgstr ""
 
 #: ui/Bell.qml:42
 #, kde-format
+msgctxt "@label"
+msgid "Emits a sound whenever certain keys are pressed"
+msgstr ""
+
+#: ui/Bell.qml:50
+#, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
 msgstr ""
 
-#: ui/Bell.qml:75
+#: ui/Bell.qml:83
 #, kde-format
 msgid "Search audio file for the system bell"
 msgstr ""
 
-#: ui/Bell.qml:76
+#: ui/Bell.qml:84
 #, kde-format
 msgid "Button search audio file"
 msgstr ""
 
-#: ui/Bell.qml:92
+#: ui/Bell.qml:100
 #, fuzzy, kde-format
 #| msgid "Visible Bell"
 msgid "Visual bell:"
 msgstr "দৃশ্যমান ঘন্টা"
 
-#: ui/Bell.qml:93
+#: ui/Bell.qml:101
 #, kde-format
 msgctxt "Enable visual bell"
 msgid "Enable"
 msgstr ""
 
-#: ui/Bell.qml:107
+#: ui/Bell.qml:113
+#, fuzzy, kde-format
+#| msgid "Use the system bell whenever a key is rejected"
+msgctxt "@label"
+msgid "Flashes the screen whenever certain keys are pressed"
+msgstr "এটা চাবি অগ্ৰাহ্য কৰাৰ সময়ত ব্যৱস্থাপ্ৰণালীৰ ঘন্টা ব্যৱহাৰ কৰক"
+
+#: ui/Bell.qml:123
 #, fuzzy, kde-format
 #| msgid "I&nvert screen"
-msgctxt "Invert screen on a system bell"
-msgid "Invert Screen"
+msgctxt "@option:radio Invert screen colors when a system bell is rung"
+msgid "Invert screen colors"
 msgstr "পৰ্দ্দা ওলোটা কৰক (&n)"
 
-#: ui/Bell.qml:124
-#, kde-format
-msgctxt "Flash screen on a system bell"
-msgid "Flash"
-msgstr ""
+#: ui/Bell.qml:141
+#, fuzzy, kde-format
+#| msgid "F&lash screen"
+msgctxt "@option:radio Flash screen when a system bell is rung"
+msgid "Flash screen"
+msgstr "F&lash screen"
 
-#: ui/Bell.qml:135
+#: ui/Bell.qml:152
 #, kde-format
 msgctxt "Color of the system bell"
 msgid "Color"
 msgstr ""
 
-#: ui/Bell.qml:149
+#: ui/Bell.qml:166
 #, fuzzy, kde-format
 #| msgid "Duration:"
 msgctxt "Duration of the system bell"
 msgid "Duration:"
 msgstr "সময়কাল:"
 
-#: ui/KeyboardFilters.qml:18
+#: ui/Bell.qml:181 ui/KeyboardFilters.qml:55 ui/KeyboardFilters.qml:151
+#: ui/MouseNavigation.qml:51 ui/MouseNavigation.qml:73
+#: ui/MouseNavigation.qml:95
+#, fuzzy, kde-format
+#| msgid " min"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] " min"
+msgstr[1] " min"
+
+#: ui/Bell.qml:185 ui/KeyboardFilters.qml:59 ui/KeyboardFilters.qml:155
+#: ui/MouseNavigation.qml:55 ui/MouseNavigation.qml:77
+#: ui/MouseNavigation.qml:99
+#, kde-format
+msgctxt "short for millisecond(s)"
+msgid "ms"
+msgid_plural "ms"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ui/KeyboardFilters.qml:17
 #, fuzzy, kde-format
 #| msgid "&Use slow keys"
 msgid "Slow keys:"
 msgstr "slow keys ব্যৱহাৰ কৰক (&U)"
 
-#: ui/KeyboardFilters.qml:19
+#: ui/KeyboardFilters.qml:22
 #, kde-format
 msgctxt "Enable slow keys"
 msgid "Enable"
 msgstr ""
 
-#: ui/KeyboardFilters.qml:22
+#: ui/KeyboardFilters.qml:33
 #, kde-format
+msgctxt "@info:tooltip"
 msgid ""
-"For a key to be accepted, it has to be held until the set amount of time"
+"For a key to be accepted, it has to be held until the set amount of time. "
+"Useful if you accidentally type more than one key at a time or have "
+"difficulty pressing the key you want the first time."
 msgstr ""
 
-#: ui/KeyboardFilters.qml:37
+#: ui/KeyboardFilters.qml:40
 #, kde-format
 msgctxt "Slow keys Delay"
 msgid "Delay:"
 msgstr ""
 
-#: ui/KeyboardFilters.qml:57
+#: ui/KeyboardFilters.qml:68
 #, fuzzy, kde-format
 #| msgid "Use &system bell"
 msgid "Ring system bell:"
 msgstr "ব্যৱস্থাপ্ৰণালীৰ ঘন্টা ব্যৱহাৰ কৰক (&s)"
 
-#: ui/KeyboardFilters.qml:58
+#: ui/KeyboardFilters.qml:69
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is pressed"
 msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
 msgstr "এটা চাবি টিপোঁতে ব্যৱস্থাপ্ৰণালীৰ ঘন্টা ব্যৱহাৰ কৰক (&U)"
 
-#: ui/KeyboardFilters.qml:72
+#: ui/KeyboardFilters.qml:83
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is accepted"
 msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
 msgstr "এটা চাবি গ্ৰহণ কৰিলে ব্যৱস্থাপ্ৰণালীৰ ঘন্টা ব্যৱহাৰ কৰক (&U)"
 
-#: ui/KeyboardFilters.qml:86
+#: ui/KeyboardFilters.qml:97
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is rejected"
 msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
 msgstr "এটা চাবি অগ্ৰাহ্য কৰাৰ সময়ত ব্যৱস্থাপ্ৰণালীৰ ঘন্টা ব্যৱহাৰ কৰক (&U)"
 
-#: ui/KeyboardFilters.qml:103
+#: ui/KeyboardFilters.qml:113
 #, fuzzy, kde-format
 #| msgid "Bounce Keys"
 msgid "Bounce keys:"
 msgstr "Bounce Keys"
 
-#: ui/KeyboardFilters.qml:104
+#: ui/KeyboardFilters.qml:118
 #, kde-format
 msgctxt "Bounce keys enable"
 msgid "Enable"
 msgstr ""
 
-#: ui/KeyboardFilters.qml:107
+#: ui/KeyboardFilters.qml:129
 #, kde-format
-msgid "Ignore rapid, repeated keypresses of the same key"
+msgctxt "@info:tooltip"
+msgid ""
+"Ignore rapid, repeated keypresses of the same key. Useful if you have hand "
+"tremors that cause you to press a key multiple times when you only intend to "
+"press once."
 msgstr ""
 
-#: ui/KeyboardFilters.qml:122
+#: ui/KeyboardFilters.qml:136
 #, kde-format
 msgctxt "Bounce keys delay"
 msgid "Delay:"
 msgstr ""
 
-#: ui/KeyboardFilters.qml:140
+#: ui/KeyboardFilters.qml:162
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is rejected"
 msgid "Ring system bell when rejected"
 msgstr "এটা চাবি অগ্ৰাহ্য কৰাৰ সময়ত ব্যৱস্থাপ্ৰণালীৰ ঘন্টা ব্যৱহাৰ কৰক (&U)"
 
-#: ui/main.qml:29
+#: ui/main.qml:28
 #, fuzzy, kde-format
-#| msgid "&Bell"
-msgctxt "System Bell"
-msgid "Bell"
-msgstr "ঘন্টা (&B)"
+#| msgid "Use &system bell"
+msgctxt "@title Category name in sidebar"
+msgid "System Bell"
+msgstr "ব্যৱস্থাপ্ৰণালীৰ ঘন্টা ব্যৱহাৰ কৰক (&s)"
 
-#: ui/main.qml:34
+#: ui/main.qml:33
 #, fuzzy, kde-format
 #| msgid "&Modifier Keys"
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr "&Modifier Keys"
 
-#: ui/main.qml:39
+#: ui/main.qml:38
 #, fuzzy, kde-format
 #| msgid "&Keyboard Filters"
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr "চাবিৰ ফলকৰ ফিল্টাৰ (&K)"
 
-#: ui/main.qml:44
+#: ui/main.qml:43
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr ""
 
-#: ui/main.qml:49
+#: ui/main.qml:48
 #, fuzzy, kde-format
 #| msgid "Activation Gestures"
-msgid "Activation Gestures"
+msgid "Activation Shortcuts"
 msgstr "সক্ৰিয় কৰাৰ ঈঙ্গিত"
 
-#: ui/main.qml:54
+#: ui/main.qml:53
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
 msgstr ""
 
-#: ui/main.qml:59
+#: ui/main.qml:58
 #, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"
 msgstr ""
 
-#: ui/ModifierKeys.qml:16
+#: ui/ModifierKeys.qml:17
 #, fuzzy, kde-format
 #| msgid "S&ticky Keys"
+msgctxt "@option:check"
 msgid "Sticky keys:"
 msgstr "S&ticky Keys"
 
-#: ui/ModifierKeys.qml:18
+#: ui/ModifierKeys.qml:22
 #, kde-format
-msgctxt "Enable sticky keys"
+msgctxt "@option:check Enable sticky keys"
 msgid "Enable"
 msgstr ""
 
-#: ui/ModifierKeys.qml:30
+#: ui/ModifierKeys.qml:33
 #, kde-format
-msgctxt "Lock sticky keys"
-msgid "Lock"
+msgctxt "@info:tooltip"
+msgid ""
+"Modifier keys like Ctrl, Shift, Alt, and the Meta/Super/Windows key act as "
+"though they “stick in place” and no longer need to be held down when typing "
+"a keyboard shortcut."
 msgstr ""
 
-#: ui/ModifierKeys.qml:44
+#: ui/ModifierKeys.qml:39
+#, fuzzy, kde-format
+#| msgid "&Lock sticky keys"
+msgctxt "@option:check"
+msgid "Lock sticky keys"
+msgstr "sticky keys ল'ক কৰক (&L)"
+
+#: ui/ModifierKeys.qml:51
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Once locked, the “sticky” state of modifier keys will not be disabled until "
+"a keyboard shortcut is finished or until a non-modifier key is pressed."
+msgstr ""
+
+#: ui/ModifierKeys.qml:57
 #, kde-format
 msgid "Disable when two keys are held down"
 msgstr ""
 
-#: ui/ModifierKeys.qml:57
+#: ui/ModifierKeys.qml:70
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is pressed"
 msgid "Ring system bell when modifier keys are used"
 msgstr "এটা চাবি টিপোঁতে ব্যৱস্থাপ্ৰণালীৰ ঘন্টা ব্যৱহাৰ কৰক (&U)"
 
-#: ui/ModifierKeys.qml:74
+#: ui/ModifierKeys.qml:88
 #, kde-format
+msgctxt "@option:check Feedback options:"
 msgid "Feedback:"
 msgstr ""
 
-#: ui/ModifierKeys.qml:76
+#: ui/ModifierKeys.qml:93
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is accepted"
-msgid "Ring system bell when locking keys are toggled"
+msgctxt "@option:check"
+msgid "Ring system bell when locking keys are used"
 msgstr "এটা চাবি গ্ৰহণ কৰিলে ব্যৱস্থাপ্ৰণালীৰ ঘন্টা ব্যৱহাৰ কৰক (&U)"
 
-#: ui/ModifierKeys.qml:87
+#: ui/ModifierKeys.qml:104
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "The locking keys are Caps Lock, Num Lock, and Scroll Lock."
+msgstr ""
+
+#: ui/ModifierKeys.qml:108
 #, fuzzy, kde-format
 #| msgid ""
 #| "Use KDE's system notification mechanism whenever a modifier or locking "
 #| "key changes its state"
+msgctxt "@option:check"
 msgid "Show notification when modifier or locking keys are used"
 msgstr ""
 "KDE ৰ ব্যৱস্থাপ্ৰণালীৰ সূচনাৰ ব্যৱস্থা ব্যৱহাৰ কৰক যেতিয়াই এটা modifier বা locking "
 "key য়ে নিজৰ অৱস্থা সলনি কৰে"
 
-#: ui/MouseNavigation.qml:17
+#: ui/ModifierKeys.qml:120
+#, fuzzy, kde-format
+#| msgid "Configure &Notifications..."
+msgctxt "@action:button"
+msgid "Configure Notifications…"
+msgstr "সূচনাবাৰ্তা বিন্যাস কৰক (&N)..."
+
+#: ui/MouseNavigation.qml:16
 #, kde-format
+msgctxt "@option:check"
 msgid "Use number pad to move cursor:"
 msgstr ""
 
-#: ui/MouseNavigation.qml:18
+#: ui/MouseNavigation.qml:21
 #, kde-format
+msgctxt "@option:check Enable mouse navigation"
 msgid "Enable"
 msgstr ""
 
-#: ui/MouseNavigation.qml:30
+#: ui/MouseNavigation.qml:32
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"The numpad key <shortcut>5</shortcut> functions as a mouse click. The keys "
+"<shortcut>2</shortcut>, <shortcut>4</shortcut>, <shortcut>6</shortcut>, and "
+"<shortcut>8</shortcut> allow for cardinal movement (down, left, right, and "
+"up). The keys <shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</"
+"shortcut>, and <shortcut>9</shortcut> allow for diagonal movement."
+msgstr ""
+
+#: ui/MouseNavigation.qml:37
 #, fuzzy, kde-format
 #| msgid "Acceptance dela&y:"
+msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
 msgstr "Acceptance dela&y:"
 
-#: ui/MouseNavigation.qml:44
+#: ui/MouseNavigation.qml:59
 #, kde-format
+msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr ""
 
-#: ui/MouseNavigation.qml:58
+#: ui/MouseNavigation.qml:81
 #, fuzzy, kde-format
 #| msgid "Acceptance dela&y:"
+msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "Acceptance dela&y:"
 
-#: ui/MouseNavigation.qml:72
+#: ui/MouseNavigation.qml:103
 #, kde-format
+msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr ""
 
-#: ui/MouseNavigation.qml:86
+#: ui/MouseNavigation.qml:117
 #, fuzzy, kde-format
 #| msgid "Acceptance dela&y:"
+msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
 msgstr "Acceptance dela&y:"
 
-#: ui/ScreenReader.qml:28
+#: ui/ScreenReader.qml:20
 #, kde-format
+msgctxt "@info Placeholder message title"
+msgid "The Orca Screen Reader is not installed"
+msgstr ""
+
+#: ui/ScreenReader.qml:21
+#, kde-format
+msgctxt "@info Placeholder message explanation"
+msgid "Please install it, then close and reopen this window"
+msgstr ""
+
+#: ui/ScreenReader.qml:27
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable Screen Reader"
+msgstr ""
+
+#: ui/ScreenReader.qml:39
+#, kde-format
+msgctxt "@action:button"
 msgid "Launch Orca Screen Reader Configuration…"
-msgstr ""
-
-#: ui/ScreenReader.qml:42
-#, kde-format
-msgid ""
-"Please note that you may have to log out or reboot once to allow the screen "
-"reader to work properly."
-msgstr ""
-
-#: ui/ScreenReader.qml:43
-#, kde-format
-msgid ""
-"It appears that the Orca Screen Reader is not installed. Please install it "
-"before trying to use this feature, and then log out or reboot"
 msgstr ""
 
 #: ui/ShakeCursor.qml:15
@@ -705,6 +822,20 @@ msgstr ""
 msgctxt "@label Large cursor size"
 msgid "Large"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Activation Gestures"
+#~ msgid "Activation:"
+#~ msgstr "সক্ৰিয় কৰাৰ ঈঙ্গিত"
+
+#~ msgid "Use gestures for activating sticky keys and slow keys"
+#~ msgstr "sticky keys আৰু slow keys সক্ৰিয় কৰিবলৈ ঈঙ্গিত ব্যৱহাৰ কৰক"
+
+#, fuzzy
+#~| msgid "&Bell"
+#~ msgctxt "System Bell"
+#~ msgid "Bell"
+#~ msgstr "ঘন্টা (&B)"
 
 #, fuzzy
 #~| msgid "Acceptance dela&y:"
@@ -805,9 +936,6 @@ msgstr ""
 #~ msgstr ""
 #~ "তলত দিয়া সময়ৰ মতে পৰ্দ্দাৰ ৰং আপুনি নিৰ্ব্বাচন কৰা ৰঙলৈ পৰিবৰ্ত্তন কৰা হ'ব ।"
 
-#~ msgid "F&lash screen"
-#~ msgstr "F&lash screen"
-
 #~ msgid ""
 #~ "All screen colors will be inverted for the amount of time specified below."
 #~ msgstr "তলত দিয়া সময়ৰ মতে পৰ্দ্দাৰ সকলো ৰং ওলোটোৱা হ'ব ।"
@@ -843,9 +971,6 @@ msgstr ""
 
 #~ msgid "Use bou&nce keys"
 #~ msgstr "bounce keys ব্যৱহাৰ কৰক (&n)"
-
-#~ msgid "Use the system bell whenever a key is rejected"
-#~ msgstr "এটা চাবি অগ্ৰাহ্য কৰাৰ সময়ত ব্যৱস্থাপ্ৰণালীৰ ঘন্টা ব্যৱহাৰ কৰক"
 
 #, fuzzy
 #~| msgid "Activation Gestures"

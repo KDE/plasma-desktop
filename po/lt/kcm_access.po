@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-01 00:40+0000\n"
+"POT-Creation-Date: 2024-08-28 00:40+0000\n"
 "PO-Revision-Date: 2024-07-05 21:33+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -284,7 +284,7 @@ msgid "Mouse Key Curve"
 msgstr "Pelės klavišo kreivė"
 
 #. i18n: ectx: label, entry (Enabled), group (ScreenReader)
-#: kcmaccessibilityscreenreader.kcfg:9 ui/ScreenReader.qml:17
+#: kcmaccessibilityscreenreader.kcfg:9
 #, kde-format
 msgid "Enable Screen Reader"
 msgstr "Įjungti ekrano skaityklė"
@@ -301,22 +301,40 @@ msgstr "Ar pelės žymeklio pakratymas yra įjungtas"
 msgid "Magnification"
 msgstr "Didinimas"
 
-#: ui/ActivationGestures.qml:16
-#, kde-format
-msgid "Activation:"
-msgstr "Aktyvinimas:"
+#: ui/ActivationShortcuts.qml:17
+#, fuzzy, kde-format
+#| msgid "Activation Gestures"
+msgctxt "@option:check"
+msgid "Activation shortcuts:"
+msgstr "Aktyvinimo gestai"
 
-#: ui/ActivationGestures.qml:17
-#, kde-format
-msgid "Use gestures for activating sticky keys and slow keys"
-msgstr "Naudoti gestus atmeniųjų ir lėtųjų klavišų aktyvavimui"
+#: ui/ActivationShortcuts.qml:18
+#, fuzzy, kde-format
+#| msgid "Enable"
+msgctxt "Enable activation shortcuts"
+msgid "Enable"
+msgstr "Įjungti"
 
-#: ui/ActivationGestures.qml:29
+#: ui/ActivationShortcuts.qml:30
 #, kde-format
-msgid "Turn sticky keys and slow keys off after inactivity:"
+msgctxt "@label"
+msgid "Press Shift 5 times to enable Sticky Keys"
+msgstr ""
+
+#: ui/ActivationShortcuts.qml:37
+#, kde-format
+msgctxt "@label"
+msgid "Hold Shift for 8 seconds to enable Slow Keys"
+msgstr ""
+
+#: ui/ActivationShortcuts.qml:46
+#, fuzzy, kde-format
+#| msgid "Turn sticky keys and slow keys off after inactivity:"
+msgctxt "@option:check"
+msgid "Disable sticky and slow keys after:"
 msgstr "Išjungti atmeniuosius ir lėtuosius klavišus po neveiklumo:"
 
-#: ui/ActivationGestures.qml:58
+#: ui/ActivationShortcuts.qml:75
 #, kde-format
 msgid "%1 min"
 msgid_plural "%1 min"
@@ -325,32 +343,40 @@ msgstr[1] "%1 min."
 msgstr[2] "%1 min."
 msgstr[3] "%1 min."
 
-#: ui/ActivationGestures.qml:62
-#, kde-format
+#: ui/ActivationShortcuts.qml:79
+#, fuzzy, kde-format
+#| msgid "min"
+msgctxt "short for minute(s)"
 msgid "min"
-msgstr "min."
+msgid_plural "min"
+msgstr[0] "min."
+msgstr[1] "min."
+msgstr[2] "min."
+msgstr[3] "min."
 
-#: ui/ActivationGestures.qml:70
-#, kde-format
-msgid "When a gesture is used:"
+#: ui/ActivationShortcuts.qml:88
+#, fuzzy, kde-format
+#| msgid "When a gesture is used:"
+msgid "When a shortcut is used:"
 msgstr "Naudojant gestą:"
 
-#: ui/ActivationGestures.qml:71
+#: ui/ActivationShortcuts.qml:89
 #, kde-format
 msgid "Display a confirmation dialog"
 msgstr "Rodyti patvirtinimo dialogą"
 
-#: ui/ActivationGestures.qml:82
-#, kde-format
-msgid "Ring the System Bell"
+#: ui/ActivationShortcuts.qml:100
+#, fuzzy, kde-format
+#| msgid "Ring the System Bell"
+msgid "Ring the system bell"
 msgstr "Skambinti sistemos skambučiu"
 
-#: ui/ActivationGestures.qml:93
+#: ui/ActivationShortcuts.qml:111
 #, kde-format
 msgid "Show a notification"
 msgstr "Rodyti pranešimą"
 
-#: ui/ActivationGestures.qml:104 ui/ModifierKeys.qml:99
+#: ui/ActivationShortcuts.qml:122
 #, kde-format
 msgid "Configure Notifications…"
 msgstr "Konfigūruoti pranešimus…"
@@ -379,271 +405,387 @@ msgstr "Įjungti"
 
 #: ui/Bell.qml:42
 #, kde-format
+msgctxt "@label"
+msgid "Emits a sound whenever certain keys are pressed"
+msgstr ""
+
+#: ui/Bell.qml:50
+#, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
 msgstr "Tinkintas garsas:"
 
-#: ui/Bell.qml:75
+#: ui/Bell.qml:83
 #, kde-format
 msgid "Search audio file for the system bell"
 msgstr "Ieškoti garso failo sistemos skambučiui"
 
-#: ui/Bell.qml:76
+#: ui/Bell.qml:84
 #, kde-format
 msgid "Button search audio file"
 msgstr "Garso failo paieškos mygtukas"
 
-#: ui/Bell.qml:92
+#: ui/Bell.qml:100
 #, kde-format
 msgid "Visual bell:"
 msgstr "Vaizdinis skambutis:"
 
-#: ui/Bell.qml:93
+#: ui/Bell.qml:101
 #, kde-format
 msgctxt "Enable visual bell"
 msgid "Enable"
 msgstr "Įjungti"
 
-#: ui/Bell.qml:107
-#, kde-format
-msgctxt "Invert screen on a system bell"
-msgid "Invert Screen"
+#: ui/Bell.qml:113
+#, fuzzy, kde-format
+#| msgid "Use the system bell whenever a key is rejected"
+msgctxt "@label"
+msgid "Flashes the screen whenever certain keys are pressed"
+msgstr "Naudoti sistemos skambutį kiekvieną kartą, kai klavišas yra atmetamas"
+
+#: ui/Bell.qml:123
+#, fuzzy, kde-format
+#| msgctxt "Invert screen on a system bell"
+#| msgid "Invert Screen"
+msgctxt "@option:radio Invert screen colors when a system bell is rung"
+msgid "Invert screen colors"
 msgstr "Invertuoti ekraną"
 
-#: ui/Bell.qml:124
-#, kde-format
-msgctxt "Flash screen on a system bell"
-msgid "Flash"
-msgstr "Blyksnis"
+#: ui/Bell.qml:141
+#, fuzzy, kde-format
+#| msgid "F&lash screen"
+msgctxt "@option:radio Flash screen when a system bell is rung"
+msgid "Flash screen"
+msgstr "Mirginti e&kraną"
 
-#: ui/Bell.qml:135
+#: ui/Bell.qml:152
 #, kde-format
 msgctxt "Color of the system bell"
 msgid "Color"
 msgstr "Spalva"
 
-#: ui/Bell.qml:149
+#: ui/Bell.qml:166
 #, kde-format
 msgctxt "Duration of the system bell"
 msgid "Duration:"
 msgstr "Trukmė:"
 
-#: ui/KeyboardFilters.qml:18
+#: ui/Bell.qml:181 ui/KeyboardFilters.qml:55 ui/KeyboardFilters.qml:151
+#: ui/MouseNavigation.qml:51 ui/MouseNavigation.qml:73
+#: ui/MouseNavigation.qml:95
+#, fuzzy, kde-format
+#| msgid "%1 min"
+#| msgid_plural "%1 min"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 min."
+msgstr[1] "%1 min."
+msgstr[2] "%1 min."
+msgstr[3] "%1 min."
+
+#: ui/Bell.qml:185 ui/KeyboardFilters.qml:59 ui/KeyboardFilters.qml:155
+#: ui/MouseNavigation.qml:55 ui/MouseNavigation.qml:77
+#: ui/MouseNavigation.qml:99
+#, kde-format
+msgctxt "short for millisecond(s)"
+msgid "ms"
+msgid_plural "ms"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: ui/KeyboardFilters.qml:17
 #, kde-format
 msgid "Slow keys:"
 msgstr "Lėtieji klavišai:"
 
-#: ui/KeyboardFilters.qml:19
+#: ui/KeyboardFilters.qml:22
 #, kde-format
 msgctxt "Enable slow keys"
 msgid "Enable"
 msgstr "Įjungti"
 
-#: ui/KeyboardFilters.qml:22
+#: ui/KeyboardFilters.qml:33
 #, kde-format
+msgctxt "@info:tooltip"
 msgid ""
-"For a key to be accepted, it has to be held until the set amount of time"
+"For a key to be accepted, it has to be held until the set amount of time. "
+"Useful if you accidentally type more than one key at a time or have "
+"difficulty pressing the key you want the first time."
 msgstr ""
-"Tam, kad klavišas būtų priimtas, jis turi būti laikomas nuspaustas nurodytą "
-"laiką"
 
-#: ui/KeyboardFilters.qml:37
+#: ui/KeyboardFilters.qml:40
 #, kde-format
 msgctxt "Slow keys Delay"
 msgid "Delay:"
 msgstr "Delsa:"
 
-#: ui/KeyboardFilters.qml:57
+#: ui/KeyboardFilters.qml:68
 #, kde-format
 msgid "Ring system bell:"
 msgstr "Skambinti sistemos skambučiu:"
 
-#: ui/KeyboardFilters.qml:58
+#: ui/KeyboardFilters.qml:69
 #, kde-format
 msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
 msgstr "kai klavišas yra pa&spaudžiamas"
 
-#: ui/KeyboardFilters.qml:72
+#: ui/KeyboardFilters.qml:83
 #, kde-format
 msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
 msgstr "kai klavišas yra &priimamas"
 
-#: ui/KeyboardFilters.qml:86
+#: ui/KeyboardFilters.qml:97
 #, kde-format
 msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
 msgstr "kai klavišas yra &atmetamas"
 
-#: ui/KeyboardFilters.qml:103
+#: ui/KeyboardFilters.qml:113
 #, kde-format
 msgid "Bounce keys:"
 msgstr "Pasikartojantys klavišai:"
 
-#: ui/KeyboardFilters.qml:104
+#: ui/KeyboardFilters.qml:118
 #, kde-format
 msgctxt "Bounce keys enable"
 msgid "Enable"
 msgstr "Įjungti"
 
-#: ui/KeyboardFilters.qml:107
+#: ui/KeyboardFilters.qml:129
 #, kde-format
-msgid "Ignore rapid, repeated keypresses of the same key"
-msgstr "Nepaisyti greitų, pasikartojančių to paties klavišo paspaudimų"
+msgctxt "@info:tooltip"
+msgid ""
+"Ignore rapid, repeated keypresses of the same key. Useful if you have hand "
+"tremors that cause you to press a key multiple times when you only intend to "
+"press once."
+msgstr ""
 
-#: ui/KeyboardFilters.qml:122
+#: ui/KeyboardFilters.qml:136
 #, kde-format
 msgctxt "Bounce keys delay"
 msgid "Delay:"
 msgstr "Delsa:"
 
-#: ui/KeyboardFilters.qml:140
+#: ui/KeyboardFilters.qml:162
 #, kde-format
 msgid "Ring system bell when rejected"
 msgstr "Skambinti sistemos skambučiu, kai atmetami"
 
-#: ui/main.qml:29
-#, kde-format
-msgctxt "System Bell"
-msgid "Bell"
-msgstr "Skambutis"
+#: ui/main.qml:28
+#, fuzzy, kde-format
+#| msgid "Use System Bell"
+msgctxt "@title Category name in sidebar"
+msgid "System Bell"
+msgstr "Naudoti sistemos skambutį"
 
-#: ui/main.qml:34
+#: ui/main.qml:33
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr "Modifikavimo klavišai"
 
-#: ui/main.qml:39
+#: ui/main.qml:38
 #, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr "Klaviatūros filtrai"
 
-#: ui/main.qml:44
+#: ui/main.qml:43
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr "Naršymas pele"
 
-#: ui/main.qml:49
-#, kde-format
-msgid "Activation Gestures"
+#: ui/main.qml:48
+#, fuzzy, kde-format
+#| msgid "Activation Gestures"
+msgid "Activation Shortcuts"
 msgstr "Aktyvinimo gestai"
 
-#: ui/main.qml:54
+#: ui/main.qml:53
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
 msgstr "Ekrano skaityklė"
 
-#: ui/main.qml:59
+#: ui/main.qml:58
 #, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"
 msgstr "Pakratyti pelės žymeklį"
 
-#: ui/ModifierKeys.qml:16
-#, kde-format
+#: ui/ModifierKeys.qml:17
+#, fuzzy, kde-format
+#| msgid "Sticky keys:"
+msgctxt "@option:check"
 msgid "Sticky keys:"
 msgstr "Atmenieji klavišai:"
 
-#: ui/ModifierKeys.qml:18
-#, kde-format
-msgctxt "Enable sticky keys"
+#: ui/ModifierKeys.qml:22
+#, fuzzy, kde-format
+#| msgid "Enable"
+msgctxt "@option:check Enable sticky keys"
 msgid "Enable"
 msgstr "Įjungti"
 
-#: ui/ModifierKeys.qml:30
+#: ui/ModifierKeys.qml:33
 #, kde-format
-msgctxt "Lock sticky keys"
-msgid "Lock"
-msgstr "Užrakinti"
+msgctxt "@info:tooltip"
+msgid ""
+"Modifier keys like Ctrl, Shift, Alt, and the Meta/Super/Windows key act as "
+"though they “stick in place” and no longer need to be held down when typing "
+"a keyboard shortcut."
+msgstr ""
 
-#: ui/ModifierKeys.qml:44
+#: ui/ModifierKeys.qml:39
+#, fuzzy, kde-format
+#| msgid "Lock the sticky keys"
+msgctxt "@option:check"
+msgid "Lock sticky keys"
+msgstr "Užrakinti atmeniuosius klavišus"
+
+#: ui/ModifierKeys.qml:51
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Once locked, the “sticky” state of modifier keys will not be disabled until "
+"a keyboard shortcut is finished or until a non-modifier key is pressed."
+msgstr ""
+
+#: ui/ModifierKeys.qml:57
 #, kde-format
 msgid "Disable when two keys are held down"
 msgstr "Išjungti, kai yra laikomi paspausti du klavišai"
 
-#: ui/ModifierKeys.qml:57
+#: ui/ModifierKeys.qml:70
 #, kde-format
 msgid "Ring system bell when modifier keys are used"
 msgstr "Skambinti sistemos skambučiu, kai yra naudojami modifikavimo klavišai"
 
-#: ui/ModifierKeys.qml:74
-#, kde-format
+#: ui/ModifierKeys.qml:88
+#, fuzzy, kde-format
+#| msgid "Feedback:"
+msgctxt "@option:check Feedback options:"
 msgid "Feedback:"
 msgstr "Grįžtamasis ryšys:"
 
-#: ui/ModifierKeys.qml:76
-#, kde-format
-msgid "Ring system bell when locking keys are toggled"
+#: ui/ModifierKeys.qml:93
+#, fuzzy, kde-format
+#| msgid "Ring system bell when locking keys are toggled"
+msgctxt "@option:check"
+msgid "Ring system bell when locking keys are used"
 msgstr "Skambinti sistemos skambučiu, kai yra perjungiami užrakinimo klavišai"
 
-#: ui/ModifierKeys.qml:87
+#: ui/ModifierKeys.qml:104
 #, kde-format
+msgctxt "@info:tooltip"
+msgid "The locking keys are Caps Lock, Num Lock, and Scroll Lock."
+msgstr ""
+
+#: ui/ModifierKeys.qml:108
+#, fuzzy, kde-format
+#| msgid "Show notification when modifier or locking keys are used"
+msgctxt "@option:check"
 msgid "Show notification when modifier or locking keys are used"
 msgstr "Rodyti pranešimą, kai naudojami modifikavimo ar užrakinimo klavišai"
 
-#: ui/MouseNavigation.qml:17
-#, kde-format
+#: ui/ModifierKeys.qml:120
+#, fuzzy, kde-format
+#| msgid "Configure Notifications…"
+msgctxt "@action:button"
+msgid "Configure Notifications…"
+msgstr "Konfigūruoti pranešimus…"
+
+#: ui/MouseNavigation.qml:16
+#, fuzzy, kde-format
+#| msgid "Use number pad to move cursor:"
+msgctxt "@option:check"
 msgid "Use number pad to move cursor:"
 msgstr "Pelės judinimui naudoti skaitmeninę klaviatūrą:"
 
-#: ui/MouseNavigation.qml:18
-#, kde-format
+#: ui/MouseNavigation.qml:21
+#, fuzzy, kde-format
+#| msgid "Enable"
+msgctxt "@option:check Enable mouse navigation"
 msgid "Enable"
 msgstr "Įjungti"
 
-#: ui/MouseNavigation.qml:30
-#, kde-format
+#: ui/MouseNavigation.qml:32
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"The numpad key <shortcut>5</shortcut> functions as a mouse click. The keys "
+"<shortcut>2</shortcut>, <shortcut>4</shortcut>, <shortcut>6</shortcut>, and "
+"<shortcut>8</shortcut> allow for cardinal movement (down, left, right, and "
+"up). The keys <shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</"
+"shortcut>, and <shortcut>9</shortcut> allow for diagonal movement."
+msgstr ""
+
+#: ui/MouseNavigation.qml:37
+#, fuzzy, kde-format
+#| msgid "Acceleration delay:"
+msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
 msgstr "Pagreičio delsa:"
 
-#: ui/MouseNavigation.qml:44
-#, kde-format
+#: ui/MouseNavigation.qml:59
+#, fuzzy, kde-format
+#| msgid "Repeat interval:"
+msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr "Kartojimo intervalas:"
 
-#: ui/MouseNavigation.qml:58
-#, kde-format
+#: ui/MouseNavigation.qml:81
+#, fuzzy, kde-format
+#| msgid "Acceleration time:"
+msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "Pagreičio laikas:"
 
-#: ui/MouseNavigation.qml:72
-#, kde-format
+#: ui/MouseNavigation.qml:103
+#, fuzzy, kde-format
+#| msgid "Maximum speed:"
+msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr "Didžiausias greitis:"
 
-#: ui/MouseNavigation.qml:86
-#, kde-format
+#: ui/MouseNavigation.qml:117
+#, fuzzy, kde-format
+#| msgid "Pointer acceleration:"
+msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
 msgstr "Rodyklės pagreitis:"
 
-#: ui/ScreenReader.qml:28
-#, kde-format
-msgid "Launch Orca Screen Reader Configuration…"
+#: ui/ScreenReader.qml:20
+#, fuzzy, kde-format
+#| msgid "Launch Orca Screen Reader Configuration…"
+msgctxt "@info Placeholder message title"
+msgid "The Orca Screen Reader is not installed"
 msgstr "Paleisti Orca ekrano skaityklės konfigūraciją…"
 
-#: ui/ScreenReader.qml:42
+#: ui/ScreenReader.qml:21
 #, kde-format
-msgid ""
-"Please note that you may have to log out or reboot once to allow the screen "
-"reader to work properly."
+msgctxt "@info Placeholder message explanation"
+msgid "Please install it, then close and reopen this window"
 msgstr ""
-"Turėkite omenyje, jog tam, kad ekrano skaityklė tinkamai veiktų, jums gali "
-"tekti atsijungti ar paleisti kompiuterį iš naujo."
 
-#: ui/ScreenReader.qml:43
-#, kde-format
-msgid ""
-"It appears that the Orca Screen Reader is not installed. Please install it "
-"before trying to use this feature, and then log out or reboot"
-msgstr ""
-"Atrodo, kad Orca ekrano skaityklė nėra įdiegta. Prieš bandydami naudotis šia "
-"ypatybe, įsidiekite ekrano skaityklę, o tuomet atsijunkite arba paleiskite "
-"kompiuterį iš naujo"
+#: ui/ScreenReader.qml:27
+#, fuzzy, kde-format
+#| msgid "Enable Screen Reader"
+msgctxt "@option:check"
+msgid "Enable Screen Reader"
+msgstr "Įjungti ekrano skaityklė"
+
+#: ui/ScreenReader.qml:39
+#, fuzzy, kde-format
+#| msgid "Launch Orca Screen Reader Configuration…"
+msgctxt "@action:button"
+msgid "Launch Orca Screen Reader Configuration…"
+msgstr "Paleisti Orca ekrano skaityklės konfigūraciją…"
 
 #: ui/ShakeCursor.qml:15
 #, kde-format
@@ -674,6 +816,52 @@ msgstr "Normalus"
 msgctxt "@label Large cursor size"
 msgid "Large"
 msgstr "Didelis"
+
+#~ msgid "Activation:"
+#~ msgstr "Aktyvinimas:"
+
+#~ msgid "Use gestures for activating sticky keys and slow keys"
+#~ msgstr "Naudoti gestus atmeniųjų ir lėtųjų klavišų aktyvavimui"
+
+#~ msgctxt "Flash screen on a system bell"
+#~ msgid "Flash"
+#~ msgstr "Blyksnis"
+
+#~ msgid ""
+#~ "For a key to be accepted, it has to be held until the set amount of time"
+#~ msgstr ""
+#~ "Tam, kad klavišas būtų priimtas, jis turi būti laikomas nuspaustas "
+#~ "nurodytą laiką"
+
+#~ msgid "Ignore rapid, repeated keypresses of the same key"
+#~ msgstr "Nepaisyti greitų, pasikartojančių to paties klavišo paspaudimų"
+
+#~ msgctxt "System Bell"
+#~ msgid "Bell"
+#~ msgstr "Skambutis"
+
+#~ msgctxt "Enable sticky keys"
+#~ msgid "Enable"
+#~ msgstr "Įjungti"
+
+#~ msgctxt "Lock sticky keys"
+#~ msgid "Lock"
+#~ msgstr "Užrakinti"
+
+#~ msgid ""
+#~ "Please note that you may have to log out or reboot once to allow the "
+#~ "screen reader to work properly."
+#~ msgstr ""
+#~ "Turėkite omenyje, jog tam, kad ekrano skaityklė tinkamai veiktų, jums "
+#~ "gali tekti atsijungti ar paleisti kompiuterį iš naujo."
+
+#~ msgid ""
+#~ "It appears that the Orca Screen Reader is not installed. Please install "
+#~ "it before trying to use this feature, and then log out or reboot"
+#~ msgstr ""
+#~ "Atrodo, kad Orca ekrano skaityklė nėra įdiegta. Prieš bandydami naudotis "
+#~ "šia ypatybe, įsidiekite ekrano skaityklę, o tuomet atsijunkite arba "
+#~ "paleiskite kompiuterį iš naujo"
 
 #~ msgid "Acceleration profile:"
 #~ msgstr "Pagreičio profilis:"
@@ -758,9 +946,6 @@ msgstr "Didelis"
 #~ "below."
 #~ msgstr "Ekranas, žemiau nurodytam laikui, nusidažys pasirinkta spalva."
 
-#~ msgid "F&lash screen"
-#~ msgstr "Mirginti e&kraną"
-
 #~ msgid ""
 #~ "All screen colors will be inverted for the amount of time specified below."
 #~ msgstr "Visos ekrano spalvos, žemiau nurodytam laikui, bus invertuotos."
@@ -797,10 +982,6 @@ msgstr "Didelis"
 
 #~ msgid "Use bou&nce keys"
 #~ msgstr "&Naudoti pasikartojančius klavišus"
-
-#~ msgid "Use the system bell whenever a key is rejected"
-#~ msgstr ""
-#~ "Naudoti sistemos skambutį kiekvieną kartą, kai klavišas yra atmetamas"
 
 #~ msgid "Activation &Gestures"
 #~ msgstr "Aktyvavimo &gestai"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-01 00:40+0000\n"
+"POT-Creation-Date: 2024-08-28 00:40+0000\n"
 "PO-Revision-Date: 2024-07-01 11:36+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -283,7 +283,7 @@ msgid "Mouse Key Curve"
 msgstr "滑鼠按鍵曲線"
 
 #. i18n: ectx: label, entry (Enabled), group (ScreenReader)
-#: kcmaccessibilityscreenreader.kcfg:9 ui/ScreenReader.qml:17
+#: kcmaccessibilityscreenreader.kcfg:9
 #, kde-format
 msgid "Enable Screen Reader"
 msgstr "啟用螢幕閱讀器"
@@ -300,53 +300,76 @@ msgstr "是否要啟用游標甩動功能"
 msgid "Magnification"
 msgstr "放大"
 
-#: ui/ActivationGestures.qml:16
-#, kde-format
-msgid "Activation:"
-msgstr "觸發："
+#: ui/ActivationShortcuts.qml:17
+#, fuzzy, kde-format
+#| msgid "Activation Gestures"
+msgctxt "@option:check"
+msgid "Activation shortcuts:"
+msgstr "觸發手勢"
 
-#: ui/ActivationGestures.qml:17
-#, kde-format
-msgid "Use gestures for activating sticky keys and slow keys"
-msgstr "使用手勢來觸發相黏鍵與慢速按鍵"
+#: ui/ActivationShortcuts.qml:18
+#, fuzzy, kde-format
+#| msgid "Enable"
+msgctxt "Enable activation shortcuts"
+msgid "Enable"
+msgstr "啟用"
 
-#: ui/ActivationGestures.qml:29
+#: ui/ActivationShortcuts.qml:30
 #, kde-format
-msgid "Turn sticky keys and slow keys off after inactivity:"
+msgctxt "@label"
+msgid "Press Shift 5 times to enable Sticky Keys"
+msgstr ""
+
+#: ui/ActivationShortcuts.qml:37
+#, kde-format
+msgctxt "@label"
+msgid "Hold Shift for 8 seconds to enable Slow Keys"
+msgstr ""
+
+#: ui/ActivationShortcuts.qml:46
+#, fuzzy, kde-format
+#| msgid "Turn sticky keys and slow keys off after inactivity:"
+msgctxt "@option:check"
+msgid "Disable sticky and slow keys after:"
 msgstr "在未動作一段時間之後關閉相黏鍵與慢速按鍵"
 
-#: ui/ActivationGestures.qml:58
+#: ui/ActivationShortcuts.qml:75
 #, kde-format
 msgid "%1 min"
 msgid_plural "%1 min"
 msgstr[0] "%1 分鐘"
 
-#: ui/ActivationGestures.qml:62
-#, kde-format
+#: ui/ActivationShortcuts.qml:79
+#, fuzzy, kde-format
+#| msgid "min"
+msgctxt "short for minute(s)"
 msgid "min"
-msgstr " 分鐘"
+msgid_plural "min"
+msgstr[0] " 分鐘"
 
-#: ui/ActivationGestures.qml:70
-#, kde-format
-msgid "When a gesture is used:"
+#: ui/ActivationShortcuts.qml:88
+#, fuzzy, kde-format
+#| msgid "When a gesture is used:"
+msgid "When a shortcut is used:"
 msgstr "手勢被使用時："
 
-#: ui/ActivationGestures.qml:71
+#: ui/ActivationShortcuts.qml:89
 #, kde-format
 msgid "Display a confirmation dialog"
 msgstr "顯示確認對話框"
 
-#: ui/ActivationGestures.qml:82
-#, kde-format
-msgid "Ring the System Bell"
+#: ui/ActivationShortcuts.qml:100
+#, fuzzy, kde-format
+#| msgid "Ring the System Bell"
+msgid "Ring the system bell"
 msgstr "觸發系統響鈴"
 
-#: ui/ActivationGestures.qml:93
+#: ui/ActivationShortcuts.qml:111
 #, kde-format
 msgid "Show a notification"
 msgstr "顯示一個通知"
 
-#: ui/ActivationGestures.qml:104 ui/ModifierKeys.qml:99
+#: ui/ActivationShortcuts.qml:122
 #, kde-format
 msgid "Configure Notifications…"
 msgstr "設定通知…"
@@ -375,265 +398,381 @@ msgstr "啟用"
 
 #: ui/Bell.qml:42
 #, kde-format
+msgctxt "@label"
+msgid "Emits a sound whenever certain keys are pressed"
+msgstr ""
+
+#: ui/Bell.qml:50
+#, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
 msgstr "自訂音效："
 
-#: ui/Bell.qml:75
+#: ui/Bell.qml:83
 #, kde-format
 msgid "Search audio file for the system bell"
 msgstr "搜尋系統響鈴用的音效檔"
 
-#: ui/Bell.qml:76
+#: ui/Bell.qml:84
 #, kde-format
 msgid "Button search audio file"
 msgstr "按鈕搜尋音效檔"
 
-#: ui/Bell.qml:92
+#: ui/Bell.qml:100
 #, kde-format
 msgid "Visual bell:"
 msgstr "可視化響鈴："
 
-#: ui/Bell.qml:93
+#: ui/Bell.qml:101
 #, kde-format
 msgctxt "Enable visual bell"
 msgid "Enable"
 msgstr "啟用"
 
-#: ui/Bell.qml:107
-#, kde-format
-msgctxt "Invert screen on a system bell"
-msgid "Invert Screen"
+#: ui/Bell.qml:113
+#, fuzzy, kde-format
+#| msgid "Use the system bell whenever a key is rejected"
+msgctxt "@label"
+msgid "Flashes the screen whenever certain keys are pressed"
+msgstr "當按鍵被拒絕時使用系統鈴聲"
+
+#: ui/Bell.qml:123
+#, fuzzy, kde-format
+#| msgctxt "Invert screen on a system bell"
+#| msgid "Invert Screen"
+msgctxt "@option:radio Invert screen colors when a system bell is rung"
+msgid "Invert screen colors"
 msgstr "反轉螢幕"
 
-#: ui/Bell.qml:124
-#, kde-format
-msgctxt "Flash screen on a system bell"
-msgid "Flash"
-msgstr "閃光"
+#: ui/Bell.qml:141
+#, fuzzy, kde-format
+#| msgid "F&lash screen"
+msgctxt "@option:radio Flash screen when a system bell is rung"
+msgid "Flash screen"
+msgstr "閃爍螢幕(&L)"
 
-#: ui/Bell.qml:135
+#: ui/Bell.qml:152
 #, kde-format
 msgctxt "Color of the system bell"
 msgid "Color"
 msgstr "色彩"
 
-#: ui/Bell.qml:149
+#: ui/Bell.qml:166
 #, kde-format
 msgctxt "Duration of the system bell"
 msgid "Duration:"
 msgstr "持續時間："
 
-#: ui/KeyboardFilters.qml:18
+#: ui/Bell.qml:181 ui/KeyboardFilters.qml:55 ui/KeyboardFilters.qml:151
+#: ui/MouseNavigation.qml:51 ui/MouseNavigation.qml:73
+#: ui/MouseNavigation.qml:95
+#, fuzzy, kde-format
+#| msgid "%1 min"
+#| msgid_plural "%1 min"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 分鐘"
+
+#: ui/Bell.qml:185 ui/KeyboardFilters.qml:59 ui/KeyboardFilters.qml:155
+#: ui/MouseNavigation.qml:55 ui/MouseNavigation.qml:77
+#: ui/MouseNavigation.qml:99
+#, kde-format
+msgctxt "short for millisecond(s)"
+msgid "ms"
+msgid_plural "ms"
+msgstr[0] ""
+
+#: ui/KeyboardFilters.qml:17
 #, kde-format
 msgid "Slow keys:"
 msgstr "慢速按鍵："
 
-#: ui/KeyboardFilters.qml:19
+#: ui/KeyboardFilters.qml:22
 #, kde-format
 msgctxt "Enable slow keys"
 msgid "Enable"
 msgstr "啟用"
 
-#: ui/KeyboardFilters.qml:22
+#: ui/KeyboardFilters.qml:33
 #, kde-format
+msgctxt "@info:tooltip"
 msgid ""
-"For a key to be accepted, it has to be held until the set amount of time"
-msgstr "按鍵要被接受必須要先被持續按著一段時間"
+"For a key to be accepted, it has to be held until the set amount of time. "
+"Useful if you accidentally type more than one key at a time or have "
+"difficulty pressing the key you want the first time."
+msgstr ""
 
-#: ui/KeyboardFilters.qml:37
+#: ui/KeyboardFilters.qml:40
 #, kde-format
 msgctxt "Slow keys Delay"
 msgid "Delay:"
 msgstr "延遲："
 
-#: ui/KeyboardFilters.qml:57
+#: ui/KeyboardFilters.qml:68
 #, kde-format
 msgid "Ring system bell:"
 msgstr "觸發系統響鈴："
 
-#: ui/KeyboardFilters.qml:58
+#: ui/KeyboardFilters.qml:69
 #, kde-format
 msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
 msgstr "當任何按鍵被按下時(&P)"
 
-#: ui/KeyboardFilters.qml:72
+#: ui/KeyboardFilters.qml:83
 #, kde-format
 msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
 msgstr "當任何按鍵被接受時(&A)"
 
-#: ui/KeyboardFilters.qml:86
+#: ui/KeyboardFilters.qml:97
 #, kde-format
 msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
 msgstr "當任何按鍵被拒絕時(&R)"
 
-#: ui/KeyboardFilters.qml:103
+#: ui/KeyboardFilters.qml:113
 #, kde-format
 msgid "Bounce keys:"
 msgstr "彈回按鍵："
 
-#: ui/KeyboardFilters.qml:104
+#: ui/KeyboardFilters.qml:118
 #, kde-format
 msgctxt "Bounce keys enable"
 msgid "Enable"
 msgstr "啟用"
 
-#: ui/KeyboardFilters.qml:107
+#: ui/KeyboardFilters.qml:129
 #, kde-format
-msgid "Ignore rapid, repeated keypresses of the same key"
-msgstr "忽略快速重複按下同一個按鍵的動作"
+msgctxt "@info:tooltip"
+msgid ""
+"Ignore rapid, repeated keypresses of the same key. Useful if you have hand "
+"tremors that cause you to press a key multiple times when you only intend to "
+"press once."
+msgstr ""
 
-#: ui/KeyboardFilters.qml:122
+#: ui/KeyboardFilters.qml:136
 #, kde-format
 msgctxt "Bounce keys delay"
 msgid "Delay:"
 msgstr "延遲："
 
-#: ui/KeyboardFilters.qml:140
+#: ui/KeyboardFilters.qml:162
 #, kde-format
 msgid "Ring system bell when rejected"
 msgstr "拒絕按鍵時觸發系統響鈴"
 
-#: ui/main.qml:29
-#, kde-format
-msgctxt "System Bell"
-msgid "Bell"
-msgstr "響鈴"
+#: ui/main.qml:28
+#, fuzzy, kde-format
+#| msgid "Use System Bell"
+msgctxt "@title Category name in sidebar"
+msgid "System Bell"
+msgstr "使用系統響鈴"
 
-#: ui/main.qml:34
+#: ui/main.qml:33
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr "修飾鍵"
 
-#: ui/main.qml:39
+#: ui/main.qml:38
 #, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr "鍵盤過濾器"
 
-#: ui/main.qml:44
+#: ui/main.qml:43
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr "滑鼠導覽"
 
-#: ui/main.qml:49
-#, kde-format
-msgid "Activation Gestures"
+#: ui/main.qml:48
+#, fuzzy, kde-format
+#| msgid "Activation Gestures"
+msgid "Activation Shortcuts"
 msgstr "觸發手勢"
 
-#: ui/main.qml:54
+#: ui/main.qml:53
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
 msgstr "螢幕閱讀器"
 
-#: ui/main.qml:59
+#: ui/main.qml:58
 #, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"
 msgstr "甩動游標"
 
-#: ui/ModifierKeys.qml:16
-#, kde-format
+#: ui/ModifierKeys.qml:17
+#, fuzzy, kde-format
+#| msgid "Sticky keys:"
+msgctxt "@option:check"
 msgid "Sticky keys:"
 msgstr "相黏鍵："
 
-#: ui/ModifierKeys.qml:18
-#, kde-format
-msgctxt "Enable sticky keys"
+#: ui/ModifierKeys.qml:22
+#, fuzzy, kde-format
+#| msgid "Enable"
+msgctxt "@option:check Enable sticky keys"
 msgid "Enable"
 msgstr "啟用"
 
-#: ui/ModifierKeys.qml:30
+#: ui/ModifierKeys.qml:33
 #, kde-format
-msgctxt "Lock sticky keys"
-msgid "Lock"
-msgstr "鎖定"
+msgctxt "@info:tooltip"
+msgid ""
+"Modifier keys like Ctrl, Shift, Alt, and the Meta/Super/Windows key act as "
+"though they “stick in place” and no longer need to be held down when typing "
+"a keyboard shortcut."
+msgstr ""
 
-#: ui/ModifierKeys.qml:44
+#: ui/ModifierKeys.qml:39
+#, fuzzy, kde-format
+#| msgid "Lock the sticky keys"
+msgctxt "@option:check"
+msgid "Lock sticky keys"
+msgstr "鎖定相黏按鍵"
+
+#: ui/ModifierKeys.qml:51
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Once locked, the “sticky” state of modifier keys will not be disabled until "
+"a keyboard shortcut is finished or until a non-modifier key is pressed."
+msgstr ""
+
+#: ui/ModifierKeys.qml:57
 #, kde-format
 msgid "Disable when two keys are held down"
 msgstr "同時按下兩個按鍵時停用"
 
-#: ui/ModifierKeys.qml:57
+#: ui/ModifierKeys.qml:70
 #, kde-format
 msgid "Ring system bell when modifier keys are used"
 msgstr "使用修飾鍵時觸發系統響鈴"
 
-#: ui/ModifierKeys.qml:74
-#, kde-format
+#: ui/ModifierKeys.qml:88
+#, fuzzy, kde-format
+#| msgid "Feedback:"
+msgctxt "@option:check Feedback options:"
 msgid "Feedback:"
 msgstr "回饋："
 
-#: ui/ModifierKeys.qml:76
-#, kde-format
-msgid "Ring system bell when locking keys are toggled"
+#: ui/ModifierKeys.qml:93
+#, fuzzy, kde-format
+#| msgid "Ring system bell when locking keys are toggled"
+msgctxt "@option:check"
+msgid "Ring system bell when locking keys are used"
 msgstr "切換鎖定鍵時觸發系統響鈴"
 
-#: ui/ModifierKeys.qml:87
+#: ui/ModifierKeys.qml:104
 #, kde-format
+msgctxt "@info:tooltip"
+msgid "The locking keys are Caps Lock, Num Lock, and Scroll Lock."
+msgstr ""
+
+#: ui/ModifierKeys.qml:108
+#, fuzzy, kde-format
+#| msgid "Show notification when modifier or locking keys are used"
+msgctxt "@option:check"
 msgid "Show notification when modifier or locking keys are used"
 msgstr "使用修飾鍵或鎖定鍵時顯示通知"
 
-#: ui/MouseNavigation.qml:17
-#, kde-format
+#: ui/ModifierKeys.qml:120
+#, fuzzy, kde-format
+#| msgid "Configure Notifications…"
+msgctxt "@action:button"
+msgid "Configure Notifications…"
+msgstr "設定通知…"
+
+#: ui/MouseNavigation.qml:16
+#, fuzzy, kde-format
+#| msgid "Use number pad to move cursor:"
+msgctxt "@option:check"
 msgid "Use number pad to move cursor:"
 msgstr "使用數字鍵盤移動游標："
 
-#: ui/MouseNavigation.qml:18
-#, kde-format
+#: ui/MouseNavigation.qml:21
+#, fuzzy, kde-format
+#| msgid "Enable"
+msgctxt "@option:check Enable mouse navigation"
 msgid "Enable"
 msgstr "啟用"
 
-#: ui/MouseNavigation.qml:30
-#, kde-format
+#: ui/MouseNavigation.qml:32
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"The numpad key <shortcut>5</shortcut> functions as a mouse click. The keys "
+"<shortcut>2</shortcut>, <shortcut>4</shortcut>, <shortcut>6</shortcut>, and "
+"<shortcut>8</shortcut> allow for cardinal movement (down, left, right, and "
+"up). The keys <shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</"
+"shortcut>, and <shortcut>9</shortcut> allow for diagonal movement."
+msgstr ""
+
+#: ui/MouseNavigation.qml:37
+#, fuzzy, kde-format
+#| msgid "Acceleration delay:"
+msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
 msgstr "加速延遲："
 
-#: ui/MouseNavigation.qml:44
-#, kde-format
+#: ui/MouseNavigation.qml:59
+#, fuzzy, kde-format
+#| msgid "Repeat interval:"
+msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr "重複間隔："
 
-#: ui/MouseNavigation.qml:58
-#, kde-format
+#: ui/MouseNavigation.qml:81
+#, fuzzy, kde-format
+#| msgid "Acceleration time:"
+msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "加速時間："
 
-#: ui/MouseNavigation.qml:72
-#, kde-format
+#: ui/MouseNavigation.qml:103
+#, fuzzy, kde-format
+#| msgid "Maximum speed:"
+msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr "最快速度："
 
-#: ui/MouseNavigation.qml:86
-#, kde-format
+#: ui/MouseNavigation.qml:117
+#, fuzzy, kde-format
+#| msgid "Pointer acceleration:"
+msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
 msgstr "指標加速："
 
-#: ui/ScreenReader.qml:28
-#, kde-format
-msgid "Launch Orca Screen Reader Configuration…"
+#: ui/ScreenReader.qml:20
+#, fuzzy, kde-format
+#| msgid "Launch Orca Screen Reader Configuration…"
+msgctxt "@info Placeholder message title"
+msgid "The Orca Screen Reader is not installed"
 msgstr "開啟 Orca 螢幕閱讀器設定…"
 
-#: ui/ScreenReader.qml:42
+#: ui/ScreenReader.qml:21
 #, kde-format
-msgid ""
-"Please note that you may have to log out or reboot once to allow the screen "
-"reader to work properly."
-msgstr "請注意，您可能需要登出或重新開機一次，才能讓螢幕閱讀器正確運作。"
-
-#: ui/ScreenReader.qml:43
-#, kde-format
-msgid ""
-"It appears that the Orca Screen Reader is not installed. Please install it "
-"before trying to use this feature, and then log out or reboot"
+msgctxt "@info Placeholder message explanation"
+msgid "Please install it, then close and reopen this window"
 msgstr ""
-"Orca 螢幕閱讀器看起來尚未安裝。使用這個功能前請先安裝它並重新登入或重新開機"
+
+#: ui/ScreenReader.qml:27
+#, fuzzy, kde-format
+#| msgid "Enable Screen Reader"
+msgctxt "@option:check"
+msgid "Enable Screen Reader"
+msgstr "啟用螢幕閱讀器"
+
+#: ui/ScreenReader.qml:39
+#, fuzzy, kde-format
+#| msgid "Launch Orca Screen Reader Configuration…"
+msgctxt "@action:button"
+msgid "Launch Orca Screen Reader Configuration…"
+msgstr "開啟 Orca 螢幕閱讀器設定…"
 
 #: ui/ShakeCursor.qml:15
 #, kde-format
@@ -664,6 +803,47 @@ msgstr "一般"
 msgctxt "@label Large cursor size"
 msgid "Large"
 msgstr "巨大"
+
+#~ msgid "Activation:"
+#~ msgstr "觸發："
+
+#~ msgid "Use gestures for activating sticky keys and slow keys"
+#~ msgstr "使用手勢來觸發相黏鍵與慢速按鍵"
+
+#~ msgctxt "Flash screen on a system bell"
+#~ msgid "Flash"
+#~ msgstr "閃光"
+
+#~ msgid ""
+#~ "For a key to be accepted, it has to be held until the set amount of time"
+#~ msgstr "按鍵要被接受必須要先被持續按著一段時間"
+
+#~ msgid "Ignore rapid, repeated keypresses of the same key"
+#~ msgstr "忽略快速重複按下同一個按鍵的動作"
+
+#~ msgctxt "System Bell"
+#~ msgid "Bell"
+#~ msgstr "響鈴"
+
+#~ msgctxt "Enable sticky keys"
+#~ msgid "Enable"
+#~ msgstr "啟用"
+
+#~ msgctxt "Lock sticky keys"
+#~ msgid "Lock"
+#~ msgstr "鎖定"
+
+#~ msgid ""
+#~ "Please note that you may have to log out or reboot once to allow the "
+#~ "screen reader to work properly."
+#~ msgstr "請注意，您可能需要登出或重新開機一次，才能讓螢幕閱讀器正確運作。"
+
+#~ msgid ""
+#~ "It appears that the Orca Screen Reader is not installed. Please install "
+#~ "it before trying to use this feature, and then log out or reboot"
+#~ msgstr ""
+#~ "Orca 螢幕閱讀器看起來尚未安裝。使用這個功能前請先安裝它並重新登入或重新開"
+#~ "機"
 
 #~ msgid "Acceleration profile:"
 #~ msgstr "加速設定檔："
@@ -742,9 +922,6 @@ msgstr "巨大"
 #~ "below."
 #~ msgstr "畫面將會在下面指定的時間內轉變成自定的顏色。"
 
-#~ msgid "F&lash screen"
-#~ msgstr "閃爍螢幕(&L)"
-
 #~ msgid ""
 #~ "All screen colors will be inverted for the amount of time specified below."
 #~ msgstr "畫面所有的顏色將會在下面指定的時間內反白。"
@@ -775,9 +952,6 @@ msgstr "巨大"
 
 #~ msgid "Use bou&nce keys"
 #~ msgstr "使用彈回按鍵(&N)"
-
-#~ msgid "Use the system bell whenever a key is rejected"
-#~ msgstr "當按鍵被拒絕時使用系統鈴聲"
 
 #~ msgid ""
 #~ "Use the system bell whenever a gesture is used to toggle an accessibility "

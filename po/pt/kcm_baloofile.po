@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_baloofile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-29 00:40+0000\n"
+"POT-Creation-Date: 2024-08-28 00:40+0000\n"
 "PO-Revision-Date: 2022-12-14 09:40+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -143,8 +143,10 @@ msgid "Indexed"
 msgstr "Indexado"
 
 #: ui/main.qml:301
-#, kde-format
-msgid "Delete entry"
+#, fuzzy, kde-format
+#| msgid "Delete entry"
+msgctxt "Remove the list item for this filesystem path"
+msgid "Remove entry"
 msgstr "Apagar o item"
 
 #: ui/main.qml:316

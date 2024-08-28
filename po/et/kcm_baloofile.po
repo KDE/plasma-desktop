@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-29 00:40+0000\n"
+"POT-Creation-Date: 2024-08-28 00:40+0000\n"
 "PO-Revision-Date: 2020-10-07 22:37+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -139,8 +139,10 @@ msgid "Indexed"
 msgstr "Indekseeritud"
 
 #: ui/main.qml:301
-#, kde-format
-msgid "Delete entry"
+#, fuzzy, kde-format
+#| msgid "Delete entry"
+msgctxt "Remove the list item for this filesystem path"
+msgid "Remove entry"
 msgstr "Kustuta kirje"
 
 #: ui/main.qml:316

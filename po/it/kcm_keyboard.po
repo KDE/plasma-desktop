@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-22 00:41+0000\n"
-"PO-Revision-Date: 2024-08-17 19:10+0200\n"
+"PO-Revision-Date: 2024-08-27 18:19+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -243,7 +243,7 @@ msgstr "Ritardo:"
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat delay %1"
-msgstr ""
+msgstr "Ritardo ripetizione dei tasti %1"
 
 #: ui/main.qml:188
 #, kde-format
@@ -267,7 +267,7 @@ msgstr "Velocità:"
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat rate %1"
-msgstr ""
+msgstr "Velocità ripetizione dei tasti %1"
 
 #: ui/main.qml:227
 #, kde-format
@@ -375,9 +375,7 @@ msgstr ""
 "scorciatoia personalizzata."
 
 #: ui/main.qml:385
-#, fuzzy, kde-format
-#| msgctxt "@label:group Shotcut to change the keyboard layout. Keep it short"
-#| msgid "Change layout shortcut:"
+#, kde-format
 msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
 msgstr "Modifica la scorciatoia della mappatura:"
@@ -455,12 +453,10 @@ msgid "Switch to last used layout:"
 msgstr "Passa all'ultima mappatura utilizzata:"
 
 #: ui/Switching.qml:133
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:group"
 msgid "Legacy Shortcuts"
-msgstr "Scorciatoia"
+msgstr "Scorciatoie originali"
 
 #: ui/Switching.qml:141
 #, kde-kuit-format
@@ -471,6 +467,11 @@ msgid ""
 "Wayland.<nl/><nl/>Setting these shortcuts will take you to the Key bindings "
 "page."
 msgstr ""
+"Le scorciatoie X11 originali permettono un controllo più fine delle "
+"scorciatoie dei soli modificatori, e hanno un supporto leggermente migliore "
+"in X11 nei casi limite. Possono essere usate anche in Wayland.<nl/><nl/"
+">L'impostazione di queste scorciatoie ti porterà alla pagina delle "
+"associazioni dei tasti."
 
 #: ui/Switching.qml:182
 #, kde-format
