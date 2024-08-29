@@ -644,7 +644,7 @@ ColumnLayout {
             Item {Layout.fillWidth: true}
 
             PC3.ToolButton {
-                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button Done configuring the panel", "Done")
+                text: plasmoid.corona.enteredEditModeViaDesktop() ? i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button Close the panel configuration window", "Close") : i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button Close the panel configuration window and exit edit mode", "Exit Edit Mode")
                 icon.name: "dialog-ok-symbolic"
 
                 PC3.ToolTip.text: i18nd("plasma_shell_org.kde.plasma.desktop", "Close Panel Settings window and exit Edit Mode")
