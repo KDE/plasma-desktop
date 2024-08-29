@@ -4,14 +4,14 @@
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2014, 2015, 2019, 2020.
-# Josep M. Ferrer <txemaq@gmail.com>, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
 # Alfredo Vicente <alviboi@gmail.com>, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:40+0000\n"
-"PO-Revision-Date: 2024-07-11 08:50+0200\n"
+"PO-Revision-Date: 2024-08-28 16:37+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -69,15 +69,13 @@ msgid "9,999+"
 msgstr "9.999+"
 
 #: package/contents/ui/ConfigAppearance.qml:46
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@label for several checkboxes"
 msgid "General:"
 msgstr "General:"
 
 #: package/contents/ui/ConfigAppearance.qml:47
-#, fuzzy, kde-format
-#| msgid "Show small window previews when hovering over Tasks"
+#, kde-format
 msgctxt "@option:check section General"
 msgid "Show small window previews when hovering over tasks"
 msgstr ""
@@ -85,30 +83,25 @@ msgstr ""
 "tasques"
 
 #: package/contents/ui/ConfigAppearance.qml:52
-#, fuzzy, kde-format
-#| msgid "Hide other windows when hovering over previews"
+#, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over previews"
 msgstr "Oculta les altres finestres en passar per sobre de les vistes prèvies"
 
 #: package/contents/ui/ConfigAppearance.qml:57
-#, fuzzy, kde-format
-#| msgid "Mark applications that play audio"
+#, kde-format
 msgctxt "@option:check section General"
 msgid "Mark applications that play audio"
 msgstr "Marca les aplicacions que reprodueixin àudio"
 
 #: package/contents/ui/ConfigAppearance.qml:65
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Fill free space on Panel"
+#, kde-format
 msgctxt "@option:check section General"
 msgid "Fill free space on panel"
 msgstr "Omple l'espai lliure en el plafó"
 
 #: package/contents/ui/ConfigAppearance.qml:77
-#, fuzzy, kde-format
-#| msgid "Maximum task width:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Maximum task width:"
 msgstr "Amplada màxima de les tasques:"
@@ -132,9 +125,7 @@ msgid "Wide"
 msgstr "Ampla"
 
 #: package/contents/ui/ConfigAppearance.qml:93
-#, fuzzy, kde-format
-#| msgctxt "@option: radio"
-#| msgid "Use multi-column view:"
+#, kde-format
 msgctxt ""
 "@label for radio button group, completes sentence: … when panel is low on "
 "space etc."
@@ -142,9 +133,7 @@ msgid "Use multi-column view:"
 msgstr "Usa una vista multicolumna:"
 
 #: package/contents/ui/ConfigAppearance.qml:94
-#, fuzzy, kde-format
-#| msgctxt "@option:radio"
-#| msgid "Use multi-row view:"
+#, kde-format
 msgctxt ""
 "@label for radio button group, completes sentence: … when panel is low on "
 "space etc."
@@ -152,48 +141,37 @@ msgid "Use multi-row view:"
 msgstr "Usa una vista multifila:"
 
 #: package/contents/ui/ConfigAppearance.qml:100
-#, fuzzy, kde-format
-#| msgctxt "Never use multi-column view for Task Manager"
-#| msgid "Never"
+#, kde-format
 msgctxt "@option:radio Never use multi-column view for Task Manager"
 msgid "Never"
 msgstr "Mai"
 
 #: package/contents/ui/ConfigAppearance.qml:110
-#, fuzzy, kde-format
-#| msgctxt "When to use multi-row view in Task Manager"
-#| msgid "When Panel is low on space and thick enough"
+#, kde-format
 msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "When panel is low on space and thick enough"
 msgstr "Quan el plafó té poc espai i és prou ample"
 
 #: package/contents/ui/ConfigAppearance.qml:120
-#, fuzzy, kde-format
-#| msgctxt "When to use multi-row view in Task Manager"
-#| msgid "Always when Panel is thick enough"
+#, kde-format
 msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "Always when panel is thick enough"
-msgstr "Sempre quan el plafó és prou ample"
+msgstr "Sempre quan el plafó sigui prou ample"
 
 #: package/contents/ui/ConfigAppearance.qml:127
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Maximum columns:"
+#, kde-format
 msgctxt "@label:spinbox maximum number of columns for tasks"
 msgid "Maximum columns:"
 msgstr "Màxim de columnes:"
 
 #: package/contents/ui/ConfigAppearance.qml:128
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Maximum rows:"
+#, kde-format
 msgctxt "@label:spinbox maximum number of rows for tasks"
 msgid "Maximum rows:"
 msgstr "Màxim de files:"
 
 #: package/contents/ui/ConfigAppearance.qml:138
-#, fuzzy, kde-format
-#| msgid "Spacing between icons:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Spacing between icons:"
 msgstr "Espaiat entre les icones:"
@@ -217,46 +195,37 @@ msgid "Large"
 msgstr "Gran"
 
 #: package/contents/ui/ConfigAppearance.qml:176
-#, fuzzy, kde-format
-#| msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
-#| msgid "Automatically set to Large when in Touch Mode"
+#, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch mode"
 msgstr "S'estableix automàticament a Gran en el mode tàctil"
 
 #: package/contents/ui/ConfigBehavior.qml:49
-#, fuzzy, kde-format
-#| msgid "Group:"
+#, kde-format
 msgctxt "@label:listbox how to group tasks"
 msgid "Group:"
 msgstr "Grup:"
 
 #: package/contents/ui/ConfigBehavior.qml:53
-#, fuzzy, kde-format
-#| msgid "Do not group"
+#, kde-format
 msgctxt "@item:inlistbox how to group tasks"
 msgid "Do not group"
 msgstr "No agrupis"
 
 #: package/contents/ui/ConfigBehavior.qml:54
-#, fuzzy, kde-format
-#| msgid "By program name"
+#, kde-format
 msgctxt "@item:inlistbox how to group tasks"
 msgid "By program name"
 msgstr "Per nom del programa"
 
 #: package/contents/ui/ConfigBehavior.qml:60
-#, fuzzy, kde-format
-#| msgid "Clicking grouped task:"
+#, kde-format
 msgctxt "@label:listbox completes sentence like: … cycles through tasks"
 msgid "Clicking grouped task:"
 msgstr "En fer clic a les tasques agrupades:"
 
 #: package/contents/ui/ConfigBehavior.qml:67
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task cycles through tasks' "
-#| msgid "Cycles through tasks"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task cycles through "
 "tasks' "
@@ -264,11 +233,7 @@ msgid "Cycles through tasks"
 msgstr "Circula entre les tasques"
 
 #: package/contents/ui/ConfigBehavior.qml:68
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows tooltip window "
-#| "thumbnails' "
-#| msgid "Shows small window previews"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task shows small "
 "window previews' "
@@ -276,10 +241,7 @@ msgid "Shows small window previews"
 msgstr "Mostra vistes prèvies petites de les finestres"
 
 #: package/contents/ui/ConfigBehavior.qml:69
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows large window previews"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task shows large "
 "window previews' "
@@ -287,9 +249,7 @@ msgid "Shows large window previews"
 msgstr "Mostra vistes prèvies grans de les finestres"
 
 #: package/contents/ui/ConfigBehavior.qml:70
-#, fuzzy, kde-format
-#| msgctxt "Completes the sentence 'Clicking grouped task shows textual list' "
-#| msgid "Shows textual list"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task shows textual "
 "list' "
@@ -297,10 +257,7 @@ msgid "Shows textual list"
 msgstr "Mostra la llista de text"
 
 #: package/contents/ui/ConfigBehavior.qml:81
-#, fuzzy, kde-format
-#| msgid ""
-#| "The compositor does not support displaying windows side by side, so a "
-#| "textual list will be displayed instead."
+#, kde-format
 msgctxt "@info displayed as InlineMessage"
 msgid ""
 "The compositor does not support displaying windows side by side, so a "
@@ -310,79 +267,67 @@ msgstr ""
 "tant, en el seu lloc es mostrarà una llista de text."
 
 #: package/contents/ui/ConfigBehavior.qml:91
-#, fuzzy, kde-format
-#| msgid "Combine into single button"
+#, kde-format
 msgctxt "@option:check grouped task"
 msgid "Combine into single button"
 msgstr "Combina en un únic botó"
 
 #: package/contents/ui/ConfigBehavior.qml:98
-#, fuzzy, kde-format
-#| msgid "Group only when the Task Manager is full"
+#, kde-format
 msgctxt "@option:check grouped task"
 msgid "Group only when the Task Manager is full"
 msgstr "Agrupa només quan el gestor de tasques estigui ple"
 
 #: package/contents/ui/ConfigBehavior.qml:110
-#, fuzzy, kde-format
-#| msgid "Sort:"
+#, kde-format
 msgctxt "@label:listbox sort tasks in grouped task"
 msgid "Sort:"
 msgstr "Ordenació:"
 
 #: package/contents/ui/ConfigBehavior.qml:114
-#, fuzzy, kde-format
-#| msgid "Do not sort"
+#, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Do not sort"
 msgstr "No ordenis"
 
 #: package/contents/ui/ConfigBehavior.qml:115
-#, fuzzy, kde-format
-#| msgid "Manually"
+#, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Manually"
 msgstr "Manualment"
 
 #: package/contents/ui/ConfigBehavior.qml:116
-#, fuzzy, kde-format
-#| msgid "Alphabetically"
+#, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Alphabetically"
 msgstr "Alfabèticament"
 
 #: package/contents/ui/ConfigBehavior.qml:117
-#, fuzzy, kde-format
-#| msgid "By desktop"
+#, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By desktop"
 msgstr "Per escriptori"
 
 #: package/contents/ui/ConfigBehavior.qml:118
-#, fuzzy, kde-format
-#| msgid "By activity"
+#, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By activity"
 msgstr "Per activitat"
 
 #: package/contents/ui/ConfigBehavior.qml:125
-#, fuzzy, kde-format
-#| msgid "Keep launchers separate"
+#, kde-format
 msgctxt "@option:check configure task sorting"
 msgid "Keep launchers separate"
 msgstr "Mantén els llançadors separats"
 
 #: package/contents/ui/ConfigBehavior.qml:132
-#, fuzzy, kde-format
-#| msgid "Hide launchers after application startup"
+#, kde-format
 msgctxt "@option:check for icons-and-text task manager"
 msgid "Hide launchers after application startup"
 msgstr "Oculta els llançadors després de l'inici de les aplicacions"
 
 #: package/contents/ui/ConfigBehavior.qml:142
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
-#| msgid "Clicking active task:"
+#, kde-format
 msgctxt ""
 "@label for checkbox Part of a sentence: 'Clicking active task minimizes the "
 "task'"
@@ -390,35 +335,27 @@ msgid "Clicking active task:"
 msgstr "En fer clic a una tasca activa:"
 
 #: package/contents/ui/ConfigBehavior.qml:143
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
-#| msgid "Minimizes the task"
+#, kde-format
 msgctxt ""
 "@option:check Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
 msgstr "Minimitza la tasca"
 
 #: package/contents/ui/ConfigBehavior.qml:148
-#, fuzzy, kde-format
-#| msgid "Middle-clicking any task:"
+#, kde-format
 msgctxt "@label:listbox completes sentence like: … does nothing"
 msgid "Middle-clicking any task:"
 msgstr "En fer clic del mig a qualsevol tasca:"
 
 #: package/contents/ui/ConfigBehavior.qml:152
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Middle-clicking any task does nothing'"
-#| msgid "Does nothing"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task does nothing'"
 msgid "Does nothing"
 msgstr "No fa res"
 
 #: package/contents/ui/ConfigBehavior.qml:153
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Part of a sentence: 'Middle-clicking any task closes window or group'"
-#| msgid "Closes window or group"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task closes window "
 "or group'"
@@ -426,9 +363,7 @@ msgid "Closes window or group"
 msgstr "Tanca la finestra o el grup"
 
 #: package/contents/ui/ConfigBehavior.qml:154
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Middle-clicking any task opens a new window'"
-#| msgid "Opens a new window"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task opens a new "
 "window'"
@@ -436,11 +371,7 @@ msgid "Opens a new window"
 msgstr "Obre una finestra nova"
 
 #: package/contents/ui/ConfigBehavior.qml:155
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Part of a sentence: 'Middle-clicking any task minimizes/restores window "
-#| "or group'"
-#| msgid "Minimizes/Restores window or group"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task minimizes/"
 "restores window or group'"
@@ -448,9 +379,7 @@ msgid "Minimizes/Restores window or group"
 msgstr "Minimitza/restaura la finestra o el grup"
 
 #: package/contents/ui/ConfigBehavior.qml:156
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Middle-clicking any task toggles grouping'"
-#| msgid "Toggles grouping"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task toggles "
 "grouping'"
@@ -458,11 +387,7 @@ msgid "Toggles grouping"
 msgstr "Commuta l'agrupament"
 
 #: package/contents/ui/ConfigBehavior.qml:157
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Part of a sentence: 'Middle-clicking any task brings it to the current "
-#| "virtual desktop'"
-#| msgid "Brings it to the current virtual desktop"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task brings it to "
 "the current virtual desktop'"
@@ -470,114 +395,96 @@ msgid "Brings it to the current virtual desktop"
 msgstr "La trasllada a l'escriptori virtual actual"
 
 #: package/contents/ui/ConfigBehavior.qml:167
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
-#| msgid "Mouse wheel:"
+#, kde-format
 msgctxt ""
 "@label for checkbox Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Mouse wheel:"
 msgstr "Roda del ratolí:"
 
 #: package/contents/ui/ConfigBehavior.qml:168
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task cycles through tasks' "
-#| msgid "Cycles through tasks"
+#, kde-format
 msgctxt "@option:check Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
 msgstr "Circula entre les tasques"
 
 #: package/contents/ui/ConfigBehavior.qml:177
-#, fuzzy, kde-format
-#| msgid "Skip minimized tasks"
+#, kde-format
 msgctxt "@option:check mouse wheel task cycling"
 msgid "Skip minimized tasks"
 msgstr "Omet les tasques minimitzades"
 
 #: package/contents/ui/ConfigBehavior.qml:188
-#, fuzzy, kde-format
-#| msgid "Show only tasks:"
+#, kde-format
 msgctxt ""
 "@label for checkbox group, completes sentence like: … from current screen"
 msgid "Show only tasks:"
 msgstr "Mostra només les tasques:"
 
 #: package/contents/ui/ConfigBehavior.qml:189
-#, fuzzy, kde-format
-#| msgid "From current screen"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current screen"
 msgstr "De la pantalla actual"
 
 #: package/contents/ui/ConfigBehavior.qml:194
-#, fuzzy, kde-format
-#| msgid "From current desktop"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current desktop"
 msgstr "De l'escriptori actual"
 
 #: package/contents/ui/ConfigBehavior.qml:199
-#, fuzzy, kde-format
-#| msgid "From current activity"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current activity"
 msgstr "De l'activitat actual"
 
 #: package/contents/ui/ConfigBehavior.qml:204
-#, fuzzy, kde-format
-#| msgid "That are minimized"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "That are minimized"
 msgstr "Que estiguin minimitzades"
 
 #: package/contents/ui/ConfigBehavior.qml:213
-#, fuzzy, kde-format
-#| msgid "When panel is hidden:"
+#, kde-format
 msgctxt ""
 "@label for checkbox, completes sentence: … unhide if window wants attention"
 msgid "When panel is hidden:"
 msgstr "Quan el plafó està ocult:"
 
 #: package/contents/ui/ConfigBehavior.qml:214
-#, fuzzy, kde-format
-#| msgid "Unhide when a window wants attention"
+#, kde-format
 msgctxt "@option:check completes sentence: When panel is hidden"
 msgid "Unhide when a window wants attention"
 msgstr "Mostra quan una finestra vulgui atenció"
 
 #: package/contents/ui/ConfigBehavior.qml:226
-#, fuzzy, kde-format
-#| msgid "New tasks appear:"
+#, kde-format
 msgctxt "@label for radiobutton group completes sentence like: … on the bottom"
 msgid "New tasks appear:"
 msgstr "Les tasques noves apareixen:"
 
 #: package/contents/ui/ConfigBehavior.qml:230
-#, fuzzy, kde-format
-#| msgid "On the bottom"
+#, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the bottom"
 msgstr "A la part inferior"
 
 #: package/contents/ui/ConfigBehavior.qml:234
 #: package/contents/ui/ConfigBehavior.qml:253
-#, fuzzy, kde-format
-#| msgid "To the right"
+#, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the right"
 msgstr "A la dreta"
 
 #: package/contents/ui/ConfigBehavior.qml:236
 #: package/contents/ui/ConfigBehavior.qml:251
-#, fuzzy, kde-format
-#| msgid "To the left"
+#, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the left"
 msgstr "A l'esquerra"
 
 #: package/contents/ui/ConfigBehavior.qml:247
-#, fuzzy, kde-format
-#| msgid "On the Top"
+#, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the top"
 msgstr "A la part superior"

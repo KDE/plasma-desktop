@@ -12,79 +12,79 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 00:40+0000\n"
-"PO-Revision-Date: 2024-07-01 08:44+0200\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
+"PO-Revision-Date: 2024-08-28 19:00+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.08.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
-#: kcmaccess.cpp:116
+#: kcmaccess.cpp:117
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGr"
 
-#: kcmaccess.cpp:118
+#: kcmaccess.cpp:119
 #, kde-format
 msgid "Hyper"
 msgstr "Hyper"
 
-#: kcmaccess.cpp:120
+#: kcmaccess.cpp:121
 #, kde-format
 msgid "Super"
 msgstr "Súper"
 
-#: kcmaccess.cpp:130
+#: kcmaccess.cpp:131
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
 msgstr "Premeu %1 mentre Bloq Núm, Bloq Maj i Bloq Despl estan actives"
 
-#: kcmaccess.cpp:131
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
 msgstr "Premeu %1 mentre Bloq Maj i Bloq Despl estan actives"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
 msgstr "Premeu %1 mentre Bloq Núm i Bloq Despl estan actives"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:134
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
 msgstr "Premeu %1 mentre Bloq Despl està activa"
 
-#: kcmaccess.cpp:134
+#: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
 msgstr "Premeu %1 mentre Bloq Núm i Bloq Maj estan actives"
 
-#: kcmaccess.cpp:135
+#: kcmaccess.cpp:136
 #, kde-format
 msgid "Press %1 while CapsLock is active"
 msgstr "Premeu %1 mentre Bloq Maj està activa"
 
-#: kcmaccess.cpp:136
+#: kcmaccess.cpp:137
 #, kde-format
 msgid "Press %1 while NumLock is active"
 msgstr "Premeu %1 mentre Bloq Núm està activa"
 
-#: kcmaccess.cpp:137
+#: kcmaccess.cpp:138
 #, kde-format
 msgid "Press %1"
 msgstr "Premeu %1"
 
-#: kcmaccess.cpp:186
+#: kcmaccess.cpp:192
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "No s'han pogut definir els paràmetres de l'Orca: «%1» ha fallat"
 
-#: kcmaccess.cpp:193
+#: kcmaccess.cpp:199
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Error: No s'ha pogut llançar «orca --setup»"
@@ -166,6 +166,13 @@ msgstr "Color del timbre visible"
 #, kde-format
 msgid "Duration of the Visible Bell"
 msgstr "Durada del timbre visible"
+
+#. i18n: ectx: label, entry (ColorblindnessCorrection), group (Plugins)
+#: kcmaccessibilitycolorblindnesscorrection.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Whether Shake Cursor is enabled"
+msgid "Whether Colorblindness Correction is enabled"
+msgstr "Si s'ha activat Sacseja el cursor"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
@@ -307,15 +314,13 @@ msgid "Magnification"
 msgstr "Ampliació"
 
 #: ui/ActivationShortcuts.qml:17
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgctxt "@option:check"
 msgid "Activation shortcuts:"
-msgstr "Gestos d'activació"
+msgstr "Dreceres d'activació:"
 
 #: ui/ActivationShortcuts.qml:18
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "Enable activation shortcuts"
 msgid "Enable"
 msgstr "Activa"
@@ -325,19 +330,21 @@ msgstr "Activa"
 msgctxt "@label"
 msgid "Press Shift 5 times to enable Sticky Keys"
 msgstr ""
+"Premeu 5 vegades la tecla de majúscules per a activar les tecles apegaloses"
 
 #: ui/ActivationShortcuts.qml:37
 #, kde-format
 msgctxt "@label"
 msgid "Hold Shift for 8 seconds to enable Slow Keys"
 msgstr ""
+"Mantingueu premuda la tecla de majúscules durant 8 segons per a activar les "
+"tecles lentes"
 
 #: ui/ActivationShortcuts.qml:46
-#, fuzzy, kde-format
-#| msgid "Turn sticky keys and slow keys off after inactivity:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable sticky and slow keys after:"
-msgstr "Desactiva les tecles apegaloses i lentes després d'inactivitat:"
+msgstr "Desactiva les tecles apegaloses i lentes després de:"
 
 #: ui/ActivationShortcuts.qml:75
 #, kde-format
@@ -347,8 +354,7 @@ msgstr[0] "%1 min"
 msgstr[1] "%1 min"
 
 #: ui/ActivationShortcuts.qml:79
-#, fuzzy, kde-format
-#| msgid "min"
+#, kde-format
 msgctxt "short for minute(s)"
 msgid "min"
 msgid_plural "min"
@@ -356,10 +362,9 @@ msgstr[0] "min"
 msgstr[1] "min"
 
 #: ui/ActivationShortcuts.qml:88
-#, fuzzy, kde-format
-#| msgid "When a gesture is used:"
+#, kde-format
 msgid "When a shortcut is used:"
-msgstr "En usar un gest:"
+msgstr "En usar una drecera:"
 
 #: ui/ActivationShortcuts.qml:89
 #, kde-format
@@ -367,8 +372,7 @@ msgid "Display a confirmation dialog"
 msgstr "Mostra un diàleg de confirmació"
 
 #: ui/ActivationShortcuts.qml:100
-#, fuzzy, kde-format
-#| msgid "Ring the System Bell"
+#, kde-format
 msgid "Ring the system bell"
 msgstr "Fes sonar el timbre del sistema"
 
@@ -408,7 +412,7 @@ msgstr "Activa"
 #, kde-format
 msgctxt "@label"
 msgid "Emits a sound whenever certain keys are pressed"
-msgstr ""
+msgstr "Emet un so quan es premen determinades tecles"
 
 #: ui/Bell.qml:50
 #, kde-format
@@ -441,21 +445,19 @@ msgstr "Activa"
 #, kde-format
 msgctxt "@label"
 msgid "Flashes the screen whenever certain keys are pressed"
-msgstr ""
+msgstr "La pantalla fa un flaix quan es premen determinades tecles"
 
 #: ui/Bell.qml:123
-#, fuzzy, kde-format
-#| msgctxt "Invert screen on a system bell"
-#| msgid "Invert Screen"
+#, kde-format
 msgctxt "@option:radio Invert screen colors when a system bell is rung"
 msgid "Invert screen colors"
-msgstr "Inverteix la pantalla"
+msgstr "Inverteix els colors de la pantalla"
 
 #: ui/Bell.qml:141
 #, kde-format
 msgctxt "@option:radio Flash screen when a system bell is rung"
 msgid "Flash screen"
-msgstr ""
+msgstr "Flaix de la pantalla"
 
 #: ui/Bell.qml:152
 #, kde-format
@@ -472,13 +474,11 @@ msgstr "Durada:"
 #: ui/Bell.qml:181 ui/KeyboardFilters.qml:55 ui/KeyboardFilters.qml:151
 #: ui/MouseNavigation.qml:51 ui/MouseNavigation.qml:73
 #: ui/MouseNavigation.qml:95
-#, fuzzy, kde-format
-#| msgid "%1 min"
-#| msgid_plural "%1 min"
+#, kde-format
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "%1 min"
-msgstr[1] "%1 min"
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
 
 #: ui/Bell.qml:185 ui/KeyboardFilters.qml:59 ui/KeyboardFilters.qml:155
 #: ui/MouseNavigation.qml:55 ui/MouseNavigation.qml:77
@@ -487,8 +487,84 @@ msgstr[1] "%1 min"
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ms"
+msgstr[1] "ms"
+
+#: ui/ColorblindnessCorrection.qml:22
+#, kde-format
+msgctxt "@label"
+msgid "Color blindness correction:"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:23
+#, fuzzy, kde-format
+#| msgctxt "Enable activation shortcuts"
+#| msgid "Enable"
+msgctxt "@option check, Enable color blindness correction effect"
+msgid "Enable"
+msgstr "Activa"
+
+#: ui/ColorblindnessCorrection.qml:36
+#, kde-format
+msgctxt "@label"
+msgid "Mode:"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:41
+#, kde-format
+msgctxt "@option"
+msgid "Protanopia (red weak)"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:42
+#, kde-format
+msgctxt "@option"
+msgid "Deuteranopia (green weak)"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:43
+#, kde-format
+msgctxt "@option"
+msgid "Tritanopia (blue-yellow)"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:58
+#, kde-format
+msgctxt "@label"
+msgid "Intensity:"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:81
+#, kde-format
+msgctxt "@label Mild color blindness correction intensity"
+msgid "Mild"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:88
+#, kde-format
+msgctxt "@label Intense color blindness correction intensity"
+msgid "Intense"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:111
+#, kde-format
+msgid "Red"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:112
+#, kde-format
+msgid "Green"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:113
+#, kde-format
+msgid "Blue"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:114
+#, kde-format
+msgid "Purple"
+msgstr ""
 
 #: ui/KeyboardFilters.qml:17
 #, kde-format
@@ -509,6 +585,9 @@ msgid ""
 "Useful if you accidentally type more than one key at a time or have "
 "difficulty pressing the key you want the first time."
 msgstr ""
+"Perquè s'accepti una tecla, s'ha de mantenir fins al temps establert. És "
+"útil si escriviu accidentalment més d'una tecla alhora o teniu dificultats "
+"per prémer la tecla que voleu la primera vegada."
 
 #: ui/KeyboardFilters.qml:40
 #, kde-format
@@ -558,6 +637,9 @@ msgid ""
 "tremors that cause you to press a key multiple times when you only intend to "
 "press once."
 msgstr ""
+"Ignora les pulsacions ràpides i repetides de la mateixa tecla. És útil si "
+"teniu tremolors de mans que us fan prémer una tecla diverses vegades quan "
+"només preteneu prémer una vegada."
 
 #: ui/KeyboardFilters.qml:136
 #, kde-format
@@ -571,11 +653,10 @@ msgid "Ring system bell when rejected"
 msgstr "Fes sonar el timbre quan es rebutgi"
 
 #: ui/main.qml:28
-#, fuzzy, kde-format
-#| msgid "Use System Bell"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "System Bell"
-msgstr "Usa el timbre del sistema"
+msgstr "Timbre del sistema"
 
 #: ui/main.qml:33
 #, kde-format
@@ -596,10 +677,9 @@ msgid "Mouse Navigation"
 msgstr "Navegació amb el ratolí"
 
 #: ui/main.qml:48
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgid "Activation Shortcuts"
-msgstr "Gestos d'activació"
+msgstr "Dreceres d'activació"
 
 #: ui/main.qml:53
 #, kde-format
@@ -609,20 +689,24 @@ msgstr "Lector de pantalla"
 
 #: ui/main.qml:58
 #, kde-format
+msgctxt "Correction for color blindness"
+msgid "Color Blindness Correction"
+msgstr ""
+
+#: ui/main.qml:63
+#, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"
 msgstr "Sacseja el cursor"
 
 #: ui/ModifierKeys.qml:17
-#, fuzzy, kde-format
-#| msgid "Sticky keys:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sticky keys:"
 msgstr "Tecles apegaloses:"
 
 #: ui/ModifierKeys.qml:22
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable sticky keys"
 msgid "Enable"
 msgstr "Activa"
@@ -635,10 +719,12 @@ msgid ""
 "though they “stick in place” and no longer need to be held down when typing "
 "a keyboard shortcut."
 msgstr ""
+"Les tecles modificadores com Ctrl, Maj, Alt i la tecla Meta/Súper/Windows "
+"actuen com si fossin «apegaloses al lloc» i ja no cal mantenir-les premudes "
+"en teclejar una drecera de teclat."
 
 #: ui/ModifierKeys.qml:39
-#, fuzzy, kde-format
-#| msgid "Lock the sticky keys"
+#, kde-format
 msgctxt "@option:check"
 msgid "Lock sticky keys"
 msgstr "Bloqueja les tecles apegaloses"
@@ -650,6 +736,9 @@ msgid ""
 "Once locked, the “sticky” state of modifier keys will not be disabled until "
 "a keyboard shortcut is finished or until a non-modifier key is pressed."
 msgstr ""
+"Un cop bloquejada, l'estat «apegalós» de les tecles modificadores no es "
+"desactivarà fins que finalitzi una drecera de teclat o fins que es premi una "
+"tecla no modificadora."
 
 #: ui/ModifierKeys.qml:57
 #, kde-format
@@ -662,50 +751,45 @@ msgid "Ring system bell when modifier keys are used"
 msgstr "Fes sonar el timbre del sistema quan s'usin les tecles modificadores"
 
 #: ui/ModifierKeys.qml:88
-#, fuzzy, kde-format
-#| msgid "Feedback:"
+#, kde-format
 msgctxt "@option:check Feedback options:"
 msgid "Feedback:"
 msgstr "Retroalimentació:"
 
 #: ui/ModifierKeys.qml:93
-#, fuzzy, kde-format
-#| msgid "Ring system bell when locking keys are toggled"
+#, kde-format
 msgctxt "@option:check"
 msgid "Ring system bell when locking keys are used"
-msgstr "Fes sonar el timbre del sistema quan es commuti el bloqueig de tecles"
+msgstr ""
+"Fes sonar el timbre del sistema quan es faci servir el bloqueig de tecles"
 
 #: ui/ModifierKeys.qml:104
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The locking keys are Caps Lock, Num Lock, and Scroll Lock."
-msgstr ""
+msgstr "Les tecles de bloqueig són Bloq Maj, Bloq Núm i Bloq Despl."
 
 #: ui/ModifierKeys.qml:108
-#, fuzzy, kde-format
-#| msgid "Show notification when modifier or locking keys are used"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show notification when modifier or locking keys are used"
 msgstr ""
 "Mostra una notificació quan s'usi un modificador o les tecles de bloqueig"
 
 #: ui/ModifierKeys.qml:120
-#, fuzzy, kde-format
-#| msgid "Configure Notifications…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Notifications…"
 msgstr "Configura les notificacions…"
 
 #: ui/MouseNavigation.qml:16
-#, fuzzy, kde-format
-#| msgid "Use number pad to move cursor:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move cursor:"
 msgstr "Usa el teclat numèric per a moure el cursor:"
 
 #: ui/MouseNavigation.qml:21
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable mouse navigation"
 msgid "Enable"
 msgstr "Activa"
@@ -720,65 +804,63 @@ msgid ""
 "up). The keys <shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</"
 "shortcut>, and <shortcut>9</shortcut> allow for diagonal movement."
 msgstr ""
+"La tecla <shortcut>5</shortcut> del teclat numèric funciona com un botó de "
+"ratolí. Les tecles <shortcut>2</shortcut>, <shortcut>4</shortcut>, "
+"<shortcut>6</shortcut> i <shortcut>8</shortcut> permeten el moviment "
+"cardinal (avall, esquerra, dreta, amunt). Les tecles <shortcut>1</shortcut>, "
+"<shortcut>3</shortcut>, <shortcut>7</shortcut> i <shortcut>9</shortcut> "
+"permeten el moviment diagonal."
 
 #: ui/MouseNavigation.qml:37
-#, fuzzy, kde-format
-#| msgid "Acceleration delay:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
 msgstr "Retard de l'acceleració:"
 
 #: ui/MouseNavigation.qml:59
-#, fuzzy, kde-format
-#| msgid "Repeat interval:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr "Interval de repetició:"
 
 #: ui/MouseNavigation.qml:81
-#, fuzzy, kde-format
-#| msgid "Acceleration time:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "Temps d'acceleració:"
 
 #: ui/MouseNavigation.qml:103
-#, fuzzy, kde-format
-#| msgid "Maximum speed:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr "Velocitat màxima:"
 
 #: ui/MouseNavigation.qml:117
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
 msgstr "Acceleració del punter:"
 
 #: ui/ScreenReader.qml:20
-#, fuzzy, kde-format
-#| msgid "Launch Orca Screen Reader Configuration…"
+#, kde-format
 msgctxt "@info Placeholder message title"
 msgid "The Orca Screen Reader is not installed"
-msgstr "Configuració del llançament del lector de pantalla Orca…"
+msgstr "El lector de pantalla Orca no està instal·lat"
 
 #: ui/ScreenReader.qml:21
 #, kde-format
 msgctxt "@info Placeholder message explanation"
 msgid "Please install it, then close and reopen this window"
-msgstr ""
+msgstr "Instal·leu-lo, després tanqueu i torneu a obrir aquesta finestra"
 
 #: ui/ScreenReader.qml:27
-#, fuzzy, kde-format
-#| msgid "Enable Screen Reader"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable Screen Reader"
 msgstr "Activa el lector de pantalla"
 
 #: ui/ScreenReader.qml:39
-#, fuzzy, kde-format
-#| msgid "Launch Orca Screen Reader Configuration…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Launch Orca Screen Reader Configuration…"
 msgstr "Configuració del llançament del lector de pantalla Orca…"

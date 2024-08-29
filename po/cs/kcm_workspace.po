@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2024-08-20 15:07+0200\n"
+"PO-Revision-Date: 2024-08-28 09:31+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -89,6 +89,9 @@ msgid ""
 "because they either do not support smooth scrolling, or have their own "
 "setting for enabling and disabling it."
 msgstr ""
+"Toto nastavení zapíná nebo vypíná animovaný přechod při rolování kolečkem "
+"myši nebo klávesnice. Některé aplikace toto nastavení nedodržují protože buď "
+"nepodporují jemné posouvání nebo mají pro tuto volbu vlastní nastavení."
 
 #: ui/main.qml:146
 #, kde-format
@@ -226,6 +229,8 @@ msgid ""
 "Two clicks within this duration are considered a double-click. Some "
 "applications may not honor this setting."
 msgstr ""
+"Dva kliky v tomto časovém rozmezí budou považovány za dvojklik. Ne všechny "
+"aplikace toto nastavení dodržují."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9

@@ -16,78 +16,78 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 00:40+0000\n"
-"PO-Revision-Date: 2024-07-01 22:07+0200\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
+"PO-Revision-Date: 2024-08-28 11:40+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.08.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: kcmaccess.cpp:116
+#: kcmaccess.cpp:117
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGraph"
 
-#: kcmaccess.cpp:118
+#: kcmaccess.cpp:119
 #, kde-format
 msgid "Hyper"
 msgstr "Hyper"
 
-#: kcmaccess.cpp:120
+#: kcmaccess.cpp:121
 #, kde-format
 msgid "Super"
 msgstr "Super"
 
-#: kcmaccess.cpp:130
+#: kcmaccess.cpp:131
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
 msgstr "Druk op %1 terwijl NumLock, CapsLock en ScrollLock actief zijn"
 
-#: kcmaccess.cpp:131
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
 msgstr "Druk op %1 terwijl CapsLock en ScrollLock actief zijn"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
 msgstr "Druk op %1 terwijl NumLock en ScrollLock actief zijn"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:134
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
 msgstr "Druk op %1 terwijl ScrollLock actief is"
 
-#: kcmaccess.cpp:134
+#: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
 msgstr "Druk op %1 terwijl NumLock en CapsLock actief zijn"
 
-#: kcmaccess.cpp:135
+#: kcmaccess.cpp:136
 #, kde-format
 msgid "Press %1 while CapsLock is active"
 msgstr "Druk op %1 terwijl CapsLock actief is"
 
-#: kcmaccess.cpp:136
+#: kcmaccess.cpp:137
 #, kde-format
 msgid "Press %1 while NumLock is active"
 msgstr "Druk op %1 terwijl NumLock actief is"
 
-#: kcmaccess.cpp:137
+#: kcmaccess.cpp:138
 #, kde-format
 msgid "Press %1"
 msgstr "Druk op %1"
 
-#: kcmaccess.cpp:186
+#: kcmaccess.cpp:192
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Kon geen gsettings voor Orca instellen: \"%1\" is mislukt"
 
-#: kcmaccess.cpp:193
+#: kcmaccess.cpp:199
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Fout: kon \"orca --setup\" niet starten"
@@ -169,6 +169,13 @@ msgstr "Kleur van de zichtbare bel"
 #, kde-format
 msgid "Duration of the Visible Bell"
 msgstr "Duur van de zichtbare bel"
+
+#. i18n: ectx: label, entry (ColorblindnessCorrection), group (Plugins)
+#: kcmaccessibilitycolorblindnesscorrection.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Whether Shake Cursor is enabled"
+msgid "Whether Colorblindness Correction is enabled"
+msgstr "Of schuddende cursor is ingeschakeld"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
@@ -310,15 +317,13 @@ msgid "Magnification"
 msgstr "Vergroting"
 
 #: ui/ActivationShortcuts.qml:17
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgctxt "@option:check"
 msgid "Activation shortcuts:"
-msgstr "Activeringsgebaren"
+msgstr "Sneltoetsen voor activeren:"
 
 #: ui/ActivationShortcuts.qml:18
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "Enable activation shortcuts"
 msgid "Enable"
 msgstr "Inschakelen"
@@ -327,20 +332,20 @@ msgstr "Inschakelen"
 #, kde-format
 msgctxt "@label"
 msgid "Press Shift 5 times to enable Sticky Keys"
-msgstr ""
+msgstr "Druk Shift 5 keer in om plakkende toetsen in te schakelen"
 
 #: ui/ActivationShortcuts.qml:37
 #, kde-format
 msgctxt "@label"
 msgid "Hold Shift for 8 seconds to enable Slow Keys"
 msgstr ""
+"Hou Shift gedurende 8 seconden ingedrukt om langzame toetsen in te schakelen"
 
 #: ui/ActivationShortcuts.qml:46
-#, fuzzy, kde-format
-#| msgid "Turn sticky keys and slow keys off after inactivity:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable sticky and slow keys after:"
-msgstr "Plakkende en langzame toetsen uitschakelen na inactiviteit:"
+msgstr "Plakkende en langzame toetsen uitschakelen na:"
 
 #: ui/ActivationShortcuts.qml:75
 #, kde-format
@@ -350,8 +355,7 @@ msgstr[0] "%1 min"
 msgstr[1] "%1 min"
 
 #: ui/ActivationShortcuts.qml:79
-#, fuzzy, kde-format
-#| msgid "min"
+#, kde-format
 msgctxt "short for minute(s)"
 msgid "min"
 msgid_plural "min"
@@ -359,10 +363,9 @@ msgstr[0] "min"
 msgstr[1] "min"
 
 #: ui/ActivationShortcuts.qml:88
-#, fuzzy, kde-format
-#| msgid "When a gesture is used:"
+#, kde-format
 msgid "When a shortcut is used:"
-msgstr "Wanneer een gebaar wordt gebruikt:"
+msgstr "Wanneer een sneltoets wordt gebruikt:"
 
 #: ui/ActivationShortcuts.qml:89
 #, kde-format
@@ -370,8 +373,7 @@ msgid "Display a confirmation dialog"
 msgstr "Een bevestigingsdialoog tonen"
 
 #: ui/ActivationShortcuts.qml:100
-#, fuzzy, kde-format
-#| msgid "Ring the System Bell"
+#, kde-format
 msgid "Ring the system bell"
 msgstr "De systeembel gebruiken"
 
@@ -411,7 +413,7 @@ msgstr "Inschakelen"
 #, kde-format
 msgctxt "@label"
 msgid "Emits a sound whenever certain keys are pressed"
-msgstr ""
+msgstr "Stuurt een geluid uit wanneer bepaalde toetsen worden ingedrukt"
 
 #: ui/Bell.qml:50
 #, kde-format
@@ -441,26 +443,22 @@ msgid "Enable"
 msgstr "Inschakelen"
 
 #: ui/Bell.qml:113
-#, fuzzy, kde-format
-#| msgid "Use the system bell whenever a key is rejected"
+#, kde-format
 msgctxt "@label"
 msgid "Flashes the screen whenever certain keys are pressed"
-msgstr "Systeembel gebruiken als een toets wordt geweigerd"
+msgstr "Laat het scherm knipperen wanneer bepaalde toetsen worden ingedrukt"
 
 #: ui/Bell.qml:123
-#, fuzzy, kde-format
-#| msgctxt "Invert screen on a system bell"
-#| msgid "Invert Screen"
+#, kde-format
 msgctxt "@option:radio Invert screen colors when a system bell is rung"
 msgid "Invert screen colors"
-msgstr "Scherm omkeren"
+msgstr "Schermkleuren omkeren"
 
 #: ui/Bell.qml:141
-#, fuzzy, kde-format
-#| msgid "F&lash screen"
+#, kde-format
 msgctxt "@option:radio Flash screen when a system bell is rung"
 msgid "Flash screen"
-msgstr "Scherm &laten knipperen"
+msgstr "Scherm laten knipperen"
 
 #: ui/Bell.qml:152
 #, kde-format
@@ -477,12 +475,10 @@ msgstr "Tijdsduur:"
 #: ui/Bell.qml:181 ui/KeyboardFilters.qml:55 ui/KeyboardFilters.qml:151
 #: ui/MouseNavigation.qml:51 ui/MouseNavigation.qml:73
 #: ui/MouseNavigation.qml:95
-#, fuzzy, kde-format
-#| msgid "%1 min"
-#| msgid_plural "%1 min"
+#, kde-format
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "%1 min"
+msgstr[0] "%1 ms"
 msgstr[1] "%1 min"
 
 #: ui/Bell.qml:185 ui/KeyboardFilters.qml:59 ui/KeyboardFilters.qml:155
@@ -492,8 +488,84 @@ msgstr[1] "%1 min"
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ms"
+msgstr[1] "ms"
+
+#: ui/ColorblindnessCorrection.qml:22
+#, kde-format
+msgctxt "@label"
+msgid "Color blindness correction:"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:23
+#, fuzzy, kde-format
+#| msgctxt "Enable activation shortcuts"
+#| msgid "Enable"
+msgctxt "@option check, Enable color blindness correction effect"
+msgid "Enable"
+msgstr "Inschakelen"
+
+#: ui/ColorblindnessCorrection.qml:36
+#, kde-format
+msgctxt "@label"
+msgid "Mode:"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:41
+#, kde-format
+msgctxt "@option"
+msgid "Protanopia (red weak)"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:42
+#, kde-format
+msgctxt "@option"
+msgid "Deuteranopia (green weak)"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:43
+#, kde-format
+msgctxt "@option"
+msgid "Tritanopia (blue-yellow)"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:58
+#, kde-format
+msgctxt "@label"
+msgid "Intensity:"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:81
+#, kde-format
+msgctxt "@label Mild color blindness correction intensity"
+msgid "Mild"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:88
+#, kde-format
+msgctxt "@label Intense color blindness correction intensity"
+msgid "Intense"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:111
+#, kde-format
+msgid "Red"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:112
+#, kde-format
+msgid "Green"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:113
+#, kde-format
+msgid "Blue"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:114
+#, kde-format
+msgid "Purple"
+msgstr ""
 
 #: ui/KeyboardFilters.qml:17
 #, kde-format
@@ -514,6 +586,10 @@ msgid ""
 "Useful if you accidentally type more than one key at a time or have "
 "difficulty pressing the key you want the first time."
 msgstr ""
+"Om een toets geaccepteerd te krijgen, moet het een ingestelde tijd ingedrukt "
+"worden gehouden. Nuttig wanneer u per ongeluk meer dan één toets tegelijk "
+"indrukt of moeite heeft om de toets die u wilt voor de eerste keer in te "
+"drukken."
 
 #: ui/KeyboardFilters.qml:40
 #, kde-format
@@ -563,6 +639,9 @@ msgid ""
 "tremors that cause you to press a key multiple times when you only intend to "
 "press once."
 msgstr ""
+"Negeer snelle, herhaalde toetsaanslagen van dezelfde toets. Nuttig als u "
+"tremors aan de hand hebt die veroorzaakt dat u een toets meerdere keen "
+"indrukt wanneer u slechts bedoeld het een keer te doen."
 
 #: ui/KeyboardFilters.qml:136
 #, kde-format
@@ -576,11 +655,10 @@ msgid "Ring system bell when rejected"
 msgstr "Systeembel gebruiken bij afwijzen"
 
 #: ui/main.qml:28
-#, fuzzy, kde-format
-#| msgid "Use System Bell"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "System Bell"
-msgstr "Systeembel gebruiken"
+msgstr "Systeembel"
 
 #: ui/main.qml:33
 #, kde-format
@@ -601,10 +679,9 @@ msgid "Mouse Navigation"
 msgstr "Muisnavigatie"
 
 #: ui/main.qml:48
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgid "Activation Shortcuts"
-msgstr "Activeringsgebaren"
+msgstr "Sneltoetsen voor activeren"
 
 #: ui/main.qml:53
 #, kde-format
@@ -614,20 +691,24 @@ msgstr "Schermlezer"
 
 #: ui/main.qml:58
 #, kde-format
+msgctxt "Correction for color blindness"
+msgid "Color Blindness Correction"
+msgstr ""
+
+#: ui/main.qml:63
+#, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"
 msgstr "Cursor schudden"
 
 #: ui/ModifierKeys.qml:17
-#, fuzzy, kde-format
-#| msgid "Sticky keys:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sticky keys:"
 msgstr "Plakkende toetsen:"
 
 #: ui/ModifierKeys.qml:22
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable sticky keys"
 msgid "Enable"
 msgstr "Inschakelen"
@@ -640,10 +721,12 @@ msgid ""
 "though they “stick in place” and no longer need to be held down when typing "
 "a keyboard shortcut."
 msgstr ""
+"Modifier-toetsen zoals Ctrl, Shift, Alt en de Meta/Super/Windows toets "
+"werken alsof ze “ter plekke plakken” en niet langer nodig zijn om ingedrukt "
+"te blijven bij typen van een sneltoets."
 
 #: ui/ModifierKeys.qml:39
-#, fuzzy, kde-format
-#| msgid "Lock the sticky keys"
+#, kde-format
 msgctxt "@option:check"
 msgid "Lock sticky keys"
 msgstr "Plakkende toetsen vergrendelen"
@@ -655,6 +738,9 @@ msgid ""
 "Once locked, the “sticky” state of modifier keys will not be disabled until "
 "a keyboard shortcut is finished or until a non-modifier key is pressed."
 msgstr ""
+"Na vergrendelen zal de plakkende” status van modifier-toetsen niet "
+"uitgeschakeld worden totdat een sneltoets is beëindigd of totdat een niet-"
+"modifier-toets wordt ingedrukt."
 
 #: ui/ModifierKeys.qml:57
 #, kde-format
@@ -667,49 +753,43 @@ msgid "Ring system bell when modifier keys are used"
 msgstr "Systeembel gebruiken als samensteltoetsen worden gebruikt"
 
 #: ui/ModifierKeys.qml:88
-#, fuzzy, kde-format
-#| msgid "Feedback:"
+#, kde-format
 msgctxt "@option:check Feedback options:"
 msgid "Feedback:"
 msgstr "Terugkoppeling:"
 
 #: ui/ModifierKeys.qml:93
-#, fuzzy, kde-format
-#| msgid "Ring system bell when locking keys are toggled"
+#, kde-format
 msgctxt "@option:check"
 msgid "Ring system bell when locking keys are used"
-msgstr "Systeembel gebruiken wanneer een vergrendeltoetsen worden omgeschakeld"
+msgstr "Systeembel gebruiken wanneer vergrendeltoetsen worden gebruikt"
 
 #: ui/ModifierKeys.qml:104
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The locking keys are Caps Lock, Num Lock, and Scroll Lock."
-msgstr ""
+msgstr "De vergrendeltoetsen zijn Caps Lock, Num Lock en Scroll Lock."
 
 #: ui/ModifierKeys.qml:108
-#, fuzzy, kde-format
-#| msgid "Show notification when modifier or locking keys are used"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show notification when modifier or locking keys are used"
 msgstr "Melding tonen wanneer samenstel- of vergrendeltoetsen worden gebruikt"
 
 #: ui/ModifierKeys.qml:120
-#, fuzzy, kde-format
-#| msgid "Configure Notifications…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Notifications…"
 msgstr "Meldingen configureren…"
 
 #: ui/MouseNavigation.qml:16
-#, fuzzy, kde-format
-#| msgid "Use number pad to move cursor:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move cursor:"
 msgstr "Cijferpad gebruiken om cursor te verplaatsen:"
 
 #: ui/MouseNavigation.qml:21
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable mouse navigation"
 msgid "Enable"
 msgstr "Inschakelen"
@@ -724,65 +804,63 @@ msgid ""
 "up). The keys <shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</"
 "shortcut>, and <shortcut>9</shortcut> allow for diagonal movement."
 msgstr ""
+"De toets op het numerieke pad <shortcut>5</shortcut> functioneert als een "
+"muisklik. De toetsen <shortcut>2</shortcut>, <shortcut>4</shortcut>, "
+"<shortcut>6</shortcut> en <shortcut>8</shortcut> staan voor hoofd "
+"verplaatsingen (omlaag, links, rechts en omhoog). De toetsen <shortcut>1</"
+"shortcut>, <shortcut>3</shortcut>, <shortcut>7</shortcut> en <shortcut>9</"
+"shortcut> bieden diagonale verplaatsing."
 
 #: ui/MouseNavigation.qml:37
-#, fuzzy, kde-format
-#| msgid "Acceleration delay:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
 msgstr "Versnellingsvertraging:"
 
 #: ui/MouseNavigation.qml:59
-#, fuzzy, kde-format
-#| msgid "Repeat interval:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr "Herhaalinterval:"
 
 #: ui/MouseNavigation.qml:81
-#, fuzzy, kde-format
-#| msgid "Acceleration time:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "Versnellingstijd:"
 
 #: ui/MouseNavigation.qml:103
-#, fuzzy, kde-format
-#| msgid "Maximum speed:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr "Maximum snelheid:"
 
 #: ui/MouseNavigation.qml:117
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
 msgstr "Aanwijzerversnelling:"
 
 #: ui/ScreenReader.qml:20
-#, fuzzy, kde-format
-#| msgid "Launch Orca Screen Reader Configuration…"
+#, kde-format
 msgctxt "@info Placeholder message title"
 msgid "The Orca Screen Reader is not installed"
-msgstr "Orca schermlezerconfiguratie starten…"
+msgstr "De Orca schermlezer is niet geïnstalleerd"
 
 #: ui/ScreenReader.qml:21
 #, kde-format
 msgctxt "@info Placeholder message explanation"
 msgid "Please install it, then close and reopen this window"
-msgstr ""
+msgstr "Installeer het, sluit daarna en open dit venster opnieuw"
 
 #: ui/ScreenReader.qml:27
-#, fuzzy, kde-format
-#| msgid "Enable Screen Reader"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable Screen Reader"
 msgstr "Schermlezer inschakelen"
 
 #: ui/ScreenReader.qml:39
-#, fuzzy, kde-format
-#| msgid "Launch Orca Screen Reader Configuration…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Launch Orca Screen Reader Configuration…"
 msgstr "Orca schermlezerconfiguratie starten…"

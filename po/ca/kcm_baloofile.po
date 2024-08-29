@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:40+0000\n"
-"PO-Revision-Date: 2024-06-29 16:45+0200\n"
+"PO-Revision-Date: 2024-08-28 16:31+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: ui/main.qml:44
 #, kde-format
@@ -142,11 +142,10 @@ msgid "Indexed"
 msgstr "Indexada"
 
 #: ui/main.qml:301
-#, fuzzy, kde-format
-#| msgid "Delete entry"
+#, kde-format
 msgctxt "Remove the list item for this filesystem path"
 msgid "Remove entry"
-msgstr "Suprimeix l'entrada"
+msgstr "Elimina l'entrada"
 
 #: ui/main.qml:316
 #, kde-format

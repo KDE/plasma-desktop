@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 00:40+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2024-07-01 08:44+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -24,67 +24,67 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
-#: kcmaccess.cpp:116
+#: kcmaccess.cpp:117
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGr"
 
-#: kcmaccess.cpp:118
+#: kcmaccess.cpp:119
 #, kde-format
 msgid "Hyper"
 msgstr "Hyper"
 
-#: kcmaccess.cpp:120
+#: kcmaccess.cpp:121
 #, kde-format
 msgid "Super"
 msgstr "Súper"
 
-#: kcmaccess.cpp:130
+#: kcmaccess.cpp:131
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
 msgstr "Premeu %1 mentre «Bloq Núm», «Bloq Maj» i «Bloq Despl» estan actives"
 
-#: kcmaccess.cpp:131
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
 msgstr "Premeu %1 mentre «Bloq Maj» i «Bloq Despl» estan actives"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
 msgstr "Premeu %1 mentre «Bloq Núm» i «Bloq Despl» estan actives"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:134
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
 msgstr "Premeu %1 mentre «Bloq Despl» està activa"
 
-#: kcmaccess.cpp:134
+#: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
 msgstr "Premeu %1 mentre «Bloq Núm» i «Bloq Maj» estan actives"
 
-#: kcmaccess.cpp:135
+#: kcmaccess.cpp:136
 #, kde-format
 msgid "Press %1 while CapsLock is active"
 msgstr "Premeu %1 mentre «Bloq Maj» està activa"
 
-#: kcmaccess.cpp:136
+#: kcmaccess.cpp:137
 #, kde-format
 msgid "Press %1 while NumLock is active"
 msgstr "Premeu %1 mentre «Bloq Núm» està activa"
 
-#: kcmaccess.cpp:137
+#: kcmaccess.cpp:138
 #, kde-format
 msgid "Press %1"
 msgstr "Premeu %1"
 
-#: kcmaccess.cpp:186
+#: kcmaccess.cpp:192
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "No s'han pogut definir els paràmetres d'Orca: «%1» ha fallat"
 
-#: kcmaccess.cpp:193
+#: kcmaccess.cpp:199
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "S'ha produït un error: No s'ha pogut iniciar «orca --setup»"
@@ -166,6 +166,13 @@ msgstr "Color del timbre visible"
 #, kde-format
 msgid "Duration of the Visible Bell"
 msgstr "Duració del timbre visible"
+
+#. i18n: ectx: label, entry (ColorblindnessCorrection), group (Plugins)
+#: kcmaccessibilitycolorblindnesscorrection.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Whether Shake Cursor is enabled"
+msgid "Whether Colorblindness Correction is enabled"
+msgstr "Si s'ha marcat Sacsa el cursor"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
@@ -490,6 +497,81 @@ msgid_plural "ms"
 msgstr[0] ""
 msgstr[1] ""
 
+#: ui/ColorblindnessCorrection.qml:22
+#, kde-format
+msgctxt "@label"
+msgid "Color blindness correction:"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:23
+#, fuzzy, kde-format
+#| msgid "Enable"
+msgctxt "@option check, Enable color blindness correction effect"
+msgid "Enable"
+msgstr "Activa"
+
+#: ui/ColorblindnessCorrection.qml:36
+#, kde-format
+msgctxt "@label"
+msgid "Mode:"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:41
+#, kde-format
+msgctxt "@option"
+msgid "Protanopia (red weak)"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:42
+#, kde-format
+msgctxt "@option"
+msgid "Deuteranopia (green weak)"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:43
+#, kde-format
+msgctxt "@option"
+msgid "Tritanopia (blue-yellow)"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:58
+#, kde-format
+msgctxt "@label"
+msgid "Intensity:"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:81
+#, kde-format
+msgctxt "@label Mild color blindness correction intensity"
+msgid "Mild"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:88
+#, kde-format
+msgctxt "@label Intense color blindness correction intensity"
+msgid "Intense"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:111
+#, kde-format
+msgid "Red"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:112
+#, kde-format
+msgid "Green"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:113
+#, kde-format
+msgid "Blue"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:114
+#, kde-format
+msgid "Purple"
+msgstr ""
+
 #: ui/KeyboardFilters.qml:17
 #, kde-format
 msgid "Slow keys:"
@@ -608,6 +690,12 @@ msgid "Screen Reader"
 msgstr "Lector de pantalla"
 
 #: ui/main.qml:58
+#, kde-format
+msgctxt "Correction for color blindness"
+msgid "Color Blindness Correction"
+msgstr ""
+
+#: ui/main.qml:63
 #, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"

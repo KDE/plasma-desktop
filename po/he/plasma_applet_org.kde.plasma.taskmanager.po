@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:40+0000\n"
-"PO-Revision-Date: 2024-07-11 08:14+0300\n"
+"PO-Revision-Date: 2024-08-28 11:23+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -68,44 +68,37 @@ msgid "9,999+"
 msgstr "‎9,999+‎"
 
 #: package/contents/ui/ConfigAppearance.qml:46
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@label for several checkboxes"
 msgid "General:"
 msgstr "כללי:"
 
 #: package/contents/ui/ConfigAppearance.qml:47
-#, fuzzy, kde-format
-#| msgid "Show small window previews when hovering over Tasks"
+#, kde-format
 msgctxt "@option:check section General"
 msgid "Show small window previews when hovering over tasks"
 msgstr "הצגת חלוניות תצוגת מקדימה בעת ריחוף מעל משימות"
 
 #: package/contents/ui/ConfigAppearance.qml:52
-#, fuzzy, kde-format
-#| msgid "Hide other windows when hovering over previews"
+#, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over previews"
 msgstr "הסתרת חלונות אחרים בעת ריחוף מעל תצוגות מקדימות"
 
 #: package/contents/ui/ConfigAppearance.qml:57
-#, fuzzy, kde-format
-#| msgid "Mark applications that play audio"
+#, kde-format
 msgctxt "@option:check section General"
 msgid "Mark applications that play audio"
 msgstr "סימון יישומים שמשמיעים קול"
 
 #: package/contents/ui/ConfigAppearance.qml:65
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Fill free space on Panel"
+#, kde-format
 msgctxt "@option:check section General"
 msgid "Fill free space on panel"
 msgstr "מילוי המקום הפנוי בלוח"
 
 #: package/contents/ui/ConfigAppearance.qml:77
-#, fuzzy, kde-format
-#| msgid "Maximum task width:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Maximum task width:"
 msgstr "רוחב משימה מרבי:"
@@ -129,9 +122,7 @@ msgid "Wide"
 msgstr "רחב"
 
 #: package/contents/ui/ConfigAppearance.qml:93
-#, fuzzy, kde-format
-#| msgctxt "@option: radio"
-#| msgid "Use multi-column view:"
+#, kde-format
 msgctxt ""
 "@label for radio button group, completes sentence: … when panel is low on "
 "space etc."
@@ -139,9 +130,7 @@ msgid "Use multi-column view:"
 msgstr "להשתמש בתצוגה מרובת עמודות:"
 
 #: package/contents/ui/ConfigAppearance.qml:94
-#, fuzzy, kde-format
-#| msgctxt "@option:radio"
-#| msgid "Use multi-row view:"
+#, kde-format
 msgctxt ""
 "@label for radio button group, completes sentence: … when panel is low on "
 "space etc."
@@ -149,48 +138,37 @@ msgid "Use multi-row view:"
 msgstr "להשתמש בתצוגה מרובת שורות:"
 
 #: package/contents/ui/ConfigAppearance.qml:100
-#, fuzzy, kde-format
-#| msgctxt "Never use multi-column view for Task Manager"
-#| msgid "Never"
+#, kde-format
 msgctxt "@option:radio Never use multi-column view for Task Manager"
 msgid "Never"
 msgstr "אף פעם"
 
 #: package/contents/ui/ConfigAppearance.qml:110
-#, fuzzy, kde-format
-#| msgctxt "When to use multi-row view in Task Manager"
-#| msgid "When Panel is low on space and thick enough"
+#, kde-format
 msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "When panel is low on space and thick enough"
 msgstr "כאשר אין מספיק מקום בלוח והוא עבה מספיק"
 
 #: package/contents/ui/ConfigAppearance.qml:120
-#, fuzzy, kde-format
-#| msgctxt "When to use multi-row view in Task Manager"
-#| msgid "Always when Panel is thick enough"
+#, kde-format
 msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "Always when panel is thick enough"
 msgstr "תמיד כאשר הלוח עבה מספיק"
 
 #: package/contents/ui/ConfigAppearance.qml:127
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Maximum columns:"
+#, kde-format
 msgctxt "@label:spinbox maximum number of columns for tasks"
 msgid "Maximum columns:"
 msgstr "כמות עמודות מרבית:"
 
 #: package/contents/ui/ConfigAppearance.qml:128
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Maximum rows:"
+#, kde-format
 msgctxt "@label:spinbox maximum number of rows for tasks"
 msgid "Maximum rows:"
 msgstr "כמות שורות מרבית:"
 
 #: package/contents/ui/ConfigAppearance.qml:138
-#, fuzzy, kde-format
-#| msgid "Spacing between icons:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Spacing between icons:"
 msgstr "ריווח בין סמלים:"
@@ -214,58 +192,45 @@ msgid "Large"
 msgstr "גדול"
 
 #: package/contents/ui/ConfigAppearance.qml:176
-#, fuzzy, kde-format
-#| msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
-#| msgid "Automatically set to Large when in Touch Mode"
+#, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch mode"
 msgstr "להגדיר לגדול במצב מגע"
 
 #: package/contents/ui/ConfigBehavior.qml:49
-#, fuzzy, kde-format
-#| msgid "Group:"
+#, kde-format
 msgctxt "@label:listbox how to group tasks"
 msgid "Group:"
 msgstr "קיבוץ:"
 
 #: package/contents/ui/ConfigBehavior.qml:53
-#, fuzzy, kde-format
-#| msgid "Do not group"
+#, kde-format
 msgctxt "@item:inlistbox how to group tasks"
 msgid "Do not group"
 msgstr "לא לקבץ"
 
 #: package/contents/ui/ConfigBehavior.qml:54
-#, fuzzy, kde-format
-#| msgid "By program name"
+#, kde-format
 msgctxt "@item:inlistbox how to group tasks"
 msgid "By program name"
 msgstr "לפי שם יישום"
 
 #: package/contents/ui/ConfigBehavior.qml:60
-#, fuzzy, kde-format
-#| msgid "Clicking grouped task:"
+#, kde-format
 msgctxt "@label:listbox completes sentence like: … cycles through tasks"
 msgid "Clicking grouped task:"
 msgstr "לחיצה על משימות מקובצות:"
 
 #: package/contents/ui/ConfigBehavior.qml:67
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task cycles through tasks' "
-#| msgid "Cycles through tasks"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task cycles through "
 "tasks' "
 msgid "Cycles through tasks"
-msgstr "עוברת מעגלית בין משימות"
+msgstr "עוברת בלולאה בין משימות"
 
 #: package/contents/ui/ConfigBehavior.qml:68
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows tooltip window "
-#| "thumbnails' "
-#| msgid "Shows small window previews"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task shows small "
 "window previews' "
@@ -273,10 +238,7 @@ msgid "Shows small window previews"
 msgstr "מציגה חלוניות קטנות לתצוגה מקדימה"
 
 #: package/contents/ui/ConfigBehavior.qml:69
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows large window previews"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task shows large "
 "window previews' "
@@ -284,9 +246,7 @@ msgid "Shows large window previews"
 msgstr "מציגה חלוניות גדולות לתצוגה מקדימה"
 
 #: package/contents/ui/ConfigBehavior.qml:70
-#, fuzzy, kde-format
-#| msgctxt "Completes the sentence 'Clicking grouped task shows textual list' "
-#| msgid "Shows textual list"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task shows textual "
 "list' "
@@ -294,10 +254,7 @@ msgid "Shows textual list"
 msgstr "מציגה רשימת הקשרים"
 
 #: package/contents/ui/ConfigBehavior.qml:81
-#, fuzzy, kde-format
-#| msgid ""
-#| "The compositor does not support displaying windows side by side, so a "
-#| "textual list will be displayed instead."
+#, kde-format
 msgctxt "@info displayed as InlineMessage"
 msgid ""
 "The compositor does not support displaying windows side by side, so a "
@@ -306,79 +263,67 @@ msgstr ""
 "המסדר החלונאי לא תומך בהצגת חלונות זה לצד זה, לכן תופיע רשימת הקשרים במקום."
 
 #: package/contents/ui/ConfigBehavior.qml:91
-#, fuzzy, kde-format
-#| msgid "Combine into single button"
+#, kde-format
 msgctxt "@option:check grouped task"
 msgid "Combine into single button"
 msgstr "גיבוש לכפתור יחיד"
 
 #: package/contents/ui/ConfigBehavior.qml:98
-#, fuzzy, kde-format
-#| msgid "Group only when the Task Manager is full"
+#, kde-format
 msgctxt "@option:check grouped task"
 msgid "Group only when the Task Manager is full"
-msgstr "לקבץ רק כששורת המשימות מלאה"
+msgstr "לקבץ רק כשמנהל המשימות מלא"
 
 #: package/contents/ui/ConfigBehavior.qml:110
-#, fuzzy, kde-format
-#| msgid "Sort:"
+#, kde-format
 msgctxt "@label:listbox sort tasks in grouped task"
 msgid "Sort:"
 msgstr "מיון:"
 
 #: package/contents/ui/ConfigBehavior.qml:114
-#, fuzzy, kde-format
-#| msgid "Do not sort"
+#, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Do not sort"
 msgstr "לא למיין"
 
 #: package/contents/ui/ConfigBehavior.qml:115
-#, fuzzy, kde-format
-#| msgid "Manually"
+#, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Manually"
 msgstr "ידנית"
 
 #: package/contents/ui/ConfigBehavior.qml:116
-#, fuzzy, kde-format
-#| msgid "Alphabetically"
+#, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Alphabetically"
 msgstr "לפי האלפבית"
 
 #: package/contents/ui/ConfigBehavior.qml:117
-#, fuzzy, kde-format
-#| msgid "By desktop"
+#, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By desktop"
 msgstr "לפי שולחן עבודה"
 
 #: package/contents/ui/ConfigBehavior.qml:118
-#, fuzzy, kde-format
-#| msgid "By activity"
+#, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By activity"
 msgstr "לפי פעילות"
 
 #: package/contents/ui/ConfigBehavior.qml:125
-#, fuzzy, kde-format
-#| msgid "Keep launchers separate"
+#, kde-format
 msgctxt "@option:check configure task sorting"
 msgid "Keep launchers separate"
-msgstr "שמירה על הפרדת משגרים"
+msgstr "שמירה על משגרים מופרדים"
 
 #: package/contents/ui/ConfigBehavior.qml:132
-#, fuzzy, kde-format
-#| msgid "Hide launchers after application startup"
+#, kde-format
 msgctxt "@option:check for icons-and-text task manager"
 msgid "Hide launchers after application startup"
 msgstr "הסתרת המשגרים לאחר הפעלת היישום"
 
 #: package/contents/ui/ConfigBehavior.qml:142
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
-#| msgid "Clicking active task:"
+#, kde-format
 msgctxt ""
 "@label for checkbox Part of a sentence: 'Clicking active task minimizes the "
 "task'"
@@ -386,35 +331,27 @@ msgid "Clicking active task:"
 msgstr "לחיצה על משימה פעילה:"
 
 #: package/contents/ui/ConfigBehavior.qml:143
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
-#| msgid "Minimizes the task"
+#, kde-format
 msgctxt ""
 "@option:check Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
 msgstr "ממזערת את המשימה"
 
 #: package/contents/ui/ConfigBehavior.qml:148
-#, fuzzy, kde-format
-#| msgid "Middle-clicking any task:"
+#, kde-format
 msgctxt "@label:listbox completes sentence like: … does nothing"
 msgid "Middle-clicking any task:"
 msgstr "לחיצה אמצעית על משימה כלשהי:"
 
 #: package/contents/ui/ConfigBehavior.qml:152
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Middle-clicking any task does nothing'"
-#| msgid "Does nothing"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task does nothing'"
 msgid "Does nothing"
 msgstr "לא עושה כלום"
 
 #: package/contents/ui/ConfigBehavior.qml:153
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Part of a sentence: 'Middle-clicking any task closes window or group'"
-#| msgid "Closes window or group"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task closes window "
 "or group'"
@@ -422,9 +359,7 @@ msgid "Closes window or group"
 msgstr "סוגרת חלון או קבוצה"
 
 #: package/contents/ui/ConfigBehavior.qml:154
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Middle-clicking any task opens a new window'"
-#| msgid "Opens a new window"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task opens a new "
 "window'"
@@ -432,11 +367,7 @@ msgid "Opens a new window"
 msgstr "פותחת חלון חדש"
 
 #: package/contents/ui/ConfigBehavior.qml:155
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Part of a sentence: 'Middle-clicking any task minimizes/restores window "
-#| "or group'"
-#| msgid "Minimizes/Restores window or group"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task minimizes/"
 "restores window or group'"
@@ -444,9 +375,7 @@ msgid "Minimizes/Restores window or group"
 msgstr "ממזערת/משחזרת חלון או קבוצה"
 
 #: package/contents/ui/ConfigBehavior.qml:156
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Middle-clicking any task toggles grouping'"
-#| msgid "Toggles grouping"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task toggles "
 "grouping'"
@@ -454,11 +383,7 @@ msgid "Toggles grouping"
 msgstr "מחליפה את הקיבוץ"
 
 #: package/contents/ui/ConfigBehavior.qml:157
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Part of a sentence: 'Middle-clicking any task brings it to the current "
-#| "virtual desktop'"
-#| msgid "Brings it to the current virtual desktop"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task brings it to "
 "the current virtual desktop'"
@@ -466,114 +391,96 @@ msgid "Brings it to the current virtual desktop"
 msgstr "מקדמת אותה לשולחן העבודה הווירטואלי הנוכחי"
 
 #: package/contents/ui/ConfigBehavior.qml:167
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
-#| msgid "Mouse wheel:"
+#, kde-format
 msgctxt ""
 "@label for checkbox Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Mouse wheel:"
 msgstr "גלגלת עכבר:"
 
 #: package/contents/ui/ConfigBehavior.qml:168
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task cycles through tasks' "
-#| msgid "Cycles through tasks"
+#, kde-format
 msgctxt "@option:check Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
-msgstr "עוברת מעגלית בין משימות"
+msgstr "עוברת בלולאה בין משימות"
 
 #: package/contents/ui/ConfigBehavior.qml:177
-#, fuzzy, kde-format
-#| msgid "Skip minimized tasks"
+#, kde-format
 msgctxt "@option:check mouse wheel task cycling"
 msgid "Skip minimized tasks"
 msgstr "מדלגת על משימות ממוזערות"
 
 #: package/contents/ui/ConfigBehavior.qml:188
-#, fuzzy, kde-format
-#| msgid "Show only tasks:"
+#, kde-format
 msgctxt ""
 "@label for checkbox group, completes sentence like: … from current screen"
 msgid "Show only tasks:"
 msgstr "הצגת משימות:"
 
 #: package/contents/ui/ConfigBehavior.qml:189
-#, fuzzy, kde-format
-#| msgid "From current screen"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current screen"
 msgstr "רק מהמסך הנוכחי"
 
 #: package/contents/ui/ConfigBehavior.qml:194
-#, fuzzy, kde-format
-#| msgid "From current desktop"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current desktop"
 msgstr "רק משולחן העבודה הנוכחי"
 
 #: package/contents/ui/ConfigBehavior.qml:199
-#, fuzzy, kde-format
-#| msgid "From current activity"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current activity"
 msgstr "רק מהפעילות הנוכחית"
 
 #: package/contents/ui/ConfigBehavior.qml:204
-#, fuzzy, kde-format
-#| msgid "That are minimized"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "That are minimized"
 msgstr "ממוזערות בלבד"
 
 #: package/contents/ui/ConfigBehavior.qml:213
-#, fuzzy, kde-format
-#| msgid "When panel is hidden:"
+#, kde-format
 msgctxt ""
 "@label for checkbox, completes sentence: … unhide if window wants attention"
 msgid "When panel is hidden:"
 msgstr "כאשר הלוח מוסתר:"
 
 #: package/contents/ui/ConfigBehavior.qml:214
-#, fuzzy, kde-format
-#| msgid "Unhide when a window wants attention"
+#, kde-format
 msgctxt "@option:check completes sentence: When panel is hidden"
 msgid "Unhide when a window wants attention"
 msgstr "לבטל את ההסתרה כאשר חלון צריך תשומת לב"
 
 #: package/contents/ui/ConfigBehavior.qml:226
-#, fuzzy, kde-format
-#| msgid "New tasks appear:"
+#, kde-format
 msgctxt "@label for radiobutton group completes sentence like: … on the bottom"
 msgid "New tasks appear:"
 msgstr "משימות חדשות מופיעות:"
 
 #: package/contents/ui/ConfigBehavior.qml:230
-#, fuzzy, kde-format
-#| msgid "On the bottom"
+#, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the bottom"
 msgstr "למטה"
 
 #: package/contents/ui/ConfigBehavior.qml:234
 #: package/contents/ui/ConfigBehavior.qml:253
-#, fuzzy, kde-format
-#| msgid "To the right"
+#, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the right"
 msgstr "מימין"
 
 #: package/contents/ui/ConfigBehavior.qml:236
 #: package/contents/ui/ConfigBehavior.qml:251
-#, fuzzy, kde-format
-#| msgid "To the left"
+#, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the left"
 msgstr "משמאל"
 
 #: package/contents/ui/ConfigBehavior.qml:247
-#, fuzzy, kde-format
-#| msgid "On the Top"
+#, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the top"
 msgstr "למעלה"

@@ -1,7 +1,7 @@
 # translation of kcmaccess.po to Slovenian
 # Translation of kcmaccess.po to Slovenian
 # SLOVENIAN TRANSLATION OF KCMACCESS.
-# $Id: kcm_access.po 1688933 2024-08-28 01:13:41Z scripty $
+# $Id: kcm_access.po 1689015 2024-08-29 01:13:42Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2005, 2006 Free Software Foundation, Inc.
@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 00:40+0000\n"
-"PO-Revision-Date: 2024-07-01 06:48+0200\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
+"PO-Revision-Date: 2024-08-28 07:12+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -27,67 +27,67 @@ msgstr ""
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.4.4\n"
 
-#: kcmaccess.cpp:116
+#: kcmaccess.cpp:117
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGraph"
 
-#: kcmaccess.cpp:118
+#: kcmaccess.cpp:119
 #, kde-format
 msgid "Hyper"
 msgstr "Hyper"
 
-#: kcmaccess.cpp:120
+#: kcmaccess.cpp:121
 #, kde-format
 msgid "Super"
 msgstr "Super"
 
-#: kcmaccess.cpp:130
+#: kcmaccess.cpp:131
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
 msgstr "Pritisnite %1, ko so vključeni NumLock, CapsLock in ScrollLock"
 
-#: kcmaccess.cpp:131
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
 msgstr "Pritisnite %1, ko sta vključena CapsLock in ScrollLock"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
 msgstr "Pritisnite %1, ko sta vključena NumLock in ScrollLock"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:134
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
 msgstr "Pritisnite %1, ko je vključen ScrollLock"
 
-#: kcmaccess.cpp:134
+#: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
 msgstr "Pritisnite %1, ko sta vključena NumLock in CapsLock"
 
-#: kcmaccess.cpp:135
+#: kcmaccess.cpp:136
 #, kde-format
 msgid "Press %1 while CapsLock is active"
 msgstr "Pritisnite %1, ko je vključen CapsLock"
 
-#: kcmaccess.cpp:136
+#: kcmaccess.cpp:137
 #, kde-format
 msgid "Press %1 while NumLock is active"
 msgstr "Pritisnite %1, ko je vključen NumLock"
 
-#: kcmaccess.cpp:137
+#: kcmaccess.cpp:138
 #, kde-format
 msgid "Press %1"
 msgstr "Pritisnite %1"
 
-#: kcmaccess.cpp:186
+#: kcmaccess.cpp:192
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Ni bilo mogoče nastaviti gsettings za Orco: \"%1\" ni uspelo"
 
-#: kcmaccess.cpp:193
+#: kcmaccess.cpp:199
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Napaka: ni bilo mogoče zagnati »orca --setup«"
@@ -169,6 +169,13 @@ msgstr "Barva vizualnega zvonca"
 #, kde-format
 msgid "Duration of the Visible Bell"
 msgstr "Trajanje vizualnega zvonca"
+
+#. i18n: ectx: label, entry (ColorblindnessCorrection), group (Plugins)
+#: kcmaccessibilitycolorblindnesscorrection.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Whether Shake Cursor is enabled"
+msgid "Whether Colorblindness Correction is enabled"
+msgstr "Ali je omogočeno tresenje kazalke"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
@@ -309,15 +316,13 @@ msgid "Magnification"
 msgstr "Povečanje"
 
 #: ui/ActivationShortcuts.qml:17
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgctxt "@option:check"
 msgid "Activation shortcuts:"
-msgstr "Ativiranje kretenj"
+msgstr "Ativiranje bližnjic:"
 
 #: ui/ActivationShortcuts.qml:18
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "Enable activation shortcuts"
 msgid "Enable"
 msgstr "Omogoči"
@@ -326,20 +331,19 @@ msgstr "Omogoči"
 #, kde-format
 msgctxt "@label"
 msgid "Press Shift 5 times to enable Sticky Keys"
-msgstr ""
+msgstr "Pritisnite dvigalko 5-krat, da omogočite lepljive tipke"
 
 #: ui/ActivationShortcuts.qml:37
 #, kde-format
 msgctxt "@label"
 msgid "Hold Shift for 8 seconds to enable Slow Keys"
-msgstr ""
+msgstr "Držite dvigalko 8 sekund, da omogočite počasne tipke"
 
 #: ui/ActivationShortcuts.qml:46
-#, fuzzy, kde-format
-#| msgid "Turn sticky keys and slow keys off after inactivity:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable sticky and slow keys after:"
-msgstr "Izključi lepljive in počasne tipke po nedejavnosti:"
+msgstr "Izključi lepljive in počasne tipke po:"
 
 #: ui/ActivationShortcuts.qml:75
 #, kde-format
@@ -351,8 +355,7 @@ msgstr[2] "%1 min"
 msgstr[3] "%1 min"
 
 #: ui/ActivationShortcuts.qml:79
-#, fuzzy, kde-format
-#| msgid "min"
+#, kde-format
 msgctxt "short for minute(s)"
 msgid "min"
 msgid_plural "min"
@@ -362,10 +365,9 @@ msgstr[2] "min"
 msgstr[3] "min"
 
 #: ui/ActivationShortcuts.qml:88
-#, fuzzy, kde-format
-#| msgid "When a gesture is used:"
+#, kde-format
 msgid "When a shortcut is used:"
-msgstr "Kadar so uporabljene geste:"
+msgstr "Ko je uporabljena bližnjica:"
 
 #: ui/ActivationShortcuts.qml:89
 #, kde-format
@@ -373,10 +375,9 @@ msgid "Display a confirmation dialog"
 msgstr "Prikaži okno s potrdilom"
 
 #: ui/ActivationShortcuts.qml:100
-#, fuzzy, kde-format
-#| msgid "Ring the System Bell"
+#, kde-format
 msgid "Ring the system bell"
-msgstr "Pozvoni s sistemskim zvoncem"
+msgstr "Pozvoni sistemski zvonec"
 
 #: ui/ActivationShortcuts.qml:111
 #, kde-format
@@ -414,7 +415,7 @@ msgstr "Omogoči"
 #, kde-format
 msgctxt "@label"
 msgid "Emits a sound whenever certain keys are pressed"
-msgstr ""
+msgstr "Oddaj zvok vsakič, ko pritisnete določene tipke"
 
 #: ui/Bell.qml:50
 #, kde-format
@@ -444,26 +445,22 @@ msgid "Enable"
 msgstr "Omogoči"
 
 #: ui/Bell.qml:113
-#, fuzzy, kde-format
-#| msgid "Use the system bell whenever a key is rejected"
+#, kde-format
 msgctxt "@label"
 msgid "Flashes the screen whenever certain keys are pressed"
-msgstr "Ob vsaki zavrnitvi tipke uporabi sistemski zvonec"
+msgstr "Zabliskaj zaslon vsakič, ko pritisnete določene tipke"
 
 #: ui/Bell.qml:123
-#, fuzzy, kde-format
-#| msgctxt "Invert screen on a system bell"
-#| msgid "Invert Screen"
+#, kde-format
 msgctxt "@option:radio Invert screen colors when a system bell is rung"
 msgid "Invert screen colors"
-msgstr "Obrni zaslon"
+msgstr "Obrni zaslonske barve"
 
 #: ui/Bell.qml:141
-#, fuzzy, kde-format
-#| msgid "F&lash screen"
+#, kde-format
 msgctxt "@option:radio Flash screen when a system bell is rung"
 msgid "Flash screen"
-msgstr "Zab&liskaj zaslon"
+msgstr "Zabliskaj zaslon"
 
 #: ui/Bell.qml:152
 #, kde-format
@@ -480,15 +477,13 @@ msgstr "Trajanje:"
 #: ui/Bell.qml:181 ui/KeyboardFilters.qml:55 ui/KeyboardFilters.qml:151
 #: ui/MouseNavigation.qml:51 ui/MouseNavigation.qml:73
 #: ui/MouseNavigation.qml:95
-#, fuzzy, kde-format
-#| msgid "%1 min"
-#| msgid_plural "%1 min"
+#, kde-format
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "%1 min"
-msgstr[1] "%1 min"
-msgstr[2] "%1 min"
-msgstr[3] "%1 min"
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
+msgstr[2] "%1 ms"
+msgstr[3] "%1 ms"
 
 #: ui/Bell.qml:185 ui/KeyboardFilters.qml:59 ui/KeyboardFilters.qml:155
 #: ui/MouseNavigation.qml:55 ui/MouseNavigation.qml:77
@@ -497,10 +492,86 @@ msgstr[3] "%1 min"
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "ms"
+msgstr[1] "ms"
+msgstr[2] "ms"
+msgstr[3] "ms"
+
+#: ui/ColorblindnessCorrection.qml:22
+#, kde-format
+msgctxt "@label"
+msgid "Color blindness correction:"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:23
+#, fuzzy, kde-format
+#| msgctxt "Enable activation shortcuts"
+#| msgid "Enable"
+msgctxt "@option check, Enable color blindness correction effect"
+msgid "Enable"
+msgstr "Omogoči"
+
+#: ui/ColorblindnessCorrection.qml:36
+#, kde-format
+msgctxt "@label"
+msgid "Mode:"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:41
+#, kde-format
+msgctxt "@option"
+msgid "Protanopia (red weak)"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:42
+#, kde-format
+msgctxt "@option"
+msgid "Deuteranopia (green weak)"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:43
+#, kde-format
+msgctxt "@option"
+msgid "Tritanopia (blue-yellow)"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:58
+#, kde-format
+msgctxt "@label"
+msgid "Intensity:"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:81
+#, kde-format
+msgctxt "@label Mild color blindness correction intensity"
+msgid "Mild"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:88
+#, kde-format
+msgctxt "@label Intense color blindness correction intensity"
+msgid "Intense"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:111
+#, kde-format
+msgid "Red"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:112
+#, kde-format
+msgid "Green"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:113
+#, kde-format
+msgid "Blue"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:114
+#, kde-format
+msgid "Purple"
+msgstr ""
 
 #: ui/KeyboardFilters.qml:17
 #, kde-format
@@ -521,6 +592,9 @@ msgid ""
 "Useful if you accidentally type more than one key at a time or have "
 "difficulty pressing the key you want the first time."
 msgstr ""
+"Da je tipka sprejeta, jo je treba držati do nastavljenega časa. Uporabno, če "
+"pomotoma pritisnete več kot eno tipko hkrati ali imate težave s prvim "
+"pritiskom na želeno tipko."
 
 #: ui/KeyboardFilters.qml:40
 #, kde-format
@@ -570,6 +644,9 @@ msgid ""
 "tremors that cause you to press a key multiple times when you only intend to "
 "press once."
 msgstr ""
+"Prezri hitre, ponavljajoče se pritiske iste tipke. Uporabno, če imate "
+"tresenje rok, zaradi česar večkrat pritisnete tipko, čeprav jo nameravate "
+"pritisniti le enkrat."
 
 #: ui/KeyboardFilters.qml:136
 #, kde-format
@@ -583,11 +660,10 @@ msgid "Ring system bell when rejected"
 msgstr "Pozvoni sistemski zvonec ob zavrnitvi"
 
 #: ui/main.qml:28
-#, fuzzy, kde-format
-#| msgid "Use System Bell"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "System Bell"
-msgstr "Uporabi sistemski zvonec"
+msgstr "Sistemski zvonec"
 
 #: ui/main.qml:33
 #, kde-format
@@ -608,10 +684,9 @@ msgid "Mouse Navigation"
 msgstr "Krmarjenje miške"
 
 #: ui/main.qml:48
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgid "Activation Shortcuts"
-msgstr "Ativiranje kretenj"
+msgstr "Ativiranje bližnjic"
 
 #: ui/main.qml:53
 #, kde-format
@@ -621,20 +696,24 @@ msgstr "Bralnik zaslona"
 
 #: ui/main.qml:58
 #, kde-format
+msgctxt "Correction for color blindness"
+msgid "Color Blindness Correction"
+msgstr ""
+
+#: ui/main.qml:63
+#, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"
 msgstr "Zatresi kazalko"
 
 #: ui/ModifierKeys.qml:17
-#, fuzzy, kde-format
-#| msgid "Sticky keys:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sticky keys:"
 msgstr "Lepljive tipke:"
 
 #: ui/ModifierKeys.qml:22
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable sticky keys"
 msgid "Enable"
 msgstr "Omogoči"
@@ -647,10 +726,12 @@ msgid ""
 "though they “stick in place” and no longer need to be held down when typing "
 "a keyboard shortcut."
 msgstr ""
+"Modifikacijske tipke, kot so kontrolka, dvigalka, tipka Alt in tipka Meta/"
+"Super/Windows, delujejo, kot da »ostanejo na mestu« in jih ni več treba "
+"držati pritisnjenih, ko tipkate bližnjico na tipkovnici."
 
 #: ui/ModifierKeys.qml:39
-#, fuzzy, kde-format
-#| msgid "Lock the sticky keys"
+#, kde-format
 msgctxt "@option:check"
 msgid "Lock sticky keys"
 msgstr "Zakleni lepljive tipke"
@@ -662,6 +743,9 @@ msgid ""
 "Once locked, the “sticky” state of modifier keys will not be disabled until "
 "a keyboard shortcut is finished or until a non-modifier key is pressed."
 msgstr ""
+"Ko je zaklenjeno, »lepljivo« stanje modifikacijskih tipk ne bo onemogočeno, "
+"dokler bližnjica na tipkovnici ni končana ali dokler ni pritisnjena tipka, "
+"ki ni modifikator."
 
 #: ui/ModifierKeys.qml:57
 #, kde-format
@@ -674,50 +758,45 @@ msgid "Ring system bell when modifier keys are used"
 msgstr "Pozvoni s sistemskim zvoncem, kadar so uporabljene spremenilne tipke"
 
 #: ui/ModifierKeys.qml:88
-#, fuzzy, kde-format
-#| msgid "Feedback:"
+#, kde-format
 msgctxt "@option:check Feedback options:"
 msgid "Feedback:"
 msgstr "Povratni odziv:"
 
 #: ui/ModifierKeys.qml:93
-#, fuzzy, kde-format
-#| msgid "Ring system bell when locking keys are toggled"
+#, kde-format
 msgctxt "@option:check"
 msgid "Ring system bell when locking keys are used"
-msgstr "Pozvoni s sistemskim zvoncem, kadar so preklopljene tipke za zaklep"
+msgstr "Zazvoni sistemski zvonec ob uporabi tipk za zaklepanje"
 
 #: ui/ModifierKeys.qml:104
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The locking keys are Caps Lock, Num Lock, and Scroll Lock."
-msgstr ""
+msgstr "Tipke za zaklepanje so Caps Lock, Num Lock in Scroll Lock."
 
 #: ui/ModifierKeys.qml:108
-#, fuzzy, kde-format
-#| msgid "Show notification when modifier or locking keys are used"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show notification when modifier or locking keys are used"
 msgstr ""
-"Prikaži obvestilo kadar so uporabljene spremenilne tipke ali tipke za zaklep"
+"Prikaži obvestilo kadar so uporabljene spremenilne tipke ali tipke za "
+"zaklepanje"
 
 #: ui/ModifierKeys.qml:120
-#, fuzzy, kde-format
-#| msgid "Configure Notifications…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Notifications…"
-msgstr "Nastavi obvestila…"
+msgstr "Konfiguriraj obvestila…"
 
 #: ui/MouseNavigation.qml:16
-#, fuzzy, kde-format
-#| msgid "Use number pad to move cursor:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move cursor:"
-msgstr "Uporabi številsko tipkovnico za premikanje kazalčka:"
+msgstr "Uporabi številsko tipkovnico za premikanje kazalke:"
 
 #: ui/MouseNavigation.qml:21
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable mouse navigation"
 msgid "Enable"
 msgstr "Omogoči"
@@ -732,68 +811,65 @@ msgid ""
 "up). The keys <shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</"
 "shortcut>, and <shortcut>9</shortcut> allow for diagonal movement."
 msgstr ""
+"Tipka na številski tipkovnici <shortcut>5</shortcut> deluje kot klik miške. "
+"Tipke <shortcut>2</shortcut>, <shortcut>4</shortcut>, <shortcut>6</shortcut> "
+"in <shortcut>8</shortcut> omogočajo gibanje po oseh (dol, levo, desno in "
+"gor). Tipke <shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</"
+"shortcut> in <shortcut>9</shortcut> omogočajo diagonalno gibanje."
 
 #: ui/MouseNavigation.qml:37
-#, fuzzy, kde-format
-#| msgid "Acceleration delay:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
 msgstr "Zakasnitev pospeševanja:"
 
 #: ui/MouseNavigation.qml:59
-#, fuzzy, kde-format
-#| msgid "Repeat interval:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr "Interval ponovitev:"
 
 #: ui/MouseNavigation.qml:81
-#, fuzzy, kde-format
-#| msgid "Acceleration time:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "Čas pospeševanja:"
 
 #: ui/MouseNavigation.qml:103
-#, fuzzy, kde-format
-#| msgid "Maximum speed:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr "Največja hitrost:"
 
 #: ui/MouseNavigation.qml:117
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
 msgstr "Pospeševanje kazalca:"
 
 #: ui/ScreenReader.qml:20
-#, fuzzy, kde-format
-#| msgid "Launch Orca Screen Reader Configuration…"
+#, kde-format
 msgctxt "@info Placeholder message title"
 msgid "The Orca Screen Reader is not installed"
-msgstr "Zaženi nastavitev bralnika zaslona Orca…"
+msgstr "Bralnik zaslona Orca ni nameščen"
 
 #: ui/ScreenReader.qml:21
 #, kde-format
 msgctxt "@info Placeholder message explanation"
 msgid "Please install it, then close and reopen this window"
-msgstr ""
+msgstr "Namestite ga, nato zaprite in znova odprite to okno"
 
 #: ui/ScreenReader.qml:27
-#, fuzzy, kde-format
-#| msgid "Enable Screen Reader"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable Screen Reader"
 msgstr "Omogoči bralnik zaslona"
 
 #: ui/ScreenReader.qml:39
-#, fuzzy, kde-format
-#| msgid "Launch Orca Screen Reader Configuration…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Launch Orca Screen Reader Configuration…"
-msgstr "Zaženi nastavitev bralnika zaslona Orca…"
+msgstr "Zaženi konfiguracijo bralnika zaslona Orca…"
 
 #: ui/ShakeCursor.qml:15
 #, kde-format

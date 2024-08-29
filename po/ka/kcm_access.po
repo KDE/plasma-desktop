@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 00:40+0000\n"
-"PO-Revision-Date: 2024-07-01 05:51+0200\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
+"PO-Revision-Date: 2024-08-28 04:18+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -18,67 +18,67 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.3.2\n"
 
-#: kcmaccess.cpp:116
+#: kcmaccess.cpp:117
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGraph"
 
-#: kcmaccess.cpp:118
+#: kcmaccess.cpp:119
 #, kde-format
 msgid "Hyper"
 msgstr "Hyper"
 
-#: kcmaccess.cpp:120
+#: kcmaccess.cpp:121
 #, kde-format
 msgid "Super"
 msgstr "Super"
 
-#: kcmaccess.cpp:130
+#: kcmaccess.cpp:131
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
 msgstr "დააწექით %1-ს, როცა NumLock, CapsLock და ScrollLock აქტიურია"
 
-#: kcmaccess.cpp:131
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
 msgstr "დააწექით %1-ს, როცა CapsLock და ScrollLock აქტიურია"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
 msgstr "დააწექით %1-ს, როცა NumLock დაScrollLock აქტიურია"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:134
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
 msgstr "დააწექით %1-ს, როცა ScrollLock აქტიურია"
 
-#: kcmaccess.cpp:134
+#: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
 msgstr "დააწექით %1-ს, როცა NumLock და CapsLock აქტიურია"
 
-#: kcmaccess.cpp:135
+#: kcmaccess.cpp:136
 #, kde-format
 msgid "Press %1 while CapsLock is active"
 msgstr "დააწექით %1-ს, როცა CapsLock აქტიურია"
 
-#: kcmaccess.cpp:136
+#: kcmaccess.cpp:137
 #, kde-format
 msgid "Press %1 while NumLock is active"
 msgstr "დააწექით %1-ს, როცა NumLock აქტიურია"
 
-#: kcmaccess.cpp:137
+#: kcmaccess.cpp:138
 #, kde-format
 msgid "Press %1"
 msgstr "დააწექით %1-ს"
 
-#: kcmaccess.cpp:186
+#: kcmaccess.cpp:192
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Orca-სთვის gsettings-ის დაყენების შეცდომა: \"%1\"-ის შეცდომა"
 
-#: kcmaccess.cpp:193
+#: kcmaccess.cpp:199
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "შეცდომა: \"orca --setup\" -ის გაშვების შეცდომა"
@@ -160,6 +160,13 @@ msgstr "ხილული ზარის ფერი"
 #, kde-format
 msgid "Duration of the Visible Bell"
 msgstr "ხილული ზარის ხანგრძლივობა"
+
+#. i18n: ectx: label, entry (ColorblindnessCorrection), group (Plugins)
+#: kcmaccessibilitycolorblindnesscorrection.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Whether Shake Cursor is enabled"
+msgid "Whether Colorblindness Correction is enabled"
+msgstr "როცა კურსორის ჯანჯღარი ჩართულია"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
@@ -300,15 +307,13 @@ msgid "Magnification"
 msgstr "გადიდება"
 
 #: ui/ActivationShortcuts.qml:17
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgctxt "@option:check"
 msgid "Activation shortcuts:"
-msgstr "აქტივაციის ჟესტები"
+msgstr "აქტივაციის მალსახმობები:"
 
 #: ui/ActivationShortcuts.qml:18
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "Enable activation shortcuts"
 msgid "Enable"
 msgstr "ჩართვა"
@@ -317,20 +322,19 @@ msgstr "ჩართვა"
 #, kde-format
 msgctxt "@label"
 msgid "Press Shift 5 times to enable Sticky Keys"
-msgstr ""
+msgstr "დააჭირეთ Shift-ს 5-ჯერ, წებოვანი ღილაკების ჩასართავად"
 
 #: ui/ActivationShortcuts.qml:37
 #, kde-format
 msgctxt "@label"
 msgid "Hold Shift for 8 seconds to enable Slow Keys"
-msgstr ""
+msgstr "გეჭიროთ ღილაკი Shift 8 წამის განმავლობაში ნელი ღილაკების ჩასართავად"
 
 #: ui/ActivationShortcuts.qml:46
-#, fuzzy, kde-format
-#| msgid "Turn sticky keys and slow keys off after inactivity:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable sticky and slow keys after:"
-msgstr "წებოვანი და ნელი ღილაკების გათიშვა უქმეობის შემდეგ:"
+msgstr "წებოვანი და ნელი ღილაკების გათიშვა დროის შემდეგ:"
 
 #: ui/ActivationShortcuts.qml:75
 #, kde-format
@@ -340,8 +344,7 @@ msgstr[0] "%1 წთ"
 msgstr[1] "%1 წთ"
 
 #: ui/ActivationShortcuts.qml:79
-#, fuzzy, kde-format
-#| msgid "min"
+#, kde-format
 msgctxt "short for minute(s)"
 msgid "min"
 msgid_plural "min"
@@ -349,10 +352,9 @@ msgstr[0] "წთ"
 msgstr[1] "წთ"
 
 #: ui/ActivationShortcuts.qml:88
-#, fuzzy, kde-format
-#| msgid "When a gesture is used:"
+#, kde-format
 msgid "When a shortcut is used:"
-msgstr "როდის გამოიყენება ჟესტი:"
+msgstr "როცა მალსახმობი გამოიყენება:"
 
 #: ui/ActivationShortcuts.qml:89
 #, kde-format
@@ -360,8 +362,7 @@ msgid "Display a confirmation dialog"
 msgstr "დადასტურების ფანჯრის ჩვენება"
 
 #: ui/ActivationShortcuts.qml:100
-#, fuzzy, kde-format
-#| msgid "Ring the System Bell"
+#, kde-format
 msgid "Ring the system bell"
 msgstr "სისტემური ზარის დარეკვა"
 
@@ -401,7 +402,7 @@ msgstr "ჩართვა"
 #, kde-format
 msgctxt "@label"
 msgid "Emits a sound whenever certain keys are pressed"
-msgstr ""
+msgstr "გამოსცემს ხმას, როცა გარკვეულ ღილაკებს დააჭერენ"
 
 #: ui/Bell.qml:50
 #, kde-format
@@ -434,21 +435,19 @@ msgstr "ჩართვა"
 #, kde-format
 msgctxt "@label"
 msgid "Flashes the screen whenever certain keys are pressed"
-msgstr ""
+msgstr "ეკრანი გაიციმციმებს, როცა გარკვეულ ღილაკებს დააჭერენ"
 
 #: ui/Bell.qml:123
-#, fuzzy, kde-format
-#| msgctxt "Invert screen on a system bell"
-#| msgid "Invert Screen"
+#, kde-format
 msgctxt "@option:radio Invert screen colors when a system bell is rung"
 msgid "Invert screen colors"
-msgstr "ეკრანის ინვერსია"
+msgstr "ეკრანის ფერების ინვერსია"
 
 #: ui/Bell.qml:141
 #, kde-format
 msgctxt "@option:radio Flash screen when a system bell is rung"
 msgid "Flash screen"
-msgstr ""
+msgstr "ეკრანის ციმციმი"
 
 #: ui/Bell.qml:152
 #, kde-format
@@ -465,9 +464,7 @@ msgstr "ხანგრძლივობა:"
 #: ui/Bell.qml:181 ui/KeyboardFilters.qml:55 ui/KeyboardFilters.qml:151
 #: ui/MouseNavigation.qml:51 ui/MouseNavigation.qml:73
 #: ui/MouseNavigation.qml:95
-#, fuzzy, kde-format
-#| msgid "%1 min"
-#| msgid_plural "%1 min"
+#, kde-format
 msgid "%1 ms"
 msgid_plural "%1 ms"
 msgstr[0] "%1 წთ"
@@ -480,8 +477,84 @@ msgstr[1] "%1 წთ"
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "მწმ"
+msgstr[1] "მწმ"
+
+#: ui/ColorblindnessCorrection.qml:22
+#, kde-format
+msgctxt "@label"
+msgid "Color blindness correction:"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:23
+#, fuzzy, kde-format
+#| msgctxt "Enable activation shortcuts"
+#| msgid "Enable"
+msgctxt "@option check, Enable color blindness correction effect"
+msgid "Enable"
+msgstr "ჩართვა"
+
+#: ui/ColorblindnessCorrection.qml:36
+#, kde-format
+msgctxt "@label"
+msgid "Mode:"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:41
+#, kde-format
+msgctxt "@option"
+msgid "Protanopia (red weak)"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:42
+#, kde-format
+msgctxt "@option"
+msgid "Deuteranopia (green weak)"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:43
+#, kde-format
+msgctxt "@option"
+msgid "Tritanopia (blue-yellow)"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:58
+#, kde-format
+msgctxt "@label"
+msgid "Intensity:"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:81
+#, kde-format
+msgctxt "@label Mild color blindness correction intensity"
+msgid "Mild"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:88
+#, kde-format
+msgctxt "@label Intense color blindness correction intensity"
+msgid "Intense"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:111
+#, kde-format
+msgid "Red"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:112
+#, kde-format
+msgid "Green"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:113
+#, kde-format
+msgid "Blue"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:114
+#, kde-format
+msgid "Purple"
+msgstr ""
 
 #: ui/KeyboardFilters.qml:17
 #, kde-format
@@ -502,6 +575,9 @@ msgid ""
 "Useful if you accidentally type more than one key at a time or have "
 "difficulty pressing the key you want the first time."
 msgstr ""
+"იმისათვის, რომ ღილაკი მისაღები იყოს, ის გარკვეული დროის განმავლობაში უნდა "
+"გეჭიროთ. სასარგებლოა, თუ შემთხვევით აკრიფეთ რამდენიმე ღილაკი, ან გაქვთ "
+"პრობლემა, პირველად დააწვეთ სასურველ ღილაკს."
 
 #: ui/KeyboardFilters.qml:40
 #, kde-format
@@ -551,6 +627,8 @@ msgid ""
 "tremors that cause you to press a key multiple times when you only intend to "
 "press once."
 msgstr ""
+"სწრაფი, განმეორებადი ღილაკის დაჭერების იგნორი. სასარგებლოა, თუ კანკალებთ და "
+"ამიტომ ღილაკზე ბევრჯერ გეჭირებათ, როცა ეს ერთხელ გნებავდათ."
 
 #: ui/KeyboardFilters.qml:136
 #, kde-format
@@ -564,11 +642,10 @@ msgid "Ring system bell when rejected"
 msgstr "უარყოფისას სისტემური ზარის დარეკვა"
 
 #: ui/main.qml:28
-#, fuzzy, kde-format
-#| msgid "Use System Bell"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "System Bell"
-msgstr "სისტემური ზარის გამოყენება"
+msgstr "სისტემური ზარი"
 
 #: ui/main.qml:33
 #, kde-format
@@ -589,10 +666,9 @@ msgid "Mouse Navigation"
 msgstr "თაგუნით ნავიგაცა"
 
 #: ui/main.qml:48
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgid "Activation Shortcuts"
-msgstr "აქტივაციის ჟესტები"
+msgstr "აქტივაციის მალსახმობები"
 
 #: ui/main.qml:53
 #, kde-format
@@ -602,20 +678,24 @@ msgstr "ეკრანის მკითხველი"
 
 #: ui/main.qml:58
 #, kde-format
+msgctxt "Correction for color blindness"
+msgid "Color Blindness Correction"
+msgstr ""
+
+#: ui/main.qml:63
+#, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"
 msgstr "კურსორის ჯანჯღარი"
 
 #: ui/ModifierKeys.qml:17
-#, fuzzy, kde-format
-#| msgid "Sticky keys:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sticky keys:"
 msgstr "წებოვანი ღილაკები:"
 
 #: ui/ModifierKeys.qml:22
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable sticky keys"
 msgid "Enable"
 msgstr "ჩართვა"
@@ -628,10 +708,12 @@ msgid ""
 "though they “stick in place” and no longer need to be held down when typing "
 "a keyboard shortcut."
 msgstr ""
+"მოდიფიკატორი ღილაკები, როგორებიცაა Ctrl, Alt, Sift და Meta/Super/Windows "
+"მუშაობენ, თითქოს ისინი \"დაწებებულები არიან\" და აღარაა საჭირო, ზედ გეჭიროთ, "
+"როცა კლავიატურის მალსახმობს კრეფთ."
 
 #: ui/ModifierKeys.qml:39
-#, fuzzy, kde-format
-#| msgid "Lock the sticky keys"
+#, kde-format
 msgctxt "@option:check"
 msgid "Lock sticky keys"
 msgstr "წებოვანი ღილაკების დაბლოკვა"
@@ -643,6 +725,9 @@ msgid ""
 "Once locked, the “sticky” state of modifier keys will not be disabled until "
 "a keyboard shortcut is finished or until a non-modifier key is pressed."
 msgstr ""
+"როცა დაბლოკილია, მოდიფიკატორი ღილაკების \"წებოვანი\" მდგომარეობა არ "
+"გაითიშება, სანამ კლავიატურის მალსახმობი არ დასრულდება, ან არამოდიფიკატორ "
+"ღილაკს არ დაწევებით."
 
 #: ui/ModifierKeys.qml:57
 #, kde-format
@@ -655,49 +740,43 @@ msgid "Ring system bell when modifier keys are used"
 msgstr "სისტემური ზარის დარეკვა მოდიფიკატორი ღილაკების გამოყენებისას"
 
 #: ui/ModifierKeys.qml:88
-#, fuzzy, kde-format
-#| msgid "Feedback:"
+#, kde-format
 msgctxt "@option:check Feedback options:"
 msgid "Feedback:"
 msgstr "უკუკავშირი:"
 
 #: ui/ModifierKeys.qml:93
-#, fuzzy, kde-format
-#| msgid "Ring system bell when locking keys are toggled"
+#, kde-format
 msgctxt "@option:check"
 msgid "Ring system bell when locking keys are used"
-msgstr "სისტემური ზარის დარეკვა ღილაკების ბლოკირების გადართვისას"
+msgstr "სისტემური ზარის დარეკვა დაბლოკვის ღილაკების გამოყენებისას"
 
 #: ui/ModifierKeys.qml:104
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The locking keys are Caps Lock, Num Lock, and Scroll Lock."
-msgstr ""
+msgstr "დამბლოკავი ღილაკებია Cals Lock, Num Lock და Scroll Lock."
 
 #: ui/ModifierKeys.qml:108
-#, fuzzy, kde-format
-#| msgid "Show notification when modifier or locking keys are used"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show notification when modifier or locking keys are used"
 msgstr "მოდიფიკატორი ან ჩამკეტი ღილაკების გამოყენებისას შეტყობინების ჩვენება"
 
 #: ui/ModifierKeys.qml:120
-#, fuzzy, kde-format
-#| msgid "Configure Notifications…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Notifications…"
 msgstr "შეტყობინებების მორგება…"
 
 #: ui/MouseNavigation.qml:16
-#, fuzzy, kde-format
-#| msgid "Use number pad to move cursor:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move cursor:"
 msgstr "კურსორის გადასაადგილებლად ციფრული კლავიატურის გამოყენება:"
 
 #: ui/MouseNavigation.qml:21
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable mouse navigation"
 msgid "Enable"
 msgstr "ჩართვა"
@@ -712,65 +791,63 @@ msgid ""
 "up). The keys <shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</"
 "shortcut>, and <shortcut>9</shortcut> allow for diagonal movement."
 msgstr ""
+"კალკულატორის ღილაკი <shortcut>5</shortcut> თაგუნას წკაპივით მუშაობს. "
+"ღილაკები <shortcut>2</shortcut>, <shortcut>4</shortcut>, <shortcut>6</"
+"shortcut> და <shortcut>8</shortcut> შესაბამისი მიმართულებით "
+"გადაადგილებისთვის (ქვემოთ, მარცხნივ, მარჯვნივ და მაღლა). ღილაკებით "
+"<shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</shortcut>და "
+"<shortcut>9</shortcut> კი - დიაგონალურად."
 
 #: ui/MouseNavigation.qml:37
-#, fuzzy, kde-format
-#| msgid "Acceleration delay:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
 msgstr "აჩქარების დაყოვნება:"
 
 #: ui/MouseNavigation.qml:59
-#, fuzzy, kde-format
-#| msgid "Repeat interval:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr "გამეორების ინტერვალი:"
 
 #: ui/MouseNavigation.qml:81
-#, fuzzy, kde-format
-#| msgid "Acceleration time:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "აჩქარების დრო:"
 
 #: ui/MouseNavigation.qml:103
-#, fuzzy, kde-format
-#| msgid "Maximum speed:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr "მაქსიმალური სიჩქარე:"
 
 #: ui/MouseNavigation.qml:117
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
 msgstr "კურსორის აჩქარება:"
 
 #: ui/ScreenReader.qml:20
-#, fuzzy, kde-format
-#| msgid "Launch Orca Screen Reader Configuration…"
+#, kde-format
 msgctxt "@info Placeholder message title"
 msgid "The Orca Screen Reader is not installed"
-msgstr "Orca - ეკრანის მკითხველის მორგების გაშვება…"
+msgstr "Orca - ეკრანის მკითხველი დაყენებული არაა"
 
 #: ui/ScreenReader.qml:21
 #, kde-format
 msgctxt "@info Placeholder message explanation"
 msgid "Please install it, then close and reopen this window"
-msgstr ""
+msgstr "დააყენეთ ის და თავიდან გახსენით ეს ფანჯარა"
 
 #: ui/ScreenReader.qml:27
-#, fuzzy, kde-format
-#| msgid "Enable Screen Reader"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable Screen Reader"
 msgstr "ეკრანის მკითხველის ჩართვა"
 
 #: ui/ScreenReader.qml:39
-#, fuzzy, kde-format
-#| msgid "Launch Orca Screen Reader Configuration…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Launch Orca Screen Reader Configuration…"
 msgstr "Orca - ეკრანის მკითხველის მორგების გაშვება…"
