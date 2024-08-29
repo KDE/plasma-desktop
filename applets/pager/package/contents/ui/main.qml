@@ -589,26 +589,31 @@ PlasmoidItem {
 
     Plasmoid.contextualActions: [
         PlasmaCore.Action {
-            text: i18n("Show Activity Manager…")
+            text: i18nc("@action:inmenu widget context menu", "Show Activity Manager")
             icon.name: "activities"
             visible: root.isActivityPager
             onTriggered: ActivitySwitcher.Backend.toggleActivityManager()
         },
         PlasmaCore.Action {
-            text: i18n("Add Virtual Desktop")
+            text: i18nc("@action:inmenu widget context menu", "Add Virtual Desktop")
             icon.name: "list-add"
             visible: !root.isActivityPager && KConfig.KAuthorized.authorize("kcm_kwin_virtualdesktops")
             onTriggered: pagerModel.addDesktop()
         },
         PlasmaCore.Action {
-            text: i18n("Remove Virtual Desktop")
+            text: i18nc("@action:inmenu widget context menu", "Remove Virtual Desktop")
             icon.name: "list-remove"
             visible: !root.isActivityPager && KConfig.KAuthorized.authorize("kcm_kwin_virtualdesktops")
             enabled: repeater.count > 1
             onTriggered: pagerModel.removeDesktop()
         },
         PlasmaCore.Action {
-            text: i18n("Configure Virtual Desktops…")
+            text: i18nc("@action:inmenu widget context menu", "&Configure Activities…")
+            visible: root.isActivityPager && KConfig.KAuthorized.authorize("kcm_activities")
+            onTriggered: KCM.KCMLauncher.openSystemSettings("kcm_activities")
+        },
+        PlasmaCore.Action {
+            text: i18nc("@action:inmenu widget context menu", "Configure Virtual Desktops…")
             visible: !root.isActivityPager && KConfig.KAuthorized.authorize("kcm_kwin_virtualdesktops")
             onTriggered: KCM.KCMLauncher.openSystemSettings("kcm_kwin_virtualdesktops")
         }
