@@ -172,7 +172,7 @@ KCM.SimpleKCM {
         QQC2.Button {
             enabled: KConfig.KAuthorized.authorizeControlModule("kcm_plasmasearch")
             icon.name: "settings-configure"
-            text: i18nc("@action:button", "Configure Enabled Search Plugins…")
+            text: i18nc("@action:button opens plasmasearch kcm", "Configure Search Plugins…")
             onClicked: KCM.KCMLauncher.openSystemSettings("kcm_plasmasearch")
         }
 
