@@ -16,6 +16,9 @@ import org.kde.plasma.activityswitcher as ActivitySwitcher
 import org.kde.kirigami as Kirigami
 import org.kde.activities as Activities
 
+import org.kde.kcmutils as KCM
+import org.kde.config as KConfig
+
 PlasmoidItem {
     id: root
 
@@ -112,4 +115,12 @@ PlasmoidItem {
             textFormat: Text.PlainText
         }
     }
+
+    Plasmoid.contextualActions: [
+        PlasmaCore.Action {
+            text: i18nc("@action:inmenu widget context menu", "&Configure Activities…")
+            visible: KConfig.KAuthorized.authorize("kcm_activities")
+            onTriggered: KCM.KCMLauncher.openSystemSettings("kcm_activities")
+        }
+        ]
 }
