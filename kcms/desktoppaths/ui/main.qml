@@ -49,13 +49,13 @@ KCM.SimpleKCM {
         UrlRequester {
             id: desktop
 
-            Kirigami.FormData.label: i18n("Desktop path:")
+            Kirigami.FormData.label: i18nc("@label:textbox", "Desktop folder:")
 
             textFieldWidth: root.commonFieldWidth
 
             location: kcm.settings.desktopLocation
             defaultLocation: kcm.settings.defaultDesktopLocation
-            Accessible.description: i18n("This folder contains all the files which you see on your desktop. You can change the location of this folder if you want to, and the contents will move automatically to the new location as well.")
+            Accessible.description: i18nc("@info:tooltip and accessible description", "This folder contains all the files you see on your desktop.")
 
             onNewLocationSelected: (newLocation) => kcm.settings.desktopLocation = newLocation
         }
@@ -63,13 +63,13 @@ KCM.SimpleKCM {
         UrlRequester {
             id: documents
 
-            Kirigami.FormData.label: i18n("Documents path:")
+            Kirigami.FormData.label: i18nc("@label:textbox", "Documents folder:")
 
             textFieldWidth: root.commonFieldWidth
 
             location: kcm.settings.documentsLocation
             defaultLocation: kcm.settings.defaultDocumentsLocation
-            Accessible.description: i18n("This folder will be used by default to load or save documents from or to.")
+            Accessible.description: i18nc("@info:tooltip and accessible description", "This folder will be used by default to open or save documents.")
 
             onNewLocationSelected: (newLocation) => kcm.settings.documentsLocation = newLocation
         }
@@ -77,13 +77,13 @@ KCM.SimpleKCM {
         UrlRequester {
             id: downloads
 
-            Kirigami.FormData.label: i18n("Downloads path:")
+            Kirigami.FormData.label: i18nc("@label:textbox", "Downloads folder:")
 
             textFieldWidth: root.commonFieldWidth
 
             location: kcm.settings.downloadsLocation
             defaultLocation: kcm.settings.defaultDownloadsLocation
-            Accessible.description: i18n("This folder will be used by default to save your downloaded items.")
+            Accessible.description: i18nc("@info:tooltip and accessible description", "This folder will be used by default to save your downloaded items.")
 
             onNewLocationSelected: (newLocation) => kcm.settings.downloadsLocation = newLocation
         }
@@ -91,13 +91,13 @@ KCM.SimpleKCM {
         UrlRequester {
             id: videos
 
-            Kirigami.FormData.label: i18n("Videos path:")
+            Kirigami.FormData.label: i18nc("@label:textbox", "Videos folder:")
 
             textFieldWidth: root.commonFieldWidth
 
             location: kcm.settings.videosLocation
             defaultLocation: kcm.settings.defaultVideosLocation
-            Accessible.description: i18n("This folder will be used by default to load or save movies from or to.")
+            Accessible.description: i18nc("@info:tooltip and accessible description", "This folder will be used by default to open or save video files.")
 
             onNewLocationSelected: (newLocation) => kcm.settings.videosLocation = newLocation
         }
@@ -105,13 +105,13 @@ KCM.SimpleKCM {
         UrlRequester {
             id: pictures
 
-            Kirigami.FormData.label: i18n("Pictures path:")
+            Kirigami.FormData.label: i18nc("@label:textbox", "Pictures folder:")
 
             textFieldWidth: root.commonFieldWidth
 
             location: kcm.settings.picturesLocation
             defaultLocation: kcm.settings.defaultPicturesLocation
-            Accessible.description: i18n("This folder will be used by default to load or save pictures from or to.")
+            Accessible.description: i18nc("@info:tooltip and accessible description", "This folder will be used by default to open or save image files.")
 
             onNewLocationSelected: (newLocation) => kcm.settings.picturesLocation = newLocation
         }
@@ -119,13 +119,13 @@ KCM.SimpleKCM {
         UrlRequester {
             id: music
 
-            Kirigami.FormData.label: i18n("Music path:")
+            Kirigami.FormData.label: i18nc("@label:textbox", "Music folder:")
 
             textFieldWidth: root.commonFieldWidth
 
             location: kcm.settings.musicLocation
             defaultLocation: kcm.settings.defaultMusicLocation
-            Accessible.description: i18n("This folder will be used by default to load or save music from or to.")
+            Accessible.description: i18nc("@info:tooltip and accessible description", "This folder will be used by default to open or save music files.")
 
             onNewLocationSelected: (newLocation) => kcm.settings.musicLocation = newLocation
         }
@@ -133,13 +133,13 @@ KCM.SimpleKCM {
         UrlRequester {
             id: publicPath
 
-            Kirigami.FormData.label: i18n("Public path:")
+            Kirigami.FormData.label: i18nc("@label:textbox", "Public folder:")
 
             textFieldWidth: root.commonFieldWidth
 
             location: kcm.settings.publicLocation
             defaultLocation: kcm.settings.defaultPublicLocation
-            Accessible.description: i18n("This folder will be used by default for publicly-shared files when network sharing is enabled.")
+            Accessible.description: i18nc("@info:tooltip and accessible description", "This folder will be used by default for publicly-shared files when network sharing is enabled.")
 
             onNewLocationSelected: (newLocation) => kcm.settings.publicLocation = newLocation
         }
@@ -147,13 +147,13 @@ KCM.SimpleKCM {
         UrlRequester {
             id: templates
 
-            Kirigami.FormData.label: i18n("Templates path:")
+            Kirigami.FormData.label: i18nc("@label:textbox", "Templates folder:")
 
             textFieldWidth: root.commonFieldWidth
 
             location: kcm.settings.templatesLocation
             defaultLocation: kcm.settings.defaultTemplatesLocation
-            Accessible.description: i18n("This folder will be used by default to load or save templates from or to.")
+            Accessible.description: i18nc("@info:tooltip and accessible description", "This folder will be used by default to open or save file templates.")
 
             onNewLocationSelected: (newLocation) => kcm.settings.templatesLocation = newLocation
         }
