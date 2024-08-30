@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-27 00:41+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2024-08-24 11:50+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -503,10 +503,19 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "Usuń ten pasek; nie będzie można cofnąć tego działania"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, kde-format
-msgctxt "@action:button Done configuring the panel"
-msgid "Done"
-msgstr "Gotowe"
+#, fuzzy, kde-format
+#| msgid "Close"
+msgctxt "@action:button Close the panel configuration window"
+msgid "Close"
+msgstr "Zamknij"
+
+#: contents/configuration/PanelConfiguration.qml:647
+#, fuzzy, kde-format
+#| msgid "Exit Edit Mode"
+msgctxt ""
+"@action:button Close the panel configuration window and exit edit mode"
+msgid "Exit Edit Mode"
+msgstr "Wyjdź z trybu dostosowywania"
 
 #: contents/configuration/PanelConfiguration.qml:650
 #, kde-format
@@ -598,6 +607,12 @@ msgstr "Zamienny wygląd obsługi"
 #, kde-format
 msgid "Unsupported Widget"
 msgstr "Nieobsługiwany element interfejsu"
+
+#: contents/explorer/AppletDelegate.qml:172
+#, kde-format
+msgctxt "Text displayed on top of newly installed widgets"
+msgid "New!"
+msgstr ""
 
 #: contents/explorer/AppletDelegate.qml:188
 #, kde-format
@@ -808,6 +823,10 @@ msgstr "Wyjdź z trybu dostosowywania"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Wskaźnik bycia na pasku"
+
+#~ msgctxt "@action:button Done configuring the panel"
+#~ msgid "Done"
+#~ msgstr "Gotowe"
 
 #~ msgctxt "@option:check"
 #~ msgid "Keep visible when unlocking prompt disappears"

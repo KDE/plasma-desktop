@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-27 00:41+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2014-12-28 11:53+0000\n"
 "Last-Translator: Ajla Alic <aalic2@etf.unsa.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -528,9 +528,17 @@ msgid "Remove this panel; this action is undo-able"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:647
+#, fuzzy, kde-format
+#| msgid "Close"
+msgctxt "@action:button Close the panel configuration window"
+msgid "Close"
+msgstr "ZatvorI"
+
+#: contents/configuration/PanelConfiguration.qml:647
 #, kde-format
-msgctxt "@action:button Done configuring the panel"
-msgid "Done"
+msgctxt ""
+"@action:button Close the panel configuration window and exit edit mode"
+msgid "Exit Edit Mode"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:650
@@ -622,6 +630,12 @@ msgstr "Alternative"
 #: contents/explorer/AppletDelegate.qml:41
 #, kde-format
 msgid "Unsupported Widget"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:172
+#, kde-format
+msgctxt "Text displayed on top of newly installed widgets"
+msgid "New!"
 msgstr ""
 
 #: contents/explorer/AppletDelegate.qml:188

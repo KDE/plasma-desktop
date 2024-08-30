@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-27 00:41+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2024-07-21 22:16-0500\n"
 "Last-Translator: aalam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -502,10 +502,18 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "ਇਹ ਪੈਨਲ ਹਟਾਓ; ਇਹ ਕਾਰਵਾਈ ਵਾਪਸ ਲੈਣ ਯੋਗ ਹੈ"
 
 #: contents/configuration/PanelConfiguration.qml:647
+#, fuzzy, kde-format
+#| msgid "Close"
+msgctxt "@action:button Close the panel configuration window"
+msgid "Close"
+msgstr "ਬੰਦ ਕਰੋ"
+
+#: contents/configuration/PanelConfiguration.qml:647
 #, kde-format
-msgctxt "@action:button Done configuring the panel"
-msgid "Done"
-msgstr "ਮੁਕੰਮਲ"
+msgctxt ""
+"@action:button Close the panel configuration window and exit edit mode"
+msgid "Exit Edit Mode"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:650
 #, kde-format
@@ -595,6 +603,12 @@ msgstr "ਬਦਲਵੇਂ ਵਿਜੈੱਟ"
 #, kde-format
 msgid "Unsupported Widget"
 msgstr "ਗ਼ੈਰ-ਸਹਾਇਕ ਵਿਜੈੱਟ"
+
+#: contents/explorer/AppletDelegate.qml:172
+#, kde-format
+msgctxt "Text displayed on top of newly installed widgets"
+msgid "New!"
+msgstr ""
 
 #: contents/explorer/AppletDelegate.qml:188
 #, kde-format
@@ -806,6 +820,10 @@ msgstr ""
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr ""
+
+#~ msgctxt "@action:button Done configuring the panel"
+#~ msgid "Done"
+#~ msgstr "ਮੁਕੰਮਲ"
 
 #~ msgid "Height:"
 #~ msgstr "ਉਚਾਈ:"

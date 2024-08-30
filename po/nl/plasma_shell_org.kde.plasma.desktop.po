@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-27 00:41+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2024-08-23 12:10+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -506,10 +506,19 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "Dit paneel verwijderen; deze actie kan niet ongedaan worden"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, kde-format
-msgctxt "@action:button Done configuring the panel"
-msgid "Done"
-msgstr "Gereed"
+#, fuzzy, kde-format
+#| msgid "Close"
+msgctxt "@action:button Close the panel configuration window"
+msgid "Close"
+msgstr "Sluiten"
+
+#: contents/configuration/PanelConfiguration.qml:647
+#, fuzzy, kde-format
+#| msgid "Exit Edit Mode"
+msgctxt ""
+"@action:button Close the panel configuration window and exit edit mode"
+msgid "Exit Edit Mode"
+msgstr "Bewerkingsmodus sluiten"
 
 #: contents/configuration/PanelConfiguration.qml:650
 #, kde-format
@@ -603,6 +612,12 @@ msgstr "Alternatieve widgets"
 #, kde-format
 msgid "Unsupported Widget"
 msgstr "Niet ondersteund widget"
+
+#: contents/explorer/AppletDelegate.qml:172
+#, kde-format
+msgctxt "Text displayed on top of newly installed widgets"
+msgid "New!"
+msgstr ""
 
 #: contents/explorer/AppletDelegate.qml:188
 #, kde-format
@@ -812,6 +827,10 @@ msgstr "Bewerkingsmodus sluiten"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Focusindicator van paneel"
+
+#~ msgctxt "@action:button Done configuring the panel"
+#~ msgid "Done"
+#~ msgstr "Gereed"
 
 #~ msgctxt "@option:check"
 #~ msgid "Keep visible when unlocking prompt disappears"

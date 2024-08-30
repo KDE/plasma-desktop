@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-27 00:41+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2024-06-08 17:09+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -511,10 +511,19 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "Elimină acest panou. Acțiunea nu poate fi desfăcută."
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, kde-format
-msgctxt "@action:button Done configuring the panel"
-msgid "Done"
-msgstr "Gata"
+#, fuzzy, kde-format
+#| msgid "Close"
+msgctxt "@action:button Close the panel configuration window"
+msgid "Close"
+msgstr "Închide"
+
+#: contents/configuration/PanelConfiguration.qml:647
+#, fuzzy, kde-format
+#| msgid "Exit Edit Mode"
+msgctxt ""
+"@action:button Close the panel configuration window and exit edit mode"
+msgid "Exit Edit Mode"
+msgstr "Ieși din regim de modificare"
 
 #: contents/configuration/PanelConfiguration.qml:650
 #, kde-format
@@ -609,6 +618,12 @@ msgstr "Controale grafice alternative"
 #, kde-format
 msgid "Unsupported Widget"
 msgstr "Control grafic nesusținut"
+
+#: contents/explorer/AppletDelegate.qml:172
+#, kde-format
+msgctxt "Text displayed on top of newly installed widgets"
+msgid "New!"
+msgstr ""
 
 #: contents/explorer/AppletDelegate.qml:188
 #, kde-format
@@ -823,6 +838,10 @@ msgstr "Ieși din regim de modificare"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Indicator de focalizare a panoului"
+
+#~ msgctxt "@action:button Done configuring the panel"
+#~ msgid "Done"
+#~ msgstr "Gata"
 
 #~ msgctxt "@option:check"
 #~ msgid "Keep visible when unlocking prompt disappears"

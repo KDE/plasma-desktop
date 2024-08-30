@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:40+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2023-02-26 01:18+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -21,86 +21,106 @@ msgstr ""
 "X-Generator: Lokalize 22.12.2\n"
 
 #: ui/main.qml:52
-#, kde-format
-msgid "Desktop path:"
-msgstr "Pfad zur Arbeitsfläche:"
+#, fuzzy, kde-format
+#| msgid "Desktop %1:"
+msgctxt "@label:textbox"
+msgid "Desktop folder:"
+msgstr "Arbeitsfläche %1:"
 
 #: ui/main.qml:58
 #, kde-format
-msgid ""
-"This folder contains all the files which you see on your desktop. You can "
-"change the location of this folder if you want to, and the contents will "
-"move automatically to the new location as well."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder contains all the files you see on your desktop."
 msgstr ""
-"Dieser Ordner enthält alle Dateien, die Sie auf der Arbeitsfläche sehen. Sie "
-"können die Position dieses Ordners ändern, wenn Sie möchten. Der Inhalt wird "
-"dabei automatisch an den neuen Platz verschoben."
 
 #: ui/main.qml:66
-#, kde-format
-msgid "Documents path:"
-msgstr "Pfad für Dokumente:"
+#, fuzzy, kde-format
+#| msgid "Documents"
+msgctxt "@label:textbox"
+msgid "Documents folder:"
+msgstr "Dokumente"
 
 #: ui/main.qml:72
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save documents from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save documents."
 msgstr ""
 "Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von "
 "Dokumenten benutzt."
 
 #: ui/main.qml:80
-#, kde-format
-msgid "Downloads path:"
-msgstr "Pfad für heruntergeladene Dateien:"
+#, fuzzy, kde-format
+#| msgid "Downloads"
+msgctxt "@label:textbox"
+msgid "Downloads folder:"
+msgstr "Downloads"
 
 #: ui/main.qml:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "This folder will be used by default to save your downloaded items."
+msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "Dieser Ordner wird als Voreinstellung zum Speichern von heruntergeladenen "
 "Dateien benutzt."
 
 #: ui/main.qml:94
-#, kde-format
-msgid "Videos path:"
+#, fuzzy, kde-format
+#| msgid "Videos path:"
+msgctxt "@label:textbox"
+msgid "Videos folder:"
 msgstr "Pfad für Videos:"
 
 #: ui/main.qml:100
-#, kde-format
-msgid "This folder will be used by default to load or save movies from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save video files."
 msgstr ""
 "Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von Filmen "
 "benutzt."
 
 #: ui/main.qml:108
-#, kde-format
-msgid "Pictures path:"
+#, fuzzy, kde-format
+#| msgid "Pictures path:"
+msgctxt "@label:textbox"
+msgid "Pictures folder:"
 msgstr "Pfad für Bilder:"
 
 #: ui/main.qml:114
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save pictures from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save image files."
 msgstr ""
-"Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von Bildern "
+"Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von Filmen "
 "benutzt."
 
 #: ui/main.qml:122
 #, kde-format
-msgid "Music path:"
-msgstr "Pfad für Musik:"
+msgctxt "@label:textbox"
+msgid "Music folder:"
+msgstr ""
 
 #: ui/main.qml:128
-#, kde-format
-msgid "This folder will be used by default to load or save music from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save music from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save music files."
 msgstr ""
 "Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von Musik "
 "benutzt."
 
 #: ui/main.qml:136
-#, kde-format
-msgid "Public path:"
+#, fuzzy, kde-format
+#| msgid "Public path:"
+msgctxt "@label:textbox"
+msgid "Public folder:"
 msgstr "Pfad für Öffentlich:"
 
 #: ui/main.qml:142
@@ -108,6 +128,7 @@ msgstr "Pfad für Öffentlich:"
 #| msgid ""
 #| "This folder will be used by default to load or save public shares from or "
 #| "to."
+msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
@@ -116,14 +137,18 @@ msgstr ""
 "öffentlichen Freigaben benutzt."
 
 #: ui/main.qml:150
-#, kde-format
-msgid "Templates path:"
-msgstr "Pfad für Vorlagen:"
+#, fuzzy, kde-format
+#| msgid "Templates"
+msgctxt "@label:textbox"
+msgid "Templates folder:"
+msgstr "Vorlagen"
 
 #: ui/main.qml:156
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save templates from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save templates from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save file templates."
 msgstr ""
 "Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von Vorlagen "
 "benutzt."
@@ -134,14 +159,38 @@ msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "Neuen Ort auswählen"
 
+#~ msgid "Desktop path:"
+#~ msgstr "Pfad zur Arbeitsfläche:"
+
+#~ msgid ""
+#~ "This folder contains all the files which you see on your desktop. You can "
+#~ "change the location of this folder if you want to, and the contents will "
+#~ "move automatically to the new location as well."
+#~ msgstr ""
+#~ "Dieser Ordner enthält alle Dateien, die Sie auf der Arbeitsfläche sehen. "
+#~ "Sie können die Position dieses Ordners ändern, wenn Sie möchten. Der "
+#~ "Inhalt wird dabei automatisch an den neuen Platz verschoben."
+
+#~ msgid "Documents path:"
+#~ msgstr "Pfad für Dokumente:"
+
+#~ msgid "Downloads path:"
+#~ msgstr "Pfad für heruntergeladene Dateien:"
+
+#~ msgid ""
+#~ "This folder will be used by default to load or save pictures from or to."
+#~ msgstr ""
+#~ "Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von "
+#~ "Bildern benutzt."
+
+#~ msgid "Music path:"
+#~ msgstr "Pfad für Musik:"
+
+#~ msgid "Templates path:"
+#~ msgstr "Pfad für Vorlagen:"
+
 #~ msgid "Desktop"
 #~ msgstr "Arbeitsfläche"
-
-#~ msgid "Documents"
-#~ msgstr "Dokumente"
-
-#~ msgid "Downloads"
-#~ msgstr "Downloads"
 
 #~ msgid "Music"
 #~ msgstr "Musik"
@@ -154,9 +203,6 @@ msgstr "Neuen Ort auswählen"
 
 #~ msgid "Public"
 #~ msgstr "Öffentlich"
-
-#~ msgid "Templates"
-#~ msgstr "Vorlagen"
 
 #~ msgid ""
 #~ "<h1>Paths</h1>\n"
@@ -722,9 +768,6 @@ msgstr "Neuen Ort auswählen"
 
 #~ msgid "Desktop &Names"
 #~ msgstr "Arbeitsflächen&namen"
-
-#~ msgid "Desktop %1:"
-#~ msgstr "Arbeitsfläche %1:"
 
 #~ msgid "Here you can enter the name for desktop %1"
 #~ msgstr "Hier können Sie den Namen für Arbeitsfläche %1 angeben"

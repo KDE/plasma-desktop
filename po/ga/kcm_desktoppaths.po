@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:40+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2004-12-03 14:52-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -19,41 +19,46 @@ msgstr ""
 "3 : 4\n"
 
 #: ui/main.qml:52
-#, kde-format
-msgid "Desktop path:"
-msgstr "Conair na deisce:"
+#, fuzzy, kde-format
+#| msgid "Desktop Menu"
+msgctxt "@label:textbox"
+msgid "Desktop folder:"
+msgstr "Roghchlár na Deisce"
 
 #: ui/main.qml:58
 #, kde-format
-msgid ""
-"This folder contains all the files which you see on your desktop. You can "
-"change the location of this folder if you want to, and the contents will "
-"move automatically to the new location as well."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder contains all the files you see on your desktop."
 msgstr ""
-"Is san fhillteán seo a stóráiltear na comhaid go léir atá ar do dheasc. Is "
-"féidir suíomh an fhillteáin seo a athrú más mian leat, agus bogfar an t-"
-"inneachar go dtí an suíomh nua go huathoibríoch."
 
 #: ui/main.qml:66
-#, kde-format
-msgid "Documents path:"
-msgstr "Conair na gcáipéisí:"
+#, fuzzy, kde-format
+#| msgid "Documents"
+msgctxt "@label:textbox"
+msgid "Documents folder:"
+msgstr "Cáipéisí"
 
 #: ui/main.qml:72
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save documents from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save documents."
 msgstr ""
 "Luchtófar cáipéisí ón fhillteán seo agus sábhálfar iad ann de réir "
 "réamhshocraithe."
 
 #: ui/main.qml:80
-#, kde-format
-msgid "Downloads path:"
-msgstr "Conair na n-íosluchtuithe:"
+#, fuzzy, kde-format
+#| msgid "Downloads"
+msgctxt "@label:textbox"
+msgid "Downloads folder:"
+msgstr "Íosluchtuithe"
 
 #: ui/main.qml:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "This folder will be used by default to save your downloaded items."
+msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "Sábhálfar do chuid íosluchtuithe san fhillteán seo de réir réamhshocraithe."
@@ -61,50 +66,64 @@ msgstr ""
 #: ui/main.qml:94
 #, fuzzy, kde-format
 #| msgid "Movies path:"
-msgid "Videos path:"
+msgctxt "@label:textbox"
+msgid "Videos folder:"
 msgstr "Conair na scannán:"
 
 #: ui/main.qml:100
-#, kde-format
-msgid "This folder will be used by default to load or save movies from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save video files."
 msgstr ""
 "Luchtófar scannáin ón fhillteán seo agus sábhálfar iad ann de réir "
 "réamhshocraithe."
 
 #: ui/main.qml:108
-#, kde-format
-msgid "Pictures path:"
+#, fuzzy, kde-format
+#| msgid "Pictures path:"
+msgctxt "@label:textbox"
+msgid "Pictures folder:"
 msgstr "Conair na bpictiúr:"
 
 #: ui/main.qml:114
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save pictures from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save image files."
 msgstr ""
-"Luchtófar pictiúir ón fhillteán seo agus sábhálfar iad ann de réir "
+"Luchtófar scannáin ón fhillteán seo agus sábhálfar iad ann de réir "
 "réamhshocraithe."
 
 #: ui/main.qml:122
 #, kde-format
-msgid "Music path:"
-msgstr "Conair cheoil:"
+msgctxt "@label:textbox"
+msgid "Music folder:"
+msgstr ""
 
 #: ui/main.qml:128
-#, kde-format
-msgid "This folder will be used by default to load or save music from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save music from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save music files."
 msgstr ""
 "Luchtófar ceol ón fhillteán seo agus sábhálfar é ann de réir réamhshocraithe."
 
 #: ui/main.qml:136
 #, fuzzy, kde-format
 #| msgid "Music path:"
-msgid "Public path:"
+msgctxt "@label:textbox"
+msgid "Public folder:"
 msgstr "Conair cheoil:"
 
 #: ui/main.qml:142
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
+msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
@@ -115,15 +134,16 @@ msgstr ""
 #: ui/main.qml:150
 #, fuzzy, kde-format
 #| msgid "Pictures path:"
-msgid "Templates path:"
+msgctxt "@label:textbox"
+msgid "Templates folder:"
 msgstr "Conair na bpictiúr:"
 
 #: ui/main.qml:156
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
-msgid ""
-"This folder will be used by default to load or save templates from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save file templates."
 msgstr ""
 "Luchtófar pictiúir ón fhillteán seo agus sábhálfar iad ann de réir "
 "réamhshocraithe."
@@ -134,14 +154,35 @@ msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
 
+#~ msgid "Desktop path:"
+#~ msgstr "Conair na deisce:"
+
+#~ msgid ""
+#~ "This folder contains all the files which you see on your desktop. You can "
+#~ "change the location of this folder if you want to, and the contents will "
+#~ "move automatically to the new location as well."
+#~ msgstr ""
+#~ "Is san fhillteán seo a stóráiltear na comhaid go léir atá ar do dheasc. "
+#~ "Is féidir suíomh an fhillteáin seo a athrú más mian leat, agus bogfar an "
+#~ "t-inneachar go dtí an suíomh nua go huathoibríoch."
+
+#~ msgid "Documents path:"
+#~ msgstr "Conair na gcáipéisí:"
+
+#~ msgid "Downloads path:"
+#~ msgstr "Conair na n-íosluchtuithe:"
+
+#~ msgid ""
+#~ "This folder will be used by default to load or save pictures from or to."
+#~ msgstr ""
+#~ "Luchtófar pictiúir ón fhillteán seo agus sábhálfar iad ann de réir "
+#~ "réamhshocraithe."
+
+#~ msgid "Music path:"
+#~ msgstr "Conair cheoil:"
+
 #~ msgid "Desktop"
 #~ msgstr "Deasc"
-
-#~ msgid "Documents"
-#~ msgstr "Cáipéisí"
-
-#~ msgid "Downloads"
-#~ msgstr "Íosluchtuithe"
 
 #~ msgid "Music"
 #~ msgstr "Ceol"
@@ -320,9 +361,6 @@ msgstr ""
 
 #~ msgid "No Action"
 #~ msgstr "Gan Ghníomh"
-
-#~ msgid "Desktop Menu"
-#~ msgstr "Roghchlár na Deisce"
 
 #~ msgid "Application Menu"
 #~ msgstr "Roghchlár na bhFeidhmchlár"

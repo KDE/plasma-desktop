@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:40+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2024-05-12 16:54+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -31,87 +31,111 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 
 #: ui/main.qml:52
-#, kde-format
-msgid "Desktop path:"
+#, fuzzy, kde-format
+#| msgid "Desktop path:"
+msgctxt "@label:textbox"
+msgid "Desktop folder:"
 msgstr "Папка рабочего стола:"
 
 #: ui/main.qml:58
 #, kde-format
-msgid ""
-"This folder contains all the files which you see on your desktop. You can "
-"change the location of this folder if you want to, and the contents will "
-"move automatically to the new location as well."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder contains all the files you see on your desktop."
 msgstr ""
-"Эта папка содержит все файлы, которые видны на рабочем столе. Вы можете "
-"изменить адрес этой папки по своему желанию, при этом содержимое "
-"автоматически переместится на новое место."
 
 #: ui/main.qml:66
-#, kde-format
-msgid "Documents path:"
-msgstr "Папка документов:"
+#, fuzzy, kde-format
+#| msgid "Documents"
+msgctxt "@label:textbox"
+msgid "Documents folder:"
+msgstr "Документы"
 
 #: ui/main.qml:72
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save documents from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save documents."
 msgstr ""
 "Эта папка будет использоваться по умолчанию для открытия и сохранения "
 "документов."
 
 #: ui/main.qml:80
-#, kde-format
-msgid "Downloads path:"
-msgstr "Папка загрузок:"
+#, fuzzy, kde-format
+#| msgid "Downloads"
+msgctxt "@label:textbox"
+msgid "Downloads folder:"
+msgstr "Загрузки"
 
 #: ui/main.qml:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "This folder will be used by default to save your downloaded items."
+msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr "Эта папка будет использоваться по умолчанию для загружаемых файлов."
 
 #: ui/main.qml:94
-#, kde-format
-msgid "Videos path:"
+#, fuzzy, kde-format
+#| msgid "Videos path:"
+msgctxt "@label:textbox"
+msgid "Videos folder:"
 msgstr "Папка видеозаписей:"
 
 #: ui/main.qml:100
-#, kde-format
-msgid "This folder will be used by default to load or save movies from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save video files."
 msgstr ""
 "Эта папка будет использоваться по умолчанию для открытия и сохранения "
 "фильмов."
 
 #: ui/main.qml:108
-#, kde-format
-msgid "Pictures path:"
+#, fuzzy, kde-format
+#| msgid "Pictures path:"
+msgctxt "@label:textbox"
+msgid "Pictures folder:"
 msgstr "Папка изображений:"
 
 #: ui/main.qml:114
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save pictures from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save image files."
 msgstr ""
 "Эта папка будет использоваться по умолчанию для открытия и сохранения "
-"изображений."
+"фильмов."
 
 #: ui/main.qml:122
 #, kde-format
-msgid "Music path:"
-msgstr "Папка музыки:"
+msgctxt "@label:textbox"
+msgid "Music folder:"
+msgstr ""
 
 #: ui/main.qml:128
-#, kde-format
-msgid "This folder will be used by default to load or save music from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save music from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save music files."
 msgstr ""
 "Эта папка будет использоваться по умолчанию для открытия и сохранения музыки."
 
 #: ui/main.qml:136
-#, kde-format
-msgid "Public path:"
+#, fuzzy, kde-format
+#| msgid "Public path:"
+msgctxt "@label:textbox"
+msgid "Public folder:"
 msgstr "Общедоступная папка:"
 
 #: ui/main.qml:142
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default for publicly-shared files when "
+#| "network sharing is enabled."
+msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
@@ -120,14 +144,18 @@ msgstr ""
 "хранения совместно используемых сетевых ресурсов."
 
 #: ui/main.qml:150
-#, kde-format
-msgid "Templates path:"
-msgstr "Папка шаблонов:"
+#, fuzzy, kde-format
+#| msgid "Templates"
+msgctxt "@label:textbox"
+msgid "Templates folder:"
+msgstr "Шаблоны"
 
 #: ui/main.qml:156
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save templates from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save templates from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save file templates."
 msgstr ""
 "Эта папка будет использоваться по умолчанию для открытия и сохранения "
 "шаблонов."
@@ -138,14 +166,35 @@ msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "Задать новое расположение"
 
+#~ msgid ""
+#~ "This folder contains all the files which you see on your desktop. You can "
+#~ "change the location of this folder if you want to, and the contents will "
+#~ "move automatically to the new location as well."
+#~ msgstr ""
+#~ "Эта папка содержит все файлы, которые видны на рабочем столе. Вы можете "
+#~ "изменить адрес этой папки по своему желанию, при этом содержимое "
+#~ "автоматически переместится на новое место."
+
+#~ msgid "Documents path:"
+#~ msgstr "Папка документов:"
+
+#~ msgid "Downloads path:"
+#~ msgstr "Папка загрузок:"
+
+#~ msgid ""
+#~ "This folder will be used by default to load or save pictures from or to."
+#~ msgstr ""
+#~ "Эта папка будет использоваться по умолчанию для открытия и сохранения "
+#~ "изображений."
+
+#~ msgid "Music path:"
+#~ msgstr "Папка музыки:"
+
+#~ msgid "Templates path:"
+#~ msgstr "Папка шаблонов:"
+
 #~ msgid "Desktop"
 #~ msgstr "Рабочий стол"
-
-#~ msgid "Documents"
-#~ msgstr "Документы"
-
-#~ msgid "Downloads"
-#~ msgstr "Загрузки"
 
 #~ msgid "Music"
 #~ msgstr "Музыка"
@@ -158,9 +207,6 @@ msgstr "Задать новое расположение"
 
 #~ msgid "Public"
 #~ msgstr "Общая"
-
-#~ msgid "Templates"
-#~ msgstr "Шаблоны"
 
 #~ msgid ""
 #~ "<h1>Paths</h1>\n"

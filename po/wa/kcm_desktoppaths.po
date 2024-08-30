@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:40+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2010-10-22 18:26+0200\n"
 "Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
 "Language-Team: Walloon <linux@walon.org>\n"
@@ -19,84 +19,103 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 
 #: ui/main.qml:52
-#, kde-format
-msgid "Desktop path:"
-msgstr "Tchimin do scribanne"
+#, fuzzy, kde-format
+#| msgid "Desktop %1:"
+msgctxt "@label:textbox"
+msgid "Desktop folder:"
+msgstr "Sicribanne %1:"
 
 #: ui/main.qml:58
 #, kde-format
-msgid ""
-"This folder contains all the files which you see on your desktop. You can "
-"change the location of this folder if you want to, and the contents will "
-"move automatically to the new location as well."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder contains all the files you see on your desktop."
 msgstr ""
-"I gn a dins ç' ridant tos les fitchîs ki vs veyoz so vosse sicribanne. Vos "
-"ploz candjî l' eplaeçmint di ç' ridant si vos l' voloz eyet l' ådvins srè "
-"bodjî otomaticmint viè l' novele plaece, eto."
 
 #: ui/main.qml:66
-#, kde-format
-msgid "Documents path:"
-msgstr "Tchimin des documints:"
+#, fuzzy, kde-format
+#| msgid "Documents"
+msgctxt "@label:textbox"
+msgid "Documents folder:"
+msgstr "Documints"
 
 #: ui/main.qml:72
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save documents from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save documents."
 msgstr "Çou ridant srè eployî (prémetou) po tcherdjî ou schaper les documints."
 
 #: ui/main.qml:80
-#, kde-format
-msgid "Downloads path:"
-msgstr "Tchimin des aberwetaedjes:"
+#, fuzzy, kde-format
+#| msgid "Downloads"
+msgctxt "@label:textbox"
+msgid "Downloads folder:"
+msgstr "Aberwetaedjes"
 
 #: ui/main.qml:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "This folder will be used by default to save your downloaded items."
+msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr "Çou ridant srè eployî (prémetou) po schaper vos cayets aberwetés."
 
 #: ui/main.qml:94
 #, fuzzy, kde-format
 #| msgid "Movies path:"
-msgid "Videos path:"
+msgctxt "@label:textbox"
+msgid "Videos folder:"
 msgstr "Tchimin des fimes:"
 
 #: ui/main.qml:100
-#, kde-format
-msgid "This folder will be used by default to load or save movies from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save video files."
 msgstr "Çou ridant srè eployî (prémetou) po tcherdjî ou schaper les fimes."
 
 #: ui/main.qml:108
-#, kde-format
-msgid "Pictures path:"
+#, fuzzy, kde-format
+#| msgid "Pictures path:"
+msgctxt "@label:textbox"
+msgid "Pictures folder:"
 msgstr "Tchimin des imådjes:"
 
 #: ui/main.qml:114
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save pictures from or to."
-msgstr "Çou ridant srè eployî (prémetou) po tcherdjî ou schaper les imådjes."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save image files."
+msgstr "Çou ridant srè eployî (prémetou) po tcherdjî ou schaper les fimes."
 
 #: ui/main.qml:122
 #, kde-format
-msgid "Music path:"
-msgstr "Tchimin del muzike:"
+msgctxt "@label:textbox"
+msgid "Music folder:"
+msgstr ""
 
 #: ui/main.qml:128
-#, kde-format
-msgid "This folder will be used by default to load or save music from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save music from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save music files."
 msgstr "Çou ridant srè eployî (prémetou) po tcherdjî ou schaper les muzikes."
 
 #: ui/main.qml:136
 #, fuzzy, kde-format
 #| msgid "Music path:"
-msgid "Public path:"
+msgctxt "@label:textbox"
+msgid "Public folder:"
 msgstr "Tchimin del muzike:"
 
 #: ui/main.qml:142
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
+msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
@@ -105,15 +124,16 @@ msgstr "Çou ridant srè eployî (prémetou) po tcherdjî ou schaper les imådje
 #: ui/main.qml:150
 #, fuzzy, kde-format
 #| msgid "Pictures path:"
-msgid "Templates path:"
+msgctxt "@label:textbox"
+msgid "Templates folder:"
 msgstr "Tchimin des imådjes:"
 
 #: ui/main.qml:156
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
-msgid ""
-"This folder will be used by default to load or save templates from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save file templates."
 msgstr "Çou ridant srè eployî (prémetou) po tcherdjî ou schaper les imådjes."
 
 #: ui/UrlRequester.qml:74
@@ -122,14 +142,34 @@ msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
 
+#~ msgid "Desktop path:"
+#~ msgstr "Tchimin do scribanne"
+
+#~ msgid ""
+#~ "This folder contains all the files which you see on your desktop. You can "
+#~ "change the location of this folder if you want to, and the contents will "
+#~ "move automatically to the new location as well."
+#~ msgstr ""
+#~ "I gn a dins ç' ridant tos les fitchîs ki vs veyoz so vosse sicribanne. "
+#~ "Vos ploz candjî l' eplaeçmint di ç' ridant si vos l' voloz eyet l' ådvins "
+#~ "srè bodjî otomaticmint viè l' novele plaece, eto."
+
+#~ msgid "Documents path:"
+#~ msgstr "Tchimin des documints:"
+
+#~ msgid "Downloads path:"
+#~ msgstr "Tchimin des aberwetaedjes:"
+
+#~ msgid ""
+#~ "This folder will be used by default to load or save pictures from or to."
+#~ msgstr ""
+#~ "Çou ridant srè eployî (prémetou) po tcherdjî ou schaper les imådjes."
+
+#~ msgid "Music path:"
+#~ msgstr "Tchimin del muzike:"
+
 #~ msgid "Desktop"
 #~ msgstr "Sicribanne"
-
-#~ msgid "Documents"
-#~ msgstr "Documints"
-
-#~ msgid "Downloads"
-#~ msgstr "Aberwetaedjes"
 
 #~ msgid "Music"
 #~ msgstr "Muzike"
@@ -402,9 +442,6 @@ msgstr ""
 
 #~ msgid "Desktop &Names"
 #~ msgstr "&Nos des scribannes"
-
-#~ msgid "Desktop %1:"
-#~ msgstr "Sicribanne %1:"
 
 #~ msgid "Desktop %1"
 #~ msgstr "Sicribanne %1"

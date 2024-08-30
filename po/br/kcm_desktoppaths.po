@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:40+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2004-09-21 18:50+0200\n"
 "Last-Translator: Thierry Vignaud <tvignaud.com>\n"
 "Language-Team: Brezhoneg <Suav.Icb.fr>\n"
@@ -16,83 +16,91 @@ msgstr ""
 
 #: ui/main.qml:52
 #, fuzzy, kde-format
-#| msgid "Des&ktop path:"
-msgid "Desktop path:"
-msgstr "&Hent ar burev :"
+#| msgid "Desktop %1:"
+msgctxt "@label:textbox"
+msgid "Desktop folder:"
+msgstr "Burev %1 :"
 
 #: ui/main.qml:58
 #, kde-format
-msgid ""
-"This folder contains all the files which you see on your desktop. You can "
-"change the location of this folder if you want to, and the contents will "
-"move automatically to the new location as well."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder contains all the files you see on your desktop."
 msgstr ""
 
 #: ui/main.qml:66
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
-msgid "Documents path:"
+msgctxt "@label:textbox"
+msgid "Documents folder:"
 msgstr "Hent an &teulioù :"
 
 #: ui/main.qml:72
 #, kde-format
-msgid ""
-"This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save documents."
 msgstr ""
 
 #: ui/main.qml:80
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
-msgid "Downloads path:"
+msgctxt "@label:textbox"
+msgid "Downloads folder:"
 msgstr "Hent an &teulioù :"
 
 #: ui/main.qml:86
 #, kde-format
+msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 
 #: ui/main.qml:94
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
-msgid "Videos path:"
+msgctxt "@label:textbox"
+msgid "Videos folder:"
 msgstr "Hent an &teulioù :"
 
 #: ui/main.qml:100
 #, kde-format
-msgid "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save video files."
 msgstr ""
 
 #: ui/main.qml:108
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
-msgid "Pictures path:"
+msgctxt "@label:textbox"
+msgid "Pictures folder:"
 msgstr "Hent an &teulioù :"
 
 #: ui/main.qml:114
 #, kde-format
-msgid ""
-"This folder will be used by default to load or save pictures from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save image files."
 msgstr ""
 
 #: ui/main.qml:122
-#, fuzzy, kde-format
-#| msgid "D&ocuments path:"
-msgid "Music path:"
-msgstr "Hent an &teulioù :"
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Music folder:"
+msgstr ""
 
 #: ui/main.qml:128
 #, kde-format
-msgid "This folder will be used by default to load or save music from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save music files."
 msgstr ""
 
 #: ui/main.qml:136
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
-msgid "Public path:"
+msgctxt "@label:textbox"
+msgid "Public folder:"
 msgstr "Hent an &teulioù :"
 
 #: ui/main.qml:142
 #, kde-format
+msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
@@ -101,13 +109,14 @@ msgstr ""
 #: ui/main.qml:150
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
-msgid "Templates path:"
+msgctxt "@label:textbox"
+msgid "Templates folder:"
 msgstr "Hent an &teulioù :"
 
 #: ui/main.qml:156
 #, kde-format
-msgid ""
-"This folder will be used by default to load or save templates from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save file templates."
 msgstr ""
 
 #: ui/UrlRequester.qml:74
@@ -116,18 +125,28 @@ msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
 
+#, fuzzy
+#~| msgid "Des&ktop path:"
+#~ msgid "Desktop path:"
+#~ msgstr "&Hent ar burev :"
+
+#, fuzzy
+#~| msgid "D&ocuments path:"
+#~ msgid "Documents path:"
+#~ msgstr "Hent an &teulioù :"
+
+#, fuzzy
+#~| msgid "D&ocuments path:"
+#~ msgid "Downloads path:"
+#~ msgstr "Hent an &teulioù :"
+
+#, fuzzy
+#~| msgid "D&ocuments path:"
+#~ msgid "Music path:"
+#~ msgstr "Hent an &teulioù :"
+
 #~ msgid "Desktop"
 #~ msgstr "Burev"
-
-#, fuzzy
-#~| msgid "D&ocuments path:"
-#~ msgid "Documents"
-#~ msgstr "Hent an &teulioù :"
-
-#, fuzzy
-#~| msgid "D&ocuments path:"
-#~ msgid "Downloads"
-#~ msgstr "Hent an &teulioù :"
 
 #, fuzzy
 #~| msgid "D&ocuments path:"
@@ -330,9 +349,6 @@ msgstr ""
 
 #~ msgid "Desktop &Names"
 #~ msgstr "&Anv ar burevioù"
-
-#~ msgid "Desktop %1:"
-#~ msgstr "Burev %1 :"
 
 #~ msgid "Here you can enter the name for desktop %1"
 #~ msgstr "Amañ e c'hellit reiñ anv ar burev %1"

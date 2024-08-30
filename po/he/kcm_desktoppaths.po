@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:40+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2024-05-07 07:47+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -31,93 +31,122 @@ msgstr ""
 "X-Generator: Lokalize 23.08.5\n"
 
 #: ui/main.qml:52
-#, kde-format
-msgid "Desktop path:"
+#, fuzzy, kde-format
+#| msgid "Desktop path:"
+msgctxt "@label:textbox"
+msgid "Desktop folder:"
 msgstr "נתיב לשולחן העבודה:"
 
 #: ui/main.qml:58
 #, kde-format
-msgid ""
-"This folder contains all the files which you see on your desktop. You can "
-"change the location of this folder if you want to, and the contents will "
-"move automatically to the new location as well."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder contains all the files you see on your desktop."
 msgstr ""
-"תיקייה זו מכילה את כל הקבצים שמופיעים על שולחן העבודה שלך. אפשר לשנות את "
-"מקומה של תיקייה זו לבחירתך, ואז גם תועבר תכולתה אוטומטית למקום החדש."
 
 #: ui/main.qml:66
-#, kde-format
-msgid "Documents path:"
-msgstr "נתיב עבור מסמכים:"
+#, fuzzy, kde-format
+#| msgid "Documents"
+msgctxt "@label:textbox"
+msgid "Documents folder:"
+msgstr "מסמכים"
 
 #: ui/main.qml:72
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save documents from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save documents."
 msgstr "תיקייה זו תשמש כברירת מחדל לטעינה ולשמירה של מסמכים."
 
 #: ui/main.qml:80
-#, kde-format
-msgid "Downloads path:"
-msgstr "נתיב עבור הורדות:"
+#, fuzzy, kde-format
+#| msgid "Downloads"
+msgctxt "@label:textbox"
+msgid "Downloads folder:"
+msgstr "הורדות"
 
 #: ui/main.qml:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "This folder will be used by default to save your downloaded items."
+msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr "תיקייה זו תשמש כברירת מחדל לשמירה של פריטים שהורדו."
 
 #: ui/main.qml:94
-#, kde-format
-msgid "Videos path:"
+#, fuzzy, kde-format
+#| msgid "Videos path:"
+msgctxt "@label:textbox"
+msgid "Videos folder:"
 msgstr "נתיב סרטונים:"
 
 #: ui/main.qml:100
-#, kde-format
-msgid "This folder will be used by default to load or save movies from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save video files."
 msgstr "תיקייה זו תשמש כברירת מחדל לטעינה ולשמירה של סרטונים."
 
 #: ui/main.qml:108
-#, kde-format
-msgid "Pictures path:"
+#, fuzzy, kde-format
+#| msgid "Pictures path:"
+msgctxt "@label:textbox"
+msgid "Pictures folder:"
 msgstr "נתיב עבור תמונות:"
 
 #: ui/main.qml:114
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save pictures from or to."
-msgstr "תיקייה זו תשמש כברירת מחדל לטעינה ולשמירה של תמונות."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save image files."
+msgstr "תיקייה זו תשמש כברירת מחדל לטעינה ולשמירה של סרטונים."
 
 #: ui/main.qml:122
 #, kde-format
-msgid "Music path:"
-msgstr "נתיב עבור מוזיקה:"
+msgctxt "@label:textbox"
+msgid "Music folder:"
+msgstr ""
 
 #: ui/main.qml:128
-#, kde-format
-msgid "This folder will be used by default to load or save music from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save music from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save music files."
 msgstr "תיקייה זו תשמש כברירת מחדל לטעינה ולשמירה של מוזיקה."
 
 #: ui/main.qml:136
-#, kde-format
-msgid "Public path:"
+#, fuzzy, kde-format
+#| msgid "Public path:"
+msgctxt "@label:textbox"
+msgid "Public folder:"
 msgstr "נתיב ציבורי:"
 
 #: ui/main.qml:142
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default for publicly-shared files when "
+#| "network sharing is enabled."
+msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
 msgstr "תיקייה זו תשמש כברירת מחדל לקבצים לשיתוף ציבורי כששיתוף ברשת פעיל."
 
 #: ui/main.qml:150
-#, kde-format
-msgid "Templates path:"
-msgstr "נתיב תבניות:"
+#, fuzzy, kde-format
+#| msgid "Templates"
+msgctxt "@label:textbox"
+msgid "Templates folder:"
+msgstr "תבניות"
 
 #: ui/main.qml:156
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save templates from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save templates from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save file templates."
 msgstr "תיקייה זו תשמש כברירת המחדל לטעינת או שמירת תבניות ממנה או אליה."
 
 #: ui/UrlRequester.qml:74
@@ -126,14 +155,32 @@ msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "נא לבחור במקום חדש"
 
+#~ msgid ""
+#~ "This folder contains all the files which you see on your desktop. You can "
+#~ "change the location of this folder if you want to, and the contents will "
+#~ "move automatically to the new location as well."
+#~ msgstr ""
+#~ "תיקייה זו מכילה את כל הקבצים שמופיעים על שולחן העבודה שלך. אפשר לשנות את "
+#~ "מקומה של תיקייה זו לבחירתך, ואז גם תועבר תכולתה אוטומטית למקום החדש."
+
+#~ msgid "Documents path:"
+#~ msgstr "נתיב עבור מסמכים:"
+
+#~ msgid "Downloads path:"
+#~ msgstr "נתיב עבור הורדות:"
+
+#~ msgid ""
+#~ "This folder will be used by default to load or save pictures from or to."
+#~ msgstr "תיקייה זו תשמש כברירת מחדל לטעינה ולשמירה של תמונות."
+
+#~ msgid "Music path:"
+#~ msgstr "נתיב עבור מוזיקה:"
+
+#~ msgid "Templates path:"
+#~ msgstr "נתיב תבניות:"
+
 #~ msgid "Desktop"
 #~ msgstr "שולחן עבודה"
-
-#~ msgid "Documents"
-#~ msgstr "מסמכים"
-
-#~ msgid "Downloads"
-#~ msgstr "הורדות"
 
 #~ msgid "Music"
 #~ msgstr "מוזיקה"
@@ -146,9 +193,6 @@ msgstr "נא לבחור במקום חדש"
 
 #~ msgid "Public"
 #~ msgstr "ציבורי"
-
-#~ msgid "Templates"
-#~ msgstr "תבניות"
 
 #~ msgid ""
 #~ "<h1>Paths</h1>\n"

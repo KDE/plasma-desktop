@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:40+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2024-05-09 09:37+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -26,79 +26,104 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #: ui/main.qml:52
-#, kde-format
-msgid "Desktop path:"
+#, fuzzy, kde-format
+#| msgid "Desktop path:"
+msgctxt "@label:textbox"
+msgid "Desktop folder:"
 msgstr "مسار سطح المكتب:"
 
 #: ui/main.qml:58
 #, kde-format
-msgid ""
-"This folder contains all the files which you see on your desktop. You can "
-"change the location of this folder if you want to, and the contents will "
-"move automatically to the new location as well."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder contains all the files you see on your desktop."
 msgstr ""
-"يحتوي هذا المجلد كل الملفات التي تراها على سطح مكتبك. تستطيع تغيير موقع هذا "
-"المجلد إن أردت، تسنقل عندها كل المحتويات تلقائياً للموقع الجديد."
 
 #: ui/main.qml:66
-#, kde-format
-msgid "Documents path:"
-msgstr "مسار المستندات:"
+#, fuzzy, kde-format
+#| msgid "Documents"
+msgctxt "@label:textbox"
+msgid "Documents folder:"
+msgstr "المستندات"
 
 #: ui/main.qml:72
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save documents from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save documents."
 msgstr "سيُستخدم هذا المجلد افتراضيًا لتحميل المستندات منه أو حفظها فيه."
 
 #: ui/main.qml:80
-#, kde-format
-msgid "Downloads path:"
-msgstr "مسار التنزيلات:"
+#, fuzzy, kde-format
+#| msgid "Downloads"
+msgctxt "@label:textbox"
+msgid "Downloads folder:"
+msgstr "التنزيلات"
 
 #: ui/main.qml:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "This folder will be used by default to save your downloaded items."
+msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr "سيُستخدم هذا المجلد افتراضياً لحفظ العناصر التي تنزلها من الإنترنت."
 
 #: ui/main.qml:94
-#, kde-format
-msgid "Videos path:"
+#, fuzzy, kde-format
+#| msgid "Videos path:"
+msgctxt "@label:textbox"
+msgid "Videos folder:"
 msgstr "مسار الفيديوهات:"
 
 #: ui/main.qml:100
-#, kde-format
-msgid "This folder will be used by default to load or save movies from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save video files."
 msgstr "سيُستخدم هذا المجلد افتراضياً لتحميل الأفلام منه أو حفظها فيه."
 
 #: ui/main.qml:108
-#, kde-format
-msgid "Pictures path:"
+#, fuzzy, kde-format
+#| msgid "Pictures path:"
+msgctxt "@label:textbox"
+msgid "Pictures folder:"
 msgstr "مسار الصور:"
 
 #: ui/main.qml:114
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save pictures from or to."
-msgstr "سيُستخدم هذا المجلد افتراضياً لتحميل الصور منه أو حفظها فيه."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save image files."
+msgstr "سيُستخدم هذا المجلد افتراضياً لتحميل الأفلام منه أو حفظها فيه."
 
 #: ui/main.qml:122
 #, kde-format
-msgid "Music path:"
-msgstr "مسار الموسيقى:"
+msgctxt "@label:textbox"
+msgid "Music folder:"
+msgstr ""
 
 #: ui/main.qml:128
-#, kde-format
-msgid "This folder will be used by default to load or save music from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save music from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save music files."
 msgstr "سيُستخدم هذا المجلد افتراضياً لتحميل الموسيقى منه أو حفظها فيه."
 
 #: ui/main.qml:136
-#, kde-format
-msgid "Public path:"
+#, fuzzy, kde-format
+#| msgid "Public path:"
+msgctxt "@label:textbox"
+msgid "Public folder:"
 msgstr "مسار العام:"
 
 #: ui/main.qml:142
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default for publicly-shared files when "
+#| "network sharing is enabled."
+msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
@@ -107,14 +132,18 @@ msgstr ""
 "الشبكة."
 
 #: ui/main.qml:150
-#, kde-format
-msgid "Templates path:"
-msgstr "مسار القوالب:"
+#, fuzzy, kde-format
+#| msgid "Templates"
+msgctxt "@label:textbox"
+msgid "Templates folder:"
+msgstr "القوالب"
 
 #: ui/main.qml:156
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save templates from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save templates from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save file templates."
 msgstr "سيُستخدم هذا المجلد بشكل مبدئي لتحميل القوالب منه أو حفظها فيه."
 
 #: ui/UrlRequester.qml:74
@@ -123,14 +152,32 @@ msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "اختر موقع جديداً"
 
+#~ msgid ""
+#~ "This folder contains all the files which you see on your desktop. You can "
+#~ "change the location of this folder if you want to, and the contents will "
+#~ "move automatically to the new location as well."
+#~ msgstr ""
+#~ "يحتوي هذا المجلد كل الملفات التي تراها على سطح مكتبك. تستطيع تغيير موقع "
+#~ "هذا المجلد إن أردت، تسنقل عندها كل المحتويات تلقائياً للموقع الجديد."
+
+#~ msgid "Documents path:"
+#~ msgstr "مسار المستندات:"
+
+#~ msgid "Downloads path:"
+#~ msgstr "مسار التنزيلات:"
+
+#~ msgid ""
+#~ "This folder will be used by default to load or save pictures from or to."
+#~ msgstr "سيُستخدم هذا المجلد افتراضياً لتحميل الصور منه أو حفظها فيه."
+
+#~ msgid "Music path:"
+#~ msgstr "مسار الموسيقى:"
+
+#~ msgid "Templates path:"
+#~ msgstr "مسار القوالب:"
+
 #~ msgid "Desktop"
 #~ msgstr "سطح المكتب"
-
-#~ msgid "Documents"
-#~ msgstr "المستندات"
-
-#~ msgid "Downloads"
-#~ msgstr "التنزيلات"
 
 #~ msgid "Music"
 #~ msgstr "الموسيقى"
@@ -143,9 +190,6 @@ msgstr "اختر موقع جديداً"
 
 #~ msgid "Public"
 #~ msgstr "العام"
-
-#~ msgid "Templates"
-#~ msgstr "القوالب"
 
 #~ msgid ""
 #~ "<h1>Paths</h1>\n"

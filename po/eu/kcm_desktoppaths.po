@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:40+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2024-06-28 09:14+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -24,88 +24,111 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ui/main.qml:52
-#, kde-format
-msgid "Desktop path:"
+#, fuzzy, kde-format
+#| msgid "Desktop path:"
+msgctxt "@label:textbox"
+msgid "Desktop folder:"
 msgstr "Mahaigainaren bide-izena:"
 
 #: ui/main.qml:58
 #, kde-format
-msgid ""
-"This folder contains all the files which you see on your desktop. You can "
-"change the location of this folder if you want to, and the contents will "
-"move automatically to the new location as well."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder contains all the files you see on your desktop."
 msgstr ""
-"Karpeta honek zure mahaigainean ikusten dituzun fitxategi guztiak dauzka. "
-"Nahi izanez gero, karpeta honen helbidea aldatu dezakezu, eta barnean "
-"dituenak ere automatikoki mugituko dira helbide berrira."
 
 #: ui/main.qml:66
-#, kde-format
-msgid "Documents path:"
-msgstr "Dokumentuen bide-izena:"
+#, fuzzy, kde-format
+#| msgid "Documents"
+msgctxt "@label:textbox"
+msgid "Documents folder:"
+msgstr "Dokumentuak"
 
 #: ui/main.qml:72
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save documents from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save documents."
 msgstr ""
 "Hau izango da dokumentuak bertatik kargatzeko edo bertara kopiatzeko "
 "erabiliko den karpeta lehenetsia."
 
 #: ui/main.qml:80
-#, kde-format
-msgid "Downloads path:"
-msgstr "Jaitsitakoak-en bidea:"
+#, fuzzy, kde-format
+#| msgid "Downloads"
+msgctxt "@label:textbox"
+msgid "Downloads folder:"
+msgstr "Jaitsitakoak"
 
 #: ui/main.qml:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "This folder will be used by default to save your downloaded items."
+msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "Hau izango da zuk jaitsitako elementuak gordetzeko erabiliko den karpeta "
 "lehenetsia."
 
 #: ui/main.qml:94
-#, kde-format
-msgid "Videos path:"
+#, fuzzy, kde-format
+#| msgid "Videos path:"
+msgctxt "@label:textbox"
+msgid "Videos folder:"
 msgstr "Bideoen bide-izena:"
 
 #: ui/main.qml:100
-#, kde-format
-msgid "This folder will be used by default to load or save movies from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save video files."
 msgstr ""
 "Hau izango da filmak kargatu edo gordetzeko erabiliko den karpeta lehenetsia."
 
 #: ui/main.qml:108
-#, kde-format
-msgid "Pictures path:"
+#, fuzzy, kde-format
+#| msgid "Pictures path:"
+msgctxt "@label:textbox"
+msgid "Pictures folder:"
 msgstr "Irudien bide-izena:"
 
 #: ui/main.qml:114
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save pictures from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save image files."
 msgstr ""
-"Hau izango da irudiak kargatu edo gordetzeko erabiliko den karpeta "
-"lehenetsia."
+"Hau izango da filmak kargatu edo gordetzeko erabiliko den karpeta lehenetsia."
 
 #: ui/main.qml:122
 #, kde-format
-msgid "Music path:"
-msgstr "Musikaren bide-izena:"
+msgctxt "@label:textbox"
+msgid "Music folder:"
+msgstr ""
 
 #: ui/main.qml:128
-#, kde-format
-msgid "This folder will be used by default to load or save music from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save music from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save music files."
 msgstr ""
 "Hau izango da musika kargatu edo gordetzeko erabiliko den karpeta lehenetsia."
 
 #: ui/main.qml:136
-#, kde-format
-msgid "Public path:"
+#, fuzzy, kde-format
+#| msgid "Public path:"
+msgctxt "@label:textbox"
+msgid "Public folder:"
 msgstr "Bide-izen publikoa:"
 
 #: ui/main.qml:142
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default for publicly-shared files when "
+#| "network sharing is enabled."
+msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
@@ -114,14 +137,18 @@ msgstr ""
 "fitxategietarako, sarean partekatzea gaituta dagoenean."
 
 #: ui/main.qml:150
-#, kde-format
-msgid "Templates path:"
-msgstr "Txantiloien bide-izena:"
+#, fuzzy, kde-format
+#| msgid "Templates"
+msgctxt "@label:textbox"
+msgid "Templates folder:"
+msgstr "Txantiloiak"
 
 #: ui/main.qml:156
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save templates from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save templates from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save file templates."
 msgstr ""
 "Karpeta hau erabiliko da, era lehenetsian, txantiloiak zamatzeko/gordetzeko."
 
@@ -131,14 +158,35 @@ msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "Aukeratu kokaleku berria"
 
+#~ msgid ""
+#~ "This folder contains all the files which you see on your desktop. You can "
+#~ "change the location of this folder if you want to, and the contents will "
+#~ "move automatically to the new location as well."
+#~ msgstr ""
+#~ "Karpeta honek zure mahaigainean ikusten dituzun fitxategi guztiak dauzka. "
+#~ "Nahi izanez gero, karpeta honen helbidea aldatu dezakezu, eta barnean "
+#~ "dituenak ere automatikoki mugituko dira helbide berrira."
+
+#~ msgid "Documents path:"
+#~ msgstr "Dokumentuen bide-izena:"
+
+#~ msgid "Downloads path:"
+#~ msgstr "Jaitsitakoak-en bidea:"
+
+#~ msgid ""
+#~ "This folder will be used by default to load or save pictures from or to."
+#~ msgstr ""
+#~ "Hau izango da irudiak kargatu edo gordetzeko erabiliko den karpeta "
+#~ "lehenetsia."
+
+#~ msgid "Music path:"
+#~ msgstr "Musikaren bide-izena:"
+
+#~ msgid "Templates path:"
+#~ msgstr "Txantiloien bide-izena:"
+
 #~ msgid "Desktop"
 #~ msgstr "Mahaigaina"
-
-#~ msgid "Documents"
-#~ msgstr "Dokumentuak"
-
-#~ msgid "Downloads"
-#~ msgstr "Jaitsitakoak"
 
 #~ msgid "Music"
 #~ msgstr "Musika"
@@ -151,9 +199,6 @@ msgstr "Aukeratu kokaleku berria"
 
 #~ msgid "Public"
 #~ msgstr "Publikoa"
-
-#~ msgid "Templates"
-#~ msgstr "Txantiloiak"
 
 #~ msgid ""
 #~ "<h1>Paths</h1>\n"

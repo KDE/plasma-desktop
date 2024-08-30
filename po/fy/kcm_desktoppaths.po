@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:40+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2009-12-19 18:43+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -17,85 +17,104 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: ui/main.qml:52
-#, kde-format
-msgid "Desktop path:"
+#, fuzzy, kde-format
+#| msgid "Desktop path:"
+msgctxt "@label:textbox"
+msgid "Desktop folder:"
 msgstr "Buroblêdpaad:"
 
 #: ui/main.qml:58
 #, kde-format
-msgid ""
-"This folder contains all the files which you see on your desktop. You can "
-"change the location of this folder if you want to, and the contents will "
-"move automatically to the new location as well."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder contains all the files you see on your desktop."
 msgstr ""
-"Dizze map befettet alle triemmen dy har op jo buroblêd befine. As jo wolle "
-"dan is de lokaasje te wizigjen. De ynhâld fan it buroblêd ferhûzet "
-"automatysk mei nei de nije lokaasje."
 
 #: ui/main.qml:66
-#, kde-format
-msgid "Documents path:"
-msgstr "Dokumintenpaad:"
+#, fuzzy, kde-format
+#| msgid "Documents"
+msgctxt "@label:textbox"
+msgid "Documents folder:"
+msgstr "Dokuminten"
 
 #: ui/main.qml:72
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save documents from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save documents."
 msgstr ""
 "Dizze map wurdt standert brûkt om dokuminten yn te bewarjen of te laden."
 
 #: ui/main.qml:80
-#, kde-format
-msgid "Downloads path:"
-msgstr "Ynlaadpaad:"
+#, fuzzy, kde-format
+#| msgid "Downloads"
+msgctxt "@label:textbox"
+msgid "Downloads folder:"
+msgstr "ynladen"
 
 #: ui/main.qml:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "This folder will be used by default to save your downloaded items."
+msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr "Dizze map wurdt standert brûkt om jo ynladen items te bewarjen."
 
 #: ui/main.qml:94
 #, fuzzy, kde-format
 #| msgid "Movies path:"
-msgid "Videos path:"
+msgctxt "@label:textbox"
+msgid "Videos folder:"
 msgstr "Filmpaad:"
 
 #: ui/main.qml:100
-#, kde-format
-msgid "This folder will be used by default to load or save movies from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save video files."
 msgstr "Dizze map wurdt standert brûkt om films yn te bewarjen of te laden."
 
 #: ui/main.qml:108
-#, kde-format
-msgid "Pictures path:"
+#, fuzzy, kde-format
+#| msgid "Pictures path:"
+msgctxt "@label:textbox"
+msgid "Pictures folder:"
 msgstr "Fotopaad:"
 
 #: ui/main.qml:114
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save pictures from or to."
-msgstr "Dizze map wurdt standert brûkt om foto's yn te bewarjen of te laden."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save image files."
+msgstr "Dizze map wurdt standert brûkt om films yn te bewarjen of te laden."
 
 #: ui/main.qml:122
 #, kde-format
-msgid "Music path:"
-msgstr "Musykpaad:"
+msgctxt "@label:textbox"
+msgid "Music folder:"
+msgstr ""
 
 #: ui/main.qml:128
-#, kde-format
-msgid "This folder will be used by default to load or save music from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save music from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save music files."
 msgstr "Dizze map wurdt standert brûkt om musyk yn te bewarjen of te laden."
 
 #: ui/main.qml:136
 #, fuzzy, kde-format
 #| msgid "Music path:"
-msgid "Public path:"
+msgctxt "@label:textbox"
+msgid "Public folder:"
 msgstr "Musykpaad:"
 
 #: ui/main.qml:142
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
+msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
@@ -104,15 +123,16 @@ msgstr "Dizze map wurdt standert brûkt om foto's yn te bewarjen of te laden."
 #: ui/main.qml:150
 #, fuzzy, kde-format
 #| msgid "Pictures path:"
-msgid "Templates path:"
+msgctxt "@label:textbox"
+msgid "Templates folder:"
 msgstr "Fotopaad:"
 
 #: ui/main.qml:156
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
-msgid ""
-"This folder will be used by default to load or save templates from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save file templates."
 msgstr "Dizze map wurdt standert brûkt om foto's yn te bewarjen of te laden."
 
 #: ui/UrlRequester.qml:74
@@ -121,14 +141,31 @@ msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
 
+#~ msgid ""
+#~ "This folder contains all the files which you see on your desktop. You can "
+#~ "change the location of this folder if you want to, and the contents will "
+#~ "move automatically to the new location as well."
+#~ msgstr ""
+#~ "Dizze map befettet alle triemmen dy har op jo buroblêd befine. As jo "
+#~ "wolle dan is de lokaasje te wizigjen. De ynhâld fan it buroblêd ferhûzet "
+#~ "automatysk mei nei de nije lokaasje."
+
+#~ msgid "Documents path:"
+#~ msgstr "Dokumintenpaad:"
+
+#~ msgid "Downloads path:"
+#~ msgstr "Ynlaadpaad:"
+
+#~ msgid ""
+#~ "This folder will be used by default to load or save pictures from or to."
+#~ msgstr ""
+#~ "Dizze map wurdt standert brûkt om foto's yn te bewarjen of te laden."
+
+#~ msgid "Music path:"
+#~ msgstr "Musykpaad:"
+
 #~ msgid "Desktop"
 #~ msgstr "Buroblêd"
-
-#~ msgid "Documents"
-#~ msgstr "Dokuminten"
-
-#~ msgid "Downloads"
-#~ msgstr "ynladen"
 
 #~ msgid "Music"
 #~ msgstr "Musyk"

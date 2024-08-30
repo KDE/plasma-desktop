@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:40+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2024-06-08 17:05+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -21,87 +21,111 @@ msgstr ""
 "X-Generator: Lokalize 21.12.3\n"
 
 #: ui/main.qml:52
-#, kde-format
-msgid "Desktop path:"
-msgstr "Cale birou:"
+#, fuzzy, kde-format
+#| msgid "Desktop Menu"
+msgctxt "@label:textbox"
+msgid "Desktop folder:"
+msgstr "Meniul biroului"
 
 #: ui/main.qml:58
 #, kde-format
-msgid ""
-"This folder contains all the files which you see on your desktop. You can "
-"change the location of this folder if you want to, and the contents will "
-"move automatically to the new location as well."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder contains all the files you see on your desktop."
 msgstr ""
-"Acest dosar conține toate fișierele pe care le vedeți pe ecran. Puteți "
-"schimba locul acestui dosar dacă doriți, iar conținutul lui va fi mutat "
-"automat la noua amplasare."
 
 #: ui/main.qml:66
-#, kde-format
-msgid "Documents path:"
-msgstr "Cale documente:"
+#, fuzzy, kde-format
+#| msgid "Documents"
+msgctxt "@label:textbox"
+msgid "Documents folder:"
+msgstr "Documente"
 
 #: ui/main.qml:72
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save documents from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save documents."
 msgstr ""
 "Acest dosar va fi folosit în mod implicit pentru a încărca sau salva "
 "documente."
 
 #: ui/main.qml:80
-#, kde-format
-msgid "Downloads path:"
-msgstr "Cale descărcări:"
+#, fuzzy, kde-format
+#| msgid "Downloads"
+msgctxt "@label:textbox"
+msgid "Downloads folder:"
+msgstr "Descărcări"
 
 #: ui/main.qml:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "This folder will be used by default to save your downloaded items."
+msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "Acest dosar va fi folosit în mod implicit pentru a vă salva elementele "
 "descărcate."
 
 #: ui/main.qml:94
-#, kde-format
-msgid "Videos path:"
+#, fuzzy, kde-format
+#| msgid "Videos path:"
+msgctxt "@label:textbox"
+msgid "Videos folder:"
 msgstr "Cale videoclipuri:"
 
 #: ui/main.qml:100
-#, kde-format
-msgid "This folder will be used by default to load or save movies from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save video files."
 msgstr ""
 "Acest dosar va fi folosit în mod implicit pentru a încărca sau salva filme."
 
 #: ui/main.qml:108
-#, kde-format
-msgid "Pictures path:"
+#, fuzzy, kde-format
+#| msgid "Pictures path:"
+msgctxt "@label:textbox"
+msgid "Pictures folder:"
 msgstr "Cale poze:"
 
 #: ui/main.qml:114
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save pictures from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save image files."
 msgstr ""
-"Acest dosar va fi folosit în mod implicit pentru a încărca sau salva poze."
+"Acest dosar va fi folosit în mod implicit pentru a încărca sau salva filme."
 
 #: ui/main.qml:122
 #, kde-format
-msgid "Music path:"
-msgstr "Cale muzică:"
+msgctxt "@label:textbox"
+msgid "Music folder:"
+msgstr ""
 
 #: ui/main.qml:128
-#, kde-format
-msgid "This folder will be used by default to load or save music from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save music from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save music files."
 msgstr ""
 "Acest dosar va fi folosit în mod implicit pentru a încărca sau salva muzică."
 
 #: ui/main.qml:136
-#, kde-format
-msgid "Public path:"
+#, fuzzy, kde-format
+#| msgid "Public path:"
+msgctxt "@label:textbox"
+msgid "Public folder:"
 msgstr "Cale publică:"
 
 #: ui/main.qml:142
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default for publicly-shared files when "
+#| "network sharing is enabled."
+msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
@@ -110,14 +134,18 @@ msgstr ""
 "când e activă partajarea prin rețea."
 
 #: ui/main.qml:150
-#, kde-format
-msgid "Templates path:"
+#, fuzzy, kde-format
+#| msgid "Templates path:"
+msgctxt "@label:textbox"
+msgid "Templates folder:"
 msgstr "Cale șabloane:"
 
 #: ui/main.qml:156
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save templates from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save templates from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save file templates."
 msgstr ""
 "Acest dosar va fi folosit implicit pentru a încărca sau salva șabloane."
 
@@ -127,14 +155,34 @@ msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "Alege amplasare nouă"
 
+#~ msgid "Desktop path:"
+#~ msgstr "Cale birou:"
+
+#~ msgid ""
+#~ "This folder contains all the files which you see on your desktop. You can "
+#~ "change the location of this folder if you want to, and the contents will "
+#~ "move automatically to the new location as well."
+#~ msgstr ""
+#~ "Acest dosar conține toate fișierele pe care le vedeți pe ecran. Puteți "
+#~ "schimba locul acestui dosar dacă doriți, iar conținutul lui va fi mutat "
+#~ "automat la noua amplasare."
+
+#~ msgid "Documents path:"
+#~ msgstr "Cale documente:"
+
+#~ msgid "Downloads path:"
+#~ msgstr "Cale descărcări:"
+
+#~ msgid ""
+#~ "This folder will be used by default to load or save pictures from or to."
+#~ msgstr ""
+#~ "Acest dosar va fi folosit în mod implicit pentru a încărca sau salva poze."
+
+#~ msgid "Music path:"
+#~ msgstr "Cale muzică:"
+
 #~ msgid "Desktop"
 #~ msgstr "Birou"
-
-#~ msgid "Documents"
-#~ msgstr "Documente"
-
-#~ msgid "Downloads"
-#~ msgstr "Descărcări"
 
 #~ msgid "Music"
 #~ msgstr "Muzică"
@@ -515,9 +563,6 @@ msgstr "Alege amplasare nouă"
 
 #~ msgid "Window List Menu"
 #~ msgstr "Meniul listei de ferestre"
-
-#~ msgid "Desktop Menu"
-#~ msgstr "Meniul biroului"
 
 #~ msgid "Application Menu"
 #~ msgstr "Meniul de aplicații"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-27 00:41+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2024-08-23 10:44+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -508,10 +508,19 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "Kendu panel hau; ekintza hau desegin daiteke"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, kde-format
-msgctxt "@action:button Done configuring the panel"
-msgid "Done"
-msgstr "Eginda"
+#, fuzzy, kde-format
+#| msgid "Close"
+msgctxt "@action:button Close the panel configuration window"
+msgid "Close"
+msgstr "Itxi"
+
+#: contents/configuration/PanelConfiguration.qml:647
+#, fuzzy, kde-format
+#| msgid "Exit Edit Mode"
+msgctxt ""
+"@action:button Close the panel configuration window and exit edit mode"
+msgid "Exit Edit Mode"
+msgstr "Irten editatzeko modutik"
 
 #: contents/configuration/PanelConfiguration.qml:650
 #, kde-format
@@ -605,6 +614,12 @@ msgstr "Ordezko trepetak"
 #, kde-format
 msgid "Unsupported Widget"
 msgstr "Euskarririk gabeko trepeta"
+
+#: contents/explorer/AppletDelegate.qml:172
+#, kde-format
+msgctxt "Text displayed on top of newly installed widgets"
+msgid "New!"
+msgstr ""
 
 #: contents/explorer/AppletDelegate.qml:188
 #, kde-format
@@ -814,6 +829,10 @@ msgstr "Irten editatzeko modutik"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Panelaren fokuaren adierazlea"
+
+#~ msgctxt "@action:button Done configuring the panel"
+#~ msgid "Done"
+#~ msgstr "Eginda"
 
 #~ msgctxt "@option:check"
 #~ msgid "Keep visible when unlocking prompt disappears"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-27 00:41+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2024-08-25 12:05+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -505,10 +505,19 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "Fjern panelet (kan ikkje angrast)"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, kde-format
-msgctxt "@action:button Done configuring the panel"
-msgid "Done"
-msgstr "Fullført"
+#, fuzzy, kde-format
+#| msgid "Close"
+msgctxt "@action:button Close the panel configuration window"
+msgid "Close"
+msgstr "Lukk"
+
+#: contents/configuration/PanelConfiguration.qml:647
+#, fuzzy, kde-format
+#| msgid "Exit Edit Mode"
+msgctxt ""
+"@action:button Close the panel configuration window and exit edit mode"
+msgid "Exit Edit Mode"
+msgstr "Avslutt tilpassing"
 
 #: contents/configuration/PanelConfiguration.qml:650
 #, kde-format
@@ -600,6 +609,12 @@ msgstr "Alternative element"
 #, kde-format
 msgid "Unsupported Widget"
 msgstr "Ikkje-støtta skjermelement"
+
+#: contents/explorer/AppletDelegate.qml:172
+#, kde-format
+msgctxt "Text displayed on top of newly installed widgets"
+msgid "New!"
+msgstr ""
 
 #: contents/explorer/AppletDelegate.qml:188
 #, kde-format
@@ -809,3 +824,7 @@ msgstr "Avslutt tilpassing"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Panelfokus-markør"
+
+#~ msgctxt "@action:button Done configuring the panel"
+#~ msgid "Done"
+#~ msgstr "Fullført"

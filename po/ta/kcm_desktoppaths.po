@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:40+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2024-05-12 15:11+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -18,81 +18,107 @@ msgstr ""
 "X-Generator: Lokalize 24.02.2\n"
 
 #: ui/main.qml:52
-#, kde-format
-msgid "Desktop path:"
-msgstr "பணிமேடைப் பாதை:"
+#, fuzzy, kde-format
+#| msgid "Desktop %1:"
+msgctxt "@label:textbox"
+msgid "Desktop folder:"
+msgstr "மேல்மேசை %1:"
 
 #: ui/main.qml:58
 #, kde-format
-msgid ""
-"This folder contains all the files which you see on your desktop. You can "
-"change the location of this folder if you want to, and the contents will "
-"move automatically to the new location as well."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder contains all the files you see on your desktop."
 msgstr ""
-"பணிமேடையில் காட்டப்படும் கோப்புகளை இந்த அடைவு கொண்டிருக்கும். இந்த அடைவின் இருப்பிடத்தை "
-"மாற்றினால், அதில் உள்ள உருப்படிகள் தானாகவே புது இடத்திற்கு நகர்த்தப்படும்."
 
 #: ui/main.qml:66
-#, kde-format
-msgid "Documents path:"
-msgstr "ஆவணங்களுக்கான பாதை:"
+#, fuzzy, kde-format
+#| msgid "Documents"
+msgctxt "@label:textbox"
+msgid "Documents folder:"
+msgstr "ஆவணங்கள்"
 
 #: ui/main.qml:72
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save documents from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save documents."
 msgstr "ஆவணங்களை ஏற்ற/சேமிக்க பயன்படும் இயல்பிருப்பு அடைவாக இவ்வடைவு பயன்படுத்தப்படும்."
 
 #: ui/main.qml:80
-#, kde-format
-msgid "Downloads path:"
-msgstr "பதிவிறக்கங்களுக்கான பாதை:"
+#, fuzzy, kde-format
+#| msgid "Downloads"
+msgctxt "@label:textbox"
+msgid "Downloads folder:"
+msgstr "பதிவிறக்கங்கள்"
 
 #: ui/main.qml:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "This folder will be used by default to save your downloaded items."
+msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "உங்கள் பதிவிறக்கங்களை சேமிக்க பயன்படும் இயல்பிருப்பு அடைவாக இவ்வடைவு பயன்படுத்தப்படும்."
 
 #: ui/main.qml:94
-#, kde-format
-msgid "Videos path:"
+#, fuzzy, kde-format
+#| msgid "Videos path:"
+msgctxt "@label:textbox"
+msgid "Videos folder:"
 msgstr "ஒளிக்காட்சிகளுக்கான பாதை:"
 
 #: ui/main.qml:100
-#, kde-format
-msgid "This folder will be used by default to load or save movies from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save video files."
 msgstr ""
 "ஒளிக்காட்சிகளை ஏற்ற/சேமிக்க பயன்படும் இயல்பிருப்பு அடைவாக இவ்வடைவு பயன்படுத்தப்படும்."
 
 #: ui/main.qml:108
-#, kde-format
-msgid "Pictures path:"
+#, fuzzy, kde-format
+#| msgid "Pictures path:"
+msgctxt "@label:textbox"
+msgid "Pictures folder:"
 msgstr "படங்களுக்கான பாதை:"
 
 #: ui/main.qml:114
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save pictures from or to."
-msgstr "படங்களை ஏற்ற/சேமிக்க பயன்படும் இயல்பிருப்பு அடைவாக இவ்வடைவு பயன்படுத்தப்படும்."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save image files."
+msgstr ""
+"ஒளிக்காட்சிகளை ஏற்ற/சேமிக்க பயன்படும் இயல்பிருப்பு அடைவாக இவ்வடைவு பயன்படுத்தப்படும்."
 
 #: ui/main.qml:122
 #, kde-format
-msgid "Music path:"
-msgstr "பாடல்களுக்கான பாதை:"
+msgctxt "@label:textbox"
+msgid "Music folder:"
+msgstr ""
 
 #: ui/main.qml:128
-#, kde-format
-msgid "This folder will be used by default to load or save music from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save music from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save music files."
 msgstr "பாடல்களை ஏற்ற/சேமிக்க பயன்படும் இயல்பிருப்பு அடைவாக இவ்வடைவு பயன்படுத்தப்படும்."
 
 #: ui/main.qml:136
-#, kde-format
-msgid "Public path:"
+#, fuzzy, kde-format
+#| msgid "Public path:"
+msgctxt "@label:textbox"
+msgid "Public folder:"
 msgstr "பொதுவானவற்றிற்கான பாதை:"
 
 #: ui/main.qml:142
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default for publicly-shared files when "
+#| "network sharing is enabled."
+msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
@@ -101,14 +127,18 @@ msgstr ""
 "பயன்படுத்தப்படும்."
 
 #: ui/main.qml:150
-#, kde-format
-msgid "Templates path:"
-msgstr "வார்ப்புருகளுக்கான பாதை:"
+#, fuzzy, kde-format
+#| msgid "Templates"
+msgctxt "@label:textbox"
+msgid "Templates folder:"
+msgstr "வார்ப்புருகள்"
 
 #: ui/main.qml:156
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save templates from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save templates from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save file templates."
 msgstr ""
 "வார்ப்புருகளை ஏற்ற/சேமிக்க பயன்படும் இயல்பிருப்பு அடைவாக இவ்வடைவு பயன்படுத்தப்படும்."
 
@@ -118,14 +148,35 @@ msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "புதிய இடத்தைத் தேர்ந்தெடு"
 
+#~ msgid "Desktop path:"
+#~ msgstr "பணிமேடைப் பாதை:"
+
+#~ msgid ""
+#~ "This folder contains all the files which you see on your desktop. You can "
+#~ "change the location of this folder if you want to, and the contents will "
+#~ "move automatically to the new location as well."
+#~ msgstr ""
+#~ "பணிமேடையில் காட்டப்படும் கோப்புகளை இந்த அடைவு கொண்டிருக்கும். இந்த அடைவின் "
+#~ "இருப்பிடத்தை மாற்றினால், அதில் உள்ள உருப்படிகள் தானாகவே புது இடத்திற்கு நகர்த்தப்படும்."
+
+#~ msgid "Documents path:"
+#~ msgstr "ஆவணங்களுக்கான பாதை:"
+
+#~ msgid "Downloads path:"
+#~ msgstr "பதிவிறக்கங்களுக்கான பாதை:"
+
+#~ msgid ""
+#~ "This folder will be used by default to load or save pictures from or to."
+#~ msgstr "படங்களை ஏற்ற/சேமிக்க பயன்படும் இயல்பிருப்பு அடைவாக இவ்வடைவு பயன்படுத்தப்படும்."
+
+#~ msgid "Music path:"
+#~ msgstr "பாடல்களுக்கான பாதை:"
+
+#~ msgid "Templates path:"
+#~ msgstr "வார்ப்புருகளுக்கான பாதை:"
+
 #~ msgid "Desktop"
 #~ msgstr "பணிமேடை"
-
-#~ msgid "Documents"
-#~ msgstr "ஆவணங்கள்"
-
-#~ msgid "Downloads"
-#~ msgstr "பதிவிறக்கங்கள்"
 
 #~ msgid "Music"
 #~ msgstr "பாடல்கள்"
@@ -138,9 +189,6 @@ msgstr "புதிய இடத்தைத் தேர்ந்தெடு"
 
 #~ msgid "Public"
 #~ msgstr "பொதுவானவை"
-
-#~ msgid "Templates"
-#~ msgstr "வார்ப்புருகள்"
 
 #~ msgid ""
 #~ "<h1>Paths</h1>\n"
@@ -662,9 +710,6 @@ msgstr "புதிய இடத்தைத் தேர்ந்தெடு"
 
 #~ msgid "Desktop &Names"
 #~ msgstr "மேல்மேசைகளின்  பெயர்கள்"
-
-#~ msgid "Desktop %1:"
-#~ msgstr "மேல்மேசை %1:"
 
 #~ msgid "Here you can enter the name for desktop %1"
 #~ msgstr "இங்கு %1 மேமேல்சையின் பெயரை உள்ளிடலாம்."

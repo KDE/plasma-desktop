@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-29 00:41+0000\n"
-"PO-Revision-Date: 2024-08-28 11:27+0300\n"
+"PO-Revision-Date: 2024-08-29 07:08+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -729,6 +729,8 @@ msgid ""
 "though they “stick in place” and no longer need to be held down when typing "
 "a keyboard shortcut."
 msgstr ""
+"מקשי החלפה כגון Ctrl,‏ Shift,‏ Alt ומקש המטא/סופר/Windows מתנהגים כאילו הם "
+"„מתקבעים” ולא צריך עוד להחזיק אותם לחוצים בעת הקלדת צירופי מקשים במקלדת."
 
 #: ui/ModifierKeys.qml:39
 #, kde-format
@@ -743,6 +745,8 @@ msgid ""
 "Once locked, the “sticky” state of modifier keys will not be disabled until "
 "a keyboard shortcut is finished or until a non-modifier key is pressed."
 msgstr ""
+"לאחר הנעילה, המצב ה„מקובע” של מקשי ההחלפה לא יושבת עד שקיצור מקשים הסתיים או "
+"עד שמקש שאינו מקש החלפה נלחץ."
 
 #: ui/ModifierKeys.qml:57
 #, kde-format
@@ -770,7 +774,7 @@ msgstr "לצלצל בפעמון המערכת בעת שימוש במקשי נעי
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The locking keys are Caps Lock, Num Lock, and Scroll Lock."
-msgstr ""
+msgstr "מקשי הנעילה הם Caps Lock,‏ Num Lock ו־Scroll Lock"
 
 #: ui/ModifierKeys.qml:108
 #, kde-format
@@ -806,6 +810,11 @@ msgid ""
 "up). The keys <shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</"
 "shortcut>, and <shortcut>9</shortcut> allow for diagonal movement."
 msgstr ""
+"מקש לוח המספרים <shortcut>5</shortcut> מתפקד כלחיצה על העכבר. המקשים "
+"<shortcut>2</shortcut>,‏ <shortcut>4</shortcut>,‏ <shortcut>6</shortcut> ו־"
+"<shortcut>8</shortcut> מאפשרים תנועה כיוונית (למטה, שמאלה, ימינה ולמעלה). "
+"המקשים <shortcut>1</shortcut>,‏ <shortcut>3</shortcut>,‏ <shortcut>7</"
+"shortcut> ו־<shortcut>9</shortcut> מאפשרים תנועה אנכית."
 
 #: ui/MouseNavigation.qml:37
 #, kde-format

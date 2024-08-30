@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:40+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2020-10-07 22:38+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -22,90 +22,110 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: ui/main.qml:52
-#, kde-format
-msgid "Desktop path:"
-msgstr "Töölaua asukoht:"
+#, fuzzy, kde-format
+#| msgid "Desktop %1:"
+msgctxt "@label:textbox"
+msgid "Desktop folder:"
+msgstr "Töölaud %1:"
 
 #: ui/main.qml:58
 #, kde-format
-msgid ""
-"This folder contains all the files which you see on your desktop. You can "
-"change the location of this folder if you want to, and the contents will "
-"move automatically to the new location as well."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder contains all the files you see on your desktop."
 msgstr ""
-"See kataloog sisaldab kõiki faile, mida töölaual näed. Soovi korral võid "
-"muuta selle asukohta ning selle kataloogi sisu liigutatakse samuti "
-"automaatselt uude kohta."
 
 #: ui/main.qml:66
-#, kde-format
-msgid "Documents path:"
-msgstr "Dokumentide asukoht:"
+#, fuzzy, kde-format
+#| msgid "Documents"
+msgctxt "@label:textbox"
+msgid "Documents folder:"
+msgstr "Dokumendid"
 
 #: ui/main.qml:72
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save documents from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save documents."
 msgstr ""
 "Seda kataloogi kasutatakse vaikimisi dokumentide salvestamiseks ning "
 "avamiseks."
 
 #: ui/main.qml:80
-#, kde-format
-msgid "Downloads path:"
-msgstr "Allalaadimiste asukoht:"
+#, fuzzy, kde-format
+#| msgid "Downloads"
+msgctxt "@label:textbox"
+msgid "Downloads folder:"
+msgstr "Allalaaditud"
 
 #: ui/main.qml:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "This folder will be used by default to save your downloaded items."
+msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "Seda kataloogi kasutatakse vaikimisi alla laaditud dokumentide "
 "salvestamiseks."
 
 #: ui/main.qml:94
-#, kde-format
-msgid "Videos path:"
+#, fuzzy, kde-format
+#| msgid "Videos path:"
+msgctxt "@label:textbox"
+msgid "Videos folder:"
 msgstr "Videote asukoht:"
 
 #: ui/main.qml:100
-#, kde-format
-msgid "This folder will be used by default to load or save movies from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save video files."
 msgstr ""
 "Seda kataloogi kasutatakse vaikimisi filmide salvestamiseks ning avamiseks."
 
 #: ui/main.qml:108
-#, kde-format
-msgid "Pictures path:"
+#, fuzzy, kde-format
+#| msgid "Pictures path:"
+msgctxt "@label:textbox"
+msgid "Pictures folder:"
 msgstr "Piltide asukoht:"
 
 #: ui/main.qml:114
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save pictures from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save image files."
 msgstr ""
-"Seda kataloogi kasutatakse vaikimisi piltide salvestamiseks ning avamiseks."
+"Seda kataloogi kasutatakse vaikimisi filmide salvestamiseks ning avamiseks."
 
 #: ui/main.qml:122
 #, kde-format
-msgid "Music path:"
-msgstr "Muusika asukoht:"
+msgctxt "@label:textbox"
+msgid "Music folder:"
+msgstr ""
 
 #: ui/main.qml:128
-#, kde-format
-msgid "This folder will be used by default to load or save music from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save music from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save music files."
 msgstr ""
 "Seda kataloogi kasutatakse vaikimisi muusika salvestamiseks ning avamiseks."
 
 #: ui/main.qml:136
 #, fuzzy, kde-format
 #| msgid "Music path:"
-msgid "Public path:"
+msgctxt "@label:textbox"
+msgid "Public folder:"
 msgstr "Muusika asukoht:"
 
 #: ui/main.qml:142
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
+msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
@@ -115,15 +135,16 @@ msgstr ""
 #: ui/main.qml:150
 #, fuzzy, kde-format
 #| msgid "Pictures path:"
-msgid "Templates path:"
+msgctxt "@label:textbox"
+msgid "Templates folder:"
 msgstr "Piltide asukoht:"
 
 #: ui/main.qml:156
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
-msgid ""
-"This folder will be used by default to load or save templates from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save file templates."
 msgstr ""
 "Seda kataloogi kasutatakse vaikimisi piltide salvestamiseks ning avamiseks."
 
@@ -133,14 +154,35 @@ msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
 
+#~ msgid "Desktop path:"
+#~ msgstr "Töölaua asukoht:"
+
+#~ msgid ""
+#~ "This folder contains all the files which you see on your desktop. You can "
+#~ "change the location of this folder if you want to, and the contents will "
+#~ "move automatically to the new location as well."
+#~ msgstr ""
+#~ "See kataloog sisaldab kõiki faile, mida töölaual näed. Soovi korral võid "
+#~ "muuta selle asukohta ning selle kataloogi sisu liigutatakse samuti "
+#~ "automaatselt uude kohta."
+
+#~ msgid "Documents path:"
+#~ msgstr "Dokumentide asukoht:"
+
+#~ msgid "Downloads path:"
+#~ msgstr "Allalaadimiste asukoht:"
+
+#~ msgid ""
+#~ "This folder will be used by default to load or save pictures from or to."
+#~ msgstr ""
+#~ "Seda kataloogi kasutatakse vaikimisi piltide salvestamiseks ning "
+#~ "avamiseks."
+
+#~ msgid "Music path:"
+#~ msgstr "Muusika asukoht:"
+
 #~ msgid "Desktop"
 #~ msgstr "Töölaud"
-
-#~ msgid "Documents"
-#~ msgstr "Dokumendid"
-
-#~ msgid "Downloads"
-#~ msgstr "Allalaaditud"
 
 #~ msgid "Music"
 #~ msgstr "Muusika"
@@ -686,9 +728,6 @@ msgstr ""
 
 #~ msgid "Desktop &Names"
 #~ msgstr "Töölaudade &nimed"
-
-#~ msgid "Desktop %1:"
-#~ msgstr "Töölaud %1:"
 
 #~ msgid "Here you can enter the name for desktop %1"
 #~ msgstr "Siin saab anda töölauale %1 nime"

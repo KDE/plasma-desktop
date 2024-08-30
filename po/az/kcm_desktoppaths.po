@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:40+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2023-02-19 16:36+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -18,90 +18,112 @@ msgstr ""
 "X-Generator: Lokalize 22.12.2\n"
 
 #: ui/main.qml:52
-#, kde-format
-msgid "Desktop path:"
+#, fuzzy, kde-format
+#| msgid "Desktop path:"
+msgctxt "@label:textbox"
+msgid "Desktop folder:"
 msgstr "İş masası yolu:"
 
 #: ui/main.qml:58
 #, kde-format
-msgid ""
-"This folder contains all the files which you see on your desktop. You can "
-"change the location of this folder if you want to, and the contents will "
-"move automatically to the new location as well."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder contains all the files you see on your desktop."
 msgstr ""
-"Bu qovluq İş masasında gördüyünüz bütün fayllardan ibarətdir. İstəsəniz bu "
-"qovluğun yerini dəyişdirə bilərsiniz və tərkibindəkilər avtomatik olaraq "
-"yeni yerə köçəcəkdir."
 
 #: ui/main.qml:66
-#, kde-format
-msgid "Documents path:"
-msgstr "Sənədlər yolu:"
+#, fuzzy, kde-format
+#| msgid "Documents"
+msgctxt "@label:textbox"
+msgid "Documents folder:"
+msgstr "Sənədlər"
 
 #: ui/main.qml:72
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save documents from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save documents."
 msgstr ""
 "Bu qovluq sənədləri yükləmək və ya saxlamaq üçün standart olaraq istifadə "
 "ediləcəkdir."
 
 #: ui/main.qml:80
-#, kde-format
-msgid "Downloads path:"
-msgstr "Yükləmələr yolu:"
+#, fuzzy, kde-format
+#| msgid "Downloads"
+msgctxt "@label:textbox"
+msgid "Downloads folder:"
+msgstr "Yükləmələr"
 
 #: ui/main.qml:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "This folder will be used by default to save your downloaded items."
+msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "Yüklənənləri saxlamaq üçün bu qovluq standart olaraq istifadə olunacaq."
 
 #: ui/main.qml:94
-#, kde-format
-msgid "Videos path:"
+#, fuzzy, kde-format
+#| msgid "Videos path:"
+msgctxt "@label:textbox"
+msgid "Videos folder:"
 msgstr "Videolar yolu:"
 
 #: ui/main.qml:100
-#, kde-format
-msgid "This folder will be used by default to load or save movies from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save video files."
 msgstr ""
 "Bu qovluq videoları yükləmək və ya saxlamaq üçün standart olaraq istifadə "
 "ediləcəkdir."
 
 #: ui/main.qml:108
-#, kde-format
-msgid "Pictures path:"
+#, fuzzy, kde-format
+#| msgid "Pictures path:"
+msgctxt "@label:textbox"
+msgid "Pictures folder:"
 msgstr "Şəkillərə yol:"
 
 #: ui/main.qml:114
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save pictures from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save image files."
 msgstr ""
-"Bu qovluq, adətən şəkilləri yükləmək və ya saxlamaq üçün istifadə olunacaq."
+"Bu qovluq videoları yükləmək və ya saxlamaq üçün standart olaraq istifadə "
+"ediləcəkdir."
 
 #: ui/main.qml:122
 #, kde-format
-msgid "Music path:"
-msgstr "Musiqilərə yol:"
+msgctxt "@label:textbox"
+msgid "Music folder:"
+msgstr ""
 
 #: ui/main.qml:128
-#, kde-format
-msgid "This folder will be used by default to load or save music from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save music from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save music files."
 msgstr ""
 "Bu qovluq standart olaraq musiqi yükləmək və ya saxlamaq üçün istifadə "
 "olunacaq."
 
 #: ui/main.qml:136
-#, kde-format
-msgid "Public path:"
+#, fuzzy, kde-format
+#| msgid "Public path:"
+msgctxt "@label:textbox"
+msgid "Public folder:"
 msgstr "Ümumi yol:"
 
 #: ui/main.qml:142
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
+msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
@@ -109,14 +131,18 @@ msgstr ""
 "Bu qovluq, adətən şəkilləri yükləmək və ya saxlamaq üçün istifadə olunacaq."
 
 #: ui/main.qml:150
-#, kde-format
-msgid "Templates path:"
-msgstr "Şablonlar yolu:"
+#, fuzzy, kde-format
+#| msgid "Templates"
+msgctxt "@label:textbox"
+msgid "Templates folder:"
+msgstr "Şablonlar"
 
 #: ui/main.qml:156
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save templates from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save templates from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save file templates."
 msgstr ""
 "Bu qovluq standart olaraq şablonları yükləmək və ya saxlamaq üçün istifadə "
 "olunacaq."
@@ -127,14 +153,35 @@ msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "Yeni yer seç"
 
+#~ msgid ""
+#~ "This folder contains all the files which you see on your desktop. You can "
+#~ "change the location of this folder if you want to, and the contents will "
+#~ "move automatically to the new location as well."
+#~ msgstr ""
+#~ "Bu qovluq İş masasında gördüyünüz bütün fayllardan ibarətdir. İstəsəniz "
+#~ "bu qovluğun yerini dəyişdirə bilərsiniz və tərkibindəkilər avtomatik "
+#~ "olaraq yeni yerə köçəcəkdir."
+
+#~ msgid "Documents path:"
+#~ msgstr "Sənədlər yolu:"
+
+#~ msgid "Downloads path:"
+#~ msgstr "Yükləmələr yolu:"
+
+#~ msgid ""
+#~ "This folder will be used by default to load or save pictures from or to."
+#~ msgstr ""
+#~ "Bu qovluq, adətən şəkilləri yükləmək və ya saxlamaq üçün istifadə "
+#~ "olunacaq."
+
+#~ msgid "Music path:"
+#~ msgstr "Musiqilərə yol:"
+
+#~ msgid "Templates path:"
+#~ msgstr "Şablonlar yolu:"
+
 #~ msgid "Desktop"
 #~ msgstr "İş masası"
-
-#~ msgid "Documents"
-#~ msgstr "Sənədlər"
-
-#~ msgid "Downloads"
-#~ msgstr "Yükləmələr"
 
 #~ msgid "Music"
 #~ msgstr "Musiqilər"
@@ -147,9 +194,6 @@ msgstr "Yeni yer seç"
 
 #~ msgid "Public"
 #~ msgstr "İctimai"
-
-#~ msgid "Templates"
-#~ msgstr "Şablonlar"
 
 #~ msgid ""
 #~ "<h1>Paths</h1>\n"

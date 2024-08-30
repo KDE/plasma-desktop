@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma__desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-27 00:41+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2017-09-25 19:53+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -522,9 +522,17 @@ msgid "Remove this panel; this action is undo-able"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:647
+#, fuzzy, kde-format
+#| msgid "Close"
+msgctxt "@action:button Close the panel configuration window"
+msgid "Close"
+msgstr "Затвори"
+
+#: contents/configuration/PanelConfiguration.qml:647
 #, kde-format
-msgctxt "@action:button Done configuring the panel"
-msgid "Done"
+msgctxt ""
+"@action:button Close the panel configuration window and exit edit mode"
+msgid "Exit Edit Mode"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:650
@@ -615,6 +623,12 @@ msgstr "Алтернативни виџети"
 #: contents/explorer/AppletDelegate.qml:41
 #, kde-format
 msgid "Unsupported Widget"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:172
+#, kde-format
+msgctxt "Text displayed on top of newly installed widgets"
+msgid "New!"
 msgstr ""
 
 #: contents/explorer/AppletDelegate.qml:188

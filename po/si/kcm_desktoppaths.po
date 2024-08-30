@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:40+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2009-12-26 16:58+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <danishka@gmail.com>\n"
@@ -18,83 +18,103 @@ msgstr ""
 "X-Generator: Lokalize 0.3\n"
 
 #: ui/main.qml:52
-#, kde-format
-msgid "Desktop path:"
+#, fuzzy, kde-format
+#| msgid "Desktop path:"
+msgctxt "@label:textbox"
+msgid "Desktop folder:"
 msgstr "වැඩතල මාර්ගය:"
 
 #: ui/main.qml:58
 #, kde-format
-msgid ""
-"This folder contains all the files which you see on your desktop. You can "
-"change the location of this folder if you want to, and the contents will "
-"move automatically to the new location as well."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder contains all the files you see on your desktop."
 msgstr ""
-"මෙම බහාලුමේ ඔබට වැඩතලයේ දී දැකීමට අවශ්‍ය සියළුම ගොණු අන්තර්ගතයි, ඔබට අවශ්‍ය නම් මෙම බහාලුමේ "
-"ස්ථානය වෙනස් කල හැක, එවිට පවතින ගොණු ස්වයංක්‍රීයව නව ස්ථානයට පිටපත් වනු ඇත."
 
 #: ui/main.qml:66
-#, kde-format
-msgid "Documents path:"
-msgstr "ලේඛන මාර්ගය:"
+#, fuzzy, kde-format
+#| msgid "Documents"
+msgctxt "@label:textbox"
+msgid "Documents folder:"
+msgstr "ලේඛන"
 
 #: ui/main.qml:72
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save documents from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save documents."
 msgstr "මෙම බහාලුම, ලේඛන ගබඩා කිරීමට හා පූර්ණයට පෙරනිමිය ලෙස භාවිත කරනු ඇත"
 
 #: ui/main.qml:80
-#, kde-format
-msgid "Downloads path:"
-msgstr "බාගැනීම් මාර්ගය:"
+#, fuzzy, kde-format
+#| msgid "Downloads"
+msgctxt "@label:textbox"
+msgid "Downloads folder:"
+msgstr "බාගැනීම්"
 
 #: ui/main.qml:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "This folder will be used by default to save your downloaded items."
+msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr "මෙම බහාලුම, බා ගන්නා ගොණු ගබඩා කිරීමට හා පූර්ණයට පෙරනිමිය ලෙස භාවිත කරනු ඇත"
 
 #: ui/main.qml:94
 #, fuzzy, kde-format
 #| msgid "Movies path:"
-msgid "Videos path:"
+msgctxt "@label:textbox"
+msgid "Videos folder:"
 msgstr "විත්‍රපටි මාර්ගය:"
 
 #: ui/main.qml:100
-#, kde-format
-msgid "This folder will be used by default to load or save movies from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save video files."
 msgstr "මෙම බහාලුම, චිත්‍රපට ගබඩා කිරීමට හා පූර්ණයට පෙරනිමිය ලෙස භාවිත කරනු ඇත"
 
 #: ui/main.qml:108
-#, kde-format
-msgid "Pictures path:"
+#, fuzzy, kde-format
+#| msgid "Pictures path:"
+msgctxt "@label:textbox"
+msgid "Pictures folder:"
 msgstr "පින්තූර මාර්ගය:"
 
 #: ui/main.qml:114
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save pictures from or to."
-msgstr "මෙම බහාලුම, පින්තූර ගබඩා කිරීමට හා පූර්ණයට පෙරනිමිය ලෙස භාවිත කරනු ඇත"
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save image files."
+msgstr "මෙම බහාලුම, චිත්‍රපට ගබඩා කිරීමට හා පූර්ණයට පෙරනිමිය ලෙස භාවිත කරනු ඇත"
 
 #: ui/main.qml:122
 #, kde-format
-msgid "Music path:"
-msgstr "ගීත මාර්ගය:"
+msgctxt "@label:textbox"
+msgid "Music folder:"
+msgstr ""
 
 #: ui/main.qml:128
-#, kde-format
-msgid "This folder will be used by default to load or save music from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save music from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save music files."
 msgstr "මෙම බහාලුම, ගීත ගබඩා කිරීමට හා පූර්ණයට පෙරනිමිය ලෙස භාවිත කරනු ඇත"
 
 #: ui/main.qml:136
 #, fuzzy, kde-format
 #| msgid "Music path:"
-msgid "Public path:"
+msgctxt "@label:textbox"
+msgid "Public folder:"
 msgstr "ගීත මාර්ගය:"
 
 #: ui/main.qml:142
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
+msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
@@ -103,15 +123,16 @@ msgstr "මෙම බහාලුම, පින්තූර ගබඩා කි�
 #: ui/main.qml:150
 #, fuzzy, kde-format
 #| msgid "Pictures path:"
-msgid "Templates path:"
+msgctxt "@label:textbox"
+msgid "Templates folder:"
 msgstr "පින්තූර මාර්ගය:"
 
 #: ui/main.qml:156
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
-msgid ""
-"This folder will be used by default to load or save templates from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save file templates."
 msgstr "මෙම බහාලුම, පින්තූර ගබඩා කිරීමට හා පූර්ණයට පෙරනිමිය ලෙස භාවිත කරනු ඇත"
 
 #: ui/UrlRequester.qml:74
@@ -120,14 +141,29 @@ msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
 
+#~ msgid ""
+#~ "This folder contains all the files which you see on your desktop. You can "
+#~ "change the location of this folder if you want to, and the contents will "
+#~ "move automatically to the new location as well."
+#~ msgstr ""
+#~ "මෙම බහාලුමේ ඔබට වැඩතලයේ දී දැකීමට අවශ්‍ය සියළුම ගොණු අන්තර්ගතයි, ඔබට අවශ්‍ය නම් මෙම "
+#~ "බහාලුමේ ස්ථානය වෙනස් කල හැක, එවිට පවතින ගොණු ස්වයංක්‍රීයව නව ස්ථානයට පිටපත් වනු ඇත."
+
+#~ msgid "Documents path:"
+#~ msgstr "ලේඛන මාර්ගය:"
+
+#~ msgid "Downloads path:"
+#~ msgstr "බාගැනීම් මාර්ගය:"
+
+#~ msgid ""
+#~ "This folder will be used by default to load or save pictures from or to."
+#~ msgstr "මෙම බහාලුම, පින්තූර ගබඩා කිරීමට හා පූර්ණයට පෙරනිමිය ලෙස භාවිත කරනු ඇත"
+
+#~ msgid "Music path:"
+#~ msgstr "ගීත මාර්ගය:"
+
 #~ msgid "Desktop"
 #~ msgstr "වැඩතලය"
-
-#~ msgid "Documents"
-#~ msgstr "ලේඛන"
-
-#~ msgid "Downloads"
-#~ msgstr "බාගැනීම්"
 
 #~ msgid "Music"
 #~ msgstr "ගීත"

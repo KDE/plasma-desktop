@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-27 00:41+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2024-07-07 20:41-0400\n"
 "Last-Translator: Janet Blackquill <uhhadd@gmail.com>\n"
 "Language-Team: C <kde-i18n-doc@kde.org>\n"
@@ -498,10 +498,19 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "o weka e ni (sina ken sin e ona)"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, kde-format
-msgctxt "@action:button Done configuring the panel"
-msgid "Done"
-msgstr "o pini"
+#, fuzzy, kde-format
+#| msgid "Close"
+msgctxt "@action:button Close the panel configuration window"
+msgid "Close"
+msgstr "o weka"
+
+#: contents/configuration/PanelConfiguration.qml:647
+#, fuzzy, kde-format
+#| msgid "Exit Edit Mode"
+msgctxt ""
+"@action:button Close the panel configuration window and exit edit mode"
+msgid "Exit Edit Mode"
+msgstr "o weka tan tomo ante"
 
 #: contents/configuration/PanelConfiguration.qml:650
 #, kde-format
@@ -590,6 +599,12 @@ msgstr ""
 #: contents/explorer/AppletDelegate.qml:41
 #, kde-format
 msgid "Unsupported Widget"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:172
+#, kde-format
+msgctxt "Text displayed on top of newly installed widgets"
+msgid "New!"
 msgstr ""
 
 #: contents/explorer/AppletDelegate.qml:188
@@ -801,3 +816,7 @@ msgstr "o weka tan tomo ante"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr ""
+
+#~ msgctxt "@action:button Done configuring the panel"
+#~ msgid "Done"
+#~ msgstr "o pini"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-27 00:41+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2024-08-20 20:45+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -511,10 +511,19 @@ msgstr ""
 "Diese Kontrollleiste entfernen; diese Aktion kann rückgängig gemacht werden"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, kde-format
-msgctxt "@action:button Done configuring the panel"
-msgid "Done"
-msgstr "Fertig"
+#, fuzzy, kde-format
+#| msgid "Close"
+msgctxt "@action:button Close the panel configuration window"
+msgid "Close"
+msgstr "Schließen"
+
+#: contents/configuration/PanelConfiguration.qml:647
+#, fuzzy, kde-format
+#| msgid "Exit Edit Mode"
+msgctxt ""
+"@action:button Close the panel configuration window and exit edit mode"
+msgid "Exit Edit Mode"
+msgstr "Bearbeitungsmodus beenden"
 
 #: contents/configuration/PanelConfiguration.qml:650
 #, kde-format
@@ -609,6 +618,12 @@ msgstr "Alternative Miniprogramme"
 #, kde-format
 msgid "Unsupported Widget"
 msgstr "Nicht unterstütztes Miniprogramm"
+
+#: contents/explorer/AppletDelegate.qml:172
+#, kde-format
+msgctxt "Text displayed on top of newly installed widgets"
+msgid "New!"
+msgstr ""
 
 #: contents/explorer/AppletDelegate.qml:188
 #, kde-format
@@ -818,6 +833,10 @@ msgstr "Bearbeitungsmodus beenden"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Fokus der Kontrollleiste sichtbar machen"
+
+#~ msgctxt "@action:button Done configuring the panel"
+#~ msgid "Done"
+#~ msgstr "Fertig"
 
 #~ msgid "Height:"
 #~ msgstr "Höhe:"

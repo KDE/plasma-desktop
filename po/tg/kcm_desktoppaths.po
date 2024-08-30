@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:40+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2019-09-23 20:07+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -18,79 +18,92 @@ msgstr ""
 "X-Generator: Lokalize 19.04.3\n"
 
 #: ui/main.qml:52
-#, kde-format
-msgid "Desktop path:"
+#, fuzzy, kde-format
+#| msgid "Desktop path:"
+msgctxt "@label:textbox"
+msgid "Desktop folder:"
 msgstr "Масири мизи корӣ:"
 
 #: ui/main.qml:58
 #, kde-format
-msgid ""
-"This folder contains all the files which you see on your desktop. You can "
-"change the location of this folder if you want to, and the contents will "
-"move automatically to the new location as well."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder contains all the files you see on your desktop."
 msgstr ""
 
 #: ui/main.qml:66
-#, kde-format
-msgid "Documents path:"
-msgstr "Масири ҳуҷҷатҳо:"
+#, fuzzy, kde-format
+#| msgid "Documents"
+msgctxt "@label:textbox"
+msgid "Documents folder:"
+msgstr "Ҳуҷҷатҳо"
 
 #: ui/main.qml:72
 #, kde-format
-msgid ""
-"This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save documents."
 msgstr ""
 
 #: ui/main.qml:80
-#, kde-format
-msgid "Downloads path:"
-msgstr "Масири боргириҳо:"
+#, fuzzy, kde-format
+#| msgid "Downloads"
+msgctxt "@label:textbox"
+msgid "Downloads folder:"
+msgstr "Боргириҳо"
 
 #: ui/main.qml:86
 #, kde-format
+msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 
 #: ui/main.qml:94
 #, fuzzy, kde-format
 #| msgid "Movies path:"
-msgid "Videos path:"
+msgctxt "@label:textbox"
+msgid "Videos folder:"
 msgstr "Масири филмҳо:"
 
 #: ui/main.qml:100
 #, kde-format
-msgid "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save video files."
 msgstr ""
 
 #: ui/main.qml:108
-#, kde-format
-msgid "Pictures path:"
+#, fuzzy, kde-format
+#| msgid "Pictures path:"
+msgctxt "@label:textbox"
+msgid "Pictures folder:"
 msgstr "Масири тасвирҳо:"
 
 #: ui/main.qml:114
 #, kde-format
-msgid ""
-"This folder will be used by default to load or save pictures from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save image files."
 msgstr ""
 
 #: ui/main.qml:122
 #, kde-format
-msgid "Music path:"
-msgstr "Масири мусиқӣ:"
+msgctxt "@label:textbox"
+msgid "Music folder:"
+msgstr ""
 
 #: ui/main.qml:128
 #, kde-format
-msgid "This folder will be used by default to load or save music from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save music files."
 msgstr ""
 
 #: ui/main.qml:136
 #, fuzzy, kde-format
 #| msgid "Music path:"
-msgid "Public path:"
+msgctxt "@label:textbox"
+msgid "Public folder:"
 msgstr "Масири мусиқӣ:"
 
 #: ui/main.qml:142
 #, kde-format
+msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
@@ -99,13 +112,14 @@ msgstr ""
 #: ui/main.qml:150
 #, fuzzy, kde-format
 #| msgid "Pictures path:"
-msgid "Templates path:"
+msgctxt "@label:textbox"
+msgid "Templates folder:"
 msgstr "Масири тасвирҳо:"
 
 #: ui/main.qml:156
 #, kde-format
-msgid ""
-"This folder will be used by default to load or save templates from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save file templates."
 msgstr ""
 
 #: ui/UrlRequester.qml:74
@@ -114,14 +128,17 @@ msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
 
+#~ msgid "Documents path:"
+#~ msgstr "Масири ҳуҷҷатҳо:"
+
+#~ msgid "Downloads path:"
+#~ msgstr "Масири боргириҳо:"
+
+#~ msgid "Music path:"
+#~ msgstr "Масири мусиқӣ:"
+
 #~ msgid "Desktop"
 #~ msgstr "Мизи корӣ"
-
-#~ msgid "Documents"
-#~ msgstr "Ҳуҷҷатҳо"
-
-#~ msgid "Downloads"
-#~ msgstr "Боргириҳо"
 
 #~ msgid "Music"
 #~ msgstr "Мусиқӣ"

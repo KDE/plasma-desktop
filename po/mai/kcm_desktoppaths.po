@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:40+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2010-01-29 13:18+0530\n"
 "Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Maithili <maithili.sf.net>\n"
@@ -23,81 +23,103 @@ msgstr ""
 "\n"
 
 #: ui/main.qml:52
-#, kde-format
-msgid "Desktop path:"
+#, fuzzy, kde-format
+#| msgid "Desktop path:"
+msgctxt "@label:textbox"
+msgid "Desktop folder:"
 msgstr "डेस्कटाप पथ: "
 
 #: ui/main.qml:58
 #, kde-format
-msgid ""
-"This folder contains all the files which you see on your desktop. You can "
-"change the location of this folder if you want to, and the contents will "
-"move automatically to the new location as well."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder contains all the files you see on your desktop."
 msgstr ""
 
 #: ui/main.qml:66
-#, kde-format
-msgid "Documents path:"
-msgstr "दस्ताबेज क' पथः "
+#, fuzzy, kde-format
+#| msgid "Documents"
+msgctxt "@label:textbox"
+msgid "Documents folder:"
+msgstr "दस्ताबेज"
 
 #: ui/main.qml:72
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save documents from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save documents."
 msgstr "ई फोल्डर मूलभूत द्वारा दस्ताबेज केँ लोड करब अथवा सहेजबा मे उपयोग मे लेल जएताह."
 
 #: ui/main.qml:80
-#, kde-format
-msgid "Downloads path:"
-msgstr "दस्ताबेज क' पथः "
+#, fuzzy, kde-format
+#| msgid "Downloads"
+msgctxt "@label:textbox"
+msgid "Downloads folder:"
+msgstr "डाउनलोड"
 
 #: ui/main.qml:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "This folder will be used by default to save your downloaded items."
+msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr "ई फोल्डर मूलभूत द्वारा दस्ताबेज केँ लोड करब अथवा सहेजबा मे उपयोग मे लेल जएताह."
 
 #: ui/main.qml:94
 #, fuzzy, kde-format
 #| msgid "Movies path:"
-msgid "Videos path:"
+msgctxt "@label:textbox"
+msgid "Videos folder:"
 msgstr "मूवी क' पथः "
 
 #: ui/main.qml:100
-#, kde-format
-msgid "This folder will be used by default to load or save movies from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save video files."
 msgstr "ई फोल्डर मूलभूत द्वारा मूवी केँ लोड करब अथवा सहेजबा मे उपयोग मे लेल जएताह."
 
 #: ui/main.qml:108
-#, kde-format
-msgid "Pictures path:"
+#, fuzzy, kde-format
+#| msgid "Pictures path:"
+msgctxt "@label:textbox"
+msgid "Pictures folder:"
 msgstr "चित्र क' पथः "
 
 #: ui/main.qml:114
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save pictures from or to."
-msgstr "ई फोल्डर मूलभूत द्वारा चित्र केँ लोड करब अथवा सहेजबा मे उपयोग मे लेल जएताह."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save image files."
+msgstr "ई फोल्डर मूलभूत द्वारा मूवी केँ लोड करब अथवा सहेजबा मे उपयोग मे लेल जएताह."
 
 #: ui/main.qml:122
 #, kde-format
-msgid "Music path:"
-msgstr "संगीत पथ:"
+msgctxt "@label:textbox"
+msgid "Music folder:"
+msgstr ""
 
 #: ui/main.qml:128
-#, kde-format
-msgid "This folder will be used by default to load or save music from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save music from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save music files."
 msgstr "ई फोल्डर मूलभूत द्वारा चित्र केँ लोड करब अथवा सहेजबा मे उपयोग मे लेल जएताह."
 
 #: ui/main.qml:136
 #, fuzzy, kde-format
 #| msgid "Music path:"
-msgid "Public path:"
+msgctxt "@label:textbox"
+msgid "Public folder:"
 msgstr "संगीत पथ:"
 
 #: ui/main.qml:142
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
+msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
@@ -106,15 +128,16 @@ msgstr "ई फोल्डर मूलभूत द्वारा चित�
 #: ui/main.qml:150
 #, fuzzy, kde-format
 #| msgid "Pictures path:"
-msgid "Templates path:"
+msgctxt "@label:textbox"
+msgid "Templates folder:"
 msgstr "चित्र क' पथः "
 
 #: ui/main.qml:156
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
-msgid ""
-"This folder will be used by default to load or save templates from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save file templates."
 msgstr "ई फोल्डर मूलभूत द्वारा चित्र केँ लोड करब अथवा सहेजबा मे उपयोग मे लेल जएताह."
 
 #: ui/UrlRequester.qml:74
@@ -123,14 +146,21 @@ msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
 
+#~ msgid "Documents path:"
+#~ msgstr "दस्ताबेज क' पथः "
+
+#~ msgid "Downloads path:"
+#~ msgstr "दस्ताबेज क' पथः "
+
+#~ msgid ""
+#~ "This folder will be used by default to load or save pictures from or to."
+#~ msgstr "ई फोल्डर मूलभूत द्वारा चित्र केँ लोड करब अथवा सहेजबा मे उपयोग मे लेल जएताह."
+
+#~ msgid "Music path:"
+#~ msgstr "संगीत पथ:"
+
 #~ msgid "Desktop"
 #~ msgstr "डेस्कटाप"
-
-#~ msgid "Documents"
-#~ msgstr "दस्ताबेज"
-
-#~ msgid "Downloads"
-#~ msgstr "डाउनलोड"
 
 #~ msgid "Music"
 #~ msgstr "संगीत"

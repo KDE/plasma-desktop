@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:40+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2024-05-13 19:04+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -20,30 +20,31 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: ui/main.qml:52
-#, kde-format
-msgid "Desktop path:"
+#, fuzzy, kde-format
+#| msgid "Desktop path:"
+msgctxt "@label:textbox"
+msgid "Desktop folder:"
 msgstr "Директория за работния плот:"
 
 #: ui/main.qml:58
 #, kde-format
-msgid ""
-"This folder contains all the files which you see on your desktop. You can "
-"change the location of this folder if you want to, and the contents will "
-"move automatically to the new location as well."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder contains all the files you see on your desktop."
 msgstr ""
-"<p>Тази директория съдържа всички файлове, които виждате на работния плот. </"
-"p><p>Може да промените местоположението на директорията по свое желание, при "
-"което съдържанието и автоматично ще се премести в новата директория.</p>"
 
 #: ui/main.qml:66
-#, kde-format
-msgid "Documents path:"
+#, fuzzy, kde-format
+#| msgid "Documents path:"
+msgctxt "@label:textbox"
+msgid "Documents folder:"
 msgstr "Директория за документи:"
 
 #: ui/main.qml:72
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save documents from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save documents."
 msgstr ""
 "<p>Тази директория се използва за съхранение на вашите документи по "
 "подразбиране. Когато отваряте или записвате файл, ще бъде показвана тази "
@@ -53,61 +54,84 @@ msgstr ""
 "премести в новата директория.</p>"
 
 #: ui/main.qml:80
-#, kde-format
-msgid "Downloads path:"
+#, fuzzy, kde-format
+#| msgid "Downloads path:"
+msgctxt "@label:textbox"
+msgid "Downloads folder:"
 msgstr "Директория за изтегляния:"
 
 #: ui/main.qml:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "This folder will be used by default to save your downloaded items."
+msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "Тази директория се използва по подразбиране за съхранение на файловете, "
 "които изтегляте от мрежата."
 
 #: ui/main.qml:94
-#, kde-format
-msgid "Videos path:"
+#, fuzzy, kde-format
+#| msgid "Videos path:"
+msgctxt "@label:textbox"
+msgid "Videos folder:"
 msgstr "Директория за видео:"
 
 #: ui/main.qml:100
-#, kde-format
-msgid "This folder will be used by default to load or save movies from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save video files."
 msgstr ""
 "Тази директория се използва по подразбиране за съхранение и зареждане на "
 "филми."
 
 #: ui/main.qml:108
-#, kde-format
-msgid "Pictures path:"
+#, fuzzy, kde-format
+#| msgid "Pictures path:"
+msgctxt "@label:textbox"
+msgid "Pictures folder:"
 msgstr "Директория за изображения:"
 
 #: ui/main.qml:114
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save pictures from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save image files."
 msgstr ""
 "Тази директория се използва по подразбиране за съхранение и зареждане на "
-"снимки."
+"филми."
 
 #: ui/main.qml:122
 #, kde-format
-msgid "Music path:"
-msgstr "Директория за музика:"
+msgctxt "@label:textbox"
+msgid "Music folder:"
+msgstr ""
 
 #: ui/main.qml:128
-#, kde-format
-msgid "This folder will be used by default to load or save music from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save music from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save music files."
 msgstr ""
 "Тази директория се използва по подразбиране за съхранение и зареждане на "
 "музика."
 
 #: ui/main.qml:136
-#, kde-format
-msgid "Public path:"
+#, fuzzy, kde-format
+#| msgid "Public path:"
+msgctxt "@label:textbox"
+msgid "Public folder:"
 msgstr "Директория за Публични:"
 
 #: ui/main.qml:142
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default for publicly-shared files when "
+#| "network sharing is enabled."
+msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
@@ -116,14 +140,18 @@ msgstr ""
 "е разрешено споделянето в мрежа."
 
 #: ui/main.qml:150
-#, kde-format
-msgid "Templates path:"
+#, fuzzy, kde-format
+#| msgid "Templates path:"
+msgctxt "@label:textbox"
+msgid "Templates folder:"
 msgstr "Директория за шаблони:"
 
 #: ui/main.qml:156
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save templates from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save templates from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save file templates."
 msgstr ""
 "Тази директория се използва по подразбиране за съхранение и зареждане на "
 "шаблони."
@@ -133,3 +161,22 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "Изберете ново местоположение"
+
+#~ msgid ""
+#~ "This folder contains all the files which you see on your desktop. You can "
+#~ "change the location of this folder if you want to, and the contents will "
+#~ "move automatically to the new location as well."
+#~ msgstr ""
+#~ "<p>Тази директория съдържа всички файлове, които виждате на работния "
+#~ "плот. </p><p>Може да промените местоположението на директорията по свое "
+#~ "желание, при което съдържанието и автоматично ще се премести в новата "
+#~ "директория.</p>"
+
+#~ msgid ""
+#~ "This folder will be used by default to load or save pictures from or to."
+#~ msgstr ""
+#~ "Тази директория се използва по подразбиране за съхранение и зареждане на "
+#~ "снимки."
+
+#~ msgid "Music path:"
+#~ msgstr "Директория за музика:"

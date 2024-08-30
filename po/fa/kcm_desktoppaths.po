@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:40+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2011-08-22 13:08+0430\n"
 "Last-Translator: Mohamad Reza Mirdamadi <mohi@linuxshop.ir>\n"
 "Language-Team: Farsi (Persian) <kde-i18n-doc@kde.org>\n"
@@ -20,39 +20,44 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ui/main.qml:52
-#, kde-format
-msgid "Desktop path:"
-msgstr "مسیر رومیزی:‌"
+#, fuzzy, kde-format
+#| msgid "Desktop %1:"
+msgctxt "@label:textbox"
+msgid "Desktop folder:"
+msgstr "رومیزی %1:"
 
 #: ui/main.qml:58
 #, kde-format
-msgid ""
-"This folder contains all the files which you see on your desktop. You can "
-"change the location of this folder if you want to, and the contents will "
-"move automatically to the new location as well."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder contains all the files you see on your desktop."
 msgstr ""
-"این پوشه شامل همه پرونده‌هاست که بر روی رومیزی خود می‌بینید. می‌توانید محل این "
-"پوشه را در صورت تمایل تغییر داده، و محتویات هم به طور خودکار به محل جدید "
-"حرکت می‌کنند."
 
 #: ui/main.qml:66
-#, kde-format
-msgid "Documents path:"
-msgstr "مسیر اسناد:‌"
+#, fuzzy, kde-format
+#| msgid "Documents"
+msgctxt "@label:textbox"
+msgid "Documents folder:"
+msgstr "اسناد"
 
 #: ui/main.qml:72
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save documents from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save documents."
 msgstr "این گزینه به طور پیش‌فرض برای بارگذاری یا ذخیره اسناد استفاده می‌شود."
 
 #: ui/main.qml:80
-#, kde-format
-msgid "Downloads path:"
-msgstr "مسیر بارگیری‌ها:‌"
+#, fuzzy, kde-format
+#| msgid "Downloads"
+msgctxt "@label:textbox"
+msgid "Downloads folder:"
+msgstr "بارگیری‌ها‌"
 
 #: ui/main.qml:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "This folder will be used by default to save your downloaded items."
+msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "این پوشه به طور پیش‌فرض برای ذخیره مواردی که بارگیری کرده‌اید استفاده می‌شود."
@@ -60,46 +65,61 @@ msgstr ""
 #: ui/main.qml:94
 #, fuzzy, kde-format
 #| msgid "Movies path:"
-msgid "Videos path:"
+msgctxt "@label:textbox"
+msgid "Videos folder:"
 msgstr "مسیر فیلمها:"
 
 #: ui/main.qml:100
-#, kde-format
-msgid "This folder will be used by default to load or save movies from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save video files."
 msgstr ""
 "این گزینه به طور پیش‌فرض برای بازخوانی یا ذخیره فیلمهای شما استفاده می‌شود."
 
 #: ui/main.qml:108
-#, kde-format
-msgid "Pictures path:"
+#, fuzzy, kde-format
+#| msgid "Pictures path:"
+msgctxt "@label:textbox"
+msgid "Pictures folder:"
 msgstr "مسیر عکسها:‌"
 
 #: ui/main.qml:114
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save pictures from or to."
-msgstr "این گزینه به طور پیش‌فرض برای بازخوانی یا ذخیره عکسها استفاده می‌شود."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save image files."
+msgstr ""
+"این گزینه به طور پیش‌فرض برای بازخوانی یا ذخیره فیلمهای شما استفاده می‌شود."
 
 #: ui/main.qml:122
 #, kde-format
-msgid "Music path:"
-msgstr "مسیر موسیقی‌ها:‌"
+msgctxt "@label:textbox"
+msgid "Music folder:"
+msgstr ""
 
 #: ui/main.qml:128
-#, kde-format
-msgid "This folder will be used by default to load or save music from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save music from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save music files."
 msgstr "این گزینه به طور پیش‌فرض برای بازخوانی یا ذخیره موسیقی‌ها استفاده می‌شود."
 
 #: ui/main.qml:136
 #, fuzzy, kde-format
 #| msgid "Music path:"
-msgid "Public path:"
+msgctxt "@label:textbox"
+msgid "Public folder:"
 msgstr "مسیر موسیقی‌ها:‌"
 
 #: ui/main.qml:142
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
+msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
@@ -108,15 +128,16 @@ msgstr "این گزینه به طور پیش‌فرض برای بازخوانی 
 #: ui/main.qml:150
 #, fuzzy, kde-format
 #| msgid "Pictures path:"
-msgid "Templates path:"
+msgctxt "@label:textbox"
+msgid "Templates folder:"
 msgstr "مسیر عکسها:‌"
 
 #: ui/main.qml:156
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
-msgid ""
-"This folder will be used by default to load or save templates from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save file templates."
 msgstr "این گزینه به طور پیش‌فرض برای بازخوانی یا ذخیره عکسها استفاده می‌شود."
 
 #: ui/UrlRequester.qml:74
@@ -125,14 +146,33 @@ msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
 
+#~ msgid "Desktop path:"
+#~ msgstr "مسیر رومیزی:‌"
+
+#~ msgid ""
+#~ "This folder contains all the files which you see on your desktop. You can "
+#~ "change the location of this folder if you want to, and the contents will "
+#~ "move automatically to the new location as well."
+#~ msgstr ""
+#~ "این پوشه شامل همه پرونده‌هاست که بر روی رومیزی خود می‌بینید. می‌توانید محل "
+#~ "این پوشه را در صورت تمایل تغییر داده، و محتویات هم به طور خودکار به محل "
+#~ "جدید حرکت می‌کنند."
+
+#~ msgid "Documents path:"
+#~ msgstr "مسیر اسناد:‌"
+
+#~ msgid "Downloads path:"
+#~ msgstr "مسیر بارگیری‌ها:‌"
+
+#~ msgid ""
+#~ "This folder will be used by default to load or save pictures from or to."
+#~ msgstr "این گزینه به طور پیش‌فرض برای بازخوانی یا ذخیره عکسها استفاده می‌شود."
+
+#~ msgid "Music path:"
+#~ msgstr "مسیر موسیقی‌ها:‌"
+
 #~ msgid "Desktop"
 #~ msgstr "رومیزی"
-
-#~ msgid "Documents"
-#~ msgstr "اسناد"
-
-#~ msgid "Downloads"
-#~ msgstr "بارگیری‌ها‌"
 
 #~ msgid "Music"
 #~ msgstr "موسیقی"
@@ -769,9 +809,6 @@ msgstr ""
 
 #~ msgid "Desktop &Names"
 #~ msgstr "&نامهای رومیزی‌"
-
-#~ msgid "Desktop %1:"
-#~ msgstr "رومیزی %1:"
 
 #~ msgid "Here you can enter the name for desktop %1"
 #~ msgstr "در اینجا می‌توانید نام رومیزی %1 را وارد کنید"

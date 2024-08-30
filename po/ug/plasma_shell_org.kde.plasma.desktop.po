@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-27 00:41+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -511,8 +511,15 @@ msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:647
 #, kde-format
-msgctxt "@action:button Done configuring the panel"
-msgid "Done"
+msgctxt "@action:button Close the panel configuration window"
+msgid "Close"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:647
+#, kde-format
+msgctxt ""
+"@action:button Close the panel configuration window and exit edit mode"
+msgid "Exit Edit Mode"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:650
@@ -602,6 +609,12 @@ msgstr ""
 #: contents/explorer/AppletDelegate.qml:41
 #, kde-format
 msgid "Unsupported Widget"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:172
+#, kde-format
+msgctxt "Text displayed on top of newly installed widgets"
+msgid "New!"
 msgstr ""
 
 #: contents/explorer/AppletDelegate.qml:188

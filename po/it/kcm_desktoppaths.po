@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:40+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2024-05-07 13:13+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -22,90 +22,114 @@ msgstr ""
 "X-Generator: Lokalize 24.02.2\n"
 
 #: ui/main.qml:52
-#, kde-format
-msgid "Desktop path:"
-msgstr "Percorso del desktop:"
+#, fuzzy, kde-format
+#| msgid "Desktop Menu"
+msgctxt "@label:textbox"
+msgid "Desktop folder:"
+msgstr "Menu del desktop"
 
 #: ui/main.qml:58
 #, kde-format
-msgid ""
-"This folder contains all the files which you see on your desktop. You can "
-"change the location of this folder if you want to, and the contents will "
-"move automatically to the new location as well."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder contains all the files you see on your desktop."
 msgstr ""
-"Questa cartella contiene tutti i file che vedi sul desktop. Se vuoi, puoi "
-"cambiare la posizione di questa cartella e il contenuto verrà spostato "
-"automaticamente nella nuova posizione."
 
 #: ui/main.qml:66
-#, kde-format
-msgid "Documents path:"
-msgstr "Percorso dei documenti:"
+#, fuzzy, kde-format
+#| msgid "Documents"
+msgctxt "@label:textbox"
+msgid "Documents folder:"
+msgstr "Documenti"
 
 #: ui/main.qml:72
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save documents from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save documents."
 msgstr ""
 "Questa cartella sarà usata come cartella predefinita per caricare o salvare "
 "i documenti."
 
 #: ui/main.qml:80
-#, kde-format
-msgid "Downloads path:"
-msgstr "Percorso degli scaricamenti:"
+#, fuzzy, kde-format
+#| msgid "Downloads"
+msgctxt "@label:textbox"
+msgid "Downloads folder:"
+msgstr "Scaricamenti"
 
 #: ui/main.qml:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "This folder will be used by default to save your downloaded items."
+msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "Questa cartella sarà usata come cartella predefinita per salvare ciò che "
 "viene scaricato."
 
 #: ui/main.qml:94
-#, kde-format
-msgid "Videos path:"
+#, fuzzy, kde-format
+#| msgid "Videos path:"
+msgctxt "@label:textbox"
+msgid "Videos folder:"
 msgstr "Percorso dei filmati:"
 
 #: ui/main.qml:100
-#, kde-format
-msgid "This folder will be used by default to load or save movies from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save video files."
 msgstr ""
 "Questa cartella sarà usata come cartella predefinita per caricare o salvare "
 "i filmati."
 
 #: ui/main.qml:108
-#, kde-format
-msgid "Pictures path:"
+#, fuzzy, kde-format
+#| msgid "Pictures path:"
+msgctxt "@label:textbox"
+msgid "Pictures folder:"
 msgstr "Percorso delle immagini:"
 
 #: ui/main.qml:114
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save pictures from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save image files."
 msgstr ""
 "Questa cartella sarà usata come cartella predefinita per caricare o salvare "
-"le immagini."
+"i filmati."
 
 #: ui/main.qml:122
 #, kde-format
-msgid "Music path:"
-msgstr "Percorso della musica:"
+msgctxt "@label:textbox"
+msgid "Music folder:"
+msgstr ""
 
 #: ui/main.qml:128
-#, kde-format
-msgid "This folder will be used by default to load or save music from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save music from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save music files."
 msgstr ""
 "Questa cartella sarà usata come cartella predefinita per caricare o salvare "
 "la musica."
 
 #: ui/main.qml:136
-#, kde-format
-msgid "Public path:"
+#, fuzzy, kde-format
+#| msgid "Public path:"
+msgctxt "@label:textbox"
+msgid "Public folder:"
 msgstr "Percorso pubblico:"
 
 #: ui/main.qml:142
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default for publicly-shared files when "
+#| "network sharing is enabled."
+msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
@@ -114,14 +138,18 @@ msgstr ""
 "pubblicamente quando la condivisione di rete è abilitata."
 
 #: ui/main.qml:150
-#, kde-format
-msgid "Templates path:"
-msgstr "Percorso dei modelli:"
+#, fuzzy, kde-format
+#| msgid "Templates"
+msgctxt "@label:textbox"
+msgid "Templates folder:"
+msgstr "Modelli"
 
 #: ui/main.qml:156
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save templates from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save templates from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save file templates."
 msgstr ""
 "Questa cartella sarà usata in modo predefinito per caricare o salvare i "
 "modelli."
@@ -132,14 +160,38 @@ msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "Scegli una nuova posizione"
 
+#~ msgid "Desktop path:"
+#~ msgstr "Percorso del desktop:"
+
+#~ msgid ""
+#~ "This folder contains all the files which you see on your desktop. You can "
+#~ "change the location of this folder if you want to, and the contents will "
+#~ "move automatically to the new location as well."
+#~ msgstr ""
+#~ "Questa cartella contiene tutti i file che vedi sul desktop. Se vuoi, puoi "
+#~ "cambiare la posizione di questa cartella e il contenuto verrà spostato "
+#~ "automaticamente nella nuova posizione."
+
+#~ msgid "Documents path:"
+#~ msgstr "Percorso dei documenti:"
+
+#~ msgid "Downloads path:"
+#~ msgstr "Percorso degli scaricamenti:"
+
+#~ msgid ""
+#~ "This folder will be used by default to load or save pictures from or to."
+#~ msgstr ""
+#~ "Questa cartella sarà usata come cartella predefinita per caricare o "
+#~ "salvare le immagini."
+
+#~ msgid "Music path:"
+#~ msgstr "Percorso della musica:"
+
+#~ msgid "Templates path:"
+#~ msgstr "Percorso dei modelli:"
+
 #~ msgid "Desktop"
 #~ msgstr "Desktop"
-
-#~ msgid "Documents"
-#~ msgstr "Documenti"
-
-#~ msgid "Downloads"
-#~ msgstr "Scaricamenti"
 
 #~ msgid "Music"
 #~ msgstr "Musica"
@@ -152,9 +204,6 @@ msgstr "Scegli una nuova posizione"
 
 #~ msgid "Public"
 #~ msgstr "Pubblico"
-
-#~ msgid "Templates"
-#~ msgstr "Modelli"
 
 #~ msgid ""
 #~ "<h1>Paths</h1>\n"
@@ -496,9 +545,6 @@ msgstr "Scegli una nuova posizione"
 
 #~ msgid "Window List Menu"
 #~ msgstr "Menu della lista delle finestre"
-
-#~ msgid "Desktop Menu"
-#~ msgstr "Menu del desktop"
 
 #~ msgid "Application Menu"
 #~ msgstr "Menu delle applicazioni"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq 0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:40+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2009-12-31 02:12+0100\n"
 "Last-Translator: Andrej Dundovic <adundovi@gmail.com>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -23,39 +23,44 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 
 #: ui/main.qml:52
-#, kde-format
-msgid "Desktop path:"
-msgstr "Putanja radne površine:"
+#, fuzzy, kde-format
+#| msgid "Desktop %1:"
+msgctxt "@label:textbox"
+msgid "Desktop folder:"
+msgstr "Radna površina%1:"
 
 #: ui/main.qml:58
 #, kde-format
-msgid ""
-"This folder contains all the files which you see on your desktop. You can "
-"change the location of this folder if you want to, and the contents will "
-"move automatically to the new location as well."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder contains all the files you see on your desktop."
 msgstr ""
-"Ovaj direktorij sadrži sve datoteke koje vidite na radnoj površini. Možete "
-"promijeniti lokaciju ovog direktorija ako želite, i njegov sadržaj će se "
-"automatski premjestiti na  novu lokaciju."
 
 #: ui/main.qml:66
-#, kde-format
-msgid "Documents path:"
-msgstr "Putanja dokumenata:"
+#, fuzzy, kde-format
+#| msgid "Documents"
+msgctxt "@label:textbox"
+msgid "Documents folder:"
+msgstr "Dokumenti"
 
 #: ui/main.qml:72
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save documents from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save documents."
 msgstr "Ovaj direktorij će biti korišten kao uobičajeni za čuvanje dokumenata."
 
 #: ui/main.qml:80
-#, kde-format
-msgid "Downloads path:"
-msgstr "Putanja skinutih datoteka:"
+#, fuzzy, kde-format
+#| msgid "Downloads"
+msgctxt "@label:textbox"
+msgid "Downloads folder:"
+msgstr "Skinute datoteke"
 
 #: ui/main.qml:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "This folder will be used by default to save your downloaded items."
+msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "Ovaj direktorij će biti korišten kao uobičajeni za čuvanje skinutih datoteka."
@@ -63,45 +68,59 @@ msgstr ""
 #: ui/main.qml:94
 #, fuzzy, kde-format
 #| msgid "Movies path:"
-msgid "Videos path:"
+msgctxt "@label:textbox"
+msgid "Videos folder:"
 msgstr "Putanja filmova:"
 
 #: ui/main.qml:100
-#, kde-format
-msgid "This folder will be used by default to load or save movies from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save video files."
 msgstr "Ovaj direktorij će biti korišten kao uobičajeni za čuvanje filmova."
 
 #: ui/main.qml:108
-#, kde-format
-msgid "Pictures path:"
+#, fuzzy, kde-format
+#| msgid "Pictures path:"
+msgctxt "@label:textbox"
+msgid "Pictures folder:"
 msgstr "Putanja slika:"
 
 #: ui/main.qml:114
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save pictures from or to."
-msgstr "Ovaj direktorij će biti korišten kao uobičajeni za čuvanje slika."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save image files."
+msgstr "Ovaj direktorij će biti korišten kao uobičajeni za čuvanje filmova."
 
 #: ui/main.qml:122
 #, kde-format
-msgid "Music path:"
-msgstr "Putanja glazbe:"
+msgctxt "@label:textbox"
+msgid "Music folder:"
+msgstr ""
 
 #: ui/main.qml:128
-#, kde-format
-msgid "This folder will be used by default to load or save music from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save music from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save music files."
 msgstr "Ovaj direktorij će biti korišten kao uobičajeni za čuvanje glazbe."
 
 #: ui/main.qml:136
 #, fuzzy, kde-format
 #| msgid "Music path:"
-msgid "Public path:"
+msgctxt "@label:textbox"
+msgid "Public folder:"
 msgstr "Putanja glazbe:"
 
 #: ui/main.qml:142
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
+msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
@@ -110,15 +129,16 @@ msgstr "Ovaj direktorij će biti korišten kao uobičajeni za čuvanje slika."
 #: ui/main.qml:150
 #, fuzzy, kde-format
 #| msgid "Pictures path:"
-msgid "Templates path:"
+msgctxt "@label:textbox"
+msgid "Templates folder:"
 msgstr "Putanja slika:"
 
 #: ui/main.qml:156
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save pictures from or to."
-msgid ""
-"This folder will be used by default to load or save templates from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save file templates."
 msgstr "Ovaj direktorij će biti korišten kao uobičajeni za čuvanje slika."
 
 #: ui/UrlRequester.qml:74
@@ -127,14 +147,33 @@ msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
 
+#~ msgid "Desktop path:"
+#~ msgstr "Putanja radne površine:"
+
+#~ msgid ""
+#~ "This folder contains all the files which you see on your desktop. You can "
+#~ "change the location of this folder if you want to, and the contents will "
+#~ "move automatically to the new location as well."
+#~ msgstr ""
+#~ "Ovaj direktorij sadrži sve datoteke koje vidite na radnoj površini. "
+#~ "Možete promijeniti lokaciju ovog direktorija ako želite, i njegov sadržaj "
+#~ "će se automatski premjestiti na  novu lokaciju."
+
+#~ msgid "Documents path:"
+#~ msgstr "Putanja dokumenata:"
+
+#~ msgid "Downloads path:"
+#~ msgstr "Putanja skinutih datoteka:"
+
+#~ msgid ""
+#~ "This folder will be used by default to load or save pictures from or to."
+#~ msgstr "Ovaj direktorij će biti korišten kao uobičajeni za čuvanje slika."
+
+#~ msgid "Music path:"
+#~ msgstr "Putanja glazbe:"
+
 #~ msgid "Desktop"
 #~ msgstr "Radna površina"
-
-#~ msgid "Documents"
-#~ msgstr "Dokumenti"
-
-#~ msgid "Downloads"
-#~ msgstr "Skinute datoteke"
 
 #~ msgid "Music"
 #~ msgstr "Glazba"
@@ -562,9 +601,6 @@ msgstr ""
 
 #~ msgid "Desktop &Names"
 #~ msgstr "Imena radnih površina"
-
-#~ msgid "Desktop %1:"
-#~ msgstr "Radna površina%1:"
 
 #~ msgid "Here you can enter the name for desktop %1"
 #~ msgstr "Ovdje možete unijeti ime radne površine %1"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:40+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2023-02-07 09:40+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -19,96 +19,121 @@ msgstr ""
 "X-Generator: Lokalize 24.02.2\n"
 
 #: ui/main.qml:52
-#, kde-format
-msgid "Desktop path:"
+#, fuzzy, kde-format
+#| msgid "Desktop path:"
+msgctxt "@label:textbox"
+msgid "Desktop folder:"
 msgstr "Cesta k pracovní ploše:"
 
 #: ui/main.qml:58
 #, kde-format
-msgid ""
-"This folder contains all the files which you see on your desktop. You can "
-"change the location of this folder if you want to, and the contents will "
-"move automatically to the new location as well."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder contains all the files you see on your desktop."
 msgstr ""
-"Tato složka obsahuje všechny soubory, které vidíte na pracovní ploše. Budete-"
-"li chtít, můžete změnit její umístění. Její obsah pak bude automaticky "
-"přesunut do nového umístění."
 
 #: ui/main.qml:66
-#, kde-format
-msgid "Documents path:"
+#, fuzzy, kde-format
+#| msgid "Documents path:"
+msgctxt "@label:textbox"
+msgid "Documents folder:"
 msgstr "Cesta k adresáři s dokumenty:"
 
 #: ui/main.qml:72
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save documents from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save documents."
 msgstr ""
 "Tato složka bude použita jako výchozí pro otevírání či ukládání dokumentů."
 
 #: ui/main.qml:80
-#, kde-format
-msgid "Downloads path:"
+#, fuzzy, kde-format
+#| msgid "Downloads path:"
+msgctxt "@label:textbox"
+msgid "Downloads folder:"
 msgstr "Cesta k adresáři se staženými soubory:"
 
 #: ui/main.qml:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "This folder will be used by default to save your downloaded items."
+msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr "Tato složka bude použita jako výchozí pro ukládání stažených věcí."
 
 #: ui/main.qml:94
-#, kde-format
-msgid "Videos path:"
+#, fuzzy, kde-format
+#| msgid "Videos path:"
+msgctxt "@label:textbox"
+msgid "Videos folder:"
 msgstr "Cesta k adresáři s videem:"
 
 #: ui/main.qml:100
-#, kde-format
-msgid "This folder will be used by default to load or save movies from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save video files."
 msgstr "Tato složka bude použita jako výchozí pro otevírání či ukládání filmů."
 
 #: ui/main.qml:108
-#, kde-format
-msgid "Pictures path:"
+#, fuzzy, kde-format
+#| msgid "Pictures path:"
+msgctxt "@label:textbox"
+msgid "Pictures folder:"
 msgstr "Cesta k adresáři s obrázky:"
 
 #: ui/main.qml:114
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save pictures from or to."
-msgstr ""
-"Tato složka bude použita jako výchozí pro otevírání či ukládání obrázků."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save image files."
+msgstr "Tato složka bude použita jako výchozí pro otevírání či ukládání filmů."
 
 #: ui/main.qml:122
 #, kde-format
-msgid "Music path:"
-msgstr "Cesta k adresáři s hudbou:"
+msgctxt "@label:textbox"
+msgid "Music folder:"
+msgstr ""
 
 #: ui/main.qml:128
-#, kde-format
-msgid "This folder will be used by default to load or save music from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save music from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save music files."
 msgstr "Tato složka bude použita jako výchozí pro otevírání či ukládání hudby."
 
 #: ui/main.qml:136
-#, kde-format
-msgid "Public path:"
+#, fuzzy, kde-format
+#| msgid "Public path:"
+msgctxt "@label:textbox"
+msgid "Public folder:"
 msgstr "Veřejná cesta:"
 
 #: ui/main.qml:142
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "This folder will be used by default to save your downloaded items."
+msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
-msgstr ""
+msgstr "Tato složka bude použita jako výchozí pro ukládání stažených věcí."
 
 #: ui/main.qml:150
-#, kde-format
-msgid "Templates path:"
+#, fuzzy, kde-format
+#| msgid "Templates path:"
+msgctxt "@label:textbox"
+msgid "Templates folder:"
 msgstr "Cesta k šabloně:"
 
 #: ui/main.qml:156
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save templates from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save templates from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save file templates."
 msgstr ""
 "Tato složka bude použita jako výchozí pro otevírání či ukládání šablon."
 
@@ -117,3 +142,20 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "Vyberte nové místo"
+
+#~ msgid ""
+#~ "This folder contains all the files which you see on your desktop. You can "
+#~ "change the location of this folder if you want to, and the contents will "
+#~ "move automatically to the new location as well."
+#~ msgstr ""
+#~ "Tato složka obsahuje všechny soubory, které vidíte na pracovní ploše. "
+#~ "Budete-li chtít, můžete změnit její umístění. Její obsah pak bude "
+#~ "automaticky přesunut do nového umístění."
+
+#~ msgid ""
+#~ "This folder will be used by default to load or save pictures from or to."
+#~ msgstr ""
+#~ "Tato složka bude použita jako výchozí pro otevírání či ukládání obrázků."
+
+#~ msgid "Music path:"
+#~ msgstr "Cesta k adresáři s hudbou:"

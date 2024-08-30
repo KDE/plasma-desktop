@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:40+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2008-11-19 23:51+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -20,95 +20,102 @@ msgstr ""
 #: ui/main.qml:52
 #, fuzzy, kde-format
 #| msgid "Des&ktop path:"
-msgid "Desktop path:"
+msgctxt "@label:textbox"
+msgid "Desktop folder:"
 msgstr "Puć za &dźěłowy powjerch:"
 
 #: ui/main.qml:58
 #, kde-format
-msgid ""
-"This folder contains all the files which you see on your desktop. You can "
-"change the location of this folder if you want to, and the contents will "
-"move automatically to the new location as well."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder contains all the files you see on your desktop."
 msgstr ""
-"W tutym zapisku su wšitke dataje, kotrež na Wašim dźěłowym powjerchu. Móžeće "
-"městno tutoho zapiska změnić, jeli chceće, a wobsah so awtomatisce na nowe "
-"městno přesunje."
 
 #: ui/main.qml:66
 #, fuzzy, kde-format
-#| msgid "D&ocuments path:"
-msgid "Documents path:"
-msgstr "Puć za &dokumenty:"
+#| msgid "Documents"
+msgctxt "@label:textbox"
+msgid "Documents folder:"
+msgstr "Dokumenty"
 
 #: ui/main.qml:72
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save documents from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save documents."
 msgstr "To je standardny zapisk za čitanje a składowanje dokumentow."
 
 #: ui/main.qml:80
 #, fuzzy, kde-format
-#| msgid "Downloads: "
-msgid "Downloads path:"
-msgstr "Sćehnjene:"
+#| msgid "Download"
+msgctxt "@label:textbox"
+msgid "Downloads folder:"
+msgstr "Sćahnyć"
 
 #: ui/main.qml:86
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr "To je standardny zapisk za čitanje a składowanje dokumentow."
 
 #: ui/main.qml:94
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
-msgid "Videos path:"
+msgctxt "@label:textbox"
+msgid "Videos folder:"
 msgstr "Puć za &dokumenty:"
 
 #: ui/main.qml:100
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
-msgid "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save video files."
 msgstr "To je standardny zapisk za čitanje a składowanje dokumentow."
 
 #: ui/main.qml:108
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
-msgid "Pictures path:"
+msgctxt "@label:textbox"
+msgid "Pictures folder:"
 msgstr "Puć za &dokumenty:"
 
 #: ui/main.qml:114
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
-msgid ""
-"This folder will be used by default to load or save pictures from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save image files."
 msgstr "To je standardny zapisk za čitanje a składowanje dokumentow."
 
 #: ui/main.qml:122
-#, fuzzy, kde-format
-#| msgid "D&ocuments path:"
-msgid "Music path:"
-msgstr "Puć za &dokumenty:"
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Music folder:"
+msgstr ""
 
 #: ui/main.qml:128
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
-msgid "This folder will be used by default to load or save music from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save music files."
 msgstr "To je standardny zapisk za čitanje a składowanje dokumentow."
 
 #: ui/main.qml:136
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
-msgid "Public path:"
+msgctxt "@label:textbox"
+msgid "Public folder:"
 msgstr "Puć za &dokumenty:"
 
 #: ui/main.qml:142
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
@@ -117,15 +124,16 @@ msgstr "To je standardny zapisk za čitanje a składowanje dokumentow."
 #: ui/main.qml:150
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
-msgid "Templates path:"
+msgctxt "@label:textbox"
+msgid "Templates folder:"
 msgstr "Puć za &dokumenty:"
 
 #: ui/main.qml:156
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
-msgid ""
-"This folder will be used by default to load or save templates from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save file templates."
 msgstr "To je standardny zapisk za čitanje a składowanje dokumentow."
 
 #: ui/UrlRequester.qml:74
@@ -134,16 +142,39 @@ msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
 
-#~ msgid "Desktop"
-#~ msgstr "Dźěłowy powjerch"
-
-#~ msgid "Documents"
-#~ msgstr "Dokumenty"
+#~ msgid ""
+#~ "This folder contains all the files which you see on your desktop. You can "
+#~ "change the location of this folder if you want to, and the contents will "
+#~ "move automatically to the new location as well."
+#~ msgstr ""
+#~ "W tutym zapisku su wšitke dataje, kotrež na Wašim dźěłowym powjerchu. "
+#~ "Móžeće městno tutoho zapiska změnić, jeli chceće, a wobsah so awtomatisce "
+#~ "na nowe městno přesunje."
 
 #, fuzzy
-#~| msgid "Download"
-#~ msgid "Downloads"
-#~ msgstr "Sćahnyć"
+#~| msgid "D&ocuments path:"
+#~ msgid "Documents path:"
+#~ msgstr "Puć za &dokumenty:"
+
+#, fuzzy
+#~| msgid "Downloads: "
+#~ msgid "Downloads path:"
+#~ msgstr "Sćehnjene:"
+
+#, fuzzy
+#~| msgid ""
+#~| "This folder will be used by default to load or save documents from or to."
+#~ msgid ""
+#~ "This folder will be used by default to load or save pictures from or to."
+#~ msgstr "To je standardny zapisk za čitanje a składowanje dokumentow."
+
+#, fuzzy
+#~| msgid "D&ocuments path:"
+#~ msgid "Music path:"
+#~ msgstr "Puć za &dokumenty:"
+
+#~ msgid "Desktop"
+#~ msgstr "Dźěłowy powjerch"
 
 #, fuzzy
 #~| msgctxt "Name"

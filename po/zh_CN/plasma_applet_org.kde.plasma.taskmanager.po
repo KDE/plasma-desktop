@@ -74,7 +74,7 @@ msgstr "常规："
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show small window previews when hovering over tasks"
-msgstr ""
+msgstr "光标悬停在任务图标上时显示窗口预览"
 
 #: package/contents/ui/ConfigAppearance.qml:52
 #, kde-format
@@ -92,13 +92,13 @@ msgstr "标记正在播放音频的应用程序"
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Fill free space on panel"
-msgstr ""
+msgstr "填满面板的可用空间"
 
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Maximum task width:"
-msgstr ""
+msgstr "最大任务宽度："
 
 #: package/contents/ui/ConfigAppearance.qml:80
 #, kde-format
@@ -124,7 +124,7 @@ msgctxt ""
 "@label for radio button group, completes sentence: … when panel is low on "
 "space etc."
 msgid "Use multi-column view:"
-msgstr ""
+msgstr "使用多列视图："
 
 #: package/contents/ui/ConfigAppearance.qml:94
 #, kde-format
@@ -132,25 +132,25 @@ msgctxt ""
 "@label for radio button group, completes sentence: … when panel is low on "
 "space etc."
 msgid "Use multi-row view:"
-msgstr ""
+msgstr "使用多行视图："
 
 #: package/contents/ui/ConfigAppearance.qml:100
 #, kde-format
 msgctxt "@option:radio Never use multi-column view for Task Manager"
 msgid "Never"
-msgstr ""
+msgstr "不使用"
 
 #: package/contents/ui/ConfigAppearance.qml:110
 #, kde-format
 msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "When panel is low on space and thick enough"
-msgstr ""
+msgstr "当面板高度足够而空间不足时"
 
 #: package/contents/ui/ConfigAppearance.qml:120
 #, kde-format
 msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "Always when panel is thick enough"
-msgstr ""
+msgstr "当面板高度足够时总是使用"
 
 #: package/contents/ui/ConfigAppearance.qml:127
 #, kde-format
@@ -192,7 +192,7 @@ msgstr "大"
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch mode"
-msgstr ""
+msgstr "在触摸模式下自动设置为大间距"
 
 #: package/contents/ui/ConfigBehavior.qml:49
 #, kde-format
@@ -316,7 +316,7 @@ msgstr "保持启动器分隔放置"
 #, kde-format
 msgctxt "@option:check for icons-and-text task manager"
 msgid "Hide launchers after application startup"
-msgstr ""
+msgstr "应用程序启动后隐藏启动器"
 
 #: package/contents/ui/ConfigBehavior.qml:142
 #, kde-format
@@ -479,7 +479,7 @@ msgstr "左侧"
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the top"
-msgstr ""
+msgstr "在顶部显示"
 
 #: package/contents/ui/ContextMenu.qml:102
 #, kde-format

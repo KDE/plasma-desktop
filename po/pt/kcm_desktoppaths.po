@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:40+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2023-02-15 15:17+0000\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -15,82 +15,103 @@ msgstr ""
 "X-POFile-SpellExtra: netscape\n"
 
 #: ui/main.qml:52
-#, kde-format
-msgid "Desktop path:"
+#, fuzzy, kde-format
+#| msgid "Desktop path:"
+msgctxt "@label:textbox"
+msgid "Desktop folder:"
 msgstr "Localização do ecrã:"
 
 #: ui/main.qml:58
 #, kde-format
-msgid ""
-"This folder contains all the files which you see on your desktop. You can "
-"change the location of this folder if you want to, and the contents will "
-"move automatically to the new location as well."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder contains all the files you see on your desktop."
 msgstr ""
-"Esta pasta contém todos os ficheiros que vê no seu ecrã. Pode alterar a "
-"localização da pasta se o desejar, para que o seu conteúdo seja "
-"automaticamente movido para a nova localização."
 
 #: ui/main.qml:66
-#, kde-format
-msgid "Documents path:"
-msgstr "Localização dos documentos:"
+#, fuzzy, kde-format
+#| msgid "Documents"
+msgctxt "@label:textbox"
+msgid "Documents folder:"
+msgstr "Documentos"
 
 #: ui/main.qml:72
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save documents from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save documents."
 msgstr "Esta pasta será usada por omissão para gravar ou ler os documentos."
 
 #: ui/main.qml:80
-#, kde-format
-msgid "Downloads path:"
-msgstr "Local das transferências:"
+#, fuzzy, kde-format
+#| msgid "Downloads"
+msgctxt "@label:textbox"
+msgid "Downloads folder:"
+msgstr "Transferências"
 
 #: ui/main.qml:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "This folder will be used by default to save your downloaded items."
+msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "Esta pasta será usada por omissão para gravar os itens transferidos por si."
 
 #: ui/main.qml:94
-#, kde-format
-msgid "Videos path:"
+#, fuzzy, kde-format
+#| msgid "Videos path:"
+msgctxt "@label:textbox"
+msgid "Videos folder:"
 msgstr "Localização dos vídeos:"
 
 #: ui/main.qml:100
-#, kde-format
-msgid "This folder will be used by default to load or save movies from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save video files."
 msgstr "Esta pasta será usada por omissão para gravar ou ler os filmes."
 
 #: ui/main.qml:108
-#, kde-format
-msgid "Pictures path:"
+#, fuzzy, kde-format
+#| msgid "Pictures path:"
+msgctxt "@label:textbox"
+msgid "Pictures folder:"
 msgstr "Localização das imagens:"
 
 #: ui/main.qml:114
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save pictures from or to."
-msgstr "Esta pasta será usada por omissão para gravar ou ler as imagens."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save image files."
+msgstr "Esta pasta será usada por omissão para gravar ou ler os filmes."
 
 #: ui/main.qml:122
 #, kde-format
-msgid "Music path:"
-msgstr "Local das músicas:"
+msgctxt "@label:textbox"
+msgid "Music folder:"
+msgstr ""
 
 #: ui/main.qml:128
-#, kde-format
-msgid "This folder will be used by default to load or save music from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save music from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save music files."
 msgstr "Esta pasta será usada por omissão para gravar ou ler as músicas."
 
 #: ui/main.qml:136
-#, kde-format
-msgid "Public path:"
+#, fuzzy, kde-format
+#| msgid "Public path:"
+msgctxt "@label:textbox"
+msgid "Public folder:"
 msgstr "Localização pública:"
 
 #: ui/main.qml:142
 #, fuzzy, kde-format
 #| msgid "This folder will be used by default to save your downloaded items."
+msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
@@ -98,14 +119,18 @@ msgstr ""
 "Esta pasta será usada por omissão para gravar os itens transferidos por si."
 
 #: ui/main.qml:150
-#, kde-format
-msgid "Templates path:"
-msgstr "Localização dos modelos:"
+#, fuzzy, kde-format
+#| msgid "Templates"
+msgctxt "@label:textbox"
+msgid "Templates folder:"
+msgstr "Modelos"
 
 #: ui/main.qml:156
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save templates from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save templates from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save file templates."
 msgstr "Esta pasta será usada por omissão para gravar ou ler os modelos."
 
 #: ui/UrlRequester.qml:74
@@ -114,14 +139,33 @@ msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "Escolher a nova localização"
 
+#~ msgid ""
+#~ "This folder contains all the files which you see on your desktop. You can "
+#~ "change the location of this folder if you want to, and the contents will "
+#~ "move automatically to the new location as well."
+#~ msgstr ""
+#~ "Esta pasta contém todos os ficheiros que vê no seu ecrã. Pode alterar a "
+#~ "localização da pasta se o desejar, para que o seu conteúdo seja "
+#~ "automaticamente movido para a nova localização."
+
+#~ msgid "Documents path:"
+#~ msgstr "Localização dos documentos:"
+
+#~ msgid "Downloads path:"
+#~ msgstr "Local das transferências:"
+
+#~ msgid ""
+#~ "This folder will be used by default to load or save pictures from or to."
+#~ msgstr "Esta pasta será usada por omissão para gravar ou ler as imagens."
+
+#~ msgid "Music path:"
+#~ msgstr "Local das músicas:"
+
+#~ msgid "Templates path:"
+#~ msgstr "Localização dos modelos:"
+
 #~ msgid "Desktop"
 #~ msgstr "Ecrã"
-
-#~ msgid "Documents"
-#~ msgstr "Documentos"
-
-#~ msgid "Downloads"
-#~ msgstr "Transferências"
 
 #~ msgid "Music"
 #~ msgstr "Música"
@@ -134,9 +178,6 @@ msgstr "Escolher a nova localização"
 
 #~ msgid "Public"
 #~ msgstr "Público"
-
-#~ msgid "Templates"
-#~ msgstr "Modelos"
 
 #~ msgid ""
 #~ "<h1>Paths</h1>\n"

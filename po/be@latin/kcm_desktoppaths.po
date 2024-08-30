@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-07 00:40+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2008-11-04 17:48+0200\n"
 "Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian Latin <i18n@mova.org>\n"
@@ -23,95 +23,102 @@ msgstr ""
 #: ui/main.qml:52
 #, fuzzy, kde-format
 #| msgid "Des&ktop path:"
-msgid "Desktop path:"
+msgctxt "@label:textbox"
+msgid "Desktop folder:"
 msgstr "Ściežka &stała:"
 
 #: ui/main.qml:58
 #, kde-format
-msgid ""
-"This folder contains all the files which you see on your desktop. You can "
-"change the location of this folder if you want to, and the contents will "
-"move automatically to the new location as well."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder contains all the files you see on your desktop."
 msgstr ""
-"Hety kataloh źmiaščaje ŭsie fajły, jakija vidać na tvaim rabočym stale. Ty "
-"možaš źmianić miesca hetaha kataloha, i tady jahonaje źmieściva budzie "
-"aŭtamatyčna tudy pieraniesienaje."
 
 #: ui/main.qml:66
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
-msgid "Documents path:"
+msgctxt "@label:textbox"
+msgid "Documents folder:"
 msgstr "Ściežka &dakumentaŭ:"
 
 #: ui/main.qml:72
-#, kde-format
-msgid ""
-"This folder will be used by default to load or save documents from or to."
+#, fuzzy, kde-format
+#| msgid ""
+#| "This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save documents."
 msgstr "Heta zmoŭčany kataloh dla adčytvańnia j zapisu dakumentaŭ."
 
 #: ui/main.qml:80
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
-msgid "Downloads path:"
+msgctxt "@label:textbox"
+msgid "Downloads folder:"
 msgstr "Ściežka &dakumentaŭ:"
 
 #: ui/main.qml:86
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr "Heta zmoŭčany kataloh dla adčytvańnia j zapisu dakumentaŭ."
 
 #: ui/main.qml:94
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
-msgid "Videos path:"
+msgctxt "@label:textbox"
+msgid "Videos folder:"
 msgstr "Ściežka &dakumentaŭ:"
 
 #: ui/main.qml:100
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
-msgid "This folder will be used by default to load or save movies from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save video files."
 msgstr "Heta zmoŭčany kataloh dla adčytvańnia j zapisu dakumentaŭ."
 
 #: ui/main.qml:108
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
-msgid "Pictures path:"
+msgctxt "@label:textbox"
+msgid "Pictures folder:"
 msgstr "Ściežka &dakumentaŭ:"
 
 #: ui/main.qml:114
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
-msgid ""
-"This folder will be used by default to load or save pictures from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save image files."
 msgstr "Heta zmoŭčany kataloh dla adčytvańnia j zapisu dakumentaŭ."
 
 #: ui/main.qml:122
-#, fuzzy, kde-format
-#| msgid "D&ocuments path:"
-msgid "Music path:"
-msgstr "Ściežka &dakumentaŭ:"
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Music folder:"
+msgstr ""
 
 #: ui/main.qml:128
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
-msgid "This folder will be used by default to load or save music from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save music files."
 msgstr "Heta zmoŭčany kataloh dla adčytvańnia j zapisu dakumentaŭ."
 
 #: ui/main.qml:136
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
-msgid "Public path:"
+msgctxt "@label:textbox"
+msgid "Public folder:"
 msgstr "Ściežka &dakumentaŭ:"
 
 #: ui/main.qml:142
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
+msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
@@ -120,15 +127,16 @@ msgstr "Heta zmoŭčany kataloh dla adčytvańnia j zapisu dakumentaŭ."
 #: ui/main.qml:150
 #, fuzzy, kde-format
 #| msgid "D&ocuments path:"
-msgid "Templates path:"
+msgctxt "@label:textbox"
+msgid "Templates folder:"
 msgstr "Ściežka &dakumentaŭ:"
 
 #: ui/main.qml:156
 #, fuzzy, kde-format
 #| msgid ""
 #| "This folder will be used by default to load or save documents from or to."
-msgid ""
-"This folder will be used by default to load or save templates from or to."
+msgctxt "@info:tooltip and accessible description"
+msgid "This folder will be used by default to open or save file templates."
 msgstr "Heta zmoŭčany kataloh dla adčytvańnia j zapisu dakumentaŭ."
 
 #: ui/UrlRequester.qml:74
@@ -137,18 +145,39 @@ msgctxt "@action:button"
 msgid "Choose new location"
 msgstr ""
 
+#~ msgid ""
+#~ "This folder contains all the files which you see on your desktop. You can "
+#~ "change the location of this folder if you want to, and the contents will "
+#~ "move automatically to the new location as well."
+#~ msgstr ""
+#~ "Hety kataloh źmiaščaje ŭsie fajły, jakija vidać na tvaim rabočym stale. "
+#~ "Ty možaš źmianić miesca hetaha kataloha, i tady jahonaje źmieściva budzie "
+#~ "aŭtamatyčna tudy pieraniesienaje."
+
+#, fuzzy
+#~| msgid "D&ocuments path:"
+#~ msgid "Documents path:"
+#~ msgstr "Ściežka &dakumentaŭ:"
+
+#, fuzzy
+#~| msgid "D&ocuments path:"
+#~ msgid "Downloads path:"
+#~ msgstr "Ściežka &dakumentaŭ:"
+
+#, fuzzy
+#~| msgid ""
+#~| "This folder will be used by default to load or save documents from or to."
+#~ msgid ""
+#~ "This folder will be used by default to load or save pictures from or to."
+#~ msgstr "Heta zmoŭčany kataloh dla adčytvańnia j zapisu dakumentaŭ."
+
+#, fuzzy
+#~| msgid "D&ocuments path:"
+#~ msgid "Music path:"
+#~ msgstr "Ściežka &dakumentaŭ:"
+
 #~ msgid "Desktop"
 #~ msgstr "Rabočy stoł"
-
-#, fuzzy
-#~| msgid "D&ocuments path:"
-#~ msgid "Documents"
-#~ msgstr "Ściežka &dakumentaŭ:"
-
-#, fuzzy
-#~| msgid "D&ocuments path:"
-#~ msgid "Downloads"
-#~ msgstr "Ściežka &dakumentaŭ:"
 
 #, fuzzy
 #~| msgid "D&ocuments path:"
