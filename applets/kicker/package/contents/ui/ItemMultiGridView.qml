@@ -95,6 +95,7 @@ PlasmaComponents.ScrollView {
                     property int footerHeight: (Math.ceil(headerHeight / cellSize) * cellSize) - headerHeight
 
                     property Item itemGrid: gridView
+                    visible: gridView.count > 0
 
                     Kirigami.Heading {
                         id: gridViewLabel
