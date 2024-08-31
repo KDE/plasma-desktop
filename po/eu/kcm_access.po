@@ -14,14 +14,14 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-24 00:40+0000\n"
-"PO-Revision-Date: 2024-06-28 09:07+0200\n"
+"PO-Revision-Date: 2024-08-29 23:48+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.08.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: kcmaccess.cpp:116
@@ -129,13 +129,13 @@ msgstr "Erabili bip bat sartzeko"
 #: kcmaccessibilitybell.kcfg:9
 #, kde-format
 msgid "Use System Bell"
-msgstr "Erabili sistemako txirrina"
+msgstr "Erabili sistemaren txirrina"
 
 #. i18n: ectx: label, entry (CustomBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:13
 #, kde-format
 msgid "Customize system bell"
-msgstr "Sistemako txirrina norbere erara egokitzea"
+msgstr "Sistemaren txirrina norbere erara egokitzea"
 
 #. i18n: ectx: label, entry (CustomBellFile), group (Bell)
 #: kcmaccessibilitybell.kcfg:17
@@ -291,7 +291,7 @@ msgstr "Sagu-teklaren kurba"
 #: kcmaccessibilityscreenreader.kcfg:9 ui/ScreenReader.qml:17
 #, kde-format
 msgid "Enable Screen Reader"
-msgstr "Gaitu pantaila-irakurgailua"
+msgstr "Gaitu pantaila-irakurlea"
 
 #. i18n: ectx: label, entry (ShakeCursor), group (Plugins)
 #: kcmaccessibilityshakecursor.kcfg:9
@@ -383,12 +383,12 @@ msgstr "Gaitu"
 #, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
-msgstr "Norberak finkatutako soinua:"
+msgstr "Neurrira ipinitako soinua:"
 
 #: ui/Bell.qml:74
 #, kde-format
 msgid "Search audio file for the system bell"
-msgstr "Bilatu sistemako txirrinerako audio fitxategia"
+msgstr "Bilatu sistemaren txirrinerako audio fitxategia"
 
 #: ui/Bell.qml:75
 #, kde-format
@@ -457,7 +457,7 @@ msgstr "Atzerapena:"
 #: ui/KeyboardFilters.qml:57
 #, kde-format
 msgid "Ring system bell:"
-msgstr "Jo sistemako txirrina:"
+msgstr "Jo sistemaren txirrina:"
 
 #: ui/KeyboardFilters.qml:58
 #, kde-format
@@ -502,7 +502,7 @@ msgstr "Atzerapena:"
 #: ui/KeyboardFilters.qml:140
 #, kde-format
 msgid "Ring system bell when rejected"
-msgstr "Jo sistemako txirrina errefusatzean"
+msgstr "Jo sistemaren txirrina errefusatzean"
 
 #: ui/main.qml:27
 #, kde-format
@@ -537,7 +537,7 @@ msgstr "Aktibazio-keinuak"
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
-msgstr "Pantaila-irakurgailua"
+msgstr "Pantaila-irakurlea"
 
 #: ui/main.qml:57
 #, kde-format
@@ -570,7 +570,7 @@ msgstr "Ezgaitu bi tekla sakatuta mantentzean"
 #: ui/ModifierKeys.qml:57
 #, kde-format
 msgid "Ring system bell when modifier keys are used"
-msgstr "Jo sistemako txirrina tekla aldarazleak erabiltzen direnean"
+msgstr "Jo sistemaren txirrina tekla aldarazleak erabiltzen direnean"
 
 #: ui/ModifierKeys.qml:74
 #, kde-format
