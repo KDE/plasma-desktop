@@ -1,5 +1,6 @@
 # translation of joystick.po to galician
 # Tradución de joystick.po ó galego
+# SPDX-FileCopyrightText: 2024 Adrián Chaves (Gallaecio)
 # Gonzalo H. Castilla <ttxzgl@yahoo.es>, 2004.
 # Xabier García Feal <xabigf@gmx.net>, 2004.
 # Xabi G. Feal <xabigf@gmx.net>, 2005, 2006.
@@ -8,20 +9,20 @@
 # marce villarino <mvillarino@users.sourceforge.net>, 2009.
 # Marce Villarino <mvillarino@gmail.com>, 2009.
 # Marce Villarino <mvillarino@kde-espana.es>, 2012, 2013.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-04 03:17+0000\n"
-"PO-Revision-Date: 2017-10-03 14:31+0100\n"
+"PO-Revision-Date: 2024-08-30 13:05+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
-"Language-Team: Galician <kde-i18n-doc@kde.org>\n"
+"Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -153,7 +154,7 @@ msgstr ""
 #, kde-format
 msgid "Could not get number of axes for joystick device %1: %2"
 msgstr ""
-"Non foi posíbel obter o número de eixos do dispositivo «joystick» %1: %2"
+"Non foi posíbel obter o número de eixes do dispositivo «joystick» %1: %2"
 
 #: joydevice.cpp:79
 #, kde-format
@@ -191,7 +192,7 @@ msgstr "erro interno; non se coñece o código %1"
 #: joystick.cpp:29
 #, kde-format
 msgid "KDE Joystick Control Module"
-msgstr "Módulo de control de «joysticks» de KDE"
+msgstr "Módulo de control de mando de KDE"
 
 #: joystick.cpp:31
 #, kde-format
@@ -219,14 +220,14 @@ msgid ""
 "can check your Linux source/Documentation/input/joystick.txt)"
 msgstr ""
 "<h1>Joystick</h1>Este módulo axuda a comprobar se o «joystick» está "
-"funcionando correctamente.<br/>Se os valores dos eixos son incorrectos, pode "
+"funcionando correctamente.<br/>Se os valores dos eixes son incorrectos, pode "
 "intentar corrixilo coa calibración.<br/>Este módulo intenta atopar todos os "
 "«joysticks» dispoñíbeis comprobando /dev/js[0-4] e /dev/input/js[0-4]<br/>Se "
 "usa outros ficheiros de dispositivo, insíraos na lista.<br/>A lista de "
-"botóns mostra o estado dos botóns do «joystick», a de eixos mostra os "
-"valores actuais dos eixos.<br/>Nota: o controlador actual de Linux (Kernel "
-"2.4 e 2.6) só pode detectar automaticamente «joysticks» de <ul><li>2 eixos e "
-"4 botóns</li><li>3 eixos e 4 botóns</li><li>4 eixos e 4 botóns</"
+"botóns mostra o estado dos botóns do «joystick», a de eixes mostra os "
+"valores actuais dos eixes.<br/>Nota: o controlador actual de Linux (Kernel "
+"2.4 e 2.6) só pode detectar automaticamente «joysticks» de <ul><li>2 eixes e "
+"4 botóns</li><li>3 eixes e 4 botóns</li><li>4 eixes e 4 botóns</"
 "li><li>«joysticks» dixitais Saitek Cyborg </li></ul>(Para máis detalles, "
 "pode consultar o ficheiro source/Documentation/input/joystick.txt)"
 
@@ -264,7 +265,7 @@ msgstr "Estado"
 #: joywidget.cpp:110
 #, kde-format
 msgid "Axes:"
-msgstr "Eixos:"
+msgstr "Eixes:"
 
 #: joywidget.cpp:114
 #, kde-format
@@ -326,7 +327,7 @@ msgid ""
 "</b><br /><br />Click OK to start the calibration.</qt>"
 msgstr ""
 "<qt>A calibración está a piques de comprobar a precisión.<br/><br/><b>Mova "
-"todos os eixos á posición central e non toque o «joystick».</b><br/><br/"
+"todos os eixes á posición central e non toque o «joystick».</b><br/><br/"
 ">Prema Aceptar para iniciar a calibración.</qt>"
 
 #: joywidget.cpp:367
