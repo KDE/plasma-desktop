@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-30 00:41+0000\n"
-"PO-Revision-Date: 2024-08-23 11:00+0200\n"
+"PO-Revision-Date: 2024-08-30 11:16+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -509,15 +509,13 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "Elimina este quadro. Esta acció no es podrà desfer"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Tanca"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, fuzzy, kde-format
-#| msgid "Exit Edit Mode"
+#, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
@@ -620,7 +618,7 @@ msgstr "Giny no admés"
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
-msgstr ""
+msgstr "Nou!"
 
 #: contents/explorer/AppletDelegate.qml:188
 #, kde-format
@@ -830,7 +828,3 @@ msgstr "Ix del mode edició"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Indicador de focus del quadro"
-
-#~ msgctxt "@action:button Done configuring the panel"
-#~ msgid "Done"
-#~ msgstr "Fet"

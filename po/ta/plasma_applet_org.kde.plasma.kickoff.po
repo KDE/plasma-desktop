@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-03 00:40+0000\n"
+"POT-Creation-Date: 2024-08-31 00:40+0000\n"
 "PO-Revision-Date: 2023-12-17 16:39+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -144,9 +144,11 @@ msgid "Automatically disabled when in Touch Mode"
 msgstr "பலகைக்கணினி பயன்முறையில் தானாக முடக்கப்படும்"
 
 #: package/contents/ui/ConfigGeneral.qml:175
-#, kde-format
-msgctxt "@action:button"
-msgid "Configure Enabled Search Plugins…"
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Configure Enabled Search Plugins…"
+msgctxt "@action:button opens plasmasearch kcm"
+msgid "Configure Search Plugins…"
 msgstr "இயக்கியுள்ள தேடல் செருகுநிரல்களை அமை…"
 
 #: package/contents/ui/ConfigGeneral.qml:185

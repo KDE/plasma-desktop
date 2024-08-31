@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-30 00:41+0000\n"
-"PO-Revision-Date: 2024-08-23 06:33+0200\n"
+"PO-Revision-Date: 2024-08-30 06:22+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -510,19 +510,17 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "Odstrani ta pult; tega dejanja ni mogoče razveljaviti"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Zapri"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, fuzzy, kde-format
-#| msgid "Exit Edit Mode"
+#, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
-msgstr "Izhod iz urejevalnega načina"
+msgstr "Izhod iz načina urejanja"
 
 #: contents/configuration/PanelConfiguration.qml:650
 #, kde-format
@@ -620,7 +618,7 @@ msgstr "Nepodprt gradnik"
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
-msgstr ""
+msgstr "Novo!"
 
 #: contents/explorer/AppletDelegate.qml:188
 #, kde-format

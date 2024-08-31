@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-10 00:43+0000\n"
+"POT-Creation-Date: 2024-08-31 00:40+0000\n"
 "PO-Revision-Date: 2022-08-18 18:10+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -149,21 +149,36 @@ msgid "Switch to %1"
 msgstr ""
 
 #: package/contents/ui/main.qml:592
-#, kde-format
-msgid "Show Activity Manager…"
+#, fuzzy, kde-format
+#| msgid "Show Activity Manager…"
+msgctxt "@action:inmenu widget context menu"
+msgid "Show Activity Manager"
 msgstr "アクティビティマネージャを表示..."
 
 #: package/contents/ui/main.qml:598
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Virtual Desktop"
+msgctxt "@action:inmenu widget context menu"
 msgid "Add Virtual Desktop"
 msgstr "仮想デスクトップを追加"
 
 #: package/contents/ui/main.qml:604
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Virtual Desktop"
+msgctxt "@action:inmenu widget context menu"
 msgid "Remove Virtual Desktop"
 msgstr "仮想デスクトップを削除"
 
 #: package/contents/ui/main.qml:611
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure Virtual Desktops…"
+msgctxt "@action:inmenu widget context menu"
+msgid "&Configure Activities…"
+msgstr "仮想デスクトップを設定…"
+
+#: package/contents/ui/main.qml:616
+#, fuzzy, kde-format
+#| msgid "Configure Virtual Desktops…"
+msgctxt "@action:inmenu widget context menu"
 msgid "Configure Virtual Desktops…"
 msgstr "仮想デスクトップを設定…"

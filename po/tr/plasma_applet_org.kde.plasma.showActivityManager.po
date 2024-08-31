@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"POT-Creation-Date: 2024-08-31 00:40+0000\n"
 "PO-Revision-Date: 2022-07-22 10:47+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -49,18 +49,24 @@ msgstr "Başlık:"
 msgid "Show the current activity name"
 msgstr "Geçerli etkinliğin adını göster"
 
-#: package/contents/ui/main.qml:67
+#: package/contents/ui/main.qml:70
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Current activity is %1"
 msgstr "Geçerli etkinlik: %1"
 
-#: package/contents/ui/main.qml:77
+#: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Show Activity Manager"
 msgstr "Etkinlik Yöneticisini Göster"
 
-#: package/contents/ui/main.qml:78
+#: package/contents/ui/main.qml:81
 #, kde-format
 msgid "Click to show the activity manager"
 msgstr "Etkinlik yöneticisini görüntülemek için tıklayın"
+
+#: package/contents/ui/main.qml:121
+#, kde-format
+msgctxt "@action:inmenu widget context menu"
+msgid "&Configure Activities…"
+msgstr ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-03 00:40+0000\n"
+"POT-Creation-Date: 2024-08-31 00:40+0000\n"
 "PO-Revision-Date: 2024-01-07 18:32+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -148,9 +148,11 @@ msgid "Automatically disabled when in Touch Mode"
 msgstr "Dezactivată automat în regim tactil"
 
 #: package/contents/ui/ConfigGeneral.qml:175
-#, kde-format
-msgctxt "@action:button"
-msgid "Configure Enabled Search Plugins…"
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Configure Enabled Search Plugins…"
+msgctxt "@action:button opens plasmasearch kcm"
+msgid "Configure Search Plugins…"
 msgstr "Configurează extensiile de căutare active…"
 
 #: package/contents/ui/ConfigGeneral.qml:185

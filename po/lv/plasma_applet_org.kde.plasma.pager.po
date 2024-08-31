@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-10 00:43+0000\n"
+"POT-Creation-Date: 2024-08-31 00:40+0000\n"
 "PO-Revision-Date: 2024-08-15 21:50+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -159,22 +159,37 @@ msgid "Switch to %1"
 msgstr "Pārslēgties uz %1"
 
 #: package/contents/ui/main.qml:592
-#, kde-format
-msgid "Show Activity Manager…"
+#, fuzzy, kde-format
+#| msgid "Show Activity Manager…"
+msgctxt "@action:inmenu widget context menu"
+msgid "Show Activity Manager"
 msgstr "Rādīt aktivitāšu pārvaldnieku…"
 
 #: package/contents/ui/main.qml:598
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Virtual Desktop"
+msgctxt "@action:inmenu widget context menu"
 msgid "Add Virtual Desktop"
 msgstr "Pievienot virtuālo darbvirsmu"
 
 #: package/contents/ui/main.qml:604
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Virtual Desktop"
+msgctxt "@action:inmenu widget context menu"
 msgid "Remove Virtual Desktop"
 msgstr "Noņemt virtuālo darbvirsmu"
 
 #: package/contents/ui/main.qml:611
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure Virtual Desktops…"
+msgctxt "@action:inmenu widget context menu"
+msgid "&Configure Activities…"
+msgstr "Konfigurēt virtuālās darbvirsmas…"
+
+#: package/contents/ui/main.qml:616
+#, fuzzy, kde-format
+#| msgid "Configure Virtual Desktops…"
+msgctxt "@action:inmenu widget context menu"
 msgid "Configure Virtual Desktops…"
 msgstr "Konfigurēt virtuālās darbvirsmas…"
 

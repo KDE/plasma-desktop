@@ -6,64 +6,58 @@
 # Sebastià Pla i Sanz <sps@sastia.com>, 1999, 2000, 2001, 2002, 2004, 2005, 2006.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2003, 2017, 2020.
 # Albert Astals Cid <aacid@kde.org>, 2005.
-# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2017, 2018, 2020, 2021, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2017, 2018, 2020, 2021, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-30 00:41+0000\n"
-"PO-Revision-Date: 2024-05-07 11:48+0200\n"
+"PO-Revision-Date: 2024-08-30 11:21+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.08.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Desktop path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Desktop folder:"
-msgstr "Camí de l'escriptori:"
+msgstr "Carpeta d'escriptori:"
 
 #: ui/main.qml:58
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder contains all the files you see on your desktop."
-msgstr ""
+msgstr "Esta carpeta conté tots els fitxers que veeu en l'escriptori."
 
 #: ui/main.qml:66
-#, fuzzy, kde-format
-#| msgid "Documents path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Documents folder:"
-msgstr "Camí dels documents:"
+msgstr "Carpeta de documents:"
 
 #: ui/main.qml:72
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save documents from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save documents."
 msgstr ""
-"Esta carpeta s'utilitzarà de manera predeterminada per a carregar o guardar "
-"els documents."
+"Esta carpeta s'utilitzarà de manera predeterminada per a obrir o guardar els "
+"documents."
 
 #: ui/main.qml:80
-#, fuzzy, kde-format
-#| msgid "Downloads path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Downloads folder:"
-msgstr "Camí de les baixades:"
+msgstr "Carpeta de baixades:"
 
 #: ui/main.qml:86
-#, fuzzy, kde-format
-#| msgid "This folder will be used by default to save your downloaded items."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
@@ -71,67 +65,55 @@ msgstr ""
 "elements baixats."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgid "Videos path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Videos folder:"
-msgstr "Camí dels vídeos:"
+msgstr "Carpeta de vídeos:"
 
 #: ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save movies from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save video files."
 msgstr ""
-"Esta carpeta s'utilitzarà de manera predeterminada per a carregar o guardar "
-"les pel·lícules."
+"Esta carpeta s'utilitzarà de manera predeterminada per a obrir o guardar "
+"fitxers de vídeo."
 
 #: ui/main.qml:108
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Pictures folder:"
-msgstr "Camí de les imatges:"
+msgstr "Carpeta d'imatges:"
 
 #: ui/main.qml:114
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save movies from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save image files."
 msgstr ""
-"Esta carpeta s'utilitzarà de manera predeterminada per a carregar o guardar "
-"les pel·lícules."
+"Esta carpeta s'utilitzarà de manera predeterminada per a obrir o guardar "
+"imatges."
 
 #: ui/main.qml:122
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Music folder:"
-msgstr ""
+msgstr "Carpeta de música:"
 
 #: ui/main.qml:128
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save music from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save music files."
 msgstr ""
-"Esta carpeta s'utilitzarà de manera predeterminada per a carregar o guardar "
-"la música."
+"Esta carpeta s'utilitzarà de manera predeterminada per a obrir o guardar "
+"fitxers de música."
 
 #: ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "Public path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Public folder:"
-msgstr "Camí públic:"
+msgstr "Carpeta pública:"
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default for publicly-shared files when "
-#| "network sharing is enabled."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
@@ -141,42 +123,21 @@ msgstr ""
 "compartits públicament quan estiga activada la compartició de xarxa."
 
 #: ui/main.qml:150
-#, fuzzy, kde-format
-#| msgid "Templates path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Templates folder:"
-msgstr "Camí de les plantilles:"
+msgstr "Carpeta de plantilles:"
 
 #: ui/main.qml:156
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save templates from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save file templates."
 msgstr ""
-"Esta carpeta s'utilitzarà de manera predeterminada per a carregar o guardar "
-"plantilles."
+"Esta carpeta s'utilitzarà de manera predeterminada per a obrir o guardar "
+"plantilles de fitxers."
 
 #: ui/UrlRequester.qml:74
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "Seleccioneu una ubicació nova"
-
-#~ msgid ""
-#~ "This folder contains all the files which you see on your desktop. You can "
-#~ "change the location of this folder if you want to, and the contents will "
-#~ "move automatically to the new location as well."
-#~ msgstr ""
-#~ "Esta carpeta conté tots els fitxers que veeu en l'escriptori. Si voleu, "
-#~ "podeu canviar la ubicació de la carpeta, i el contingut es mourà "
-#~ "automàticament a la nova ubicació."
-
-#~ msgid ""
-#~ "This folder will be used by default to load or save pictures from or to."
-#~ msgstr ""
-#~ "Esta carpeta s'utilitzarà de manera predeterminada per a carregar o "
-#~ "guardar les imatges."
-
-#~ msgid "Music path:"
-#~ msgstr "Camí de la música:"

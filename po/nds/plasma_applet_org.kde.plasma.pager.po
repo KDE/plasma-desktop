@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-10 00:43+0000\n"
+"POT-Creation-Date: 2024-08-31 00:40+0000\n"
 "PO-Revision-Date: 2014-07-06 21:47+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -164,22 +164,35 @@ msgstr ""
 
 #: package/contents/ui/main.qml:592
 #, kde-format
-msgid "Show Activity Manager…"
+msgctxt "@action:inmenu widget context menu"
+msgid "Show Activity Manager"
 msgstr ""
 
 #: package/contents/ui/main.qml:598
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Virtual Desktop"
+msgctxt "@action:inmenu widget context menu"
 msgid "Add Virtual Desktop"
 msgstr "Virtuell Schriefdisch tofögen"
 
 #: package/contents/ui/main.qml:604
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Virtual Desktop"
+msgctxt "@action:inmenu widget context menu"
 msgid "Remove Virtual Desktop"
 msgstr "Virtuell Schriefdisch wegmaken"
 
 #: package/contents/ui/main.qml:611
 #, fuzzy, kde-format
 #| msgid "&Configure Virtual Desktops..."
+msgctxt "@action:inmenu widget context menu"
+msgid "&Configure Activities…"
+msgstr "Virtuell Schriefdischen &instellen..."
+
+#: package/contents/ui/main.qml:616
+#, fuzzy, kde-format
+#| msgid "&Configure Virtual Desktops..."
+msgctxt "@action:inmenu widget context menu"
 msgid "Configure Virtual Desktops…"
 msgstr "Virtuell Schriefdischen &instellen..."
 

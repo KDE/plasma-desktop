@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-10 00:43+0000\n"
+"POT-Creation-Date: 2024-08-31 00:40+0000\n"
 "PO-Revision-Date: 2024-08-11 07:37+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -168,22 +168,37 @@ msgid "Switch to %1"
 msgstr "Переключиться на %1"
 
 #: package/contents/ui/main.qml:592
-#, kde-format
-msgid "Show Activity Manager…"
+#, fuzzy, kde-format
+#| msgid "Show Activity Manager…"
+msgctxt "@action:inmenu widget context menu"
+msgid "Show Activity Manager"
 msgstr "Показать диспетчер комнат..."
 
 #: package/contents/ui/main.qml:598
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Virtual Desktop"
+msgctxt "@action:inmenu widget context menu"
 msgid "Add Virtual Desktop"
 msgstr "Добавить виртуальный рабочий стол"
 
 #: package/contents/ui/main.qml:604
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Virtual Desktop"
+msgctxt "@action:inmenu widget context menu"
 msgid "Remove Virtual Desktop"
 msgstr "Удалить виртуальный рабочий стол"
 
 #: package/contents/ui/main.qml:611
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure Virtual Desktops…"
+msgctxt "@action:inmenu widget context menu"
+msgid "&Configure Activities…"
+msgstr "Настроить виртуальные рабочие столы..."
+
+#: package/contents/ui/main.qml:616
+#, fuzzy, kde-format
+#| msgid "Configure Virtual Desktops…"
+msgctxt "@action:inmenu widget context menu"
 msgid "Configure Virtual Desktops…"
 msgstr "Настроить виртуальные рабочие столы..."
 

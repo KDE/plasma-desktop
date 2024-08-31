@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-10 00:43+0000\n"
+"POT-Creation-Date: 2024-08-31 00:40+0000\n"
 "PO-Revision-Date: 2023-02-01 23:09+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -153,22 +153,37 @@ msgid "Switch to %1"
 msgstr "Passa a %1"
 
 #: package/contents/ui/main.qml:592
-#, kde-format
-msgid "Show Activity Manager…"
+#, fuzzy, kde-format
+#| msgid "Show Activity Manager…"
+msgctxt "@action:inmenu widget context menu"
+msgid "Show Activity Manager"
 msgstr "Monstra Gerente de activitate..."
 
 #: package/contents/ui/main.qml:598
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Virtual Desktop"
+msgctxt "@action:inmenu widget context menu"
 msgid "Add Virtual Desktop"
 msgstr "Adde Scriptorio Virtual"
 
 #: package/contents/ui/main.qml:604
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Virtual Desktop"
+msgctxt "@action:inmenu widget context menu"
 msgid "Remove Virtual Desktop"
 msgstr "Remove Scriptorio Virtual"
 
 #: package/contents/ui/main.qml:611
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure Virtual Desktops…"
+msgctxt "@action:inmenu widget context menu"
+msgid "&Configure Activities…"
+msgstr "Configura Scriptorios virtual ..."
+
+#: package/contents/ui/main.qml:616
+#, fuzzy, kde-format
+#| msgid "Configure Virtual Desktops…"
+msgctxt "@action:inmenu widget context menu"
 msgid "Configure Virtual Desktops…"
 msgstr "Configura Scriptorios virtual ..."
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.showActivityManager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"POT-Creation-Date: 2024-08-31 00:40+0000\n"
 "PO-Revision-Date: 2022-07-20 08:41+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -50,18 +50,24 @@ msgstr "Заголовок:"
 msgid "Show the current activity name"
 msgstr "Показувати назву поточного простору дій"
 
-#: package/contents/ui/main.qml:67
+#: package/contents/ui/main.qml:70
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Current activity is %1"
 msgstr "Поточним простором дій є %1"
 
-#: package/contents/ui/main.qml:77
+#: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Show Activity Manager"
 msgstr "Показувати керування просторами дій"
 
-#: package/contents/ui/main.qml:78
+#: package/contents/ui/main.qml:81
 #, kde-format
 msgid "Click to show the activity manager"
 msgstr "Клацніть, щоб відкрити вікно керування просторами дій"
+
+#: package/contents/ui/main.qml:121
+#, kde-format
+msgctxt "@action:inmenu widget context menu"
+msgid "&Configure Activities…"
+msgstr ""

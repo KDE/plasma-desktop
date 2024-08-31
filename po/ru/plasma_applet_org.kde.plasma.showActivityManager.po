@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"POT-Creation-Date: 2024-08-31 00:40+0000\n"
 "PO-Revision-Date: 2022-08-11 15:29+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -50,21 +50,27 @@ msgstr "Заголовок:"
 msgid "Show the current activity name"
 msgstr "Показывать название текущей комнаты"
 
-#: package/contents/ui/main.qml:67
+#: package/contents/ui/main.qml:70
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Current activity is %1"
 msgstr "Текущая комната: %1"
 
-#: package/contents/ui/main.qml:77
+#: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Show Activity Manager"
 msgstr "Показать диспетчер комнат"
 
-#: package/contents/ui/main.qml:78
+#: package/contents/ui/main.qml:81
 #, kde-format
 msgid "Click to show the activity manager"
 msgstr "Щёлкните для открытия диспетчера комнат"
+
+#: package/contents/ui/main.qml:121
+#, kde-format
+msgctxt "@action:inmenu widget context menu"
+msgid "&Configure Activities…"
+msgstr ""
 
 #~ msgid "Click or press the Meta key and 'Q' to show the activity manager"
 #~ msgstr ""

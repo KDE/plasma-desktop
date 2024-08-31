@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-30 00:41+0000\n"
-"PO-Revision-Date: 2024-05-07 05:02+0200\n"
+"PO-Revision-Date: 2024-08-30 05:40+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -19,45 +19,40 @@ msgstr ""
 "X-Generator: Poedit 3.3.2\n"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Desktop path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Desktop folder:"
-msgstr "სამუშაო მაგიდის ბილიკი:"
+msgstr "სამუშაო მაგიდის საქაღალდე:"
 
 #: ui/main.qml:58
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder contains all the files you see on your desktop."
 msgstr ""
+"ეს საქაღალდე შეიცავს ყველა ფაილს, რომელსაც ხედავთ თქვენს სამუშაო მაგიდაზე."
 
 #: ui/main.qml:66
-#, fuzzy, kde-format
-#| msgid "Documents"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Documents folder:"
-msgstr "დოკუმენტები"
+msgstr "დოკუმენტების საქაღალდე:"
 
 #: ui/main.qml:72
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save documents from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save documents."
 msgstr ""
-"ეს საქაღალდე ნაგულისხმევად გამოყენებული იქნება დოკუმენტების ჩასატვირთად ან "
+"ეს საქაღალდე ნაგულისხმევად გამოყენებული იქნება დოკუმენტების გასახსნელად ან "
 "შესანახად."
 
 #: ui/main.qml:80
-#, fuzzy, kde-format
-#| msgid "Downloads"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Downloads folder:"
-msgstr "გადმოწერები"
+msgstr "გადმოწერების საქაღალდე:"
 
 #: ui/main.qml:86
-#, fuzzy, kde-format
-#| msgid "This folder will be used by default to save your downloaded items."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
@@ -65,67 +60,55 @@ msgstr ""
 "შესანახად."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgid "Videos path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Videos folder:"
-msgstr "ვიდეოების ბილიკი:"
+msgstr "ვიდეოების საქაღალდე:"
 
 #: ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save movies from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save video files."
 msgstr ""
-"ეს საქაღალდე ნაგულისხმებად გამოყენებული იქნება ფილმების ჩასატვირთად ან "
+"ეს საქაღალდე ნაგულისხმებად გამოყენებული იქნება ფილმების გასახსნელად ან "
 "შესანახად."
 
 #: ui/main.qml:108
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Pictures folder:"
-msgstr "სურათების ბილიკი:"
+msgstr "სურთების საქაღალდე:"
 
 #: ui/main.qml:114
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save movies from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save image files."
 msgstr ""
-"ეს საქაღალდე ნაგულისხმებად გამოყენებული იქნება ფილმების ჩასატვირთად ან "
+"ეს საქაღალდე ნაგულისხმებად გამოყენებული იქნება სურათბის გაასახსნელად ან "
 "შესანახად."
 
 #: ui/main.qml:122
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Music folder:"
-msgstr ""
+msgstr "მუსიკის საქაღალდე:"
 
 #: ui/main.qml:128
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save music from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save music files."
 msgstr ""
-"ეს საქაღალდე ნაგულისხმებად გამოყენებული იქნება მუსიკის ჩასატვირთად ან "
+"ეს საქაღალდე ნაგულისხმებად გამოყენებული იქნება მუსიკის გასახსენელად ან "
 "შესანახად."
 
 #: ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "Public path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Public folder:"
-msgstr "საჯარო ბილიკი:"
+msgstr "საჯარო საქაღალდე:"
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default for publicly-shared files when "
-#| "network sharing is enabled."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
@@ -135,21 +118,18 @@ msgstr ""
 "ფაილებისთვის, როცა ქსელში გაზიარება ჩართულია."
 
 #: ui/main.qml:150
-#, fuzzy, kde-format
-#| msgid "Templates"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Templates folder:"
-msgstr "ნიმუშები"
+msgstr "ნიმუშების საქაღალდე:"
 
 #: ui/main.qml:156
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save templates from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save file templates."
 msgstr ""
-"ეს საქაღალდე ნაგულისხმევად გამოყენებული იქნება შაბლონების ჩასატვირთად ან "
-"შესანახად."
+"ეს საქაღალდე ნაგულისხმევად გამოყენებული იქნება ფაილის ნიმუშების გასახსნელად "
+"ან შესანახად."
 
 #: ui/UrlRequester.qml:74
 #, kde-format

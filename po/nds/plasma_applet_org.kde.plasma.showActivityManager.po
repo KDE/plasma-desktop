@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_showactivitymanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"POT-Creation-Date: 2024-08-31 00:40+0000\n"
 "PO-Revision-Date: 2011-10-06 15:28+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -48,22 +48,28 @@ msgstr ""
 msgid "Show the current activity name"
 msgstr "Aktivitetenpleger wiesen"
 
-#: package/contents/ui/main.qml:67
+#: package/contents/ui/main.qml:70
 #, fuzzy, kde-format
 #| msgid "Show Activity Manager"
 msgctxt "@info:tooltip"
 msgid "Current activity is %1"
 msgstr "Aktivitetenpleger wiesen"
 
-#: package/contents/ui/main.qml:77
+#: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Show Activity Manager"
 msgstr "Aktivitetenpleger wiesen"
 
-#: package/contents/ui/main.qml:78
+#: package/contents/ui/main.qml:81
 #, kde-format
 msgid "Click to show the activity manager"
 msgstr "Klick, wenn Du den Aktivitetenpleger wiesen wullt."
+
+#: package/contents/ui/main.qml:121
+#, kde-format
+msgctxt "@action:inmenu widget context menu"
+msgid "&Configure Activities…"
+msgstr ""
 
 #~ msgid "Click or press the Meta key and 'Q' to show the activity manager"
 #~ msgstr ""

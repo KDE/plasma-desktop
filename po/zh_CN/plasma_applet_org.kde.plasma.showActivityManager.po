@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-17 01:38+0000\n"
+"POT-Creation-Date: 2024-08-31 00:40+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -48,18 +48,24 @@ msgstr "标题："
 msgid "Show the current activity name"
 msgstr "显示当前活动名称"
 
-#: package/contents/ui/main.qml:67
+#: package/contents/ui/main.qml:70
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Current activity is %1"
 msgstr "当前活动是 %1"
 
-#: package/contents/ui/main.qml:77
+#: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Show Activity Manager"
 msgstr "显示活动管理器"
 
-#: package/contents/ui/main.qml:78
+#: package/contents/ui/main.qml:81
 #, kde-format
 msgid "Click to show the activity manager"
 msgstr "点击显示活动管理器"
+
+#: package/contents/ui/main.qml:121
+#, kde-format
+msgctxt "@action:inmenu widget context menu"
+msgid "&Configure Activities…"
+msgstr ""

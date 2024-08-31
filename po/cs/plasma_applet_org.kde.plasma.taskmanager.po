@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:40+0000\n"
-"PO-Revision-Date: 2024-07-12 11:44+0200\n"
+"PO-Revision-Date: 2024-08-29 13:38+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -71,37 +71,37 @@ msgstr "9,999+"
 #, kde-format
 msgctxt "@label for several checkboxes"
 msgid "General:"
-msgstr ""
+msgstr "Obecné:"
 
 #: package/contents/ui/ConfigAppearance.qml:47
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show small window previews when hovering over tasks"
-msgstr ""
+msgstr "Při přejezdu myší nad úlohami zobrazovat malé okno s náhledem"
 
 #: package/contents/ui/ConfigAppearance.qml:52
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over previews"
-msgstr ""
+msgstr "Skrýt ostatní okna při přejetí přes náhledy"
 
 #: package/contents/ui/ConfigAppearance.qml:57
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Mark applications that play audio"
-msgstr ""
+msgstr "Označte aplikace přehrávající hudbu"
 
 #: package/contents/ui/ConfigAppearance.qml:65
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Fill free space on panel"
-msgstr ""
+msgstr "Vyplnit na panelu volné místo"
 
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Maximum task width:"
-msgstr ""
+msgstr "Maximální šířka úkolu:"
 
 #: package/contents/ui/ConfigAppearance.qml:80
 #, kde-format
@@ -127,7 +127,7 @@ msgctxt ""
 "@label for radio button group, completes sentence: … when panel is low on "
 "space etc."
 msgid "Use multi-column view:"
-msgstr ""
+msgstr "Použít vícesloupcový pohled:"
 
 #: package/contents/ui/ConfigAppearance.qml:94
 #, kde-format
@@ -135,43 +135,43 @@ msgctxt ""
 "@label for radio button group, completes sentence: … when panel is low on "
 "space etc."
 msgid "Use multi-row view:"
-msgstr ""
+msgstr "Použít víceřádkový pohled:"
 
 #: package/contents/ui/ConfigAppearance.qml:100
 #, kde-format
 msgctxt "@option:radio Never use multi-column view for Task Manager"
 msgid "Never"
-msgstr ""
+msgstr "Nikdy"
 
 #: package/contents/ui/ConfigAppearance.qml:110
 #, kde-format
 msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "When panel is low on space and thick enough"
-msgstr ""
+msgstr "Pokud má panel málo místa ale je dostatečně široký"
 
 #: package/contents/ui/ConfigAppearance.qml:120
 #, kde-format
 msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "Always when panel is thick enough"
-msgstr ""
+msgstr "Vždy když je panel dostatečně široký"
 
 #: package/contents/ui/ConfigAppearance.qml:127
 #, kde-format
 msgctxt "@label:spinbox maximum number of columns for tasks"
 msgid "Maximum columns:"
-msgstr ""
+msgstr "Sloupců maximálně:"
 
 #: package/contents/ui/ConfigAppearance.qml:128
 #, kde-format
 msgctxt "@label:spinbox maximum number of rows for tasks"
 msgid "Maximum rows:"
-msgstr ""
+msgstr "Řádků maximálně:"
 
 #: package/contents/ui/ConfigAppearance.qml:138
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Spacing between icons:"
-msgstr ""
+msgstr "Vzdálenosti mezi ikonami:"
 
 #: package/contents/ui/ConfigAppearance.qml:142
 #, kde-format
@@ -195,31 +195,31 @@ msgstr "Velké"
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch mode"
-msgstr ""
+msgstr "Automaticky přepnout na velké v dotykovém režimu"
 
 #: package/contents/ui/ConfigBehavior.qml:49
 #, kde-format
 msgctxt "@label:listbox how to group tasks"
 msgid "Group:"
-msgstr ""
+msgstr "Skupina:"
 
 #: package/contents/ui/ConfigBehavior.qml:53
 #, kde-format
 msgctxt "@item:inlistbox how to group tasks"
 msgid "Do not group"
-msgstr ""
+msgstr "Neseskupovat"
 
 #: package/contents/ui/ConfigBehavior.qml:54
 #, kde-format
 msgctxt "@item:inlistbox how to group tasks"
 msgid "By program name"
-msgstr ""
+msgstr "Podle názvu programu"
 
 #: package/contents/ui/ConfigBehavior.qml:60
 #, kde-format
 msgctxt "@label:listbox completes sentence like: … cycles through tasks"
 msgid "Clicking grouped task:"
-msgstr ""
+msgstr "Kliknutí na seskupenou úlohu:"
 
 #: package/contents/ui/ConfigBehavior.qml:67
 #, kde-format
@@ -227,7 +227,7 @@ msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task cycles through "
 "tasks' "
 msgid "Cycles through tasks"
-msgstr ""
+msgstr "Postupně prochází mezi úlohami"
 
 #: package/contents/ui/ConfigBehavior.qml:68
 #, kde-format
@@ -235,7 +235,7 @@ msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task shows small "
 "window previews' "
 msgid "Shows small window previews"
-msgstr ""
+msgstr "Zobrazí malé náhledy oken"
 
 #: package/contents/ui/ConfigBehavior.qml:69
 #, kde-format
@@ -243,7 +243,7 @@ msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task shows large "
 "window previews' "
 msgid "Shows large window previews"
-msgstr ""
+msgstr "Zobrazí velké náhledy oken"
 
 #: package/contents/ui/ConfigBehavior.qml:70
 #, kde-format
@@ -251,7 +251,7 @@ msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task shows textual "
 "list' "
 msgid "Shows textual list"
-msgstr ""
+msgstr "Zobrazí textový seznam"
 
 #: package/contents/ui/ConfigBehavior.qml:81
 #, kde-format
@@ -265,61 +265,61 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check grouped task"
 msgid "Combine into single button"
-msgstr ""
+msgstr "Sloučit do jednoho tlačítka"
 
 #: package/contents/ui/ConfigBehavior.qml:98
 #, kde-format
 msgctxt "@option:check grouped task"
 msgid "Group only when the Task Manager is full"
-msgstr ""
+msgstr "Seskupovat pouze pokud je správce úloh plný"
 
 #: package/contents/ui/ConfigBehavior.qml:110
 #, kde-format
 msgctxt "@label:listbox sort tasks in grouped task"
 msgid "Sort:"
-msgstr ""
+msgstr "Seřadit:"
 
 #: package/contents/ui/ConfigBehavior.qml:114
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Do not sort"
-msgstr ""
+msgstr "Neseřazovat"
 
 #: package/contents/ui/ConfigBehavior.qml:115
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Manually"
-msgstr ""
+msgstr "Ručně"
 
 #: package/contents/ui/ConfigBehavior.qml:116
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Alphabetically"
-msgstr ""
+msgstr "Podle abecedy"
 
 #: package/contents/ui/ConfigBehavior.qml:117
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By desktop"
-msgstr ""
+msgstr "Podle plochy"
 
 #: package/contents/ui/ConfigBehavior.qml:118
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By activity"
-msgstr ""
+msgstr "Podle aktivity"
 
 #: package/contents/ui/ConfigBehavior.qml:125
 #, kde-format
 msgctxt "@option:check configure task sorting"
 msgid "Keep launchers separate"
-msgstr ""
+msgstr "Nechat spouštěče oddělené"
 
 #: package/contents/ui/ConfigBehavior.qml:132
 #, kde-format
 msgctxt "@option:check for icons-and-text task manager"
 msgid "Hide launchers after application startup"
-msgstr ""
+msgstr "Skrýt spouštěče po spuštění aplikace"
 
 #: package/contents/ui/ConfigBehavior.qml:142
 #, kde-format
@@ -327,27 +327,27 @@ msgctxt ""
 "@label for checkbox Part of a sentence: 'Clicking active task minimizes the "
 "task'"
 msgid "Clicking active task:"
-msgstr ""
+msgstr "Kliknutí na aktivní úlohu:"
 
 #: package/contents/ui/ConfigBehavior.qml:143
 #, kde-format
 msgctxt ""
 "@option:check Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
-msgstr ""
+msgstr "Minimalizuje úlohu"
 
 #: package/contents/ui/ConfigBehavior.qml:148
 #, kde-format
 msgctxt "@label:listbox completes sentence like: … does nothing"
 msgid "Middle-clicking any task:"
-msgstr ""
+msgstr "Kliknutí prostředním tlačítkem na kteroukoliv úlohu:"
 
 #: package/contents/ui/ConfigBehavior.qml:152
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task does nothing'"
 msgid "Does nothing"
-msgstr ""
+msgstr "Nedělá nic"
 
 #: package/contents/ui/ConfigBehavior.qml:153
 #, kde-format
@@ -355,7 +355,7 @@ msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task closes window "
 "or group'"
 msgid "Closes window or group"
-msgstr ""
+msgstr "Zavře okno nebo skupinu"
 
 #: package/contents/ui/ConfigBehavior.qml:154
 #, kde-format
@@ -363,7 +363,7 @@ msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task opens a new "
 "window'"
 msgid "Opens a new window"
-msgstr ""
+msgstr "Otevře nové okno"
 
 #: package/contents/ui/ConfigBehavior.qml:155
 #, kde-format
@@ -371,7 +371,7 @@ msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task minimizes/"
 "restores window or group'"
 msgid "Minimizes/Restores window or group"
-msgstr ""
+msgstr "Minimalizuje/Vrátí okno nebo skupinu"
 
 #: package/contents/ui/ConfigBehavior.qml:156
 #, kde-format
@@ -379,7 +379,7 @@ msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task toggles "
 "grouping'"
 msgid "Toggles grouping"
-msgstr ""
+msgstr "Zapne seskupování"
 
 #: package/contents/ui/ConfigBehavior.qml:157
 #, kde-format
@@ -387,64 +387,64 @@ msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task brings it to "
 "the current virtual desktop'"
 msgid "Brings it to the current virtual desktop"
-msgstr ""
+msgstr "Přesune jej na současnou virtuální plochu"
 
 #: package/contents/ui/ConfigBehavior.qml:167
 #, kde-format
 msgctxt ""
 "@label for checkbox Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Mouse wheel:"
-msgstr ""
+msgstr "Kolečko myši:"
 
 #: package/contents/ui/ConfigBehavior.qml:168
 #, kde-format
 msgctxt "@option:check Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
-msgstr ""
+msgstr "Postupně prochází mezi úlohami"
 
 #: package/contents/ui/ConfigBehavior.qml:177
 #, kde-format
 msgctxt "@option:check mouse wheel task cycling"
 msgid "Skip minimized tasks"
-msgstr ""
+msgstr "Přeskočit minimalizované úlohy"
 
 #: package/contents/ui/ConfigBehavior.qml:188
 #, kde-format
 msgctxt ""
 "@label for checkbox group, completes sentence like: … from current screen"
 msgid "Show only tasks:"
-msgstr ""
+msgstr "Zobrazit pouze úlohy:"
 
 #: package/contents/ui/ConfigBehavior.qml:189
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current screen"
-msgstr ""
+msgstr "Ze současné obrazovky"
 
 #: package/contents/ui/ConfigBehavior.qml:194
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current desktop"
-msgstr ""
+msgstr "Ze současné plochy"
 
 #: package/contents/ui/ConfigBehavior.qml:199
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current activity"
-msgstr ""
+msgstr "Ze současné aktivity"
 
 #: package/contents/ui/ConfigBehavior.qml:204
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "That are minimized"
-msgstr ""
+msgstr "Které jsou minimalizované"
 
 #: package/contents/ui/ConfigBehavior.qml:213
 #, kde-format
 msgctxt ""
 "@label for checkbox, completes sentence: … unhide if window wants attention"
 msgid "When panel is hidden:"
-msgstr ""
+msgstr "Pokud je panel skrytý:"
 
 #: package/contents/ui/ConfigBehavior.qml:214
 #, kde-format
@@ -456,33 +456,33 @@ msgstr ""
 #, kde-format
 msgctxt "@label for radiobutton group completes sentence like: … on the bottom"
 msgid "New tasks appear:"
-msgstr ""
+msgstr "Objeví se nové úkoly:"
 
 #: package/contents/ui/ConfigBehavior.qml:230
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the bottom"
-msgstr ""
+msgstr "Dole"
 
 #: package/contents/ui/ConfigBehavior.qml:234
 #: package/contents/ui/ConfigBehavior.qml:253
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the right"
-msgstr ""
+msgstr "Doprava"
 
 #: package/contents/ui/ConfigBehavior.qml:236
 #: package/contents/ui/ConfigBehavior.qml:251
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the left"
-msgstr ""
+msgstr "Doleva"
 
 #: package/contents/ui/ConfigBehavior.qml:247
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the top"
-msgstr ""
+msgstr "Nahoře"
 
 #: package/contents/ui/ContextMenu.qml:102
 #, kde-format

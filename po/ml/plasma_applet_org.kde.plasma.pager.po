@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager trunk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-10 00:43+0000\n"
+"POT-Creation-Date: 2024-08-31 00:40+0000\n"
 "PO-Revision-Date: 2008-11-23 20:00-0800\n"
 "Last-Translator: Praveen Arimbrathodiyil <pravi.a@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -154,21 +154,31 @@ msgstr ""
 
 #: package/contents/ui/main.qml:592
 #, kde-format
-msgid "Show Activity Manager…"
+msgctxt "@action:inmenu widget context menu"
+msgid "Show Activity Manager"
 msgstr ""
 
 #: package/contents/ui/main.qml:598
 #, fuzzy, kde-format
+msgctxt "@action:inmenu widget context menu"
 msgid "Add Virtual Desktop"
 msgstr "പണിയിടങ്ങള്‍ &ക്രമീകരിയ്ക്കുക..."
 
 #: package/contents/ui/main.qml:604
 #, fuzzy, kde-format
+msgctxt "@action:inmenu widget context menu"
 msgid "Remove Virtual Desktop"
 msgstr "പണിയിടങ്ങള്‍ &ക്രമീകരിയ്ക്കുക..."
 
 #: package/contents/ui/main.qml:611
 #, fuzzy, kde-format
+msgctxt "@action:inmenu widget context menu"
+msgid "&Configure Activities…"
+msgstr "പണിയിടങ്ങള്‍ &ക്രമീകരിയ്ക്കുക..."
+
+#: package/contents/ui/main.qml:616
+#, fuzzy, kde-format
+msgctxt "@action:inmenu widget context menu"
 msgid "Configure Virtual Desktops…"
 msgstr "പണിയിടങ്ങള്‍ &ക്രമീകരിയ്ക്കുക..."
 
