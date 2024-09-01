@@ -192,18 +192,29 @@ Item {
 
     PlasmaCore.Dialog {
         id: sidePanel
+
+        readonly property bool sideBarOnRightEdge: {
+            if (!sidePanelStack.active) {
+                return false;
+            }
+
+            const item = sidePanelStack.item;
+            if (!item) {
+                return false;
+            }
+
+            const rightEdgeParent = (item.containment
+                                     && item.containment !== containment.plasmoid
+                                     && item.containment.location == PlasmaCore.Types.RightEdge);
+
+            return rightEdgeParent || Qt.application.layoutDirection === Qt.RightToLeft;
+        }
+
         location: sideBarOnRightEdge ? PlasmaCore.Types.RightEdge : PlasmaCore.Types.LeftEdge
         type: PlasmaCore.Dialog.Dock
         flags: Qt.WindowStaysOnTopHint
 
         hideOnWindowDeactivate: true
-
-        property bool rightEdgeParent: {
-            const item = sidePanelStack.item;
-            return (item?.containment && item.containment !== containment.plasmoid
-                && item.containment.location == PlasmaCore.Types.RightEdge)
-        }
-        property bool sideBarOnRightEdge: rightEdgeParent || Qt.application.layoutDirection === Qt.RightToLeft
 
         x: {
             let result = desktop.x;
