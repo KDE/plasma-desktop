@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-30 00:41+0000\n"
-"PO-Revision-Date: 2024-08-24 11:50+0200\n"
+"PO-Revision-Date: 2024-08-31 06:15+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -503,15 +503,13 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "Usuń ten pasek; nie będzie można cofnąć tego działania"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Zamknij"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, fuzzy, kde-format
-#| msgid "Exit Edit Mode"
+#, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
@@ -612,7 +610,7 @@ msgstr "Nieobsługiwany element interfejsu"
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
-msgstr ""
+msgstr "Nowy!"
 
 #: contents/explorer/AppletDelegate.qml:188
 #, kde-format

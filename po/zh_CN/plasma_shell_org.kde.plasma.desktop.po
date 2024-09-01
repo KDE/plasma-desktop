@@ -502,15 +502,13 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "移除此面板；此操作可以撤销"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "关闭"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, fuzzy, kde-format
-#| msgid "Exit Edit Mode"
+#, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
@@ -611,7 +609,7 @@ msgstr "不支持的挂件"
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
-msgstr ""
+msgstr "新！"
 
 #: contents/explorer/AppletDelegate.qml:188
 #, kde-format
@@ -820,7 +818,3 @@ msgstr "退出编辑模式"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "面板焦点指示器"
-
-#~ msgctxt "@action:button Done configuring the panel"
-#~ msgid "Done"
-#~ msgstr "完成"
