@@ -18,4 +18,6 @@ Label {
     fontSizeMode: Text.Fit
     minimumPixelSize: 6
     font.pixelSize: text.length === 1 ? 80 : 40
+
+    renderType: Text.QtRendering
 }
