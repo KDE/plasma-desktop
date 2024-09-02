@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-24 00:41+0000\n"
-"PO-Revision-Date: 2024-07-06 21:09+0530\n"
+"PO-Revision-Date: 2024-09-01 20:05+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,13 +15,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: basemodel.cpp:157
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@title:group Launch app"
 msgid "Launch"
-msgstr ""
+msgstr "ஏவு"
 
 #: globalaccelmodel.cpp:235
 #, kde-format
@@ -47,46 +47,41 @@ msgid "Failed to communicate with global shortcuts daemon"
 msgstr "பொது சுருக்குவழி பின்னணி சேவையை தொடர்பு கொள்ளுதல் தோல்வியடைந்தது"
 
 #: kcm_keys.cpp:378
-#, fuzzy, kde-kuit-format
-#| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
-#| msgid ""
-#| "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
-#| "Do you want to reassign it?"
+#, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action "
 "<interface>%3</interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
-"%1 என்ற சுருக்குவழி, '%3' என்ற பொதுவான %2 செயலுக்கு ஏற்கனவே நியமிக்கப்பட்டுள்ளது.\n"
-"நியமனத்தை மாற்ற விரும்புகிறீர்களா?"
+"<shortcut>%1</shortcut> என்ற சுருக்குவழி, <interface>%3</interface> என்ற "
+"பொதுவான %2 செயலுக்கு ஏற்கனவே நியமிக்கப்பட்டுள்ளது.<nl/><nl/>%4 என்பதற்கு அதை நியமிக்க "
+"வேண்டுமா?"
 
 #: kcm_keys.cpp:384
-#, fuzzy, kde-kuit-format
-#| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
-#| msgid ""
-#| "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
-#| "Do you want to reassign it?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to action <interface>"
 "%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
 "action <interface>%4</interface> of <application>%5</application>?"
 msgstr ""
-"%1 என்ற சுருக்குவழி, '%3' என்ற பொதுவான %2 செயலுக்கு ஏற்கனவே நியமிக்கப்பட்டுள்ளது.\n"
-"நியமனத்தை மாற்ற விரும்புகிறீர்களா?"
+"<shortcut>%1</shortcut> என்ற சுருக்குவழி, <application>%3</application> என்ற "
+"செயலியின் <interface>%2</interface> என்ற செயலுக்கு ஏற்கனவே நியமிக்கப்பட்டுள்ளது.<nl/"
+"><nl/><application>%5</application> என்ற செயலியின் <interface>%4</interface> "
+"எனும் செயலுக்கு அதை நியமிக்க வேண்டுமா?"
 
 #: kcm_keys.cpp:393
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
-msgstr ""
+msgstr "சுருக்குவழி முரண்பாட்டை தீர்க்கவும்"
 
 #: kcm_keys.cpp:403
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr ""
+msgstr "மாற்று"
 
 #: standardshortcutsmodel.cpp:34
 #, kde-format
@@ -139,9 +134,7 @@ msgid "Common Actions"
 msgstr "பொதுவான செயல்கள்"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgctxt "@action: button Import shortcut scheme"
-#| msgid "Import…"
+#, kde-format
 msgctxt "@action:button Import shortcut scheme"
 msgid "Import…"
 msgstr "இறக்குமதி செய்…"
@@ -170,9 +163,7 @@ msgid ""
 msgstr "ஏற்றுமதி செய்யும் திட்டத்தில் இருக்க வேண்டிய கூறுகளை தேர்ந்தெடுக்கவும்"
 
 #: ui/main.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@action:button Export shortcut scheme"
-#| msgid "Export…"
+#, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export"
 msgstr "ஏற்றுமதி செய்…"
@@ -196,57 +187,47 @@ msgid "Command or Script…"
 msgstr "சிறுநிரல் அல்லது கட்டளை…"
 
 #: ui/main.qml:225
-#, fuzzy, kde-format
-#| msgctxt "@action:button Export shortcut scheme"
-#| msgid "Export…"
+#, kde-format
 msgctxt ""
 "@option:check accessible export shortcuts %1 is application/group name"
 msgid "Export %1"
-msgstr "ஏற்றுமதி செய்…"
+msgstr "%1 தனை ஏற்றுமதி செய்…"
 
 #: ui/main.qml:234
-#, fuzzy, kde-format
-#| msgctxt "@tooltip:button %1 is the text of a custom command"
-#| msgid "Edit command for %1"
+#, kde-format
 msgctxt "@action:button accessible %1 is the name of a custom command"
 msgid "Edit command for %1"
-msgstr "%1-க்கான கட்டளையை இயக்கு"
+msgstr "%1-க்கான கட்டளையை திருத்து"
 
 #: ui/main.qml:250
-#, fuzzy, kde-format
-#| msgctxt "@tooltip:button %1 is the text of a custom command"
-#| msgid "Edit command for %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the text of a custom command"
 msgid "Edit command for %1"
-msgstr "%1-க்கான கட்டளையை இயக்கு"
+msgstr "%1-க்கான கட்டளையை திருத்த விடும்"
 
 #: ui/main.qml:258
-#, fuzzy, kde-format
-#| msgid "Remove all shortcuts for %1"
+#, kde-format
 msgctxt "@action:button accessible %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "%1-க்கான அனைத்து சுருக்குவழிகளையும் நீக்கு"
 
 #: ui/main.qml:267
-#, fuzzy, kde-format
-#| msgid "Remove all shortcuts for %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the text of a shortcut category"
 msgid "Remove all shortcuts for %1"
-msgstr "%1-க்கான அனைத்து சுருக்குவழிகளையும் நீக்கு"
+msgstr "%1 எனும் பகுப்புக்கான் அனைத்து சுருக்குவழிகளையும் நீக்கும்"
 
 #: ui/main.qml:274
-#, fuzzy, kde-format
-#| msgid "Undo deletion"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Undo deletion"
-msgstr "நீக்கியதை மீட்டமை"
+msgstr "நீக்கியதை திரும்பப்பெறு"
 
 #: ui/main.qml:279
-#, fuzzy, kde-format
-#| msgid "Undo deletion"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo deletion"
-msgstr "நீக்கியதை மீட்டமை"
+msgstr "நீக்கியதை திரும்பப்பெற விடும்"
 
 #: ui/main.qml:333
 #, kde-format
@@ -300,18 +281,16 @@ msgid "Enter a command or choose a script file:"
 msgstr "கட்டளையையோ சிறுநிரல்கோப்பையோ தேர்ந்தெடுக்கவும்:"
 
 #: ui/main.qml:468
-#, fuzzy, kde-format
-#| msgid "Commands"
+#, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
-msgstr "கட்டளைகள்"
+msgstr "கட்டளை:"
 
 #: ui/main.qml:474
-#, fuzzy, kde-format
-#| msgid "Commands"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
-msgstr "கட்டளைகள்"
+msgstr "கட்டளை"
 
 #: ui/main.qml:481
 #, kde-format
@@ -320,24 +299,22 @@ msgid "Choose…"
 msgstr "தேர்ந்தெடு…"
 
 #: ui/main.qml:482
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Choose Script File"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
-msgstr "சிறுநிரல் கோப்பைத் தேர்ந்தெடுப்பது"
+msgstr "சிறுநிரல் கோப்பைத் தேர்ந்தெடு"
 
 #: ui/main.qml:490
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
-msgstr ""
+msgstr "பெயர்:"
 
 #: ui/main.qml:491
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
-msgstr ""
+msgstr "பெயரை இங்கு உள்ளிடவும்"
 
 #: ui/main.qml:503
 #, kde-format
@@ -351,7 +328,7 @@ msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
 "extensions"
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
-msgstr ""
+msgstr "சிறுநிரல் கோப்புகள் (.sh, .bash, .zsh போன்றவை) (*.*sh)"
 
 #: ui/main.qml:528
 #, kde-format
@@ -420,15 +397,13 @@ msgid "Custom shortcuts"
 msgstr "தனிப்பட்ட சுருக்குவழிகள்"
 
 #: ui/ShortcutActionDelegate.qml:180
-#, fuzzy, kde-format
-#| msgid "Delete this shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
-msgstr "இந்த சுருக்குவழியை நீக்கு"
+msgstr "சுருக்குவழியை நீக்கு"
 
 #: ui/ShortcutActionDelegate.qml:184
-#, fuzzy, kde-format
-#| msgid "Delete this shortcut"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this shortcut"
 msgstr "இந்த சுருக்குவழியை நீக்கு"
@@ -440,25 +415,22 @@ msgid "Add…"
 msgstr "சேர்…"
 
 #: ui/ShortcutActionDelegate.qml:191
-#, fuzzy, kde-format
-#| msgid "Add custom shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
-msgstr "தனிப்பட்ட சுருக்குவழியை சேர்"
+msgstr "தனிப்பயன் சுருக்குவழியை சேர்"
 
 #: ui/ShortcutActionDelegate.qml:226
-#, fuzzy, kde-format
-#| msgid "Cancel capturing of new shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
-msgstr "புதிய சுருக்குவழியை பதிவு செய்தலை ரத்து செய்"
+msgstr "சுருக்குவழியை பதிவு செய்வதை ரத்து செய்"
 
 #: ui/ShortcutActionDelegate.qml:230
-#, fuzzy, kde-format
-#| msgid "Cancel capturing of new shortcut"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel capturing of new shortcut"
-msgstr "புதிய சுருக்குவழியை பதிவு செய்தலை ரத்து செய்"
+msgstr "புதிய சுருக்குவழியை பதிவு செய்வதை ரத்து செய்யும்"
 
 #~ msgctxt "Template for file dialog"
 #~ msgid "Script file (*.*sh)"

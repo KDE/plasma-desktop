@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-31 00:40+0000\n"
-"PO-Revision-Date: 2024-08-10 16:28+0200\n"
+"PO-Revision-Date: 2024-09-01 17:16+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -154,39 +154,34 @@ msgid "Switch to %1"
 msgstr "Passa a %1"
 
 #: package/contents/ui/main.qml:592
-#, fuzzy, kde-format
-#| msgid "Show Activity Manager…"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Show Activity Manager"
-msgstr "Mostra gestore delle attività..."
+msgstr "Mostra il gestore delle attività"
 
 #: package/contents/ui/main.qml:598
-#, fuzzy, kde-format
-#| msgid "Add Virtual Desktop"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Add Virtual Desktop"
 msgstr "Aggiungi desktop virtuale"
 
 #: package/contents/ui/main.qml:604
-#, fuzzy, kde-format
-#| msgid "Remove Virtual Desktop"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Remove Virtual Desktop"
 msgstr "Rimuovi desktop virtuale"
 
 #: package/contents/ui/main.qml:611
-#, fuzzy, kde-format
-#| msgid "Configure Virtual Desktops…"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "&Configure Activities…"
-msgstr "Configura i desktop virtuali..."
+msgstr "&Configura le attività…"
 
 #: package/contents/ui/main.qml:616
-#, fuzzy, kde-format
-#| msgid "Configure Virtual Desktops…"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Configure Virtual Desktops…"
-msgstr "Configura i desktop virtuali..."
+msgstr "Configura desktop virtuali..."
 
 #~ msgid "Activate %1"
 #~ msgstr "Attiva %1"

@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-22 00:41+0000\n"
-"PO-Revision-Date: 2024-08-18 14:04+0200\n"
+"PO-Revision-Date: 2024-08-25 11:58+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -384,12 +384,10 @@ msgstr ""
 "raccourci personnalisé."
 
 #: ui/main.qml:385
-#, fuzzy, kde-format
-#| msgctxt "@label:group Shotcut to change the keyboard layout. Keep it short"
-#| msgid "Change layout shortcut:"
+#, kde-format
 msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
-msgstr "Modifier le raccourci de la disposition :"
+msgstr "Modifier un raccourci de disposition :"
 
 #: ui/main.qml:409
 #, kde-format
