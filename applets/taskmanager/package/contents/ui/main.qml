@@ -403,17 +403,6 @@ PlasmoidItem {
                 }
             }
 
-            secondaryPoint: {
-                if (tasks.toolTipAreaItem === null) {
-                    return Qt.point(0, 0);
-                }
-                const x = tasks.toolTipAreaItem.x;
-                const y = tasks.toolTipAreaItem.y;
-                const height = tasks.toolTipAreaItem.height;
-                const width = tasks.toolTipAreaItem.width;
-                return Qt.point(x+width/2, height);
-            }
-
             LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
             anchors {
                 left: parent.left
