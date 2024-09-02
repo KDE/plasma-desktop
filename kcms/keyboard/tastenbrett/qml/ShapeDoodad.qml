@@ -12,8 +12,8 @@ ShapeCanvas {
 
     shape: doodad.shape
 
-    x: doodad.left
-    y: doodad.top
+    x: doodad.left + shape.bounds.x
+    y: doodad.top + shape.bounds.y
     z: doodad.priority
     // Unlike sections we'll rotate doodads in whatever way desired.
     // They do not contain anything that could be up-side-down

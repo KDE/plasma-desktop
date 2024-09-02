@@ -15,6 +15,6 @@ Outline::Outline(XkbOutlinePtr outline_, XkbDescPtr xkb_, QObject *parent)
 {
     for (int i = 0; i < outline->num_points; ++i) {
         const auto p = outline->points + i;
-        points.push_back(QPoint(p->x, p->y));
+        points.push_back(QPointF(p->x, p->y));
     }
 }

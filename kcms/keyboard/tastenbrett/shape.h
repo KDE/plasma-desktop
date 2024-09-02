@@ -15,11 +15,11 @@ class Shape : public XkbObject
     Q_OBJECT
 
     Q_PROPERTY(QList<QObject *> outlines MEMBER outlines CONSTANT)
-    Q_PROPERTY(QRect bounds MEMBER bounds CONSTANT)
+    Q_PROPERTY(QRectF bounds MEMBER bounds CONSTANT)
 public:
     Shape(XkbShapePtr shape_, XkbDescPtr xkb_, QObject *parent = nullptr);
 
     XkbShapePtr shape = nullptr;
     QList<QObject *> outlines;
-    QRect bounds;
+    QRectF bounds;
 };

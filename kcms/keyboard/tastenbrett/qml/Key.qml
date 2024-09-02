@@ -40,12 +40,12 @@ ShapeCanvas {
         const siblings = parent.children.filter(item => item !== this);
         if (parent.row.orientation === Qt.Horizontal) {
             const previousX = Math.max(...siblings.map(item => item.x + item.width),  0);
-            x = previousX + key.gap;
+            x = previousX + key.gap + shape.bounds.x;
             y = shape.bounds.y;
         } else {
             const previousY = Math.max(...siblings.map(item => item.y + item.height), 0);
-            y = previousY + key.gap;
-            x = shape.bounds.y;
+            y = previousY + key.gap + shape.bounds.y;
+            x = shape.bounds.x;
         }
     }
 }

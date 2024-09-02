@@ -51,6 +51,9 @@ Canvas {
         ctx.translate(translation, translation)
         ctx.scale(scale, scale)
 
+        // Acount for offset bounds (positive or negative!)
+        ctx.translate(-shape.bounds.x, -shape.bounds.y)
+
         ctx.beginPath()
 
         for (var i in shape.outlines) {
