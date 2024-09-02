@@ -112,78 +112,122 @@ audible cues, or who have difficulty using a keyboard.
 </sect3>
 
 <sect3 id="access-modifier-keys">
-<title><guilabel>Modifier keys</guilabel></title>
+<title><guilabel>Modifier Keys</guilabel></title>
 
-<para>There are the two sections <guilabel>Sticky Keys</guilabel>
-and <guilabel>Locking Keys</guilabel> to this panel.</para>
+<para>
+    Modifier keys are special keys on your keyboard that modify the behavior of
+    the next key that is pressed. For example, pressing Ctrl + v will paste the
+    contents of your clipboard on a text editor instead of simply typing the
+    letter v. The most common modifier keys are:
+</para>
+
+<itemizedlist>
+    <listitem><para>Ctrl</para></listitem>
+    <listitem><para>Shift</para></listitem>
+    <listitem><para>Alt</para></listitem>
+    <listitem><para>Meta (also known as Super or Windows key)</para></listitem>
+</itemizedlist>
 
 <variablelist>
 <varlistentry>
-<term><guilabel>Use Sticky Keys</guilabel></term>
+<term><guilabel>Sticky Keys:</guilabel></term>
 <listitem>
-<para>
-If this option is enabled, you can press and release the &Shift;,
-&Alt; or &Ctrl; keys, and then press another key to get a key combo
-(example: <keycombo action="simul">&Ctrl;&Alt;&Del;</keycombo> could
-be done with &Ctrl;, then &Alt; and then &Del;).
-</para>
+    <para>
+        Typically, to trigger a keyboard shortcut like
+        <keycombo action="simul">&Ctrl;&Alt;&Del;</keycombo>, you would:
+    </para>
+    <itemizedlist>
+        <listitem><para>Press and hold &Ctrl;</para></listitem>
+        <listitem><para>Press and hold &Alt; while holding &Ctrl;</para></listitem>
+        <listitem><para>Press and release T while holding &Ctrl; and &Alt;</para></listitem>
+        <listitem><para>Release &Ctrl; and &Alt;</para></listitem>
+    </itemizedlist>
+    <para>
+        In other words, all the modifier keys would need to be held down while performing
+        the shortcut. This can cause strain in the hands, especially if you suffer from
+        any motor skill issues.
+    </para>
+    <para>
+        If Sticky Keys is enabled, modifier keys will behave as though they <quote>stick</quote>
+        in place, that is, they no longer need to be held down, and you will only need to do the
+        following in order to trigger the shortcut:
+    </para>
+    <itemizedlist>
+        <listitem><para>Press and release &Ctrl;</para></listitem>
+        <listitem><para>Press and release &Alt;</para></listitem>
+        <listitem><para>Press and release T</para></listitem>
+    </itemizedlist>
 
-<para>
-Also in this section is a check box labeled <guilabel>Lock Sticky
-Keys</guilabel>.  If this check box is enabled, the &Alt;, &Ctrl;
-and &Shift; keys stay <quote>selected</quote> until you
-<quote>de-selected</quote> them.
-</para>
+    <para>
+        If the next check box, <guilabel>Lock sticky keys</guilabel>, is enabled, modifier keys
+        stay <quote>selected</quote> until you <quote>de-select</quote> them. As an example:
+    </para>
 
-<para>
-As an example:
-</para>
-<variablelist>
-<varlistentry>
-<term>With <guilabel>Lock Sticky Keys</guilabel> disabled:</term>
-<listitem>
-<para>If you press the &Shift; key then press the
-<keycap>F</keycap> key, the computer interprets this as <keycombo
-action="simul">&Shift;<keycap>F</keycap></keycombo>.  Now if you
-type a <keycap>P</keycap>, the computer interprets this as the letter p
-(no shift).
-</para>
+    <variablelist>
+        <varlistentry>
+            <term>With <guilabel>Lock Sticky Keys</guilabel> disabled:</term>
+            <listitem>
+                <para>If you press the &Shift; key then press the
+                    <keycap>F</keycap> key, the computer interprets this as <keycombo
+                        action="simul">&Shift;<keycap>F</keycap></keycombo>.  Now if you
+                    type a <keycap>P</keycap>, the computer interprets this as the letter p
+                    (no shift).
+                </para>
+            </listitem>
+        </varlistentry>
+
+        <varlistentry>
+            <term>With <guilabel>Lock Sticky Keys</guilabel> enabled:</term>
+            <listitem>
+                <para>
+                    If you press the &Shift; key <emphasis>twice</emphasis> then press the <keycap>F</keycap> key,
+                    the computer interprets this as <keycombo
+                        action="simul">&Shift;<keycap>F</keycap></keycombo>.  Now if you
+                    type a <keycap>P</keycap>, the computer interprets this as the letter P
+                    (<keycombo action="simul">&Shift;<keycap>P</keycap></keycombo>). To
+                    de-select the &Shift; key, press it again.
+                </para>
+            </listitem>
+        </varlistentry>
+    </variablelist>
+
+    <para>
+        If the check box <guilabel>Disable when two keys are held down</guilabel> is enabled,
+        pressing and holding two keys, for example Shift P, will cancel or <quote>deselect</quote>
+        the modifier keys that have been previously locked.
+    </para>
+    <para>
+        If the check box <guilabel>Ring system bell when modifier keys are used</guilabel> is enabled,
+        every time a modifier key is pressed, the system bell will ring. At least one of the bell
+        options provided in the <link linkend="access-bell">System Bell</link> page should
+        be enabled for this option to work.
+    </para>
+
+    <para>
+        The following two options are feedback options, and they don't need sticky keys to be active.
+    </para>
+
+    <para>
+        If the check box <guilabel>Ring system bell when locking keys are used</guilabel> is enabled,
+        every time a locking key is pressed, the system bell will ring. At least one of the bell
+        options provided in the <link linkend="access-bell">System Bell</link> page should
+        be enabled for this option to work. The locking keys are Caps Lock, Num Lock, and Scroll Lock.
+    </para>
+
+    <para>
+        If the check box <guilabel>Show notification when modifier or locking keys are used</guilabel> is enabled,
+        a visual Plasma notification will show up for five seconds when any of the mentioned keys are pressed
+        with a message like <quote>The Shift key is now active</quote>.
+    </para>
+
+    <para>
+        Click the <guibutton>Configure Notifications...</guibutton> button to open a dialog
+        that allows you to edit the notifications for all accessibility features, including
+        whether the notification should make a sound or show a popup.
+    </para>
+
 </listitem>
 </varlistentry>
-
-<varlistentry>
-<term>With <guilabel>Lock Sticky Keys</guilabel> enabled:</term>
-<listitem>
-<para>
-If you press the &Shift; key <emphasis>twice</emphasis> then press the <keycap>F</keycap> key,
-the computer interprets this as <keycombo
-action="simul">&Shift;<keycap>F</keycap></keycombo>.  Now if you
-type a <keycap>P</keycap>, the computer interprets this as the letter P
-(<keycombo action="simul">&Shift;<keycap>P</keycap></keycombo>). To
-de-select the &Shift; key, press it again.
-</para>
-</listitem>
-</varlistentry>
-</variablelist>
-<!--this is missing - explain it
-<para><guilabel>Turn sticky keys off when two keys are pressed simultaneously</guilabel></para>
-<para><guilabel>Use system bell whenever a modifier gets latched, locked or unlocked</guilabel></para>
--->
-</listitem>
-</varlistentry>
-<!-- explain use case etc
-<guilabel>Locking Keys</guilabel> what is that?
-<varlistentry>
-<term><guilabel>Use system bell whenever a locking key gets activated or deactivated</guilabel></term>
-<listitem><para></para></listitem>
-</varlistentry>
-<varlistentry>
-<term><guilabel>Use Plasma's system notification mechanism whenever a modifier or locking key 
-changes its state</guilabel></term>
-<listitem><para>Click the <guibutton>Configure Notifications...</guibutton> button to open a dialog 
-which allows you to edit the notifications for status changes of all keys</para></listitem>
-</varlistentry>
--->
 </variablelist>
 
 </sect3>
