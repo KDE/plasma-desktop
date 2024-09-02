@@ -41,9 +41,9 @@ KCMTouchpad::KCMTouchpad(QObject *parent, const KPluginMetaData &data)
 
     m_initError = !m_backend->errorString().isNull();
 
-    QQmlEngine *engine = qApp->property("__qmlEngine").value<QQmlEngine *>();
-    if (engine) {
-        m_view = new QQuickWidget(engine, widget());
+    auto engine = qApp->property("__qmlEngine").value<std::weak_ptr<QQmlEngine>>();
+    if (auto locked = engine.lock(); locked) {
+        m_view = new QQuickWidget(locked.get(), widget());
     } else {
         m_view = new QQuickWidget(widget());
     }
