@@ -144,29 +144,33 @@ Rules Rules::readRules()
         m = rxkb_model_next(m);
     }
 
-    rxkb_layout *l = rxkb_layout_first(context);
-    rxkb_iso639_code *iso639;
-    int layoutIndex = -1;
-    while (l != nullptr) {
+    for (rxkb_layout *l = rxkb_layout_first(context); l != nullptr; l = rxkb_layout_next(l)) {
         QStringList languages;
-        iso639 = rxkb_layout_get_iso639_first(l);
-        while (iso639 != nullptr) {
+        for (rxkb_iso639_code *iso639 = rxkb_layout_get_iso639_first(l); iso639 != nullptr; iso639 = rxkb_iso639_code_next(iso639)) {
             languages << QString::fromUtf8(rxkb_iso639_code_get_code(iso639));
-            iso639 = rxkb_iso639_code_next(iso639);
         }
 
+        const char *layoutName = rxkb_layout_get_name(l);
         const char *variant = rxkb_layout_get_variant(l);
+
+        // Add new layout
         if (variant == nullptr) {
-            LayoutInfo layout(rxkb_layout_get_name(l), rxkb_layout_get_description(l));
+            LayoutInfo layout(layoutName, rxkb_layout_get_description(l));
             layout.languages = languages;
-            layoutIndex = rules.layoutInfos.size();
             rules.layoutInfos << layout;
-        } else if (layoutIndex != -1) {
+            continue;
+        }
+
+        // Find the layout and add the new variant
+        auto layoutIt = std::find_if(rules.layoutInfos.rbegin(), rules.layoutInfos.rend(), [layoutName](const auto &info) {
+            return info.name == layoutName;
+        });
+
+        if (layoutIt != rules.layoutInfos.rend()) {
             VariantInfo v(variant, rxkb_layout_get_description(l));
             v.languages = languages;
-            rules.layoutInfos[layoutIndex].variantInfos << v;
+            layoutIt->variantInfos << v;
         }
-        l = rxkb_layout_next(l);
     }
 
     rxkb_option_group *g = rxkb_option_group_first(context);
