@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-29 00:41+0000\n"
-"PO-Revision-Date: 2024-07-01 11:07+0200\n"
+"PO-Revision-Date: 2024-09-02 16:05+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -314,8 +314,7 @@ msgid "Activation shortcuts:"
 msgstr "Gestures de Activation "
 
 #: ui/ActivationShortcuts.qml:18
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "Enable activation shortcuts"
 msgid "Enable"
 msgstr "Habilita"
@@ -450,7 +449,7 @@ msgstr "Usa le campana de systema quandocunque un clave es rejectate"
 #| msgid "Invert Screen"
 msgctxt "@option:radio Invert screen colors when a system bell is rung"
 msgid "Invert screen colors"
-msgstr "Inverte le schermo"
+msgstr "Inverte colores de schermo"
 
 #: ui/Bell.qml:141
 #, fuzzy, kde-format
@@ -474,12 +473,10 @@ msgstr "Duration:"
 #: ui/Bell.qml:181 ui/KeyboardFilters.qml:55 ui/KeyboardFilters.qml:151
 #: ui/MouseNavigation.qml:51 ui/MouseNavigation.qml:73
 #: ui/MouseNavigation.qml:95
-#, fuzzy, kde-format
-#| msgid "%1 min"
-#| msgid_plural "%1 min"
+#, kde-format
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "%1 min"
+msgstr[0] "%1ms"
 msgstr[1] "%1 min"
 
 #: ui/Bell.qml:185 ui/KeyboardFilters.qml:59 ui/KeyboardFilters.qml:155
@@ -489,8 +486,8 @@ msgstr[1] "%1 min"
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ms"
+msgstr[1] "ms"
 
 #: ui/ColorblindnessCorrection.qml:22
 #, kde-format
@@ -509,31 +506,31 @@ msgstr "Habilita"
 #, kde-format
 msgctxt "@label"
 msgid "Mode:"
-msgstr ""
+msgstr "Modo:"
 
 #: ui/ColorblindnessCorrection.qml:41
 #, kde-format
 msgctxt "@option"
 msgid "Protanopia (red weak)"
-msgstr ""
+msgstr "Protanopia (rubie debile)"
 
 #: ui/ColorblindnessCorrection.qml:42
 #, kde-format
 msgctxt "@option"
 msgid "Deuteranopia (green weak)"
-msgstr ""
+msgstr "Deuteranopia (verde debile)"
 
 #: ui/ColorblindnessCorrection.qml:43
 #, kde-format
 msgctxt "@option"
 msgid "Tritanopia (blue-yellow)"
-msgstr ""
+msgstr "Tritanopia (blau-jalne)"
 
 #: ui/ColorblindnessCorrection.qml:58
 #, kde-format
 msgctxt "@label"
 msgid "Intensity:"
-msgstr ""
+msgstr "Intensitate:"
 
 #: ui/ColorblindnessCorrection.qml:81
 #, kde-format
@@ -550,22 +547,22 @@ msgstr ""
 #: ui/ColorblindnessCorrection.qml:111
 #, kde-format
 msgid "Red"
-msgstr ""
+msgstr "Rubie"
 
 #: ui/ColorblindnessCorrection.qml:112
 #, kde-format
 msgid "Green"
-msgstr ""
+msgstr "Verde"
 
 #: ui/ColorblindnessCorrection.qml:113
 #, kde-format
 msgid "Blue"
-msgstr ""
+msgstr "Blau"
 
 #: ui/ColorblindnessCorrection.qml:114
 #, kde-format
 msgid "Purple"
-msgstr ""
+msgstr "Purpura"
 
 #: ui/KeyboardFilters.qml:17
 #, kde-format
@@ -652,7 +649,7 @@ msgstr "Sono de campana de systema quando un clave es rejectate"
 #| msgid "Use System Bell"
 msgctxt "@title Category name in sidebar"
 msgid "System Bell"
-msgstr "Usa campana de systema"
+msgstr "Campana de systema"
 
 #: ui/main.qml:33
 #, kde-format
@@ -697,8 +694,7 @@ msgid "Shake Cursor"
 msgstr "Agita Cursor"
 
 #: ui/ModifierKeys.qml:17
-#, fuzzy, kde-format
-#| msgid "Sticky keys:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sticky keys:"
 msgstr "Claves collate:"
@@ -724,7 +720,7 @@ msgstr ""
 #| msgid "Lock the sticky keys"
 msgctxt "@option:check"
 msgid "Lock sticky keys"
-msgstr "Bloca claves collose"
+msgstr "B&loca claves collose"
 
 #: ui/ModifierKeys.qml:51
 #, kde-format
@@ -745,8 +741,7 @@ msgid "Ring system bell when modifier keys are used"
 msgstr "Sono de campana de systema quando claves de modificator es usate"
 
 #: ui/ModifierKeys.qml:88
-#, fuzzy, kde-format
-#| msgid "Feedback:"
+#, kde-format
 msgctxt "@option:check Feedback options:"
 msgid "Feedback:"
 msgstr "Retorno :"
@@ -765,8 +760,7 @@ msgid "The locking keys are Caps Lock, Num Lock, and Scroll Lock."
 msgstr ""
 
 #: ui/ModifierKeys.qml:108
-#, fuzzy, kde-format
-#| msgid "Show notification when modifier or locking keys are used"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show notification when modifier or locking keys are used"
 msgstr "Monstra motification quando un modificator o claves blocante es usate "
@@ -779,8 +773,7 @@ msgid "Configure Notifications…"
 msgstr "Configura notificationes ..."
 
 #: ui/MouseNavigation.qml:16
-#, fuzzy, kde-format
-#| msgid "Use number pad to move cursor:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move cursor:"
 msgstr "Usa pannello numeric per mover cursor"
@@ -804,36 +797,31 @@ msgid ""
 msgstr ""
 
 #: ui/MouseNavigation.qml:37
-#, fuzzy, kde-format
-#| msgid "Acceleration delay:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
 msgstr "Retardo de acceleration:"
 
 #: ui/MouseNavigation.qml:59
-#, fuzzy, kde-format
-#| msgid "Repeat interval:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr "Intervallo de repetition:"
 
 #: ui/MouseNavigation.qml:81
-#, fuzzy, kde-format
-#| msgid "Acceleration time:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "Tempore de acceleration:"
 
 #: ui/MouseNavigation.qml:103
-#, fuzzy, kde-format
-#| msgid "Maximum speed:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr "Velocitate maxime:"
 
 #: ui/MouseNavigation.qml:117
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
 msgstr "Acceleration de punctator:"
@@ -852,15 +840,13 @@ msgid "Please install it, then close and reopen this window"
 msgstr ""
 
 #: ui/ScreenReader.qml:27
-#, fuzzy, kde-format
-#| msgid "Enable Screen Reader"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable Screen Reader"
 msgstr "Activa Lector de schermo"
 
 #: ui/ScreenReader.qml:39
-#, fuzzy, kde-format
-#| msgid "Launch Orca Screen Reader Configuration…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Launch Orca Screen Reader Configuration…"
 msgstr "Lancea configuration de Lector de schermo Orca…"
