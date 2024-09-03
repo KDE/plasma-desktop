@@ -12,6 +12,8 @@ import org.kde.kirigami as Kirigami
 import org.kde.kitemmodels as KItemModels
 import org.kde.kcmutils as KCM
 
+import Qt.labs.qmlmodels
+
 KCM.ScrollViewKCM {
     title: i18nc("@title", "Key Bindings")
 
@@ -29,6 +31,7 @@ KCM.ScrollViewKCM {
     KItemModels.KSortFilterProxyModel {
         id: xkbOptionsProxy
         sourceModel: kcm?.xkbOptionsModel ?? undefined
+        sortRoleName: "display"
         sortOrder: Qt.AscendingOrder
         recursiveFilteringEnabled: true
         autoAcceptChildRows: true
@@ -74,7 +77,7 @@ KCM.ScrollViewKCM {
 
     view: TreeView {
         id: treeView
-        boundsBehavior: Flickable.StopAtBounds
+        activeFocusOnTab: true
         alternatingRows: false
         clip: true
         enabled: kcm.keyboardSettings.resetOldXkbOptions
@@ -97,37 +100,84 @@ KCM.ScrollViewKCM {
         }
 
         model: xkbOptionsProxy
+        delegate: chooser
+    }
 
-        delegate: QQC2.TreeViewDelegate {
-            id: delegate
+    DelegateChooser {
+        id: chooser
+        role: "type"
 
-            // you can't use a CheckDelegate as a TreeViewDelegate. This nests the buttons and is pretty bad for accessible
-            contentItem: RowLayout {
-                spacing: Kirigami.Units.smallSpacing
+        DelegateChoice {
+            roleValue: "parentNode"
 
-                QQC2.CheckBox {
-                    id: checkbox
-                    tristate: delegate.isTreeNode && delegate.hasChildren
-                    checkState: model.checkState
-                    onToggled: model.checkState = checkState
+            QQC2.TreeViewDelegate {
+                activeFocusOnTab: true
+                onClicked: treeView.toggleExpanded(row)
+
+                contentItem: RowLayout {
+                    spacing: Kirigami.Units.smallSpacing
+
+                    QQC2.Label {
+                        text: model.display
+                        Layout.fillWidth: true
+                        font.bold: model.checked
+                    }
+
+                    QQC2.ToolButton {
+                        Layout.rightMargin: Kirigami.Units.largeSpacing
+                        icon.name: "edit-reset-symbolic"
+                        text: i18nc("@action:button", "Reset")
+                        visible: model.checked
+                        onClicked: kcm.xkbOptionsModel.clearXkbGroup(model.name)
+
+                        Accessible.description: i18nc("@info accessible", "Reset selected options for this group")
+                        QQC2.ToolTip.text: i18nc("@info:tooltip", "Reset selected options for this group")
+                        QQC2.ToolTip.visible: hovered
+                    }
+                }
+            }
+        }
+
+        DelegateChoice {
+            roleValue: "radio"
+
+            QQC2.TreeViewDelegate {
+                activeFocusOnTab: false
+                contentItem: QQC2.RadioButton {
+                    activeFocusOnTab: true
+                    checked: model.checked
+                    onToggled: model.checked = !model.checked
+                    text: model.display
+                    // Checked state controlled via xkbOptionsModel
+                    autoExclusive: false
 
                     KCM.SettingHighlighter {
-                        highlight: model.checkState !== Qt.Unchecked
+                        highlight: model.checked
                     }
                 }
 
-                QQC2.Label {
-                    Layout.fillWidth: true
-                    text: model.display
-                }
+                onClicked: model.checked = !model.checked
             }
+        }
 
-            onClicked: {
-                if (delegate.isTreeNode && delegate.hasChildren) {
-                    treeView.toggleExpanded(row)
-                } else {
-                    model.checkState = checkbox.checkState === Qt.Checked ? Qt.Unchecked : Qt.Checked
+
+        DelegateChoice {
+            roleValue: "check"
+
+            QQC2.TreeViewDelegate {
+                activeFocusOnTab: false
+                contentItem: QQC2.CheckBox {
+                    activeFocusOnTab: true
+                    checked: model.checked
+                    onToggled: model.checked = !model.checked
+                    text: model.display
+
+                    KCM.SettingHighlighter {
+                        highlight: model.checked
+                    }
                 }
+
+                onClicked: model.checked = !model.checked
             }
         }
     }

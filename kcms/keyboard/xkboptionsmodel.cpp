@@ -75,24 +75,14 @@ QModelIndex XkbOptionsModel::index(int row, int column, const QModelIndex &paren
     return createIndex(row, column, (100 * (parent.row() + 1)) + row);
 }
 
-Qt::ItemFlags XkbOptionsModel::flags(const QModelIndex &index) const
-{
-    if (!index.isValid()) {
-        return Qt::ItemFlags();
-    }
-
-    if (!index.parent().isValid()) {
-        return Qt::ItemIsEnabled | Qt::ItemIsSelectable;
-    }
-
-    return Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable;
-}
-
 QHash<int, QByteArray> XkbOptionsModel::roleNames() const
 {
     return {
         {Qt::DisplayRole, QByteArrayLiteral("display")},
-        {Qt::CheckStateRole, QByteArrayLiteral("checkState")},
+        {Roles::CheckedRole, QByteArrayLiteral("checked")},
+        {Roles::NameRole, QByteArrayLiteral("name")},
+        {Roles::DescriptionRole, QByteArrayLiteral("description")},
+        {Roles::TypeRole, QByteArrayLiteral("type")},
     };
 }
 
@@ -102,33 +92,48 @@ QVariant XkbOptionsModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    int row = index.row();
+    const auto &infos = Rules::self().optionGroupInfos;
 
-    if (role == Qt::DisplayRole) {
+    switch (role) {
+    case Qt::DisplayRole:
+    case Roles::DescriptionRole: {
         if (!index.parent().isValid()) {
-            return Rules::self().optionGroupInfos[row].description;
-        } else {
-            int groupRow = index.parent().row();
-            const OptionGroupInfo xkbGroup = Rules::self().optionGroupInfos[groupRow];
-            return xkbGroup.optionInfos[row].description;
+            return infos.at(index.row()).description;
         }
-    } else if (role == Qt::CheckStateRole) {
-        if (index.parent().isValid()) {
-            int groupRow = index.parent().row();
-            const OptionGroupInfo xkbGroup = Rules::self().optionGroupInfos[groupRow];
-            const QString &xkbOptionName = xkbGroup.optionInfos[row].name;
-            return m_xkbOptions.indexOf(xkbOptionName) == -1 ? Qt::Unchecked : Qt::Checked;
-        } else {
-            int groupRow = index.row();
-            const OptionGroupInfo xkbGroup = Rules::self().optionGroupInfos[groupRow];
-            for (const OptionInfo &optionInfo : xkbGroup.optionInfos) {
-                if (m_xkbOptions.indexOf(optionInfo.name) != -1) {
-                    return Qt::PartiallyChecked;
-                }
-            }
-            return Qt::Unchecked;
-        }
+
+        return infos.at(index.parent().row()).optionInfos.at(index.row()).description;
     }
+    case Roles::NameRole: {
+        if (!index.parent().isValid()) {
+            return infos.at(index.row()).name;
+        }
+
+        return infos.at(index.parent().row()).optionInfos.at(index.row()).name;
+    }
+    case Roles::CheckedRole: {
+        if (!index.parent().isValid()) {
+            const OptionGroupInfo optionGroup = Rules::self().optionGroupInfos.at(index.row());
+            return std::any_of(optionGroup.optionInfos.cbegin(), optionGroup.optionInfos.cend(), [this](const OptionInfo &info) {
+                return m_xkbOptions.indexOf(info.name) >= 0;
+            });
+        }
+
+        const QString &optionName = infos.at(index.parent().row()).optionInfos.at(index.row()).name;
+        return m_xkbOptions.indexOf(optionName) >= 0;
+    }
+    case Roles::TypeRole: {
+        if (!index.parent().isValid()) {
+            return QStringLiteral("parentNode");
+        }
+
+        if (infos.at(index.parent().row()).exclusive) {
+            return QStringLiteral("radio");
+        }
+
+        return QStringLiteral("check");
+    }
+    }
+
     return QVariant();
 }
 
@@ -208,17 +213,20 @@ void XkbOptionsModel::populateWithCurrentXkbOptions()
 
 bool XkbOptionsModel::setData(const QModelIndex &index, const QVariant &value, int role)
 {
-    int groupRow = index.parent().row();
-    if (groupRow < 0) {
+    if (!index.isValid() || !index.parent().isValid()) {
         return false;
     }
 
-    const OptionGroupInfo xkbGroup = Rules::self().optionGroupInfos[groupRow];
-    const OptionInfo option = xkbGroup.optionInfos[index.row()];
+    if (role != Roles::CheckedRole || !value.canConvert(QMetaType::Bool)) {
+        return false;
+    }
 
-    if (value.toInt() == Qt::Checked) {
+    const OptionGroupInfo xkbGroup = Rules::self().optionGroupInfos.at(index.parent().row());
+    const OptionInfo option = xkbGroup.optionInfos.at(index.row());
+
+    if (value.toBool()) {
+        // clear if exclusive
         if (xkbGroup.exclusive) {
-            // clear if exclusive (TODO: radiobutton)
             int idx = m_xkbOptions.indexOf(QRegularExpression(xkbGroup.name + ".*"));
             if (idx >= 0) {
                 for (int i = 0; i < xkbGroup.optionInfos.count(); i++) {
@@ -229,16 +237,20 @@ bool XkbOptionsModel::setData(const QModelIndex &index, const QVariant &value, i
                 }
             }
         }
+
         if (m_xkbOptions.indexOf(option.name) < 0) {
             m_xkbOptions.append(option.name);
         }
+
     } else {
         m_xkbOptions.removeAll(option.name);
     }
 
-    Q_EMIT dataChanged(index, index);
-    Q_EMIT dataChanged(index.parent(), index.parent());
+    Q_EMIT dataChanged(index, index, {Roles::CheckedRole});
+    Q_EMIT dataChanged(index.parent(), index.parent(), {Roles::CheckedRole});
+
     return true;
 }
+
 #include "moc_xkboptionsmodel.cpp"
 #include "xkboptionsmodel.moc"

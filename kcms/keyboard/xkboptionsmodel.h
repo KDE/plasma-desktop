@@ -13,6 +13,12 @@ class KeyboardSettings;
 class XkbOptionsModel final : public QAbstractItemModel
 {
     Q_OBJECT
+    enum Roles {
+        CheckedRole = Qt::UserRole + 1,
+        NameRole,
+        DescriptionRole,
+        TypeRole,
+    };
 
 public:
     XkbOptionsModel(QObject *parent);
@@ -24,7 +30,6 @@ public:
     int rowCount(const QModelIndex &parent) const override;
     QModelIndex parent(const QModelIndex &index) const override;
     QModelIndex index(int row, int column, const QModelIndex &parent) const override;
-    Qt::ItemFlags flags(const QModelIndex &index) const override;
     QHash<int, QByteArray> roleNames() const override;
 
     bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
