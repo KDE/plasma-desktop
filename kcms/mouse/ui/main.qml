@@ -123,7 +123,7 @@ KCMUtils.SimpleKCM {
             spacing: Kirigami.Units.smallSpacing
             QQC2.CheckBox {
                 id: middleEmulation
-                text: i18nd("kcmmouse", "Press left and right buttons for middle-click")
+                text: i18ndc("kcmmouse", "@option:check", "Press left and right buttons for middle-click")
                 enabled: root.device?.supportsMiddleEmulation ?? false
                 checked: enabled && (root.device?.middleEmulation ?? false)
 
@@ -135,11 +135,11 @@ KCMUtils.SimpleKCM {
 
                 QQC2.ToolTip.delay: 1000
                 QQC2.ToolTip.visible: hovered
-                QQC2.ToolTip.text: i18nd("kcmmouse", "Clicking left and right button simultaneously sends middle button click.")
+                QQC2.ToolTip.text: i18ndc("kcmmouse", "@info:tooltip" ,"Pressing the left and right button simultaneously acts as middle-click.")
             }
 
             Kirigami.ContextualHelpButton {
-                toolTipText: i18nd("kcmmouse", "Activating this setting increases mouse click latency by 50ms. The extra delay is needed to correctly detect simultaneous left and right mouse clicks.")
+                toolTipText: i18nd("kcmmouse", "@info:tooltip from ContextualHelpButton", "Activating this setting increases click latency by 50ms. The extra delay is needed to correctly detect simultaneous left and right button presses.")
             }
         }
 
@@ -348,7 +348,7 @@ KCMUtils.SimpleKCM {
 
             QQC2.ToolTip.delay: 1000
             QQC2.ToolTip.visible: hovered
-            QQC2.ToolTip.text: i18nd("kcmmouse", "Touchscreen like scrolling.")
+            QQC2.ToolTip.text: i18nd("kcmmouse", "Touchscreen-like scrolling.")
         }
 
         QQC2.CheckBox {

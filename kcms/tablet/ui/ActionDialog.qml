@@ -174,9 +174,9 @@ Kirigami.Dialog {
                     textRole: "text"
                     valueRole: "value"
                     model: [
-                        { value: Qt.LeftButton, text: i18ndc("kcm_tablet", "@action:inmenu Left mouse click", "Left Click") },
-                        { value: Qt.MiddleButton, text: i18ndc("kcm_tablet", "@action:inmenu Middle mouse click", "Middle Click") },
-                        { value: Qt.RightButton, text: i18ndc("kcm_tablet", "@action:inmenu Right mouse click", "Right Click") }
+                        { value: Qt.LeftButton, text: i18ndc("kcm_tablet", "@action:inmenu Left mouse click", "Left-click") },
+                        { value: Qt.MiddleButton, text: i18ndc("kcm_tablet", "@action:inmenu Middle mouse click", "Middle-click") },
+                        { value: Qt.RightButton, text: i18ndc("kcm_tablet", "@action:inmenu Right mouse click", "Right-click") }
                     ]
 
                     onActivated: actionDialog.inputSequence.setMouseButton(currentValue)

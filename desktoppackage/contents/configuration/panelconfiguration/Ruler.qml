@@ -27,8 +27,16 @@ KSvg.FrameSvgItem {
     property alias maximumLength: rightMaximumLengthHandle.value
     property bool isHorizontal: root.prefix[0] === 'north' || root.prefix[0] === 'south'
 
-    property string maximumText: (dialogRoot.vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Drag to change maximum height.") : i18nd("plasma_shell_org.kde.plasma.desktop", "Drag to change maximum width.")) + "\n" + i18nd("plasma_shell_org.kde.plasma.desktop", "Double click to reset.")
-    property string minimumText: (dialogRoot.vertical ? i18nd("plasma_shell_org.kde.plasma.desktop", "Drag to change minimum height.") : i18nd("plasma_shell_org.kde.plasma.desktop", "Drag to change minimum width.")) + "\n" + i18nd("plasma_shell_org.kde.plasma.desktop", "Double click to reset.")
+    property string maximumText: (
+        dialogRoot.vertical
+            ? i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:tooltip slider handle", "Drag to change maximum height.")
+            : i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:tooltip slider handle", "Drag to change maximum width.")
+        ) + "\n" + i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:tooltip slider handle", "Double-click to reset.")
+    property string minimumText: (
+        dialogRoot.vertical
+            ? i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:tooltip slider handle", "Drag to change minimum height.")
+            : i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:tooltip slider handle", "Drag to change minimum width.")
+        ) + "\n" + i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:tooltip slider handle", "Double-click to reset.")
 
     imagePath: "widgets/containment-controls"
     implicitWidth: Math.max(offsetHandle.width, rightMinimumLengthHandle.width + rightMaximumLengthHandle.width)
@@ -75,7 +83,8 @@ KSvg.FrameSvgItem {
             bottom: root.isHorizontal ? root.bottom : undefined
         }
         graphicElementName: "offsetslider"
-        description: i18nd("plasma_shell_org.kde.plasma.desktop", "Drag to change position on this screen edge.\nDouble click to reset.")
+        description: i18nd("plasma_shell_org.kde.plasma.desktop", "@info:tooltip slider handle",
+                           "Drag to change position on this screen edge.\nDouble-click to reset.")
         offset: panel.alignment === Qt.AlignCenter ? 0 : (dialogRoot.vertical ? panel.height : panel.width) / 2
         property int position: (dialogRoot.vertical) ? y + height / 2 : x + width / 2
         onPositionChanged: {

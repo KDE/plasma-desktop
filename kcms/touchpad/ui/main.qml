@@ -231,11 +231,11 @@ KCM.SimpleKCM {
             spacing: Kirigami.Units.smallSpacing
             QQC2.CheckBox {
                 id: middleEmulation
-                text: i18nd("kcm_touchpad", "Press left and right buttons for middle click")
+                text: i18ndc("kcm_touchpad", "@option:check", "Press left and right buttons to middle-click")
 
                 hoverEnabled: true
                 QQC2.ToolTip {
-                    text: i18nd("kcm_touchpad", "Clicking left and right button simultaneously sends middle button click.")
+                    text: i18ndc("kcm_touchpad", "@info:tooltip for checkbox", "Pressing the left and right button simultaneously acts as middle-click.")
                     visible: parent.hovered
                     delay: 1000
                 }
@@ -261,7 +261,7 @@ KCM.SimpleKCM {
             }
 
             Kirigami.ContextualHelpButton {
-                toolTipText: i18nd("kcm_touchpad", "Activating this setting increases mouse click latency by 50ms. The extra delay is needed to correctly detect simultaneous left and right mouse clicks.")
+                toolTipText: i18ndc("kcm_touchpad", "@info:tooltip from ContextualHelpButton", "Activating this setting increases click latency by 50ms. The extra delay is needed to correctly detect simultaneous left and right button presses.")
             }
         }
 
@@ -593,7 +593,7 @@ KCM.SimpleKCM {
 
             hoverEnabled: true
             QQC2.ToolTip {
-                text: i18nd("kcm_touchpad", "Disable horizontal scrolling")
+                text: i18nd("kcm_touchpad", "Disable horizontal scrolling.")
                 visible: parent.hovered
                 delay: 1000
             }
@@ -606,12 +606,12 @@ KCM.SimpleKCM {
         // Tapping
         QQC2.CheckBox {
             id: tapToClick
-            Kirigami.FormData.label: i18nd("kcm_touchpad", "Tapping:")
-            text: i18nd("kcm_touchpad", "Tap-to-click")
+            Kirigami.FormData.label: i18ndc("kcm_touchpad", "@label for checkbox, tap-to-click", "Tapping:")
+            text: i18ndc("kcm_touchpad", "@option:check", "Tap-to-click")
 
             hoverEnabled: true
             QQC2.ToolTip {
-                text: i18nd("kcm_touchpad", "Single tap is left button click.")
+                text: i18ndc("kcm_touchpad", "@info:tooltip", "Single tap to left-click.")
                 visible: parent.hovered
                 delay: 1000
             }
@@ -774,7 +774,7 @@ KCM.SimpleKCM {
 
         ColumnLayout {
             id: rightClickMethod
-            Kirigami.FormData.label: i18nd("kcm_touchpad", "Right-click:")
+            Kirigami.FormData.label: i18ndc("kcm_touchpad", "@label for radiobutton group, configure right-click with touch-pad integrated button (pressing into the touchpad)", "Integrated right-click:")
             Kirigami.FormData.buddyFor: rightClickMethodAreas
 
             spacing: Kirigami.Units.smallSpacing
@@ -808,33 +808,78 @@ KCM.SimpleKCM {
 
             QQC2.RadioButton {
                 id: rightClickMethodAreas
-                text: i18nd("kcm_touchpad", "Press bottom-right corner")
+                text: i18ndc("kcm_touchpad", "@option:radio touchpad integrated right-click", "Press bottom-right corner")
 
                 hoverEnabled: true
-                QQC2.ToolTip {
-                    text: i18nd("kcm_touchpad", "Software enabled buttons will be added to bottom portion of your touchpad.")
-                    visible: parent.hovered
-                    delay: 1000
+
+                property string toolTipText:middleEmulation.checked
+                    ? i18ndc("kcm_touchpad", "@info:tooltip", "Pressing the bottom right corner of your touchpad acts as right-click. Middle-click by simultaneously pressing the bottom left and bottom right corners.")
+                    : i18ndc("kcm_touchpad", "@info:tooltip", "Pressing the bottom right corner of your touchpad acts as right-click. Middle-click by pressing the bottom central area.")
+                QQC2.ToolTip.text: toolTipText
+                QQC2.ToolTip.visible: hovered
+                QQC2.ToolTip.delay: 1000
+            }
+
+            QQC2.Label {
+                Layout.fillWidth: true
+                visible: !middleClickMethod.visible
+                leftPadding: rightClickMethodAreas.indicator.width
+                text: middleEmulation.checked
+                    ? i18nc("@info shown below radio button", "Middle-click by pressing both bottom corners.")
+                    : i18nc("@info shown below radio button", "Middle-click by pressing bottom center.")
+                textFormat: Text.PlainText
+                elide: Text.ElideRight
+                font: Kirigami.Theme.smallFont
+
+                QQC2.ToolTip.text: rightClickMethodAreas.toolTipText
+                QQC2.ToolTip.visible: labelRightAreasMouseArea.containsMouse
+                QQC2.ToolTip.delay: 1000
+
+                MouseArea {
+                    id: labelRightAreasMouseArea
+                    anchors.fill: parent
+                    hoverEnabled: true
                 }
             }
 
             QQC2.RadioButton {
                 id: rightClickMethodClickfinger
-                text: i18nd("kcm_touchpad", "Press anywhere with two fingers")
+                text: i18ndc("kcm_touchpad", "@option:radio touchpad integrated right-click", "Press touchpad with two fingers")
 
                 hoverEnabled: true
-                QQC2.ToolTip {
-                    text: i18nd("kcm_touchpad", "Tap with two finger to enable right click.")
-                    visible: parent.hovered
-                    delay: 1000
-                }
+
+                property string toolTipText: i18ndc("kcm_touchpad", "@info:tooltip for radiobutton", "Pressing the touchpad anywhere with two fingers acts as right-click.")
+                QQC2.ToolTip.text: toolTipText
+                QQC2.ToolTip.visible: hovered
+                QQC2.ToolTip.delay: 1000
+
                 onCheckedChanged: rightClickMethod.syncCurrent()
+            }
+
+            QQC2.Label {
+                Layout.fillWidth: true
+                visible: !middleClickMethod.visible
+                leftPadding: rightClickMethodClickfinger.indicator.width
+                text: i18nc("@info shown below radio button", "Middle-click by pressing with three fingers.")
+                textFormat: Text.PlainText
+                elide: Text.ElideRight
+                font: Kirigami.Theme.smallFont
+
+                QQC2.ToolTip.text: rightClickMethodClickfinger.toolTipText
+                QQC2.ToolTip.visible: labelRightClickfingerMouseArea.containsMouse
+                QQC2.ToolTip.delay: 1000
+
+                MouseArea {
+                    id: labelRightClickfingerMouseArea
+                    anchors.fill: parent
+                    hoverEnabled: true
+                }
             }
         }
 
         ColumnLayout {
             id: middleClickMethod
-            Kirigami.FormData.label: i18nd("kcm_touchpad", "Middle-click: ")
+            Kirigami.FormData.label: i18ndc("kcm_touchpad", "@label for radiobutton group, configure middle-click with touch-pad integrated button (pressing into the touchpad)", "Integrated middle-click:")
             Kirigami.FormData.buddyFor: middleSoftwareEmulation
 
             spacing: Kirigami.Units.smallSpacing
@@ -863,11 +908,11 @@ KCM.SimpleKCM {
 
             QQC2.RadioButton {
                 id: noMiddleSoftwareEmulation
-                text: i18nd("kcm_touchpad", "Press bottom-middle")
+                text: i18ndc("kcm_touchpad", "@option:radio touchpad integrated middle-click", "Press bottom middle edge")
                 visible: rightClickMethodAreas.checked
                 hoverEnabled: true
                 QQC2.ToolTip {
-                    text: i18nd("kcm_touchpad", "Software enabled middle-button will be added to bottom portion of your touchpad.")
+                    text: i18ndc("kcm_touchpad", "@info:tooltip for radiobutton", "Pressing the bottom right corner of your touchpad acts as right-click.")
                     visible: parent.hovered
                     delay: 1000
                 }
@@ -875,11 +920,11 @@ KCM.SimpleKCM {
 
             QQC2.RadioButton {
                 id: middleSoftwareEmulation
-                text: i18nd("kcm_touchpad", "Press bottom left and bottom right corners simultaneously")
+                text: i18ndc("kcm_touchpad", "@option:radio touchpad integrated middle-click", "Press bottom left and bottom right corners")
                 visible: rightClickMethodAreas.checked
                 hoverEnabled: true
                 QQC2.ToolTip {
-                    text: i18nd("kcm_touchpad", "Clicking left and right button simultaneously sends middle button click.")
+                    text: i18ndc("kcm_touchpad", "@info:tooltip for radiobutton", "Pressing the bottom left and bottom right corners simultaneously acts as middle-click.")
                     visible: parent.hovered
                     delay: 1000
                 }
@@ -888,13 +933,13 @@ KCM.SimpleKCM {
 
             QQC2.CheckBox {
                 id: clickfingerMiddleInfoBox
-                text: i18nd("kcm_touchpad", "Press anywhere with three fingers")
+                text: i18ndc("kcm_touchpad", "@option:check touchpad integrated middle-click", "Press touchpad with three fingers")
                 checked: true
                 enabled: false
                 visible: rightClickMethodClickfinger.checked
                 hoverEnabled: true
                 QQC2.ToolTip {
-                    text: i18nd("kcm_touchpad", "Press anywhere with three fingers.")
+                    text: i18nd("kcm_touchpad", "@info:tooltip for radiobutton", "Pressing the touchpad anywhere with three fingers acts as middle-click.")
                     visible: parent.hovered
                     delay: 1000
                 }

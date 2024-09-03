@@ -252,9 +252,9 @@ KCM.SimpleKCM {
 
         QQC2.CheckBox {
             id: primarySelectionRadio
-            Kirigami.FormData.label: i18nc("@radio part of a complete sentence: 'Middle click pastes selected text'", "Middle Click:")
+            Kirigami.FormData.label: i18nc("@label for checkbox, part of a complete sentence: 'Middle-click pastes selected text'", "Middle-click:")
             visible: KWindowSystem.isPlatformWayland
-            text: i18nc("@radio part of a complete sentence: 'Middle click pastes selected text'", "Pastes selected text")
+            text: i18nc("@option:check part of a complete sentence: 'Middle click pastes selected text'", "Pastes selected text")
             checked: kcm.kwinSettings.primarySelection
             onToggled: kcm.kwinSettings.primarySelection = checked
 
