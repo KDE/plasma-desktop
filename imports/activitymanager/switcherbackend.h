@@ -67,6 +67,7 @@ public Q_SLOTS:
     void stopActivity(const QString &activity);
     void removeActivity(const QString &activity);
 
+    bool dragContainsWindows(QMimeData *mimeData) const;
     void setDropMode(bool value);
     void drop(QMimeData *mimeData, int modifiers, const QVariant &activityId);
     void dropCopy(QMimeData *mimeData, const QVariant &activityId);

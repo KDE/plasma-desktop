@@ -41,7 +41,11 @@ PlasmoidItem {
         id: dropArea
         anchors.fill: parent
 
-        onDragEnter: ActivitySwitcher.Backend.setDropMode(true)
+        onDragEnter: (dragEvent) => {
+            if (ActivitySwitcher.Backend.dragContainsWindows(dragEvent.mimeData)) {
+                ActivitySwitcher.Backend.setDropMode(true)
+            }
+        }
         onDragLeave: ActivitySwitcher.Backend.setDropMode(false)
 
         Activities.ActivityInfo {

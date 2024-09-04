@@ -31,6 +31,7 @@
 #include <KWindowInfo>
 #include <KWindowSystem>
 #include <KX11Extras>
+#include <waylandtasksmodel.h>
 #include <windowtasksmodel.h>
 #include <xwindowtasksmodel.h>
 
@@ -444,6 +445,17 @@ void SwitcherBackend::setDropMode(bool value)
     } else {
         m_dropModeHider.start();
     }
+}
+
+bool SwitcherBackend::dragContainsWindows(QMimeData *mimeData) const
+{
+    if (KWindowSystem::isPlatformX11()) {
+        return TaskManager::XWindowTasksModel::winIdsFromMimeData(mimeData).count();
+    }
+    if (KWindowSystem::isPlatformWayland()) {
+        return TaskManager::WaylandTasksModel::winIdsFromMimeData(mimeData).count();
+    }
+    return false;
 }
 
 void SwitcherBackend::toggleActivityManager()
