@@ -139,7 +139,7 @@ KCMUtils.SimpleKCM {
             }
 
             Kirigami.ContextualHelpButton {
-                toolTipText: i18nd("kcmmouse", "@info:tooltip from ContextualHelpButton", "Activating this setting increases click latency by 50ms. The extra delay is needed to correctly detect simultaneous left and right button presses.")
+                toolTipText: i18ndc("kcmmouse", "@info:tooltip from ContextualHelpButton", "Activating this setting increases click latency by 50ms. The extra delay is needed to correctly detect simultaneous left and right button presses.")
             }
         }
 
