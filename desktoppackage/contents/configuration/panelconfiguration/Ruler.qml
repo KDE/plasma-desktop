@@ -83,7 +83,7 @@ KSvg.FrameSvgItem {
             bottom: root.isHorizontal ? root.bottom : undefined
         }
         graphicElementName: "offsetslider"
-        description: i18nd("plasma_shell_org.kde.plasma.desktop", "@info:tooltip slider handle",
+        description: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:tooltip slider handle",
                            "Drag to change position on this screen edge.\nDouble-click to reset.")
         offset: panel.alignment === Qt.AlignCenter ? 0 : (dialogRoot.vertical ? panel.height : panel.width) / 2
         property int position: (dialogRoot.vertical) ? y + height / 2 : x + width / 2
