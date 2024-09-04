@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-26 00:40+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2022-11-10 00:39+0700\n"
 "Last-Translator: OIS <mistresssilvara@hotmail.com>\n"
 "Language-Team: Interlingue <kde-i18n-doc@kde.org>\n"
@@ -155,21 +155,20 @@ msgid "Swap left and right buttons."
 msgstr "Dextri butones del panel de titul"
 
 #: ui/main.qml:126
-#, kde-format
+#, fuzzy, kde-format
+msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
-msgstr ""
+msgstr "Dextri butones del panel de titul"
 
 #: ui/main.qml:138
 #, kde-format
-msgid ""
-"Clicking left and right button simultaneously sends middle button click."
+msgctxt "@info:tooltip"
+msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
 
 #: ui/main.qml:142
 #, kde-format
-msgid ""
-"Activating this setting increases mouse click latency by 50ms. The extra "
-"delay is needed to correctly detect simultaneous left and right mouse clicks."
+msgid "@info:tooltip from ContextualHelpButton"
 msgstr ""
 
 #: ui/main.qml:154
@@ -231,7 +230,7 @@ msgstr "Inverter li direction de rulament"
 
 #: ui/main.qml:351
 #, fuzzy, kde-format
-msgid "Touchscreen like scrolling."
+msgid "Touchscreen-like scrolling."
 msgstr "Rulament"
 
 #: ui/main.qml:356

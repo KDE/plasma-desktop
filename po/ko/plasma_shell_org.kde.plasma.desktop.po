@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-30 00:41+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-02-17 15:11+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -524,40 +524,46 @@ msgstr ""
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/Ruler.qml:30
-#, kde-format
+#: contents/configuration/panelconfiguration/Ruler.qml:32
+#, fuzzy, kde-format
+#| msgid "Drag to change maximum height."
+msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum height."
 msgstr "드래그하여 최대 높이를 변경하십시오."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:30
-#, kde-format
+#: contents/configuration/panelconfiguration/Ruler.qml:33
+#, fuzzy, kde-format
+#| msgid "Drag to change maximum width."
+msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum width."
 msgstr "드래그하여 최대 너비를 변경하십시오."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:30
-#: contents/configuration/panelconfiguration/Ruler.qml:31
-#, kde-format
-msgid "Double click to reset."
+#: contents/configuration/panelconfiguration/Ruler.qml:34
+#: contents/configuration/panelconfiguration/Ruler.qml:39
+#, fuzzy, kde-format
+#| msgid "Double click to reset."
+msgctxt "@info:tooltip slider handle"
+msgid "Double-click to reset."
 msgstr "두 번 클릭하여 초기화하십시오."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:31
-#, kde-format
+#: contents/configuration/panelconfiguration/Ruler.qml:37
+#, fuzzy, kde-format
+#| msgid "Drag to change minimum height."
+msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum height."
 msgstr "드래그하여 최소 높이를 변경하십시오."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:31
-#, kde-format
+#: contents/configuration/panelconfiguration/Ruler.qml:38
+#, fuzzy, kde-format
+#| msgid "Drag to change minimum width."
+msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr "드래그하여 최소 너비를 변경하십시오."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:78
+#: contents/configuration/panelconfiguration/Ruler.qml:86
 #, kde-format
-msgid ""
-"Drag to change position on this screen edge.\n"
-"Double click to reset."
+msgid "@info:tooltip slider handle"
 msgstr ""
-"드래그하여 화면 경계 위치를 변경하십시오.\n"
-"두 번 클릭하여 초기화하십시오."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 #, fuzzy, kde-format
@@ -829,6 +835,13 @@ msgstr ""
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr ""
+
+#~ msgid ""
+#~ "Drag to change position on this screen edge.\n"
+#~ "Double click to reset."
+#~ msgstr ""
+#~ "드래그하여 화면 경계 위치를 변경하십시오.\n"
+#~ "두 번 클릭하여 초기화하십시오."
 
 #~ msgid "Height:"
 #~ msgstr "높이:"

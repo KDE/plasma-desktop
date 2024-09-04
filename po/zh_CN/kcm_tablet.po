@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:42+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -154,21 +154,27 @@ msgid ""
 msgstr "此数位板按钮将被转发到位于焦点的应用程序，由该应用程序决定如何处理。"
 
 #: ui/ActionDialog.qml:177
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu Left mouse click"
+#| msgid "Left Click"
 msgctxt "@action:inmenu Left mouse click"
-msgid "Left Click"
+msgid "Left-click"
 msgstr "左键点击"
 
 #: ui/ActionDialog.qml:178
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu Middle mouse click"
+#| msgid "Middle Click"
 msgctxt "@action:inmenu Middle mouse click"
-msgid "Middle Click"
+msgid "Middle-click"
 msgstr "中键点击"
 
 #: ui/ActionDialog.qml:179
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu Right mouse click"
+#| msgid "Right Click"
 msgctxt "@action:inmenu Right mouse click"
-msgid "Right Click"
+msgid "Right-click"
 msgstr "右键点击"
 
 #: ui/ActionDialog.qml:206

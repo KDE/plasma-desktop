@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:42+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-07-30 16:24+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -158,21 +158,27 @@ msgstr ""
 "puede decidir cómo se maneja."
 
 #: ui/ActionDialog.qml:177
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu Left mouse click"
+#| msgid "Left Click"
 msgctxt "@action:inmenu Left mouse click"
-msgid "Left Click"
+msgid "Left-click"
 msgstr "Clic izquierdo"
 
 #: ui/ActionDialog.qml:178
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu Middle mouse click"
+#| msgid "Middle Click"
 msgctxt "@action:inmenu Middle mouse click"
-msgid "Middle Click"
+msgid "Middle-click"
 msgstr "Clic central"
 
 #: ui/ActionDialog.qml:179
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu Right mouse click"
+#| msgid "Right Click"
 msgctxt "@action:inmenu Right mouse click"
-msgid "Right Click"
+msgid "Right-click"
 msgstr "Clic derecho"
 
 #: ui/ActionDialog.qml:206

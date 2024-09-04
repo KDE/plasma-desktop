@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-30 00:41+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2014-08-11 12:37+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -543,37 +543,40 @@ msgstr ""
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr ""
 
-#: contents/configuration/panelconfiguration/Ruler.qml:30
+#: contents/configuration/panelconfiguration/Ruler.qml:32
 #, kde-format
+msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum height."
 msgstr ""
 
-#: contents/configuration/panelconfiguration/Ruler.qml:30
+#: contents/configuration/panelconfiguration/Ruler.qml:33
 #, kde-format
+msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum width."
 msgstr ""
 
-#: contents/configuration/panelconfiguration/Ruler.qml:30
-#: contents/configuration/panelconfiguration/Ruler.qml:31
+#: contents/configuration/panelconfiguration/Ruler.qml:34
+#: contents/configuration/panelconfiguration/Ruler.qml:39
 #, kde-format
-msgid "Double click to reset."
+msgctxt "@info:tooltip slider handle"
+msgid "Double-click to reset."
 msgstr ""
 
-#: contents/configuration/panelconfiguration/Ruler.qml:31
+#: contents/configuration/panelconfiguration/Ruler.qml:37
 #, kde-format
+msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum height."
 msgstr ""
 
-#: contents/configuration/panelconfiguration/Ruler.qml:31
+#: contents/configuration/panelconfiguration/Ruler.qml:38
 #, kde-format
+msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr ""
 
-#: contents/configuration/panelconfiguration/Ruler.qml:78
+#: contents/configuration/panelconfiguration/Ruler.qml:86
 #, kde-format
-msgid ""
-"Drag to change position on this screen edge.\n"
-"Double click to reset."
+msgid "@info:tooltip slider handle"
 msgstr ""
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19

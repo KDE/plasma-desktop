@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-26 00:40+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -150,24 +150,24 @@ msgid "Swap left and right buttons."
 msgstr "交换左键和右键"
 
 #: ui/main.qml:126
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Press left and right buttons for middle-click"
+msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "同时按左键和右键模拟中键点击"
 
 #: ui/main.qml:138
-#, kde-format
-msgid ""
-"Clicking left and right button simultaneously sends middle button click."
+#, fuzzy, kde-format
+#| msgid ""
+#| "Clicking left and right button simultaneously sends middle button click."
+msgctxt "@info:tooltip"
+msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr "同时点击左键和右键时将发送中键点击信号。"
 
 #: ui/main.qml:142
 #, kde-format
-msgid ""
-"Activating this setting increases mouse click latency by 50ms. The extra "
-"delay is needed to correctly detect simultaneous left and right mouse clicks."
+msgid "@info:tooltip from ContextualHelpButton"
 msgstr ""
-"激活此设置将增加鼠标点击延迟 50 毫秒。正确检测鼠标左键和右键的同时点击需要额"
-"外的延迟。"
 
 #: ui/main.qml:154
 #, kde-format
@@ -227,8 +227,9 @@ msgid "Invert scroll direction"
 msgstr "反转滚动方向"
 
 #: ui/main.qml:351
-#, kde-format
-msgid "Touchscreen like scrolling."
+#, fuzzy, kde-format
+#| msgid "Touchscreen like scrolling."
+msgid "Touchscreen-like scrolling."
 msgstr "采用类似触摸屏的滚动方式。"
 
 #: ui/main.qml:356
@@ -240,3 +241,11 @@ msgstr "按住中键并移动鼠标以滚动"
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "按住中键时用鼠标滚动。"
+
+#~ msgid ""
+#~ "Activating this setting increases mouse click latency by 50ms. The extra "
+#~ "delay is needed to correctly detect simultaneous left and right mouse "
+#~ "clicks."
+#~ msgstr ""
+#~ "激活此设置将增加鼠标点击延迟 50 毫秒。正确检测鼠标左键和右键的同时点击需要"
+#~ "额外的延迟。"

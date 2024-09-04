@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-26 00:40+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-08-26 22:49+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -288,23 +288,32 @@ msgid "Swap left and right buttons."
 msgstr "Поміняти місцями ліву і праву кнопки."
 
 #: ui/main.qml:234
-#, kde-format
-msgid "Press left and right buttons for middle click"
+#, fuzzy, kde-format
+#| msgid "Press left and right buttons for middle click"
+msgctxt "@option:check"
+msgid "Press left and right buttons to middle-click"
 msgstr "Натискати ліву і праву кнопки для клацання середньою"
 
-#: ui/main.qml:238 ui/main.qml:882
-#, kde-format
-msgid ""
-"Clicking left and right button simultaneously sends middle button click."
+#: ui/main.qml:238
+#, fuzzy, kde-format
+#| msgid ""
+#| "Clicking left and right button simultaneously sends middle button click."
+msgctxt "@info:tooltip for checkbox"
+msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
 "Одночасне натискання лівої і правої кнопок надсилатиме сигнал клацання "
 "середньою кнопкою."
 
 #: ui/main.qml:264
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Activating this setting increases mouse click latency by 50ms. The extra "
+#| "delay is needed to correctly detect simultaneous left and right mouse "
+#| "clicks."
+msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
-"Activating this setting increases mouse click latency by 50ms. The extra "
-"delay is needed to correctly detect simultaneous left and right mouse clicks."
+"Activating this setting increases click latency by 50ms. The extra delay is "
+"needed to correctly detect simultaneous left and right button presses."
 msgstr ""
 "Вмикання цього параметра збільшує латентність клацання кнопками миші на 50 "
 "мс. Додаткова затримка потрібна для належного виявлення одночасного клацання "
@@ -393,24 +402,36 @@ msgstr "Зворотний напрямок гортання (природне �
 msgid "Touchscreen like scrolling."
 msgstr "Гортання як на сенсорній панелі."
 
-#: ui/main.qml:579 ui/main.qml:596
+#: ui/main.qml:579
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "Вимкнути горизонтальне гортання"
 
+#: ui/main.qml:596
+#, fuzzy, kde-format
+#| msgid "Disable horizontal scrolling"
+msgid "Disable horizontal scrolling."
+msgstr "Вимкнути горизонтальне гортання"
+
 #: ui/main.qml:609
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Tapping:"
+msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Дотики:"
 
 #: ui/main.qml:610
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Tap-to-click"
+msgctxt "@option:check"
 msgid "Tap-to-click"
 msgstr "Дотик як клацання"
 
 #: ui/main.qml:614
-#, kde-format
-msgid "Single tap is left button click."
+#, fuzzy, kde-format
+#| msgid "Single tap is left button click."
+msgctxt "@info:tooltip"
+msgid "Single tap to left-click."
 msgstr "Одинарний дотик — клацання лівою кнопкою."
 
 #: ui/main.qml:643
@@ -486,64 +507,134 @@ msgid "Tap with two fingers to middle-click."
 msgstr "Дотик двома пальцями — клацання середньою."
 
 #: ui/main.qml:777
-#, kde-format
-msgid "Right-click:"
+#, fuzzy, kde-format
+#| msgid "Right-click:"
+msgctxt ""
+"@label for radiobutton group, configure right-click with touch-pad "
+"integrated button (pressing into the touchpad)"
+msgid "Integrated right-click:"
 msgstr "Клацання правою:"
 
 #: ui/main.qml:811
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Press bottom-right corner"
+msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
 msgstr "Натискання у нижньому правому куті"
 
-#: ui/main.qml:815
+#: ui/main.qml:816
 #, kde-format
+msgctxt "@info:tooltip"
 msgid ""
-"Software enabled buttons will be added to bottom portion of your touchpad."
-msgstr "Програмні кнопки буде додано у нижній частині сенсорної панелі."
+"Pressing the bottom right corner of your touchpad acts as right-click. "
+"Middle-click by simultaneously pressing the bottom left and bottom right "
+"corners."
+msgstr ""
 
-#: ui/main.qml:823
+#: ui/main.qml:817
 #, kde-format
-msgid "Press anywhere with two fingers"
+msgctxt "@info:tooltip"
+msgid ""
+"Pressing the bottom right corner of your touchpad acts as right-click. "
+"Middle-click by pressing the bottom central area."
+msgstr ""
+
+#: ui/main.qml:828
+#, kde-format
+msgctxt "@info shown below radio button"
+msgid "Middle-click by pressing both bottom corners."
+msgstr ""
+
+#: ui/main.qml:829
+#, kde-format
+msgctxt "@info shown below radio button"
+msgid "Middle-click by pressing bottom center."
+msgstr ""
+
+#: ui/main.qml:847
+#, fuzzy, kde-format
+#| msgid "Press anywhere with two fingers"
+msgctxt "@option:radio touchpad integrated right-click"
+msgid "Press touchpad with two fingers"
 msgstr "Натискання будь-де двома пальцями"
 
-#: ui/main.qml:827
-#, kde-format
-msgid "Tap with two finger to enable right click."
+#: ui/main.qml:851
+#, fuzzy, kde-format
+#| msgid "Tap with two fingers to right-click."
+msgctxt "@info:tooltip for radiobutton"
+msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
 msgstr "Дотик двома пальцями — клацання правою."
 
-#: ui/main.qml:837
-#, kde-format
-msgid "Middle-click: "
+#: ui/main.qml:863
+#, fuzzy, kde-format
+#| msgid "Press anywhere with three fingers."
+msgctxt "@info shown below radio button"
+msgid "Middle-click by pressing with three fingers."
+msgstr "Натискання будь-де трьома пальцями."
+
+#: ui/main.qml:882
+#, fuzzy, kde-format
+#| msgid "Middle-click: "
+msgctxt ""
+"@label for radiobutton group, configure middle-click with touch-pad "
+"integrated button (pressing into the touchpad)"
+msgid "Integrated middle-click:"
 msgstr "Клацання середньою:"
 
-#: ui/main.qml:866
-#, kde-format
-msgid "Press bottom-middle"
+#: ui/main.qml:911
+#, fuzzy, kde-format
+#| msgid "Press bottom-middle"
+msgctxt "@option:radio touchpad integrated middle-click"
+msgid "Press bottom middle edge"
 msgstr "Натискання внизу посередині"
 
-#: ui/main.qml:870
+#: ui/main.qml:915
 #, kde-format
-msgid ""
-"Software enabled middle-button will be added to bottom portion of your "
-"touchpad."
+msgctxt "@info:tooltip for radiobutton"
+msgid "Pressing the bottom right corner of your touchpad acts as right-click."
 msgstr ""
-"Програмну кнопку середньої кнопки миші буде додано у нижній частині "
-"сенсорної панелі."
 
-#: ui/main.qml:878
-#, kde-format
-msgid "Press bottom left and bottom right corners simultaneously"
+#: ui/main.qml:923
+#, fuzzy, kde-format
+#| msgid "Press bottom left and bottom right corners simultaneously"
+msgctxt "@option:radio touchpad integrated middle-click"
+msgid "Press bottom left and bottom right corners"
 msgstr "Натискання у нижньому лівому і нижньому правому куті одночасно"
 
-#: ui/main.qml:891
-#, kde-format
-msgid "Press anywhere with three fingers"
+#: ui/main.qml:927
+#, fuzzy, kde-format
+#| msgid "Press bottom left and bottom right corners simultaneously"
+msgctxt "@info:tooltip for radiobutton"
+msgid ""
+"Pressing the bottom left and bottom right corners simultaneously acts as "
+"middle-click."
+msgstr "Натискання у нижньому лівому і нижньому правому куті одночасно"
+
+#: ui/main.qml:936
+#, fuzzy, kde-format
+#| msgid "Press anywhere with three fingers"
+msgctxt "@option:check touchpad integrated middle-click"
+msgid "Press touchpad with three fingers"
 msgstr "Натискання будь-де трьома пальцями"
 
-#: ui/main.qml:897
+#: ui/main.qml:942
 #, kde-format
-msgid "Press anywhere with three fingers."
-msgstr "Натискання будь-де трьома пальцями."
+msgid "@info:tooltip for radiobutton"
+msgstr ""
+
+#~ msgid ""
+#~ "Software enabled buttons will be added to bottom portion of your touchpad."
+#~ msgstr "Програмні кнопки буде додано у нижній частині сенсорної панелі."
+
+#~ msgid "Tap with two finger to enable right click."
+#~ msgstr "Дотик двома пальцями — клацання правою."
+
+#~ msgid ""
+#~ "Software enabled middle-button will be added to bottom portion of your "
+#~ "touchpad."
+#~ msgstr ""
+#~ "Програмну кнопку середньої кнопки миші буде додано у нижній частині "
+#~ "сенсорної панелі."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

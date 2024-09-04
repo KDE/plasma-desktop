@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-26 00:40+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-09-01 19:49+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -278,21 +278,30 @@ msgid "Swap left and right buttons."
 msgstr "இடது மற்றும் வலது பட்டன்களை இடமாற்று."
 
 #: ui/main.qml:234
-#, kde-format
-msgid "Press left and right buttons for middle click"
+#, fuzzy, kde-format
+#| msgid "Press left and right buttons for middle click"
+msgctxt "@option:check"
+msgid "Press left and right buttons to middle-click"
 msgstr "நடு க்ளிக்குக்கு இடது மற்றும் வலது பட்டன்களை சேர்த்து அழுத்து"
 
-#: ui/main.qml:238 ui/main.qml:882
-#, kde-format
-msgid ""
-"Clicking left and right button simultaneously sends middle button click."
+#: ui/main.qml:238
+#, fuzzy, kde-format
+#| msgid ""
+#| "Clicking left and right button simultaneously sends middle button click."
+msgctxt "@info:tooltip for checkbox"
+msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr "இடது மற்றும் வலது பட்டன்களை சேர்த்து அழுத்துதல், நடு க்ளிக்காக கருதப்படும்."
 
 #: ui/main.qml:264
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Activating this setting increases mouse click latency by 50ms. The extra "
+#| "delay is needed to correctly detect simultaneous left and right mouse "
+#| "clicks."
+msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
-"Activating this setting increases mouse click latency by 50ms. The extra "
-"delay is needed to correctly detect simultaneous left and right mouse clicks."
+"Activating this setting increases click latency by 50ms. The extra delay is "
+"needed to correctly detect simultaneous left and right button presses."
 msgstr ""
 "இந்த அமைப்பை இயக்குவது, கிளிக்குகளுக்கு கணினி பதிலளிக்கும் தாமத‍த்தை 50மி.நொ. "
 "அதிகரிக்கும். ஒரே நேரத்தில் நிகழும் இடது மற்றும் வலது கிளிக்குகளை சரியாக அடையாளங்கான "
@@ -380,24 +389,36 @@ msgstr "உருளல் திசையைப் புரட்டு (இ�
 msgid "Touchscreen like scrolling."
 msgstr "தொடுதிரையைப் போன்ற உருளல்."
 
-#: ui/main.qml:579 ui/main.qml:596
+#: ui/main.qml:579
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "கிடைமட்ட உருளலை முடக்கு"
 
+#: ui/main.qml:596
+#, fuzzy, kde-format
+#| msgid "Disable horizontal scrolling"
+msgid "Disable horizontal scrolling."
+msgstr "கிடைமட்ட உருளலை முடக்கு"
+
 #: ui/main.qml:609
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Tapping:"
+msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "தட்டுதல்:"
 
 #: ui/main.qml:610
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Tap-to-click"
+msgctxt "@option:check"
 msgid "Tap-to-click"
 msgstr "க்ளிக் செய்ய தட்டு"
 
 #: ui/main.qml:614
-#, kde-format
-msgid "Single tap is left button click."
+#, fuzzy, kde-format
+#| msgid "Single tap is left button click."
+msgctxt "@info:tooltip"
+msgid "Single tap to left-click."
 msgstr "ஒரு முறை தட்டுதல், இடது க்ளிக்காக கருதப்படும்."
 
 #: ui/main.qml:643
@@ -473,62 +494,132 @@ msgid "Tap with two fingers to middle-click."
 msgstr "நடு க்ளிக்குக்கு இரண்டு விரல்களைக் கொண்டு தட்டலாம்."
 
 #: ui/main.qml:777
-#, kde-format
-msgid "Right-click:"
+#, fuzzy, kde-format
+#| msgid "Right-click:"
+msgctxt ""
+"@label for radiobutton group, configure right-click with touch-pad "
+"integrated button (pressing into the touchpad)"
+msgid "Integrated right-click:"
 msgstr "வலது க்ளிக்:"
 
 #: ui/main.qml:811
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Press bottom-right corner"
+msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
 msgstr "வலது-கீழ் மூலையை அழுத்தினால்"
 
-#: ui/main.qml:815
+#: ui/main.qml:816
 #, kde-format
+msgctxt "@info:tooltip"
 msgid ""
-"Software enabled buttons will be added to bottom portion of your touchpad."
-msgstr "உங்கள் தொடுபலகையின் கீழ் பகுதியில் மென்பொருள் பட்டன்கள் சேர்க்கப்படும்."
+"Pressing the bottom right corner of your touchpad acts as right-click. "
+"Middle-click by simultaneously pressing the bottom left and bottom right "
+"corners."
+msgstr ""
 
-#: ui/main.qml:823
+#: ui/main.qml:817
 #, kde-format
-msgid "Press anywhere with two fingers"
+msgctxt "@info:tooltip"
+msgid ""
+"Pressing the bottom right corner of your touchpad acts as right-click. "
+"Middle-click by pressing the bottom central area."
+msgstr ""
+
+#: ui/main.qml:828
+#, kde-format
+msgctxt "@info shown below radio button"
+msgid "Middle-click by pressing both bottom corners."
+msgstr ""
+
+#: ui/main.qml:829
+#, kde-format
+msgctxt "@info shown below radio button"
+msgid "Middle-click by pressing bottom center."
+msgstr ""
+
+#: ui/main.qml:847
+#, fuzzy, kde-format
+#| msgid "Press anywhere with two fingers"
+msgctxt "@option:radio touchpad integrated right-click"
+msgid "Press touchpad with two fingers"
 msgstr "எங்கேயாவது இரண்டு விரல்களை கொண்டு அழுத்தினால்"
 
-#: ui/main.qml:827
-#, kde-format
-msgid "Tap with two finger to enable right click."
-msgstr "வலது க்ளிக் செய்ய எங்கேயேனும் இரண்டு விரல்களை கொண்டு தட்டுங்கள்."
+#: ui/main.qml:851
+#, fuzzy, kde-format
+#| msgid "Tap with two fingers to right-click."
+msgctxt "@info:tooltip for radiobutton"
+msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
+msgstr "வலது க்ளிக்குக்கு இரண்டு விரல்களைக் கொண்டு தட்டலாம்."
 
-#: ui/main.qml:837
-#, kde-format
-msgid "Middle-click: "
+#: ui/main.qml:863
+#, fuzzy, kde-format
+#| msgid "Press anywhere with three fingers."
+msgctxt "@info shown below radio button"
+msgid "Middle-click by pressing with three fingers."
+msgstr "மூன்று விரல்களை கொண்டு எங்கேயேனும் அழுத்தினால்."
+
+#: ui/main.qml:882
+#, fuzzy, kde-format
+#| msgid "Middle-click: "
+msgctxt ""
+"@label for radiobutton group, configure middle-click with touch-pad "
+"integrated button (pressing into the touchpad)"
+msgid "Integrated middle-click:"
 msgstr "நடு க்ளிக்: "
 
-#: ui/main.qml:866
-#, kde-format
-msgid "Press bottom-middle"
+#: ui/main.qml:911
+#, fuzzy, kde-format
+#| msgid "Press bottom-middle"
+msgctxt "@option:radio touchpad integrated middle-click"
+msgid "Press bottom middle edge"
 msgstr "நடு-கீழ் பகுதியை அழுத்தினால்"
 
-#: ui/main.qml:870
+#: ui/main.qml:915
 #, kde-format
-msgid ""
-"Software enabled middle-button will be added to bottom portion of your "
-"touchpad."
-msgstr "உங்கள் தொடுபலகையின் கீழ் பகுதியில் இதற்கான மென்பொருள் பட்டன் சேர்க்கப்படும்."
+msgctxt "@info:tooltip for radiobutton"
+msgid "Pressing the bottom right corner of your touchpad acts as right-click."
+msgstr ""
 
-#: ui/main.qml:878
-#, kde-format
-msgid "Press bottom left and bottom right corners simultaneously"
+#: ui/main.qml:923
+#, fuzzy, kde-format
+#| msgid "Press bottom left and bottom right corners simultaneously"
+msgctxt "@option:radio touchpad integrated middle-click"
+msgid "Press bottom left and bottom right corners"
 msgstr "வலது-கீழ் மற்றும் இடது-கீழ் மூலைகளை சேர்த்து அழுத்தினால்"
 
-#: ui/main.qml:891
-#, kde-format
-msgid "Press anywhere with three fingers"
+#: ui/main.qml:927
+#, fuzzy, kde-format
+#| msgid "Press bottom left and bottom right corners simultaneously"
+msgctxt "@info:tooltip for radiobutton"
+msgid ""
+"Pressing the bottom left and bottom right corners simultaneously acts as "
+"middle-click."
+msgstr "வலது-கீழ் மற்றும் இடது-கீழ் மூலைகளை சேர்த்து அழுத்தினால்"
+
+#: ui/main.qml:936
+#, fuzzy, kde-format
+#| msgid "Press anywhere with three fingers"
+msgctxt "@option:check touchpad integrated middle-click"
+msgid "Press touchpad with three fingers"
 msgstr "மூன்று விரல்களை கொண்டு அழுத்தினால்"
 
-#: ui/main.qml:897
+#: ui/main.qml:942
 #, kde-format
-msgid "Press anywhere with three fingers."
-msgstr "மூன்று விரல்களை கொண்டு எங்கேயேனும் அழுத்தினால்."
+msgid "@info:tooltip for radiobutton"
+msgstr ""
+
+#~ msgid ""
+#~ "Software enabled buttons will be added to bottom portion of your touchpad."
+#~ msgstr "உங்கள் தொடுபலகையின் கீழ் பகுதியில் மென்பொருள் பட்டன்கள் சேர்க்கப்படும்."
+
+#~ msgid "Tap with two finger to enable right click."
+#~ msgstr "வலது க்ளிக் செய்ய எங்கேயேனும் இரண்டு விரல்களை கொண்டு தட்டுங்கள்."
+
+#~ msgid ""
+#~ "Software enabled middle-button will be added to bottom portion of your "
+#~ "touchpad."
+#~ msgstr "உங்கள் தொடுபலகையின் கீழ் பகுதியில் இதற்கான மென்பொருள் பட்டன் சேர்க்கப்படும்."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-26 00:40+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2023-08-25 23:14+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -164,22 +164,24 @@ msgid "Swap left and right buttons."
 msgstr "왼쪽과 오른쪽 단추를 전환합니다."
 
 #: ui/main.qml:126
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Press left and right buttons for middle-click"
+msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "왼쪽과 오른쪽 단추를 같이 클릭해서 가운데 단추 클릭"
 
 #: ui/main.qml:138
-#, kde-format
-msgid ""
-"Clicking left and right button simultaneously sends middle button click."
+#, fuzzy, kde-format
+#| msgid ""
+#| "Clicking left and right button simultaneously sends middle button click."
+msgctxt "@info:tooltip"
+msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
 "왼쪽과 오른쪽 단추를 같이 클릭하면 가운데 단추를 클릭한 것으로 취급합니다."
 
 #: ui/main.qml:142
 #, kde-format
-msgid ""
-"Activating this setting increases mouse click latency by 50ms. The extra "
-"delay is needed to correctly detect simultaneous left and right mouse clicks."
+msgid "@info:tooltip from ContextualHelpButton"
 msgstr ""
 
 #: ui/main.qml:154
@@ -240,8 +242,9 @@ msgid "Invert scroll direction"
 msgstr "스크롤 방향 뒤집기"
 
 #: ui/main.qml:351
-#, kde-format
-msgid "Touchscreen like scrolling."
+#, fuzzy, kde-format
+#| msgid "Touchscreen like scrolling."
+msgid "Touchscreen-like scrolling."
 msgstr "터치스크린 형태 스크롤을 사용합니다."
 
 #: ui/main.qml:356

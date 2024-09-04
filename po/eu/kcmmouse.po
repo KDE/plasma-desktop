@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-26 00:40+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-08-29 23:26+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -164,26 +164,25 @@ msgid "Swap left and right buttons."
 msgstr "Trukatu ezker eta eskuin botoiak"
 
 #: ui/main.qml:126
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Press left and right buttons for middle-click"
+msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "Sakatu ezker eta eskuin botoiak erdiko-klik gisa"
 
 #: ui/main.qml:138
-#, kde-format
-msgid ""
-"Clicking left and right button simultaneously sends middle button click."
+#, fuzzy, kde-format
+#| msgid ""
+#| "Clicking left and right button simultaneously sends middle button click."
+msgctxt "@info:tooltip"
+msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
 "Ezker eta eskuin botoiak batera sakatzea erdiko botoiaren klik bidaltzen du."
 
 #: ui/main.qml:142
 #, kde-format
-msgid ""
-"Activating this setting increases mouse click latency by 50ms. The extra "
-"delay is needed to correctly detect simultaneous left and right mouse clicks."
+msgid "@info:tooltip from ContextualHelpButton"
 msgstr ""
-"Ezarpen hau aktibatuz gero, sagu-klikaren latentzia 50 ms handitzen da. "
-"Atzerapen gehigarria beharrezkoa da saguaren ezker eta eskuineko klikak aldi "
-"berean antzemateko."
 
 #: ui/main.qml:154
 #, kde-format
@@ -244,8 +243,9 @@ msgid "Invert scroll direction"
 msgstr "Alderantzizko kiribiltze-noranzkoa"
 
 #: ui/main.qml:351
-#, kde-format
-msgid "Touchscreen like scrolling."
+#, fuzzy, kde-format
+#| msgid "Touchscreen like scrolling."
+msgid "Touchscreen-like scrolling."
 msgstr "Ukimen-pantailakoa bezalako kiribiltzea."
 
 #: ui/main.qml:356
@@ -258,6 +258,15 @@ msgstr "Sakatu erdiko botoia eta mugitu sagua kiribiltzeko"
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr ""
 "Saguaren erdiko botoia sakatuta dagoen bitartean saguarekin kiribiltzea."
+
+#~ msgid ""
+#~ "Activating this setting increases mouse click latency by 50ms. The extra "
+#~ "delay is needed to correctly detect simultaneous left and right mouse "
+#~ "clicks."
+#~ msgstr ""
+#~ "Ezarpen hau aktibatuz gero, sagu-klikaren latentzia 50 ms handitzen da. "
+#~ "Atzerapen gehigarria beharrezkoa da saguaren ezker eta eskuineko klikak "
+#~ "aldi berean antzemateko."
 
 #~ msgctxt "@action:button"
 #~ msgid "Bindings for Additional Mouse Buttons"

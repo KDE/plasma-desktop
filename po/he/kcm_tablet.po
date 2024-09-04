@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:42+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-07-30 10:08+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -155,21 +155,27 @@ msgid ""
 msgstr "כפתור לוח הציור הזה מועבר ליישום הממוקד, אופן השימוש בו נתון לבחירתו."
 
 #: ui/ActionDialog.qml:177
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu Left mouse click"
+#| msgid "Left Click"
 msgctxt "@action:inmenu Left mouse click"
-msgid "Left Click"
+msgid "Left-click"
 msgstr "לחיצה שמאלית"
 
 #: ui/ActionDialog.qml:178
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu Middle mouse click"
+#| msgid "Middle Click"
 msgctxt "@action:inmenu Middle mouse click"
-msgid "Middle Click"
+msgid "Middle-click"
 msgstr "לחיצה אמצעית"
 
 #: ui/ActionDialog.qml:179
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu Right mouse click"
+#| msgid "Right Click"
 msgctxt "@action:inmenu Right mouse click"
-msgid "Right Click"
+msgid "Right-click"
 msgstr "לחיצה ימנית"
 
 #: ui/ActionDialog.qml:206

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-30 00:41+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-06-08 17:09+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -532,40 +532,46 @@ msgstr ""
 "Închide fereastra cu configurări ale panoului și iese din regimul de "
 "modificare"
 
-#: contents/configuration/panelconfiguration/Ruler.qml:30
-#, kde-format
+#: contents/configuration/panelconfiguration/Ruler.qml:32
+#, fuzzy, kde-format
+#| msgid "Drag to change maximum height."
+msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum height."
 msgstr "Trageți pentru a schimba înălțimea maximă."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:30
-#, kde-format
+#: contents/configuration/panelconfiguration/Ruler.qml:33
+#, fuzzy, kde-format
+#| msgid "Drag to change maximum width."
+msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum width."
 msgstr "Trageți pentru a schimba lățimea maximă."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:30
-#: contents/configuration/panelconfiguration/Ruler.qml:31
-#, kde-format
-msgid "Double click to reset."
+#: contents/configuration/panelconfiguration/Ruler.qml:34
+#: contents/configuration/panelconfiguration/Ruler.qml:39
+#, fuzzy, kde-format
+#| msgid "Double click to reset."
+msgctxt "@info:tooltip slider handle"
+msgid "Double-click to reset."
 msgstr "Dublu-clic pentru reinițializare."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:31
-#, kde-format
+#: contents/configuration/panelconfiguration/Ruler.qml:37
+#, fuzzy, kde-format
+#| msgid "Drag to change minimum height."
+msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum height."
 msgstr "Trageți pentru a schimba înălțimea minimă."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:31
-#, kde-format
+#: contents/configuration/panelconfiguration/Ruler.qml:38
+#, fuzzy, kde-format
+#| msgid "Drag to change minimum width."
+msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr "Trageți pentru a schimba lățimea minimă."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:78
+#: contents/configuration/panelconfiguration/Ruler.qml:86
 #, kde-format
-msgid ""
-"Drag to change position on this screen edge.\n"
-"Double click to reset."
+msgid "@info:tooltip slider handle"
 msgstr ""
-"Trageți pentru a schimba poziția pe această muchie a ecranului.\n"
-"Dublu-clic pentru reinițializare."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 #, kde-format
@@ -838,6 +844,13 @@ msgstr "Ieși din regim de modificare"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Indicator de focalizare a panoului"
+
+#~ msgid ""
+#~ "Drag to change position on this screen edge.\n"
+#~ "Double click to reset."
+#~ msgstr ""
+#~ "Trageți pentru a schimba poziția pe această muchie a ecranului.\n"
+#~ "Dublu-clic pentru reinițializare."
 
 #~ msgctxt "@action:button Done configuring the panel"
 #~ msgid "Done"

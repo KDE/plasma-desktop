@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-22 00:41+0000\n"
-"PO-Revision-Date: 2024-09-02 16:10+0200\n"
+"PO-Revision-Date: 2024-09-03 11:51+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -123,6 +123,9 @@ msgid ""
 "The abbreviated name of the selected layout, which will be displayed in the "
 "system tray. You can change this setting yourself."
 msgstr ""
+"Le nomine abbreviate del disposition (layout) selectionate, que essera "
+"monstrate in le tabuliero de systema. Tu pote cambiar iste prefrentia per te "
+"mesme."
 
 #: ui/LayoutDialog.qml:195
 #, kde-format
@@ -140,7 +143,7 @@ msgstr "Vista preliminar"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Switching…"
-msgstr ""
+msgstr "Configura commutar…"
 
 #: ui/main.qml:38
 #, kde-format
@@ -238,7 +241,7 @@ msgstr "Retardo:"
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat delay %1"
-msgstr ""
+msgstr "Retardo de repetition de clave %1"
 
 #: ui/main.qml:188
 #, kde-format
@@ -262,7 +265,7 @@ msgstr "Frequentia:"
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat rate %1"
-msgstr ""
+msgstr "TAxa de Repetition de clave %1"
 
 #: ui/main.qml:227
 #, kde-format
@@ -304,7 +307,7 @@ msgstr "Move in alto"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout up"
-msgstr ""
+msgstr "Move disposition %1 in alto"
 
 #: ui/main.qml:275
 #, kde-format
@@ -346,7 +349,7 @@ msgstr "Dispositiones (layout) de reserva:"
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
-msgstr ""
+msgstr "Numero de dispositiones principal de recambio"
 
 #: ui/main.qml:376
 #, kde-format
@@ -363,6 +366,10 @@ msgid ""
 "accessed through the keyboard indicator applet or by setting a custom "
 "shortcut."
 msgstr ""
+"Tu pote haber usque 4 disposition principal, omne altere dispositiones es de "
+"recambio. Dispositiones de recambio non es includite quando on cycla trans "
+"le dispsoitiones, ma pote esser accessite trans le applet indicator de "
+"claviero o per assignar un via breve personaliste."
 
 #: ui/main.qml:385
 #, kde-format
@@ -389,12 +396,10 @@ msgid "Behavior"
 msgstr "Comportamento"
 
 #: ui/Switching.qml:28
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Switching layout affects:"
-msgstr "Computo de disposition (layout) principal:"
+msgstr "Commutar dispositiones (layout) influentia:"
 
 #: ui/Switching.qml:35
 #, kde-format
@@ -406,27 +411,25 @@ msgstr "Omne fenestras"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows on current desktop"
-msgstr ""
+msgstr "Omne fenestras sur le scriptorio currente"
 
 #: ui/Switching.qml:43
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows of current application"
-msgstr ""
+msgstr "Omne fenestras del application currente"
 
 #: ui/Switching.qml:47
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Current window only"
-msgstr ""
+msgstr "Solmente fenestra currente"
 
 #: ui/Switching.qml:74
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Show notification on layout change"
-msgstr "Monstra un popup sur modificationes de disposition"
+msgstr "Monstra notification sur modification de disposition"
 
 #: ui/Switching.qml:86
 #, kde-format
@@ -435,27 +438,22 @@ msgid "Shortcuts"
 msgstr "Vias breve"
 
 #: ui/Switching.qml:91 ui/Switching.qml:153
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Change layout:"
-msgstr "Dispositiones (layout) de reserva"
+msgstr "Cambia dispositiones (layout)"
 
 #: ui/Switching.qml:112
-#, fuzzy, kde-format
-#| msgid "Switch to Last-Used Keyboard Layout"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Switch to last used layout:"
-msgstr "Commuta a ultime disposition de claviero usate"
+msgstr "Commuta a ultime disposition usate:"
 
 #: ui/Switching.qml:133
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:group"
 msgid "Legacy Shortcuts"
-msgstr "Via Breve"
+msgstr "Via Breve Hereditate"
 
 #: ui/Switching.qml:141
 #, kde-kuit-format
@@ -466,14 +464,16 @@ msgid ""
 "Wayland.<nl/><nl/>Setting these shortcuts will take you to the Key bindings "
 "page."
 msgstr ""
+"Vias breve hereditate de X11 permitte un controlo plus accurate del vias "
+"breve de solo modificator e ha un supporto legermente melior sur X11 in "
+"casos de margine. Illos anque pote esser usate sur Wayland.<nl/><nl/"
+">Assignar iste vias breve te ducera al pagina de ligamines de clave."
 
 #: ui/Switching.qml:182
-#, fuzzy, kde-format
-#| msgctxt "@option:textbox"
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Alternative symbols:"
-msgstr "Via breve alternative:"
+msgstr "Symbolos alternative:"
 
 #: ui/Switching.qml:208
 #, kde-format
@@ -482,6 +482,8 @@ msgid ""
 "Modifier keys can be used to type additional characters, symbols, and "
 "diacritical marks."
 msgstr ""
+"Clave modfiicator pote esser usate pertypar characteres additional, "
+"symbolos, e signos diacritic."
 
 #: xkboptionsmodel.cpp:160
 #, kde-format

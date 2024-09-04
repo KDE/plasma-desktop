@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-26 00:40+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2017-12-15 12:37+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -156,20 +156,19 @@ msgstr ""
 
 #: ui/main.qml:126
 #, kde-format
+msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr ""
 
 #: ui/main.qml:138
 #, kde-format
-msgid ""
-"Clicking left and right button simultaneously sends middle button click."
+msgctxt "@info:tooltip"
+msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
 
 #: ui/main.qml:142
 #, kde-format
-msgid ""
-"Activating this setting increases mouse click latency by 50ms. The extra "
-"delay is needed to correctly detect simultaneous left and right mouse clicks."
+msgid "@info:tooltip from ContextualHelpButton"
 msgstr ""
 
 #: ui/main.qml:154
@@ -234,7 +233,7 @@ msgstr "Obrni &smer klizanja"
 
 #: ui/main.qml:351
 #, kde-format
-msgid "Touchscreen like scrolling."
+msgid "Touchscreen-like scrolling."
 msgstr ""
 
 #: ui/main.qml:356

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-30 00:41+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-08-30 12:27+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -525,40 +525,46 @@ msgstr "Desactivar o modo de edición"
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "Pechar a xanela de configuración do panel e saír do modo de edición."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:30
-#, kde-format
+#: contents/configuration/panelconfiguration/Ruler.qml:32
+#, fuzzy, kde-format
+#| msgid "Drag to change maximum height."
+msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum height."
 msgstr "Arrastrar para cambiar a altura máxima."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:30
-#, kde-format
+#: contents/configuration/panelconfiguration/Ruler.qml:33
+#, fuzzy, kde-format
+#| msgid "Drag to change maximum width."
+msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum width."
 msgstr "Arrastrar para cambiar a anchura máxima."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:30
-#: contents/configuration/panelconfiguration/Ruler.qml:31
-#, kde-format
-msgid "Double click to reset."
+#: contents/configuration/panelconfiguration/Ruler.qml:34
+#: contents/configuration/panelconfiguration/Ruler.qml:39
+#, fuzzy, kde-format
+#| msgid "Double click to reset."
+msgctxt "@info:tooltip slider handle"
+msgid "Double-click to reset."
 msgstr "Prema dobre para restabelecer."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:31
-#, kde-format
+#: contents/configuration/panelconfiguration/Ruler.qml:37
+#, fuzzy, kde-format
+#| msgid "Drag to change minimum height."
+msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum height."
 msgstr "Arrastrar para cambiar a altura mínima."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:31
-#, kde-format
+#: contents/configuration/panelconfiguration/Ruler.qml:38
+#, fuzzy, kde-format
+#| msgid "Drag to change minimum width."
+msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr "Arrastrar para cambiar a anchura mínima."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:78
+#: contents/configuration/panelconfiguration/Ruler.qml:86
 #, kde-format
-msgid ""
-"Drag to change position on this screen edge.\n"
-"Double click to reset."
+msgid "@info:tooltip slider handle"
 msgstr ""
-"Arrastrar para cambiar a posición neste extremo da pantalla.\n"
-"Prema dupla para restabelecer."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 #, kde-format
@@ -826,6 +832,13 @@ msgstr "Desactivar o modo de edición"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Indicador de foco do panel"
+
+#~ msgid ""
+#~ "Drag to change position on this screen edge.\n"
+#~ "Double click to reset."
+#~ msgstr ""
+#~ "Arrastrar para cambiar a posición neste extremo da pantalla.\n"
+#~ "Prema dupla para restabelecer."
 
 #~ msgctxt "@action:button Done configuring the panel"
 #~ msgid "Done"

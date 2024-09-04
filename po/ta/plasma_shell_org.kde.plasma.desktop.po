@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-30 00:41+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-09-01 19:54+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -520,40 +520,46 @@ msgstr "திருத்தும் பயன்முறையிலிர�
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "பலகை அமைப்புகளை மூடி திருத்தும் பயன்முறையிலிருந்து வெளியேறும்"
 
-#: contents/configuration/panelconfiguration/Ruler.qml:30
-#, kde-format
+#: contents/configuration/panelconfiguration/Ruler.qml:32
+#, fuzzy, kde-format
+#| msgid "Drag to change maximum height."
+msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum height."
 msgstr "அதிகபட்ச உயரத்தை மாற்ற இழுங்கள்."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:30
-#, kde-format
+#: contents/configuration/panelconfiguration/Ruler.qml:33
+#, fuzzy, kde-format
+#| msgid "Drag to change maximum width."
+msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum width."
 msgstr "அதிகபட்ச அகலத்தை மாற்ற இழுங்கள்."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:30
-#: contents/configuration/panelconfiguration/Ruler.qml:31
-#, kde-format
-msgid "Double click to reset."
+#: contents/configuration/panelconfiguration/Ruler.qml:34
+#: contents/configuration/panelconfiguration/Ruler.qml:39
+#, fuzzy, kde-format
+#| msgid "Double click to reset."
+msgctxt "@info:tooltip slider handle"
+msgid "Double-click to reset."
 msgstr "மீட்டமைக்க இரட்டைக் கிளிக் செய்யுங்கள்."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:31
-#, kde-format
+#: contents/configuration/panelconfiguration/Ruler.qml:37
+#, fuzzy, kde-format
+#| msgid "Drag to change minimum height."
+msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum height."
 msgstr "குறைந்தபட்ச உயரத்தை மாற்ற இழுங்கள்."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:31
-#, kde-format
+#: contents/configuration/panelconfiguration/Ruler.qml:38
+#, fuzzy, kde-format
+#| msgid "Drag to change minimum width."
+msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr "குறைந்தபட்ச அகலத்தை மாற்ற இழுங்கள்."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:78
+#: contents/configuration/panelconfiguration/Ruler.qml:86
 #, kde-format
-msgid ""
-"Drag to change position on this screen edge.\n"
-"Double click to reset."
+msgid "@info:tooltip slider handle"
 msgstr ""
-"திரையின் இவ்வோரத்தில் இருப்பிடத்தை மாற்ற இழுங்கள்.\n"
-"மீட்டமைக்க இரட்டைக் கிளிக் செய்யுங்கள்."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 #, kde-format
@@ -820,6 +826,13 @@ msgstr "திருத்தும் பயன்முறையிலிர�
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "பலகைக் குவியக்காட்டி"
+
+#~ msgid ""
+#~ "Drag to change position on this screen edge.\n"
+#~ "Double click to reset."
+#~ msgstr ""
+#~ "திரையின் இவ்வோரத்தில் இருப்பிடத்தை மாற்ற இழுங்கள்.\n"
+#~ "மீட்டமைக்க இரட்டைக் கிளிக் செய்யுங்கள்."
 
 #~ msgctxt "@action:button Done configuring the panel"
 #~ msgid "Done"

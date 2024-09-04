@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-30 00:41+0000\n"
-"PO-Revision-Date: 2024-05-08 22:50+0300\n"
+"PO-Revision-Date: 2024-09-03 21:56+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -21,137 +21,113 @@ msgstr ""
 "X-Generator: Poedit 3.4.2\n"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Desktop path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Desktop folder:"
-msgstr "Darbalaukio kelias:"
+msgstr "Darbalaukio aplankas:"
 
 #: ui/main.qml:58
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder contains all the files you see on your desktop."
-msgstr ""
+msgstr "Šiame aplanke yra visi failai, kuriuos matote darbalaukyje."
 
 #: ui/main.qml:66
-#, fuzzy, kde-format
-#| msgid "Documents"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Documents folder:"
-msgstr "Dokumentai"
+msgstr "Dokumentų aplankas:"
 
 #: ui/main.qml:72
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save documents from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save documents."
 msgstr ""
-"Šis aplankas, pagal numatymą, bus naudojamas tam, kad iš jo būtų įkelti arba "
-"į jį būtų įrašyti dokumentai."
+"Šis aplankas, pagal numatymą, bus naudojamas dokumentų atvėrimui ar įrašymui."
 
 #: ui/main.qml:80
-#, fuzzy, kde-format
-#| msgid "Downloads"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Downloads folder:"
-msgstr "Atsiuntimai"
+msgstr "Atsiuntimų aplankas:"
 
 #: ui/main.qml:86
-#, fuzzy, kde-format
-#| msgid "This folder will be used by default to save your downloaded items."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
-"Šis aplankas, pagal numatymą, bus naudojamas tam, kad į jį būtų įrašyti "
-"atsiuntimai."
+"Šis aplankas, pagal numatymą, bus naudojamas atsiųstų elementų įrašymui."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgid "Videos path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Videos folder:"
-msgstr "Vaizdo įrašų kelias:"
+msgstr "Vaizdo įrašų aplankas:"
 
 #: ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save movies from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save video files."
 msgstr ""
-"Šis aplankas, pagal numatymą, bus naudojamas tam, kad iš jo būtų įkelti arba "
-"į jį būtų įrašyti filmai."
+"Šis aplankas, pagal numatymą, bus naudojamas vaizdo įrašų atvėrimui ar "
+"įrašymui."
 
 #: ui/main.qml:108
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Pictures folder:"
-msgstr "Paveikslų kelias:"
+msgstr "Paveikslų aplankas:"
 
 #: ui/main.qml:114
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save movies from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save image files."
 msgstr ""
-"Šis aplankas, pagal numatymą, bus naudojamas tam, kad iš jo būtų įkelti arba "
-"į jį būtų įrašyti filmai."
+"Šis aplankas, pagal numatymą, bus naudojamas paveikslų atvėrimui ar įrašymui."
 
 #: ui/main.qml:122
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Music folder:"
-msgstr ""
+msgstr "Muzikos aplankas:"
 
 #: ui/main.qml:128
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save music from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save music files."
 msgstr ""
-"Šis aplankas, pagal numatymą, bus naudojamas tam, kad iš jo būtų įkelta arba "
-"į jį būtų įrašyta muzika."
+"Šis aplankas, pagal numatymą, bus naudojamas muzikinių failų atvėrimui ar "
+"įrašymui."
 
 #: ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "Public path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Public folder:"
-msgstr "Viešinių kelias:"
+msgstr "Viešinių aplankas:"
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default for publicly-shared files when "
-#| "network sharing is enabled."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
 msgstr ""
-"Šis aplankas, pagal numatymą, bus naudojamas viešai bendrinamiems failams, "
-"kai yra įjungtas tinklo bendrinimas."
+"Šis aplankas, kai yra įjungtas tinklo bendrinimas, pagal numatymą, bus "
+"naudojamas viešai bendrinamiems failams."
 
 #: ui/main.qml:150
-#, fuzzy, kde-format
-#| msgid "Templates"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Templates folder:"
-msgstr "Šablonai"
+msgstr "Šablonų aplankas:"
 
 #: ui/main.qml:156
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save templates from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save file templates."
 msgstr ""
-"Šis aplankas, pagal numatymą, bus naudojamas tam, kad iš jo būtų įkelti arba "
-"į jį būtų įrašyti šablonai."
+"Šis aplankas, pagal numatymą, bus naudojamas failų šablonų atvėrimui ar "
+"įrašymui."
 
 #: ui/UrlRequester.qml:74
 #, kde-format

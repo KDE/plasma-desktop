@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-06-10 09:20+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -156,16 +156,24 @@ msgid "Middle-click to scroll to clicked location"
 msgstr "Clic central pour défiler vers l'emplacement du clic"
 
 #: ui/main.qml:255
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@radio part of a complete sentence: 'Middle click pastes selected text'"
+#| msgid "Middle Click:"
 msgctxt ""
-"@radio part of a complete sentence: 'Middle click pastes selected text'"
-msgid "Middle Click:"
+"@label for checkbox, part of a complete sentence: 'Middle-click pastes "
+"selected text'"
+msgid "Middle-click:"
 msgstr "Clic central :"
 
 #: ui/main.qml:257
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@radio part of a complete sentence: 'Middle click pastes selected text'"
+#| msgid "Pastes selected text"
 msgctxt ""
-"@radio part of a complete sentence: 'Middle click pastes selected text'"
+"@option:check part of a complete sentence: 'Middle click pastes selected "
+"text'"
 msgid "Pastes selected text"
 msgstr "Colle le texte sélectionné"
 

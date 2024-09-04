@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-26 00:40+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-07-22 13:03+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -166,27 +166,26 @@ msgid "Swap left and right buttons."
 msgstr "Víxla hægri og vinstri hnöppum."
 
 #: ui/main.qml:126
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Press left and right buttons for middle-click"
+msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "Ýta á vinstri og hægri hnappa til að gera miðjusmell."
 
 #: ui/main.qml:138
-#, kde-format
-msgid ""
-"Clicking left and right button simultaneously sends middle button click."
+#, fuzzy, kde-format
+#| msgid ""
+#| "Clicking left and right button simultaneously sends middle button click."
+msgctxt "@info:tooltip"
+msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
 "Ef smellt er á vinstri og hægri hnappana samtímis myndar músin "
 "miðjuhnappssmell."
 
 #: ui/main.qml:142
 #, kde-format
-msgid ""
-"Activating this setting increases mouse click latency by 50ms. The extra "
-"delay is needed to correctly detect simultaneous left and right mouse clicks."
+msgid "@info:tooltip from ContextualHelpButton"
 msgstr ""
-"Ef þessi stilling er virkjuð eykur það biðtíma eftir að smellt er með "
-"músinni um 50 msek. Töfin sem bætist við er nauðsynleg til að hægt sé að "
-"greina rétt þegar smellt er samtímis með vinstri og hægri músarhnappi."
 
 #: ui/main.qml:154
 #, kde-format
@@ -246,8 +245,9 @@ msgid "Invert scroll direction"
 msgstr "Snúa við skrunstefnu"
 
 #: ui/main.qml:351
-#, kde-format
-msgid "Touchscreen like scrolling."
+#, fuzzy, kde-format
+#| msgid "Touchscreen like scrolling."
+msgid "Touchscreen-like scrolling."
 msgstr "Skrun eins og á snertiskjá."
 
 #: ui/main.qml:356
@@ -259,6 +259,15 @@ msgstr "Ýta á miðjuhnapp og færa músina til að skruna"
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "Skrunað með músinni á meðan miðjuhnappinum er haldið niðri."
+
+#~ msgid ""
+#~ "Activating this setting increases mouse click latency by 50ms. The extra "
+#~ "delay is needed to correctly detect simultaneous left and right mouse "
+#~ "clicks."
+#~ msgstr ""
+#~ "Ef þessi stilling er virkjuð eykur það biðtíma eftir að smellt er með "
+#~ "músinni um 50 msek. Töfin sem bætist við er nauðsynleg til að hægt sé að "
+#~ "greina rétt þegar smellt er samtímis með vinstri og hægri músarhnappi."
 
 #~ msgctxt "@action:button"
 #~ msgid "Bindings for Additional Mouse Buttons"

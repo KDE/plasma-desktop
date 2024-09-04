@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:42+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-07-30 11:29+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -158,21 +158,27 @@ msgstr ""
 "decidir com gestionar-ho."
 
 #: ui/ActionDialog.qml:177
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu Left mouse click"
+#| msgid "Left Click"
 msgctxt "@action:inmenu Left mouse click"
-msgid "Left Click"
+msgid "Left-click"
 msgstr "Clic esquerre"
 
 #: ui/ActionDialog.qml:178
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu Middle mouse click"
+#| msgid "Middle Click"
 msgctxt "@action:inmenu Middle mouse click"
-msgid "Middle Click"
+msgid "Middle-click"
 msgstr "Clic del mig"
 
 #: ui/ActionDialog.qml:179
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu Right mouse click"
+#| msgid "Right Click"
 msgctxt "@action:inmenu Right mouse click"
-msgid "Right Click"
+msgid "Right-click"
 msgstr "Clic dret"
 
 #: ui/ActionDialog.qml:206

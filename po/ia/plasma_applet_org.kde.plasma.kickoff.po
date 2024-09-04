@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Giovanni Sora <g.sora@tiscali.it>, 2013, 2014, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2013, 2014, 2020, 2021, 2022, 2023, 2024 Giovanni Sora <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-31 00:40+0000\n"
-"PO-Revision-Date: 2023-09-13 18:02+0200\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"PO-Revision-Date: 2024-09-03 11:54+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -146,12 +146,10 @@ msgid "Automatically disabled when in Touch Mode"
 msgstr "Automaticamente dishabilitate quando in modo de tocco (Touch Mode)"
 
 #: package/contents/ui/ConfigGeneral.qml:175
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Enabled Search Plugins…"
+#, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
-msgstr "Configura plugins de cerca habilitate..."
+msgstr "Configura plugins de cerca..."
 
 #: package/contents/ui/ConfigGeneral.qml:185
 #, kde-format
@@ -251,7 +249,7 @@ msgstr "Nulle correspondentias"
 msgid "Open user settings"
 msgstr "Aperi preferentias de usator"
 
-#: package/contents/ui/Header.qml:265
+#: package/contents/ui/Header.qml:261
 #, kde-format
 msgid "Keep Open"
 msgstr "Manteni aperite"

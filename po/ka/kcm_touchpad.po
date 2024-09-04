@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-26 00:40+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-08-26 05:49+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -282,22 +282,31 @@ msgid "Swap left and right buttons."
 msgstr "მარჯვენა და მარცხენა ღილაკებისთვის ადგილის შეცვლა."
 
 #: ui/main.qml:234
-#, kde-format
-msgid "Press left and right buttons for middle click"
+#, fuzzy, kde-format
+#| msgid "Press left and right buttons for middle click"
+msgctxt "@option:check"
+msgid "Press left and right buttons to middle-click"
 msgstr "შუა-წკაპისთვის მარჯვენა და მარცხენა ღილაკებს ერთდროულად დააწექით"
 
-#: ui/main.qml:238 ui/main.qml:882
-#, kde-format
-msgid ""
-"Clicking left and right button simultaneously sends middle button click."
+#: ui/main.qml:238
+#, fuzzy, kde-format
+#| msgid ""
+#| "Clicking left and right button simultaneously sends middle button click."
+msgctxt "@info:tooltip for checkbox"
+msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
 "მარცხენა და მარჯვენა ღილაკებზე ერთდროული წკაპი შუა ღილაკის წკაპს აგზავნის."
 
 #: ui/main.qml:264
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Activating this setting increases mouse click latency by 50ms. The extra "
+#| "delay is needed to correctly detect simultaneous left and right mouse "
+#| "clicks."
+msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
-"Activating this setting increases mouse click latency by 50ms. The extra "
-"delay is needed to correctly detect simultaneous left and right mouse clicks."
+"Activating this setting increases click latency by 50ms. The extra delay is "
+"needed to correctly detect simultaneous left and right button presses."
 msgstr ""
 "ამ პარამეტრის გააქტიურება თაგუნას წკაპის დაყოვნებას 50მწმ-ით ზრდის. "
 "დამატებითი დაყოვნება საჭიროა, რომ თაგუნას მარჯვენა და მარცხენა ღილაკების "
@@ -385,24 +394,36 @@ msgstr "აწევ-ჩამოწევის მიმართულებ�
 msgid "Touchscreen like scrolling."
 msgstr "სენსორული ეკრანის მსგავსი აწევ-ჩამოწევა."
 
-#: ui/main.qml:579 ui/main.qml:596
+#: ui/main.qml:579
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "ჰორიზონტალური აწევ-ჩამოწევის გამორთვა"
 
+#: ui/main.qml:596
+#, fuzzy, kde-format
+#| msgid "Disable horizontal scrolling"
+msgid "Disable horizontal scrolling."
+msgstr "ჰორიზონტალური აწევ-ჩამოწევის გამორთვა"
+
 #: ui/main.qml:609
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Tapping:"
+msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "დატყაპუნება:"
 
 #: ui/main.qml:610
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Tap-to-click"
+msgctxt "@option:check"
 msgid "Tap-to-click"
 msgstr "დასაწკაპუნებლად დაატყაპუნეთ"
 
 #: ui/main.qml:614
-#, kde-format
-msgid "Single tap is left button click."
+#, fuzzy, kde-format
+#| msgid "Single tap is left button click."
+msgctxt "@info:tooltip"
+msgid "Single tap to left-click."
 msgstr "მარცხენა კლავიშის წკაპისთვის ერთი ტყაპი."
 
 #: ui/main.qml:643
@@ -473,63 +494,134 @@ msgid "Tap with two fingers to middle-click."
 msgstr "შუა-წკაპისთვის ორი თითით დაატყაპუნეთ."
 
 #: ui/main.qml:777
-#, kde-format
-msgid "Right-click:"
+#, fuzzy, kde-format
+#| msgid "Right-click:"
+msgctxt ""
+"@label for radiobutton group, configure right-click with touch-pad "
+"integrated button (pressing into the touchpad)"
+msgid "Integrated right-click:"
 msgstr "მარჯვენა-წკაპი:"
 
 #: ui/main.qml:811
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Press bottom-right corner"
+msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
 msgstr "დააჭირეთ ქვედა-მარჯვენა კუთხეში"
 
-#: ui/main.qml:815
+#: ui/main.qml:816
 #, kde-format
+msgctxt "@info:tooltip"
 msgid ""
-"Software enabled buttons will be added to bottom portion of your touchpad."
-msgstr "პროგრამულად ჩართული ღილაკები თქვენი თაჩპედის ქვედა ადგილას დაემატება."
+"Pressing the bottom right corner of your touchpad acts as right-click. "
+"Middle-click by simultaneously pressing the bottom left and bottom right "
+"corners."
+msgstr ""
 
-#: ui/main.qml:823
+#: ui/main.qml:817
 #, kde-format
-msgid "Press anywhere with two fingers"
+msgctxt "@info:tooltip"
+msgid ""
+"Pressing the bottom right corner of your touchpad acts as right-click. "
+"Middle-click by pressing the bottom central area."
+msgstr ""
+
+#: ui/main.qml:828
+#, kde-format
+msgctxt "@info shown below radio button"
+msgid "Middle-click by pressing both bottom corners."
+msgstr ""
+
+#: ui/main.qml:829
+#, kde-format
+msgctxt "@info shown below radio button"
+msgid "Middle-click by pressing bottom center."
+msgstr ""
+
+#: ui/main.qml:847
+#, fuzzy, kde-format
+#| msgid "Press anywhere with two fingers"
+msgctxt "@option:radio touchpad integrated right-click"
+msgid "Press touchpad with two fingers"
 msgstr "სადმე ორი თითით დაატყაპუნეთ"
 
-#: ui/main.qml:827
-#, kde-format
-msgid "Tap with two finger to enable right click."
-msgstr "მარჯვენა წკაპით ჩასართავად ორი თითით დაატყაპუნეთ."
+#: ui/main.qml:851
+#, fuzzy, kde-format
+#| msgid "Tap with two fingers to right-click."
+msgctxt "@info:tooltip for radiobutton"
+msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
+msgstr "მარჯვენა-წკაპისთვის ორი თითით დაატყაპუნეთ."
 
-#: ui/main.qml:837
-#, kde-format
-msgid "Middle-click: "
+#: ui/main.qml:863
+#, fuzzy, kde-format
+#| msgid "Press anywhere with three fingers."
+msgctxt "@info shown below radio button"
+msgid "Middle-click by pressing with three fingers."
+msgstr "სადმე სამი თითით დაატყაპუნეთ."
+
+#: ui/main.qml:882
+#, fuzzy, kde-format
+#| msgid "Middle-click: "
+msgctxt ""
+"@label for radiobutton group, configure middle-click with touch-pad "
+"integrated button (pressing into the touchpad)"
+msgid "Integrated middle-click:"
 msgstr "შუა-წკაპი: "
 
-#: ui/main.qml:866
-#, kde-format
-msgid "Press bottom-middle"
+#: ui/main.qml:911
+#, fuzzy, kde-format
+#| msgid "Press bottom-middle"
+msgctxt "@option:radio touchpad integrated middle-click"
+msgid "Press bottom middle edge"
 msgstr "დააჭირეთ ქვედა შუაში"
 
-#: ui/main.qml:870
+#: ui/main.qml:915
 #, kde-format
-msgid ""
-"Software enabled middle-button will be added to bottom portion of your "
-"touchpad."
+msgctxt "@info:tooltip for radiobutton"
+msgid "Pressing the bottom right corner of your touchpad acts as right-click."
 msgstr ""
-"პროგრამულად ჩართული შუა-ღილაკი თქვენი თაჩპედის ქვედა ადგილას დაემატება."
 
-#: ui/main.qml:878
-#, kde-format
-msgid "Press bottom left and bottom right corners simultaneously"
+#: ui/main.qml:923
+#, fuzzy, kde-format
+#| msgid "Press bottom left and bottom right corners simultaneously"
+msgctxt "@option:radio touchpad integrated middle-click"
+msgid "Press bottom left and bottom right corners"
 msgstr "ერთდროულად დააწექით ქვედა მარცხენა და ქვედა მარჯვენა კუთხეებს"
 
-#: ui/main.qml:891
-#, kde-format
-msgid "Press anywhere with three fingers"
+#: ui/main.qml:927
+#, fuzzy, kde-format
+#| msgid "Press bottom left and bottom right corners simultaneously"
+msgctxt "@info:tooltip for radiobutton"
+msgid ""
+"Pressing the bottom left and bottom right corners simultaneously acts as "
+"middle-click."
+msgstr "ერთდროულად დააწექით ქვედა მარცხენა და ქვედა მარჯვენა კუთხეებს"
+
+#: ui/main.qml:936
+#, fuzzy, kde-format
+#| msgid "Press anywhere with three fingers"
+msgctxt "@option:check touchpad integrated middle-click"
+msgid "Press touchpad with three fingers"
 msgstr "სადმე სამი თითით დაატყაპუნეთ"
 
-#: ui/main.qml:897
+#: ui/main.qml:942
 #, kde-format
-msgid "Press anywhere with three fingers."
-msgstr "სადმე სამი თითით დაატყაპუნეთ."
+msgid "@info:tooltip for radiobutton"
+msgstr ""
+
+#~ msgid ""
+#~ "Software enabled buttons will be added to bottom portion of your touchpad."
+#~ msgstr ""
+#~ "პროგრამულად ჩართული ღილაკები თქვენი თაჩპედის ქვედა ადგილას დაემატება."
+
+#~ msgid "Tap with two finger to enable right click."
+#~ msgstr "მარჯვენა წკაპით ჩასართავად ორი თითით დაატყაპუნეთ."
+
+#~ msgid ""
+#~ "Software enabled middle-button will be added to bottom portion of your "
+#~ "touchpad."
+#~ msgstr ""
+#~ "პროგრამულად ჩართული შუა-ღილაკი თქვენი თაჩპედის ქვედა ადგილას დაემატება."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

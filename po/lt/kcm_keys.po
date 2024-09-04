@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-24 00:41+0000\n"
-"PO-Revision-Date: 2024-07-27 19:00+0300\n"
+"PO-Revision-Date: 2024-09-03 22:17+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -287,12 +287,10 @@ msgid "Enter a command or choose a script file:"
 msgstr "Įveskite komandą arba pasirinkite scenarijaus failą:"
 
 #: ui/main.qml:468
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox accessible"
-#| msgid "Command"
+#, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
-msgstr "Komanda"
+msgstr "Komanda:"
 
 #: ui/main.qml:474
 #, kde-format
@@ -316,13 +314,13 @@ msgstr "Pasirinkti scenarijaus failą"
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
-msgstr ""
+msgstr "Pavadinimas:"
 
 #: ui/main.qml:491
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
-msgstr ""
+msgstr "Įveskite čia pavadinimą"
 
 #: ui/main.qml:503
 #, kde-format
@@ -336,7 +334,7 @@ msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
 "extensions"
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
-msgstr ""
+msgstr "Scenarijaus failai (.sh, .bash, .zsh ir t.t.) (*.*sh)"
 
 #: ui/main.qml:528
 #, kde-format

@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-26 00:40+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-08-26 10:19+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -179,26 +179,25 @@ msgid "Swap left and right buttons."
 msgstr "Intercambiar os botóns esquerdo e dereito."
 
 #: ui/main.qml:126
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Press left and right buttons for middle-click"
+msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "Prema os botóns esquerdo e dereito para facer un clic central"
 
 #: ui/main.qml:138
-#, kde-format
-msgid ""
-"Clicking left and right button simultaneously sends middle button click."
+#, fuzzy, kde-format
+#| msgid ""
+#| "Clicking left and right button simultaneously sends middle button click."
+msgctxt "@info:tooltip"
+msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
 "Premer os botóns esquerdo e dereito á vez envía un clic do botón central."
 
 #: ui/main.qml:142
 #, kde-format
-msgid ""
-"Activating this setting increases mouse click latency by 50ms. The extra "
-"delay is needed to correctly detect simultaneous left and right mouse clicks."
+msgid "@info:tooltip from ContextualHelpButton"
 msgstr ""
-"Activar esta opción aumenta a latencia entre clics do rato en 50 ms. O "
-"atraso adicional é necesario para detectar correctamente clics simultáneos "
-"dos botóns esquerdo e dereito do rato."
 
 #: ui/main.qml:154
 #, kde-format
@@ -260,8 +259,9 @@ msgid "Invert scroll direction"
 msgstr "Inverter a dirección de desprazamento"
 
 #: ui/main.qml:351
-#, kde-format
-msgid "Touchscreen like scrolling."
+#, fuzzy, kde-format
+#| msgid "Touchscreen like scrolling."
+msgid "Touchscreen-like scrolling."
 msgstr "Desprazamento como o dunha pantalla táctil."
 
 #: ui/main.qml:356
@@ -273,6 +273,15 @@ msgstr "Prema o botón central e mova o rato para desprazar."
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "Desprazamento co rato mentres se preme o botón central."
+
+#~ msgid ""
+#~ "Activating this setting increases mouse click latency by 50ms. The extra "
+#~ "delay is needed to correctly detect simultaneous left and right mouse "
+#~ "clicks."
+#~ msgstr ""
+#~ "Activar esta opción aumenta a latencia entre clics do rato en 50 ms. O "
+#~ "atraso adicional é necesario para detectar correctamente clics "
+#~ "simultáneos dos botóns esquerdo e dereito do rato."
 
 #~ msgctxt "@action:button"
 #~ msgid "Bindings for Additional Mouse Buttons"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:42+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-08-03 14:35+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -157,21 +157,27 @@ msgid ""
 msgstr "這個平板按鍵按下時會轉交給聚焦的應用程式，讓它決定如何處理它。"
 
 #: ui/ActionDialog.qml:177
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu Left mouse click"
+#| msgid "Left Click"
 msgctxt "@action:inmenu Left mouse click"
-msgid "Left Click"
+msgid "Left-click"
 msgstr "左鍵點擊"
 
 #: ui/ActionDialog.qml:178
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu Middle mouse click"
+#| msgid "Middle Click"
 msgctxt "@action:inmenu Middle mouse click"
-msgid "Middle Click"
+msgid "Middle-click"
 msgstr "中鍵點擊"
 
 #: ui/ActionDialog.qml:179
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu Right mouse click"
+#| msgid "Right Click"
 msgctxt "@action:inmenu Right mouse click"
-msgid "Right Click"
+msgid "Right-click"
 msgstr "右鍵點擊"
 
 #: ui/ActionDialog.qml:206
