@@ -939,7 +939,7 @@ KCM.SimpleKCM {
                 visible: rightClickMethodClickfinger.checked
                 hoverEnabled: true
                 QQC2.ToolTip {
-                    text: i18nd("kcm_touchpad", "@info:tooltip for radiobutton", "Pressing the touchpad anywhere with three fingers acts as middle-click.")
+                    text: i18ndc("kcm_touchpad", "@info:tooltip for radiobutton", "Pressing the touchpad anywhere with three fingers acts as middle-click.")
                     visible: parent.hovered
                     delay: 1000
                 }
