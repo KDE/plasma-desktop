@@ -404,8 +404,6 @@ KCM.AbstractKCM {
         property string name: ""
         property Item commandListItemDelegate: null
 
-        width: Math.max(root.width / 2, Kirigami.Units.gridUnit * 24)
-
         title: editing ? i18n("Edit Command") : i18n("Add Command")
         iconName: 'folder-script-symbolic'
 
@@ -457,8 +455,10 @@ KCM.AbstractKCM {
             spacing: Kirigami.Units.smallSpacing
 
             QQC2.Label {
+                Layout.fillWidth: true
                 text: i18n("Enter a command or choose a script file:")
                 textFormat: Text.PlainText
+                wrapMode: Text.Wrap
             }
 
             Kirigami.FormLayout {
