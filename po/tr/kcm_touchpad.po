@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: playground-utils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 02:27+0000\n"
-"PO-Revision-Date: 2024-07-02 13:49+0300\n"
+"PO-Revision-Date: 2024-09-05 01:02+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #: actions.cpp:19
 #, kde-format
@@ -54,7 +54,7 @@ msgstr "Dokunmatik alan %1 için temel aygıt bilgi okumasında kritik hata."
 #: backends/x11/xlibbackend.cpp:71
 #, kde-format
 msgid "Cannot connect to X server"
-msgstr "X sunucusuna bağlanılamadı"
+msgstr "X sunucusuna bağlanılamıyor"
 
 #: backends/x11/xlibbackend.cpp:84 kcm/libinput/touchpad.qml:95
 #, kde-format
@@ -99,7 +99,7 @@ msgstr "Aygıt etkin"
 #: kcm/libinput/touchpad.qml:141
 #, kde-format
 msgid "Accept input through this device."
-msgstr "Bu aygıt üzerinden girişi kabul et."
+msgstr "Bu aygıt üzerinden girişi kabul edin."
 
 #: kcm/libinput/touchpad.qml:165
 #, kde-format
@@ -478,7 +478,7 @@ msgstr "Tüm kenarlar"
 #, kde-format
 msgctxt "Touchpad Edge"
 msgid "Top edge"
-msgstr "Üst kenarlık"
+msgstr "Üst kenar"
 
 #. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
 #: touchpadparameters.kcfg:291
@@ -492,7 +492,7 @@ msgstr "Sağ üst köşe"
 #, kde-format
 msgctxt "Touchpad Edge"
 msgid "Right edge"
-msgstr "Sağ kenarlık"
+msgstr "Sağ kenar"
 
 #. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
 #: touchpadparameters.kcfg:297
@@ -506,7 +506,7 @@ msgstr "Sağ alt köşe"
 #, kde-format
 msgctxt "Touchpad Edge"
 msgid "Bottom edge"
-msgstr "Alt kenarlık"
+msgstr "Alt kenar"
 
 #. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
 #: touchpadparameters.kcfg:303
@@ -520,7 +520,7 @@ msgstr "Sol alt köşe"
 #, kde-format
 msgctxt "Touchpad Edge"
 msgid "Left edge"
-msgstr "Sol kenarlık"
+msgstr "Sol kenar"
 
 #. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
 #: touchpadparameters.kcfg:309
