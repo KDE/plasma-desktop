@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
 "PO-Revision-Date: 2024-04-28 17:39+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -563,10 +563,18 @@ msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr "ドラッグして最小の幅を変更"
 
-#: contents/configuration/panelconfiguration/Ruler.qml:86
-#, kde-format
-msgid "@info:tooltip slider handle"
+#: contents/configuration/panelconfiguration/Ruler.qml:87
+#, fuzzy, kde-format
+#| msgid ""
+#| "Drag to change position on this screen edge.\n"
+#| "Double click to reset."
+msgctxt "@info:tooltip slider handle"
+msgid ""
+"Drag to change position on this screen edge.\n"
+"Double-click to reset."
 msgstr ""
+"ドラッグしてこのスクリーンの端での位置を変更\n"
+"ダブルクリックしてリセット"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 #, kde-format
@@ -835,13 +843,6 @@ msgstr ""
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "パネルフォーカスインジケータ"
-
-#~ msgid ""
-#~ "Drag to change position on this screen edge.\n"
-#~ "Double click to reset."
-#~ msgstr ""
-#~ "ドラッグしてこのスクリーンの端での位置を変更\n"
-#~ "ダブルクリックしてリセット"
 
 #~ msgctxt "@option:check"
 #~ msgid "Keep visible when unlocking prompt disappears"

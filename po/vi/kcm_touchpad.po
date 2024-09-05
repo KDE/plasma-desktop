@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
 "PO-Revision-Date: 2021-09-09 16:18+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -597,9 +597,11 @@ msgid "Press touchpad with three fingers"
 msgstr "Nhấn bất kì đâu bằng ba ngón"
 
 #: ui/main.qml:942
-#, kde-format
-msgid "@info:tooltip for radiobutton"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Tap with two fingers to right-click."
+msgctxt "@info:tooltip for radiobutton"
+msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
+msgstr "Vỗ bằng hai ngón để bấm phải."
 
 #~ msgid ""
 #~ "Software enabled buttons will be added to bottom portion of your touchpad."

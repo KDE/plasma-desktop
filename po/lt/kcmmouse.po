@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
 "PO-Revision-Date: 2024-09-03 23:32+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -183,9 +183,19 @@ msgstr ""
 "viduriniojo mygtuko spustelėjimas."
 
 #: ui/main.qml:142
-#, kde-format
-msgid "@info:tooltip from ContextualHelpButton"
+#, fuzzy, kde-format
+#| msgid ""
+#| "Activating this setting increases mouse click latency by 50ms. The extra "
+#| "delay is needed to correctly detect simultaneous left and right mouse "
+#| "clicks."
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"Activating this setting increases click latency by 50ms. The extra delay is "
+"needed to correctly detect simultaneous left and right button presses."
 msgstr ""
+"Aktyvavus šią nuostatą pelės delsa padidėja 50 milisekundžių. Ši papildoma "
+"delsa yra reikalinga, kad būtų teisingai aptinkami vienalaikiai kairiojo ir "
+"dešiniojo pelės mygtuko spustelėjimai."
 
 #: ui/main.qml:154
 #, kde-format
@@ -259,15 +269,6 @@ msgstr "Paspausti vidurinįjį mygtuką ir judinti pelę, kad būtų slenkama"
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "Slinkimas naudojant pelę, kol yra nuspaustas vidurinysis mygtukas."
-
-#~ msgid ""
-#~ "Activating this setting increases mouse click latency by 50ms. The extra "
-#~ "delay is needed to correctly detect simultaneous left and right mouse "
-#~ "clicks."
-#~ msgstr ""
-#~ "Aktyvavus šią nuostatą pelės delsa padidėja 50 milisekundžių. Ši "
-#~ "papildoma delsa yra reikalinga, kad būtų teisingai aptinkami vienalaikiai "
-#~ "kairiojo ir dešiniojo pelės mygtuko spustelėjimai."
 
 #~ msgctxt "@action:button"
 #~ msgid "Bindings for Additional Mouse Buttons"

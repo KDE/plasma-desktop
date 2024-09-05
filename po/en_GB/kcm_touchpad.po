@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
 "PO-Revision-Date: 2024-07-05 13:53+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -601,9 +601,11 @@ msgid "Press touchpad with three fingers"
 msgstr "Press anywhere with three fingers"
 
 #: ui/main.qml:942
-#, kde-format
-msgid "@info:tooltip for radiobutton"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Tap with two fingers to right-click."
+msgctxt "@info:tooltip for radiobutton"
+msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
+msgstr "Tap with two fingers to right-click."
 
 #~ msgid ""
 #~ "Software enabled buttons will be added to bottom portion of your touchpad."

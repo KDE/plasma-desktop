@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
 "PO-Revision-Date: 2024-01-14 22:35+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -189,7 +189,10 @@ msgstr "左右のボタンを同時に押すと中クリックを送信します
 
 #: ui/main.qml:142
 #, kde-format
-msgid "@info:tooltip from ContextualHelpButton"
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"Activating this setting increases click latency by 50ms. The extra delay is "
+"needed to correctly detect simultaneous left and right button presses."
 msgstr ""
 
 #: ui/main.qml:154

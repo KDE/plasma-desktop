@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
-"PO-Revision-Date: 2024-08-30 05:41+0200\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"PO-Revision-Date: 2024-09-04 04:58+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -520,45 +520,48 @@ msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "პანელის მორგების ფანჯრის დახურვა და ჩასწორების რეჟიმიდან გასვლა"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:32
-#, fuzzy, kde-format
-#| msgid "Drag to change maximum height."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum height."
 msgstr "მაქსიმალური სიმაღლის შესაცვლელად გადაათრიეთ."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:33
-#, fuzzy, kde-format
-#| msgid "Drag to change maximum width."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum width."
 msgstr "მაქსიმალური სიგანის შესაცვლელად გადაათრიეთ."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:34
 #: contents/configuration/panelconfiguration/Ruler.qml:39
-#, fuzzy, kde-format
-#| msgid "Double click to reset."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Double-click to reset."
-msgstr "ორმაგი დაწკაპუნება საწყის მნიშვნელობაზე დასაბრუნებლად."
+msgstr "ორმაგი-წკაპი ჩამოსაყრელად."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:37
-#, fuzzy, kde-format
-#| msgid "Drag to change minimum height."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum height."
 msgstr "მინიმალური სიმაღლის შესაცვლელად გადაათრიეთ."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:38
-#, fuzzy, kde-format
-#| msgid "Drag to change minimum width."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr "მინიმალური სიგანის შესაცვლელად გადაათრიეთ."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:86
-#, kde-format
-msgid "@info:tooltip slider handle"
+#: contents/configuration/panelconfiguration/Ruler.qml:87
+#, fuzzy, kde-format
+#| msgid ""
+#| "Drag to change position on this screen edge.\n"
+#| "Double click to reset."
+msgctxt "@info:tooltip slider handle"
+msgid ""
+"Drag to change position on this screen edge.\n"
+"Double-click to reset."
 msgstr ""
+"გადაათრიეთ ეკრანის კუთხის პოზიციის შესაცვლელად.\n"
+"ორმაგი წკაპი საწყის მნიშვნელობაზე დასაბრუნებლად."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 #, kde-format
@@ -827,12 +830,8 @@ msgstr "რედაქტირების რეჟიმიდან გა�
 msgid "Panel Focus Indicator"
 msgstr "პანელის ფოკუსის მაჩვენებელი"
 
-#~ msgid ""
-#~ "Drag to change position on this screen edge.\n"
-#~ "Double click to reset."
-#~ msgstr ""
-#~ "გადაათრიეთ ეკრანის კუთხის პოზიციის შესაცვლელად.\n"
-#~ "ორმაგი წკაპი საწყის მნიშვნელობაზე დასაბრუნებლად."
+#~ msgid "@info:tooltip slider handle"
+#~ msgstr "@info:tooltip slider handle"
 
 #~ msgctxt "@action:button Done configuring the panel"
 #~ msgid "Done"

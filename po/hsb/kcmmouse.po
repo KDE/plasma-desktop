@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
 "PO-Revision-Date: 2008-11-13 22:59+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -164,7 +164,10 @@ msgstr ""
 
 #: ui/main.qml:142
 #, kde-format
-msgid "@info:tooltip from ContextualHelpButton"
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"Activating this setting increases click latency by 50ms. The extra delay is "
+"needed to correctly detect simultaneous left and right button presses."
 msgstr ""
 
 #: ui/main.qml:154

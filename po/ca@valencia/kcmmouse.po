@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
-"PO-Revision-Date: 2024-08-26 10:54+0200\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"PO-Revision-Date: 2024-09-04 11:20+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -172,25 +172,24 @@ msgid "Swap left and right buttons."
 msgstr "Intercanvia el botó esquerre i el dret."
 
 #: ui/main.qml:126
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "Prémer els botons esquerre i dret per al clic del mig"
 
 #: ui/main.qml:138
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
-"En fer un clic simultani en el botó dret i esquerre s'envia un clic del botó "
-"del mig."
+"En prémer simultàniament al botó dret i esquerre fa com un clic del mig."
 
 #: ui/main.qml:142
 #, kde-format
-msgid "@info:tooltip from ContextualHelpButton"
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"Activating this setting increases click latency by 50ms. The extra delay is "
+"needed to correctly detect simultaneous left and right button presses."
 msgstr ""
 
 #: ui/main.qml:154
@@ -253,8 +252,7 @@ msgid "Invert scroll direction"
 msgstr "Invertix la direcció de desplaçament"
 
 #: ui/main.qml:351
-#, fuzzy, kde-format
-#| msgid "Touchscreen like scrolling."
+#, kde-format
 msgid "Touchscreen-like scrolling."
 msgstr "Pantalla tàctil com el desplaçament."
 
@@ -268,11 +266,6 @@ msgstr "Premeu el botó del mig i mogueu el ratolí per a desplaçar"
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "Desplaçament amb el ratolí mentre es prem el botó del mig."
 
-#~ msgid ""
-#~ "Activating this setting increases mouse click latency by 50ms. The extra "
-#~ "delay is needed to correctly detect simultaneous left and right mouse "
-#~ "clicks."
-#~ msgstr ""
-#~ "L'activació d'este paràmetre augmenta la latència del clic del ratolí en "
-#~ "50 ms. Cal un retard addicional per a detectar correctament els clics "
-#~ "simultanis esquerre i dret del ratolí."
+#, fuzzy
+#~ msgid "@info:tooltip from ContextualHelpButton"
+#~ msgstr "@info:tooltip from ContextualHelpButton"

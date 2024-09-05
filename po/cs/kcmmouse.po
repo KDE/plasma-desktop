@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
 "PO-Revision-Date: 2024-08-29 16:38+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -180,9 +180,19 @@ msgstr ""
 "Kliknutí levým a pravým tlačítkem zároveň je kliknutí prostředním tlačítkem."
 
 #: ui/main.qml:142
-#, kde-format
-msgid "@info:tooltip from ContextualHelpButton"
+#, fuzzy, kde-format
+#| msgid ""
+#| "Activating this setting increases mouse click latency by 50ms. The extra "
+#| "delay is needed to correctly detect simultaneous left and right mouse "
+#| "clicks."
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"Activating this setting increases click latency by 50ms. The extra delay is "
+"needed to correctly detect simultaneous left and right button presses."
 msgstr ""
+"Povolením tohoto nastavení zvýší zpoždění kliknutí myši o 50 ms. Toto "
+"dodatečné zpoždění je potřeba pro správné rozpoznání souběžného kliknutí "
+"levým a pravým tlačítkem myši."
 
 #: ui/main.qml:154
 #, kde-format
@@ -257,12 +267,3 @@ msgstr "Stiskněte prostřední tlačítko myši pro rolování"
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "Rolování myší zatímco je stisknuto prostřední tlačítko."
-
-#~ msgid ""
-#~ "Activating this setting increases mouse click latency by 50ms. The extra "
-#~ "delay is needed to correctly detect simultaneous left and right mouse "
-#~ "clicks."
-#~ msgstr ""
-#~ "Povolením tohoto nastavení zvýší zpoždění kliknutí myši o 50 ms. Toto "
-#~ "dodatečné zpoždění je potřeba pro správné rozpoznání souběžného kliknutí "
-#~ "levým a pravým tlačítkem myši."

@@ -1,4 +1,4 @@
-# Version: $Revision: 1689480 $
+# Version: $Revision: 1689550 $
 # translation of kcminput.po to
 # SPDX-FileCopyrightText: 2011, 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Piotr Roszatycki <dexter@debian.org>, 1998-2000.
@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
 "PO-Revision-Date: 2024-08-31 05:48+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -182,9 +182,19 @@ msgstr ""
 "środkowym przyciskiem."
 
 #: ui/main.qml:142
-#, kde-format
-msgid "@info:tooltip from ContextualHelpButton"
+#, fuzzy, kde-format
+#| msgid ""
+#| "Activating this setting increases mouse click latency by 50ms. The extra "
+#| "delay is needed to correctly detect simultaneous left and right mouse "
+#| "clicks."
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"Activating this setting increases click latency by 50ms. The extra delay is "
+"needed to correctly detect simultaneous left and right button presses."
 msgstr ""
+"Włączenie tego ustawienia zwiększa opóźnienie naciśnięcia myszą o 50 ms. "
+"Dodatkowe opóźnienie jest potrzebne do wykrywania jednoczesnego naciśnięcia "
+"lewego i prawego przycisku myszy."
 
 #: ui/main.qml:154
 #, kde-format
@@ -259,15 +269,6 @@ msgstr "Naciśnij środkowy przycisk i przesuń myszą, aby przewinąć"
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "Przewijanie myszą, przy naciśniętym jej środkowym przycisku."
-
-#~ msgid ""
-#~ "Activating this setting increases mouse click latency by 50ms. The extra "
-#~ "delay is needed to correctly detect simultaneous left and right mouse "
-#~ "clicks."
-#~ msgstr ""
-#~ "Włączenie tego ustawienia zwiększa opóźnienie naciśnięcia myszą o 50 ms. "
-#~ "Dodatkowe opóźnienie jest potrzebne do wykrywania jednoczesnego "
-#~ "naciśnięcia lewego i prawego przycisku myszy."
 
 #~ msgctxt "@action:button"
 #~ msgid "Bindings for Additional Mouse Buttons"

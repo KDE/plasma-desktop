@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
 "PO-Revision-Date: 2023-02-19 16:55+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -578,10 +578,18 @@ msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr "Minimum eni dəyişmək üçün sürüşdürün."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:86
-#, kde-format
-msgid "@info:tooltip slider handle"
+#: contents/configuration/panelconfiguration/Ruler.qml:87
+#, fuzzy, kde-format
+#| msgid ""
+#| "Drag to change position on this screen edge.\n"
+#| "Double click to reset."
+msgctxt "@info:tooltip slider handle"
+msgid ""
+"Drag to change position on this screen edge.\n"
+"Double-click to reset."
 msgstr ""
+"Bu ekran kənarındakı mövqeyi dəyişmək üçün sürüşdürün.\n"
+"Sıfırlamaq üçün iki dəfə vurun."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 #, fuzzy, kde-format
@@ -856,13 +864,6 @@ msgstr ""
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr ""
-
-#~ msgid ""
-#~ "Drag to change position on this screen edge.\n"
-#~ "Double click to reset."
-#~ msgstr ""
-#~ "Bu ekran kənarındakı mövqeyi dəyişmək üçün sürüşdürün.\n"
-#~ "Sıfırlamaq üçün iki dəfə vurun."
 
 #, fuzzy
 #~| msgid "Right"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
 "PO-Revision-Date: 2024-04-23 19:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -555,10 +555,18 @@ msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr "拖动以更改最小宽度。"
 
-#: contents/configuration/panelconfiguration/Ruler.qml:86
-#, kde-format
-msgid "@info:tooltip slider handle"
+#: contents/configuration/panelconfiguration/Ruler.qml:87
+#, fuzzy, kde-format
+#| msgid ""
+#| "Drag to change position on this screen edge.\n"
+#| "Double click to reset."
+msgctxt "@info:tooltip slider handle"
+msgid ""
+"Drag to change position on this screen edge.\n"
+"Double-click to reset."
 msgstr ""
+"拖动以更改屏幕边缘的位置。\n"
+"双击以重置。"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 #, kde-format
@@ -824,10 +832,3 @@ msgstr "退出编辑模式"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "面板焦点指示器"
-
-#~ msgid ""
-#~ "Drag to change position on this screen edge.\n"
-#~ "Double click to reset."
-#~ msgstr ""
-#~ "拖动以更改屏幕边缘的位置。\n"
-#~ "双击以重置。"

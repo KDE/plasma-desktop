@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
 "PO-Revision-Date: 2024-06-26 14:11+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -562,10 +562,18 @@ msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr "Potiahnutím zmeníte minimálnu šírku."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:86
-#, kde-format
-msgid "@info:tooltip slider handle"
+#: contents/configuration/panelconfiguration/Ruler.qml:87
+#, fuzzy, kde-format
+#| msgid ""
+#| "Drag to change position on this screen edge.\n"
+#| "Double click to reset."
+msgctxt "@info:tooltip slider handle"
+msgid ""
+"Drag to change position on this screen edge.\n"
+"Double-click to reset."
 msgstr ""
+"Potiahnutím zmeníte polohu na tomto okraji obrazovky.\n"
+"Dvojitým kliknutím obnovíte nastavenie."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 #, kde-format
@@ -837,13 +845,6 @@ msgstr "Ukončiť režim úprav"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Indikátor zamerania panela"
-
-#~ msgid ""
-#~ "Drag to change position on this screen edge.\n"
-#~ "Double click to reset."
-#~ msgstr ""
-#~ "Potiahnutím zmeníte polohu na tomto okraji obrazovky.\n"
-#~ "Dvojitým kliknutím obnovíte nastavenie."
 
 #~ msgctxt "@action:button Done configuring the panel"
 #~ msgid "Done"

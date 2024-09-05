@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
 "PO-Revision-Date: 2024-08-15 11:38+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -183,9 +183,19 @@ msgstr ""
 "يؤدي النقر فوق الزر الأيمن والأيسر في نفس الوقت إلى إرسال نقرة الزر الأوسط."
 
 #: ui/main.qml:142
-#, kde-format
-msgid "@info:tooltip from ContextualHelpButton"
+#, fuzzy, kde-format
+#| msgid ""
+#| "Activating this setting increases mouse click latency by 50ms. The extra "
+#| "delay is needed to correctly detect simultaneous left and right mouse "
+#| "clicks."
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"Activating this setting increases click latency by 50ms. The extra delay is "
+"needed to correctly detect simultaneous left and right button presses."
 msgstr ""
+"يؤدي تنشيط هذا الإعداد إلى زيادة زمن انتقال النقر بالفأرة بمقدار 50 مللي "
+"ثانية. هناك حاجة إلى تأخير لاكتشاف نقرات الفأرة اليمنى واليسرى المتزامنة "
+"بشكل صحيح."
 
 #: ui/main.qml:154
 #, kde-format
@@ -259,15 +269,6 @@ msgstr "اضغط على الزر الأوسط وحرك الفأرة للتمري
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "التمرير باستخدام الفأرة أثناء الضغط على الزر الأوسط."
-
-#~ msgid ""
-#~ "Activating this setting increases mouse click latency by 50ms. The extra "
-#~ "delay is needed to correctly detect simultaneous left and right mouse "
-#~ "clicks."
-#~ msgstr ""
-#~ "يؤدي تنشيط هذا الإعداد إلى زيادة زمن انتقال النقر بالفأرة بمقدار 50 مللي "
-#~ "ثانية. هناك حاجة إلى تأخير لاكتشاف نقرات الفأرة اليمنى واليسرى المتزامنة "
-#~ "بشكل صحيح."
 
 #~ msgctxt "@action:button"
 #~ msgid "Bindings for Additional Mouse Buttons"

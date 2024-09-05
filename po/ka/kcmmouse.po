@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
-"PO-Revision-Date: 2024-08-26 05:49+0200\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"PO-Revision-Date: 2024-09-04 04:57+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -161,25 +161,32 @@ msgid "Swap left and right buttons."
 msgstr "მარჯვენა და მარცხენა ღილაკებისთვის ადგილის შეცვლა."
 
 #: ui/main.qml:126
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "შუა-წკაპისთვის მარჯვენა და მარცხენა ღილაკებს ერთდროულად დააწექით"
 
 #: ui/main.qml:138
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
 "მარცხენა და მარჯვენა ღილაკებზე ერთდროული წკაპი შუა ღილაკის წკაპს აგზავნის."
 
 #: ui/main.qml:142
-#, kde-format
-msgid "@info:tooltip from ContextualHelpButton"
+#, fuzzy, kde-format
+#| msgid ""
+#| "Activating this setting increases mouse click latency by 50ms. The extra "
+#| "delay is needed to correctly detect simultaneous left and right mouse "
+#| "clicks."
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"Activating this setting increases click latency by 50ms. The extra delay is "
+"needed to correctly detect simultaneous left and right button presses."
 msgstr ""
+"ამ პარამეტრის გააქტიურება თაგუნას წკაპის დაყოვნებას 50მწმ-ით ზრდის. "
+"დამატებითი დაყოვნება საჭიროა, რომ თაგუნას მარჯვენა და მარცხენა ღილაკების "
+"ერთდროული დაწკაპუნება სწორად ამოვიცნო."
 
 #: ui/main.qml:154
 #, kde-format
@@ -239,8 +246,7 @@ msgid "Invert scroll direction"
 msgstr "აწევ-ჩამოწევის მიმართულების ინვერსია (ჩვეულებრივი აწევ-ჩამოწევა)"
 
 #: ui/main.qml:351
-#, fuzzy, kde-format
-#| msgid "Touchscreen like scrolling."
+#, kde-format
 msgid "Touchscreen-like scrolling."
 msgstr "სენსორული ეკრანის მსგავსი აწევ-ჩამოწევა."
 
@@ -254,14 +260,8 @@ msgstr "დააწექით შუა ღილაკს და გაა�
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "გადახვევა, როცა თაგუნას შუა ღილაკი გიჭირავთ."
 
-#~ msgid ""
-#~ "Activating this setting increases mouse click latency by 50ms. The extra "
-#~ "delay is needed to correctly detect simultaneous left and right mouse "
-#~ "clicks."
-#~ msgstr ""
-#~ "ამ პარამეტრის გააქტიურება თაგუნას წკაპის დაყოვნებას 50მწმ-ით ზრდის. "
-#~ "დამატებითი დაყოვნება საჭიროა, რომ თაგუნას მარჯვენა და მარცხენა ღილაკების "
-#~ "ერთდროული დაწკაპუნება სწორად ამოვიცნო."
+#~ msgid "@info:tooltip from ContextualHelpButton"
+#~ msgstr "@info:tooltip from ContextualHelpButton"
 
 #~ msgctxt "@action:button"
 #~ msgid "Bindings for Additional Mouse Buttons"

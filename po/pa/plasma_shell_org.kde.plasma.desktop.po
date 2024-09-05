@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
 "PO-Revision-Date: 2024-07-21 22:16-0500\n"
 "Last-Translator: aalam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -556,9 +556,12 @@ msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr "ਘੱਟੋ-ਘੱਟ ਚੌੜਾਈ ਬਦਲਣ ਲਈ ਖਿੱਚੋ।"
 
-#: contents/configuration/panelconfiguration/Ruler.qml:86
+#: contents/configuration/panelconfiguration/Ruler.qml:87
 #, kde-format
-msgid "@info:tooltip slider handle"
+msgctxt "@info:tooltip slider handle"
+msgid ""
+"Drag to change position on this screen edge.\n"
+"Double-click to reset."
 msgstr ""
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19

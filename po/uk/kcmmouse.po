@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
-"PO-Revision-Date: 2024-08-26 22:49+0300\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"PO-Revision-Date: 2024-09-04 11:53+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -171,26 +171,33 @@ msgid "Swap left and right buttons."
 msgstr "Поміняти місцями ліву і праву кнопки."
 
 #: ui/main.qml:126
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "Натискати ліву і праву кнопки для клацання середньою"
 
 #: ui/main.qml:138
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
-"Одночасне натискання лівої і правої кнопок надсилатиме сигнал клацання "
-"середньою кнопкою."
+"Одночасне натискання лівої і правої кнопок працюватиме як клацання середньою "
+"кнопкою."
 
 #: ui/main.qml:142
-#, kde-format
-msgid "@info:tooltip from ContextualHelpButton"
+#, fuzzy, kde-format
+#| msgid ""
+#| "Activating this setting increases mouse click latency by 50ms. The extra "
+#| "delay is needed to correctly detect simultaneous left and right mouse "
+#| "clicks."
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"Activating this setting increases click latency by 50ms. The extra delay is "
+"needed to correctly detect simultaneous left and right button presses."
 msgstr ""
+"Вмикання цього параметра збільшує латентність клацання кнопками миші на 50 "
+"мс. Додаткова затримка потрібна для належного виявлення одночасного клацання "
+"лівою і правою кнопками миші."
 
 #: ui/main.qml:154
 #, kde-format
@@ -251,8 +258,7 @@ msgid "Invert scroll direction"
 msgstr "Інвертувати напрямок гортання"
 
 #: ui/main.qml:351
-#, fuzzy, kde-format
-#| msgid "Touchscreen like scrolling."
+#, kde-format
 msgid "Touchscreen-like scrolling."
 msgstr "Гортання як на сенсорній панелі."
 
@@ -266,14 +272,8 @@ msgstr "Натисніть середню кнопку миші пересунь
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "Гортання за допомогою миші, доки натиснуто середню кнопку миші."
 
-#~ msgid ""
-#~ "Activating this setting increases mouse click latency by 50ms. The extra "
-#~ "delay is needed to correctly detect simultaneous left and right mouse "
-#~ "clicks."
-#~ msgstr ""
-#~ "Вмикання цього параметра збільшує латентність клацання кнопками миші на "
-#~ "50 мс. Додаткова затримка потрібна для належного виявлення одночасного "
-#~ "клацання лівою і правою кнопками миші."
+#~ msgid "@info:tooltip from ContextualHelpButton"
+#~ msgstr "@info:tooltip з ContextualHelpButton"
 
 #~ msgctxt "@action:button"
 #~ msgid "Bindings for Additional Mouse Buttons"

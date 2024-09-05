@@ -1,7 +1,7 @@
 # translation of kcminput.po to Slovenian
 # Translation of kcminput.po to Slovenian
 # KCMINPUT TRANSLATION TO SLOVENE LANGUAGE.
-# $Id: kcmmouse.po 1689480 2024-09-04 01:13:55Z scripty $
+# $Id: kcmmouse.po 1689550 2024-09-05 01:14:13Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
-"PO-Revision-Date: 2024-08-26 15:47+0200\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"PO-Revision-Date: 2024-09-04 07:14+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -95,7 +95,7 @@ msgstr "Kazalna naprava je izključena. Ni najti nobene druge naprave."
 #, kde-format
 msgctxt "@title"
 msgid "Extra Mouse Buttons"
-msgstr "Dodatni miškini gumbi."
+msgstr "Dodatni miškini gumbi"
 
 #: ui/bindings.qml:70
 #, kde-format
@@ -170,24 +170,31 @@ msgid "Swap left and right buttons."
 msgstr "Preklopi levi in desni gumb."
 
 #: ui/main.qml:126
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "Pritisnite levi in desni gumb kot srednji klik"
 
 #: ui/main.qml:138
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
-msgstr "Hkratni klik levega in desnega gumba pošlje klik srednjega gumba."
+msgstr "Hkratni klik levega in desnega gumba deluje klik srednjega gumba."
 
 #: ui/main.qml:142
-#, kde-format
-msgid "@info:tooltip from ContextualHelpButton"
+#, fuzzy, kde-format
+#| msgid ""
+#| "Activating this setting increases mouse click latency by 50ms. The extra "
+#| "delay is needed to correctly detect simultaneous left and right mouse "
+#| "clicks."
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"Activating this setting increases click latency by 50ms. The extra delay is "
+"needed to correctly detect simultaneous left and right button presses."
 msgstr ""
+"Aktiviranje te nastavitve poveča zakasnitev klika miške za 50 ms. Dodatna "
+"zakasnitev je potrebna za pravilno zaznavanje istočasnih levih in desnih "
+"klikov miške."
 
 #: ui/main.qml:154
 #, kde-format
@@ -247,8 +254,7 @@ msgid "Invert scroll direction"
 msgstr "Obrni smer drsenja zaslona"
 
 #: ui/main.qml:351
-#, fuzzy, kde-format
-#| msgid "Touchscreen like scrolling."
+#, kde-format
 msgid "Touchscreen-like scrolling."
 msgstr "Drsenje zaslona kot pri zaslonih na dotik."
 
@@ -262,14 +268,8 @@ msgstr "Pritisnite srednji gumb in premaknite miško za pomikanje"
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "Drsenje z miško, medtem ko je srednji gumb pritisnjen."
 
-#~ msgid ""
-#~ "Activating this setting increases mouse click latency by 50ms. The extra "
-#~ "delay is needed to correctly detect simultaneous left and right mouse "
-#~ "clicks."
-#~ msgstr ""
-#~ "Aktiviranje te nastavitve poveča zakasnitev klika miške za 50 ms. Dodatna "
-#~ "zakasnitev je potrebna za pravilno zaznavanje istočasnih levih in desnih "
-#~ "klikov miške."
+#~ msgid "@info:tooltip from ContextualHelpButton"
+#~ msgstr "@info:tooltip od ContextualHelpButton"
 
 #~ msgctxt "@action:button"
 #~ msgid "Bindings for Additional Mouse Buttons"

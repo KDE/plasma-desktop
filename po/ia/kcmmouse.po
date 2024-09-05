@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
 "PO-Revision-Date: 2024-09-03 11:53+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -179,9 +179,19 @@ msgstr ""
 "medie."
 
 #: ui/main.qml:142
-#, kde-format
-msgid "@info:tooltip from ContextualHelpButton"
+#, fuzzy, kde-format
+#| msgid ""
+#| "Activating this setting increases mouse click latency by 50ms. The extra "
+#| "delay is needed to correctly detect simultaneous left and right mouse "
+#| "clicks."
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"Activating this setting increases click latency by 50ms. The extra delay is "
+"needed to correctly detect simultaneous left and right button presses."
 msgstr ""
+"Activar iste preferentia augmenta le latentia de mus per 50ms. Le retardo "
+"extra es necessitate per relavar correctemente le clicks simultanee sinistre "
+"e dextere de mus."
 
 #: ui/main.qml:154
 #, kde-format
@@ -256,15 +266,6 @@ msgstr "Pressa button in le medie e move le mus per rolar"
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "Rolar con le mus durante que le buttoin de medie es pressate."
-
-#~ msgid ""
-#~ "Activating this setting increases mouse click latency by 50ms. The extra "
-#~ "delay is needed to correctly detect simultaneous left and right mouse "
-#~ "clicks."
-#~ msgstr ""
-#~ "Activar iste preferentia augmenta le latentia de mus per 50ms. Le retardo "
-#~ "extra es necessitate per relavar correctemente le clicks simultanee "
-#~ "sinistre e dextere de mus."
 
 #~ msgctxt "@action:button"
 #~ msgid "Bindings for Additional Mouse Buttons"

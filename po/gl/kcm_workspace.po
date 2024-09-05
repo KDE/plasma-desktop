@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-04 00:41+0000\n"
-"PO-Revision-Date: 2024-06-09 10:02+0200\n"
+"PO-Revision-Date: 2024-09-04 17:27+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: ui/main.qml:23
 #, kde-format
@@ -148,10 +148,7 @@ msgid "Middle-click to scroll to clicked location"
 msgstr "Clic central para desprazar á localización premida"
 
 #: ui/main.qml:255
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@radio part of a complete sentence: 'Middle click pastes selected text'"
-#| msgid "Middle Click:"
+#, kde-format
 msgctxt ""
 "@label for checkbox, part of a complete sentence: 'Middle-click pastes "
 "selected text'"
@@ -159,15 +156,12 @@ msgid "Middle-click:"
 msgstr "Clic central:"
 
 #: ui/main.qml:257
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@radio part of a complete sentence: 'Middle click pastes selected text'"
-#| msgid "Pastes selected text"
+#, kde-format
 msgctxt ""
 "@option:check part of a complete sentence: 'Middle click pastes selected "
 "text'"
 msgid "Pastes selected text"
-msgstr "Pega o texto seleccionado"
+msgstr "Pega o texto seleccionado."
 
 #: ui/main.qml:274
 #, kde-format

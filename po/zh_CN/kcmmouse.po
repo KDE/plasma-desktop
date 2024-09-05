@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -165,9 +165,18 @@ msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr "同时点击左键和右键时将发送中键点击信号。"
 
 #: ui/main.qml:142
-#, kde-format
-msgid "@info:tooltip from ContextualHelpButton"
+#, fuzzy, kde-format
+#| msgid ""
+#| "Activating this setting increases mouse click latency by 50ms. The extra "
+#| "delay is needed to correctly detect simultaneous left and right mouse "
+#| "clicks."
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"Activating this setting increases click latency by 50ms. The extra delay is "
+"needed to correctly detect simultaneous left and right button presses."
 msgstr ""
+"激活此设置将增加鼠标点击延迟 50 毫秒。正确检测鼠标左键和右键的同时点击需要额"
+"外的延迟。"
 
 #: ui/main.qml:154
 #, kde-format
@@ -241,11 +250,3 @@ msgstr "按住中键并移动鼠标以滚动"
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "按住中键时用鼠标滚动。"
-
-#~ msgid ""
-#~ "Activating this setting increases mouse click latency by 50ms. The extra "
-#~ "delay is needed to correctly detect simultaneous left and right mouse "
-#~ "clicks."
-#~ msgstr ""
-#~ "激活此设置将增加鼠标点击延迟 50 毫秒。正确检测鼠标左键和右键的同时点击需要"
-#~ "额外的延迟。"

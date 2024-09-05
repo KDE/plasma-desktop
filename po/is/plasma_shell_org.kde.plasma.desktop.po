@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
 "PO-Revision-Date: 2024-07-22 13:05+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -560,10 +560,18 @@ msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr "Dragðu til að breyta lágmarksbreidd."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:86
-#, kde-format
-msgid "@info:tooltip slider handle"
+#: contents/configuration/panelconfiguration/Ruler.qml:87
+#, fuzzy, kde-format
+#| msgid ""
+#| "Drag to change position on this screen edge.\n"
+#| "Double click to reset."
+msgctxt "@info:tooltip slider handle"
+msgid ""
+"Drag to change position on this screen edge.\n"
+"Double-click to reset."
 msgstr ""
+"Dragðu til að breyta staðsetningu á þessari skjábrún.\n"
+"Tvísmelltu til að endurstilla."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 #, kde-format
@@ -832,13 +840,6 @@ msgstr "Loka breytingasniði"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Fókusvísir skjáborðsstiku"
-
-#~ msgid ""
-#~ "Drag to change position on this screen edge.\n"
-#~ "Double click to reset."
-#~ msgstr ""
-#~ "Dragðu til að breyta staðsetningu á þessari skjábrún.\n"
-#~ "Tvísmelltu til að endurstilla."
 
 #~ msgctxt "@action:button Done configuring the panel"
 #~ msgid "Done"

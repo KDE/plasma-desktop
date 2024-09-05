@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
 "PO-Revision-Date: 2024-06-08 17:09+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -568,10 +568,18 @@ msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr "Trageți pentru a schimba lățimea minimă."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:86
-#, kde-format
-msgid "@info:tooltip slider handle"
+#: contents/configuration/panelconfiguration/Ruler.qml:87
+#, fuzzy, kde-format
+#| msgid ""
+#| "Drag to change position on this screen edge.\n"
+#| "Double click to reset."
+msgctxt "@info:tooltip slider handle"
+msgid ""
+"Drag to change position on this screen edge.\n"
+"Double-click to reset."
 msgstr ""
+"Trageți pentru a schimba poziția pe această muchie a ecranului.\n"
+"Dublu-clic pentru reinițializare."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 #, kde-format
@@ -844,13 +852,6 @@ msgstr "Ieși din regim de modificare"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Indicator de focalizare a panoului"
-
-#~ msgid ""
-#~ "Drag to change position on this screen edge.\n"
-#~ "Double click to reset."
-#~ msgstr ""
-#~ "Trageți pentru a schimba poziția pe această muchie a ecranului.\n"
-#~ "Dublu-clic pentru reinițializare."
 
 #~ msgctxt "@action:button Done configuring the panel"
 #~ msgid "Done"

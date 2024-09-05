@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
 "PO-Revision-Date: 2024-09-01 17:38+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -173,9 +173,19 @@ msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr "இடது மற்றும் வலது பட்டன்களை சேர்த்து அழுத்துதல், நடு க்ளிக்காக கருதப்படும்."
 
 #: ui/main.qml:142
-#, kde-format
-msgid "@info:tooltip from ContextualHelpButton"
+#, fuzzy, kde-format
+#| msgid ""
+#| "Activating this setting increases mouse click latency by 50ms. The extra "
+#| "delay is needed to correctly detect simultaneous left and right mouse "
+#| "clicks."
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"Activating this setting increases click latency by 50ms. The extra delay is "
+"needed to correctly detect simultaneous left and right button presses."
 msgstr ""
+"இந்த அமைப்பை இயக்குவது, கிளிக்குகளுக்கு கணினி பதிலளிக்கும் தாமத‍த்தை 50மி.நொ. "
+"அதிகரிக்கும். ஒரே நேரத்தில் நிகழும் இடது மற்றும் வலது கிளிக்குகளை சரியாக அடையாளங்கான "
+"இந்த கூடுதல் தாமதம் தேவை."
 
 #: ui/main.qml:154
 #, kde-format
@@ -249,15 +259,6 @@ msgstr "உருள நடு பட்டனை அழுத்தி சு�
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "நடு பட்டனை அழுத்தம்போது சுட்டியைக் கொண்டு உருள்வது."
-
-#~ msgid ""
-#~ "Activating this setting increases mouse click latency by 50ms. The extra "
-#~ "delay is needed to correctly detect simultaneous left and right mouse "
-#~ "clicks."
-#~ msgstr ""
-#~ "இந்த அமைப்பை இயக்குவது, கிளிக்குகளுக்கு கணினி பதிலளிக்கும் தாமத‍த்தை 50மி.நொ. "
-#~ "அதிகரிக்கும். ஒரே நேரத்தில் நிகழும் இடது மற்றும் வலது கிளிக்குகளை சரியாக "
-#~ "அடையாளங்கான இந்த கூடுதல் தாமதம் தேவை."
 
 #~ msgctxt "@action:button"
 #~ msgid "Bindings for Additional Mouse Buttons"

@@ -1,6 +1,6 @@
-# Spanish translations for kcm_touchpad.po package.
+# Translation of kcm_touchpad to Spanish
 # Copyright (C) 2015 This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the plasma-desktop package.
 #
 # Automatically generated, 2015.
 # SPDX-FileCopyrightText: 2015, 2017, 2018, 2019, 2020, 2021, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
-"PO-Revision-Date: 2024-08-27 12:30+0200\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"PO-Revision-Date: 2024-09-04 16:54+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: actions.cpp:19
 #, kde-format
@@ -284,36 +284,29 @@ msgid "Swap left and right buttons."
 msgstr "Intercambiar los botones derecho e izquierdo."
 
 #: ui/main.qml:234
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons to middle-click"
 msgstr "Pulse los botones izquierdo y derecho para clic central"
 
 #: ui/main.qml:238
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
+#, kde-format
 msgctxt "@info:tooltip for checkbox"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
-"Al pulsar de forma simultánea los botones izquierdo y derecho se envía un "
+"La pulsación simultánea de los botones izquierdo y derecho actúa como un "
 "clic del botón central."
 
 #: ui/main.qml:264
-#, fuzzy, kde-format
-#| msgid ""
-#| "Activating this setting increases mouse click latency by 50ms. The extra "
-#| "delay is needed to correctly detect simultaneous left and right mouse "
-#| "clicks."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
-"La activación de este ajuste aumenta la latencia del clic del ratón en 50 "
-"ms. Este retardo adicional es necesario para detectar correctamente los "
-"clics derecho e izquierdo simultáneos del ratón."
+"La activación de este ajuste aumenta la latencia del clic en 50 ms. Este "
+"retardo adicional es necesario para detectar correctamente la pulsación "
+"simultánea de los botones derecho e izquierdo."
 
 #: ui/main.qml:274
 #, kde-format
@@ -405,28 +398,24 @@ msgid "Disable horizontal scrolling"
 msgstr "Desactivar el desplazamiento horizontal"
 
 #: ui/main.qml:596
-#, fuzzy, kde-format
-#| msgid "Disable horizontal scrolling"
+#, kde-format
 msgid "Disable horizontal scrolling."
-msgstr "Desactivar el desplazamiento horizontal"
+msgstr "Desactivar el desplazamiento horizontal."
 
 #: ui/main.qml:609
-#, fuzzy, kde-format
-#| msgid "Tapping:"
+#, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Toques:"
 
 #: ui/main.qml:610
-#, fuzzy, kde-format
-#| msgid "Tap-to-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Tap-to-click"
-msgstr "Toque para hacer clic"
+msgstr "Tocar para hacer clic"
 
 #: ui/main.qml:614
-#, fuzzy, kde-format
-#| msgid "Single tap is left button click."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Single tap to left-click."
 msgstr "Un único toque representa el clic del botón izquierdo."
@@ -503,17 +492,15 @@ msgid "Tap with two fingers to middle-click."
 msgstr "Toque con dos dedos para simular un clic central."
 
 #: ui/main.qml:777
-#, fuzzy, kde-format
-#| msgid "Right-click:"
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, configure right-click with touch-pad "
 "integrated button (pressing into the touchpad)"
 msgid "Integrated right-click:"
-msgstr "Clic derecho:"
+msgstr "Clic derecho integrado:"
 
 #: ui/main.qml:811
-#, fuzzy, kde-format
-#| msgid "Press bottom-right corner"
+#, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
 msgstr "Pulsar la esquina inferior derecha"
@@ -526,6 +513,9 @@ msgid ""
 "Middle-click by simultaneously pressing the bottom left and bottom right "
 "corners."
 msgstr ""
+"La pulsación de la esquina inferior derecha del panel táctil actúa como un "
+"clic derecho. Pulse simultáneamente las esquinas inferior derecha e inferior "
+"izquierda para simular un clic central."
 
 #: ui/main.qml:817
 #, kde-format
@@ -534,91 +524,97 @@ msgid ""
 "Pressing the bottom right corner of your touchpad acts as right-click. "
 "Middle-click by pressing the bottom central area."
 msgstr ""
+"La pulsación de la esquina inferior derecha del panel táctil actúa como un "
+"clic derecho. Pulse el área inferior central para simular un clic central."
 
 #: ui/main.qml:828
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
-msgstr ""
+msgstr "Clic central al pulsar ambas esquinas inferiores."
 
 #: ui/main.qml:829
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
-msgstr ""
+msgstr "Clic central al pulsar el centro de la zona inferior."
 
 #: ui/main.qml:847
-#, fuzzy, kde-format
-#| msgid "Press anywhere with two fingers"
+#, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press touchpad with two fingers"
-msgstr "Pulsar en cualquier lugar con dos dedos"
+msgstr "Pulsar el panel central con dos dedos"
 
 #: ui/main.qml:851
-#, fuzzy, kde-format
-#| msgid "Tap with two fingers to right-click."
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
-msgstr "Toque con dos dedos para simular un clic derecho."
+msgstr ""
+"La pulsación de cualquier parte del panel central con dos dedos actúa como "
+"un clic derecho."
 
 #: ui/main.qml:863
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers."
+#, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
-msgstr "Pulsar en cualquier lugar con tres dedos."
+msgstr "Clic central al pulsar con tres dedos."
 
 #: ui/main.qml:882
-#, fuzzy, kde-format
-#| msgid "Middle-click: "
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, configure middle-click with touch-pad "
 "integrated button (pressing into the touchpad)"
 msgid "Integrated middle-click:"
-msgstr "Clic central:"
+msgstr "Clic central integrado:"
 
 #: ui/main.qml:911
-#, fuzzy, kde-format
-#| msgid "Press bottom-middle"
+#, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom middle edge"
-msgstr "Pulsar la parte inferior central"
+msgstr "Pulsar el centro del borde inferior"
 
 #: ui/main.qml:915
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the bottom right corner of your touchpad acts as right-click."
 msgstr ""
+"La pulsación de la esquina inferior derecha del panel táctil actúa como un "
+"clic derecho."
 
 #: ui/main.qml:923
-#, fuzzy, kde-format
-#| msgid "Press bottom left and bottom right corners simultaneously"
+#, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom left and bottom right corners"
-msgstr ""
-"Pulsar de forma simultánea las esquinas inferior izquierda e inferior derecha"
+msgstr "Pulsar las esquinas inferior derecha e inferior izquierda"
 
 #: ui/main.qml:927
-#, fuzzy, kde-format
-#| msgid "Press bottom left and bottom right corners simultaneously"
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid ""
 "Pressing the bottom left and bottom right corners simultaneously acts as "
 "middle-click."
 msgstr ""
-"Pulsar de forma simultánea las esquinas inferior izquierda e inferior derecha"
+"La pulsación simultánea de las esquinas inferior derecha e inferior "
+"izquierda actúa como un clic central."
 
 #: ui/main.qml:936
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers"
+#, kde-format
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
-msgstr "Pulsar en cualquier lugar con tres dedos"
+msgstr "Pulsar el panel táctil con tres dedos"
 
 #: ui/main.qml:942
-#, kde-format
-msgid "@info:tooltip for radiobutton"
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip for radiobutton"
+#| msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
+msgctxt "@info:tooltip for radiobutton"
+msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr ""
+"La pulsación de cualquier parte del panel central con dos dedos actúa como "
+"un clic derecho."
+
+#~ msgid "@info:tooltip for radiobutton"
+#~ msgstr "@info:tooltip para botón de opción"
 
 #~ msgid ""
 #~ "Software enabled buttons will be added to bottom portion of your touchpad."

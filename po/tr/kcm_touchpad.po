@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: playground-utils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
-"PO-Revision-Date: 2024-08-27 03:20+0300\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"PO-Revision-Date: 2024-09-05 01:02+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -54,7 +54,7 @@ msgstr "Dokunmatik alan %1 için temel aygıt bilgi okumasında kritik hata."
 #: backends/x11/xlibbackend.cpp:71
 #, kde-format
 msgid "Cannot connect to X server"
-msgstr "X sunucusuna bağlanılamadı"
+msgstr "X sunucusuna bağlanılamıyor"
 
 #: backends/x11/xlibbackend.cpp:84 ui/main.qml:98
 #, kde-format
@@ -179,7 +179,7 @@ msgstr "Tüm kenarlar"
 #, kde-format
 msgctxt "Touchpad Edge"
 msgid "Top edge"
-msgstr "Üst kenarlık"
+msgstr "Üst kenar"
 
 #. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
 #: touchpadparameters.kcfg:291
@@ -193,7 +193,7 @@ msgstr "Sağ üst köşe"
 #, kde-format
 msgctxt "Touchpad Edge"
 msgid "Right edge"
-msgstr "Sağ kenarlık"
+msgstr "Sağ kenar"
 
 #. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
 #: touchpadparameters.kcfg:297
@@ -207,7 +207,7 @@ msgstr "Sağ alt köşe"
 #, kde-format
 msgctxt "Touchpad Edge"
 msgid "Bottom edge"
-msgstr "Alt kenarlık"
+msgstr "Alt kenar"
 
 #. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
 #: touchpadparameters.kcfg:303
@@ -221,7 +221,7 @@ msgstr "Sol alt köşe"
 #, kde-format
 msgctxt "Touchpad Edge"
 msgid "Left edge"
-msgstr "Sol kenarlık"
+msgstr "Sol kenar"
 
 #. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
 #: touchpadparameters.kcfg:309
@@ -253,7 +253,7 @@ msgstr "Aygıt etkin"
 #: ui/main.qml:144
 #, kde-format
 msgid "Accept input through this device."
-msgstr "Bu aygıt üzerinden girişi kabul et."
+msgstr "Bu aygıt üzerinden girişi kabul edin."
 
 #: ui/main.qml:168
 #, kde-format
@@ -284,34 +284,27 @@ msgid "Swap left and right buttons."
 msgstr "Sol ve sağ düğmeleri değiştir."
 
 #: ui/main.qml:234
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons to middle-click"
 msgstr "Orta tık için sağ ve sol düğmelere bas"
 
 #: ui/main.qml:238
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
+#, kde-format
 msgctxt "@info:tooltip for checkbox"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
-msgstr "Sol ve sağ aynı anda tıklamak orta düğme tıklaması sağlar."
+msgstr "Sağ ve sol düğmelere aynı anda basmak, orta tık olarak çalışır."
 
 #: ui/main.qml:264
-#, fuzzy, kde-format
-#| msgid ""
-#| "Activating this setting increases mouse click latency by 50ms. The extra "
-#| "delay is needed to correctly detect simultaneous left and right mouse "
-#| "clicks."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
 "Bu ayarı etkinleştirmek, fare tıklaması gecikmesini 50 ms kadar artırır. Bu "
-"ek gecikme, aynı anda yapılan sol ve sağ tıklamaları düzgünce algılayabilmek "
-"için gereklidir."
+"ek gecikme, aynı anda yapılan düğme basımlarını düzgünce algılayabilmek için "
+"gereklidir."
 
 #: ui/main.qml:274
 #, kde-format
@@ -401,31 +394,27 @@ msgid "Disable horizontal scrolling"
 msgstr "Yatay sarmayı devre dışı bırak"
 
 #: ui/main.qml:596
-#, fuzzy, kde-format
-#| msgid "Disable horizontal scrolling"
+#, kde-format
 msgid "Disable horizontal scrolling."
-msgstr "Yatay sarmayı devre dışı bırak"
+msgstr "Yatay sarmayı devre dışı bırakın."
 
 #: ui/main.qml:609
-#, fuzzy, kde-format
-#| msgid "Tapping:"
+#, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Vuruş:"
 
 #: ui/main.qml:610
-#, fuzzy, kde-format
-#| msgid "Tap-to-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Tap-to-click"
 msgstr "Tıklamak için vur"
 
 #: ui/main.qml:614
-#, fuzzy, kde-format
-#| msgid "Single tap is left button click."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Single tap to left-click."
-msgstr "Tek vuruşla sol düğme tıklanır."
+msgstr "Sol tık için bir kez vurun."
 
 #: ui/main.qml:643
 #, kde-format
@@ -495,20 +484,18 @@ msgid "Tap with two fingers to middle-click."
 msgstr "Orta tık için iki parmakla vurun."
 
 #: ui/main.qml:777
-#, fuzzy, kde-format
-#| msgid "Right-click:"
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, configure right-click with touch-pad "
 "integrated button (pressing into the touchpad)"
 msgid "Integrated right-click:"
-msgstr "Sağ tık:"
+msgstr "Tümleşik sağ tık:"
 
 #: ui/main.qml:811
-#, fuzzy, kde-format
-#| msgid "Press bottom-right corner"
+#, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
-msgstr "Sağ alt köşeye basmak"
+msgstr "Sağ alt köşeye bas"
 
 #: ui/main.qml:816
 #, kde-format
@@ -518,6 +505,8 @@ msgid ""
 "Middle-click by simultaneously pressing the bottom left and bottom right "
 "corners."
 msgstr ""
+"Dokunmatik yüzeyin sağ alt köşesine basmak, sağ tık olarak çalışır. Orta "
+"tıklamak için sağ ve sol alt köşelere aynı anda basın."
 
 #: ui/main.qml:817
 #, kde-format
@@ -526,89 +515,88 @@ msgid ""
 "Pressing the bottom right corner of your touchpad acts as right-click. "
 "Middle-click by pressing the bottom central area."
 msgstr ""
+"Dokunmatik yüzeyin sağ alt köşesine basmak, sağ tık olarak çalışır. Orta "
+"tıklamak için alt kısmın ortasına basın."
 
 #: ui/main.qml:828
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
-msgstr ""
+msgstr "Orta tık için her iki alt köşeye aynı anda basın."
 
 #: ui/main.qml:829
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
-msgstr ""
+msgstr "Orta tık için alt kısmın ortasına basın."
 
 #: ui/main.qml:847
-#, fuzzy, kde-format
-#| msgid "Press anywhere with two fingers"
+#, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press touchpad with two fingers"
-msgstr "İki parmakla herhangi bir yere basın"
+msgstr "Dokunmatik yüzeye iki parmakla bas"
 
 #: ui/main.qml:851
-#, fuzzy, kde-format
-#| msgid "Tap with two fingers to right-click."
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
-msgstr "Sağ tık için iki parmakla vurun."
+msgstr "Sağ tık için iki parmakla dokunmatik yüzeyde herhangi bir yere basın."
 
 #: ui/main.qml:863
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers."
+#, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
-msgstr "Üç parmakla herhangi bir yere basın."
+msgstr "Orta tık için üç parmakla basın."
 
 #: ui/main.qml:882
-#, fuzzy, kde-format
-#| msgid "Middle-click: "
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, configure middle-click with touch-pad "
 "integrated button (pressing into the touchpad)"
 msgid "Integrated middle-click:"
-msgstr "Orta tık: "
+msgstr "Tümleşik orta tık:"
 
 #: ui/main.qml:911
-#, fuzzy, kde-format
-#| msgid "Press bottom-middle"
+#, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom middle edge"
-msgstr "Alt ortaya basın"
+msgstr "Alt orta kenara bas"
 
 #: ui/main.qml:915
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the bottom right corner of your touchpad acts as right-click."
-msgstr ""
+msgstr "Dokunmatik yüzeyin sağ alt köşesine basmak, sağ tık olarak çalışır."
 
 #: ui/main.qml:923
-#, fuzzy, kde-format
-#| msgid "Press bottom left and bottom right corners simultaneously"
+#, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom left and bottom right corners"
-msgstr "Sol alt ve sağ alt köşelere aynı anda basın"
+msgstr "Sol alt ve sağ alt köşelere aynı anda bas"
 
 #: ui/main.qml:927
-#, fuzzy, kde-format
-#| msgid "Press bottom left and bottom right corners simultaneously"
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid ""
 "Pressing the bottom left and bottom right corners simultaneously acts as "
 "middle-click."
-msgstr "Sol alt ve sağ alt köşelere aynı anda basın"
+msgstr ""
+"Dokunmatik yüzeyin sol alt ve sağ alt köşelerine aynı anda basmak, orta tık "
+"olarak çalışır."
 
 #: ui/main.qml:936
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers"
+#, kde-format
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
-msgstr "Üç parmakla herhangi bir yere basın"
+msgstr "Dokunmatik yüzeye üç parmakla bas"
 
 #: ui/main.qml:942
-#, kde-format
-msgid "@info:tooltip for radiobutton"
-msgstr ""
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip for radiobutton"
+#| msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
+msgctxt "@info:tooltip for radiobutton"
+msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
+msgstr "Sağ tık için iki parmakla dokunmatik yüzeyde herhangi bir yere basın."
 
 #~ msgid ""
 #~ "Software enabled buttons will be added to bottom portion of your touchpad."

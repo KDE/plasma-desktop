@@ -1,25 +1,21 @@
-# Translation of kcminput to Spanish
-# translation of kcminput.po to Spanish
-# Translation to spanish.
-# Copyright (C) 2000-2002.
+# Translation of kcmmouse to Spanish
+# Copyright (C) 2000-2024 This_file_is_part_of_KDE
+# This file is distributed under the same license as the plasma-desktop package.
 #
-# Pablo de Vicente <vicente@oan.es>, 2000-2002.
-# Jaime Robles <jaime@kde.org>, 2003, 2007, 2008.
-# Miguel Revilla Rodríguez <yo@miguelrevilla.com>, 2003, 2004.
-# Pablo de Vicente <p.devicente@wanadoo.es>, 2004, 2005.
-# Juan Manuel Garcia Molina <juanma@superiodico.net>, 2005.
-# Pablo de Vicente <pablo.devicente@gmail.com>, 2006.
-# Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
+# SPDX-FileCopyrightText: 2000, 2001, 2002, 2004, 2005, 2006 Pablo de Vicente <pablo.devicente@gmail.com>
+# SPDX-FileCopyrightText: 2003, 2004 Miguel Revilla Rodríguez <yo@miguelrevilla.com>
+# SPDX-FileCopyrightText: 2003, 2007, 2008, 2009 Jaime Robles <jaime@kde.org>
+# SPDX-FileCopyrightText: 2005 Juan Manuel Garcia Molina <juanma@superiodico.net>
+# SPDX-FileCopyrightText: 2007 Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>
 # SPDX-FileCopyrightText: 2008, 2009, 2014, 2015, 2016, 2017, 2018, 2020, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
-# Jaime Robles <jaime@robles.es>, 2009.
-# Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2010, 2011.
-# Javier Vinal <fjvinal@gmail.com>, 2011, 2012.
+# SPDX-FileCopyrightText: 2010, 2011 Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>
+# SPDX-FileCopyrightText: 2011, 2012 Javier Vinal <fjvinal@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: kcminput\n"
+"Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
-"PO-Revision-Date: 2024-08-27 12:30+0200\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"PO-Revision-Date: 2024-09-04 16:57+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -28,7 +24,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "com>\n"
 "First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
@@ -179,26 +175,33 @@ msgid "Swap left and right buttons."
 msgstr "Permutar los botones derecho e izquierdo."
 
 #: ui/main.qml:126
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "Pulsar los botones derecho e izquierdo para clic central"
 
 #: ui/main.qml:138
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
-"Al hacer clic simultáneamente con los botones derecho e izquierdo se envía "
-"un clic del botón central."
+"La pulsación simultánea de los botones derecho e izquierdo actúa como un "
+"clic central."
 
 #: ui/main.qml:142
-#, kde-format
-msgid "@info:tooltip from ContextualHelpButton"
+#, fuzzy, kde-format
+#| msgid ""
+#| "Activating this setting increases mouse click latency by 50ms. The extra "
+#| "delay is needed to correctly detect simultaneous left and right mouse "
+#| "clicks."
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"Activating this setting increases click latency by 50ms. The extra delay is "
+"needed to correctly detect simultaneous left and right button presses."
 msgstr ""
+"La activación de este ajuste aumenta la latencia del clic del ratón en 50 "
+"ms. Este retardo adicional es necesario para detectar correctamente los "
+"clics derecho e izquierdo simultáneos del ratón."
 
 #: ui/main.qml:154
 #, kde-format
@@ -260,8 +263,7 @@ msgid "Invert scroll direction"
 msgstr "Invertir la dirección de desplazamiento"
 
 #: ui/main.qml:351
-#, fuzzy, kde-format
-#| msgid "Touchscreen like scrolling."
+#, kde-format
 msgid "Touchscreen-like scrolling."
 msgstr "Desplazamiento como en pantalla táctil."
 
@@ -275,14 +277,8 @@ msgstr "Pulsar el botón central y mover el ratón para desplazar"
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "Desplazar con el ratón mientras se pulsa el botón central."
 
-#~ msgid ""
-#~ "Activating this setting increases mouse click latency by 50ms. The extra "
-#~ "delay is needed to correctly detect simultaneous left and right mouse "
-#~ "clicks."
-#~ msgstr ""
-#~ "La activación de este ajuste aumenta la latencia del clic del ratón en 50 "
-#~ "ms. Este retardo adicional es necesario para detectar correctamente los "
-#~ "clics derecho e izquierdo simultáneos del ratón."
+#~ msgid "@info:tooltip from ContextualHelpButton"
+#~ msgstr "@info:tooltip de ContextualHelpButton"
 
 #~ msgctxt "@action:button"
 #~ msgid "Bindings for Additional Mouse Buttons"

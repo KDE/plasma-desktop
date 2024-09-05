@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
 "PO-Revision-Date: 2024-08-31 06:15+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -556,10 +556,18 @@ msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr "Przeciągnij, aby zmienić najmniejszą szerokość."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:86
-#, kde-format
-msgid "@info:tooltip slider handle"
+#: contents/configuration/panelconfiguration/Ruler.qml:87
+#, fuzzy, kde-format
+#| msgid ""
+#| "Drag to change position on this screen edge.\n"
+#| "Double click to reset."
+msgctxt "@info:tooltip slider handle"
+msgid ""
+"Drag to change position on this screen edge.\n"
+"Double-click to reset."
 msgstr ""
+"Przeciągnij, aby zmienić położenie na tę krawędź ekranu.\n"
+"Naciśnij dwukrotnie, aby wyzerować."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 #, kde-format
@@ -827,13 +835,6 @@ msgstr "Wyjdź z trybu dostosowywania"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Wskaźnik bycia na pasku"
-
-#~ msgid ""
-#~ "Drag to change position on this screen edge.\n"
-#~ "Double click to reset."
-#~ msgstr ""
-#~ "Przeciągnij, aby zmienić położenie na tę krawędź ekranu.\n"
-#~ "Naciśnij dwukrotnie, aby wyzerować."
 
 #~ msgctxt "@action:button Done configuring the panel"
 #~ msgid "Done"

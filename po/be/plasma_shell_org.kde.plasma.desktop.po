@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
 "PO-Revision-Date: 2024-06-17 08:06\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -566,10 +566,18 @@ msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr "Перацягніце, каб змяніць мінімальную шырыню."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:86
-#, kde-format
-msgid "@info:tooltip slider handle"
+#: contents/configuration/panelconfiguration/Ruler.qml:87
+#, fuzzy, kde-format
+#| msgid ""
+#| "Drag to change position on this screen edge.\n"
+#| "Double click to reset."
+msgctxt "@info:tooltip slider handle"
+msgid ""
+"Drag to change position on this screen edge.\n"
+"Double-click to reset."
 msgstr ""
+"Перацягніце, каб змяніць пазіцыю на гэтым краі экрана.\n"
+"Двойчы пстрыкніце, каб скінуць."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 #, kde-format
@@ -840,13 +848,6 @@ msgstr "Выйсці з рэжыму рэдагавання"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Індыкатар фокуса панэлі"
-
-#~ msgid ""
-#~ "Drag to change position on this screen edge.\n"
-#~ "Double click to reset."
-#~ msgstr ""
-#~ "Перацягніце, каб змяніць пазіцыю на гэтым краі экрана.\n"
-#~ "Двойчы пстрыкніце, каб скінуць."
 
 #~ msgctxt "@action:button Done configuring the panel"
 #~ msgid "Done"

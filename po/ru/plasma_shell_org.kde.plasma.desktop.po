@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
 "PO-Revision-Date: 2024-06-22 11:48+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -576,10 +576,18 @@ msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr "Перетаскивайте для изменения минимальной ширины."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:86
-#, kde-format
-msgid "@info:tooltip slider handle"
+#: contents/configuration/panelconfiguration/Ruler.qml:87
+#, fuzzy, kde-format
+#| msgid ""
+#| "Drag to change position on this screen edge.\n"
+#| "Double click to reset."
+msgctxt "@info:tooltip slider handle"
+msgid ""
+"Drag to change position on this screen edge.\n"
+"Double-click to reset."
 msgstr ""
+"Перетаскивайте для изменения расположения на краю экрана.\n"
+"Двойной щелчок для отмены."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 #, kde-format
@@ -850,13 +858,6 @@ msgstr "Выйти из режима редактирования"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Индикатор получения фокуса панелью"
-
-#~ msgid ""
-#~ "Drag to change position on this screen edge.\n"
-#~ "Double click to reset."
-#~ msgstr ""
-#~ "Перетаскивайте для изменения расположения на краю экрана.\n"
-#~ "Двойной щелчок для отмены."
 
 #~ msgctxt "@action:button Done configuring the panel"
 #~ msgid "Done"

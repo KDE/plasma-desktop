@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
-"PO-Revision-Date: 2024-08-27 16:15+0300\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"PO-Revision-Date: 2024-09-04 15:07+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -391,31 +391,27 @@ msgid "Disable horizontal scrolling"
 msgstr "השבתת גלילה אופקית"
 
 #: ui/main.qml:596
-#, fuzzy, kde-format
-#| msgid "Disable horizontal scrolling"
+#, kde-format
 msgid "Disable horizontal scrolling."
-msgstr "השבתת גלילה אופקית"
+msgstr "השבתת גלילה אופקית."
 
 #: ui/main.qml:609
-#, fuzzy, kde-format
-#| msgid "Tapping:"
+#, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "נקישה:"
 
 #: ui/main.qml:610
-#, fuzzy, kde-format
-#| msgid "Tap-to-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Tap-to-click"
-msgstr "נקישה מייצרת לחיצה"
+msgstr "נקישה ללחיצה"
 
 #: ui/main.qml:614
-#, fuzzy, kde-format
-#| msgid "Single tap is left button click."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Single tap to left-click."
-msgstr "נקישה בודדת היא לחיצה בלחצן העכבר השמאלי."
+msgstr "נקישה בודדת היא לחיצה שמאלית."
 
 #: ui/main.qml:643
 #, kde-format
@@ -486,17 +482,15 @@ msgid "Tap with two fingers to middle-click."
 msgstr "נקישה בשתי אצבעות ללחיצה אמצעית."
 
 #: ui/main.qml:777
-#, fuzzy, kde-format
-#| msgid "Right-click:"
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, configure right-click with touch-pad "
 "integrated button (pressing into the touchpad)"
 msgid "Integrated right-click:"
-msgstr "לחיצה ימנית:"
+msgstr "לחיצה ימנית משולבת:"
 
 #: ui/main.qml:811
-#, fuzzy, kde-format
-#| msgid "Press bottom-right corner"
+#, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
 msgstr "לחיצה על הפינה הימנית התחתונה"
@@ -522,20 +516,19 @@ msgstr ""
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
-msgstr ""
+msgstr "לחיצה אמצעית על ידי לחיצה על שתי הפינות התחתונות."
 
 #: ui/main.qml:829
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
-msgstr ""
+msgstr "לחיצה ימנית בלחיצה במרכז למטה."
 
 #: ui/main.qml:847
-#, fuzzy, kde-format
-#| msgid "Press anywhere with two fingers"
+#, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press touchpad with two fingers"
-msgstr "יש ללחוץ איפשהו עם שתי אצבעות"
+msgstr "יש ללחוץ על משטח המגע בשתי אצבעות"
 
 #: ui/main.qml:851
 #, fuzzy, kde-format
@@ -552,54 +545,52 @@ msgid "Middle-click by pressing with three fingers."
 msgstr "יש ללחוץ איפשהו עם שלוש אצבעות."
 
 #: ui/main.qml:882
-#, fuzzy, kde-format
-#| msgid "Middle-click: "
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, configure middle-click with touch-pad "
 "integrated button (pressing into the touchpad)"
 msgid "Integrated middle-click:"
-msgstr "לחיצה אמצעית: "
+msgstr "לחיצה אמצעית משולבת:"
 
 #: ui/main.qml:911
-#, fuzzy, kde-format
-#| msgid "Press bottom-middle"
+#, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom middle edge"
-msgstr "לחיצה באמצע למטה"
+msgstr "לחיצה בקצה התחתון באמצע"
 
 #: ui/main.qml:915
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the bottom right corner of your touchpad acts as right-click."
-msgstr ""
+msgstr "לחיצה על הפינה הימנית התחתונה של משטח המגע שלך מתנהגת כמו לחיצה ימנית."
 
 #: ui/main.qml:923
-#, fuzzy, kde-format
-#| msgid "Press bottom left and bottom right corners simultaneously"
+#, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom left and bottom right corners"
-msgstr "לחיצה על הפינות התחתונות השמאלית והימנית בו־זמנית"
+msgstr "לחיצה על הפינות התחתונות השמאלית והימנית"
 
 #: ui/main.qml:927
-#, fuzzy, kde-format
-#| msgid "Press bottom left and bottom right corners simultaneously"
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid ""
 "Pressing the bottom left and bottom right corners simultaneously acts as "
 "middle-click."
-msgstr "לחיצה על הפינות התחתונות השמאלית והימנית בו־זמנית"
+msgstr ""
+"לחיצה על הפינות התחתונות השמאלית והימנית בו־זמנית מתנהגת כמו לחיצה אמצעית."
 
 #: ui/main.qml:936
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers"
+#, kde-format
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
-msgstr "יש ללחוץ איפשהו עם שלוש אצבעות"
+msgstr "יש ללחוץ על משטח המגע בשלוש אצבעות"
 
 #: ui/main.qml:942
-#, kde-format
-msgid "@info:tooltip for radiobutton"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Tap with two fingers to right-click."
+msgctxt "@info:tooltip for radiobutton"
+msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
+msgstr "נקישה בשתי אצבעות ללחיצה ימנית."
 
 #~ msgid ""
 #~ "Software enabled buttons will be added to bottom portion of your touchpad."

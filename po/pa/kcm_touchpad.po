@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
 "PO-Revision-Date: 2024-02-25 09:27-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -589,9 +589,11 @@ msgid "Press touchpad with three fingers"
 msgstr "ਤਿੰਨ ਉਂਗਲਾਂ ਨਾਲ ਕਿਤੇ ਵੀ ਦਬਾਓ"
 
 #: ui/main.qml:942
-#, kde-format
-msgid "@info:tooltip for radiobutton"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Tap with two fingers to right-click."
+msgctxt "@info:tooltip for radiobutton"
+msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
+msgstr "ਸੱਜੇ ਕਲਿੱਕ ਲਈ ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਟੈਪ ਕਰੋ"
 
 #~ msgid "Tap with two finger to enable right click."
 #~ msgstr "ਸੱਜਾ ਕਲਿੱਕ ਸਮਰੱਥ ਕਰਨ ਲਈ ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਟੈਪ ਕਰੋ।"

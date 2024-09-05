@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
 "PO-Revision-Date: 2024-08-10 22:17+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -562,10 +562,18 @@ msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr "Завлечете с мишката, за да промените минималната широчина."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:86
-#, kde-format
-msgid "@info:tooltip slider handle"
+#: contents/configuration/panelconfiguration/Ruler.qml:87
+#, fuzzy, kde-format
+#| msgid ""
+#| "Drag to change position on this screen edge.\n"
+#| "Double click to reset."
+msgctxt "@info:tooltip slider handle"
+msgid ""
+"Drag to change position on this screen edge.\n"
+"Double-click to reset."
 msgstr ""
+"Плъзнете, за да промените позицията на този край на екрана.\n"
+"Двойно щракване, за да върнете предишните настройки."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 #, kde-format
@@ -834,13 +842,6 @@ msgstr "Излизане от режим на редактиране"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Индикатор за фокус на панела"
-
-#~ msgid ""
-#~ "Drag to change position on this screen edge.\n"
-#~ "Double click to reset."
-#~ msgstr ""
-#~ "Плъзнете, за да промените позицията на този край на екрана.\n"
-#~ "Двойно щракване, за да върнете предишните настройки."
 
 #~ msgctxt "@action:button Done configuring the panel"
 #~ msgid "Done"

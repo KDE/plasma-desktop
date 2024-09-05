@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-04 00:41+0000\n"
-"PO-Revision-Date: 2024-07-30 13:15+0200\n"
+"PO-Revision-Date: 2024-09-04 13:37+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: inputsequence.cpp:135
 #, kde-format
@@ -157,28 +157,22 @@ msgstr ""
 "beslissen hoe ermee te handelen."
 
 #: ui/ActionDialog.qml:177
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu Left mouse click"
-#| msgid "Left Click"
+#, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left-click"
 msgstr "Linker muisklik"
 
 #: ui/ActionDialog.qml:178
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu Middle mouse click"
-#| msgid "Middle Click"
+#, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle-click"
-msgstr "Midden-klik"
+msgstr "Middel-klik"
 
 #: ui/ActionDialog.qml:179
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu Right mouse click"
-#| msgid "Right Click"
+#, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right-click"
-msgstr "Rechter muisklik"
+msgstr "Rechter-klik"
 
 #: ui/ActionDialog.qml:206
 #, kde-format
