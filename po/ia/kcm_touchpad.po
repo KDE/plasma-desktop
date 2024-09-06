@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-09-03 11:53+0200\n"
+"PO-Revision-Date: 2024-09-05 09:46+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -285,36 +285,29 @@ msgid "Swap left and right buttons."
 msgstr "Excambia buttones de sinistra e dextera."
 
 #: ui/main.qml:234
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons to middle-click"
 msgstr "Pressa buttones de sinistra e dextera per pulsar in le medio"
 
 #: ui/main.qml:238
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
+#, kde-format
 msgctxt "@info:tooltip for checkbox"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
-"Pulsar buttones de sinistra e dextera simultaneemente invia click al button "
-"medie."
+"Pulsar buttones de sinistra e dextera simultaneemente age como cliccar in le "
+"medio."
 
 #: ui/main.qml:264
-#, fuzzy, kde-format
-#| msgid ""
-#| "Activating this setting increases mouse click latency by 50ms. The extra "
-#| "delay is needed to correctly detect simultaneous left and right mouse "
-#| "clicks."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
-"Activar iste preferentia augmenta le latentia de mus per 50ms. Le retardo "
-"extra es necessitate per relavar correctemente le clicks simultanee sinistre "
-"e dextere de mus."
+"Activar iste preferentia augmenta le latentia de cliccar per 50ms. Le "
+"retardo extra es necessitate per relevar correctemente le clicks simultanee "
+"sinistre e dextere."
 
 #: ui/main.qml:274
 #, kde-format
@@ -405,31 +398,27 @@ msgid "Disable horizontal scrolling"
 msgstr "Dishabilita rolar horizontal"
 
 #: ui/main.qml:596
-#, fuzzy, kde-format
-#| msgid "Disable horizontal scrolling"
+#, kde-format
 msgid "Disable horizontal scrolling."
-msgstr "Dishabilita rolar horizontal"
+msgstr "Dishabilita rolar horizontal."
 
 #: ui/main.qml:609
-#, fuzzy, kde-format
-#| msgid "Tapping:"
+#, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Toccar:"
 
 #: ui/main.qml:610
-#, fuzzy, kde-format
-#| msgid "Tap-to-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Tap-to-click"
 msgstr "Colpa per pulsar"
 
 #: ui/main.qml:614
-#, fuzzy, kde-format
-#| msgid "Single tap is left button click."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Single tap to left-click."
-msgstr "Singule tocco es click de button sinistre"
+msgstr "Singule tocco per cliccar a sinistra"
 
 #: ui/main.qml:643
 #, kde-format
@@ -503,17 +492,15 @@ msgid "Tap with two fingers to middle-click."
 msgstr "Tocco con duo digitos per click in le medie."
 
 #: ui/main.qml:777
-#, fuzzy, kde-format
-#| msgid "Right-click:"
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, configure right-click with touch-pad "
 "integrated button (pressing into the touchpad)"
 msgid "Integrated right-click:"
-msgstr "Pulsa a dextera:"
+msgstr "Cliccar a dextera integrate:"
 
 #: ui/main.qml:811
-#, fuzzy, kde-format
-#| msgid "Press bottom-right corner"
+#, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
 msgstr "Pressa button-angolo dextere"
@@ -526,6 +513,9 @@ msgid ""
 "Middle-click by simultaneously pressing the bottom left and bottom right "
 "corners."
 msgstr ""
+"Pressar le angulo dextere a basso de tu pannello tactile (touchpad) age como "
+"cliccar a dextera. Le cliccar in le medio es per pressar simultaneemente le "
+"angulos dextere e sinistre a basso."
 
 #: ui/main.qml:817
 #, kde-format
@@ -534,91 +524,93 @@ msgid ""
 "Pressing the bottom right corner of your touchpad acts as right-click. "
 "Middle-click by pressing the bottom central area."
 msgstr ""
+"Pressar le angulo dextere a basso de tu pannello tactile (touchpad) age como "
+"cliccar a dextera. Le cliccar in le medio es per pressar le area central a "
+"basso."
 
 #: ui/main.qml:828
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
-msgstr ""
+msgstr "Cliccar in le medio per pressar ambes le angulos a basso."
 
 #: ui/main.qml:829
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
-msgstr ""
+msgstr "Cliccar in le medio per pressar le centro a basso."
 
 #: ui/main.qml:847
-#, fuzzy, kde-format
-#| msgid "Press anywhere with two fingers"
+#, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press touchpad with two fingers"
-msgstr "Pressa ubique con duo digitos"
+msgstr "Pressa le pannello digital (touchpad) con duo digitos"
 
 #: ui/main.qml:851
-#, fuzzy, kde-format
-#| msgid "Tap with two fingers to right-click."
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
-msgstr "Tocco con duo digitos per click a dextera"
+msgstr ""
+"Pressar le pannello digital (touchpad) ubique con duo digitos age comor "
+"click a dextera."
 
 #: ui/main.qml:863
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers."
+#, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
-msgstr "Pressa ubique con tres digitos."
+msgstr "Cliccar in l emedio per pressar con tres digitos."
 
 #: ui/main.qml:882
-#, fuzzy, kde-format
-#| msgid "Middle-click: "
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, configure middle-click with touch-pad "
 "integrated button (pressing into the touchpad)"
 msgid "Integrated middle-click:"
-msgstr "Click in medio: "
+msgstr "Cliccar in medio integrate: "
 
 #: ui/main.qml:911
-#, fuzzy, kde-format
-#| msgid "Press bottom-middle"
+#, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom middle edge"
-msgstr "Pressa button-medie"
+msgstr "Pressa bordo medie a basso"
 
 #: ui/main.qml:915
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the bottom right corner of your touchpad acts as right-click."
 msgstr ""
+"Pressar le angulo dextere a basso de tu pannello tactile (touchpad) age como "
+"cliccar a dextera."
 
 #: ui/main.qml:923
-#, fuzzy, kde-format
-#| msgid "Press bottom left and bottom right corners simultaneously"
+#, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom left and bottom right corners"
-msgstr "Pressa angulos sinistre e dextere a basso simultaneemente"
+msgstr "Pressa angulos sinistre e dextere a basso"
 
 #: ui/main.qml:927
-#, fuzzy, kde-format
-#| msgid "Press bottom left and bottom right corners simultaneously"
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid ""
 "Pressing the bottom left and bottom right corners simultaneously acts as "
 "middle-click."
-msgstr "Pressa angulos sinistre e dextere a basso simultaneemente"
+msgstr ""
+"Pressar angulos sinistre e dextere a basso simultaneemente age como un "
+"cliccar in le medio."
 
 #: ui/main.qml:936
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers"
+#, kde-format
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
-msgstr "Pressa ubique con tres digitos"
+msgstr "Pressa le pannello digital (touchpad) con tres digitos"
 
 #: ui/main.qml:942
-#, fuzzy, kde-format
-#| msgid "Tap with two fingers to right-click."
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
-msgstr "Tocco con duo digitos per click a dextera"
+msgstr ""
+"Tocco  le pannello digital (touchpad) ubique con tres digitos age como "
+"cliccar in le medio."
 
 #~ msgid ""
 #~ "Software enabled buttons will be added to bottom portion of your touchpad."

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-09-04 15:07+0300\n"
+"PO-Revision-Date: 2024-09-05 05:23+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -275,33 +275,26 @@ msgid "Swap left and right buttons."
 msgstr "להחליף בין הלחצנים השמאלי והימני."
 
 #: ui/main.qml:234
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons to middle-click"
 msgstr "לחיצה על הלחצנים השמאלי והימני מייצרים לחיצה אמצעית"
 
 #: ui/main.qml:238
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
+#, kde-format
 msgctxt "@info:tooltip for checkbox"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
-msgstr "לחיצה על הלחצנים השמאלי והימני בו־זמנית שולחת לחיצה אמצעית."
+msgstr "לחיצה על הלחצנים השמאלי והימני בו־זמנית מתנהגת כמו לחיצה אמצעית."
 
 #: ui/main.qml:264
-#, fuzzy, kde-format
-#| msgid ""
-#| "Activating this setting increases mouse click latency by 50ms. The extra "
-#| "delay is needed to correctly detect simultaneous left and right mouse "
-#| "clicks."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
-"הפעלת ההגדרה הזאת מגבירה את עיכוב לחיצת העכבר ב־50 מילישניות. העיכוב הנוסף "
-"הזה נחוץ כדי לזהות בצורה נכונה לחיצות מקביליות על הכפתור השמאלי והימני יחד."
+"הפעלת ההגדרה הזאת מגבירה את עיכוב הלחיצה ב־50 מילישניות. העיכוב הנוסף הזה "
+"נחוץ כדי לזהות בצורה נכונה לחיצות מקביליות על הכפתור השמאלי והימני יחד."
 
 #: ui/main.qml:274
 #, kde-format
@@ -503,6 +496,8 @@ msgid ""
 "Middle-click by simultaneously pressing the bottom left and bottom right "
 "corners."
 msgstr ""
+"לחיצה על הפינה הימנית התחתונה של משטח המגע שלך מתנהגת כמו לחיצה ימנית. לחיצה "
+"אמצעית נוצרת על ידי לחיצה על הפינות השמאלית והימנית התחתונות בו־זמנית."
 
 #: ui/main.qml:817
 #, kde-format
@@ -511,6 +506,8 @@ msgid ""
 "Pressing the bottom right corner of your touchpad acts as right-click. "
 "Middle-click by pressing the bottom central area."
 msgstr ""
+"לחיצה על הפינה הימנית התחתונה של משטח המגע שלך מתנהגת כמו לחיצה ימנית. לחיצה "
+"אמצעית מתקבלת על ידי לחיצה על האזור האמצעי בתחתית."
 
 #: ui/main.qml:828
 #, kde-format
@@ -531,18 +528,16 @@ msgid "Press touchpad with two fingers"
 msgstr "יש ללחוץ על משטח המגע בשתי אצבעות"
 
 #: ui/main.qml:851
-#, fuzzy, kde-format
-#| msgid "Tap with two fingers to right-click."
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
-msgstr "נקישה בשתי אצבעות ללחיצה ימנית."
+msgstr "נגיעה במשטח המגע היכן שהוא בשתי אצבעות מתנהגת כמו לחיצה ימנית."
 
 #: ui/main.qml:863
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers."
+#, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
-msgstr "יש ללחוץ איפשהו עם שלוש אצבעות."
+msgstr "לחיצה אמצעית בלחיצה עם שלוש אצבעות."
 
 #: ui/main.qml:882
 #, kde-format
@@ -586,11 +581,10 @@ msgid "Press touchpad with three fingers"
 msgstr "יש ללחוץ על משטח המגע בשלוש אצבעות"
 
 #: ui/main.qml:942
-#, fuzzy, kde-format
-#| msgid "Tap with two fingers to right-click."
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
-msgstr "נקישה בשתי אצבעות ללחיצה ימנית."
+msgstr "נגיעה במשטח המגע היכן שהוא בשלוש אצבעות מתנהגת כמו לחיצה אמצעית."
 
 #~ msgid ""
 #~ "Software enabled buttons will be added to bottom portion of your touchpad."

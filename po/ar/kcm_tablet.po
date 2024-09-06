@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-04 00:41+0000\n"
-"PO-Revision-Date: 2024-08-15 11:42+0400\n"
+"PO-Revision-Date: 2024-09-05 13:54+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -34,25 +34,25 @@ msgstr "لا شيء"
 #, kde-format
 msgctxt "@action:button"
 msgid "Left mouse button"
-msgstr ""
+msgstr "زر الفأرة الأيسر"
 
 #: inputsequence.cpp:147
 #, kde-format
 msgctxt "@action:button"
 msgid "Right mouse button"
-msgstr ""
+msgstr "زر الفأرة الأيمن"
 
 #: inputsequence.cpp:149
 #, kde-format
 msgctxt "@action:button"
 msgid "Middle mouse button"
-msgstr ""
+msgstr "زر الفأرة الأوسط"
 
 #: inputsequence.cpp:155
 #, kde-format
 msgctxt "@action:button"
 msgid "Application-defined"
-msgstr ""
+msgstr "حسب ما يعرفه التطبيق"
 
 #: kcmtablet.cpp:34
 #, kde-format
@@ -120,25 +120,25 @@ msgstr "اختر إجراء الزّرّ"
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when pressing %1:"
-msgstr ""
+msgstr "اختر الإجراء الذي سيأخذ عند الضغط على %1:"
 
 #: ui/ActionDialog.qml:84
 #, kde-format
 msgctxt "@option:radio Set this action to an application-defined type"
 msgid "Defer to application"
-msgstr ""
+msgstr "يوجه إلى تطبيق"
 
 #: ui/ActionDialog.qml:99
 #, kde-format
 msgctxt "@option:radio Set this action to a keyboard type"
 msgid "Send keyboard key"
-msgstr ""
+msgstr "أرسل مفتاح لوحة المفاتيح"
 
 #: ui/ActionDialog.qml:113
 #, kde-format
 msgctxt "@option:radio Set this action to a mouse type"
 msgid "Send mouse button click"
-msgstr ""
+msgstr "أرسل نقرة زر الفأرة"
 
 #: ui/ActionDialog.qml:129
 #, kde-format
@@ -153,25 +153,23 @@ msgid ""
 "This tablet button is forwarded to the focused application, which can decide "
 "how to handle it."
 msgstr ""
+"يوجه زر الجهاز اللوحي هذا إلى التطبيق المحدد، والذي يمكنه تحديد كيفية "
+"التعامل معه."
 
 #: ui/ActionDialog.qml:177
 #, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left-click"
-msgstr ""
+msgstr "النقر باليسرى"
 
 #: ui/ActionDialog.qml:178
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu Middle mouse click"
-#| msgid "Middle Click"
+#, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle-click"
-msgstr "النقرة الوسطى"
+msgstr "النّقر بالوسط"
 
 #: ui/ActionDialog.qml:179
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu Right mouse click"
-#| msgid "Right Click"
+#, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right-click"
 msgstr "النقر باليمين"
@@ -204,7 +202,7 @@ msgstr "Shift"
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
-msgstr ""
+msgstr "هذا الزر معطل ولن يفعل أي شيء."
 
 #: ui/Calibration.qml:31
 #, kde-format
@@ -218,7 +216,7 @@ msgctxt "@info"
 msgid ""
 "Calibration is completed and saved.<nl/><nl/>Refine the calibration further "
 "or close the window."
-msgstr ""
+msgstr "انتهت المعايرة وحفظت.<nl/><nl/>حسن المعايرة بشكل أكبر أو أغلق النافذة."
 
 #: ui/Calibration.qml:86
 #, kde-kuit-format
@@ -227,18 +225,20 @@ msgid ""
 "Tap the center of each target.<nl/><nl/>Aim for the point where the stylus "
 "tip lands, and ignore the cursor position on the screen."
 msgstr ""
+"اضغط على مركز كل هدف.<nl/><nl/>استهدف النقطة التي يهبط عليها طرف القلم، "
+"وتجاهل موضع المؤشر على الشاشة."
 
 #: ui/Calibration.qml:92
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
-msgstr ""
+msgstr "حسّن المعايرة الحالية"
 
 #: ui/Calibration.qml:101
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
-msgstr ""
+msgstr "أعد المعايرة من الصفر"
 
 #: ui/Calibration.qml:115
 #, kde-format
@@ -371,7 +371,7 @@ msgstr "زر القلم 3"
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
-msgstr ""
+msgstr "معايرة قيد التقدم"
 
 #: ui/main.qml:353
 #, kde-format
@@ -383,13 +383,13 @@ msgstr "عاير"
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
-msgstr ""
+msgstr "المعايرة غير مدعومة"
 
 #: ui/main.qml:383
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
-msgstr ""
+msgstr "المعايرة عبر شاشات متعددة غير مدعومة."
 
 #: ui/main.qml:393
 #, kde-format

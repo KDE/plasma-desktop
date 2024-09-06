@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-08-15 11:38+0400\n"
+"PO-Revision-Date: 2024-09-05 10:15+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -156,8 +156,7 @@ msgid "Accept input through this device."
 msgstr "قبول الإدخال من خلال هذا الجهاز."
 
 #: ui/main.qml:107
-#, fuzzy, kde-format
-#| msgid "Left handed mode"
+#, kde-format
 msgid "Left-handed mode"
 msgstr "وضع الأعسر"
 
@@ -167,20 +166,17 @@ msgid "Swap left and right buttons."
 msgstr "بدّل الأزرار اليمنى واليسرى."
 
 #: ui/main.qml:126
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "اضغط على الزرين الأيمن والأيسر للنقر الأوسط"
 
 #: ui/main.qml:138
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
-"يؤدي النقر فوق الزر الأيمن والأيسر في نفس الوقت إلى إرسال نقرة الزر الأوسط."
+"الضغط فوق الزر الأيمن والأيسر في نفس الوقت يعمل على إرسال نقرة الزر الأوسط."
 
 #: ui/main.qml:142
 #, fuzzy, kde-format
@@ -255,8 +251,7 @@ msgid "Invert scroll direction"
 msgstr "اعكس اتّجاه التّمرير"
 
 #: ui/main.qml:351
-#, fuzzy, kde-format
-#| msgid "Touchscreen like scrolling."
+#, kde-format
 msgid "Touchscreen-like scrolling."
 msgstr "تمرير مثل الشاشة العاملة باللمس."
 

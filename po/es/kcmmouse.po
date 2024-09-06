@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-09-04 16:57+0200\n"
+"PO-Revision-Date: 2024-09-05 04:18+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -189,19 +189,15 @@ msgstr ""
 "clic central."
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "Activating this setting increases mouse click latency by 50ms. The extra "
-#| "delay is needed to correctly detect simultaneous left and right mouse "
-#| "clicks."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
-"La activación de este ajuste aumenta la latencia del clic del ratón en 50 "
-"ms. Este retardo adicional es necesario para detectar correctamente los "
-"clics derecho e izquierdo simultáneos del ratón."
+"La activación de este ajuste aumenta la latencia del clic en 50 ms. Este "
+"retardo adicional es necesario para detectar correctamente la pulsación  "
+"simultánea de los botones derecho e izquierdo."
 
 #: ui/main.qml:154
 #, kde-format

@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-09-04 11:20+0200\n"
+"PO-Revision-Date: 2024-09-05 12:22+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -184,19 +184,15 @@ msgstr ""
 "En prémer simultàniament al botó dret i esquerre fa com un clic del mig."
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "Activating this setting increases mouse click latency by 50ms. The extra "
-#| "delay is needed to correctly detect simultaneous left and right mouse "
-#| "clicks."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
-"L'activació d'aquest paràmetre augmenta la latència del clic del ratolí en "
-"50 ms. Cal un retard addicional per a detectar correctament els clics "
-"simultanis esquerre i dret del ratolí."
+"L'activació d'aquest paràmetre augmenta la latència del clic en 50 ms. Cal "
+"un retard addicional per a detectar correctament els clics simultanis dels "
+"botons esquerre i dret."
 
 #: ui/main.qml:154
 #, kde-format

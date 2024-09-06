@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-07-28 12:48+0400\n"
+"PO-Revision-Date: 2024-09-05 13:37+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -268,8 +268,7 @@ msgid "This can interfere with video games."
 msgstr "قد يتعارض هذا مع ألعاب الفيديو."
 
 #: ui/main.qml:204
-#, fuzzy, kde-format
-#| msgid "Left handed mode"
+#, kde-format
 msgid "Left-handed mode"
 msgstr "وضع الأعسر"
 
@@ -279,35 +278,28 @@ msgid "Swap left and right buttons."
 msgstr "بدّل الأزرار اليمنى واليسرى."
 
 #: ui/main.qml:234
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons to middle-click"
 msgstr "اضغط على الزرين الأيمن والأيسر للنقر الأوسط"
 
 #: ui/main.qml:238
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
+#, kde-format
 msgctxt "@info:tooltip for checkbox"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
-"يؤدي النقر فوق الزر الأيمن والأيسر في نفس الوقت إلى إرسال نقرة الزر الأوسط."
+"الضغط فوق الزر الأيمن والأيسر في نفس الوقت يعمل على إرسال نقرة الزر الأوسط."
 
 #: ui/main.qml:264
-#, fuzzy, kde-format
-#| msgid ""
-#| "Activating this setting increases mouse click latency by 50ms. The extra "
-#| "delay is needed to correctly detect simultaneous left and right mouse "
-#| "clicks."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
-"يؤدي تنشيط هذا الإعداد إلى زيادة زمن انتقال النقر بالفأرة بمقدار 50 مللي "
-"ثانية. هناك حاجة إلى تأخير لاكتشاف نقرات الفأرة اليمنى واليسرى المتزامنة "
-"بشكل صحيح."
+"يؤدي تنشيط هذا الإعداد إلى زيادة زمن انتظار النقر بمقدار 50 مللي ثانية. يلزم "
+"هذا التأخير الإضافي للكشف بشكل صحيح عن الضغطات المتزامنة على الزر الأيسر "
+"والأيمن."
 
 #: ui/main.qml:274
 #, kde-format
@@ -397,31 +389,27 @@ msgid "Disable horizontal scrolling"
 msgstr "عطّل التمرير الأفقي"
 
 #: ui/main.qml:596
-#, fuzzy, kde-format
-#| msgid "Disable horizontal scrolling"
+#, kde-format
 msgid "Disable horizontal scrolling."
-msgstr "عطّل التمرير الأفقي"
+msgstr "عطّل التمرير الأفقي."
 
 #: ui/main.qml:609
-#, fuzzy, kde-format
-#| msgid "Tapping:"
+#, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "الطَرق:"
 
 #: ui/main.qml:610
-#, fuzzy, kde-format
-#| msgid "Tap-to-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Tap-to-click"
 msgstr "اطَرق لتنقر"
 
 #: ui/main.qml:614
-#, fuzzy, kde-format
-#| msgid "Single tap is left button click."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Single tap to left-click."
-msgstr "طَرقة مفردة عبارة عن نقرة بالزر الأيسر"
+msgstr "طَرقة مفردة للنقرة بالزر الأيسر"
 
 #: ui/main.qml:643
 #, kde-format
@@ -491,17 +479,15 @@ msgid "Tap with two fingers to middle-click."
 msgstr "الطَرْق بأصبعين للنقر الأوسط."
 
 #: ui/main.qml:777
-#, fuzzy, kde-format
-#| msgid "Right-click:"
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, configure right-click with touch-pad "
 "integrated button (pressing into the touchpad)"
 msgid "Integrated right-click:"
-msgstr "النقر باليمين:"
+msgstr "النقر الأيمن المدمج:"
 
 #: ui/main.qml:811
-#, fuzzy, kde-format
-#| msgid "Press bottom-right corner"
+#, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
 msgstr "اضغط الحافّة اليمنى الدنيا"
@@ -514,6 +500,9 @@ msgid ""
 "Middle-click by simultaneously pressing the bottom left and bottom right "
 "corners."
 msgstr ""
+"الضغط على الزاوية اليمنى السفلية من لوحة اللمس يعمل بمثابة النقر بزر الفأرة "
+"الأيمن.النقر بزر الفأرة الأوسط عن طريق الضغط في نفس الوقت على الزاوية اليسرى "
+"السفلية والزاوية اليمنى السفلية."
 
 #: ui/main.qml:817
 #, kde-format
@@ -522,84 +511,83 @@ msgid ""
 "Pressing the bottom right corner of your touchpad acts as right-click. "
 "Middle-click by pressing the bottom central area."
 msgstr ""
+"الضغط على الزاوية اليمنى السفلية من لوحة اللمس الخاصة بك يعمل بمثابة النقر "
+"بزر الفأرة الأيمن.النقر بزر الفأرة الأوسط بالضغط على المنطقة الوسطى السفلية."
 
 #: ui/main.qml:828
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
-msgstr ""
+msgstr "نقرة الفأرة الأوسط بالضغط على الزاويتين السفليتين."
 
 #: ui/main.qml:829
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
-msgstr ""
+msgstr "نقرة الفأرة الأوسط بالضغط على أسفل الوسط."
 
 #: ui/main.qml:847
-#, fuzzy, kde-format
-#| msgid "Press anywhere with two fingers"
+#, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press touchpad with two fingers"
-msgstr "اضغط أي مكان بأصبعين"
+msgstr "اضغط لوحة اللمس بأصبعين"
 
 #: ui/main.qml:851
-#, fuzzy, kde-format
-#| msgid "Tap with two fingers to right-click."
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
-msgstr "الطَرْق بأصبعين للنقر الأيمن."
+msgstr ""
+"يؤدي الضغط على لوحة اللمس في أي مكان بأصبعين إلى النقر بزر الفأرة الأيمن."
 
 #: ui/main.qml:863
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers."
+#, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
-msgstr "اضغط أي مكان بثلاثة أصابع."
+msgstr "احصل على النقر الأوسط عن طريق الضغط بثلاثة أصابع."
 
 #: ui/main.qml:882
-#, fuzzy, kde-format
-#| msgid "Middle-click: "
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, configure middle-click with touch-pad "
 "integrated button (pressing into the touchpad)"
 msgid "Integrated middle-click:"
-msgstr "النّقر بالوسط: "
+msgstr "النّقر الأوسط المدمج: "
 
 #: ui/main.qml:911
-#, fuzzy, kde-format
-#| msgid "Press bottom-middle"
+#, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom middle edge"
-msgstr "اضغط الزر الأوسط"
+msgstr "اضغط على الحافة الوسطى السفلية"
 
 #: ui/main.qml:915
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the bottom right corner of your touchpad acts as right-click."
 msgstr ""
+"الضغط على الزاوية اليمنى السفلية من لوحة اللمس الخاصة بك يعمل بمثابة النقر "
+"بزر الفأرة الأيمن."
 
 #: ui/main.qml:923
-#, fuzzy, kde-format
-#| msgid "Press bottom left and bottom right corners simultaneously"
+#, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom left and bottom right corners"
-msgstr "اضغط على الزاوية اليمنى السفلية واليسرى في وقت واحد"
+msgstr "اضغط على الزاوية السفلية اليسرى والزاوية السفلية اليمنى"
 
 #: ui/main.qml:927
-#, fuzzy, kde-format
-#| msgid "Press bottom left and bottom right corners simultaneously"
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid ""
 "Pressing the bottom left and bottom right corners simultaneously acts as "
 "middle-click."
-msgstr "اضغط على الزاوية اليمنى السفلية واليسرى في وقت واحد"
+msgstr ""
+"الضغط على الزاوية السفلية اليسرى والزاوية السفلية اليمنى في نفس الوقت يعمل "
+"بمثابة النقر بالزر الأوسط."
 
 #: ui/main.qml:936
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers"
+#, kde-format
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
-msgstr "اضغط أي مكان بثلاثة أصابع"
+msgstr "اضغط لوحة اللمس بثلاثة أصابع"
 
 #: ui/main.qml:942
 #, fuzzy, kde-format

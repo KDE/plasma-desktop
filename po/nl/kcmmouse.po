@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-09-04 13:54+0200\n"
+"PO-Revision-Date: 2024-09-05 09:56+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -187,11 +187,7 @@ msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr "Linker en rechter knop tegelijk indrukken werkt als midden-klik."
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "Activating this setting increases mouse click latency by 50ms. The extra "
-#| "delay is needed to correctly detect simultaneous left and right mouse "
-#| "clicks."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
@@ -199,7 +195,7 @@ msgid ""
 msgstr ""
 "Deze instelling activeren verhoogt de vertraging van de muisklik met 50ms. "
 "De extra vertraging is nodig om gelijktijdig indrukken van de linker en "
-"rechter muisknop correct te detecteren."
+"rechter knop correct te detecteren."
 
 #: ui/main.qml:154
 #, kde-format

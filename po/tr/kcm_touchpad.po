@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: playground-utils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-09-05 01:02+0300\n"
+"PO-Revision-Date: 2024-09-05 14:57+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -591,12 +591,10 @@ msgid "Press touchpad with three fingers"
 msgstr "Dokunmatik yüzeye üç parmakla bas"
 
 #: ui/main.qml:942
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip for radiobutton"
-#| msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
-msgstr "Sağ tık için iki parmakla dokunmatik yüzeyde herhangi bir yere basın."
+msgstr "Orta tık için üç parmakla dokunmatik yüzeyde herhangi bir yere basın."
 
 #~ msgid ""
 #~ "Software enabled buttons will be added to bottom portion of your touchpad."

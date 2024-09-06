@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-09-03 11:53+0200\n"
+"PO-Revision-Date: 2024-09-05 09:47+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -162,36 +162,29 @@ msgid "Swap left and right buttons."
 msgstr "Excambia buttones de sinistra e dextera."
 
 #: ui/main.qml:126
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "Pressa buttones de sinistra e dextera per pulsar in le medio"
 
 #: ui/main.qml:138
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
-"Pulsar buttones de sinistra e dextera simultaneemente invia click al button "
-"medie."
+"Pulsar buttones de sinistra e dextera simultaneemente age como cliccar in le "
+"medio."
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "Activating this setting increases mouse click latency by 50ms. The extra "
-#| "delay is needed to correctly detect simultaneous left and right mouse "
-#| "clicks."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
-"Activar iste preferentia augmenta le latentia de mus per 50ms. Le retardo "
-"extra es necessitate per relavar correctemente le clicks simultanee sinistre "
-"e dextere de mus."
+"Activar iste preferentia augmenta le latentia de cliccar per 50ms. Le "
+"retardo extra es necessitate per relevar correctemente le clicks simultanee "
+"sinistre e dextere."
 
 #: ui/main.qml:154
 #, kde-format
@@ -252,10 +245,9 @@ msgid "Invert scroll direction"
 msgstr "Reverte direction de rolar"
 
 #: ui/main.qml:351
-#, fuzzy, kde-format
-#| msgid "Touchscreen like scrolling."
+#, kde-format
 msgid "Touchscreen-like scrolling."
-msgstr "Schermo tactile como rolar."
+msgstr "Rolar como Schermo tactile."
 
 #: ui/main.qml:356
 #, kde-format

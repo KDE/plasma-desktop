@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-22 00:41+0000\n"
-"PO-Revision-Date: 2024-08-17 20:40+0400\n"
+"PO-Revision-Date: 2024-09-05 10:57+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -115,11 +115,10 @@ msgid "Add Layout"
 msgstr "أضف تخطيطًا"
 
 #: ui/LayoutDialog.qml:177
-#, fuzzy, kde-format
-#| msgid "Show layout indicator"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
-msgstr "أظهر مؤشّر التّخطيط"
+msgstr "اسم التخطيط مختصر"
 
 #: ui/LayoutDialog.qml:187
 #, kde-format
@@ -128,6 +127,8 @@ msgid ""
 "The abbreviated name of the selected layout, which will be displayed in the "
 "system tray. You can change this setting yourself."
 msgstr ""
+"الاسم المختصر للتخطيط المحدد، والذي سيعرض في شريط المهام. يمكنك تغيير هذا "
+"الإعداد بنفسك."
 
 #: ui/LayoutDialog.qml:195
 #, kde-format
@@ -145,15 +146,13 @@ msgstr "عاين"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Switching…"
-msgstr ""
+msgstr "اضبط التبديل…"
 
 #: ui/main.qml:38
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure Layouts"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Configure Switching"
-msgstr "اضبط التّخطيطات"
+msgstr "اضبط التبديل"
 
 #: ui/main.qml:44
 #, kde-format
@@ -198,12 +197,10 @@ msgid "Model:"
 msgstr "الطّراز:"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgctxt "@title:group"
-#| msgid "NumLock on Plasma Startup:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "NumLock on startup:"
-msgstr "قفل الأرقام عند بدء بلازما:"
+msgstr "قفل الأرقام عند بدء:"
 
 #: ui/main.qml:112
 #, kde-format
@@ -226,18 +223,16 @@ msgid "Leave unchanged"
 msgstr "لا تغيّر"
 
 #: ui/main.qml:146
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Key repeat:"
-msgstr "تكرار لوحة المفاتيح"
+msgstr "إعادة المفتاح:"
 
 #: ui/main.qml:155
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Key repeat"
-msgstr "تكرار لوحة المفاتيح"
+msgstr "إعادة المفتاح"
 
 #: ui/main.qml:166
 #, kde-format
@@ -249,7 +244,7 @@ msgstr "المهلة:"
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat delay %1"
-msgstr ""
+msgstr "مهلة تكرار المفتاح %1"
 
 #: ui/main.qml:188
 #, kde-format
@@ -273,21 +268,19 @@ msgstr "المعدّل:"
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat rate %1"
-msgstr ""
+msgstr "معدل تكرار المفتاح %1"
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid " repeats/s"
+#, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "%1 repeats/s"
-msgstr " إعادة/ثا"
+msgstr "%1 إعادة/ثا"
 
 #: ui/main.qml:231
-#, fuzzy, kde-format
-#| msgid " repeats/s"
+#, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "repeats/s"
-msgstr " إعادة/ثا"
+msgstr "إعادة/ثا"
 
 #: ui/main.qml:243
 #, kde-format
@@ -317,7 +310,7 @@ msgstr "انقل لأعلى"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout up"
-msgstr ""
+msgstr "انقل تخطيط %1 للأعلى"
 
 #: ui/main.qml:275
 #, kde-format
@@ -326,12 +319,10 @@ msgid "Move Down"
 msgstr "انقل لأسفل"
 
 #: ui/main.qml:276
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout Down"
-msgstr "انقل لأسفل"
+msgstr "انقل تخطيط %1 للأسفل"
 
 #: ui/main.qml:286
 #, kde-format
@@ -349,7 +340,7 @@ msgstr "أزِل"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Remove layout %1"
-msgstr ""
+msgstr "أزل تخطيط %1"
 
 #: ui/main.qml:307
 #, kde-format
@@ -361,15 +352,13 @@ msgstr "التّخطيطات الاحتياطيّة:"
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
-msgstr ""
+msgstr "عدد التخطيطات الرئيسة الاحتياطية"
 
 #: ui/main.qml:376
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@label:textbox completes spinbox, x main layouts"
 msgid "main layouts"
-msgstr "التّخطيطات الاحتياطيّة"
+msgstr "التّخطيطات الرئيسة"
 
 #: ui/main.qml:380
 #, kde-format
@@ -380,14 +369,15 @@ msgid ""
 "accessed through the keyboard indicator applet or by setting a custom "
 "shortcut."
 msgstr ""
+"يمكنك الحصول على ما يصل إلى 4 تخطيطات رئيسة، وجميع التخطيطات الأخرى "
+"احتياطية. لا تُضمن التخطيطات الاحتياطية عند التنقل بين التخطيطات، ولكن يمكن "
+"الوصول إليها من خلال أداة مؤشر لوحة المفاتيح أو عن طريق تعيين اختصار مخصص."
 
 #: ui/main.qml:385
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
-msgstr "عدد التّخطيط الرّئيسيّ:"
+msgstr "اختصار تغير التّخطيط:"
 
 #: ui/main.qml:409
 #, kde-format
@@ -396,12 +386,10 @@ msgid "or"
 msgstr "أو"
 
 #: ui/Switching.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure Layouts"
+#, kde-format
 msgctxt "@title"
 msgid "Configure Switching"
-msgstr "اضبط التّخطيطات"
+msgstr "اضبط التبديل"
 
 #: ui/Switching.qml:23
 #, kde-format
@@ -410,44 +398,40 @@ msgid "Behavior"
 msgstr "السّلوك"
 
 #: ui/Switching.qml:28
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Switching layout affects:"
-msgstr "عدد التّخطيط الرّئيسيّ:"
+msgstr "يؤثر تبديل التخطيط على:"
 
 #: ui/Switching.qml:35
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows"
-msgstr ""
+msgstr "كل النوافذ"
 
 #: ui/Switching.qml:39
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows on current desktop"
-msgstr ""
+msgstr "كل النوافذ في سطح المكتب الحالي"
 
 #: ui/Switching.qml:43
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows of current application"
-msgstr ""
+msgstr "كل نوافذ التطبيق الحالي"
 
 #: ui/Switching.qml:47
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Current window only"
-msgstr ""
+msgstr "النافذة الحالية فقط"
 
 #: ui/Switching.qml:74
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Show notification on layout change"
-msgstr "أظهر منبثقة عند تغيير تخطيط لوحة المفاتيح"
+msgstr "أظهر إشعار عند تغيير تخطيط"
 
 #: ui/Switching.qml:86
 #, kde-format
@@ -456,27 +440,22 @@ msgid "Shortcuts"
 msgstr "الاختصارات"
 
 #: ui/Switching.qml:91 ui/Switching.qml:153
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Change layout:"
-msgstr "التّخطيطات الاحتياطيّة"
+msgstr "غير التخطيط:"
 
 #: ui/Switching.qml:112
-#, fuzzy, kde-format
-#| msgid "Switch to Last-Used Keyboard Layout"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Switch to last used layout:"
-msgstr "بدّل إلى أخر تخطيط للوحة المفاتيح"
+msgstr "بدّل إلى أخر تخطيط مستخدم:"
 
 #: ui/Switching.qml:133
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:group"
 msgid "Legacy Shortcuts"
-msgstr "الاختصار"
+msgstr "الاختصارات القديمة"
 
 #: ui/Switching.qml:141
 #, kde-kuit-format
@@ -487,14 +466,15 @@ msgid ""
 "Wayland.<nl/><nl/>Setting these shortcuts will take you to the Key bindings "
 "page."
 msgstr ""
+"تتيح اختصارات أكس11 القديمة  التحكم بشكل أفضل في اختصارات التعديل فقط وتتمتع "
+"بدعم أفضل قليلاً على أكس11 في بعض الحالات المتطرفة. ويمكن استخدامها أيضًا على "
+"ويلاند.<nl/><nl/>سيؤدي ضبط هذه الاختصارات إلى نقلك إلى صفحة ربط المفاتيح."
 
 #: ui/Switching.qml:182
-#, fuzzy, kde-format
-#| msgctxt "@option:textbox"
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Alternative symbols:"
-msgstr "الاختصار البديل:"
+msgstr "الرموز البديلة:"
 
 #: ui/Switching.qml:208
 #, kde-format
@@ -502,7 +482,7 @@ msgctxt "@info"
 msgid ""
 "Modifier keys can be used to type additional characters, symbols, and "
 "diacritical marks."
-msgstr ""
+msgstr "يمكن استخدام مفاتيح التعديل لكتابة أحرف ورموز وعلامات إعراب إضافية."
 
 #: xkboptionsmodel.cpp:160
 #, kde-format

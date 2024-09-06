@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-09-04 16:54+0200\n"
+"PO-Revision-Date: 2024-09-05 04:16+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -604,14 +604,12 @@ msgid "Press touchpad with three fingers"
 msgstr "Pulsar el panel táctil con tres dedos"
 
 #: ui/main.qml:942
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip for radiobutton"
-#| msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr ""
-"La pulsación de cualquier parte del panel central con dos dedos actúa como "
-"un clic derecho."
+"La pulsación de cualquier parte del panel central con tres dedos actúa como "
+"un clic central."
 
 #~ msgid "@info:tooltip for radiobutton"
 #~ msgstr "@info:tooltip para botón de opción"

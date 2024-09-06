@@ -1,7 +1,7 @@
 # translation of kcminput.po to Slovenian
 # Translation of kcminput.po to Slovenian
 # KCMINPUT TRANSLATION TO SLOVENE LANGUAGE.
-# $Id: kcmmouse.po 1689550 2024-09-05 01:14:13Z scripty $
+# $Id: kcmmouse.po 1689624 2024-09-06 01:14:14Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-09-04 07:14+0200\n"
+"PO-Revision-Date: 2024-09-05 06:54+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -182,19 +182,15 @@ msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr "Hkratni klik levega in desnega gumba deluje klik srednjega gumba."
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "Activating this setting increases mouse click latency by 50ms. The extra "
-#| "delay is needed to correctly detect simultaneous left and right mouse "
-#| "clicks."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
 "Aktiviranje te nastavitve poveča zakasnitev klika miške za 50 ms. Dodatna "
-"zakasnitev je potrebna za pravilno zaznavanje istočasnih levih in desnih "
-"klikov miške."
+"zakasnitev je nujna za pravilno zaznavanje istočasnih levih in desnih klikov "
+"miške."
 
 #: ui/main.qml:154
 #, kde-format

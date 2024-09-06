@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-30 00:41+0000\n"
-"PO-Revision-Date: 2024-05-09 09:37+0400\n"
+"PO-Revision-Date: 2024-09-05 10:23+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -24,105 +24,88 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Desktop path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Desktop folder:"
-msgstr "مسار سطح المكتب:"
+msgstr "مجلّد سطح المكتب:"
 
 #: ui/main.qml:58
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder contains all the files you see on your desktop."
-msgstr ""
+msgstr "هذا المجلد يحوي كل الملفات التي تراها على سطح مكتبك"
 
 #: ui/main.qml:66
-#, fuzzy, kde-format
-#| msgid "Documents"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Documents folder:"
-msgstr "المستندات"
+msgstr "مجلد المستندات:"
 
 #: ui/main.qml:72
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save documents from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save documents."
-msgstr "سيُستخدم هذا المجلد افتراضيًا لتحميل المستندات منه أو حفظها فيه."
+msgstr "سيُستخدم هذا المجلد مبدئيًا لتحميل المستندات منه أو حفظها فيه."
 
 #: ui/main.qml:80
-#, fuzzy, kde-format
-#| msgid "Downloads"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Downloads folder:"
-msgstr "التنزيلات"
+msgstr "مجلد التنزيلات:"
 
 #: ui/main.qml:86
-#, fuzzy, kde-format
-#| msgid "This folder will be used by default to save your downloaded items."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr "سيُستخدم هذا المجلد افتراضياً لحفظ العناصر التي تنزلها من الإنترنت."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgid "Videos path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Videos folder:"
-msgstr "مسار الفيديوهات:"
+msgstr "مجلد الفيديوهات:"
 
 #: ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save movies from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save video files."
-msgstr "سيُستخدم هذا المجلد افتراضياً لتحميل الأفلام منه أو حفظها فيه."
+msgstr "سيُستخدم هذا المجلد مبدئيًا لتحميل الفيديوهات منه أو حفظها فيه."
 
 #: ui/main.qml:108
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Pictures folder:"
-msgstr "مسار الصور:"
+msgstr "مجلد الصور:"
 
 #: ui/main.qml:114
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save movies from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save image files."
-msgstr "سيُستخدم هذا المجلد افتراضياً لتحميل الأفلام منه أو حفظها فيه."
+msgstr "سيُستخدم هذا المجلد مبدئيًا لتحميل الصور منه أو حفظها فيه."
 
 #: ui/main.qml:122
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Music folder:"
-msgstr ""
+msgstr "مجلد الموسيقى:"
 
 #: ui/main.qml:128
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save music from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save music files."
-msgstr "سيُستخدم هذا المجلد افتراضياً لتحميل الموسيقى منه أو حفظها فيه."
+msgstr "سيُستخدم هذا المجلد مبدئيًا لتحميل الملفات الصوتية منه أو حفظها فيه."
 
 #: ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "Public path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Public folder:"
-msgstr "مسار العام:"
+msgstr "المجلد العام:"
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default for publicly-shared files when "
-#| "network sharing is enabled."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
@@ -132,19 +115,16 @@ msgstr ""
 "الشبكة."
 
 #: ui/main.qml:150
-#, fuzzy, kde-format
-#| msgid "Templates"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Templates folder:"
-msgstr "القوالب"
+msgstr "مجلّد القوالب:"
 
 #: ui/main.qml:156
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save templates from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save file templates."
-msgstr "سيُستخدم هذا المجلد بشكل مبدئي لتحميل القوالب منه أو حفظها فيه."
+msgstr "سيُستخدم هذا المجلد مبدئيًا لتحميل القوالب منه أو حفظها فيه."
 
 #: ui/UrlRequester.qml:74
 #, kde-format

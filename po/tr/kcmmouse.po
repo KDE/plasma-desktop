@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-09-05 01:11+0300\n"
+"PO-Revision-Date: 2024-09-05 14:57+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -185,19 +185,15 @@ msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr "Sol ve sağ düğmelere aynı anda basmak, orta tık olarak çalışır."
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "Activating this setting increases mouse click latency by 50ms. The extra "
-#| "delay is needed to correctly detect simultaneous left and right mouse "
-#| "clicks."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
 "Bu ayarı etkinleştirmek, fare tıklaması gecikmesini 50 ms kadar artırır. Bu "
-"ek gecikme, aynı anda yapılan sol ve sağ tıklamaları düzgünce algılayabilmek "
-"için gereklidir."
+"ek gecikme, aynı anda yapılan sol ve sağ düğme basımlarını düzgünce "
+"algılayabilmek için gereklidir."
 
 #: ui/main.qml:154
 #, kde-format

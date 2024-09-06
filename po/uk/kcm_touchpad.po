@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-09-04 12:01+0300\n"
+"PO-Revision-Date: 2024-09-05 12:30+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -606,12 +606,11 @@ msgid "Press touchpad with three fingers"
 msgstr "Натискання сенсорної панелі трьома пальцями"
 
 #: ui/main.qml:942
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip for radiobutton"
-#| msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
-msgstr "Натискання сенсорної панелі будь-де двома пальцями — клацання правою."
+msgstr ""
+"Натискання сенсорної панелі будь-де трьома пальцями — клацання середньою."
 
 #~ msgid "@info:tooltip for radiobutton"
 #~ msgstr "@info:tooltip for radiobutton"
