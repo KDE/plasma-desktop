@@ -112,6 +112,7 @@ KCMUtils.AbstractKCM {
                             Layout.fillWidth: true
                             icon.name: baseDelegate.icon.name
                             title: baseDelegate.text
+                            selected: baseDelegate.highlighted || baseDelegate.down
                         }
 
                         Rectangle {
