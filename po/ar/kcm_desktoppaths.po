@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-01 00:48+0000\n"
-"PO-Revision-Date: 2022-12-22 10:29+0400\n"
+"PO-Revision-Date: 2024-09-05 10:23+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -24,6 +24,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: desktoppathssettings.cpp:197
 #, kde-format
@@ -43,7 +44,7 @@ msgstr "التنزيلات"
 #: desktoppathssettings.cpp:242
 #, kde-format
 msgid "Music"
-msgstr "الموسيقى"
+msgstr "الصوتيات"
 
 #: desktoppathssettings.cpp:257
 #, kde-format
@@ -149,7 +150,7 @@ msgstr "سيُستخدم هذا المجلد افتراضياً لتحميل ا�
 #: globalpaths.ui:102
 #, kde-format
 msgid "Music path:"
-msgstr "مسار الموسيقى:"
+msgstr "مسار الصوتيات:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
 #: globalpaths.ui:109
