@@ -180,9 +180,7 @@ ContainmentLayoutManager.ConfigOverlayWithHandles {
             }
 
             ActionButton {
-                // FIXME: missing from Breeze icons! See
-                // https://bugs.kde.org/show_bug.cgi?id=472863.
-                icon.name: "showbackground"
+                icon.name: "show-background"
                 toolTip: checked ? i18n("Hide Background") : i18n("Show Background")
                 visible: (applet.plasmoid.backgroundHints & PlasmaCore.Types.ConfigurableBackground)
                 checked: applet.plasmoid.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground || applet.plasmoid.effectiveBackgroundHints & PlasmaCore.Types.TranslucentBackground
