@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-09-04 17:31+0200\n"
+"PO-Revision-Date: 2024-09-06 16:19+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -192,19 +192,15 @@ msgstr ""
 "Premer os botóns esquerdo e dereito á vez equivale a premer o botón central."
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "Activating this setting increases mouse click latency by 50ms. The extra "
-#| "delay is needed to correctly detect simultaneous left and right mouse "
-#| "clicks."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
-"Activar esta opción aumenta a latencia entre clics do rato en 50 ms. O "
-"atraso adicional é necesario para detectar correctamente clics simultáneos "
-"dos botóns esquerdo e dereito do rato."
+"Activar esta opción aumenta a latencia entre clics en 50 ms. O atraso "
+"adicional é necesario para detectar correctamente premas simultáneas dos "
+"botóns esquerdo e dereito."
 
 #: ui/main.qml:154
 #, kde-format

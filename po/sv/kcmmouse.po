@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-09-04 17:36+0200\n"
+"PO-Revision-Date: 2024-09-05 17:23+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -177,19 +177,15 @@ msgstr ""
 "Att trycka vänster- och högerknappen samtidigt fungerar som mittenklick."
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "Activating this setting increases mouse click latency by 50ms. The extra "
-#| "delay is needed to correctly detect simultaneous left and right mouse "
-#| "clicks."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
-"Om inställningen aktiveras ökar fördröjningen för musklick med 50 ms. Den "
-"extra fördröjningen behövs för att korrekt upptäcka samtidiga vänster- och "
-"högerklick."
+"Om inställningen aktiveras ökar fördröjningen för klick med 50 ms. Den extra "
+"fördröjningen behövs för att korrekt upptäcka samtidiga vänster- och "
+"högertryck."
 
 #: ui/main.qml:154
 #, kde-format

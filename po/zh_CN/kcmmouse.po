@@ -159,7 +159,7 @@ msgstr "同时按左键和右键模拟中键点击"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
-msgstr ""
+msgstr "同时点击左键和右键时进行中键点击。"
 
 #: ui/main.qml:142
 #, kde-format
@@ -168,6 +168,8 @@ msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
+"激活此设置将增加点击延迟 50 毫秒。为了左键和右键的同时点击能被正确识别，额外"
+"的延迟是必要的。"
 
 #: ui/main.qml:154
 #, kde-format
@@ -229,7 +231,7 @@ msgstr "反转滚动方向"
 #: ui/main.qml:351
 #, kde-format
 msgid "Touchscreen-like scrolling."
-msgstr ""
+msgstr "模仿触摸屏的滚动方式。"
 
 #: ui/main.qml:356
 #, kde-format

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-09-03 23:32+0300\n"
+"PO-Revision-Date: 2024-09-06 12:54+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -164,8 +164,7 @@ msgid "Swap left and right buttons."
 msgstr "Apkeisti kairįjį ir dešinįjį mygtuką vietomis."
 
 #: ui/main.qml:126
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr ""
@@ -173,29 +172,23 @@ msgstr ""
 "mygtukus kartu"
 
 #: ui/main.qml:138
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
-"Spustelėjus vienu metu kairįjį ir dešinįjį mygtuką, bus siunčiamas "
-"viduriniojo mygtuko spustelėjimas."
+"Kairiojo ir dešiniojo mygtukų paspaudimas vienu metu veikia kaip viduriniojo "
+"mygtuko spustelėjimas."
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "Activating this setting increases mouse click latency by 50ms. The extra "
-#| "delay is needed to correctly detect simultaneous left and right mouse "
-#| "clicks."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
-"Aktyvavus šią nuostatą pelės delsa padidėja 50 milisekundžių. Ši papildoma "
-"delsa yra reikalinga, kad būtų teisingai aptinkami vienalaikiai kairiojo ir "
-"dešiniojo pelės mygtuko spustelėjimai."
+"Aktyvavus šią nuostatą spustelėjimo delsa padidėja 50 milisekundžių. Ši "
+"papildoma delsa yra reikalinga, kad būtų teisingai aptinkami vienalaikiai "
+"kairiojo ir dešiniojo mygtuko spustelėjimai."
 
 #: ui/main.qml:154
 #, kde-format
@@ -255,8 +248,7 @@ msgid "Invert scroll direction"
 msgstr "Atvirkštinė slinkimo kryptis"
 
 #: ui/main.qml:351
-#, fuzzy, kde-format
-#| msgid "Touchscreen like scrolling."
+#, kde-format
 msgid "Touchscreen-like scrolling."
 msgstr "Jutiklinio ekrano tipo slinkimas."
 

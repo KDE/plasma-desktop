@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-09-05 10:15+0400\n"
+"PO-Revision-Date: 2024-09-06 21:23+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -179,19 +179,15 @@ msgstr ""
 "الضغط فوق الزر الأيمن والأيسر في نفس الوقت يعمل على إرسال نقرة الزر الأوسط."
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "Activating this setting increases mouse click latency by 50ms. The extra "
-#| "delay is needed to correctly detect simultaneous left and right mouse "
-#| "clicks."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
-"يؤدي تنشيط هذا الإعداد إلى زيادة زمن انتقال النقر بالفأرة بمقدار 50 مللي "
-"ثانية. هناك حاجة إلى تأخير لاكتشاف نقرات الفأرة اليمنى واليسرى المتزامنة "
-"بشكل صحيح."
+"يؤدي تنشيط هذا الإعداد إلى زيادة زمن انتظار النقر بمقدار 50 مللي ثانية. يلزم "
+"هذا التأخير الإضافي للكشف بشكل صحيح عن الضغطات المتزامنة على الزر الأيسر "
+"والأيمن."
 
 #: ui/main.qml:154
 #, kde-format
