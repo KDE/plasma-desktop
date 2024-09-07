@@ -3,19 +3,20 @@
 # Tahereh Dadkhahfar <dadkhahfar@itland.ir>, 2006.
 # MaryamSadat Razavi <razavi@itland.ir>, 2006.
 # Nasim Daniarzadeh <daniarzadeh@itland.ir>, 2006.
+# SPDX-FileCopyrightText: 2024 Mohi Mirdamadi <mohi.pub@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-24 00:40+0000\n"
-"PO-Revision-Date: 2007-09-02 12:12+0330\n"
-"Last-Translator: Nazanin Kazemi <kazemi@itland.ir>\n"
-"Language-Team: Persian <kde-i18n-fa@kde.org>\n"
+"PO-Revision-Date: 2024-09-06 22:32+0330\n"
+"Last-Translator: Mohi Mirdamadi <mohi.pub@gmail.com>\n"
+"Language-Team: fa\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: kcmaccess.cpp:116
@@ -128,14 +129,14 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Use &system bell"
 msgid "Use System Bell"
-msgstr "استفاده از زنگ &سیستم‌"
+msgstr "استفاده از زنگ &سامانه‌"
 
 #. i18n: ectx: label, entry (CustomBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:13
 #, fuzzy, kde-format
 #| msgid "Use &system bell"
 msgid "Customize system bell"
-msgstr "استفاده از زنگ &سیستم‌"
+msgstr "استفاده از زنگ &سامانه‌"
 
 #. i18n: ectx: label, entry (CustomBellFile), group (Bell)
 #: kcmaccessibilitybell.kcfg:17
@@ -160,7 +161,7 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Use &system bell"
 msgid "Color of the Visible Bell"
-msgstr "استفاده از زنگ &سیستم‌"
+msgstr "استفاده از زنگ &سامانه‌"
 
 #. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
 #: kcmaccessibilitybell.kcfg:32
@@ -358,7 +359,7 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Use &system bell"
 msgid "Ring the System Bell"
-msgstr "استفاده از زنگ &سیستم‌"
+msgstr "استفاده از زنگ &سامانه‌"
 
 #: ui/ActivationGestures.qml:93
 #, fuzzy, kde-format
@@ -477,28 +478,28 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Use &system bell"
 msgid "Ring system bell:"
-msgstr "استفاده از زنگ &سیستم‌"
+msgstr "استفاده از زنگ &سامانه‌"
 
 #: ui/KeyboardFilters.qml:58
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is pressed"
 msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
-msgstr "هنگامی که کلیدی فشار داده می‌شود، از زنگ سیستم &استفاده شود‌"
+msgstr "هنگامی که کلیدی فشار داده می‌شود، از زنگ سامانه &استفاده شود‌"
 
 #: ui/KeyboardFilters.qml:72
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is accepted"
 msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
-msgstr "هنگامی که کلیدی پذیرفته می‌شود، از زنگ سیستم &استفاده شود‌"
+msgstr "هنگامی که کلیدی پذیرفته می‌شود، از زنگ سامانه &استفاده شود‌"
 
 #: ui/KeyboardFilters.qml:86
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is rejected"
 msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
-msgstr "هنگامی که کلیدی رد می‌شود، از زنگ سیستم &استفاده شود‌"
+msgstr "هنگامی که کلیدی رد می‌شود، از زنگ سامانه &استفاده شود‌"
 
 #: ui/KeyboardFilters.qml:103
 #, fuzzy, kde-format
@@ -527,7 +528,7 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is rejected"
 msgid "Ring system bell when rejected"
-msgstr "هنگامی که کلیدی رد می‌شود، از زنگ سیستم &استفاده شود‌"
+msgstr "هنگامی که کلیدی رد می‌شود، از زنگ سامانه &استفاده شود‌"
 
 #: ui/main.qml:27
 #, fuzzy, kde-format
@@ -601,7 +602,7 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is pressed"
 msgid "Ring system bell when modifier keys are used"
-msgstr "هنگامی که کلیدی فشار داده می‌شود، از زنگ سیستم &استفاده شود‌"
+msgstr "هنگامی که کلیدی فشار داده می‌شود، از زنگ سامانه &استفاده شود‌"
 
 #: ui/ModifierKeys.qml:74
 #, kde-format
@@ -612,7 +613,7 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is accepted"
 msgid "Ring system bell when locking keys are toggled"
-msgstr "هنگامی که کلیدی پذیرفته می‌شود، از زنگ سیستم &استفاده شود‌"
+msgstr "هنگامی که کلیدی پذیرفته می‌شود، از زنگ سامانه &استفاده شود‌"
 
 #: ui/ModifierKeys.qml:87
 #, fuzzy, kde-format
@@ -622,7 +623,7 @@ msgstr "هنگامی که کلیدی پذیرفته می‌شود، از زنگ 
 msgid "Show notification when modifier or locking keys are used"
 msgstr ""
 "هرگاه تغییردهنده یا کلید قفل تغییر، وضعیت خود را تغییر داد، از سازوکار اخطار "
-"سیستم KDE استفاده شود"
+"سامانه KDE استفاده شود"
 
 #: ui/MouseNavigation.qml:17
 #, kde-format

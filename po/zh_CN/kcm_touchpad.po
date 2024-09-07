@@ -120,13 +120,13 @@ msgstr "将左键和右键对调。"
 #: kcm/libinput/touchpad.qml:223
 #, kde-format
 msgid "Press left and right buttons for middle click"
-msgstr "同时按下左键和右键可触发中键点击"
+msgstr "同时按下左键和右键时点击中键"
 
 #: kcm/libinput/touchpad.qml:227 kcm/libinput/touchpad.qml:875
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
-msgstr "同时点击左键和右键来触发中键点击。"
+msgstr "同时点击左键和右键时点击中键。"
 
 #: kcm/libinput/touchpad.qml:253
 #, kde-format
@@ -134,8 +134,8 @@ msgid ""
 "Activating this setting increases mouse click latency by 50ms. The extra "
 "delay is needed to correctly detect simultaneous left and right mouse clicks."
 msgstr ""
-"激活此设置将增加鼠标点击延迟 50 毫秒。正确检测鼠标左键和右键的同时点击需要额"
-"外的延迟。"
+"激活此设置将增加点击延迟 50 毫秒。为了能够正确识别左键和右键的同时点击，额外"
+"的延迟是必要的。"
 
 #: kcm/libinput/touchpad.qml:263
 #, kde-format
@@ -180,7 +180,7 @@ msgstr "轻触点击"
 #: kcm/libinput/touchpad.qml:429
 #, kde-format
 msgid "Single tap is left button click."
-msgstr "单指轻触时触发左键点击。"
+msgstr "单指轻触时点击左键。"
 
 #: kcm/libinput/touchpad.qml:458
 #, kde-format
@@ -190,7 +190,7 @@ msgstr "轻触拖拽"
 #: kcm/libinput/touchpad.qml:462
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
-msgstr "单指轻触后在触摸板上滑动之间触发拖拽。"
+msgstr "单指轻触后在触摸板上滑动时进行拖拽。"
 
 #: kcm/libinput/touchpad.qml:489
 #, kde-format
@@ -210,24 +210,24 @@ msgstr "双指轻触："
 #: kcm/libinput/touchpad.qml:524
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
-msgstr "右键点击 (三指轻触为中键点击)"
+msgstr "右键点击 (三指轻触时点击中键)"
 
 #: kcm/libinput/touchpad.qml:525
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
-msgstr "双指轻触触发右键点击，三指轻触触发中键点击。"
+msgstr "双指轻触时点击右键，三指轻触时点击中键。"
 
 #: kcm/libinput/touchpad.qml:527
 #, kde-format
 msgid "Middle-click (three-finger tap right-click)"
-msgstr "中键点击 (三指轻触为右键点击)"
+msgstr "中键点击 (三指轻触时点击右键)"
 
 #: kcm/libinput/touchpad.qml:528
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
-msgstr "双指轻触触发中键点击，三指轻触触发右键点击。"
+msgstr "双指轻触时点击中键，三指轻触时点击右键。"
 
 #: kcm/libinput/touchpad.qml:530
 #, kde-format
@@ -237,7 +237,7 @@ msgstr "右键点击"
 #: kcm/libinput/touchpad.qml:531
 #, kde-format
 msgid "Tap with two fingers to right-click."
-msgstr "双指轻触为右键点击。"
+msgstr "双指轻触时点击右键。"
 
 #: kcm/libinput/touchpad.qml:533
 #, kde-format
@@ -247,7 +247,7 @@ msgstr "中键点击"
 #: kcm/libinput/touchpad.qml:534
 #, kde-format
 msgid "Tap with two fingers to middle-click."
-msgstr "双指轻触为中键点击。"
+msgstr "双指轻触时点击中键。"
 
 #: kcm/libinput/touchpad.qml:593
 #, kde-format
@@ -330,7 +330,7 @@ msgstr "双指按下触摸板的任意位置"
 #: kcm/libinput/touchpad.qml:816
 #, kde-format
 msgid "Tap with two finger to enable right click."
-msgstr "双指轻触为右键点击。"
+msgstr "双指轻触时启用右键。"
 
 #: kcm/libinput/touchpad.qml:830
 #, kde-format
@@ -340,7 +340,7 @@ msgstr "中键点击："
 #: kcm/libinput/touchpad.qml:859
 #, kde-format
 msgid "Press bottom-middle"
-msgstr "按下触摸板的底边中间"
+msgstr "按下触摸板底部的中间位置"
 
 #: kcm/libinput/touchpad.qml:863
 #, kde-format
