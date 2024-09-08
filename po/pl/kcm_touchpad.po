@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-08-31 05:48+0200\n"
+"PO-Revision-Date: 2024-09-07 11:13+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -279,36 +279,29 @@ msgid "Swap left and right buttons."
 msgstr "Zamienia przycisk lewy z prawym."
 
 #: ui/main.qml:234
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons to middle-click"
-msgstr "Gdy nacisnę lewy i prawy, to naciśnij dla mnie środkowy"
+msgstr "Naciśnij lewy i prawy przycisk, aby kliknąć środkowym"
 
 #: ui/main.qml:238
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
+#, kde-format
 msgctxt "@info:tooltip for checkbox"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
-"Naciśnięcie jednocześnie lewym i prawym przyciskiem wywołuje naciśnięcie "
-"środkowym przyciskiem."
+"Naciśnięcie jednocześnie lewym i prawym przyciskiem wywołuje kliknięcie "
+"środkowym."
 
 #: ui/main.qml:264
-#, fuzzy, kde-format
-#| msgid ""
-#| "Activating this setting increases mouse click latency by 50ms. The extra "
-#| "delay is needed to correctly detect simultaneous left and right mouse "
-#| "clicks."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
-"Włączenie tego ustawienia zwiększa opóźnienie naciśnięcia myszą o 50 ms. "
-"Dodatkowe opóźnienie jest potrzebne do wykrywania jednoczesnego naciśnięcia "
-"lewego i prawego przycisku myszy."
+"Włączenie tego ustawienia zwiększa opóźnienie klikania o 50 ms. Dodatkowe "
+"opóźnienie jest potrzebne do wykrywania jednoczesnego naciśnięcia lewego i "
+"prawego przycisku myszy."
 
 #: ui/main.qml:274
 #, kde-format
@@ -398,28 +391,24 @@ msgid "Disable horizontal scrolling"
 msgstr "Wyłącz przewijanie w poziomie"
 
 #: ui/main.qml:596
-#, fuzzy, kde-format
-#| msgid "Disable horizontal scrolling"
+#, kde-format
 msgid "Disable horizontal scrolling."
-msgstr "Wyłącz przewijanie w poziomie"
+msgstr "Wyłącz przewijanie w poziomie."
 
 #: ui/main.qml:609
-#, fuzzy, kde-format
-#| msgid "Tapping:"
+#, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Stukanie:"
 
 #: ui/main.qml:610
-#, fuzzy, kde-format
-#| msgid "Tap-to-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Tap-to-click"
 msgstr "Stuknij-aby-kliknąć"
 
 #: ui/main.qml:614
-#, fuzzy, kde-format
-#| msgid "Single tap is left button click."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Single tap to left-click."
 msgstr "Pojedyncze stuknięcie to kliknięcie lewym przyciskiem."
@@ -495,20 +484,18 @@ msgid "Tap with two fingers to middle-click."
 msgstr "Stuknij dwoma palcami, aby kliknąć środkowym."
 
 #: ui/main.qml:777
-#, fuzzy, kde-format
-#| msgid "Right-click:"
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, configure right-click with touch-pad "
 "integrated button (pressing into the touchpad)"
 msgid "Integrated right-click:"
-msgstr "Kliknięcie prawym:"
+msgstr "Zintegrowane kliknięcie prawym:"
 
 #: ui/main.qml:811
-#, fuzzy, kde-format
-#| msgid "Press bottom-right corner"
+#, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
-msgstr "Po naciśnięciu dolnego, prawego narożnika"
+msgstr "Naciśnij na dolny prawy narożnik"
 
 #: ui/main.qml:816
 #, kde-format
@@ -518,6 +505,9 @@ msgid ""
 "Middle-click by simultaneously pressing the bottom left and bottom right "
 "corners."
 msgstr ""
+"Naciśnięcie dolnego prawego narożnika gładzika działa jak kliknięcie prawym. "
+"Kliknięcie środkowym to z kolei jednoczesne naciśnięcie dolnego lewego i "
+"prawego narożnika."
 
 #: ui/main.qml:817
 #, kde-format
@@ -526,91 +516,91 @@ msgid ""
 "Pressing the bottom right corner of your touchpad acts as right-click. "
 "Middle-click by pressing the bottom central area."
 msgstr ""
+"Naciśnięcie dolnego prawego narożnika gładzika działa jak kliknięcie prawym. "
+"Kliknięcie środkowym to z kolei naciśnięcie dolnego obszaru na jego środku."
 
 #: ui/main.qml:828
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
-msgstr ""
+msgstr "Kliknięcie środkowym po naciśnięciu obu dolnych narożników."
 
 #: ui/main.qml:829
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
-msgstr ""
+msgstr "Kliknięcie środkowym po naciśnięciu na dole na środku."
 
 #: ui/main.qml:847
-#, fuzzy, kde-format
-#| msgid "Press anywhere with two fingers"
+#, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press touchpad with two fingers"
-msgstr "Po naciśnięciu w dowolnym miejscu dwoma palcami"
+msgstr "Naciśnij gładzik dwoma palcami"
 
 #: ui/main.qml:851
-#, fuzzy, kde-format
-#| msgid "Tap with two fingers to right-click."
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
-msgstr "Stuknij dwoma palcami, aby kliknąć prawym."
+msgstr ""
+"Naciśnięcie gładzika w dowolnym miejscu dwoma palcami działa jak kliknięcie "
+"prawym."
 
 #: ui/main.qml:863
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers."
+#, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
-msgstr "Naciśnij w dowolnym miejscu trzema palcami."
+msgstr "Kliknięcie środkowym po naciśnięciu trzema palcami."
 
 #: ui/main.qml:882
-#, fuzzy, kde-format
-#| msgid "Middle-click: "
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, configure middle-click with touch-pad "
 "integrated button (pressing into the touchpad)"
 msgid "Integrated middle-click:"
-msgstr "Kliknięcie środkowym: "
+msgstr "Zintegrowane kliknięcie środkowym:"
 
 #: ui/main.qml:911
-#, fuzzy, kde-format
-#| msgid "Press bottom-middle"
+#, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom middle edge"
-msgstr "Naciśnij na dole na środku"
+msgstr "Naciśnij dolną krawędź na środku"
 
 #: ui/main.qml:915
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the bottom right corner of your touchpad acts as right-click."
 msgstr ""
+"Naciśnięcie dolnego prawego narożnika gładzika działa jak kliknięcie prawym."
 
 #: ui/main.qml:923
-#, fuzzy, kde-format
-#| msgid "Press bottom left and bottom right corners simultaneously"
+#, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom left and bottom right corners"
-msgstr "Naciśnij na dolny lewy i prawy narożnik jednocześnie"
+msgstr "Naciśnij na dolny lewy i prawy narożnik"
 
 #: ui/main.qml:927
-#, fuzzy, kde-format
-#| msgid "Press bottom left and bottom right corners simultaneously"
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid ""
 "Pressing the bottom left and bottom right corners simultaneously acts as "
 "middle-click."
-msgstr "Naciśnij na dolny lewy i prawy narożnik jednocześnie"
+msgstr ""
+"Naciśnięcie jednocześnie w lewym i prawym narożniku działa jak kliknięcie "
+"środkowym."
 
 #: ui/main.qml:936
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers"
+#, kde-format
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
-msgstr "Naciśnij w dowolnym miejscu trzema palcami"
+msgstr "Naciśnij gładzik trzema palcami"
 
 #: ui/main.qml:942
-#, fuzzy, kde-format
-#| msgid "Tap with two fingers to right-click."
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
-msgstr "Stuknij dwoma palcami, aby kliknąć prawym."
+msgstr ""
+"Naciśnięcie gładzika w dowolnym miejscu trzema palcami działa jak kliknięcie "
+"środkowym."
 
 #~ msgid ""
 #~ "Software enabled buttons will be added to bottom portion of your touchpad."

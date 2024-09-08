@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-08-03 12:55+0100\n"
+"PO-Revision-Date: 2024-09-07 11:51+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
 "Language: en_GB\n"
@@ -149,10 +149,9 @@ msgid "Accept input through this device."
 msgstr "Accept input through this device."
 
 #: ui/main.qml:107
-#, fuzzy, kde-format
-#| msgid "Left handed mode"
+#, kde-format
 msgid "Left-handed mode"
-msgstr "Left handed mode"
+msgstr "Left-handed mode"
 
 #: ui/main.qml:119
 #, kde-format
@@ -160,34 +159,27 @@ msgid "Swap left and right buttons."
 msgstr "Swap left and right buttons."
 
 #: ui/main.qml:126
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "Press left and right buttons for middle-click"
 
 #: ui/main.qml:138
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
-"Clicking left and right button simultaneously sends middle button click."
+"Pressing the left and right button simultaneously acts as middle-click."
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "Activating this setting increases mouse click latency by 50ms. The extra "
-#| "delay is needed to correctly detect simultaneous left and right mouse "
-#| "clicks."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
-"Activating this setting increases mouse click latency by 50ms. The extra "
-"delay is needed to correctly detect simultaneous left and right mouse clicks."
+"Activating this setting increases click latency by 50ms. The extra delay is "
+"needed to correctly detect simultaneous left and right button presses."
 
 #: ui/main.qml:154
 #, kde-format
@@ -247,10 +239,9 @@ msgid "Invert scroll direction"
 msgstr "Invert scroll direction"
 
 #: ui/main.qml:351
-#, fuzzy, kde-format
-#| msgid "Touchscreen like scrolling."
+#, kde-format
 msgid "Touchscreen-like scrolling."
-msgstr "Touchscreen like scrolling."
+msgstr "Touchscreen-like scrolling."
 
 #: ui/main.qml:356
 #, kde-format

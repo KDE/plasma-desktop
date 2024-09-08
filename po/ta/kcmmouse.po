@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-09-01 17:38+0200\n"
+"PO-Revision-Date: 2024-09-07 20:31+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -14,14 +14,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
-"உள்ளீட்டு சாதனங்களை கண்டறிதல் தோல்வியடைந்த‍து. இந்த அமைப்புக்கூறை மூடி மறுபடியும் "
-"திறவுங்கள்."
+"உள்ளீட்டு சாதனங்களை கண்டறிவது தோல்வியடைந்த‍து. இந்த அமைப்புக்கூறை மூடி மறுபடியும் "
+"திறக்கவும்."
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:81
 #, kde-format
@@ -158,34 +158,27 @@ msgid "Swap left and right buttons."
 msgstr "இடது மற்றும் வலது பட்டன்களை இடமாற்று."
 
 #: ui/main.qml:126
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
-msgstr "நடு க்ளிக்குக்கு இடது மற்றும் வலது பட்டன்களை சேர்த்து அழுத்து"
+msgstr "இடது மற்றும் வலது பட்டன்களை சேர்த்து அழுத்துவது நடு கிளிக்"
 
 #: ui/main.qml:138
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
-msgstr "இடது மற்றும் வலது பட்டன்களை சேர்த்து அழுத்துதல், நடு க்ளிக்காக கருதப்படும்."
+msgstr "இடது மற்றும் வலது பட்டன்களை சேர்த்து அழுத்துவது, நடு கிளிக்காக கருதப்படும்."
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "Activating this setting increases mouse click latency by 50ms. The extra "
-#| "delay is needed to correctly detect simultaneous left and right mouse "
-#| "clicks."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
 "இந்த அமைப்பை இயக்குவது, கிளிக்குகளுக்கு கணினி பதிலளிக்கும் தாமத‍த்தை 50மி.நொ. "
-"அதிகரிக்கும். ஒரே நேரத்தில் நிகழும் இடது மற்றும் வலது கிளிக்குகளை சரியாக அடையாளங்கான "
-"இந்த கூடுதல் தாமதம் தேவை."
+"அதிகரிக்கும். ஒரே நேரத்தில் நிகழும் இடது மற்றும் வலது கிளிக்குகளை சரியாக "
+"அடையாளங்காணஇந்த கூடுதல் தாமதம் தேவை."
 
 #: ui/main.qml:154
 #, kde-format
@@ -245,8 +238,7 @@ msgid "Invert scroll direction"
 msgstr "உருளல் திசையைப் புரட்டு"
 
 #: ui/main.qml:351
-#, fuzzy, kde-format
-#| msgid "Touchscreen like scrolling."
+#, kde-format
 msgid "Touchscreen-like scrolling."
 msgstr "தொடுதிரையைப் போன்ற உருளல்."
 

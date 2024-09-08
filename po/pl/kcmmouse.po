@@ -1,4 +1,4 @@
-# Version: $Revision: 1689550 $
+# Version: $Revision: 1689794 $
 # translation of kcminput.po to
 # SPDX-FileCopyrightText: 2011, 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Piotr Roszatycki <dexter@debian.org>, 1998-2000.
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-08-31 05:48+0200\n"
+"PO-Revision-Date: 2024-09-07 11:13+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -165,36 +165,29 @@ msgid "Swap left and right buttons."
 msgstr "Zamień lewy z prawym przyciskiem."
 
 #: ui/main.qml:126
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "Jednoczesne naciśnięcie lewym i prawym naciska środkowy"
 
 #: ui/main.qml:138
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
-"Kliknięcie lewym i prawym przyciskiem jednocześnie emuluje kliknięcie "
-"środkowym przyciskiem."
+"Naciśnięcie jednocześnie lewym i prawym przyciskiem wywołuje kliknięcie "
+"środkowym."
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "Activating this setting increases mouse click latency by 50ms. The extra "
-#| "delay is needed to correctly detect simultaneous left and right mouse "
-#| "clicks."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
-"Włączenie tego ustawienia zwiększa opóźnienie naciśnięcia myszą o 50 ms. "
-"Dodatkowe opóźnienie jest potrzebne do wykrywania jednoczesnego naciśnięcia "
-"lewego i prawego przycisku myszy."
+"Włączenie tego ustawienia zwiększa opóźnienie klikania o 50 ms. Dodatkowe "
+"opóźnienie jest potrzebne do wykrywania jednoczesnego naciśnięcia lewego i "
+"prawego przycisku myszy."
 
 #: ui/main.qml:154
 #, kde-format
@@ -255,8 +248,7 @@ msgid "Invert scroll direction"
 msgstr "Odwróć kierunek przewijania"
 
 #: ui/main.qml:351
-#, fuzzy, kde-format
-#| msgid "Touchscreen like scrolling."
+#, kde-format
 msgid "Touchscreen-like scrolling."
 msgstr "Przewijanie jak na ekranie dotykowym."
 
