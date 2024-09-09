@@ -2,20 +2,21 @@
 # Frederik Schwarzer <schwarzer@kde.org>, 2014, 2016, 2020, 2022, 2023.
 # Burkhard Lück <lueck@hube-lueck.de>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
+# SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-08-20 20:45+0200\n"
-"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
+"PO-Revision-Date: 2024-09-08 17:06+0200\n"
+"Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -330,10 +331,9 @@ msgid "Add spacer widget to the panel"
 msgstr "Abstandhalter-Miniprogramm zur Kontrollleiste hinzufügen"
 
 #: contents/configuration/PanelConfiguration.qml:114
-#, fuzzy, kde-format
-#| msgid "Add Widgets…"
+#, kde-format
 msgid "Add or Manage Widgets…"
-msgstr "Miniprogramme hinzufügen ..."
+msgstr "Miniprogramme hinzufügen oder verwalten …"
 
 #: contents/configuration/PanelConfiguration.qml:117
 #, kde-format
@@ -511,15 +511,13 @@ msgstr ""
 "Diese Kontrollleiste entfernen; diese Aktion kann rückgängig gemacht werden"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Schließen"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, fuzzy, kde-format
-#| msgid "Exit Edit Mode"
+#, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
@@ -532,46 +530,38 @@ msgstr ""
 "Kontrollleisteneinstellungsfenster schließen und Bearbeitungsmodus verlassen"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:32
-#, fuzzy, kde-format
-#| msgid "Drag to change maximum height."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum height."
 msgstr "Ziehen, um die maximale Höhe zu ändern."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:33
-#, fuzzy, kde-format
-#| msgid "Drag to change maximum width."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum width."
 msgstr "Ziehen, um die maximale Breite zu ändern."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:34
 #: contents/configuration/panelconfiguration/Ruler.qml:39
-#, fuzzy, kde-format
-#| msgid "Double click to reset."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Double-click to reset."
 msgstr "Doppelklick zum Zurücksetzen."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:37
-#, fuzzy, kde-format
-#| msgid "Drag to change minimum height."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum height."
 msgstr "Ziehen, um die minimale Höhe zu ändern."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:38
-#, fuzzy, kde-format
-#| msgid "Drag to change minimum width."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr "Ziehen, um die minimale Breite zu ändern."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:87
-#, fuzzy, kde-format
-#| msgid ""
-#| "Drag to change position on this screen edge.\n"
-#| "Double click to reset."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid ""
 "Drag to change position on this screen edge.\n"
@@ -637,7 +627,7 @@ msgstr "Nicht unterstütztes Miniprogramm"
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
-msgstr ""
+msgstr "Neu"
 
 #: contents/explorer/AppletDelegate.qml:188
 #, kde-format

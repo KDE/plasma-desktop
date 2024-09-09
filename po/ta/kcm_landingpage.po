@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Kishore G <kishore96@gmail.com>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2024 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:42+0000\n"
-"PO-Revision-Date: 2022-04-02 21:33+0530\n"
+"PO-Revision-Date: 2024-09-08 12:59+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.03.80\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: landingpage_kdeglobalssettings.kcfg:9
@@ -55,11 +55,10 @@ msgid "Theme:"
 msgstr "தோற்றத்திட்டம்:"
 
 #: ui/main.qml:76
-#, fuzzy, kde-format
-#| msgid "More Appearance Settings…"
+#, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More appearance settings:"
-msgstr "கூடுதல் தோற்ற அமைப்புகள்…"
+msgstr "மேம்பட்ட தோற்ற அமைப்புகள்:"
 
 #: ui/main.qml:120
 #, kde-format
@@ -108,11 +107,10 @@ msgid "Select by clicking on item's selection marker"
 msgstr "ஒன்றன் தேர்வுக் குறிப்பை க்ளிக் செய்தால் அதைத் தேர்ந்தெடு"
 
 #: ui/main.qml:216
-#, fuzzy, kde-format
-#| msgid "More Behavior Settings…"
+#, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More behavior settings:"
-msgstr "நடத்தை சம்பந்தப்பட்ட கூடுதல் அமைப்புகள்…"
+msgstr "மேம்பட்ட நடத்தை அமைப்புகள்:"
 
 #: ui/main.qml:229
 #, kde-format
