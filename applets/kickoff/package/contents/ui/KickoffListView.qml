@@ -303,6 +303,7 @@ EmptyPage {
                     case Qt.Key_Enter:
                         root.currentItem.action.triggered();
                         root.currentItem.forceActiveFocus(Qt.ShortcutFocusReason);
+                        event.accepted = true;
                         break;
                 }
             }
