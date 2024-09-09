@@ -240,7 +240,7 @@ EmptyPage {
             let targetIndex = currentIndex
             const atFirst = currentIndex === 0
             const atLast = currentIndex === count - 1
-            if (count > 1) {
+            if (count >= 1) {
                 switch (event.key) {
                     case Qt.Key_Up: if (!atFirst) {
                         decrementCurrentIndex()
