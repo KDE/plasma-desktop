@@ -159,9 +159,9 @@ KAccessConfig::KAccessConfig(QObject *parent, const KPluginMetaData &metaData)
 
     connect(m_data->bellSettings(), &BellSettings::configChanged, this, &KAccessConfig::bellIsDefaultsChanged);
     connect(m_data->mouseSettings(), &MouseSettings::configChanged, this, &KAccessConfig::mouseIsDefaultsChanged);
-    connect(m_data->activationGesturesSettings(), &MouseSettings::configChanged, this, &KAccessConfig::activationGesturesIsDefaultsChanged);
-    connect(m_data->keyboardFiltersSettings(), &ScreenReaderSettings::configChanged, this, &KAccessConfig::keyboardFiltersIsDefaultsChanged);
-    connect(m_data->keyboardSettings(), &ScreenReaderSettings::configChanged, this, &KAccessConfig::keyboardModifiersIsDefaultsChanged);
+    connect(m_data->activationGesturesSettings(), &ActivationGesturesSettings::configChanged, this, &KAccessConfig::activationGesturesIsDefaultsChanged);
+    connect(m_data->keyboardFiltersSettings(), &KeyboardFiltersSettings::configChanged, this, &KAccessConfig::keyboardFiltersIsDefaultsChanged);
+    connect(m_data->keyboardSettings(), &KeyboardSettings::configChanged, this, &KAccessConfig::keyboardModifiersIsDefaultsChanged);
     connect(m_data->screenReaderSettings(), &ScreenReaderSettings::configChanged, this, &KAccessConfig::screenReaderIsDefaultsChanged);
     connect(m_data->shakeCursorSettings(), &ShakeCursorSettings::configChanged, this, &KAccessConfig::shakeCursorIsDefaultsChanged);
     connect(m_data->colorblindnessCorrectionSettings(),
