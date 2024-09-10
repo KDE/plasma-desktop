@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-31 00:40+0000\n"
-"PO-Revision-Date: 2024-08-15 05:45+0900\n"
+"PO-Revision-Date: 2024-09-10 02:22+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "dot tw>\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 24.08.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: package/contents/config/config.qml:13
@@ -156,36 +156,31 @@ msgid "Switch to %1"
 msgstr "切換到 %1"
 
 #: package/contents/ui/main.qml:592
-#, fuzzy, kde-format
-#| msgid "Show Activity Manager…"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Show Activity Manager"
-msgstr "顯示活動管理員..."
+msgstr "顯示活動管理員.."
 
 #: package/contents/ui/main.qml:598
-#, fuzzy, kde-format
-#| msgid "Add Virtual Desktop"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Add Virtual Desktop"
 msgstr "新增虛擬桌面"
 
 #: package/contents/ui/main.qml:604
-#, fuzzy, kde-format
-#| msgid "Remove Virtual Desktop"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Remove Virtual Desktop"
 msgstr "移除虛擬桌面"
 
 #: package/contents/ui/main.qml:611
-#, fuzzy, kde-format
-#| msgid "Configure Virtual Desktops…"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "&Configure Activities…"
-msgstr "設定虛擬桌面…"
+msgstr "設定活動(&C)…"
 
 #: package/contents/ui/main.qml:616
-#, fuzzy, kde-format
-#| msgid "Configure Virtual Desktops…"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Configure Virtual Desktops…"
 msgstr "設定虛擬桌面…"

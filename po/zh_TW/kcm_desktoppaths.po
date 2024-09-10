@@ -16,134 +16,113 @@ msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-30 00:41+0000\n"
-"PO-Revision-Date: 2024-05-07 16:22+0900\n"
+"PO-Revision-Date: 2024-09-10 02:19+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 24.08.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Desktop path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Desktop folder:"
-msgstr "桌面路徑："
+msgstr "桌面資料夾："
 
 #: ui/main.qml:58
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder contains all the files you see on your desktop."
-msgstr ""
+msgstr "這個資料夾包含您在桌面上看到的所有檔案。"
 
 #: ui/main.qml:66
-#, fuzzy, kde-format
-#| msgid "Documents"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Documents folder:"
-msgstr "文件"
+msgstr "文件資料夾："
 
 #: ui/main.qml:72
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save documents from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save documents."
-msgstr "此目錄是預設用來讀取或儲存文件的。"
+msgstr "開啟或儲存文件時的預設資料夾。"
 
 #: ui/main.qml:80
-#, fuzzy, kde-format
-#| msgid "Downloads"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Downloads folder:"
-msgstr "下載"
+msgstr "下載資料夾："
 
 #: ui/main.qml:86
-#, fuzzy, kde-format
-#| msgid "This folder will be used by default to save your downloaded items."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
-msgstr "此目錄是預設用來儲存下載檔案的。"
+msgstr "儲存下載項目時的預設資料夾。"
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgid "Videos path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Videos folder:"
-msgstr "影片路徑："
+msgstr "影片資料夾："
 
 #: ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save movies from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save video files."
-msgstr "此目錄是預設用來儲存或載入影片的。"
+msgstr "開啟或儲存影片檔案時的預設資料夾。"
 
 #: ui/main.qml:108
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Pictures folder:"
-msgstr "圖片路徑："
+msgstr "圖片資料夾："
 
 #: ui/main.qml:114
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save movies from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save image files."
-msgstr "此目錄是預設用來儲存或載入影片的。"
+msgstr "開啟或儲存影像檔案時的預設資料夾。"
 
 #: ui/main.qml:122
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Music folder:"
-msgstr ""
+msgstr "音樂資料夾"
 
 #: ui/main.qml:128
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save music from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save music files."
-msgstr "此目錄是預設用來儲存或載入音樂的。"
+msgstr "開啟或儲存音樂檔案時的預設資料夾。"
 
 #: ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "Public path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Public folder:"
-msgstr "公開路徑："
+msgstr "公開資料夾："
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default for publicly-shared files when "
-#| "network sharing is enabled."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
-msgstr "此目錄是在啟用網路分享時預設供公開分享的檔案使用的。"
+msgstr "已啟用網路分享時公開分享檔案所使用的預設資料夾。"
 
 #: ui/main.qml:150
-#, fuzzy, kde-format
-#| msgid "Templates"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Templates folder:"
-msgstr "樣本"
+msgstr "模板資料夾："
 
 #: ui/main.qml:156
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save templates from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save file templates."
-msgstr "此目錄是預設用來儲存或載入樣本的。"
+msgstr "開啟或儲存檔案模板用的預設資料夾。"
 
 #: ui/UrlRequester.qml:74
 #, kde-format

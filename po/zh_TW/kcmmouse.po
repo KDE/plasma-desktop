@@ -17,14 +17,14 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-07-14 17:24+0900\n"
+"PO-Revision-Date: 2024-09-10 02:21+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 24.08.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
@@ -150,8 +150,7 @@ msgid "Accept input through this device."
 msgstr "透過此裝置同意輸入"
 
 #: ui/main.qml:107
-#, fuzzy, kde-format
-#| msgid "Left handed mode"
+#, kde-format
 msgid "Left-handed mode"
 msgstr "左手模式"
 
@@ -161,32 +160,25 @@ msgid "Swap left and right buttons."
 msgstr "交換左右鍵。"
 
 #: ui/main.qml:126
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "按下左右鍵傳出中鍵"
 
 #: ui/main.qml:138
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
-msgstr "同時按下左右鍵，即送出中鍵點選事件。"
+msgstr "同時按下左右鍵來進行中鍵點擊。"
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "Activating this setting increases mouse click latency by 50ms. The extra "
-#| "delay is needed to correctly detect simultaneous left and right mouse "
-#| "clicks."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
-"啟用此設定會使滑鼠點擊增加 50 毫秒的延遲。這個延遲用來偵測同時的左右鍵點擊。"
+"啟用此設定會使點擊增加 50 毫秒的延遲。這個延遲用來偵測左右鍵的同時按下。"
 
 #: ui/main.qml:154
 #, kde-format
@@ -246,8 +238,7 @@ msgid "Invert scroll direction"
 msgstr "反轉捲動方向"
 
 #: ui/main.qml:351
-#, fuzzy, kde-format
-#| msgid "Touchscreen like scrolling."
+#, kde-format
 msgid "Touchscreen-like scrolling."
 msgstr "像觸控螢幕的捲動。"
 

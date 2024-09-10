@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-04 00:41+0000\n"
-"PO-Revision-Date: 2024-08-03 14:35+0900\n"
+"PO-Revision-Date: 2024-09-10 02:22+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: inputsequence.cpp:135
 #, kde-format
@@ -157,25 +157,19 @@ msgid ""
 msgstr "這個平板按鍵按下時會轉交給聚焦的應用程式，讓它決定如何處理它。"
 
 #: ui/ActionDialog.qml:177
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu Left mouse click"
-#| msgid "Left Click"
+#, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left-click"
 msgstr "左鍵點擊"
 
 #: ui/ActionDialog.qml:178
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu Middle mouse click"
-#| msgid "Middle Click"
+#, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle-click"
 msgstr "中鍵點擊"
 
 #: ui/ActionDialog.qml:179
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu Right mouse click"
-#| msgid "Right Click"
+#, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right-click"
 msgstr "右鍵點擊"
