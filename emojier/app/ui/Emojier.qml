@@ -6,7 +6,10 @@
 
 import QtQuick
 import QtQuick.Layouts
+
 import org.kde.kirigami as Kirigami
+import org.kde.config as KConfig
+
 import org.kde.plasma.emoji
 
 Kirigami.ApplicationWindow {
@@ -15,6 +18,10 @@ Kirigami.ApplicationWindow {
     minimumWidth: Math.round(minimumHeight * 1.25)
     width: Kirigami.Units.gridUnit * 25
     height: Kirigami.Units.gridUnit * 25
+
+    KConfig.WindowStateSaver {
+        configGroupName: "MainWindow"
+    }
 
     EmojiModel {
         id: emoji
