@@ -14,11 +14,11 @@ import org.kde.taskmanager 0.1 as TaskManager
 Controller {
     id: controller
 
-    titleActive: i18nc("@action:button", "Restore All Minimized Windows")
-    titleInactive: i18nc("@action:button", "Minimize All Windows")
+    titleActive: i18nc("@action:button shown as tooltip and @action:inmenu", "Restore Windows")
+    titleInactive: i18nc("@action:button shown as tooltip and @action:inmenu", "Minimize All Windows")
 
-    descriptionActive: i18nc("@info:tooltip", "Restores the previously minimized windows")
-    descriptionInactive: i18nc("@info:tooltip", "Shows the Desktop by minimizing all windows")
+    descriptionActive: i18nc("@info:tooltip shown as subtitle", "Restores the previously minimized windows")
+    descriptionInactive: i18nc("@info:tooltip shown as subtitle", "Shows the Desktop by minimizing all windows")
     
     active: Boolean(activeByActivityDesktop[activityDesktopId])
 
