@@ -178,17 +178,15 @@ PlasmoidItem {
 
     Plasmoid.contextualActions: [
         PlasmaCore.Action {
-            text: minimizeAllController.titleInactive
-            checkable: true
-            checked: minimizeAllController.active
+            text: minimizeAllController.title
+            icon.name: minimizeAllController.active ? "window-restore-symbolic" : "window-minimize-symbolic"
             toolTip: minimizeAllController.description
             enabled: !peekController.active
             onTriggered: minimizeAllController.toggle()
         },
         PlasmaCore.Action {
-            text: peekController.titleInactive
-            checkable: true
-            checked: peekController.active
+            text: peekController.title
+            icon.name: peekController.active ? "window-symbolic" : "desktop-symbolic"
             toolTip: peekController.description
             enabled: !minimizeAllController.active
             onTriggered: peekController.toggle()
