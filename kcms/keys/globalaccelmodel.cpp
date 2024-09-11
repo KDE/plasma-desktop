@@ -26,7 +26,7 @@
 
 static QStringList buildActionId(const QString &componentUnique, const QString &componentFriendly, const QString &actionUnique, const QString &actionFriendly)
 {
-    QStringList actionId{"", "", "", ""};
+    QStringList actionId(4);
     actionId[KGlobalAccel::ComponentUnique] = componentUnique;
     actionId[KGlobalAccel::ComponentFriendly] = componentFriendly;
     actionId[KGlobalAccel::ActionUnique] = actionUnique;
