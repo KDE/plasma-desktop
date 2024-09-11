@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-08-27 18:21+0200\n"
+"PO-Revision-Date: 2024-09-05 14:58+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
@@ -166,35 +166,28 @@ msgid "Swap left and right buttons."
 msgstr "Inverte i pulsanti destro e sinistro."
 
 #: ui/main.qml:126
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "Premi i pulsanti sinistro e destro per il clic centrale"
 
 #: ui/main.qml:138
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
-"Facendo clic simultaneamente col pulsante sinistro e col destro viene "
-"inviato un clic col pulsante centrale."
+"La pressione simultanea dei pulsanti destro e sinistro si comporta come un "
+"clic centrale."
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "Activating this setting increases mouse click latency by 50ms. The extra "
-#| "delay is needed to correctly detect simultaneous left and right mouse "
-#| "clicks."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
-"L'attivazione di questa impostazione aumenta la latenza al clic del mouse di "
-"50ms. Il ritardo aggiuntivo è necessario per rilevare i clic destri e "
+"L'attivazione di questa impostazione aumenta la latenza al clic di 50ms. Il "
+"ritardo aggiuntivo è necessario per rilevare correttamente i clic destri e "
 "sinistri simultanei."
 
 #: ui/main.qml:154
@@ -257,10 +250,9 @@ msgid "Invert scroll direction"
 msgstr "Inverti la direzione di scorrimento"
 
 #: ui/main.qml:351
-#, fuzzy, kde-format
-#| msgid "Touchscreen like scrolling."
+#, kde-format
 msgid "Touchscreen-like scrolling."
-msgstr "Touchscreen come scorrimento."
+msgstr "Scorrimento come su uno schermo tattile."
 
 #: ui/main.qml:356
 #, kde-format
