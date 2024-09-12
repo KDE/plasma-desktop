@@ -367,11 +367,11 @@ KCM.SimpleKCM {
                 }
 
                 textFromValue: (value, locale) => {
-                    return i18np("%1 msec", "%1 msec", value)
+                    return i18ncp("short for millisecond(s)", "%1 ms", "%1 ms", value)
                 }
 
                 valueFromText: (text, locale) => {
-                    return Number.fromLocaleString(locale, text.replace(i18n("msec"), ""))
+                    return Number.fromLocaleString(locale, text.replace(i18nc("short for millisecond(s)", "ms"), ""))
                 }
 
                 onValueModified: kcm.globalsSettings.doubleClickInterval = value
