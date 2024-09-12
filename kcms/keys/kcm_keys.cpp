@@ -263,6 +263,7 @@ QString KCMKeys::addCommand(const QString &exec, const QString &name)
         // escaping with backslashes or doubling doesn't seem to work either, so we just do this
         serviceName = escapedExec.left(escapedExec.indexOf(" "));
     }
+    serviceName = QLatin1String("net.local.") + serviceName;
     QString menuId;
     QString newPath = KService::newServicePath(false /* ignored argument */, serviceName, &menuId);
 
