@@ -81,6 +81,7 @@ KCM.ScrollViewKCM {
         alternatingRows: false
         clip: true
         enabled: kcm.keyboardSettings.resetOldXkbOptions
+        reuseItems: false
 
         onEnabledChanged: {
             if (!enabled) {
