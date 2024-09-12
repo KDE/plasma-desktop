@@ -228,7 +228,7 @@ PC3.Page {
         position: PC3.ToolBar.Footer
         visible: pendingUninstallTimer.applets.length > 0
         contentItem: PC3.Button {
-            text: i18ndp("plasma_shell_org.kde.plasma.desktop", "Confirm Removal Of One Widget", "Confirm Removal Of %1 Widgets", pendingUninstallTimer.applets.length)
+            text: i18ndcp("plasma_shell_org.kde.plasma.desktop", "@action:button uninstall widgets in widget explorer", "Confirm Removal of One Widget", "Confirm Removal of %1 Widgets", pendingUninstallTimer.applets.length)
             onClicked: pendingUninstallTimer.uninstall()
         }
     }
