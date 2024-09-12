@@ -12,30 +12,34 @@
 # Petros <pvidalis@gmail.com>, 2010.
 # Dimitrios Glentadakis <dglent@gmail.com>, 2011, 2012.
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2015, 2016.
+# Dimitrys Meliates <demetresmeliates+i18n@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2016-09-19 16:57+0200\n"
-"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2024-08-12 22:00+0300\n"
+"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
+"Η αναζήτηση συσκευών εισόδου απέτυχε. Παρακαλούμε ανοίξτε ξανά αυτή τη "
+"μονάδα ρυθμίσεων."
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:81
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr ""
+"Κρίσιμο σφάλμα κατά την ανάγνωση των θεμελιωδών πληροφοριών της συσκευής %1."
 
 #: kcm.cpp:140
 #, kde-format
@@ -43,11 +47,13 @@ msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr ""
+"Σφάλμα κατά τη φόρτωση τιμών. Δείτε τα αρχεία καταγραφής για περισσότερες "
+"πληροφορίες. Παρακαλώ επανεκκινήστε αυτή τη μονάδα διαμόρφωσης."
 
 #: kcm.cpp:143
 #, kde-format
 msgid "No pointer device found. Connect now."
-msgstr ""
+msgstr "Δεν βρέθηκε συσκευή δείκτη. συνδεθείτε τώρα."
 
 #: kcm.cpp:152
 #, kde-format
@@ -55,6 +61,9 @@ msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
 "this configuration module and try again."
 msgstr ""
+"Δεν μπορείτε να αποθηκεύσετε όλες τις αλλαγές. Δείτε τα αρχεία καταγραφής "
+"για περισσότερες πληροφορίες. Παρακαλώ επανεκκινήστε αυτή τη μονάδα "
+"διαμόρφωσης και δοκιμάστε ξανά."
 
 #: kcm.cpp:170
 #, kde-format
@@ -62,6 +71,8 @@ msgid ""
 "Error while loading default values. Failed to set some options to their "
 "default values."
 msgstr ""
+"Σφάλμα κατά τη φόρτωση προεπιλεγμένων τιμών. Αποτυχία ορισμού ορισμένων "
+"επιλογών στις προεπιλεγμένες τιμές τους."
 
 #: kcm.cpp:185
 #, kde-format
@@ -69,110 +80,112 @@ msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
 "this configuration module."
 msgstr ""
+"Σφάλμα κατά την προσθήκη νέας συνδεδεμένης συσκευής. Παρακαλούμε "
+"επανασυνδέστε την και επανεκκινήστε αυτή τη μονάδα διαμόρφωσης."
 
 #: kcm.cpp:198
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
-msgstr ""
+msgstr "Η συσκευή δείκτη αποσυνδέθηκε. έκλεισε το παράθυρο διαλόγου ρύθμισης."
 
 #: kcm.cpp:200
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
-msgstr ""
+msgstr "Η συσκευή δείκτη αποσυνδέθηκε. δεν βρέθηκαν άλλες συσκευές."
 
 #: ui/bindings.qml:27
-#, fuzzy, kde-format
-#| msgid "Press Connect Button"
+#, kde-format
 msgctxt "@title"
 msgid "Extra Mouse Buttons"
-msgstr "Πιέστε το πλήκτρο Σύνδεση"
+msgstr "Επιπλέον κουμπιά ποντικιού"
 
 #: ui/bindings.qml:70
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
-msgstr ""
+msgstr "Επιπλέον κουμπί %1:"
 
 #: ui/bindings.qml:100
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
 msgstr ""
+"Πατήστε το κουμπί ποντικιού για το οποίο θέλετε να προσθέσετε μια δέσμευση "
+"πλήκτρων."
 
 #: ui/bindings.qml:102
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
-msgstr ""
+msgstr "Εισάγετε το νέο συνδυασμό πλήκτρων για το %1"
 
 #: ui/bindings.qml:106
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Ακύρωση"
 
 #: ui/bindings.qml:124
-#, fuzzy, kde-format
-#| msgid "Press Connect Button"
+#, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button"
-msgstr "Πιέστε το πλήκτρο Σύνδεση"
+msgstr "Πατήστε ένα κουμπί ποντικιού"
 
 #: ui/bindings.qml:125
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
-msgstr ""
+msgstr "Προσθήκη δεσμού…"
 
 #: ui/main.qml:37
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
-msgstr ""
+msgstr "Διαμόρφωση επιπλέον κουμπιών…"
 
 #: ui/main.qml:64
 #, kde-format
 msgid "Device:"
-msgstr ""
+msgstr "Συσκευή:"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "&General"
+#, kde-format
 msgid "General:"
-msgstr "&Γενικά"
+msgstr "Γενικά:"
 
 #: ui/main.qml:88
 #, kde-format
 msgid "Device enabled"
-msgstr ""
+msgstr "Ενεργή συσκευή"
 
 #: ui/main.qml:101
 #, kde-format
 msgid "Accept input through this device."
-msgstr ""
+msgstr "Αποδοχή εισόδου μέσω αυτής της συσκευής."
 
 #: ui/main.qml:107
-#, fuzzy, kde-format
-#| msgid "Le&ft handed"
+#, kde-format
 msgid "Left-handed mode"
-msgstr "Αριστερό&χειρας"
+msgstr "Λειτουργία αριστερόχειρα"
 
 #: ui/main.qml:119
 #, kde-format
 msgid "Swap left and right buttons."
-msgstr ""
+msgstr "Αλλαγή αριστερού και δεξιού κουμπιού."
 
 #: ui/main.qml:126
 #, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
-msgstr ""
+msgstr "Πατήστε το αριστερό και το δεξί κουμπί για μεσαίο κλικ"
 
 #: ui/main.qml:138
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
+"Το ταυτόχρονο πάτημα του αριστερού και δεξιού κουμπιού στέλνει το κλικ του "
+"μεσαίου κουμπιού."
 
 #: ui/main.qml:142
 #, kde-format
@@ -181,12 +194,14 @@ msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
+"Η ενεργοποίηση αυτής της ρύθμισης αυξάνει την καθυστέρηση του κλικ ποντικιού "
+"κατά 50ms. Η επιπλέον καθυστέρηση είναι απαραίτητη για να ανιχνεύονται σωστά "
+"τα ταυτόχρονα αριστερά και δεξιά κλικ του ποντικιού."
 
 #: ui/main.qml:154
-#, fuzzy, kde-format
-#| msgid "Pointer threshold:"
+#, kde-format
 msgid "Pointer speed:"
-msgstr "Κατώφλι δείκτη:"
+msgstr "Ταχύτητα δείκτη:"
 
 #: ui/main.qml:230
 #, kde-format
@@ -196,66 +211,66 @@ msgstr "Επιτάχυνση δείκτη:"
 #: ui/main.qml:246
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Κανένα"
 
 #: ui/main.qml:251
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
-msgstr ""
+msgstr "Ο δρομέας κινείται στην ίδια απόσταση με την κίνηση του ποντικιού."
 
 #: ui/main.qml:256
 #, kde-format
 msgid "Standard"
-msgstr ""
+msgstr "Τυπικό"
 
 #: ui/main.qml:261
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
 msgstr ""
+"Η απόσταση κίνησης του δρομέα εξαρτάται από την ταχύτητα κίνησης του "
+"ποντικιού."
 
 #: ui/main.qml:271
-#, fuzzy, kde-format
-#| msgid "Pointer threshold:"
+#, kde-format
 msgid "Scrolling speed:"
-msgstr "Κατώφλι δείκτη:"
+msgstr "Ταχύτητα κύλισης:"
 
 #: ui/main.qml:321
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
-msgstr ""
+msgstr "Αργότερη"
 
 #: ui/main.qml:330
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
-msgstr ""
+msgstr "Ταχύτερη"
 
 #: ui/main.qml:338
 #, kde-format
 msgid "Scrolling:"
-msgstr ""
+msgstr "Κύλιση:"
 
 #: ui/main.qml:339
-#, fuzzy, kde-format
-#| msgid "Re&verse scroll direction"
+#, kde-format
 msgid "Invert scroll direction"
-msgstr "Α&ντιστροφή της διεύθυνσης της κύλισης"
+msgstr "Αντιστροφή κατεύθυνσης κύλισης"
 
 #: ui/main.qml:351
 #, kde-format
 msgid "Touchscreen-like scrolling."
-msgstr ""
+msgstr "Κύλιση σαν οθόνη αφής."
 
 #: ui/main.qml:356
 #, kde-format
 msgid "Press middle button and move mouse to scroll"
-msgstr ""
+msgstr "Πατήστε το μεσαίο κουμπί και μετακινήστε το ποντίκι για κύλιση"
 
 #: ui/main.qml:368
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
-msgstr ""
+msgstr "Κύλιση με το ποντίκι ενώ το μεσαίο κουμπί είναι πατημένο."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

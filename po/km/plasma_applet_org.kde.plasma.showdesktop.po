@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_showdesktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-13 00:40+0000\n"
+"POT-Creation-Date: 2024-09-12 00:41+0000\n"
 "PO-Revision-Date: 2008-12-12 09:03+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -25,25 +25,25 @@ msgstr ""
 
 #: package/contents/ui/MinimizeAllController.qml:17
 #, kde-format
-msgctxt "@action:button"
-msgid "Restore All Minimized Windows"
+msgctxt "@action:button shown as tooltip and @action:inmenu"
+msgid "Restore Windows"
 msgstr ""
 
 #: package/contents/ui/MinimizeAllController.qml:18
 #, kde-format
-msgctxt "@action:button"
+msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Minimize All Windows"
 msgstr ""
 
 #: package/contents/ui/MinimizeAllController.qml:20
 #, kde-format
-msgctxt "@info:tooltip"
+msgctxt "@info:tooltip shown as subtitle"
 msgid "Restores the previously minimized windows"
 msgstr ""
 
 #: package/contents/ui/MinimizeAllController.qml:21
 #, kde-format
-msgctxt "@info:tooltip"
+msgctxt "@info:tooltip shown as subtitle"
 msgid "Shows the Desktop by minimizing all windows"
 msgstr ""
 

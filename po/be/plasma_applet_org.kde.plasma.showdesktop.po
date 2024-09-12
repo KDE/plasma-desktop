@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-13 00:40+0000\n"
+"POT-Creation-Date: 2024-09-12 00:41+0000\n"
 "PO-Revision-Date: 2024-06-20 17:30\n"
 "Last-Translator: kom <me@komzpa.net>\n"
 "Language-Team: Belarusian\n"
@@ -28,26 +28,34 @@ msgid "Minimize All Applet Active Indicator"
 msgstr "Згарнуць усе актыўныя аплеты"
 
 #: package/contents/ui/MinimizeAllController.qml:17
-#, kde-format
-msgctxt "@action:button"
-msgid "Restore All Minimized Windows"
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Restore All Minimized Windows"
+msgctxt "@action:button shown as tooltip and @action:inmenu"
+msgid "Restore Windows"
 msgstr "Аднавіць усе згорнутыя вокны"
 
 #: package/contents/ui/MinimizeAllController.qml:18
-#, kde-format
-msgctxt "@action:button"
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Minimize All Windows"
+msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Minimize All Windows"
 msgstr "Згарнуць усе вокны"
 
 #: package/contents/ui/MinimizeAllController.qml:20
-#, kde-format
-msgctxt "@info:tooltip"
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Restores the previously minimized windows"
+msgctxt "@info:tooltip shown as subtitle"
 msgid "Restores the previously minimized windows"
 msgstr "Аднаўляе папярэдне згорнутыя вокны"
 
 #: package/contents/ui/MinimizeAllController.qml:21
-#, kde-format
-msgctxt "@info:tooltip"
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Shows the Desktop by minimizing all windows"
+msgctxt "@info:tooltip shown as subtitle"
 msgid "Shows the Desktop by minimizing all windows"
 msgstr "Згортвае ўсе вокны і паказвае пусты працоўны стол"
 

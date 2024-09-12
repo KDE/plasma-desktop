@@ -5,19 +5,20 @@
 # nikos, 2011.
 # Dimitrios Glentadakis <dglent@gmail.com>, 2011.
 # Dimitris Kardarakos <dimkard@gmail.com>, 2015.
+# Dimitrys Meliates <demetresmeliates+i18n@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2015-11-24 14:18+0200\n"
-"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2024-08-12 11:38+0300\n"
+"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -32,15 +33,7 @@ msgstr "p_vidalis@hotmail.com, pantazisnikolaos@gmail.com"
 
 #. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
 #: DeviceAutomounterKCM.ui:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "This list contains the storage devices known to the system. If "
-#| "\"Automount on Login\" is checked, the device will be automatically "
-#| "mounted even though \"Mount all removable media at login\" is unchecked. "
-#| "The same applies for \"Automount on Attach\".\n"
-#| "\n"
-#| "If \"Enable automatic mounting of removable media\" is unchecked, the "
-#| "overrides do not apply and no devices will be automatically mounted."
+#, kde-format
 msgid ""
 "This list contains the storage devices known to the system. If \"Automount "
 "on Login\" is checked, the device will be automatically mounted even though "
@@ -51,11 +44,7 @@ msgstr ""
 "σύστημα. Αν το «Αυτόματη προσάρτηση κατά την είσοδο» είναι επιλεγμένο, η "
 "συσκευή θα προσαρτάται αυτόματα, ακόμα και αν το «Προσάρτηση όλων των "
 "αφαιρούμενων συσκευών κατά την σύνδεση» δεν είναι επιλεγμένο. Το ίδιο ισχύει "
-"και για την επιλογή «Αυτόματη προσάρτηση όταν συνδέεται».\n"
-"\n"
-"Αν το «Ενεργοποίηση αυτόματης προσάρτησης αφαιρούμενων μέσων» δεν είναι "
-"επιλεγμένο, οι παρακάμψεις δεν θα ισχύσουν και καμία συσκευή δεν θα "
-"προσαρτηθεί αυτόματα."
+"και για την επιλογή «Αυτόματη προσάρτηση όταν συνδέεται»."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:54
@@ -82,15 +71,7 @@ msgstr "Αγνόηση συσκευής"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
 #: DeviceAutomounterKCM.ui:67
-#, fuzzy, kde-format
-#| msgid ""
-#| "When this is checked, only remembered devices will be automatically "
-#| "mounted. A device is 'remembered' if it has ever been mounted before. For "
-#| "instance, plugging in a USB media player to charge is not sufficient to "
-#| "'remember' it - if the files are not accessed, it will not be "
-#| "automatically mounted the next time it is seen. Once they have been "
-#| "accessed, however, the device's contents will be automatically made "
-#| "available to the system."
+#, kde-format
 msgid ""
 "When this is not checked, only remembered devices will be automatically "
 "mounted. A device is 'remembered' if it has ever been mounted before. For "
@@ -99,58 +80,52 @@ msgid ""
 "mounted the next time it is seen. Once they have been accessed, however, the "
 "device's contents will be automatically made available to the system."
 msgstr ""
-"Όταν αυτή η επιλογή είναι ενεργή, η πλατφόρμα KDE θα προσαρτά αυτόματα μόνο "
-"τις συσκευές που θυμάται. Μία συσκευή απομνημονεύεται αν έχει προσαρτηθεί "
-"στο παρελθόν. Για παράδειγμα, η σύνδεση ενός αναπαραγωγέα πολυμέσων σε μία "
-"θύρα USB για φόρτιση δεν είναι αρκετό για να απομνημονευτεί - αν τα αρχεία "
-"δεν προσπελαστούν, η πλατφόρμα KDE δεν θα τον προσαρτήσει αυτόματα την "
-"επόμενη φορά. Αν προσπελαστούν όμως, η πλατφόρμα KDE θα θυμάται να κάνει τα "
-"περιεχόμενά του διαθέσιμα στο σύστημά σας."
+"Όταν αυτό δεν είναι επιλεγμένο, μόνο οι απομνημονευμένες συσκευές θα "
+"προσαρτηθούν αυτόματα. Μία συσκευή απομνημονεύεται αν έχει προσαρτηθεί στο "
+"παρελθόν. Για παράδειγμα, η σύνδεση ενός αναπαραγωγέα πολυμέσων σε μία θύρα "
+"USB για φόρτιση δεν αρκεί για να απομνημονευτεί - αν τα αρχεία δεν "
+"προσπελαστούν, δεν θα προσαρτήσει αυτόματα την επόμενη φορά. επόμενη φορά. "
+"Ωστόσο, μόλις προσπελαστούν, τα περιεχόμενα της συσκευής θα διατεθούν "
+"αυτόματα στο σύστημα."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
 #: DeviceAutomounterKCM.ui:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Only automatically mount removable media that has been manually mounted "
-#| "before"
+#, kde-format
 msgid "Automatically mount removable media that have never been mounted before"
 msgstr ""
-"Προσάρτηση μόνο αφαιρούμενων μέσων που έχουν χειροκίνητα προσαρτηθεί στο "
-"παρελθόν"
+"Αυτόματη προσάρτηση αφαιρούμενων μέσων που δεν έχουν προσαρτηθεί ποτέ πριν"
 
 #: DeviceModel.cpp:52
-#, fuzzy, kde-format
-#| msgid "Automount on Login"
+#, kde-format
 msgid "Automount Device"
-msgstr "Αυτόματη προσάρτηση κατά την είσοδο"
+msgstr "Αυτόματη προσάρτηση συσκευής"
 
 #: DeviceModel.cpp:54
 #, kde-format
 msgctxt "As in automount on login"
 msgid "On Login"
-msgstr ""
+msgstr "Κατά την είσοδο"
 
 #: DeviceModel.cpp:56
 #, kde-format
 msgctxt "As in automount on attach"
 msgid "On Attach"
-msgstr ""
+msgstr "Κατά τη σύνδεση"
 
 #: DeviceModel.cpp:258
-#, fuzzy, kde-format
-#| msgid "Device"
+#, kde-format
 msgid "All Devices"
-msgstr "Συσκευή"
+msgstr "Όλες οι συσκευές"
 
 #: DeviceModel.cpp:258
 #, kde-format
 msgid "All Known Devices"
-msgstr ""
+msgstr "Όλες οι γνωστές συσκευές"
 
 #: DeviceModel.cpp:260
 #, kde-format
 msgid "Attached Devices"
-msgstr "Συνδεδεμένες συσκευές"
+msgstr "Προσαρτημένες συσκευές"
 
 #: DeviceModel.cpp:262
 #, kde-format

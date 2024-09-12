@@ -3,58 +3,57 @@
 #
 # Antonis Geralis <capoiosct@gmail.com>, 2011, 2012.
 # Dimitrios Glentadakis <dglent@gmail.com>, 2012.
+# Antonis Geralis <capoiosct@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_showactivitymanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2012-03-03 07:35+0100\n"
-"Last-Translator: Dimitrios Glentadakis <dglent@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2024-08-12 23:35+0300\n"
+"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
 msgid "Appearance"
-msgstr ""
+msgstr "Εμφάνιση"
 
 #: package/contents/ui/ConfigAppearance.qml:23
 #, kde-format
 msgid "Icon:"
-msgstr ""
+msgstr "Εικονίδιο:"
 
 #: package/contents/ui/ConfigAppearance.qml:25
 #, kde-format
 msgid "Show the current activity icon"
-msgstr ""
+msgstr "Εμφάνιση του εικονιδίου της τρέχουσας δραστηριότητας"
 
 #: package/contents/ui/ConfigAppearance.qml:31
 #, kde-format
 msgid "Show the generic activity icon"
-msgstr ""
+msgstr "Εμφάνιση γενικού εικονιδίου δραστηριότητας"
 
 #: package/contents/ui/ConfigAppearance.qml:41
 #, kde-format
 msgid "Title:"
-msgstr ""
+msgstr "Τίτλος:"
 
 #: package/contents/ui/ConfigAppearance.qml:43
-#, fuzzy, kde-format
-#| msgid "Show Activity Manager"
+#, kde-format
 msgid "Show the current activity name"
-msgstr "Εμφάνιση διαχειριστή δραστηριοτήτων"
+msgstr "Εμφάνιση ονόματος της τρέχουσας δραστηριότητας"
 
 #: package/contents/ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Show Activity Manager"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Current activity is %1"
-msgstr "Εμφάνιση διαχειριστή δραστηριοτήτων"
+msgstr "Η τρέχουσα δραστηριότητα είναι %1"
 
 #: package/contents/ui/main.qml:84
 #, kde-format
@@ -64,13 +63,13 @@ msgstr "Εμφάνιση διαχειριστή δραστηριοτήτων"
 #: package/contents/ui/main.qml:85
 #, kde-format
 msgid "Click to show the activity manager"
-msgstr "Πατήστε εδώ για να εμφανίσετε το διαχειριστή δραστηριοτήτων"
+msgstr "Κάντε κλικ για να εμφανιστεί ο διαχειριστής δραστηριοτήτων"
 
 #: package/contents/ui/main.qml:125
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "&Configure Activities…"
-msgstr ""
+msgstr "&Ρύθμιση δραστηριοτήτων…"
 
 #~ msgid "Click or press the Meta key and 'Q' to show the activity manager"
 #~ msgstr ""

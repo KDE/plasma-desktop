@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-13 00:40+0000\n"
+"POT-Creation-Date: 2024-09-12 00:41+0000\n"
 "PO-Revision-Date: 2019-09-19 19:37+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -28,27 +28,29 @@ msgstr "Ҳамаи равзанаҳоро ба ҳадди ақал сохтан"
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Minimize All Windows"
-msgctxt "@action:button"
-msgid "Restore All Minimized Windows"
+msgctxt "@action:button shown as tooltip and @action:inmenu"
+msgid "Restore Windows"
 msgstr "Ҳамаи равзанаҳоро ба ҳадди ақал сохтан"
 
 #: package/contents/ui/MinimizeAllController.qml:18
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Minimize All Windows"
-msgctxt "@action:button"
+msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Minimize All Windows"
 msgstr "Ҳамаи равзанаҳоро ба ҳадди ақал сохтан"
 
 #: package/contents/ui/MinimizeAllController.qml:20
-#, kde-format
-msgctxt "@info:tooltip"
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Minimize All Windows"
+msgctxt "@info:tooltip shown as subtitle"
 msgid "Restores the previously minimized windows"
-msgstr ""
+msgstr "Ҳамаи равзанаҳоро ба ҳадди ақал сохтан"
 
 #: package/contents/ui/MinimizeAllController.qml:21
 #, kde-format
-msgctxt "@info:tooltip"
+msgctxt "@info:tooltip shown as subtitle"
 msgid "Shows the Desktop by minimizing all windows"
 msgstr ""
 

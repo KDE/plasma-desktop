@@ -2,26 +2,26 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2015, 2016.
+# Antonis Geralis <capoiosct@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-24 00:40+0000\n"
-"PO-Revision-Date: 2016-10-31 15:37+0200\n"
-"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2024-08-12 18:46+0300\n"
+"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: plasmasearch/kcm.h:70
-#, fuzzy, kde-format
-#| msgid "Available Plugins"
+#, kde-format
 msgid "Favorite Plugins"
-msgstr "Διαθέσιμα πρόσθετα"
+msgstr "Αγαπημένα πρόσθετα"
 
 #: plasmasearch/kcm.h:71
 #, kde-format
@@ -31,12 +31,12 @@ msgstr "Διαθέσιμα πρόσθετα"
 #: plasmasearch/ui/main.qml:25
 #, kde-format
 msgid "Configure KRunner…"
-msgstr ""
+msgstr "Διαμόρφωση KRunner…"
 
 #: plasmasearch/ui/main.qml:29
 #, kde-format
 msgid "Get New Plugins…"
-msgstr ""
+msgstr "Απόκτηση νέων πρόσθετων…"
 
 #: plasmasearch/ui/main.qml:44
 #, kde-format
@@ -45,83 +45,92 @@ msgid ""
 "Overview effect). Mark plugins as favorites and arrange them in order you "
 "want to prioritize them."
 msgstr ""
+"Ενεργοποίηση ή απενεργοποίηση πρόσθετων (που χρησιμοποιούνται στο KRunner, "
+"Εκκινητή εφαρμογών και στο εφέ Επισκόπηση). Χαρακτηρίστε τα πρόσθετα ως "
+"αγαπημένα και τα τακτοποιήστε τα με τη σειρά που θέλετε να τους δώσετε "
+"προτεραιότητα."
 
 #: plasmasearch/ui/main.qml:90
 #, kde-format
 msgid "Remove from favorites"
-msgstr ""
+msgstr "Αφαίρεση από τα αγαπημένα"
 
 #: plasmasearch/ui/main.qml:90
 #, kde-format
 msgid "Add to favorites"
-msgstr ""
+msgstr "Προσθήκη στα αγαπημένα"
 
 #: plugininstaller/AbstractJob.cpp:18
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "Failed to run install script in terminal <message>%1</message>"
 msgstr ""
+"Αποτυχία εκτέλεσης σεναρίου εγκατάστασης στο τερματικό <message>%1</message>"
 
 #: plugininstaller/AbstractJob.cpp:29
 #, kde-format
 msgctxt "@info"
 msgid "Installation executed successfully, you may now close this window"
 msgstr ""
+"Η εγκατάσταση εκτελέστηκε με επιτυχία, μπορείτε τώρα να κλείσετε αυτό το "
+"παράθυρο"
 
 #: plugininstaller/AbstractJob.cpp:31
 #, kde-format
 msgctxt "@info"
 msgid "Uninstallation executed successfully, you may now close this window"
 msgstr ""
+"Η απεγκατάσταση εκτελέστηκε με επιτυχία, μπορείτε τώρα να κλείσετε αυτό το "
+"παράθυρο"
 
 #: plugininstaller/KRunnerPluginInstallerRcJob.cpp:88
 #, kde-format
 msgid "Failed to copy file %1 to %2"
-msgstr ""
+msgstr "Αποτυχία αντιγραφής αρχείου %1 σε %2"
 
 #: plugininstaller/KRunnerPluginInstallerRcJob.cpp:103
 #: plugininstaller/KRunnerPluginInstallerRcJob.cpp:106
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Failed to remove file %1:<nl/>%2"
-msgstr ""
+msgstr "Αποτυχία αφαίρεσης αρχείου %1:<nl/>%2"
 
 #: plugininstaller/main.cpp:33
 #, kde-format
 msgctxt "@info"
 msgid "KRunner plugin installation failed"
-msgstr ""
+msgstr "Αποτυχία εγκατάστασης πρόσθετου KRunner"
 
 #: plugininstaller/main.cpp:48
 #, kde-format
 msgctxt "@info:shell"
 msgid "Command to execute: install or uninstall"
-msgstr ""
+msgstr "Εντολή προς εκτέλεση: εγκατάσταση ή απεγκατάσταση"
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
 msgid "Path to archive or extracted folder"
-msgstr ""
+msgstr "Διαδρομή προς αρχείο ή φάκελο που έχει εξαχθεί"
 
 #: plugininstaller/main.cpp:50
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a visual confirmation dialog"
-msgstr ""
+msgstr "Να μην εμφανίζεται οπτικός διάλογος επιβεβαίωσης"
 
 #: plugininstaller/main.cpp:92
 #, kde-format
 msgctxt "@info"
 msgid "No PackageKit support"
-msgstr ""
+msgstr "Δεν υπάρχει υποστήριξη PackageKit"
 
 #: plugininstaller/PackageKitConfirmationDialog.h:23
 #: plugininstaller/ScriptConfirmationDialog.h:37
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Installation"
-msgstr ""
+msgstr "Επιβεβαίωση εγκατάστασης"
 
 #: plugininstaller/PackageKitConfirmationDialog.h:26
 #, kde-kuit-format
@@ -130,25 +139,27 @@ msgid ""
 "You are about to install a binary package. You should only install these "
 "from a trusted author/packager."
 msgstr ""
+"Πρόκειται να εγκαταστήσετε ένα δυαδικό πακέτο. Θα πρέπει να τα εγκαθιστάτε "
+"μόνο από έναν αξιόπιστο συγγραφέα/συσκευαστή."
 
 #: plugininstaller/PackageKitConfirmationDialog.h:33
 #: plugininstaller/ScriptConfirmationDialog.h:94
 #, kde-format
 msgctxt "@action:button"
 msgid "Accept Risk And Continue"
-msgstr ""
+msgstr "Αποδοχή κινδύνου και συνέχεια"
 
 #: plugininstaller/PackageKitConfirmationDialog.h:37
 #, kde-format
 msgctxt "@action:button"
 msgid "View File"
-msgstr ""
+msgstr "Προβολή αρχείου"
 
 #: plugininstaller/PackageKitJob.cpp:24
 #, kde-format
 msgctxt "@info"
 msgid "The mime type %1 is not supported by the packagekit backend"
-msgstr ""
+msgstr "Ο τύπος mime %1 δεν υποστηρίζεται από το packagekit backend"
 
 #: plugininstaller/ScriptConfirmationDialog.h:44
 #, kde-kuit-format
@@ -157,6 +168,8 @@ msgid ""
 "This plugin executes the following command for starting the \"%1\" service:"
 "<nl/>%2"
 msgstr ""
+"Αυτό το πρόσθετο εκτελεί την ακόλουθη εντολή για την εκκίνηση της υπηρεσίας "
+"\"%1\": <nl/>%2"
 
 #: plugininstaller/ScriptConfirmationDialog.h:47
 #, kde-kuit-format
@@ -166,6 +179,10 @@ msgid ""
 "author. You can try to uninstall the plugin manually.<nl/>If you do not feel "
 "capable or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"Αυτό το πρόσθετο δεν παρέχει ένα σενάριο απεγκατάστασης. Παρακαλούμε "
+"επικοινωνήστε με τον συγγραφέα. Μπορείτε να προσπαθήσετε να απεγκαταστήσετε "
+"το πρόσθετο χειροκίνητα.<nl/>Αν δεν αισθάνεστε ικανοί ή άνετοι με αυτό, "
+"πατήστε <interface>Ακύρωση</interface> τώρα."
 
 #: plugininstaller/ScriptConfirmationDialog.h:52
 #, kde-kuit-format
@@ -176,6 +193,11 @@ msgid ""
 "the README for instructions from the author.<nl/>If you do not feel capable "
 "or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"Αυτό το πρόσθετο δεν παρέχει ένα σενάριο απεγκατάστασης. Παρακαλούμε "
+"επικοινωνήστε με τον συγγραφέα. Μπορείτε να προσπαθήσετε να απεγκαταστήσετε "
+"το πρόσθετο χειροκίνητα. Παρακαλώ ρίξτε μια ματιά στο README για οδηγίες από "
+"τον συγγραφέα.<nl/>Αν δεν αισθάνεστε ικανοί ή άνετοι με αυτό, πατήστε "
+"<interface>Ακύρωση</interface> τώρα."
 
 #: plugininstaller/ScriptConfirmationDialog.h:58
 #, kde-kuit-format
@@ -185,6 +207,10 @@ msgid ""
 "author. You can try to install the plugin manually.<nl/>If you do not feel "
 "capable or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"Αυτό το πρόσθετο δεν παρέχει σενάριο εγκατάστασης. Παρακαλούμε επικοινωνήστε "
+"με τον συγγραφέα. Μπορείτε να προσπαθήσετε να εγκαταστήσετε το πρόσθετο "
+"χειροκίνητα.<nl/>Αν δεν αισθάνεστε ικανοί ή άνετοι με αυτό, πατήστε "
+"<interface>Ακύρωση</interface> τώρα."
 
 #: plugininstaller/ScriptConfirmationDialog.h:63
 #, kde-kuit-format
@@ -195,6 +221,11 @@ msgid ""
 "the README for instructions from the author.<nl/>If you do not feel capable "
 "or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"Αυτό το πρόσθετο δεν παρέχει σενάριο εγκατάστασης. Παρακαλούμε επικοινωνήστε "
+"με τον συγγραφέα. Μπορείτε να προσπαθήσετε να εγκαταστήσετε το πρόσθετο "
+"χειροκίνητα. Παρακαλώ ρίξτε μια ματιά στο README για οδηγίες από τον "
+"συγγραφέα. <nl/>Αν δεν αισθάνεστε ικανοί ή άνετοι με αυτό, πατήστε "
+"<interface>Ακύρωση</interface> τώρα."
 
 #: plugininstaller/ScriptConfirmationDialog.h:69
 #, kde-kuit-format
@@ -205,6 +236,11 @@ msgid ""
 "read the script's source code.<nl/>If you do not feel capable or comfortable "
 "with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"Αυτό το πρόσθετο χρησιμοποιεί ένα σενάριο για την εγκατάσταση, το οποίο "
+"μπορεί να αποτελέσει κίνδυνο για την ασφάλεια. Παρακαλούμε εξετάστε ολόκληρο "
+"το περιεχόμενο του πρόσθετου πριν την εγκατάσταση ή τουλάχιστον διαβάστε τον "
+"πηγαίο  κώδικα του σεναρίου.<nl/>Αν δεν αισθάνεστε ικανοί ή άνετοι με αυτό, "
+"πατήστε <interface>Ακύρωση</interface> τώρα."
 
 #: plugininstaller/ScriptConfirmationDialog.h:75
 #, kde-kuit-format
@@ -215,48 +251,53 @@ msgid ""
 "read the README file and the script's source code.<nl/>If you do not feel "
 "capable or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"Αυτό το πρόσθετο χρησιμοποιεί ένα σενάριο για την εγκατάσταση, το οποίο "
+"μπορεί να αποτελέσει κίνδυνο για την ασφάλεια. Παρακαλούμε εξετάστε ολόκληρο "
+"το περιεχόμενο του πρόσθετου πριν την εγκατάσταση ή τουλάχιστον διαβάστε το "
+"αρχείο READMEκαι τον πηγαίο κώδικα του σεναρίου.<nl/>Αν δεν αισθάνεστε "
+"ικανοί ή άνετοι με αυτό,πατήστε <interface>Ακύρωση</interface> τώρα."
 
 #: plugininstaller/ScriptConfirmationDialog.h:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Mark entry as uninstalled"
-msgstr ""
+msgstr "Επισήμανση καταχώρησης ως απεγκατεστημένη"
 
 #: plugininstaller/ScriptConfirmationDialog.h:92
 #, kde-format
 msgctxt "@action:button"
 msgid "Mark entry as installed"
-msgstr ""
+msgstr "Επισήμανση καταχώρησης ως εγκατεστημένη"
 
 #: plugininstaller/ScriptConfirmationDialog.h:100
 #, kde-format
 msgctxt "@action:button"
 msgid "View Script"
-msgstr ""
+msgstr "Προβολή σεναρίου"
 
 #: plugininstaller/ScriptConfirmationDialog.h:106
 #, kde-format
 msgctxt "@action:button"
 msgid "View Source Directory"
-msgstr ""
+msgstr "Προβολή καταλόγου πηγών"
 
 #: plugininstaller/ScriptConfirmationDialog.h:117
 #, kde-format
 msgctxt "@action:button"
 msgid "View %1"
-msgstr ""
+msgstr "Προβολή %1"
 
 #: plugininstaller/ZypperRPMJob.cpp:28
 #, kde-format
 msgctxt "@info"
 msgid "Could not resolve package name of %1"
-msgstr ""
+msgstr "Αδυναμία επίλυσης του ονόματος πακέτου %1"
 
 #: plugininstaller/ZypperRPMJob.cpp:35
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Failed to run install command: <message>%1</message>"
-msgstr ""
+msgstr "Αποτυχία εκτέλεσης της εντολής εγκατάστασης: <message>%1</message>"
 
 #, fuzzy
 #~| msgid "Clear History"

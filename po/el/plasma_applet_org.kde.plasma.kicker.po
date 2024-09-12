@@ -6,20 +6,21 @@
 # Stelios <<sstavra@gmail.com>>, 2013.
 # Antonis Geralis <gaantonio@civil.auth.gr>, 2013, 2014.
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2015, 2016, 2017.
+# Dimitrys Meliates <demetresmeliates+i18n@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-15 00:40+0000\n"
-"PO-Revision-Date: 2017-09-08 16:23+0200\n"
-"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2024-08-12 23:01+0300\n"
+"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -39,18 +40,17 @@ msgstr "Προσθήκη στα αγαπημένα"
 #: package/contents/ui/code/tools.js:73
 #, kde-format
 msgid "On All Activities"
-msgstr ""
+msgstr "Σε όλες τις δραστηριότητες"
 
 #: package/contents/ui/code/tools.js:123
 #, kde-format
 msgid "On the Current Activity"
-msgstr ""
+msgstr "Σχετικά με την τρέχουσα δραστηριότητα"
 
 #: package/contents/ui/code/tools.js:137
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgid "Show in Favorites"
-msgstr "Αγαπημένα"
+msgstr "Εμφάνιση στα αγαπημένα"
 
 #: package/contents/ui/ConfigGeneral.qml:46
 #, kde-format
@@ -58,12 +58,10 @@ msgid "Icon:"
 msgstr "Εικονίδιο:"
 
 #: package/contents/ui/ConfigGeneral.qml:129
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu Open icon chooser dialog"
-#| msgid "Choose..."
+#, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
-msgstr "Επιλογή..."
+msgstr "Επιλογή…"
 
 #: package/contents/ui/ConfigGeneral.qml:134
 #, kde-format
@@ -89,7 +87,7 @@ msgstr "Μόνο περιγραφή"
 #: package/contents/ui/ConfigGeneral.qml:154
 #, kde-format
 msgid "Name (Description)"
-msgstr "Όνομα  (Περιγραφή)"
+msgstr "Όνομα (περιγραφή)"
 
 #: package/contents/ui/ConfigGeneral.qml:154
 #, kde-format
@@ -97,89 +95,78 @@ msgid "Description (Name)"
 msgstr "Περιγραφή (όνομα)"
 
 #: package/contents/ui/ConfigGeneral.qml:164
-#, fuzzy, kde-format
-#| msgid "Behavior"
+#, kde-format
 msgid "Behavior:"
-msgstr "Συμπεριφορά"
+msgstr "Συμπεριφορά:"
 
 #: package/contents/ui/ConfigGeneral.qml:166
-#, fuzzy, kde-format
-#| msgid "Sort alphabetically"
+#, kde-format
 msgid "Sort applications alphabetically"
-msgstr "Ταξινόμηση αλφαβητικά"
+msgstr "Ταξινόμηση εφαρμογών αλφαβητικά"
 
 #: package/contents/ui/ConfigGeneral.qml:174
-#, fuzzy, kde-format
-#| msgid "Flatten menu to a single level"
+#, kde-format
 msgid "Flatten sub-menus to a single level"
-msgstr "Εμφάνιση του μενού σε ένα μόνο επίπεδο"
+msgstr "Εμφάνιση των υπομενού σε ένα μόνο επίπεδο"
 
 #: package/contents/ui/ConfigGeneral.qml:182
 #, kde-format
 msgid "Show icons on the root level of the menu"
-msgstr ""
+msgstr "Εμφάνιση εικονιδίων στο ριζικό επίπεδο του μενού"
 
 #: package/contents/ui/ConfigGeneral.qml:192
-#, fuzzy, kde-format
-#| msgid "Categories"
+#, kde-format
 msgid "Show categories:"
-msgstr "Κατηγορίες"
+msgstr "Εμφάνιση κατηγοριών:"
 
 #: package/contents/ui/ConfigGeneral.qml:195
-#, fuzzy, kde-format
-#| msgid "Recent Applications"
+#, kde-format
 msgid "Recent applications"
 msgstr "Πρόσφατες εφαρμογές"
 
 #: package/contents/ui/ConfigGeneral.qml:196
-#, fuzzy, kde-format
-#| msgid "Often Used Applications"
+#, kde-format
 msgid "Often used applications"
-msgstr "Εφαρμογές που χρησιμοποιούνται συχνά"
+msgstr "Συχνά χρησιμοποιούμενες εφαρμογές"
 
 #: package/contents/ui/ConfigGeneral.qml:203
-#, fuzzy, kde-format
-#| msgid "Recent Documents"
+#, kde-format
 msgid "Recent files"
-msgstr "Πρόσφατα έγγραφα"
+msgstr "Πρόσφατα αρχεία"
 
 #: package/contents/ui/ConfigGeneral.qml:204
-#, fuzzy, kde-format
-#| msgid "Often used"
+#, kde-format
 msgid "Often used files"
-msgstr "Χρησιμοποιούνται συχνά"
+msgstr "Συχνά χρησιμοποιούμενα αρχεία"
 
 #: package/contents/ui/ConfigGeneral.qml:210
 #, kde-format
 msgid "Sort items in categories by:"
-msgstr ""
+msgstr "Ταξινόμηση αντικειμένων σε κατηγορίες κατά:"
 
 #: package/contents/ui/ConfigGeneral.qml:211
-#, fuzzy, kde-format
-#| msgid "Recently used"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "Χρησιμοποιήθηκαν πρόσφατα"
 
 #: package/contents/ui/ConfigGeneral.qml:211
-#, fuzzy, kde-format
-#| msgid "Often used"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
 msgid "Often used"
 msgstr "Χρησιμοποιούνται συχνά"
 
 #: package/contents/ui/ConfigGeneral.qml:221
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgid "Search:"
-msgstr "Αναζήτηση"
+msgstr "Αναζήτηση:"
 
 #: package/contents/ui/ConfigGeneral.qml:223
 #, kde-format
 msgid "Expand search to bookmarks, files and emails"
-msgstr "Επέκταση της αναζήτησης σε σελιδοδείκτες, αρχεία και αλληλογραφία"
+msgstr "Επέκταση αναζήτησης σε σελιδοδείκτες, αρχεία και αλληλογραφία"
 
 #: package/contents/ui/ConfigGeneral.qml:231
 #, kde-format
@@ -189,14 +176,13 @@ msgstr "Στοίχιση των αποτελεσμάτων αναζήτησης 
 #: package/contents/ui/DashboardRepresentation.qml:227
 #, kde-format
 msgid "Searching for '%1'"
-msgstr "Αναζήτηση για '%1'"
+msgstr "Αναζήτηση για «%1»"
 
 #: package/contents/ui/DashboardRepresentation.qml:227
-#, fuzzy, kde-format
-#| msgid "Type to search."
+#, kde-format
 msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
 msgid "Type to search…"
-msgstr "Πληκτρολογήστε για αναζήτηση."
+msgstr "Πληκτρολογήστε για αναζήτηση…"
 
 #: package/contents/ui/DashboardRepresentation.qml:323
 #, kde-format
@@ -204,10 +190,9 @@ msgid "Favorites"
 msgstr "Αγαπημένα"
 
 #: package/contents/ui/main.qml:247
-#, fuzzy, kde-format
-#| msgid "Edit Applications..."
+#, kde-format
 msgid "Edit Applications…"
-msgstr "Επεξεργασία εφαρμογών..."
+msgstr "Επεξεργασία εφαρμογών…"
 
 #~ msgid "Widgets"
 #~ msgstr "Γραφικά συστατικά"

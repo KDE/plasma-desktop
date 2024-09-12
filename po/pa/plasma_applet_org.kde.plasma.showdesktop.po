@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_showdesktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-13 00:40+0000\n"
+"POT-Creation-Date: 2024-09-12 00:41+0000\n"
 "PO-Revision-Date: 2023-12-22 21:39-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -26,26 +26,34 @@ msgid "Minimize All Applet Active Indicator"
 msgstr "ਸਭ ਵਿੰਡੋਆਂ ਨੂੰ ਘੱਟੋ-ਘੱਟ ਕਰੋ"
 
 #: package/contents/ui/MinimizeAllController.qml:17
-#, kde-format
-msgctxt "@action:button"
-msgid "Restore All Minimized Windows"
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Restore All Minimized Windows"
+msgctxt "@action:button shown as tooltip and @action:inmenu"
+msgid "Restore Windows"
 msgstr "ਸਭ ਘੱਟੋ-ਘੱਟ ਕੀਤੀਆਂ ਵਿੰਡੋਆਂ ਨੂੰ ਬਹਾਲ ਕਰੋ"
 
 #: package/contents/ui/MinimizeAllController.qml:18
-#, kde-format
-msgctxt "@action:button"
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Minimize All Windows"
+msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Minimize All Windows"
 msgstr "ਸਭ ਵਿੰਡੋਆਂ ਨੂੰ ਘੱਟੋ-ਘੱਟ ਕਰੋ"
 
 #: package/contents/ui/MinimizeAllController.qml:20
-#, kde-format
-msgctxt "@info:tooltip"
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Restore All Minimized Windows"
+msgctxt "@info:tooltip shown as subtitle"
 msgid "Restores the previously minimized windows"
-msgstr ""
+msgstr "ਸਭ ਘੱਟੋ-ਘੱਟ ਕੀਤੀਆਂ ਵਿੰਡੋਆਂ ਨੂੰ ਬਹਾਲ ਕਰੋ"
 
 #: package/contents/ui/MinimizeAllController.qml:21
-#, kde-format
-msgctxt "@info:tooltip"
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Shows the Desktop by minimizing all windows"
+msgctxt "@info:tooltip shown as subtitle"
 msgid "Shows the Desktop by minimizing all windows"
 msgstr "ਸਾਰੀਆਂ ਵਿੰਡੋਆਂ ਨੂੰ ਘੱਟੋ-ਘੱਟ ਕਰਕੇ ਡੈਸਕਟਾਪ ਵੇਖਾਓ"
 

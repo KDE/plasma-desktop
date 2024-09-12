@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2017.
+# Dimitrys Meliates <demetresmeliates+i18n@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-04 00:41+0000\n"
-"PO-Revision-Date: 2017-04-11 17:01+0200\n"
-"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2024-08-12 21:34+0300\n"
+"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: ui/main.qml:23
 #, kde-format
@@ -23,58 +24,59 @@ msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
 msgstr ""
+"Το σύστημα πρέπει να επανεκκινηθεί προτού τεθούν σε ισχύ οι αλλαγές στη "
+"ρύθμιση επικόλλησης με μεσαίο κλικ."
 
 #: ui/main.qml:29
 #, kde-format
 msgid "Restart"
-msgstr ""
+msgstr "Επανεκκίνηση"
 
 #: ui/main.qml:45
 #, kde-format
 msgid "Visual behavior:"
-msgstr ""
+msgstr "Οπτική συμπεριφορά:"
 
 #. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
 #: ui/main.qml:46 workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
-msgstr ""
+msgstr "Εμφάνιση υποδείξεων σε αιώρηση με το ποντίκι"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: ui/main.qml:57 workspaceoptions_plasmasettings.kcfg:15
-#, fuzzy, kde-format
-#| msgid "Visual feedback for status changes"
+#, kde-format
 msgid "Display visual feedback for status changes"
-msgstr "Οπτική ανάδραση για αλλαγές κατάστασης"
+msgstr "Εμφάνιση οπτικής ανάδρασης για αλλαγές κατάστασης"
 
 #: ui/main.qml:75
 #, kde-format
 msgid "Animation speed:"
-msgstr ""
+msgstr "Ταχύτητα κίνησης:"
 
 #: ui/main.qml:101
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
-msgstr ""
+msgstr "Αργή"
 
 #: ui/main.qml:108
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
-msgstr ""
+msgstr "Άμεση"
 
 #: ui/main.qml:119
 #, kde-format
 msgctxt "@label"
 msgid "Scrolling:"
-msgstr ""
+msgstr "Κύλιση:"
 
 #: ui/main.qml:123
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
-msgstr ""
+msgstr "Προτίμηση ομαλής κύλισης"
 
 #: ui/main.qml:133
 #, kde-format
@@ -85,40 +87,45 @@ msgid ""
 "because they either do not support smooth scrolling, or have their own "
 "setting for enabling and disabling it."
 msgstr ""
+"Αυτή η ρύθμιση ενεργοποιεί ή απενεργοποιεί τις κινούμενες μεταβολές κατά την "
+"κύλιση με τον τροχό του ποντικιού ή το πληκτρολόγιο. Ορισμένες εφαρμογές "
+"ενδέχεται να μην τιμούν αυτή τη ρύθμιση επειδή είτε δεν υποστηρίζουν ομαλή "
+"κύλιση είτε έχουν τη δική τους ρύθμιση για την ενεργοποίηση και την "
+"απενεργοποίησή της."
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
-msgstr ""
+msgstr "Κάνοντας κλικ σε αρχεία ή φακέλους:"
 
 #: ui/main.qml:153
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
-msgstr ""
+msgstr "Τα επιλέγει"
 
 #: ui/main.qml:167
 #, kde-format
 msgid "Open by double-clicking instead"
-msgstr ""
+msgstr "Άνοιγμα με διπλό κλικ"
 
 #: ui/main.qml:180
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
-msgstr ""
+msgstr "Τα ανοίγει"
 
 #: ui/main.qml:193
 #, kde-format
 msgid "Select by clicking on item's selection marker"
-msgstr ""
+msgstr "Επιλογή κάνοντας κλικ στο δείκτη επιλογής του στοιχείου"
 
 #: ui/main.qml:209
 #, kde-format
 msgid "Clicking in scrollbar track:"
-msgstr ""
+msgstr "Κάνοντας κλικ στη γραμμή κύλισης:"
 
 #: ui/main.qml:210
 #, kde-format
@@ -126,7 +133,7 @@ msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
 "the clicked location'"
 msgid "Scrolls to the clicked location"
-msgstr ""
+msgstr "Κάνει κύλιση στη θέση στην οποία έγινε κλικ"
 
 #: ui/main.qml:228
 #, kde-format
@@ -134,12 +141,12 @@ msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
 "page up or down'"
 msgid "Scrolls one page up or down"
-msgstr ""
+msgstr "Κύλιση μιας σελίδας προς τα πάνω ή προς τα κάτω"
 
 #: ui/main.qml:241
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
-msgstr ""
+msgstr "Μεσαίο κλικ για κύλιση στην επιλεγμένη θέση"
 
 #: ui/main.qml:255
 #, kde-format
@@ -147,7 +154,7 @@ msgctxt ""
 "@label for checkbox, part of a complete sentence: 'Middle-click pastes "
 "selected text'"
 msgid "Middle-click:"
-msgstr ""
+msgstr "Μεσαίο κλικ:"
 
 #: ui/main.qml:257
 #, kde-format
@@ -155,24 +162,24 @@ msgctxt ""
 "@option:check part of a complete sentence: 'Middle click pastes selected "
 "text'"
 msgid "Pastes selected text"
-msgstr ""
+msgstr "Επικόλληση επιλεγμένου κειμένου"
 
 #: ui/main.qml:274
 #, kde-format
 msgid "Touch Mode:"
-msgstr ""
+msgstr "Λειτουργία αφής:"
 
 #: ui/main.qml:276
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
-msgstr ""
+msgstr "Αυτόματη ενεργοποίηση ανάλογα με τις ανάγκες"
 
 #: ui/main.qml:276 ui/main.qml:319
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
-msgstr ""
+msgstr "Δεν ενεργοποιήθηκε ποτέ"
 
 #: ui/main.qml:292
 #, kde-format
@@ -181,12 +188,16 @@ msgid ""
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
+"Η λειτουργία αφής ενεργοποιείται αυτόματα κάθε φορά που το σύστημα ανιχνεύει "
+"μια οθόνη αφής αλλά όχι ποντίκι ή επιφάνεια αφής. Για παράδειγμα: όταν το "
+"πληκτρολόγιο ενός μεταμορφώσιμου φορητού υπολογιστή αναποδογυριστεί ή "
+"αποσπαστεί."
 
 #: ui/main.qml:297
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
-msgstr ""
+msgstr "Πάντα ενεργή"
 
 #: ui/main.qml:337
 #, kde-format
@@ -194,23 +205,25 @@ msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
 "more easily accommodate touch interaction."
 msgstr ""
+"Στη λειτουργία αφής, πολλά στοιχεία της διεπαφής χρήστη θα γίνουν μεγαλύτερα "
+"για να διευκολύνουν την αλληλεπίδραση με την αφή."
 
 #: ui/main.qml:355
 #, kde-format
 msgid "Double-click interval:"
-msgstr ""
+msgstr "Κάντε διπλό κλικ στο διάστημα:"
 
 #: ui/main.qml:370
 #, kde-format
 msgid "%1 msec"
 msgid_plural "%1 msec"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 msec"
+msgstr[1] "%1 msec"
 
 #: ui/main.qml:374
 #, kde-format
 msgid "msec"
-msgstr ""
+msgstr "msec"
 
 #: ui/main.qml:388
 #, kde-format
@@ -218,70 +231,73 @@ msgid ""
 "Two clicks within this duration are considered a double-click. Some "
 "applications may not honor this setting."
 msgstr ""
+"Δύο κλικ εντός αυτής της διάρκειας θεωρούνται διπλό κλικ. Ορισμένες "
+"εφαρμογές ενδέχεται να μην σέβονται αυτή τη ρύθμιση."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
 #, kde-format
 msgid "Single click to open files"
-msgstr ""
+msgstr "Ένα κλικ για άνοιγμα αρχείων"
 
 #. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:13
 #, kde-format
 msgid "Animation speed"
-msgstr ""
+msgstr "Ταχύτητα κίνησης"
 
 #. i18n: ectx: label, entry (smoothScroll), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:17
 #, kde-format
 msgid "Smooth scrolling"
-msgstr ""
+msgstr "Ομαλή κύλιση"
 
 #. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21
 #, kde-format
 msgid "Left-click in scrollbar track moves scrollbar by one page"
 msgstr ""
+"Αριστερό κλικ στη γραμμή κύλισης μετακινεί τη γραμμή κύλισης κατά μία σελίδα"
 
 #. i18n: ectx: label, entry (doubleClickInterval), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:25
 #, kde-format
 msgid "Double click interval"
-msgstr ""
+msgstr "Διπλό κλικ στο διάστημα"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9
 #, kde-format
 msgid "Automatically switch to touch-optimized mode"
-msgstr ""
+msgstr "Αυτόματη μετάβαση σε λειτουργία βελτιστοποιημένης αφής"
 
 #. i18n: ectx: label, entry (primarySelection), group (Wayland)
 #: workspaceoptions_kwinsettings.kcfg:15
 #, kde-format
 msgid "Enable middle click selection pasting"
-msgstr ""
+msgstr "Ενεργοποίηση επικόλλησης επιλογής με μεσαίο κλικ"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
-#, fuzzy, kde-format
-#| msgid "Show a popup for status changes such as brightness or volume."
+#, kde-format
 msgid ""
 "Show an on-screen display to indicate status changes such as brightness or "
 "volume"
 msgstr ""
-"Εμφάνιση αναδυόμενου για αλλαγές κατάστασης όπως φωτεινότητας ή έντασης ήχου."
+"Εμφάνιση μιας οθόνης για την ένδειξη αλλαγών κατάστασης, όπως η φωτεινότητα "
+"ή η ένταση του ήχου."
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:20
 #, kde-format
 msgid "OSD on layout change"
-msgstr ""
+msgstr "OSD στην αλλαγή διάταξης"
 
 #. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21
 #, kde-format
 msgid "Show a popup on layout changes"
-msgstr ""
+msgstr "Εμφάνιση αναδυόμενου παραθύρου σε αλλαγές διάταξης"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

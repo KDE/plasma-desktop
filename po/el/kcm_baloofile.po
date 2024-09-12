@@ -3,32 +3,31 @@
 #
 # Antonis Geralis <gaantonio@civil.auth.gr>, 2013, 2014.
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2017.
+# Antonis Geralis <capoiosct@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:40+0000\n"
-"PO-Revision-Date: 2017-06-12 16:44+0200\n"
-"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2024-08-12 10:41+0300\n"
+"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid "Desktop File Indexer"
+#, kde-format
 msgid "Pause Indexer"
-msgstr "Ευρετήριο αρχείων επιφάνειας εργασίας"
+msgstr "Παύση ευρετηρίου"
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid "Desktop File Indexer"
+#, kde-format
 msgid "Resume Indexer"
-msgstr "Ευρετήριο αρχείων επιφάνειας εργασίας"
+msgstr "Συνέχεια ευρετηρίου"
 
 #: ui/main.qml:60
 #, kde-format
@@ -36,6 +35,9 @@ msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
 "extended metadata display from all KDE applications."
 msgstr ""
+"Αυτό θα απενεργοποιήσει την αναζήτηση αρχείων στα μενού KRunner και εκκινητή "
+"και θα αφαιρέσει την εκτεταμένη εμφάνιση μεταδεδομένων από όλες τις "
+"εφαρμογές KDE."
 
 #: ui/main.qml:70
 #, kde-format
@@ -44,117 +46,113 @@ msgid ""
 "if indexing is re-enabled later, the entire index will have to be re-created "
 "from scratch. This may take some time, depending on how many files you have."
 msgstr ""
+"Θέλετε να διαγράψετε τα αποθηκευμένα δεδομένα ευρετηρίου; Θα απελευθερωθεί "
+"%1, αλλά αν η ευρετηρίαση ενεργοποιηθεί ξανά αργότερα, ολόκληρο το ευρετήριο "
+"θα πρέπει να δημιουργηθεί από το μηδέν. Αυτό μπορεί να πάρει κάποιο χρόνο, "
+"ανάλογα με το πόσα αρχεία έχετε."
 
 #: ui/main.qml:72
 #, kde-format
 msgid "Delete Index Data"
-msgstr ""
+msgstr "Διαγραφή δεδομένων ευρετηρίου"
 
 #: ui/main.qml:90
-#, fuzzy, kde-format
-#| msgid ""
-#| "File Search helps you quickly locate all your files based on their content"
+#, kde-format
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
 "folders and what types of file data are indexed."
 msgstr ""
-"Η αναζήτηση αρχείων σας βοηθά να εντοπίσετε γρήγορα όλα τα αρχεία σας με "
-"βάση το περιεχόμενό τους"
+"Η αναζήτηση αρχείων σας βοηθά να εντοπίσετε γρήγορα τα αρχεία σας. Μπορείτε "
+"να επιλέξετε ποιους φακέλους και ποιους τύπους αρχείων θα ευρετηριαστούν."
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "File Indexing"
+#, kde-format
 msgctxt "@title:group"
 msgid "File indexing:"
-msgstr "Δεικτοδότηση αρχείων"
+msgstr "Ευρετηρίαση αρχείων:"
 
 #: ui/main.qml:105
 #, kde-format
 msgctxt "@action:check"
 msgid "Enabled"
-msgstr ""
+msgstr "Ενεργό"
 
 #: ui/main.qml:121
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
-msgstr ""
+msgstr "Δεδομένα προς ευρετηρίαση:"
 
 #: ui/main.qml:123
 #, kde-format
 msgid "File names and contents"
-msgstr ""
+msgstr "Ονόματα και περιεχόμενα αρχείων"
 
 #: ui/main.qml:136
 #, kde-format
 msgid "File names only"
-msgstr ""
+msgstr "Μόνο ονόματα αρχείων"
 
 #: ui/main.qml:155
-#, fuzzy, kde-format
-#| msgid "Show hidden folders"
+#, kde-format
 msgid "Hidden files and folders"
-msgstr "Εμφάνιση κρυφών φακέλων"
+msgstr "Κρυφά αρχεία και φάκελοι"
 
 #: ui/main.qml:181
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
-msgstr ""
+msgstr "Τοποθεσίες"
 
 #: ui/main.qml:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
-msgstr ""
+msgstr "Έναρξη ευρετηρίασης φακέλου…"
 
 #: ui/main.qml:192
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
-msgstr ""
+msgstr "Διακοπή ευρετηρίασης φακέλου…"
 
 #: ui/main.qml:210
 #, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
-msgstr ""
+msgstr "%1, %2% ολοκληρωμένο"
 
 #: ui/main.qml:217
-#, fuzzy, kde-kuit-format
-#| msgid "File Indexing"
+#, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "Currently indexing: <filename>%1</filename>"
-msgstr "Δεικτοδότηση αρχείων"
+msgstr "Τρέχουσα ευρετηρίαση: <filename>%1</filename>"
 
 #: ui/main.qml:270
 #, kde-format
 msgid "Not indexed"
-msgstr ""
+msgstr "Δεν ευρετηριάζεται"
 
 #: ui/main.qml:271
-#, fuzzy, kde-format
-#| msgid "Index Audio"
+#, kde-format
 msgid "Indexed"
-msgstr "Δεικτοδότηση ήχου"
+msgstr "Ευρετηριασμένο"
 
 #: ui/main.qml:301
 #, kde-format
 msgctxt "Remove the list item for this filesystem path"
 msgid "Remove entry"
-msgstr ""
+msgstr "Διαγραφή καταχώρησης"
 
 #: ui/main.qml:316
-#, fuzzy, kde-format
-#| msgid "Select the folder which should be excluded"
+#, kde-format
 msgid "Select a folder to include"
-msgstr "Επιλέξτε τους φακέλους που θα πρέπει να εξαιρεθούν"
+msgstr "Επιλογή φακέλου για συμπερίληψη"
 
 #: ui/main.qml:316
-#, fuzzy, kde-format
-#| msgid "Select the folder which should be excluded"
+#, kde-format
 msgid "Select a folder to exclude"
-msgstr "Επιλέξτε τους φακέλους που θα πρέπει να εξαιρεθούν"
+msgstr "Επιλογή φακέλου προς εξαίρεση"
 
 #, fuzzy
 #~| msgid "File Indexing"

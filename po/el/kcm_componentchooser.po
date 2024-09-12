@@ -9,118 +9,108 @@
 # Spiros Georgaras <sng@hellug.gr>, 2007.
 # Petros Vidalis <p_vidalis@hotmail.com>, 2009.
 # Dimitris Kardarakos <dimkard@gmail.com>, 2016.
+# Antonis Geralis <capoiosct@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:38+0000\n"
-"PO-Revision-Date: 2016-09-16 14:41+0200\n"
-"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2024-08-12 10:58+0300\n"
+"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: applicationmodel.cpp:67
 #, kde-format
 msgid "Other…"
-msgstr ""
+msgstr "Άλλα…"
 
 #: components/componentchooserarchivemanager.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default archive manager"
-msgstr "Επιλογή προτιμώμενου πελάτη email:"
+msgstr "Επιλογή προεπιλεγμένου διαχειριστή αρχειοθέτησης"
 
 #: components/componentchooserbrowser.cpp:13
 #, kde-format
 msgid "Select default browser"
-msgstr ""
+msgstr "Επιλογή προεπιλεγμένου προγράμματος περιήγησης"
 
 #: components/componentchooseremail.cpp:20
-#, fuzzy, kde-format
-#| msgid "Use a different &email client:"
+#, kde-format
 msgid "Select default e-mail client"
-msgstr "Χρήση ενός διαφορετικού πελάτη &email:"
+msgstr "Επιλογή προεπιλεγμένου προγράμματος ηλεκτρονικού ταχυδρομείου"
 
 #: components/componentchooserfilemanager.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default file manager"
-msgstr "Επιλογή προτιμώμενου πελάτη email:"
+msgstr "Επιλογή προεπιλεγμένου διαχειριστή αρχείων"
 
 #: components/componentchoosergeo.cpp:13
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default map"
-msgstr "Επιλογή προτιμώμενου πελάτη email:"
+msgstr "Επιλογή προεπιλεγμένου χάρτη"
 
 #: components/componentchooserimageviewer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default image viewer"
-msgstr "Επιλογή προτιμώμενου πελάτη email:"
+msgstr "Επιλογή προεπιλεγμένου προγράμματος προβολής εικόνων"
 
 #: components/componentchoosermusicplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default music player"
-msgstr "Επιλογή προτιμώμενου πελάτη email:"
+msgstr "Επιλογή προεπιλεγμένου προγράμματος αναπαραγωγής μουσικής"
 
 #: components/componentchooserpdfviewer.cpp:11
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default PDF viewer"
-msgstr "Επιλογή προτιμώμενου πελάτη email:"
+msgstr "Επιλογή προεπιλεγμένου προγράμματος προβολής PDF"
 
 #: components/componentchoosertel.cpp:17
-#, fuzzy, kde-format
-#| msgid "Select preferred terminal application:"
+#, kde-format
 msgid "Select default dialer application"
-msgstr "Επιλογή προτιμώμενης εφαρμογής τερματικού:"
+msgstr "Επιλογή προεπιλεγμένης εφαρμογής κλήσης"
 
 #: components/componentchooserterminal.cpp:25
-#, fuzzy, kde-format
-#| msgid "Select preferred terminal application:"
+#, kde-format
 msgid "Select default terminal emulator"
-msgstr "Επιλογή προτιμώμενης εφαρμογής τερματικού:"
+msgstr "Επιλογή προεπιλεγμένου εξομοιωτή τερματικού"
 
 #: components/componentchoosertexteditor.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select preferred terminal application:"
+#, kde-format
 msgid "Select default text editor"
-msgstr "Επιλογή προτιμώμενης εφαρμογής τερματικού:"
+msgstr "Επιλογή προεπιλεγμένου επεξεργαστή κειμένου"
 
 #: components/componentchooservideoplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default video player"
-msgstr "Επιλογή προτιμώμενου πελάτη email:"
+msgstr "Επιλογή προεπιλεγμένου προγράμματος αναπαραγωγής βίντεο"
 
 #: ui/ComponentOverlay.qml:52
 #, kde-format
 msgid "Details"
-msgstr ""
+msgstr "Λεπτομέρειες"
 
 #: ui/ComponentOverlay.qml:83
 #, kde-format
 msgid "This application can also open these file types:"
-msgstr ""
+msgstr "Αυτή η εφαρμογή μπορεί επίσης να ανοίξει αυτούς τους τύπους αρχείων:"
 
 #: ui/ComponentOverlay.qml:97
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 (Currently opens in %2)"
-msgstr ""
+msgstr "%1 (Αυτή τη στιγμή ανοίγει στο %2)"
 
 #: ui/ComponentOverlay.qml:110
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Open All in %1"
-msgstr ""
+msgstr "Άνοιγμα όλων στο %1"
 
 #: ui/ComponentOverlay.qml:129
 #, kde-format
@@ -128,18 +118,19 @@ msgid ""
 "This application does not advertise support for the following file types, "
 "but may be able to open them anyway:"
 msgstr ""
+"Αυτή η εφαρμογή δεν διαφημίζει υποστήριξη για τους ακόλουθους τύπους "
+"αρχείων, αλλά μπορεί να τους ανοίξει ούτως ή άλλως:"
 
 #: ui/ComponentOverlay.qml:146
 #, kde-format
 msgctxt "@action:button"
 msgid "Force All to Open in %1"
-msgstr ""
+msgstr "Εξαναγκασμός όλων να ανοίξουν με %1"
 
 #: ui/ComponentOverlay.qml:158
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgid "Configure Manually…"
-msgstr "Ρύθμιση"
+msgstr "Ρύθμιση χειροκίνητα…"
 
 #: ui/main.qml:17
 #, kde-format
@@ -147,93 +138,94 @@ msgid ""
 "’%1’ seems to not support the following mimetypes associated with this kind "
 "of application: %2"
 msgstr ""
+"Το «%1» φαίνεται να μην υποστηρίζει τους ακόλουθους τύπους mime που "
+"σχετίζονται με αυτό το είδος εφαρμογής: %2"
 
 #: ui/main.qml:46
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
-msgstr ""
+msgstr "Διαδίκτυο"
 
 #: ui/main.qml:50
 #, kde-format
 msgid "Web browser:"
-msgstr ""
+msgstr "Πρόγραμμα περιήγησης στο διαδίκτυο:"
 
 #: ui/main.qml:72
 #, kde-format
 msgid "Email client:"
-msgstr ""
+msgstr "Πρόγραμμα ηλ. ταχυδρομείου:"
 
 #: ui/main.qml:94
 #, kde-format
 msgctxt "Default phone app"
 msgid "Phone Numbers:"
-msgstr ""
+msgstr "Αριθμοί τηλεφώνου:"
 
 #: ui/main.qml:116
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
-msgstr ""
+msgstr "Πολυμέσα"
 
 #: ui/main.qml:121
 #, kde-format
 msgid "Image viewer:"
-msgstr ""
+msgstr "Πρόγραμμα προβολής εικόνας:"
 
 #: ui/main.qml:145
 #, kde-format
 msgid "Music player:"
-msgstr ""
+msgstr "Αναπαραγωγέας μουσικής:"
 
 #: ui/main.qml:168
 #, kde-format
 msgid "Video player:"
-msgstr ""
+msgstr "Αναπαραγωγέας βίντεο:"
 
 #: ui/main.qml:190
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
-msgstr ""
+msgstr "Έγγραφα"
 
 #: ui/main.qml:195
 #, kde-format
 msgid "Text editor:"
-msgstr ""
+msgstr "Επεξεργαστής κειμένου:"
 
 #: ui/main.qml:217
 #, kde-format
 msgid "PDF viewer:"
-msgstr ""
+msgstr "Πρόγραμμα προβολής PDF:"
 
 #: ui/main.qml:239
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
-msgstr ""
+msgstr "Εργαλεία"
 
 #: ui/main.qml:244
 #, kde-format
 msgid "File manager:"
-msgstr ""
+msgstr "Διαχειριστής αρχείων:"
 
 #: ui/main.qml:266
-#, fuzzy, kde-format
-#| msgid "Select preferred terminal application:"
+#, kde-format
 msgid "Terminal emulator:"
-msgstr "Επιλογή προτιμώμενης εφαρμογής τερματικού:"
+msgstr "Εξομοιωτής τερματικού:"
 
 #: ui/main.qml:279
 #, kde-format
 msgid "Archive manager:"
-msgstr ""
+msgstr "Διαχειριστής αρχείου:"
 
 #: ui/main.qml:301
 #, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
-msgstr ""
+msgstr "Χάρτης:"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

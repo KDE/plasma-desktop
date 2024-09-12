@@ -13,19 +13,20 @@
 # Dimitrios Glentadakis <dglent@gmail.com>, 2011.
 # Stelios <sstavra@gmail.com>, 2013.
 # Dimitris Kardarakos <dimkard@gmail.com>, 2015.
+# Dimitrys Meliates <demetresmeliates+i18n@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-16 00:40+0000\n"
-"PO-Revision-Date: 2015-10-14 19:53+0300\n"
-"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2024-09-04 14:30+0300\n"
+"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 24.08.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -56,13 +57,15 @@ msgstr "&Αυτόματη ρύθμιση ημερομηνίας και ώρας"
 #: dateandtime.ui:62
 #, kde-format
 msgid "&Time server:"
-msgstr "&Εξυπηρετητής ώρας:"
+msgstr "&Διακομιστής ώρας:"
 
 #. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
 #: dateandtime.ui:102
 #, kde-format
 msgid "Here you can change the system date's day of the month, month and year."
-msgstr "Εδώ μπορείτε να αλλάξετε την ημερομηνία του συστήματος."
+msgstr ""
+"Εδώ μπορείτε να αλλάξετε την ημέρα του μήνα, τον μήνα και το έτος της "
+"ημερομηνίας του συστήματος."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: dateandtime.ui:145
@@ -86,10 +89,9 @@ msgstr "Τρέχουσα τοπική ζώνη ώρας:"
 
 #. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
 #: dateandtime.ui:184
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgid "Search…"
-msgstr "Αναζήτηση"
+msgstr "Αναζήτηση…"
 
 #: dtime.cpp:61
 #, kde-format
@@ -136,7 +138,7 @@ msgstr ""
 #: dtime.cpp:269
 #, kde-format
 msgid "Unable to contact time server: %1."
-msgstr "Αδύνατη η επικοινωνία με το διακομιστή χρόνου: %1."
+msgstr "Αδύνατη η επικοινωνία με τον διακομιστή ώρας: %1."
 
 #: dtime.cpp:273
 #, kde-format
@@ -175,18 +177,18 @@ msgstr ""
 #, kde-format
 msgctxt "Define an area in the time zone, like a town area"
 msgid "Area"
-msgstr ""
+msgstr "Περιοχή"
 
 #: k4timezonewidget.cpp:64
 #, kde-format
 msgctxt "Time zone"
 msgid "Region"
-msgstr ""
+msgstr "Περιφέρεια"
 
 #: k4timezonewidget.cpp:64
 #, kde-format
 msgid "Comment"
-msgstr ""
+msgstr "Σχόλιο"
 
 #: main.cpp:90
 #, kde-format

@@ -8,87 +8,87 @@
 # Toussis Manolis <koppermind@yahoo.com>, 2005.
 # Spiros Georgaras <sng@hellug.gr>, 2007.
 # Toussis Manolis <manolis@koppermind.homelinux.org>, 2008, 2009.
+# Antonis Geralis <capoiosct@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:40+0000\n"
-"PO-Revision-Date: 2009-02-13 11:53+0200\n"
-"Last-Translator: Toussis Manolis <manolis@koppermind.homelinux.org>\n"
-"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2024-08-12 19:17+0300\n"
+"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 0.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Conf&irm logout"
+#, kde-format
 msgid "Confirm logout"
-msgstr "Επι&βεβαίωση εξόδου"
+msgstr "Επιβεβαίωση εξόδου"
 
 #. i18n: ectx: label, entry (shutdownType), group (General)
 #: smserversettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Default Leave Option"
+#, kde-format
 msgid "Default leave option"
-msgstr "Προκαθορισμένη επιλογή τερματισμού"
+msgstr "Προεπιλεγμένη επιλογή εξόδου"
 
 #. i18n: ectx: label, entry (loginMode), group (General)
 #: smserversettings.kcfg:22
-#, fuzzy, kde-format
-#| msgid "On Login"
+#, kde-format
 msgid "On login"
 msgstr "Κατά την είσοδο"
 
 #. i18n: ectx: label, entry (excludeApps), group (General)
 #: smserversettings.kcfg:26
-#, fuzzy, kde-format
-#| msgid "Applications to be e&xcluded from sessions:"
+#, kde-format
 msgid "Applications to be excluded from session"
-msgstr "Εφαρμογές που θα ε&ξαιρεθούν από τις συνεδρίες:"
+msgstr "Εφαρμογές που αποκλείονται από τη συνεδρία"
 
 #: ui/main.qml:31
 #, kde-format
 msgid ""
 "The system must be restarted before manual session saving becomes active."
 msgstr ""
+"Το σύστημα πρέπει να επανεκκινηθεί πριν ενεργοποιηθεί η χειροκίνητη "
+"αποθήκευση συνεδρίας."
 
 #: ui/main.qml:36
-#, fuzzy, kde-format
-#| msgid "&Restart computer"
+#, kde-format
 msgid "Restart"
-msgstr "&Επανεκκίνηση υπολογιστή"
+msgstr "Επανεκκίνηση"
 
 #: ui/main.qml:58
 #, kde-format
 msgid "Failed to request restart to firmware setup: %1"
-msgstr ""
+msgstr "Αποτυχία αίτησης επανεκκίνησης για ρύθμιση υλικολογισμικού: %1"
 
 #: ui/main.qml:59
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
 msgstr ""
+"Την επόμενη φορά που ο υπολογιστής θα επανεκκινηθεί, θα εισέλθει στην οθόνη "
+"ρύθμισης UEFI."
 
 #: ui/main.qml:60
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
 msgstr ""
+"Την επόμενη φορά που θα γίνει επανεκκίνηση του υπολογιστή, θα εμφανιστεί η "
+"οθόνη ρύθμισης του υλικολογισμικού."
 
 #: ui/main.qml:65
-#, fuzzy, kde-format
-#| msgid "&Restart computer"
+#, kde-format
 msgid "Restart Now"
-msgstr "&Επανεκκίνηση υπολογιστή"
+msgstr "Επανεκκίνηση τώρα"
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group"
 msgid "General"
 msgstr "Γενικά"
@@ -99,7 +99,7 @@ msgctxt ""
 "@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "Ask for confirmation:"
-msgstr ""
+msgstr "Αίτηση επιβεβαίωσης:"
 
 #: ui/main.qml:80
 #, kde-format
@@ -107,32 +107,30 @@ msgctxt ""
 "@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "On shutdown, restart, and logout"
-msgstr ""
+msgstr "Κατά τον τερματισμό, επανεκκίνηση και αποσύνδεση"
 
 #: ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "Session Manager"
+#, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
-msgstr "Διαχειριστής συνεδρίας"
+msgstr "Επαναφορά συνεδρίας"
 
 #: ui/main.qml:99
 #, kde-format
 msgid "On login, launch apps that were open:"
-msgstr ""
+msgstr "Κατά την είσοδο, εκκίνηση εφαρμογών που ήταν ανοιχτές:"
 
 #: ui/main.qml:100
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr ""
+msgstr "Κατά την τελευταία αποσύνδεση"
 
 #: ui/main.qml:113
-#, fuzzy, kde-format
-#| msgid "Restore &manually saved session"
+#, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr "Επαναφορά &χειροκίνητα αποθηκευμένης συνεδρίας"
+msgstr "Όταν η συνεδρία αποθηκεύτηκε χειροκίνητα"
 
 #: ui/main.qml:122
 #, kde-kuit-format
@@ -143,21 +141,25 @@ msgid ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 msgstr ""
+"Ένα κουμπί <interface>Αποθήκευση συνεδρίας</interface> θα εμφανιστεί στο "
+"μενού <interface>Εκκίνησης εφαρμογών</interface>. Όταν κάνετε κλικ σε αυτό, "
+"το Plasma θα θυμάται τις εφαρμογές που είναι ανοιχτές και θα τις επαναφέρει "
+"κατά την επόμενη είσοδο. Κάντε ξανά κλικ σε αυτό για να αντικαταστήσετε το "
+"σύνολο εφαρμογών που έχουν απομνημονευτεί."
 
 #: ui/main.qml:127
-#, fuzzy, kde-format
-#| msgid "Start with an empty &session"
+#, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
 "restoration, whereby the windows that were open on logout are re-opened on "
 "the next login"
 msgid "Start with an empty session"
-msgstr "Εκκίνηση με μια &κενή συνεδρία"
+msgstr "Εκκίνηση με μια άδεια συνεδρία"
 
 #: ui/main.qml:141
 #, kde-format
 msgid "Ignored applications:"
-msgstr ""
+msgstr "Αγνοημένες εφαρμογές:"
 
 #: ui/main.qml:164
 #, kde-format
@@ -166,12 +168,16 @@ msgid ""
 "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
 "autostarting along with other session-restored apps."
 msgstr ""
+"Γράψτε εδώ τα ονόματα των εκτελέσιμων εφαρμογών (χωρισμένα με κόμμα ή άνω "
+"και κάτω τελεία, για παράδειγμα 'xterm:konsole' ή 'xterm,konsole') για να "
+"αποτρέψετε την αυτόματη εκκίνησή τους μαζί με άλλες εφαρμογές που έχουν "
+"αποκατασταθεί σε λειτουργία."
 
 #: ui/main.qml:171
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
-msgstr ""
+msgstr "Yλικολογισμικό"
 
 #: ui/main.qml:177
 #, kde-format
@@ -179,19 +185,19 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr ""
+msgstr "Μετά την επόμενη επανεκκίνηση:"
 
 #: ui/main.qml:178
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
-msgstr ""
+msgstr "Είσοδος στην οθόνη ρυθμίσεων UEFI"
 
 #: ui/main.qml:179
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr ""
+msgstr "Είσοδος στην οθόνη ρύθμισης υλικολογισμικού"
 
 #~ msgid ""
 #~ "<h1>Session Manager</h1> You can configure the session manager here. This "

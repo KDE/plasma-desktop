@@ -5,19 +5,20 @@
 # Antonis Geralis <capoiosct@gmail.com>, 2012.
 # Dimitrios Glentadakis <dglent@gmail.com>, 2012.
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014.
+# Antonis Geralis <capoiosct@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-08 01:58+0000\n"
-"PO-Revision-Date: 2014-10-11 13:23+0300\n"
-"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2024-08-12 19:26+0300\n"
+"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -33,7 +34,7 @@ msgstr "manolis@koppermind.homelinux.org"
 #: ActionEditor.cpp:60
 #, kde-format
 msgid "Editing Action '%1'"
-msgstr "Επεξεργασία ενέργειας \"%1\""
+msgstr "Επεξεργασία ενέργειας '%1'"
 
 #: ActionEditor.cpp:162
 #, kde-format
@@ -41,13 +42,13 @@ msgid ""
 "It appears that the action name, command, icon or condition are not valid.\n"
 "Therefore, changes will not be applied."
 msgstr ""
-"Μη έγκυρο όνομα ενέργειας, εικονίδιο ή συνθήκη.\n"
-"Οι τροποποιήσεις δεν θα εφαρμοστούν."
+"Το όνομα της ενέργειας, εντολή, εικονίδιο ή συνθήκη δεν είναι έγκυρα.\n"
+"Οι αλλαγές δεν θα εφαρμοστούν."
 
 #: ActionEditor.cpp:163
 #, kde-format
 msgid "Invalid action"
-msgstr "Μη έγκυρη ενέργεια"
+msgstr "Άκυρη ενέργεια"
 
 #. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
 #: ActionEditor.ui:17
@@ -181,7 +182,7 @@ msgstr "Εισάγετε το όνομα της νέας ενέργειας"
 #: DesktopFileGenerator.cpp:25
 #, kde-format
 msgid "Solid Action Desktop File Generator"
-msgstr "Δημιουργός αρχείων επιφάνειας εργασίας ενεργειών Solid"
+msgstr "Γεννήτρια ενεργειών αρχείων επιφάνειας εργασίας Solid"
 
 #: DesktopFileGenerator.cpp:27
 #, kde-format
@@ -262,13 +263,13 @@ msgstr "Αφαίρεση"
 #: SolidActions.ui:29
 #, kde-format
 msgid "Edit…"
-msgstr ""
+msgstr "Επεξεργασία…"
 
 #. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
 #: SolidActions.ui:36
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "Προσθήκη…"
 
 #~ msgid "Solid Device Actions Editor"
 #~ msgstr "Επεξεργαστής ενεργειών συσκευών Solid"

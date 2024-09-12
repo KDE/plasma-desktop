@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-13 00:40+0000\n"
+"POT-Creation-Date: 2024-09-12 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -24,26 +24,34 @@ msgid "Minimize All Applet Active Indicator"
 msgstr "最小化所有小程序活动指示器"
 
 #: package/contents/ui/MinimizeAllController.qml:17
-#, kde-format
-msgctxt "@action:button"
-msgid "Restore All Minimized Windows"
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Restore All Minimized Windows"
+msgctxt "@action:button shown as tooltip and @action:inmenu"
+msgid "Restore Windows"
 msgstr "还原所有最小化的窗口"
 
 #: package/contents/ui/MinimizeAllController.qml:18
-#, kde-format
-msgctxt "@action:button"
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Minimize All Windows"
+msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Minimize All Windows"
 msgstr "最小化所有窗口"
 
 #: package/contents/ui/MinimizeAllController.qml:20
-#, kde-format
-msgctxt "@info:tooltip"
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Restores the previously minimized windows"
+msgctxt "@info:tooltip shown as subtitle"
 msgid "Restores the previously minimized windows"
 msgstr "还原之前最小化的窗口"
 
 #: package/contents/ui/MinimizeAllController.qml:21
-#, kde-format
-msgctxt "@info:tooltip"
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Shows the Desktop by minimizing all windows"
+msgctxt "@info:tooltip shown as subtitle"
 msgid "Shows the Desktop by minimizing all windows"
 msgstr "最小化所有窗口以显示桌面"
 

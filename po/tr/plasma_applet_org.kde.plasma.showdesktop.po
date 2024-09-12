@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeplasma-addons-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-13 00:40+0000\n"
+"POT-Creation-Date: 2024-09-12 00:41+0000\n"
 "PO-Revision-Date: 2024-06-20 14:00+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -26,27 +26,35 @@ msgid "Minimize All Applet Active Indicator"
 msgstr "Tüm Uygulamacık Etkin Göstergelerini Simge Durumuna Küçült"
 
 #: package/contents/ui/MinimizeAllController.qml:17
-#, kde-format
-msgctxt "@action:button"
-msgid "Restore All Minimized Windows"
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Restore All Minimized Windows"
+msgctxt "@action:button shown as tooltip and @action:inmenu"
+msgid "Restore Windows"
 msgstr "Küçültülmüş Pencereleri Eski Hallerine Döndür"
 
 #: package/contents/ui/MinimizeAllController.qml:18
-#, kde-format
-msgctxt "@action:button"
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Minimize All Windows"
+msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Minimize All Windows"
 msgstr "Tüm Pencereleri Simge Durumuna Küçült"
 
 #: package/contents/ui/MinimizeAllController.qml:20
-#, kde-format
-msgctxt "@info:tooltip"
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Restores the previously minimized windows"
+msgctxt "@info:tooltip shown as subtitle"
 msgid "Restores the previously minimized windows"
 msgstr ""
 "Daha önceden simge durumuna küçültülen pencereleri eski hallerine döndürür"
 
 #: package/contents/ui/MinimizeAllController.qml:21
-#, kde-format
-msgctxt "@info:tooltip"
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Shows the Desktop by minimizing all windows"
+msgctxt "@info:tooltip shown as subtitle"
 msgid "Shows the Desktop by minimizing all windows"
 msgstr "Tüm pencereleri simge durumuna küçülterek Masaüstü’nü gösterir"
 
