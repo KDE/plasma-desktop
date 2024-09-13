@@ -5,18 +5,18 @@
 
 import gi
 
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import GLib, Gtk
 
 
-class TestWindow(Gtk.Window):
+class TestWindow(Gtk.ApplicationWindow):
 
-    def __init__(self) -> None:
-        super().__init__(title="Test Window")
+    def __init__(self, _app: Gtk.Application) -> None:
+        super().__init__(application=_app, title="Test Window")
 
-        self.button = Gtk.Button.new_with_label(label="Active Window")
+        self.button = Gtk.Button(label="Active Window")
         self.button.connect("clicked", self.on_button_clicked)
-        self.add(self.button)
+        self.set_child(self.button)
         self.connect("notify::is-active", self.on_is_active_changed)
 
         GLib.timeout_add_seconds(60, self.close)
@@ -31,8 +31,12 @@ class TestWindow(Gtk.Window):
             self.button.set_label("Inactive Window")
 
 
+def on_activate(_app: Gtk.Application) -> None:
+    win = TestWindow(_app)
+    win.present()
+
+
 if __name__ == "__main__":
-    win = TestWindow()
-    win.connect("destroy", Gtk.main_quit)
-    win.show_all()
-    Gtk.main()
+    app = Gtk.Application(application_id='org.kde.testwindow')
+    app.connect('activate', on_activate)
+    app.run(None)
