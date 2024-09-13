@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"POT-Creation-Date: 2024-09-13 00:41+0000\n"
 "PO-Revision-Date: 2024-02-11 18:46+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -46,7 +46,7 @@ msgstr "グローバルショートカットサービスとのやり取り中に
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "グローバルショートカットデーモンとのやり取りに失敗しました"
 
-#: kcm_keys.cpp:378
+#: kcm_keys.cpp:379
 #, fuzzy, kde-kuit-format
 #| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 #| msgid ""
@@ -61,7 +61,7 @@ msgstr ""
 "ショートカット %1 は既に共通アクション %2 の '%3' に割り当てられています。\n"
 "再割り当てしますか？"
 
-#: kcm_keys.cpp:384
+#: kcm_keys.cpp:385
 #, fuzzy, kde-kuit-format
 #| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 #| msgid ""
@@ -76,13 +76,13 @@ msgstr ""
 "ショートカット %1 は既に共通アクション %2 の '%3' に割り当てられています。\n"
 "再割り当てしますか？"
 
-#: kcm_keys.cpp:393
+#: kcm_keys.cpp:394
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr ""
 
-#: kcm_keys.cpp:403
+#: kcm_keys.cpp:404
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"

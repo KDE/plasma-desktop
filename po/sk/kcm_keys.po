@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"POT-Creation-Date: 2024-09-13 00:41+0000\n"
 "PO-Revision-Date: 2024-06-26 14:09+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -45,7 +45,7 @@ msgstr "Chyba počas komunikácie so službou globálnych skratiek"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Zlyhala komunikácia s démonom globálnych skratiek"
 
-#: kcm_keys.cpp:378
+#: kcm_keys.cpp:379
 #, fuzzy, kde-kuit-format
 #| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 #| msgid ""
@@ -60,7 +60,7 @@ msgstr ""
 "Skratka %1 je už priradená k bežnej %2 akcii '%3'.\n"
 "Chcete ju znova priradiť?"
 
-#: kcm_keys.cpp:384
+#: kcm_keys.cpp:385
 #, fuzzy, kde-kuit-format
 #| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 #| msgid ""
@@ -75,13 +75,13 @@ msgstr ""
 "Skratka %1 je už priradená k bežnej %2 akcii '%3'.\n"
 "Chcete ju znova priradiť?"
 
-#: kcm_keys.cpp:393
+#: kcm_keys.cpp:394
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr ""
 
-#: kcm_keys.cpp:403
+#: kcm_keys.cpp:404
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"

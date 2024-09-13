@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"POT-Creation-Date: 2024-09-13 00:41+0000\n"
 "PO-Revision-Date: 2024-08-25 02:29+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -48,7 +48,7 @@ msgstr "與全域捷徑服務聯繫時發生錯誤失敗"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "與全域捷徑服務聯繫失敗"
 
-#: kcm_keys.cpp:378
+#: kcm_keys.cpp:379
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -59,7 +59,7 @@ msgstr ""
 "快捷鍵 <shortcut>%1</shortcut> 已經指派給通用 %2 動作 <interface>%3</"
 "interface>。<nl/><nl/>要將它重新指派給 %4 嗎？"
 
-#: kcm_keys.cpp:384
+#: kcm_keys.cpp:385
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -71,13 +71,13 @@ msgstr ""
 "作 <interface>%2</interface>。<nl/><nl/>要將它重新指派給 <application>%4</"
 "application> 的動作 <interface>%5</interface> 嗎？"
 
-#: kcm_keys.cpp:393
+#: kcm_keys.cpp:394
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "解決快捷鍵衝突"
 
-#: kcm_keys.cpp:403
+#: kcm_keys.cpp:404
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"

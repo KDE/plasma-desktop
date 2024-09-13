@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-04 00:41+0000\n"
-"PO-Revision-Date: 2024-01-23 15:11+0200\n"
+"PO-Revision-Date: 2024-09-10 11:14+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -80,7 +80,7 @@ msgstr "Ikonas nosaukums ir „%1“"
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
-msgstr "Izvēlēties..."
+msgstr "Izvēlēties…"
 
 #: package/contents/ui/ConfigGeneral.qml:93
 #, kde-format
@@ -147,12 +147,10 @@ msgid "Automatically disabled when in Touch Mode"
 msgstr "Automātiski izslēgt, atrodoties skārienjutīgā režīmā"
 
 #: package/contents/ui/ConfigGeneral.qml:175
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Enabled Search Plugins…"
+#, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
-msgstr "Konfigurēt ieslēgtos meklēšanas spraudņus..."
+msgstr "Konfigurēt meklēšanas spraudņus…"
 
 #: package/contents/ui/ConfigGeneral.qml:185
 #, kde-format
@@ -275,7 +273,7 @@ msgstr "Vairāk"
 #: package/contents/ui/main.qml:316
 #, kde-format
 msgid "Edit Applications…"
-msgstr "Rediģēt programmas..."
+msgstr "Rediģēt programmas…"
 
 #: package/contents/ui/PlacesPage.qml:51
 #, kde-format

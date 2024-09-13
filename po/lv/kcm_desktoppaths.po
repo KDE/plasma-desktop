@@ -11,137 +11,116 @@ msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-30 00:41+0000\n"
-"PO-Revision-Date: 2024-08-15 19:31+0300\n"
+"PO-Revision-Date: 2024-09-10 10:26+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Desktop Menu"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Desktop folder:"
-msgstr "Darvirsmas izvēlne"
+msgstr "Darvirsmas mape:"
 
 #: ui/main.qml:58
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder contains all the files you see on your desktop."
-msgstr ""
+msgstr "Šī mape satur visas uz darbvirsmas redzamās datnes."
 
 #: ui/main.qml:66
-#, fuzzy, kde-format
-#| msgid "Documents"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Documents folder:"
-msgstr "Dokumenti"
+msgstr "Dokumentu mape:"
 
 #: ui/main.qml:72
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save documents from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save documents."
-msgstr "Šī mape būs noklusētā mape dokumentu ielādēšanai un saglabāšanai."
+msgstr "Šī mape ir noklusējuma mape dokumentu atvēršanai un saglabāšanai."
 
 #: ui/main.qml:80
-#, fuzzy, kde-format
-#| msgid "Downloads"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Downloads folder:"
-msgstr "Lejupielādes"
+msgstr "Lejupielāžu mape:"
 
 #: ui/main.qml:86
-#, fuzzy, kde-format
-#| msgid "This folder will be used by default to save your downloaded items."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
-msgstr "Šī mape būs noklusētā mape lejupielādēto dokumentu saglabāšanai."
+msgstr "Šī mape ir noklusējuma mape lejupielādēto datņu saglabāšanai."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgid "Videos path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Videos folder:"
-msgstr "Video ceļš:"
+msgstr "Video mape:"
 
 #: ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save movies from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save video files."
-msgstr "Šī mape būs noklusētā mape video datņu ielādēšanai vai saglabāšanai."
+msgstr "Šī mape ir noklusējuma mape video datņu atvēršanai un saglabāšanai."
 
 #: ui/main.qml:108
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Pictures folder:"
-msgstr "Attēlu ceļš:"
+msgstr "Attēlu mape:"
 
 #: ui/main.qml:114
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save movies from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save image files."
-msgstr "Šī mape būs noklusētā mape video datņu ielādēšanai vai saglabāšanai."
+msgstr "Šī mape ir noklusējuma mape video datņu atvēršanai un saglabāšanai."
 
 #: ui/main.qml:122
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Music folder:"
-msgstr ""
+msgstr "Mūzikas mape:"
 
 #: ui/main.qml:128
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save music from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save music files."
-msgstr "Šī mape būs noklusētā mape mūzikas ielādēšanai un saglabāšanai."
+msgstr "Šī mape ir noklusējuma mape mūzikas datņu atvēršanai un saglabāšanai."
 
 #: ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "Public path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Public folder:"
-msgstr "Publiskais ceļš:"
+msgstr "Publiskā mape:"
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default for publicly-shared files when "
-#| "network sharing is enabled."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
 msgstr ""
-"Šī mape būs noklusētā mape publiski kopīgatajām datnēm, kad būs ieslēgta "
+"Šī mape ir noklusējuma mape publiski kopīgatajām datnēm, kad ir ieslēgta "
 "kopīgošana tīklā."
 
 #: ui/main.qml:150
-#, fuzzy, kde-format
-#| msgid "Templates path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Templates folder:"
-msgstr "Veidņu ceļš:"
+msgstr "Veidņu mape:"
 
 #: ui/main.qml:156
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save templates from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save file templates."
-msgstr "Šī mape būs noklusētā mape veidņu ielādēšanai un saglabāšanai."
+msgstr "Šī mape ir noklusējuma mape datņu veidņu atvēršanai un saglabāšanai."
 
 #: ui/UrlRequester.qml:74
 #, kde-format

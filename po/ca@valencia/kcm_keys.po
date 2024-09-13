@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"POT-Creation-Date: 2024-09-13 00:41+0000\n"
 "PO-Revision-Date: 2024-08-22 10:59+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -50,7 +50,7 @@ msgstr "S'ha produït un error en comunicar amb el servei de dreceres globals"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "No s'ha pogut comunicar amb el domini de dreceres globals"
 
-#: kcm_keys.cpp:378
+#: kcm_keys.cpp:379
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -61,7 +61,7 @@ msgstr ""
 "La drecera <shortcut>%1</shortcut> ja es troba assignada a l'acció %2 comuna "
 "<interface>%3</interface>.<nl/><nl/>La voleu tornar a assignar a %4?"
 
-#: kcm_keys.cpp:384
+#: kcm_keys.cpp:385
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -74,13 +74,13 @@ msgstr ""
 "torne a assignar a l'acció <interface>%4</interface> de <application>%5</"
 "application>?"
 
-#: kcm_keys.cpp:393
+#: kcm_keys.cpp:394
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "Resolució de conflicte de dreceres"
 
-#: kcm_keys.cpp:403
+#: kcm_keys.cpp:404
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
