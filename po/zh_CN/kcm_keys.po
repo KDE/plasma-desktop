@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"POT-Creation-Date: 2024-09-13 02:34+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -46,7 +46,7 @@ msgstr "与全局快捷键服务通信时出错"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "与全局快捷键守护进程通信失败"
 
-#: kcm_keys.cpp:378
+#: kcm_keys.cpp:379
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -57,7 +57,7 @@ msgstr ""
 "快捷键 <shortcut>%1</shortcut> 已经分配给了 %2 通用操作<interface>%3</"
 "interface>。<nl/><nl/>您想要将它重新分配给 %4 吗？"
 
-#: kcm_keys.cpp:384
+#: kcm_keys.cpp:385
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -69,13 +69,13 @@ msgstr ""
 "<interface>%2</interface> 操作。<nl/><nl/>您想要将它重新分配给 <application>"
 "%4</application> 的 <interface>%5</interface> 操作吗？"
 
-#: kcm_keys.cpp:393
+#: kcm_keys.cpp:394
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "解决快捷键冲突"
 
-#: kcm_keys.cpp:403
+#: kcm_keys.cpp:404
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"POT-Creation-Date: 2024-09-13 02:34+0000\n"
 "PO-Revision-Date: 2024-08-23 09:18+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -50,7 +50,7 @@ msgstr "Помилка під час спроби обмінятися дани�
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Не вдалося встановити зв'язок із фоновою службою загальних скорочень"
 
-#: kcm_keys.cpp:378
+#: kcm_keys.cpp:379
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -61,7 +61,7 @@ msgstr ""
 "Скорочення <shortcut>%1</shortcut> вже пов'язано із загальною дією %2 у "
 "<interface>%3</interface>.<nl/><nl/>Перепризначити його до %4?"
 
-#: kcm_keys.cpp:384
+#: kcm_keys.cpp:385
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -73,13 +73,13 @@ msgstr ""
 "interface> у <application>%3</application>.<nl/><nl/>Перепризначити його до "
 "дії <interface>%4</interface> у <application>%5</application>?"
 
-#: kcm_keys.cpp:393
+#: kcm_keys.cpp:394
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "Розв'язання конфлікту скорочень"
 
-#: kcm_keys.cpp:403
+#: kcm_keys.cpp:404
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"

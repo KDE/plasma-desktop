@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"POT-Creation-Date: 2024-09-13 02:34+0000\n"
 "PO-Revision-Date: 2024-08-22 07:46+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -47,7 +47,7 @@ msgstr "Napaka pri komunikacij z globalno storitvijo bližnjic"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Neuspela komunikacija z demonom globalnih bližnjic"
 
-#: kcm_keys.cpp:378
+#: kcm_keys.cpp:379
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -58,7 +58,7 @@ msgstr ""
 "Bližnjica <shortcut>%1</shortcut> je že dodeljena običajnemu dejanju %2 "
 "<interface>%3</interface>.<nl/><nl/>Naj jo znova dodelim %4?"
 
-#: kcm_keys.cpp:384
+#: kcm_keys.cpp:385
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -70,13 +70,13 @@ msgstr ""
 "interface> od <application>%3</application>.<nl/><nl/>Naj jo znova dodelim "
 "dejanju <interface> %4</interface> od <application>%5</application>?"
 
-#: kcm_keys.cpp:393
+#: kcm_keys.cpp:394
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "Razreši spor bližnjic"
 
-#: kcm_keys.cpp:403
+#: kcm_keys.cpp:404
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"

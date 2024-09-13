@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"POT-Creation-Date: 2024-09-13 02:34+0000\n"
 "PO-Revision-Date: 2024-08-25 12:05+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -49,7 +49,7 @@ msgstr "Feil ved kommunikasjon med tenesta for globale snøggtastar"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Klarte ikkje kommunisera med tenesta for globale snarvegar"
 
-#: kcm_keys.cpp:378
+#: kcm_keys.cpp:379
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -65,7 +65,7 @@ msgstr ""
 # %2 er for eksempel «Maksimer vindauget» (utan hermeteikn).
 # %3 er for eksempel «KWin»  (utan hermeteikn).
 # %4 og %5 svarar til høvesvis %2 og %3 (men ny komponent/handling).
-#: kcm_keys.cpp:384
+#: kcm_keys.cpp:385
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -78,13 +78,13 @@ msgstr ""
 "han på nytt til <application>%5</application>-handlinga <interface>%4</"
 "interface>?"
 
-#: kcm_keys.cpp:393
+#: kcm_keys.cpp:394
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "Løys snøggtastkonflikt"
 
-#: kcm_keys.cpp:403
+#: kcm_keys.cpp:404
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"

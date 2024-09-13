@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-12 00:41+0000\n"
-"PO-Revision-Date: 2024-06-13 05:23+0200\n"
+"PO-Revision-Date: 2024-09-12 03:29+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -24,33 +24,25 @@ msgid "Minimize All Applet Active Indicator"
 msgstr "ყველა აპლეტის აქტიურობის მაჩვენებლის ჩაკეცვა"
 
 #: package/contents/ui/MinimizeAllController.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Restore All Minimized Windows"
+#, kde-format
 msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Restore Windows"
-msgstr "ყველა ჩაკეცილი ფანჯრის აღდგენა"
+msgstr "ფანჯრების აღდგენა"
 
 #: package/contents/ui/MinimizeAllController.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Minimize All Windows"
+#, kde-format
 msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Minimize All Windows"
 msgstr "ყველა ფანჯრის ჩაკეცვა"
 
 #: package/contents/ui/MinimizeAllController.qml:20
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Restores the previously minimized windows"
+#, kde-format
 msgctxt "@info:tooltip shown as subtitle"
 msgid "Restores the previously minimized windows"
 msgstr "უკვე ჩაკეცილი ფანჯრების აღდგენა"
 
 #: package/contents/ui/MinimizeAllController.qml:21
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Shows the Desktop by minimizing all windows"
+#, kde-format
 msgctxt "@info:tooltip shown as subtitle"
 msgid "Shows the Desktop by minimizing all windows"
 msgstr "სამუშაო მაგიდის ჩვენება ყველა ფანჯრის ჩაკეცვით"

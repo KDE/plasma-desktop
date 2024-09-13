@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"POT-Creation-Date: 2024-09-13 02:34+0000\n"
 "PO-Revision-Date: 2024-07-20 23:38-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -47,7 +47,7 @@ msgstr "Erro ao comunicar o serviço de atalhos globais"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Falha ao comunicar com o daemon dos atalhos globais"
 
-#: kcm_keys.cpp:378
+#: kcm_keys.cpp:379
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -58,7 +58,7 @@ msgstr ""
 "O atalho <shortcut>%1</shortcut> já está atribuído para a ação comum %2 "
 "<interface>%3</interface>.<nl/><nl/>Deseja reatribuí-lo a %4?"
 
-#: kcm_keys.cpp:384
+#: kcm_keys.cpp:385
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -75,13 +75,13 @@ msgstr ""
 "%2</interface> de <application>%3</application>.<nl/><nl/>Deseja reatribuí-"
 "lo para a ação <interface> %4</interface> de <application>%4</application>?"
 
-#: kcm_keys.cpp:393
+#: kcm_keys.cpp:394
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "Resolver conflito de atalho"
 
-#: kcm_keys.cpp:403
+#: kcm_keys.cpp:404
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"

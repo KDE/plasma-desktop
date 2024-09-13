@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"POT-Creation-Date: 2024-09-13 02:34+0000\n"
 "PO-Revision-Date: 2024-08-27 18:32+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -46,7 +46,7 @@ msgstr "Errore nella comunicazione col servizio delle scorciatoie globali"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Impossibile comunicare col demone delle scorciatoie globali"
 
-#: kcm_keys.cpp:378
+#: kcm_keys.cpp:379
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -57,7 +57,7 @@ msgstr ""
 "La scorciatoia <shortcut>%1</shortcut> è già assegnata all'azione comune %2 "
 "di <interface>%3</interface>.<nl/><nl/>Vuoi riassegnarla a %4?"
 
-#: kcm_keys.cpp:384
+#: kcm_keys.cpp:385
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -70,13 +70,13 @@ msgstr ""
 ">Vuoi riassegnarla all'azione <interface>%4</interface> di <application>%5</"
 "application>?"
 
-#: kcm_keys.cpp:393
+#: kcm_keys.cpp:394
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "Risolvi il conflitto tra scorciatoie"
 
-#: kcm_keys.cpp:403
+#: kcm_keys.cpp:404
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"

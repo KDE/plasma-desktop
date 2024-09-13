@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-08-15 22:20+0300\n"
+"POT-Creation-Date: 2024-09-13 02:34+0000\n"
+"PO-Revision-Date: 2024-09-10 10:49+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: basemodel.cpp:157
 #, kde-format
@@ -47,7 +47,7 @@ msgstr "Kļūda, komunicējot ar globālo saīšņu servisu"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Neizdevās komunicēt ar globālo saīšņu dēmonu"
 
-#: kcm_keys.cpp:378
+#: kcm_keys.cpp:379
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -59,7 +59,7 @@ msgstr ""
 "ko nodrošina „<interface>%3</interface>“.\n"
 "Vai vēlaties to piešķirt „%4“?"
 
-#: kcm_keys.cpp:384
+#: kcm_keys.cpp:385
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -72,13 +72,13 @@ msgstr ""
 "Vai to piešķirt programmas „<application>%5</application>“ darbībai "
 "„<interface>%4</interface>“?"
 
-#: kcm_keys.cpp:393
+#: kcm_keys.cpp:394
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "Atrisināt saīsnes konfliktu"
 
-#: kcm_keys.cpp:403
+#: kcm_keys.cpp:404
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -282,12 +282,10 @@ msgid "Enter a command or choose a script file:"
 msgstr "Ievadiet komandu vai izvēlieties skripta datni:"
 
 #: ui/main.qml:468
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox accessible"
-#| msgid "Command"
+#, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
-msgstr "Komanda"
+msgstr "Komanda:"
 
 #: ui/main.qml:474
 #, kde-format
@@ -311,13 +309,13 @@ msgstr "Izvēlieties skripta datni"
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
-msgstr ""
+msgstr "Nosaukums:"
 
 #: ui/main.qml:491
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
-msgstr ""
+msgstr "Ierakstiet te nosaukumu"
 
 #: ui/main.qml:503
 #, kde-format
@@ -331,7 +329,7 @@ msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
 "extensions"
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
-msgstr ""
+msgstr "Skriptu datnes (.sh, .bash, .zsh, etc.) (*.*sh)"
 
 #: ui/main.qml:528
 #, kde-format

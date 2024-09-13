@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"POT-Creation-Date: 2024-09-13 02:34+0000\n"
 "PO-Revision-Date: 2024-08-23 21:45+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -47,7 +47,7 @@ msgstr "Eraro dum komunikado kun la ĉiea ŝparvoja servo"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Malsukcesis komuniki kun demono por ĉieaj ŝparvojoj"
 
-#: kcm_keys.cpp:378
+#: kcm_keys.cpp:379
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -58,7 +58,7 @@ msgstr ""
 "Ŝparvojo <shortcut>%1</shortcut> jam estas asignita al la komuna %2-ago "
 "<interface>%3</interface>.<nl/><nl/>.Ĉu reasigni ĝin al %4?"
 
-#: kcm_keys.cpp:384
+#: kcm_keys.cpp:385
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -70,13 +70,13 @@ msgstr ""
 "interface> de <application>%3</application>.<nl/><nl/>.Ĉu reasigni ĝin al "
 "ago <interface>%4</interface> de <application>%5</application>?"
 
-#: kcm_keys.cpp:393
+#: kcm_keys.cpp:394
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "Solvi Ŝparvojan Konflikton"
 
-#: kcm_keys.cpp:403
+#: kcm_keys.cpp:404
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"

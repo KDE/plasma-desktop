@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"POT-Creation-Date: 2024-09-13 02:34+0000\n"
 "PO-Revision-Date: 2024-09-03 22:17+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: none\n"
@@ -48,7 +48,7 @@ msgstr "Klaida susisiekiant su visuotine sparčiųjų klavišų tarnyba"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Nepavyko susisiekti su visuotinių sparčiųjų klavišų tarnyba"
 
-#: kcm_keys.cpp:378
+#: kcm_keys.cpp:379
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -60,7 +60,7 @@ msgstr ""
 "veiksmui <interface>%3</interface>.<nl/><nl/>Ar norite priskirti jį iš naujo "
 "veiksmui %4?"
 
-#: kcm_keys.cpp:384
+#: kcm_keys.cpp:385
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -73,13 +73,13 @@ msgstr ""
 ">Ar priskirti jį iš naujo programos <application>%5</application> veiksmui "
 "<interface>%4</interface>?"
 
-#: kcm_keys.cpp:393
+#: kcm_keys.cpp:394
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "Išspręsti sparčiųjų klavišų konfliktą"
 
-#: kcm_keys.cpp:403
+#: kcm_keys.cpp:404
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"

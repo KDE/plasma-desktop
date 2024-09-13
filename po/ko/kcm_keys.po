@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"POT-Creation-Date: 2024-09-13 02:34+0000\n"
 "PO-Revision-Date: 2024-02-09 19:22+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -47,7 +47,7 @@ msgstr "전역 단축키 서비스와 통신하는 중 오류 발생"
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "전역 단축키 데몬과 통신할 수 없음"
 
-#: kcm_keys.cpp:378
+#: kcm_keys.cpp:379
 #, fuzzy, kde-kuit-format
 #| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 #| msgid ""
@@ -62,7 +62,7 @@ msgstr ""
 "단축키 %1이(가) 이미 공통 %2 동작 '%3'에 할당되어 있습니다.\n"
 "다시 할당하시겠습니까?"
 
-#: kcm_keys.cpp:384
+#: kcm_keys.cpp:385
 #, fuzzy, kde-kuit-format
 #| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 #| msgid ""
@@ -77,13 +77,13 @@ msgstr ""
 "단축키 %1이(가) 이미 공통 %2 동작 '%3'에 할당되어 있습니다.\n"
 "다시 할당하시겠습니까?"
 
-#: kcm_keys.cpp:393
+#: kcm_keys.cpp:394
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr ""
 
-#: kcm_keys.cpp:403
+#: kcm_keys.cpp:404
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"

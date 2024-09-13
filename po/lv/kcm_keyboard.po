@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-22 00:41+0000\n"
-"PO-Revision-Date: 2024-08-15 19:39+0300\n"
+"PO-Revision-Date: 2024-09-10 10:49+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -96,17 +96,13 @@ msgstr ""
 "darboties."
 
 #: ui/KeyBindings.qml:16
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Key Bindings"
+#, kde-format
 msgctxt "@title"
 msgid "Key Bindings"
-msgstr "Tastatūras saīsinājumi"
+msgstr "Taustiņu sasaistes"
 
 #: ui/KeyBindings.qml:37
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure keyboard options"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Configure keyboard options"
 msgstr "Konfigurēt tastatūras opcijas"
@@ -118,11 +114,10 @@ msgid "Add Layout"
 msgstr "Pievienot izkārtojumu"
 
 #: ui/LayoutDialog.qml:177
-#, fuzzy, kde-format
-#| msgid "Show layout indicator"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
-msgstr "Rādīt izkārtojumu indikatoru"
+msgstr "Rādīt izkārtojuma nosaukumu"
 
 #: ui/LayoutDialog.qml:187
 #, kde-format
@@ -131,6 +126,8 @@ msgid ""
 "The abbreviated name of the selected layout, which will be displayed in the "
 "system tray. You can change this setting yourself."
 msgstr ""
+"Atlasītā izkārtojuma saīsināts nosaukums, kas parādīsies sistēmas ikonu "
+"joslā. Šo iestatījumu varat mainīt."
 
 #: ui/LayoutDialog.qml:195
 #, kde-format
@@ -148,42 +145,34 @@ msgstr "Priekšskatījums"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Switching…"
-msgstr ""
+msgstr "Pielāgot pārslēgšanu…"
 
 #: ui/main.qml:38
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure Layouts"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Configure Switching"
-msgstr "Konfigurēt izkārtojumus"
+msgstr "Pielāgot pārslēgšanu"
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Key Bindings"
+#, kde-format
 msgctxt "@action:button"
 msgid "Key Bindings"
-msgstr "Tastatūras saīsinājumi"
+msgstr "Taustiņu sasaistes"
 
 #: ui/main.qml:45
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Key Bindings"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Key Bindings"
-msgstr "Tastatūras saīsinājumi"
+msgstr "Taustiņu sasaistes"
 
 #: ui/main.qml:51
 #, kde-format
 msgctxt "@action:button Layout"
 msgid "Add…"
-msgstr ""
+msgstr "Pievienot…"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add layout"
 msgstr "Pievienot izkārtojumu"
@@ -192,12 +181,10 @@ msgstr "Pievienot izkārtojumu"
 #, kde-format
 msgctxt "@label:checkbox configure layouts option"
 msgid "Enable"
-msgstr ""
+msgstr "Ieslēgt"
 
 #: ui/main.qml:60
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure Layouts"
+#, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Configure Layouts"
 msgstr "Konfigurēt izkārtojumus"
@@ -206,35 +193,28 @@ msgstr "Konfigurēt izkārtojumus"
 #, kde-format
 msgctxt "@label:listbox Keyboard model"
 msgid "Model:"
-msgstr ""
+msgstr "Modelis:"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgctxt "@title:group"
-#| msgid "NumLock on Plasma Startup:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "NumLock on startup:"
-msgstr "„NumLock“ statuss, palaižot „Plasma“:"
+msgstr "„NumLock“ statuss pēc sistēmas ieslēgšanās:"
 
 #: ui/main.qml:112
-#, fuzzy, kde-format
-#| msgctxt "@option:radio"
-#| msgid "Turn On"
+#, kde-format
 msgctxt "@item:inlistbox Turn on \"NumLock\" on startup"
 msgid "Turn on"
 msgstr "Ieslēgts"
 
 #: ui/main.qml:116
-#, fuzzy, kde-format
-#| msgid "Turn o&ff"
+#, kde-format
 msgctxt "@item:inlistbox Turn off \"NumLock\" on startup"
 msgid "Turn off"
-msgstr "I&zslēgts"
+msgstr "Izslēgts"
 
 #: ui/main.qml:120
-#, fuzzy, kde-format
-#| msgctxt "@option:radio"
-#| msgid "Leave unchanged"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Leave \"NumLock\" at whatever it was set to before Plasma "
 "started up"
@@ -242,23 +222,19 @@ msgid "Leave unchanged"
 msgstr "Atstāt nemainītu"
 
 #: ui/main.qml:146
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Key repeat:"
-msgstr "Tastatūras atkārtošana"
+msgstr "Taustiņu atkārtošana:"
 
 #: ui/main.qml:155
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Key repeat"
-msgstr "Tastatūras atkārtošana"
+msgstr "Taustiņu atkārtošana"
 
 #: ui/main.qml:166
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Delay:"
+#, kde-format
 msgctxt "@label:textbox Key repeat delay"
 msgid "Delay:"
 msgstr "Aizture:"
@@ -267,25 +243,22 @@ msgstr "Aizture:"
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat delay %1"
-msgstr ""
+msgstr "Taustiņu atkārtošanas aizture %1"
 
 #: ui/main.qml:188
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "%1 ms"
-msgstr ""
+msgstr "%1 ms"
 
 #: ui/main.qml:192
-#, fuzzy, kde-format
-#| msgid " ms"
+#, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "ms"
-msgstr " ms"
+msgstr "ms"
 
 #: ui/main.qml:205
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Rate:"
+#, kde-format
 msgctxt "@label:textbox Key repeat rate"
 msgid "Rate:"
 msgstr "Ātrums:"
@@ -294,27 +267,25 @@ msgstr "Ātrums:"
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat rate %1"
-msgstr ""
+msgstr "Taustiņu atkārtošanas ātrums %1"
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid " repeats/s"
+#, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "%1 repeats/s"
-msgstr " atkārtojumi/s"
+msgstr "%1 atkārtojumi/sek."
 
 #: ui/main.qml:231
-#, fuzzy, kde-format
-#| msgid " repeats/s"
+#, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "repeats/s"
-msgstr " atkārtojumi/s"
+msgstr "atkārtojumi/sek."
 
 #: ui/main.qml:243
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Test area:"
-msgstr "Izmēģinājumu lauks:"
+msgstr "Izmēģinājuma lauks:"
 
 #: ui/main.qml:245
 #, kde-format
@@ -323,9 +294,7 @@ msgid "Type here to test settings"
 msgstr "Rakstiet, lai izmēģinātu iestatījumus"
 
 #: ui/main.qml:256
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Layouts"
+#, kde-format
 msgctxt "@title:view"
 msgid "Layouts"
 msgstr "Izkārtojumi"
@@ -340,7 +309,7 @@ msgstr "Pārvietot augšup"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout up"
-msgstr ""
+msgstr "Pārvietot „%1“ izkārtojumu augšup"
 
 #: ui/main.qml:275
 #, kde-format
@@ -349,17 +318,13 @@ msgid "Move Down"
 msgstr "Pārvietot lejup"
 
 #: ui/main.qml:276
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout Down"
-msgstr "Pārvietot lejup"
+msgstr "Pārvietot „%1“ izkārtojumu lejup"
 
 #: ui/main.qml:286
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Preview"
 msgstr "Priekšskatījums"
@@ -374,29 +339,25 @@ msgstr "Noņemt"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Remove layout %1"
-msgstr ""
+msgstr "Noņemt izkārtojumu „%1“"
 
 #: ui/main.qml:307
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Spare layouts:"
-msgstr "Brīvie izkārtojumi"
+msgstr "Rezerves izkārtojumi:"
 
 #: ui/main.qml:344
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
-msgstr ""
+msgstr "Pamata rezerves izkārtojumu skaits"
 
 #: ui/main.qml:376
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@label:textbox completes spinbox, x main layouts"
 msgid "main layouts"
-msgstr "Brīvie izkārtojumi"
+msgstr "pamata izkārtojumi"
 
 #: ui/main.qml:380
 #, kde-format
@@ -407,105 +368,94 @@ msgid ""
 "accessed through the keyboard indicator applet or by setting a custom "
 "shortcut."
 msgstr ""
+"Sistēmā var būt līdz četriem pamata izkārtojumiem, bet visi pārējie "
+"izkārtojumi ir rezerves. Rezerves izkārtojumi nav iekļauti, ejot cauri "
+"izkārtojumiem, bet tiem iespējams piekļūt ar tastatūras indikatora "
+"sīklietotni vai pielāgotu saīsni."
 
 #: ui/main.qml:385
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
-msgstr "Galveno izkārtojumu skaits:"
+msgstr "Mainīt izkārtojuma saīsni:"
 
 #: ui/main.qml:409
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
-msgstr ""
+msgstr "vai"
 
 #: ui/Switching.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure Layouts"
+#, kde-format
 msgctxt "@title"
 msgid "Configure Switching"
-msgstr "Konfigurēt izkārtojumus"
+msgstr "Konfigurēt pārslēgšanos"
 
 #: ui/Switching.qml:23
 #, kde-format
 msgctxt "@title:group"
 msgid "Behavior"
-msgstr ""
+msgstr "Uzvedība"
 
 #: ui/Switching.qml:28
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Switching layout affects:"
-msgstr "Galveno izkārtojumu skaits:"
+msgstr "Izkārtojumu pārslēgšana ietekmē:"
 
 #: ui/Switching.qml:35
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows"
-msgstr ""
+msgstr "Visus logus"
 
 #: ui/Switching.qml:39
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows on current desktop"
-msgstr ""
+msgstr "Visus logus darbvirsmā"
 
 #: ui/Switching.qml:43
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows of current application"
-msgstr ""
+msgstr "Visus aktīvās programmas logus"
 
 #: ui/Switching.qml:47
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Current window only"
-msgstr ""
+msgstr "Tikai aktīvo logu"
 
 #: ui/Switching.qml:74
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Show notification on layout change"
-msgstr "Parādīt uznirstošu logu, izmainot izkārtojumu"
+msgstr "Mainot izkārtojumu, rādīt paziņojumu"
 
 #: ui/Switching.qml:86
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:group"
 msgid "Shortcuts"
-msgstr "Saīsne"
+msgstr "Saīsnes"
 
 #: ui/Switching.qml:91 ui/Switching.qml:153
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Change layout:"
-msgstr "Brīvie izkārtojumi"
+msgstr "Mainīt izkārtojumu:"
 
 #: ui/Switching.qml:112
-#, fuzzy, kde-format
-#| msgid "Switch to Last-Used Keyboard Layout"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Switch to last used layout:"
-msgstr "Pārslēgt uz pēdējo lietoto tastatūras izkārtojumu"
+msgstr "Pārslēgties uz pēdējo izmantoto izkārtojumu:"
 
 #: ui/Switching.qml:133
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:group"
 msgid "Legacy Shortcuts"
-msgstr "Saīsne"
+msgstr "Novecojušās saīsnes"
 
 #: ui/Switching.qml:141
 #, kde-kuit-format
@@ -516,14 +466,16 @@ msgid ""
 "Wayland.<nl/><nl/>Setting these shortcuts will take you to the Key bindings "
 "page."
 msgstr ""
+"Novecojušās X1 sasaistes ļauj sīkāk pārvaldīt vai modificēt saīsnes un tām "
+"ir nedaudz labāks atbalsts retākos X11 gadījumos. Tās iespējams izmantot arī "
+"„Wayland“ protokolā<nl/><nl/>Šo saīšņu iestatīšana jūs aizvedīs uz taustiņu "
+"sasaistes lapu."
 
 #: ui/Switching.qml:182
-#, fuzzy, kde-format
-#| msgctxt "@option:textbox"
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Alternative symbols:"
-msgstr "Alternatīvā saīsne:"
+msgstr "Alternatīvie simboli:"
 
 #: ui/Switching.qml:208
 #, kde-format
@@ -532,6 +484,8 @@ msgid ""
 "Modifier keys can be used to type additional characters, symbols, and "
 "diacritical marks."
 msgstr ""
+"Modifikatorus taustiņus var izmantot papildu rakstzīmju, simbolu un "
+"diakritisko zīmju rakstīšanai."
 
 #: xkboptionsmodel.cpp:160
 #, kde-format
@@ -545,7 +499,7 @@ msgstr[2] "%1 saīšņu"
 #, kde-format
 msgctxt "no shortcuts defined"
 msgid "None"
-msgstr "Nekāda"
+msgstr "Nav"
 
 #~| msgid "Keyboard &model:"
 #~ msgctxt "@title:group"
