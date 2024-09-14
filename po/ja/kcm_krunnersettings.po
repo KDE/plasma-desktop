@@ -4,8 +4,8 @@ msgstr ""
 "Project-Id-Version: kcm_search\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-02 02:36+0000\n"
-"PO-Revision-Date: 2021-10-03 17:22-0700\n"
-"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
+"PO-Revision-Date: 2024-09-11 04:32+0900\n"
+"Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: ui/main.qml:31
 #, kde-format
@@ -34,13 +34,13 @@ msgstr "中央"
 #: ui/main.qml:55
 #, kde-format
 msgid "Activation:"
-msgstr ""
+msgstr "アクティベーション:"
 
 #: ui/main.qml:58
 #, kde-format
 msgctxt "@option:check"
 msgid "Activate when pressing any key on the desktop"
-msgstr ""
+msgstr "デスクトップ上で任意のキーを押すとアクティブになる"
 
 #: ui/main.qml:71
 #, kde-format
@@ -51,45 +51,45 @@ msgstr "履歴:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Disabled"
-msgstr ""
+msgstr "無効"
 
 #: ui/main.qml:79
 #, kde-format
 msgctxt "@option:check The thing being enabled is search history"
 msgid "Enable suggestions"
-msgstr ""
+msgstr "提案を有効にする"
 
 #: ui/main.qml:84
 #, kde-format
 msgctxt "@option:check The thing being enabled is search history"
 msgid "Enabled auto-complete"
-msgstr ""
+msgstr "オートコンプリートを有効にする"
 
 #: ui/main.qml:92
 #, kde-format
 msgid "Clear History…"
-msgstr "履歴を消去…"
+msgstr "履歴を消去..."
 
 #: ui/main.qml:115
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for all activities"
 msgid "For all activities"
-msgstr ""
+msgstr "すべてのアクティビティ"
 
 #: ui/main.qml:127
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for this activity"
 msgid "For activity \"%1\""
-msgstr ""
+msgstr "アクティビティ \"%1\""
 
 #: ui/main.qml:144
 #, kde-format
 msgctxt "@label"
 msgid "Plugins:"
-msgstr ""
+msgstr "プラグイン:"
 
 #: ui/main.qml:148
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
-msgstr ""
+msgstr "有効な検索プラグインを設定..."
