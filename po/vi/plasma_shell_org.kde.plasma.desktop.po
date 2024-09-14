@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"POT-Creation-Date: 2024-09-14 00:42+0000\n"
 "PO-Revision-Date: 2023-01-08 16:18+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -708,8 +708,9 @@ msgstr "Các loại"
 
 #: contents/explorer/WidgetExplorer.qml:231
 #, kde-format
-msgid "Confirm Removal Of One Widget"
-msgid_plural "Confirm Removal Of %1 Widgets"
+msgctxt "@action:button uninstall widgets in widget explorer"
+msgid "Confirm Removal of One Widget"
+msgid_plural "Confirm Removal of %1 Widgets"
 msgstr[0] ""
 
 #: contents/explorer/WidgetExplorer.qml:315

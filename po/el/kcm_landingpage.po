@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-07-30 00:42+0000\n"
+"PO-Revision-Date: 2024-09-13 18:18+0300\n"
+"Last-Translator: Antonis G. <capoiosct@gmail.com>\n"
+"Language-Team: el <kde-i18n-el@kde.org>\n"
+"Language: Greek\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.4\n"
+
+#. i18n: ectx: label, entry (colorScheme), group (General)
+#: landingpage_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Color scheme name"
+msgstr ""
+
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:15
+#, kde-format
+msgid "Single click to open files"
+msgstr ""
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:19
+#, kde-format
+msgid "Global Look and Feel package"
+msgstr ""
+
+#. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
+#. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:23
+#: landingpage_kdeglobalssettings.kcfg:27
+#, kde-format
+msgid "Global Look and Feel package, alternate"
+msgstr ""
+
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:31
+#, kde-format
+msgid "Animation speed"
+msgstr ""
+
+#: ui/main.qml:33
+#, kde-format
+msgid "Theme:"
+msgstr ""
+
+#: ui/main.qml:76
+#, kde-format
+msgctxt "@title:group translate as short as possible"
+msgid "More appearance settings:"
+msgstr ""
+
+#: ui/main.qml:120
+#, kde-format
+msgid "Animation speed:"
+msgstr ""
+
+#: ui/main.qml:129
+#, kde-format
+msgctxt "Animation speed"
+msgid "Slow"
+msgstr ""
+
+#: ui/main.qml:136
+#, kde-format
+msgctxt "Animation speed"
+msgid "Instant"
+msgstr ""
+
+#: ui/main.qml:150
+#, kde-format
+msgctxt ""
+"part of a sentence: 'Clicking files or folders [opens them/selects them]'"
+msgid "Clicking files or folders:"
+msgstr ""
+
+#: ui/main.qml:158
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders selects them'"
+msgid "Selects them"
+msgstr ""
+
+#: ui/main.qml:163
+#, kde-format
+msgid "Open by double-clicking instead"
+msgstr ""
+
+#: ui/main.qml:188
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders opens them'"
+msgid "Opens them"
+msgstr ""
+
+#: ui/main.qml:193
+#, kde-format
+msgid "Select by clicking on item's selection marker"
+msgstr ""
+
+#: ui/main.qml:216
+#, kde-format
+msgctxt "@title:group translate as short as possible"
+msgid "More behavior settings:"
+msgstr ""
+
+#: ui/main.qml:229
+#, kde-format
+msgid "Most Used Pages:"
+msgstr ""

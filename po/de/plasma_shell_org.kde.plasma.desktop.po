@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"POT-Creation-Date: 2024-09-14 00:42+0000\n"
 "PO-Revision-Date: 2024-09-08 17:06+0200\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -683,9 +683,12 @@ msgid "Categories"
 msgstr "Kategorien"
 
 #: contents/explorer/WidgetExplorer.qml:231
-#, kde-format
-msgid "Confirm Removal Of One Widget"
-msgid_plural "Confirm Removal Of %1 Widgets"
+#, fuzzy, kde-format
+#| msgid "Confirm Removal Of One Widget"
+#| msgid_plural "Confirm Removal Of %1 Widgets"
+msgctxt "@action:button uninstall widgets in widget explorer"
+msgid "Confirm Removal of One Widget"
+msgid_plural "Confirm Removal of %1 Widgets"
 msgstr[0] "Entfernen eines Miniprogramms bestätigen"
 msgstr[1] "Entfernen von %1 Miniprogrammen bestätigen"
 

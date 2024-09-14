@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-12 00:41+0000\n"
-"PO-Revision-Date: 2024-06-13 23:37+0200\n"
+"PO-Revision-Date: 2024-09-14 00:23+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: package/contents/ui/main.qml:116
 #, kde-format
@@ -24,33 +24,25 @@ msgid "Minimize All Applet Active Indicator"
 msgstr "Alle indicatoren voor actieve applet minimaliseren"
 
 #: package/contents/ui/MinimizeAllController.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Restore All Minimized Windows"
+#, kde-format
 msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Restore Windows"
-msgstr "Alle geminimaliseerde vensters herstellen"
+msgstr "Vensters herstellen"
 
 #: package/contents/ui/MinimizeAllController.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Minimize All Windows"
+#, kde-format
 msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Minimize All Windows"
 msgstr "Alle vensters minimaliseren"
 
 #: package/contents/ui/MinimizeAllController.qml:20
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Restores the previously minimized windows"
+#, kde-format
 msgctxt "@info:tooltip shown as subtitle"
 msgid "Restores the previously minimized windows"
 msgstr "Herstelt de eerder geminimaliseerde vensters"
 
 #: package/contents/ui/MinimizeAllController.qml:21
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Shows the Desktop by minimizing all windows"
+#, kde-format
 msgctxt "@info:tooltip shown as subtitle"
 msgid "Shows the Desktop by minimizing all windows"
 msgstr "Toont het bureaublad door alle vensters te minimaliseren"

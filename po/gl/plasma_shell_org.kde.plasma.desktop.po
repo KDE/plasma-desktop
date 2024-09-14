@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"POT-Creation-Date: 2024-09-14 00:42+0000\n"
 "PO-Revision-Date: 2024-09-06 16:17+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -678,9 +678,12 @@ msgid "Categories"
 msgstr "Categorías"
 
 #: contents/explorer/WidgetExplorer.qml:231
-#, kde-format
-msgid "Confirm Removal Of One Widget"
-msgid_plural "Confirm Removal Of %1 Widgets"
+#, fuzzy, kde-format
+#| msgid "Confirm Removal Of One Widget"
+#| msgid_plural "Confirm Removal Of %1 Widgets"
+msgctxt "@action:button uninstall widgets in widget explorer"
+msgid "Confirm Removal of One Widget"
+msgid_plural "Confirm Removal of %1 Widgets"
 msgstr[0] "Confirmar a retirada dun trebello"
 msgstr[1] "Confirmar a retirada de %1 trebellos"
 

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-29 00:41+0000\n"
-"PO-Revision-Date: 2024-05-27 22:47+0200\n"
+"PO-Revision-Date: 2024-09-13 15:30+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: kcmaccess.cpp:117
 #, kde-format
@@ -171,10 +171,9 @@ msgstr "A vizuális csengő időtartama"
 
 #. i18n: ectx: label, entry (ColorblindnessCorrection), group (Plugins)
 #: kcmaccessibilitycolorblindnesscorrection.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether Colorblindness Correction is enabled"
-msgstr "A Kurzor rázása be van-e kapcsolva"
+msgstr "A Színtévesztés-korrekció be van-e kapcsolva"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
@@ -315,15 +314,13 @@ msgid "Magnification"
 msgstr "Nagyítás"
 
 #: ui/ActivationShortcuts.qml:17
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgctxt "@option:check"
 msgid "Activation shortcuts:"
-msgstr "Aktiválási sorozat"
+msgstr "Aktiválási gyorsbillentyűk:"
 
 #: ui/ActivationShortcuts.qml:18
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "Enable activation shortcuts"
 msgid "Enable"
 msgstr "Bekapcsolás"
@@ -332,20 +329,20 @@ msgstr "Bekapcsolás"
 #, kde-format
 msgctxt "@label"
 msgid "Press Shift 5 times to enable Sticky Keys"
-msgstr ""
+msgstr "Nyomja meg ötször a Shiftet a ragadó billentyűk bekapcsolásához"
 
 #: ui/ActivationShortcuts.qml:37
 #, kde-format
 msgctxt "@label"
 msgid "Hold Shift for 8 seconds to enable Slow Keys"
 msgstr ""
+"Tartsa lenyomva a Shiftet 8 másodpercig a lassú billentyűk bekapcsolásához"
 
 #: ui/ActivationShortcuts.qml:46
-#, fuzzy, kde-format
-#| msgid "Turn sticky keys and slow keys off after inactivity:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable sticky and slow keys after:"
-msgstr "A ragadós és lassú billentyűk kikapcsolása ennyi inaktivitás után:"
+msgstr "Ragadós és lassú billentyűk kikapcsolása ennyi inaktivitás után:"
 
 #: ui/ActivationShortcuts.qml:75
 #, kde-format
@@ -355,8 +352,7 @@ msgstr[0] "%1 perc"
 msgstr[1] "%1 perc"
 
 #: ui/ActivationShortcuts.qml:79
-#, fuzzy, kde-format
-#| msgid "min"
+#, kde-format
 msgctxt "short for minute(s)"
 msgid "min"
 msgid_plural "min"
@@ -364,10 +360,9 @@ msgstr[0] "perc"
 msgstr[1] "perc"
 
 #: ui/ActivationShortcuts.qml:88
-#, fuzzy, kde-format
-#| msgid "When a gesture is used:"
+#, kde-format
 msgid "When a shortcut is used:"
-msgstr "Kézmozdulat használatakor:"
+msgstr "Gyorsbillentyű használatakor:"
 
 #: ui/ActivationShortcuts.qml:89
 #, kde-format
@@ -375,10 +370,9 @@ msgid "Display a confirmation dialog"
 msgstr "Megerősítéskérő ablak megjelenítése"
 
 #: ui/ActivationShortcuts.qml:100
-#, fuzzy, kde-format
-#| msgid "Ring the System Bell"
+#, kde-format
 msgid "Ring the system bell"
-msgstr "A rendszercsengő megszólaltatása"
+msgstr "Rendszercsengő megszólaltatása"
 
 #: ui/ActivationShortcuts.qml:111
 #, kde-format
@@ -396,12 +390,10 @@ msgid "Please choose an audio file"
 msgstr "Válasszon ki egy hangfájlt"
 
 #: ui/Bell.qml:21
-#, fuzzy, kde-format
-#| msgctxt "Name filters in a file dialog"
-#| msgid "Audio Files (*.ogg *.wav)"
+#, kde-format
 msgctxt "Name filters in a file dialog. Do not translate `(*.ogg *.oga *.wav)`"
 msgid "ogg, oga, and wav audio files (*.ogg *.oga *.wav)"
-msgstr "Hangfájlok (*.ogg *.wav)"
+msgstr "Hangfájlok (*.ogg *.oga *.wav)"
 
 #: ui/Bell.qml:30
 #, kde-format
@@ -418,7 +410,7 @@ msgstr "Bekapcsolás"
 #, kde-format
 msgctxt "@label"
 msgid "Emits a sound whenever certain keys are pressed"
-msgstr ""
+msgstr "Bizonyos billentyűk megnyomásakor hangot ad ki"
 
 #: ui/Bell.qml:50
 #, kde-format
@@ -448,26 +440,22 @@ msgid "Enable"
 msgstr "Bekapcsolás"
 
 #: ui/Bell.qml:113
-#, fuzzy, kde-format
-#| msgid "Use the system bell whenever a key is rejected"
+#, kde-format
 msgctxt "@label"
 msgid "Flashes the screen whenever certain keys are pressed"
-msgstr "Csengetés billentyű visszautasításakor"
+msgstr "Villogtatja a képernyőt bizonyos billentyűk lenyomásakor"
 
 #: ui/Bell.qml:123
-#, fuzzy, kde-format
-#| msgctxt "Invert screen on a system bell"
-#| msgid "Invert Screen"
+#, kde-format
 msgctxt "@option:radio Invert screen colors when a system bell is rung"
 msgid "Invert screen colors"
-msgstr "Képernyő invertálása"
+msgstr "Képernyőszínek invertálása"
 
 #: ui/Bell.qml:141
-#, fuzzy, kde-format
-#| msgid "F&lash screen"
+#, kde-format
 msgctxt "@option:radio Flash screen when a system bell is rung"
 msgid "Flash screen"
-msgstr "A &képernyő villogtatása"
+msgstr "Képernyő villogtatása"
 
 #: ui/Bell.qml:152
 #, kde-format
@@ -484,13 +472,11 @@ msgstr "Időtartam:"
 #: ui/Bell.qml:181 ui/KeyboardFilters.qml:55 ui/KeyboardFilters.qml:151
 #: ui/MouseNavigation.qml:51 ui/MouseNavigation.qml:73
 #: ui/MouseNavigation.qml:95
-#, fuzzy, kde-format
-#| msgid "%1 min"
-#| msgid_plural "%1 min"
+#, kde-format
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "%1 perc"
-msgstr[1] "%1 perc"
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
 
 #: ui/Bell.qml:185 ui/KeyboardFilters.qml:59 ui/KeyboardFilters.qml:155
 #: ui/MouseNavigation.qml:55 ui/MouseNavigation.qml:77
@@ -499,18 +485,17 @@ msgstr[1] "%1 perc"
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ms"
+msgstr[1] "ms"
 
 #: ui/ColorblindnessCorrection.qml:22
 #, kde-format
 msgctxt "@label"
 msgid "Color blindness correction:"
-msgstr ""
+msgstr "Színvakság-korrekció:"
 
 #: ui/ColorblindnessCorrection.qml:23
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable color blindness correction effect"
 msgid "Enable"
 msgstr "Bekapcsolás"
@@ -519,63 +504,63 @@ msgstr "Bekapcsolás"
 #, kde-format
 msgctxt "@label"
 msgid "Mode:"
-msgstr ""
+msgstr "Mód:"
 
 #: ui/ColorblindnessCorrection.qml:41
 #, kde-format
 msgctxt "@option"
 msgid "Protanopia (red weak)"
-msgstr ""
+msgstr "Protanópia (vörös)"
 
 #: ui/ColorblindnessCorrection.qml:42
 #, kde-format
 msgctxt "@option"
 msgid "Deuteranopia (green weak)"
-msgstr ""
+msgstr "Deuteranópia (zöld)"
 
 #: ui/ColorblindnessCorrection.qml:43
 #, kde-format
 msgctxt "@option"
 msgid "Tritanopia (blue-yellow)"
-msgstr ""
+msgstr "Tritanópia (kék-sárga)"
 
 #: ui/ColorblindnessCorrection.qml:58
 #, kde-format
 msgctxt "@label"
 msgid "Intensity:"
-msgstr ""
+msgstr "Intenzitás:"
 
 #: ui/ColorblindnessCorrection.qml:81
 #, kde-format
 msgctxt "@label Mild color blindness correction intensity"
 msgid "Mild"
-msgstr ""
+msgstr "Enyhe"
 
 #: ui/ColorblindnessCorrection.qml:88
 #, kde-format
 msgctxt "@label Intense color blindness correction intensity"
 msgid "Intense"
-msgstr ""
+msgstr "Intenzív"
 
 #: ui/ColorblindnessCorrection.qml:111
 #, kde-format
 msgid "Red"
-msgstr ""
+msgstr "Vörös"
 
 #: ui/ColorblindnessCorrection.qml:112
 #, kde-format
 msgid "Green"
-msgstr ""
+msgstr "Zöld"
 
 #: ui/ColorblindnessCorrection.qml:113
 #, kde-format
 msgid "Blue"
-msgstr ""
+msgstr "Kék"
 
 #: ui/ColorblindnessCorrection.qml:114
 #, kde-format
 msgid "Purple"
-msgstr ""
+msgstr "Lila"
 
 #: ui/KeyboardFilters.qml:17
 #, kde-format
@@ -596,6 +581,9 @@ msgid ""
 "Useful if you accidentally type more than one key at a time or have "
 "difficulty pressing the key you want the first time."
 msgstr ""
+"Egy billentyű elfogadásához lenyomva kell tartani azt a megadott ideig. "
+"Hasznos, ha véletlenül egyszerre több billentyűt nyom le, vagy ha véletlenül "
+"nehezen nyomja meg a kívánt billentyűt első alkalommal."
 
 #: ui/KeyboardFilters.qml:40
 #, kde-format
@@ -645,6 +633,9 @@ msgid ""
 "tremors that cause you to press a key multiple times when you only intend to "
 "press once."
 msgstr ""
+"Figyelmen kívül hagyja az ugyanazon billentyű gyors, ismételt lenyomását. "
+"Hasznos, ha kézremegés miatt többször is megnyom egy billentyűt, amikor csak "
+"egyszer akarja megnyomni."
 
 #: ui/KeyboardFilters.qml:136
 #, kde-format
@@ -658,11 +649,10 @@ msgid "Ring system bell when rejected"
 msgstr "Csengetés visszautasításkor"
 
 #: ui/main.qml:28
-#, fuzzy, kde-format
-#| msgid "Use System Bell"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "System Bell"
-msgstr "A rendszercsengő használata"
+msgstr "Rendszercsengő"
 
 #: ui/main.qml:33
 #, kde-format
@@ -683,10 +673,9 @@ msgid "Mouse Navigation"
 msgstr "Egeres navigáció"
 
 #: ui/main.qml:48
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgid "Activation Shortcuts"
-msgstr "Aktiválási sorozat"
+msgstr "Aktiválási gyorsbillentyűk"
 
 #: ui/main.qml:53
 #, kde-format
@@ -698,7 +687,7 @@ msgstr "Képernyőolvasó"
 #, kde-format
 msgctxt "Correction for color blindness"
 msgid "Color Blindness Correction"
-msgstr ""
+msgstr "Színvakság-korrekció"
 
 #: ui/main.qml:63
 #, kde-format
@@ -707,15 +696,13 @@ msgid "Shake Cursor"
 msgstr "Kurzor rázása"
 
 #: ui/ModifierKeys.qml:17
-#, fuzzy, kde-format
-#| msgid "Sticky keys:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sticky keys:"
 msgstr "Ragadó billentyűk:"
 
 #: ui/ModifierKeys.qml:22
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable sticky keys"
 msgid "Enable"
 msgstr "Bekapcsolás"
@@ -728,13 +715,15 @@ msgid ""
 "though they “stick in place” and no longer need to be held down when typing "
 "a keyboard shortcut."
 msgstr ""
+"Az olyan módosító billentyűk, mint a Ctrl, Shift, Alt és a Meta/Super/"
+"Windows, úgy működnek, mintha „a helyükön maradnának”, és nem kell többé "
+"lenyomva tartani azokat billentyűparancs használata közben."
 
 #: ui/ModifierKeys.qml:39
-#, fuzzy, kde-format
-#| msgid "Lock the sticky keys"
+#, kde-format
 msgctxt "@option:check"
 msgid "Lock sticky keys"
-msgstr "A ragadó billentyűk zárolása"
+msgstr "Ragadó billentyűk zárolása"
 
 #: ui/ModifierKeys.qml:51
 #, kde-format
@@ -743,6 +732,9 @@ msgid ""
 "Once locked, the “sticky” state of modifier keys will not be disabled until "
 "a keyboard shortcut is finished or until a non-modifier key is pressed."
 msgstr ""
+"A zárolás után a módosító billentyűk „ragacsos” állapota nem lesz "
+"kikapcsolva, amíg egy billentyűparancs befejeződik, vagy amíg egy nem "
+"módosító billentyűt le nem nyom."
 
 #: ui/ModifierKeys.qml:57
 #, kde-format
@@ -755,49 +747,43 @@ msgid "Ring system bell when modifier keys are used"
 msgstr "Csengetés módosítóbillentyűk használatakor"
 
 #: ui/ModifierKeys.qml:88
-#, fuzzy, kde-format
-#| msgid "Feedback:"
+#, kde-format
 msgctxt "@option:check Feedback options:"
 msgid "Feedback:"
 msgstr "Visszajelzés:"
 
 #: ui/ModifierKeys.qml:93
-#, fuzzy, kde-format
-#| msgid "Ring system bell when locking keys are toggled"
+#, kde-format
 msgctxt "@option:check"
 msgid "Ring system bell when locking keys are used"
-msgstr "Csengetés zárolóbillentyűk be- és kikapcsolásakor"
+msgstr "Csengetés zárolóbillentyűk használatakor"
 
 #: ui/ModifierKeys.qml:104
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The locking keys are Caps Lock, Num Lock, and Scroll Lock."
-msgstr ""
+msgstr "A zárolóbillentyűk a Caps Lock, Num Lock és a Scroll Lock."
 
 #: ui/ModifierKeys.qml:108
-#, fuzzy, kde-format
-#| msgid "Show notification when modifier or locking keys are used"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show notification when modifier or locking keys are used"
 msgstr "Értesítés megjelenítése módosító- vagy zárolóbillentyű használatakor"
 
 #: ui/ModifierKeys.qml:120
-#, fuzzy, kde-format
-#| msgid "Configure Notifications…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Notifications…"
-msgstr "Az értesítések beállítása…"
+msgstr "Értesítések beállítása…"
 
 #: ui/MouseNavigation.qml:16
-#, fuzzy, kde-format
-#| msgid "Use number pad to move cursor:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move cursor:"
 msgstr "Kurzor mozgatása a számbillentyűzettel:"
 
 #: ui/MouseNavigation.qml:21
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable mouse navigation"
 msgid "Enable"
 msgstr "Bekapcsolás"
@@ -812,65 +798,63 @@ msgid ""
 "up). The keys <shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</"
 "shortcut>, and <shortcut>9</shortcut> allow for diagonal movement."
 msgstr ""
+"A számbillentyűzet <shortcut>5</shortcut>-ös billentyűje egérkattintásként "
+"működik. A <shortcut>2</shortcut>-es, <shortcut>4</shortcut>-es, "
+"<shortcut>6</shortcut>-os és <shortcut>8</shortcut>-as billentyűk lehetővé "
+"teszik az egyenes mozgatást (le, balra, jobbra és fel). Az <shortcut>1</"
+"shortcut>-es, <shortcut>3</shortcut>-as, <shortcut>7</shortcut>-es és "
+"<shortcut>9</shortcut>-es billentyűk az átlós mozgást teszik lehetővé."
 
 #: ui/MouseNavigation.qml:37
-#, fuzzy, kde-format
-#| msgid "Acceleration delay:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
 msgstr "Gyorsítási késleltetés:"
 
 #: ui/MouseNavigation.qml:59
-#, fuzzy, kde-format
-#| msgid "Repeat interval:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr "Ismétlési időköz:"
 
 #: ui/MouseNavigation.qml:81
-#, fuzzy, kde-format
-#| msgid "Acceleration time:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "Gyorsítási idő:"
 
 #: ui/MouseNavigation.qml:103
-#, fuzzy, kde-format
-#| msgid "Maximum speed:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr "Maximális sebesség:"
 
 #: ui/MouseNavigation.qml:117
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
 msgstr "Mutatógyorsítás:"
 
 #: ui/ScreenReader.qml:20
-#, fuzzy, kde-format
-#| msgid "Launch Orca Screen Reader Configuration…"
+#, kde-format
 msgctxt "@info Placeholder message title"
 msgid "The Orca Screen Reader is not installed"
-msgstr "Az Orca beállításainak betöltése…"
+msgstr "Az Orca képernyőolvasó nincs telepítve"
 
 #: ui/ScreenReader.qml:21
 #, kde-format
 msgctxt "@info Placeholder message explanation"
 msgid "Please install it, then close and reopen this window"
-msgstr ""
+msgstr "Kérjük, telepítse, majd zárja be és nyissa meg újra ezt az ablakot"
 
 #: ui/ScreenReader.qml:27
-#, fuzzy, kde-format
-#| msgid "Enable Screen Reader"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable Screen Reader"
 msgstr "Képernyőolvasó bekapcsolása"
 
 #: ui/ScreenReader.qml:39
-#, fuzzy, kde-format
-#| msgid "Launch Orca Screen Reader Configuration…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Launch Orca Screen Reader Configuration…"
 msgstr "Az Orca beállításainak betöltése…"

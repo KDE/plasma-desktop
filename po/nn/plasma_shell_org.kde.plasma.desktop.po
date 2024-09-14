@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"POT-Creation-Date: 2024-09-14 00:42+0000\n"
 "PO-Revision-Date: 2024-08-25 12:05+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -684,9 +684,12 @@ msgid "Categories"
 msgstr "Kategoriar"
 
 #: contents/explorer/WidgetExplorer.qml:231
-#, kde-format
-msgid "Confirm Removal Of One Widget"
-msgid_plural "Confirm Removal Of %1 Widgets"
+#, fuzzy, kde-format
+#| msgid "Confirm Removal Of One Widget"
+#| msgid_plural "Confirm Removal Of %1 Widgets"
+msgctxt "@action:button uninstall widgets in widget explorer"
+msgid "Confirm Removal of One Widget"
+msgid_plural "Confirm Removal of %1 Widgets"
 msgstr[0] "Stadfest fjerning av skjermelement"
 msgstr[1] "Stadfest fjerning av %1 skjermelement"
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"POT-Creation-Date: 2024-09-14 00:42+0000\n"
 "PO-Revision-Date: 2024-09-05 14:56+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -675,9 +675,12 @@ msgid "Categories"
 msgstr "Kategoriler"
 
 #: contents/explorer/WidgetExplorer.qml:231
-#, kde-format
-msgid "Confirm Removal Of One Widget"
-msgid_plural "Confirm Removal Of %1 Widgets"
+#, fuzzy, kde-format
+#| msgid "Confirm Removal Of One Widget"
+#| msgid_plural "Confirm Removal Of %1 Widgets"
+msgctxt "@action:button uninstall widgets in widget explorer"
+msgid "Confirm Removal of One Widget"
+msgid_plural "Confirm Removal of %1 Widgets"
 msgstr[0] "1 Araç Takımının Kaldırılmasını Onayla"
 msgstr[1] "%1 Araç Takımının Kaldırılmasını Onayla"
 
