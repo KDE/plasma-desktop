@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 03:23+0000\n"
-"PO-Revision-Date: 2022-08-20 23:18-0700\n"
-"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
+"PO-Revision-Date: 2024-09-11 06:29+0900\n"
+"Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -37,7 +37,7 @@ msgstr "挙動"
 #, kde-format
 msgctxt "@action:button"
 msgid "Unmute"
-msgstr "アンミュート"
+msgstr "ミュート解除"
 
 #: package/contents/ui/AudioStream.qml:101
 #, kde-format
@@ -49,7 +49,7 @@ msgstr "ミュート"
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Unmute %1"
-msgstr "%1 をアンミュート"
+msgstr "%1 をミュート解除"
 
 #: package/contents/ui/AudioStream.qml:102
 #, kde-format
@@ -75,16 +75,14 @@ msgid "General:"
 msgstr "全般:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Show small window previews when hovering over Tasks"
-msgstr "ツールチップへのホバー時にウィンドウを強調表示"
+msgstr "タスクの上にマウスを置いたときに小さなウィンドウプレビューを表示"
 
 #: package/contents/ui/ConfigAppearance.qml:39
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgid "Hide other windows when hovering over previews"
-msgstr "ツールチップへのホバー時にウィンドウを強調表示"
+msgstr "プレビューにマウスを置いたときに他のウィンドウを非表示にする"
 
 #: package/contents/ui/ConfigAppearance.qml:44
 #, kde-format
@@ -173,25 +171,19 @@ msgid "Cycles through tasks"
 msgstr "タスクを循環"
 
 #: package/contents/ui/ConfigBehavior.qml:63
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
 msgid "Shows small window previews"
-msgstr "ウィンドウを並べて表示"
+msgstr "小さなウィンドウプレビューを表示"
 
 #: package/contents/ui/ConfigBehavior.qml:64
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
-msgstr "ウィンドウを並べて表示"
+msgstr "大きなウィンドウプレビューを表示"
 
 #: package/contents/ui/ConfigBehavior.qml:65
 #, kde-format
@@ -211,7 +203,7 @@ msgstr ""
 #: package/contents/ui/ConfigBehavior.qml:83
 #, kde-format
 msgid "Combine into single button"
-msgstr "一つのボタンに結合する"
+msgstr "1つのボタンに結合する"
 
 #: package/contents/ui/ConfigBehavior.qml:90
 #, kde-format
@@ -370,24 +362,24 @@ msgstr "新しいタスクは:"
 #: package/contents/ui/ConfigBehavior.qml:209
 #, kde-format
 msgid "On the bottom"
-msgstr ""
+msgstr "一番下に"
 
 #: package/contents/ui/ConfigBehavior.qml:213
 #: package/contents/ui/ConfigBehavior.qml:233
 #, kde-format
 msgid "To the right"
-msgstr "右に現れる"
+msgstr "右に表示"
 
 #: package/contents/ui/ConfigBehavior.qml:215
 #: package/contents/ui/ConfigBehavior.qml:231
 #, kde-format
 msgid "To the left"
-msgstr "左に現れる"
+msgstr "左に表示"
 
 #: package/contents/ui/ConfigBehavior.qml:227
 #, kde-format
 msgid "On the Top"
-msgstr ""
+msgstr "一番上に"
 
 #: package/contents/ui/ContextMenu.qml:95
 #, kde-format
@@ -618,7 +610,7 @@ msgstr "%1 を有効化"
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
-msgstr "%1 をアンミュート"
+msgstr "%1 をミュート解除"
 
 #: package/contents/ui/ToolTipInstance.qml:357
 #, kde-format
