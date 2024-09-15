@@ -17,8 +17,8 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-22 00:41+0000\n"
-"PO-Revision-Date: 2024-01-09 22:19-0800\n"
-"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
+"PO-Revision-Date: 2024-09-11 04:34+0900\n"
+"Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -27,22 +27,22 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Jumpei Ogawa, Ryuichi Yamada"
+msgstr "Jumpei Ogawa, Ryuichi Yamada, UTUMI Hirosi"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "phanective@gmail.com, ryuichi_ya220@outlook.jp"
+msgstr "phanective@gmail.com, ryuichi_ya220@outlook.jp, utuhiro78@yahoo.co.jp"
 
 #: bindings.cpp:24
 #, kde-format
 msgid "Keyboard Layout Switcher"
-msgstr "キーボードレイアウトスイッチャー"
+msgstr "キーボードレイアウトの切り替え"
 
 #: bindings.cpp:26
 #, kde-format
@@ -52,7 +52,7 @@ msgstr "次のキーボードレイアウトに切り替え"
 #: bindings.cpp:30
 #, kde-format
 msgid "Switch to Last-Used Keyboard Layout"
-msgstr "最後に使用されたキーボードレイアウトに切り替え"
+msgstr "最後に使用したキーボードレイアウトに切り替え"
 
 #: bindings.cpp:60
 #, kde-format
@@ -95,23 +95,28 @@ msgid ""
 "not supported and  will also trigger this message. These might still work "
 "fine if applied"
 msgstr ""
+"キーボードジオメトリの読み込みに失敗しました。これは選択したモデルが特定のレ"
+"イアウトまたはレイアウトバリアントをサポートしていないことを示している場合が"
+"多いです。この問題はモデル、レイアウト、バリアントの組み合わせによって発生す"
+"る場合もあります。\n"
+"システムの xkb ディレクトリ外で定義しているレイアウトのプレビューはサポートし"
+"ていないので、それによってこのメッセージが表示されることもあります。これらを"
+"修正すると、正常に機能する可能性があります"
 
 #: ui/KeyBindings.qml:16
 #, kde-format
 msgctxt "@title"
 msgid "Key Bindings"
-msgstr ""
+msgstr "キーバインディング"
 
 #: ui/KeyBindings.qml:37
-#, fuzzy, kde-format
-#| msgid "&Configure keyboard options"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Configure keyboard options"
-msgstr "キーボードオプションを設定(&C)"
+msgstr "キーボードオプションを設定"
 
 #: ui/LayoutDialog.qml:20
-#, fuzzy, kde-format
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Layout"
 msgstr "レイアウトを追加"
@@ -120,7 +125,7 @@ msgstr "レイアウトを追加"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
-msgstr ""
+msgstr "レイアウトの短縮名"
 
 #: ui/LayoutDialog.qml:187
 #, kde-format
@@ -129,17 +134,17 @@ msgid ""
 "The abbreviated name of the selected layout, which will be displayed in the "
 "system tray. You can change this setting yourself."
 msgstr ""
+"選択したレイアウトの略称で、システムトレイに表示されます。この設定は自分で変"
+"更できます。"
 
 #: ui/LayoutDialog.qml:195
-#, fuzzy, kde-format
-#| msgid "Shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "ショートカット:"
 
 #: ui/LayoutDialog.qml:206 ui/main.qml:285
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button"
 msgid "Preview"
 msgstr "プレビュー"
@@ -148,36 +153,34 @@ msgstr "プレビュー"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Switching…"
-msgstr ""
+msgstr "切り替えの設定..."
 
 #: ui/main.qml:38
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Configure Switching"
-msgstr "レイアウトを設定"
+msgstr "切り替えを設定"
 
 #: ui/main.qml:44
 #, kde-format
 msgctxt "@action:button"
 msgid "Key Bindings"
-msgstr ""
+msgstr "キーバインディング"
 
 #: ui/main.qml:45
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Key Bindings"
-msgstr ""
+msgstr "キーバインディング"
 
 #: ui/main.qml:51
 #, kde-format
 msgctxt "@action:button Layout"
 msgid "Add…"
-msgstr ""
+msgstr "追加..."
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add layout"
 msgstr "レイアウトを追加"
@@ -186,11 +189,10 @@ msgstr "レイアウトを追加"
 #, kde-format
 msgctxt "@label:checkbox configure layouts option"
 msgid "Enable"
-msgstr ""
+msgstr "有効"
 
 #: ui/main.qml:60
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Configure Layouts"
 msgstr "レイアウトを設定"
@@ -199,131 +201,117 @@ msgstr "レイアウトを設定"
 #, kde-format
 msgctxt "@label:listbox Keyboard model"
 msgid "Model:"
-msgstr ""
+msgstr "モデル:"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "NumLock on Plasma Startup"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "NumLock on startup:"
-msgstr "Plasma 起動時の NumLock"
+msgstr "起動時の NumLock:"
 
 #: ui/main.qml:112
-#, fuzzy, kde-format
-#| msgid "T&urn on"
+#, kde-format
 msgctxt "@item:inlistbox Turn on \"NumLock\" on startup"
 msgid "Turn on"
-msgstr "オン(&U)"
+msgstr "オンにする"
 
 # ACCELERATOR changed by translator
 #: ui/main.qml:116
-#, fuzzy, kde-format
-#| msgid "&Turn off"
+#, kde-format
 msgctxt "@item:inlistbox Turn off \"NumLock\" on startup"
 msgid "Turn off"
-msgstr "オフ(&N)"
+msgstr "オフにする"
 
 #: ui/main.qml:120
-#, fuzzy, kde-format
-#| msgid "Leave unchan&ged"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Leave \"NumLock\" at whatever it was set to before Plasma "
 "started up"
 msgid "Leave unchanged"
-msgstr "変更しない(&G)"
+msgstr "変更しない"
 
 #: ui/main.qml:146
-#, fuzzy, kde-format
-#| msgid " repeats/s"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Key repeat:"
-msgstr " 回/秒"
+msgstr "キーリピート:"
 
 #: ui/main.qml:155
-#, fuzzy, kde-format
-#| msgid " repeats/s"
+#, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Key repeat"
-msgstr " 回/秒"
+msgstr "キーリピート"
 
 # ACCELERATOR changed by translator
 #: ui/main.qml:166
-#, fuzzy, kde-format
-#| msgid "&Delay:"
+#, kde-format
 msgctxt "@label:textbox Key repeat delay"
 msgid "Delay:"
-msgstr "遅延(&Y):"
+msgstr "遅延:"
 
 #: ui/main.qml:180
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat delay %1"
-msgstr ""
+msgstr "キーリピートの遅延 %1"
 
 #: ui/main.qml:188
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "%1 ms"
-msgstr ""
+msgstr "%1 ミリ秒"
 
 #: ui/main.qml:192
-#, fuzzy, kde-format
-#| msgid " ms"
+#, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "ms"
-msgstr " ミリ秒"
+msgstr "ミリ秒"
 
 # ACCELERATOR changed by translator
 #: ui/main.qml:205
-#, fuzzy, kde-format
-#| msgid "&Rate:"
+#, kde-format
 msgctxt "@label:textbox Key repeat rate"
 msgid "Rate:"
-msgstr "速度(&T):"
+msgstr "レート:"
 
 #: ui/main.qml:219
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat rate %1"
-msgstr ""
+msgstr "キーリピートのレート %1"
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid " repeats/s"
+#, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "%1 repeats/s"
-msgstr " 回/秒"
+msgstr "%1 リピート/秒"
 
 #: ui/main.qml:231
-#, fuzzy, kde-format
-#| msgid " repeats/s"
+#, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "repeats/s"
-msgstr " 回/秒"
+msgstr "リピート/秒"
 
 #: ui/main.qml:243
-#, fuzzy, kde-format
-#| msgid "Test area:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Test area:"
-msgstr "テスト領域:"
+msgstr "テストエリア:"
 
 #: ui/main.qml:245
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to test settings"
-msgstr ""
+msgstr "設定をテストするにはここに入力"
 
 #: ui/main.qml:256
-#, fuzzy, kde-format
-#| msgid "Layouts"
+#, kde-format
 msgctxt "@title:view"
 msgid "Layouts"
 msgstr "レイアウト"
 
 #: ui/main.qml:268
-#, fuzzy, kde-format
-#| msgid "Move Up"
+#, kde-format
 msgctxt "@action:button"
 msgid "Move Up"
 msgstr "上へ移動"
@@ -332,32 +320,28 @@ msgstr "上へ移動"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout up"
-msgstr ""
+msgstr "%1 レイアウトを上に移動"
 
 #: ui/main.qml:275
-#, fuzzy, kde-format
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@action:button"
 msgid "Move Down"
 msgstr "下へ移動"
 
 #: ui/main.qml:276
-#, fuzzy, kde-format
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout Down"
-msgstr "下へ移動"
+msgstr "%1 レイアウトを下に移動"
 
 #: ui/main.qml:286
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Preview"
 msgstr "プレビュー"
 
 #: ui/main.qml:294
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "削除"
@@ -366,27 +350,25 @@ msgstr "削除"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Remove layout %1"
-msgstr ""
+msgstr "レイアウト %1 を削除"
 
 #: ui/main.qml:307
-#, fuzzy, kde-format
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Spare layouts:"
-msgstr "予備のレイアウト"
+msgstr "予備のレイアウト:"
 
 #: ui/main.qml:344
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
-msgstr ""
+msgstr "予備のメインレイアウトの数"
 
 #: ui/main.qml:376
-#, fuzzy, kde-format
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@label:textbox completes spinbox, x main layouts"
 msgid "main layouts"
-msgstr "予備のレイアウト"
+msgstr "メインレイアウト"
 
 #: ui/main.qml:380
 #, kde-format
@@ -397,97 +379,94 @@ msgid ""
 "accessed through the keyboard indicator applet or by setting a custom "
 "shortcut."
 msgstr ""
+"メインレイアウトは最大4つまで作成でき、その他のレイアウトは予備レイアウトで"
+"す。予備レイアウトはレイアウトの循環には含まれませんが、キーボードインジケー"
+"ターアプレットからか、カスタムショートカットを設定することで、アクセスできま"
+"す。"
 
 #: ui/main.qml:385
-#, fuzzy, kde-format
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
-msgstr "メインのレイアウトの数:"
+msgstr "レイアウト変更のショートカット:"
 
 #: ui/main.qml:409
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
-msgstr ""
+msgstr "または"
 
 #: ui/Switching.qml:17
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgctxt "@title"
 msgid "Configure Switching"
-msgstr "レイアウトを設定"
+msgstr "切り替えを設定"
 
 #: ui/Switching.qml:23
 #, kde-format
 msgctxt "@title:group"
 msgid "Behavior"
-msgstr ""
+msgstr "動作"
 
 #: ui/Switching.qml:28
-#, fuzzy, kde-format
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Switching layout affects:"
-msgstr "メインのレイアウトの数:"
+msgstr "レイアウト切り替えの影響:"
 
 #: ui/Switching.qml:35
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows"
-msgstr ""
+msgstr "すべてのウィンドウ"
 
 #: ui/Switching.qml:39
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows on current desktop"
-msgstr ""
+msgstr "現在のデスクトップのすべてのウィンドウ"
 
 #: ui/Switching.qml:43
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows of current application"
-msgstr ""
+msgstr "現在のアプリケーションのすべてのウィンドウ"
 
 #: ui/Switching.qml:47
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Current window only"
-msgstr ""
+msgstr "現在のウィンドウのみ"
 
 #: ui/Switching.qml:74
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Show notification on layout change"
-msgstr ""
+msgstr "レイアウト変更時に通知を表示する"
 
 #: ui/Switching.qml:86
-#, fuzzy, kde-format
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:group"
 msgid "Shortcuts"
 msgstr "ショートカット"
 
 #: ui/Switching.qml:91 ui/Switching.qml:153
-#, fuzzy, kde-format
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Change layout:"
-msgstr "予備のレイアウト"
+msgstr "レイアウトを変更:"
 
 #: ui/Switching.qml:112
-#, fuzzy, kde-format
-#| msgid "Switch to Last-Used Keyboard Layout"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Switch to last used layout:"
-msgstr "最後に使用されたキーボードレイアウトに切り替え"
+msgstr "最後に使用したレイアウトに切り替え:"
 
 #: ui/Switching.qml:133
-#, fuzzy, kde-format
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:group"
 msgid "Legacy Shortcuts"
-msgstr "ショートカット"
+msgstr "レガシーショートカット"
 
 #: ui/Switching.qml:141
 #, kde-kuit-format
@@ -498,13 +477,16 @@ msgid ""
 "Wayland.<nl/><nl/>Setting these shortcuts will take you to the Key bindings "
 "page."
 msgstr ""
+"レガシー X11 ショートカットを使用すると、修飾キーのみのショートカットをより細"
+"かく制御でき、エッジケースでの X11 のサポートが若干向上します。Wayland でも使"
+"用できます。<nl/><nl/>これらのショートカットを設定すると、キーバインディング"
+"ページに移動します。"
 
 #: ui/Switching.qml:182
-#, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Alternative symbols:"
-msgstr "代替:"
+msgstr "代替シンボル:"
 
 #: ui/Switching.qml:208
 #, kde-format
@@ -512,7 +494,7 @@ msgctxt "@info"
 msgid ""
 "Modifier keys can be used to type additional characters, symbols, and "
 "diacritical marks."
-msgstr ""
+msgstr "修飾キーを使用すると、追加の文字、記号、分音記号を入力できます。"
 
 #: xkboptionsmodel.cpp:160
 #, kde-format
@@ -525,186 +507,3 @@ msgstr[0] "%1 ショートカット"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "なし"
-
-#, fuzzy
-#~| msgid "Keyboard &model:"
-#~ msgctxt "@title:group"
-#~ msgid "Keyboard model:"
-#~ msgstr "キーボードモデル(&M):"
-
-#, fuzzy
-#~| msgid "When a key is held:"
-#~ msgctxt "@title:group"
-#~ msgid "When key is held:"
-#~ msgstr "キーが押し続けられたとき:"
-
-#, fuzzy
-#~| msgid "&Repeat the key"
-#~ msgctxt "@option:radio"
-#~ msgid "Repeat the key"
-#~ msgstr "キーを繰り返す(&R)"
-
-#, fuzzy
-#~| msgid "&Do nothing"
-#~ msgctxt "@option:radio"
-#~ msgid "Do nothing"
-#~ msgstr "何もしない(&D)"
-
-#, fuzzy
-#~| msgid "&Show accented and similar characters "
-#~ msgctxt "@option:radio"
-#~ msgid "Show accented and similar characters"
-#~ msgstr "アクセント付きの文字と類似の文字を表示(&S)"
-
-#, fuzzy
-#~| msgid "Shortcuts for Switching Layout"
-#~ msgctxt "@title:group"
-#~ msgid "Shortcuts for Switching Layout"
-#~ msgstr "レイアウトを切り替えるショートカット"
-
-#, fuzzy
-#~| msgid "Main shortcuts:"
-#~ msgctxt "@option:textbox"
-#~ msgid "Main shortcuts:"
-#~ msgstr "メイン:"
-
-#, fuzzy
-#~| msgid "3rd level shortcuts:"
-#~ msgctxt "@option:textbox"
-#~ msgid "3rd level shortcuts:"
-#~ msgstr "第三階層のレイアウト:"
-
-#, fuzzy
-#~| msgid "Last used shortcut:"
-#~ msgctxt "@option:textbox"
-#~ msgid "Last used shortcuts:"
-#~ msgstr "最後に使用したレイアウト:"
-
-#, fuzzy
-#~| msgid "Switching Policy"
-#~ msgctxt "@title:group"
-#~ msgid "Switching Policy"
-#~ msgstr "切り替えポリシー"
-
-#, fuzzy
-#~| msgid "&Global"
-#~ msgctxt "@option:radio"
-#~ msgid "Global"
-#~ msgstr "グローバル(&G)"
-
-#, fuzzy
-#~| msgid "&Desktop"
-#~ msgctxt "@option:radio"
-#~ msgid "Desktop"
-#~ msgstr "デスクトップ(&D)"
-
-#, fuzzy
-#~| msgid "&Application"
-#~ msgctxt "@option:radio"
-#~ msgid "Application"
-#~ msgstr "アプリケーション(&A)"
-
-#, fuzzy
-#~| msgid "&Window"
-#~ msgctxt "@option:radio"
-#~ msgid "Window"
-#~ msgstr "ウィンドウ(&W)"
-
-#, fuzzy
-#~| msgid "Add"
-#~ msgctxt "@action:button"
-#~ msgid "Add"
-#~ msgstr "追加"
-
-#, fuzzy
-#~| msgctxt "layout map name"
-#~| msgid "Map"
-#~ msgctxt "@title:column"
-#~ msgid "Map"
-#~ msgstr "マップ"
-
-#, fuzzy
-#~| msgid "Label"
-#~ msgctxt "@title:column"
-#~ msgid "Label"
-#~ msgstr "ラベル"
-
-#, fuzzy
-#~| msgid "Layout"
-#~ msgctxt "@title:column"
-#~ msgid "Layout"
-#~ msgstr "レイアウト"
-
-#, fuzzy
-#~| msgid "Variant"
-#~ msgctxt "@title:column"
-#~ msgid "Variant"
-#~ msgstr "変種"
-
-#, fuzzy
-#~| msgid "Main shortcuts:"
-#~ msgctxt "@action:button"
-#~ msgid "Reassign shortcut"
-#~ msgstr "メイン:"
-
-#, fuzzy
-#~| msgid "Hardware"
-#~ msgctxt "@title:tab"
-#~ msgid "Hardware"
-#~ msgstr "ハードウェア"
-
-#~ msgctxt "layout - variant"
-#~ msgid "%1 - %2"
-#~ msgstr "%1 - %2"
-
-#~ msgid "Search…"
-#~ msgstr "検索…"
-
-#~ msgid "Label:"
-#~ msgstr "ラベル:"
-
-#~ msgid ""
-#~ "If you select \"Application\" or \"Window\" switching policy, changing "
-#~ "the keyboard layout will only affect the current application or window."
-#~ msgstr ""
-#~ "「アプリケーション」か「ウィンドウ」を選択した場合、キーボードレイアウトの"
-#~ "変更は使用中のアプリケーションもしくはウィンドウにのみ適用されます。"
-
-#~ msgctxt "no shortcut defined"
-#~ msgid "None"
-#~ msgstr "なし"
-
-#~ msgid "…"
-#~ msgstr "…"
-
-#~ msgid "Advanced"
-#~ msgstr "詳細"
-
-#~ msgctxt "variant"
-#~ msgid "Default"
-#~ msgstr "デフォルト"
-
-#~ msgid ""
-#~ "If supported, this option allows you to setup the state of NumLock after "
-#~ "Plasma startup.<p>You can configure NumLock to be turned on or off, or "
-#~ "configure Plasma not to set NumLock state."
-#~ msgstr ""
-#~ "システムが対応している場合、このオプションで Plasma 起動後の NumLock の状"
-#~ "態を設定することができます。<p>NumLock をオンまたはオフに設定したり、ある"
-#~ "いは Plasma がその状態を変更しないようにすることもできます。"
-
-#~ msgid ""
-#~ "If supported, this option allows you to set the delay after which a "
-#~ "pressed key will start generating keycodes. The 'Repeat rate' option "
-#~ "controls the frequency of these keycodes."
-#~ msgstr ""
-#~ "あなたのシステムが対応している場合、このオプションで、キーを押してからキー"
-#~ "コードのリピートを開始するまでの時間を設定できます。速度のオプションで繰り"
-#~ "返しの速さを調節します。"
-
-#~ msgid ""
-#~ "If supported, this option allows you to set the rate at which keycodes "
-#~ "are generated while a key is pressed."
-#~ msgstr ""
-#~ "あなたのシステムが対応している場合、このオプションで、キーを押している間に"
-#~ "キーコードを繰り返す速さを調整できます。"

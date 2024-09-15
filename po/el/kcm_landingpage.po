@@ -1,7 +1,7 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# SPDX-FileCopyrightText: 2024 Dimitrys Meliates <demetresmeliates+i18n@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
@@ -10,30 +10,30 @@ msgstr ""
 "PO-Revision-Date: 2024-09-13 18:18+0300\n"
 "Last-Translator: Antonis G. <capoiosct@gmail.com>\n"
 "Language-Team: el <kde-i18n-el@kde.org>\n"
-"Language: Greek\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: landingpage_kdeglobalssettings.kcfg:9
 #, kde-format
 msgid "Color scheme name"
-msgstr ""
+msgstr "Όνομα θέματος χρωμάτων"
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: landingpage_kdeglobalssettings.kcfg:15
 #, kde-format
 msgid "Single click to open files"
-msgstr ""
+msgstr "Ένα κλικ για άνοιγμα αρχείων"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: landingpage_kdeglobalssettings.kcfg:19
 #, kde-format
 msgid "Global Look and Feel package"
-msgstr ""
+msgstr "Πακέτο καθολικής εμφάνισης και αισθητικής"
 
 #. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
 #. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
@@ -41,78 +41,78 @@ msgstr ""
 #: landingpage_kdeglobalssettings.kcfg:27
 #, kde-format
 msgid "Global Look and Feel package, alternate"
-msgstr ""
+msgstr "Πακέτο καθολικής εμφάνισης και αισθητικής, εναλλακτικά"
 
 #. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
 #: landingpage_kdeglobalssettings.kcfg:31
 #, kde-format
 msgid "Animation speed"
-msgstr ""
+msgstr "Ταχύτητα κίνησης"
 
 #: ui/main.qml:33
 #, kde-format
 msgid "Theme:"
-msgstr ""
+msgstr "Θέμα:"
 
 #: ui/main.qml:76
 #, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More appearance settings:"
-msgstr ""
+msgstr "Περισσότερες ρυθμίσεις εμφάνισης:"
 
 #: ui/main.qml:120
 #, kde-format
 msgid "Animation speed:"
-msgstr ""
+msgstr "Ταχύτητα κίνησης:"
 
 #: ui/main.qml:129
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
-msgstr ""
+msgstr "Αργή"
 
 #: ui/main.qml:136
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
-msgstr ""
+msgstr "Άμεση"
 
 #: ui/main.qml:150
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
-msgstr ""
+msgstr "Κάνοντας κλικ σε αρχεία ή φακέλους:"
 
 #: ui/main.qml:158
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
-msgstr ""
+msgstr "Τους επιλέγει"
 
 #: ui/main.qml:163
 #, kde-format
 msgid "Open by double-clicking instead"
-msgstr ""
+msgstr "Άνοιγμα με διπλό κλικ"
 
 #: ui/main.qml:188
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
-msgstr ""
+msgstr "Τους ανοίγει"
 
 #: ui/main.qml:193
 #, kde-format
 msgid "Select by clicking on item's selection marker"
-msgstr ""
+msgstr "Επιλογή κάνοντας κλικ στο δείκτη επιλογής στοιχείου"
 
 #: ui/main.qml:216
 #, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More behavior settings:"
-msgstr ""
+msgstr "Περισσότερες ρυθμίσεις συμπεριφοράς:"
 
 #: ui/main.qml:229
 #, kde-format
 msgid "Most Used Pages:"
-msgstr ""
+msgstr "Πιο συχνές σελίδες:"

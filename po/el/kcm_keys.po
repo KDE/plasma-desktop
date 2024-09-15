@@ -1,7 +1,7 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# SPDX-FileCopyrightText: 2024 Dimitrys Meliates <demetresmeliates+i18n@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
@@ -10,42 +10,41 @@ msgstr ""
 "PO-Revision-Date: 2024-09-13 18:18+0300\n"
 "Last-Translator: Antonis G. <capoiosct@gmail.com>\n"
 "Language-Team: el <kde-i18n-el@kde.org>\n"
-"Language: Greek\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.4\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: basemodel.cpp:157
 #, kde-format
 msgctxt "@title:group Launch app"
 msgid "Launch"
-msgstr ""
+msgstr "Εκκίνηση"
 
 #: globalaccelmodel.cpp:235
 #, kde-format
 msgctxt ""
 "%1 is the name of the component, %2 is the action for which saving failed"
 msgid "Error while saving shortcut %1: %2"
-msgstr ""
+msgstr "Σφάλμα κατά την αποθήκευση συντόμευσης %1: %2"
 
 #: globalaccelmodel.cpp:347
 #, kde-format
 msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
-msgstr ""
+msgstr "Σφάλμα κατά την προσθήκη του %1, φαίνεται ότι δεν έχει ενέργειες."
 
 #: globalaccelmodel.cpp:398
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
-msgstr ""
+msgstr "Σφάλμα κατά την επικοινωνία με την υπηρεσία καθολικών συντομεύσεων"
 
 #: kcm_keys.cpp:58
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
-msgstr ""
+msgstr "Αποτυχία επικοινωνίας με τον δαίμονα καθολικών συντομεύσεων"
 
 #: kcm_keys.cpp:379
 #, kde-kuit-format
@@ -55,6 +54,8 @@ msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action "
 "<interface>%3</interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
+"Η συντόμευση <shortcut>%1</shortcut> συγκρούεται με την κοινή ενέργεια %2 "
+"<interface>%3</interface>.<nl/><nl/>Επαναδήλωση της στο %4;"
 
 #: kcm_keys.cpp:385
 #, kde-kuit-format
@@ -64,215 +65,221 @@ msgid ""
 "%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
 "action <interface>%4</interface> of <application>%5</application>?"
 msgstr ""
+"Η συντόμευση <shortcut>%1</shortcut> συγκρούεται με την ενέργεια <interface>"
+"%2</interface> του <application>%3</application>.<nl/><nl/> Επαναδήλωση στην "
+"ενέργεια <interface>%4</interface> του <application>%5</application>;"
 
 #: kcm_keys.cpp:394
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
-msgstr ""
+msgstr "Επίλυση σύγκρουσης συντομεύσεων"
 
 #: kcm_keys.cpp:404
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr ""
+msgstr "Επανεκχώρηση"
 
 #: standardshortcutsmodel.cpp:34
 #, kde-format
 msgid "File"
-msgstr ""
+msgstr "Αρχείο"
 
 #: standardshortcutsmodel.cpp:35
 #, kde-format
 msgid "Edit"
-msgstr ""
+msgstr "Επεξεργασία"
 
 #: standardshortcutsmodel.cpp:37
 #, kde-format
 msgid "Navigation"
-msgstr ""
+msgstr "Πλοήγηση"
 
 #: standardshortcutsmodel.cpp:38
 #, kde-format
 msgid "View"
-msgstr ""
+msgstr "Προβολή"
 
 #: standardshortcutsmodel.cpp:39
 #, kde-format
 msgid "Settings"
-msgstr ""
+msgstr "Ρυθμίσεις"
 
 #: standardshortcutsmodel.cpp:40
 #, kde-format
 msgid "Help"
-msgstr ""
+msgstr "Βοήθεια"
 
 #: ui/main.qml:27
 #, kde-format
 msgid "Applications"
-msgstr ""
+msgstr "Εφαρμογές"
 
 #: ui/main.qml:27
 #, kde-format
 msgid "Commands"
-msgstr ""
+msgstr "Εντολές"
 
 #: ui/main.qml:27
 #, kde-format
 msgid "System Services"
-msgstr ""
+msgstr "Υπηρεσίες συστήματος"
 
 #: ui/main.qml:27
 #, kde-format
 msgid "Common Actions"
-msgstr ""
+msgstr "Κοινές ενέργειες"
 
 #: ui/main.qml:43
 #, kde-format
 msgctxt "@action:button Import shortcut scheme"
 msgid "Import…"
-msgstr ""
+msgstr "Εισαγωγή…"
 
 #: ui/main.qml:50
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Export"
-msgstr ""
+msgstr "Ακύρωση εξαγωγής"
 
 #: ui/main.qml:51
 #, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export…"
-msgstr ""
+msgstr "Εξαγωγή…"
 
 #: ui/main.qml:83
 #, kde-format
 msgid "Cannot export scheme while there are unsaved changes"
-msgstr ""
+msgstr "Αδυναμία εξαγωγής σχεδίου ενώ υπάρχουν μη αποθηκευμένες αλλαγές"
 
 #: ui/main.qml:96
 #, kde-format
 msgid ""
 "Select the components below that should be included in the exported scheme"
 msgstr ""
+"Επιλογή των παρακάτω εξαρτημάτων που πρέπει να συμπεριληφθούν στο εξαγόμενο "
+"σχήμα"
 
 #: ui/main.qml:103
 #, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export"
-msgstr ""
+msgstr "Εξαγωγή"
 
 #: ui/main.qml:173
 #, kde-format
 msgctxt "@action:button Add new shortcut"
 msgid "Add New"
-msgstr ""
+msgstr "Προσθήκη νέου"
 
 #: ui/main.qml:179
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Application…'"
 msgid "Application…"
-msgstr ""
+msgstr "Εφαρμογή…"
 
 #: ui/main.qml:188
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
 msgid "Command or Script…"
-msgstr ""
+msgstr "Εντολή ή σενάριο…"
 
 #: ui/main.qml:225
 #, kde-format
 msgctxt ""
 "@option:check accessible export shortcuts %1 is application/group name"
 msgid "Export %1"
-msgstr ""
+msgstr "Εξαγωγή %1"
 
 #: ui/main.qml:234
 #, kde-format
 msgctxt "@action:button accessible %1 is the name of a custom command"
 msgid "Edit command for %1"
-msgstr ""
+msgstr "Επεξεργασία εντολής για %1"
 
 #: ui/main.qml:250
 #, kde-format
 msgctxt "@info:tooltip %1 is the text of a custom command"
 msgid "Edit command for %1"
-msgstr ""
+msgstr "Επεξεργασία εντολής για %1"
 
 #: ui/main.qml:258
 #, kde-format
 msgctxt "@action:button accessible %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
-msgstr ""
+msgstr "Κατάργηση όλων των συντομεύσεων για %1"
 
 #: ui/main.qml:267
 #, kde-format
 msgctxt "@info:tooltip %1 is the text of a shortcut category"
 msgid "Remove all shortcuts for %1"
-msgstr ""
+msgstr "Κατάργηση όλων των συντομεύσεων για %1"
 
 #: ui/main.qml:274
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Undo deletion"
-msgstr ""
+msgstr "Αναίρεση διαγραφής"
 
 #: ui/main.qml:279
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo deletion"
-msgstr ""
+msgstr "Αναίρεση διαγραφής"
 
 #: ui/main.qml:333
 #, kde-format
 msgid "No items matched the search terms"
-msgstr ""
+msgstr "Δεν ταιριάζουν αντικείμενα με τους όρους αναζήτησης"
 
 #: ui/main.qml:366
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr ""
+"Επιλέξτε ένα αντικείμενο από τη λίστα για να δείτε τις συντομεύσεις του εδώ"
 
 #: ui/main.qml:378
 #, kde-format
 msgid "Export Shortcut Scheme"
-msgstr ""
+msgstr "Εξαγωγή σχεδίου συντόμευσης"
 
 #: ui/main.qml:378 ui/main.qml:520
 #, kde-format
 msgid "Import Shortcut Scheme"
-msgstr ""
+msgstr "Εισαγωγή σχεδίου συντόμευσης"
 
 #: ui/main.qml:380
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
-msgstr ""
+msgstr "Συντόμευση σχεδίου (*.kksrc)"
 
 #: ui/main.qml:407
 #, kde-format
 msgid "Edit Command"
-msgstr ""
+msgstr "Επεξεργασία εντολής"
 
 #: ui/main.qml:407
 #, kde-format
 msgid "Add Command"
-msgstr ""
+msgstr "Προσθήκη εντολής"
 
 #: ui/main.qml:429
 #, kde-format
 msgid "Save"
-msgstr ""
+msgstr "Αποθήκευση"
 
 #: ui/main.qml:429
 #, kde-format
 msgid "Add"
-msgstr ""
+msgstr "Προσθήκη"
 
 #: ui/main.qml:459
 #, kde-format
 msgid "Enter a command or choose a script file:"
-msgstr ""
+msgstr "Εισάγετε μια εντολή ή επιλέξτε ένα αρχείο δέσμης ενεργειών:"
 
 #: ui/main.qml:468
 #, kde-format
@@ -284,19 +291,19 @@ msgstr ""
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
-msgstr ""
+msgstr "Εντολή"
 
 #: ui/main.qml:481
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
-msgstr ""
+msgstr "Επιλογή…"
 
 #: ui/main.qml:482
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
-msgstr ""
+msgstr "Επιλογή αρχείου δέσμης ενεργειών"
 
 #: ui/main.qml:490
 #, kde-format
@@ -314,7 +321,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
-msgstr ""
+msgstr "Επιλογή αρχείου σεναρίου"
 
 #: ui/main.qml:505
 #, kde-format
@@ -322,32 +329,32 @@ msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
 "extensions"
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
-msgstr ""
+msgstr "Αρχεία σεναρίου (.sh, .bash, .zsh, etc.) (*.*sh)"
 
 #: ui/main.qml:528
 #, kde-format
 msgid "Select the scheme to import:"
-msgstr ""
+msgstr "Επιλογή του σχεδίου για εισαγωγή:"
 
 #: ui/main.qml:547
 #, kde-format
 msgid "Custom Scheme"
-msgstr ""
+msgstr "Προσαρμοσμένο σχέδιο"
 
 #: ui/main.qml:555
 #, kde-format
 msgid "Select File…"
-msgstr ""
+msgstr "Επιλογή αρχείου…"
 
 #: ui/main.qml:555
 #, kde-format
 msgid "Import"
-msgstr ""
+msgstr "Εισαγωγή"
 
 #: ui/ShortcutActionDelegate.qml:34
 #, kde-format
 msgid "Editing shortcut: %1"
-msgstr ""
+msgstr "Επεξεργασία συντόμευσης: %1"
 
 #: ui/ShortcutActionDelegate.qml:53
 #, kde-format
@@ -355,73 +362,73 @@ msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
 "after :"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #: ui/ShortcutActionDelegate.qml:77
 #, kde-format
 msgid "No active shortcuts"
-msgstr ""
+msgstr "Δεν υπάρχουν ενεργές συντομεύσεις"
 
 #: ui/ShortcutActionDelegate.qml:120
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
 msgid_plural "Default shortcuts"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Προεπιλεγμένη συντόμευση"
+msgstr[1] "Προεπιλεγμένες συντομεύσεις"
 
 #: ui/ShortcutActionDelegate.qml:122
 #, kde-format
 msgid "No default shortcuts"
-msgstr ""
+msgstr "Δεν υπάρχουν προεπιλεγμένες συντομεύσεις"
 
 #: ui/ShortcutActionDelegate.qml:131
 #, kde-format
 msgid "Default shortcut %1 is enabled."
-msgstr ""
+msgstr "Η προεπιλεγμένη συντόμευση %1 είναι ενεργή."
 
 #: ui/ShortcutActionDelegate.qml:131
 #, kde-format
 msgid "Default shortcut %1 is disabled."
-msgstr ""
+msgstr "Η προεπιλεγμένη συντόμευση %1 είναι ανενεργή."
 
 #: ui/ShortcutActionDelegate.qml:154
 #, kde-format
 msgid "Custom shortcuts"
-msgstr ""
+msgstr "Προσαρμοσμένες συντομεύσεις"
 
 #: ui/ShortcutActionDelegate.qml:180
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
-msgstr ""
+msgstr "Διαγραφή συντόμευσης"
 
 #: ui/ShortcutActionDelegate.qml:184
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this shortcut"
-msgstr ""
+msgstr "Διαγραφή αυτής της συντόμευσης"
 
 #: ui/ShortcutActionDelegate.qml:190
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
-msgstr ""
+msgstr "Προσθήκη…"
 
 #: ui/ShortcutActionDelegate.qml:191
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
-msgstr ""
+msgstr "Προσθήκη προσαρμοσμένης συντόμευσης"
 
 #: ui/ShortcutActionDelegate.qml:226
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
-msgstr ""
+msgstr "Ακύρωση λήψης συντόμευσης"
 
 #: ui/ShortcutActionDelegate.qml:230
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel capturing of new shortcut"
-msgstr ""
+msgstr "Ακύρωση λήψης νέας συντόμευσης"

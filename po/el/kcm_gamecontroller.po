@@ -1,7 +1,7 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# SPDX-FileCopyrightText: 2024 Dimitrys Meliates <demetresmeliates+i18n@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
@@ -10,67 +10,67 @@ msgstr ""
 "PO-Revision-Date: 2024-09-13 18:18+0300\n"
 "Last-Translator: Antonis G. <capoiosct@gmail.com>\n"
 "Language-Team: el <kde-i18n-el@kde.org>\n"
-"Language: Greek\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: axesmodel.cpp:63
 #, kde-format
 msgctxt "@label Axis value"
 msgid "Value"
-msgstr ""
+msgstr "Τιμή"
 
 #: buttonmodel.cpp:74
 #, kde-format
 msgctxt "Status of a gamepad button"
 msgid "PRESSED"
-msgstr ""
+msgstr "ΠΙΕΣΜΕΝΟ"
 
 #: buttonmodel.cpp:84
 #, kde-format
 msgctxt "@label Button state"
 msgid "State"
-msgstr ""
+msgstr "Κατάσταση"
 
 #: devicemodel.cpp:72
 #, kde-format
 msgctxt "Device name and path"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: ui/main.qml:23
 #, kde-format
 msgid "No game controllers found"
-msgstr ""
+msgstr "Δεν βρέθηκαν χειριστήρια παιχνιδιών"
 
 #: ui/main.qml:24
 #, kde-format
 msgid "Connect a wired or wireless controller"
-msgstr ""
+msgstr "Συνδέστε έναν ενσύρματο ή ασύρματο χειριστήριο"
 
 #: ui/main.qml:56
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Device:"
-msgstr ""
+msgstr "Συσκευή:"
 
 #: ui/main.qml:83
 #, kde-format
 msgctxt "@label Visual representation of an axis position"
 msgid "Position:"
-msgstr ""
+msgstr "Θέση:"
 
 #: ui/main.qml:102
 #, kde-format
 msgctxt "@label Gamepad buttons"
 msgid "Buttons:"
-msgstr ""
+msgstr "Κουμπιά:"
 
 #: ui/main.qml:124
 #, kde-format
 msgctxt "@label Gamepad axes (sticks)"
 msgid "Axes:"
-msgstr ""
+msgstr "Άξονες:"

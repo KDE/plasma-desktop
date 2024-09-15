@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:40+0000\n"
-"PO-Revision-Date: 2022-08-20 23:18-0700\n"
-"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
+"PO-Revision-Date: 2024-09-11 06:29+0900\n"
+"Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -37,7 +37,7 @@ msgstr "挙動"
 #, kde-format
 msgctxt "@action:button"
 msgid "Unmute"
-msgstr "アンミュート"
+msgstr "ミュート解除"
 
 #: package/contents/ui/AudioStream.qml:101
 #, kde-format
@@ -49,7 +49,7 @@ msgstr "ミュート"
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Unmute %1"
-msgstr "%1 をアンミュート"
+msgstr "%1 をミュート解除"
 
 #: package/contents/ui/AudioStream.qml:102
 #, kde-format
@@ -70,65 +70,58 @@ msgid "9,999+"
 msgstr "9,999+"
 
 #: package/contents/ui/ConfigAppearance.qml:46
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@label for several checkboxes"
 msgid "General:"
 msgstr "全般:"
 
 #: package/contents/ui/ConfigAppearance.qml:47
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgctxt "@option:check section General"
 msgid "Show small window previews when hovering over tasks"
-msgstr "ツールチップへのホバー時にウィンドウを強調表示"
+msgstr "タスクの上にマウスを置いたときに小さなウィンドウプレビューを表示"
 
 #: package/contents/ui/ConfigAppearance.qml:52
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over previews"
-msgstr "ツールチップへのホバー時にウィンドウを強調表示"
+msgstr "プレビューにマウスを置いたときに他のウィンドウを非表示にする"
 
 #: package/contents/ui/ConfigAppearance.qml:57
-#, fuzzy, kde-format
-#| msgid "Mark applications that play audio"
+#, kde-format
 msgctxt "@option:check section General"
 msgid "Mark applications that play audio"
-msgstr "音声を再生するアプリケーションに印を付ける"
+msgstr "オーディオを再生するアプリケーションをマークする"
 
 #: package/contents/ui/ConfigAppearance.qml:65
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Fill free space on Panel"
+#, kde-format
 msgctxt "@option:check section General"
 msgid "Fill free space on panel"
 msgstr "パネルの空き領域を埋める"
 
 #: package/contents/ui/ConfigAppearance.qml:77
-#, fuzzy, kde-format
-#| msgid "Maximum rows:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Maximum task width:"
-msgstr "最大行数:"
+msgstr "タスクの最大幅:"
 
 #: package/contents/ui/ConfigAppearance.qml:80
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Narrow"
-msgstr ""
+msgstr "狭い"
 
 #: package/contents/ui/ConfigAppearance.qml:81
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Medium"
-msgstr ""
+msgstr "中"
 
 #: package/contents/ui/ConfigAppearance.qml:82
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Wide"
-msgstr ""
+msgstr "広い"
 
 #: package/contents/ui/ConfigAppearance.qml:93
 #, kde-format
@@ -136,7 +129,7 @@ msgctxt ""
 "@label for radio button group, completes sentence: … when panel is low on "
 "space etc."
 msgid "Use multi-column view:"
-msgstr ""
+msgstr "複数列ビューを使用する:"
 
 #: package/contents/ui/ConfigAppearance.qml:94
 #, kde-format
@@ -144,44 +137,40 @@ msgctxt ""
 "@label for radio button group, completes sentence: … when panel is low on "
 "space etc."
 msgid "Use multi-row view:"
-msgstr ""
+msgstr "複数行ビューを使用する:"
 
 #: package/contents/ui/ConfigAppearance.qml:100
 #, kde-format
 msgctxt "@option:radio Never use multi-column view for Task Manager"
 msgid "Never"
-msgstr ""
+msgstr "しない"
 
 #: package/contents/ui/ConfigAppearance.qml:110
 #, kde-format
 msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "When panel is low on space and thick enough"
-msgstr ""
+msgstr "パネルのスペースが少なく、厚さが十分な場合"
 
 #: package/contents/ui/ConfigAppearance.qml:120
-#, fuzzy, kde-format
-#| msgid "When panel is hidden:"
+#, kde-format
 msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "Always when panel is thick enough"
-msgstr "パネルが非表示のとき:"
+msgstr "パネルが十分に厚い場合は常に"
 
 #: package/contents/ui/ConfigAppearance.qml:127
-#, fuzzy, kde-format
-#| msgid "Maximum columns:"
+#, kde-format
 msgctxt "@label:spinbox maximum number of columns for tasks"
 msgid "Maximum columns:"
 msgstr "最大列数:"
 
 #: package/contents/ui/ConfigAppearance.qml:128
-#, fuzzy, kde-format
-#| msgid "Maximum rows:"
+#, kde-format
 msgctxt "@label:spinbox maximum number of rows for tasks"
 msgid "Maximum rows:"
 msgstr "最大行数:"
 
 #: package/contents/ui/ConfigAppearance.qml:138
-#, fuzzy, kde-format
-#| msgid "Spacing between icons:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Spacing between icons:"
 msgstr "アイコンの間隔:"
@@ -205,46 +194,37 @@ msgid "Large"
 msgstr "大"
 
 #: package/contents/ui/ConfigAppearance.qml:176
-#, fuzzy, kde-format
-#| msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
-#| msgid "Automatically set to Large when in Touch Mode"
+#, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch mode"
-msgstr "タッチモードのとき自動的に「大」に設定"
+msgstr "タッチモードのときは自動的に「大」に設定"
 
 #: package/contents/ui/ConfigBehavior.qml:49
-#, fuzzy, kde-format
-#| msgid "Group:"
+#, kde-format
 msgctxt "@label:listbox how to group tasks"
 msgid "Group:"
 msgstr "グループ化:"
 
 #: package/contents/ui/ConfigBehavior.qml:53
-#, fuzzy, kde-format
-#| msgid "Do not group"
+#, kde-format
 msgctxt "@item:inlistbox how to group tasks"
 msgid "Do not group"
 msgstr "グループ化しない"
 
 #: package/contents/ui/ConfigBehavior.qml:54
-#, fuzzy, kde-format
-#| msgid "By program name"
+#, kde-format
 msgctxt "@item:inlistbox how to group tasks"
 msgid "By program name"
 msgstr "プログラム名で"
 
 #: package/contents/ui/ConfigBehavior.qml:60
-#, fuzzy, kde-format
-#| msgid "Clicking grouped task:"
+#, kde-format
 msgctxt "@label:listbox completes sentence like: … cycles through tasks"
 msgid "Clicking grouped task:"
-msgstr "グループをクリックした時:"
+msgstr "グループ化されたタスクをクリックしたとき:"
 
 #: package/contents/ui/ConfigBehavior.qml:67
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task cycles through tasks' "
-#| msgid "Cycles through tasks"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task cycles through "
 "tasks' "
@@ -252,109 +232,89 @@ msgid "Cycles through tasks"
 msgstr "タスクを循環"
 
 #: package/contents/ui/ConfigBehavior.qml:68
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task shows small "
 "window previews' "
 msgid "Shows small window previews"
-msgstr "ウィンドウを並べて表示"
+msgstr "小さなウィンドウプレビューを表示"
 
 #: package/contents/ui/ConfigBehavior.qml:69
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task shows large "
 "window previews' "
 msgid "Shows large window previews"
-msgstr "ウィンドウを並べて表示"
+msgstr "大きなウィンドウプレビューを表示"
 
 #: package/contents/ui/ConfigBehavior.qml:70
-#, fuzzy, kde-format
-#| msgctxt "Completes the sentence 'Clicking grouped task shows textual list' "
-#| msgid "Shows textual list"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task shows textual "
 "list' "
 msgid "Shows textual list"
-msgstr "テキスト形式のリストを表示"
+msgstr "テキストリストを表示"
 
 #: package/contents/ui/ConfigBehavior.qml:81
-#, fuzzy, kde-format
-#| msgid ""
-#| "The compositor does not support displaying windows side by side, so a "
-#| "textual list will be displayed instead."
+#, kde-format
 msgctxt "@info displayed as InlineMessage"
 msgid ""
 "The compositor does not support displaying windows side by side, so a "
 "textual list will be displayed instead."
 msgstr ""
 "コンポジタがウィンドウを並べる表示をサポートしていないため、代わりにテキスト"
-"形式のリストが表示されます。"
+"リストが表示されます。"
 
 #: package/contents/ui/ConfigBehavior.qml:91
-#, fuzzy, kde-format
-#| msgid "Combine into single button"
+#, kde-format
 msgctxt "@option:check grouped task"
 msgid "Combine into single button"
-msgstr "一つのボタンに結合する"
+msgstr "1つのボタンに結合する"
 
 #: package/contents/ui/ConfigBehavior.qml:98
-#, fuzzy, kde-format
-#| msgid "Group only when the Task Manager is full"
+#, kde-format
 msgctxt "@option:check grouped task"
 msgid "Group only when the Task Manager is full"
-msgstr "タスクバーがいっぱいになったときのみグループ化"
+msgstr "タスクマネージャがいっぱいのときのみグループ化"
 
 #: package/contents/ui/ConfigBehavior.qml:110
-#, fuzzy, kde-format
-#| msgid "Sort:"
+#, kde-format
 msgctxt "@label:listbox sort tasks in grouped task"
 msgid "Sort:"
 msgstr "ソート:"
 
 #: package/contents/ui/ConfigBehavior.qml:114
-#, fuzzy, kde-format
-#| msgid "Do not sort"
+#, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Do not sort"
 msgstr "ソートしない"
 
 #: package/contents/ui/ConfigBehavior.qml:115
-#, fuzzy, kde-format
-#| msgid "Manually"
+#, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Manually"
 msgstr "手動"
 
 #: package/contents/ui/ConfigBehavior.qml:116
-#, fuzzy, kde-format
-#| msgid "Alphabetically"
+#, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Alphabetically"
 msgstr "アルファベット順"
 
 #: package/contents/ui/ConfigBehavior.qml:117
-#, fuzzy, kde-format
-#| msgid "By desktop"
+#, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By desktop"
 msgstr "デスクトップで"
 
 #: package/contents/ui/ConfigBehavior.qml:118
-#, fuzzy, kde-format
-#| msgid "By activity"
+#, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By activity"
 msgstr "アクティビティで"
 
 #: package/contents/ui/ConfigBehavior.qml:125
-#, fuzzy, kde-format
-#| msgid "Keep launchers separate"
+#, kde-format
 msgctxt "@option:check configure task sorting"
 msgid "Keep launchers separate"
 msgstr "ランチャーを分離して配置する"
@@ -363,48 +323,38 @@ msgstr "ランチャーを分離して配置する"
 #, kde-format
 msgctxt "@option:check for icons-and-text task manager"
 msgid "Hide launchers after application startup"
-msgstr ""
+msgstr "アプリケーションの起動後にランチャーを隠す"
 
 #: package/contents/ui/ConfigBehavior.qml:142
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
-#| msgid "Clicking active task:"
+#, kde-format
 msgctxt ""
 "@label for checkbox Part of a sentence: 'Clicking active task minimizes the "
 "task'"
 msgid "Clicking active task:"
-msgstr "アクティブなタスクをクリックした時:"
+msgstr "アクティブなタスクをクリックしたとき:"
 
 #: package/contents/ui/ConfigBehavior.qml:143
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
-#| msgid "Minimizes the task"
+#, kde-format
 msgctxt ""
 "@option:check Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
-msgstr "タスクを最小化する"
+msgstr "タスクを最小化"
 
 #: package/contents/ui/ConfigBehavior.qml:148
-#, fuzzy, kde-format
-#| msgid "Middle-clicking any task:"
+#, kde-format
 msgctxt "@label:listbox completes sentence like: … does nothing"
 msgid "Middle-clicking any task:"
-msgstr "タスクを中クリックした時:"
+msgstr "タスクを中クリックしたとき:"
 
 #: package/contents/ui/ConfigBehavior.qml:152
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Middle-clicking any task does nothing'"
-#| msgid "Does nothing"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task does nothing'"
 msgid "Does nothing"
 msgstr "何もしない"
 
 #: package/contents/ui/ConfigBehavior.qml:153
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Part of a sentence: 'Middle-clicking any task closes window or group'"
-#| msgid "Closes window or group"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task closes window "
 "or group'"
@@ -412,9 +362,7 @@ msgid "Closes window or group"
 msgstr "ウインドウまたはグループを閉じる"
 
 #: package/contents/ui/ConfigBehavior.qml:154
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Middle-clicking any task opens a new window'"
-#| msgid "Opens a new window"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task opens a new "
 "window'"
@@ -422,11 +370,7 @@ msgid "Opens a new window"
 msgstr "新しいウィンドウを開く"
 
 #: package/contents/ui/ConfigBehavior.qml:155
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Part of a sentence: 'Middle-clicking any task minimizes/restores window "
-#| "or group'"
-#| msgid "Minimizes/Restores window or group"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task minimizes/"
 "restores window or group'"
@@ -434,106 +378,86 @@ msgid "Minimizes/Restores window or group"
 msgstr "ウインドウまたはグループを最小化/復元"
 
 #: package/contents/ui/ConfigBehavior.qml:156
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Middle-clicking any task toggles grouping'"
-#| msgid "Toggles grouping"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task toggles "
 "grouping'"
 msgid "Toggles grouping"
-msgstr "グループ化を切り替え"
+msgstr "グループ化を切り替える"
 
 #: package/contents/ui/ConfigBehavior.qml:157
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Part of a sentence: 'Middle-clicking any task brings it to the current "
-#| "virtual desktop'"
-#| msgid "Brings it to the current virtual desktop"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task brings it to "
 "the current virtual desktop'"
 msgid "Brings it to the current virtual desktop"
-msgstr "現在の仮想デスクトップに移動"
+msgstr "現在の仮想デスクトップに移動する"
 
 #: package/contents/ui/ConfigBehavior.qml:167
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
-#| msgid "Mouse wheel:"
+#, kde-format
 msgctxt ""
 "@label for checkbox Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Mouse wheel:"
 msgstr "マウスホイール:"
 
 #: package/contents/ui/ConfigBehavior.qml:168
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task cycles through tasks' "
-#| msgid "Cycles through tasks"
+#, kde-format
 msgctxt "@option:check Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
-msgstr "タスクを循環"
+msgstr "タスクを循環する"
 
 #: package/contents/ui/ConfigBehavior.qml:177
-#, fuzzy, kde-format
-#| msgid "Skip minimized tasks"
+#, kde-format
 msgctxt "@option:check mouse wheel task cycling"
 msgid "Skip minimized tasks"
-msgstr "最小化されたタスクをスキップする"
+msgstr "最小化されたタスクをスキップ"
 
 #: package/contents/ui/ConfigBehavior.qml:188
-#, fuzzy, kde-format
-#| msgid "Show only tasks:"
+#, kde-format
 msgctxt ""
 "@label for checkbox group, completes sentence like: … from current screen"
 msgid "Show only tasks:"
-msgstr "表示するタスク:"
+msgstr "タスクのみを表示:"
 
 #: package/contents/ui/ConfigBehavior.qml:189
-#, fuzzy, kde-format
-#| msgid "From current screen"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current screen"
 msgstr "現在のスクリーン"
 
 #: package/contents/ui/ConfigBehavior.qml:194
-#, fuzzy, kde-format
-#| msgid "From current desktop"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current desktop"
 msgstr "現在のデスクトップ"
 
 #: package/contents/ui/ConfigBehavior.qml:199
-#, fuzzy, kde-format
-#| msgid "From current activity"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current activity"
 msgstr "現在のアクティビティ"
 
 #: package/contents/ui/ConfigBehavior.qml:204
-#, fuzzy, kde-format
-#| msgid "That are minimized"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "That are minimized"
-msgstr "最小化されたタスク"
+msgstr "最小化されたもの"
 
 #: package/contents/ui/ConfigBehavior.qml:213
-#, fuzzy, kde-format
-#| msgid "When panel is hidden:"
+#, kde-format
 msgctxt ""
 "@label for checkbox, completes sentence: … unhide if window wants attention"
 msgid "When panel is hidden:"
 msgstr "パネルが非表示のとき:"
 
 #: package/contents/ui/ConfigBehavior.qml:214
-#, fuzzy, kde-format
-#| msgid "Unhide when a window wants attention"
+#, kde-format
 msgctxt "@option:check completes sentence: When panel is hidden"
 msgid "Unhide when a window wants attention"
 msgstr "注意を促すウインドウを再表示する"
 
 #: package/contents/ui/ConfigBehavior.qml:226
-#, fuzzy, kde-format
-#| msgid "New tasks appear:"
+#, kde-format
 msgctxt "@label for radiobutton group completes sentence like: … on the bottom"
 msgid "New tasks appear:"
 msgstr "新しいタスクは:"
@@ -542,29 +466,27 @@ msgstr "新しいタスクは:"
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the bottom"
-msgstr ""
+msgstr "一番下に"
 
 #: package/contents/ui/ConfigBehavior.qml:234
 #: package/contents/ui/ConfigBehavior.qml:253
-#, fuzzy, kde-format
-#| msgid "To the right"
+#, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the right"
-msgstr "右に現れる"
+msgstr "右に表示"
 
 #: package/contents/ui/ConfigBehavior.qml:236
 #: package/contents/ui/ConfigBehavior.qml:251
-#, fuzzy, kde-format
-#| msgid "To the left"
+#, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the left"
-msgstr "左に現れる"
+msgstr "左に表示"
 
 #: package/contents/ui/ConfigBehavior.qml:247
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the top"
-msgstr ""
+msgstr "一番上に"
 
 #: package/contents/ui/ContextMenu.qml:102
 #, kde-format
@@ -745,11 +667,10 @@ msgid "Allow this program to be grouped"
 msgstr "このプログラムのグループ化を許可する"
 
 #: package/contents/ui/ContextMenu.qml:772
-#, fuzzy, kde-format
-#| msgid "&Close"
+#, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
-msgstr "閉じる(&C)"
+msgstr "すべて閉じる(&C)"
 
 #: package/contents/ui/ContextMenu.qml:772
 #, kde-format
@@ -796,7 +717,7 @@ msgstr "%1 を有効化"
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
-msgstr "%1 をアンミュート"
+msgstr "%1 をミュート解除"
 
 #: package/contents/ui/ToolTipInstance.qml:363
 #, kde-format
@@ -897,11 +818,3 @@ msgstr "最近使用した場所を忘れる"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "最近使用したファイルを忘れる"
-
-#~ msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
-#~ msgid "Cycles through tasks"
-#~ msgstr "タスクを循環"
-
-#~ msgctxt "1 = number of desktop, 2 = desktop name"
-#~ msgid "&%1 %2"
-#~ msgstr "%1 %2(&%1)"

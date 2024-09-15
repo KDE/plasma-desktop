@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-04 00:41+0000\n"
-"PO-Revision-Date: 2024-01-09 19:23+0900\n"
+"PO-Revision-Date: 2024-09-12 22:38+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: ui/main.qml:23
 #, kde-format
@@ -24,8 +24,8 @@ msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
 msgstr ""
-"中クリック貼り付けの設定の変更を有効にするにはシステムを再起動する必要があり"
-"ます。"
+"中クリック貼り付けの設定の変更を有効にするには、システムを再起動する必要があ"
+"ります。"
 
 #: ui/main.qml:29
 #, kde-format
@@ -70,13 +70,13 @@ msgstr "即時"
 #, kde-format
 msgctxt "@label"
 msgid "Scrolling:"
-msgstr ""
+msgstr "スクロール:"
 
 #: ui/main.qml:123
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
-msgstr ""
+msgstr "可能なときにスムーズスクロールを使用する"
 
 #: ui/main.qml:133
 #, kde-format
@@ -87,6 +87,10 @@ msgid ""
 "because they either do not support smooth scrolling, or have their own "
 "setting for enabling and disabling it."
 msgstr ""
+"この設定でマウスホイールもしくはキーボードでスクロールする際のアニメーション"
+"を有効化/無効化します。いくつかのアプリケーションはスムーズスクロールをサポー"
+"トしていないか固有のスクロール設定を持っているため、ここでの設定を尊重しませ"
+"ん。"
 
 #: ui/main.qml:146
 #, kde-format
@@ -104,7 +108,7 @@ msgstr "選択する"
 #: ui/main.qml:167
 #, kde-format
 msgid "Open by double-clicking instead"
-msgstr "ダブルクリックで開く"
+msgstr "ダブルクリックして開く"
 
 #: ui/main.qml:180
 #, kde-format
@@ -120,7 +124,7 @@ msgstr "アイテムの選択マーカーをクリックして選択"
 #: ui/main.qml:209
 #, kde-format
 msgid "Clicking in scrollbar track:"
-msgstr "スクロールバーのスクロールエリアをクリックした際の挙動:"
+msgstr "スクロールエリアをクリックした際の挙動:"
 
 #: ui/main.qml:210
 #, kde-format
@@ -231,7 +235,7 @@ msgid ""
 "applications may not honor this setting."
 msgstr ""
 "この期間にされた2回のクリックがダブルクリックと見なされます。いくつかのアプリ"
-"ケーションはこの設定を尊重しないかもしれません。"
+"ケーションはこの設定を無視するかもしれません。"
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
@@ -249,7 +253,7 @@ msgstr "アニメーションの速度"
 #: workspaceoptions_kdeglobalssettings.kcfg:17
 #, kde-format
 msgid "Smooth scrolling"
-msgstr ""
+msgstr "スムーズスクロール"
 
 #. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21

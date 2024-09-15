@@ -1,7 +1,7 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# SPDX-FileCopyrightText: 2024 Dimitrys Meliates <demetresmeliates+i18n@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
@@ -10,140 +10,140 @@ msgstr ""
 "PO-Revision-Date: 2024-09-13 18:18+0300\n"
 "Last-Translator: Antonis G. <capoiosct@gmail.com>\n"
 "Language-Team: el <kde-i18n-el@kde.org>\n"
-"Language: Greek\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: inputsequence.cpp:135
 #, kde-format
 msgctxt "@action:button This action is disabled"
 msgid "Disabled"
-msgstr ""
+msgstr "Ανενεργό"
 
 #: inputsequence.cpp:138
 #, kde-format
 msgctxt "@action:button There is no keybinding"
 msgid "None"
-msgstr ""
+msgstr "Κανένα"
 
 #: inputsequence.cpp:145
 #, kde-format
 msgctxt "@action:button"
 msgid "Left mouse button"
-msgstr ""
+msgstr "Αριστερό κουμπί ποντικιού"
 
 #: inputsequence.cpp:147
 #, kde-format
 msgctxt "@action:button"
 msgid "Right mouse button"
-msgstr ""
+msgstr "Δεξί κουμπί ποντικιού"
 
 #: inputsequence.cpp:149
 #, kde-format
 msgctxt "@action:button"
 msgid "Middle mouse button"
-msgstr ""
+msgstr "Μεσαίο κουμπί ποντικιού"
 
 #: inputsequence.cpp:155
 #, kde-format
 msgctxt "@action:button"
 msgid "Application-defined"
-msgstr ""
+msgstr "Οριζόμενο από την εφαρμογή"
 
 #: kcmtablet.cpp:34
 #, kde-format
 msgid "Default"
-msgstr ""
+msgstr "Προεπιλογή"
 
 #: kcmtablet.cpp:35
 #, kde-format
 msgid "Portrait"
-msgstr ""
+msgstr "Πορτρέτο"
 
 #: kcmtablet.cpp:36
 #, kde-format
 msgid "Landscape"
-msgstr ""
+msgstr "Τοπίο"
 
 #: kcmtablet.cpp:37
 #, kde-format
 msgid "Inverted Portrait"
-msgstr ""
+msgstr "Αντεστραμμένο πορτρέτο"
 
 #: kcmtablet.cpp:38
 #, kde-format
 msgid "Inverted Landscape"
-msgstr ""
+msgstr "Αντεστραμμένο τοπίο"
 
 #: kcmtablet.cpp:88
 #, kde-format
 msgid "Follow the Current Screen"
-msgstr ""
+msgstr "Ακολούθηση της τρέχουσας οθόνης"
 
 #: kcmtablet.cpp:93
 #, kde-format
 msgid "All Screens"
-msgstr ""
+msgstr "Όλες οι οθόνες"
 
 #: kcmtablet.cpp:102
 #, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
-msgstr ""
+msgstr "%1 - (%2,%3 %4×%5)"
 
 #: kcmtablet.cpp:162
 #, kde-format
 msgid "Fit to Screen"
-msgstr ""
+msgstr "Προσαρμογή στην οθόνη"
 
 #: kcmtablet.cpp:163
 #, kde-format
 msgid "Keep Aspect Ratio and Fit Within Screen"
-msgstr ""
+msgstr "Διατήρηση αναλογίας διαστάσεων και προσαρμογή εντός οθόνης"
 
 #: kcmtablet.cpp:164
 #, kde-format
 msgid "Map to Portion of Screen"
-msgstr ""
+msgstr "Χάρτης σε τμήμα της οθόνης"
 
 #: ui/ActionDialog.qml:24
 #, kde-format
 msgctxt "@title Select the action for the tablet button"
 msgid "Select Button Action"
-msgstr ""
+msgstr "Επιλογή ενέργειας κουμπιού"
 
 #: ui/ActionDialog.qml:70
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when pressing %1:"
-msgstr ""
+msgstr "Επιλογή της ενέργειας που θα εκτελεστεί όταν πατήσετε το %1:"
 
 #: ui/ActionDialog.qml:84
 #, kde-format
 msgctxt "@option:radio Set this action to an application-defined type"
 msgid "Defer to application"
-msgstr ""
+msgstr "Αναβολή στην εφαρμογή"
 
 #: ui/ActionDialog.qml:99
 #, kde-format
 msgctxt "@option:radio Set this action to a keyboard type"
 msgid "Send keyboard key"
-msgstr ""
+msgstr "Αποστολή πλήκτρου πληκτρολογίου"
 
 #: ui/ActionDialog.qml:113
 #, kde-format
 msgctxt "@option:radio Set this action to a mouse type"
 msgid "Send mouse button click"
-msgstr ""
+msgstr "Αποστολή κλικ κουμπιού ποντικιού"
 
 #: ui/ActionDialog.qml:129
 #, kde-format
 msgctxt "@option:radio Disable this action"
 msgid "Do nothing"
-msgstr ""
+msgstr "Να μην γίνει τίποτα"
 
 #: ui/ActionDialog.qml:149
 #, kde-format
@@ -152,60 +152,62 @@ msgid ""
 "This tablet button is forwarded to the focused application, which can decide "
 "how to handle it."
 msgstr ""
+"Αυτό το κουμπί tablet προωθείται στην εστιασμένη εφαρμογή, η οποία μπορεί να "
+"αποφασίσει πώς θα το χειριστεί."
 
 #: ui/ActionDialog.qml:177
 #, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left-click"
-msgstr ""
+msgstr "Αριστερό κλικ"
 
 #: ui/ActionDialog.qml:178
 #, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle-click"
-msgstr ""
+msgstr "Μεσαίο κλικ"
 
 #: ui/ActionDialog.qml:179
 #, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right-click"
-msgstr ""
+msgstr "Δεξί κλικ"
 
 #: ui/ActionDialog.qml:206
 #, kde-format
 msgctxt "@option:check The ctrl modifier on the keyboard"
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 #: ui/ActionDialog.qml:213
 #, kde-format
 msgctxt "@option:check The alt modifier on the keyboard"
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: ui/ActionDialog.qml:220
 #, kde-format
 msgctxt "@option:check The meta modifier on the keyboard"
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: ui/ActionDialog.qml:227
 #, kde-format
 msgctxt "@option:check The shift modifier on the keyboard"
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 #: ui/ActionDialog.qml:235
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
-msgstr ""
+msgstr "Αυτό το κουμπί είναι ανενεργό και δεν θα κάνει τίποτα."
 
 #: ui/Calibration.qml:31
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
-msgstr ""
+msgstr "Βαθμονόμηση στυλό"
 
 #: ui/Calibration.qml:85
 #, kde-kuit-format
@@ -214,6 +216,8 @@ msgid ""
 "Calibration is completed and saved.<nl/><nl/>Refine the calibration further "
 "or close the window."
 msgstr ""
+"Η βαθμονόμηση έχει ολοκληρωθεί και αποθηκευτεί.<nl/><nl/>Τελειοποιήστε "
+"περαιτέρω τη βαθμονόμηση ή κλείστε το παράθυρο."
 
 #: ui/Calibration.qml:86
 #, kde-kuit-format
@@ -222,72 +226,74 @@ msgid ""
 "Tap the center of each target.<nl/><nl/>Aim for the point where the stylus "
 "tip lands, and ignore the cursor position on the screen."
 msgstr ""
+"Πατήστε το κέντρο κάθε στόχου.<nl/><nl/>Στοχεύστε στο σημείο όπου "
+"προσγειώνεται η άκρη της γραφίδας και αγνοήστε τη θέση του δρομέα στην οθόνη."
 
 #: ui/Calibration.qml:92
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
-msgstr ""
+msgstr "Βελτίωση υπάρχουσας βαθμονόμησης"
 
 #: ui/Calibration.qml:101
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
-msgstr ""
+msgstr "Βαθμονόμηση από την αρχή"
 
 #: ui/Calibration.qml:115
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "Κλείσιμο"
 
 #: ui/Calibration.qml:115
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Ακύρωση"
 
 #: ui/main.qml:32
 #, kde-format
 msgid "No drawing tablets found"
-msgstr ""
+msgstr "Δεν βρέθηκαν tablets σχεδίασης"
 
 #: ui/main.qml:33
 #, kde-format
 msgid "Connect a drawing tablet"
-msgstr ""
+msgstr "Συνδέστε ένα tablet σχεδίασης"
 
 #: ui/main.qml:41
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr ""
+msgstr "Δοκιμή tablet…"
 
 #: ui/main.qml:67
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
-msgstr ""
+msgstr "Συσκευή:"
 
 #: ui/main.qml:105
 #, kde-format
 msgid "Map to screen:"
-msgstr ""
+msgstr "Χαρτογράφηση στην οθόνη:"
 
 #: ui/main.qml:125
 #, kde-format
 msgid "Orientation:"
-msgstr ""
+msgstr "Προσανατολισμός:"
 
 #: ui/main.qml:131
 #, kde-format
 msgid "Not Supported"
-msgstr ""
+msgstr "Δεν υποστηρίζεται"
 
 #: ui/main.qml:138
 #, kde-format
 msgid "Left-handed mode:"
-msgstr ""
+msgstr "Λειτουργία αριστερόχειρα:"
 
 #: ui/main.qml:149
 #, kde-kuit-format
@@ -297,33 +303,36 @@ msgid ""
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
+"Προσαρμόζει τη συσκευή για αριστερόχειρες χρήστες. Τα αποτελέσματα "
+"ποικίλλουν ανάλογα με τη συσκευή, αλλά συχνά αντιστρέφει τη λειτουργία των "
+"κουμπιών του πεδίου, ώστε το tablet να μπορεί να χρησιμοποιηθεί ανάποδα."
 
 #: ui/main.qml:155
 #, kde-format
 msgid "Mapped Area:"
-msgstr ""
+msgstr "Χαρτογραφημένη περιοχή:"
 
 #: ui/main.qml:242
 #, kde-format
 msgid "Resize the tablet area"
-msgstr ""
+msgstr "Αλλαγή μεγέθους περιοχής tablet"
 
 #: ui/main.qml:266
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
-msgstr ""
+msgstr "Κλείδωμα αναλογίας διαστάσεων"
 
 #: ui/main.qml:274
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
-msgstr ""
+msgstr "%1,%2 - %3×%4"
 
 #: ui/main.qml:285
 #, kde-format
 msgid "Pen button 1:"
-msgstr ""
+msgstr "Κουμπί στυλό 1:"
 
 #: ui/main.qml:286
 #, kde-format
@@ -331,12 +340,12 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 1'"
 msgid "pen button 1"
-msgstr ""
+msgstr "κουμπί στυλό 1"
 
 #: ui/main.qml:290
 #, kde-format
 msgid "Pen button 2:"
-msgstr ""
+msgstr "Κουμπί στυλό 2:"
 
 #: ui/main.qml:291
 #, kde-format
@@ -344,12 +353,12 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 2'"
 msgid "pen button 2"
-msgstr ""
+msgstr "κουμπί στυλό 2"
 
 #: ui/main.qml:295
 #, kde-format
 msgid "Pen button 3:"
-msgstr ""
+msgstr "Κουμπί στυλό 3:"
 
 #: ui/main.qml:296
 #, kde-format
@@ -357,47 +366,47 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 3'"
 msgid "pen button 3"
-msgstr ""
+msgstr "κουμπί στυλό 3"
 
 #: ui/main.qml:351
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
-msgstr ""
+msgstr "Βαθμονόμηση σε εξέλιξη"
 
 #: ui/main.qml:353
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
-msgstr ""
+msgstr "Βαθμονόμηση"
 
 #: ui/main.qml:356
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
-msgstr ""
+msgstr "Η βαθμονόμηση δεν υποστηρίζεται"
 
 #: ui/main.qml:383
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
-msgstr ""
+msgstr "Η βαθμονόμηση σε πολλαπλές οθόνες δεν υποστηρίζεται."
 
 #: ui/main.qml:393
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
-msgstr ""
+msgstr "Επιφάνεια:"
 
 #: ui/main.qml:404
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "Κανένα"
 
 #: ui/main.qml:429
 #, kde-format
 msgid "Pad button %1:"
-msgstr ""
+msgstr "Κουμπί επιφάνειας %1:"
 
 #: ui/main.qml:432
 #, kde-format
@@ -405,28 +414,28 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad button %1"
-msgstr ""
+msgstr "κουμπί επιφάνειας %1"
 
 #: ui/Tester.qml:25
 #, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
-msgstr ""
+msgstr "Δοκιμαστής Tablet"
 
 #: ui/Tester.qml:48
 #, kde-format
 msgid "Stylus press X=%1 Y=%2"
-msgstr ""
+msgstr "Πάτημα γραφίδας X=%1 Y=%2"
 
 #: ui/Tester.qml:58
 #, kde-format
 msgid "Stylus release X=%1 Y=%2"
-msgstr ""
+msgstr "Απελευθέρωση γραφίδας X=%1 Y=%2"
 
 #: ui/Tester.qml:68
 #, kde-format
 msgid "Stylus move X=%1 Y=%2"
-msgstr ""
+msgstr "Κίνηση γραφίδας X=%1 Y=%2"
 
 #: ui/Tester.qml:199
 #, kde-format
@@ -434,9 +443,11 @@ msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
 msgstr ""
+"## Υπόμνημα:\n"
+"# X, Y - συντεταγμένες συμβάντος\n"
 
 #: ui/Tester.qml:206
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"
-msgstr ""
+msgstr "Εκκαθάριση"

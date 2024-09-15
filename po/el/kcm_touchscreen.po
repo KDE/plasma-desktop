@@ -1,7 +1,7 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# SPDX-FileCopyrightText: 2024 Dimitrys Meliates <demetresmeliates+i18n@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
@@ -10,46 +10,46 @@ msgstr ""
 "PO-Revision-Date: 2024-09-13 18:18+0300\n"
 "Last-Translator: Antonis G. <capoiosct@gmail.com>\n"
 "Language-Team: el <kde-i18n-el@kde.org>\n"
-"Language: Greek\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: kcmtouchscreen.cpp:46
 #, kde-format
 msgid "Automatic"
-msgstr ""
+msgstr "Αυτόματα"
 
 #: kcmtouchscreen.cpp:52
 #, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
-msgstr ""
+msgstr "%1 - (%2,%3 %4×%5)"
 
 #: ui/main.qml:29
 #, kde-format
 msgid "No touchscreens found"
-msgstr ""
+msgstr "Δεν βρέθηκαν οθόνες αφής"
 
 #: ui/main.qml:30
 #, kde-format
 msgid "Connect an external touchscreen"
-msgstr ""
+msgstr "Σύνδεση εξωτερικής οθόνης αφής"
 
 #: ui/main.qml:46
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
-msgstr ""
+msgstr "Συσκευή:"
 
 #: ui/main.qml:59
 #, kde-format
 msgid "Enabled:"
-msgstr ""
+msgstr "Ενεργή:"
 
 #: ui/main.qml:67
 #, kde-format
 msgid "Target display:"
-msgstr ""
+msgstr "Οθόνη στόχος:"

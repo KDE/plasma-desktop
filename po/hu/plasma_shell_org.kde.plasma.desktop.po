@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-14 00:42+0000\n"
-"PO-Revision-Date: 2024-05-27 22:48+0200\n"
+"PO-Revision-Date: 2024-09-14 20:58+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -330,10 +330,9 @@ msgid "Add spacer widget to the panel"
 msgstr "Elválasztó elem hozzáadása a panelhez"
 
 #: contents/configuration/PanelConfiguration.qml:114
-#, fuzzy, kde-format
-#| msgid "Add Widgets…"
+#, kde-format
 msgid "Add or Manage Widgets…"
-msgstr "Elemek hozzáadása…"
+msgstr "Elemek hozzáadása vagy kezelése…"
 
 #: contents/configuration/PanelConfiguration.qml:117
 #, kde-format
@@ -475,7 +474,7 @@ msgstr "Stílus"
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
-msgstr ""
+msgstr "Javítás"
 
 #: contents/configuration/PanelConfiguration.qml:564
 #, kde-format
@@ -509,15 +508,13 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "Eltávolítja ezt a panelt; a művelet nem vonható vissza"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Bezárás"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, fuzzy, kde-format
-#| msgid "Exit Edit Mode"
+#, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
@@ -529,46 +526,38 @@ msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "Panelbeállítások ablak bezárása és kilépés a szerkesztőmódból"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:32
-#, fuzzy, kde-format
-#| msgid "Drag to change maximum height."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum height."
 msgstr "Húzza a maximális magasság módosításához."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:33
-#, fuzzy, kde-format
-#| msgid "Drag to change maximum width."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum width."
 msgstr "Húzza a maximális szélesség módosításához."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:34
 #: contents/configuration/panelconfiguration/Ruler.qml:39
-#, fuzzy, kde-format
-#| msgid "Double click to reset."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Double-click to reset."
 msgstr "Kattintson duplán a visszaállításhoz."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:37
-#, fuzzy, kde-format
-#| msgid "Drag to change minimum height."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum height."
 msgstr "Húzza a minimális magasság módosításához."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:38
-#, fuzzy, kde-format
-#| msgid "Drag to change minimum width."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr "Húzza a minimális szélesség módosításához."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:87
-#, fuzzy, kde-format
-#| msgid ""
-#| "Drag to change position on this screen edge.\n"
-#| "Double click to reset."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid ""
 "Drag to change position on this screen edge.\n"
@@ -633,7 +622,7 @@ msgstr "Nem támogatott felületi elem"
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
-msgstr ""
+msgstr "Új!"
 
 #: contents/explorer/AppletDelegate.qml:188
 #, kde-format
@@ -672,18 +661,16 @@ msgid "Widgets"
 msgstr "Elemek"
 
 #: contents/explorer/WidgetExplorer.qml:164
-#, fuzzy, kde-format
-#| msgid "Get New Plugins…"
+#, kde-format
 msgctxt "@action:button The word 'new' refers to widgets"
 msgid "Get New…"
-msgstr "Új kiegészítők letöltése…"
+msgstr "Új letöltése…"
 
 #: contents/explorer/WidgetExplorer.qml:165
-#, fuzzy, kde-format
-#| msgid "Get New Widgets…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Get New Widgets…"
-msgstr "Új widgetek letöltése…"
+msgstr "Új elemek letöltése…"
 
 #: contents/explorer/WidgetExplorer.qml:220
 #, kde-format
@@ -691,13 +678,11 @@ msgid "Categories"
 msgstr "Kategóriák"
 
 #: contents/explorer/WidgetExplorer.qml:231
-#, fuzzy, kde-format
-#| msgid "Confirm Removal Of One Widget"
-#| msgid_plural "Confirm Removal Of %1 Widgets"
+#, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Confirm Removal of One Widget"
 msgid_plural "Confirm Removal of %1 Widgets"
-msgstr[0] "Egy elem eltávolításának megerősítése"
+msgstr[0] "1 elem eltávolításának megerősítése"
 msgstr[1] "%1 elem eltávolításának megerősítése"
 
 #: contents/explorer/WidgetExplorer.qml:315
@@ -720,7 +705,7 @@ msgstr "Óra:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
-msgstr ""
+msgstr "Óra megjelenítése"
 
 #: contents/lockscreen/config.qml:33
 #, kde-format

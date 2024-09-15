@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:42+0000\n"
-"PO-Revision-Date: 2024-01-14 12:45+0900\n"
+"PO-Revision-Date: 2024-08-18 16:42+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: landingpage_kdeglobalssettings.kcfg:9
@@ -55,11 +55,10 @@ msgid "Theme:"
 msgstr "テーマ:"
 
 #: ui/main.qml:76
-#, fuzzy, kde-format
-#| msgid "More Appearance Settings…"
+#, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More appearance settings:"
-msgstr "その他の外観設定..."
+msgstr "その他の外観設定:"
 
 #: ui/main.qml:120
 #, kde-format
@@ -108,27 +107,12 @@ msgid "Select by clicking on item's selection marker"
 msgstr "アイテムの選択マーカーをクリックして選択"
 
 #: ui/main.qml:216
-#, fuzzy, kde-format
-#| msgid "More Behavior Settings…"
+#, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More behavior settings:"
-msgstr "その他の動作設定..."
+msgstr "その他の動作設定:"
 
 #: ui/main.qml:229
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "よく使われるページ:"
-
-#, fuzzy
-#~| msgid "Change Wallpaper…"
-#~ msgctxt "@action:button as in, 'this will take you to the Wallpaper KCM'"
-#~ msgid "Wallpaper"
-#~ msgstr "壁紙を変更..."
-
-#, fuzzy
-#~| msgid "Color scheme name"
-#~ msgctxt ""
-#~ "@action:button as in, 'this will take you to the first KCM in the Colors "
-#~ "& Themes group'"
-#~ msgid "Colors & Themes"
-#~ msgstr "カラースキームの名前"

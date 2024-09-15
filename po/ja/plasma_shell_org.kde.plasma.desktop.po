@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-14 00:42+0000\n"
-"PO-Revision-Date: 2024-04-28 17:39+0900\n"
-"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
+"PO-Revision-Date: 2024-09-11 19:57+0900\n"
+"Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -330,10 +330,9 @@ msgid "Add spacer widget to the panel"
 msgstr "スペーサーウィジェットをパネルに追加"
 
 #: contents/configuration/PanelConfiguration.qml:114
-#, fuzzy, kde-format
-#| msgid "Add Widgets…"
+#, kde-format
 msgid "Add or Manage Widgets…"
-msgstr "ウィジェットを追加..."
+msgstr "ウィジェットを追加または管理..."
 
 #: contents/configuration/PanelConfiguration.qml:117
 #, kde-format
@@ -474,7 +473,7 @@ msgstr "スタイル"
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
-msgstr ""
+msgstr "修正する"
 
 #: contents/configuration/PanelConfiguration.qml:564
 #, kde-format
@@ -482,10 +481,9 @@ msgid "Panel Width:"
 msgstr "パネルの幅:"
 
 #: contents/configuration/PanelConfiguration.qml:565
-#, fuzzy, kde-format
-#| msgid "Panel Width:"
+#, kde-format
 msgid "Panel Height:"
-msgstr "パネルの幅:"
+msgstr "パネルの高さ:"
 
 #: contents/configuration/PanelConfiguration.qml:588
 #, kde-format
@@ -509,8 +507,7 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "このパネルを削除します。この操作は取り消せません"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "閉じる"
@@ -520,61 +517,53 @@ msgstr "閉じる"
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
-msgstr ""
+msgstr "編集モードを終了"
 
 #: contents/configuration/PanelConfiguration.qml:650
 #, kde-format
 msgid "Close Panel Settings window and exit Edit Mode"
-msgstr ""
+msgstr "パネル設定ウィンドウを閉じて編集モードを終了する"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:32
-#, fuzzy, kde-format
-#| msgid "Drag to change maximum height."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum height."
-msgstr "ドラッグして最大の高さを変更"
+msgstr "ドラッグで最大の高さを変更する。"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:33
-#, fuzzy, kde-format
-#| msgid "Drag to change maximum width."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum width."
-msgstr "ドラッグして最大の幅を変更"
+msgstr "ドラッグで最大の幅を変更する。"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:34
 #: contents/configuration/panelconfiguration/Ruler.qml:39
-#, fuzzy, kde-format
-#| msgid "Double click to reset."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Double-click to reset."
-msgstr "ダブルクリックしてリセット"
+msgstr "ダブルクリックでリセットする。"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:37
-#, fuzzy, kde-format
-#| msgid "Drag to change minimum height."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum height."
-msgstr "ドラッグして最小の高さを変更"
+msgstr "ドラッグで最小の高さを変更する。"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:38
-#, fuzzy, kde-format
-#| msgid "Drag to change minimum width."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
-msgstr "ドラッグして最小の幅を変更"
+msgstr "ドラッグで最小の幅を変更する。"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:87
-#, fuzzy, kde-format
-#| msgid ""
-#| "Drag to change position on this screen edge.\n"
-#| "Double click to reset."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid ""
 "Drag to change position on this screen edge.\n"
 "Double-click to reset."
 msgstr ""
-"ドラッグしてこのスクリーンの端での位置を変更\n"
-"ダブルクリックしてリセット"
+"ドラッグでこの画面の端の位置を変更する。\n"
+"ダブルクリックでリセット。"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 #, kde-format
@@ -631,7 +620,7 @@ msgstr "サポートされていないウィジェット"
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
-msgstr ""
+msgstr "新規！"
 
 #: contents/explorer/AppletDelegate.qml:188
 #, kde-format
@@ -670,18 +659,16 @@ msgid "Widgets"
 msgstr "ウィジェット"
 
 #: contents/explorer/WidgetExplorer.qml:164
-#, fuzzy, kde-format
-#| msgid "Get New Plugins…"
+#, kde-format
 msgctxt "@action:button The word 'new' refers to widgets"
 msgid "Get New…"
-msgstr "新しいプラグインを入手..."
+msgstr "新規取得..."
 
 #: contents/explorer/WidgetExplorer.qml:165
-#, fuzzy, kde-format
-#| msgid "Get New Widgets…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Get New Widgets…"
-msgstr "新しいウィジェットを入手..."
+msgstr "新しいウィジェットを取得..."
 
 #: contents/explorer/WidgetExplorer.qml:220
 #, kde-format
@@ -717,7 +704,7 @@ msgstr "時計:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
-msgstr ""
+msgstr "時計を表示"
 
 #: contents/lockscreen/config.qml:33
 #, kde-format
@@ -818,35 +805,30 @@ msgstr "次のトラック"
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: contents/views/DesktopEditMode.qml:115
 #, kde-format
 msgid "Global Themes"
-msgstr ""
+msgstr "グローバルテーマ"
 
 #: contents/views/DesktopEditMode.qml:122
-#, fuzzy, kde-format
-#| msgid "Open configuration page"
+#, kde-format
 msgid "Display Configuration"
-msgstr "設定ページを開く"
+msgstr "ディスプレイの設定"
 
 #: contents/views/DesktopEditMode.qml:143
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
-msgstr ""
+msgstr "もっと"
 
 #: contents/views/DesktopEditMode.qml:152
 #, kde-format
 msgid "Exit Edit Mode"
-msgstr ""
+msgstr "編集モードを終了"
 
 #: contents/views/Panel.qml:302
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "パネルフォーカスインジケータ"
-
-#~ msgctxt "@option:check"
-#~ msgid "Keep visible when unlocking prompt disappears"
-#~ msgstr "アンロック画面が消えても表示し続ける"
