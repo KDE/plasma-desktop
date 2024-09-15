@@ -233,6 +233,7 @@ FocusScope {
         property int dragY: -1
         property var cPress: null
         property bool doubleClickInProgress: false
+        property bool renameByLabelClickInitiated: false
 
         acceptedButtons: {
             if (hoveredItem === null && main.isRootView) {
@@ -410,8 +411,8 @@ FocusScope {
 
             if (!(pos.x <= hoveredItem.actionsOverlay.width && pos.y <= hoveredItem.actionsOverlay.height)) {
 
-                // Clicked on the label of an already-selected item: rename it
-                if (pos.x > hoveredItem.labelArea.x
+                // Clicked on the label of an already-selected item: schedule it for renaming when doubleClickTimer expires
+                renameByLabelClickInitiated = (pos.x > hoveredItem.labelArea.x
                     && pos.x <= hoveredItem.labelArea.x + hoveredItem.labelArea.width
                     && pos.y > hoveredItem.labelArea.y
                     && pos.y <= hoveredItem.labelArea.y + hoveredItem.labelArea.height
@@ -419,15 +420,12 @@ FocusScope {
                     && gridView.currentIndex !== -1
                     && !Qt.styleHints.singleClickActivation
                     && Plasmoid.configuration.renameInline
-                    && !doubleClickInProgress
-                ) {
-                    rename();
-                    return;
-                }
+                )
 
                 // Single-click mode and single-clicked on the item or
                 // double-click mode and double-clicked on the item: open it
                 if (Qt.styleHints.singleClickActivation || doubleClickInProgress || mouse.source === Qt.MouseEventSynthesizedByQt) {
+                    doubleClickInProgress = false
                     var func = root.useListViewMode && mouse.button === Qt.LeftButton && hoveredItem.isDir ? doCd : dir.run;
 
                     func(positioner.map(gridView.currentIndex));
@@ -606,6 +604,10 @@ FocusScope {
             id: doubleClickTimer
 
             onTriggered: {
+                if (listener.renameByLabelClickInitiated && listener.doubleClickInProgress) {
+                    main.rename()
+                }
+                listener.renameByLabelClickInitiated = false
                 listener.doubleClickInProgress = false;
             }
         }
