@@ -150,6 +150,13 @@ PC3.Page {
     }
 
     header: PlasmaExtras.PlasmoidHeading {
+        readonly property int margins: Kirigami.Units.largeSpacing
+
+        topPadding: topInset
+        leftPadding: margins + leftInset
+        rightPadding: margins + rightInset
+        bottomPadding: margins + bottomInset
+
         ColumnLayout {
             id: header
             anchors.fill: parent
