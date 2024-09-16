@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-16 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -205,14 +205,19 @@ msgid "Double-click interval:"
 msgstr "双击间隔时间："
 
 #: ui/main.qml:370
-#, kde-format
-msgid "%1 msec"
-msgid_plural "%1 msec"
+#, fuzzy, kde-format
+#| msgid "%1 msec"
+#| msgid_plural "%1 msec"
+msgctxt "short for millisecond(s)"
+msgid "%1 ms"
+msgid_plural "%1 ms"
 msgstr[0] "%1 毫秒"
 
 #: ui/main.qml:374
-#, kde-format
-msgid "msec"
+#, fuzzy, kde-format
+#| msgid "msec"
+msgctxt "short for millisecond(s)"
+msgid "ms"
 msgstr "毫秒"
 
 #: ui/main.qml:388

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-16 00:41+0000\n"
 "PO-Revision-Date: 2024-09-04 16:57+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -212,15 +212,20 @@ msgid "Double-click interval:"
 msgstr "Intervalo de doble clic:"
 
 #: ui/main.qml:370
-#, kde-format
-msgid "%1 msec"
-msgid_plural "%1 msec"
+#, fuzzy, kde-format
+#| msgid "%1 msec"
+#| msgid_plural "%1 msec"
+msgctxt "short for millisecond(s)"
+msgid "%1 ms"
+msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
 #: ui/main.qml:374
-#, kde-format
-msgid "msec"
+#, fuzzy, kde-format
+#| msgid "msec"
+msgctxt "short for millisecond(s)"
+msgid "ms"
 msgstr "ms"
 
 #: ui/main.qml:388

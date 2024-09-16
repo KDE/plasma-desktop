@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-16 00:41+0000\n"
 "PO-Revision-Date: 2024-09-10 02:22+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -208,14 +208,19 @@ msgid "Double-click interval:"
 msgstr "雙擊間隔："
 
 #: ui/main.qml:370
-#, kde-format
-msgid "%1 msec"
-msgid_plural "%1 msec"
+#, fuzzy, kde-format
+#| msgid "%1 msec"
+#| msgid_plural "%1 msec"
+msgctxt "short for millisecond(s)"
+msgid "%1 ms"
+msgid_plural "%1 ms"
 msgstr[0] "%1 微秒"
 
 #: ui/main.qml:374
-#, kde-format
-msgid "msec"
+#, fuzzy, kde-format
+#| msgid "msec"
+msgctxt "short for millisecond(s)"
+msgid "ms"
 msgstr "微秒"
 
 #: ui/main.qml:388

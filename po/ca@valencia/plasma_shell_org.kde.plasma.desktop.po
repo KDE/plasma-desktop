@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-14 00:42+0000\n"
-"PO-Revision-Date: 2024-09-05 12:22+0200\n"
+"PO-Revision-Date: 2024-09-14 13:13+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -680,14 +680,12 @@ msgid "Categories"
 msgstr "Categories"
 
 #: contents/explorer/WidgetExplorer.qml:231
-#, fuzzy, kde-format
-#| msgid "Confirm Removal Of One Widget"
-#| msgid_plural "Confirm Removal Of %1 Widgets"
+#, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Confirm Removal of One Widget"
 msgid_plural "Confirm Removal of %1 Widgets"
-msgstr[0] "Confirmeu la supressió d'un giny"
-msgstr[1] "Confirmeu la supressió de %1 ginys"
+msgstr[0] "Confirma la supressió d'un giny"
+msgstr[1] "Confirma la supressió de %1 ginys"
 
 #: contents/explorer/WidgetExplorer.qml:315
 #, kde-format

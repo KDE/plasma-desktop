@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-16 00:41+0000\n"
 "PO-Revision-Date: 2017-12-03 22:53+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -203,8 +203,9 @@ msgstr ""
 
 #: ui/main.qml:370
 #, kde-format
-msgid "%1 msec"
-msgid_plural "%1 msec"
+msgctxt "short for millisecond(s)"
+msgid "%1 ms"
+msgid_plural "%1 ms"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
@@ -212,7 +213,8 @@ msgstr[3] ""
 
 #: ui/main.qml:374
 #, kde-format
-msgid "msec"
+msgctxt "short for millisecond(s)"
+msgid "ms"
 msgstr ""
 
 #: ui/main.qml:388
