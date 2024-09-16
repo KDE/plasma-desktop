@@ -32,7 +32,7 @@ Controller {
     
     readonly property QtObject tasksModel: TaskManager.TasksModel {
         id: tasksModel
-        sortMode: TaskManager.TasksModel.SortDisabled
+        sortMode: TaskManager.TasksModel.SortLastActivated
         groupMode: TaskManager.TasksModel.GroupDisabled
     }
 
@@ -69,7 +69,7 @@ Controller {
 
     function activate() {
         const clients = [];
-        for (let i = 0; i < tasksModel.count; i++) {
+        for (let i = tasksModel.count - 1; i >= 0; i--) {
             const idx = tasksModel.makeModelIndex(i);
             if (!tasksModel.data(idx, TaskManager.AbstractTasksModel.IsHidden) &
                 tasksModel.data(idx, TaskManager.AbstractTasksModel.Activities).includes(activityInfo.currentActivity) &
