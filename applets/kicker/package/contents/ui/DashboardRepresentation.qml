@@ -884,7 +884,7 @@ Kicker.DashboardWindow {
                         }
 
                         highlight: PlasmaExtras.Highlight {
-                            x: filterList.currentItem ? filterList.currentItem.x : 0
+                            x: LayoutMirroring.enabled ? filterList.width - width : 0
                             y: filterList.currentItem ? filterList.currentItem.y : 0
                             height: filterList.currentItem ? filterList.currentItem.height : 0
                             width: (highlightItemSvg.margins.left
