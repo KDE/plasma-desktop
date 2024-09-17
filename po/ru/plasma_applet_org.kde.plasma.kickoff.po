@@ -10,13 +10,13 @@
 # Nick Shaforostoff <shafff@ukr.net>, 2009, 2010.
 # Yuri Efremov <yur.arh@gmail.com>, 2011, 2012.
 # Alexander Lakhin <exclusion@gmail.com>, 2013.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2018, 2019, 2021, 2022, 2023.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2018, 2019, 2021, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_launcher\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-04 00:41+0000\n"
-"PO-Revision-Date: 2023-12-26 17:03+0300\n"
+"PO-Revision-Date: 2024-09-15 13:47+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -158,12 +158,10 @@ msgid "Automatically disabled when in Touch Mode"
 msgstr "Отключать автоматически в сенсорном режиме"
 
 #: package/contents/ui/ConfigGeneral.qml:175
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Enabled Search Plugins…"
+#, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
-msgstr "Настроить используемые модули поиска…"
+msgstr "Настроить модули поиска…"
 
 #: package/contents/ui/ConfigGeneral.qml:185
 #, kde-format

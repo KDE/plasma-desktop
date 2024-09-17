@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-16 00:41+0000\n"
-"PO-Revision-Date: 2024-09-04 17:36+0200\n"
+"PO-Revision-Date: 2024-09-16 20:03+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -211,21 +211,18 @@ msgid "Double-click interval:"
 msgstr "Dubbelklickintervall:"
 
 #: ui/main.qml:370
-#, fuzzy, kde-format
-#| msgid "%1 msec"
-#| msgid_plural "%1 msec"
+#, kde-format
 msgctxt "short for millisecond(s)"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "%1 msek"
-msgstr[1] "%1 msek"
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
 
 #: ui/main.qml:374
-#, fuzzy, kde-format
-#| msgid "msec"
+#, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
-msgstr "msek"
+msgstr "ms"
 
 #: ui/main.qml:388
 #, kde-format

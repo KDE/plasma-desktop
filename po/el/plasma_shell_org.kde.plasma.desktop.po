@@ -4,20 +4,21 @@
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2015, 2016, 2017.
 # Dimitrios Glentadakis <dglent@free.fr>, 2014.
 # Dimitrys Meliates <demetresmeliates+i18n@gmail.com>, 2024.
+# SPDX-FileCopyrightText: 2024 Antonis Geralis <capoiosct@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-14 00:42+0000\n"
-"PO-Revision-Date: 2024-08-13 11:44+0300\n"
-"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-09-15 20:52+0300\n"
+"Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -684,13 +685,11 @@ msgid "Categories"
 msgstr "Κατηγορίες"
 
 #: contents/explorer/WidgetExplorer.qml:231
-#, fuzzy, kde-format
-#| msgid "Confirm Removal Of One Widget"
-#| msgid_plural "Confirm Removal Of %1 Widgets"
+#, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Confirm Removal of One Widget"
 msgid_plural "Confirm Removal of %1 Widgets"
-msgstr[0] "Επιβεβαίωση αφαίρεση ενός συστατικού"
+msgstr[0] "Επιβεβαίωση αφαίρεσης ενός συστατικού"
 msgstr[1] "Επιβεβαίωση αφαίρεσης %1 συστατικών"
 
 #: contents/explorer/WidgetExplorer.qml:315

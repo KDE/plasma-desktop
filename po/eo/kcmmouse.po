@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-07-12 22:08+0200\n"
+"PO-Revision-Date: 2024-09-16 20:29+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -154,8 +154,7 @@ msgid "Accept input through this device."
 msgstr "Akcepti enigojn per tiu aparato."
 
 #: ui/main.qml:107
-#, fuzzy, kde-format
-#| msgid "Left handed mode"
+#, kde-format
 msgid "Left-handed mode"
 msgstr "Maldekstromana reĝimo"
 
@@ -165,35 +164,28 @@ msgid "Swap left and right buttons."
 msgstr "Interŝanĝi maldekstran kaj dekstran butonon."
 
 #: ui/main.qml:126
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "Premi maldekstran kaj dekstran butonon for meza klako."
 
 #: ui/main.qml:138
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
-"Alklaki maldekstran kaj dekstran butonon samtempe sendas mezan butonklakon."
+"Premi maldekstran kaj dekstran butonon samtempe agas kiel meza butonklako."
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "Activating this setting increases mouse click latency by 50ms. The extra "
-#| "delay is needed to correctly detect simultaneous left and right mouse "
-#| "clicks."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
-"Aktivigi ĉi tiun agordon pliigas la respondotempon de musklako je 50 ms. La "
+"Aktivigo de ĉi tiu agordo pliigas la klakrespondan tempon je 50 ms. La "
 "ekstra prokrasto estas necesa por ĝuste detekti samtempajn maldekstrajn kaj "
-"dekstrajn musklakojn."
+"dekstrajn butonpremojn."
 
 #: ui/main.qml:154
 #, kde-format
@@ -253,10 +245,9 @@ msgid "Invert scroll direction"
 msgstr "Inversigi la ruluman direkton"
 
 #: ui/main.qml:351
-#, fuzzy, kde-format
-#| msgid "Touchscreen like scrolling."
+#, kde-format
 msgid "Touchscreen-like scrolling."
-msgstr "Rulumado kvazaŭ tuŝekrana."
+msgstr "Tuŝekran-simila rulumado."
 
 #: ui/main.qml:356
 #, kde-format

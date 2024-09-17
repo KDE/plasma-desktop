@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-04 00:41+0000\n"
-"PO-Revision-Date: 2023-09-13 19:56+0100\n"
+"PO-Revision-Date: 2024-09-16 20:29+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -146,12 +146,10 @@ msgid "Automatically disabled when in Touch Mode"
 msgstr "Aŭtomate malŝaltita kiam en Tuŝreĝimo"
 
 #: package/contents/ui/ConfigGeneral.qml:175
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Enabled Search Plugins…"
+#, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
-msgstr "Agordi Eblitajn Serĉajn kromaĵojn…"
+msgstr "Agordi Serĉon de Kromaĵoj…"
 
 #: package/contents/ui/ConfigGeneral.qml:185
 #, kde-format
