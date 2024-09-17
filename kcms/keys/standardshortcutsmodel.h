@@ -17,6 +17,6 @@ public:
     void load() override;
     void save() override;
 
-    void exportToConfig(const KConfigBase &config) override;
+    void exportToConfig(KConfigBase &config) override;
     void importConfig(const KConfigBase &config) override;
 };

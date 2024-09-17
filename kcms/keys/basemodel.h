@@ -71,7 +71,7 @@ public:
     Q_INVOKABLE void disableShortcut(const QModelIndex &index, const QKeySequence &shortcut);
     Q_INVOKABLE void changeShortcut(const QModelIndex &index, const QKeySequence &oldShortcut, const QKeySequence &newShortcut);
 
-    virtual void exportToConfig(const KConfigBase &config) = 0;
+    virtual void exportToConfig(KConfigBase &config) = 0;
     virtual void importConfig(const KConfigBase &config) = 0;
 
     virtual void load() = 0;

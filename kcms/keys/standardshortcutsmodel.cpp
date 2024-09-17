@@ -66,7 +66,7 @@ void StandardShortcutsModel::load()
     endResetModel();
 }
 
-void StandardShortcutsModel::exportToConfig(const KConfigBase &config)
+void StandardShortcutsModel::exportToConfig(KConfigBase &config)
 {
     KConfigGroup group(&config, QStringLiteral("StandardShortcuts"));
     for (const auto &component : std::as_const(m_components)) {
