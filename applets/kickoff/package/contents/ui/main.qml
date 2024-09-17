@@ -26,6 +26,9 @@ import "code/tools.js" as Tools
 PlasmoidItem {
     id: kickoff
 
+    width: Kirigami.Units.iconSizes.huge
+    height: Kirigami.Units.iconSizes.huge
+
     // The properties are defined here instead of the singleton because each
     // instance of Kickoff requires different instances of these properties
 
@@ -94,11 +97,15 @@ PlasmoidItem {
         }
     }
 
-    readonly property Kicker.RecentUsageModel recentUsageModel: Kicker.RecentUsageModel {
+    readonly property alias recentUsageModel: recentUsageModel
+    Kicker.RecentUsageModel {
+        id: recentUsageModel
         favoritesModel: rootModel.favoritesModel
     }
 
-    readonly property Kicker.RecentUsageModel frequentUsageModel: Kicker.RecentUsageModel {
+    readonly property alias frequentUsageModel: frequentUsageModel
+    Kicker.RecentUsageModel {
+        id: frequentUsageModel
         favoritesModel: rootModel.favoritesModel
         ordering: 1 // Popular / Frequently Used
     }
@@ -236,6 +243,7 @@ PlasmoidItem {
         property bool wasExpanded
 
         Accessible.name: Plasmoid.title
+        Accessible.role: Accessible.Button
 
         onPressed: wasExpanded = kickoff.expanded
         onClicked: kickoff.expanded = !wasExpanded
