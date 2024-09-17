@@ -68,7 +68,7 @@ Item {
         if (!containment) {
             return Qt.rect(0,0,0,0);
         }
-        let screenRect = containment.plasmoid.availableScreenRect;
+        let screenRect = desktop.strictAvailableScreenRect;
         let panelConfigRect = Qt.rect(0,0,0,0);
 
         if (containment.plasmoid.corona.panelBeingConfigured
