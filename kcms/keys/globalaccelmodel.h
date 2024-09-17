@@ -29,7 +29,7 @@ public:
 
     void addApplication(const QString &desktopFileName, const QString &displayName);
 
-    void exportToConfig(const KConfigBase &config) override;
+    void exportToConfig(KConfigBase &config) override;
     void importConfig(const KConfigBase &config) override;
 
     void load() override;

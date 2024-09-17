@@ -243,7 +243,7 @@ void GlobalAccelModel::save()
     }
 }
 
-void GlobalAccelModel::exportToConfig(const KConfigBase &config)
+void GlobalAccelModel::exportToConfig(KConfigBase &config)
 {
     for (const auto &component : std::as_const(m_components)) {
         if (component.checked) {
