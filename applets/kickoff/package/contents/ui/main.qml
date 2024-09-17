@@ -48,6 +48,7 @@ PlasmoidItem {
         // TODO: appletInterface property now can be ported to "applet" and have the real Applet* assigned directly
         appletInterface: kickoff
 
+        appNameFormat: Plasmoid.configuration.appNameFormat
         flat: true // have categories, but no subcategories
         sorted: Plasmoid.configuration.alphaSort
         showSeparators: true

@@ -29,6 +29,7 @@ KCM.SimpleKCM {
 
     property string cfg_menuLabel: menuLabel.text
     property string cfg_icon: Plasmoid.configuration.icon
+    property alias cfg_appNameFormat: appNameFormat.currentIndex
     property bool cfg_paneSwap: Plasmoid.configuration.paneSwap
     property int cfg_favoritesDisplay: Plasmoid.configuration.favoritesDisplay
     property int cfg_applicationsDisplay: Plasmoid.configuration.applicationsDisplay
@@ -106,6 +107,22 @@ KCM.SimpleKCM {
                     onClicked: root.cfg_icon = ""
                 }
             }
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
+        QQC2.ComboBox {
+            id: appNameFormat
+
+            Kirigami.FormData.label: i18n("Show applications as:")
+
+            model: [i18n("Name only"), i18n("Description only"), i18n("Name (Description)"), i18n("Description (Name)")]
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
         }
 
         Kirigami.ActionTextField {

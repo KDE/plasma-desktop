@@ -24,6 +24,13 @@ import org.kde.plasma.plasmoid
 T.ItemDelegate {
     id: root
 
+    enum AppNameFormat {
+        NameOnly,
+        GenericNameOnly,
+        NameAndGenericName,
+        GenericNameAndName
+    }
+
     // model properties
     required property var model
     required property int index
@@ -97,7 +104,7 @@ T.ItemDelegate {
     enabled: !isSeparator && !model.disabled
     hoverEnabled: false
 
-    text: model.name ?? model.displayWrapped ?? model.display
+    text: model.compactNameWrapped ?? model.compactName ?? model.displayWrapped ?? model.display
     Accessible.role: Accessible.ListItem
     Accessible.description: root.description !== root.text ? root.description : ""
     Accessible.onPressAction: {
@@ -214,7 +221,7 @@ T.ItemDelegate {
 
     PC3.ToolTip.text: {
         if (root.labelTruncated && root.descriptionTruncated) {
-            return `${text} (${description})`
+            return model.display
         } else if (root.descriptionTruncated || !root.descriptionVisible) {
             return description
         }
