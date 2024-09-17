@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-30 00:41+0000\n"
-"PO-Revision-Date: 2024-08-30 16:34+0200\n"
+"PO-Revision-Date: 2024-09-03 08:34+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -28,25 +28,26 @@ msgstr "Složka plochy:"
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder contains all the files you see on your desktop."
-msgstr ""
+msgstr "Tato složka obsahuje všechny soubory, které uvidíte na pracovní ploše."
 
 #: ui/main.qml:66
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Documents folder:"
-msgstr ""
+msgstr "Složka s dokumenty:"
 
 #: ui/main.qml:72
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save documents."
 msgstr ""
+"Tato složka bude použita jako výchozí pro otevírání či ukládání dokumentů."
 
 #: ui/main.qml:80
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Downloads folder:"
-msgstr ""
+msgstr "Složka pro stahování:"
 
 #: ui/main.qml:86
 #, kde-format
@@ -58,13 +59,15 @@ msgstr "Tato složka bude použita jako výchozí pro ukládání stažených v�
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Videos folder:"
-msgstr ""
+msgstr "Složka s videi:"
 
 #: ui/main.qml:100
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save video files."
 msgstr ""
+"Tato složka bude použita jako výchozí pro otevírání či ukládání video "
+"souborů."
 
 #: ui/main.qml:108
 #, kde-format
@@ -77,6 +80,8 @@ msgstr "Složka obrázků:"
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save image files."
 msgstr ""
+"Tato složka bude použita jako výchozí pro otevírání či ukládání souborů "
+"obrázků."
 
 #: ui/main.qml:122
 #, kde-format
@@ -89,6 +94,8 @@ msgstr "Složka s hudbou:"
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save music files."
 msgstr ""
+"Tato složka bude použita jako výchozí pro otevírání či ukládání audio "
+"souborů."
 
 #: ui/main.qml:136
 #, kde-format
@@ -103,6 +110,8 @@ msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
 msgstr ""
+"Tato složka bude použita jako výchozí pro veřejně sdílené soubory pokud bude "
+"povoleno sdílení na síti."
 
 #: ui/main.qml:150
 #, kde-format
@@ -115,6 +124,7 @@ msgstr "Složka se šablonami:"
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save file templates."
 msgstr ""
+"Tato složka bude použita jako výchozí pro otevírání či ukládání šablon."
 
 #: ui/UrlRequester.qml:74
 #, kde-format
