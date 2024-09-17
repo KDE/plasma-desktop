@@ -206,7 +206,6 @@ bool LibinputTouchpad::getConfig()
     success &= valueLoader(m_leftHandedEnabledByDefault);
     success &= valueLoader(m_leftHanded);
 
-    success &= valueLoader(m_supportsDisableEventsOnExternalMouse);
     success &= valueLoader(m_disableEventsOnExternalMouse);
     success &= valueLoader(m_disableEventsOnExternalMouseDefault);
 

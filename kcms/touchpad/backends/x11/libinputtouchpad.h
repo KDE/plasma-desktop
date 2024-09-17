@@ -72,7 +72,7 @@ private:
     }
     bool supportsDisableEventsOnExternalMouse() const override
     {
-        return m_supportsDisableEventsOnExternalMouse.avail && m_supportsDisableEventsOnExternalMouse.val;
+        return m_disableEventsOnExternalMouse.avail && m_disableEventsOnExternalMouse.val;
     }
     bool supportsDisableWhileTyping() const override
     {

@@ -75,6 +75,9 @@ class LibinputCommon : public QObject
     Q_PROPERTY(bool leftHanded READ isLeftHanded WRITE setLeftHanded NOTIFY leftHandedChanged)
 
     Q_PROPERTY(bool supportsDisableEventsOnExternalMouse READ supportsDisableEventsOnExternalMouse CONSTANT)
+    Q_PROPERTY(bool disableEventsOnExternalMouseEnabledByDefault READ disableEventsOnExternalMouseEnabledByDefault CONSTANT)
+    Q_PROPERTY(
+        bool disableEventsOnExternalMouse READ isDisableEventsOnExternalMouse WRITE setDisableEventsOnExternalMouse NOTIFY disableEventsOnExternalMouseChanged)
 
     Q_PROPERTY(bool supportsDisableWhileTyping READ supportsDisableWhileTyping CONSTANT)
     Q_PROPERTY(bool disableWhileTypingEnabledByDefault READ disableWhileTypingEnabledByDefault CONSTANT)
@@ -185,6 +188,18 @@ public:
     }
 
     virtual bool supportsDisableEventsOnExternalMouse() const = 0;
+    bool disableEventsOnExternalMouseEnabledByDefault() const
+    {
+        return m_disableEventsOnExternalMouseEnabledByDefault.val;
+    }
+    bool isDisableEventsOnExternalMouse() const
+    {
+        return m_disableEventsOnExternalMouse.val;
+    }
+    void setDisableEventsOnExternalMouse(bool set)
+    {
+        m_disableEventsOnExternalMouse.set(set);
+    }
 
     virtual bool supportsDisableWhileTyping() const = 0;
     bool disableWhileTypingEnabledByDefault() const
@@ -437,6 +452,7 @@ Q_SIGNALS:
     void tapDragLockChanged();
     // Advanced
     void leftHandedChanged();
+    void disableEventsOnExternalMouseChanged();
     void disableWhileTypingChanged();
     void middleEmulationChanged();
     // acceleration speed and profile
@@ -519,7 +535,8 @@ protected:
     PropBool m_leftHandedEnabledByDefault = PropBool("leftHandedEnabledByDefault");
     PropBool m_leftHanded = PropBool("leftHanded");
 
-    PropBool m_supportsDisableEventsOnExternalMouse = PropBool("supportsDisableEventsOnExternalMouse");
+    PropBool m_disableEventsOnExternalMouseEnabledByDefault = PropBool("disableEventsOnExternalMouseEnabledByDefault");
+    PropBool m_disableEventsOnExternalMouse = PropBool("disableEventsOnExternalMouse");
 
     PropBool m_disableWhileTypingEnabledByDefault = PropBool("disableWhileTypingEnabledByDefault");
     PropBool m_disableWhileTyping = PropBool("disableWhileTyping");

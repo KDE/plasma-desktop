@@ -154,6 +154,7 @@ private:
     //
     // advanced
     Prop<bool> m_supportsLeftHanded = PropBool("supportsLeftHanded");
+    Prop<bool> m_supportsDisableEventsOnExternalMouse = PropBool("supportsDisableEventsOnExternalMouse");
     Prop<bool> m_supportsDisableWhileTyping = PropBool("supportsDisableWhileTyping");
     Prop<bool> m_supportsMiddleEmulation = PropBool("supportsMiddleEmulation");
 

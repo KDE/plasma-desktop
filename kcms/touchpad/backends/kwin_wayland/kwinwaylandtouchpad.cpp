@@ -48,16 +48,18 @@ bool KWinWaylandTouchpad::getConfig()
     success &= valueLoader(m_supportsPointerAcceleration);
     success &= valueLoader(m_supportsPointerAccelerationProfileFlat);
     success &= valueLoader(m_supportsPointerAccelerationProfileAdaptive);
-    success &= valueLoader(m_supportsDisableWhileTyping);
     success &= valueLoader(m_supportsDisableEventsOnExternalMouse);
+    success &= valueLoader(m_supportsDisableWhileTyping);
     success &= valueLoader(m_defaultPointerAcceleration);
     success &= valueLoader(m_defaultPointerAccelerationProfileFlat);
     success &= valueLoader(m_defaultPointerAccelerationProfileAdaptive);
+    success &= valueLoader(m_disableEventsOnExternalMouseEnabledByDefault);
     success &= valueLoader(m_disableWhileTypingEnabledByDefault);
     success &= valueLoader(m_leftHandedEnabledByDefault);
     success &= valueLoader(m_pointerAcceleration);
     success &= valueLoader(m_pointerAccelerationProfileFlat);
     success &= valueLoader(m_pointerAccelerationProfileAdaptive);
+    success &= valueLoader(m_disableEventsOnExternalMouse);
     success &= valueLoader(m_disableWhileTyping);
     // tapping
     success &= valueLoader(m_tapFingerCount);
@@ -111,6 +113,7 @@ bool KWinWaylandTouchpad::getDefaultConfig()
     m_pointerAccelerationProfileFlat.set(m_defaultPointerAccelerationProfileFlat);
     m_pointerAccelerationProfileAdaptive.set(m_defaultPointerAccelerationProfileAdaptive);
 
+    m_disableEventsOnExternalMouse.set(m_disableEventsOnExternalMouseEnabledByDefault);
     m_disableWhileTyping.set(m_disableWhileTypingEnabledByDefault);
 
     m_tapToClick.set(m_tapToClickEnabledByDefault);
@@ -137,7 +140,9 @@ bool KWinWaylandTouchpad::applyConfig()
     msgs << valueWriter(m_enabled) << valueWriter(m_leftHanded) << valueWriter(m_pointerAcceleration) << valueWriter(m_pointerAccelerationProfileFlat)
          << valueWriter(m_pointerAccelerationProfileAdaptive)
 
-         << valueWriter(m_disableWhileTyping) << valueWriter(m_middleEmulation)
+         << valueWriter(m_disableEventsOnExternalMouse) << valueWriter(m_disableWhileTyping)
+
+         << valueWriter(m_middleEmulation)
 
          << valueWriter(m_tapToClick) << valueWriter(m_tapAndDrag) << valueWriter(m_tapDragLock) << valueWriter(m_lmrTapButtonMap)
 
@@ -174,6 +179,7 @@ bool KWinWaylandTouchpad::isChangedConfig() const
             m_pointerAcceleration.changed() ||
             m_pointerAccelerationProfileFlat.changed() ||
             m_pointerAccelerationProfileAdaptive.changed() ||
+            m_disableEventsOnExternalMouse.changed() ||
             m_disableWhileTyping.changed() ||
             m_middleEmulation.changed() ||
             m_tapToClick.changed() ||
