@@ -3,12 +3,16 @@
 # SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
 # SPDX-License-Identifier: MIT
 
+import subprocess
 import time
 import unittest
+from typing import Final
 
 from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
+
+KDE_VERSION: Final = 6
 
 
 class EmojierTest(unittest.TestCase):
@@ -37,6 +41,7 @@ class EmojierTest(unittest.TestCase):
         """
         Make sure to terminate the driver again, lest it dangles.
         """
+        subprocess.check_call([f"kquitapp{KDE_VERSION}", "plasma.emojier"])
         cls.driver.quit()
 
     def test_0_open(self) -> None:
