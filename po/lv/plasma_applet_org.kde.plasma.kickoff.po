@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-18 00:41+0000\n"
 "PO-Revision-Date: 2024-09-10 11:14+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -49,18 +49,18 @@ msgstr "Pašreizējā aktivitātē"
 msgid "Show in Favorites"
 msgstr "Rādīt iecienītajās"
 
-#: package/contents/ui/ConfigGeneral.qml:45
+#: package/contents/ui/ConfigGeneral.qml:46
 #, kde-format
 msgid "Icon:"
 msgstr "Ikona:"
 
-#: package/contents/ui/ConfigGeneral.qml:51
+#: package/contents/ui/ConfigGeneral.qml:52
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr "Mainīt programmu palaidēja ikonu"
 
-#: package/contents/ui/ConfigGeneral.qml:52
+#: package/contents/ui/ConfigGeneral.qml:53
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -70,161 +70,187 @@ msgstr ""
 "Šobrīd ikona ir %1. Spiediet, lai atvērtu izvēlni un mainītu pašreizējo "
 "ikonu vai to atiestatītu uz noklusējuma ikonu."
 
-#: package/contents/ui/ConfigGeneral.qml:56
+#: package/contents/ui/ConfigGeneral.qml:57
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
 msgstr "Ikonas nosaukums ir „%1“"
 
-#: package/contents/ui/ConfigGeneral.qml:91
+#: package/contents/ui/ConfigGeneral.qml:92
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Izvēlēties…"
 
-#: package/contents/ui/ConfigGeneral.qml:93
+#: package/contents/ui/ConfigGeneral.qml:94
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr "Izvēlieties ikonu programmu palaidējam"
 
-#: package/contents/ui/ConfigGeneral.qml:97
+#: package/contents/ui/ConfigGeneral.qml:98
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "Atiestatīt uz noklusējuma ikonu"
 
-#: package/contents/ui/ConfigGeneral.qml:103
+#: package/contents/ui/ConfigGeneral.qml:104
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "Noņemt ikonu"
 
-#: package/contents/ui/ConfigGeneral.qml:114
+#: package/contents/ui/ConfigGeneral.qml:119
+#, fuzzy, kde-format
+#| msgid "Show other applications:"
+msgid "Show applications as:"
+msgstr "Rādīt citas programmas:"
+
+#: package/contents/ui/ConfigGeneral.qml:121
+#, kde-format
+msgid "Name only"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:121
+#, kde-format
+msgid "Description only"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:121
+#, kde-format
+msgid "Name (Description)"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:121
+#, kde-format
+msgid "Description (Name)"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:131
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "Teksta etiķete:"
 
-#: package/contents/ui/ConfigGeneral.qml:116
+#: package/contents/ui/ConfigGeneral.qml:133
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "Rakstiet te, lai pievienota teksta etiķeti"
 
-#: package/contents/ui/ConfigGeneral.qml:130
+#: package/contents/ui/ConfigGeneral.qml:147
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr "Atiestatīt izvēlnes etiķeti"
 
-#: package/contents/ui/ConfigGeneral.qml:143
+#: package/contents/ui/ConfigGeneral.qml:160
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "Teksta etiķeti nevar uzlikt, panelim atrodoties vertikāli."
 
-#: package/contents/ui/ConfigGeneral.qml:154
+#: package/contents/ui/ConfigGeneral.qml:171
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "Pamata:"
 
-#: package/contents/ui/ConfigGeneral.qml:155
+#: package/contents/ui/ConfigGeneral.qml:172
 #, kde-format
 msgid "Always sort applications alphabetically"
 msgstr "Programmas vienmēr kārtot alfabētiski"
 
-#: package/contents/ui/ConfigGeneral.qml:160
+#: package/contents/ui/ConfigGeneral.qml:177
 #, kde-format
 msgid "Use compact list item style"
 msgstr "Izmantot saraksta kompaktu stilu"
 
-#: package/contents/ui/ConfigGeneral.qml:166
+#: package/contents/ui/ConfigGeneral.qml:183
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "Automātiski izslēgt, atrodoties skārienjutīgā režīmā"
 
-#: package/contents/ui/ConfigGeneral.qml:175
+#: package/contents/ui/ConfigGeneral.qml:192
 #, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
 msgstr "Konfigurēt meklēšanas spraudņus…"
 
-#: package/contents/ui/ConfigGeneral.qml:185
+#: package/contents/ui/ConfigGeneral.qml:202
 #, kde-format
 msgid "Sidebar position:"
 msgstr "Sānu joslas atrašanās vieta:"
 
-#: package/contents/ui/ConfigGeneral.qml:186
-#: package/contents/ui/ConfigGeneral.qml:194
+#: package/contents/ui/ConfigGeneral.qml:203
+#: package/contents/ui/ConfigGeneral.qml:211
 #, kde-format
 msgid "Right"
 msgstr "Pa labi"
 
-#: package/contents/ui/ConfigGeneral.qml:186
-#: package/contents/ui/ConfigGeneral.qml:194
+#: package/contents/ui/ConfigGeneral.qml:203
+#: package/contents/ui/ConfigGeneral.qml:211
 #, kde-format
 msgid "Left"
 msgstr "Pa kreisi"
 
-#: package/contents/ui/ConfigGeneral.qml:202
+#: package/contents/ui/ConfigGeneral.qml:219
 #, kde-format
 msgid "Show favorites:"
 msgstr "Rādīt iecienītās:"
 
-#: package/contents/ui/ConfigGeneral.qml:203
+#: package/contents/ui/ConfigGeneral.qml:220
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "Režģī"
 
-#: package/contents/ui/ConfigGeneral.qml:211
+#: package/contents/ui/ConfigGeneral.qml:228
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "Sarakstā"
 
-#: package/contents/ui/ConfigGeneral.qml:219
+#: package/contents/ui/ConfigGeneral.qml:236
 #, kde-format
 msgid "Show other applications:"
 msgstr "Rādīt citas programmas:"
 
-#: package/contents/ui/ConfigGeneral.qml:220
+#: package/contents/ui/ConfigGeneral.qml:237
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "Režģī"
 
-#: package/contents/ui/ConfigGeneral.qml:228
+#: package/contents/ui/ConfigGeneral.qml:245
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "Sarakstā"
 
-#: package/contents/ui/ConfigGeneral.qml:240
+#: package/contents/ui/ConfigGeneral.qml:257
 #, kde-format
 msgid "Show buttons for:"
 msgstr "Rādīt pogas:"
 
-#: package/contents/ui/ConfigGeneral.qml:241
+#: package/contents/ui/ConfigGeneral.qml:258
 #: package/contents/ui/LeaveButtons.qml:164
 #, kde-format
 msgid "Power"
 msgstr "Izslēgšanai"
 
-#: package/contents/ui/ConfigGeneral.qml:250
+#: package/contents/ui/ConfigGeneral.qml:267
 #, kde-format
 msgid "Session"
 msgstr "Sesijai"
 
-#: package/contents/ui/ConfigGeneral.qml:259
+#: package/contents/ui/ConfigGeneral.qml:276
 #, kde-format
 msgid "Power and session"
 msgstr "Izslēgšanai un sesijai"
 
-#: package/contents/ui/ConfigGeneral.qml:268
+#: package/contents/ui/ConfigGeneral.qml:285
 #, kde-format
 msgid "Show action button captions"
 msgstr "Rādīt aktīvās pogas parakstus"
@@ -270,7 +296,7 @@ msgstr "Atstāt"
 msgid "More"
 msgstr "Vairāk"
 
-#: package/contents/ui/main.qml:316
+#: package/contents/ui/main.qml:325
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Rediģēt programmas…"

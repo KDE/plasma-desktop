@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-30 00:41+0000\n"
-"PO-Revision-Date: 2024-05-07 23:27+0100\n"
+"PO-Revision-Date: 2024-09-17 21:39+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -22,45 +22,38 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Desktop path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Desktop folder:"
-msgstr "Labortabla vojo:"
+msgstr "Labortabla dosierujo:"
 
 #: ui/main.qml:58
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder contains all the files you see on your desktop."
 msgstr ""
+"Ĉi tiu dosierujo enhavas ĉiujn dosierojn kiujn vi vidas sur via labortablo."
 
 #: ui/main.qml:66
-#, fuzzy, kde-format
-#| msgid "Documents path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Documents folder:"
-msgstr "Dokumenta vojo:"
+msgstr "Dosierujo de dokumentoj:"
 
 #: ui/main.qml:72
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save documents from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save documents."
-msgstr ""
-"Tiu dosierujo estos la defaŭlta por la ŝargado kaj la konservado de "
-"dokumentoj."
+msgstr "Tiu dosierujo estos la defaŭlta por malfermi aŭ konservi dokumentojn."
 
 #: ui/main.qml:80
-#, fuzzy, kde-format
-#| msgid "Downloads path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Downloads folder:"
-msgstr "Elŝuta vojo:"
+msgstr "Dosierujo de elŝutoj:"
 
 #: ui/main.qml:86
-#, fuzzy, kde-format
-#| msgid "This folder will be used by default to save your downloaded items."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
@@ -68,64 +61,52 @@ msgstr ""
 "elŝutaĵoj."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgid "Videos path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Videos folder:"
-msgstr "Videofilma vojo:"
+msgstr "Dosierujo de videofilmoj:"
 
 #: ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save movies from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save video files."
 msgstr ""
-"Tiu dosierujo estos la defaŭlta por la ŝargado kaj la konservado de filmoj."
+"Tiu dosierujo estos la defaŭlta por malfermi aŭ konservi filmdosierojn."
 
 #: ui/main.qml:108
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Pictures folder:"
-msgstr "Bilda vojo:"
+msgstr "Dosierujo de bildoj:"
 
 #: ui/main.qml:114
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save movies from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save image files."
 msgstr ""
-"Tiu dosierujo estos la defaŭlta por la ŝargado kaj la konservado de filmoj."
+"Tiu dosierujo estos la defaŭlta por malfermi aŭ konservi bilddosierojn."
 
 #: ui/main.qml:122
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Music folder:"
-msgstr ""
+msgstr "Dosierujo de muziko:"
 
 #: ui/main.qml:128
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save music from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save music files."
 msgstr ""
-"Tiu dosierujo estos la defaŭlta por la ŝargado kaj la konservado de muzikoj."
+"Tiu dosierujo estos la defaŭlta por malfermi aŭ konservi muzikdosierojn."
 
 #: ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "Public path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Public folder:"
-msgstr "Publika vojo:"
+msgstr "Publika dosierujo:"
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default for publicly-shared files when "
-#| "network sharing is enabled."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
@@ -135,41 +116,20 @@ msgstr ""
 "kunhavigo estas ŝaltita."
 
 #: ui/main.qml:150
-#, fuzzy, kde-format
-#| msgid "Templates path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Templates folder:"
-msgstr "Ŝablona vojo:"
+msgstr "Ŝablona dosierujo:"
 
 #: ui/main.qml:156
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save templates from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save file templates."
 msgstr ""
-"Tiu dosierujo estos la defaŭlta por la ŝargado aŭ konservado de ŝablonoj."
+"Tiu dosierujo estos la defaŭlta por malfermi aŭ konservi dosierŝablonojn."
 
 #: ui/UrlRequester.qml:74
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "Elekti novan lokon"
-
-#~ msgid ""
-#~ "This folder contains all the files which you see on your desktop. You can "
-#~ "change the location of this folder if you want to, and the contents will "
-#~ "move automatically to the new location as well."
-#~ msgstr ""
-#~ "Tiu dosierujo enhavas ĉiujn dosierojn, kiujn vi vidas sur via labortablo. "
-#~ "Vi povas ŝanĝi la lokon de tiu dosierujo se vi volas. La enhavo moviĝos "
-#~ "aŭtomate al la nova loko."
-
-#~ msgid ""
-#~ "This folder will be used by default to load or save pictures from or to."
-#~ msgstr ""
-#~ "Tiu dosierujo estos la defaŭlta por la ŝargado kaj la konservado de "
-#~ "bildoj."
-
-#~ msgid "Music path:"
-#~ msgstr "Muzika vojo:"

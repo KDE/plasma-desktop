@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-18 00:41+0000\n"
 "PO-Revision-Date: 2024-09-03 08:35+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -50,18 +50,18 @@ msgstr "V současné aktivitě"
 msgid "Show in Favorites"
 msgstr "Zobrazit v oblíbených"
 
-#: package/contents/ui/ConfigGeneral.qml:45
+#: package/contents/ui/ConfigGeneral.qml:46
 #, kde-format
 msgid "Icon:"
 msgstr "Ikona:"
 
-#: package/contents/ui/ConfigGeneral.qml:51
+#: package/contents/ui/ConfigGeneral.qml:52
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr "Změnit ikonu spouštěče aplikace"
 
-#: package/contents/ui/ConfigGeneral.qml:52
+#: package/contents/ui/ConfigGeneral.qml:53
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -71,161 +71,187 @@ msgstr ""
 "Současná ikona je %1. Klikněte pro otevření nabídky pro změnu současné ikony "
 "nebo vrácení původní ikony."
 
-#: package/contents/ui/ConfigGeneral.qml:56
+#: package/contents/ui/ConfigGeneral.qml:57
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
 msgstr "Název ikony je \"%1\""
 
-#: package/contents/ui/ConfigGeneral.qml:91
+#: package/contents/ui/ConfigGeneral.qml:92
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Vybrat…"
 
-#: package/contents/ui/ConfigGeneral.qml:93
+#: package/contents/ui/ConfigGeneral.qml:94
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr "Vyberte ikonu spouštěče aplikace"
 
-#: package/contents/ui/ConfigGeneral.qml:97
+#: package/contents/ui/ConfigGeneral.qml:98
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "Obnovit výchozí ikonu"
 
-#: package/contents/ui/ConfigGeneral.qml:103
+#: package/contents/ui/ConfigGeneral.qml:104
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "Odstranit ikonu"
 
-#: package/contents/ui/ConfigGeneral.qml:114
+#: package/contents/ui/ConfigGeneral.qml:119
+#, fuzzy, kde-format
+#| msgid "Show other applications:"
+msgid "Show applications as:"
+msgstr "Zobrazit ostatní aplikace:"
+
+#: package/contents/ui/ConfigGeneral.qml:121
+#, kde-format
+msgid "Name only"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:121
+#, kde-format
+msgid "Description only"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:121
+#, kde-format
+msgid "Name (Description)"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:121
+#, kde-format
+msgid "Description (Name)"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:131
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "Textový popisek:"
 
-#: package/contents/ui/ConfigGeneral.qml:116
+#: package/contents/ui/ConfigGeneral.qml:133
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "Pro přidání textového popisku pište zde"
 
-#: package/contents/ui/ConfigGeneral.qml:130
+#: package/contents/ui/ConfigGeneral.qml:147
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr "Resetovat popisek nabídky"
 
-#: package/contents/ui/ConfigGeneral.qml:143
+#: package/contents/ui/ConfigGeneral.qml:160
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "Pokud je panel svislý, nelze nastavit textový popisek."
 
-#: package/contents/ui/ConfigGeneral.qml:154
+#: package/contents/ui/ConfigGeneral.qml:171
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "Obecné:"
 
-#: package/contents/ui/ConfigGeneral.qml:155
+#: package/contents/ui/ConfigGeneral.qml:172
 #, kde-format
 msgid "Always sort applications alphabetically"
 msgstr "Vždy řadit aplikace podle abecedy"
 
-#: package/contents/ui/ConfigGeneral.qml:160
+#: package/contents/ui/ConfigGeneral.qml:177
 #, kde-format
 msgid "Use compact list item style"
 msgstr "Použít kompaktní styl seznamu položek"
 
-#: package/contents/ui/ConfigGeneral.qml:166
+#: package/contents/ui/ConfigGeneral.qml:183
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "Automaticky zakázáno v dotykovém režimu"
 
-#: package/contents/ui/ConfigGeneral.qml:175
+#: package/contents/ui/ConfigGeneral.qml:192
 #, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
 msgstr "Nastavit pro vyhledávání…"
 
-#: package/contents/ui/ConfigGeneral.qml:185
+#: package/contents/ui/ConfigGeneral.qml:202
 #, kde-format
 msgid "Sidebar position:"
 msgstr "Pozice postranní lišty:"
 
-#: package/contents/ui/ConfigGeneral.qml:186
-#: package/contents/ui/ConfigGeneral.qml:194
+#: package/contents/ui/ConfigGeneral.qml:203
+#: package/contents/ui/ConfigGeneral.qml:211
 #, kde-format
 msgid "Right"
 msgstr "Vpravo"
 
-#: package/contents/ui/ConfigGeneral.qml:186
-#: package/contents/ui/ConfigGeneral.qml:194
+#: package/contents/ui/ConfigGeneral.qml:203
+#: package/contents/ui/ConfigGeneral.qml:211
 #, kde-format
 msgid "Left"
 msgstr "Vlevo"
 
-#: package/contents/ui/ConfigGeneral.qml:202
+#: package/contents/ui/ConfigGeneral.qml:219
 #, kde-format
 msgid "Show favorites:"
 msgstr "Zobrazit oblíbené:"
 
-#: package/contents/ui/ConfigGeneral.qml:203
+#: package/contents/ui/ConfigGeneral.qml:220
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "V mřížce"
 
-#: package/contents/ui/ConfigGeneral.qml:211
+#: package/contents/ui/ConfigGeneral.qml:228
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "V seznamu"
 
-#: package/contents/ui/ConfigGeneral.qml:219
+#: package/contents/ui/ConfigGeneral.qml:236
 #, kde-format
 msgid "Show other applications:"
 msgstr "Zobrazit ostatní aplikace:"
 
-#: package/contents/ui/ConfigGeneral.qml:220
+#: package/contents/ui/ConfigGeneral.qml:237
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "V mřížce"
 
-#: package/contents/ui/ConfigGeneral.qml:228
+#: package/contents/ui/ConfigGeneral.qml:245
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "V seznamu"
 
-#: package/contents/ui/ConfigGeneral.qml:240
+#: package/contents/ui/ConfigGeneral.qml:257
 #, kde-format
 msgid "Show buttons for:"
 msgstr "Zobrazit tlačítka pro:"
 
-#: package/contents/ui/ConfigGeneral.qml:241
+#: package/contents/ui/ConfigGeneral.qml:258
 #: package/contents/ui/LeaveButtons.qml:164
 #, kde-format
 msgid "Power"
 msgstr "Napájení"
 
-#: package/contents/ui/ConfigGeneral.qml:250
+#: package/contents/ui/ConfigGeneral.qml:267
 #, kde-format
 msgid "Session"
 msgstr "Sezení"
 
-#: package/contents/ui/ConfigGeneral.qml:259
+#: package/contents/ui/ConfigGeneral.qml:276
 #, kde-format
 msgid "Power and session"
 msgstr "Napájení a sezení"
 
-#: package/contents/ui/ConfigGeneral.qml:268
+#: package/contents/ui/ConfigGeneral.qml:285
 #, kde-format
 msgid "Show action button captions"
 msgstr "Zobrazit popisky akčních tlačítek"
@@ -271,7 +297,7 @@ msgstr "Opustit"
 msgid "More"
 msgstr "Více"
 
-#: package/contents/ui/main.qml:316
+#: package/contents/ui/main.qml:325
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Upravit aplikace…"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-09-18 00:41+0000\n"
 "PO-Revision-Date: 2024-08-31 08:50+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -47,18 +47,18 @@ msgstr "För aktuell aktivitet"
 msgid "Show in Favorites"
 msgstr "Visa i favoriter"
 
-#: package/contents/ui/ConfigGeneral.qml:45
+#: package/contents/ui/ConfigGeneral.qml:46
 #, kde-format
 msgid "Icon:"
 msgstr "Ikon:"
 
-#: package/contents/ui/ConfigGeneral.qml:51
+#: package/contents/ui/ConfigGeneral.qml:52
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr "Ändra startprogrammets ikon"
 
-#: package/contents/ui/ConfigGeneral.qml:52
+#: package/contents/ui/ConfigGeneral.qml:53
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -68,161 +68,187 @@ msgstr ""
 "Nuvarande ikon är %1. Klicka för att visa menyn för att ändra nuvarande ikon "
 "eller återställa till standardikonen."
 
-#: package/contents/ui/ConfigGeneral.qml:56
+#: package/contents/ui/ConfigGeneral.qml:57
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
 msgstr "Ikonnamnet är \"%1\""
 
-#: package/contents/ui/ConfigGeneral.qml:91
+#: package/contents/ui/ConfigGeneral.qml:92
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Välj…"
 
-#: package/contents/ui/ConfigGeneral.qml:93
+#: package/contents/ui/ConfigGeneral.qml:94
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr "Välj en ikon för startprogrammet"
 
-#: package/contents/ui/ConfigGeneral.qml:97
+#: package/contents/ui/ConfigGeneral.qml:98
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "Återställ till standardikon"
 
-#: package/contents/ui/ConfigGeneral.qml:103
+#: package/contents/ui/ConfigGeneral.qml:104
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "Ta bort ikon"
 
-#: package/contents/ui/ConfigGeneral.qml:114
+#: package/contents/ui/ConfigGeneral.qml:119
+#, fuzzy, kde-format
+#| msgid "Show other applications:"
+msgid "Show applications as:"
+msgstr "Visa övriga program:"
+
+#: package/contents/ui/ConfigGeneral.qml:121
+#, kde-format
+msgid "Name only"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:121
+#, kde-format
+msgid "Description only"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:121
+#, kde-format
+msgid "Name (Description)"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:121
+#, kde-format
+msgid "Description (Name)"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:131
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "Textetikett:"
 
-#: package/contents/ui/ConfigGeneral.qml:116
+#: package/contents/ui/ConfigGeneral.qml:133
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "Skriv här för att lägga till en textetikett"
 
-#: package/contents/ui/ConfigGeneral.qml:130
+#: package/contents/ui/ConfigGeneral.qml:147
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr "Återställ menybeteckning"
 
-#: package/contents/ui/ConfigGeneral.qml:143
+#: package/contents/ui/ConfigGeneral.qml:160
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "En textetikett kan inte anges när panelen är vertikal."
 
-#: package/contents/ui/ConfigGeneral.qml:154
+#: package/contents/ui/ConfigGeneral.qml:171
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "Allmänt:"
 
-#: package/contents/ui/ConfigGeneral.qml:155
+#: package/contents/ui/ConfigGeneral.qml:172
 #, kde-format
 msgid "Always sort applications alphabetically"
 msgstr "Sortera alltid program alfabetiskt"
 
-#: package/contents/ui/ConfigGeneral.qml:160
+#: package/contents/ui/ConfigGeneral.qml:177
 #, kde-format
 msgid "Use compact list item style"
 msgstr "Använd kompakt stil för listalternativ"
 
-#: package/contents/ui/ConfigGeneral.qml:166
+#: package/contents/ui/ConfigGeneral.qml:183
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "Automatiskt inaktiverat i pekläge"
 
-#: package/contents/ui/ConfigGeneral.qml:175
+#: package/contents/ui/ConfigGeneral.qml:192
 #, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
 msgstr "Anpassa sökinsticksprogram…"
 
-#: package/contents/ui/ConfigGeneral.qml:185
+#: package/contents/ui/ConfigGeneral.qml:202
 #, kde-format
 msgid "Sidebar position:"
 msgstr "Sidoradens position:"
 
-#: package/contents/ui/ConfigGeneral.qml:186
-#: package/contents/ui/ConfigGeneral.qml:194
+#: package/contents/ui/ConfigGeneral.qml:203
+#: package/contents/ui/ConfigGeneral.qml:211
 #, kde-format
 msgid "Right"
 msgstr "Höger"
 
-#: package/contents/ui/ConfigGeneral.qml:186
-#: package/contents/ui/ConfigGeneral.qml:194
+#: package/contents/ui/ConfigGeneral.qml:203
+#: package/contents/ui/ConfigGeneral.qml:211
 #, kde-format
 msgid "Left"
 msgstr "Vänster"
 
-#: package/contents/ui/ConfigGeneral.qml:202
+#: package/contents/ui/ConfigGeneral.qml:219
 #, kde-format
 msgid "Show favorites:"
 msgstr "Visa favoriter:"
 
-#: package/contents/ui/ConfigGeneral.qml:203
+#: package/contents/ui/ConfigGeneral.qml:220
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "I ett rutnät"
 
-#: package/contents/ui/ConfigGeneral.qml:211
+#: package/contents/ui/ConfigGeneral.qml:228
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "I en lista"
 
-#: package/contents/ui/ConfigGeneral.qml:219
+#: package/contents/ui/ConfigGeneral.qml:236
 #, kde-format
 msgid "Show other applications:"
 msgstr "Visa övriga program:"
 
-#: package/contents/ui/ConfigGeneral.qml:220
+#: package/contents/ui/ConfigGeneral.qml:237
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "I ett rutnät"
 
-#: package/contents/ui/ConfigGeneral.qml:228
+#: package/contents/ui/ConfigGeneral.qml:245
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "I en lista"
 
-#: package/contents/ui/ConfigGeneral.qml:240
+#: package/contents/ui/ConfigGeneral.qml:257
 #, kde-format
 msgid "Show buttons for:"
 msgstr "Visa knappar för:"
 
-#: package/contents/ui/ConfigGeneral.qml:241
+#: package/contents/ui/ConfigGeneral.qml:258
 #: package/contents/ui/LeaveButtons.qml:164
 #, kde-format
 msgid "Power"
 msgstr "Strömhantering"
 
-#: package/contents/ui/ConfigGeneral.qml:250
+#: package/contents/ui/ConfigGeneral.qml:267
 #, kde-format
 msgid "Session"
 msgstr "Session"
 
-#: package/contents/ui/ConfigGeneral.qml:259
+#: package/contents/ui/ConfigGeneral.qml:276
 #, kde-format
 msgid "Power and session"
 msgstr "Strömhantering och session"
 
-#: package/contents/ui/ConfigGeneral.qml:268
+#: package/contents/ui/ConfigGeneral.qml:285
 #, kde-format
 msgid "Show action button captions"
 msgstr "Visa rubriker för åtgärdsknappar"
@@ -268,7 +294,7 @@ msgstr "Gå ifrån"
 msgid "More"
 msgstr "Mer"
 
-#: package/contents/ui/main.qml:316
+#: package/contents/ui/main.qml:325
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Redigera program…"
