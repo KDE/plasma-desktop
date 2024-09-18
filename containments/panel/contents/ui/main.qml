@@ -107,7 +107,7 @@ ContainmentItem {
         Plasmoid.applets.forEach(applet => applet.expanded = false);
         const component = Qt.createComponent("ConfigOverlay.qml");
         configOverlay = component.createObject(this, {
-            "anchors.fill": this,
+            "anchors.fill": dropArea,
             "anchors.rightMargin": Qt.binding(() => isHorizontal ? toolBox.width : 0),
             "anchors.bottomMargin": Qt.binding(() => !isHorizontal ? toolBox.height : 0),
         });
