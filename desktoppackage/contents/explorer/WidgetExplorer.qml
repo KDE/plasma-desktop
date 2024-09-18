@@ -57,6 +57,15 @@ PC3.Page {
 
     signal closed()
 
+    onClosed: {
+        // If was called from a panel, open the panel config
+        if (root.widgetExplorer.containment &&
+            root.widgetExplorer.containment.containmentType == 1 &&
+            !root.widgetExplorer.containment.userConfiguring) {
+            root.widgetExplorer.containment.internalAction("configure").trigger()
+        }
+    }
+
     onVisibleChanged: {
         if (!visible) {
             KWindowSystem.showingDesktop = false

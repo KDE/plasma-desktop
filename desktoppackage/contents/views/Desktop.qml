@@ -235,13 +235,6 @@ Item {
 
         onVisibleChanged: {
             if (!visible) {
-                // If was called from a panel, open the panel config
-                const item = sidePanelStack.item;
-                if (item?.containment && item.containment !== containment.plasmoid
-                    && !item.containment.userConfiguring
-                ) {
-                    Qt.callLater(item.containment.internalAction("configure").trigger);
-                }
                 sidePanelStack.state = "closed";
                 ActivitySwitcher.Backend.shouldShowSwitcher = false;
             }
