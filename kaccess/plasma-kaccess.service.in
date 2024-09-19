@@ -1,7 +1,9 @@
 [Unit]
 Description=KAccess
+After=plasma-core.target
 PartOf=graphical-session.target
 
 [Service]
 ExecStart=@CMAKE_INSTALL_FULL_BINDIR@/kaccess
+Restart=on-failure
 Slice=background.slice
