@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-14 00:42+0000\n"
+"POT-Creation-Date: 2024-09-19 00:41+0000\n"
 "PO-Revision-Date: 2024-09-14 05:29+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -624,9 +624,17 @@ msgid "Undo uninstall"
 msgstr "წაშლის გაუქმება"
 
 #: contents/explorer/AppletDelegate.qml:189
-#, kde-format
-msgid "Uninstall widget"
-msgstr "ვიჯეტის წაშლა"
+#, fuzzy, kde-format
+#| msgid "Uninstall"
+msgctxt "@info:tooltip uninstall a widget"
+msgid "Uninstall"
+msgstr "ამოშლა"
+
+#: contents/explorer/AppletDelegate.qml:231
+#, fuzzy, kde-format
+#| msgid "Remove Panel"
+msgid "Remove all instances"
+msgstr "პანელის მოცილება"
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -643,35 +651,35 @@ msgstr "ელფოტა:"
 msgid "Uninstall"
 msgstr "ამოშლა"
 
-#: contents/explorer/WidgetExplorer.qml:129
-#: contents/explorer/WidgetExplorer.qml:206
+#: contents/explorer/WidgetExplorer.qml:138
+#: contents/explorer/WidgetExplorer.qml:215
 #, kde-format
 msgid "All Widgets"
 msgstr "ყველა ვიჯეტი"
 
-#: contents/explorer/WidgetExplorer.qml:155
+#: contents/explorer/WidgetExplorer.qml:164
 #, kde-format
 msgid "Widgets"
 msgstr "ვიჯეტები"
 
-#: contents/explorer/WidgetExplorer.qml:164
+#: contents/explorer/WidgetExplorer.qml:173
 #, kde-format
 msgctxt "@action:button The word 'new' refers to widgets"
 msgid "Get New…"
 msgstr "ახლის მიღება…"
 
-#: contents/explorer/WidgetExplorer.qml:165
+#: contents/explorer/WidgetExplorer.qml:174
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "ახალი ვიჯეტების მიღება…"
 
-#: contents/explorer/WidgetExplorer.qml:220
+#: contents/explorer/WidgetExplorer.qml:229
 #, kde-format
 msgid "Categories"
 msgstr "კატეგორიები"
 
-#: contents/explorer/WidgetExplorer.qml:231
+#: contents/explorer/WidgetExplorer.qml:240
 #, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Confirm Removal of One Widget"
@@ -679,12 +687,12 @@ msgid_plural "Confirm Removal of %1 Widgets"
 msgstr[0] "დაადასტურეთ ვიჯეტის წაშლა"
 msgstr[1] "დაადასტურეთ %1 ვიჯეტის წაშლა"
 
-#: contents/explorer/WidgetExplorer.qml:315
+#: contents/explorer/WidgetExplorer.qml:324
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "ვიჯეტების თქვენს ძებნას პასუხები არ აქვს"
 
-#: contents/explorer/WidgetExplorer.qml:315
+#: contents/explorer/WidgetExplorer.qml:324
 #, kde-format
 msgid "No widgets available"
 msgstr "ვიჯეტების გარეშე"
@@ -827,6 +835,9 @@ msgstr "რედაქტირების რეჟიმიდან გა�
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "პანელის ფოკუსის მაჩვენებელი"
+
+#~ msgid "Uninstall widget"
+#~ msgstr "ვიჯეტის წაშლა"
 
 #~ msgid "@info:tooltip slider handle"
 #~ msgstr "@info:tooltip slider handle"

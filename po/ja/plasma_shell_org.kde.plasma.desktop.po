@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-14 00:42+0000\n"
+"POT-Creation-Date: 2024-09-19 00:41+0000\n"
 "PO-Revision-Date: 2024-09-11 19:57+0900\n"
 "Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -628,9 +628,17 @@ msgid "Undo uninstall"
 msgstr "アンインストールを取り消し"
 
 #: contents/explorer/AppletDelegate.qml:189
-#, kde-format
-msgid "Uninstall widget"
-msgstr "ウィジェットをアンインストール"
+#, fuzzy, kde-format
+#| msgid "Uninstall"
+msgctxt "@info:tooltip uninstall a widget"
+msgid "Uninstall"
+msgstr "アンインストール"
+
+#: contents/explorer/AppletDelegate.qml:231
+#, fuzzy, kde-format
+#| msgid "Remove Panel"
+msgid "Remove all instances"
+msgstr "パネルを削除"
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -647,35 +655,35 @@ msgstr "メールアドレス:"
 msgid "Uninstall"
 msgstr "アンインストール"
 
-#: contents/explorer/WidgetExplorer.qml:129
-#: contents/explorer/WidgetExplorer.qml:206
+#: contents/explorer/WidgetExplorer.qml:138
+#: contents/explorer/WidgetExplorer.qml:215
 #, kde-format
 msgid "All Widgets"
 msgstr "すべてのウィジェット"
 
-#: contents/explorer/WidgetExplorer.qml:155
+#: contents/explorer/WidgetExplorer.qml:164
 #, kde-format
 msgid "Widgets"
 msgstr "ウィジェット"
 
-#: contents/explorer/WidgetExplorer.qml:164
+#: contents/explorer/WidgetExplorer.qml:173
 #, kde-format
 msgctxt "@action:button The word 'new' refers to widgets"
 msgid "Get New…"
 msgstr "新規取得..."
 
-#: contents/explorer/WidgetExplorer.qml:165
+#: contents/explorer/WidgetExplorer.qml:174
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "新しいウィジェットを取得..."
 
-#: contents/explorer/WidgetExplorer.qml:220
+#: contents/explorer/WidgetExplorer.qml:229
 #, kde-format
 msgid "Categories"
 msgstr "カテゴリ"
 
-#: contents/explorer/WidgetExplorer.qml:231
+#: contents/explorer/WidgetExplorer.qml:240
 #, fuzzy, kde-format
 #| msgid "Confirm Removal Of One Widget"
 #| msgid_plural "Confirm Removal Of %1 Widgets"
@@ -684,12 +692,12 @@ msgid "Confirm Removal of One Widget"
 msgid_plural "Confirm Removal of %1 Widgets"
 msgstr[0] "%1 のウィジェットの削除を確認"
 
-#: contents/explorer/WidgetExplorer.qml:315
+#: contents/explorer/WidgetExplorer.qml:324
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "検索語に一致するウィジェットはありません"
 
-#: contents/explorer/WidgetExplorer.qml:315
+#: contents/explorer/WidgetExplorer.qml:324
 #, kde-format
 msgid "No widgets available"
 msgstr "利用可能なウィジェットはありません"
@@ -832,3 +840,6 @@ msgstr "編集モードを終了"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "パネルフォーカスインジケータ"
+
+#~ msgid "Uninstall widget"
+#~ msgstr "ウィジェットをアンインストール"

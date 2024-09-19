@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-14 00:42+0000\n"
+"POT-Creation-Date: 2024-09-19 00:41+0000\n"
 "PO-Revision-Date: 2024-09-14 11:01+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -623,9 +623,17 @@ msgid "Undo uninstall"
 msgstr "ביטול הסרה"
 
 #: contents/explorer/AppletDelegate.qml:189
-#, kde-format
-msgid "Uninstall widget"
-msgstr "הסרת יישומון"
+#, fuzzy, kde-format
+#| msgid "Uninstall"
+msgctxt "@info:tooltip uninstall a widget"
+msgid "Uninstall"
+msgstr "הסרה"
+
+#: contents/explorer/AppletDelegate.qml:231
+#, fuzzy, kde-format
+#| msgid "Remove Panel"
+msgid "Remove all instances"
+msgstr "הסרת לוח"
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -642,35 +650,35 @@ msgstr "דוא״ל:"
 msgid "Uninstall"
 msgstr "הסרה"
 
-#: contents/explorer/WidgetExplorer.qml:129
-#: contents/explorer/WidgetExplorer.qml:206
+#: contents/explorer/WidgetExplorer.qml:138
+#: contents/explorer/WidgetExplorer.qml:215
 #, kde-format
 msgid "All Widgets"
 msgstr "כל היישומונים"
 
-#: contents/explorer/WidgetExplorer.qml:155
+#: contents/explorer/WidgetExplorer.qml:164
 #, kde-format
 msgid "Widgets"
 msgstr "יישומונים"
 
-#: contents/explorer/WidgetExplorer.qml:164
+#: contents/explorer/WidgetExplorer.qml:173
 #, kde-format
 msgctxt "@action:button The word 'new' refers to widgets"
 msgid "Get New…"
 msgstr "הורדת חדשים…"
 
-#: contents/explorer/WidgetExplorer.qml:165
+#: contents/explorer/WidgetExplorer.qml:174
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "הורדת יישומונים חדשים…"
 
-#: contents/explorer/WidgetExplorer.qml:220
+#: contents/explorer/WidgetExplorer.qml:229
 #, kde-format
 msgid "Categories"
 msgstr "קטגוריות"
 
-#: contents/explorer/WidgetExplorer.qml:231
+#: contents/explorer/WidgetExplorer.qml:240
 #, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Confirm Removal of One Widget"
@@ -680,12 +688,12 @@ msgstr[1] "אישור הסרת שני יישומונים"
 msgstr[2] "אישור הסרת %1 יישומונים"
 msgstr[3] "אישור הסרת %1 יישומונים"
 
-#: contents/explorer/WidgetExplorer.qml:315
+#: contents/explorer/WidgetExplorer.qml:324
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "אף יישומון לא עונה על תנאי החיפוש"
 
-#: contents/explorer/WidgetExplorer.qml:315
+#: contents/explorer/WidgetExplorer.qml:324
 #, kde-format
 msgid "No widgets available"
 msgstr "אין יישומונים זמינים"
@@ -828,6 +836,9 @@ msgstr "יציאה ממצב עריכה"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "מחוון מיקוד לוח"
+
+#~ msgid "Uninstall widget"
+#~ msgstr "הסרת יישומון"
 
 #~ msgctxt "@action:button Done configuring the panel"
 #~ msgid "Done"

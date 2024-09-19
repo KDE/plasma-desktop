@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-14 00:42+0000\n"
+"POT-Creation-Date: 2024-09-19 00:41+0000\n"
 "PO-Revision-Date: 2024-09-14 08:29+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -632,9 +632,17 @@ msgid "Undo uninstall"
 msgstr "Razveljavi odstranitev"
 
 #: contents/explorer/AppletDelegate.qml:189
-#, kde-format
-msgid "Uninstall widget"
-msgstr "Odstrani gradnik"
+#, fuzzy, kde-format
+#| msgid "Uninstall"
+msgctxt "@info:tooltip uninstall a widget"
+msgid "Uninstall"
+msgstr "Odstrani"
+
+#: contents/explorer/AppletDelegate.qml:231
+#, fuzzy, kde-format
+#| msgid "Remove Panel"
+msgid "Remove all instances"
+msgstr "Odstrani pult"
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -651,35 +659,35 @@ msgstr "E-pošta:"
 msgid "Uninstall"
 msgstr "Odstrani"
 
-#: contents/explorer/WidgetExplorer.qml:129
-#: contents/explorer/WidgetExplorer.qml:206
+#: contents/explorer/WidgetExplorer.qml:138
+#: contents/explorer/WidgetExplorer.qml:215
 #, kde-format
 msgid "All Widgets"
 msgstr "Vsi gradniki"
 
-#: contents/explorer/WidgetExplorer.qml:155
+#: contents/explorer/WidgetExplorer.qml:164
 #, kde-format
 msgid "Widgets"
 msgstr "Gradniki"
 
-#: contents/explorer/WidgetExplorer.qml:164
+#: contents/explorer/WidgetExplorer.qml:173
 #, kde-format
 msgctxt "@action:button The word 'new' refers to widgets"
 msgid "Get New…"
 msgstr "Dobi nove…"
 
-#: contents/explorer/WidgetExplorer.qml:165
+#: contents/explorer/WidgetExplorer.qml:174
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "Dobi nove gradnike…"
 
-#: contents/explorer/WidgetExplorer.qml:220
+#: contents/explorer/WidgetExplorer.qml:229
 #, kde-format
 msgid "Categories"
 msgstr "Kategorije"
 
-#: contents/explorer/WidgetExplorer.qml:231
+#: contents/explorer/WidgetExplorer.qml:240
 #, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Confirm Removal of One Widget"
@@ -689,12 +697,12 @@ msgstr[1] "Potrdite odstranitev %1 gradnika"
 msgstr[2] "Potrdite odstranitev %1 gradnikov"
 msgstr[3] "Potrdite odstranitev %1 gradnikov"
 
-#: contents/explorer/WidgetExplorer.qml:315
+#: contents/explorer/WidgetExplorer.qml:324
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "Noben gradnik se ne ujema z iskalnimi izrazi"
 
-#: contents/explorer/WidgetExplorer.qml:315
+#: contents/explorer/WidgetExplorer.qml:324
 #, kde-format
 msgid "No widgets available"
 msgstr "Gradnikov ni na voljo"
@@ -837,6 +845,9 @@ msgstr "Izhod iz urejevalnega načina"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Indikator fokusa plošče"
+
+#~ msgid "Uninstall widget"
+#~ msgstr "Odstrani gradnik"
 
 #~ msgid "@info:tooltip slider handle"
 #~ msgstr "@info:tooltip ročka drsnika"

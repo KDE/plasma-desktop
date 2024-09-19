@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-14 00:42+0000\n"
+"POT-Creation-Date: 2024-09-19 00:41+0000\n"
 "PO-Revision-Date: 2024-09-14 13:13+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -632,9 +632,17 @@ msgid "Undo uninstall"
 msgstr "Desfés la desinstal·lació"
 
 #: contents/explorer/AppletDelegate.qml:189
-#, kde-format
-msgid "Uninstall widget"
-msgstr "Desinstal·la el giny"
+#, fuzzy, kde-format
+#| msgid "Uninstall"
+msgctxt "@info:tooltip uninstall a widget"
+msgid "Uninstall"
+msgstr "Desinstal·la"
+
+#: contents/explorer/AppletDelegate.qml:231
+#, fuzzy, kde-format
+#| msgid "Remove Panel"
+msgid "Remove all instances"
+msgstr "Elimina el quadro"
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -651,35 +659,35 @@ msgstr "Correu electrònic:"
 msgid "Uninstall"
 msgstr "Desinstal·la"
 
-#: contents/explorer/WidgetExplorer.qml:129
-#: contents/explorer/WidgetExplorer.qml:206
+#: contents/explorer/WidgetExplorer.qml:138
+#: contents/explorer/WidgetExplorer.qml:215
 #, kde-format
 msgid "All Widgets"
 msgstr "Tots els ginys"
 
-#: contents/explorer/WidgetExplorer.qml:155
+#: contents/explorer/WidgetExplorer.qml:164
 #, kde-format
 msgid "Widgets"
 msgstr "Ginys"
 
-#: contents/explorer/WidgetExplorer.qml:164
+#: contents/explorer/WidgetExplorer.qml:173
 #, kde-format
 msgctxt "@action:button The word 'new' refers to widgets"
 msgid "Get New…"
 msgstr "Obtín nous…"
 
-#: contents/explorer/WidgetExplorer.qml:165
+#: contents/explorer/WidgetExplorer.qml:174
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "Obtín ginys nous…"
 
-#: contents/explorer/WidgetExplorer.qml:220
+#: contents/explorer/WidgetExplorer.qml:229
 #, kde-format
 msgid "Categories"
 msgstr "Categories"
 
-#: contents/explorer/WidgetExplorer.qml:231
+#: contents/explorer/WidgetExplorer.qml:240
 #, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Confirm Removal of One Widget"
@@ -687,12 +695,12 @@ msgid_plural "Confirm Removal of %1 Widgets"
 msgstr[0] "Confirma la supressió d'un giny"
 msgstr[1] "Confirma la supressió de %1 ginys"
 
-#: contents/explorer/WidgetExplorer.qml:315
+#: contents/explorer/WidgetExplorer.qml:324
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "No hi ha cap giny que coincidisca amb els termes de la busca"
 
-#: contents/explorer/WidgetExplorer.qml:315
+#: contents/explorer/WidgetExplorer.qml:324
 #, kde-format
 msgid "No widgets available"
 msgstr "No hi ha cap giny disponible"
@@ -835,3 +843,6 @@ msgstr "Ix del mode edició"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Indicador de focus del quadro"
+
+#~ msgid "Uninstall widget"
+#~ msgstr "Desinstal·la el giny"

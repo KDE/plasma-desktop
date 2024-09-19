@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-14 00:42+0000\n"
+"POT-Creation-Date: 2024-09-19 00:41+0000\n"
 "PO-Revision-Date: 2024-07-22 13:05+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -638,9 +638,17 @@ msgid "Undo uninstall"
 msgstr "Afturkalla fjarlægingu"
 
 #: contents/explorer/AppletDelegate.qml:189
-#, kde-format
-msgid "Uninstall widget"
-msgstr "Fjarlægja græju"
+#, fuzzy, kde-format
+#| msgid "Uninstall"
+msgctxt "@info:tooltip uninstall a widget"
+msgid "Uninstall"
+msgstr "Fjarlægja"
+
+#: contents/explorer/AppletDelegate.qml:231
+#, fuzzy, kde-format
+#| msgid "Remove Panel"
+msgid "Remove all instances"
+msgstr "Fjarlægja skjáborðsstiku"
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -657,35 +665,35 @@ msgstr "Netfang:"
 msgid "Uninstall"
 msgstr "Fjarlægja"
 
-#: contents/explorer/WidgetExplorer.qml:129
-#: contents/explorer/WidgetExplorer.qml:206
+#: contents/explorer/WidgetExplorer.qml:138
+#: contents/explorer/WidgetExplorer.qml:215
 #, kde-format
 msgid "All Widgets"
 msgstr "Allar græjur"
 
-#: contents/explorer/WidgetExplorer.qml:155
+#: contents/explorer/WidgetExplorer.qml:164
 #, kde-format
 msgid "Widgets"
 msgstr "Græjur"
 
-#: contents/explorer/WidgetExplorer.qml:164
+#: contents/explorer/WidgetExplorer.qml:173
 #, kde-format
 msgctxt "@action:button The word 'new' refers to widgets"
 msgid "Get New…"
 msgstr "Sækja nýtt..."
 
-#: contents/explorer/WidgetExplorer.qml:165
+#: contents/explorer/WidgetExplorer.qml:174
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "Sækja nýjar græjur…"
 
-#: contents/explorer/WidgetExplorer.qml:220
+#: contents/explorer/WidgetExplorer.qml:229
 #, kde-format
 msgid "Categories"
 msgstr "Flokkar"
 
-#: contents/explorer/WidgetExplorer.qml:231
+#: contents/explorer/WidgetExplorer.qml:240
 #, fuzzy, kde-format
 #| msgid "Confirm Removal Of One Widget"
 #| msgid_plural "Confirm Removal Of %1 Widgets"
@@ -695,12 +703,12 @@ msgid_plural "Confirm Removal of %1 Widgets"
 msgstr[0] "Staðfestu að fjarlægja eigi eina græju"
 msgstr[1] "Staðfestu að fjarlægja eigi %1 græjur"
 
-#: contents/explorer/WidgetExplorer.qml:315
+#: contents/explorer/WidgetExplorer.qml:324
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "Engar græjur passa við leitarorðin"
 
-#: contents/explorer/WidgetExplorer.qml:315
+#: contents/explorer/WidgetExplorer.qml:324
 #, kde-format
 msgid "No widgets available"
 msgstr "Engar græjur í boði"
@@ -843,6 +851,9 @@ msgstr "Loka breytingasniði"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Fókusvísir skjáborðsstiku"
+
+#~ msgid "Uninstall widget"
+#~ msgstr "Fjarlægja græju"
 
 #~ msgctxt "@action:button Done configuring the panel"
 #~ msgid "Done"

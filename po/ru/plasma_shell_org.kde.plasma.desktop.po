@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-14 00:42+0000\n"
+"POT-Creation-Date: 2024-09-19 00:41+0000\n"
 "PO-Revision-Date: 2024-06-22 11:48+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -652,9 +652,17 @@ msgid "Undo uninstall"
 msgstr "Отменить удаление"
 
 #: contents/explorer/AppletDelegate.qml:189
-#, kde-format
-msgid "Uninstall widget"
-msgstr "Удалить виджет"
+#, fuzzy, kde-format
+#| msgid "Uninstall"
+msgctxt "@info:tooltip uninstall a widget"
+msgid "Uninstall"
+msgstr "Удалить"
+
+#: contents/explorer/AppletDelegate.qml:231
+#, fuzzy, kde-format
+#| msgid "Remove Panel"
+msgid "Remove all instances"
+msgstr "Удалить панель"
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -671,37 +679,37 @@ msgstr "Эл. почта:"
 msgid "Uninstall"
 msgstr "Удалить"
 
-#: contents/explorer/WidgetExplorer.qml:129
-#: contents/explorer/WidgetExplorer.qml:206
+#: contents/explorer/WidgetExplorer.qml:138
+#: contents/explorer/WidgetExplorer.qml:215
 #, kde-format
 msgid "All Widgets"
 msgstr "Все виджеты"
 
-#: contents/explorer/WidgetExplorer.qml:155
+#: contents/explorer/WidgetExplorer.qml:164
 #, kde-format
 msgid "Widgets"
 msgstr "Виджеты"
 
-#: contents/explorer/WidgetExplorer.qml:164
+#: contents/explorer/WidgetExplorer.qml:173
 #, fuzzy, kde-format
 #| msgid "Get New Plugins…"
 msgctxt "@action:button The word 'new' refers to widgets"
 msgid "Get New…"
 msgstr "Загрузить новые модули..."
 
-#: contents/explorer/WidgetExplorer.qml:165
+#: contents/explorer/WidgetExplorer.qml:174
 #, fuzzy, kde-format
 #| msgid "Get New Widgets…"
 msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "Пополнить список виджетов..."
 
-#: contents/explorer/WidgetExplorer.qml:220
+#: contents/explorer/WidgetExplorer.qml:229
 #, kde-format
 msgid "Categories"
 msgstr "Категории"
 
-#: contents/explorer/WidgetExplorer.qml:231
+#: contents/explorer/WidgetExplorer.qml:240
 #, fuzzy, kde-format
 #| msgid "Confirm Removal Of One Widget"
 #| msgid_plural "Confirm Removal Of %1 Widgets"
@@ -713,12 +721,12 @@ msgstr[1] "Подтверждение удаления %1 виджетов"
 msgstr[2] "Подтверждение удаления %1 виджетов"
 msgstr[3] "Подтверждение удаления %1 виджета"
 
-#: contents/explorer/WidgetExplorer.qml:315
+#: contents/explorer/WidgetExplorer.qml:324
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "Не найдено ни одного виджета, удовлетворяющего критериям поиска"
 
-#: contents/explorer/WidgetExplorer.qml:315
+#: contents/explorer/WidgetExplorer.qml:324
 #, kde-format
 msgid "No widgets available"
 msgstr "Виджеты не найдены"
@@ -861,6 +869,9 @@ msgstr "Выйти из режима редактирования"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Индикатор получения фокуса панелью"
+
+#~ msgid "Uninstall widget"
+#~ msgstr "Удалить виджет"
 
 #~ msgctxt "@action:button Done configuring the panel"
 #~ msgid "Done"

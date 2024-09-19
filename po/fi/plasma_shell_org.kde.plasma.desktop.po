@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-14 00:42+0000\n"
+"POT-Creation-Date: 2024-09-19 00:41+0000\n"
 "PO-Revision-Date: 2024-02-25 02:43+0200\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -638,9 +638,17 @@ msgid "Undo uninstall"
 msgstr "Kumoa asennuksen poisto"
 
 #: contents/explorer/AppletDelegate.qml:189
-#, kde-format
-msgid "Uninstall widget"
-msgstr "Poista sovelman asennus"
+#, fuzzy, kde-format
+#| msgid "Uninstall"
+msgctxt "@info:tooltip uninstall a widget"
+msgid "Uninstall"
+msgstr "Poista asennus"
+
+#: contents/explorer/AppletDelegate.qml:231
+#, fuzzy, kde-format
+#| msgid "Remove Panel"
+msgid "Remove all instances"
+msgstr "Poista paneeli"
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -657,37 +665,37 @@ msgstr "Sähköposti:"
 msgid "Uninstall"
 msgstr "Poista asennus"
 
-#: contents/explorer/WidgetExplorer.qml:129
-#: contents/explorer/WidgetExplorer.qml:206
+#: contents/explorer/WidgetExplorer.qml:138
+#: contents/explorer/WidgetExplorer.qml:215
 #, kde-format
 msgid "All Widgets"
 msgstr "Kaikki sovelmat"
 
-#: contents/explorer/WidgetExplorer.qml:155
+#: contents/explorer/WidgetExplorer.qml:164
 #, kde-format
 msgid "Widgets"
 msgstr "Sovelmat"
 
-#: contents/explorer/WidgetExplorer.qml:164
+#: contents/explorer/WidgetExplorer.qml:173
 #, fuzzy, kde-format
 #| msgid "Get New Plugins…"
 msgctxt "@action:button The word 'new' refers to widgets"
 msgid "Get New…"
 msgstr "Hae uusia liitännäisiä…"
 
-#: contents/explorer/WidgetExplorer.qml:165
+#: contents/explorer/WidgetExplorer.qml:174
 #, fuzzy, kde-format
 #| msgid "Get New Widgets…"
 msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "Hae uusia sovelmia…"
 
-#: contents/explorer/WidgetExplorer.qml:220
+#: contents/explorer/WidgetExplorer.qml:229
 #, kde-format
 msgid "Categories"
 msgstr "Luokat"
 
-#: contents/explorer/WidgetExplorer.qml:231
+#: contents/explorer/WidgetExplorer.qml:240
 #, fuzzy, kde-format
 #| msgid "Confirm Removal Of One Widget"
 #| msgid_plural "Confirm Removal Of %1 Widgets"
@@ -697,12 +705,12 @@ msgid_plural "Confirm Removal of %1 Widgets"
 msgstr[0] "Vahvista yhden sovelman poisto"
 msgstr[1] "Vahvista %1 sovelman poisto"
 
-#: contents/explorer/WidgetExplorer.qml:315
+#: contents/explorer/WidgetExplorer.qml:324
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "Ei hakua vastaavia sovelmia"
 
-#: contents/explorer/WidgetExplorer.qml:315
+#: contents/explorer/WidgetExplorer.qml:324
 #, kde-format
 msgid "No widgets available"
 msgstr "Sovelmia ei ole saatavilla"
@@ -848,6 +856,9 @@ msgstr ""
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr ""
+
+#~ msgid "Uninstall widget"
+#~ msgstr "Poista sovelman asennus"
 
 #~ msgid "Height:"
 #~ msgstr "Korkeus:"

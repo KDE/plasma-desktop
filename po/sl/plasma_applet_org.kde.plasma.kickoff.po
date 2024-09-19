@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-18 00:41+0000\n"
-"PO-Revision-Date: 2024-08-31 09:05+0200\n"
+"PO-Revision-Date: 2024-09-18 07:23+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: LUGOS\n"
 "Language: sl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.5\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -103,30 +103,29 @@ msgid "Remove icon"
 msgstr "Odstrani ikono"
 
 #: package/contents/ui/ConfigGeneral.qml:119
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgid "Show applications as:"
-msgstr "Prikaži ostale aplikacije:"
+msgstr "Prikaži aplikacije kot:"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgid "Name only"
-msgstr ""
+msgstr "Samo ime"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgid "Description only"
-msgstr ""
+msgstr "Samo opis"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgid "Name (Description)"
-msgstr ""
+msgstr "Ime (Opis)"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgid "Description (Name)"
-msgstr ""
+msgstr "Opis (Ime)"
 
 #: package/contents/ui/ConfigGeneral.qml:131
 #, kde-format

@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-14 00:42+0000\n"
-"PO-Revision-Date: 2024-09-06 12:46+0300\n"
+"POT-Creation-Date: 2024-09-19 00:41+0000\n"
+"PO-Revision-Date: 2024-09-19 01:53+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -633,9 +633,17 @@ msgid "Undo uninstall"
 msgstr "Atšaukti pašalinimą"
 
 #: contents/explorer/AppletDelegate.qml:189
-#, kde-format
-msgid "Uninstall widget"
-msgstr "Pašalinti valdiklį"
+#, fuzzy, kde-format
+#| msgid "Uninstall"
+msgctxt "@info:tooltip uninstall a widget"
+msgid "Uninstall"
+msgstr "Pašalinti"
+
+#: contents/explorer/AppletDelegate.qml:231
+#, fuzzy, kde-format
+#| msgid "Remove Panel"
+msgid "Remove all instances"
+msgstr "Šalinti skydelį"
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -652,38 +660,36 @@ msgstr "El. paštas:"
 msgid "Uninstall"
 msgstr "Pašalinti"
 
-#: contents/explorer/WidgetExplorer.qml:129
-#: contents/explorer/WidgetExplorer.qml:206
+#: contents/explorer/WidgetExplorer.qml:138
+#: contents/explorer/WidgetExplorer.qml:215
 #, kde-format
 msgid "All Widgets"
 msgstr "Visi valdikliai"
 
-#: contents/explorer/WidgetExplorer.qml:155
+#: contents/explorer/WidgetExplorer.qml:164
 #, kde-format
 msgid "Widgets"
 msgstr "Valdikliai"
 
-#: contents/explorer/WidgetExplorer.qml:164
+#: contents/explorer/WidgetExplorer.qml:173
 #, kde-format
 msgctxt "@action:button The word 'new' refers to widgets"
 msgid "Get New…"
 msgstr "Gauti naujų…"
 
-#: contents/explorer/WidgetExplorer.qml:165
+#: contents/explorer/WidgetExplorer.qml:174
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "Gauti naujų valdiklių…"
 
-#: contents/explorer/WidgetExplorer.qml:220
+#: contents/explorer/WidgetExplorer.qml:229
 #, kde-format
 msgid "Categories"
 msgstr "Kategorijos"
 
-#: contents/explorer/WidgetExplorer.qml:231
-#, fuzzy, kde-format
-#| msgid "Confirm Removal Of One Widget"
-#| msgid_plural "Confirm Removal Of %1 Widgets"
+#: contents/explorer/WidgetExplorer.qml:240
+#, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Confirm Removal of One Widget"
 msgid_plural "Confirm Removal of %1 Widgets"
@@ -692,12 +698,12 @@ msgstr[1] "Patvirtinti %1 valdiklių šalinimą"
 msgstr[2] "Patvirtinti %1 valdiklių šalinimą"
 msgstr[3] "Patvirtinti %1 valdiklio šalinimą"
 
-#: contents/explorer/WidgetExplorer.qml:315
+#: contents/explorer/WidgetExplorer.qml:324
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "Joks valdiklis neatitiko paieškos žodžių"
 
-#: contents/explorer/WidgetExplorer.qml:315
+#: contents/explorer/WidgetExplorer.qml:324
 #, kde-format
 msgid "No widgets available"
 msgstr "Nėra jokių prieinamų valdiklių"
@@ -840,6 +846,9 @@ msgstr "Išjungti taisymo veikseną"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Skydelio fokusavimo indikatorius"
+
+#~ msgid "Uninstall widget"
+#~ msgstr "Pašalinti valdiklį"
 
 #~ msgctxt "@action:button Done configuring the panel"
 #~ msgid "Done"

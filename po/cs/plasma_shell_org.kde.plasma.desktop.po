@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-14 00:42+0000\n"
-"PO-Revision-Date: 2024-08-30 16:33+0200\n"
+"POT-Creation-Date: 2024-09-19 00:41+0000\n"
+"PO-Revision-Date: 2024-09-17 15:21+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.08.1\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -528,20 +528,20 @@ msgstr ""
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum height."
-msgstr ""
+msgstr "Táhněte pro změnu maximální výšky."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:33
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum width."
-msgstr ""
+msgstr "Táhněte pro změnu maximální šířky."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:34
 #: contents/configuration/panelconfiguration/Ruler.qml:39
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Double-click to reset."
-msgstr ""
+msgstr "Dvojklik pro vrácení."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:37
 #, kde-format
@@ -628,9 +628,17 @@ msgid "Undo uninstall"
 msgstr "Vrátit odinstalaci zpět"
 
 #: contents/explorer/AppletDelegate.qml:189
-#, kde-format
-msgid "Uninstall widget"
-msgstr "Odinstalovat widget"
+#, fuzzy, kde-format
+#| msgid "Uninstall"
+msgctxt "@info:tooltip uninstall a widget"
+msgid "Uninstall"
+msgstr "Odinstalovat"
+
+#: contents/explorer/AppletDelegate.qml:231
+#, fuzzy, kde-format
+#| msgid "Remove Panel"
+msgid "Remove all instances"
+msgstr "Odstranit panel"
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -647,49 +655,49 @@ msgstr "E-mail:"
 msgid "Uninstall"
 msgstr "Odinstalovat"
 
-#: contents/explorer/WidgetExplorer.qml:129
-#: contents/explorer/WidgetExplorer.qml:206
+#: contents/explorer/WidgetExplorer.qml:138
+#: contents/explorer/WidgetExplorer.qml:215
 #, kde-format
 msgid "All Widgets"
 msgstr "Všechny widgety"
 
-#: contents/explorer/WidgetExplorer.qml:155
+#: contents/explorer/WidgetExplorer.qml:164
 #, kde-format
 msgid "Widgets"
 msgstr "Widgety"
 
-#: contents/explorer/WidgetExplorer.qml:164
+#: contents/explorer/WidgetExplorer.qml:173
 #, kde-format
 msgctxt "@action:button The word 'new' refers to widgets"
 msgid "Get New…"
 msgstr "Získat nové…"
 
-#: contents/explorer/WidgetExplorer.qml:165
+#: contents/explorer/WidgetExplorer.qml:174
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "Získat nové widgety…"
 
-#: contents/explorer/WidgetExplorer.qml:220
+#: contents/explorer/WidgetExplorer.qml:229
 #, kde-format
 msgid "Categories"
 msgstr "Kategorie"
 
-#: contents/explorer/WidgetExplorer.qml:231
+#: contents/explorer/WidgetExplorer.qml:240
 #, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Confirm Removal of One Widget"
 msgid_plural "Confirm Removal of %1 Widgets"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Potvrdit odstranění jednoho widgetu"
+msgstr[1] "Potvrdit odstranění %1 widgetů"
+msgstr[2] "Potvrdit odstranění %1 widgetů"
 
-#: contents/explorer/WidgetExplorer.qml:315
+#: contents/explorer/WidgetExplorer.qml:324
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "Vyhledávacím kritériím neodpovídá žádný widget"
 
-#: contents/explorer/WidgetExplorer.qml:315
+#: contents/explorer/WidgetExplorer.qml:324
 #, kde-format
 msgid "No widgets available"
 msgstr "Nejsou dostupné žádné widgety"
@@ -832,3 +840,6 @@ msgstr "Ukončit režim úprav"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr ""
+
+#~ msgid "Uninstall widget"
+#~ msgstr "Odinstalovat widget"

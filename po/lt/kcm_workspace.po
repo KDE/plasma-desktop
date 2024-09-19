@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-16 00:41+0000\n"
-"PO-Revision-Date: 2024-09-06 12:55+0300\n"
+"PO-Revision-Date: 2024-09-19 01:54+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -215,9 +215,7 @@ msgid "Double-click interval:"
 msgstr "Dvikarčio spustelėjimo intervalas:"
 
 #: ui/main.qml:370
-#, fuzzy, kde-format
-#| msgid "%1 msec"
-#| msgid_plural "%1 msec"
+#, kde-format
 msgctxt "short for millisecond(s)"
 msgid "%1 ms"
 msgid_plural "%1 ms"
@@ -227,8 +225,7 @@ msgstr[2] "%1 msek."
 msgstr[3] "%1 msek."
 
 #: ui/main.qml:374
-#, fuzzy, kde-format
-#| msgid "msec"
+#, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgstr "msek."

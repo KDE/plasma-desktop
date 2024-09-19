@@ -9,19 +9,20 @@
 # Alexander Potashev <aspotashev@gmail.com>, 2011, 2015, 2016, 2017, 2018.
 # SPDX-FileCopyrightText: 2019, 2021, 2022, 2023, 2024 Alexander Yavorsky <kekcuha@gmail.com>
 # Дронова Ю <juliette.tux@gmail.com>, 2020.
+# SPDX-FileCopyrightText: 2024 Olesya Gerasimenko <translation-team@basealt.ru>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-29 00:41+0000\n"
-"PO-Revision-Date: 2024-04-04 17:44+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
-"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"PO-Revision-Date: 2024-09-18 17:16+0300\n"
+"Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
+"Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Environment: kde\n"
@@ -317,14 +318,12 @@ msgstr "Увеличение"
 
 #: ui/ActivationShortcuts.qml:17
 #, fuzzy, kde-format
-#| msgid "&Activation Gestures"
 msgctxt "@option:check"
 msgid "Activation shortcuts:"
 msgstr "Ж&есты активации"
 
 #: ui/ActivationShortcuts.qml:18
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "Enable activation shortcuts"
 msgid "Enable"
 msgstr "Включить"
@@ -343,8 +342,6 @@ msgstr ""
 
 #: ui/ActivationShortcuts.qml:46
 #, fuzzy, kde-format
-#| msgid ""
-#| "Turn sticky keys and slow keys off after a certain period of inactivity."
 msgctxt "@option:check"
 msgid "Disable sticky and slow keys after:"
 msgstr ""
@@ -352,7 +349,6 @@ msgstr ""
 
 #: ui/ActivationShortcuts.qml:75
 #, fuzzy, kde-format
-#| msgid " min"
 msgid "%1 min"
 msgid_plural "%1 min"
 msgstr[0] " мин"
@@ -362,7 +358,6 @@ msgstr[3] " мин"
 
 #: ui/ActivationShortcuts.qml:79
 #, fuzzy, kde-format
-#| msgid " min"
 msgctxt "short for minute(s)"
 msgid "min"
 msgid_plural "min"
@@ -373,7 +368,6 @@ msgstr[3] " мин"
 
 #: ui/ActivationShortcuts.qml:88
 #, fuzzy, kde-format
-#| msgid "When a gesture is used:"
 msgid "When a shortcut is used:"
 msgstr "При использовании жеста:"
 
@@ -384,7 +378,6 @@ msgstr "Показывать диалог подтверждения"
 
 #: ui/ActivationShortcuts.qml:100
 #, fuzzy, kde-format
-#| msgid "Ring the System Bell"
 msgid "Ring the system bell"
 msgstr "Проигрывать системный сигнал"
 
@@ -405,8 +398,6 @@ msgstr "Выберите звуковой файл"
 
 #: ui/Bell.qml:21
 #, fuzzy, kde-format
-#| msgctxt "Name filters in a file dialog"
-#| msgid "Audio Files (*.ogg *.wav)"
 msgctxt "Name filters in a file dialog. Do not translate `(*.ogg *.oga *.wav)`"
 msgid "ogg, oga, and wav audio files (*.ogg *.oga *.wav)"
 msgstr "Звуковые файлы (*.ogg *.wav)"
@@ -459,22 +450,18 @@ msgstr "Включить"
 
 #: ui/Bell.qml:113
 #, fuzzy, kde-format
-#| msgid "Use the system bell whenever a key is rejected"
 msgctxt "@label"
 msgid "Flashes the screen whenever certain keys are pressed"
 msgstr "Подавать системный сигнал при отклонении ввода клавиши"
 
 #: ui/Bell.qml:123
 #, fuzzy, kde-format
-#| msgctxt "Invert screen on a system bell"
-#| msgid "Invert Screen"
 msgctxt "@option:radio Invert screen colors when a system bell is rung"
 msgid "Invert screen colors"
 msgstr "Инвертировать экран"
 
 #: ui/Bell.qml:141
 #, fuzzy, kde-format
-#| msgid "F&lash screen"
 msgctxt "@option:radio Flash screen when a system bell is rung"
 msgid "Flash screen"
 msgstr "&Мигание экрана"
@@ -495,7 +482,6 @@ msgstr "Длительность:"
 #: ui/MouseNavigation.qml:51 ui/MouseNavigation.qml:73
 #: ui/MouseNavigation.qml:95
 #, fuzzy, kde-format
-#| msgid " min"
 msgid "%1 ms"
 msgid_plural "%1 ms"
 msgstr[0] " мин"
@@ -510,20 +496,19 @@ msgstr[3] " мин"
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "мс"
+msgstr[1] "мс"
+msgstr[2] "мс"
+msgstr[3] "мс"
 
 #: ui/ColorblindnessCorrection.qml:22
 #, kde-format
 msgctxt "@label"
 msgid "Color blindness correction:"
-msgstr ""
+msgstr "Коррекция при неспособности различать цвета:"
 
 #: ui/ColorblindnessCorrection.qml:23
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable color blindness correction effect"
 msgid "Enable"
 msgstr "Включить"
@@ -532,63 +517,63 @@ msgstr "Включить"
 #, kde-format
 msgctxt "@label"
 msgid "Mode:"
-msgstr ""
+msgstr "Режим:"
 
 #: ui/ColorblindnessCorrection.qml:41
 #, kde-format
 msgctxt "@option"
 msgid "Protanopia (red weak)"
-msgstr ""
+msgstr "Протанопия (пониженная чувствительность к красному)"
 
 #: ui/ColorblindnessCorrection.qml:42
 #, kde-format
 msgctxt "@option"
 msgid "Deuteranopia (green weak)"
-msgstr ""
+msgstr "Дейтеранопия (пониженная чувствительность к зелёному)"
 
 #: ui/ColorblindnessCorrection.qml:43
 #, kde-format
 msgctxt "@option"
 msgid "Tritanopia (blue-yellow)"
-msgstr ""
+msgstr "Тританопия (сине-жёлтый)"
 
 #: ui/ColorblindnessCorrection.qml:58
 #, kde-format
 msgctxt "@label"
 msgid "Intensity:"
-msgstr ""
+msgstr "Интенсивность:"
 
 #: ui/ColorblindnessCorrection.qml:81
 #, kde-format
 msgctxt "@label Mild color blindness correction intensity"
 msgid "Mild"
-msgstr ""
+msgstr "Умеренная"
 
 #: ui/ColorblindnessCorrection.qml:88
 #, kde-format
 msgctxt "@label Intense color blindness correction intensity"
 msgid "Intense"
-msgstr ""
+msgstr "Высокая"
 
 #: ui/ColorblindnessCorrection.qml:111
 #, kde-format
 msgid "Red"
-msgstr ""
+msgstr "Красный"
 
 #: ui/ColorblindnessCorrection.qml:112
 #, kde-format
 msgid "Green"
-msgstr ""
+msgstr "Зелёный"
 
 #: ui/ColorblindnessCorrection.qml:113
 #, kde-format
 msgid "Blue"
-msgstr ""
+msgstr "Синий"
 
 #: ui/ColorblindnessCorrection.qml:114
 #, kde-format
 msgid "Purple"
-msgstr ""
+msgstr "Фиолетовый"
 
 #: ui/KeyboardFilters.qml:17
 #, kde-format
@@ -599,7 +584,7 @@ msgstr "Замедленные клавиши:"
 #, kde-format
 msgctxt "Enable slow keys"
 msgid "Enable"
-msgstr "включить"
+msgstr "Включить"
 
 #: ui/KeyboardFilters.qml:33
 #, kde-format
@@ -648,7 +633,7 @@ msgstr "«Прыгающие» клавиши:"
 #, kde-format
 msgctxt "Bounce keys enable"
 msgid "Enable"
-msgstr "включить"
+msgstr "Включить"
 
 #: ui/KeyboardFilters.qml:129
 #, kde-format
@@ -671,11 +656,10 @@ msgid "Ring system bell when rejected"
 msgstr "Проигрывать системный сигнал при отклонении"
 
 #: ui/main.qml:28
-#, fuzzy, kde-format
-#| msgid "Use System Bell"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "System Bell"
-msgstr "Использовать системный сигнал"
+msgstr "Системный сигнал"
 
 #: ui/main.qml:33
 #, kde-format
@@ -697,7 +681,6 @@ msgstr "Навигация мыши"
 
 #: ui/main.qml:48
 #, fuzzy, kde-format
-#| msgid "&Activation Gestures"
 msgid "Activation Shortcuts"
 msgstr "Ж&есты активации"
 
@@ -711,24 +694,22 @@ msgstr "Средство чтения с экрана"
 #, kde-format
 msgctxt "Correction for color blindness"
 msgid "Color Blindness Correction"
-msgstr ""
+msgstr "Коррекция при неспособности различать цвета"
 
 #: ui/main.qml:63
 #, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"
-msgstr ""
+msgstr "Потрясти курсором"
 
 #: ui/ModifierKeys.qml:17
-#, fuzzy, kde-format
-#| msgid "Sticky keys:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sticky keys:"
 msgstr "Залипающие клавиши:"
 
 #: ui/ModifierKeys.qml:22
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable sticky keys"
 msgid "Enable"
 msgstr "Включить"
@@ -743,8 +724,7 @@ msgid ""
 msgstr ""
 
 #: ui/ModifierKeys.qml:39
-#, fuzzy, kde-format
-#| msgid "Lock the sticky keys"
+#, kde-format
 msgctxt "@option:check"
 msgid "Lock sticky keys"
 msgstr "Закрепить залипающие клавиши"
@@ -768,15 +748,13 @@ msgid "Ring system bell when modifier keys are used"
 msgstr "Проигрывать системный сигнал при использовании клавиш-модификаторов"
 
 #: ui/ModifierKeys.qml:88
-#, fuzzy, kde-format
-#| msgid "Feedback:"
+#, kde-format
 msgctxt "@option:check Feedback options:"
 msgid "Feedback:"
 msgstr "Обратная связь:"
 
 #: ui/ModifierKeys.qml:93
 #, fuzzy, kde-format
-#| msgid "Ring system bell when locking keys are toggled"
 msgctxt "@option:check"
 msgid "Ring system bell when locking keys are used"
 msgstr ""
@@ -790,7 +768,6 @@ msgstr ""
 
 #: ui/ModifierKeys.qml:108
 #, fuzzy, kde-format
-#| msgid "Show notification when modifier or locking keys are used"
 msgctxt "@option:check"
 msgid "Show notification when modifier or locking keys are used"
 msgstr ""
@@ -799,21 +776,18 @@ msgstr ""
 
 #: ui/ModifierKeys.qml:120
 #, fuzzy, kde-format
-#| msgid "Configure Notifications…"
 msgctxt "@action:button"
 msgid "Configure Notifications…"
 msgstr "Настроить уведомления..."
 
 #: ui/MouseNavigation.qml:16
 #, fuzzy, kde-format
-#| msgid "Use number pad to move cursor:"
 msgctxt "@option:check"
 msgid "Use number pad to move cursor:"
 msgstr "Использовать цифровую клавиатуру для перемещения курсора:"
 
 #: ui/MouseNavigation.qml:21
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable mouse navigation"
 msgid "Enable"
 msgstr "Включить"
@@ -831,42 +805,36 @@ msgstr ""
 
 #: ui/MouseNavigation.qml:37
 #, fuzzy, kde-format
-#| msgid "Acceleration delay:"
 msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
 msgstr "Задержка ускорения:"
 
 #: ui/MouseNavigation.qml:59
 #, fuzzy, kde-format
-#| msgid "Repeat interval:"
 msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr "Интервал повтора:"
 
 #: ui/MouseNavigation.qml:81
 #, fuzzy, kde-format
-#| msgid "Acceleration time:"
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "Время ускорения:"
 
 #: ui/MouseNavigation.qml:103
 #, fuzzy, kde-format
-#| msgid "Maximum speed:"
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr "Максимальная скорость:"
 
 #: ui/MouseNavigation.qml:117
 #, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
 msgstr "Ускорение курсора:"
 
 #: ui/ScreenReader.qml:20
 #, fuzzy, kde-format
-#| msgid "Launch Orca Screen Reader Configuration…"
 msgctxt "@info Placeholder message title"
 msgid "The Orca Screen Reader is not installed"
 msgstr "Запустить настройку средства чтения с экрана «Orca»…"
@@ -878,15 +846,13 @@ msgid "Please install it, then close and reopen this window"
 msgstr ""
 
 #: ui/ScreenReader.qml:27
-#, fuzzy, kde-format
-#| msgid "Enable Screen Reader"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable Screen Reader"
 msgstr "Включить средство чтения с экрана"
 
 #: ui/ScreenReader.qml:39
 #, fuzzy, kde-format
-#| msgid "Launch Orca Screen Reader Configuration…"
 msgctxt "@action:button"
 msgid "Launch Orca Screen Reader Configuration…"
 msgstr "Запустить настройку средства чтения с экрана «Orca»…"
@@ -898,15 +864,13 @@ msgid "Shake cursor to find it:"
 msgstr ""
 
 #: ui/ShakeCursor.qml:16
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable shake cursor effect"
 msgid "Enable"
 msgstr "Включить"
 
 #: ui/ShakeCursor.qml:28
 #, fuzzy, kde-format
-#| msgid "Show a notification"
 msgctxt "@label Cursor magnification level"
 msgid "Magnification:"
 msgstr "Показывать уведомление"

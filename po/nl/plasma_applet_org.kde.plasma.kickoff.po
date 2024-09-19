@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-18 00:41+0000\n"
-"PO-Revision-Date: 2024-08-31 11:16+0200\n"
+"PO-Revision-Date: 2024-09-18 10:28+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -100,30 +100,29 @@ msgid "Remove icon"
 msgstr "Pictogram verwijderen"
 
 #: package/contents/ui/ConfigGeneral.qml:119
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgid "Show applications as:"
-msgstr "Andere toepassingen tonen:"
+msgstr "Toepassingen tonen als:"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgid "Name only"
-msgstr ""
+msgstr "Alleen naam"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgid "Description only"
-msgstr ""
+msgstr "Alleen beschrijving"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgid "Name (Description)"
-msgstr ""
+msgstr "Naam (beschrijving)"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgid "Description (Name)"
-msgstr ""
+msgstr "Beschrijving (Naam)"
 
 #: package/contents/ui/ConfigGeneral.qml:131
 #, kde-format

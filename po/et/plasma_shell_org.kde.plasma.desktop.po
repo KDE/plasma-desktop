@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-14 00:42+0000\n"
+"POT-Creation-Date: 2024-09-19 00:41+0000\n"
 "PO-Revision-Date: 2020-10-08 11:52+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -647,9 +647,17 @@ msgid "Undo uninstall"
 msgstr "Tühista eemaldamine"
 
 #: contents/explorer/AppletDelegate.qml:189
-#, kde-format
-msgid "Uninstall widget"
-msgstr "Eemalda vidin"
+#, fuzzy, kde-format
+#| msgid "Uninstall"
+msgctxt "@info:tooltip uninstall a widget"
+msgid "Uninstall"
+msgstr "Eemalda"
+
+#: contents/explorer/AppletDelegate.qml:231
+#, fuzzy, kde-format
+#| msgid "Remove Panel"
+msgid "Remove all instances"
+msgstr "Eemalda paneel"
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -666,37 +674,37 @@ msgstr "E-posti aadress:"
 msgid "Uninstall"
 msgstr "Eemalda"
 
-#: contents/explorer/WidgetExplorer.qml:129
-#: contents/explorer/WidgetExplorer.qml:206
+#: contents/explorer/WidgetExplorer.qml:138
+#: contents/explorer/WidgetExplorer.qml:215
 #, kde-format
 msgid "All Widgets"
 msgstr "Kõik vidinad"
 
-#: contents/explorer/WidgetExplorer.qml:155
+#: contents/explorer/WidgetExplorer.qml:164
 #, kde-format
 msgid "Widgets"
 msgstr "Vidinad"
 
-#: contents/explorer/WidgetExplorer.qml:164
+#: contents/explorer/WidgetExplorer.qml:173
 #, fuzzy, kde-format
 #| msgid "Get New Plugins..."
 msgctxt "@action:button The word 'new' refers to widgets"
 msgid "Get New…"
 msgstr "Hangi uusi pluginaid ..."
 
-#: contents/explorer/WidgetExplorer.qml:165
+#: contents/explorer/WidgetExplorer.qml:174
 #, fuzzy, kde-format
 #| msgid "Get New Widgets..."
 msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "Hangi uusi vidinaid ..."
 
-#: contents/explorer/WidgetExplorer.qml:220
+#: contents/explorer/WidgetExplorer.qml:229
 #, kde-format
 msgid "Categories"
 msgstr "Kategooriad"
 
-#: contents/explorer/WidgetExplorer.qml:231
+#: contents/explorer/WidgetExplorer.qml:240
 #, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Confirm Removal of One Widget"
@@ -704,12 +712,12 @@ msgid_plural "Confirm Removal of %1 Widgets"
 msgstr[0] ""
 msgstr[1] ""
 
-#: contents/explorer/WidgetExplorer.qml:315
+#: contents/explorer/WidgetExplorer.qml:324
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "Otsinguga ei sobi ükski vidin"
 
-#: contents/explorer/WidgetExplorer.qml:315
+#: contents/explorer/WidgetExplorer.qml:324
 #, kde-format
 msgid "No widgets available"
 msgstr "Ühtegi vidinat pole saada"
@@ -854,6 +862,9 @@ msgstr ""
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr ""
+
+#~ msgid "Uninstall widget"
+#~ msgstr "Eemalda vidin"
 
 #, fuzzy
 #~| msgid "Height"

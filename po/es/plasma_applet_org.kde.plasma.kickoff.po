@@ -1,6 +1,6 @@
 # Spanish translations for plasma_applet_org.kde.plasma.kickoff.po package.
 # Copyright (C) 2014 This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the pladma-desktop package.
 #
 # Automatically generated, 2014.
 # SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-18 00:41+0000\n"
-"PO-Revision-Date: 2024-08-31 12:25+0200\n"
+"PO-Revision-Date: 2024-09-18 11:52+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -101,30 +101,29 @@ msgid "Remove icon"
 msgstr "Eliminar icono"
 
 #: package/contents/ui/ConfigGeneral.qml:119
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgid "Show applications as:"
-msgstr "Mostrar otras aplicaciones:"
+msgstr "Mostrar aplicaciones como:"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgid "Name only"
-msgstr ""
+msgstr "Solo el nombre"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgid "Description only"
-msgstr ""
+msgstr "Solo la descripción"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgid "Name (Description)"
-msgstr ""
+msgstr "Nombre (Descripción)"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgid "Description (Name)"
-msgstr ""
+msgstr "Descripción (Nombre)"
 
 #: package/contents/ui/ConfigGeneral.qml:131
 #, kde-format

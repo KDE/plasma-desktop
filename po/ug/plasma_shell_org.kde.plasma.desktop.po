@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-14 00:42+0000\n"
+"POT-Creation-Date: 2024-09-19 00:41+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -632,8 +632,14 @@ msgstr "يوقات"
 #: contents/explorer/AppletDelegate.qml:189
 #, fuzzy, kde-format
 #| msgid "Uninstall"
-msgid "Uninstall widget"
+msgctxt "@info:tooltip uninstall a widget"
+msgid "Uninstall"
 msgstr "يوقات"
+
+#: contents/explorer/AppletDelegate.qml:231
+#, kde-format
+msgid "Remove all instances"
+msgstr ""
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -650,51 +656,51 @@ msgstr "ئېلخەت:"
 msgid "Uninstall"
 msgstr "يوقات"
 
-#: contents/explorer/WidgetExplorer.qml:129
-#: contents/explorer/WidgetExplorer.qml:206
+#: contents/explorer/WidgetExplorer.qml:138
+#: contents/explorer/WidgetExplorer.qml:215
 #, fuzzy, kde-format
 #| msgid "Get new widgets"
 msgid "All Widgets"
 msgstr "يېڭى كىچىك ئەپلەرنى ئال"
 
-#: contents/explorer/WidgetExplorer.qml:155
+#: contents/explorer/WidgetExplorer.qml:164
 #, fuzzy, kde-format
 #| msgid "Get new widgets"
 msgid "Widgets"
 msgstr "يېڭى كىچىك ئەپلەرنى ئال"
 
-#: contents/explorer/WidgetExplorer.qml:164
+#: contents/explorer/WidgetExplorer.qml:173
 #, fuzzy, kde-format
 #| msgid "Get new widgets"
 msgctxt "@action:button The word 'new' refers to widgets"
 msgid "Get New…"
 msgstr "يېڭى كىچىك ئەپلەرنى ئال"
 
-#: contents/explorer/WidgetExplorer.qml:165
+#: contents/explorer/WidgetExplorer.qml:174
 #, fuzzy, kde-format
 #| msgid "Get new widgets"
 msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "يېڭى كىچىك ئەپلەرنى ئال"
 
-#: contents/explorer/WidgetExplorer.qml:220
+#: contents/explorer/WidgetExplorer.qml:229
 #, kde-format
 msgid "Categories"
 msgstr "كاتېگورىيە"
 
-#: contents/explorer/WidgetExplorer.qml:231
+#: contents/explorer/WidgetExplorer.qml:240
 #, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Confirm Removal of One Widget"
 msgid_plural "Confirm Removal of %1 Widgets"
 msgstr[0] ""
 
-#: contents/explorer/WidgetExplorer.qml:315
+#: contents/explorer/WidgetExplorer.qml:324
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr ""
 
-#: contents/explorer/WidgetExplorer.qml:315
+#: contents/explorer/WidgetExplorer.qml:324
 #, kde-format
 msgid "No widgets available"
 msgstr ""
@@ -837,6 +843,11 @@ msgstr ""
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Uninstall"
+#~ msgid "Uninstall widget"
+#~ msgstr "يوقات"
 
 #, fuzzy
 #~| msgid "Get new widgets"

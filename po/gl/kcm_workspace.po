@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-16 00:41+0000\n"
-"PO-Revision-Date: 2024-09-04 17:27+0200\n"
+"PO-Revision-Date: 2024-09-18 19:10+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -212,9 +212,7 @@ msgid "Double-click interval:"
 msgstr "Intervalo de clic duplo:"
 
 #: ui/main.qml:370
-#, fuzzy, kde-format
-#| msgid "%1 msec"
-#| msgid_plural "%1 msec"
+#, kde-format
 msgctxt "short for millisecond(s)"
 msgid "%1 ms"
 msgid_plural "%1 ms"
@@ -222,8 +220,7 @@ msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
 #: ui/main.qml:374
-#, fuzzy, kde-format
-#| msgid "msec"
+#, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgstr "ms"
