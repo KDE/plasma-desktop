@@ -193,7 +193,7 @@ KCM.SimpleKCM {
         QQC2.Label {
             Layout.fillWidth: true
             leftPadding: dwt.indicator.width
-            text: i18nc("@label 'this' refers to the 'disable touchpad while typing' feature", "This can interfere with video games.")
+            text: i18ndc("kcm_touchpad", "@label 'this' refers to the 'disable touchpad while typing' feature", "This can interfere with video games.")
             textFormat: Text.PlainText
             elide: Text.ElideRight
             font: Kirigami.Theme.smallFont
@@ -825,8 +825,8 @@ KCM.SimpleKCM {
                 visible: !middleClickMethod.visible
                 leftPadding: rightClickMethodAreas.indicator.width
                 text: middleEmulation.checked
-                    ? i18nc("@info shown below radio button", "Middle-click by pressing both bottom corners.")
-                    : i18nc("@info shown below radio button", "Middle-click by pressing bottom center.")
+                    ? i18ndc("kcm_touchpad", "@info shown below radio button", "Middle-click by pressing both bottom corners.")
+                    : i18ndc("kcm_touchpad", "@info shown below radio button", "Middle-click by pressing bottom center.")
                 textFormat: Text.PlainText
                 elide: Text.ElideRight
                 font: Kirigami.Theme.smallFont
@@ -860,7 +860,7 @@ KCM.SimpleKCM {
                 Layout.fillWidth: true
                 visible: !middleClickMethod.visible
                 leftPadding: rightClickMethodClickfinger.indicator.width
-                text: i18nc("@info shown below radio button", "Middle-click by pressing with three fingers.")
+                text: i18ndc("kcm_touchpad", "@info shown below radio button", "Middle-click by pressing with three fingers.")
                 textFormat: Text.PlainText
                 elide: Text.ElideRight
                 font: Kirigami.Theme.smallFont
