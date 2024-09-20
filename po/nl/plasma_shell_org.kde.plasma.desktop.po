@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-19 00:41+0000\n"
-"PO-Revision-Date: 2024-09-16 12:43+0200\n"
+"PO-Revision-Date: 2024-09-19 10:37+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -629,17 +629,15 @@ msgid "Undo uninstall"
 msgstr "Deïnstalleren ongedaan maken"
 
 #: contents/explorer/AppletDelegate.qml:189
-#, fuzzy, kde-format
-#| msgid "Uninstall"
+#, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Uninstall"
-msgstr "Deïnstalleren"
+msgstr "Installatie ongedaan maken"
 
 #: contents/explorer/AppletDelegate.qml:231
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgid "Remove all instances"
-msgstr "Paneel verwijderen"
+msgstr "Alle exemplaren verwijderen"
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format

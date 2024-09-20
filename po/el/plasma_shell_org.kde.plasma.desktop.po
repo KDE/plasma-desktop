@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-19 00:41+0000\n"
-"PO-Revision-Date: 2024-09-15 20:52+0300\n"
+"PO-Revision-Date: 2024-09-19 17:30+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -108,7 +108,7 @@ msgstr "Αποστολή ηλ. μηνύματος στο %1"
 #, kde-format
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
-msgstr "Άνοιγμα ιστότοπου %1"
+msgstr "Άνοιγμα ιστοτόπου %1"
 
 #: contents/configuration/AboutPlugin.qml:137
 #, kde-format
@@ -509,7 +509,7 @@ msgstr "Διαγραφή πίνακα"
 #: contents/configuration/PanelConfiguration.qml:636
 #, kde-format
 msgid "Remove this panel; this action is undo-able"
-msgstr "Αφαίρεση αυτού του πίνακα; η ενέργεια είναι αναιρέσημη"
+msgstr "Αφαίρεση αυτού του πίνακα; η ενέργεια είναι αναιρέσιμη"
 
 #: contents/configuration/PanelConfiguration.qml:647
 #, kde-format
@@ -637,8 +637,7 @@ msgid "Undo uninstall"
 msgstr "Αναίρεση απεγκατάστασης"
 
 #: contents/explorer/AppletDelegate.qml:189
-#, fuzzy, kde-format
-#| msgid "Uninstall"
+#, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Uninstall"
 msgstr "Απεγκατάσταση"
@@ -769,7 +768,7 @@ msgstr "Εικονικό πληκτρολόγιο"
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr "Εναλαγή διάταξης"
+msgstr "Εναλλαγή διάταξης"
 
 #: contents/lockscreen/MainBlock.qml:64
 #, kde-format

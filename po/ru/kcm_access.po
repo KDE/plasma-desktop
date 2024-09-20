@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-29 00:41+0000\n"
-"PO-Revision-Date: 2024-09-18 17:16+0300\n"
+"PO-Revision-Date: 2024-09-19 12:06+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -176,7 +176,7 @@ msgstr "Длительность системного сигнала"
 #: kcmaccessibilitycolorblindnesscorrection.kcfg:13
 #, kde-format
 msgid "Whether Colorblindness Correction is enabled"
-msgstr ""
+msgstr "Включена ли опция «Коррекция при неспособности различать цвета»"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
@@ -194,19 +194,19 @@ msgstr "Закрепить залипающие клавиши"
 #: kcmaccessibilitykeyboard.kcfg:17
 #, kde-format
 msgid "Turn sticky keys off when two keys are pressed simultaneously"
-msgstr "Выключать залипающие клавиши при одновременном нажатии двух клавиш"
+msgstr "Отключать залипающие клавиши при одновременном нажатии двух клавиш"
 
 #. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:21
 #, kde-format
 msgid "Beep on a sticky key press"
-msgstr "Проигрывать звук при нажатии залипающих клавиш"
+msgstr "Воспроизводить звук при нажатии залипающих клавиш"
 
 #. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:25
 #, kde-format
 msgid "Toggle keys beep"
-msgstr "Вкл/выкл звук залипающих клавиш"
+msgstr "Вкл/откл звук залипающих клавиш"
 
 #. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:29
@@ -230,19 +230,19 @@ msgstr "Задержка при нажатии"
 #: kcmaccessibilitykeyboardfilters.kcfg:17
 #, kde-format
 msgid "Beep on a slow keypress"
-msgstr "Проигрывать звук при замедленном нажатии"
+msgstr "Воспроизводить звук при замедленном нажатии"
 
 #. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:21
 #, kde-format
 msgid "Beep on an accepted keypress"
-msgstr "Проигрывать звук при принятом нажатии"
+msgstr "Воспроизводить звук при принятом нажатии"
 
 #. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:25
 #, kde-format
 msgid "Beep on a rejected keypress"
-msgstr "Проигрывать звук при отклонённом нажатии"
+msgstr "Воспроизводить звук при отклонённом нажатии"
 
 #. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:29
@@ -260,7 +260,7 @@ msgstr "Задержка для «прыгающих» клавиш"
 #: kcmaccessibilitykeyboardfilters.kcfg:37
 #, kde-format
 msgid "Beep if a bounce key event is rejected"
-msgstr "Проигрывать звук, если событие «прыгающих» клавиш будет отклонено"
+msgstr "Воспроизводить звук, если событие «прыгающих» клавиш будет отклонено"
 
 #. i18n: ectx: label, entry (MouseKeys), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:9
@@ -308,7 +308,7 @@ msgstr "Включить средство чтения с экрана"
 #: kcmaccessibilityshakecursor.kcfg:9
 #, kde-format
 msgid "Whether Shake Cursor is enabled"
-msgstr ""
+msgstr "Включена ли опция «Потрясти курсором»"
 
 #. i18n: ectx: label, entry (ShakeCursorMagnification), group (Effect-shakecursor)
 #: kcmaccessibilityshakecursor.kcfg:15
@@ -317,10 +317,10 @@ msgid "Magnification"
 msgstr "Увеличение"
 
 #: ui/ActivationShortcuts.qml:17
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check"
 msgid "Activation shortcuts:"
-msgstr "Ж&есты активации"
+msgstr "Комбинации клавиш активации:"
 
 #: ui/ActivationShortcuts.qml:18
 #, kde-format
@@ -332,44 +332,43 @@ msgstr "Включить"
 #, kde-format
 msgctxt "@label"
 msgid "Press Shift 5 times to enable Sticky Keys"
-msgstr ""
+msgstr "Нажать Shift 5 раз для включения залипающих клавиш"
 
 #: ui/ActivationShortcuts.qml:37
 #, kde-format
 msgctxt "@label"
 msgid "Hold Shift for 8 seconds to enable Slow Keys"
-msgstr ""
+msgstr "Удерживать Shift в течение 8 секунд для включения замедленных клавиш"
 
 #: ui/ActivationShortcuts.qml:46
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable sticky and slow keys after:"
-msgstr ""
-"Отключать залипающие и замедленные клавиши через некоторое время бездействия."
+msgstr "Отключать залипающие и замедленные клавиши через:"
 
 #: ui/ActivationShortcuts.qml:75
-#, fuzzy, kde-format
+#, kde-format
 msgid "%1 min"
 msgid_plural "%1 min"
-msgstr[0] " мин"
-msgstr[1] " мин"
-msgstr[2] " мин"
-msgstr[3] " мин"
+msgstr[0] "%1 мин"
+msgstr[1] "%1 мин"
+msgstr[2] "%1 мин"
+msgstr[3] "%1 мин"
 
 #: ui/ActivationShortcuts.qml:79
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "short for minute(s)"
 msgid "min"
 msgid_plural "min"
-msgstr[0] " мин"
-msgstr[1] " мин"
-msgstr[2] " мин"
-msgstr[3] " мин"
+msgstr[0] "мин"
+msgstr[1] "мин"
+msgstr[2] "мин"
+msgstr[3] "мин"
 
 #: ui/ActivationShortcuts.qml:88
-#, fuzzy, kde-format
+#, kde-format
 msgid "When a shortcut is used:"
-msgstr "При использовании жеста:"
+msgstr "При использовании комбинации клавиш:"
 
 #: ui/ActivationShortcuts.qml:89
 #, kde-format
@@ -377,9 +376,9 @@ msgid "Display a confirmation dialog"
 msgstr "Показывать диалог подтверждения"
 
 #: ui/ActivationShortcuts.qml:100
-#, fuzzy, kde-format
+#, kde-format
 msgid "Ring the system bell"
-msgstr "Проигрывать системный сигнал"
+msgstr "Воспроизводить системный сигнал"
 
 #: ui/ActivationShortcuts.qml:111
 #, kde-format
@@ -397,10 +396,10 @@ msgid "Please choose an audio file"
 msgstr "Выберите звуковой файл"
 
 #: ui/Bell.qml:21
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "Name filters in a file dialog. Do not translate `(*.ogg *.oga *.wav)`"
 msgid "ogg, oga, and wav audio files (*.ogg *.oga *.wav)"
-msgstr "Звуковые файлы (*.ogg *.wav)"
+msgstr "Звуковые файлы OGG, OGA и WAV (*.ogg *.oga *.wav)"
 
 #: ui/Bell.qml:30
 #, kde-format
@@ -417,7 +416,7 @@ msgstr "Включить"
 #, kde-format
 msgctxt "@label"
 msgid "Emits a sound whenever certain keys are pressed"
-msgstr ""
+msgstr "Воспроизведение звука при нажатии определённых клавиш"
 
 #: ui/Bell.qml:50
 #, kde-format
@@ -449,22 +448,22 @@ msgid "Enable"
 msgstr "Включить"
 
 #: ui/Bell.qml:113
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label"
 msgid "Flashes the screen whenever certain keys are pressed"
-msgstr "Подавать системный сигнал при отклонении ввода клавиши"
+msgstr "Мигание экрана при нажатии определённых клавиш"
 
 #: ui/Bell.qml:123
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:radio Invert screen colors when a system bell is rung"
 msgid "Invert screen colors"
-msgstr "Инвертировать экран"
+msgstr "Инверсия цветов экрана"
 
 #: ui/Bell.qml:141
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:radio Flash screen when a system bell is rung"
 msgid "Flash screen"
-msgstr "&Мигание экрана"
+msgstr "Мигание экрана"
 
 #: ui/Bell.qml:152
 #, kde-format
@@ -481,13 +480,13 @@ msgstr "Длительность:"
 #: ui/Bell.qml:181 ui/KeyboardFilters.qml:55 ui/KeyboardFilters.qml:151
 #: ui/MouseNavigation.qml:51 ui/MouseNavigation.qml:73
 #: ui/MouseNavigation.qml:95
-#, fuzzy, kde-format
+#, kde-format
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] " мин"
-msgstr[1] " мин"
-msgstr[2] " мин"
-msgstr[3] " мин"
+msgstr[0] "%1 мс"
+msgstr[1] "%1 мс"
+msgstr[2] "%1 мс"
+msgstr[3] "%1 мс"
 
 #: ui/Bell.qml:185 ui/KeyboardFilters.qml:59 ui/KeyboardFilters.qml:155
 #: ui/MouseNavigation.qml:55 ui/MouseNavigation.qml:77
@@ -594,6 +593,10 @@ msgid ""
 "Useful if you accidentally type more than one key at a time or have "
 "difficulty pressing the key you want the first time."
 msgstr ""
+"Чтобы нажатие клавиши было принято, необходимо удерживать её в течение "
+"заданного времени. Это удобная опция на тот случай, если происходит "
+"случайное нажатие сразу нескольких клавиш или сложно с первого раза нажать "
+"нужную клавишу."
 
 #: ui/KeyboardFilters.qml:40
 #, kde-format
@@ -604,7 +607,7 @@ msgstr "Задержка:"
 #: ui/KeyboardFilters.qml:68
 #, kde-format
 msgid "Ring system bell:"
-msgstr "Проигрывать системный сигнал:"
+msgstr "Воспроизводить системный сигнал:"
 
 #: ui/KeyboardFilters.qml:69
 #, kde-format
@@ -643,6 +646,9 @@ msgid ""
 "tremors that cause you to press a key multiple times when you only intend to "
 "press once."
 msgstr ""
+"Игнорировать быстрые повторные нажатия одной и той же клавиши. Это удобная "
+"опция на тот случай, если из-за тремора рук происходит многократное нажатие "
+"клавиши, которую требовалось нажать только один раз."
 
 #: ui/KeyboardFilters.qml:136
 #, kde-format
@@ -653,7 +659,7 @@ msgstr "Задержка:"
 #: ui/KeyboardFilters.qml:162
 #, kde-format
 msgid "Ring system bell when rejected"
-msgstr "Проигрывать системный сигнал при отклонении"
+msgstr "Воспроизводить системный сигнал при отклонении"
 
 #: ui/main.qml:28
 #, kde-format
@@ -680,9 +686,9 @@ msgid "Mouse Navigation"
 msgstr "Навигация мыши"
 
 #: ui/main.qml:48
-#, fuzzy, kde-format
+#, kde-format
 msgid "Activation Shortcuts"
-msgstr "Ж&есты активации"
+msgstr "Комбинации клавиш активации"
 
 #: ui/main.qml:53
 #, kde-format
@@ -722,6 +728,9 @@ msgid ""
 "though they “stick in place” and no longer need to be held down when typing "
 "a keyboard shortcut."
 msgstr ""
+"Такие клавиши-модификаторы, как Ctrl, Shift, Alt, и клавиша Meta/Super/"
+"Windows будут работать так, как будто они «залипли»; их больше не "
+"потребуется нажимать при наборе комбинации клавиш."
 
 #: ui/ModifierKeys.qml:39
 #, kde-format
@@ -736,6 +745,9 @@ msgid ""
 "Once locked, the “sticky” state of modifier keys will not be disabled until "
 "a keyboard shortcut is finished or until a non-modifier key is pressed."
 msgstr ""
+"После закрепления состояние «залипания» клавиш-модификаторов отключится "
+"только после завершения комбинации клавиш или нажатия какой-либо клавиши, не "
+"являющейся модификатором."
 
 #: ui/ModifierKeys.qml:57
 #, kde-format
@@ -745,7 +757,7 @@ msgstr "Отключить при удерживании двух клавиш"
 #: ui/ModifierKeys.qml:70
 #, kde-format
 msgid "Ring system bell when modifier keys are used"
-msgstr "Проигрывать системный сигнал при использовании клавиш-модификаторов"
+msgstr "Воспроизводить системный сигнал при использовании клавиш-модификаторов"
 
 #: ui/ModifierKeys.qml:88
 #, kde-format
@@ -754,20 +766,20 @@ msgid "Feedback:"
 msgstr "Обратная связь:"
 
 #: ui/ModifierKeys.qml:93
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check"
 msgid "Ring system bell when locking keys are used"
 msgstr ""
-"Проигрывать системный сигнал при включении/выключении закрепляющих клавиш"
+"Воспроизводить системный сигнал при включении/отключении закрепляющих клавиш"
 
 #: ui/ModifierKeys.qml:104
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The locking keys are Caps Lock, Num Lock, and Scroll Lock."
-msgstr ""
+msgstr "Закрепляющие клавиши: Caps Lock, Num Lock и Scroll Lock."
 
 #: ui/ModifierKeys.qml:108
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check"
 msgid "Show notification when modifier or locking keys are used"
 msgstr ""
@@ -775,13 +787,13 @@ msgstr ""
 "клавиш"
 
 #: ui/ModifierKeys.qml:120
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Notifications…"
-msgstr "Настроить уведомления..."
+msgstr "Настроить уведомления…"
 
 #: ui/MouseNavigation.qml:16
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move cursor:"
 msgstr "Использовать цифровую клавиатуру для перемещения курсора:"
@@ -802,48 +814,54 @@ msgid ""
 "up). The keys <shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</"
 "shortcut>, and <shortcut>9</shortcut> allow for diagonal movement."
 msgstr ""
+"Клавиша <shortcut>5</shortcut> цифровой клавиатуры соответствует щелчку "
+"мышью. Клавиши <shortcut>2</shortcut>, <shortcut>4</shortcut>, <shortcut>6</"
+"shortcut> и <shortcut>8</shortcut> позволяют перемещаться в разные стороны "
+"(вниз, влево, вправо и вверх). Клавиши <shortcut>1</shortcut>, <shortcut>3</"
+"shortcut>, <shortcut>7</shortcut> и <shortcut>9</shortcut> позволяют "
+"перемещаться по диагонали."
 
 #: ui/MouseNavigation.qml:37
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
 msgstr "Задержка ускорения:"
 
 #: ui/MouseNavigation.qml:59
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr "Интервал повтора:"
 
 #: ui/MouseNavigation.qml:81
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "Время ускорения:"
 
 #: ui/MouseNavigation.qml:103
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr "Максимальная скорость:"
 
 #: ui/MouseNavigation.qml:117
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
 msgstr "Ускорение курсора:"
 
 #: ui/ScreenReader.qml:20
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info Placeholder message title"
 msgid "The Orca Screen Reader is not installed"
-msgstr "Запустить настройку средства чтения с экрана «Orca»…"
+msgstr "Средство чтения с экрана «Orca» не установлено"
 
 #: ui/ScreenReader.qml:21
 #, kde-format
 msgctxt "@info Placeholder message explanation"
 msgid "Please install it, then close and reopen this window"
-msgstr ""
+msgstr "Установите его, затем закройте и снова откройте это окно"
 
 #: ui/ScreenReader.qml:27
 #, kde-format
@@ -852,7 +870,7 @@ msgid "Enable Screen Reader"
 msgstr "Включить средство чтения с экрана"
 
 #: ui/ScreenReader.qml:39
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button"
 msgid "Launch Orca Screen Reader Configuration…"
 msgstr "Запустить настройку средства чтения с экрана «Orca»…"
@@ -861,7 +879,7 @@ msgstr "Запустить настройку средства чтения с �
 #, kde-format
 msgctxt "@label"
 msgid "Shake cursor to find it:"
-msgstr ""
+msgstr "Потрясти курсором:"
 
 #: ui/ShakeCursor.qml:16
 #, kde-format
@@ -870,22 +888,22 @@ msgid "Enable"
 msgstr "Включить"
 
 #: ui/ShakeCursor.qml:28
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label Cursor magnification level"
 msgid "Magnification:"
-msgstr "Показывать уведомление"
+msgstr "Увеличение курсора:"
 
 #: ui/ShakeCursor.qml:55
 #, kde-format
 msgctxt "@label Normal cursor size"
 msgid "Normal"
-msgstr ""
+msgstr "Обычный "
 
 #: ui/ShakeCursor.qml:62
 #, kde-format
 msgctxt "@label Large cursor size"
 msgid "Large"
-msgstr ""
+msgstr "Большой"
 
 #~ msgid "Activation:"
 #~ msgstr "Активация:"
