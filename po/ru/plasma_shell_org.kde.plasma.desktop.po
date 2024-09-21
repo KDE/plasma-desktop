@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-19 02:32+0000\n"
-"PO-Revision-Date: 2024-06-22 11:48+0300\n"
+"PO-Revision-Date: 2024-09-20 13:08+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -340,10 +340,9 @@ msgid "Add spacer widget to the panel"
 msgstr "Добавить виджет "
 
 #: contents/configuration/PanelConfiguration.qml:114
-#, fuzzy, kde-format
-#| msgid "Add Widgets…"
+#, kde-format
 msgid "Add or Manage Widgets…"
-msgstr "Добавить виджеты..."
+msgstr "Добавить или изменить виджеты…"
 
 #: contents/configuration/PanelConfiguration.qml:117
 #, kde-format
@@ -521,15 +520,13 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "Удалить панель, необратимое действие"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Закрыть"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, fuzzy, kde-format
-#| msgid "Exit Edit Mode"
+#, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
@@ -541,46 +538,38 @@ msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "Закрыть панель настройки и выйти из режима редактирования"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:32
-#, fuzzy, kde-format
-#| msgid "Drag to change maximum height."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum height."
 msgstr "Перетаскивайте для изменения максимальной высоты."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:33
-#, fuzzy, kde-format
-#| msgid "Drag to change maximum width."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum width."
 msgstr "Перетаскивайте для изменения максимальной ширины."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:34
 #: contents/configuration/panelconfiguration/Ruler.qml:39
-#, fuzzy, kde-format
-#| msgid "Double click to reset."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Double-click to reset."
 msgstr "Двойной щелчок для отмены."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:37
-#, fuzzy, kde-format
-#| msgid "Drag to change minimum height."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum height."
 msgstr "Перетаскивайте для изменения минимальной высоты."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:38
-#, fuzzy, kde-format
-#| msgid "Drag to change minimum width."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr "Перетаскивайте для изменения минимальной ширины."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:87
-#, fuzzy, kde-format
-#| msgid ""
-#| "Drag to change position on this screen edge.\n"
-#| "Double click to reset."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid ""
 "Drag to change position on this screen edge.\n"
@@ -644,7 +633,7 @@ msgstr "Неподдерживаемый виджет"
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
-msgstr ""
+msgstr "Новый виджет!"
 
 #: contents/explorer/AppletDelegate.qml:188
 #, kde-format
@@ -683,18 +672,16 @@ msgid "Widgets"
 msgstr "Виджеты"
 
 #: contents/explorer/WidgetExplorer.qml:173
-#, fuzzy, kde-format
-#| msgid "Get New Plugins…"
+#, kde-format
 msgctxt "@action:button The word 'new' refers to widgets"
 msgid "Get New…"
-msgstr "Загрузить новые модули..."
+msgstr "Загрузить новые виджеты…"
 
 #: contents/explorer/WidgetExplorer.qml:174
-#, fuzzy, kde-format
-#| msgid "Get New Widgets…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Get New Widgets…"
-msgstr "Пополнить список виджетов..."
+msgstr "Загрузить новые виджеты…"
 
 #: contents/explorer/WidgetExplorer.qml:229
 #, kde-format
@@ -730,7 +717,7 @@ msgstr "Часы:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
-msgstr ""
+msgstr "Показывать часы"
 
 #: contents/lockscreen/config.qml:33
 #, kde-format

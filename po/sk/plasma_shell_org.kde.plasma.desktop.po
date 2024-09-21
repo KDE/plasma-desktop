@@ -10,14 +10,14 @@ msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-19 02:32+0000\n"
-"PO-Revision-Date: 2024-06-26 14:11+0200\n"
+"PO-Revision-Date: 2024-09-20 20:25+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.08.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
@@ -329,10 +329,9 @@ msgid "Add spacer widget to the panel"
 msgstr "Pridať oddeľovač na panel."
 
 #: contents/configuration/PanelConfiguration.qml:114
-#, fuzzy, kde-format
-#| msgid "Add Widgets…"
+#, kde-format
 msgid "Add or Manage Widgets…"
-msgstr "Pridať miniaplikácie..."
+msgstr "Pridať alebo spravovať miniaplikácie..."
 
 #: contents/configuration/PanelConfiguration.qml:117
 #, kde-format
@@ -507,15 +506,13 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "Odstrániť tento panel; túto akciu je možné zrušiť"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Zavrieť"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, fuzzy, kde-format
-#| msgid "Exit Edit Mode"
+#, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
@@ -527,46 +524,38 @@ msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "Zatvoriť okno nastavení panelu a odísť z režimu úprav"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:32
-#, fuzzy, kde-format
-#| msgid "Drag to change maximum height."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum height."
 msgstr "Potiahnutím zmeníte maximálnu výšku."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:33
-#, fuzzy, kde-format
-#| msgid "Drag to change maximum width."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum width."
 msgstr "Potiahnutím zmeníte maximálnu šírku."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:34
 #: contents/configuration/panelconfiguration/Ruler.qml:39
-#, fuzzy, kde-format
-#| msgid "Double click to reset."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Double-click to reset."
 msgstr "Dvojitým kliknutím obnovíte."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:37
-#, fuzzy, kde-format
-#| msgid "Drag to change minimum height."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum height."
 msgstr "Potiahnutím zmeníte minimálnu výšku."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:38
-#, fuzzy, kde-format
-#| msgid "Drag to change minimum width."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr "Potiahnutím zmeníte minimálnu šírku."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:87
-#, fuzzy, kde-format
-#| msgid ""
-#| "Drag to change position on this screen edge.\n"
-#| "Double click to reset."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid ""
 "Drag to change position on this screen edge.\n"
@@ -630,7 +619,7 @@ msgstr "Nepodporovaný widget"
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
-msgstr ""
+msgstr "Nové!"
 
 #: contents/explorer/AppletDelegate.qml:188
 #, kde-format
@@ -669,15 +658,13 @@ msgid "Widgets"
 msgstr "Miniaplikácie"
 
 #: contents/explorer/WidgetExplorer.qml:173
-#, fuzzy, kde-format
-#| msgid "Get New Plugins…"
+#, kde-format
 msgctxt "@action:button The word 'new' refers to widgets"
 msgid "Get New…"
-msgstr "Získať nové doplnky..."
+msgstr "Získať nové..."
 
 #: contents/explorer/WidgetExplorer.qml:174
-#, fuzzy, kde-format
-#| msgid "Get New Widgets…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "Získať nové miniaplikácie..."
@@ -688,14 +675,12 @@ msgid "Categories"
 msgstr "Kategórie"
 
 #: contents/explorer/WidgetExplorer.qml:240
-#, fuzzy, kde-format
-#| msgid "Confirm Removal Of One Widget"
-#| msgid_plural "Confirm Removal Of %1 Widgets"
+#, kde-format
 msgid "Confirm Removal Of One Widget"
 msgid_plural "Confirm Removal Of %1 Widgets"
 msgstr[0] "Potvrdiť odstránenie jedného widgetu"
-msgstr[1] ""
-msgstr[2] ""
+msgstr[1] "Potvrdiť odstránenie %1 widgetov"
+msgstr[2] "Potvrdiť odstránenie %1 widgetov"
 
 #: contents/explorer/WidgetExplorer.qml:324
 #, kde-format
@@ -717,7 +702,7 @@ msgstr "Hodiny:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
-msgstr ""
+msgstr "Zobraziť hodiny"
 
 #: contents/lockscreen/config.qml:33
 #, kde-format
