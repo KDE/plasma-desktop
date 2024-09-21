@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_launcher\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-18 00:41+0000\n"
-"PO-Revision-Date: 2024-09-15 13:47+0300\n"
+"PO-Revision-Date: 2024-09-20 12:25+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -112,38 +112,29 @@ msgid "Remove icon"
 msgstr "Удалить значок"
 
 #: package/contents/ui/ConfigGeneral.qml:119
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgid "Show applications as:"
-msgstr "Остальные приложения:"
+msgstr "Формат наименования программ:"
 
 #: package/contents/ui/ConfigGeneral.qml:121
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Format:"
-#| msgid "Name Only"
+#, kde-format
 msgid "Name only"
-msgstr "Только имена"
+msgstr "Только названия"
 
 #: package/contents/ui/ConfigGeneral.qml:121
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Format:"
-#| msgid "Description Only"
+#, kde-format
 msgid "Description only"
 msgstr "Только описания"
 
 #: package/contents/ui/ConfigGeneral.qml:121
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Format:"
-#| msgid "Name (Description)"
+#, kde-format
 msgid "Name (Description)"
-msgstr "Имя (Описание)"
+msgstr "Название (Описание)"
 
 #: package/contents/ui/ConfigGeneral.qml:121
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Format:"
-#| msgid "Description (Name)"
+#, kde-format
 msgid "Description (Name)"
-msgstr "Описание (Имя)"
+msgstr "Описание (Название)"
 
 #: package/contents/ui/ConfigGeneral.qml:131
 #, kde-format

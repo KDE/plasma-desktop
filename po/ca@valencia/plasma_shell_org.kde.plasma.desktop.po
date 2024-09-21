@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-19 00:41+0000\n"
-"PO-Revision-Date: 2024-09-14 13:13+0200\n"
+"PO-Revision-Date: 2024-09-19 10:05+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -632,17 +632,15 @@ msgid "Undo uninstall"
 msgstr "Desfés la desinstal·lació"
 
 #: contents/explorer/AppletDelegate.qml:189
-#, fuzzy, kde-format
-#| msgid "Uninstall"
+#, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Uninstall"
 msgstr "Desinstal·la"
 
 #: contents/explorer/AppletDelegate.qml:231
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgid "Remove all instances"
-msgstr "Elimina el quadro"
+msgstr "Elimina totes les instàncies"
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -843,6 +841,3 @@ msgstr "Ix del mode edició"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Indicador de focus del quadro"
-
-#~ msgid "Uninstall widget"
-#~ msgstr "Desinstal·la el giny"

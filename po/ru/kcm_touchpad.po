@@ -3,19 +3,20 @@
 # Victor Ryzhykh <victorr2007@yandex.ru>, 2014, 2015.
 # Alexander Potashev <aspotashev@gmail.com>, 2015, 2017, 2018.
 # Alexander Yavorsky <kekcuha@gmail.com>, 2024.
+# SPDX-FileCopyrightText: 2024 Olesya Gerasimenko <translation-team@basealt.ru>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-02-27 21:35+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
-"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"PO-Revision-Date: 2024-09-20 15:07+0300\n"
+"Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
+"Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
@@ -272,37 +273,31 @@ msgstr ""
 #, kde-format
 msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
 msgid "This can interfere with video games."
-msgstr ""
+msgstr "Это может помешать видеоиграм."
 
 #: ui/main.qml:204
-#, fuzzy, kde-format
-#| msgid "Left handed mode"
+#, kde-format
 msgid "Left-handed mode"
 msgstr "Для левшей"
 
 #: ui/main.qml:208
 #, kde-format
 msgid "Swap left and right buttons."
-msgstr "Поменять назначение левой и правой кнопок"
+msgstr "Поменять назначение левой и правой кнопок."
 
 #: ui/main.qml:234
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons to middle-click"
-msgstr ""
-"Воспринимать одновременное нажатие левой и правой кнопок как нажатие средней "
-"кнопки"
+msgstr "Нажатие левой и правой кнопок — нажатие средней кнопки"
 
 #: ui/main.qml:238
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
+#, kde-format
 msgctxt "@info:tooltip for checkbox"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
 "Воспринимать одновременное нажатие левой и правой кнопок как нажатие средней "
-"кнопки"
+"кнопки."
 
 #: ui/main.qml:264
 #, kde-format
@@ -311,6 +306,9 @@ msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
+"При включении этого параметра запаздывание щелчка мышью увеличится на 50 мс. "
+"Дополнительная задержка нужна для корректного определения одновременных "
+"нажатий левой и правой кнопок мыши."
 
 #: ui/main.qml:274
 #, kde-format
@@ -340,7 +338,7 @@ msgstr "Обычное"
 #: ui/main.qml:420
 #, kde-format
 msgid "Cursor travel distance depends on movement speed of finger."
-msgstr "Перемещение курсора зависит от скорости перемещения пальца"
+msgstr "Перемещение курсора зависит от скорости перемещения пальца."
 
 #: ui/main.qml:434
 #, kde-format
@@ -382,7 +380,7 @@ msgstr "По краям панели"
 #: ui/main.qml:545
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
-msgstr "Прокрутка при перемещении пальца вдоль края сенсорной панели"
+msgstr "Прокрутка при перемещении пальца вдоль края сенсорной панели."
 
 #: ui/main.qml:555
 #, kde-format
@@ -400,31 +398,27 @@ msgid "Disable horizontal scrolling"
 msgstr "Отключить горизонтальную прокрутку"
 
 #: ui/main.qml:596
-#, fuzzy, kde-format
-#| msgid "Disable horizontal scrolling"
+#, kde-format
 msgid "Disable horizontal scrolling."
-msgstr "Отключить горизонтальную прокрутку"
+msgstr "Отключить горизонтальную прокрутку."
 
 #: ui/main.qml:609
-#, fuzzy, kde-format
-#| msgid "Tapping:"
+#, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Нажатия:"
 
 #: ui/main.qml:610
-#, fuzzy, kde-format
-#| msgid "Tap-to-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Tap-to-click"
 msgstr "Эмуляция кнопок мыши"
 
 #: ui/main.qml:614
-#, fuzzy, kde-format
-#| msgid "Single tap is left button click."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Single tap to left-click."
-msgstr "Воспринимать одиночное нажатие как нажатие левой кнопки мыши"
+msgstr "Воспринимать одиночное нажатие как нажатие левой кнопки мыши."
 
 #: ui/main.qml:643
 #, kde-format
@@ -434,7 +428,7 @@ msgstr "Перетаскивание после нажатия"
 #: ui/main.qml:647
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
-msgstr "Перетаскивать объект перемещением по сенсорной панели после нажатия"
+msgstr "Перетаскивать объект перемещением по сенсорной панели после нажатия."
 
 #: ui/main.qml:674
 #, kde-format
@@ -445,7 +439,7 @@ msgstr "Продолжать перетаскивание после отпус�
 #, kde-format
 msgid "Dragging continues after a short finger lift."
 msgstr ""
-"Режим перетаскивание останется активным после непродолжительного отпуская "
+"Режим перетаскивания останется активным после непродолжительного отпускания "
 "пальца."
 
 #: ui/main.qml:698
@@ -468,8 +462,7 @@ msgstr ""
 "тремя пальцами — как нажатие средней кнопки."
 
 #: ui/main.qml:712
-#, fuzzy, kde-format
-#| msgid "Middle-click (three-finger tap right-click)"
+#, kde-format
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr ""
 "Нажатие средней кнопки (касание тремя пальцами — нажатие правой кнопки)"
@@ -503,20 +496,18 @@ msgid "Tap with two fingers to middle-click."
 msgstr "Касание двумя пальцами обрабатывается как нажатие средней кнопки."
 
 #: ui/main.qml:777
-#, fuzzy, kde-format
-#| msgid "Right-click:"
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, configure right-click with touch-pad "
 "integrated button (pressing into the touchpad)"
 msgid "Integrated right-click:"
-msgstr "Щелчок правой кнопкой мыши:"
+msgstr "Интегрированное нажатие правой кнопки:"
 
 #: ui/main.qml:811
-#, fuzzy, kde-format
-#| msgid "Press bottom-right corner"
+#, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
-msgstr "Нажатие на правый нижний угол"
+msgstr "Нажатие правого нижнего угла"
 
 #: ui/main.qml:816
 #, kde-format
@@ -526,6 +517,9 @@ msgid ""
 "Middle-click by simultaneously pressing the bottom left and bottom right "
 "corners."
 msgstr ""
+"Воспринимать нажатие правого нижнего угла сенсорной панели как нажатие "
+"правой кнопки. Одновременное нажатие левого нижнего и правого нижнего углов "
+"— как нажатие средней кнопки."
 
 #: ui/main.qml:817
 #, kde-format
@@ -534,91 +528,92 @@ msgid ""
 "Pressing the bottom right corner of your touchpad acts as right-click. "
 "Middle-click by pressing the bottom central area."
 msgstr ""
+"Воспринимать нажатие правого нижнего угла сенсорной панели как нажатие "
+"правой кнопки. Нажатие по центру внизу — как нажатие средней кнопки."
 
 #: ui/main.qml:828
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
-msgstr ""
+msgstr "Нажатие обоих нижних углов — нажатие средней кнопки."
 
 #: ui/main.qml:829
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
-msgstr ""
+msgstr "Нажатие по центру внизу — нажатие средней кнопки."
 
 #: ui/main.qml:847
-#, fuzzy, kde-format
-#| msgid "Press anywhere with two fingers"
+#, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press touchpad with two fingers"
-msgstr "Нажатие двумя пальцами"
+msgstr "Нажатие сенсорного экрана двумя пальцами"
 
 #: ui/main.qml:851
-#, fuzzy, kde-format
-#| msgid "Tap with two fingers to right-click."
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
-msgstr "Касание двумя пальцами обрабатывается как нажатие правой кнопки."
+msgstr ""
+"Воспринимать нажатие сенсорной панели двумя пальцами как нажатие правой "
+"кнопки."
 
 #: ui/main.qml:863
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers."
+#, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
-msgstr "Нажмите тремя пальцами."
+msgstr "Нажатие тремя пальцами — нажатие средней кнопки."
 
 #: ui/main.qml:882
-#, fuzzy, kde-format
-#| msgid "Middle-click: "
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, configure middle-click with touch-pad "
 "integrated button (pressing into the touchpad)"
 msgid "Integrated middle-click:"
-msgstr "Нажатие средней кнопки: "
+msgstr "Интегрированное нажатие средней кнопки:"
 
 #: ui/main.qml:911
-#, fuzzy, kde-format
-#| msgid "Press bottom-middle"
+#, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom middle edge"
-msgstr "Нажмите внизу посередине"
+msgstr "Нажатие внизу посередине"
 
 #: ui/main.qml:915
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the bottom right corner of your touchpad acts as right-click."
 msgstr ""
+"Воспринимать нажатие правого нижнего угла сенсорной панели как нажатие "
+"правой кнопки."
 
 #: ui/main.qml:923
-#, fuzzy, kde-format
-#| msgid "Press bottom left and bottom right corners simultaneously"
+#, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom left and bottom right corners"
-msgstr "Нажмите одновременно внизу в правом и левом углах"
+msgstr "Нажатие левого нижнего и правого нижнего углов"
 
 #: ui/main.qml:927
-#, fuzzy, kde-format
-#| msgid "Press bottom left and bottom right corners simultaneously"
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid ""
 "Pressing the bottom left and bottom right corners simultaneously acts as "
 "middle-click."
-msgstr "Нажмите одновременно внизу в правом и левом углах"
+msgstr ""
+"Воспринимать одновременное нажатие левого нижнего и правого нижнего углов "
+"как нажатие средней кнопки."
 
 #: ui/main.qml:936
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers"
+#, kde-format
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
-msgstr "Нажмите тремя пальцами"
+msgstr "Нажатие сенсорного экрана тремя пальцами"
 
 #: ui/main.qml:942
-#, fuzzy, kde-format
-#| msgid "Tap with two fingers to right-click."
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
-msgstr "Касание двумя пальцами обрабатывается как нажатие правой кнопки."
+msgstr ""
+"Воспринимать нажатие сенсорной панели тремя пальцами как нажатие средней "
+"кнопки."
 
 #~ msgid ""
 #~ "Software enabled buttons will be added to bottom portion of your touchpad."
