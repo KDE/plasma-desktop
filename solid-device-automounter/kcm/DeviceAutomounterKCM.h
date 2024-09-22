@@ -20,7 +20,6 @@ class DeviceAutomounterKCM : public KCModule, public Ui::DeviceAutomounterKCM
 
 public:
     explicit DeviceAutomounterKCM(QObject *parent, const KPluginMetaData &data);
-    ~DeviceAutomounterKCM() override;
 
 public Q_SLOTS:
     void load() override;
