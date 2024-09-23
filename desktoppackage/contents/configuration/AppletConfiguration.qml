@@ -141,6 +141,7 @@ Rectangle {
 
     Connections {
         target: app.currentConfigPage
+        ignoreUnknownSignals: true
 
         function onSettingValueChanged() {
             applyButton.enabled = true;
