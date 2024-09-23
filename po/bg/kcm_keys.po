@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-13 02:34+0000\n"
-"PO-Revision-Date: 2024-07-24 13:13+0200\n"
+"PO-Revision-Date: 2024-09-22 18:25+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: basemodel.cpp:157
 #, kde-format
@@ -283,12 +283,10 @@ msgid "Enter a command or choose a script file:"
 msgstr "Въведете команда или изберете скрипт:"
 
 #: ui/main.qml:468
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox accessible"
-#| msgid "Command"
+#, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
-msgstr "Команда"
+msgstr "Команда:"
 
 #: ui/main.qml:474
 #, kde-format
@@ -312,13 +310,13 @@ msgstr "Изберете скрипт"
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
-msgstr ""
+msgstr "Име:"
 
 #: ui/main.qml:491
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
-msgstr ""
+msgstr "Въведете името тук"
 
 #: ui/main.qml:503
 #, kde-format
@@ -332,7 +330,7 @@ msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
 "extensions"
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
-msgstr ""
+msgstr "Скриптови файлове (.sh, .bash, .zsh, etc.) (*.*sh)"
 
 #: ui/main.qml:528
 #, kde-format

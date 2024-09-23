@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-07-12 20:48+0200\n"
+"PO-Revision-Date: 2024-09-22 16:39+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.11.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -153,10 +153,9 @@ msgid "Accept input through this device."
 msgstr "Ta imot inndata frå eininga."
 
 #: ui/main.qml:107
-#, fuzzy, kde-format
-#| msgid "Left handed mode"
+#, kde-format
 msgid "Left-handed mode"
-msgstr "Venstrehandsmodus"
+msgstr "Venstrehandsmodus:"
 
 #: ui/main.qml:119
 #, kde-format
@@ -164,8 +163,7 @@ msgid "Swap left and right buttons."
 msgstr "Byt verknad av venstre og høgre knapp."
 
 #: ui/main.qml:126
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "Trykk venstre og høgre knapp samtidig for midtklikk"
@@ -181,11 +179,7 @@ msgstr ""
 "midtknapp."
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "Activating this setting increases mouse click latency by 50ms. The extra "
-#| "delay is needed to correctly detect simultaneous left and right mouse "
-#| "clicks."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
@@ -253,8 +247,7 @@ msgid "Invert scroll direction"
 msgstr "Omvend rulleretning"
 
 #: ui/main.qml:351
-#, fuzzy, kde-format
-#| msgid "Touchscreen like scrolling."
+#, kde-format
 msgid "Touchscreen-like scrolling."
 msgstr "Rulling som på ein peikeskjerm."
 

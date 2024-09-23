@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: KDE 4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-12 00:41+0000\n"
-"PO-Revision-Date: 2024-07-10 21:12+0200\n"
+"PO-Revision-Date: 2024-09-22 16:38+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.11.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -26,33 +26,25 @@ msgid "Minimize All Applet Active Indicator"
 msgstr "Indikator for «minimer alle vindauga»-status"
 
 #: package/contents/ui/MinimizeAllController.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Restore All Minimized Windows"
+#, kde-format
 msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Restore Windows"
-msgstr "Gjenopprett alle minimerte vindauge"
+msgstr "Gjenopprett vindauge"
 
 #: package/contents/ui/MinimizeAllController.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Minimize All Windows"
+#, kde-format
 msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Minimize All Windows"
 msgstr "Minimer alle vindauga"
 
 #: package/contents/ui/MinimizeAllController.qml:20
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Restores the previously minimized windows"
+#, kde-format
 msgctxt "@info:tooltip shown as subtitle"
 msgid "Restores the previously minimized windows"
 msgstr "Gjenopprett vindauga som vart minimerte"
 
 #: package/contents/ui/MinimizeAllController.qml:21
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Shows the Desktop by minimizing all windows"
+#, kde-format
 msgctxt "@info:tooltip shown as subtitle"
 msgid "Shows the Desktop by minimizing all windows"
 msgstr "Vis skrivebordet ved å minimera alle vindauga"

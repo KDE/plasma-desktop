@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-07-03 23:05+0200\n"
+"PO-Revision-Date: 2024-09-22 19:30+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: actions.cpp:19
@@ -271,8 +271,7 @@ msgid "This can interfere with video games."
 msgstr "Това може да доведе до смущения във видеоигрите."
 
 #: ui/main.qml:204
-#, fuzzy, kde-format
-#| msgid "Left handed mode"
+#, kde-format
 msgid "Left-handed mode"
 msgstr "Режим за лява ръка"
 
@@ -282,17 +281,14 @@ msgid "Swap left and right buttons."
 msgstr "Размяна на левия и десния бутон."
 
 #: ui/main.qml:234
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons to middle-click"
 msgstr ""
 "Натискане на левия и десния бутон за емулация на кликване със среден бутон"
 
 #: ui/main.qml:238
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
+#, kde-format
 msgctxt "@info:tooltip for checkbox"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
@@ -300,11 +296,7 @@ msgstr ""
 "със среден бутон."
 
 #: ui/main.qml:264
-#, fuzzy, kde-format
-#| msgid ""
-#| "Activating this setting increases mouse click latency by 50ms. The extra "
-#| "delay is needed to correctly detect simultaneous left and right mouse "
-#| "clicks."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
@@ -402,28 +394,24 @@ msgid "Disable horizontal scrolling"
 msgstr "Деактивиране на хоризонтално превъртане"
 
 #: ui/main.qml:596
-#, fuzzy, kde-format
-#| msgid "Disable horizontal scrolling"
+#, kde-format
 msgid "Disable horizontal scrolling."
 msgstr "Деактивиране на хоризонтално превъртане"
 
 #: ui/main.qml:609
-#, fuzzy, kde-format
-#| msgid "Tapping:"
+#, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Докосване:"
 
 #: ui/main.qml:610
-#, fuzzy, kde-format
-#| msgid "Tap-to-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Tap-to-click"
 msgstr "Докосване за кликване"
 
 #: ui/main.qml:614
-#, fuzzy, kde-format
-#| msgid "Single tap is left button click."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Single tap to left-click."
 msgstr "Еднократно докосване е кликване с левия бутон."
@@ -502,17 +490,15 @@ msgid "Tap with two fingers to middle-click."
 msgstr "Докосване с два пръста за кликване със среден бутон."
 
 #: ui/main.qml:777
-#, fuzzy, kde-format
-#| msgid "Right-click:"
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, configure right-click with touch-pad "
 "integrated button (pressing into the touchpad)"
 msgid "Integrated right-click:"
-msgstr "Кликване с десния бутон:"
+msgstr "Интегрирано кликване с десния бутон:"
 
 #: ui/main.qml:811
-#, fuzzy, kde-format
-#| msgid "Press bottom-right corner"
+#, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
 msgstr "Натискане на долния десен ъгъл"
@@ -525,6 +511,9 @@ msgid ""
 "Middle-click by simultaneously pressing the bottom left and bottom right "
 "corners."
 msgstr ""
+"Натискането на долния десен ъгъл на тъчпада действа като щракване с десен "
+"бутон. Кликване със среден бутон с натискане едновременно на долния ляв и "
+"долния десен ъгъл."
 
 #: ui/main.qml:817
 #, kde-format
@@ -533,52 +522,50 @@ msgid ""
 "Pressing the bottom right corner of your touchpad acts as right-click. "
 "Middle-click by pressing the bottom central area."
 msgstr ""
+"Натискането на долния десен ъгъл на тъчпада действа като щракване с десен "
+"бутон. Кликване със среден бутон с натискане на долната централна област."
 
 #: ui/main.qml:828
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
-msgstr ""
+msgstr "Кликване със среден бутон чрез натискане на двата долни ъгъла."
 
 #: ui/main.qml:829
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
-msgstr ""
+msgstr "Кликване със среден бутон чрез натискане средата на долния ръб."
 
 #: ui/main.qml:847
-#, fuzzy, kde-format
-#| msgid "Press anywhere with two fingers"
+#, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press touchpad with two fingers"
-msgstr "Натискане на навсякъде с два пръста"
+msgstr "Натискане на тъчпада с два пръста"
 
 #: ui/main.qml:851
-#, fuzzy, kde-format
-#| msgid "Tap with two fingers to right-click."
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
-msgstr "Докосване с два пръста за кликване с десния бутон."
+msgstr ""
+"Натискането на тъчпада с два пръста действа като кликване с десен бутон."
 
 #: ui/main.qml:863
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers."
+#, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
-msgstr "Натискане навсякъде с три пръста."
+msgstr "Кликване със среден бутон чрез натискане с три пръста."
 
 #: ui/main.qml:882
-#, fuzzy, kde-format
-#| msgid "Middle-click: "
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, configure middle-click with touch-pad "
 "integrated button (pressing into the touchpad)"
 msgid "Integrated middle-click:"
-msgstr "Кликване със среден бутон: "
+msgstr "Интегрирано кликване със среден бутон:"
 
 #: ui/main.qml:911
-#, fuzzy, kde-format
-#| msgid "Press bottom-middle"
+#, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom middle edge"
 msgstr "Натискане долу в средата"
@@ -588,36 +575,36 @@ msgstr "Натискане долу в средата"
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the bottom right corner of your touchpad acts as right-click."
 msgstr ""
+"Натискането на долния десен ъгъл на тъчпада действа като кликване с десен "
+"бутон."
 
 #: ui/main.qml:923
-#, fuzzy, kde-format
-#| msgid "Press bottom left and bottom right corners simultaneously"
+#, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom left and bottom right corners"
 msgstr "Натискане на едновременно долния ляв и долния десен ъгъл"
 
 #: ui/main.qml:927
-#, fuzzy, kde-format
-#| msgid "Press bottom left and bottom right corners simultaneously"
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid ""
 "Pressing the bottom left and bottom right corners simultaneously acts as "
 "middle-click."
-msgstr "Натискане на едновременно долния ляв и долния десен ъгъл"
+msgstr ""
+"Натискане на едновременно долния ляв и долния десен ъгъл симулира натискане "
+"на среден бутон на мишката."
 
 #: ui/main.qml:936
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers"
+#, kde-format
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
-msgstr "Натискане навсякъде с три пръста"
+msgstr "Натискане на тъчпада с три пръста"
 
 #: ui/main.qml:942
-#, fuzzy, kde-format
-#| msgid "Tap with two fingers to right-click."
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
-msgstr "Докосване с два пръста за кликване с десния бутон."
+msgstr "Натискането на тъчпада с три пръста действа като средно щракване."
 
 #~ msgid ""
 #~ "Software enabled buttons will be added to bottom portion of your touchpad."
