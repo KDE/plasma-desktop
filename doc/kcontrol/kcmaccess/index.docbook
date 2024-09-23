@@ -235,36 +235,86 @@ audible cues, or who have difficulty using a keyboard.
 <sect3 id="access-keyboard-filters">
 <title><guilabel>Keyboard Filters</guilabel></title>
 
-<para>There are two sections to this panel.</para>
+<para>
+    Keyboard filters control the behavior of keypresses, and they apply to all keys.
+</para>
 
 <variablelist>
-<varlistentry>
-<term><guilabel>Use slow keys</guilabel></term>
-<listitem>
-<para>
-If this option is enabled, you must hold the key down for a
-specified length of time (adjustable with the spin box) before the
-keystroke will be accepted. This helps prevent accidental key strokes.
-</para>
-</listitem>
-</varlistentry>
-<!-- Acceptance delay slider 500 ms default
-Use system bell whenever a key is pressed/accepted/rejected
--->
-<varlistentry>
-<term><guilabel>Use bounce keys</guilabel></term>
-<listitem>
-<para>
-If this option is enabled, you must wait for a specified length of time
-(configurable with the spin box) before the next key press can be
-accepted. This prevents accidental multiple key strokes.
-</para>
-</listitem>
-</varlistentry>
-<!-- Debounce time slider 500 ms default
-Use system bell whenever a key is rejected
--->
+    <varlistentry>
+        <term><guilabel>Slow keys</guilabel></term>
+        <listitem>
+            <para>
+                If the check box to <guilabel>Enable</guilabel> is selected, you must hold any desired key down for a
+                specified length of time (adjustable with the spin box) before the
+                keystroke will be accepted. This helps prevent accidental key strokes.
+            </para>
+            <para>
+                By default, the <guilabel>Delay</guilabel> spinbox is set to 100 ms, or a tenth of a second,
+                and it is configurable.
+            </para>
+        </listitem>
+    </varlistentry>
 
+    <varlistentry>
+        <term><guilabel>Ring system bell</guilabel></term>
+        <listitem>
+            <para>
+                When <guilabel>Slow keys</guilabel> is enabled, it can be difficult to estimate whether a key
+                was successfully pressed or not, the time it takes it for the key press to count,
+                and what is the current state of the key press.
+            </para>
+            <para>
+                To assist with that, the system bell can be rung <guilabel>when a key was pressed</guilabel>,
+                <guilabel>when a key was accepted</guilabel>, and <guilabel>when a key was rejected</guilabel>.
+            </para>
+            <para>
+                If the check box <guilabel>Ring system bell when a key was pressed</guilabel> is enabled,
+                the moment you press any key, the system bell will be rung.
+                This will happen every time, regardless of whether other Keyboard Filters are enabled.
+                This option is enabled by default once you enable <guilabel>Slow keys</guilabel>.
+            </para>
+            <para>
+                If the check box <guilabel>Ring system bell when a key was accepted</guilabel> is enabled,
+                the system bell will be rung only if the conditions for a key press were applied.
+                For example, if you have enabled <guilabel>Slow keys</guilabel>, the system bell will ring once you have
+                pressed the key for the necessary amount of time.
+                This option is disabled by default. Should you choose to enable it, you will likely want
+                for the option <guilabel>Ring system bell when a key was rejected</guilabel> to be disabled.
+            </para>
+            <para>
+                If the check box <guilabel>Ring system bell when a key was rejected</guilabel> is enabled,
+                the system bell will be rung every time the desired key is pressed for less time than it should
+                for the key to be accepted.
+                This option is disabled by default. Should you choose to enable it, you will likely want
+                for the option <guilabel>Ring system bell when a key was accepted</guilabel> to be disabled.
+            </para>
+        </listitem>
+    </varlistentry>
+
+    <varlistentry>
+        <term><guilabel>Bounce keys</guilabel></term>
+        <listitem>
+            <para>
+                If the check box to <guilabel>Enable</guilabel> is selected, you must wait for a specified length of time
+                before the next key press can be accepted. This prevents accidental multiple key strokes, which can happen
+                in case you have hand tremors or any sort of motor skill issue.
+            </para>
+            <para>
+                By default, the <guilabel>Delay</guilabel> spinbox is set to 500 ms, or half a second, and it is configurable.
+                The delay in this case corresponds to the time before an initial keypress and the next key press.
+                If the time you take to press a key for the second time is shorter than the delay, the key press action will be rejected.
+            </para>
+            <para>
+                When <guilabel>Bounce keys</guilabel> is enabled, it can be difficult to make sure whether you have accidentally
+                pressed a key multiple times or not.
+            </para>
+            <para>
+                To assist with that, you can enable the check box <guilabel>Ring the system bell when rejected</guilabel>.
+                If the time you take to press a key for the second time is shorter than the set delay, the key press action will be rejected,
+                in which case the system bell will ring to warn you to start your key press again.
+            </para>
+        </listitem>
+    </varlistentry>
 </variablelist>
 
 </sect3>
