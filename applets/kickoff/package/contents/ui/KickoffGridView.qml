@@ -134,7 +134,7 @@ EmptyPage {
             // The highlight gets a value of 3 while the drag is active and then goes back to the default value of 0.
             z: (root.currentItem?.Drag.active ?? false) ? 3 : 0
 
-            pressed: (view.currentItem as T.AbstractButton)?.down ?? false
+            pressed: view.currentItem instanceof KickoffGridDelegate && view.currentItem.down
 
             active: view.activeFocus
                 || (kickoff.contentArea === root
