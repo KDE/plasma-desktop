@@ -10,7 +10,7 @@ import QtQuick.Controls as QQC2
 import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 
-Kirigami.OverlaySheet {
+Kirigami.Dialog {
     id: root
 
     property QtObject componentChooser
@@ -41,6 +41,8 @@ Kirigami.OverlaySheet {
         return "<ul>" + list.map(formatListItem).join("\n") + "</ul>";
     }
 
+    padding: Kirigami.Units.largeSpacing
+
     onOpened: {
         focus = true;
     }
@@ -54,10 +56,9 @@ Kirigami.OverlaySheet {
     modal: true
     QQC2.Overlay.modal: KcmPopupModal {}
 
-    ColumnLayout {
+    contentItem: ColumnLayout {
         enabled: root.componentChooser !== null
         spacing: Kirigami.Units.smallSpacing
-        Layout.preferredWidth: Kirigami.Units.gridUnit * 25
 
         RowLayout {
             Layout.fillWidth: true
