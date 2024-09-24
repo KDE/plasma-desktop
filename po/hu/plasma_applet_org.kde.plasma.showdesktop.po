@@ -4,56 +4,47 @@
 # Tamnas Szanto <tszanto@interware.hu>, 2009.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2015, 2019.
 # SPDX-FileCopyrightText: 2017, 2021, 2023 Kiszel Kristóf <kiszel.kristof@gmail.com>
+# SPDX-FileCopyrightText: 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-12 00:41+0000\n"
-"PO-Revision-Date: 2023-12-15 13:48+0100\n"
-"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
+"PO-Revision-Date: 2024-09-23 22:03+0200\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: package/contents/ui/main.qml:116
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Minimize All Windows"
+#, kde-format
 msgid "Minimize All Applet Active Indicator"
-msgstr "Összes ablak minimalizálása"
+msgstr "Összes minimalizálása kisalkalmazás aktív jelző"
 
 #: package/contents/ui/MinimizeAllController.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Restore All Minimized Windows"
+#, kde-format
 msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Restore Windows"
-msgstr "Összes minimalizált ablak visszaállítása"
+msgstr "Ablakok visszaállítása"
 
 #: package/contents/ui/MinimizeAllController.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Minimize All Windows"
+#, kde-format
 msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Minimize All Windows"
 msgstr "Összes ablak minimalizálása"
 
 #: package/contents/ui/MinimizeAllController.qml:20
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Restores the previously minimized windows"
+#, kde-format
 msgctxt "@info:tooltip shown as subtitle"
 msgid "Restores the previously minimized windows"
 msgstr "Visszaállítja a korábban minimalizált ablakokat"
 
 #: package/contents/ui/MinimizeAllController.qml:21
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Shows the Desktop by minimizing all windows"
+#, kde-format
 msgctxt "@info:tooltip shown as subtitle"
 msgid "Shows the Desktop by minimizing all windows"
 msgstr "Az asztal megjelenítése az összes ablak minimalizálásával"

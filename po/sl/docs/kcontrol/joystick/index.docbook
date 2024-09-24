@@ -1,0 +1,187 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Slovenian "INCLUDE">
+]>
+<article id="joystick" lang="&language;">
+<articleinfo>
+<title
+>Krmilnik za igre</title>
+<authorgroup>
+<author
+><firstname
+>Michael</firstname
+> <surname
+>Anderson</surname
+> <affiliation
+> <address
+><email
+>nosrednaekim@gmail.com</email
+></address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Luka</firstname
+><surname
+>Puhar</surname
+><affiliation
+><address
+><email
+>puhar.luka@gmail.com</email
+></address
+></affiliation
+><contrib
+>Prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>09.04.2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Sistemske nastavitve</keyword>
+<keyword
+>krmilna palica</keyword>
+<keyword
+>krmilnik</keyword>
+<keyword
+>igralna ploščica</keyword>
+<keyword
+>umeri</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_joystick">
+<title
+>Umerjanje igralnega krmilnika</title>
+
+<para
+>Ta modul zagotavlja vmesnik za umerjanje igralnega krmilnika in prikaz funkcij igralnega krmilnika, ki so prirejene posameznim logičnim gumbom ali osem.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Tu je posnetek zaslona modula igralnega krmilnika</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="joystick-main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Modul igralnega krmilnika</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Naprava</guilabel
+></term>
+<listitem>
+<para
+>Tu si lahko ogledate logično lokacijo naprave. Če imate več igralnih krmilnikov, lahko izberete tudi enega, ki ga želite konfigurirati. </para>
+<para
+>Če v računalniku ni samodejno najden noben igralni krmilnik, vi pa veste, da je priključen, lahko tukaj vnesete pravilno datoteko naprave. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Položaj</guilabel
+></term>
+<listitem>
+<para
+>Izrisana lokacija osi X in Y krmilne palice igralnega krmilnika. Omogočite <guibutton
+>Pokaži sled</guibutton
+> za izris poti krmilne palice od ene točke do druge. </para>
+<tip
+><para
+>Če krmilna palica ne doseže vseh točk na tem grafu ali če se ne osredotoči pravilno, morate napravo umeriti. </para
+></tip
+> 
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Gumbi</guilabel
+></term>
+<listitem>
+<para
+>Mesto za prikaz stanja pritisnjenih gumbov na igralnem krmilniku in preveritev, ali so gumbi pravilno preslikani. Ko je gumb pritisnjen, se ob logični številki (kot jo vidi računalnik) gumba, ki je bil pritisnjen, pojavi <guilabel
+>PRESSED</guilabel
+>. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Osi</guilabel
+></term>
+<listitem>
+<para
+>Prikaže številčne vrednosti položajev osi. 0 je v središču, največja in najmanjša vrednost pa sta odvisni od igralnega krmilnika in posamezne osi. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Umeri</guilabel
+></term>
+<listitem>
+<para
+>S klikom na <guibutton
+>Kalibriraj</guibutton
+> se odpre pogovorno okno za kalibracijo vseh osi na igralnih palicah. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Umerjanje igralnega krmilnika</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="joystick-calibration.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Umerjanje igralnega krmilnika</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Vsako os bo treba premakniti v najmanjši položaj, nato v središče in nazadnje v največji položaj. Merilnik v spodnjem levem kotu pogovornega okna vam bo pomagal določiti, v katero smer se vrednosti povečajo in v katero zmanjšajo. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

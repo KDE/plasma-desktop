@@ -1,0 +1,295 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Slovenian "INCLUDE">
+]>
+<article id="solid-actions" lang="&language;">
+<articleinfo>
+<title
+>Dejavnosti naprave</title>
+<authorgroup>
+<author
+><firstname
+>Ben</firstname
+><surname
+>Cooksley</surname
+></author>
+<author
+>&Anne-Marie.Mahfouf;</author>
+<othercredit role="translator"
+><firstname
+>Luka</firstname
+><surname
+>Puhar</surname
+><affiliation
+><address
+><email
+>puhar.luka@gmail.com</email
+></address
+></affiliation
+><contrib
+>Prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>10.12.2018</date>
+<releaseinfo
+>&plasma; 5.14</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>Nastavitve sistema</keyword>
+<keyword
+>Trdno</keyword>
+<keyword
+>dejanja</keyword>
+<keyword
+>naprave</keyword>
+<keyword
+>strojna oprema</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_solid_actions">
+<title
+>Dejanja za nove naprave</title>
+<sect2 id="icons-intro">
+<title
+>Uvod</title>
+
+<para
+>Ta modul vam omogoča, da nastavite dejanja, ki jih želite povezati, ko priključite nove naprave.</para>
+<para>
+<screenshot>
+<screeninfo
+>Posnetek zaslona upravitelja dejanj naprave</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Posnetek zaslona upravitelja dejanj naprave</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Prikazani bodo vsa možna dejanja, ki so na voljo, ko so naprave priključene. Upoštevajte, da bodo na voljo le pod določenimi pogoji.</para>
+
+<itemizedlist>
+<listitem
+><para
+><guibutton
+>Dodaj</guibutton
+> To vas bo pozvalo k vnosu imena za novo dejanje, nato pa bo odprlo to dejanje za urejanje. Če v tem pogovornem oknu ne navedete vseh zahtevanih podatkov, bo vaše dejanje izbrisano. </para
+></listitem>
+<listitem
+><para
+><guibutton
+>Uredi</guibutton
+> S tem lahko spremenite Ime, Ikono, ukaz za izvedbo in pogoje, ki jih mora dejanje izpolnjevati, da se prikaže. </para
+></listitem>
+<listitem
+><para
+><guibutton
+>Odstrani / Ni mogoče izbrisati / Odstrani</guibutton
+> Ta gumb bo opravil različna dejanja, odvisno od tega, ali je bil dobavljen s sistemom ali ste ga ustvarili sami. Zavrnete lahko samo spremembe v sistemskih dejanjih, če ni sprememb, teh dejanj ni mogoče izbrisati. Dejanja, ki jih je ustvaril uporabnik, so v celoti odstranjena, vključno z vsemi spremembami. </para
+></listitem>
+</itemizedlist>
+
+</sect2>
+
+<sect2 id="add-action">
+<title
+>Dodaj dejanje</title>
+
+<para
+>Gumb <guibutton
+>Dodaj</guibutton
+> prikaže pogovorno okno za vnos imena novega dejanja. </para>
+<para>
+<screenshot>
+<screeninfo
+>Posnetek zaslona pogovornega okna Dodaj dejanje</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="add-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Posnetek zaslona pogovornega okna Dodaj dejanje</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Ime dejanja mora pravilno opisovati dejanje. Ko vnesete ime in kliknete <guibutton
+>OK</guibutton
+>, se prikaže pogovorno okno Uredi dejanje, v katerem lahko nastavite lastnosti akcije. </para>
+</sect2>
+
+<sect2 id="edit-action">
+<title
+>Uredi dejanje</title>
+
+<para
+>V tem pogovornem oknu lahko spremenite nastavitve izbranega dejanja.</para>
+<para>
+<screenshot>
+<screeninfo
+>Posnetek zaslona pogovornega okna Uredi dejanje</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="edit-action.png" format="PNG"/>
+    </imageobject>
+     <textobject>
+      <phrase
+>Posnetek zaslona pogovornega okna Uredi dejanje</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>To vključuje ikono, ime akcije, ukaz akcije in različne parametre. Ikono lahko spremenite tako, da jo kliknete.</para>
+<para
+>Parametri so prikazani v drevesu, pri čemer mora biti zgornji element resničen, da se dejanje prikaže.</para>
+
+<sect3 id="edit-parameter">
+<title
+>Uredi parameter</title>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Tip parametra</guilabel
+></term>
+<listitem>
+<para
+>S tem se nadzoruje, kaj je lahko vsebovano v njem ali kakšno ujemanje se izvede, da se preveri, ali je resničen. <variablelist>
+<varlistentry
+><term
+><guilabel
+>Lastniško ujemanje</guilabel
+></term>
+<listitem>
+<para
+>Primerja določeno lastnost Naprave (z uporabo <guilabel
+>Tip naprave</guilabel
+> in <guilabel
+>Naziv vrednosti</guilabel
+>) in jo s pomočjo ocenjevalnika primerja z navedenim besedilom.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Povezava vsebine</guilabel
+></term>
+<listitem>
+<para
+>Vse podlastnosti tega morajo biti resnične, da je resnično tudi samo.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Vsebinska disjunkcija</guilabel
+></term>
+<listitem>
+<para
+>Katera koli podlastnost tega je lahko resnična, da bi bila resnična tudi sama po sebi.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Ujemanje vmesnika naprave</guilabel
+></term>
+<listitem>
+<para
+>Preveri, ali je napravo mogoče uvrstiti v izbran tip naprave.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Tip naprave</guilabel
+></term>
+<listitem>
+<para
+>To so vse možne vrste naprav, ki jih podpira &plasma; na vašem sistemu. Uporabljajo se pri ujemanju vmesnikov lastnosti in naprav. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Ime vrednosti</guilabel
+></term>
+<listitem>
+<para
+>To je seznam vseh možnih imen lastnosti za izbrano vrsto naprave. Omogoča tudi izbiro ocenjevalnika vrednosti (ki je <guilabel 
+>Enako</guilabel 
+> ali <guilabel 
+>Vsebuje</guilabel 
+>) in omogoča vnos besedila, s katerim se primerja.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Ponastavi parameter</guibutton
+></term>
+<listitem>
+<para
+>Razveljavi vse neshranjene spremembe, ki ste jih naredili v tem parametru.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Shrani spremembe parametrov</guibutton
+></term>
+<listitem>
+<para
+>Shrani spremembe, ki ste jih naredili v parametru.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect3>
+</sect2>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

@@ -1,0 +1,152 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Slovenian "INCLUDE">
+]>
+<article id="solid-device-automounter" lang="&language;">
+<title
+>Samodejna namestitev naprave</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Trever</firstname
+><surname
+>Fischer</surname
+></author>
+<othercredit role="translator"
+><firstname
+>Luka</firstname
+><surname
+>Puhar</surname
+><affiliation
+><address
+><email
+>puhar.luka@gmail.com</email
+></address
+></affiliation
+><contrib
+>Prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>08.04.2021</date>
+<releaseinfo
+>&plasma; 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Sistemske nastavitve</keyword>
+<keyword
+>samodejni priklop</keyword>
+<keyword
+>naprava</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>V tem pogovornem oknu lahko nastavite samodejno nameščanje diskov in zvezkov. </para>
+
+<para
+>Če v tem modulu omogočite funkcije samodejne namestitve, vam za dostop do nedavno priključene naprave ne bo treba uporabljati programa za obveščanje o napravah ali navigacijske plošče v upravitelju datotek. </para>
+
+<para
+>Na vrhu pogovornega okna so na voljo globalne nastavitve, ki jih lahko prevladate za vsako posamezno napravo na seznamu <guilabel
+>Preglasitve naprav</guilabel
+>. Za namizje z enim uporabnikom je priporočljivo, da so omogočena vsa potrditvena polja nad seznamom prevlad. </para>
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Omogoči samodejno nameščanje izmenljivih medijev</guilabel
+></term>
+<listitem
+><para
+>Če ta možnost ni označena, ne bo prišlo do samodejnega nameščanja naprav, ne glede na vse, kar je izbrano v razdelku <guilabel
+>Preglasitve naprav</guilabel
+>. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Samodejno namesti samo odstranljive medije, ki so bili pred tem ročno nameščeni</guilabel
+></term>
+<listitem
+><para
+>Če je ta možnost odobrjena, bo program &plasma; samodejno namestil samo naprave, ki si jih zapomni. Naprava je <quote
+>zapomnjena</quote
+>, če je bila že kdaj prej nameščena; &eg; priključitev &USB; medijskega predvajalnika za polnjenje ne zadostuje za <quote
+>zapomnjenje</quote
+>. Če do datotek ni dostopa, &plasma; ob naslednjem prikazu predvajalnika ne bo samodejno namestil predvajalnika. Ko do njih dostopate, bo program &plasma; samodejno omogočil dostop do vsebine v vašem sistemu. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Samodejno namesti vse izmenljive medije ob prijavi</guilabel
+></term>
+<listitem
+><para
+>Če so ob prijavi v namizje v sistem priključene odstranljive pomnilniške naprave, bo &plasma; samodejno dala vsebino na voljo sistemu, da jo lahko berejo drugi programi. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Samodejno namesti izmenljive medije, ko so priključeni</guilabel
+></term>
+<listitem
+><para
+>Če je ta možnost označena, bo &plasma; samodejno dala na voljo vsebino katere koli naprave za shranjevanje, ko bo ta priključena ali priklopljena na sistem. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Samodejno namesti</guilabel
+></term>
+<listitem
+><para
+>Ta seznam vsebuje naprave za shranjevanje, ki jih pozna &plasma;. Če je <guilabel
+>Ob prijavi</guilabel
+> označen,bo naprava samodejno nameščena, čeprav ni označena možnost <guilabel
+>Samodejno namestiti vse izmenljive medije ob prijavi</guilabel
+>. Enako velja za <guilabel
+>Ob pritrditvi</guilabel
+>.</para>
+<para
+>Če je polje <guilabel
+>Omogoči samodejno nameščanje izmenljivih medijev</guilabel
+> odkljukano, se prekriti parametri ne uporabljajo in nobena naprava ne bo samodejno nameščena. </para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Pozabi napravo</guibutton
+></term>
+<listitem
+><para
+>S klikom na ta gumb &plasma; <quote
+>pozabi</quote
+>, da so izbrane naprave sploh kdaj obstajale. To je uporabno le, če je označeno polje <guilabel
+>Samodejno namesti izmenljive medije, ki so bili predhodno ročno nameščeni</guilabel
+>. Ko je naprava pozabljena in je funkcija &plasma; nastavljena na samodejno nameščanje samo znanih naprav, se naprava ne bo samodejno namestila. </para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+ 
+</article>

@@ -1,0 +1,212 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Slovenian "INCLUDE">
+]>
+
+<article id="kfontview" lang="&language;">
+
+<articleinfo>
+<title
+>Pregledovalnik pisav</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+
+<othercredit role="translator"
+><contrib
+>Prevod</contrib
+><firstname
+>Luka</firstname
+><surname
+>Puhar</surname
+><affiliation
+><address
+><email
+>puhar.luka@gmail.com</email
+></address
+></affiliation
+></othercredit
+> 
+</authorgroup>
+
+<date
+>31.08.2018</date>
+<releaseinfo
+>Plasma 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>pregled pisave</keyword>
+<keyword
+>pisave</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>&kfontview; je aplikacija za ogled in namestitev različnih vrst pisav: <itemizedlist>
+<listitem
+><para
+>&TrueType; (<filename class="extension"
+>.ttf</filename
+>)</para
+></listitem>
+<listitem
+><para
+>OpenType (Odprti tip) (<filename class="extension"
+>otf</filename
+>, <filename class="extension"
+>.ttf</filename
+>)</para
+></listitem>
+<listitem
+><para
+>&PostScript; tip 1 (razširitev datoteke na &Windows; &amp; OS/2 <filename class="extension"
+>.pfb</filename
+>/<filename class="extension"
+>.pfm</filename
+>; na &UNIX;/&Linux; <filename class="extension"
+>.pfa</filename
+>/<filename class="extension"
+>.afm</filename
+>)</para
+></listitem>
+<listitem
+><para
+>BDF (Bitmap Distribution Format, podaljšek datoteke <filename class="extension"
+>.bdf</filename
+>)</para
+></listitem
+> 
+<listitem
+><para
+>PCF (Portable Compiled Format, podaljšek datoteke <filename class="extension"
+>.pcf</filename
+>)</para
+></listitem>
+</itemizedlist>
+</para>
+<para
+>Uporabite jo lahko kot samostojen program za predogled in namestitev pisave, prenesene iz interneta. V predogledu lahko preverite, ali ima pisava vse znake, ki jih potrebujete. </para>
+<para
+>Poleg tega lahko &kfontview; zaženete iz modula &systemsettings; <ulink url="help:/kcontrol/fontinst/index.html"
+> <guilabel
+>Upravljanje pisav</guilabel
+></ulink
+>, da uporabite razširjene zmožnosti predogleda &kfontview;.</para>
+
+<para
+>Uporabite lahko tudi modul <guilabel
+>Upravljanje pisav</guilabel
+> za namestitev, odstranitev, predogled in upravljanje vseh pisav v sistemu.</para>
+
+<!--FIXME still valid?
+<para
+>To use &kfontview; in &konqueror; select <guilabel
+>Services</guilabel
+> in
+the sidebar and go to the folders <filename class="directory"
+>Fonts/Personal
+</filename
+> or <filename class="directory"
+>Fonts/System</filename
+>.
+Then open the context menu with a &RMB; click on a font and start &kfontview; 
+by selecting it from the context menu.</para>
+-->
+<!-- used by others as well? -->
+
+<para>
+<screenshot>
+<screeninfo
+>&kfontview; aplikacija</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="kfontview.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>&kfontview; aplikacija</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+><guilabel
+>Standardni predogled</guilabel
+> prikaže vašo pisavo v več različnih velikostih z uporabo pangrama (stavek, v katerem je vsaka črka abecede uporabljena vsaj enkrat). Tako si lahko ustvarite dobro predstavo o tem, kako bo videti. V spustnem oknu v orodni vrstici lahko izberete dodatne vrste predogleda: <itemizedlist>
+<listitem
+><para
+><guilabel
+>Vsi znaki</guilabel
+> prikaže vse znake, ki jih zagotavlja pisava, v eni velikosti. </para
+></listitem>
+<listitem
+><para
+>Blok Unicode: Standard Unicode skupine znakov razvršča v bloke</para
+></listitem>
+<listitem
+><para
+>Skripta Unicode: V Unicode je skripta zbirka črk in drugih pisnih znakov, ki se uporabljajo za predstavitev besedilnih informacij v enem ali več pisnih sistemih</para
+></listitem>
+<listitem
+><para
+><guibutton
+>Spremeni besedilo</guibutton
+>: Z uporabo tega gumba se odpre pogovorno okno <guilabel
+>Predogled niza</guilabel
+>, v katerega lahko vstavite uporabniško določeno besedilo. S to funkcijo lahko preverite, ali pisava podpira znake, ki jih potrebujete. </para
+></listitem>
+</itemizedlist
+></para>
+<para
+>Za spreminjanje velikosti pisave v vseh vrstah predogledov lahko uporabite gumbe za povečavo ali kolesce miške.</para>
+<para
+>V načinu predogleda <guilabel
+>Blok Unicode</guilabel
+> in <guilabel
+>Skripta Unicode</guilabel
+> se prikažejo dodatne informacije v obliki namiga orodja, če znak obesite s kazalcem miške: Unicode <guilabel
+>Kategorija </guilabel
+> znaka in vrednost v <guilabel
+> UCS-4</guilabel
+>, <guilabel
+>UTF-16</guilabel
+>, <guilabel
+>UTF-8</guilabel
+> in kot <guilabel
+>XML Decimal Entity</guilabel
+>.</para>
+
+<para
+>Če želite namestiti pisavo, ki ste jo prenesli z interneta, kliknite gumb <guibutton
+>Namesti</guibutton
+> v spodnjem desnem kotu. </para>
+
+<para
+>Pisavo lahko namestite za osebno rabo, ki je na voljo samo vam, ali za celoten sistem, ki je na voljo vsem uporabnikom; za slednje so potrebni skrbniški privilegiji.</para>
+
+<para
+>Pisave so pogosto na voljo v obliki arhiva, kot je <literal role="extension"
+>zip</literal
+>. Te arhive odprite s programom &ark;, ki omogoča preprost predogled pisav. Če želite izkoristiti razširjene zmogljivosti programa &kfontview;, izberite pisave in jih odprite v programu &kfontview;. </para
+><para
+>Za uporabo novo nameščenih pisav je treba znova zagnati aplikacije.</para>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

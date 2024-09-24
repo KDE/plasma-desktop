@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Slovenian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kded" lang="&language;">
+<articleinfo>
+
+<title
+>Storitve v ozadju</title>
+<authorgroup>
+<author
+><personname
+><firstname
+>Burkhard</firstname
+><surname
+>Lück</surname
+></personname
+> <email
+>lueck@hube-lueck.de</email
+> </author>
+<othercredit role="translator"
+><firstname
+>Luka</firstname
+><surname
+>Puhar</surname
+><affiliation
+><address
+><email
+>puhar.luka@gmail.com</email
+></address
+></affiliation
+><contrib
+>Prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>08.04.2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Sistemske nastavitve</keyword>
+<keyword
+>Storitev</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Modul <guilabel
+>Upravitelj storitev </guilabel
+> omogoča pregled nad vsemi vtičniki sistema &kde; Daemon, imenovanimi tudi &kde; Services. Na splošno obstajata dve vrsti storitev:</para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Storitve nalaganja na zahtevo</guilabel
+></term>
+<listitem
+><para
+>To je seznam razpoložljivih storitev &kde;, ki se zaženejo na zahtevo. Navedene so le zaradi priročnosti, saj s temi storitvami ne morete upravljati. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Storitve zagona</guilabel
+></term>
+<listitem
+><para
+>To prikazuje vse storitve &kde;, ki jih je mogoče naložiti ob zagonu &kde;. Storitve, označene v stolpcu <guilabel
+>Uporabi</guilabel
+>, bodo sprožene ob naslednjem zagonu.</para>
+<para
+>Bodite previdni pri deaktivaciji neznanih storitev: nekatere storitve so ključnega pomena za &kde;; ne deaktivirajte storitev, če ne veste, kaj počnete. </para>
+<para
+>Če želite spremeniti <guilabel
+>Status</guilabel
+> storitve, jo izberite na seznamu. Nato lahko z gumboma <guibutton
+>Začetek</guibutton
+> in <guibutton
+>Ustavi</guibutton
+> spremenite stanje storitve iz <guilabel
+>Ne deluje</guilabel
+> v <guilabel
+>Poteka</guilabel
+> in obratno. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

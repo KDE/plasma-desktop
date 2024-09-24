@@ -1,0 +1,164 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Slovenian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmsmserver" lang="&language;">
+<articleinfo>
+<title
+>Upravljalnik sej</title>
+<authorgroup>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<author
+><firstname
+>Natalie</firstname
+><surname
+>Clarius</surname
+><email
+>natalie_clarius@yahoo.de</email
+></author>
+<othercredit role="translator"
+><contrib
+>Prevod</contrib
+><firstname
+>Matej</firstname
+><surname
+>Badalič</surname
+><affiliation
+><address
+><email
+>matej_badalic@slo.net</email
+></address
+></affiliation
+></othercredit
+> 
+</authorgroup>
+
+<date
+>30.01.2023</date>
+<releaseinfo
+>Plasma 5.27</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>seja</keyword>
+<keyword
+>Sistemske nastavitve</keyword>
+<keyword
+>odjava</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="sessions">
+<title
+>Seja namizja</title>
+
+<para
+>V tem modulu &systemsettings; lahko konfigurirate nastavitve upravitelja sej in odjave v &plasma;.</para>
+
+<para
+>Upravljanje sej se navezuje na sposobnost programa &plasma;, da shrani stanje aplikacij in oken, ko se odjavite iz programa &plasma;, in jih obnovi, ko se ponovno prijavite.</para>
+
+<sect2 id="sessions-logoutscreen">
+<title
+>Splošno</title>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Vprašaj za potrditev: ob izklopu, ponovnem zagonu in odjavi</guilabel
+></term>
+<listitem>
+<para
+>Če je ta nastavitev vklopljena, bo prikazan zaslon za potrditev, ko se odjavite, izklopite ali znova zaženete. Ko je nastavitev izklopljena, se bo vaš računalnik takoj po kliku ustreznega gumba odjavil, zaustavil itd.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+
+<sect2 id="sessions-restore">
+<title
+>Ob prijavi zaženi aplikacije, ki so bile odprte</title>
+<para
+>Izberete lahko eno od treh možnosti, kaj naj se zgodi, ko se prijavite v &plasma;:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Ob zadnji prijavi</guilabel
+></term>
+<listitem
+><para
+>Če je ta možnost označena, bo &plasma; ob odjavi shranila stanje trenutne seje. &plasma; bo ob naslednji prijavi obnovila sejo, tako da boste lahko nadaljevali delo z namizjem, kot ste ga zapustili.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Ko je bila seja shranjena ročno</guilabel
+></term>
+<listitem
+><para
+>Namesto da bi se obnovilo stanje &plasma;, ki je bilo ob zadnji odjavi, se obnovi določeno stanje, ki ste ga shranili ročno.</para
+><para
+>V meniju <guilabel
+>Zaganjalnik aplikacij</guilabel
+> in &plasma; iskanju se pojavi gumb <guilabel
+>Shrani sejo</guilabel
+>. Ko ga kliknete, si &plasma; zapomni odprte aplikacije in jih obnovi ob naslednji prijavi. Ponovno ga kliknite, da zamenjate nabor zapomnjenih aplikacij.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Začni s prazno sejo</guilabel
+></term>
+<listitem>
+<para
+>Če izberete to možnost, program &plasma; ne bo nikoli obnovil shranjenih sej.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Nazadnje lahko vnesete z dvopičjem (<literal
+>:</literal
+>) ali vejico (<literal
+>,</literal
+>) ločen seznam aplikacij, ki jih je treba izključiti iz sej in se zato pri obnovitvi seje ne bodo zagnali. Na primer <userinput
+>xterm:konsole</userinput
+> ali <userinput
+>xterm,konsole</userinput
+>.</para>
+</sect2>
+
+<sect2 id="sessions-firmware">
+<title
+>Programska oprema</title>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Po naslednjem ponovnem zagonu: Vstopite v zaslon za nastavitev UEFI</guilabel
+></term>
+<listitem
+><para
+>Če je ta možnost omogočena, bo računalnik ob naslednjem ponovnem zagonu vstopil v način nastavitve vdelane programske opreme (BIOS/UEFI). To je morda lažje, kot če bi poskušali vstopiti v nastavitve vdelane programske opreme s hitrim pritiskanjem posebnih tipk med zagonom.</para
+></listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+
+</sect1>
+
+</article>
+

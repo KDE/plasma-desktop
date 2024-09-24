@@ -1,0 +1,145 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Slovenian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="mouse" lang="&language;">
+<articleinfo>
+<title
+>Miška</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Brad.Hards; &Brad.Hards.mail;</author>
+<othercredit role="translator"
+><contrib
+>Prevod</contrib
+><firstname
+>Andrej</firstname
+><surname
+>Vernekar</surname
+><affiliation
+><address
+><email
+>andrej.vernekar@moj.net</email
+></address
+></affiliation
+></othercredit
+> 
+</authorgroup>
+
+<date
+>06.04.2021</date>
+<releaseinfo
+>Plasma 5.21</releaseinfo>
+
+<abstract>
+<para
+>To je dokumentacija za modul &systemsettings;, ki konfigurira miške in druge kazalne naprave. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Sistemske nastavitve</keyword>
+<keyword
+>miška</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Ta modul vam omogoča nastavitev vaše kazalne naprave. Ta je lahko miška, sledilna kroglica, sledilna ploščica ali pa kakšen drug kos strojne opreme, ki opravlja podobno funkcijo.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Splošno</guilabel
+></term>
+<listitem>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Levoročna miška</guilabel
+></term>
+<listitem
+><para
+>Če ste levičar, boste morda raje zamenjali funkciji gumbov <mousebutton
+>levega</mousebutton
+> in <mousebutton
+>desnega</mousebutton
+> klika na svoji kazalni napravi tako, da potrdite to možnost. Če ima vaša kazalna naprava več kot dva gumba, to vpliva samo na gumba, ki delujeta kot gumba <mousebutton
+>levi</mousebutton
+> in <mousebutton
+>desni</mousebutton
+>. Če imate na primer miško s tremi gumbi, to ne vpliva na <mousebutton
+>srednji gumb</mousebutton
+>.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Pritisnite levi in desni gumb za srednji klik</guilabel
+></term>
+<listitem
+><para
+>Označite to potrditveno polje, če nimate &MMB;. S hkratnim pritiskom levega in desnega miškinega gumba lahko posnemate srednji klik. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term id="peripherals-mouse-acceleration">
+<guilabel
+>Hitrost kazalca</guilabel
+></term>
+<listitem
+><para
+>Ta možnost vam omogoča spreminjanje razmerja med razdaljo premika kazalca po zaslonu in relativnim pomikanjem same fizične naprave (ki je lahko miška, sledilna kroglica ali kakšna druga kazalna naprava.)</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Pospešitev kazalke</guilabel
+></term>
+<listitem
+><para
+><guilabel
+>Standardni</guilabel
+> način prilagodi količino pospeševanja kazalca glede na to, kako hitro premikate miško. Če ga nastavite na <guilabel
+>Brez</guilabel
+>, ostane pospešek konstanten ne glede na hitrost. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Drsno pomikanje: Obrnite smer pomikanja</guilabel
+></term>
+<listitem
+><para
+>Ko je izbrano to potrditveno polje, bo drsno kolesce (če obstaja) delovalo v nasprotni smeri (tako da če je premikanje vrha drsnega kolesca proti vam prej povzročilo drsenje navzdol, bo zdaj povzročilo drsenje navzgor). </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<note
+><para
+>V &plasma; 5.13 najdete nastavitev za uporabo enojnih ali dvojnih klikov miške za odpiranje datotek in map v modulu <ulink url="help:/kcontrol/workspaceoptions/index.html"
+>Delovni prostor</ulink
+>. </para
+></note>
+
+</article>

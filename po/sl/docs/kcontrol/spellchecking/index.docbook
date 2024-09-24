@@ -1,0 +1,174 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Slovenian "INCLUDE"
+> <!-- change language only here -->
+<!ENTITY kappname "&sonnet;">
+]>
+
+<article id="spellchecking" lang="&language;">
+<articleinfo>
+<title
+>Preverjanje črkovanja</title>
+
+<authorgroup>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+
+<othercredit role="translator"
+><contrib
+>Prevod</contrib
+><firstname
+>Andrej</firstname
+><surname
+>Vernekar</surname
+><affiliation
+><address
+><email
+>andrej.vernekar@moj.net</email
+></address
+></affiliation
+></othercredit
+> 
+</authorgroup>
+
+<date
+>08.04.2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Črkovanje</keyword>
+<keyword
+>slovar</keyword>
+</keywordset>
+
+</articleinfo>
+
+<sect1 id="spellchecker">
+<title
+>Preverjanje črkovanja</title>
+<para
+>Nastavitvene možnosti, ki so na voljo tukaj, privzeto uporabljajo vse aplikacije &kde;, ki uporabljajo &sonnet;, ki je vmesnik za različne brezplačne programe za preverjanje črkovanja.</para>
+
+<para
+>Za uporabo &sonnet; morate namestiti programe za preverjanje črkovanja, kot so &eg; <ulink url="http://aspell.net/"
+>&GNU; Aspell</ulink
+>, <ulink url="http://hspell.ivrix.org.il/"
+>Hspell</ulink
+> ali <ulink url="https://hunspell.github.io/"
+>Hunspell</ulink
+> poleg ustreznih slovarjev za vaš jezik.</para>
+
+<para
+>Možnosti konfiguracije, ki so izbrane tukaj, lahko vsaka aplikacija prekliče.</para>
+
+<para
+>V spustnem oknu <guilabel
+>Privzet jezik</guilabel
+> med razpoložljivimi slovarji izberite, katerega želite uporabiti za &sonnet;. </para>
+
+<sect2 id="spell-options">
+<title
+>Možnosti</title>
+
+<variablelist>
+ 
+<varlistentry>
+<term
+><guilabel
+>Omogoči samodejno zaznavanje jezika</guilabel
+></term>
+<listitem>
+<para
+>Ta funkcija temelji na več hevrističnih metodah (uporabljena pisava, ujemanje trigramov in razvrstitev jezikov na podlagi razpoložljivih jezikov v zaledju preverjanja črkovanja). Tako lahko samodejno preklopi jezik v večjezičnem dokumentu. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Samodejno preverjanje črkovanja je privzeto omogočeno</guilabel
+></term>
+<listitem>
+<para
+>Če označite to potrditveno polje, se v dokumentu preveri črkovanje besed, ko jih vnesete. Pod napačno zapisanimi besedami bo narisana rdeča črta. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Preskoči vse besede z velikimi črkami</guilabel
+></term>
+<listitem>
+<para
+>Če označite to potrditveno polje, se ne preveri črkovanje katere koli besede, ki je sestavljena iz vseh velikih črk.</para>
+<tip
+><para
+>To je uporabno za dokumente, ki vsebujejo veliko število kratic. Če tega polja ne označite, bo večina teh kratic nepravilno označena. Če označite to polje, akronimi ne bodo označeni kot napačno napisani.</para
+></tip>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Preskočite skupne besede</guilabel
+></term>
+<listitem
+><para
+>Če to polje ni označeno, se besede, ki so v slovarju prikazane ločeno, vendar so bile združene, obravnavajo kot pravopisne napake. Takšne besede so na primer polnoč, vinograd, morebiti. </para>
+
+<tip
+><para
+>Če potrdite to polje, boste preprečili, da bi aplikacije označile spletne strani in e-poštne naslove zaradi pravopisnih napak. Ti naslovi pogosto vsebujejo besede, ki so sestavljene skupaj.</para
+></tip>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect2>
+<!-- from koffice/kword/opt.docbook 1.6.2--> 
+<sect2
+><title
+>Prezrte besede</title>
+<para
+>V spodnjem delu pogovornega okna lahko določite določene besede (lahko gre za specializirano terminologijo, lastna imena &etc;), ki jih program za črkovanje ne bo upošteval.</para>
+
+<sect3
+><title
+>Dodajanje besede na seznam prezrtih besed</title>
+<para
+>Če želite dodati besedo, jo vnesite v besedilno polje in kliknite gumb <guibutton
+>Dodaj</guibutton
+>.</para>
+</sect3>
+
+<sect3
+><title
+>Brisanje besede s seznama prezrtih besed</title>
+<para
+>Če želite odstraniti besedo, jo izberite v seznamu, ki vsebuje vse trenutno prezrte besede, tako da kliknete nanjo z &LMB;. Zdaj kliknite gumb <guibutton
+>Odstrani</guibutton
+>.</para>
+
+<para
+>Ko ste s spremembami zadovoljni, preprosto kliknite <guibutton
+>Potrdi</guibutton
+>.</para>
+
+<para
+>S klikom na gumb <guibutton
+>Privzete vrednosti</guibutton
+> povrnete vse vrednosti na privzete vrednosti.</para>
+</sect3>
+
+</sect2>
+</sect1>
+
+</article>

@@ -1,0 +1,134 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Slovenian "INCLUDE">
+]>
+<article id="baloo" lang="&language;">
+<title
+>Iskanje datotek</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Vishesh</firstname
+> <surname
+>Handa</surname
+> </author>
+<othercredit role="translator"
+><firstname
+>Luka</firstname
+><surname
+>Puhar</surname
+><affiliation
+><address
+><email
+>puhar.luka@gmail.com</email
+></address
+></affiliation
+><contrib
+>Prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>30.01.2023</date>
+<releaseinfo
+>Plasma 5.27</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>Sistemske nastavitve</keyword>
+<keyword
+>iskanje</keyword>
+<keyword
+>datoteka</keyword>
+<keyword
+>baloo</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Ta modul &systemsettings; vam omogoča, da nastavite, katere datoteke naj se indeksirajo za hitro iskanje. Za učinkovito interno iskanje po datotekah uporablja tehnologijo Baloo. </para>
+
+<para
+>Dodajte pripomoček <guilabel
+>Izvedi</guilabel
+> na ploščo ali omogočite iskanje v &krunner; in uporabite rezultate indeksiranja za hitrejši dostop do dokumentov. </para>
+
+<para
+>Če želite v aplikacijah &dolphin; in drugih aplikacijah &kde; uporabljati možnosti iskanja na namizju, aktivirajte element <guilabel
+>Omogoči Iskanje Datotek</guilabel
+>. Če ne želite uporabljati iskanja datotek s programom Baloo, odstranite kljukico (lahko uporabite druge tehnologije iskanja, &eg; &kfind;). </para>
+
+<para
+>Uporabite <guilabel
+>Indeksiraj tudi vsebino datotek</guilabel
+>, če želite poleg imen datotek indeksirati tudi njihovo vsebino. </para>
+
+<para
+>Označite element <guilabel
+>Indeksiraj skrite datoteke in mape</guilabel
+>, če želite, da Baloo indeksira skrite datoteke in mape. </para>
+
+<note>
+    <para
+>Vsako ime datoteke ali mape, ki se začne s piko (<literal
+>.</literal
+>), je privzeto skrito. </para>
+</note>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Konfiguracija specifične mape</guilabel
+></term>
+<listitem>
+    <para
+>Prikaže se seznam map, ki jih je mogoče indeksirati. Privzeto je indeksirana samo celotna mapa <filename class="directory"
+><envar
+>$HOME</envar
+></filename
+>, druge mape ali pogoni pa niso indeksirani. </para>
+    <para
+>Odstranljivi medij se privzeto nikoli ne indeksira. Lahko ga izrecno odstranite s seznama izključenih map, nato bo indeksiran. </para>
+    <para
+>Z izbirnim poljem ob vsakem elementu na seznamu lahko nastavite, ali je <guimenuitem
+>Indeksiran</guimenuitem
+> ali <guimenuitem
+>Neindeksiran</guimenuitem
+>. </para>
+    <para
+>Uporabite gumb za smeti, da odstranite element s seznama. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guibutton
+>Začetek indeksiranja mape...</guibutton
+>/<guibutton
+>Zaključek indeksiranja mape...</guibutton
+></term>
+<listitem>
+    <para
+>S klikom na katero koli od zgoraj navedenih možnosti se prikaže standardno pogovorno okno &plasma; <guilabel
+>Izberite mapo za filtriranje</guilabel
+>, v katerem lahko izberete mapo, ki bo ustrezno obdelana. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Za več informacij o dodatnih možnostih konfiguracije &eg; kako dodati pogon, nameščen zunaj mape <filename class="directory"
+><envar
+>$HOME</envar
+></filename
+>, preberite <ulink url="https://community.kde.org/Baloo/Configuration"
+>Baloo/Configuration</ulink
+>.</para>
+
+</article>
