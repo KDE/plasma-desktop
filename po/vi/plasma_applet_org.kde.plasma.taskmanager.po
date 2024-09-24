@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 03:23+0000\n"
+"POT-Creation-Date: 2024-09-24 03:46+0000\n"
 "PO-Revision-Date: 2023-01-08 16:15+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -661,47 +661,47 @@ msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "Hiện có ở %1"
 
-#: plugin/backend.cpp:351
+#: plugin/backend.cpp:368
 #, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place"
 msgid_plural "%1 more Places"
 msgstr[0] "%1 địa điểm khác nữa"
 
-#: plugin/backend.cpp:447
+#: plugin/backend.cpp:468
 #, kde-format
 msgid "Recent Downloads"
 msgstr "Tải về gần đây"
 
-#: plugin/backend.cpp:449
+#: plugin/backend.cpp:470
 #, kde-format
 msgid "Recent Connections"
 msgstr "Kết nối gần đây"
 
-#: plugin/backend.cpp:451
+#: plugin/backend.cpp:472
 #, kde-format
 msgid "Recent Places"
 msgstr "Địa điểm gần đây"
 
-#: plugin/backend.cpp:460
+#: plugin/backend.cpp:481
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
 msgstr "Quên các tải về gần đây đi"
 
-#: plugin/backend.cpp:462
+#: plugin/backend.cpp:483
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
 msgstr "Quên các kết nối gần đây đi"
 
-#: plugin/backend.cpp:464
+#: plugin/backend.cpp:485
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
 msgstr "Quên các địa điểm gần đây đi"
 
-#: plugin/backend.cpp:466
+#: plugin/backend.cpp:487
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 03:23+0000\n"
+"POT-Creation-Date: 2024-09-24 03:46+0000\n"
 "PO-Revision-Date: 2023-03-28 22:10+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -665,7 +665,7 @@ msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "%1 üzerinde kullanılabilir"
 
-#: plugin/backend.cpp:351
+#: plugin/backend.cpp:368
 #, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place"
@@ -673,40 +673,40 @@ msgid_plural "%1 more Places"
 msgstr[0] "%1 yer daha"
 msgstr[1] "%1 yer daha"
 
-#: plugin/backend.cpp:447
+#: plugin/backend.cpp:468
 #, kde-format
 msgid "Recent Downloads"
 msgstr "Son İndirmeler"
 
-#: plugin/backend.cpp:449
+#: plugin/backend.cpp:470
 #, kde-format
 msgid "Recent Connections"
 msgstr "Son Bağlantılar"
 
-#: plugin/backend.cpp:451
+#: plugin/backend.cpp:472
 #, kde-format
 msgid "Recent Places"
 msgstr "Son Yerler"
 
-#: plugin/backend.cpp:460
+#: plugin/backend.cpp:481
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
 msgstr "Son İndirmeleri Unut"
 
-#: plugin/backend.cpp:462
+#: plugin/backend.cpp:483
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
 msgstr "Son Bağlantıları Unut"
 
-#: plugin/backend.cpp:464
+#: plugin/backend.cpp:485
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
 msgstr "Son Yerleri Unut"
 
-#: plugin/backend.cpp:466
+#: plugin/backend.cpp:487
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
