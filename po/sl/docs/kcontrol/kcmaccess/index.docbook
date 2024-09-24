@@ -1,0 +1,527 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Slovenian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmaccess" lang="&language;">
+<title
+>Dostopnost</title>
+<articleinfo>
+<authorgroup
+>	
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><contrib
+>Prevod</contrib
+><firstname
+>Matej</firstname
+><surname
+>Badalič</surname
+><affiliation
+><address
+><email
+>matej_badalic@slo.net</email
+></address
+></affiliation
+></othercredit
+> 
+</authorgroup>
+
+<date
+>08.04.2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Sistemske nastavitve</keyword>
+<keyword
+>dostopnost</keyword>
+<keyword
+>tipke</keyword>
+<keyword
+>zvonec</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="accessibility">
+<title
+>Dostopnost</title>
+<sect2 id="accessibility-intro">
+
+<title
+>Uvod</title>
+
+<para
+>Ta modul je oblikovan, da pomaga uporabnikom, ki imajo težave z zaznavanjem zvočnih namigov ali težave z uporabo tipkovnice ali miške. </para>
+
+<para
+>The module is divided into six tabs: <link linkend="access-bell"
+><guilabel
+>Zvonec</guilabel
+></link
+>, <link linkend="access-modifier-keys"
+><guilabel
+>Modifikacijske tipke</guilabel
+></link
+>, <link linkend="access-keyboard-filters"
+><guilabel
+>Filtri Tipkovnice</guilabel
+></link
+>, <link linkend="access-activation-gestures"
+><guilabel
+>Aktivacijske geste</guilabel
+></link
+>, <link linkend="mouse-navigation"
+><guilabel
+>Navigacija z miško</guilabel
+></link
+>, in <link linkend="access-screenreader"
+><guilabel
+>Bralec Ekrana</guilabel
+></link
+>. </para>
+
+<sect3 id="access-bell">
+<title
+><guilabel
+>Zvonec</guilabel
+></title>
+
+<para
+>Ta pult je razdeljena na razdelka <guilabel
+>Slišni Zvonec</guilabel
+> in <guilabel
+>Vidni Zvonec</guilabel
+>. </para>
+
+<para
+>Vrhnje potrditveno polje <guilabel
+>Uporabi sistemski zvonec</guilabel
+>, določa ali naj sistemski zvonec zvoni. Če je ta možnost onemogočena, bo sistemski zvonec brez glasu. </para>
+
+<para
+>Naslednje potrditveno polje se lahko uporablja za predvajanje različnih zvokov, kadar je sistemski zvonec že sprožen. Da aktivirate to možnost, odkljukajte potrditveno polje z oznako <guilabel
+>Uporabi prilagojeni zvonec</guilabel
+> in vnesite celotno pot do zvočne datoteke v vnosno polje z oznako <guilabel
+>Predvajaj zvok</guilabel
+>. Če želite, lahko izberete gumb <guibutton
+>Brskaj</guibutton
+>, da prebrskate skozi vaš datotečni sistem in najdete pravo datoteko. </para>
+
+<para
+>Za tiste uporabnike, ki imajo težave s poslušanjem sistemskega zvonca, ali za tiste, ki imajo tih računalnik, &kde; ponuja <emphasis
+>vizualni zvonec</emphasis
+>. Ta zagotavlja vizualni signal (obračanje zaslona ali utripanje barve na zaslonu), ko bi se običajno oglasil sistemski zvonec. </para>
+
+<para
+>Da uporabite vidni zvonec, najprej odkljukajte potrditveno polje z oznako <guilabel
+>Uporabi vizualni zvonec</guilabel
+>. </para>
+
+<para
+>Potem lahko izbirate med <guilabel
+>Obrni barve</guilabel
+> ali <guilabel
+>Utripaj</guilabel
+>. Če izberete <guilabel
+>Obrni barve</guilabel
+>, bodo vse barve na zaslonu obrnjene. Če izberete <guilabel
+>Utripaj</guilabel
+>, lahko izberete barvo z gumbom na desni strani razdelka <guilabel
+>Utripaj</guilabel
+>. </para>
+
+<para
+>S poljem za vrtenje lahko prilagodite trajanje vidnega zvonca. Privzeta vrednost je 500 msec ali pol sekunde. </para>
+
+</sect3>
+
+<sect3 id="access-modifier-keys">
+<title
+><guilabel
+>Modifikacijske tipke</guilabel
+></title>
+
+<para
+>Na tem pultu sta dva razdelka <guilabel
+>Trajne tipke</guilabel
+> in <guilabel
+>Ključavnice</guilabel
+>.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Uporabi trajne tipke</guilabel
+></term>
+<listitem>
+<para
+>Če je ta možnost omogočena, lahko uporabnik pritisne in izpusti tipke &Shift;, &Alt; ali &Ctrl;, ter potem pritisne drugo tipko, da dobi kombinacijo (primer: <keycombo action="simul"
+>&Ctrl;&Alt; &Del;</keycombo
+> se lahko naredi s &Ctrl;, potem &Alt; in &Del;). </para>
+
+<para
+>Tudi v tem razdelku je potrditveno polje z oznako <guilabel
+>Zakleni trajne tipke</guilabel
+>. Če je to potrditveno polje omogočeno, bodo tipke &Alt;, &Ctrl; in &Shift; ostale <quote
+>izbrane</quote
+> dokler ne bodo ponovno <quote
+>od-izbrane</quote
+>. </para>
+
+<para
+>Na primer: </para>
+<variablelist>
+<varlistentry>
+<term
+>Z onemogočenim <guilabel
+>Zakleni trajne tipke</guilabel
+>:</term>
+<listitem>
+<para
+>Če pritisnete &Shift;, nato tipko <keycap
+>F</keycap
+>. Računalnik to prevede v <keycombo action="simul"
+>&Shift;<keycap
+>F</keycap
+></keycombo
+>. Če sedaj vtipkate <keycap
+>P</keycap
+>, bo računalnik razumel to kot črko p (brez shift). </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Z omogočenim <guilabel
+>Zakleni trajne tipke</guilabel
+>:</term>
+<listitem>
+<para
+>Če pritisnete tipko &Shift; <emphasis
+>dvakrat</emphasis
+> in nato pritisnete tipko <keycap
+>F</keycap
+>, računalnik to razume kot <keycombo action="simul"
+>&Shift;<keycap
+>F</keycap
+></keycombo
+>. Če sedaj vnesete <keycap
+>P</keycap
+>, računalnik to razume kot črko P (<keycombo action="simul"
+>&Shift;<keycap
+>P</keycap
+></keycombo
+>). Če želite od-zbrati tipko &Shift;, jo znova pritisnite. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+<!--this is missing - explain it
+<para
+><guilabel
+>Turn sticky keys off when two keys are pressed simultaneously</guilabel
+></para>
+<para
+><guilabel
+>Use system bell whenever a modifier gets latched, locked or unlocked</guilabel
+></para>
+-->
+</listitem>
+</varlistentry>
+<!-- explain use case etc
+<guilabel
+>Locking Keys</guilabel
+> what is that?
+<varlistentry>
+<term
+><guilabel
+>Use system bell whenever a locking key gets activated or deactivated</guilabel
+></term>
+<listitem
+><para
+></para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Use Plasma's system notification mechanism whenever a modifier or locking key 
+changes its state</guilabel
+></term>
+<listitem
+><para
+>Click the <guibutton
+>Configure Notifications...</guibutton
+> button to open a dialog 
+which allows you to edit the notifications for status changes of all keys</para
+></listitem>
+</varlistentry>
+-->
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-keyboard-filters">
+<title
+><guilabel
+>Filtri za tipkovnico</guilabel
+></title>
+
+<para
+>Na tem pultu sta dva razdelka.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Uporabi počasne tipke</guilabel
+></term>
+<listitem>
+<para
+>Če je ta možnost omogočena, morate tipko držati pritisnjeno določen čas (nastavljiv z vrtilnim okencem), preden bo pritisk tipke sprejet. S tem preprečite naključne pritiske tipk. </para>
+</listitem>
+</varlistentry>
+<!-- Acceptance delay slider 500 ms default
+Use system bell whenever a key is pressed/accepted/rejected
+-->
+<varlistentry>
+<term
+><guilabel
+>Uporabi skakajoče tipke</guilabel
+></term>
+<listitem>
+<para
+>Če je ta možnost omogočena, morate počakati določen čas (nastavljiv z okencem za vrtenje), preden se lahko sprejme naslednji pritisk tipke. To preprečuje nenamerne večkratne pritiske tipk. </para>
+</listitem>
+</varlistentry>
+<!-- Debounce time slider 500 ms default
+Use system bell whenever a key is rejected
+-->
+
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-activation-gestures">
+<title
+><guilabel
+>Aktivacijske geste</guilabel
+></title>
+
+<para
+>Na tem pultu sta dva razdelka.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Aktivacijske geste</guilabel
+> s temi možnostmi:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Uporaba gest za aktiviranje lepljivih tipk in počasnih tipk</guilabel
+></member>
+<member
+>Tu lahko aktivirate geste tipkovnice, ki vklopijo naslednje funkcije:</member>
+<member
+>Tipke miške: Pritisnite &Shift;+NumLock</member>
+<member
+>Trajne tipke: pritisnite tipko &Shift; 5-krat zapored</member>
+<member
+>Počasne tipke: Pridržite &Shift; za 8 sekund</member>
+<member
+><guilabel
+>Izklop trajnih in počasnih tipk po določenem času neaktivnosti</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Obvestilo</guilabel
+> s temi možnostmi:</term>
+<listitem>
+<para>
+<simplelist>
+<member
+><guilabel
+>Uporaba sistemskega zvonca, kadar se z gesto vklopi ali izklopi funkcija dostopnosti</guilabel
+></member>
+
+<member
+><guilabel
+>Prikaz pogovornega okna za potrditev, kadar je vklopljena ali izklopljena funkcija za dostopnost tipkovnice</guilabel
+></member>
+<member
+>Če je ta možnost označena,&kde; prikaže potrditveno pogovorno okno ob vsakem vklopu ali izklopu funkcije dostopnosti tipkovnice.</member>
+<member
+>Prepričajte se, da veste, kaj počnete, če okno odznačite, bodo nastavitve dostopnosti tipkovnice vedno uporabljene brez potrditve.</member>
+
+<member
+><guilabel
+>Uporabite&kde; mehanizem sistemskega obveščanja ob vklopu ali izklopu funkcije za dostopnost tipkovnice</guilabel
+></member>
+</simplelist>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+<para
+>Kliknite gumb <guibutton
+>Konfiguracija obvestil</guibutton
+>, da odprete pogovorno okno, ki omogoča urejanje obvestil o spremembah stanja vseh tipk.</para>
+
+</sect3>
+
+<sect3 id="mouse-navigation">
+<title
+>Navigiranje z miško</title>
+
+<para
+>Ta zavihek omogoča konfiguracijo tipk številčnice na tipkovnici kot naprave tipa miška. To je lahko koristno, kadar delate na napravi brez druge kazalne naprave ali kadar nimate druge možnosti uporabe številčnice. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Premikanje kazalca s tipkovnico (z uporabo številske tipkovnice)</guilabel
+></term>
+<listitem>
+<para
+>Da omogočite način miške s tipkovnico, morate izbrati potrditveno polje z oznako <guilabel
+>Premikanje kazalca s tipkovnico (z uporabo številčnice)</guilabel
+>. Ko to storite, bodo omogočene druge nastavitve in po potrebi lahko dodatno prilagodite obnašanje kazalca na tipkovnici. </para>
+<para
+>Različne tipke na številčnici se premikajo v pričakovani smeri. Upoštevajte, da se lahko premikate po diagonali ter navzgor, navzdol, levo in desno. Tipka <keycap
+>5</keycap
+> posnema klik na kazalčni gumb, običajno &LMB;. Spreminjanje posnemane tipke, storite s tipkami <keycap
+>/</keycap
+> (s tem postane &LMB;), <keycap
+>*</keycap
+> (s tem postane &MMB;) in <keycap
+>-</keycap
+> (s tem postane &RMB;). Uporaba <keycap
+>+</keycap
+> posnema dvojni klik na izbrani gumb kazalca. S tipko <keycap
+>0</keycap
+> lahko posnemate držanje izbrane kazalne tipke (za lažje vlečenje), nato pa s tipko <keycap
+>.</keycap
+> posnemate sprostitev izbrane kazalne tipke. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Zakasnitev pospeševanja</guilabel
+></term>
+<listitem>
+<para
+>To je čas (v milisekundah) med začetnim pritiskom na tipko in prvim ponovljenim dogodkom gibanja za pospeševanje tipke miške. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Interval ponavljanja</guilabel
+></term>
+<listitem>
+<para
+>To je čas v milisekundah med ponavljajočimi se dogodki gibanja za pospeševanje tipke miške. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Čas pospeševanja</guilabel
+></term>
+<listitem>
+<para
+>To je čas v milisekundah, preden kazalec doseže največjo hitrost za pospeševanje tipke miške. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Največja hitrost</guilabel
+></term>
+<listitem>
+<para
+>To je največja hitrost v slikovnih pikah na sekundo, ki jo lahko doseže kazalec pri pospeševanju tipke miške. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Pospešek kazalke</guilabel
+></term>
+<listitem>
+<para
+>To je količina pospeška, ki se uporabi za pospeševanje tipke miške. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect3>
+
+<sect3 id="access-screenreader">
+<title
+><guilabel
+>Bralnik zaslona</guilabel
+></title>
+
+<para
+>Namestite aplikacijo za branje zaslona, kot je <ulink url="https://en.wikipedia.org/wiki/Orca_(assistive_technology)"
+>Orca</ulink
+>, skupaj z <application
+>speech-dispatcher</application
+>. </para>
+
+<para
+>Preizkusite, ali zvok iz govornega dispečerja deluje, z ukazom <command
+>spd-say hello</command
+> v terminalu. </para>
+
+<para
+>Poleg tega potrebujete sintetizator besedila v govor, kot je &eg; <application
+>espeak</application
+>. </para>
+
+<para
+>V potrditvenem polju omogočite bralnik zaslona, se odjavite in znova zaženite sejo namizja. </para>
+
+<para
+>Za sam program &plasma; uporabite tradicionalni <guilabel
+>Meni aplikacij</guilabel
+> in preverite, ali ima ta meni povezano bližnjico na tipkovnici (<keycombo action="simul"
+>&Alt;<keycap
+>F1</keycap
+></keycombo
+>). Ko pritisnete to bližnjico, se mora odpreti meni, ki ga lahko preberete pri premikanju po meniju s smernimi tipkami. </para>
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>

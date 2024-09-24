@@ -1,0 +1,245 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Slovenian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="workspaceoptions" lang="&language;">
+<articleinfo>
+<title
+>Splošno vedenje</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+<author
+><firstname
+>Natalie</firstname
+><surname
+>Clarius</surname
+><email
+>natalie_clarius@yahoo.de</email
+></author>
+<othercredit role="translator"
+><firstname
+>Luka</firstname
+><surname
+>Puhar</surname
+><affiliation
+><address
+><email
+>puhar.luka@gmail.com</email
+></address
+></affiliation
+><contrib
+>Prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>39.01.2023</date>
+
+<releaseinfo
+>&plasma; 5.27</releaseinfo>
+
+<keywordset>
+<keyword
+>Sistemske nastavitve</keyword>
+<keyword
+>namizje</keyword>
+<keyword
+>delovni prostor</keyword>
+</keywordset>
+
+</articleinfo>
+
+<para
+>To je modul za konfiguracijo splošnega obnašanja delovnega prostora. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Prikaz informacijskih namigov orodij ob lebdenju miške</guilabel
+></term>
+<listitem>
+<para
+>Če je ta možnost označena, se namigi orodij prikažejo nad lebdečimi elementi v &plasma; pultu ali na namizju.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Prikaz vizualnih povratnih informacij za spremembe stanja</guilabel
+></term>
+<listitem>
+<para
+>Če s tipkovnico spreminjate &eg; svetlost in glasnost, se te spremembe stanja prikažejo v prikazovalniku OSD.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Hitrost animacije</guilabel
+></term>
+<listitem>
+    <para
+>Omogoča nastavitev hitrosti animacij namiznih učinkov od <guilabel
+>počasi</guilabel
+> do <guilabel
+>takojšnje</guilabel
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Klikanje datotek ali map</guimenu
+><guimenuitem
+>Jih odpre</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Če je ta možnost označena, se datoteke in mape odprejo z enim klikom <mousebutton
+>levega</mousebutton
+> miškinega gumba. Datoteke in mape lahko izberete tako, da <mousebutton
+>levo</mousebutton
+> kliknete na njihove označevalnike za izbor, povlečete pravokotnik izbora okoli njih ali <keycombo action="simul"
+>&Ctrl;<mousebutton
+>levo</mousebutton
+></keycombo
+> kliknete. To je privzeto obnašanje, ki je zasnovano tako, da je skladno s pričakovanji pri klikanju povezav v spletnih brskalnikih.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Klikanje datotek ali map</guimenu
+><guimenuitem
+>jih izbere</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Če je ta možnost označena, je treba datoteke in mape odpreti z dvojnim klikom, medtem ko jih izberete z enim klikom. Takšno obnašanje morda poznate iz drugih namizij ali operacijskih sistemov.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Klikanje v tirnici pomikanja</guimenu
+><guimenuitem
+>Potegne eno stran navzgor in navzdol</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>To je privzeta nastavitev. Z levim klikom na sled v drsni vrstici premaknete drsno vrstico za eno stran.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Klikanje v tirnici pomikanja</guimenu
+><guimenuitem
+>Pretakne na kliknjeno mesto</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Vklopi obnašanje, ko položaj ročice za pomikanje preskoči na položaj v dokumentu, na katerega ste kliknili. Takšno obnašanje morda poznate iz drugih namizij ali operacijskih sistemov.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Srednji klik</guimenu
+><guimenuitem
+>Prilepi izbrano besedilo</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Če je ta možnost označena, se s sredinskim klikom v besedilno polje prilepi iz odložišča, tako kot pri uporabi <keycombo action="simul"
+>&Ctrl;<keysym
+>V</keysym
+></keycombo
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Način na dotik</guimenuitem
+></term>
+<listitem>
+<para
+>V načinu na dotik bo veliko elementov uporabniškega vmesnika postalo večjih, da se bo lažje prilagodilo interakciji z dotikom.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Način na dotik</guimenu
+><guimenuitem
+>Samodejno omogoči po potrebi</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Če je izbrana ta možnost, se bo način na dotik samodejno aktiviral, ko sistem zazna zaslon na dotik, ne pa tudi miške ali sledilne ploščice. Na primer: ko je tipkovnica prenosnika, ki ga je mogoče spremeniti, obrnjena ali odstranjena.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Način na dotik</guimenu
+><guimenuitem
+>Vedno omogočeno</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Če izberete to možnost, bo način na dotik vedno omogočen. To možnost uporabite, če uporabljate &plasma; predvsem z zaslonom na dotik ali imate raje večje cilje klikov iz drugih razlogov.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Način na dotik</guimenu
+><guimenuitem
+>Nikoli omogočeno</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Če izberete to možnost, bo način na dotik vedno onemogočen. Uporabite to možnost, če na napravi ne potrebujete načina na dotik.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

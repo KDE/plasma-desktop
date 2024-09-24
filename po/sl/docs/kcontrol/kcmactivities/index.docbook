@@ -1,0 +1,185 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Slovenian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmactivities" lang="&language;">
+<title
+>Dejavnosti</title>
+<articleinfo>
+<authorgroup
+>	
+<author
+><firstname
+>Yuri</firstname
+><surname
+>Chornoivan</surname
+> <email
+>yurchor@ukr.net</email
+></author>
+<othercredit role="translator"
+><firstname
+>Matjaž</firstname
+><surname
+>Jeran</surname
+><affiliation
+><address
+><email
+>matjaz.jeran@amis.net</email
+></address
+></affiliation
+><contrib
+>Prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>12.04.2021</date>
+<releaseinfo
+>Plazma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Sistemske nastavitve</keyword>
+<keyword
+>dejavnost</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="activities">
+<title
+>Dejavnosti</title>
+<sect2 id="activities-intro">
+
+<title
+>Uvod</title>
+
+<para
+>Ta modul omogoča konfiguriranje dejavnosti. Dejavnosti so način, kako imeti več &plasma; nastavitev, pri čemer ima vsaka drugačen nabor gradnikov in tem. Nekatere dejavnosti so lahko zasebne. Takšne dejavnosti ne sledijo vašim dejanjem. Na primer ne spremljajo, kateri dokument ste nedavno odprli. </para>
+
+<para
+>Modul je razdeljen na dva zavihka: <link linkend="activities-main"
+><guilabel
+>Dejavnosti</guilabel
+></link
+> in <link linkend="activities-switching"
+><guilabel
+>Spreminjanje</guilabel
+></link
+>. </para>
+
+<sect3 id="activities-main">
+<title
+><guilabel
+>Dejavnosti</guilabel
+></title>
+
+<para
+>V tem zavihku so navedene vaše trenutne dejavnosti. Z miškinim kazalcem podrsajte elemente na seznamu, da se prikažejo gumbi za konfiguriranje ali odstranitev dejavnosti. </para>
+
+<para
+>Uporabite <inlinemediaobject
+><imageobject
+><imagedata fileref="configure.png" format="PNG"/></imageobject
+></inlinemediaobject
+> prekrivni gumb za konfiguriranje dejavnosti. Spremenite lahko naslednje parametre dejavnosti: </para>
+
+<variablelist>
+    <varlistentry>
+        <term
+><guilabel
+>Ikona</guilabel
+></term>
+        <listitem>
+            <para
+>Ikona dejavnosti je vidna v izbirniku upravitelja dejavnosti na pultu &plasma;. Kliknite na trenutno ikono, če želite izbrati ikono za celoten sistem, ali pa pobrskajte po datotečnem sistemu in izberite ikono po meri. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Ime</guilabel
+></term>
+        <listitem>
+            <para
+>Dajte svoji dejavnosti prepoznavno ime. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Opis</guilabel
+></term>
+        <listitem>
+            <para
+>Opis dejavnosti v poljubni obliki, ki je prikazan pod imenom v izbirniku upravitelja dejavnosti na plošči &plasma;. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Zasebnost</guilabel
+></term>
+        <listitem>
+            <para
+>Označite element <guilabel
+>Ne spremljaj uporabe za to dejavnost</guilabel
+>, da izklopite sledenje za svojo dejavnost. </para>
+        </listitem>
+    </varlistentry>
+    <varlistentry>
+        <term
+><guilabel
+>Bližnjica za preklop</guilabel
+></term>
+        <listitem>
+            <para
+>Pritisnite prvi gumb, da vnesete novo bližnjico za preklop na dejavnost. Če želite odstraniti trenutno bližnjico, pritisnite drugi gumb. </para>
+        </listitem>
+    </varlistentry>
+</variablelist>
+<para
+>S klikom na <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> gumb odstranite dejavnost. </para>
+<para
+>S klikom na gumb <guibutton
+>Ustvari novo...</guibutton
+> pod seznamom se odpre pogovorno okno <guilabel
+>Ustvari novo dejavnost</guilabel
+>, ki je podobno zgoraj opisanemu pogovornemu oknu za konfiguracijo dejavnosti. </para>
+</sect3>
+
+<sect3 id="activities-switching">
+<title
+><guilabel
+>Preklapljanje</guilabel
+></title>
+
+<para
+>Tu lahko nastavite, ali naj si &plasma; zapomni <guilabel
+>Prihodnje virtualno namizje</guilabel
+> za vsako dejavnost (potrebuje ponovni zagon). Mogoče je tudi konfigurirati bližnjice za premikanje po seznamu dejavnosti. </para>
+<para
+>Za več informacij o uporabi sistema bližnjic &kde; glejte <ulink url="help:/fundamentals/shortcuts.html"
+><emphasis
+>Uporaba in prilagajanje bližnjic</emphasis
+> v razdelku <emphasis
+>&kde; Fundamentals</emphasis
+> dokumentacije</ulink
+>. </para>
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>

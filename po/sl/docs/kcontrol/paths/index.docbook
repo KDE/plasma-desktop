@@ -1,0 +1,172 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Slovenian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="paths" lang="&language;">
+<title
+>Lokacije</title>
+<articleinfo>
+
+<authorgroup>
+<author
+><firstname
+>Michael</firstname
+> <surname
+>Anderson</surname
+> <affiliation
+> <address
+><email
+>nosrednaekim@gmail.com</email
+></address>
+</affiliation>
+</author>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+><email
+>annma@kde.org</email
+></address>
+</affiliation
+></author>
+<othercredit role="translator"
+><firstname
+>Luka</firstname
+><surname
+>Puhar</surname
+><affiliation
+><address
+><email
+>puhar.luka@gmail.com</email
+></address
+></affiliation
+><contrib
+>Prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>09.05.2021</date>
+<releaseinfo
+>Plasma 5.22</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>namizje</keyword>
+<keyword
+>poti</keyword>
+<keyword
+>lokacija</keyword>
+<keyword
+>nastavitev sistema</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>To je modul za konfiguracijo bistvenih poti za &plasma; namizje.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Konfigurirajte nekaj &kde; poti</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="paths.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Konfigurirajte nekaj &kde; poti</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<note>
+    <para
+>Pogonov, ki so samodejno nameščeni ob prijavi, ni mogoče uporabiti kot poti. Takšni pogoni bodo med ponovnim zagonom programa &plasma; povrnjeni na privzete nastavitve. </para>
+</note>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Pot do namizja:</guilabel
+></term>
+<listitem
+><para
+>Mapa namizja vsebuje vse datoteke, ki so prikazane v gradniku <guilabel
+>Pogled map</guilabel
+> na namizju. Privzeta pot je običajno <filename class="directory"
+>~/Desktop</filename
+>, vendar lahko tukaj spremenite lokacijo te mape. </para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Pot do dokumentov:</guilabel
+></term>
+<listitem
+><para
+>Ta mapa bo privzeto uporabljena za nalaganje ali shranjevanje dokumentov iz ali v to mapo.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Pot do prenosov:</guilabel
+></term>
+<listitem
+><para
+>Ta mapa bo privzeto uporabljena za shranjevanje prenesenih elementov.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Pot do videoposnetkov:</guilabel
+></term>
+<listitem
+><para
+>Ta mapa bo privzeto uporabljena za nalaganje ali shranjevanje filmov.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Pot do slik:</guilabel
+></term>
+<listitem
+><para
+>Ta mapa bo privzeto uporabljena za nalaganje ali shranjevanje slik iz ali v to mapo.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Pot do glasbe:</guilabel
+></term>
+<listitem
+><para
+>Ta mapa bo privzeto uporabljena za nalaganje ali shranjevanje glasbe iz nje ali vanjo.</para
+></listitem>
+</varlistentry>
+</variablelist>
+<para
+>Če spremenite pot in kliknete <guibutton
+>Potrdi</guibutton
+>, se prikaže pogovorno okno, v katerem lahko izberete premik vsebine v novo mapo ali uporabo nove mape brez premikanja datotek.</para>
+
+</article>

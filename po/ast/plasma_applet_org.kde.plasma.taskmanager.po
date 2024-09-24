@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 00:40+0000\n"
+"POT-Creation-Date: 2024-09-24 00:40+0000\n"
 "PO-Revision-Date: 2023-12-12 00:58+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
@@ -828,7 +828,7 @@ msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr ""
 
-#: plugin/backend.cpp:299
+#: plugin/backend.cpp:315
 #, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place"
@@ -836,40 +836,40 @@ msgid_plural "%1 more Places"
 msgstr[0] "%1 llugar más"
 msgstr[1] "%1 llugares más"
 
-#: plugin/backend.cpp:395
+#: plugin/backend.cpp:415
 #, kde-format
 msgid "Recent Downloads"
 msgstr "Descargues de recién"
 
-#: plugin/backend.cpp:397
+#: plugin/backend.cpp:417
 #, kde-format
 msgid "Recent Connections"
 msgstr "Conexones de recién"
 
-#: plugin/backend.cpp:399
+#: plugin/backend.cpp:419
 #, kde-format
 msgid "Recent Places"
 msgstr "Llugares de recién"
 
-#: plugin/backend.cpp:408
+#: plugin/backend.cpp:428
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
 msgstr "Escaecer les descargues de recién"
 
-#: plugin/backend.cpp:410
+#: plugin/backend.cpp:430
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
 msgstr "Escaecer les conexones de recién"
 
-#: plugin/backend.cpp:412
+#: plugin/backend.cpp:432
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
 msgstr "Escaecer los llugares de recién"
 
-#: plugin/backend.cpp:414
+#: plugin/backend.cpp:434
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"

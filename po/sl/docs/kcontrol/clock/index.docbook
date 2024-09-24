@@ -1,0 +1,120 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Slovenian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="clock" lang="&language;">
+<articleinfo>
+<title
+>Datum in ura</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Matej</firstname
+><surname
+>Badalič</surname
+><affiliation
+><address
+><email
+>matej_badalic@slo.net</email
+></address
+></affiliation
+></othercredit
+> 
+</authorgroup>
+
+<date
+>25.03.2018</date>
+<releaseinfo
+>&plasma; 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Sistemske nastavitve</keyword>
+<keyword
+>ura</keyword>
+<keyword
+>datum</keyword>
+<keyword
+>čas</keyword>
+<keyword
+>nastavi</keyword>
+<keyword
+>nastavitev</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="datetime">
+
+<title
+>Datum in ura</title>
+
+<para
+>Ta modul lahko uporabite, da spremenite sistemski datum in uro preko udobnega grafičnega vmesnika.</para>
+
+<note
+><para
+>Ker te nastavitve ne vplivajo le na vas kot uporabnika, temveč na celoten sistem, morate imeti za spreminjanje datuma in časa sistema dostop skrbnika sistema(<systemitem class="username"
+>root</systemitem
+>). Če te ravni dostopa nimate, vam bo modul prikazal le trenutne nastavitve, vaše spremembe pa ne bodo shranjene.</para
+></note>
+
+<sect2 id="date-change">
+<title
+>Datum in Ura</title>
+
+<para
+>Če potrdite možnost <guilabel
+>Samodejno nastavi datum in uro</guilabel
+>, bo ta modul uporabil <acronym
+>systemd</acronym
+> za pridobivanje datuma in časa.</para>
+
+<para
+>V računalniku brez <acronym
+>systemd</acronym
+> se uporabljata pripomočka <acronym
+>NTP</acronym
+> <command
+>rdate</command
+> ali <command
+>ntpdate</command
+>. Če ti pripomočki manjkajo, jih namestite. </para>
+
+<para
+>Ko se prijavite v sejo &plasma; med delovanjem v spletu ali ko se pozneje povežete z internetom, se zgodi dostop do enega ali več strežnikov <acronym
+>NTP</acronym
+>.</para>
+<para
+>To ne zadostuje, toda, za dolgoročno vzdrževanje natančne ure. To je uporabno za občasno nastavljanje časa v računalnikih, ki nimajo stalnega dostopa do omrežja, kot so prenosni računalniki. </para>
+
+<para
+>Če ne uporabljate časovnega strežnika, lahko datum ročno nastavite v koledarju.</para>
+<para
+>Z gumbi na dnu koledarja izberite trenutni datum, vnesite datum v polje za urejanje ali izberite teden v letu v spustnem polju.</para>
+
+<para
+>Čas nastavite z vrtilnimi polju na dnu analogne ure. Lahko tudi neposredno vnesete vrednost.</para>
+</sect2>
+
+<sect2 id="date-time-tone">
+<title
+>Časovni pas</title>
+<para
+>Če želite nastaviti nov časovni pas, preprosto izberite svoje območje s spodnjega seznama. S filtrirnim poljem poiščite želeno <guilabel
+>Območje</guilabel
+> ali <guilabel
+>Regija</guilabel
+>.</para>
+</sect2>
+
+</sect1>
+
+</article>

@@ -1,0 +1,223 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Slovenian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="keys" lang="&language;">
+<title
+>Bližnjice</title>
+<articleinfo>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<othercredit role="translator"
+><contrib
+>Prevod</contrib
+><firstname
+>Matej</firstname
+><surname
+>Badalič</surname
+><affiliation
+><address
+><email
+>matej_badalic@slo.net</email
+></address
+></affiliation
+></othercredit
+> 
+</authorgroup>
+
+<date
+>25.03.2018</date>
+<releaseinfo
+>Plasma 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>Plasma</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>tipkovne vezi</keyword>
+<keyword
+>vezi</keyword>
+<keyword
+>bližnjice</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="key-bindings">
+<title
+>Bližnjice</title>
+
+<sect2 id="key-bindings-intro"
+> 
+<title
+>Uvod</title
+> 
+
+<para
+>Medtem, ko je večina delovanja, ki ga ponuja &plasma; dostopna z uporabo preprostega <quote
+>pokaži in klikni</quote
+> vmesnika, veliko ljudi raje uporablja tipkovnico za nekatera opravila. Pritiskanje kot je <keycombo action="simul"
+> &Ctrl;<keycap
+>F</keycap
+></keycombo
+> je pogosto hitreje kot premikanje vaših rok iz tipkovnice na miško, odpiranje menuja <guimenu
+>Uredi</guimenu
+> in izbiranje <guimenuitem
+>Najdi</guimenuitem
+>.</para>
+
+<para
+>Ker različni ljudje imajo različne težnje za bližnjice s tipkovnico, vam &plasma; ponuja popolnoma prosto izbiro za določanje tako imenovanih <quote
+>tipkovnih vezi</quote
+>. Tipkovna vez ali bližnjica je kombinacija dejanja s tipko ali kombinacijo tipk.</para>
+
+</sect2>
+
+<sect2 id="key-bindings-use-globapp">
+<title
+>Standardne bližnjice in globalne bližnjice</title>
+
+<para
+>Standardne bližnjice in globalne bližnjice delujejo enako. Pravzaprav so standardne bližnjice ali bližnjice aplikacij na nek način tudi <quote
+>globalne</quote
+>. Edina razlika je:</para>
+
+<itemizedlist>
+<listitem
+><para
+><quote
+>Standardne bližnjice</quote
+> se nanašajo na dejanja, ki so pogosto na voljo v aplikacijah, kot so Shrani, Natisni, Kopiraj &etc;</para
+></listitem
+> 
+<listitem
+><para
+><quote
+>Globalne bližnjice</quote
+> so bližnjice za dejanja, ki so smiselna, tudi če ni odprt noben program. Te bližnjice se običajno nanašajo na dejanja, kot so preklapljanje namizij, upravljanje oken &etc;</para
+></listitem
+> 
+</itemizedlist>
+
+<para
+>Vedite, da bližnjice do programov, ki so tukaj nastavljene so <emphasis
+>samo</emphasis
+> standardna dejanja, ki se pogosto najdejo v aplikacijah. Veliko aplikacij določa tudi lastna dejanja, za katera morate prilagoditi tipkovne vezi z uporabo pogovornega okna za določanje bližnjic do programov.</para>
+
+<sect3 id="key-bindings-standard">
+<title
+>Stran Standardne bližnjice</title>
+<para
+>Na vrhu tega pogovornega okna je prikazano vnosno polje, v katerem lahko interaktivno poiščete imena bližnjic (&eg; Kopiraj) ali kombinacije tipk (&eg; <quote
+><userinput
+>Ctrl+C</userinput
+></quote
+>) tako, da jih tukaj dobesedno vnesete.</para>
+<para
+>Pod poljem za iskanje si lahko ogledate seznam vezav tipk, &ie; povezave med akcijami (&eg; Kopiraj), prikazanimi v stolpcu <guilabel
+>Akcija</guilabel
+>, in tipkami ali kombinacijo tipk (&eg; <keycombo action="simul"
+>&Ctrl;<keycap
+>C</keycap
+> </keycombo
+>), prikazanimi v stolpcu <guilabel
+>Zkrajšava</guilabel
+> ali <guilabel
+>Alternativa</guilabel
+>. </para>
+</sect3>
+
+<sect3 id="key-bindings-global">
+<title
+>Stran Globalne bližnjice</title>
+<para
+>Na levi strani je polje s seznamom, v katerem lahko izberete <guilabel
+>Komponenta</guilabel
+>, kot so KWin, Plasma Desktop &etc;. Opredeljene bližnjice za izbrano komponento so prikazane v stolpcu <guilabel
+>Akcija</guilabel
+> in <guilabel
+>Global</guilabel
+> v pogledu seznama.</para>
+<para
+>Ta stran ima enako iskalno polje kot zavihek <guilabel
+>Standardne bližnjice</guilabel
+>.</para>
+<para
+>Uporabite <guiicon
+><inlinemediaobject
+><imageobject
+><imagedata fileref="list-add.png" format="PNG"/></imageobject
+></inlinemediaobject
+></guiicon
+> ali <guiicon
+><inlinemediaobject
+><imageobject
+><imagedata fileref="remove.png" format="PNG"/></imageobject
+></inlinemediaobject
+></guiicon
+> za dodajanje ali odstranjevanje komponente. </para>
+
+<para
+>Z dodajanjem komponente se odpre pogovorno okno za izbiro aplikacij iz strukture začetnega menija in dodajanje zaganjalnikov, ki jih je mogoče uporabljati kot bližnjice. Če ima aplikacija možnosti na seznamu skokov, bodo na voljo kot dejanja. </para>
+
+<para
+>Če želite uvoziti/izvoziti shemo, kliknite spustno polje <guilabel
+>Datoteka</guilabel
+> na desni strani in nastavite vse bližnjice na ne(none).</para>
+<para
+>Globalne bližnjice je zdaj mogoče konfigurirati za preskok na določena opravila v aplikaciji.</para>
+
+<para
+>Privzeto lahko meni aplikacije odprete tako, da pritisnete tipko &Meta;. </para>
+</sect3>
+
+<sect3 id="key-bindings-use-confkeys">
+<title
+>Nastavitev tipkovnih vezi</title>
+
+<para
+>Konfiguracija vezav tipk je precej preprosta. V sredini teh modulov &systemsettings; najdete seznam razpoložljivih akcij. Če je za to dejanje konfigurirana vezava ključa, jo boste našli v stolpcih desno od njega. Izberite dejanje, ki ga želite konfigurirati.</para>
+
+<para
+>Ko izberete dejanje na seznamu, boste opazili, da je ta element označen in da sta pod tem elementom v pogledu seznama vidna še dva dodatna potrditvena polja. Tam lahko za izbrano dejanje konfigurirate kombinacijo tipk ali morda sploh ne želite vezave tipk. </para>
+
+<itemizedlist>
+
+<listitem
+><para
+><guilabel
+>Privzeto</guilabel
+>: izbrano dejanje bo povezano s privzeto vrednostjo &kde;. To je dobra izbira za večino akcij, saj ima &kde; na voljo razumne vezave tipk, na katere smo se spomnili. </para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Po meri</guilabel
+>: če je ta možnost omogočena, lahko ustvarite kombinacijo tipk za izbrano dejanje. Kliknite gumb, ki je označen kot <guibutton
+>Nič</guibutton
+> ali kot prej izbrana bližnjica po meri. Zdaj se oznaka gumba spremeni v <guibutton
+>Vnos</guibutton
+>. Nato pritisnite katero koli modifikacijsko tipko (&ie; &Shift;, &Ctrl; ali &Alt;) in nato običajno tipko ali funkcijsko tipko (&eg; <keycap
+>F11</keycap
+>), ki jo želite dodeliti tej kombinaciji tipk.</para>
+<para
+>S klikom na stolpec <guilabel
+>Alternirajoče</guilabel
+> vrstice na seznamu lahko uredite drugo bližnjico za dejanje.</para
+></listitem>
+</itemizedlist>
+
+</sect3>
+</sect2>
+</sect1>
+
+</article>

@@ -4,21 +4,21 @@
 # Tamas Szanto <tszanto@interware.hu>, 2007.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011, 2014, 2019, 2021.
 # Balázs Úr <urbalazs@gmail.com>, 2014.
-# SPDX-FileCopyrightText: 2022, 2023 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-31 00:40+0000\n"
-"PO-Revision-Date: 2023-12-15 13:37+0100\n"
-"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
+"PO-Revision-Date: 2024-09-23 22:04+0200\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -31,10 +31,9 @@ msgid "General:"
 msgstr "Általános:"
 
 #: package/contents/ui/configGeneral.qml:40
-#, fuzzy, kde-format
-#| msgid "Show application icons on window outlines"
+#, kde-format
 msgid "Show window outlines"
-msgstr "Alkalmazásikonok megjelenítése az ablakok körvonalán"
+msgstr "Ablakkörvonalak megjelenítése"
 
 #: package/contents/ui/configGeneral.qml:45
 #, kde-format
@@ -155,36 +154,31 @@ msgid "Switch to %1"
 msgstr "Váltás erre: %1"
 
 #: package/contents/ui/main.qml:592
-#, fuzzy, kde-format
-#| msgid "Show Activity Manager…"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Show Activity Manager"
-msgstr "Aktivitáskezelő megjelenítése…"
+msgstr "Aktivitáskezelő megjelenítése"
 
 #: package/contents/ui/main.qml:598
-#, fuzzy, kde-format
-#| msgid "Add Virtual Desktop"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Add Virtual Desktop"
 msgstr "Virtuális asztal hozzáadása"
 
 #: package/contents/ui/main.qml:604
-#, fuzzy, kde-format
-#| msgid "Remove Virtual Desktop"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Remove Virtual Desktop"
 msgstr "Virtuális asztal eltávolítása"
 
 #: package/contents/ui/main.qml:611
-#, fuzzy, kde-format
-#| msgid "Configure Virtual Desktops…"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "&Configure Activities…"
-msgstr "Virtuális asztalok beállítása…"
+msgstr "Aktivitások &beállítása…"
 
 #: package/contents/ui/main.qml:616
-#, fuzzy, kde-format
-#| msgid "Configure Virtual Desktops…"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Configure Virtual Desktops…"
 msgstr "Virtuális asztalok beállítása…"

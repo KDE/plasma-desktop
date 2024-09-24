@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<!--
+    SPDX-FileCopyrightText: 2021 Yuri Chornoivan <yurchor@ukr.net>
+    SPDX-FileCopyrightText: 2023 Méven Car <meven@kde.org>
+
+    SPDX-License-Identifier: GPL-2.0-or-later
+-->
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Slovenian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcm_recentFiles" lang="&language;">
+<articleinfo>
+    
+<title
+>Nedavne datoteke</title>
+<authorgroup>
+<author
+><firstname
+>Yuri</firstname
+><surname
+>Chornoivan</surname
+> <email
+>yurchor@ukr.net</email
+></author>
+<othercredit role="translator"
+><firstname
+>Matjaž</firstname
+><surname
+>Jeran</surname
+><affiliation
+><address
+><email
+>matjaz.jeran@amis.net</email
+></address
+></affiliation
+><contrib
+>Prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>30.11.2023</date>
+<releaseinfo
+>Plasma 6.0</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemsettings</keyword>
+<keyword
+>Nedavne datoteke</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Ta modul omogoča konfiguracijo časa za <guilabel
+>Ohranjaj zgodovino</guilabel
+>za odprte datoteke in počistite nekaj sledilnih podatkov. Uporabite <guibutton
+>Počistizgodovino</guibutton
+> spustni gumb za &plasma; <guimenuitem
+>Pozabizadnjo uro</guimenuitem
+>, <guimenuitem
+>Pozabi zadnji dve uri</guimenuitem
+>guimenuitem
+>, <guimenuitem
+>Pozabi dan</guimenuitem
+> ali<guimenuitem
+>Pozabi vse</guimenuitem
+>. </para>
+    
+<para
+>Spodaj lahko konfigurirate obseg odprtih aplikacij za shranjevanje dokumentov. Za shranjevanje uporabite element <guilabel
+>Za vse aplikacije</guilabel
+> vse podatke, element <guilabel
+>Ne spominjaj se</guilabel
+> za izklop shranjevanja podatkov ali element <guilabel
+>Samo za posebne aplikacije</guilabel
+> za natančno izbiro (klik na element aplikacije preklopi njegovo trenutni način). </para>
+
+<para
+>Preverite element <guilabel
+>Aplikacije na črnem seznamu, ki niso na seznamu</guilabel
+>za izklop sledenja za vse aplikacije, ki niso na seznamu. </para>
+
+</article>

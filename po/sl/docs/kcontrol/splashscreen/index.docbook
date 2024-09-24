@@ -1,0 +1,132 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Slovenian "INCLUDE">
+]>
+<article id="splashscreen" lang="&language;">
+<title
+>Začetni zaslon</title>
+<articleinfo>
+<authorgroup>
+<author
+><firstname
+>Anne-Marie</firstname
+> <surname
+>Mahfouf</surname
+> <affiliation
+> <address
+>&Anne-Marie.Mahfouf.mail;</address>
+</affiliation>
+</author>
+<othercredit role="translator"
+><firstname
+>Luka</firstname
+><surname
+>Puhar</surname
+><affiliation
+><address
+><email
+>puhar.luka@gmail.com</email
+></address
+></affiliation
+><contrib
+>Prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>08.04.2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Sistemske nastavitve</keyword>
+<keyword
+>začetni zaslon</keyword>
+<keyword
+>tema</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Ta modul zagotavlja vmesnik za ogled in izbiro tem začetnega zaslona.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Tukaj je posnetek zaslona upravitelja začetnih zaslonov</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="splash-main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Modul upravitelja začetnih zaslonov</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Na tej strani si lahko ogledate predogled že nameščenih začetnih zaslonov. Predogled trenutnega začetnega zaslona je označen.</para>
+
+<para
+>S kazalcem miške premaknite sliko za predogled, nato pa se v spodnjem desnem kotu slike prikaže gumb <guilabel
+>Predogled začetnega zaslona</guilabel
+>. Pritisnite ta gumb, če si želite ogledati začetni zaslon v akciji.</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Pridobi nove pozdravne zaslone ...</guilabel
+></term>
+<listitem>
+<para
+>Za uporabo tega dejanja morate biti povezani z internetom. V pogovornem oknu se prikaže seznam tem s spletnega mesta <ulink url="https://store.kde.org"
+>https://store.kde.org</ulink
+>. S klikom na gumb <guibutton
+>Namesti</guibutton
+>, ki je povezan s temo, se ta tema namesti lokalno. </para>
+<para>
+<screenshot>
+<screeninfo
+>Nameščanje nove teme</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get-new-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Nameščanje nove teme</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Ta nova tema bo na voljo takoj, ko zaprete pogovorno okno &systemsettings; Prenesi nove zaslone za prikazovanje in je označena. V predogledu se prikaže slika. Kliknite gumb <guibutton
+>Potrdi</guibutton
+>, da bo ta tema postala vaša trenutna tema začetnega zaslona. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

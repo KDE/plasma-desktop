@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-18 00:41+0000\n"
-"PO-Revision-Date: 2024-09-10 02:23+0900\n"
+"PO-Revision-Date: 2024-09-23 20:42+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -101,30 +101,29 @@ msgid "Remove icon"
 msgstr "移除圖示"
 
 #: package/contents/ui/ConfigGeneral.qml:119
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgid "Show applications as:"
-msgstr "其他應用程式顯示方式："
+msgstr "應用程式顯示方式："
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgid "Name only"
-msgstr ""
+msgstr "僅顯示名稱"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgid "Description only"
-msgstr ""
+msgstr "僅顯示描述"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgid "Name (Description)"
-msgstr ""
+msgstr "名稱（描述）"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgid "Description (Name)"
-msgstr ""
+msgstr "描述（名稱）"
 
 #: package/contents/ui/ConfigGeneral.qml:131
 #, kde-format

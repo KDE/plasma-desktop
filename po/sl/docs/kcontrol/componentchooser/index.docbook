@@ -1,0 +1,97 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Slovenian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article lang="&language;" id="default-components">
+<articleinfo>
+
+<title
+>Privzete aplikacije</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck;&Burkhard.Lueck.mail;</author>
+
+<othercredit role="translator"
+><firstname
+>Luka</firstname
+><surname
+>Puhar</surname
+><affiliation
+><address
+><email
+>puhar.luka@gmail.com</email
+></address
+></affiliation
+><contrib
+>Prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>12.01.2022</date>
+<releaseinfo
+>Plasma 5.24</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Sistemske nastavitve</keyword>
+<keyword
+>komponenta</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>V tem modulu lahko spremenite &kde; privzete komponente.</para>
+
+<para
+>Komponente so programi, ki opravljajo osnovna opravila, kot so spletni brskalnik, terminalski emulator, upravitelj datotek, 
+odjemalec e-pošte, elektronski zemljevid in klicalnik. Različne &kde; aplikacije morajo včasih priklicati konzolni emulator, poslati e-pošto, upravljati datoteke in mape, prikazati zemljevid ali poklicati številko v telefonu.</para
+> 
+
+<para
+>Za dosledno delovanje, te aplikacije vedno kličejo iste komponente. Tu lahko izberete, kateri programi so te komponente.</para>
+
+<para
+>Seznam na levi strani prikazuje vrste komponent, ki jih je mogoče konfigurirati:</para>
+<itemizedlist>
+<listitem>
+<para
+>Spletni brskalnik</para>
+</listitem>
+<listitem>
+<para
+>Upravitelj datotek</para>
+</listitem>
+<listitem>
+<para
+>Odjemalec e-pošte</para>
+</listitem>
+<listitem>
+<para
+>Terminalski emulator</para>
+</listitem>
+<listitem>
+<para
+>Zemljevid</para>
+</listitem>
+<listitem>
+<para
+>Klicalnik</para>
+</listitem>
+</itemizedlist>
+
+<para
+>Kliknite izbirno okno komponente, ki jo želite konfigurirati. Na seznamu izberite najljubši spletni brskalnik, upravitelja datotek, odjemalca e-pošte, emulator terminala, zemljevid in klicalnik. Izberite <guimenuitem
+>Other. . . </guimenuitem
+>, da odprete pogovorno okno <guilabel
+>Choose Application</guilabel
+> in ročno izberete aplikacijo.</para>
+
+</article>
