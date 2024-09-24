@@ -79,7 +79,7 @@ Item {
             NumberAnimation { duration: Kirigami.Units.longDuration }
         }
 
-        height: Math.round(parent.height * 0.4)
+        height: Math.round(icon.paintedHeight * 0.45)
         visible: task.smartLauncherItem.countVisible
         number: task.smartLauncherItem.count
     }
