@@ -23,7 +23,7 @@ KCM.SimpleKCM {
     ComponentOverlay {
         id: overlay
         parent: root.QQC2.Overlay.overlay
-        width: Math.min(root.width, Kirigami.Units.gridUnit * 250)
+        width: Math.min(root.width, Kirigami.Units.gridUnit * 25)
     }
 
     Kirigami.FormLayout {
