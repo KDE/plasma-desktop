@@ -135,6 +135,12 @@ Item {
                 fadeoutTimer.restart();
             }
         }
+        onExited: {
+            uiVisible = false;
+            if (mainBlock.mainPasswordBox.text.length > 0) {
+                root.clearPassword();
+            }
+        }
         Keys.onEscapePressed: {
             // If the escape key is pressed, kscreenlocker will turn off the screen.
             // We do not want to show the password prompt in this case.
@@ -198,14 +204,15 @@ Item {
             id: clockShadow
             anchors.fill: clock
             source: clock
-            visible: !softwareRendering && config.alwaysShowClock
+            opacity: lockScreenRoot.containsMouse ? 1 : 0
+            visible: !softwareRendering && config.alwaysShowClock && lockScreenRoot.containsMouse
             radius: 6
             samples: 14
             spread: 0.3
             color : "black" // shadows should always be black
             Behavior on opacity {
                 OpacityAnimator {
-                    duration: Kirigami.Units.veryLongDuration * 2
+                    duration: Kirigami.Units.veryLongDuration
                     easing.type: Easing.InOutQuad
                 }
             }
@@ -214,10 +221,17 @@ Item {
         Clock {
             id: clock
             property Item shadow: clockShadow
+            opacity: lockScreenRoot.containsMouse ? 1 : 0
             visible: y > 0 && config.alwaysShowClock
             anchors.horizontalCenter: parent.horizontalCenter
             y: (mainBlock.userList.y + mainStack.y)/2 - height/2
             Layout.alignment: Qt.AlignBaseline
+            Behavior on opacity {
+                OpacityAnimator {
+                    duration: Kirigami.Units.veryLongDuration
+                    easing.type: Easing.InOutQuad
+                }
+            }
         }
 
         ListModel {
