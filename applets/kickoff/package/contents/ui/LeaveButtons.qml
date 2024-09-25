@@ -116,7 +116,12 @@ RowLayout {
 
                 text: model.display
                 icon.name: model.decoration
-                onClicked: filteredButtonsModel.trigger(index);
+                onClicked: {
+                    filteredButtonsModel.trigger(index);
+                    if (kickoff.hideOnWindowDeactivate) {
+                        kickoff.expanded = false;
+                    }
+                }
                 display: Plasmoid.configuration.showActionButtonCaptions ? PC3.AbstractButton.TextBesideIcon : PC3.AbstractButton.IconOnly;
                 Layout.rightMargin: model.favoriteId === "switch-user" && root.__layout.allActionsArePrimary ? Kirigami.Units.gridUnit : undefined
 
