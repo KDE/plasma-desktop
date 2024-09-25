@@ -161,6 +161,7 @@ class DesktopTest(unittest.TestCase):
         ActionChains(self.driver).send_keys(Keys.ESCAPE).perform()
         wait.until_not(lambda _: title_element.is_displayed())
 
+    @unittest.skip("https://invent.kde.org/frameworks/kirigami/-/merge_requests/1612#note_1039925")
     def test_1_containment_config_dialog_3_other_sections(self) -> None:
         """
         Opens other sections successively and matches text to make sure there is no breaking QML error
