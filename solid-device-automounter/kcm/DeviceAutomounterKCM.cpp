@@ -51,11 +51,8 @@ DeviceAutomounterKCM::DeviceAutomounterKCM(QObject *parent, const KPluginMetaDat
     connect(forgetDevice, &QAbstractButton::clicked, this, &DeviceAutomounterKCM::forgetSelectedDevices);
 
     connect(m_devices, &QAbstractItemModel::dataChanged, this, &DeviceAutomounterKCM::updateState);
-}
 
-DeviceAutomounterKCM::~DeviceAutomounterKCM()
-{
-    saveLayout();
+    connect(widget(), &QObject::destroyed, this, &DeviceAutomounterKCM::saveLayout);
 }
 
 void DeviceAutomounterKCM::updateState()
@@ -107,7 +104,6 @@ void DeviceAutomounterKCM::load()
 void DeviceAutomounterKCM::save()
 {
     KCModule::save();
-    saveLayout();
 
     // Housekeeping before saving.
     // 1. Detect if any of the automount options is set to globally enable automounting
