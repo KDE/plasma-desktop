@@ -96,6 +96,7 @@ void ComponentChooser::select(int index)
 
         Q_EMIT indexChanged();
         Q_EMIT isDefaultsChanged();
+        Q_EMIT modelChanged();
     }
 }
 
