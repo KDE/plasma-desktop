@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-13 02:34+0000\n"
+"POT-Creation-Date: 2024-09-25 02:32+0000\n"
 "PO-Revision-Date: 2024-08-22 13:48+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -358,7 +358,7 @@ msgstr "İçe Aktar"
 msgid "Editing shortcut: %1"
 msgstr "Kısayol düzenleniyor: %1"
 
-#: ui/ShortcutActionDelegate.qml:53
+#: ui/ShortcutActionDelegate.qml:55
 #, kde-format
 msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
@@ -366,12 +366,12 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: ui/ShortcutActionDelegate.qml:77
+#: ui/ShortcutActionDelegate.qml:79
 #, kde-format
 msgid "No active shortcuts"
 msgstr "Etkin kısayol yok"
 
-#: ui/ShortcutActionDelegate.qml:120
+#: ui/ShortcutActionDelegate.qml:122
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -379,57 +379,57 @@ msgid_plural "Default shortcuts"
 msgstr[0] "Öntanımlı kısayol"
 msgstr[1] "Öntanımlı kısayollar"
 
-#: ui/ShortcutActionDelegate.qml:122
+#: ui/ShortcutActionDelegate.qml:124
 #, kde-format
 msgid "No default shortcuts"
 msgstr "Öntanımlı kısayol yok"
 
-#: ui/ShortcutActionDelegate.qml:131
+#: ui/ShortcutActionDelegate.qml:133
 #, kde-format
 msgid "Default shortcut %1 is enabled."
 msgstr "%1 öntanımlı kısayolu etkinleştirildi."
 
-#: ui/ShortcutActionDelegate.qml:131
+#: ui/ShortcutActionDelegate.qml:133
 #, kde-format
 msgid "Default shortcut %1 is disabled."
 msgstr "%1 öntanımlı kısayolu devre dışı bırakıldı."
 
-#: ui/ShortcutActionDelegate.qml:154
+#: ui/ShortcutActionDelegate.qml:156
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "Özel kısayollar"
 
-#: ui/ShortcutActionDelegate.qml:180
+#: ui/ShortcutActionDelegate.qml:182
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
 msgstr "Kısayolu sil"
 
-#: ui/ShortcutActionDelegate.qml:184
+#: ui/ShortcutActionDelegate.qml:186
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this shortcut"
 msgstr "Bu kısayolu sil"
 
-#: ui/ShortcutActionDelegate.qml:190
+#: ui/ShortcutActionDelegate.qml:192
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
 msgstr "Ekle…"
 
-#: ui/ShortcutActionDelegate.qml:191
+#: ui/ShortcutActionDelegate.qml:193
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr "Özel kısayol ekle"
 
-#: ui/ShortcutActionDelegate.qml:226
+#: ui/ShortcutActionDelegate.qml:228
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
 msgstr "Kısayol yakalamayı iptal et"
 
-#: ui/ShortcutActionDelegate.qml:230
+#: ui/ShortcutActionDelegate.qml:232
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel capturing of new shortcut"

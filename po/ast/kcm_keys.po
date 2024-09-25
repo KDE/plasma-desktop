@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-13 02:34+0000\n"
+"POT-Creation-Date: 2024-09-25 02:32+0000\n"
 "PO-Revision-Date: 2024-03-14 23:20+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
@@ -358,7 +358,7 @@ msgstr ""
 msgid "Editing shortcut: %1"
 msgstr ""
 
-#: ui/ShortcutActionDelegate.qml:53
+#: ui/ShortcutActionDelegate.qml:55
 #, kde-format
 msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
@@ -366,12 +366,12 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: ui/ShortcutActionDelegate.qml:77
+#: ui/ShortcutActionDelegate.qml:79
 #, kde-format
 msgid "No active shortcuts"
 msgstr ""
 
-#: ui/ShortcutActionDelegate.qml:120
+#: ui/ShortcutActionDelegate.qml:122
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -379,57 +379,57 @@ msgid_plural "Default shortcuts"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ui/ShortcutActionDelegate.qml:122
+#: ui/ShortcutActionDelegate.qml:124
 #, kde-format
 msgid "No default shortcuts"
 msgstr ""
 
-#: ui/ShortcutActionDelegate.qml:131
+#: ui/ShortcutActionDelegate.qml:133
 #, kde-format
 msgid "Default shortcut %1 is enabled."
 msgstr ""
 
-#: ui/ShortcutActionDelegate.qml:131
+#: ui/ShortcutActionDelegate.qml:133
 #, kde-format
 msgid "Default shortcut %1 is disabled."
 msgstr ""
 
-#: ui/ShortcutActionDelegate.qml:154
+#: ui/ShortcutActionDelegate.qml:156
 #, kde-format
 msgid "Custom shortcuts"
 msgstr ""
 
-#: ui/ShortcutActionDelegate.qml:180
+#: ui/ShortcutActionDelegate.qml:182
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
 msgstr ""
 
-#: ui/ShortcutActionDelegate.qml:184
+#: ui/ShortcutActionDelegate.qml:186
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this shortcut"
 msgstr ""
 
-#: ui/ShortcutActionDelegate.qml:190
+#: ui/ShortcutActionDelegate.qml:192
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
 msgstr ""
 
-#: ui/ShortcutActionDelegate.qml:191
+#: ui/ShortcutActionDelegate.qml:193
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr ""
 
-#: ui/ShortcutActionDelegate.qml:226
+#: ui/ShortcutActionDelegate.qml:228
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
 msgstr ""
 
-#: ui/ShortcutActionDelegate.qml:230
+#: ui/ShortcutActionDelegate.qml:232
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel capturing of new shortcut"

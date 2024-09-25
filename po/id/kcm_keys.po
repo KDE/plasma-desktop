@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-13 02:34+0000\n"
+"POT-Creation-Date: 2024-09-25 02:32+0000\n"
 "PO-Revision-Date: 2022-05-09 20:24+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -372,7 +372,7 @@ msgstr "Impor"
 msgid "Editing shortcut: %1"
 msgstr "Pengeditan pintasan: %1"
 
-#: ui/ShortcutActionDelegate.qml:53
+#: ui/ShortcutActionDelegate.qml:55
 #, kde-format
 msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
@@ -380,12 +380,12 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: ui/ShortcutActionDelegate.qml:77
+#: ui/ShortcutActionDelegate.qml:79
 #, kde-format
 msgid "No active shortcuts"
 msgstr "Tidak ada pintasan yang aktif"
 
-#: ui/ShortcutActionDelegate.qml:120
+#: ui/ShortcutActionDelegate.qml:122
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -393,61 +393,61 @@ msgid_plural "Default shortcuts"
 msgstr[0] "Pintasan default"
 msgstr[1] "Pintasan-pintasan default"
 
-#: ui/ShortcutActionDelegate.qml:122
+#: ui/ShortcutActionDelegate.qml:124
 #, kde-format
 msgid "No default shortcuts"
 msgstr "Tidak ada pintasan-pintasan default"
 
-#: ui/ShortcutActionDelegate.qml:131
+#: ui/ShortcutActionDelegate.qml:133
 #, kde-format
 msgid "Default shortcut %1 is enabled."
 msgstr "Pintasan default %1 difungsikan."
 
-#: ui/ShortcutActionDelegate.qml:131
+#: ui/ShortcutActionDelegate.qml:133
 #, kde-format
 msgid "Default shortcut %1 is disabled."
 msgstr "Pintasan default %1 dinonfungsikan."
 
-#: ui/ShortcutActionDelegate.qml:154
+#: ui/ShortcutActionDelegate.qml:156
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "Pintasan kustom"
 
-#: ui/ShortcutActionDelegate.qml:180
+#: ui/ShortcutActionDelegate.qml:182
 #, fuzzy, kde-format
 #| msgid "Delete this shortcut"
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
 msgstr "Hapus pintasan ini"
 
-#: ui/ShortcutActionDelegate.qml:184
+#: ui/ShortcutActionDelegate.qml:186
 #, fuzzy, kde-format
 #| msgid "Delete this shortcut"
 msgctxt "@info:tooltip"
 msgid "Delete this shortcut"
 msgstr "Hapus pintasan ini"
 
-#: ui/ShortcutActionDelegate.qml:190
+#: ui/ShortcutActionDelegate.qml:192
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
 msgstr ""
 
-#: ui/ShortcutActionDelegate.qml:191
+#: ui/ShortcutActionDelegate.qml:193
 #, fuzzy, kde-format
 #| msgid "Add custom shortcut"
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr "Tambahkan pintasan kustom"
 
-#: ui/ShortcutActionDelegate.qml:226
+#: ui/ShortcutActionDelegate.qml:228
 #, fuzzy, kde-format
 #| msgid "Cancel capturing of new shortcut"
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
 msgstr "Batal menangkap pintasan baru"
 
-#: ui/ShortcutActionDelegate.qml:230
+#: ui/ShortcutActionDelegate.qml:232
 #, fuzzy, kde-format
 #| msgid "Cancel capturing of new shortcut"
 msgctxt "@info:tooltip"
