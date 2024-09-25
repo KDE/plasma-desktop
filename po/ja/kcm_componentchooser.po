@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-09-25 00:40+0000\n"
 "PO-Revision-Date: 2023-12-29 17:17+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -91,29 +91,29 @@ msgstr "デフォルトのテキストエディタを選択"
 msgid "Select default video player"
 msgstr "デフォルトの動画プレーヤーを選択"
 
-#: ui/ComponentOverlay.qml:52
+#: ui/ComponentOverlay.qml:54
 #, kde-format
 msgid "Details"
 msgstr "詳細"
 
-#: ui/ComponentOverlay.qml:83
+#: ui/ComponentOverlay.qml:84
 #, kde-format
 msgid "This application can also open these file types:"
 msgstr "このアプリケーションはこれらのファイルタイプも開けます:"
 
-#: ui/ComponentOverlay.qml:97
+#: ui/ComponentOverlay.qml:98
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 (Currently opens in %2)"
 msgstr "%1 (現在 %2 で開かれるように設定されています)"
 
-#: ui/ComponentOverlay.qml:110
+#: ui/ComponentOverlay.qml:111
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Open All in %1"
 msgstr "すべてを %1 で開く"
 
-#: ui/ComponentOverlay.qml:129
+#: ui/ComponentOverlay.qml:130
 #, kde-format
 msgid ""
 "This application does not advertise support for the following file types, "
@@ -122,13 +122,13 @@ msgstr ""
 "このアプリケーションは以下のファイルタイプのサポートを明示していませんが、そ"
 "れでも開けるかもしれません:"
 
-#: ui/ComponentOverlay.qml:146
+#: ui/ComponentOverlay.qml:147
 #, kde-format
 msgctxt "@action:button"
 msgid "Force All to Open in %1"
 msgstr "すべてを強制的に %1 で開く"
 
-#: ui/ComponentOverlay.qml:158
+#: ui/ComponentOverlay.qml:159
 #, kde-format
 msgid "Configure Manually…"
 msgstr "手動で設定..."
@@ -142,87 +142,87 @@ msgstr ""
 "'%1' はこの種類のアプリケーションに関連付けられている以下の MIME タイプをサ"
 "ポートしていないようです: %2"
 
-#: ui/main.qml:46
+#: ui/main.qml:47
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
 msgstr "インターネット"
 
-#: ui/main.qml:50
+#: ui/main.qml:51
 #, kde-format
 msgid "Web browser:"
 msgstr "ウェブブラウザ:"
 
-#: ui/main.qml:72
+#: ui/main.qml:73
 #, kde-format
 msgid "Email client:"
 msgstr "メールクライアント:"
 
-#: ui/main.qml:94
+#: ui/main.qml:95
 #, kde-format
 msgctxt "Default phone app"
 msgid "Phone Numbers:"
 msgstr "電話番号:"
 
-#: ui/main.qml:116
+#: ui/main.qml:117
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
 msgstr "マルチメディア"
 
-#: ui/main.qml:121
+#: ui/main.qml:122
 #, kde-format
 msgid "Image viewer:"
 msgstr "画像ビューア:"
 
-#: ui/main.qml:145
+#: ui/main.qml:146
 #, kde-format
 msgid "Music player:"
 msgstr "音楽プレーヤー:"
 
-#: ui/main.qml:168
+#: ui/main.qml:169
 #, kde-format
 msgid "Video player:"
 msgstr "動画プレーヤー:"
 
-#: ui/main.qml:190
+#: ui/main.qml:191
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
 msgstr "文書"
 
-#: ui/main.qml:195
+#: ui/main.qml:196
 #, kde-format
 msgid "Text editor:"
 msgstr "テキストエディタ:"
 
-#: ui/main.qml:217
+#: ui/main.qml:218
 #, kde-format
 msgid "PDF viewer:"
 msgstr "PDF ビューア:"
 
-#: ui/main.qml:239
+#: ui/main.qml:240
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
 msgstr "ユーティリティ"
 
-#: ui/main.qml:244
+#: ui/main.qml:245
 #, kde-format
 msgid "File manager:"
 msgstr "ファイルマネージャ:"
 
-#: ui/main.qml:266
+#: ui/main.qml:267
 #, kde-format
 msgid "Terminal emulator:"
 msgstr "ターミナルエミュレータ:"
 
-#: ui/main.qml:279
+#: ui/main.qml:280
 #, kde-format
 msgid "Archive manager:"
 msgstr "アーカイブマネージャ:"
 
-#: ui/main.qml:301
+#: ui/main.qml:302
 #, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"

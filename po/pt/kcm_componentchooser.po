@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-09-25 00:40+0000\n"
 "PO-Revision-Date: 2023-02-15 15:17+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -78,12 +78,12 @@ msgstr "Seleccione o editor de texto predefinido"
 msgid "Select default video player"
 msgstr "Seleccione o leitor de vídeos predefinido"
 
-#: ui/ComponentOverlay.qml:52
+#: ui/ComponentOverlay.qml:54
 #, kde-format
 msgid "Details"
 msgstr "Detalhes"
 
-#: ui/ComponentOverlay.qml:83
+#: ui/ComponentOverlay.qml:84
 #, fuzzy, kde-format
 #| msgid ""
 #| "This application does not advertise support for the following file types:"
@@ -91,19 +91,19 @@ msgid "This application can also open these file types:"
 msgstr ""
 "Esta aplicação não anuncia o suporte para os seguintes tipos de ficheiros:"
 
-#: ui/ComponentOverlay.qml:97
+#: ui/ComponentOverlay.qml:98
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 (Currently opens in %2)"
 msgstr ""
 
-#: ui/ComponentOverlay.qml:110
+#: ui/ComponentOverlay.qml:111
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Open All in %1"
 msgstr ""
 
-#: ui/ComponentOverlay.qml:129
+#: ui/ComponentOverlay.qml:130
 #, fuzzy, kde-format
 #| msgid ""
 #| "This application does not advertise support for the following file types:"
@@ -113,7 +113,7 @@ msgid ""
 msgstr ""
 "Esta aplicação não anuncia o suporte para os seguintes tipos de ficheiros:"
 
-#: ui/ComponentOverlay.qml:146
+#: ui/ComponentOverlay.qml:147
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Force Open Anyway"
@@ -121,7 +121,7 @@ msgctxt "@action:button"
 msgid "Force All to Open in %1"
 msgstr "Forçar a Abertura à Mesma"
 
-#: ui/ComponentOverlay.qml:158
+#: ui/ComponentOverlay.qml:159
 #, kde-format
 msgid "Configure Manually…"
 msgstr ""
@@ -135,87 +135,87 @@ msgstr ""
 "O ’%1’ não parece suportar os seguintes tipos MIME associados a este tipo de "
 "aplicação: %2"
 
-#: ui/main.qml:46
+#: ui/main.qml:47
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
 msgstr "Internet"
 
-#: ui/main.qml:50
+#: ui/main.qml:51
 #, kde-format
 msgid "Web browser:"
 msgstr "Navegador Web:"
 
-#: ui/main.qml:72
+#: ui/main.qml:73
 #, kde-format
 msgid "Email client:"
 msgstr "Cliente de e-mail:"
 
-#: ui/main.qml:94
+#: ui/main.qml:95
 #, kde-format
 msgctxt "Default phone app"
 msgid "Phone Numbers:"
 msgstr ""
 
-#: ui/main.qml:116
+#: ui/main.qml:117
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
 msgstr "Multimédia"
 
-#: ui/main.qml:121
+#: ui/main.qml:122
 #, kde-format
 msgid "Image viewer:"
 msgstr "Visualizador de imagens:"
 
-#: ui/main.qml:145
+#: ui/main.qml:146
 #, kde-format
 msgid "Music player:"
 msgstr "Leitor de música:"
 
-#: ui/main.qml:168
+#: ui/main.qml:169
 #, kde-format
 msgid "Video player:"
 msgstr "Leitor de vídeos:"
 
-#: ui/main.qml:190
+#: ui/main.qml:191
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
 msgstr "Documentos"
 
-#: ui/main.qml:195
+#: ui/main.qml:196
 #, kde-format
 msgid "Text editor:"
 msgstr "Editor de texto:"
 
-#: ui/main.qml:217
+#: ui/main.qml:218
 #, kde-format
 msgid "PDF viewer:"
 msgstr "Visualizador de PDF's:"
 
-#: ui/main.qml:239
+#: ui/main.qml:240
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
 msgstr "Utilitários"
 
-#: ui/main.qml:244
+#: ui/main.qml:245
 #, kde-format
 msgid "File manager:"
 msgstr "Gestor de ficheiros:"
 
-#: ui/main.qml:266
+#: ui/main.qml:267
 #, kde-format
 msgid "Terminal emulator:"
 msgstr "Emulador de terminal:"
 
-#: ui/main.qml:279
+#: ui/main.qml:280
 #, kde-format
 msgid "Archive manager:"
 msgstr "Gestor de pacotes:"
 
-#: ui/main.qml:301
+#: ui/main.qml:302
 #, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"

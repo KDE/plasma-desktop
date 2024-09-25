@@ -1,0 +1,1053 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&plasma;">
+  <!ENTITY package "kde-module">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Slovenian "INCLUDE">
+]>
+<book id="plasma-desktop" lang="&language;">
+
+<bookinfo>
+<title
+>&plasma;priročnik</title>
+
+<authorgroup>
+<author
+><personname
+> <firstname
+>Sebastian</firstname
+> <surname
+>Kügler</surname
+> </personname
+> <email
+>sebas@kde.org</email
+> </author>
+<author
+><firstname
+>Claus</firstname
+> <surname
+>Christensen</surname
+></author>
+<othercredit role="translator"
+><firstname
+>Luka</firstname
+><surname
+>Puhar</surname
+><affiliation
+><address
+><email
+>puhar.luka@gmail.com</email
+></address
+></affiliation
+><contrib
+>Prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+<copyright>
+<year
+>2008&ndash;2010</year>
+<holder
+>Sebastian Kügler</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>23.07.2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<abstract>
+<para
+>&plasma; je osrednji uporabniški vmesnik namizja. </para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Plasma</keyword>
+<keyword
+>Plasmoid</keyword>
+<keyword
+>Pripomoček</keyword>
+<keyword
+>Vsebniki</keyword>
+<keyword
+>Namizje</keyword>
+<keyword
+>Izvajalec</keyword>
+<keyword
+>Izganjalec</keyword>
+</keywordset>
+
+</bookinfo>
+
+<chapter id="introduction">
+<title
+>Uvod</title>
+
+<para
+>&plasma; zagotavlja sodobno in prilagodljivo okolje za zagon priljubljenih aplikacij in dostop do informacij, ne glede na to, kje se nahajajo. Druge skupne lastnosti namizja &plasma; vključujejo napredno upravljanje oken in učinke namizja, podporo za pripomočke &kde; &plasma;, integrirano iskanje, upravljanje strojne opreme in visoko stopnjo prilagodljivosti. </para>
+
+</chapter>
+
+<chapter id="using-kapp">
+<title
+>Uporaba &plasma;</title>
+
+<sect1 id="plasma-components">
+<title
+>&plasma; Sestavine</title>
+
+<sect2 id="plasmoids-and-containments">
+<title
+>&plasma; Pripomočki in vsebniki</title>
+
+<para
+>Bistvo sistema &plasma; se vrti okoli dveh osnovnih konceptov: </para>
+
+<variablelist>
+<varlistentry>
+<term
+>&plasma; Pripomočki</term>
+<listitem>
+<para
+>"Appleti" ali majhne aplikacije, ki živijo na namizju. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+>Vsebniki</term
+><!--FIXME remove it, just a technical term with no meaning for joe user?-->
+<listitem>
+<para
+>Majhne aplikacije, ki delujejo kot vsebnik za &plasma; gradnike </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Na privzetem namizju sta dva glavna elementa: plošča in namizje. Oba sta vsebnika v smislu &plasma;. </para>
+
+</sect2>
+
+<sect2 id="default-plasma-desktop">
+<title
+>Privzeto &plasma; Namizje</title>
+
+<para
+><note
+><para
+>Namizje &plasma; lahko konfigurirate na nešteto načinov. Spodnji posnetek zaslona prikazuje dokaj standardno namizje. Nekatere distribucije uporabljajo obsežne prilagoditve, zato bo vaše namizje morda videti drugače. </para>
+<para
+>Podobno je mogoče oblikovati tudi grafični videz elementov vmesnika. Na teh posnetkih je uporabljen privzeti slog &plasma; Sapica.</para
+></note>
+</para>
+<para>
+<screenshot>
+<screeninfo
+>Dokaj standardna &plasma; Namizje</screeninfo>
+  <mediaobjectco>
+    <imageobjectco>
+      <areaspec units="other" otherunits="imagemap">
+        <area id="im1" linkends="panel-launcher" coords="0,519,31,551"/> <!-- #1 kickoff launcher #-->
+        <area id="im2" linkends="panel-launcher" coords="0,735,30,598"/><!-- #1 kickoff launcher icon -->
+        <!--area linkends="FIXME" coords="37,483,69,516"/--><!-- #2 panel icons # -->
+        <!--area linkends="FIXME" coords="23,558,83,597"/--><!-- #2 panel icons red box -->
+        <!--area linkends="FIXME" coords="97,666,137,707"/--><!-- #3 pager # -->
+        <!--area linkends="FIXME" coords="76,519,107,551"/--><!-- #3 pager plasmoid -->
+        <area id="im3" linkends="panel-taskbar" coords="288,519,320,551"/><!-- #4 task manager # -->
+        <area id="im4" linkends="panel-taskbar" coords="102,558,615,598"/><!-- #4 task manager red box -->
+        <area id="im5" linkends="panel-system-tray" coords="652,519,683,551"/><!-- #5 system tray # -->
+        <area id="im6" linkends="panel-system-tray" coords="618,557,728,598"/><!-- #5 system tray red box -->
+        <area id="im7" linkends="panel-digital-clock" coords="739,534,772,566"/><!-- #6 clock # -->
+        <area id="im8" linkends="panel-digital-clock" coords="729,573,781,598"/><!-- #6 clock plasmoid -->
+        <area id="im9" linkends="panel-toolbox" coords="750,477,782,508"/><!-- #7 panel cashew # -->
+        <area id="im10" linkends="panel-toolbox" coords="783,573,800,598"/><!-- #7 panel cashew icon --> 
+        <!--area linkends="FIXME" coords="733,11,765,44"/--><!-- #8 desktop cashew # -->
+        <!--area linkends="FIXME" coords="772,0,800,25"/--><!-- #8 desktop cashew icon -->
+        <!--area linkends="FIXME" coords="374,88,406,119"/--><!-- #9 folder view # -->
+        <!--area linkends="FIXME" coords="10,18,361,204"/--><!-- #9 folder view plasmoid -->
+       <area id = "im11" linkends="panel-launcher" coords="0,665,40,707"/> <!-- #1 kickoff launcher #-->
+      </areaspec>
+    <imageobject>
+      <imagedata fileref="plasma-desktop-annotated.png" format="PNG"/>
+    </imageobject>
+    </imageobjectco>
+  </mediaobjectco>
+</screenshot>
+</para>
+<orderedlist>
+<listitem
+><para
+>Zaganjalnik programa. Običajno je to <link linkend="panel-launcher"
+>Zaganjalnik aplikacij</link
+>.</para
+></listitem>
+<listitem
+><para
+>Nekaj ikon, ki omogočajo enostaven dostop do pogosto uporabljenih aplikacij</para
+></listitem>
+<!--listitem
+><para
+>The Pager widget</para
+></listitem-->
+<listitem
+><para
+><link linkend="panel-taskbar"
+>Upravitelj opravil</link
+>, ki prikazuje naslove oken trenutno zagnanih aplikacij. Ko je bil posnet posnetek zaslona, ni bilo odprto nobeno okno aplikacije</para
+></listitem>
+<listitem
+><para
+><link linkend="panel-system-tray"
+>Sistemski pladenj</link
+></para
+></listitem>
+<listitem
+><para
+>Gradnik <link linkend="panel-digital-clock"
+>Digitalna ura</link
+></para
+></listitem>
+<listitem
+><para
+>Orodje <link linkend="panel-toolbox"
+>Zbirka orodij za ploščo</link
+></para
+></listitem>
+<listitem
+><para
+>Zbirka orodij <link linkend="desktop"
+>Namizje</link
+></para
+></listitem>
+<listitem
+><para
+>Gradnik Pogled mape, ki prikazuje vsebino mape namizja</para
+></listitem>
+</orderedlist>
+
+</sect2>
+</sect1>
+
+<sect1 id="panel">
+<title
+>Pult</title>
+
+<para
+>Privzeta plošča vsebuje nekaj pripomočkov &plasma;: na levi strani je zaganjalnik aplikacij.</para>
+
+<sect2 id="panel-launcher">
+<title
+>Zaganjalnik aplikacij</title>
+
+<screenshot>
+<screeninfo
+>Zaganjalnik aplikacij</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-launcher.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Zaganjalnik aplikacij</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+<para
+>Z njim lahko zaženete aplikacije, odprete nedavno odprte datoteke in uporabite običajne možnosti odjave/izklopa. Na voljo je tudi struktura, ki omogoča brskanje po aplikacijah. Postavitev je optimizirana za najpogostejši primer uporabe: zagon aplikacije. Privzeti zavihek je zavihek <guilabel
+>Priljubljene</guilabel
+>, ki vsebuje najpogosteje uporabljene vnose. Na začetku boste verjetno pogosteje uporabljali zavihek <guilabel
+>Aplikacije</guilabel
+>. Ko ugotovite, kateri so vaši najpogosteje zagnani programi, <mousebutton
+>desno</mousebutton
+> kliknite elemente in izberite <guimenuitem
+>Dodaj v priljubljene</guimenuitem
+>, da jih dodate v <guilabel
+>Priljubljene</guilabel
+> (ali neposredno v ploščo ali na namizje. Upoštevajte, da morate <quote
+>odkleniti</quote
+> &plasma; z <mousebutton
+>desnim</mousebutton
+> klikom na namizje za kakršno koli spreminjanje).</para>
+</sect2>
+
+<sect2 id="panel-menu">
+<title
+>Meni aplikacij</title>
+
+<para
+>Če imate raje tradicionalni zaganjalnik aplikacij v obliki menija, ga spremenite tako, da <mousebutton
+>desno</mousebutton
+> kliknete gumb menija in izberete <guimenuitem
+>Alternative</guimenuitem
+>. </para>
+<screenshot>
+<screeninfo
+>Meni aplikacij</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-menu.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Meni aplikacij</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="panel-launcher-settings">
+<title
+>Nastavitve zaganjalnika aplikacij</title>
+
+<para
+>Če želite konfigurirati zaganjalnik aplikacij, ga spremenite tako, da <mousebutton
+>desno</mousebutton
+> kliknete gumb menija in izberete <guimenuitem
+>Konfiguracija zaganjalnika aplikacij</guimenuitem
+>. </para>
+<screenshot>
+<screeninfo
+>Nastavitve zaganjalnika aplikacij</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="application-launcher-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Nastavitve zaganjalnika aplikacij</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="panel-taskbar">
+<title
+>Opravilna vrstica</title>
+
+<para
+>Opravilna vrstica je še en gradnik na plošči. Privzeto prikazuje območje za vsa odprta okna na vseh namizjih. Prikaz vseh odprtih oken na trenutnem namizju lahko omogočite tako, da ob desnem kliku na upravitelja opravil med dvema oknoma potrdite <guimenuitem
+>Prikaži samo opravila s trenutnega namizja</guimenuitem
+>. Velikost besedila na elementih opravilne vrstice lahko nastavite v &systemsettings; pod <menuchoice
+><guimenu
+>Oblika</guimenu
+><guisubmenu
+>Pisave</guisubmenu
+> </menuchoice
+>. Z desnim klikom na opravilno vrstico odprete pogovorno okno Nastavitve, v katerem lahko izberete več možnosti za prilagoditev opravilne vrstice. <screenshot>
+<screeninfo
+>Tu je posnetek zaslona pogovornega okna nastavitev opravilne vrstice</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="taskbar-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Pogovorno okno z nastavitvami opravilne vrstice</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</sect2>
+
+<sect2 id="panel-system-tray">
+<title
+>Sistemska vrstica</title>
+
+<para
+>Drugi privzeti element na plošči je <application
+>Sistemski pladenj</application
+>, ki ga običajne aplikacije in gradniki uporabljajo kot dok. Z desnim klikom na <application
+>Sistemska vrstica</application
+> lahko odprete pogovorno okno z nastavitvami, v katerem lahko nastavite vnose, ki naj se prikažejo, in njihovo vidnost. </para>
+<screenshot>
+<screeninfo
+>Pogovorno okno z nastavitvami sistemske vrstice</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="system-tray-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Pogovorno okno z nastavitvami sistemske vrstice</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</sect2>
+
+<sect2 id="device-notifier">
+<title
+>Obvestilo naprave</title>
+
+<para
+>Ikona, ki se običajno nahaja v sistemski vrstici, je <application
+>Obvestilo naprave</application
+>. Priključite disk &USB; in odprlo se bo pogovorno okno, v katerem lahko odprete napravo v programu &dolphin; ali drugi povezani aplikaciji. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="device_notifier_widget.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Aplikacija <application
+>Obvestilo naprave</application
+> se uporablja za ravnanje z napravami, ki jih je mogoče priključiti, kot so pendrivi (imenovani tudi flash diski ali palčki), digitalni fotoaparati, zunanji &USB; trdi diski &etc;; Uporablja se tudi, ko se v optični pogon naloži medij, kot je &CD; ali DVD. </para>
+<para
+>Ko priključite zunanjo napravo ali v pogon naložite nov medij, se prikaže okno <guilabel
+>Obveščevalnik</guilabel
+> (odprete ga lahko tudi izrecno s klikom na ikono na plošči). Odprt ostane, dokler je nad njim kazalec, sicer se po nekaj sekundah skrije. </para>
+<para
+>Okno <guilabel
+>Obveščevalnik</guilabel
+> prikazuje seznam vseh naprav, ki jih trenutno pozna. Če premaknete kazalec miške nad napravo, boste označili, koliko možnih dejanj je povezanih s to napravo. </para>
+<para>
+<screenshot>
+<screeninfo
+></screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="device_notifier_widget_actions.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+></phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>S klikom kjer koli v osenčenem polju okoli imena naprave (vendar ne na ikono za izmet/odstranitev, če je prisotna) razširite vnos in prikažete seznam možnih dejanj za to napravo. Nabor ukrepov je odvisen od naprave; nastaviti ga je mogoče v kontekstnem meniju <application
+>Obvestilo naprave</application
+> ali v nastavitvah &systemsettings; modulih <ulink url="help:/kcontrol/solid-actions/index.html"
+>Dejanja naprav</ulink
+> in <ulink url="help:/kcontrol/solid-device-automounter/index.html"
+>Odstranljive naprave</ulink
+>. Enostavno ga izberite z miško ali tipkovnico, da zaženete to dejanje. </para>
+<para
+>Na desni strani vsakega vnosa je tudi majhna ikona, ki prikazuje, ali je naprava trenutno dostopna (ali <emphasis
+>montirana</emphasis
+>) ali ne. Napravo lahko fizično odklopite iz računalnika le, če ni nameščena. S klikom na ikono se naprava odmontira in/ali medij izloči, če je trenutno nameščen, če pa ni, se namesti. Upoštevajte, da lahko odstranitev/izmet ne uspe, če so v napravi še vedno odprte datoteke, &eg; če se kopiranje velike datoteke še ni končalo. V večini primerov lahko nekaj časa počakate in poskusite znova. Ko je odstranjevanje uspešno, se na ikoni <application
+>Obvestilo naprave</application
+> prikaže ikona uspeha. </para>
+</sect2>
+
+<sect2 id="panel-hidden">
+<title
+>Skriti predmeti</title>
+
+<para
+><application
+>Sistemska vrstica</application
+> običajno vsebuje še nekaj vnosov, kot so &klipper;, &kmix; &etc;</para>
+
+<para
+>Nekateri privzeti vnosi v <application
+>Sistemska vrstica</application
+> so skriti, da se prihrani prostor v vrstici. Za prikaz teh vnosov kliknite majhen bel trikotnik <inlinemediaobject
+><imageobject
+><imagedata fileref="system-tray-up-arrow.png" format="PNG"/> </imageobject
+></inlinemediaobject
+>, nato uporabite &LMB; za zagon gradnika ali &RMB; za odprtje njegovega pogovornega okna za nastavitve.</para>
+</sect2>
+
+<sect2 id="panel-digital-clock">
+<title
+>Digitalna ura</title>
+
+<para
+>Najbolj desno &plasma; gradnik na privzeti plošči vsebuje <application
+>Digitalna ura</application
+>. Ta ura lahko prikazuje čas v različnih časovnih pasovih in spreminja svojo velikost. Ura bo prilagodila velikost pisave območju, ki ji ga zagotavlja okoliški prostor (v tem primeru je to plošča). Če se odločite za prikaz datuma, bo ta datum prikazan z uporabo možnosti <guimenuitem
+>Majhna pisava</guimenuitem
+> iz pogovornega okna &systemsettings; <guilabel
+>Pisava</guilabel
+>. Čas bo zasedel preostali prostor. Na koncu boste torej sami izbrali količino prikazanih informacij in ali vam ustrezajo. Če želite prikazati več informacij, povečajte ploščo ali postavite uro na namizje, kjer lahko prosto raste. </para>
+</sect2>
+
+<sect2 id="panel-pager">
+<title
+>Pozivnik</title>
+
+<para
+>Izbirni element na plošči je <application
+>Pozivnik</application
+>. Omogoča preklapljanje med navideznimi namizji. Če spremenite postavitev <application
+>Pozivnika</application
+> z možnostjo <guimenuitem
+>Število vrstic</guimenuitem
+>, bo to vplivalo tudi na postavitev in animacije, ki so prikazane v učinku <guimenuitem
+>Mreža namizja</guimenuitem
+> &kwin;. Za večje pozivnike je izbira možnosti <guimenuitem
+>Prikaz ikon oken</guimenuitem
+> običajno smiselna. </para>
+</sect2>
+<!-- other items in a kde compiled from sources -->
+<!-- Activity Manager -->
+<!-- Notifications -->
+<!-- Show the Desktop -->
+
+</sect1>
+
+<sect1 id="panel-toolbox">
+<title
+>Orodjarna plošče</title>
+
+<para
+>Če je namizje odklenjeno (to lahko storite tako, da <mousebutton
+>desno</mousebutton
+> kliknete na namizje, ali če nobena aplikacija nima fokusa, s <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>L</keycap
+>), se v spodnjem desnem kotu plošče pojavi majhen logotip &plasma;. Kliknite na to orodjarno in odpre se krmilnik plošče.</para>
+
+<screenshot>
+<screeninfo
+>Nastavitve plošče</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="panel-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Nastavitve plošče</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>S krmilnikom plošče lahko spremenite položaj, velikost in postavitev plošče. Gradniki &plasma;, ki živijo na tej plošči, bodo samodejno prilagodili svojo velikost. &plasma; gradniki imajo osnovno znanje o velikosti, ki ga zagotavlja vsebina. Programirani so tako, da izkoristijo to velikost in obvestijo programček o tem, koliko prostora potrebujejo. Na koncu omejitev jabolkom določi možno velikost, jabolka pa se ji podredijo.</para>
+
+</sect1>
+
+<sect1 id="add-applets">
+<title
+>Dodajanje programčkov</title>
+
+<para
+>Odklenite namizje in lahko dodajate in odstranjujete gradnike s plošče ali namizja. Gradnike &plasma; dodajate tako, da jih preprosto povlečete, kamor želite. <mousebutton
+>Desno</mousebutton
+> kliknite na gradnik, da ga odstranite. <screenshot
+> <screeninfo
+>Dodaj gradnike</screeninfo
+> <mediaobject
+> <imageobject
+> <imagedata fileref="add-widgets.png" format="PNG"/> </imageobject
+> <textobject
+> <phrase
+>Dodaj gradnike</phrase
+> </textobject
+> </mediaobject
+> </screenshot
+> Gumb <guibutton
+>Pridobi nove gradnike</guibutton
+> vam omogoča dodajanje gradnikov, ki ste jih predhodno naložili, in prenos novih gradnikov &plasma;. Trenutno podpira izvirne pakete &plasmagik; in nekatere pripomočke za nadzorno ploščo &Mac; OS&nbsp;X. Do tako nameščenih gradnikov lahko dostopate kot do običajnih, vnaprej nameščenih gradnikov. </para>
+</sect1>
+
+<sect1 id="desktop">
+<title
+>Namizje</title>
+
+<para
+>Namizje je pravzaprav še en prostor za zadrževanje. Takšna, ki ne omejuje velikosti programčkov. Majhne programe lahko poljubno premikate in določate njihovo velikost. Na odklenjenem namizju bodo gradniki &plasma; prikazali okvir, ko se z miško premaknete nad njih. S tem ročajem lahko premikate, spreminjate velikost, prestavljate in poravnavate ploščo. Omogoča tudi vlečenje &plasma; gradnikov na namizju. Gumbi v kotu se uporabljajo za spreminjanje velikosti, vrtenje, konfiguriranje in odstranjevanje programčkov. Pri vrtenju bo pripomoček &plasma; deloval magnetno proti 12. uri, zato ga je enostavno vrniti v smiseln položaj. Večina majhnih programov med spreminjanjem velikosti privzeto ohrani svoje razmerje stranic. Če želite poljubno spremeniti velikost programčka, med spreminjanjem velikosti držite pritisnjeno tipko &Ctrl;. </para>
+
+<para
+>Z desnim klikom na namizje lahko tudi konfigurirate vidike, kot so ozadje, uporabljena postavitev in dejanja z miško. Ponuja prenos novih ozadij prek &knewstuff;. </para>
+<para
+>Na strani <guilabel
+>Popravki</guilabel
+> lahko konfigurirate skrivanje namiznega orodjarne in prilagodite ravnanje z gradniki. </para>
+
+<screenshot>
+<screeninfo
+>Nastavitve namizja</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="desktop-settings.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Nastavitve namizja</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Če želite spremeniti temo &plasma; ali prenesti novo prek &knewstuff; odprite stran <menuchoice
+><guimenu
+>Oblika</guimenu
+> <guimenuitem
+>Tema namizja</guimenuitem
+></menuchoice
+> v &systemsettings;.</para>
+
+<para
+>Z odprtimi aplikacijami hitro težko vidite pripomočke na namizju. <emphasis role="bold"
+>Armaturna plošča</emphasis
+> pred vas postavi te &plasma; gradnike, podobno kot funkcionalnost <guilabel
+>Pokukaj na namizje</guilabel
+>, ki ste je vajeni iz običajnih namizij. </para>
+
+</sect1>
+
+<sect1 id="folder-view">
+<title
+>Pogled mape</title>
+<para
+>Gradnik <guilabel
+>Pogled mape</guilabel
+> se uporablja za prikaz vnosov, kot so mape ali datoteke iz mape, privzeto iz <filename class="directory"
+>$<envar
+>HOME</envar
+>/Namizje</filename
+>. </para>
+<para
+>Izbirate lahko med pregledovanjem vseh datotek ali filtriranjem po določenih regularnih izrazih (&eg;, vse datoteke z določeno končnico) ali po vrsti datoteke (&eg; samo slike). </para>
+<para
+>Ta gradnik podpira tudi osnovne lastnosti upravljanja datotek (na primer premikanje, kopiranje, rezanje in lepljenje), na namizju pa jih imate lahko poljubno veliko. </para>
+
+<screenshot>
+<screeninfo
+>Pogled mape</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="folder-view.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>Pogled mape</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Če v <guilabel
+>Nastavitve namizja</guilabel
+> izberete postavitev <guilabel
+>Pogled mape</guilabel
+>, lahko en pogled mape uporabite kot celotno namizje, s čimer učinkovito ponovite paradigmo namizja v "starem slogu". </para>
+</sect1>
+
+<sect1 id="krunner">
+<title
+>&krunner;</title>
+<para
+>&krunner; je vsestranska mini ukazna vrstica. Z njim lahko zaženete aplikacije, odprete spletne strani, dostopate do zaznamkov, iščete po podatkih na namizju, izračunate kratke enačbe in še veliko več. S pritiskom na <keycombo action="simul"
+>&Alt;&Space;</keycombo
+> ali <keycombo action="simul"
+>&Alt;<keysym
+>F2</keysym
+></keycombo
+> se odpre pogovorno okno &krunner;. Samo začnete tipkati in &krunner; bo začel iskati zadetke takoj, ko boste vnesli več kot dva znaka. Odprite pogovorno okno z nastavitvami in se seznanite s funkcijami &krunner;, ki jih zagotavljajo vtičniki. Po tekmah se lahko pomikate s tabulatorjem in smernimi tipkami. </para>
+<!-- without tab no arrow keys-->
+<screenshot>
+<screeninfo
+>&krunner; dialog</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="krunner.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>&krunner; dialog</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Uporabite gumb <inlinemediaobject
+><imageobject
+><imagedata fileref="krunner-configure.png" format="PNG"/> </imageobject
+></inlinemediaobject
+>, da odprete modul <guilabel
+>KRunner</guilabel
+> &systemsettings; ter konfigurirate, kje in kaj naj se išče v &krunner;. </para>
+
+<para
+>&krunner; podpira <quote
+>Dejanja namizja</quote
+>, ki so dodatna dejanja, ki jih lahko aplikacija ponudi za izvajanje običajnih dejanj ali neposreden preskok na določeno opravilo iz Upravitelja opravil. Pogosti primeri so <guilabel
+>Odpri novo okno brez beleženja zgodovine</guilabel
+> za neposredno odprtje brskalnika v zasebnem načinu, <guilabel
+>Sestavite e-pošto</guilabel
+>, ne da bi najprej zagnali polnopravni e-poštni odjemalec, ali dejanja, ki jih zagotavlja &spectacle;: </para>
+
+<screenshot>
+<screeninfo
+>&krunner; Dejavnosti namizja</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="krunner-desktop-actions.png" format="PNG"/>
+    </imageobject>
+      <textobject>
+      <phrase
+>&krunner; Dejavnosti namizja</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+
+<para
+>Če pritisnete tipko &Down; v praznem &krunner;, se prikaže zgodovina zadnjih entitet. Po priklicu rezultata iskanja se njegova poizvedba premakne na vrh, tako da večkrat uporabljeni ukazi nikoli ne izpadejo s seznama. </para>
+<para
+>Posamezne vnose s seznama odstranite z gumbom <inlinemediaobject
+><imageobject
+><imagedata fileref="remove.png" format="PNG"/> </imageobject
+></inlinemediaobject
+> ali počistite celotno zgodovino v nastavitvah &krunner;. </para>
+
+<para
+>Če želite vedeti, kaj se dogaja v sistemu, lahko s pritiskom <keycombo action="simul"
+>&Ctrl;&Esc;</keycombo
+> hitro dostopate do seznama oken in procesov z možnostmi za spremljanje njihovega izpisa in ubijanje procesov. </para>
+</sect1>
+
+<sect1 id="activities-interface">
+<title
+>Dejavnosti</title>
+
+<para
+>Orodjarna namizja, do katere dostopate preko zgornjega levega kota, ima gumb za prikaz vaših dejavnosti, med katerimi je &plasma; vam omogoča, da imate več kot enega. V bistvu je to več namiznih vsebnikov, ki gostijo več nizov &plasma; pripomočki. Prikažite vrstico <quote
+>Dejavnosti</quote
+>, izberite eno od vnaprej določenih dejavnosti ali izberite <guilabel
+>Ustvari dejavnost</guilabel
+>, da ustvarite nov vsebnik, izberite svoj novi vsebnik in ga prilagodite svojemu okusu. Dejavnosti &plasma; in namizna mreža &kwin; so v tem pogledu podobne, vendar obstaja bistvena razlika. Medtem ko se navidezno namizje uporablja za združevanje in organiziranje oken, se dejavnosti &plasma; uporabljajo za združevanje in organiziranje &plasma; pripomočki. Na ta način lahko preklapljate med dejavnostmi in imate ustrezne &plasma; gradniki, ki podpirajo nalogo, ki jo trenutno poskušate opraviti. Ustvarite lahko dejavnost <quote
+>Prosti čas</quote
+> s stripi, sestavljanko in drugimi &plasma; pripomočki in dejavnost <quote
+>Delo</quote
+> z ustreznimi viri <acronym
+>RSS</acronym
+>, kalkulatorjem in koledarjem, na primer. </para>
+
+<para
+>Če želite izbrisati dejavnost, pritisnite gumb <guibutton
+>Ustavi dejavnost</guibutton
+> v vrstici <quote
+>Dejavnosti</quote
+> (pritisnite <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+> nato <keycombo action="simul"
+>&Alt;<keycap
+>A</keycap
+></keycombo
+> za odprtje te vrstice), nato kliknite rdeči 'X' (ali pritisnite <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+> nato <keycombo action="simul"
+>&Alt;<keycap
+>R</keycap
+></keycombo
+>) in potrdite izbris. </para>
+
+</sect1>
+
+<sect1 id="shortcuts">
+<title
+>Bližnjice</title>
+
+<para
+>Večina funkcij programa &plasma; je na voljo tudi z bližnjicami na tipkovnici. Različne kombinacije je treba pritiskati zaporedno, torej na primer <keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>A</keycap
+> pomeni: Pritisnite &Alt; in <keycap
+>D</keycap
+>, sprostite in pritisnite <keycap
+>A</keycap
+>. </para>
+<para
+>Trenutno lahko uporabite naslednje privzete bližnjice: </para>
+
+<variablelist>
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>A</keycap
+></term>
+<listitem
+><para
+>Dodaj pripomočke</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>R</keycap
+></term>
+<listitem
+><para
+>Odstrani pripomoček</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>L</keycap
+></term>
+<listitem
+><para
+>Zakleni/Odkleni pripomočke</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;<keycap
+>=</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Pomanjšaj</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;<keycap
+>=</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Povečaj</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>N</keycap
+></term>
+<listitem
+><para
+>Naslednji pripomoček</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>P</keycap
+></term>
+<listitem
+><para
+>Prejšnji pripomoček</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>S</keycap
+></term>
+<listitem
+><para
+>Lastnosti pripomočkov</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>A</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Dejavnosti</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>R</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Odstrani to dejavnost</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycombo action="simul"
+>&Alt;<keycap
+>S</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Nastavitve namizja</para
+></listitem
+> <!--FIXME also Panel Settings?-->
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;&Tab;</keycombo
+></term>
+<listitem
+><para
+>Naslednja aktivnost</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;&Shift;&Tab;</keycombo
+></term>
+<listitem
+><para
+>Prejšnjnja dejavnost</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Ctrl;<keycap
+>F12</keycap
+></keycombo
+></term>
+<listitem
+><para
+>Pokukaj na namizje</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>T</keycap
+></term>
+<listitem
+><para
+>Zaženi povezano aplikacijo</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><keycombo action="simul"
+>&Meta;&Tab;</keycombo
+></term>
+<listitem
+><para
+>Odpri ploščo dejavnosti</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect1>
+
+</chapter>
+
+<chapter id="credits">
+<title
+>Zasluge in licenca</title>
+
+<para
+>&plasma; </para>
+<para
+>Avtorske pravice programa 2008 &Aaron.J.Seigo; &Aaron.J.Seigo.mail; </para>
+
+<para
+>Dokumentacija Avtorske pravice &copy; 2008&ndash;2010 Sebastian Kügler <email
+>sebas@kde.org</email
+> </para>
+
+<para
+>Prevod: Luka Puhar<email
+>puhar.luka@gmail.com</email
+></para
+> &underFDL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-16 00:41+0000\n"
-"PO-Revision-Date: 2024-06-15 23:16+0200\n"
+"PO-Revision-Date: 2024-09-23 15:20+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: ui/main.qml:23
 #, kde-format
@@ -147,10 +147,7 @@ msgid "Middle-click to scroll to clicked location"
 msgstr "Кликване със среден бутон за превъртане до избраното място"
 
 #: ui/main.qml:255
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@radio part of a complete sentence: 'Middle click pastes selected text'"
-#| msgid "Middle Click:"
+#, kde-format
 msgctxt ""
 "@label for checkbox, part of a complete sentence: 'Middle-click pastes "
 "selected text'"
@@ -158,10 +155,7 @@ msgid "Middle-click:"
 msgstr "Кликване със среден бутон:"
 
 #: ui/main.qml:257
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@radio part of a complete sentence: 'Middle click pastes selected text'"
-#| msgid "Pastes selected text"
+#, kde-format
 msgctxt ""
 "@option:check part of a complete sentence: 'Middle click pastes selected "
 "text'"
@@ -217,21 +211,18 @@ msgid "Double-click interval:"
 msgstr "Интервал на двойно кликване"
 
 #: ui/main.qml:370
-#, fuzzy, kde-format
-#| msgid "%1 msec"
-#| msgid_plural "%1 msec"
+#, kde-format
 msgctxt "short for millisecond(s)"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "%1 мсек"
-msgstr[1] "%1 мсек"
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
 
 #: ui/main.qml:374
-#, fuzzy, kde-format
-#| msgid "msec"
+#, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
-msgstr "мсек"
+msgstr "ms"
 
 #: ui/main.qml:388
 #, kde-format

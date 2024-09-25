@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-19 00:41+0000\n"
-"PO-Revision-Date: 2024-08-10 22:17+0200\n"
+"PO-Revision-Date: 2024-09-23 15:20+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -328,10 +328,9 @@ msgid "Add spacer widget to the panel"
 msgstr "Добавяне на разделител към панела"
 
 #: contents/configuration/PanelConfiguration.qml:114
-#, fuzzy, kde-format
-#| msgid "Add Widgets…"
+#, kde-format
 msgid "Add or Manage Widgets…"
-msgstr "Добавяне на уиджети…"
+msgstr "Добавяне или управление на уиджети…"
 
 #: contents/configuration/PanelConfiguration.qml:117
 #, kde-format
@@ -507,15 +506,13 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "Премахване на този панел; това действие е обратимо"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Затваряне"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, fuzzy, kde-format
-#| msgid "Exit Edit Mode"
+#, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
@@ -527,46 +524,38 @@ msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "Затваряне на настройките на панела и излизане от режима за редактиране"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:32
-#, fuzzy, kde-format
-#| msgid "Drag to change maximum height."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum height."
-msgstr "Завлечете с мишката, за да промените максималната височина."
+msgstr "Завлечете, за да промените максималната височина."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:33
-#, fuzzy, kde-format
-#| msgid "Drag to change maximum width."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum width."
-msgstr "Завлечете с мишката, за да промените максималната широчина."
+msgstr "Завлечете, за да промените максималната широчина."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:34
 #: contents/configuration/panelconfiguration/Ruler.qml:39
-#, fuzzy, kde-format
-#| msgid "Double click to reset."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Double-click to reset."
 msgstr "Двойно кликване за завръщане към предишните настройки."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:37
-#, fuzzy, kde-format
-#| msgid "Drag to change minimum height."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum height."
-msgstr "Завлечете с мишката, за да промените минималната височина."
+msgstr "Завлечете, за да промените минималната височина."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:38
-#, fuzzy, kde-format
-#| msgid "Drag to change minimum width."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
-msgstr "Завлечете с мишката, за да промените минималната широчина."
+msgstr "Завлечете, за да промените минималната широчина."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:87
-#, fuzzy, kde-format
-#| msgid ""
-#| "Drag to change position on this screen edge.\n"
-#| "Double click to reset."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid ""
 "Drag to change position on this screen edge.\n"
@@ -632,7 +621,7 @@ msgstr "Неподдържан уиджет"
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
-msgstr ""
+msgstr "Ново!"
 
 #: contents/explorer/AppletDelegate.qml:188
 #, kde-format
@@ -640,17 +629,15 @@ msgid "Undo uninstall"
 msgstr "Отмяна на деинсталирането"
 
 #: contents/explorer/AppletDelegate.qml:189
-#, fuzzy, kde-format
-#| msgid "Uninstall"
+#, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Uninstall"
 msgstr "Деинсталиране"
 
 #: contents/explorer/AppletDelegate.qml:231
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgid "Remove all instances"
-msgstr "Премахване на панела"
+msgstr "Премахване на всички екземпляри"
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -696,9 +683,7 @@ msgid "Categories"
 msgstr "Категории"
 
 #: contents/explorer/WidgetExplorer.qml:240
-#, fuzzy, kde-format
-#| msgid "Confirm Removal Of One Widget"
-#| msgid_plural "Confirm Removal Of %1 Widgets"
+#, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Confirm Removal of One Widget"
 msgid_plural "Confirm Removal of %1 Widgets"

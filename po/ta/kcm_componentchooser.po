@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2024-09-25 00:40+0000\n"
 "PO-Revision-Date: 2023-12-07 21:25+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -84,29 +84,29 @@ msgstr "இயல்பிருப்பு உரைத்திருத்�
 msgid "Select default video player"
 msgstr "இயல்பிருப்பு நிகழ்பட இயக்கயை தேர்ந்தெடு"
 
-#: ui/ComponentOverlay.qml:52
+#: ui/ComponentOverlay.qml:54
 #, kde-format
 msgid "Details"
 msgstr "விவரங்கள்"
 
-#: ui/ComponentOverlay.qml:83
+#: ui/ComponentOverlay.qml:84
 #, kde-format
 msgid "This application can also open these file types:"
 msgstr "பின்வரும் கோப்புவகைகளையும் இச்செயலியால் திறக்கக்கூடும்:"
 
-#: ui/ComponentOverlay.qml:97
+#: ui/ComponentOverlay.qml:98
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 (Currently opens in %2)"
 msgstr "%1 (தற்போது %2 தனில் திறக்கப்படுவது)"
 
-#: ui/ComponentOverlay.qml:110
+#: ui/ComponentOverlay.qml:111
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Open All in %1"
 msgstr "அனைத்தையும் %1 தனில் திற"
 
-#: ui/ComponentOverlay.qml:129
+#: ui/ComponentOverlay.qml:130
 #, kde-format
 msgid ""
 "This application does not advertise support for the following file types, "
@@ -115,13 +115,13 @@ msgstr ""
 "பின்வரும் கோப்புவகைகளை ஆதரிப்பதாக இச்செயலி கூறவில்லை, ஆனாலும் அவற்றைத் திறக்கக்கூடியதாக "
 "இருக்கலாம்:"
 
-#: ui/ComponentOverlay.qml:146
+#: ui/ComponentOverlay.qml:147
 #, kde-format
 msgctxt "@action:button"
 msgid "Force All to Open in %1"
 msgstr "அனைத்தையுத் %1 தனில் திறக்குமாறு கட்டாயப்படுத்து"
 
-#: ui/ComponentOverlay.qml:158
+#: ui/ComponentOverlay.qml:159
 #, kde-format
 msgid "Configure Manually…"
 msgstr "கைமுறையாக அமை…"
@@ -134,87 +134,87 @@ msgid ""
 msgstr ""
 "இவ்வகையான செயலி ஆதரிக்கவேண்டிய பின்வரும் மைம்வகைகளை '%1' ஆதரிப்பதுபோல் தெரியவில்லை: %2"
 
-#: ui/main.qml:46
+#: ui/main.qml:47
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
 msgstr "இணையம்"
 
-#: ui/main.qml:50
+#: ui/main.qml:51
 #, kde-format
 msgid "Web browser:"
 msgstr "இணைய உலாவி:"
 
-#: ui/main.qml:72
+#: ui/main.qml:73
 #, kde-format
 msgid "Email client:"
 msgstr "மின்னஞ்சல் மென்பொருள்:"
 
-#: ui/main.qml:94
+#: ui/main.qml:95
 #, kde-format
 msgctxt "Default phone app"
 msgid "Phone Numbers:"
 msgstr "தொலைபேசி எண்கள்:"
 
-#: ui/main.qml:116
+#: ui/main.qml:117
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
 msgstr "பல்லூடகம்"
 
-#: ui/main.qml:121
+#: ui/main.qml:122
 #, kde-format
 msgid "Image viewer:"
 msgstr "படக் காட்டி:"
 
-#: ui/main.qml:145
+#: ui/main.qml:146
 #, kde-format
 msgid "Music player:"
 msgstr "பாடல் இசைப்பி:"
 
-#: ui/main.qml:168
+#: ui/main.qml:169
 #, kde-format
 msgid "Video player:"
 msgstr "நிகழ்பட இயக்கி:"
 
-#: ui/main.qml:190
+#: ui/main.qml:191
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
 msgstr "ஆவணங்கள்"
 
-#: ui/main.qml:195
+#: ui/main.qml:196
 #, kde-format
 msgid "Text editor:"
 msgstr "உரைத்திருத்தி:"
 
-#: ui/main.qml:217
+#: ui/main.qml:218
 #, kde-format
 msgid "PDF viewer:"
 msgstr "PDF காட்டி:"
 
-#: ui/main.qml:239
+#: ui/main.qml:240
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
 msgstr "பயனுள்ளவை"
 
-#: ui/main.qml:244
+#: ui/main.qml:245
 #, kde-format
 msgid "File manager:"
 msgstr "கோப்பு மேலாளர்"
 
-#: ui/main.qml:266
+#: ui/main.qml:267
 #, kde-format
 msgid "Terminal emulator:"
 msgstr "முனைய கருவி:"
 
-#: ui/main.qml:279
+#: ui/main.qml:280
 #, kde-format
 msgid "Archive manager:"
 msgstr "காப்பக நிரல்:"
 
-#: ui/main.qml:301
+#: ui/main.qml:302
 #, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
