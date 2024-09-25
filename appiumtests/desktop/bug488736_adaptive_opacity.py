@@ -164,6 +164,7 @@ def on_activate(_app: Gtk.Application) -> None:
 
 if __name__ == '__main__':
     if len(sys.argv) == 1:
+        assert subprocess.call(["pidof", "plasmashell"]) != 0, "The test requires plasmashell to quit"
         unittest.main()
     else:
         sys.argv.pop()

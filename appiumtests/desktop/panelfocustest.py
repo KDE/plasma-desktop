@@ -24,6 +24,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from desktoptest import start_plasmashell
 
+
 class PanelFocusTest(unittest.TestCase):
     """
     Tests for panel focus
@@ -67,12 +68,8 @@ class PanelFocusTest(unittest.TestCase):
         """
         el = self.driver.find_element(by=AppiumBy.NAME, value="Peek at Desktop")
         el.click()
-        WebDriverWait(self.driver, 6).until(
-            EC.visibility_of_element_located((AppiumBy.NAME, "Minimize All Applet Active Indicator"))
-        )
-        WebDriverWait(self.driver, 6).until(
-            EC.invisibility_of_element_located((AppiumBy.NAME, "Panel Focus Indicator"))
-        )
+        WebDriverWait(self.driver, 6).until(EC.visibility_of_element_located((AppiumBy.NAME, "Minimize All Applet Active Indicator")))
+        WebDriverWait(self.driver, 6).until(EC.invisibility_of_element_located((AppiumBy.NAME, "Panel Focus Indicator")))
         el.click()
 
     def test_1_setting_focus_shortcut(self) -> None:
@@ -86,8 +83,7 @@ class PanelFocusTest(unittest.TestCase):
         message = Gio.DBusMessage.new_method_call("org.kde.kglobalaccel", "/component/plasmashell", "org.kde.kglobalaccel.Component", "allShortcutInfos")
         reply, _ = session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 1000)
         shortcut_list = reply.get_body().get_child_value(0)
-        before = set(shortcut_list.get_child_value(i).get_child_value(0).get_string()
-                     for i in range(shortcut_list.n_children()))
+        before = set(shortcut_list.get_child_value(i).get_child_value(0).get_string() for i in range(shortcut_list.n_children()))
 
         actions = ActionChains(self.driver)
         actions.context_click(self.driver.find_element(by=AppiumBy.NAME, value="Peek at Desktop"))
@@ -121,8 +117,7 @@ class PanelFocusTest(unittest.TestCase):
         message = Gio.DBusMessage.new_method_call("org.kde.kglobalaccel", "/component/plasmashell", "org.kde.kglobalaccel.Component", "allShortcutInfos")
         reply, _ = session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 1000)
         shortcut_list = reply.get_body().get_child_value(0)
-        after = set(shortcut_list.get_child_value(i).get_child_value(0).get_string()
-                     for i in range(shortcut_list.n_children()))
+        after = set(shortcut_list.get_child_value(i).get_child_value(0).get_string() for i in range(shortcut_list.n_children()))
         difference = after - before
 
         self.assertTrue(len(difference) == 1)
@@ -132,9 +127,9 @@ class PanelFocusTest(unittest.TestCase):
         message.set_body(GLib.Variant("(s)", [launcher_shortcut_id]))
         session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 1000)
 
-        WebDriverWait(self.driver, 6).until(
-            EC.visibility_of_element_located((AppiumBy.NAME, "Panel Focus Indicator"))
-        )
+        WebDriverWait(self.driver, 6).until(EC.visibility_of_element_located((AppiumBy.NAME, "Panel Focus Indicator")))
+
 
 if __name__ == '__main__':
+    assert subprocess.call(["pidof", "plasmashell"]) != 0, "The test requires plasmashell to quit"
     unittest.main()
