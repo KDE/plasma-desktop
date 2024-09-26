@@ -320,51 +320,65 @@ audible cues, or who have difficulty using a keyboard.
 </sect3>
 
 <sect3 id="access-activation-shortcuts">
-<title><guilabel>Activation Gestures</guilabel></title>
+<title><guilabel>Activation Shortcuts</guilabel></title>
 
-<para>There are two sections to this panel.</para>
-
-<variablelist>
-<varlistentry>
-<term><guilabel>Activation Gestures</guilabel> with these options:</term>
-<listitem>
 <para>
-<simplelist>
-<member><guilabel>Use gestures for activating sticky keys and slow keys</guilabel></member>
-<member>Here you can activate keyboard gestures that turn on the following features:</member>
-<member>Mouse Keys: Press &Shift;+NumLock</member>
-<member>Sticky keys: Press &Shift; key 5 consecutive times</member>
-<member>Slow keys: Hold down &Shift; for 8 seconds</member>
-<member><guilabel>Turn sticky keys and slow keys off after a certain period of inactivity</guilabel></member>
-</simplelist>
+    Activation shortcuts are special keyboard shortcuts that can be used to quickly trigger
+    accessibility settings.
 </para>
-</listitem>
-</varlistentry>
 
-<varlistentry>
-<term><guilabel>Notification</guilabel> with these options:</term>
-<listitem>
 <para>
-<simplelist>
-<member><guilabel>Use the system bell whenever a gesture is used to turn an accessibility 
-feature on or off</guilabel></member>
-
-<member><guilabel>Show a confirmation dialog whenever a keyboard accessibility feature is 
-turned on or off</guilabel></member>
-<member>If this option is checked, &kde; will show a confirmation dialog whenever a 
-keyboard accessibility feature is turned on or off.</member>
-<member>Ensure you know what you are doing if you uncheck it, as the keyboard 
-accessibility settings will then always be applied without confirmation.</member>
-
-<member><guilabel>Use &kde;'s system notification mechanism whenever a keyboard accessibility 
-feature is turned on or off</guilabel></member>
-</simplelist>
+    If the check box <guilabel>Activation shortcuts: Enable</guilabel> is selected, two new
+    keyboard shortcuts will be made available:
 </para>
-</listitem>
-</varlistentry>
-</variablelist>
-<para>Click the <guibutton>Configure Notifications</guibutton> button to open a dialog 
-which allows you to edit the notifications for status changes of all keys.</para>
+
+<itemizedlist>
+    <listitem>
+        <para>
+            Press &Shift; 5 times to enable Sticky Keys
+        </para>
+    </listitem>
+    <listitem>
+        <para>
+            Hold &Shift; for 8 seconds to enable Slow Keys
+        </para>
+    </listitem>
+</itemizedlist>
+
+<para>
+    If the check box <guilabel>Disable sticky and slow keys after:</guilabel> is enabled,
+    once either of the activation shortcuts are triggered, an internal timer will start to tick down,
+    and after it ends the shortcuts will be disabled. The timer is programmable by a spinbox.
+</para>
+
+<para>
+    Similar to sticky keys and slow keys, activation shortcuts also have options to
+    let you know when the functionality gets enabled: <guilabel>When a shortcut is used:</guilabel>.
+</para>
+
+<itemizedlist>
+    <listitem>
+        <para>
+            If the check box <guilabel>Display a confirmation dialog</guilabel> is enabled,
+            a dialog describing the expected behavior of the functionality will appear, asking if you would really like
+            to enable this feature. This is useful in case you know you might accidentally trigger activation shortcuts.
+        </para>
+        <para>
+            If the check box <guilabel>Ring the system bell</guilabel> is enabled, the system bell will be triggered.
+            This option requires you to have enabled either the visible bell, the audible bell, or both.
+        </para>
+        <para>
+            If the check box <guilabel>Show a notification</guilabel> is enabled, a notification should appear explicitly
+            stating whether the relevant functionality was enabled or disabled.
+        </para>
+        <para>
+            If more customizable notification settings are needed to improve your experience with activation shortcuts,
+            you can click the <guibutton>Configure Notifications...</guibutton> button to open a dialog
+            that allows you to edit the notifications for all accessibility features, including
+            whether the notification should make a sound or show a popup.
+        </para>
+    </listitem>
+</itemizedlist>
 
 </sect3>
 
