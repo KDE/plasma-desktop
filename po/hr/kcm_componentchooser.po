@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser 0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-25 00:40+0000\n"
+"POT-Creation-Date: 2024-09-26 00:40+0000\n"
 "PO-Revision-Date: 2009-10-02 12:05+0200\n"
 "Last-Translator: Marko Dimjasevic <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -146,88 +146,100 @@ msgid ""
 "of application: %2"
 msgstr ""
 
-#: ui/main.qml:47
+#: ui/main.qml:34
+#, kde-format
+msgctxt "@info:status"
+msgid "This application may not be able to open all file types."
+msgstr ""
+
+#: ui/main.qml:36
+#, kde-format
+msgctxt "@action:button"
+msgid "View Details"
+msgstr ""
+
+#: ui/main.qml:62
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
 msgstr ""
 
-#: ui/main.qml:51
+#: ui/main.qml:68
 #, kde-format
 msgid "Web browser:"
 msgstr ""
 
-#: ui/main.qml:73
+#: ui/main.qml:82
 #, kde-format
 msgid "Email client:"
 msgstr ""
 
-#: ui/main.qml:95
+#: ui/main.qml:96
 #, kde-format
 msgctxt "Default phone app"
 msgid "Phone Numbers:"
 msgstr ""
 
-#: ui/main.qml:117
+#: ui/main.qml:110
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
 msgstr ""
 
-#: ui/main.qml:122
+#: ui/main.qml:116
 #, kde-format
 msgid "Image viewer:"
 msgstr ""
 
-#: ui/main.qml:146
+#: ui/main.qml:130
 #, kde-format
 msgid "Music player:"
 msgstr ""
 
-#: ui/main.qml:169
+#: ui/main.qml:144
 #, kde-format
 msgid "Video player:"
 msgstr ""
 
-#: ui/main.qml:191
+#: ui/main.qml:158
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
 msgstr ""
 
-#: ui/main.qml:196
+#: ui/main.qml:164
 #, kde-format
 msgid "Text editor:"
 msgstr ""
 
-#: ui/main.qml:218
+#: ui/main.qml:179
 #, kde-format
 msgid "PDF viewer:"
 msgstr ""
 
-#: ui/main.qml:240
+#: ui/main.qml:193
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
 msgstr ""
 
-#: ui/main.qml:245
+#: ui/main.qml:199
 #, kde-format
 msgid "File manager:"
 msgstr ""
 
-#: ui/main.qml:267
+#: ui/main.qml:213
 #, fuzzy, kde-format
 #| msgid "Select preferred terminal application:"
 msgid "Terminal emulator:"
 msgstr "Odaberite preferiranu terminalnu aplikaciju:"
 
-#: ui/main.qml:280
+#: ui/main.qml:227
 #, kde-format
 msgid "Archive manager:"
 msgstr ""
 
-#: ui/main.qml:302
+#: ui/main.qml:241
 #, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"

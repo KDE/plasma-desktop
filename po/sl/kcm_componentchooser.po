@@ -1,7 +1,7 @@
 # translation of kcmcomponentchooser.po to Slovenian
 # Translation of kcmcomponentchooser.po to Slovenian
 # SLOVENIAN TRANSLATION OF KDEBASE.
-# $Id: kcm_componentchooser.po 1691332 2024-09-25 01:15:05Z scripty $
+# $Id: kcm_componentchooser.po 1691409 2024-09-26 01:14:40Z scripty $
 # $Source$
 #
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-25 00:40+0000\n"
+"POT-Creation-Date: 2024-09-26 00:40+0000\n"
 "PO-Revision-Date: 2024-03-15 15:45+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -144,87 +144,101 @@ msgstr ""
 "’%1’ kaže, da ne podpira naslednjih vrst MIME v povezavi s to vrsto "
 "aplikacije : %2"
 
-#: ui/main.qml:47
+#: ui/main.qml:34
+#, fuzzy, kde-format
+#| msgid "This application can also open these file types:"
+msgctxt "@info:status"
+msgid "This application may not be able to open all file types."
+msgstr "Ta aplikacija lahko odpira tudi te vrste datotek:"
+
+#: ui/main.qml:36
+#, fuzzy, kde-format
+#| msgid "Details"
+msgctxt "@action:button"
+msgid "View Details"
+msgstr "Podrobnosti"
+
+#: ui/main.qml:62
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
 msgstr "Internet"
 
-#: ui/main.qml:51
+#: ui/main.qml:68
 #, kde-format
 msgid "Web browser:"
 msgstr "Spletni brskalnik:"
 
-#: ui/main.qml:73
+#: ui/main.qml:82
 #, kde-format
 msgid "Email client:"
 msgstr "Odjemalec elektronske pošte:"
 
-#: ui/main.qml:95
+#: ui/main.qml:96
 #, kde-format
 msgctxt "Default phone app"
 msgid "Phone Numbers:"
 msgstr "Telefonske številke:"
 
-#: ui/main.qml:117
+#: ui/main.qml:110
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
 msgstr "Večpredstavnost"
 
-#: ui/main.qml:122
+#: ui/main.qml:116
 #, kde-format
 msgid "Image viewer:"
 msgstr "Ogledovalnik slik:"
 
-#: ui/main.qml:146
+#: ui/main.qml:130
 #, kde-format
 msgid "Music player:"
 msgstr "Predvajalnik glasbe:"
 
-#: ui/main.qml:169
+#: ui/main.qml:144
 #, kde-format
 msgid "Video player:"
 msgstr "Predvajalnik videov:"
 
-#: ui/main.qml:191
+#: ui/main.qml:158
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
 msgstr "Dokumenti"
 
-#: ui/main.qml:196
+#: ui/main.qml:164
 #, kde-format
 msgid "Text editor:"
 msgstr "Urejevalnik besedil:"
 
-#: ui/main.qml:218
+#: ui/main.qml:179
 #, kde-format
 msgid "PDF viewer:"
 msgstr "Ogledovalnik dokumentov PDF:"
 
-#: ui/main.qml:240
+#: ui/main.qml:193
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
 msgstr "Uporabni programi"
 
-#: ui/main.qml:245
+#: ui/main.qml:199
 #, kde-format
 msgid "File manager:"
 msgstr "Upravljalnik datotek:"
 
-#: ui/main.qml:267
+#: ui/main.qml:213
 #, kde-format
 msgid "Terminal emulator:"
 msgstr "Terminalski program:"
 
-#: ui/main.qml:280
+#: ui/main.qml:227
 #, kde-format
 msgid "Archive manager:"
 msgstr "Upravljalnik arhivov:"
 
-#: ui/main.qml:302
+#: ui/main.qml:241
 #, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"

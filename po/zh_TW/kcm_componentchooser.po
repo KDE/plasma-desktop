@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-25 00:40+0000\n"
+"POT-Creation-Date: 2024-09-26 00:40+0000\n"
 "PO-Revision-Date: 2023-11-29 17:57+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -137,87 +137,101 @@ msgid ""
 "of application: %2"
 msgstr "'%1' 似乎不支援以下與這種應用程式相關的 MIME 類型：%2"
 
-#: ui/main.qml:47
+#: ui/main.qml:34
+#, fuzzy, kde-format
+#| msgid "This application can also open these file types:"
+msgctxt "@info:status"
+msgid "This application may not be able to open all file types."
+msgstr "這個應用程式也可以開啟以下檔案型態："
+
+#: ui/main.qml:36
+#, fuzzy, kde-format
+#| msgid "Details"
+msgctxt "@action:button"
+msgid "View Details"
+msgstr "詳細資料"
+
+#: ui/main.qml:62
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
 msgstr "網際網路"
 
-#: ui/main.qml:51
+#: ui/main.qml:68
 #, kde-format
 msgid "Web browser:"
 msgstr "網頁瀏覽器："
 
-#: ui/main.qml:73
+#: ui/main.qml:82
 #, kde-format
 msgid "Email client:"
 msgstr "電子郵件軟體："
 
-#: ui/main.qml:95
+#: ui/main.qml:96
 #, kde-format
 msgctxt "Default phone app"
 msgid "Phone Numbers:"
 msgstr "電話號碼："
 
-#: ui/main.qml:117
+#: ui/main.qml:110
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
 msgstr "多媒體"
 
-#: ui/main.qml:122
+#: ui/main.qml:116
 #, kde-format
 msgid "Image viewer:"
 msgstr "影像檢視器："
 
-#: ui/main.qml:146
+#: ui/main.qml:130
 #, kde-format
 msgid "Music player:"
 msgstr "音樂播放器："
 
-#: ui/main.qml:169
+#: ui/main.qml:144
 #, kde-format
 msgid "Video player:"
 msgstr "影片播放器："
 
-#: ui/main.qml:191
+#: ui/main.qml:158
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
 msgstr "文件"
 
-#: ui/main.qml:196
+#: ui/main.qml:164
 #, kde-format
 msgid "Text editor:"
 msgstr "文字編輯器："
 
-#: ui/main.qml:218
+#: ui/main.qml:179
 #, kde-format
 msgid "PDF viewer:"
 msgstr "PDF 檢視器："
 
-#: ui/main.qml:240
+#: ui/main.qml:193
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
 msgstr "工具"
 
-#: ui/main.qml:245
+#: ui/main.qml:199
 #, kde-format
 msgid "File manager:"
 msgstr "檔案管理員："
 
-#: ui/main.qml:267
+#: ui/main.qml:213
 #, kde-format
 msgid "Terminal emulator:"
 msgstr "終端機模擬程式："
 
-#: ui/main.qml:280
+#: ui/main.qml:227
 #, kde-format
 msgid "Archive manager:"
 msgstr "封存檔管理器："
 
-#: ui/main.qml:302
+#: ui/main.qml:241
 #, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"

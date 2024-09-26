@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-25 00:40+0000\n"
+"POT-Creation-Date: 2024-09-26 00:40+0000\n"
 "PO-Revision-Date: 2024-03-09 19:02+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -138,87 +138,101 @@ msgstr ""
 "«%1» ser ikkje ut til å støtta desse MIME-typane knytt til denne typen "
 "program: %2"
 
-#: ui/main.qml:47
+#: ui/main.qml:34
+#, fuzzy, kde-format
+#| msgid "This application can also open these file types:"
+msgctxt "@info:status"
+msgid "This application may not be able to open all file types."
+msgstr "Dette programmet kan òg opna desse filtypane:"
+
+#: ui/main.qml:36
+#, fuzzy, kde-format
+#| msgid "Details"
+msgctxt "@action:button"
+msgid "View Details"
+msgstr "Detaljar"
+
+#: ui/main.qml:62
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
 msgstr "Internett"
 
-#: ui/main.qml:51
+#: ui/main.qml:68
 #, kde-format
 msgid "Web browser:"
 msgstr "Nettlesar:"
 
-#: ui/main.qml:73
+#: ui/main.qml:82
 #, kde-format
 msgid "Email client:"
 msgstr "E-postprogram:"
 
-#: ui/main.qml:95
+#: ui/main.qml:96
 #, kde-format
 msgctxt "Default phone app"
 msgid "Phone Numbers:"
 msgstr "Telefonnummer:"
 
-#: ui/main.qml:117
+#: ui/main.qml:110
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
 msgstr "Multimedia"
 
-#: ui/main.qml:122
+#: ui/main.qml:116
 #, kde-format
 msgid "Image viewer:"
 msgstr "Biletvisar:"
 
-#: ui/main.qml:146
+#: ui/main.qml:130
 #, kde-format
 msgid "Music player:"
 msgstr "Musikkspelar:"
 
-#: ui/main.qml:169
+#: ui/main.qml:144
 #, kde-format
 msgid "Video player:"
 msgstr "Videospelar:"
 
-#: ui/main.qml:191
+#: ui/main.qml:158
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
 msgstr "Dokument"
 
-#: ui/main.qml:196
+#: ui/main.qml:164
 #, kde-format
 msgid "Text editor:"
 msgstr "Skriveprogram:"
 
-#: ui/main.qml:218
+#: ui/main.qml:179
 #, kde-format
 msgid "PDF viewer:"
 msgstr "PDF-visar:"
 
-#: ui/main.qml:240
+#: ui/main.qml:193
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
 msgstr "Verktøy"
 
-#: ui/main.qml:245
+#: ui/main.qml:199
 #, kde-format
 msgid "File manager:"
 msgstr "Filhandsamar:"
 
-#: ui/main.qml:267
+#: ui/main.qml:213
 #, kde-format
 msgid "Terminal emulator:"
 msgstr "Terminalemulator:"
 
-#: ui/main.qml:280
+#: ui/main.qml:227
 #, kde-format
 msgid "Archive manager:"
 msgstr "Arkivhandsamar:"
 
-#: ui/main.qml:302
+#: ui/main.qml:241
 #, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"

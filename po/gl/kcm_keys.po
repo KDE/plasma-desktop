@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-13 00:41+0000\n"
+"POT-Creation-Date: 2024-09-26 00:40+0000\n"
 "PO-Revision-Date: 2024-08-22 19:04+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -353,7 +353,7 @@ msgstr "Importar"
 msgid "Editing shortcut: %1"
 msgstr "Editando un atallo: %1"
 
-#: ui/ShortcutActionDelegate.qml:53
+#: ui/ShortcutActionDelegate.qml:55
 #, kde-format
 msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
@@ -361,12 +361,12 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: ui/ShortcutActionDelegate.qml:77
+#: ui/ShortcutActionDelegate.qml:79
 #, kde-format
 msgid "No active shortcuts"
 msgstr "Non hai atallos activos."
 
-#: ui/ShortcutActionDelegate.qml:120
+#: ui/ShortcutActionDelegate.qml:122
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -374,57 +374,57 @@ msgid_plural "Default shortcuts"
 msgstr[0] "Atallo predeterminado"
 msgstr[1] "Atallos predeterminados"
 
-#: ui/ShortcutActionDelegate.qml:122
+#: ui/ShortcutActionDelegate.qml:124
 #, kde-format
 msgid "No default shortcuts"
 msgstr "Non hai atallos predeterminados"
 
-#: ui/ShortcutActionDelegate.qml:131
+#: ui/ShortcutActionDelegate.qml:133
 #, kde-format
 msgid "Default shortcut %1 is enabled."
 msgstr "O atallo predeterminado %1 está activado."
 
-#: ui/ShortcutActionDelegate.qml:131
+#: ui/ShortcutActionDelegate.qml:133
 #, kde-format
 msgid "Default shortcut %1 is disabled."
 msgstr "O atallo predeterminado %1 está desactivado."
 
-#: ui/ShortcutActionDelegate.qml:154
+#: ui/ShortcutActionDelegate.qml:156
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "Atallos personalizados"
 
-#: ui/ShortcutActionDelegate.qml:180
+#: ui/ShortcutActionDelegate.qml:182
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
 msgstr "Eliminar o atallo"
 
-#: ui/ShortcutActionDelegate.qml:184
+#: ui/ShortcutActionDelegate.qml:186
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this shortcut"
 msgstr "Eliminar este atallo."
 
-#: ui/ShortcutActionDelegate.qml:190
+#: ui/ShortcutActionDelegate.qml:192
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
 msgstr "Engadir…"
 
-#: ui/ShortcutActionDelegate.qml:191
+#: ui/ShortcutActionDelegate.qml:193
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr "Engadir un atallo personalizado"
 
-#: ui/ShortcutActionDelegate.qml:226
+#: ui/ShortcutActionDelegate.qml:228
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
 msgstr "Cancelar a captura do atallo"
 
-#: ui/ShortcutActionDelegate.qml:230
+#: ui/ShortcutActionDelegate.qml:232
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel capturing of new shortcut"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-13 00:41+0000\n"
+"POT-Creation-Date: 2024-09-26 00:40+0000\n"
 "PO-Revision-Date: 2024-08-29 13:47+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -354,7 +354,7 @@ msgstr "Importovat"
 msgid "Editing shortcut: %1"
 msgstr "Upravujete zkratku: %1"
 
-#: ui/ShortcutActionDelegate.qml:53
+#: ui/ShortcutActionDelegate.qml:55
 #, kde-format
 msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
@@ -362,12 +362,12 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: ui/ShortcutActionDelegate.qml:77
+#: ui/ShortcutActionDelegate.qml:79
 #, kde-format
 msgid "No active shortcuts"
 msgstr "Žádné aktivní klávesové zkratky"
 
-#: ui/ShortcutActionDelegate.qml:120
+#: ui/ShortcutActionDelegate.qml:122
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -376,57 +376,57 @@ msgstr[0] "Výchozí klávesová zkratka"
 msgstr[1] "Výchozí klávesové zkratky"
 msgstr[2] "Výchozí klávesové zkratky"
 
-#: ui/ShortcutActionDelegate.qml:122
+#: ui/ShortcutActionDelegate.qml:124
 #, kde-format
 msgid "No default shortcuts"
 msgstr "Žádné výchozí klávesové zkratky"
 
-#: ui/ShortcutActionDelegate.qml:131
+#: ui/ShortcutActionDelegate.qml:133
 #, kde-format
 msgid "Default shortcut %1 is enabled."
 msgstr "Výchozí klávesová zkratka %1 je povolena."
 
-#: ui/ShortcutActionDelegate.qml:131
+#: ui/ShortcutActionDelegate.qml:133
 #, kde-format
 msgid "Default shortcut %1 is disabled."
 msgstr "Výchozí klávesová zkratka %1 je zakázána."
 
-#: ui/ShortcutActionDelegate.qml:154
+#: ui/ShortcutActionDelegate.qml:156
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "Vlastní zkratky"
 
-#: ui/ShortcutActionDelegate.qml:180
+#: ui/ShortcutActionDelegate.qml:182
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
 msgstr "Smazat zkratku"
 
-#: ui/ShortcutActionDelegate.qml:184
+#: ui/ShortcutActionDelegate.qml:186
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this shortcut"
 msgstr "Odstranit tuto klávesovou zkratku"
 
-#: ui/ShortcutActionDelegate.qml:190
+#: ui/ShortcutActionDelegate.qml:192
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
 msgstr "Přidat…"
 
-#: ui/ShortcutActionDelegate.qml:191
+#: ui/ShortcutActionDelegate.qml:193
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr "Přidat vlastní klávesovou zkratku"
 
-#: ui/ShortcutActionDelegate.qml:226
+#: ui/ShortcutActionDelegate.qml:228
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
 msgstr "Zrušit zadání klávesové zkratky"
 
-#: ui/ShortcutActionDelegate.qml:230
+#: ui/ShortcutActionDelegate.qml:232
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel capturing of new shortcut"

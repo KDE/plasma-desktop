@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-25 00:40+0000\n"
+"POT-Creation-Date: 2024-09-26 00:40+0000\n"
 "PO-Revision-Date: 2024-07-26 22:53-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -140,87 +140,101 @@ msgstr ""
 "’%1’ parece não suportar os seguintes tipos MIME associados a este tipo de "
 "aplicativo: %2"
 
-#: ui/main.qml:47
+#: ui/main.qml:34
+#, fuzzy, kde-format
+#| msgid "This application can also open these file types:"
+msgctxt "@info:status"
+msgid "This application may not be able to open all file types."
+msgstr "Este aplicativo também pode abrir estes formatos de arquivo:"
+
+#: ui/main.qml:36
+#, fuzzy, kde-format
+#| msgid "Details"
+msgctxt "@action:button"
+msgid "View Details"
+msgstr "Detalhes"
+
+#: ui/main.qml:62
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
 msgstr "Internet"
 
-#: ui/main.qml:51
+#: ui/main.qml:68
 #, kde-format
 msgid "Web browser:"
 msgstr "Navegador Web:"
 
-#: ui/main.qml:73
+#: ui/main.qml:82
 #, kde-format
 msgid "Email client:"
 msgstr "Cliente de e-mail:"
 
-#: ui/main.qml:95
+#: ui/main.qml:96
 #, kde-format
 msgctxt "Default phone app"
 msgid "Phone Numbers:"
 msgstr "Números de telefone:"
 
-#: ui/main.qml:117
+#: ui/main.qml:110
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
 msgstr "Multimídia"
 
-#: ui/main.qml:122
+#: ui/main.qml:116
 #, kde-format
 msgid "Image viewer:"
 msgstr "Visualizador de imagem:"
 
-#: ui/main.qml:146
+#: ui/main.qml:130
 #, kde-format
 msgid "Music player:"
 msgstr "Reprodutor de música:"
 
-#: ui/main.qml:169
+#: ui/main.qml:144
 #, kde-format
 msgid "Video player:"
 msgstr "Reprodutor de vídeo:"
 
-#: ui/main.qml:191
+#: ui/main.qml:158
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
 msgstr "Documentos"
 
-#: ui/main.qml:196
+#: ui/main.qml:164
 #, kde-format
 msgid "Text editor:"
 msgstr "Editor de texto:"
 
-#: ui/main.qml:218
+#: ui/main.qml:179
 #, kde-format
 msgid "PDF viewer:"
 msgstr "Visualizador de PDF:"
 
-#: ui/main.qml:240
+#: ui/main.qml:193
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
 msgstr "Utilitários"
 
-#: ui/main.qml:245
+#: ui/main.qml:199
 #, kde-format
 msgid "File manager:"
 msgstr "Gerenciador de arquivos:"
 
-#: ui/main.qml:267
+#: ui/main.qml:213
 #, kde-format
 msgid "Terminal emulator:"
 msgstr "Emulador de terminal:"
 
-#: ui/main.qml:280
+#: ui/main.qml:227
 #, kde-format
 msgid "Archive manager:"
 msgstr "Gerenciador de arquivos compactados:"
 
-#: ui/main.qml:302
+#: ui/main.qml:241
 #, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"

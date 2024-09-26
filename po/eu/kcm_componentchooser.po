@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-25 00:40+0000\n"
+"POT-Creation-Date: 2024-09-26 00:40+0000\n"
 "PO-Revision-Date: 2023-11-30 09:55+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -141,87 +141,101 @@ msgstr ""
 "Ematen du '%1'(e)k ez dituela aplikazio mota honekin lotutako ondoko MIME "
 "motak onartzen: %2"
 
-#: ui/main.qml:47
+#: ui/main.qml:34
+#, fuzzy, kde-format
+#| msgid "This application can also open these file types:"
+msgctxt "@info:status"
+msgid "This application may not be able to open all file types."
+msgstr "Aplikazio honek beste fitxategi-mota horiek ere ireki ditzake:"
+
+#: ui/main.qml:36
+#, fuzzy, kde-format
+#| msgid "Details"
+msgctxt "@action:button"
+msgid "View Details"
+msgstr "Xehetasunak"
+
+#: ui/main.qml:62
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
 msgstr "Internet"
 
-#: ui/main.qml:51
+#: ui/main.qml:68
 #, kde-format
 msgid "Web browser:"
 msgstr "Web arakatzailea:"
 
-#: ui/main.qml:73
+#: ui/main.qml:82
 #, kde-format
 msgid "Email client:"
 msgstr "E-posta bezeroa:"
 
-#: ui/main.qml:95
+#: ui/main.qml:96
 #, kde-format
 msgctxt "Default phone app"
 msgid "Phone Numbers:"
 msgstr "Telefono zenbakiak:"
 
-#: ui/main.qml:117
+#: ui/main.qml:110
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
 msgstr "Multimedia"
 
-#: ui/main.qml:122
+#: ui/main.qml:116
 #, kde-format
 msgid "Image viewer:"
 msgstr "Irudi erakuslea:"
 
-#: ui/main.qml:146
+#: ui/main.qml:130
 #, kde-format
 msgid "Music player:"
 msgstr "Musika-jotzailea:"
 
-#: ui/main.qml:169
+#: ui/main.qml:144
 #, kde-format
 msgid "Video player:"
 msgstr "Bideo-jotzailea:"
 
-#: ui/main.qml:191
+#: ui/main.qml:158
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
 msgstr "Dokumentuak"
 
-#: ui/main.qml:196
+#: ui/main.qml:164
 #, kde-format
 msgid "Text editor:"
 msgstr "Testu-editorea:"
 
-#: ui/main.qml:218
+#: ui/main.qml:179
 #, kde-format
 msgid "PDF viewer:"
 msgstr "PDF erakuslea:"
 
-#: ui/main.qml:240
+#: ui/main.qml:193
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
 msgstr "Baliagarritasunak"
 
-#: ui/main.qml:245
+#: ui/main.qml:199
 #, kde-format
 msgid "File manager:"
 msgstr "Fitxategi-kudeatzailea:"
 
-#: ui/main.qml:267
+#: ui/main.qml:213
 #, kde-format
 msgid "Terminal emulator:"
 msgstr "Terminal emulatzailea:"
 
-#: ui/main.qml:280
+#: ui/main.qml:227
 #, kde-format
 msgid "Archive manager:"
 msgstr "Artxibo-kudeatzailea:"
 
-#: ui/main.qml:302
+#: ui/main.qml:241
 #, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
