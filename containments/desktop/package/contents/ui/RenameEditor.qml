@@ -7,6 +7,8 @@
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtQml 2.15
+import QtQuick.Controls as QQC2
+
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.components 3.0 as PlasmaComponents
@@ -27,7 +29,10 @@ PlasmaComponents.ScrollView {
         }
     }
 
-    PlasmaComponents.TextArea {
+    // We use QQC2.TextArea here to allow context menu to appear,
+    // since PlasmaComponents.TextArea does not have a context menu
+    // BUG:427292
+    QQC2.TextArea {
         id: editor
 
         wrapMode: root.useListViewMode ? TextEdit.NoWrap : TextEdit.Wrap
@@ -37,6 +42,8 @@ PlasmaComponents.ScrollView {
         horizontalAlignment: root.useListViewMode ? TextEdit.AlignLeft : TextEdit.AlignHCenter
 
         rightPadding: root.PlasmaComponents.ScrollBar.vertical.visible ? root.PlasmaComponents.ScrollBar.vertical.width : 0
+
+        Kirigami.SpellCheck.enabled: false
 
         property Item targetItem: null
 
