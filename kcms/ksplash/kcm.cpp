@@ -115,7 +115,8 @@ void KCMSplashScreen::ghnsEntryChanged(const KNSCore::Entry &entry)
 {
     auto removeItemFromModel = [this](const QStringList &files) {
         if (!files.isEmpty()) {
-            const QString guessedPluginId = QFileInfo(files.constFirst()).fileName();
+            QFileInfo info(files.constFirst());
+            const QString guessedPluginId = info.isDir() ? info.dir().dirName() : info.fileName();
             const int index = pluginIndex(guessedPluginId);
             if (index != -1) {
                 m_model->removeRows(index, 1);
