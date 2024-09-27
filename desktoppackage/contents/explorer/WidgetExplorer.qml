@@ -27,6 +27,8 @@ PC3.Page {
 
     opacity: draggingWidget ? 0.3 : 1
 
+    readonly property int contentMargins: Kirigami.Units.largeSpacing
+
     property QtObject containment
 
     property PlasmaCore.Dialog sidePanel
@@ -150,17 +152,13 @@ PC3.Page {
     }
 
     header: PlasmaExtras.PlasmoidHeading {
-        readonly property int margins: Kirigami.Units.largeSpacing
+        // Subtract page's own margins since we touch the top, left, and right
+        topPadding: - main.sidePanel.margins.top
+        leftPadding: main.contentMargins - main.sidePanel.margins.left
+        rightPadding: main.contentMargins - main.sidePanel.margins.right
+        bottomPadding: main.contentMargins
 
-        topPadding: topInset
-        leftPadding: margins + leftInset
-        rightPadding: margins + rightInset
-        bottomPadding: margins + bottomInset
-
-        ColumnLayout {
-            id: header
-            anchors.fill: parent
-
+        contentItem: ColumnLayout {
             spacing: Kirigami.Units.smallSpacing
 
             RowLayout {
@@ -241,8 +239,17 @@ PC3.Page {
     }
 
     footer: PlasmaExtras.PlasmoidHeading {
+        id: footerContainer
+
+        // Subtract page's own margins since we touch the left, right, and bottom
+        topPadding: main.contentMargins
+        leftPadding: main.contentMargins - main.sidePanel.margins.left
+        rightPadding: main.contentMargins - main.sidePanel.margins.right
+        bottomPadding: main.contentMargins - main.sidePanel.margins.bottom
+
         position: PC3.ToolBar.Footer
         visible: pendingUninstallTimer.applets.length > 0
+
         contentItem: PC3.Button {
             text: i18ndp("plasma_shell_org.kde.plasma.desktop", "Confirm Removal Of One Widget", "Confirm Removal Of %1 Widgets", pendingUninstallTimer.applets.length)
             onClicked: pendingUninstallTimer.uninstall()
@@ -257,8 +264,16 @@ PC3.Page {
     }
 
     PC3.ScrollView {
-        anchors.fill: parent
-        anchors.rightMargin: - main.sidePanel.margins.right
+        anchors {
+            fill: parent
+            // Subtract page's own margins since we touch the left, right, and sometimes bottom
+            topMargin: -1 // account for PlasmoidHeading's pixel
+            leftMargin: - main.sidePanel.margins.left
+            rightMargin: - main.sidePanel.margins.right
+            bottomMargin: footerContainer.visible ? 0 : - main.sidePanel.margins.bottom
+        }
+
+        PC3.ScrollBar.horizontal.policy: PC3.ScrollBar.AlwaysOff
 
         // hide the flickering by fading in nicely
         opacity: setModelTimer.running ? 0 : 1
@@ -272,10 +287,19 @@ PC3.Page {
         GridView {
             id: list
 
+            readonly property int effectiveWidth: width
+                                                - leftMargin
+                                                - rightMargin
+
             // model set delayed by Timer above
 
+            topMargin: main.contentMargins
+            leftMargin: main.contentMargins
+            rightMargin: main.contentMargins
+            bottomMargin: main.contentMargins
+
             activeFocusOnTab: true
-            cellWidth: Math.floor(width / 3)
+            cellWidth: Math.floor(effectiveWidth / 3)
             cellHeight: cellWidth + Kirigami.Units.gridUnit * 4 + Kirigami.Units.smallSpacing * 3
 
             delegate: AppletDelegate {}
