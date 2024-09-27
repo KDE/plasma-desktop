@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-26 00:40+0000\n"
-"PO-Revision-Date: 2023-11-19 06:35+0100\n"
+"PO-Revision-Date: 2024-09-26 05:34+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: applicationmodel.cpp:67
 #, kde-format
@@ -135,18 +135,16 @@ msgstr ""
 "აპლიკაციით: %2"
 
 #: ui/main.qml:34
-#, fuzzy, kde-format
-#| msgid "This application can also open these file types:"
+#, kde-format
 msgctxt "@info:status"
 msgid "This application may not be able to open all file types."
-msgstr "ამ აპლიკაციას, ასევე, შეუძლია შემდეგი ტიპის ფაილების გახსნა:"
+msgstr "ამ აპლიკაციამ, შეიძლება, ვერ შეძლოს ფაილის ყველა ტიპის გახსნა."
 
 #: ui/main.qml:36
-#, fuzzy, kde-format
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button"
 msgid "View Details"
-msgstr "დეტალები"
+msgstr "დეტალების ნახვა"
 
 #: ui/main.qml:62
 #, kde-format
