@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-04 00:41+0000\n"
-"PO-Revision-Date: 2024-05-11 22:54+0200\n"
+"PO-Revision-Date: 2024-09-26 14:23+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -15,17 +15,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: inputsequence.cpp:135
 #, kde-format
 msgctxt "@action:button This action is disabled"
 msgid "Disabled"
-msgstr ""
+msgstr "Letiltva"
 
 #: inputsequence.cpp:138
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "@action:button There is no keybinding"
 msgid "None"
 msgstr "Nincs"
@@ -34,30 +33,30 @@ msgstr "Nincs"
 #, kde-format
 msgctxt "@action:button"
 msgid "Left mouse button"
-msgstr ""
+msgstr "Bal egérgomb"
 
 #: inputsequence.cpp:147
 #, kde-format
 msgctxt "@action:button"
 msgid "Right mouse button"
-msgstr ""
+msgstr "Jobb egérgomb"
 
 #: inputsequence.cpp:149
 #, kde-format
 msgctxt "@action:button"
 msgid "Middle mouse button"
-msgstr ""
+msgstr "Középső egérgomb"
 
 #: inputsequence.cpp:155
 #, kde-format
 msgctxt "@action:button"
 msgid "Application-defined"
-msgstr ""
+msgstr "Alkalmazás által definiált"
 
 #: kcmtablet.cpp:34
 #, kde-format
 msgid "Default"
-msgstr ""
+msgstr "Alapértelmezett"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -80,15 +79,14 @@ msgid "Inverted Landscape"
 msgstr "Fordított fekvő"
 
 #: kcmtablet.cpp:88
-#, fuzzy, kde-format
-#| msgid "Follow the active screen"
+#, kde-format
 msgid "Follow the Current Screen"
-msgstr "Aktív képernyő követése"
+msgstr "Jelenlegi képernyő követése"
 
 #: kcmtablet.cpp:93
 #, kde-format
 msgid "All Screens"
-msgstr ""
+msgstr "Összes képernyő"
 
 #: kcmtablet.cpp:102
 #, kde-format
@@ -99,53 +97,53 @@ msgstr "%1 - (%2,%3 %4×%5)"
 #: kcmtablet.cpp:162
 #, kde-format
 msgid "Fit to Screen"
-msgstr ""
+msgstr "Illesztés a képernyőre"
 
 #: kcmtablet.cpp:163
 #, kde-format
 msgid "Keep Aspect Ratio and Fit Within Screen"
-msgstr ""
+msgstr "Arány megőrzése és illesztés a képernyőre"
 
 #: kcmtablet.cpp:164
 #, kde-format
 msgid "Map to Portion of Screen"
-msgstr ""
+msgstr "Leképezés a képernyő egy részére"
 
 #: ui/ActionDialog.qml:24
 #, kde-format
 msgctxt "@title Select the action for the tablet button"
 msgid "Select Button Action"
-msgstr ""
+msgstr "Gombművelet kiválasztása"
 
 #: ui/ActionDialog.qml:70
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when pressing %1:"
-msgstr ""
+msgstr "Válassza ki a(z) %1 lenyomásakor végrehajtandó műveletet:"
 
 #: ui/ActionDialog.qml:84
 #, kde-format
 msgctxt "@option:radio Set this action to an application-defined type"
 msgid "Defer to application"
-msgstr ""
+msgstr "Alkalmazásra hárítás"
 
 #: ui/ActionDialog.qml:99
 #, kde-format
 msgctxt "@option:radio Set this action to a keyboard type"
 msgid "Send keyboard key"
-msgstr ""
+msgstr "Billentyűleütés küldése"
 
 #: ui/ActionDialog.qml:113
 #, kde-format
 msgctxt "@option:radio Set this action to a mouse type"
 msgid "Send mouse button click"
-msgstr ""
+msgstr "Egérkattintás küldése"
 
 #: ui/ActionDialog.qml:129
 #, kde-format
 msgctxt "@option:radio Disable this action"
 msgid "Do nothing"
-msgstr ""
+msgstr "Semmi"
 
 #: ui/ActionDialog.qml:149
 #, kde-format
@@ -154,60 +152,62 @@ msgid ""
 "This tablet button is forwarded to the focused application, which can decide "
 "how to handle it."
 msgstr ""
+"Ez a rajztáblagombot továbbítódik a fókuszált alkalmazáshoz, amely dönthet "
+"arról, hogyan kezelje."
 
 #: ui/ActionDialog.qml:177
 #, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left-click"
-msgstr ""
+msgstr "Bal gombos kattintás"
 
 #: ui/ActionDialog.qml:178
 #, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle-click"
-msgstr ""
+msgstr "Középső gombos kattintás"
 
 #: ui/ActionDialog.qml:179
 #, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right-click"
-msgstr ""
+msgstr "Jobb gombos kattintás"
 
 #: ui/ActionDialog.qml:206
 #, kde-format
 msgctxt "@option:check The ctrl modifier on the keyboard"
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 #: ui/ActionDialog.qml:213
 #, kde-format
 msgctxt "@option:check The alt modifier on the keyboard"
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: ui/ActionDialog.qml:220
 #, kde-format
 msgctxt "@option:check The meta modifier on the keyboard"
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: ui/ActionDialog.qml:227
 #, kde-format
 msgctxt "@option:check The shift modifier on the keyboard"
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 #: ui/ActionDialog.qml:235
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
-msgstr ""
+msgstr "Ez a gomb le van tiltva, és nem csinál semmit."
 
 #: ui/Calibration.qml:31
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
-msgstr ""
+msgstr "Tollkalibrálás"
 
 #: ui/Calibration.qml:85
 #, kde-kuit-format
@@ -216,6 +216,8 @@ msgid ""
 "Calibration is completed and saved.<nl/><nl/>Refine the calibration further "
 "or close the window."
 msgstr ""
+"Kalibráció befejezve és mentve.<nl/><nl/>Finomíthatja tovább a kalibrációt, "
+"vagy bezárhatja az ablakot."
 
 #: ui/Calibration.qml:86
 #, kde-kuit-format
@@ -224,30 +226,33 @@ msgid ""
 "Tap the center of each target.<nl/><nl/>Aim for the point where the stylus "
 "tip lands, and ignore the cursor position on the screen."
 msgstr ""
+"Koppintson minden egyes célkereszt közepére.<nl/><nl/>Célozzon a pontra, "
+"ahová a toll hegye érkezik, és hagyja figyelmen kívül a kurzor pozícióját a "
+"képernyőn."
 
 #: ui/Calibration.qml:92
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
-msgstr ""
+msgstr "Meglévő kalibráció finomítása"
 
 #: ui/Calibration.qml:101
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
-msgstr ""
+msgstr "Újrakalibrálás"
 
 #: ui/Calibration.qml:115
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "Bezárás"
 
 #: ui/Calibration.qml:115
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Mégse"
 
 #: ui/main.qml:32
 #, kde-format
@@ -260,11 +265,10 @@ msgid "Connect a drawing tablet"
 msgstr "Csatlakoztasson egy rajztáblát"
 
 #: ui/main.qml:41
-#, fuzzy, kde-format
-#| msgid "Tablet"
+#, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr "Rajztábla"
+msgstr "Rajztábla tesztelése…"
 
 #: ui/main.qml:67
 #, kde-format
@@ -275,7 +279,7 @@ msgstr "Eszköz:"
 #: ui/main.qml:105
 #, kde-format
 msgid "Map to screen:"
-msgstr ""
+msgstr "Leképezés a képernyőre:"
 
 #: ui/main.qml:125
 #, kde-format
@@ -285,11 +289,10 @@ msgstr "Tájolás:"
 #: ui/main.qml:131
 #, kde-format
 msgid "Not Supported"
-msgstr ""
+msgstr "Nem támogatott"
 
 #: ui/main.qml:138
-#, fuzzy, kde-format
-#| msgid "Left handed mode:"
+#, kde-format
 msgid "Left-handed mode:"
 msgstr "Balkezes mód:"
 
@@ -301,11 +304,14 @@ msgid ""
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
+"Megmondja az eszköznek, hogy a balkezes felhasználókhoz is alkalmazkodjon. A "
+"hatások eszközönként változnak, de gyakran megfordítja a rajztábla "
+"gombjainak működését, így a tábla fejjel lefelé is használható."
 
 #: ui/main.qml:155
 #, kde-format
 msgid "Mapped Area:"
-msgstr ""
+msgstr "Leképezett terület:"
 
 #: ui/main.qml:242
 #, kde-format
@@ -330,13 +336,12 @@ msgid "Pen button 1:"
 msgstr "1. tollgomb:"
 
 #: ui/main.qml:286
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 1'"
 msgid "pen button 1"
-msgstr "1. tollgomb:"
+msgstr "1. tollgomb"
 
 #: ui/main.qml:290
 #, kde-format
@@ -344,13 +349,12 @@ msgid "Pen button 2:"
 msgstr "2. tollgomb:"
 
 #: ui/main.qml:291
-#, fuzzy, kde-format
-#| msgid "Pen button 2:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 2'"
 msgid "pen button 2"
-msgstr "2. tollgomb:"
+msgstr "2. tollgomb"
 
 #: ui/main.qml:295
 #, kde-format
@@ -358,37 +362,36 @@ msgid "Pen button 3:"
 msgstr "3. tollgomb:"
 
 #: ui/main.qml:296
-#, fuzzy, kde-format
-#| msgid "Pen button 3:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 3'"
 msgid "pen button 3"
-msgstr "3. tollgomb:"
+msgstr "3. tollgomb"
 
 #: ui/main.qml:351
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
-msgstr ""
+msgstr "Kalibráció folyamatban"
 
 #: ui/main.qml:353
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
-msgstr ""
+msgstr "Kalibrálás"
 
 #: ui/main.qml:356
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
-msgstr ""
+msgstr "Kalibráció nem támogatott"
 
 #: ui/main.qml:383
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
-msgstr ""
+msgstr "A több képernyőn keresztüli kalibráció nem támogatott."
 
 #: ui/main.qml:393
 #, kde-format
@@ -407,35 +410,33 @@ msgid "Pad button %1:"
 msgstr "%1. táblagomb:"
 
 #: ui/main.qml:432
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad button %1"
-msgstr "%1. táblagomb:"
+msgstr "%1. táblagomb"
 
 #: ui/Tester.qml:25
-#, fuzzy, kde-format
-#| msgid "Tablet"
+#, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
-msgstr "Rajztábla"
+msgstr "Rajztáblatesztelő"
 
 #: ui/Tester.qml:48
 #, kde-format
 msgid "Stylus press X=%1 Y=%2"
-msgstr ""
+msgstr "Tollérintés X=%1 Y=%2"
 
 #: ui/Tester.qml:58
 #, kde-format
 msgid "Stylus release X=%1 Y=%2"
-msgstr ""
+msgstr "Tollelengedés X=%1 Y=%2"
 
 #: ui/Tester.qml:68
 #, kde-format
 msgid "Stylus move X=%1 Y=%2"
-msgstr ""
+msgstr "Tollmozgatás X=%1 Y=%2"
 
 #: ui/Tester.qml:199
 #, kde-format
@@ -443,12 +444,14 @@ msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
 msgstr ""
+"## Jelmagyarázat:\n"
+"# X, Y - eseménykoordináta\n"
 
 #: ui/Tester.qml:206
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"
-msgstr ""
+msgstr "Törlés"
 
 #~ msgid "Primary (default)"
 #~ msgstr "Elsődleges (alapértelmezett)"

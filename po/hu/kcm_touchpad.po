@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2024-05-11 22:55+0200\n"
+"PO-Revision-Date: 2024-09-26 12:02+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: actions.cpp:19
 #, kde-format
@@ -269,11 +269,10 @@ msgstr ""
 #, kde-format
 msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
 msgid "This can interfere with video games."
-msgstr ""
+msgstr "Ez zavarhatja a videojátékokat."
 
 #: ui/main.qml:204
-#, fuzzy, kde-format
-#| msgid "Left handed mode"
+#, kde-format
 msgid "Left-handed mode"
 msgstr "Balkezes mód"
 
@@ -283,16 +282,13 @@ msgid "Swap left and right buttons."
 msgstr "Bal és jobb gombok megcserélése."
 
 #: ui/main.qml:234
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons to middle-click"
 msgstr "Nyomja meg a bal és jobb gombot a középső kattintáshoz."
 
 #: ui/main.qml:238
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
+#, kde-format
 msgctxt "@info:tooltip for checkbox"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
@@ -300,11 +296,7 @@ msgstr ""
 "kattintásnak felel meg."
 
 #: ui/main.qml:264
-#, fuzzy, kde-format
-#| msgid ""
-#| "Activating this setting increases mouse click latency by 50ms. The extra "
-#| "delay is needed to correctly detect simultaneous left and right mouse "
-#| "clicks."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
@@ -402,28 +394,24 @@ msgid "Disable horizontal scrolling"
 msgstr "Vízszintes görgetés kikapcsolása"
 
 #: ui/main.qml:596
-#, fuzzy, kde-format
-#| msgid "Disable horizontal scrolling"
+#, kde-format
 msgid "Disable horizontal scrolling."
-msgstr "Vízszintes görgetés kikapcsolása"
+msgstr "Vízszintes görgetés kikapcsolása."
 
 #: ui/main.qml:609
-#, fuzzy, kde-format
-#| msgid "Tapping:"
+#, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Koppintás:"
 
 #: ui/main.qml:610
-#, fuzzy, kde-format
-#| msgid "Tap-to-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Tap-to-click"
 msgstr "Koppintással kattintás"
 
 #: ui/main.qml:614
-#, fuzzy, kde-format
-#| msgid "Single tap is left button click."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Single tap to left-click."
 msgstr "Az egyszeres koppintás a bal gombos kattintás."
@@ -468,8 +456,7 @@ msgstr ""
 "gombos kattintáshoz."
 
 #: ui/main.qml:712
-#, fuzzy, kde-format
-#| msgid "Middle-click (three-finger tap right-click)"
+#, kde-format
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr ""
 "Középső gombos kattintás (háromujjas koppintás jobb gombos kattintáshoz)"
@@ -503,17 +490,15 @@ msgid "Tap with two fingers to middle-click."
 msgstr "Koppintson két ujjal a középső gombos kattintáshoz."
 
 #: ui/main.qml:777
-#, fuzzy, kde-format
-#| msgid "Right-click:"
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, configure right-click with touch-pad "
 "integrated button (pressing into the touchpad)"
 msgid "Integrated right-click:"
-msgstr "Jobb gombos kattintás:"
+msgstr "Integrált jobb kattintás:"
 
 #: ui/main.qml:811
-#, fuzzy, kde-format
-#| msgid "Press bottom-right corner"
+#, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
 msgstr "Nyomja meg a jobb alsó sarkot"
@@ -526,6 +511,9 @@ msgid ""
 "Middle-click by simultaneously pressing the bottom left and bottom right "
 "corners."
 msgstr ""
+"Az érintőtábla jobb alsó sarkának megnyomása jobb kattintásként működik. "
+"Középső kattintás a bal alsó és a jobb alsó gomb egyidejű megnyomásával "
+"lehetséges."
 
 #: ui/main.qml:817
 #, kde-format
@@ -534,91 +522,90 @@ msgid ""
 "Pressing the bottom right corner of your touchpad acts as right-click. "
 "Middle-click by pressing the bottom central area."
 msgstr ""
+"Az érintőtábla jobb alsó sarkának megnyomása jobb kattintásként működik. "
+"Középső kattintás az alsó középső terület megnyomásával lehetséges."
 
 #: ui/main.qml:828
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
-msgstr ""
+msgstr "Középső kattintás a két alsó sarok megnyomásával lehetséges."
 
 #: ui/main.qml:829
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
-msgstr ""
+msgstr "Középső kattintás az alsó középső terület megnyomásával lehetséges."
 
 #: ui/main.qml:847
-#, fuzzy, kde-format
-#| msgid "Press anywhere with two fingers"
+#, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press touchpad with two fingers"
 msgstr "Nyomja meg az érintőtáblát két ujjal"
 
 #: ui/main.qml:851
-#, fuzzy, kde-format
-#| msgid "Tap with two fingers to right-click."
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
-msgstr "Koppintson két ujjal a jobb gombos kattintáshoz."
+msgstr ""
+"Az érintőtábla két ujjal bárhol történő megnyomása jobb kattintásként "
+"működik."
 
 #: ui/main.qml:863
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers."
+#, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
-msgstr "Nyomja meg az érintőtáblát három ujjal."
+msgstr "A három ujjal történő megnyomás középső kattintásként működik."
 
 #: ui/main.qml:882
-#, fuzzy, kde-format
-#| msgid "Middle-click: "
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, configure middle-click with touch-pad "
 "integrated button (pressing into the touchpad)"
 msgid "Integrated middle-click:"
-msgstr "Középső gombos kattintás: "
+msgstr "Integrált középső kattintás:"
 
 #: ui/main.qml:911
-#, fuzzy, kde-format
-#| msgid "Press bottom-middle"
+#, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom middle edge"
-msgstr "Nyomja meg alul középen"
+msgstr "Nyomja meg alsó szélet középen"
 
 #: ui/main.qml:915
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the bottom right corner of your touchpad acts as right-click."
 msgstr ""
+"Az érintőtábla jobb alsó sarkának megnyomása jobb kattintásként működik."
 
 #: ui/main.qml:923
-#, fuzzy, kde-format
-#| msgid "Press bottom left and bottom right corners simultaneously"
+#, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom left and bottom right corners"
-msgstr "Nyomja meg egyszerre a bal alsó és a jobb alsó sarkokat"
+msgstr "Nyomja meg a bal alsó és a jobb alsó sarkokat"
 
 #: ui/main.qml:927
-#, fuzzy, kde-format
-#| msgid "Press bottom left and bottom right corners simultaneously"
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid ""
 "Pressing the bottom left and bottom right corners simultaneously acts as "
 "middle-click."
-msgstr "Nyomja meg egyszerre a bal alsó és a jobb alsó sarkokat"
+msgstr ""
+"A bal és a jobb alsó sarok egyidejű megnyomása középső kattintásként működik."
 
 #: ui/main.qml:936
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers"
+#, kde-format
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
 msgstr "Nyomja meg az érintőtáblát három ujjal"
 
 #: ui/main.qml:942
-#, fuzzy, kde-format
-#| msgid "Tap with two fingers to right-click."
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
-msgstr "Koppintson két ujjal a jobb gombos kattintáshoz."
+msgstr ""
+"Az érintőtábla három ujjal bárhol történő megnyomása középső kattintásként "
+"működik."
 
 #~ msgid ""
 #~ "Software enabled buttons will be added to bottom portion of your touchpad."
