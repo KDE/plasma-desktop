@@ -222,7 +222,7 @@ Item {
                 return result;
             }
 
-            const rect = containment.plasmoid.availableScreenRect;
+            const rect = desktop.strictAvailableScreenRect;
             result += rect.x;
 
             if (sideBarOnRightEdge) {
@@ -231,7 +231,7 @@ Item {
 
             return result;
         }
-        y: desktop.y + (containment ? containment.plasmoid.availableScreenRect.y : 0)
+        y: desktop.y + (containment ? desktop.strictAvailableScreenRect.y : 0)
 
         onVisibleChanged: {
             if (!visible) {
@@ -244,7 +244,7 @@ Item {
             id: sidePanelStack
             asynchronous: true
             width: item ? item.width : 0
-            height: containment ? containment.plasmoid.availableScreenRect.height - sidePanel.margins.top - sidePanel.margins.bottom : 1000
+            height: containment ? desktop.strictAvailableScreenRect.height - sidePanel.margins.top - sidePanel.margins.bottom : 1000
             state: "closed"
 
             function bindingWithItem(callback: var, defaults: var): var {
@@ -297,8 +297,8 @@ Item {
     }
 
     Connections {
-        target: containment?.plasmoid ?? null
-        function onAvailableScreenRectChanged() {
+        target: desktop
+        function onStrictAvailableScreenRectChanged() {
             if (sidePanel.visible) {
                 sidePanel.requestActivate();
             }
