@@ -1,0 +1,399 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!-- Define an entity for your application if it is not part of KDE
+       CVS -->
+  <!ENTITY kappname "&knetattach;">
+  <!ENTITY package "kdebase"
+><!-- I think this came from kdebase... -->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Slovenian "INCLUDE"
+> 
+
+  <!-- Do not define any other entities; instead, use the entities
+       from entities/general.entities and $LANG/user.entities. -->
+]>
+
+<book id="knetattach" lang="&language;">
+
+<!-- This header contains all of the meta-information for the document such
+as Authors, publish date, the abstract, and Keywords -->
+
+<bookinfo>
+<title
+>&knetattach; priročnik</title>
+
+<authorgroup>
+<author
+>&Orville.Bennett; &Orville.Bennett.mail; </author>
+<othercredit role="translator"
+><firstname
+>Andrej</firstname
+><surname
+>Vernekar</surname
+><affiliation
+><address
+><email
+>andrej.vernekar@moj.net</email
+></address
+></affiliation
+><contrib
+>Prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+
+<copyright>
+<year
+>2005</year>
+<holder
+>&Orville.Bennett;</holder>
+</copyright>
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>10.04.2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<abstract>
+<para
+>&knetattach; je čarovnik, ki olajša povezovanje omrežnih virov z vašim &kde; namizjem. </para>
+</abstract>
+
+<!-- This is a set of Keywords for indexing by search engines.
+Please at least include KDE, the KDE package it is in, the name
+ of your application, and a few relevant keywords. -->
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>kde baza</keyword>
+<keyword
+>kne pritrditev</keyword>
+<keyword
+>Omrežne mape</keyword>
+<keyword
+>Čarovnik za omrežne mape</keyword>
+<keyword
+>Čarovnik za omrežne mape KDE</keyword>
+</keywordset>
+
+</bookinfo>
+
+<!-- 
+in kde 4 no application any more.
+
+konqueror/dolphin/gwenview enter "remote:/" in location bar or click Network in Places
+"Add Network Folder" click opens the wizard
+-->
+
+<chapter id="introduction">
+<title
+>Uvod</title>
+
+<para
+>Čarovnik &knetattach;, v nadaljevanju znan kot čarovnik za omrežne mape, omogoča enostavno dodajanje in povezovanje različnih omrežnih map z vašim namizjem &kde;. O morebitnih težavah ali zahtevah po funkcijah poročajte na spletnem mestu &kde; hrošči. </para>
+</chapter>
+
+<chapter id="using-knetattach">
+<title
+>Uporaba &knetattach;</title>
+
+<para
+>Kot vidite na spodnji sliki zajetega zaslona, čarovnik za omrežne mape trenutno omogoča dodajanje štirih vrst omrežnih map: WebDav, &FTP;, &Microsoft; &Windows; (&Samba;) omrežni pogoni in SSH. Poleg tega lahko v polju seznama izberete nedavno povezavo. <screenshot>
+<screeninfo
+>Tukaj je posnetek zaslona za &knetattach;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Posnetek zaslona</phrase>
+</textobject>
+<caption>
+<para
+>Glavno okno čarovnika za omrežne mape</para>
+</caption>
+</mediaobject>
+</screenshot>
+</para>
+
+
+<sect1 id="knetattach-features">
+<title
+>Dodajanje omrežnih map</title>
+
+<para
+>Omrežne mape se prikažejo na posebnem mestu v programih &konqueror; in &dolphin;, ki se imenuje <emphasis
+>virtualna mapa</emphasis
+>. Do te navidezne mape dostopate tako, da v lokacijsko vrstico vnesete <userinput
+>remote:/</userinput
+> ali izberete <guilabel
+>Omrežje</guilabel
+> na plošči <guilabel
+>Kraji</guilabel
+>. Nato boste lahko videli vse mape, ki ste jih že dodali, in lahko s čarovnikom dodate nove. <screenshot>
+<screeninfo
+>Tukaj je posnetek zaslona za &knetattach;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot1.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Posnetek zaslona</phrase>
+</textobject>
+<caption>
+<para
+>Virtualna mapa s čarovnikom za omrežno mapo</para>
+</caption>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Ko že govorimo o čarovnikih, je čarovnik za omrežne mape zelo enostaven za uporabo. Po odprtju čarovnika morate izbrati vrsto omrežne mape, do katere želite dostopati. Ko se premaknete na naslednji zaslon, morate samo izpolniti zahtevane podatke. Zadnji korak je vnos uporabniškega imena in prijavnega gesla za omrežni delež, do katerega ste se odločili dostopati. </para>
+<para
+>Spodaj je seznam informacij, ki jih čarovnik potrebuje za ustvarjanje omrežnih map. Če možnost za določeno mapo ni na voljo, je ni treba vnesti. Za mape &Samba; &eg; ni potreben vnos <guilabel
+>Vrata</guilabel
+>. </para>
+
+<para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Ime:</guilabel
+></term>
+<listitem>
+<para
+>Tu omrežni povezavi dodelite ime. Mejo za ime postavlja le vaša domišljija (ali abeceda). </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Uporabnik:</guilabel
+></term>
+<listitem>
+<para
+>To je uporabniško ime, ki bo uporabljeno za vzpostavitev povezave. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Strežnik:</guilabel
+></term>
+<listitem>
+<para
+>To je naslov strežnika, ki ga želite dodati. To je lahko naslov IP ali ime domene. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Vrata:</guilabel
+></term>
+<listitem>
+<para
+>Tukaj vnesite številko vrat, s katerimi se želite povezati. Privzete nastavitve običajno zadostujejo. <note
+> <para
+>Ni na voljo za mape &Microsoft; &Windows; (&Samba;). </para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Mapa:</guilabel
+></term>
+<listitem>
+<para
+>Tu je treba navesti pot do mape, s katero se želite povezati. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Kodiranje:</guilabel
+></term>
+<listitem>
+<para
+>Z elementi v tem seznamu lahko izberete kodiranje za povezave &FTP; in ssh. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Ustvarite ikono za to oddaljeno mapo</guilabel
+></term>
+<listitem>
+<para
+>Če je to polje označeno, se ustvari ikona, ki omogoča dostop prek oddaljene:/ virtualne mape. Če ni označena, bo povezava mogoča, vendar ne bo dostopna iz oddaljenega:/. <note
+> <para
+>Možnost <guilabel
+>Nedavna povezava:</guilabel
+> vam omogoča ponovno povezavo z zadnjo omrežno priključno točko, s katero ste se povezali s čarovnikom, ne glede na to, ali je ikona ustvarjena ali ne. </para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Uporaba šifriranja</guilabel
+></term>
+<listitem>
+<para
+>Če je označeno, bo omogočena možnost vzpostavitve varne povezave. <note
+> <para
+>Na voljo samo za mape WebDav.</para>
+</note>
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</para>
+
+</sect1>
+</chapter>
+
+<chapter id="knetattach-walkthrough">
+<title
+>&knetattach; Pregled</title>
+
+
+<para
+>To bo hiter pregled čarovnika za omrežno mapo. Ne pomežikni, sicer ga lahko zamudiš. </para>
+
+<para
+>Spodaj je prikazano glavno okno čarovnika za omrežno mapo. Tu izberemo, katero vrsto mape želimo dodati ali povezati z njo. V tem priročniku bomo uporabljali &FTP;. Vsebuje večino možnosti, s katerimi se boste srečali med uporabo čarovnika. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Tukaj je posnetek zaslona &knetattach; glavnega okna</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Posnetek zaslona</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>V redu, torej smo se (jaz) odločili dodati mapo &FTP;. Spodaj je prikazan primer vrste informacij, ki jih morate dodati za svoj strežnik &FTP;. Ko ga izpolnimo, pritisnemo <guibutton
+>Shrani &amp; Poveži</guibutton
+> in počakamo na čarovnijo. Če vaš strežnik zahteva kakršno koli potrditev, boste na tej točki pozvani, preden vam bo omogočena povezava. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Posnetek zaslona prikazuje dodajanje &FTP; Mape z uporabo &knetattach;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot2.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Posnetek zaslona</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Tako smo zdaj vsi povezani in lahko krmarimo po novo dodanem deležu. Radost! </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Screenshot of the linked &FTP; folder</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot3.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Posnetek zaslona</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Za vrnitev v naše omrežne mape je vse, kar potrebujete, vtipkati <action
+>remote:/</action
+> v lokacijsko vrstico &konqueror; ali &dolphin; ali izberite <guilabel
+>Omrežje</guilabel
+> na plošči <guilabel
+>Mesta</guilabel
+>. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Zaslonska slika oddaljene:/ virtualne mape z dodano povezavo</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot4.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Posnetek zaslona</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+</para>
+
+<para
+>Z uporabo povezave <guilabel
+>Dodaj omrežno mapo</guilabel
+> lahko z istega mesta dodate tudi nove mape. S tem smo končali naš sprehod (rekel sem vam, da bo hiter). Želim vam veliko sreče pri vaših pustolovščinah z omrežnimi mapami ;-) </para>
+</chapter>
+
+<chapter id="credits">
+
+<title
+>Zasluge in licenca</title>
+
+<para
+>&knetattach; </para>
+<para
+>Avtorske pravice programa 2004 &George.Staikos; &George.Staikos.mail; </para>
+
+<para
+>Dokumentacija Avtorske pravice &copy; 2005 &Orville.Bennett; &Orville.Bennett.mail; </para>
+
+<para
+>Prevod Andrej Vernekar <email
+>andrej.vernekar@moj.net</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+</book>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

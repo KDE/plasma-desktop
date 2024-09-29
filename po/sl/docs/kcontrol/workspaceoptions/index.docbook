@@ -1,0 +1,178 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Slovenian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="workspaceoptions" lang="&language;">
+<articleinfo>
+<title
+>Splošno vedenje</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+<othercredit role="translator"
+><firstname
+>Andrej</firstname
+><surname
+>Vernekar</surname
+><affiliation
+><address
+><email
+>andrej.vernekar@moj.net</email
+></address
+></affiliation
+><contrib
+>Prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>18.05.2022</date>
+
+<releaseinfo
+>&plasma; 5.25</releaseinfo>
+
+<keywordset>
+<keyword
+>Sistemske nastavitve</keyword>
+<keyword
+>namizje</keyword>
+<keyword
+>delovni prostor</keyword>
+</keywordset>
+
+</articleinfo>
+
+<para
+>To je modul za konfiguracijo splošnega obnašanja delovnega prostora. </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Prikaz informacijskih namigov orodij ob lebdenju miške</guilabel
+></term>
+<listitem>
+<para
+>Če je ta možnost označena, se namigi orodij prikažejo nad lebdečimi elementi v &plasma; pultu ali na namizju.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Prikaz vizualnih povratnih informacij za spremembe stanja</guilabel
+></term>
+<listitem>
+<para
+>Če s tipkovnico spreminjate &eg; svetlost in glasnost, se te spremembe stanja prikažejo v prikazovalniku OSD.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Hitrost animacije</guilabel
+></term>
+<listitem>
+    <para
+>Omogoča nastavitev hitrosti animacij namiznih učinkov od <guilabel
+>počasi</guilabel
+> do <guilabel
+>takojšnje</guilabel
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Odpiranje datoteke in mape z enim samim klikom</guilabel
+></term>
+<listitem>
+<para
+>To je privzeta nastavitev. Če enkrat kliknete ikono, jo odprete. Če želite izbrati, lahko povlečete po ikoni ali z <keycombo action="simul"
+>&Ctrl;<mousebutton
+>desnim</mousebutton
+></keycombo
+> klikom ali jo preprosto kliknete in pridržite, da jo povlečete. Izbira se lahko opravi tudi s klikom na izbirno oznako artikla.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Odpiranje datotek in map z dvojnim klikom</guilabel
+></term>
+<listitem>
+<para
+>Če ta možnost ni označena, se ikone/datoteke odprejo z enim klikom <mousebutton
+>leve</mousebutton
+> tipke miške. To privzeto vedenje je skladno s tem, kar bi pričakovali, ko kliknete povezave v večini spletnih brskalnikov. Če pa je označeno, bodo ikone/datoteke odprte le z dvojnim klikom, medtem ko bo en sam klik izbral samo ikono ali datoteko. To je vedenje, ki ga morda poznate iz drugih namizij ali operacijskih sistemov.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Klikanje v tirnici pomikanja</guimenu
+><guimenuitem
+>Potegne eno stran navzgor in navzdol</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>To je privzeta nastavitev. Z levim klikom na sled v drsni vrstici premaknete drsno vrstico za eno stran.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Klikanje v tirnici pomikanja</guimenu
+><guimenuitem
+>Pretakne na kliknjeno mesto</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Vklopi obnašanje, ko položaj ročice za pomikanje preskoči na položaj v dokumentu, na katerega ste kliknili. Takšno obnašanje morda poznate iz drugih namizij ali operacijskih sistemov.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Način na dotik</guimenu
+><guimenuitem
+>Samodejno omogoči po potrebi/Nikoli ne omogoči</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Način na dotik se samodejno aktivira vsakič, ko sistem zazna zaslon na dotik, ne pa miške ali sledilne ploščice. Na primer: ko je tipkovnica prenosnika, ki ga je mogoče spremeniti, obrnjena ali odstranjena.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Vedno omogočeno (privzeto)/Nikoli omogočeno</guimenuitem
+></term>
+<listitem>
+<para
+>V načinu na dotik bo veliko elementov uporabniškega vmesnika postalo večjih, da se bo lažje prilagodilo interakciji z dotikom.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

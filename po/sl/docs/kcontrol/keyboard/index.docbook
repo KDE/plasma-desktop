@@ -1,0 +1,300 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Slovenian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="keyboard" lang="&language;">
+<title
+>Tipkovnica</title>
+<articleinfo>
+
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+><contrib
+>Prevod</contrib
+><firstname
+>Andrej</firstname
+><surname
+>Vernekar</surname
+><affiliation
+><address
+><email
+>andrej.vernekar@moj.net</email
+></address
+></affiliation
+></othercredit
+> 
+</authorgroup>
+
+<date
+>05.12.2020</date>
+<releaseinfo
+>Plasma 5.21</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Plasma</keyword>
+<keyword
+>Sistemske nastavitve</keyword>
+<keyword
+>tipkovnica</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Ta modul vam omogoča izbiro načina delovanja vaše tipkovnice.</para>
+
+<para
+>V tem modulu so trije zavihki.</para>
+
+<sect1 id="hardware">
+<title
+>Zavihek Strojna oprema</title>
+<para
+>Dejanski učinek nastavitve teh možnosti je odvisen od funkcij, ki jih zagotavljata strojna oprema tipkovnice in strežnik X, v katerem se izvaja program &plasma;. Na primer, lahko ugotovite, da sprememba glasnosti klika tipke nima učinka, ker ta funkcija v vašem sistemu ni na voljo. </para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Model tipkovnice:</guilabel
+></term>
+<listitem>
+<para
+>Tu lahko nastavite model tipkovnice. Ta nastavitev je neodvisna od razporeditve tipkovnice in se nanaša na model &quot;strojne opreme&quot;, &ie; na način izdelave tipkovnice. Sodobne tipkovnice, ki so priložene računalniku, imajo običajno dve dodatni tipki, znane kot &quot;104-tipka &quot; modeli, kar je verjetno tisto, kar želite, če ne veste, kakšno tipkovnico imate. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>NumLock ob zagonu Plasma</guilabel
+></term>
+<listitem>
+<para
+>Izbirate lahko med <guilabel
+>Vklopi</guilabel
+> ali <guilabel
+>Izklopi</guilabel
+>, da vklopite /izklopite NumLock ob zagonu &plasma; ali pa izberete, da boste pustili NumLock na vrednosti, kakršni je bil, preden je bil &plasma; zagnan.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Ko držite tipko:</guilabel
+></term>
+<listitem>
+<para
+>Tu lahko izberete eno od treh možnosti drevesa, in sicer</para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Prikaži naglašene in podobne znake</guilabel
+></term>
+<listitem>
+<para
+>Če je ta možnost izbrana, se ob pritisnjeni tipki med vnašanjem besedila prikaže pojavno okno, ki omogoča izbiro med različnimi naglašenimi oblikami znaka.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Ne stori ničesar</guilabel
+></term>
+<listitem>
+<para
+>S to možnostjo lahko izklopite vse dejavnosti, ko pritisnete in držite tipke.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Ponovi tipko</guilabel
+></term>
+<listitem>
+<para
+>Kadar je izbrana ta možnost pritisk in držanje tipke ponavlja enak znak dokler ni tipka spuščena. Pritisk in držanje tipke bo imel enak učinek kot večkratno zaporedno pritiskanje tipke.</para>
+<tip
+><para
+>To možnost bodo želeli imeti vključeno skoraj vsi uporabniki, saj precej olajša gibanje skozi dokumente s pomočjo puščičnih tipk. </para
+></tip>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Zakasnitev</guilabel
+></term>
+<listitem>
+<para
+>Ta možnost omogoča nastavitev zakasnitve, po kateri bo pritisnjena tipka začela ustvarjati kode tipk.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Hitrost</guilabel
+></term>
+<listitem>
+<para
+>S to možnostjo lahko nastavite hitrost, s katero se generirajo kode tipk, ko je tipka pritisnjena.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>V besedilno polje <guilabel
+>Testno območje</guilabel
+> vnesite nekaj znakov in preverite nastavitve.</para>
+<para
+>Mnogo računalnikov ne bo podpiralo te funkcije.</para>
+
+</listitem>
+</varlistentry>
+
+</variablelist>
+</sect1>
+
+<sect1 id="layouts">
+<title
+>Zavihek Postavitve</title>
+<para
+>V tem zavihku lahko izberete, katere postavitve tipkovnice želite uporabljati, kateri indikator želite v sistemski vrstici, kako želite preklapljati in katere bližnjice boste uporabljali.</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Indikator postavitve</guilabel
+></term>
+<listitem>
+<para
+>Izberete lahko možnost <guilabel
+>Pokaži indikator postavitve</guilabel
+>, ki bo v sistemski vrstici prikazala ime jezikovnega iso. Kazalnik lahko prikažete tudi, če je omogočena ena sama postavitev, in z izbiro možnosti <guilabel
+>Pokaži zastavico</guilabel
+> lahko prikažete zastavico jezika in ne le kodo ISO.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Politika preklapljanja</guilabel
+></term>
+<listitem>
+<para
+>Če izberete politiko preklapljanja <guilabel
+>Aplikacija</guilabel
+> ali <guilabel
+>Okno</guilabel
+>, bo sprememba postavitve tipkovnice vplivala samo na trenutno aplikacijo ali okno. <guilabel
+>Globalno</guilabel
+> bo spremenila postavitev tipkovnice globalno, <guilabel
+>Namizje</guilabel
+> pa jo bo spremenila samo za trenutno virtualno namizje. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Bližnjice za preklop postavitve</guilabel
+></term>
+<listitem>
+<para
+><guilabel
+>Glavne bližnjice</guilabel
+> je bližnjica za preklop med postavitvami, ki jo upravlja X.org. <guilabel
+>3-nadstropne bližnjice</guilabel
+> je bližnjica za preklop na tretjo raven aktivne postavitve (če jo ima), ki jo upravlja X.org. Omogoča bližnjice samo za modifikatorje. <guilabel
+>Alternativna bližnjica</guilabel
+> je bližnjica za preklapljanje postavitev, ki ga upravlja &plasma;. Ne podpira bližnjic, ki imajo samo modifikatorje in v nekaterih primerih morda ne bo delovala (&eg; če je aktivno pojavno okno ali iz ohranjevalnika zaslona). </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Konfiguracija postavitev</guilabel
+></term>
+<listitem>
+<para
+>Če označite možnost <guilabel
+>Konfiguriracija postavitev</guilabel
+>, boste lahko dodajali in odstranjevali postavitve tipkovnice, da boste lahko po potrebi preklapljali med njimi. </para>
+<para
+>S klikom na <guibutton
+>Dodaj</guibutton
+> se odpre pogovorno okno, v katerem lahko izberete novo postavitev tipkovnice, ki jo želite dodati, ter njeno različico, oznako in bližnjico. </para>
+<para
+>Seznam postavitev, ki se nahaja tik ob oznaki <guilabel
+>Postavitev</guilabel
+> v pogovornem oknu <guilabel
+>Dodaj postavitev</guilabel
+>, lahko zožite z uporabo spustnega seznama <guilabel
+>Omejiti izbiro po jeziku</guilabel
+>. S klikom na gumb <guibutton
+>Predogled</guibutton
+> si lahko izbrano postavitev ogledate v ločenem oknu. </para>
+<para
+>Postavitve lahko uredite s tipkama za navzgor in navzdol, pri čemer je zgornja postavitev privzeta. </para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Rezervne postavitve</guilabel
+></term>
+<listitem>
+<para
+>To možnost lahko omogočite le, če imate več kot dve postavitvi.</para>
+<para
+>Z rezervnimi postavitvami lahko preprosto preklapljate med majhnim številom postavitev, hkrati pa imate več postavitev pri roki. Uporabljate lahko na primer tri jezike: angleščino, ukrajinščino in nemščino, vendar prva dva uporabljate pogosto, tretjega pa le občasno. V tem primeru lahko prvi dve nastavite kot glavni postavitvi (nastavitev <guilabel
+>Število glavnih postavitev</guilabel
+>: 2), nemško pa kot rezervno - ko preklapljate s tipkovnico in levim gumbom miške, se bo preklopil samo med glavnima postavitvama, vendar lahko vedno izberete tretjo postavitev s kontekstnim menijem.</para>
+<para
+>Ko je izbrana rezervna postavitev, zamenja zadnjo glavno postavitev (to je narejeno iz tehničnih razlogov, običajno globalne bližnjice delujejo na podlagi prve aktivne postavitve, zato je bolj zanesljivo, da se ohrani prva postavitev, ko se omogoči aktiviranje rezervnih postavitev).</para>
+<!-- context menu ?-->
+<para
+>Ker X.org dovoljuje le 4 postavitve za preklapljanje, lahko s funkcijo <quote
+>proste postavitve</quote
+> premagate to omejitev: uporabnik ima lahko največ 4 glavne postavitve (ki jih upravlja X.org), dovoljene pa so še 4 proste postavitve (ki jih upravlja stikalo postavitev). Tako lahko uporabnik udobno dela z do 8 postavitvami (čeprav se lahko omejitev 4 rezervnih postavitev v prihodnosti poveča). </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+
+<sect1 id="advanced">
+<title
+>Zavihek Napredno</title>
+<para
+>Če v tem zavihku označite možnost <guilabel
+>Konfiguriranje možnosti tipkovnice</guilabel
+>, boste lahko nastavili nekaj možnosti glede nekaterih posebnih nastavitev tipk. Te možnosti lahko razširite s klikom na simbol &gt; na levi strani možnosti, nato pa na razširjenem seznamu izberete nastavitev.</para>
+<para
+>To je &GUI; za pomoč pri ustvarjanju poljubnih postavitev tipkovnice za &X11; z uporabo XKB. </para>
+<para
+>Za več informacij glejte razdelek <emphasis
+>Odnosi</emphasis
+> na strani <ulink url="https://www.freedesktop.org/wiki/Software/XKeyboardConfig"
+>XKeyboardConfig na freedesktop.org</ulink
+>. </para>
+</sect1>
+</article>
