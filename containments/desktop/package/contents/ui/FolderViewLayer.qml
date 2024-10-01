@@ -188,6 +188,15 @@ FocusScope {
     }
 
     Connections {
+        target: Plasmoid.containment
+        // Load the icon positions when geometry changes, so we dont use positions from wrong geometry
+        // BUG:493569
+        function onScreenGeometryChanged(): void {
+            folderView.positions = getPositions();
+        }
+    }
+
+    Connections {
         target: Plasmoid.configuration
 
         function onArrangementChanged() {
