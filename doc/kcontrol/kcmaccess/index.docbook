@@ -476,27 +476,75 @@ audible cues, or who have difficulty using a keyboard.
 <sect3 id="access-screenreader">
 <title><guilabel>Screen Reader</guilabel></title>
 
-<para>Install a screen reader application like
-<ulink url="https://en.wikipedia.org/wiki/Orca_(assistive_technology)">Orca</ulink>
-together with <application>speech-dispatcher</application>.
+<para>
+    If you do not have the
+    <ulink url="https://en.wikipedia.org/wiki/Orca_(assistive_technology)">Orca screen reader</ulink>
+    installed, upon opening this page, you will see a message instructing you to install it
+    on your system, then close and reopen the Accessibility settings window.
 </para>
 
-<para>Test that sound from speech dispatcher works using the command
-<command>spd-say hello</command> in a terminal.
+<para>
+    Upon installing Orca, you should have <application>speech-dispatcher</application>
+    and <application>espeak</application> installed as well.
+    In case this does not happen, you may need to install it manually.
 </para>
 
-<para>In addition you need a text to speech synthesizer like &eg; <application>espeak</application>.
+<para>
+    Test that sound from speech dispatcher works using the command
+    <command>spd-say hello</command> in a terminal.
 </para>
 
-<para>Enable the screen reader in the checkbox, logout and restart your desktop session.
+<para>
+    If the check box <guilabel>Enable Screen Reader</guilabel> is checked,
+    upon clicking on <guibutton>Apply</guibutton>, Orca will start automatically in the background.
 </para>
 
-<para>For &plasma; itself, make sure to use the traditional <guilabel>Application Menu</guilabel>,
-and check that this menu has a keyboard shortcut associated
-(<keycombo action="simul">&Alt;<keycap>F1</keycap></keycombo>).
-When pressing this shortcut, the menu should open and be read when navigating
-the menu with the arrow keys.
+<para>
+    If you are unfamiliar with Orca, you should see the
+    <ulink url="https://help.gnome.org/users/orca/stable/index.html">Orca documentation website</ulink>.
 </para>
+
+<para>
+    You may want to configure:
+</para>
+
+<varlistentry>
+    <listitem>
+        <para>
+            In the <guilabel>General</guilabel> tab: whether the <guilabel>Keyboard Layout</guilabel>
+            should be in <guilabel>Desktop</guilabel> mode or <guilabel>Laptop</guilabel> mode.
+        </para>
+        <para>
+            In Desktop mode, the Orca Modifier used by most keyboard shortcuts to activate Orca
+            functionality will be either Insert or the number 0 on the number pad, whereas in
+            Laptop mode the Orca Modifier will be Caps Lock. Note that Orca itself refers to
+            number pad keys as KP, which stands for Key Pad.
+        </para>
+    </listitem>
+    <listitem>
+        <para>
+            In the <guilabel>Voice</guilabel> tab: select the <guilabel>Person</guilabel> voice
+            to be used. This will dramatically affect your screen reader experience. You should
+            also adjust the <guilabel>Rate</guilabel> accordingly to make the voice faster,
+            as the default is fairly slow in most configurations.
+        </para>
+    </listitem>
+    <listitem>
+        <para>
+            Also in the <guilabel>Voice</guilabel> tab: you might want to configure another speech
+            synthesizer, such as <ulink url="https://github.com/Elleo/pied">Pied</ulink>.
+            To do so, you might need to close the Orca settings, install the new speech synthesizer,
+            then reopen and enable it in this tab.
+        </para>
+    </listitem>
+    <listitem>
+        <para>
+            In the <guilabel>Keybindings</guilabel> tab: select which <guilabel>Screen Reader Modifier Key(s)</guilabel>
+            will function as the default Orca Modifier for keyboard shortcuts.
+        </para>
+    </listitem>
+</varlistentry>
+
 </sect3>
 
 </sect2>
