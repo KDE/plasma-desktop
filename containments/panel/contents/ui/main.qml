@@ -431,10 +431,12 @@ ContainmentItem {
         PlasmaCore.ToolTipArea {
             id: toolTipArea
             anchors.fill: parent
-            mainText: Plasmoid.internalAction("configure").text
+            // This is to avoid the presence of mnemonics, that would
+            // show the text as "&Show Panel Configuration"
+            mainText: Plasmoid.internalAction("configure").text.replace('&', '')
             icon: "configure"
         }
-        Accessible.name: Plasmoid.internalAction("configure").text
+        Accessible.name: toolTipArea.mainText
         Accessible.description: i18nd("plasma_shell_org.kde.plasma.desktop", "Open Panel configuration ui")
         Accessible.role: Accessible.Button
     }
