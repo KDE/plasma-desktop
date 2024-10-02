@@ -49,7 +49,7 @@ UI related to adding and changing applets — the add widgets sidebar and the ap
 
 UI for the panel and desktop.
 
-### `layouts-templates/`
+### `layout-templates/`
 
 Templates for the items in the "Add Panel…" menu on the desktop: default panel, empty panel, and global menubar.
 
