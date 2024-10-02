@@ -279,6 +279,14 @@ ColumnLayout {
                     }
                 }
             }
+            PC3.ComboBox {
+                model: [alignmentBox.model.reduce((a, b) => a.length > b.length ? a : b)]
+
+                Component.onCompleted: {
+                    parent.Layout.minimumWidth = implicitWidth
+                    destroy()
+                }
+            }
         }
 
         ColumnLayout {
@@ -325,7 +333,14 @@ ColumnLayout {
                         panelConfiguration.panelRulerView.visible = true
                     }
                 }
+            }
+            PC3.ComboBox {
+                model: [widthBox.model.reduce((a, b) => a.length > b.length ? a : b)]
 
+                Component.onCompleted: {
+                    parent.Layout.minimumWidth = implicitWidth
+                    destroy()
+                }
             }
         }
 
@@ -386,6 +401,14 @@ ColumnLayout {
                     }
                 }
             }
+            PC3.ComboBox {
+                model: [autoHideBox.model.reduce((a, b) => a.length > b.length ? a : b)]
+
+                Component.onCompleted: {
+                    parent.Layout.minimumWidth = implicitWidth
+                    destroy()
+                }
+            }
         }
 
         ColumnLayout {
@@ -424,6 +447,14 @@ ColumnLayout {
                     } else {
                         panel.opacityMode = Panel.Global.Translucent
                     }
+                }
+            }
+            PC3.ComboBox {
+                model: [transparencyBox.model.reduce((a, b) => a.length > b.length ? a : b)]
+
+                Component.onCompleted: {
+                    parent.Layout.minimumWidth = implicitWidth
+                    destroy()
                 }
             }
         }
