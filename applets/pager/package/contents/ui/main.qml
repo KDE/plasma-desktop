@@ -393,7 +393,6 @@ PlasmoidItem {
                     anchors.fill: parent
                     imagePath: "widgets/pager"
                     opacity: desktop.state === usedPrefix ? 1 : 0
-                    Behavior on opacity { OpacityAnimator { duration: Kirigami.Units.longDuration; easing.type: Easing.OutCubic } }
                 }
 
                 PagerFrame {
@@ -508,11 +507,6 @@ PlasmoidItem {
                             border.color: model.IsActive
                                 ? root.windowActiveBorderColor
                                 : root.windowInactiveBorderColor
-
-                            Behavior on width  { NumberAnimation { duration: Kirigami.Units.longDuration; easing.type: Easing.OutCubic } }
-                            Behavior on height { NumberAnimation { duration: Kirigami.Units.longDuration; easing.type: Easing.OutCubic } }
-                            Behavior on color        { ColorAnimation  { duration: Kirigami.Units.longDuration; easing.type: Easing.OutCubic } }
-                            Behavior on border.color { ColorAnimation  { duration: Kirigami.Units.longDuration; easing.type: Easing.OutCubic } }
 
                             MouseArea {
                                 id: windowMouseArea
