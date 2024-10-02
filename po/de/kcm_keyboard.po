@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_keyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-22 00:41+0000\n"
-"PO-Revision-Date: 2024-05-30 22:09+0200\n"
+"PO-Revision-Date: 2024-09-29 13:38+0200\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -74,13 +74,7 @@ msgid "Keyboard layout visualization"
 msgstr "Anzeige der Tastaturbelegung"
 
 #: tastenbrett/main.cpp:139
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid ""
-#| "The keyboard geometry failed to load. This often indicates that the "
-#| "selected model does not support a specific layout or layout variant. This "
-#| "problem will likely also present when you try to use this combination of "
-#| "model, layout and variant."
+#, kde-format
 msgctxt "@label"
 msgid ""
 "The keyboard geometry failed to load. This often indicates that the selected "
@@ -94,34 +88,35 @@ msgstr ""
 "Die Tastaturgeometrie konnte nicht geladen werden. Dies zeigt oft an, dass "
 "das ausgewählte Modell eine bestimmte Belegung oder eine Variante nicht "
 "unterstützt. Dieses Problem tritt wahrscheinlich auch auf, wenn Sie "
-"versuchen, die Kombination aus Modell, Belegung und Variante zu verwenden."
+"versuchen, diese Kombination aus Modell, Belegung und Variante zu "
+"verwenden.\n"
+"Die Vorschau von Layouts, die außerhalb des xkb-Verzeichnisses Ihres Systems "
+"definiert sind, wird nicht unterstützt und löst ebenfalls diese Meldung aus. "
+"Diese können trotzdem funktionieren, wenn sie angewendet werden"
 
 #: ui/KeyBindings.qml:16
 #, kde-format
 msgctxt "@title"
 msgid "Key Bindings"
-msgstr ""
+msgstr "Tastenzuordnungen"
 
 #: ui/KeyBindings.qml:37
-#, fuzzy, kde-format
-#| msgid "&Configure keyboard options"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Configure keyboard options"
-msgstr "&Tastatureinstellungen ändern"
+msgstr "Tastatureinstellungen ändern"
 
 #: ui/LayoutDialog.qml:20
-#, fuzzy, kde-format
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Layout"
 msgstr "Belegung hinzufügen"
 
 #: ui/LayoutDialog.qml:177
-#, fuzzy, kde-format
-#| msgid "Show layout indicator"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
-msgstr "Belegungsanzeige aktivieren"
+msgstr "Kurzbezeichnung der Belegung"
 
 #: ui/LayoutDialog.qml:187
 #, kde-format
@@ -130,17 +125,18 @@ msgid ""
 "The abbreviated name of the selected layout, which will be displayed in the "
 "system tray. You can change this setting yourself."
 msgstr ""
+"Der abgekürzte Name der gewählten Tastaturbelegung, der im Systemabschnitt "
+"der Kontrollleiste angezeigt wird. Sie können diese Einstellung selbst "
+"ändern."
 
 #: ui/LayoutDialog.qml:195
-#, fuzzy, kde-format
-#| msgid "Shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "Kurzbefehl:"
 
 #: ui/LayoutDialog.qml:206 ui/main.qml:285
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button"
 msgid "Preview"
 msgstr "Vorschau"
@@ -149,37 +145,35 @@ msgstr "Vorschau"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Switching…"
-msgstr ""
+msgstr "Wechsel einrichten …"
 
 # bearbeiten?
 #: ui/main.qml:38
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Configure Switching"
-msgstr "Belegungen einrichten"
+msgstr "Wechsel einrichten"
 
 #: ui/main.qml:44
 #, kde-format
 msgctxt "@action:button"
 msgid "Key Bindings"
-msgstr ""
+msgstr "Tastenzuordnungen"
 
 #: ui/main.qml:45
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Key Bindings"
-msgstr ""
+msgstr "Tastenzuordnungen"
 
 #: ui/main.qml:51
 #, kde-format
 msgctxt "@action:button Layout"
 msgid "Add…"
-msgstr ""
+msgstr "Hinzufügen …"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add layout"
 msgstr "Belegung hinzufügen"
@@ -188,12 +182,11 @@ msgstr "Belegung hinzufügen"
 #, kde-format
 msgctxt "@label:checkbox configure layouts option"
 msgid "Enable"
-msgstr ""
+msgstr "Aktivieren"
 
 # bearbeiten?
 #: ui/main.qml:60
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Configure Layouts"
 msgstr "Belegungen einrichten"
@@ -202,114 +195,100 @@ msgstr "Belegungen einrichten"
 #, kde-format
 msgctxt "@label:listbox Keyboard model"
 msgid "Model:"
-msgstr ""
+msgstr "Modell:"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "NumLock on Plasma Startup"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "NumLock on startup:"
-msgstr "Zahlenblock beim Plasma-Start"
+msgstr "Zahlenblock beim Plasma-Start:"
 
 #: ui/main.qml:112
-#, fuzzy, kde-format
-#| msgid "T&urn on"
+#, kde-format
 msgctxt "@item:inlistbox Turn on \"NumLock\" on startup"
 msgid "Turn on"
-msgstr "Ein&schalten"
+msgstr "Einschalten"
 
 #: ui/main.qml:116
-#, fuzzy, kde-format
-#| msgid "Turn o&ff"
+#, kde-format
 msgctxt "@item:inlistbox Turn off \"NumLock\" on startup"
 msgid "Turn off"
-msgstr "&Ausschalten"
+msgstr "Ausschalten"
 
 #: ui/main.qml:120
-#, fuzzy, kde-format
-#| msgid "&Leave unchanged"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Leave \"NumLock\" at whatever it was set to before Plasma "
 "started up"
 msgid "Leave unchanged"
-msgstr "&Unverändert lassen"
+msgstr "Unverändert lassen"
 
 #: ui/main.qml:146
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Key repeat:"
-msgstr "Tastenwiederholung"
+msgstr "Tastenwiederholung:"
 
 #: ui/main.qml:155
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Key repeat"
 msgstr "Tastenwiederholung"
 
 #: ui/main.qml:166
-#, fuzzy, kde-format
-#| msgid "&Delay:"
+#, kde-format
 msgctxt "@label:textbox Key repeat delay"
 msgid "Delay:"
-msgstr "&Verzögerung:"
+msgstr "Verzögerung:"
 
 #: ui/main.qml:180
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat delay %1"
-msgstr ""
+msgstr "Tastenwiederholungs-Verzögerung %1"
 
 #: ui/main.qml:188
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "%1 ms"
-msgstr ""
+msgstr "%1 ms"
 
 #: ui/main.qml:192
-#, fuzzy, kde-format
-#| msgid " ms"
+#, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "ms"
-msgstr " ms"
+msgstr "ms"
 
 #: ui/main.qml:205
-#, fuzzy, kde-format
-#| msgid "&Rate:"
+#, kde-format
 msgctxt "@label:textbox Key repeat rate"
 msgid "Rate:"
-msgstr "&Geschwindigkeit:"
+msgstr "Geschwindigkeit:"
 
 #: ui/main.qml:219
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat rate %1"
-msgstr ""
+msgstr "Tastenwiederholungsrate %1"
 
 # Ausgeschriebene Übersetzung (Wiederholungen/Sek.) zu lang für Spinbox
 # TODO: Bugreport schreiben
-#
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid " repeats/s"
+#, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "%1 repeats/s"
-msgstr " Wdh./Sek."
+msgstr "%1 Wdh./Sek."
 
 # Ausgeschriebene Übersetzung (Wiederholungen/Sek.) zu lang für Spinbox
 # TODO: Bugreport schreiben
-#
 #: ui/main.qml:231
-#, fuzzy, kde-format
-#| msgid " repeats/s"
+#, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "repeats/s"
-msgstr " Wdh./Sek."
+msgstr "Wdh./Sek."
 
 #: ui/main.qml:243
-#, fuzzy, kde-format
-#| msgid "Test area:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Test area:"
 msgstr "Testbereich:"
@@ -318,18 +297,16 @@ msgstr "Testbereich:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to test settings"
-msgstr ""
+msgstr "Hier eingeben, um die Einstellungen zu testen"
 
 #: ui/main.qml:256
-#, fuzzy, kde-format
-#| msgid "Layouts"
+#, kde-format
 msgctxt "@title:view"
 msgid "Layouts"
 msgstr "Belegungen"
 
 #: ui/main.qml:268
-#, fuzzy, kde-format
-#| msgid "Move Up"
+#, kde-format
 msgctxt "@action:button"
 msgid "Move Up"
 msgstr "Nach oben"
@@ -338,32 +315,28 @@ msgstr "Nach oben"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout up"
-msgstr ""
+msgstr "%1-Belegung nach oben verschieben"
 
 #: ui/main.qml:275
-#, fuzzy, kde-format
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@action:button"
 msgid "Move Down"
 msgstr "Nach unten"
 
 #: ui/main.qml:276
-#, fuzzy, kde-format
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout Down"
-msgstr "Nach unten"
+msgstr "%1-Belegung nach unten verschieben"
 
 #: ui/main.qml:286
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Preview"
 msgstr "Vorschau"
 
 #: ui/main.qml:294
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "Entfernen"
@@ -372,29 +345,27 @@ msgstr "Entfernen"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Remove layout %1"
-msgstr ""
+msgstr "%1-Belegung entfernen"
 
 # bearbeiten?
 #: ui/main.qml:307
-#, fuzzy, kde-format
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Spare layouts:"
-msgstr "Zusätzliche Belegungen"
+msgstr "Zusätzliche Belegungen:"
 
 #: ui/main.qml:344
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
-msgstr ""
+msgstr "Anzahl zusätzlicher Belegungen"
 
 # bearbeiten?
 #: ui/main.qml:376
-#, fuzzy, kde-format
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@label:textbox completes spinbox, x main layouts"
 msgid "main layouts"
-msgstr "Zusätzliche Belegungen"
+msgstr "Hauptbelegungen"
 
 #: ui/main.qml:380
 #, kde-format
@@ -405,99 +376,97 @@ msgid ""
 "accessed through the keyboard indicator applet or by setting a custom "
 "shortcut."
 msgstr ""
+"Sie können bis zu 4 Hauptbelegungen haben, alle anderen Belegungen sind "
+"zusätzliche Belegungen. Zusätzliche Belegungen werden beim Durchschalten der "
+"Layouts nicht berücksichtigt, können aber über das Tastaturanzeige-"
+"Miniprogramm oder durch Festlegen eines benutzerdefinierten Tastaturkürzels "
+"aufgerufen werden."
 
 #: ui/main.qml:385
-#, fuzzy, kde-format
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
-msgstr "Anzahl Haupt-Belegungen:"
+msgstr "Belegungskürzel ändern:"
 
 #: ui/main.qml:409
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
-msgstr ""
+msgstr "oder"
 
 # bearbeiten?
 #: ui/Switching.qml:17
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgctxt "@title"
 msgid "Configure Switching"
-msgstr "Belegungen einrichten"
+msgstr "Belegungswechsel einrichten"
 
 #: ui/Switching.qml:23
 #, kde-format
 msgctxt "@title:group"
 msgid "Behavior"
-msgstr ""
+msgstr "Verhalten"
 
 #: ui/Switching.qml:28
-#, fuzzy, kde-format
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Switching layout affects:"
-msgstr "Anzahl Haupt-Belegungen:"
+msgstr "Belegungswechsel betrifft:"
 
 #: ui/Switching.qml:35
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows"
-msgstr ""
+msgstr "Alle Fenster"
 
 #: ui/Switching.qml:39
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows on current desktop"
-msgstr ""
+msgstr "Alle Fenster der aktuellen Arbeitsfläche"
 
 #: ui/Switching.qml:43
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows of current application"
-msgstr ""
+msgstr "Alle Fenster der aktuellen Anwendung"
 
 #: ui/Switching.qml:47
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Current window only"
-msgstr ""
+msgstr "Nur das aktuelle Fenster"
 
 #: ui/Switching.qml:74
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Show notification on layout change"
-msgstr ""
+msgstr "Benachrichtigung beim Ändern der Belegung anzeigen"
 
 #: ui/Switching.qml:86
-#, fuzzy, kde-format
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:group"
 msgid "Shortcuts"
-msgstr "Kurzbefehl"
+msgstr "Kurzbefehle"
 
 # bearbeiten?
 #: ui/Switching.qml:91 ui/Switching.qml:153
-#, fuzzy, kde-format
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Change layout:"
-msgstr "Zusätzliche Belegungen"
+msgstr "Tastaturbelegung ändern:"
 
 #: ui/Switching.qml:112
-#, fuzzy, kde-format
-#| msgid "Switch to Next Keyboard Layout"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Switch to last used layout:"
-msgstr "Auf nächste Tastaturbelegung umschalten"
+msgstr "Auf zuletzt verwendete Tastaturbelegung umschalten:"
 
 #: ui/Switching.qml:133
-#, fuzzy, kde-format
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:group"
 msgid "Legacy Shortcuts"
-msgstr "Kurzbefehl"
+msgstr "Ältere Kurzbefehle"
 
 #: ui/Switching.qml:141
 #, kde-kuit-format
@@ -508,13 +477,17 @@ msgid ""
 "Wayland.<nl/><nl/>Setting these shortcuts will take you to the Key bindings "
 "page."
 msgstr ""
+"Ältere X11-Kurzbefehle erlauben eine feinere Steuerung von reinen "
+"Modifizierer-Kurzbefehlen und haben in gewissen Fällen unter X11 eine etwas "
+"bessere Unterstützung. Sie können auch mit Wayland verwendet werden.<nl/><nl/"
+">Wenn Sie diese Kurzbefehle festlegen, gelangen Sie auf die Seite mit den "
+"Tastenzuordnungen."
 
 #: ui/Switching.qml:182
-#, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Alternative symbols:"
-msgstr "Alternativer Kurzbefehl:"
+msgstr "Alternative Symbole:"
 
 #: ui/Switching.qml:208
 #, kde-format
@@ -523,6 +496,8 @@ msgid ""
 "Modifier keys can be used to type additional characters, symbols, and "
 "diacritical marks."
 msgstr ""
+"Mit Modifizertasten können Sie zusätzliche Zeichen, Symbole und diakritische "
+"Zeichen eingeben."
 
 #: xkboptionsmodel.cpp:160
 #, kde-format

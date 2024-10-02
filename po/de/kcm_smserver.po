@@ -5,20 +5,21 @@
 # Frederik Schwarzer <schwarzer@kde.org>, 2012, 2022.
 # Burkhard Lück <lueck@hube-lueck.de>, 2013, 2015, 2019, 2020, 2021.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
+# SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_smserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:40+0000\n"
-"PO-Revision-Date: 2024-07-29 22:23+0200\n"
-"Last-Translator: Alois.spitzbart <spitz234@hotmail.com>\n"
+"PO-Revision-Date: 2024-09-29 16:30+0200\n"
+"Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -86,11 +87,10 @@ msgid "Restart Now"
 msgstr "Jetzt neu starten"
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group"
 msgid "General"
-msgstr "Allgemein:"
+msgstr "Allgemein"
 
 #: ui/main.qml:79
 #, kde-format
@@ -98,7 +98,7 @@ msgctxt ""
 "@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "Ask for confirmation:"
-msgstr ""
+msgstr "Um Bestätigung bitten:"
 
 #: ui/main.qml:80
 #, kde-format
@@ -106,7 +106,7 @@ msgctxt ""
 "@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "On shutdown, restart, and logout"
-msgstr ""
+msgstr "Beim Herunterfahren, Neustart und Ausloggen"
 
 #: ui/main.qml:91
 #, kde-format
