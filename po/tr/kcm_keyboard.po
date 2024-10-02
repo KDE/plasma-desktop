@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-22 00:41+0000\n"
+"POT-Creation-Date: 2024-10-02 00:41+0000\n"
 "PO-Revision-Date: 2024-08-22 13:48+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -97,17 +97,35 @@ msgstr ""
 "bu iletiyi gösterecektir. Ancak bunları uygularsanız yine de düzgün "
 "çalışabilir."
 
-#: ui/KeyBindings.qml:16
+#: ui/KeyBindings.qml:18
 #, kde-format
 msgctxt "@title"
 msgid "Key Bindings"
 msgstr "Düğme Bağıntıları"
 
-#: ui/KeyBindings.qml:37
+#: ui/KeyBindings.qml:62
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Configure keyboard options"
 msgstr "Klavye seçeneklerini yapılandır"
+
+#: ui/KeyBindings.qml:130
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset"
+msgstr ""
+
+#: ui/KeyBindings.qml:134
+#, kde-format
+msgctxt "@info accessible"
+msgid "Reset selected options for this group"
+msgstr ""
+
+#: ui/KeyBindings.qml:135
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Reset selected options for this group"
+msgstr ""
 
 #: ui/LayoutDialog.qml:20
 #, kde-format
@@ -489,14 +507,14 @@ msgstr ""
 "Niteleyici düğmeler; ek karakterler, semboller ve aksan imlerini yazmak için "
 "kullanılabilirler."
 
-#: xkboptionsmodel.cpp:160
+#: xkboptionsmodel.cpp:165
 #, kde-format
 msgid "%1 shortcut"
 msgid_plural "%1 shortcuts"
 msgstr[0] "%1 kısayol"
 msgstr[1] "%1 kısayol"
 
-#: xkboptionsmodel.cpp:163
+#: xkboptionsmodel.cpp:168
 #, kde-format
 msgctxt "no shortcuts defined"
 msgid "None"

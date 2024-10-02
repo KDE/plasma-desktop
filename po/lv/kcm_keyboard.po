@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-22 00:41+0000\n"
+"POT-Creation-Date: 2024-10-02 00:41+0000\n"
 "PO-Revision-Date: 2024-09-10 10:49+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -95,17 +95,35 @@ msgstr ""
 "atbalstīta un arī var izraisīt šādu ziņojumu, tomēr šāds izkārtojums var "
 "darboties."
 
-#: ui/KeyBindings.qml:16
+#: ui/KeyBindings.qml:18
 #, kde-format
 msgctxt "@title"
 msgid "Key Bindings"
 msgstr "Taustiņu sasaistes"
 
-#: ui/KeyBindings.qml:37
+#: ui/KeyBindings.qml:62
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Configure keyboard options"
 msgstr "Konfigurēt tastatūras opcijas"
+
+#: ui/KeyBindings.qml:130
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset"
+msgstr ""
+
+#: ui/KeyBindings.qml:134
+#, kde-format
+msgctxt "@info accessible"
+msgid "Reset selected options for this group"
+msgstr ""
+
+#: ui/KeyBindings.qml:135
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Reset selected options for this group"
+msgstr ""
 
 #: ui/LayoutDialog.qml:20
 #, kde-format
@@ -487,7 +505,7 @@ msgstr ""
 "Modifikatorus taustiņus var izmantot papildu rakstzīmju, simbolu un "
 "diakritisko zīmju rakstīšanai."
 
-#: xkboptionsmodel.cpp:160
+#: xkboptionsmodel.cpp:165
 #, kde-format
 msgid "%1 shortcut"
 msgid_plural "%1 shortcuts"
@@ -495,7 +513,7 @@ msgstr[0] "%1 saīsne"
 msgstr[1] "%1 saīsnes"
 msgstr[2] "%1 saīšņu"
 
-#: xkboptionsmodel.cpp:163
+#: xkboptionsmodel.cpp:168
 #, kde-format
 msgctxt "no shortcuts defined"
 msgid "None"

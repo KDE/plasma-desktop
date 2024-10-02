@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxkb\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-22 00:41+0000\n"
+"POT-Creation-Date: 2024-10-02 00:41+0000\n"
 "PO-Revision-Date: 2009-12-15 19:24+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -90,18 +90,36 @@ msgid ""
 "fine if applied"
 msgstr ""
 
-#: ui/KeyBindings.qml:16
+#: ui/KeyBindings.qml:18
 #, kde-format
 msgctxt "@title"
 msgid "Key Bindings"
 msgstr ""
 
-#: ui/KeyBindings.qml:37
+#: ui/KeyBindings.qml:62
 #, fuzzy, kde-format
 #| msgid "&Enable keyboard layouts"
 msgctxt "@label:checkbox"
 msgid "Configure keyboard options"
 msgstr "&Włączë ùstôwë klawiaturë"
+
+#: ui/KeyBindings.qml:130
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset"
+msgstr ""
+
+#: ui/KeyBindings.qml:134
+#, kde-format
+msgctxt "@info accessible"
+msgid "Reset selected options for this group"
+msgstr ""
+
+#: ui/KeyBindings.qml:135
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Reset selected options for this group"
+msgstr ""
 
 #: ui/LayoutDialog.qml:20
 #, fuzzy, kde-format
@@ -492,7 +510,7 @@ msgid ""
 "diacritical marks."
 msgstr ""
 
-#: xkboptionsmodel.cpp:160
+#: xkboptionsmodel.cpp:165
 #, fuzzy, kde-format
 #| msgid "Main shortcuts:"
 msgid "%1 shortcut"
@@ -501,7 +519,7 @@ msgstr[0] "Przédné skrodzënë:"
 msgstr[1] "Przédné skrodzënë:"
 msgstr[2] "Przédné skrodzënë:"
 
-#: xkboptionsmodel.cpp:163
+#: xkboptionsmodel.cpp:168
 #, fuzzy, kde-format
 #| msgid "None"
 msgctxt "no shortcuts defined"

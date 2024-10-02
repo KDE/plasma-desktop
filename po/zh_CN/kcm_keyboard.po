@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-22 00:41+0000\n"
+"POT-Creation-Date: 2024-10-02 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -88,17 +88,35 @@ msgstr ""
 "程序不支持预览在本机系统的 xkb 目录之外定义的布局，预览这种布局时将触发本提示"
 "消息。这些键盘型号、布局、变种可能仍然能够在应用后正常工作。"
 
-#: ui/KeyBindings.qml:16
+#: ui/KeyBindings.qml:18
 #, kde-format
 msgctxt "@title"
 msgid "Key Bindings"
 msgstr "键位绑定"
 
-#: ui/KeyBindings.qml:37
+#: ui/KeyBindings.qml:62
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Configure keyboard options"
 msgstr "配置键盘选项"
+
+#: ui/KeyBindings.qml:130
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset"
+msgstr ""
+
+#: ui/KeyBindings.qml:134
+#, kde-format
+msgctxt "@info accessible"
+msgid "Reset selected options for this group"
+msgstr ""
+
+#: ui/KeyBindings.qml:135
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Reset selected options for this group"
+msgstr ""
 
 #: ui/LayoutDialog.qml:20
 #, kde-format
@@ -473,13 +491,13 @@ msgid ""
 "diacritical marks."
 msgstr "修饰符键可以用于输入额外字符、符号和变音符。"
 
-#: xkboptionsmodel.cpp:160
+#: xkboptionsmodel.cpp:165
 #, kde-format
 msgid "%1 shortcut"
 msgid_plural "%1 shortcuts"
 msgstr[0] "%1 个快捷键"
 
-#: xkboptionsmodel.cpp:163
+#: xkboptionsmodel.cpp:168
 #, kde-format
 msgctxt "no shortcuts defined"
 msgid "None"

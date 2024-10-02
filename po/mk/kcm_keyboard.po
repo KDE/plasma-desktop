@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-22 00:41+0000\n"
+"POT-Creation-Date: 2024-10-02 00:41+0000\n"
 "PO-Revision-Date: 2008-12-21 16:38+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -91,18 +91,36 @@ msgid ""
 "fine if applied"
 msgstr ""
 
-#: ui/KeyBindings.qml:16
+#: ui/KeyBindings.qml:18
 #, kde-format
 msgctxt "@title"
 msgid "Key Bindings"
 msgstr ""
 
-#: ui/KeyBindings.qml:37
+#: ui/KeyBindings.qml:62
 #, fuzzy, kde-format
 #| msgid "&Enable keyboard repeat"
 msgctxt "@label:checkbox"
 msgid "Configure keyboard options"
 msgstr "&Овозможи повторување на тастатура"
+
+#: ui/KeyBindings.qml:130
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset"
+msgstr ""
+
+#: ui/KeyBindings.qml:134
+#, kde-format
+msgctxt "@info accessible"
+msgid "Reset selected options for this group"
+msgstr ""
+
+#: ui/KeyBindings.qml:135
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Reset selected options for this group"
+msgstr ""
 
 #: ui/LayoutDialog.qml:20
 #, fuzzy, kde-format
@@ -497,7 +515,7 @@ msgid ""
 "diacritical marks."
 msgstr ""
 
-#: xkboptionsmodel.cpp:160
+#: xkboptionsmodel.cpp:165
 #, kde-format
 msgid "%1 shortcut"
 msgid_plural "%1 shortcuts"
@@ -505,7 +523,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: xkboptionsmodel.cpp:163
+#: xkboptionsmodel.cpp:168
 #, fuzzy, kde-format
 #| msgctxt "no shortcut defined"
 #| msgid "None"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-22 00:41+0000\n"
+"POT-Creation-Date: 2024-10-02 00:41+0000\n"
 "PO-Revision-Date: 2024-08-23 07:06+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -93,17 +93,35 @@ msgstr ""
 "הצגה מקדימה של הפריסוות שמוגדרות מחוץ לתיקיית ה־xkb של המערכת שלך אינה נתמכת "
 "וגם תציג את ההודעה הזאת. הן יכולות לעבוד היטב אם יוחלו במערכת"
 
-#: ui/KeyBindings.qml:16
+#: ui/KeyBindings.qml:18
 #, kde-format
 msgctxt "@title"
 msgid "Key Bindings"
 msgstr "איגודי מקשים"
 
-#: ui/KeyBindings.qml:37
+#: ui/KeyBindings.qml:62
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Configure keyboard options"
 msgstr "הגדרת אפשרויות המקלדת"
+
+#: ui/KeyBindings.qml:130
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset"
+msgstr ""
+
+#: ui/KeyBindings.qml:134
+#, kde-format
+msgctxt "@info accessible"
+msgid "Reset selected options for this group"
+msgstr ""
+
+#: ui/KeyBindings.qml:135
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Reset selected options for this group"
+msgstr ""
 
 #: ui/LayoutDialog.qml:20
 #, kde-format
@@ -481,7 +499,7 @@ msgid ""
 "diacritical marks."
 msgstr "אפשר להשתמש במקשי החלפה כדי להקליד תווים, סמלים וסימני הבחן נוספים."
 
-#: xkboptionsmodel.cpp:160
+#: xkboptionsmodel.cpp:165
 #, kde-format
 msgid "%1 shortcut"
 msgid_plural "%1 shortcuts"
@@ -490,7 +508,7 @@ msgstr[1] "שני קיצורי דרך"
 msgstr[2] "%1 קיצורי דרך"
 msgstr[3] "%1 קיצורי דרך"
 
-#: xkboptionsmodel.cpp:163
+#: xkboptionsmodel.cpp:168
 #, kde-format
 msgctxt "no shortcuts defined"
 msgid "None"

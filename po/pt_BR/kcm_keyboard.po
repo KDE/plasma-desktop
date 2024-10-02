@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-22 00:41+0000\n"
+"POT-Creation-Date: 2024-10-02 00:41+0000\n"
 "PO-Revision-Date: 2024-07-26 12:31-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -99,7 +99,7 @@ msgstr ""
 "não é suportada e também acionará essa mensagem. Eles ainda podem funcionar "
 "bem se aplicados"
 
-#: ui/KeyBindings.qml:16
+#: ui/KeyBindings.qml:18
 #, fuzzy, kde-format
 #| msgctxt "@title:tab"
 #| msgid "Key Bindings"
@@ -107,13 +107,31 @@ msgctxt "@title"
 msgid "Key Bindings"
 msgstr "Combinação de teclas"
 
-#: ui/KeyBindings.qml:37
+#: ui/KeyBindings.qml:62
 #, fuzzy, kde-format
 #| msgctxt "@option:checkbox"
 #| msgid "Configure keyboard options"
 msgctxt "@label:checkbox"
 msgid "Configure keyboard options"
 msgstr "Configurar as opções do teclado"
+
+#: ui/KeyBindings.qml:130
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset"
+msgstr ""
+
+#: ui/KeyBindings.qml:134
+#, kde-format
+msgctxt "@info accessible"
+msgid "Reset selected options for this group"
+msgstr ""
+
+#: ui/KeyBindings.qml:135
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Reset selected options for this group"
+msgstr ""
 
 #: ui/LayoutDialog.qml:20
 #, kde-format
@@ -537,14 +555,14 @@ msgid ""
 "diacritical marks."
 msgstr ""
 
-#: xkboptionsmodel.cpp:160
+#: xkboptionsmodel.cpp:165
 #, kde-format
 msgid "%1 shortcut"
 msgid_plural "%1 shortcuts"
 msgstr[0] "%1 atalho"
 msgstr[1] "%1 atalhos"
 
-#: xkboptionsmodel.cpp:163
+#: xkboptionsmodel.cpp:168
 #, kde-format
 msgctxt "no shortcuts defined"
 msgid "None"
