@@ -437,10 +437,15 @@ ContainmentItem {
         PlasmaCore.ToolTipArea {
             id: toolTipArea
             anchors.fill: parent
-            mainText: Plasmoid.internalAction("configure").text
+            // This is to avoid the presence of mnemonics, that would
+            // show the text as "&Show Panel Configuration"
+            // Strip out ampersands right before non-whitespace characters, i.e.
+            // those used to determine the alt key shortcut
+            // (except when the word ends in ; (HTML entities))
+            mainText: Plasmoid.internalAction("configure").text.replace(/(&)(?!;)\S+(?>\s)/g, "")
             icon: "configure"
         }
-        Accessible.name: Plasmoid.internalAction("configure").text
+        Accessible.name: toolTipArea.mainText
         Accessible.description: i18nd("plasma_shell_org.kde.plasma.desktop", "Open Panel configuration ui")
         Accessible.role: Accessible.Button
     }
