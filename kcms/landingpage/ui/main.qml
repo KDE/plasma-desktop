@@ -226,7 +226,7 @@ KCMUtils.SimpleKCM {
 
         GridLayout {
             id: mostUsedGrid
-            Kirigami.FormData.label: i18n("Most Used Pages:")
+            Kirigami.FormData.label: i18n("Most used pages:")
 
             visible: recentlyUsedRepeater.count > 0
             Layout.fillWidth: true
