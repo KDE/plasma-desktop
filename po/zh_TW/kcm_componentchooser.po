@@ -9,20 +9,20 @@
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2008, 2009.
 # Jeff Huang <s8321414@gmail.com>, 2016, 2017.
 # pan93412 <pan93412@gmail.com>, 2018, 2020.
-# SPDX-FileCopyrightText: 2022, 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-26 00:40+0000\n"
-"PO-Revision-Date: 2023-11-29 17:57+0900\n"
+"PO-Revision-Date: 2024-10-02 17:28+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.04.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: applicationmodel.cpp:67
@@ -138,18 +138,16 @@ msgid ""
 msgstr "'%1' 似乎不支援以下與這種應用程式相關的 MIME 類型：%2"
 
 #: ui/main.qml:34
-#, fuzzy, kde-format
-#| msgid "This application can also open these file types:"
+#, kde-format
 msgctxt "@info:status"
 msgid "This application may not be able to open all file types."
-msgstr "這個應用程式也可以開啟以下檔案型態："
+msgstr "這個應用程式可能無法開啟所有檔案型態。"
 
 #: ui/main.qml:36
-#, fuzzy, kde-format
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button"
 msgid "View Details"
-msgstr "詳細資料"
+msgstr "檢視詳細資訊"
 
 #: ui/main.qml:62
 #, kde-format

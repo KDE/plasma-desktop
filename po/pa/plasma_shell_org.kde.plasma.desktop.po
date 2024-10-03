@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-28 00:41+0000\n"
-"PO-Revision-Date: 2024-07-21 22:16-0500\n"
-"Last-Translator: aalam <aalam@punlinux.org>\n"
-"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-10-01 21:44-0500\n"
+"Last-Translator: A S Alam <aman@punlinux.org>\n"
+"Language-Team: pa\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -324,10 +324,9 @@ msgid "Add spacer widget to the panel"
 msgstr "ਪੈਨਲ ਵਿੱਚ ਸਪੇਸਰ ਵਿਜੈੱਟ ਜੋੜੋ"
 
 #: contents/configuration/PanelConfiguration.qml:114
-#, fuzzy, kde-format
-#| msgid "Add Widgets…"
+#, kde-format
 msgid "Add or Manage Widgets…"
-msgstr "…ਵਿਜੈਟ ਜੋੜੋ"
+msgstr "…ਵਿਜੈਟ ਜੋੜੋ ਜਾਂ ਇੰਤਜ਼ਾਮ"
 
 #: contents/configuration/PanelConfiguration.qml:117
 #, kde-format
@@ -502,8 +501,7 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "ਇਹ ਪੈਨਲ ਹਟਾਓ; ਇਹ ਕਾਰਵਾਈ ਵਾਪਸ ਲੈਣ ਯੋਗ ਹੈ"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "ਬੰਦ ਕਰੋ"
@@ -513,45 +511,40 @@ msgstr "ਬੰਦ ਕਰੋ"
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
-msgstr ""
+msgstr "ਸੋਧ ਢੰਗ ਨੂੰ ਛੱਡੋ"
 
 #: contents/configuration/PanelConfiguration.qml:650
 #, kde-format
 msgid "Close Panel Settings window and exit Edit Mode"
-msgstr ""
+msgstr "ਪੈਨਲ ਸੈਟਿੰਗ ਵਿੰਡੋ ਨੂੰ ਬੰਦ ਕਰੋ ਅਤੇ ਸੋਧ ਢੰਗ ਵਿੱਚੋਂ ਬਾਹਰ ਜਾਓ"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:32
-#, fuzzy, kde-format
-#| msgid "Drag to change maximum height."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum height."
 msgstr "ਵੱਧ ਤੋਂ ਵੱਧ ਉਚਾਈ ਬਦਲਣ ਲਈ ਖਿੱਚੋ।"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:33
-#, fuzzy, kde-format
-#| msgid "Drag to change maximum width."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum width."
 msgstr "ਵੱਧ ਤੋਂ ਵੱਧ ਚੌੜਾਈ ਬਦਲਣ ਲਈ ਖਿੱਚੋ।"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:34
 #: contents/configuration/panelconfiguration/Ruler.qml:39
-#, fuzzy, kde-format
-#| msgid "Double click to reset."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Double-click to reset."
 msgstr "ਮੁੜ-ਸੈਟ ਕਰਨ ਲਈ ਦੋ ਵਾਰ ਕਲਿੱਕ ਕਰੋ।"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:37
-#, fuzzy, kde-format
-#| msgid "Drag to change minimum height."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum height."
 msgstr "ਘੱਟੋ-ਘੱਟ ਉਚਾਈ ਬਦਲਣ ਲਈ ਖਿੱਚੋ।"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:38
-#, fuzzy, kde-format
-#| msgid "Drag to change minimum width."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr "ਘੱਟੋ-ਘੱਟ ਚੌੜਾਈ ਬਦਲਣ ਲਈ ਖਿੱਚੋ।"
@@ -619,7 +612,7 @@ msgstr "ਗ਼ੈਰ-ਸਹਾਇਕ ਵਿਜੈੱਟ"
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
-msgstr ""
+msgstr "ਨਵਾਂ!"
 
 #: contents/explorer/AppletDelegate.qml:188
 #, kde-format
@@ -627,17 +620,15 @@ msgid "Undo uninstall"
 msgstr "ਅਣ-ਇੰਸਟਾਲ ਨੂੰ ਵਾਪਸ ਲਵੋ"
 
 #: contents/explorer/AppletDelegate.qml:189
-#, fuzzy, kde-format
-#| msgid "Uninstall"
+#, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Uninstall"
 msgstr "ਅਣ-ਇੰਸਟਾਲ"
 
 #: contents/explorer/AppletDelegate.qml:231
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgid "Remove all instances"
-msgstr "ਪੈਨਲ ਨੂੰ ਹਟਾਓ"
+msgstr "ਸਭ ਮੌਕਿਆਂ ਨੂੰ ਹਟਾਓ"
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -666,15 +657,13 @@ msgid "Widgets"
 msgstr "ਵਿਦਜੈਟ"
 
 #: contents/explorer/WidgetExplorer.qml:178
-#, fuzzy, kde-format
-#| msgid "Get New Plugins…"
+#, kde-format
 msgctxt "@action:button The word 'new' refers to widgets"
 msgid "Get New…"
-msgstr "…ਨਵੀਆਂ ਪਲੱਗਇਨਾਂ ਲਵੋ"
+msgstr "…ਨਵੇਂ ਲਵੋ"
 
 #: contents/explorer/WidgetExplorer.qml:179
-#, fuzzy, kde-format
-#| msgid "Get New Widgets…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "…ਨਵੇਂ ਵਿਜੈਟ ਲਵੋ"
@@ -685,9 +674,7 @@ msgid "Categories"
 msgstr "ਕੈਟਾਗਰੀਆਂ"
 
 #: contents/explorer/WidgetExplorer.qml:254
-#, fuzzy, kde-format
-#| msgid "Confirm Removal Of One Widget"
-#| msgid_plural "Confirm Removal Of %1 Widgets"
+#, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Confirm Removal of One Widget"
 msgid_plural "Confirm Removal of %1 Widgets"
@@ -714,24 +701,24 @@ msgstr "ਘੜੀ:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
-msgstr ""
+msgstr "ਘੜੀ ਵੇਖਾਓ"
 
 #: contents/lockscreen/config.qml:33
 #, kde-format
 msgctxt "@title: group"
 msgid "Media controls:"
-msgstr ""
+msgstr "ਮੀਡਿਆ ਕੰਟਰੋਲ:"
 
 #: contents/lockscreen/config.qml:36
 #, kde-format
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
-msgstr ""
+msgstr "ਅਣ-ਲਾਕ ਪਰੌਂਟ ਹੇਠਾਂ ਵੇਖਾਓ"
 
 #: contents/lockscreen/LockScreenUi.qml:48
 #, kde-format
 msgid "Unlocking failed"
-msgstr ""
+msgstr "ਅਣ-ਲਾਕ ਕਰਨ ਲਈ ਅਸਫ਼ਲ"
 
 #: contents/lockscreen/LockScreenUi.qml:271
 #, kde-format
@@ -784,32 +771,32 @@ msgstr "(ਜਾਂ ਰੀਡਰ ਉੱਤੇ ਆਪਣੇ ਫਿੰਗਰ-ਪਰ
 #: contents/lockscreen/MainBlock.qml:160
 #, kde-format
 msgid "(or scan your smartcard)"
-msgstr ""
+msgstr "(ਜਾਂ ਆਪਣਾ ਸਮਾਰਟ-ਕਾਡ ਸਕੈਨ ਕਰੋ)"
 
 #: contents/lockscreen/MediaControls.qml:59
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "ਕੋਈ ਟਾਈਟਲ ਨਹੀਂ"
 
 #: contents/lockscreen/MediaControls.qml:60
 #, kde-format
 msgid "No media playing"
-msgstr ""
+msgstr "ਕੋਈ ਮੀਡਿਆ ਨਹੀਂ ਚੱਲ ਰਿਹਾ ਹੈ"
 
 #: contents/lockscreen/MediaControls.qml:88
 #, kde-format
 msgid "Previous track"
-msgstr ""
+msgstr "ਪਿਛਲਾ ਟਰੈਕ"
 
 #: contents/lockscreen/MediaControls.qml:100
 #, kde-format
 msgid "Play or Pause media"
-msgstr ""
+msgstr "ਮੀਡਿਆ ਚਲਾਓ ਜਾਂ ਰੋਕੋ"
 
 #: contents/lockscreen/MediaControls.qml:110
 #, kde-format
 msgid "Next track"
-msgstr ""
+msgstr "ਅਗਲਾ ਟਰੈਕ"
 
 #: contents/osd/OsdItem.qml:34
 #, kde-format
@@ -836,12 +823,12 @@ msgstr "ਹੋਰ"
 #: contents/views/DesktopEditMode.qml:152
 #, kde-format
 msgid "Exit Edit Mode"
-msgstr ""
+msgstr "ਸੋਧ ਢੰਗ ਨੂੰ ਛੱਡੋ"
 
 #: contents/views/Panel.qml:302
 #, kde-format
 msgid "Panel Focus Indicator"
-msgstr ""
+msgstr "ਪੈਨਲ ਫੋਕਸ ਸੰਕੇਤਕ"
 
 #~ msgid "Uninstall widget"
 #~ msgstr "ਵਿਜੈਟ ਅਣ-ਇੰਸਟਾਲ"
