@@ -43,7 +43,7 @@ DeviceAutomounterKCM::DeviceAutomounterKCM(QObject *parent, const KPluginMetaDat
     deviceView->header()->setSectionResizeMode(QHeaderView::ResizeToContents);
     deviceView->header()->setSectionResizeMode(0, QHeaderView::Stretch);
 
-    connect(kcfg_AutomountUnknownDevices, &QCheckBox::stateChanged, this, [this](int state) {
+    connect(kcfg_AutomountUnknownDevices, &QCheckBox::checkStateChanged, this, [this](Qt::CheckState state) {
         m_devices->setAutomaticUnknown(state == Qt::Checked);
     });
 
