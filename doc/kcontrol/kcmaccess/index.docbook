@@ -319,6 +319,98 @@ audible cues, or who have difficulty using a keyboard.
 
 </sect3>
 
+<sect3 id="mouse-navigation">
+    <title>Mouse Navigation</title>
+
+    <para>
+        This page allows you to configure the keyboard number pad keys to move the cursor as though it were a mouse.
+        This may be useful when you are working on a computer without a mouse, or in case you have no other use
+        for the number pad.
+    </para>
+
+    <variablelist>
+
+    <varlistentry>
+        <term><guilabel>Use the number pad to move cursor</guilabel></term>
+            <listitem>
+                <para>
+                    If the check box labeled <guilabel>Use the number pad to move cursor</guilabel>
+                    is selected, the functionality will be enabled.
+                </para>
+                <important>
+                    <para>
+                    This option will override the behavior of the Num Lock key no matter whether it is enabled or disabled.
+                    This means you won't be able to type numbers using the number pad.
+                    </para>
+                </important>
+                <para>
+                    The various keys on the number pad move in the direction you would expect.
+                    Note that you can move diagonally as well as up, down, left and right.
+                    The <keycap>5</keycap> key emulates a click to a pointer button, typically &LMB;.
+                    You change which button is emulated by using the <keycap>/</keycap> key (which makes it &LMB;),
+                    <keycap>*</keycap> key (which makes it &MMB;) and <keycap>-</keycap> (which makes it &RMB;).
+                    Using the <keycap>+</keycap> emulates a double click to the selected pointer button.
+                    You can use the <keycap>0</keycap> key to emulate holding down the selected pointer button (for easy dragging),
+                    and then use the <keycap>.</keycap> to emulate releasing the selected pointer button.
+                </para>
+            </listitem>
+    </varlistentry>
+
+    <varlistentry>
+        <term><guilabel>Acceleration delay</guilabel></term>
+        <listitem>
+            <para>
+            This is the time (in milliseconds) between the initial key press
+            and the first repeated motion event before the cursor begins to accelerate.
+            It has a maximum of 500 milliseconds (or half a second).
+            </para>
+        </listitem>
+    </varlistentry>
+
+    <varlistentry>
+        <term><guilabel>Repeat interval</guilabel></term>
+        <listitem>
+            <para>
+            This is the time in milliseconds between repeated motion events while the cursor is moving.
+            This refers to the time before the cursor transitions from one motion to the next.
+            It has a maximum of 130 milliseconds.
+            </para>
+        </listitem>
+    </varlistentry>
+
+    <varlistentry>
+        <term><guilabel>Acceleration time</guilabel></term>
+        <listitem>
+            <para>
+            This is the time in milliseconds before the cursor reaches a maximum speed for mouse key acceleration.
+            It has a maximum of 100 milliseconds.
+            </para>
+        </listitem>
+    </varlistentry>
+
+    <varlistentry>
+        <term><guilabel>Maximum speed</guilabel></term>
+        <listitem>
+            <para>
+            This is the maximum speed in pixels per second the cursor can reach for mouse key acceleration.
+            It has a maximum of 100 pixels per second.
+            </para>
+        </listitem>
+    </varlistentry>
+
+    <varlistentry>
+        <term><guilabel>Pointer acceleration</guilabel></term>
+        <listitem>
+            <para>
+            This is the amount of acceleration to apply to mouse key acceleration.
+            It has a maximum value of 1000.
+            </para>
+        </listitem>
+    </varlistentry>
+
+    </variablelist>
+</sect3>
+
 <sect3 id="access-activation-shortcuts">
 <title>Activation Shortcuts</title>
 
@@ -379,99 +471,6 @@ audible cues, or who have difficulty using a keyboard.
         </para>
     </listitem>
 </itemizedlist>
-
-</sect3>
-
-<sect3 id="mouse-navigation">
-<title>Mouse Navigation</title>
-
-<para>
-    This page allows you to configure the keyboard number pad keys to move the cursor as though it were a mouse.
-    This may be useful when you are working on a computer without a mouse, or in case you have no other use
-    for the number pad.
-</para>
-
-<variablelist>
-
-<varlistentry>
-    <term><guilabel>Use the number pad to move cursor</guilabel></term>
-        <listitem>
-            <para>
-                If the check box labeled <guilabel>Use the number pad to move cursor</guilabel>
-                is selected, the functionality will be enabled.
-            </para>
-            <important>
-                <para>
-                This option will override the behavior of the Num Lock key no matter whether it is enabled or disabled.
-                This means you won't be able to type numbers using the number pad.
-                </para>
-            </important>
-            <para>
-                The various keys on the number pad move in the direction you would expect.
-                Note that you can move diagonally as well as up, down, left and right.
-                The <keycap>5</keycap> key emulates a click to a pointer button, typically &LMB;.
-                You change which button is emulated by using the <keycap>/</keycap> key (which makes it &LMB;),
-                <keycap>*</keycap> key (which makes it &MMB;) and <keycap>-</keycap> (which makes it &RMB;).
-                Using the <keycap>+</keycap> emulates a double click to the selected pointer button.
-                You can use the <keycap>0</keycap> key to emulate holding down the selected pointer button (for easy dragging),
-                and then use the <keycap>.</keycap> to emulate releasing the selected pointer button.
-            </para>
-        </listitem>
-</varlistentry>
-
-<varlistentry>
-    <term><guilabel>Acceleration delay</guilabel></term>
-    <listitem>
-        <para>
-        This is the time (in milliseconds) between the initial key press
-        and the first repeated motion event before the cursor begins to accelerate.
-        It has a maximum of 500 milliseconds (or half a second).
-        </para>
-    </listitem>
-</varlistentry>
-
-<varlistentry>
-    <term><guilabel>Repeat interval</guilabel></term>
-    <listitem>
-        <para>
-        This is the time in milliseconds between repeated motion events while the cursor is moving.
-        This refers to the time before the cursor transitions from one motion to the next.
-        It has a maximum of 130 milliseconds.
-        </para>
-    </listitem>
-</varlistentry>
-
-<varlistentry>
-    <term><guilabel>Acceleration time</guilabel></term>
-    <listitem>
-        <para>
-        This is the time in milliseconds before the cursor reaches a maximum speed for mouse key acceleration.
-        It has a maximum of 100 milliseconds.
-        </para>
-    </listitem>
-</varlistentry>
-
-<varlistentry>
-    <term><guilabel>Maximum speed</guilabel></term>
-    <listitem>
-        <para>
-        This is the maximum speed in pixels per second the cursor can reach for mouse key acceleration.
-        It has a maximum of 100 pixels per second.
-        </para>
-    </listitem>
-</varlistentry>
-
-<varlistentry>
-    <term><guilabel>Pointer acceleration</guilabel></term>
-    <listitem>
-        <para>
-        This is the amount of acceleration to apply to mouse key acceleration.
-        It has a maximum value of 1000.
-        </para>
-    </listitem>
-</varlistentry>
-
-</variablelist>
 
 </sect3>
 
