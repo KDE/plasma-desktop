@@ -44,7 +44,8 @@ audible cues, or who have difficulty using a keyboard.
     <link linkend="access-activation-shortcuts"><guilabel>Activation Shortcuts</guilabel></link>,
     <link linkend="mouse-navigation"><guilabel>Mouse Navigation</guilabel></link>,
     <link linkend="access-screenreader"><guilabel>Screen Reader</guilabel></link>,
-    <link linkend="access-color-blindness"><guilabel>Color Blindness Correction</guilabel></link>.
+    <link linkend="access-color-blindness"><guilabel>Color Blindness Correction</guilabel></link>, and
+    <link linkend="access-shake-cursor"><guilabel>Shake Cursor</guilabel></link>.
 </para>
 
 <sect3 id="access-bell">
@@ -602,6 +603,30 @@ audible cues, or who have difficulty using a keyboard.
         <guilabel>Intense</guilabel> to the right. By default the intensity will be the maximum value.
         The value can be lowered appropriately for the degree of color blindness you experience.
         The results only take effect once you click the <guibutton>Apply</guibutton> button.
+    </para>
+</sect3>
+
+<sect3 id="access-shake-cursor">
+    <title>Shake Cursor</title>
+
+    <para>
+        The default Breeze cursors follow the guideline of having two contrasting colors, dark and light,
+        to allow the cursor to stand out whether it is hovering a light background or a dark background.
+        However, certain states of the cursor can make it difficult to stand out, or you might be using a
+        different cursor theme, or you might struggle to see its colors or notice its movements,
+        in which case it might not be enough to locate the cursor.
+    </para>
+
+    <para>
+        If the check box <guilabel>Shake cursor to find it: Enable</guilabel> is selected, upon five
+        shakes of the mouse, the cursor will increase in size. The direction of the shake does not matter,
+        but the distance traveled by the cursor needs to be of a minimum length for the effect to trigger.
+    </para>
+
+    <para>
+        The <guilabel>Magnification</guilabel> slider allows you to choose the size of the expanded cursor,
+        with <guilabel>Normal</guilabel> to the left and <guilabel>Large</guilabel> to the right.
+        The default value is one level of magnification starting from the left.
     </para>
 </sect3>
 
