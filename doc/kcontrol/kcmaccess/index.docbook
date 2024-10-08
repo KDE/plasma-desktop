@@ -42,8 +42,9 @@ audible cues, or who have difficulty using a keyboard.
     <link linkend="access-modifier-keys"><guilabel>Modifier Keys</guilabel></link>,
     <link linkend="access-keyboard-filters"><guilabel>Keyboard Filters</guilabel></link>,
     <link linkend="access-activation-shortcuts"><guilabel>Activation Shortcuts</guilabel></link>,
-    <link linkend="mouse-navigation"><guilabel>Mouse Navigation</guilabel></link>, and
-    <link linkend="access-screenreader"><guilabel>Screen Reader</guilabel></link>.
+    <link linkend="mouse-navigation"><guilabel>Mouse Navigation</guilabel></link>,
+    <link linkend="access-screenreader"><guilabel>Screen Reader</guilabel></link>,
+    <link linkend="access-color-blindness"><guilabel>Color Blindness Correction</guilabel></link>.
 </para>
 
 <sect3 id="access-bell">
@@ -546,6 +547,62 @@ audible cues, or who have difficulty using a keyboard.
     </listitem>
 </itemizedlist>
 
+</sect3>
+
+<sect3 id="access-color-blindness">
+    <title>Color Blindness Correction</title>
+
+    <para>
+        Color blindness is a condition where the user's eyes have trouble identifying
+        colors, either partially or completely. Color blindness might manifest as the
+        inability to see a color, multiple colors, or the inability to differentiate
+        between certain colors.
+    </para>
+
+    <para>
+        To improve the perception of images for users with color blindness, it is possible
+        to apply some color correction to the screen via software. This correction is
+        called daltonization.
+        It consists of changing the color or colors that the user cannot see to a
+        different color or shade such that it becomes possible to at least differentiate
+        the color of an element in the image from the other colors in the same image.
+    </para>
+
+    <para>
+        If the check box labeled <guilabel>Color blindness correction: Enabled</guilabel> is checked,
+        the <guilabel>Mode</guilabel> combobox and the <guilabel>Intensity</guilabel> slider
+        will be made available.
+    </para>
+
+    <para>
+        Below the above controls you should see four columns of squares with different shades
+        of red, green, blue, and purple. These serve as baselines for you to compare the
+        results of the current color correction mode.
+    </para>
+
+    <para>
+        Only once you select an option from the <guilabel>Mode</guilabel> combobox and click
+        <guibutton>Apply</guibutton> will the new color correction effect take place.
+        Each mode refers to a specific condition that counts as color blindness and comes
+        with a brief explanation in parentheses () mentioning the colors involved with the
+        condition. The result should be evident using the baseline squares below the controls.
+    </para>
+
+    <para>
+        For example, for <guilabel>Protanopia (red weak)</guilabel>, a condition where the user
+        struggles to see or cannot see red, the color red is replaced with a shade of pink.
+        This also applies to colors that are not red but contain some level of red in them,
+        such as orange or purple. Other colors might be affected as well to reinforce the
+        distinction between shades of color.
+    </para>
+
+    <para>
+        The <guilabel>Intensity</guilabel> slider can be used to modify the intensity of
+        the color correction effect, with <guilabel>Mild</guilabel> to the left and
+        <guilabel>Intense</guilabel> to the right. By default the intensity will be the maximum value.
+        The value can be lowered appropriately for the degree of color blindness you experience.
+        The results only take effect once you click the <guibutton>Apply</guibutton> button.
+    </para>
 </sect3>
 
 </sect2>
