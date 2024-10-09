@@ -19,6 +19,8 @@ if (TARGET SDL2::SDL2)
     add_subdirectory( gamecontroller )
 endif()
 
+add_subdirectory( timezone )
+
 add_subdirectory(activities)
 add_subdirectory(recentFiles)
 add_subdirectory(componentchooser)
