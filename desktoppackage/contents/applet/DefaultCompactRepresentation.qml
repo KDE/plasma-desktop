@@ -12,6 +12,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.kirigami 2.20 as Kirigami
 
 Kirigami.Icon {
+    id: defaultCompactRepresentation
     property PlasmoidItem plasmoidItem
     readonly property bool inPanel: [PlasmaCore.Types.TopEdge, PlasmaCore.Types.RightEdge, PlasmaCore.Types.BottomEdge, PlasmaCore.Types.LeftEdge]
         .includes(Plasmoid.location)
@@ -67,6 +68,12 @@ Kirigami.Icon {
         anchors.fill: parent
         hoverEnabled: true
         onPressed: wasExpanded = plasmoidItem.expanded
-        onClicked: plasmoidItem.expanded = !wasExpanded
+        onClicked: mouse => {
+            if (mouse.button === Qt.MiddleButton) {
+                defaultCompactRepresentation.plasmoidItem.Plasmoid.secondaryActivated();
+            } else {
+                defaultCompactRepresentation.plasmoidItem.expanded = !wasExpanded;
+            }
+        }
     }
 }
