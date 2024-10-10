@@ -3,13 +3,13 @@
 # Copyright (C) 2004 Free Software Foundation, Inc.
 #
 # root <root@localhost.localdomain>, 2004.
-# SPDX-FileCopyrightText: 2021, 2022, 2023 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-26 00:40+0000\n"
-"PO-Revision-Date: 2023-12-07 21:25+0530\n"
+"PO-Revision-Date: 2024-10-09 21:39+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #: applicationmodel.cpp:67
 #, kde-format
@@ -135,18 +135,16 @@ msgstr ""
 "இவ்வகையான செயலி ஆதரிக்கவேண்டிய பின்வரும் மைம்வகைகளை '%1' ஆதரிப்பதுபோல் தெரியவில்லை: %2"
 
 #: ui/main.qml:34
-#, fuzzy, kde-format
-#| msgid "This application can also open these file types:"
+#, kde-format
 msgctxt "@info:status"
 msgid "This application may not be able to open all file types."
-msgstr "பின்வரும் கோப்புவகைகளையும் இச்செயலியால் திறக்கக்கூடும்:"
+msgstr "சில கோப்புவகைகளை இச்செயலியால் திறக்க முடியாமல் இருக்கலாம்."
 
 #: ui/main.qml:36
-#, fuzzy, kde-format
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button"
 msgid "View Details"
-msgstr "விவரங்கள்"
+msgstr "விவரங்களைக் காட்டு"
 
 #: ui/main.qml:62
 #, kde-format

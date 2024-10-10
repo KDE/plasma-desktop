@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-28 00:41+0000\n"
-"PO-Revision-Date: 2024-09-07 20:27+0200\n"
+"PO-Revision-Date: 2024-10-09 21:37+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -624,17 +624,15 @@ msgid "Undo uninstall"
 msgstr "நிறுவல்நீக்கியதை செயல்நீக்கு"
 
 #: contents/explorer/AppletDelegate.qml:189
-#, fuzzy, kde-format
-#| msgid "Uninstall"
+#, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Uninstall"
 msgstr "நிறுவல் நீக்கு"
 
 #: contents/explorer/AppletDelegate.qml:231
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgid "Remove all instances"
-msgstr "பலகையை நீக்கு"
+msgstr "இது உள்ள அனைத்து இடங்களிலிருந்தும் நீக்கு"
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -680,14 +678,12 @@ msgid "Categories"
 msgstr "வகைகள்"
 
 #: contents/explorer/WidgetExplorer.qml:254
-#, fuzzy, kde-format
-#| msgid "Confirm Removal Of One Widget"
-#| msgid_plural "Confirm Removal Of %1 Widgets"
+#, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Confirm Removal of One Widget"
 msgid_plural "Confirm Removal of %1 Widgets"
-msgstr[0] "ஒரு பிளாஸ்மாய்டை நீக்கியதை உறுதிப்படுத்தவும்"
-msgstr[1] "%1 பிளாஸ்மாய்டுகளை நீக்கியதை உறுதிப்படுத்தவும்"
+msgstr[0] "ஒரு பிளாஸ்மாய்டை நீக்குவதை உறுதிப்படுத்தவும்"
+msgstr[1] "%1 பிளாஸ்மாய்டுகளை நீக்குவதை உறுதிப்படுத்தவும்"
 
 #: contents/explorer/WidgetExplorer.qml:355
 #, kde-format

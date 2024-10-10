@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-12 00:41+0000\n"
-"PO-Revision-Date: 2024-06-16 17:06+0530\n"
+"PO-Revision-Date: 2024-10-09 21:36+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #: package/contents/ui/main.qml:116
 #, kde-format
@@ -23,36 +23,28 @@ msgid "Minimize All Applet Active Indicator"
 msgstr "அனைத்து சாளரங்களையும் ஒதுக்கும் பிளாஸ்மாய்ட் செயலிலுள்ளதா எனக் காட்டும் நிலைகாட்டி"
 
 #: package/contents/ui/MinimizeAllController.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Restore All Minimized Windows"
+#, kde-format
 msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Restore Windows"
-msgstr "ஒதுக்கப்பட்ட அனைத்து சாளரங்களையும் மீட்டெடு"
+msgstr "ஒதுக்கப்பட்ட சாளரங்களை மீட்டெடு"
 
 #: package/contents/ui/MinimizeAllController.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Minimize All Windows"
+#, kde-format
 msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Minimize All Windows"
 msgstr "அனைத்து சாளரங்களையும் ஒதுக்கு"
 
 #: package/contents/ui/MinimizeAllController.qml:20
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Restores the previously minimized windows"
+#, kde-format
 msgctxt "@info:tooltip shown as subtitle"
 msgid "Restores the previously minimized windows"
-msgstr "ஒதுப்பட்டுள்ள அனைத்து சாளரங்களையும் மீண்டும் காட்டும்"
+msgstr "முன்பு ஒதுப்பட்ட அனைத்து சாளரங்களையும் மீண்டும் காட்டும்"
 
 #: package/contents/ui/MinimizeAllController.qml:21
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Shows the Desktop by minimizing all windows"
+#, kde-format
 msgctxt "@info:tooltip shown as subtitle"
 msgid "Shows the Desktop by minimizing all windows"
-msgstr "சாளரங்களை ஒதுக்கி பணிமேடையை காட்டும்"
+msgstr "அனைத்து சாளரங்களையும் ஒதுக்கி பணிமேடையை காட்டும்"
 
 #: package/contents/ui/PeekController.qml:14
 #, kde-format
