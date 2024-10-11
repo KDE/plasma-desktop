@@ -130,18 +130,16 @@ msgid ""
 msgstr "“%1”不支持关联到此类应用程序的下列 MIME 类型：%2"
 
 #: ui/main.qml:34
-#, fuzzy, kde-format
-#| msgid "This application can also open these file types:"
+#, kde-format
 msgctxt "@info:status"
 msgid "This application may not be able to open all file types."
-msgstr "此应用程序也可以打开这些文件类型："
+msgstr "此应用程序可能无法打开所有文件类型。"
 
 #: ui/main.qml:36
-#, fuzzy, kde-format
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button"
 msgid "View Details"
-msgstr "详情"
+msgstr "查看详情"
 
 #: ui/main.qml:62
 #, kde-format

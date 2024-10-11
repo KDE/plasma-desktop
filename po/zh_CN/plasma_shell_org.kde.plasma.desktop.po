@@ -623,17 +623,15 @@ msgid "Undo uninstall"
 msgstr "撤销卸载"
 
 #: contents/explorer/AppletDelegate.qml:189
-#, fuzzy, kde-format
-#| msgid "Uninstall"
+#, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Uninstall"
 msgstr "卸载"
 
 #: contents/explorer/AppletDelegate.qml:231
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgid "Remove all instances"
-msgstr "移除面板"
+msgstr "移除所有实例"
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -679,13 +677,11 @@ msgid "Categories"
 msgstr "类别"
 
 #: contents/explorer/WidgetExplorer.qml:254
-#, fuzzy, kde-format
-#| msgid "Confirm Removal Of One Widget"
-#| msgid_plural "Confirm Removal Of %1 Widgets"
+#, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Confirm Removal of One Widget"
 msgid_plural "Confirm Removal of %1 Widgets"
-msgstr[0] "确认删除 %1 个挂件"
+msgstr[0] "确认移除 %1 个挂件"
 
 #: contents/explorer/WidgetExplorer.qml:355
 #, kde-format
@@ -835,6 +831,3 @@ msgstr "退出编辑模式"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "面板焦点指示器"
-
-#~ msgid "Uninstall widget"
-#~ msgstr "卸载挂件"
