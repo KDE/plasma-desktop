@@ -50,6 +50,7 @@ TouchpadConfig::TouchpadConfig(QObject *parent, const KPluginMetaData &data)
 
     QVBoxLayout *layout = new QVBoxLayout(widget());
 
+    layout->setContentsMargins(0, 0, 0, 0);
     layout->addWidget(m_view);
     widget()->setLayout(layout);
 
