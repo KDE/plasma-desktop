@@ -51,6 +51,9 @@ int CalibrationTool::currentTarget() const
 void CalibrationTool::calibrate(const double touchX, const double touchY, const double screenX, const double screenY)
 {
     Q_ASSERT(m_calibratedTargets >= 0 && m_calibratedTargets < 4);
+    if (m_calibratedTargets < 0 || m_calibratedTargets >= 4) {
+        return;
+    }
 
     m_screenPoints[m_calibratedTargets] = {screenX, screenY};
     m_touchPoints[m_calibratedTargets] = {touchX, touchY};
@@ -64,11 +67,13 @@ void CalibrationTool::calibrate(const double touchX, const double touchY, const 
 
 void CalibrationTool::setCalibrationMatrix(InputDevice *device, const QMatrix4x4 &matrix)
 {
+    Q_ASSERT(device);
     device->setCalibrationMatrix(device->calibrationMatrix() * matrix);
 }
 
 void CalibrationTool::restoreDefaults(InputDevice *device)
 {
+    Q_ASSERT(device);
     device->setCalibrationMatrix(device->defaultCalibrationMatrix());
     playSound(QStringLiteral("dialog-information"));
 }
