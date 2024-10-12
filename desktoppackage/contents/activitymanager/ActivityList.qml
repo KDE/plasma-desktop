@@ -28,9 +28,11 @@ Flickable {
     function _selectRelativeToCurrent(distance)
     {
         var startingWithSelected = selectedIndex;
+        var visited = 0;
 
         do {
             selectedIndex += distance;
+            visited++;
 
             if (selectedIndex >= activitiesList.count) {
                 selectedIndex = 0;
@@ -40,11 +42,15 @@ Flickable {
                 selectedIndex = activitiesList.count - 1;
             }
 
-            // Searching for the first item that is visible, or back to the one
-            // that we started with
-        } while (!activitiesList.itemAt(selectedIndex).visible
-                        && startingWithSelected !== selectedIndex);
+            if (visited >= activitiesList.count) {
+                // we've visited all activities but could not find a visible
+                // one, so stop searching and select the one we started with
+                selectedIndex = startingWithSelected;
+                break;
+            }
 
+            // Searching for the first item that is visible
+        } while (!activitiesList.itemAt(selectedIndex).visible);
         _updateSelectedItem();
 
     }
