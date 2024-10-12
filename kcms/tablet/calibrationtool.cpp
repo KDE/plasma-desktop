@@ -125,6 +125,9 @@ QMatrix3x3 invert(const QMatrix3x3 &m)
 void CalibrationTool::checkIfFinished()
 {
     if (m_calibratedTargets >= 4) {
+        Q_ASSERT(m_width > 0.0f);
+        Q_ASSERT(m_height > 0.0f);
+
         // Calibration math based off of https://github.com/kreijack/xlibinput_calibrator
         // The gist is that we want to calculate the difference between screen and touch position, and then normalize it before passing to KWin
 
