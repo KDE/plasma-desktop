@@ -64,7 +64,7 @@ void CalibrationTool::calibrate(const double touchX, const double touchY, const 
 
 void CalibrationTool::setCalibrationMatrix(InputDevice *device, const QMatrix4x4 &matrix)
 {
-    device->setCalibrationMatrix(matrix);
+    device->setCalibrationMatrix(device->calibrationMatrix() * matrix);
 }
 
 void CalibrationTool::restoreDefaults(InputDevice *device)
@@ -184,6 +184,7 @@ void CalibrationTool::checkIfFinished()
         // Remove the junk
         average(2, 0) = 0.0f;
         average(2, 1) = 0.0f;
+        average(2, 2) = 1.0f;
 
         m_finishedCalibration = true;
         Q_EMIT finishedCalibrationChanged();

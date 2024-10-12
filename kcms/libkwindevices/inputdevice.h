@@ -102,6 +102,11 @@ public:
         return m_iface->property("defaultCalibrationMatrix").value<QMatrix4x4>();
     }
 
+    QMatrix4x4 calibrationMatrix() const
+    {
+        return m_iface->property("calibrationMatrix").value<QMatrix4x4>();
+    }
+
     void setCalibrationMatrix(const QMatrix4x4 &matrix) const
     {
         // TODO: why does this not with our existing interface...?
