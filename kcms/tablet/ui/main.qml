@@ -388,7 +388,12 @@ SimpleKCM {
                         }
                     }
 
-                    const window = component.createObject(root, {device: form.device, tabletEvents, screen: Qt.application.screens[screenIndex]});
+                    const window = component.createObject(root, {device: form.device, tabletEvents});
+                    // We need to show the window first, because Qt will override screen based on position.
+                    // Working around QTBUG-129989
+                    window.show();
+                    // Then override the screen, try showing it again and now it'll be on the correct screen:
+                    window.screen = Qt.application.screens[screenIndex];
                     window.showFullScreen();
                     window.closing.connect((close) => {
                         root.calibrationWindow = null;
