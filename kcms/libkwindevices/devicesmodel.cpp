@@ -134,6 +134,8 @@ void DevicesModel::onDeviceRemoved(const QString &sysName)
     beginRemoveRows({}, index, index);
     m_devices.erase(it);
     endRemoveRows();
+
+    Q_EMIT deviceRemoved(sysName);
 }
 
 InputDevice *DevicesModel::deviceAt(int row) const

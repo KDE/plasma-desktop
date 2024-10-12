@@ -37,6 +37,7 @@ private Q_SLOTS:
 
 Q_SIGNALS:
     void needsSaveChanged();
+    void deviceRemoved(const QString &sysName);
 
 private:
     void addDevice(const QString &sysname, bool tellModel);
