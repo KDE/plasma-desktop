@@ -89,6 +89,9 @@ void InputDevice::defaults()
     m_outputArea.resetFromDefaults();
     m_enabled.resetFromDefaults();
     m_mapToWorkspace.resetFromDefaults();
+    if (supportsCalibrationMatrix()) {
+        setCalibrationMatrix(defaultCalibrationMatrix());
+    }
 }
 
 bool InputDevice::isDefaults() const
