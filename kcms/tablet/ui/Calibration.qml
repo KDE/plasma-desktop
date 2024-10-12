@@ -33,6 +33,11 @@ QQC2.ApplicationWindow {
     onWidthChanged: tool.width = width
     onHeightChanged: tool.height = height
 
+    HoverHandler {
+        cursorShape: Qt.BlankCursor
+        acceptedDevices: PointerDevice.Stylus
+    }
+
     Connections {
         target: tabletEvents
 
