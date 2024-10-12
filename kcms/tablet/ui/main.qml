@@ -17,7 +17,9 @@ SimpleKCM {
     id: root
 
     property bool testerWindowOpen: false
-    property bool calibrationWindowOpen: false
+    readonly property bool calibrationWindowOpen: calibrationWindow !== null
+    property Calibration calibrationWindow
+    property string currentCalibrationSysName
 
     ConfigModule.buttons: ConfigModule.Default | ConfigModule.Apply
 
@@ -57,6 +59,23 @@ SimpleKCM {
             }
         }
     ]
+
+    function cancelCalibration(): void {
+        if (root.calibrationWindowOpen) {
+            calibrationWindow.close();
+            calibrationWindow = null;
+        }
+    }
+
+    Connections {
+        target: combo.model
+
+        function onDeviceRemoved(sysname: string): void {
+            if (root.currentCalibrationSysName === sysname) {
+                cancelCalibration();
+            }
+        }
+    }
 
     Kirigami.FormLayout {
         id: form
@@ -372,10 +391,11 @@ SimpleKCM {
                     const window = component.createObject(root, {device: form.device, tabletEvents, screen: Qt.application.screens[screenIndex]});
                     window.showFullScreen();
                     window.closing.connect((close) => {
-                        root.calibrationWindowOpen = false;
+                        root.calibrationWindow = null;
                     });
 
-                    root.calibrationWindowOpen = true;
+                    root.currentCalibrationSysName = form.device.sysName;
+                    root.calibrationWindow = window;
                 }
             }
 
