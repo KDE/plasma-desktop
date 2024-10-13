@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-10-13 02:31+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -207,7 +207,7 @@ msgctxt "@title"
 msgid "Pen Calibration"
 msgstr "压感笔校准"
 
-#: ui/Calibration.qml:85
+#: ui/Calibration.qml:90
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -216,7 +216,7 @@ msgid ""
 msgstr ""
 "校准已经完成并保存。<nl/><nl/>您可以进一步优化现有校准，或者关闭此窗口。"
 
-#: ui/Calibration.qml:86
+#: ui/Calibration.qml:91
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -226,73 +226,73 @@ msgstr ""
 "请点击每个目标的中心点。<nl/><nl/>请以笔尖的物理落点为准，不要理会屏幕显示的"
 "光标位置。"
 
-#: ui/Calibration.qml:92
+#: ui/Calibration.qml:97
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
 msgstr "优化现有校准"
 
-#: ui/Calibration.qml:101
+#: ui/Calibration.qml:106
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
 msgstr "重新校准"
 
-#: ui/Calibration.qml:115
+#: ui/Calibration.qml:120
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
 msgstr "关闭"
 
-#: ui/Calibration.qml:115
+#: ui/Calibration.qml:120
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "取消"
 
-#: ui/main.qml:32
+#: ui/main.qml:34
 #, kde-format
 msgid "No drawing tablets found"
 msgstr "没有找到数位板"
 
-#: ui/main.qml:33
+#: ui/main.qml:35
 #, kde-format
 msgid "Connect a drawing tablet"
 msgstr "连接数位板"
 
-#: ui/main.qml:41
+#: ui/main.qml:43
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
 msgstr "测试数位板…"
 
-#: ui/main.qml:67
+#: ui/main.qml:86
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "设备："
 
-#: ui/main.qml:105
+#: ui/main.qml:124
 #, kde-format
 msgid "Map to screen:"
 msgstr "映射到屏幕："
 
-#: ui/main.qml:125
+#: ui/main.qml:144
 #, kde-format
 msgid "Orientation:"
 msgstr "方向："
 
-#: ui/main.qml:131
+#: ui/main.qml:150
 #, kde-format
 msgid "Not Supported"
 msgstr "不支持"
 
-#: ui/main.qml:138
+#: ui/main.qml:157
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "左手模式："
 
-#: ui/main.qml:149
+#: ui/main.qml:168
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -303,34 +303,34 @@ msgstr ""
 "要求设备针对左手用户进行相应调整。效果因设备而异，但一般都会翻转数位板板面按"
 "钮的方向，以便在旋转 180 度后使用。"
 
-#: ui/main.qml:155
+#: ui/main.qml:174
 #, kde-format
 msgid "Mapped Area:"
 msgstr "映射区域："
 
-#: ui/main.qml:242
+#: ui/main.qml:261
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "调整数位板有效区域大小"
 
-#: ui/main.qml:266
+#: ui/main.qml:285
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "锁定宽高比"
 
-#: ui/main.qml:274
+#: ui/main.qml:293
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: ui/main.qml:285
+#: ui/main.qml:304
 #, kde-format
 msgid "Pen button 1:"
 msgstr "笔身按钮 1："
 
-#: ui/main.qml:286
+#: ui/main.qml:305
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
@@ -338,12 +338,12 @@ msgctxt ""
 msgid "pen button 1"
 msgstr "笔身按钮 1："
 
-#: ui/main.qml:290
+#: ui/main.qml:309
 #, kde-format
 msgid "Pen button 2:"
 msgstr "笔身按钮 2："
 
-#: ui/main.qml:291
+#: ui/main.qml:310
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
@@ -351,12 +351,12 @@ msgctxt ""
 msgid "pen button 2"
 msgstr "笔身按钮 2："
 
-#: ui/main.qml:295
+#: ui/main.qml:314
 #, kde-format
 msgid "Pen button 3:"
 msgstr "笔身按钮 3："
 
-#: ui/main.qml:296
+#: ui/main.qml:315
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
@@ -364,47 +364,47 @@ msgctxt ""
 msgid "pen button 3"
 msgstr "笔身按钮 3："
 
-#: ui/main.qml:351
+#: ui/main.qml:370
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "正在校准"
 
-#: ui/main.qml:353
+#: ui/main.qml:372
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "校准"
 
-#: ui/main.qml:356
+#: ui/main.qml:375
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "不支持校准"
 
-#: ui/main.qml:383
+#: ui/main.qml:408
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
 msgstr "不支持跨屏幕校准。"
 
-#: ui/main.qml:393
+#: ui/main.qml:418
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr "数位板："
 
-#: ui/main.qml:404
+#: ui/main.qml:429
 #, kde-format
 msgid "None"
 msgstr "无"
 
-#: ui/main.qml:429
+#: ui/main.qml:454
 #, kde-format
 msgid "Pad button %1:"
 msgstr "板面按钮 %1："
 
-#: ui/main.qml:432
+#: ui/main.qml:457
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "

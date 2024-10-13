@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-10-13 02:31+0000\n"
 "PO-Revision-Date: 2024-08-03 07:26+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -216,7 +216,7 @@ msgctxt "@title"
 msgid "Pen Calibration"
 msgstr "Kalibrado de Skribilo"
 
-#: ui/Calibration.qml:85
+#: ui/Calibration.qml:90
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -226,7 +226,7 @@ msgstr ""
 "Kalibrado estas finita kaj konservita.<nl/><nl/>Rafinu la kalibradon plu aŭ "
 "fermu la fenestron."
 
-#: ui/Calibration.qml:86
+#: ui/Calibration.qml:91
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -236,73 +236,73 @@ msgstr ""
 "Frapu la centron de ĉiu celo.<nl/><nl/>Celu al la punkto kie la grifelpinto "
 "alteriĝas, kaj ignoru la kursoran pozicion sur la ekrano."
 
-#: ui/Calibration.qml:92
+#: ui/Calibration.qml:97
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
 msgstr "Rafini Ekzistantan Kalibradon"
 
-#: ui/Calibration.qml:101
+#: ui/Calibration.qml:106
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
 msgstr "Kalibri de Nulo"
 
-#: ui/Calibration.qml:115
+#: ui/Calibration.qml:120
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
 msgstr "Fermi"
 
-#: ui/Calibration.qml:115
+#: ui/Calibration.qml:120
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Nuligi"
 
-#: ui/main.qml:32
+#: ui/main.qml:34
 #, kde-format
 msgid "No drawing tablets found"
 msgstr "Trovis neniujn desegnotabulojn"
 
-#: ui/main.qml:33
+#: ui/main.qml:35
 #, kde-format
 msgid "Connect a drawing tablet"
 msgstr "Konekti desegnotabulon"
 
-#: ui/main.qml:41
+#: ui/main.qml:43
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
 msgstr "Testi Tabuleton…"
 
-#: ui/main.qml:67
+#: ui/main.qml:86
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Aparato:"
 
-#: ui/main.qml:105
+#: ui/main.qml:124
 #, kde-format
 msgid "Map to screen:"
 msgstr "Mapi al ekrano:"
 
-#: ui/main.qml:125
+#: ui/main.qml:144
 #, kde-format
 msgid "Orientation:"
 msgstr "Orientiĝo:"
 
-#: ui/main.qml:131
+#: ui/main.qml:150
 #, kde-format
 msgid "Not Supported"
 msgstr "Ne Subtenata"
 
-#: ui/main.qml:138
+#: ui/main.qml:157
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "Maldekstramana reĝimo:"
 
-#: ui/main.qml:149
+#: ui/main.qml:168
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -314,34 +314,34 @@ msgstr ""
 "aparato, sed ofte ĝi inversigas la funkciecon de la platbutonoj por ke la "
 "tabuleto povu esti uzata renverse."
 
-#: ui/main.qml:155
+#: ui/main.qml:174
 #, kde-format
 msgid "Mapped Area:"
 msgstr "Mapita Areo:"
 
-#: ui/main.qml:242
+#: ui/main.qml:261
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "Regrandigi la tablojdan areon"
 
-#: ui/main.qml:266
+#: ui/main.qml:285
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "Ŝlosi bildformaton"
 
-#: ui/main.qml:274
+#: ui/main.qml:293
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: ui/main.qml:285
+#: ui/main.qml:304
 #, kde-format
 msgid "Pen button 1:"
 msgstr "Skribilbutono 1:"
 
-#: ui/main.qml:286
+#: ui/main.qml:305
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
@@ -349,12 +349,12 @@ msgctxt ""
 msgid "pen button 1"
 msgstr "skribilbutonon 1"
 
-#: ui/main.qml:290
+#: ui/main.qml:309
 #, kde-format
 msgid "Pen button 2:"
 msgstr "Skribilbutono 2:"
 
-#: ui/main.qml:291
+#: ui/main.qml:310
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
@@ -362,12 +362,12 @@ msgctxt ""
 msgid "pen button 2"
 msgstr "skribilbutonon 2"
 
-#: ui/main.qml:295
+#: ui/main.qml:314
 #, kde-format
 msgid "Pen button 3:"
 msgstr "Skribilbutono 3:"
 
-#: ui/main.qml:296
+#: ui/main.qml:315
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
@@ -375,47 +375,47 @@ msgctxt ""
 msgid "pen button 3"
 msgstr "skribilbutonon 3"
 
-#: ui/main.qml:351
+#: ui/main.qml:370
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "Kalibrado en Progreso"
 
-#: ui/main.qml:353
+#: ui/main.qml:372
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "Kalibri"
 
-#: ui/main.qml:356
+#: ui/main.qml:375
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "Kalibrado Ne Subtenata"
 
-#: ui/main.qml:383
+#: ui/main.qml:408
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
 msgstr "Kalibrado tra pluraj ekranoj ne estas subtenata."
 
-#: ui/main.qml:393
+#: ui/main.qml:418
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr "Kuseneto:"
 
-#: ui/main.qml:404
+#: ui/main.qml:429
 #, kde-format
 msgid "None"
 msgstr "Neniu"
 
-#: ui/main.qml:429
+#: ui/main.qml:454
 #, kde-format
 msgid "Pad button %1:"
 msgstr "Matbutono %1:"
 
-#: ui/main.qml:432
+#: ui/main.qml:457
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "

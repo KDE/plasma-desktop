@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-10-13 02:31+0000\n"
 "PO-Revision-Date: 2022-02-26 14:11+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -210,7 +210,7 @@ msgctxt "@title"
 msgid "Pen Calibration"
 msgstr ""
 
-#: ui/Calibration.qml:85
+#: ui/Calibration.qml:90
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -218,7 +218,7 @@ msgid ""
 "or close the window."
 msgstr ""
 
-#: ui/Calibration.qml:86
+#: ui/Calibration.qml:91
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -226,78 +226,78 @@ msgid ""
 "tip lands, and ignore the cursor position on the screen."
 msgstr ""
 
-#: ui/Calibration.qml:92
+#: ui/Calibration.qml:97
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
 msgstr ""
 
-#: ui/Calibration.qml:101
+#: ui/Calibration.qml:106
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
 msgstr ""
 
-#: ui/Calibration.qml:115
+#: ui/Calibration.qml:120
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
 msgstr ""
 
-#: ui/Calibration.qml:115
+#: ui/Calibration.qml:120
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr ""
 
-#: ui/main.qml:32
+#: ui/main.qml:34
 #, fuzzy, kde-format
 #| msgid "No drawing tablets found."
 msgid "No drawing tablets found"
 msgstr "कोई चित्रकारी टेबलेट नही मिले ।"
 
-#: ui/main.qml:33
+#: ui/main.qml:35
 #, fuzzy, kde-format
 #| msgid "Configure drawing tablets"
 msgid "Connect a drawing tablet"
 msgstr "चित्रकारी टेबलेट विन्यस्त करें"
 
-#: ui/main.qml:41
+#: ui/main.qml:43
 #, fuzzy, kde-format
 #| msgid "Tablet"
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
 msgstr "टेबलेट"
 
-#: ui/main.qml:67
+#: ui/main.qml:86
 #, fuzzy, kde-format
 #| msgid "Device:"
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "उपकरण :"
 
-#: ui/main.qml:105
+#: ui/main.qml:124
 #, kde-format
 msgid "Map to screen:"
 msgstr ""
 
-#: ui/main.qml:125
+#: ui/main.qml:144
 #, kde-format
 msgid "Orientation:"
 msgstr "दिशा निर्धारण :"
 
-#: ui/main.qml:131
+#: ui/main.qml:150
 #, kde-format
 msgid "Not Supported"
 msgstr ""
 
-#: ui/main.qml:138
+#: ui/main.qml:157
 #, fuzzy, kde-format
 #| msgid "Left-handed mode:"
 msgid "Left-handed mode:"
 msgstr "बाएँ हाथ वाला मोड :"
 
-#: ui/main.qml:149
+#: ui/main.qml:168
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -306,34 +306,34 @@ msgid ""
 "can be used upside-down."
 msgstr ""
 
-#: ui/main.qml:155
+#: ui/main.qml:174
 #, kde-format
 msgid "Mapped Area:"
 msgstr ""
 
-#: ui/main.qml:242
+#: ui/main.qml:261
 #, kde-format
 msgid "Resize the tablet area"
 msgstr ""
 
-#: ui/main.qml:266
+#: ui/main.qml:285
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr ""
 
-#: ui/main.qml:274
+#: ui/main.qml:293
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr ""
 
-#: ui/main.qml:285
+#: ui/main.qml:304
 #, kde-format
 msgid "Pen button 1:"
 msgstr ""
 
-#: ui/main.qml:286
+#: ui/main.qml:305
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
@@ -341,12 +341,12 @@ msgctxt ""
 msgid "pen button 1"
 msgstr ""
 
-#: ui/main.qml:290
+#: ui/main.qml:309
 #, kde-format
 msgid "Pen button 2:"
 msgstr ""
 
-#: ui/main.qml:291
+#: ui/main.qml:310
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
@@ -354,12 +354,12 @@ msgctxt ""
 msgid "pen button 2"
 msgstr ""
 
-#: ui/main.qml:295
+#: ui/main.qml:314
 #, kde-format
 msgid "Pen button 3:"
 msgstr ""
 
-#: ui/main.qml:296
+#: ui/main.qml:315
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
@@ -367,47 +367,47 @@ msgctxt ""
 msgid "pen button 3"
 msgstr ""
 
-#: ui/main.qml:351
+#: ui/main.qml:370
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr ""
 
-#: ui/main.qml:353
+#: ui/main.qml:372
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr ""
 
-#: ui/main.qml:356
+#: ui/main.qml:375
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr ""
 
-#: ui/main.qml:383
+#: ui/main.qml:408
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
 msgstr ""
 
-#: ui/main.qml:393
+#: ui/main.qml:418
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr ""
 
-#: ui/main.qml:404
+#: ui/main.qml:429
 #, kde-format
 msgid "None"
 msgstr ""
 
-#: ui/main.qml:429
+#: ui/main.qml:454
 #, kde-format
 msgid "Pad button %1:"
 msgstr ""
 
-#: ui/main.qml:432
+#: ui/main.qml:457
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
