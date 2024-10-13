@@ -132,7 +132,7 @@ PlasmoidItem {
     readonly property bool paneSwap: Plasmoid.configuration.paneSwap
     readonly property bool sideBarOnRight: (Qt.application.layoutDirection == Qt.RightToLeft) != paneSwap
     // References to items according to their focus chain order
-    readonly property Item firstHeaderItem: header ? (paneSwap ? header.pinButton : header.avatar) : null
+    readonly property Item firstHeaderItem: header ? (paneSwap ? header.pinButton : header.avatar) : null // TODO: Oh my god.
     readonly property Item lastHeaderItem: header ? (paneSwap ? header.avatar : header.pinButton) : null
     readonly property Item firstCentralPane: paneSwap ? contentArea : sideBar
     readonly property Item lastCentralPane: paneSwap ? sideBar : contentArea

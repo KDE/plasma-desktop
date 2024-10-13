@@ -7,11 +7,21 @@ pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Templates as T
+import org.kde.kirigami as Kirigami
 
 EmptyPage {
     id: root
-    property real preferredSideBarWidth: Math.max(footer.tabBar.implicitWidth, applicationsPage.implicitSideBarWidth)
+    // TODO: implicitSideBarWidth is broken, comes back as 7, which probably
+    //        breaks i18n as implicitWidth doesn't cover its content
+    property real preferredSideBarWidth: Math.max(applicationsPage.implicitSideBarWidth, Kirigami.Units.gridUnit * 12)
 
+    // TODO: Just move it in here!
+    contentItem: ApplicationsPage {
+        id: applicationsPage
+        preferredSideBarWidth: root.preferredSideBarWidth + kickoff.backgroundMetrics.leftPadding
+        focus: true // TODO: Needed?
+    }
+    /*
     contentItem: HorizontalStackView {
         id: stackView
         focus: true
@@ -38,10 +48,11 @@ EmptyPage {
             }
         }
     }
+    */
 
     footer: Footer {
         id: footer
-        preferredTabBarWidth: root.preferredSideBarWidth
+        preferredNameAndIconWidth: root.preferredSideBarWidth
         Binding {
             target: kickoff
             property: "footer"

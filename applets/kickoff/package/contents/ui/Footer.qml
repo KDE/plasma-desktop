@@ -8,19 +8,24 @@
 pragma ComponentBehavior: Bound
 
 import QtQuick
+import QtQuick.Layouts
 import org.kde.ksvg as KSvg
 import org.kde.plasma.components as PC3
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami as Kirigami
+import org.kde.kirigamiaddons.components as KirigamiComponents
+import org.kde.coreaddons as KCoreAddons
+import org.kde.kcmutils as KCM
+import org.kde.config as KConfig
 
 PlasmaExtras.PlasmoidHeading {
     id: root
 
-    readonly property alias tabBar: tabBar
-    property real preferredTabBarWidth: 0
+    property real preferredNameAndIconWidth: 0
     readonly property alias leaveButtons: leaveButtons
+    property Item avatar: avatar
 
-    contentWidth: tabBar.implicitWidth + spacing
+    contentWidth: nameAndIcon.implicitWidth + spacing
     contentHeight: leaveButtons.implicitHeight
 
     // We use an increased vertical padding to improve touch usability
@@ -37,114 +42,112 @@ PlasmaExtras.PlasmoidHeading {
     spacing: kickoff.backgroundMetrics.spacing
     position: PC3.ToolBar.Footer
 
-    PC3.TabBar {
-        id: tabBar
+    KCoreAddons.KUser {
+        id: kuser
+    }
 
-        property real tabWidth: Math.max(applicationsTab.implicitWidth, placesTab.implicitWidth)
+    RowLayout {
+        id: nameAndIcon
+        spacing: root.spacing
+        anchors.left: parent.left
+        LayoutMirroring.enabled: kickoff.sideBarOnRight
+        height: parent.height
+        width: root.preferredNameAndIconWidth
 
-        focus: true
+        KirigamiComponents.AvatarButton {
+            id: avatar
+            visible: KConfig.KAuthorized.authorizeControlModule("kcm_users")
 
-        width: root.preferredTabBarWidth > 0 ? root.preferredTabBarWidth : undefined
-        implicitWidth: contentWidth + leftPadding + rightPadding
-        implicitHeight: contentHeight + topPadding + bottomPadding
+            Layout.fillHeight: true
+            Layout.minimumWidth: height
+            Layout.maximumWidth: height
 
-        // This is needed to keep the sparators horizontally aligned
-        leftPadding: mirrored ? root.spacing : 0
-        rightPadding: !mirrored ? root.spacing : 0
+            text: i18n("Open user settings")
+            name: kuser.fullName
 
-        anchors {
-            top: parent.top
-            left: parent.left
-            bottom: parent.bottom
-        }
+            // The icon property emits two signals in a row during which it
+            // changes to an empty URL and probably back to the same
+            // static file path, so we need QtQuick.Image not to cache it.
+            cache: false
+            source: kuser.faceIconUrl
 
-        position: PC3.TabBar.Footer
-
-        contentItem: ListView {
-            id: tabBarListView
-            focus: true
-            model: tabBar.contentModel
-            currentIndex: tabBar.currentIndex
-
-            spacing: tabBar.spacing
-            orientation: ListView.Horizontal
-            boundsBehavior: Flickable.StopAtBounds
-            flickableDirection: Flickable.AutoFlickIfNeeded
-            snapMode: ListView.SnapToItem
-
-            highlightMoveDuration: Kirigami.Units.longDuration
-            highlightRangeMode: ListView.ApplyRange
-            preferredHighlightBegin: tabBar.tabWidth
-            preferredHighlightEnd: width - tabBar.tabWidth
-            highlight: KSvg.FrameSvgItem {
-                anchors.top: tabBarListView.contentItem.top
-                anchors.bottom: tabBarListView.contentItem.bottom
-                anchors.topMargin: -root.topPadding
-                anchors.bottomMargin: -root.bottomPadding
-                imagePath: "widgets/tabbar"
-                prefix: tabBar.position === PC3.TabBar.Header ? "north-active-tab" : "south-active-tab"
+            Keys.onTabPressed: event => {
+                tabSetFocus(event, kickoff.firstCentralPane);
             }
-            keyNavigationEnabled: false
-        }
-
-        PC3.TabButton {
-            id: applicationsTab
-            focus: true
-            width: tabBar.tabWidth
-            anchors.top: tabBarListView.contentItem.top
-            anchors.bottom: tabBarListView.contentItem.bottom
-            anchors.topMargin: -root.topPadding
-            anchors.bottomMargin: -root.bottomPadding
-            icon.width: Kirigami.Units.iconSizes.smallMedium
-            icon.height: Kirigami.Units.iconSizes.smallMedium
-            icon.name: "applications-all-symbolic"
-            text: i18n("Applications")
             Keys.onBacktabPressed: event => {
-                (kickoff.lastCentralPane || nextItemInFocusChain(false))
-                    .forceActiveFocus(Qt.BacktabFocusReason)
+                tabSetFocus(event, nextItemInFocusChain());
             }
-        }
-        PC3.TabButton {
-            id: placesTab
-            width: tabBar.tabWidth
-            anchors.top: tabBarListView.contentItem.top
-            anchors.bottom: tabBarListView.contentItem.bottom
-            anchors.topMargin: -root.topPadding
-            anchors.bottomMargin: -root.bottomPadding
-            icon.width: Kirigami.Units.iconSizes.smallMedium
-            icon.height: Kirigami.Units.iconSizes.smallMedium
-            icon.name: "compass"
-            text: i18n("Places") //Explore?
-        }
-
-        Connections {
-            target: kickoff
-            function onExpandedChanged() {
-                if (kickoff.expanded) {
-                    tabBar.currentIndex = 0
+            Keys.onLeftPressed: event => {
+                if (kickoff.sideBarOnRight) {
+                    searchField.forceActiveFocus(Qt.application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
                 }
             }
-        }
-
-        Keys.onPressed: event => {
-            const Key_Next = Qt.application.layoutDirection === Qt.RightToLeft ? Qt.Key_Left : Qt.Key_Right
-            const Key_Prev = Qt.application.layoutDirection === Qt.RightToLeft ? Qt.Key_Right : Qt.Key_Left
-            if (event.key === Key_Next) {
-                if (currentIndex === count - 1) {
-                    leaveButtons.nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
+            Keys.onRightPressed: event => {
+                if (!kickoff.sideBarOnRight) {
+                    searchField.forceActiveFocus(Qt.application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
+                }
+            }
+            Keys.onDownPressed: event => {
+                if (kickoff.sideBar) {
+                    kickoff.sideBar.forceActiveFocus(Qt.TabFocusReason)
                 } else {
-                    incrementCurrentIndex()
-                    currentItem.forceActiveFocus(Qt.TabFocusReason)
+                    kickoff.contentArea.forceActiveFocus(Qt.TabFocusReason)
                 }
-                event.accepted = true
-            } else if (event.key === Key_Prev && currentIndex > 0) {
-                decrementCurrentIndex()
-                currentItem.forceActiveFocus(Qt.BacktabFocusReason)
-                event.accepted = true
             }
+
+            onClicked: KCM.KCMLauncher.openSystemSettings("kcm_users")
         }
-        Keys.onUpPressed: event => {
-            kickoff.firstCentralPane.forceActiveFocus(Qt.BacktabFocusReason);
+
+        MouseArea {
+            id: nameAndInfoMouseArea
+            hoverEnabled: true
+
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+
+            Kirigami.Heading {
+                id: nameLabel
+                anchors.fill: parent
+                opacity: parent.containsMouse ? 0 : 1
+                color: Kirigami.Theme.textColor
+                level: 4
+                text: kuser.fullName
+                textFormat: Text.PlainText
+                elide: Text.ElideRight
+                horizontalAlignment: kickoff.paneSwap ? Text.AlignRight : Text.AlignLeft
+                verticalAlignment: Text.AlignVCenter
+
+                Behavior on opacity {
+                    NumberAnimation {
+                        duration: Kirigami.Units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
+                }
+            }
+
+            Kirigami.Heading {
+                id: infoLabel
+                anchors.fill: parent
+                level: 5
+                opacity: parent.containsMouse ? 1 : 0
+                color: Kirigami.Theme.textColor
+                text: kuser.os !== "" ? `${kuser.loginName}@${kuser.host} (${kuser.os})` : `${kuser.loginName}@${kuser.host}`
+                textFormat: Text.PlainText
+                elide: Text.ElideRight
+                horizontalAlignment: kickoff.paneSwap ? Text.AlignRight : Text.AlignLeft
+                verticalAlignment: Text.AlignVCenter
+
+                Behavior on opacity {
+                    NumberAnimation {
+                        duration: Kirigami.Units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
+                }
+            }
+
+            PC3.ToolTip.text: infoLabel.text
+            PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
+            PC3.ToolTip.visible: infoLabel.truncated && containsMouse
         }
     }
 
@@ -158,7 +161,7 @@ PlasmaExtras.PlasmoidHeading {
         }
 
         // available width for leaveButtons
-        maximumWidth: root.availableWidth - tabBar.width - root.spacing
+        maximumWidth: root.availableWidth - nameAndIcon.width - root.spacing
 
         Keys.onUpPressed: event => {
             kickoff.lastCentralPane.forceActiveFocus(Qt.BacktabFocusReason);
@@ -170,44 +173,6 @@ PlasmaExtras.PlasmoidHeading {
         NumberAnimation {
             duration: Kirigami.Units.longDuration
             easing.type: Easing.InQuad
-        }
-    }
-
-    // Using item containing WheelHandler instead of MouseArea because
-    // MouseArea doesn't keep track to the total amount of rotation.
-    // Keeping track of the total amount of rotation makes it work
-    // better for touch pads.
-    Item {
-        id: mouseItem
-        parent: root
-        anchors.left: parent.left
-        height: root.height
-        width: tabBar.width
-        z: 1 // Has to be above contentItem to receive mouse wheel events
-        WheelHandler {
-            id: tabScrollHandler
-            acceptedDevices: PointerDevice.Mouse | PointerDevice.TouchPad
-            onWheel: {
-                const shouldDec = rotation >= 15
-                const shouldInc = rotation <= -15
-                const shouldReset = (rotation > 0 && tabBar.currentIndex === 0) || (rotation < 0 && tabBar.currentIndex === tabBar.count - 1)
-                if (shouldDec) {
-                    tabBar.decrementCurrentIndex();
-                    rotation = 0
-                } else if (shouldInc) {
-                    tabBar.incrementCurrentIndex();
-                    rotation = 0
-                } else if (shouldReset) {
-                    rotation = 0
-                }
-            }
-        }
-    }
-
-    Shortcut {
-        sequences: ["Ctrl+Tab", "Ctrl+Shift+Tab", StandardKey.NextChild, StandardKey.PreviousChild]
-        onActivated: {
-            tabBar.currentIndex = (tabBar.currentIndex === 0) ? 1 : 0;
         }
     }
 }

@@ -106,7 +106,7 @@ FocusScope {
                 .forceActiveFocus(Qt.TabFocusReason)
         }
         Keys.onBacktabPressed: event => {
-            (kickoff.paneSwap ? kickoff.header.avatar : sideBarLoader)
+            (kickoff.paneSwap ? kickoff.footer.avatar : sideBarLoader) // TODO: That ain't right
                 .forceActiveFocus(Qt.BacktabFocusReason)
         }
         Keys.onLeftPressed: event => {
