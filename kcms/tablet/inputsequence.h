@@ -27,6 +27,7 @@ public:
         Disabled, /** Emits nothing. */
         Keyboard, /** Emits a keyboard event. */
         Mouse, /** Emits a mouse event. */
+        Pen, /** Emits a stylus pen (tool button) event. */
         ApplicationDefined /** The tablet button is passed directly to the application. */
     };
     Q_ENUM(Type)
@@ -91,6 +92,16 @@ public:
      */
     Q_INVOKABLE void setKeyboardModifiers(Qt::KeyboardModifiers modifiers);
 
+    /**
+     * @return The pen (tablet tool) button to be emitted. Will assert on a non-Pen type sequence.
+     */
+    Q_INVOKABLE int penButton() const;
+
+    /**
+     * @brief Sets the pen (tablet tool) button to be emitted. Will assert on a non-Pen type sequence.
+     */
+    Q_INVOKABLE void setPenButton(int button);
+
 private:
     using KeyData = QKeySequence;
 
@@ -99,14 +110,17 @@ private:
         Qt::KeyboardModifiers modifiers;
     };
     using MouseData = MouseSequence;
+    using PenData = int;
     using NoData = std::monostate;
 
     KeyData &keyData();
     MouseData &mouseData();
+    PenData &penData();
 
     KeyData keyData() const;
     MouseData mouseData() const;
+    int penData() const;
 
     Type m_type = Type::ApplicationDefined;
-    std::variant<KeyData, MouseData, NoData> m_data;
+    std::variant<KeyData, MouseData, PenData, NoData> m_data;
 };

@@ -25,7 +25,7 @@ Kirigami.Dialog {
     modal: true
 
     maximumWidth: Kirigami.Units.gridUnit * 20
-    maximumHeight: Kirigami.Units.gridUnit * 18
+    maximumHeight: Kirigami.Units.gridUnit * 20
 
     topPadding: 0
     leftPadding: Kirigami.Units.largeSpacing
@@ -56,6 +56,9 @@ Kirigami.Dialog {
                 altCheckbox.checked = checkFlag(Qt.AltModifier);
                 metaCheckbox.checked = checkFlag(Qt.MetaModifier);
                 shiftCheckbox.checked = checkFlag(Qt.ShiftModifier);
+                break;
+            case InputSequence.Pen:
+                penRadio.checked = true;
                 break;
             case InputSequence.ApplicationDefined:
                 applicationRadio.checked = true;
@@ -121,9 +124,24 @@ Kirigami.Dialog {
             }
         }
         QQC2.RadioButton {
-            id: disabledRadio
+            id: penRadio
 
             readonly property int index: 3
+
+            text: i18ndc("kcm_tablet", "@option:radio Set this action to a pen button type", "Send pen button")
+            icon.name: "tool_pen-symbolic"
+
+            QQC2.ButtonGroup.group: radioGroup
+
+            onToggled: {
+                inputSequence.type = InputSequence.Pen;
+                refreshDialogData();
+            }
+        }
+        QQC2.RadioButton {
+            id: disabledRadio
+
+            readonly property int index: 4
 
             icon.name: "action-unavailable-symbolic"
             text: i18ndc("kcm_tablet", "@option:radio Disable this action", "Do nothing")
@@ -227,6 +245,25 @@ Kirigami.Dialog {
                         text: i18ndc("kcm_tablet", "@option:check The shift modifier on the keyboard", "Shift")
                         modifier: Qt.ShiftModifier
                     }
+                }
+            }
+            ColumnLayout {
+                id: penButtonView
+
+                spacing: Kirigami.Units.smallSpacing
+
+                QQC2.ComboBox {
+                    id: penButtonCombo
+
+                    textRole: "text"
+                    valueRole: "value"
+                    model: [
+                        { value: 0, text: i18ndc("kcm_tablet", "@action:inmenu Stylus button", "Button 1") },
+                        { value: 1, text: i18ndc("kcm_tablet", "@action:inmenu Stylus button", "Button 2") },
+                        { value: 2, text: i18ndc("kcm_tablet", "@action:inmenu Stylus button", "Button 2") }
+                    ]
+
+                    onActivated: actionDialog.inputSequence.setPenButton(currentValue)
                 }
             }
             QQC2.Label {
