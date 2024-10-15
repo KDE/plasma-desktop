@@ -267,7 +267,7 @@ InputSequence::MouseData InputSequence::mouseData() const
     return std::get<MouseData>(m_data);
 }
 
-int InputSequence::penData() const
+InputSequence::PenData InputSequence::penData() const
 {
     Q_ASSERT(m_type == Type::Pen);
     return std::get<PenData>(m_data);
