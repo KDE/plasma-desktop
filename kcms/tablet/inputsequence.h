@@ -119,7 +119,7 @@ private:
 
     KeyData keyData() const;
     MouseData mouseData() const;
-    int penData() const;
+    PenData penData() const;
 
     Type m_type = Type::ApplicationDefined;
     std::variant<KeyData, MouseData, PenData, NoData> m_data;

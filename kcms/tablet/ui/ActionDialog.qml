@@ -18,6 +18,7 @@ Kirigami.Dialog {
 
     property inputSequence inputSequence
     property string name
+    property bool supportsPenButton
 
     signal gotInputSequence(sequence: inputSequence)
 
@@ -130,6 +131,8 @@ Kirigami.Dialog {
 
             text: i18ndc("kcm_tablet", "@option:radio Set this action to a pen button type", "Send pen button")
             icon.name: "tool_pen-symbolic"
+            visible: actionDialog.supportsPenButton
+            enabled: visible
 
             QQC2.ButtonGroup.group: radioGroup
 
