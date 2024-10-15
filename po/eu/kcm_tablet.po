@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-14 00:40+0000\n"
+"POT-Creation-Date: 2024-10-15 00:41+0000\n"
 "PO-Revision-Date: 2024-09-04 23:09+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -279,27 +279,27 @@ msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Gailua:"
 
-#: ui/main.qml:124
+#: ui/main.qml:125
 #, kde-format
 msgid "Map to screen:"
 msgstr "Mapatu pantailara:"
 
-#: ui/main.qml:144
+#: ui/main.qml:145
 #, kde-format
 msgid "Orientation:"
 msgstr "Orientazioa:"
 
-#: ui/main.qml:150
+#: ui/main.qml:151
 #, kde-format
-msgid "Not Supported"
-msgstr "Ez da onartzen"
+msgid "Not Applicable"
+msgstr ""
 
-#: ui/main.qml:157
+#: ui/main.qml:158
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "Ezkerti modua:"
 
-#: ui/main.qml:168
+#: ui/main.qml:169
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -312,34 +312,34 @@ msgstr ""
 "funtzionaltasuna atzekoz aurrera ipintzen du tableta buruz behera erabili "
 "ahal izan dadin."
 
-#: ui/main.qml:174
+#: ui/main.qml:175
 #, kde-format
 msgid "Mapped Area:"
 msgstr "Mapatutako azalera:"
 
-#: ui/main.qml:261
+#: ui/main.qml:262
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "Aldatu tabletaren azaleraren neurria"
 
-#: ui/main.qml:285
+#: ui/main.qml:286
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "Giltzatu itxura-proportzioa"
 
-#: ui/main.qml:293
+#: ui/main.qml:294
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: ui/main.qml:304
+#: ui/main.qml:305
 #, kde-format
 msgid "Pen button 1:"
 msgstr "Arkatzaren 1. botoia:"
 
-#: ui/main.qml:305
+#: ui/main.qml:306
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
@@ -347,12 +347,12 @@ msgctxt ""
 msgid "pen button 1"
 msgstr "Arkatzaren 1. botoia"
 
-#: ui/main.qml:309
+#: ui/main.qml:310
 #, kde-format
 msgid "Pen button 2:"
 msgstr "arkatzaren 2. botoia:"
 
-#: ui/main.qml:310
+#: ui/main.qml:311
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
@@ -360,12 +360,12 @@ msgctxt ""
 msgid "pen button 2"
 msgstr "arkatzaren 2. botoia"
 
-#: ui/main.qml:314
+#: ui/main.qml:315
 #, kde-format
 msgid "Pen button 3:"
 msgstr "Arkatzaren 3. botoia:"
 
-#: ui/main.qml:315
+#: ui/main.qml:316
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
@@ -373,47 +373,84 @@ msgctxt ""
 msgid "pen button 3"
 msgstr "arkatzaren 3. botoia"
 
-#: ui/main.qml:370
+#: ui/main.qml:365
+#, kde-format
+msgid "Pen Pressure:"
+msgstr ""
+
+#: ui/main.qml:408
+#, kde-format
+msgctxt "Low pen pressure"
+msgid "Low Pressure"
+msgstr ""
+
+#: ui/main.qml:416
+#, kde-format
+msgctxt "High pen pressure"
+msgid "High Pressure"
+msgstr ""
+
+#: ui/main.qml:427
+#, kde-format
+msgctxt "100% or maximum pen pressure"
+msgid "100%"
+msgstr ""
+
+#: ui/main.qml:435
+#, kde-format
+msgctxt "0% or zero pen pressure"
+msgid "0%"
+msgstr ""
+
+#: ui/main.qml:439
+#, kde-format
+msgctxt "@info"
+msgid ""
+"This curve controls the relationship between the pressure on the stylus and "
+"the pressure values received by applications."
+msgstr ""
+
+#: ui/main.qml:450
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "Kalibratzen ari da"
 
-#: ui/main.qml:372
+#: ui/main.qml:452
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "Kalibratu"
 
-#: ui/main.qml:375
+#: ui/main.qml:455
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "Kalibratzea ez da onartzen"
 
-#: ui/main.qml:408
+#: ui/main.qml:488
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
 msgstr "Pantaila anizkoitzen artean kalibratzea ez da onartzen."
 
-#: ui/main.qml:418
+#: ui/main.qml:498
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr "Teklatua:"
 
-#: ui/main.qml:429
+#: ui/main.qml:509
 #, kde-format
 msgid "None"
 msgstr "Bat ere ez"
 
-#: ui/main.qml:454
+#: ui/main.qml:534
 #, kde-format
 msgid "Pad button %1:"
 msgstr "Teklatuko %1 botoia:"
 
-#: ui/main.qml:457
+#: ui/main.qml:537
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
@@ -456,6 +493,9 @@ msgstr ""
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr "Hustu"
+
+#~ msgid "Not Supported"
+#~ msgstr "Ez da onartzen"
 
 #~ msgid "Primary (default)"
 #~ msgstr "Nagusia (lehenetsia)"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-14 00:40+0000\n"
+"POT-Creation-Date: 2024-10-15 00:41+0000\n"
 "PO-Revision-Date: 2024-05-13 22:04+0200\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -276,27 +276,27 @@ msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Gerät:"
 
-#: ui/main.qml:124
+#: ui/main.qml:125
 #, kde-format
 msgid "Map to screen:"
 msgstr ""
 
-#: ui/main.qml:144
+#: ui/main.qml:145
 #, kde-format
 msgid "Orientation:"
 msgstr "Ausrichtung:"
 
-#: ui/main.qml:150
+#: ui/main.qml:151
 #, kde-format
-msgid "Not Supported"
+msgid "Not Applicable"
 msgstr ""
 
-#: ui/main.qml:157
+#: ui/main.qml:158
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "Linkshändiger Modus:"
 
-#: ui/main.qml:168
+#: ui/main.qml:169
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -305,35 +305,35 @@ msgid ""
 "can be used upside-down."
 msgstr ""
 
-#: ui/main.qml:174
+#: ui/main.qml:175
 #, kde-format
 msgid "Mapped Area:"
 msgstr ""
 
-#: ui/main.qml:261
+#: ui/main.qml:262
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "Größe des Tablettbereichs ändern"
 
-#: ui/main.qml:285
+#: ui/main.qml:286
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "Seitenverhältnis sperren"
 
-#: ui/main.qml:293
+#: ui/main.qml:294
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: ui/main.qml:304
+#: ui/main.qml:305
 #, fuzzy, kde-format
 #| msgid "Button %1:"
 msgid "Pen button 1:"
 msgstr "Knopf %1:"
 
-#: ui/main.qml:305
+#: ui/main.qml:306
 #, fuzzy, kde-format
 #| msgid "Button %1:"
 msgctxt ""
@@ -342,13 +342,13 @@ msgctxt ""
 msgid "pen button 1"
 msgstr "Knopf %1:"
 
-#: ui/main.qml:309
+#: ui/main.qml:310
 #, fuzzy, kde-format
 #| msgid "Tool Button 2"
 msgid "Pen button 2:"
 msgstr "Werkzeugknopf 2"
 
-#: ui/main.qml:310
+#: ui/main.qml:311
 #, fuzzy, kde-format
 #| msgid "Tool Button 2"
 msgctxt ""
@@ -357,13 +357,13 @@ msgctxt ""
 msgid "pen button 2"
 msgstr "Werkzeugknopf 2"
 
-#: ui/main.qml:314
+#: ui/main.qml:315
 #, fuzzy, kde-format
 #| msgid "Tool Button 3"
 msgid "Pen button 3:"
 msgstr "Werkzeugknopf 3"
 
-#: ui/main.qml:315
+#: ui/main.qml:316
 #, fuzzy, kde-format
 #| msgid "Tool Button 3"
 msgctxt ""
@@ -372,48 +372,85 @@ msgctxt ""
 msgid "pen button 3"
 msgstr "Werkzeugknopf 3"
 
-#: ui/main.qml:370
+#: ui/main.qml:365
+#, kde-format
+msgid "Pen Pressure:"
+msgstr ""
+
+#: ui/main.qml:408
+#, kde-format
+msgctxt "Low pen pressure"
+msgid "Low Pressure"
+msgstr ""
+
+#: ui/main.qml:416
+#, kde-format
+msgctxt "High pen pressure"
+msgid "High Pressure"
+msgstr ""
+
+#: ui/main.qml:427
+#, kde-format
+msgctxt "100% or maximum pen pressure"
+msgid "100%"
+msgstr ""
+
+#: ui/main.qml:435
+#, kde-format
+msgctxt "0% or zero pen pressure"
+msgid "0%"
+msgstr ""
+
+#: ui/main.qml:439
+#, kde-format
+msgctxt "@info"
+msgid ""
+"This curve controls the relationship between the pressure on the stylus and "
+"the pressure values received by applications."
+msgstr ""
+
+#: ui/main.qml:450
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr ""
 
-#: ui/main.qml:372
+#: ui/main.qml:452
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr ""
 
-#: ui/main.qml:375
+#: ui/main.qml:455
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr ""
 
-#: ui/main.qml:408
+#: ui/main.qml:488
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
 msgstr ""
 
-#: ui/main.qml:418
+#: ui/main.qml:498
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr "Pad:"
 
-#: ui/main.qml:429
+#: ui/main.qml:509
 #, kde-format
 msgid "None"
 msgstr "Keine"
 
-#: ui/main.qml:454
+#: ui/main.qml:534
 #, fuzzy, kde-format
 #| msgid "Button %1:"
 msgid "Pad button %1:"
 msgstr "Knopf %1:"
 
-#: ui/main.qml:457
+#: ui/main.qml:537
 #, fuzzy, kde-format
 #| msgid "Button %1:"
 msgctxt ""
