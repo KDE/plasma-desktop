@@ -487,5 +487,7 @@ SimpleKCM {
 
     ActionDialog {
         id: actionDialog
+
+        parent: root.QQC2.Overlay.overlay
     }
 }
