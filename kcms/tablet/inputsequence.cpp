@@ -16,6 +16,10 @@ constexpr int BTN_LEFT = 0x110;
 constexpr int BTN_RIGHT = 0x111;
 constexpr int BTN_MIDDLE = 0x112;
 
+constexpr int BTN_STYLUS = 0x14b;
+constexpr int BTN_STYLUS2 = 0x14c;
+constexpr int BTN_STYLUS3 = 0x149;
+
 InputSequence::InputSequence() = default;
 
 InputSequence::InputSequence(const QStringList &config)
@@ -55,6 +59,19 @@ InputSequence::InputSequence(const QStringList &config)
         }
     } else if (type == u"ApplicationDefined"_s) {
         setType(Type::ApplicationDefined);
+    } else if (type == u"TabletToolButton"_s) {
+        setType(Type::Pen);
+
+        if (config.size() >= 2) {
+            const auto linuxButton = config[1].toInt();
+            if (linuxButton == BTN_STYLUS) {
+                penData() = 0;
+            } else if (linuxButton == BTN_STYLUS2) {
+                penData() = 1;
+            } else if (linuxButton == BTN_STYLUS3) {
+                penData() = 2;
+            }
+        }
     } else {
         qCWarning(KCM_TABLET) << "Unknown input sequence type" << type;
     }
@@ -81,6 +98,9 @@ void InputSequence::setType(const Type type)
             break;
         case Type::Mouse:
             m_data = MouseData{.button = Qt::LeftButton, .modifiers = {}};
+            break;
+        case Type::Pen:
+            m_data = PenData{0};
             break;
         default:
             Q_UNREACHABLE();
@@ -123,6 +143,23 @@ QStringList InputSequence::toConfigFormat() const
     }
     case Type::ApplicationDefined:
         return QStringList{}; // to pass events through, just don't give KWin anything
+    case Type::Pen: {
+        int linuxButton;
+        switch (penData()) {
+        case 0:
+            linuxButton = BTN_STYLUS;
+            break;
+        case 1:
+            linuxButton = BTN_STYLUS2;
+            break;
+        case 2:
+            linuxButton = BTN_STYLUS3;
+            break;
+        default:
+            Q_UNREACHABLE();
+        }
+        return QStringList{"TabletToolButton", QString::number(linuxButton)};
+    }
     default:
         Q_UNREACHABLE();
     }
@@ -153,6 +190,8 @@ QString InputSequence::toString() const
     }
     case Type::ApplicationDefined:
         return i18nc("@action:button", "Application-defined");
+    case Type::Pen:
+        return i18nc("@action:button", "Pen Button %1", penData() + 1);
     default:
         Q_UNREACHABLE();
     }
@@ -188,6 +227,16 @@ void InputSequence::setKeyboardModifiers(const Qt::KeyboardModifiers modifiers)
     mouseData().modifiers = modifiers;
 }
 
+int InputSequence::penButton() const
+{
+    return penData();
+}
+
+void InputSequence::setPenButton(const int button)
+{
+    penData() = button;
+}
+
 InputSequence::KeyData &InputSequence::keyData()
 {
     Q_ASSERT(m_type == Type::Keyboard);
@@ -200,6 +249,12 @@ InputSequence::MouseData &InputSequence::mouseData()
     return std::get<MouseData>(m_data);
 }
 
+InputSequence::PenData &InputSequence::penData()
+{
+    Q_ASSERT(m_type == Type::Pen);
+    return std::get<PenData>(m_data);
+}
+
 InputSequence::KeyData InputSequence::keyData() const
 {
     Q_ASSERT(m_type == Type::Keyboard);
@@ -210,4 +265,10 @@ InputSequence::MouseData InputSequence::mouseData() const
 {
     Q_ASSERT(m_type == Type::Mouse);
     return std::get<MouseData>(m_data);
+}
+
+int InputSequence::penData() const
+{
+    Q_ASSERT(m_type == Type::Pen);
+    return std::get<PenData>(m_data);
 }

@@ -29,6 +29,8 @@ QQC2.Button {
                 return "input-keyboard-symbolic";
             case InputSequence.Mouse:
                 return "input-mouse-symbolic";
+            case InputSequence.Pen:
+                return "tool_pen-symbolic";
             case InputSequence.ApplicationDefined:
                 return "applications-all-symbolic";
         }
