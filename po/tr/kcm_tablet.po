@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-15 00:41+0000\n"
-"PO-Revision-Date: 2024-09-05 01:13+0300\n"
+"PO-Revision-Date: 2024-10-15 23:20+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -289,7 +289,7 @@ msgstr "Yönelim:"
 #: ui/main.qml:151
 #, kde-format
 msgid "Not Applicable"
-msgstr ""
+msgstr "Uygulanamaz"
 
 #: ui/main.qml:158
 #, kde-format
@@ -373,31 +373,31 @@ msgstr "Kalem düğmesi 3"
 #: ui/main.qml:365
 #, kde-format
 msgid "Pen Pressure:"
-msgstr ""
+msgstr "Kalem basıncı:"
 
 #: ui/main.qml:408
 #, kde-format
 msgctxt "Low pen pressure"
 msgid "Low Pressure"
-msgstr ""
+msgstr "Düşük basınç"
 
 #: ui/main.qml:416
 #, kde-format
 msgctxt "High pen pressure"
 msgid "High Pressure"
-msgstr ""
+msgstr "Yüksek basınç"
 
 #: ui/main.qml:427
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
-msgstr ""
+msgstr "%​100"
 
 #: ui/main.qml:435
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
-msgstr ""
+msgstr "%​0"
 
 #: ui/main.qml:439
 #, kde-format
@@ -406,6 +406,8 @@ msgid ""
 "This curve controls the relationship between the pressure on the stylus and "
 "the pressure values received by applications."
 msgstr ""
+"Bu eğri, kaleme uygulanan basınç ile uygulamaların aldığı basınç değerleri "
+"arasındaki ilişkiyi denetler."
 
 #: ui/main.qml:450
 #, kde-format

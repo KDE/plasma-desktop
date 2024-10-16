@@ -2,7 +2,7 @@
 # Copyright (C) 2009 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kcmaccess package.
 # Andhika Padmawan <andhika.padmawan@gmail.com>, 2009-2014.
-# Wantoyo <wantoyek@gmail.com>, 2017, 2018, 2019, 2022, 2023.
+# SPDX-FileCopyrightText: 2017, 2018, 2019, 2022, 2023, 2024 Wantoyo <wantoyek@gmail.com>
 # Aziz Adam Adrian <4.adam.adrian@gmail.com>, 2022.
 #
 msgid ""
@@ -10,15 +10,15 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-29 00:41+0000\n"
-"PO-Revision-Date: 2023-01-02 07:28+0700\n"
+"PO-Revision-Date: 2024-10-15 05:59+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
-"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: kcmaccess.cpp:117
 #, kde-format
@@ -111,10 +111,9 @@ msgstr "Gunakan tundaan timeout"
 
 #. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
 #: kcmaccessibilityactivationgestures.kcfg:25
-#, fuzzy, kde-format
-#| msgid "Delay for the mouse movement"
+#, kde-format
 msgid "Delay for timeout"
-msgstr "Tundaan untuk perpindahan mouse"
+msgstr "Tundaan untuk timeout"
 
 #. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
 #: kcmaccessibilityactivationgestures.kcfg:29
@@ -168,37 +167,37 @@ msgstr "Durasi Bel Tampak"
 #: kcmaccessibilitycolorblindnesscorrection.kcfg:13
 #, kde-format
 msgid "Whether Colorblindness Correction is enabled"
-msgstr ""
+msgstr "Apakah Koreksi Buta Warna difungsikan"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
 #, kde-format
 msgid "Use sticky Keys"
-msgstr "Gunakan Tuts lekat"
+msgstr "Gunakan Tombol lekat"
 
 #. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:13
 #, kde-format
 msgid "Lock the sticky keys"
-msgstr "Kunci tuts lekat"
+msgstr "Kunci tombol lekat"
 
 #. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:17
 #, kde-format
 msgid "Turn sticky keys off when two keys are pressed simultaneously"
-msgstr "Matikan tuts lekat ketika dua tuts ditekan secara serempak"
+msgstr "Matikan tombol lekat ketika dua tombol ditekan secara serempak"
 
 #. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:21
 #, kde-format
 msgid "Beep on a sticky key press"
-msgstr "Bunyi tit saat tekan tuts lekat"
+msgstr "Bunyi tit saat tekan tombol lekat"
 
 #. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:25
 #, kde-format
 msgid "Toggle keys beep"
-msgstr "Jungkitan bunyi tit tuts"
+msgstr "Jungkitan bunyi tit tombol"
 
 #. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:29
@@ -210,37 +209,37 @@ msgstr "Notifikasikan ketika pemodif keyboard ditekan"
 #: kcmaccessibilitykeyboardfilters.kcfg:9
 #, kde-format
 msgid "Use slow keypresses"
-msgstr "Gunakan tekanan tuts pelan"
+msgstr "Gunakan tekanan tombol pelan"
 
 #. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:13
 #, kde-format
 msgid "Delay for the key press"
-msgstr "Tundaan untuk tekanan tuts"
+msgstr "Tundaan untuk tekanan tombol"
 
 #. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:17
 #, kde-format
 msgid "Beep on a slow keypress"
-msgstr "Bunyi tit saat tekanan tuts pelan"
+msgstr "Bunyi tit saat tekanan tombol pelan"
 
 #. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:21
 #, kde-format
 msgid "Beep on an accepted keypress"
-msgstr "Bunyi tit saat tekanan tuts disetujui"
+msgstr "Bunyi tit saat tekanan tombol disetujui"
 
 #. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:25
 #, kde-format
 msgid "Beep on a rejected keypress"
-msgstr "Bunyi tit saat tekanan tuts ditolak"
+msgstr "Bunyi tit saat tekanan tombol ditolak"
 
 #. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:29
 #, kde-format
 msgid "Bounce Keys"
-msgstr "Tuts Mentul"
+msgstr "Tombol Mentul"
 
 #. i18n: ectx: label, entry (BounceKeysDelay), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:33
@@ -252,13 +251,13 @@ msgstr "Gunakan tundaan untuk permentulan"
 #: kcmaccessibilitykeyboardfilters.kcfg:37
 #, kde-format
 msgid "Beep if a bounce key event is rejected"
-msgstr "Bunyi tit jika peristiwa tuts mentul ditolak"
+msgstr "Bunyi tit jika peristiwa tombol mentul ditolak"
 
 #. i18n: ectx: label, entry (MouseKeys), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:9
 #, kde-format
 msgid "Use keys to control the mouse"
-msgstr "Gunakan tuts untuk mengontrol mouse"
+msgstr "Gunakan tombol untuk mengontrol mouse"
 
 #. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:13
@@ -288,7 +287,7 @@ msgstr "Kecepatan Maksimal"
 #: kcmaccessibilitymouse.kcfg:29
 #, kde-format
 msgid "Mouse Key Curve"
-msgstr "Kurva Tuts Mouse"
+msgstr "Kurva Tombol Mouse"
 
 #. i18n: ectx: label, entry (Enabled), group (ScreenReader)
 #: kcmaccessibilityscreenreader.kcfg:9
@@ -300,25 +299,22 @@ msgstr "Fungsikan Screen Reader"
 #: kcmaccessibilityshakecursor.kcfg:9
 #, kde-format
 msgid "Whether Shake Cursor is enabled"
-msgstr ""
+msgstr "Apakah Kursor Guncang difungsikan"
 
 #. i18n: ectx: label, entry (ShakeCursorMagnification), group (Effect-shakecursor)
 #: kcmaccessibilityshakecursor.kcfg:15
-#, fuzzy, kde-format
-#| msgid "Show a notification"
+#, kde-format
 msgid "Magnification"
-msgstr "Tampilkan notifikasi"
+msgstr "Pembesaran"
 
 #: ui/ActivationShortcuts.qml:17
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgctxt "@option:check"
 msgid "Activation shortcuts:"
-msgstr "Gestur Pengaktifan"
+msgstr "Pintasan aktivasi:"
 
 #: ui/ActivationShortcuts.qml:18
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "Enable activation shortcuts"
 msgid "Enable"
 msgstr "Fungsikan"
@@ -327,44 +323,39 @@ msgstr "Fungsikan"
 #, kde-format
 msgctxt "@label"
 msgid "Press Shift 5 times to enable Sticky Keys"
-msgstr ""
+msgstr "Tekan Shift 5 kali untuk memfungsikan Tombol Lekat"
 
 #: ui/ActivationShortcuts.qml:37
 #, kde-format
 msgctxt "@label"
 msgid "Hold Shift for 8 seconds to enable Slow Keys"
-msgstr ""
+msgstr "Tahan Shift selama 8 detik untuk memfungsikan Tombol Pelan"
 
 #: ui/ActivationShortcuts.qml:46
-#, fuzzy, kde-format
-#| msgid ""
-#| "Turn sticky keys and slow keys off after a certain period of inactivity."
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable sticky and slow keys after:"
-msgstr "Matikan tuts lekat dan tuts pelan setelah beberapa saat tidak aktif."
+msgstr "Nonfungsikan tombol lekat dan tombol pelan setelah:"
 
 #: ui/ActivationShortcuts.qml:75
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid "%1 min"
 msgid_plural "%1 min"
-msgstr[0] " mnt"
-msgstr[1] " mnt"
+msgstr[0] "%1 mnt"
+msgstr[1] "%1 mnt"
 
 #: ui/ActivationShortcuts.qml:79
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgctxt "short for minute(s)"
 msgid "min"
 msgid_plural "min"
-msgstr[0] " mnt"
-msgstr[1] " mnt"
+msgstr[0] "min"
+msgstr[1] "min"
 
 #: ui/ActivationShortcuts.qml:88
-#, fuzzy, kde-format
-#| msgid "When a gesture is used:"
+#, kde-format
 msgid "When a shortcut is used:"
-msgstr "Ketika gestur digunakan:"
+msgstr "Ketika pintasan digunakan:"
 
 #: ui/ActivationShortcuts.qml:89
 #, kde-format
@@ -372,10 +363,9 @@ msgid "Display a confirmation dialog"
 msgstr "Tampilan dialog konfirmasi"
 
 #: ui/ActivationShortcuts.qml:100
-#, fuzzy, kde-format
-#| msgid "Ring the System Bell"
+#, kde-format
 msgid "Ring the system bell"
-msgstr "Deringkan Bel Sistem"
+msgstr "Deringkan bel sistem"
 
 #: ui/ActivationShortcuts.qml:111
 #, kde-format
@@ -393,11 +383,10 @@ msgid "Please choose an audio file"
 msgstr "Silakan pilih file audio"
 
 #: ui/Bell.qml:21
-#, fuzzy, kde-format
-#| msgid "Audio Files (*.mp3 *.ogg *.wav)"
+#, kde-format
 msgctxt "Name filters in a file dialog. Do not translate `(*.ogg *.oga *.wav)`"
 msgid "ogg, oga, and wav audio files (*.ogg *.oga *.wav)"
-msgstr "File Audio (*.mp3 *.ogg *.wav)"
+msgstr "File-file audio ogg, oga, dan wav (*.ogg *.oga *.wav)"
 
 #: ui/Bell.qml:30
 #, kde-format
@@ -414,7 +403,7 @@ msgstr "Fungsikan"
 #, kde-format
 msgctxt "@label"
 msgid "Emits a sound whenever certain keys are pressed"
-msgstr ""
+msgstr "Bunyikan suara ketika tombol tertentu ditekan"
 
 #: ui/Bell.qml:50
 #, kde-format
@@ -444,26 +433,22 @@ msgid "Enable"
 msgstr "Fungsikan"
 
 #: ui/Bell.qml:113
-#, fuzzy, kde-format
-#| msgid "Use the system bell whenever a key is rejected"
+#, kde-format
 msgctxt "@label"
 msgid "Flashes the screen whenever certain keys are pressed"
-msgstr "Gunakan bel sistem kapanpun sebuah tuts diapkir"
+msgstr "Kilatkan layar ketika tombol tertentu ditekan"
 
 #: ui/Bell.qml:123
-#, fuzzy, kde-format
-#| msgctxt "Invert screen on a system bell"
-#| msgid "Invert Screen"
+#, kde-format
 msgctxt "@option:radio Invert screen colors when a system bell is rung"
 msgid "Invert screen colors"
-msgstr "Kebalikan Layar"
+msgstr "Kebalikan warna layar"
 
 #: ui/Bell.qml:141
-#, fuzzy, kde-format
-#| msgid "F&lash screen"
+#, kde-format
 msgctxt "@option:radio Flash screen when a system bell is rung"
 msgid "Flash screen"
-msgstr "Layar ki&lat"
+msgstr "Layar kilat"
 
 #: ui/Bell.qml:152
 #, kde-format
@@ -480,12 +465,11 @@ msgstr "Durasi:"
 #: ui/Bell.qml:181 ui/KeyboardFilters.qml:55 ui/KeyboardFilters.qml:151
 #: ui/MouseNavigation.qml:51 ui/MouseNavigation.qml:73
 #: ui/MouseNavigation.qml:95
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] " mnt"
-msgstr[1] " mnt"
+msgstr[0] "%1 mdt"
+msgstr[1] "%1 mdt"
 
 #: ui/Bell.qml:185 ui/KeyboardFilters.qml:59 ui/KeyboardFilters.qml:155
 #: ui/MouseNavigation.qml:55 ui/MouseNavigation.qml:77
@@ -494,18 +478,17 @@ msgstr[1] " mnt"
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "mdt"
+msgstr[1] "mdt"
 
 #: ui/ColorblindnessCorrection.qml:22
 #, kde-format
 msgctxt "@label"
 msgid "Color blindness correction:"
-msgstr ""
+msgstr "Koreksi buta warna:"
 
 #: ui/ColorblindnessCorrection.qml:23
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable color blindness correction effect"
 msgid "Enable"
 msgstr "Fungsikan"
@@ -514,68 +497,68 @@ msgstr "Fungsikan"
 #, kde-format
 msgctxt "@label"
 msgid "Mode:"
-msgstr ""
+msgstr "Mode:"
 
 #: ui/ColorblindnessCorrection.qml:41
 #, kde-format
 msgctxt "@option"
 msgid "Protanopia (red weak)"
-msgstr ""
+msgstr "Protanopia (merah pudar)"
 
 #: ui/ColorblindnessCorrection.qml:42
 #, kde-format
 msgctxt "@option"
 msgid "Deuteranopia (green weak)"
-msgstr ""
+msgstr "Deuteranopia (hijau pudar)"
 
 #: ui/ColorblindnessCorrection.qml:43
 #, kde-format
 msgctxt "@option"
 msgid "Tritanopia (blue-yellow)"
-msgstr ""
+msgstr "Tritanopia (biru kekuningan)"
 
 #: ui/ColorblindnessCorrection.qml:58
 #, kde-format
 msgctxt "@label"
 msgid "Intensity:"
-msgstr ""
+msgstr "Intensitas:"
 
 #: ui/ColorblindnessCorrection.qml:81
 #, kde-format
 msgctxt "@label Mild color blindness correction intensity"
 msgid "Mild"
-msgstr ""
+msgstr "Ringan"
 
 #: ui/ColorblindnessCorrection.qml:88
 #, kde-format
 msgctxt "@label Intense color blindness correction intensity"
 msgid "Intense"
-msgstr ""
+msgstr "Berat"
 
 #: ui/ColorblindnessCorrection.qml:111
 #, kde-format
 msgid "Red"
-msgstr ""
+msgstr "Merah"
 
 #: ui/ColorblindnessCorrection.qml:112
 #, kde-format
 msgid "Green"
-msgstr ""
+msgstr "Hijau"
 
 #: ui/ColorblindnessCorrection.qml:113
 #, kde-format
 msgid "Blue"
-msgstr ""
+msgstr "Biru"
 
 #: ui/ColorblindnessCorrection.qml:114
 #, kde-format
 msgid "Purple"
-msgstr ""
+msgstr "Ungu"
 
 #: ui/KeyboardFilters.qml:17
 #, kde-format
 msgid "Slow keys:"
-msgstr "Tuts pelan:"
+msgstr "Tombol pelan:"
 
 #: ui/KeyboardFilters.qml:22
 #, kde-format
@@ -591,6 +574,10 @@ msgid ""
 "Useful if you accidentally type more than one key at a time or have "
 "difficulty pressing the key you want the first time."
 msgstr ""
+"Agar tombol diterima, tombol tersebut harus ditahan hingga waktu yang "
+"ditentukan. Berguna jika Anda tidak sengaja mengetik lebih dari satu tombol "
+"sekaligus atau mengalami kesulitan menekan tombol yang Anda inginkan untuk "
+"pertama kalinya."
 
 #: ui/KeyboardFilters.qml:40
 #, kde-format
@@ -607,24 +594,24 @@ msgstr "Dering bel sistem:"
 #, kde-format
 msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
-msgstr "ketika tuts apapun dit&ekan"
+msgstr "ketika tombol apapun dit&ekan"
 
 #: ui/KeyboardFilters.qml:83
 #, kde-format
 msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
-msgstr "ketika tuts apapun di&setujui"
+msgstr "ketika tombol apapun di&setujui"
 
 #: ui/KeyboardFilters.qml:97
 #, kde-format
 msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
-msgstr "ketika tuts apapun di&tolak"
+msgstr "ketika tombol apapun di&tolak"
 
 #: ui/KeyboardFilters.qml:113
 #, kde-format
 msgid "Bounce keys:"
-msgstr "Tuts mentul:"
+msgstr "Tombol mentul:"
 
 #: ui/KeyboardFilters.qml:118
 #, kde-format
@@ -640,6 +627,9 @@ msgid ""
 "tremors that cause you to press a key multiple times when you only intend to "
 "press once."
 msgstr ""
+"Abaikan penekanan tombol yang cepat dan berulang pada tombol yang sama. "
+"Berguna jika tangan Anda gemetar sehingga Anda menekan tombol beberapa kali, "
+"padahal Anda hanya ingin menekannya sekali."
 
 #: ui/KeyboardFilters.qml:136
 #, kde-format
@@ -653,17 +643,16 @@ msgid "Ring system bell when rejected"
 msgstr "Deringkan bel sistem ketika ditolak"
 
 #: ui/main.qml:28
-#, fuzzy, kde-format
-#| msgid "Use System Bell"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "System Bell"
-msgstr "Gunakan Bel Sistem"
+msgstr "Bel Sistem"
 
 #: ui/main.qml:33
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
-msgstr "Tuts Pemodif"
+msgstr "Tombol Pengubah"
 
 #: ui/main.qml:38
 #, kde-format
@@ -678,10 +667,9 @@ msgid "Mouse Navigation"
 msgstr "Navigasi Mouse"
 
 #: ui/main.qml:48
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgid "Activation Shortcuts"
-msgstr "Gestur Pengaktifan"
+msgstr "Pintasan Aktivasi"
 
 #: ui/main.qml:53
 #, kde-format
@@ -693,24 +681,22 @@ msgstr "Screen Reader"
 #, kde-format
 msgctxt "Correction for color blindness"
 msgid "Color Blindness Correction"
-msgstr ""
+msgstr "Koreksi Buta Warna"
 
 #: ui/main.qml:63
 #, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"
-msgstr ""
+msgstr "Guncang Kursor"
 
 #: ui/ModifierKeys.qml:17
-#, fuzzy, kde-format
-#| msgid "Sticky keys:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sticky keys:"
-msgstr "Tuts lekat:"
+msgstr "Tombol lekat:"
 
 #: ui/ModifierKeys.qml:22
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable sticky keys"
 msgid "Enable"
 msgstr "Fungsikan"
@@ -723,13 +709,15 @@ msgid ""
 "though they “stick in place” and no longer need to be held down when typing "
 "a keyboard shortcut."
 msgstr ""
+"Tombol pengubah seperti Ctrl, Shift, Alt, dan tombol Meta/Super/Windows "
+"berfungsi seolah-olah “tetap di tempatnya” dan tidak perlu lagi ditekan saat "
+"mengetik pintasan keyboard."
 
 #: ui/ModifierKeys.qml:39
-#, fuzzy, kde-format
-#| msgid "Lock the sticky keys"
+#, kde-format
 msgctxt "@option:check"
 msgid "Lock sticky keys"
-msgstr "Kunci tuts lekat"
+msgstr "Kunci tombol lekat"
 
 #: ui/ModifierKeys.qml:51
 #, kde-format
@@ -738,61 +726,58 @@ msgid ""
 "Once locked, the “sticky” state of modifier keys will not be disabled until "
 "a keyboard shortcut is finished or until a non-modifier key is pressed."
 msgstr ""
+"Setelah terkunci, status \"lengket\" tombol pengubah tidak akan "
+"dinonaktifkan hingga pintasan keyboard selesai atau hingga tombol non-"
+"pengubah ditekan."
 
 #: ui/ModifierKeys.qml:57
 #, kde-format
 msgid "Disable when two keys are held down"
-msgstr "Nonfungsikan ketika dua tuts tertekan-tahan"
+msgstr "Nonfungsikan ketika dua tombol tertekan-tahan"
 
 #: ui/ModifierKeys.qml:70
 #, kde-format
 msgid "Ring system bell when modifier keys are used"
-msgstr "Deringkan bel sistem ketika tuts pemodif digunakan"
+msgstr "Deringkan bel sistem ketika tombol pemodif digunakan"
 
 #: ui/ModifierKeys.qml:88
-#, fuzzy, kde-format
-#| msgid "Feedback:"
+#, kde-format
 msgctxt "@option:check Feedback options:"
 msgid "Feedback:"
 msgstr "Umpan balik:"
 
 #: ui/ModifierKeys.qml:93
-#, fuzzy, kde-format
-#| msgid "Ring system bell when locking keys are toggled"
+#, kde-format
 msgctxt "@option:check"
 msgid "Ring system bell when locking keys are used"
-msgstr "Deringkan bel sistem ketika tuts penguncian tertekan"
+msgstr "Deringkan bel sistem ketika tombol penguncian digunakan"
 
 #: ui/ModifierKeys.qml:104
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The locking keys are Caps Lock, Num Lock, and Scroll Lock."
-msgstr ""
+msgstr "Tombol penguncian adalah Caps Lock, Num Lock, dan Scroll Lock."
 
 #: ui/ModifierKeys.qml:108
-#, fuzzy, kde-format
-#| msgid "Show notification when modifier or locking keys are used"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show notification when modifier or locking keys are used"
-msgstr "Tampilkan notifikasi ketika tuts pemodif atau pengunci digunakan"
+msgstr "Tampilkan notifikasi ketika tombol pemodif atau pengunci digunakan"
 
 #: ui/ModifierKeys.qml:120
-#, fuzzy, kde-format
-#| msgid "Configure Notifications…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Notifications…"
 msgstr "Konfigurasi Notifikasi..."
 
 #: ui/MouseNavigation.qml:16
-#, fuzzy, kde-format
-#| msgid "Use number pad to move cursor:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move cursor:"
 msgstr "Gunakan papan nomor untuk memindah kursor:"
 
 #: ui/MouseNavigation.qml:21
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable mouse navigation"
 msgid "Enable"
 msgstr "Fungsikan"
@@ -809,63 +794,55 @@ msgid ""
 msgstr ""
 
 #: ui/MouseNavigation.qml:37
-#, fuzzy, kde-format
-#| msgid "Acceleration delay:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
 msgstr "Tundaan akselerasi:"
 
 #: ui/MouseNavigation.qml:59
-#, fuzzy, kde-format
-#| msgid "Repeat interval:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr "Interval pengulangan:"
 
 #: ui/MouseNavigation.qml:81
-#, fuzzy, kde-format
-#| msgid "Acceleration time:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "Waktu akselerasi:"
 
 #: ui/MouseNavigation.qml:103
-#, fuzzy, kde-format
-#| msgid "Maximum speed:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr "Kecepatan maksimum:"
 
 #: ui/MouseNavigation.qml:117
-#, fuzzy, kde-format
-#| msgid "Acceleration time:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
-msgstr "Waktu akselerasi:"
+msgstr "Akselerasi pointer:"
 
 #: ui/ScreenReader.qml:20
-#, fuzzy, kde-format
-#| msgid "Launch Orca Screen Reader Configuration…"
+#, kde-format
 msgctxt "@info Placeholder message title"
 msgid "The Orca Screen Reader is not installed"
-msgstr "&Luncurkan Konfigurasi Orca Screen Reader..."
+msgstr "Orca Screen Reader belum diinstal"
 
 #: ui/ScreenReader.qml:21
 #, kde-format
 msgctxt "@info Placeholder message explanation"
 msgid "Please install it, then close and reopen this window"
-msgstr ""
+msgstr "Silakan instal, kemudian tutup dan buka kembali jendela ini"
 
 #: ui/ScreenReader.qml:27
-#, fuzzy, kde-format
-#| msgid "Enable Screen Reader"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable Screen Reader"
 msgstr "Fungsikan Screen Reader"
 
 #: ui/ScreenReader.qml:39
-#, fuzzy, kde-format
-#| msgid "Launch Orca Screen Reader Configuration…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Launch Orca Screen Reader Configuration…"
 msgstr "&Luncurkan Konfigurasi Orca Screen Reader..."
@@ -874,33 +851,31 @@ msgstr "&Luncurkan Konfigurasi Orca Screen Reader..."
 #, kde-format
 msgctxt "@label"
 msgid "Shake cursor to find it:"
-msgstr ""
+msgstr "Guncangkan kursor untuk menemukannya:"
 
 #: ui/ShakeCursor.qml:16
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable shake cursor effect"
 msgid "Enable"
 msgstr "Fungsikan"
 
 #: ui/ShakeCursor.qml:28
-#, fuzzy, kde-format
-#| msgid "Show a notification"
+#, kde-format
 msgctxt "@label Cursor magnification level"
 msgid "Magnification:"
-msgstr "Tampilkan notifikasi"
+msgstr "Pembesaran:"
 
 #: ui/ShakeCursor.qml:55
 #, kde-format
 msgctxt "@label Normal cursor size"
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 #: ui/ShakeCursor.qml:62
 #, kde-format
 msgctxt "@label Large cursor size"
 msgid "Large"
-msgstr ""
+msgstr "Besar"
 
 #, fuzzy
 #~| msgid "Activation Gestures"

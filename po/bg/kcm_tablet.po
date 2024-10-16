@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-15 00:41+0000\n"
-"PO-Revision-Date: 2024-09-22 18:24+0200\n"
+"PO-Revision-Date: 2024-10-15 16:53+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #: inputsequence.cpp:135
 #, kde-format
@@ -227,7 +227,7 @@ msgid ""
 "tip lands, and ignore the cursor position on the screen."
 msgstr ""
 "Докоснете центъра на всяка мишена.<nl/><nl/>Целете се в точката, в която "
-"пада върхът на писалката, и игнорирайте позицията на курсора на екрана."
+"пада върхът на писеца и игнорирайте позицията на курсора на екрана."
 
 #: ui/Calibration.qml:97
 #, kde-format
@@ -288,7 +288,7 @@ msgstr "Ориентация:"
 #: ui/main.qml:151
 #, kde-format
 msgid "Not Applicable"
-msgstr ""
+msgstr "Не е приложимо"
 
 #: ui/main.qml:158
 #, kde-format
@@ -372,31 +372,31 @@ msgstr "бутон за показалец 3"
 #: ui/main.qml:365
 #, kde-format
 msgid "Pen Pressure:"
-msgstr ""
+msgstr "Натиск на писалката:"
 
 #: ui/main.qml:408
 #, kde-format
 msgctxt "Low pen pressure"
 msgid "Low Pressure"
-msgstr ""
+msgstr "Лек натиск"
 
 #: ui/main.qml:416
 #, kde-format
 msgctxt "High pen pressure"
 msgid "High Pressure"
-msgstr ""
+msgstr "Силен натиск"
 
 #: ui/main.qml:427
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: ui/main.qml:435
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
-msgstr ""
+msgstr "0%"
 
 #: ui/main.qml:439
 #, kde-format
@@ -405,6 +405,8 @@ msgid ""
 "This curve controls the relationship between the pressure on the stylus and "
 "the pressure values received by applications."
 msgstr ""
+"Тази крива контролира връзката между натиска върху писеца и стойностите на "
+"натиска, получени от приложенията."
 
 #: ui/main.qml:450
 #, kde-format

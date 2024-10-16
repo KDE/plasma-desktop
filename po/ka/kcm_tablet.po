@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-15 00:41+0000\n"
-"PO-Revision-Date: 2024-09-04 04:50+0200\n"
+"PO-Revision-Date: 2024-10-15 19:46+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: inputsequence.cpp:135
 #, kde-format
@@ -290,7 +290,7 @@ msgstr "ორიენტაცია:"
 #: ui/main.qml:151
 #, kde-format
 msgid "Not Applicable"
-msgstr ""
+msgstr "არ განეკუთვნება"
 
 #: ui/main.qml:158
 #, kde-format
@@ -373,31 +373,31 @@ msgstr "კალმის ღილაკი 3"
 #: ui/main.qml:365
 #, kde-format
 msgid "Pen Pressure:"
-msgstr ""
+msgstr "კალმის წნევა:"
 
 #: ui/main.qml:408
 #, kde-format
 msgctxt "Low pen pressure"
 msgid "Low Pressure"
-msgstr ""
+msgstr "დაბალი წნევა"
 
 #: ui/main.qml:416
 #, kde-format
 msgctxt "High pen pressure"
 msgid "High Pressure"
-msgstr ""
+msgstr "მაღალი წნევა"
 
 #: ui/main.qml:427
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: ui/main.qml:435
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
-msgstr ""
+msgstr "0%"
 
 #: ui/main.qml:439
 #, kde-format
@@ -406,6 +406,8 @@ msgid ""
 "This curve controls the relationship between the pressure on the stylus and "
 "the pressure values received by applications."
 msgstr ""
+"ეს მრუდი აკონტროლებს ურთიერთობას სტილუსის წნევასა და პროგრამების მიერ "
+"მიღებულ წნევის მნიშვნელობებს შორის."
 
 #: ui/main.qml:450
 #, kde-format

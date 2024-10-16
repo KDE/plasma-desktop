@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-15 00:41+0000\n"
-"PO-Revision-Date: 2024-09-06 12:56+0300\n"
+"PO-Revision-Date: 2024-10-16 01:45+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -290,7 +290,7 @@ msgstr "Orientacija:"
 #: ui/main.qml:151
 #, kde-format
 msgid "Not Applicable"
-msgstr ""
+msgstr "Netaikoma"
 
 #: ui/main.qml:158
 #, kde-format
@@ -373,31 +373,31 @@ msgstr "rašiklio mygtukas 3"
 #: ui/main.qml:365
 #, kde-format
 msgid "Pen Pressure:"
-msgstr ""
+msgstr "Rašiklio spaudimas:"
 
 #: ui/main.qml:408
 #, kde-format
 msgctxt "Low pen pressure"
 msgid "Low Pressure"
-msgstr ""
+msgstr "Žemas spaudimas"
 
 #: ui/main.qml:416
 #, kde-format
 msgctxt "High pen pressure"
 msgid "High Pressure"
-msgstr ""
+msgstr "Didelis spaudimas"
 
 #: ui/main.qml:427
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: ui/main.qml:435
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
-msgstr ""
+msgstr "0%"
 
 #: ui/main.qml:439
 #, kde-format
@@ -406,6 +406,8 @@ msgid ""
 "This curve controls the relationship between the pressure on the stylus and "
 "the pressure values received by applications."
 msgstr ""
+"Ši kreivė valdo santykį tarp spaudimo ant rašiklio ir spaudimo reikšmių, "
+"kurias gauna programos."
 
 #: ui/main.qml:450
 #, kde-format
