@@ -161,6 +161,7 @@ void RecentFilesKcm::load()
     d->radioRememberAllApplications->setChecked(wtr == AllApplications);
 
     d->excludedApplicationsModel->setEnabled(d->radioRememberSpecificApplications->isChecked());
+    d->kcfg_blockedByDefault->setEnabled(d->radioRememberSpecificApplications->isChecked());
 
     d->updateUiDefaultIndicator(defaultsIndicatorsVisible());
 }
