@@ -22,7 +22,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 set (KAMD_KCM_SRCS
    kcm_recentFiles.cpp
 
-   BlacklistedApplicationsModel.cpp
+   ExcludedApplicationsModel.cpp
    )
 
 ki18n_wrap_ui (

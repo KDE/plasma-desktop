@@ -42,8 +42,8 @@ private Q_SLOTS:
     void whatToRememberWidgetChanged(bool checked);
 
 Q_SIGNALS:
-    void blackListModelChanged(bool changed);
-    void blackListModelDefaulted(bool isDefault);
+    void exclusionModelChanged(bool changed);
+    void exclusionModelDefaulted(bool isDefault);
 
 private:
     enum WhatToRemember {

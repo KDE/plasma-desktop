@@ -4,7 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-#include "BlacklistedApplicationsModel.h"
+#include "ExcludedApplicationsModel.h"
 
 #include <QDebug>
 #include <QList>
@@ -23,7 +23,7 @@
 
 #include "definitions.h"
 
-class BlacklistedApplicationsModel::Private
+class ExcludedApplicationsModel::Private
 {
 public:
     struct ApplicationData {
@@ -39,23 +39,23 @@ public:
     bool enabled;
 };
 
-BlacklistedApplicationsModel::BlacklistedApplicationsModel(QObject *parent)
+ExcludedApplicationsModel::ExcludedApplicationsModel(QObject *parent)
     : QAbstractListModel(parent)
 {
     d->enabled = false;
     d->pluginConfig = new KActivityManagerdPluginsSettings;
 }
 
-BlacklistedApplicationsModel::~BlacklistedApplicationsModel()
+ExcludedApplicationsModel::~ExcludedApplicationsModel()
 {
 }
 
-QHash<int, QByteArray> BlacklistedApplicationsModel::roleNames() const
+QHash<int, QByteArray> ExcludedApplicationsModel::roleNames() const
 {
     return {{ApplicationIdRole, "name"}, {Qt::DecorationRole, "icon"}, {Qt::DisplayRole, "title"}, {BlockedApplicationRole, "blocked"}};
 }
 
-void BlacklistedApplicationsModel::load()
+void ExcludedApplicationsModel::load()
 {
     QSqlDatabase database;
 
@@ -125,13 +125,13 @@ void BlacklistedApplicationsModel::load()
     }
 }
 
-void BlacklistedApplicationsModel::save()
+void ExcludedApplicationsModel::save()
 {
     d->pluginConfig->save();
     Q_EMIT changed(false);
 }
 
-void BlacklistedApplicationsModel::defaults()
+void ExcludedApplicationsModel::defaults()
 {
     for (int i = 0; i < rowCount(); i++) {
         d->applications[i].blocked = false;
@@ -142,7 +142,7 @@ void BlacklistedApplicationsModel::defaults()
     Q_EMIT defaulted(true);
 }
 
-void BlacklistedApplicationsModel::toggleApplicationBlocked(int index)
+void ExcludedApplicationsModel::toggleApplicationBlocked(int index)
 {
     if (index > rowCount()) {
         return;
@@ -175,7 +175,7 @@ void BlacklistedApplicationsModel::toggleApplicationBlocked(int index)
     Q_EMIT defaulted(blockedApplicationsItem->isDefault() && allowedApplicationsItem->isDefault());
 }
 
-QVariant BlacklistedApplicationsModel::headerData(int section, Qt::Orientation orientation, int role) const
+QVariant ExcludedApplicationsModel::headerData(int section, Qt::Orientation orientation, int role) const
 {
     Q_UNUSED(section)
     Q_UNUSED(orientation)
@@ -183,7 +183,7 @@ QVariant BlacklistedApplicationsModel::headerData(int section, Qt::Orientation o
     return QVariant();
 }
 
-QVariant BlacklistedApplicationsModel::data(const QModelIndex &modelIndex, int role) const
+QVariant ExcludedApplicationsModel::data(const QModelIndex &modelIndex, int role) const
 {
     const auto index = modelIndex.row();
 
@@ -211,21 +211,21 @@ QVariant BlacklistedApplicationsModel::data(const QModelIndex &modelIndex, int r
     }
 }
 
-int BlacklistedApplicationsModel::rowCount(const QModelIndex &parent) const
+int ExcludedApplicationsModel::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent)
     return d->applications.size();
 }
 
-bool BlacklistedApplicationsModel::enabled() const
+bool ExcludedApplicationsModel::enabled() const
 {
     return d->enabled;
 }
 
-void BlacklistedApplicationsModel::setEnabled(bool enabled)
+void ExcludedApplicationsModel::setEnabled(bool enabled)
 {
     d->enabled = enabled;
     Q_EMIT enabledChanged(enabled);
 }
 
-// #include <BlacklistedApplicationsModel.moc>
+// #include <ExcludedApplicationsModel.moc>

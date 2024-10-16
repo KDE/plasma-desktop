@@ -11,17 +11,17 @@
 #include <utils/d_ptr.h>
 
 /**
- * BlacklistedApplicationsModel
+ * ExcludedApplicationsModel
  */
-class BlacklistedApplicationsModel : public QAbstractListModel
+class ExcludedApplicationsModel : public QAbstractListModel
 {
     Q_OBJECT
 
     Q_PROPERTY(bool enabled READ enabled WRITE setEnabled NOTIFY enabledChanged)
 
 public:
-    explicit BlacklistedApplicationsModel(QObject *parent = nullptr);
-    ~BlacklistedApplicationsModel() override;
+    explicit ExcludedApplicationsModel(QObject *parent = nullptr);
+    ~ExcludedApplicationsModel() override;
 
     enum Roles {
         ApplicationIdRole = Qt::UserRole + 1,

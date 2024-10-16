@@ -24,7 +24,7 @@
 #include <KMessageWidget>
 #include <KSharedConfig>
 
-#include "BlacklistedApplicationsModel.h"
+#include "ExcludedApplicationsModel.h"
 #include "ui_RecentFiles.h"
 
 #include <utils/d_ptr_implementation.h>
@@ -43,12 +43,12 @@ public:
     KActivityManagerdSettings *mainConfig;
     KActivityManagerdPluginsSettings *pluginConfig;
 
-    BlacklistedApplicationsModel *blacklistedApplicationsModel;
+    ExcludedApplicationsModel *excludedApplicationsModel;
 
     explicit Private(QObject *parent)
         : mainConfig(new KActivityManagerdSettings(parent))
         , pluginConfig(new KActivityManagerdPluginsSettings(parent))
-        , blacklistedApplicationsModel(new BlacklistedApplicationsModel(parent))
+        , excludedApplicationsModel(new ExcludedApplicationsModel(parent))
     {
     }
 
@@ -90,19 +90,19 @@ RecentFilesKcm::RecentFilesKcm(QObject *parent, const KPluginMetaData &data)
 
     d->buttonClearRecentHistory->setMenu(menu);
 
-    // Blacklist applications
+    // Excluded applications
 
-    d->blacklistedApplicationsModel = new BlacklistedApplicationsModel(this);
-    connect(d->blacklistedApplicationsModel, &BlacklistedApplicationsModel::changed, this, &RecentFilesKcm::unmanagedWidgetChangeState);
-    connect(d->blacklistedApplicationsModel, &BlacklistedApplicationsModel::defaulted, this, &RecentFilesKcm::unmanagedWidgetDefaultState);
+    d->excludedApplicationsModel = new ExcludedApplicationsModel(this);
+    connect(d->excludedApplicationsModel, &ExcludedApplicationsModel::changed, this, &RecentFilesKcm::unmanagedWidgetChangeState);
+    connect(d->excludedApplicationsModel, &ExcludedApplicationsModel::defaulted, this, &RecentFilesKcm::unmanagedWidgetDefaultState);
 
-    d->viewBlacklistedApplications->setClearColor(QGuiApplication::palette().window().color());
-    d->viewBlacklistedApplications->rootContext()->setContextProperty(QStringLiteral("applicationModel"), d->blacklistedApplicationsModel);
-    d->viewBlacklistedApplications->setSource(QUrl::fromLocalFile(KAMD_KCM_DATADIR + QStringLiteral("/qml/recentFiles/BlacklistApplicationView.qml")));
+    d->viewExcludeddApplications->setClearColor(QGuiApplication::palette().window().color());
+    d->viewExcludeddApplications->rootContext()->setContextProperty(QStringLiteral("applicationModel"), d->excludedApplicationsModel);
+    d->viewExcludeddApplications->setSource(QUrl::fromLocalFile(KAMD_KCM_DATADIR + QStringLiteral("/qml/recentFiles/ExcludedApplicationView.qml")));
 
     // React to changes
 
-    connect(d->radioRememberSpecificApplications, &QAbstractButton::toggled, d->blacklistedApplicationsModel, &BlacklistedApplicationsModel::setEnabled);
+    connect(d->radioRememberSpecificApplications, &QAbstractButton::toggled, d->excludedApplicationsModel, &ExcludedApplicationsModel::setEnabled);
     connect(d->radioRememberSpecificApplications, &QAbstractButton::toggled, d->kcfg_blockedByDefault, &QCheckBox::setEnabled);
 
     // By default the KCModule (and eventually the kconfigdialogmanager) use
@@ -122,7 +122,7 @@ RecentFilesKcm::RecentFilesKcm(QObject *parent, const KPluginMetaData &data)
 
     // Initial state
 
-    d->blacklistedApplicationsModel->setEnabled(false);
+    d->excludedApplicationsModel->setEnabled(false);
     d->messageWidget->setVisible(false);
 
     connect(this, &RecentFilesKcm::defaultsIndicatorsVisibleChanged, this, [this]() {
@@ -142,7 +142,7 @@ RecentFilesKcm::~RecentFilesKcm()
 
 void RecentFilesKcm::defaults()
 {
-    d->blacklistedApplicationsModel->defaults();
+    d->excludedApplicationsModel->defaults();
     // Click and not setChecked to trigger whatToRememberWidgetChanged()
     d->radioRememberAllApplications->click();
 
@@ -151,7 +151,7 @@ void RecentFilesKcm::defaults()
 
 void RecentFilesKcm::load()
 {
-    d->blacklistedApplicationsModel->load();
+    d->excludedApplicationsModel->load();
 
     KCModule::load();
 
@@ -160,7 +160,7 @@ void RecentFilesKcm::load()
     d->radioDontRememberApplications->setChecked(wtr == NoApplications);
     d->radioRememberAllApplications->setChecked(wtr == AllApplications);
 
-    d->blacklistedApplicationsModel->setEnabled(d->radioRememberSpecificApplications->isChecked());
+    d->excludedApplicationsModel->setEnabled(d->radioRememberSpecificApplications->isChecked());
 
     d->updateUiDefaultIndicator(defaultsIndicatorsVisible());
 }
@@ -184,7 +184,7 @@ void RecentFilesKcm::whatToRememberWidgetChanged(bool)
 
 void RecentFilesKcm::save()
 {
-    d->blacklistedApplicationsModel->save();
+    d->excludedApplicationsModel->save();
     // clang-format off
     const auto whatToRemember =
         d->radioRememberSpecificApplications->isChecked() ? SpecificApplications :
