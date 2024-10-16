@@ -41,10 +41,6 @@ private Q_SLOTS:
     void spinKeepHistoryValueChanged(int value);
     void whatToRememberWidgetChanged(bool checked);
 
-Q_SIGNALS:
-    void exclusionModelChanged(bool changed);
-    void exclusionModelDefaulted(bool isDefault);
-
 private:
     enum WhatToRemember {
         AllApplications = 0,
