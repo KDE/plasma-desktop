@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:38+0000\n"
+"POT-Creation-Date: 2024-10-17 00:41+0000\n"
 "PO-Revision-Date: 2023-06-20 22:59+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -67,7 +67,7 @@ msgstr "Oblida un die"
 msgid "Forget everything"
 msgstr "Oblida toto"
 
-#: kcm_recentFiles.cpp:232
+#: kcm_recentFiles.cpp:233
 #, kde-format
 msgctxt "unit of time. months to keep the history"
 msgid " month"
@@ -75,7 +75,7 @@ msgid_plural " months"
 msgstr[0] " mense"
 msgstr[1] "menses"
 
-#: kcm_recentFiles.cpp:235
+#: kcm_recentFiles.cpp:236
 #, kde-format
 msgctxt "for in 'keep history for 5 months'"
 msgid "For "
@@ -125,6 +125,7 @@ msgstr "Memora documentos aperite:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_blockedByDefault)
 #: ui/RecentFiles.ui:128
-#, kde-format
-msgid "Blacklist applications not on the list"
+#, fuzzy, kde-format
+#| msgid "Blacklist applications not on the list"
+msgid "Exclude applications not on the list"
 msgstr "Applicationes de lista negre non sur le lista"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-06 01:38+0000\n"
+"POT-Creation-Date: 2024-10-17 00:41+0000\n"
 "PO-Revision-Date: 2022-08-02 11:37+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -67,14 +67,14 @@ msgstr "Quên một ngày"
 msgid "Forget everything"
 msgstr "Quên tất cả"
 
-#: kcm_recentFiles.cpp:232
+#: kcm_recentFiles.cpp:233
 #, kde-format
 msgctxt "unit of time. months to keep the history"
 msgid " month"
 msgid_plural " months"
 msgstr[0] " tháng"
 
-#: kcm_recentFiles.cpp:235
+#: kcm_recentFiles.cpp:236
 #, kde-format
 msgctxt "for in 'keep history for 5 months'"
 msgid "For "
@@ -124,6 +124,7 @@ msgstr "Nhớ những tài liệu đã mở:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_blockedByDefault)
 #: ui/RecentFiles.ui:128
-#, kde-format
-msgid "Blacklist applications not on the list"
+#, fuzzy, kde-format
+#| msgid "Blacklist applications not on the list"
+msgid "Exclude applications not on the list"
 msgstr "Đưa những ứng dụng không được liệt kê vào danh sách đen"
