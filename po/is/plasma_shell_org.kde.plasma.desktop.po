@@ -2,14 +2,15 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # SPDX-FileCopyrightText: 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
+# SPDX-FileCopyrightText: 2024 Sveinn í Felli <sv1@fellsnet.is>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-28 02:32+0000\n"
-"PO-Revision-Date: 2024-07-22 13:05+0000\n"
-"Last-Translator: Gummi <gudmundure@gmail.com>\n"
-"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-10-17 13:28+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -268,7 +269,7 @@ msgstr "Útlit:"
 #: contents/configuration/ConfigurationContainmentAppearance.qml:98
 #, kde-format
 msgid "Wallpaper type:"
-msgstr "Gerð veggfóðurs:"
+msgstr "Gerð bakgrunnsmyndar:"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:119
 #, kde-format
@@ -299,7 +300,7 @@ msgstr "Þessi flýtilykill virkjar smáforritið eins og smellt hafi verið á 
 #: contents/configuration/ContainmentConfiguration.qml:27
 #, kde-format
 msgid "Wallpaper"
-msgstr "Veggfóður"
+msgstr "Bakgrunnsmynd"
 
 #: contents/configuration/ContainmentConfiguration.qml:33
 #, kde-format
@@ -327,15 +328,15 @@ msgid "Add spacer widget to the panel"
 msgstr "Bæta bili á skjáborðsstikuna"
 
 #: contents/configuration/PanelConfiguration.qml:114
-#, fuzzy, kde-format
-#| msgid "Add Widgets…"
+#, kde-format
 msgid "Add or Manage Widgets…"
-msgstr "Bæta við græjum..."
+msgstr "Bæta við eða stýra viðmótshlutum…"
 
 #: contents/configuration/PanelConfiguration.qml:117
 #, kde-format
 msgid "Open the widget selector to drag and drop widgets to the panel"
-msgstr "Opna græjuvalið til að draga og sleppa græjum á skjáborðsstikuna"
+msgstr ""
+"Opna val á viðmótshlutum til að draga og sleppa græjum á skjáborðsstikuna"
 
 #: contents/configuration/PanelConfiguration.qml:146
 #, kde-format
@@ -505,15 +506,13 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "Eyða þessari skjáborðsstiku. Ekki er hægt að afturkalla aðgerðina"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Loka"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, fuzzy, kde-format
-#| msgid "Exit Edit Mode"
+#, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
@@ -525,46 +524,38 @@ msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "Loka stillingaglugga skjáborðsstiku og hætta í breytisniði"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:32
-#, fuzzy, kde-format
-#| msgid "Drag to change maximum height."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum height."
 msgstr "Dragðu til að breyta hámarkshæð."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:33
-#, fuzzy, kde-format
-#| msgid "Drag to change maximum width."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum width."
 msgstr "Dragðu til að breyta hámarksbreidd."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:34
 #: contents/configuration/panelconfiguration/Ruler.qml:39
-#, fuzzy, kde-format
-#| msgid "Double click to reset."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Double-click to reset."
 msgstr "Tvísmelltu til að endurstilla."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:37
-#, fuzzy, kde-format
-#| msgid "Drag to change minimum height."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum height."
 msgstr "Dragðu til að breyta lágmarkshæð."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:38
-#, fuzzy, kde-format
-#| msgid "Drag to change minimum width."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr "Dragðu til að breyta lágmarksbreidd."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:87
-#, fuzzy, kde-format
-#| msgid ""
-#| "Drag to change position on this screen edge.\n"
-#| "Double click to reset."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid ""
 "Drag to change position on this screen edge.\n"
@@ -630,7 +621,7 @@ msgstr "Óstuddar græjur"
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
-msgstr ""
+msgstr "Nýtt!"
 
 #: contents/explorer/AppletDelegate.qml:188
 #, kde-format
@@ -666,7 +657,7 @@ msgstr "Allar græjur"
 #: contents/explorer/WidgetExplorer.qml:169
 #, kde-format
 msgid "Widgets"
-msgstr "Græjur"
+msgstr "Viðmótshlutar"
 
 #: contents/explorer/WidgetExplorer.qml:178
 #, kde-format
@@ -712,7 +703,7 @@ msgstr "Klukka:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
-msgstr ""
+msgstr "Birta klukku"
 
 #: contents/lockscreen/config.qml:33
 #, kde-format
