@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-15 00:41+0000\n"
-"PO-Revision-Date: 2024-09-07 11:52+0100\n"
+"PO-Revision-Date: 2024-10-18 17:01+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
 "Language: en_GB\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: inputsequence.cpp:135
 #, kde-format
@@ -288,7 +288,7 @@ msgstr "Orientation:"
 #: ui/main.qml:151
 #, kde-format
 msgid "Not Applicable"
-msgstr ""
+msgstr "Not Applicable"
 
 #: ui/main.qml:158
 #, kde-format
@@ -371,31 +371,31 @@ msgstr "pen button 3"
 #: ui/main.qml:365
 #, kde-format
 msgid "Pen Pressure:"
-msgstr ""
+msgstr "Pen Pressure:"
 
 #: ui/main.qml:408
 #, kde-format
 msgctxt "Low pen pressure"
 msgid "Low Pressure"
-msgstr ""
+msgstr "Low Pressure"
 
 #: ui/main.qml:416
 #, kde-format
 msgctxt "High pen pressure"
 msgid "High Pressure"
-msgstr ""
+msgstr "High Pressure"
 
 #: ui/main.qml:427
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: ui/main.qml:435
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
-msgstr ""
+msgstr "0%"
 
 #: ui/main.qml:439
 #, kde-format
@@ -404,6 +404,8 @@ msgid ""
 "This curve controls the relationship between the pressure on the stylus and "
 "the pressure values received by applications."
 msgstr ""
+"This curve controls the relationship between the pressure on the stylus and "
+"the pressure values received by applications."
 
 #: ui/main.qml:450
 #, kde-format

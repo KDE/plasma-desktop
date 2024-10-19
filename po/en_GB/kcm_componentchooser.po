@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-26 00:40+0000\n"
-"PO-Revision-Date: 2024-05-20 18:56+0100\n"
+"PO-Revision-Date: 2024-10-18 17:02+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
 "Language: en_GB\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: applicationmodel.cpp:67
 #, kde-format
@@ -136,18 +136,16 @@ msgstr ""
 "of application: %2"
 
 #: ui/main.qml:34
-#, fuzzy, kde-format
-#| msgid "This application can also open these file types:"
+#, kde-format
 msgctxt "@info:status"
 msgid "This application may not be able to open all file types."
-msgstr "This application can also open these file types:"
+msgstr "This application may not be able to open all file types."
 
 #: ui/main.qml:36
-#, fuzzy, kde-format
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button"
 msgid "View Details"
-msgstr "Details"
+msgstr "View Details"
 
 #: ui/main.qml:62
 #, kde-format
