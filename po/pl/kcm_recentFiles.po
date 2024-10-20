@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
+# SPDX-FileCopyrightText: 2022, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2022-08-06 08:19+0200\n"
+"PO-Revision-Date: 2024-10-19 12:43+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:10
@@ -104,7 +105,7 @@ msgstr "Wyczyść historię"
 #: ui/RecentFiles.ui:68
 #, kde-format
 msgid "For a&ll applications"
-msgstr "D&la wszystkich programów"
+msgstr "D&la wszystkich aplikacji"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioDontRememberApplications)
 #: ui/RecentFiles.ui:78
@@ -116,7 +117,7 @@ msgstr "&Nie zapamiętuj"
 #: ui/RecentFiles.ui:85
 #, kde-format
 msgid "O&nly for specific applications:"
-msgstr "Tylko dla da&nych programów:"
+msgstr "Tylko dla da&nych aplikacji:"
 
 #. i18n: ectx: property (text), widget (QLabel, labelRememberDocuments)
 #: ui/RecentFiles.ui:95
@@ -126,7 +127,6 @@ msgstr "Zapamiętaj otwarte dokumenty:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_blockedByDefault)
 #: ui/RecentFiles.ui:128
-#, fuzzy, kde-format
-#| msgid "Blacklist applications not on the list"
+#, kde-format
 msgid "Exclude applications not on the list"
-msgstr "Umieść na czarnej liście aplikacje nie będące na liście"
+msgstr "Wyklucz aplikacje nie znajdujące się na tej liście"
