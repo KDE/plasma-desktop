@@ -127,7 +127,8 @@ PlasmaExtras.Menu {
         // QMenu does not limit its width automatically. Even if we set a maximumWidth
         // it would just cut off text rather than eliding. So we do this manually.
         const textMetrics = Qt.createQmlObject("import QtQuick; TextMetrics {}", menu);
-        const maximumWidth = LayoutMetrics.maximumContextMenuTextWidth();
+        textMetrics.elide = Qt.ElideRight;
+        textMetrics.elideWidth = LayoutMetrics.maximumContextMenuTextWidth();
 
         sections.forEach(section => {
             if (section["actions"].length > 0 || section["group"] === "actions") {
@@ -148,18 +149,8 @@ PlasmaExtras.Menu {
                 var item = newMenuItem(menu);
                 item.action = section["actions"][i];
 
-                // Crude way of manually eliding...
-                var elided = false;
-                textMetrics.text = Qt.binding(() => item.action.text);
-
-                while (textMetrics.width > maximumWidth) {
-                    item.action.text = item.action.text.slice(0, -1);
-                    elided = true;
-                }
-
-                if (elided) {
-                    item.action.text += "…";
-                }
+                textMetrics.text = item.action.text;
+                item.action.text = textMetrics.elidedText;
 
                 menu.addMenuItem(item, startNewInstanceItem);
             }
