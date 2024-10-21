@@ -260,6 +260,12 @@ FocusScope {
                 return;
             }
 
+            // Ignore clicks if editor is enabled and we click on that
+            // BUG:494558
+            if (editor && childAt(mouse.x, mouse.y) === editor) {
+                return;
+            }
+
             scrollArea.focus = true;
 
             if (mouse.buttons & Qt.BackButton) {
