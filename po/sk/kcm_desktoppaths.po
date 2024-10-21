@@ -13,19 +13,18 @@ msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-30 00:41+0000\n"
-"PO-Revision-Date: 2024-06-26 14:10+0200\n"
+"PO-Revision-Date: 2024-10-20 11:31+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.08.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Desktop path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Desktop folder:"
 msgstr "Cesta k ploche:"
@@ -35,124 +34,105 @@ msgstr "Cesta k ploche:"
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder contains all the files you see on your desktop."
 msgstr ""
+"Tento priečinok obsahuje všetky súbory, ktoré vidíte na pracovnej ploche."
 
 #: ui/main.qml:66
-#, fuzzy, kde-format
-#| msgid "Documents"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Documents folder:"
-msgstr "Dokumenty"
+msgstr "Cesta k dokumentom:"
 
 #: ui/main.qml:72
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save documents from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save documents."
 msgstr ""
-"Tento priečinok bude použitý ako štandardný pre načítavanie a ukladanie "
-"vašich dokumentov."
+"Tento priečinok sa bude predvolene používať na otváranie alebo ukladanie "
+"dokumentov."
 
 #: ui/main.qml:80
-#, fuzzy, kde-format
-#| msgid "Downloads"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Downloads folder:"
-msgstr "Sťahovania"
+msgstr "Cesta k preberaniam"
 
 #: ui/main.qml:86
-#, fuzzy, kde-format
-#| msgid "This folder will be used by default to save your downloaded items."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
-"Tento priečinok bude použitý ako štandardný pre ukladanie stiahnutých vecí."
+"Tento priečinok sa predvolene používa na ukladanie prevzatých položiek."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgid "Videos path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Videos folder:"
 msgstr "Cesta k videám:"
 
 #: ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save movies from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save video files."
 msgstr ""
-"Tento priečinok bude použitý ako štandardný pre načítavanie a ukladanie "
-"filmov."
+"Tento priečinok sa bude predvolene používať na otváranie alebo ukladanie "
+"videosúborov."
 
 #: ui/main.qml:108
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Pictures folder:"
 msgstr "Cesta k obrázkom:"
 
 #: ui/main.qml:114
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save movies from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save image files."
 msgstr ""
-"Tento priečinok bude použitý ako štandardný pre načítavanie a ukladanie "
-"filmov."
+"Tento priečinok sa bude predvolene používať na otváranie alebo ukladanie "
+"obrázkov."
 
 #: ui/main.qml:122
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Music folder:"
-msgstr ""
+msgstr "Cesta k hudbe:"
 
 #: ui/main.qml:128
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save music from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save music files."
 msgstr ""
-"Tento priečinok bude použitý ako štandardný pre načítavanie a ukladanie "
-"hudby."
+"Tento priečinok sa bude predvolene používať na otváranie alebo ukladanie "
+"hudobných súborov."
 
 #: ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "Public path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Public folder:"
-msgstr "Verejná cesta:"
+msgstr "Cesta k verejným súborom:"
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default for publicly-shared files when "
-#| "network sharing is enabled."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
 msgstr ""
-"Tento priečinok bude použitý ako štandardný pre načítavanie a ukladanie "
-"zdieľaných súborov v sieti."
+"Tento priečinok sa bude predvolene používať pre verejne zdieľané súbory, keď "
+"je povolené sieťové zdieľanie."
 
 #: ui/main.qml:150
-#, fuzzy, kde-format
-#| msgid "Templates"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Templates folder:"
-msgstr "Šablóny"
+msgstr "Cesta k šablónam:"
 
 #: ui/main.qml:156
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save templates from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save file templates."
 msgstr ""
-"Tento priečinok bude použitý ako štandardný pre načítavanie a ukladanie "
+"Tento priečinok sa bude predvolene používať na otváranie alebo ukladanie "
 "šablón."
 
 #: ui/UrlRequester.qml:74
