@@ -3,6 +3,8 @@
 # SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
 # SPDX-License-Identifier: MIT
 
+import time
+import sys
 import unittest
 from typing import Final
 
@@ -50,6 +52,8 @@ class KCMTest(unittest.TestCase):
         Tests the plugin list is loaded
         @see https://bugs.kde.org/show_bug.cgi?id=476702
         """
+        time.sleep(3)
+        print(self.driver.page_source, file=sys.stderr)
         self.driver.find_element(AppiumBy.NAME, "Configure KRunner…")
         self.driver.find_element(AppiumBy.NAME, "Applications")
         self.driver.find_element(AppiumBy.NAME, "Remove from favorites")
