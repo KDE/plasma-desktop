@@ -852,6 +852,7 @@ void FolderModel::rename(int row, const QString &name)
 
     QModelIndex idx = index(row, 0);
     m_dirModel->setData(mapToSource(idx), name, Qt::EditRole);
+    connect(m_dirModel, &KDirModel::dataChanged, this, &FolderModel::itemRenamed, Qt::SingleShotConnection);
 }
 
 int FolderModel::fileExtensionBoundary(int row)
