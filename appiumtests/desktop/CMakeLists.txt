@@ -5,7 +5,7 @@ add_test(
     NAME desktoptest
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/desktoptest.py --failfast
 )
-set_tests_properties(desktoptest PROPERTIES TIMEOUT 300 ENVIRONMENT "TEST_WITHOUT_GLOBAL_SHORTCUT=0;CMAKE_BINARY_DIR=${CMAKE_BINARY_DIR};KACTIVITYMANAGERD_PATH=${KDE_INSTALL_FULL_LIBEXECDIR}/kactivitymanagerd")
+set_tests_properties(desktoptest PROPERTIES TIMEOUT 300 ENVIRONMENT "TEST_WITHOUT_GLOBAL_SHORTCUT=0;KACTIVITYMANAGERD_PATH=${KDE_INSTALL_FULL_LIBEXECDIR}/kactivitymanagerd;GDK_BACKEND=wayland")
 
 add_test(
     NAME folderviewtest
