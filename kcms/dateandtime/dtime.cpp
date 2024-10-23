@@ -18,6 +18,7 @@
 #include <QGroupBox>
 #include <QPainter>
 #include <QPushButton>
+#include <QQmlEngine>
 #include <QTimeEdit>
 
 #include <KColorScheme>
@@ -29,8 +30,10 @@
 #include <QDebug>
 #include <QGridLayout>
 #include <QHBoxLayout>
+#include <QQmlContext>
 #include <QVBoxLayout>
 
+#include <KLocalizedContext>
 #include <KSvg/Svg>
 
 #include "timedated_interface.h"
@@ -101,27 +104,21 @@ Dtime::Dtime(QWidget *parent, bool haveTimeDated)
 
     tabWidget->tabBar()->setExpanding(true);
 
-    // Timezone
-    connect(tzonelist, &K4TimeZoneWidget::itemSelectionChanged, this, &Dtime::configChanged);
-    tzonesearch->setTreeWidget(tzonelist);
+    auto engine = timezoneViewer->engine();
+    engine->rootContext()->setContextObject(new KLocalizedContext(engine));
+
+    timezoneViewer->rootContext()->setContextProperty("DTime", this);
+    timezoneViewer->setSource(QUrl("qrc:/kcm/kcm_clock/main.qml"));
+    timezoneViewer->resize(QSize(500, 600));
+    timezoneViewer->setResizeMode(QQuickWidget::SizeRootObjectToView);
+    timezoneViewer->setClearColor(Qt::transparent);
+    timezoneViewer->setAttribute(Qt::WA_AlwaysStackOnTop);
 }
 
 void Dtime::currentZone()
 {
     QTimeZone localZone = QTimeZone::systemTimeZone();
-    const auto continentCity = localZone.id().split('/');
-    // Use the translation catalog of the digitalclock applet until  there is a standard API for city/continent names
-    const char *domain = "plasma_applet_org.kde.plasma.digitalclock.mo";
-    QString displayName = i18nd(domain, continentCity[0]);
-    if (continentCity.size() > 1) {
-        displayName += '/' + i18nd(domain, continentCity[1]);
-    }
-    const QString abbreviation = localZone.abbreviation(QDateTime::currentDateTime());
-    if (abbreviation.isEmpty()) {
-        m_local->setText(i18nc("%1 is name of time zone", "Current local time zone: %1", displayName));
-    } else {
-        m_local->setText(i18nc("%1 is name of time zone, %2 is its abbreviation", "Current local time zone: %1 (%2)", displayName, abbreviation));
-    }
+    setSelectedTimeZone(localZone.id());
 }
 
 void Dtime::findNTPutility()
@@ -222,18 +219,22 @@ void Dtime::load()
     // Timezone
     currentZone();
 
-    tzonelist->setSelected(currentTimeZone, true);
     Q_EMIT timeChanged(false);
 }
 
 QString Dtime::selectedTimeZone() const
 {
-    QStringList selectedZones(tzonelist->selection());
-    if (!selectedZones.isEmpty()) {
-        return selectedZones.first();
+    return m_selectedTimeZone;
+}
+
+void Dtime::setSelectedTimeZone(QString selectedTimeZone)
+{
+    if (m_selectedTimeZone == selectedTimeZone) {
+        return;
     }
 
-    return QString();
+    m_selectedTimeZone = selectedTimeZone;
+    Q_EMIT selectedTimeZoneChanged(true);
 }
 
 QStringList Dtime::ntpServers() const
@@ -286,6 +287,48 @@ void Dtime::timeout()
     ontimeout = false;
 
     kclock->setTime(time);
+}
+
+QStringList Dtime::availableTimeZoneRegions() const
+{
+    QSet<QString> regions;
+    QList<QByteArray> timeZoneIds = QTimeZone::availableTimeZoneIds();
+
+    for (const QByteArray &id : timeZoneIds) {
+        QString timeZone = QString::fromUtf8(id);
+        QString region = timeZone.section('/', 0, 0);
+        regions.insert(region);
+    }
+
+    QStringList sortedRegions(regions.begin(), regions.end());
+    sortedRegions.sort();
+    return sortedRegions;
+}
+
+QStringList Dtime::availableTimeZoneLocationsInRegion(const QString &region) const
+{
+    QStringList locations;
+    QList<QByteArray> timeZoneIds = QTimeZone::availableTimeZoneIds();
+
+    for (const QByteArray &id : timeZoneIds) {
+        QString timeZone = QString::fromUtf8(id);
+        QString timeZoneRegion = timeZone.section('/', 0, 0);
+
+        if (timeZoneRegion == region) {
+            QString location = timeZone.section('/', 1, 1);
+            if (!location.isEmpty()) {
+                locations.append(location);
+            }
+        }
+    }
+
+    locations.sort();
+    return locations;
+}
+
+QString Dtime::timezoneDataPath() const
+{
+    return QStandardPaths::locate(QStandardPaths::GenericDataLocation, "timezonefiles", QStandardPaths::LocateDirectory);
 }
 
 QString Dtime::quickHelp() const

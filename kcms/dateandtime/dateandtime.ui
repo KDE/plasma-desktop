@@ -140,67 +140,18 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="tab_2">
+
+     <widget class="QQuickWidget" name="timezoneViewer">
       <attribute name="title">
        <string>Time Zone</string>
       </attribute>
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <item>
-        <widget class="QLabel" name="label">
-         <property name="text">
-          <string>To change the local time zone, select your area from the list below.</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <spacer name="verticalSpacer_2">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Fixed</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>5</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
-        <widget class="QLabel" name="m_local">
-         <property name="text">
-          <string>Current local time zone:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="KTreeWidgetSearchLine" name="tzonesearch">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
-         <property name="placeholderText">
-          <string>Search…</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="K4TimeZoneWidget" name="tzonelist">
-        </widget>
-       </item>
-      </layout>
      </widget>
+
     </widget>
    </item>
   </layout>
  </widget>
  <customwidgets>
-  <customwidget>
-   <class>K4TimeZoneWidget</class>
-   <extends>QTreeWidget</extends>
-   <header>k4timezonewidget.h</header>
-  </customwidget>
   <customwidget>
    <class>KDatePicker</class>
    <extends>QFrame</extends>
