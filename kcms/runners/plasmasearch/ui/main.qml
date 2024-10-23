@@ -23,6 +23,7 @@ KCMUtils.ScrollViewKCM {
         Kirigami.Action {
             icon.name: "configure"
             text: i18n("Configure KRunner…")
+            Accessible.name: text // https://bugreports.qt.io/browse/QTBUG-130360
             onTriggered: kcm.showKRunnerKCM()
         },
         NewStuff.Action {
@@ -88,6 +89,7 @@ KCMUtils.ScrollViewKCM {
                     Kirigami.Action {
                         displayHint: Kirigami.DisplayHint.IconOnly
                         text: isFavorite ? i18n("Remove from favorites") : i18n("Add to favorites")
+                        Accessible.name: text // https://bugreports.qt.io/browse/QTBUG-130360
                         icon.name: isFavorite ? "starred-symbolic": "non-starred-symbolic"
                         onTriggered: isFavorite ? kcm.removeFromFavorites(model.metaData) : kcm.addToFavorites(model.metaData)
                     }
