@@ -54,7 +54,7 @@ class KickoffTests(unittest.TestCase):
 
     def setUp(self) -> None:
         ActionChains(self.driver).send_keys(Keys.ESCAPE).perform()
-        self.driver.find_element(by=AppiumBy.CLASS_NAME, value="[push button | Application Launcher]").click()
+        self.driver.find_element(by=AppiumBy.CLASS_NAME, value="[button | Application Launcher]").click()
         self.driver.find_element(by=AppiumBy.CLASS_NAME, value="[list item | All Applications]")
 
     def tearDown(self) -> None:
@@ -63,6 +63,7 @@ class KickoffTests(unittest.TestCase):
         """
         if not self._outcome.result.wasSuccessful():
             self.driver.get_screenshot_as_file(f"failed_test_shot_{WIDGET_ID}_#{self.id()}.png")
+            print(self.driver.page_source, file=sys.stderr)
 
     def test_1_search_calculator(self) -> None:
         self.driver.find_element(by=AppiumBy.NAME, value="Search").send_keys("12345+67890")
