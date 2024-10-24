@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-24 00:40+0000\n"
+"POT-Creation-Date: 2024-10-24 00:41+0000\n"
 "PO-Revision-Date: 2024-02-09 19:26+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -593,176 +593,176 @@ msgstr "최근 파일"
 msgid "Actions"
 msgstr "동작"
 
-#: package/contents/ui/ContextMenu.qml:174
+#: package/contents/ui/ContextMenu.qml:165
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "이전 트랙"
 
-#: package/contents/ui/ContextMenu.qml:188
+#: package/contents/ui/ContextMenu.qml:179
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "일시 정지"
 
-#: package/contents/ui/ContextMenu.qml:188
+#: package/contents/ui/ContextMenu.qml:179
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "재생"
 
-#: package/contents/ui/ContextMenu.qml:206
+#: package/contents/ui/ContextMenu.qml:197
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "다음 트랙"
 
-#: package/contents/ui/ContextMenu.qml:217
+#: package/contents/ui/ContextMenu.qml:208
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
 msgstr "정지"
 
-#: package/contents/ui/ContextMenu.qml:237
+#: package/contents/ui/ContextMenu.qml:228
 #, kde-format
 msgctxt "Quit media player app"
 msgid "Quit"
 msgstr "끝내기"
 
-#: package/contents/ui/ContextMenu.qml:252
+#: package/contents/ui/ContextMenu.qml:243
 #, kde-format
 msgctxt "Open or bring to the front window of media player app"
 msgid "Restore"
 msgstr "복원"
 
-#: package/contents/ui/ContextMenu.qml:277
+#: package/contents/ui/ContextMenu.qml:268
 #, kde-format
 msgid "Mute"
 msgstr "음소거"
 
-#: package/contents/ui/ContextMenu.qml:288
+#: package/contents/ui/ContextMenu.qml:279
 #, kde-format
 msgid "Open New Window"
 msgstr "새 창 열기"
 
-#: package/contents/ui/ContextMenu.qml:304
+#: package/contents/ui/ContextMenu.qml:295
 #, kde-format
 msgid "Move to &Desktop"
 msgstr "다음 바탕 화면으로 이동(&D)"
 
-#: package/contents/ui/ContextMenu.qml:334
+#: package/contents/ui/ContextMenu.qml:325
 #, kde-format
 msgid "Move &To Current Desktop"
 msgstr "현재 바탕 화면으로 이동(&T)"
 
-#: package/contents/ui/ContextMenu.qml:343
+#: package/contents/ui/ContextMenu.qml:334
 #, kde-format
 msgid "&All Desktops"
 msgstr "모든 바탕 화면(&A)"
 
-#: package/contents/ui/ContextMenu.qml:371
+#: package/contents/ui/ContextMenu.qml:362
 #, kde-format
 msgid "&New Desktop"
 msgstr "새 바탕 화면(&N)"
 
-#: package/contents/ui/ContextMenu.qml:391
+#: package/contents/ui/ContextMenu.qml:382
 #, kde-format
 msgid "Show in &Activities"
 msgstr "다음 활동에 표시(&A)"
 
-#: package/contents/ui/ContextMenu.qml:415
+#: package/contents/ui/ContextMenu.qml:406
 #, kde-format
 msgid "Add To Current Activity"
 msgstr "현재 활동에 추가"
 
-#: package/contents/ui/ContextMenu.qml:425
+#: package/contents/ui/ContextMenu.qml:416
 #, kde-format
 msgid "All Activities"
 msgstr "모든 활동"
 
-#: package/contents/ui/ContextMenu.qml:481
+#: package/contents/ui/ContextMenu.qml:472
 #, kde-format
 msgid "Move to %1"
 msgstr "%1(으)로 이동"
 
-#: package/contents/ui/ContextMenu.qml:507
-#: package/contents/ui/ContextMenu.qml:523
+#: package/contents/ui/ContextMenu.qml:498
+#: package/contents/ui/ContextMenu.qml:514
 #, kde-format
 msgid "&Pin to Task Manager"
 msgstr "작업 관리자에 고정(&P)"
 
-#: package/contents/ui/ContextMenu.qml:575
+#: package/contents/ui/ContextMenu.qml:566
 #, kde-format
 msgid "On All Activities"
 msgstr "모든 활동에"
 
-#: package/contents/ui/ContextMenu.qml:581
+#: package/contents/ui/ContextMenu.qml:572
 #, kde-format
 msgid "On The Current Activity"
 msgstr "현재 활동에"
 
-#: package/contents/ui/ContextMenu.qml:605
+#: package/contents/ui/ContextMenu.qml:596
 #, kde-format
 msgid "Unpin from Task Manager"
 msgstr "작업 관리자에서 고정 해제"
 
-#: package/contents/ui/ContextMenu.qml:620
+#: package/contents/ui/ContextMenu.qml:611
 #, kde-format
 msgid "More"
 msgstr "더 보기"
 
-#: package/contents/ui/ContextMenu.qml:629
+#: package/contents/ui/ContextMenu.qml:620
 #, kde-format
 msgid "&Move"
 msgstr "이동(&M)"
 
-#: package/contents/ui/ContextMenu.qml:638
+#: package/contents/ui/ContextMenu.qml:629
 #, kde-format
 msgid "Re&size"
 msgstr "크기 조정(&S)"
 
-#: package/contents/ui/ContextMenu.qml:652
+#: package/contents/ui/ContextMenu.qml:643
 #, kde-format
 msgid "Ma&ximize"
 msgstr "최대화(&X)"
 
-#: package/contents/ui/ContextMenu.qml:666
+#: package/contents/ui/ContextMenu.qml:657
 #, kde-format
 msgid "Mi&nimize"
 msgstr "최소화(&N)"
 
-#: package/contents/ui/ContextMenu.qml:676
+#: package/contents/ui/ContextMenu.qml:667
 #, kde-format
 msgid "Keep &Above Others"
 msgstr "항상 위(&A)"
 
-#: package/contents/ui/ContextMenu.qml:686
+#: package/contents/ui/ContextMenu.qml:677
 #, kde-format
 msgid "Keep &Below Others"
 msgstr "항상 아래(&B)"
 
-#: package/contents/ui/ContextMenu.qml:698
+#: package/contents/ui/ContextMenu.qml:689
 #, kde-format
 msgid "&Fullscreen"
 msgstr "전체 화면(&F)"
 
-#: package/contents/ui/ContextMenu.qml:710
+#: package/contents/ui/ContextMenu.qml:701
 #, kde-format
 msgid "&Shade"
 msgstr "말아 올리기(&S)"
 
-#: package/contents/ui/ContextMenu.qml:726
+#: package/contents/ui/ContextMenu.qml:717
 #, kde-format
 msgid "Allow this program to be grouped"
 msgstr "이 프로그램을 그룹으로 묶기"
 
-#: package/contents/ui/ContextMenu.qml:772
+#: package/contents/ui/ContextMenu.qml:763
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
 msgstr "모두 닫기(&C)"
 
-#: package/contents/ui/ContextMenu.qml:772
+#: package/contents/ui/ContextMenu.qml:763
 #, kde-format
 msgid "&Close"
 msgstr "닫기(&C)"
