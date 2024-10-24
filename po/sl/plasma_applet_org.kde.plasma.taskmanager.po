@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 00:40+0000\n"
+"POT-Creation-Date: 2024-10-24 02:34+0000\n"
 "PO-Revision-Date: 2024-08-28 07:24+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: LUGOS\n"
@@ -501,176 +501,176 @@ msgstr "Nedavne datoteke"
 msgid "Actions"
 msgstr "Dejanja"
 
-#: package/contents/ui/ContextMenu.qml:174
+#: package/contents/ui/ContextMenu.qml:165
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "Predhodna sled"
 
-#: package/contents/ui/ContextMenu.qml:188
+#: package/contents/ui/ContextMenu.qml:179
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "Naredi premor"
 
-#: package/contents/ui/ContextMenu.qml:188
+#: package/contents/ui/ContextMenu.qml:179
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "Predvajaj"
 
-#: package/contents/ui/ContextMenu.qml:206
+#: package/contents/ui/ContextMenu.qml:197
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "Naslednja sled"
 
-#: package/contents/ui/ContextMenu.qml:217
+#: package/contents/ui/ContextMenu.qml:208
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
 msgstr "Zaustavi"
 
-#: package/contents/ui/ContextMenu.qml:237
+#: package/contents/ui/ContextMenu.qml:228
 #, kde-format
 msgctxt "Quit media player app"
 msgid "Quit"
 msgstr "Končaj"
 
-#: package/contents/ui/ContextMenu.qml:252
+#: package/contents/ui/ContextMenu.qml:243
 #, kde-format
 msgctxt "Open or bring to the front window of media player app"
 msgid "Restore"
 msgstr "Obnovi"
 
-#: package/contents/ui/ContextMenu.qml:277
+#: package/contents/ui/ContextMenu.qml:268
 #, kde-format
 msgid "Mute"
 msgstr "Utišaj"
 
-#: package/contents/ui/ContextMenu.qml:288
+#: package/contents/ui/ContextMenu.qml:279
 #, kde-format
 msgid "Open New Window"
 msgstr "Odpri novo okno"
 
-#: package/contents/ui/ContextMenu.qml:304
+#: package/contents/ui/ContextMenu.qml:295
 #, kde-format
 msgid "Move to &Desktop"
 msgstr "Premakni na namizje"
 
-#: package/contents/ui/ContextMenu.qml:334
+#: package/contents/ui/ContextMenu.qml:325
 #, kde-format
 msgid "Move &To Current Desktop"
 msgstr "Premakni na &trenutno namizje"
 
-#: package/contents/ui/ContextMenu.qml:343
+#: package/contents/ui/ContextMenu.qml:334
 #, kde-format
 msgid "&All Desktops"
 msgstr "Vs&a namizja"
 
-#: package/contents/ui/ContextMenu.qml:371
+#: package/contents/ui/ContextMenu.qml:362
 #, kde-format
 msgid "&New Desktop"
 msgstr "&Novo namizje"
 
-#: package/contents/ui/ContextMenu.qml:391
+#: package/contents/ui/ContextMenu.qml:382
 #, kde-format
 msgid "Show in &Activities"
 msgstr "Prikaži med dej&avnosti"
 
-#: package/contents/ui/ContextMenu.qml:415
+#: package/contents/ui/ContextMenu.qml:406
 #, kde-format
 msgid "Add To Current Activity"
 msgstr "Dodaj k trenutni dejavnosti"
 
-#: package/contents/ui/ContextMenu.qml:425
+#: package/contents/ui/ContextMenu.qml:416
 #, kde-format
 msgid "All Activities"
 msgstr "Vse dejavnosti"
 
-#: package/contents/ui/ContextMenu.qml:481
+#: package/contents/ui/ContextMenu.qml:472
 #, kde-format
 msgid "Move to %1"
 msgstr "Premakni na %1"
 
-#: package/contents/ui/ContextMenu.qml:507
-#: package/contents/ui/ContextMenu.qml:523
+#: package/contents/ui/ContextMenu.qml:498
+#: package/contents/ui/ContextMenu.qml:514
 #, kde-format
 msgid "&Pin to Task Manager"
 msgstr "Pripni na upravljalnika opravil"
 
-#: package/contents/ui/ContextMenu.qml:575
+#: package/contents/ui/ContextMenu.qml:566
 #, kde-format
 msgid "On All Activities"
 msgstr "Na vseh dejavnostih"
 
-#: package/contents/ui/ContextMenu.qml:581
+#: package/contents/ui/ContextMenu.qml:572
 #, kde-format
 msgid "On The Current Activity"
 msgstr "Na trenutni dejavnosti"
 
-#: package/contents/ui/ContextMenu.qml:605
+#: package/contents/ui/ContextMenu.qml:596
 #, kde-format
 msgid "Unpin from Task Manager"
 msgstr "Odpni od upravitelja opravil"
 
-#: package/contents/ui/ContextMenu.qml:620
+#: package/contents/ui/ContextMenu.qml:611
 #, kde-format
 msgid "More"
 msgstr "Več"
 
-#: package/contents/ui/ContextMenu.qml:629
+#: package/contents/ui/ContextMenu.qml:620
 #, kde-format
 msgid "&Move"
 msgstr "Pre&makni"
 
-#: package/contents/ui/ContextMenu.qml:638
+#: package/contents/ui/ContextMenu.qml:629
 #, kde-format
 msgid "Re&size"
 msgstr "&Spremeni velikost"
 
-#: package/contents/ui/ContextMenu.qml:652
+#: package/contents/ui/ContextMenu.qml:643
 #, kde-format
 msgid "Ma&ximize"
 msgstr "Razpni"
 
-#: package/contents/ui/ContextMenu.qml:666
+#: package/contents/ui/ContextMenu.qml:657
 #, kde-format
 msgid "Mi&nimize"
 msgstr "Skrči"
 
-#: package/contents/ui/ContextMenu.qml:676
+#: package/contents/ui/ContextMenu.qml:667
 #, kde-format
 msgid "Keep &Above Others"
 msgstr "Ohranjaj n&ad drugimi"
 
-#: package/contents/ui/ContextMenu.qml:686
+#: package/contents/ui/ContextMenu.qml:677
 #, kde-format
 msgid "Keep &Below Others"
 msgstr "Ohranjaj pod drugimi"
 
-#: package/contents/ui/ContextMenu.qml:698
+#: package/contents/ui/ContextMenu.qml:689
 #, kde-format
 msgid "&Fullscreen"
 msgstr "&Celozaslonski način"
 
-#: package/contents/ui/ContextMenu.qml:710
+#: package/contents/ui/ContextMenu.qml:701
 #, kde-format
 msgid "&Shade"
 msgstr "Osenči"
 
-#: package/contents/ui/ContextMenu.qml:726
+#: package/contents/ui/ContextMenu.qml:717
 #, kde-format
 msgid "Allow this program to be grouped"
 msgstr "Temu programu dovoli združevanje"
 
-#: package/contents/ui/ContextMenu.qml:772
+#: package/contents/ui/ContextMenu.qml:763
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
 msgstr "Zapri vse"
 
-#: package/contents/ui/ContextMenu.qml:772
+#: package/contents/ui/ContextMenu.qml:763
 #, kde-format
 msgid "&Close"
 msgstr "Zapri"

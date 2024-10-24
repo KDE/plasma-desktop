@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 00:40+0000\n"
+"POT-Creation-Date: 2024-10-24 02:34+0000\n"
 "PO-Revision-Date: 2024-08-31 10:02+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -510,176 +510,176 @@ msgstr "Fichiers récents"
 msgid "Actions"
 msgstr "Actions"
 
-#: package/contents/ui/ContextMenu.qml:174
+#: package/contents/ui/ContextMenu.qml:165
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "Piste précédente"
 
-#: package/contents/ui/ContextMenu.qml:188
+#: package/contents/ui/ContextMenu.qml:179
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "Pause"
 
-#: package/contents/ui/ContextMenu.qml:188
+#: package/contents/ui/ContextMenu.qml:179
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "Lecture"
 
-#: package/contents/ui/ContextMenu.qml:206
+#: package/contents/ui/ContextMenu.qml:197
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "Piste suivante"
 
-#: package/contents/ui/ContextMenu.qml:217
+#: package/contents/ui/ContextMenu.qml:208
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
 msgstr "Arrêter"
 
-#: package/contents/ui/ContextMenu.qml:237
+#: package/contents/ui/ContextMenu.qml:228
 #, kde-format
 msgctxt "Quit media player app"
 msgid "Quit"
 msgstr "Quitter"
 
-#: package/contents/ui/ContextMenu.qml:252
+#: package/contents/ui/ContextMenu.qml:243
 #, kde-format
 msgctxt "Open or bring to the front window of media player app"
 msgid "Restore"
 msgstr "Restaurer"
 
-#: package/contents/ui/ContextMenu.qml:277
+#: package/contents/ui/ContextMenu.qml:268
 #, kde-format
 msgid "Mute"
 msgstr "Couper le son"
 
-#: package/contents/ui/ContextMenu.qml:288
+#: package/contents/ui/ContextMenu.qml:279
 #, kde-format
 msgid "Open New Window"
 msgstr "Ouvrir une nouvelle fenêtre"
 
-#: package/contents/ui/ContextMenu.qml:304
+#: package/contents/ui/ContextMenu.qml:295
 #, kde-format
 msgid "Move to &Desktop"
 msgstr "&Déplacer vers le bureau"
 
-#: package/contents/ui/ContextMenu.qml:334
+#: package/contents/ui/ContextMenu.qml:325
 #, kde-format
 msgid "Move &To Current Desktop"
 msgstr "Déplacer vers le bureau &courant"
 
-#: package/contents/ui/ContextMenu.qml:343
+#: package/contents/ui/ContextMenu.qml:334
 #, kde-format
 msgid "&All Desktops"
 msgstr "&Tous les bureaux"
 
-#: package/contents/ui/ContextMenu.qml:371
+#: package/contents/ui/ContextMenu.qml:362
 #, kde-format
 msgid "&New Desktop"
 msgstr "&Nouveau bureau"
 
-#: package/contents/ui/ContextMenu.qml:391
+#: package/contents/ui/ContextMenu.qml:382
 #, kde-format
 msgid "Show in &Activities"
 msgstr "Afficher dans les &activités"
 
-#: package/contents/ui/ContextMenu.qml:415
+#: package/contents/ui/ContextMenu.qml:406
 #, kde-format
 msgid "Add To Current Activity"
 msgstr "Ajouter à l'activité courante"
 
-#: package/contents/ui/ContextMenu.qml:425
+#: package/contents/ui/ContextMenu.qml:416
 #, kde-format
 msgid "All Activities"
 msgstr "Toutes les activités"
 
-#: package/contents/ui/ContextMenu.qml:481
+#: package/contents/ui/ContextMenu.qml:472
 #, kde-format
 msgid "Move to %1"
 msgstr "Déplacer vers %1"
 
-#: package/contents/ui/ContextMenu.qml:507
-#: package/contents/ui/ContextMenu.qml:523
+#: package/contents/ui/ContextMenu.qml:498
+#: package/contents/ui/ContextMenu.qml:514
 #, kde-format
 msgid "&Pin to Task Manager"
 msgstr "É&pingler au gestionnaire de tâches"
 
-#: package/contents/ui/ContextMenu.qml:575
+#: package/contents/ui/ContextMenu.qml:566
 #, kde-format
 msgid "On All Activities"
 msgstr "Sur toutes les activités"
 
-#: package/contents/ui/ContextMenu.qml:581
+#: package/contents/ui/ContextMenu.qml:572
 #, kde-format
 msgid "On The Current Activity"
 msgstr "Sur l'activité courante"
 
-#: package/contents/ui/ContextMenu.qml:605
+#: package/contents/ui/ContextMenu.qml:596
 #, kde-format
 msgid "Unpin from Task Manager"
 msgstr "Désépingler du gestionnaire de tâches"
 
-#: package/contents/ui/ContextMenu.qml:620
+#: package/contents/ui/ContextMenu.qml:611
 #, kde-format
 msgid "More"
 msgstr "Plus"
 
-#: package/contents/ui/ContextMenu.qml:629
+#: package/contents/ui/ContextMenu.qml:620
 #, kde-format
 msgid "&Move"
 msgstr "&Déplacer"
 
-#: package/contents/ui/ContextMenu.qml:638
+#: package/contents/ui/ContextMenu.qml:629
 #, kde-format
 msgid "Re&size"
 msgstr "Re&dimensionner"
 
-#: package/contents/ui/ContextMenu.qml:652
+#: package/contents/ui/ContextMenu.qml:643
 #, kde-format
 msgid "Ma&ximize"
 msgstr "Ma&ximiser"
 
-#: package/contents/ui/ContextMenu.qml:666
+#: package/contents/ui/ContextMenu.qml:657
 #, kde-format
 msgid "Mi&nimize"
 msgstr "Mi&nimiser"
 
-#: package/contents/ui/ContextMenu.qml:676
+#: package/contents/ui/ContextMenu.qml:667
 #, kde-format
 msgid "Keep &Above Others"
 msgstr "Conserver &au-dessus des autres"
 
-#: package/contents/ui/ContextMenu.qml:686
+#: package/contents/ui/ContextMenu.qml:677
 #, kde-format
 msgid "Keep &Below Others"
 msgstr "Conserver en-des&sous des autres"
 
-#: package/contents/ui/ContextMenu.qml:698
+#: package/contents/ui/ContextMenu.qml:689
 #, kde-format
 msgid "&Fullscreen"
 msgstr "&Plein écran"
 
-#: package/contents/ui/ContextMenu.qml:710
+#: package/contents/ui/ContextMenu.qml:701
 #, kde-format
 msgid "&Shade"
 msgstr "&Enrouler"
 
-#: package/contents/ui/ContextMenu.qml:726
+#: package/contents/ui/ContextMenu.qml:717
 #, kde-format
 msgid "Allow this program to be grouped"
 msgstr "Autoriser ce programme à être regroupé"
 
-#: package/contents/ui/ContextMenu.qml:772
+#: package/contents/ui/ContextMenu.qml:763
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
 msgstr "&Tout fermer"
 
-#: package/contents/ui/ContextMenu.qml:772
+#: package/contents/ui/ContextMenu.qml:763
 #, kde-format
 msgid "&Close"
 msgstr "&Fermer"

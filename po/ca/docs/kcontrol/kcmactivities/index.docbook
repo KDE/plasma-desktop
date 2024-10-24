@@ -50,13 +50,17 @@
 >Aquest mòdul permet configurar les activitats. Les activitats són una forma de tenir múltiples configuracions del &plasma;, cadascuna amb un conjunt de ginys i temes diferents. Algunes activitats poden ser privades. Aquestes activitats no enregistren les vostres accions. Per exemple, no segueixen quin document s'ha obert recentment. </para>
 
 <para
->El mòdul es divideix en dues pestanyes: <link linkend="activities-main"
+>The module is divided into three tabs: <link linkend="activities-main"
 ><guilabel
->Activitats</guilabel
+>Activities</guilabel
 ></link
-> i <link linkend="activities-switching"
+>, <link linkend="activities-switching"
 ><guilabel
->Canvi</guilabel
+>Switching</guilabel
+></link
+>, and <link linkend="activities-privacy"
+><guilabel
+>Privacy</guilabel
 ></link
 >. </para>
 
@@ -162,6 +166,40 @@
 >Fonaments del &kde;</emphasis
 ></ulink
 >. </para>
+</sect3>
+
+<sect3 id="activities-privacy">
+<title
+><guilabel
+>Privadesa</guilabel
+></title>
+
+<para
+>This tab allows configuring the time for activities to <guilabel
+>Keep history</guilabel
+> and clean some tracking data. Use the <guibutton
+>Clear History</guibutton
+> drop-down button to make &plasma; <guimenuitem
+>Forget the last hour</guimenuitem
+>, <guimenuitem
+>Forget the last two hours</guimenuitem
+>, <guimenuitem
+>Forget a day</guimenuitem
+>, or <guimenuitem
+>Forget everything</guimenuitem
+>. </para>
+<para
+>Below, you can configure the range of applications for memorizing opened documents in your activities. Use the <guilabel
+>For all applications</guilabel
+> item to store all data, the <guilabel
+>Do not remember</guilabel
+> item to switch off storing data, or <guilabel
+>Only for specific applications</guilabel
+> item for fine-grained selection (clicking on the application item toggles its current mode). </para>
+<para
+>Check the <guilabel
+>Blacklist applications not on the list</guilabel
+> item to switch off tracking for all applications that are not on the list. </para>
 </sect3>
 
 </sect2>
