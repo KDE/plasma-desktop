@@ -14,12 +14,20 @@ import time
 import unittest
 from typing import Final
 
+import cv2 as cv
+import gi
+
+gi.require_version('Gtk', '4.0')
 from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
 from appium.webdriver.webelement import WebElement
-from gi.repository import Gio, GLib
+from gi.repository import Gio, GLib, Gtk
+from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.actions.action_builder import ActionBuilder
+from selenium.webdriver.common.actions.interaction import POINTER_TOUCH
+from selenium.webdriver.common.actions.pointer_input import PointerInput
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
@@ -281,6 +289,74 @@ class DesktopTest(unittest.TestCase):
             self.assertEqual(reply.get_signature(), "u")
             self.assertGreater(reply.get_body().get_child_value(0).get_uint32(), 0)
             print("done sending message", file=sys.stderr)
+
+    def test_8_touch_long_press_on_desktop(self) -> None:
+        # BUG478958: Long press on the desktop to enter the edit mode
+        screen_geometry = Gtk.Window().get_display().get_monitors()[0].get_geometry()
+        long_press_time_ms: int = Gtk.Settings.get_default().get_property("gtk-long-press-time") * 2 + 5000
+        self.assertGreater(screen_geometry.width, 100)
+        self.assertGreater(screen_geometry.height, 100)
+
+        # Click "More" to open the desktop context menu
+        wait = WebDriverWait(self.driver, 5)
+        success = False
+        for _ in range(20):
+            try:
+                # Work around "no target window"
+                action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_TOUCH, "finger"))
+                action.pointer_action.move_to_location(int(screen_geometry.width / 2), int(screen_geometry.height / 2)).click()
+                action.perform()
+                action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_TOUCH, "finger"))
+                action.pointer_action.move_to_location(int(screen_geometry.width / 2), int(screen_geometry.height / 2)).pointer_down().pause(long_press_time_ms / 1000).pointer_up()
+                action.perform()
+                wait.until(EC.presence_of_element_located((AppiumBy.NAME, "More"))).click()
+                success = True
+                break
+            except TimeoutException:
+                continue
+        self.assertTrue(success)
+
+        # BUG 477220: "More" button in the desktop toolbox does not open the context menu
+        time.sleep(3)  # Wait until the menu appears
+        self.driver.get_screenshot_as_file("bug477220_open_context_menu_before.png")
+        actions = ActionChains(self.driver)
+        for _ in range(3):  # The number of menu items by default
+            actions = actions.send_keys(Keys.DOWN).pause(0.5)
+        actions.perform()
+        self.driver.get_screenshot_as_file("bug477220_open_context_menu_after.png")
+
+        img1 = cv.imread("bug477220_open_context_menu_before.png", cv.IMREAD_GRAYSCALE)
+        img2 = cv.imread("bug477220_open_context_menu_after.png", cv.IMREAD_GRAYSCALE)
+        diff = cv.subtract(img1, img2)
+        self.assertGreater(cv.countNonZero(diff), 4000)  # Menu highlight changes
+
+        # Click an empty area to close the menu
+        action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_TOUCH, "finger"))
+        action.pointer_action.move_to_location(int(screen_geometry.width / 2), int(screen_geometry.height / 2)).click()
+        action.perform()
+
+        # Long press on the panel to enter the edit mode
+        time.sleep(3)  # Wait until the menu disappears
+        wait = WebDriverWait(self.driver, 5)
+        success = False
+        for _ in range(20):
+            try:
+                # Work around "no target window"
+                action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_TOUCH, "finger"))
+                action.pointer_action.move_to_location(int(screen_geometry.width / 2), int(screen_geometry.height - 20)).click()
+                action.perform()
+                # Press on the panel
+                action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_TOUCH, "finger"))
+                action.pointer_action.move_to_location(int(screen_geometry.width / 2), int(screen_geometry.height - 20)).pointer_down().pause(long_press_time_ms / 1000).pointer_up()
+                action.perform()
+                wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Add Spacer")))  # The panel config dialog is opened
+                success = True
+                break
+            except TimeoutException:
+                continue
+        self.assertTrue(success)
+
+        self._exit_edit_mode()
 
 
 if __name__ == '__main__':
