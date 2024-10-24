@@ -36,6 +36,32 @@ FocusScope {
 
     focus: true
 
+    // Due to screen size being resized during panels being set up,
+    // ignore any icon positioning when screen is being resized
+    property bool resizingDone: true
+
+    onWidthChanged: {
+        resizingDone = false;
+        resizeTimer.restart();
+    }
+
+    onHeightChanged: {
+        resizingDone = false;
+        resizeTimer.restart();
+    }
+
+    Timer {
+        id: resizeTimer
+        interval: 1000
+        onTriggered: {
+            // Window.window is null if we do not have a screen
+            if (folderViewLayerComponent.Window.window !== null) {
+                folderViewLayerComponent.resizingDone = true;
+                folderView.positions = folderViewLayerComponent.getPositions();
+            }
+        }
+    }
+
     function updateContextualActions() {
         folderView.model.updateActions();
 
@@ -256,11 +282,15 @@ FocusScope {
         }
 
         onPositionsChanged: {
-            saveTimer.restart()
+            if (folderViewLayerComponent.resizingDone && folderViewLayerComponent.Window.window !== null) {
+                saveTimer.restart()
+            }
         }
 
         onPerStripeChanged: {
-            folderView.positions = getPositions();
+            if (folderViewLayerComponent.Window.window !== null){
+                folderView.positions = getPositions();
+            }
         }
 
         Timer {
