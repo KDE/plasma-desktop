@@ -24,7 +24,11 @@ class RemoveAction : public QAction
 public:
     explicit RemoveAction(KActionCollection *collection, QObject *parent = nullptr);
 
-    enum class ShiftState { Unknown, Pressed, Released };
+    enum class ShiftState {
+        Unknown,
+        Pressed,
+        Released
+    };
 
     /**
      * Updates this action key based on @p shiftState.

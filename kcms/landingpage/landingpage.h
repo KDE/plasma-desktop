@@ -33,7 +33,9 @@ class MostUsedModel : public QSortFilterProxyModel
     Q_OBJECT
 
 public:
-    enum Roles { KcmPluginRole = Qt::UserRole + 1000 };
+    enum Roles {
+        KcmPluginRole = Qt::UserRole + 1000
+    };
 
     explicit MostUsedModel(QObject *parent = nullptr);
     void setResultModel(KActivities::Stats::ResultModel *model);

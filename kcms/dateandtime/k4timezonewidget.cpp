@@ -42,9 +42,15 @@ public:
     {
     }
 
-    enum Columns { CityColumn = 0, RegionColumn, CommentColumn };
+    enum Columns {
+        CityColumn = 0,
+        RegionColumn,
+        CommentColumn
+    };
 
-    enum Roles { ZoneRole = Qt::UserRole + 0xF3A3CB1 };
+    enum Roles {
+        ZoneRole = Qt::UserRole + 0xF3A3CB1
+    };
 
     bool itemsCheckable;
     bool singleSelection;

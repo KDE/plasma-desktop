@@ -78,9 +78,8 @@ void KCMWorkspaceOptions::save()
     }
 
     if (smoothScrollSaved) {
-        QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/SmoothScroll"),
-                                                          QStringLiteral("org.kde.SmoothScroll"),
-                                                          QStringLiteral("notifyChange"));
+        QDBusMessage message =
+            QDBusMessage::createSignal(QStringLiteral("/SmoothScroll"), QStringLiteral("org.kde.SmoothScroll"), QStringLiteral("notifyChange"));
         bool enabled = m_data->workspaceOptionsGlobalsSettings()->smoothScroll();
         message.setArguments({QVariant(enabled)});
         QDBusConnection::sessionBus().send(message);
