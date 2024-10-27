@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-02 00:41+0000\n"
-"PO-Revision-Date: 2024-07-08 12:59+0200\n"
+"PO-Revision-Date: 2024-10-26 12:37+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -94,17 +94,13 @@ msgstr ""
 "fint hvis anvendt."
 
 #: ui/KeyBindings.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Key Bindings"
+#, kde-format
 msgctxt "@title"
 msgid "Key Bindings"
 msgstr "Tastebindinger"
 
 #: ui/KeyBindings.qml:62
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure keyboard options"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Configure keyboard options"
 msgstr "Indstil tastaturmuligheder"
@@ -113,19 +109,19 @@ msgstr "Indstil tastaturmuligheder"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset"
-msgstr ""
+msgstr "Nulstil"
 
 #: ui/KeyBindings.qml:134
 #, kde-format
 msgctxt "@info accessible"
 msgid "Reset selected options for this group"
-msgstr ""
+msgstr "Nulstil valgte indstillinger for denne gruppe"
 
 #: ui/KeyBindings.qml:135
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Reset selected options for this group"
-msgstr ""
+msgstr "Nulstil valgte indstillinger for denne gruppe"
 
 #: ui/LayoutDialog.qml:20
 #, kde-format
@@ -134,11 +130,10 @@ msgid "Add Layout"
 msgstr "Tilføj layout"
 
 #: ui/LayoutDialog.qml:177
-#, fuzzy, kde-format
-#| msgid "Show layout indicator"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
-msgstr "Vis layoutindikator"
+msgstr "Kort layoutnavn"
 
 #: ui/LayoutDialog.qml:187
 #, kde-format
@@ -147,6 +142,8 @@ msgid ""
 "The abbreviated name of the selected layout, which will be displayed in the "
 "system tray. You can change this setting yourself."
 msgstr ""
+"Det forkortede navn af det valgte layout, som vil blive vist i systembakken. "
+"Du kan selv ændre denne indstilling"
 
 #: ui/LayoutDialog.qml:195
 #, kde-format
@@ -164,28 +161,22 @@ msgstr "Forhåndsvisning"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Switching…"
-msgstr ""
+msgstr "Indstil skiftning…"
 
 #: ui/main.qml:38
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure Layouts"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Configure Switching"
-msgstr "Indstil layouts"
+msgstr "Indstil skiftning"
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Key Bindings"
+#, kde-format
 msgctxt "@action:button"
 msgid "Key Bindings"
 msgstr "Tastebindinger"
 
 #: ui/main.qml:45
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Key Bindings"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Key Bindings"
 msgstr "Tastebindinger"
@@ -194,12 +185,10 @@ msgstr "Tastebindinger"
 #, kde-format
 msgctxt "@action:button Layout"
 msgid "Add…"
-msgstr ""
+msgstr "Tilføj…"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add layout"
 msgstr "Tilføj layout"
@@ -208,12 +197,10 @@ msgstr "Tilføj layout"
 #, kde-format
 msgctxt "@label:checkbox configure layouts option"
 msgid "Enable"
-msgstr ""
+msgstr "Aktivér"
 
 #: ui/main.qml:60
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure Layouts"
+#, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Configure Layouts"
 msgstr "Indstil layouts"
@@ -222,35 +209,28 @@ msgstr "Indstil layouts"
 #, kde-format
 msgctxt "@label:listbox Keyboard model"
 msgid "Model:"
-msgstr ""
+msgstr "Model:"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgctxt "@title:group"
-#| msgid "NumLock on Plasma Startup:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "NumLock on startup:"
-msgstr "NumLock ved opstart af Plasma:"
+msgstr "NumLock ved opstart:"
 
 #: ui/main.qml:112
-#, fuzzy, kde-format
-#| msgctxt "@option:radio"
-#| msgid "Turn On"
+#, kde-format
 msgctxt "@item:inlistbox Turn on \"NumLock\" on startup"
 msgid "Turn on"
 msgstr "Slå til"
 
 #: ui/main.qml:116
-#, fuzzy, kde-format
-#| msgid "Turn o&ff"
+#, kde-format
 msgctxt "@item:inlistbox Turn off \"NumLock\" on startup"
 msgid "Turn off"
-msgstr "Slå &fra"
+msgstr "Slå fra"
 
 #: ui/main.qml:120
-#, fuzzy, kde-format
-#| msgctxt "@option:radio"
-#| msgid "Leave unchanged"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Leave \"NumLock\" at whatever it was set to before Plasma "
 "started up"
@@ -258,23 +238,19 @@ msgid "Leave unchanged"
 msgstr "Efterlad uændret"
 
 #: ui/main.qml:146
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Key repeat:"
-msgstr "Tastaturgentagelse"
+msgstr "Tastegentagelser:"
 
 #: ui/main.qml:155
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Key repeat"
-msgstr "Tastaturgentagelse"
+msgstr "Tastegentagelse"
 
 #: ui/main.qml:166
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Delay:"
+#, kde-format
 msgctxt "@label:textbox Key repeat delay"
 msgid "Delay:"
 msgstr "Forsinkelse:"
@@ -283,25 +259,22 @@ msgstr "Forsinkelse:"
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat delay %1"
-msgstr ""
+msgstr "Forsinkelse ved tastegentagelser %1"
 
 #: ui/main.qml:188
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "%1 ms"
-msgstr ""
+msgstr "%1 ms"
 
 #: ui/main.qml:192
-#, fuzzy, kde-format
-#| msgid " ms"
+#, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "ms"
-msgstr " ms"
+msgstr "ms"
 
 #: ui/main.qml:205
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Rate:"
+#, kde-format
 msgctxt "@label:textbox Key repeat rate"
 msgid "Rate:"
 msgstr "Rate:"
@@ -310,21 +283,19 @@ msgstr "Rate:"
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat rate %1"
-msgstr ""
+msgstr "Frekvens ved tastegentagelser %1"
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid " repeats/s"
+#, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "%1 repeats/s"
-msgstr " gentagelser/s"
+msgstr "%1 gentagelser/s"
 
 #: ui/main.qml:231
-#, fuzzy, kde-format
-#| msgid " repeats/s"
+#, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "repeats/s"
-msgstr " gentagelser/s"
+msgstr "gentagelser/s"
 
 #: ui/main.qml:243
 #, kde-format
@@ -339,9 +310,7 @@ msgid "Type here to test settings"
 msgstr "Skriv her for at teste indstillinger"
 
 #: ui/main.qml:256
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Layouts"
+#, kde-format
 msgctxt "@title:view"
 msgid "Layouts"
 msgstr "Layouts"
@@ -356,7 +325,7 @@ msgstr "Flyt op"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout up"
-msgstr ""
+msgstr "Flyt %1-layoutet op"
 
 #: ui/main.qml:275
 #, kde-format
@@ -365,17 +334,13 @@ msgid "Move Down"
 msgstr "Flyt ned"
 
 #: ui/main.qml:276
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout Down"
-msgstr "Flyt ned"
+msgstr "Flyt %1-layoutet ned"
 
 #: ui/main.qml:286
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Preview"
 msgstr "Forhåndsvisning"
@@ -390,29 +355,25 @@ msgstr "Fjern"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Remove layout %1"
-msgstr ""
+msgstr "Fjern layoutet %1"
 
 #: ui/main.qml:307
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Spare layouts:"
-msgstr "Reservelayouts"
+msgstr "Reservelayouts:"
 
 #: ui/main.qml:344
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
-msgstr ""
+msgstr "Antal reserverede hovedlayouts"
 
 #: ui/main.qml:376
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@label:textbox completes spinbox, x main layouts"
 msgid "main layouts"
-msgstr "Reservelayouts"
+msgstr "hovedlayouts"
 
 #: ui/main.qml:380
 #, kde-format
@@ -423,105 +384,93 @@ msgid ""
 "accessed through the keyboard indicator applet or by setting a custom "
 "shortcut."
 msgstr ""
+"Du kan have op til fire hovedlayouts, alle andre layouts er reserver. "
+"Reservelayouts er ikke inkluderet, når du skifter mellem layoutsne, men kan "
+"tilgås via tasteindikatorappletten eller ved at lave en tilpasset genvej. "
 
 #: ui/main.qml:385
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
-msgstr "Antal hovedlayout:"
+msgstr "Genvej til layoutændring:"
 
 #: ui/main.qml:409
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
-msgstr ""
+msgstr "eller"
 
 #: ui/Switching.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure Layouts"
+#, kde-format
 msgctxt "@title"
 msgid "Configure Switching"
-msgstr "Indstil layouts"
+msgstr "Indstil skiftning"
 
 #: ui/Switching.qml:23
 #, kde-format
 msgctxt "@title:group"
 msgid "Behavior"
-msgstr ""
+msgstr "Opførsel"
 
 #: ui/Switching.qml:28
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Switching layout affects:"
-msgstr "Antal hovedlayout:"
+msgstr "Layoutskiftning påvirker:"
 
 #: ui/Switching.qml:35
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows"
-msgstr ""
+msgstr "Alle vinduer"
 
 #: ui/Switching.qml:39
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows on current desktop"
-msgstr ""
+msgstr "Alle vinduer på nuværende skrivebord"
 
 #: ui/Switching.qml:43
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows of current application"
-msgstr ""
+msgstr "Alle vinduer af nuværende skrivebord"
 
 #: ui/Switching.qml:47
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Current window only"
-msgstr ""
+msgstr "Kun nuværende vinduer"
 
 #: ui/Switching.qml:74
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Show notification on layout change"
-msgstr "Vis en pop-up ved layoutændringer"
+msgstr "Vis en notifikation ved layoutændring"
 
 #: ui/Switching.qml:86
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:group"
 msgid "Shortcuts"
-msgstr "Genvej"
+msgstr "Genveje"
 
 #: ui/Switching.qml:91 ui/Switching.qml:153
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Change layout:"
-msgstr "Reservelayouts"
+msgstr "Skift layout:"
 
 #: ui/Switching.qml:112
-#, fuzzy, kde-format
-#| msgid "Switch to Last-Used Keyboard Layout"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Switch to last used layout:"
-msgstr "Skift til sidst brugt tastatur-layout"
+msgstr "Skift til sidst brugt layout:"
 
 #: ui/Switching.qml:133
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:group"
 msgid "Legacy Shortcuts"
-msgstr "Genvej"
+msgstr "Gamle genveje"
 
 #: ui/Switching.qml:141
 #, kde-kuit-format
@@ -532,14 +481,16 @@ msgid ""
 "Wayland.<nl/><nl/>Setting these shortcuts will take you to the Key bindings "
 "page."
 msgstr ""
+"Gamle X11-genveje tillader finere kontrol over genveje med kun "
+"ændringstaster og har lidt bedre understøttelse på X11 i edge-cases. De kan "
+"også bruges på Wayland.<nl/><nl/>Hvis du indstiller disse genveje, kommer du "
+"til siden med tastaturgenveje."
 
 #: ui/Switching.qml:182
-#, fuzzy, kde-format
-#| msgctxt "@option:textbox"
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Alternative symbols:"
-msgstr "Alternativ genvej:"
+msgstr "Alternativ symboler:"
 
 #: ui/Switching.qml:208
 #, kde-format
@@ -548,6 +499,8 @@ msgid ""
 "Modifier keys can be used to type additional characters, symbols, and "
 "diacritical marks."
 msgstr ""
+"Ændringstaster kan også bruges til at skrive yderligere tegn, symboler og "
+"diakritiske mærker."
 
 #: xkboptionsmodel.cpp:165
 #, kde-format

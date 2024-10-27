@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-23 00:42+0000\n"
-"PO-Revision-Date: 2024-07-08 16:31+0200\n"
+"PO-Revision-Date: 2024-10-26 11:54+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -327,10 +327,9 @@ msgid "Add spacer widget to the panel"
 msgstr "Tilføj afstandsstykkewidget til panelet"
 
 #: contents/configuration/PanelConfiguration.qml:114
-#, fuzzy, kde-format
-#| msgid "Add Widgets…"
+#, kde-format
 msgid "Add or Manage Widgets…"
-msgstr "Tilføj widgets…"
+msgstr "Tilføj eller indstil widgets…"
 
 #: contents/configuration/PanelConfiguration.qml:117
 #, kde-format
@@ -505,15 +504,13 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "Fjern dette panel; dette kan ikke fortrydes"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Luk"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, fuzzy, kde-format
-#| msgid "Exit Edit Mode"
+#, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
@@ -525,46 +522,38 @@ msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "Luk panelindstillingsvindue og afslut Redigér-tilstand"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:32
-#, fuzzy, kde-format
-#| msgid "Drag to change maximum height."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum height."
 msgstr "Træk for at ændre maksimumshøjde."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:33
-#, fuzzy, kde-format
-#| msgid "Drag to change maximum width."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum width."
 msgstr "Træk for at ændre maksimumsbredde."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:34
 #: contents/configuration/panelconfiguration/Ruler.qml:39
-#, fuzzy, kde-format
-#| msgid "Double click to reset."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Double-click to reset."
 msgstr "Dobbeltklik for at nulstille"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:37
-#, fuzzy, kde-format
-#| msgid "Drag to change minimum height."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum height."
 msgstr "Træk for at ændre minimumshøjde."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:38
-#, fuzzy, kde-format
-#| msgid "Drag to change minimum width."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr "Træk for at ændre minimumsbredde."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:87
-#, fuzzy, kde-format
-#| msgid ""
-#| "Drag to change position on this screen edge.\n"
-#| "Double click to reset."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid ""
 "Drag to change position on this screen edge.\n"
@@ -630,7 +619,7 @@ msgstr "Ikke-understøttet widget"
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
-msgstr ""
+msgstr "Ny!"
 
 #: contents/explorer/AppletDelegate.qml:188
 #, kde-format
@@ -638,17 +627,15 @@ msgid "Undo uninstall"
 msgstr "Fortryd afinstallation"
 
 #: contents/explorer/AppletDelegate.qml:189
-#, fuzzy, kde-format
-#| msgid "Uninstall"
+#, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Uninstall"
 msgstr "Afinstallér"
 
 #: contents/explorer/AppletDelegate.qml:231
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgid "Remove all instances"
-msgstr "Fjern panel"
+msgstr "Fjern alle instanser"
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -677,15 +664,13 @@ msgid "Widgets"
 msgstr "Widgets"
 
 #: contents/explorer/WidgetExplorer.qml:178
-#, fuzzy, kde-format
-#| msgid "Get New Plugins…"
+#, kde-format
 msgctxt "@action:button The word 'new' refers to widgets"
 msgid "Get New…"
-msgstr "Hent nye plugins..."
+msgstr "Hent nye…"
 
 #: contents/explorer/WidgetExplorer.qml:179
-#, fuzzy, kde-format
-#| msgid "Get New Widgets…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "Hent nye widgets…"
@@ -696,9 +681,7 @@ msgid "Categories"
 msgstr "Kategorier"
 
 #: contents/explorer/WidgetExplorer.qml:254
-#, fuzzy, kde-format
-#| msgid "Confirm Removal Of One Widget"
-#| msgid_plural "Confirm Removal Of %1 Widgets"
+#, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Confirm Removal of One Widget"
 msgid_plural "Confirm Removal of %1 Widgets"
@@ -725,7 +708,7 @@ msgstr "Ur:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
-msgstr ""
+msgstr "Vis ur"
 
 #: contents/lockscreen/config.qml:33
 #, kde-format

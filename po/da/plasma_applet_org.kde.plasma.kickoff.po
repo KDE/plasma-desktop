@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-26 00:40+0000\n"
-"PO-Revision-Date: 2024-07-08 13:30+0200\n"
+"PO-Revision-Date: 2024-10-26 11:48+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -100,30 +100,29 @@ msgid "Remove icon"
 msgstr "Fjern ikon"
 
 #: package/contents/ui/ConfigGeneral.qml:119
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgid "Show applications as:"
-msgstr "Vis andre programmer:"
+msgstr "Vis programmer som:"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgid "Name only"
-msgstr ""
+msgstr "Kun navn"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgid "Description only"
-msgstr ""
+msgstr "Kun beskrivelse"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgid "Name (Description)"
-msgstr ""
+msgstr "Navn (beskrivelse)"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgid "Description (Name)"
-msgstr ""
+msgstr "Beskrivelse (navn)"
 
 #: package/contents/ui/ConfigGeneral.qml:131
 #, kde-format
@@ -172,12 +171,10 @@ msgid "Automatically disabled when in Touch Mode"
 msgstr "Slå automatisk fra når i touch-tilstand"
 
 #: package/contents/ui/ConfigGeneral.qml:192
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Enabled Search Plugins…"
+#, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
-msgstr "Indstil aktiverede søge-plugins…"
+msgstr "Indstil søge-plugins…"
 
 #: package/contents/ui/ConfigGeneral.qml:202
 #, kde-format

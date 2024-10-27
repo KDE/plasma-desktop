@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-29 00:40+0000\n"
-"PO-Revision-Date: 2024-07-08 12:34+0200\n"
+"PO-Revision-Date: 2024-10-26 11:46+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: kcmkded.cpp:115
@@ -54,6 +54,8 @@ msgid ""
 "If you're disabling something here to work around an issue, please <link "
 "url='%1'>submit a bug report about it as well.</link>"
 msgstr ""
+"Hvis du deaktiverer noget her for at omgå et problem, bedes du også <link "
+"url='%1'>sende en fejlrapport om det.</link>"
 
 #: ui/main.qml:55
 #, kde-format
@@ -110,18 +112,16 @@ msgid "Load-on-Demand Services"
 msgstr "Load-on-Demand tjenester"
 
 #: ui/main.qml:182
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Disable automatically loading %1 on startup"
-msgstr "Slå automatisk indlæsning af denne tjeneste ved opstart fra"
+msgstr "Deaktivér automatisk indlæsning af %1 ved opstart"
 
 #: ui/main.qml:182
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Enable automatically loading %1 on startup"
-msgstr "Slå automatisk indlæsning af denne tjeneste ved opstart til"
+msgstr "Aktivér automatisk indlæsning af %1 ved opstart"
 
 #: ui/main.qml:183
 #, kde-format
