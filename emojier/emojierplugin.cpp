@@ -192,7 +192,7 @@ bool SearchModelFilter::filterAcceptsRow(int source_row, const QModelIndex &sour
 {
     const auto idx = sourceModel()->index(source_row, 0, source_parent);
     return idx.data(Qt::ToolTipRole).toString().contains(m_search, Qt::CaseInsensitive)
-        || idx.data(AbstractEmojiModel::AnnotationsRole).toStringList().contains(m_search, Qt::CaseInsensitive);
+        || !idx.data(AbstractEmojiModel::AnnotationsRole).toStringList().filter(m_search, Qt::CaseInsensitive).isEmpty();
 }
 
 void CopyHelperPrivate::copyTextToClipboard(const QString &text)
