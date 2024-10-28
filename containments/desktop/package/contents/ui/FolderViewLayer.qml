@@ -287,12 +287,6 @@ FocusScope {
             }
         }
 
-        onPerStripeChanged: {
-            if (folderViewLayerComponent.Window.window !== null){
-                folderView.positions = getPositions();
-            }
-        }
-
         Timer {
             id: saveTimer
             interval: Kirigami.Units.humanMoment
