@@ -135,7 +135,7 @@
 
 <para
 >Aquest plafó està dividit en dues seccions anomenades <guilabel
->Tecles apegaloses</guilabel
+>Tecles permanents</guilabel
 > i <guilabel
 >Tecles de bloqueig</guilabel
 >.</para>
@@ -144,7 +144,7 @@
 <varlistentry>
 <term
 ><guilabel
->Usa tecles apegaloses</guilabel
+>Usa tecles permanents</guilabel
 ></term>
 <listitem>
 <para
@@ -154,7 +154,7 @@
 
 <para
 >En aquesta secció també hi ha una casella de selecció anomenada <guilabel
->Bloqueja les tecles apegaloses</guilabel
+>Bloqueja les tecles permanents</guilabel
 >. Si aquesta casella de selecció està habilitada les tecles &Alt;, &Ctrl; i &Maj; romandran «seleccionades» fins que siguin «desseleccionades» per l'usuari. </para>
 
 <para
@@ -163,7 +163,7 @@
 <varlistentry>
 <term
 >Amb <guilabel
->Bloqueja les tecles apegaloses</guilabel
+>Bloqueja les tecles permanents</guilabel
 > inhabilitada:</term>
 <listitem>
 <para
@@ -182,7 +182,7 @@
 <varlistentry>
 <term
 >Amb <guilabel
->Bloqueja les tecles apegaloses</guilabel
+>Bloqueja les tecles permanents</guilabel
 > habilitada:</term>
 <listitem>
 <para
@@ -310,19 +310,19 @@ Use system bell whenever a key is rejected
 <simplelist>
 <member
 ><guilabel
->Usa gestos per a activar les tecles apegaloses i lentes</guilabel
+>Usa gestos per a activar les tecles permanents i lentes</guilabel
 ></member>
 <member
 >Aquí podeu activar els gestos del teclat disposant de les següents característiques:</member>
 <member
 >Tecles de ratolí: Preu &Maj;+Bloq Núm</member>
 <member
->Tecles apegaloses: Premeu la tecla &Maj; cinc vegades consecutives</member>
+>Tecles permanents: Premeu la tecla &Maj; cinc vegades consecutives</member>
 <member
 >Tecles lentes: Manteniu premut &Maj; durant vuit segons</member>
 <member
 ><guilabel
->Desactiva les tecles apegaloses i lentes després d'un cert període d'inactivitat</guilabel
+>Desactiva les tecles permanents i lentes després d'un cert període d'inactivitat</guilabel
 ></member>
 </simplelist>
 </para>

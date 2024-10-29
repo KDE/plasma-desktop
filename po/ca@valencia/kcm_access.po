@@ -13,14 +13,14 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-29 00:41+0000\n"
-"PO-Revision-Date: 2024-08-29 17:17+0200\n"
+"PO-Revision-Date: 2024-10-28 11:47+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -177,26 +177,26 @@ msgstr "Si s'ha marcat la correcció del daltonisme"
 #: kcmaccessibilitykeyboard.kcfg:9
 #, kde-format
 msgid "Use sticky Keys"
-msgstr "Utilitza tecles apegaloses"
+msgstr "Utilitza tecles permanents"
 
 #. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:13
 #, kde-format
 msgid "Lock the sticky keys"
-msgstr "Bloqueja les tecles apegaloses"
+msgstr "Bloqueja les tecles permanents"
 
 #. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:17
 #, kde-format
 msgid "Turn sticky keys off when two keys are pressed simultaneously"
 msgstr ""
-"Activa les tecles apegaloses sempre que es premen dues tecles simultàniament"
+"Activa les tecles permanents sempre que es premen dues tecles simultàniament"
 
 #. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:21
 #, kde-format
 msgid "Beep on a sticky key press"
-msgstr "Timbre en prémer una tecla apegalosa"
+msgstr "Timbre en prémer una tecla permanent"
 
 #. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:25
@@ -329,7 +329,7 @@ msgstr "Activa"
 msgctxt "@label"
 msgid "Press Shift 5 times to enable Sticky Keys"
 msgstr ""
-"Premeu 5 vegades la tecla de majúscules per a activar les tecles apegaloses"
+"Premeu 5 vegades la tecla de majúscules per a activar les tecles permanents"
 
 #: ui/ActivationShortcuts.qml:37
 #, kde-format
@@ -343,7 +343,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable sticky and slow keys after:"
-msgstr "Desactiva les tecles apegaloses i lentes després de:"
+msgstr "Desactiva les tecles permanents i lentes després de:"
 
 #: ui/ActivationShortcuts.qml:75
 #, kde-format
@@ -700,7 +700,7 @@ msgstr "Sacsa el cursor"
 #, kde-format
 msgctxt "@option:check"
 msgid "Sticky keys:"
-msgstr "Tecles apegaloses:"
+msgstr "Tecles permanents:"
 
 #: ui/ModifierKeys.qml:22
 #, kde-format
@@ -717,14 +717,14 @@ msgid ""
 "a keyboard shortcut."
 msgstr ""
 "Les tecles modificadores com «Ctrl», «Maj», «Alt» i la tecla "
-"«Meta»/«Súper»/«Windows» actuen com si foren «apegaloses al lloc» i ja no "
+"«Meta»/«Súper»/«Windows» actuen com si foren «permanents al lloc» i ja no "
 "cal mantindre-les premudes en teclejar una drecera de teclat."
 
 #: ui/ModifierKeys.qml:39
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock sticky keys"
-msgstr "Bloqueja les tecles apegaloses"
+msgstr "Bloqueja les tecles permanents"
 
 #: ui/ModifierKeys.qml:51
 #, kde-format
@@ -733,7 +733,7 @@ msgid ""
 "Once locked, the “sticky” state of modifier keys will not be disabled until "
 "a keyboard shortcut is finished or until a non-modifier key is pressed."
 msgstr ""
-"Una vegada bloquejada, l'estat «apegalós» de les tecles modificadores no es "
+"Una vegada bloquejada, l'estat «permanent» de les tecles modificadores no es "
 "desactivarà fins que finalitze una drecera de teclat o fins que es prema una "
 "tecla no modificadora."
 
