@@ -26,6 +26,12 @@ ContainmentItem {
 //BEGIN properties
     Layout.preferredWidth: fixedWidth || currentLayout.implicitWidth + currentLayout.horizontalDisplacement
     Layout.preferredHeight: fixedHeight || currentLayout.implicitHeight + currentLayout.verticalDisplacement
+    Layout.fillWidth: {
+        return currentLayout.children
+            .filter(child => child?.applet?.plasmoid?.pluginName === "org.kde.plasma.panelspacer")
+            .some(child => child.applet.plasmoid.configuration.expanding)
+    }
+    Layout.fillHeight: Layout.fillWidth
 
     property Item toolBox
     property var layoutManager: LayoutManager
