@@ -116,18 +116,15 @@ Rectangle {
             if (isContainment) {
                 pushReplace(Qt.resolvedUrl("ConfigurationAppletPage.qml"), {configItem: item});
             } else {
-
                 const config = Plasmoid.configuration; // type: KConfigPropertyMap
 
-                const props = {
-                    "title": item.name
-                };
+                pushReplace(item.source, { "title": item.name });
 
                 config.keys().forEach(key => {
-                    props["cfg_" + key] = config[key];
+                    if ("cfg_" + key in app.currentConfigPage) {
+                        app.currentConfigPage["cfg_" + key] = config[key];
+                    }
                 });
-
-                pushReplace(item.source, props);
             }
 
         } else if (item.kcm) {
