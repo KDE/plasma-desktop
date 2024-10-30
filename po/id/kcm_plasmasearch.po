@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Wantoyo <wantoyek@gmail.com>, 2018, 2019, 2022.
+# SPDX-FileCopyrightText: 2018, 2019, 2022, 2024 Wantoyo <wantoyek@gmail.com>
 # Aziz Adam Adrian <4.adam.adrian@gmail.com>, 2022.
 #
 msgid ""
@@ -8,21 +8,20 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-24 00:41+0000\n"
-"PO-Revision-Date: 2022-09-27 18:12+0700\n"
+"PO-Revision-Date: 2024-10-29 08:04+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
-"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: plasmasearch/kcm.h:70
-#, fuzzy, kde-format
-#| msgid "Available Plugins"
+#, kde-format
 msgid "Favorite Plugins"
-msgstr "Plugin Tersedia"
+msgstr "Plugin Favorit"
 
 #: plasmasearch/kcm.h:71
 #, kde-format
@@ -40,27 +39,25 @@ msgid "Get New Plugins…"
 msgstr "Dapatkan Plugin Baru..."
 
 #: plasmasearch/ui/main.qml:45
-#, fuzzy, kde-format
-#| msgid ""
-#| "Enable or disable plugins (used in KRunner, Application Launcher, and the "
-#| "Overview effect)"
+#, kde-format
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect). Mark plugins as favorites and arrange them in order you "
 "want to prioritize them."
 msgstr ""
-"Fungsikan atau nonfungsikan plugin (yang digunakan di KRunner, Application "
-"Launcher, dan efek Overview)"
+"Fungsikan atau nonfungsikan plugin (digunakan di KRunner, Application "
+"Launcher, dan efek Overview). Tandai plugin sebagai favorit dan atur "
+"berdasarkan prioritas Anda."
 
 #: plasmasearch/ui/main.qml:91
 #, kde-format
 msgid "Remove from favorites"
-msgstr ""
+msgstr "Singkirkan dari favorit"
 
 #: plasmasearch/ui/main.qml:91
 #, kde-format
 msgid "Add to favorites"
-msgstr ""
+msgstr "Tambahkan ke favorit"
 
 #: plugininstaller/AbstractJob.cpp:18
 #, kde-kuit-format
@@ -83,14 +80,14 @@ msgstr "Eksekusi pencopotan berhasil, sekarang kamu boleh menutup jendela ini"
 #: plugininstaller/KRunnerPluginInstallerRcJob.cpp:88
 #, kde-format
 msgid "Failed to copy file %1 to %2"
-msgstr ""
+msgstr "Gagal menyalin file %1 ke %2"
 
 #: plugininstaller/KRunnerPluginInstallerRcJob.cpp:103
 #: plugininstaller/KRunnerPluginInstallerRcJob.cpp:106
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Failed to remove file %1:<nl/>%2"
-msgstr ""
+msgstr "Gagal menghapus file %1:<nl/>%2"
 
 #: plugininstaller/main.cpp:33
 #, kde-format
@@ -99,24 +96,22 @@ msgid "KRunner plugin installation failed"
 msgstr "Pemasangan plugin KRunner gagal"
 
 #: plugininstaller/main.cpp:48
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "Command to execute: install or uninstall."
+#, kde-format
 msgctxt "@info:shell"
 msgid "Command to execute: install or uninstall"
-msgstr "Perintah untuk mengeksekusi: pasang atau copot."
+msgstr "Perintah untuk mengeksekusi: instal atau hapus instalan"
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
 msgid "Path to archive or extracted folder"
-msgstr ""
+msgstr "Alur untuk mengarsipkan atau mengekstrak folder"
 
 #: plugininstaller/main.cpp:50
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a visual confirmation dialog"
-msgstr ""
+msgstr "Jangan tampilkan dialog konfirmasi visual"
 
 #: plugininstaller/main.cpp:92
 #, kde-format
@@ -167,6 +162,7 @@ msgid ""
 "This plugin executes the following command for starting the \"%1\" service:"
 "<nl/>%2"
 msgstr ""
+"Plugin ini mengeksekusi perintah berikut untuk memulai layanan \"%1\":<nl/>%2"
 
 #: plugininstaller/ScriptConfirmationDialog.h:47
 #, kde-kuit-format

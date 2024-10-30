@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-16 00:41+0000\n"
-"PO-Revision-Date: 2024-04-23 03:21+0700\n"
+"PO-Revision-Date: 2024-10-29 18:22+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: ui/main.qml:23
 #, kde-format
@@ -71,13 +71,13 @@ msgstr "Kencang"
 #, kde-format
 msgctxt "@label"
 msgid "Scrolling:"
-msgstr ""
+msgstr "Pengguliran:"
 
 #: ui/main.qml:123
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
-msgstr ""
+msgstr "Utamakan pengguliran lembut"
 
 #: ui/main.qml:133
 #, kde-format
@@ -88,6 +88,11 @@ msgid ""
 "because they either do not support smooth scrolling, or have their own "
 "setting for enabling and disabling it."
 msgstr ""
+"Pengaturan ini memfungsikan atau menonfungsikan transisi yang dianimasi "
+"ketika menggulir dengan roda mouse atau keyboard. Beberapa aplikasi mungkin "
+"tidak mengindahkan pengaturan ini karena antara belum mendukung pengguliran "
+"halus, atau memiliki pengaturan sendiri untuk memfungsikan dan "
+"menonfungsikannya."
 
 #: ui/main.qml:146
 #, kde-format
@@ -145,26 +150,20 @@ msgid "Middle-click to scroll to clicked location"
 msgstr "Klik-tengah untuk menggulirkan ke lokasi yang diklik"
 
 #: ui/main.qml:255
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@radio part of a complete sentence: 'Middle click pastes selected text'"
-#| msgid "Middle Click:"
+#, kde-format
 msgctxt ""
 "@label for checkbox, part of a complete sentence: 'Middle-click pastes "
 "selected text'"
 msgid "Middle-click:"
-msgstr "Klik Tengah:"
+msgstr "Klik tengah:"
 
 #: ui/main.qml:257
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@radio part of a complete sentence: 'Middle click pastes selected text'"
-#| msgid "Pastes selected text"
+#, kde-format
 msgctxt ""
 "@option:check part of a complete sentence: 'Middle click pastes selected "
 "text'"
 msgid "Pastes selected text"
-msgstr "Menempelkan teks terpilih"
+msgstr "Menempelkan teks yang dipilih"
 
 #: ui/main.qml:274
 #, kde-format
@@ -215,21 +214,18 @@ msgid "Double-click interval:"
 msgstr "Interval klik ganda:"
 
 #: ui/main.qml:370
-#, fuzzy, kde-format
-#| msgid "%1 msec"
-#| msgid_plural "%1 msec"
+#, kde-format
 msgctxt "short for millisecond(s)"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "%1 mdetik"
-msgstr[1] "%1 mdetik"
+msgstr[0] "%1 mdt"
+msgstr[1] "%1 mdt"
 
 #: ui/main.qml:374
-#, fuzzy, kde-format
-#| msgid "msec"
+#, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
-msgstr "mdetik"
+msgstr "mdt"
 
 #: ui/main.qml:388
 #, kde-format
@@ -256,7 +252,7 @@ msgstr "Kecepatan animasi"
 #: workspaceoptions_kdeglobalssettings.kcfg:17
 #, kde-format
 msgid "Smooth scrolling"
-msgstr ""
+msgstr "Pengguliran halus"
 
 #. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21
