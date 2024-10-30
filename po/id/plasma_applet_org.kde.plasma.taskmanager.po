@@ -2,7 +2,7 @@
 # Copyright (C) 2010 This_file_is_part_of_KDE
 # This file is distributed under the same license as the plasma_applet_tasks package.
 # Andhika Padmawan <andhika.padmawan@gmail.com>, 2010-2014.
-# Wantoyo <wantoyek@gmail.com>, 2017, 2018, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2017, 2018, 2019, 2020, 2021, 2022, 2024 Wantoyo <wantoyek@gmail.com>
 # Linerly <linerly@protonmail.com>, 2022.
 # Aziz Adam Adrian <4.adam.adrian@gmail.com>, 2022.
 #
@@ -11,15 +11,15 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-24 03:46+0000\n"
-"PO-Revision-Date: 2022-11-16 22:06+0700\n"
-"Last-Translator: Linerly <linerly@protonmail.com>\n"
-"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-10-29 21:02+0700\n"
+"Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
+"Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -32,35 +32,28 @@ msgid "Behavior"
 msgstr "Perilaku"
 
 #: package/contents/ui/AudioStream.qml:101
-#, fuzzy, kde-format
-#| msgctxt "button to unmute app"
-#| msgid "Unmute %1"
+#, kde-format
 msgctxt "@action:button"
 msgid "Unmute"
-msgstr "Bunyikan %1"
+msgstr "Bunyikan"
 
 #: package/contents/ui/AudioStream.qml:101
-#, fuzzy, kde-format
-#| msgid "Mute"
+#, kde-format
 msgctxt "@action:button"
 msgid "Mute"
-msgstr "Bungkam"
+msgstr "Senyapkan"
 
 #: package/contents/ui/AudioStream.qml:102
-#, fuzzy, kde-format
-#| msgctxt "button to unmute app"
-#| msgid "Unmute %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Unmute %1"
 msgstr "Bunyikan %1"
 
 #: package/contents/ui/AudioStream.qml:102
-#, fuzzy, kde-format
-#| msgctxt "button to mute app"
-#| msgid "Mute %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Mute %1"
-msgstr "Bungkam %1"
+msgstr "Senyapkan %1"
 
 #: package/contents/ui/Badge.qml:54
 #, kde-format
@@ -587,7 +580,7 @@ msgstr "&Tutup"
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
-msgstr ""
+msgstr "Luncurkan %1"
 
 #: package/contents/ui/Task.qml:88
 #, kde-format

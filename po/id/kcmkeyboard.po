@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-05 00:46+0000\n"
-"PO-Revision-Date: 2024-05-09 08:37+0700\n"
+"PO-Revision-Date: 2024-10-29 21:18+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -397,7 +397,7 @@ msgid ""
 "Allows to test keyboard repeat and click volume (just don't forget to apply "
 "the changes)."
 msgstr ""
-"Memungkinkan tes pengulangan papan ketik dan volume klik (hanya jangan lupa "
+"Memungkinkan tes perulangan papan ketik dan volume klik (hanya jangan lupa "
 "untuk menyimpan perubahannya)."
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, numlockGroupBox)
@@ -453,8 +453,8 @@ msgid ""
 "frequency of these keycodes."
 msgstr ""
 "Jika didukung, opsi ini memungkinkan Anda untuk mengatur jeda setelah "
-"penekanan tombol yang akan memunculkan karakter. Opsi 'kecepatan "
-"pengulangan' mengendalikan frekuensi karakter ini."
+"penekanan tombol yang akan memunculkan karakter. Opsi 'kecepatan perulangan' "
+"mengendalikan frekuensi karakter ini."
 
 #. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, kcfg_repeatRate)
 #. i18n: ectx: property (whatsThis), widget (QSlider, rateSlider)
@@ -471,7 +471,7 @@ msgstr ""
 #: kcmmiscwidget.ui:195
 #, kde-format
 msgid " repeats/s"
-msgstr " pengulangan/d"
+msgstr " perulangan/d"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_repeatDelay)
 #: kcmmiscwidget.ui:205
