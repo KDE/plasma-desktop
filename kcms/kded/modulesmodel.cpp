@@ -159,7 +159,7 @@ void ModulesModel::load()
         QString servicePath = module.fileName();
 
         // autoload defaults to false if it is not found
-        const bool autoload = module.value(QStringLiteral("X-KDE-Kded-autoload"), false);
+        const bool autoload = module.value(u"X-KDE-Kded-autoload", false);
 
         // keep estimating dbusModuleName in sync with KDEDModule (kdbusaddons) and kded (kded)
         // currently (KF5) the module name in the D-Bus object path is set by the pluginId
@@ -184,7 +184,7 @@ void ModulesModel::load()
         if (autoload) {
             data.type = KDEDConfig::AutostartType;
             autostartModules << data;
-        } else if (module.value(QStringLiteral("X-KDE-Kded-load-on-demand"), false)) {
+        } else if (module.value(u"X-KDE-Kded-load-on-demand", false)) {
             data.type = KDEDConfig::OnDemandType;
             onDemandModules << data;
         } else {
