@@ -17,9 +17,7 @@ kconfig_add_kcfg_files(kcm_workspace workspaceoptions_kwinsettings.kcfgc GENERAT
 target_link_libraries(kcm_workspace PRIVATE
     KF6::KCMUtilsQuick
     KF6::I18n
-    KF6::KCMUtils
-    KF6::ConfigWidgets
-
+    KF6::ConfigGui
     Qt::DBus
 )
 

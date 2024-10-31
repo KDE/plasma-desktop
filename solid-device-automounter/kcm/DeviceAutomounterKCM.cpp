@@ -12,7 +12,6 @@
 #include <QItemSelectionModel>
 #include <QStandardItem>
 #include <QStandardItemModel>
-#include <kconfigwidgets_version.h>
 
 #include <KAboutData>
 #include <KConfigGroup>

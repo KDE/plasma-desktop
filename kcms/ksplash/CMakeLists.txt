@@ -13,20 +13,15 @@ kconfig_add_kcfg_files(kcm_splashscreen splashscreensettings.kcfgc GENERATE_MOC)
 
 
 target_link_libraries(kcm_splashscreen PRIVATE
-  KF6::KIOWidgets
   KF6::CoreAddons
-  KF6::ConfigWidgets
-  KF6::KCMUtils
+  KF6::ConfigGui
   KF6::KCMUtilsQuick
   KF6::I18n
   Plasma::Plasma
   Plasma::PlasmaQuick
   KF6::NewStuffCore
   KF6::Package
-
   Qt::DBus
-  Qt::Widgets
-  Qt::QuickWidgets
 )
 
 install(FILES splashscreensettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})

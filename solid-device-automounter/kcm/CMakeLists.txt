@@ -27,7 +27,6 @@ target_link_libraries(kcm_device_automounter
                       Qt::DBus
                       KF6::CoreAddons
                       KF6::KCMUtils
-                      KF6::ConfigWidgets
                       KF6::Service
                       KF6::I18n
                       KF6::Solid)
