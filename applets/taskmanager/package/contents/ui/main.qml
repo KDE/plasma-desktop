@@ -403,7 +403,7 @@ PlasmoidItem {
                 }
             }
 
-            LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+            LayoutMirroring.enabled: tasks.shouldBeMirrored(Plasmoid.configuration.reverseMode, Qt.application.layoutDirection, vertical)
             anchors {
                 left: parent.left
                 top: parent.top
@@ -415,7 +415,7 @@ PlasmoidItem {
             TaskList {
                 id: taskList
 
-                LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+                LayoutMirroring.enabled: tasks.shouldBeMirrored(Plasmoid.configuration.reverseMode, Qt.application.layoutDirection, vertical)
                 anchors {
                     left: parent.left
                     top: parent.top
@@ -537,6 +537,18 @@ PlasmoidItem {
             backend,
         });
         return contextMenuComponent.createObject(rootTask, initialArgs);
+    }
+
+    function shouldBeMirrored(reverseMode, layoutDirection, vertical): bool {
+        // LayoutMirroring is only horizontal
+        if (vertical) {
+            return layoutDirection === Qt.RightToLeft;
+        }
+
+        if (layoutDirection === Qt.LeftToRight) {
+            return reverseMode;
+        }
+        return !reverseMode;
     }
 
     Component.onCompleted: {
