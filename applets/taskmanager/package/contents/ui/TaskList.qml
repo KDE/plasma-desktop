@@ -12,12 +12,6 @@ import "code/layoutmetrics.js" as LayoutMetrics
 GridLayout {
     property bool animating: false
 
-    layoutDirection: (Plasmoid.configuration.reverseMode && !tasks.vertical)
-        ? (Qt.application.layoutDirection === Qt.LeftToRight)
-            ? Qt.RightToLeft
-            : Qt.LeftToRight
-        : Qt.application.layoutDirection
-
     rowSpacing: 0
     columnSpacing: 0
 
