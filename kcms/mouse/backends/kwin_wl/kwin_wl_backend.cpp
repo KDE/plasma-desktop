@@ -106,13 +106,22 @@ bool KWinWaylandBackend::save()
 {
     KConfigGroup buttonGroup = mouseButtonRebindsConfigGroup();
 
-    for (const auto &[buttonName, variant] : std::as_const(m_buttonMapping).asKeyValueRange()) {
-        if (const auto keySequence = variant.value<QKeySequence>(); !keySequence.isEmpty()) {
-            const auto value = QStringList{u"Key"_s, keySequence.toString(QKeySequence::PortableText)};
-            buttonGroup.writeEntry(buttonName, value, KConfig::Notify);
-        } else {
-            buttonGroup.deleteEntry(buttonName, KConfig::Notify);
+    for (const auto &[deviceName, mappings] : m_changedButtonMapping.asKeyValueRange()) {
+        KConfigGroup deviceGroup = buttonGroup.group(deviceName);
+        for (const auto &[buttonName, variant] : std::as_const(mappings).asKeyValueRange()) {
+            if (const auto keySequence = variant.value<QKeySequence>(); !keySequence.isEmpty()) {
+                const auto value = QStringList{u"Key"_s, keySequence.toString(QKeySequence::PortableText)};
+                deviceGroup.writeEntry(buttonName, value, KConfig::Notify);
+            } else {
+                deviceGroup.deleteEntry(buttonName, KConfig::Notify);
+            }
         }
+    }
+
+    // We copied these global keys to each device on load, so we can clear out
+    // any global keys now.
+    for (const QString &key : buttonGroup.keyList()) {
+        buttonGroup.deleteEntry(key);
     }
 
     return forAllDevices(&KWinWaylandDevice::save);
@@ -120,19 +129,25 @@ bool KWinWaylandBackend::save()
 
 bool KWinWaylandBackend::load()
 {
-    m_loadedButtonMapping.clear();
-    const KConfigGroup buttonGroup = mouseButtonRebindsConfigGroup();
+    KConfigGroup buttonGroup = mouseButtonRebindsConfigGroup();
 
-    for (int i = 1; i <= 24; ++i) {
-        const auto buttonName = QLatin1String("ExtraButton%1").arg(QString::number(i));
-        const auto entry = buttonGroup.readEntry(buttonName, QStringList());
-        if (entry.size() == 2 && entry.first() == QLatin1String("Key")) {
-            if (const auto keySequence = QKeySequence::fromString(entry.at(1), QKeySequence::PortableText); !keySequence.isEmpty()) {
-                m_loadedButtonMapping.insert(buttonName, keySequence);
-            }
+    // Bindings config should be per-device now, so if global bindings exist,
+    // migrate them to each device we know of.
+    if (const QStringList &keyList = buttonGroup.keyList(); !keyList.isEmpty()) {
+        QSet<QString> deviceNames;
+
+        for (const auto &device : m_devices) {
+            deviceNames << device.get()->name();
+        }
+
+        for (const QString &deviceConfigKey : buttonGroup.groupList()) {
+            deviceNames << deviceConfigKey;
+        }
+
+        for (const QString &deviceName : deviceNames) {
+            setButtonMapping(deviceName, buttonMapping(deviceName));
         }
     }
-    setButtonMapping(m_loadedButtonMapping);
 
     return forAllDevices(&KWinWaylandDevice::init);
 }
@@ -144,21 +159,49 @@ bool KWinWaylandBackend::defaults()
 
 bool KWinWaylandBackend::isSaveNeeded() const
 {
-    return m_buttonMapping != m_loadedButtonMapping || std::ranges::any_of(std::as_const(m_devices), [](const std::unique_ptr<KWinWaylandDevice> &device) {
-               return device->isSaveNeeded();
-           });
+    return !m_changedButtonMapping.isEmpty() || std::ranges::any_of(std::as_const(m_devices), [](const std::unique_ptr<KWinWaylandDevice> &device) {
+        return device->isSaveNeeded();
+    });
 }
 
-QVariantMap KWinWaylandBackend::buttonMapping() const
+QVariantMap KWinWaylandBackend::buttonMapping(const QVariant deviceName) const
 {
-    return m_buttonMapping;
+    const QString deviceNameString = deviceName.toString();
+    const KConfigGroup mouseGroup = mouseButtonRebindsConfigGroup();
+    QVariantMap buttonMapping;
+
+    const auto loadConfigGroup = [&](const KConfigGroup &configGroup) {
+        const auto deviceKeys = configGroup.keyList();
+        for (const QString &buttonName : deviceKeys) {
+            const auto action = configGroup.readEntry(buttonName, QStringList());
+            if (action.size() == 2 && action.first() == QLatin1String("Key")) {
+                const auto keySequence = QKeySequence::fromString(action.at(1), QKeySequence::PortableText);
+                if (!keySequence.isEmpty()) {
+                    buttonMapping.insert(buttonName, keySequence);
+                }
+            }
+        }
+    };
+
+    loadConfigGroup(mouseGroup);
+
+    if (!deviceNameString.isEmpty()) {
+        loadConfigGroup(mouseGroup.group(deviceNameString));
+    }
+
+    return buttonMapping;
 }
 
-void KWinWaylandBackend::setButtonMapping(const QVariantMap &mapping)
+void KWinWaylandBackend::setButtonMapping(const QVariant deviceName, const QVariantMap &mapping)
 {
-    if (m_buttonMapping != mapping) {
-        m_buttonMapping = mapping;
-        Q_EMIT buttonMappingChanged();
+    if (mapping.isEmpty()) {
+        return;
+    }
+
+    const QString deviceNameString = deviceName.toString();
+    if (!deviceNameString.isEmpty()) {
+        m_changedButtonMapping.insert(deviceNameString, mapping);
+        Q_EMIT needsSaveChanged();
     }
 }
 
