@@ -210,7 +210,7 @@ PlasmoidItem {
 
         property Item toolTip
 
-        text: toolTip ? toolTip.text : ""
+        text: toolTip ? toolTip.mainText : ""
         textFormat: Text.PlainText
     }
 
