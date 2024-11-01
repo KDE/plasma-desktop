@@ -32,23 +32,6 @@ KCMUtils.SimpleKCM {
         return (device?.supportedButtons ?? 0) & ~(Qt.LeftButton | Qt.RightButton | Qt.MiddleButton);
     }
 
-    actions: Kirigami.Action  {
-        icon.name: "input-mouse-click-left-symbolic"
-        text: i18ndc("kcmmouse", "@action:button", "Configure Extra Buttons…")
-
-        visible: {
-            if (root.backend.isAnonymousInputDevice) {
-                return false;
-            }
-            return root.backend.buttonMappingCount > 0
-                || root.backend.inputDevices.some(root.supportsExtraButtons);
-        }
-
-        onTriggered: source => {
-            root.KCMUtils.ConfigModule.push("bindings.qml");
-        }
-    }
-
     header: Header {
         saveLoadMessage: root.KCMUtils.ConfigModule.saveLoadMessage
         hotplugMessage: root.KCMUtils.ConfigModule.hotplugMessage
@@ -352,6 +335,23 @@ KCMUtils.SimpleKCM {
             QQC2.ToolTip.delay: 1000
             QQC2.ToolTip.visible: hovered
             QQC2.ToolTip.text: i18nd("kcmmouse", "Scrolling with the mouse while the middle button is pressed.")
+        }
+
+        QQC2.Button {
+            icon.name: "input-mouse-click-left-symbolic"
+            text: i18ndc("kcmmouse", "@action:button", "Configure Extra Buttons…")
+
+            visible: {
+                if (root.backend.isAnonymousInputDevice) {
+                    return false;
+                }
+                return root.backend.buttonMappingCount > 0
+                    || root.backend.inputDevices.some(root.supportsExtraButtons);
+            }
+
+            onClicked: source => {
+                root.KCMUtils.ConfigModule.push("bindings.qml", {deviceName: deviceSelector.currentText});
+            }
         }
     }
 }

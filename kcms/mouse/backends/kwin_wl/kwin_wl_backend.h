@@ -32,8 +32,8 @@ public:
     int deviceCount() const override;
     QList<InputDevice *> inputDevices() const override;
 
-    QVariantMap buttonMapping() const override;
-    void setButtonMapping(const QVariantMap &mapping) override;
+    Q_INVOKABLE QVariantMap buttonMapping(const QVariant deviceName) const override;
+    Q_INVOKABLE void setButtonMapping(const QVariant deviceName, const QVariantMap &mapping) override;
 
 private Q_SLOTS:
     void onDeviceAdded(QString);
@@ -48,8 +48,7 @@ private:
 
     std::unique_ptr<QDBusInterface> m_deviceManager;
     std::vector<std::unique_ptr<KWinWaylandDevice>> m_devices;
-    QVariantMap m_buttonMapping;
-    QVariantMap m_loadedButtonMapping;
+    QMap<QString, QVariantMap> m_changedButtonMapping;
 
     QString m_errorString;
 };
