@@ -263,7 +263,7 @@ Kirigami.Dialog {
                     model: [
                         { value: 0, text: i18ndc("kcm_tablet", "@action:inmenu Stylus button", "Button 1") },
                         { value: 1, text: i18ndc("kcm_tablet", "@action:inmenu Stylus button", "Button 2") },
-                        { value: 2, text: i18ndc("kcm_tablet", "@action:inmenu Stylus button", "Button 2") }
+                        { value: 2, text: i18ndc("kcm_tablet", "@action:inmenu Stylus button", "Button 3") }
                     ]
 
                     onActivated: actionDialog.inputSequence.setPenButton(currentValue)
