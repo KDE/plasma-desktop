@@ -23,6 +23,10 @@ KCMUtils.SimpleKCM {
     id: root
 
     readonly property Mouse.KWinWaylandBackend backend: KCMUtils.ConfigModule.inputBackend
+    property string deviceName
+    property var buttonMapping: backend?.buttonMapping(deviceName)
+
+    onButtonMappingChanged: backend?.setButtonMapping(deviceName, buttonMapping)
 
     title: i18ndc("kcmmouse", "@title", "Extra Mouse Buttons")
 
@@ -62,7 +66,7 @@ KCMUtils.SimpleKCM {
             Repeater {
                 id: buttonMappings
 
-                model: extraButtons.filter(entry => entry.buttonName in root.backend.buttonMapping) ?? []
+                model: extraButtons.filter(entry => entry.buttonName in root.buttonMapping) ?? []
 
                 readonly property var extraButtons: Array.from({length: 24}, (value, index) => ({
                     buttonName: "ExtraButton" + (index + 1),
@@ -75,16 +79,16 @@ KCMUtils.SimpleKCM {
 
                     Kirigami.FormData.label: modelData.label
 
-                    keySequence: root.backend.buttonMapping[modelData.buttonName]
+                    keySequence: root.buttonMapping[modelData.buttonName]
 
                     patterns: ShortcutPattern.Modifier | ShortcutPattern.Key | ShortcutPattern.ModifierAndKey
                     multiKeyShortcutsAllowed: false
                     checkForConflictsAgainst: KQuickControls.ShortcutType.None
 
                     onCaptureFinished: {
-                        const copy = root.backend.buttonMapping;
+                        const copy = root.buttonMapping;
                         copy[modelData.buttonName] = keySequence
-                        root.backend.buttonMapping = copy
+                        root.buttonMapping = copy
                     }
                 }
             }
@@ -137,9 +141,9 @@ KCMUtils.SimpleKCM {
                     visible = false
                     newBinding.visible = true
                     newBinding.checked = false
-                    const copy = root.backend.buttonMapping;
+                    const copy = root.buttonMapping;
                     copy[buttonCapture.lastButton.buttonName] = keySequence
-                    root.backend.buttonMapping = copy
+                    root.buttonMapping = copy
                 }
             }
         }
