@@ -369,6 +369,10 @@ SimpleKCM {
                     Component.onCompleted: reloadSettings()
 
                     function reloadSettings(): void {
+                        if (!form.device) {
+                            return;
+                        }
+
                         const points = kcm.fromSerializedCurve(form.device.pressureCurve);
                         if (points.length === 2) {
                             pressureCurve.controlPoint1 = points[0];
@@ -378,6 +382,10 @@ SimpleKCM {
                     }
 
                     function saveSettings(): void {
+                        if (!form.device) {
+                            return;
+                        }
+
                         form.device.pressureCurve = kcm.toSerializedCurve(pressureCurve.controlPoint1, pressureCurve.controlPoint2);
                     }
 
