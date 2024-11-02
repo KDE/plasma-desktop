@@ -19,8 +19,6 @@ QQC2.Control {
     property point controlPoint1: Qt.point(0.0, 0.0)
     property point controlPoint2: Qt.point(1.0, 1.0)
 
-    property bool fullyInitialized: false
-
     implicitWidth: 220
     implicitHeight: 220
 
