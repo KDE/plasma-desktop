@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-15 00:41+0000\n"
+"POT-Creation-Date: 2024-11-03 00:41+0000\n"
 "PO-Revision-Date: 2024-10-21 12:25+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -17,135 +17,171 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: inputsequence.cpp:135
+#: inputsequence.cpp:172
 #, kde-format
 msgctxt "@action:button This action is disabled"
 msgid "Disabled"
 msgstr "Dishabilitate"
 
-#: inputsequence.cpp:138
+#: inputsequence.cpp:175
 #, kde-format
 msgctxt "@action:button There is no keybinding"
 msgid "None"
 msgstr "Necun"
 
-#: inputsequence.cpp:145
+#: inputsequence.cpp:182
 #, kde-format
 msgctxt "@action:button"
 msgid "Left mouse button"
 msgstr "Button de mus sinistre"
 
-#: inputsequence.cpp:147
+#: inputsequence.cpp:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Right mouse button"
 msgstr "Button de mus dextere"
 
-#: inputsequence.cpp:149
+#: inputsequence.cpp:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Middle mouse button"
 msgstr "Button de centro de mus"
 
-#: inputsequence.cpp:155
+#: inputsequence.cpp:192
 #, kde-format
 msgctxt "@action:button"
 msgid "Application-defined"
 msgstr "Definite per application"
 
-#: kcmtablet.cpp:34
+#: inputsequence.cpp:194
+#, fuzzy, kde-format
+#| msgid "Pen button 1:"
+msgctxt "@action:button"
+msgid "Pen Button %1"
+msgstr "Button de penna 1:"
+
+#: kcmtablet.cpp:35
 #, kde-format
 msgid "Default"
 msgstr "Predefinite"
 
-#: kcmtablet.cpp:35
+#: kcmtablet.cpp:36
 #, kde-format
 msgid "Portrait"
 msgstr "Vertical"
 
-#: kcmtablet.cpp:36
+#: kcmtablet.cpp:37
 #, kde-format
 msgid "Landscape"
 msgstr "Orientation horizontal"
 
-#: kcmtablet.cpp:37
+#: kcmtablet.cpp:38
 #, kde-format
 msgid "Inverted Portrait"
 msgstr "Orientation vertical invertite"
 
-#: kcmtablet.cpp:38
+#: kcmtablet.cpp:39
 #, kde-format
 msgid "Inverted Landscape"
 msgstr "Orientation horizontal Invertite"
 
-#: kcmtablet.cpp:88
+#: kcmtablet.cpp:89
 #, kde-format
 msgid "Follow the Current Screen"
 msgstr "Seque le schermo currente"
 
-#: kcmtablet.cpp:93
+#: kcmtablet.cpp:94
 #, kde-format
 msgid "All Screens"
 msgstr "Omne Schermos"
 
-#: kcmtablet.cpp:102
+#: kcmtablet.cpp:103
 #, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 - (%2,%3 %4x%5)"
 
-#: kcmtablet.cpp:162
+#: kcmtablet.cpp:163
 #, kde-format
 msgid "Fit to Screen"
 msgstr "Adaota a Schermo"
 
-#: kcmtablet.cpp:163
+#: kcmtablet.cpp:164
 #, kde-format
 msgid "Keep Aspect Ratio and Fit Within Screen"
 msgstr "Mantene rata de aspecto e adapta intra schermo"
 
-#: kcmtablet.cpp:164
+#: kcmtablet.cpp:165
 #, kde-format
 msgid "Map to Portion of Screen"
 msgstr "Mappa al portion de schermo"
 
-#: ui/ActionDialog.qml:24
+#: kcmtablet.cpp:290
+#, fuzzy, kde-format
+#| msgid "Pen button 1:"
+msgctxt "Stylus pen button"
+msgid "Pen button %1:"
+msgstr "Button de penna 1:"
+
+#: kcmtablet.cpp:291
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@info Meant to be inserted into an existing sentence like 'configuring "
+#| "pen button 1'"
+#| msgid "pen button 1"
+msgctxt ""
+"@info Meant to be inserted into an existing sentence like 'configuring pen "
+"button X'"
+msgid "pen button %1"
+msgstr "Button de penna 1"
+
+#: ui/ActionDialog.qml:25
 #, kde-format
 msgctxt "@title Select the action for the tablet button"
 msgid "Select Button Action"
 msgstr "Selige Action de Button"
 
-#: ui/ActionDialog.qml:70
+#: ui/ActionDialog.qml:74
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when pressing %1:"
 msgstr "Selige qual action essera prendite quando on pressa %1:"
 
-#: ui/ActionDialog.qml:84
+#: ui/ActionDialog.qml:88
 #, kde-format
 msgctxt "@option:radio Set this action to an application-defined type"
 msgid "Defer to application"
 msgstr "Differe a application"
 
-#: ui/ActionDialog.qml:99
+#: ui/ActionDialog.qml:103
 #, kde-format
 msgctxt "@option:radio Set this action to a keyboard type"
 msgid "Send keyboard key"
 msgstr "Invia clave de claviero"
 
-#: ui/ActionDialog.qml:113
+#: ui/ActionDialog.qml:117
 #, kde-format
 msgctxt "@option:radio Set this action to a mouse type"
 msgid "Send mouse button click"
 msgstr "Invia click de button de mus"
 
-#: ui/ActionDialog.qml:129
+#: ui/ActionDialog.qml:132
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@info Meant to be inserted into an existing sentence like 'configuring "
+#| "pen button 1'"
+#| msgid "pen button 1"
+msgctxt "@option:radio Set this action to a pen button type"
+msgid "Send pen button"
+msgstr "Button de penna 1"
+
+#: ui/ActionDialog.qml:150
 #, kde-format
 msgctxt "@option:radio Disable this action"
 msgid "Do nothing"
 msgstr "Nihil Facer"
 
-#: ui/ActionDialog.qml:149
+#: ui/ActionDialog.qml:170
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -155,49 +191,76 @@ msgstr ""
 "Iste tabletta es inviate al application in foco, que pote decider como "
 "manear lo."
 
-#: ui/ActionDialog.qml:177
+#: ui/ActionDialog.qml:198
 #, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left-click"
 msgstr "Click sinistre"
 
-#: ui/ActionDialog.qml:178
+#: ui/ActionDialog.qml:199
 #, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle-click"
 msgstr "Click in medio"
 
-#: ui/ActionDialog.qml:179
+#: ui/ActionDialog.qml:200
 #, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right-click"
 msgstr "Pulsa a dextera:"
 
-#: ui/ActionDialog.qml:206
+#: ui/ActionDialog.qml:227
 #, kde-format
 msgctxt "@option:check The ctrl modifier on the keyboard"
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: ui/ActionDialog.qml:213
+#: ui/ActionDialog.qml:234
 #, kde-format
 msgctxt "@option:check The alt modifier on the keyboard"
 msgid "Alt"
 msgstr "Alt"
 
-#: ui/ActionDialog.qml:220
+#: ui/ActionDialog.qml:241
 #, kde-format
 msgctxt "@option:check The meta modifier on the keyboard"
 msgid "Meta"
 msgstr "Meta"
 
-#: ui/ActionDialog.qml:227
+#: ui/ActionDialog.qml:248
 #, kde-format
 msgctxt "@option:check The shift modifier on the keyboard"
 msgid "Shift"
 msgstr "Shift"
 
-#: ui/ActionDialog.qml:235
+#: ui/ActionDialog.qml:264
+#, fuzzy, kde-format
+#| msgid "Tool Button 1"
+msgctxt "@action:inmenu Stylus button"
+msgid "Button 1"
+msgstr "Button de Instrumento 1"
+
+#: ui/ActionDialog.qml:265
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@info Meant to be inserted into an existing sentence like 'configuring "
+#| "pen button 2'"
+#| msgid "pen button 2"
+msgctxt "@action:inmenu Stylus button"
+msgid "Button 2"
+msgstr "Button de penna 2"
+
+#: ui/ActionDialog.qml:266
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@info Meant to be inserted into an existing sentence like 'configuring "
+#| "pen button 3'"
+#| msgid "pen button 3"
+msgctxt "@action:inmenu Stylus button"
+msgid "Button 3"
+msgstr "Button de penna 3"
+
+#: ui/ActionDialog.qml:275
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
@@ -330,75 +393,36 @@ msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: ui/main.qml:305
-#, kde-format
-msgid "Pen button 1:"
-msgstr "Button de penna 1:"
-
-#: ui/main.qml:306
-#, kde-format
-msgctxt ""
-"@info Meant to be inserted into an existing sentence like 'configuring pen "
-"button 1'"
-msgid "pen button 1"
-msgstr "Button de penna 1"
-
-#: ui/main.qml:310
-#, kde-format
-msgid "Pen button 2:"
-msgstr "Button de penna 2:"
-
-#: ui/main.qml:311
-#, kde-format
-msgctxt ""
-"@info Meant to be inserted into an existing sentence like 'configuring pen "
-"button 2'"
-msgid "pen button 2"
-msgstr "Button de penna 2"
-
-#: ui/main.qml:315
-#, kde-format
-msgid "Pen button 3:"
-msgstr "Button de penna 3:"
-
-#: ui/main.qml:316
-#, kde-format
-msgctxt ""
-"@info Meant to be inserted into an existing sentence like 'configuring pen "
-"button 3'"
-msgid "pen button 3"
-msgstr "Button de penna 3"
-
-#: ui/main.qml:365
+#: ui/main.qml:352
 #, kde-format
 msgid "Pen Pressure:"
 msgstr "Pression de Penna:"
 
-#: ui/main.qml:408
+#: ui/main.qml:403
 #, kde-format
 msgctxt "Low pen pressure"
 msgid "Low Pressure"
 msgstr "Basse Pression"
 
-#: ui/main.qml:416
+#: ui/main.qml:411
 #, kde-format
 msgctxt "High pen pressure"
 msgid "High Pressure"
 msgstr "Alte Pression"
 
-#: ui/main.qml:427
+#: ui/main.qml:422
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr "100%"
 
-#: ui/main.qml:435
+#: ui/main.qml:430
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr "0%"
 
-#: ui/main.qml:439
+#: ui/main.qml:434
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -408,47 +432,47 @@ msgstr ""
 "Iste curva controla lerelationes inter lepressiones sur le penna e le "
 "valores de pression recipite per le applicationes."
 
-#: ui/main.qml:450
+#: ui/main.qml:445
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "Calibration in progresso"
 
-#: ui/main.qml:452
+#: ui/main.qml:447
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "Calibrar"
 
-#: ui/main.qml:455
+#: ui/main.qml:450
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "Calibration non supportate"
 
-#: ui/main.qml:488
+#: ui/main.qml:483
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
 msgstr "Calibration trans multiple schermos non es supportate."
 
-#: ui/main.qml:498
+#: ui/main.qml:493
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr "Reimple (Pad):"
 
-#: ui/main.qml:509
+#: ui/main.qml:504
 #, kde-format
 msgid "None"
 msgstr "Necun"
 
-#: ui/main.qml:534
+#: ui/main.qml:529
 #, kde-format
 msgid "Pad button %1:"
 msgstr "Button de tampon (pad)  %1:"
 
-#: ui/main.qml:537
+#: ui/main.qml:532
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
@@ -492,6 +516,12 @@ msgctxt "Clear the event log"
 msgid "Clear"
 msgstr "Netta"
 
+#~ msgid "Pen button 2:"
+#~ msgstr "Button de penna 2:"
+
+#~ msgid "Pen button 3:"
+#~ msgstr "Button de penna 3:"
+
 #~ msgid "Not Supported"
 #~ msgstr "Non supportate"
 
@@ -512,9 +542,6 @@ msgstr "Netta"
 
 #~ msgid "Area:"
 #~ msgstr "Area:"
-
-#~ msgid "Tool Button 1"
-#~ msgstr "Button de Instrumento 1"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-15 00:41+0000\n"
+"POT-Creation-Date: 2024-11-03 00:41+0000\n"
 "PO-Revision-Date: 2024-10-16 01:45+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,135 +19,171 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.4.2\n"
 
-#: inputsequence.cpp:135
+#: inputsequence.cpp:172
 #, kde-format
 msgctxt "@action:button This action is disabled"
 msgid "Disabled"
 msgstr "Išjungtas"
 
-#: inputsequence.cpp:138
+#: inputsequence.cpp:175
 #, kde-format
 msgctxt "@action:button There is no keybinding"
 msgid "None"
 msgstr "Nėra"
 
-#: inputsequence.cpp:145
+#: inputsequence.cpp:182
 #, kde-format
 msgctxt "@action:button"
 msgid "Left mouse button"
 msgstr "Kairysis pelės mygtukas"
 
-#: inputsequence.cpp:147
+#: inputsequence.cpp:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Right mouse button"
 msgstr "Dešinysis pelės mygtukas"
 
-#: inputsequence.cpp:149
+#: inputsequence.cpp:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Middle mouse button"
 msgstr "Vidurinysis pelės mygtukas"
 
-#: inputsequence.cpp:155
+#: inputsequence.cpp:192
 #, kde-format
 msgctxt "@action:button"
 msgid "Application-defined"
 msgstr "Apibrėžtas programos"
 
-#: kcmtablet.cpp:34
+#: inputsequence.cpp:194
+#, fuzzy, kde-format
+#| msgid "Pen button 1:"
+msgctxt "@action:button"
+msgid "Pen Button %1"
+msgstr "Rašiklio mygtukas 1:"
+
+#: kcmtablet.cpp:35
 #, kde-format
 msgid "Default"
 msgstr "Numatytasis"
 
-#: kcmtablet.cpp:35
+#: kcmtablet.cpp:36
 #, kde-format
 msgid "Portrait"
 msgstr "Stačiai"
 
-#: kcmtablet.cpp:36
+#: kcmtablet.cpp:37
 #, kde-format
 msgid "Landscape"
 msgstr "Gulsčiai"
 
-#: kcmtablet.cpp:37
+#: kcmtablet.cpp:38
 #, kde-format
 msgid "Inverted Portrait"
 msgstr "Invertuotai stačiai"
 
-#: kcmtablet.cpp:38
+#: kcmtablet.cpp:39
 #, kde-format
 msgid "Inverted Landscape"
 msgstr "Invertuotai gulsčiai"
 
-#: kcmtablet.cpp:88
+#: kcmtablet.cpp:89
 #, kde-format
 msgid "Follow the Current Screen"
 msgstr "Sekti paskui dabartinį ekraną"
 
-#: kcmtablet.cpp:93
+#: kcmtablet.cpp:94
 #, kde-format
 msgid "All Screens"
 msgstr "Visi ekranai"
 
-#: kcmtablet.cpp:102
+#: kcmtablet.cpp:103
 #, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 - (%2,%3 %4×%5)"
 
-#: kcmtablet.cpp:162
+#: kcmtablet.cpp:163
 #, kde-format
 msgid "Fit to Screen"
 msgstr "Įtalpinti į ekraną"
 
-#: kcmtablet.cpp:163
+#: kcmtablet.cpp:164
 #, kde-format
 msgid "Keep Aspect Ratio and Fit Within Screen"
 msgstr "Išlaikyti proporcijas ir įtalpinti į ekraną"
 
-#: kcmtablet.cpp:164
+#: kcmtablet.cpp:165
 #, kde-format
 msgid "Map to Portion of Screen"
 msgstr "Susieti su ekrano dalimi"
 
-#: ui/ActionDialog.qml:24
+#: kcmtablet.cpp:290
+#, fuzzy, kde-format
+#| msgid "Pen button 1:"
+msgctxt "Stylus pen button"
+msgid "Pen button %1:"
+msgstr "Rašiklio mygtukas 1:"
+
+#: kcmtablet.cpp:291
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@info Meant to be inserted into an existing sentence like 'configuring "
+#| "pen button 1'"
+#| msgid "pen button 1"
+msgctxt ""
+"@info Meant to be inserted into an existing sentence like 'configuring pen "
+"button X'"
+msgid "pen button %1"
+msgstr "rašiklio mygtukas 1"
+
+#: ui/ActionDialog.qml:25
 #, kde-format
 msgctxt "@title Select the action for the tablet button"
 msgid "Select Button Action"
 msgstr "Pasirinkite mygtuko veiksmą"
 
-#: ui/ActionDialog.qml:70
+#: ui/ActionDialog.qml:74
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when pressing %1:"
 msgstr "Pasirinkite, koks veiksmas bus vykdomas, kai bus paspaustas %1:"
 
-#: ui/ActionDialog.qml:84
+#: ui/ActionDialog.qml:88
 #, kde-format
 msgctxt "@option:radio Set this action to an application-defined type"
 msgid "Defer to application"
 msgstr "Atidėti programai"
 
-#: ui/ActionDialog.qml:99
+#: ui/ActionDialog.qml:103
 #, kde-format
 msgctxt "@option:radio Set this action to a keyboard type"
 msgid "Send keyboard key"
 msgstr "Siųsti klaviatūros klavišą"
 
-#: ui/ActionDialog.qml:113
+#: ui/ActionDialog.qml:117
 #, kde-format
 msgctxt "@option:radio Set this action to a mouse type"
 msgid "Send mouse button click"
 msgstr "Siųsti pelės mygtuko spustelėjimą"
 
-#: ui/ActionDialog.qml:129
+#: ui/ActionDialog.qml:132
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@info Meant to be inserted into an existing sentence like 'configuring "
+#| "pen button 1'"
+#| msgid "pen button 1"
+msgctxt "@option:radio Set this action to a pen button type"
+msgid "Send pen button"
+msgstr "rašiklio mygtukas 1"
+
+#: ui/ActionDialog.qml:150
 #, kde-format
 msgctxt "@option:radio Disable this action"
 msgid "Do nothing"
 msgstr "Nieko nedaryti"
 
-#: ui/ActionDialog.qml:149
+#: ui/ActionDialog.qml:170
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -157,49 +193,79 @@ msgstr ""
 "Šis planšetės mygtukas yra persiunčiamas sufokusuotai programai, kuri galės "
 "nuspręsti, kaip jį apdoroti."
 
-#: ui/ActionDialog.qml:177
+#: ui/ActionDialog.qml:198
 #, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left-click"
 msgstr "Kairiojo mygtuko spustelėjimas"
 
-#: ui/ActionDialog.qml:178
+#: ui/ActionDialog.qml:199
 #, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle-click"
 msgstr "Viduriniojo mygtuko spustelėjimas"
 
-#: ui/ActionDialog.qml:179
+#: ui/ActionDialog.qml:200
 #, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right-click"
 msgstr "Dešiniojo mygtuko spustelėjimas"
 
-#: ui/ActionDialog.qml:206
+#: ui/ActionDialog.qml:227
 #, kde-format
 msgctxt "@option:check The ctrl modifier on the keyboard"
 msgid "Ctrl"
 msgstr "Vald"
 
-#: ui/ActionDialog.qml:213
+#: ui/ActionDialog.qml:234
 #, kde-format
 msgctxt "@option:check The alt modifier on the keyboard"
 msgid "Alt"
 msgstr "Alt"
 
-#: ui/ActionDialog.qml:220
+#: ui/ActionDialog.qml:241
 #, kde-format
 msgctxt "@option:check The meta modifier on the keyboard"
 msgid "Meta"
 msgstr "Meta"
 
-#: ui/ActionDialog.qml:227
+#: ui/ActionDialog.qml:248
 #, kde-format
 msgctxt "@option:check The shift modifier on the keyboard"
 msgid "Shift"
 msgstr "Lyg2"
 
-#: ui/ActionDialog.qml:235
+#: ui/ActionDialog.qml:264
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@info Meant to be inserted into an existing sentence like 'configuring "
+#| "pen button 1'"
+#| msgid "pen button 1"
+msgctxt "@action:inmenu Stylus button"
+msgid "Button 1"
+msgstr "rašiklio mygtukas 1"
+
+#: ui/ActionDialog.qml:265
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@info Meant to be inserted into an existing sentence like 'configuring "
+#| "pen button 2'"
+#| msgid "pen button 2"
+msgctxt "@action:inmenu Stylus button"
+msgid "Button 2"
+msgstr "rašiklio mygtukas 2"
+
+#: ui/ActionDialog.qml:266
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@info Meant to be inserted into an existing sentence like 'configuring "
+#| "pen button 3'"
+#| msgid "pen button 3"
+msgctxt "@action:inmenu Stylus button"
+msgid "Button 3"
+msgstr "rašiklio mygtukas 3"
+
+#: ui/ActionDialog.qml:275
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
@@ -331,75 +397,36 @@ msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: ui/main.qml:305
-#, kde-format
-msgid "Pen button 1:"
-msgstr "Rašiklio mygtukas 1:"
-
-#: ui/main.qml:306
-#, kde-format
-msgctxt ""
-"@info Meant to be inserted into an existing sentence like 'configuring pen "
-"button 1'"
-msgid "pen button 1"
-msgstr "rašiklio mygtukas 1"
-
-#: ui/main.qml:310
-#, kde-format
-msgid "Pen button 2:"
-msgstr "Rašiklio mygtukas 2:"
-
-#: ui/main.qml:311
-#, kde-format
-msgctxt ""
-"@info Meant to be inserted into an existing sentence like 'configuring pen "
-"button 2'"
-msgid "pen button 2"
-msgstr "rašiklio mygtukas 2"
-
-#: ui/main.qml:315
-#, kde-format
-msgid "Pen button 3:"
-msgstr "Rašiklio mygtukas 3:"
-
-#: ui/main.qml:316
-#, kde-format
-msgctxt ""
-"@info Meant to be inserted into an existing sentence like 'configuring pen "
-"button 3'"
-msgid "pen button 3"
-msgstr "rašiklio mygtukas 3"
-
-#: ui/main.qml:365
+#: ui/main.qml:352
 #, kde-format
 msgid "Pen Pressure:"
 msgstr "Rašiklio spaudimas:"
 
-#: ui/main.qml:408
+#: ui/main.qml:403
 #, kde-format
 msgctxt "Low pen pressure"
 msgid "Low Pressure"
 msgstr "Žemas spaudimas"
 
-#: ui/main.qml:416
+#: ui/main.qml:411
 #, kde-format
 msgctxt "High pen pressure"
 msgid "High Pressure"
 msgstr "Didelis spaudimas"
 
-#: ui/main.qml:427
+#: ui/main.qml:422
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr "100%"
 
-#: ui/main.qml:435
+#: ui/main.qml:430
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr "0%"
 
-#: ui/main.qml:439
+#: ui/main.qml:434
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -409,47 +436,47 @@ msgstr ""
 "Ši kreivė valdo santykį tarp spaudimo ant rašiklio ir spaudimo reikšmių, "
 "kurias gauna programos."
 
-#: ui/main.qml:450
+#: ui/main.qml:445
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "Vyksta kalibravimas"
 
-#: ui/main.qml:452
+#: ui/main.qml:447
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "Kalibruoti"
 
-#: ui/main.qml:455
+#: ui/main.qml:450
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "Kalibravimas nepalaikomas"
 
-#: ui/main.qml:488
+#: ui/main.qml:483
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
 msgstr "Kalibravimas per kelis ekranus yra nepalaikomas."
 
-#: ui/main.qml:498
+#: ui/main.qml:493
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr "Kilimėlis:"
 
-#: ui/main.qml:509
+#: ui/main.qml:504
 #, kde-format
 msgid "None"
 msgstr "Nėra"
 
-#: ui/main.qml:534
+#: ui/main.qml:529
 #, kde-format
 msgid "Pad button %1:"
 msgstr "Kilimėlio mygtukas %1:"
 
-#: ui/main.qml:537
+#: ui/main.qml:532
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
@@ -492,6 +519,12 @@ msgstr ""
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr "Išvalyti"
+
+#~ msgid "Pen button 2:"
+#~ msgstr "Rašiklio mygtukas 2:"
+
+#~ msgid "Pen button 3:"
+#~ msgstr "Rašiklio mygtukas 3:"
 
 #~ msgid "Not Supported"
 #~ msgstr "Nepalaikoma"

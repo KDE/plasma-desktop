@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-15 00:41+0000\n"
+"POT-Creation-Date: 2024-11-03 00:41+0000\n"
 "PO-Revision-Date: 2024-09-07 20:30+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -17,135 +17,171 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.08.0\n"
 
-#: inputsequence.cpp:135
+#: inputsequence.cpp:172
 #, kde-format
 msgctxt "@action:button This action is disabled"
 msgid "Disabled"
 msgstr "முடக்கப்பட்டுள்ளது"
 
-#: inputsequence.cpp:138
+#: inputsequence.cpp:175
 #, kde-format
 msgctxt "@action:button There is no keybinding"
 msgid "None"
 msgstr "ஏதுமில்லை"
 
-#: inputsequence.cpp:145
+#: inputsequence.cpp:182
 #, kde-format
 msgctxt "@action:button"
 msgid "Left mouse button"
 msgstr "இடது சுட்டி பட்டன்"
 
-#: inputsequence.cpp:147
+#: inputsequence.cpp:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Right mouse button"
 msgstr "வலது சுட்டி பட்டன்"
 
-#: inputsequence.cpp:149
+#: inputsequence.cpp:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Middle mouse button"
 msgstr "நடு சுட்டி பட்டன்"
 
-#: inputsequence.cpp:155
+#: inputsequence.cpp:192
 #, kde-format
 msgctxt "@action:button"
 msgid "Application-defined"
 msgstr "செயலியால் வகுக்கப்படுவது"
 
-#: kcmtablet.cpp:34
+#: inputsequence.cpp:194
+#, fuzzy, kde-format
+#| msgid "Pen button 1:"
+msgctxt "@action:button"
+msgid "Pen Button %1"
+msgstr "பேனா பட்டன் 1:"
+
+#: kcmtablet.cpp:35
 #, kde-format
 msgid "Default"
 msgstr "இயல்பிருப்பு"
 
-#: kcmtablet.cpp:35
+#: kcmtablet.cpp:36
 #, kde-format
 msgid "Portrait"
 msgstr "செங்குத்தாக"
 
-#: kcmtablet.cpp:36
+#: kcmtablet.cpp:37
 #, kde-format
 msgid "Landscape"
 msgstr "கிடைமட்டமாக"
 
-#: kcmtablet.cpp:37
+#: kcmtablet.cpp:38
 #, kde-format
 msgid "Inverted Portrait"
 msgstr "புரட்டி செங்குத்தாக"
 
-#: kcmtablet.cpp:38
+#: kcmtablet.cpp:39
 #, kde-format
 msgid "Inverted Landscape"
 msgstr "புரட்டி கிடைமட்டமாக"
 
-#: kcmtablet.cpp:88
+#: kcmtablet.cpp:89
 #, kde-format
 msgid "Follow the Current Screen"
 msgstr "குவியமுள்ள திரையை பயன்படுத்து"
 
-#: kcmtablet.cpp:93
+#: kcmtablet.cpp:94
 #, kde-format
 msgid "All Screens"
 msgstr "அனைத்து திரைகள்"
 
-#: kcmtablet.cpp:102
+#: kcmtablet.cpp:103
 #, kde-format
 msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 - (%2,%3 %4×%5)"
 
-#: kcmtablet.cpp:162
+#: kcmtablet.cpp:163
 #, kde-format
 msgid "Fit to Screen"
 msgstr "திரைக்கு பொருத்து"
 
-#: kcmtablet.cpp:163
+#: kcmtablet.cpp:164
 #, kde-format
 msgid "Keep Aspect Ratio and Fit Within Screen"
 msgstr "உருவ விகிதத்தை மாற்றாமல் திரைக்குள் பொருத்து"
 
-#: kcmtablet.cpp:164
+#: kcmtablet.cpp:165
 #, kde-format
 msgid "Map to Portion of Screen"
 msgstr "திரையின் பகுதிக்கு இணை"
 
-#: ui/ActionDialog.qml:24
+#: kcmtablet.cpp:290
+#, fuzzy, kde-format
+#| msgid "Pen button 1:"
+msgctxt "Stylus pen button"
+msgid "Pen button %1:"
+msgstr "பேனா பட்டன் 1:"
+
+#: kcmtablet.cpp:291
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@info Meant to be inserted into an existing sentence like 'configuring "
+#| "pen button 1'"
+#| msgid "pen button 1"
+msgctxt ""
+"@info Meant to be inserted into an existing sentence like 'configuring pen "
+"button X'"
+msgid "pen button %1"
+msgstr "பேனா பட்டன் 1"
+
+#: ui/ActionDialog.qml:25
 #, kde-format
 msgctxt "@title Select the action for the tablet button"
 msgid "Select Button Action"
 msgstr "பட்டன் செயலைத் தெர்ந்தெடுப்பது"
 
-#: ui/ActionDialog.qml:70
+#: ui/ActionDialog.qml:74
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when pressing %1:"
 msgstr "%1-ஐ அழுத்தம்போது என்ன செய்ய வேண்டும்:"
 
-#: ui/ActionDialog.qml:84
+#: ui/ActionDialog.qml:88
 #, kde-format
 msgctxt "@option:radio Set this action to an application-defined type"
 msgid "Defer to application"
 msgstr "செயலியைப் பொறுத்து"
 
-#: ui/ActionDialog.qml:99
+#: ui/ActionDialog.qml:103
 #, kde-format
 msgctxt "@option:radio Set this action to a keyboard type"
 msgid "Send keyboard key"
 msgstr "விசைப்பலகை பட்டனை அனுப்பு"
 
-#: ui/ActionDialog.qml:113
+#: ui/ActionDialog.qml:117
 #, kde-format
 msgctxt "@option:radio Set this action to a mouse type"
 msgid "Send mouse button click"
 msgstr "சுட்டி கிளிக்கை அனுப்பு"
 
-#: ui/ActionDialog.qml:129
+#: ui/ActionDialog.qml:132
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@info Meant to be inserted into an existing sentence like 'configuring "
+#| "pen button 1'"
+#| msgid "pen button 1"
+msgctxt "@option:radio Set this action to a pen button type"
+msgid "Send pen button"
+msgstr "பேனா பட்டன் 1"
+
+#: ui/ActionDialog.qml:150
 #, kde-format
 msgctxt "@option:radio Disable this action"
 msgid "Do nothing"
 msgstr "ஒன்றும் செய்யாதே"
 
-#: ui/ActionDialog.qml:149
+#: ui/ActionDialog.qml:170
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -155,49 +191,76 @@ msgstr ""
 "குவயத்திலுள்ள செயலிக்கு இப்பட்டன் அனுப்பப்படும்; அச்செயலி இப்பட்டனை எப்படி கையாள்வதென "
 "முடிவு செய்யும்."
 
-#: ui/ActionDialog.qml:177
+#: ui/ActionDialog.qml:198
 #, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left-click"
 msgstr "இடது கிளிக்"
 
-#: ui/ActionDialog.qml:178
+#: ui/ActionDialog.qml:199
 #, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle-click"
 msgstr "நடு கிளிக்"
 
-#: ui/ActionDialog.qml:179
+#: ui/ActionDialog.qml:200
 #, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right-click"
 msgstr "வலது கிளிக்"
 
-#: ui/ActionDialog.qml:206
+#: ui/ActionDialog.qml:227
 #, kde-format
 msgctxt "@option:check The ctrl modifier on the keyboard"
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: ui/ActionDialog.qml:213
+#: ui/ActionDialog.qml:234
 #, kde-format
 msgctxt "@option:check The alt modifier on the keyboard"
 msgid "Alt"
 msgstr "Alt"
 
-#: ui/ActionDialog.qml:220
+#: ui/ActionDialog.qml:241
 #, kde-format
 msgctxt "@option:check The meta modifier on the keyboard"
 msgid "Meta"
 msgstr "Meta"
 
-#: ui/ActionDialog.qml:227
+#: ui/ActionDialog.qml:248
 #, kde-format
 msgctxt "@option:check The shift modifier on the keyboard"
 msgid "Shift"
 msgstr "Shift"
 
-#: ui/ActionDialog.qml:235
+#: ui/ActionDialog.qml:264
+#, fuzzy, kde-format
+#| msgid "Tool Button 1"
+msgctxt "@action:inmenu Stylus button"
+msgid "Button 1"
+msgstr "கருவி பட்டன் 1"
+
+#: ui/ActionDialog.qml:265
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@info Meant to be inserted into an existing sentence like 'configuring "
+#| "pen button 2'"
+#| msgid "pen button 2"
+msgctxt "@action:inmenu Stylus button"
+msgid "Button 2"
+msgstr "பேனா பட்டன் 2"
+
+#: ui/ActionDialog.qml:266
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@info Meant to be inserted into an existing sentence like 'configuring "
+#| "pen button 3'"
+#| msgid "pen button 3"
+msgctxt "@action:inmenu Stylus button"
+msgid "Button 3"
+msgstr "பேனா பட்டன் 3"
+
+#: ui/ActionDialog.qml:275
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
@@ -328,75 +391,36 @@ msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: ui/main.qml:305
-#, kde-format
-msgid "Pen button 1:"
-msgstr "பேனா பட்டன் 1:"
-
-#: ui/main.qml:306
-#, kde-format
-msgctxt ""
-"@info Meant to be inserted into an existing sentence like 'configuring pen "
-"button 1'"
-msgid "pen button 1"
-msgstr "பேனா பட்டன் 1"
-
-#: ui/main.qml:310
-#, kde-format
-msgid "Pen button 2:"
-msgstr "பேனா பட்டன் 2:"
-
-#: ui/main.qml:311
-#, kde-format
-msgctxt ""
-"@info Meant to be inserted into an existing sentence like 'configuring pen "
-"button 2'"
-msgid "pen button 2"
-msgstr "பேனா பட்டன் 2"
-
-#: ui/main.qml:315
-#, kde-format
-msgid "Pen button 3:"
-msgstr "பேனா பட்டன் 3:"
-
-#: ui/main.qml:316
-#, kde-format
-msgctxt ""
-"@info Meant to be inserted into an existing sentence like 'configuring pen "
-"button 3'"
-msgid "pen button 3"
-msgstr "பேனா பட்டன் 3"
-
-#: ui/main.qml:365
+#: ui/main.qml:352
 #, kde-format
 msgid "Pen Pressure:"
 msgstr ""
 
-#: ui/main.qml:408
+#: ui/main.qml:403
 #, kde-format
 msgctxt "Low pen pressure"
 msgid "Low Pressure"
 msgstr ""
 
-#: ui/main.qml:416
+#: ui/main.qml:411
 #, kde-format
 msgctxt "High pen pressure"
 msgid "High Pressure"
 msgstr ""
 
-#: ui/main.qml:427
+#: ui/main.qml:422
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr ""
 
-#: ui/main.qml:435
+#: ui/main.qml:430
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr ""
 
-#: ui/main.qml:439
+#: ui/main.qml:434
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -404,47 +428,47 @@ msgid ""
 "the pressure values received by applications."
 msgstr ""
 
-#: ui/main.qml:450
+#: ui/main.qml:445
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "அளதிருத்தம் செயலிலுள்ளது"
 
-#: ui/main.qml:452
+#: ui/main.qml:447
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "அளவொப்புமை"
 
-#: ui/main.qml:455
+#: ui/main.qml:450
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "அளதிருத்தம் ஆதரிக்கப்படவில்லை"
 
-#: ui/main.qml:488
+#: ui/main.qml:483
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
 msgstr "பல திரைகளுடனான அளதிருத்தம் ஆதரிக்கப்படாதது."
 
-#: ui/main.qml:498
+#: ui/main.qml:493
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr "வரைபலகை:"
 
-#: ui/main.qml:509
+#: ui/main.qml:504
 #, kde-format
 msgid "None"
 msgstr "ஏதுமில்லை"
 
-#: ui/main.qml:534
+#: ui/main.qml:529
 #, kde-format
 msgid "Pad button %1:"
 msgstr "வரைபலகை பட்டன் %1:"
 
-#: ui/main.qml:537
+#: ui/main.qml:532
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
@@ -488,6 +512,12 @@ msgctxt "Clear the event log"
 msgid "Clear"
 msgstr "காலியாக்கு"
 
+#~ msgid "Pen button 2:"
+#~ msgstr "பேனா பட்டன் 2:"
+
+#~ msgid "Pen button 3:"
+#~ msgstr "பேனா பட்டன் 3:"
+
 #~ msgid "Not Supported"
 #~ msgstr "ஆதரிக்கப்படாதது"
 
@@ -508,9 +538,6 @@ msgstr "காலியாக்கு"
 
 #~ msgid "Area:"
 #~ msgstr "பரப்பளவு:"
-
-#~ msgid "Tool Button 1"
-#~ msgstr "கருவி பட்டன் 1"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
