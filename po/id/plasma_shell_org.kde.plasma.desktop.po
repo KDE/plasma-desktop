@@ -1,6 +1,6 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Wantoyo <wantoyek@gmail.com>, 2018, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2018, 2019, 2020, 2021, 2022, 2024 Wantoyo <wantoyek@gmail.com>
 # Aziz Adam Adrian <4.adam.adrian@gmail.com>, 2022.
 # Linerly <linerly@protonmail.com>, 2023.
 #
@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-23 00:42+0000\n"
-"PO-Revision-Date: 2023-01-15 13:12+0700\n"
-"Last-Translator: Linerly <linerly@protonmail.com>\n"
-"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-11-03 21:18+0700\n"
+"Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
+"Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -104,11 +104,10 @@ msgid "Send an email to %1"
 msgstr "Kirim sebuah email ke %1"
 
 #: contents/configuration/AboutPlugin.qml:64
-#, fuzzy, kde-format
-#| msgid "Open %1"
+#, kde-format
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
-msgstr "Buka %1"
+msgstr "Buka situs %1"
 
 #: contents/configuration/AboutPlugin.qml:137
 #, kde-format
@@ -124,7 +123,7 @@ msgstr "Lisensi:"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "View license text"
-msgstr ""
+msgstr "Tampilan teks lisensi"
 
 #: contents/configuration/AboutPlugin.qml:177
 #, kde-format
@@ -144,7 +143,7 @@ msgstr "Penerjemah"
 #: contents/configuration/AboutPlugin.qml:220
 #, kde-format
 msgid "Report a Bug…"
-msgstr ""
+msgstr "Laporkan Bug…"
 
 #: contents/configuration/AppletConfiguration.qml:76
 #, kde-format
@@ -247,8 +246,7 @@ msgid "+"
 msgstr "+"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:167
-#, fuzzy, kde-format
-#| msgid "About"
+#, kde-format
 msgctxt "@title"
 msgid "About"
 msgstr "Tentang"
@@ -316,10 +314,9 @@ msgid "Input Here"
 msgstr "Input di Sini"
 
 #: contents/configuration/PanelConfiguration.qml:97
-#, fuzzy, kde-format
-#| msgid "Apply Settings"
+#, kde-format
 msgid "Panel Settings"
-msgstr "Terapkan Pengaturan"
+msgstr "Pengaturan Panel"
 
 #: contents/configuration/PanelConfiguration.qml:104
 #, kde-format
@@ -329,23 +326,22 @@ msgstr "Tambah Spacer"
 #: contents/configuration/PanelConfiguration.qml:107
 #, kde-format
 msgid "Add spacer widget to the panel"
-msgstr ""
+msgstr "Tambahkan widget spacer ke panel"
 
 #: contents/configuration/PanelConfiguration.qml:114
-#, fuzzy, kde-format
-#| msgid "Add Widgets…"
+#, kde-format
 msgid "Add or Manage Widgets…"
-msgstr "Tambah Widget..."
+msgstr "Tambahkan atau Kelola Widget..."
 
 #: contents/configuration/PanelConfiguration.qml:117
 #, kde-format
 msgid "Open the widget selector to drag and drop widgets to the panel"
-msgstr ""
+msgstr "Buka selektor widget untuk menyeret dan meletakkan widget ke panel"
 
 #: contents/configuration/PanelConfiguration.qml:146
 #, kde-format
 msgid "Position"
-msgstr ""
+msgstr "Posisi"
 
 #: contents/configuration/PanelConfiguration.qml:151
 #: contents/configuration/PanelConfiguration.qml:266
@@ -372,16 +368,14 @@ msgid "Bottom"
 msgstr "Bawah"
 
 #: contents/configuration/PanelConfiguration.qml:174
-#, fuzzy, kde-format
-#| msgid "More Options…"
+#, kde-format
 msgid "Set Position…"
-msgstr "Opsi Selebihnya..."
+msgstr "Atur Posisi..."
 
 #: contents/configuration/PanelConfiguration.qml:201
-#, fuzzy, kde-format
-#| msgid "Panel Alignment"
+#, kde-format
 msgid "Alignment"
-msgstr "Kesejajaran Panel"
+msgstr "Kesejajaran"
 
 #: contents/configuration/PanelConfiguration.qml:267
 #, kde-format
@@ -389,8 +383,7 @@ msgid "Center"
 msgstr "Tengah"
 
 #: contents/configuration/PanelConfiguration.qml:290
-#, fuzzy, kde-format
-#| msgid "Height"
+#, kde-format
 msgid "Height"
 msgstr "Tinggi"
 
@@ -400,26 +393,24 @@ msgid "Width"
 msgstr "Lebar"
 
 #: contents/configuration/PanelConfiguration.qml:310
-#, fuzzy, kde-format
-#| msgid "Panel height:"
+#, kde-format
 msgid "Fill height"
-msgstr "Tinggi Panel:"
+msgstr "Tinggi seisi"
 
 #: contents/configuration/PanelConfiguration.qml:310
-#, fuzzy, kde-format
-#| msgid "Panel width:"
+#, kde-format
 msgid "Fill width"
-msgstr "Lebar Panel:"
+msgstr "Lebar seisi"
 
 #: contents/configuration/PanelConfiguration.qml:311
 #, kde-format
 msgid "Fit content"
-msgstr ""
+msgstr "Paskan konten"
 
 #: contents/configuration/PanelConfiguration.qml:312
 #, kde-format
 msgid "Custom"
-msgstr ""
+msgstr "Kustom"
 
 #: contents/configuration/PanelConfiguration.qml:338
 #, kde-format
@@ -427,21 +418,19 @@ msgid "Visibility"
 msgstr "Keterlihatan"
 
 #: contents/configuration/PanelConfiguration.qml:351
-#, fuzzy, kde-format
-#| msgid "Always Visible"
+#, kde-format
 msgid "Always visible"
-msgstr "Selalu Terlihat"
+msgstr "Selalu terlihat"
 
 #: contents/configuration/PanelConfiguration.qml:352
-#, fuzzy, kde-format
-#| msgid "Auto Hide"
+#, kde-format
 msgid "Auto hide"
-msgstr "Auto Sembunyi"
+msgstr "Auto sembunyi"
 
 #: contents/configuration/PanelConfiguration.qml:353
 #, kde-format
 msgid "Dodge windows"
-msgstr ""
+msgstr "Menghindari jendela"
 
 #: contents/configuration/PanelConfiguration.qml:354
 #, kde-format
@@ -469,40 +458,36 @@ msgid "Translucent"
 msgstr "Bening"
 
 #: contents/configuration/PanelConfiguration.qml:436
-#, fuzzy, kde-format
-#| msgid "Floating Panel"
+#, kde-format
 msgid "Floating"
-msgstr "Panel Mengambang"
+msgstr "Mengambang"
 
 #: contents/configuration/PanelConfiguration.qml:446
 #, kde-format
 msgid "Style"
-msgstr ""
+msgstr "Gaya"
 
 #: contents/configuration/PanelConfiguration.qml:486
 #, kde-format
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
-msgstr ""
+msgstr "Perbaiki"
 
 #: contents/configuration/PanelConfiguration.qml:564
-#, fuzzy, kde-format
-#| msgid "Panel width:"
+#, kde-format
 msgid "Panel Width:"
 msgstr "Lebar Panel:"
 
 #: contents/configuration/PanelConfiguration.qml:565
-#, fuzzy, kde-format
-#| msgid "Panel width:"
+#, kde-format
 msgid "Panel Height:"
-msgstr "Lebar Panel:"
+msgstr "Tinggi Panel:"
 
 #: contents/configuration/PanelConfiguration.qml:588
-#, fuzzy, kde-format
-#| msgid "Shortcut"
+#, kde-format
 msgid "Focus shortcut:"
-msgstr "Pintasan"
+msgstr "Pintasan fokus:"
 
 #: contents/configuration/PanelConfiguration.qml:599
 #, kde-format
@@ -510,8 +495,7 @@ msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:633
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Hapus Panel"
@@ -522,8 +506,7 @@ msgid "Remove this panel; this action is undo-able"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Tutup"
@@ -533,7 +516,7 @@ msgstr "Tutup"
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
-msgstr ""
+msgstr "Keluar Mode Edit"
 
 #: contents/configuration/PanelConfiguration.qml:650
 #, kde-format
@@ -580,10 +563,9 @@ msgid ""
 msgstr ""
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy, kde-format
-#| msgid "Panels and Desktops Management"
+#, kde-format
 msgid "Panel and Desktop Management"
-msgstr "Pengelolaan Panel dan Desktop"
+msgstr "Pengelolaan Desktop dan Panel"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 #, kde-format
@@ -609,10 +591,9 @@ msgid "Move to Screen %1"
 msgstr "Pindah ke Layar %1"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:202
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgid "Remove Desktop"
-msgstr "Hapus Panel"
+msgstr "Hapus Desktop"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:203
 #, kde-format
@@ -638,7 +619,7 @@ msgstr ""
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
-msgstr ""
+msgstr "Baru!"
 
 #: contents/explorer/AppletDelegate.qml:188
 #, kde-format
@@ -646,17 +627,15 @@ msgid "Undo uninstall"
 msgstr "Urung copot"
 
 #: contents/explorer/AppletDelegate.qml:189
-#, fuzzy, kde-format
-#| msgid "Uninstall"
+#, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Uninstall"
-msgstr "Copot"
+msgstr "Hapus instalasi"
 
 #: contents/explorer/AppletDelegate.qml:231
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgid "Remove all instances"
-msgstr "Hapus Panel"
+msgstr "Hapus semua instansi"
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -685,15 +664,13 @@ msgid "Widgets"
 msgstr "Widget"
 
 #: contents/explorer/WidgetExplorer.qml:178
-#, fuzzy, kde-format
-#| msgid "Get New Plugins…"
+#, kde-format
 msgctxt "@action:button The word 'new' refers to widgets"
 msgid "Get New…"
-msgstr "Dapatkan Plugin Baru..."
+msgstr "Dapatkan Baru..."
 
 #: contents/explorer/WidgetExplorer.qml:179
-#, fuzzy, kde-format
-#| msgid "Get New Widgets…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "Dapatkan Widget Baru..."
@@ -725,75 +702,73 @@ msgstr "Tidak ada widget yang tersedia"
 #, kde-format
 msgctxt "@title: group"
 msgid "Clock:"
-msgstr ""
+msgstr "Jam:"
 
 #: contents/lockscreen/config.qml:22
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
-msgstr ""
+msgstr "Tampilkan jam"
 
 #: contents/lockscreen/config.qml:33
 #, kde-format
 msgctxt "@title: group"
 msgid "Media controls:"
-msgstr ""
+msgstr "Kontrol media:"
 
 #: contents/lockscreen/config.qml:36
 #, kde-format
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
-msgstr ""
+msgstr "Tampilkan di bawah prompt pembukaan kunci"
 
 #: contents/lockscreen/LockScreenUi.qml:48
 #, kde-format
 msgid "Unlocking failed"
-msgstr ""
+msgstr "Gagal membuka kunci"
 
 #: contents/lockscreen/LockScreenUi.qml:271
 #, kde-format
 msgid "Caps Lock is on"
-msgstr ""
+msgstr "Caps Lock telah nyala"
 
 #: contents/lockscreen/LockScreenUi.qml:285
 #, kde-format
 msgid "Sleep"
-msgstr ""
+msgstr "Tidur"
 
 #: contents/lockscreen/LockScreenUi.qml:291
 #, kde-format
 msgid "Hibernate"
-msgstr ""
+msgstr "Hibernasi"
 
 #: contents/lockscreen/LockScreenUi.qml:297
-#, fuzzy, kde-format
-#| msgid "Switch"
+#, kde-format
 msgid "Switch User"
-msgstr "Alihkan"
+msgstr "Beralih Pengguna"
 
 #: contents/lockscreen/LockScreenUi.qml:358
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
-msgstr ""
+msgstr "Keyboard Virtual"
 
 #: contents/lockscreen/LockScreenUi.qml:382
-#, fuzzy, kde-format
-#| msgid "Switch"
+#, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr "Alihkan"
+msgstr "Alihkan tataletak"
 
 #: contents/lockscreen/MainBlock.qml:64
 #, kde-format
 msgid "Password"
-msgstr ""
+msgstr "Kata sandi"
 
 #: contents/lockscreen/MainBlock.qml:107
 #: contents/lockscreen/NoPasswordUnlock.qml:17
 #, kde-format
 msgid "Unlock"
-msgstr ""
+msgstr "Lepas kunci"
 
 #: contents/lockscreen/MainBlock.qml:156
 #, kde-format
@@ -808,27 +783,27 @@ msgstr ""
 #: contents/lockscreen/MediaControls.qml:59
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "Tidak ada judul"
 
 #: contents/lockscreen/MediaControls.qml:60
 #, kde-format
 msgid "No media playing"
-msgstr ""
+msgstr "Tidak ada media yang diputar"
 
 #: contents/lockscreen/MediaControls.qml:88
 #, kde-format
 msgid "Previous track"
-msgstr ""
+msgstr "Trek sebelumnya"
 
 #: contents/lockscreen/MediaControls.qml:100
 #, kde-format
 msgid "Play or Pause media"
-msgstr ""
+msgstr "Putar atau Jeda media"
 
 #: contents/lockscreen/MediaControls.qml:110
 #, kde-format
 msgid "Next track"
-msgstr ""
+msgstr "Trek selanjutnya"
 
 #: contents/osd/OsdItem.qml:34
 #, kde-format
@@ -839,24 +814,23 @@ msgstr ""
 #: contents/views/DesktopEditMode.qml:115
 #, kde-format
 msgid "Global Themes"
-msgstr ""
+msgstr "Tema Global"
 
 #: contents/views/DesktopEditMode.qml:122
-#, fuzzy, kde-format
-#| msgid "Open configuration page"
+#, kde-format
 msgid "Display Configuration"
-msgstr "Buka halaman konfigurasi"
+msgstr "Konfigurasi Display"
 
 #: contents/views/DesktopEditMode.qml:143
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
-msgstr ""
+msgstr "Selebihnya"
 
 #: contents/views/DesktopEditMode.qml:152
 #, kde-format
 msgid "Exit Edit Mode"
-msgstr ""
+msgstr "Keluar Mode Edit"
 
 #: contents/views/Panel.qml:302
 #, kde-format

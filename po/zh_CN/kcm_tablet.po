@@ -54,11 +54,10 @@ msgid "Application-defined"
 msgstr "应用程序定义"
 
 #: inputsequence.cpp:194
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pen Button %1"
-msgstr "笔身按钮 1："
+msgstr ""
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -117,23 +116,18 @@ msgid "Map to Portion of Screen"
 msgstr "映射到屏幕区域"
 
 #: kcmtablet.cpp:290
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
-msgstr "笔身按钮 1："
+msgstr ""
 
 #: kcmtablet.cpp:291
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button X'"
 msgid "pen button %1"
-msgstr "笔身按钮 1："
+msgstr ""
 
 #: ui/ActionDialog.qml:25
 #, kde-format
@@ -166,14 +160,10 @@ msgid "Send mouse button click"
 msgstr "发送鼠标键点击"
 
 #: ui/ActionDialog.qml:132
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt "@option:radio Set this action to a pen button type"
 msgid "Send pen button"
-msgstr "笔身按钮 1："
+msgstr ""
 
 #: ui/ActionDialog.qml:150
 #, kde-format
@@ -232,34 +222,22 @@ msgid "Shift"
 msgstr "Shift"
 
 #: ui/ActionDialog.qml:264
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
-msgstr "笔身按钮 1："
+msgstr ""
 
 #: ui/ActionDialog.qml:265
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 2'"
-#| msgid "pen button 2"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
-msgstr "笔身按钮 2："
+msgstr ""
 
 #: ui/ActionDialog.qml:266
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 3'"
-#| msgid "pen button 3"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
-msgstr "笔身按钮 3："
+msgstr ""
 
 #: ui/ActionDialog.qml:275
 #, kde-format
@@ -511,9 +489,3 @@ msgstr ""
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr "清除"
-
-#~ msgid "Pen button 2:"
-#~ msgstr "笔身按钮 2："
-
-#~ msgid "Pen button 3:"
-#~ msgstr "笔身按钮 3："

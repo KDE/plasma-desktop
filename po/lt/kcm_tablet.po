@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-03 00:41+0000\n"
-"PO-Revision-Date: 2024-10-16 01:45+0300\n"
+"PO-Revision-Date: 2024-11-04 00:05+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -56,11 +56,10 @@ msgid "Application-defined"
 msgstr "Apibrėžtas programos"
 
 #: inputsequence.cpp:194
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pen Button %1"
-msgstr "Rašiklio mygtukas 1:"
+msgstr "Rašiklio mygtukas %1"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -119,23 +118,18 @@ msgid "Map to Portion of Screen"
 msgstr "Susieti su ekrano dalimi"
 
 #: kcmtablet.cpp:290
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
-msgstr "Rašiklio mygtukas 1:"
+msgstr "Rašiklio mygtukas %1:"
 
 #: kcmtablet.cpp:291
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button X'"
 msgid "pen button %1"
-msgstr "rašiklio mygtukas 1"
+msgstr "rašiklio mygtukas %1"
 
 #: ui/ActionDialog.qml:25
 #, kde-format
@@ -168,14 +162,10 @@ msgid "Send mouse button click"
 msgstr "Siųsti pelės mygtuko spustelėjimą"
 
 #: ui/ActionDialog.qml:132
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt "@option:radio Set this action to a pen button type"
 msgid "Send pen button"
-msgstr "rašiklio mygtukas 1"
+msgstr "Siųsti rašiklio mygtuką"
 
 #: ui/ActionDialog.qml:150
 #, kde-format
@@ -236,34 +226,22 @@ msgid "Shift"
 msgstr "Lyg2"
 
 #: ui/ActionDialog.qml:264
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
-msgstr "rašiklio mygtukas 1"
+msgstr "Mygtukas 1"
 
 #: ui/ActionDialog.qml:265
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 2'"
-#| msgid "pen button 2"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
-msgstr "rašiklio mygtukas 2"
+msgstr "Mygtukas 2"
 
 #: ui/ActionDialog.qml:266
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 3'"
-#| msgid "pen button 3"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
-msgstr "rašiklio mygtukas 3"
+msgstr "Mygtukas 3"
 
 #: ui/ActionDialog.qml:275
 #, kde-format
