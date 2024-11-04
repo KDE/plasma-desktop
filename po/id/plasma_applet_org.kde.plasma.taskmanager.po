@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-24 02:34+0000\n"
-"PO-Revision-Date: 2024-10-29 21:02+0700\n"
+"PO-Revision-Date: 2024-11-01 23:10+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
@@ -74,18 +74,16 @@ msgid "General:"
 msgstr "Umum:"
 
 #: package/contents/ui/ConfigAppearance.qml:47
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgctxt "@option:check section General"
 msgid "Show small window previews when hovering over tasks"
-msgstr "Sorot jendela ketika kursor di atas tugas alat tip"
+msgstr "Tampilkan jendela kecil ketika melintasi di atas tugas"
 
 #: package/contents/ui/ConfigAppearance.qml:52
-#, fuzzy, kde-format
-#| msgid "Highlight windows when hovering over task tooltips"
+#, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over previews"
-msgstr "Sorot jendela ketika kursor di atas tugas alat tip"
+msgstr "Sembunyikan jendela lain ketika melintasi di atas pratinjau"
 
 #: package/contents/ui/ConfigAppearance.qml:57
 #, kde-format
@@ -97,14 +95,13 @@ msgstr "Tandai aplikasi yang memutar audio"
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Fill free space on panel"
-msgstr ""
+msgstr "Isikan ruang kosong pada panel"
 
 #: package/contents/ui/ConfigAppearance.qml:77
-#, fuzzy, kde-format
-#| msgid "Maximum rows:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Maximum task width:"
-msgstr "Baris maksimum:"
+msgstr "Maksimum lebar tugas:"
 
 #: package/contents/ui/ConfigAppearance.qml:80
 #, kde-format
@@ -116,7 +113,7 @@ msgstr "Sempit"
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Medium"
-msgstr ""
+msgstr "Medium"
 
 #: package/contents/ui/ConfigAppearance.qml:82
 #, kde-format
@@ -130,7 +127,7 @@ msgctxt ""
 "@label for radio button group, completes sentence: … when panel is low on "
 "space etc."
 msgid "Use multi-column view:"
-msgstr ""
+msgstr "Gunakan tampilan multi kolom:"
 
 #: package/contents/ui/ConfigAppearance.qml:94
 #, kde-format
@@ -138,26 +135,25 @@ msgctxt ""
 "@label for radio button group, completes sentence: … when panel is low on "
 "space etc."
 msgid "Use multi-row view:"
-msgstr ""
+msgstr "Gunakan tampilan multi garis:"
 
 #: package/contents/ui/ConfigAppearance.qml:100
 #, kde-format
 msgctxt "@option:radio Never use multi-column view for Task Manager"
 msgid "Never"
-msgstr ""
+msgstr "Tidak pernah"
 
 #: package/contents/ui/ConfigAppearance.qml:110
 #, kde-format
 msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "When panel is low on space and thick enough"
-msgstr ""
+msgstr "Ketika panel ruangnya sedikit dan cukup tebal"
 
 #: package/contents/ui/ConfigAppearance.qml:120
-#, fuzzy, kde-format
-#| msgid "When panel is hidden:"
+#, kde-format
 msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "Always when panel is thick enough"
-msgstr "Ketika panel disembunyikan:"
+msgstr "Selalu ketika panel cukup tebal"
 
 #: package/contents/ui/ConfigAppearance.qml:127
 #, kde-format
@@ -196,16 +192,13 @@ msgid "Large"
 msgstr "Besar"
 
 #: package/contents/ui/ConfigAppearance.qml:176
-#, fuzzy, kde-format
-#| msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
-#| msgid "Automatically set to Large when in Touch Mode"
+#, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch mode"
-msgstr "Otomatis atur ke Besar saat dalam Mode Sentuh"
+msgstr "Setel secara otomatis ke Besar ketika dalam mode Sentuh"
 
 #: package/contents/ui/ConfigBehavior.qml:49
-#, fuzzy, kde-format
-#| msgid "Group:"
+#, kde-format
 msgctxt "@label:listbox how to group tasks"
 msgid "Group:"
 msgstr "Kelompok:"
@@ -237,26 +230,20 @@ msgid "Cycles through tasks"
 msgstr "Siklus melalui task"
 
 #: package/contents/ui/ConfigBehavior.qml:68
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task shows small "
 "window previews' "
 msgid "Shows small window previews"
-msgstr "Tampilkan jendela secara bedampingan"
+msgstr "Tampilkan pratinjau jendela kecil"
 
 #: package/contents/ui/ConfigBehavior.qml:69
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task shows large "
 "window previews' "
 msgid "Shows large window previews"
-msgstr "Tampilkan jendela secara bedampingan"
+msgstr "Tampilkan jendela besar pratinjau"
 
 #: package/contents/ui/ConfigBehavior.qml:70
 #, kde-format
@@ -334,7 +321,7 @@ msgstr "Jaga pemisah peluncuran"
 #, kde-format
 msgctxt "@option:check for icons-and-text task manager"
 msgid "Hide launchers after application startup"
-msgstr ""
+msgstr "Sembunyikan peluncur sesudah pemulaian aplikasi"
 
 #: package/contents/ui/ConfigBehavior.qml:142
 #, kde-format
@@ -358,9 +345,7 @@ msgid "Middle-clicking any task:"
 msgstr "Pengeklikan tengah task mana pun:"
 
 #: package/contents/ui/ConfigBehavior.qml:152
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Middle-clicking any task does nothing'"
-#| msgid "Does nothing"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task does nothing'"
 msgid "Does nothing"
@@ -479,7 +464,7 @@ msgstr "Tugas baru muncul:"
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the bottom"
-msgstr ""
+msgstr "Berada di Bawah"
 
 #: package/contents/ui/ConfigBehavior.qml:234
 #: package/contents/ui/ConfigBehavior.qml:253
@@ -499,7 +484,7 @@ msgstr "Ke kiri"
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the top"
-msgstr ""
+msgstr "Berada di atas"
 
 #: package/contents/ui/ContextMenu.qml:102
 #, kde-format
@@ -701,30 +686,26 @@ msgstr "Luncurkan %1"
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
 msgid_plural "There are %1 new messages."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Ada %1 pesan baru."
+msgstr[1] "Ada %1 pesan baru."
 
 #: package/contents/ui/Task.qml:167
-#, fuzzy, kde-format
-#| msgid "Show tooltips"
+#, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
-msgstr "Tampilkan tip alat"
+msgstr "Tampilkan tip alat Tugas untuk %1"
 
 #: package/contents/ui/Task.qml:173
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Completes the sentence 'Clicking grouped task shows windows side by side' "
-#| msgid "Shows windows side by side"
+#, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
-msgstr "Tampilkan window secara bedampingan"
+msgstr "Tampilkan jendela secara bedampingan untuk %1"
 
 #: package/contents/ui/Task.qml:178
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
-msgstr ""
+msgstr "Buka daftar tekstual jendela untuk %1"
 
 #: package/contents/ui/Task.qml:182
 #, kde-format
