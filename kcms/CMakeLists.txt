@@ -26,7 +26,6 @@ add_subdirectory(kded)
 add_subdirectory(runners)
 add_subdirectory(spellchecking)
 add_subdirectory(qtquicksettings)
-add_subdirectory(tablet)
 add_subdirectory(touchscreen)
 
 add_subdirectory(workspaceoptions)
@@ -41,4 +40,8 @@ endif()
 
 if (BUILD_KCM_TOUCHPAD_KWIN_WAYLAND OR BUILD_KCM_TOUCHPAD_X11)
     add_subdirectory(touchpad)
+endif()
+
+if(BUILD_KCM_TABLET)
+    add_subdirectory(tablet)
 endif()

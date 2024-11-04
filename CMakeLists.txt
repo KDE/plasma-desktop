@@ -40,6 +40,7 @@ option(BUILD_KCM_MOUSE_KWIN_WAYLAND "Build the Mouse KCM's KWin+Wayland backend"
 option(BUILD_KCM_MOUSE_X11 "Build the Mouse KCM's X11 backend" ON)
 option(BUILD_KCM_TOUCHPAD_KWIN_WAYLAND "Build the Touchpad KCM's KWin+Wayland backend" ON)
 option(BUILD_KCM_TOUCHPAD_X11 "Build the Touchpad KCM's X11 backend" ON)
+option(BUILD_KCM_TABLET "Build the Tablet KCM" ON)
 
 find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Quick
@@ -51,7 +52,10 @@ find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Core5Compat
     Sql # kcms/activities
 )
-find_package(Qt6 ${QT_MIN_VERSION} CONFIG OPTIONAL_COMPONENTS WaylandClient)
+
+if(BUILD_KCM_TABLET)
+    find_package(Qt6WaylandClient ${QT_MIN_VERSION} CONFIG REQUIRED)
+endif()
 
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     Auth
@@ -139,17 +143,20 @@ set_package_properties(KF6QQC2DesktopStyle PROPERTIES
     TYPE RUNTIME
 )
 
-find_package(WaylandProtocols 1.25)
-set_package_properties(WaylandProtocols PROPERTIES
-    TYPE REQUIRED
-    PURPOSE "Collection of Wayland protocols that add functionality not available in the Wayland core protocol"
-    URL "https://gitlab.freedesktop.org/wayland/wayland-protocols/"
-)
-find_package(Wayland 1.2)
-set_package_properties(Wayland PROPERTIES
-    TYPE REQUIRED
-    PURPOSE "Required for building Tablet input KCM"
-)
+if(BUILD_KCM_TABLET)
+    find_package(WaylandProtocols 1.25)
+    set_package_properties(WaylandProtocols PROPERTIES
+        TYPE REQUIRED
+        PURPOSE "Collection of Wayland protocols that add functionality not available in the Wayland core protocol"
+        URL "https://gitlab.freedesktop.org/wayland/wayland-protocols/"
+    )
+    find_package(Wayland 1.2)
+    set_package_properties(Wayland PROPERTIES
+        TYPE REQUIRED
+        PURPOSE "Required for building Tablet input KCM"
+    )
+    pkg_check_modules(LIBWACOM libwacom REQUIRED IMPORTED_TARGET)
+endif()
 
 find_package(SDL2 2.0.16)
 set_package_properties(SDL2 PROPERTIES
@@ -260,9 +267,6 @@ set_package_properties(GLIB2 PROPERTIES
 pkg_check_modules(IBUS "ibus-1.0>=1.5.0" IMPORTED_TARGET)
 pkg_check_modules(GOBJECT gobject-2.0 IMPORTED_TARGET)
 pkg_check_modules(SCIM scim IMPORTED_TARGET)
-
-# for kcm_tablet
-pkg_check_modules(LIBWACOM libwacom REQUIRED IMPORTED_TARGET)
 
 ecm_setup_version(${PROJECT_VERSION} VARIABLE_PREFIX PLASMA VERSION_HEADER plasma_version.h)
 
