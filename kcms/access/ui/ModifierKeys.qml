@@ -48,7 +48,7 @@ Kirigami.FormLayout {
             onToggled: kcm.keyboardSettings.stickyKeysLatch = checked
         }
         Kirigami.ContextualHelpButton {
-            toolTipText: i18nc("@info:tooltip", "Once locked, the “sticky” state of modifier keys will not be disabled until a keyboard shortcut is finished or until a non-modifier key is pressed.")
+            toolTipText: i18nc("@info:tooltip", "Pressing a modifier key twice will keep it in active state until pressed again.")
         }
     }
     QQC2.CheckBox {
