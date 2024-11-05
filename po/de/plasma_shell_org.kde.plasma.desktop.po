@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-23 00:42+0000\n"
-"PO-Revision-Date: 2024-09-08 17:06+0200\n"
-"Last-Translator: Flori G <Renner03@protonmail.com>\n"
+"PO-Revision-Date: 2024-10-30 19:43+0100\n"
+"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -422,22 +422,22 @@ msgstr "Sichtbarkeit"
 #: contents/configuration/PanelConfiguration.qml:351
 #, kde-format
 msgid "Always visible"
-msgstr "Immer sichtbar"
+msgstr "Begrenzend"
 
 #: contents/configuration/PanelConfiguration.qml:352
 #, kde-format
 msgid "Auto hide"
-msgstr "Automatisch ausblenden"
+msgstr "Versteckt"
 
 #: contents/configuration/PanelConfiguration.qml:353
 #, kde-format
 msgid "Dodge windows"
-msgstr "Fenstern ausweichen"
+msgstr "Im Hintergrund"
 
 #: contents/configuration/PanelConfiguration.qml:354
 #, kde-format
 msgid "Windows Go Below"
-msgstr "Fenster rutschen unter die Kontrollleiste"
+msgstr "Im Vordergrund"
 
 #: contents/configuration/PanelConfiguration.qml:397
 #, kde-format
@@ -635,17 +635,15 @@ msgid "Undo uninstall"
 msgstr "Deinstallation rückgängig machen"
 
 #: contents/explorer/AppletDelegate.qml:189
-#, fuzzy, kde-format
-#| msgid "Uninstall"
+#, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Uninstall"
 msgstr "Deinstallieren"
 
 #: contents/explorer/AppletDelegate.qml:231
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgid "Remove all instances"
-msgstr "Kontrollleiste entfernen"
+msgstr "Alle Instanzen entfernen"
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -691,9 +689,7 @@ msgid "Categories"
 msgstr "Kategorien"
 
 #: contents/explorer/WidgetExplorer.qml:254
-#, fuzzy, kde-format
-#| msgid "Confirm Removal Of One Widget"
-#| msgid_plural "Confirm Removal Of %1 Widgets"
+#, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Confirm Removal of One Widget"
 msgid_plural "Confirm Removal of %1 Widgets"

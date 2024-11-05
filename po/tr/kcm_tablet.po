@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-03 00:41+0000\n"
-"PO-Revision-Date: 2024-10-15 23:20+0300\n"
+"PO-Revision-Date: 2024-11-04 16:58+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: inputsequence.cpp:172
 #, kde-format
@@ -55,11 +55,10 @@ msgid "Application-defined"
 msgstr "Uygulama Tanımlı"
 
 #: inputsequence.cpp:194
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pen Button %1"
-msgstr "Kalem düğmesi 1:"
+msgstr "Kalem Düğmesi %1"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -118,23 +117,18 @@ msgid "Map to Portion of Screen"
 msgstr "Ekranın Bir Kısmına Eşlemle"
 
 #: kcmtablet.cpp:290
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
-msgstr "Kalem düğmesi 1:"
+msgstr "Kalem düğmesi %1:"
 
 #: kcmtablet.cpp:291
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button X'"
 msgid "pen button %1"
-msgstr "Kalem düğmesi 1"
+msgstr "kalem düğmesi %1"
 
 #: ui/ActionDialog.qml:25
 #, kde-format
@@ -167,14 +161,10 @@ msgid "Send mouse button click"
 msgstr "Fare tıklaması gönder"
 
 #: ui/ActionDialog.qml:132
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt "@option:radio Set this action to a pen button type"
 msgid "Send pen button"
-msgstr "Kalem düğmesi 1"
+msgstr "Kalem düğmesi gönder"
 
 #: ui/ActionDialog.qml:150
 #, kde-format
@@ -235,31 +225,22 @@ msgid "Shift"
 msgstr "Üst Karakter"
 
 #: ui/ActionDialog.qml:264
-#, fuzzy, kde-format
-#| msgid "Tool Button 1"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
-msgstr "Araç Düğmesi 1"
+msgstr "Düğme 1"
 
 #: ui/ActionDialog.qml:265
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 2'"
-#| msgid "pen button 2"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
-msgstr "Kalem düğmesi 2"
+msgstr "Düğme 2"
 
 #: ui/ActionDialog.qml:266
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 3'"
-#| msgid "pen button 3"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
-msgstr "Kalem düğmesi 3"
+msgstr "Düğme 3"
 
 #: ui/ActionDialog.qml:275
 #, kde-format
@@ -516,30 +497,3 @@ msgstr ""
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr "Temizle"
-
-#~ msgid "Pen button 2:"
-#~ msgstr "Kalem düğmesi 2:"
-
-#~ msgid "Pen button 3:"
-#~ msgstr "Kalem düğmesi 3:"
-
-#~ msgid "Not Supported"
-#~ msgstr "Desteklenmiyor"
-
-#~ msgid "Primary (default)"
-#~ msgstr "Birincil (öntanımlı)"
-
-#~ msgid "Fit to Output"
-#~ msgstr "Çıktıya Sığdır"
-
-#~ msgid "Fit Output in tablet"
-#~ msgstr "Tablette Çıktıya Sığdır"
-
-#~ msgid "Custom size"
-#~ msgstr "Özel Boyut"
-
-#~ msgid "Target display:"
-#~ msgstr "Hedef görüntü:"
-
-#~ msgid "Area:"
-#~ msgstr "Alan:"
