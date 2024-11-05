@@ -20,7 +20,7 @@ KCMUtils.SimpleKCM {
 
     property alias cfg_showToolTips: showToolTips.checked
     property alias cfg_highlightWindows: highlightWindows.checked
-    property bool cfg_indicateAudioStreams
+    property bool cfg_interactiveMute
     property alias cfg_fill: fill.checked
     property alias cfg_maxStripes: maxStripes.value
     property alias cfg_forceStripes: forceStripes.checked
@@ -53,10 +53,10 @@ KCMUtils.SimpleKCM {
         }
 
         QQC2.CheckBox {
-            id: indicateAudioStreams
-            text: i18nc("@option:check section General", "Mark applications that play audio")
-            checked: cfg_indicateAudioStreams && plasmaPaAvailable
-            onToggled: cfg_indicateAudioStreams = checked
+            id: interactiveMute
+            text: i18nc("@option:check section General", "Use audio indicators to mute tasks")
+            checked: cfg_interactiveMute && plasmaPaAvailable
+            onToggled: cfg_interactiveMute = checked
             enabled: plasmaPaAvailable
         }
 

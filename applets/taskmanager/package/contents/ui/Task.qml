@@ -66,7 +66,7 @@ PlasmaCore.ToolTipArea {
     property var audioStreams: []
     property bool delayAudioStreamIndicator: false
     property bool completed: false
-    readonly property bool audioIndicatorsEnabled: Plasmoid.configuration.indicateAudioStreams
+    readonly property bool audioIndicatorsEnabled: Plasmoid.configuration.interactiveMute
     readonly property bool hasAudioStream: audioStreams.length > 0
     readonly property bool playingAudio: hasAudioStream && audioStreams.some(item => !item.corked)
     readonly property bool muted: hasAudioStream && audioStreams.every(item => item.muted)
@@ -247,7 +247,7 @@ PlasmaCore.ToolTipArea {
     }
 
     onHasAudioStreamChanged: {
-        const audioStreamIconActive = hasAudioStream && audioIndicatorsEnabled;
+        const audioStreamIconActive = hasAudioStream;
         if (!audioStreamIconActive) {
             if (audioStreamIcon !== null) {
                 audioStreamIcon.destroy();

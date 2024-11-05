@@ -332,7 +332,6 @@ ColumnLayout {
     Loader {
         active: toolTipDelegate.parentTask !== null
              && pulseAudio.item !== null
-             && toolTipDelegate.parentTask.audioIndicatorsEnabled
              && toolTipDelegate.parentTask.hasAudioStream
              && root.index !== -1 // Avoid loading when the instance is going to be destroyed
         asynchronous: true

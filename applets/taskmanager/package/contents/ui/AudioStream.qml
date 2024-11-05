@@ -6,6 +6,7 @@
 
 import QtQuick
 
+import org.kde.plasma.plasmoid
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami as Kirigami
 import org.kde.ksvg as KSvg
@@ -104,11 +105,13 @@ Item {
 
     HoverHandler {
         id: hoverHandler
+        enabled: Plasmoid.configuration.interactiveMute
     }
 
     TapHandler {
         id: tapHandler
         gesturePolicy: TapHandler.ReleaseWithinBounds // Exclusive grab
+        enabled: Plasmoid.configuration.interactiveMute
         onTapped: (eventPoint, button) => toggleMuted()
     }
 
