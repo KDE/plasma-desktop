@@ -242,7 +242,11 @@ public:
     Q_INVOKABLE void refresh();
     Q_INVOKABLE void createFolder();
 
+    bool screenUsed();
+
     void setScreen(int screen);
+
+    QRectF screenGeometry();
 
 Q_SIGNALS:
     void urlChanged() const;
@@ -274,6 +278,7 @@ Q_SIGNALS:
     void selectionChanged() const;
     void showHiddenFilesChanged() const;
     void itemRenamed() const;
+    void screenGeometryChanged() const;
 
 protected:
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;

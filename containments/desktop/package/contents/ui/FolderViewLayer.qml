@@ -30,8 +30,6 @@ FocusScope {
     property alias overflowing: folderView.overflowing
     property alias flow: folderView.flow
 
-    property string resolution: Math.round(root.screenGeometry.width) + "x" + Math.round(root.screenGeometry.height)
-
     readonly property bool lockedByKiosk: !KAuthorized.authorize("editable_desktop_icons")
 
     focus: true
@@ -165,37 +163,6 @@ FocusScope {
         }
     }
 
-    function getPositions() {
-        let allPositions;
-        try {
-            allPositions = JSON.parse(Plasmoid.configuration.positions);
-        } catch (err) {
-            allPositions = {};
-            allPositions[resolution] = Plasmoid.configuration.positions;
-        }
-        return allPositions[resolution] || "";
-    }
-
-    function savePositions(positions) {
-        let allPositions;
-        try {
-            allPositions = JSON.parse(Plasmoid.configuration.positions);
-        } catch (err) {
-            allPositions = {};
-        }
-        allPositions[resolution] = positions;
-        Plasmoid.configuration.positions = JSON.stringify(allPositions, Object.keys(allPositions).sort());
-    }
-
-    Connections {
-        target: Plasmoid.containment
-        // Load the icon positions when geometry changes, so we dont use positions from wrong geometry
-        // BUG:493569
-        function onScreenGeometryChanged(): void {
-            folderView.positions = getPositions();
-        }
-    }
-
     Connections {
         target: Plasmoid.configuration
 
@@ -240,6 +207,7 @@ FocusScope {
 
         focus: true
         isRootView: true
+        positionerApplet: Plasmoid
 
         url: Plasmoid.configuration.url
         locked: (Plasmoid.configuration.locked || !isContainment || lockedByKiosk)
@@ -255,23 +223,8 @@ FocusScope {
             Plasmoid.configuration.sortMode = sortMode;
         }
 
-        onPositionsChanged: {
-            saveTimer.restart()
-        }
-
-        onPerStripeChanged: {
-            folderView.positions = getPositions();
-        }
-
-        Timer {
-            id: saveTimer
-            interval: Kirigami.Units.humanMoment
-            onTriggered: savePositions(folderView.positions)
-        }
-
         Component.onCompleted: {
             folderView.sortMode = Plasmoid.configuration.sortMode;
-            folderView.positions = getPositions();
         }
     }
 

@@ -10,6 +10,9 @@
 #include <cstdlib>
 #include <span>
 
+#include <QJsonArray>
+#include <QJsonDocument>
+#include <QJsonObject>
 #include <QTimer>
 
 Positioner::Positioner(QObject *parent)
@@ -19,11 +22,7 @@ Positioner::Positioner(QObject *parent)
     , m_perStripe(0)
     , m_ignoreNextTransaction(false)
     , m_deferApplyPositions(false)
-    , m_updatePositionsTimer(new QTimer(this))
 {
-    m_updatePositionsTimer->setSingleShot(true);
-    m_updatePositionsTimer->setInterval(0);
-    connect(m_updatePositionsTimer, &QTimer::timeout, this, &Positioner::updatePositions);
 }
 
 Positioner::~Positioner()
@@ -49,10 +48,6 @@ void Positioner::setEnabled(bool enabled)
         endResetModel();
 
         Q_EMIT enabledChanged();
-
-        if (!enabled) {
-            m_updatePositionsTimer->start();
-        }
     }
 }
 
@@ -74,7 +69,7 @@ void Positioner::setFolderModel(QObject *folderModel)
 
         if (m_folderModel) {
             connectSignals(m_folderModel);
-
+            updateResolution();
             if (m_enabled) {
                 initMaps();
             }
@@ -93,13 +88,18 @@ int Positioner::perStripe() const
 
 void Positioner::setPerStripe(int perStripe)
 {
-    if (m_perStripe != perStripe) {
+    if (m_perStripe != perStripe && perStripe > 0) {
         m_perStripe = perStripe;
-
+        // Make sure we have the correct resolution and positions
+        // loaded before changing the stripe, so we modify the right positions
+        updateResolution();
         Q_EMIT perStripeChanged();
-
-        if (m_enabled && perStripe > 0 && !m_proxyToSource.isEmpty()) {
-            applyPositions();
+        if (m_enabled && screenInUse() && !m_proxyToSource.isEmpty()) {
+            convertFolderModelData();
+            // If no longer defering positions, update them
+            if (!m_deferApplyPositions) {
+                updatePositionsList();
+            }
         }
     }
 }
@@ -107,22 +107,6 @@ void Positioner::setPerStripe(int perStripe)
 QStringList Positioner::positions() const
 {
     return m_positions;
-}
-
-void Positioner::setPositions(const QStringList &positions)
-{
-    if (m_positions != positions) {
-        m_positions = positions;
-
-        Q_EMIT positionsChanged();
-
-        // Defer applying positions until listing completes.
-        if (m_folderModel->status() == FolderModel::Listing) {
-            m_deferApplyPositions = true;
-        } else {
-            applyPositions();
-        }
-    }
 }
 
 int Positioner::map(int row) const
@@ -342,10 +326,11 @@ void Positioner::reset()
     endResetModel();
 
     m_positions = QStringList();
-    Q_EMIT positionsChanged();
+    updatePositionsList();
+    savePositionsConfig();
 }
 
-int Positioner::move(const QVariantList &moves)
+int Positioner::move(const QVariantList &moves, bool save)
 {
     struct RowMove {
         int from;
@@ -465,17 +450,20 @@ int Positioner::move(const QVariantList &moves)
 
     m_folderModel->updateSelection(sourceRows, true);
 
-    m_updatePositionsTimer->start();
+    updatePositionsList();
+    if (save) {
+        savePositionsConfig();
+    }
 
     return toIndices.constFirst();
 }
 
-void Positioner::updatePositions()
+void Positioner::updatePositionsList()
 {
     QStringList positions;
 
-    if (m_enabled && !m_proxyToSource.isEmpty() && m_perStripe > 0) {
-        positions.append(QString::number((1 + ((rowCount() - 1) / m_perStripe))));
+    if (m_enabled && screenInUse()) {
+        positions.append(QString::number(1 + ((rowCount() - 1) / m_perStripe)));
         positions.append(QString::number(m_perStripe));
 
         QHashIterator<int, int> it(m_proxyToSource);
@@ -495,8 +483,6 @@ void Positioner::updatePositions()
         }
         if (positions != m_positions) {
             m_positions = positions;
-
-            Q_EMIT positionsChanged();
         }
     }
 }
@@ -504,11 +490,17 @@ void Positioner::updatePositions()
 void Positioner::sourceStatusChanged()
 {
     if (m_deferApplyPositions && m_folderModel->status() != FolderModel::Listing) {
-        applyPositions();
+        convertFolderModelData();
+        // If no longer defering positions, update them
+        if (!m_deferApplyPositions) {
+            updatePositionsList();
+        }
     }
 
+    // When deferring moves, skip saving, since this action is not by user:
+    // the moves happened during listing, so we should not save them
     if (m_deferMovePositions.count() > 0 && m_folderModel->status() != FolderModel::Listing) {
-        move(m_deferMovePositions);
+        move(m_deferMovePositions, false);
         m_deferMovePositions.clear();
     }
 }
@@ -522,7 +514,6 @@ void Positioner::sourceDataChanged(const QModelIndex &topLeft, const QModelIndex
         for (int i = start; i <= end; ++i) {
             if (m_sourceToProxy.contains(i)) {
                 const QModelIndex &idx = index(m_sourceToProxy.value(i), 0);
-
                 Q_EMIT dataChanged(idx, idx);
             }
         }
@@ -693,8 +684,11 @@ void Positioner::sourceRowsInserted(const QModelIndex &parent, int first, int la
 
     // Don't generate new positions data if we're waiting for listing to
     // complete to apply initial positions.
-    if (!m_deferApplyPositions) {
-        m_updatePositionsTimer->start();
+    if (!m_deferApplyPositions && screenInUse()) {
+        // Load current config
+        loadAndApplyPositionsConfig();
+        // Update positions to append the missing items
+        updatePositionsList();
     }
 }
 
@@ -723,7 +717,14 @@ void Positioner::sourceRowsRemoved(const QModelIndex &parent, int first, int las
 
     flushPendingChanges();
 
-    m_updatePositionsTimer->start();
+    if (screenInUse()) {
+        // Load current config
+        loadAndApplyPositionsConfig();
+        // Update positions to remove the missing items
+        // We do not wait for defer here since we want this to happen instantly
+        // due to this being user action
+        updatePositionsList();
+    }
 }
 
 void Positioner::sourceLayoutChanged(const QList<QPersistentModelIndex> &parents, QAbstractItemModel::LayoutChangeHint hint)
@@ -799,8 +800,11 @@ int Positioner::firstFreeRow() const
     return -1;
 }
 
-void Positioner::applyPositions()
+void Positioner::convertFolderModelData()
 {
+    if (!screenInUse()) {
+        return;
+    }
     // We were called while the source model is listing. Defer applying positions
     // until listing completes.
     if (m_folderModel->status() == FolderModel::Listing) {
@@ -809,17 +813,7 @@ void Positioner::applyPositions()
         return;
     }
 
-    if (m_positions.size() < 5) {
-        // We were waiting for listing to complete before proxying source rows,
-        // but we don't have positions to apply. Reset to populate.
-        if (m_deferApplyPositions) {
-            m_deferApplyPositions = false;
-            reset();
-        }
-
-        return;
-    }
-
+    // Do not allow saving during this operation
     beginResetModel();
 
     m_proxyToSource.clear();
@@ -924,8 +918,6 @@ void Positioner::applyPositions()
     endResetModel();
 
     m_deferApplyPositions = false;
-
-    m_updatePositionsTimer->start();
 }
 
 void Positioner::flushPendingChanges()
@@ -945,6 +937,126 @@ void Positioner::flushPendingChanges()
     m_pendingChanges.clear();
 }
 
+Plasma::Applet *Positioner::applet() const
+{
+    return m_applet;
+}
+
+void Positioner::setApplet(Plasma::Applet *applet)
+{
+    if (m_applet != applet) {
+        Q_ASSERT(!m_applet);
+        m_applet = applet;
+
+        Q_EMIT appletChanged();
+    }
+}
+
+bool Positioner::screenInUse() const
+{
+    if (!m_folderModel) {
+        return false;
+    }
+    return m_folderModel->screenUsed();
+}
+
+void Positioner::loadAndApplyPositionsConfig()
+{
+    if (m_applet && screenInUse() && !m_resolution.isEmpty()) {
+        // The old configuration has commas with escape characters, so clean up those from the config
+        auto confdata = loadConfigData();
+        const QJsonDocument doc = QJsonDocument::fromJson(confdata.toUtf8());
+        QStringList positions = doc[m_resolution].toVariant().toStringList();
+
+        m_positions = positions;
+        // In case our row and m_perStripe values are out of sync, update them here
+        // The can get out of sync due to FolderView.qml and positioner.cpp both handling them
+        // If we have the first two values of positions, we have the perStripe value
+        if (m_positions.length() >= 2) {
+            m_perStripe = m_positions[1].toInt();
+            Q_EMIT perStripeChanged();
+        }
+
+        convertFolderModelData();
+    }
+}
+
+void Positioner::savePositionsConfig()
+{
+    if (m_applet && screenInUse()) {
+        auto confdata = loadConfigData();
+        auto doc = QJsonDocument::fromJson(confdata.toUtf8());
+        QJsonObject root;
+        // Iterate over the old data
+        for (const auto &item : doc.toVariant().toMap().asKeyValueRange()) {
+            if (item.first != m_resolution) {
+                root.insert(item.first, QJsonValue::fromVariant(item.second));
+            }
+        }
+        // Append our new item
+        root.insert(m_resolution, QJsonArray::fromStringList(m_positions));
+
+        const QByteArray data = QJsonDocument(root).toJson(QJsonDocument::Compact);
+        m_applet->config().group(QStringLiteral("General")).writeEntry(QStringLiteral("positions"), data);
+        Q_EMIT m_applet->configNeedsSaving();
+    }
+}
+
+void Positioner::updateResolution()
+{
+    if (m_folderModel) {
+        QString resolution = QStringLiteral("%1x%2").arg(QString::number(floor(m_folderModel->screenGeometry().width())),
+                                                         QString::number(floor(m_folderModel->screenGeometry().height())));
+        if (resolution != QStringLiteral("0x0")) {
+            if (m_resolution != resolution) {
+                m_resolution = resolution;
+                if (configurationHasResolution(m_resolution)) {
+                    loadAndApplyPositionsConfig();
+                }
+                if (!m_deferApplyPositions) {
+                    updatePositionsList();
+                }
+            }
+        }
+    }
+}
+
+bool Positioner::configurationHasResolution(const QString &resolution) const
+{
+    auto confdata = loadConfigData();
+    if (confdata.isEmpty()) {
+        return false;
+    }
+    const QJsonDocument doc = QJsonDocument::fromJson(confdata.toUtf8());
+    return doc.object().contains(resolution);
+}
+
+QString Positioner::loadConfigData() const
+{
+    QString confdata;
+    if (m_applet) {
+        confdata =
+            m_applet->config().group(QStringLiteral("General")).readEntry(QStringLiteral("positions")).replace(QStringLiteral("\\,"), QStringLiteral(","));
+    }
+    return confdata;
+}
+
+void Positioner::onItemRenamed()
+{
+    updatePositionsList();
+    savePositionsConfig();
+}
+
+// Save positions only when listing is done, so we
+// do not save them during they're being moved due to
+// geometry changes
+void Positioner::onListingCompleted()
+{
+    if (screenInUse()) {
+        savePositionsConfig();
+    }
+}
+
 void Positioner::connectSignals(FolderModel *model)
 {
     connect(model, &QAbstractItemModel::dataChanged, this, &Positioner::sourceDataChanged, Qt::UniqueConnection);
@@ -958,7 +1070,9 @@ void Positioner::connectSignals(FolderModel *model)
     connect(model, &QAbstractItemModel::layoutChanged, this, &Positioner::sourceLayoutChanged, Qt::UniqueConnection);
     connect(m_folderModel, &FolderModel::urlChanged, this, &Positioner::reset, Qt::UniqueConnection);
     connect(m_folderModel, &FolderModel::statusChanged, this, &Positioner::sourceStatusChanged, Qt::UniqueConnection);
-    connect(m_folderModel, &FolderModel::itemRenamed, this, &Positioner::updatePositions, Qt::UniqueConnection);
+    connect(m_folderModel, &FolderModel::itemRenamed, this, &Positioner::onItemRenamed, Qt::UniqueConnection);
+    connect(m_folderModel, &FolderModel::screenGeometryChanged, this, &Positioner::updateResolution, Qt::UniqueConnection);
+    connect(m_folderModel, &FolderModel::listingCompleted, this, &Positioner::onListingCompleted, Qt::UniqueConnection);
 }
 
 void Positioner::disconnectSignals(FolderModel *model)
@@ -974,5 +1088,7 @@ void Positioner::disconnectSignals(FolderModel *model)
     disconnect(model, &QAbstractItemModel::layoutChanged, this, &Positioner::sourceLayoutChanged);
     disconnect(m_folderModel, &FolderModel::urlChanged, this, &Positioner::reset);
     disconnect(m_folderModel, &FolderModel::statusChanged, this, &Positioner::sourceStatusChanged);
-    disconnect(m_folderModel, &FolderModel::itemRenamed, this, &Positioner::updatePositions);
+    disconnect(m_folderModel, &FolderModel::itemRenamed, this, &Positioner::onItemRenamed);
+    disconnect(m_folderModel, &FolderModel::screenGeometryChanged, this, &Positioner::updateResolution);
+    disconnect(m_folderModel, &FolderModel::listingCompleted, this, &Positioner::onListingCompleted);
 }

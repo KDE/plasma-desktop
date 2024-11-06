@@ -7,11 +7,17 @@
 
 #pragma once
 
+#include <Plasma/Applet>
+#include <QJsonDocument>
 #include <QObject>
 
 class QTemporaryDir;
 class FolderModel;
 class Positioner;
+struct Pos {
+    int x;
+    int y;
+};
 
 class PositionerTest : public QObject
 {
@@ -24,8 +30,8 @@ private Q_SLOTS:
     void init();
     void cleanup();
 
-    void tst_positions_data();
-    void tst_positions();
+    void tst_default_positions_data();
+    void tst_default_positions();
     void tst_map();
     void tst_move_data();
     void tst_move();
@@ -37,13 +43,22 @@ private Q_SLOTS:
     void tst_changeEnabledStatus();
     void tst_changePerStripe();
     void tst_proxyMapping();
+    void tst_configSaveLoad();
+    void tst_changeResolution();
+    void tst_renameFile();
+    void tst_insertFile();
+    void tst_dontSaveWithoutScreen();
 
 private:
-    void checkPositions(int perStripe);
+    void checkDefaultPositions(int perStripe);
     void ensureFolderModelReady();
+    QJsonDocument getCurrentConfig();
+    QHash<QString, Pos> getPositionHash(QStringList positions);
+    void changeResolution(QString resolution);
 
     QString m_currentActivity;
     Positioner *m_positioner;
     FolderModel *m_folderModel;
     QTemporaryDir *m_folderDir;
+    Plasma::Applet *m_applet = nullptr;
 };

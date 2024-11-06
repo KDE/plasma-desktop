@@ -744,16 +744,20 @@ void FolderModel::setFilterMimeTypes(const QStringList &mimeList)
 
 void FolderModel::setScreen(int screen)
 {
-    m_screenUsed = (screen != -1);
+    bool screenUsed = (screen != -1);
 
-    if (!m_screenUsed || m_screen == screen)
-        return;
-
-    m_screen = screen;
-    if (m_usedByContainment && !m_screenMapper->sharedDesktops()) {
-        m_screenMapper->addScreen(screen, m_currentActivity, resolvedUrl());
+    if (screenUsed && m_screen != screen) {
+        m_screen = screen;
+        if (m_usedByContainment && !m_screenMapper->sharedDesktops()) {
+            m_screenMapper->addScreen(screen, m_currentActivity, resolvedUrl());
+        }
     }
+    m_screenUsed = screenUsed;
     Q_EMIT screenChanged();
+}
+
+bool FolderModel::screenUsed() {
+    return m_screenUsed;
 }
 
 KFileItem FolderModel::rootItem() const
@@ -2089,11 +2093,23 @@ void FolderModel::setApplet(Plasma::Applet *applet)
                 }
                 setScreen(containment->screen());
                 connect(containment, &Plasma::Containment::screenChanged, this, &FolderModel::setScreen);
+                connect(containment, &Plasma::Containment::screenGeometryChanged, this, &FolderModel::screenGeometryChanged);
             }
         }
 
         Q_EMIT appletChanged();
     }
+}
+
+QRectF FolderModel::screenGeometry()
+{
+    if (m_applet) {
+        Plasma::Containment *containment = m_applet->containment();
+        if (containment) {
+            return containment->screenGeometry();
+        }
+    }
+    return QRectF();
 }
 
 bool FolderModel::showHiddenFiles() const

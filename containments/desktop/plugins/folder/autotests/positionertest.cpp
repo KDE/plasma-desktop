@@ -7,6 +7,7 @@
 
 #include "positionertest.h"
 
+#include <QJsonDocument>
 #include <QSignalSpy>
 #include <QTemporaryDir>
 #include <QTest>
@@ -18,9 +19,12 @@
 QTEST_MAIN(PositionerTest)
 
 static const QLatin1String desktop(QLatin1String("Desktop"));
+static const QLatin1String defaultResolution(QLatin1String("1920x1080"));
 
 void PositionerTest::initTestCase()
 {
+    m_applet = new Plasma::Applet(this, KPluginMetaData(), QVariantList{});
+
     m_currentActivity = QStringLiteral("00000000-0000-0000-0000-000000000000");
     m_folderDir = new QTemporaryDir();
 
@@ -49,6 +53,8 @@ void PositionerTest::init()
     m_folderModel->setUsedByContainment(true);
     m_folderModel->componentComplete();
     m_positioner = new Positioner(this);
+    m_positioner->m_resolution = defaultResolution;
+    m_positioner->setApplet(m_applet);
     m_positioner->setEnabled(true);
     m_positioner->setFolderModel(m_folderModel);
     m_positioner->setPerStripe(3);
@@ -66,18 +72,23 @@ void PositionerTest::cleanup()
     m_positioner = nullptr;
 }
 
-void PositionerTest::tst_positions_data()
+void PositionerTest::tst_default_positions_data()
 {
     QTest::addColumn<int>("perStripe");
     QTest::newRow("3 per column") << 3;
     QTest::newRow("5 per column") << 5;
 }
 
-void PositionerTest::tst_positions()
+void PositionerTest::tst_default_positions()
 {
+    // Ignore config with this test to see if positions are as expected
     QFETCH(int, perStripe);
+    QVERIFY(m_positioner->screenInUse());
+    // Since we are not using configs, make sure our positions is clean before test
+    m_positioner->m_positions = QStringList();
     m_positioner->setPerStripe(perStripe);
-    checkPositions(perStripe);
+    m_positioner->updatePositionsList();
+    checkDefaultPositions(perStripe);
 }
 
 void PositionerTest::tst_map()
@@ -92,22 +103,32 @@ void PositionerTest::tst_move_data()
 {
     QTest::addColumn<QVariantList>("moves");
     QTest::addColumn<QList<int>>("result");
-    QTest::newRow("First to last") << QVariantList({0, 10}) << QList<int>({-1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0});
-    QTest::newRow("First to after last") << QVariantList({0, 11}) << QList<int>({-1, 1, 2, 3, 4, 5, 6, 7, 8, 9, -1, 0});
-    QTest::newRow("Switch 2nd with 3rd ") << QVariantList({1, 2, 2, 1}) << QList<int>({0, 2, 1, 3, 4, 5, 6, 7, 8, 9});
-    QTest::newRow("Switch 2nd with 2nd ") << QVariantList({1, 1, 1, 1}) << QList<int>({0, 1, 2, 3, 4, 5, 6, 7, 8, 9});
-    QTest::newRow("2nd to last") << QVariantList({2, 10}) << QList<int>({0, 1, -1, 3, 4, 5, 6, 7, 8, 9, 2});
+    QTest::addColumn<bool>("configChanged");
+    QTest::newRow("First to last") << QVariantList({0, 10}) << QList<int>({-1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0}) << true;
+    QTest::newRow("First to after last") << QVariantList({0, 11}) << QList<int>({-1, 1, 2, 3, 4, 5, 6, 7, 8, 9, -1, 0}) << true;
+    QTest::newRow("Switch 2nd with 3rd ") << QVariantList({1, 2, 2, 1}) << QList<int>({0, 2, 1, 3, 4, 5, 6, 7, 8, 9}) << true;
+    QTest::newRow("Switch 2nd with 2nd ") << QVariantList({1, 1, 1, 1}) << QList<int>({0, 1, 2, 3, 4, 5, 6, 7, 8, 9}) << false;
+    QTest::newRow("2nd to last") << QVariantList({2, 10}) << QList<int>({0, 1, -1, 3, 4, 5, 6, 7, 8, 9, 2}) << true;
 }
 
 void PositionerTest::tst_move()
 {
     QFETCH(QVariantList, moves);
     QFETCH(QList<int>, result);
+    QFETCH(bool, configChanged);
 
     ensureFolderModelReady();
+    auto baselineConfig = getCurrentConfig();
     m_positioner->move(moves);
     for (int i = 0; i < m_positioner->rowCount(); i++) {
         QCOMPARE(m_positioner->map(i), result[i]);
+    }
+    // Configuration should be saved during move, so they shouldn't be equal
+    if (configChanged) {
+        QCOMPARE_NE(baselineConfig, getCurrentConfig());
+    } else {
+        // If our movement doesnt change anything, config is equal
+        QCOMPARE(baselineConfig, getCurrentConfig());
     }
 }
 
@@ -144,10 +165,8 @@ void PositionerTest::tst_reset()
     ensureFolderModelReady();
     m_positioner->move({0, 10});
     m_positioner->reset();
-    QSignalSpy s(m_positioner, &Positioner::positionsChanged);
-    s.wait(500);
-    QCOMPARE(s.count(), 1);
-    checkPositions(3);
+    // Check that positions are placed in their default positions
+    checkDefaultPositions(3);
 
     for (int i = 0; i < m_positioner->rowCount(); i++) {
         QCOMPARE(m_positioner->map(i), i);
@@ -288,32 +307,144 @@ void PositionerTest::tst_proxyMapping()
     verifyMapping(secondPositioner.sourceToProxyMapping(), expectedSource2ProxyScreen1);
 }
 
-void PositionerTest::checkPositions(int perStripe)
+void PositionerTest::tst_configSaveLoad()
+{
+    QVERIFY(m_positioner->screenInUse());
+    // During init, the stripe is set to 3
+    m_positioner->savePositionsConfig();
+    m_positioner->loadAndApplyPositionsConfig();
+    auto baselineConfig = getCurrentConfig();
+
+    // set stripe to 5
+    m_positioner->setPerStripe(5);
+    m_positioner->updatePositionsList();
+    // The config should be identical since we did not allow saving
+    m_positioner->loadAndApplyPositionsConfig();
+    QCOMPARE(baselineConfig, getCurrentConfig());
+
+    // Set stripe to 4, the config should be different
+    m_positioner->setPerStripe(4);
+    m_positioner->updatePositionsList();
+    m_positioner->savePositionsConfig();
+    m_positioner->loadAndApplyPositionsConfig();
+    QCOMPARE_NE(baselineConfig, getCurrentConfig());
+}
+
+void PositionerTest::tst_changeResolution()
+{
+    QVERIFY(m_positioner->screenInUse());
+    // During init, the stripe is set to 3
+    m_positioner->savePositionsConfig();
+    m_positioner->loadAndApplyPositionsConfig();
+    auto baselineConfig = getCurrentConfig();
+
+    changeResolution(QStringLiteral("800x600"));
+    // Configuration should not be saved after resolution change, so its identical to baseline
+    QCOMPARE(baselineConfig, getCurrentConfig());
+}
+
+void PositionerTest::tst_renameFile()
 {
     ensureFolderModelReady();
+    QSignalSpy itemRenamedSpy(m_folderModel, &FolderModel::itemRenamed);
+    QVERIFY(m_positioner->screenInUse());
+    // setup baseline
+    m_positioner->savePositionsConfig();
+    m_positioner->loadAndApplyPositionsConfig();
+    auto baselineConfig = getCurrentConfig();
 
-    QSignalSpy s(m_positioner, &Positioner::positionsChanged);
-    s.wait();
+    m_folderModel->rename(1, QStringLiteral("NEWNAME.txt"));
+    QVERIFY(itemRenamedSpy.wait());
+    // Renaming should save the config, so baseline and current should be not equal
+    QCOMPARE_NE(baselineConfig, getCurrentConfig());
+}
 
-    const auto positions = m_positioner->positions();
-    struct Pos {
-        int x;
-        int y;
-    };
-    const auto fileCount = m_folderModel->rowCount();
+void PositionerTest::tst_insertFile()
+{
+    ensureFolderModelReady();
+    QSignalSpy itemInsertedSpy(m_positioner, &Positioner::rowsInserted);
+    QVERIFY(m_positioner->screenInUse());
+    // setup baseline
+    m_positioner->savePositionsConfig();
+    m_positioner->loadAndApplyPositionsConfig();
+    auto baselineConfig = getCurrentConfig();
+
+    // Add new file
+    QDir dir(m_folderDir->path());
+    dir.cd(desktop);
+    QFile f;
+    f.setFileName(QStringLiteral("%1/NEWFILE.txt").arg(dir.path()));
+    f.open(QFile::WriteOnly);
+    f.close();
+
+    QVERIFY(itemInsertedSpy.wait());
+    // adding new item should save the config, so baseline and current should be not equal
+    QCOMPARE_NE(baselineConfig, getCurrentConfig());
+}
+
+void PositionerTest::tst_dontSaveWithoutScreen()
+{
+    ensureFolderModelReady();
+    QSignalSpy folderRowRemoved(m_folderModel, &FolderModel::rowsRemoved);
+    auto baselineConfig = getCurrentConfig();
+
+    // set screen off
+    m_folderModel->setScreen(-1);
+    QVERIFY(!m_positioner->screenInUse());
+
+    // Remove NEWFILE.txt that we added in previous test
+    QDir dir(m_folderDir->path());
+    dir.cd(desktop);
+    QVERIFY(dir.entryList().contains(QStringLiteral("NEWFILE.txt")));
+    dir.remove(QStringLiteral("%1/NEWFILE.txt").arg(dir.path()));
+    dir.refresh();
+    m_folderModel->refresh();
+    QVERIFY(!dir.entryList().contains(QStringLiteral("NEWFILE.txt")));
+    QVERIFY(folderRowRemoved.wait());
+
+    // Removing a row should not save without a screen, so config should be equal
+    QCOMPARE(baselineConfig, getCurrentConfig());
+}
+
+// Test utilities
+
+QJsonDocument PositionerTest::getCurrentConfig()
+{
+    return QJsonDocument::fromJson(m_applet->config()
+                                       .group(QStringLiteral("General"))
+                                       .readEntry(QStringLiteral("positions"))
+                                       .replace(QStringLiteral("\\,"), QStringLiteral(","))
+                                       .toUtf8());
+}
+
+QHash<QString, Pos> PositionerTest::getPositionHash(QStringList positions)
+{
     QHash<QString, Pos> posHash;
-    QCOMPARE(positions[0].toInt(), 1 + ((fileCount - 1) / perStripe)); // rows
-    QCOMPARE(positions[1].toInt(), perStripe); // columns
+
     for (int i = 2; i < positions.length() - 2; i += 3) {
         posHash[positions[i]] = {positions[i + 1].toInt(), positions[i + 2].toInt()};
     }
+    return posHash;
+}
 
-    int row = 0;
+void PositionerTest::checkDefaultPositions(int perStripe)
+{
+    ensureFolderModelReady();
+    QCOMPARE(perStripe, m_positioner->perStripe());
+    QCOMPARE(m_positioner->positions()[0].toInt(), 1 + ((m_positioner->rowCount() - 1) / perStripe)); // rows
+    QCOMPARE(m_positioner->positions()[1].toInt(), perStripe); // columns
+    const auto currentPositions = getPositionHash(m_positioner->positions());
+    // Checking default positions ignores configuration completely
+    // instead, it compares that the default values match, since the
+    // for-loop it runs is same as creating default positions in positioner code.
+    // For comparing configurations and their positions, you can just compare the JSON data.
+
     int col = 0;
-    for (int i = 0; i < fileCount; i++) {
+    int row = 0;
+    for (int i = 0; i < m_positioner->rowCount(); i++) {
         const auto index = m_folderModel->index(i, 0);
         const auto url = index.data(FolderModel::UrlRole).toString();
-        const Pos pos = posHash[url];
+        const Pos pos = currentPositions[url];
         QCOMPARE(pos.x, row);
         QCOMPARE(pos.y, col);
         col++;
@@ -330,4 +461,12 @@ void PositionerTest::ensureFolderModelReady()
         QSignalSpy folderModelReadySpy(m_folderModel, &FolderModel::statusChanged);
         QVERIFY(folderModelReadySpy.wait());
     }
+}
+
+void PositionerTest::changeResolution(QString resolution)
+{
+    // Identical to updateResolution, except we input the resolution manually
+    // instead of reading a screen
+    m_positioner->m_resolution = resolution;
+    m_positioner->loadAndApplyPositionsConfig();
 }
