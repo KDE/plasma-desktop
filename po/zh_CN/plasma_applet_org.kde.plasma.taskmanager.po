@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-24 00:41+0000\n"
+"POT-Creation-Date: 2024-11-06 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -28,25 +28,25 @@ msgstr "外观"
 msgid "Behavior"
 msgstr "行为"
 
-#: package/contents/ui/AudioStream.qml:101
+#: package/contents/ui/AudioStream.qml:102
 #, kde-format
 msgctxt "@action:button"
 msgid "Unmute"
 msgstr "取消静音"
 
-#: package/contents/ui/AudioStream.qml:101
+#: package/contents/ui/AudioStream.qml:102
 #, kde-format
 msgctxt "@action:button"
 msgid "Mute"
 msgstr "静音"
 
-#: package/contents/ui/AudioStream.qml:102
+#: package/contents/ui/AudioStream.qml:103
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Unmute %1"
 msgstr "取消静音 %1"
 
-#: package/contents/ui/AudioStream.qml:102
+#: package/contents/ui/AudioStream.qml:103
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Mute %1"
@@ -85,8 +85,8 @@ msgstr "光标悬停在窗口预览上时隐藏其他窗口"
 #: package/contents/ui/ConfigAppearance.qml:57
 #, kde-format
 msgctxt "@option:check section General"
-msgid "Mark applications that play audio"
-msgstr "标记正在播放音频的应用程序"
+msgid "Use audio indicators to mute tasks"
+msgstr ""
 
 #: package/contents/ui/ConfigAppearance.qml:65
 #, kde-format
@@ -706,61 +706,61 @@ msgstr "打开 %1 的文本窗口列表"
 msgid "Activate %1"
 msgstr "激活 %1"
 
-#: package/contents/ui/ToolTipInstance.qml:362
+#: package/contents/ui/ToolTipInstance.qml:361
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
 msgstr "取消静音 %1"
 
-#: package/contents/ui/ToolTipInstance.qml:363
+#: package/contents/ui/ToolTipInstance.qml:362
 #, kde-format
 msgctxt "button to mute app"
 msgid "Mute %1"
 msgstr "静音 %1"
 
-#: package/contents/ui/ToolTipInstance.qml:381
+#: package/contents/ui/ToolTipInstance.qml:380
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
 msgstr "调整 %1 音量"
 
-#: package/contents/ui/ToolTipInstance.qml:397
+#: package/contents/ui/ToolTipInstance.qml:396
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/ToolTipInstance.qml:401
+#: package/contents/ui/ToolTipInstance.qml:400
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
 msgstr "100%"
 
-#: package/contents/ui/ToolTipInstance.qml:417
+#: package/contents/ui/ToolTipInstance.qml:416
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "On %1"
 msgstr "位于 %1"
 
-#: package/contents/ui/ToolTipInstance.qml:420
+#: package/contents/ui/ToolTipInstance.qml:419
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
 msgstr "固定到所有桌面"
 
-#: package/contents/ui/ToolTipInstance.qml:426
+#: package/contents/ui/ToolTipInstance.qml:425
 #, kde-format
 msgctxt "Which virtual desktop a window is currently on"
 msgid "Available on all activities"
 msgstr "位于全部活动中"
 
-#: package/contents/ui/ToolTipInstance.qml:436
+#: package/contents/ui/ToolTipInstance.qml:435
 #, kde-format
 msgctxt "Activities a window is currently on (apart from the current one)"
 msgid "Also available on %1"
 msgstr "同时位于 %1"
 
-#: package/contents/ui/ToolTipInstance.qml:440
+#: package/contents/ui/ToolTipInstance.qml:439
 #, kde-format
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
@@ -811,3 +811,7 @@ msgstr "忘记最近位置"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "清除最近文件"
+
+#~ msgctxt "@option:check section General"
+#~ msgid "Mark applications that play audio"
+#~ msgstr "标记正在播放音频的应用程序"

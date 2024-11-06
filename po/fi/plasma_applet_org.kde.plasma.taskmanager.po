@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-24 00:41+0000\n"
+"POT-Creation-Date: 2024-11-06 00:41+0000\n"
 "PO-Revision-Date: 2023-12-11 18:22+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -28,26 +28,26 @@ msgstr "Ulkoasu"
 msgid "Behavior"
 msgstr "Toiminta"
 
-#: package/contents/ui/AudioStream.qml:101
+#: package/contents/ui/AudioStream.qml:102
 #, kde-format
 msgctxt "@action:button"
 msgid "Unmute"
 msgstr "Poista vaimennus"
 
-#: package/contents/ui/AudioStream.qml:101
+#: package/contents/ui/AudioStream.qml:102
 #, kde-format
 msgctxt "@action:button"
 msgid "Mute"
 msgstr "Vaimenna"
 
-#: package/contents/ui/AudioStream.qml:102
+#: package/contents/ui/AudioStream.qml:103
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Unmute %1"
 msgstr "Poista vaimennus: %1"
 
 # Kaksoispiste yhdenmukaisuussyistä: ”Poista vaimennus” vaatii genetiivin (poista JONKIN vaimennus)
-#: package/contents/ui/AudioStream.qml:102
+#: package/contents/ui/AudioStream.qml:103
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Mute %1"
@@ -87,11 +87,10 @@ msgid "Hide other windows when hovering over previews"
 msgstr "Piilota muut ikkunat esikatselujen yllä ollessa"
 
 #: package/contents/ui/ConfigAppearance.qml:57
-#, fuzzy, kde-format
-#| msgid "Mark applications that play audio"
+#, kde-format
 msgctxt "@option:check section General"
-msgid "Mark applications that play audio"
-msgstr "Osoita ääntä toistavat sovellukset"
+msgid "Use audio indicators to mute tasks"
+msgstr ""
 
 #: package/contents/ui/ConfigAppearance.qml:65
 #, fuzzy, kde-format
@@ -806,61 +805,61 @@ msgstr "Avaa tehtävän %1 ikkunat luetteloksi"
 msgid "Activate %1"
 msgstr "Aktivoi %1"
 
-#: package/contents/ui/ToolTipInstance.qml:362
+#: package/contents/ui/ToolTipInstance.qml:361
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
 msgstr "Vaimenna %1"
 
-#: package/contents/ui/ToolTipInstance.qml:363
+#: package/contents/ui/ToolTipInstance.qml:362
 #, kde-format
 msgctxt "button to mute app"
 msgid "Mute %1"
 msgstr "Vaimenna %1"
 
-#: package/contents/ui/ToolTipInstance.qml:381
+#: package/contents/ui/ToolTipInstance.qml:380
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
 msgstr "Säädä äänenvoimakkuutta %1"
 
-#: package/contents/ui/ToolTipInstance.qml:397
+#: package/contents/ui/ToolTipInstance.qml:396
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
 msgstr "%1 %"
 
-#: package/contents/ui/ToolTipInstance.qml:401
+#: package/contents/ui/ToolTipInstance.qml:400
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
 msgstr "100 %"
 
-#: package/contents/ui/ToolTipInstance.qml:417
+#: package/contents/ui/ToolTipInstance.qml:416
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "On %1"
 msgstr "Aktiviteet(e)issa %1"
 
-#: package/contents/ui/ToolTipInstance.qml:420
+#: package/contents/ui/ToolTipInstance.qml:419
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
 msgstr "Näytetään kaikilla työpöydillä"
 
-#: package/contents/ui/ToolTipInstance.qml:426
+#: package/contents/ui/ToolTipInstance.qml:425
 #, kde-format
 msgctxt "Which virtual desktop a window is currently on"
 msgid "Available on all activities"
 msgstr "Käytettävissä kaikissa aktiviteeteissa"
 
-#: package/contents/ui/ToolTipInstance.qml:436
+#: package/contents/ui/ToolTipInstance.qml:435
 #, kde-format
 msgctxt "Activities a window is currently on (apart from the current one)"
 msgid "Also available on %1"
 msgstr "Käytettävissä myös aktiviteetissa %1"
 
-#: package/contents/ui/ToolTipInstance.qml:440
+#: package/contents/ui/ToolTipInstance.qml:439
 #, kde-format
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
@@ -912,6 +911,12 @@ msgstr "Unohda viimeisimmät sijainnit"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Unohda viimeisimmät tiedostot"
+
+#, fuzzy
+#~| msgid "Mark applications that play audio"
+#~ msgctxt "@option:check section General"
+#~ msgid "Mark applications that play audio"
+#~ msgstr "Osoita ääntä toistavat sovellukset"
 
 #~ msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 #~ msgid "Cycles through tasks"

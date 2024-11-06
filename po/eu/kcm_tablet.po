@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-03 00:41+0000\n"
-"PO-Revision-Date: 2024-10-15 22:11+0200\n"
+"PO-Revision-Date: 2024-11-05 19:27+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: inputsequence.cpp:172
 #, kde-format
@@ -57,11 +57,10 @@ msgid "Application-defined"
 msgstr "Aplikazioak definitua"
 
 #: inputsequence.cpp:194
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pen Button %1"
-msgstr "Arkatzaren 1. botoia:"
+msgstr "Arkatzaren %1. botoia"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -120,23 +119,18 @@ msgid "Map to Portion of Screen"
 msgstr "Mapatu pantailaren zatira"
 
 #: kcmtablet.cpp:290
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
-msgstr "Arkatzaren 1. botoia:"
+msgstr "Arkatzaren %1 botoia:"
 
 #: kcmtablet.cpp:291
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button X'"
 msgid "pen button %1"
-msgstr "Arkatzaren 1. botoia"
+msgstr "arkatzaren %1. botoia"
 
 #: ui/ActionDialog.qml:25
 #, kde-format
@@ -169,14 +163,10 @@ msgid "Send mouse button click"
 msgstr "Bidali sauaren botoiaren klik"
 
 #: ui/ActionDialog.qml:132
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt "@option:radio Set this action to a pen button type"
 msgid "Send pen button"
-msgstr "Arkatzaren 1. botoia"
+msgstr "Bidali arkatzaren botoia"
 
 #: ui/ActionDialog.qml:150
 #, kde-format
@@ -237,31 +227,22 @@ msgid "Shift"
 msgstr "Maius"
 
 #: ui/ActionDialog.qml:264
-#, fuzzy, kde-format
-#| msgid "Tool Button 1"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
-msgstr "Tresnaren botoia 1"
+msgstr "1. botoia"
 
 #: ui/ActionDialog.qml:265
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 2'"
-#| msgid "pen button 2"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
-msgstr "arkatzaren 2. botoia"
+msgstr "2. botoia"
 
 #: ui/ActionDialog.qml:266
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 3'"
-#| msgid "pen button 3"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
-msgstr "arkatzaren 3. botoia"
+msgstr "3. botoia"
 
 #: ui/ActionDialog.qml:275
 #, kde-format

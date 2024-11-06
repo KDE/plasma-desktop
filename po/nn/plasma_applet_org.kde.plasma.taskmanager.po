@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-24 00:41+0000\n"
+"POT-Creation-Date: 2024-11-06 00:41+0000\n"
 "PO-Revision-Date: 2024-07-12 21:04+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -30,25 +30,25 @@ msgstr "Utsjånad"
 msgid "Behavior"
 msgstr "Åtferd"
 
-#: package/contents/ui/AudioStream.qml:101
+#: package/contents/ui/AudioStream.qml:102
 #, kde-format
 msgctxt "@action:button"
 msgid "Unmute"
 msgstr "Lyddemping av"
 
-#: package/contents/ui/AudioStream.qml:101
+#: package/contents/ui/AudioStream.qml:102
 #, kde-format
 msgctxt "@action:button"
 msgid "Mute"
 msgstr "Demp lyd"
 
-#: package/contents/ui/AudioStream.qml:102
+#: package/contents/ui/AudioStream.qml:103
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Unmute %1"
 msgstr "Slå av lyddemping for %1"
 
-#: package/contents/ui/AudioStream.qml:102
+#: package/contents/ui/AudioStream.qml:103
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Mute %1"
@@ -88,11 +88,10 @@ msgid "Hide other windows when hovering over previews"
 msgstr "Gøym andre vindauge når peikaren er over miniversjonar av vindauge"
 
 #: package/contents/ui/ConfigAppearance.qml:57
-#, fuzzy, kde-format
-#| msgid "Mark applications that play audio"
+#, kde-format
 msgctxt "@option:check section General"
-msgid "Mark applications that play audio"
-msgstr "Marker program som spelar av lyd"
+msgid "Use audio indicators to mute tasks"
+msgstr ""
 
 #: package/contents/ui/ConfigAppearance.qml:65
 #, fuzzy, kde-format
@@ -804,61 +803,61 @@ msgstr "Vis tekstliste med vindauge for %1"
 msgid "Activate %1"
 msgstr "Slå på %1"
 
-#: package/contents/ui/ToolTipInstance.qml:362
+#: package/contents/ui/ToolTipInstance.qml:361
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
 msgstr "Slå av lyddemping for %1"
 
-#: package/contents/ui/ToolTipInstance.qml:363
+#: package/contents/ui/ToolTipInstance.qml:362
 #, kde-format
 msgctxt "button to mute app"
 msgid "Mute %1"
 msgstr "Demp lyden på %1"
 
-#: package/contents/ui/ToolTipInstance.qml:381
+#: package/contents/ui/ToolTipInstance.qml:380
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
 msgstr "Juster lydstyrken for %1"
 
-#: package/contents/ui/ToolTipInstance.qml:397
+#: package/contents/ui/ToolTipInstance.qml:396
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
 msgstr "%1 %"
 
-#: package/contents/ui/ToolTipInstance.qml:401
+#: package/contents/ui/ToolTipInstance.qml:400
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
 msgstr "100 %"
 
-#: package/contents/ui/ToolTipInstance.qml:417
+#: package/contents/ui/ToolTipInstance.qml:416
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "On %1"
 msgstr "På %1"
 
-#: package/contents/ui/ToolTipInstance.qml:420
+#: package/contents/ui/ToolTipInstance.qml:419
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
 msgstr "Festa til alle skriveborda"
 
-#: package/contents/ui/ToolTipInstance.qml:426
+#: package/contents/ui/ToolTipInstance.qml:425
 #, kde-format
 msgctxt "Which virtual desktop a window is currently on"
 msgid "Available on all activities"
 msgstr "Tilgjengeleg i alle aktivitetar"
 
-#: package/contents/ui/ToolTipInstance.qml:436
+#: package/contents/ui/ToolTipInstance.qml:435
 #, kde-format
 msgctxt "Activities a window is currently on (apart from the current one)"
 msgid "Also available on %1"
 msgstr "Også tilgjengelig på %1"
 
-#: package/contents/ui/ToolTipInstance.qml:440
+#: package/contents/ui/ToolTipInstance.qml:439
 #, kde-format
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
@@ -910,3 +909,9 @@ msgstr "Gløym nyleg brukte stadar"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Gløym nyleg brukte filer"
+
+#, fuzzy
+#~| msgid "Mark applications that play audio"
+#~ msgctxt "@option:check section General"
+#~ msgid "Mark applications that play audio"
+#~ msgstr "Marker program som spelar av lyd"
