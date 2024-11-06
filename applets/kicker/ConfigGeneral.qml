@@ -154,6 +154,8 @@ KCMUtils.SimpleKCM {
         QQC2.ComboBox {
             id: appNameFormat
 
+            visible: !isDash
+
             Kirigami.FormData.label: i18n("Show applications as:")
 
             model: [i18n("Name only"), i18n("Description only"), i18n("Name (Description)"), i18n("Description (Name)")]

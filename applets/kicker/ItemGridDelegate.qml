@@ -91,10 +91,9 @@ Item {
     PlasmaCore.ToolTipArea {
         id: toolTip
 
-        mainText: model.display ?? ""
+        mainText: model.description ?? ""
 
         anchors.fill: parent
-        active: root.visible && mainText !== "" && label.truncated
         mainItem: toolTipDelegate
 
         onContainsMouseChanged: item.GridView.view.itemContainsMouseChanged(containsMouse)
