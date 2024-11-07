@@ -160,9 +160,9 @@ class OutputsFittingModel : public QStandardItemModel
 public:
     OutputsFittingModel()
     {
-        appendRow(new QStandardItem(i18n("Fit to Screen")));
-        appendRow(new QStandardItem(i18n("Keep Aspect Ratio and Fit Within Screen")));
-        appendRow(new QStandardItem(i18n("Map to Portion of Screen")));
+        appendRow(new QStandardItem(i18nc("@item:inlistbox Stretch and fill to the screen", "Stretch and Fill")));
+        appendRow(new QStandardItem(i18nc("@item:inlistbox Keep aspect ratio and fit within the screen", "Keep Aspect Ratio and Fit")));
+        appendRow(new QStandardItem(i18nc("@item:inlistbox Map to portion of the screen", "Map to Portion")));
 
         setItemRoleNames({{Qt::DisplayRole, "display"}});
     }
