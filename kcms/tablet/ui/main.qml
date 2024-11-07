@@ -127,7 +127,6 @@ SimpleKCM {
             model: OutputsModel {
                 id: outputsModel
             }
-            enabled: count > 3 //It's only interesting when there's more than 1 screen
             currentIndex: {
 
                 if (count === 0) {
