@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-22 00:41+0000\n"
+"POT-Creation-Date: 2024-11-07 00:41+0000\n"
 "PO-Revision-Date: 2024-05-18 10:14+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -32,7 +32,7 @@ msgid "Location"
 msgstr "Путь"
 
 #: package/contents/config/config.qml:23
-#: package/contents/ui/FolderViewLayer.qml:406
+#: package/contents/ui/FolderViewLayer.qml:359
 #, kde-format
 msgid "Icons"
 msgstr "Значки"
@@ -430,38 +430,38 @@ msgstr "Настроить рабочий стол и обои..."
 msgid "Select Folder"
 msgstr "Выбор папки"
 
-#: plugins/folder/foldermodel.cpp:512
+#: plugins/folder/foldermodel.cpp:510
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "&Обновить рабочий стол"
 
-#: plugins/folder/foldermodel.cpp:512 plugins/folder/foldermodel.cpp:1680
+#: plugins/folder/foldermodel.cpp:510 plugins/folder/foldermodel.cpp:1682
 #, kde-format
 msgid "&Refresh View"
 msgstr "О&бновить вид"
 
-#: plugins/folder/foldermodel.cpp:1689
+#: plugins/folder/foldermodel.cpp:1691
 #, kde-format
 msgid "&Empty Trash"
 msgstr "О&чистить корзину"
 
-#: plugins/folder/foldermodel.cpp:1692
+#: plugins/folder/foldermodel.cpp:1694
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore"
 msgstr "Восстановить"
 
-#: plugins/folder/foldermodel.cpp:1695
+#: plugins/folder/foldermodel.cpp:1697
 #, kde-format
 msgid "&Open"
 msgstr "&Открыть"
 
-#: plugins/folder/foldermodel.cpp:1812
+#: plugins/folder/foldermodel.cpp:1814
 #, kde-format
 msgid "&Paste"
 msgstr "Вст&авить"
 
-#: plugins/folder/foldermodel.cpp:1928
+#: plugins/folder/foldermodel.cpp:1930
 #, kde-format
 msgid "&Properties"
 msgstr "&Свойства"

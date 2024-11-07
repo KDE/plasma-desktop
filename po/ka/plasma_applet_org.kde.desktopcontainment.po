@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-22 00:41+0000\n"
+"POT-Creation-Date: 2024-11-07 00:41+0000\n"
 "PO-Revision-Date: 2024-03-26 05:54+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -24,7 +24,7 @@ msgid "Location"
 msgstr "მდებარეობა"
 
 #: package/contents/config/config.qml:23
-#: package/contents/ui/FolderViewLayer.qml:406
+#: package/contents/ui/FolderViewLayer.qml:359
 #, kde-format
 msgid "Icons"
 msgstr "ხატულები"
@@ -421,38 +421,38 @@ msgstr "სამუშაო მაგიდა და ფონის სუ�
 msgid "Select Folder"
 msgstr "აირჩიეთ საქაღალდე"
 
-#: plugins/folder/foldermodel.cpp:512
+#: plugins/folder/foldermodel.cpp:510
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "&სამუშაო მაგიდის განახლება"
 
-#: plugins/folder/foldermodel.cpp:512 plugins/folder/foldermodel.cpp:1680
+#: plugins/folder/foldermodel.cpp:510 plugins/folder/foldermodel.cpp:1682
 #, kde-format
 msgid "&Refresh View"
 msgstr "&ხედის განახლება"
 
-#: plugins/folder/foldermodel.cpp:1689
+#: plugins/folder/foldermodel.cpp:1691
 #, kde-format
 msgid "&Empty Trash"
 msgstr "&სანაგვე ყუთის დაცარიელება"
 
-#: plugins/folder/foldermodel.cpp:1692
+#: plugins/folder/foldermodel.cpp:1694
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore"
 msgstr "აღდგენა"
 
-#: plugins/folder/foldermodel.cpp:1695
+#: plugins/folder/foldermodel.cpp:1697
 #, kde-format
 msgid "&Open"
 msgstr "&გახსნა"
 
-#: plugins/folder/foldermodel.cpp:1812
+#: plugins/folder/foldermodel.cpp:1814
 #, kde-format
 msgid "&Paste"
 msgstr "&ჩასმა"
 
-#: plugins/folder/foldermodel.cpp:1928
+#: plugins/folder/foldermodel.cpp:1930
 #, kde-format
 msgid "&Properties"
 msgstr "&თვისებები"

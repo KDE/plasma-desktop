@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-22 00:41+0000\n"
+"POT-Creation-Date: 2024-11-07 00:41+0000\n"
 "PO-Revision-Date: 2024-07-21 22:13-0500\n"
 "Last-Translator: aalam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -24,7 +24,7 @@ msgid "Location"
 msgstr "ਟਿਕਾਣਾ"
 
 #: package/contents/config/config.qml:23
-#: package/contents/ui/FolderViewLayer.qml:406
+#: package/contents/ui/FolderViewLayer.qml:359
 #, kde-format
 msgid "Icons"
 msgstr "ਆਈਕਾਨ"
@@ -421,38 +421,38 @@ msgstr "ਡੈਸਕਟਾਪ ਅਤੇ ਵਾਲਪੇਪਰ"
 msgid "Select Folder"
 msgstr "ਫੋਲਡਰ ਚੁਣੋ"
 
-#: plugins/folder/foldermodel.cpp:512
+#: plugins/folder/foldermodel.cpp:510
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "ਡੈਸਕਟਾਪ ਤਾਜ਼ਾ ਕਰੋ(&R)"
 
-#: plugins/folder/foldermodel.cpp:512 plugins/folder/foldermodel.cpp:1680
+#: plugins/folder/foldermodel.cpp:510 plugins/folder/foldermodel.cpp:1682
 #, kde-format
 msgid "&Refresh View"
 msgstr "ਝਲਕ ਤਾਜ਼ਾ ਕਰੋ(&R)"
 
-#: plugins/folder/foldermodel.cpp:1689
+#: plugins/folder/foldermodel.cpp:1691
 #, kde-format
 msgid "&Empty Trash"
 msgstr "ਰੱਦੀ ਖਾਲੀ ਕਰੋ(&E)"
 
-#: plugins/folder/foldermodel.cpp:1692
+#: plugins/folder/foldermodel.cpp:1694
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore"
 msgstr "ਬਹਾਲ ਕਰੋ"
 
-#: plugins/folder/foldermodel.cpp:1695
+#: plugins/folder/foldermodel.cpp:1697
 #, kde-format
 msgid "&Open"
 msgstr "ਖੋਲ੍ਹੋ(&O)"
 
-#: plugins/folder/foldermodel.cpp:1812
+#: plugins/folder/foldermodel.cpp:1814
 #, kde-format
 msgid "&Paste"
 msgstr "ਚੇਪੋ(&P)"
 
-#: plugins/folder/foldermodel.cpp:1928
+#: plugins/folder/foldermodel.cpp:1930
 #, kde-format
 msgid "&Properties"
 msgstr "ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ(&P)"

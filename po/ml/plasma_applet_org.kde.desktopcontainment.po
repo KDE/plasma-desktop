@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-22 00:41+0000\n"
+"POT-Creation-Date: 2024-11-07 00:41+0000\n"
 "PO-Revision-Date: 2019-12-29 20:50+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -24,7 +24,7 @@ msgid "Location"
 msgstr "സ്ഥാനം"
 
 #: package/contents/config/config.qml:23
-#: package/contents/ui/FolderViewLayer.qml:406
+#: package/contents/ui/FolderViewLayer.qml:359
 #, kde-format
 msgid "Icons"
 msgstr "ചിഹ്നങ്ങള്‍"
@@ -437,38 +437,38 @@ msgstr "പണിയിടം ക്രമീകരിക്കുക"
 msgid "Select Folder"
 msgstr "എല്ലാം തെരഞ്ഞെടുക്കുക"
 
-#: plugins/folder/foldermodel.cpp:512
+#: plugins/folder/foldermodel.cpp:510
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "പണിയിടം പുതുക്കുക (&R)"
 
-#: plugins/folder/foldermodel.cpp:512 plugins/folder/foldermodel.cpp:1680
+#: plugins/folder/foldermodel.cpp:510 plugins/folder/foldermodel.cpp:1682
 #, kde-format
 msgid "&Refresh View"
 msgstr "കാഴ്ച പുതുക്കുക (&R)"
 
-#: plugins/folder/foldermodel.cpp:1689
+#: plugins/folder/foldermodel.cpp:1691
 #, fuzzy, kde-format
 msgid "&Empty Trash"
 msgstr "ചവറ്റുകുട്ട കാലിയാക്കുക (&E)"
 
-#: plugins/folder/foldermodel.cpp:1692
+#: plugins/folder/foldermodel.cpp:1694
 #, fuzzy, kde-format
 msgctxt "Restore from trash"
 msgid "Restore"
 msgstr "വീണ്ടെടുക്കുക (&R)"
 
-#: plugins/folder/foldermodel.cpp:1695
+#: plugins/folder/foldermodel.cpp:1697
 #, kde-format
 msgid "&Open"
 msgstr "തുറക്കുക (&O)"
 
-#: plugins/folder/foldermodel.cpp:1812
+#: plugins/folder/foldermodel.cpp:1814
 #, kde-format
 msgid "&Paste"
 msgstr "ഒട്ടിക്കുക (&P)"
 
-#: plugins/folder/foldermodel.cpp:1928
+#: plugins/folder/foldermodel.cpp:1930
 #, kde-format
 msgid "&Properties"
 msgstr "ഗുണഗണങ്ങള്‍ (&P)"

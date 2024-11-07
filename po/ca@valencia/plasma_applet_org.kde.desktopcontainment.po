@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-22 00:41+0000\n"
+"POT-Creation-Date: 2024-11-07 00:41+0000\n"
 "PO-Revision-Date: 2024-03-26 10:23+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -28,7 +28,7 @@ msgid "Location"
 msgstr "Ubicació"
 
 #: package/contents/config/config.qml:23
-#: package/contents/ui/FolderViewLayer.qml:406
+#: package/contents/ui/FolderViewLayer.qml:359
 #, kde-format
 msgid "Icons"
 msgstr "Icones"
@@ -425,38 +425,38 @@ msgstr "Escriptori i fons de pantalla"
 msgid "Select Folder"
 msgstr "Seleccioneu una carpeta"
 
-#: plugins/folder/foldermodel.cpp:512
+#: plugins/folder/foldermodel.cpp:510
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "Act&ualitza l'escriptori"
 
-#: plugins/folder/foldermodel.cpp:512 plugins/folder/foldermodel.cpp:1680
+#: plugins/folder/foldermodel.cpp:510 plugins/folder/foldermodel.cpp:1682
 #, kde-format
 msgid "&Refresh View"
 msgstr "Act&ualitza la vista"
 
-#: plugins/folder/foldermodel.cpp:1689
+#: plugins/folder/foldermodel.cpp:1691
 #, kde-format
 msgid "&Empty Trash"
 msgstr "&Buida la paperera"
 
-#: plugins/folder/foldermodel.cpp:1692
+#: plugins/folder/foldermodel.cpp:1694
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore"
 msgstr "Restaura"
 
-#: plugins/folder/foldermodel.cpp:1695
+#: plugins/folder/foldermodel.cpp:1697
 #, kde-format
 msgid "&Open"
 msgstr "O&bri"
 
-#: plugins/folder/foldermodel.cpp:1812
+#: plugins/folder/foldermodel.cpp:1814
 #, kde-format
 msgid "&Paste"
 msgstr "A&pega"
 
-#: plugins/folder/foldermodel.cpp:1928
+#: plugins/folder/foldermodel.cpp:1930
 #, kde-format
 msgid "&Properties"
 msgstr "&Propietats"
