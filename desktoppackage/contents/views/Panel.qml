@@ -275,8 +275,22 @@ Item {
                 return;
             }
             if (verticalPanel) {
+                if (containment.Layout.fillHeight) {
+                    if (panel.lengthMode == Panel.Global.Custom) {
+                        return panel.maximumHeight
+                    } else {
+                        return panel.screenGeometry.height
+                    }
+                }
                 return containment.Layout.preferredHeight
             } else {
+                if (containment.Layout.fillWidth) {
+                    if (panel.lengthMode == Panel.Global.Custom) {
+                        return panel.maximumWidth
+                    } else {
+                        return panel.screenGeometry.width
+                    }
+                }
                 return containment.Layout.preferredWidth
             }
         }
