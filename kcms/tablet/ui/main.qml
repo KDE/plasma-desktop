@@ -526,18 +526,11 @@ SimpleKCM {
             id: tabletEvents
 
             anchors.fill: parent
-
-            onPadButtonsChanged: {
-                if (!path.endsWith(form.padDevice.sysName)) {
-                    return;
-                }
-                buttonsRepeater.model = buttonCount
-            }
         }
 
         Repeater {
             id: buttonsRepeater
-            model: tabletEvents.padButtons
+            model: form.padDevice.tabletPadButtonCount
 
             delegate: ActionBinding {
                 id: seq

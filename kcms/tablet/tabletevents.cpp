@@ -36,11 +36,6 @@ public:
         m_buttons = buttons;
     }
 
-    void zwp_tablet_pad_v2_done() override
-    {
-        m_events->padButtonsChanged(m_path, m_buttons);
-    }
-
     void zwp_tablet_pad_v2_button(uint32_t /*time*/, uint32_t button, uint32_t state) override
     {
         Q_EMIT m_events->padButtonReceived(m_path, button, state);
