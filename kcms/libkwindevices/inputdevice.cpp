@@ -148,3 +148,8 @@ void InputDevice::setPressureCurve(const QString &curve)
 {
     m_pressureCurve.set(curve);
 }
+
+bool InputDevice::pressureCurveIsDefault() const
+{
+    return m_pressureCurve.isDefaults();
+}

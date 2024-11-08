@@ -33,6 +33,7 @@ class InputDevice : public QObject
     Q_PROPERTY(QRectF outputArea READ outputArea WRITE setOutputArea NOTIFY outputAreaChanged)
     Q_PROPERTY(bool mapToWorkspace READ isMapToWorkspace WRITE setMapToWorkspace NOTIFY mapToWorkspaceChanged)
     Q_PROPERTY(QString pressureCurve READ pressureCurve WRITE setPressureCurve NOTIFY pressureCurveChanged)
+    Q_PROPERTY(bool pressureCurveIsDefault READ pressureCurveIsDefault NOTIFY pressureCurveChanged)
 
 public:
     InputDevice(const QString &dbusName, QObject *parent);
@@ -128,6 +129,7 @@ public:
         return m_pressureCurve.value();
     }
     void setPressureCurve(const QString &curve);
+    bool pressureCurveIsDefault() const;
 
 Q_SIGNALS:
     void needsSaveChanged();
