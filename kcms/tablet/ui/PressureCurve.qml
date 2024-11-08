@@ -18,6 +18,7 @@ QQC2.Control {
 
     property point controlPoint1: Qt.point(0.0, 0.0)
     property point controlPoint2: Qt.point(1.0, 1.0)
+    property bool isDefault: true
 
     implicitWidth: 220
     implicitHeight: 220
@@ -42,7 +43,7 @@ QQC2.Control {
 
         border {
             width: 1
-            color: root.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.disabledTextColor
+            color: root.activeFocus ? Kirigami.Theme.highlightColor : (root.isDefault ? Kirigami.Theme.neutralBackgroundColor : Kirigami.Theme.neutralTextColor)
         }
 
         Kirigami.Theme.inherit: false

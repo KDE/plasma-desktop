@@ -153,6 +153,10 @@ SimpleKCM {
             onActivated: {
                 parent.device.orientation = orientationsModel.orientationAt(currentIndex)
             }
+            SettingHighlighter {
+                // First index is "Default"
+                highlight: form.device.supportsOrientation && parent.currentIndex !== 0
+            }
         }
         RowLayout {
             Kirigami.FormData.label: i18nd("kcm_tablet", "Left-handed mode:")
@@ -168,6 +172,10 @@ SimpleKCM {
             Kirigami.ContextualHelpButton {
                 toolTipText: xi18nc("@info", "Tells the device to accommodate left-handed users. Effects will vary by device, but often it reverses the pad buttonsʼ functionality so the tablet can be used upside-down.")
             }
+            SettingHighlighter {
+                // No device has a default of left-handed, so this is always an explicit user choice
+                highlight: leftHandedCheckbox.checked
+            }
         }
         QQC2.ComboBox {
             id: outputAreaCombo
@@ -178,6 +186,10 @@ SimpleKCM {
                 outputAreaView.changed = true
                 keepAspectRatio.checked = true
                 outputAreaView.resetOutputArea(index, index === 0 ? Qt.rect(0,0, 1,1) : Qt.rect(0, 0, 1, outputItem.aspectRatio/tabletItem.aspectRatio))
+            }
+            SettingHighlighter {
+                // The default is stretch to screen
+                highlight: outputAreaCombo.currentIndex !== 0
             }
         }
 
@@ -345,6 +357,11 @@ SimpleKCM {
                 onGotInputSequence: sequence => {
                     kcm.assignToolButtonMapping(form.device.name, modelData.value, sequence)
                 }
+
+                SettingHighlighter {
+                    // Currently, application-defined is the default
+                    highlight: seq.inputSequence.type !== InputSequence.ApplicationDefined
+                }
             }
         }
 
@@ -363,6 +380,7 @@ SimpleKCM {
 
                     onControlPoint1Changed: saveSettings()
                     onControlPoint2Changed: saveSettings()
+                    isDefault: form.device.pressureCurveIsDefault
 
                     Layout.fillWidth: true
 
@@ -556,6 +574,11 @@ SimpleKCM {
 
                 onGotInputSequence: sequence => {
                     kcm.assignPadButtonMapping(form.padDevice.name, modelData, sequence)
+                }
+
+                SettingHighlighter {
+                    // Currently, application-defined is the default
+                    highlight: seq.inputSequence.type !== InputSequence.ApplicationDefined
                 }
             }
         }
