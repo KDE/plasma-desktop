@@ -14,8 +14,8 @@ extern "C" {
 #include <libwacom/libwacom.h>
 }
 
-#include "devicesmodel.h"
 #include "inputsequence.h"
+#include "tabletsmodel.h"
 
 Q_DECLARE_OPAQUE_POINTER(WacomDeviceDatabase *)
 
@@ -25,8 +25,7 @@ class TabletData;
 class Tablet : public KQuickManagedConfigModule
 {
     Q_OBJECT
-    Q_PROPERTY(DevicesModel *toolsModel READ toolsModel CONSTANT)
-    Q_PROPERTY(DevicesModel *padsModel READ padsModel CONSTANT)
+    Q_PROPERTY(TabletsModel *tabletsModel READ tabletsModel CONSTANT)
     Q_PROPERTY(WacomDeviceDatabase *db READ db CONSTANT)
 
 public:
@@ -39,8 +38,7 @@ public:
     bool isSaveNeeded() const override;
     bool isDefaults() const override;
 
-    DevicesModel *toolsModel() const;
-    DevicesModel *padsModel() const;
+    TabletsModel *tabletsModel() const;
 
     Q_SCRIPTABLE void assignPadButtonMapping(const QString &deviceName, uint button, const InputSequence &keySequence);
     Q_SCRIPTABLE void assignToolButtonMapping(const QString &deviceName, uint button, const InputSequence &keySequence);
@@ -59,8 +57,7 @@ Q_SIGNALS:
 private:
     void refreshNeedsSave();
 
-    DevicesModel *const m_toolsModel;
-    DevicesModel *const m_padsModel;
+    TabletsModel *m_tabletsModel;
     QHash<QString, QHash<QString, QHash<uint, InputSequence>>> m_unsavedMappings;
     WacomDeviceDatabase *m_db = nullptr;
 };

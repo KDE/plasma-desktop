@@ -35,6 +35,7 @@ target_sources(kcm_tablet PRIVATE
     tabletevents.cpp
     calibrationtool.cpp
     inputsequence.cpp
+    tabletsmodel.cpp
 )
 
 target_link_libraries(kcm_tablet PRIVATE

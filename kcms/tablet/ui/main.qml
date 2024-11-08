@@ -84,7 +84,7 @@ SimpleKCM {
         QQC2.ComboBox {
             id: combo
             Kirigami.FormData.label: i18ndc("kcm_tablet", "@label:listbox The device we are configuring", "Device:")
-            model: kcm.toolsModel
+            model: kcm.tabletsModel
 
             onCountChanged: if (count > 0 && currentIndex < 0) {
                 currentIndex = 0;
@@ -104,7 +104,8 @@ SimpleKCM {
             }
 
             onCurrentIndexChanged: {
-                parent.device = kcm.toolsModel.deviceAt(combo.currentIndex)
+                parent.device = kcm.tabletsModel.penAt(combo.currentIndex);
+                parent.padDevice = kcm.tabletsModel.padAt(combo.currentIndex);
                 reloadOutputView()
                 pressureCurve.reloadSettings();
             }
@@ -504,23 +505,10 @@ SimpleKCM {
 
         Kirigami.Separator {
             Layout.fillWidth: true
+            visible: form.padDevice.tabletPadButtonCount > 0
         }
 
         property QtObject padDevice: null
-        QQC2.ComboBox {
-            Kirigami.FormData.label: i18ndc("kcm_tablet", "@label:listbox The pad we are configuring", "Pad:")
-            model: kcm.padsModel
-
-            onCurrentIndexChanged: {
-                parent.padDevice = kcm.padsModel.deviceAt(currentIndex)
-            }
-
-            onCountChanged: if (count > 0 && currentIndex < 0) {
-                currentIndex = 0;
-            }
-            enabled: count > 0
-            displayText: enabled ? currentText : i18n("None")
-        }
 
         TabletEvents {
             id: tabletEvents

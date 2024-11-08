@@ -312,13 +312,13 @@ private:
 
 Tablet::Tablet(QObject *parent, const KPluginMetaData &metaData)
     : KQuickManagedConfigModule(parent, metaData)
-    , m_toolsModel(new DevicesModel("tabletTool", this))
-    , m_padsModel(new DevicesModel("tabletPad", this))
 {
     m_db = libwacom_database_new();
     if (m_db == nullptr) {
         qCWarning(KCM_TABLET) << "Failed to initialize libwacom database!";
     }
+
+    m_tabletsModel = new TabletsModel(m_db, this);
 
     qDBusRegisterMetaType<QMatrix4x4>();
 
@@ -334,8 +334,7 @@ Tablet::Tablet(QObject *parent, const KPluginMetaData &metaData)
     qmlRegisterType<InputSequence>("org.kde.plasma.tablet.kcm", 1, 1, "inputSequence");
     qmlRegisterUncreatableMetaObject(InputSequence::staticMetaObject, "org.kde.plasma.tablet.kcm", 1, 1, "InputSequence", "Access to enums & flags only");
 
-    connect(m_toolsModel, &DevicesModel::needsSaveChanged, this, &Tablet::refreshNeedsSave);
-    connect(m_padsModel, &DevicesModel::needsSaveChanged, this, &Tablet::refreshNeedsSave);
+    connect(m_tabletsModel, &TabletsModel::needsSaveChanged, this, &Tablet::refreshNeedsSave);
     connect(this, &Tablet::settingsRestored, this, &Tablet::refreshNeedsSave);
 }
 
@@ -353,7 +352,7 @@ void Tablet::refreshNeedsSave()
 
 bool Tablet::isSaveNeeded() const
 {
-    return !m_unsavedMappings.isEmpty() || m_toolsModel->isSaveNeeded() || m_padsModel->isSaveNeeded();
+    return !m_unsavedMappings.isEmpty() || m_tabletsModel->isSaveNeeded();
 }
 
 bool Tablet::isDefaults() const
@@ -368,13 +367,12 @@ bool Tablet::isDefaults() const
     if (cfg->group("ButtonRebinds").group("TabletTool").isValid()) {
         return false;
     }
-    return m_toolsModel->isDefaults() && m_padsModel->isDefaults();
+    return m_tabletsModel->isDefaults();
 }
 
 void Tablet::load()
 {
-    m_toolsModel->load();
-    m_padsModel->load();
+    m_tabletsModel->load();
 
     m_unsavedMappings.clear();
     Q_EMIT settingsRestored();
@@ -382,8 +380,7 @@ void Tablet::load()
 
 void Tablet::save()
 {
-    m_toolsModel->save();
-    m_padsModel->save();
+    m_tabletsModel->save();
 
     auto generalGroup = KSharedConfig::openConfig("kcminputrc")->group("ButtonRebinds");
     for (const auto &device : QStringList{"Tablet", "TabletTool"}) {
@@ -406,8 +403,7 @@ void Tablet::save()
 
 void Tablet::defaults()
 {
-    m_toolsModel->defaults();
-    m_padsModel->defaults();
+    m_tabletsModel->defaults();
 
     m_unsavedMappings.clear();
     const auto generalGroup = KSharedConfig::openConfig("kcminputrc")->group("ButtonRebinds");
@@ -504,14 +500,9 @@ WacomDeviceDatabase *Tablet::db() const
     return m_db;
 }
 
-DevicesModel *Tablet::toolsModel() const
+TabletsModel *Tablet::tabletsModel() const
 {
-    return m_toolsModel;
-}
-
-DevicesModel *Tablet::padsModel() const
-{
-    return m_padsModel;
+    return m_tabletsModel;
 }
 
 #include "kcmtablet.moc"
