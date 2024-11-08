@@ -34,6 +34,7 @@ class InputDevice : public QObject
     Q_PROPERTY(bool mapToWorkspace READ isMapToWorkspace WRITE setMapToWorkspace NOTIFY mapToWorkspaceChanged)
     Q_PROPERTY(QString pressureCurve READ pressureCurve WRITE setPressureCurve NOTIFY pressureCurveChanged)
     Q_PROPERTY(bool pressureCurveIsDefault READ pressureCurveIsDefault NOTIFY pressureCurveChanged)
+    Q_PROPERTY(quint32 tabletPadButtonCount READ tabletPadButtonCount CONSTANT)
 
 public:
     InputDevice(const QString &dbusName, QObject *parent);
@@ -130,6 +131,11 @@ public:
     }
     void setPressureCurve(const QString &curve);
     bool pressureCurveIsDefault() const;
+
+    quint32 tabletPadButtonCount() const
+    {
+        return m_tabletPadButtonCount.value();
+    }
 
 Q_SIGNALS:
     void needsSaveChanged();
@@ -265,6 +271,8 @@ private:
 
     Prop<QString> m_pressureCurve =
         Prop<QString>(this, "pressureCurve", &OrgKdeKWinInputDeviceInterface::defaultPressureCurve, nullptr, &InputDevice::pressureCurveChanged);
+
+    Prop<quint32> m_tabletPadButtonCount = Prop<quint32>(this, "tabletPadButtonCount");
 
     std::unique_ptr<OrgKdeKWinInputDeviceInterface> m_iface;
 };
