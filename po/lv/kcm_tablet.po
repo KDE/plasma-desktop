@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-03 00:41+0000\n"
-"PO-Revision-Date: 2024-10-18 20:00+0300\n"
+"PO-Revision-Date: 2024-11-06 21:14+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -55,11 +55,10 @@ msgid "Application-defined"
 msgstr "Nosaka programma"
 
 #: inputsequence.cpp:194
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pen Button %1"
-msgstr "Zīmuļa poga 1:"
+msgstr "Pildspalvas %1. poga:"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -118,23 +117,18 @@ msgid "Map to Portion of Screen"
 msgstr "Kartēt uz ekrāna daļu"
 
 #: kcmtablet.cpp:290
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
-msgstr "Zīmuļa poga 1:"
+msgstr "Pildspalvas %1. poga:"
 
 #: kcmtablet.cpp:291
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button X'"
 msgid "pen button %1"
-msgstr "zīmuļa poga 1"
+msgstr "pildspalvas %1. poga"
 
 #: ui/ActionDialog.qml:25
 #, kde-format
@@ -167,14 +161,10 @@ msgid "Send mouse button click"
 msgstr "Nosūtīt peles klikšķi"
 
 #: ui/ActionDialog.qml:132
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt "@option:radio Set this action to a pen button type"
 msgid "Send pen button"
-msgstr "zīmuļa poga 1"
+msgstr "Nosūtīt pildspalvas pogu"
 
 #: ui/ActionDialog.qml:150
 #, kde-format
@@ -235,31 +225,22 @@ msgid "Shift"
 msgstr "Shift"
 
 #: ui/ActionDialog.qml:264
-#, fuzzy, kde-format
-#| msgid "Tool Button 1"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
-msgstr "Rīka taustiņš 1"
+msgstr "1. poga"
 
 #: ui/ActionDialog.qml:265
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 2'"
-#| msgid "pen button 2"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
-msgstr "zīmuļa poga 2"
+msgstr "2. poga"
 
 #: ui/ActionDialog.qml:266
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 3'"
-#| msgid "pen button 3"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
-msgstr "zīmuļa poga 3"
+msgstr "3. poga"
 
 #: ui/ActionDialog.qml:275
 #, kde-format
@@ -320,18 +301,18 @@ msgstr "Atcelt"
 #: ui/main.qml:34
 #, kde-format
 msgid "No drawing tablets found"
-msgstr "Nav atrastas zīmēšanas planšetes"
+msgstr "Nav atrastas grafiskās planšetes"
 
 #: ui/main.qml:35
 #, kde-format
 msgid "Connect a drawing tablet"
-msgstr "Pievienojiet zīmēšanas planšeti"
+msgstr "Pievienojiet grafisko planšeti"
 
 #: ui/main.qml:43
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr "Pārbaudīt zīmēšanas planšeti…"
+msgstr "Izmēģināt grafisko planšeti…"
 
 #: ui/main.qml:86
 #, kde-format
@@ -508,7 +489,7 @@ msgid ""
 "# X, Y - event coordinate\n"
 msgstr ""
 "## Apzīmējumi:\n"
-"# X, Y — notikuma koordināte\n"
+"# X, Y — notikuma koordināta\n"
 
 #: ui/Tester.qml:206
 #, kde-format
