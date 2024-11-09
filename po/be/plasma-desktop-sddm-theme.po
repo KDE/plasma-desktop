@@ -1,15 +1,12 @@
-# Copyright (C) 2024 This file is copyright:
-# This file is distributed under the same license as the plasma-desktop package.
-#
 # SPDX-FileCopyrightText: 2024 Antikruk <nashtlumach@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma-desktop\n"
+"Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-10 00:40+0000\n"
-"PO-Revision-Date: 2024-06-29 23:11+0300\n"
+"PO-Revision-Date: 2024-08-11 21:07\n"
 "Last-Translator: Antikruk <nashtlumach@gmail.com>\n"
-"Language-Team: Belarusian <kde-i18n-doc@kde.org>\n"
+"Language-Team: Belarusian\n"
 "Language: be\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,62 +15,68 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
 "X-Generator: Lokalize 24.05.1\n"
+"X-Crowdin-Project: fc57ad16a28d02dea100ceb1c60de14e\n"
+"X-Crowdin-Project-ID: 136\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/plasma-desktop/plasma-"
+"desktop-sddm-theme.po\n"
+"X-Crowdin-File-ID: 17998\n"
 
 #: KeyboardButton.qml:19
 msgid "Keyboard Layout: %1"
-msgstr ""
+msgstr "Раскладка клавіятуры: %1"
 
 #: Login.qml:85
 msgid "Username"
-msgstr ""
+msgstr "Імя карыстальніка"
 
 #: Login.qml:102
 msgid "Password"
-msgstr ""
+msgstr "Пароль"
 
 #: Login.qml:144 Login.qml:150
 msgid "Log In"
-msgstr ""
+msgstr "Увайсці"
 
 #: Main.qml:195
 msgid "Caps Lock is on"
-msgstr ""
+msgstr "Caps Lock уключаны"
 
 #: Main.qml:207 Main.qml:346
 msgctxt "Suspend to RAM"
 msgid "Sleep"
-msgstr ""
+msgstr "Прыпыніць у RAM"
 
 #: Main.qml:213 Main.qml:352
 msgid "Restart"
-msgstr ""
+msgstr "Перазапусціць"
 
 #: Main.qml:219 Main.qml:358
 msgid "Shut Down"
-msgstr ""
+msgstr "Выключыць"
 
 #: Main.qml:225
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
-msgstr ""
+msgstr "Іншае…"
 
 #: Main.qml:332
 msgid "Type in Username and Password"
-msgstr ""
+msgstr "Увядзіце імя карыстальніка і пароль"
 
 #: Main.qml:364
 msgid "List Users"
-msgstr ""
+msgstr "Спіс карыстальнікаў"
 
 #: Main.qml:438
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
-msgstr ""
+msgstr "Віртуальная клавіятура"
 
 #: Main.qml:505
 msgid "Login Failed"
-msgstr ""
+msgstr "Не ўдалося ўвайсці"
 
 #: SessionButton.qml:18
 msgid "Desktop Session: %1"
-msgstr ""
+msgstr "Сеанс: %1"

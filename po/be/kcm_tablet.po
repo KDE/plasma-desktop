@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-03 00:41+0000\n"
-"PO-Revision-Date: 2024-06-20 17:30\n"
+"PO-Revision-Date: 2024-11-06 22:00\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -26,11 +26,10 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button This action is disabled"
 msgid "Disabled"
-msgstr ""
+msgstr "Адключана"
 
 #: inputsequence.cpp:175
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "@action:button There is no keybinding"
 msgid "None"
 msgstr "Няма"
@@ -39,32 +38,31 @@ msgstr "Няма"
 #, kde-format
 msgctxt "@action:button"
 msgid "Left mouse button"
-msgstr ""
+msgstr "Левая кнопка мышы"
 
 #: inputsequence.cpp:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Right mouse button"
-msgstr ""
+msgstr "Правая кнопка мышы"
 
 #: inputsequence.cpp:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Middle mouse button"
-msgstr ""
+msgstr "Сярэдняя кнопка мышы"
 
 #: inputsequence.cpp:192
 #, kde-format
 msgctxt "@action:button"
 msgid "Application-defined"
-msgstr ""
+msgstr "Вызначаецца праграмай"
 
 #: inputsequence.cpp:194
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pen Button %1"
-msgstr "Кнопка стылуса 1:"
+msgstr "Кнопка стылуса %1"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -123,63 +121,60 @@ msgid "Map to Portion of Screen"
 msgstr "Суадносіны з часткай экрана"
 
 #: kcmtablet.cpp:290
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
-msgstr "Кнопка стылуса 1:"
+msgstr "Кнопка стылуса %1:"
 
 #: kcmtablet.cpp:291
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button X'"
 msgid "pen button %1"
-msgstr "Кнопка стылуса 1:"
+msgstr "кнопка стылуса %1"
 
 #: ui/ActionDialog.qml:25
 #, kde-format
 msgctxt "@title Select the action for the tablet button"
 msgid "Select Button Action"
-msgstr ""
+msgstr "Абраць дзеянне кнопкі"
 
 #: ui/ActionDialog.qml:74
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when pressing %1:"
-msgstr ""
+msgstr "Абраць дзеянне, якое будзе выканана пры націсканні %1:"
 
 #: ui/ActionDialog.qml:88
 #, kde-format
 msgctxt "@option:radio Set this action to an application-defined type"
 msgid "Defer to application"
-msgstr ""
+msgstr "Адтэрмінаванне для праграмы"
 
 #: ui/ActionDialog.qml:103
 #, kde-format
 msgctxt "@option:radio Set this action to a keyboard type"
 msgid "Send keyboard key"
-msgstr ""
+msgstr "Адправіць клавішу клавіятуры"
 
 #: ui/ActionDialog.qml:117
 #, kde-format
 msgctxt "@option:radio Set this action to a mouse type"
 msgid "Send mouse button click"
-msgstr ""
+msgstr "Адправіць пстрыканне левай кнопкай мышы"
 
 #: ui/ActionDialog.qml:132
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "@option:radio Set this action to a pen button type"
 msgid "Send pen button"
-msgstr "Кнопка стылуса 1:"
+msgstr "Адправіць кнопку стылуса"
 
 #: ui/ActionDialog.qml:150
 #, kde-format
 msgctxt "@option:radio Disable this action"
 msgid "Do nothing"
-msgstr ""
+msgstr "Нічога не рабіць"
 
 #: ui/ActionDialog.qml:170
 #, kde-format
@@ -188,81 +183,80 @@ msgid ""
 "This tablet button is forwarded to the focused application, which can decide "
 "how to handle it."
 msgstr ""
+"Гэтая кнопка планшэта перанакіроўваецца мэтавай праграме, якая можа "
+"вырашыць, як яе апрацоўваць."
 
 #: ui/ActionDialog.qml:198
 #, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left-click"
-msgstr ""
+msgstr "Пстрыканне левай кнопкай мышы"
 
 #: ui/ActionDialog.qml:199
 #, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle-click"
-msgstr ""
+msgstr "Пстрыканне сярэдняй кнопкай мышы"
 
 #: ui/ActionDialog.qml:200
 #, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right-click"
-msgstr ""
+msgstr "Пстрыканне правай кнопкай мышы"
 
 #: ui/ActionDialog.qml:227
 #, kde-format
 msgctxt "@option:check The ctrl modifier on the keyboard"
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 #: ui/ActionDialog.qml:234
 #, kde-format
 msgctxt "@option:check The alt modifier on the keyboard"
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: ui/ActionDialog.qml:241
 #, kde-format
 msgctxt "@option:check The meta modifier on the keyboard"
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: ui/ActionDialog.qml:248
 #, kde-format
 msgctxt "@option:check The shift modifier on the keyboard"
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 #: ui/ActionDialog.qml:264
-#, fuzzy, kde-format
-#| msgid "Tool Button 1"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
-msgstr "Кнопка інструмента 1"
+msgstr "Кнопка 1"
 
 #: ui/ActionDialog.qml:265
-#, fuzzy, kde-format
-#| msgid "Pen button 2:"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
-msgstr "Кнопка стылуса 2:"
+msgstr "Кнопка 2"
 
 #: ui/ActionDialog.qml:266
-#, fuzzy, kde-format
-#| msgid "Pen button 3:"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
-msgstr "Кнопка стылуса 3:"
+msgstr "Кнопка 3"
 
 #: ui/ActionDialog.qml:275
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
-msgstr ""
+msgstr "Гэтая кнопка адключаная і нічога не робіць."
 
 #: ui/Calibration.qml:31
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
-msgstr ""
+msgstr "Калібраванне стылуса"
 
 #: ui/Calibration.qml:90
 #, kde-kuit-format
@@ -271,6 +265,8 @@ msgid ""
 "Calibration is completed and saved.<nl/><nl/>Refine the calibration further "
 "or close the window."
 msgstr ""
+"Калібраванне завершана, даныя захаваныя.<nl/><nl/>Паспрабуйце ўдасканаліць "
+"калібраванне або закрыйце акно."
 
 #: ui/Calibration.qml:91
 #, kde-kuit-format
@@ -279,30 +275,32 @@ msgid ""
 "Tap the center of each target.<nl/><nl/>Aim for the point where the stylus "
 "tip lands, and ignore the cursor position on the screen."
 msgstr ""
+"Дакраніцеся да цэнтра кожнага мэтавага элемента.<nl/><nl/>Цэльцеся ў пункт, "
+"дзе прызямляецца кончык стылуса, не зважайце на пазіцыю курсора на экране."
 
 #: ui/Calibration.qml:97
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
-msgstr ""
+msgstr "Удасканаліць бягучае калібраванне"
 
 #: ui/Calibration.qml:106
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
-msgstr ""
+msgstr "Калібраванне з нуля"
 
 #: ui/Calibration.qml:120
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "Закрыць"
 
 #: ui/Calibration.qml:120
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Скасаваць"
 
 #: ui/main.qml:34
 #, kde-format
@@ -339,7 +337,7 @@ msgstr "Арыентацыя:"
 #: ui/main.qml:151
 #, kde-format
 msgid "Not Applicable"
-msgstr ""
+msgstr "Не дастасавальна"
 
 #: ui/main.qml:158
 #, kde-format
@@ -383,31 +381,31 @@ msgstr "%1,%2 - %3×%4"
 #: ui/main.qml:352
 #, kde-format
 msgid "Pen Pressure:"
-msgstr ""
+msgstr "Узровень націскання стылусам:"
 
 #: ui/main.qml:403
 #, kde-format
 msgctxt "Low pen pressure"
 msgid "Low Pressure"
-msgstr ""
+msgstr "Слабое націсканне"
 
 #: ui/main.qml:411
 #, kde-format
 msgctxt "High pen pressure"
 msgid "High Pressure"
-msgstr ""
+msgstr "Моцнае націсканне"
 
 #: ui/main.qml:422
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: ui/main.qml:430
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
-msgstr ""
+msgstr "0%"
 
 #: ui/main.qml:434
 #, kde-format
@@ -416,30 +414,32 @@ msgid ""
 "This curve controls the relationship between the pressure on the stylus and "
 "the pressure values received by applications."
 msgstr ""
+"Гэтая крывая кіруе залежнасцю націскання стылусам са значэннямі, якія "
+"атрымліваюць праграмы."
 
 #: ui/main.qml:445
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
-msgstr ""
+msgstr "Выконваецца калібраванне"
 
 #: ui/main.qml:447
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
-msgstr ""
+msgstr "Калібраваць"
 
 #: ui/main.qml:450
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
-msgstr ""
+msgstr "Калібраванне не падтрымліваецца"
 
 #: ui/main.qml:483
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
-msgstr ""
+msgstr "Калібраванне на некалькіх экранах не падтрымліваецца."
 
 #: ui/main.qml:493
 #, kde-format
@@ -458,13 +458,12 @@ msgid "Pad button %1:"
 msgstr "Кнопка планшэта %1:"
 
 #: ui/main.qml:532
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad button %1"
-msgstr "Кнопка планшэта %1:"
+msgstr "кнопка планшэта %1"
 
 #: ui/Tester.qml:25
 #, kde-format

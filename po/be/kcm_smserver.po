@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:40+0000\n"
-"PO-Revision-Date: 2024-05-25 23:54\n"
+"PO-Revision-Date: 2024-11-04 22:06\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -84,11 +84,10 @@ msgid "Restart Now"
 msgstr "Перазапусціць"
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group"
 msgid "General"
-msgstr "Асноўныя:"
+msgstr "Асноўныя налады"
 
 #: ui/main.qml:79
 #, kde-format
@@ -96,7 +95,7 @@ msgctxt ""
 "@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "Ask for confirmation:"
-msgstr ""
+msgstr "Пытацца пацвярджэння:"
 
 #: ui/main.qml:80
 #, kde-format
@@ -104,7 +103,7 @@ msgctxt ""
 "@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "On shutdown, restart, and logout"
-msgstr ""
+msgstr "Пры выключэнні, перазапуску і выхадзе з сістэмы"
 
 #: ui/main.qml:91
 #, kde-format
