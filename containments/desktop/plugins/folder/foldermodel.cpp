@@ -182,14 +182,12 @@ FolderModel::FolderModel(QObject *parent)
 
     connect(dirLister, &KCoreDirLister::started, this, std::bind(&FolderModel::setStatus, this, Status::Listing));
 
-    void (KCoreDirLister::*myCompletedSignal)() = &KCoreDirLister::completed;
-    QObject::connect(dirLister, myCompletedSignal, this, [this] {
+    QObject::connect(dirLister, &KCoreDirLister::completed, this, [this] {
         setStatus(Status::Ready);
         Q_EMIT listingCompleted();
     });
 
-    void (KCoreDirLister::*myCanceledSignal)() = &KCoreDirLister::canceled;
-    QObject::connect(dirLister, myCanceledSignal, this, [this] {
+    QObject::connect(dirLister, &KCoreDirLister::canceled, this, [this] {
         setStatus(Status::Canceled);
         Q_EMIT listingCanceled();
     });

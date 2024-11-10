@@ -31,8 +31,8 @@ ActionEditor::ActionEditor(QWidget *parent)
     connect(ui.TvPredicateTree, &QTreeView::activated, this, &ActionEditor::updateParameter);
     connect(ui.PbParameterSave, &QPushButton::clicked, this, &ActionEditor::saveParameter);
     connect(ui.PbParameterReset, &QPushButton::clicked, this, &ActionEditor::updateParameter);
-    connect(ui.CbDeviceType, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &ActionEditor::updatePropertyList);
-    connect(ui.CbParameterType, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &ActionEditor::manageControlStatus);
+    connect(ui.CbDeviceType, &QComboBox::currentIndexChanged, this, &ActionEditor::updatePropertyList);
+    connect(ui.CbParameterType, &QComboBox::currentIndexChanged, this, &ActionEditor::manageControlStatus);
 
     connect(ui.buttonBox, &QDialogButtonBox::accepted, this, &ActionEditor::accept);
     connect(ui.buttonBox, &QDialogButtonBox::rejected, this, &ActionEditor::reject);

@@ -48,7 +48,7 @@ Dtime::Dtime(QWidget *parent, bool haveTimeDated)
     connect(setDateTimeAuto, &QCheckBox::toggled, this, &Dtime::configChanged);
 
     timeServerList->setEditable(false);
-    connect(timeServerList, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated), this, &Dtime::configChanged);
+    connect(timeServerList, &QComboBox::activated, this, &Dtime::configChanged);
     connect(timeServerList, &QComboBox::editTextChanged, this, &Dtime::configChanged);
     connect(setDateTimeAuto, &QCheckBox::toggled, timeServerList, &QComboBox::setEnabled);
     timeServerList->setEnabled(false);

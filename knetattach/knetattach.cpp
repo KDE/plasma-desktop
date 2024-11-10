@@ -31,7 +31,7 @@ KNetAttach::KNetAttach(QWidget *parent)
     connect(_connectionName, &QLineEdit::textChanged, this, &KNetAttach::updateParametersPageStatus);
     connect(_user, &QLineEdit::textChanged, this, &KNetAttach::updateParametersPageStatus);
     connect(_host, &QLineEdit::textChanged, this, &KNetAttach::updateParametersPageStatus);
-    connect(_port, (void(QSpinBox::*)(int)) & QSpinBox::valueChanged, this, &KNetAttach::updateParametersPageStatus);
+    connect(_port, &QSpinBox::valueChanged, this, &KNetAttach::updateParametersPageStatus);
     connect(_path, &QLineEdit::textChanged, this, &KNetAttach::updateParametersPageStatus);
     connect(_useEncryption, &QAbstractButton::toggled, this, &KNetAttach::updatePort);
     connect(_createIcon, &QAbstractButton::toggled, this, &KNetAttach::updateFinishButtonText);
