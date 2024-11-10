@@ -21,7 +21,7 @@ class AbstractEmojiModel : public QAbstractListModel
 public:
     enum EmojiRole {
         CategoryRole = Qt::UserRole + 1,
-        AnnotationsRole
+        AnnotationsRole,
     };
 
     int rowCount(const QModelIndex &parent = {}) const override;
@@ -39,7 +39,7 @@ class EmojiModel : public AbstractEmojiModel
     Q_PROPERTY(QStringList categories MEMBER m_categories CONSTANT)
 public:
     enum EmojiRole {
-        CategoryRole = Qt::UserRole + 1
+        CategoryRole = Qt::UserRole + 1,
     };
 
     EmojiModel();

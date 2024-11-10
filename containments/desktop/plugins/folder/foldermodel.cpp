@@ -754,7 +754,8 @@ void FolderModel::setScreen(int screen)
     Q_EMIT screenChanged();
 }
 
-bool FolderModel::screenUsed() {
+bool FolderModel::screenUsed()
+{
     return m_screenUsed;
 }
 

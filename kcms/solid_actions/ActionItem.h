@@ -43,11 +43,11 @@ public:
 private:
     enum DesktopAction {
         DesktopRead = 0,
-        DesktopWrite = 1
+        DesktopWrite = 1,
     };
     enum GroupType {
         GroupDesktop = 0,
-        GroupAction = 1
+        GroupAction = 1,
     };
 
     QString readKey(GroupType keyGroup, const QString &keyName, const QString &defaultValue) const;

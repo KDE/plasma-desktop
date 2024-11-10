@@ -27,7 +27,7 @@ public:
     enum class ShiftState {
         Unknown,
         Pressed,
-        Released
+        Released,
     };
 
     /**

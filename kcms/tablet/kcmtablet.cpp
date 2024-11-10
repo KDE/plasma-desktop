@@ -206,7 +206,7 @@ public:
     enum CustomRoles {
         NameRole = Qt::UserRole,
         LabelRole,
-        ValueRole
+        ValueRole,
     };
 
     StylusButtonsModel()

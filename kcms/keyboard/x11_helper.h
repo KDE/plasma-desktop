@@ -247,7 +247,7 @@ public:
     enum FetchType {
         ALL,
         LAYOUTS_ONLY,
-        MODEL_ONLY
+        MODEL_ONLY,
     };
     static bool getGroupNames(Display *dpy, XkbConfig *xkbConfig, FetchType fetchType);
 

@@ -8,8 +8,8 @@
 
 #pragma once
 
-#include <QFileSystemWatcher>
 #include <QAction>
+#include <QFileSystemWatcher>
 #include <QImage>
 #include <QItemSelection>
 #include <QMimeData>

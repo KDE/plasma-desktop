@@ -21,7 +21,7 @@ public:
         CallError = 1 << 0,
         TimezoneError = 1 << 1,
         NTPError = 1 << 2,
-        DateError = 1 << 3
+        DateError = 1 << 3,
     };
 
 public Q_SLOTS:
