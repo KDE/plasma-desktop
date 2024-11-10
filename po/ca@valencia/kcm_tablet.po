@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-03 00:41+0000\n"
-"PO-Revision-Date: 2024-10-15 10:29+0200\n"
+"PO-Revision-Date: 2024-11-03 09:58+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: inputsequence.cpp:172
 #, kde-format
@@ -56,11 +56,10 @@ msgid "Application-defined"
 msgstr "Definit per l'aplicació"
 
 #: inputsequence.cpp:194
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pen Button %1"
-msgstr "Botó 1 del llapis:"
+msgstr "Botó %1 del llapis"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -119,23 +118,18 @@ msgid "Map to Portion of Screen"
 msgstr "Associa a una porció de la pantalla"
 
 #: kcmtablet.cpp:290
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
-msgstr "Botó 1 del llapis:"
+msgstr "Botó %1 del llapis:"
 
 #: kcmtablet.cpp:291
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button X'"
 msgid "pen button %1"
-msgstr "botó 1 del llapis"
+msgstr "botó %1 del llapis"
 
 #: ui/ActionDialog.qml:25
 #, kde-format
@@ -168,14 +162,10 @@ msgid "Send mouse button click"
 msgstr "Envia un clic de botó del ratolí"
 
 #: ui/ActionDialog.qml:132
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt "@option:radio Set this action to a pen button type"
 msgid "Send pen button"
-msgstr "botó 1 del llapis"
+msgstr "Envia al botó del llapis"
 
 #: ui/ActionDialog.qml:150
 #, kde-format
@@ -236,34 +226,22 @@ msgid "Shift"
 msgstr "Majúscules"
 
 #: ui/ActionDialog.qml:264
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
-msgstr "botó 1 del llapis"
+msgstr "Botó 1"
 
 #: ui/ActionDialog.qml:265
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 2'"
-#| msgid "pen button 2"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
-msgstr "botó 2 del llapis"
+msgstr "Botó 2"
 
 #: ui/ActionDialog.qml:266
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 3'"
-#| msgid "pen button 3"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
-msgstr "botó 3 del llapis"
+msgstr "Botó 3"
 
 #: ui/ActionDialog.qml:275
 #, kde-format
@@ -519,9 +497,3 @@ msgstr ""
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr "Neteja"
-
-#~ msgid "Pen button 2:"
-#~ msgstr "Botó 2 del llapis:"
-
-#~ msgid "Pen button 3:"
-#~ msgstr "Botó 3 del llapis:"
