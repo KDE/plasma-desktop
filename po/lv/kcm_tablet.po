@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-03 00:41+0000\n"
+"POT-Creation-Date: 2024-11-11 00:41+0000\n"
 "PO-Revision-Date: 2024-11-06 21:14+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -335,12 +335,12 @@ msgstr "Orientācija:"
 msgid "Not Applicable"
 msgstr "Nav piemērojams"
 
-#: ui/main.qml:158
+#: ui/main.qml:162
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "Kreisās rokas režīms:"
 
-#: ui/main.qml:169
+#: ui/main.qml:173
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -352,58 +352,58 @@ msgstr ""
 "efekts mainās atkarībā no ierīces, bet bieži tas ietver paliktņa pogu "
 "funkcionalitātes samainīšanu pusēm, lai planšeti varētu turēt otrādi."
 
-#: ui/main.qml:175
+#: ui/main.qml:183
 #, kde-format
 msgid "Mapped Area:"
 msgstr "Kartētā zona:"
 
-#: ui/main.qml:262
+#: ui/main.qml:274
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "Mainīt planšetes zonas izmēru"
 
-#: ui/main.qml:286
+#: ui/main.qml:298
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "Slēgt malu attiecību"
 
-#: ui/main.qml:294
+#: ui/main.qml:306
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 — %3×%4"
 
-#: ui/main.qml:352
+#: ui/main.qml:369
 #, kde-format
 msgid "Pen Pressure:"
 msgstr "Zīmuļa spiediens:"
 
-#: ui/main.qml:403
+#: ui/main.qml:421
 #, kde-format
 msgctxt "Low pen pressure"
 msgid "Low Pressure"
 msgstr "Viegls spiediens"
 
-#: ui/main.qml:411
+#: ui/main.qml:429
 #, kde-format
 msgctxt "High pen pressure"
 msgid "High Pressure"
 msgstr "Stiprs spiediens"
 
-#: ui/main.qml:422
+#: ui/main.qml:440
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr "100 %"
 
-#: ui/main.qml:430
+#: ui/main.qml:448
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr "0 %"
 
-#: ui/main.qml:434
+#: ui/main.qml:452
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -413,47 +413,47 @@ msgstr ""
 "Šī līkne kontrole attiecību starp zīmuļa spiedienu un programmu saņemtajām "
 "spiediena vērtībām."
 
-#: ui/main.qml:445
+#: ui/main.qml:463
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "Notiek kalibrēšana"
 
-#: ui/main.qml:447
+#: ui/main.qml:465
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "Kalibrēt"
 
-#: ui/main.qml:450
+#: ui/main.qml:468
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "Kalibrēšana nav atbalstīta"
 
-#: ui/main.qml:483
+#: ui/main.qml:501
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
 msgstr "Kalibrēšana vairākos ekrānos nav atbalstīta."
 
-#: ui/main.qml:493
+#: ui/main.qml:511
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr "Planšete:"
 
-#: ui/main.qml:504
+#: ui/main.qml:522
 #, kde-format
 msgid "None"
 msgstr "Nav"
 
-#: ui/main.qml:529
+#: ui/main.qml:547
 #, kde-format
 msgid "Pad button %1:"
 msgstr "Planšetes poga %1:"
 
-#: ui/main.qml:532
+#: ui/main.qml:550
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "

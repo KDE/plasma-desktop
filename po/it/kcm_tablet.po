@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-03 00:41+0000\n"
+"POT-Creation-Date: 2024-11-11 00:41+0000\n"
 "PO-Revision-Date: 2024-10-17 18:15+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -353,12 +353,12 @@ msgstr "Orientazione:"
 msgid "Not Applicable"
 msgstr "Non applicabile"
 
-#: ui/main.qml:158
+#: ui/main.qml:162
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "Modalità mancino:"
 
-#: ui/main.qml:169
+#: ui/main.qml:173
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -370,58 +370,58 @@ msgstr ""
 "varieranno in base al dispositivo; spesso inverte la funzionalità dei "
 "pulsanti della tavoletta, in modo che possa essere usata capovolta."
 
-#: ui/main.qml:175
+#: ui/main.qml:183
 #, kde-format
 msgid "Mapped Area:"
 msgstr "Area associata:"
 
-#: ui/main.qml:262
+#: ui/main.qml:274
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "Ridimensiona l'area della tavoletta"
 
-#: ui/main.qml:286
+#: ui/main.qml:298
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "Blocca il rapporto d'aspetto"
 
-#: ui/main.qml:294
+#: ui/main.qml:306
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: ui/main.qml:352
+#: ui/main.qml:369
 #, kde-format
 msgid "Pen Pressure:"
 msgstr "Pressione della penna:"
 
-#: ui/main.qml:403
+#: ui/main.qml:421
 #, kde-format
 msgctxt "Low pen pressure"
 msgid "Low Pressure"
 msgstr "Pressione bassa"
 
-#: ui/main.qml:411
+#: ui/main.qml:429
 #, kde-format
 msgctxt "High pen pressure"
 msgid "High Pressure"
 msgstr "Pressione alta"
 
-#: ui/main.qml:422
+#: ui/main.qml:440
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr "100%"
 
-#: ui/main.qml:430
+#: ui/main.qml:448
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr "0%"
 
-#: ui/main.qml:434
+#: ui/main.qml:452
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -431,47 +431,47 @@ msgstr ""
 "Questa curva controlla la relazione tra la pressione sul pennino e i valori "
 "di pressione ricevuti dalle applicazioni."
 
-#: ui/main.qml:445
+#: ui/main.qml:463
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "Calibrazione in corso"
 
-#: ui/main.qml:447
+#: ui/main.qml:465
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "Calibra"
 
-#: ui/main.qml:450
+#: ui/main.qml:468
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "Calibrazione non supportata"
 
-#: ui/main.qml:483
+#: ui/main.qml:501
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
 msgstr "La calibrazione tra più schermi non è supportata."
 
-#: ui/main.qml:493
+#: ui/main.qml:511
 #, kde-format
 msgctxt "@label:listbox The pad we are configuring"
 msgid "Pad:"
 msgstr "Tavoletta:"
 
-#: ui/main.qml:504
+#: ui/main.qml:522
 #, kde-format
 msgid "None"
 msgstr "Nessuna"
 
-#: ui/main.qml:529
+#: ui/main.qml:547
 #, kde-format
 msgid "Pad button %1:"
 msgstr "Pulsante %1 della tavoletta:"
 
-#: ui/main.qml:532
+#: ui/main.qml:550
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
