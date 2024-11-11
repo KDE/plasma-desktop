@@ -43,7 +43,7 @@ QQC2.Control {
 
         border {
             width: 1
-            color: root.activeFocus ? Kirigami.Theme.highlightColor : (root.isDefault ? Kirigami.Theme.neutralBackgroundColor : Kirigami.Theme.neutralTextColor)
+            color: root.activeFocus ? Kirigami.Theme.highlightColor : (kcm.defaultsIndicatorsVisible && !root.isDefault ? Kirigami.Theme.neutralTextColor : Kirigami.Theme.disabledTextColor)
         }
 
         Kirigami.Theme.inherit: false
