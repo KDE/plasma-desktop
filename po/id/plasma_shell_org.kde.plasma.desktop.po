@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-08 02:29+0000\n"
-"PO-Revision-Date: 2024-11-03 21:18+0700\n"
+"PO-Revision-Date: 2024-11-08 21:05+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
@@ -281,7 +281,7 @@ msgstr "Dapatkan Plugin Baru..."
 #, kde-format
 msgid "Layout changes must be applied before other changes can be made"
 msgstr ""
-"Perubahan tataletak mestinya diterapkan sebelum perubahan yang lain dibuat"
+"Perubahan tata letak mestinya diterapkan sebelum perubahan yang lain dibuat"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:197
 #, kde-format
@@ -492,7 +492,7 @@ msgstr "Pintasan fokus:"
 #: contents/configuration/PanelConfiguration.qml:599
 #, kde-format
 msgid "Press this keyboard shortcut to move focus to the Panel"
-msgstr ""
+msgstr "Tekan pintasan keyboard ini untuk memindahkan fokus ke Panel"
 
 #: contents/configuration/PanelConfiguration.qml:633
 #, kde-format
@@ -503,7 +503,7 @@ msgstr "Hapus Panel"
 #: contents/configuration/PanelConfiguration.qml:636
 #, kde-format
 msgid "Remove this panel; this action is undo-able"
-msgstr ""
+msgstr "Hapus panel ini, tindakan ini dapat diurungkan"
 
 #: contents/configuration/PanelConfiguration.qml:647
 #, kde-format
@@ -521,38 +521,38 @@ msgstr "Keluar Mode Edit"
 #: contents/configuration/PanelConfiguration.qml:650
 #, kde-format
 msgid "Close Panel Settings window and exit Edit Mode"
-msgstr ""
+msgstr "Tutup jendela Pengaturan Panel dan keluar Mode Edit"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:32
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum height."
-msgstr ""
+msgstr "Seret untuk mengubah tinggi maksimum."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:33
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum width."
-msgstr ""
+msgstr "Seret untuk mengubah lebar maksimum."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:34
 #: contents/configuration/panelconfiguration/Ruler.qml:39
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Double-click to reset."
-msgstr ""
+msgstr "Klik ganda untuk menyetel ulang."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:37
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum height."
-msgstr ""
+msgstr "Seret untuk mengubah tinggi minimum."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:38
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
-msgstr ""
+msgstr "Seret untuk mengubah lebar minimum."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:87
 #, kde-format
@@ -561,6 +561,8 @@ msgid ""
 "Drag to change position on this screen edge.\n"
 "Double-click to reset."
 msgstr ""
+"Seret untuk mengubah posisi di tepi layar ini.\n"
+"Klik ganda untuk menyetel ulang."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 #, kde-format
@@ -613,7 +615,7 @@ msgstr "Widget Alternatif"
 #: contents/explorer/AppletDelegate.qml:41
 #, kde-format
 msgid "Unsupported Widget"
-msgstr ""
+msgstr "Widget tak didukung"
 
 #: contents/explorer/AppletDelegate.qml:172
 #, kde-format
@@ -678,8 +680,8 @@ msgstr "Kategori"
 #, kde-format
 msgid "Confirm Removal Of One Widget"
 msgid_plural "Confirm Removal Of %1 Widgets"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Konfirmasi Penghapusan Satu Widget"
+msgstr[1] "Konfirmasi Penghapusan %1 Widget"
 
 #: contents/explorer/WidgetExplorer.qml:355
 #, kde-format
@@ -750,7 +752,7 @@ msgstr "Keyboard Virtual"
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr "Alihkan tataletak"
+msgstr "Alihkan tata letak"
 
 #: contents/lockscreen/MainBlock.qml:64
 #, kde-format
@@ -766,12 +768,12 @@ msgstr "Lepas kunci"
 #: contents/lockscreen/MainBlock.qml:156
 #, kde-format
 msgid "(or scan your fingerprint on the reader)"
-msgstr ""
+msgstr "(atau pindai sidik jari Anda di reader)"
 
 #: contents/lockscreen/MainBlock.qml:160
 #, kde-format
 msgid "(or scan your smartcard)"
-msgstr ""
+msgstr "(atau pindai smartcard Anda)"
 
 #: contents/lockscreen/MediaControls.qml:59
 #, kde-format
@@ -802,7 +804,7 @@ msgstr "Trek selanjutnya"
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: contents/views/DesktopEditMode.qml:115
 #, kde-format
@@ -828,7 +830,7 @@ msgstr "Keluar Mode Edit"
 #: contents/views/Panel.qml:316
 #, kde-format
 msgid "Panel Focus Indicator"
-msgstr ""
+msgstr "Indikator Fokus Panel"
 
 #, fuzzy
 #~| msgid "Height"
