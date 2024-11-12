@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-11 00:41+0000\n"
+"POT-Creation-Date: 2024-11-12 00:42+0000\n"
 "PO-Revision-Date: 2024-09-18 09:46+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -104,18 +104,22 @@ msgstr "%1 - (%2,%3 %4×%5)"
 
 #: kcmtablet.cpp:163
 #, kde-format
-msgid "Fit to Screen"
+msgctxt "@item:inlistbox Stretch and fill to the screen"
+msgid "Stretch and Fill"
 msgstr ""
 
 #: kcmtablet.cpp:164
 #, kde-format
-msgid "Keep Aspect Ratio and Fit Within Screen"
+msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
+msgid "Keep Aspect Ratio and Fit"
 msgstr ""
 
 #: kcmtablet.cpp:165
-#, kde-format
-msgid "Map to Portion of Screen"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Map to screen:"
+msgctxt "@item:inlistbox Map to portion of the screen"
+msgid "Map to Portion"
+msgstr "Připojit na obrazovku:"
 
 #: kcmtablet.cpp:290
 #, fuzzy, kde-format
@@ -336,7 +340,7 @@ msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Zařízení:"
 
-#: ui/main.qml:125
+#: ui/main.qml:126
 #, kde-format
 msgid "Map to screen:"
 msgstr "Připojit na obrazovku:"
@@ -448,24 +452,12 @@ msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
 msgstr "Kalibrace není podporována."
 
-#: ui/main.qml:511
-#, kde-format
-msgctxt "@label:listbox The pad we are configuring"
-msgid "Pad:"
-msgstr ""
-
-# žádné parametry funkce v inspektoru funkcí
-#: ui/main.qml:522
-#, kde-format
-msgid "None"
-msgstr "Nic"
-
-#: ui/main.qml:547
+#: ui/main.qml:527
 #, kde-format
 msgid "Pad button %1:"
 msgstr "Tlačítko tabletu %1:"
 
-#: ui/main.qml:550
+#: ui/main.qml:530
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
@@ -506,6 +498,10 @@ msgstr ""
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr "Vyprázdnit"
+
+# žádné parametry funkce v inspektoru funkcí
+#~ msgid "None"
+#~ msgstr "Nic"
 
 #~ msgid "Pen button 2:"
 #~ msgstr "Tlačítko pera 2:"

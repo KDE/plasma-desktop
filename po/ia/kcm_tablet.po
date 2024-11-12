@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-11 00:41+0000\n"
+"POT-Creation-Date: 2024-11-12 00:42+0000\n"
 "PO-Revision-Date: 2024-11-04 17:55+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -102,17 +102,22 @@ msgstr "%1 - (%2,%3 %4x%5)"
 
 #: kcmtablet.cpp:163
 #, kde-format
-msgid "Fit to Screen"
-msgstr "Adaota a Schermo"
+msgctxt "@item:inlistbox Stretch and fill to the screen"
+msgid "Stretch and Fill"
+msgstr ""
 
 #: kcmtablet.cpp:164
-#, kde-format
-msgid "Keep Aspect Ratio and Fit Within Screen"
+#, fuzzy, kde-format
+#| msgid "Keep Aspect Ratio and Fit Within Screen"
+msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
+msgid "Keep Aspect Ratio and Fit"
 msgstr "Mantene rata de aspecto e adapta intra schermo"
 
 #: kcmtablet.cpp:165
-#, kde-format
-msgid "Map to Portion of Screen"
+#, fuzzy, kde-format
+#| msgid "Map to Portion of Screen"
+msgctxt "@item:inlistbox Map to portion of the screen"
+msgid "Map to Portion"
 msgstr "Mappa al portion de schermo"
 
 #: kcmtablet.cpp:290
@@ -320,7 +325,7 @@ msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Dispositivo:"
 
-#: ui/main.qml:125
+#: ui/main.qml:126
 #, kde-format
 msgid "Map to screen:"
 msgstr "Mappa a schermo:"
@@ -437,23 +442,12 @@ msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
 msgstr "Calibration trans multiple schermos non es supportate."
 
-#: ui/main.qml:511
-#, kde-format
-msgctxt "@label:listbox The pad we are configuring"
-msgid "Pad:"
-msgstr "Reimple (Pad):"
-
-#: ui/main.qml:522
-#, kde-format
-msgid "None"
-msgstr "Necun"
-
-#: ui/main.qml:547
+#: ui/main.qml:527
 #, kde-format
 msgid "Pad button %1:"
 msgstr "Button de tampon (pad)  %1:"
 
-#: ui/main.qml:550
+#: ui/main.qml:530
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
@@ -496,6 +490,16 @@ msgstr ""
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr "Netta"
+
+#~ msgid "Fit to Screen"
+#~ msgstr "Adaota a Schermo"
+
+#~ msgctxt "@label:listbox The pad we are configuring"
+#~ msgid "Pad:"
+#~ msgstr "Reimple (Pad):"
+
+#~ msgid "None"
+#~ msgstr "Necun"
 
 #~ msgid "Pen button 2:"
 #~ msgstr "Button de penna 2:"

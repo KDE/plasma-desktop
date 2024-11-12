@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-11 00:41+0000\n"
+"POT-Creation-Date: 2024-11-12 00:42+0000\n"
 "PO-Revision-Date: 2024-09-07 20:30+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -103,17 +103,22 @@ msgstr "%1 - (%2,%3 %4×%5)"
 
 #: kcmtablet.cpp:163
 #, kde-format
-msgid "Fit to Screen"
-msgstr "திரைக்கு பொருத்து"
+msgctxt "@item:inlistbox Stretch and fill to the screen"
+msgid "Stretch and Fill"
+msgstr ""
 
 #: kcmtablet.cpp:164
-#, kde-format
-msgid "Keep Aspect Ratio and Fit Within Screen"
+#, fuzzy, kde-format
+#| msgid "Keep Aspect Ratio and Fit Within Screen"
+msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
+msgid "Keep Aspect Ratio and Fit"
 msgstr "உருவ விகிதத்தை மாற்றாமல் திரைக்குள் பொருத்து"
 
 #: kcmtablet.cpp:165
-#, kde-format
-msgid "Map to Portion of Screen"
+#, fuzzy, kde-format
+#| msgid "Map to Portion of Screen"
+msgctxt "@item:inlistbox Map to portion of the screen"
+msgid "Map to Portion"
 msgstr "திரையின் பகுதிக்கு இணை"
 
 #: kcmtablet.cpp:290
@@ -338,7 +343,7 @@ msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "சாதனம்:"
 
-#: ui/main.qml:125
+#: ui/main.qml:126
 #, kde-format
 msgid "Map to screen:"
 msgstr "திரைக்கு இணை:"
@@ -452,23 +457,12 @@ msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
 msgstr "பல திரைகளுடனான அளதிருத்தம் ஆதரிக்கப்படாதது."
 
-#: ui/main.qml:511
-#, kde-format
-msgctxt "@label:listbox The pad we are configuring"
-msgid "Pad:"
-msgstr "வரைபலகை:"
-
-#: ui/main.qml:522
-#, kde-format
-msgid "None"
-msgstr "ஏதுமில்லை"
-
-#: ui/main.qml:547
+#: ui/main.qml:527
 #, kde-format
 msgid "Pad button %1:"
 msgstr "வரைபலகை பட்டன் %1:"
 
-#: ui/main.qml:550
+#: ui/main.qml:530
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
@@ -511,6 +505,16 @@ msgstr ""
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr "காலியாக்கு"
+
+#~ msgid "Fit to Screen"
+#~ msgstr "திரைக்கு பொருத்து"
+
+#~ msgctxt "@label:listbox The pad we are configuring"
+#~ msgid "Pad:"
+#~ msgstr "வரைபலகை:"
+
+#~ msgid "None"
+#~ msgstr "ஏதுமில்லை"
 
 #~ msgid "Pen button 2:"
 #~ msgstr "பேனா பட்டன் 2:"

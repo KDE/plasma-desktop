@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-11 00:41+0000\n"
-"PO-Revision-Date: 2024-10-17 08:32+0400\n"
+"POT-Creation-Date: 2024-11-12 00:42+0000\n"
+"PO-Revision-Date: 2024-11-11 17:02+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -55,11 +55,10 @@ msgid "Application-defined"
 msgstr "حسب ما يعرفه التطبيق"
 
 #: inputsequence.cpp:194
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pen Button %1"
-msgstr "زر القلم 1:"
+msgstr "زر القلم %1"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -104,37 +103,37 @@ msgstr "‏%1 - (‏%2،‏%3 ‏%4×%5)"
 
 #: kcmtablet.cpp:163
 #, kde-format
-msgid "Fit to Screen"
-msgstr "لائم الشاشة"
+msgctxt "@item:inlistbox Stretch and fill to the screen"
+msgid "Stretch and Fill"
+msgstr ""
 
 #: kcmtablet.cpp:164
-#, kde-format
-msgid "Keep Aspect Ratio and Fit Within Screen"
+#, fuzzy, kde-format
+#| msgid "Keep Aspect Ratio and Fit Within Screen"
+msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
+msgid "Keep Aspect Ratio and Fit"
 msgstr "أبقِ النّسبة الباعيّة ولائم في الشاشة"
 
 #: kcmtablet.cpp:165
-#, kde-format
-msgid "Map to Portion of Screen"
+#, fuzzy, kde-format
+#| msgid "Map to Portion of Screen"
+msgctxt "@item:inlistbox Map to portion of the screen"
+msgid "Map to Portion"
 msgstr "عيّنها في جزء من الشاشة"
 
 #: kcmtablet.cpp:290
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
-msgstr "زر القلم 1:"
+msgstr "زر القلم %1:"
 
 #: kcmtablet.cpp:291
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button X'"
 msgid "pen button %1"
-msgstr "زر القلم 1"
+msgstr "زر القلم %1"
 
 #: ui/ActionDialog.qml:25
 #, kde-format
@@ -167,14 +166,10 @@ msgid "Send mouse button click"
 msgstr "أرسل نقرة زر الفأرة"
 
 #: ui/ActionDialog.qml:132
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt "@option:radio Set this action to a pen button type"
 msgid "Send pen button"
-msgstr "زر القلم 1"
+msgstr "أرسل زر القلم"
 
 #: ui/ActionDialog.qml:150
 #, kde-format
@@ -235,31 +230,22 @@ msgid "Shift"
 msgstr "Shift"
 
 #: ui/ActionDialog.qml:264
-#, fuzzy, kde-format
-#| msgid "Tool Button 1"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
-msgstr "زر الأدوات 1"
+msgstr "الزّرّ 1"
 
 #: ui/ActionDialog.qml:265
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 2'"
-#| msgid "pen button 2"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
-msgstr "زر القلم 2"
+msgstr "الزّرّ 2"
 
 #: ui/ActionDialog.qml:266
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 3'"
-#| msgid "pen button 3"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
-msgstr "زر القلم 3"
+msgstr "الزّرّ 3"
 
 #: ui/ActionDialog.qml:275
 #, kde-format
@@ -337,7 +323,7 @@ msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "الجهاز:"
 
-#: ui/main.qml:125
+#: ui/main.qml:126
 #, kde-format
 msgid "Map to screen:"
 msgstr "عيين إلى شاشة:"
@@ -454,23 +440,12 @@ msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
 msgstr "المعايرة عبر شاشات متعددة غير مدعومة."
 
-#: ui/main.qml:511
-#, kde-format
-msgctxt "@label:listbox The pad we are configuring"
-msgid "Pad:"
-msgstr "اللوح:"
-
-#: ui/main.qml:522
-#, kde-format
-msgid "None"
-msgstr "لا شيء"
-
-#: ui/main.qml:547
+#: ui/main.qml:527
 #, kde-format
 msgid "Pad button %1:"
 msgstr "زر اللوحي %1:"
 
-#: ui/main.qml:550
+#: ui/main.qml:530
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
@@ -513,6 +488,16 @@ msgstr ""
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr "امسح"
+
+#~ msgid "Fit to Screen"
+#~ msgstr "لائم الشاشة"
+
+#~ msgctxt "@label:listbox The pad we are configuring"
+#~ msgid "Pad:"
+#~ msgstr "اللوح:"
+
+#~ msgid "None"
+#~ msgstr "لا شيء"
 
 #~ msgid "Pen button 2:"
 #~ msgstr "زر القلم 2:"

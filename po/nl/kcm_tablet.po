@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-11 00:41+0000\n"
+"POT-Creation-Date: 2024-11-12 00:42+0000\n"
 "PO-Revision-Date: 2024-11-03 14:50+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -103,17 +103,22 @@ msgstr "%1 - (%2,%3 %4×%5)"
 
 #: kcmtablet.cpp:163
 #, kde-format
-msgid "Fit to Screen"
-msgstr "Op het scherm laten passen"
+msgctxt "@item:inlistbox Stretch and fill to the screen"
+msgid "Stretch and Fill"
+msgstr ""
 
 #: kcmtablet.cpp:164
-#, kde-format
-msgid "Keep Aspect Ratio and Fit Within Screen"
+#, fuzzy, kde-format
+#| msgid "Keep Aspect Ratio and Fit Within Screen"
+msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
+msgid "Keep Aspect Ratio and Fit"
 msgstr "Beeldverhouding behouden en op het scherm laten passen"
 
 #: kcmtablet.cpp:165
-#, kde-format
-msgid "Map to Portion of Screen"
+#, fuzzy, kde-format
+#| msgid "Map to Portion of Screen"
+msgctxt "@item:inlistbox Map to portion of the screen"
+msgid "Map to Portion"
 msgstr "Op gedeelte van het scherm weergeven"
 
 #: kcmtablet.cpp:290
@@ -320,7 +325,7 @@ msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Apparaat:"
 
-#: ui/main.qml:125
+#: ui/main.qml:126
 #, kde-format
 msgid "Map to screen:"
 msgstr "Op scherm weergeven:"
@@ -437,23 +442,12 @@ msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
 msgstr "Kalibratie over meerdere schermen wordt niet ondersteund."
 
-#: ui/main.qml:511
-#, kde-format
-msgctxt "@label:listbox The pad we are configuring"
-msgid "Pad:"
-msgstr "Blok:"
-
-#: ui/main.qml:522
-#, kde-format
-msgid "None"
-msgstr "Geen"
-
-#: ui/main.qml:547
+#: ui/main.qml:527
 #, kde-format
 msgid "Pad button %1:"
 msgstr "Padknop %1:"
 
-#: ui/main.qml:550
+#: ui/main.qml:530
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
@@ -496,6 +490,16 @@ msgstr ""
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr "Wissen"
+
+#~ msgid "Fit to Screen"
+#~ msgstr "Op het scherm laten passen"
+
+#~ msgctxt "@label:listbox The pad we are configuring"
+#~ msgid "Pad:"
+#~ msgstr "Blok:"
+
+#~ msgid "None"
+#~ msgstr "Geen"
 
 #~ msgid "Pen button 2:"
 #~ msgstr "Penknop 2:"

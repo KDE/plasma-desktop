@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-11 00:41+0000\n"
+"POT-Creation-Date: 2024-11-12 00:42+0000\n"
 "PO-Revision-Date: 2024-02-19 21:39+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -105,17 +105,20 @@ msgstr "%1 - (%2,%3 %4×%5)"
 
 #: kcmtablet.cpp:163
 #, kde-format
-msgid "Fit to Screen"
+msgctxt "@item:inlistbox Stretch and fill to the screen"
+msgid "Stretch and Fill"
 msgstr ""
 
 #: kcmtablet.cpp:164
 #, kde-format
-msgid "Keep Aspect Ratio and Fit Within Screen"
+msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
+msgid "Keep Aspect Ratio and Fit"
 msgstr ""
 
 #: kcmtablet.cpp:165
 #, kde-format
-msgid "Map to Portion of Screen"
+msgctxt "@item:inlistbox Map to portion of the screen"
+msgid "Map to Portion"
 msgstr ""
 
 #: kcmtablet.cpp:290
@@ -323,7 +326,7 @@ msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "장치:"
 
-#: ui/main.qml:125
+#: ui/main.qml:126
 #, kde-format
 msgid "Map to screen:"
 msgstr ""
@@ -435,24 +438,13 @@ msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
 msgstr ""
 
-#: ui/main.qml:511
-#, kde-format
-msgctxt "@label:listbox The pad we are configuring"
-msgid "Pad:"
-msgstr "패드:"
-
-#: ui/main.qml:522
-#, kde-format
-msgid "None"
-msgstr "없음"
-
-#: ui/main.qml:547
+#: ui/main.qml:527
 #, fuzzy, kde-format
 #| msgid "Button %1:"
 msgid "Pad button %1:"
 msgstr "단추 %1:"
 
-#: ui/main.qml:550
+#: ui/main.qml:530
 #, fuzzy, kde-format
 #| msgid "Button %1:"
 msgctxt ""
@@ -495,6 +487,13 @@ msgstr ""
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr ""
+
+#~ msgctxt "@label:listbox The pad we are configuring"
+#~ msgid "Pad:"
+#~ msgstr "패드:"
+
+#~ msgid "None"
+#~ msgstr "없음"
 
 #, fuzzy
 #~| msgid "Pen Button 2"

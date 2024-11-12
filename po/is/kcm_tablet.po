@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-11 00:41+0000\n"
+"POT-Creation-Date: 2024-11-12 00:42+0000\n"
 "PO-Revision-Date: 2024-07-22 13:02+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -104,17 +104,22 @@ msgstr "%1 - (%2,%3 %4×%5)"
 
 #: kcmtablet.cpp:163
 #, kde-format
-msgid "Fit to Screen"
-msgstr "Passa á skjá"
+msgctxt "@item:inlistbox Stretch and fill to the screen"
+msgid "Stretch and Fill"
+msgstr ""
 
 #: kcmtablet.cpp:164
-#, kde-format
-msgid "Keep Aspect Ratio and Fit Within Screen"
+#, fuzzy, kde-format
+#| msgid "Keep Aspect Ratio and Fit Within Screen"
+msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
+msgid "Keep Aspect Ratio and Fit"
 msgstr "Halda myndhlutfalli og passa innan skjásins"
 
 #: kcmtablet.cpp:165
-#, kde-format
-msgid "Map to Portion of Screen"
+#, fuzzy, kde-format
+#| msgid "Map to Portion of Screen"
+msgctxt "@item:inlistbox Map to portion of the screen"
+msgid "Map to Portion"
 msgstr "Varpa á hluta skjásins"
 
 #: kcmtablet.cpp:290
@@ -325,7 +330,7 @@ msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Tæki:"
 
-#: ui/main.qml:125
+#: ui/main.qml:126
 #, kde-format
 msgid "Map to screen:"
 msgstr "Varpa á skjá:"
@@ -440,23 +445,12 @@ msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
 msgstr "Kvörðun á mörgum skjám er ekki studd."
 
-#: ui/main.qml:511
-#, kde-format
-msgctxt "@label:listbox The pad we are configuring"
-msgid "Pad:"
-msgstr "Bakki:"
-
-#: ui/main.qml:522
-#, kde-format
-msgid "None"
-msgstr "Ekkert"
-
-#: ui/main.qml:547
+#: ui/main.qml:527
 #, kde-format
 msgid "Pad button %1:"
 msgstr "Bakkahnappur %1:"
 
-#: ui/main.qml:550
+#: ui/main.qml:530
 #, fuzzy, kde-format
 #| msgid "Pad button %1:"
 msgctxt ""
@@ -500,6 +494,16 @@ msgstr ""
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr "Hreinsa"
+
+#~ msgid "Fit to Screen"
+#~ msgstr "Passa á skjá"
+
+#~ msgctxt "@label:listbox The pad we are configuring"
+#~ msgid "Pad:"
+#~ msgstr "Bakki:"
+
+#~ msgid "None"
+#~ msgstr "Ekkert"
 
 #~ msgid "Pen button 2:"
 #~ msgstr "Pennahnappur 2:"
