@@ -525,7 +525,16 @@ PlasmoidItem {
 
         const task = taskRepeater.itemAt(index);
         if (task) {
-            TaskTools.activateTask(task.modelIndex(), task.model, null, task, Plasmoid, this, effectWatcher.registered);
+            TaskTools.activateTask(task.modelIndex(),
+                                   task.model,
+                                   null,
+                                   task,
+                                   Plasmoid,
+                                   this,
+                                   effectWatcher.registered,
+                                   true); // Force cycling since other switching
+                                          // options don't make sense when activated
+                                          // from the keyboard.
         }
     }
 
