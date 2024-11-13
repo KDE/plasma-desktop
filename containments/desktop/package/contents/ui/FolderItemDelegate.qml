@@ -25,6 +25,7 @@ Item {
     property string name:        model.blank ? "" : model.display
     property string nameWrapped: model.blank ? "" : model.displayWrapped
     property bool blank:         model.blank
+    property bool selected:      model.blank ? false : model.selected
     property bool isDir:           loader.item ? loader.item.isDir : false
     property QtObject popupDialog: loader.item ? loader.item.popupDialog    : null
     property Item iconArea:        loader.item ? loader.item.iconArea       : null
@@ -77,6 +78,14 @@ Item {
         asynchronous: true
     }
 
+    function updateDragImage() {
+        if (selected && !blank) {
+            loader.grabToImage(result => {
+                dir.addItemDragImage(positioner.map(index), main.x + loader.x, main.y + loader.y, loader.width, loader.height, result.image);
+            });
+        }
+    }
+
     Component {
         id: delegateImplementation
 
@@ -86,7 +95,6 @@ Item {
             anchors.fill: parent
 
             property bool blank: model.blank
-            property bool selected: model.blank ? false : model.selected
             property bool isDir: model.blank ? false : model.isDir
             property bool hovered: (main.GridView.view.hoveredItem === main)
             property QtObject popupDialog: null
@@ -97,21 +105,11 @@ Item {
             property Item hoverArea: toolTip
             property Item frame: frameLoader
             property Item toolTip: toolTip
-            property Item selectionButton: null
+            property Item selectionButton: selectionButtonComponent.createObject(actions)
             property Item popupButton: null
 
             readonly property bool iconAndLabelsShouldlookSelected: impl.hovered
 
-            // When a drop happens, a new item is created, and is set to selected
-            // grabToImagebefore it gets the final width, making grabToImage fail because it's still 0x0
-            onSelectedChanged: Qt.callLater(updateDragImage)
-            function updateDragImage() {
-                if (selected && !blank) {
-                    frameLoader.grabToImage(result => {
-                        dir.addItemDragImage(positioner.map(index), main.x + frameLoader.x, main.y + frameLoader.y, frameLoader.width, frameLoader.height, result.image);
-                    });
-                }
-            }
 
             Connections {
                 target: model
@@ -126,7 +124,7 @@ Item {
             onHoveredChanged: {
                 if (hovered) {
                     if (Plasmoid.configuration.selectionMarkers && Qt.styleHints.singleClickActivation) {
-                        selectionButton = selectionButtonComponent.createObject(actions);
+                        selectionButton.visible = true;
                     }
 
                     if (model.isDir) {
@@ -143,10 +141,7 @@ Item {
                         closePopup();
                     }
 
-                    if (selectionButton) {
-                        selectionButton.destroy();
-                        selectionButton = null;
-                    }
+                    selectionButton.visible = false;
 
                     if (popupButton) {
                         popupButton.destroy();
@@ -469,6 +464,7 @@ Item {
             }
 
             Component.onCompleted: {
+                selectionButton.visible = false;
                 if (Plasmoid.isContainment && main.GridView.view.isRootView && root.GraphicsInfo.api === GraphicsInfo.OpenGL) {
                     frameLoader.iconShadow = iconShadowComponent.createObject(frameLoader);
                 }

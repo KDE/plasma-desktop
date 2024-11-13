@@ -905,6 +905,7 @@ void FolderModel::setSelected(int row)
     }
 
     m_selectionModel->select(index(row, 0), QItemSelectionModel::Select);
+    Q_EMIT selectionDone();
 }
 
 void FolderModel::toggleSelected(int row)
@@ -914,6 +915,7 @@ void FolderModel::toggleSelected(int row)
     }
 
     m_selectionModel->select(index(row, 0), QItemSelectionModel::Toggle);
+    Q_EMIT selectionDone();
 }
 
 void FolderModel::setRangeSelected(int anchor, int to)
@@ -924,6 +926,7 @@ void FolderModel::setRangeSelected(int anchor, int to)
 
     QItemSelection selection(index(anchor, 0), index(to, 0));
     m_selectionModel->select(selection, QItemSelectionModel::ClearAndSelect);
+    Q_EMIT selectionDone();
 }
 
 void FolderModel::updateSelection(const QVariantList &rows, bool toggle)
@@ -950,6 +953,8 @@ void FolderModel::updateSelection(const QVariantList &rows, bool toggle)
     } else {
         m_selectionModel->select(newSelection, QItemSelectionModel::ClearAndSelect);
     }
+    // We do not emit selectionDone here since updateSelection is called on every movement
+    // and we want to call it after selection is done for performance reasons
 }
 
 void FolderModel::clearSelection()
