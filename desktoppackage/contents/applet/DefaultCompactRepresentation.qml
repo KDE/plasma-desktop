@@ -7,6 +7,7 @@
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
 
+import org.kde.draganddrop as DragDrop
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
 import org.kde.kirigami 2.20 as Kirigami
@@ -73,6 +74,29 @@ Kirigami.Icon {
                 defaultCompactRepresentation.plasmoidItem.Plasmoid.secondaryActivated();
             } else {
                 defaultCompactRepresentation.plasmoidItem.expanded = !wasExpanded;
+            }
+        }
+    }
+
+    // Open the FullRepresentation on drag-hover if the applet wants it
+    Loader {
+        anchors.fill: parent
+
+        active: defaultCompactRepresentation.plasmoidItem.expandedOnDragHover
+
+        sourceComponent: DragDrop.DropArea {
+            anchors.fill: parent
+
+            onDragEnter: dropTimer.restart()
+            onDragLeave: dropTimer.stop()
+
+            Timer {
+                id: dropTimer
+                interval: 250 // matches taskmanager delay
+                onTriggered: {
+                    defaultCompactRepresentation.plasmoidItem.expanded = true;
+                    mouseArea.wasExpanded = true;
+                }
             }
         }
     }
