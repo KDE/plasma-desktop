@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-07 00:41+0000\n"
+"POT-Creation-Date: 2024-11-14 00:41+0000\n"
 "PO-Revision-Date: 2024-05-11 22:56+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -404,7 +404,7 @@ msgstr "Eltávolítás"
 msgid "Preview Plugins"
 msgstr "Bővítmények előnézete"
 
-#: package/contents/ui/FolderView.qml:1205
+#: package/contents/ui/FolderView.qml:1222
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -430,33 +430,33 @@ msgstr "Mappa kiválasztása"
 msgid "&Refresh Desktop"
 msgstr "Az asztal &frissítése"
 
-#: plugins/folder/foldermodel.cpp:510 plugins/folder/foldermodel.cpp:1682
+#: plugins/folder/foldermodel.cpp:510 plugins/folder/foldermodel.cpp:1687
 #, kde-format
 msgid "&Refresh View"
 msgstr "A né&zet frissítése"
 
-#: plugins/folder/foldermodel.cpp:1691
+#: plugins/folder/foldermodel.cpp:1696
 #, kde-format
 msgid "&Empty Trash"
 msgstr "A Kuka ü&rítése"
 
-#: plugins/folder/foldermodel.cpp:1694
+#: plugins/folder/foldermodel.cpp:1699
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore"
 msgstr "Visszaállítás"
 
-#: plugins/folder/foldermodel.cpp:1697
+#: plugins/folder/foldermodel.cpp:1702
 #, kde-format
 msgid "&Open"
 msgstr "Megny&itás"
 
-#: plugins/folder/foldermodel.cpp:1814
+#: plugins/folder/foldermodel.cpp:1819
 #, kde-format
 msgid "&Paste"
 msgstr "&Beillesztés"
 
-#: plugins/folder/foldermodel.cpp:1930
+#: plugins/folder/foldermodel.cpp:1935
 #, kde-format
 msgid "&Properties"
 msgstr "&Tulajdonságok"

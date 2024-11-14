@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-07 00:41+0000\n"
+"POT-Creation-Date: 2024-11-14 00:41+0000\n"
 "PO-Revision-Date: 2024-04-04 17:07+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -407,7 +407,7 @@ msgstr "Šalinti"
 msgid "Preview Plugins"
 msgstr "Peržiūros įskiepiai"
 
-#: package/contents/ui/FolderView.qml:1205
+#: package/contents/ui/FolderView.qml:1222
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -433,33 +433,33 @@ msgstr "Pasirinkite aplanką"
 msgid "&Refresh Desktop"
 msgstr "Į&kelti darbalaukį iš naujo"
 
-#: plugins/folder/foldermodel.cpp:510 plugins/folder/foldermodel.cpp:1682
+#: plugins/folder/foldermodel.cpp:510 plugins/folder/foldermodel.cpp:1687
 #, kde-format
 msgid "&Refresh View"
 msgstr "Įke&lti rodinį iš naujo"
 
-#: plugins/folder/foldermodel.cpp:1691
+#: plugins/folder/foldermodel.cpp:1696
 #, kde-format
 msgid "&Empty Trash"
 msgstr "&Išvalyti šiukšlinę"
 
-#: plugins/folder/foldermodel.cpp:1694
+#: plugins/folder/foldermodel.cpp:1699
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore"
 msgstr "Atkurti"
 
-#: plugins/folder/foldermodel.cpp:1697
+#: plugins/folder/foldermodel.cpp:1702
 #, kde-format
 msgid "&Open"
 msgstr "At&verti"
 
-#: plugins/folder/foldermodel.cpp:1814
+#: plugins/folder/foldermodel.cpp:1819
 #, kde-format
 msgid "&Paste"
 msgstr "Į&dėti"
 
-#: plugins/folder/foldermodel.cpp:1930
+#: plugins/folder/foldermodel.cpp:1935
 #, kde-format
 msgid "&Properties"
 msgstr "&Savybės"

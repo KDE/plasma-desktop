@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-12 00:42+0000\n"
-"PO-Revision-Date: 2024-11-03 09:58+0100\n"
+"PO-Revision-Date: 2024-11-12 10:09+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -106,21 +106,19 @@ msgstr "%1 - (%2,%3 %4×%5)"
 #, kde-format
 msgctxt "@item:inlistbox Stretch and fill to the screen"
 msgid "Stretch and Fill"
-msgstr ""
+msgstr "Estira i òmpliga"
 
 #: kcmtablet.cpp:164
-#, fuzzy, kde-format
-#| msgid "Keep Aspect Ratio and Fit Within Screen"
+#, kde-format
 msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
 msgid "Keep Aspect Ratio and Fit"
-msgstr "Mantín la relació d'aspecte i ajusta en la pantalla"
+msgstr "Mantín la relació d'aspecte i ajusta"
 
 #: kcmtablet.cpp:165
-#, fuzzy, kde-format
-#| msgid "Map to Portion of Screen"
+#, kde-format
 msgctxt "@item:inlistbox Map to portion of the screen"
 msgid "Map to Portion"
-msgstr "Associa a una porció de la pantalla"
+msgstr "Associa a una porció"
 
 #: kcmtablet.cpp:290
 #, kde-format
@@ -491,13 +489,3 @@ msgstr ""
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr "Neteja"
-
-#~ msgid "Fit to Screen"
-#~ msgstr "Ajusta a la pantalla"
-
-#~ msgctxt "@label:listbox The pad we are configuring"
-#~ msgid "Pad:"
-#~ msgstr "Teclat:"
-
-#~ msgid "None"
-#~ msgstr "Sense"
