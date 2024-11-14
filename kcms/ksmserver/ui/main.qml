@@ -137,32 +137,27 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: true
         }
 
-        ColumnLayout {
+        RowLayout {
             Kirigami.FormData.label: i18n("Ignored applications:")
-            Kirigami.FormData.buddyFor: ignoredAppsTextField
-            spacing: Kirigami.Units.smallSpacing
 
-            RowLayout {
-                spacing: 0
+            spacing: 0
 
-                TextField {
-                    id: ignoredAppsTextField
-                    Layout.preferredWidth: Kirigami.Units.gridUnit * 16
-                    text: Settings.excludeApps
-                    enabled: !loginEmpty.checked
-                    // onTextEdited instead of onAccepted because otherwise the apply and
-                    // reset buttons won't work, since otherwise in many case no change will
-                    // be sent to the kconfigXt backend.
-                    onTextEdited: Settings.excludeApps = text
+            TextField {
+                Layout.preferredWidth: Kirigami.Units.gridUnit * 16
+                text: Settings.excludeApps
+                enabled: !loginEmpty.checked
+                // onTextEdited instead of onAccepted because otherwise the apply and
+                // reset buttons won't work, since otherwise in many case no change will
+                // be sent to the kconfigXt backend.
+                onTextEdited: Settings.excludeApps = text
 
-                    KCM.SettingStateBinding {
-                        configObject: Settings
-                        settingName: "excludeApps"
-                    }
+                KCM.SettingStateBinding {
+                    configObject: Settings
+                    settingName: "excludeApps"
                 }
-                Kirigami.ContextualHelpButton {
-                    toolTipText: i18n("Write apps' executable names here (separated by commas or colons, for example 'xterm:konsole' or 'xterm,konsole') to prevent them from autostarting along with other session-restored apps.")
-                }
+            }
+            Kirigami.ContextualHelpButton {
+                toolTipText: i18n("Write apps' executable names here (separated by commas or colons, for example 'xterm:konsole' or 'xterm,konsole') to prevent them from autostarting along with other session-restored apps.")
             }
         }
 
