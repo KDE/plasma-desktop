@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:40+0000\n"
+"POT-Creation-Date: 2024-11-15 00:41+0000\n"
 "PO-Revision-Date: 2024-06-25 09:42+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -153,7 +153,7 @@ msgstr "Initia con un session vacue"
 msgid "Ignored applications:"
 msgstr "Applicationes ignorate:"
 
-#: ui/main.qml:164
+#: ui/main.qml:160
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -164,13 +164,13 @@ msgstr ""
 "per exemplo 'xterm:konsole' o 'xternm,konsole' ) per impedir illos ab "
 "autoinitiar con altere apps restabilite de session."
 
-#: ui/main.qml:171
+#: ui/main.qml:166
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "Firmware:"
 
-#: ui/main.qml:177
+#: ui/main.qml:172
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -178,13 +178,13 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "Post proxime restartar"
 
-#: ui/main.qml:178
+#: ui/main.qml:173
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "Inserta schermo de configuration de UEFI"
 
-#: ui/main.qml:179
+#: ui/main.qml:174
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"

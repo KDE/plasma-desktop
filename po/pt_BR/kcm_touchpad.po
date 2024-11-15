@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-12 00:40+0000\n"
-"PO-Revision-Date: 2024-07-19 18:42-0300\n"
+"PO-Revision-Date: 2024-11-14 19:22-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: actions.cpp:19
 #, kde-format
@@ -275,8 +275,7 @@ msgid "This can interfere with video games."
 msgstr "Isto pode interferir nos vídeo games"
 
 #: ui/main.qml:204
-#, fuzzy, kde-format
-#| msgid "Left handed mode"
+#, kde-format
 msgid "Left-handed mode"
 msgstr "Modo canhoto"
 
@@ -286,8 +285,7 @@ msgid "Swap left and right buttons."
 msgstr "Trocar os botões esquerdo e direito."
 
 #: ui/main.qml:234
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons to middle-click"
 msgstr "Pressione nos botões esquerdo e direito para simular o botão do meio"
@@ -413,15 +411,13 @@ msgid "Disable horizontal scrolling."
 msgstr "Desativar a rolagem horizontal"
 
 #: ui/main.qml:609
-#, fuzzy, kde-format
-#| msgid "Tapping:"
+#, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Toques:"
 
 #: ui/main.qml:610
-#, fuzzy, kde-format
-#| msgid "Tap-to-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Tap-to-click"
 msgstr "Toque para clicar"
@@ -528,6 +524,9 @@ msgid ""
 "Middle-click by simultaneously pressing the bottom left and bottom right "
 "corners."
 msgstr ""
+"Pressionar o canto inferior direito do seu touchpad funciona como clique "
+"direito. Clique do meio pressionando simultaneamente os cantos inferior "
+"esquerdo e inferior direito."
 
 #: ui/main.qml:817
 #, kde-format
@@ -536,18 +535,21 @@ msgid ""
 "Pressing the bottom right corner of your touchpad acts as right-click. "
 "Middle-click by pressing the bottom central area."
 msgstr ""
+"Pressionar o canto inferior direito do seu touchpad funciona como clique com "
+"o botão direito. Clique com o botão do meio pressionando a área central "
+"inferior."
 
 #: ui/main.qml:828
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
-msgstr ""
+msgstr "Clique com o botão do meio pressionando ambos os cantos inferiores."
 
 #: ui/main.qml:829
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
-msgstr ""
+msgstr "Clique com o botão do meio pressionando a parte inferior central."
 
 #: ui/main.qml:847
 #, fuzzy, kde-format
@@ -591,6 +593,8 @@ msgstr "Pressione o botão do meio"
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the bottom right corner of your touchpad acts as right-click."
 msgstr ""
+"Pressionar o canto inferior direito do touchpad funciona como um clique com "
+"o botão direito."
 
 #: ui/main.qml:923
 #, fuzzy, kde-format

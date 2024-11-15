@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmserver 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:40+0000\n"
+"POT-Creation-Date: 2024-11-15 00:41+0000\n"
 "PO-Revision-Date: 2024-06-30 13:32+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -146,7 +146,7 @@ msgstr "காலியான அமர்வுடன் துவக்கு"
 msgid "Ignored applications:"
 msgstr "பொருட்படுத்தப்படாத செயலிகள்:"
 
-#: ui/main.qml:164
+#: ui/main.qml:160
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -157,13 +157,13 @@ msgstr ""
 "'xterm:konsole' அல்லது 'xterm,konsole') இங்கு உள்ளிட்டால், அச்செயலிகளை பிளாஸ்மா "
 "மீட்டெடுக்காது."
 
-#: ui/main.qml:171
+#: ui/main.qml:166
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "சாதனநிரல்"
 
-#: ui/main.qml:177
+#: ui/main.qml:172
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -171,13 +171,13 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "அடுத்த மீள்துவக்கத்திற்குப் பின்:"
 
-#: ui/main.qml:178
+#: ui/main.qml:173
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "சாதனநிரல் (UEFI) அமைப்புகளில் நுழை"
 
-#: ui/main.qml:179
+#: ui/main.qml:174
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"

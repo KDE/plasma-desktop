@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:40+0000\n"
+"POT-Creation-Date: 2024-11-15 00:41+0000\n"
 "PO-Revision-Date: 2024-06-28 16:51+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -156,7 +156,7 @@ msgstr "Komenci en malplena seanco"
 msgid "Ignored applications:"
 msgstr "Ignorataj aplikaĵoj:"
 
-#: ui/main.qml:164
+#: ui/main.qml:160
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -167,13 +167,13 @@ msgstr ""
 "aŭ dupunktoj, ekzemple 'xterm:konsole' aŭ 'xterm,konsole') por malhelpi ilin "
 "aŭtomate ekfunkciigi kune kun aliaj seancaj restaŭrigitaj apps."
 
-#: ui/main.qml:171
+#: ui/main.qml:166
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "Firmvaro"
 
-#: ui/main.qml:177
+#: ui/main.qml:172
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -181,13 +181,13 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "Post sekva restarto:"
 
-#: ui/main.qml:178
+#: ui/main.qml:173
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "Eniri UEFI-agordan ekranon"
 
-#: ui/main.qml:179
+#: ui/main.qml:174
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"

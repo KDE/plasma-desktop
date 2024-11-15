@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:40+0000\n"
+"POT-Creation-Date: 2024-11-15 00:41+0000\n"
 "PO-Revision-Date: 2024-08-12 19:17+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -161,7 +161,7 @@ msgstr "Εκκίνηση με μια άδεια συνεδρία"
 msgid "Ignored applications:"
 msgstr "Αγνοημένες εφαρμογές:"
 
-#: ui/main.qml:164
+#: ui/main.qml:160
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -173,13 +173,13 @@ msgstr ""
 "αποτρέψετε την αυτόματη εκκίνησή τους μαζί με άλλες εφαρμογές που έχουν "
 "αποκατασταθεί σε λειτουργία."
 
-#: ui/main.qml:171
+#: ui/main.qml:166
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "Yλικολογισμικό"
 
-#: ui/main.qml:177
+#: ui/main.qml:172
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -187,13 +187,13 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "Μετά την επόμενη επανεκκίνηση:"
 
-#: ui/main.qml:178
+#: ui/main.qml:173
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "Είσοδος στην οθόνη ρυθμίσεων UEFI"
 
-#: ui/main.qml:179
+#: ui/main.qml:174
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"

@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-06 00:41+0000\n"
-"PO-Revision-Date: 2024-07-29 10:37-0300\n"
+"PO-Revision-Date: 2024-11-14 19:19-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -69,15 +69,13 @@ msgid "9,999+"
 msgstr "9,999+"
 
 #: package/contents/ui/ConfigAppearance.qml:46
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@label for several checkboxes"
 msgid "General:"
 msgstr "Geral:"
 
 #: package/contents/ui/ConfigAppearance.qml:47
-#, fuzzy, kde-format
-#| msgid "Show small window previews when hovering over Tasks"
+#, kde-format
 msgctxt "@option:check section General"
 msgid "Show small window previews when hovering over tasks"
 msgstr ""
@@ -85,8 +83,7 @@ msgstr ""
 "tarefas"
 
 #: package/contents/ui/ConfigAppearance.qml:52
-#, fuzzy, kde-format
-#| msgid "Hide other windows when hovering over previews"
+#, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over previews"
 msgstr "Ocultar outras janelas ao passar o mouse sobre as visualizações"
@@ -98,37 +95,34 @@ msgid "Use audio indicators to mute tasks"
 msgstr ""
 
 #: package/contents/ui/ConfigAppearance.qml:65
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Fill free space on Panel"
+#, kde-format
 msgctxt "@option:check section General"
 msgid "Fill free space on panel"
 msgstr "Preencher espaço livre no painel"
 
 #: package/contents/ui/ConfigAppearance.qml:77
-#, fuzzy, kde-format
-#| msgid "Maximum rows:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Maximum task width:"
-msgstr "Máximo de linhas:"
+msgstr "Largura máxima da tarefa:"
 
 #: package/contents/ui/ConfigAppearance.qml:80
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Narrow"
-msgstr ""
+msgstr "Estreito"
 
 #: package/contents/ui/ConfigAppearance.qml:81
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Medium"
-msgstr ""
+msgstr "Médio"
 
 #: package/contents/ui/ConfigAppearance.qml:82
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Wide"
-msgstr ""
+msgstr "Largo"
 
 #: package/contents/ui/ConfigAppearance.qml:93
 #, fuzzy, kde-format
@@ -545,38 +539,33 @@ msgid "Unhide when a window wants attention"
 msgstr "Mostrar quando uma janela precisar de atenção"
 
 #: package/contents/ui/ConfigBehavior.qml:226
-#, fuzzy, kde-format
-#| msgid "New tasks appear:"
+#, kde-format
 msgctxt "@label for radiobutton group completes sentence like: … on the bottom"
 msgid "New tasks appear:"
 msgstr "Novas tarefas aparecem:"
 
 #: package/contents/ui/ConfigBehavior.qml:230
-#, fuzzy, kde-format
-#| msgid "On the bottom"
+#, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the bottom"
 msgstr "Embaixo"
 
 #: package/contents/ui/ConfigBehavior.qml:234
 #: package/contents/ui/ConfigBehavior.qml:253
-#, fuzzy, kde-format
-#| msgid "To the right"
+#, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the right"
 msgstr "Na direita"
 
 #: package/contents/ui/ConfigBehavior.qml:236
 #: package/contents/ui/ConfigBehavior.qml:251
-#, fuzzy, kde-format
-#| msgid "To the left"
+#, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the left"
 msgstr "Na esquerda"
 
 #: package/contents/ui/ConfigBehavior.qml:247
-#, fuzzy, kde-format
-#| msgid "On the Top"
+#, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the top"
 msgstr "Em cima"

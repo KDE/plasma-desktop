@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:40+0000\n"
+"POT-Creation-Date: 2024-11-15 00:41+0000\n"
 "PO-Revision-Date: 2024-01-14 21:03-0800\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -155,7 +155,7 @@ msgstr "空のセッションで開始"
 msgid "Ignored applications:"
 msgstr "復元しないアプリケーション:"
 
-#: ui/main.qml:164
+#: ui/main.qml:160
 #, kde-format
 msgid ""
 "Write apps' executable names here (separated by commas or colons, for "
@@ -166,13 +166,13 @@ msgstr ""
 "ます。例: 'xterm:konsole' もしくは 'xterm,konsole') を入力してください。セッ"
 "ションが復元される際に、自動的に起動されないようになります。"
 
-#: ui/main.qml:171
+#: ui/main.qml:166
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "ファームウェア"
 
-#: ui/main.qml:177
+#: ui/main.qml:172
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -180,13 +180,13 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "次の再起動後:"
 
-#: ui/main.qml:178
+#: ui/main.qml:173
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "UEFI 設定画面に入る"
 
-#: ui/main.qml:179
+#: ui/main.qml:174
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
