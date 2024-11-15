@@ -181,5 +181,5 @@ class CopyHelperPrivate : public QObject
     QML_NAMED_ELEMENT(CopyHelper)
     QML_SINGLETON
 public:
-    Q_INVOKABLE static void copyTextToClipboard(const QString &text);
+    Q_INVOKABLE void copyToClipboardAndQuit(const QString &text);
 };

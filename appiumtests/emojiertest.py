@@ -64,6 +64,7 @@ class EmojierTest(unittest.TestCase):
         self.assertEqual(self.driver.get_clipboard_text(), "😀")
 
     def test_2_recent_usage(self) -> None:
+        subprocess.run(["plasma.emojier"])
         self.driver.find_element(AppiumBy.NAME, "Recent").click()
         self.driver.find_element(AppiumBy.NAME, "grinning face")
 

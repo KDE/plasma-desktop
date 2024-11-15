@@ -240,18 +240,12 @@ Kirigami.ScrollablePage {
             QQC2.MenuItem {
                 icon.name: "edit-copy"
                 text: i18nc("@item:inmenu", "Copy Character")
-                onClicked: {
-                    view.copyRequested(menu.label.text)
-                    variantDialog.close()
-                }
+                onClicked: CopyHelper.copyToClipboardAndQuit(menu.label.text)
             }
             QQC2.MenuItem {
                 icon.name: "edit-copy"
                 text: i18nc("@item:inmenu", "Copy Description")
-                onClicked: {
-                    view.copyRequested(menu.label.QQC2.ToolTip.text)
-                    variantDialog.close()
-                }
+                onClicked: CopyHelper.copyToClipboardAndQuit(menu.label.QQC2.ToolTip.text)
             }
         }
     }

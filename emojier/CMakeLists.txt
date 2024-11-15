@@ -15,9 +15,14 @@ ecm_qt_declare_logging_category(EmojierDeclarativePlugin
 
 kconfig_add_kcfg_files(EmojierDeclarativePlugin emojiersettings.kcfgc GENERATE_MOC)
 
-target_link_libraries(EmojierDeclarativePlugin PRIVATE Qt::Qml Qt::Gui KF6::ConfigGui KF6::I18n)
+target_link_libraries(EmojierDeclarativePlugin PRIVATE Qt::Qml Qt::Gui KF6::ConfigGui KF6::I18n KF6::IconThemes KF6::Notifications)
 
 ecm_finalize_qml_module(EmojierDeclarativePlugin)
 
 add_subdirectory(data)
 add_subdirectory(app)
+
+install(
+    FILES emojier.notifyrc
+    DESTINATION ${KDE_INSTALL_KNOTIFYRCDIR}
+)
