@@ -318,7 +318,6 @@ ContainmentItem {
 
                 onAppletChanged: {
                     applet.visible = true
-                    console.log(applet.visible)
                 }
 
                 Drag.dragType: Drag.Automatic
