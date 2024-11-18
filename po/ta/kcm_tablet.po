@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-12 00:42+0000\n"
-"PO-Revision-Date: 2024-09-07 20:30+0200\n"
+"PO-Revision-Date: 2024-11-17 22:33+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: inputsequence.cpp:172
 #, kde-format
@@ -54,11 +54,10 @@ msgid "Application-defined"
 msgstr "செயலியால் வகுக்கப்படுவது"
 
 #: inputsequence.cpp:194
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pen Button %1"
-msgstr "பேனா பட்டன் 1:"
+msgstr "பேனா பட்டன் %1"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -105,40 +104,33 @@ msgstr "%1 - (%2,%3 %4×%5)"
 #, kde-format
 msgctxt "@item:inlistbox Stretch and fill to the screen"
 msgid "Stretch and Fill"
-msgstr ""
+msgstr "நீட்டி திரையை நிரப்பு"
 
 #: kcmtablet.cpp:164
-#, fuzzy, kde-format
-#| msgid "Keep Aspect Ratio and Fit Within Screen"
+#, kde-format
 msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
 msgid "Keep Aspect Ratio and Fit"
 msgstr "உருவ விகிதத்தை மாற்றாமல் திரைக்குள் பொருத்து"
 
 #: kcmtablet.cpp:165
-#, fuzzy, kde-format
-#| msgid "Map to Portion of Screen"
+#, kde-format
 msgctxt "@item:inlistbox Map to portion of the screen"
 msgid "Map to Portion"
 msgstr "திரையின் பகுதிக்கு இணை"
 
 #: kcmtablet.cpp:290
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
-msgstr "பேனா பட்டன் 1:"
+msgstr "பேனா பட்டன் %1:"
 
 #: kcmtablet.cpp:291
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button X'"
 msgid "pen button %1"
-msgstr "பேனா பட்டன் 1"
+msgstr "பேனா பட்டன் %1"
 
 #: ui/ActionDialog.qml:25
 #, kde-format
@@ -171,14 +163,10 @@ msgid "Send mouse button click"
 msgstr "சுட்டி கிளிக்கை அனுப்பு"
 
 #: ui/ActionDialog.qml:132
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt "@option:radio Set this action to a pen button type"
 msgid "Send pen button"
-msgstr "பேனா பட்டன் 1"
+msgstr "பேனா பட்டனை அனுப்பு"
 
 #: ui/ActionDialog.qml:150
 #, kde-format
@@ -239,31 +227,22 @@ msgid "Shift"
 msgstr "Shift"
 
 #: ui/ActionDialog.qml:264
-#, fuzzy, kde-format
-#| msgid "Tool Button 1"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
-msgstr "கருவி பட்டன் 1"
+msgstr "பட்டன் 1"
 
 #: ui/ActionDialog.qml:265
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 2'"
-#| msgid "pen button 2"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
-msgstr "பேனா பட்டன் 2"
+msgstr "பட்டன் 2"
 
 #: ui/ActionDialog.qml:266
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 3'"
-#| msgid "pen button 3"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
-msgstr "பேனா பட்டன் 3"
+msgstr "பட்டன் 3"
 
 #: ui/ActionDialog.qml:275
 #, kde-format
@@ -356,7 +335,7 @@ msgstr "நோக்குநிலை:"
 #: ui/main.qml:151
 #, kde-format
 msgid "Not Applicable"
-msgstr ""
+msgstr "பொருந்தாதது"
 
 #: ui/main.qml:162
 #, kde-format
@@ -399,31 +378,31 @@ msgstr "%1,%2 - %3×%4"
 #: ui/main.qml:369
 #, kde-format
 msgid "Pen Pressure:"
-msgstr ""
+msgstr "பேனா அழுத்தம்:"
 
 #: ui/main.qml:421
 #, kde-format
 msgctxt "Low pen pressure"
 msgid "Low Pressure"
-msgstr ""
+msgstr "குறைவான அழுத்தம்"
 
 #: ui/main.qml:429
 #, kde-format
 msgctxt "High pen pressure"
 msgid "High Pressure"
-msgstr ""
+msgstr "கூடுதல் அழுத்தம்"
 
 #: ui/main.qml:440
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: ui/main.qml:448
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
-msgstr ""
+msgstr "0%"
 
 #: ui/main.qml:452
 #, kde-format
@@ -432,6 +411,8 @@ msgid ""
 "This curve controls the relationship between the pressure on the stylus and "
 "the pressure values received by applications."
 msgstr ""
+"பேனாமீத் நீங்கள் இடும் அழுத்தம், செயலிக்கு எவ்வாறு மாற்றி அனுப்பப்பட வேண்டுமென்பதை இது "
+"தீர்மானிக்கும்"
 
 #: ui/main.qml:463
 #, kde-format
