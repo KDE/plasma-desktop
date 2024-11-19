@@ -32,8 +32,8 @@ public:
     int deviceCount() const override;
     QList<InputDevice *> inputDevices() const override;
 
-    Q_INVOKABLE QVariantMap buttonMapping(const QVariant deviceName) const override;
-    Q_INVOKABLE void setButtonMapping(const QVariant deviceName, const QVariantMap &mapping) override;
+    Q_INVOKABLE QVariantMap buttonMapping(const QString &deviceName) const override;
+    Q_INVOKABLE void setButtonMapping(const QString &deviceName, const QVariantMap &mapping) override;
 
 private Q_SLOTS:
     void onDeviceAdded(QString);
