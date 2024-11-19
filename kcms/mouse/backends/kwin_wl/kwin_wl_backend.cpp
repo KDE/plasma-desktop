@@ -164,9 +164,8 @@ bool KWinWaylandBackend::isSaveNeeded() const
     });
 }
 
-QVariantMap KWinWaylandBackend::buttonMapping(const QVariant deviceName) const
+QVariantMap KWinWaylandBackend::buttonMapping(const QString &deviceName) const
 {
-    const QString deviceNameString = deviceName.toString();
     const KConfigGroup mouseGroup = mouseButtonRebindsConfigGroup();
     QVariantMap buttonMapping;
 
@@ -185,22 +184,21 @@ QVariantMap KWinWaylandBackend::buttonMapping(const QVariant deviceName) const
 
     loadConfigGroup(mouseGroup);
 
-    if (!deviceNameString.isEmpty()) {
-        loadConfigGroup(mouseGroup.group(deviceNameString));
+    if (!deviceName.isEmpty()) {
+        loadConfigGroup(mouseGroup.group(deviceName));
     }
 
     return buttonMapping;
 }
 
-void KWinWaylandBackend::setButtonMapping(const QVariant deviceName, const QVariantMap &mapping)
+void KWinWaylandBackend::setButtonMapping(const QString &deviceName, const QVariantMap &mapping)
 {
     if (mapping.isEmpty()) {
         return;
     }
 
-    const QString deviceNameString = deviceName.toString();
-    if (!deviceNameString.isEmpty()) {
-        m_changedButtonMapping.insert(deviceNameString, mapping);
+    if (!deviceName.isEmpty()) {
+        m_changedButtonMapping.insert(deviceName, mapping);
         Q_EMIT needsSaveChanged();
     }
 }
