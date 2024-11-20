@@ -134,7 +134,7 @@ T.ItemDelegate {
         }
     }
 
-    Drag.active: mouseArea.drag.active
+    Drag.active: dragHandler.active
     Drag.dragType: Drag.Automatic
     Drag.mimeData: { "text/uri-list" : [root.url] }
     Drag.onDragFinished: Drag.imageSource = ""
@@ -158,9 +158,16 @@ T.ItemDelegate {
             // to change while delegates are moving under the mouse cursor
             && kickoff.fullRepresentationItem && !kickoff.fullRepresentationItem.contentItem.busy && !kickoff.fullRepresentationItem.blockingHoverFocus
         acceptedButtons: Qt.LeftButton | Qt.RightButton
-        drag {
-            axis: Drag.XAndYAxis
-            target: root.dragEnabled && mouseArea.dragEnabled ? dragItem : undefined
+        DragHandler { // BUG: https://bugs.kde.org/show_bug.cgi?id=496232
+            id: dragHandler
+            enabled: mouseArea.dragEnabled
+            acceptedButtons: Qt.LeftButton
+            target: null
+            onActiveChanged: if (active) {
+                acceptedButtons = Qt.NoButton // Force ungrab
+            } else {
+                acceptedButtons = Qt.LeftButton // allow dragging again
+            }
         }
         // Using this Item fixes drag and drop causing delegates
         // to reset to a 0 X position and overlapping each other.
