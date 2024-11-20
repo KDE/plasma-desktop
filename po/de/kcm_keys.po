@@ -4,27 +4,28 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2020, 2021.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
 # SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
+# SPDX-FileCopyrightText: 2024 Alois Spitzbart <spitz234@hotmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-25 02:32+0000\n"
-"PO-Revision-Date: 2023-12-21 17:57+0100\n"
-"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
+"PO-Revision-Date: 2024-11-17 17:16+0100\n"
+"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #: basemodel.cpp:157
 #, kde-format
 msgctxt "@title:group Launch app"
 msgid "Launch"
-msgstr ""
+msgstr "Starten"
 
 #: globalaccelmodel.cpp:235
 #, kde-format
@@ -51,46 +52,41 @@ msgstr ""
 "Die Kommunikation mit dem Dienst für globale Kurzbefehle ist fehlgeschlagen"
 
 #: kcm_keys.cpp:379
-#, fuzzy, kde-kuit-format
-#| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
-#| msgid ""
-#| "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
-#| "Do you want to reassign it?"
+#, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action "
 "<interface>%3</interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
-"Der Kurzbefehl %1 ist bereits der Aktion „%3“ in Kategorie %2 zugewiesen.\n"
-"Möchten Sie ihn neu zuweisen?"
+"Der Kurzbefehl <shortcut>%1</shortcut> ist bereits der Aktion <interface>%3</"
+"interface> in Kategorie %2 zugewiesen.\n"
+"Möchten Sie ihn neu zu %4 zuweisen?"
 
 #: kcm_keys.cpp:385
-#, fuzzy, kde-kuit-format
-#| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
-#| msgid ""
-#| "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
-#| "Do you want to reassign it?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to action <interface>"
 "%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
 "action <interface>%4</interface> of <application>%5</application>?"
 msgstr ""
-"Der Kurzbefehl %1 ist bereits der Aktion „%3“ in Kategorie %2 zugewiesen.\n"
-"Möchten Sie ihn neu zuweisen?"
+"Der Kurzbefehl <shortcut>%1</shortcut> ist bereits der Aktion <interface>%2</"
+"interface> in <application>%3</application> zugewiesen.<nl/><nl/>Möchten Sie "
+"ihn der Aktion <interface>%4</interface> in <application>%5</application> "
+"neu zuweisen?"
 
 #: kcm_keys.cpp:394
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
-msgstr ""
+msgstr "Kurzbefehlkonflikt auflösen"
 
 #: kcm_keys.cpp:404
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr ""
+msgstr "Neu zuordnen"
 
 #: standardshortcutsmodel.cpp:34
 #, kde-format
@@ -143,9 +139,7 @@ msgid "Common Actions"
 msgstr "Allgemeine Aktionen"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgctxt "@action: button Import shortcut scheme"
-#| msgid "Import…"
+#, kde-format
 msgctxt "@action:button Import shortcut scheme"
 msgid "Import…"
 msgstr "Importieren …"
@@ -178,12 +172,10 @@ msgstr ""
 "soll"
 
 #: ui/main.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@action:button Export shortcut scheme"
-#| msgid "Export…"
+#, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export"
-msgstr "Exportieren …"
+msgstr "Exportieren"
 
 #: ui/main.qml:173
 #, kde-format
@@ -204,54 +196,44 @@ msgid "Command or Script…"
 msgstr "Befehl oder Skript …"
 
 #: ui/main.qml:225
-#, fuzzy, kde-format
-#| msgctxt "@action:button Export shortcut scheme"
-#| msgid "Export…"
+#, kde-format
 msgctxt ""
 "@option:check accessible export shortcuts %1 is application/group name"
 msgid "Export %1"
-msgstr "Exportieren …"
+msgstr "%1 exportieren"
 
 #: ui/main.qml:234
-#, fuzzy, kde-format
-#| msgctxt "@tooltip:button %1 is the text of a custom command"
-#| msgid "Edit command for %1"
+#, kde-format
 msgctxt "@action:button accessible %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "Befehl für %1 bearbeiten"
 
 #: ui/main.qml:250
-#, fuzzy, kde-format
-#| msgctxt "@tooltip:button %1 is the text of a custom command"
-#| msgid "Edit command for %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "Befehl für %1 bearbeiten"
 
 #: ui/main.qml:258
-#, fuzzy, kde-format
-#| msgid "Remove all shortcuts for %1"
+#, kde-format
 msgctxt "@action:button accessible %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Alle Kurzbefehle für %1 entfernen"
 
 #: ui/main.qml:267
-#, fuzzy, kde-format
-#| msgid "Remove all shortcuts for %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the text of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Alle Kurzbefehle für %1 entfernen"
 
 #: ui/main.qml:274
-#, fuzzy, kde-format
-#| msgid "Undo deletion"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Undo deletion"
 msgstr "Löschung zurücknehmen"
 
 #: ui/main.qml:279
-#, fuzzy, kde-format
-#| msgid "Undo deletion"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo deletion"
 msgstr "Löschung zurücknehmen"
@@ -309,18 +291,16 @@ msgid "Enter a command or choose a script file:"
 msgstr "Geben Sie einen Befehl ein oder wählen Sie eine Skriptdatei:"
 
 #: ui/main.qml:468
-#, fuzzy, kde-format
-#| msgid "Commands"
+#, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
-msgstr "Befehle"
+msgstr "Befehl:"
 
 #: ui/main.qml:474
-#, fuzzy, kde-format
-#| msgid "Commands"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
-msgstr "Befehle"
+msgstr "Befehl"
 
 #: ui/main.qml:481
 #, kde-format
@@ -329,9 +309,7 @@ msgid "Choose…"
 msgstr "Auswählen ..."
 
 #: ui/main.qml:482
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Choose Script File"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Skriptdatei auswählen"
@@ -340,13 +318,13 @@ msgstr "Skriptdatei auswählen"
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
-msgstr ""
+msgstr "Name:"
 
 #: ui/main.qml:491
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
-msgstr ""
+msgstr "Namen hier eingeben"
 
 #: ui/main.qml:503
 #, kde-format
@@ -360,7 +338,7 @@ msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
 "extensions"
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
-msgstr ""
+msgstr "Skript-Dateien (.sh, .bash, .zsh, etc.) (*.*sh)"
 
 #: ui/main.qml:528
 #, kde-format
@@ -429,15 +407,13 @@ msgid "Custom shortcuts"
 msgstr "Eigene Kurzbefehle"
 
 #: ui/ShortcutActionDelegate.qml:182
-#, fuzzy, kde-format
-#| msgid "Delete this shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
-msgstr "Diesen Kurzbefehl löschen"
+msgstr "Kurzbefehl löschen"
 
 #: ui/ShortcutActionDelegate.qml:186
-#, fuzzy, kde-format
-#| msgid "Delete this shortcut"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this shortcut"
 msgstr "Diesen Kurzbefehl löschen"
@@ -446,25 +422,22 @@ msgstr "Diesen Kurzbefehl löschen"
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
-msgstr ""
+msgstr "Hinzufügen …"
 
 #: ui/ShortcutActionDelegate.qml:193
-#, fuzzy, kde-format
-#| msgid "Add custom shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr "Eigenen Kurzbefehl hinzufügen"
 
 #: ui/ShortcutActionDelegate.qml:228
-#, fuzzy, kde-format
-#| msgid "Cancel capturing of new shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
-msgstr "Aufzeichnung des neuen Kurzbefehls abbrechen"
+msgstr "Aufzeichnung des Kurzbefehls abbrechen"
 
 #: ui/ShortcutActionDelegate.qml:232
-#, fuzzy, kde-format
-#| msgid "Cancel capturing of new shortcut"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel capturing of new shortcut"
 msgstr "Aufzeichnung des neuen Kurzbefehls abbrechen"
