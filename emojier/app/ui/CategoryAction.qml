@@ -5,9 +5,11 @@
 */
 
 import org.kde.kirigami as Kirigami
+import org.kde.textaddons.emoticons
 
 Kirigami.Action {
     property string category
+    property string categoryId
 
     checked: window.pageStack.get(0).title === text
     text: i18ndc("org.kde.plasma.emojier", "Emoji Category", category)
@@ -15,8 +17,7 @@ Kirigami.Action {
     onTriggered: source => {
         window.pageStack.replace(Qt.resolvedUrl("CategoryPage.qml"), {
             title: text,
-            category,
-            model: emoji,
+            category: categoryId,
         });
     }
 }

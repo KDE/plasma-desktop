@@ -9,8 +9,9 @@ import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 import org.kde.config as KConfig
+import org.kde.kquickcontrolsaddons as KQuickControlsAddons
 
-import org.kde.plasma.emoji
+import org.kde.textaddons.emoticons
 
 Kirigami.ApplicationWindow {
     id: window
@@ -23,24 +24,22 @@ Kirigami.ApplicationWindow {
         configGroupName: "MainWindow"
     }
 
-    EmojiModel {
-        id: emoji
-    }
-
-    RecentEmojiModel {
+    /*RecentEmojiModel {
         id: recentEmojiModel
-    }
+    }*/
 
     function report(thing: string, description: string): void {
         if (!visible) {
             return;
         }
-        CopyHelper.copyTextToClipboard(thing)
-        recentEmojiModel.includeRecent(thing, description);
+        clipboard.content = thing;
+        //recentEmojiModel.includeRecent(thing, description);
         window.showPassiveNotification(i18n("%1 copied to the clipboard", thing))
     }
 
-    Kirigami.Action {
+    KQuickControlsAddons.Clipboard { id: clipboard }
+
+    /*Kirigami.Action {
         id: recentAction
         checked: window.pageStack.get(0).title === text
         text: i18n("Recent")
@@ -54,7 +53,7 @@ Kirigami.ApplicationWindow {
                 showClearHistoryButton: true,
             });
         }
-    }
+    }*/
 
     Kirigami.Action {
         id: searchAction
@@ -130,11 +129,12 @@ Kirigami.ApplicationWindow {
                 property int loadCount: 0
 
                 asynchronous: true
-                model: emoji.categories
+                model: UnicodeEmoticonManager.categories
 
                 CategoryAction {
-                    category: modelData
-                    icon.name: drawer.getIcon(category)
+                    category: modelData.i18nName
+                    icon.name: getIcon(modelData.category)
+                    categoryId: modelData.category
                 }
 
                 onObjectAdded: (index, object) => {
@@ -142,7 +142,7 @@ Kirigami.ApplicationWindow {
                         return;
                     }
 
-                    const actions = [recentAction, searchAction, allAction];
+                    const actions = [searchAction, allAction];
                     for (let i = 0; i < count; ++i) {
                         actions.push(this.objectAt(i));
                     }
@@ -155,7 +155,7 @@ Kirigami.ApplicationWindow {
     }
 
     Component.onCompleted: {
-        recentAction.trigger();
+        //recentAction.trigger();
 
         const incubator = drawerComponent.incubateObject(window);
         if (incubator.status !== Component.Ready) {

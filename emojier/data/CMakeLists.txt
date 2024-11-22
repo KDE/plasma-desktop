@@ -1,2 +1,0 @@
-file(GLOB EMOJI_DATA_FILES "*.dict")
-install(FILES ${EMOJI_DATA_FILES} DESTINATION ${KDE_INSTALL_DATADIR}/plasma/emoji)

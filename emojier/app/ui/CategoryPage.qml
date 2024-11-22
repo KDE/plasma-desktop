@@ -8,14 +8,13 @@ import QtQuick
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 import QtQuick.Controls as QQC2
-import org.kde.plasma.emoji
+import org.kde.textaddons.emoticons
 
 Kirigami.ScrollablePage {
     id: view
 
-    property alias model: emojiModel.sourceModel
     property string searchText: ""
-    property alias category: filter.category
+    property alias category: proxyModel.category
     property bool showSearch: false
     property bool showClearHistoryButton: false
 
@@ -136,11 +135,10 @@ Kirigami.ScrollablePage {
         cellWidth: width / columnsToHave
         cellHeight: desiredSize
 
-        model: CategoryModelFilter {
-            id: filter
-            sourceModel: SearchModelFilter {
-                id: emojiModel
-            }
+        model: EmojiProxyModel {
+            id: proxyModel
+
+            sourceModel: EmojiModelManager.emojiModel
         }
 
         currentIndex: -1
@@ -155,19 +153,19 @@ Kirigami.ScrollablePage {
             contentItem: QQC2.Label {
                 font.pointSize: 25
                 font.family: 'emoji' // Avoid monochrome fonts like DejaVu Sans
-                fontSizeMode: model.display.length > 5 ? Text.Fit : Text.FixedSize
+                fontSizeMode: model.unicode.length > 5 ? Text.Fit : Text.FixedSize
                 minimumPointSize: 10
-                text: model.display
+                text: model.unicode
                 textFormat: Text.PlainText
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
             }
 
-            Accessible.name: model.toolTip
+            Accessible.name: model.identifier
             Accessible.onPressAction: tapHandler.action()
 
             QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
-            QQC2.ToolTip.text: model.toolTip
+            QQC2.ToolTip.text: model.name
             QQC2.ToolTip.visible: hoverHandler.hovered
 
             Keys.onMenuPressed: event => contextMenuHandler.action()
@@ -180,7 +178,7 @@ Kirigami.ScrollablePage {
             TapHandler {
                 id: tapHandler
                 function action() {
-                    window.report(model.display, model.toolTip);
+                    window.report(model.unicode, model.name);
                 }
                 onTapped: (eventPoint, button) => action()
             }
