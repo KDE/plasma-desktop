@@ -28,7 +28,7 @@ K_PLUGIN_CLASS_WITH_JSON(KCMMouse, "kcm_mouse.json")
 extern "C" {
 Q_DECL_EXPORT void kcminit()
 {
-    std::unique_ptr<InputBackend> backend(InputBackend::implementation());
+    std::unique_ptr<InputBackend> backend = InputBackend::create();
     if (backend) {
         backend->kcmInit();
     }
@@ -79,7 +79,7 @@ KCMMouse::KCMMouse(QObject *parent, const KPluginMetaData &data, [[maybe_unused]
     qmlRegisterUncreatableType<InputDevice>(uri, 1, 0, "InputDevice", QString());
     InputBackend::registerImplementationTypes(uri);
 
-    m_inputBackend.reset(InputBackend::implementation());
+    m_inputBackend = InputBackend::create();
 
     if (!m_inputBackend) {
         qCCritical(KCM_MOUSE) << "Not able to select appropriate backend.";

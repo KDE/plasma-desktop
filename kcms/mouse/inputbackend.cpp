@@ -21,7 +21,7 @@
 #include <private/qtx11extras_p.h>
 #endif
 
-InputBackend *InputBackend::implementation(QObject *parent)
+std::unique_ptr<InputBackend> InputBackend::create()
 {
     // There are multiple possible backends
 #if BUILD_KCM_MOUSE_X11
@@ -32,14 +32,14 @@ InputBackend *InputBackend::implementation(QObject *parent)
 
         if (testAtom) {
             qCDebug(KCM_MOUSE) << "Using libinput driver on X11.";
-            return new X11LibinputBackend(parent);
+            return std::make_unique<X11LibinputBackend>();
         }
     }
 #endif
 #if BUILD_KCM_MOUSE_KWIN_WAYLAND
     if (KWindowSystem::isPlatformWayland()) {
         qCDebug(KCM_MOUSE) << "Using KWin+Wayland backend";
-        return new KWinWaylandBackend(parent);
+        return std::make_unique<KWinWaylandBackend>();
     }
 #endif
 

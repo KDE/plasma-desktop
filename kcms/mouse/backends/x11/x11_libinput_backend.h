@@ -19,7 +19,7 @@ class X11LibinputBackend : public InputBackend
     Q_OBJECT
 
 public:
-    explicit X11LibinputBackend(QObject *parent = nullptr);
+    explicit X11LibinputBackend();
     ~X11LibinputBackend() = default;
 
     void kcmInit() override;

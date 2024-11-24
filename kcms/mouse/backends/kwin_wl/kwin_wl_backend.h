@@ -21,7 +21,7 @@ class KWinWaylandBackend : public InputBackend
     Q_OBJECT
 
 public:
-    explicit KWinWaylandBackend(QObject *parent = nullptr);
+    explicit KWinWaylandBackend();
     ~KWinWaylandBackend();
 
     bool save() override;

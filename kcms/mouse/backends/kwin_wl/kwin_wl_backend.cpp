@@ -19,8 +19,8 @@
 
 #include "logging.h"
 
-KWinWaylandBackend::KWinWaylandBackend(QObject *parent)
-    : InputBackend(parent)
+KWinWaylandBackend::KWinWaylandBackend()
+    : InputBackend()
     , m_deviceManager(new QDBusInterface(QStringLiteral("org.kde.KWin"),
                                          QStringLiteral("/org/kde/KWin/InputDevice"),
                                          QStringLiteral("org.kde.KWin.InputDeviceManager"),

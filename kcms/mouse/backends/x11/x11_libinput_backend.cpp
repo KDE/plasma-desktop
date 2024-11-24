@@ -6,8 +6,8 @@
 
 #include "x11_libinput_backend.h"
 
-X11LibinputBackend::X11LibinputBackend(QObject *parent)
-    : InputBackend(parent)
+X11LibinputBackend::X11LibinputBackend()
+    : InputBackend()
     , m_device(new X11LibinputDummyDevice(this, QX11Info::display()))
 {
     connect(m_device.get(), &X11LibinputDummyDevice::needsSaveChanged, this, &InputBackend::needsSaveChanged);

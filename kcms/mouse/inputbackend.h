@@ -25,13 +25,10 @@ class InputBackend : public QObject
     Q_PROPERTY(int buttonMappingCount READ buttonMappingCount NOTIFY buttonMappingChanged STORED false FINAL)
 
 protected:
-    explicit InputBackend(QObject *parent)
-        : QObject(parent)
-    {
-    }
+    explicit InputBackend() = default;
 
 public:
-    static InputBackend *implementation(QObject *parent = nullptr);
+    static std::unique_ptr<InputBackend> create();
     static void registerImplementationTypes(const char *uri);
 
     virtual void kcmInit()
