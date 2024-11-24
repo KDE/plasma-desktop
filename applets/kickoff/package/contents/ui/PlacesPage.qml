@@ -22,6 +22,7 @@ BasePage {
             description: ""
             width: view.availableWidth
             isCategoryListItem: true
+            isMultilineText: false
         }
     }
 

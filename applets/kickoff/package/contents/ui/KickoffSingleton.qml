@@ -71,6 +71,7 @@ Item {
         width: implicitHeight
         action: null
         indicator: null
+        isMultilineText: false
     }
     KickoffListDelegate {
         id: compactListDelegate
@@ -85,6 +86,7 @@ Item {
         description: "asdf"
         action: null
         indicator: null
+        isMultilineText: false
     }
     //END
 }

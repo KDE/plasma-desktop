@@ -93,10 +93,11 @@ AbstractKickoffItemDelegate {
                     return implicitHeight;
                 }
                 text: root.text
-                textFormat: Text.PlainText
+                textFormat: root.isMultilineText ? Text.StyledText : Text.PlainText
                 elide: Text.ElideRight
+                wrapMode: root.isMultilineText ? Text.WordWrap : Text.NoWrap
                 verticalAlignment: Text.AlignVCenter
-                maximumLineCount: 1
+                maximumLineCount: root.isMultilineText ? Infinity : 1
                 color: gridLayout.textColor
             }
 

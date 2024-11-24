@@ -37,6 +37,7 @@ T.ItemDelegate {
     required property url url
     required property var decoration
     required property string description
+    required property bool isMultilineText
 
     readonly property Flickable view: ListView.view ?? GridView.view
     property bool isCategoryListItem: false
