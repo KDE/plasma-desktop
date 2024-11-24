@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-12 02:33+0000\n"
-"PO-Revision-Date: 2024-11-14 19:22-0300\n"
+"PO-Revision-Date: 2024-11-23 21:34-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -405,8 +405,7 @@ msgid "Disable horizontal scrolling"
 msgstr "Desativar a rolagem horizontal"
 
 #: ui/main.qml:596
-#, fuzzy, kde-format
-#| msgid "Disable horizontal scrolling"
+#, kde-format
 msgid "Disable horizontal scrolling."
 msgstr "Desativar a rolagem horizontal"
 
@@ -510,8 +509,7 @@ msgid "Integrated right-click:"
 msgstr "Botão direito:"
 
 #: ui/main.qml:811
-#, fuzzy, kde-format
-#| msgid "Press bottom-right corner"
+#, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
 msgstr "Pressione o canto inferior direito"
@@ -597,11 +595,10 @@ msgstr ""
 "o botão direito."
 
 #: ui/main.qml:923
-#, fuzzy, kde-format
-#| msgid "Press bottom left and bottom right corners simultaneously"
+#, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom left and bottom right corners"
-msgstr "Pressione os cantos inferiores direito e esquerdo simultaneamente"
+msgstr "Pressione os cantos inferiores direito e esquerdo"
 
 #: ui/main.qml:927
 #, fuzzy, kde-format
