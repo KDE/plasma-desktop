@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-30 00:41+0000\n"
-"PO-Revision-Date: 2024-06-11 20:15\n"
+"PO-Revision-Date: 2024-11-21 20:40\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -24,107 +24,91 @@ msgstr ""
 "X-Crowdin-File-ID: 10602\n"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Desktop %1:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Desktop folder:"
-msgstr "Працоўны стол %1:"
+msgstr "Каталог працоўнага стала:"
 
 #: ui/main.qml:58
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder contains all the files you see on your desktop."
-msgstr ""
+msgstr "Гэты каталог змяшчае ўсе файлы вашага працоўнага стала."
 
 #: ui/main.qml:66
-#, fuzzy, kde-format
-#| msgid "Documents"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Documents folder:"
-msgstr "Дакументы"
+msgstr "Каталог дакументаў:"
 
 #: ui/main.qml:72
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save documents from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save documents."
 msgstr ""
-"Гэты каталог будзе выкарыстоўвацца для захавання і загрузкі дакументаў."
+"Гэты каталог будзе выкарыстоўвацца для адкрыцця або захавання дакументаў."
 
 #: ui/main.qml:80
-#, fuzzy, kde-format
-#| msgid "Downloads"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Downloads folder:"
-msgstr "Спампаваныя файлы"
+msgstr "Каталог спампоўванняў:"
 
 #: ui/main.qml:86
-#, fuzzy, kde-format
-#| msgid "This folder will be used by default to save your downloaded items."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
 "Гэты каталог будзе выкарыстоўвацца для захавання спампаваных элементаў."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgid "Videos path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Videos folder:"
-msgstr "Шлях да каталога \"Відэа\":"
+msgstr "Каталог відэа:"
 
 #: ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save movies from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save video files."
 msgstr ""
-"Гэты каталог будзе выкарыстоўвацца для загрузкі або захавання відэафайлаў."
+"Гэты каталог будзе выкарыстоўвацца для адкрыцця або захавання відэафайлаў."
 
 #: ui/main.qml:108
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Pictures folder:"
-msgstr "Шлях да каталога \"Выявы\":"
+msgstr "Каталог выяў:"
 
 #: ui/main.qml:114
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save movies from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save image files."
 msgstr ""
-"Гэты каталог будзе выкарыстоўвацца для загрузкі або захавання відэафайлаў."
+"Гэты каталог будзе выкарыстоўвацца для адкрыцця або захавання файлаў выяў."
 
 #: ui/main.qml:122
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Music folder:"
-msgstr ""
+msgstr "Каталог музыкі:"
 
 #: ui/main.qml:128
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save music from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save music files."
-msgstr "Гэты каталог будзе выкарыстоўвацца для загрузкі або захавання музыкі."
+msgstr ""
+"Гэты каталог будзе выкарыстоўвацца для адкрыцця або захавання музычных "
+"файлаў."
 
 #: ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "Public path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Public folder:"
-msgstr "Шлях да публічных рэсурсаў:"
+msgstr "Публічны каталог:"
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default for publicly-shared files when "
-#| "network sharing is enabled."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
@@ -134,20 +118,18 @@ msgstr ""
 "сеткавы доступ."
 
 #: ui/main.qml:150
-#, fuzzy, kde-format
-#| msgid "Templates"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Templates folder:"
-msgstr "Шаблоны"
+msgstr "Каталог шаблонаў:"
 
 #: ui/main.qml:156
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save templates from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save file templates."
 msgstr ""
-"Гэты каталог будзе выкарыстоўвацца для загрузкі або захавання шаблонаў."
+"Гэты каталог будзе выкарыстоўвацца для адкрыцця або захавання файлаў "
+"шаблонаў."
 
 #: ui/UrlRequester.qml:74
 #, kde-format

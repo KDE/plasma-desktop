@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-27 00:41+0000\n"
-"PO-Revision-Date: 2024-11-04 22:06\n"
+"PO-Revision-Date: 2024-11-21 20:40\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -286,12 +286,10 @@ msgid "Enter a command or choose a script file:"
 msgstr "Увядзіце каманду або абярыце файл скрыпта:"
 
 #: ui/main.qml:469
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox accessible"
-#| msgid "Command"
+#, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
-msgstr "Каманда"
+msgstr "Каманда:"
 
 #: ui/main.qml:475
 #, kde-format
@@ -315,13 +313,13 @@ msgstr "Абраць файл скрыпта"
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
-msgstr ""
+msgstr "Назва:"
 
 #: ui/main.qml:492
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
-msgstr ""
+msgstr "Увядзіце сюды назву"
 
 #: ui/main.qml:504
 #, kde-format
@@ -335,7 +333,7 @@ msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
 "extensions"
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
-msgstr ""
+msgstr "Файлы скрыптоў (.sh, .bash, .zsh, etc.) (*.*sh)"
 
 #: ui/main.qml:529
 #, kde-format
