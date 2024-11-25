@@ -3,7 +3,7 @@
     SPDX-FileCopyrightText: 2014 Martin Gräßlin <mgraesslin@kde.org>
     SPDX-FileCopyrightText: 2016 Kai Uwe Broulik <kde@privat.broulik.de>
     SPDX-FileCopyrightText: 2017 Roman Gilg <subdiff@gmail.com>
-    SPDX-FileCopyrightText: 2020 Nate Graham <nate@kde.org>
+    SPDX-FileCopyrightText: 2020-2024 Nate Graham <nate@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -69,20 +69,21 @@ ColumnLayout {
 
     readonly property bool titleIncludesTrack: toolTipDelegate.playerData !== null && title.includes(toolTipDelegate.playerData.track)
 
-    spacing: Kirigami.Units.smallSpacing
+    // Lots of spacing with no thumbnails looks bad
+    spacing: Plasmoid.configuration.showToolTips ? Kirigami.Units.smallSpacing : 0
 
     // text labels + close button
     RowLayout {
         id: header
         // match spacing of DefaultToolTip.qml in plasma-framework
-        spacing: toolTipDelegate.isWin ? Kirigami.Units.smallSpacing : Kirigami.Units.gridUnit
+        spacing: Kirigami.Units.smallSpacing
 
         // This number controls the overall size of the window tooltips
         Layout.maximumWidth: toolTipDelegate.tooltipInstanceMaximumWidth
-        Layout.minimumWidth: toolTipDelegate.isWin ? Layout.maximumWidth : 0
+        Layout.minimumWidth: (toolTipDelegate.isWin && Plasmoid.configuration.showToolTips) || toolTipDelegate.isGroup ? Layout.maximumWidth : 0
         Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
         // match margins of DefaultToolTip.qml in plasma-framework
-        Layout.margins: toolTipDelegate.isWin ? 0 : Kirigami.Units.gridUnit / 2
+        Layout.margins: toolTipDelegate.isWin && Plasmoid.configuration.showToolTips ? 0 : Kirigami.Units.gridUnit / 2
 
         // all textlabels
         ColumnLayout {
@@ -92,7 +93,7 @@ ColumnLayout {
                 id: appNameHeading
                 level: 3
                 maximumLineCount: 1
-                lineHeight: toolTipDelegate.isWin ? 1 : appNameHeading.lineHeight
+                lineHeight: toolTipDelegate.isWin && Plasmoid.configuration.showToolTips ? 1 : appNameHeading.lineHeight
                 Layout.fillWidth: true
                 elide: Text.ElideRight
                 text: toolTipDelegate.appName
@@ -127,7 +128,7 @@ ColumnLayout {
         // Count badge.
         // The badge itself is inside an item to better center the text in the bubble
         Item {
-            Layout.alignment: Qt.AlignRight | Qt.AlignTop
+            Layout.alignment: !Plasmoid.configuration.showToolTips && !playerController.active && !volumeControls.active ? Qt.AlignVCenter : Qt.AlignTop
             Layout.preferredHeight: closeButton.height
             Layout.preferredWidth: closeButton.width
             visible: root.index === 0 && toolTipDelegate.smartLauncherCountVisible
@@ -142,7 +143,9 @@ ColumnLayout {
         // close button
         PlasmaComponents3.ToolButton {
             id: closeButton
-            Layout.alignment: Qt.AlignRight | Qt.AlignTop
+            Layout.alignment: Qt.AlignTop
+            Layout.rightMargin: -header.Layout.margins
+            Layout.topMargin: -header.Layout.margins
             visible: toolTipDelegate.isWin
             icon.name: "window-close"
             onClicked: {
@@ -160,7 +163,7 @@ ColumnLayout {
         Layout.preferredHeight: Kirigami.Units.gridUnit * 8
 
         clip: true
-        visible: toolTipDelegate.isWin
+        visible: Plasmoid.configuration.showToolTips && toolTipDelegate.isWin
 
         readonly property /*undefined|WId where WId = int|string*/ var winId:
             toolTipDelegate.isWin ? toolTipDelegate.windows[root.index] : undefined
@@ -330,6 +333,7 @@ ColumnLayout {
 
     // Volume controls
     Loader {
+        id: volumeControls
         active: toolTipDelegate.parentTask !== null
              && pulseAudio.item !== null
              && toolTipDelegate.parentTask.hasAudioStream

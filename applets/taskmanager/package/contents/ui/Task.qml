@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2012-2013 Eike Hein <hein@kde.org>
+    SPDX-FileCopyrightText: 2024 Nate Graham <nate@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -75,10 +76,10 @@ PlasmaCore.ToolTipArea {
         || (task.contextMenu && task.contextMenu.status === PlasmaExtras.Menu.Open)
         || (!!tasksRoot.groupDialog && tasksRoot.groupDialog.visualParent === task)
 
-    active: (Plasmoid.configuration.showToolTips || tasksRoot.toolTipOpenedByClick === task) && !inPopup && !tasksRoot.groupDialog
+    active: !inPopup && !tasksRoot.groupDialog
     interactive: model.IsWindow || mainItem.playerData
     location: Plasmoid.location
-    mainItem: model.IsWindow ? openWindowToolTipDelegate : pinnedAppToolTipDelegate
+    mainItem: !Plasmoid.configuration.showToolTips || !model.IsWindow ? pinnedAppToolTipDelegate : openWindowToolTipDelegate
 
     onXChanged: {
         if (!completed) {
@@ -163,10 +164,7 @@ PlasmaCore.ToolTipArea {
             case 0:
                 break; // Use the default description
             case 1: {
-                if (Plasmoid.configuration.showToolTips) {
-                    return `${i18nc("@info:usagetip %1 task name", "Show Task tooltip for %1", model.display)}; ${smartLauncherDescription}`;
-                }
-                // fallthrough
+                return `${i18nc("@info:usagetip %1 task name", "Show Task tooltip for %1", model.display)}; ${smartLauncherDescription}`;
             }
             case 2: {
                 if (effectWatcher.registered) {
@@ -416,7 +414,7 @@ PlasmaCore.ToolTipArea {
         onTapped: (eventPoint, button) => leftClick()
 
         function leftClick(): void {
-            if (Plasmoid.configuration.showToolTips && task.active) {
+            if (task.active) {
                 hideToolTip();
             }
             TaskTools.activateTask(modelIndex(), model, point.modifiers, task, Plasmoid, tasksRoot, effectWatcher.registered);

@@ -3,6 +3,7 @@
     SPDX-FileCopyrightText: 2014 Martin Gräßlin <mgraesslin@kde.org>
     SPDX-FileCopyrightText: 2016 Kai Uwe Broulik <kde@privat.broulik.de>
     SPDX-FileCopyrightText: 2017 Roman Gilg <subdiff@gmail.com>
+    SPDX-FileCopyrightText: 2024 Nate Graham <nate@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -93,17 +94,19 @@ Loader {
 
                 model: delegateModel
 
-                orientation: isVerticalPanel ? ListView.Vertical : ListView.Horizontal
+                orientation: isVerticalPanel || !Plasmoid.configuration.showToolTips ? ListView.Vertical : ListView.Horizontal
                 reuseItems: true
-                spacing: Kirigami.Units.gridUnit
+
+                // Lots of spacing with no thumbnails looks bad
+                spacing: Plasmoid.configuration.showToolTips ? Kirigami.Units.gridUnit : 0
             }
 
             DelegateModel {
                 id: delegateModel
 
                 // On Wayland, a tooltip has a significant resizing process, so estimate the size first.
-                readonly property real estimatedWidth: (toolTipDelegate.isVerticalPanel ? 1 : count) * (toolTipDelegate.tooltipInstanceMaximumWidth + Kirigami.Units.gridUnit) - Kirigami.Units.gridUnit
-                readonly property real estimatedHeight: (toolTipDelegate.isVerticalPanel ? count : 1) * (toolTipDelegate.tooltipInstanceMaximumWidth / 2 + Kirigami.Units.gridUnit) - Kirigami.Units.gridUnit
+                readonly property real estimatedWidth: (toolTipDelegate.isVerticalPanel || !Plasmoid.configuration.showToolTips ? 1 : count) * (toolTipDelegate.tooltipInstanceMaximumWidth + Kirigami.Units.gridUnit) - Kirigami.Units.gridUnit
+                readonly property real estimatedHeight: (toolTipDelegate.isVerticalPanel || !Plasmoid.configuration.showToolTips ? count : 1) * (Plasmoid.configuration.showToolTips ? (toolTipDelegate.tooltipInstanceMaximumWidth / 2 + Kirigami.Units.gridUnit) : Kirigami.Units.gridUnit * 2) - Kirigami.Units.gridUnit
 
                 model: tasksModel
 

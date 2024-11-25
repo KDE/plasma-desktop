@@ -20,14 +20,12 @@ import org.kde.plasma.private.mpris as Mpris
 
 RowLayout {
     enabled: toolTipDelegate.playerData.canControl
+    spacing: Kirigami.Units.smallSpacing
 
     readonly property bool isPlaying: toolTipDelegate.playerData.playbackStatus === Mpris.PlaybackStatus.Playing
 
     ColumnLayout {
         Layout.fillWidth: true
-        Layout.topMargin: Kirigami.Units.smallSpacing
-        Layout.bottomMargin: Kirigami.Units.smallSpacing
-        Layout.rightMargin: isWin ? Kirigami.Units.smallSpacing : Kirigami.Units.gridUnit
         spacing: 0
 
         ScrollableTextWrapper {
