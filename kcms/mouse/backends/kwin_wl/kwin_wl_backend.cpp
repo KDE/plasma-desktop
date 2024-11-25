@@ -194,10 +194,6 @@ void KWinWaylandBackend::onDeviceAdded(QString sysName)
         m_devices.push_back(std::move(dev));
         Q_EMIT deviceAdded(true);
         Q_EMIT inputDevicesChanged();
-
-        if (dev->isSaveNeeded()) {
-            Q_EMIT needsSaveChanged();
-        }
     }
 }
 
