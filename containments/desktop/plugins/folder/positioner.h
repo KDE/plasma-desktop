@@ -25,6 +25,11 @@ class Positioner : public QAbstractItemModel
     Q_PROPERTY(int perStripe READ perStripe WRITE setPerStripe NOTIFY perStripeChanged)
 
 public:
+    enum LoadAndApplyFlags {
+        None,
+        SkipPerStripeUpdate
+    };
+
     explicit Positioner(QObject *parent = nullptr);
     ~Positioner() override;
 
@@ -53,9 +58,11 @@ public:
     /**
      * Loads the position configuration from a config file,
      * then calls convertFolderModelData to convert it to
-     * proxyData which can be used later by updatePositions
+     * proxyData which can be used later by updatePositions.
+     * @param flags is used for handling if the PerStripe value is updated
+     * on load.
      */
-    void loadAndApplyPositionsConfig();
+    void loadAndApplyPositionsConfig(const LoadAndApplyFlags flags = LoadAndApplyFlags::None);
 
     /**
      * Saves the positions in m_positions to a configuration file

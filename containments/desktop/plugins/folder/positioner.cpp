@@ -94,7 +94,7 @@ void Positioner::setPerStripe(int perStripe)
         updateResolution();
         Q_EMIT perStripeChanged();
         if (m_enabled && screenInUse()) {
-            convertFolderModelData();
+            loadAndApplyPositionsConfig(LoadAndApplyFlags::SkipPerStripeUpdate);
             // If no longer defering positions, update them
             if (!m_deferApplyPositions) {
                 updatePositionsList();
@@ -958,7 +958,7 @@ bool Positioner::screenInUse() const
     return m_folderModel->screenUsed();
 }
 
-void Positioner::loadAndApplyPositionsConfig()
+void Positioner::loadAndApplyPositionsConfig(const LoadAndApplyFlags flags)
 {
     if (m_applet && screenInUse() && !m_resolution.isEmpty()) {
         // The old configuration has commas with escape characters, so clean up those from the config
@@ -970,7 +970,7 @@ void Positioner::loadAndApplyPositionsConfig()
         // In case our row and m_perStripe values are out of sync, update them here
         // The can get out of sync due to FolderView.qml and positioner.cpp both handling them
         // If we have the first two values of positions, we have the perStripe value
-        if (m_positions.length() >= 2) {
+        if (flags != LoadAndApplyFlags::SkipPerStripeUpdate && m_positions.length() >= 2) {
             m_perStripe = m_positions[1].toInt();
             Q_EMIT perStripeChanged();
         }
