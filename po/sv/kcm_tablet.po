@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-12 00:42+0000\n"
-"PO-Revision-Date: 2024-10-15 20:41+0200\n"
+"PO-Revision-Date: 2024-11-24 19:37+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: inputsequence.cpp:172
 #, kde-format
@@ -54,11 +54,10 @@ msgid "Application-defined"
 msgstr "Programdefinierad"
 
 #: inputsequence.cpp:194
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pen Button %1"
-msgstr "Pennknapp 1:"
+msgstr "Pennknapp %1"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -105,40 +104,33 @@ msgstr "%1 - (%2,%3 %4 × %5)"
 #, kde-format
 msgctxt "@item:inlistbox Stretch and fill to the screen"
 msgid "Stretch and Fill"
-msgstr ""
+msgstr "Sträck och fyll"
 
 #: kcmtablet.cpp:164
-#, fuzzy, kde-format
-#| msgid "Keep Aspect Ratio and Fit Within Screen"
+#, kde-format
 msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
 msgid "Keep Aspect Ratio and Fit"
-msgstr "Behåll proportion och anpassa inom skärm"
+msgstr "Behåll proportion och anpassa"
 
 #: kcmtablet.cpp:165
-#, fuzzy, kde-format
-#| msgid "Map to Portion of Screen"
+#, kde-format
 msgctxt "@item:inlistbox Map to portion of the screen"
 msgid "Map to Portion"
-msgstr "Avbilda till del av skärm"
+msgstr "Avbilda till del"
 
 #: kcmtablet.cpp:290
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
-msgstr "Pennknapp 1:"
+msgstr "Pennknapp %1:"
 
 #: kcmtablet.cpp:291
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button X'"
 msgid "pen button %1"
-msgstr "pennknapp 1"
+msgstr "pennknapp %1"
 
 #: ui/ActionDialog.qml:25
 #, kde-format
@@ -171,14 +163,10 @@ msgid "Send mouse button click"
 msgstr "Skicka klick med musknapp"
 
 #: ui/ActionDialog.qml:132
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt "@option:radio Set this action to a pen button type"
 msgid "Send pen button"
-msgstr "pennknapp 1"
+msgstr "Skicka pennknapp"
 
 #: ui/ActionDialog.qml:150
 #, kde-format
@@ -239,31 +227,22 @@ msgid "Shift"
 msgstr "Skift"
 
 #: ui/ActionDialog.qml:264
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
-msgstr "Knapp %1:"
+msgstr "Knapp 1"
 
 #: ui/ActionDialog.qml:265
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 2'"
-#| msgid "pen button 2"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
-msgstr "pennknapp 2"
+msgstr "Knapp 2"
 
 #: ui/ActionDialog.qml:266
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 3'"
-#| msgid "pen button 3"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
-msgstr "pennknapp 3"
+msgstr "Knapp 3"
 
 #: ui/ActionDialog.qml:275
 #, kde-format
