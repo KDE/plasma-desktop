@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-12 00:42+0000\n"
-"PO-Revision-Date: 2024-11-11 16:03+0900\n"
+"PO-Revision-Date: 2024-11-26 00:14+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: inputsequence.cpp:172
 #, kde-format
@@ -107,21 +107,19 @@ msgstr "%1 - (%2,%3 %4×%5)"
 #, kde-format
 msgctxt "@item:inlistbox Stretch and fill to the screen"
 msgid "Stretch and Fill"
-msgstr ""
+msgstr "拉伸並填滿螢幕"
 
 #: kcmtablet.cpp:164
-#, fuzzy, kde-format
-#| msgid "Keep Aspect Ratio and Fit Within Screen"
+#, kde-format
 msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
 msgid "Keep Aspect Ratio and Fit"
 msgstr "維持寬高比並調整為適合螢幕大小"
 
 #: kcmtablet.cpp:165
-#, fuzzy, kde-format
-#| msgid "Map to Portion of Screen"
+#, kde-format
 msgctxt "@item:inlistbox Map to portion of the screen"
 msgid "Map to Portion"
-msgstr "映射到螢幕的一部分"
+msgstr "映射到區域"
 
 #: kcmtablet.cpp:290
 #, kde-format
