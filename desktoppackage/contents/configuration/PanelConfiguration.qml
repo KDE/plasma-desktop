@@ -351,7 +351,7 @@ ColumnLayout {
                     i18nd("plasma_shell_org.kde.plasma.desktop", "Always visible"),
                     i18nd("plasma_shell_org.kde.plasma.desktop", "Auto hide"),
                     i18nd("plasma_shell_org.kde.plasma.desktop", "Dodge windows"),
-                    i18nd("plasma_shell_org.kde.plasma.desktop", "Windows Go Below"),
+                    i18nd("plasma_shell_org.kde.plasma.desktop", "Windows go below"),
                 ]
                 Layout.alignment: Qt.AlignHCenter
                 Layout.minimumWidth: visibilityRepresentation.width
