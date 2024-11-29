@@ -68,8 +68,9 @@ class KCMTest(unittest.TestCase):
         """
         Make sure to terminate the driver again, lest it dangles.
         """
+        cls.driver.find_element(AppiumBy.XPATH, "//*[@name='Cancel' and contains(@accessibility-id, 'Button')]").click()
         if cls.kded_process is not None:
-            cls.kded_process.terminate()
+            subprocess.check_output([f"kquitapp{KDE_VERSION}", f"kded{KDE_VERSION}"], stderr=sys.stderr)
             cls.kded_process.wait()
         cls.driver.quit()
 
