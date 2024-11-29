@@ -177,18 +177,16 @@ KCM.AbstractKCM {
                                 Kirigami.Action {
                                     icon.name: "applications-all-symbolic"
                                     text: i18nc("@action:menu End of the sentence 'Add New Application…'", "Application…")
-                                    // TODO: enable once Kirigami actions can have Accessible.name set  (QT 6.8)
-                                    // Accessible.Name: i18nc("@action:menu accessible", "Add new application")
-                                    // Accessible.Role: Accessible.MenuItem
+                                    Accessible.name: i18nc("@action:menu accessible", "Add new application")
+                                    Accessible.role: Accessible.MenuItem
                                     onTriggered: kcm.addApplication(root)
                                 }
 
                                 Kirigami.Action {
                                     icon.name: "scriptnew-symbolic"
                                     text: i18nc("@action:menu End of the sentence 'Add New Command or Script…'", "Command or Script…")
-                                    // TODO: enable once Kirigami actions can have Accessible.name set  (QT 6.8)
-                                    // Accessible.Name: i18nc("@action:menu accessible", "Add new command or script")
-                                    // Accessible.Role: Accessible.MenuItem
+                                    Accessible.name: i18nc("@action:menu accessible", "Add new command or script")
+                                    Accessible.role: Accessible.MenuItem
                                     onTriggered: addCommandDialog.open()
                                 }
                             }
@@ -202,6 +200,7 @@ KCM.AbstractKCM {
                         text: model.display
                         icon.name: model.decoration
 
+                        Accessible.onPressAction: clicked()
                         KeyNavigation.right: shortcutsList
 
                         onClicked: ListView.view.currentIndex = index
@@ -230,7 +229,7 @@ KCM.AbstractKCM {
 
                                 implicitHeight: label.implicitHeight
                                 implicitWidth: implicitHeight
-                                
+
                                 Accessible.name: i18nc("@action:button accessible %1 is the name of a custom command", "Edit command for %1", model.display)
 
                                 visible: model.section === Private.ComponentType.Command
@@ -429,7 +428,7 @@ KCM.AbstractKCM {
         property Kirigami.Action addCommandAction: Kirigami.Action {
             text: addCommandDialog.editing ? i18n("Save") : i18n("Add")
             // TODO: enable once Kirigami actions can have Accessible.name set  (QT 6.8)
-            // Accessible.Name: addCommandDialog.editing 
+            // Accessible.Name: addCommandDialog.editing
             //                  ? i18nc("@action:button accessible", "Save command")
             //                  : i18nc("@action:button accessible", "Add command")
             icon.name: addCommandDialog.editing ? "dialog-ok" : "list-add"
@@ -555,7 +554,7 @@ KCM.AbstractKCM {
              Kirigami.Action {
                 text: schemeBox.customSchemeSelected ? i18n("Select File…") : i18n("Import")
                 // TODO: enable once Kirigami actions can have Accessible.name set  (QT 6.8)
-                // Accessible.Name: schemeBox.customSchemeSelected 
+                // Accessible.Name: schemeBox.customSchemeSelected
                 //                  ? i18nc("@action:button accessible", "Select shortcut scheme file")
                 //                  : i18nc("@action:button accessible", "Add shortcut scheme")
                 // Accessible.Role: Accessible.MenuItem
