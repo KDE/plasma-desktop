@@ -39,10 +39,12 @@ KACTIVITYMANAGERD_SERVICE_NAME: Final = "org.kde.ActivityManager"
 KDE_VERSION: Final = 6
 
 
-def name_has_owner(session_bus: Gio.DBusConnection, name: str) -> bool:
+def name_has_owner(session_bus: Gio.DBusConnection | None, name: str) -> bool:
     """
     Whether the given name is available on session bus
     """
+    if session_bus is None:
+        session_bus = Gio.bus_get_sync(Gio.BusType.SESSION)
     message: Gio.DBusMessage = Gio.DBusMessage.new_method_call("org.freedesktop.DBus", "/", "org.freedesktop.DBus", "NameHasOwner")
     message.set_body(GLib.Variant("(s)", [name]))
     reply, _ = session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 1000)

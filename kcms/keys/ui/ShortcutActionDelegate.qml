@@ -32,6 +32,8 @@ QQC2.ItemDelegate {
         }
     }
     Accessible.name: root.state === "expanded" ? i18n("Editing shortcut: %1", displayLabel.text) : displayLabel.text + keySequenceList.text
+    Accessible.onPressAction: root.state = "expanded"
+
     contentItem: ColumnLayout {
         clip: true
 
