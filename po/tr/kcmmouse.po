@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"POT-Creation-Date: 2024-11-29 00:42+0000\n"
 "PO-Revision-Date: 2024-09-15 21:29+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -43,7 +43,12 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "%1 aygıtının temel bilgilerinin okunmasında kritik hata."
 
-#: kcm.cpp:140
+#: kcm.cpp:86
+#, kde-format
+msgid "Not able to select appropriate backend"
+msgstr ""
+
+#: kcm.cpp:142
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -52,12 +57,12 @@ msgstr ""
 "Değerler yüklenirken hata oluştu. Daha fazla bilgi için günlüklere bakın. "
 "Lütfen bu yapılandırma modülünü yeniden başlatın."
 
-#: kcm.cpp:143
+#: kcm.cpp:145
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Bulunan işaretçi aygıtı yok. Şimdi bir tane bağlayın."
 
-#: kcm.cpp:152
+#: kcm.cpp:154
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -66,7 +71,7 @@ msgstr ""
 "Tüm değişiklikler kaydedilemiyor. Daha fazla bilgi için günlüklere bakın. "
 "Lütfen bu yapılandırma modülünü yeniden başlatın ve bir kez daha deneyin."
 
-#: kcm.cpp:170
+#: kcm.cpp:172
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -75,7 +80,7 @@ msgstr ""
 "Öntanımlı değerler yüklenirken hata oluştu. Bazı seçenekleri öntanımlı "
 "değerlerine ayarlama başarısız."
 
-#: kcm.cpp:185
+#: kcm.cpp:187
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -84,12 +89,12 @@ msgstr ""
 "Yeni bir aygıt eklenirken hata oluştu. Lütfen yeniden bağlayın ve bu "
 "yapılandırma modülünü yeniden başlatın."
 
-#: kcm.cpp:198
+#: kcm.cpp:200
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "İşaretçi aygıtı bağlantısı kesildi. Ayar iletişim penceresi kapatıldı."
 
-#: kcm.cpp:200
+#: kcm.cpp:202
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "İşaretçi aygıtı bağlantısı kesildi. Başka aygıt bulunamadı."

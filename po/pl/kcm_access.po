@@ -1,4 +1,4 @@
-# Version: $Revision: 1689183 $
+# Version: $Revision: 1696204 $
 # translation of kcmaccess.po to
 # SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2019, 2021, 2022, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-29 00:41+0000\n"
+"POT-Creation-Date: 2024-11-29 00:42+0000\n"
 "PO-Revision-Date: 2024-08-31 06:02+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -727,12 +727,9 @@ msgstr "Włącz lepkie klawisze"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
-"Once locked, the “sticky” state of modifier keys will not be disabled until "
-"a keyboard shortcut is finished or until a non-modifier key is pressed."
+"Pressing a modifier key twice will keep it in active state until pressed "
+"again."
 msgstr ""
-"Po włączeniu, stan \"lepkości\" klawiszy odmieniającego nie wyłączy się do "
-"czasu ukończenia skrótu klawiszowego lub naciśnięcia klawisza "
-"nieodmieniającego."
 
 #: ui/ModifierKeys.qml:57
 #, kde-format
@@ -888,6 +885,16 @@ msgstr "Zwykły"
 msgctxt "@label Large cursor size"
 msgid "Large"
 msgstr "Duży"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Once locked, the “sticky” state of modifier keys will not be disabled "
+#~ "until a keyboard shortcut is finished or until a non-modifier key is "
+#~ "pressed."
+#~ msgstr ""
+#~ "Po włączeniu, stan \"lepkości\" klawiszy odmieniającego nie wyłączy się "
+#~ "do czasu ukończenia skrótu klawiszowego lub naciśnięcia klawisza "
+#~ "nieodmieniającego."
 
 #~ msgid "Activation:"
 #~ msgstr "Wyzwolenie:"

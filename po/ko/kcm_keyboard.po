@@ -1,7 +1,7 @@
 # Translation of kcmkeyboard to Korean.
 # Copyright (C) 2007-2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kdebase package.
-# Shinjo Park <kde@peremen.name>, 2007, 2008, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020, 2021, 2023.
+# SPDX-FileCopyrightText: 2007, 2008, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020, 2021, 2023, 2024 Shinjo Park <kde@peremen.name>
 # JungHee Lee <daemul72@gmail.com>, 2021.
 #
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-02 00:41+0000\n"
-"PO-Revision-Date: 2023-10-08 23:47+0200\n"
+"PO-Revision-Date: 2024-11-29 00:52+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -74,13 +74,7 @@ msgid "Keyboard layout visualization"
 msgstr "키보드 레이아웃 표시"
 
 #: tastenbrett/main.cpp:139
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid ""
-#| "The keyboard geometry failed to load. This often indicates that the "
-#| "selected model does not support a specific layout or layout variant. This "
-#| "problem will likely also present when you try to use this combination of "
-#| "model, layout and variant."
+#, kde-format
 msgctxt "@label"
 msgid ""
 "The keyboard geometry failed to load. This often indicates that the selected "
@@ -93,52 +87,51 @@ msgid ""
 msgstr ""
 "키보드 형상을 불러오지 못했습니다. 이는 종종 선택한 모델이 특정 레이아웃 또"
 "는 레이아웃 파생형을 지원하지 않음을 나타냅니다. 이 모델, 레이아웃, 파생형 조"
-"합을 사용하려고 할 때도 같은 문제가 발생할 수 있습니다."
+"합을 사용하려고 할 때도 같은 문제가 발생할 수 있습니다.\n"
+"시스템의 xkb 디렉터리 외부에서 정의된 레이아웃 미리 보기는 지원되지 않으며 "
+"이 메시지를 표시합니다. 그대로 적용해도 작동할 수도 있습니다"
 
 #: ui/KeyBindings.qml:18
 #, kde-format
 msgctxt "@title"
 msgid "Key Bindings"
-msgstr ""
+msgstr "키 바인딩"
 
 #: ui/KeyBindings.qml:62
-#, fuzzy, kde-format
-#| msgid "&Configure keyboard options"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Configure keyboard options"
-msgstr "키보드 옵션 설정(&C)"
+msgstr "키보드 옵션 설정"
 
 #: ui/KeyBindings.qml:130
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset"
-msgstr ""
+msgstr "초기화"
 
 #: ui/KeyBindings.qml:134
 #, kde-format
 msgctxt "@info accessible"
 msgid "Reset selected options for this group"
-msgstr ""
+msgstr "이 그룹의 선택한 옵션 초기화"
 
 #: ui/KeyBindings.qml:135
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Reset selected options for this group"
-msgstr ""
+msgstr "이 그룹의 선택한 옵션 초기화"
 
 #: ui/LayoutDialog.qml:20
-#, fuzzy, kde-format
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Layout"
 msgstr "레이아웃 추가"
 
 #: ui/LayoutDialog.qml:177
-#, fuzzy, kde-format
-#| msgid "Show layout indicator"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
-msgstr "레이아웃 표시기 표시"
+msgstr "레이아웃 이름 표시"
 
 #: ui/LayoutDialog.qml:187
 #, kde-format
@@ -147,17 +140,17 @@ msgid ""
 "The abbreviated name of the selected layout, which will be displayed in the "
 "system tray. You can change this setting yourself."
 msgstr ""
+"선택한 레이아웃의 축약한 이름이며 시스템 트레이에 표시됩니다. 이 설정을 변경"
+"할 수 있습니다."
 
 #: ui/LayoutDialog.qml:195
-#, fuzzy, kde-format
-#| msgid "Shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "단축키:"
 
 #: ui/LayoutDialog.qml:206 ui/main.qml:285
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button"
 msgid "Preview"
 msgstr "미리 보기"
@@ -166,36 +159,34 @@ msgstr "미리 보기"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Switching…"
-msgstr ""
+msgstr "전환 설정…"
 
 #: ui/main.qml:38
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Configure Switching"
-msgstr "레이아웃 설정"
+msgstr "전환 설정"
 
 #: ui/main.qml:44
 #, kde-format
 msgctxt "@action:button"
 msgid "Key Bindings"
-msgstr ""
+msgstr "키 바인딩"
 
 #: ui/main.qml:45
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Key Bindings"
-msgstr ""
+msgstr "키 바인딩"
 
 #: ui/main.qml:51
 #, kde-format
 msgctxt "@action:button Layout"
 msgid "Add…"
-msgstr ""
+msgstr "추가…"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add layout"
 msgstr "레이아웃 추가"
@@ -204,11 +195,10 @@ msgstr "레이아웃 추가"
 #, kde-format
 msgctxt "@label:checkbox configure layouts option"
 msgid "Enable"
-msgstr ""
+msgstr "활성화"
 
 #: ui/main.qml:60
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Configure Layouts"
 msgstr "레이아웃 설정"
@@ -217,108 +207,96 @@ msgstr "레이아웃 설정"
 #, kde-format
 msgctxt "@label:listbox Keyboard model"
 msgid "Model:"
-msgstr ""
+msgstr "모델:"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "NumLock on Plasma Startup"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "NumLock on startup:"
-msgstr "Plasma를 시작할 때 NumLock 상태"
+msgstr "시작할 때 NumLock 상태:"
 
 #: ui/main.qml:112
-#, fuzzy, kde-format
-#| msgid "T&urn on"
+#, kde-format
 msgctxt "@item:inlistbox Turn on \"NumLock\" on startup"
 msgid "Turn on"
-msgstr "켜기(&U)"
+msgstr "켜기"
 
 #: ui/main.qml:116
-#, fuzzy, kde-format
-#| msgid "Turn o&ff"
+#, kde-format
 msgctxt "@item:inlistbox Turn off \"NumLock\" on startup"
 msgid "Turn off"
-msgstr "끄기(&F)"
+msgstr "끄기"
 
 #: ui/main.qml:120
-#, fuzzy, kde-format
-#| msgid "&Leave unchanged"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Leave \"NumLock\" at whatever it was set to before Plasma "
 "started up"
 msgid "Leave unchanged"
-msgstr "바꾸지 않기(&L)"
+msgstr "변경하지 않기"
 
 #: ui/main.qml:146
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Key repeat:"
-msgstr "키보드 반복"
+msgstr "키보드 반복:"
 
 #: ui/main.qml:155
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Key repeat"
 msgstr "키보드 반복"
 
 #: ui/main.qml:166
-#, fuzzy, kde-format
-#| msgid "&Delay:"
+#, kde-format
 msgctxt "@label:textbox Key repeat delay"
 msgid "Delay:"
-msgstr "지연 시간(&D):"
+msgstr "지연 시간:"
 
 #: ui/main.qml:180
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat delay %1"
-msgstr ""
+msgstr "키 반복 지연 %1"
 
 #: ui/main.qml:188
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "%1 ms"
-msgstr ""
+msgstr "%1밀리초"
 
 #: ui/main.qml:192
-#, fuzzy, kde-format
-#| msgid " ms"
+#, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "ms"
-msgstr " ms"
+msgstr "밀리초"
 
 #: ui/main.qml:205
-#, fuzzy, kde-format
-#| msgid "&Rate:"
+#, kde-format
 msgctxt "@label:textbox Key repeat rate"
 msgid "Rate:"
-msgstr "반복 정도(&R):"
+msgstr "속도:"
 
 #: ui/main.qml:219
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat rate %1"
-msgstr ""
+msgstr "키 반복 속도 %1"
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid " repeats/s"
+#, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "%1 repeats/s"
-msgstr " 반복/초"
+msgstr "%1반복/초"
 
 #: ui/main.qml:231
-#, fuzzy, kde-format
-#| msgid " repeats/s"
+#, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "repeats/s"
-msgstr " 반복/초"
+msgstr "반복/초"
 
 #: ui/main.qml:243
-#, fuzzy, kde-format
-#| msgid "Test area:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Test area:"
 msgstr "테스트 영역:"
@@ -327,18 +305,16 @@ msgstr "테스트 영역:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to test settings"
-msgstr ""
+msgstr "여기에 입력하여 설정 테스트"
 
 #: ui/main.qml:256
-#, fuzzy, kde-format
-#| msgid "Layouts"
+#, kde-format
 msgctxt "@title:view"
 msgid "Layouts"
 msgstr "레이아웃"
 
 #: ui/main.qml:268
-#, fuzzy, kde-format
-#| msgid "Move Up"
+#, kde-format
 msgctxt "@action:button"
 msgid "Move Up"
 msgstr "위로 이동"
@@ -347,32 +323,28 @@ msgstr "위로 이동"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout up"
-msgstr ""
+msgstr "%1 레이아웃 위로 이동"
 
 #: ui/main.qml:275
-#, fuzzy, kde-format
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@action:button"
 msgid "Move Down"
 msgstr "아래로 이동"
 
 #: ui/main.qml:276
-#, fuzzy, kde-format
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout Down"
-msgstr "아래로 이동"
+msgstr "%1 레이아웃 아래로 이동"
 
 #: ui/main.qml:286
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Preview"
 msgstr "미리 보기"
 
 #: ui/main.qml:294
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "삭제"
@@ -381,27 +353,25 @@ msgstr "삭제"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Remove layout %1"
-msgstr ""
+msgstr "%1 레이아웃 삭제"
 
 #: ui/main.qml:307
-#, fuzzy, kde-format
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Spare layouts:"
-msgstr "예비 레이아웃"
+msgstr "예비 레이아웃:"
 
 #: ui/main.qml:344
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
-msgstr ""
+msgstr "예비 주 레이아웃 개수"
 
 #: ui/main.qml:376
-#, fuzzy, kde-format
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@label:textbox completes spinbox, x main layouts"
 msgid "main layouts"
-msgstr "예비 레이아웃"
+msgstr "주 레이아웃"
 
 #: ui/main.qml:380
 #, kde-format
@@ -412,97 +382,93 @@ msgid ""
 "accessed through the keyboard indicator applet or by setting a custom "
 "shortcut."
 msgstr ""
+"주 레이아웃은 4개까지 지정할 수 있으며, 나머지는 예비 레이아웃입니다. 예비 레"
+"이아웃은 전환 단축키에 포함되지 않으며, 키보드 표시기 애플릿이나 사용자 정의 "
+"단축키로 전환할 수 있습니다."
 
 #: ui/main.qml:385
-#, fuzzy, kde-format
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
-msgstr "주 레이아웃 개수:"
+msgstr "레이아웃 단축키 변경:"
 
 #: ui/main.qml:409
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
-msgstr ""
+msgstr "또는"
 
 #: ui/Switching.qml:17
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgctxt "@title"
 msgid "Configure Switching"
-msgstr "레이아웃 설정"
+msgstr "전환 설정"
 
 #: ui/Switching.qml:23
 #, kde-format
 msgctxt "@title:group"
 msgid "Behavior"
-msgstr ""
+msgstr "행동"
 
 #: ui/Switching.qml:28
-#, fuzzy, kde-format
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Switching layout affects:"
-msgstr "주 레이아웃 개수:"
+msgstr "레이아웃 전환 범위:"
 
 #: ui/Switching.qml:35
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows"
-msgstr ""
+msgstr "모든 창"
 
 #: ui/Switching.qml:39
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows on current desktop"
-msgstr ""
+msgstr "현재 바탕 화면의 모든 창"
 
 #: ui/Switching.qml:43
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows of current application"
-msgstr ""
+msgstr "현재 앱의 모든 창"
 
 #: ui/Switching.qml:47
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Current window only"
-msgstr ""
+msgstr "현재 창만"
 
 #: ui/Switching.qml:74
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Show notification on layout change"
-msgstr ""
+msgstr "레이아웃 전환 시 알림 표시"
 
 #: ui/Switching.qml:86
-#, fuzzy, kde-format
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:group"
 msgid "Shortcuts"
 msgstr "단축키"
 
 #: ui/Switching.qml:91 ui/Switching.qml:153
-#, fuzzy, kde-format
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Change layout:"
-msgstr "예비 레이아웃"
+msgstr "레이아웃 변경:"
 
 #: ui/Switching.qml:112
-#, fuzzy, kde-format
-#| msgid "Switch to Last-Used Keyboard Layout"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Switch to last used layout:"
-msgstr "마지막으로 사용한 키보드 레이아웃으로 전환"
+msgstr "마지막으로 사용한 레이아웃으로 변경:"
 
 #: ui/Switching.qml:133
-#, fuzzy, kde-format
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:group"
 msgid "Legacy Shortcuts"
-msgstr "단축키"
+msgstr "레거시 단축키"
 
 #: ui/Switching.qml:141
 #, kde-kuit-format
@@ -513,13 +479,15 @@ msgid ""
 "Wayland.<nl/><nl/>Setting these shortcuts will take you to the Key bindings "
 "page."
 msgstr ""
+"레거시 X11 단축키를 사용하면 수정자 키만을 단축키로 사용할 때 정밀한 설정을 "
+"제공하고 특수한 경우에서 X11 지원을 향상합니다. Wayland에서도 사용할 수도 있"
+"습니다.<nl/><nl/>이 단축키를 설정하면 키 바인딩 페이지로 이동합니다."
 
 #: ui/Switching.qml:182
-#, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Alternative symbols:"
-msgstr "대체 단축키:"
+msgstr "대체 기호:"
 
 #: ui/Switching.qml:208
 #, kde-format
@@ -528,6 +496,7 @@ msgid ""
 "Modifier keys can be used to type additional characters, symbols, and "
 "diacritical marks."
 msgstr ""
+"수정자 키를 사용하여 추가 문자, 기호, 발음 구별 기호를 입력할 수 있습니다."
 
 #: xkboptionsmodel.cpp:165
 #, kde-format

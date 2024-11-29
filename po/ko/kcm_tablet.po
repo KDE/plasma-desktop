@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-12 00:42+0000\n"
-"PO-Revision-Date: 2024-02-19 21:39+0100\n"
+"PO-Revision-Date: 2024-11-29 00:52+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,17 +15,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: inputsequence.cpp:172
 #, kde-format
 msgctxt "@action:button This action is disabled"
 msgid "Disabled"
-msgstr ""
+msgstr "사용 안 함"
 
 #: inputsequence.cpp:175
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "@action:button There is no keybinding"
 msgid "None"
 msgstr "없음"
@@ -34,37 +33,36 @@ msgstr "없음"
 #, kde-format
 msgctxt "@action:button"
 msgid "Left mouse button"
-msgstr ""
+msgstr "마우스 왼쪽 단추"
 
 #: inputsequence.cpp:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Right mouse button"
-msgstr ""
+msgstr "마우스 오른쪽 단추"
 
 #: inputsequence.cpp:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Middle mouse button"
-msgstr ""
+msgstr "마우스 가운데 단추"
 
 #: inputsequence.cpp:192
 #, kde-format
 msgctxt "@action:button"
 msgid "Application-defined"
-msgstr ""
+msgstr "앱에서 정의한 값"
 
 #: inputsequence.cpp:194
-#, fuzzy, kde-format
-#| msgid "Pen Button 1"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pen Button %1"
-msgstr "펜 단추 1"
+msgstr "펜 단추 %1"
 
 #: kcmtablet.cpp:35
 #, kde-format
 msgid "Default"
-msgstr ""
+msgstr "기본값"
 
 #: kcmtablet.cpp:36
 #, kde-format
@@ -87,15 +85,14 @@ msgid "Inverted Landscape"
 msgstr "반전된 가로"
 
 #: kcmtablet.cpp:89
-#, fuzzy, kde-format
-#| msgid "Follow the active screen"
+#, kde-format
 msgid "Follow the Current Screen"
-msgstr "활성 화면 따라가기"
+msgstr "현재 화면 따라가기"
 
 #: kcmtablet.cpp:94
 #, kde-format
 msgid "All Screens"
-msgstr ""
+msgstr "모든 화면"
 
 #: kcmtablet.cpp:103
 #, kde-format
@@ -122,11 +119,10 @@ msgid "Map to Portion"
 msgstr ""
 
 #: kcmtablet.cpp:290
-#, fuzzy, kde-format
-#| msgid "Pen Button 1"
+#, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
-msgstr "펜 단추 1"
+msgstr "펜 단추 %1:"
 
 #: kcmtablet.cpp:291
 #, fuzzy, kde-format
@@ -198,7 +194,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle-click"
-msgstr ""
+msgstr "가운데 단추"
 
 #: ui/ActionDialog.qml:200
 #, kde-format
@@ -231,25 +227,22 @@ msgid "Shift"
 msgstr ""
 
 #: ui/ActionDialog.qml:264
-#, fuzzy, kde-format
-#| msgid "Tool Button 1"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
-msgstr "도구 단추 1"
+msgstr "단추 1"
 
 #: ui/ActionDialog.qml:265
-#, fuzzy, kde-format
-#| msgid "Pen Button 2"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
-msgstr "펜 단추 2"
+msgstr "단추 2"
 
 #: ui/ActionDialog.qml:266
-#, fuzzy, kde-format
-#| msgid "Pen Button 3"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
-msgstr "펜 단추 3"
+msgstr "단추 3"
 
 #: ui/ActionDialog.qml:275
 #, kde-format
@@ -295,13 +288,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "닫기"
 
 #: ui/Calibration.qml:120
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "취소"
 
 #: ui/main.qml:34
 #, kde-format
@@ -386,13 +379,13 @@ msgstr ""
 #, kde-format
 msgctxt "Low pen pressure"
 msgid "Low Pressure"
-msgstr ""
+msgstr "낮은 압력"
 
 #: ui/main.qml:429
 #, kde-format
 msgctxt "High pen pressure"
 msgid "High Pressure"
-msgstr ""
+msgstr "높은 압력"
 
 #: ui/main.qml:440
 #, kde-format
@@ -454,11 +447,10 @@ msgid "pad button %1"
 msgstr "단추 %1:"
 
 #: ui/Tester.qml:25
-#, fuzzy, kde-format
-#| msgid "Tablet"
+#, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
-msgstr "태블릿"
+msgstr "태블릿 시험 도구"
 
 #: ui/Tester.qml:48
 #, kde-format

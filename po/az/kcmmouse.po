@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"POT-Creation-Date: 2024-11-29 00:42+0000\n"
 "PO-Revision-Date: 2022-10-18 12:49+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -29,7 +29,12 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "%1 cihazı haqqında əsas məlumatların oxunmasında ciddi xəta."
 
-#: kcm.cpp:140
+#: kcm.cpp:86
+#, kde-format
+msgid "Not able to select appropriate backend"
+msgstr ""
+
+#: kcm.cpp:142
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -38,12 +43,12 @@ msgstr ""
 "Göstəricilərin yüklənməsi zamanı xəta. daha ətraflı məlumatlar jurnalda "
 "saxlanılır. Lütfən bu ayarlar modulunu yenidən başladın."
 
-#: kcm.cpp:143
+#: kcm.cpp:145
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Göstərici cihaz tapılmadı. Cihazı qoşmaq."
 
-#: kcm.cpp:152
+#: kcm.cpp:154
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -53,7 +58,7 @@ msgstr ""
 "Xahiş edirəm bu ayarlar modulunu yenidən başladın və bir daha yenidən cəhd "
 "edin."
 
-#: kcm.cpp:170
+#: kcm.cpp:172
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -62,7 +67,7 @@ msgstr ""
 "Standart göstəricilərin yüklənməsində xəta. Bəzi seçimləri standart "
 "göstəriciləri üçün qurmak mümkün olmadı."
 
-#: kcm.cpp:185
+#: kcm.cpp:187
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -71,12 +76,12 @@ msgstr ""
 "Yenicə qoşulmuş cihazı əlavə edilərkən xəta baş verdi. Lütfən yenidən qoşun "
 "və bu ayarlar modulunu yenidən başladın."
 
-#: kcm.cpp:198
+#: kcm.cpp:200
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Göstərici cihazı bağlandı. Ayarlama dialoqu bağlandı."
 
-#: kcm.cpp:200
+#: kcm.cpp:202
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Göstərici cihazı bağlandı. Başqa cihaz tapılmadı."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"POT-Creation-Date: 2024-11-29 00:42+0000\n"
 "PO-Revision-Date: 2022-09-02 17:47+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -28,7 +28,12 @@ msgstr "Truy vấn thiết bị nhập thất bại. Vui lòng mở lại khối
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Lỗi nguy cấp khi đọc các thông tin thiết bị cơ bản của %1."
 
-#: kcm.cpp:140
+#: kcm.cpp:86
+#, kde-format
+msgid "Not able to select appropriate backend"
+msgstr ""
+
+#: kcm.cpp:142
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -37,12 +42,12 @@ msgstr ""
 "Lỗi khi tải các giá trị. Xem thêm thông tin trong nhật kí. Vui lòng khởi "
 "động lại khối cấu hình này."
 
-#: kcm.cpp:143
+#: kcm.cpp:145
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Không tìm thấy thiết bị trỏ nào. Hãy kết nối thiết bị trỏ."
 
-#: kcm.cpp:152
+#: kcm.cpp:154
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -51,7 +56,7 @@ msgstr ""
 "Không thể lưu tất cả các thay đổi. Xem thêm thông tin trong nhật kí. Vui "
 "lòng khởi động lại khối cấu hình này và thử lại."
 
-#: kcm.cpp:170
+#: kcm.cpp:172
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -60,7 +65,7 @@ msgstr ""
 "Lỗi khi tải các giá trị mặc định. Đặt một số lựa chọn về giá trị mặc định "
 "thất bại."
 
-#: kcm.cpp:185
+#: kcm.cpp:187
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -69,12 +74,12 @@ msgstr ""
 "Lỗi khi thêm thiết bị mới được kết nối. Vui lòng kết nối lại và khởi động "
 "lại khối cấu hình này."
 
-#: kcm.cpp:198
+#: kcm.cpp:200
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr "Thiết bị trỏ bị ngắt kết nối. Đã đóng hộp thoại thiết lập."
 
-#: kcm.cpp:200
+#: kcm.cpp:202
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "Thiết bị trỏ bị ngắt kết nối. Không tìm thấy thiết bị trỏ nào khác."
