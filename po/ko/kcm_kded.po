@@ -1,14 +1,14 @@
 # Translation of kcmkded to Korean.
 # Copyright (C) 2007-2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kdebase package.
-# Shinjo Park <kde@peremen.name>, 2007, 2008, 2015, 2017, 2020, 2022, 2023.
+# SPDX-FileCopyrightText: 2007, 2008, 2015, 2017, 2020, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-29 00:40+0000\n"
-"PO-Revision-Date: 2023-07-25 22:49+0200\n"
+"PO-Revision-Date: 2024-11-29 00:25+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: kcmkded.cpp:115
 #, kde-format
@@ -50,6 +50,8 @@ msgid ""
 "If you're disabling something here to work around an issue, please <link "
 "url='%1'>submit a bug report about it as well.</link>"
 msgstr ""
+"문제를 해결하기 위해서 여기에 있는 설정을 비활성화한다면 <link url='%1'>버그 "
+"보고를 고려해 보십시오.</link>"
 
 #: ui/main.qml:55
 #, kde-format
@@ -105,18 +107,16 @@ msgid "Load-on-Demand Services"
 msgstr "필요할 때 불러오는 서비스"
 
 #: ui/main.qml:182
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Disable automatically loading %1 on startup"
-msgstr "시작할 때 이 서비스 자동 시작 전환"
+msgstr "시작할 때 %1 자동 불러오기 비활성화"
 
 #: ui/main.qml:182
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Enable automatically loading %1 on startup"
-msgstr "시작할 때 이 서비스 자동 시작 전환"
+msgstr "시작할 때 %1 자동 불러오기 활성화"
 
 #: ui/main.qml:183
 #, kde-format
@@ -134,18 +134,16 @@ msgid "Running"
 msgstr "실행 중"
 
 #: ui/main.qml:248
-#, fuzzy, kde-format
-#| msgid "Stop"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Stop %1"
-msgstr "정지"
+msgstr "%1 정지"
 
 #: ui/main.qml:248
-#, fuzzy, kde-format
-#| msgid "Start"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Start %1"
-msgstr "시작"
+msgstr "%1 시작"
 
 #: ui/main.qml:251
 #, kde-format

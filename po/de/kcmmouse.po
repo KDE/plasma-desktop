@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"POT-Creation-Date: 2024-11-29 02:38+0000\n"
 "PO-Revision-Date: 2024-03-26 19:21+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -34,7 +34,12 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "Kritischer Fehler beim Lesen der Basisinformation des Geräts von %1 ."
 
-#: kcm.cpp:140
+#: kcm.cpp:86
+#, kde-format
+msgid "Not able to select appropriate backend"
+msgstr ""
+
+#: kcm.cpp:142
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -43,13 +48,13 @@ msgstr ""
 "Fehler beim Laden von Werten. Im Protokoll finden Sie weitere Informationen "
 "dazu. Bitte starten Sie dieses Einrichtungsmodul erneut."
 
-#: kcm.cpp:143
+#: kcm.cpp:145
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr ""
 "Es wurde kein Zeigergerät gefunden. Schließen Sie ein Zeigergerät jetzt an."
 
-#: kcm.cpp:152
+#: kcm.cpp:154
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -59,7 +64,7 @@ msgstr ""
 "weitere Informationen dazu. Bitte starten Sie dieses Einrichtungsmodul neu "
 "und versuchen es nochmal."
 
-#: kcm.cpp:170
+#: kcm.cpp:172
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -68,7 +73,7 @@ msgstr ""
 "Fehler beim Laden der Standardwerte. Es können nicht alle Einstellungen auf "
 "die Standardwerte zurückgesetzt werden."
 
-#: kcm.cpp:185
+#: kcm.cpp:187
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -77,14 +82,14 @@ msgstr ""
 "Fehler beim Hinzufügen des neu angeschlossenen Geräts. Schließen Sie es "
 "bitte erneut an und starten dann dieses Einrichtungsmodul neu."
 
-#: kcm.cpp:198
+#: kcm.cpp:200
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 "Das Zeigergerät wurde getrennt, der Einstellungsdialog dafür wird "
 "geschlossen."
 
-#: kcm.cpp:200
+#: kcm.cpp:202
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr ""

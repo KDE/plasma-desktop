@@ -1,14 +1,14 @@
 # translation of kcminput.po to Korean.
 # Copyright (C) 2001, 2007 Free Software Foundation, Inc.
 # Yu-Chan, Park <super@susekorea.net>, 2001.
-# Shinjo Park <kde@peremen.name>, 2007, 2008, 2010, 2011, 2012, 2014, 2016, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2007, 2008, 2010, 2011, 2012, 2014, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2023-08-25 23:14+0200\n"
+"POT-Creation-Date: 2024-11-29 02:38+0000\n"
+"PO-Revision-Date: 2024-11-29 00:42+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
@@ -28,7 +28,12 @@ msgstr "입력 장치를 조회할 수 없습니다. 설정 모듈을 다시 여
 msgid "Critical error on reading fundamental device infos of %1."
 msgstr "%1의 정보를 조회하는 중 치명적인 오류가 발생했습니다."
 
-#: kcm.cpp:140
+#: kcm.cpp:86
+#, kde-format
+msgid "Not able to select appropriate backend"
+msgstr ""
+
+#: kcm.cpp:142
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -37,12 +42,12 @@ msgstr ""
 "값을 불러오는 중 오류가 발생했습니다. 더 많은 정보를 보려면 로그를 참조하십시"
 "오. 이 설정 모듈을 다시 시작하십시오."
 
-#: kcm.cpp:143
+#: kcm.cpp:145
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "포인터 장치를 찾을 수 없습니다. 연결해 주십시오."
 
-#: kcm.cpp:152
+#: kcm.cpp:154
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -51,7 +56,7 @@ msgstr ""
 "모든 설정을 저장할 수 없었습니다. 더 많은 정보를 보려면 로그를 참조하십시오. "
 "이 설정 모듈을 다시 시작한 다음 다시 시도하십시오."
 
-#: kcm.cpp:170
+#: kcm.cpp:172
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -60,7 +65,7 @@ msgstr ""
 "기본값을 불러오는 중 오류가 발생했습니다. 일부 옵션을 기본값으로 초기화할 수 "
 "없었습니다."
 
-#: kcm.cpp:185
+#: kcm.cpp:187
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -69,24 +74,22 @@ msgstr ""
 "새로 연결된 장치를 추가하는 중 오류가 발생했습니다. 장치를 다시 연결한 다음 "
 "이 설정 모듈을 다시 시작하십시오."
 
-#: kcm.cpp:198
+#: kcm.cpp:200
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 "포인터 장치가 연결 해제되었습니다. 해당 장치 설정 대화 상자를 닫았습니다."
 
-#: kcm.cpp:200
+#: kcm.cpp:202
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr "포인터 장치가 연결 해제되었습니다. 다른 장치를 찾을 수 없습니다."
 
 #: ui/bindings.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@label for assigning an action to a numbered button"
-#| msgid "Extra Button %1:"
+#, kde-format
 msgctxt "@title"
 msgid "Extra Mouse Buttons"
-msgstr "추가 단추 %1:"
+msgstr "추가 마우스 단추"
 
 #: ui/bindings.qml:70
 #, kde-format
@@ -113,9 +116,7 @@ msgid "Cancel"
 msgstr "취소"
 
 #: ui/bindings.qml:124
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Press a mouse button "
+#, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button"
 msgstr "마우스 단추를 누르십시오 "
@@ -130,7 +131,7 @@ msgstr "바인딩 추가…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
-msgstr ""
+msgstr "추가 단추 설정…"
 
 #: ui/main.qml:64
 #, kde-format
@@ -153,8 +154,7 @@ msgid "Accept input through this device."
 msgstr "이 장치가 보내는 입력을 받아 들입니다."
 
 #: ui/main.qml:107
-#, fuzzy, kde-format
-#| msgid "Left handed mode"
+#, kde-format
 msgid "Left-handed mode"
 msgstr "왼손잡이 모드"
 
@@ -164,16 +164,13 @@ msgid "Swap left and right buttons."
 msgstr "왼쪽과 오른쪽 단추를 전환합니다."
 
 #: ui/main.qml:126
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "왼쪽과 오른쪽 단추를 같이 클릭해서 가운데 단추 클릭"
 
 #: ui/main.qml:138
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
@@ -186,6 +183,8 @@ msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
+"이 설정을 사용하면 클릭 지연 시간을 50 ms 추가합니다. 마우스 왼쪽과 오른쪽 단"
+"추를 같이 누른 것을 올바르게 감지하기 위해서 추가 지연 시간이 필요합니다."
 
 #: ui/main.qml:154
 #, kde-format
@@ -245,20 +244,19 @@ msgid "Invert scroll direction"
 msgstr "스크롤 방향 뒤집기"
 
 #: ui/main.qml:351
-#, fuzzy, kde-format
-#| msgid "Touchscreen like scrolling."
+#, kde-format
 msgid "Touchscreen-like scrolling."
 msgstr "터치스크린 형태 스크롤을 사용합니다."
 
 #: ui/main.qml:356
 #, kde-format
 msgid "Press middle button and move mouse to scroll"
-msgstr ""
+msgstr "마우스 가운데 단추를 누르고 이동하여 스크롤"
 
 #: ui/main.qml:368
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
-msgstr ""
+msgstr "가운데 단추를 누른 상태에서 마우스를 사용하여 스크롤합니다."
 
 #, fuzzy
 #~| msgctxt "@action:button"

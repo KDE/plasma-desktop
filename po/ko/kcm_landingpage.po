@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Shinjo Park <kde@peremen.name>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:42+0000\n"
-"PO-Revision-Date: 2022-02-20 20:55+0100\n"
+"PO-Revision-Date: 2024-11-29 00:27+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: landingpage_kdeglobalssettings.kcfg:9
@@ -55,11 +55,10 @@ msgid "Theme:"
 msgstr "테마:"
 
 #: ui/main.qml:76
-#, fuzzy, kde-format
-#| msgid "More Appearance Settings…"
+#, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More appearance settings:"
-msgstr "더 많은 모양 설정…"
+msgstr "더 많은 모양 설정:"
 
 #: ui/main.qml:120
 #, kde-format
@@ -108,11 +107,10 @@ msgid "Select by clicking on item's selection marker"
 msgstr "항목의 선택 마커를 클릭해서 선택"
 
 #: ui/main.qml:216
-#, fuzzy, kde-format
-#| msgid "More Behavior Settings…"
+#, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More behavior settings:"
-msgstr "더 많은 행동 설정…"
+msgstr "더 많은 행동 설정:"
 
 #: ui/main.qml:229
 #, kde-format

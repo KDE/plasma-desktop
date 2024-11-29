@@ -1,7 +1,7 @@
 # translation of kcmaccess.po to Slovenian
 # Translation of kcmaccess.po to Slovenian
 # SLOVENIAN TRANSLATION OF KCMACCESS.
-# $Id: kcm_access.po 1689080 2024-08-30 01:14:03Z scripty $
+# $Id: kcm_access.po 1696216 2024-11-29 03:06:32Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2005, 2006 Free Software Foundation, Inc.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-29 00:41+0000\n"
+"POT-Creation-Date: 2024-11-29 02:38+0000\n"
 "PO-Revision-Date: 2024-08-29 08:49+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -737,12 +737,9 @@ msgstr "Zakleni lepljive tipke"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
-"Once locked, the “sticky” state of modifier keys will not be disabled until "
-"a keyboard shortcut is finished or until a non-modifier key is pressed."
+"Pressing a modifier key twice will keep it in active state until pressed "
+"again."
 msgstr ""
-"Ko je zaklenjeno, »lepljivo« stanje modifikacijskih tipk ne bo onemogočeno, "
-"dokler bližnjica na tipkovnici ni končana ali dokler ni pritisnjena tipka, "
-"ki ni modifikator."
 
 #: ui/ModifierKeys.qml:57
 #, kde-format
@@ -897,6 +894,16 @@ msgstr "Normalno"
 msgctxt "@label Large cursor size"
 msgid "Large"
 msgstr "Veliko"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Once locked, the “sticky” state of modifier keys will not be disabled "
+#~ "until a keyboard shortcut is finished or until a non-modifier key is "
+#~ "pressed."
+#~ msgstr ""
+#~ "Ko je zaklenjeno, »lepljivo« stanje modifikacijskih tipk ne bo "
+#~ "onemogočeno, dokler bližnjica na tipkovnici ni končana ali dokler ni "
+#~ "pritisnjena tipka, ki ni modifikator."
 
 #~ msgid "Activation:"
 #~ msgstr "Aktivacija:"

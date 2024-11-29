@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"POT-Creation-Date: 2024-11-29 02:38+0000\n"
 "PO-Revision-Date: 2024-09-06 16:19+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -44,7 +44,12 @@ msgstr ""
 "Produciuse un erro crítico ao ler información de dispositivo fundamental de "
 "%1."
 
-#: kcm.cpp:140
+#: kcm.cpp:86
+#, kde-format
+msgid "Not able to select appropriate backend"
+msgstr ""
+
+#: kcm.cpp:142
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -53,12 +58,12 @@ msgstr ""
 "Erro ao cargar os valores. Consulte o rexistro para máis información. "
 "Reinicie este módulo de configuración."
 
-#: kcm.cpp:143
+#: kcm.cpp:145
 #, kde-format
 msgid "No pointer device found. Connect now."
 msgstr "Non se atopou ningún dispositivo de punteiro. Conécteo."
 
-#: kcm.cpp:152
+#: kcm.cpp:154
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -67,7 +72,7 @@ msgstr ""
 "Non foi posíbel gardar todos os cambios. Consulte o rexistro para máis "
 "información. Reinicie o módulo de configuración e inténteo de novo."
 
-#: kcm.cpp:170
+#: kcm.cpp:172
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -76,7 +81,7 @@ msgstr ""
 "Erro ao cargar os valores predeterminados. Non se puideron definir algunhas "
 "opcións cos seus valores predeterminados."
 
-#: kcm.cpp:185
+#: kcm.cpp:187
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -85,14 +90,14 @@ msgstr ""
 "Erro ao engadir o dispositivo que acababa de conectar. Conécteo de novo e "
 "reinicie o módulo de configuración."
 
-#: kcm.cpp:198
+#: kcm.cpp:200
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
 msgstr ""
 "Desconectouse o dispositivo de punteiro. Pechouse o seu diálogo de "
 "configuración."
 
-#: kcm.cpp:200
+#: kcm.cpp:202
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
 msgstr ""
