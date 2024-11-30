@@ -275,8 +275,8 @@ class DesktopTest(unittest.TestCase):
         session_bus = Gio.bus_get_sync(Gio.BusType.SESSION)
         # LookAndFeelManager::save
         message: Gio.DBusMessage = Gio.DBusMessage.new_method_call("org.kde.plasmashell", "/PlasmaShell", "org.kde.PlasmaShell", "loadLookAndFeelDefaultLayout")
-        message.set_body(GLib.Variant("(s)", ["Breeze Dark"]))
-        session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 5000)
+        message.set_body(GLib.Variant("(s)", ["org.kde.breezedark.desktop"]))
+        session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 10000)
         self.assertFalse(kickoff_element.is_displayed())
         self.driver.find_element(AppiumBy.NAME, "Application Launcher")
 
