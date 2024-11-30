@@ -4,7 +4,6 @@
 # SPDX-FileCopyrightText: 2022-2023 Harald Sitter <sitter@kde.org>
 
 import os
-import shutil
 import subprocess
 import sys
 import time
@@ -14,7 +13,6 @@ from typing import Final
 from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
-from gi.repository import GLib
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 
@@ -31,10 +29,7 @@ class KickoffTests(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls) -> None:
-        os.makedirs(os.path.join(GLib.get_user_config_dir(), "menus"))
-        shutil.copy(os.path.join(os.path.dirname(os.path.abspath(__file__)), "applications.menu"), os.path.join(GLib.get_user_config_dir(), "menus"))
         cls.kactivitymanagerd = start_kactivitymanagerd()
-        subprocess.check_call([f"kbuildsycoca{KDE_VERSION}"], stdout=sys.stderr, stderr=sys.stderr)
 
         options = AppiumOptions()
         options.set_capability("environ", {

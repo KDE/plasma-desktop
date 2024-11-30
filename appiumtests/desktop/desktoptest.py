@@ -5,8 +5,10 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 import functools
+import logging
 import os
 import pathlib
+import shutil
 import stat
 import subprocess
 import sys
@@ -47,19 +49,29 @@ def name_has_owner(session_bus: Gio.DBusConnection, name: str) -> bool:
     return reply and reply.get_signature() == 'b' and reply.get_body().get_child_value(0).get_boolean()
 
 
+def build_ksycoca() -> None:
+    subprocess.check_call([f"kbuildsycoca{KDE_VERSION}"], stdout=sys.stderr, stderr=sys.stderr, env=os.environ)
+
+
 def start_kactivitymanagerd() -> subprocess.Popen | None:
     session_bus: Gio.DBusConnection = Gio.bus_get_sync(Gio.BusType.SESSION)
-    kactivitymanagerd = None
-    if not name_has_owner(session_bus, KACTIVITYMANAGERD_SERVICE_NAME):
-        kactivitymanagerd = subprocess.Popen([KACTIVITYMANAGERD_PATH], stdout=sys.stderr, stderr=sys.stderr)
-        kactivitymanagerd_started: bool = False
-        for _ in range(10):
-            if name_has_owner(session_bus, KACTIVITYMANAGERD_SERVICE_NAME):
-                kactivitymanagerd_started = True
-                break
-            print("waiting for kactivitymanagerd to appear on the DBus session")
-            time.sleep(1)
-        assert kactivitymanagerd_started
+    if name_has_owner(session_bus, KACTIVITYMANAGERD_SERVICE_NAME):
+        return None
+
+    os.makedirs(os.path.join(GLib.get_user_config_dir(), "menus"))
+    shutil.copy(os.path.join(os.path.dirname(os.path.abspath(__file__)), "applications.menu"), os.path.join(GLib.get_user_config_dir(), "menus"))
+
+    kactivitymanagerd = subprocess.Popen([KACTIVITYMANAGERD_PATH], stdout=sys.stderr, stderr=sys.stderr, env=os.environ)
+    started: bool = False
+    for _ in range(10):
+        if name_has_owner(session_bus, KACTIVITYMANAGERD_SERVICE_NAME):
+            started = True
+            break
+        logging.info("waiting for kactivitymanagerd to appear on the DBus session")
+        time.sleep(1)
+    assert started
+
+    build_ksycoca()
 
     return kactivitymanagerd
 
