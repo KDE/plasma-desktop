@@ -3,9 +3,9 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2014, 2015, 2017, 2019, 2020, 2021, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
 # Sebastià Pla i Sanz <sps@sastia.com>, 2000, 2001, 2004, 2005, 2006.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2002, 2003, 2012, 2015, 2016, 2020.
-# SPDX-FileCopyrightText: 2007, 2008, 2009, 2014, 2015, 2017, 2019, 2020, 2021, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
 # Orestes Mas Casals <orestes@tsc.upc.edu>, 2008.
 # Alfredo Vicente <alviboi@gmail.com>, 2019.
 msgid ""
@@ -13,14 +13,14 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-29 00:42+0000\n"
-"PO-Revision-Date: 2024-10-28 11:47+0100\n"
+"PO-Revision-Date: 2024-11-29 09:16+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -733,6 +733,8 @@ msgid ""
 "Pressing a modifier key twice will keep it in active state until pressed "
 "again."
 msgstr ""
+"Prement una tecla modificadora dues vegades la mantindrà en estat actiu fins "
+"que es torni a prémer."
 
 #: ui/ModifierKeys.qml:57
 #, kde-format
@@ -888,58 +890,3 @@ msgstr "Normal"
 msgctxt "@label Large cursor size"
 msgid "Large"
 msgstr "Gran"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Once locked, the “sticky” state of modifier keys will not be disabled "
-#~ "until a keyboard shortcut is finished or until a non-modifier key is "
-#~ "pressed."
-#~ msgstr ""
-#~ "Un cop bloquejada, l'estat «permanent» de les tecles modificadores no es "
-#~ "desactivarà fins que finalitzi una drecera de teclat o fins que es premi "
-#~ "una tecla no modificadora."
-
-#~ msgid "Activation:"
-#~ msgstr "Activació:"
-
-#~ msgid "Use gestures for activating sticky keys and slow keys"
-#~ msgstr "Usa gestos per a activar les tecles apegaloses i lentes"
-
-#~ msgctxt "Flash screen on a system bell"
-#~ msgid "Flash"
-#~ msgstr "Flaix"
-
-#~ msgid ""
-#~ "For a key to be accepted, it has to be held until the set amount of time"
-#~ msgstr ""
-#~ "Perquè s'accepti una tecla, s'ha de mantenir fins al temps establert"
-
-#~ msgid "Ignore rapid, repeated keypresses of the same key"
-#~ msgstr "Ignora les pulsacions ràpides i repetides de la mateixa tecla"
-
-#~ msgctxt "System Bell"
-#~ msgid "Bell"
-#~ msgstr "Timbre"
-
-#~ msgctxt "Enable sticky keys"
-#~ msgid "Enable"
-#~ msgstr "Activa"
-
-#~ msgctxt "Lock sticky keys"
-#~ msgid "Lock"
-#~ msgstr "Bloqueja"
-
-#~ msgid ""
-#~ "Please note that you may have to log out or reboot once to allow the "
-#~ "screen reader to work properly."
-#~ msgstr ""
-#~ "Recordeu que potser haureu de sortir de la sessió o reiniciar per a "
-#~ "permetre que el lector de la pantalla funcioni correctament."
-
-#~ msgid ""
-#~ "It appears that the Orca Screen Reader is not installed. Please install "
-#~ "it before trying to use this feature, and then log out or reboot"
-#~ msgstr ""
-#~ "Sembla que el lector de pantalla Orca no està instal·lat. Instal·leu-lo "
-#~ "abans d'intentar usar aquesta funcionalitat, i després sortiu de la "
-#~ "sessió o reinicieu"
