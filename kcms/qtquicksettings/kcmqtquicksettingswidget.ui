@@ -20,13 +20,16 @@
    <item>
     <widget class="KMessageWidget" name="kmessagewidget">
      <property name="text">
-      <string>These settings adjust the QtQuick settings used by Plasma. Only adjust if you know what you are doing.</string>
+      <string>These settings adjust the QtQuick settings used by Plasma. Modifying these settings can break your desktop. Only adjust these settings if you know what you are doing.</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>
      </property>
+     <property name="closeButtonVisible">
+      <bool>false</bool>
+     </property>
      <property name="messageType">
-      <enum>KMessageWidget::Information</enum>
+      <enum>KMessageWidget::Warning</enum>
      </property>
     </widget>
    </item>
