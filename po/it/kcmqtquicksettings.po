@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-07 02:03+0000\n"
+"POT-Creation-Date: 2024-12-02 00:44+0000\n"
 "PO-Revision-Date: 2023-04-12 03:16+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -30,71 +30,75 @@ msgstr "feus73@gmail.com"
 
 #. i18n: ectx: property (text), widget (KMessageWidget, kmessagewidget)
 #: kcmqtquicksettingswidget.ui:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "These settings adjust the QtQuick settings used by Plasma. Only adjust if "
+#| "you know what you are doing."
 msgid ""
-"These settings adjust the QtQuick settings used by Plasma. Only adjust if "
-"you know what you are doing."
+"These settings adjust the QtQuick settings used by Plasma. Modifying these "
+"settings can break your desktop. Only adjust these settings if you know what "
+"you are doing."
 msgstr ""
 "Queste impostazioni regolano le impostazioni di QtQuick usate da Plasma. "
 "Cambiale solo se sai quello che stai facendo."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: kcmqtquicksettingswidget.ui:38
+#: kcmqtquicksettingswidget.ui:41
 #, kde-format
 msgid "Rendering Backend:"
 msgstr "Motore di rendering:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
-#: kcmqtquicksettingswidget.ui:46 kcmqtquicksettingswidget.ui:84
+#: kcmqtquicksettingswidget.ui:49 kcmqtquicksettingswidget.ui:87
 #, kde-format
 msgid "Automatic"
 msgstr "Automatico"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
-#: kcmqtquicksettingswidget.ui:51
+#: kcmqtquicksettingswidget.ui:54
 #, kde-format
 msgid "Open GL"
 msgstr "Open GL"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
-#: kcmqtquicksettingswidget.ui:56
+#: kcmqtquicksettingswidget.ui:59
 #, kde-format
 msgid "Software"
 msgstr "Software"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
-#: kcmqtquicksettingswidget.ui:61
+#: kcmqtquicksettingswidget.ui:64
 #, kde-format
 msgid "Vulkan"
 msgstr "Vulkan"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcmqtquicksettingswidget.ui:69
+#: kcmqtquicksettingswidget.ui:72
 #, kde-format
 msgid "GL Core Profile:"
 msgstr "Profilo di GL Core:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcmqtquicksettingswidget.ui:76
+#: kcmqtquicksettingswidget.ui:79
 #, kde-format
 msgid "Render Loop:"
 msgstr "Ciclo di rendering:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
-#: kcmqtquicksettingswidget.ui:89
+#: kcmqtquicksettingswidget.ui:92
 #, kde-format
 msgid "Basic"
 msgstr "Di base"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
-#: kcmqtquicksettingswidget.ui:94
+#: kcmqtquicksettingswidget.ui:97
 #, kde-format
 msgid "Threaded"
 msgstr "Con thread"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ForceGlCoreProfile)
-#: kcmqtquicksettingswidget.ui:102
+#: kcmqtquicksettingswidget.ui:105
 #, kde-format
 msgid "Force"
 msgstr "Forza"

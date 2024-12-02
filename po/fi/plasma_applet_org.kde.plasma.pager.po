@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2013, 2014, 2016.
-# Tommi Nieminen <translator@legisign.org>, 2016, 2018, 2019, 2021, 2022.
+# SPDX-FileCopyrightText: 2016, 2018, 2019, 2021, 2022, 2024 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-03 00:41+0000\n"
-"PO-Revision-Date: 2022-08-05 10:25+0300\n"
+"PO-Revision-Date: 2024-10-18 11:01+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -29,10 +29,9 @@ msgid "General:"
 msgstr "Yleistä:"
 
 #: package/contents/ui/configGeneral.qml:40
-#, fuzzy, kde-format
-#| msgid "Show application icons on window outlines"
+#, kde-format
 msgid "Show window outlines"
-msgstr "Näytä ikkunakehyksissä sovelluskuvakkeet"
+msgstr "Näytä ikkunoiden ääriviivat"
 
 #: package/contents/ui/configGeneral.qml:45
 #, kde-format
@@ -154,36 +153,31 @@ msgid "Switch to %1"
 msgstr "Vaihda virtuaalinäyttöön %1"
 
 #: package/contents/ui/main.qml:586
-#, fuzzy, kde-format
-#| msgid "Show Activity Manager…"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Show Activity Manager"
-msgstr "Näytä aktiviteettien hallinta…"
+msgstr "Näytä aktiviteettien hallinta"
 
 #: package/contents/ui/main.qml:592
-#, fuzzy, kde-format
-#| msgid "Add Virtual Desktop"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Add Virtual Desktop"
 msgstr "Lisää virtuaalityöpöytä"
 
 #: package/contents/ui/main.qml:598
-#, fuzzy, kde-format
-#| msgid "Remove Virtual Desktop"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Remove Virtual Desktop"
 msgstr "Poista virtuaalityöpöytä"
 
 #: package/contents/ui/main.qml:605
-#, fuzzy, kde-format
-#| msgid "Configure Virtual Desktops…"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "&Configure Activities…"
-msgstr "Virtuaalityöpöytien asetukset…"
+msgstr "&Aktiviteettiasetukset…"
 
 #: package/contents/ui/main.qml:610
-#, fuzzy, kde-format
-#| msgid "Configure Virtual Desktops…"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Configure Virtual Desktops…"
 msgstr "Virtuaalityöpöytien asetukset…"

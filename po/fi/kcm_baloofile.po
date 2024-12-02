@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2013, 2014.
-# Tommi Nieminen <translator@legisign.org>, 2017, 2019, 2020, 2021, 2023.
+# SPDX-FileCopyrightText: 2017, 2019, 2020, 2021, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 #
 #
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:40+0000\n"
-"PO-Revision-Date: 2023-06-27 15:53+0300\n"
+"PO-Revision-Date: 2024-10-18 10:24+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: ui/main.qml:44
 #, kde-format
@@ -121,12 +121,10 @@ msgid "%1, %2% complete"
 msgstr "%1, %2 % valmiina"
 
 #: ui/main.qml:217
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info Currently Indexing"
-#| msgid "<filename>%1</filename>"
+#, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "Currently indexing: <filename>%1</filename>"
-msgstr "<filename>%1</filename>"
+msgstr "Nyt indeksoidaan: <filename>%1</filename>"
 
 # Pudotusvalikko, josta valitaan, indeksoidaanko kansio vai ei
 #: ui/main.qml:270
@@ -141,8 +139,7 @@ msgid "Indexed"
 msgstr "Indeksoi"
 
 #: ui/main.qml:301
-#, fuzzy, kde-format
-#| msgid "Delete entry"
+#, kde-format
 msgctxt "Remove the list item for this filesystem path"
 msgid "Remove entry"
 msgstr "Poista tietue"

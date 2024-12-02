@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Tommi Nieminen <translator@legisign.org>, 2013, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2013, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 # Lasse Liehu <lasse.liehu@gmail.com>, 2013, 2014, 2015, 2016, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-25 00:41+0000\n"
-"PO-Revision-Date: 2023-09-26 18:06+0300\n"
+"PO-Revision-Date: 2024-11-02 08:42+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -99,42 +99,41 @@ msgid "Remove icon"
 msgstr "Poista kuvake"
 
 #: package/contents/ui/ConfigGeneral.qml:119
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgid "Show applications as:"
-msgstr "Näytä muut sovellukset:"
+msgstr "Näytä sovelluksista:"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgid "Name only"
-msgstr ""
+msgstr "Vain nimi"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgid "Description only"
-msgstr ""
+msgstr "Vain kuvaus"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgid "Name (Description)"
-msgstr ""
+msgstr "Nimi (kuvaus)"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgid "Description (Name)"
-msgstr ""
+msgstr "Kuvaus (nimi)"
 
 #: package/contents/ui/ConfigGeneral.qml:131
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
-msgstr "Tekstiselite:"
+msgstr "Selite:"
 
 #: package/contents/ui/ConfigGeneral.qml:133
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
-msgstr "Lisää tekstiselite kirjoittamalla tähän"
+msgstr "Kirjoita selite tähän"
 
 #: package/contents/ui/ConfigGeneral.qml:147
 #, kde-format
@@ -146,7 +145,7 @@ msgstr "Palauta valikon selite"
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
-msgstr "Tekstiselitettä ei voi lisätä, kun paneeli on pystysuunnassa."
+msgstr "Pystysuuntaiseen paneeliin ei voi lisätä tekstiselitettä."
 
 #: package/contents/ui/ConfigGeneral.qml:171
 #, kde-format
@@ -162,7 +161,7 @@ msgstr "Aakkosta sovellukset aina"
 #: package/contents/ui/ConfigGeneral.qml:177
 #, kde-format
 msgid "Use compact list item style"
-msgstr "Käytä tiivistelmä luetelmatyyliä"
+msgstr "Käytä tiivistä luetelmatyyliä"
 
 #: package/contents/ui/ConfigGeneral.qml:183
 #, kde-format
@@ -171,12 +170,10 @@ msgid "Automatically disabled when in Touch Mode"
 msgstr "Poistetaan kosketustilassa automaattisesti käytöstä"
 
 #: package/contents/ui/ConfigGeneral.qml:192
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Enabled Search Plugins…"
+#, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
-msgstr "Aseta käytössä olevat hakuliitännäiset…"
+msgstr "Hakuliitännäisten asetukset…"
 
 #: package/contents/ui/ConfigGeneral.qml:202
 #, kde-format
@@ -187,13 +184,13 @@ msgstr "Sivupaneelin sijainti:"
 #: package/contents/ui/ConfigGeneral.qml:211
 #, kde-format
 msgid "Right"
-msgstr "Oikealla"
+msgstr "oikealla"
 
 #: package/contents/ui/ConfigGeneral.qml:203
 #: package/contents/ui/ConfigGeneral.qml:211
 #, kde-format
 msgid "Left"
-msgstr "Vasemmalla"
+msgstr "vasemmalla"
 
 #: package/contents/ui/ConfigGeneral.qml:219
 #, kde-format
@@ -204,13 +201,13 @@ msgstr "Näytä suosikit:"
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
-msgstr "Ruudukkona"
+msgstr "ruudukkona"
 
 #: package/contents/ui/ConfigGeneral.qml:228
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
-msgstr "Luettelona"
+msgstr "luettelona"
 
 #: package/contents/ui/ConfigGeneral.qml:236
 #, kde-format
@@ -284,7 +281,7 @@ msgstr "Pidä avoinna"
 #: package/contents/ui/KickoffGridView.qml:102
 #, kde-format
 msgid "Grid with %1 rows, %2 columns"
-msgstr "Ruudukko, jossa %1 riviä × %2 saraketta"
+msgstr "%1 rivin × %2 sarakkeen ruudukko"
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
