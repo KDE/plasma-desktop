@@ -501,6 +501,9 @@ void Positioner::sourceStatusChanged()
     if (m_deferMovePositions.count() > 0 && m_folderModel->status() != FolderModel::Listing) {
         move(m_deferMovePositions, false);
         m_deferMovePositions.clear();
+        // Load the configuration to make sure any of the moved items that are in the configuration
+        // are in their correct place after deferred movements
+        loadAndApplyPositionsConfig(SkipPerStripeUpdate);
     }
 }
 
