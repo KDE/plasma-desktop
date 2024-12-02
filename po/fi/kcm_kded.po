@@ -5,7 +5,7 @@
 # Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2003, 2008.
 # Mikko Piippo <piippo@cc.helsinki.fi>, 2007.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2014, 2015.
-# Tommi Nieminen <translator@legisign.org>, 2017, 2020, 2023.
+# SPDX-FileCopyrightText: 2017, 2020, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 #
 # KDE Finnish translation sprint participants:
 msgid ""
@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-29 00:40+0000\n"
-"PO-Revision-Date: 2023-07-25 13:34+0300\n"
+"PO-Revision-Date: 2024-10-18 10:30+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -21,8 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-POT-Import-Date: 2012-12-01 22:22:11+0000\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: kcmkded.cpp:115
 #, kde-format
@@ -59,6 +58,8 @@ msgid ""
 "If you're disabling something here to work around an issue, please <link "
 "url='%1'>submit a bug report about it as well.</link>"
 msgstr ""
+"Jos ratkaistaksesi ongelman poistat jotakin täällä käytöstä, <link "
+"url='%1'>tee siitä myös vikailmoitus</link>."
 
 #: ui/main.qml:55
 #, kde-format
@@ -116,18 +117,16 @@ msgid "Load-on-Demand Services"
 msgstr "Pyynnöstä ladattavat palvelut"
 
 #: ui/main.qml:182
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Disable automatically loading %1 on startup"
-msgstr "Muuta tämän palvelun automaattisen latauksen tilaa"
+msgstr "Poista käytöstä palvelun %1 automaattinen käynnistys"
 
 #: ui/main.qml:182
-#, fuzzy, kde-format
-#| msgid "Toggle automatically loading this service on startup"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Enable automatically loading %1 on startup"
-msgstr "Muuta tämän palvelun automaattisen latauksen tilaa"
+msgstr "Käynnistä %1 automaattisesti järjestelmää käynnistettäessä"
 
 #: ui/main.qml:183
 #, kde-format
@@ -145,18 +144,16 @@ msgid "Running"
 msgstr "Käynnissä"
 
 #: ui/main.qml:248
-#, fuzzy, kde-format
-#| msgid "Stop"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Stop %1"
-msgstr "Pysäytä"
+msgstr "Pysäytä %1"
 
 #: ui/main.qml:248
-#, fuzzy, kde-format
-#| msgid "Start"
+#, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Start %1"
-msgstr "Käynnistä"
+msgstr "Käynnistä %1"
 
 #: ui/main.qml:251
 #, kde-format

@@ -1,6 +1,6 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Tommi Nieminen <translator@legisign.org>, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 # SPDX-FileCopyrightText: 2022, 2024 Lasse Liehu <lasse.liehu@iki.fi>
 #
 msgid ""
@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-13 02:31+0000\n"
-"PO-Revision-Date: 2024-02-29 20:02+0200\n"
-"Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
+"PO-Revision-Date: 2024-11-07 17:21+0200\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -22,11 +22,10 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button This action is disabled"
 msgid "Disabled"
-msgstr ""
+msgstr "Ei käytössä"
 
 #: inputsequence.cpp:138
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "@action:button There is no keybinding"
 msgid "None"
 msgstr "Ei mitään"
@@ -35,30 +34,30 @@ msgstr "Ei mitään"
 #, kde-format
 msgctxt "@action:button"
 msgid "Left mouse button"
-msgstr ""
+msgstr "Hiiren vasen painike"
 
 #: inputsequence.cpp:147
 #, kde-format
 msgctxt "@action:button"
 msgid "Right mouse button"
-msgstr ""
+msgstr "Hiiren oikea painike"
 
 #: inputsequence.cpp:149
 #, kde-format
 msgctxt "@action:button"
 msgid "Middle mouse button"
-msgstr ""
+msgstr "Hiiren keskipainike"
 
 #: inputsequence.cpp:155
 #, kde-format
 msgctxt "@action:button"
 msgid "Application-defined"
-msgstr ""
+msgstr "Sovelluskohtainen"
 
 #: kcmtablet.cpp:34
 #, kde-format
 msgid "Default"
-msgstr ""
+msgstr "Oletus"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -81,15 +80,14 @@ msgid "Inverted Landscape"
 msgstr "Käänteinen vaaka"
 
 #: kcmtablet.cpp:88
-#, fuzzy, kde-format
-#| msgid "Follow the active screen"
+#, kde-format
 msgid "Follow the Current Screen"
-msgstr "Seuraa aktiivista näyttöä"
+msgstr "Seuraa nykyistä näyttöä"
 
 #: kcmtablet.cpp:93
 #, kde-format
 msgid "All Screens"
-msgstr ""
+msgstr "Kaikki näytöt"
 
 #: kcmtablet.cpp:102
 #, kde-format
@@ -100,53 +98,54 @@ msgstr "%1 – (%2,%3 %4×%5)"
 #: kcmtablet.cpp:162
 #, kde-format
 msgid "Fit to Screen"
-msgstr ""
+msgstr "Sovita näytölle"
 
 #: kcmtablet.cpp:163
 #, kde-format
 msgid "Keep Aspect Ratio and Fit Within Screen"
-msgstr ""
+msgstr "Säilytä kuvasuhde ja sovita näytölle"
 
 #: kcmtablet.cpp:164
 #, kde-format
 msgid "Map to Portion of Screen"
-msgstr ""
+msgstr "Yhdistä näytön alueeseen"
 
 #: ui/ActionDialog.qml:24
 #, kde-format
 msgctxt "@title Select the action for the tablet button"
 msgid "Select Button Action"
-msgstr ""
+msgstr "Valitse painikkeen toiminto"
 
+# Tässä täytyy hieman taiteilla, jottei %1 joutuisi asemaan, jossa sitä pitäisi taivuttaa (vrt. ”painettaessa *hiiren oikeaa painiketta*”)
 #: ui/ActionDialog.qml:70
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when pressing %1:"
-msgstr ""
+msgstr "Valitse, minkä toiminnon %1 toteuttaa:"
 
 #: ui/ActionDialog.qml:84
 #, kde-format
 msgctxt "@option:radio Set this action to an application-defined type"
 msgid "Defer to application"
-msgstr ""
+msgstr "Välitä sovellukselle"
 
 #: ui/ActionDialog.qml:99
 #, kde-format
 msgctxt "@option:radio Set this action to a keyboard type"
 msgid "Send keyboard key"
-msgstr ""
+msgstr "Lähetä näppäimistön näppäin"
 
 #: ui/ActionDialog.qml:113
 #, kde-format
 msgctxt "@option:radio Set this action to a mouse type"
 msgid "Send mouse button click"
-msgstr ""
+msgstr "Lähetä hiiripainikkeen napsautus"
 
 #: ui/ActionDialog.qml:129
 #, kde-format
 msgctxt "@option:radio Disable this action"
 msgid "Do nothing"
-msgstr ""
+msgstr "Älä tee mitään"
 
 #: ui/ActionDialog.qml:149
 #, kde-format
@@ -155,60 +154,62 @@ msgid ""
 "This tablet button is forwarded to the focused application, which can decide "
 "how to handle it."
 msgstr ""
+"Piirtoalustan tämä painike välitetään kohdistettuun sovellukseen, joka voi "
+"päättää, miten se käsitellään."
 
 #: ui/ActionDialog.qml:177
 #, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left-click"
-msgstr ""
+msgstr "Vasen napsautus"
 
 #: ui/ActionDialog.qml:178
 #, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle-click"
-msgstr ""
+msgstr "Keskinapsautus"
 
 #: ui/ActionDialog.qml:179
 #, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right-click"
-msgstr ""
+msgstr "Oikea napsautus"
 
 #: ui/ActionDialog.qml:206
 #, kde-format
 msgctxt "@option:check The ctrl modifier on the keyboard"
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 #: ui/ActionDialog.qml:213
 #, kde-format
 msgctxt "@option:check The alt modifier on the keyboard"
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: ui/ActionDialog.qml:220
 #, kde-format
 msgctxt "@option:check The meta modifier on the keyboard"
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: ui/ActionDialog.qml:227
 #, kde-format
 msgctxt "@option:check The shift modifier on the keyboard"
 msgid "Shift"
-msgstr ""
+msgstr "Vaihto"
 
 #: ui/ActionDialog.qml:235
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
-msgstr ""
+msgstr "Tämä painike on poistettu käytöstä eikä tee mitään."
 
 #: ui/Calibration.qml:31
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
-msgstr ""
+msgstr "Kynän kalibrointi"
 
 #: ui/Calibration.qml:90
 #, kde-kuit-format
@@ -217,6 +218,8 @@ msgid ""
 "Calibration is completed and saved.<nl/><nl/>Refine the calibration further "
 "or close the window."
 msgstr ""
+"Kalibrointi on valmis ja tallennettu.<nl/><nl/>Kalibrointia voi nyt "
+"tarkentaa tai sulkea ikkunan."
 
 #: ui/Calibration.qml:91
 #, kde-kuit-format
@@ -225,30 +228,32 @@ msgid ""
 "Tap the center of each target.<nl/><nl/>Aim for the point where the stylus "
 "tip lands, and ignore the cursor position on the screen."
 msgstr ""
+"Napauta kunkin kohteen keskelle.<nl/><nl/>Tähtää pisteeseen, johon kynän "
+"kärki osuu, ja sivuuta osoittimen sijainti näytöllä."
 
 #: ui/Calibration.qml:97
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
-msgstr ""
+msgstr "Tarkenna olemassa olevaa kalibrointia"
 
 #: ui/Calibration.qml:106
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
-msgstr ""
+msgstr "Kalibroi alusta alkaen"
 
 #: ui/Calibration.qml:120
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "Sulje"
 
 #: ui/Calibration.qml:120
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Peru"
 
 #: ui/main.qml:34
 #, kde-format
@@ -261,11 +266,10 @@ msgid "Connect a drawing tablet"
 msgstr "Yhdistä piirtopöytään"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgid "Tablet"
+#, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr "Piirtopöytä"
+msgstr "Kokeile piirtoalustaa…"
 
 #: ui/main.qml:86
 #, kde-format
@@ -276,7 +280,7 @@ msgstr "Laite:"
 #: ui/main.qml:124
 #, kde-format
 msgid "Map to screen:"
-msgstr ""
+msgstr "Yhdistä näyttöön:"
 
 #: ui/main.qml:144
 #, kde-format
@@ -286,7 +290,7 @@ msgstr "Suunta:"
 #: ui/main.qml:150
 #, kde-format
 msgid "Not Supported"
-msgstr ""
+msgstr "Ei tuettu"
 
 #: ui/main.qml:157
 #, kde-format
@@ -301,11 +305,14 @@ msgid ""
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
+"Ohjeistaa laitteen sopeutumaan vasenkätiseen käyttöön. Vaikutus vaihtelee "
+"laitteittain, mutta usein painikkeiden järjestys kääntyy niin, että "
+"piirtoalustaa voi käyttää ylösalaisin."
 
 #: ui/main.qml:174
 #, kde-format
 msgid "Mapped Area:"
-msgstr ""
+msgstr "Yhdistetty alue:"
 
 #: ui/main.qml:261
 #, kde-format
@@ -325,73 +332,67 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 – %3×%4"
 
 #: ui/main.qml:304
-#, fuzzy, kde-format
-#| msgid "Pen Button 1"
+#, kde-format
 msgid "Pen button 1:"
-msgstr "Kynäpainike 1"
+msgstr "Kynäpainike 1:"
 
 #: ui/main.qml:305
-#, fuzzy, kde-format
-#| msgid "Pen Button 1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 1'"
 msgid "pen button 1"
-msgstr "Kynäpainike 1"
+msgstr "kynäpainike 1"
 
 #: ui/main.qml:309
-#, fuzzy, kde-format
-#| msgid "Pen Button 2"
+#, kde-format
 msgid "Pen button 2:"
-msgstr "Kynäpainike 2"
+msgstr "Kynäpainike 2:"
 
 #: ui/main.qml:310
-#, fuzzy, kde-format
-#| msgid "Pen Button 2"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 2'"
 msgid "pen button 2"
-msgstr "Kynäpainike 2"
+msgstr "kynäpainike 2"
 
 #: ui/main.qml:314
-#, fuzzy, kde-format
-#| msgid "Pen Button 3"
+#, kde-format
 msgid "Pen button 3:"
-msgstr "Kynäpainike 3"
+msgstr "Kynäpainike 3:"
 
 #: ui/main.qml:315
-#, fuzzy, kde-format
-#| msgid "Pen Button 3"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 3'"
 msgid "pen button 3"
-msgstr "Kynäpainike 3"
+msgstr "kynäpainike 3"
 
 #: ui/main.qml:370
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
-msgstr ""
+msgstr "Kalibrointi meneillään"
 
 #: ui/main.qml:372
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
-msgstr ""
+msgstr "Kalibroi"
 
 #: ui/main.qml:375
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
-msgstr ""
+msgstr "Kalibrointia ei tueta"
 
 #: ui/main.qml:408
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
-msgstr ""
+msgstr "Kalibrointia monen näytön välillä ei tueta."
 
 #: ui/main.qml:418
 #, kde-format
@@ -405,41 +406,38 @@ msgid "None"
 msgstr "Ei mitään"
 
 #: ui/main.qml:454
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Pad button %1:"
-msgstr "Painike %1:"
+msgstr "Alustan painike %1:"
 
 #: ui/main.qml:457
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad button %1"
-msgstr "Painike %1:"
+msgstr "alustan painike %1"
 
 #: ui/Tester.qml:25
-#, fuzzy, kde-format
-#| msgid "Tablet"
+#, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
-msgstr "Piirtopöytä"
+msgstr "Piirtoalustan kokeilu"
 
 #: ui/Tester.qml:48
 #, kde-format
 msgid "Stylus press X=%1 Y=%2"
-msgstr ""
+msgstr "Kynän painallus X=%1 Y=%2"
 
 #: ui/Tester.qml:58
 #, kde-format
 msgid "Stylus release X=%1 Y=%2"
-msgstr ""
+msgstr "Kynän vapautus X=%1 Y=%2"
 
 #: ui/Tester.qml:68
 #, kde-format
 msgid "Stylus move X=%1 Y=%2"
-msgstr ""
+msgstr "Kynän liike X=%1 Y=%2"
 
 #: ui/Tester.qml:199
 #, kde-format
@@ -447,12 +445,14 @@ msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
 msgstr ""
+"## Selite:\n"
+"# X, Y - tapahtumakoordinaatti\n"
 
 #: ui/Tester.qml:206
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"
-msgstr ""
+msgstr "Tyhjennä"
 
 #~ msgid "Primary (default)"
 #~ msgstr "Ensisijainen (oletus)"

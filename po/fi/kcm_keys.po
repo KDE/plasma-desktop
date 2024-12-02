@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Tommi Nieminen <translator@legisign.org>, 2020, 2021, 2023.
+# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-25 02:32+0000\n"
-"PO-Revision-Date: 2023-11-19 20:51+0200\n"
+"PO-Revision-Date: 2024-10-18 10:41+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,13 +15,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: basemodel.cpp:157
 #, kde-format
 msgctxt "@title:group Launch app"
 msgid "Launch"
-msgstr ""
+msgstr "Käynnistä"
 
 #: globalaccelmodel.cpp:235
 #, kde-format
@@ -47,46 +47,41 @@ msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Viestintä yleisen pikanäppäinpalvelun kanssa epäonnistui"
 
 #: kcm_keys.cpp:379
-#, fuzzy, kde-kuit-format
-#| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
-#| msgid ""
-#| "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
-#| "Do you want to reassign it?"
+#, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
 msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to the common %2 action "
 "<interface>%3</interface>.<nl/><nl/>Re-assign it to %4?"
 msgstr ""
-"Pikanäppäin %1 on jo kytketty luokan %2 yleiseen toimintoon ”%3“.\n"
-"Haluatko muuttaa kytköstä?"
+"<shortcut>%1</shortcut> on jo kytketty luokan %2 yleiseen toimintoon "
+"<interface>%3</interface>.\n"
+"Haluatko vaihtaa kytkökseksi %4?"
 
 #: kcm_keys.cpp:385
-#, fuzzy, kde-kuit-format
-#| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
-#| msgid ""
-#| "Shortcut %1 is already assigned to the common %2 action '%3'.\n"
-#| "Do you want to reassign it?"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Shortcut <shortcut>%1</shortcut> is already assigned to action <interface>"
 "%2</interface> of <application>%3</application>.<nl/><nl/>Reassign it to "
 "action <interface>%4</interface> of <application>%5</application>?"
 msgstr ""
-"Pikanäppäin %1 on jo kytketty luokan %2 yleiseen toimintoon ”%3“.\n"
-"Haluatko muuttaa kytköstä?"
+"<shortcut>%1</shortcut> on jo kytketty sovelluksen <application>%3</"
+"application>  toimintoon <interface>%2</interface>.<nl/><nl/>Vaihdetaanko "
+"toiminnoksi <interface>%4</interface> sovelluksessa <application>%5</"
+"application>?"
 
 #: kcm_keys.cpp:394
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
-msgstr ""
+msgstr "Ratkaise pikanäppäinristiriita"
 
 #: kcm_keys.cpp:404
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
-msgstr ""
+msgstr "Kytke uudelleen"
 
 #: standardshortcutsmodel.cpp:34
 #, kde-format
@@ -139,9 +134,7 @@ msgid "Common Actions"
 msgstr "Yleiset toiminnot"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgctxt "@action: button Import shortcut scheme"
-#| msgid "Import…"
+#, kde-format
 msgctxt "@action:button Import shortcut scheme"
 msgid "Import…"
 msgstr "Tuo…"
@@ -170,12 +163,10 @@ msgid ""
 msgstr "Valitse alta osat, joiden tulisi sisältyä vietävään teemaan"
 
 #: ui/main.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@action:button Export shortcut scheme"
-#| msgid "Export…"
+#, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export"
-msgstr "Vie…"
+msgstr "Vie"
 
 #: ui/main.qml:173
 #, kde-format
@@ -196,54 +187,44 @@ msgid "Command or Script…"
 msgstr "Komento tai skripti…"
 
 #: ui/main.qml:225
-#, fuzzy, kde-format
-#| msgctxt "@action:button Export shortcut scheme"
-#| msgid "Export…"
+#, kde-format
 msgctxt ""
 "@option:check accessible export shortcuts %1 is application/group name"
 msgid "Export %1"
-msgstr "Vie…"
+msgstr "Vie %1"
 
 #: ui/main.qml:234
-#, fuzzy, kde-format
-#| msgctxt "@tooltip:button %1 is the text of a custom command"
-#| msgid "Edit command for %1"
+#, kde-format
 msgctxt "@action:button accessible %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "Muokkaa komentoa – %1"
 
 #: ui/main.qml:250
-#, fuzzy, kde-format
-#| msgctxt "@tooltip:button %1 is the text of a custom command"
-#| msgid "Edit command for %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "Muokkaa komentoa – %1"
 
 #: ui/main.qml:258
-#, fuzzy, kde-format
-#| msgid "Remove all shortcuts for %1"
+#, kde-format
 msgctxt "@action:button accessible %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Poista kaikki pikanäppäimet kohteelta %1"
 
 #: ui/main.qml:267
-#, fuzzy, kde-format
-#| msgid "Remove all shortcuts for %1"
+#, kde-format
 msgctxt "@info:tooltip %1 is the text of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Poista kaikki pikanäppäimet kohteelta %1"
 
 #: ui/main.qml:274
-#, fuzzy, kde-format
-#| msgid "Undo deletion"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Undo deletion"
 msgstr "Kumoa poistaminen"
 
 #: ui/main.qml:279
-#, fuzzy, kde-format
-#| msgid "Undo deletion"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo deletion"
 msgstr "Kumoa poistaminen"
@@ -300,18 +281,16 @@ msgid "Enter a command or choose a script file:"
 msgstr "Lisää komento tai valitse skriptitiedosto:"
 
 #: ui/main.qml:468
-#, fuzzy, kde-format
-#| msgid "Commands"
+#, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
-msgstr "Komennot"
+msgstr "Komento:"
 
 #: ui/main.qml:474
-#, fuzzy, kde-format
-#| msgid "Commands"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
-msgstr "Komennot"
+msgstr "Komento"
 
 #: ui/main.qml:481
 #, kde-format
@@ -320,9 +299,7 @@ msgid "Choose…"
 msgstr "Valitse…"
 
 #: ui/main.qml:482
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Choose Script File"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Valitse skriptitiedosto"
@@ -331,13 +308,13 @@ msgstr "Valitse skriptitiedosto"
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
-msgstr ""
+msgstr "Nimi:"
 
 #: ui/main.qml:491
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
-msgstr ""
+msgstr "Kirjoita tähän nimi"
 
 #: ui/main.qml:503
 #, kde-format
@@ -351,7 +328,7 @@ msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
 "extensions"
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
-msgstr ""
+msgstr "Skriptitiedostot (.sh, .bash, .zsh jne.) (*.*sh)"
 
 #: ui/main.qml:528
 #, kde-format
@@ -420,15 +397,13 @@ msgid "Custom shortcuts"
 msgstr "Mukautetut pikanäppäimet"
 
 #: ui/ShortcutActionDelegate.qml:182
-#, fuzzy, kde-format
-#| msgid "Delete this shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
-msgstr "Poista tämä pikanäppäin"
+msgstr "Poista pikanäppäin"
 
 #: ui/ShortcutActionDelegate.qml:186
-#, fuzzy, kde-format
-#| msgid "Delete this shortcut"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this shortcut"
 msgstr "Poista tämä pikanäppäin"
@@ -437,25 +412,22 @@ msgstr "Poista tämä pikanäppäin"
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
-msgstr ""
+msgstr "Lisää…"
 
 #: ui/ShortcutActionDelegate.qml:193
-#, fuzzy, kde-format
-#| msgid "Add custom shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr "Lisää mukautettu pikanäppäin"
 
 #: ui/ShortcutActionDelegate.qml:228
-#, fuzzy, kde-format
-#| msgid "Cancel capturing of new shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
-msgstr "Peru uuden pikanäppäimen kaappaus"
+msgstr "Peru pikanäppäimen kaappaus"
 
 #: ui/ShortcutActionDelegate.qml:232
-#, fuzzy, kde-format
-#| msgid "Cancel capturing of new shortcut"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel capturing of new shortcut"
 msgstr "Peru uuden pikanäppäimen kaappaus"

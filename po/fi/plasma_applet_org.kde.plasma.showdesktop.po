@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Tommi Nieminen <translator@legisign.org>, 2010, 2018, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2010, 2018, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 # Lasse Liehu <lasse.liehu@gmail.com>, 2015, 2016, 2022.
 #
 # KDE Finnish translation sprint participants:
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_showdesktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-12 00:41+0000\n"
-"PO-Revision-Date: 2023-03-04 19:57+0200\n"
+"PO-Revision-Date: 2024-10-18 11:02+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -17,47 +17,36 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-POT-Import-Date: 2012-12-01 22:25:25+0000\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: package/contents/ui/main.qml:116
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Minimize All Windows"
+#, kde-format
 msgid "Minimize All Applet Active Indicator"
-msgstr "Pienennä kaikki ikkunat"
+msgstr "Pienennä sovelmien kaikki aktiivisuusosoittimet"
 
 #: package/contents/ui/MinimizeAllController.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Restore All Minimized Windows"
+#, kde-format
 msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Restore Windows"
-msgstr "Palauta kaikki pienennetyt ikkunat"
+msgstr "Palauta ikkunat"
 
 #: package/contents/ui/MinimizeAllController.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Minimize All Windows"
+#, kde-format
 msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Minimize All Windows"
 msgstr "Pienennä kaikki ikkunat"
 
 #: package/contents/ui/MinimizeAllController.qml:20
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Restores the previously minimized windows"
+#, kde-format
 msgctxt "@info:tooltip shown as subtitle"
 msgid "Restores the previously minimized windows"
 msgstr "Palauttaa aiemmin pienennetyt ikkunat"
 
 #: package/contents/ui/MinimizeAllController.qml:21
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Shows the Desktop by minimizing all windows"
+#, kde-format
 msgctxt "@info:tooltip shown as subtitle"
 msgid "Shows the Desktop by minimizing all windows"
-msgstr "Näytä työpöytä pienentämällä kaikki ikkunat"
+msgstr "Näyttää työpöydän pienentämällä kaikki ikkunat"
 
 #: package/contents/ui/PeekController.qml:14
 #, kde-format

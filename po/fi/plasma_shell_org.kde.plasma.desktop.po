@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2017, 2022, 2024 Lasse Liehu <lasse.liehu@gmail.com>
-# Tommi Nieminen <translator@legisign.org>, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 #
 #
 msgid ""
@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-08 02:29+0000\n"
-"PO-Revision-Date: 2024-02-25 02:43+0200\n"
-"Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
+"PO-Revision-Date: 2024-10-18 11:07+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -329,10 +329,9 @@ msgid "Add spacer widget to the panel"
 msgstr "Lisää välilevy paneeliin"
 
 #: contents/configuration/PanelConfiguration.qml:114
-#, fuzzy, kde-format
-#| msgid "Add Widgets…"
+#, kde-format
 msgid "Add or Manage Widgets…"
-msgstr "Lisää sovelmia…"
+msgstr "Lisää tai hallitse sovelmia…"
 
 #: contents/configuration/PanelConfiguration.qml:117
 #, kde-format
@@ -473,7 +472,7 @@ msgstr "Tyyli"
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
-msgstr ""
+msgstr "Korjaa"
 
 #: contents/configuration/PanelConfiguration.qml:564
 #, kde-format
@@ -481,10 +480,9 @@ msgid "Panel Width:"
 msgstr "Paneelin leveys:"
 
 #: contents/configuration/PanelConfiguration.qml:565
-#, fuzzy, kde-format
-#| msgid "Panel Width:"
+#, kde-format
 msgid "Panel Height:"
-msgstr "Paneelin leveys:"
+msgstr "Paneelin korkeus:"
 
 #: contents/configuration/PanelConfiguration.qml:588
 #, kde-format
@@ -508,8 +506,7 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "Poista tämä paneeli – toimintoa ei voi kumota"
 
 #: contents/configuration/PanelConfiguration.qml:647
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Sulje"
@@ -519,64 +516,56 @@ msgstr "Sulje"
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
-msgstr ""
+msgstr "Poistu muokkaustilasta"
 
 #: contents/configuration/PanelConfiguration.qml:650
 #, kde-format
 msgid "Close Panel Settings window and exit Edit Mode"
-msgstr ""
+msgstr "Sulje paneeliasetusikkuna ja poistu muokkaustilasta"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:32
-#, fuzzy, kde-format
-#| msgid "Drag to change maximum height."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum height."
 msgstr "Muuta enimmäiskorkeutta vetämällä."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:33
-#, fuzzy, kde-format
-#| msgid "Drag to change maximum width."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum width."
 msgstr "Muuta enimmäisleveyttä vetämällä."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:34
 #: contents/configuration/panelconfiguration/Ruler.qml:39
-#, fuzzy, kde-format
-#| msgid "Double click to reset."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Double-click to reset."
 msgstr "Palauta kaksoisnapsauttamalla."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:37
-#, fuzzy, kde-format
-#| msgid "Drag to change minimum height."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum height."
 msgstr "Muuta vähimmäiskorkeutta vetämällä."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:38
-#, fuzzy, kde-format
-#| msgid "Drag to change minimum width."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr "Muuta vähimmäisleveyttä vetämällä."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:87
-#, fuzzy, kde-format
-#| msgid ""
-#| "Drag to change position on this screen edge.\n"
-#| "Double click to reset."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid ""
 "Drag to change position on this screen edge.\n"
 "Double-click to reset."
 msgstr ""
-"Muuta tämän näytön reunan sijaintia vetämällä. Palauta kaksoisnapsauttamalla."
+"Muuta tämän näytön reunan sijaintia vetämällä.\n"
+"Palauta kaksoisnapsauttamalla."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy, kde-format
-#| msgid "Panels and Desktops Management"
+#, kde-format
 msgid "Panel and Desktop Management"
 msgstr "Paneeli- ja työpöytähallinta"
 
@@ -630,7 +619,7 @@ msgstr "Sovelmat joita ei tueta"
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
-msgstr ""
+msgstr "Uusi!"
 
 #: contents/explorer/AppletDelegate.qml:188
 #, kde-format
@@ -669,15 +658,13 @@ msgid "Widgets"
 msgstr "Sovelmat"
 
 #: contents/explorer/WidgetExplorer.qml:178
-#, fuzzy, kde-format
-#| msgid "Get New Plugins…"
+#, kde-format
 msgctxt "@action:button The word 'new' refers to widgets"
 msgid "Get New…"
-msgstr "Hae uusia liitännäisiä…"
+msgstr "Hae uusia…"
 
 #: contents/explorer/WidgetExplorer.qml:179
-#, fuzzy, kde-format
-#| msgid "Get New Widgets…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "Hae uusia sovelmia…"
@@ -708,143 +695,140 @@ msgstr "Sovelmia ei ole saatavilla"
 #, kde-format
 msgctxt "@title: group"
 msgid "Clock:"
-msgstr ""
+msgstr "Kello:"
 
 #: contents/lockscreen/config.qml:22
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
-msgstr ""
+msgstr "näytä kello"
 
 #: contents/lockscreen/config.qml:33
 #, kde-format
 msgctxt "@title: group"
 msgid "Media controls:"
-msgstr ""
+msgstr "Mediasäätimet:"
 
 #: contents/lockscreen/config.qml:36
 #, kde-format
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
-msgstr ""
+msgstr "näytä lukituksen avauskehotteen alla"
 
 #: contents/lockscreen/LockScreenUi.qml:48
 #, kde-format
 msgid "Unlocking failed"
-msgstr ""
+msgstr "Lukituksen avaaminen epäonnistui"
 
 #: contents/lockscreen/LockScreenUi.qml:271
 #, kde-format
 msgid "Caps Lock is on"
-msgstr ""
+msgstr "Vaihtolukko on käytössä"
 
 #: contents/lockscreen/LockScreenUi.qml:285
 #, kde-format
 msgid "Sleep"
-msgstr ""
+msgstr "Valmiustila"
 
 #: contents/lockscreen/LockScreenUi.qml:291
 #, kde-format
 msgid "Hibernate"
-msgstr ""
+msgstr "Lepotila"
 
 #: contents/lockscreen/LockScreenUi.qml:297
-#, fuzzy, kde-format
-#| msgid "Switch"
+#, kde-format
 msgid "Switch User"
-msgstr "Vaihda"
+msgstr "Vaihda käyttäjä"
 
 #: contents/lockscreen/LockScreenUi.qml:358
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
-msgstr ""
+msgstr "Näyttönäppäimistö"
 
 #: contents/lockscreen/LockScreenUi.qml:382
-#, fuzzy, kde-format
-#| msgid "Switch"
+#, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr "Vaihda"
+msgstr "Vaihda asettelu"
 
 #: contents/lockscreen/MainBlock.qml:64
 #, kde-format
 msgid "Password"
-msgstr ""
+msgstr "Salasana"
 
 #: contents/lockscreen/MainBlock.qml:107
 #: contents/lockscreen/NoPasswordUnlock.qml:17
 #, kde-format
 msgid "Unlock"
-msgstr ""
+msgstr "Avaa lukitus"
 
 #: contents/lockscreen/MainBlock.qml:156
 #, kde-format
 msgid "(or scan your fingerprint on the reader)"
-msgstr ""
+msgstr "(tai lue sormenjälki)"
 
 #: contents/lockscreen/MainBlock.qml:160
 #, kde-format
 msgid "(or scan your smartcard)"
-msgstr ""
+msgstr "(tai lue älykortti)"
 
 #: contents/lockscreen/MediaControls.qml:59
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "Ei otsikkoa"
 
 #: contents/lockscreen/MediaControls.qml:60
 #, kde-format
 msgid "No media playing"
-msgstr ""
+msgstr "Ei toistettavaa mediaa"
 
 #: contents/lockscreen/MediaControls.qml:88
 #, kde-format
 msgid "Previous track"
-msgstr ""
+msgstr "Edellinen raita"
 
 #: contents/lockscreen/MediaControls.qml:100
 #, kde-format
 msgid "Play or Pause media"
-msgstr ""
+msgstr "Toista tai keskeytä media"
 
 #: contents/lockscreen/MediaControls.qml:110
 #, kde-format
 msgid "Next track"
-msgstr ""
+msgstr "Seuraava raita"
 
 #: contents/osd/OsdItem.qml:34
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
-msgstr ""
+msgstr "%1 %"
 
 #: contents/views/DesktopEditMode.qml:115
 #, kde-format
 msgid "Global Themes"
-msgstr ""
+msgstr "Yleisteemat"
 
 #: contents/views/DesktopEditMode.qml:122
-#, fuzzy, kde-format
-#| msgid "Open configuration page"
+#, kde-format
 msgid "Display Configuration"
-msgstr "Avaa asetussivu"
+msgstr "Näyttöasetukset"
 
 #: contents/views/DesktopEditMode.qml:143
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
-msgstr ""
+msgstr "Lisää"
 
 #: contents/views/DesktopEditMode.qml:152
 #, kde-format
 msgid "Exit Edit Mode"
-msgstr ""
+msgstr "Poistu muokkaustilasta"
 
 #: contents/views/Panel.qml:316
 #, kde-format
 msgid "Panel Focus Indicator"
-msgstr ""
+msgstr "Paneelin kohdistuksen osoitin"
 
 #~ msgid "Height:"
 #~ msgstr "Korkeus:"

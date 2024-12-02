@@ -6,7 +6,7 @@
 # Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2010, 2011, 2012, 2013, 2014, 2016, 2017.
 # Jiri Grönroos <jiri.gronroos+kde@iki.fi>, 2012.
-# Tommi Nieminen <translator@legisign.org>, 2012, 2020, 2021, 2023.
+# SPDX-FileCopyrightText: 2012, 2020, 2021, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 #
 # KDE Finnish translation sprint participants:
 #
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-22 00:41+0000\n"
-"PO-Revision-Date: 2023-11-19 20:53+0200\n"
+"PO-Revision-Date: 2024-10-18 10:38+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -24,8 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-POT-Import-Date: 2012-12-01 22:22:22+0000\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -85,13 +84,7 @@ msgid "Keyboard layout visualization"
 msgstr "Näppäimistöasettelun yleiskuva"
 
 #: tastenbrett/main.cpp:139
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid ""
-#| "The keyboard geometry failed to load. This often indicates that the "
-#| "selected model does not support a specific layout or layout variant. This "
-#| "problem will likely also present when you try to use this combination of "
-#| "model, layout and variant."
+#, kde-format
 msgctxt "@label"
 msgid ""
 "The keyboard geometry failed to load. This often indicates that the selected "
@@ -102,36 +95,36 @@ msgid ""
 "not supported and  will also trigger this message. These might still work "
 "fine if applied"
 msgstr ""
-"Näppäimistögeometrian lataaminen epäonnistui. Tämä osoittaa yleensä, ettei "
+"Näppäimistögeometrian lataaminen epäonnistui. Tämä tarkoittaa yleensä, ettei "
 "valittu malli tue valittua asettelua tai sen muunnelmaa. Odotettavissa voi "
-"olla ongelmia, jos käytät tätä mallin, asettelun ja muunnelman yhdistelmää."
+"olla ongelmia, jos käytät tätä mallin, asettelun ja muunnelman yhdistelmää.\n"
+"Järjestelmän xkb-kansion ulkopuolella määritettyjen asettelujen esikatselula "
+"ei tueta, mikä myös voi aiheuttaa tämän viestin. Asettelut voivat käytössä "
+"silti toimia oikein"
 
 #: ui/KeyBindings.qml:16
 #, kde-format
 msgctxt "@title"
 msgid "Key Bindings"
-msgstr ""
+msgstr "Näppäinsidokset"
 
 #: ui/KeyBindings.qml:37
-#, fuzzy, kde-format
-#| msgid "&Configure keyboard options"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Configure keyboard options"
-msgstr "&Muokkaa näppäimistövalintoja"
+msgstr "Muokkaa näppäimistövalintoja"
 
 #: ui/LayoutDialog.qml:20
-#, fuzzy, kde-format
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add Layout"
 msgstr "Lisää asettelu"
 
 #: ui/LayoutDialog.qml:177
-#, fuzzy, kde-format
-#| msgid "Show layout indicator"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
-msgstr "Näytä asettelun ilmaisin"
+msgstr "Asettelun lyhenne"
 
 #: ui/LayoutDialog.qml:187
 #, kde-format
@@ -140,17 +133,16 @@ msgid ""
 "The abbreviated name of the selected layout, which will be displayed in the "
 "system tray. You can change this setting yourself."
 msgstr ""
+"Valitun asettelun ilmoitusalueella näkyvä lyhenne. Asetusta voi muuttaa."
 
 #: ui/LayoutDialog.qml:195
-#, fuzzy, kde-format
-#| msgid "Shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "Pikanäppäin:"
 
 #: ui/LayoutDialog.qml:206 ui/main.qml:285
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button"
 msgid "Preview"
 msgstr "Esikatselu"
@@ -159,36 +151,34 @@ msgstr "Esikatselu"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Switching…"
-msgstr ""
+msgstr "Vaihtoasetukset…"
 
 #: ui/main.qml:38
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Configure Switching"
-msgstr "Valitse asettelut"
+msgstr "Vaihtoasetukset"
 
 #: ui/main.qml:44
 #, kde-format
 msgctxt "@action:button"
 msgid "Key Bindings"
-msgstr ""
+msgstr "Näppäinsidokset"
 
 #: ui/main.qml:45
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Key Bindings"
-msgstr ""
+msgstr "Näppäinsidokset"
 
 #: ui/main.qml:51
 #, kde-format
 msgctxt "@action:button Layout"
 msgid "Add…"
-msgstr ""
+msgstr "Lisää…"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add layout"
 msgstr "Lisää asettelu"
@@ -197,122 +187,109 @@ msgstr "Lisää asettelu"
 #, kde-format
 msgctxt "@label:checkbox configure layouts option"
 msgid "Enable"
-msgstr ""
+msgstr "Käytä"
 
 #: ui/main.qml:60
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Configure Layouts"
-msgstr "Valitse asettelut"
+msgstr "Asetteluasetukset"
 
 #: ui/main.qml:76
 #, kde-format
 msgctxt "@label:listbox Keyboard model"
 msgid "Model:"
-msgstr ""
+msgstr "Malli:"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "NumLock on Plasma Startup"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "NumLock on startup:"
-msgstr "Numerolukko Plasman käynnistyessä"
+msgstr "Numerolukko käynnistettäessä:"
 
 #: ui/main.qml:112
-#, fuzzy, kde-format
-#| msgid "T&urn on"
+#, kde-format
 msgctxt "@item:inlistbox Turn on \"NumLock\" on startup"
 msgid "Turn on"
-msgstr "Ota &käyttöön"
+msgstr "Ota käyttöön"
 
 #: ui/main.qml:116
-#, fuzzy, kde-format
-#| msgid "Turn o&ff"
+#, kde-format
 msgctxt "@item:inlistbox Turn off \"NumLock\" on startup"
 msgid "Turn off"
-msgstr "P&oista käytöstä"
+msgstr "Poista käytöstä"
 
 #: ui/main.qml:120
-#, fuzzy, kde-format
-#| msgid "&Leave unchanged"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Leave \"NumLock\" at whatever it was set to before Plasma "
 "started up"
 msgid "Leave unchanged"
-msgstr "&Älä muuta tilaa"
+msgstr "Älä muuta tilaa"
 
 #: ui/main.qml:146
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Key repeat:"
-msgstr "Näppäintoisto"
+msgstr "Näppäintoisto:"
 
 #: ui/main.qml:155
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Key repeat"
 msgstr "Näppäintoisto"
 
 #: ui/main.qml:166
-#, fuzzy, kde-format
-#| msgid "&Delay:"
+#, kde-format
 msgctxt "@label:textbox Key repeat delay"
 msgid "Delay:"
-msgstr "&Viive"
+msgstr "Viive:"
 
 #: ui/main.qml:180
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat delay %1"
-msgstr ""
+msgstr "Näppäintoiston viive %1"
 
 #: ui/main.qml:188
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "%1 ms"
-msgstr ""
+msgstr "%1 ms"
 
 #: ui/main.qml:192
-#, fuzzy, kde-format
-#| msgid " ms"
+#, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "ms"
 msgstr " ms"
 
 # HUOM! En mahda mitään, mutta minusta ”tahti” ei tässä vain kuulosta oikealta
 #: ui/main.qml:205
-#, fuzzy, kde-format
-#| msgid "&Rate:"
+#, kde-format
 msgctxt "@label:textbox Key repeat rate"
 msgid "Rate:"
-msgstr "&Nopeus:"
+msgstr "Nopeus:"
 
 #: ui/main.qml:219
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat rate %1"
-msgstr ""
+msgstr "Näppäintoiston nopeus %1"
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid " repeats/s"
+#, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "%1 repeats/s"
-msgstr " toistoa/s"
+msgstr "%1 toistoa/s"
 
 #: ui/main.qml:231
-#, fuzzy, kde-format
-#| msgid " repeats/s"
+#, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "repeats/s"
-msgstr " toistoa/s"
+msgstr "toistoa/s"
 
 #: ui/main.qml:243
-#, fuzzy, kde-format
-#| msgid "Test area:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Test area:"
 msgstr "Kokeilualue:"
@@ -321,18 +298,16 @@ msgstr "Kokeilualue:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to test settings"
-msgstr ""
+msgstr "Kokeile asetuksia kirjoittamalla tähän"
 
 #: ui/main.qml:256
-#, fuzzy, kde-format
-#| msgid "Layouts"
+#, kde-format
 msgctxt "@title:view"
 msgid "Layouts"
 msgstr "Asettelut"
 
 #: ui/main.qml:268
-#, fuzzy, kde-format
-#| msgid "Move Up"
+#, kde-format
 msgctxt "@action:button"
 msgid "Move Up"
 msgstr "Siirrä ylemmäs"
@@ -341,32 +316,28 @@ msgstr "Siirrä ylemmäs"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout up"
-msgstr ""
+msgstr "Siirrä asettelua %1 ylemmäs"
 
 #: ui/main.qml:275
-#, fuzzy, kde-format
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@action:button"
 msgid "Move Down"
 msgstr "Siirrä alemmas"
 
 #: ui/main.qml:276
-#, fuzzy, kde-format
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout Down"
-msgstr "Siirrä alemmas"
+msgstr "Siirrä asettelua %1 alemmas"
 
 #: ui/main.qml:286
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Preview"
 msgstr "Esikatselu"
 
 #: ui/main.qml:294
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "Poista"
@@ -375,27 +346,25 @@ msgstr "Poista"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Remove layout %1"
-msgstr ""
+msgstr "Poista asettelu %1"
 
 #: ui/main.qml:307
-#, fuzzy, kde-format
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Spare layouts:"
-msgstr "Ylimääräiset asettelut"
+msgstr "Vara-asettelut:"
 
 #: ui/main.qml:344
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
-msgstr ""
+msgstr "Vara-asettelujen määrä"
 
 #: ui/main.qml:376
-#, fuzzy, kde-format
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@label:textbox completes spinbox, x main layouts"
 msgid "main layouts"
-msgstr "Ylimääräiset asettelut"
+msgstr "pääasettelut"
 
 #: ui/main.qml:380
 #, kde-format
@@ -406,97 +375,93 @@ msgid ""
 "accessed through the keyboard indicator applet or by setting a custom "
 "shortcut."
 msgstr ""
+"Pääasetteluja on enintään neljä, kaikki muut ovat varalla. Vara-asettelut "
+"eivät sisälly asettelukiertoon, mutta niihin voi vaihtaa "
+"ilmoitusaluesovelmalla tai mukautetulla pikanäppäimellä."
 
 #: ui/main.qml:385
-#, fuzzy, kde-format
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
-msgstr "Pääasettelujen määrä:"
+msgstr "Vaihda asettelun pikanäppäin:"
 
 #: ui/main.qml:409
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
-msgstr ""
+msgstr "tai"
 
 #: ui/Switching.qml:17
-#, fuzzy, kde-format
-#| msgid "Configure layouts"
+#, kde-format
 msgctxt "@title"
 msgid "Configure Switching"
-msgstr "Valitse asettelut"
+msgstr "Vaihtoasetukset"
 
 #: ui/Switching.qml:23
 #, kde-format
 msgctxt "@title:group"
 msgid "Behavior"
-msgstr ""
+msgstr "Toiminta"
 
 #: ui/Switching.qml:28
-#, fuzzy, kde-format
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Switching layout affects:"
-msgstr "Pääasettelujen määrä:"
+msgstr "Asettelun vaihdon ala:"
 
 #: ui/Switching.qml:35
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows"
-msgstr ""
+msgstr "Kaikki ikkunat"
 
 #: ui/Switching.qml:39
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows on current desktop"
-msgstr ""
+msgstr "Kaikki nykyisen työpöydän ikkunat"
 
 #: ui/Switching.qml:43
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows of current application"
-msgstr ""
+msgstr "Kaikki nykyisen sovelluksen ikkunat"
 
 #: ui/Switching.qml:47
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Current window only"
-msgstr ""
+msgstr "Vain nykyinen ikkuna"
 
 #: ui/Switching.qml:74
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Show notification on layout change"
-msgstr ""
+msgstr "Näytä asetteluvaihdosta ilmoitus"
 
 #: ui/Switching.qml:86
-#, fuzzy, kde-format
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:group"
 msgid "Shortcuts"
-msgstr "Pikanäppäin"
+msgstr "Pikanäppäimet"
 
 #: ui/Switching.qml:91 ui/Switching.qml:153
-#, fuzzy, kde-format
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Change layout:"
-msgstr "Ylimääräiset asettelut"
+msgstr "Vaihda asettelu:"
 
 #: ui/Switching.qml:112
-#, fuzzy, kde-format
-#| msgid "Switch to Last-Used Keyboard Layout"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Switch to last used layout:"
-msgstr "Vaihda viimeksi käytettyyn näppäimistöasetteluun"
+msgstr "Vaihda viimeisimpään asetteluun:"
 
 #: ui/Switching.qml:133
-#, fuzzy, kde-format
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:group"
 msgid "Legacy Shortcuts"
-msgstr "Pikanäppäin"
+msgstr "Vanhat pikanäppäimet"
 
 #: ui/Switching.qml:141
 #, kde-kuit-format
@@ -507,14 +472,17 @@ msgid ""
 "Wayland.<nl/><nl/>Setting these shortcuts will take you to the Key bindings "
 "page."
 msgstr ""
+"Vanhat X11-pikanäppäimet sallivat tarkemman säädön vain muuntonäppäimistä "
+"koostuviin pikanäppäimiin ja voivat joskus tukea X11:tä paremmin. Niitä voi "
+"käyttää myös Waylandissä.<nl/>Näiden pikanäppäinten asettaminen siirtää "
+"sinut näppäinsidossivulle."
 
 # Id on outo: näppäin, jolla vaihdetaan näppäimistöasettelua (oletuksena Ctrl-Alt-K)
 #: ui/Switching.qml:182
-#, fuzzy, kde-format
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Alternative symbols:"
-msgstr "Asettelunvaihtonäppäin:"
+msgstr "Vaihtoehtoiset symbolit:"
 
 #: ui/Switching.qml:208
 #, kde-format
@@ -522,7 +490,7 @@ msgctxt "@info"
 msgid ""
 "Modifier keys can be used to type additional characters, symbols, and "
 "diacritical marks."
-msgstr ""
+msgstr "Muunnosnäppäimin voi kirjoittaa lisämerkkejä, symboleja ja tarkkeita."
 
 #: xkboptionsmodel.cpp:160
 #, kde-format
