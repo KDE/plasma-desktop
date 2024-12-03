@@ -17,14 +17,14 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-29 02:38+0000\n"
-"PO-Revision-Date: 2024-09-10 02:21+0900\n"
+"PO-Revision-Date: 2024-12-02 16:49+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.08.3\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
@@ -35,12 +35,12 @@ msgstr "查詢輸入裝置失敗。請重新開啟設定模組。"
 #: backends/kwin_wl/kwin_wl_backend.cpp:81
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
-msgstr "讀取 %1 基本裝置資訊時發生緊急錯誤。"
+msgstr "讀取 %1 基本裝置資訊時發生嚴重錯誤。"
 
 #: kcm.cpp:86
 #, kde-format
 msgid "Not able to select appropriate backend"
-msgstr ""
+msgstr "無法選擇合適的後端"
 
 #: kcm.cpp:142
 #, kde-format
