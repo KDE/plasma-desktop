@@ -1,9 +1,9 @@
 # Translation of kcmqtquicksettings.po to Catalan
-# Copyright (C) 2018-2023 This_file_is_part_of_KDE
+# Copyright (C) 2018-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2018, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2018, 2023, 2024.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2020.
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
 msgid ""
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-02 00:44+0000\n"
-"PO-Revision-Date: 2023-04-07 08:47+0100\n"
+"PO-Revision-Date: 2024-12-02 09:00+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -34,17 +34,15 @@ msgstr "txemaq@gmail.com"
 
 #. i18n: ectx: property (text), widget (KMessageWidget, kmessagewidget)
 #: kcmqtquicksettingswidget.ui:23
-#, fuzzy, kde-format
-#| msgid ""
-#| "These settings adjust the QtQuick settings used by Plasma. Only adjust if "
-#| "you know what you are doing."
+#, kde-format
 msgid ""
 "These settings adjust the QtQuick settings used by Plasma. Modifying these "
 "settings can break your desktop. Only adjust these settings if you know what "
 "you are doing."
 msgstr ""
-"Aquests paràmetres ajusten l'arranjament del «QtQuick» usat pel Plasma. "
-"Ajusteu-ho només si sabeu el que esteu fent."
+"Aquests paràmetres ajusten la configuració del «QtQuick» usada pel Plasma. "
+"La modificació d'aquests paràmetres poden trencar l'escriptori. Ajusteu-ho "
+"només si sabeu què esteu fent."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcmqtquicksettingswidget.ui:41

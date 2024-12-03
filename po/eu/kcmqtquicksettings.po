@@ -1,15 +1,15 @@
 # Translation of kcmqtquicksettings.po to Euskara/Basque (eu).
-# Copyright (C) 2018-2023 This file is copyright:
+# Copyright (C) 2018-2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2024 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2018, 2023.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2018, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmqtquicksettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-02 00:44+0000\n"
-"PO-Revision-Date: 2023-04-09 20:08+0200\n"
+"PO-Revision-Date: 2024-12-02 22:59+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,17 +31,15 @@ msgstr "xalba@euskalnet.net"
 
 #. i18n: ectx: property (text), widget (KMessageWidget, kmessagewidget)
 #: kcmqtquicksettingswidget.ui:23
-#, fuzzy, kde-format
-#| msgid ""
-#| "These settings adjust the QtQuick settings used by Plasma. Only adjust if "
-#| "you know what you are doing."
+#, kde-format
 msgid ""
 "These settings adjust the QtQuick settings used by Plasma. Modifying these "
 "settings can break your desktop. Only adjust these settings if you know what "
 "you are doing."
 msgstr ""
-"Ezarpen hauek Plasmak erabilitako QtQuick ezarpenak doitzen dituzte. Doitu "
-"soilik egiten ari zarena ezagutzen baduzu."
+"Ezarpen hauek Plasmak erabilitako QtQuick ezarpenak doitzen dituzte. Ezarpen "
+"hauek aldatzea zure mahaigaina hautsi dezake. Ezarpen hauek doitu, bakarrik, "
+"egiten ari zarena ezagutzen baduzu."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcmqtquicksettingswidget.ui:41
