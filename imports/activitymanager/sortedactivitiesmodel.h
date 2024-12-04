@@ -74,7 +74,7 @@ private:
 
     QString m_previousActivity;
 
-    KActivities::ActivitiesModel *m_activitiesModel = nullptr;
+    KActivities::ActivitiesModel *const m_activitiesModel;
     KActivities::Consumer *m_activities = nullptr;
 
     QHash<QString, QVariantList> m_activitiesWindows;
