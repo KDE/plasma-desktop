@@ -7,7 +7,6 @@
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
 
-import org.kde.draganddrop as DragDrop
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
 import org.kde.kirigami 2.20 as Kirigami
@@ -84,11 +83,11 @@ Kirigami.Icon {
 
         active: defaultCompactRepresentation.plasmoidItem.expandedOnDragHover
 
-        sourceComponent: DragDrop.DropArea {
+        sourceComponent: DropArea {
             anchors.fill: parent
 
-            onDragEnter: dropTimer.restart()
-            onDragLeave: dropTimer.stop()
+            onEntered: dropTimer.restart()
+            onExited: dropTimer.stop()
 
             Timer {
                 id: dropTimer
