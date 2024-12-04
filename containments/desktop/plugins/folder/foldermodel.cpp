@@ -278,18 +278,18 @@ QHash<int, QByteArray> FolderModel::roleNames() const
 QHash<int, QByteArray> FolderModel::staticRoleNames()
 {
     QHash<int, QByteArray> roleNames;
-    roleNames[Qt::DisplayRole] = "display";
-    roleNames[Qt::DecorationRole] = "decoration";
-    roleNames[BlankRole] = "blank";
-    roleNames[SelectedRole] = "selected";
-    roleNames[IsDirRole] = "isDir";
-    roleNames[IsLinkRole] = "isLink";
-    roleNames[IsHiddenRole] = "isHidden";
-    roleNames[UrlRole] = "url";
-    roleNames[LinkDestinationUrl] = "linkDestinationUrl";
-    roleNames[SizeRole] = "size";
-    roleNames[TypeRole] = "type";
-    roleNames[FileNameWrappedRole] = "displayWrapped";
+    roleNames[Qt::DisplayRole] = QByteArrayLiteral("display");
+    roleNames[Qt::DecorationRole] = QByteArrayLiteral("decoration");
+    roleNames[BlankRole] = QByteArrayLiteral("blank");
+    roleNames[SelectedRole] = QByteArrayLiteral("selected");
+    roleNames[IsDirRole] = QByteArrayLiteral("isDir");
+    roleNames[IsLinkRole] = QByteArrayLiteral("isLink");
+    roleNames[IsHiddenRole] = QByteArrayLiteral("isHidden");
+    roleNames[UrlRole] = QByteArrayLiteral("url");
+    roleNames[LinkDestinationUrl] = QByteArrayLiteral("linkDestinationUrl");
+    roleNames[SizeRole] = QByteArrayLiteral("size");
+    roleNames[TypeRole] = QByteArrayLiteral("type");
+    roleNames[FileNameWrappedRole] = QByteArrayLiteral("displayWrapped");
 
     return roleNames;
 }

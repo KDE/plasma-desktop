@@ -32,8 +32,8 @@ PreviewPluginsModel::~PreviewPluginsModel()
 QHash<int, QByteArray> PreviewPluginsModel::roleNames() const
 {
     return {
-        {Qt::DisplayRole, "display"},
-        {Qt::CheckStateRole, "checked"},
+        {Qt::DisplayRole, QByteArrayLiteral("display")},
+        {Qt::CheckStateRole, QByteArrayLiteral("checked")},
     };
 }
 

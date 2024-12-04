@@ -30,10 +30,10 @@ MimeTypesModel::~MimeTypesModel()
 QHash<int, QByteArray> MimeTypesModel::roleNames() const
 {
     return {
-        {Qt::DisplayRole, "comment"},
-        {Qt::UserRole, "name"},
-        {Qt::DecorationRole, "decoration"},
-        {Qt::CheckStateRole, "checked"},
+        {Qt::DisplayRole, QByteArrayLiteral("comment")},
+        {Qt::UserRole, QByteArrayLiteral("name")},
+        {Qt::DecorationRole, QByteArrayLiteral("decoration")},
+        {Qt::CheckStateRole, QByteArrayLiteral("checked")},
     };
 }
 

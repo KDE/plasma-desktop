@@ -56,11 +56,11 @@ DirModel::~DirModel()
 QHash<int, QByteArray> DirModel::roleNames() const
 {
     return {
-        {Qt::DisplayRole, "display"},
-        {Qt::DecorationRole, "decoration"},
-        {UrlRole, "url"},
-        {MimeTypeRole, "mimeType"},
-        {Thumbnail, "thumbnail"},
+        {Qt::DisplayRole, QByteArrayLiteral("display")},
+        {Qt::DecorationRole, QByteArrayLiteral("decoration")},
+        {UrlRole, QByteArrayLiteral("url")},
+        {MimeTypeRole, QByteArrayLiteral("mimeType")},
+        {Thumbnail, QByteArrayLiteral("thumbnail")},
     };
 }
 

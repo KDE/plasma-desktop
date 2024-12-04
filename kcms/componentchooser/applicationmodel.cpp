@@ -226,10 +226,10 @@ QModelIndex ApplicationModel::findByStorageId(const QString &storageId) const
 QHash<int, QByteArray> ApplicationModel::roleNames() const
 {
     return {
-        {Qt::DisplayRole, "name"},
-        {Icon, "icon"},
-        {StorageId, "storageId"},
-        {Selected, "isSelected"},
-        {ExecLine, "execLine"},
+        {Qt::DisplayRole, QByteArrayLiteral("name")},
+        {Icon, QByteArrayLiteral("icon")},
+        {StorageId, QByteArrayLiteral("storageId")},
+        {Selected, QByteArrayLiteral("isSelected")},
+        {ExecLine, QByteArrayLiteral("execLine")},
     };
 }

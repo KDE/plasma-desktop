@@ -52,7 +52,10 @@ ExcludedApplicationsModel::~ExcludedApplicationsModel()
 
 QHash<int, QByteArray> ExcludedApplicationsModel::roleNames() const
 {
-    return {{ApplicationIdRole, "name"}, {Qt::DecorationRole, "icon"}, {Qt::DisplayRole, "title"}, {BlockedApplicationRole, "blocked"}};
+    return {{ApplicationIdRole, QByteArrayLiteral("name")},
+            {Qt::DecorationRole, QByteArrayLiteral("icon")},
+            {Qt::DisplayRole, QByteArrayLiteral("title")},
+            {BlockedApplicationRole, QByteArrayLiteral("blocked")}};
 }
 
 void ExcludedApplicationsModel::load()

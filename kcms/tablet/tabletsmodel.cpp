@@ -297,6 +297,6 @@ InputDevice *TabletsModel::padAt(int row) const
 QHash<int, QByteArray> TabletsModel::roleNames() const
 {
     return {
-        {Qt::DisplayRole, "display"},
+        {Qt::DisplayRole, QByteArrayLiteral("display")},
     };
 }

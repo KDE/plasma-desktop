@@ -30,8 +30,8 @@ PlacesModel::~PlacesModel()
 QHash<int, QByteArray> PlacesModel::roleNames() const
 {
     QHash<int, QByteArray> roleNames = QSortFilterProxyModel::roleNames();
-    roleNames[Qt::DisplayRole] = "display";
-    roleNames[Qt::DecorationRole] = "decoration";
+    roleNames[Qt::DisplayRole] = QByteArrayLiteral("display");
+    roleNames[Qt::DecorationRole] = QByteArrayLiteral("decoration");
     return roleNames;
 }
 

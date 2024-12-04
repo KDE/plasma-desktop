@@ -150,7 +150,7 @@ InputDevice *DevicesModel::deviceAt(int row) const
 QHash<int, QByteArray> DevicesModel::roleNames() const
 {
     return {
-        {Qt::DisplayRole, "display"},
+        {Qt::DisplayRole, QByteArrayLiteral("display")},
     };
 }
 

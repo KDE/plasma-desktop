@@ -271,10 +271,10 @@ QHash<int, QByteArray> SortedActivitiesModel::roleNames() const
 
     auto roleNames = sourceModel()->roleNames();
 
-    roleNames[LastTimeUsed] = "lastTimeUsed";
-    roleNames[LastTimeUsedString] = "lastTimeUsedString";
-    roleNames[WindowCount] = "windowCount";
-    roleNames[HasWindows] = "hasWindows";
+    roleNames[LastTimeUsed] = QByteArrayLiteral("lastTimeUsed");
+    roleNames[LastTimeUsedString] = QByteArrayLiteral("lastTimeUsedString");
+    roleNames[WindowCount] = QByteArrayLiteral("windowCount");
+    roleNames[HasWindows] = QByteArrayLiteral("hasWindows");
 
     return roleNames;
 }

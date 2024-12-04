@@ -89,10 +89,10 @@ void MostUsedModel::setResultModel(ResultModel *model)
 QHash<int, QByteArray> MostUsedModel::roleNames() const
 {
     QHash<int, QByteArray> roleNames;
-    roleNames.insert(Qt::DisplayRole, "display");
-    roleNames.insert(Qt::DecorationRole, "decoration");
-    roleNames.insert(ResultModel::ScoreRole, "score");
-    roleNames.insert(KcmPluginRole, "kcmPlugin");
+    roleNames.insert(Qt::DisplayRole, QByteArrayLiteral("display"));
+    roleNames.insert(Qt::DecorationRole, QByteArrayLiteral("decoration"));
+    roleNames.insert(ResultModel::ScoreRole, QByteArrayLiteral("score"));
+    roleNames.insert(KcmPluginRole, QByteArrayLiteral("kcmPlugin"));
     return roleNames;
 }
 
