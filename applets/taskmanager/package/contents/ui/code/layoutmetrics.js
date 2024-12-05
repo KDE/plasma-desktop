@@ -63,8 +63,14 @@ function preferredMinWidth() {
 function preferredMaxWidth() {
     if (tasks.iconsOnly) {
         if (tasks.vertical) {
+            if (tasks.width === 0) {
+                return 0
+            }
             return tasks.width + verticalMargins();
         } else {
+            if (tasks.height === 0) {
+                return 0
+            }
             return tasks.height + horizontalMargins();
         }
     }
