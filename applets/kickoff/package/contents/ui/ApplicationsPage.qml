@@ -11,6 +11,7 @@ import QtQuick.Templates as T
 import org.kde.plasma.private.kicker as Kicker
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.plasmoid
+import org.kde.plasma.extras as PlasmaExtras
 
 BasePage {
     id: root
@@ -24,6 +25,15 @@ BasePage {
         delegate: KickoffListDelegate {
             width: view.availableWidth
             isCategoryListItem: true
+            background: PlasmaExtras.Highlight {
+                // I have to do this for it to actually fill the item for some reason
+                anchors.fill: parent
+                active: false
+                hovered: parent.mouseArea.containsMouse
+                visible: !Plasmoid.configuration.switchCategoryOnHover
+                    && !parent.isSeparator && !parent.ListView.isCurrentItem
+                    && hovered
+            }
         }
     }
 

@@ -9,6 +9,7 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Templates as T
+import org.kde.plasma.extras as PlasmaExtras
 
 BasePage {
     id: root
@@ -23,6 +24,15 @@ BasePage {
             width: view.availableWidth
             isCategoryListItem: true
             isMultilineText: false
+            background: PlasmaExtras.Highlight {
+                // I have to do this for it to actually fill the item for some reason
+                anchors.fill: parent
+                active: false
+                hovered: parent.mouseArea.containsMouse
+                visible: !Plasmoid.configuration.switchCategoryOnHover
+                    && !parent.isSeparator && !parent.ListView.isCurrentItem
+                    && hovered
+            }
         }
     }
 

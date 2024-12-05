@@ -38,6 +38,7 @@ KCM.SimpleKCM {
     property int cfg_primaryActions: Plasmoid.configuration.primaryActions
     property alias cfg_showActionButtonCaptions: showActionButtonCaptions.checked
     property alias cfg_compactMode: compactModeCheckbox.checked
+    property alias cfg_switchCategoryOnHover: switchCategoryOnHoverCheckbox.checked
 
     Kirigami.FormLayout {
         QQC2.Button {
@@ -184,6 +185,11 @@ KCM.SimpleKCM {
             Layout.fillWidth: true
             wrapMode: Text.Wrap
             font: Kirigami.Theme.smallFont
+        }
+
+        QQC2.CheckBox {
+            id: switchCategoryOnHoverCheckbox
+            text: i18n("Switch sidebar categories when hovering over them")
         }
 
         QQC2.Button {

@@ -33,7 +33,7 @@ EmptyPage {
 
     header: MouseArea {
         implicitHeight: KickoffSingleton.listItemMetrics.margins.top
-        hoverEnabled: true
+        hoverEnabled: mainContentView || Plasmoid.configuration.switchCategoryOnHover
         onEntered: {
             if (containsMouse) {
                 const targetIndex = view.indexAt(mouseX + view.contentX, view.contentY)
@@ -47,7 +47,7 @@ EmptyPage {
 
     footer: MouseArea {
         implicitHeight: KickoffSingleton.listItemMetrics.margins.bottom
-        hoverEnabled: true
+        hoverEnabled: mainContentView || Plasmoid.configuration.switchCategoryOnHover
         onEntered: {
             if (containsMouse) {
                 const targetIndex = view.indexAt(mouseX + view.contentX, view.height + view.contentY - 1)
