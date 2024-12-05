@@ -493,7 +493,8 @@ ColumnLayout {
     }
 
     Instantiator {
-        active: setPositionButton.checked
+        id: dialogInstantiator
+        active: setPositionButton.checked || clonePanelButton.checked
         asynchronous: true
         model: Application.screens
         Item {
@@ -507,7 +508,7 @@ ColumnLayout {
                 property var onClickedLocation
                 flags: Qt.WindowStaysOnTopHint | Qt.WindowDoesNotAcceptFocus | Qt.BypassWindowManagerHint
                 location: PlasmaCore.Types.Floating
-                visible: setPositionButton.checked && (panel.location !== onClickedLocation || modelData.name !== panel.screenToFollow.name)
+                visible: dialogInstantiator.active && (panel.location !== onClickedLocation || modelData.name !== panel.screenToFollow.name)
 
                 x: modelData.virtualX + Kirigami.Units.largeSpacing
                 y: modelData.virtualY + modelData.height / 2 - mainItem.height / 2 - margins.top
@@ -517,7 +518,14 @@ ColumnLayout {
                     height: Kirigami.Units.iconSizes.enormous
                     icon.name: root.iconSource
 
-                    onClicked: setPositionButton.moveTo(root.onClickedLocation, Window.window)
+                    onClicked: {
+                        if (setPositionButton.checked) {
+                            setPositionButton.moveTo(root.onClickedLocation, Window.window)
+                        } else if (clonePanelButton.checked) {
+                            panel.clonePanelTo(root.onClickedLocation, dialogRoot.panelConfiguration.screenFromWindow(Window.window))
+                            clonePanelButton.checked = false
+                        }
+                    }
                 }
             }
 
@@ -638,6 +646,17 @@ ColumnLayout {
                 PC3.ToolTip.visible: hovered
 
                 onClicked: plasmoid.internalAction("remove").trigger()
+            }
+
+            PC3.ToolButton {
+                id: clonePanelButton
+                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button Clone the panel", "Clone Panel")
+                icon.name: "edit-copy-symbolic"
+                checkable: true
+
+                PC3.ToolTip.text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:tooltip", "Create a new panel with the same settings and applets")
+                PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
+                PC3.ToolTip.visible: hovered
             }
 
 
