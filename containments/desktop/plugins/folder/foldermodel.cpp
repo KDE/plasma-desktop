@@ -2225,3 +2225,5 @@ bool FolderModel::isDeleteCommandShown()
     KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("KDE"));
     return cg.readEntry("ShowDeleteCommand", false);
 }
+
+#include "moc_foldermodel.cpp"

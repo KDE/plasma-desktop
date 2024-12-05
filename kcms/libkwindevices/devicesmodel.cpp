@@ -188,3 +188,5 @@ bool DevicesModel::isSaveNeeded() const
         return dev->isSaveNeeded();
     });
 }
+
+#include "moc_devicesmodel.cpp"

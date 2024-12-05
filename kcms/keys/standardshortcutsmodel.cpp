@@ -152,3 +152,5 @@ void StandardShortcutsModel::save()
         }
     }
 }
+
+#include "moc_standardshortcutsmodel.cpp"

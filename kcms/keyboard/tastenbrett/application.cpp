@@ -20,3 +20,5 @@ Application *Application::instance()
 {
     return qobject_cast<Application *>(qGuiApp);
 }
+
+#include "moc_application.cpp"

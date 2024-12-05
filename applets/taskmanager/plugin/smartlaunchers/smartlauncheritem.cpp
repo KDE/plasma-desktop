@@ -219,3 +219,5 @@ void Item::setUrgent(bool urgent)
         Q_EMIT urgentChanged(urgent);
     }
 }
+
+#include "moc_smartlauncheritem.cpp"

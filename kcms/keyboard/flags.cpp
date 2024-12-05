@@ -94,3 +94,5 @@ QString Flags::getLongText(const LayoutUnit &layoutUnit)
 
     return layoutText;
 }
+
+#include "moc_flags.cpp"

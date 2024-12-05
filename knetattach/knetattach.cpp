@@ -337,3 +337,5 @@ void KNetAttach::updateFinishButtonText(bool save)
 }
 
 // vim: ts=8 sw=4 noet
+
+#include "moc_knetattach.cpp"

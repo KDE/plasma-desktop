@@ -78,3 +78,5 @@ qreal Screen::devicePixelRatioForPoint(int x, int y)
     }
     return 1.0;
 }
+
+#include "moc_screen.cpp"

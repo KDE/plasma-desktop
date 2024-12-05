@@ -276,3 +276,5 @@ void PanelAgent::SetLookupTable(const QStringList &labels,
 {
     Q_EMIT updateLookupTableFull(Args2LookupTable(labels, candis, attrlists, hasPrev, hasNext), cursor, layout);
 }
+
+#include "moc_kimpanelagent.cpp"

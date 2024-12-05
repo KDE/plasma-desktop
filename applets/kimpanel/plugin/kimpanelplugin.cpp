@@ -15,3 +15,5 @@ void KimpanelPlugin::registerTypes(const char *uri)
     qmlRegisterType<Screen>(uri, 0, 1, "Screen");
     qmlRegisterType<Kimpanel>(uri, 0, 1, "Kimpanel");
 }
+
+#include "moc_kimpanelplugin.cpp"

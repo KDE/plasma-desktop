@@ -174,3 +174,5 @@ void LabelGenerator::connectPlacesModel()
     connect(s_placesModel, &KFilePlacesModel::rowsRemoved, this, &LabelGenerator::updateDisplayLabel, Qt::UniqueConnection);
     connect(s_placesModel, &KFilePlacesModel::dataChanged, this, &LabelGenerator::updateDisplayLabel, Qt::UniqueConnection);
 }
+
+#include "moc_labelgenerator.cpp"

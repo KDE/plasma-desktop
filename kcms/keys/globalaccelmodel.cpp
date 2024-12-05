@@ -397,3 +397,5 @@ void GlobalAccelModel::genericErrorOccured(const QString &description, const QDB
     }
     Q_EMIT this->errorOccured(i18n("Error while communicating with the global shortcuts service"));
 }
+
+#include "moc_globalaccelmodel.cpp"

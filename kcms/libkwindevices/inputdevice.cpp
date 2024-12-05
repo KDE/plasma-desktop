@@ -153,3 +153,5 @@ bool InputDevice::pressureCurveIsDefault() const
 {
     return m_pressureCurve.isDefaults();
 }
+
+#include "moc_inputdevice.cpp"

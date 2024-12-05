@@ -33,3 +33,5 @@ KCMGameController::~KCMGameController()
 }
 
 #include "kcm.moc"
+
+#include "moc_kcm.cpp"

@@ -468,3 +468,5 @@ void SortedActivitiesModel::rowChanged(int row, const QList<int> &roles)
         return;
     Q_EMIT dataChanged(index(row, 0), index(row, 0), roles);
 }
+
+#include "moc_sortedactivitiesmodel.cpp"

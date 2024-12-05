@@ -31,3 +31,5 @@ QString AbstractJob::terminalCloseMessage(bool install)
         return i18nc("@info", "Uninstallation executed successfully, you may now close this window");
     }
 }
+
+#include "moc_AbstractJob.cpp"

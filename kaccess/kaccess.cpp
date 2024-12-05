@@ -1025,3 +1025,5 @@ void KAccessApp::setXkbOpcode(int opcode)
 {
     xkb_opcode = opcode;
 }
+
+#include "moc_kaccess.cpp"
