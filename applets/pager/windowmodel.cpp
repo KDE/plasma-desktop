@@ -25,7 +25,7 @@ public:
     PagerModel *pagerModel = nullptr;
 
 private:
-    WindowModel *q;
+    WindowModel *const q;
 };
 
 WindowModel::Private::Private(WindowModel *q)

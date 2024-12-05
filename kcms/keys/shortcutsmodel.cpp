@@ -33,7 +33,7 @@ public:
     void slotModelAboutToBeReset();
     void slotModelReset();
 
-    ShortcutsModel *q;
+    ShortcutsModel *const q;
     QList<QAbstractItemModel *> m_models;
     int m_rowCount = 0; // have to maintain it here since we can't compute during model destruction
 

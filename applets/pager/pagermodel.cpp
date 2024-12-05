@@ -70,7 +70,7 @@ public:
     void refreshDataSource();
 
 private:
-    PagerModel *q;
+    PagerModel *const q;
 };
 
 int PagerModel::Private::instanceCount = 0;
