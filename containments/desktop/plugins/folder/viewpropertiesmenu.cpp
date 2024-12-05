@@ -281,3 +281,5 @@ void ViewPropertiesMenu::setIconSize(int iconSize)
         }
     }
 }
+
+#include "moc_viewpropertiesmenu.cpp"

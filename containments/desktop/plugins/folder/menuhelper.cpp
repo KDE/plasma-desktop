@@ -35,3 +35,5 @@ void MenuHelper::setMenu(QAction *action, QObject *menu)
         action->setMenu(bla);
     }
 }
+
+#include "moc_menuhelper.cpp"

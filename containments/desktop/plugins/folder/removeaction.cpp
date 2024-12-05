@@ -95,3 +95,5 @@ bool RemoveAction::eventFilter(QObject *watched, QEvent *event)
 
     return false;
 }
+
+#include "moc_removeaction.cpp"

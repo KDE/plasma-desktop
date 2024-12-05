@@ -111,3 +111,5 @@ void UdevDeviceNotifier::socketActivated()
 {
 }
 #endif
+
+#include "moc_udev_helper.cpp"

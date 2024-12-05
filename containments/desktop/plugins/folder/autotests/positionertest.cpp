@@ -476,3 +476,5 @@ void PositionerTest::changeResolution(QString resolution)
     m_positioner->m_resolution = resolution;
     m_positioner->loadAndApplyPositionsConfig();
 }
+
+#include "moc_positionertest.cpp"

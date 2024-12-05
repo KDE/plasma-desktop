@@ -15,3 +15,5 @@ void AppLauncher::openUrl(const QUrl &url)
     job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
     job->start();
 }
+
+#include "moc_applauncher.cpp"

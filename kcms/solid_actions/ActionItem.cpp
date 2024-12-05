@@ -150,3 +150,5 @@ qsizetype ActionItem::configItemIndex(DesktopAction actionType, GroupType keyGro
     }
     Q_UNREACHABLE();
 }
+
+#include "moc_ActionItem.cpp"

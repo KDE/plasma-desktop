@@ -116,3 +116,5 @@ void WindowModel::onPagerItemSizeChanged()
         Q_EMIT dataChanged(index(0, 0), index(rowCount() - 1, 0), {AbstractTasksModel::Geometry});
     }
 }
+
+#include "moc_windowmodel.cpp"

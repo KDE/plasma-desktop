@@ -48,3 +48,5 @@ bool ShortCut::eventFilter(QObject *obj, QEvent *e)
 
     return QObject::eventFilter(obj, e);
 }
+
+#include "moc_shortcut.cpp"

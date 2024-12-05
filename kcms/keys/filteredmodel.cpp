@@ -64,3 +64,5 @@ void FilteredShortcutsModel::setFilter(const QString &filter)
     invalidateFilter();
     Q_EMIT filterChanged();
 }
+
+#include "moc_filteredmodel.cpp"

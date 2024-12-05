@@ -197,3 +197,5 @@ void Kimpanel::triggerProperty(const QString &key)
 {
     m_panelAgent->triggerProperty(key);
 }
+
+#include "moc_kimpanel.cpp"

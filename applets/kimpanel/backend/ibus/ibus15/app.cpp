@@ -455,3 +455,5 @@ App::~App()
         xcb_key_symbols_free(m_syms);
     }
 }
+
+#include "moc_app.cpp"
