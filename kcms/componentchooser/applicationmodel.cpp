@@ -233,3 +233,5 @@ QHash<int, QByteArray> ApplicationModel::roleNames() const
         {ExecLine, QByteArrayLiteral("execLine")},
     };
 }
+
+#include "moc_applicationmodel.cpp"

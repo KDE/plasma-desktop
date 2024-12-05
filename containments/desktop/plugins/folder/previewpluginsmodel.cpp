@@ -120,3 +120,5 @@ QStringList PreviewPluginsModel::checkedPlugins() const
 
     return list;
 }
+
+#include "moc_previewpluginsmodel.cpp"

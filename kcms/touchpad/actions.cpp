@@ -50,3 +50,5 @@ TouchpadGlobalActions::TouchpadGlobalActions(bool isConfiguration, QObject *pare
         }
     }
 }
+
+#include "moc_actions.cpp"

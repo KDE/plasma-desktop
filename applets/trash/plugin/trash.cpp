@@ -49,3 +49,5 @@ QList<QUrl> Trash::trashableUrls(const QList<QUrl> &urls) const
 
     return validUrls;
 }
+
+#include "moc_trash.cpp"

@@ -18,3 +18,5 @@ Outline::Outline(XkbOutlinePtr outline_, XkbDescPtr xkb_, QObject *parent)
         points.push_back(QPointF(p->x, p->y));
     }
 }
+
+#include "moc_outline.cpp"

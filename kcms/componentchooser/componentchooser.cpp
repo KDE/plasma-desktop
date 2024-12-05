@@ -281,3 +281,5 @@ bool ComponentChooser::serviceSupportsMimeType(KService::Ptr service, const QStr
 
     return false;
 }
+
+#include "moc_componentchooser.cpp"

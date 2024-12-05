@@ -158,3 +158,5 @@ TabletEvents::TabletEvents(QQuickItem *parent)
     auto _seat = tabletClient->get_tablet_seat(seat);
     new TabletSeat(this, _seat);
 }
+
+#include "moc_tabletevents.cpp"

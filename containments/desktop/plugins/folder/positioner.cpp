@@ -1093,3 +1093,5 @@ void Positioner::disconnectSignals(FolderModel *model)
     disconnect(m_folderModel, &FolderModel::screenGeometryChanged, this, &Positioner::updateResolution);
     disconnect(m_folderModel, &FolderModel::listingCompleted, this, &Positioner::onListingCompleted);
 }
+
+#include "moc_positioner.cpp"

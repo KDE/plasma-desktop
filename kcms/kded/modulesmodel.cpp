@@ -245,3 +245,5 @@ void ModulesModel::refreshAutoloadEnabledSavedState()
         item.savedAutoloadEnabled = item.autoloadEnabled;
     }
 }
+
+#include "moc_modulesmodel.cpp"

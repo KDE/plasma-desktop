@@ -381,3 +381,5 @@ void FolderModelTest::tst_multiScreenDifferenPath()
     QCOMPARE(m_folderModel->rowCount(), count + 1);
     QCOMPARE(secondFolderModel.rowCount(), count2 + 1);
 }
+
+#include "moc_foldermodeltest.cpp"

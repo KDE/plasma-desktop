@@ -191,3 +191,5 @@ void DeviceAutomounterKCM::loadLayout()
 }
 
 #include "DeviceAutomounterKCM.moc"
+
+#include "moc_DeviceAutomounterKCM.cpp"

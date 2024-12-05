@@ -47,3 +47,5 @@ void RubberBand::geometryChange(const QRectF &newGeometry, const QRectF &oldGeom
     m_geometry = newGeometry;
     QQuickItem::geometryChange(newGeometry, oldGeometry);
 }
+
+#include "moc_rubberband.cpp"

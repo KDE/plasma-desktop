@@ -67,3 +67,5 @@ QRect SubDialog::availableScreenRectForItem(QQuickItem *item) const
 
     return screen->availableGeometry();
 }
+
+#include "moc_subdialog.cpp"

@@ -207,3 +207,5 @@ bool KcmComponentChooser::isSaveNeeded() const
 }
 
 #include "kcm_componentchooser.moc"
+
+#include "moc_kcm_componentchooser.cpp"

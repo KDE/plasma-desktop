@@ -227,3 +227,5 @@ ActionReply ClockHelper::save(const QVariantMap &args)
 }
 
 KAUTH_HELPER_MAIN("org.kde.kcontrol.kcmclock", ClockHelper)
+
+#include "moc_helper.cpp"

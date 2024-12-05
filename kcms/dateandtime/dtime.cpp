@@ -478,3 +478,5 @@ void Kclock::paintEvent(QPaintEvent *)
     paint.setRenderHint(QPainter::Antialiasing);
     paintInterface(&paint, rect());
 }
+
+#include "moc_dtime.cpp"

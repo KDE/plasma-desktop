@@ -188,3 +188,5 @@ int XInputEventNotifier::getNewDeviceEventType(xcb_generic_event_t * /*event*/)
 }
 
 #endif
+
+#include "moc_xinput_helper.cpp"

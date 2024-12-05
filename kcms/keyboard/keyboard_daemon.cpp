@@ -294,3 +294,5 @@ void KeyboardDaemon::setLastUsedLayoutValue(uint newValue)
 }
 
 #include "keyboard_daemon.moc"
+
+#include "moc_keyboard_daemon.cpp"

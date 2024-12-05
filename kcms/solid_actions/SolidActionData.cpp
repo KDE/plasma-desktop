@@ -165,3 +165,5 @@ QList<QMetaObject> SolidActionData::fillInterfaceList()
     interfaces.append(Solid::OpticalDisc::staticMetaObject);
     return interfaces;
 }
+
+#include "moc_SolidActionData.cpp"

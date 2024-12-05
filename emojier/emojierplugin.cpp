@@ -203,3 +203,5 @@ void CopyHelperPrivate::copyTextToClipboard(const QString &text)
 }
 
 #include "emojierplugin.moc"
+
+#include "moc_emojierplugin.cpp"

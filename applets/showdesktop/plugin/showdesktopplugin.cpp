@@ -14,3 +14,5 @@ void ShowDesktopPlugin::registerTypes(const char *uri)
     Q_ASSERT(QLatin1String(uri) == QLatin1String("org.kde.plasma.private.showdesktop"));
     qmlRegisterType<ShowDesktop>(uri, 0, 1, "ShowDesktop");
 }
+
+#include "moc_showdesktopplugin.cpp"

@@ -106,3 +106,5 @@ void DeviceAutomounter::deviceAdded(const QString &udi)
 }
 
 #include "DeviceAutomounter.moc"
+
+#include "moc_DeviceAutomounter.cpp"

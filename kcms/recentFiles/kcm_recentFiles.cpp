@@ -239,3 +239,5 @@ void RecentFilesKcm::spinKeepHistoryValueChanged(int value)
 }
 
 #include "kcm_recentFiles.moc"
+
+#include "moc_kcm_recentFiles.cpp"

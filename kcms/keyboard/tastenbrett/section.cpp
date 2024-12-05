@@ -36,3 +36,5 @@ Section::Section(XkbSectionPtr section_, XkbDescPtr xkb_, QObject *parent)
     // Because of this we do not actually set our caps to the overlays and ignore
     // them entirely.
 }
+
+#include "moc_section.cpp"

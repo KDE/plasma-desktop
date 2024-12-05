@@ -128,3 +128,5 @@ void MimeTypesModel::setCheckedTypes(const QStringList &list)
 
     Q_EMIT checkedTypesChanged();
 }
+
+#include "moc_mimetypesmodel.cpp"

@@ -272,3 +272,4 @@ InputSequence::PenData InputSequence::penData() const
     Q_ASSERT(m_type == Type::Pen);
     return std::get<PenData>(m_data);
 }
+#include "moc_inputsequence.cpp"

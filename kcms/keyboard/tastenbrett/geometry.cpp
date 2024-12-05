@@ -36,3 +36,5 @@ Geometry::~Geometry()
 {
     XkbFreeKeyboard(xkb, 0, True);
 }
+
+#include "moc_geometry.cpp"

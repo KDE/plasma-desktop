@@ -37,3 +37,5 @@ void WheelInterceptor::wheelEvent(QWheelEvent *event)
         QCoreApplication::sendEvent(m_destination, event);
     }
 }
+
+#include "moc_wheelinterceptor.cpp"
