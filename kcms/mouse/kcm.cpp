@@ -138,6 +138,12 @@ void KCMMouse::load()
         return;
     }
 
+    if(m_inputBackend == nullpointer){
+        qCCritical(KCM_MOUSE) << "m_inputBackend is a nullpointer and can not be dereferenced. Set m_initError to true.";
+        m_initError = true;
+        return
+    }
+
     if (!m_inputBackend->load()) {
         setSaveLoadMessage(Message::error(i18n("Error while loading values. See logs for more information. Please restart this configuration module.")));
     }
@@ -148,7 +154,7 @@ void KCMMouse::load()
 }
 
 void KCMMouse::save()
-{
+{   
     if (!m_inputBackend->save()) {
         setSaveLoadMessage(
             Message::error(i18n("Not able to save all changes. See logs for more information. Please restart this configuration module and try again.")));
