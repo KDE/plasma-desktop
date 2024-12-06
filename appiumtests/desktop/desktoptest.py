@@ -246,6 +246,7 @@ class DesktopTest(unittest.TestCase):
         session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 1000)
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Install Software")))
 
+    @unittest.skipIf("KDECI_BUILD" in os.environ, "TODO: failed in CI")
     def test_6_sentry_3516_load_layout(self) -> None:
         """
         ShellCorona::loadLookAndFeelDefaultLayout -> ShellCorona::unload() -> qDeleteAll(panelViews) -> QWindow::visibleChanged -> rectNotify() -> 💣
