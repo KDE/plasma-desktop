@@ -9,33 +9,31 @@
 #pragma once
 
 #include <QAbstractTableModel>
-#include <SDL2/SDL_gamecontroller.h>
 
-class Gamepad;
+class Device;
 
 class ButtonModel : public QAbstractTableModel
 {
     Q_OBJECT
 
-    Q_PROPERTY(Gamepad *device MEMBER m_device NOTIFY deviceChanged REQUIRED)
+    Q_PROPERTY(Device *device READ device WRITE setDevice REQUIRED)
 
 public:
     explicit ButtonModel(QObject *parent = nullptr);
 
-    int rowCount(const QModelIndex &) const override;
-    int columnCount(const QModelIndex &) const override;
+    Device *device() const;
+    void setDevice(Device *device);
+
+    int rowCount(const QModelIndex &parent) const override;
+    int columnCount(const QModelIndex &parent) const override;
 
     QVariant data(const QModelIndex &index, int role) const override;
 
     QVariant headerData(int section, Qt::Orientation orientation, int role) const override;
 
-Q_SIGNALS:
-    void deviceChanged();
+private Q_SLOTS:
+    void onButtonStateChanged(int index);
 
 private:
-    Q_SLOT void initDeviceButtons();
-
-private:
-    Gamepad *m_device = nullptr;
-    QList<SDL_GameControllerButton> m_buttons;
+    Device *m_device = nullptr;
 };

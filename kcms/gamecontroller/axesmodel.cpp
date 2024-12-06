@@ -8,22 +8,41 @@
 
 #include "axesmodel.h"
 
-#include <SDL2/SDL_joystick.h>
+#include <KLocalizedString>
+
+#include "device.h"
 
 AxesModel::AxesModel(QObject *parent)
     : QAbstractTableModel(parent)
 {
-    connect(this, &AxesModel::deviceChanged, this, [this] {
-        beginResetModel();
-        endResetModel();
+}
 
-        if (m_device != nullptr) {
-            connect(m_device, &Gamepad::axisStateChanged, this, [this](int index) {
-                const QModelIndex changedIndex = this->index(index, 0);
-                Q_EMIT dataChanged(changedIndex, changedIndex, {Qt::DisplayRole});
-            });
-        }
-    });
+Device *AxesModel::device() const
+{
+    return m_device;
+}
+
+void AxesModel::setDevice(Device *device)
+{
+    if (device == m_device) {
+        return;
+    }
+
+    beginResetModel();
+    if (m_device != nullptr) {
+        disconnect(m_device, &Device::axisValueChanged, this, &AxesModel::onAxisValueChanged);
+    }
+    m_device = device;
+    if (m_device != nullptr) {
+        connect(m_device, &Device::axisValueChanged, this, &AxesModel::onAxisValueChanged);
+    }
+    endResetModel();
+}
+
+void AxesModel::onAxisValueChanged(int index)
+{
+    const QModelIndex changedIndex = this->index(index, 0);
+    Q_EMIT dataChanged(changedIndex, changedIndex, {Qt::DisplayRole});
 }
 
 int AxesModel::rowCount(const QModelIndex &parent) const
@@ -34,7 +53,7 @@ int AxesModel::rowCount(const QModelIndex &parent) const
         return 0;
     }
 
-    return SDL_JoystickNumAxes(m_device->joystick());
+    return m_device->axisCount();
 }
 
 int AxesModel::columnCount(const QModelIndex &parent) const
@@ -50,7 +69,7 @@ QVariant AxesModel::data(const QModelIndex &index, int role) const
     }
 
     if (index.column() == 0 && role == Qt::DisplayRole) {
-        return SDL_JoystickGetAxis(m_device->joystick(), index.row());
+        return QString::number(m_device->axisValue(index.row()));
     }
 
     return {};

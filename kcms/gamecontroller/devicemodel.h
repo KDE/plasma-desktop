@@ -8,11 +8,14 @@
 
 #pragma once
 
-#include <QList>
+#include <QAbstractListModel>
+#include <QMap>
 #include <QPointer>
-#include <QStandardItemModel>
+
+#include <SDL2/SDL_joystick.h>
 
 class QTimer;
+class Device;
 class Gamepad;
 
 class DeviceModel : public QAbstractListModel
@@ -21,13 +24,20 @@ class DeviceModel : public QAbstractListModel
     Q_PROPERTY(int count READ count NOTIFY devicesChanged)
 
 public:
+    enum CustomRoles {
+        TextRole = Qt::UserRole + 1,
+        IDRole,
+    };
+
     DeviceModel();
     virtual ~DeviceModel();
 
-    Q_INVOKABLE Gamepad *device(int index) const;
+    Q_INVOKABLE Device *device(SDL_JoystickID id) const;
+    Q_INVOKABLE Gamepad *gamepad(SDL_JoystickID id) const;
 
     int rowCount(const QModelIndex &parent) const override;
     QVariant data(const QModelIndex &index, int role) const override;
+    QHash<int, QByteArray> roleNames() const override;
 
     int count() const;
 
@@ -39,9 +49,10 @@ private Q_SLOTS:
 
 private:
     void addDevice(const int deviceIndex);
-    void removeDevice(const int deviceIndex);
+    void removeDevice(const SDL_JoystickID id);
 
     // Map of sdl indexes to Gamepad devices
-    QMap<int, Gamepad *> m_devices;
+    QMap<SDL_JoystickID, Device *> m_devices;
+    QMap<SDL_JoystickID, Gamepad *> m_gamepads;
     QPointer<QTimer> m_timer;
 };

@@ -12,8 +12,8 @@
 #include <QTimer>
 
 #include <SDL2/SDL.h>
-#include <SDL2/SDL_joystick.h>
 
+#include "device.h"
 #include "gamepad.h"
 #include "logging.h"
 
@@ -40,18 +40,21 @@ DeviceModel::~DeviceModel()
 {
     if (initialized) {
         qCDebug(KCM_GAMECONTROLLER) << "Calling SDL_Quit";
+        qDeleteAll(m_devices);
+        qDeleteAll(m_gamepads);
         SDL_Quit();
         initialized = false;
     }
 }
 
-Gamepad *DeviceModel::device(int index) const
+Device *DeviceModel::device(SDL_JoystickID id) const
 {
-    if (index < 0 || index >= m_devices.count())
-        return nullptr;
+    return m_devices.value(id, nullptr);
+}
 
-    const int sdlIndex = m_devices.keys().at(index);
-    return m_devices.value(sdlIndex);
+Gamepad *DeviceModel::gamepad(SDL_JoystickID id) const
+{
+    return m_gamepads.value(id, nullptr);
 }
 
 int DeviceModel::rowCount(const QModelIndex &parent) const
@@ -66,13 +69,21 @@ QVariant DeviceModel::data(const QModelIndex &index, int role) const
         return {};
     }
 
-    if (role == Qt::DisplayRole) {
-        const int sdlIndex = m_devices.keys().at(index.row());
+    const SDL_JoystickID id = m_devices.keys().at(index.row());
 
-        return i18nc("Device name and path", "%1 (%2)", m_devices.value(sdlIndex)->name(), m_devices.value(sdlIndex)->path());
+    switch (role) {
+    case CustomRoles::TextRole:
+        return i18nc("Device name and path", "%1 (%2)", m_devices.value(id)->name(), m_devices.value(id)->path());
+    case CustomRoles::IDRole:
+        return id;
     }
 
     return {};
+}
+
+QHash<int, QByteArray> DeviceModel::roleNames() const
+{
+    return {{CustomRoles::TextRole, QByteArrayLiteral("text")}, {CustomRoles::IDRole, QByteArrayLiteral("id")}};
 }
 
 void DeviceModel::poll()
@@ -86,18 +97,27 @@ void DeviceModel::poll()
     SDL_Event event{};
     while (SDL_PollEvent(&event)) {
         switch (event.type) {
-        case SDL_CONTROLLERDEVICEADDED:
-            addDevice(event.cdevice.which);
+        case SDL_JOYDEVICEADDED:
+            addDevice(event.jdevice.which);
             break;
-        case SDL_CONTROLLERDEVICEREMOVED:
-            removeDevice(event.cdevice.which);
+        case SDL_JOYDEVICEREMOVED:
+            removeDevice(event.jdevice.which);
             break;
-        case SDL_CONTROLLERBUTTONDOWN:
-        case SDL_CONTROLLERBUTTONUP:
-            m_devices.value(event.cbutton.which)->onButtonEvent(event.cbutton);
+        case SDL_JOYBUTTONDOWN:
+        case SDL_JOYBUTTONUP:
+            if (m_devices.contains(event.jbutton.which)) {
+                m_devices.value(event.jbutton.which)->onButtonEvent(event.jbutton);
+            }
+            break;
+        case SDL_JOYAXISMOTION:
+            if (m_devices.contains(event.jaxis.which)) {
+                m_devices.value(event.jaxis.which)->onAxisEvent(event.jaxis);
+            }
             break;
         case SDL_CONTROLLERAXISMOTION:
-            m_devices.value(event.caxis.which)->onAxisEvent(event.caxis);
+            if (m_gamepads.contains(event.caxis.which)) {
+                m_gamepads.value(event.caxis.which)->onAxisEvent(event.caxis);
+            }
             break;
         }
     }
@@ -105,22 +125,37 @@ void DeviceModel::poll()
 
 void DeviceModel::addDevice(const int deviceIndex)
 {
-    const auto joystick = SDL_JoystickOpen(deviceIndex);
-    const auto id = SDL_JoystickInstanceID(joystick);
+    auto device = std::make_unique<Device>(deviceIndex, this);
+    if (!device->open()) {
+        const QString error = QString::fromLocal8Bit(SDL_GetError());
+        qCCritical(KCM_GAMECONTROLLER).nospace() << "Could not open device " << deviceIndex << ": " << error;
+        return;
+    }
 
+    const SDL_JoystickID id = device->id();
     if (m_devices.contains(id)) {
-        qCWarning(KCM_GAMECONTROLLER) << "Got a duplicate add event, ignoring. Index: " << deviceIndex;
+        qCWarning(KCM_GAMECONTROLLER) << "Ignoring a duplicate device ID" << id << "from add event";
         return;
     }
 
-    const auto gamepad = SDL_GameControllerOpen(deviceIndex);
-    if (SDL_GameControllerTypeForIndex(deviceIndex) == SDL_CONTROLLER_TYPE_VIRTUAL) {
-        qCWarning(KCM_GAMECONTROLLER) << "Skipping gamepad since it is virtual. Index: " << deviceIndex;
+    if (device->isVirtual()) {
+        qCWarning(KCM_GAMECONTROLLER) << "Skipping device" << deviceIndex << "since it is virtual";
         return;
     }
+
+    auto gamepad = std::make_unique<Gamepad>(deviceIndex, this);
+    if (!gamepad->open()) {
+        qCDebug(KCM_GAMECONTROLLER) << "Device" << deviceIndex << "is not a gamepad";
+        gamepad.reset();
+    }
+
+    qCDebug(KCM_GAMECONTROLLER) << "Adding device" << deviceIndex << "with ID" << id;
 
     beginInsertRows(QModelIndex(), m_devices.count(), m_devices.count());
-    m_devices.insert(id, new Gamepad(joystick, gamepad, this));
+    m_devices.insert(id, device.release());
+    if (gamepad) {
+        m_gamepads.insert(id, gamepad.release());
+    }
     endInsertRows();
 
     // Now that we have a device poll every short poll time
@@ -128,18 +163,24 @@ void DeviceModel::addDevice(const int deviceIndex)
     Q_EMIT devicesChanged();
 }
 
-void DeviceModel::removeDevice(const int deviceIndex)
+void DeviceModel::removeDevice(const SDL_JoystickID id)
 {
-    if (!m_devices.contains(deviceIndex)) {
-        qCWarning(KCM_GAMECONTROLLER) << "Invalid device index from removal event, ignoring";
+    if (!m_devices.contains(id)) {
+        qCWarning(KCM_GAMECONTROLLER) << "Ignoring an invalid device ID" << id << "from removal event";
         return;
     }
 
-    const int index = m_devices.keys().indexOf(deviceIndex);
+    const int index = m_devices.keys().indexOf(id);
+
+    qCDebug(KCM_GAMECONTROLLER) << "Removing device with ID" << id;
 
     beginRemoveRows(QModelIndex(), index, index);
-    m_devices.value(deviceIndex)->deleteLater();
-    m_devices.remove(deviceIndex);
+    m_devices.value(id)->deleteLater();
+    m_devices.remove(id);
+    if (m_gamepads.contains(id)) {
+        m_gamepads.value(id)->deleteLater();
+        m_gamepads.remove(id);
+    }
     endRemoveRows();
 
     if (m_devices.count() == 0) {

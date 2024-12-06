@@ -9,15 +9,10 @@
 #pragma once
 
 #include <QObject>
-#include <QPointF>
-#include <QString>
 #include <QVector2D>
-
-#include <KLocalizedString>
 
 #include <SDL2/SDL_events.h>
 #include <SDL2/SDL_gamecontroller.h>
-#include <SDL2/SDL_joystick.h>
 
 class Gamepad : public QObject
 {
@@ -26,31 +21,23 @@ class Gamepad : public QObject
     Q_PROPERTY(QVector2D axisValue READ axisValue NOTIFY axisValueChanged)
 
 public:
-    Gamepad(SDL_Joystick *joystick, SDL_GameController *controller, QObject *parent = nullptr);
+    Gamepad(int deviceIndex, QObject *parent = nullptr);
+    ~Gamepad();
 
-    QString name() const;
-    QString path() const;
-
-    SDL_Joystick *joystick() const;
-    SDL_GameController *gamecontroller() const;
+    bool open();
+    void close();
 
     QVector2D axisValue() const;
 
 Q_SIGNALS:
-    void buttonStateChanged(SDL_GameControllerButton button);
-    void axisStateChanged(int index);
     void axisValueChanged();
 
 private:
     friend class DeviceModel;
 
-    void onButtonEvent(SDL_ControllerButtonEvent sdlEvent);
-    void onAxisEvent(SDL_ControllerAxisEvent sdlEvent);
+    void onAxisEvent(const SDL_ControllerAxisEvent &event);
 
-    SDL_Joystick *m_joystick = nullptr;
+    int m_deviceIndex = -1;
     SDL_GameController *m_gameController = nullptr;
-
-    QString m_name;
-    QString m_path;
-    QPointF m_axis = QPointF(0.0, 0.0);
+    QVector2D m_axis;
 };

@@ -16,7 +16,8 @@ import org.kde.plasma.gamecontroller.kcm
 KCM.SimpleKCM {
     id: root
 
-    readonly property var device: deviceModel.device(deviceCombo.currentIndex)
+    readonly property var device: deviceCombo.currentValue !== null ? deviceModel.device(deviceCombo.currentValue) : null
+    readonly property var gamepad: deviceCombo.currentValue !== null ? deviceModel.gamepad(deviceCombo.currentValue) : null
 
     Kirigami.PlaceholderMessage {
         icon.name: "input-gamepad"
@@ -37,6 +38,9 @@ KCM.SimpleKCM {
             } else if (deviceCombo.currentIndex === -1) {
                 // However if we didn't have a selection before, and now have a device
                 deviceCombo.currentIndex = 0;
+            } else if (deviceCombo.currentIndex >= deviceModel.count) {
+                // If the last device in the popup list was disconnected, select a previous one
+                deviceCombo.currentIndex = deviceModel.count - 1;
             }
         }
     }
@@ -62,7 +66,8 @@ KCM.SimpleKCM {
 
                 model: deviceModel
 
-                textRole: "display"
+                textRole: "text"
+                valueRole: "id"
 
                 Layout.fillWidth: true
             }
@@ -87,7 +92,7 @@ KCM.SimpleKCM {
                 PositionWidget {
                     id: posWidget
 
-                    device: root.device
+                    device: root.gamepad
                 }
             }
 

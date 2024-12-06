@@ -27,6 +27,7 @@ ecm_qt_install_logging_categories(
 
 target_sources(kcm_gamecontroller PRIVATE
     devicemodel.cpp
+    device.cpp
     gamepad.cpp
     axesmodel.cpp
     buttonmodel.cpp

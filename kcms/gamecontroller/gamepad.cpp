@@ -8,61 +8,52 @@
 
 #include "gamepad.h"
 
-#include <QTimer>
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_gamecontroller.h>
-
-Gamepad::Gamepad(SDL_Joystick *joystick, SDL_GameController *controller, QObject *parent)
+Gamepad::Gamepad(int deviceIndex, QObject *parent)
     : QObject(parent)
-    , m_joystick(joystick)
-    , m_gameController(controller)
+    , m_deviceIndex(deviceIndex)
 {
-    m_name = QString::fromLocal8Bit(SDL_JoystickName(m_joystick));
-    m_path = QString::fromLocal8Bit(SDL_JoystickPath(m_joystick));
 }
 
-QString Gamepad::name() const
+Gamepad::~Gamepad()
 {
-    return m_name;
+    close();
 }
 
-QString Gamepad::path() const
+bool Gamepad::open()
 {
-    return m_path;
+    if (m_gameController != nullptr) {
+        return true;
+    }
+
+    m_gameController = SDL_GameControllerOpen(m_deviceIndex);
+    return m_gameController != nullptr;
 }
 
-void Gamepad::onButtonEvent(const SDL_ControllerButtonEvent sdlEvent)
+void Gamepad::close()
 {
-    Q_EMIT buttonStateChanged(static_cast<SDL_GameControllerButton>(sdlEvent.button));
+    if (m_gameController == nullptr) {
+        return;
+    }
+
+    SDL_GameControllerClose(m_gameController);
+    m_gameController = nullptr;
 }
 
-void Gamepad::onAxisEvent(const SDL_ControllerAxisEvent sdlEvent)
+void Gamepad::onAxisEvent(const SDL_ControllerAxisEvent &event)
 {
-    const float value = static_cast<float>(sdlEvent.value) / std::numeric_limits<Sint16>::max();
-    if (sdlEvent.axis == SDL_CONTROLLER_AXIS_LEFTX) {
+    const float value = static_cast<float>(event.value) / std::numeric_limits<Sint16>::max();
+    if (event.axis == SDL_CONTROLLER_AXIS_LEFTX) {
         m_axis.setX(value);
         Q_EMIT axisValueChanged();
-    } else if (sdlEvent.axis == SDL_CONTROLLER_AXIS_LEFTY) {
+    } else if (event.axis == SDL_CONTROLLER_AXIS_LEFTY) {
         m_axis.setY(value);
         Q_EMIT axisValueChanged();
     }
-
-    Q_EMIT axisStateChanged(sdlEvent.axis);
-}
-
-SDL_Joystick *Gamepad::joystick() const
-{
-    return m_joystick;
-}
-
-SDL_GameController *Gamepad::gamecontroller() const
-{
-    return m_gameController;
 }
 
 QVector2D Gamepad::axisValue() const
 {
-    return QVector2D(m_axis);
+    return m_axis;
 }
 
 #include "moc_gamepad.cpp"

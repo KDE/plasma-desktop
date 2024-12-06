@@ -7,54 +7,53 @@
 */
 
 #include "buttonmodel.h"
-#include "gamepad.h"
-
-#include <SDL2/SDL_joystick.h>
 
 #include <KLocalizedString>
+
+#include "device.h"
 
 ButtonModel::ButtonModel(QObject *parent)
     : QAbstractTableModel(parent)
 {
-    connect(this, &ButtonModel::deviceChanged, this, &ButtonModel::initDeviceButtons);
 }
 
-void ButtonModel::initDeviceButtons()
+Device *ButtonModel::device() const
 {
-    beginResetModel();
-    m_buttons.clear();
+    return m_device;
+}
 
-    if (!m_device) {
-        endResetModel();
+void ButtonModel::setDevice(Device *device)
+{
+    if (device == m_device) {
         return;
     }
 
-    const int numButtons = SDL_JoystickNumButtons(m_device->joystick());
-    for (int i = 0; i < SDL_CONTROLLER_BUTTON_MAX; i++) {
-        const SDL_GameControllerButton button = static_cast<SDL_GameControllerButton>(i);
-        if (SDL_GameControllerHasButton(m_device->gamecontroller(), button)) {
-            m_buttons << button;
-            if (m_buttons.count() == numButtons) {
-                break;
-            }
-        }
+    beginResetModel();
+    if (m_device != nullptr) {
+        disconnect(m_device, &Device::buttonStateChanged, this, &ButtonModel::onButtonStateChanged);
     }
-
+    m_device = device;
+    if (m_device != nullptr) {
+        connect(m_device, &Device::buttonStateChanged, this, &ButtonModel::onButtonStateChanged);
+    }
     endResetModel();
+}
 
-    connect(m_device, &Gamepad::buttonStateChanged, this, [this](SDL_GameControllerButton button) {
-        const int row = m_buttons.indexOf(button);
-        if (row >= 0) {
-            const QModelIndex changedIndex = index(row, 0);
-            Q_EMIT dataChanged(changedIndex, changedIndex, {Qt::DisplayRole});
-        }
-    });
+void ButtonModel::onButtonStateChanged(int index)
+{
+    const QModelIndex changedIndex = this->index(index, 0);
+    Q_EMIT dataChanged(changedIndex, changedIndex, {Qt::DisplayRole});
 }
 
 int ButtonModel::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
-    return m_buttons.count();
+
+    if (m_device == nullptr) {
+        return 0;
+    }
+
+    return m_device->buttonCount();
 }
 
 int ButtonModel::columnCount(const QModelIndex &parent) const
@@ -70,7 +69,7 @@ QVariant ButtonModel::data(const QModelIndex &index, int role) const
     }
 
     if (index.column() == 0 && role == Qt::DisplayRole) {
-        const int pressed = SDL_GameControllerGetButton(m_device->gamecontroller(), m_buttons.at(index.row()));
+        const bool pressed = m_device->buttonState(index.row());
         return pressed ? i18nc("Status of a gamepad button", "PRESSED") : QStringLiteral("-");
     }
 
