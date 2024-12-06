@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-28 00:41+0000\n"
+"POT-Creation-Date: 2024-12-06 00:42+0000\n"
 "PO-Revision-Date: 2024-04-23 19:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -470,51 +470,64 @@ msgctxt ""
 msgid "Fix it"
 msgstr "修复"
 
-#: contents/configuration/PanelConfiguration.qml:564
+#: contents/configuration/PanelConfiguration.qml:572
 #, kde-format
 msgid "Panel Width:"
 msgstr "面板宽度："
 
-#: contents/configuration/PanelConfiguration.qml:565
+#: contents/configuration/PanelConfiguration.qml:573
 #, kde-format
 msgid "Panel Height:"
 msgstr "面板高度："
 
-#: contents/configuration/PanelConfiguration.qml:588
+#: contents/configuration/PanelConfiguration.qml:596
 #, kde-format
 msgid "Focus shortcut:"
 msgstr "焦点快捷键："
 
-#: contents/configuration/PanelConfiguration.qml:599
+#: contents/configuration/PanelConfiguration.qml:607
 #, kde-format
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "按下此键盘快捷键以移动焦点到面板"
 
-#: contents/configuration/PanelConfiguration.qml:633
+#: contents/configuration/PanelConfiguration.qml:641
 #, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "删除面板"
 
-#: contents/configuration/PanelConfiguration.qml:636
+#: contents/configuration/PanelConfiguration.qml:644
 #, kde-format
 msgid "Remove this panel; this action is undo-able"
 msgstr "移除此面板；此操作可以撤销"
 
-#: contents/configuration/PanelConfiguration.qml:647
+#: contents/configuration/PanelConfiguration.qml:653
+#, fuzzy, kde-format
+#| msgid "Remove Panel"
+msgctxt "@action:button Clone the panel"
+msgid "Clone Panel"
+msgstr "移除面板"
+
+#: contents/configuration/PanelConfiguration.qml:657
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Create a new panel with the same settings and applets"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:666
 #, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "关闭"
 
-#: contents/configuration/PanelConfiguration.qml:647
+#: contents/configuration/PanelConfiguration.qml:666
 #, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
 msgstr "退出编辑模式"
 
-#: contents/configuration/PanelConfiguration.qml:650
+#: contents/configuration/PanelConfiguration.qml:669
 #, kde-format
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "关闭面板设置窗口并退出编辑模式"

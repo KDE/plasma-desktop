@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-25 00:41+0000\n"
+"POT-Creation-Date: 2024-12-06 00:42+0000\n"
 "PO-Revision-Date: 2024-09-19 17:29+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -49,18 +49,18 @@ msgstr "Στην τρέχουσα δραστηριότητα"
 msgid "Show in Favorites"
 msgstr "Εμφάνιση στα αγαπημένα"
 
-#: package/contents/ui/ConfigGeneral.qml:46
+#: package/contents/ui/ConfigGeneral.qml:47
 #, kde-format
 msgid "Icon:"
 msgstr "Εικονίδιο:"
 
-#: package/contents/ui/ConfigGeneral.qml:52
+#: package/contents/ui/ConfigGeneral.qml:53
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr "Αλλαγή εικονιδίου εκκινητή εφαρμογών"
 
-#: package/contents/ui/ConfigGeneral.qml:53
+#: package/contents/ui/ConfigGeneral.qml:54
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -70,104 +70,104 @@ msgstr ""
 "Το τρέχον εικονίδιο είναι %1. Κάντε κλικ για να ανοίξετε το μενού για να "
 "αλλάξετε το τρέχον εικονίδιο ή να το επαναφέρετε στο προεπιλεγμένο εικονίδιο."
 
-#: package/contents/ui/ConfigGeneral.qml:57
+#: package/contents/ui/ConfigGeneral.qml:58
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
 msgstr "Το όνομα του εικονιδίου είναι «%1»"
 
-#: package/contents/ui/ConfigGeneral.qml:92
+#: package/contents/ui/ConfigGeneral.qml:93
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Επιλογή…"
 
-#: package/contents/ui/ConfigGeneral.qml:94
+#: package/contents/ui/ConfigGeneral.qml:95
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr "Επιλέξτε ένα εικονίδιο για τον εκκινητή εφαρμογών"
 
-#: package/contents/ui/ConfigGeneral.qml:98
+#: package/contents/ui/ConfigGeneral.qml:99
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "Επαναφορά στο προεπιλεγμένο εικονίδιο"
 
-#: package/contents/ui/ConfigGeneral.qml:104
+#: package/contents/ui/ConfigGeneral.qml:105
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "Αφαίρεση εικονιδίου"
 
-#: package/contents/ui/ConfigGeneral.qml:119
+#: package/contents/ui/ConfigGeneral.qml:120
 #, fuzzy, kde-format
 #| msgid "Show other applications:"
 msgid "Show applications as:"
 msgstr "Εμφάνιση άλλων εφαρμογών:"
 
-#: package/contents/ui/ConfigGeneral.qml:121
+#: package/contents/ui/ConfigGeneral.qml:122
 #, kde-format
 msgid "Name only"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:121
+#: package/contents/ui/ConfigGeneral.qml:122
 #, kde-format
 msgid "Description only"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:121
+#: package/contents/ui/ConfigGeneral.qml:122
 #, kde-format
 msgid "Name (Description)"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:121
+#: package/contents/ui/ConfigGeneral.qml:122
 #, kde-format
 msgid "Description (Name)"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:131
+#: package/contents/ui/ConfigGeneral.qml:132
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "Ετικέτα κειμένου:"
 
-#: package/contents/ui/ConfigGeneral.qml:133
+#: package/contents/ui/ConfigGeneral.qml:134
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "Πληκτρολογήστε εδώ για να προσθέσετε μια ετικέτα κειμένου"
 
-#: package/contents/ui/ConfigGeneral.qml:147
+#: package/contents/ui/ConfigGeneral.qml:148
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr "Επαναφορά ετικέτας μενού"
 
-#: package/contents/ui/ConfigGeneral.qml:160
+#: package/contents/ui/ConfigGeneral.qml:161
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr ""
 "Η ετικέτα κειμένου δεν μπορεί να οριστεί όταν ο πίνακας είναι κατακόρυφος."
 
-#: package/contents/ui/ConfigGeneral.qml:171
+#: package/contents/ui/ConfigGeneral.qml:172
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "Γενικά:"
 
-#: package/contents/ui/ConfigGeneral.qml:172
+#: package/contents/ui/ConfigGeneral.qml:173
 #, kde-format
 msgid "Always sort applications alphabetically"
 msgstr "Ταξινόμηση των εφαρμογών πάντα με αλφαβητική σειρά"
 
-#: package/contents/ui/ConfigGeneral.qml:177
+#: package/contents/ui/ConfigGeneral.qml:178
 #, kde-format
 msgid "Use compact list item style"
 msgstr "Χρήση συμπαγούς στυλ στοιχείων λίστας"
 
-#: package/contents/ui/ConfigGeneral.qml:183
+#: package/contents/ui/ConfigGeneral.qml:184
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
@@ -175,83 +175,88 @@ msgstr "Αυτόματη απενεργοποίηση όταν βρίσκεστ�
 
 #: package/contents/ui/ConfigGeneral.qml:192
 #, kde-format
+msgid "Switch sidebar categories when hovering over them"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:198
+#, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
 msgstr "Ρύθμιση ενεργών πρόσθετων αναζήτησης…"
 
-#: package/contents/ui/ConfigGeneral.qml:202
+#: package/contents/ui/ConfigGeneral.qml:208
 #, kde-format
 msgid "Sidebar position:"
 msgstr "Θέση πλευρικής μπάρας:"
 
-#: package/contents/ui/ConfigGeneral.qml:203
-#: package/contents/ui/ConfigGeneral.qml:211
+#: package/contents/ui/ConfigGeneral.qml:209
+#: package/contents/ui/ConfigGeneral.qml:217
 #, kde-format
 msgid "Right"
 msgstr "Δεξιά"
 
-#: package/contents/ui/ConfigGeneral.qml:203
-#: package/contents/ui/ConfigGeneral.qml:211
+#: package/contents/ui/ConfigGeneral.qml:209
+#: package/contents/ui/ConfigGeneral.qml:217
 #, kde-format
 msgid "Left"
 msgstr "Αριστερά"
 
-#: package/contents/ui/ConfigGeneral.qml:219
+#: package/contents/ui/ConfigGeneral.qml:225
 #, kde-format
 msgid "Show favorites:"
 msgstr "Εμφάνιση αγαπημένων:"
 
-#: package/contents/ui/ConfigGeneral.qml:220
+#: package/contents/ui/ConfigGeneral.qml:226
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "Σε ένα πλέγμα"
 
-#: package/contents/ui/ConfigGeneral.qml:228
+#: package/contents/ui/ConfigGeneral.qml:234
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "Σε μια λίστα"
 
-#: package/contents/ui/ConfigGeneral.qml:236
+#: package/contents/ui/ConfigGeneral.qml:242
 #, kde-format
 msgid "Show other applications:"
 msgstr "Εμφάνιση άλλων εφαρμογών:"
 
-#: package/contents/ui/ConfigGeneral.qml:237
+#: package/contents/ui/ConfigGeneral.qml:243
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "Σε ένα πλέγμα"
 
-#: package/contents/ui/ConfigGeneral.qml:245
+#: package/contents/ui/ConfigGeneral.qml:251
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "Σε μια λίστα"
 
-#: package/contents/ui/ConfigGeneral.qml:257
+#: package/contents/ui/ConfigGeneral.qml:263
 #, kde-format
 msgid "Show buttons for:"
 msgstr "Εμφάνιση κουμπιών για:"
 
-#: package/contents/ui/ConfigGeneral.qml:258
+#: package/contents/ui/ConfigGeneral.qml:264
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
 msgid "Power"
 msgstr "Ενέργεια"
 
-#: package/contents/ui/ConfigGeneral.qml:267
+#: package/contents/ui/ConfigGeneral.qml:273
 #, kde-format
 msgid "Session"
 msgstr "Συνεδρία"
 
-#: package/contents/ui/ConfigGeneral.qml:276
+#: package/contents/ui/ConfigGeneral.qml:282
 #, kde-format
 msgid "Power and session"
 msgstr "Ενέργεια και συνεδρία"
 
-#: package/contents/ui/ConfigGeneral.qml:285
+#: package/contents/ui/ConfigGeneral.qml:291
 #, kde-format
 msgid "Show action button captions"
 msgstr "Εμφάνιση λεζάντας κουμπιών δράσης"
@@ -302,19 +307,19 @@ msgstr "Περισσότερα"
 msgid "Edit Applications…"
 msgstr "Επεξεργασία εφαρμογών…"
 
-#: package/contents/ui/PlacesPage.qml:52
+#: package/contents/ui/PlacesPage.qml:62
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "Computer"
 msgstr "Υπολογιστής"
 
-#: package/contents/ui/PlacesPage.qml:53
+#: package/contents/ui/PlacesPage.qml:63
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "History"
 msgstr "Ιστορικό"
 
-#: package/contents/ui/PlacesPage.qml:54
+#: package/contents/ui/PlacesPage.qml:64
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"

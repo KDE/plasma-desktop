@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-28 00:41+0000\n"
+"POT-Creation-Date: 2024-12-06 00:42+0000\n"
 "PO-Revision-Date: 2024-08-25 12:05+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -474,45 +474,58 @@ msgctxt ""
 msgid "Fix it"
 msgstr "Rett det"
 
-#: contents/configuration/PanelConfiguration.qml:564
+#: contents/configuration/PanelConfiguration.qml:572
 #, kde-format
 msgid "Panel Width:"
 msgstr "Panelbreidd:"
 
-#: contents/configuration/PanelConfiguration.qml:565
+#: contents/configuration/PanelConfiguration.qml:573
 #, kde-format
 msgid "Panel Height:"
 msgstr "Panelhøgd:"
 
-#: contents/configuration/PanelConfiguration.qml:588
+#: contents/configuration/PanelConfiguration.qml:596
 #, kde-format
 msgid "Focus shortcut:"
 msgstr "Fokussnarveg:"
 
-#: contents/configuration/PanelConfiguration.qml:599
+#: contents/configuration/PanelConfiguration.qml:607
 #, kde-format
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Bruk snøggtasten til å flytta fokuset til panelet"
 
-#: contents/configuration/PanelConfiguration.qml:633
+#: contents/configuration/PanelConfiguration.qml:641
 #, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Fjern panel"
 
-#: contents/configuration/PanelConfiguration.qml:636
+#: contents/configuration/PanelConfiguration.qml:644
 #, kde-format
 msgid "Remove this panel; this action is undo-able"
 msgstr "Fjern panelet (kan ikkje angrast)"
 
-#: contents/configuration/PanelConfiguration.qml:647
+#: contents/configuration/PanelConfiguration.qml:653
+#, fuzzy, kde-format
+#| msgid "Remove Panel"
+msgctxt "@action:button Clone the panel"
+msgid "Clone Panel"
+msgstr "Fjern panelet"
+
+#: contents/configuration/PanelConfiguration.qml:657
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Create a new panel with the same settings and applets"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:666
 #, fuzzy, kde-format
 #| msgid "Close"
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Lukk"
 
-#: contents/configuration/PanelConfiguration.qml:647
+#: contents/configuration/PanelConfiguration.qml:666
 #, fuzzy, kde-format
 #| msgid "Exit Edit Mode"
 msgctxt ""
@@ -520,7 +533,7 @@ msgctxt ""
 msgid "Exit Edit Mode"
 msgstr "Avslutt tilpassing"
 
-#: contents/configuration/PanelConfiguration.qml:650
+#: contents/configuration/PanelConfiguration.qml:669
 #, kde-format
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "Lukk panelinnstillingane og avslutt tilpassingsmodus"

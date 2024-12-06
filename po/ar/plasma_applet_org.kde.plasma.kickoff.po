@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-25 00:41+0000\n"
+"POT-Creation-Date: 2024-12-06 00:42+0000\n"
 "PO-Revision-Date: 2024-09-19 09:19+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -49,18 +49,18 @@ msgstr "في النّشاط الحاليّ"
 msgid "Show in Favorites"
 msgstr "أظهر في المفضّلة"
 
-#: package/contents/ui/ConfigGeneral.qml:46
+#: package/contents/ui/ConfigGeneral.qml:47
 #, kde-format
 msgid "Icon:"
 msgstr "الأيقونة:"
 
-#: package/contents/ui/ConfigGeneral.qml:52
+#: package/contents/ui/ConfigGeneral.qml:53
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr "غيّر أيقونة تطبيق المُطلق"
 
-#: package/contents/ui/ConfigGeneral.qml:53
+#: package/contents/ui/ConfigGeneral.qml:54
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -70,102 +70,102 @@ msgstr ""
 "الأيقونة الحالية %1. انقر لتفتح قائمة لتغير الأيقونة الحالية أو تصفرها إلى "
 "المبدئية."
 
-#: package/contents/ui/ConfigGeneral.qml:57
+#: package/contents/ui/ConfigGeneral.qml:58
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
 msgstr "اسم الأيقونة \"%1\""
 
-#: package/contents/ui/ConfigGeneral.qml:92
+#: package/contents/ui/ConfigGeneral.qml:93
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "اختر..."
 
-#: package/contents/ui/ConfigGeneral.qml:94
+#: package/contents/ui/ConfigGeneral.qml:95
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr "اختر أيقونة لتطبيق مطلق التطبيقات"
 
-#: package/contents/ui/ConfigGeneral.qml:98
+#: package/contents/ui/ConfigGeneral.qml:99
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "صفّر إلى الأيقونة المبدئية"
 
-#: package/contents/ui/ConfigGeneral.qml:104
+#: package/contents/ui/ConfigGeneral.qml:105
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "أزل الأيقونة"
 
-#: package/contents/ui/ConfigGeneral.qml:119
+#: package/contents/ui/ConfigGeneral.qml:120
 #, kde-format
 msgid "Show applications as:"
 msgstr "أظهر التّطبيقات كـ:"
 
-#: package/contents/ui/ConfigGeneral.qml:121
+#: package/contents/ui/ConfigGeneral.qml:122
 #, kde-format
 msgid "Name only"
 msgstr "الاسم فقط"
 
-#: package/contents/ui/ConfigGeneral.qml:121
+#: package/contents/ui/ConfigGeneral.qml:122
 #, kde-format
 msgid "Description only"
 msgstr "الوصف فقط"
 
-#: package/contents/ui/ConfigGeneral.qml:121
+#: package/contents/ui/ConfigGeneral.qml:122
 #, kde-format
 msgid "Name (Description)"
 msgstr "الاسم (الوصف)"
 
-#: package/contents/ui/ConfigGeneral.qml:121
+#: package/contents/ui/ConfigGeneral.qml:122
 #, kde-format
 msgid "Description (Name)"
 msgstr "الوصف (الاسم)"
 
-#: package/contents/ui/ConfigGeneral.qml:131
+#: package/contents/ui/ConfigGeneral.qml:132
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "اللصيقة النصية:"
 
-#: package/contents/ui/ConfigGeneral.qml:133
+#: package/contents/ui/ConfigGeneral.qml:134
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "اكتب هنا لتضيف لصيقة نصية"
 
-#: package/contents/ui/ConfigGeneral.qml:147
+#: package/contents/ui/ConfigGeneral.qml:148
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr "صفّر تسمية القائمة"
 
-#: package/contents/ui/ConfigGeneral.qml:160
+#: package/contents/ui/ConfigGeneral.qml:161
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "لا يمكن وضع لصيقة نصية عندما تكون اللوحة عمودية"
 
-#: package/contents/ui/ConfigGeneral.qml:171
+#: package/contents/ui/ConfigGeneral.qml:172
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "عام:"
 
-#: package/contents/ui/ConfigGeneral.qml:172
+#: package/contents/ui/ConfigGeneral.qml:173
 #, kde-format
 msgid "Always sort applications alphabetically"
 msgstr "افرز أبجديًّا دائما"
 
-#: package/contents/ui/ConfigGeneral.qml:177
+#: package/contents/ui/ConfigGeneral.qml:178
 #, kde-format
 msgid "Use compact list item style"
 msgstr "استخدم قائمة العناصر المتراصة"
 
-#: package/contents/ui/ConfigGeneral.qml:183
+#: package/contents/ui/ConfigGeneral.qml:184
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
@@ -173,83 +173,88 @@ msgstr "يعطل آليا في وضع اللوحي"
 
 #: package/contents/ui/ConfigGeneral.qml:192
 #, kde-format
+msgid "Switch sidebar categories when hovering over them"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:198
+#, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
 msgstr "اضبط ملحقات البحث…"
 
-#: package/contents/ui/ConfigGeneral.qml:202
+#: package/contents/ui/ConfigGeneral.qml:208
 #, kde-format
 msgid "Sidebar position:"
 msgstr "موضع الشريط الجانبي:"
 
-#: package/contents/ui/ConfigGeneral.qml:203
-#: package/contents/ui/ConfigGeneral.qml:211
+#: package/contents/ui/ConfigGeneral.qml:209
+#: package/contents/ui/ConfigGeneral.qml:217
 #, kde-format
 msgid "Right"
 msgstr "يمين"
 
-#: package/contents/ui/ConfigGeneral.qml:203
-#: package/contents/ui/ConfigGeneral.qml:211
+#: package/contents/ui/ConfigGeneral.qml:209
+#: package/contents/ui/ConfigGeneral.qml:217
 #, kde-format
 msgid "Left"
 msgstr "يسار"
 
-#: package/contents/ui/ConfigGeneral.qml:219
+#: package/contents/ui/ConfigGeneral.qml:225
 #, kde-format
 msgid "Show favorites:"
 msgstr "أظهر المفضّلات"
 
-#: package/contents/ui/ConfigGeneral.qml:220
+#: package/contents/ui/ConfigGeneral.qml:226
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "في شبكة"
 
-#: package/contents/ui/ConfigGeneral.qml:228
+#: package/contents/ui/ConfigGeneral.qml:234
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "في قائمة"
 
-#: package/contents/ui/ConfigGeneral.qml:236
+#: package/contents/ui/ConfigGeneral.qml:242
 #, kde-format
 msgid "Show other applications:"
 msgstr "أظهر التّطبيقات الأخرى:"
 
-#: package/contents/ui/ConfigGeneral.qml:237
+#: package/contents/ui/ConfigGeneral.qml:243
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "في شبكة"
 
-#: package/contents/ui/ConfigGeneral.qml:245
+#: package/contents/ui/ConfigGeneral.qml:251
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "في قائمة"
 
-#: package/contents/ui/ConfigGeneral.qml:257
+#: package/contents/ui/ConfigGeneral.qml:263
 #, kde-format
 msgid "Show buttons for:"
 msgstr "أظهر أزرار لـ:"
 
-#: package/contents/ui/ConfigGeneral.qml:258
+#: package/contents/ui/ConfigGeneral.qml:264
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
 msgid "Power"
 msgstr "الطاقة"
 
-#: package/contents/ui/ConfigGeneral.qml:267
+#: package/contents/ui/ConfigGeneral.qml:273
 #, kde-format
 msgid "Session"
 msgstr "الجلسة"
 
-#: package/contents/ui/ConfigGeneral.qml:276
+#: package/contents/ui/ConfigGeneral.qml:282
 #, kde-format
 msgid "Power and session"
 msgstr "الطاقة والجلسة"
 
-#: package/contents/ui/ConfigGeneral.qml:285
+#: package/contents/ui/ConfigGeneral.qml:291
 #, kde-format
 msgid "Show action button captions"
 msgstr "أظهر عناوين أزرار الإجراءات"
@@ -300,19 +305,19 @@ msgstr "المزيد"
 msgid "Edit Applications…"
 msgstr "حرّر التّطبيقات..."
 
-#: package/contents/ui/PlacesPage.qml:52
+#: package/contents/ui/PlacesPage.qml:62
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "Computer"
 msgstr "الحاسوب"
 
-#: package/contents/ui/PlacesPage.qml:53
+#: package/contents/ui/PlacesPage.qml:63
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "History"
 msgstr "التّأريخ"
 
-#: package/contents/ui/PlacesPage.qml:54
+#: package/contents/ui/PlacesPage.qml:64
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"

@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-02 00:44+0000\n"
-"PO-Revision-Date: 2023-04-13 23:17+0200\n"
+"PO-Revision-Date: 2024-12-05 21:36+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -29,17 +29,15 @@ msgstr "mkondarev@yahoo.de"
 
 #. i18n: ectx: property (text), widget (KMessageWidget, kmessagewidget)
 #: kcmqtquicksettingswidget.ui:23
-#, fuzzy, kde-format
-#| msgid ""
-#| "These settings adjust the QtQuick settings used by Plasma. Only adjust if "
-#| "you know what you are doing."
+#, kde-format
 msgid ""
 "These settings adjust the QtQuick settings used by Plasma. Modifying these "
 "settings can break your desktop. Only adjust these settings if you know what "
 "you are doing."
 msgstr ""
-"Промяна на настройките на QtQuick, използвани от Plasma. Променяйте само, "
-"ако знаете какво правите."
+"Тези настройки променят настройките на QtQuick, използвани от Plasma. "
+"Промяната им може да доведе до срив на работната среда. Променяйте само, ако "
+"знаете какво правите."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcmqtquicksettingswidget.ui:41
