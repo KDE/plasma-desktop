@@ -158,8 +158,9 @@ class DesktopTest(unittest.TestCase):
         self.driver.find_element(AppiumBy.NAME, "Add Wallpaper Image…").click()
         wait = WebDriverWait(self.driver, 30)
         title_element: WebElement = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Open Image")))
-
-        ActionChains(self.driver).send_keys(Keys.ESCAPE).perform()
+        buttons = self.driver.find_elements(AppiumBy.XPATH, "//button[@name='Cancel' and contains(@accessibility-id, 'KFileWidget')]")
+        for button in buttons:
+            button.click()
         wait.until_not(lambda _: title_element.is_displayed())
 
     def test_1_containment_config_dialog_3_other_sections(self) -> None:
