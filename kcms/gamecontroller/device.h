@@ -7,6 +7,7 @@
 #pragma once
 
 #include <QObject>
+#include <QVector2D>
 
 #include <SDL2/SDL_events.h>
 #include <SDL2/SDL_joystick.h>
@@ -34,15 +35,20 @@ public:
     int axisCount() const;
     int axisValue(int index) const;
 
+    int hatCount() const;
+    QVector2D hatPosition(int index) const;
+
 Q_SIGNALS:
     void buttonStateChanged(int index);
     void axisValueChanged(int index);
+    void hatPositionChanged(int index);
 
 private:
     friend class DeviceModel;
 
     void onButtonEvent(const SDL_JoyButtonEvent &event);
     void onAxisEvent(const SDL_JoyAxisEvent &event);
+    void onHatEvent(const SDL_JoyHatEvent &event);
 
     int m_deviceIndex = -1;
     SDL_Joystick *m_joystick = nullptr;

@@ -114,6 +114,11 @@ void DeviceModel::poll()
                 m_devices.value(event.jaxis.which)->onAxisEvent(event.jaxis);
             }
             break;
+        case SDL_JOYHATMOTION:
+            if (m_devices.contains(event.jhat.which)) {
+                m_devices.value(event.jhat.which)->onHatEvent(event.jhat);
+            }
+            break;
         case SDL_CONTROLLERAXISMOTION:
             if (m_gamepads.contains(event.caxis.which)) {
                 m_gamepads.value(event.caxis.which)->onAxisEvent(event.caxis);

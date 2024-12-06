@@ -77,6 +77,31 @@ int Device::axisValue(int index) const
     return SDL_JoystickGetAxis(m_joystick, index);
 }
 
+int Device::hatCount() const
+{
+    return SDL_JoystickNumHats(m_joystick);
+}
+
+QVector2D Device::hatPosition(int index) const
+{
+    const Uint8 hat = SDL_JoystickGetHat(m_joystick, index);
+    QVector2D position;
+
+    if ((hat & SDL_HAT_LEFT) != 0) {
+        position.setX(std::numeric_limits<Sint16>::min());
+    } else if ((hat & SDL_HAT_RIGHT) != 0) {
+        position.setX(std::numeric_limits<Sint16>::max());
+    }
+
+    if ((hat & SDL_HAT_UP) != 0) {
+        position.setY(std::numeric_limits<Sint16>::min());
+    } else if ((hat & SDL_HAT_DOWN) != 0) {
+        position.setY(std::numeric_limits<Sint16>::max());
+    }
+
+    return position;
+}
+
 void Device::onButtonEvent(const SDL_JoyButtonEvent &event)
 {
     Q_EMIT buttonStateChanged(event.button);
@@ -85,6 +110,11 @@ void Device::onButtonEvent(const SDL_JoyButtonEvent &event)
 void Device::onAxisEvent(const SDL_JoyAxisEvent &event)
 {
     Q_EMIT axisValueChanged(event.axis);
+}
+
+void Device::onHatEvent(const SDL_JoyHatEvent &event)
+{
+    Q_EMIT hatPositionChanged(event.hat);
 }
 
 #include "moc_device.cpp"

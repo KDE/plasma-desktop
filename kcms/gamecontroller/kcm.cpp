@@ -11,8 +11,10 @@
 #include <KPluginFactory>
 
 #include "axesmodel.h"
+#include "axesproxymodel.h"
 #include "buttonmodel.h"
 #include "devicemodel.h"
+#include "hatmodel.h"
 
 K_PLUGIN_CLASS_WITH_JSON(KCMGameController, "kcm_gamecontroller.json")
 
@@ -25,7 +27,9 @@ KCMGameController::KCMGameController(QObject *parent, const KPluginMetaData &met
 
     qmlRegisterType<DeviceModel>(uri, 1, 0, "DeviceModel");
     qmlRegisterType<AxesModel>(uri, 1, 0, "AxesModel");
+    qmlRegisterType<AxesProxyModel>(uri, 1, 0, "AxesProxyModel");
     qmlRegisterType<ButtonModel>(uri, 1, 0, "ButtonModel");
+    qmlRegisterType<HatModel>(uri, 1, 0, "HatModel");
 }
 
 KCMGameController::~KCMGameController()

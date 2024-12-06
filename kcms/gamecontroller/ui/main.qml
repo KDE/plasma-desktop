@@ -131,7 +131,7 @@ KCM.SimpleKCM {
                 }
 
                 Table {
-                    model: AxesModel {
+                    model: AxesProxyModel {
                         device: root.device
                     }
 

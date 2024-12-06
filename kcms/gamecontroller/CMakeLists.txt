@@ -30,7 +30,9 @@ target_sources(kcm_gamecontroller PRIVATE
     device.cpp
     gamepad.cpp
     axesmodel.cpp
+    axesproxymodel.cpp
     buttonmodel.cpp
+    hatmodel.cpp
     kcm.cpp
 )
 
