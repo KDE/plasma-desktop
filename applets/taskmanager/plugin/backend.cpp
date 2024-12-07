@@ -529,7 +529,7 @@ void Backend::handleRecentDocumentAction() const
     // prevents using a service file that does not support opening a mime type for a file it created
     // for instance spectacle
     const auto mimetype = action->property("mimeType").toString();
-    if (!mimetype.isEmpty()) {
+    if (!mimetype.isEmpty() && mimetype != QLatin1String("application/octet-stream")) {
         if (!service->hasMimeType(mimetype)) {
             // needs to find the application that supports this mimetype
             service = KApplicationTrader::preferredService(mimetype);
