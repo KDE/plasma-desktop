@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-06 00:42+0000\n"
-"PO-Revision-Date: 2024-11-29 10:47+0200\n"
+"PO-Revision-Date: 2024-12-06 08:17+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -502,17 +502,16 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "הסרת הלוח הזה, זאת פעולה בלתי הפיכה"
 
 #: contents/configuration/PanelConfiguration.qml:653
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
-msgstr "הסרת לוח"
+msgstr "שכפול לוח"
 
 #: contents/configuration/PanelConfiguration.qml:657
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
-msgstr ""
+msgstr "יצירת לוח חדש עם אותה ההגדרות והיישומונים"
 
 #: contents/configuration/PanelConfiguration.qml:666
 #, kde-format

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-06 00:42+0000\n"
-"PO-Revision-Date: 2024-11-28 07:31+0100\n"
+"PO-Revision-Date: 2024-12-06 07:00+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -510,17 +510,16 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "Odstrani ta pult; tega dejanja ni mogoče razveljaviti"
 
 #: contents/configuration/PanelConfiguration.qml:653
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
-msgstr "Odstrani pult"
+msgstr "Kloniraj ploščo"
 
 #: contents/configuration/PanelConfiguration.qml:657
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
-msgstr ""
+msgstr "Ustvari novo ploščo z istimi nastavitvami in programčki"
 
 #: contents/configuration/PanelConfiguration.qml:666
 #, kde-format

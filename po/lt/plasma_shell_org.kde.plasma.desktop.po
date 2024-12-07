@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-06 00:42+0000\n"
-"PO-Revision-Date: 2024-10-05 19:54+0300\n"
+"PO-Revision-Date: 2024-12-06 21:45+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -437,8 +437,7 @@ msgid "Dodge windows"
 msgstr "Vengti langų"
 
 #: contents/configuration/PanelConfiguration.qml:354
-#, fuzzy, kde-format
-#| msgid "Windows Go Below"
+#, kde-format
 msgid "Windows go below"
 msgstr "Langai palenda"
 
@@ -511,17 +510,16 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "Šalinti šį skydelį; šį veiksmą galima bus atšaukti"
 
 #: contents/configuration/PanelConfiguration.qml:653
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
-msgstr "Šalinti skydelį"
+msgstr "Dubliuoti skydelį"
 
 #: contents/configuration/PanelConfiguration.qml:657
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
-msgstr ""
+msgstr "Sukurti naują skydelį su tomis pačiomis nuostatomis ir programėlėmis"
 
 #: contents/configuration/PanelConfiguration.qml:666
 #, kde-format
