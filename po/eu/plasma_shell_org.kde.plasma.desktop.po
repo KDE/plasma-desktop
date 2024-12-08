@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-06 00:42+0000\n"
-"PO-Revision-Date: 2024-11-28 20:15+0100\n"
+"PO-Revision-Date: 2024-12-07 18:18+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -508,17 +508,16 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "Kendu panel hau; ekintza hau desegin daiteke"
 
 #: contents/configuration/PanelConfiguration.qml:653
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
-msgstr "Kendu panela"
+msgstr "Klonatu panela"
 
 #: contents/configuration/PanelConfiguration.qml:657
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
-msgstr ""
+msgstr "Sortu panel berri bat ezarpen eta aplikaziotxo berdinekin"
 
 #: contents/configuration/PanelConfiguration.qml:666
 #, kde-format

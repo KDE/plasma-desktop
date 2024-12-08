@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-06 00:42+0000\n"
-"PO-Revision-Date: 2024-09-21 12:37+0200\n"
+"PO-Revision-Date: 2024-12-07 12:36+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -430,8 +430,7 @@ msgid "Dodge windows"
 msgstr "Unikaj okien"
 
 #: contents/configuration/PanelConfiguration.qml:354
-#, fuzzy, kde-format
-#| msgid "Windows Go Below"
+#, kde-format
 msgid "Windows go below"
 msgstr "Okna są przykrywane"
 
@@ -504,17 +503,16 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "Usuń ten pasek; nie będzie można cofnąć tego działania"
 
 #: contents/configuration/PanelConfiguration.qml:653
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
-msgstr "Usuń panel"
+msgstr "Powiel pasek"
 
 #: contents/configuration/PanelConfiguration.qml:657
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
-msgstr ""
+msgstr "Utwórz nowy pasek z tymi samymi ustawieniami i apletami"
 
 #: contents/configuration/PanelConfiguration.qml:666
 #, kde-format
@@ -584,7 +582,8 @@ msgstr "Zarządzanie paskami i pulpitem"
 #, kde-format
 msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
-msgstr "Możesz przeciągać panele i pulpity i przenosić je na różne ekrany."
+msgstr ""
+"Możesz przeciągać paski oraz pulpity, a także przenosić je na różne ekrany."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:44
 #, kde-format
@@ -609,7 +608,7 @@ msgstr "Usuń pulpit"
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:203
 #, kde-format
 msgid "Remove Panel"
-msgstr "Usuń panel"
+msgstr "Usuń pasek"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:279
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-12 00:42+0000\n"
-"PO-Revision-Date: 2024-10-19 12:44+0200\n"
+"PO-Revision-Date: 2024-12-07 12:34+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: inputsequence.cpp:172
 #, kde-format
@@ -55,11 +55,10 @@ msgid "Application-defined"
 msgstr "Określone przez aplikację"
 
 #: inputsequence.cpp:194
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pen Button %1"
-msgstr "Przycisk rysika 1:"
+msgstr "Przycisk rysika %1"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -106,40 +105,33 @@ msgstr "%1 - (%2,%3 %4×%5)"
 #, kde-format
 msgctxt "@item:inlistbox Stretch and fill to the screen"
 msgid "Stretch and Fill"
-msgstr ""
+msgstr "Rozciągnij i wypełnij"
 
 #: kcmtablet.cpp:164
-#, fuzzy, kde-format
-#| msgid "Keep Aspect Ratio and Fit Within Screen"
+#, kde-format
 msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
 msgid "Keep Aspect Ratio and Fit"
-msgstr "Zachowaj kształt i zmieść go takim na ekranie"
+msgstr "Zachowaj kształt i zmieść go"
 
 #: kcmtablet.cpp:165
-#, fuzzy, kde-format
-#| msgid "Map to Portion of Screen"
+#, kde-format
 msgctxt "@item:inlistbox Map to portion of the screen"
 msgid "Map to Portion"
-msgstr "Zmapuj do części ekranu"
+msgstr "Zmapuj do części"
 
 #: kcmtablet.cpp:290
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
-msgstr "Przycisk rysika 1:"
+msgstr "Przycisk rysika %1:"
 
 #: kcmtablet.cpp:291
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button X'"
 msgid "pen button %1"
-msgstr "przycisk rysika 1"
+msgstr "przycisk rysika %1"
 
 #: ui/ActionDialog.qml:25
 #, kde-format
@@ -172,14 +164,10 @@ msgid "Send mouse button click"
 msgstr "Wyślij kliknięcie przyciskiem myszy"
 
 #: ui/ActionDialog.qml:132
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt "@option:radio Set this action to a pen button type"
 msgid "Send pen button"
-msgstr "przycisk rysika 1"
+msgstr "Wyślij przycisk rysika"
 
 #: ui/ActionDialog.qml:150
 #, kde-format
@@ -240,31 +228,22 @@ msgid "Shift"
 msgstr "Shift"
 
 #: ui/ActionDialog.qml:264
-#, fuzzy, kde-format
-#| msgid "Tool Button 1"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
-msgstr "Przycisk narzędziowy 1"
+msgstr "Przycisk 1"
 
 #: ui/ActionDialog.qml:265
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 2'"
-#| msgid "pen button 2"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
-msgstr "przycisk rysika 2"
+msgstr "Przycisk 2"
 
 #: ui/ActionDialog.qml:266
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 3'"
-#| msgid "pen button 3"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
-msgstr "przycisk rysika 3"
+msgstr "Przycisk 3"
 
 #: ui/ActionDialog.qml:275
 #, kde-format
