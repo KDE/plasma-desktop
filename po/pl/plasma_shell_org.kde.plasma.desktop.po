@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-28 02:41+0000\n"
-"PO-Revision-Date: 2024-02-11 13:24+0100\n"
+"PO-Revision-Date: 2024-12-07 12:36+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: contents/activitymanager/ActivityItem.qml:212
 msgid "Currently being used"
@@ -264,11 +264,11 @@ msgstr "Wpisz tutaj"
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:194
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:194
 msgid "Remove Panel"
-msgstr "Usuń panel"
+msgstr "Usuń pasek"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:47
 msgid "Panel Alignment"
-msgstr "Wyrównanie panelu"
+msgstr "Wyrównanie paska"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
 msgid "Top"
@@ -328,11 +328,11 @@ msgstr "Przezroczysty"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:176
 msgid "Maximize Panel"
-msgstr "Maksymalizuj panel"
+msgstr "Maksymalizuj pasek"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:184
 msgid "Floating Panel"
-msgstr "Panel pływający"
+msgstr "Pływający pasek"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:200
 msgid "Shortcut"
@@ -391,15 +391,15 @@ msgstr "Przeciąganie przenosi"
 #: contents/configuration/panelconfiguration/ToolBar.qml:261
 msgctxt "@info:tooltip"
 msgid "Use arrow keys to move the panel"
-msgstr "Klawisze strzałek przesuwają panel"
+msgstr "Klawisze strzałek przesuwają pasek"
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:282
 msgid "Panel width:"
-msgstr "Szerokość panelu:"
+msgstr "Szerokość paska:"
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:282
 msgid "Panel height:"
-msgstr "Wysokość panelu:"
+msgstr "Wysokość paska:"
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:402
 #: contents/configuration/ShellContainmentConfiguration.qml:43
@@ -408,12 +408,13 @@ msgstr "Zamknij"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 msgid "Panels and Desktops Management"
-msgstr "Zarządzanie panelami i pulpitami"
+msgstr "Zarządzanie paskami i pulpitami"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
-msgstr "Możesz przeciągać panele i pulpity i przenosić je na różne ekrany."
+msgstr ""
+"Możesz przeciągać paski oraz pulpity, a także przenosić je na różne ekrany."
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:178
 msgid "Swap with Desktop on Screen %1"
