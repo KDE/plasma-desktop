@@ -10,8 +10,6 @@
 
 #include <KLocalizedString>
 
-#include "device.h"
-
 AxesModel::AxesModel(QObject *parent)
     : QAbstractTableModel(parent)
 {

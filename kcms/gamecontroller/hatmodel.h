@@ -8,7 +8,7 @@
 
 #include <QAbstractTableModel>
 
-class Device;
+#include "device.h"
 
 // Provides position data from joystick POV hats. Each POV hat is mapped to a pair of X/Y model rows.
 // On many gamepads D-pad is actually exposed as a POV hat instead of four regular buttons.

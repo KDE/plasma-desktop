@@ -9,7 +9,6 @@
 #include <KLocalizedString>
 
 #include "axesmodel.h"
-#include "device.h"
 #include "hatmodel.h"
 
 AxesProxyModel::AxesProxyModel(QObject *parent)

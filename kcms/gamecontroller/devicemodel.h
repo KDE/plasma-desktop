@@ -14,9 +14,10 @@
 
 #include <SDL2/SDL_joystick.h>
 
+#include "device.h"
+#include "gamepad.h"
+
 class QTimer;
-class Device;
-class Gamepad;
 
 class DeviceModel : public QAbstractListModel
 {

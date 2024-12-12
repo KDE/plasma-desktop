@@ -10,7 +10,7 @@
 
 #include <QAbstractTableModel>
 
-class Device;
+#include "device.h"
 
 class AxesModel : public QAbstractTableModel
 {

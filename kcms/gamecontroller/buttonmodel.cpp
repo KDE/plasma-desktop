@@ -10,8 +10,6 @@
 
 #include <KLocalizedString>
 
-#include "device.h"
-
 ButtonModel::ButtonModel(QObject *parent)
     : QAbstractTableModel(parent)
 {

@@ -8,8 +8,9 @@
 
 #include <QConcatenateTablesProxyModel>
 
+#include "device.h"
+
 class AxesModel;
-class Device;
 class HatModel;
 
 // Concatenates rows of AxesModel and HatModel into a single model

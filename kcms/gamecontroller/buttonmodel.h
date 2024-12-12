@@ -10,7 +10,7 @@
 
 #include <QAbstractTableModel>
 
-class Device;
+#include "device.h"
 
 class ButtonModel : public QAbstractTableModel
 {

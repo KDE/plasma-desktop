@@ -13,8 +13,6 @@
 
 #include <SDL2/SDL.h>
 
-#include "device.h"
-#include "gamepad.h"
 #include "logging.h"
 
 // 100 ms while we have devices

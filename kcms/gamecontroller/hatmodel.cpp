@@ -8,8 +8,6 @@
 
 #include <KLocalizedString>
 
-#include "device.h"
-
 HatModel::HatModel(QObject *parent)
     : QAbstractTableModel(parent)
 {
