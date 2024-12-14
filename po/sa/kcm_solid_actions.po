@@ -1,0 +1,264 @@
+# Sanskrit translations for plasma-desktop package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-09-08 01:58+0000\n"
+"PO-Revision-Date: 2024-12-13 19:10+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: ActionEditor.cpp:60
+#, kde-format
+msgid "Editing Action '%1'"
+msgstr "सम्पादनक्रिया '%1'."
+
+#: ActionEditor.cpp:162
+#, kde-format
+msgid ""
+"It appears that the action name, command, icon or condition are not valid.\n"
+"Therefore, changes will not be applied."
+msgstr ""
+"क्रियानाम, आदेशः, चिह्नं वा शर्तं वा वैधं नास्ति इति भासते ।\n"
+"अतः परिवर्तनं न प्रयुक्तं भविष्यति।"
+
+#: ActionEditor.cpp:163
+#, kde-format
+msgid "Invalid action"
+msgstr "असिद्धं कर्म"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
+#: ActionEditor.ui:17
+#, kde-format
+msgid "Edit Parameter"
+msgstr "पैरामीटर् सम्पादयतु"
+
+#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
+#: ActionEditor.ui:43
+#, kde-format
+msgid "Parameter type:"
+msgstr "पैरामीटर् प्रकारः : १."
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:51
+#, kde-format
+msgid "Property Match"
+msgstr "सम्पत्ति मेल"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:56
+#, kde-format
+msgid "Content Conjunction"
+msgstr "सामग्री सन्धि"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:61
+#, kde-format
+msgid "Content Disjunction"
+msgstr "सामग्री विच्छेदः"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:66
+#, kde-format
+msgid "Device Interface Match"
+msgstr "उपकरण अन्तरफलक मेल"
+
+#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
+#: ActionEditor.ui:96
+#, kde-format
+msgid "Device type:"
+msgstr "यन्त्रप्रकारः : १."
+
+#. i18n: ectx: property (text), widget (QLabel, LblValueName)
+#: ActionEditor.ui:135
+#, kde-format
+msgid "Value name:"
+msgstr "मूल्यनाम : १."
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:175
+#, kde-format
+msgid "Equals"
+msgstr "समाः"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:180
+#, kde-format
+msgid "Contains"
+msgstr "भरति"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
+#: ActionEditor.ui:208
+#, kde-format
+msgid "Reset Parameter"
+msgstr "पैरामीटर् पुनः सेट् कुर्वन्तु"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
+#: ActionEditor.ui:215
+#, kde-format
+msgid "Save Parameter Changes"
+msgstr "पैरामीटर् परिवर्तनं रक्षतु"
+
+#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
+#: ActionEditor.ui:247
+#, kde-format
+msgid "Action icon, click to change it"
+msgstr "क्रियाचिह्नं, परिवर्तयितुं क्लिक् कुर्वन्तु"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
+#: ActionEditor.ui:254
+#, kde-format
+msgid "Action name"
+msgstr "कर्म नाम"
+
+#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
+#: ActionEditor.ui:271
+#, kde-format
+msgid "Command: "
+msgstr "आदेश: "
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
+#: ActionEditor.ui:283
+#, no-c-format, kde-format
+msgid ""
+"Command that will trigger the action\n"
+"This can include any or all of the following case insensitive expands:\n"
+"\n"
+"%f: The mountpoint for the device - Storage Access devices only\n"
+"%d: Path to the device node - Block devices only\n"
+"%i: The identifier of the device"
+msgstr ""
+"आदेशः यः क्रियायाः प्रवर्तनं करिष्यति\n"
+"अस्मिन् निम्नलिखितप्रकरणानाम् असंवेदनशीलविस्ताराणां कश्चन वा सर्वः वा समावेशः भवितुम् "
+"अर्हति ।\n"
+"\n"
+"%f: यन्त्रस्य कृते माउण्ट्-बिन्दुः - केवलं भण्डारण-प्रवेश-यन्त्राणि\n"
+"%d: उपकरणनोड् प्रति मार्गः - केवलं उपकरणानि अवरुद्ध्यताम्\n"
+"%i: यन्त्रस्य परिचयकः"
+
+#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
+#: ActionEditor.ui:300
+#, kde-format
+msgid "Devices must match the following parameters for this action:"
+msgstr "अस्य क्रियायाः कृते यन्त्राणि निम्नलिखितमापदण्डैः सह मेलनं कुर्वन्तु ।"
+
+#. i18n: ectx: property (text), widget (QLabel, LblActionName)
+#: AddAction.ui:19
+#, kde-format
+msgid "Action name:"
+msgstr "क्रियानाम : १."
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
+#: AddAction.ui:26
+#, kde-format
+msgid "Enter the name for your new action"
+msgstr "भवतः नूतनक्रियायाः नाम प्रविशतु"
+
+#: DesktopFileGenerator.cpp:25
+#, kde-format
+msgid "Solid Action Desktop File Generator"
+msgstr "ठोस क्रिया डेस्कटॉप सञ्चिका जनरेटर"
+
+#: DesktopFileGenerator.cpp:27
+#, kde-format
+msgid ""
+"Tool to automatically generate Desktop Files from Solid DeviceInterface "
+"classes for translation"
+msgstr ""
+"अनुवादार्थं Solid DeviceInterface वर्गेभ्यः स्वयमेव Desktop Files उत्पन्नं कर्तुं साधनम्"
+
+#: DesktopFileGenerator.cpp:29
+#, kde-format
+msgid "(c) 2009, Ben Cooksley"
+msgstr "(ग) 2009, बेन कुक्सले"
+
+#: DesktopFileGenerator.cpp:30
+#, kde-format
+msgid "Ben Cooksley"
+msgstr "बेन् कुक्सले"
+
+#: DesktopFileGenerator.cpp:30
+#, kde-format
+msgid "Maintainer"
+msgstr "परिपालकः"
+
+#: PredicateItem.cpp:119
+#, kde-format
+msgid "The device must be of the type %1"
+msgstr "यन्त्रं %1 प्रकारस्य भवितुमर्हति"
+
+#: PredicateItem.cpp:122
+#, kde-format
+msgid "Any of the contained properties must match"
+msgstr "समाविष्टानां गुणानाम् एकः अपि मेलनं भवितुमर्हति"
+
+#: PredicateItem.cpp:125
+#, kde-format
+msgid "All of the contained properties must match"
+msgstr "समाविष्टानां सर्वेषां गुणानाम् मेलनं भवितुमर्हति"
+
+#: PredicateItem.cpp:134
+#, kde-format
+msgid "The device property %1 must equal %2"
+msgstr "यन्त्रगुणः %1 %2 इत्यस्य बराबरः भवितुमर्हति"
+
+#: PredicateItem.cpp:137
+#, kde-format
+msgid "The device property %1 must contain %2"
+msgstr "%1 इति यन्त्रगुणे %2 अवश्यं भवितव्यम्"
+
+#: SolidActions.cpp:137
+#, kde-format
+msgid "It appears that the predicate for this action is not valid."
+msgstr "अस्य कर्मणः विधेयस्य न प्रामाणिक इति भासते ।"
+
+#: SolidActions.cpp:137
+#, kde-format
+msgid "Error Parsing Device Conditions"
+msgstr "त्रुटिः पार्सिंग् उपकरणस्य स्थितिः"
+
+#: SolidActions.cpp:185
+#, kde-format
+msgid "No Action Selected"
+msgstr "न कर्म चयनितम्"
+
+#: SolidActions.cpp:206
+#, kde-format
+msgid "Cannot be deleted"
+msgstr "लोपयितुं न शक्यते"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
+#: SolidActions.ui:22
+#, kde-format
+msgid "Remove"
+msgstr "अपाकरोति"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
+#: SolidActions.ui:29
+#, kde-format
+msgid "Edit…"
+msgstr "सम्पादन…"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
+#: SolidActions.ui:36
+#, kde-format
+msgid "Add…"
+msgstr "संयोजयति…"

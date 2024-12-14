@@ -1,27 +1,28 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
+# Sanskrit translations for plasma-desktop package.
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2014, 2015, 2017, 2020, 2021, 2022, 2023, 2024 Vincenzo Reale <smart2128vr@gmail.com>
-# Paolo Zamponi <feus73@gmail.com>, 2018, 2019.
+# Kali <EMAIL@ADDRESS>, 2024.
 #
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-06 00:42+0000\n"
-"PO-Revision-Date: 2024-12-06 22:15+0100\n"
-"Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
-"Language-Team: Italian <kde-i18n-it@kde.org>\n"
-"Language: it\n"
+"PO-Revision-Date: 2024-12-13 20:20+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
+"Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.3\n"
+"Plural-Forms: nplurals=2; plural=(n>2);\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
 msgid "Currently being used"
-msgstr "Attualmente utilizzata"
+msgstr "सम्प्रति प्रयुक्तम्"
 
 #: contents/activitymanager/ActivityItem.qml:245
 #, kde-format
@@ -29,8 +30,8 @@ msgid ""
 "Move to\n"
 "this activity"
 msgstr ""
-"Sposta in\n"
-"questa attività"
+"प्रति गच्छतु\n"
+"एतत् क्रियाकलापम्"
 
 #: contents/activitymanager/ActivityItem.qml:275
 #, kde-format
@@ -38,121 +39,121 @@ msgid ""
 "Show also\n"
 "in this activity"
 msgstr ""
-"Mostra anche\n"
-"in questa attività"
+"अपि दर्शयतु\n"
+"अस्मिन् कार्ये"
 
 #: contents/activitymanager/ActivityItem.qml:337
 #, kde-format
 msgid "Configure"
-msgstr "Configura"
+msgstr "विन्यस्तं कुर्वन्तु"
 
 #: contents/activitymanager/ActivityItem.qml:356
 #, kde-format
 msgid "Stop activity"
-msgstr "Ferma l'attività"
+msgstr "क्रियाकलापं स्थगयतु"
 
 #: contents/activitymanager/ActivityList.qml:148
 #, kde-format
 msgid "Stopped activities:"
-msgstr "Attività fermate:"
+msgstr "स्थगितानि क्रियाकलापाः : १."
 
 #: contents/activitymanager/ActivityManager.qml:122
 #, kde-format
 msgid "Create activity…"
-msgstr "Crea attività..."
+msgstr "क्रियाकलापं रचयन्तु..."
 
 #: contents/activitymanager/Heading.qml:59
 #, kde-format
 msgid "Activities"
-msgstr "Attività"
+msgstr "गतिविधयः"
 
 #: contents/activitymanager/StoppedActivityItem.qml:138
 #, kde-format
 msgid "Configure activity"
-msgstr "Configura l'attività"
+msgstr "क्रियाकलापं विन्यस्यताम्"
 
 #: contents/activitymanager/StoppedActivityItem.qml:155
 #, kde-format
 msgid "Delete"
-msgstr "Elimina"
+msgstr "लुप्"
 
 #: contents/applet/AppletError.qml:164
 #, kde-format
 msgid "Copy to Clipboard"
-msgstr "Copia negli appunti"
+msgstr "क्लिप्बोर्ड् प्रति प्रतिलिख्यताम्"
 
 #: contents/applet/AppletError.qml:187
 #, kde-format
 msgid "View Error Details…"
-msgstr "Visualizza i dettagli dell'errore..."
+msgstr "त्रुटिविवरणं पश्यन्तु..."
 
 #: contents/applet/CompactApplet.qml:76
 #, kde-format
 msgid "Open %1"
-msgstr "Apri %1"
+msgstr "%1 उद्घाटयन्तु"
 
 #: contents/configuration/AboutPlugin.qml:21
 #: contents/configuration/AppletConfiguration.qml:305
 #, kde-format
 msgid "About"
-msgstr "Informazioni"
+msgstr "विषये"
 
 #: contents/configuration/AboutPlugin.qml:50
 #, kde-format
 msgid "Send an email to %1"
-msgstr "Invia un messaggio di posta elettronica a %1"
+msgstr "%1 इत्यस्मै ईमेल प्रेषयन्तु"
 
 #: contents/configuration/AboutPlugin.qml:64
 #, kde-format
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
-msgstr "Apri il sito web %1"
+msgstr ""
 
 #: contents/configuration/AboutPlugin.qml:137
 #, kde-format
 msgid "Copyright"
-msgstr "Copyright"
+msgstr "प्रतिलिपि अधिकार"
 
 #: contents/configuration/AboutPlugin.qml:158 contents/explorer/Tooltip.qml:94
 #, kde-format
 msgid "License:"
-msgstr "Licenza:"
+msgstr "अनुज्ञापत्रम् : १."
 
 #: contents/configuration/AboutPlugin.qml:163
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "View license text"
-msgstr "Visualizza il testo della licenza"
+msgstr ""
 
 #: contents/configuration/AboutPlugin.qml:177
 #, kde-format
 msgid "Authors"
-msgstr "Autori"
+msgstr "लेखकाः"
 
 #: contents/configuration/AboutPlugin.qml:189
 #, kde-format
 msgid "Credits"
-msgstr "Riconoscimenti"
+msgstr "श्रेयः"
 
 #: contents/configuration/AboutPlugin.qml:202
 #, kde-format
 msgid "Translators"
-msgstr "Traduttori"
+msgstr "अनुवादकाः"
 
 #: contents/configuration/AboutPlugin.qml:220
 #, kde-format
 msgid "Report a Bug…"
-msgstr "Segnala un bug…"
+msgstr "एकं दोषं प्रतिवेदयतु..."
 
 #: contents/configuration/AppletConfiguration.qml:76
 #, kde-format
 msgid "Keyboard Shortcuts"
-msgstr "Scorciatoie da tastiera"
+msgstr "कीबोर्ड शॉर्टकट"
 
 #: contents/configuration/AppletConfiguration.qml:353
 #, kde-format
 msgid "Apply Settings"
-msgstr "Applica impostazioni"
+msgstr "सेटिंग्स् प्रयोजयन्तु"
 
 #: contents/configuration/AppletConfiguration.qml:354
 #, kde-format
@@ -160,68 +161,67 @@ msgid ""
 "The settings of the current module have changed. Do you want to apply the "
 "changes or discard them?"
 msgstr ""
-"Le impostazioni del modulo attuale sono cambiate. Vuoi applicare le "
-"modifiche o annullarle?"
+"वर्तमानमॉड्यूलस्य सेटिङ्ग्स् परिवर्तिताः सन्ति । परिवर्तनं प्रयोक्तुं इच्छति वा परित्यक्तुं वा?"
 
 #: contents/configuration/AppletConfiguration.qml:385
 #, kde-format
 msgid "OK"
-msgstr "OK"
+msgstr "अस्तु"
 
 #: contents/configuration/AppletConfiguration.qml:392
 #, kde-format
 msgid "Apply"
-msgstr "Applica"
+msgstr "आचरतु"
 
 #: contents/configuration/AppletConfiguration.qml:398
 #, kde-format
 msgid "Cancel"
-msgstr "Annulla"
+msgstr "निरसयतु"
 
 #: contents/configuration/ConfigCategoryDelegate.qml:27
 #, kde-format
 msgid "Open configuration page"
-msgstr "Apri la pagina di configurazione"
+msgstr "विन्यासपृष्ठं उद्घाटयन्तु"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:21
 #, kde-format
 msgid "Left-Button"
-msgstr "Pulsante sinistro"
+msgstr "वाम-बटनम्"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:22
 #, kde-format
 msgid "Right-Button"
-msgstr "Pulsante destro"
+msgstr "दक्षिण-बटन"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:23
 #, kde-format
 msgid "Middle-Button"
-msgstr "Pulsante centrale"
+msgstr "मध्य-बटन"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:24
 #, kde-format
 msgid "Back-Button"
-msgstr "Pulsante di ricerca all'indietro"
+msgstr "पृष्ठ-बटन"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:25
 #, kde-format
 msgid "Forward-Button"
-msgstr "Pulsante di ricerca in avanti"
+msgstr "अग्रे-बटनम्"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:27
 #, kde-format
 msgid "Vertical-Scroll"
-msgstr "Scorrimento verticale"
+msgstr "ऊर्ध्वाधर-स्क्रॉल"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:28
 #, kde-format
 msgid "Horizontal-Scroll"
-msgstr "Scorrimento orizzontale"
+msgstr "क्षैतिज-स्क्रॉल"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:30
 #, kde-format
 msgid "Shift"
-msgstr "Maiusc"
+msgstr "विहरति"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:31
 #, kde-format
@@ -231,348 +231,338 @@ msgstr "Ctrl"
 #: contents/configuration/ConfigurationContainmentActions.qml:32
 #, kde-format
 msgid "Alt"
-msgstr "Alt"
+msgstr "सर्वे"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:33
 #, kde-format
 msgid "Meta"
-msgstr "Meta"
+msgstr "मेटा"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:95
 #, kde-format
 msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
 msgid "+"
-msgstr "+"
+msgstr ""
 
 #: contents/configuration/ConfigurationContainmentActions.qml:167
 #, kde-format
 msgctxt "@title"
 msgid "About"
-msgstr "Informazioni"
+msgstr "विषये"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:182
 #: contents/configuration/MouseEventInputButton.qml:13
 #, kde-format
 msgid "Add Action"
-msgstr "Aggiungi azione"
+msgstr "Action योजयतु"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:69
 #, kde-format
 msgid "Layout changes have been restricted by the system administrator"
-msgstr ""
-"Le modifiche della disposizione sono state limitate dall'amministratore del "
-"sistema"
+msgstr "विन्यासपरिवर्तनं प्रणालीप्रशासकेन प्रतिबन्धितम् अस्ति"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:84
 #, kde-format
 msgid "Layout:"
-msgstr "Disposizione:"
+msgstr "प्रारूपं:"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:98
 #, kde-format
 msgid "Wallpaper type:"
-msgstr "Tipo di sfondo:"
+msgstr "वॉलपेपर प्रकारः : १."
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:119
 #, kde-format
 msgid "Get New Plugins…"
-msgstr "Ottieni nuove estensioni..."
+msgstr "नवीन प्लगिन् प्राप्त करें..."
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:193
 #, kde-format
 msgid "Layout changes must be applied before other changes can be made"
-msgstr ""
-"Le modifiche alla disposizione devono essere applicate prima che ne possano "
-"essere apportate delle altre"
+msgstr "अन्यपरिवर्तनानि कर्तुं पूर्वं विन्यासपरिवर्तनं प्रयोक्तव्यम्"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:197
 #, kde-format
 msgid "Apply Now"
-msgstr "Applica adesso"
+msgstr "अधुना आवेदनं कुर्वन्तु"
 
 #: contents/configuration/ConfigurationShortcuts.qml:18
 #, kde-format
 msgid "Shortcuts"
-msgstr "Scorciatoie"
+msgstr "शॉर्टकट"
 
 #: contents/configuration/ConfigurationShortcuts.qml:30
 #, kde-format
 msgid "This shortcut will activate the applet as though it had been clicked."
-msgstr ""
-"Questa scorciatoia attiverà l'applet, come se avessi fatto clic su di essa."
+msgstr "एषः शॉर्टकट् एप्लेट् क्लिक् कृतवत् सक्रियं करिष्यति ।"
 
 #: contents/configuration/ContainmentConfiguration.qml:27
 #, kde-format
 msgid "Wallpaper"
-msgstr "Immagine di sfondo"
+msgstr "वॉलपेपर"
 
 #: contents/configuration/ContainmentConfiguration.qml:33
 #, kde-format
 msgid "Mouse Actions"
-msgstr "Azioni del mouse"
+msgstr "मूषकस्य क्रियाः"
 
 #: contents/configuration/MouseEventInputButton.qml:20
 #, kde-format
 msgid "Input Here"
-msgstr "Digita qui"
+msgstr "अत्र निवेशयतु"
 
 #: contents/configuration/PanelConfiguration.qml:97
 #, kde-format
 msgid "Panel Settings"
-msgstr "Impostazioni del pannello"
+msgstr "फलक सेटिंग्स्"
 
 #: contents/configuration/PanelConfiguration.qml:104
 #, kde-format
 msgid "Add Spacer"
-msgstr "Aggiungi spaziatore"
+msgstr "स्पेसर योजयन्तु"
 
 #: contents/configuration/PanelConfiguration.qml:107
 #, kde-format
 msgid "Add spacer widget to the panel"
-msgstr "Aggiungi l'oggetto spaziatore al pannello"
+msgstr "फलकस्य मध्ये spacer widget योजयन्तु"
 
 #: contents/configuration/PanelConfiguration.qml:114
 #, kde-format
 msgid "Add or Manage Widgets…"
-msgstr "Aggiungi o gestisci oggetti..."
+msgstr "विजेट् योजयन्तु अथवा प्रबन्धयन्तु..."
 
 #: contents/configuration/PanelConfiguration.qml:117
 #, kde-format
 msgid "Open the widget selector to drag and drop widgets to the panel"
-msgstr ""
-"Apri il selettore degli oggetti per trascinare e rilasciare gli oggetti sul "
-"pannello"
+msgstr "विजेट्-इत्येतत् पटलं प्रति कर्षितुं पातयितुं च विजेट्-चयनकं उद्घाटयन्तु"
 
 #: contents/configuration/PanelConfiguration.qml:146
 #, kde-format
 msgid "Position"
-msgstr "Posizione"
+msgstr "स्थितिः"
 
 #: contents/configuration/PanelConfiguration.qml:151
 #: contents/configuration/PanelConfiguration.qml:266
 #, kde-format
 msgid "Top"
-msgstr "Alto"
+msgstr "उपरितन"
 
 #: contents/configuration/PanelConfiguration.qml:152
 #: contents/configuration/PanelConfiguration.qml:268
 #, kde-format
 msgid "Right"
-msgstr "Destra"
+msgstr "दक्षिणः"
 
 #: contents/configuration/PanelConfiguration.qml:153
 #: contents/configuration/PanelConfiguration.qml:266
 #, kde-format
 msgid "Left"
-msgstr "Sinistra"
+msgstr "वामः"
 
 #: contents/configuration/PanelConfiguration.qml:154
 #: contents/configuration/PanelConfiguration.qml:268
 #, kde-format
 msgid "Bottom"
-msgstr "Basso"
+msgstr "अधः"
 
 #: contents/configuration/PanelConfiguration.qml:174
 #, kde-format
 msgid "Set Position…"
-msgstr "Imposta la posizione…"
+msgstr "पदं सेट् कुर्वन्तु..."
 
 #: contents/configuration/PanelConfiguration.qml:201
 #, kde-format
 msgid "Alignment"
-msgstr "Allineamento"
+msgstr "संरेखणम्"
 
 #: contents/configuration/PanelConfiguration.qml:267
 #, kde-format
 msgid "Center"
-msgstr "Centro"
+msgstr "केंद्र"
 
 #: contents/configuration/PanelConfiguration.qml:290
 #, kde-format
 msgid "Height"
-msgstr "Altezza"
+msgstr "औनत्यम्‌"
 
 #: contents/configuration/PanelConfiguration.qml:291
 #, kde-format
 msgid "Width"
-msgstr "Larghezza"
+msgstr "विस्तार"
 
 #: contents/configuration/PanelConfiguration.qml:310
 #, kde-format
 msgid "Fill height"
-msgstr "Riempi in altezza"
+msgstr "ऊर्ध्वता पूरयतु"
 
 #: contents/configuration/PanelConfiguration.qml:310
 #, kde-format
 msgid "Fill width"
-msgstr "Riempi in larghezza"
+msgstr "चौड़ाई पूरयतु"
 
 #: contents/configuration/PanelConfiguration.qml:311
 #, kde-format
 msgid "Fit content"
-msgstr "Adatta il contenuto"
+msgstr "सामग्रीं फिट् कुर्वन्तु"
 
 #: contents/configuration/PanelConfiguration.qml:312
 #, kde-format
 msgid "Custom"
-msgstr "Personalizzato"
+msgstr "आचारः"
 
 #: contents/configuration/PanelConfiguration.qml:338
 #, kde-format
 msgid "Visibility"
-msgstr "Visibilità"
+msgstr "दृश्यता"
 
 #: contents/configuration/PanelConfiguration.qml:351
 #, kde-format
 msgid "Always visible"
-msgstr "Sempre visibile"
+msgstr "सदा दृश्यमानम्"
 
 #: contents/configuration/PanelConfiguration.qml:352
 #, kde-format
 msgid "Auto hide"
-msgstr "Nascondi automaticamente"
+msgstr "स्वतः गोपनम्"
 
 #: contents/configuration/PanelConfiguration.qml:353
 #, kde-format
 msgid "Dodge windows"
-msgstr "Eludi le finestre"
+msgstr "खिडकयः चकमातु"
 
 #: contents/configuration/PanelConfiguration.qml:354
 #, kde-format
 msgid "Windows go below"
-msgstr "Le finestre vanno sotto"
+msgstr "विण्डोजः अधः गच्छन्ति"
 
 #: contents/configuration/PanelConfiguration.qml:397
 #, kde-format
 msgid "Opacity"
-msgstr "Opacità"
+msgstr "अपारदर्शिता"
 
 #: contents/configuration/PanelConfiguration.qml:411
 #, kde-format
 msgid "Adaptive"
-msgstr "Flessibile"
+msgstr "अनुकूली"
 
 #: contents/configuration/PanelConfiguration.qml:412
 #, kde-format
 msgid "Opaque"
-msgstr "Opaco"
+msgstr "अपारदर्शी"
 
 #: contents/configuration/PanelConfiguration.qml:413
 #, kde-format
 msgid "Translucent"
-msgstr "Trasparente"
+msgstr "अर्धपारदर्शक"
 
 #: contents/configuration/PanelConfiguration.qml:436
 #, kde-format
 msgid "Floating"
-msgstr "Flottante"
+msgstr "प्लवमानः"
 
 #: contents/configuration/PanelConfiguration.qml:446
 #, kde-format
 msgid "Style"
-msgstr "Stile"
+msgstr "शैली"
 
 #: contents/configuration/PanelConfiguration.qml:486
 #, kde-format
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
-msgstr "Correggilo"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:572
 #, kde-format
 msgid "Panel Width:"
-msgstr "Larghezza del pannello:"
+msgstr "फलकस्य विस्तारः : १."
 
 #: contents/configuration/PanelConfiguration.qml:573
 #, kde-format
 msgid "Panel Height:"
-msgstr "Altezza del pannello:"
+msgstr "फलकस्य ऊर्ध्वता : १."
 
 #: contents/configuration/PanelConfiguration.qml:596
 #, kde-format
 msgid "Focus shortcut:"
-msgstr "Scorciatoia per messa a fuoco:"
+msgstr "फोकस शॉर्टकट् : १."
 
 #: contents/configuration/PanelConfiguration.qml:607
 #, kde-format
 msgid "Press this keyboard shortcut to move focus to the Panel"
-msgstr ""
-"Premi questa scorciatoia da tastiera per spostare il fuoco sul pannello"
+msgstr "Panel मध्ये फोकस गन्तुं एतत् कीबोर्ड शॉर्टकट् नुदन्तु"
 
 #: contents/configuration/PanelConfiguration.qml:641
 #, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
-msgstr "Elimina pannello"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:644
 #, kde-format
 msgid "Remove this panel; this action is undo-able"
-msgstr "Rimuovi questo pannello; questa azione è annullabile"
+msgstr "एतत् पटलं निष्कासयन्तु; एतत् कर्म अण्डो-सक्षमम् अस्ति"
 
 #: contents/configuration/PanelConfiguration.qml:653
 #, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
-msgstr "Clona pannello"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:657
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
-msgstr "Crea un nuovo pannello con le stesse impostazioni e applet"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:666
 #, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
-msgstr "Chiudi"
+msgstr "पिधानं करोतु"
 
 #: contents/configuration/PanelConfiguration.qml:666
 #, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
-msgstr "Esci dalla modalità di modifica"
+msgstr "सम्पादन मोडतः निर्गच्छन्तु"
 
 #: contents/configuration/PanelConfiguration.qml:669
 #, kde-format
 msgid "Close Panel Settings window and exit Edit Mode"
-msgstr ""
-"Chiudi la finestra delle impostazioni del pannello ed esci dalla modalità di "
-"modifica"
+msgstr "Panel Settings विण्डो बन्दं कृत्वा Edit Mode इत्यस्मात् निर्गच्छतु"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:32
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum height."
-msgstr "Trascina per modificare l'altezza massima."
+msgstr ""
 
 #: contents/configuration/panelconfiguration/Ruler.qml:33
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum width."
-msgstr "Trascina per modificare la larghezza massima."
+msgstr ""
 
 #: contents/configuration/panelconfiguration/Ruler.qml:34
 #: contents/configuration/panelconfiguration/Ruler.qml:39
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Double-click to reset."
-msgstr "Fai doppio clic per ripristinare."
+msgstr ""
 
 #: contents/configuration/panelconfiguration/Ruler.qml:37
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum height."
-msgstr "Trascina per modificare l'altezza minima."
+msgstr ""
 
 #: contents/configuration/panelconfiguration/Ruler.qml:38
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
-msgstr "Trascina per modificare la larghezza minima."
+msgstr ""
 
 #: contents/configuration/panelconfiguration/Ruler.qml:87
 #, kde-format
@@ -581,486 +571,278 @@ msgid ""
 "Drag to change position on this screen edge.\n"
 "Double-click to reset."
 msgstr ""
-"Trascina per cambiare la posizione su questo bordo dello schermo.\n"
-"Fai doppio clic per ripristinare."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 #, kde-format
 msgid "Panel and Desktop Management"
-msgstr "Gestione dei pannelli e del desktop"
+msgstr "पैनल तथा डेस्कटॉप प्रबन्धन"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 #, kde-format
 msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
-msgstr "Puoi trascinare pannelli e desktop per spostarli su schermi diversi."
+msgstr ""
+"भवान् Panels तथा Desktops इत्येतत् भिन्न-भिन्न-स्क्रीन्-मध्ये स्थानान्तरयितुं परितः कर्षितुं "
+"शक्नोति ।"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:44
 #, kde-format
 msgid "Close"
-msgstr "Chiudi"
+msgstr "पिधानं करोतु"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:187
 #, kde-format
 msgid "Swap with Desktop on Screen %1"
-msgstr "Scambia con desktop sullo schermo %1"
+msgstr "Screen %1 इत्यत्र Desktop इत्यनेन सह स्वैप कुर्वन्तु"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:188
 #, kde-format
 msgid "Move to Screen %1"
-msgstr "Sposta allo schermo %1"
+msgstr "Screen %1 - मध्ये गच्छन्तु"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:202
 #, kde-format
 msgid "Remove Desktop"
-msgstr "Rimuovi desktop"
+msgstr "डेस्कटॉपं निष्कासयन्तु"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:203
 #, kde-format
 msgid "Remove Panel"
-msgstr "Rimuovi pannello"
+msgstr "फलकं निष्कासयन्तु"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:279
 #, kde-format
 msgid "%1 (primary)"
-msgstr "%1 (primario)"
+msgstr "%1 (प्राथमिक) २."
 
 #: contents/explorer/AppletAlternatives.qml:66
 #, kde-format
 msgid "Alternative Widgets"
-msgstr "Oggetti alternativi"
+msgstr "वैकल्पिक विजेट्"
 
 #: contents/explorer/AppletDelegate.qml:41
 #, kde-format
 msgid "Unsupported Widget"
-msgstr "Oggetto non supportato"
+msgstr "असमर्थित विजेट्"
 
 #: contents/explorer/AppletDelegate.qml:172
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
-msgstr "Nuovo!"
+msgstr ""
 
 #: contents/explorer/AppletDelegate.qml:188
 #, kde-format
 msgid "Undo uninstall"
-msgstr "Annulla la disinstallazione"
+msgstr "विस्थापनं पूर्ववत् कुर्वन्तु"
 
 #: contents/explorer/AppletDelegate.qml:189
 #, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Uninstall"
-msgstr "Disinstalla"
+msgstr "अनइन्स्टॉल"
 
 #: contents/explorer/AppletDelegate.qml:231
 #, kde-format
 msgid "Remove all instances"
-msgstr "Rimuovi tutte le istanze"
+msgstr "सर्वाणि उदाहरणानि निष्कासयन्तु"
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
 msgid "Author:"
-msgstr "Autore:"
+msgstr "लेखकः:"
 
 #: contents/explorer/Tooltip.qml:115
 #, kde-format
 msgid "Email:"
-msgstr "Posta elettronica:"
+msgstr "ईमेल : १."
 
 #: contents/explorer/Tooltip.qml:136
 #, kde-format
 msgid "Uninstall"
-msgstr "Disinstalla"
+msgstr "अनइन्स्टॉल"
 
 #: contents/explorer/WidgetExplorer.qml:140
 #: contents/explorer/WidgetExplorer.qml:220
 #, kde-format
 msgid "All Widgets"
-msgstr "Tutti gli oggetti"
+msgstr "सर्वे विजेट्"
 
 #: contents/explorer/WidgetExplorer.qml:169
 #, kde-format
 msgid "Widgets"
-msgstr "Oggetti"
+msgstr "विजेट्"
 
 #: contents/explorer/WidgetExplorer.qml:178
 #, kde-format
 msgctxt "@action:button The word 'new' refers to widgets"
 msgid "Get New…"
-msgstr "Scarica nuovo…"
+msgstr ""
 
 #: contents/explorer/WidgetExplorer.qml:179
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Widgets…"
-msgstr "Scarica nuovi oggetti..."
+msgstr ""
 
 #: contents/explorer/WidgetExplorer.qml:234
 #, kde-format
 msgid "Categories"
-msgstr "Categorie"
+msgstr "श्रेणियाँ"
 
 #: contents/explorer/WidgetExplorer.qml:254
 #, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Confirm Removal of One Widget"
 msgid_plural "Confirm Removal of %1 Widgets"
-msgstr[0] "Conferma la rimozione di un oggetto"
-msgstr[1] "Conferma la rimozione di %1 oggetti"
+msgstr[0] ""
+msgstr[1] ""
 
 #: contents/explorer/WidgetExplorer.qml:355
 #, kde-format
 msgid "No widgets matched the search terms"
-msgstr "Nessun oggetto ha verificato i termini di ricerca"
+msgstr "अन्वेषणपदैः सह कोऽपि विजेट् मेलनं न कृतवान्"
 
 #: contents/explorer/WidgetExplorer.qml:355
 #, kde-format
 msgid "No widgets available"
-msgstr "Nessun oggetto disponibile"
+msgstr "कोऽपि विजेट् उपलब्धः नास्ति"
 
 #: contents/lockscreen/config.qml:19
 #, kde-format
 msgctxt "@title: group"
 msgid "Clock:"
-msgstr "Orologio:"
+msgstr ""
 
 #: contents/lockscreen/config.qml:22
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
-msgstr "Mostra l'orologio"
+msgstr ""
 
 #: contents/lockscreen/config.qml:33
 #, kde-format
 msgctxt "@title: group"
 msgid "Media controls:"
-msgstr "Controlli multimediali:"
+msgstr ""
 
 #: contents/lockscreen/config.qml:36
 #, kde-format
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
-msgstr "Mostra sotto richiesta di sblocco"
+msgstr ""
 
 #: contents/lockscreen/LockScreenUi.qml:48
 #, kde-format
 msgid "Unlocking failed"
-msgstr "Sblocco non riuscito"
+msgstr "अनलॉकिंग् विफलम् अभवत्"
 
 #: contents/lockscreen/LockScreenUi.qml:271
 #, kde-format
 msgid "Caps Lock is on"
-msgstr "Il blocco maiuscole è attivo"
+msgstr "Caps Lock चालू अस्ति"
 
 #: contents/lockscreen/LockScreenUi.qml:285
 #, kde-format
 msgid "Sleep"
-msgstr "Sospendi"
+msgstr "शयनं करोतु"
 
 #: contents/lockscreen/LockScreenUi.qml:291
 #, kde-format
 msgid "Hibernate"
-msgstr "Iberna"
+msgstr "शीतनिद्रा"
 
 #: contents/lockscreen/LockScreenUi.qml:297
 #, kde-format
 msgid "Switch User"
-msgstr "Cambia utente"
+msgstr "उपयोक्तारं परिवर्तयन्तु"
 
 #: contents/lockscreen/LockScreenUi.qml:358
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
-msgstr "Tastiera virtuale"
+msgstr ""
 
 #: contents/lockscreen/LockScreenUi.qml:382
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr "Cambia disposizione"
+msgstr ""
 
 #: contents/lockscreen/MainBlock.qml:64
 #, kde-format
 msgid "Password"
-msgstr "Password"
+msgstr "समाभाष्"
 
 #: contents/lockscreen/MainBlock.qml:107
 #: contents/lockscreen/NoPasswordUnlock.qml:17
 #, kde-format
 msgid "Unlock"
-msgstr "Sblocca"
+msgstr "अनलॉक"
 
 #: contents/lockscreen/MainBlock.qml:156
 #, kde-format
 msgid "(or scan your fingerprint on the reader)"
-msgstr "(o esegui la scansione dell'impronta sul tuo lettore)"
+msgstr "(अथवा पाठके स्वस्य अङ्गुलिचिह्नं स्कैन कुर्वन्तु)"
 
 #: contents/lockscreen/MainBlock.qml:160
 #, kde-format
 msgid "(or scan your smartcard)"
-msgstr "(o esegui la scansione della tua smart card)"
+msgstr "(अथवा स्वस्य स्मार्टकार्डं स्कैन् कुर्वन्तु)"
 
 #: contents/lockscreen/MediaControls.qml:59
 #, kde-format
 msgid "No title"
-msgstr "Nessun titolo"
+msgstr "न उपाधिः"
 
 #: contents/lockscreen/MediaControls.qml:60
 #, kde-format
 msgid "No media playing"
-msgstr "Nessun supporto in riproduzione"
+msgstr "न मीडिया वाद्यते"
 
 #: contents/lockscreen/MediaControls.qml:88
 #, kde-format
 msgid "Previous track"
-msgstr "Traccia precedente"
+msgstr "पूर्वः पटलः"
 
 #: contents/lockscreen/MediaControls.qml:100
 #, kde-format
 msgid "Play or Pause media"
-msgstr "Riproduci o sospendi supporto"
+msgstr "माध्यमं प्ले कुर्वन्तु अथवा विरामयन्तु"
 
 #: contents/lockscreen/MediaControls.qml:110
 #, kde-format
 msgid "Next track"
-msgstr "Traccia successiva"
+msgstr "अग्रिमः पटलः"
 
 #: contents/osd/OsdItem.qml:34
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
-msgstr "%1%"
+msgstr ""
 
 #: contents/views/DesktopEditMode.qml:115
 #, kde-format
 msgid "Global Themes"
-msgstr "Temi globali"
+msgstr "वैश्विक विषयवस्तु"
 
 #: contents/views/DesktopEditMode.qml:122
 #, kde-format
 msgid "Display Configuration"
-msgstr "Configurazione dello schermo"
+msgstr "प्रदर्शन विन्यास"
 
 #: contents/views/DesktopEditMode.qml:143
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
-msgstr "Altro"
+msgstr ""
 
 #: contents/views/DesktopEditMode.qml:152
 #, kde-format
 msgid "Exit Edit Mode"
-msgstr "Esci dalla modalità di modifica"
+msgstr "सम्पादन मोडतः निर्गच्छन्तु"
 
 #: contents/views/Panel.qml:316
 #, kde-format
 msgid "Panel Focus Indicator"
-msgstr "Indicatore di messa a fuoco dei pannelli"
-
-#~ msgid "Uninstall widget"
-#~ msgstr "Disinstalla l'oggetto"
-
-#~ msgctxt "@action:button Done configuring the panel"
-#~ msgid "Done"
-#~ msgstr "Fatto"
-
-#~ msgctxt "@option:check"
-#~ msgid "Keep visible when unlocking prompt disappears"
-#~ msgstr "Mantieni visibile quando la richiesta di sblocco scompare"
-
-#~ msgid "Height:"
-#~ msgstr "Altezza:"
-
-#~ msgid "Sorry! There was an error loading %1."
-#~ msgstr "Spiacenti! Si è verificato un errore durante il caricamento di %1."
-
-#~ msgid "Length"
-#~ msgstr "Lunghezza"
-
-#~ msgctxt "@action:button Make the panel as big as it can be"
-#~ msgid "Maximize"
-#~ msgstr "Massimizza"
-
-#~ msgid "Make this panel as tall as possible"
-#~ msgstr "Rendi questo pannello il più alto possibile"
-
-#~ msgid "Make this panel as wide as possible"
-#~ msgstr "Rendi questo pannello il più largo possibile"
-
-#~ msgctxt "@action:button Delete the panel"
-#~ msgid "Delete"
-#~ msgstr "Elimina"
-
-#~ msgid ""
-#~ "Aligns a non-maximized panel to the top; no effect when panel is maximized"
-#~ msgstr ""
-#~ "Allinea in alto un pannello non massimizzato; nessun effetto quando il "
-#~ "pannello è massimizzato"
-
-#~ msgid ""
-#~ "Aligns a non-maximized panel to the left; no effect when panel is "
-#~ "maximized"
-#~ msgstr ""
-#~ "Allinea a sinistra un pannello non massimizzato; nessun effetto quando il "
-#~ "pannello è massimizzato"
-
-#~ msgid ""
-#~ "Aligns a non-maximized panel to the center; no effect when panel is "
-#~ "maximized"
-#~ msgstr ""
-#~ "Allinea al centro un pannello non massimizzato; nessun effetto quando il "
-#~ "pannello è massimizzato"
-
-#~ msgid ""
-#~ "Aligns a non-maximized panel to the bottom; no effect when panel is "
-#~ "maximized"
-#~ msgstr ""
-#~ "Allinea un pannello non massimizzato verso il basso; nessun effetto "
-#~ "quando il pannello è massimizzato"
-
-#~ msgid ""
-#~ "Aligns a non-maximized panel to the right; no effect when panel is "
-#~ "maximized"
-#~ msgstr ""
-#~ "Allinea a destra un pannello non massimizzato; nessun effetto quando il "
-#~ "pannello è massimizzato"
-
-#~ msgid ""
-#~ "Panel is hidden, but reveals itself when the cursor touches the panel's "
-#~ "screen edge"
-#~ msgstr ""
-#~ "Il pannello è nascosto, ma si rivela quando il cursore tocca il bordo "
-#~ "dello schermo del pannello"
-
-#~ msgid ""
-#~ "Panel is opaque when any windows are touching it, and translucent at "
-#~ "other times"
-#~ msgstr ""
-#~ "Il pannello è opaco quando le finestre lo toccano e trasparente in altri "
-#~ "momenti"
-
-#~ msgid "Floating:"
-#~ msgstr "Flottante:"
-
-#~ msgid "Panel visibly floats away from its screen edge"
-#~ msgstr "Il pannello si allontana visibilmente dal bordo dello schermo"
-
-#~ msgid "Attached"
-#~ msgstr "Attaccato"
-
-#~ msgid "Panel is attached to its screen edge"
-#~ msgstr "Il pannello è attaccato al bordo dello schermo"
-
-#~ msgid "More Options…"
-#~ msgstr "Altre opzioni..."
-
-#~ msgctxt "Minimize the length of this string as much as possible"
-#~ msgid "Drag to move"
-#~ msgstr "Trascina per spostare"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Use arrow keys to move the panel"
-#~ msgstr "Utilizza le frecce direzionali per spostare il pannello"
-
-#, fuzzy
-#~| msgid "Windows Behind"
-#~ msgid "Windows Above"
-#~ msgstr "Le finestre vanno sotto"
-
-#, fuzzy
-#~| msgid ""
-#~| "Makes the panel remain visible always but part of the maximized windows "
-#~| "shall go below the panel as though the panel did not exist."
-#~ msgid ""
-#~ "Like \"Always Visible\", but maximized and tiled windows go under the "
-#~ "panel as though it didn't exist"
-#~ msgstr ""
-#~ "Fa in modo che il pannello rimanga sempre visibile, ma parte delle "
-#~ "finestre ingrandite andranno sotto il pannello come se il pannello non "
-#~ "esistesse."
-
-#~ msgid "Windows In Front"
-#~ msgstr "Le finestre in primo piano"
-
-#~ msgid "Aligns the panel"
-#~ msgstr "Allinea il pannello"
-
-#~ msgid "Center aligns the panel if the panel is not maximized."
-#~ msgstr "Allinea al centro il pannello se il pannello non è ingrandito."
-
-#~ msgid ""
-#~ "Makes the panel hidden always but reveals it when mouse enters the area "
-#~ "where the panel would have been if it were not hidden."
-#~ msgstr ""
-#~ "Rende sempre nascosto il pannello, ma lo rivela quando il mouse entra "
-#~ "nell'area in cui sarebbe stato il pannello se non fosse stato nascosto."
-
-#~ msgid ""
-#~ "Makes the panel remain visible always but maximized windows shall cover "
-#~ "it. It is revealed when mouse enters the area where the panel would have "
-#~ "been if it were not covered."
-#~ msgstr ""
-#~ "Fa in modo che il pannello rimanga sempre visibile, ma le finestre "
-#~ "massimizzate lo copriranno. Viene rivelato quando il mouse entra "
-#~ "nell'area dove sarebbe stato il pannello se non fosse stato coperto."
-
-#~ msgid "Makes the panel translucent except when some windows touch it."
-#~ msgstr ""
-#~ "Rende il pannello trasparente, tranne quando alcune finestre lo toccano."
-
-#~ msgid "Makes the panel translucent always."
-#~ msgstr "Rende il pannello sempre trasparente."
-
-#~ msgid "Makes the panel float from the edge of the screen."
-#~ msgstr "Fa fluttuare il pannello dal bordo dello schermo."
-
-#~ msgid "Makes the panel remain attached to the edge of the screen."
-#~ msgstr "Fa rimanere il pannello attaccato al bordo dello schermo."
-
-#~ msgid "%1 (disabled)"
-#~ msgstr "%1 (disabilitato)"
-
-#~ msgid "Appearance"
-#~ msgstr "Aspetto"
-
-#~ msgid "Search…"
-#~ msgstr "Cerca…"
-
-#~ msgid "Screen Edge"
-#~ msgstr "Bordo dello schermo"
-
-#~ msgid "Click and drag the button to a screen edge to move the panel there."
-#~ msgstr ""
-#~ "Fai clic e trascina il pulsante in un angolo dello schermo per spostare "
-#~ "il pannello lì."
-
-#~ msgid "Click and drag the button to resize the panel."
-#~ msgstr "Fai clic e trascina il pulsante per ridimensionare il pannello."
-
-#~ msgid "Layout cannot be changed while widgets are locked"
-#~ msgstr ""
-#~ "La disposizione non può essere modificata se gli oggetti sono bloccati"
-
-#~ msgid "Lock Widgets"
-#~ msgstr "Blocca oggetti"
-
-#~ msgid ""
-#~ "This shortcut will activate the applet: it will give the keyboard focus "
-#~ "to it, and if the applet has a popup (such as the start menu), the popup "
-#~ "will be open."
-#~ msgstr ""
-#~ "Questa scorciatoia attiverà l'applet: ciò consentirà l'immissione da "
-#~ "tastiera, e, se l'applet ha una finestra a comparsa (come il menu di "
-#~ "avvio), questa verrà aperta."
-
-#~ msgid "Stop"
-#~ msgstr "Ferma"
-
-#~ msgid "Activity name:"
-#~ msgstr "Nome dell'attività:"
-
-#~ msgid "Create"
-#~ msgstr "Crea"
-
-#~ msgid "Are you sure you want to delete this activity?"
-#~ msgstr "Sei sicuro di voler eliminare questa attività?"
+msgstr "फलक फोकस सूचक"

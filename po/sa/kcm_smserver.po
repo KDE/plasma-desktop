@@ -1,0 +1,180 @@
+# Sanskrit translations for plasma-desktop package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-11-15 00:41+0000\n"
+"PO-Revision-Date: 2024-12-13 19:10+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, kde-format
+msgid "Confirm logout"
+msgstr "लॉगआउट् पुष्टयन्तु"
+
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:13
+#, kde-format
+msgid "Default leave option"
+msgstr "पूर्वनिर्धारित अवकाश विकल्प"
+
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:22
+#, kde-format
+msgid "On login"
+msgstr "तत्र प्रवेशः अस्ति"
+
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:26
+#, kde-format
+msgid "Applications to be excluded from session"
+msgstr "सत्रात् बहिष्कृताः आवेदनाः"
+
+#: ui/main.qml:31
+#, kde-format
+msgid ""
+"The system must be restarted before manual session saving becomes active."
+msgstr "हस्तचलितसत्ररक्षणं सक्रियं भवितुं पूर्वं प्रणाली पुनः आरब्धा भवितुमर्हति ।"
+
+#: ui/main.qml:36
+#, kde-format
+msgid "Restart"
+msgstr "पुनः आरभत"
+
+#: ui/main.qml:58
+#, kde-format
+msgid "Failed to request restart to firmware setup: %1"
+msgstr "फर्मवेयर सेटअपं प्रति पुनः आरम्भस्य अनुरोधं कर्तुं असफलम्: %1"
+
+#: ui/main.qml:59
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the UEFI setup screen."
+msgstr "अग्रिमे समये सङ्गणकं पुनः आरभ्यते तदा UEFI setup screen मध्ये प्रविशति ।"
+
+#: ui/main.qml:60
+#, kde-format
+msgid ""
+"Next time the computer is restarted, it will enter the firmware setup screen."
+msgstr "अग्रिमे समये सङ्गणकं पुनः आरभ्यते तदा सः फर्मवेयर सेटअप स्क्रीन् मध्ये प्रविशति ।"
+
+#: ui/main.qml:65
+#, kde-format
+msgid "Restart Now"
+msgstr "अधुना पुनः आरभत"
+
+#: ui/main.qml:74
+#, kde-format
+msgctxt "@title:group"
+msgid "General"
+msgstr ""
+
+#: ui/main.qml:79
+#, kde-format
+msgctxt ""
+"@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
+"restart, and logout.'"
+msgid "Ask for confirmation:"
+msgstr ""
+
+#: ui/main.qml:80
+#, kde-format
+msgctxt ""
+"@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
+"restart, and logout.'"
+msgid "On shutdown, restart, and logout"
+msgstr ""
+
+#: ui/main.qml:91
+#, kde-format
+msgctxt "@title:group"
+msgid "Session Restore"
+msgstr ""
+
+#: ui/main.qml:99
+#, kde-format
+msgid "On login, launch apps that were open:"
+msgstr "प्रवेशे, एप्स् प्रारम्भं कुर्वन्तु ये उद्घाटिताः आसन्:"
+
+#: ui/main.qml:100
+#, kde-format
+msgctxt "@option:radio Automatic style of session restoration"
+msgid "On last logout"
+msgstr ""
+
+#: ui/main.qml:113
+#, kde-format
+msgctxt "@option:radio Manual style of session restoration"
+msgid "When session was manually saved"
+msgstr ""
+
+#: ui/main.qml:122
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"A <interface>Save Session</interface> button will appear in the "
+"<interface>Application Launcher</interface> menu. When you click it, Plasma "
+"will remember the apps that are open and restore them on the next login. "
+"Click it again to replace the set of remembered apps."
+msgstr ""
+
+#: ui/main.qml:127
+#, kde-format
+msgctxt ""
+"@option:radio Here 'session' refers to the technical concept of session "
+"restoration, whereby the windows that were open on logout are re-opened on "
+"the next login"
+msgid "Start with an empty session"
+msgstr ""
+
+#: ui/main.qml:141
+#, kde-format
+msgid "Ignored applications:"
+msgstr "उपेक्षिताः अनुप्रयोगाः : १."
+
+#: ui/main.qml:160
+#, kde-format
+msgid ""
+"Write apps' executable names here (separated by commas or colons, for "
+"example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
+"autostarting along with other session-restored apps."
+msgstr ""
+"अत्र एप्सस्य कार्यान्वयनीयनामानि लिखन्तु (अल्पविरामैः अथवा कोलोनेन पृथक्कृताः, उदाहरणार्थं "
+"'xterm:konsole' अथवा 'xterm,konsole') अन्यैः सत्र-पुनर्स्थापितैः एप्स्-सहितं स्वतः "
+"आरभ्यतुं न शक्नुवन्ति"
+
+#: ui/main.qml:166
+#, kde-format
+msgctxt "@title:group"
+msgid "Firmware"
+msgstr ""
+
+#: ui/main.qml:172
+#, kde-format
+msgctxt ""
+"@label:check part of a sentence: After next restart enter UEFI/Firmware "
+"setup screen"
+msgid "After next restart:"
+msgstr ""
+
+#: ui/main.qml:173
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter UEFI setup screen"
+msgstr ""
+
+#: ui/main.qml:174
+#, kde-format
+msgctxt "@option:check"
+msgid "Enter firmware setup screen"
+msgstr ""

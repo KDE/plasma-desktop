@@ -1,0 +1,146 @@
+# Sanskrit translations for plasma-desktop package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-03-17 02:33+0000\n"
+"PO-Revision-Date: 2024-12-13 19:10+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, kde-format
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"अस्मिन् सूचौ प्रणाल्याः ज्ञातानि भण्डारणयन्त्राणि सन्ति । यदि \"Automount on Login\" "
+"इति जाँचितम् अस्ति तर्हि \"Mount all removable media at login\" इति अचेक् कृत्वा अपि "
+"यन्त्रं स्वयमेव माउण्ट् भविष्यति । \"Automount on Attach\" इत्यस्य अपि तथैव भवति ।"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"एतत् बटन् नुदनेन चयनितयन्त्राणि 'विस्मृतानि' भवन्ति । इदं केवलं तदा एव उपयोगी भवति यदा "
+"\"केवलं स्वयमेव हटनीयं माध्यमं माउण्ट् कुर्वन्तु यत् पूर्वं मैन्युअल् रूपेण माउण्ट् कृतम् अस्ति\" इति "
+"परीक्षितम् अस्ति । एकदा यन्त्रं विस्मृतं भवति तथा च प्रणाली केवलं परिचितयन्त्राणि स्वयमेव "
+"माउण्ट् कर्तुं सेट् भवति तदा यन्त्रं स्वयमेव माउण्ट् न भविष्यति ।"
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "Device विस्मरतु"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, kde-format
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"यदा एतत् न परीक्षितं भवति तदा केवलं स्मरणीययन्त्राणि एव स्वयमेव माउण्ट् भविष्यन्ति । यदि "
+"पूर्वं कदापि यन्त्रं स्थापितं भवति तर्हि यन्त्रं 'स्मर्यते' । यथा, चार्जं कर्तुं USB मीडिया प्लेयर् "
+"प्लग् करणं तस्य 'स्मरणार्थं' पर्याप्तं नास्ति - यदि सञ्चिकाः न अभिगताः तर्हि अग्रिमे समये "
+"स्वयमेव माउण्ट् न भविष्यति परन्तु एकदा तेषां अभिगमनं जातं चेत्, यन्त्रस्य सामग्रीः स्वयमेव "
+"प्रणाल्याः कृते उपलब्धा भविष्यति ।"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, kde-format
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr "पूर्वं कदापि न स्थापितानि हटनीयानि माध्यमानि स्वयमेव माउण्ट् कुर्वन्तु"
+
+#: DeviceModel.cpp:52
+#, kde-format
+msgid "Automount Device"
+msgstr "ऑटोमाउंट डिवाइस"
+
+#: DeviceModel.cpp:54
+#, kde-format
+msgctxt "As in automount on login"
+msgid "On Login"
+msgstr ""
+
+#: DeviceModel.cpp:56
+#, kde-format
+msgctxt "As in automount on attach"
+msgid "On Attach"
+msgstr ""
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Devices"
+msgstr "सर्वाणि यन्त्राणि"
+
+#: DeviceModel.cpp:258
+#, kde-format
+msgid "All Known Devices"
+msgstr "सर्वाणि ज्ञातानि यन्त्राणि"
+
+#: DeviceModel.cpp:260
+#, kde-format
+msgid "Attached Devices"
+msgstr "संलग्नयन्त्राणि"
+
+#: DeviceModel.cpp:262
+#, kde-format
+msgid "Disconnected Devices"
+msgstr "विच्छिन्नयन्त्राणि"
+
+#: DeviceModel.cpp:298 DeviceModel.cpp:307
+#, kde-format
+msgid "UDI: %1"
+msgstr "उडी: %1"
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will be automatically mounted at login."
+msgstr "एतत् यन्त्रं प्रवेशसमये स्वयमेव माउण्ट् भविष्यति ।"
+
+#: DeviceModel.cpp:318
+#, kde-format
+msgid "This device will not be automatically mounted at login."
+msgstr "प्रवेशसमये एतत् यन्त्रं स्वयमेव न माउण्ट् भविष्यति ।"
+
+#: DeviceModel.cpp:326
+#, kde-format
+msgid "This device will be automatically mounted when attached."
+msgstr "एतत् यन्त्रं संलग्नं भवति तदा स्वयमेव माउण्ट् भविष्यति ।"
+
+#: DeviceModel.cpp:327
+#, kde-format
+msgid "This device will not be automatically mounted when attached."
+msgstr "एतत् यन्त्रं संलग्नं भवति तदा स्वयमेव न स्थापितं भविष्यति ।"

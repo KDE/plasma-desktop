@@ -1,0 +1,252 @@
+# Sanskrit translations for plasma-desktop package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-11-29 00:42+0000\n"
+"PO-Revision-Date: 2024-12-13 19:10+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: backends/kwin_wl/kwin_wl_backend.cpp:61
+#, kde-format
+msgid "Querying input devices failed. Please reopen this settings module."
+msgstr "निवेशयन्त्राणां पृच्छनं विफलम् अभवत् । कृपया एतत् सेटिङ्ग्स् मॉड्यूल् पुनः उद्घाटयन्तु ।"
+
+#: backends/kwin_wl/kwin_wl_backend.cpp:81
+#, kde-format
+msgid "Critical error on reading fundamental device infos of %1."
+msgstr "%1 इत्यस्य मौलिकयन्त्रसूचनानां पठने गम्भीरदोषः ।"
+
+#: kcm.cpp:86
+#, kde-format
+msgid "Not able to select appropriate backend"
+msgstr "समुचितं पृष्ठभागं चयनं कर्तुं न समर्थः"
+
+#: kcm.cpp:142
+#, kde-format
+msgid ""
+"Error while loading values. See logs for more information. Please restart "
+"this configuration module."
+msgstr ""
+"मूल्यानि लोड् कुर्वन् त्रुटिः। अधिकविवरणार्थं लॉग्स् पश्यन्तु । कृपया एतत् विन्यासमॉड्यूल् पुनः "
+"आरभत ।"
+
+#: kcm.cpp:145
+#, kde-format
+msgid "No pointer device found. Connect now."
+msgstr "न सूचकयन्त्रं लब्धम्। अधुना संयोजयन्तु।"
+
+#: kcm.cpp:154
+#, kde-format
+msgid ""
+"Not able to save all changes. See logs for more information. Please restart "
+"this configuration module and try again."
+msgstr ""
+"सर्वान् परिवर्तनान् रक्षितुं न शक्नोति। अधिकविवरणार्थं लॉग्स् पश्यन्तु । कृपया एतत् "
+"विन्यासमॉड्यूल् पुनः आरभ्य पुनः प्रयासं कुर्वन्तु ।"
+
+#: kcm.cpp:172
+#, kde-format
+msgid ""
+"Error while loading default values. Failed to set some options to their "
+"default values."
+msgstr ""
+"पूर्वनिर्धारितमूल्यानि लोड् कुर्वन् त्रुटिः । केचन विकल्पाः तेषां पूर्वनिर्धारितमूल्येषु सेट् कर्तुं "
+"असफलः ।"
+
+#: kcm.cpp:187
+#, kde-format
+msgid ""
+"Error while adding newly connected device. Please reconnect it and restart "
+"this configuration module."
+msgstr ""
+"नवसंयोजितं यन्त्रं योजयन् त्रुटिः। कृपया पुनः संयोजयित्वा एतत् विन्यासमॉड्यूल् पुनः आरभत ।"
+
+#: kcm.cpp:200
+#, kde-format
+msgid "Pointer device disconnected. Closed its setting dialog."
+msgstr "सूचकयन्त्रं विच्छिन्नम्। तस्य सेटिंग् संवादं पिधाय ।"
+
+#: kcm.cpp:202
+#, kde-format
+msgid "Pointer device disconnected. No other devices found."
+msgstr "सूचकयन्त्रं विच्छिन्नम्। अन्ये यन्त्राणि न प्राप्तानि।"
+
+#: ui/bindings.qml:27
+#, kde-format
+msgctxt "@title"
+msgid "Extra Mouse Buttons"
+msgstr ""
+
+#: ui/bindings.qml:70
+#, kde-format
+msgctxt "@label for assigning an action to a numbered button"
+msgid "Extra Button %1:"
+msgstr ""
+
+#: ui/bindings.qml:100
+#, kde-format
+msgctxt "@action:button"
+msgid "Press the mouse button for which you want to add a key binding"
+msgstr ""
+
+#: ui/bindings.qml:102
+#, kde-format
+msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
+msgid "Enter the new key combination for %1"
+msgstr ""
+
+#: ui/bindings.qml:106
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr ""
+
+#: ui/bindings.qml:124
+#, kde-format
+msgctxt "@action:button"
+msgid "Press a mouse button"
+msgstr ""
+
+#: ui/bindings.qml:125
+#, kde-format
+msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
+msgid "Add Binding…"
+msgstr ""
+
+#: ui/main.qml:37
+#, kde-format
+msgctxt "@action:button"
+msgid "Configure Extra Buttons…"
+msgstr ""
+
+#: ui/main.qml:64
+#, kde-format
+msgid "Device:"
+msgstr "उपकरणम्‌:"
+
+#: ui/main.qml:87
+#, kde-format
+msgid "General:"
+msgstr "सामान्य:"
+
+#: ui/main.qml:88
+#, kde-format
+msgid "Device enabled"
+msgstr "यन्त्रं सक्षमम्"
+
+#: ui/main.qml:101
+#, kde-format
+msgid "Accept input through this device."
+msgstr "अस्य यन्त्रस्य माध्यमेन निवेशं स्वीकुर्वन्तु।"
+
+#: ui/main.qml:107
+#, kde-format
+msgid "Left-handed mode"
+msgstr "वामहस्तः मोडः"
+
+#: ui/main.qml:119
+#, kde-format
+msgid "Swap left and right buttons."
+msgstr "वाम-दक्षिण-बटनयोः अदला-बदली कुर्वन्तु ।"
+
+#: ui/main.qml:126
+#, kde-format
+msgctxt "@option:check"
+msgid "Press left and right buttons for middle-click"
+msgstr ""
+
+#: ui/main.qml:138
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Pressing the left and right button simultaneously acts as middle-click."
+msgstr ""
+
+#: ui/main.qml:142
+#, kde-format
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"Activating this setting increases click latency by 50ms. The extra delay is "
+"needed to correctly detect simultaneous left and right button presses."
+msgstr ""
+
+#: ui/main.qml:154
+#, kde-format
+msgid "Pointer speed:"
+msgstr "सूचकस्य गतिः : १."
+
+#: ui/main.qml:230
+#, kde-format
+msgid "Pointer acceleration:"
+msgstr "सूचकत्वरणम् : १."
+
+#: ui/main.qml:246
+#, kde-format
+msgid "None"
+msgstr "न कश्चित्"
+
+#: ui/main.qml:251
+#, kde-format
+msgid "Cursor moves the same distance as the mouse movement."
+msgstr "कर्सर मूषकस्य गतिं यावत् दूरं गच्छति ।"
+
+#: ui/main.qml:256
+#, kde-format
+msgid "Standard"
+msgstr "स्तरीय"
+
+#: ui/main.qml:261
+#, kde-format
+msgid "Cursor travel distance depends on the mouse movement speed."
+msgstr "कर्सरस्य यात्रायाः दूरी मूषकस्य गतिवेगस्य उपरि निर्भरं भवति ।"
+
+#: ui/main.qml:271
+#, kde-format
+msgid "Scrolling speed:"
+msgstr "स्क्रॉल गतिः : १."
+
+#: ui/main.qml:321
+#, kde-format
+msgctxt "Slower Scroll"
+msgid "Slower"
+msgstr ""
+
+#: ui/main.qml:330
+#, kde-format
+msgctxt "Faster Scroll Speed"
+msgid "Faster"
+msgstr ""
+
+#: ui/main.qml:338
+#, kde-format
+msgid "Scrolling:"
+msgstr "स्क्रॉल करणम् : १."
+
+#: ui/main.qml:339
+#, kde-format
+msgid "Invert scroll direction"
+msgstr "स्क्रॉल दिशां विपर्यययन्तु"
+
+#: ui/main.qml:351
+#, kde-format
+msgid "Touchscreen-like scrolling."
+msgstr "टचस्क्रीन्-सदृशं स्क्रॉलिंग् ।"
+
+#: ui/main.qml:356
+#, kde-format
+msgid "Press middle button and move mouse to scroll"
+msgstr "मध्यबटनं नुत्वा स्क्रॉल कर्तुं मूषकं चालयन्तु"
+
+#: ui/main.qml:368
+#, kde-format
+msgid "Scrolling with the mouse while the middle button is pressed."
+msgstr "मध्यबटनं निपीड्य मूषकेन स्क्रॉल करणम् ।"

@@ -1,0 +1,64 @@
+# Sanskrit translations for plasma-desktop package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-09-28 00:41+0000\n"
+"PO-Revision-Date: 2024-12-13 19:10+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: kcm.cpp:162
+#, kde-format
+msgid "None"
+msgstr "न कश्चित्"
+
+#: kcm.cpp:165
+#, kde-format
+msgid "No splash screen will be shown"
+msgstr "कोऽपि स्प्लैश स्क्रीनः न दर्शितः भविष्यति"
+
+#: kcm.cpp:183
+#, kde-format
+msgid "You cannot delete the currently selected splash screen"
+msgstr "सम्प्रति चयनितं स्प्लैश-पर्दे भवान् विलोपयितुं न शक्नोति"
+
+#. i18n: ectx: label, entry (engine), group (KSplash)
+#: splashscreensettings.kcfg:12
+#, kde-format
+msgid "For future use"
+msgstr "भविष्ये उपयोगाय"
+
+#. i18n: ectx: label, entry (theme), group (KSplash)
+#: splashscreensettings.kcfg:16
+#, kde-format
+msgid "Name of the current splash theme"
+msgstr "वर्तमानस्य स्प्लैश विषयस्य नाम"
+
+#: ui/main.qml:30
+#, kde-format
+msgid "&Get New…"
+msgstr "&नवं प्राप्नुत..."
+
+#: ui/main.qml:50
+#, kde-format
+msgid "Failed to show the splash screen preview."
+msgstr "splash screen पूर्वावलोकनं दर्शयितुं असफलम् ।"
+
+#: ui/main.qml:81
+#, kde-format
+msgid "Preview Splash Screen"
+msgstr "पूर्वावलोकन Splash स्क्रीन"
+
+#: ui/main.qml:86
+#, kde-format
+msgid "Uninstall"
+msgstr "अनइन्स्टॉल"

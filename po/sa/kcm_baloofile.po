@@ -1,0 +1,150 @@
+# Sanskrit translations for plasma-desktop package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-08-28 00:40+0000\n"
+"PO-Revision-Date: 2024-12-13 19:10+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ui/main.qml:44
+#, kde-format
+msgid "Pause Indexer"
+msgstr "अनुक्रमणिका विरामं कुर्वन्तु"
+
+#: ui/main.qml:44
+#, kde-format
+msgid "Resume Indexer"
+msgstr "पुनरावृत्ति अनुक्रमणिका"
+
+#: ui/main.qml:60
+#, kde-format
+msgid ""
+"This will disable file searching in KRunner and launcher menus, and remove "
+"extended metadata display from all KDE applications."
+msgstr ""
+"एतेन KRunner तथा launcher मेन्यूषु सञ्चिका अन्वेषणं निष्क्रियं भविष्यति, तथा च सर्वेभ्यः KDE "
+"अनुप्रयोगेभ्यः विस्तारितं मेटाडाटा प्रदर्शनं निष्कासितम् ।"
+
+#: ui/main.qml:70
+#, kde-format
+msgid ""
+"Do you want to delete the saved index data? %1 of space will be freed, but "
+"if indexing is re-enabled later, the entire index will have to be re-created "
+"from scratch. This may take some time, depending on how many files you have."
+msgstr ""
+"किं भवान् रक्षितं अनुक्रमणिकादत्तांशं विलोपयितुम् इच्छति ? %1 स्थानं मुक्तं भविष्यति, परन्तु यदि "
+"पश्चात् अनुक्रमणिका पुनः सक्षमं भवति तर्हि सम्पूर्णं अनुक्रमणिका आद्यतः पुनः निर्मातव्यं "
+"भविष्यति । एतत् किञ्चित् समयं गृह्णीयात्, भवतः कियन्तः सञ्चिकाः सन्ति इति अवलम्ब्य ।"
+
+#: ui/main.qml:72
+#, kde-format
+msgid "Delete Index Data"
+msgstr "अनुक्रमणिकादत्तांशं विलोपयन्तु"
+
+#: ui/main.qml:90
+#, kde-format
+msgid ""
+"File Search helps you quickly locate your files. You can choose which "
+"folders and what types of file data are indexed."
+msgstr ""
+"File Search भवतः सञ्चिकानां शीघ्रं स्थानं ज्ञातुं साहाय्यं करोति । भवान् के के पुटे, के "
+"प्रकाराः सञ्चिकादत्तांशः अनुक्रमितः इति चिन्वितुं शक्नोति ।"
+
+#: ui/main.qml:104
+#, kde-format
+msgctxt "@title:group"
+msgid "File indexing:"
+msgstr ""
+
+#: ui/main.qml:105
+#, kde-format
+msgctxt "@action:check"
+msgid "Enabled"
+msgstr ""
+
+#: ui/main.qml:121
+#, kde-format
+msgctxt "@title:group"
+msgid "Data to index:"
+msgstr ""
+
+#: ui/main.qml:123
+#, kde-format
+msgid "File names and contents"
+msgstr "सञ्चिकानामानि विषयवस्तु च"
+
+#: ui/main.qml:136
+#, kde-format
+msgid "File names only"
+msgstr "केवलं सञ्चिकानामानि"
+
+#: ui/main.qml:155
+#, kde-format
+msgid "Hidden files and folders"
+msgstr "गुप्तसञ्चिकाः पुटकानि च"
+
+#: ui/main.qml:181
+#, kde-format
+msgctxt "@title:table Locations to include or exclude from indexing"
+msgid "Locations"
+msgstr ""
+
+#: ui/main.qml:184
+#, kde-format
+msgctxt "@action:button"
+msgid "Start Indexing a Folder…"
+msgstr ""
+
+#: ui/main.qml:192
+#, kde-format
+msgctxt "@action:button"
+msgid "Stop Indexing a Folder…"
+msgstr ""
+
+#: ui/main.qml:210
+#, kde-format
+msgctxt "State and a percentage of progress"
+msgid "%1, %2% complete"
+msgstr ""
+
+#: ui/main.qml:217
+#, kde-kuit-format
+msgctxt "@info Currently Indexing"
+msgid "Currently indexing: <filename>%1</filename>"
+msgstr ""
+
+#: ui/main.qml:270
+#, kde-format
+msgid "Not indexed"
+msgstr "न अनुक्रमितम्"
+
+#: ui/main.qml:271
+#, kde-format
+msgid "Indexed"
+msgstr "अनुक्रमितम्"
+
+#: ui/main.qml:301
+#, kde-format
+msgctxt "Remove the list item for this filesystem path"
+msgid "Remove entry"
+msgstr ""
+
+#: ui/main.qml:316
+#, kde-format
+msgid "Select a folder to include"
+msgstr "समावेशार्थं एकं पुटं चिनोतु"
+
+#: ui/main.qml:316
+#, kde-format
+msgid "Select a folder to exclude"
+msgstr "बहिष्कारार्थं एकं पुटं चिनोतु"

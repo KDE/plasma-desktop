@@ -1,0 +1,496 @@
+# Sanskrit translations for plasma-desktop package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-10-02 00:41+0000\n"
+"PO-Revision-Date: 2024-12-13 19:10+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n>2);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: bindings.cpp:24
+#, kde-format
+msgid "Keyboard Layout Switcher"
+msgstr "कीबोर्ड लेआउट स्विचर"
+
+#: bindings.cpp:26
+#, kde-format
+msgid "Switch to Next Keyboard Layout"
+msgstr "Next Keyboard Layout इत्यत्र गच्छन्तु"
+
+#: bindings.cpp:30
+#, kde-format
+msgid "Switch to Last-Used Keyboard Layout"
+msgstr "अन्तिम-उपयुक्तं कीबोर्ड-विन्यासं प्रति स्विच् कुर्वन्तु"
+
+#: bindings.cpp:60
+#, kde-format
+msgid "Switch keyboard layout to %1"
+msgstr "कीबोर्डविन्यासं %1 इत्यत्र परिवर्तयन्तु"
+
+#: keyboardmodel.cpp:35
+#, kde-format
+msgctxt "unknown keyboard model vendor"
+msgid "Unknown"
+msgstr ""
+
+#: keyboardmodel.cpp:39
+#, kde-format
+msgctxt "vendor | keyboard model"
+msgid "%1 | %2"
+msgstr ""
+
+#: tastenbrett/main.cpp:52
+#, kde-format
+msgctxt "app display name"
+msgid "Keyboard Preview"
+msgstr ""
+
+#: tastenbrett/main.cpp:54
+#, kde-format
+msgctxt "app description"
+msgid "Keyboard layout visualization"
+msgstr ""
+
+#: tastenbrett/main.cpp:139
+#, kde-format
+msgctxt "@label"
+msgid ""
+"The keyboard geometry failed to load. This often indicates that the selected "
+"model does not support a specific layout or layout variant. This problem "
+"will likely also present when you try to use this combination of model, "
+"layout and variant.\n"
+"Previewing layouts that are defined outside your systems xkb directory is "
+"not supported and  will also trigger this message. These might still work "
+"fine if applied"
+msgstr ""
+
+#: ui/KeyBindings.qml:18
+#, kde-format
+msgctxt "@title"
+msgid "Key Bindings"
+msgstr ""
+
+#: ui/KeyBindings.qml:62
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Configure keyboard options"
+msgstr ""
+
+#: ui/KeyBindings.qml:130
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset"
+msgstr ""
+
+#: ui/KeyBindings.qml:134
+#, kde-format
+msgctxt "@info accessible"
+msgid "Reset selected options for this group"
+msgstr ""
+
+#: ui/KeyBindings.qml:135
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Reset selected options for this group"
+msgstr ""
+
+#: ui/LayoutDialog.qml:20
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Layout"
+msgstr ""
+
+#: ui/LayoutDialog.qml:177
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Short layout name"
+msgstr ""
+
+#: ui/LayoutDialog.qml:187
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The abbreviated name of the selected layout, which will be displayed in the "
+"system tray. You can change this setting yourself."
+msgstr ""
+
+#: ui/LayoutDialog.qml:195
+#, kde-format
+msgctxt "@option:textbox"
+msgid "Shortcut:"
+msgstr ""
+
+#: ui/LayoutDialog.qml:206 ui/main.qml:285
+#, kde-format
+msgctxt "@action:button"
+msgid "Preview"
+msgstr ""
+
+#: ui/main.qml:37
+#, kde-format
+msgctxt "@action:button"
+msgid "Configure Switching…"
+msgstr ""
+
+#: ui/main.qml:38
+#, kde-format
+msgctxt "@action:button accessible"
+msgid "Configure Switching"
+msgstr ""
+
+#: ui/main.qml:44
+#, kde-format
+msgctxt "@action:button"
+msgid "Key Bindings"
+msgstr ""
+
+#: ui/main.qml:45
+#, kde-format
+msgctxt "@action:button accessible"
+msgid "Key Bindings"
+msgstr ""
+
+#: ui/main.qml:51
+#, kde-format
+msgctxt "@action:button Layout"
+msgid "Add…"
+msgstr ""
+
+#: ui/main.qml:52
+#, kde-format
+msgctxt "@action:button accessible"
+msgid "Add layout"
+msgstr ""
+
+#: ui/main.qml:59
+#, kde-format
+msgctxt "@label:checkbox configure layouts option"
+msgid "Enable"
+msgstr ""
+
+#: ui/main.qml:60
+#, kde-format
+msgctxt "@label:checkbox accessible"
+msgid "Configure Layouts"
+msgstr ""
+
+#: ui/main.qml:76
+#, kde-format
+msgctxt "@label:listbox Keyboard model"
+msgid "Model:"
+msgstr ""
+
+#: ui/main.qml:104
+#, kde-format
+msgctxt "@label:listbox"
+msgid "NumLock on startup:"
+msgstr ""
+
+#: ui/main.qml:112
+#, kde-format
+msgctxt "@item:inlistbox Turn on \"NumLock\" on startup"
+msgid "Turn on"
+msgstr ""
+
+#: ui/main.qml:116
+#, kde-format
+msgctxt "@item:inlistbox Turn off \"NumLock\" on startup"
+msgid "Turn off"
+msgstr ""
+
+#: ui/main.qml:120
+#, kde-format
+msgctxt ""
+"@item:inlistbox Leave \"NumLock\" at whatever it was set to before Plasma "
+"started up"
+msgid "Leave unchanged"
+msgstr ""
+
+#: ui/main.qml:146
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Key repeat:"
+msgstr ""
+
+#: ui/main.qml:155
+#, kde-format
+msgctxt "@label:checkbox accessible"
+msgid "Key repeat"
+msgstr ""
+
+#: ui/main.qml:166
+#, kde-format
+msgctxt "@label:textbox Key repeat delay"
+msgid "Delay:"
+msgstr ""
+
+#: ui/main.qml:180
+#, kde-format
+msgctxt "@label:spinbox accessible"
+msgid "Key repeat delay %1"
+msgstr ""
+
+#: ui/main.qml:188
+#, kde-format
+msgctxt "@spinbox:value Repeat delay interval"
+msgid "%1 ms"
+msgstr ""
+
+#: ui/main.qml:192
+#, kde-format
+msgctxt "@spinbox:value Repeat delay interval"
+msgid "ms"
+msgstr ""
+
+#: ui/main.qml:205
+#, kde-format
+msgctxt "@label:textbox Key repeat rate"
+msgid "Rate:"
+msgstr ""
+
+#: ui/main.qml:219
+#, kde-format
+msgctxt "@label:spinbox accessible"
+msgid "Key repeat rate %1"
+msgstr ""
+
+#: ui/main.qml:227
+#, kde-format
+msgctxt "@spinbox:value  Key repeat rate"
+msgid "%1 repeats/s"
+msgstr ""
+
+#: ui/main.qml:231
+#, kde-format
+msgctxt "@spinbox:value  Key repeat rate"
+msgid "repeats/s"
+msgstr ""
+
+#: ui/main.qml:243
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Test area:"
+msgstr ""
+
+#: ui/main.qml:245
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type here to test settings"
+msgstr ""
+
+#: ui/main.qml:256
+#, kde-format
+msgctxt "@title:view"
+msgid "Layouts"
+msgstr ""
+
+#: ui/main.qml:268
+#, kde-format
+msgctxt "@action:button"
+msgid "Move Up"
+msgstr ""
+
+#: ui/main.qml:269
+#, kde-format
+msgctxt "@action:button accessible"
+msgid "Move %1 layout up"
+msgstr ""
+
+#: ui/main.qml:275
+#, kde-format
+msgctxt "@action:button"
+msgid "Move Down"
+msgstr ""
+
+#: ui/main.qml:276
+#, kde-format
+msgctxt "@action:button accessible"
+msgid "Move %1 layout Down"
+msgstr ""
+
+#: ui/main.qml:286
+#, kde-format
+msgctxt "@action:button accessible"
+msgid "Preview"
+msgstr ""
+
+#: ui/main.qml:294
+#, kde-format
+msgctxt "@action:button"
+msgid "Remove"
+msgstr ""
+
+#: ui/main.qml:295
+#, kde-format
+msgctxt "@action:button accessible"
+msgid "Remove layout %1"
+msgstr ""
+
+#: ui/main.qml:307
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Spare layouts:"
+msgstr ""
+
+#: ui/main.qml:344
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Number of spared main layouts"
+msgstr ""
+
+#: ui/main.qml:376
+#, kde-format
+msgctxt "@label:textbox completes spinbox, x main layouts"
+msgid "main layouts"
+msgstr ""
+
+#: ui/main.qml:380
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You can have up to 4 main layouts, all other layouts are spare. Spare "
+"layouts are not included when cycling through the layouts, but can be "
+"accessed through the keyboard indicator applet or by setting a custom "
+"shortcut."
+msgstr ""
+
+#: ui/main.qml:385
+#, kde-format
+msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
+msgid "Change layout shortcut:"
+msgstr ""
+
+#: ui/main.qml:409
+#, kde-format
+msgctxt "@label Change layout shortcut or \"Configure Switching\""
+msgid "or"
+msgstr ""
+
+#: ui/Switching.qml:17
+#, kde-format
+msgctxt "@title"
+msgid "Configure Switching"
+msgstr ""
+
+#: ui/Switching.qml:23
+#, kde-format
+msgctxt "@title:group"
+msgid "Behavior"
+msgstr ""
+
+#: ui/Switching.qml:28
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Switching layout affects:"
+msgstr ""
+
+#: ui/Switching.qml:35
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "All windows"
+msgstr ""
+
+#: ui/Switching.qml:39
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "All windows on current desktop"
+msgstr ""
+
+#: ui/Switching.qml:43
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "All windows of current application"
+msgstr ""
+
+#: ui/Switching.qml:47
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Current window only"
+msgstr ""
+
+#: ui/Switching.qml:74
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Show notification on layout change"
+msgstr ""
+
+#: ui/Switching.qml:86
+#, kde-format
+msgctxt "@title:group"
+msgid "Shortcuts"
+msgstr ""
+
+#: ui/Switching.qml:91 ui/Switching.qml:153
+#, kde-format
+msgctxt "@option:textbox"
+msgid "Change layout:"
+msgstr ""
+
+#: ui/Switching.qml:112
+#, kde-format
+msgctxt "@option:textbox"
+msgid "Switch to last used layout:"
+msgstr ""
+
+#: ui/Switching.qml:133
+#, kde-format
+msgctxt "@title:group"
+msgid "Legacy Shortcuts"
+msgstr ""
+
+#: ui/Switching.qml:141
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Legacy X11 shortcuts allow finer control of modifier-only shortcuts and have "
+"slightly better support on X11 in edge cases. They can also be used on "
+"Wayland.<nl/><nl/>Setting these shortcuts will take you to the Key bindings "
+"page."
+msgstr ""
+
+#: ui/Switching.qml:182
+#, kde-format
+msgctxt "@option:textbox"
+msgid "Alternative symbols:"
+msgstr ""
+
+#: ui/Switching.qml:208
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Modifier keys can be used to type additional characters, symbols, and "
+"diacritical marks."
+msgstr ""
+
+#: xkboptionsmodel.cpp:165
+#, kde-format
+msgid "%1 shortcut"
+msgid_plural "%1 shortcuts"
+msgstr[0] ""
+msgstr[1] ""
+
+#: xkboptionsmodel.cpp:168
+#, kde-format
+msgctxt "no shortcuts defined"
+msgid "None"
+msgstr ""

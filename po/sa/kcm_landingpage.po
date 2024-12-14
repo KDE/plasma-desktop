@@ -1,0 +1,117 @@
+# Sanskrit translations for plasma-desktop package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-10-04 00:41+0000\n"
+"PO-Revision-Date: 2024-12-13 19:10+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. i18n: ectx: label, entry (colorScheme), group (General)
+#: landingpage_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Color scheme name"
+msgstr "वर्ण योजना नाम"
+
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:15
+#, kde-format
+msgid "Single click to open files"
+msgstr "सञ्चिकाः उद्घाटयितुं एकवारं क्लिक् कुर्वन्तु"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:19
+#, kde-format
+msgid "Global Look and Feel package"
+msgstr "Global Look and Feel इति संकुलम्"
+
+#. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
+#. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:23
+#: landingpage_kdeglobalssettings.kcfg:27
+#, kde-format
+msgid "Global Look and Feel package, alternate"
+msgstr "Global Look and Feel संकुलं, वैकल्पिकम्"
+
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:31
+#, kde-format
+msgid "Animation speed"
+msgstr "एनिमेशन वेग"
+
+#: ui/main.qml:33
+#, kde-format
+msgid "Theme:"
+msgstr "विषयवस्तु:"
+
+#: ui/main.qml:76
+#, kde-format
+msgctxt "@title:group translate as short as possible"
+msgid "More appearance settings:"
+msgstr ""
+
+#: ui/main.qml:120
+#, kde-format
+msgid "Animation speed:"
+msgstr "एनिमेशनवेगः : १."
+
+#: ui/main.qml:129
+#, kde-format
+msgctxt "Animation speed"
+msgid "Slow"
+msgstr ""
+
+#: ui/main.qml:136
+#, kde-format
+msgctxt "Animation speed"
+msgid "Instant"
+msgstr ""
+
+#: ui/main.qml:150
+#, kde-format
+msgctxt ""
+"part of a sentence: 'Clicking files or folders [opens them/selects them]'"
+msgid "Clicking files or folders:"
+msgstr ""
+
+#: ui/main.qml:158
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders selects them'"
+msgid "Selects them"
+msgstr ""
+
+#: ui/main.qml:163
+#, kde-format
+msgid "Open by double-clicking instead"
+msgstr "तस्य स्थाने द्विवारं क्लिक् कृत्वा उद्घाटयन्तु"
+
+#: ui/main.qml:188
+#, kde-format
+msgctxt "part of a sentence: 'Clicking files or folders opens them'"
+msgid "Opens them"
+msgstr ""
+
+#: ui/main.qml:193
+#, kde-format
+msgid "Select by clicking on item's selection marker"
+msgstr "मदस्य चयनचिह्नं नुत्वा चयनं कुर्वन्तु"
+
+#: ui/main.qml:216
+#, kde-format
+msgctxt "@title:group translate as short as possible"
+msgid "More behavior settings:"
+msgstr ""
+
+#: ui/main.qml:229
+#, kde-format
+msgid "Most used pages:"
+msgstr "सर्वाधिकं प्रयुक्तानि पृष्ठानि : १."

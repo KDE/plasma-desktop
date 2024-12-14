@@ -1,0 +1,211 @@
+# Sanskrit translations for plasma-desktop package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-05-24 00:40+0000\n"
+"PO-Revision-Date: 2024-12-13 19:10+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: knetattach.cpp:78
+#, kde-format
+msgid ""
+"Enter a name for this <i>WebFolder</i> as well as a server address, port and "
+"folder path to use and press the <b>Save & Connect</b> button."
+msgstr ""
+"अस्य <i>WebFolder</i> इत्यस्य नाम अपि च उपयोक्तुं सर्वर-सङ्केतं, पोर्ट्, फोल्डर्-मार्गं च "
+"प्रविश्य <b>Save &amp; Connect इति</b> बटनं नुदन्तु ।"
+
+#: knetattach.cpp:81
+#, kde-format
+msgid ""
+"Enter a name for this <i>Secure shell connection</i> as well as a server "
+"address, port and folder path to use and press the <b>Save & Connect</b> "
+"button."
+msgstr ""
+"अस्य <i>Secure shell connection</i> इत्यस्य नाम अपि च उपयोक्तुं सर्वर-सङ्केतं, पोर्ट्, "
+"फोल्डर्-मार्गं च प्रविश्य <b>Save &amp; Connect इति</b> बटनं नुदन्तु ।"
+
+#: knetattach.cpp:85
+#, kde-format
+msgid ""
+"Enter a name for this <i>File Transfer Protocol connection</i> as well as a "
+"server address and folder path to use and press the <b>Save & Connect</b> "
+"button."
+msgstr ""
+"अस्य <i>File Transfer Protocol संयोजनस्य</i> नाम अपि च उपयोक्तुं सर्वर-सङ्केतं फोल्डर्-"
+"मार्गं च प्रविश्य <b>Save &amp; Connect</b> बटनं नुदन्तु ।"
+
+#: knetattach.cpp:89
+#, kde-format
+msgid ""
+"Enter a name for this <i>Microsoft Windows network drive</i> as well as a "
+"server address and folder path to use and press the <b>Save & Connect</b> "
+"button."
+msgstr ""
+"अस्य <i>Microsoft Windows संजालड्राइवस्य</i> नाम अपि च उपयोक्तुं सर्वर-सङ्केतं, फोल्डर्-"
+"मार्गं च प्रविश्य <b>Save &amp; Connect इति</b> बटनं नुदन्तु ।"
+
+#: knetattach.cpp:205
+#, kde-format
+msgid "Unable to connect to server.  Please check your settings and try again."
+msgstr "सर्वरेण सह संयोजितुं असमर्थः।  कृपया स्वस्य सेटिङ्ग्स् पश्यन्तु पुनः प्रयासं कुर्वन्तु ।"
+
+#: knetattach.cpp:333
+#, kde-format
+msgid "Save && C&onnect"
+msgstr "सेव && C&onnect"
+
+#: knetattach.cpp:335
+#, kde-format
+msgid "C&onnect"
+msgstr "संयुज्"
+
+#. i18n: ectx: property (windowTitle), widget (QWizard, KNetAttach)
+#: knetattach.ui:14
+#, kde-format
+msgid "Network Folder Wizard"
+msgstr "संजालपुट विजार्ड"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderType)
+#: knetattach.ui:18
+#, kde-format
+msgid "Add Network Folder"
+msgstr "Network Folder योजयन्तु"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: knetattach.ui:24
+#, kde-format
+msgid ""
+"Select the type of network folder you wish to connect to and press the Next "
+"button."
+msgstr "यस्य जालपुटस्य प्रकारं भवन्तः संयोजयितुम् इच्छन्ति तत् चित्वा Next बटन् नुदन्तु ।"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _recent)
+#: knetattach.ui:65
+#, kde-format
+msgid "&Recent connection:"
+msgstr "&अद्यतनसंयोजनम् : १."
+
+#. i18n: ectx: property (text), widget (QRadioButton, _webfolder)
+#: knetattach.ui:72
+#, kde-format
+msgid "&WebFolder (webdav)"
+msgstr "&वेबफोल्डर (webdav) २."
+
+#. i18n: ectx: property (text), widget (QRadioButton, _fish)
+#: knetattach.ui:82
+#, kde-format
+msgid "&Secure shell (ssh)"
+msgstr "&सुरक्षित शेल (ssh) 1 ."
+
+#. i18n: ectx: property (text), widget (QRadioButton, _ftp)
+#: knetattach.ui:111
+#, kde-format
+msgid "FT&P"
+msgstr "एफटी एण्ड पी"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _smb)
+#: knetattach.ui:118
+#, kde-format
+msgid "&Microsoft® Windows® network drive"
+msgstr "&Microsoft® Windows® संजालड्राइवः"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderParameters)
+#: knetattach.ui:145
+#, kde-format
+msgid "Network Folder Information"
+msgstr "नेटवर्क फोल्डर सूचना"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel4_2)
+#: knetattach.ui:177
+#, kde-format
+msgid "&Name:"
+msgstr "&नामः:"
+
+#. i18n: ectx: property (text), widget (QLabel, _userText)
+#: knetattach.ui:196
+#, kde-format
+msgid "&User:"
+msgstr "&उपयोक्ता : १."
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: knetattach.ui:222
+#, kde-format
+msgid "Se&rver:"
+msgstr "से&र्वेर्: १."
+
+#. i18n: ectx: property (text), widget (QLabel, _portText)
+#: knetattach.ui:248
+#, kde-format
+msgid "&Port:"
+msgstr "&पोताश्रय:"
+
+#. i18n: ectx: property (text), widget (QLabel, _protocol)
+#: knetattach.ui:283
+#, kde-format
+msgid "&Protocol:"
+msgstr "&प्रोटोकॉल : १."
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: knetattach.ui:313
+#, kde-format
+msgid "&Folder:"
+msgstr "&फोल्डर: १."
+
+#. i18n: ectx: property (text), widget (QLabel, _encodingText)
+#: knetattach.ui:335
+#, kde-format
+msgid "Encoding:"
+msgstr "एन्कोडिंग् : १."
+
+#. i18n: ectx: property (text), widget (QCheckBox, _createIcon)
+#: knetattach.ui:351
+#, kde-format
+msgid "Cr&eate an icon for this remote folder"
+msgstr "अस्य दूरस्थपुटस्य कृते एकं चिह्नं Cr&eate कुर्वन्तु"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _useEncryption)
+#: knetattach.ui:361
+#, kde-format
+msgid "&Use encryption"
+msgstr "&गुप्तीकरणस्य उपयोगं कुर्वन्तु"
+
+#: main.cpp:21 main.cpp:23
+#, kde-format
+msgid "KDE Network Wizard"
+msgstr "KDE संजालविजार्डः"
+
+#: main.cpp:25
+#, kde-format
+msgid "(c) 2004 George Staikos"
+msgstr "(ग) 2004 जॉर्ज स्टैइकोस"
+
+#: main.cpp:28
+#, kde-format
+msgid "George Staikos"
+msgstr "जार्ज स्टैइकोस"
+
+#: main.cpp:28
+#, kde-format
+msgid "Primary author and maintainer"
+msgstr "प्राथमिक लेखक एवं परिपालक"

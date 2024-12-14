@@ -1,0 +1,69 @@
+# Sanskrit translations for plasma-desktop package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-09-05 00:41+0000\n"
+"PO-Revision-Date: 2024-12-13 19:10+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "स्वरूपम्‌"
+
+#: package/contents/ui/ConfigAppearance.qml:23
+#, kde-format
+msgid "Icon:"
+msgstr "चिह्नम् : १."
+
+#: package/contents/ui/ConfigAppearance.qml:25
+#, kde-format
+msgid "Show the current activity icon"
+msgstr "वर्तमानक्रियाकलापचिह्नं दर्शयतु"
+
+#: package/contents/ui/ConfigAppearance.qml:31
+#, kde-format
+msgid "Show the generic activity icon"
+msgstr "सामान्यक्रियाकलापचिह्नं दर्शयतु"
+
+#: package/contents/ui/ConfigAppearance.qml:41
+#, kde-format
+msgid "Title:"
+msgstr "शीर्षक:"
+
+#: package/contents/ui/ConfigAppearance.qml:43
+#, kde-format
+msgid "Show the current activity name"
+msgstr "वर्तमानं क्रियाकलापनाम दर्शयतु"
+
+#: package/contents/ui/main.qml:74
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Current activity is %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Show Activity Manager"
+msgstr "गतिविधिप्रबन्धकं दर्शयतु"
+
+#: package/contents/ui/main.qml:85
+#, kde-format
+msgid "Click to show the activity manager"
+msgstr "क्रियाकलापप्रबन्धकं दर्शयितुं क्लिक् कुर्वन्तु"
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgctxt "@action:inmenu widget context menu"
+msgid "&Configure Activities…"
+msgstr ""

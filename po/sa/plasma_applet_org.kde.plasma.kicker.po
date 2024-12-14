@@ -1,0 +1,189 @@
+# Sanskrit translations for plasma-desktop package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-06-15 00:40+0000\n"
+"PO-Revision-Date: 2024-12-13 19:10+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "सामान्य"
+
+#: package/contents/ui/code/tools.js:43
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "प्रियतः निष्कासयन्तु"
+
+#: package/contents/ui/code/tools.js:47
+#, kde-format
+msgid "Add to Favorites"
+msgstr "प्रियं योजयतु"
+
+#: package/contents/ui/code/tools.js:73
+#, kde-format
+msgid "On All Activities"
+msgstr "सर्वेषु क्रियाकलापेषु"
+
+#: package/contents/ui/code/tools.js:123
+#, kde-format
+msgid "On the Current Activity"
+msgstr "वर्तमान क्रियाकलापस्य विषये"
+
+#: package/contents/ui/code/tools.js:137
+#, kde-format
+msgid "Show in Favorites"
+msgstr "प्रियेषु दर्शयतु"
+
+#: package/contents/ui/ConfigGeneral.qml:46
+#, kde-format
+msgid "Icon:"
+msgstr "चिह्नम् : १."
+
+#: package/contents/ui/ConfigGeneral.qml:129
+#, kde-format
+msgctxt "@item:inmenu Open icon chooser dialog"
+msgid "Choose…"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:134
+#, kde-format
+msgctxt "@item:inmenu Reset icon to default"
+msgid "Clear Icon"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:152
+#, kde-format
+msgid "Show applications as:"
+msgstr "अनुप्रयोगाः यथा दर्शयन्तु :"
+
+#: package/contents/ui/ConfigGeneral.qml:154
+#, kde-format
+msgid "Name only"
+msgstr "नाममात्रम्"
+
+#: package/contents/ui/ConfigGeneral.qml:154
+#, kde-format
+msgid "Description only"
+msgstr "वर्णनमात्रम्"
+
+#: package/contents/ui/ConfigGeneral.qml:154
+#, kde-format
+msgid "Name (Description)"
+msgstr "नाम (विवरण) ९."
+
+#: package/contents/ui/ConfigGeneral.qml:154
+#, kde-format
+msgid "Description (Name)"
+msgstr "विवरणम् (नाम) २."
+
+#: package/contents/ui/ConfigGeneral.qml:164
+#, kde-format
+msgid "Behavior:"
+msgstr "व्यवहार:"
+
+#: package/contents/ui/ConfigGeneral.qml:166
+#, kde-format
+msgid "Sort applications alphabetically"
+msgstr "अनुप्रयोगानाम् वर्णमालानुसारं क्रमणं कुर्वन्तु"
+
+#: package/contents/ui/ConfigGeneral.qml:174
+#, kde-format
+msgid "Flatten sub-menus to a single level"
+msgstr "उपमेनूः एकस्मिन् स्तरे समतलं कुर्वन्तु"
+
+#: package/contents/ui/ConfigGeneral.qml:182
+#, kde-format
+msgid "Show icons on the root level of the menu"
+msgstr "मेन्यू इत्यस्य मूलस्तरस्य चिह्नानि दर्शयन्तु"
+
+#: package/contents/ui/ConfigGeneral.qml:192
+#, kde-format
+msgid "Show categories:"
+msgstr "श्रेणयः दर्शयतु : १."
+
+#: package/contents/ui/ConfigGeneral.qml:195
+#, kde-format
+msgid "Recent applications"
+msgstr "अद्यतन आवेदन"
+
+#: package/contents/ui/ConfigGeneral.qml:196
+#, kde-format
+msgid "Often used applications"
+msgstr "प्रायः प्रयुक्ताः अनुप्रयोगाः"
+
+#: package/contents/ui/ConfigGeneral.qml:203
+#, kde-format
+msgid "Recent files"
+msgstr "अद्यतनसञ्चिकाः"
+
+#: package/contents/ui/ConfigGeneral.qml:204
+#, kde-format
+msgid "Often used files"
+msgstr "प्रायः प्रयुक्ताः सञ्चिकाः"
+
+#: package/contents/ui/ConfigGeneral.qml:210
+#, kde-format
+msgid "Sort items in categories by:"
+msgstr "श्रेणीषु वस्तूनि क्रमेण क्रमयन्तु:"
+
+#: package/contents/ui/ConfigGeneral.qml:211
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Often used]"
+msgid "Recently used"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:211
+#, kde-format
+msgctxt ""
+"@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+msgid "Often used"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:221
+#, kde-format
+msgid "Search:"
+msgstr "अन्वेषण:"
+
+#: package/contents/ui/ConfigGeneral.qml:223
+#, kde-format
+msgid "Expand search to bookmarks, files and emails"
+msgstr "अन्वेषणं बुकमार्क, सञ्चिका, ईमेल च यावत् विस्तारयन्तु"
+
+#: package/contents/ui/ConfigGeneral.qml:231
+#, kde-format
+msgid "Align search results to bottom"
+msgstr "अन्वेषणपरिणामान् अधः संरेखयन्तु"
+
+#: package/contents/ui/DashboardRepresentation.qml:227
+#, kde-format
+msgid "Searching for '%1'"
+msgstr "'%1' इत्यस्य अन्वेषणम् ।"
+
+#: package/contents/ui/DashboardRepresentation.qml:227
+#, kde-format
+msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
+msgid "Type to search…"
+msgstr ""
+
+#: package/contents/ui/DashboardRepresentation.qml:323
+#, kde-format
+msgid "Favorites"
+msgstr "प्रियाः"
+
+#: package/contents/ui/main.qml:247
+#, kde-format
+msgid "Edit Applications…"
+msgstr "अनुप्रयोगाः सम्पादयन्तु..."

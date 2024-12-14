@@ -1,0 +1,130 @@
+# Sanskrit translations for plasma-desktop package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"PO-Revision-Date: 2024-12-13 19:10+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n>2);\n"
+
+#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:10
+#, kde-format
+msgid "How many months keep the activity history"
+msgstr "कति मासाः क्रियाकलापस्य इतिहासं रक्षन्ति"
+
+#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:17
+#, kde-format
+msgid "Which data to keep in activity history"
+msgstr "क्रियाकलाप-इतिहासस्य मध्ये कोऽपि दत्तांशः स्थापयितव्यः"
+
+#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:21
+#, kde-format
+msgid "List of Applications whose activity history to save"
+msgstr "येषां अनुप्रयोगानाम् क्रियाकलाप-इतिहासः रक्षितुं शक्यते तेषां सूची"
+
+#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:24
+#, kde-format
+msgid "List of Applications whose activity history not to save"
+msgstr "येषां अनुप्रयोगानाम् क्रियाकलाप-इतिहासः न रक्षितव्यः तेषां सूची"
+
+#: kcm_recentFiles.cpp:77
+#, kde-format
+msgctxt "unlimited number of months"
+msgid "Forever"
+msgstr ""
+
+#: kcm_recentFiles.cpp:86
+#, kde-format
+msgid "Forget the last hour"
+msgstr "अन्तिमघण्टां विस्मरन्तु"
+
+#: kcm_recentFiles.cpp:87
+#, kde-format
+msgid "Forget the last two hours"
+msgstr "अन्तिमघण्टाद्वयं विस्मरतु"
+
+#: kcm_recentFiles.cpp:88
+#, kde-format
+msgid "Forget a day"
+msgstr "एकं दिवसं विस्मरतु"
+
+#: kcm_recentFiles.cpp:89
+#, kde-format
+msgid "Forget everything"
+msgstr "सर्वं विस्मरतु"
+
+#: kcm_recentFiles.cpp:233
+#, kde-format
+msgctxt "unit of time. months to keep the history"
+msgid " month"
+msgid_plural " months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: kcm_recentFiles.cpp:236
+#, kde-format
+msgctxt "for in 'keep history for 5 months'"
+msgid "For "
+msgstr ""
+
+#. i18n: ectx: property (text), widget (KMessageWidget, messageWidget)
+#: ui/RecentFiles.ui:17
+#, kde-format
+msgid "Cleared the activity history."
+msgstr "क्रियाकलापस्य इतिहासं स्वच्छं कृतवान्।"
+
+#. i18n: ectx: property (text), widget (QLabel, labelKeepHistory)
+#: ui/RecentFiles.ui:35
+#, kde-format
+msgid "Keep history:"
+msgstr "इतिहासं रक्षतु : १."
+
+#. i18n: ectx: property (text), widget (QPushButton, buttonClearRecentHistory)
+#: ui/RecentFiles.ui:47
+#, kde-format
+msgid "Clear History"
+msgstr "इतिहासं स्पष्टं कुरुत"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioRememberAllApplications)
+#: ui/RecentFiles.ui:68
+#, kde-format
+msgid "For a&ll applications"
+msgstr "a&ll अनुप्रयोगानाम् कृते"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioDontRememberApplications)
+#: ui/RecentFiles.ui:78
+#, kde-format
+msgid "&Do not remember"
+msgstr "&न स्मर्यताम्"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioRememberSpecificApplications)
+#: ui/RecentFiles.ui:85
+#, kde-format
+msgid "O&nly for specific applications:"
+msgstr "O&nly विशिष्टानुप्रयोगानाम् कृते:"
+
+#. i18n: ectx: property (text), widget (QLabel, labelRememberDocuments)
+#: ui/RecentFiles.ui:95
+#, kde-format
+msgid "Remember opened documents:"
+msgstr "उद्घाटितदस्तावेजाः स्मर्यताम् : १."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_blockedByDefault)
+#: ui/RecentFiles.ui:128
+#, kde-format
+msgid "Exclude applications not on the list"
+msgstr "सूचीयां न विद्यमानाः अनुप्रयोगाः बहिष्कृताः कुर्वन्तु"
