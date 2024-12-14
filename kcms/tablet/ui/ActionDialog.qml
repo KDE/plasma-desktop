@@ -162,7 +162,7 @@ Kirigami.Dialog {
         }
 
         StackLayout {
-            currentIndex: radioGroup.checkedButton.index
+            currentIndex: radioGroup.checkedButton?.index ?? 0
 
             QQC2.Label {
                 id: applicationView

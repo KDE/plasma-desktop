@@ -206,6 +206,9 @@ void TabletsModel::addDevice(const QString &sysName, bool tellModel)
                 qCInfo(KCM_TABLET) << "Adding a tablet pad to an existing thing.";
                 it->padDevice = std::move(dev);
             }
+            const int index = std::distance(m_devices.begin(), it);
+            // We need to tell the model that a pad/pen was added for this device and the UI needs refreshing
+            Q_EMIT deviceChanged(index);
         } else {
             TabletDevice tablet;
             tablet.deviceGroup = deviceGroup;

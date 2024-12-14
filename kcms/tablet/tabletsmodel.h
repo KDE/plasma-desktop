@@ -54,6 +54,7 @@ Q_SIGNALS:
     void needsSaveChanged();
     void dbChanged();
     void deviceRemoved(const QString &sysName);
+    void deviceChanged(int row);
 
 private:
     void addDevice(const QString &sysname, bool tellModel);
