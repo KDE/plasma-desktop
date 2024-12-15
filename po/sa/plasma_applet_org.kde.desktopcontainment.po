@@ -111,13 +111,13 @@ msgstr "कस्टम् चिह्नस्य उपयोगं कुर
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
-msgstr ""
+msgstr "चिनोतु…"
 
 #: package/contents/ui/ConfigIcons.qml:109
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
-msgstr ""
+msgstr "स्पष्टं चिह्नम्"
 
 #: package/contents/ui/ConfigIcons.qml:129
 #, kde-format
@@ -128,31 +128,31 @@ msgstr "व्यवस्थाम्:"
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Left to Right"
-msgstr ""
+msgstr "वामतः दक्षिणतः"
 
 #: package/contents/ui/ConfigIcons.qml:134
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Right to Left"
-msgstr ""
+msgstr "दक्षिणतः वामतः"
 
 #: package/contents/ui/ConfigIcons.qml:135
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Top to Bottom"
-msgstr ""
+msgstr "उपरितः अधः यावत्"
 
 #: package/contents/ui/ConfigIcons.qml:144
 #, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align left"
-msgstr ""
+msgstr "वामभागे संरेखणं कुर्वन्तु"
 
 #: package/contents/ui/ConfigIcons.qml:145
 #, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align right"
-msgstr ""
+msgstr "दक्षिणतः संरेखणं कुर्वन्तु"
 
 #: package/contents/ui/ConfigIcons.qml:160
 #, kde-format
@@ -168,61 +168,61 @@ msgstr "क्रमाङ्कनम् : १."
 #, kde-format
 msgctxt "@item:inlistbox sort icons manually"
 msgid "Manual"
-msgstr ""
+msgstr "शास्त्र"
 
 #: package/contents/ui/ConfigIcons.qml:183
 #, kde-format
 msgctxt "@item:inlistbox sort icons by name"
 msgid "Name"
-msgstr ""
+msgstr "नामः"
 
 #: package/contents/ui/ConfigIcons.qml:184
 #, kde-format
 msgctxt "@item:inlistbox sort icons by size"
 msgid "Size"
-msgstr ""
+msgstr "आकृति"
 
 #: package/contents/ui/ConfigIcons.qml:185
 #, kde-format
 msgctxt "@item:inlistbox sort icons by file type"
 msgid "Type"
-msgstr ""
+msgstr "प्रकारः"
 
 #: package/contents/ui/ConfigIcons.qml:186
 #, kde-format
 msgctxt "@item:inlistbox sort icons by date"
 msgid "Date"
-msgstr ""
+msgstr "दिनाङ्कः"
 
 #: package/contents/ui/ConfigIcons.qml:197
 #, kde-format
 msgctxt "@option:check sort icons in descending order"
 msgid "Descending"
-msgstr ""
+msgstr "अवतरन्"
 
 #: package/contents/ui/ConfigIcons.qml:205
 #, kde-format
 msgctxt "@option:check sort icons with folders first"
 msgid "Folders first"
-msgstr ""
+msgstr "प्रथमं पुटम्"
 
 #: package/contents/ui/ConfigIcons.qml:219
 #, kde-format
 msgctxt "whether to use icon or list view"
 msgid "View mode:"
-msgstr ""
+msgstr "दृश्यविधिः : १."
 
 #: package/contents/ui/ConfigIcons.qml:221
 #, kde-format
 msgctxt "@item:inlistbox show icons in a list"
 msgid "List"
-msgstr ""
+msgstr "सूची"
 
 #: package/contents/ui/ConfigIcons.qml:222
 #, kde-format
 msgctxt "@item:inlistbox show icons in a grid"
 msgid "Grid"
-msgstr ""
+msgstr "गृध्र"
 
 #: package/contents/ui/ConfigIcons.qml:233
 #, kde-format
@@ -233,13 +233,13 @@ msgstr "चिह्नस्य आकारः : १."
 #, kde-format
 msgctxt "@label:slider smallest icon size"
 msgid "Small"
-msgstr ""
+msgstr "लघु"
 
 #: package/contents/ui/ConfigIcons.qml:257
 #, kde-format
 msgctxt "@label:slider largest icon size"
 msgid "Large"
-msgstr ""
+msgstr "बृहत्‌"
 
 #: package/contents/ui/ConfigIcons.qml:266
 #, kde-format
@@ -250,19 +250,19 @@ msgstr "लेबलस्य विस्तारः : १."
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Narrow"
-msgstr ""
+msgstr "सङ्कीर्णः"
 
 #: package/contents/ui/ConfigIcons.qml:270
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Medium"
-msgstr ""
+msgstr "मध्यम"
 
 #: package/contents/ui/ConfigIcons.qml:271
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Wide"
-msgstr ""
+msgstr "विस्तृतः"
 
 #: package/contents/ui/ConfigIcons.qml:279
 #, kde-format
@@ -406,6 +406,8 @@ msgid ""
 "There are a lot of files and folders on the desktop. This can cause bugs and "
 "performance issues. Please consider moving some of them elsewhere."
 msgstr ""
+"डेस्कटॉप् मध्ये बहु सञ्चिकाः, पुटकानि च सन्ति । एतेन दोषाः, कार्यक्षमतायाः समस्याः च "
+"उत्पद्यन्ते । तेषु केचन अन्यत्र स्थानान्तरयितुं विचारयन्तु।"
 
 #: package/contents/ui/main.qml:400
 #, kde-format
@@ -436,7 +438,7 @@ msgstr "&रिक्त कचरा"
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore"
-msgstr ""
+msgstr "निर्यत्"
 
 #: plugins/folder/foldermodel.cpp:1701
 #, kde-format
@@ -462,43 +464,43 @@ msgstr "Sort By"
 #, kde-format
 msgctxt "@item:inmenu Sort icons manually"
 msgid "Unsorted"
-msgstr ""
+msgstr "अक्रमितम्"
 
 #: plugins/folder/viewpropertiesmenu.cpp:28
 #, kde-format
 msgctxt "@item:inmenu Sort icons by name"
 msgid "Name"
-msgstr ""
+msgstr "नामः"
 
 #: plugins/folder/viewpropertiesmenu.cpp:32
 #, kde-format
 msgctxt "@item:inmenu Sort icons by size"
 msgid "Size"
-msgstr ""
+msgstr "आकृति"
 
 #: plugins/folder/viewpropertiesmenu.cpp:36
 #, kde-format
 msgctxt "@item:inmenu Sort icons by file type"
 msgid "Type"
-msgstr ""
+msgstr "प्रकारः"
 
 #: plugins/folder/viewpropertiesmenu.cpp:40
 #, kde-format
 msgctxt "@item:inmenu Sort icons by date"
 msgid "Date"
-msgstr ""
+msgstr "दिनाङ्कः"
 
 #: plugins/folder/viewpropertiesmenu.cpp:45
 #, kde-format
 msgctxt "@item:inmenu Sort icons in descending order"
 msgid "Descending"
-msgstr ""
+msgstr "अवतरन्"
 
 #: plugins/folder/viewpropertiesmenu.cpp:47
 #, kde-format
 msgctxt "@item:inmenu Sort icons with folders first"
 msgid "Folders First"
-msgstr ""
+msgstr "पुटं प्रथमं"
 
 #: plugins/folder/viewpropertiesmenu.cpp:50
 #, kde-format
@@ -509,67 +511,67 @@ msgstr "चिह्न आकार"
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Tiny"
-msgstr ""
+msgstr "तुच्छ"
 
 #: plugins/folder/viewpropertiesmenu.cpp:54
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Very Small"
-msgstr ""
+msgstr "अतीव लघु"
 
 #: plugins/folder/viewpropertiesmenu.cpp:55
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Small"
-msgstr ""
+msgstr "लघु"
 
 #: plugins/folder/viewpropertiesmenu.cpp:56
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Small-Medium"
-msgstr ""
+msgstr "लघु-मध्यम"
 
 #: plugins/folder/viewpropertiesmenu.cpp:57
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Medium"
-msgstr ""
+msgstr "मध्यम"
 
 #: plugins/folder/viewpropertiesmenu.cpp:58
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Large"
-msgstr ""
+msgstr "बृहत्‌"
 
 #: plugins/folder/viewpropertiesmenu.cpp:59
 #, kde-format
 msgctxt "@item:inmenu size of the icons"
 msgid "Huge"
-msgstr ""
+msgstr "विशालः"
 
 #: plugins/folder/viewpropertiesmenu.cpp:67
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Arrange"
-msgstr ""
+msgstr "आयुजति"
 
 #: plugins/folder/viewpropertiesmenu.cpp:71
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Left to Right"
-msgstr ""
+msgstr "वामतः दक्षिणतः"
 
 #: plugins/folder/viewpropertiesmenu.cpp:72
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Right to Left"
-msgstr ""
+msgstr "दक्षिणतः वामतः"
 
 #: plugins/folder/viewpropertiesmenu.cpp:76
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "Top to Bottom"
-msgstr ""
+msgstr "उपरितः अधः यावत्"
 
 #: plugins/folder/viewpropertiesmenu.cpp:81
 #, kde-format
@@ -580,13 +582,13 @@ msgstr "संरेखणं कुर्वन्तु"
 #, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Left"
-msgstr ""
+msgstr "वामः"
 
 #: plugins/folder/viewpropertiesmenu.cpp:88
 #, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Right"
-msgstr ""
+msgstr "दक्षिणः"
 
 #: plugins/folder/viewpropertiesmenu.cpp:93
 #, kde-format
@@ -597,4 +599,4 @@ msgstr "पूर्वावलोकनानि दर्शयतु"
 #, kde-format
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
-msgstr ""
+msgstr "तालाबद्धः"

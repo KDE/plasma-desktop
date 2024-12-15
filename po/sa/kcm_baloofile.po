@@ -3,18 +3,21 @@
 # This file is distributed under the same license as the plasma-desktop package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:40+0000\n"
-"PO-Revision-Date: 2024-12-13 19:10+0530\n"
-"Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
+"PO-Revision-Date: 2024-12-14 01:12+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: ui/main.qml:44
 #, kde-format
@@ -64,19 +67,19 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "File indexing:"
-msgstr ""
+msgstr "सञ्चिका अनुक्रमणिका : १."
 
 #: ui/main.qml:105
 #, kde-format
 msgctxt "@action:check"
 msgid "Enabled"
-msgstr ""
+msgstr "सक्षमम्"
 
 #: ui/main.qml:121
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
-msgstr ""
+msgstr "अनुक्रमणिकां कर्तुं दत्तांशः : १."
 
 #: ui/main.qml:123
 #, kde-format
@@ -97,31 +100,31 @@ msgstr "गुप्तसञ्चिकाः पुटकानि च"
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
-msgstr ""
+msgstr "स्थानानि"
 
 #: ui/main.qml:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
-msgstr ""
+msgstr "एकस्य फोल्डरस्य अनुक्रमणं आरभत..."
 
 #: ui/main.qml:192
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
-msgstr ""
+msgstr "फोल्डर् अनुक्रमणं स्थगयन्तु..."
 
 #: ui/main.qml:210
 #, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
-msgstr ""
+msgstr "%1, %2% पूर्णम्"
 
 #: ui/main.qml:217
 #, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "Currently indexing: <filename>%1</filename>"
-msgstr ""
+msgstr "सम्प्रति अनुक्रमणिका: <filename>%1</filename>"
 
 #: ui/main.qml:270
 #, kde-format
@@ -137,7 +140,7 @@ msgstr "अनुक्रमितम्"
 #, kde-format
 msgctxt "Remove the list item for this filesystem path"
 msgid "Remove entry"
-msgstr ""
+msgstr "प्रविष्टिं निष्कासयन्तु"
 
 #: ui/main.qml:316
 #, kde-format

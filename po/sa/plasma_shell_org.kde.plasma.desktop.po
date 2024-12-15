@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-06 00:42+0000\n"
-"PO-Revision-Date: 2024-12-13 20:20+0530\n"
+"PO-Revision-Date: 2024-12-14 01:12+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
@@ -107,7 +107,7 @@ msgstr "%1 इत्यस्मै ईमेल प्रेषयन्तु"
 #, kde-format
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
-msgstr ""
+msgstr "वेबसाइट् %1 उद्घाटयन्तु"
 
 #: contents/configuration/AboutPlugin.qml:137
 #, kde-format
@@ -123,7 +123,7 @@ msgstr "अनुज्ञापत्रम् : १."
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "View license text"
-msgstr ""
+msgstr "अनुज्ञापत्रपाठं पश्यन्तु"
 
 #: contents/configuration/AboutPlugin.qml:177
 #, kde-format
@@ -242,7 +242,7 @@ msgstr "मेटा"
 #, kde-format
 msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
 msgid "+"
-msgstr ""
+msgstr "+"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:167
 #, kde-format
@@ -470,7 +470,7 @@ msgstr "शैली"
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
-msgstr ""
+msgstr "तत् समाधातु"
 
 #: contents/configuration/PanelConfiguration.qml:572
 #, kde-format
@@ -496,7 +496,7 @@ msgstr "Panel मध्ये फोकस गन्तुं एतत् क�
 #, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
-msgstr ""
+msgstr "पटलं विलोपयन्तु"
 
 #: contents/configuration/PanelConfiguration.qml:644
 #, kde-format
@@ -507,13 +507,13 @@ msgstr "एतत् पटलं निष्कासयन्तु; एत�
 #, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
-msgstr ""
+msgstr "क्लोन पैनल"
 
 #: contents/configuration/PanelConfiguration.qml:657
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
-msgstr ""
+msgstr "समानसेटिंग्स् एप्लेट् च सह नूतनं पटलं रचयन्तु"
 
 #: contents/configuration/PanelConfiguration.qml:666
 #, kde-format
@@ -537,32 +537,32 @@ msgstr "Panel Settings विण्डो बन्दं कृत्वा Edi
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum height."
-msgstr ""
+msgstr "अधिकतमं ऊर्ध्वतां परिवर्तयितुं कर्षन्तु ।"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:33
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum width."
-msgstr ""
+msgstr "अधिकतमविस्तारं परिवर्तयितुं कर्षन्तु ।"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:34
 #: contents/configuration/panelconfiguration/Ruler.qml:39
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Double-click to reset."
-msgstr ""
+msgstr "रीसेट् कर्तुं द्विवारं क्लिक् कुर्वन्तु ।"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:37
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum height."
-msgstr ""
+msgstr "न्यूनतमं ऊर्ध्वतां परिवर्तयितुं कर्षन्तु ।"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:38
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
-msgstr ""
+msgstr "न्यूनतमविस्तारं परिवर्तयितुं कर्षन्तु ।"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:87
 #, kde-format
@@ -571,6 +571,8 @@ msgid ""
 "Drag to change position on this screen edge.\n"
 "Double-click to reset."
 msgstr ""
+"अस्मिन् स्क्रीन-प्रान्ते स्थानं परिवर्तयितुं कर्षयन्तु ।\n"
+"रीसेट् कर्तुं द्विवारं क्लिक् कुर्वन्तु ।"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 #, kde-format
@@ -629,7 +631,7 @@ msgstr "असमर्थित विजेट्"
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
-msgstr ""
+msgstr "नूतनम्‌!"
 
 #: contents/explorer/AppletDelegate.qml:188
 #, kde-format
@@ -677,13 +679,13 @@ msgstr "विजेट्"
 #, kde-format
 msgctxt "@action:button The word 'new' refers to widgets"
 msgid "Get New…"
-msgstr ""
+msgstr "नवीनं प्राप्तुम्..."
 
 #: contents/explorer/WidgetExplorer.qml:179
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Widgets…"
-msgstr ""
+msgstr "नवीनविजेट् प्राप्तुम्..."
 
 #: contents/explorer/WidgetExplorer.qml:234
 #, kde-format
@@ -695,8 +697,8 @@ msgstr "श्रेणियाँ"
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Confirm Removal of One Widget"
 msgid_plural "Confirm Removal of %1 Widgets"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "एकस्य विजेट् इत्यस्य निष्कासनस्य पुष्टिं कुर्वन्तु"
+msgstr[1] "%1 विजेट् इत्यस्य निष्कासनस्य पुष्टिं कुर्वन्तु"
 
 #: contents/explorer/WidgetExplorer.qml:355
 #, kde-format
@@ -712,25 +714,25 @@ msgstr "कोऽपि विजेट् उपलब्धः नास्त
 #, kde-format
 msgctxt "@title: group"
 msgid "Clock:"
-msgstr ""
+msgstr "घटिका:"
 
 #: contents/lockscreen/config.qml:22
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
-msgstr ""
+msgstr "घड़ीं दर्शयतु"
 
 #: contents/lockscreen/config.qml:33
 #, kde-format
 msgctxt "@title: group"
 msgid "Media controls:"
-msgstr ""
+msgstr "माध्यमनियन्त्रणानि : १."
 
 #: contents/lockscreen/config.qml:36
 #, kde-format
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
-msgstr ""
+msgstr "अनलॉकिंग् प्रॉम्प्ट् इत्यस्य अधः दर्शयतु"
 
 #: contents/lockscreen/LockScreenUi.qml:48
 #, kde-format
@@ -761,13 +763,13 @@ msgstr "उपयोक्तारं परिवर्तयन्तु"
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
-msgstr ""
+msgstr "आभासी कीबोर्ड"
 
 #: contents/lockscreen/LockScreenUi.qml:382
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr ""
+msgstr "लेआउट् स्विच् कुर्वन्तु"
 
 #: contents/lockscreen/MainBlock.qml:64
 #, kde-format
@@ -819,7 +821,7 @@ msgstr "अग्रिमः पटलः"
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
-msgstr ""
+msgstr "%1% २."
 
 #: contents/views/DesktopEditMode.qml:115
 #, kde-format
@@ -835,7 +837,7 @@ msgstr "प्रदर्शन विन्यास"
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
-msgstr ""
+msgstr "अधिकः"
 
 #: contents/views/DesktopEditMode.qml:152
 #, kde-format

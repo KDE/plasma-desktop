@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-12 00:42+0000\n"
+"POT-Creation-Date: 2024-12-15 00:42+0000\n"
 "PO-Revision-Date: 2024-12-07 12:34+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -101,19 +101,19 @@ msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 - (%2,%3 %4×%5)"
 
-#: kcmtablet.cpp:163
+#: kcmtablet.cpp:163 ui/main.qml:196 ui/main.qml:197
 #, kde-format
 msgctxt "@item:inlistbox Stretch and fill to the screen"
 msgid "Stretch and Fill"
 msgstr "Rozciągnij i wypełnij"
 
-#: kcmtablet.cpp:164
+#: kcmtablet.cpp:164 ui/main.qml:198
 #, kde-format
 msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
 msgid "Keep Aspect Ratio and Fit"
 msgstr "Zachowaj kształt i zmieść go"
 
-#: kcmtablet.cpp:165
+#: kcmtablet.cpp:165 ui/main.qml:199
 #, kde-format
 msgctxt "@item:inlistbox Map to portion of the screen"
 msgid "Map to Portion"
@@ -301,49 +301,67 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Anuluj"
 
-#: ui/main.qml:34
+#: ui/ExternalScreenMapping.qml:112
+#, kde-format
+msgctxt "tablet area position - size"
+msgid "%1,%2 - %3×%4"
+msgstr "%1,%2 - %3×%4"
+
+#: ui/ExternalScreenMapping.qml:151
+#, fuzzy, kde-format
+#| msgid "Resize the tablet area"
+msgid "Resize the screen area"
+msgstr "Zmień rozmiar obszaru tabletu"
+
+#: ui/ExternalScreenMapping.qml:210
+#, kde-format
+msgctxt "@option:check"
+msgid "Lock aspect ratio"
+msgstr "Zablokuj współczynnik kształtu"
+
+#: ui/main.qml:35
 #, kde-format
 msgid "No drawing tablets found"
 msgstr "Nie znaleziono żadnego tabletu rysunkowego"
 
-#: ui/main.qml:35
+#: ui/main.qml:36
 #, kde-format
 msgid "Connect a drawing tablet"
 msgstr "Podłącz swój tablet rysunkowy"
 
-#: ui/main.qml:43
+#: ui/main.qml:44
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
 msgstr "Przetestuj tablet…"
 
-#: ui/main.qml:86
+#: ui/main.qml:87
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Urządzenie:"
 
-#: ui/main.qml:126
+#: ui/main.qml:129
 #, kde-format
 msgid "Map to screen:"
 msgstr "Zmapuj na ekran:"
 
-#: ui/main.qml:145
+#: ui/main.qml:154
 #, kde-format
 msgid "Orientation:"
 msgstr "Kierunek:"
 
-#: ui/main.qml:151
+#: ui/main.qml:160
 #, kde-format
 msgid "Not Applicable"
 msgstr "Nie ma zastosowania"
 
-#: ui/main.qml:162
+#: ui/main.qml:171
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "Tryb leworęczny:"
 
-#: ui/main.qml:173
+#: ui/main.qml:182
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -355,58 +373,41 @@ msgstr ""
 "będzie różny w zależności od posiadanego urządzenia, lecz zazwyczaj zamienia "
 "to działanie przycisków tak, aby można było używać tabletu do góry nogami."
 
-#: ui/main.qml:183
+#: ui/main.qml:192
 #, kde-format
 msgid "Mapped Area:"
 msgstr "Zmapowany obszar:"
 
-#: ui/main.qml:274
-#, kde-format
-msgid "Resize the tablet area"
-msgstr "Zmień rozmiar obszaru tabletu"
-
-#: ui/main.qml:298
-#, kde-format
-msgctxt "@option:check"
-msgid "Lock aspect ratio"
-msgstr "Zablokuj współczynnik kształtu"
-
-#: ui/main.qml:306
-#, kde-format
-msgctxt "tablet area position - size"
-msgid "%1,%2 - %3×%4"
-msgstr "%1,%2 - %3×%4"
-
-#: ui/main.qml:369
+#: ui/main.qml:277
 #, kde-format
 msgid "Pen Pressure:"
 msgstr "Nacisk pióra:"
 
-#: ui/main.qml:421
+#: ui/main.qml:329
 #, kde-format
 msgctxt "Low pen pressure"
 msgid "Low Pressure"
 msgstr "Mały nacisk"
 
-#: ui/main.qml:429
+#: ui/main.qml:337
 #, kde-format
 msgctxt "High pen pressure"
 msgid "High Pressure"
 msgstr "Duży nacisk"
 
-#: ui/main.qml:440
+#: ui/main.qml:348
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr "100%"
 
-#: ui/main.qml:448
+#: ui/main.qml:356
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr "0%"
 
-#: ui/main.qml:452
+#: ui/main.qml:360
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -416,36 +417,36 @@ msgstr ""
 "Ta krzywa steruje zależnością pomiędzy naciskiem rysika i wartościami "
 "nacisku otrzymywanymi przez aplikacje."
 
-#: ui/main.qml:463
+#: ui/main.qml:371
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "Kalibracja w trakcie"
 
-#: ui/main.qml:465
+#: ui/main.qml:373
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "Skalibruj"
 
-#: ui/main.qml:468
+#: ui/main.qml:376
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "Kalibracja nie jest obsługiwana"
 
-#: ui/main.qml:501
+#: ui/main.qml:409
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
 msgstr "Kalibracja na wielu ekranach nie jest obsługiwana."
 
-#: ui/main.qml:527
+#: ui/main.qml:435
 #, kde-format
 msgid "Pad button %1:"
 msgstr "Przycisk płytki %1:"
 
-#: ui/main.qml:530
+#: ui/main.qml:438
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "

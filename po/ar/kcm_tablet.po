@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-12 00:42+0000\n"
+"POT-Creation-Date: 2024-12-15 00:42+0000\n"
 "PO-Revision-Date: 2024-12-01 19:47+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -101,19 +101,19 @@ msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
 msgstr "‏%1 - (‏%2،‏%3 ‏%4×%5)"
 
-#: kcmtablet.cpp:163
+#: kcmtablet.cpp:163 ui/main.qml:196 ui/main.qml:197
 #, kde-format
 msgctxt "@item:inlistbox Stretch and fill to the screen"
 msgid "Stretch and Fill"
 msgstr "تمتد وملء"
 
-#: kcmtablet.cpp:164
+#: kcmtablet.cpp:164 ui/main.qml:198
 #, kde-format
 msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
 msgid "Keep Aspect Ratio and Fit"
 msgstr "أبقِ النّسبة الباعيّة ولائم"
 
-#: kcmtablet.cpp:165
+#: kcmtablet.cpp:165 ui/main.qml:199
 #, kde-format
 msgctxt "@item:inlistbox Map to portion of the screen"
 msgid "Map to Portion"
@@ -299,49 +299,67 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "ألغِ"
 
-#: ui/main.qml:34
+#: ui/ExternalScreenMapping.qml:112
+#, kde-format
+msgctxt "tablet area position - size"
+msgid "%1,%2 - %3×%4"
+msgstr "‏%1،%2 - %3×%4"
+
+#: ui/ExternalScreenMapping.qml:151
+#, fuzzy, kde-format
+#| msgid "Resize the tablet area"
+msgid "Resize the screen area"
+msgstr "غير الحجم مساحة اللوحي"
+
+#: ui/ExternalScreenMapping.qml:210
+#, kde-format
+msgctxt "@option:check"
+msgid "Lock aspect ratio"
+msgstr "اقفل النّسبة الباعيّة"
+
+#: ui/main.qml:35
 #, kde-format
 msgid "No drawing tablets found"
 msgstr "لم يعثر على أي لوح رسم"
 
-#: ui/main.qml:35
+#: ui/main.qml:36
 #, kde-format
 msgid "Connect a drawing tablet"
 msgstr "صِل لوح رسم"
 
-#: ui/main.qml:43
+#: ui/main.qml:44
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
 msgstr "اختبر اللوحي…"
 
-#: ui/main.qml:86
+#: ui/main.qml:87
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "الجهاز:"
 
-#: ui/main.qml:126
+#: ui/main.qml:129
 #, kde-format
 msgid "Map to screen:"
 msgstr "عيين إلى شاشة:"
 
-#: ui/main.qml:145
+#: ui/main.qml:154
 #, kde-format
 msgid "Orientation:"
 msgstr "الاتّجاه:"
 
-#: ui/main.qml:151
+#: ui/main.qml:160
 #, kde-format
 msgid "Not Applicable"
 msgstr "لا ينطبق"
 
-#: ui/main.qml:162
+#: ui/main.qml:171
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "وضع الأعسر:"
 
-#: ui/main.qml:173
+#: ui/main.qml:182
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -353,58 +371,41 @@ msgstr ""
 "ولكنها غالبًا ما تؤدي إلى عكس وظيفة أزرار اللوحة بحيث يمكن استخدام الجهاز "
 "اللوحي رأسًا على عقب."
 
-#: ui/main.qml:183
+#: ui/main.qml:192
 #, kde-format
 msgid "Mapped Area:"
 msgstr "المنطقة المعينة:"
 
-#: ui/main.qml:274
-#, kde-format
-msgid "Resize the tablet area"
-msgstr "غير الحجم مساحة اللوحي"
-
-#: ui/main.qml:298
-#, kde-format
-msgctxt "@option:check"
-msgid "Lock aspect ratio"
-msgstr "اقفل النّسبة الباعيّة"
-
-#: ui/main.qml:306
-#, kde-format
-msgctxt "tablet area position - size"
-msgid "%1,%2 - %3×%4"
-msgstr "‏%1،%2 - %3×%4"
-
-#: ui/main.qml:369
+#: ui/main.qml:277
 #, kde-format
 msgid "Pen Pressure:"
 msgstr "ضغط القلم:"
 
-#: ui/main.qml:421
+#: ui/main.qml:329
 #, kde-format
 msgctxt "Low pen pressure"
 msgid "Low Pressure"
 msgstr "ضغط منخفض"
 
-#: ui/main.qml:429
+#: ui/main.qml:337
 #, kde-format
 msgctxt "High pen pressure"
 msgid "High Pressure"
 msgstr "ضغط عالي"
 
-#: ui/main.qml:440
+#: ui/main.qml:348
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr "100٪"
 
-#: ui/main.qml:448
+#: ui/main.qml:356
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr "0٪"
 
-#: ui/main.qml:452
+#: ui/main.qml:360
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -414,36 +415,36 @@ msgstr ""
 "يتحكم هذا المنحنى في العلاقة بين الضغط على القلم وقيم الضغط التي تتلقاها "
 "التطبيقات."
 
-#: ui/main.qml:463
+#: ui/main.qml:371
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "معايرة قيد التقدم"
 
-#: ui/main.qml:465
+#: ui/main.qml:373
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "عاير"
 
-#: ui/main.qml:468
+#: ui/main.qml:376
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "المعايرة غير مدعومة"
 
-#: ui/main.qml:501
+#: ui/main.qml:409
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
 msgstr "المعايرة عبر شاشات متعددة غير مدعومة."
 
-#: ui/main.qml:527
+#: ui/main.qml:435
 #, kde-format
 msgid "Pad button %1:"
 msgstr "زر اللوحي %1:"
 
-#: ui/main.qml:530
+#: ui/main.qml:438
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "

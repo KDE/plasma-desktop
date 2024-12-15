@@ -61,19 +61,19 @@ msgstr "प्रियं योजयन्तु"
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "Failed to run install script in terminal <message>%1</message>"
-msgstr ""
+msgstr "टर्मिनल् <message>%1</message> मध्ये संस्थापनस्क्रिप्ट् चालयितुं असफलम्"
 
 #: plugininstaller/AbstractJob.cpp:29
 #, kde-format
 msgctxt "@info"
 msgid "Installation executed successfully, you may now close this window"
-msgstr ""
+msgstr "संस्थापनं सफलतया निष्पादितम्, इदानीं भवान् एतत् विण्डो पिधातुं शक्नोति"
 
 #: plugininstaller/AbstractJob.cpp:31
 #, kde-format
 msgctxt "@info"
 msgid "Uninstallation executed successfully, you may now close this window"
-msgstr ""
+msgstr "विस्थापनं सफलतया निष्पादितम्, इदानीं भवान् एतत् विण्डो पिधातुं शक्नोति"
 
 #: plugininstaller/KRunnerPluginInstallerRcJob.cpp:88
 #, kde-format
@@ -85,44 +85,44 @@ msgstr "%1 सञ्चिकां %2 प्रति प्रतिलिख�
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Failed to remove file %1:<nl/>%2"
-msgstr ""
+msgstr "%1:<nl/>%2 सञ्चिकां निष्कासयितुं असफलम्"
 
 #: plugininstaller/main.cpp:33
 #, kde-format
 msgctxt "@info"
 msgid "KRunner plugin installation failed"
-msgstr ""
+msgstr "KRunner प्लगिन् संस्थापनं विफलम्"
 
 #: plugininstaller/main.cpp:48
 #, kde-format
 msgctxt "@info:shell"
 msgid "Command to execute: install or uninstall"
-msgstr ""
+msgstr "निष्पादयितुं आदेशः: संस्थापयन्तु अथवा विस्थापनं कुर्वन्तु"
 
 #: plugininstaller/main.cpp:49
 #, kde-format
 msgctxt "@info:shell"
 msgid "Path to archive or extracted folder"
-msgstr ""
+msgstr "आर्काइव् अथवा एक्सट्रैक्ड् फोल्डर् इत्यस्य मार्गः"
 
 #: plugininstaller/main.cpp:50
 #, kde-format
 msgctxt "@info:shell"
 msgid "Do not show a visual confirmation dialog"
-msgstr ""
+msgstr "दृश्यपुष्टिसंवादं न दर्शयन्तु"
 
 #: plugininstaller/main.cpp:92
 #, kde-format
 msgctxt "@info"
 msgid "No PackageKit support"
-msgstr ""
+msgstr "PackageKit समर्थनं नास्ति"
 
 #: plugininstaller/PackageKitConfirmationDialog.h:23
 #: plugininstaller/ScriptConfirmationDialog.h:37
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Installation"
-msgstr ""
+msgstr "संस्थापनस्य पुष्टिं कुर्वन्तु"
 
 #: plugininstaller/PackageKitConfirmationDialog.h:26
 #, kde-kuit-format
@@ -131,25 +131,27 @@ msgid ""
 "You are about to install a binary package. You should only install these "
 "from a trusted author/packager."
 msgstr ""
+"भवान् द्विचक्रीयसङ्कुलं संस्थापयितुं प्रवृत्तः अस्ति । एतानि भवद्भिः केवलं विश्वसनीयलेखकात्/पैकेजर् "
+"इत्यस्मात् संस्थापनीयानि ।"
 
 #: plugininstaller/PackageKitConfirmationDialog.h:33
 #: plugininstaller/ScriptConfirmationDialog.h:94
 #, kde-format
 msgctxt "@action:button"
 msgid "Accept Risk And Continue"
-msgstr ""
+msgstr "जोखिमं स्वीकृत्य निरन्तरं कुर्वन्तु"
 
 #: plugininstaller/PackageKitConfirmationDialog.h:37
 #, kde-format
 msgctxt "@action:button"
 msgid "View File"
-msgstr ""
+msgstr "सञ्चिकां पश्यन्तु"
 
 #: plugininstaller/PackageKitJob.cpp:24
 #, kde-format
 msgctxt "@info"
 msgid "The mime type %1 is not supported by the packagekit backend"
-msgstr ""
+msgstr "%1 इति mime प्रकारः packagekit पृष्ठभागेन समर्थितः नास्ति"
 
 #: plugininstaller/ScriptConfirmationDialog.h:44
 #, kde-kuit-format
@@ -157,7 +159,7 @@ msgctxt "@info"
 msgid ""
 "This plugin executes the following command for starting the \"%1\" service:"
 "<nl/>%2"
-msgstr ""
+msgstr "एतत् प्लगिन् \"%1\" सेवायाः आरम्भार्थं निम्नलिखितम् आदेशं निष्पादयति:<nl/>%2"
 
 #: plugininstaller/ScriptConfirmationDialog.h:47
 #, kde-kuit-format
@@ -167,6 +169,9 @@ msgid ""
 "author. You can try to uninstall the plugin manually.<nl/>If you do not feel "
 "capable or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"एतत् प्लगिन् विस्थापनलिपिं न ददाति । कृपया लेखक से सम्पर्क करें। भवान् प्लगिन् स्वहस्तेन "
+"विस्थापयितुं प्रयतितुं शक्नोति।<nl/>यदि भवान् एतत् समर्थं वा सहजं वा न अनुभवति तर्हि इदानीं "
+"<interface>रद्दं</interface> नुदतु ।"
 
 #: plugininstaller/ScriptConfirmationDialog.h:52
 #, kde-kuit-format
@@ -177,6 +182,9 @@ msgid ""
 "the README for instructions from the author.<nl/>If you do not feel capable "
 "or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"एतत् प्लगिन् विस्थापनस्क्रिप्ट् न ददाति । कृपया लेखक से सम्पर्क करें। प्लगिन् मैन्युअल् रूपेण "
+"विस्थापयितुं प्रयतितुं शक्नुवन्ति । लेखकस्य निर्देशान् प्राप्तुं कृपया README पश्यन्तु ।<nl/>यदि "
+"भवान् एतत् समर्थं वा सहजं वा न अनुभवति तर्हि इदानीं <interface>रद्दं</interface> नुदतु ।"
 
 #: plugininstaller/ScriptConfirmationDialog.h:58
 #, kde-kuit-format
@@ -186,6 +194,9 @@ msgid ""
 "author. You can try to install the plugin manually.<nl/>If you do not feel "
 "capable or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"एतत् प्लगिन् संस्थापनलिपिं न ददाति । कृपया लेखक से सम्पर्क करें। भवान् प्लगिन् हस्तचलितरूपेण "
+"संस्थापयितुं प्रयतितुं शक्नोति।<nl/>यदि भवान् एतत् समर्थं वा सहजं वा न अनुभवति तर्हि इदानीं "
+"<interface>रद्दं</interface> नुदतु ।"
 
 #: plugininstaller/ScriptConfirmationDialog.h:63
 #, kde-kuit-format
@@ -196,6 +207,9 @@ msgid ""
 "the README for instructions from the author.<nl/>If you do not feel capable "
 "or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"एतत् प्लगिन् संस्थापनलिपिं न ददाति । कृपया लेखक से सम्पर्क करें। प्लगिन् मैन्युअल् रूपेण संस्थापयितुं "
+"प्रयतितुं शक्नुवन्ति । लेखकस्य निर्देशान् प्राप्तुं कृपया README पश्यन्तु ।<nl/>यदि भवान् एतत् "
+"समर्थं वा सहजं वा न अनुभवति तर्हि इदानीं <interface>रद्दं</interface> नुदतु ।"
 
 #: plugininstaller/ScriptConfirmationDialog.h:69
 #, kde-kuit-format
@@ -206,6 +220,10 @@ msgid ""
 "read the script's source code.<nl/>If you do not feel capable or comfortable "
 "with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"एतत् प्लगिन् संस्थापनार्थं स्क्रिप्ट् उपयुज्यते यत् सुरक्षाजोखिमं जनयितुं शक्नोति । कृपया संस्थापनात् "
+"पूर्वं सम्पूर्णं प्लगिन्-सामग्रीम् परीक्ष्यताम्, अथवा न्यूनातिन्यूनं स्क्रिप्ट्-स्क्रिप्ट्-सङ्केतं पठन्तु ।"
+"<nl/>यदि भवान् एतत् समर्थं वा सहजं वा न अनुभवति तर्हि इदानीं <interface>रद्दं</"
+"interface> नुदतु"
 
 #: plugininstaller/ScriptConfirmationDialog.h:75
 #, kde-kuit-format
@@ -216,45 +234,49 @@ msgid ""
 "read the README file and the script's source code.<nl/>If you do not feel "
 "capable or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"एतत् प्लगिन् संस्थापनार्थं स्क्रिप्ट् उपयुज्यते यत् सुरक्षाजोखिमं जनयितुं शक्नोति । कृपया संस्थापनात् "
+"पूर्वं सम्पूर्णं प्लगिन्-सामग्रीम् परीक्ष्य, अथवा न्यूनातिन्यूनं README सञ्चिकां स्क्रिप्ट्-स्रोत-"
+"सङ्केतं च पठन्तु ।<nl/>यदि भवान् एतत् समर्थं वा सहजं वा न अनुभवति तर्हि इदानीं "
+"<interface>रद्दं</interface> नुदतु"
 
 #: plugininstaller/ScriptConfirmationDialog.h:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Mark entry as uninstalled"
-msgstr ""
+msgstr "प्रविष्टिं विस्थापितम् इति चिह्नितव्यम्"
 
 #: plugininstaller/ScriptConfirmationDialog.h:92
 #, kde-format
 msgctxt "@action:button"
 msgid "Mark entry as installed"
-msgstr ""
+msgstr "प्रविष्टिं यथा संस्थापितम् इति चिह्नं कुर्वन्तु"
 
 #: plugininstaller/ScriptConfirmationDialog.h:100
 #, kde-format
 msgctxt "@action:button"
 msgid "View Script"
-msgstr ""
+msgstr "स्क्रिप्ट् पश्यन्तु"
 
 #: plugininstaller/ScriptConfirmationDialog.h:106
 #, kde-format
 msgctxt "@action:button"
 msgid "View Source Directory"
-msgstr ""
+msgstr "स्रोतनिर्देशिकां पश्यन्तु"
 
 #: plugininstaller/ScriptConfirmationDialog.h:117
 #, kde-format
 msgctxt "@action:button"
 msgid "View %1"
-msgstr ""
+msgstr "%1 पश्यन्तु"
 
 #: plugininstaller/ZypperRPMJob.cpp:28
 #, kde-format
 msgctxt "@info"
 msgid "Could not resolve package name of %1"
-msgstr ""
+msgstr "%1 इत्यस्य संकुलनाम समाधानं कर्तुं न शक्तम्"
 
 #: plugininstaller/ZypperRPMJob.cpp:35
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Failed to run install command: <message>%1</message>"
-msgstr ""
+msgstr "संस्थापन आदेशं चालयितुं असफलम्: <message>%1</message>"

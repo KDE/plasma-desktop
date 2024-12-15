@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-28 00:41+0000\n"
+"POT-Creation-Date: 2024-12-15 00:42+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -17,59 +17,59 @@ msgstr ""
 "X-Crowdin-File: /kf6-trunk/messages/plasma-desktop/kcm_gamecontroller.pot\n"
 "X-Crowdin-File-ID: 48278\n"
 
-#: axesmodel.cpp:63
+#: axesmodel.cpp:80 hatmodel.cpp:80
 #, kde-format
 msgctxt "@label Axis value"
 msgid "Value"
 msgstr "值"
 
-#: buttonmodel.cpp:74
+#: buttonmodel.cpp:71
 #, kde-format
 msgctxt "Status of a gamepad button"
 msgid "PRESSED"
 msgstr "已按下"
 
-#: buttonmodel.cpp:84
+#: buttonmodel.cpp:81
 #, kde-format
 msgctxt "@label Button state"
 msgid "State"
 msgstr "状态"
 
-#: devicemodel.cpp:72
+#: devicemodel.cpp:74
 #, kde-format
 msgctxt "Device name and path"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: ui/main.qml:23
+#: ui/main.qml:24
 #, kde-format
 msgid "No game controllers found"
 msgstr "没有找到游戏控制器"
 
-#: ui/main.qml:24
+#: ui/main.qml:25
 #, kde-format
 msgid "Connect a wired or wireless controller"
 msgstr "连接有线/无线控制器"
 
-#: ui/main.qml:56
+#: ui/main.qml:60
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Device:"
 msgstr "设备："
 
-#: ui/main.qml:83
+#: ui/main.qml:88
 #, kde-format
 msgctxt "@label Visual representation of an axis position"
 msgid "Position:"
 msgstr "位置："
 
-#: ui/main.qml:102
+#: ui/main.qml:107
 #, kde-format
 msgctxt "@label Gamepad buttons"
 msgid "Buttons:"
 msgstr "按钮："
 
-#: ui/main.qml:124
+#: ui/main.qml:129
 #, kde-format
 msgctxt "@label Gamepad axes (sticks)"
 msgid "Axes:"

@@ -3,29 +3,31 @@
 # This file is distributed under the same license as the plasma-desktop package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-02 00:41+0000\n"
-"PO-Revision-Date: 2024-12-13 19:10+0530\n"
-"Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
+"PO-Revision-Date: 2024-12-14 01:12+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "भवतः नामानि"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "भवतः ईमेलपत्राणि"
 
 #: bindings.cpp:24
 #, kde-format
@@ -51,25 +53,25 @@ msgstr "कीबोर्डविन्यासं %1 इत्यत्र �
 #, kde-format
 msgctxt "unknown keyboard model vendor"
 msgid "Unknown"
-msgstr ""
+msgstr "अज्ञात"
 
 #: keyboardmodel.cpp:39
 #, kde-format
 msgctxt "vendor | keyboard model"
 msgid "%1 | %2"
-msgstr ""
+msgstr "%1 | %2"
 
 #: tastenbrett/main.cpp:52
 #, kde-format
 msgctxt "app display name"
 msgid "Keyboard Preview"
-msgstr ""
+msgstr "कीबोर्ड पूर्वावलोकन"
 
 #: tastenbrett/main.cpp:54
 #, kde-format
 msgctxt "app description"
 msgid "Keyboard layout visualization"
-msgstr ""
+msgstr "कीबोर्ड विन्यास दृश्यीकरण"
 
 #: tastenbrett/main.cpp:139
 #, kde-format
@@ -83,48 +85,53 @@ msgid ""
 "not supported and  will also trigger this message. These might still work "
 "fine if applied"
 msgstr ""
+"कीबोर्ड ज्यामितिः लोड् कर्तुं असफलः अभवत् । एतेन प्रायः ज्ञायते यत् चयनितं प्रतिरूपं विशिष्टं "
+"विन्यासं वा विन्यासरूपान्तरं वा न समर्थयति । सम्भवतः एषा समस्या तदा अपि उपस्थास्यति यदा "
+"भवान् मॉडल्, लेआउट्, वेरिएण्ट् इत्येतयोः एतस्य संयोजनस्य उपयोगं कर्तुं प्रयतते ।\n"
+"भवतः systems xkb निर्देशिकायाः बहिः परिभाषितानां विन्यासानां पूर्वावलोकनं समर्थितं "
+"नास्ति तथा च एतत् सन्देशं प्रेरयिष्यति । एते अद्यापि प्रयुक्ताः चेत् सम्यक् कार्यं कर्तुं शक्नुवन्ति"
 
 #: ui/KeyBindings.qml:18
 #, kde-format
 msgctxt "@title"
 msgid "Key Bindings"
-msgstr ""
+msgstr "की बन्धन"
 
 #: ui/KeyBindings.qml:62
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Configure keyboard options"
-msgstr ""
+msgstr "कीबोर्ड विकल्पान् विन्यस्यताम्"
 
 #: ui/KeyBindings.qml:130
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset"
-msgstr ""
+msgstr "पुनः सेट् करें"
 
 #: ui/KeyBindings.qml:134
 #, kde-format
 msgctxt "@info accessible"
 msgid "Reset selected options for this group"
-msgstr ""
+msgstr "अस्य समूहस्य कृते चयनितविकल्पान् पुनः सेट् कुर्वन्तु"
 
 #: ui/KeyBindings.qml:135
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Reset selected options for this group"
-msgstr ""
+msgstr "अस्य समूहस्य कृते चयनितविकल्पान् पुनः सेट् कुर्वन्तु"
 
 #: ui/LayoutDialog.qml:20
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Layout"
-msgstr ""
+msgstr "Layout योजयतु"
 
 #: ui/LayoutDialog.qml:177
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
-msgstr ""
+msgstr "लघु विन्यास नाम"
 
 #: ui/LayoutDialog.qml:187
 #, kde-format
@@ -133,90 +140,92 @@ msgid ""
 "The abbreviated name of the selected layout, which will be displayed in the "
 "system tray. You can change this setting yourself."
 msgstr ""
+"चयनितस्य विन्यासस्य संक्षिप्तं नाम, यत् सिस्टम् ट्रे मध्ये प्रदर्शितं भविष्यति । भवान् स्वयमेव "
+"एतत् सेटिङ्ग् परिवर्तयितुं शक्नोति ।"
 
 #: ui/LayoutDialog.qml:195
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Shortcut:"
-msgstr ""
+msgstr "लघुमार्गः : १."
 
 #: ui/LayoutDialog.qml:206 ui/main.qml:285
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview"
-msgstr ""
+msgstr "पूर्वावलोकन"
 
 #: ui/main.qml:37
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Switching…"
-msgstr ""
+msgstr "स्विचिंग् विन्यस्तं कुर्वन्तु..."
 
 #: ui/main.qml:38
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Configure Switching"
-msgstr ""
+msgstr "स्विचिंग् विन्यस्तं कुर्वन्तु"
 
 #: ui/main.qml:44
 #, kde-format
 msgctxt "@action:button"
 msgid "Key Bindings"
-msgstr ""
+msgstr "की बन्धन"
 
 #: ui/main.qml:45
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Key Bindings"
-msgstr ""
+msgstr "की बन्धन"
 
 #: ui/main.qml:51
 #, kde-format
 msgctxt "@action:button Layout"
 msgid "Add…"
-msgstr ""
+msgstr "संयोजयति…"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add layout"
-msgstr ""
+msgstr "विन्यासं योजयन्तु"
 
 #: ui/main.qml:59
 #, kde-format
 msgctxt "@label:checkbox configure layouts option"
 msgid "Enable"
-msgstr ""
+msgstr "सक्रियं करोतु"
 
 #: ui/main.qml:60
 #, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Configure Layouts"
-msgstr ""
+msgstr "Layouts विन्यस्तं कुर्वन्तु"
 
 #: ui/main.qml:76
 #, kde-format
 msgctxt "@label:listbox Keyboard model"
 msgid "Model:"
-msgstr ""
+msgstr "प्रतिकृति:"
 
 #: ui/main.qml:104
 #, kde-format
 msgctxt "@label:listbox"
 msgid "NumLock on startup:"
-msgstr ""
+msgstr "स्टार्टअप इत्यत्र NumLock:"
 
 #: ui/main.qml:112
 #, kde-format
 msgctxt "@item:inlistbox Turn on \"NumLock\" on startup"
 msgid "Turn on"
-msgstr ""
+msgstr "चालू कुर्वन्तु"
 
 #: ui/main.qml:116
 #, kde-format
 msgctxt "@item:inlistbox Turn off \"NumLock\" on startup"
 msgid "Turn off"
-msgstr ""
+msgstr "निष्क्रियं कुर्वन्तु"
 
 #: ui/main.qml:120
 #, kde-format
@@ -224,145 +233,145 @@ msgctxt ""
 "@item:inlistbox Leave \"NumLock\" at whatever it was set to before Plasma "
 "started up"
 msgid "Leave unchanged"
-msgstr ""
+msgstr "अपरिवर्तितं त्यजतु"
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Key repeat:"
-msgstr ""
+msgstr "कील पुनरावृत्तिः : १."
 
 #: ui/main.qml:155
 #, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Key repeat"
-msgstr ""
+msgstr "कील पुनरावृत्ति"
 
 #: ui/main.qml:166
 #, kde-format
 msgctxt "@label:textbox Key repeat delay"
 msgid "Delay:"
-msgstr ""
+msgstr "विलम्बः:"
 
 #: ui/main.qml:180
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat delay %1"
-msgstr ""
+msgstr "कील पुनरावृत्तिविलम्ब %1"
 
 #: ui/main.qml:188
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "%1 ms"
-msgstr ""
+msgstr "%1 ms"
 
 #: ui/main.qml:192
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "ms"
-msgstr ""
+msgstr "ms"
 
 #: ui/main.qml:205
 #, kde-format
 msgctxt "@label:textbox Key repeat rate"
 msgid "Rate:"
-msgstr ""
+msgstr "मानम्‌:"
 
 #: ui/main.qml:219
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat rate %1"
-msgstr ""
+msgstr "कील पुनरावृत्ति दर %1"
 
 #: ui/main.qml:227
 #, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "%1 repeats/s"
-msgstr ""
+msgstr "%1 पुनरावृत्तिः/s"
 
 #: ui/main.qml:231
 #, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "repeats/s"
-msgstr ""
+msgstr "पुनरावृत्तिः/सः"
 
 #: ui/main.qml:243
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Test area:"
-msgstr ""
+msgstr "परीक्षणक्षेत्रम् : १."
 
 #: ui/main.qml:245
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to test settings"
-msgstr ""
+msgstr "सेटिंग्स् परीक्षितुं अत्र टङ्कयन्तु"
 
 #: ui/main.qml:256
 #, kde-format
 msgctxt "@title:view"
 msgid "Layouts"
-msgstr ""
+msgstr "विन्यासाः"
 
 #: ui/main.qml:268
 #, kde-format
 msgctxt "@action:button"
 msgid "Move Up"
-msgstr ""
+msgstr "उपरि गच्छतु"
 
 #: ui/main.qml:269
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout up"
-msgstr ""
+msgstr "%1 विन्यासं उपरि चालयन्तु"
 
 #: ui/main.qml:275
 #, kde-format
 msgctxt "@action:button"
 msgid "Move Down"
-msgstr ""
+msgstr "अधः गच्छतु"
 
 #: ui/main.qml:276
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout Down"
-msgstr ""
+msgstr "%1 विन्यासं अधः चालयन्तु"
 
 #: ui/main.qml:286
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Preview"
-msgstr ""
+msgstr "पूर्वावलोकनम्"
 
 #: ui/main.qml:294
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove"
-msgstr ""
+msgstr "अपाकरोति"
 
 #: ui/main.qml:295
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Remove layout %1"
-msgstr ""
+msgstr "%1 विन्यासं निष्कासयन्तु"
 
 #: ui/main.qml:307
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Spare layouts:"
-msgstr ""
+msgstr "स्पेयर लेआउट् : १."
 
 #: ui/main.qml:344
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
-msgstr ""
+msgstr "अवशिष्टानां मुख्यविन्यासानां संख्या"
 
 #: ui/main.qml:376
 #, kde-format
 msgctxt "@label:textbox completes spinbox, x main layouts"
 msgid "main layouts"
-msgstr ""
+msgstr "मुख्यविन्यासाः"
 
 #: ui/main.qml:380
 #, kde-format
@@ -373,90 +382,93 @@ msgid ""
 "accessed through the keyboard indicator applet or by setting a custom "
 "shortcut."
 msgstr ""
+"भवतः ४ मुख्यविन्यासाः यावत् भवितुम् अर्हन्ति, अन्ये सर्वे विन्यासाः अतिरिक्ताः सन्ति । "
+"विन्यासेषु चक्रं गच्छन् स्पेयर विन्यासाः न समाविष्टाः, परन्तु कीबोर्ड् सूचक एप्लेट् मार्गेण अथवा "
+"कस्टम् शॉर्टकट् सेट् कृत्वा अभिगन्तुं शक्यन्ते ।"
 
 #: ui/main.qml:385
 #, kde-format
 msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
-msgstr ""
+msgstr "विन्यासस्य शॉर्टकट् परिवर्तनं कुर्वन्तु : १."
 
 #: ui/main.qml:409
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
-msgstr ""
+msgstr "वा"
 
 #: ui/Switching.qml:17
 #, kde-format
 msgctxt "@title"
 msgid "Configure Switching"
-msgstr ""
+msgstr "स्विचिंग् विन्यस्तं कुर्वन्तु"
 
 #: ui/Switching.qml:23
 #, kde-format
 msgctxt "@title:group"
 msgid "Behavior"
-msgstr ""
+msgstr "व्यवहार"
 
 #: ui/Switching.qml:28
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Switching layout affects:"
-msgstr ""
+msgstr "विन्यासस्य परिवर्तनेन प्रभावः भवति : १."
 
 #: ui/Switching.qml:35
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows"
-msgstr ""
+msgstr "सर्वाणि खिडकयः"
 
 #: ui/Switching.qml:39
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows on current desktop"
-msgstr ""
+msgstr "वर्तमान डेस्कटॉप् मध्ये सर्वाणि विण्डोस्"
 
 #: ui/Switching.qml:43
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows of current application"
-msgstr ""
+msgstr "वर्तमान अनुप्रयोगस्य सर्वाणि विण्डोज"
 
 #: ui/Switching.qml:47
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Current window only"
-msgstr ""
+msgstr "केवलं वर्तमानविण्डो"
 
 #: ui/Switching.qml:74
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Show notification on layout change"
-msgstr ""
+msgstr "विन्यासपरिवर्तनस्य विषये सूचनां दर्शयतु"
 
 #: ui/Switching.qml:86
 #, kde-format
 msgctxt "@title:group"
 msgid "Shortcuts"
-msgstr ""
+msgstr "शॉर्टकट"
 
 #: ui/Switching.qml:91 ui/Switching.qml:153
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Change layout:"
-msgstr ""
+msgstr "विन्यासं परिवर्तयन्तु : १."
 
 #: ui/Switching.qml:112
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Switch to last used layout:"
-msgstr ""
+msgstr "अन्तिमप्रयुक्तविन्यासं प्रति स्विच् कुर्वन्तु:"
 
 #: ui/Switching.qml:133
 #, kde-format
 msgctxt "@title:group"
 msgid "Legacy Shortcuts"
-msgstr ""
+msgstr "विरासत शॉर्टकट"
 
 #: ui/Switching.qml:141
 #, kde-kuit-format
@@ -467,12 +479,15 @@ msgid ""
 "Wayland.<nl/><nl/>Setting these shortcuts will take you to the Key bindings "
 "page."
 msgstr ""
+"विरासतः X11 शॉर्टकट् केवलं संशोधक-शॉर्टकट् इत्यस्य सूक्ष्मतरं नियन्त्रणं अनुमन्यते तथा च एज-"
+"प्रकरणेषु X11 इत्यत्र किञ्चित् उत्तमं समर्थनं भवति । तेषां उपयोगः Wayland इत्यत्र अपि कर्तुं "
+"शक्यते ।<nl/><nl/>एतानि शॉर्टकट् सेट् करणेन भवान् Key bindings पृष्ठं प्रति नेष्यति ।"
 
 #: ui/Switching.qml:182
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Alternative symbols:"
-msgstr ""
+msgstr "वैकल्पिकचिह्नानि : १."
 
 #: ui/Switching.qml:208
 #, kde-format
@@ -481,16 +496,17 @@ msgid ""
 "Modifier keys can be used to type additional characters, symbols, and "
 "diacritical marks."
 msgstr ""
+"अतिरिक्तवर्णान्, चिह्नानि, विवर्णचिह्नानि च टङ्कयितुं संशोधककुंजीनां उपयोगः कर्तुं शक्यते ।"
 
 #: xkboptionsmodel.cpp:165
 #, kde-format
 msgid "%1 shortcut"
 msgid_plural "%1 shortcuts"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 शॉर्टकट्"
+msgstr[1] "%1 शॉर्टकट्"
 
 #: xkboptionsmodel.cpp:168
 #, kde-format
 msgctxt "no shortcuts defined"
 msgid "None"
-msgstr ""
+msgstr "न कश्चित्"

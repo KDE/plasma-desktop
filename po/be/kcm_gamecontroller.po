@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-28 00:41+0000\n"
+"POT-Creation-Date: 2024-12-15 00:42+0000\n"
 "PO-Revision-Date: 2024-05-18 09:10\n"
 "Last-Translator: Antikruk <nashtlumach@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -22,59 +22,59 @@ msgstr ""
 "kcm_gamecontroller.po\n"
 "X-Crowdin-File-ID: 17882\n"
 
-#: axesmodel.cpp:63
+#: axesmodel.cpp:80 hatmodel.cpp:80
 #, kde-format
 msgctxt "@label Axis value"
 msgid "Value"
 msgstr "Значэнне"
 
-#: buttonmodel.cpp:74
+#: buttonmodel.cpp:71
 #, kde-format
 msgctxt "Status of a gamepad button"
 msgid "PRESSED"
 msgstr "НАЦІСНУТАЯ"
 
-#: buttonmodel.cpp:84
+#: buttonmodel.cpp:81
 #, kde-format
 msgctxt "@label Button state"
 msgid "State"
 msgstr "Стан"
 
-#: devicemodel.cpp:72
+#: devicemodel.cpp:74
 #, kde-format
 msgctxt "Device name and path"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: ui/main.qml:23
+#: ui/main.qml:24
 #, kde-format
 msgid "No game controllers found"
 msgstr "Гульнявыя кантролеры не знойдзеныя"
 
-#: ui/main.qml:24
+#: ui/main.qml:25
 #, kde-format
 msgid "Connect a wired or wireless controller"
 msgstr "Падлучыце правадны або бесправадны кантролер"
 
-#: ui/main.qml:56
+#: ui/main.qml:60
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Device:"
 msgstr "Прылада:"
 
-#: ui/main.qml:83
+#: ui/main.qml:88
 #, kde-format
 msgctxt "@label Visual representation of an axis position"
 msgid "Position:"
 msgstr "Пазіцыя:"
 
-#: ui/main.qml:102
+#: ui/main.qml:107
 #, kde-format
 msgctxt "@label Gamepad buttons"
 msgid "Buttons:"
 msgstr "Кнопкі:"
 
-#: ui/main.qml:124
+#: ui/main.qml:129
 #, kde-format
 msgctxt "@label Gamepad axes (sticks)"
 msgid "Axes:"

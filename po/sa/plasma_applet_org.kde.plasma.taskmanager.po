@@ -3,19 +3,21 @@
 # This file is distributed under the same license as the plasma-desktop package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-26 00:41+0000\n"
-"PO-Revision-Date: 2024-12-13 19:10+0530\n"
-"Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
+"PO-Revision-Date: 2024-12-14 01:12+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -31,7 +33,7 @@ msgstr "व्यवहार"
 #, kde-format
 msgctxt "@action:button"
 msgid "Unmute"
-msgstr ""
+msgstr "अप्रसन्नता"
 
 #: package/contents/ui/AudioStream.qml:102
 #, kde-format
@@ -43,79 +45,79 @@ msgstr "मूक"
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Unmute %1"
-msgstr ""
+msgstr "अप्रसन्नता %1"
 
 #: package/contents/ui/AudioStream.qml:103
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Mute %1"
-msgstr ""
+msgstr "म्यूट %1"
 
 #: package/contents/ui/Badge.qml:52
 #, kde-format
 msgctxt "Invalid number of new messages, overlay, keep short"
 msgid "—"
-msgstr ""
+msgstr "— ९."
 
 #: package/contents/ui/Badge.qml:54
 #, kde-format
 msgctxt "Over 9999 new messages, overlay, keep short"
 msgid "9,999+"
-msgstr ""
+msgstr "९,९९९+"
 
 #: package/contents/ui/ConfigAppearance.qml:46
 #, kde-format
 msgctxt "@label for several checkboxes"
 msgid "General:"
-msgstr ""
+msgstr "सामान्य:"
 
 #: package/contents/ui/ConfigAppearance.qml:47
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show small window previews when hovering over tasks"
-msgstr ""
+msgstr "कार्याणां उपरि भ्रमन् लघु विण्डो पूर्वावलोकनं दर्शयतु"
 
 #: package/contents/ui/ConfigAppearance.qml:52
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over previews"
-msgstr ""
+msgstr "पूर्वावलोकनानां उपरि भ्रमन् अन्यविण्डोः गोपयन्तु"
 
 #: package/contents/ui/ConfigAppearance.qml:57
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Use audio indicators to mute tasks"
-msgstr ""
+msgstr "कार्याणि निःशब्दं कर्तुं श्रव्यसूचकानाम् उपयोगं कुर्वन्तु"
 
 #: package/contents/ui/ConfigAppearance.qml:65
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Fill free space on panel"
-msgstr ""
+msgstr "फलकस्य उपरि मुक्तस्थानं पूरयन्तु"
 
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Maximum task width:"
-msgstr ""
+msgstr "अधिकतमं कार्यविस्तारः : १."
 
 #: package/contents/ui/ConfigAppearance.qml:80
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Narrow"
-msgstr ""
+msgstr "सङ्कीर्णः"
 
 #: package/contents/ui/ConfigAppearance.qml:81
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Medium"
-msgstr ""
+msgstr "मध्यम"
 
 #: package/contents/ui/ConfigAppearance.qml:82
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Wide"
-msgstr ""
+msgstr "विस्तृतः"
 
 #: package/contents/ui/ConfigAppearance.qml:93
 #, kde-format
@@ -123,7 +125,7 @@ msgctxt ""
 "@label for radio button group, completes sentence: … when panel is low on "
 "space etc."
 msgid "Use multi-column view:"
-msgstr ""
+msgstr "बहुस्तम्भदृश्यस्य उपयोगं कुर्वन्तु : १."
 
 #: package/contents/ui/ConfigAppearance.qml:94
 #, kde-format
@@ -131,91 +133,91 @@ msgctxt ""
 "@label for radio button group, completes sentence: … when panel is low on "
 "space etc."
 msgid "Use multi-row view:"
-msgstr ""
+msgstr "बहुपङ्क्तिदृश्यस्य उपयोगं कुर्वन्तु : १."
 
 #: package/contents/ui/ConfigAppearance.qml:100
 #, kde-format
 msgctxt "@option:radio Never use multi-column view for Task Manager"
 msgid "Never"
-msgstr ""
+msgstr "कदापि न"
 
 #: package/contents/ui/ConfigAppearance.qml:110
 #, kde-format
 msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "When panel is low on space and thick enough"
-msgstr ""
+msgstr "यदा पटलः अन्तरिक्षे न्यूनः भवति तथा च पर्याप्तं स्थूलः भवति"
 
 #: package/contents/ui/ConfigAppearance.qml:120
 #, kde-format
 msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "Always when panel is thick enough"
-msgstr ""
+msgstr "सर्वदा यदा पटलः पर्याप्तं स्थूलः भवति"
 
 #: package/contents/ui/ConfigAppearance.qml:127
 #, kde-format
 msgctxt "@label:spinbox maximum number of columns for tasks"
 msgid "Maximum columns:"
-msgstr ""
+msgstr "अधिकतमस्तम्भाः : १."
 
 #: package/contents/ui/ConfigAppearance.qml:128
 #, kde-format
 msgctxt "@label:spinbox maximum number of rows for tasks"
 msgid "Maximum rows:"
-msgstr ""
+msgstr "अधिकतमं पङ्क्तयः : १."
 
 #: package/contents/ui/ConfigAppearance.qml:138
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Spacing between icons:"
-msgstr ""
+msgstr "चिह्नानां मध्ये अन्तरं : १."
 
 #: package/contents/ui/ConfigAppearance.qml:142
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
-msgstr ""
+msgstr "लघु"
 
 #: package/contents/ui/ConfigAppearance.qml:146
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
-msgstr ""
+msgstr "सामान्य"
 
 #: package/contents/ui/ConfigAppearance.qml:150
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
-msgstr ""
+msgstr "बृहत्‌"
 
 #: package/contents/ui/ConfigAppearance.qml:176
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch mode"
-msgstr ""
+msgstr "टच मोड् मध्ये स्थित्वा स्वयमेव Large इति सेट् भवति"
 
 #: package/contents/ui/ConfigBehavior.qml:49
 #, kde-format
 msgctxt "@label:listbox how to group tasks"
 msgid "Group:"
-msgstr ""
+msgstr "समूह:"
 
 #: package/contents/ui/ConfigBehavior.qml:53
 #, kde-format
 msgctxt "@item:inlistbox how to group tasks"
 msgid "Do not group"
-msgstr ""
+msgstr "समूहं न कुर्वन्तु"
 
 #: package/contents/ui/ConfigBehavior.qml:54
 #, kde-format
 msgctxt "@item:inlistbox how to group tasks"
 msgid "By program name"
-msgstr ""
+msgstr "कार्यक्रमनाम्ना"
 
 #: package/contents/ui/ConfigBehavior.qml:60
 #, kde-format
 msgctxt "@label:listbox completes sentence like: … cycles through tasks"
 msgid "Clicking grouped task:"
-msgstr ""
+msgstr "समूहीकृतं कार्यं क्लिक् करणम् : १."
 
 #: package/contents/ui/ConfigBehavior.qml:67
 #, kde-format
@@ -223,7 +225,7 @@ msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task cycles through "
 "tasks' "
 msgid "Cycles through tasks"
-msgstr ""
+msgstr "कार्याणां माध्यमेन चक्रं करोति"
 
 #: package/contents/ui/ConfigBehavior.qml:68
 #, kde-format
@@ -231,7 +233,7 @@ msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task shows small "
 "window previews' "
 msgid "Shows small window previews"
-msgstr ""
+msgstr "लघु विण्डो पूर्वावलोकनं दर्शयति"
 
 #: package/contents/ui/ConfigBehavior.qml:69
 #, kde-format
@@ -239,7 +241,7 @@ msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task shows large "
 "window previews' "
 msgid "Shows large window previews"
-msgstr ""
+msgstr "बृहत् विण्डो पूर्वावलोकनं दर्शयति"
 
 #: package/contents/ui/ConfigBehavior.qml:70
 #, kde-format
@@ -247,7 +249,7 @@ msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task shows textual "
 "list' "
 msgid "Shows textual list"
-msgstr ""
+msgstr "पाठ्यसूचीं दर्शयति"
 
 #: package/contents/ui/ConfigBehavior.qml:81
 #, kde-format
@@ -256,66 +258,68 @@ msgid ""
 "The compositor does not support displaying windows side by side, so a "
 "textual list will be displayed instead."
 msgstr ""
+"रचयिता विण्डोस् पार्श्वे पार्श्वे प्रदर्शयितुं समर्थं न करोति, अतः तस्य स्थाने पाठसूची "
+"प्रदर्शिता भविष्यति ।"
 
 #: package/contents/ui/ConfigBehavior.qml:91
 #, kde-format
 msgctxt "@option:check grouped task"
 msgid "Combine into single button"
-msgstr ""
+msgstr "एकस्मिन् बटने संयोजयन्तु"
 
 #: package/contents/ui/ConfigBehavior.qml:98
 #, kde-format
 msgctxt "@option:check grouped task"
 msgid "Group only when the Task Manager is full"
-msgstr ""
+msgstr "यदा कार्यप्रबन्धकः पूर्णः भवति तदा एव समूहं कुर्वन्तु"
 
 #: package/contents/ui/ConfigBehavior.qml:110
 #, kde-format
 msgctxt "@label:listbox sort tasks in grouped task"
 msgid "Sort:"
-msgstr ""
+msgstr "प्रकारं:"
 
 #: package/contents/ui/ConfigBehavior.qml:114
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Do not sort"
-msgstr ""
+msgstr "मा क्रमेण क्रमयन्तु"
 
 #: package/contents/ui/ConfigBehavior.qml:115
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Manually"
-msgstr ""
+msgstr "हस्तचलितरूपेण"
 
 #: package/contents/ui/ConfigBehavior.qml:116
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Alphabetically"
-msgstr ""
+msgstr "वर्णमालानुसारम्"
 
 #: package/contents/ui/ConfigBehavior.qml:117
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By desktop"
-msgstr ""
+msgstr "डेस्कटॉप् द्वारा"
 
 #: package/contents/ui/ConfigBehavior.qml:118
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By activity"
-msgstr ""
+msgstr "कर्मणा"
 
 #: package/contents/ui/ConfigBehavior.qml:125
 #, kde-format
 msgctxt "@option:check configure task sorting"
 msgid "Keep launchers separate"
-msgstr ""
+msgstr "प्रक्षेपकान् पृथक् स्थापयन्तु"
 
 #: package/contents/ui/ConfigBehavior.qml:132
 #, kde-format
 msgctxt "@option:check for icons-and-text task manager"
 msgid "Hide launchers after application startup"
-msgstr ""
+msgstr "अनुप्रयोगप्रारम्भस्य अनन्तरं प्रक्षेपकान् गोपयन्तु"
 
 #: package/contents/ui/ConfigBehavior.qml:142
 #, kde-format
@@ -323,27 +327,27 @@ msgctxt ""
 "@label for checkbox Part of a sentence: 'Clicking active task minimizes the "
 "task'"
 msgid "Clicking active task:"
-msgstr ""
+msgstr "सक्रियकार्यं क्लिक् कृत्वा : १."
 
 #: package/contents/ui/ConfigBehavior.qml:143
 #, kde-format
 msgctxt ""
 "@option:check Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
-msgstr ""
+msgstr "कार्यं न्यूनीकरोति"
 
 #: package/contents/ui/ConfigBehavior.qml:148
 #, kde-format
 msgctxt "@label:listbox completes sentence like: … does nothing"
 msgid "Middle-clicking any task:"
-msgstr ""
+msgstr "कस्यापि कार्यस्य मध्य-क्लिक् करणम् : १."
 
 #: package/contents/ui/ConfigBehavior.qml:152
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task does nothing'"
 msgid "Does nothing"
-msgstr ""
+msgstr "न किमपि करोति"
 
 #: package/contents/ui/ConfigBehavior.qml:153
 #, kde-format
@@ -351,7 +355,7 @@ msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task closes window "
 "or group'"
 msgid "Closes window or group"
-msgstr ""
+msgstr "विण्डो वा समूहं वा पिधायति"
 
 #: package/contents/ui/ConfigBehavior.qml:154
 #, kde-format
@@ -359,7 +363,7 @@ msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task opens a new "
 "window'"
 msgid "Opens a new window"
-msgstr ""
+msgstr "नूतनं विण्डो उद्घाटयति"
 
 #: package/contents/ui/ConfigBehavior.qml:155
 #, kde-format
@@ -367,7 +371,7 @@ msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task minimizes/"
 "restores window or group'"
 msgid "Minimizes/Restores window or group"
-msgstr ""
+msgstr "विण्डो अथवा समूहं न्यूनीकरोति/पुनर्स्थापयति"
 
 #: package/contents/ui/ConfigBehavior.qml:156
 #, kde-format
@@ -375,7 +379,7 @@ msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task toggles "
 "grouping'"
 msgid "Toggles grouping"
-msgstr ""
+msgstr "समूहीकरणं टॉगल करोति"
 
 #: package/contents/ui/ConfigBehavior.qml:157
 #, kde-format
@@ -383,102 +387,102 @@ msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task brings it to "
 "the current virtual desktop'"
 msgid "Brings it to the current virtual desktop"
-msgstr ""
+msgstr "वर्तमान वर्चुअल् डेस्कटॉप् प्रति आनयति"
 
 #: package/contents/ui/ConfigBehavior.qml:167
 #, kde-format
 msgctxt ""
 "@label for checkbox Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Mouse wheel:"
-msgstr ""
+msgstr "मूषकचक्रम् : १."
 
 #: package/contents/ui/ConfigBehavior.qml:168
 #, kde-format
 msgctxt "@option:check Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
-msgstr ""
+msgstr "कार्याणां माध्यमेन चक्रं करोति"
 
 #: package/contents/ui/ConfigBehavior.qml:177
 #, kde-format
 msgctxt "@option:check mouse wheel task cycling"
 msgid "Skip minimized tasks"
-msgstr ""
+msgstr "न्यूनतमकार्यं त्यजन्तु"
 
 #: package/contents/ui/ConfigBehavior.qml:188
 #, kde-format
 msgctxt ""
 "@label for checkbox group, completes sentence like: … from current screen"
 msgid "Show only tasks:"
-msgstr ""
+msgstr "केवलं कार्याणि दर्शयतु : १."
 
 #: package/contents/ui/ConfigBehavior.qml:189
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current screen"
-msgstr ""
+msgstr "वर्तमानपर्दे"
 
 #: package/contents/ui/ConfigBehavior.qml:194
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current desktop"
-msgstr ""
+msgstr "वर्तमान डेस्कटॉप् तः"
 
 #: package/contents/ui/ConfigBehavior.qml:199
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current activity"
-msgstr ""
+msgstr "वर्तमानक्रियाकलापात्"
 
 #: package/contents/ui/ConfigBehavior.qml:204
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "That are minimized"
-msgstr ""
+msgstr "तानि न्यूनीकृतानि भवन्ति"
 
 #: package/contents/ui/ConfigBehavior.qml:213
 #, kde-format
 msgctxt ""
 "@label for checkbox, completes sentence: … unhide if window wants attention"
 msgid "When panel is hidden:"
-msgstr ""
+msgstr "यदा पटलः गुप्तः भवति तदा :"
 
 #: package/contents/ui/ConfigBehavior.qml:214
 #, kde-format
 msgctxt "@option:check completes sentence: When panel is hidden"
 msgid "Unhide when a window wants attention"
-msgstr ""
+msgstr "यदा खिडकी ध्यानं इच्छति तदा अनगोपयन्तु"
 
 #: package/contents/ui/ConfigBehavior.qml:226
 #, kde-format
 msgctxt "@label for radiobutton group completes sentence like: … on the bottom"
 msgid "New tasks appear:"
-msgstr ""
+msgstr "नूतनानि कार्याणि दृश्यन्ते- १."
 
 #: package/contents/ui/ConfigBehavior.qml:230
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the bottom"
-msgstr ""
+msgstr "अधः"
 
 #: package/contents/ui/ConfigBehavior.qml:234
 #: package/contents/ui/ConfigBehavior.qml:253
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the right"
-msgstr ""
+msgstr "दक्षिणतः"
 
 #: package/contents/ui/ConfigBehavior.qml:236
 #: package/contents/ui/ConfigBehavior.qml:251
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the left"
-msgstr ""
+msgstr "वामतः"
 
 #: package/contents/ui/ConfigBehavior.qml:247
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the top"
-msgstr ""
+msgstr "उपरि"
 
 #: package/contents/ui/ContextMenu.qml:102
 #, kde-format
@@ -499,43 +503,43 @@ msgstr "कर्माणि"
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
-msgstr ""
+msgstr "पूर्व Track"
 
 #: package/contents/ui/ContextMenu.qml:179
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
-msgstr ""
+msgstr "विराम"
 
 #: package/contents/ui/ContextMenu.qml:179
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
-msgstr ""
+msgstr "क्रीडतु"
 
 #: package/contents/ui/ContextMenu.qml:197
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
-msgstr ""
+msgstr "अग्रिमः Track"
 
 #: package/contents/ui/ContextMenu.qml:208
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
-msgstr ""
+msgstr "विरमतु"
 
 #: package/contents/ui/ContextMenu.qml:228
 #, kde-format
 msgctxt "Quit media player app"
 msgid "Quit"
-msgstr ""
+msgstr "परिजहातु"
 
 #: package/contents/ui/ContextMenu.qml:243
 #, kde-format
 msgctxt "Open or bring to the front window of media player app"
 msgid "Restore"
-msgstr ""
+msgstr "निर्यत्"
 
 #: package/contents/ui/ContextMenu.qml:268
 #, kde-format
@@ -662,7 +666,7 @@ msgstr "अस्य कार्यक्रमस्य समूहीकर�
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
-msgstr ""
+msgstr "&सर्वं बन्दं कुरुत"
 
 #: package/contents/ui/ContextMenu.qml:763
 #, kde-format
@@ -673,33 +677,33 @@ msgstr "&पिधानं करोतु"
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
-msgstr ""
+msgstr "%1 प्रारम्भं कुर्वन्तु"
 
 #: package/contents/ui/Task.qml:159
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
 msgid_plural "There are %1 new messages."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 नूतनः सन्देशः अस्ति ।"
+msgstr[1] "%1 नूतनाः सन्देशाः सन्ति ।"
 
 #: package/contents/ui/Task.qml:167
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
-msgstr ""
+msgstr "%1 कृते Task tooltip दर्शयतु"
 
 #: package/contents/ui/Task.qml:171
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
-msgstr ""
+msgstr "%1 कृते विण्डोः पार्श्वे पार्श्वे दर्शयतु"
 
 #: package/contents/ui/Task.qml:176
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
-msgstr ""
+msgstr "%1 कृते विण्डोस् इत्यस्य पाठ्यसूचीं उद्घाटयन्तु"
 
 #: package/contents/ui/Task.qml:180
 #, kde-format
@@ -710,69 +714,69 @@ msgstr "%1 सक्रियं कुर्वन्तु"
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
-msgstr ""
+msgstr "अप्रसन्नता %1"
 
 #: package/contents/ui/ToolTipInstance.qml:366
 #, kde-format
 msgctxt "button to mute app"
 msgid "Mute %1"
-msgstr ""
+msgstr "म्यूट %1"
 
 #: package/contents/ui/ToolTipInstance.qml:384
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
-msgstr ""
+msgstr "%1 कृते आयतनं समायोजयन्तु"
 
 #: package/contents/ui/ToolTipInstance.qml:400
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
-msgstr ""
+msgstr "%1% २."
 
 #: package/contents/ui/ToolTipInstance.qml:404
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
-msgstr ""
+msgstr "१००% २."
 
 #: package/contents/ui/ToolTipInstance.qml:420
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "On %1"
-msgstr ""
+msgstr "%1 इत्यत्र"
 
 #: package/contents/ui/ToolTipInstance.qml:423
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
-msgstr ""
+msgstr "सर्वेषु डेस्कटॉपेषु पिन कृतम्"
 
 #: package/contents/ui/ToolTipInstance.qml:429
 #, kde-format
 msgctxt "Which virtual desktop a window is currently on"
 msgid "Available on all activities"
-msgstr ""
+msgstr "सर्वेषु कार्येषु उपलभ्यते"
 
 #: package/contents/ui/ToolTipInstance.qml:439
 #, kde-format
 msgctxt "Activities a window is currently on (apart from the current one)"
 msgid "Also available on %1"
-msgstr ""
+msgstr "%1 इत्यत्र अपि उपलभ्यते"
 
 #: package/contents/ui/ToolTipInstance.qml:443
 #, kde-format
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
-msgstr ""
+msgstr "%1 इत्यत्र उपलब्धम्"
 
 #: plugin/backend.cpp:315
 #, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place"
 msgid_plural "%1 more Places"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 अधिकं स्थानम्"
+msgstr[1] "%1 अधिकं स्थानानि"
 
 #: plugin/backend.cpp:415
 #, kde-format
@@ -793,22 +797,22 @@ msgstr "अद्यतनस्थानानि"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
-msgstr ""
+msgstr "Recent Downloads विस्मरन्तु"
 
 #: plugin/backend.cpp:430
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
-msgstr ""
+msgstr "Recent Connections विस्मरन्तु"
 
 #: plugin/backend.cpp:432
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
-msgstr ""
+msgstr "अद्यतनस्थानानि विस्मरन्तु"
 
 #: plugin/backend.cpp:434
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
-msgstr ""
+msgstr "Recent Files विस्मरन्तु"

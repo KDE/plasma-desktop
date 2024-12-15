@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-28 00:41+0000\n"
+"POT-Creation-Date: 2024-12-15 00:42+0000\n"
 "PO-Revision-Date: 2024-03-30 21:08+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -17,59 +17,59 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.02.1\n"
 
-#: axesmodel.cpp:63
+#: axesmodel.cpp:80 hatmodel.cpp:80
 #, kde-format
 msgctxt "@label Axis value"
 msgid "Value"
 msgstr "மதிப்பு"
 
-#: buttonmodel.cpp:74
+#: buttonmodel.cpp:71
 #, kde-format
 msgctxt "Status of a gamepad button"
 msgid "PRESSED"
 msgstr "அழுத்தப்படுகிறது"
 
-#: buttonmodel.cpp:84
+#: buttonmodel.cpp:81
 #, kde-format
 msgctxt "@label Button state"
 msgid "State"
 msgstr "நிலை"
 
-#: devicemodel.cpp:72
+#: devicemodel.cpp:74
 #, kde-format
 msgctxt "Device name and path"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: ui/main.qml:23
+#: ui/main.qml:24
 #, kde-format
 msgid "No game controllers found"
 msgstr "எந்த விளையாட்டு கட்டுப்படுத்தியும் கண்டுபிடிக்கப்படவில்லை"
 
-#: ui/main.qml:24
+#: ui/main.qml:25
 #, kde-format
 msgid "Connect a wired or wireless controller"
 msgstr "கம்பியுள்ள அல்லது கம்பியில்லை விளையாட்டு கட்டுப்படுத்தியை இணைக்கவும்"
 
-#: ui/main.qml:56
+#: ui/main.qml:60
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Device:"
 msgstr "சாதனம்:"
 
-#: ui/main.qml:83
+#: ui/main.qml:88
 #, kde-format
 msgctxt "@label Visual representation of an axis position"
 msgid "Position:"
 msgstr "இருப்பிடம்:"
 
-#: ui/main.qml:102
+#: ui/main.qml:107
 #, kde-format
 msgctxt "@label Gamepad buttons"
 msgid "Buttons:"
 msgstr "பட்டன்கள்"
 
-#: ui/main.qml:124
+#: ui/main.qml:129
 #, kde-format
 msgctxt "@label Gamepad axes (sticks)"
 msgid "Axes:"

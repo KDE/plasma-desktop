@@ -77,7 +77,7 @@ msgstr "अधुना पुनः आरभत"
 #, kde-format
 msgctxt "@title:group"
 msgid "General"
-msgstr ""
+msgstr "सामान्य"
 
 #: ui/main.qml:79
 #, kde-format
@@ -85,7 +85,7 @@ msgctxt ""
 "@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "Ask for confirmation:"
-msgstr ""
+msgstr "पुष्टिः पृच्छन्तु : १."
 
 #: ui/main.qml:80
 #, kde-format
@@ -93,13 +93,13 @@ msgctxt ""
 "@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "On shutdown, restart, and logout"
-msgstr ""
+msgstr "शटडाउन, पुनः आरम्भ, लॉगआउट् इत्यत्र"
 
 #: ui/main.qml:91
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
-msgstr ""
+msgstr "सत्र पुनर्स्थापनम्"
 
 #: ui/main.qml:99
 #, kde-format
@@ -110,13 +110,13 @@ msgstr "प्रवेशे, एप्स् प्रारम्भं क�
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr ""
+msgstr "अन्तिमे लॉगआउट् इत्यत्र"
 
 #: ui/main.qml:113
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr ""
+msgstr "यदा सत्रं स्वहस्तेन रक्षितम् आसीत्"
 
 #: ui/main.qml:122
 #, kde-kuit-format
@@ -127,6 +127,9 @@ msgid ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 msgstr ""
+"<interface>Save Session</interface> इति बटनं <interface>Application Launcher</"
+"interface> मेन्यू मध्ये दृश्यते । यदा भवान् तत् क्लिक् करोति तदा प्लाज्मा उद्घाटितानि एप्स् "
+"स्मरिष्यति, अग्रिमे प्रवेशे पुनः स्थापयति च । स्मरितानां एप्स्-समूहस्य स्थाने पुनः क्लिक् कुर्वन्तु ।"
 
 #: ui/main.qml:127
 #, kde-format
@@ -135,7 +138,7 @@ msgctxt ""
 "restoration, whereby the windows that were open on logout are re-opened on "
 "the next login"
 msgid "Start with an empty session"
-msgstr ""
+msgstr "रिक्तसत्रेण आरभत"
 
 #: ui/main.qml:141
 #, kde-format
@@ -157,7 +160,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
-msgstr ""
+msgstr "फर्मवेयर"
 
 #: ui/main.qml:172
 #, kde-format
@@ -165,16 +168,16 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr ""
+msgstr "अग्रिम पुनः आरम्भस्य अनन्तरं : १."
 
 #: ui/main.qml:173
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
-msgstr ""
+msgstr "UEFI सेटअप स्क्रीन् प्रविशन्तु"
 
 #: ui/main.qml:174
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr ""
+msgstr "फर्मवेयर सेटअप स्क्रीन् प्रविशन्तु"
