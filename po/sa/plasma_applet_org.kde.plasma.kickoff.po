@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-06 00:42+0000\n"
-"PO-Revision-Date: 2023-09-21 23:24+0530\n"
+"PO-Revision-Date: 2024-12-15 22:20+0530\n"
 "Last-Translator: \n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.3.2\n"
-"X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -101,10 +101,9 @@ msgid "Remove icon"
 msgstr "चिह्नं निष्कासयन्तु"
 
 #: package/contents/ui/ConfigGeneral.qml:120
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgid "Show applications as:"
-msgstr "अन्ये अनुप्रयोगाः दर्शयन्तु :"
+msgstr "अनुप्रयोगाः यथा दर्शयन्तु :"
 
 #: package/contents/ui/ConfigGeneral.qml:122
 #, kde-format
@@ -178,12 +177,10 @@ msgid "Switch sidebar categories when hovering over them"
 msgstr "तेषां उपरि भ्रमन् पार्श्वपट्टिकावर्गान् परिवर्तयन्तु"
 
 #: package/contents/ui/ConfigGeneral.qml:198
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Enabled Search Plugins…"
+#, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
-msgstr "सक्षमान् अन्वेषणप्लगिन् विन्यस्तं कुर्वन्तु…"
+msgstr "अन्वेषणप्लगिन् विन्यस्तं कुर्वन्तु…"
 
 #: package/contents/ui/ConfigGeneral.qml:208
 #, kde-format

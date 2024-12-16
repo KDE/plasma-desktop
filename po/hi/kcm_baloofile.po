@@ -1,0 +1,143 @@
+# Hindi translations for plasma-desktop package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-08-28 00:40+0000\n"
+"PO-Revision-Date: 2024-12-15 15:58+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ui/main.qml:44
+#, kde-format
+msgid "Pause Indexer"
+msgstr ""
+
+#: ui/main.qml:44
+#, kde-format
+msgid "Resume Indexer"
+msgstr ""
+
+#: ui/main.qml:60
+#, kde-format
+msgid ""
+"This will disable file searching in KRunner and launcher menus, and remove "
+"extended metadata display from all KDE applications."
+msgstr ""
+
+#: ui/main.qml:70
+#, kde-format
+msgid ""
+"Do you want to delete the saved index data? %1 of space will be freed, but "
+"if indexing is re-enabled later, the entire index will have to be re-created "
+"from scratch. This may take some time, depending on how many files you have."
+msgstr ""
+
+#: ui/main.qml:72
+#, kde-format
+msgid "Delete Index Data"
+msgstr ""
+
+#: ui/main.qml:90
+#, kde-format
+msgid ""
+"File Search helps you quickly locate your files. You can choose which "
+"folders and what types of file data are indexed."
+msgstr ""
+
+#: ui/main.qml:104
+#, kde-format
+msgctxt "@title:group"
+msgid "File indexing:"
+msgstr ""
+
+#: ui/main.qml:105
+#, kde-format
+msgctxt "@action:check"
+msgid "Enabled"
+msgstr ""
+
+#: ui/main.qml:121
+#, kde-format
+msgctxt "@title:group"
+msgid "Data to index:"
+msgstr ""
+
+#: ui/main.qml:123
+#, kde-format
+msgid "File names and contents"
+msgstr ""
+
+#: ui/main.qml:136
+#, kde-format
+msgid "File names only"
+msgstr ""
+
+#: ui/main.qml:155
+#, kde-format
+msgid "Hidden files and folders"
+msgstr ""
+
+#: ui/main.qml:181
+#, kde-format
+msgctxt "@title:table Locations to include or exclude from indexing"
+msgid "Locations"
+msgstr ""
+
+#: ui/main.qml:184
+#, kde-format
+msgctxt "@action:button"
+msgid "Start Indexing a Folder…"
+msgstr ""
+
+#: ui/main.qml:192
+#, kde-format
+msgctxt "@action:button"
+msgid "Stop Indexing a Folder…"
+msgstr ""
+
+#: ui/main.qml:210
+#, kde-format
+msgctxt "State and a percentage of progress"
+msgid "%1, %2% complete"
+msgstr ""
+
+#: ui/main.qml:217
+#, kde-kuit-format
+msgctxt "@info Currently Indexing"
+msgid "Currently indexing: <filename>%1</filename>"
+msgstr ""
+
+#: ui/main.qml:270
+#, kde-format
+msgid "Not indexed"
+msgstr ""
+
+#: ui/main.qml:271
+#, kde-format
+msgid "Indexed"
+msgstr ""
+
+#: ui/main.qml:301
+#, kde-format
+msgctxt "Remove the list item for this filesystem path"
+msgid "Remove entry"
+msgstr ""
+
+#: ui/main.qml:316
+#, kde-format
+msgid "Select a folder to include"
+msgstr ""
+
+#: ui/main.qml:316
+#, kde-format
+msgid "Select a folder to exclude"
+msgstr ""
