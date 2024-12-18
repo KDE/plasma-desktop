@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-15 00:42+0000\n"
-"PO-Revision-Date: 2024-07-22 13:02+0000\n"
+"PO-Revision-Date: 2024-12-13 10:28+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -21,45 +21,43 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button This action is disabled"
 msgid "Disabled"
-msgstr ""
+msgstr "Óvirkt"
 
 #: inputsequence.cpp:175
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "@action:button There is no keybinding"
 msgid "None"
-msgstr "Ekkert"
+msgstr "Engin"
 
 #: inputsequence.cpp:182
 #, kde-format
 msgctxt "@action:button"
 msgid "Left mouse button"
-msgstr ""
+msgstr "Vinstri músarhnappur"
 
 #: inputsequence.cpp:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Right mouse button"
-msgstr ""
+msgstr "Hægri músarhnappur"
 
 #: inputsequence.cpp:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Middle mouse button"
-msgstr ""
+msgstr "Miðjumúsarhnappur"
 
 #: inputsequence.cpp:192
 #, kde-format
 msgctxt "@action:button"
 msgid "Application-defined"
-msgstr ""
+msgstr "Forrit skilgreinir"
 
 #: inputsequence.cpp:194
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pen Button %1"
-msgstr "Pennahnappur 1:"
+msgstr "Pennahnappur %1"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -106,80 +104,75 @@ msgstr "%1 - (%2,%3 %4×%5)"
 #, kde-format
 msgctxt "@item:inlistbox Stretch and fill to the screen"
 msgid "Stretch and Fill"
-msgstr ""
+msgstr "Teygja og fylla"
 
 #: kcmtablet.cpp:164 ui/main.qml:198
-#, fuzzy, kde-format
-#| msgid "Keep Aspect Ratio and Fit Within Screen"
+#, kde-format
 msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
 msgid "Keep Aspect Ratio and Fit"
-msgstr "Halda myndhlutfalli og passa innan skjásins"
+msgstr "Halda myndhlutfalli og passa á skjá"
 
 #: kcmtablet.cpp:165 ui/main.qml:199
-#, fuzzy, kde-format
-#| msgid "Map to Portion of Screen"
+#, kde-format
 msgctxt "@item:inlistbox Map to portion of the screen"
 msgid "Map to Portion"
 msgstr "Varpa á hluta skjásins"
 
 #: kcmtablet.cpp:290
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
-msgstr "Pennahnappur 1:"
+msgstr "Pennahnappur %1:"
 
 #: kcmtablet.cpp:291
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button X'"
 msgid "pen button %1"
-msgstr "Pennahnappur 1:"
+msgstr "pennahnappur %1"
 
 #: ui/ActionDialog.qml:25
 #, kde-format
 msgctxt "@title Select the action for the tablet button"
 msgid "Select Button Action"
-msgstr ""
+msgstr "Velja hnappaaðgerð"
 
 #: ui/ActionDialog.qml:74
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when pressing %1:"
-msgstr ""
+msgstr "Velja hvað gerist þegar ýtt er á %1:"
 
 #: ui/ActionDialog.qml:88
 #, kde-format
 msgctxt "@option:radio Set this action to an application-defined type"
 msgid "Defer to application"
-msgstr ""
+msgstr "Láta forritið stjórna"
 
 #: ui/ActionDialog.qml:103
 #, kde-format
 msgctxt "@option:radio Set this action to a keyboard type"
 msgid "Send keyboard key"
-msgstr ""
+msgstr "Senda lyklaborðslykil"
 
 #: ui/ActionDialog.qml:117
 #, kde-format
 msgctxt "@option:radio Set this action to a mouse type"
 msgid "Send mouse button click"
-msgstr ""
+msgstr "Senda músarhnappssmell"
 
 #: ui/ActionDialog.qml:132
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "@option:radio Set this action to a pen button type"
 msgid "Send pen button"
-msgstr "Pennahnappur 1:"
+msgstr "Senda pennahnapp"
 
 #: ui/ActionDialog.qml:150
 #, kde-format
 msgctxt "@option:radio Disable this action"
 msgid "Do nothing"
-msgstr ""
+msgstr "Gera ekkert"
 
 #: ui/ActionDialog.qml:170
 #, kde-format
@@ -188,75 +181,74 @@ msgid ""
 "This tablet button is forwarded to the focused application, which can decide "
 "how to handle it."
 msgstr ""
+"Þessi teikniborðshnappur er framsendur til forritsins sem er í fókus, sem "
+"getur svo ákveðið hvernig á að meðhöndla hann."
 
 #: ui/ActionDialog.qml:198
 #, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left-click"
-msgstr ""
+msgstr "Vinstrismellur"
 
 #: ui/ActionDialog.qml:199
 #, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle-click"
-msgstr ""
+msgstr "Miðjusmellur"
 
 #: ui/ActionDialog.qml:200
 #, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right-click"
-msgstr ""
+msgstr "Hægrismellur"
 
 #: ui/ActionDialog.qml:227
 #, kde-format
 msgctxt "@option:check The ctrl modifier on the keyboard"
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 #: ui/ActionDialog.qml:234
 #, kde-format
 msgctxt "@option:check The alt modifier on the keyboard"
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: ui/ActionDialog.qml:241
 #, kde-format
 msgctxt "@option:check The meta modifier on the keyboard"
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: ui/ActionDialog.qml:248
 #, kde-format
 msgctxt "@option:check The shift modifier on the keyboard"
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 #: ui/ActionDialog.qml:264
-#, fuzzy, kde-format
-#| msgid "Tool Button 1"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
-msgstr "Pennahnappur 1"
+msgstr "Hnappur 1"
 
 #: ui/ActionDialog.qml:265
-#, fuzzy, kde-format
-#| msgid "Pen button 2:"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
-msgstr "Pennahnappur 2:"
+msgstr "Hnappur 2"
 
 #: ui/ActionDialog.qml:266
-#, fuzzy, kde-format
-#| msgid "Pen button 3:"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
-msgstr "Pennahnappur 3:"
+msgstr "Hnappur 3"
 
 #: ui/ActionDialog.qml:275
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
-msgstr ""
+msgstr "Þessi hnappur er óvirkur og gerir ekkert."
 
 #: ui/Calibration.qml:31
 #, kde-format
@@ -361,7 +353,7 @@ msgstr "Stefna:"
 #: ui/main.qml:160
 #, kde-format
 msgid "Not Applicable"
-msgstr ""
+msgstr "Á ekki við"
 
 #: ui/main.qml:171
 #, kde-format
@@ -388,31 +380,31 @@ msgstr "Varpað svæði:"
 #: ui/main.qml:277
 #, kde-format
 msgid "Pen Pressure:"
-msgstr ""
+msgstr "Pennaþrýstingur:"
 
 #: ui/main.qml:329
 #, kde-format
 msgctxt "Low pen pressure"
 msgid "Low Pressure"
-msgstr ""
+msgstr "Lítill þrýstingur"
 
 #: ui/main.qml:337
 #, kde-format
 msgctxt "High pen pressure"
 msgid "High Pressure"
-msgstr ""
+msgstr "Mikill þrýstingur"
 
 #: ui/main.qml:348
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: ui/main.qml:356
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
-msgstr ""
+msgstr "0%"
 
 #: ui/main.qml:360
 #, kde-format
@@ -421,6 +413,8 @@ msgid ""
 "This curve controls the relationship between the pressure on the stylus and "
 "the pressure values received by applications."
 msgstr ""
+"Þessi kúrva stjórnar sambandinu á milli þrýstingsins á pennann og "
+"þrýstingsgildanna sem forritið fær send."
 
 #: ui/main.qml:371
 #, kde-format
@@ -452,13 +446,12 @@ msgid "Pad button %1:"
 msgstr "Bakkahnappur %1:"
 
 #: ui/main.qml:438
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad button %1"
-msgstr "Bakkahnappur %1:"
+msgstr "bakkahnappur %1"
 
 #: ui/Tester.qml:25
 #, kde-format

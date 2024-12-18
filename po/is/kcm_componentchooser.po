@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-26 00:40+0000\n"
-"PO-Revision-Date: 2024-07-04 09:56+0000\n"
+"PO-Revision-Date: 2024-12-13 10:09+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -140,18 +140,16 @@ msgstr ""
 "þessari gerð: %2"
 
 #: ui/main.qml:34
-#, fuzzy, kde-format
-#| msgid "This application can also open these file types:"
+#, kde-format
 msgctxt "@info:status"
 msgid "This application may not be able to open all file types."
-msgstr "Þetta forrit getur einnig opnað þessar skrárgerðir:"
+msgstr "Þetta forrit getur hugsanlega ekki opnað allar skrárgerðir."
 
 #: ui/main.qml:36
-#, fuzzy, kde-format
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button"
 msgid "View Details"
-msgstr "Ítarlegt"
+msgstr "Skoða upplýsingar"
 
 #: ui/main.qml:62
 #, kde-format

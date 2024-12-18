@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-12 00:40+0000\n"
-"PO-Revision-Date: 2024-07-04 12:49+0000\n"
+"PO-Revision-Date: 2024-12-13 10:31+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -270,8 +270,7 @@ msgid "This can interfere with video games."
 msgstr "Þetta getur truflað við spilun tölvuleikja."
 
 #: ui/main.qml:204
-#, fuzzy, kde-format
-#| msgid "Left handed mode"
+#, kde-format
 msgid "Left-handed mode"
 msgstr "Snið fyrir örvhenta"
 
@@ -281,16 +280,13 @@ msgid "Swap left and right buttons."
 msgstr "Víxla hægri og vinstri hnöppum."
 
 #: ui/main.qml:234
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons to middle-click"
-msgstr "Ýta á vinstri og hægri hnappa til að gera miðjusmell"
+msgstr "Ýta á vinstri og hægri hnappa til að miðjusmella"
 
 #: ui/main.qml:238
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
+#, kde-format
 msgctxt "@info:tooltip for checkbox"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
@@ -298,19 +294,15 @@ msgstr ""
 "miðjuhnappssmell."
 
 #: ui/main.qml:264
-#, fuzzy, kde-format
-#| msgid ""
-#| "Activating this setting increases mouse click latency by 50ms. The extra "
-#| "delay is needed to correctly detect simultaneous left and right mouse "
-#| "clicks."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
-"Ef þessi stilling er virkjuð eykur það biðtíma eftir að smellt er með "
-"músinni um 50 msek. Töfin sem bætist við er nauðsynleg til að hægt sé að "
-"greina rétt þegar smellt er samtímis með vinstri og hægri músarhnappi."
+"Ef þessi stilling er virkjuð eykur það biðtíma eftir smell um 50 msek. Töfin "
+"sem bætist við er nauðsynleg til að hægt sé að greina rétt þegar ýtt er "
+"samtímis á vinstri og hægri músarhnappana."
 
 #: ui/main.qml:274
 #, kde-format
@@ -401,28 +393,24 @@ msgid "Disable horizontal scrolling"
 msgstr "Slökkva á láréttu skruni"
 
 #: ui/main.qml:596
-#, fuzzy, kde-format
-#| msgid "Disable horizontal scrolling"
+#, kde-format
 msgid "Disable horizontal scrolling."
-msgstr "Slökkva á láréttu skruni"
+msgstr "Slökkva á láréttu skruni."
 
 #: ui/main.qml:609
-#, fuzzy, kde-format
-#| msgid "Tapping:"
+#, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Pikkað:"
 
 #: ui/main.qml:610
-#, fuzzy, kde-format
-#| msgid "Tap-to-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Tap-to-click"
 msgstr "Pikka til að smella"
 
 #: ui/main.qml:614
-#, fuzzy, kde-format
-#| msgid "Single tap is left button click."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Single tap to left-click."
 msgstr "Stakt pikk er vinstrismellur"
@@ -501,17 +489,15 @@ msgid "Tap with two fingers to middle-click."
 msgstr "Pikka með tveimur fingrum til að miðjusmella."
 
 #: ui/main.qml:777
-#, fuzzy, kde-format
-#| msgid "Right-click:"
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, configure right-click with touch-pad "
 "integrated button (pressing into the touchpad)"
 msgid "Integrated right-click:"
-msgstr "Hægrismellur:"
+msgstr "Samstilltur hægrismellur:"
 
 #: ui/main.qml:811
-#, fuzzy, kde-format
-#| msgid "Press bottom-right corner"
+#, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
 msgstr "Ýta neðst á hægra hornið"
@@ -524,6 +510,8 @@ msgid ""
 "Middle-click by simultaneously pressing the bottom left and bottom right "
 "corners."
 msgstr ""
+"Ef ýtt er neðst á hægra hornið á snertiplattanum myndar það hægrismell. "
+"Miðjusmellt er með því að ýta samtímis á vinstra og hægra hornið neðst."
 
 #: ui/main.qml:817
 #, kde-format
@@ -532,52 +520,51 @@ msgid ""
 "Pressing the bottom right corner of your touchpad acts as right-click. "
 "Middle-click by pressing the bottom central area."
 msgstr ""
+"Ef ýtt er neðst á hægra hornið á snertiplattanum myndar það hægrismell. "
+"Miðjusmellt með því að ýta neðst á miðjan plattann."
 
 #: ui/main.qml:828
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
-msgstr ""
+msgstr "Miðjusmella með því að ýta á bæði hornin."
 
 #: ui/main.qml:829
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
-msgstr ""
+msgstr "Miðjusmella með því að ýta neðst á miðjuna."
 
 #: ui/main.qml:847
-#, fuzzy, kde-format
-#| msgid "Press anywhere with two fingers"
+#, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press touchpad with two fingers"
-msgstr "Ýta hvar sem er með tveimur fingrum"
+msgstr "Ýta á snertiplatta með tveimur fingrum"
 
 #: ui/main.qml:851
-#, fuzzy, kde-format
-#| msgid "Tap with two fingers to right-click."
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
-msgstr "Pikka með tveimur fingrum til að hægrismella"
+msgstr ""
+"Ef ýtt er einhvers staðar á snertiplattann með tveimur fingrum myndar það "
+"hægrismell."
 
 #: ui/main.qml:863
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers."
+#, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
-msgstr "Ýta hvar sem er með þremur fingrum."
+msgstr "Miðjusmella með því að ýta með þremur fingrum."
 
 #: ui/main.qml:882
-#, fuzzy, kde-format
-#| msgid "Middle-click: "
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, configure middle-click with touch-pad "
 "integrated button (pressing into the touchpad)"
 msgid "Integrated middle-click:"
-msgstr "Miðjusmellur:"
+msgstr "Samstilltur miðjusmellur:"
 
 #: ui/main.qml:911
-#, fuzzy, kde-format
-#| msgid "Press bottom-middle"
+#, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom middle edge"
 msgstr "Ýta neðst á miðjuhlutann"
@@ -586,37 +573,34 @@ msgstr "Ýta neðst á miðjuhlutann"
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the bottom right corner of your touchpad acts as right-click."
-msgstr ""
+msgstr "Ef ýtt er neðst á hægra horn snertiplattans myndar það hægrismell."
 
 #: ui/main.qml:923
-#, fuzzy, kde-format
-#| msgid "Press bottom left and bottom right corners simultaneously"
+#, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom left and bottom right corners"
-msgstr "Ýta samtímis á hornin neðst til vinstri og hægri"
+msgstr "Ýta á hornin neðst til vinstri og hægri"
 
 #: ui/main.qml:927
-#, fuzzy, kde-format
-#| msgid "Press bottom left and bottom right corners simultaneously"
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid ""
 "Pressing the bottom left and bottom right corners simultaneously acts as "
 "middle-click."
-msgstr "Ýta samtímis á hornin neðst til vinstri og hægri"
+msgstr ""
+"Ef ýtt er samtímis á hornin neðst til vinstri og hægri myndar það miðjusmell."
 
 #: ui/main.qml:936
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers"
+#, kde-format
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
-msgstr "Ýta hvar sem er með þremur fingrum"
+msgstr "Ýta á snertiplatta með þremur fingrum"
 
 #: ui/main.qml:942
-#, fuzzy, kde-format
-#| msgid "Tap with two fingers to right-click."
+#, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
-msgstr "Pikka með tveimur fingrum til að hægrismella"
+msgstr "Ef ýtt er á snertiplattann með þremur fingrum myndar það miðjusmell."
 
 #~ msgid ""
 #~ "Software enabled buttons will be added to bottom portion of your touchpad."

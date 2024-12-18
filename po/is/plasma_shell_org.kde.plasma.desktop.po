@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-06 00:42+0000\n"
-"PO-Revision-Date: 2024-07-22 13:05+0000\n"
+"PO-Revision-Date: 2024-12-13 10:42+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -327,10 +327,9 @@ msgid "Add spacer widget to the panel"
 msgstr "Bæta bili á skjáborðsstikuna"
 
 #: contents/configuration/PanelConfiguration.qml:114
-#, fuzzy, kde-format
-#| msgid "Add Widgets…"
+#, kde-format
 msgid "Add or Manage Widgets…"
-msgstr "Bæta við græjum..."
+msgstr "Bæta við eða stjórna græjum..."
 
 #: contents/configuration/PanelConfiguration.qml:117
 #, kde-format
@@ -432,8 +431,7 @@ msgid "Dodge windows"
 msgstr "Víkja fyrir gluggum"
 
 #: contents/configuration/PanelConfiguration.qml:354
-#, fuzzy, kde-format
-#| msgid "Windows Go Below"
+#, kde-format
 msgid "Windows go below"
 msgstr "Gluggar fara undir"
 
@@ -506,32 +504,29 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "Eyða þessari skjáborðsstiku. Ekki er hægt að afturkalla aðgerðina"
 
 #: contents/configuration/PanelConfiguration.qml:653
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
-msgstr "Fjarlægja skjáborðsstiku"
+msgstr "Klóna skjáborðsstiku"
 
 #: contents/configuration/PanelConfiguration.qml:657
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
-msgstr ""
+msgstr "Búa til nýja skjáborðsstiku með sömu stillingum og smáforritum"
 
 #: contents/configuration/PanelConfiguration.qml:666
-#, fuzzy, kde-format
-#| msgid "Close"
+#, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Loka"
 
 #: contents/configuration/PanelConfiguration.qml:666
-#, fuzzy, kde-format
-#| msgid "Exit Edit Mode"
+#, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
-msgstr "Loka breytingasniði"
+msgstr "Hætta í breytisniði"
 
 #: contents/configuration/PanelConfiguration.qml:669
 #, kde-format
@@ -539,46 +534,38 @@ msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "Loka stillingaglugga skjáborðsstiku og hætta í breytisniði"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:32
-#, fuzzy, kde-format
-#| msgid "Drag to change maximum height."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum height."
 msgstr "Dragðu til að breyta hámarkshæð."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:33
-#, fuzzy, kde-format
-#| msgid "Drag to change maximum width."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum width."
 msgstr "Dragðu til að breyta hámarksbreidd."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:34
 #: contents/configuration/panelconfiguration/Ruler.qml:39
-#, fuzzy, kde-format
-#| msgid "Double click to reset."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Double-click to reset."
 msgstr "Tvísmelltu til að endurstilla."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:37
-#, fuzzy, kde-format
-#| msgid "Drag to change minimum height."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum height."
 msgstr "Dragðu til að breyta lágmarkshæð."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:38
-#, fuzzy, kde-format
-#| msgid "Drag to change minimum width."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr "Dragðu til að breyta lágmarksbreidd."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:87
-#, fuzzy, kde-format
-#| msgid ""
-#| "Drag to change position on this screen edge.\n"
-#| "Double click to reset."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid ""
 "Drag to change position on this screen edge.\n"
@@ -644,7 +631,7 @@ msgstr "Óstuddar græjur"
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
-msgstr ""
+msgstr "Nýtt!"
 
 #: contents/explorer/AppletDelegate.qml:188
 #, kde-format
@@ -652,17 +639,15 @@ msgid "Undo uninstall"
 msgstr "Afturkalla fjarlægingu"
 
 #: contents/explorer/AppletDelegate.qml:189
-#, fuzzy, kde-format
-#| msgid "Uninstall"
+#, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Uninstall"
 msgstr "Fjarlægja"
 
 #: contents/explorer/AppletDelegate.qml:231
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgid "Remove all instances"
-msgstr "Fjarlægja skjáborðsstiku"
+msgstr "Fjarlægja öll tilvik"
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -708,9 +693,7 @@ msgid "Categories"
 msgstr "Flokkar"
 
 #: contents/explorer/WidgetExplorer.qml:254
-#, fuzzy, kde-format
-#| msgid "Confirm Removal Of One Widget"
-#| msgid_plural "Confirm Removal Of %1 Widgets"
+#, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Confirm Removal of One Widget"
 msgid_plural "Confirm Removal of %1 Widgets"
@@ -737,7 +720,7 @@ msgstr "Klukka:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Show clock"
-msgstr ""
+msgstr "Sýna klukku"
 
 #: contents/lockscreen/config.qml:33
 #, kde-format

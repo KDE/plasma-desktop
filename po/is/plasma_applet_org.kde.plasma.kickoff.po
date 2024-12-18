@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-06 00:42+0000\n"
-"PO-Revision-Date: 2024-03-18 15:45+0000\n"
-"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"PO-Revision-Date: 2024-12-13 10:35+0000\n"
+"Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -99,30 +99,29 @@ msgid "Remove icon"
 msgstr "Fjarlægja tákn"
 
 #: package/contents/ui/ConfigGeneral.qml:120
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgid "Show applications as:"
-msgstr "Sýna önnur forrit:"
+msgstr "Sýna forrit sem:"
 
 #: package/contents/ui/ConfigGeneral.qml:122
 #, kde-format
 msgid "Name only"
-msgstr ""
+msgstr "Heiti eingöngu"
 
 #: package/contents/ui/ConfigGeneral.qml:122
 #, kde-format
 msgid "Description only"
-msgstr ""
+msgstr "Lýsing eingöngu"
 
 #: package/contents/ui/ConfigGeneral.qml:122
 #, kde-format
 msgid "Name (Description)"
-msgstr ""
+msgstr "Heiti (lýsing)"
 
 #: package/contents/ui/ConfigGeneral.qml:122
 #, kde-format
 msgid "Description (Name)"
-msgstr ""
+msgstr "Lýsing (heiti)"
 
 #: package/contents/ui/ConfigGeneral.qml:132
 #, kde-format
@@ -173,15 +172,13 @@ msgstr "Sjálfkrafa óvirkt þegar snertistilling er notuð"
 #: package/contents/ui/ConfigGeneral.qml:192
 #, kde-format
 msgid "Switch sidebar categories when hovering over them"
-msgstr ""
+msgstr "Skipta um flokka á hliðarstiku við þegar bendill sveimar yfir þeim"
 
 #: package/contents/ui/ConfigGeneral.qml:198
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Enabled Search Plugins…"
+#, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
-msgstr "Grunnstilla virkar leitarviðbætur..."
+msgstr "Grunnstilla leitarviðbætur..."
 
 #: package/contents/ui/ConfigGeneral.qml:208
 #, kde-format

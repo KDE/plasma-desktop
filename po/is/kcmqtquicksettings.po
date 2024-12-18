@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-02 00:44+0000\n"
-"PO-Revision-Date: 2024-07-04 13:36+0000\n"
+"PO-Revision-Date: 2024-12-13 10:33+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -29,23 +29,21 @@ msgstr "gudmundure@gmail.com"
 
 #. i18n: ectx: property (text), widget (KMessageWidget, kmessagewidget)
 #: kcmqtquicksettingswidget.ui:23
-#, fuzzy, kde-format
-#| msgid ""
-#| "These settings adjust the QtQuick settings used by Plasma. Only adjust if "
-#| "you know what you are doing."
+#, kde-format
 msgid ""
 "These settings adjust the QtQuick settings used by Plasma. Modifying these "
 "settings can break your desktop. Only adjust these settings if you know what "
 "you are doing."
 msgstr ""
-"Þessar stillingar breyta QtQuick-stillingunum sem Plasma notar. Breyttu þeim "
-"eingöngu ef þú veist hvað þú ert að gera."
+"Þessar stillingar breyta QtQuick-stillingunum sem Plasma notar. Ef þeim er "
+"breytt getur skjáborðið hætt að virka. Breyttu þeim eingöngu ef þú veist "
+"hvað þú ert að gera."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcmqtquicksettingswidget.ui:41
 #, kde-format
 msgid "Rendering Backend:"
-msgstr "Bakendi myndgerðar:"
+msgstr "Myndgerðarbakendi:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)

@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-29 00:42+0000\n"
-"PO-Revision-Date: 2024-07-04 09:25+0000\n"
+"PO-Revision-Date: 2024-12-13 10:09+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -168,10 +168,9 @@ msgstr "Tímalengd sjónrænu bjöllunnar"
 
 #. i18n: ectx: label, entry (ColorblindnessCorrection), group (Plugins)
 #: kcmaccessibilitycolorblindnesscorrection.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether Colorblindness Correction is enabled"
-msgstr "Hvort hristibendill sé virkur"
+msgstr "Hvort leiðrétting fyrir litblindu sé virk"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
@@ -312,15 +311,13 @@ msgid "Magnification"
 msgstr "Stækkun"
 
 #: ui/ActivationShortcuts.qml:17
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgctxt "@option:check"
 msgid "Activation shortcuts:"
-msgstr "Virkjunarhreyfiskipanir"
+msgstr "Flýtilyklar fyrir virkjanir:"
 
 #: ui/ActivationShortcuts.qml:18
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "Enable activation shortcuts"
 msgid "Enable"
 msgstr "Virkja"
@@ -329,20 +326,19 @@ msgstr "Virkja"
 #, kde-format
 msgctxt "@label"
 msgid "Press Shift 5 times to enable Sticky Keys"
-msgstr ""
+msgstr "Ýttu 5 sinnum á Shift til að virkja festilykla"
 
 #: ui/ActivationShortcuts.qml:37
 #, kde-format
 msgctxt "@label"
 msgid "Hold Shift for 8 seconds to enable Slow Keys"
-msgstr ""
+msgstr "Haltu Shift inni í 8 sekúndur til að virkja hæga lykla"
 
 #: ui/ActivationShortcuts.qml:46
-#, fuzzy, kde-format
-#| msgid "Turn sticky keys and slow keys off after inactivity:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable sticky and slow keys after:"
-msgstr "Slökkva á festilyklum og hægum lyklum eftir aðgerðaleysi í:"
+msgstr "Slökkva á festilyklum og hægum lyklum eftir:"
 
 #: ui/ActivationShortcuts.qml:75
 #, kde-format
@@ -352,8 +348,7 @@ msgstr[0] "%1 mín."
 msgstr[1] "%1 mín."
 
 #: ui/ActivationShortcuts.qml:79
-#, fuzzy, kde-format
-#| msgid "min"
+#, kde-format
 msgctxt "short for minute(s)"
 msgid "min"
 msgid_plural "min"
@@ -361,10 +356,9 @@ msgstr[0] "mín."
 msgstr[1] "mín."
 
 #: ui/ActivationShortcuts.qml:88
-#, fuzzy, kde-format
-#| msgid "When a gesture is used:"
+#, kde-format
 msgid "When a shortcut is used:"
-msgstr "Þegar hreyfiskipun er notuð:"
+msgstr "Þegar flýtilykill er notaður:"
 
 #: ui/ActivationShortcuts.qml:89
 #, kde-format
@@ -372,10 +366,9 @@ msgid "Display a confirmation dialog"
 msgstr "Birta staðfestingarglugga"
 
 #: ui/ActivationShortcuts.qml:100
-#, fuzzy, kde-format
-#| msgid "Ring the System Bell"
+#, kde-format
 msgid "Ring the system bell"
-msgstr "Nota kerfisbjölluna"
+msgstr "Hringja kerfisbjöllu"
 
 #: ui/ActivationShortcuts.qml:111
 #, kde-format
@@ -413,7 +406,7 @@ msgstr "Virkja"
 #, kde-format
 msgctxt "@label"
 msgid "Emits a sound whenever certain keys are pressed"
-msgstr ""
+msgstr "Gefur frá sér hljóð þegar ýtt er á tiltekna lykla"
 
 #: ui/Bell.qml:50
 #, kde-format
@@ -443,26 +436,22 @@ msgid "Enable"
 msgstr "Virkja"
 
 #: ui/Bell.qml:113
-#, fuzzy, kde-format
-#| msgid "Use the system bell whenever a key is rejected"
+#, kde-format
 msgctxt "@label"
 msgid "Flashes the screen whenever certain keys are pressed"
-msgstr "Nota kerfisbjölluna í hvert sinn sem lykli er hafnað"
+msgstr "Lætur skjáinn blikka þegar ýtt er á tiltekna lykla"
 
 #: ui/Bell.qml:123
-#, fuzzy, kde-format
-#| msgctxt "Invert screen on a system bell"
-#| msgid "Invert Screen"
+#, kde-format
 msgctxt "@option:radio Invert screen colors when a system bell is rung"
 msgid "Invert screen colors"
 msgstr "Umsnúa skjálitum"
 
 #: ui/Bell.qml:141
-#, fuzzy, kde-format
-#| msgid "F&lash screen"
+#, kde-format
 msgctxt "@option:radio Flash screen when a system bell is rung"
 msgid "Flash screen"
-msgstr "&Blikka skjánum"
+msgstr "Blikka skjánum"
 
 #: ui/Bell.qml:152
 #, kde-format
@@ -479,12 +468,10 @@ msgstr "Tímalengd:"
 #: ui/Bell.qml:181 ui/KeyboardFilters.qml:55 ui/KeyboardFilters.qml:151
 #: ui/MouseNavigation.qml:51 ui/MouseNavigation.qml:73
 #: ui/MouseNavigation.qml:95
-#, fuzzy, kde-format
-#| msgid "%1 min"
-#| msgid_plural "%1 min"
+#, kde-format
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "%1 mín."
+msgstr[0] "%1 msek."
 msgstr[1] "%1 mín."
 
 #: ui/Bell.qml:185 ui/KeyboardFilters.qml:59 ui/KeyboardFilters.qml:155
@@ -494,18 +481,17 @@ msgstr[1] "%1 mín."
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "msek."
+msgstr[1] "msek."
 
 #: ui/ColorblindnessCorrection.qml:22
 #, kde-format
 msgctxt "@label"
 msgid "Color blindness correction:"
-msgstr ""
+msgstr "Leiðrétting fyrir litblindu:"
 
 #: ui/ColorblindnessCorrection.qml:23
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable color blindness correction effect"
 msgid "Enable"
 msgstr "Virkja"
@@ -514,63 +500,63 @@ msgstr "Virkja"
 #, kde-format
 msgctxt "@label"
 msgid "Mode:"
-msgstr ""
+msgstr "Snið:"
 
 #: ui/ColorblindnessCorrection.qml:41
 #, kde-format
 msgctxt "@option"
 msgid "Protanopia (red weak)"
-msgstr ""
+msgstr "Rauðblinda (protanopia)"
 
 #: ui/ColorblindnessCorrection.qml:42
 #, kde-format
 msgctxt "@option"
 msgid "Deuteranopia (green weak)"
-msgstr ""
+msgstr "Grænblinda (deuteranopia)"
 
 #: ui/ColorblindnessCorrection.qml:43
 #, kde-format
 msgctxt "@option"
 msgid "Tritanopia (blue-yellow)"
-msgstr ""
+msgstr "Bláblinda (tritanopia)"
 
 #: ui/ColorblindnessCorrection.qml:58
 #, kde-format
 msgctxt "@label"
 msgid "Intensity:"
-msgstr ""
+msgstr "Styrkur:"
 
 #: ui/ColorblindnessCorrection.qml:81
 #, kde-format
 msgctxt "@label Mild color blindness correction intensity"
 msgid "Mild"
-msgstr ""
+msgstr "Milt"
 
 #: ui/ColorblindnessCorrection.qml:88
 #, kde-format
 msgctxt "@label Intense color blindness correction intensity"
 msgid "Intense"
-msgstr ""
+msgstr "Sterkt"
 
 #: ui/ColorblindnessCorrection.qml:111
 #, kde-format
 msgid "Red"
-msgstr ""
+msgstr "Rautt"
 
 #: ui/ColorblindnessCorrection.qml:112
 #, kde-format
 msgid "Green"
-msgstr ""
+msgstr "Grænt"
 
 #: ui/ColorblindnessCorrection.qml:113
 #, kde-format
 msgid "Blue"
-msgstr ""
+msgstr "Blátt"
 
 #: ui/ColorblindnessCorrection.qml:114
 #, kde-format
 msgid "Purple"
-msgstr ""
+msgstr "Fjólublátt"
 
 #: ui/KeyboardFilters.qml:17
 #, kde-format
@@ -591,6 +577,9 @@ msgid ""
 "Useful if you accidentally type more than one key at a time or have "
 "difficulty pressing the key you want the first time."
 msgstr ""
+"Til að lykill sé samþykktur þarf að halda honum niðri í tiltekinn tíma. "
+"Þetta er gagnlegt ef þú ýtir óvart á fleiri en einn lykil samtímis eða átt "
+"erfitt með að ýta á lykilinn sem þú vildir."
 
 #: ui/KeyboardFilters.qml:40
 #, kde-format
@@ -640,6 +629,9 @@ msgid ""
 "tremors that cause you to press a key multiple times when you only intend to "
 "press once."
 msgstr ""
+"Hunsa þegar ýtt er hratt og endurtekið á sama lykilinn. Gagnlegt ef þú átt "
+"við handskjálfta að stríða sem veldur því að þú ýtir á oft lykil í einu "
+"þegar þú ætlar bara að ýta á hann einu sinni."
 
 #: ui/KeyboardFilters.qml:136
 #, kde-format
@@ -653,11 +645,10 @@ msgid "Ring system bell when rejected"
 msgstr "Hringja kerfisbjöllu við höfnun"
 
 #: ui/main.qml:28
-#, fuzzy, kde-format
-#| msgid "Use System Bell"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "System Bell"
-msgstr "Nota kerfisbjöllu"
+msgstr "Kerfisbjalla"
 
 #: ui/main.qml:33
 #, kde-format
@@ -678,10 +669,9 @@ msgid "Mouse Navigation"
 msgstr "Músarstjórnun"
 
 #: ui/main.qml:48
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgid "Activation Shortcuts"
-msgstr "Virkjunarhreyfiskipanir"
+msgstr "Flýtilyklar fyrir virkjanir"
 
 #: ui/main.qml:53
 #, kde-format
@@ -693,7 +683,7 @@ msgstr "Skjálesari"
 #, kde-format
 msgctxt "Correction for color blindness"
 msgid "Color Blindness Correction"
-msgstr ""
+msgstr "Leiðrétting fyrir litblindu"
 
 #: ui/main.qml:63
 #, kde-format
@@ -702,15 +692,13 @@ msgid "Shake Cursor"
 msgstr "Hrista bendil"
 
 #: ui/ModifierKeys.qml:17
-#, fuzzy, kde-format
-#| msgid "Sticky keys:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sticky keys:"
 msgstr "Festilyklar:"
 
 #: ui/ModifierKeys.qml:22
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable sticky keys"
 msgid "Enable"
 msgstr "Virkja"
@@ -723,13 +711,15 @@ msgid ""
 "though they “stick in place” and no longer need to be held down when typing "
 "a keyboard shortcut."
 msgstr ""
+"Breytilyklar eins og Ctrl, Shift, Alt, og Meta/Super/Windows-lyklarnir virka "
+"þannig að þeir “standa í stað” og ekki þarf lengur að halda þeim inni þegar "
+"flýtilyklar eru slegnir inn."
 
 #: ui/ModifierKeys.qml:39
-#, fuzzy, kde-format
-#| msgid "Lock the sticky keys"
+#, kde-format
 msgctxt "@option:check"
 msgid "Lock sticky keys"
-msgstr "Læsa festilyklunum"
+msgstr "Læsa festilyklum"
 
 #: ui/ModifierKeys.qml:51
 #, kde-format
@@ -738,6 +728,8 @@ msgid ""
 "Pressing a modifier key twice will keep it in active state until pressed "
 "again."
 msgstr ""
+"Ef ýtt er tvisvar á breytilykil helst hann virkur þar til ýtt er á hann "
+"aftur."
 
 #: ui/ModifierKeys.qml:57
 #, kde-format
@@ -750,49 +742,43 @@ msgid "Ring system bell when modifier keys are used"
 msgstr "Hringja kerfisbjöllu þegar breytilyklar eru notaðir"
 
 #: ui/ModifierKeys.qml:88
-#, fuzzy, kde-format
-#| msgid "Feedback:"
+#, kde-format
 msgctxt "@option:check Feedback options:"
 msgid "Feedback:"
 msgstr "Svörun:"
 
 #: ui/ModifierKeys.qml:93
-#, fuzzy, kde-format
-#| msgid "Ring system bell when locking keys are toggled"
+#, kde-format
 msgctxt "@option:check"
 msgid "Ring system bell when locking keys are used"
-msgstr "Hringja kerfisbjöllu þegar læsilyklum er víxlað af/á"
+msgstr "Hringja kerfisbjöllu þegar læsilyklar eru notaðir"
 
 #: ui/ModifierKeys.qml:104
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The locking keys are Caps Lock, Num Lock, and Scroll Lock."
-msgstr ""
+msgstr "Læsilyklarnir eru Caps Lock, Num Lock og Scroll Lock."
 
 #: ui/ModifierKeys.qml:108
-#, fuzzy, kde-format
-#| msgid "Show notification when modifier or locking keys are used"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show notification when modifier or locking keys are used"
 msgstr "Birta tilkynningu þegar breyti- eða læsilyklar eru notaðir"
 
 #: ui/ModifierKeys.qml:120
-#, fuzzy, kde-format
-#| msgid "Configure Notifications…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Notifications…"
 msgstr "Grunnstilla tilkynningar..."
 
 #: ui/MouseNavigation.qml:16
-#, fuzzy, kde-format
-#| msgid "Use number pad to move cursor:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move cursor:"
 msgstr "Nota talnaborð til að hreyfa bendilinn:"
 
 #: ui/MouseNavigation.qml:21
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable mouse navigation"
 msgid "Enable"
 msgstr "Virkja"
@@ -807,65 +793,63 @@ msgid ""
 "up). The keys <shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</"
 "shortcut>, and <shortcut>9</shortcut> allow for diagonal movement."
 msgstr ""
+"Talnaborðslykillinn <shortcut>5</shortcut> virkar eins og músarsmellur. Með "
+"lyklunum <shortcut>2</shortcut>, <shortcut>4</shortcut>, <shortcut>6</"
+"shortcut> og <shortcut>8</shortcut> er hægt að hreyfa bendilinn aðaláttirnar "
+"(niður, til vinstri, til hægri og upp). Með <shortcut>1</shortcut>, "
+"<shortcut>3</shortcut>, <shortcut>7</shortcut> og <shortcut>9</shortcut> er "
+"hægt að hreyfa hann á ská."
 
 #: ui/MouseNavigation.qml:37
-#, fuzzy, kde-format
-#| msgid "Acceleration delay:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
-msgstr "Seinkun á hröðun:"
+msgstr "Töf á hröðun:"
 
 #: ui/MouseNavigation.qml:59
-#, fuzzy, kde-format
-#| msgid "Repeat interval:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr "Endurtekningarbil:"
 
 #: ui/MouseNavigation.qml:81
-#, fuzzy, kde-format
-#| msgid "Acceleration time:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "Hröðunartími:"
 
 #: ui/MouseNavigation.qml:103
-#, fuzzy, kde-format
-#| msgid "Maximum speed:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr "Hámarkshraði:"
 
 #: ui/MouseNavigation.qml:117
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
 msgstr "Hröðun bendils:"
 
 #: ui/ScreenReader.qml:20
-#, fuzzy, kde-format
-#| msgid "Launch Orca Screen Reader Configuration…"
+#, kde-format
 msgctxt "@info Placeholder message title"
 msgid "The Orca Screen Reader is not installed"
-msgstr "Keyra grunnstillingu fyrir Orca skjálesarann..."
+msgstr "Orca skjálesarinn er ekki uppsettur"
 
 #: ui/ScreenReader.qml:21
 #, kde-format
 msgctxt "@info Placeholder message explanation"
 msgid "Please install it, then close and reopen this window"
-msgstr ""
+msgstr "Settu hann upp, lokaðu svo þessum glugga og opnaðu hann aftur"
 
 #: ui/ScreenReader.qml:27
-#, fuzzy, kde-format
-#| msgid "Enable Screen Reader"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable Screen Reader"
 msgstr "Virkja skjálesara"
 
 #: ui/ScreenReader.qml:39
-#, fuzzy, kde-format
-#| msgid "Launch Orca Screen Reader Configuration…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Launch Orca Screen Reader Configuration…"
 msgstr "Keyra grunnstillingu fyrir Orca skjálesarann..."
