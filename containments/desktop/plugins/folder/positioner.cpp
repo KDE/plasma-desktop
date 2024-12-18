@@ -496,10 +496,11 @@ void Positioner::sourceStatusChanged()
         }
     }
 
-    // When deferring moves, skip saving, since this action is not by user:
-    // the moves happened during listing, so we should not save them
+    // When deferring moves, skip saving if screen is not in use
+    // If screen is in use, this is likely because user created new file
+    // so we want to move that file to the spot of creation
     if (m_deferMovePositions.count() > 0 && m_folderModel->status() != FolderModel::Listing) {
-        move(m_deferMovePositions, false);
+        move(m_deferMovePositions, screenInUse());
         m_deferMovePositions.clear();
         // Load the configuration to make sure any of the moved items that are in the configuration
         // are in their correct place after deferred movements
