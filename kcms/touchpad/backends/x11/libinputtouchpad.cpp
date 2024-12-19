@@ -31,7 +31,7 @@ const Parameter libinputProperties[] = {
     /* Disable on external mouse */
     {"supportsDisableEventsOnExternalMouse", PT_INT, 0, 1, LIBINPUT_PROP_SENDEVENTS_AVAILABLE, 8, 1},
     {"disableEventsOnExternalMouse", PT_INT, 0, 1, LIBINPUT_PROP_SENDEVENTS_ENABLED, 8, 1},
-    {"disableEventsOnExternalMouseDefault", PT_INT, 0, 1, LIBINPUT_PROP_SENDEVENTS_ENABLED_DEFAULT, 8, 1},
+    {"disableEventsOnExternalMouseEnabledByDefault", PT_INT, 0, 1, LIBINPUT_PROP_SENDEVENTS_ENABLED_DEFAULT, 8, 1},
 
     /* Disable while typing */
     {"disableWhileTypingEnabledByDefault", PT_INT, 0, 1, LIBINPUT_PROP_DISABLE_WHILE_TYPING_DEFAULT, 8, 0},
@@ -208,7 +208,7 @@ bool LibinputTouchpad::getConfig()
 
     success &= valueLoader(m_supportsDisableEventsOnExternalMouse);
     success &= valueLoader(m_disableEventsOnExternalMouse);
-    success &= valueLoader(m_disableEventsOnExternalMouseDefault);
+    success &= valueLoader(m_disableEventsOnExternalMouseEnabledByDefault);
 
     success &= valueLoader(m_disableWhileTypingEnabledByDefault);
     success &= valueLoader(m_disableWhileTyping);
@@ -262,10 +262,11 @@ bool LibinputTouchpad::applyConfig()
     QList<QString> msgs;
 
     msgs << valueWriter(m_enabled) << valueWriter(m_tapToClick) << valueWriter(m_lrmTapButtonMap) << valueWriter(m_lmrTapButtonMap) << valueWriter(m_tapAndDrag)
-         << valueWriter(m_tapDragLock) << valueWriter(m_leftHanded) << valueWriter(m_disableWhileTyping) << valueWriter(m_middleEmulation)
-         << valueWriter(m_pointerAcceleration) << valueWriter(m_pointerAccelerationProfileFlat) << valueWriter(m_pointerAccelerationProfileAdaptive)
-         << valueWriter(m_naturalScroll) << valueWriter(m_horizontalScrolling) << valueWriter(m_isScrollTwoFinger) << valueWriter(m_isScrollEdge)
-         << valueWriter(m_isScrollOnButtonDown) << valueWriter(m_scrollButton) << valueWriter(m_clickMethodAreas) << valueWriter(m_clickMethodClickfinger);
+         << valueWriter(m_tapDragLock) << valueWriter(m_leftHanded) << valueWriter(m_disableEventsOnExternalMouse) << valueWriter(m_disableWhileTyping)
+         << valueWriter(m_middleEmulation) << valueWriter(m_pointerAcceleration) << valueWriter(m_pointerAccelerationProfileFlat)
+         << valueWriter(m_pointerAccelerationProfileAdaptive) << valueWriter(m_naturalScroll) << valueWriter(m_horizontalScrolling)
+         << valueWriter(m_isScrollTwoFinger) << valueWriter(m_isScrollEdge) << valueWriter(m_isScrollOnButtonDown) << valueWriter(m_scrollButton)
+         << valueWriter(m_clickMethodAreas) << valueWriter(m_clickMethodClickfinger);
 
     bool success = true;
     QString error_msg;
@@ -298,7 +299,7 @@ bool LibinputTouchpad::getDefaultConfig()
     m_tapAndDrag.set(m_tapAndDragEnabledByDefault);
     m_tapDragLock.set(m_tapDragLockEnabledByDefault);
     m_leftHanded.set(m_leftHandedEnabledByDefault);
-    m_disableEventsOnExternalMouse.set(m_disableEventsOnExternalMouseDefault);
+    m_disableEventsOnExternalMouse.set(m_disableEventsOnExternalMouseEnabledByDefault);
     m_disableWhileTyping.set(m_disableWhileTypingEnabledByDefault);
     m_middleEmulation.set(m_middleEmulationEnabledByDefault);
     m_pointerAcceleration.set(m_defaultPointerAcceleration);

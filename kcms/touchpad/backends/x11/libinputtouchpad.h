@@ -51,7 +51,7 @@ private:
     }
     bool isEnabled() const override
     {
-        return !m_enabled.val;
+        return !m_enabled.val; // underlying X11 property actually stores the "disabled" value
     }
     void setEnabled(bool set) override
     {
@@ -137,10 +137,6 @@ private:
     // Tapping
     Prop<bool> m_lrmTapButtonMapEnabledByDefault = PropBool("lrmTapButtonMapEnabledByDefault");
     Prop<bool> m_lrmTapButtonMap = PropBool("lrmTapButtonMap");
-    //
-    // advanced
-    Prop<bool> m_disableEventsOnExternalMouse = PropBool("disableEventsOnExternalMouse");
-    Prop<bool> m_disableEventsOnExternalMouseDefault = PropBool("disableEventsOnExternalMouseDefault");
 
     QString m_name;
 };

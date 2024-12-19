@@ -47,6 +47,7 @@ KCM.SimpleKCM {
         loading = true
 
         deviceEnabled.load()
+        disableEventsOnExternalMouse.load()
         dwt.load()
         leftHanded.load()
         middleEmulation.load()
@@ -164,8 +165,31 @@ KCM.SimpleKCM {
         }
 
         QQC2.CheckBox {
+            id: disableEventsOnExternalMouse
+            text: i18ndc("kcm_touchpad", "@option:check", "Disable while mouse is connected")
+            leftPadding: deviceEnabled.indicator.width + Kirigami.Units.smallSpacing
+
+            function load() {
+                if (!formLayout.enabled) {
+                    checked = false
+                    return
+                }
+                enabled = touchpad.supportsDisableEventsOnExternalMouse
+                checked = enabled && touchpad.disableEventsOnExternalMouse
+            }
+
+            onCheckedChanged: {
+                if (enabled && !root.loading) {
+                    touchpad.disableEventsOnExternalMouse = checked
+                    root.changeSignal()
+                }
+            }
+        }
+
+        QQC2.CheckBox {
             id: dwt
             text: i18nd("kcm_touchpad", "Disable while typing")
+            leftPadding: deviceEnabled.indicator.width + Kirigami.Units.smallSpacing
 
             hoverEnabled: true
             QQC2.ToolTip {
@@ -192,7 +216,7 @@ KCM.SimpleKCM {
         }
         QQC2.Label {
             Layout.fillWidth: true
-            leftPadding: dwt.indicator.width
+            leftPadding: dwt.leftPadding + dwt.indicator.width
             text: i18ndc("kcm_touchpad", "@label 'this' refers to the 'disable touchpad while typing' feature", "This can interfere with video games.")
             textFormat: Text.PlainText
             elide: Text.ElideRight
