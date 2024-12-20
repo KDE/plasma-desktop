@@ -167,7 +167,7 @@ KCM.SimpleKCM {
         QQC2.CheckBox {
             id: disableEventsOnExternalMouse
             text: i18ndc("kcm_touchpad", "@option:check", "Disable while mouse is connected")
-            leftPadding: deviceEnabled.indicator.width + Kirigami.Units.smallSpacing
+            leftPadding: deviceEnabled.contentItem.leftPadding
 
             function load() {
                 if (!formLayout.enabled) {
@@ -186,41 +186,46 @@ KCM.SimpleKCM {
             }
         }
 
-        QQC2.CheckBox {
-            id: dwt
-            text: i18nd("kcm_touchpad", "Disable while typing")
-            leftPadding: deviceEnabled.indicator.width + Kirigami.Units.smallSpacing
+        ColumnLayout {
+            Kirigami.FormData.buddyFor: dwt
+            spacing: 0
 
-            hoverEnabled: true
-            QQC2.ToolTip {
-                text: i18nd("kcm_touchpad", "Disable touchpad while typing to prevent accidental inputs.")
-                visible: parent.hovered
-                delay: 1000
-            }
+            QQC2.CheckBox {
+                id: dwt
+                text: i18nd("kcm_touchpad", "Disable while typing")
+                leftPadding: deviceEnabled.contentItem.leftPadding
 
-            function load() {
-                if (!formLayout.enabled) {
-                    checked = false
-                    return
+                hoverEnabled: true
+                QQC2.ToolTip {
+                    text: i18nd("kcm_touchpad", "Disable touchpad while typing to prevent accidental inputs.")
+                    visible: parent.hovered
+                    delay: 1000
                 }
-                enabled = touchpad.supportsDisableWhileTyping
-                checked = enabled && touchpad.disableWhileTyping
-            }
 
-            onCheckedChanged: {
-                if (enabled && !root.loading) {
-                    touchpad.disableWhileTyping = checked
-                    root.changeSignal()
+                function load() {
+                    if (!formLayout.enabled) {
+                        checked = false
+                        return
+                    }
+                    enabled = touchpad.supportsDisableWhileTyping
+                    checked = enabled && touchpad.disableWhileTyping
+                }
+
+                onCheckedChanged: {
+                    if (enabled && !root.loading) {
+                        touchpad.disableWhileTyping = checked
+                        root.changeSignal()
+                    }
                 }
             }
-        }
-        QQC2.Label {
-            Layout.fillWidth: true
-            leftPadding: dwt.leftPadding + dwt.indicator.width
-            text: i18ndc("kcm_touchpad", "@label 'this' refers to the 'disable touchpad while typing' feature", "This can interfere with video games.")
-            textFormat: Text.PlainText
-            elide: Text.ElideRight
-            font: Kirigami.Theme.smallFont
+            QQC2.Label {
+                Layout.fillWidth: true
+                leftPadding: dwt.leftPadding + dwt.contentItem.leftPadding
+                text: i18ndc("kcm_touchpad", "@label 'this' refers to the 'disable touchpad while typing' feature", "This can interfere with video games.")
+                textFormat: Text.PlainText
+                elide: Text.ElideRight
+                font: Kirigami.Theme.smallFont
+            }
         }
 
         QQC2.CheckBox {
@@ -801,7 +806,8 @@ KCM.SimpleKCM {
             Kirigami.FormData.label: i18ndc("kcm_touchpad", "@label for radiobutton group, configure right-click with touch-pad integrated button (pressing into the touchpad)", "Integrated right-click:")
             Kirigami.FormData.buddyFor: rightClickMethodAreas
 
-            spacing: Kirigami.Units.smallSpacing
+            // spacing only on top of radio buttons, not between radio and help text label
+            spacing: 0
             // hide initially
             visible: false
 
@@ -830,6 +836,7 @@ KCM.SimpleKCM {
                 loading = false
             }
 
+
             QQC2.RadioButton {
                 id: rightClickMethodAreas
                 text: i18ndc("kcm_touchpad", "@option:radio touchpad integrated right-click", "Press bottom-right corner")
@@ -847,7 +854,7 @@ KCM.SimpleKCM {
             QQC2.Label {
                 Layout.fillWidth: true
                 visible: !middleClickMethod.visible
-                leftPadding: rightClickMethodAreas.indicator.width
+                leftPadding: rightClickMethodAreas.contentItem.leftPadding
                 text: middleEmulation.checked
                     ? i18ndc("kcm_touchpad", "@info shown below radio button", "Middle-click by pressing both bottom corners.")
                     : i18ndc("kcm_touchpad", "@info shown below radio button", "Middle-click by pressing bottom center.")
@@ -869,6 +876,7 @@ KCM.SimpleKCM {
             QQC2.RadioButton {
                 id: rightClickMethodClickfinger
                 text: i18ndc("kcm_touchpad", "@option:radio touchpad integrated right-click", "Press touchpad with two fingers")
+                topPadding: Kirigami.Units.smallSpacing // in lieu of rightClickMethod.spacing
 
                 hoverEnabled: true
 
@@ -883,7 +891,7 @@ KCM.SimpleKCM {
             QQC2.Label {
                 Layout.fillWidth: true
                 visible: !middleClickMethod.visible
-                leftPadding: rightClickMethodClickfinger.indicator.width
+                leftPadding: rightClickMethodClickfinger.contentItem.leftPadding
                 text: i18ndc("kcm_touchpad", "@info shown below radio button", "Middle-click by pressing with three fingers.")
                 textFormat: Text.PlainText
                 elide: Text.ElideRight
