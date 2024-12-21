@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-29 00:42+0000\n"
-"PO-Revision-Date: 2024-12-14 13:40+0530\n"
+"PO-Revision-Date: 2024-12-20 21:53+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: kcmaccess.cpp:117
 #, kde-format
@@ -310,7 +310,7 @@ msgstr "आवर्धनम्"
 #, kde-format
 msgctxt "@option:check"
 msgid "Activation shortcuts:"
-msgstr "सक्रियीकरणस्य शॉर्टकट् : १."
+msgstr "सक्रियीकरणस्य शॉर्टकट् :"
 
 #: ui/ActivationShortcuts.qml:18
 #, kde-format
@@ -354,7 +354,7 @@ msgstr[1] "मि"
 #: ui/ActivationShortcuts.qml:88
 #, kde-format
 msgid "When a shortcut is used:"
-msgstr "यदा शॉर्टकट् प्रयुक्तः भवति तदा : १."
+msgstr "यदा शॉर्टकट् प्रयुक्तः भवति तदा :"
 
 #: ui/ActivationShortcuts.qml:89
 #, kde-format
@@ -390,7 +390,7 @@ msgstr "ogg, oga, and wav श्रव्यसञ्चिकाः (*.ogg *.og
 #: ui/Bell.qml:30
 #, kde-format
 msgid "Audible bell:"
-msgstr "श्रव्यघण्टा : १."
+msgstr "श्रव्यघण्टा :"
 
 #: ui/Bell.qml:31
 #, kde-format
@@ -408,7 +408,7 @@ msgstr "यदा कदापि कतिपयानि कीलानि �
 #, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
-msgstr "कस्टम् ध्वनिः : १."
+msgstr "कस्टम् ध्वनिः :"
 
 #: ui/Bell.qml:83
 #, kde-format
@@ -423,7 +423,7 @@ msgstr "बटनं अन्वेषणं श्रव्यसञ्चि�
 #: ui/Bell.qml:100
 #, kde-format
 msgid "Visual bell:"
-msgstr "दृश्यघण्टाः १."
+msgstr "दृश्यघण्टाः"
 
 #: ui/Bell.qml:101
 #, kde-format
@@ -484,7 +484,7 @@ msgstr[1] "ms"
 #, kde-format
 msgctxt "@label"
 msgid "Color blindness correction:"
-msgstr "वर्णान्धता सुधारः : १."
+msgstr "वर्णान्धता सुधारः :"
 
 #: ui/ColorblindnessCorrection.qml:23
 #, kde-format
@@ -496,31 +496,31 @@ msgstr "सक्रियं करोतु"
 #, kde-format
 msgctxt "@label"
 msgid "Mode:"
-msgstr "मोडः : १."
+msgstr "मोडः :"
 
 #: ui/ColorblindnessCorrection.qml:41
 #, kde-format
 msgctxt "@option"
 msgid "Protanopia (red weak)"
-msgstr "प्रोटानोपिया (लाल दुर्बल) २."
+msgstr "प्रोटानोपिया (लाल दुर्बल)"
 
 #: ui/ColorblindnessCorrection.qml:42
 #, kde-format
 msgctxt "@option"
 msgid "Deuteranopia (green weak)"
-msgstr "Deuteranopia (हरित दुर्बल) २."
+msgstr "Deuteranopia (हरित दुर्बल)"
 
 #: ui/ColorblindnessCorrection.qml:43
 #, kde-format
 msgctxt "@option"
 msgid "Tritanopia (blue-yellow)"
-msgstr "त्रिटानोपिया (नील-पीत) २."
+msgstr "त्रिटानोपिया (नील-पीत)"
 
 #: ui/ColorblindnessCorrection.qml:58
 #, kde-format
 msgctxt "@label"
 msgid "Intensity:"
-msgstr "तीव्रता : १."
+msgstr "तीव्रता :"
 
 #: ui/ColorblindnessCorrection.qml:81
 #, kde-format
@@ -557,7 +557,7 @@ msgstr "शोण"
 #: ui/KeyboardFilters.qml:17
 #, kde-format
 msgid "Slow keys:"
-msgstr "मन्दकुंजीः : १."
+msgstr "मन्दकुंजीः :"
 
 #: ui/KeyboardFilters.qml:22
 #, kde-format
@@ -585,7 +585,7 @@ msgstr "विलम्बः:"
 #: ui/KeyboardFilters.qml:68
 #, kde-format
 msgid "Ring system bell:"
-msgstr "रिंग प्रणाली घण्टी : १."
+msgstr "रिंग प्रणाली घण्टी :"
 
 #: ui/KeyboardFilters.qml:69
 #, kde-format
@@ -608,7 +608,7 @@ msgstr "यदा कोऽपि कीलः &प्रत्याख्य�
 #: ui/KeyboardFilters.qml:113
 #, kde-format
 msgid "Bounce keys:"
-msgstr "उछालकुंजी : १."
+msgstr "उछालकुंजी :"
 
 #: ui/KeyboardFilters.qml:118
 #, kde-format
@@ -690,7 +690,7 @@ msgstr "शेक कर्सर"
 #, kde-format
 msgctxt "@option:check"
 msgid "Sticky keys:"
-msgstr "चिपचिपा कुञ्जी : १."
+msgstr "चिपचिपा कुञ्जी :"
 
 #: ui/ModifierKeys.qml:22
 #, kde-format
@@ -795,31 +795,31 @@ msgstr ""
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
-msgstr "त्वरणविलम्बः : १."
+msgstr "त्वरणविलम्बः :"
 
 #: ui/MouseNavigation.qml:59
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Repeat interval:"
-msgstr "पुनरावृत्तिः अन्तरालः : १."
+msgstr "पुनरावृत्तिः अन्तरालः :"
 
 #: ui/MouseNavigation.qml:81
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
-msgstr "त्वरणसमयः : १."
+msgstr "त्वरणसमयः :"
 
 #: ui/MouseNavigation.qml:103
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
-msgstr "अधिकतमं गतिः : १."
+msgstr "अधिकतमं गतिः :"
 
 #: ui/MouseNavigation.qml:117
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
-msgstr "सूचकत्वरणम् : १."
+msgstr "सूचकत्वरणम् :"
 
 #: ui/ScreenReader.qml:20
 #, kde-format
@@ -861,7 +861,7 @@ msgstr "सक्रियं करोतु"
 #, kde-format
 msgctxt "@label Cursor magnification level"
 msgid "Magnification:"
-msgstr "आवर्धनम् : १."
+msgstr "आवर्धनम् :"
 
 #: ui/ShakeCursor.qml:55
 #, kde-format
