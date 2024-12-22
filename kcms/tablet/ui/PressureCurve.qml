@@ -16,8 +16,8 @@ import org.kde.plasma.tablet.kcm 1.0
 QQC2.Control {
     id: root
 
-    property point controlPoint1: Qt.point(0.0, 0.0)
-    property point controlPoint2: Qt.point(1.0, 1.0)
+    property point controlPoint1
+    property point controlPoint2
     property bool isDefault: true
 
     implicitWidth: 220

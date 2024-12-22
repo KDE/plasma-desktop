@@ -129,6 +129,9 @@ Kirigami.FormLayout {
                         pressureCurve.controlPoint1 = points[0];
                         pressureCurve.controlPoint2 = points[1];
                         pressureCurve.forceReloadControlPoints();
+                    } else {
+                        pressureCurve.controlPoint1 = Qt.point(0.0, 0.0);
+                        pressureCurve.controlPoint2 = Qt.point(1.0, 1.0);
                     }
                 }
 
