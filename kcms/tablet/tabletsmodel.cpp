@@ -200,10 +200,10 @@ void TabletsModel::addDevice(const QString &sysName, bool tellModel)
 
         if (it != m_devices.end()) {
             if (dev->tabletTool()) {
-                qCInfo(KCM_TABLET) << "Adding a tablet pen to an existing thing.";
+                qCDebug(KCM_TABLET) << "Adding a tablet pen to an existing thing.";
                 it->penDevice = std::move(dev);
             } else if (dev->tabletPad()) {
-                qCInfo(KCM_TABLET) << "Adding a tablet pad to an existing thing.";
+                qCDebug(KCM_TABLET) << "Adding a tablet pad to an existing thing.";
                 it->padDevice = std::move(dev);
             }
             const int index = std::distance(m_devices.begin(), it);
