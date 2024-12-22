@@ -37,6 +37,9 @@ class InputDevice : public QObject
     Q_PROPERTY(QString pressureCurve READ pressureCurve WRITE setPressureCurve NOTIFY pressureCurveChanged)
     Q_PROPERTY(bool pressureCurveIsDefault READ pressureCurveIsDefault NOTIFY pressureCurveChanged)
     Q_PROPERTY(quint32 tabletPadButtonCount READ tabletPadButtonCount CONSTANT)
+    Q_PROPERTY(double pressureRangeMin READ pressureRangeMin WRITE setPressureRangeMin NOTIFY pressureRangeMinChanged)
+    Q_PROPERTY(double pressureRangeMax READ pressureRangeMax WRITE setPressureRangeMax NOTIFY pressureRangeMaxChanged)
+    Q_PROPERTY(bool supportsPressureRange READ supportsPressureRange CONSTANT)
 
 public:
     InputDevice(const QString &dbusName, QObject *parent);
@@ -144,6 +147,29 @@ public:
     void setPressureCurve(const QString &curve);
     bool pressureCurveIsDefault() const;
 
+    void setPressureRangeMin(double min)
+    {
+        m_pressureRangeMin.set(min);
+    }
+    double pressureRangeMin() const
+    {
+        return m_pressureRangeMin.value();
+    }
+
+    void setPressureRangeMax(double max)
+    {
+        m_pressureRangeMax.set(max);
+    }
+    double pressureRangeMax() const
+    {
+        return m_pressureRangeMax.value();
+    }
+
+    bool supportsPressureRange() const
+    {
+        return m_pressureRangeMin.isSupported() && m_pressureRangeMax.isSupported();
+    }
+
     quint32 tabletPadButtonCount() const
     {
         return m_tabletPadButtonCount.value();
@@ -175,6 +201,8 @@ Q_SIGNALS:
     void mapToWorkspaceChanged();
     void pressureCurveChanged();
     void inputAreaChanged();
+    void pressureRangeMinChanged();
+    void pressureRangeMaxChanged();
 
 private:
     template<typename T>
@@ -306,6 +334,17 @@ private:
         Prop<QString>(this, "pressureCurve", &OrgKdeKWinInputDeviceInterface::defaultPressureCurve, nullptr, &InputDevice::pressureCurveChanged);
 
     Prop<quint32> m_tabletPadButtonCount = Prop<quint32>(this, "tabletPadButtonCount");
+
+    Prop<double> m_pressureRangeMin = Prop<double>(this,
+                                                   "pressureRangeMin",
+                                                   &OrgKdeKWinInputDeviceInterface::defaultPressureRangeMin,
+                                                   &OrgKdeKWinInputDeviceInterface::supportsPressureRange,
+                                                   &InputDevice::pressureRangeMinChanged);
+    Prop<double> m_pressureRangeMax = Prop<double>(this,
+                                                   "pressureRangeMax",
+                                                   &OrgKdeKWinInputDeviceInterface::defaultPressureRangeMax,
+                                                   &OrgKdeKWinInputDeviceInterface::supportsPressureRange,
+                                                   &InputDevice::pressureRangeMaxChanged);
 
     Prop<QString> m_deviceGroup = Prop<QString>(this, "deviceGroupId");
     Prop<bool> m_tabletPad = Prop<bool>(this, "tabletPad");

@@ -151,7 +151,7 @@ Kirigami.FormLayout {
             }
             RowLayout {
                 QQC2.Label {
-                    text: i18ndc("kcm_tablet", "Low pen pressure", "Low Pressure")
+                    text: i18ndc("kcm_tablet", "% of minimum pen pressure", "%1%", Math.round(root.device.pressureRangeMin * 100.0))
                 }
 
                 Item {
@@ -159,7 +159,7 @@ Kirigami.FormLayout {
                 }
 
                 QQC2.Label {
-                    text: i18ndc("kcm_tablet", "High pen pressure", "High Pressure")
+                    text: i18ndc("kcm_tablet", "% of maximum pen pressure", "%1%", Math.round(root.device.pressureRangeMax * 100.0))
                 }
             }
         }
@@ -185,6 +185,39 @@ Kirigami.FormLayout {
             toolTipText: i18ndc("kcm_tablet", "@info", "This curve controls the relationship between the pressure on the stylus and the pressure values received by applications.")
         }
     }
+
+    RowLayout {
+        Kirigami.FormData.label: i18ndc("kcm_tablet", "Pen pressure range", "Pressure Range:")
+
+        spacing: Kirigami.Units.smallSpacing
+        enabled: root.device.supportsPressureRange
+
+        Layout.fillWidth: true
+
+        QQC2.RangeSlider {
+            from: 0
+            to: 1
+            first {
+                value: root.device.pressureRangeMin
+                onMoved: root.device.pressureRangeMin = first.value
+            }
+            second {
+                value: root.device.pressureRangeMax
+                onMoved: root.device.pressureRangeMax = second.value
+            }
+
+            Layout.preferredWidth: pressureCurve.width
+        }
+
+        Item {
+            Layout.fillWidth: true
+        }
+
+        Kirigami.ContextualHelpButton {
+            toolTipText: i18ndc("kcm_tablet", "@info", "Pressure above or below the threshold will be clamped, and this becomes the new effective range.")
+        }
+    }
+
 
     QQC2.Button {
         // TODO: don't allow calibration across multiple screens again
