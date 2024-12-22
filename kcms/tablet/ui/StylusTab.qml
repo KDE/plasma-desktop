@@ -186,6 +186,43 @@ Kirigami.FormLayout {
         }
     }
 
+    RowLayout {
+        Kirigami.FormData.label: i18nd("kcm_tablet Pen pressure range", "Pressure Range:")
+
+        spacing: Kirigami.Units.smallSpacing
+        enabled: root.device.supportsPressureRange
+
+        Layout.fillWidth: true
+
+        QQC2.Label {
+            text: i18ndc("kcm_tablet", "% of minimum pen pressure", "%1%", Math.round(root.device.pressureRangeMin * 100.0))
+        }
+
+        QQC2.RangeSlider {
+            from: 0
+            to: 1
+            first {
+                value: root.device.pressureRangeMin
+                onMoved: root.device.pressureRangeMin = first.value
+            }
+            second {
+                value: root.device.pressureRangeMax
+                onMoved: root.device.pressureRangeMax = second.value
+            }
+
+            Layout.fillWidth: true
+        }
+
+        QQC2.Label {
+            text: i18ndc("kcm_tablet", "% of maximum pen pressure", "%1%", Math.round(root.device.pressureRangeMax * 100.0))
+        }
+
+        Kirigami.ContextualHelpButton {
+            toolTipText: i18ndc("kcm_tablet", "@info", "This controls the available pressure range of the stylus, and pressure will not register below or above the given threshold.")
+        }
+    }
+
+
     QQC2.Button {
         // TODO: don't allow calibration across multiple screens again
         readonly property bool supportsCalibration: root.device.supportsCalibrationMatrix
