@@ -213,6 +213,8 @@ Item {
     }
 
     Shape {
+        preferredRendererType: Shape.CurveRenderer
+
         ShapePath {
             id: topLeftPath
 
