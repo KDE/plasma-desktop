@@ -78,12 +78,18 @@ bool KWinWaylandDevice::init()
     success &= valueLoader(m_supportsPointerAcceleration);
     success &= valueLoader(m_supportsPointerAccelerationProfileFlat);
     success &= valueLoader(m_supportsPointerAccelerationProfileAdaptive);
+    success &= valueLoader(m_supportsPointerAccelerationProfileCustom);
     success &= valueLoader(m_defaultPointerAcceleration);
     success &= valueLoader(m_defaultPointerAccelerationProfileFlat);
     success &= valueLoader(m_defaultPointerAccelerationProfileAdaptive);
+    success &= valueLoader(m_defaultPointerAccelerationProfileCustom);
     success &= valueLoader(m_pointerAcceleration);
     success &= valueLoader(m_pointerAccelerationProfileFlat);
     success &= valueLoader(m_pointerAccelerationProfileAdaptive);
+    success &= valueLoader(m_pointerAccelerationProfileCustom);
+    success &= valueLoader(m_pointerAccelerationCustomFallback);
+    success &= valueLoader(m_pointerAccelerationCustomMotion);
+    success &= valueLoader(m_pointerAccelerationCustomScroll);
     // natural scroll
     success &= valueLoader(m_supportsNaturalScroll);
     success &= valueLoader(m_naturalScrollEnabledByDefault);
@@ -107,6 +113,8 @@ bool KWinWaylandDevice::defaults()
     m_pointerAcceleration.set(m_defaultPointerAcceleration);
     m_pointerAccelerationProfileFlat.set(m_defaultPointerAccelerationProfileFlat);
     m_pointerAccelerationProfileAdaptive.set(m_defaultPointerAccelerationProfileAdaptive);
+    m_pointerAccelerationProfileCustom.set(m_defaultPointerAccelerationProfileCustom);
+    // not resetting custom acceleration curves, would be more annoying than helpful and there is no default anyway
     // scrolling
     m_naturalScroll.set(m_naturalScrollEnabledByDefault);
     m_scrollFactor.set(1.0);
@@ -127,6 +135,10 @@ bool KWinWaylandDevice::save()
     success &= valueWriter(m_pointerAcceleration);
     success &= valueWriter(m_pointerAccelerationProfileFlat);
     success &= valueWriter(m_pointerAccelerationProfileAdaptive);
+    success &= valueWriter(m_pointerAccelerationProfileCustom);
+    success &= valueWriter(m_pointerAccelerationCustomFallback);
+    success &= valueWriter(m_pointerAccelerationCustomMotion);
+    success &= valueWriter(m_pointerAccelerationCustomScroll);
     // scrolling
     success &= valueWriter(m_naturalScroll);
     success &= valueWriter(m_scrollFactor);
@@ -145,6 +157,10 @@ bool KWinWaylandDevice::isSaveNeeded() const
         || m_pointerAcceleration.isSaveNeeded() //
         || m_pointerAccelerationProfileFlat.isSaveNeeded() //
         || m_pointerAccelerationProfileAdaptive.isSaveNeeded() //
+        || m_pointerAccelerationProfileCustom.isSaveNeeded() //
+        || m_pointerAccelerationCustomFallback.isSaveNeeded() //
+        || m_pointerAccelerationCustomMotion.isSaveNeeded() //
+        || m_pointerAccelerationCustomScroll.isSaveNeeded() //
         // scrolling
         || m_naturalScroll.isSaveNeeded() //
         || m_scrollFactor.isSaveNeeded() //
@@ -176,7 +192,7 @@ bool KWinWaylandDevice::valueWriter(const Prop<T> &prop)
                                                   QStringLiteral("/org/kde/KWin/InputDevice/") + m_dbusName,
                                                   QStringLiteral("org.freedesktop.DBus.Properties"),
                                                   QStringLiteral("Set"));
-    message << QStringLiteral("org.kde.KWin.InputDevice") << prop.dbus << QVariant::fromValue(QDBusVariant(prop.val));
+    message << QStringLiteral("org.kde.KWin.InputDevice") << prop.dbus << QVariant::fromValue(QDBusVariant(QVariant::fromValue(prop.val)));
     QDBusReply<void> reply = QDBusConnection::sessionBus().call(message);
     if (reply.error().isValid()) {
         qCCritical(KCM_MOUSE) << reply.error().message();

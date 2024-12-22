@@ -48,17 +48,23 @@ bool KWinWaylandTouchpad::getConfig()
     success &= valueLoader(m_supportsPointerAcceleration);
     success &= valueLoader(m_supportsPointerAccelerationProfileFlat);
     success &= valueLoader(m_supportsPointerAccelerationProfileAdaptive);
+    success &= valueLoader(m_supportsPointerAccelerationProfileCustom);
     success &= valueLoader(m_supportsDisableWhileTyping);
     success &= valueLoader(m_supportsDisableEventsOnExternalMouse);
     success &= valueLoader(m_defaultPointerAcceleration);
     success &= valueLoader(m_defaultPointerAccelerationProfileFlat);
     success &= valueLoader(m_defaultPointerAccelerationProfileAdaptive);
+    success &= valueLoader(m_defaultPointerAccelerationProfileCustom);
     success &= valueLoader(m_disableEventsOnExternalMouseEnabledByDefault);
     success &= valueLoader(m_disableWhileTypingEnabledByDefault);
     success &= valueLoader(m_leftHandedEnabledByDefault);
     success &= valueLoader(m_pointerAcceleration);
     success &= valueLoader(m_pointerAccelerationProfileFlat);
     success &= valueLoader(m_pointerAccelerationProfileAdaptive);
+    success &= valueLoader(m_pointerAccelerationProfileCustom);
+    success &= valueLoader(m_pointerAccelerationCustomFallback);
+    success &= valueLoader(m_pointerAccelerationCustomMotion);
+    success &= valueLoader(m_pointerAccelerationCustomScroll);
     success &= valueLoader(m_disableEventsOnExternalMouse);
     success &= valueLoader(m_disableWhileTyping);
     // tapping
@@ -112,6 +118,8 @@ bool KWinWaylandTouchpad::getDefaultConfig()
     m_pointerAcceleration.set(m_defaultPointerAcceleration);
     m_pointerAccelerationProfileFlat.set(m_defaultPointerAccelerationProfileFlat);
     m_pointerAccelerationProfileAdaptive.set(m_defaultPointerAccelerationProfileAdaptive);
+    m_pointerAccelerationProfileCustom.set(m_defaultPointerAccelerationProfileCustom);
+    // not resetting custom acceleration curves, would be more annoying than helpful and there is no default anyway
 
     m_disableEventsOnExternalMouse.set(m_disableEventsOnExternalMouseEnabledByDefault);
     m_disableWhileTyping.set(m_disableWhileTypingEnabledByDefault);
@@ -137,8 +145,13 @@ bool KWinWaylandTouchpad::applyConfig()
 {
     QList<QString> msgs;
 
-    msgs << valueWriter(m_enabled) << valueWriter(m_leftHanded) << valueWriter(m_pointerAcceleration) << valueWriter(m_pointerAccelerationProfileFlat)
-         << valueWriter(m_pointerAccelerationProfileAdaptive)
+    msgs << valueWriter(m_enabled) << valueWriter(m_leftHanded) << valueWriter(m_pointerAcceleration) //
+         << valueWriter(m_pointerAccelerationProfileFlat) //
+         << valueWriter(m_pointerAccelerationProfileAdaptive) //
+         << valueWriter(m_pointerAccelerationProfileCustom) //
+         << valueWriter(m_pointerAccelerationCustomFallback) //
+         << valueWriter(m_pointerAccelerationCustomMotion) //
+         << valueWriter(m_pointerAccelerationCustomScroll) //
 
          << valueWriter(m_disableEventsOnExternalMouse) << valueWriter(m_disableWhileTyping) << valueWriter(m_middleEmulation)
 
@@ -177,6 +190,7 @@ bool KWinWaylandTouchpad::isChangedConfig() const
             m_pointerAcceleration.changed() ||
             m_pointerAccelerationProfileFlat.changed() ||
             m_pointerAccelerationProfileAdaptive.changed() ||
+            m_pointerAccelerationProfileCustom.changed() ||
             m_disableEventsOnExternalMouse.changed() ||
             m_disableWhileTyping.changed() ||
             m_middleEmulation.changed() ||

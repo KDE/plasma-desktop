@@ -46,6 +46,18 @@ class InputDevice : public QObject
     Q_PROPERTY(bool pointerAccelerationProfileAdaptive READ pointerAccelerationProfileAdaptive WRITE setPointerAccelerationProfileAdaptive NOTIFY
                    pointerAccelerationProfileAdaptiveChanged FINAL)
 
+    Q_PROPERTY(bool supportsPointerAccelerationProfileCustom READ supportsPointerAccelerationProfileCustom CONSTANT FINAL)
+    Q_PROPERTY(bool defaultPointerAccelerationProfileCustom READ defaultPointerAccelerationProfileCustom CONSTANT FINAL)
+    Q_PROPERTY(bool pointerAccelerationProfileCustom READ pointerAccelerationProfileCustom WRITE setPointerAccelerationProfileAdaptive NOTIFY
+                   pointerAccelerationProfileCustomChanged FINAL)
+
+    Q_PROPERTY(QString pointerAccelerationCustomFallback READ pointerAccelerationCustomFallback WRITE setPointerAccelerationCustomFallback NOTIFY
+                   pointerAccelerationCustomFallbackChanged FINAL)
+    Q_PROPERTY(QString pointerAccelerationCustomMotion READ pointerAccelerationCustomMotion WRITE setPointerAccelerationCustomMotion NOTIFY
+                   pointerAccelerationCustomMotionChanged FINAL)
+    Q_PROPERTY(QString pointerAccelerationCustomScroll READ pointerAccelerationCustomScroll WRITE setPointerAccelerationCustomScroll NOTIFY
+                   pointerAccelerationCustomScrollChanged FINAL)
+
     //
     // scrolling
     Q_PROPERTY(bool supportsNaturalScroll READ supportsNaturalScroll CONSTANT FINAL)
@@ -108,6 +120,22 @@ public:
     virtual bool pointerAccelerationProfileAdaptive() const = 0;
     virtual void setPointerAccelerationProfileAdaptive(bool set) = 0;
 
+    virtual bool supportsPointerAccelerationProfileCustom() const = 0;
+
+    virtual bool defaultPointerAccelerationProfileCustom() const = 0;
+
+    virtual bool pointerAccelerationProfileCustom() const = 0;
+    virtual void setPointerAccelerationProfileCustom(bool set) = 0;
+
+    virtual QString pointerAccelerationCustomFallback() const = 0;
+    virtual void setPointerAccelerationCustomFallback(const QString &set) = 0;
+
+    virtual QString pointerAccelerationCustomMotion() const = 0;
+    virtual void setPointerAccelerationCustomMotion(const QString &set) = 0;
+
+    virtual QString pointerAccelerationCustomScroll() const = 0;
+    virtual void setPointerAccelerationCustomScroll(const QString &set) = 0;
+
     //
     // scrolling
     virtual bool supportsNaturalScroll() const = 0;
@@ -134,6 +162,10 @@ Q_SIGNALS:
     void pointerAccelerationChanged();
     void pointerAccelerationProfileFlatChanged();
     void pointerAccelerationProfileAdaptiveChanged();
+    void pointerAccelerationProfileCustomChanged();
+    void pointerAccelerationCustomFallbackChanged();
+    void pointerAccelerationCustomMotionChanged();
+    void pointerAccelerationCustomScrollChanged();
     void enabledChanged();
     void middleEmulationChanged();
     void naturalScrollChanged();

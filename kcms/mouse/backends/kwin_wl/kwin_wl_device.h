@@ -160,6 +160,56 @@ public:
         m_pointerAccelerationProfileAdaptive.set(set);
     }
 
+    bool supportsPointerAccelerationProfileCustom() const override
+    {
+        return m_supportsPointerAccelerationProfileCustom.val;
+    }
+
+    bool defaultPointerAccelerationProfileCustom() const override
+    {
+        return m_defaultPointerAccelerationProfileCustom.val;
+    }
+
+    bool pointerAccelerationProfileCustom() const override
+    {
+        return m_pointerAccelerationProfileCustom.val;
+    }
+
+    void setPointerAccelerationProfileCustom(bool set) override
+    {
+        m_pointerAccelerationProfileCustom.set(set);
+    }
+
+    QString pointerAccelerationCustomFallback() const override
+    {
+        return m_pointerAccelerationCustomFallback.val;
+    }
+
+    void setPointerAccelerationCustomFallback(const QString &set) override
+    {
+        m_pointerAccelerationCustomFallback.set(set);
+    }
+
+    QString pointerAccelerationCustomMotion() const override
+    {
+        return m_pointerAccelerationCustomMotion.val;
+    }
+
+    void setPointerAccelerationCustomMotion(const QString &set) override
+    {
+        m_pointerAccelerationCustomMotion.set(set);
+    }
+
+    QString pointerAccelerationCustomScroll() const override
+    {
+        return m_pointerAccelerationCustomScroll.val;
+    }
+
+    void setPointerAccelerationCustomScroll(const QString &set) override
+    {
+        m_pointerAccelerationCustomScroll.set(set);
+    }
+
     //
     // scrolling
     bool supportsNaturalScroll() const override
@@ -304,6 +354,17 @@ private:
     Prop<bool> m_pointerAccelerationProfileAdaptive{this,
                                                     u"pointerAccelerationProfileAdaptive"_s,
                                                     &KWinWaylandDevice::pointerAccelerationProfileAdaptiveChanged};
+
+    Prop<bool> m_supportsPointerAccelerationProfileCustom{this, u"supportsPointerAccelerationProfileCustom"_s};
+    Prop<bool> m_defaultPointerAccelerationProfileCustom{this, u"defaultPointerAccelerationProfileCustom"_s};
+    Prop<bool> m_pointerAccelerationProfileCustom{this, u"pointerAccelerationProfileCustom"_s, &KWinWaylandDevice::pointerAccelerationProfileCustomChanged};
+
+    Prop<QString> m_pointerAccelerationCustomFallback =
+        Prop<QString>{this, u"pointerAccelerationCustomFallback"_s, &KWinWaylandDevice::pointerAccelerationCustomFallbackChanged};
+    Prop<QString> m_pointerAccelerationCustomMotion =
+        Prop<QString>{this, u"pointerAccelerationCustomMotion"_s, &KWinWaylandDevice::pointerAccelerationCustomMotionChanged};
+    Prop<QString> m_pointerAccelerationCustomScroll =
+        Prop<QString>{this, u"pointerAccelerationCustomScroll"_s, &KWinWaylandDevice::pointerAccelerationCustomScrollChanged};
 
     //
     // scrolling

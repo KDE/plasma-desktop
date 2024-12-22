@@ -162,6 +162,57 @@ public:
         m_pointerAccelerationProfileAdaptive.set(set);
     }
 
+    bool supportsPointerAccelerationProfileCustom() const override
+    {
+        // could be implemented, but needs better config than bool "X11LibInputXAccelProfileFlat" (vs. adaptive)
+        return false;
+    }
+
+    bool defaultPointerAccelerationProfileCustom() const override
+    {
+        return false;
+    }
+
+    bool pointerAccelerationProfileCustom() const override
+    {
+        return false;
+    }
+
+    void setPointerAccelerationProfileCustom(bool) override
+    {
+        Q_ASSERT(false);
+    }
+
+    QString pointerAccelerationCustomFallback() const override
+    {
+        return QString();
+    }
+
+    void setPointerAccelerationCustomFallback(const QString &) override
+    {
+        Q_ASSERT(false);
+    }
+
+    QString pointerAccelerationCustomMotion() const override
+    {
+        return QString();
+    }
+
+    void setPointerAccelerationCustomMotion(const QString &) override
+    {
+        Q_ASSERT(false);
+    }
+
+    QString pointerAccelerationCustomScroll() const override
+    {
+        return QString();
+    }
+
+    void setPointerAccelerationCustomScroll(const QString &) override
+    {
+        Q_ASSERT(false);
+    }
+
     //
     // scrolling
     bool supportsNaturalScroll() const override

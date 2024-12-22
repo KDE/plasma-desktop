@@ -96,6 +96,10 @@ private:
     {
         return m_supportsPointerAccelerationProfileAdaptive.val;
     }
+    bool supportsPointerAccelerationProfileCustom() const override
+    {
+        return false;
+    }
     //
     // scrolling
     bool supportsNaturalScroll() const override

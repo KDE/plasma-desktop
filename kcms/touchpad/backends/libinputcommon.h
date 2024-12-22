@@ -102,6 +102,18 @@ class LibinputCommon : public QObject
     Q_PROPERTY(bool pointerAccelerationProfileAdaptive READ pointerAccelerationProfileAdaptive WRITE setPointerAccelerationProfileAdaptive NOTIFY
                    pointerAccelerationProfileAdaptiveChanged)
 
+    Q_PROPERTY(bool supportsPointerAccelerationProfileCustom READ supportsPointerAccelerationProfileCustom CONSTANT)
+    Q_PROPERTY(bool defaultPointerAccelerationProfileCustom READ defaultPointerAccelerationProfileCustom CONSTANT)
+    Q_PROPERTY(bool pointerAccelerationProfileCustom READ pointerAccelerationProfileCustom WRITE setPointerAccelerationProfileCustom NOTIFY
+                   pointerAccelerationProfileCustomChanged)
+
+    Q_PROPERTY(QString pointerAccelerationCustomFallback READ pointerAccelerationCustomFallback WRITE setPointerAccelerationCustomFallback NOTIFY
+                   pointerAccelerationCustomFallbackChanged)
+    Q_PROPERTY(QString pointerAccelerationCustomMotion READ pointerAccelerationCustomMotion WRITE setPointerAccelerationCustomMotion NOTIFY
+                   pointerAccelerationCustomMotionChanged)
+    Q_PROPERTY(QString pointerAccelerationCustomScroll READ pointerAccelerationCustomScroll WRITE setPointerAccelerationCustomScroll NOTIFY
+                   pointerAccelerationCustomScrollChanged)
+
     //
     // tapping
     Q_PROPERTY(int tapFingerCount READ tapFingerCount CONSTANT)
@@ -229,6 +241,8 @@ public:
         m_middleEmulation.set(set);
     }
 
+    //
+    // acceleration speed and profile
     virtual bool supportsPointerAcceleration() const = 0;
     qreal pointerAcceleration() const
     {
@@ -265,6 +279,47 @@ public:
     void setPointerAccelerationProfileAdaptive(bool set)
     {
         m_pointerAccelerationProfileAdaptive.set(set);
+    }
+
+    virtual bool supportsPointerAccelerationProfileCustom() const = 0;
+    bool defaultPointerAccelerationProfileCustom() const
+    {
+        return m_defaultPointerAccelerationProfileCustom.val;
+    }
+    bool pointerAccelerationProfileCustom() const
+    {
+        return m_pointerAccelerationProfileCustom.val;
+    }
+    void setPointerAccelerationProfileCustom(bool set)
+    {
+        m_pointerAccelerationProfileCustom.set(set);
+    }
+
+    QString pointerAccelerationCustomFallback() const
+    {
+        return m_pointerAccelerationCustomFallback.val;
+    }
+    void setPointerAccelerationCustomFallback(const QString &set)
+    {
+        m_pointerAccelerationCustomFallback.set(set);
+    }
+
+    QString pointerAccelerationCustomMotion() const
+    {
+        return m_pointerAccelerationCustomMotion.val;
+    }
+    void setPointerAccelerationCustomMotion(const QString &set)
+    {
+        m_pointerAccelerationCustomMotion.set(set);
+    }
+
+    QString pointerAccelerationCustomScroll() const
+    {
+        return m_pointerAccelerationCustomScroll.val;
+    }
+    void setPointerAccelerationCustomScroll(const QString &set)
+    {
+        m_pointerAccelerationCustomScroll.set(set);
     }
 
     //
@@ -460,6 +515,10 @@ Q_SIGNALS:
     void pointerAccelerationChanged();
     void pointerAccelerationProfileFlatChanged();
     void pointerAccelerationProfileAdaptiveChanged();
+    void pointerAccelerationProfileCustomChanged();
+    void pointerAccelerationCustomFallbackChanged();
+    void pointerAccelerationCustomMotionChanged();
+    void pointerAccelerationCustomScrollChanged();
     // scrolling
     void naturalScrollChanged();
     void horizontalScrollingChanged();
@@ -538,6 +597,13 @@ protected:
         }
     };
 
+    struct PropString : public Prop<QString> {
+        explicit PropString(LibinputCommon *device, const QByteArray &name, ChangedSignal changedSignal = nullptr)
+            : Prop<QString>(device, name, QString(), changedSignal)
+        {
+        }
+    };
+
     //
     // general
     PropBool m_supportsDisableEvents = PropBool(this, "supportsDisableEvents");
@@ -574,6 +640,15 @@ protected:
     PropBool m_defaultPointerAccelerationProfileAdaptive = PropBool(this, "defaultPointerAccelerationProfileAdaptive");
     PropBool m_pointerAccelerationProfileAdaptive =
         PropBool(this, "pointerAccelerationProfileAdaptive", &LibinputCommon::pointerAccelerationProfileAdaptiveChanged);
+
+    PropBool m_supportsPointerAccelerationProfileCustom = PropBool(this, "supportsPointerAccelerationProfileCustom");
+    PropBool m_defaultPointerAccelerationProfileCustom = PropBool(this, "defaultPointerAccelerationProfileCustom");
+    PropBool m_pointerAccelerationProfileCustom = PropBool(this, "pointerAccelerationProfileCustom", &LibinputCommon::pointerAccelerationProfileCustomChanged);
+
+    PropString m_pointerAccelerationCustomFallback =
+        PropString(this, "pointerAccelerationCustomFallback", &LibinputCommon::pointerAccelerationCustomFallbackChanged);
+    PropString m_pointerAccelerationCustomMotion = PropString(this, "pointerAccelerationCustomMotion", &LibinputCommon::pointerAccelerationCustomMotionChanged);
+    PropString m_pointerAccelerationCustomScroll = PropString(this, "pointerAccelerationCustomScroll", &LibinputCommon::pointerAccelerationCustomScrollChanged);
 
     //
     // tapping

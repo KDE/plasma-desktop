@@ -9,6 +9,7 @@
 
 #include <QSet>
 
+#include <float.h> // FLT_MAX
 #include <limits.h>
 #include <stddef.h>
 
@@ -70,6 +71,9 @@ const Parameter libinputProperties[] = {
     {"supportsPointerAccelerationProfileFlat", PT_BOOL, 0, 1, LIBINPUT_PROP_ACCEL_PROFILES_AVAILABLE, 8, 1},
     {"defaultPointerAccelerationProfileFlat", PT_BOOL, 0, 1, LIBINPUT_PROP_ACCEL_PROFILE_ENABLED_DEFAULT, 8, 1},
     {"pointerAccelerationProfileFlat", PT_BOOL, 0, 1, LIBINPUT_PROP_ACCEL_PROFILE_ENABLED, 8, 1},
+    {"supportsPointerAccelerationProfileCustom", PT_BOOL, 0, 1, LIBINPUT_PROP_ACCEL_PROFILES_AVAILABLE, 8, 2},
+    {"defaultPointerAccelerationProfileCustom", PT_BOOL, 0, 1, LIBINPUT_PROP_ACCEL_PROFILE_ENABLED_DEFAULT, 8, 2},
+    {"pointerAccelerationProfileCustom", PT_BOOL, 0, 1, LIBINPUT_PROP_ACCEL_PROFILE_ENABLED, 8, 2},
 
     /* Natural Scrolling */
     {"naturalScrollEnabledByDefault", PT_INT, 0, 1, LIBINPUT_PROP_NATURAL_SCROLL_DEFAULT, 8, 0},
@@ -206,6 +210,8 @@ LibinputTouchpad::LibinputTouchpad(Display *display, int deviceId)
     valueLoader(m_defaultPointerAccelerationProfileFlat);
     valueLoader(m_supportsPointerAccelerationProfileAdaptive);
     valueLoader(m_defaultPointerAccelerationProfileAdaptive);
+    valueLoader(m_supportsPointerAccelerationProfileCustom);
+    valueLoader(m_defaultPointerAccelerationProfileCustom);
 
     valueLoader(m_naturalScrollEnabledByDefault);
     valueLoader(m_supportsScrollTwoFinger);
@@ -249,6 +255,7 @@ bool LibinputTouchpad::getConfig()
     success &= valueLoader(m_pointerAcceleration);
     success &= valueLoader(m_pointerAccelerationProfileFlat);
     success &= valueLoader(m_pointerAccelerationProfileAdaptive);
+    success &= valueLoader(m_pointerAccelerationProfileCustom);
 
     success &= valueLoader(m_naturalScroll);
     success &= valueLoader(m_horizontalScrolling);
@@ -273,12 +280,28 @@ bool LibinputTouchpad::applyConfig()
 {
     QList<QString> msgs;
 
-    msgs << valueWriter(m_enabled) << valueWriter(m_tapToClick) << valueWriter(m_lrmTapButtonMap) << valueWriter(m_lmrTapButtonMap) << valueWriter(m_tapAndDrag)
-         << valueWriter(m_tapDragLock) << valueWriter(m_leftHanded) << valueWriter(m_disableEventsOnExternalMouse) << valueWriter(m_disableWhileTyping)
-         << valueWriter(m_middleEmulation) << valueWriter(m_pointerAcceleration) << valueWriter(m_pointerAccelerationProfileFlat)
-         << valueWriter(m_pointerAccelerationProfileAdaptive) << valueWriter(m_naturalScroll) << valueWriter(m_horizontalScrolling)
-         << valueWriter(m_isScrollTwoFinger) << valueWriter(m_isScrollEdge) << valueWriter(m_isScrollOnButtonDown) << valueWriter(m_scrollButton)
-         << valueWriter(m_clickMethodAreas) << valueWriter(m_clickMethodClickfinger);
+    msgs << valueWriter(m_enabled) //
+         << valueWriter(m_tapToClick) //
+         << valueWriter(m_lrmTapButtonMap) //
+         << valueWriter(m_lmrTapButtonMap) //
+         << valueWriter(m_tapAndDrag) //
+         << valueWriter(m_tapDragLock) //
+         << valueWriter(m_leftHanded) //
+         << valueWriter(m_disableEventsOnExternalMouse) //
+         << valueWriter(m_disableWhileTyping) //
+         << valueWriter(m_middleEmulation) //
+         << valueWriter(m_pointerAcceleration) //
+         << valueWriter(m_pointerAccelerationProfileFlat) //
+         << valueWriter(m_pointerAccelerationProfileAdaptive) //
+         << valueWriter(m_pointerAccelerationProfileCustom) //
+         << valueWriter(m_naturalScroll) //
+         << valueWriter(m_horizontalScrolling) //
+         << valueWriter(m_isScrollTwoFinger) //
+         << valueWriter(m_isScrollEdge) //
+         << valueWriter(m_isScrollOnButtonDown) //
+         << valueWriter(m_scrollButton) //
+         << valueWriter(m_clickMethodAreas) //
+         << valueWriter(m_clickMethodClickfinger);
 
     bool success = true;
     QString error_msg;
@@ -317,6 +340,7 @@ bool LibinputTouchpad::getDefaultConfig()
     m_pointerAcceleration.set(m_defaultPointerAcceleration);
     m_pointerAccelerationProfileFlat.set(m_defaultPointerAccelerationProfileFlat);
     m_pointerAccelerationProfileAdaptive.set(m_defaultPointerAccelerationProfileAdaptive);
+    m_pointerAccelerationProfileCustom.set(m_defaultPointerAccelerationProfileCustom);
     m_naturalScroll.set(m_naturalScrollEnabledByDefault);
     m_horizontalScrolling.set(true);
     m_isScrollTwoFinger.set(m_scrollTwoFingerEnabledByDefault);
@@ -345,6 +369,7 @@ bool LibinputTouchpad::isChangedConfig()
             m_pointerAcceleration.changed() ||
             m_pointerAccelerationProfileFlat.changed() ||
             m_pointerAccelerationProfileAdaptive.changed() ||
+            m_pointerAccelerationProfileCustom.changed() ||
             m_naturalScroll.changed() ||
             m_horizontalScrolling.changed() ||
             m_isScrollTwoFinger.changed() ||
@@ -403,7 +428,7 @@ QString LibinputTouchpad::valueWriter(const Prop<T> &prop)
         return QString();
     }
 
-    bool error = !setParameter(p, prop.val);
+    bool error = !setParameter(p, QVariant::fromValue(prop.val));
     if (error) {
         qCCritical(KCM_TOUCHPAD) << "Cannot set property " + QString::fromLatin1(prop.name);
         return QStringLiteral("Cannot set property ") + QString::fromLatin1(prop.name);
