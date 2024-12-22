@@ -135,7 +135,6 @@ SimpleKCM {
 
                     function onSettingsRestored(): void {
                         if (displayAction.checked) {
-                            contentLoader.item.mapping.changed = false;
                             contentLoader.item.reloadOutputView();
                         }
                     }

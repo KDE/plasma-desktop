@@ -28,10 +28,12 @@ Kirigami.FormLayout {
         } else {
             outputAreaCombo.currentIndex = 2;
         }
+        const initialInputArea = root.device.inputArea;
         if (outputsCombo.currentIndex !== 0) {
             mapping.setOutputAreaMode(outputAreaCombo.currentIndex);
             mapping.setOutputArea(initialOutputArea);
         }
+        mapping.setInputArea(initialInputArea);
     }
 
     QQC2.ComboBox {
@@ -91,7 +93,7 @@ Kirigami.FormLayout {
                 i18nc("@item:inlistbox Keep aspect ratio and fit within the screen", "Keep Aspect Ratio and Fit"),
                 i18nc("@item:inlistbox Map to portion of the screen", "Map to Portion")]
         onActivated: index => {
-            mapping.changed = true;
+            mapping.outputChanged = true;
             mapping.setOutputAreaMode(index);
         }
         SettingHighlighter {
@@ -104,7 +106,8 @@ Kirigami.FormLayout {
     ExternalScreenMapping {
         id: mapping
 
-        visible: root.device && outputsCombo.currentIndex !== 0
+        visible: root.device
+        displayVisible: outputsCombo.currentIndex !== 0
         device: root.device
         mode: outputAreaCombo.currentIndex
 

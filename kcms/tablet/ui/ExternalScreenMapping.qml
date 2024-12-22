@@ -21,6 +21,7 @@ Item {
     
     required property var device
     required property int mode
+    required property bool displayVisible
 
     readonly property bool stretchToFill: mode === 0
     readonly property bool fitAspectRatio: mode === 1
@@ -61,32 +62,70 @@ Item {
         tabletSizeHandle.y = Qt.binding(() => outputArea.height * outputItem.outputHeight);
     }
 
-
+    function setInputArea(inputArea): void {
+        inputAreaItem.x = Qt.binding(() => inputArea.x * tabletItem.outputWidth);
+        inputAreaItem.y = Qt.binding(() => inputArea.y * tabletItem.outputHeight);
+        inputAreaItem.width = Qt.binding(() => inputAreaSizeHandle.x);
+        inputAreaItem.height = Qt.binding(() => inputAreaSizeHandle.y);
+        inputAreaSizeHandle.x = Qt.binding(() => inputArea.width * tabletItem.outputWidth);
+        inputAreaSizeHandle.y = Qt.binding(() => inputArea.height * tabletItem.outputHeight);
+    }
 
     readonly property rect outputAreaSetting: Qt.rect(outputAreaItem.x / outputItem.outputWidth,
                                                       outputAreaItem.y / outputItem.outputHeight,
                                                       outputAreaItem.width / outputItem.outputWidth,
                                                       outputAreaItem.height / outputItem.outputHeight)
 
-    property bool changed: false
+    readonly property rect inputAreaSetting: Qt.rect(inputAreaItem.x / tabletItem.outputWidth,
+                                                     inputAreaItem.y / tabletItem.outputHeight,
+                                                     inputAreaItem.width / tabletItem.outputWidth,
+                                                     inputAreaItem.height / tabletItem.outputHeight)
+
+    property bool outputChanged: false
+    property bool inputChanged: false
 
     onOutputAreaSettingChanged: {
-        if (outputAreaView.device && changed) {
+        if (outputAreaView.device && outputChanged) {
             outputAreaView.device.outputArea = outputAreaSetting;
+        }
+    }
+
+    onInputAreaSettingChanged: {
+        if (outputAreaView.device && inputChanged) {
+            outputAreaView.device.inputArea = inputAreaSetting;
         }
     }
 
     enabled: outputAreaView.device
     implicitHeight: outputItem.height + tabletItem.height + Kirigami.Units.largeSpacing + (keepAspectRatio.visible ? keepAspectRatio.implicitHeight + keepAspectRatio.anchors.topMargin : 0)
 
+    QQC2.CheckBox {
+        id: keepAspectRatio
+
+        anchors {
+            top: parent.top
+            horizontalCenter: parent.horizontalCenter
+        }
+
+        text: i18ndc("kcm_tablet", "@option:check", "Lock aspect ratio")
+        visible: outputAreaView.mapToPortion
+        checked: true
+    }
+
     Output {
         id: outputItem
+
+        anchors {
+            top: keepAspectRatio.bottom
+            topMargin: Kirigami.Units.largeSpacing
+        }
 
         // Resolution of the selected display
         screenSize: outputsModel.data(outputsModel.index(outputsCombo.currentIndex, 0), Qt.UserRole + 2)
 
+        visible: outputAreaView.displayVisible
         width: parent.width
-        height: implicitHeight
+        height: visible ? implicitHeight : 0
 
         Rectangle {
             id: outputAreaItem
@@ -128,7 +167,7 @@ Item {
                 cursorShape: Qt.ClosedHandCursor
                 target: parent
                 enabled: outputAreaView.mapToPortion
-                onActiveChanged: { outputAreaView.changed = true }
+                onActiveChanged: { outputAreaView.outputChanged = true }
 
                 xAxis.minimum: 0
                 xAxis.maximum: outputItem.outputWidth - outputAreaItem.width
@@ -158,7 +197,7 @@ Item {
                 DragHandler {
                     cursorShape: Qt.SizeFDiagCursor
                     target: parent
-                    onActiveChanged: { outputAreaView.changed = true }
+                    onActiveChanged: { outputAreaView.inputChanged = true }
 
                     xAxis.minimum: 10
                     xAxis.maximum: outputItem.outputWidth
@@ -196,24 +235,92 @@ Item {
 
         outputWidth: parent.width * 0.7
         outputHeight: width / aspectRatio
-    }
 
-    QQC2.CheckBox {
-        id: keepAspectRatio
+        Rectangle {
+            id: inputAreaItem
 
-        anchors {
-            top: tabletItem.bottom
-            topMargin: Kirigami.Units.largeSpacing
-            horizontalCenter: parent.horizontalCenter
+            color: Kirigami.Theme.activeBackgroundColor
+            opacity: 0.8
+            readonly property real desiredAspectRatio: outputItem.aspectRatio
+            readonly property real aspectRatio: width / height
+            width: inputAreaSizeHandle.x
+            height: inputAreaSizeHandle.y
+
+            border {
+                width: 1
+                color: Kirigami.Theme.highlightColor
+            }
+
+            ColumnLayout {
+                anchors.centerIn: parent
+                visible: outputAreaView.inputAreaSetting.width !== 1.0 || outputAreaView.inputAreaSetting.height !== 1.0
+
+                Kirigami.Icon {
+                    source: "transform-move-symbolic"
+
+                    Layout.alignment: Qt.AlignHCenter
+                }
+
+                QQC2.Label {
+                    text: i18ndc("kcm_tablet", "tablet area position - size", "%1%,%2% - %3%×%4%", String(Math.floor(outputAreaView.inputAreaSetting.x * 100))
+                        , String(Math.floor(outputAreaView.inputAreaSetting.y * 100))
+                        , String(Math.floor(outputAreaView.inputAreaSetting.width * 100))
+                        , String(Math.floor(outputAreaView.inputAreaSetting.height * 100)))
+                    textFormat: Text.PlainText
+
+                    Layout.fillWidth: true
+                }
+            }
+
+            DragHandler {
+                cursorShape: Qt.ClosedHandCursor
+                target: parent
+                enabled: outputAreaView.device.supportsInputArea
+                onActiveChanged: { outputAreaView.inputChanged = true }
+
+                xAxis.minimum: 0
+                xAxis.maximum: tabletItem.outputWidth - inputAreaItem.width
+
+                yAxis.minimum: 0
+                yAxis.maximum: tabletItem.outputHeight - inputAreaItem.height
+            }
+
+            TapHandler {
+                gesturePolicy: TapHandler.WithinBounds
+            }
+
+            QQC2.Button {
+                id: inputAreaSizeHandle
+                x: tabletItem.width
+                y: tabletItem.width / parent.desiredAspectRatio
+                visible: outputAreaView.device.supportsInputArea
+                icon.name: "transform-scale-symbolic"
+                display: QQC2.AbstractButton.IconOnly
+                text: i18nd("kcm_tablet", "Resize the tablet area")
+                QQC2.ToolTip {
+                    text: inputAreaSizeHandle.text
+                    visible: parent.hovered
+                    delay: Kirigami.Units.toolTipDelay
+                }
+
+                DragHandler {
+                    cursorShape: Qt.SizeFDiagCursor
+                    target: parent
+                    onActiveChanged: { outputAreaView.inputChanged = true }
+
+                    xAxis.minimum: 10
+                    xAxis.maximum: tabletItem.outputWidth
+
+                    yAxis.minimum: 10
+                    yAxis.maximum: tabletItem.outputHeight
+                }
+            }
         }
-
-        text: i18ndc("kcm_tablet", "@option:check", "Lock aspect ratio")
-        visible: outputAreaView.mapToPortion
-        checked: true
     }
 
     Shape {
         preferredRendererType: Shape.CurveRenderer
+        visible: outputAreaView.displayVisible
 
         ShapePath {
             id: topLeftPath
@@ -222,11 +329,11 @@ Item {
             strokeColor: Qt.alpha(Kirigami.Theme.highlightColor, 0.5)
 
             startX: outputAreaItem.parent.x + outputAreaItem.x
-            startY: outputAreaItem.parent.y + outputAreaItem.y
+            startY: outputItem.y + outputAreaItem.parent.y + outputAreaItem.y
 
             PathLine {
-                x: tabletItem.mapped.x
-                y: tabletItem.mapped.y
+                x: tabletItem.mapped.x + inputAreaItem.x
+                y: tabletItem.mapped.y + inputAreaItem.y
             }
         }
 
@@ -237,11 +344,11 @@ Item {
             strokeColor: Qt.alpha(Kirigami.Theme.highlightColor, 0.5)
 
             startX: outputAreaItem.parent.x + outputAreaItem.x + outputAreaItem.width
-            startY: outputAreaItem.parent.y + outputAreaItem.y
+            startY: outputItem.y + outputAreaItem.parent.y + outputAreaItem.y
 
             PathLine {
-                x: tabletItem.mapped.x + tabletItem.mapped.width
-                y: tabletItem.mapped.y
+                x: tabletItem.mapped.x + inputAreaItem.x + inputAreaItem.width
+                y: tabletItem.mapped.y + inputAreaItem.y
             }
         }
 
@@ -252,11 +359,11 @@ Item {
             strokeColor: Qt.alpha(Kirigami.Theme.highlightColor, 0.5)
 
             startX: outputAreaItem.parent.x + outputAreaItem.x
-            startY: outputAreaItem.parent.y + outputAreaItem.y + outputAreaItem.height
+            startY: outputItem.y + outputAreaItem.parent.y + outputAreaItem.y + outputAreaItem.height
 
             PathLine {
-                x: tabletItem.mapped.x
-                y: tabletItem.mapped.y + tabletItem.mapped.height
+                x: tabletItem.mapped.x + inputAreaItem.x
+                y: tabletItem.mapped.y + inputAreaItem.height + inputAreaItem.y
             }
         }
 
@@ -267,11 +374,11 @@ Item {
             strokeColor: Qt.alpha(Kirigami.Theme.highlightColor, 0.5)
 
             startX: outputAreaItem.parent.x + outputAreaItem.x + outputAreaItem.width
-            startY: outputAreaItem.parent.y + outputAreaItem.y + outputAreaItem.height
+            startY: outputItem.y + outputAreaItem.parent.y + outputAreaItem.y + outputAreaItem.height
 
             PathLine {
-                x: tabletItem.mapped.x + tabletItem.mapped.width
-                y: tabletItem.mapped.y  + tabletItem.mapped.height
+                x: tabletItem.mapped.x + inputAreaItem.width + inputAreaItem.x
+                y: tabletItem.mapped.y  + inputAreaItem.height + inputAreaItem.y
             }
         }
     }
