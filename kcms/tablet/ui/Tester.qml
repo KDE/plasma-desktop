@@ -196,9 +196,14 @@ QQC2.ApplicationWindow {
                     QQC2.TextArea {
                         id: penLogText
 
-                        text: i18nd("kcm_tablet", "## Legend:\n# X, Y - event coordinate\n")
                         readOnly: true
                         wrapMode: TextEdit.Wrap
+
+                        Component.onCompleted: loadLegend()
+
+                        function loadLegend(): void {
+                            text = i18nd("kcm_tablet", "## Legend:\n# X, Y - event coordinate\n");
+                        }
                     }
                 }
 
@@ -208,6 +213,7 @@ QQC2.ApplicationWindow {
 
                     onClicked: {
                         penLogText.clear();
+                        penLogText.loadLegend();
                         penPath.path = [];
                     }
 
