@@ -26,6 +26,7 @@ class InputDevice : public QObject
     Q_PROPERTY(bool supportsLeftHanded READ supportsLeftHanded CONSTANT)
     Q_PROPERTY(bool leftHanded READ isLeftHanded WRITE setLeftHanded NOTIFY leftHandedChanged)
     Q_PROPERTY(bool supportsCalibrationMatrix READ supportsCalibrationMatrix CONSTANT)
+    Q_PROPERTY(bool calibrationMatrixIsDefault READ calibrationMatrixIsDefault NOTIFY calibrationMatrixChanged)
 
     Q_PROPERTY(bool supportsOrientation READ supportsOrientation CONSTANT)
     Q_PROPERTY(int orientation READ orientation WRITE setOrientation NOTIFY orientationChanged)
@@ -107,7 +108,7 @@ public:
 
     bool supportsCalibrationMatrix() const
     {
-        return m_supportsCalibrationMatrix.value();
+        return m_calibrationMatrix.isSupported();
     }
 
     bool isEnabled() const
@@ -117,19 +118,22 @@ public:
 
     QMatrix4x4 defaultCalibrationMatrix() const
     {
-        return m_iface->property("defaultCalibrationMatrix").value<QMatrix4x4>();
+        return deserializeMatrix(m_calibrationMatrix.defaultValue());
     }
 
     QMatrix4x4 calibrationMatrix() const
     {
-        return m_iface->property("calibrationMatrix").value<QMatrix4x4>();
+        return deserializeMatrix(m_calibrationMatrix.value());
     }
 
-    void setCalibrationMatrix(const QMatrix4x4 &matrix) const
+    void setCalibrationMatrix(const QMatrix4x4 &matrix)
     {
-        // TODO: why does this not with our existing interface...?
-        QDBusInterface iface(QStringLiteral("org.kde.KWin"), m_iface->path());
-        iface.setProperty("calibrationMatrix", matrix);
+        m_calibrationMatrix.set(serializeMatrix(matrix));
+    }
+
+    bool calibrationMatrixIsDefault() const
+    {
+        return m_calibrationMatrix.isDefaults();
     }
 
     void setEnabled(bool enabled);
@@ -203,6 +207,7 @@ Q_SIGNALS:
     void inputAreaChanged();
     void pressureRangeMinChanged();
     void pressureRangeMaxChanged();
+    void calibrationMatrixChanged();
 
 private:
     template<typename T>
@@ -297,6 +302,9 @@ private:
         mutable std::optional<T> m_value;
     };
 
+    static QString serializeMatrix(const QMatrix4x4 &matrix);
+    static QMatrix4x4 deserializeMatrix(const QString &matrix);
+
     //
     // general
     Prop<QString> m_name = Prop<QString>(this, "name");
@@ -327,8 +335,11 @@ private:
     Prop<bool> m_mapToWorkspace =
         Prop<bool>(this, "mapToWorkspace", &OrgKdeKWinInputDeviceInterface::defaultMapToWorkspace, nullptr, &InputDevice::mapToWorkspaceChanged);
 
-    Prop<bool> m_supportsCalibrationMatrix =
-        Prop<bool>(this, "supportsCalibrationMatrix", nullptr, &OrgKdeKWinInputDeviceInterface::supportsCalibrationMatrix, nullptr);
+    Prop<QString> m_calibrationMatrix = Prop<QString>(this,
+                                                      "calibrationMatrix",
+                                                      &OrgKdeKWinInputDeviceInterface::defaultCalibrationMatrix,
+                                                      &OrgKdeKWinInputDeviceInterface::supportsCalibrationMatrix,
+                                                      &InputDevice::calibrationMatrixChanged);
 
     Prop<QString> m_pressureCurve =
         Prop<QString>(this, "pressureCurve", &OrgKdeKWinInputDeviceInterface::defaultPressureCurve, nullptr, &InputDevice::pressureCurveChanged);

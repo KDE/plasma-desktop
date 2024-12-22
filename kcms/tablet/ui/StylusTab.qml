@@ -265,6 +265,10 @@ Kirigami.FormLayout {
                 root.calibrationWindow = window;
             }
         }
+
+        SettingHighlighter {
+            highlight: !root.device.calibrationMatrixIsDefault
+        }
     }
 
     ActionDialog {

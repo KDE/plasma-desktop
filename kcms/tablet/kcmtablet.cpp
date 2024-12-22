@@ -168,33 +168,6 @@ public:
     }
 };
 
-// QMatrix4x4 over DBus is needed for writing calibration matrices
-QDBusArgument &operator<<(QDBusArgument &argument, const QMatrix4x4 &matrix)
-{
-    argument.beginArray(qMetaTypeId<double>());
-    for (quint8 row = 0; row < 4; ++row) {
-        for (quint8 col = 0; col < 4; ++col) {
-            argument << matrix(row, col);
-        }
-    }
-    argument.endArray();
-    return argument;
-}
-
-const QDBusArgument &operator>>(const QDBusArgument &argument, QMatrix4x4 &matrix)
-{
-    argument.beginArray();
-    for (quint8 row = 0; row < 4; ++row) {
-        for (quint8 col = 0; col < 4; ++col) {
-            double val;
-            argument >> val;
-            matrix(row, col) = val;
-        }
-    }
-    argument.endArray();
-    return argument;
-}
-
 class StylusButtonsModel : public QStandardItemModel
 {
     Q_OBJECT
@@ -319,8 +292,6 @@ Tablet::Tablet(QObject *parent, const KPluginMetaData &metaData)
     }
 
     m_tabletsModel = new TabletsModel(m_db, this);
-
-    qDBusRegisterMetaType<QMatrix4x4>();
 
     qmlRegisterType<OutputsModel>("org.kde.plasma.tablet.kcm", 1, 0, "OutputsModel");
     qmlRegisterType<OrientationsModel>("org.kde.plasma.tablet.kcm", 1, 0, "OrientationsModel");

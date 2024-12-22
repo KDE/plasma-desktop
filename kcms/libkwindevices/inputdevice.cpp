@@ -6,8 +6,6 @@
 
 #include "inputdevice.h"
 
-#include <QDBusError>
-#include <QDBusInterface>
 #include <QList>
 
 #include "logging.h"
@@ -67,6 +65,7 @@ InputDevice::InputDevice(const QString &dbusName, QObject *parent)
     connect(this, &InputDevice::inputAreaChanged, this, &InputDevice::needsSaveChanged);
     connect(this, &InputDevice::pressureRangeMinChanged, this, &InputDevice::needsSaveChanged);
     connect(this, &InputDevice::pressureRangeMaxChanged, this, &InputDevice::needsSaveChanged);
+    connect(this, &InputDevice::calibrationMatrixChanged, this, &InputDevice::needsSaveChanged);
 }
 
 void InputDevice::save()
@@ -81,12 +80,13 @@ void InputDevice::save()
     m_inputArea.save();
     m_pressureRangeMin.save();
     m_pressureRangeMax.save();
+    m_calibrationMatrix.save();
 }
 
 bool InputDevice::isSaveNeeded() const
 {
     return m_leftHanded.changed() || m_orientation.changed() || m_outputName.changed() || m_outputArea.changed() || m_enabled.changed()
-        || m_mapToWorkspace.changed() || m_pressureCurve.changed() || m_inputArea.changed() || m_pressureRangeMin.changed() || m_pressureRangeMax.changed();
+        || m_mapToWorkspace.changed() || m_pressureCurve.changed() || m_inputArea.changed() || m_pressureRangeMin.changed() || m_pressureRangeMax.changed() || m_calibrationMatrix.changed();
 }
 
 void InputDevice::defaults()
@@ -97,19 +97,17 @@ void InputDevice::defaults()
     m_outputArea.resetFromDefaults();
     m_enabled.resetFromDefaults();
     m_mapToWorkspace.resetFromDefaults();
-    if (supportsCalibrationMatrix()) {
-        setCalibrationMatrix(defaultCalibrationMatrix());
-    }
     m_pressureCurve.resetFromDefaults();
     m_inputArea.resetFromDefaults();
     m_pressureRangeMin.resetFromDefaults();
     m_pressureRangeMax.resetFromDefaults();
+    m_calibrationMatrix.resetFromDefaults();
 }
 
 bool InputDevice::isDefaults() const
 {
     return m_leftHanded.isDefaults() && m_orientation.isDefaults() && m_outputName.isDefaults() && m_outputArea.isDefaults() && m_enabled.isDefaults()
-        && m_mapToWorkspace.isDefaults() && m_pressureCurve.isDefaults() && m_inputArea.isDefaults() && m_pressureRangeMin.isDefaults() && m_pressureRangeMax.isDefaults();
+        && m_mapToWorkspace.isDefaults() && m_pressureCurve.isDefaults() && m_inputArea.isDefaults() && m_pressureRangeMin.isDefaults() && m_pressureRangeMax.isDefaults() && m_calibrationMatrix.isDefaults();
 }
 
 void InputDevice::load()
@@ -124,6 +122,7 @@ void InputDevice::load()
     m_inputArea.resetFromSaved();
     m_pressureRangeMin.resetFromSaved();
     m_pressureRangeMax.resetFromSaved();
+    m_calibrationMatrix.resetFromSaved();
 }
 
 void InputDevice::setOrientation(int ori)
@@ -169,6 +168,34 @@ void InputDevice::setPressureCurve(const QString &curve)
 bool InputDevice::pressureCurveIsDefault() const
 {
     return m_pressureCurve.isDefaults();
+}
+
+QString InputDevice::serializeMatrix(const QMatrix4x4 &matrix)
+{
+    QString result;
+    for (int i = 0; i < 16; i++) {
+        result.append(QString::number(matrix.constData()[i]));
+        if (i != 15) {
+            result.append(QLatin1Char(','));
+        }
+    }
+    return result;
+}
+
+QMatrix4x4 InputDevice::deserializeMatrix(const QString &matrix)
+{
+    const auto items = QStringView(matrix).split(QLatin1Char(','));
+    if (items.size() == 16) {
+        QList<float> data;
+        data.reserve(16);
+        std::ranges::transform(std::as_const(items), std::back_inserter(data), [](const QStringView &item) {
+            return item.toFloat();
+        });
+
+        return QMatrix4x4{data.constData()};
+    }
+
+    return QMatrix4x4{};
 }
 
 #include "moc_inputdevice.cpp"
