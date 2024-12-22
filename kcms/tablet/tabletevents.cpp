@@ -77,12 +77,24 @@ public:
         m_tool_x = x;
         m_tool_y = y;
         const double pressure = m_pressure / 65535.0;
-        Q_EMIT m_events->toolMotion(m_hardware_serial_hi, m_hardware_serial_lo, wl_fixed_to_double(m_tool_x), wl_fixed_to_double(m_tool_y), pressure);
+        Q_EMIT m_events->toolMotion(m_hardware_serial_hi,
+                                    m_hardware_serial_lo,
+                                    wl_fixed_to_double(m_tool_x),
+                                    wl_fixed_to_double(m_tool_y),
+                                    pressure,
+                                    wl_fixed_to_double(m_tilt_x),
+                                    wl_fixed_to_double(m_tilt_y));
     }
 
     void zwp_tablet_tool_v2_pressure(uint32_t pressure) override
     {
         m_pressure = pressure;
+    }
+
+    void zwp_tablet_tool_v2_tilt(wl_fixed_t tilt_x, wl_fixed_t tilt_y) override
+    {
+        m_tilt_x = tilt_x;
+        m_tilt_y = tilt_y;
     }
 
     void zwp_tablet_tool_v2_down(uint32_t serial) override
@@ -101,6 +113,8 @@ public:
     uint32_t m_tool_x = 0;
     uint32_t m_tool_y = 0;
     uint32_t m_pressure = 0;
+    uint32_t m_tilt_x = 0;
+    uint32_t m_tilt_y = 0;
     TabletEvents *const m_events;
 };
 

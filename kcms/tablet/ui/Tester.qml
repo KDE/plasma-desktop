@@ -59,13 +59,13 @@ QQC2.ApplicationWindow {
             scrollLogToBottom();
         }
 
-        function onToolMotion(hardware_serial_hi: int, hardware_serial_lo: int, window_x: real, window_y: real, pressure: real): void {
+        function onToolMotion(hardware_serial_hi: int, hardware_serial_lo: int, window_x: real, window_y: real, pressure: real, tilt_x: real, tilt_y: real): void {
             const local = drawingSquare.mapFromItem(container, window_x, window_y);
 
             if (insideDrawingSquare(local.x, local.y) && root.toolDown) {
                 penPath.path.push(local);
 
-                penLogText.append(i18nd("kcm_tablet", "Stylus move X=%1 Y=%2 P=%3%", local.x, local.y, pressure * 100.0));
+                penLogText.append(i18nd("kcm_tablet", "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5", local.x, local.y, pressure * 100.0, tilt_x, tilt_y));
                 scrollLogToBottom();
             }
         }
@@ -202,7 +202,7 @@ QQC2.ApplicationWindow {
                         Component.onCompleted: loadLegend()
 
                         function loadLegend(): void {
-                            text = i18nd("kcm_tablet", "## Legend:\n# X, Y - event coordinate\n# P - pressure");
+                            text = i18nd("kcm_tablet", "## Legend:\n# X, Y - event coordinate\n# P - pressure\n# TX,TY - tilt\n");
                         }
                     }
                 }
