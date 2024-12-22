@@ -111,6 +111,8 @@ Kirigami.FormLayout {
             PressureCurve {
                 id: pressureCurve
 
+                property bool loadedSettings: false
+
                 onControlPoint1Changed: saveSettings()
                 onControlPoint2Changed: saveSettings()
                 isDefault: root.device.pressureCurveIsDefault
@@ -130,10 +132,15 @@ Kirigami.FormLayout {
                         pressureCurve.controlPoint2 = points[1];
                         pressureCurve.forceReloadControlPoints();
                     }
+
+                    // For some reason this function will be called first, even before the settings are loaded
+                    // which causes the pressure curve to reset to it's default. We need to ensure saveSettings() can
+                    // only be called before reloadSettings().
+                    loadedSettings = true;
                 }
 
                 function saveSettings(): void {
-                    if (!root.device) {
+                    if (!root.device || !loadedSettings) {
                         return;
                     }
 
