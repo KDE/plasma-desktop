@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: KDE 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-06 00:42+0000\n"
-"PO-Revision-Date: 2024-12-01 19:38+0400\n"
+"PO-Revision-Date: 2024-12-19 07:20+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -504,17 +504,16 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "أزِل هذه اللوحة؛ لا يمكن التراجع عن هذا الإجراء"
 
 #: contents/configuration/PanelConfiguration.qml:653
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
-msgstr "أزل اللوحة"
+msgstr "استنسخ اللوحة"
 
 #: contents/configuration/PanelConfiguration.qml:657
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
-msgstr ""
+msgstr "أنشئ لوحة جديدة بنفس الإعدادات والتطبيقات الصغيرة"
 
 #: contents/configuration/PanelConfiguration.qml:666
 #, kde-format

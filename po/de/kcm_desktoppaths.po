@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
 # Thomas Diehl <thd@kde.org>, 2002, 2003, 2004.
 # Thomas Diehl <th.diehl@gmx.net>, 2004.
 # Stephan Johach <hunsum@gmx.de>, 2005.
@@ -10,56 +11,51 @@ msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-30 00:41+0000\n"
-"PO-Revision-Date: 2023-02-26 01:18+0100\n"
-"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
+"PO-Revision-Date: 2024-11-20 14:40+0100\n"
+"Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Desktop %1:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Desktop folder:"
-msgstr "Arbeitsfläche %1:"
+msgstr "Arbeitsflächenordner:"
 
 #: ui/main.qml:58
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder contains all the files you see on your desktop."
 msgstr ""
+"Dieser Ordner enthält alle Dateien, die Sie auf Ihrer Arbeitsfläche sehen."
 
 #: ui/main.qml:66
-#, fuzzy, kde-format
-#| msgid "Documents"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Documents folder:"
-msgstr "Dokumente"
+msgstr "Dokumentenordner:"
 
 #: ui/main.qml:72
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save documents from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save documents."
 msgstr ""
-"Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von "
+"Dieser Ordner wird als Voreinstellung zum Öffnen oder Speichern von "
 "Dokumenten benutzt."
 
 #: ui/main.qml:80
-#, fuzzy, kde-format
-#| msgid "Downloads"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Downloads folder:"
-msgstr "Downloads"
+msgstr "Downloadordner:"
 
 #: ui/main.qml:86
-#, fuzzy, kde-format
-#| msgid "This folder will be used by default to save your downloaded items."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr ""
@@ -67,91 +63,76 @@ msgstr ""
 "Dateien benutzt."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgid "Videos path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Videos folder:"
-msgstr "Pfad für Videos:"
+msgstr "Videoordner:"
 
 #: ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save movies from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save video files."
 msgstr ""
-"Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von Filmen "
-"benutzt."
+"Dieser Ordner wird als Voreinstellung zum Öffnen oder Speichern von "
+"Videodateien benutzt."
 
 #: ui/main.qml:108
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Pictures folder:"
-msgstr "Pfad für Bilder:"
+msgstr "Bilderordner:"
 
 #: ui/main.qml:114
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save movies from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save image files."
 msgstr ""
-"Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von Filmen "
-"benutzt."
+"Dieser Ordner wird als Voreinstellung zum Öffnen oder Speichern von "
+"Bilddateien benutzt."
 
 #: ui/main.qml:122
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Music folder:"
-msgstr ""
+msgstr "Musikordner:"
 
 #: ui/main.qml:128
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save music from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save music files."
 msgstr ""
-"Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von Musik "
-"benutzt."
+"Dieser Ordner wird als Voreinstellung zum Öffnen oder Speichern von "
+"Musikdateien benutzt."
 
 #: ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "Public path:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Public folder:"
-msgstr "Pfad für Öffentlich:"
+msgstr "Öffentlicher Ordner:"
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save public shares from or "
-#| "to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
 msgstr ""
-"Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von "
-"öffentlichen Freigaben benutzt."
+"Dieser Ordner wird als Voreinstellung für öffentlich freigegebene Dateien "
+"verwendet, wenn Netzwerkfreigaben eingeschaltet sind."
 
 #: ui/main.qml:150
-#, fuzzy, kde-format
-#| msgid "Templates"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Templates folder:"
-msgstr "Vorlagen"
+msgstr "Vorlagenordner:"
 
 #: ui/main.qml:156
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save templates from or to."
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save file templates."
 msgstr ""
-"Dieser Ordner wird als Voreinstellung zum Laden oder Speichern von Vorlagen "
-"benutzt."
+"Dieser Ordner wird als Voreinstellung zum Öffnen oder Speichern von "
+"Dateivorlagen benutzt."
 
 #: ui/UrlRequester.qml:74
 #, kde-format
