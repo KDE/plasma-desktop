@@ -19,7 +19,7 @@ Item {
     required property real outputWidth
     required property real outputHeight
 
-    readonly property real padding: 2
+    readonly property real padding: Kirigami.Units.smallSpacing
 
     width: outputWidth + padding * 2
     height: outputHeight + Kirigami.Units.gridUnit + padding * 3
@@ -83,25 +83,22 @@ Item {
             id: rect
             anchors {
                 left: parent.left
-                right: parent.right
-                bottom: parent.bottom
                 top: rightButton.bottom
                 margins: Kirigami.Units.smallSpacing
             }
 
             height: outputHeight
             width: outputWidth
-            color: Kirigami.Theme.activeBackgroundColor
-            opacity: 0.8
+            color: Kirigami.Theme.backgroundColor
 
             border {
-                color: Kirigami.Theme.highlightColor
+                color: Kirigami.Theme.disabledTextColor
                 width: 1
             }
-        }
 
-        Item {
-            id: childrenContainer
+            Item {
+                id: childrenContainer
+            }
         }
     }
 }

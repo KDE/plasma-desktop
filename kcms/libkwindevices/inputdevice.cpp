@@ -64,6 +64,7 @@ InputDevice::InputDevice(const QString &dbusName, QObject *parent)
     connect(this, &InputDevice::enabledChanged, this, &InputDevice::needsSaveChanged);
     connect(this, &InputDevice::mapToWorkspaceChanged, this, &InputDevice::needsSaveChanged);
     connect(this, &InputDevice::pressureCurveChanged, this, &InputDevice::needsSaveChanged);
+    connect(this, &InputDevice::inputAreaChanged, this, &InputDevice::needsSaveChanged);
 }
 
 void InputDevice::save()
@@ -75,12 +76,13 @@ void InputDevice::save()
     m_enabled.save();
     m_mapToWorkspace.save();
     m_pressureCurve.save();
+    m_inputArea.save();
 }
 
 bool InputDevice::isSaveNeeded() const
 {
     return m_leftHanded.changed() || m_orientation.changed() || m_outputName.changed() || m_outputArea.changed() || m_enabled.changed()
-        || m_mapToWorkspace.changed() || m_pressureCurve.changed();
+        || m_mapToWorkspace.changed() || m_pressureCurve.changed() || m_inputArea.changed();
 }
 
 void InputDevice::defaults()
@@ -95,12 +97,13 @@ void InputDevice::defaults()
         setCalibrationMatrix(defaultCalibrationMatrix());
     }
     m_pressureCurve.resetFromDefaults();
+    m_inputArea.resetFromDefaults();
 }
 
 bool InputDevice::isDefaults() const
 {
     return m_leftHanded.isDefaults() && m_orientation.isDefaults() && m_outputName.isDefaults() && m_outputArea.isDefaults() && m_enabled.isDefaults()
-        && m_mapToWorkspace.isDefaults() && m_pressureCurve.isDefaults();
+        && m_mapToWorkspace.isDefaults() && m_pressureCurve.isDefaults() && m_inputArea.isDefaults();
 }
 
 void InputDevice::load()
@@ -112,6 +115,7 @@ void InputDevice::load()
     m_enabled.resetFromSaved();
     m_mapToWorkspace.resetFromSaved();
     m_pressureCurve.resetFromSaved();
+    m_inputArea.resetFromSaved();
 }
 
 void InputDevice::setOrientation(int ori)
@@ -132,6 +136,11 @@ void InputDevice::setLeftHanded(bool set)
 void InputDevice::setOutputArea(const QRectF &outputArea)
 {
     m_outputArea.set(outputArea);
+}
+
+void InputDevice::setInputArea(const QRectF &inputArea)
+{
+    m_inputArea.set(inputArea);
 }
 
 void InputDevice::setEnabled(bool enabled)
