@@ -132,6 +132,11 @@ QQC2.ApplicationWindow {
 
         icon.name: "crosshairs"
         focusPolicy: Qt.NoFocus
+        hoverEnabled: false
+        HoverHandler {
+            cursorShape: Qt.BlankCursor
+            acceptedDevices: PointerDevice.Stylus
+        }
 
         down: {
             const isX = root.currentPenToolX >= Kirigami.ScenePosition.x && root.currentPenToolX <= Kirigami.ScenePosition.x + width;
