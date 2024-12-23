@@ -353,7 +353,7 @@ void Tablet::save()
     m_tabletsModel->save();
 
     auto generalGroup = KSharedConfig::openConfig("kcminputrc")->group("ButtonRebinds");
-    for (const auto &device : QStringList{"Tablet", "TabletTool"}) {
+    for (const auto &device : QStringList{"Tablet", "TabletTool", "TabletDial"}) {
         for (auto it = m_unsavedMappings[device].cbegin(), itEnd = m_unsavedMappings[device].cend(); it != itEnd; ++it) {
             auto group = generalGroup.group(device).group(it.key());
             for (auto itDevice = it->cbegin(), itDeviceEnd = it->cend(); itDevice != itDeviceEnd; ++itDevice) {
@@ -377,7 +377,7 @@ void Tablet::defaults()
 
     m_unsavedMappings.clear();
     const auto generalGroup = KSharedConfig::openConfig("kcminputrc")->group("ButtonRebinds");
-    for (const auto &deviceType : QStringList{"Tablet", "TabletTool"}) {
+    for (const auto &deviceType : QStringList{"Tablet", "TabletTool", "TabletDial"}) {
         auto tabletGroup = generalGroup.group(deviceType);
         const auto tablets = tabletGroup.groupList();
         for (const auto &deviceName : tablets) {
@@ -393,6 +393,12 @@ void Tablet::defaults()
 void Tablet::assignPadButtonMapping(const QString &deviceName, uint button, const InputSequence &keySequence)
 {
     m_unsavedMappings["Tablet"][deviceName][button] = keySequence;
+    Q_EMIT settingsRestored();
+}
+
+void Tablet::assignPadDialMapping(const QString &deviceName, uint button, const InputSequence &keySequence)
+{
+    m_unsavedMappings["TabletDial"][deviceName][button] = keySequence;
     Q_EMIT settingsRestored();
 }
 
@@ -414,6 +420,22 @@ InputSequence Tablet::padButtonMapping(const QString &deviceName, uint button) c
 
     const auto cfg = KSharedConfig::openConfig("kcminputrc");
     const auto group = cfg->group("ButtonRebinds").group("Tablet").group(deviceName);
+    const auto sequence = group.readEntry(QString::number(button), QStringList());
+    return InputSequence(sequence);
+}
+
+InputSequence Tablet::padDialMapping(const QString &deviceName, uint button) const
+{
+    if (deviceName.isEmpty()) {
+        return {};
+    }
+
+    if (const auto &device = m_unsavedMappings["TabletDial"][deviceName]; device.contains(button)) {
+        return device.value(button);
+    }
+
+    const auto cfg = KSharedConfig::openConfig("kcminputrc");
+    const auto group = cfg->group("ButtonRebinds").group("TabletDial").group(deviceName);
     const auto sequence = group.readEntry(QString::number(button), QStringList());
     return InputSequence(sequence);
 }

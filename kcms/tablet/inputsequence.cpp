@@ -37,6 +37,12 @@ InputSequence::InputSequence(const QStringList &config)
         if (config.size() == 2) {
             keyData() = config.last();
         }
+    } else if (type == u"AxisKey"_s) {
+        setType(Type::RelativeKeyboard);
+
+        if (config.size() == 3) {
+            relativeKeyData() = {config.at(1), config.at(2)};
+        }
     } else if (type == u"MouseButton"_s) {
         setType(Type::Mouse);
 
@@ -72,6 +78,8 @@ InputSequence::InputSequence(const QStringList &config)
                 penData() = 2;
             }
         }
+    } else if (type == u"Scroll"_s) {
+        setType(Type::Scroll);
     } else {
         qCWarning(KCM_TABLET) << "Unknown input sequence type" << type;
     }
@@ -91,10 +99,14 @@ void InputSequence::setType(const Type type)
         switch (m_type) {
         case Type::Disabled:
         case Type::ApplicationDefined:
+        case Type::Scroll:
             m_data = NoData{};
             break;
         case Type::Keyboard:
             m_data = KeyData{QString{}};
+            break;
+        case Type::RelativeKeyboard:
+            m_data = RelativeKeyData{QString{}, QString{}};
             break;
         case Type::Mouse:
             m_data = MouseData{.button = Qt::LeftButton, .modifiers = {}};
@@ -116,6 +128,11 @@ QStringList InputSequence::toConfigFormat() const
     case Type::Keyboard: {
         const auto key = keyData().toString(QKeySequence::PortableText);
         return QStringList{u"Key"_s, key};
+    }
+    case Type::RelativeKeyboard: {
+        const auto upKey = relativeKeyData().up.toString(QKeySequence::PortableText);
+        const auto downKey = relativeKeyData().down.toString(QKeySequence::PortableText);
+        return QStringList{u"AxisKey"_s, upKey, downKey};
     }
     case Type::Mouse: {
         const auto mouse = mouseData();
@@ -159,6 +176,8 @@ QStringList InputSequence::toConfigFormat() const
             Q_UNREACHABLE();
         }
         return QStringList{"TabletToolButton", QString::number(linuxButton)};
+    case Type::Scroll:
+        return QStringList{"Scroll"};
     }
     default:
         Q_UNREACHABLE();
@@ -176,6 +195,26 @@ QString InputSequence::toString() const
         }
         return keyData().toString(QKeySequence::NativeText);
     }
+    case Type::RelativeKeyboard: {
+        QList<QKeySequence> sequences;
+        if (!relativeKeyData().up.isEmpty()) {
+            sequences.push_back(relativeKeyData().up);
+        }
+        if (!relativeKeyData().down.isEmpty()) {
+            sequences.push_back(relativeKeyData().down);
+        }
+
+        if (sequences.size() == 2) {
+            return i18nc("@action:button Two keybinds for a dial, up & down",
+                         "%1 && %2",
+                         sequences.first().toString(QKeySequence::NativeText),
+                         sequences.last().toString(QKeySequence::NativeText));
+        }
+        if (sequences.size() == 1) {
+            return sequences.first().toString(QKeySequence::NativeText);
+        }
+        return i18nc("@action:button There is no keybindings", "None");
+    }
     case Type::Mouse: {
         switch (mouseData().button) {
         case Qt::LeftButton:
@@ -192,6 +231,8 @@ QString InputSequence::toString() const
         return i18nc("@action:button", "Application-defined");
     case Type::Pen:
         return i18nc("@action:button", "Pen Button %1", penData() + 1);
+    case Type::Scroll:
+        return i18nc("@action:button", "Scroll wheel");
     default:
         Q_UNREACHABLE();
     }
@@ -205,6 +246,26 @@ QKeySequence InputSequence::keySequence() const
 void InputSequence::setKeySequence(const QKeySequence &sequence)
 {
     keyData() = sequence;
+}
+
+QKeySequence InputSequence::upKeySequence() const
+{
+    return relativeKeyData().up;
+}
+
+void InputSequence::setUpKeySequence(const QKeySequence &sequence)
+{
+    relativeKeyData().up = sequence;
+}
+
+QKeySequence InputSequence::downKeySequence() const
+{
+    return relativeKeyData().down;
+}
+
+void InputSequence::setDownKeySequence(const QKeySequence &sequence)
+{
+    relativeKeyData().down = sequence;
 }
 
 Qt::MouseButton InputSequence::mouseButton() const
@@ -243,6 +304,12 @@ InputSequence::KeyData &InputSequence::keyData()
     return std::get<KeyData>(m_data);
 }
 
+InputSequence::RelativeKeyData &InputSequence::relativeKeyData()
+{
+    Q_ASSERT(m_type == Type::RelativeKeyboard);
+    return std::get<RelativeKeyData>(m_data);
+}
+
 InputSequence::MouseData &InputSequence::mouseData()
 {
     Q_ASSERT(m_type == Type::Mouse);
@@ -259,6 +326,12 @@ InputSequence::KeyData InputSequence::keyData() const
 {
     Q_ASSERT(m_type == Type::Keyboard);
     return std::get<KeyData>(m_data);
+}
+
+InputSequence::RelativeKeyData InputSequence::relativeKeyData() const
+{
+    Q_ASSERT(m_type == Type::RelativeKeyboard);
+    return std::get<RelativeKeyData>(m_data);
 }
 
 InputSequence::MouseData InputSequence::mouseData() const

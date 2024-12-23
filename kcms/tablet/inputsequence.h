@@ -26,8 +26,10 @@ public:
     enum class Type {
         Disabled, /** Emits nothing. */
         Keyboard, /** Emits a keyboard event. */
+        RelativeKeyboard, /** Emits a different keyboard event depending on up/down movement. */
         Mouse, /** Emits a mouse event. */
         Pen, /** Emits a stylus pen (tool button) event. */
+        Scroll, /** Emits a scrollwheel event. Only applicable to devices that emit relative deltas. */
         ApplicationDefined /** The tablet button is passed directly to the application. */
     };
     Q_ENUM(Type)
@@ -73,6 +75,26 @@ public:
     Q_INVOKABLE void setKeySequence(const QKeySequence &sequence);
 
     /**
+     * @return The up movement keyboard sequence. Will assert on a non-RelativeKeyboard type sequence.
+     */
+    Q_INVOKABLE QKeySequence upKeySequence() const;
+
+    /**
+     * @brief Sets the up movement keyboard sequence. Will assert on a non-RelativeKeyboard type sequence.
+     */
+    Q_INVOKABLE void setUpKeySequence(const QKeySequence &sequence);
+
+    /**
+     * @return The down movement keyboard sequence. Will assert on a non-RelativeKeyboard type sequence.
+     */
+    Q_INVOKABLE QKeySequence downKeySequence() const;
+
+    /**
+     * @brief Sets the down movement keyboard sequence. Will assert on a non-RelativeKeyboard type sequence.
+     */
+    Q_INVOKABLE void setDownKeySequence(const QKeySequence &sequence);
+
+    /**
      * @return The mouse buttons to be emitted. Will assert on a non-Mouse type sequence.
      */
     Q_INVOKABLE Qt::MouseButton mouseButton() const;
@@ -104,6 +126,10 @@ public:
 
 private:
     using KeyData = QKeySequence;
+    struct RelativeKeyData {
+        QKeySequence up;
+        QKeySequence down;
+    };
 
     struct MouseSequence {
         Qt::MouseButton button;
@@ -114,13 +140,15 @@ private:
     using NoData = std::monostate;
 
     KeyData &keyData();
+    RelativeKeyData &relativeKeyData();
     MouseData &mouseData();
     PenData &penData();
 
     KeyData keyData() const;
+    RelativeKeyData relativeKeyData() const;
     MouseData mouseData() const;
     PenData penData() const;
 
     Type m_type = Type::ApplicationDefined;
-    std::variant<KeyData, MouseData, PenData, NoData> m_data;
+    std::variant<KeyData, RelativeKeyData, MouseData, PenData, NoData> m_data;
 };

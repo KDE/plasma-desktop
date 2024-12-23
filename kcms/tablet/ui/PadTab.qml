@@ -22,6 +22,44 @@ Kirigami.FormLayout {
     required property var tabletEvents
 
     Repeater {
+        id: dialRepeater
+        model: root.padDevice.tabletPadDialCount
+
+        delegate: ActionBinding {
+            id: seq
+
+            required property var modelData
+
+            Kirigami.FormData.label: i18nd("kcm_tablet", "Pad dial %1:", modelData + 1)
+
+            name: i18ndc("kcm_tablet", "@info Meant to be inserted into an existing sentence like 'configuring pad button 0'", "pad dial %1", modelData + 1)
+            supportsPenButton: false
+            supportsRelativeEvents: true
+
+            function refreshInputSequence(): void {
+                seq.inputSequence = kcm.padDialMapping(root.padDevice.name, modelData)
+            }
+
+            inputSequence: kcm.padDialMapping(root.padDevice.name, modelData)
+            Connections {
+                target: kcm
+                function onSettingsRestored() {
+                    refreshInputSequence();
+                }
+            }
+
+            onGotInputSequence: sequence => {
+                kcm.assignPadDialMapping(root.padDevice.name, modelData, sequence)
+            }
+
+            SettingHighlighter {
+                // Currently, application-defined is the default
+                highlight: seq.inputSequence.type !== InputSequence.ApplicationDefined
+            }
+        }
+    }
+
+    Repeater {
         id: buttonsRepeater
         model: root.padDevice.tabletPadButtonCount
 
