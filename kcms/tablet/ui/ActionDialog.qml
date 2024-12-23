@@ -19,6 +19,7 @@ Kirigami.Dialog {
     property inputSequence inputSequence
     property string name
     property bool supportsPenButton
+    property bool supportsRelativeEvents
 
     signal gotInputSequence(sequence: inputSequence)
 
@@ -61,6 +62,9 @@ Kirigami.Dialog {
             case InputSequence.Pen:
                 penRadio.checked = true;
                 break;
+            case InputSequence.Scroll:
+                scrollRadio.checked = true;
+                break;
             case InputSequence.ApplicationDefined:
                 applicationRadio.checked = true;
                 break;
@@ -101,6 +105,7 @@ Kirigami.Dialog {
 
             icon.name: "input-keyboard-symbolic"
             text: i18ndc("kcm_tablet", "@option:radio Set this action to a keyboard type", "Send keyboard key")
+            visible: !actionDialog.supportsRelativeEvents
 
             QQC2.ButtonGroup.group: radioGroup
 
@@ -116,6 +121,7 @@ Kirigami.Dialog {
 
             text: i18ndc("kcm_tablet", "@option:radio Set this action to a mouse type", "Send mouse button click")
             icon.name: "input-mouse-symbolic"
+            visible: !actionDialog.supportsRelativeEvents
 
             QQC2.ButtonGroup.group: radioGroup
 
@@ -142,9 +148,26 @@ Kirigami.Dialog {
             }
         }
         QQC2.RadioButton {
-            id: disabledRadio
+            id: scrollRadio
 
             readonly property int index: 4
+
+            text: i18ndc("kcm_tablet", "@option:radio Set this action to a pen button type", "Send scroll wheel")
+            icon.name: "input-mouse-click-middle"
+            visible: actionDialog.supportsRelativeEvents
+            enabled: visible
+
+            QQC2.ButtonGroup.group: radioGroup
+
+            onToggled: {
+                inputSequence.type = InputSequence.Scroll;
+                refreshDialogData();
+            }
+        }
+        QQC2.RadioButton {
+            id: disabledRadio
+
+            readonly property int index: 5
 
             icon.name: "action-unavailable-symbolic"
             text: i18ndc("kcm_tablet", "@option:radio Disable this action", "Do nothing")
@@ -268,6 +291,15 @@ Kirigami.Dialog {
 
                     onActivated: actionDialog.inputSequence.setPenButton(currentValue)
                 }
+            }
+            QQC2.Label {
+                id: scrollView
+
+                text: i18ndc("kcm_tablet", "@info", "This device will act like a scrollwheel.")
+
+                wrapMode: Text.WordWrap
+
+                Layout.fillWidth: true
             }
             QQC2.Label {
                 id: disabledView

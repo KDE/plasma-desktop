@@ -72,6 +72,8 @@ InputSequence::InputSequence(const QStringList &config)
                 penData() = 2;
             }
         }
+    } else if (type == u"Scroll"_s) {
+        setType(Type::Scroll);
     } else {
         qCWarning(KCM_TABLET) << "Unknown input sequence type" << type;
     }
@@ -91,6 +93,7 @@ void InputSequence::setType(const Type type)
         switch (m_type) {
         case Type::Disabled:
         case Type::ApplicationDefined:
+        case Type::Scroll:
             m_data = NoData{};
             break;
         case Type::Keyboard:
@@ -159,6 +162,8 @@ QStringList InputSequence::toConfigFormat() const
             Q_UNREACHABLE();
         }
         return QStringList{"TabletToolButton", QString::number(linuxButton)};
+    case Type::Scroll:
+        return QStringList{"Scroll"};
     }
     default:
         Q_UNREACHABLE();
@@ -192,6 +197,8 @@ QString InputSequence::toString() const
         return i18nc("@action:button", "Application-defined");
     case Type::Pen:
         return i18nc("@action:button", "Pen Button %1", penData() + 1);
+    case Type::Scroll:
+        return i18nc("@action:button", "Scrollwheel");
     default:
         Q_UNREACHABLE();
     }

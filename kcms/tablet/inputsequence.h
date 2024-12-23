@@ -28,6 +28,7 @@ public:
         Keyboard, /** Emits a keyboard event. */
         Mouse, /** Emits a mouse event. */
         Pen, /** Emits a stylus pen (tool button) event. */
+        Scroll, /** Emits a scrollwheel event. Only applicable to devices that emit relative deltas. */
         ApplicationDefined /** The tablet button is passed directly to the application. */
     };
     Q_ENUM(Type)

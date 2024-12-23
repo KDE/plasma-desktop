@@ -35,6 +35,7 @@ class InputDevice : public QObject
     Q_PROPERTY(QString pressureCurve READ pressureCurve WRITE setPressureCurve NOTIFY pressureCurveChanged)
     Q_PROPERTY(bool pressureCurveIsDefault READ pressureCurveIsDefault NOTIFY pressureCurveChanged)
     Q_PROPERTY(quint32 tabletPadButtonCount READ tabletPadButtonCount CONSTANT)
+    Q_PROPERTY(quint32 tabletPadDialCount READ tabletPadDialCount CONSTANT)
 
 public:
     InputDevice(const QString &dbusName, QObject *parent);
@@ -135,6 +136,11 @@ public:
     quint32 tabletPadButtonCount() const
     {
         return m_tabletPadButtonCount.value();
+    }
+
+    quint32 tabletPadDialCount() const
+    {
+        return 2;
     }
 
     QString deviceGroup() const
