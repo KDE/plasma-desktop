@@ -28,10 +28,7 @@ QQC2.Control {
     topPadding: 0
     bottomPadding: 0
 
-    topInset: -1
-    leftInset: -1
-    rightInset: -1
-    bottomInset: -1
+    clip: true
 
     function forceReloadControlPoints(): void {
         firstControlCircle.controlPoint = controlPoint1;
@@ -41,18 +38,11 @@ QQC2.Control {
     background: Rectangle {
         color: Kirigami.Theme.backgroundColor
 
-        border {
-            width: 1
-            color: root.activeFocus ? Kirigami.Theme.highlightColor : (kcm.defaultsIndicatorsVisible && !root.isDefault ? Kirigami.Theme.neutralTextColor : Kirigami.Theme.disabledTextColor)
-        }
-
         Kirigami.Theme.inherit: false
         Kirigami.Theme.colorSet: Kirigami.Theme.View
     }
 
     contentItem: Item {
-        clip: true
-
         // Vertical grid lines
         Repeater {
             id: verticalRepeater
@@ -60,6 +50,7 @@ QQC2.Control {
             model: 4
             delegate: Shape {
                 anchors.fill: parent
+                preferredRendererType: Shape.CurveRenderer
 
                 Kirigami.Theme.inherit: false
                 Kirigami.Theme.colorSet: Kirigami.Theme.Window
@@ -90,6 +81,7 @@ QQC2.Control {
 
             delegate: Shape {
                 anchors.fill: parent
+                preferredRendererType: Shape.CurveRenderer
 
                 Kirigami.Theme.inherit: false
                 Kirigami.Theme.colorSet: Kirigami.Theme.Window
@@ -114,20 +106,21 @@ QQC2.Control {
 
         Shape {
             anchors.fill: parent
+            preferredRendererType: Shape.CurveRenderer
 
             ShapePath {
                 id: path
 
                 strokeWidth: 2
-                strokeColor: root.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.disabledTextColor
+                strokeColor: kcm.defaultsIndicatorsVisible && !root.isDefault ? Kirigami.Theme.neutralTextColor : (root.activeFocus ? Kirigami.Theme.highlightColor : Kirigami.Theme.disabledTextColor)
                 fillColor: Qt.alpha(strokeColor, 0.2)
                 simplify: true
 
-                startX: -1
-                startY: root.height + 1
+                startX: -2
+                startY: root.height + 2
 
                 PathCubic {
-                    x: root.width + 1
+                    x: root.width + 2
                     y: 0
                     control1X: root.width * controlPoint1.x
                     control1Y: root.height * (1.0 - controlPoint1.y)
@@ -136,8 +129,8 @@ QQC2.Control {
                 }
 
                 PathLine {
-                    x: root.width + 1
-                    y: root.height + 1
+                    x: root.width + 2
+                    y: root.height + 2
                 }
             }
 
