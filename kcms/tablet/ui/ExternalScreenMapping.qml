@@ -200,10 +200,10 @@ Item {
                     onActiveChanged: { outputAreaView.inputChanged = true }
 
                     xAxis.minimum: 10
-                    xAxis.maximum: outputItem.outputWidth
+                    xAxis.maximum: outputItem.outputWidth - outputAreaItem.x
 
                     yAxis.minimum: keepAspectRatio.checked ? (outputAreaItem.width * tabletItem.inverseAspectRatio) : 10
-                    yAxis.maximum: keepAspectRatio.checked ? (outputAreaItem.width * tabletItem.inverseAspectRatio) : outputItem.outputHeight
+                    yAxis.maximum: (keepAspectRatio.checked ? (outputAreaItem.width * tabletItem.inverseAspectRatio) : outputItem.outputHeight) - outputAreaItem.y
                 }
             }
         }
@@ -309,10 +309,10 @@ Item {
                     onActiveChanged: { outputAreaView.inputChanged = true }
 
                     xAxis.minimum: 10
-                    xAxis.maximum: tabletItem.outputWidth
+                    xAxis.maximum: tabletItem.outputWidth - inputAreaItem.x
 
                     yAxis.minimum: 10
-                    yAxis.maximum: tabletItem.outputHeight
+                    yAxis.maximum: tabletItem.outputHeight - inputAreaItem.y
                 }
             }
         }
