@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-12 00:40+0000\n"
+"POT-Creation-Date: 2024-12-23 00:42+0000\n"
 "PO-Revision-Date: 2024-11-29 00:48+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -52,7 +52,7 @@ msgstr "터치패드 %1의 기초 장치 정보를 읽는 중 치명적 오류�
 msgid "Cannot connect to X server"
 msgstr "X 서버에 연결할 수 없음"
 
-#: backends/x11/xlibbackend.cpp:84 ui/main.qml:98
+#: backends/x11/xlibbackend.cpp:84 ui/main.qml:99
 #, kde-format
 msgid "No touchpad found"
 msgstr "터치패드 없음"
@@ -224,71 +224,78 @@ msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "왼쪽 위 꼭짓점"
 
-#: ui/main.qml:99
+#: ui/main.qml:100
 #, kde-format
 msgid "Connect an external touchpad"
 msgstr "외부 터치패드를 연결하십시오"
 
-#: ui/main.qml:113
+#: ui/main.qml:114
 #, kde-format
 msgid "Device:"
 msgstr "장치:"
 
-#: ui/main.qml:139
+#: ui/main.qml:140
 #, kde-format
 msgid "General:"
 msgstr "일반:"
 
-#: ui/main.qml:140
+#: ui/main.qml:141
 #, kde-format
 msgid "Device enabled"
 msgstr "장치 활성화됨"
 
-#: ui/main.qml:144
+#: ui/main.qml:145
 #, kde-format
 msgid "Accept input through this device."
 msgstr "이 장치를 통해서 입력합니다."
 
-#: ui/main.qml:168
+#: ui/main.qml:169
+#, fuzzy, kde-format
+#| msgid "Disable touchpad when mouse is plugged in"
+msgctxt "@option:check"
+msgid "Disable while mouse is connected"
+msgstr "마우스가 연결되었을 때 터치패드 비활성화"
+
+#: ui/main.qml:195
 #, kde-format
 msgid "Disable while typing"
 msgstr "입력할 때 끄기"
 
-#: ui/main.qml:172
+#: ui/main.qml:200
 #, kde-format
 msgid "Disable touchpad while typing to prevent accidental inputs."
 msgstr "입력할 때 터치패드를 꺼서 커서 튐을 방지합니다."
 
-#: ui/main.qml:196
+#: ui/main.qml:224
 #, kde-format
 msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
 msgid "This can interfere with video games."
 msgstr "이 설정은 게임에 영향을 줄 수도 있습니다."
 
-#: ui/main.qml:204
+#: ui/main.qml:233
 #, kde-format
 msgid "Left-handed mode"
 msgstr "왼손잡이 모드"
 
-#: ui/main.qml:208
+#: ui/main.qml:237
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "왼쪽과 오른쪽 단추를 바꿉니다."
 
-#: ui/main.qml:234
+#: ui/main.qml:263
 #, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons to middle-click"
 msgstr "왼쪽과 오른쪽 단추를 같이 클릭해서 가운데 단추 클릭"
 
-#: ui/main.qml:238
+#: ui/main.qml:267
 #, kde-format
 msgctxt "@info:tooltip for checkbox"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
 "왼쪽과 오른쪽 단추를 같이 클릭하면 가운데 단추를 클릭한 것으로 취급합니다."
 
-#: ui/main.qml:264
+#: ui/main.qml:293
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -298,147 +305,147 @@ msgstr ""
 "이 설정을 사용하면 클릭 지연 시간을 50 ms 추가합니다. 마우스 왼쪽과 오른쪽 단"
 "추를 같이 누른 것을 올바르게 감지하기 위해서 추가 지연 시간이 필요합니다."
 
-#: ui/main.qml:274
+#: ui/main.qml:303
 #, kde-format
 msgid "Pointer speed:"
 msgstr "포인터 속도:"
 
-#: ui/main.qml:372
+#: ui/main.qml:401
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "포인터 가속:"
 
-#: ui/main.qml:403
+#: ui/main.qml:432
 #, kde-format
 msgid "None"
 msgstr "없음"
 
-#: ui/main.qml:407
+#: ui/main.qml:436
 #, kde-format
 msgid "Cursor moves the same distance as finger."
 msgstr "커서와 손가락 이동 거리는 동일합니다."
 
-#: ui/main.qml:416
+#: ui/main.qml:445
 #, kde-format
 msgid "Standard"
 msgstr "표준"
 
-#: ui/main.qml:420
+#: ui/main.qml:449
 #, kde-format
 msgid "Cursor travel distance depends on movement speed of finger."
 msgstr "커서 이동 거리가 손가락 속도에 비례합니다."
 
-#: ui/main.qml:434
+#: ui/main.qml:463
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "스크롤 속도:"
 
-#: ui/main.qml:485
+#: ui/main.qml:514
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "느리게"
 
-#: ui/main.qml:492
+#: ui/main.qml:521
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "빠르게"
 
-#: ui/main.qml:500
+#: ui/main.qml:529
 #, kde-format
 msgid "Scrolling:"
 msgstr "스크롤:"
 
-#: ui/main.qml:529
+#: ui/main.qml:558
 #, kde-format
 msgid "Two fingers"
 msgstr "두 손가락"
 
-#: ui/main.qml:533
+#: ui/main.qml:562
 #, kde-format
 msgid "Slide with two fingers scrolls."
 msgstr "두 손가락으로 밀어서 스크롤합니다."
 
-#: ui/main.qml:541
+#: ui/main.qml:570
 #, kde-format
 msgid "Touchpad edges"
 msgstr "터치패드 경계"
 
-#: ui/main.qml:545
+#: ui/main.qml:574
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
 msgstr "터치패드 경계에서 손가락을 밀어서 스크롤합니다."
 
-#: ui/main.qml:555
+#: ui/main.qml:584
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "스크롤 방향 반전(자연 스크롤)"
 
-#: ui/main.qml:571
+#: ui/main.qml:600
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "터치스크린과 같은 방식으로 스크롤합니다."
 
-#: ui/main.qml:579
+#: ui/main.qml:608
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "수평 스크롤 비활성화"
 
-#: ui/main.qml:596
+#: ui/main.qml:625
 #, kde-format
 msgid "Disable horizontal scrolling."
 msgstr "수평 스크롤을 비활성화합니다."
 
-#: ui/main.qml:609
+#: ui/main.qml:638
 #, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "탭:"
 
-#: ui/main.qml:610
+#: ui/main.qml:639
 #, kde-format
 msgctxt "@option:check"
 msgid "Tap-to-click"
 msgstr "탭으로 클릭"
 
-#: ui/main.qml:614
+#: ui/main.qml:643
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Single tap to left-click."
 msgstr "한 번 탭으로 왼쪽 단추를 클릭합니다."
 
-#: ui/main.qml:643
+#: ui/main.qml:672
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "탭 후 드래그"
 
-#: ui/main.qml:647
+#: ui/main.qml:676
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
 msgstr "탭 직후 손가락을 터치패드 위에서 움직이면 드래그합니다."
 
-#: ui/main.qml:674
+#: ui/main.qml:703
 #, kde-format
 msgid "Tap-and-drag lock"
 msgstr "탭 후 드래그 잠금"
 
-#: ui/main.qml:678
+#: ui/main.qml:707
 #, kde-format
 msgid "Dragging continues after a short finger lift."
 msgstr "손가락을 잠깐 들어올린 후에도 드래그를 계속합니다."
 
-#: ui/main.qml:698
+#: ui/main.qml:727
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "두 손가락 탭:"
 
-#: ui/main.qml:709
+#: ui/main.qml:738
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "오른쪽 단추 누름(세 손가락으로 탭하여 가운데 단추)"
 
-#: ui/main.qml:710
+#: ui/main.qml:739
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
@@ -446,12 +453,12 @@ msgstr ""
 "두 손가락으로 탭하여 오른쪽 단추, 세 손가락으로 탭하여 가운데 단추를 클릭합니"
 "다."
 
-#: ui/main.qml:712
+#: ui/main.qml:741
 #, kde-format
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "가운데 단추(세 손가락으로 탭하여 오른쪽 단추)"
 
-#: ui/main.qml:713
+#: ui/main.qml:742
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
@@ -459,27 +466,27 @@ msgstr ""
 "두 손가락으로 탭하여 가운데 단추, 세 손가락으로 탭하여 오른쪽 단추를 클릭합니"
 "다."
 
-#: ui/main.qml:715
+#: ui/main.qml:744
 #, kde-format
 msgid "Right-click"
 msgstr "오른쪽 단추"
 
-#: ui/main.qml:716
+#: ui/main.qml:745
 #, kde-format
 msgid "Tap with two fingers to right-click."
 msgstr "두 손가락으로 탭하여 오른쪽 단추를 클릭합니다."
 
-#: ui/main.qml:718
+#: ui/main.qml:747
 #, kde-format
 msgid "Middle-click"
 msgstr "가운데 단추"
 
-#: ui/main.qml:719
+#: ui/main.qml:748
 #, kde-format
 msgid "Tap with two fingers to middle-click."
 msgstr "두 손가락으로 탭하여 가운데 단추를 클릭합니다."
 
-#: ui/main.qml:777
+#: ui/main.qml:806
 #, kde-format
 msgctxt ""
 "@label for radiobutton group, configure right-click with touch-pad "
@@ -487,13 +494,13 @@ msgctxt ""
 msgid "Integrated right-click:"
 msgstr "통합된 오른쪽 단추 클릭:"
 
-#: ui/main.qml:811
+#: ui/main.qml:842
 #, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
 msgstr "오른쪽 아래 꼭짓점 누르기"
 
-#: ui/main.qml:816
+#: ui/main.qml:847
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -504,7 +511,7 @@ msgstr ""
 "터치패드의 오른쪽 아래 꼭짓점을 누르면 오른쪽 클릭한 것으로 취급합니다. 왼쪽 "
 "아래와 오른쪽 아래 꼭짓점을 동시에 누르면 가운데 단추를 클릭합니다."
 
-#: ui/main.qml:817
+#: ui/main.qml:848
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -514,37 +521,37 @@ msgstr ""
 "터치패드의 오른쪽 아래 꼭짓점을 누르면 오른쪽 클릭한 것으로 취급합니다. 아래"
 "쪽 가운데 영역을 누르면 가운데 단추를 클릭합니다."
 
-#: ui/main.qml:828
+#: ui/main.qml:859
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "아래쪽 꼭짓점을 동시에 누르면 가운데 단추 클릭으로 취급합니다."
 
-#: ui/main.qml:829
+#: ui/main.qml:860
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "아래쪽 가운데를 누르면 가운데 단추 클릭으로 취급합니다."
 
-#: ui/main.qml:847
+#: ui/main.qml:878
 #, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press touchpad with two fingers"
 msgstr "터치패드를 두 손가락으로 누르기"
 
-#: ui/main.qml:851
+#: ui/main.qml:883
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
 msgstr "터치패드의 어디든지 두 손가락으로 탭하여 오른쪽 단추를 클릭합니다."
 
-#: ui/main.qml:863
+#: ui/main.qml:895
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
 msgstr "어디든지 세 손가락으로 눌러서 가운데 단추를 클릭합니다."
 
-#: ui/main.qml:882
+#: ui/main.qml:914
 #, kde-format
 msgctxt ""
 "@label for radiobutton group, configure middle-click with touch-pad "
@@ -552,25 +559,25 @@ msgctxt ""
 msgid "Integrated middle-click:"
 msgstr "통합된 가운데 단추 클릭"
 
-#: ui/main.qml:911
+#: ui/main.qml:943
 #, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom middle edge"
 msgstr "아래쪽 가운데 경계 누르기"
 
-#: ui/main.qml:915
+#: ui/main.qml:947
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the bottom right corner of your touchpad acts as right-click."
 msgstr "오른쪽 아래 꼭짓점을 누르면 오른쪽 클릭한 것으로 취급합니다."
 
-#: ui/main.qml:923
+#: ui/main.qml:955
 #, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom left and bottom right corners"
 msgstr "왼쪽과 오른쪽 아래 꼭짓점 같이 누르기"
 
-#: ui/main.qml:927
+#: ui/main.qml:959
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid ""
@@ -580,13 +587,13 @@ msgstr ""
 "왼쪽과 오른쪽 아래 꼭짓점을 동시에 누르면 가운데 단추를 클릭한 것으로 취급합"
 "니다."
 
-#: ui/main.qml:936
+#: ui/main.qml:968
 #, kde-format
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
 msgstr "터치패드를 세 손가락으로 누르기"
 
-#: ui/main.qml:942
+#: ui/main.qml:974
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
@@ -679,9 +686,6 @@ msgstr "터치패드의 어디든지 세 손가락으로 탭하여 가운데 단
 
 #~ msgid "Disable taps and scrolling only"
 #~ msgstr "탭과 스크롤만 비활성화"
-
-#~ msgid "Disable touchpad when mouse is plugged in"
-#~ msgstr "마우스가 연결되었을 때 터치패드 비활성화"
 
 #~ msgid "Notifications:"
 #~ msgstr "알림:"

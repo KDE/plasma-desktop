@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-15 00:42+0000\n"
+"POT-Creation-Date: 2024-12-23 00:42+0000\n"
 "PO-Revision-Date: 2024-12-18 18:01+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -100,19 +100,19 @@ msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 - (%2,%3 %4x%5)"
 
-#: kcmtablet.cpp:163 ui/main.qml:196 ui/main.qml:197
+#: kcmtablet.cpp:163 ui/DisplayTab.qml:89 ui/DisplayTab.qml:90
 #, kde-format
 msgctxt "@item:inlistbox Stretch and fill to the screen"
 msgid "Stretch and Fill"
 msgstr "Extende e Plena"
 
-#: kcmtablet.cpp:164 ui/main.qml:198
+#: kcmtablet.cpp:164 ui/DisplayTab.qml:91
 #, kde-format
 msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
 msgid "Keep Aspect Ratio and Fit"
 msgstr "Mantene rata de aspecto e adapta "
 
-#: kcmtablet.cpp:165 ui/main.qml:199
+#: kcmtablet.cpp:165 ui/DisplayTab.qml:92
 #, kde-format
 msgctxt "@item:inlistbox Map to portion of the screen"
 msgid "Map to Portion"
@@ -301,6 +301,26 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Cancella"
 
+#: ui/DisplayTab.qml:39
+#, kde-format
+msgid "Map to screen:"
+msgstr "Mappa a schermo:"
+
+#: ui/DisplayTab.qml:65
+#, kde-format
+msgid "Orientation:"
+msgstr "Orientation:"
+
+#: ui/DisplayTab.qml:71
+#, kde-format
+msgid "Not Applicable"
+msgstr "Non applicabile"
+
+#: ui/DisplayTab.qml:85
+#, kde-format
+msgid "Mapped Area:"
+msgstr "Area Mappate:"
+
 #: ui/ExternalScreenMapping.qml:112
 #, kde-format
 msgctxt "tablet area position - size"
@@ -318,49 +338,73 @@ msgctxt "@option:check"
 msgid "Lock aspect ratio"
 msgstr "Bloca Proportiones (rata de aspecto)"
 
-#: ui/main.qml:35
+#: ui/main.qml:39
 #, kde-format
 msgid "No drawing tablets found"
 msgstr "Necun tabletta de designar trovate"
 
-#: ui/main.qml:36
+#: ui/main.qml:40
 #, kde-format
 msgid "Connect a drawing tablet"
 msgstr "Connecte un tablettas de designar"
 
-#: ui/main.qml:44
+#: ui/main.qml:48
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
 msgstr "Essaya Tabletta..."
 
-#: ui/main.qml:87
+#: ui/main.qml:97
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Dispositivo:"
 
-#: ui/main.qml:129
+#: ui/main.qml:157
 #, kde-format
-msgid "Map to screen:"
-msgstr "Mappa a schermo:"
+msgctxt "@title:tab"
+msgid "Display"
+msgstr ""
 
-#: ui/main.qml:154
+#: ui/main.qml:170
 #, kde-format
-msgid "Orientation:"
-msgstr "Orientation:"
+msgctxt "@title:tab"
+msgid "Pen"
+msgstr ""
 
-#: ui/main.qml:160
+#: ui/main.qml:182
+#, fuzzy, kde-format
+#| msgctxt "@label:listbox The pad we are configuring"
+#| msgid "Pad:"
+msgctxt "@title:tab"
+msgid "Pad"
+msgstr "Reimple (Pad):"
+
+#: ui/PadTab.qml:33
 #, kde-format
-msgid "Not Applicable"
-msgstr "Non applicabile"
+msgid "Pad button %1:"
+msgstr "Button de tampon (pad)  %1:"
 
-#: ui/main.qml:171
+#: ui/PadTab.qml:36
+#, kde-format
+msgctxt ""
+"@info Meant to be inserted into an existing sentence like 'configuring pad "
+"button 0'"
+msgid "pad button %1"
+msgstr "Button de tampon (pad)  %1"
+
+#: ui/StylusTab.qml:31
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "Modo pro usator de mano sinistre"
 
-#: ui/main.qml:182
+#: ui/StylusTab.qml:37
+#, kde-format
+msgctxt "Enable left-handed mode"
+msgid "Enable"
+msgstr ""
+
+#: ui/StylusTab.qml:43
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -372,41 +416,36 @@ msgstr ""
 "per dispositivo, ma sovente il inverte le functionalitate de buttones del "
 "pad assi que le tabletat pote esser usate revertite."
 
-#: ui/main.qml:192
-#, kde-format
-msgid "Mapped Area:"
-msgstr "Area Mappate:"
-
-#: ui/main.qml:277
+#: ui/StylusTab.qml:102
 #, kde-format
 msgid "Pen Pressure:"
 msgstr "Pression de Penna:"
 
-#: ui/main.qml:329
+#: ui/StylusTab.qml:154
 #, kde-format
 msgctxt "Low pen pressure"
 msgid "Low Pressure"
 msgstr "Basse Pression"
 
-#: ui/main.qml:337
+#: ui/StylusTab.qml:162
 #, kde-format
 msgctxt "High pen pressure"
 msgid "High Pressure"
 msgstr "Alte Pression"
 
-#: ui/main.qml:348
+#: ui/StylusTab.qml:173
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr "100%"
 
-#: ui/main.qml:356
+#: ui/StylusTab.qml:181
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr "0%"
 
-#: ui/main.qml:360
+#: ui/StylusTab.qml:185
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -416,42 +455,23 @@ msgstr ""
 "Iste curva controla lerelationes inter lepressiones sur le penna e le "
 "valores de pression recipite per le applicationes."
 
-#: ui/main.qml:371
+#: ui/StylusTab.qml:196
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "Calibration in progresso"
 
-#: ui/main.qml:373
+#: ui/StylusTab.qml:198
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "Calibrar"
 
-#: ui/main.qml:376
+#: ui/StylusTab.qml:201
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "Calibration non supportate"
-
-#: ui/main.qml:409
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Calibration across multiple screens is not supported."
-msgstr "Calibration trans multiple schermos non es supportate."
-
-#: ui/main.qml:435
-#, kde-format
-msgid "Pad button %1:"
-msgstr "Button de tampon (pad)  %1:"
-
-#: ui/main.qml:438
-#, kde-format
-msgctxt ""
-"@info Meant to be inserted into an existing sentence like 'configuring pad "
-"button 0'"
-msgid "pad button %1"
-msgstr "Button de tampon (pad)  %1"
 
 #: ui/Tester.qml:25
 #, kde-format
@@ -470,31 +490,37 @@ msgid "Stylus release X=%1 Y=%2"
 msgstr "Stylus relaxa X=%1 Y=%2"
 
 #: ui/Tester.qml:68
-#, kde-format
-msgid "Stylus move X=%1 Y=%2"
+#, fuzzy, kde-format
+#| msgid "Stylus move X=%1 Y=%2"
+msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 msgstr "Stylus move X=%1 Y=%2"
 
-#: ui/Tester.qml:199
-#, kde-format
+#: ui/Tester.qml:205
+#, fuzzy, kde-format
+#| msgid ""
+#| "## Legend:\n"
+#| "# X, Y - event coordinate\n"
 msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
+"# P - pressure\n"
+"# TX,TY - tilt\n"
 msgstr ""
 "## Legenda\n"
 "# X, Y - coordinata de evento\n"
 
-#: ui/Tester.qml:206
+#: ui/Tester.qml:211
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr "Netta"
 
+#~ msgctxt "@info:tooltip"
+#~ msgid "Calibration across multiple screens is not supported."
+#~ msgstr "Calibration trans multiple schermos non es supportate."
+
 #~ msgid "Fit to Screen"
 #~ msgstr "Adaota a Schermo"
-
-#~ msgctxt "@label:listbox The pad we are configuring"
-#~ msgid "Pad:"
-#~ msgstr "Reimple (Pad):"
 
 #~ msgid "None"
 #~ msgstr "Necun"
