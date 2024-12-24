@@ -4,12 +4,13 @@
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # SPDX-FileCopyrightText: 2021, 2022, 2024 Josep M. Ferrer <txemaq@gmail.com>
+# Josep M. Ferrer <txemaq@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-13 02:31+0000\n"
-"PO-Revision-Date: 2024-09-04 10:37+0200\n"
+"PO-Revision-Date: 2024-12-23 10:42+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: inputsequence.cpp:135
 #, kde-format
@@ -307,7 +308,7 @@ msgid ""
 msgstr ""
 "Li diu al dispositiu que s'adapte als usuaris esquerrans. Els efectes "
 "variaran segons el dispositiu, però sovint s'invertix la funcionalitat dels "
-"botons del teclat perquè la tauleta es puga utilitzar cap per avall."
+"botons del teclat perquè la tauleta gràfica es puga utilitzar cap per avall."
 
 #: ui/main.qml:174
 #, kde-format
@@ -408,7 +409,7 @@ msgstr "Sense"
 #: ui/main.qml:454
 #, kde-format
 msgid "Pad button %1:"
-msgstr "Botó del teclat %1:"
+msgstr "Botó de la tauleta gràfica %1:"
 
 #: ui/main.qml:457
 #, kde-format
@@ -416,7 +417,7 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad button %1"
-msgstr "botó %1 del teclat"
+msgstr "botó %1 de la tauleta gràfica"
 
 #: ui/Tester.qml:25
 #, kde-format
