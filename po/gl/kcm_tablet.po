@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-23 00:42+0000\n"
-"PO-Revision-Date: 2024-12-15 23:11+0100\n"
+"PO-Revision-Date: 2024-12-23 17:08+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -363,21 +363,19 @@ msgstr "Dispositivo:"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
-msgstr ""
+msgstr "Pantalla"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
-msgstr ""
+msgstr "Lapis"
 
 #: ui/main.qml:182
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The pad we are configuring"
-#| msgid "Pad:"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
-msgstr "Mando:"
+msgstr "Mando"
 
 #: ui/PadTab.qml:33
 #, kde-format
@@ -401,7 +399,7 @@ msgstr "Modo zurdo:"
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
-msgstr ""
+msgstr "Activar"
 
 #: ui/StylusTab.qml:43
 #, kde-kuit-format
@@ -489,16 +487,12 @@ msgid "Stylus release X=%1 Y=%2"
 msgstr "Solta de lapis X=%1 Y=%2"
 
 #: ui/Tester.qml:68
-#, fuzzy, kde-format
-#| msgid "Stylus move X=%1 Y=%2"
+#, kde-format
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
-msgstr "Movemento de lapis X=%1 Y=%2"
+msgstr "Movemento de lapis X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
 #: ui/Tester.qml:205
-#, fuzzy, kde-format
-#| msgid ""
-#| "## Legend:\n"
-#| "# X, Y - event coordinate\n"
+#, kde-format
 msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
@@ -507,6 +501,8 @@ msgid ""
 msgstr ""
 "## Lenda:\n"
 "# X, Y: coordenadas do evento\n"
+"# P: presión\n"
+"# TX, TY: inclinación\n"
 
 #: ui/Tester.qml:211
 #, kde-format

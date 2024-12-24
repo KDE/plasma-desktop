@@ -481,31 +481,21 @@ msgid "Stylus release X=%1 Y=%2"
 msgstr "压感笔释放 X=%1 Y=%2"
 
 #: ui/Tester.qml:68
-#, fuzzy, kde-format
-#| msgid "Stylus move X=%1 Y=%2"
+#, kde-format
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
-msgstr "压感笔移动 X=%1 Y=%2"
+msgstr ""
 
 #: ui/Tester.qml:205
-#, fuzzy, kde-format
-#| msgid ""
-#| "## Legend:\n"
-#| "# X, Y - event coordinate\n"
+#, kde-format
 msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
 "# P - pressure\n"
 "# TX,TY - tilt\n"
 msgstr ""
-"## 图例：\n"
-"# X、Y - 事件坐标\n"
 
 #: ui/Tester.qml:211
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr "清除"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Calibration across multiple screens is not supported."
-#~ msgstr "不支持跨屏幕校准。"

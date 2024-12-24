@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-23 00:42+0000\n"
-"PO-Revision-Date: 2024-09-05 12:30+0300\n"
+"PO-Revision-Date: 2024-12-23 09:45+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -260,11 +260,10 @@ msgid "Accept input through this device."
 msgstr "Приймати вхідні дані з цього пристрою."
 
 #: ui/main.qml:169
-#, fuzzy, kde-format
-#| msgid "Disable touchpad when mouse is plugged in"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable while mouse is connected"
-msgstr "Вимикати сенсорну панель, якщо з’єднано мишу"
+msgstr "Вимикати, якщо з'єднано мишу"
 
 #: ui/main.qml:195
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-23 00:42+0000\n"
-"PO-Revision-Date: 2024-12-15 14:13+0100\n"
+"PO-Revision-Date: 2024-12-23 11:18+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: inputsequence.cpp:172
 #, kde-format
@@ -364,21 +364,19 @@ msgstr "Apparaat:"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
-msgstr ""
+msgstr "Scherm"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
-msgstr ""
+msgstr "Pen"
 
 #: ui/main.qml:182
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The pad we are configuring"
-#| msgid "Pad:"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
-msgstr "Blok:"
+msgstr "Pad"
 
 #: ui/PadTab.qml:33
 #, kde-format
@@ -402,7 +400,7 @@ msgstr "Modus linkshandig:"
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
-msgstr ""
+msgstr "Inschakelen"
 
 #: ui/StylusTab.qml:43
 #, kde-kuit-format
@@ -490,16 +488,12 @@ msgid "Stylus release X=%1 Y=%2"
 msgstr "Stylus losgelaten X=%1 Y=%2"
 
 #: ui/Tester.qml:68
-#, fuzzy, kde-format
-#| msgid "Stylus move X=%1 Y=%2"
+#, kde-format
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
-msgstr "Stylus verplaatst naar X=%1 Y=%2"
+msgstr "Stylus verplaatst naar X=%1 Y=%2 P=%3 TX=%4 TY=%5"
 
 #: ui/Tester.qml:205
-#, fuzzy, kde-format
-#| msgid ""
-#| "## Legend:\n"
-#| "# X, Y - event coordinate\n"
+#, kde-format
 msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
@@ -508,6 +502,8 @@ msgid ""
 msgstr ""
 "## Legenda:\n"
 "# X, Y - coördinaten van gebeurtenis\n"
+"# P - druk\n"
+"# TX,TY - kanteling\n"
 
 #: ui/Tester.qml:211
 #, kde-format

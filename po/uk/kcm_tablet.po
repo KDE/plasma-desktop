@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-23 00:42+0000\n"
-"PO-Revision-Date: 2024-12-15 09:29+0200\n"
+"PO-Revision-Date: 2024-12-23 09:44+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -364,21 +364,19 @@ msgstr "Пристрій:"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
-msgstr ""
+msgstr "Дисплей"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
-msgstr ""
+msgstr "Перо"
 
 #: ui/main.qml:182
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The pad we are configuring"
-#| msgid "Pad:"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
-msgstr "Панель:"
+msgstr "Панель"
 
 #: ui/PadTab.qml:33
 #, kde-format
@@ -402,7 +400,7 @@ msgstr "Режим шульги:"
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
-msgstr ""
+msgstr "Увімкнути"
 
 #: ui/StylusTab.qml:43
 #, kde-kuit-format
@@ -490,16 +488,12 @@ msgid "Stylus release X=%1 Y=%2"
 msgstr "Стило відпущено у X=%1 Y=%2"
 
 #: ui/Tester.qml:68
-#, fuzzy, kde-format
-#| msgid "Stylus move X=%1 Y=%2"
+#, kde-format
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
-msgstr "Стило пересунуто до X=%1 Y=%2"
+msgstr "Пересування стила X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
 #: ui/Tester.qml:205
-#, fuzzy, kde-format
-#| msgid ""
-#| "## Legend:\n"
-#| "# X, Y - event coordinate\n"
+#, kde-format
 msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
@@ -508,6 +502,8 @@ msgid ""
 msgstr ""
 "## Умовні позначення:\n"
 "# X, Y - координати події\n"
+"# P - стиск\n"
+"# TX,TY - нахил\n"
 
 #: ui/Tester.qml:211
 #, kde-format

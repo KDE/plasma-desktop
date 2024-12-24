@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-23 00:42+0000\n"
-"PO-Revision-Date: 2024-09-05 05:30+0200\n"
+"PO-Revision-Date: 2024-12-23 05:51+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: actions.cpp:19
 #, kde-format
@@ -255,11 +255,10 @@ msgid "Accept input through this device."
 msgstr "ამ მოწყობილობიდან შემოტანის ჩართვა."
 
 #: ui/main.qml:169
-#, fuzzy, kde-format
-#| msgid "Disable touchpad when mouse is plugged in"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable while mouse is connected"
-msgstr "თაჩპედის გამორთვა, როცა თაგუნა შეერთებულია"
+msgstr "გამორთვა, როცა თაგუნა შეერთებულია"
 
 #: ui/main.qml:195
 #, kde-format

@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-02 00:44+0000\n"
-"PO-Revision-Date: 2024-01-23 08:22+0200\n"
-"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
+"PO-Revision-Date: 2024-12-16 17:32+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -30,17 +30,15 @@ msgstr "toms.trasuns@posteo.net"
 
 #. i18n: ectx: property (text), widget (KMessageWidget, kmessagewidget)
 #: kcmqtquicksettingswidget.ui:23
-#, fuzzy, kde-format
-#| msgid ""
-#| "These settings adjust the QtQuick settings used by Plasma. Only adjust if "
-#| "you know what you are doing."
+#, kde-format
 msgid ""
 "These settings adjust the QtQuick settings used by Plasma. Modifying these "
 "settings can break your desktop. Only adjust these settings if you know what "
 "you are doing."
 msgstr ""
 "Šie iestatījumi maina „Plasma“ izmantotos „QtQuick“ iestatījumus. Tos "
-"mainiet tikai tad, ja zināt, kas jādara."
+"mainiet tikai tad, ja zināt, kas jādara, jo nepareiza konfigurācija var "
+"salauzt darbvirsmu."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcmqtquicksettingswidget.ui:41

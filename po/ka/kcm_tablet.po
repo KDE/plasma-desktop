@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-23 00:42+0000\n"
-"PO-Revision-Date: 2024-12-15 06:23+0100\n"
+"PO-Revision-Date: 2024-12-23 05:50+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -365,21 +365,19 @@ msgstr "მოწყობილობა:"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
-msgstr ""
+msgstr "ეკრანი"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
-msgstr ""
+msgstr "ფანქარი"
 
 #: ui/main.qml:182
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The pad we are configuring"
-#| msgid "Pad:"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
-msgstr "პედი:"
+msgstr "პედი"
 
 #: ui/PadTab.qml:33
 #, kde-format
@@ -403,7 +401,7 @@ msgstr "ცაციის რეჟიმი:"
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
-msgstr ""
+msgstr "ჩართვა"
 
 #: ui/StylusTab.qml:43
 #, kde-kuit-format
@@ -491,16 +489,12 @@ msgid "Stylus release X=%1 Y=%2"
 msgstr "სტილუსის აშვების X=%1 Y=%2"
 
 #: ui/Tester.qml:68
-#, fuzzy, kde-format
-#| msgid "Stylus move X=%1 Y=%2"
+#, kde-format
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
-msgstr "სტილუსის გადაადგილების X=%1 Y=%2"
+msgstr "სტილუსის გადაადგილების X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
 #: ui/Tester.qml:205
-#, fuzzy, kde-format
-#| msgid ""
-#| "## Legend:\n"
-#| "# X, Y - event coordinate\n"
+#, kde-format
 msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
@@ -509,6 +503,8 @@ msgid ""
 msgstr ""
 "## ახსნა:\n"
 "# X, Y - მოვლენის კოორდინატები\n"
+"# P - წნევა\n"
+"# TX, TY - დახრა\n"
 
 #: ui/Tester.qml:211
 #, kde-format

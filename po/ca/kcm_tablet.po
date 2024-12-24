@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-23 00:42+0000\n"
-"PO-Revision-Date: 2024-12-15 11:35+0100\n"
+"PO-Revision-Date: 2024-12-23 10:42+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -365,26 +365,24 @@ msgstr "Dispositiu:"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
-msgstr ""
+msgstr "Visualització"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
-msgstr ""
+msgstr "Llapis"
 
 #: ui/main.qml:182
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The pad we are configuring"
-#| msgid "Pad:"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
-msgstr "Teclat:"
+msgstr "Tauleta gràfica"
 
 #: ui/PadTab.qml:33
 #, kde-format
 msgid "Pad button %1:"
-msgstr "Botó del teclat %1:"
+msgstr "Botó de la tauleta gràfica %1:"
 
 #: ui/PadTab.qml:36
 #, kde-format
@@ -392,7 +390,7 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad button %1"
-msgstr "botó %1 del teclat"
+msgstr "botó %1 de la tauleta gràfica"
 
 #: ui/StylusTab.qml:31
 #, kde-format
@@ -403,7 +401,7 @@ msgstr "Mode esquerrà:"
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
-msgstr ""
+msgstr "Activa"
 
 #: ui/StylusTab.qml:43
 #, kde-kuit-format
@@ -415,7 +413,7 @@ msgid ""
 msgstr ""
 "Li diu al dispositiu que s'adapti als usuaris esquerrans. Els efectes "
 "variaran segons el dispositiu, però sovint s'inverteix la funcionalitat dels "
-"botons del teclat perquè la tauleta es pugui utilitzar cap per avall."
+"botons del teclat perquè la tauleta gràfica es pugui utilitzar cap per avall."
 
 #: ui/StylusTab.qml:102
 #, kde-format
@@ -491,16 +489,12 @@ msgid "Stylus release X=%1 Y=%2"
 msgstr "Llapis deixat anar X=%1 Y=%2"
 
 #: ui/Tester.qml:68
-#, fuzzy, kde-format
-#| msgid "Stylus move X=%1 Y=%2"
+#, kde-format
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
-msgstr "Moviment del llapis X=%1 Y=%2"
+msgstr "Moviment del llapis X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
 #: ui/Tester.qml:205
-#, fuzzy, kde-format
-#| msgid ""
-#| "## Legend:\n"
-#| "# X, Y - event coordinate\n"
+#, kde-format
 msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
@@ -509,6 +503,8 @@ msgid ""
 msgstr ""
 "## Llegenda:\n"
 "# X, Y - coordenades de l'esdeveniment\n"
+"# P - pressió\n"
+"# TX,TY - inclinació\n"
 
 #: ui/Tester.qml:211
 #, kde-format

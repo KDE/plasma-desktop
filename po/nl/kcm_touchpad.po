@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-23 00:42+0000\n"
-"PO-Revision-Date: 2024-09-05 09:54+0200\n"
+"PO-Revision-Date: 2024-12-23 11:19+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: actions.cpp:19
 #, kde-format
@@ -254,11 +254,10 @@ msgid "Accept input through this device."
 msgstr "Gebruik dit apparaat voor invoer."
 
 #: ui/main.qml:169
-#, fuzzy, kde-format
-#| msgid "Disable touchpad when mouse is plugged in"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable while mouse is connected"
-msgstr "Touchpad uitschakelen wanneer een muis in ingeplugd"
+msgstr "Uitschakelen wanneer een muis verbonden"
 
 #: ui/main.qml:195
 #, kde-format

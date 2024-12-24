@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-23 00:42+0000\n"
-"PO-Revision-Date: 2024-12-15 12:29+0300\n"
+"PO-Revision-Date: 2024-12-23 14:16+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -364,21 +364,19 @@ msgstr "Aygıt:"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
-msgstr ""
+msgstr "Görüntü"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
-msgstr ""
+msgstr "Kalem"
 
 #: ui/main.qml:182
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The pad we are configuring"
-#| msgid "Pad:"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
-msgstr "Tablet:"
+msgstr "Ped"
 
 #: ui/PadTab.qml:33
 #, kde-format
@@ -402,7 +400,7 @@ msgstr "Sol el kipi:"
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
-msgstr ""
+msgstr "Etkinleştir"
 
 #: ui/StylusTab.qml:43
 #, kde-kuit-format
@@ -491,16 +489,12 @@ msgid "Stylus release X=%1 Y=%2"
 msgstr "Kalem bırakılışı X = %1 Y = %2"
 
 #: ui/Tester.qml:68
-#, fuzzy, kde-format
-#| msgid "Stylus move X=%1 Y=%2"
+#, kde-format
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
-msgstr "Kalem hareketi X = %1 Y = %2"
+msgstr "Kalem hareketi X = %1 Y = %2 P = %​%3 TX = %4 TY = %5"
 
 #: ui/Tester.qml:205
-#, fuzzy, kde-format
-#| msgid ""
-#| "## Legend:\n"
-#| "# X, Y - event coordinate\n"
+#, kde-format
 msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
@@ -509,6 +503,8 @@ msgid ""
 msgstr ""
 "## Gösterge:\n"
 "# X, Y — Olay koordinatı\n"
+"# P — Basınç\n"
+"# TX, TY — Eğim\n"
 
 #: ui/Tester.qml:211
 #, kde-format

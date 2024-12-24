@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-23 00:42+0000\n"
-"PO-Revision-Date: 2024-09-05 04:16+0200\n"
+"PO-Revision-Date: 2024-12-23 20:43+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: actions.cpp:19
 #, kde-format
@@ -257,11 +257,10 @@ msgid "Accept input through this device."
 msgstr "Aceptar entrada de este dispositivo."
 
 #: ui/main.qml:169
-#, fuzzy, kde-format
-#| msgid "Disable touchpad when mouse is plugged in"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable while mouse is connected"
-msgstr "Desactivar el panel táctil cuando se conecta un ratón"
+msgstr "Desactivar cuando el ratón está conectado"
 
 #: ui/main.qml:195
 #, kde-format
