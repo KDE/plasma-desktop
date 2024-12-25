@@ -36,6 +36,7 @@ include(KDEGitCommitHooks)
 include(ECMQmlModule)
 include(ECMConfiguredInstall)
 
+option(BUILD_DOC "Whether to build the documentation" ON)
 option(BUILD_KCM_MOUSE_KWIN_WAYLAND "Build the Mouse KCM's KWin+Wayland backend" ON)
 option(BUILD_KCM_MOUSE_X11 "Build the Mouse KCM's X11 backend" ON)
 option(BUILD_KCM_TOUCHPAD_KWIN_WAYLAND "Build the Touchpad KCM's KWin+Wayland backend" ON)
@@ -61,7 +62,6 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     Auth
     Crash
     Config
-    DocTools
     I18n
     KCMUtils
     NewStuff
@@ -95,8 +95,15 @@ if(BUILD_TESTING)
     include(ECMAddTests)
 endif()
 
-find_package(AccountsQt6 ${ACCOUNTSQT_DEP_VERSION} CONFIG)
+if(BUILD_DOC)
+    find_package(KF6DocTools ${KF6_MIN_VERSION})
+    set_package_properties(KF6DocTools PROPERTIES
+        DESCRIPTION "Tools to generate documentation"
+        TYPE REQUIRED
+    )
+endif()
 
+find_package(AccountsQt6 ${ACCOUNTSQT_DEP_VERSION} CONFIG)
 set_package_properties(AccountsQt6 PROPERTIES
     DESCRIPTION "Accounts management library for Qt applications"
     URL "https://gitlab.com/accounts-sso/libaccounts-qt"
@@ -298,7 +305,6 @@ endif()
 
 add_subdirectory(layout-templates)
 
-add_subdirectory(doc)
 add_subdirectory(runners)
 add_subdirectory(containments)
 add_subdirectory(toolboxes)
@@ -340,5 +346,9 @@ set_package_properties(FontNotoColorEmoji PROPERTIES
 
 add_subdirectory(appiumtests)
 
+if(BUILD_DOC)
+    add_subdirectory(doc)
+    kdoctools_install(po)
+endif()
+
 ki18n_install(po)
-kdoctools_install(po)
