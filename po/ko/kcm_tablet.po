@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-13 02:31+0000\n"
-"PO-Revision-Date: 2024-11-29 00:52+0100\n"
+"PO-Revision-Date: 2024-12-24 19:10+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -97,53 +97,53 @@ msgstr "%1 - (%2,%3 %4×%5)"
 #: kcmtablet.cpp:162
 #, kde-format
 msgid "Fit to Screen"
-msgstr ""
+msgstr "화면에 맞춤"
 
 #: kcmtablet.cpp:163
 #, kde-format
 msgid "Keep Aspect Ratio and Fit Within Screen"
-msgstr ""
+msgstr "종횡비와 화면에 맞춤 유지"
 
 #: kcmtablet.cpp:164
 #, kde-format
 msgid "Map to Portion of Screen"
-msgstr ""
+msgstr "화면의 일부분으로 대응"
 
 #: ui/ActionDialog.qml:24
 #, kde-format
 msgctxt "@title Select the action for the tablet button"
 msgid "Select Button Action"
-msgstr ""
+msgstr "단추 동작 선택"
 
 #: ui/ActionDialog.qml:70
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when pressing %1:"
-msgstr ""
+msgstr "%1을(를) 눌렀을 때 취할 동작 선택:"
 
 #: ui/ActionDialog.qml:84
 #, kde-format
 msgctxt "@option:radio Set this action to an application-defined type"
 msgid "Defer to application"
-msgstr ""
+msgstr "앱으로 전달"
 
 #: ui/ActionDialog.qml:99
 #, kde-format
 msgctxt "@option:radio Set this action to a keyboard type"
 msgid "Send keyboard key"
-msgstr ""
+msgstr "키보드 키 입력"
 
 #: ui/ActionDialog.qml:113
 #, kde-format
 msgctxt "@option:radio Set this action to a mouse type"
 msgid "Send mouse button click"
-msgstr ""
+msgstr "마우스 단추 클릭 입력"
 
 #: ui/ActionDialog.qml:129
 #, kde-format
 msgctxt "@option:radio Disable this action"
 msgid "Do nothing"
-msgstr ""
+msgstr "아무것도 안 함"
 
 #: ui/ActionDialog.qml:149
 #, kde-format
@@ -152,60 +152,62 @@ msgid ""
 "This tablet button is forwarded to the focused application, which can decide "
 "how to handle it."
 msgstr ""
+"이 태블릿 단추는 포커스가 있는 앱으로 전달되며, 앱에서 처리 방식을 결정합니"
+"다."
 
 #: ui/ActionDialog.qml:177
 #, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left-click"
-msgstr ""
+msgstr "왼쪽 클릭"
 
 #: ui/ActionDialog.qml:178
 #, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle-click"
-msgstr "가운데 단추"
+msgstr "가운데 클릭"
 
 #: ui/ActionDialog.qml:179
 #, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right-click"
-msgstr ""
+msgstr "오른쪽 클릭"
 
 #: ui/ActionDialog.qml:206
 #, kde-format
 msgctxt "@option:check The ctrl modifier on the keyboard"
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 #: ui/ActionDialog.qml:213
 #, kde-format
 msgctxt "@option:check The alt modifier on the keyboard"
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: ui/ActionDialog.qml:220
 #, kde-format
 msgctxt "@option:check The meta modifier on the keyboard"
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: ui/ActionDialog.qml:227
 #, kde-format
 msgctxt "@option:check The shift modifier on the keyboard"
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 #: ui/ActionDialog.qml:235
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
-msgstr ""
+msgstr "이 단추는 비활성화되어 있으며 아무것도 하지 않습니다."
 
 #: ui/Calibration.qml:31
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
-msgstr ""
+msgstr "펜 조정"
 
 #: ui/Calibration.qml:90
 #, kde-kuit-format
@@ -214,6 +216,8 @@ msgid ""
 "Calibration is completed and saved.<nl/><nl/>Refine the calibration further "
 "or close the window."
 msgstr ""
+"조정이 완료되었고 저장되었습니다.<nl/><nl/>조정 결과를 미세 조정하거나 창을 "
+"닫으십시오."
 
 #: ui/Calibration.qml:91
 #, kde-kuit-format
@@ -222,18 +226,20 @@ msgid ""
 "Tap the center of each target.<nl/><nl/>Aim for the point where the stylus "
 "tip lands, and ignore the cursor position on the screen."
 msgstr ""
+"각 대상의 가운데를 탭하십시오.<nl/><nl/>스타일러스 탭이 닿는 곳을 향해서 조준"
+"하고, 화면상의 커서 위치는 무시하십시오."
 
 #: ui/Calibration.qml:97
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
-msgstr ""
+msgstr "기존 조정의 미세 조정"
 
 #: ui/Calibration.qml:106
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
-msgstr ""
+msgstr "빈 상태에서 조정"
 
 #: ui/Calibration.qml:120
 #, kde-format
@@ -258,11 +264,10 @@ msgid "Connect a drawing tablet"
 msgstr "그래픽 태블릿을 연결하십시오"
 
 #: ui/main.qml:43
-#, fuzzy, kde-format
-#| msgid "Tablet"
+#, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr "태블릿"
+msgstr "태블릿 시험…"
 
 #: ui/main.qml:86
 #, kde-format
@@ -273,7 +278,7 @@ msgstr "장치:"
 #: ui/main.qml:124
 #, kde-format
 msgid "Map to screen:"
-msgstr ""
+msgstr "화면에 대응:"
 
 #: ui/main.qml:144
 #, kde-format
@@ -298,11 +303,13 @@ msgid ""
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
+"장치에 왼손잡이 사용자 고려 모드를 활성화합니다. 장치에 따라서 동작 방식은 다"
+"르지만, 패드 단추 기능을 반전하여 태블릿을 거꾸로 놓고 쓸 수 있도록 합니다."
 
 #: ui/main.qml:174
 #, kde-format
 msgid "Mapped Area:"
-msgstr ""
+msgstr "대응되는 영역:"
 
 #: ui/main.qml:261
 #, kde-format
@@ -322,14 +329,12 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
 #: ui/main.qml:304
-#, fuzzy, kde-format
-#| msgid "Pen Button 1"
+#, kde-format
 msgid "Pen button 1:"
-msgstr "펜 단추 1"
+msgstr "펜 단추 1:"
 
 #: ui/main.qml:305
-#, fuzzy, kde-format
-#| msgid "Pen Button 1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 1'"
@@ -337,14 +342,12 @@ msgid "pen button 1"
 msgstr "펜 단추 1"
 
 #: ui/main.qml:309
-#, fuzzy, kde-format
-#| msgid "Pen Button 2"
+#, kde-format
 msgid "Pen button 2:"
-msgstr "펜 단추 2"
+msgstr "펜 단추 2:"
 
 #: ui/main.qml:310
-#, fuzzy, kde-format
-#| msgid "Pen Button 2"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 2'"
@@ -352,14 +355,12 @@ msgid "pen button 2"
 msgstr "펜 단추 2"
 
 #: ui/main.qml:314
-#, fuzzy, kde-format
-#| msgid "Pen Button 3"
+#, kde-format
 msgid "Pen button 3:"
-msgstr "펜 단추 3"
+msgstr "펜 단추 3:"
 
 #: ui/main.qml:315
-#, fuzzy, kde-format
-#| msgid "Pen Button 3"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 3'"
@@ -370,25 +371,25 @@ msgstr "펜 단추 3"
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
-msgstr ""
+msgstr "조정 진행 중"
 
 #: ui/main.qml:372
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
-msgstr ""
+msgstr "조정"
 
 #: ui/main.qml:375
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
-msgstr ""
+msgstr "조정을 지원하지 않음"
 
 #: ui/main.qml:408
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Calibration across multiple screens is not supported."
-msgstr ""
+msgstr "여러 화면에 걸쳐서 조정하는 것은 지원하지 않습니다."
 
 #: ui/main.qml:418
 #, kde-format
@@ -402,19 +403,17 @@ msgid "None"
 msgstr "없음"
 
 #: ui/main.qml:454
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Pad button %1:"
-msgstr "단추 %1:"
+msgstr "패드 단추 %1:"
 
 #: ui/main.qml:457
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad button %1"
-msgstr "단추 %1:"
+msgstr "패드 단추 %1"
 
 #: ui/Tester.qml:25
 #, kde-format
@@ -425,17 +424,17 @@ msgstr "태블릿 시험 도구"
 #: ui/Tester.qml:48
 #, kde-format
 msgid "Stylus press X=%1 Y=%2"
-msgstr ""
+msgstr "스타일러스 누름 X=%1 Y=%2"
 
 #: ui/Tester.qml:58
 #, kde-format
 msgid "Stylus release X=%1 Y=%2"
-msgstr ""
+msgstr "스타일러스 놓음 X=%1 Y=%2"
 
 #: ui/Tester.qml:68
 #, kde-format
 msgid "Stylus move X=%1 Y=%2"
-msgstr ""
+msgstr "스타일러스 이동 X=%1 Y=%2"
 
 #: ui/Tester.qml:199
 #, kde-format
@@ -443,12 +442,14 @@ msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
 msgstr ""
+"## 범례:\n"
+"# X, Y - 이벤트 좌표\n"
 
 #: ui/Tester.qml:206
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"
-msgstr ""
+msgstr "지우기"
 
 #~ msgid "Primary (default)"
 #~ msgstr "주(기본값)"
