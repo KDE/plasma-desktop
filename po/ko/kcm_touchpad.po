@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-23 00:42+0000\n"
-"PO-Revision-Date: 2024-11-29 00:48+0100\n"
+"PO-Revision-Date: 2024-12-24 18:56+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -250,11 +250,10 @@ msgid "Accept input through this device."
 msgstr "이 장치를 통해서 입력합니다."
 
 #: ui/main.qml:169
-#, fuzzy, kde-format
-#| msgid "Disable touchpad when mouse is plugged in"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable while mouse is connected"
-msgstr "마우스가 연결되었을 때 터치패드 비활성화"
+msgstr "마우스가 연결되었을 때 비활성화"
 
 #: ui/main.qml:195
 #, kde-format

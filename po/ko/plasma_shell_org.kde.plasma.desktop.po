@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-06 00:42+0000\n"
-"PO-Revision-Date: 2024-11-29 00:39+0100\n"
+"PO-Revision-Date: 2024-12-24 19:04+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -504,17 +504,16 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "이 패널을 삭제합니다. 실행 취소할 수 없습니다"
 
 #: contents/configuration/PanelConfiguration.qml:653
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
-msgstr "패널 삭제"
+msgstr "패널 복제"
 
 #: contents/configuration/PanelConfiguration.qml:657
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
-msgstr ""
+msgstr "같은 설정과 애플릿을 사용하여 새 패널 만들기"
 
 #: contents/configuration/PanelConfiguration.qml:666
 #, kde-format

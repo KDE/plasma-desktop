@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-23 00:42+0000\n"
-"PO-Revision-Date: 2024-12-15 10:43+0100\n"
+"PO-Revision-Date: 2024-12-24 20:20+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -367,26 +367,24 @@ msgstr "Gailua:"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
-msgstr ""
+msgstr "Erakusleihoa"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
-msgstr ""
+msgstr "Arkatza"
 
 #: ui/main.qml:182
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The pad we are configuring"
-#| msgid "Pad:"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
-msgstr "Teklatua:"
+msgstr "Teklatua"
 
 #: ui/PadTab.qml:33
 #, kde-format
 msgid "Pad button %1:"
-msgstr "Teklatuko %1 botoia:"
+msgstr "Kuxineko %1 botoia:"
 
 #: ui/PadTab.qml:36
 #, kde-format
@@ -394,7 +392,7 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad button %1"
-msgstr "Teklatuko %1 botoia"
+msgstr "kuxineko %1 botoia"
 
 #: ui/StylusTab.qml:31
 #, kde-format
@@ -405,7 +403,7 @@ msgstr "Ezkerti modua:"
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
-msgstr ""
+msgstr "Gaitu"
 
 #: ui/StylusTab.qml:43
 #, kde-kuit-format
@@ -416,7 +414,7 @@ msgid ""
 "can be used upside-down."
 msgstr ""
 "Gailuari, erabiltzaile ezkertiarrentzako egokitzeko esaten dio. Gailuaren "
-"arabera ondorioak aldatuko dira, baina askotan, teklatuko botoien "
+"arabera ondorioak aldatuko dira, baina askotan, kuxineko botoien "
 "funtzionaltasuna atzekoz aurrera ipintzen du tableta buruz behera erabili "
 "ahal izan dadin."
 
@@ -494,16 +492,12 @@ msgid "Stylus release X=%1 Y=%2"
 msgstr "Arkatza laxatzea X=%1 Y=%2"
 
 #: ui/Tester.qml:68
-#, fuzzy, kde-format
-#| msgid "Stylus move X=%1 Y=%2"
+#, kde-format
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
-msgstr "Arkatza mugitzea X=%1 Y=%2"
+msgstr "Arkatza mugitzea X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
 #: ui/Tester.qml:205
-#, fuzzy, kde-format
-#| msgid ""
-#| "## Legend:\n"
-#| "# X, Y - event coordinate\n"
+#, kde-format
 msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
@@ -512,6 +506,8 @@ msgid ""
 msgstr ""
 "## Legenda:\n"
 "# X, Y - gertakariaren koordenatuak\n"
+"# P - presioa\n"
+"# TX,TY - makurdura\n"
 
 #: ui/Tester.qml:211
 #, kde-format
