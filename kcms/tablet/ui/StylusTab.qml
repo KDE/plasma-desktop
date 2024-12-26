@@ -111,6 +111,8 @@ Kirigami.FormLayout {
             PressureCurve {
                 id: pressureCurve
 
+                property bool loadedSettings: false
+
                 onControlPoint1Changed: saveSettings()
                 onControlPoint2Changed: saveSettings()
                 isDefault: root.device.pressureCurveIsDefault
@@ -133,10 +135,13 @@ Kirigami.FormLayout {
                         pressureCurve.controlPoint1 = Qt.point(0.0, 0.0);
                         pressureCurve.controlPoint2 = Qt.point(1.0, 1.0);
                     }
+
+                    loadedSettings = true;
                 }
 
                 function saveSettings(): void {
-                    if (!root.device) {
+                    // We need to make sure not to re-save the settings we are loading in reloadSettings()
+                    if (!root.device || !loadedSettings) {
                         return;
                     }
 
