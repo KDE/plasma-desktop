@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-23 00:42+0000\n"
+"POT-Creation-Date: 2024-12-27 00:43+0000\n"
 "PO-Revision-Date: 2024-03-03 11:47+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -104,32 +104,32 @@ msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 - (%2,%3 %4×%5)"
 
-#: kcmtablet.cpp:163 ui/DisplayTab.qml:89 ui/DisplayTab.qml:90
+#: kcmtablet.cpp:163 ui/DisplayTab.qml:91 ui/DisplayTab.qml:92
 #, kde-format
 msgctxt "@item:inlistbox Stretch and fill to the screen"
 msgid "Stretch and Fill"
 msgstr ""
 
-#: kcmtablet.cpp:164 ui/DisplayTab.qml:91
+#: kcmtablet.cpp:164 ui/DisplayTab.qml:93
 #, kde-format
 msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
 msgid "Keep Aspect Ratio and Fit"
 msgstr ""
 
-#: kcmtablet.cpp:165 ui/DisplayTab.qml:92
+#: kcmtablet.cpp:165 ui/DisplayTab.qml:94
 #, kde-format
 msgctxt "@item:inlistbox Map to portion of the screen"
 msgid "Map to Portion"
 msgstr ""
 
-#: kcmtablet.cpp:290
+#: kcmtablet.cpp:263
 #, fuzzy, kde-format
 #| msgid "Pen Button 1"
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
 msgstr "Tombol Pena 1"
 
-#: kcmtablet.cpp:291
+#: kcmtablet.cpp:264
 #, fuzzy, kde-format
 #| msgid "Pen Button 1"
 msgctxt ""
@@ -304,43 +304,57 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr ""
 
-#: ui/DisplayTab.qml:39
+#: ui/DisplayTab.qml:41
 #, kde-format
 msgid "Map to screen:"
 msgstr ""
 
-#: ui/DisplayTab.qml:65
+#: ui/DisplayTab.qml:67
 #, kde-format
 msgid "Orientation:"
 msgstr "Orientasi:"
 
-#: ui/DisplayTab.qml:71
+#: ui/DisplayTab.qml:73
 #, kde-format
 msgid "Not Applicable"
 msgstr ""
 
-#: ui/DisplayTab.qml:85
+#: ui/DisplayTab.qml:87
 #, kde-format
 msgid "Mapped Area:"
 msgstr ""
 
-#: ui/ExternalScreenMapping.qml:112
+#: ui/ExternalScreenMapping.qml:110
+#, kde-format
+msgctxt "@option:check"
+msgid "Lock aspect ratio"
+msgstr "Kunci rasio aspek"
+
+#: ui/ExternalScreenMapping.qml:151
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: ui/ExternalScreenMapping.qml:151
+#: ui/ExternalScreenMapping.qml:190
 #, fuzzy, kde-format
 #| msgid "Resize the tablet area"
 msgid "Resize the screen area"
 msgstr "Ubah ukuran area tablet"
 
-#: ui/ExternalScreenMapping.qml:210
-#, kde-format
-msgctxt "@option:check"
-msgid "Lock aspect ratio"
-msgstr "Kunci rasio aspek"
+#: ui/ExternalScreenMapping.qml:265
+#, fuzzy, kde-format
+#| msgctxt "tablet area position - size"
+#| msgid "%1,%2 - %3×%4"
+msgctxt "tablet area position - size"
+msgid "%1%,%2% - %3%×%4%"
+msgstr "%1,%2 - %3×%4"
+
+#: ui/ExternalScreenMapping.qml:299
+#, fuzzy, kde-format
+#| msgid "Resize the tablet area"
+msgid "Resize the tablet area"
+msgstr "Ubah ukuran area tablet"
 
 #: ui/main.qml:39
 #, kde-format
@@ -365,19 +379,19 @@ msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Peranti:"
 
-#: ui/main.qml:157
+#: ui/main.qml:156
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
 msgstr ""
 
-#: ui/main.qml:170
+#: ui/main.qml:169
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
 msgstr ""
 
-#: ui/main.qml:182
+#: ui/main.qml:181
 #, fuzzy, kde-format
 #| msgctxt "@label:listbox The pad we are configuring"
 #| msgid "Pad:"
@@ -425,31 +439,31 @@ msgstr ""
 msgid "Pen Pressure:"
 msgstr ""
 
-#: ui/StylusTab.qml:154
-#, kde-format
-msgctxt "Low pen pressure"
-msgid "Low Pressure"
-msgstr ""
-
 #: ui/StylusTab.qml:162
 #, kde-format
-msgctxt "High pen pressure"
-msgid "High Pressure"
+msgctxt "% of minimum pen pressure"
+msgid "%1%"
 msgstr ""
 
-#: ui/StylusTab.qml:173
+#: ui/StylusTab.qml:170
+#, kde-format
+msgctxt "% of maximum pen pressure"
+msgid "%1%"
+msgstr ""
+
+#: ui/StylusTab.qml:181
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr ""
 
-#: ui/StylusTab.qml:181
+#: ui/StylusTab.qml:189
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr ""
 
-#: ui/StylusTab.qml:185
+#: ui/StylusTab.qml:193
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -457,19 +471,33 @@ msgid ""
 "the pressure values received by applications."
 msgstr ""
 
-#: ui/StylusTab.qml:196
+#: ui/StylusTab.qml:198
+#, kde-format
+msgctxt "Pen pressure range"
+msgid "Pressure Range:"
+msgstr ""
+
+#: ui/StylusTab.qml:225
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Pressure above or below the threshold will be clamped, and this becomes the "
+"new effective range."
+msgstr ""
+
+#: ui/StylusTab.qml:237
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr ""
 
-#: ui/StylusTab.qml:198
+#: ui/StylusTab.qml:239
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr ""
 
-#: ui/StylusTab.qml:201
+#: ui/StylusTab.qml:242
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"

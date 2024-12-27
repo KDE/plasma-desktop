@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the kcm_touchpad package.
-# Luigi Toscano <luigi.toscano@tiscali.it>, 2015, 2017, 2018, 2019, 2020, 2021, 2023, 2024.
+# SPDX-FileCopyrightText: 2015, 2017, 2018, 2019, 2020, 2021, 2023, 2024 Luigi Toscano <luigi.toscano@tiscali.it>
 # Vincenzo Reale <smart2128vr@gmail.com>, 2020.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-23 00:42+0000\n"
-"PO-Revision-Date: 2024-09-06 21:22+0200\n"
+"PO-Revision-Date: 2024-12-24 15:13+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #: actions.cpp:19
 #, kde-format
@@ -256,11 +256,10 @@ msgid "Accept input through this device."
 msgstr "Accetta input da questo dispositivo."
 
 #: ui/main.qml:169
-#, fuzzy, kde-format
-#| msgid "Disable touchpad when mouse is plugged in"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable while mouse is connected"
-msgstr "Disabilita il touchpad quando il mouse è collegato"
+msgstr "Disabilita quando il mouse è collegato"
 
 #: ui/main.qml:195
 #, kde-format

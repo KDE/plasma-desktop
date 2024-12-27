@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-23 00:42+0000\n"
+"POT-Creation-Date: 2024-12-27 00:43+0000\n"
 "PO-Revision-Date: 2024-12-15 16:59+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -100,31 +100,31 @@ msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 - (%2,%3 %4×%5)"
 
-#: kcmtablet.cpp:163 ui/DisplayTab.qml:89 ui/DisplayTab.qml:90
+#: kcmtablet.cpp:163 ui/DisplayTab.qml:91 ui/DisplayTab.qml:92
 #, kde-format
 msgctxt "@item:inlistbox Stretch and fill to the screen"
 msgid "Stretch and Fill"
 msgstr "நீட்டி திரையை நிரப்பு"
 
-#: kcmtablet.cpp:164 ui/DisplayTab.qml:91
+#: kcmtablet.cpp:164 ui/DisplayTab.qml:93
 #, kde-format
 msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
 msgid "Keep Aspect Ratio and Fit"
 msgstr "உருவ விகிதத்தை மாற்றாமல் திரைக்குள் பொருத்து"
 
-#: kcmtablet.cpp:165 ui/DisplayTab.qml:92
+#: kcmtablet.cpp:165 ui/DisplayTab.qml:94
 #, kde-format
 msgctxt "@item:inlistbox Map to portion of the screen"
 msgid "Map to Portion"
 msgstr "திரையின் பகுதிக்கு இணை"
 
-#: kcmtablet.cpp:290
+#: kcmtablet.cpp:263
 #, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
 msgstr "பேனா பட்டன் %1:"
 
-#: kcmtablet.cpp:291
+#: kcmtablet.cpp:264
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
@@ -300,42 +300,56 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "ரத்து செய்"
 
-#: ui/DisplayTab.qml:39
+#: ui/DisplayTab.qml:41
 #, kde-format
 msgid "Map to screen:"
 msgstr "திரைக்கு இணை:"
 
-#: ui/DisplayTab.qml:65
+#: ui/DisplayTab.qml:67
 #, kde-format
 msgid "Orientation:"
 msgstr "நோக்குநிலை:"
 
-#: ui/DisplayTab.qml:71
+#: ui/DisplayTab.qml:73
 #, kde-format
 msgid "Not Applicable"
 msgstr "பொருந்தாதது"
 
-#: ui/DisplayTab.qml:85
+#: ui/DisplayTab.qml:87
 #, kde-format
 msgid "Mapped Area:"
 msgstr "இணைக்கப்படும் பரப்பளவு:"
 
-#: ui/ExternalScreenMapping.qml:112
+#: ui/ExternalScreenMapping.qml:110
+#, kde-format
+msgctxt "@option:check"
+msgid "Lock aspect ratio"
+msgstr "உருவ விகித‍த்தை பூட்டு"
+
+#: ui/ExternalScreenMapping.qml:151
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
-#: ui/ExternalScreenMapping.qml:151
+#: ui/ExternalScreenMapping.qml:190
 #, kde-format
 msgid "Resize the screen area"
 msgstr "திரையின் அளவை மாற்று"
 
-#: ui/ExternalScreenMapping.qml:210
-#, kde-format
-msgctxt "@option:check"
-msgid "Lock aspect ratio"
-msgstr "உருவ விகித‍த்தை பூட்டு"
+#: ui/ExternalScreenMapping.qml:265
+#, fuzzy, kde-format
+#| msgctxt "tablet area position - size"
+#| msgid "%1,%2 - %3×%4"
+msgctxt "tablet area position - size"
+msgid "%1%,%2% - %3%×%4%"
+msgstr "%1,%2 - %3×%4"
+
+#: ui/ExternalScreenMapping.qml:299
+#, fuzzy, kde-format
+#| msgid "Resize the screen area"
+msgid "Resize the tablet area"
+msgstr "திரையின் அளவை மாற்று"
 
 #: ui/main.qml:39
 #, kde-format
@@ -359,19 +373,19 @@ msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "சாதனம்:"
 
-#: ui/main.qml:157
+#: ui/main.qml:156
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
 msgstr ""
 
-#: ui/main.qml:170
+#: ui/main.qml:169
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
 msgstr ""
 
-#: ui/main.qml:182
+#: ui/main.qml:181
 #, fuzzy, kde-format
 #| msgctxt "@label:listbox The pad we are configuring"
 #| msgid "Pad:"
@@ -419,31 +433,31 @@ msgstr ""
 msgid "Pen Pressure:"
 msgstr "பேனா அழுத்தம்:"
 
-#: ui/StylusTab.qml:154
-#, kde-format
-msgctxt "Low pen pressure"
-msgid "Low Pressure"
-msgstr "குறைவான அழுத்தம்"
-
 #: ui/StylusTab.qml:162
 #, kde-format
-msgctxt "High pen pressure"
-msgid "High Pressure"
-msgstr "கூடுதல் அழுத்தம்"
+msgctxt "% of minimum pen pressure"
+msgid "%1%"
+msgstr ""
 
-#: ui/StylusTab.qml:173
+#: ui/StylusTab.qml:170
+#, kde-format
+msgctxt "% of maximum pen pressure"
+msgid "%1%"
+msgstr ""
+
+#: ui/StylusTab.qml:181
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr "100%"
 
-#: ui/StylusTab.qml:181
+#: ui/StylusTab.qml:189
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr "0%"
 
-#: ui/StylusTab.qml:185
+#: ui/StylusTab.qml:193
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -453,19 +467,34 @@ msgstr ""
 "பேனாமீத் நீங்கள் இடும் அழுத்தம், செயலிக்கு எவ்வாறு மாற்றி அனுப்பப்பட வேண்டுமென்பதை இது "
 "தீர்மானிக்கும்"
 
-#: ui/StylusTab.qml:196
+#: ui/StylusTab.qml:198
+#, fuzzy, kde-format
+#| msgid "Pen Pressure:"
+msgctxt "Pen pressure range"
+msgid "Pressure Range:"
+msgstr "பேனா அழுத்தம்:"
+
+#: ui/StylusTab.qml:225
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Pressure above or below the threshold will be clamped, and this becomes the "
+"new effective range."
+msgstr ""
+
+#: ui/StylusTab.qml:237
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "அளதிருத்தம் செயலிலுள்ளது"
 
-#: ui/StylusTab.qml:198
+#: ui/StylusTab.qml:239
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "அளவொப்புமை"
 
-#: ui/StylusTab.qml:201
+#: ui/StylusTab.qml:242
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
@@ -512,6 +541,14 @@ msgstr ""
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr "காலியாக்கு"
+
+#~ msgctxt "Low pen pressure"
+#~ msgid "Low Pressure"
+#~ msgstr "குறைவான அழுத்தம்"
+
+#~ msgctxt "High pen pressure"
+#~ msgid "High Pressure"
+#~ msgstr "கூடுதல் அழுத்தம்"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid "Calibration across multiple screens is not supported."

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-23 00:42+0000\n"
-"PO-Revision-Date: 2024-10-14 20:23+0400\n"
+"PO-Revision-Date: 2024-12-26 08:18+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -252,11 +252,10 @@ msgid "Accept input through this device."
 msgstr "قبول الإدخال من خلال هذا الجهاز."
 
 #: ui/main.qml:169
-#, fuzzy, kde-format
-#| msgid "Disable touchpad when mouse is plugged in"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable while mouse is connected"
-msgstr "عطّل لوحة اللمس عند وصل الفأرة"
+msgstr "عطّل عند وصل الفأرة"
 
 #: ui/main.qml:195
 #, kde-format
