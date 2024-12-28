@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_recentFiles\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2023-04-16 12:22+0100\n"
+"PO-Revision-Date: 2024-12-27 10:42+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -126,7 +126,6 @@ msgstr "Memori malfermitajn dokumentojn:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_blockedByDefault)
 #: ui/RecentFiles.ui:128
-#, fuzzy, kde-format
-#| msgid "Blacklist applications not on the list"
+#, kde-format
 msgid "Exclude applications not on the list"
-msgstr "Nigrolistigi aplikaĵojn ne en la listo"
+msgstr "Ekskludi aplikaĵojn kiuj ne estas en la listo"

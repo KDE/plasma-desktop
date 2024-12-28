@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-27 00:43+0000\n"
-"PO-Revision-Date: 2024-09-16 20:29+0200\n"
+"PO-Revision-Date: 2024-12-27 22:09+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -55,11 +55,10 @@ msgid "Application-defined"
 msgstr "Aplikaĵe difinita"
 
 #: inputsequence.cpp:194
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pen Button %1"
-msgstr "Skribilbutono 1:"
+msgstr "Skribilbutono %1"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -109,37 +108,30 @@ msgid "Stretch and Fill"
 msgstr ""
 
 #: kcmtablet.cpp:164 ui/DisplayTab.qml:93
-#, fuzzy, kde-format
-#| msgid "Keep Aspect Ratio and Fit Within Screen"
+#, kde-format
 msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
 msgid "Keep Aspect Ratio and Fit"
-msgstr "Konservi Bildformaton kaj Ĝisrandigi Ene de Ekrano"
+msgstr "Teni Bildformaton kaj Ĝisrandigi"
 
 #: kcmtablet.cpp:165 ui/DisplayTab.qml:94
-#, fuzzy, kde-format
-#| msgid "Map to Portion of Screen"
+#, kde-format
 msgctxt "@item:inlistbox Map to portion of the screen"
 msgid "Map to Portion"
-msgstr "Mapi al Parto de Ekrano"
+msgstr "Mapi al Parto"
 
 #: kcmtablet.cpp:263
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
-msgstr "Skribilbutono 1:"
+msgstr "Skribilbutono %1:"
 
 #: kcmtablet.cpp:264
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button X'"
 msgid "pen button %1"
-msgstr "skribilbutonon 1"
+msgstr "skribilbutonon %1"
 
 #: ui/ActionDialog.qml:25
 #, kde-format
@@ -172,14 +164,10 @@ msgid "Send mouse button click"
 msgstr "Sendi musbutonan klakon"
 
 #: ui/ActionDialog.qml:132
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt "@option:radio Set this action to a pen button type"
 msgid "Send pen button"
-msgstr "skribilbutonon 1"
+msgstr "Sendi skribilbutonon"
 
 #: ui/ActionDialog.qml:150
 #, kde-format
@@ -240,34 +228,22 @@ msgid "Shift"
 msgstr "Majuskl"
 
 #: ui/ActionDialog.qml:264
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
-msgstr "skribilbutonon 1"
+msgstr "Butono 1"
 
 #: ui/ActionDialog.qml:265
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 2'"
-#| msgid "pen button 2"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
-msgstr "skribilbutonon 2"
+msgstr "Butono 2"
 
 #: ui/ActionDialog.qml:266
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 3'"
-#| msgid "pen button 3"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
-msgstr "skribilbutonon 3"
+msgstr "Butono 3"
 
 #: ui/ActionDialog.qml:275
 #, kde-format
@@ -358,24 +334,20 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
 #: ui/ExternalScreenMapping.qml:190
-#, fuzzy, kde-format
-#| msgid "Resize the tablet area"
+#, kde-format
 msgid "Resize the screen area"
-msgstr "Regrandigi la tablojdan areon"
+msgstr "Aligrandigi la ekranan areon"
 
 #: ui/ExternalScreenMapping.qml:265
-#, fuzzy, kde-format
-#| msgctxt "tablet area position - size"
-#| msgid "%1,%2 - %3×%4"
+#, kde-format
 msgctxt "tablet area position - size"
 msgid "%1%,%2% - %3%×%4%"
-msgstr "%1,%2 - %3×%4"
+msgstr "%1%,%2% - %3%×%4%"
 
 #: ui/ExternalScreenMapping.qml:299
-#, fuzzy, kde-format
-#| msgid "Resize the tablet area"
+#, kde-format
 msgid "Resize the tablet area"
-msgstr "Regrandigi la tablojdan areon"
+msgstr "Aligrandigi la tabuletan areon"
 
 #: ui/main.qml:39
 #, kde-format
@@ -403,26 +375,24 @@ msgstr "Aparato:"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
-msgstr ""
+msgstr "Ekrano"
 
 #: ui/main.qml:169
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
-msgstr ""
+msgstr "Skribilo"
 
 #: ui/main.qml:181
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The pad we are configuring"
-#| msgid "Pad:"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
-msgstr "Kuseneto:"
+msgstr "Plato"
 
 #: ui/PadTab.qml:33
 #, kde-format
 msgid "Pad button %1:"
-msgstr "Matbutono %1:"
+msgstr "Platbutono %1:"
 
 #: ui/PadTab.qml:36
 #, kde-format
@@ -430,7 +400,7 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad button %1"
-msgstr "matbutonon %1"
+msgstr "platbutonon %1"
 
 #: ui/StylusTab.qml:31
 #, kde-format
@@ -441,7 +411,7 @@ msgstr "Maldekstramana reĝimo:"
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
-msgstr ""
+msgstr "Ebligi"
 
 #: ui/StylusTab.qml:43
 #, kde-kuit-format
@@ -458,31 +428,31 @@ msgstr ""
 #: ui/StylusTab.qml:102
 #, kde-format
 msgid "Pen Pressure:"
-msgstr ""
+msgstr "Skribiila Premo:"
 
 #: ui/StylusTab.qml:162
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:170
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:181
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: ui/StylusTab.qml:189
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
-msgstr ""
+msgstr "0%"
 
 #: ui/StylusTab.qml:193
 #, kde-format
@@ -496,7 +466,7 @@ msgstr ""
 #, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
-msgstr ""
+msgstr "Gamo de Premo:"
 
 #: ui/StylusTab.qml:225
 #, kde-format
@@ -541,16 +511,12 @@ msgid "Stylus release X=%1 Y=%2"
 msgstr "Grifelmalpremo X=%1 Y=%2"
 
 #: ui/Tester.qml:68
-#, fuzzy, kde-format
-#| msgid "Stylus move X=%1 Y=%2"
+#, kde-format
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
-msgstr "Grifelmovo X=%1 Y=%2"
+msgstr "Grifelmovo X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
 #: ui/Tester.qml:205
-#, fuzzy, kde-format
-#| msgid ""
-#| "## Legend:\n"
-#| "# X, Y - event coordinate\n"
+#, kde-format
 msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
@@ -559,28 +525,11 @@ msgid ""
 msgstr ""
 "## Klarigeto:\n"
 "# X, Y - eventkoordinato\n"
+"# P - premo\n"
+"# TX,TY - inklino\n"
 
 #: ui/Tester.qml:211
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr "Malplenigi"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Calibration across multiple screens is not supported."
-#~ msgstr "Kalibrado tra pluraj ekranoj ne estas subtenata."
-
-#~ msgid "Fit to Screen"
-#~ msgstr "Konveni al Ekrano"
-
-#~ msgid "None"
-#~ msgstr "Neniu"
-
-#~ msgid "Pen button 2:"
-#~ msgstr "Skribilbutono 2:"
-
-#~ msgid "Pen button 3:"
-#~ msgstr "Skribilbutono 3:"
-
-#~ msgid "Not Supported"
-#~ msgstr "Ne Subtenata"

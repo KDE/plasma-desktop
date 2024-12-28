@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-27 00:43+0000\n"
-"PO-Revision-Date: 2024-12-23 14:16+0300\n"
+"PO-Revision-Date: 2024-12-27 12:59+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -339,18 +339,15 @@ msgid "Resize the screen area"
 msgstr "Ekran alanını yeniden boyutlandır"
 
 #: ui/ExternalScreenMapping.qml:265
-#, fuzzy, kde-format
-#| msgctxt "tablet area position - size"
-#| msgid "%1,%2 - %3×%4"
+#, kde-format
 msgctxt "tablet area position - size"
 msgid "%1%,%2% - %3%×%4%"
-msgstr "%1, %2 — %3 × %4"
+msgstr "%​%1, %​%2 — %​%3 × %​%4"
 
 #: ui/ExternalScreenMapping.qml:299
-#, fuzzy, kde-format
-#| msgid "Resize the screen area"
+#, kde-format
 msgid "Resize the tablet area"
-msgstr "Ekran alanını yeniden boyutlandır"
+msgstr "Tablet alanını yeniden boyutlandır"
 
 #: ui/main.qml:39
 #, kde-format
@@ -438,13 +435,13 @@ msgstr "Kalem basıncı:"
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%​%1"
 
 #: ui/StylusTab.qml:170
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%​%1"
 
 #: ui/StylusTab.qml:181
 #, kde-format
@@ -469,11 +466,10 @@ msgstr ""
 "arasındaki ilişkiyi denetler."
 
 #: ui/StylusTab.qml:198
-#, fuzzy, kde-format
-#| msgid "Pen Pressure:"
+#, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
-msgstr "Kalem basıncı:"
+msgstr "Basınç erimi:"
 
 #: ui/StylusTab.qml:225
 #, kde-format
@@ -482,6 +478,8 @@ msgid ""
 "Pressure above or below the threshold will be clamped, and this becomes the "
 "new effective range."
 msgstr ""
+"Eşiğin üstünde veya altında basınç sıkıştırılır ve bu yeni etkili erim "
+"haline gelir."
 
 #: ui/StylusTab.qml:237
 #, kde-format

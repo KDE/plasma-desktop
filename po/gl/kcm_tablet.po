@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-27 00:43+0000\n"
-"PO-Revision-Date: 2024-12-23 17:08+0100\n"
+"PO-Revision-Date: 2024-12-27 19:00+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -338,18 +338,15 @@ msgid "Resize the screen area"
 msgstr "Cambiar o tamaño da zona da pantalla"
 
 #: ui/ExternalScreenMapping.qml:265
-#, fuzzy, kde-format
-#| msgctxt "tablet area position - size"
-#| msgid "%1,%2 - %3×%4"
+#, kde-format
 msgctxt "tablet area position - size"
 msgid "%1%,%2% - %3%×%4%"
-msgstr "%1,%2 — %3×%4"
+msgstr "%1%,%2% — %3%×%4%"
 
 #: ui/ExternalScreenMapping.qml:299
-#, fuzzy, kde-format
-#| msgid "Resize the screen area"
+#, kde-format
 msgid "Resize the tablet area"
-msgstr "Cambiar o tamaño da zona da pantalla"
+msgstr "Cambiar o tamaño da zona da tableta"
 
 #: ui/main.qml:39
 #, kde-format
@@ -436,13 +433,13 @@ msgstr "Presión do bolígrafo:"
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:170
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:181
 #, kde-format
@@ -467,11 +464,10 @@ msgstr ""
 "presión que reciben as aplicacións."
 
 #: ui/StylusTab.qml:198
-#, fuzzy, kde-format
-#| msgid "Pen Pressure:"
+#, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
-msgstr "Presión do bolígrafo:"
+msgstr "Intervalo de presión:"
 
 #: ui/StylusTab.qml:225
 #, kde-format
@@ -480,6 +476,8 @@ msgid ""
 "Pressure above or below the threshold will be clamped, and this becomes the "
 "new effective range."
 msgstr ""
+"As presión superior ou inferior a este intervalo limitarase, este será o "
+"intervalo efectivo."
 
 #: ui/StylusTab.qml:237
 #, kde-format

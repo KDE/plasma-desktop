@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-27 00:43+0000\n"
-"PO-Revision-Date: 2024-12-23 05:50+0100\n"
+"PO-Revision-Date: 2024-12-27 03:43+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -340,18 +340,17 @@ msgid "Resize the screen area"
 msgstr "ეკრანის ალაგის ზომის შეცვლა"
 
 #: ui/ExternalScreenMapping.qml:265
-#, fuzzy, kde-format
+#, kde-format
 #| msgctxt "tablet area position - size"
 #| msgid "%1,%2 - %3×%4"
 msgctxt "tablet area position - size"
 msgid "%1%,%2% - %3%×%4%"
-msgstr "%1,%2 - %3×%4"
+msgstr "%1%,%2% - %3%×%4%"
 
 #: ui/ExternalScreenMapping.qml:299
-#, fuzzy, kde-format
-#| msgid "Resize the screen area"
+#, kde-format
 msgid "Resize the tablet area"
-msgstr "ეკრანის ალაგის ზომის შეცვლა"
+msgstr "ტაბლეტის ალაგის ზომის შეცვლა"
 
 #: ui/main.qml:39
 #, kde-format
@@ -438,13 +437,13 @@ msgstr "კალმის წნევა:"
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:170
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:181
 #, kde-format
@@ -469,11 +468,10 @@ msgstr ""
 "მიღებულ წნევის მნიშვნელობებს შორის."
 
 #: ui/StylusTab.qml:198
-#, fuzzy, kde-format
-#| msgid "Pen Pressure:"
+#, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
-msgstr "კალმის წნევა:"
+msgstr "წნევის შუალედი:"
 
 #: ui/StylusTab.qml:225
 #, kde-format
@@ -482,6 +480,7 @@ msgid ""
 "Pressure above or below the threshold will be clamped, and this becomes the "
 "new effective range."
 msgstr ""
+"ზღვრის ქვემოთ ან ზემოთ წნევა გაიწელება და ეს ახალი ეფექტური შუალედი გახდება."
 
 #: ui/StylusTab.qml:237
 #, kde-format
