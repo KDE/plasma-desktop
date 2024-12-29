@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-27 00:43+0000\n"
-"PO-Revision-Date: 2024-12-23 10:42+0100\n"
+"PO-Revision-Date: 2024-12-27 08:15+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -340,18 +340,15 @@ msgid "Resize the screen area"
 msgstr "Redimensiona l'àrea de la pantalla"
 
 #: ui/ExternalScreenMapping.qml:265
-#, fuzzy, kde-format
-#| msgctxt "tablet area position - size"
-#| msgid "%1,%2 - %3×%4"
+#, kde-format
 msgctxt "tablet area position - size"
 msgid "%1%,%2% - %3%×%4%"
-msgstr "%1,%2 - %3×%4"
+msgstr "%1%,%2% - %3%×%4%"
 
 #: ui/ExternalScreenMapping.qml:299
-#, fuzzy, kde-format
-#| msgid "Resize the screen area"
+#, kde-format
 msgid "Resize the tablet area"
-msgstr "Redimensiona l'àrea de la pantalla"
+msgstr "Redimensiona l'àrea de la tauleta"
 
 #: ui/main.qml:39
 #, kde-format
@@ -438,13 +435,13 @@ msgstr "Pressió del llapis:"
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:170
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:181
 #, kde-format
@@ -469,11 +466,10 @@ msgstr ""
 "pressió que reben les aplicacions."
 
 #: ui/StylusTab.qml:198
-#, fuzzy, kde-format
-#| msgid "Pen Pressure:"
+#, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
-msgstr "Pressió del llapis:"
+msgstr "Interval de pressió:"
 
 #: ui/StylusTab.qml:225
 #, kde-format
@@ -482,6 +478,8 @@ msgid ""
 "Pressure above or below the threshold will be clamped, and this becomes the "
 "new effective range."
 msgstr ""
+"La pressió per damunt o per davall del llindar es restringirà, i este es "
+"convertix en l'interval efectiu nou."
 
 #: ui/StylusTab.qml:237
 #, kde-format
@@ -540,11 +538,3 @@ msgstr ""
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr "Neteja"
-
-#~ msgctxt "Low pen pressure"
-#~ msgid "Low Pressure"
-#~ msgstr "Pressió baixa"
-
-#~ msgctxt "High pen pressure"
-#~ msgid "High Pressure"
-#~ msgstr "Pressió alta"

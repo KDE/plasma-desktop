@@ -335,18 +335,15 @@ msgid "Resize the screen area"
 msgstr "调整屏幕区域"
 
 #: ui/ExternalScreenMapping.qml:265
-#, fuzzy, kde-format
-#| msgctxt "tablet area position - size"
-#| msgid "%1,%2 - %3×%4"
+#, kde-format
 msgctxt "tablet area position - size"
 msgid "%1%,%2% - %3%×%4%"
-msgstr "%1,%2 - %3×%4"
+msgstr ""
 
 #: ui/ExternalScreenMapping.qml:299
-#, fuzzy, kde-format
-#| msgid "Resize the screen area"
+#, kde-format
 msgid "Resize the tablet area"
-msgstr "调整屏幕区域"
+msgstr "调整数位板有效区域大小"
 
 #: ui/main.qml:39
 #, kde-format
@@ -461,11 +458,10 @@ msgid ""
 msgstr "此曲线控制实际笔压和应用程序接收到压力值的关系。"
 
 #: ui/StylusTab.qml:198
-#, fuzzy, kde-format
-#| msgid "Pen Pressure:"
+#, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
-msgstr "笔压："
+msgstr ""
 
 #: ui/StylusTab.qml:225
 #, kde-format
@@ -532,11 +528,3 @@ msgstr ""
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr "清除"
-
-#~ msgctxt "Low pen pressure"
-#~ msgid "Low Pressure"
-#~ msgstr "笔压轻"
-
-#~ msgctxt "High pen pressure"
-#~ msgid "High Pressure"
-#~ msgstr "笔压重"

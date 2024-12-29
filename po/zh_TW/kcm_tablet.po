@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-27 00:43+0000\n"
-"PO-Revision-Date: 2024-12-19 17:32+0900\n"
+"PO-Revision-Date: 2024-12-29 01:40+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -336,18 +336,15 @@ msgid "Resize the screen area"
 msgstr "調整螢幕區域"
 
 #: ui/ExternalScreenMapping.qml:265
-#, fuzzy, kde-format
-#| msgctxt "tablet area position - size"
-#| msgid "%1,%2 - %3×%4"
+#, kde-format
 msgctxt "tablet area position - size"
 msgid "%1%,%2% - %3%×%4%"
-msgstr "%1,%2 - %3×%4"
+msgstr "%1%,%2% - %3%×%4%"
 
 #: ui/ExternalScreenMapping.qml:299
-#, fuzzy, kde-format
-#| msgid "Resize the screen area"
+#, kde-format
 msgid "Resize the tablet area"
-msgstr "調整螢幕區域"
+msgstr "調整繪圖板區域"
 
 #: ui/main.qml:39
 #, kde-format
@@ -375,21 +372,19 @@ msgstr "裝置："
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
-msgstr ""
+msgstr "顯示器"
 
 #: ui/main.qml:169
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
-msgstr ""
+msgstr "筆"
 
 #: ui/main.qml:181
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The pad we are configuring"
-#| msgid "Pad:"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
-msgstr "繪圖板："
+msgstr "繪圖板"
 
 #: ui/PadTab.qml:33
 #, kde-format
@@ -413,7 +408,7 @@ msgstr "左手模式："
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
-msgstr ""
+msgstr "啟用"
 
 #: ui/StylusTab.qml:43
 #, kde-kuit-format
@@ -435,13 +430,13 @@ msgstr "筆壓："
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:170
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:181
 #, kde-format
@@ -464,11 +459,10 @@ msgid ""
 msgstr "這個曲線控制筆尖上的壓力與應用程式實際收到的壓力值之間的關係。"
 
 #: ui/StylusTab.qml:198
-#, fuzzy, kde-format
-#| msgid "Pen Pressure:"
+#, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
-msgstr "筆壓："
+msgstr "筆壓範圍："
 
 #: ui/StylusTab.qml:225
 #, kde-format
@@ -476,7 +470,7 @@ msgctxt "@info"
 msgid ""
 "Pressure above or below the threshold will be clamped, and this becomes the "
 "new effective range."
-msgstr ""
+msgstr "高於或低於閥值的筆壓會視為最高值或最低值，而這會變成新的實際範圍。"
 
 #: ui/StylusTab.qml:237
 #, kde-format
@@ -513,16 +507,12 @@ msgid "Stylus release X=%1 Y=%2"
 msgstr "畫筆釋放 X=%1 Y=%2"
 
 #: ui/Tester.qml:68
-#, fuzzy, kde-format
-#| msgid "Stylus move X=%1 Y=%2"
+#, kde-format
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
-msgstr "畫筆移動 X=%1 Y=%2"
+msgstr "畫筆移動 X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
 #: ui/Tester.qml:205
-#, fuzzy, kde-format
-#| msgid ""
-#| "## Legend:\n"
-#| "# X, Y - event coordinate\n"
+#, kde-format
 msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
@@ -531,6 +521,8 @@ msgid ""
 msgstr ""
 "## 圖例：\n"
 "# X, Y - 事件座標\n"
+"# P - 筆壓\n"
+"# TX,TY - 傾斜\n"
 
 #: ui/Tester.qml:211
 #, kde-format
