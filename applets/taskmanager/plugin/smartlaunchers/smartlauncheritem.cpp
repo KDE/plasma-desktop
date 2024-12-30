@@ -9,6 +9,8 @@
 #include <KDesktopFile>
 #include <KService>
 
+#include "log_settings.h"
+
 using namespace SmartLauncher;
 
 Item::Item(QObject *parent)
@@ -185,7 +187,7 @@ void Item::setProgress(int progress)
     int boundedProgress = std::clamp(progress, 0, 100);
 
     if (progress != boundedProgress) {
-        qWarning().nospace() << qUtf8Printable(m_launcherUrl.toString()) << ": Progress value " << progress << " is out of bounds!";
+        qCWarning(TASKMANAGER_DEBUG).nospace() << qUtf8Printable(m_launcherUrl.toString()) << ": Progress value " << progress << " is out of bounds!";
     }
 
     if (m_progress != boundedProgress) {

@@ -4,12 +4,10 @@
 # SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
 # SPDX-License-Identifier: GPL-2.0-or-later
 
-import functools
 import logging
 import os
 import pathlib
 import shutil
-import stat
 import subprocess
 import sys
 import time
@@ -34,7 +32,9 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
-KACTIVITYMANAGERD_PATH: Final = os.environ.get("KACTIVITYMANAGERD_PATH", os.path.join(pathlib.Path.home(), "kde/usr/lib64/libexec/kactivitymanagerd"))
+from desktoptest_testwindow import DesktopFileWrapper
+
+KACTIVITYMANAGERD_PATH: Final = os.environ.get("KACTIVITYMANAGERD_PATH", "/usr/libexec/kactivitymanagerd")
 KACTIVITYMANAGERD_SERVICE_NAME: Final = "org.kde.ActivityManager"
 KDE_VERSION: Final = 6
 
@@ -235,36 +235,23 @@ class DesktopTest(unittest.TestCase):
         Meta+1 should activate the first launcher item
         """
         # Prepare a desktop file
-        os.makedirs(os.path.join(GLib.get_user_data_dir(), "applications"))
-        desktopfile_path = os.path.join(GLib.get_user_data_dir(), "applications", "org.kde.testwindow.desktop")
-        with open(desktopfile_path, "w", encoding="utf-8") as file_handler:
-            file_handler.writelines([
-                "[Desktop Entry]\n",
-                "Type=Application\n",
-                "Icon=preferences-system\n",
-                "Name=Software Center\n",
-                f"Exec=python3 {os.path.join(os.path.dirname(os.path.abspath(__file__)), 'desktoptest_testwindow.py')}\n",
-            ])
-            file_handler.flush()
-        os.chmod(desktopfile_path, os.stat(desktopfile_path).st_mode | stat.S_IEXEC)
-        self.addCleanup(functools.partial(os.remove, desktopfile_path))
+        with DesktopFileWrapper() as wrapper:
+            session_bus = Gio.bus_get_sync(Gio.BusType.SESSION)
 
-        session_bus = Gio.bus_get_sync(Gio.BusType.SESSION)
+            # Add a new launcher item
+            message: Gio.DBusMessage = Gio.DBusMessage.new_method_call("org.kde.plasmashell", "/PlasmaShell", "org.kde.PlasmaShell", "evaluateScript")
+            message.set_body(GLib.Variant("(s)", [f"panels().forEach(containment => containment.widgets('org.kde.plasma.icontasks').forEach(widget => {{widget.currentConfigGroup = ['General'];widget.writeConfig('launchers', 'file://{wrapper.path}');}}))"]))
+            session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 1000)
 
-        # Add a new launcher item
-        message: Gio.DBusMessage = Gio.DBusMessage.new_method_call("org.kde.plasmashell", "/PlasmaShell", "org.kde.PlasmaShell", "evaluateScript")
-        message.set_body(GLib.Variant("(s)", [f"panels().forEach(containment => containment.widgets('org.kde.plasma.icontasks').forEach(widget => {{widget.currentConfigGroup = ['General'];widget.writeConfig('launchers', 'file://{desktopfile_path}');}}))"]))
-        session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 1000)
+            wait = WebDriverWait(self.driver, 30)
+            wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Software Center")))
 
-        wait = WebDriverWait(self.driver, 30)
-        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Software Center")))
-
-        # Activate the first launcher
-        # ActionChains(self.driver).key_down(Keys.META).send_keys("1").key_up(Keys.META) # FIXME Meta modifier doesn't work
-        message = Gio.DBusMessage.new_method_call("org.kde.kglobalaccel", "/component/plasmashell", "org.kde.kglobalaccel.Component", "invokeShortcut")
-        message.set_body(GLib.Variant("(s)", ["activate task manager entry 1"]))
-        session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 1000)
-        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Install Software")))
+            # Activate the first launcher
+            # ActionChains(self.driver).key_down(Keys.META).send_keys("1").key_up(Keys.META) # FIXME Meta modifier doesn't work
+            message = Gio.DBusMessage.new_method_call("org.kde.kglobalaccel", "/component/plasmashell", "org.kde.kglobalaccel.Component", "invokeShortcut")
+            message.set_body(GLib.Variant("(s)", ["activate task manager entry 1"]))
+            session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 1000)
+            wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Install Software")))
 
     @unittest.skipIf("KDECI_BUILD" in os.environ, "TODO: failed in CI")
     def test_6_sentry_3516_load_layout(self) -> None:

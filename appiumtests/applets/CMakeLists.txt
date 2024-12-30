@@ -8,7 +8,7 @@ add_test(
 set_tests_properties(kickofftest PROPERTIES TIMEOUT 120 ENVIRONMENT "USE_CUSTOM_BUS=1;KACTIVITYMANAGERD_PATH=${KDE_INSTALL_FULL_LIBEXECDIR}/kactivitymanagerd")
 
 add_test(
-    NAME taskmanager_groupdialogtest
-    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/taskmanager_bug487023test.py
+    NAME taskmanagertest
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/taskmanagertest.py --failfast
 )
-set_tests_properties(taskmanager_groupdialogtest PROPERTIES TIMEOUT 120)
+set_tests_properties(taskmanagertest PROPERTIES TIMEOUT 120 ENVIRONMENT "USE_CUSTOM_BUS=1;KACTIVITYMANAGERD_PATH=${KDE_INSTALL_FULL_LIBEXECDIR}/kactivitymanagerd")
