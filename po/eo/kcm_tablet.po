@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-27 00:43+0000\n"
-"PO-Revision-Date: 2024-12-27 22:09+0100\n"
+"PO-Revision-Date: 2024-12-29 19:47+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -105,7 +105,7 @@ msgstr "%1 - (%2,%3 %4×%5)"
 #, kde-format
 msgctxt "@item:inlistbox Stretch and fill to the screen"
 msgid "Stretch and Fill"
-msgstr ""
+msgstr "Streĉi kaj Plenigi"
 
 #: kcmtablet.cpp:164 ui/DisplayTab.qml:93
 #, kde-format
@@ -314,7 +314,7 @@ msgstr "Orientiĝo:"
 #: ui/DisplayTab.qml:73
 #, kde-format
 msgid "Not Applicable"
-msgstr ""
+msgstr "Ne Aplikebla"
 
 #: ui/DisplayTab.qml:87
 #, kde-format
@@ -461,6 +461,8 @@ msgid ""
 "This curve controls the relationship between the pressure on the stylus and "
 "the pressure values received by applications."
 msgstr ""
+"Ĉi tiu kurbo regas la rilaton inter la premo sur la grifelo kaj la premaj "
+"valoroj ricevitaj de aplikoj."
 
 #: ui/StylusTab.qml:198
 #, kde-format
@@ -475,6 +477,8 @@ msgid ""
 "Pressure above or below the threshold will be clamped, and this becomes the "
 "new effective range."
 msgstr ""
+"Premo super aŭ sub la sojlo estos tondita, kaj ĉi tio iĝas la nova efika "
+"gamo."
 
 #: ui/StylusTab.qml:237
 #, kde-format

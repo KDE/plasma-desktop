@@ -338,7 +338,7 @@ msgstr "调整屏幕区域"
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1%,%2% - %3%×%4%"
-msgstr ""
+msgstr "%1%,%2% - %3%×%4%"
 
 #: ui/ExternalScreenMapping.qml:299
 #, kde-format
@@ -429,13 +429,13 @@ msgstr "笔压："
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:170
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:181
 #, kde-format
@@ -461,7 +461,7 @@ msgstr "此曲线控制实际笔压和应用程序接收到压力值的关系。
 #, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
-msgstr ""
+msgstr "压力范围："
 
 #: ui/StylusTab.qml:225
 #, kde-format
@@ -470,6 +470,7 @@ msgid ""
 "Pressure above or below the threshold will be clamped, and this becomes the "
 "new effective range."
 msgstr ""
+"超过或低于阈值的压力将被压制到阈值内，此处设置的压力范围将成为新的有效范围。"
 
 #: ui/StylusTab.qml:237
 #, kde-format

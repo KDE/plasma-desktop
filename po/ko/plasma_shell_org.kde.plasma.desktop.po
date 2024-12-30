@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-06 00:42+0000\n"
+"POT-Creation-Date: 2024-12-30 00:43+0000\n"
 "PO-Revision-Date: 2024-12-24 19:04+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -742,18 +742,21 @@ msgid "Caps Lock is on"
 msgstr "Caps Lock이 켜져 있음"
 
 #: contents/lockscreen/LockScreenUi.qml:285
-#, kde-format
-msgid "Sleep"
+#, fuzzy, kde-format
+#| msgid "Sleep"
+msgid "Slee&p"
 msgstr "대기 모드"
 
 #: contents/lockscreen/LockScreenUi.qml:291
-#, kde-format
-msgid "Hibernate"
+#, fuzzy, kde-format
+#| msgid "Hibernate"
+msgid "&Hibernate"
 msgstr "최대 절전 모드"
 
 #: contents/lockscreen/LockScreenUi.qml:297
-#, kde-format
-msgid "Switch User"
+#, fuzzy, kde-format
+#| msgid "Switch User"
+msgid "Switch &User"
 msgstr "사용자 전환"
 
 #: contents/lockscreen/LockScreenUi.qml:358

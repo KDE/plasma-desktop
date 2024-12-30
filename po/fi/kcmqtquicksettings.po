@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Tommi Nieminen <translator@legisign.org>, 2018, 2023.
+# SPDX-FileCopyrightText: 2018, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-02 00:44+0000\n"
-"PO-Revision-Date: 2023-05-02 18:21+0300\n"
+"PO-Revision-Date: 2024-12-22 22:08+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,6 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -28,17 +29,14 @@ msgstr "translator@legisign.org"
 
 #. i18n: ectx: property (text), widget (KMessageWidget, kmessagewidget)
 #: kcmqtquicksettingswidget.ui:23
-#, fuzzy, kde-format
-#| msgid ""
-#| "These settings adjust the QtQuick settings used by Plasma. Only adjust if "
-#| "you know what you are doing."
+#, kde-format
 msgid ""
 "These settings adjust the QtQuick settings used by Plasma. Modifying these "
 "settings can break your desktop. Only adjust these settings if you know what "
 "you are doing."
 msgstr ""
-"Näillä valinnoilla säädetään Plasman QtQuick-asetuksia. Muuta vain, jos "
-"tiedät, mitä teet."
+"Näillä valinnoilla säädetään Plasman QtQuick-asetuksia. Asetusten "
+"muuttaminen voi särkeä työpöytäsi. Muuta vain, jos tiedät, mitä teet."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcmqtquicksettingswidget.ui:41

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-06 00:42+0000\n"
-"PO-Revision-Date: 2024-12-01 15:00+0200\n"
+"POT-Creation-Date: 2024-12-30 00:43+0000\n"
+"PO-Revision-Date: 2024-12-22 22:07+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -506,17 +506,16 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "Poista tämä paneeli – toimintoa ei voi kumota"
 
 #: contents/configuration/PanelConfiguration.qml:653
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
-msgstr "Poista paneeli"
+msgstr "Sulje paneeli"
 
 #: contents/configuration/PanelConfiguration.qml:657
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
-msgstr ""
+msgstr "Luo uusi paneeli samoin asetuksin ja sovelmin"
 
 #: contents/configuration/PanelConfiguration.qml:666
 #, kde-format
@@ -746,18 +745,21 @@ msgid "Caps Lock is on"
 msgstr "Vaihtolukko on käytössä"
 
 #: contents/lockscreen/LockScreenUi.qml:285
-#, kde-format
-msgid "Sleep"
+#, fuzzy, kde-format
+#| msgid "Sleep"
+msgid "Slee&p"
 msgstr "Valmiustila"
 
 #: contents/lockscreen/LockScreenUi.qml:291
-#, kde-format
-msgid "Hibernate"
+#, fuzzy, kde-format
+#| msgid "Hibernate"
+msgid "&Hibernate"
 msgstr "Lepotila"
 
 #: contents/lockscreen/LockScreenUi.qml:297
-#, kde-format
-msgid "Switch User"
+#, fuzzy, kde-format
+#| msgid "Switch User"
+msgid "Switch &User"
 msgstr "Vaihda käyttäjä"
 
 #: contents/lockscreen/LockScreenUi.qml:358
