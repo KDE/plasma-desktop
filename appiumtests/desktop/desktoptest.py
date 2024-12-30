@@ -6,10 +6,10 @@
 
 import logging
 import os
-import pathlib
 import shutil
 import subprocess
 import sys
+import tempfile
 import time
 import unittest
 from typing import Final
@@ -18,11 +18,14 @@ import cv2 as cv
 import gi
 
 gi.require_version('Gtk', '4.0')
+gi.require_version('GdkPixbuf', '2.0')
+
 from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
 from appium.webdriver.webelement import WebElement
-from gi.repository import Gio, GLib, Gtk
+from desktoptest_testwindow import DesktopFileWrapper
+from gi.repository import GdkPixbuf, Gio, GLib, Gtk
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.actions.action_builder import ActionBuilder
@@ -32,10 +35,9 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
-from desktoptest_testwindow import DesktopFileWrapper
-
 KACTIVITYMANAGERD_PATH: Final = os.environ.get("KACTIVITYMANAGERD_PATH", "/usr/libexec/kactivitymanagerd")
 KACTIVITYMANAGERD_SERVICE_NAME: Final = "org.kde.ActivityManager"
+PLASMASHELL_SERVICE_NAME: Final = "org.kde.plasmashell"
 KDE_VERSION: Final = 6
 
 
@@ -239,7 +241,7 @@ class DesktopTest(unittest.TestCase):
             session_bus = Gio.bus_get_sync(Gio.BusType.SESSION)
 
             # Add a new launcher item
-            message: Gio.DBusMessage = Gio.DBusMessage.new_method_call("org.kde.plasmashell", "/PlasmaShell", "org.kde.PlasmaShell", "evaluateScript")
+            message: Gio.DBusMessage = Gio.DBusMessage.new_method_call(PLASMASHELL_SERVICE_NAME, "/PlasmaShell", "org.kde.PlasmaShell", "evaluateScript")
             message.set_body(GLib.Variant("(s)", [f"panels().forEach(containment => containment.widgets('org.kde.plasma.icontasks').forEach(widget => {{widget.currentConfigGroup = ['General'];widget.writeConfig('launchers', 'file://{wrapper.path}');}}))"]))
             session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 1000)
 
@@ -262,7 +264,7 @@ class DesktopTest(unittest.TestCase):
         kickoff_element = self.driver.find_element(AppiumBy.NAME, "Application Launcher")
         session_bus = Gio.bus_get_sync(Gio.BusType.SESSION)
         # LookAndFeelManager::save
-        message: Gio.DBusMessage = Gio.DBusMessage.new_method_call("org.kde.plasmashell", "/PlasmaShell", "org.kde.PlasmaShell", "loadLookAndFeelDefaultLayout")
+        message: Gio.DBusMessage = Gio.DBusMessage.new_method_call(PLASMASHELL_SERVICE_NAME, "/PlasmaShell", "org.kde.PlasmaShell", "loadLookAndFeelDefaultLayout")
         message.set_body(GLib.Variant("(s)", ["org.kde.breezedark.desktop"]))
         session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 10000)
         self.assertFalse(kickoff_element.is_displayed())
@@ -285,7 +287,7 @@ class DesktopTest(unittest.TestCase):
         # Send the same request twice to check binding loop
         for i in range(2):
             print(f"sending message {i}", file=sys.stderr)
-            message: Gio.DBusMessage = Gio.DBusMessage.new_method_call("org.kde.plasmashell", "/PlasmaShell", "org.kde.PlasmaShell", "color")
+            message: Gio.DBusMessage = Gio.DBusMessage.new_method_call(PLASMASHELL_SERVICE_NAME, "/PlasmaShell", "org.kde.PlasmaShell", "color")
             reply, _ = session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 1000)
             self.assertEqual(reply.get_signature(), "u")
             self.assertGreater(reply.get_body().get_child_value(0).get_uint32(), 0)
@@ -358,6 +360,55 @@ class DesktopTest(unittest.TestCase):
         self.assertTrue(success)
 
         self._exit_edit_mode()
+
+    def test_9_bug488736_adpative_opacity(self) -> None:
+        """
+        When a window is maximized in the foreground, the panel should be translucent.
+        """
+        self.driver.find_element(AppiumBy.NAME, "Application Launcher")
+        # Set color wallpaper and defloat all panels to test the bug
+        session_bus = Gio.bus_get_sync(Gio.BusType.SESSION)
+        message = Gio.DBusMessage.new_method_call(PLASMASHELL_SERVICE_NAME, "/PlasmaShell", "org.kde.PlasmaShell", "setWallpaper")
+        params: dict[str, GLib.Variant] = {
+            "Color": GLib.Variant("(u)", [4294901760]),  # RGBA value
+        }
+        # wallpaperPlugin(s), parameters(a{sv}), screenNum(u)
+        message.set_body(GLib.Variant("(sa{sv}u)", ["org.kde.color", params, 0]))
+        reply, _ = session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 100000)
+        self.assertEqual(reply.get_message_type(), Gio.DBusMessageType.METHOD_RETURN)
+
+        message = Gio.DBusMessage.new_method_call(PLASMASHELL_SERVICE_NAME, "/PlasmaShell", "org.kde.PlasmaShell", "evaluateScript")
+        message.set_body(GLib.Variant("(s)", ["panels().forEach(containment => containment.floating = false)"]))
+        reply, _ = session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 10000)
+        self.assertEqual(reply.get_message_type(), Gio.DBusMessageType.METHOD_RETURN)
+
+        # Open a maximized window
+        maximized_window = subprocess.Popen([os.path.join(os.path.dirname(os.path.abspath(__file__)), "bug488736_adaptive_opacity.py")], stdout=sys.stderr, stderr=sys.stderr)
+        self.addCleanup(maximized_window.kill)
+        time.sleep(3)  # Window animation
+        with tempfile.TemporaryDirectory() as temp_dir:
+            saved_image_path: str = os.path.join(temp_dir, "desktop_screenshot.png")
+            self.driver.get_screenshot_as_file(saved_image_path)
+            pixbuf1 = GdkPixbuf.Pixbuf.new_from_file(saved_image_path)
+
+        maximized_window.kill()
+        time.sleep(3)  # Window animation
+        with tempfile.TemporaryDirectory() as temp_dir:
+            saved_image_path = os.path.join(temp_dir, "desktop_screenshot.png")
+            self.driver.get_screenshot_as_file(saved_image_path)
+            pixbuf2 = GdkPixbuf.Pixbuf.new_from_file(saved_image_path)
+
+        self.assertEqual(pixbuf1.get_width(), pixbuf2.get_width())
+        self.assertEqual(pixbuf1.get_height(), pixbuf2.get_height())
+        self.assertGreater(pixbuf1.get_height(), 0)
+
+        n_channels: int = pixbuf1.get_n_channels()
+
+        pixel1 = pixbuf1.read_pixel_bytes().get_data()
+        pixel2 = pixbuf2.read_pixel_bytes().get_data()
+        # Get the pixel at the same position, 10 is a reasonable number to offset from the bottom line
+        offset = (pixbuf1.get_height() - 10) * pixbuf1.get_width() * n_channels + int(pixbuf1.get_width() / 2) * n_channels
+        self.assertNotEqual((pixel1[offset], pixel1[offset + 1], pixel1[offset + 2]), (pixel2[offset], pixel2[offset + 1], pixel2[offset + 2]))
 
 
 if __name__ == '__main__':
