@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-27 00:41+0000\n"
+"POT-Creation-Date: 2025-01-01 00:42+0000\n"
 "PO-Revision-Date: 2024-08-23 09:18+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -183,150 +183,165 @@ msgctxt "@action:menu End of the sentence 'Add New Application…'"
 msgid "Application…"
 msgstr "Програма…"
 
-#: ui/main.qml:188
+#: ui/main.qml:180
+#, fuzzy, kde-format
+#| msgid "Applications"
+msgctxt "@action:menu accessible"
+msgid "Add new application"
+msgstr "Програми"
+
+#: ui/main.qml:187
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
 msgid "Command or Script…"
 msgstr "Команда або скрипт…"
 
-#: ui/main.qml:225
+#: ui/main.qml:188
+#, fuzzy, kde-format
+#| msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
+#| msgid "Command or Script…"
+msgctxt "@action:menu accessible"
+msgid "Add new command or script"
+msgstr "Команда або скрипт…"
+
+#: ui/main.qml:224
 #, kde-format
 msgctxt ""
 "@option:check accessible export shortcuts %1 is application/group name"
 msgid "Export %1"
 msgstr "Експортувати %1"
 
-#: ui/main.qml:234
+#: ui/main.qml:233
 #, kde-format
 msgctxt "@action:button accessible %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "Редагувати команду для %1"
 
-#: ui/main.qml:250
+#: ui/main.qml:249
 #, kde-format
 msgctxt "@info:tooltip %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "Редагувати команду для %1"
 
-#: ui/main.qml:258
+#: ui/main.qml:257
 #, kde-format
 msgctxt "@action:button accessible %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Вилучити усі скорочення для %1"
 
-#: ui/main.qml:268
+#: ui/main.qml:267
 #, kde-format
 msgctxt "@info:tooltip %1 is the text of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Вилучити усі скорочення для %1"
 
-#: ui/main.qml:275
+#: ui/main.qml:274
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Undo deletion"
 msgstr "Скасувати вилучення"
 
-#: ui/main.qml:280
+#: ui/main.qml:279
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo deletion"
 msgstr "Скасувати вилучення"
 
-#: ui/main.qml:334
+#: ui/main.qml:333
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "Не знайдено відповідників критеріям пошуку"
 
-#: ui/main.qml:367
+#: ui/main.qml:366
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr ""
 "Виберіть пункт у списку, щоб переглянути скорочення, які у ньому містяться"
 
-#: ui/main.qml:379
+#: ui/main.qml:378
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "Експортувати схему скорочень"
 
-#: ui/main.qml:379 ui/main.qml:521
+#: ui/main.qml:378 ui/main.qml:520
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Імпортувати схему скорочень"
 
-#: ui/main.qml:381
+#: ui/main.qml:380
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "схема скорочень (*.kksrc)"
 
-#: ui/main.qml:408
+#: ui/main.qml:407
 #, kde-format
 msgid "Edit Command"
 msgstr "Редагувати команду"
 
-#: ui/main.qml:408
+#: ui/main.qml:407
 #, kde-format
 msgid "Add Command"
 msgstr "Додати команду"
 
-#: ui/main.qml:430
+#: ui/main.qml:429
 #, kde-format
 msgid "Save"
 msgstr "Зберегти"
 
-#: ui/main.qml:430
+#: ui/main.qml:429
 #, kde-format
 msgid "Add"
 msgstr "Додати"
 
-#: ui/main.qml:460
+#: ui/main.qml:459
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "Введіть команду або виберіть файл скрипту:"
 
-#: ui/main.qml:469
+#: ui/main.qml:468
 #, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
 msgstr "Команда:"
 
-#: ui/main.qml:475
+#: ui/main.qml:474
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "Команда"
 
-#: ui/main.qml:482
+#: ui/main.qml:481
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Вибрати…"
 
-#: ui/main.qml:483
+#: ui/main.qml:482
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Вибрати файл скрипту"
 
-#: ui/main.qml:491
+#: ui/main.qml:490
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
 msgstr "Назва:"
 
-#: ui/main.qml:492
+#: ui/main.qml:491
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
 msgstr "Тут слід ввести назву"
 
-#: ui/main.qml:504
+#: ui/main.qml:503
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Вибір файла скрипту"
 
-#: ui/main.qml:506
+#: ui/main.qml:505
 #, kde-format
 msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
@@ -334,22 +349,22 @@ msgctxt ""
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "файли скриптів (.sh, .bash, .zsh тощо) (*.*sh)"
 
-#: ui/main.qml:529
+#: ui/main.qml:528
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Виберіть схему для імпортування:"
 
-#: ui/main.qml:548
+#: ui/main.qml:547
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Нетипова схема"
 
-#: ui/main.qml:556
+#: ui/main.qml:555
 #, kde-format
 msgid "Select File…"
 msgstr "Вибрати файл…"
 
-#: ui/main.qml:556
+#: ui/main.qml:555
 #, kde-format
 msgid "Import"
 msgstr "Імпортувати"
@@ -359,7 +374,7 @@ msgstr "Імпортувати"
 msgid "Editing shortcut: %1"
 msgstr "Редагування скорочення: %1"
 
-#: ui/ShortcutActionDelegate.qml:55
+#: ui/ShortcutActionDelegate.qml:57
 #, kde-format
 msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
@@ -367,12 +382,12 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: ui/ShortcutActionDelegate.qml:79
+#: ui/ShortcutActionDelegate.qml:81
 #, kde-format
 msgid "No active shortcuts"
 msgstr "Немає активних скорочень"
 
-#: ui/ShortcutActionDelegate.qml:122
+#: ui/ShortcutActionDelegate.qml:124
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -382,57 +397,57 @@ msgstr[1] "Типові скорочення"
 msgstr[2] "Типові скорочення"
 msgstr[3] "Типове скорочення"
 
-#: ui/ShortcutActionDelegate.qml:124
+#: ui/ShortcutActionDelegate.qml:126
 #, kde-format
 msgid "No default shortcuts"
 msgstr "Немає типових скорочень"
 
-#: ui/ShortcutActionDelegate.qml:133
+#: ui/ShortcutActionDelegate.qml:135
 #, kde-format
 msgid "Default shortcut %1 is enabled."
 msgstr "Увімкнено типове скорочення %1."
 
-#: ui/ShortcutActionDelegate.qml:133
+#: ui/ShortcutActionDelegate.qml:135
 #, kde-format
 msgid "Default shortcut %1 is disabled."
 msgstr "Вимкнено типове скорочення %1."
 
-#: ui/ShortcutActionDelegate.qml:156
+#: ui/ShortcutActionDelegate.qml:158
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "Нетипові скорочення"
 
-#: ui/ShortcutActionDelegate.qml:182
+#: ui/ShortcutActionDelegate.qml:184
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
 msgstr "Вилучити скорочення"
 
-#: ui/ShortcutActionDelegate.qml:186
+#: ui/ShortcutActionDelegate.qml:188
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this shortcut"
 msgstr "Вилучити це скорочення"
 
-#: ui/ShortcutActionDelegate.qml:192
+#: ui/ShortcutActionDelegate.qml:194
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
 msgstr "Додати…"
 
-#: ui/ShortcutActionDelegate.qml:193
+#: ui/ShortcutActionDelegate.qml:195
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr "Додати нетипове скорочення"
 
-#: ui/ShortcutActionDelegate.qml:228
+#: ui/ShortcutActionDelegate.qml:230
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
 msgstr "Скасувати запис скорочення"
 
-#: ui/ShortcutActionDelegate.qml:232
+#: ui/ShortcutActionDelegate.qml:234
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel capturing of new shortcut"
