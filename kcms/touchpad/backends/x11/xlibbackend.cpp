@@ -17,9 +17,6 @@
 // Includes are ordered this way because of #defines in Xorg's headers
 #include "xlibbackend.h" // krazy:exclude=includes
 #include "xlibnotifications.h" // krazy:exclude=includes
-#include "xrecordkeyboardmonitor.h" // krazy:exclude=includes
-#if HAVE_XORGLIBINPUT
-#endif
 
 #include <X11/Xatom.h>
 #include <X11/Xlib-xcb.h>
@@ -72,8 +69,6 @@ XlibBackend::XlibBackend(QObject *parent)
         return;
     }
 
-    m_mouseAtom.intern(m_connection, XI_MOUSE);
-    m_keyboardAtom.intern(m_connection, XI_KEYBOARD);
     m_touchpadAtom.intern(m_connection, XI_TOUCHPAD);
     m_enabledAtom.intern(m_connection, XI_PROP_ENABLED);
 
@@ -270,7 +265,7 @@ void XlibBackend::touchpadDetached()
     Q_EMIT touchpadReset();
 }
 
-void XlibBackend::devicePlugged(int device)
+void XlibBackend::devicePlugged(int /*device*/)
 {
     if (!m_device) {
         m_device.reset(findTouchpad());
@@ -278,12 +273,9 @@ void XlibBackend::devicePlugged(int device)
             qWarning() << "Touchpad reset";
             // We get called by m_notifications, need to use deleteLater
             m_notifications.release()->deleteLater();
-            watchForEvents(m_keyboard != nullptr);
+            watchForEvents();
             Q_EMIT touchpadReset();
         }
-    }
-    if (!m_device || device != m_device->deviceId()) {
-        Q_EMIT mousesChanged();
     }
 }
 
@@ -292,37 +284,6 @@ void XlibBackend::propertyChanged(xcb_atom_t prop)
     if ((m_device && prop == m_device->touchpadOffAtom().atom()) || prop == m_enabledAtom.atom()) {
         Q_EMIT touchpadStateChanged();
     }
-}
-
-QStringList XlibBackend::listMouses(const QStringList &blacklist)
-{
-    int nDevices = 0;
-    std::unique_ptr<XDeviceInfo, DeviceListDeleter> info(XListInputDevices(m_display.get(), &nDevices));
-    QStringList list;
-    for (XDeviceInfo *i = info.get(); i != info.get() + nDevices; i++) {
-        if (m_device && i->id == static_cast<XID>(m_device->deviceId())) {
-            continue;
-        }
-        if (i->use != IsXExtensionPointer && i->use != IsXPointer) {
-            continue;
-        }
-        // type = KEYBOARD && use = Pointer means usb receiver for both keyboard
-        // and mouse
-        if (i->type != m_mouseAtom.atom() && i->type != m_keyboardAtom.atom()) {
-            continue;
-        }
-        QString name(i->name);
-        if (blacklist.contains(name, Qt::CaseInsensitive)) {
-            continue;
-        }
-        PropertyInfo enabled(m_display.get(), i->id, m_enabledAtom.atom(), 0);
-        if (enabled.value(0) == false) {
-            continue;
-        }
-        list.append(name);
-    }
-
-    return list;
 }
 
 QList<LibinputCommon *> XlibBackend::inputDevices() const
@@ -339,7 +300,7 @@ QList<LibinputCommon *> XlibBackend::inputDevices() const
     return touchpads;
 }
 
-void XlibBackend::watchForEvents(bool keyboard)
+void XlibBackend::watchForEvents()
 {
     if (!m_notifications) {
         m_notifications.reset(new XlibNotifications(m_display.get(), m_device ? m_device->deviceId() : XIAllDevices));
@@ -347,19 +308,6 @@ void XlibBackend::watchForEvents(bool keyboard)
         connect(m_notifications.get(), &XlibNotifications::touchpadDetached, this, &XlibBackend::touchpadDetached);
         connect(m_notifications.get(), &XlibNotifications::propertyChanged, this, &XlibBackend::propertyChanged);
     }
-
-    if (keyboard == (m_keyboard != nullptr)) {
-        return;
-    }
-
-    if (!keyboard) {
-        m_keyboard.reset();
-        return;
-    }
-
-    m_keyboard.reset(new XRecordKeyboardMonitor(m_display.get()));
-    connect(m_keyboard.get(), &XRecordKeyboardMonitor::keyboardActivityStarted, this, &XlibBackend::keyboardActivityStarted);
-    connect(m_keyboard.get(), &XRecordKeyboardMonitor::keyboardActivityFinished, this, &XlibBackend::keyboardActivityFinished);
 }
 
 #include "moc_xlibbackend.cpp"

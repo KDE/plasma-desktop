@@ -118,13 +118,8 @@ public:
     {
     }
 
-    virtual void watchForEvents(bool /*keyboard*/)
+    virtual void watchForEvents()
     {
-    }
-
-    virtual QStringList listMouses(const QStringList & /*blacklist*/)
-    {
-        return {};
     }
 
 private:
@@ -132,7 +127,6 @@ private:
 
 Q_SIGNALS:
     void touchpadStateChanged();
-    void mousesChanged();
     void touchpadReset();
     void keyboardActivityStarted();
     void keyboardActivityFinished();
