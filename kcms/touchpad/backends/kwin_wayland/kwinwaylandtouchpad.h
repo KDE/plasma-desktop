@@ -137,9 +137,6 @@ public:
         return m_supportsClickMethodClickfinger.val;
     }
 
-Q_SIGNALS:
-    void scrollFactorChanged();
-
 private:
     template<typename T>
     bool valueLoader(Prop<T> &prop);
@@ -148,23 +145,23 @@ private:
     QString valueWriter(const Prop<T> &prop);
     //
     // general
-    Prop<QString> m_name = Prop<QString>("name", QString());
-    Prop<QString> m_sysName = Prop<QString>("sysName", QString());
+    Prop<QString> m_name = Prop<QString>(this, "name", QString());
+    Prop<QString> m_sysName = Prop<QString>(this, "sysName", QString());
 
     //
     // advanced
-    Prop<bool> m_supportsLeftHanded = PropBool("supportsLeftHanded");
-    Prop<bool> m_supportsDisableWhileTyping = PropBool("supportsDisableWhileTyping");
-    Prop<bool> m_supportsMiddleEmulation = PropBool("supportsMiddleEmulation");
+    Prop<bool> m_supportsLeftHanded = PropBool(this, "supportsLeftHanded");
+    Prop<bool> m_supportsDisableWhileTyping = PropBool(this, "supportsDisableWhileTyping");
+    Prop<bool> m_supportsMiddleEmulation = PropBool(this, "supportsMiddleEmulation");
 
     //
     // acceleration speed and profile
-    Prop<bool> m_supportsPointerAcceleration = PropBool("supportsPointerAcceleration");
+    Prop<bool> m_supportsPointerAcceleration = PropBool(this, "supportsPointerAcceleration");
 
     //
     // scrolling
-    Prop<bool> m_supportsNaturalScroll = PropBool("supportsNaturalScroll");
-    Prop<qreal> m_scrollFactor = Prop<qreal>("scrollFactor", 0);
+    Prop<bool> m_supportsNaturalScroll = PropBool(this, "supportsNaturalScroll");
+    Prop<qreal> m_scrollFactor = Prop<qreal>(this, "scrollFactor", 0, &LibinputCommon::scrollFactorChanged);
 
     QDBusInterface *m_iface;
 };
