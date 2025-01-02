@@ -47,7 +47,7 @@ private:
     }
     bool supportsDisableEvents() const override
     {
-        return m_supportsDisableEvents.avail && m_supportsDisableEvents.val;
+        return m_supportsDisableEvents.val;
     }
     bool isEnabled() const override
     {
@@ -68,65 +68,65 @@ private:
     // advanced
     bool supportsLeftHanded() const override
     {
-        return m_leftHanded.avail;
+        return m_leftHandedEnabledByDefault.avail;
     }
     bool supportsDisableEventsOnExternalMouse() const override
     {
-        return m_supportsDisableEventsOnExternalMouse.avail && m_supportsDisableEventsOnExternalMouse.val;
+        return m_supportsDisableEventsOnExternalMouse.val;
     }
     bool supportsDisableWhileTyping() const override
     {
-        return m_disableWhileTyping.avail;
+        return m_disableWhileTypingEnabledByDefault.avail;
     }
     bool supportsMiddleEmulation() const override
     {
-        return m_middleEmulation.avail;
+        return m_middleEmulationEnabledByDefault.avail;
     }
     //
     // acceleration speed and profile
     bool supportsPointerAcceleration() const override
     {
-        return m_pointerAcceleration.avail;
+        return m_defaultPointerAcceleration.avail;
     }
     bool supportsPointerAccelerationProfileFlat() const override
     {
-        return m_supportsPointerAccelerationProfileFlat.avail && m_supportsPointerAccelerationProfileFlat.val;
+        return m_supportsPointerAccelerationProfileFlat.val;
     }
     bool supportsPointerAccelerationProfileAdaptive() const override
     {
-        return m_supportsPointerAccelerationProfileAdaptive.avail && m_supportsPointerAccelerationProfileAdaptive.val;
+        return m_supportsPointerAccelerationProfileAdaptive.val;
     }
     //
     // scrolling
     bool supportsNaturalScroll() const override
     {
-        return m_naturalScroll.avail;
+        return m_naturalScrollEnabledByDefault.avail;
     }
     bool supportsHorizontalScrolling() const override
     {
-        return true;
+        return m_horizontalScrolling.avail;
     }
     bool supportsScrollTwoFinger() const override
     {
-        return m_supportsScrollTwoFinger.avail && m_supportsScrollTwoFinger.val;
+        return m_supportsScrollTwoFinger.val;
     }
     bool supportsScrollEdge() const override
     {
-        return m_supportsScrollEdge.avail && m_supportsScrollEdge.val;
+        return m_supportsScrollEdge.val;
     }
     bool supportsScrollOnButtonDown() const override
     {
-        return m_supportsScrollOnButtonDown.avail && m_supportsScrollOnButtonDown.val;
+        return m_supportsScrollOnButtonDown.val;
     }
     //
     // click method
     bool supportsClickMethodAreas() const override
     {
-        return m_supportsClickMethodAreas.avail && m_supportsClickMethodAreas.val;
+        return m_supportsClickMethodAreas.val;
     }
     bool supportsClickMethodClickfinger() const override
     {
-        return m_supportsClickMethodClickfinger.avail && m_supportsClickMethodClickfinger.val;
+        return m_supportsClickMethodClickfinger.val;
     }
 
     bool supportsScrollFactor() const override
