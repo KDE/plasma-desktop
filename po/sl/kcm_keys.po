@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-01 00:42+0000\n"
-"PO-Revision-Date: 2024-08-22 07:46+0200\n"
+"PO-Revision-Date: 2025-01-01 18:41+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.5\n"
 
 #: basemodel.cpp:158
 #, kde-format
@@ -180,11 +180,10 @@ msgid "Application…"
 msgstr "Aplikacija…"
 
 #: ui/main.qml:180
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@action:menu accessible"
 msgid "Add new application"
-msgstr "Programi"
+msgstr "Dodaj novo aplikacijo"
 
 #: ui/main.qml:187
 #, kde-format
@@ -193,12 +192,10 @@ msgid "Command or Script…"
 msgstr "Ukaz ali skript…"
 
 #: ui/main.qml:188
-#, fuzzy, kde-format
-#| msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
-#| msgid "Command or Script…"
+#, kde-format
 msgctxt "@action:menu accessible"
 msgid "Add new command or script"
-msgstr "Ukaz ali skript…"
+msgstr "Dodaj nov ukaz ali skript"
 
 #: ui/main.qml:224
 #, kde-format

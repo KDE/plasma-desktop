@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2020, 2021, 2023, 2024.
+# Yuri Chornoivan <yurchor@ukr.net>, 2020, 2021, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-01 00:42+0000\n"
-"PO-Revision-Date: 2024-08-23 09:18+0300\n"
+"PO-Revision-Date: 2025-01-01 09:53+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -184,11 +184,10 @@ msgid "Application…"
 msgstr "Програма…"
 
 #: ui/main.qml:180
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@action:menu accessible"
 msgid "Add new application"
-msgstr "Програми"
+msgstr "Додати нову програму"
 
 #: ui/main.qml:187
 #, kde-format
@@ -197,12 +196,10 @@ msgid "Command or Script…"
 msgstr "Команда або скрипт…"
 
 #: ui/main.qml:188
-#, fuzzy, kde-format
-#| msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
-#| msgid "Command or Script…"
+#, kde-format
 msgctxt "@action:menu accessible"
 msgid "Add new command or script"
-msgstr "Команда або скрипт…"
+msgstr "Додати нову команду або скрипт"
 
 #: ui/main.qml:224
 #, kde-format

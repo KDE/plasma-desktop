@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-01 00:42+0000\n"
-"PO-Revision-Date: 2024-08-23 07:07+0300\n"
+"PO-Revision-Date: 2025-01-01 06:39+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: basemodel.cpp:158
 #, kde-format
@@ -180,11 +180,10 @@ msgid "Application…"
 msgstr "יישום…"
 
 #: ui/main.qml:180
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@action:menu accessible"
 msgid "Add new application"
-msgstr "יישומים"
+msgstr "הוספת יישום חדש"
 
 #: ui/main.qml:187
 #, kde-format
@@ -193,12 +192,10 @@ msgid "Command or Script…"
 msgstr "פקודה או סקריפט…"
 
 #: ui/main.qml:188
-#, fuzzy, kde-format
-#| msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
-#| msgid "Command or Script…"
+#, kde-format
 msgctxt "@action:menu accessible"
 msgid "Add new command or script"
-msgstr "פקודה או סקריפט…"
+msgstr "הוספת פקודה או סקריפט חדשים"
 
 #: ui/main.qml:224
 #, kde-format

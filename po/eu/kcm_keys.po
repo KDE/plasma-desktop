@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-01 00:42+0000\n"
-"PO-Revision-Date: 2024-08-22 11:36+0200\n"
+"PO-Revision-Date: 2025-01-01 08:32+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: basemodel.cpp:158
 #, kde-format
@@ -185,11 +185,10 @@ msgid "Application…"
 msgstr "Aplikazioa…"
 
 #: ui/main.qml:180
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@action:menu accessible"
 msgid "Add new application"
-msgstr "Aplikazioak"
+msgstr "Gehitu aplikazio berria"
 
 #: ui/main.qml:187
 #, kde-format
@@ -198,12 +197,10 @@ msgid "Command or Script…"
 msgstr "Komandoa edo gidoia..."
 
 #: ui/main.qml:188
-#, fuzzy, kde-format
-#| msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
-#| msgid "Command or Script…"
+#, kde-format
 msgctxt "@action:menu accessible"
 msgid "Add new command or script"
-msgstr "Komandoa edo gidoia..."
+msgstr "Gehitu komando edo gidoi berria"
 
 #: ui/main.qml:224
 #, kde-format
