@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-13 02:31+0000\n"
-"PO-Revision-Date: 2024-08-03 07:26+0200\n"
+"PO-Revision-Date: 2024-12-29 19:47+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -157,28 +157,22 @@ msgstr ""
 "decidi kiel trakti ĝin."
 
 #: ui/ActionDialog.qml:177
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu Left mouse click"
-#| msgid "Left Click"
+#, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left-click"
-msgstr "Maldesktra Klako"
+msgstr "Maldesktra klako"
 
 #: ui/ActionDialog.qml:178
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu Middle mouse click"
-#| msgid "Middle Click"
+#, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle-click"
-msgstr "Meza Klako"
+msgstr "Meza klako"
 
 #: ui/ActionDialog.qml:179
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu Right mouse click"
-#| msgid "Right Click"
+#, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right-click"
-msgstr "Desktra Klako"
+msgstr "Desktra klako"
 
 #: ui/ActionDialog.qml:206
 #, kde-format
@@ -322,7 +316,7 @@ msgstr "Mapita Areo:"
 #: ui/main.qml:261
 #, kde-format
 msgid "Resize the tablet area"
-msgstr "Regrandigi la tablojdan areon"
+msgstr "Aligrandigi la tabuletan areon"
 
 #: ui/main.qml:285
 #, kde-format
@@ -413,7 +407,7 @@ msgstr "Neniu"
 #: ui/main.qml:454
 #, kde-format
 msgid "Pad button %1:"
-msgstr "Matbutono %1:"
+msgstr "Platbutono %1:"
 
 #: ui/main.qml:457
 #, kde-format
@@ -421,7 +415,7 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad button %1"
-msgstr "matbutonon %1"
+msgstr "platbutonon %1"
 
 #: ui/Tester.qml:25
 #, kde-format
