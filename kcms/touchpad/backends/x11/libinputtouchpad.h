@@ -135,8 +135,8 @@ private:
     }
 
     // Tapping
-    Prop<bool> m_lrmTapButtonMapEnabledByDefault = PropBool("lrmTapButtonMapEnabledByDefault");
-    Prop<bool> m_lrmTapButtonMap = PropBool("lrmTapButtonMap");
+    Prop<bool> m_lrmTapButtonMapEnabledByDefault = PropBool(this, "lrmTapButtonMapEnabledByDefault");
+    Prop<bool> m_lrmTapButtonMap = PropBool(this, "lrmTapButtonMap");
 
     QString m_name;
 };

@@ -95,12 +95,12 @@ class LibinputCommon : public QObject
     Q_PROPERTY(bool supportsPointerAccelerationProfileFlat READ supportsPointerAccelerationProfileFlat CONSTANT)
     Q_PROPERTY(bool defaultPointerAccelerationProfileFlat READ defaultPointerAccelerationProfileFlat CONSTANT)
     Q_PROPERTY(bool pointerAccelerationProfileFlat READ pointerAccelerationProfileFlat WRITE setPointerAccelerationProfileFlat NOTIFY
-                   pointerAccelerationProfileChanged)
+                   pointerAccelerationProfileFlatChanged)
 
     Q_PROPERTY(bool supportsPointerAccelerationProfileAdaptive READ supportsPointerAccelerationProfileAdaptive CONSTANT)
     Q_PROPERTY(bool defaultPointerAccelerationProfileAdaptive READ defaultPointerAccelerationProfileAdaptive CONSTANT)
     Q_PROPERTY(bool pointerAccelerationProfileAdaptive READ pointerAccelerationProfileAdaptive WRITE setPointerAccelerationProfileAdaptive NOTIFY
-                   pointerAccelerationProfileChanged)
+                   pointerAccelerationProfileAdaptiveChanged)
 
     //
     // tapping
@@ -130,15 +130,15 @@ class LibinputCommon : public QObject
 
     Q_PROPERTY(bool supportsScrollTwoFinger READ supportsScrollTwoFinger CONSTANT)
     Q_PROPERTY(bool scrollTwoFingerEnabledByDefault READ scrollTwoFingerEnabledByDefault CONSTANT)
-    Q_PROPERTY(bool scrollTwoFinger READ isScrollTwoFinger WRITE setScrollTwoFinger NOTIFY scrollMethodChanged)
+    Q_PROPERTY(bool scrollTwoFinger READ isScrollTwoFinger WRITE setScrollTwoFinger NOTIFY scrollTwoFingerChanged)
 
     Q_PROPERTY(bool supportsScrollEdge READ supportsScrollEdge CONSTANT)
     Q_PROPERTY(bool scrollEdgeEnabledByDefault READ scrollEdgeEnabledByDefault CONSTANT)
-    Q_PROPERTY(bool scrollEdge READ isScrollEdge WRITE setScrollEdge NOTIFY scrollMethodChanged)
+    Q_PROPERTY(bool scrollEdge READ isScrollEdge WRITE setScrollEdge NOTIFY scrollEdgeChanged)
 
     Q_PROPERTY(bool supportsScrollOnButtonDown READ supportsScrollOnButtonDown CONSTANT)
     Q_PROPERTY(bool scrollOnButtonDownEnabledByDefault READ scrollOnButtonDownEnabledByDefault CONSTANT)
-    Q_PROPERTY(bool scrollOnButtonDown READ isScrollOnButtonDown WRITE setScrollOnButtonDown NOTIFY scrollMethodChanged)
+    Q_PROPERTY(bool scrollOnButtonDown READ isScrollOnButtonDown WRITE setScrollOnButtonDown NOTIFY scrollOnButtonDownChanged)
 
     Q_PROPERTY(quint32 defaultScrollButton READ defaultScrollButton CONSTANT)
     Q_PROPERTY(quint32 scrollButton READ scrollButton WRITE setScrollButton NOTIFY scrollButtonChanged)
@@ -146,11 +146,11 @@ class LibinputCommon : public QObject
     // Click Methods
     Q_PROPERTY(bool supportsClickMethodAreas READ supportsClickMethodAreas CONSTANT)
     Q_PROPERTY(bool defaultClickMethodAreas READ defaultClickMethodAreas CONSTANT)
-    Q_PROPERTY(bool clickMethodAreas READ isClickMethodAreas WRITE setClickMethodAreas NOTIFY clickMethodChanged)
+    Q_PROPERTY(bool clickMethodAreas READ isClickMethodAreas WRITE setClickMethodAreas NOTIFY clickMethodAreasChanged)
 
     Q_PROPERTY(bool supportsClickMethodClickfinger READ supportsClickMethodClickfinger CONSTANT)
     Q_PROPERTY(bool defaultClickMethodClickfinger READ defaultClickMethodClickfinger CONSTANT)
-    Q_PROPERTY(bool clickMethodClickfinger READ isClickMethodClickfinger WRITE setClickMethodClickfinger NOTIFY clickMethodChanged)
+    Q_PROPERTY(bool clickMethodClickfinger READ isClickMethodClickfinger WRITE setClickMethodClickfinger NOTIFY clickMethodClickfingerChanged)
 
     Q_PROPERTY(bool supportsScrollFactor READ supportsScrollFactor CONSTANT)
 public:
@@ -352,6 +352,9 @@ public:
         m_scrollButton.set(button);
     }
 
+    // the only unique property to the Wayland backend
+    virtual bool supportsScrollFactor() const = 0;
+
     //
     // tapping
     int tapFingerCount() const
@@ -441,8 +444,6 @@ public:
         m_clickMethodClickfinger.set(set);
     }
 
-    virtual bool supportsScrollFactor() const = 0;
-
 Q_SIGNALS:
     void enabledChanged();
     // Tapping
@@ -457,21 +458,31 @@ Q_SIGNALS:
     void middleEmulationChanged();
     // acceleration speed and profile
     void pointerAccelerationChanged();
-    void pointerAccelerationProfileChanged();
+    void pointerAccelerationProfileFlatChanged();
+    void pointerAccelerationProfileAdaptiveChanged();
     // scrolling
     void naturalScrollChanged();
     void horizontalScrollingChanged();
-    void scrollMethodChanged();
+    void scrollTwoFingerChanged();
+    void scrollEdgeChanged();
+    void scrollOnButtonDownChanged();
     void scrollButtonChanged();
+    // the only unique property to the Wayland backend
+    void scrollFactorChanged();
     // click methods
-    void clickMethodChanged();
+    void clickMethodAreasChanged();
+    void clickMethodClickfingerChanged();
 
 protected:
     template<typename T>
     struct Prop {
-        explicit Prop(const QByteArray &name, T initialValue)
+        using ChangedSignal = void (LibinputCommon::*)();
+
+        explicit Prop(LibinputCommon *device, const QByteArray &name, T initialValue, ChangedSignal changedSignal = nullptr)
             : name(name)
             , avail(false)
+            , changedSignalFunction(changedSignal)
+            , device(device)
             , old(initialValue)
             , val(initialValue)
         {
@@ -481,13 +492,16 @@ protected:
         {
             if (avail && val != newVal) {
                 val = newVal;
+                if (changedSignalFunction) {
+                    // clang-format off
+                    Q_EMIT (device->*changedSignalFunction)();
+                    // clang-format on
+                }
             }
         }
         void set(const Prop<T> &p)
         {
-            if (avail && val != p.val) {
-                val = p.val;
-            }
+            set(p.val);
         }
         bool changed() const
         {
@@ -497,109 +511,112 @@ protected:
         // In wayland, name will be dbus name
         QByteArray name;
         bool avail;
+        const ChangedSignal changedSignalFunction;
+        LibinputCommon *const device;
         T old;
         T val;
     };
 
     struct PropInt : public Prop<int> {
-        explicit PropInt(const QByteArray &name)
-            : Prop<int>(name, 0)
+        explicit PropInt(LibinputCommon *device, const QByteArray &name, ChangedSignal changedSignal = nullptr)
+            : Prop<int>(device, name, 0, changedSignal)
         {
         }
     };
 
     struct PropReal : public Prop<qreal> {
-        explicit PropReal(const QByteArray &name)
-            : Prop<qreal>(name, false)
+        explicit PropReal(LibinputCommon *device, const QByteArray &name, ChangedSignal changedSignal = nullptr)
+            : Prop<qreal>(device, name, 0, changedSignal)
         {
         }
     };
 
     struct PropBool : public Prop<bool> {
-        explicit PropBool(const QByteArray &name)
-            : Prop<bool>(name, 0)
+        explicit PropBool(LibinputCommon *device, const QByteArray &name, ChangedSignal changedSignal = nullptr)
+            : Prop<bool>(device, name, false, changedSignal)
         {
         }
     };
 
     //
     // general
-    PropBool m_supportsDisableEvents = PropBool("supportsDisableEvents");
-    PropBool m_enabledDefault = PropBool("enabledDefault");
-    PropBool m_enabled = PropBool("enabled");
+    PropBool m_supportsDisableEvents = PropBool(this, "supportsDisableEvents");
+    PropBool m_enabledDefault = PropBool(this, "enabledDefault");
+    PropBool m_enabled = PropBool(this, "enabled", &LibinputCommon::enabledChanged);
 
     //
     // advanced
-    Prop<Qt::MouseButtons> m_supportedButtons = Prop<Qt::MouseButtons>("supportedButtons", Qt::MouseButton::NoButton);
+    Prop<Qt::MouseButtons> m_supportedButtons = Prop<Qt::MouseButtons>(this, "supportedButtons", Qt::MouseButton::NoButton);
 
-    PropBool m_leftHandedEnabledByDefault = PropBool("leftHandedEnabledByDefault");
-    PropBool m_leftHanded = PropBool("leftHanded");
+    PropBool m_leftHandedEnabledByDefault = PropBool(this, "leftHandedEnabledByDefault");
+    PropBool m_leftHanded = PropBool(this, "leftHanded", &LibinputCommon::leftHandedChanged);
 
-    PropBool m_supportsDisableEventsOnExternalMouse = PropBool("supportsDisableEventsOnExternalMouse");
-    PropBool m_disableEventsOnExternalMouseEnabledByDefault = PropBool("disableEventsOnExternalMouseEnabledByDefault");
-    PropBool m_disableEventsOnExternalMouse = PropBool("disableEventsOnExternalMouse");
+    PropBool m_supportsDisableEventsOnExternalMouse = PropBool(this, "supportsDisableEventsOnExternalMouse");
+    PropBool m_disableEventsOnExternalMouseEnabledByDefault = PropBool(this, "disableEventsOnExternalMouseEnabledByDefault");
+    PropBool m_disableEventsOnExternalMouse = PropBool(this, "disableEventsOnExternalMouse", &LibinputCommon::disableEventsOnExternalMouseChanged);
 
-    PropBool m_disableWhileTypingEnabledByDefault = PropBool("disableWhileTypingEnabledByDefault");
-    PropBool m_disableWhileTyping = PropBool("disableWhileTyping");
+    PropBool m_disableWhileTypingEnabledByDefault = PropBool(this, "disableWhileTypingEnabledByDefault");
+    PropBool m_disableWhileTyping = PropBool(this, "disableWhileTyping", &LibinputCommon::disableWhileTypingChanged);
 
-    PropBool m_middleEmulationEnabledByDefault = PropBool("middleEmulationEnabledByDefault");
-    PropBool m_middleEmulation = PropBool("middleEmulation");
+    PropBool m_middleEmulationEnabledByDefault = PropBool(this, "middleEmulationEnabledByDefault");
+    PropBool m_middleEmulation = PropBool(this, "middleEmulation", &LibinputCommon::middleEmulationChanged);
 
     //
     // acceleration speed and profile
-    Prop<qreal> m_defaultPointerAcceleration = PropReal("defaultPointerAcceleration");
-    Prop<qreal> m_pointerAcceleration = PropReal("pointerAcceleration");
+    Prop<qreal> m_defaultPointerAcceleration = PropReal(this, "defaultPointerAcceleration");
+    Prop<qreal> m_pointerAcceleration = PropReal(this, "pointerAcceleration", &LibinputCommon::pointerAccelerationChanged);
 
-    PropBool m_supportsPointerAccelerationProfileFlat = PropBool("supportsPointerAccelerationProfileFlat");
-    PropBool m_defaultPointerAccelerationProfileFlat = PropBool("defaultPointerAccelerationProfileFlat");
-    PropBool m_pointerAccelerationProfileFlat = PropBool("pointerAccelerationProfileFlat");
+    PropBool m_supportsPointerAccelerationProfileFlat = PropBool(this, "supportsPointerAccelerationProfileFlat");
+    PropBool m_defaultPointerAccelerationProfileFlat = PropBool(this, "defaultPointerAccelerationProfileFlat");
+    PropBool m_pointerAccelerationProfileFlat = PropBool(this, "pointerAccelerationProfileFlat", &LibinputCommon::pointerAccelerationProfileFlatChanged);
 
-    PropBool m_supportsPointerAccelerationProfileAdaptive = PropBool("supportsPointerAccelerationProfileAdaptive");
-    PropBool m_defaultPointerAccelerationProfileAdaptive = PropBool("defaultPointerAccelerationProfileAdaptive");
-    PropBool m_pointerAccelerationProfileAdaptive = PropBool("pointerAccelerationProfileAdaptive");
+    PropBool m_supportsPointerAccelerationProfileAdaptive = PropBool(this, "supportsPointerAccelerationProfileAdaptive");
+    PropBool m_defaultPointerAccelerationProfileAdaptive = PropBool(this, "defaultPointerAccelerationProfileAdaptive");
+    PropBool m_pointerAccelerationProfileAdaptive =
+        PropBool(this, "pointerAccelerationProfileAdaptive", &LibinputCommon::pointerAccelerationProfileAdaptiveChanged);
 
     //
     // tapping
-    Prop<int> m_tapFingerCount = PropInt("tapFingerCount");
-    PropBool m_tapToClickEnabledByDefault = PropBool("tapToClickEnabledByDefault");
-    PropBool m_tapToClick = PropBool("tapToClick");
+    Prop<int> m_tapFingerCount = PropInt(this, "tapFingerCount");
+    PropBool m_tapToClickEnabledByDefault = PropBool(this, "tapToClickEnabledByDefault");
+    PropBool m_tapToClick = PropBool(this, "tapToClick", &LibinputCommon::tapToClickChanged);
 
-    PropBool m_lmrTapButtonMapEnabledByDefault = PropBool("lmrTapButtonMapEnabledByDefault");
-    PropBool m_lmrTapButtonMap = PropBool("lmrTapButtonMap");
+    PropBool m_lmrTapButtonMapEnabledByDefault = PropBool(this, "lmrTapButtonMapEnabledByDefault");
+    PropBool m_lmrTapButtonMap = PropBool(this, "lmrTapButtonMap", &LibinputCommon::lmrTapButtonMapChanged);
 
-    PropBool m_tapAndDragEnabledByDefault = PropBool("tapAndDragEnabledByDefault");
-    PropBool m_tapAndDrag = PropBool("tapAndDrag");
-    PropBool m_tapDragLockEnabledByDefault = PropBool("tapDragLockEnabledByDefault");
-    PropBool m_tapDragLock = PropBool("tapDragLock");
+    PropBool m_tapAndDragEnabledByDefault = PropBool(this, "tapAndDragEnabledByDefault");
+    PropBool m_tapAndDrag = PropBool(this, "tapAndDrag", &LibinputCommon::tapAndDragChanged);
+    PropBool m_tapDragLockEnabledByDefault = PropBool(this, "tapDragLockEnabledByDefault");
+    PropBool m_tapDragLock = PropBool(this, "tapDragLock", &LibinputCommon::tapDragLockChanged);
 
     //
     // scrolling
-    PropBool m_naturalScrollEnabledByDefault = PropBool("naturalScrollEnabledByDefault");
-    PropBool m_naturalScroll = PropBool("naturalScroll");
+    PropBool m_naturalScrollEnabledByDefault = PropBool(this, "naturalScrollEnabledByDefault");
+    PropBool m_naturalScroll = PropBool(this, "naturalScroll", &LibinputCommon::naturalScrollChanged);
 
-    PropBool m_horizontalScrolling = PropBool("horizontalScrolling");
+    PropBool m_horizontalScrolling = PropBool(this, "horizontalScrolling", &LibinputCommon::horizontalScrollingChanged);
 
-    PropBool m_supportsScrollTwoFinger = PropBool("supportsScrollTwoFinger");
-    PropBool m_scrollTwoFingerEnabledByDefault = PropBool("scrollTwoFingerEnabledByDefault");
-    PropBool m_isScrollTwoFinger = PropBool("scrollTwoFinger");
+    PropBool m_supportsScrollTwoFinger = PropBool(this, "supportsScrollTwoFinger");
+    PropBool m_scrollTwoFingerEnabledByDefault = PropBool(this, "scrollTwoFingerEnabledByDefault");
+    PropBool m_isScrollTwoFinger = PropBool(this, "scrollTwoFinger", &LibinputCommon::scrollTwoFingerChanged);
 
-    PropBool m_supportsScrollEdge = PropBool("supportsScrollEdge");
-    PropBool m_scrollEdgeEnabledByDefault = PropBool("scrollEdgeEnabledByDefault");
-    PropBool m_isScrollEdge = PropBool("scrollEdge");
+    PropBool m_supportsScrollEdge = PropBool(this, "supportsScrollEdge");
+    PropBool m_scrollEdgeEnabledByDefault = PropBool(this, "scrollEdgeEnabledByDefault");
+    PropBool m_isScrollEdge = PropBool(this, "scrollEdge", &LibinputCommon::scrollEdgeChanged);
 
-    PropBool m_supportsScrollOnButtonDown = PropBool("supportsScrollOnButtonDown");
-    PropBool m_scrollOnButtonDownEnabledByDefault = PropBool("scrollOnButtonDownEnabledByDefault");
-    PropBool m_isScrollOnButtonDown = PropBool("scrollOnButtonDown");
+    PropBool m_supportsScrollOnButtonDown = PropBool(this, "supportsScrollOnButtonDown");
+    PropBool m_scrollOnButtonDownEnabledByDefault = PropBool(this, "scrollOnButtonDownEnabledByDefault");
+    PropBool m_isScrollOnButtonDown = PropBool(this, "scrollOnButtonDown", &LibinputCommon::scrollOnButtonDownChanged);
 
-    Prop<quint32> m_defaultScrollButton = Prop<quint32>("defaultScrollButton", 0);
-    Prop<quint32> m_scrollButton = Prop<quint32>("scrollButton", 0);
+    Prop<quint32> m_defaultScrollButton = Prop<quint32>(this, "defaultScrollButton", 0);
+    Prop<quint32> m_scrollButton = Prop<quint32>(this, "scrollButton", 0, &LibinputCommon::scrollButtonChanged);
 
     // Click Method
-    PropBool m_supportsClickMethodAreas = PropBool("supportsClickMethodAreas");
-    PropBool m_defaultClickMethodAreas = PropBool("defaultClickMethodAreas");
-    PropBool m_clickMethodAreas = PropBool("clickMethodAreas");
+    PropBool m_supportsClickMethodAreas = PropBool(this, "supportsClickMethodAreas");
+    PropBool m_defaultClickMethodAreas = PropBool(this, "defaultClickMethodAreas");
+    PropBool m_clickMethodAreas = PropBool(this, "clickMethodAreas", &LibinputCommon::clickMethodAreasChanged);
 
-    PropBool m_supportsClickMethodClickfinger = PropBool("supportsClickMethodClickfinger");
-    PropBool m_defaultClickMethodClickfinger = PropBool("defaultClickMethodClickfinger");
-    PropBool m_clickMethodClickfinger = PropBool("clickMethodClickfinger");
+    PropBool m_supportsClickMethodClickfinger = PropBool(this, "supportsClickMethodClickfinger");
+    PropBool m_defaultClickMethodClickfinger = PropBool(this, "defaultClickMethodClickfinger");
+    PropBool m_clickMethodClickfinger = PropBool(this, "clickMethodClickfinger", &LibinputCommon::clickMethodClickfingerChanged);
 };

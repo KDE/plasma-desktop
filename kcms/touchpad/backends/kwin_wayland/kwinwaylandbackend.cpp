@@ -134,6 +134,7 @@ void KWinWaylandBackend::onDeviceAdded(QString sysName)
         m_devices.append(tp);
         qCDebug(KCM_TOUCHPAD).nospace() << "Touchpad connected: " << tp->name() << " (" << tp->sysName() << ")";
         Q_EMIT deviceAdded(true);
+        Q_EMIT inputDevicesChanged();
     }
 }
 
@@ -152,6 +153,7 @@ void KWinWaylandBackend::onDeviceRemoved(QString sysName)
     int index = it - m_devices.cbegin();
     m_devices.removeAt(index);
     Q_EMIT deviceRemoved(index);
+    Q_EMIT inputDevicesChanged();
 }
 
 #include "moc_kwinwaylandbackend.cpp"

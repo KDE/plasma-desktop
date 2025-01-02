@@ -62,7 +62,6 @@ KCMTouchpad::KCMTouchpad(QObject *parent, const KPluginMetaData &data)
     m_view->setAttribute(Qt::WA_AlwaysStackOnTop);
 
     m_view->rootContext()->setContextProperty("backend", m_backend);
-    m_view->rootContext()->setContextProperty("deviceModel", QVariant::fromValue(m_backend->inputDevices().toList()));
 
     QObject::connect(m_view, &QQuickWidget::statusChanged, [&](QQuickWidget::Status status) {
         if (status == QQuickWidget::Ready) {
@@ -111,7 +110,7 @@ void KCMTouchpad::load()
             Q_EMIT showMessage(i18n("No touchpad found. Connect touchpad now."));
         }
     }
-    QMetaObject::invokeMethod(m_view->rootObject(), "syncValuesFromBackend");
+    setNeedsSave(false);
 }
 
 void KCMTouchpad::save()
@@ -138,38 +137,26 @@ void KCMTouchpad::defaults()
     if (!m_backend->getDefaultConfig()) {
         Q_EMIT showMessage(i18n("Error while loading default values. Failed to set some options to their default values."));
     }
-    QMetaObject::invokeMethod(m_view->rootObject(), "syncValuesFromBackend");
     setNeedsSave(m_backend->isChangedConfig());
 }
 
 void KCMTouchpad::onChange()
 {
-    if (!m_backend->deviceCount()) {
-        return;
+    if (m_backend->deviceCount() > 0) {
+        hideErrorMessage();
     }
-    hideErrorMessage();
     setNeedsSave(m_backend->isChangedConfig());
 }
 
 void KCMTouchpad::onDeviceAdded(bool success)
 {
-    QQuickItem *rootObj = m_view->rootObject();
-
     if (!success) {
         Q_EMIT showMessage(i18n("Error while adding newly connected device. Please reconnect it and restart this configuration module."));
     }
 
-    int activeIndex;
-    if (m_backend->deviceCount() == 1) {
-        // if no touchpad was connected previously, show the new device and hide the no-device-message
-        activeIndex = 0;
+    if (m_backend->deviceCount() > 0) {
         hideErrorMessage();
-    } else {
-        activeIndex = QQmlProperty::read(rootObj, "deviceIndex").toInt();
     }
-    m_view->rootContext()->setContextProperty("deviceModel", QVariant::fromValue(m_backend->inputDevices()));
-    QMetaObject::invokeMethod(rootObj, "resetModel", Q_ARG(QVariant, activeIndex));
-    QMetaObject::invokeMethod(rootObj, "syncValuesFromBackend");
 }
 
 void KCMTouchpad::onDeviceRemoved(int index)
@@ -183,16 +170,7 @@ void KCMTouchpad::onDeviceRemoved(int index)
         } else {
             Q_EMIT showMessage(i18n("Touchpad disconnected. No other touchpads found."), 0 /*Kirigami.MessageType.Information*/);
         }
-        activeIndex = 0;
-    } else {
-        if (index < activeIndex) {
-            activeIndex--;
-        }
     }
-    m_view->rootContext()->setContextProperty("deviceModel", QVariant::fromValue(m_backend->inputDevices()));
-    QMetaObject::invokeMethod(m_view->rootObject(), "resetModel", Q_ARG(QVariant, activeIndex));
-    QMetaObject::invokeMethod(rootObj, "syncValuesFromBackend");
-
     setNeedsSave(m_backend->isChangedConfig());
 }
 

@@ -1,6 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2017 Roman Gilg <subdiff@gmail.com>
     SPDX-FileCopyrightText: 2018 Furkan Tokac <furkantokac34@gmail.com>
+    SPDX-FileCopyrightText: 2025 Jakob Petsovits <jpetso@petsovits.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -22,54 +23,8 @@ KCM.SimpleKCM {
     spacing: Kirigami.Units.smallSpacing
 
     property alias deviceIndex: deviceSelector.currentIndex
+    property Touchpad.InputDevice device: backend.inputDevices[deviceIndex] ?? null
     signal changeSignal()
-
-    property Touchpad.InputDevice touchpad
-    property int touchpadCount: backend.deviceCount
-
-    property bool loading: false
-
-    function resetModel(index) {
-        touchpadCount = backend.deviceCount
-        formLayout.enabled = touchpadCount
-        deviceSelector.enabled = touchpadCount > 1
-
-        loading = true
-        if (touchpadCount) {
-            touchpad = deviceModel[index]
-            deviceSelector.model = deviceModel
-            deviceSelector.currentIndex = index
-        } else {
-            deviceSelector.model = [""]
-        }
-        loading = false
-    }
-
-    function syncValuesFromBackend() {
-        loading = true
-
-        deviceEnabled.load()
-        disableEventsOnExternalMouse.load()
-        dwt.load()
-        leftHanded.load()
-        middleEmulation.load()
-        accelSpeedSpinbox.load()
-        accelSpeedSlider.load()
-        accelProfile.load()
-        tapToClick.load()
-        tapAndDrag.load()
-        tapAndDragLock.load()
-        multiTap.load()
-        scrollMethod.load()
-        naturalScroll.load()
-        scrollFactor.load()
-        rightClickMethod.load()
-        middleClickMethod.load()
-        disableHorizontalScrolling.load()
-
-        loading = false
-    }
-
 
     headerPaddingEnabled: false // Let the InlineMessage touch the edges
     header: Kirigami.InlineMessage {
@@ -82,7 +37,7 @@ KCM.SimpleKCM {
 
         function onShowMessage(message, type) {
 
-            if (touchpadCount === 0) {
+            if (!backend.inputDevices?.length) {
                 return
             }
 
@@ -101,7 +56,7 @@ KCM.SimpleKCM {
         text: i18nd("kcm_touchpad", "No touchpad found")
         explanation: i18nd("kcm_touchpad", "Connect an external touchpad");
         anchors.centerIn: parent
-        visible: touchpadCount === 0
+        visible: !backend.inputDevices?.length
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
     }
 
@@ -109,26 +64,26 @@ KCM.SimpleKCM {
     Kirigami.FormLayout {
         id: formLayout
 
-        visible: touchpadCount > 0
+        visible: backend.inputDevices?.length > 0
+        enabled: visible
 
         // Device
         QQC2.ComboBox {
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Device:")
             id: deviceSelector
 
-            visible: touchpadCount > 1
+            visible: count > 1
             Layout.fillWidth: true
-            model: deviceModel
+            model: backend.inputDevices
             textRole: "name"
 
-            onCurrentIndexChanged: {
-                if (touchpadCount) {
-                    touchpad = deviceModel[currentIndex]
-                    if (!loading) {
-                        changeSignal()
+            Connections {
+                target: backend
+                function onDeviceRemoved(index) {
+                    if (index < deviceSelector.currentIndex) {
+                        --deviceSelector.currentIndex;
                     }
                 }
-                root.syncValuesFromBackend()
             }
         }
 
@@ -141,6 +96,8 @@ KCM.SimpleKCM {
             id: deviceEnabled
             Kirigami.FormData.label: i18nd("kcm_touchpad", "General:")
             text: i18nd("kcm_touchpad", "Device enabled")
+            enabled: root.device?.supportsDisableEvents ?? false
+            checked: root.device && (!root.device.supportsDisableEvents || root.device.enabled)
 
             hoverEnabled: true
             QQC2.ToolTip {
@@ -149,18 +106,9 @@ KCM.SimpleKCM {
                 delay: 1000
             }
 
-            function load() {
-                if (!formLayout.enabled) {
-                    checked = false
-                    return
-                }
-                enabled = touchpad.supportsDisableEvents
-                checked = enabled && touchpad.enabled
-            }
-
-            onCheckedChanged: {
-                if (enabled && !root.loading) {
-                    touchpad.enabled = checked
+            onToggled: {
+                if (root.device) {
+                    root.device.enabled = checked
                     root.changeSignal()
                 }
             }
@@ -170,19 +118,12 @@ KCM.SimpleKCM {
             id: disableEventsOnExternalMouse
             text: i18ndc("kcm_touchpad", "@option:check", "Disable while mouse is connected")
             leftPadding: deviceEnabled.contentItem.leftPadding
+            enabled: root.device?.supportsDisableEventsOnExternalMouse ?? false
+            checked: enabled && (root.device?.disableEventsOnExternalMouse ?? false)
 
-            function load() {
-                if (!formLayout.enabled) {
-                    checked = false
-                    return
-                }
-                enabled = touchpad.supportsDisableEventsOnExternalMouse
-                checked = enabled && touchpad.disableEventsOnExternalMouse
-            }
-
-            onCheckedChanged: {
-                if (enabled && !root.loading) {
-                    touchpad.disableEventsOnExternalMouse = checked
+            onToggled: {
+                if (root.device) {
+                    root.device.disableEventsOnExternalMouse = checked
                     root.changeSignal()
                 }
             }
@@ -196,6 +137,8 @@ KCM.SimpleKCM {
                 id: dwt
                 text: i18nd("kcm_touchpad", "Disable while typing")
                 leftPadding: deviceEnabled.contentItem.leftPadding
+                enabled: root.device?.supportsDisableWhileTyping ?? false
+                checked: enabled && (root.device?.disableWhileTyping ?? false)
 
                 hoverEnabled: true
                 QQC2.ToolTip {
@@ -204,18 +147,9 @@ KCM.SimpleKCM {
                     delay: 1000
                 }
 
-                function load() {
-                    if (!formLayout.enabled) {
-                        checked = false
-                        return
-                    }
-                    enabled = touchpad.supportsDisableWhileTyping
-                    checked = enabled && touchpad.disableWhileTyping
-                }
-
-                onCheckedChanged: {
-                    if (enabled && !root.loading) {
-                        touchpad.disableWhileTyping = checked
+                onToggled: {
+                    if (root.device) {
+                        root.device.disableWhileTyping = checked
                         root.changeSignal()
                     }
                 }
@@ -227,12 +161,15 @@ KCM.SimpleKCM {
                 textFormat: Text.PlainText
                 elide: Text.ElideRight
                 font: Kirigami.Theme.smallFont
+                enabled: dwt.enabled
             }
         }
 
         QQC2.CheckBox {
             id: leftHanded
             text: i18nd("kcm_touchpad", "Left-handed mode")
+            enabled: root.device?.supportsLeftHanded ?? false
+            checked: enabled && (root.device?.leftHanded ?? false)
 
             hoverEnabled: true
             QQC2.ToolTip {
@@ -241,18 +178,9 @@ KCM.SimpleKCM {
                 delay: 1000
             }
 
-            function load() {
-                if (!formLayout.enabled) {
-                    checked = false
-                    return
-                }
-                enabled = touchpad.supportsLeftHanded
-                checked = enabled && touchpad.leftHanded
-            }
-
-            onCheckedChanged: {
-                if (enabled && !root.loading) {
-                    touchpad.leftHanded = checked
+            onToggled: {
+                if (root.device) {
+                    root.device.leftHanded = checked
                     root.changeSignal()
                 }
             }
@@ -263,6 +191,8 @@ KCM.SimpleKCM {
             QQC2.CheckBox {
                 id: middleEmulation
                 text: i18ndc("kcm_touchpad", "@option:check", "Press left and right buttons to middle-click")
+                enabled: root.device?.supportsMiddleEmulation ?? false
+                checked: enabled && (root.device?.middleEmulation ?? false)
 
                 hoverEnabled: true
                 QQC2.ToolTip {
@@ -271,23 +201,11 @@ KCM.SimpleKCM {
                     delay: 1000
                 }
 
-                function load() {
-                    if (!formLayout.enabled) {
-                        checked = false
-                        return
-                    }
-                    enabled = touchpad.supportsMiddleEmulation
-                    checked = enabled && touchpad.middleEmulation
-                }
-
-                onCheckedChanged: {
-                    if (enabled && !root.loading) {
-                        touchpad.middleEmulation = checked
+                onToggled: {
+                    if (root.device) {
+                        root.device.middleEmulation = checked
                         root.changeSignal()
                     }
-                    loading = true
-                    middleClickMethod.load()
-                    loading = false
                 }
             }
 
@@ -307,20 +225,8 @@ KCM.SimpleKCM {
             Layout.fillWidth: true
 
             function onAccelSpeedChanged(val) {
-                // check slider
-                if (val !== accelSpeedSlider.accelSpeedValue) {
-                    accelSpeedSlider.accelSpeedValue = val
-                    accelSpeedSlider.value = Math.round(6 + (val / 100) / 0.2)
-                }
-
-                // check spinbox
-                if (val !== accelSpeedSpinbox.value) {
-                    accelSpeedSpinbox.value = val
-                }
-
-                // check libinput accelspeed
-                if ((val / 100) !== touchpad.pointerAcceleration) {
-                    touchpad.pointerAcceleration = val / 100
+                if ((val / 100) !== root.device.pointerAcceleration) {
+                    root.device.pointerAcceleration = val / 100
                     root.changeSignal()
                 }
             }
@@ -332,25 +238,15 @@ KCM.SimpleKCM {
                 from: 1
                 to: 11
                 stepSize: 1
-                property int accelSpeedValue: 0 // [-100, 100]
+                enabled: root.device?.supportsPointerAcceleration ?? false
 
-                function load() {
-                    enabled = touchpad.supportsPointerAcceleration
-                    if (!enabled) {
-                        return
-                    }
+                // convert libinput pointer acceleration range [-1, 1] to slider range [1, 11]
+                value: enabled ? Math.round(6 + root.device.pointerAcceleration / 0.2) : 0
 
-                    accelSpeedValue = Math.round(touchpad.pointerAcceleration * 100)
-
-                    // convert libinput pointer acceleration range [-1, 1] to slider range [1, 11]
-                    value = Math.round(6 + touchpad.pointerAcceleration / 0.2)
-                }
-
-                onValueChanged: {
-                    if (touchpad != undefined && enabled && !root.loading) {
+                onMoved: {
+                    if (root.device) {
                         // convert slider range [1, 11] to accelSpeedValue range [-100, 100]
-                        accelSpeedValue = Math.round(((value - 6) * 0.2) * 100)
-
+                        const accelSpeedValue = Math.round(((value - 6) * 0.2) * 100)
                         accelSpeed.onAccelSpeedChanged(accelSpeedValue)
                     }
                 }
@@ -365,26 +261,26 @@ KCM.SimpleKCM {
                 to: 100
                 stepSize: 1
                 editable: true
+                enabled: root.device?.supportsPointerAcceleration ?? false
+
+                // if existing configuration or another application set a value with more than 2 decimals
+                // we reduce the precision to 2
+                value: enabled ? Math.round(root.device.pointerAcceleration * 100) : 0
 
                 validator: DoubleValidator {
                     bottom: accelSpeedSpinbox.from
                     top: accelSpeedSpinbox.to
                 }
 
-                function load() {
-                    enabled = touchpad.supportsPointerAcceleration
-                    if (!enabled) {
-                        return
-                    }
-
-                    // if existing configuration or another application set a value with more than 2 decimals
-                    // we reduce the precision to 2
-                    value = Math.round(touchpad.pointerAcceleration * 100)
-                }
-
-                onValueChanged: {
-                    if (touchpad != undefined && enabled && !root.loading) {
+                onValueModified: {
+                    if (root.device) {
                         accelSpeed.onAccelSpeedChanged(value)
+                        // Keyboard input breaks SpinBox value bindings with current Qt.
+                        // Restore the binding so clicking "Reset" will update it correctly.
+                        value = Qt.binding(() => accelSpeedSpinbox.enabled && root.device
+                            ? Math.round(root.device.pointerAcceleration * 100)
+                            : 0
+                        );
                     }
                 }
 
@@ -403,35 +299,24 @@ KCM.SimpleKCM {
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Pointer acceleration:")
             Kirigami.FormData.buddyFor: accelProfileFlat
             spacing: Kirigami.Units.smallSpacing
+            enabled: root.device?.supportsPointerAccelerationProfileAdaptive ?? false
+            visible: enabled
 
-            function load() {
-                enabled = touchpad.supportsPointerAccelerationProfileAdaptive
-
-                if (!enabled) {
-                    accelProfile.visible = false
-                    accelProfileFlat.checked = false
-                    accelProfileAdaptive.checked = false
-                    return
-                }
-
-                if(touchpad.pointerAccelerationProfileAdaptive) {
-                    accelProfileAdaptive.checked = true
-                } else {
-                    accelProfileFlat.checked = true
-                }
-            }
-
-            function syncCurrent() {
-                if (enabled && !root.loading) {
-                    touchpad.pointerAccelerationProfileFlat = accelProfileFlat.checked
-                    touchpad.pointerAccelerationProfileAdaptive = accelProfileAdaptive.checked
-                    root.changeSignal()
+            QQC2.ButtonGroup {
+                buttons: [accelProfileFlat, accelProfileAdaptive]
+                onClicked: {
+                    if (root.device) {
+                        root.device.pointerAccelerationProfileFlat = accelProfileFlat.checked
+                        root.device.pointerAccelerationProfileAdaptive = accelProfileAdaptive.checked
+                        root.changeSignal()
+                    }
                 }
             }
 
             QQC2.RadioButton {
                 id: accelProfileFlat
                 text: i18nd("kcm_touchpad", "None")
+                checked: accelProfile.enabled && (root.device?.pointerAccelerationProfileFlat ?? false)
 
                 hoverEnabled: true
                 QQC2.ToolTip {
@@ -439,12 +324,12 @@ KCM.SimpleKCM {
                     visible: parent.hovered
                     delay: 1000
                 }
-                onCheckedChanged: accelProfile.syncCurrent()
             }
 
             QQC2.RadioButton {
                 id: accelProfileAdaptive
                 text: i18nd("kcm_touchpad", "Standard")
+                checked: accelProfile.enabled && (root.device?.pointerAccelerationProfileAdaptive ?? false)
 
                 hoverEnabled: true
                 QQC2.ToolTip {
@@ -452,7 +337,6 @@ KCM.SimpleKCM {
                     visible: parent.hovered
                     delay: 1000
                 }
-                onCheckedChanged: accelProfile.syncCurrent()
             }
         }
 
@@ -465,17 +349,19 @@ KCM.SimpleKCM {
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Scrolling speed:")
             Kirigami.FormData.buddyFor: scrollFactor
             Layout.fillWidth: true
-            visible: touchpad.supportsScrollFactor
 
+            visible: root.device?.supportsScrollFactor ?? false
             columns: 3
 
             QQC2.Slider {
                 id: scrollFactor
                 Layout.fillWidth: true
+                Layout.columnSpan: 3
 
                 from: 0
                 to: 14
                 stepSize: 1
+                enabled: root.device
 
                 readonly property list<real> values: [
                     0.1,
@@ -495,19 +381,17 @@ KCM.SimpleKCM {
                     20
                 ]
 
-                Layout.columnSpan: 3
-
-                function load() {
-                    let index = values.indexOf(touchpad.scrollFactor)
-                    if (index === -1) {
-                        index = values.indexOf(1);
-                    }
-                    value = index
+                function indexOf(val) {
+                    const index = values.indexOf(val)
+                    return index === -1 ? values.indexOf(1) : index
                 }
+                value: indexOf(root.device?.scrollFactor ?? 1)
 
                 onMoved: {
-                    touchpad.scrollFactor = values[value]
-                    root.changeSignal()
+                    if (root.device) {
+                        root.device.scrollFactor = values[value]
+                        root.changeSignal()
+                    }
                 }
             }
 
@@ -530,34 +414,26 @@ KCM.SimpleKCM {
             id: scrollMethod
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Scrolling:")
             Kirigami.FormData.buddyFor: scrollMethodTwoFingers
+            visible: scrollMethodTwoFingers.enabled || scrollMethodTouchpadEdges.enabled
 
             spacing: Kirigami.Units.smallSpacing
 
-            function load() {
-                scrollMethodTwoFingers.enabled = touchpad.supportsScrollTwoFinger
-                scrollMethodTouchpadEdges.enabled = touchpad.supportsScrollEdge
-
-                if(scrollMethodTouchpadEdges.enabled && touchpad.scrollEdge) {
-                    scrollMethodTouchpadEdges.checked = formLayout.enabled
-                } else {
-                    scrollMethodTwoFingers.checked = formLayout.enabled
+            QQC2.ButtonGroup {
+                buttons: [scrollMethodTwoFingers, scrollMethodTouchpadEdges]
+                onClicked: {
+                    if (root.device) {
+                        root.device.scrollTwoFinger = scrollMethodTwoFingers.checked
+                        root.device.scrollEdge = scrollMethodTouchpadEdges.checked
+                        root.changeSignal()
+                    }
                 }
-            }
-
-            function syncCurrent() {
-                if (enabled && !root.loading) {
-                    touchpad.scrollTwoFinger = scrollMethodTwoFingers.checked
-                    touchpad.scrollEdge = scrollMethodTouchpadEdges.checked
-                    root.changeSignal()
-                }
-                loading = true
-                naturalScroll.load()
-                loading = false
             }
 
             QQC2.RadioButton {
                 id: scrollMethodTwoFingers
                 text: i18nd("kcm_touchpad", "Two fingers")
+                enabled: root.device?.supportsScrollTwoFinger ?? false
+                checked: root.device?.scrollTwoFinger ?? false
 
                 hoverEnabled: true
                 QQC2.ToolTip {
@@ -570,6 +446,8 @@ KCM.SimpleKCM {
             QQC2.RadioButton {
                 id: scrollMethodTouchpadEdges
                 text: i18nd("kcm_touchpad", "Touchpad edges")
+                enabled: root.device?.supportsScrollEdge ?? false
+                checked: root.device?.scrollEdge ?? false
 
                 hoverEnabled: true
                 QQC2.ToolTip {
@@ -577,22 +455,18 @@ KCM.SimpleKCM {
                     visible: parent.hovered
                     delay: 1000
                 }
-                onCheckedChanged: scrollMethod.syncCurrent()
             }
         }
 
         QQC2.CheckBox {
             id: naturalScroll
             text: i18nd("kcm_touchpad", "Invert scroll direction (Natural scrolling)")
+            enabled: root.device?.supportsNaturalScroll ?? false
+            checked: enabled && (root.device?.naturalScroll ?? false)
 
-            function load() {
-                enabled = touchpad.supportsNaturalScroll
-                checked = enabled && touchpad.naturalScroll
-            }
-
-            onCheckedChanged: {
-                if (enabled && !root.loading) {
-                    touchpad.naturalScroll = checked
+            onToggled: {
+                if (root.device) {
+                    root.device.naturalScroll = checked
                     root.changeSignal()
                 }
             }
@@ -608,16 +482,13 @@ KCM.SimpleKCM {
         QQC2.CheckBox {
             id: disableHorizontalScrolling
             text: i18nd("kcm_touchpad", "Disable horizontal scrolling")
+            visible: root.device?.supportsHorizontalScrolling ?? false
+            enabled: root.device?.supportsHorizontalScrolling ?? false
+            checked: enabled && !(root.device?.horizontalScrolling ?? true)
 
-            function load() {
-                visible = touchpad.supportsHorizontalScrolling
-                enabled = touchpad.supportsHorizontalScrolling
-                checked = enabled && !touchpad.horizontalScrolling
-            }
-
-            onCheckedChanged: {
-                if (enabled && !root.loading) {
-                    touchpad.horizontalScrolling = !checked
+            onToggled: {
+                if (root.device) {
+                    root.device.horizontalScrolling = !checked
                     root.changeSignal()
                 }
             }
@@ -639,6 +510,8 @@ KCM.SimpleKCM {
             id: tapToClick
             Kirigami.FormData.label: i18ndc("kcm_touchpad", "@label for checkbox, tap-to-click", "Tapping:")
             text: i18ndc("kcm_touchpad", "@option:check", "Tap-to-click")
+            enabled: root.device?.tapFingerCount > 0
+            checked: enabled && (root.device?.tapToClick ?? false)
 
             hoverEnabled: true
             QQC2.ToolTip {
@@ -647,23 +520,9 @@ KCM.SimpleKCM {
                 delay: 1000
             }
 
-            function load() {
-                enabled = touchpad.tapFingerCount > 0
-                checked = enabled && touchpad.tapToClick
-            }
-
-            function updateDependents() {
-                loading = true
-                tapAndDrag.load()
-                tapAndDragLock.load()
-                multiTap.load()
-                loading = false
-            }
-
-            onCheckedChanged: {
-                if (enabled && !root.loading) {
-                    touchpad.tapToClick = checked
-                    updateDependents()
+            onToggled: {
+                if (root.device) {
+                    root.device.tapToClick = checked
                     root.changeSignal()
                 }
             }
@@ -672,6 +531,8 @@ KCM.SimpleKCM {
         QQC2.CheckBox {
             id: tapAndDrag
             text: i18nd("kcm_touchpad", "Tap-and-drag")
+            enabled: root.device?.tapFingerCount > 0 && tapToClick.checked
+            checked: enabled && (root.device?.tapAndDrag ?? false)
 
             hoverEnabled: true
             QQC2.ToolTip {
@@ -680,21 +541,9 @@ KCM.SimpleKCM {
                 delay: 1000
             }
 
-            function load() {
-                enabled = touchpad.tapFingerCount > 0 && tapToClick.checked
-                checked = enabled && touchpad.tapAndDrag
-            }
-
-            function updateDependents() {
-                loading = true
-                tapAndDragLock.load()
-                loading = false
-            }
-
-            onCheckedChanged: {
-                if (enabled && !root.loading) {
-                    touchpad.tapAndDrag = checked
-                    updateDependents()
+            onToggled: {
+                if (root.device) {
+                    root.device.tapAndDrag = checked
                     root.changeSignal()
                 }
             }
@@ -703,6 +552,8 @@ KCM.SimpleKCM {
         QQC2.CheckBox {
             id: tapAndDragLock
             text: i18nd("kcm_touchpad", "Tap-and-drag lock")
+            enabled: root.device?.tapFingerCount > 0 && tapAndDrag.checked
+            checked: enabled && (root.device?.tapDragLock ?? false)
 
             hoverEnabled: true
             QQC2.ToolTip {
@@ -711,14 +562,9 @@ KCM.SimpleKCM {
                 delay: 1000
             }
 
-            function load() {
-                enabled = touchpad.tapFingerCount > 0 && tapAndDrag.checked
-                checked = enabled && touchpad.tapDragLock
-            }
-
-            onCheckedChanged: {
-                if (enabled && !root.loading) {
-                    touchpad.tapDragLock = checked
+            onToggled: {
+                if (root.device) {
+                    root.device.tapDragLock = checked
                     root.changeSignal()
                 }
             }
@@ -728,74 +574,59 @@ KCM.SimpleKCM {
             id: multiTap
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Two-finger tap:")
             Kirigami.FormData.buddyFor: multiTapRightClick
+            visible: root.device?.supportsLmrTapButtonMap
+            enabled: root.device?.supportsLmrTapButtonMap && tapToClick.checked
 
             spacing: Kirigami.Units.smallSpacing
-            // hide initially
-            visible: false
 
-            function load() {
-                visible = touchpad.supportsLmrTapButtonMap
-                enabled = touchpad.supportsLmrTapButtonMap && tapToClick.checked
-                if (touchpad.tapFingerCount > 2) {
-                    multiTapRightClick.text = i18nd("kcm_touchpad", "Right-click (three-finger tap to middle-click)")
-                    multiTapRightClickToolTip.text = i18nd("kcm_touchpad", "Tap with two fingers to right-click, tap with three fingers to middle-click.")
-
-                    multiTapMiddleClick.text = i18nd("kcm_touchpad", "Middle-click (three-finger tap to right-click)")
-                    multiTapMiddleClickToolTip.text = i18nd("kcm_touchpad", "Tap with two fingers to middle-click, tap with three fingers to right-click.")
-                } else {
-                    multiTapRightClick.text = i18nd("kcm_touchpad", "Right-click")
-                    multiTapRightClickToolTip.text = i18nd("kcm_touchpad", "Tap with two fingers to right-click.")
-
-                    multiTapMiddleClick.text = i18nd("kcm_touchpad", "Middle-click")
-                    multiTapMiddleClickToolTip.text = i18nd("kcm_touchpad", "Tap with two fingers to middle-click.")
-                }
-
-                if (!enabled) {
-                    multiTapRightClick.checked = false
-                    multiTapMiddleClick.checked = false
-                    return
-                }
-
-                if (touchpad.lmrTapButtonMap) {
-                    multiTapMiddleClick.checked = true
-                } else {
-                    multiTapRightClick.checked = true
-                }
-            }
-
-            function syncCurrent() {
-                if (enabled && !root.loading) {
-                    touchpad.lmrTapButtonMap = multiTapMiddleClick.checked
-                    root.changeSignal()
+            QQC2.ButtonGroup {
+                buttons: [multiTapRightClick, multiTapMiddleClick]
+                onClicked: {
+                    if (root.device) {
+                        root.device.lmrTapButtonMap = multiTapMiddleClick.checked
+                        root.changeSignal()
+                    }
                 }
             }
 
             QQC2.RadioButton {
                 id: multiTapRightClick
-                // text: is handled dynamically on load.
+                text: (root.device?.tapFingerCount > 2
+                    ? i18nd("kcm_touchpad", "Right-click (three-finger tap to middle-click)")
+                    : i18nd("kcm_touchpad", "Right-click")
+                )
+                checked: multiTap.enabled && !(root.device?.lmrTapButtonMap ?? false)
 
                 hoverEnabled: true
                 QQC2.ToolTip {
                     id: multiTapRightClickToolTip
                     visible: parent.hovered
                     delay: 1000
-                    // text: is handled dynamically on load.
+                    text: (root.device?.tapFingerCount > 2
+                        ? i18nd("kcm_touchpad", "Tap with two fingers to right-click, tap with three fingers to middle-click.")
+                        : i18nd("kcm_touchpad", "Tap with two fingers to right-click.")
+                    )
                 }
-                onCheckedChanged: multiTap.syncCurrent()
             }
 
             QQC2.RadioButton {
                 id: multiTapMiddleClick
-                // text: is handled dynamically on load.
+                text: (root.device?.tapFingerCount > 2
+                    ? i18nd("kcm_touchpad", "Middle-click (three-finger tap to right-click)")
+                    : i18nd("kcm_touchpad", "Middle-click")
+                )
+                checked: multiTap.enabled && (root.device?.lmrTapButtonMap ?? false)
 
                 hoverEnabled: true
                 QQC2.ToolTip {
                     id: multiTapMiddleClickToolTip
                     visible: parent.hovered
                     delay: 1000
-                    // text: is handled dynamically on load.
+                    text: (root.device?.tapFingerCount > 2
+                        ? i18nd("kcm_touchpad", "Tap with two fingers to middle-click, tap with three fingers to right-click.")
+                        : i18nd("kcm_touchpad", "Tap with two fingers to middle-click.")
+                    )
                 }
-                onCheckedChanged: multiTap.syncCurrent()
             }
         }
 
@@ -807,41 +638,28 @@ KCM.SimpleKCM {
             id: rightClickMethod
             Kirigami.FormData.label: i18ndc("kcm_touchpad", "@label for radiobutton group, configure right-click with touch-pad integrated button (pressing into the touchpad)", "Integrated right-click:")
             Kirigami.FormData.buddyFor: rightClickMethodAreas
+            enabled: (root.device?.supportsClickMethodAreas && root.device?.supportsClickMethodClickfinger) ?? false
+            visible: (root.device?.supportsClickMethodAreas || root.device?.supportsClickMethodClickfinger) ?? false
 
             // spacing only on top of radio buttons, not between radio and help text label
             spacing: 0
-            // hide initially
-            visible: false
 
-            function load() {
-                enabled = touchpad.supportsClickMethodAreas && touchpad.supportsClickMethodClickfinger
-                visible = touchpad.supportsClickMethodAreas || touchpad.supportsClickMethodClickfinger
-
-                rightClickMethodAreas.enabled = touchpad.supportsClickMethodAreas
-                rightClickMethodClickfinger.enabled = touchpad.supportsClickMethodClickfinger
-
-                if (rightClickMethodAreas.enabled && touchpad.clickMethodAreas) {
-                    rightClickMethodAreas.checked = true
-                } else if (rightClickMethodClickfinger.enabled && touchpad.clickMethodClickfinger) {
-                    rightClickMethodClickfinger.checked = true
+            QQC2.ButtonGroup {
+                buttons: [rightClickMethodAreas, rightClickMethodClickfinger]
+                onClicked: {
+                    if (root.device) {
+                        root.device.clickMethodAreas = rightClickMethodAreas.checked && rightClickMethodAreas.visible
+                        root.device.clickMethodClickfinger = rightClickMethodClickfinger.checked && rightClickMethodClickfinger.visible
+                        root.changeSignal()
+                    }
                 }
             }
-
-            function syncCurrent() {
-                if (enabled && !root.loading) {
-                    touchpad.clickMethodAreas = rightClickMethodAreas.checked && rightClickMethodAreas.visible
-                    touchpad.clickMethodClickfinger = rightClickMethodClickfinger.checked && rightClickMethodClickfinger.visible
-                    root.changeSignal()
-                }
-                loading = true
-                middleClickMethod.load()
-                loading = false
-            }
-
 
             QQC2.RadioButton {
                 id: rightClickMethodAreas
                 text: i18ndc("kcm_touchpad", "@option:radio touchpad integrated right-click", "Press bottom-right corner")
+                enabled: root.device?.supportsClickMethodAreas ?? false
+                checked: enabled && (root.device?.clickMethodAreas ?? false)
 
                 hoverEnabled: true
 
@@ -879,6 +697,8 @@ KCM.SimpleKCM {
                 id: rightClickMethodClickfinger
                 text: i18ndc("kcm_touchpad", "@option:radio touchpad integrated right-click", "Press touchpad with two fingers")
                 topPadding: Kirigami.Units.smallSpacing // in lieu of rightClickMethod.spacing
+                enabled: root.device?.supportsClickMethodClickfinger ?? false
+                checked: enabled && (root.device?.clickMethodClickfinger ?? false)
 
                 hoverEnabled: true
 
@@ -886,8 +706,6 @@ KCM.SimpleKCM {
                 QQC2.ToolTip.text: toolTipText
                 QQC2.ToolTip.visible: hovered
                 QQC2.ToolTip.delay: 1000
-
-                onCheckedChanged: rightClickMethod.syncCurrent()
             }
 
             QQC2.Label {
@@ -915,35 +733,29 @@ KCM.SimpleKCM {
             id: middleClickMethod
             Kirigami.FormData.label: i18ndc("kcm_touchpad", "@label for radiobutton group, configure middle-click with touch-pad integrated button (pressing into the touchpad)", "Integrated middle-click:")
             Kirigami.FormData.buddyFor: middleSoftwareEmulation
+            enabled: root.device?.supportsMiddleEmulation ?? false
 
             spacing: Kirigami.Units.smallSpacing
             visible: noMiddleSoftwareEmulation.visible ||
                      middleSoftwareEmulation.visible ||
                      clickfingerMiddleInfoBox.visible
 
-            function load() {
-                enabled = touchpad.supportsMiddleEmulation
-                if (enabled && touchpad.middleEmulation) {
-                    middleSoftwareEmulation.checked = true
-                } else {
-                    noMiddleSoftwareEmulation.checked = true
+            QQC2.ButtonGroup {
+                buttons: [noMiddleSoftwareEmulation, middleSoftwareEmulation]
+                onClicked: {
+                    if (root.device) {
+                        root.device.middleEmulation = middleSoftwareEmulation.checked && middleSoftwareEmulation.visible
+                        root.changeSignal()
+                    }
                 }
-            }
-
-            function syncCurrent() {
-                if (enabled && !root.loading) {
-                    touchpad.middleEmulation = middleSoftwareEmulation.checked && middleSoftwareEmulation.visible
-                    root.changeSignal()
-                }
-                loading = true
-                middleEmulation.load()
-                loading = false
             }
 
             QQC2.RadioButton {
                 id: noMiddleSoftwareEmulation
                 text: i18ndc("kcm_touchpad", "@option:radio touchpad integrated middle-click", "Press bottom middle edge")
                 visible: rightClickMethodAreas.checked
+                checked: middleClickMethod.enabled && !(root.device?.middleEmulation ?? false)
+
                 hoverEnabled: true
                 QQC2.ToolTip {
                     text: i18ndc("kcm_touchpad", "@info:tooltip for radiobutton", "Pressing the bottom right corner of your touchpad acts as right-click.")
@@ -956,13 +768,14 @@ KCM.SimpleKCM {
                 id: middleSoftwareEmulation
                 text: i18ndc("kcm_touchpad", "@option:radio touchpad integrated middle-click", "Press bottom left and bottom right corners")
                 visible: rightClickMethodAreas.checked
+                checked: middleClickMethod.enabled && (root.device?.middleEmulation ?? false)
+
                 hoverEnabled: true
                 QQC2.ToolTip {
                     text: i18ndc("kcm_touchpad", "@info:tooltip for radiobutton", "Pressing the bottom left and bottom right corners simultaneously acts as middle-click.")
                     visible: parent.hovered
                     delay: 1000
                 }
-                onCheckedChanged: middleClickMethod.syncCurrent()
             }
 
             QQC2.CheckBox {
@@ -971,6 +784,7 @@ KCM.SimpleKCM {
                 checked: true
                 enabled: false
                 visible: rightClickMethodClickfinger.checked
+
                 hoverEnabled: true
                 QQC2.ToolTip {
                     text: i18ndc("kcm_touchpad", "@info:tooltip for radiobutton", "Pressing the touchpad anywhere with three fingers acts as middle-click.")

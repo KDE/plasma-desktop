@@ -31,7 +31,7 @@ class Q_DECL_EXPORT TouchpadBackend : public QObject
 {
     Q_OBJECT
 
-    Q_PROPERTY(int deviceCount READ deviceCount CONSTANT FINAL)
+    Q_PROPERTY(QList<LibinputCommon *> inputDevices READ inputDevices NOTIFY inputDevicesChanged FINAL)
 
 protected:
     explicit TouchpadBackend(QObject *parent)
@@ -131,6 +131,7 @@ Q_SIGNALS:
     void keyboardActivityStarted();
     void keyboardActivityFinished();
 
+    void inputDevicesChanged();
     void deviceAdded(bool success);
     void deviceRemoved(int index);
 };

@@ -224,7 +224,7 @@ bool KWinWaylandTouchpad::valueLoader(Prop<T> &prop)
     T replyValue = valueLoaderPart<T>(reply);
 
     prop.old = replyValue;
-    prop.val = replyValue;
+    prop.set(replyValue);
     return true;
 }
 

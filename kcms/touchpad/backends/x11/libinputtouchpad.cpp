@@ -389,7 +389,7 @@ bool LibinputTouchpad::valueLoader(Prop<T> &prop)
     const T replyValue = valueLoaderPart<T>(reply);
     const T loadedValue = touchpadConfig.readEntry(QString(prop.name), replyValue);
     prop.old = replyValue;
-    prop.val = loadedValue;
+    prop.set(loadedValue);
 
     return true;
 }
