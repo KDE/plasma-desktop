@@ -6,16 +6,67 @@
 
 #include "kded.h"
 
-#include <KLocalizedString>
+#include <actions.h>
+
+#include <KConfigGroup>
 #include <KPluginFactory>
+#include <KSharedConfig>
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
 #include <QDBusMessage>
 #include <QDebug>
 
-#include "actions.h"
+using namespace Qt::Literals::StringLiterals;
 
 K_PLUGIN_CLASS_WITH_JSON(TouchpadDisabler, "kded_touchpad.json")
+
+void migrateConfig(TouchpadBackend *backend)
+{
+    if (!backend->isTouchpadAvailable()) {
+        return;
+    }
+
+#if BUILD_KCM_TOUCHPAD_X11
+    // on Wayland, KWin handles the on/off/toggle shortcuts, the kded is not used and X11 settings are not adopted
+    if (backend->getMode() != TouchpadInputBackendMode::XLibinput) {
+        return;
+    }
+#else
+    return;
+#endif
+
+    KSharedConfig::Ptr oldConfig = KSharedConfig::openConfig(u"touchpadrc"_s);
+    // TODO KF7 (or perhaps earlier): Remove Plasma 5->6 migration code and delete touchpadrc
+
+    const KConfigGroup oldGroup = oldConfig->group(u"autodisable"_s);
+    if (!oldGroup.exists()) {
+        // avoid writing a new config file just with migration data
+        return;
+    }
+
+    bool disableWhenMousePluggedIn = oldGroup.readEntry("DisableWhenMousePluggedIn", false);
+    bool disableOnKeyboardActivity = oldGroup.readEntry("DisableOnKeyboardActivity", true);
+
+    // touchpadxlibinputrc uses the device name in the config group - use backend API to write to the correct one
+    backend->getConfig();
+
+    for (LibinputCommon *device : backend->inputDevices()) { // only touchpads, because TouchpadBackend
+        if (device->supportsDisableEventsOnExternalMouse()) {
+            device->setDisableEventsOnExternalMouse(disableWhenMousePluggedIn);
+        }
+        // DisableWhileTyping has been configurable since early on, so keep the migration defensive
+        // by only performing migrations from `true` (default) to `false` (manually changed in prior backend).
+        // i.e. users who stuck with the default, or who changed it to `false` only for libinput, are unaffected
+        if (!disableOnKeyboardActivity && device->supportsDisableWhileTyping()) {
+            device->setDisableWhileTyping(false);
+        }
+    }
+
+    backend->applyConfig();
+
+    oldConfig->deleteGroup(u"autodisable"_s);
+    oldConfig->sync();
+}
 
 bool TouchpadDisabler::workingTouchpadFound() const
 {
@@ -39,30 +90,21 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     , m_userRequestedState(true)
     , m_touchpadEnabled(true)
     , m_workingTouchpadFound(false)
-    , m_keyboardActivity(false)
-    , m_mouse(false)
 {
     if (!m_backend) {
         return;
     }
+    migrateConfig(m_backend);
 
     m_dependencies.addWatchedService("org.kde.plasmashell");
     m_dependencies.addWatchedService("org.kde.kglobalaccel");
     connect(&m_dependencies, SIGNAL(serviceRegistered(QString)), SLOT(serviceRegistered(QString)));
 
-    connect(m_backend, SIGNAL(mousesChanged()), SLOT(mousePlugged()));
-    connect(m_backend, SIGNAL(keyboardActivityStarted()), SLOT(keyboardActivityStarted()));
-    connect(m_backend, SIGNAL(keyboardActivityFinished()), SLOT(keyboardActivityFinished()));
     connect(m_backend, SIGNAL(touchpadStateChanged()), SLOT(updateCurrentState()));
-
     connect(m_backend, SIGNAL(touchpadReset()), SLOT(handleReset()));
-
-    m_keyboardActivityTimeout.setSingleShot(true);
-    connect(&m_keyboardActivityTimeout, SIGNAL(timeout()), SLOT(timerElapsed()));
 
     updateCurrentState();
     m_userRequestedState = m_touchpadEnabled;
-    reloadSettings();
 
     m_dependencies.setWatchMode(QDBusServiceWatcher::WatchForRegistration);
     m_dependencies.setConnection(QDBusConnection::sessionBus());
@@ -133,99 +175,6 @@ void TouchpadDisabler::enable()
     m_backend->setTouchpadEnabled(true);
 }
 
-void TouchpadDisabler::reloadSettings()
-{
-    m_settings.load();
-    m_keyboardActivityTimeout.setInterval(m_settings.keyboardActivityTimeoutMs());
-
-    m_keyboardDisableState =
-        m_settings.onlyDisableTapAndScrollOnKeyboardActivity() ? TouchpadBackend::TouchpadTapAndScrollDisabled : TouchpadBackend::TouchpadFullyDisabled;
-
-    mousePlugged();
-
-    m_backend->watchForEvents(m_settings.disableOnKeyboardActivity());
-}
-
-void TouchpadDisabler::keyboardActivityStarted()
-{
-    if (m_keyboardActivity || !m_settings.disableOnKeyboardActivity()) {
-        return;
-    }
-
-    m_keyboardActivityTimeout.stop();
-    m_keyboardActivity = true;
-    m_backend->setTouchpadOff(m_keyboardDisableState);
-}
-
-void TouchpadDisabler::keyboardActivityFinished()
-{
-    if (!m_keyboardActivity) {
-        keyboardActivityStarted();
-    }
-    m_keyboardActivityTimeout.start();
-}
-
-void TouchpadDisabler::timerElapsed()
-{
-    if (!m_keyboardActivity) {
-        return;
-    }
-
-    m_keyboardActivity = false;
-    m_backend->setTouchpadOff(TouchpadBackend::TouchpadEnabled);
-}
-
-void TouchpadDisabler::mousePlugged()
-{
-    if (!m_dependencies.watchedServices().isEmpty()) {
-        return;
-    }
-
-    bool pluggedIn = isMousePluggedIn();
-    Q_EMIT mousePluggedInChanged(pluggedIn);
-
-    bool disable = pluggedIn && m_settings.disableWhenMousePluggedIn();
-    if (m_mouse == disable) {
-        return;
-    }
-    m_mouse = disable;
-
-    bool newState = disable ? false : m_userRequestedState;
-    if (newState == m_touchpadEnabled) {
-        return;
-    }
-
-    // If the disable is caused by plugin mouse, show the message, otherwise it might
-    // be user already disables touchpad themselves.
-    if (!newState && disable) {
-        showNotification("TouchpadDisabled", i18n("Touchpad was disabled because a mouse was plugged in"));
-    }
-    if (newState) {
-        showNotification("TouchpadEnabled", i18n("Touchpad was enabled because the mouse was unplugged"));
-    }
-
-    m_backend->setTouchpadEnabled(newState);
-}
-
-void TouchpadDisabler::showNotification(const QString &name, const QString &text)
-{
-    if (m_notification) {
-        m_notification->close();
-    }
-
-    m_notification = KNotification::event(name,
-                                          text,
-                                          QPixmap(), // Icon is specified in .notifyrc
-                                          KNotification::CloseOnTimeout,
-                                          "kcm_touchpad"); // this has to match the name of the .notifyrc file
-    // TouchpadPluginFactory::componentData());
-}
-
-bool TouchpadDisabler::isMousePluggedIn() const
-{
-    return !m_backend->listMouses(m_settings.mouseBlacklist()).isEmpty();
-}
-
 void TouchpadDisabler::lateInit()
 {
     TouchpadGlobalActions *actions = new TouchpadGlobalActions(false, this);
@@ -243,7 +192,6 @@ void TouchpadDisabler::lateInit()
     });
 
     updateCurrentState();
-    mousePlugged();
 }
 
 void TouchpadDisabler::handleReset()
