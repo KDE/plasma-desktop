@@ -14,6 +14,8 @@ import org.kde.kirigami as Kirigami
 
 import org.kde.touchpad.kcm
 
+import org.kde.plasma.private.kcm_touchpad as Touchpad
+
 KCM.SimpleKCM {
     id: root
 
@@ -22,13 +24,13 @@ KCM.SimpleKCM {
     property alias deviceIndex: deviceSelector.currentIndex
     signal changeSignal()
 
-    property QtObject touchpad
-    property int touchpadCount: backend.touchpadCount
+    property Touchpad.InputDevice touchpad
+    property int touchpadCount: backend.deviceCount
 
     property bool loading: false
 
     function resetModel(index) {
-        touchpadCount = backend.touchpadCount
+        touchpadCount = backend.deviceCount
         formLayout.enabled = touchpadCount
         deviceSelector.enabled = touchpadCount > 1
 

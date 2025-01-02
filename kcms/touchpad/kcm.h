@@ -33,8 +33,8 @@ Q_SIGNALS:
 
 private Q_SLOTS:
     void onChange();
-    void onTouchpadAdded(bool success);
-    void onTouchpadRemoved(int index);
+    void onDeviceAdded(bool success);
+    void onDeviceRemoved(int index);
 
 private:
     void hideErrorMessage();

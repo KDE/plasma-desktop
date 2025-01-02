@@ -7,6 +7,8 @@
 
 #pragma once
 
+#include "backends/libinputcommon.h"
+
 #include <config-build-options.h>
 
 #include <QList>
@@ -28,6 +30,8 @@ void touchpadApplySavedConfig();
 class Q_DECL_EXPORT TouchpadBackend : public QObject
 {
     Q_OBJECT
+
+    Q_PROPERTY(int deviceCount READ deviceCount CONSTANT FINAL)
 
 protected:
     explicit TouchpadBackend(QObject *parent)
@@ -73,18 +77,18 @@ public:
 
     virtual QStringList supportedParameters() const
     {
-        return QStringList();
+        return {};
     }
     virtual QString errorString() const
     {
         return QString();
     }
 
-    virtual QList<QObject *> getDevices() const
+    virtual QList<LibinputCommon *> inputDevices() const
     {
-        return QList<QObject *>();
+        return {};
     }
-    virtual int touchpadCount() const
+    virtual int deviceCount() const
     {
         return 0;
     }
@@ -120,7 +124,7 @@ public:
 
     virtual QStringList listMouses(const QStringList & /*blacklist*/)
     {
-        return QStringList();
+        return {};
     }
 
 private:
@@ -133,6 +137,6 @@ Q_SIGNALS:
     void keyboardActivityStarted();
     void keyboardActivityFinished();
 
-    void touchpadAdded(bool success);
-    void touchpadRemoved(int index);
+    void deviceAdded(bool success);
+    void deviceRemoved(int index);
 };

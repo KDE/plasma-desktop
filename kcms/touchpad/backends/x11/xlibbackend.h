@@ -29,8 +29,6 @@ class XlibBackend : public TouchpadBackend
 {
     Q_OBJECT
 
-    Q_PROPERTY(int touchpadCount READ touchpadCount CONSTANT)
-
 public:
     static XlibBackend *initialize(QObject *parent = nullptr);
     ~XlibBackend();
@@ -49,7 +47,7 @@ public:
     {
         return m_errorString;
     }
-    int touchpadCount() const override
+    int deviceCount() const override
     {
         return m_device ? 1 : 0;
     }
@@ -64,7 +62,7 @@ public:
     void watchForEvents(bool keyboard) override;
 
     QStringList listMouses(const QStringList &blacklist) override;
-    QList<QObject *> getDevices() const override;
+    QList<LibinputCommon *> inputDevices() const override;
 
 private Q_SLOTS:
     void propertyChanged(xcb_atom_t);
