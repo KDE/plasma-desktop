@@ -88,7 +88,7 @@ KCMUtils.SimpleKCM {
             text: i18nd("kcmmouse", "Device enabled")
             visible: !root.backend.isAnonymousInputDevice
             enabled: root.device?.supportsDisableEvents ?? false
-            checked: enabled && (root.device?.enabled ?? false)
+            checked: root.device && (!root.device.supportsDisableEvents || root.device.enabled)
 
             onToggled: {
                 if (root.device) {
