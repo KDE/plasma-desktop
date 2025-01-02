@@ -16,8 +16,6 @@ class KWinWaylandBackend : public TouchpadBackend
 {
     Q_OBJECT
 
-    Q_PROPERTY(int touchpadCount READ touchpadCount CONSTANT)
-
 public:
     explicit KWinWaylandBackend(QObject *parent = nullptr);
     ~KWinWaylandBackend();
@@ -31,11 +29,11 @@ public:
         return m_errorString;
     }
 
-    int touchpadCount() const override
+    int deviceCount() const override
     {
         return m_devices.count();
     }
-    QList<QObject *> getDevices() const override
+    QList<LibinputCommon *> inputDevices() const override
     {
         return m_devices;
     }
@@ -48,7 +46,7 @@ private:
     void findTouchpads();
 
     QDBusInterface *m_deviceManager;
-    QList<QObject *> m_devices;
+    QList<LibinputCommon *> m_devices;
 
     QString m_errorString = QString();
 };

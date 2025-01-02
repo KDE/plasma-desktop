@@ -85,35 +85,35 @@ void KWinWaylandBackend::findTouchpads()
 
 bool KWinWaylandBackend::applyConfig()
 {
-    return std::all_of(m_devices.constBegin(), m_devices.constEnd(), [](QObject *t) {
+    return std::all_of(m_devices.constBegin(), m_devices.constEnd(), [](LibinputCommon *t) {
         return static_cast<KWinWaylandTouchpad *>(t)->applyConfig();
     });
 }
 
 bool KWinWaylandBackend::getConfig()
 {
-    return std::all_of(m_devices.constBegin(), m_devices.constEnd(), [](QObject *t) {
+    return std::all_of(m_devices.constBegin(), m_devices.constEnd(), [](LibinputCommon *t) {
         return static_cast<KWinWaylandTouchpad *>(t)->getConfig();
     });
 }
 
 bool KWinWaylandBackend::getDefaultConfig()
 {
-    return std::all_of(m_devices.constBegin(), m_devices.constEnd(), [](QObject *t) {
+    return std::all_of(m_devices.constBegin(), m_devices.constEnd(), [](LibinputCommon *t) {
         return static_cast<KWinWaylandTouchpad *>(t)->getDefaultConfig();
     });
 }
 
 bool KWinWaylandBackend::isChangedConfig() const
 {
-    return std::any_of(m_devices.constBegin(), m_devices.constEnd(), [](QObject *t) {
+    return std::any_of(m_devices.constBegin(), m_devices.constEnd(), [](LibinputCommon *t) {
         return static_cast<KWinWaylandTouchpad *>(t)->isChangedConfig();
     });
 }
 
 void KWinWaylandBackend::onDeviceAdded(QString sysName)
 {
-    if (std::any_of(m_devices.constBegin(), m_devices.constEnd(), [sysName](QObject *t) {
+    if (std::any_of(m_devices.constBegin(), m_devices.constEnd(), [sysName](LibinputCommon *t) {
             return static_cast<KWinWaylandTouchpad *>(t)->sysName() == sysName;
         })) {
         return;
@@ -128,18 +128,18 @@ void KWinWaylandBackend::onDeviceAdded(QString sysName)
     if (reply.isValid() && reply.toBool()) {
         KWinWaylandTouchpad *tp = new KWinWaylandTouchpad(sysName);
         if (!tp->init() || !tp->getConfig()) {
-            Q_EMIT touchpadAdded(false);
+            Q_EMIT deviceAdded(false);
             return;
         }
         m_devices.append(tp);
         qCDebug(KCM_TOUCHPAD).nospace() << "Touchpad connected: " << tp->name() << " (" << tp->sysName() << ")";
-        Q_EMIT touchpadAdded(true);
+        Q_EMIT deviceAdded(true);
     }
 }
 
 void KWinWaylandBackend::onDeviceRemoved(QString sysName)
 {
-    QList<QObject *>::const_iterator it = std::find_if(m_devices.constBegin(), m_devices.constEnd(), [sysName](QObject *t) {
+    QList<LibinputCommon *>::const_iterator it = std::find_if(m_devices.constBegin(), m_devices.constEnd(), [sysName](LibinputCommon *t) {
         return static_cast<KWinWaylandTouchpad *>(t)->sysName() == sysName;
     });
     if (it == m_devices.cend()) {
@@ -151,7 +151,7 @@ void KWinWaylandBackend::onDeviceRemoved(QString sysName)
 
     int index = it - m_devices.cbegin();
     m_devices.removeAt(index);
-    Q_EMIT touchpadRemoved(index);
+    Q_EMIT deviceRemoved(index);
 }
 
 #include "moc_kwinwaylandbackend.cpp"
