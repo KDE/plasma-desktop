@@ -8,6 +8,7 @@ if (BUILD_KCM_TOUCHPAD_KWIN_WAYLAND)
             kwin_wayland/kwinwaylandbackend.cpp
             kwin_wayland/kwinwaylandtouchpad.cpp
     )
+    target_link_libraries(touchpad_common PUBLIC KF6::I18n) # KWinWaylandBackend::m_errorString
 endif()
 
 if (BUILD_KCM_TOUCHPAD_X11)
@@ -18,7 +19,6 @@ if (BUILD_KCM_TOUCHPAD_X11)
             x11/xlibtouchpad.cpp
             x11/xcbatom.cpp
             x11/xlibnotifications.cpp
-            x11/xrecordkeyboardmonitor.cpp
             x11/libinputtouchpad.cpp
     )
 

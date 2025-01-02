@@ -38,7 +38,6 @@ add_library(touchpad_common STATIC
 )
 set_property(TARGET touchpad_common PROPERTY POSITION_INDEPENDENT_CODE ON)
 
-kconfig_add_kcfg_files(touchpad_common kdedsettings.kcfgc)
 kconfig_add_kcfg_files(touchpad_common touchpadparameters.kcfgc)
 
 target_link_libraries(touchpad_common

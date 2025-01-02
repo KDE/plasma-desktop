@@ -23,7 +23,6 @@
 
 class XlibTouchpad;
 class XlibNotifications;
-class XRecordKeyboardMonitor;
 
 class XlibBackend : public TouchpadBackend
 {
@@ -59,9 +58,8 @@ public:
     bool isTouchpadEnabled() override;
     void setTouchpadEnabled(bool) override;
 
-    void watchForEvents(bool keyboard) override;
+    void watchForEvents() override;
 
-    QStringList listMouses(const QStringList &blacklist) override;
     QList<LibinputCommon *> inputDevices() const override;
 
 private Q_SLOTS:
@@ -79,7 +77,8 @@ protected:
     std::unique_ptr<Display, XDisplayCleanup> m_display;
     xcb_connection_t *m_connection;
 
-    XcbAtom m_enabledAtom, m_mouseAtom, m_keyboardAtom, m_touchpadAtom;
+    XcbAtom m_enabledAtom;
+    XcbAtom m_touchpadAtom;
     XcbAtom m_libinputIdentifierAtom;
 
     XlibTouchpad *findTouchpad();
@@ -87,5 +86,4 @@ protected:
 
     QString m_errorString;
     std::unique_ptr<XlibNotifications> m_notifications;
-    std::unique_ptr<XRecordKeyboardMonitor> m_keyboard;
 };
