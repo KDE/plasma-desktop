@@ -107,7 +107,7 @@ Item {
                         property QtObject qAction: containment?.plasmoid.corona.action("manage-containments") || null
                         text: qAction?.text
                         visible: qAction?.visible || false
-                        icon.name: "preferences-system-windows-effect-fadedesktop"
+                        icon.name: "configure-symbolic"
                         onClicked: qAction.trigger()
                     }
                 }
