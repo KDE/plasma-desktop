@@ -9,6 +9,7 @@
 #include <QDataStream>
 #include <QJsonDocument>
 #include <QList>
+#include <QMap>
 
 struct Emoji {
     QString content;
