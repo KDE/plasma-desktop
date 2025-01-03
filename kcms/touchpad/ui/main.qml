@@ -12,6 +12,7 @@ import QtQuick.Layouts
 
 import org.kde.kcmutils as KCM
 import org.kde.kirigami as Kirigami
+import org.kde.kirigamiaddons.components as KirigamiAddonsComponents
 
 import org.kde.touchpad.kcm
 
@@ -294,50 +295,36 @@ KCM.SimpleKCM {
             }
         }
 
-        ColumnLayout {
+        KirigamiAddonsComponents.RadioSelector {
             id: accelProfile
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Pointer acceleration:")
-            Kirigami.FormData.buddyFor: accelProfileFlat
-            spacing: Kirigami.Units.smallSpacing
             enabled: root.device?.supportsPointerAccelerationProfileAdaptive ?? false
             visible: enabled
+            consistentWidth: true
 
-            QQC2.ButtonGroup {
-                buttons: [accelProfileFlat, accelProfileAdaptive]
-                onClicked: {
-                    if (root.device) {
-                        root.device.pointerAccelerationProfileFlat = accelProfileFlat.checked
-                        root.device.pointerAccelerationProfileAdaptive = accelProfileAdaptive.checked
-                        root.changeSignal()
-                    }
+            function setProfile(action) {
+                if (root.device) {
+                    root.device.pointerAccelerationProfileFlat = action == accelProfileFlat;
+                    root.device.pointerAccelerationProfileAdaptive = action == accelProfileAdaptive;
+                    root.changeSignal()
                 }
             }
-
-            QQC2.RadioButton {
-                id: accelProfileFlat
-                text: i18nd("kcm_touchpad", "None")
-                checked: accelProfile.enabled && (root.device?.pointerAccelerationProfileFlat ?? false)
-
-                hoverEnabled: true
-                QQC2.ToolTip {
-                    text: i18nd("kcm_touchpad", "Cursor moves the same distance as finger.")
-                    visible: parent.hovered
-                    delay: 1000
+            actions: [
+                Kirigami.Action {
+                    id: accelProfileFlat
+                    text: i18nd("kcm_touchpad", "None")
+                    tooltip: i18nd("kcm_touchpad", "Cursor moves the same distance as finger.")
+                    checked: root.device?.pointerAccelerationProfileFlat ?? false
+                    onTriggered: accelProfile.setProfile(this)
+                },
+                Kirigami.Action {
+                    id: accelProfileAdaptive
+                    text: i18nd("kcm_touchpad", "Standard")
+                    tooltip: i18nd("kcm_touchpad", "Cursor travel distance depends on movement speed of finger.")
+                    checked: root.device?.pointerAccelerationProfileAdaptive ?? false
+                    onTriggered: accelProfile.setProfile(this)
                 }
-            }
-
-            QQC2.RadioButton {
-                id: accelProfileAdaptive
-                text: i18nd("kcm_touchpad", "Standard")
-                checked: accelProfile.enabled && (root.device?.pointerAccelerationProfileAdaptive ?? false)
-
-                hoverEnabled: true
-                QQC2.ToolTip {
-                    text: i18nd("kcm_touchpad", "Cursor travel distance depends on movement speed of finger.")
-                    visible: parent.hovered
-                    delay: 1000
-                }
-            }
+            ]
         }
 
         Item {
@@ -410,52 +397,37 @@ KCM.SimpleKCM {
         }
 
         // Scrolling
-        ColumnLayout {
+        KirigamiAddonsComponents.RadioSelector {
             id: scrollMethod
             Kirigami.FormData.label: i18nd("kcm_touchpad", "Scrolling:")
-            Kirigami.FormData.buddyFor: scrollMethodTwoFingers
             visible: scrollMethodTwoFingers.enabled || scrollMethodTouchpadEdges.enabled
+            consistentWidth: true
 
-            spacing: Kirigami.Units.smallSpacing
-
-            QQC2.ButtonGroup {
-                buttons: [scrollMethodTwoFingers, scrollMethodTouchpadEdges]
-                onClicked: {
-                    if (root.device) {
-                        root.device.scrollTwoFinger = scrollMethodTwoFingers.checked
-                        root.device.scrollEdge = scrollMethodTouchpadEdges.checked
-                        root.changeSignal()
-                    }
+            function setScrollMethod(action) {
+                if (root.device) {
+                    root.device.scrollTwoFinger = action == scrollMethodTwoFingers;
+                    root.device.scrollEdge = action == scrollMethodTouchpadEdges;
+                    root.changeSignal()
                 }
             }
-
-            QQC2.RadioButton {
-                id: scrollMethodTwoFingers
-                text: i18nd("kcm_touchpad", "Two fingers")
-                enabled: root.device?.supportsScrollTwoFinger ?? false
-                checked: root.device?.scrollTwoFinger ?? false
-
-                hoverEnabled: true
-                QQC2.ToolTip {
-                    text: i18nd("kcm_touchpad", "Slide with two fingers scrolls.")
-                    visible: parent.hovered
-                    delay: 1000
+            actions: [
+                Kirigami.Action {
+                    id: scrollMethodTwoFingers
+                    text: i18nd("kcm_touchpad", "Two fingers")
+                    tooltip: i18nd("kcm_touchpad", "Slide with two fingers scrolls.")
+                    enabled: root.device?.supportsScrollTwoFinger ?? false
+                    checked: root.device?.scrollTwoFinger ?? false
+                    onTriggered: scrollMethod.setScrollMethod(this)
+                },
+                Kirigami.Action {
+                    id: scrollMethodTouchpadEdges
+                    text: i18nd("kcm_touchpad", "Touchpad edges")
+                    tooltip: i18nd("kcm_touchpad", "Slide on the touchpad edges scrolls.")
+                    enabled: root.device?.supportsScrollEdge ?? false
+                    checked: root.device?.scrollEdge ?? false
+                    onTriggered: scrollMethod.setScrollMethod(this)
                 }
-            }
-
-            QQC2.RadioButton {
-                id: scrollMethodTouchpadEdges
-                text: i18nd("kcm_touchpad", "Touchpad edges")
-                enabled: root.device?.supportsScrollEdge ?? false
-                checked: root.device?.scrollEdge ?? false
-
-                hoverEnabled: true
-                QQC2.ToolTip {
-                    text: i18nd("kcm_touchpad", "Slide on the touchpad edges scrolls.")
-                    visible: parent.hovered
-                    delay: 1000
-                }
-            }
+            ]
         }
 
         QQC2.CheckBox {
