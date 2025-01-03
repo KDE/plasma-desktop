@@ -8,11 +8,14 @@
 
 #include <QSortFilterProxyModel>
 
-class FilteredShortcutsModel : public QSortFilterProxyModel
+#include "kglobalaccelmodel_export.h"
+
+class KGLOBALACCELMODEL_EXPORT FilteredShortcutsModel : public QSortFilterProxyModel
 {
     Q_OBJECT
 
     Q_PROPERTY(QString filter READ filter WRITE setFilter NOTIFY filterChanged)
+    Q_PROPERTY(bool showsLaunchAction READ showsLaunchAction WRITE setShowsLaunchAction NOTIFY showsLaunchActionChanged)
 
 public:
     explicit FilteredShortcutsModel(QObject *parent);
@@ -22,9 +25,14 @@ public:
     QString filter() const;
     void setFilter(const QString &filter);
 
+    bool showsLaunchAction() const;
+    void setShowsLaunchAction(bool value);
+
 Q_SIGNALS:
     void filterChanged();
+    void showsLaunchActionChanged();
 
 private:
     QString m_filter;
+    bool m_showsLaunchAction = true;
 };
