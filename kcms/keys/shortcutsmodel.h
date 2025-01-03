@@ -11,13 +11,15 @@
 #include <QAbstractItemModel>
 #include <memory>
 
+#include "kglobalaccelmodel_export.h"
+
 /*
  * This class is based on KConcatenateRowsProxyModel adapted to handle trees with two levels.
  */
 
 class ShortcutsModelPrivate;
 
-class ShortcutsModel : public QAbstractItemModel
+class KGLOBALACCELMODEL_EXPORT ShortcutsModel : public QAbstractItemModel
 {
     Q_OBJECT
 

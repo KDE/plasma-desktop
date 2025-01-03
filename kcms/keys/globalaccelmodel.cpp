@@ -8,7 +8,6 @@
 
 #include <QDBusPendingCallWatcher>
 #include <QFile>
-#include <QIcon>
 
 #include <KApplicationTrader>
 #include <KConfigGroup>
@@ -17,12 +16,11 @@
 #include <KGlobalShortcutInfo>
 #include <KLocalizedString>
 #include <KService>
-#include <kdesktopfile.h>
-#include <kglobalaccel_component_interface.h>
-#include <kglobalaccel_interface.h>
 
 #include "basemodel.h"
 #include "kcmkeys_debug.h"
+#include <kglobalaccel_component_interface.h>
+#include <kglobalaccel_interface.h>
 
 static QStringList buildActionId(const QString &componentUnique, const QString &componentFriendly, const QString &actionUnique, const QString &actionFriendly)
 {
@@ -34,10 +32,22 @@ static QStringList buildActionId(const QString &componentUnique, const QString &
     return actionId;
 }
 
-GlobalAccelModel::GlobalAccelModel(KGlobalAccelInterface *interface, QObject *parent)
+GlobalAccelModel::GlobalAccelModel(QObject *parent)
     : BaseModel(parent)
-    , m_globalAccelInterface{interface}
+    , m_globalAccelInterface(new KGlobalAccelInterface(QStringLiteral("org.kde.kglobalaccel"), //
+                                                       QStringLiteral("/kglobalaccel"),
+                                                       QDBusConnection::sessionBus(),
+                                                       this))
 {
+    if (!m_globalAccelInterface->isValid()) {
+        qCCritical(KCMKEYS) << "Interface is not valid";
+        if (m_globalAccelInterface->lastError().isValid()) {
+            qCCritical(KCMKEYS) << m_globalAccelInterface->lastError().name() << m_globalAccelInterface->lastError().message();
+        }
+    }
+
+    qDBusRegisterMetaType<KGlobalShortcutInfo>();
+    qDBusRegisterMetaType<QList<KGlobalShortcutInfo>>();
 }
 
 QVariant GlobalAccelModel::data(const QModelIndex &index, int role) const
@@ -241,6 +251,11 @@ void GlobalAccelModel::save()
             }
         }
     }
+}
+
+bool GlobalAccelModel::isValid() const
+{
+    return m_globalAccelInterface->isValid();
 }
 
 void GlobalAccelModel::exportToConfig(KConfigBase &config)

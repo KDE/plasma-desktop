@@ -64,7 +64,6 @@ private:
     QString m_lastError;
     FilteredShortcutsModel *m_filteredModel;
     GlobalAccelModel *m_globalAccelModel;
-    KGlobalAccelInterface *m_globalAccelInterface;
     ShortcutsModel *m_shortcutsModel;
     StandardShortcutsModel *m_standardShortcutsModel;
     QString m_argument;

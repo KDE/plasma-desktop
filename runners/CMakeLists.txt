@@ -1,3 +1,4 @@
 add_definitions(-DKRUNNER_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055b00)
 add_subdirectory(plasma-desktop)
+add_subdirectory(keys)
 add_subdirectory(kwin)
