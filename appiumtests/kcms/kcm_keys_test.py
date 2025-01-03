@@ -76,8 +76,8 @@ class KCMTest(unittest.TestCase):
         # Placeholder
         self.driver.find_element(AppiumBy.NAME, "Select an item from the list to view its shortcuts here")
         # Sidebar
-        self.driver.find_element(by=AppiumBy.XPATH, value="//list_item[@name='Applications' and contains(@accessibility-id, 'ListSectionHeader')]")
-        self.driver.find_element(by=AppiumBy.XPATH, value="//list_item[@name='Common Actions' and contains(@accessibility-id, 'ListSectionHeader')]")
+        self.driver.find_element(by=AppiumBy.XPATH, value="//heading[@name='Applications' and contains(@accessibility-id, 'ListSectionHeader')]")
+        self.driver.find_element(by=AppiumBy.XPATH, value="//heading[@name='Common Actions' and contains(@accessibility-id, 'ListSectionHeader')]")
 
     def test_1_application_shortcuts(self) -> None:
         """
