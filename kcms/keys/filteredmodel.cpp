@@ -18,11 +18,18 @@ FilteredShortcutsModel::FilteredShortcutsModel(QObject *parent)
 
 bool FilteredShortcutsModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
 {
+    const QModelIndex index = sourceModel()->index(source_row, 0, source_parent);
+    if (!m_showsLaunchAction) {
+        const QString actionId = index.data(BaseModel::ActionRole).toString();
+        if (actionId == u"_launch") {
+            return false;
+        }
+    }
+
     if (m_filter.isEmpty()) {
         return true;
     }
 
-    const QModelIndex index = sourceModel()->index(source_row, 0, source_parent);
     const bool displayMatches = index.data(Qt::DisplayRole).toString().contains(m_filter, Qt::CaseInsensitive);
     if (!source_parent.isValid() || displayMatches) {
         return displayMatches;
@@ -63,6 +70,21 @@ void FilteredShortcutsModel::setFilter(const QString &filter)
     m_filter = filter;
     invalidateFilter();
     Q_EMIT filterChanged();
+}
+
+bool FilteredShortcutsModel::showsLaunchAction() const
+{
+    return m_showsLaunchAction;
+}
+
+void FilteredShortcutsModel::setShowsLaunchAction(bool value)
+{
+    if (m_showsLaunchAction == value) {
+        return;
+    }
+    m_showsLaunchAction = value;
+    invalidateFilter();
+    Q_EMIT showsLaunchActionChanged();
 }
 
 #include "moc_filteredmodel.cpp"
