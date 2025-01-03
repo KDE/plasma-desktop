@@ -33,6 +33,8 @@
 #include "shortcutsmodel.h"
 #include "standardshortcutsmodel.h"
 
+Q_DECLARE_LOGGING_CATEGORY(KCMKEYS)
+Q_LOGGING_CATEGORY(KCMKEYS, "org.kde.kcm_keys", QtInfoMsg)
 K_PLUGIN_FACTORY_WITH_JSON(KCMKeysFactory, "kcm_keys.json", registerPlugin<KCMKeys>(); registerPlugin<KeysData>();)
 
 KCMKeys::KCMKeys(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
@@ -44,24 +46,15 @@ KCMKeys::KCMKeys(QObject *parent, const KPluginMetaData &metaData, const QVarian
     qmlRegisterAnonymousType<ShortcutsModel>(uri, 2);
     qmlRegisterAnonymousType<FilteredShortcutsModel>(uri, 2);
     qmlProtectModule(uri, 2);
-    qDBusRegisterMetaType<KGlobalShortcutInfo>();
-    qDBusRegisterMetaType<QList<KGlobalShortcutInfo>>();
+
     qDBusRegisterMetaType<QList<QStringList>>();
     qDBusRegisterMetaType<QKeySequence>();
     qDBusRegisterMetaType<QList<QKeySequence>>();
 
-    m_globalAccelInterface = new KGlobalAccelInterface(QStringLiteral("org.kde.kglobalaccel"), //
-                                                       QStringLiteral("/kglobalaccel"),
-                                                       QDBusConnection::sessionBus(),
-                                                       this);
-    if (!m_globalAccelInterface->isValid()) {
+    m_globalAccelModel = new GlobalAccelModel(this);
+    if (!m_globalAccelModel->isValid()) {
         setError(i18n("Failed to communicate with global shortcuts daemon"));
-        qCCritical(KCMKEYS) << "Interface is not valid";
-        if (m_globalAccelInterface->lastError().isValid()) {
-            qCCritical(KCMKEYS) << m_globalAccelInterface->lastError().name() << m_globalAccelInterface->lastError().message();
-        }
     }
-    m_globalAccelModel = new GlobalAccelModel(m_globalAccelInterface, this);
     m_standardShortcutsModel = new StandardShortcutsModel(this);
     m_shortcutsModel = new ShortcutsModel(this);
     m_shortcutsModel->addSourceModel(m_globalAccelModel);

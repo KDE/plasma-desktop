@@ -11,19 +11,20 @@
 #include <QList>
 #include <QSet>
 
+#include "kglobalaccelmodel_export.h"
+
 class KConfigBase;
 
 // we need to do this to expose the enum to QML
 namespace ComponentNS
 {
-Q_NAMESPACE
-enum ComponentType {
+KGLOBALACCELMODEL_EXPORT Q_NAMESPACE enum ComponentType {
     Application,
     Command,
     SystemService,
     CommonAction,
 };
-Q_ENUM_NS(ComponentType)
+KGLOBALACCELMODEL_EXPORT Q_ENUM_NS(ComponentType)
 };
 
 using namespace ComponentNS;
@@ -46,7 +47,7 @@ struct Component {
     bool pendingDeletion;
 };
 
-class BaseModel : public QAbstractItemModel
+class KGLOBALACCELMODEL_EXPORT BaseModel : public QAbstractItemModel
 {
     Q_OBJECT
 
