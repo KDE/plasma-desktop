@@ -103,28 +103,6 @@ Item {
                     }
 
                     PC.ToolButton {
-                        id: configureButton
-                        property QtObject qAction: containment?.plasmoid.internalAction("configure") || null
-                        text: qAction?.text
-                        icon.name: "preferences-desktop-wallpaper"
-                        onClicked: qAction.trigger()
-                    }
-
-                    PC.ToolButton {
-                        id: themeButton
-                        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Global Themes")
-                        icon.name: "preferences-desktop-theme-global"
-                        onClicked: KCM.KCMLauncher.openSystemSettings("kcm_lookandfeel")
-                    }
-
-                    PC.ToolButton {
-                        id: displaySettingsButton
-                        text: i18nd("plasma_shell_org.kde.plasma.desktop", "Display Configuration")
-                        icon.name: "preferences-desktop-display"
-                        onClicked: KCM.KCMLauncher.openSystemSettings("kcm_kscreen")
-                    }
-
-                    PC.ToolButton {
                         id: manageContainmentsButton
                         property QtObject qAction: containment?.plasmoid.corona.action("manage-containments") || null
                         text: qAction?.text
