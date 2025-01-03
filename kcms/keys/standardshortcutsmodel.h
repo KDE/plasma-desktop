@@ -7,8 +7,9 @@
 #pragma once
 
 #include "basemodel.h"
+#include "kglobalaccelmodel_export.h"
 
-class StandardShortcutsModel : public BaseModel
+class KGLOBALACCELMODEL_EXPORT StandardShortcutsModel : public BaseModel
 {
     Q_OBJECT
 public:

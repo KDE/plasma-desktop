@@ -9,6 +9,7 @@
 #include <QList>
 
 #include "basemodel.h"
+#include "kglobalaccelmodel_export.h"
 
 class QDBusError;
 
@@ -16,14 +17,12 @@ class KConfigBase;
 class KGlobalAccelInterface;
 class KGlobalShortcutInfo;
 
-class FilteredShortcutsModel;
-
-class GlobalAccelModel : public BaseModel
+class KGLOBALACCELMODEL_EXPORT GlobalAccelModel : public BaseModel
 {
     Q_OBJECT
 
 public:
-    GlobalAccelModel(KGlobalAccelInterface *interface, QObject *parent = nullptr);
+    GlobalAccelModel(QObject *parent = nullptr);
 
     QVariant data(const QModelIndex &index, int role) const override;
 
@@ -34,6 +33,9 @@ public:
 
     void load() override;
     void save() override;
+
+    // Whether KGlobalAccel D-Bus interface is online
+    bool isValid() const;
 
 Q_SIGNALS:
     void errorOccured(const QString &);
