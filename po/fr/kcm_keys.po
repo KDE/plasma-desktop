@@ -1,11 +1,11 @@
-# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024, 2025 Xavier Besnard <xavier.besnard@kde.org>
 # Xavier Besnard <xavier.besnard@kde.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-01 00:42+0000\n"
-"PO-Revision-Date: 2024-08-25 11:59+0200\n"
+"PO-Revision-Date: 2025-01-02 09:08+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: basemodel.cpp:158
 #, kde-format
@@ -183,11 +183,10 @@ msgid "Application…"
 msgstr "Application..."
 
 #: ui/main.qml:180
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@action:menu accessible"
 msgid "Add new application"
-msgstr "Applications"
+msgstr "Ajouter une nouvelle application"
 
 #: ui/main.qml:187
 #, kde-format
@@ -196,12 +195,10 @@ msgid "Command or Script…"
 msgstr "Commande ou script..."
 
 #: ui/main.qml:188
-#, fuzzy, kde-format
-#| msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
-#| msgid "Command or Script…"
+#, kde-format
 msgctxt "@action:menu accessible"
 msgid "Add new command or script"
-msgstr "Commande ou script..."
+msgstr "Ajouter uen nouvelle commande ou un nouveau script"
 
 #: ui/main.qml:224
 #, kde-format
