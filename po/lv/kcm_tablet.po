@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2023, 2024 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-27 00:43+0000\n"
-"PO-Revision-Date: 2024-12-01 21:25+0200\n"
+"PO-Revision-Date: 2025-01-03 16:52+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: inputsequence.cpp:172
 #, kde-format
@@ -58,7 +58,7 @@ msgstr "Nosaka programma"
 #, kde-format
 msgctxt "@action:button"
 msgid "Pen Button %1"
-msgstr "Pildspalvas %1. poga:"
+msgstr "Zīmuļa %1. poga:"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -123,7 +123,7 @@ msgstr "Kartēt uz daļu"
 #, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
-msgstr "Pildspalvas %1. poga:"
+msgstr "Zīmuļa %1. poga:"
 
 #: kcmtablet.cpp:264
 #, kde-format
@@ -131,7 +131,7 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button X'"
 msgid "pen button %1"
-msgstr "pildspalvas %1. poga"
+msgstr "zīmuļa %1. poga"
 
 #: ui/ActionDialog.qml:25
 #, kde-format
@@ -167,7 +167,7 @@ msgstr "Nosūtīt peles klikšķi"
 #, kde-format
 msgctxt "@option:radio Set this action to a pen button type"
 msgid "Send pen button"
-msgstr "Nosūtīt pildspalvas pogu"
+msgstr "Nosūtīt zīmuļa pogu"
 
 #: ui/ActionDialog.qml:150
 #, kde-format
@@ -334,22 +334,18 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 — %3×%4"
 
 #: ui/ExternalScreenMapping.qml:190
-#, fuzzy, kde-format
-#| msgid "Resize the tablet area"
+#, kde-format
 msgid "Resize the screen area"
-msgstr "Mainīt planšetes zonas izmēru"
+msgstr "Mainīt ekrāna zonas izmēru"
 
 #: ui/ExternalScreenMapping.qml:265
-#, fuzzy, kde-format
-#| msgctxt "tablet area position - size"
-#| msgid "%1,%2 - %3×%4"
+#, kde-format
 msgctxt "tablet area position - size"
 msgid "%1%,%2% - %3%×%4%"
-msgstr "%1,%2 — %3×%4"
+msgstr "%1 %,%2 % — %3 %×%4 %"
 
 #: ui/ExternalScreenMapping.qml:299
-#, fuzzy, kde-format
-#| msgid "Resize the tablet area"
+#, kde-format
 msgid "Resize the tablet area"
 msgstr "Mainīt planšetes zonas izmēru"
 
@@ -379,21 +375,19 @@ msgstr "Ierīce:"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
-msgstr ""
+msgstr "Displejs"
 
 #: ui/main.qml:169
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
-msgstr ""
+msgstr "Zīmulis"
 
 #: ui/main.qml:181
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The pad we are configuring"
-#| msgid "Pad:"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
-msgstr "Planšete:"
+msgstr "Planšete"
 
 #: ui/PadTab.qml:33
 #, kde-format
@@ -417,7 +411,7 @@ msgstr "Kreisās rokas režīms:"
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
-msgstr ""
+msgstr "Ieslēgt"
 
 #: ui/StylusTab.qml:43
 #, kde-kuit-format
@@ -440,13 +434,13 @@ msgstr "Zīmuļa spiediens:"
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1 %"
 
 #: ui/StylusTab.qml:170
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1 %"
 
 #: ui/StylusTab.qml:181
 #, kde-format
@@ -471,11 +465,10 @@ msgstr ""
 "spiediena vērtībām."
 
 #: ui/StylusTab.qml:198
-#, fuzzy, kde-format
-#| msgid "Pen Pressure:"
+#, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
-msgstr "Zīmuļa spiediens:"
+msgstr "Zīmuļa diapazons:"
 
 #: ui/StylusTab.qml:225
 #, kde-format
@@ -484,6 +477,8 @@ msgid ""
 "Pressure above or below the threshold will be clamped, and this becomes the "
 "new effective range."
 msgstr ""
+"Spiediens virs vai zem norādīt sliekšņa netiks ievērots un kļūst par jauno "
+"diapazonu."
 
 #: ui/StylusTab.qml:237
 #, kde-format
@@ -520,16 +515,12 @@ msgid "Stylus release X=%1 Y=%2"
 msgstr "Zīmuļa atlaišana X=%1 Y=%2"
 
 #: ui/Tester.qml:68
-#, fuzzy, kde-format
-#| msgid "Stylus move X=%1 Y=%2"
+#, kde-format
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
-msgstr "Zīmuļa pārvietošana X=%1 Y=%2"
+msgstr "Zīmuļa pārvietošana X=%1 Y=%2 P=%3 % TX=%4 TY=%5"
 
 #: ui/Tester.qml:205
-#, fuzzy, kde-format
-#| msgid ""
-#| "## Legend:\n"
-#| "# X, Y - event coordinate\n"
+#, kde-format
 msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
@@ -538,6 +529,8 @@ msgid ""
 msgstr ""
 "## Apzīmējumi:\n"
 "# X, Y — notikuma koordināta\n"
+"# P — spiediens\n"
+"# TX,TY — slīpums\n"
 
 #: ui/Tester.qml:211
 #, kde-format

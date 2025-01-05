@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
+# SPDX-FileCopyrightText: 2021, 2022, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-27 00:43+0000\n"
-"PO-Revision-Date: 2024-12-21 11:41+0100\n"
+"PO-Revision-Date: 2025-01-04 07:29+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -339,12 +339,10 @@ msgid "Resize the screen area"
 msgstr "Zmień rozmiar obszaru ekranu"
 
 #: ui/ExternalScreenMapping.qml:265
-#, fuzzy, kde-format
-#| msgctxt "tablet area position - size"
-#| msgid "%1,%2 - %3×%4"
+#, kde-format
 msgctxt "tablet area position - size"
 msgid "%1%,%2% - %3%×%4%"
-msgstr "%1,%2 - %3×%4"
+msgstr "%1%,%2% - %3%×%4%"
 
 #: ui/ExternalScreenMapping.qml:299
 #, kde-format
@@ -377,21 +375,19 @@ msgstr "Urządzenie:"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
-msgstr ""
+msgstr "Wyświetlanie"
 
 #: ui/main.qml:169
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
-msgstr ""
+msgstr "Pióro"
 
 #: ui/main.qml:181
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The pad we are configuring"
-#| msgid "Pad:"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
-msgstr "Płytka:"
+msgstr "Wypełnienie"
 
 #: ui/PadTab.qml:33
 #, kde-format
@@ -415,7 +411,7 @@ msgstr "Tryb leworęczny:"
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
-msgstr ""
+msgstr "Włącz"
 
 #: ui/StylusTab.qml:43
 #, kde-kuit-format
@@ -438,13 +434,13 @@ msgstr "Nacisk pióra:"
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:170
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:181
 #, kde-format
@@ -469,11 +465,10 @@ msgstr ""
 "nacisku otrzymywanymi przez aplikacje."
 
 #: ui/StylusTab.qml:198
-#, fuzzy, kde-format
-#| msgid "Pen Pressure:"
+#, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
-msgstr "Nacisk pióra:"
+msgstr "Zakres nacisku:"
 
 #: ui/StylusTab.qml:225
 #, kde-format
@@ -482,6 +477,8 @@ msgid ""
 "Pressure above or below the threshold will be clamped, and this becomes the "
 "new effective range."
 msgstr ""
+"Nacisk powyżej lub poniżej progu zostanie przycięty, a powstały zakres "
+"stanie się nowym obowiązującym."
 
 #: ui/StylusTab.qml:237
 #, kde-format
@@ -518,16 +515,12 @@ msgid "Stylus release X=%1 Y=%2"
 msgstr "Zwolnienie rysika X=%1 Y=%2"
 
 #: ui/Tester.qml:68
-#, fuzzy, kde-format
-#| msgid "Stylus move X=%1 Y=%2"
+#, kde-format
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
-msgstr "Ruch rysika X=%1 Y=%2"
+msgstr "Ruch rysika X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
 #: ui/Tester.qml:205
-#, fuzzy, kde-format
-#| msgid ""
-#| "## Legend:\n"
-#| "# X, Y - event coordinate\n"
+#, kde-format
 msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
@@ -536,6 +529,8 @@ msgid ""
 msgstr ""
 "## Legenda:\n"
 "# X, Y - współrzędne zdarzenia\n"
+"# P - nacisk\n"
+"# TX,TY - pochylenie\n"
 
 #: ui/Tester.qml:211
 #, kde-format
