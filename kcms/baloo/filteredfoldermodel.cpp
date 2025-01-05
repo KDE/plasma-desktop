@@ -236,11 +236,13 @@ void FilteredFolderModel::syncFolderConfig(const FolderInfo &entry)
 
 QHash<int, QByteArray> FilteredFolderModel::roleNames() const
 {
-    return {{Url, QByteArrayLiteral("url")}, //
-            {Folder, QByteArrayLiteral("folder")},
-            {EnableIndex, QByteArrayLiteral("enableIndex")},
-            {Deletable, QByteArrayLiteral("deletable")},
-            {Qt::DecorationRole, QByteArrayLiteral("decoration")}};
+    return {
+        {Url, QByteArrayLiteral("url")},
+        {Folder, QByteArrayLiteral("folder")},
+        {EnableIndex, QByteArrayLiteral("enableIndex")},
+        {Deletable, QByteArrayLiteral("deletable")},
+        {Qt::DecorationRole, QByteArrayLiteral("decoration")},
+    };
 }
 
 #include "moc_filteredfoldermodel.cpp"
