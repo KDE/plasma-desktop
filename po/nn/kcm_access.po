@@ -167,7 +167,6 @@ msgstr "Tid å visa visuell bjølle"
 #. i18n: ectx: label, entry (ColorblindnessCorrection), group (Plugins)
 #: kcmaccessibilitycolorblindnesscorrection.kcfg:13
 #, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
 msgid "Whether Colorblindness Correction is enabled"
 msgstr "Om risting av peikaren skal brukast."
 
@@ -311,14 +310,12 @@ msgstr "Forstørring"
 
 #: ui/ActivationShortcuts.qml:17
 #, fuzzy, kde-format
-#| msgid "Activation Gestures"
 msgctxt "@option:check"
 msgid "Activation shortcuts:"
 msgstr "Muserørsler"
 
 #: ui/ActivationShortcuts.qml:18
 #, fuzzy, kde-format
-#| msgid "Enable"
 msgctxt "Enable activation shortcuts"
 msgid "Enable"
 msgstr "Slå på"
@@ -337,7 +334,6 @@ msgstr ""
 
 #: ui/ActivationShortcuts.qml:46
 #, fuzzy, kde-format
-#| msgid "Turn sticky keys and slow keys off after inactivity:"
 msgctxt "@option:check"
 msgid "Disable sticky and slow keys after:"
 msgstr "Slå faste valtastar og trege tastar av etter inaktivitet."
@@ -351,7 +347,6 @@ msgstr[1] "%1 minutt"
 
 #: ui/ActivationShortcuts.qml:79
 #, fuzzy, kde-format
-#| msgid "min"
 msgctxt "short for minute(s)"
 msgid "min"
 msgid_plural "min"
@@ -360,7 +355,6 @@ msgstr[1] "min"
 
 #: ui/ActivationShortcuts.qml:88
 #, fuzzy, kde-format
-#| msgid "When a gesture is used:"
 msgid "When a shortcut is used:"
 msgstr "Når ei muserørsle vert brukt:"
 
@@ -371,7 +365,6 @@ msgstr "Vis stadfestings­vindauge"
 
 #: ui/ActivationShortcuts.qml:100
 #, fuzzy, kde-format
-#| msgid "Ring the System Bell"
 msgid "Ring the system bell"
 msgstr "Ring systembjølla"
 
@@ -448,8 +441,6 @@ msgstr ""
 
 #: ui/Bell.qml:123
 #, fuzzy, kde-format
-#| msgctxt "Invert screen on a system bell"
-#| msgid "Invert Screen"
 msgctxt "@option:radio Invert screen colors when a system bell is rung"
 msgid "Invert screen colors"
 msgstr "Negativ skjerm"
@@ -476,8 +467,6 @@ msgstr "Tid:"
 #: ui/MouseNavigation.qml:51 ui/MouseNavigation.qml:73
 #: ui/MouseNavigation.qml:95
 #, fuzzy, kde-format
-#| msgid "%1 min"
-#| msgid_plural "%1 min"
 msgid "%1 ms"
 msgid_plural "%1 ms"
 msgstr[0] "1 minutt"
@@ -501,7 +490,6 @@ msgstr ""
 
 #: ui/ColorblindnessCorrection.qml:23
 #, fuzzy, kde-format
-#| msgid "Enable"
 msgctxt "@option check, Enable color blindness correction effect"
 msgid "Enable"
 msgstr "Slå på"
@@ -651,7 +639,6 @@ msgstr "Ring systembjølla ved avvising"
 
 #: ui/main.qml:28
 #, fuzzy, kde-format
-#| msgid "Use System Bell"
 msgctxt "@title Category name in sidebar"
 msgid "System Bell"
 msgstr "Bruk systembjølle"
@@ -676,7 +663,6 @@ msgstr "Musestyring"
 
 #: ui/main.qml:48
 #, fuzzy, kde-format
-#| msgid "Activation Gestures"
 msgid "Activation Shortcuts"
 msgstr "Muserørsler"
 
@@ -700,14 +686,12 @@ msgstr "Rist på peikaren"
 
 #: ui/ModifierKeys.qml:17
 #, fuzzy, kde-format
-#| msgid "Sticky keys:"
 msgctxt "@option:check"
 msgid "Sticky keys:"
 msgstr "Faste valtastar:"
 
 #: ui/ModifierKeys.qml:22
 #, fuzzy, kde-format
-#| msgid "Enable"
 msgctxt "@option:check Enable sticky keys"
 msgid "Enable"
 msgstr "Slå på"
@@ -723,7 +707,6 @@ msgstr ""
 
 #: ui/ModifierKeys.qml:39
 #, fuzzy, kde-format
-#| msgid "Lock the sticky keys"
 msgctxt "@option:check"
 msgid "Lock sticky keys"
 msgstr "Lås faste valtastar"
@@ -748,14 +731,12 @@ msgstr "Ring systembjølla når valtastar vert brukte"
 
 #: ui/ModifierKeys.qml:88
 #, fuzzy, kde-format
-#| msgid "Feedback:"
 msgctxt "@option:check Feedback options:"
 msgid "Feedback:"
 msgstr "Tilbakemelding:"
 
 #: ui/ModifierKeys.qml:93
 #, fuzzy, kde-format
-#| msgid "Ring system bell when locking keys are toggled"
 msgctxt "@option:check"
 msgid "Ring system bell when locking keys are used"
 msgstr "Ring systembjølla når låsetastar vert slegne på/av"
@@ -768,28 +749,24 @@ msgstr ""
 
 #: ui/ModifierKeys.qml:108
 #, fuzzy, kde-format
-#| msgid "Show notification when modifier or locking keys are used"
 msgctxt "@option:check"
 msgid "Show notification when modifier or locking keys are used"
 msgstr "Vis varsling når val- eller låsetastar vert brukte"
 
 #: ui/ModifierKeys.qml:120
 #, fuzzy, kde-format
-#| msgid "Configure Notifications…"
 msgctxt "@action:button"
 msgid "Configure Notifications…"
 msgstr "Set opp varslingar …"
 
 #: ui/MouseNavigation.qml:16
 #, fuzzy, kde-format
-#| msgid "Use number pad to move cursor:"
 msgctxt "@option:check"
 msgid "Use number pad to move cursor:"
 msgstr "Bruk taltastaturet til å flytta peikaren:"
 
 #: ui/MouseNavigation.qml:21
 #, fuzzy, kde-format
-#| msgid "Enable"
 msgctxt "@option:check Enable mouse navigation"
 msgid "Enable"
 msgstr "Slå på"
@@ -807,42 +784,36 @@ msgstr ""
 
 #: ui/MouseNavigation.qml:37
 #, fuzzy, kde-format
-#| msgid "Acceleration delay:"
 msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
 msgstr "Forseinking for akselerasjon:"
 
 #: ui/MouseNavigation.qml:59
 #, fuzzy, kde-format
-#| msgid "Repeat interval:"
 msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr "Gjentakingsintervall:"
 
 #: ui/MouseNavigation.qml:81
 #, fuzzy, kde-format
-#| msgid "Acceleration time:"
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "Akselerasjonstid:"
 
 #: ui/MouseNavigation.qml:103
 #, fuzzy, kde-format
-#| msgid "Maximum speed:"
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr "Høgste fart:"
 
 #: ui/MouseNavigation.qml:117
 #, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
 msgstr "Peikarakselerasjon:"
 
 #: ui/ScreenReader.qml:20
 #, fuzzy, kde-format
-#| msgid "Launch Orca Screen Reader Configuration…"
 msgctxt "@info Placeholder message title"
 msgid "The Orca Screen Reader is not installed"
 msgstr "Set opp skjermlesaren Orca …"
@@ -855,14 +826,12 @@ msgstr ""
 
 #: ui/ScreenReader.qml:27
 #, fuzzy, kde-format
-#| msgid "Enable Screen Reader"
 msgctxt "@option:check"
 msgid "Enable Screen Reader"
 msgstr "Bruk skjermlesar"
 
 #: ui/ScreenReader.qml:39
 #, fuzzy, kde-format
-#| msgid "Launch Orca Screen Reader Configuration…"
 msgctxt "@action:button"
 msgid "Launch Orca Screen Reader Configuration…"
 msgstr "Set opp skjermlesaren Orca …"

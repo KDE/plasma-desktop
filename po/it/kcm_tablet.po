@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Paolo Zamponi <feus73@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Paolo Zamponi <feus73@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-13 02:31+0000\n"
-"PO-Revision-Date: 2024-09-05 14:23+0200\n"
+"PO-Revision-Date: 2025-01-05 18:52+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -51,7 +51,7 @@ msgstr "Pulsante centrale del mouse"
 #, kde-format
 msgctxt "@action:button"
 msgid "Application-defined"
-msgstr "Definita dall'applicazione"
+msgstr "Definito dall'applicazione"
 
 #: kcmtablet.cpp:34
 #, kde-format
@@ -201,13 +201,13 @@ msgstr "Maiusc"
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
-msgstr "Questo pulsante è disabilitato e non fa niente."
+msgstr "Questo pulsante è disabilitato, e non fa nulla."
 
 #: ui/Calibration.qml:31
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
-msgstr "Calibrazione del pennino"
+msgstr "Calibrazione della penna"
 
 #: ui/Calibration.qml:90
 #, kde-kuit-format
@@ -303,9 +303,9 @@ msgid ""
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
-"Dice al dispositivo di favorire gli utenti per mancini. Gli effetti "
-"varieranno in base al dispositivo; spesso inverte la funzionalità dei "
-"pulsanti della tavoletta, in modo che possa essere usata capovolta."
+"Dice al dispositivo di facilitare gli utenti mancini. Gli effetti variano in "
+"base al dispositivo, tuttavia spesso viene invertita la funzionalità dei "
+"pulsanti della tavoletta, in modo da poterla usare capovolta."
 
 #: ui/main.qml:174
 #, kde-format
@@ -332,7 +332,7 @@ msgstr "%1,%2 - %3×%4"
 #: ui/main.qml:304
 #, kde-format
 msgid "Pen button 1:"
-msgstr "Pulsante 1 del pennino:"
+msgstr "Pulsante 1 della penna:"
 
 #: ui/main.qml:305
 #, kde-format
@@ -340,12 +340,12 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 1'"
 msgid "pen button 1"
-msgstr "Pulsante 1 del pennino"
+msgstr "pulsante 1 della penna"
 
 #: ui/main.qml:309
 #, kde-format
 msgid "Pen button 2:"
-msgstr "Pulsante 2 del pennino:"
+msgstr "Pulsante 2 della penna:"
 
 #: ui/main.qml:310
 #, kde-format
@@ -353,12 +353,12 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 2'"
 msgid "pen button 2"
-msgstr "Pulsante 2 del pennino"
+msgstr "pulsante 2 della penna"
 
 #: ui/main.qml:314
 #, kde-format
 msgid "Pen button 3:"
-msgstr "Pulsante 3 del pennino:"
+msgstr "Pulsante 3 della penna:"
 
 #: ui/main.qml:315
 #, kde-format
@@ -366,7 +366,7 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button 3'"
 msgid "pen button 3"
-msgstr "Pulsante 3 del pennino"
+msgstr "pulsante 3 della penna"
 
 #: ui/main.qml:370
 #, kde-format
@@ -425,17 +425,17 @@ msgstr "Tester della tavoletta grafica"
 #: ui/Tester.qml:48
 #, kde-format
 msgid "Stylus press X=%1 Y=%2"
-msgstr "Pressione del pennino X=%1 Y=%2"
+msgstr "Pressione sullo stilo X=%1 Y=%2"
 
 #: ui/Tester.qml:58
 #, kde-format
 msgid "Stylus release X=%1 Y=%2"
-msgstr "Rilascio del pennino X=%1 Y=%2"
+msgstr "Rilascio dello stilo X=%1 Y=%2"
 
 #: ui/Tester.qml:68
 #, kde-format
 msgid "Stylus move X=%1 Y=%2"
-msgstr "Movimento del pennino X=%1 Y=%2"
+msgstr "Movimento dello stilo X=%1 Y=%2"
 
 #: ui/Tester.qml:199
 #, kde-format
