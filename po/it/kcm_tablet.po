@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Paolo Zamponi <feus73@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Paolo Zamponi <feus73@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-27 00:43+0000\n"
-"PO-Revision-Date: 2024-12-29 09:59+0100\n"
+"PO-Revision-Date: 2025-01-05 18:52+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -51,13 +51,13 @@ msgstr "Pulsante centrale del mouse"
 #, kde-format
 msgctxt "@action:button"
 msgid "Application-defined"
-msgstr "Definita dall'applicazione"
+msgstr "Definito dall'applicazione"
 
 #: inputsequence.cpp:194
 #, kde-format
 msgctxt "@action:button"
 msgid "Pen Button %1"
-msgstr "Pulsante %1 del pennino"
+msgstr "Pulsante %1 della penna"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -116,13 +116,13 @@ msgstr "Mantieni le proporzioni e adatta"
 #, kde-format
 msgctxt "@item:inlistbox Map to portion of the screen"
 msgid "Map to Portion"
-msgstr "Associa a porzione"
+msgstr "Associa a una porzione"
 
 #: kcmtablet.cpp:263
 #, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
-msgstr "Pulsante %1 del pennino:"
+msgstr "Pulsante %1 della penna:"
 
 #: kcmtablet.cpp:264
 #, kde-format
@@ -130,7 +130,7 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button X'"
 msgid "pen button %1"
-msgstr "pulsante %1 del pennino"
+msgstr "pulsante %1 della penna"
 
 #: ui/ActionDialog.qml:25
 #, kde-format
@@ -166,7 +166,7 @@ msgstr "Invia clic del pulsante del mouse"
 #, kde-format
 msgctxt "@option:radio Set this action to a pen button type"
 msgid "Send pen button"
-msgstr "Invia pulsante del pennino"
+msgstr "Invia pulsante della penna"
 
 #: ui/ActionDialog.qml:150
 #, kde-format
@@ -248,13 +248,13 @@ msgstr "Pulsante 3"
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
-msgstr "Questo pulsante è disabilitato e non fa niente."
+msgstr "Questo pulsante è disabilitato, e non fa nulla."
 
 #: ui/Calibration.qml:31
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
-msgstr "Calibrazione del pennino"
+msgstr "Calibrazione della penna"
 
 #: ui/Calibration.qml:90
 #, kde-kuit-format
@@ -380,7 +380,7 @@ msgstr "Visualizza"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
-msgstr "Pennino"
+msgstr "Penna"
 
 #: ui/main.qml:181
 #, kde-format
@@ -420,9 +420,9 @@ msgid ""
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
-"Dice al dispositivo di favorire gli utenti per mancini. Gli effetti "
-"varieranno in base al dispositivo; spesso inverte la funzionalità dei "
-"pulsanti della tavoletta, in modo che possa essere usata capovolta."
+"Dice al dispositivo di facilitare gli utenti mancini. Gli effetti variano in "
+"base al dispositivo, tuttavia spesso viene invertita la funzionalità dei "
+"pulsanti della tavoletta, in modo da poterla usare capovolta."
 
 #: ui/StylusTab.qml:102
 #, kde-format
@@ -460,7 +460,7 @@ msgid ""
 "This curve controls the relationship between the pressure on the stylus and "
 "the pressure values received by applications."
 msgstr ""
-"Questa curva controlla la relazione tra la pressione sul pennino e i valori "
+"Questa curva controlla la relazione tra la pressione sullo stilo e i valori "
 "di pressione ricevuti dalle applicazioni."
 
 #: ui/StylusTab.qml:198
@@ -476,8 +476,8 @@ msgid ""
 "Pressure above or below the threshold will be clamped, and this becomes the "
 "new effective range."
 msgstr ""
-"La pressione sopra o sotto la soglia verrà bloccata, e questo diventa il "
-"nuovo intervallo efficace."
+"La pressione sopra o sotto la soglia verrà bloccata, quindi questo diventa "
+"il nuovo intervallo efficace."
 
 #: ui/StylusTab.qml:237
 #, kde-format
@@ -506,17 +506,17 @@ msgstr "Tester della tavoletta grafica"
 #: ui/Tester.qml:48
 #, kde-format
 msgid "Stylus press X=%1 Y=%2"
-msgstr "Pressione del pennino X=%1 Y=%2"
+msgstr "Pressione sullo stilo X=%1 Y=%2"
 
 #: ui/Tester.qml:58
 #, kde-format
 msgid "Stylus release X=%1 Y=%2"
-msgstr "Rilascio del pennino X=%1 Y=%2"
+msgstr "Rilascio dello stilo X=%1 Y=%2"
 
 #: ui/Tester.qml:68
 #, kde-format
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
-msgstr "Movimento del pennino X=%1 Y=%2 P=%3% IX=%4 IY=%5"
+msgstr "Movimento dello stilo X=%1 Y=%2 P=%3% IX=%4 IY=%5"
 
 #: ui/Tester.qml:205
 #, kde-format
