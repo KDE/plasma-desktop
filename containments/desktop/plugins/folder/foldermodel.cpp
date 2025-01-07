@@ -52,6 +52,7 @@
 #include <KIO/FileUndoManager>
 #include <KIO/JobUiDelegate>
 #include <KIO/JobUiDelegateFactory>
+#include <KIO/OpenFileManagerWindowJob>
 #include <KIO/OpenUrlJob>
 #include <KIO/Paste>
 #include <KIO/PasteJob>
@@ -59,6 +60,7 @@
 #include <KIO/RestoreJob>
 #include <KIO/StatJob>
 #include <KLocalizedString>
+#include <KNotification>
 #include <KNotificationJobUiDelegate>
 #include <KPropertiesDialog>
 #include <KProtocolInfo>
@@ -843,6 +845,38 @@ void FolderModel::runSelected()
     }
 
     fileItemActions.runPreferredApplications(items);
+}
+
+void FolderModel::showTarget()
+{
+    const QModelIndexList indexes = m_selectionModel->selectedIndexes();
+
+    if (indexes.isEmpty() || indexes.count() != 1) {
+        return;
+    }
+
+    const KFileItem link = itemForIndex(indexes.first());
+    const QUrl destinationUrl = QUrl::fromLocalFile(link.linkDest());
+
+    auto job = KIO::stat(destinationUrl, KIO::StatJob::SourceSide, KIO::StatNoDetails);
+
+    connect(job, &KJob::finished, this, [link, destinationUrl](KJob *job) {
+        KIO::StatJob *statJob = static_cast<KIO::StatJob *>(job);
+
+        if (statJob->error()) {
+            KNotification::event(
+                KNotification::Error,
+                i18nc("@title:notifications Here 'link' refers to a symbolic link to another file or folder", "Link Target Not Found"),
+                xi18nc("@info Body text of a system notification",
+                       "<filename>%1</filename> points to <filename>%2</filename>, but that could not be found. It may have been moved or deleted.",
+                       link.name(),
+                       link.linkDest()),
+                QStringLiteral("dialog-error"),
+                KNotification::DefaultEvent);
+        } else {
+            KIO::highlightInFileManager({destinationUrl});
+        }
+    });
 }
 
 void FolderModel::rename(int row, const QString &name)
@@ -1701,7 +1735,14 @@ void FolderModel::createActions()
     QAction *actOpen = new QAction(QIcon::fromTheme(QStringLiteral("window-new")), i18n("&Open"), this);
     connect(actOpen, &QAction::triggered, this, &FolderModel::runSelected);
 
+    QAction *showTarget = m_actionCollection.addAction(QStringLiteral("showTarget"));
+    showTarget->setText(i18nc("@action:inmenu open file manager showing the target file or folder that this link points to", "Show Target"));
+    showTarget->setIcon(QIcon::fromTheme(QStringLiteral("document-open-folder")));
+    showTarget->setEnabled(false);
+    connect(showTarget, &QAction::triggered, this, &FolderModel::showTarget);
+
     m_actionCollection.addAction(QStringLiteral("open"), actOpen);
+    m_actionCollection.addAction(QStringLiteral("showTarget"), showTarget);
     m_actionCollection.addAction(QStringLiteral("cut"), cut);
     m_actionCollection.addAction(QStringLiteral("undo"), undo);
     m_actionCollection.addAction(QStringLiteral("copy"), copy);
@@ -1770,6 +1811,10 @@ void FolderModel::updateActions()
         if (file.hasLinkType() && file.readUrl() == QLatin1String("trash:/")) {
             isTrashLink = true;
         }
+    }
+
+    if (QAction *showTarget = m_actionCollection.action(QStringLiteral("showTarget"))) {
+        showTarget->setEnabled(items.count() == 1 && items.at(0).isLink());
     }
 
     if (m_newMenu) {
@@ -1882,6 +1927,14 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
         m_fileItemActions->setItemListProperties(itemProperties);
         m_fileItemActions->insertOpenWithActionsTo(nullptr, menu, QStringList());
         menu->addSeparator();
+
+        // Add "Show Target" action only if the file *has* a target
+        QAction *showTargetAction = m_actionCollection.action(QStringLiteral("showTarget"));
+        if (showTargetAction->isEnabled()) {
+            menu->addAction(showTargetAction);
+            menu->addSeparator();
+        }
+
         menu->addAction(m_actionCollection.action(QStringLiteral("cut")));
         menu->addAction(m_actionCollection.action(QStringLiteral("copy")));
         if (urls.length() == 1) {
