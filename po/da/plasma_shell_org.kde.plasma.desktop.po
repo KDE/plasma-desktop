@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-30 00:43+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2024-10-26 11:54+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -577,8 +577,9 @@ msgstr ""
 "Dobbeltklik for at nulstille."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, kde-format
-msgid "Panel and Desktop Management"
+#, fuzzy, kde-format
+#| msgid "Panel and Desktop Management"
+msgid "Manage Panels and Desktops"
 msgstr "Håndtering af panel og skrivebord"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
@@ -828,23 +829,13 @@ msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/views/DesktopEditMode.qml:115
-#, kde-format
-msgid "Global Themes"
-msgstr "Globale temaer"
-
-#: contents/views/DesktopEditMode.qml:122
-#, kde-format
-msgid "Display Configuration"
-msgstr "Vis konfiguration"
-
-#: contents/views/DesktopEditMode.qml:143
+#: contents/views/DesktopEditMode.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
 msgstr "Mere"
 
-#: contents/views/DesktopEditMode.qml:152
+#: contents/views/DesktopEditMode.qml:130
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Afslut Redigér-tilstand"
@@ -853,6 +844,12 @@ msgstr "Afslut Redigér-tilstand"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Fokusindikator for panel"
+
+#~ msgid "Global Themes"
+#~ msgstr "Globale temaer"
+
+#~ msgid "Display Configuration"
+#~ msgstr "Vis konfiguration"
 
 #~ msgid "Uninstall widget"
 #~ msgstr "Afinstallér widget"

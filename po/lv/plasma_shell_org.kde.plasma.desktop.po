@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-30 00:43+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2025-01-03 16:53+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -575,8 +575,9 @@ msgstr ""
 "Dubultklikšķis atsauc darbību."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, kde-format
-msgid "Panel and Desktop Management"
+#, fuzzy, kde-format
+#| msgid "Panel and Desktop Management"
+msgid "Manage Panels and Desktops"
 msgstr "Paneļu un darbvirsmas pārvaldība"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
@@ -823,23 +824,13 @@ msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1 %"
 
-#: contents/views/DesktopEditMode.qml:115
-#, kde-format
-msgid "Global Themes"
-msgstr "Globālie motīvi"
-
-#: contents/views/DesktopEditMode.qml:122
-#, kde-format
-msgid "Display Configuration"
-msgstr "Displeja konfigurācija"
-
-#: contents/views/DesktopEditMode.qml:143
+#: contents/views/DesktopEditMode.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
 msgstr "Vairāk"
 
-#: contents/views/DesktopEditMode.qml:152
+#: contents/views/DesktopEditMode.qml:130
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Iziet no rediģēšanas režīma"
@@ -848,6 +839,12 @@ msgstr "Iziet no rediģēšanas režīma"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Paneļa fokusa indikators"
+
+#~ msgid "Global Themes"
+#~ msgstr "Globālie motīvi"
+
+#~ msgid "Display Configuration"
+#~ msgstr "Displeja konfigurācija"
 
 #~ msgid "Uninstall widget"
 #~ msgstr "Atinstalēt logdaļu"

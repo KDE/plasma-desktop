@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-30 00:43+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2024-12-30 23:25+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -577,8 +577,9 @@ msgstr ""
 "Dubbelklik om te resetten."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, kde-format
-msgid "Panel and Desktop Management"
+#, fuzzy, kde-format
+#| msgid "Panel and Desktop Management"
+msgid "Manage Panels and Desktops"
 msgstr "Beheer panelen en bureaublad"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
@@ -825,23 +826,13 @@ msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/views/DesktopEditMode.qml:115
-#, kde-format
-msgid "Global Themes"
-msgstr "Globale thema's"
-
-#: contents/views/DesktopEditMode.qml:122
-#, kde-format
-msgid "Display Configuration"
-msgstr "Configuratie van het scherm"
-
-#: contents/views/DesktopEditMode.qml:143
+#: contents/views/DesktopEditMode.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
 msgstr "Meer"
 
-#: contents/views/DesktopEditMode.qml:152
+#: contents/views/DesktopEditMode.qml:130
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Bewerkingsmodus sluiten"
@@ -850,6 +841,12 @@ msgstr "Bewerkingsmodus sluiten"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Focusindicator van paneel"
+
+#~ msgid "Global Themes"
+#~ msgstr "Globale thema's"
+
+#~ msgid "Display Configuration"
+#~ msgstr "Configuratie van het scherm"
 
 #~ msgid "Uninstall widget"
 #~ msgstr "Widget  deïnstalleren"

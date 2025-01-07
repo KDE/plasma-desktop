@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-30 00:43+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2024-08-25 12:05+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -576,8 +576,9 @@ msgstr ""
 "Dobbeltklikk for å tilbakestilla."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, kde-format
-msgid "Panel and Desktop Management"
+#, fuzzy, kde-format
+#| msgid "Panel and Desktop Management"
+msgid "Manage Panels and Desktops"
 msgstr "Handsaming av panel og skrivebord"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
@@ -822,23 +823,13 @@ msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1 %"
 
-#: contents/views/DesktopEditMode.qml:115
-#, kde-format
-msgid "Global Themes"
-msgstr "Globale tema"
-
-#: contents/views/DesktopEditMode.qml:122
-#, kde-format
-msgid "Display Configuration"
-msgstr "Skjermoppsett"
-
-#: contents/views/DesktopEditMode.qml:143
+#: contents/views/DesktopEditMode.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
 msgstr "Meir"
 
-#: contents/views/DesktopEditMode.qml:152
+#: contents/views/DesktopEditMode.qml:130
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Avslutt tilpassing"
@@ -847,3 +838,9 @@ msgstr "Avslutt tilpassing"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Panelfokus-markør"
+
+#~ msgid "Global Themes"
+#~ msgstr "Globale tema"
+
+#~ msgid "Display Configuration"
+#~ msgstr "Skjermoppsett"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-30 00:43+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2024-12-31 19:21+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -579,8 +579,9 @@ msgstr ""
 "Egin klik bikoitza berrezartzeko."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, kde-format
-msgid "Panel and Desktop Management"
+#, fuzzy, kde-format
+#| msgid "Panel and Desktop Management"
+msgid "Manage Panels and Desktops"
 msgstr "Panel eta Mahaigain kudeaketa"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
@@ -827,23 +828,13 @@ msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%%1"
 
-#: contents/views/DesktopEditMode.qml:115
-#, kde-format
-msgid "Global Themes"
-msgstr "Gai globalak"
-
-#: contents/views/DesktopEditMode.qml:122
-#, kde-format
-msgid "Display Configuration"
-msgstr "Bistaratze-konfigurazioa"
-
-#: contents/views/DesktopEditMode.qml:143
+#: contents/views/DesktopEditMode.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
 msgstr "Gehiago"
 
-#: contents/views/DesktopEditMode.qml:152
+#: contents/views/DesktopEditMode.qml:130
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Irten editatzeko modutik"
@@ -852,6 +843,12 @@ msgstr "Irten editatzeko modutik"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Panelaren fokuaren adierazlea"
+
+#~ msgid "Global Themes"
+#~ msgstr "Gai globalak"
+
+#~ msgid "Display Configuration"
+#~ msgstr "Bistaratze-konfigurazioa"
 
 #~ msgid "Uninstall widget"
 #~ msgstr "Desinstalatu trepeta"

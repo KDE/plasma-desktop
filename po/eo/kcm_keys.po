@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-01 00:42+0000\n"
-"PO-Revision-Date: 2024-08-23 21:45+0200\n"
+"PO-Revision-Date: 2025-01-06 18:58+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -167,7 +167,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export"
-msgstr "Eksporti"
+msgstr "Elporti"
 
 #: ui/main.qml:173
 #, kde-format
@@ -182,11 +182,10 @@ msgid "Application…"
 msgstr "Aplikaĵon…"
 
 #: ui/main.qml:180
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@action:menu accessible"
 msgid "Add new application"
-msgstr "Aplikoj"
+msgstr "Aldoni novan aplikaĵon"
 
 #: ui/main.qml:187
 #, kde-format
@@ -195,19 +194,17 @@ msgid "Command or Script…"
 msgstr "Komandon aŭ Skripton…"
 
 #: ui/main.qml:188
-#, fuzzy, kde-format
-#| msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
-#| msgid "Command or Script…"
+#, kde-format
 msgctxt "@action:menu accessible"
 msgid "Add new command or script"
-msgstr "Komandon aŭ Skripton…"
+msgstr "Aldoni novan komandon aŭ skripton"
 
 #: ui/main.qml:224
 #, kde-format
 msgctxt ""
 "@option:check accessible export shortcuts %1 is application/group name"
 msgid "Export %1"
-msgstr "Eksporti %1"
+msgstr "Elporti %1"
 
 #: ui/main.qml:233
 #, kde-format

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-30 00:43+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2024-12-31 10:02+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -590,8 +590,9 @@ msgstr ""
 "Faire un double clic pour ré-initialiser."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, kde-format
-msgid "Panel and Desktop Management"
+#, fuzzy, kde-format
+#| msgid "Panel and Desktop Management"
+msgid "Manage Panels and Desktops"
 msgstr "Gestion des panneaux et des bureaux"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
@@ -838,23 +839,13 @@ msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1 %"
 
-#: contents/views/DesktopEditMode.qml:115
-#, kde-format
-msgid "Global Themes"
-msgstr "Thèmes globaux"
-
-#: contents/views/DesktopEditMode.qml:122
-#, kde-format
-msgid "Display Configuration"
-msgstr "Configuration d'affichage"
-
-#: contents/views/DesktopEditMode.qml:143
+#: contents/views/DesktopEditMode.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
 msgstr "Plus"
 
-#: contents/views/DesktopEditMode.qml:152
+#: contents/views/DesktopEditMode.qml:130
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Quitter le mode d'édition"
@@ -863,6 +854,12 @@ msgstr "Quitter le mode d'édition"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Indicateur de focus pour les panneaux"
+
+#~ msgid "Global Themes"
+#~ msgstr "Thèmes globaux"
+
+#~ msgid "Display Configuration"
+#~ msgstr "Configuration d'affichage"
 
 #~ msgid "Uninstall widget"
 #~ msgstr "Désinstaller le composant graphique"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-30 00:43+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2024-12-31 09:32+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -579,8 +579,9 @@ msgstr ""
 "Prema dupla para restabelecer."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, kde-format
-msgid "Panel and Desktop Management"
+#, fuzzy, kde-format
+#| msgid "Panel and Desktop Management"
+msgid "Manage Panels and Desktops"
 msgstr "Xestión de paneis e escritorios"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
@@ -826,23 +827,13 @@ msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/views/DesktopEditMode.qml:115
-#, kde-format
-msgid "Global Themes"
-msgstr "Temas globais"
-
-#: contents/views/DesktopEditMode.qml:122
-#, kde-format
-msgid "Display Configuration"
-msgstr "Configuración da pantalla"
-
-#: contents/views/DesktopEditMode.qml:143
+#: contents/views/DesktopEditMode.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
 msgstr "Máis"
 
-#: contents/views/DesktopEditMode.qml:152
+#: contents/views/DesktopEditMode.qml:130
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Desactivar o modo de edición"
@@ -851,6 +842,12 @@ msgstr "Desactivar o modo de edición"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Indicador de foco do panel"
+
+#~ msgid "Global Themes"
+#~ msgstr "Temas globais"
+
+#~ msgid "Display Configuration"
+#~ msgstr "Configuración da pantalla"
 
 #~ msgid "Uninstall widget"
 #~ msgstr "Desinstalar o trebello"

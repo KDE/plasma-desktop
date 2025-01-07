@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-30 00:43+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2024-12-13 10:42+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -575,8 +575,9 @@ msgstr ""
 "Tvísmelltu til að endurstilla."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, kde-format
-msgid "Panel and Desktop Management"
+#, fuzzy, kde-format
+#| msgid "Panel and Desktop Management"
+msgid "Manage Panels and Desktops"
 msgstr "Umsjón með skjáborði og skjáborðsstiku"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
@@ -826,23 +827,13 @@ msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/views/DesktopEditMode.qml:115
-#, kde-format
-msgid "Global Themes"
-msgstr "Almenn þemu"
-
-#: contents/views/DesktopEditMode.qml:122
-#, kde-format
-msgid "Display Configuration"
-msgstr "Skjástillingar"
-
-#: contents/views/DesktopEditMode.qml:143
+#: contents/views/DesktopEditMode.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
 msgstr "Meira"
 
-#: contents/views/DesktopEditMode.qml:152
+#: contents/views/DesktopEditMode.qml:130
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Loka breytingasniði"
@@ -851,6 +842,12 @@ msgstr "Loka breytingasniði"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Fókusvísir skjáborðsstiku"
+
+#~ msgid "Global Themes"
+#~ msgstr "Almenn þemu"
+
+#~ msgid "Display Configuration"
+#~ msgstr "Skjástillingar"
 
 #~ msgid "Uninstall widget"
 #~ msgstr "Fjarlægja græju"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-30 00:43+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2024-12-08 14:20+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -574,8 +574,9 @@ msgstr ""
 "மீட்டமைக்க இரட்டைக் கிளிக் செய்யவும்."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, kde-format
-msgid "Panel and Desktop Management"
+#, fuzzy, kde-format
+#| msgid "Panel and Desktop Management"
+msgid "Manage Panels and Desktops"
 msgstr "பலகை மற்றும் பணிமேடை மேலாண்மை"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
@@ -823,23 +824,13 @@ msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/views/DesktopEditMode.qml:115
-#, kde-format
-msgid "Global Themes"
-msgstr "பொதுவான தோற்றத்திட்டங்கள்"
-
-#: contents/views/DesktopEditMode.qml:122
-#, kde-format
-msgid "Display Configuration"
-msgstr "திரை அமைப்புகள்"
-
-#: contents/views/DesktopEditMode.qml:143
+#: contents/views/DesktopEditMode.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
 msgstr "மேலும்"
 
-#: contents/views/DesktopEditMode.qml:152
+#: contents/views/DesktopEditMode.qml:130
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "திருத்தும் பயன்முறையிலிருந்து வெளியேறு"
@@ -848,6 +839,12 @@ msgstr "திருத்தும் பயன்முறையிலிர�
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "பலகைக் குவியக்காட்டி"
+
+#~ msgid "Global Themes"
+#~ msgstr "பொதுவான தோற்றத்திட்டங்கள்"
+
+#~ msgid "Display Configuration"
+#~ msgstr "திரை அமைப்புகள்"
 
 #~ msgid "Uninstall widget"
 #~ msgstr "பிளாஸ்மாய்டை நிறுவல்நீக்கு"

@@ -1,10 +1,10 @@
-# SPDX-FileCopyrightText: 2022, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2022, 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-04 00:41+0000\n"
-"PO-Revision-Date: 2024-10-19 20:09+0900\n"
+"PO-Revision-Date: 2025-01-06 16:22+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: landingpage_kdeglobalssettings.kcfg:9
@@ -44,7 +44,7 @@ msgstr "全域「外觀與感覺」套件（替代）"
 #: landingpage_kdeglobalssettings.kcfg:31
 #, kde-format
 msgid "Animation speed"
-msgstr "動畫速度"
+msgstr "動畫速度(&N)"
 
 #: ui/main.qml:33
 #, kde-format
@@ -85,7 +85,7 @@ msgstr "單擊檔案或資料夾來："
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
-msgstr "選取它"
+msgstr "選取它(&S)"
 
 #: ui/main.qml:163
 #, kde-format
@@ -96,7 +96,7 @@ msgstr "點兩下開啟檔案"
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
-msgstr "開啟它"
+msgstr "開啟它(&O)"
 
 #: ui/main.qml:193
 #, kde-format
@@ -107,12 +107,12 @@ msgstr "點擊檔案的選取標記來選取它"
 #, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More behavior settings:"
-msgstr "更多行為設定："
+msgstr "更多行為設定(&M)："
 
 #: ui/main.qml:229
 #, kde-format
 msgid "Most used pages:"
-msgstr "常用頁面："
+msgstr "常用頁面(&U)："
 
 #~ msgctxt "@action:button as in, 'this will take you to the Wallpaper KCM'"
 #~ msgid "Wallpaper"

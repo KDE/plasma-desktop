@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-30 00:43+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2024-12-18 18:06+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -580,8 +580,9 @@ msgstr ""
 "Duple clicca pro refixar."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, kde-format
-msgid "Panel and Desktop Management"
+#, fuzzy, kde-format
+#| msgid "Panel and Desktop Management"
+msgid "Manage Panels and Desktops"
 msgstr "Gestion de Pannello e Scriptorio"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
@@ -831,23 +832,13 @@ msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/views/DesktopEditMode.qml:115
-#, kde-format
-msgid "Global Themes"
-msgstr "Themas global"
-
-#: contents/views/DesktopEditMode.qml:122
-#, kde-format
-msgid "Display Configuration"
-msgstr "Configuration  de monstrator"
-
-#: contents/views/DesktopEditMode.qml:143
+#: contents/views/DesktopEditMode.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
 msgstr "Plus"
 
-#: contents/views/DesktopEditMode.qml:152
+#: contents/views/DesktopEditMode.qml:130
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Exi modo de modificar"
@@ -856,6 +847,12 @@ msgstr "Exi modo de modificar"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Indicator de foco de pannello"
+
+#~ msgid "Global Themes"
+#~ msgstr "Themas global"
+
+#~ msgid "Display Configuration"
+#~ msgstr "Configuration  de monstrator"
 
 #~ msgid "Uninstall widget"
 #~ msgstr "De-installar Widget"

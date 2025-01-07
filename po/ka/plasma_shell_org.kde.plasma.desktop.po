@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-30 00:43+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2024-12-30 03:14+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -573,8 +573,9 @@ msgstr ""
 "ორმაგი წკაპი ჩამოსაყრელად."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, kde-format
-msgid "Panel and Desktop Management"
+#, fuzzy, kde-format
+#| msgid "Panel and Desktop Management"
+msgid "Manage Panels and Desktops"
 msgstr "სამუშაო მაგიდისა და პანელის მართვა"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
@@ -820,23 +821,13 @@ msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/views/DesktopEditMode.qml:115
-#, kde-format
-msgid "Global Themes"
-msgstr "გლობალური თემები"
-
-#: contents/views/DesktopEditMode.qml:122
-#, kde-format
-msgid "Display Configuration"
-msgstr "ეკრანის მორგება"
-
-#: contents/views/DesktopEditMode.qml:143
+#: contents/views/DesktopEditMode.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
 msgstr "მეტი"
 
-#: contents/views/DesktopEditMode.qml:152
+#: contents/views/DesktopEditMode.qml:130
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "რედაქტირების რეჟიმიდან გასვლა"
@@ -845,6 +836,12 @@ msgstr "რედაქტირების რეჟიმიდან გა�
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "პანელის ფოკუსის მაჩვენებელი"
+
+#~ msgid "Global Themes"
+#~ msgstr "გლობალური თემები"
+
+#~ msgid "Display Configuration"
+#~ msgstr "ეკრანის მორგება"
 
 #~ msgid "Uninstall widget"
 #~ msgstr "ვიჯეტის წაშლა"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-30 00:43+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2024-10-01 21:44-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -572,8 +572,9 @@ msgid ""
 msgstr ""
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, kde-format
-msgid "Panel and Desktop Management"
+#, fuzzy, kde-format
+#| msgid "Panel and Desktop Management"
+msgid "Manage Panels and Desktops"
 msgstr "ਪੈਨਲ ਅਤੇ ਡੈਸਕਟਾਪ ਇੰਤਜ਼ਾਮ"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
@@ -821,23 +822,13 @@ msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/views/DesktopEditMode.qml:115
-#, kde-format
-msgid "Global Themes"
-msgstr "ਗਲੋਬਲ ਥੀਮ"
-
-#: contents/views/DesktopEditMode.qml:122
-#, kde-format
-msgid "Display Configuration"
-msgstr "ਡਿਸਪਲੇਅ ਦੀ ਸੰਰਚਨਾ"
-
-#: contents/views/DesktopEditMode.qml:143
+#: contents/views/DesktopEditMode.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
 msgstr "ਹੋਰ"
 
-#: contents/views/DesktopEditMode.qml:152
+#: contents/views/DesktopEditMode.qml:130
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "ਸੋਧ ਢੰਗ ਨੂੰ ਛੱਡੋ"
@@ -846,6 +837,12 @@ msgstr "ਸੋਧ ਢੰਗ ਨੂੰ ਛੱਡੋ"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "ਪੈਨਲ ਫੋਕਸ ਸੰਕੇਤਕ"
+
+#~ msgid "Global Themes"
+#~ msgstr "ਗਲੋਬਲ ਥੀਮ"
+
+#~ msgid "Display Configuration"
+#~ msgstr "ਡਿਸਪਲੇਅ ਦੀ ਸੰਰਚਨਾ"
 
 #~ msgid "Uninstall widget"
 #~ msgstr "ਵਿਜੈਟ ਅਣ-ਇੰਸਟਾਲ"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-30 00:43+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2024-12-30 17:37+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -573,8 +573,9 @@ msgstr ""
 "לחיצה כפולה לאיפוס."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, kde-format
-msgid "Panel and Desktop Management"
+#, fuzzy, kde-format
+#| msgid "Panel and Desktop Management"
+msgid "Manage Panels and Desktops"
 msgstr "ניהול לוחות ושולחנות עבודה"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
@@ -821,23 +822,13 @@ msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/views/DesktopEditMode.qml:115
-#, kde-format
-msgid "Global Themes"
-msgstr "ערכות עיצוב כלליות"
-
-#: contents/views/DesktopEditMode.qml:122
-#, kde-format
-msgid "Display Configuration"
-msgstr "הגדרות תצוגה"
-
-#: contents/views/DesktopEditMode.qml:143
+#: contents/views/DesktopEditMode.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
 msgstr "עוד"
 
-#: contents/views/DesktopEditMode.qml:152
+#: contents/views/DesktopEditMode.qml:130
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "יציאה ממצב עריכה"
@@ -846,6 +837,12 @@ msgstr "יציאה ממצב עריכה"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "מחוון מיקוד לוח"
+
+#~ msgid "Global Themes"
+#~ msgstr "ערכות עיצוב כלליות"
+
+#~ msgid "Display Configuration"
+#~ msgstr "הגדרות תצוגה"
 
 #~ msgid "Uninstall widget"
 #~ msgstr "הסרת יישומון"

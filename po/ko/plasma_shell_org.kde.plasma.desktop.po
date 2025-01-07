@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-30 00:43+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2024-12-24 19:04+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -575,8 +575,9 @@ msgstr ""
 "두 번 클릭하여 초기화하십시오."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, kde-format
-msgid "Panel and Desktop Management"
+#, fuzzy, kde-format
+#| msgid "Panel and Desktop Management"
+msgid "Manage Panels and Desktops"
 msgstr "패널과 바탕 화면 관리"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
@@ -823,23 +824,13 @@ msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/views/DesktopEditMode.qml:115
-#, kde-format
-msgid "Global Themes"
-msgstr "전역 테마"
-
-#: contents/views/DesktopEditMode.qml:122
-#, kde-format
-msgid "Display Configuration"
-msgstr "디스플레이 설정"
-
-#: contents/views/DesktopEditMode.qml:143
+#: contents/views/DesktopEditMode.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
 msgstr "더 보기"
 
-#: contents/views/DesktopEditMode.qml:152
+#: contents/views/DesktopEditMode.qml:130
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "편집 모드 끝내기"
@@ -848,6 +839,12 @@ msgstr "편집 모드 끝내기"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "패널 포커스 표시기"
+
+#~ msgid "Global Themes"
+#~ msgstr "전역 테마"
+
+#~ msgid "Display Configuration"
+#~ msgstr "디스플레이 설정"
 
 #~ msgid "Uninstall widget"
 #~ msgstr "위젯 삭제"

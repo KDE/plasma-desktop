@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-30 00:43+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2024-11-14 19:13-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -582,8 +582,9 @@ msgstr ""
 "Clique duplo para redefinir."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, kde-format
-msgid "Panel and Desktop Management"
+#, fuzzy, kde-format
+#| msgid "Panel and Desktop Management"
+msgid "Manage Panels and Desktops"
 msgstr "Gerenciamento de painéis e áreas de trabalho"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
@@ -835,23 +836,13 @@ msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/views/DesktopEditMode.qml:115
-#, kde-format
-msgid "Global Themes"
-msgstr "Temas globais"
-
-#: contents/views/DesktopEditMode.qml:122
-#, kde-format
-msgid "Display Configuration"
-msgstr "Exibir configurações"
-
-#: contents/views/DesktopEditMode.qml:143
+#: contents/views/DesktopEditMode.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
 msgstr "Mais"
 
-#: contents/views/DesktopEditMode.qml:152
+#: contents/views/DesktopEditMode.qml:130
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Sair do modo de edição"
@@ -860,6 +851,12 @@ msgstr "Sair do modo de edição"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Indicador de foco do painel"
+
+#~ msgid "Global Themes"
+#~ msgstr "Temas globais"
+
+#~ msgid "Display Configuration"
+#~ msgstr "Exibir configurações"
 
 #~ msgid "Uninstall widget"
 #~ msgstr "Desinstalar widget"

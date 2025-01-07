@@ -11,20 +11,20 @@
 # pan93412 <pan93412@gmail.com>, 2018, 2019, 2020.
 # Franklin Weng <franklin at goodhorse dot idv dot tw>, 2007.
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2008, 2010.
-# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-29 00:42+0000\n"
-"PO-Revision-Date: 2024-12-02 16:49+0900\n"
+"PO-Revision-Date: 2025-01-06 16:47+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 25.03.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
@@ -157,7 +157,7 @@ msgstr "透過此裝置同意輸入"
 #: ui/main.qml:107
 #, kde-format
 msgid "Left-handed mode"
-msgstr "左手模式"
+msgstr "左手模式(&L)"
 
 #: ui/main.qml:119
 #, kde-format
@@ -168,7 +168,7 @@ msgstr "交換左右鍵。"
 #, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
-msgstr "按下左右鍵傳出中鍵"
+msgstr "按下左右鍵傳出中鍵(&P)"
 
 #: ui/main.qml:138
 #, kde-format
@@ -198,7 +198,7 @@ msgstr "指標加速："
 #: ui/main.qml:246
 #, kde-format
 msgid "None"
-msgstr "無"
+msgstr "無(&N)"
 
 #: ui/main.qml:251
 #, kde-format
@@ -208,7 +208,7 @@ msgstr "指標移動與滑鼠移動同距離。"
 #: ui/main.qml:256
 #, kde-format
 msgid "Standard"
-msgstr "標準"
+msgstr "標準(&S)"
 
 #: ui/main.qml:261
 #, kde-format
@@ -240,7 +240,7 @@ msgstr "捲動："
 #: ui/main.qml:339
 #, kde-format
 msgid "Invert scroll direction"
-msgstr "反轉捲動方向"
+msgstr "反轉捲動方向(&I)"
 
 #: ui/main.qml:351
 #, kde-format
@@ -250,7 +250,7 @@ msgstr "像觸控螢幕的捲動。"
 #: ui/main.qml:356
 #, kde-format
 msgid "Press middle button and move mouse to scroll"
-msgstr "點擊滑鼠中鍵並移動滑鼠來捲動"
+msgstr "點擊滑鼠中鍵並移動滑鼠來捲動(&R)"
 
 #: ui/main.qml:368
 #, kde-format

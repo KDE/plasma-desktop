@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-30 00:43+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2024-12-30 20:26+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -577,8 +577,9 @@ msgstr ""
 "Sıfırlamak için çift tıklayın."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, kde-format
-msgid "Panel and Desktop Management"
+#, fuzzy, kde-format
+#| msgid "Panel and Desktop Management"
+msgid "Manage Panels and Desktops"
 msgstr "Panel ve Masaüstü Yönetimi"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
@@ -823,23 +824,13 @@ msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%​%1"
 
-#: contents/views/DesktopEditMode.qml:115
-#, kde-format
-msgid "Global Themes"
-msgstr "Global Temalar"
-
-#: contents/views/DesktopEditMode.qml:122
-#, kde-format
-msgid "Display Configuration"
-msgstr "Görüntü Yapılandırması"
-
-#: contents/views/DesktopEditMode.qml:143
+#: contents/views/DesktopEditMode.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
 msgstr "Daha Fazla"
 
-#: contents/views/DesktopEditMode.qml:152
+#: contents/views/DesktopEditMode.qml:130
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Düzenleme Kipinden Çık"
@@ -848,6 +839,12 @@ msgstr "Düzenleme Kipinden Çık"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Panel Odağı Göstergesi"
+
+#~ msgid "Global Themes"
+#~ msgstr "Global Temalar"
+
+#~ msgid "Display Configuration"
+#~ msgstr "Görüntü Yapılandırması"
 
 #~ msgid "Uninstall widget"
 #~ msgstr "Araç takımını kaldır"

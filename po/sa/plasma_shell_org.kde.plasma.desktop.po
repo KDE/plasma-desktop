@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-30 00:43+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2024-12-20 21:53+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -575,8 +575,9 @@ msgstr ""
 "रीसेट् कर्तुं द्विवारं क्लिक् कुर्वन्तु ।"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, kde-format
-msgid "Panel and Desktop Management"
+#, fuzzy, kde-format
+#| msgid "Panel and Desktop Management"
+msgid "Manage Panels and Desktops"
 msgstr "पैनल तथा डेस्कटॉप प्रबन्धन"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
@@ -826,23 +827,13 @@ msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/views/DesktopEditMode.qml:115
-#, kde-format
-msgid "Global Themes"
-msgstr "वैश्विक विषयवस्तु"
-
-#: contents/views/DesktopEditMode.qml:122
-#, kde-format
-msgid "Display Configuration"
-msgstr "प्रदर्शन विन्यास"
-
-#: contents/views/DesktopEditMode.qml:143
+#: contents/views/DesktopEditMode.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
 msgstr "अधिकः"
 
-#: contents/views/DesktopEditMode.qml:152
+#: contents/views/DesktopEditMode.qml:130
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "सम्पादन मोडतः निर्गच्छन्तु"
@@ -851,3 +842,9 @@ msgstr "सम्पादन मोडतः निर्गच्छन्त�
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "फलक फोकस सूचक"
+
+#~ msgid "Global Themes"
+#~ msgstr "वैश्विक विषयवस्तु"
+
+#~ msgid "Display Configuration"
+#~ msgstr "प्रदर्शन विन्यास"
