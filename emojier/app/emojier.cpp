@@ -76,6 +76,11 @@ int main(int argc, char **argv)
     // Clean up old window geometry data from before using WindowStateSaver
     KSharedConfig::openConfig()->deleteGroup(QStringLiteral("Window"));
 
+    // Move old recent emojis to state config
+    KConfigGroup oldStateGroup = KSharedConfig::openConfig()->group(QStringLiteral("Emojier"));
+    KConfigGroup newStateGroup = KSharedConfig::openStateConfig()->group(QStringLiteral("Emojier"));
+    oldStateGroup.moveValuesTo({"recent", "recentDescriptions"}, newStateGroup);
+
     QQmlApplicationEngine engine;
 
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
