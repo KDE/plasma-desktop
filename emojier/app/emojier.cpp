@@ -30,39 +30,6 @@
 
 #include "config-workspace.h"
 
-class EngineWatcher : public QObject
-{
-public:
-    EngineWatcher(QQmlApplicationEngine *engine)
-        : QObject(engine)
-    {
-        connect(engine, &QQmlApplicationEngine::objectCreated, this, &EngineWatcher::integrateObject);
-    }
-
-    void integrateObject(QObject *object)
-    {
-        QWindow *window = qobject_cast<QWindow *>(object);
-
-        auto conf = KSharedConfig::openConfig();
-        KWindowConfig::restoreWindowSize(window, conf->group(QStringLiteral("Window")));
-
-        object->installEventFilter(this);
-    }
-
-    bool eventFilter(QObject *object, QEvent *event) override
-    {
-        if (event->type() == QEvent::Close) {
-            QWindow *window = qobject_cast<QWindow *>(object);
-
-            auto conf = KSharedConfig::openConfig();
-            auto group = conf->group(QStringLiteral("Window"));
-            KWindowConfig::saveWindowSize(window, group);
-            group.sync();
-        }
-        return false;
-    }
-};
-
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
@@ -106,8 +73,10 @@ int main(int argc, char **argv)
 
     KDBusService *service = new KDBusService(KDBusService::Unique | startup, &app);
 
+    // Clean up old window geometry data from before using WindowStateSaver
+    KSharedConfig::openConfig()->deleteGroup(QStringLiteral("Window"));
+
     QQmlApplicationEngine engine;
-    new EngineWatcher(&engine);
 
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
     engine.loadFromModule("org.kde.plasma.emoji.app", "Emojier");
