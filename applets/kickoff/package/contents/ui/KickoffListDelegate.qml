@@ -53,18 +53,7 @@ AbstractKickoffItemDelegate {
 
             animated: false
             selected: root.iconAndLabelsShouldlookSelected
-
-            // decorations provided by Kicker AbstractModel subclasses are strings, but can be paths or icon names.
-            source: {
-                const src = root.decoration || root.icon.name
-                // make sure there aren't any characters that shouldn't be in
-                // icon names and exclude icons that already end with "-symbolic"
-                if (root.isCategoryListItem && src.length > 0
-                    && src.search(/:|\/|\\|-symbolic$/g) === -1) {
-                    return src + "-symbolic"
-                }
-                return src || root.icon.source
-            }
+            source: root.decoration || root.icon.name || root.icon.source
         }
 
         GridLayout {
