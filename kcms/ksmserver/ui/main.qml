@@ -157,7 +157,7 @@ KCM.SimpleKCM {
                 }
             }
             Kirigami.ContextualHelpButton {
-                toolTipText: i18n("Write apps' executable names here (separated by commas or colons, for example 'xterm:konsole' or 'xterm,konsole') to prevent them from autostarting along with other session-restored apps.")
+                toolTipText: i18n("Write apps' desktop file identifier or, on X11, executable names here (separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along with other session-restored apps.")
             }
         }
 
