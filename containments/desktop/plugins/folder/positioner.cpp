@@ -461,7 +461,7 @@ void Positioner::updatePositionsList()
 {
     QStringList positions;
 
-    if (m_enabled && screenInUse()) {
+    if (m_enabled && screenInUse() && m_perStripe > 0) {
         positions.append(QString::number(1 + ((rowCount() - 1) / m_perStripe)));
         positions.append(QString::number(m_perStripe));
 
