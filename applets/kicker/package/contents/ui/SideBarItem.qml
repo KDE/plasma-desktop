@@ -133,9 +133,8 @@ Item {
         }
 
         interactive: false
-        location: (((Plasmoid.location === PlasmaCore.Types.RightEdge)
-            || (Qt.application.layoutDirection === Qt.RightToLeft))
-            ? PlasmaCore.Types.RightEdge : PlasmaCore.Types.LeftEdge)
+        // It must be floating now as PopupPlasmaWindow allows the tooltip to cover the parent window only in that case
+        location: PlasmaCore.Types.Floating
 
         mainItem: toolTipDelegate
     }
