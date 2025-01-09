@@ -299,7 +299,6 @@ ColumnLayout {
             sourceSize: Qt.size(parent.width, parent.height)
 
             asynchronous: true
-            retainWhileLoading: true
             source: toolTipDelegate.playerData?.artUrl ?? ""
             fillMode: Image.PreserveAspectFit
             visible: available
