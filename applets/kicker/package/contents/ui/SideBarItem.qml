@@ -124,7 +124,7 @@ Item {
     PlasmaCore.ToolTipArea {
         id: toolTip
 
-        property string text: model.display
+        mainText: model.display
 
         anchors {
             fill: parent
