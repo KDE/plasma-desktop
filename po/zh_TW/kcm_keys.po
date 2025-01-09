@@ -3,13 +3,13 @@
 # Copyright (C) 2022 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-25 02:32+0000\n"
-"PO-Revision-Date: 2024-08-25 02:29+0900\n"
+"PO-Revision-Date: 2025-01-08 15:51+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #: basemodel.cpp:157
 #, kde-format
@@ -41,12 +41,12 @@ msgstr "新增 %1 時發生錯誤，它似乎沒有動作。"
 #: globalaccelmodel.cpp:398
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
-msgstr "與全域捷徑服務聯繫時發生錯誤失敗"
+msgstr "與全域快捷鍵服務聯繫時發生錯誤"
 
 #: kcm_keys.cpp:58
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
-msgstr "與全域捷徑服務聯繫失敗"
+msgstr "與全域快捷鍵服務聯繫失敗"
 
 #: kcm_keys.cpp:379
 #, kde-kuit-format
@@ -137,7 +137,7 @@ msgstr "通用動作"
 #, kde-format
 msgctxt "@action:button Import shortcut scheme"
 msgid "Import…"
-msgstr "匯入…"
+msgstr "匯入(&I)…"
 
 #: ui/main.qml:50
 #, kde-format
@@ -149,7 +149,7 @@ msgstr "取消匯出"
 #, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export…"
-msgstr "匯出…"
+msgstr "匯出(&X)…"
 
 #: ui/main.qml:83
 #, kde-format
@@ -411,7 +411,7 @@ msgstr "刪除這個快捷鍵"
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
-msgstr "新增…"
+msgstr "新增(&D)…"
 
 #: ui/ShortcutActionDelegate.qml:193
 #, kde-format

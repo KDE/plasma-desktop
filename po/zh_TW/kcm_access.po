@@ -2,13 +2,13 @@
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2006-2008, 2015.
 # Jeff Huang <s8321414@gmail.com>, 2016.
 # pan93412 <pan93412@gmail.com>, 2018, 2019.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-29 02:38+0000\n"
-"PO-Revision-Date: 2024-12-02 16:52+0900\n"
+"PO-Revision-Date: 2025-01-08 15:59+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "dot tw>\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 25.03.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: kcmaccess.cpp:117
@@ -178,13 +178,13 @@ msgstr "使用相黏按鍵"
 #: kcmaccessibilitykeyboard.kcfg:13
 #, kde-format
 msgid "Lock the sticky keys"
-msgstr "鎖定相黏按鍵"
+msgstr "鎖定相黏按鍵(&L)"
 
 #. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:17
 #, kde-format
 msgid "Turn sticky keys off when two keys are pressed simultaneously"
-msgstr "當同時按下兩個按鍵時關閉相黏(sticky)鍵"
+msgstr "當同時按下兩個按鍵時關閉相黏鍵"
 
 #. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:21
@@ -394,7 +394,7 @@ msgstr "有聲響鈴："
 #, kde-format
 msgctxt "Enable the system bell"
 msgid "Enable"
-msgstr "啟用"
+msgstr "啟用(&E)"
 
 #: ui/Bell.qml:42
 #, kde-format
@@ -406,7 +406,7 @@ msgstr "按下某些按鍵時發出聲響"
 #, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
-msgstr "自訂音效："
+msgstr "自訂音效(&S)："
 
 #: ui/Bell.qml:83
 #, kde-format
@@ -427,7 +427,7 @@ msgstr "可視化響鈴："
 #, kde-format
 msgctxt "Enable visual bell"
 msgid "Enable"
-msgstr "啟用"
+msgstr "啟用(&N)"
 
 #: ui/Bell.qml:113
 #, kde-format
@@ -439,13 +439,13 @@ msgstr "按下某些按鍵時閃爍螢幕"
 #, kde-format
 msgctxt "@option:radio Invert screen colors when a system bell is rung"
 msgid "Invert screen colors"
-msgstr "反轉螢幕色彩"
+msgstr "反轉螢幕色彩(&I)"
 
 #: ui/Bell.qml:141
 #, kde-format
 msgctxt "@option:radio Flash screen when a system bell is rung"
 msgid "Flash screen"
-msgstr "閃爍螢幕"
+msgstr "閃爍螢幕(&F)"
 
 #: ui/Bell.qml:152
 #, kde-format
@@ -457,7 +457,7 @@ msgstr "色彩"
 #, kde-format
 msgctxt "Duration of the system bell"
 msgid "Duration:"
-msgstr "持續時間："
+msgstr "持續時間(&D)："
 
 #: ui/Bell.qml:181 ui/KeyboardFilters.qml:55 ui/KeyboardFilters.qml:151
 #: ui/MouseNavigation.qml:51 ui/MouseNavigation.qml:73
@@ -486,13 +486,13 @@ msgstr "色盲校正："
 #, kde-format
 msgctxt "@option check, Enable color blindness correction effect"
 msgid "Enable"
-msgstr "啟用"
+msgstr "啟用(&E)"
 
 #: ui/ColorblindnessCorrection.qml:36
 #, kde-format
 msgctxt "@label"
 msgid "Mode:"
-msgstr "模式："
+msgstr "模式(&M)："
 
 #: ui/ColorblindnessCorrection.qml:41
 #, kde-format
@@ -516,7 +516,7 @@ msgstr "藍色盲（藍黃）"
 #, kde-format
 msgctxt "@label"
 msgid "Intensity:"
-msgstr "強度："
+msgstr "強度(&I)："
 
 #: ui/ColorblindnessCorrection.qml:81
 #, kde-format
@@ -559,7 +559,7 @@ msgstr "慢速按鍵："
 #, kde-format
 msgctxt "Enable slow keys"
 msgid "Enable"
-msgstr "啟用"
+msgstr "啟用(&E)"
 
 #: ui/KeyboardFilters.qml:33
 #, kde-format
@@ -576,7 +576,7 @@ msgstr ""
 #, kde-format
 msgctxt "Slow keys Delay"
 msgid "Delay:"
-msgstr "延遲："
+msgstr "延遲(&L)："
 
 #: ui/KeyboardFilters.qml:68
 #, kde-format
@@ -593,7 +593,7 @@ msgstr "當任何按鍵被按下時(&P)"
 #, kde-format
 msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
-msgstr "當任何按鍵被接受時(&A)"
+msgstr "當任何按鍵被接受時(&T)"
 
 #: ui/KeyboardFilters.qml:97
 #, kde-format
@@ -610,7 +610,7 @@ msgstr "彈回按鍵："
 #, kde-format
 msgctxt "Bounce keys enable"
 msgid "Enable"
-msgstr "啟用"
+msgstr "啟用(&N)"
 
 #: ui/KeyboardFilters.qml:129
 #, kde-format
@@ -627,12 +627,12 @@ msgstr ""
 #, kde-format
 msgctxt "Bounce keys delay"
 msgid "Delay:"
-msgstr "延遲："
+msgstr "延遲(&Y)："
 
 #: ui/KeyboardFilters.qml:162
 #, kde-format
 msgid "Ring system bell when rejected"
-msgstr "拒絕按鍵時觸發系統響鈴"
+msgstr "拒絕按鍵時觸發系統響鈴(&S)"
 
 #: ui/main.qml:28
 #, kde-format
@@ -691,7 +691,7 @@ msgstr "相黏鍵："
 #, kde-format
 msgctxt "@option:check Enable sticky keys"
 msgid "Enable"
-msgstr "啟用"
+msgstr "啟用(&E)"
 
 #: ui/ModifierKeys.qml:33
 #, kde-format
@@ -708,7 +708,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Lock sticky keys"
-msgstr "鎖定相黏按鍵"
+msgstr "鎖定相黏按鍵(&L)"
 
 #: ui/ModifierKeys.qml:51
 #, kde-format
@@ -721,12 +721,12 @@ msgstr "按兩次修飾鍵會讓它保持作用中，直到它被再次按下。
 #: ui/ModifierKeys.qml:57
 #, kde-format
 msgid "Disable when two keys are held down"
-msgstr "同時按下兩個按鍵時停用"
+msgstr "同時按下兩個按鍵時停用(&T)"
 
 #: ui/ModifierKeys.qml:70
 #, kde-format
 msgid "Ring system bell when modifier keys are used"
-msgstr "使用修飾鍵時觸發系統響鈴"
+msgstr "使用修飾鍵時觸發系統響鈴(&M)"
 
 #: ui/ModifierKeys.qml:88
 #, kde-format
@@ -738,7 +738,7 @@ msgstr "回饋："
 #, kde-format
 msgctxt "@option:check"
 msgid "Ring system bell when locking keys are used"
-msgstr "使用鎖定鍵時觸發系統響鈴"
+msgstr "使用鎖定鍵時觸發系統響鈴(&O)"
 
 #: ui/ModifierKeys.qml:104
 #, kde-format
@@ -758,7 +758,7 @@ msgstr "使用修飾鍵或鎖定鍵時顯示通知"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Notifications…"
-msgstr "設定通知…"
+msgstr "設定通知(&C)…"
 
 #: ui/MouseNavigation.qml:16
 #, kde-format
@@ -770,7 +770,7 @@ msgstr "使用數字鍵盤移動游標："
 #, kde-format
 msgctxt "@option:check Enable mouse navigation"
 msgid "Enable"
-msgstr "啟用"
+msgstr "啟用(&E)"
 
 #: ui/MouseNavigation.qml:32
 #, kde-kuit-format
@@ -792,31 +792,31 @@ msgstr ""
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
-msgstr "加速延遲："
+msgstr "加速延遲(&C)："
 
 #: ui/MouseNavigation.qml:59
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Repeat interval:"
-msgstr "重複間隔："
+msgstr "重複間隔(&R)："
 
 #: ui/MouseNavigation.qml:81
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
-msgstr "加速時間："
+msgstr "加速時間(&L)："
 
 #: ui/MouseNavigation.qml:103
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
-msgstr "最快速度："
+msgstr "最快速度(&P)："
 
 #: ui/MouseNavigation.qml:117
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
-msgstr "指標加速："
+msgstr "指標加速(&O)："
 
 #: ui/ScreenReader.qml:20
 #, kde-format
@@ -834,13 +834,13 @@ msgstr "請安裝它之後關閉並重新開啟此視窗"
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable Screen Reader"
-msgstr "啟用螢幕閱讀器"
+msgstr "啟用螢幕閱讀器(&E)"
 
 #: ui/ScreenReader.qml:39
 #, kde-format
 msgctxt "@action:button"
 msgid "Launch Orca Screen Reader Configuration…"
-msgstr "開啟 Orca 螢幕閱讀器設定…"
+msgstr "開啟 Orca 螢幕閱讀器設定(&O)…"
 
 #: ui/ShakeCursor.qml:15
 #, kde-format
@@ -852,7 +852,7 @@ msgstr "甩動游標來尋找它："
 #, kde-format
 msgctxt "@option check, Enable shake cursor effect"
 msgid "Enable"
-msgstr "啟用"
+msgstr "啟用(&E)"
 
 #: ui/ShakeCursor.qml:28
 #, kde-format
