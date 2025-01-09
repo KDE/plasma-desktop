@@ -1,7 +1,7 @@
 # translation of kcmsmserver.po to Slovenian
 # Translation of kcmsmserver.po to Slovenian
 # KDEBASE translation to Slovenian language.
-# $Id: kcm_smserver.po 1695169 2024-11-15 01:17:07Z scripty $
+# $Id: kcm_smserver.po 1699768 2025-01-09 01:18:56Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2004, 2005 Free Software Foundation, Inc.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-15 00:41+0000\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
 "PO-Revision-Date: 2024-06-26 11:52+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -166,11 +166,16 @@ msgid "Ignored applications:"
 msgstr "Prezrte aplikacije:"
 
 #: ui/main.qml:160
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Write apps' executable names here (separated by commas or colons, for "
+#| "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
+#| "autostarting along with other session-restored apps."
 msgid ""
-"Write apps' executable names here (separated by commas or colons, for "
-"example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-"autostarting along with other session-restored apps."
+"Write apps' desktop file identifier or, on X11, executable names here "
+"(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "
+"or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
+"with other session-restored apps."
 msgstr ""
 "Napišite imena izvršljivih aplikacij (ločene z vejicami ali podpičji, na "
 "primer 'xterm:konsole' ali 'xterm,konsole'), da jim preprečite samodejni "

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-26 00:41+0000\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
 "PO-Revision-Date: 2024-03-26 05:54+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -421,38 +421,63 @@ msgstr "სამუშაო მაგიდა და ფონის სუ�
 msgid "Select Folder"
 msgstr "აირჩიეთ საქაღალდე"
 
-#: plugins/folder/foldermodel.cpp:508
+#: plugins/folder/foldermodel.cpp:510
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "&სამუშაო მაგიდის განახლება"
 
-#: plugins/folder/foldermodel.cpp:508 plugins/folder/foldermodel.cpp:1686
+#: plugins/folder/foldermodel.cpp:510 plugins/folder/foldermodel.cpp:1720
 #, kde-format
 msgid "&Refresh View"
 msgstr "&ხედის განახლება"
 
-#: plugins/folder/foldermodel.cpp:1695
+#: plugins/folder/foldermodel.cpp:869
+#, kde-format
+msgctxt ""
+"@title:notifications Here 'link' refers to a symbolic link to another file "
+"or folder"
+msgid "Link Target Not Found"
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:871
+#, kde-kuit-format
+msgctxt "@info Body text of a system notification"
+msgid ""
+"<filename>%1</filename> points to <filename>%2</filename>, but that could "
+"not be found. It may have been moved or deleted."
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:1729
 #, kde-format
 msgid "&Empty Trash"
 msgstr "&სანაგვე ყუთის დაცარიელება"
 
-#: plugins/folder/foldermodel.cpp:1698
+#: plugins/folder/foldermodel.cpp:1732
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore"
 msgstr "აღდგენა"
 
-#: plugins/folder/foldermodel.cpp:1701
+#: plugins/folder/foldermodel.cpp:1735
 #, kde-format
 msgid "&Open"
 msgstr "&გახსნა"
 
-#: plugins/folder/foldermodel.cpp:1818
+#: plugins/folder/foldermodel.cpp:1739
+#, fuzzy, kde-format
+#| msgid "Show all"
+msgctxt ""
+"@action:inmenu open file manager showing the target file or folder that this "
+"link points to"
+msgid "Show Target"
+msgstr "ყველას ჩვენება"
+
+#: plugins/folder/foldermodel.cpp:1863
 #, kde-format
 msgid "&Paste"
 msgstr "&ჩასმა"
 
-#: plugins/folder/foldermodel.cpp:1934
+#: plugins/folder/foldermodel.cpp:1987
 #, kde-format
 msgid "&Properties"
 msgstr "&თვისებები"

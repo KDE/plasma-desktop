@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-15 00:41+0000\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
 "PO-Revision-Date: 2024-07-21 22:13-0500\n"
 "Last-Translator: aalam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -148,9 +148,10 @@ msgstr "ਅਣਡਿੱਠੀਆਂ ਕੀਤੀਆਂ ਐਪਲੀਕੇਸ਼ਨ�
 #: ui/main.qml:160
 #, kde-format
 msgid ""
-"Write apps' executable names here (separated by commas or colons, for "
-"example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-"autostarting along with other session-restored apps."
+"Write apps' desktop file identifier or, on X11, executable names here "
+"(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "
+"or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
+"with other session-restored apps."
 msgstr ""
 
 #: ui/main.qml:166

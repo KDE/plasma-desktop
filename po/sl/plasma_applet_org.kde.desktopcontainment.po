@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-26 00:41+0000\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
 "PO-Revision-Date: 2024-03-26 06:53+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -424,38 +424,63 @@ msgstr "Namizje in ozadje"
 msgid "Select Folder"
 msgstr "Izberi mapo"
 
-#: plugins/folder/foldermodel.cpp:508
+#: plugins/folder/foldermodel.cpp:510
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "Osveži namizje"
 
-#: plugins/folder/foldermodel.cpp:508 plugins/folder/foldermodel.cpp:1686
+#: plugins/folder/foldermodel.cpp:510 plugins/folder/foldermodel.cpp:1720
 #, kde-format
 msgid "&Refresh View"
 msgstr "Osveži prikaz"
 
-#: plugins/folder/foldermodel.cpp:1695
+#: plugins/folder/foldermodel.cpp:869
+#, kde-format
+msgctxt ""
+"@title:notifications Here 'link' refers to a symbolic link to another file "
+"or folder"
+msgid "Link Target Not Found"
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:871
+#, kde-kuit-format
+msgctxt "@info Body text of a system notification"
+msgid ""
+"<filename>%1</filename> points to <filename>%2</filename>, but that could "
+"not be found. It may have been moved or deleted."
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:1729
 #, kde-format
 msgid "&Empty Trash"
 msgstr "Izprazni Sm&eti"
 
-#: plugins/folder/foldermodel.cpp:1698
+#: plugins/folder/foldermodel.cpp:1732
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore"
 msgstr "Obnovi"
 
-#: plugins/folder/foldermodel.cpp:1701
+#: plugins/folder/foldermodel.cpp:1735
 #, kde-format
 msgid "&Open"
 msgstr "&Odpri"
 
-#: plugins/folder/foldermodel.cpp:1818
+#: plugins/folder/foldermodel.cpp:1739
+#, fuzzy, kde-format
+#| msgid "Show all"
+msgctxt ""
+"@action:inmenu open file manager showing the target file or folder that this "
+"link points to"
+msgid "Show Target"
+msgstr "Pokaži vse"
+
+#: plugins/folder/foldermodel.cpp:1863
 #, kde-format
 msgid "&Paste"
 msgstr "&Prilepi"
 
-#: plugins/folder/foldermodel.cpp:1934
+#: plugins/folder/foldermodel.cpp:1987
 #, kde-format
 msgid "&Properties"
 msgstr "Lastnosti"

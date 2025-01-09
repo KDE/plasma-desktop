@@ -5,13 +5,13 @@
 # Jeff Huang <s8321414@gmail.com>, 2017.
 # pan93412 <pan93412@gmail.com>, 2018, 2019, 2020.
 # Chaoting Liu <brli@chakralinux.org>, 2021.
-# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-23 00:42+0000\n"
-"PO-Revision-Date: 2024-12-29 01:40+0900\n"
+"PO-Revision-Date: 2025-01-08 15:45+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #: actions.cpp:19
 #, kde-format
@@ -239,7 +239,7 @@ msgstr "一般："
 #: ui/main.qml:141
 #, kde-format
 msgid "Device enabled"
-msgstr "啟用裝置"
+msgstr "啟用裝置(&E)"
 
 #: ui/main.qml:145
 #, kde-format
@@ -250,12 +250,12 @@ msgstr "透過此裝置接受輸入。"
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable while mouse is connected"
-msgstr "插入滑鼠時停用"
+msgstr "插入滑鼠時停用(&I)"
 
 #: ui/main.qml:195
 #, kde-format
 msgid "Disable while typing"
-msgstr "打字時停用"
+msgstr "打字時停用(&W)"
 
 #: ui/main.qml:200
 #, kde-format
@@ -271,7 +271,7 @@ msgstr "這可能會影響到遊戲的遊玩。"
 #: ui/main.qml:233
 #, kde-format
 msgid "Left-handed mode"
-msgstr "左手模式"
+msgstr "左手模式(&L)"
 
 #: ui/main.qml:237
 #, kde-format
@@ -282,7 +282,7 @@ msgstr "交換左右鍵。"
 #, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons to middle-click"
-msgstr "按下左右鍵傳出中鍵"
+msgstr "按下左右鍵傳出中鍵(&P)"
 
 #: ui/main.qml:267
 #, kde-format
@@ -312,7 +312,7 @@ msgstr "指標加速："
 #: ui/main.qml:432
 #, kde-format
 msgid "None"
-msgstr "無"
+msgstr "無(&N)"
 
 #: ui/main.qml:436
 #, kde-format
@@ -322,7 +322,7 @@ msgstr "游標與手指移動同樣距離。"
 #: ui/main.qml:445
 #, kde-format
 msgid "Standard"
-msgstr "標準"
+msgstr "標準(&S)"
 
 #: ui/main.qml:449
 #, kde-format
@@ -354,7 +354,7 @@ msgstr "捲動："
 #: ui/main.qml:558
 #, kde-format
 msgid "Two fingers"
-msgstr "兩指"
+msgstr "兩指(&F)"
 
 #: ui/main.qml:562
 #, kde-format
@@ -364,7 +364,7 @@ msgstr "兩指滑動以捲動。"
 #: ui/main.qml:570
 #, kde-format
 msgid "Touchpad edges"
-msgstr "觸控板邊緣"
+msgstr "觸控板邊緣(&O)"
 
 #: ui/main.qml:574
 #, kde-format
@@ -374,7 +374,7 @@ msgstr "在觸控板邊緣滑動來捲動。"
 #: ui/main.qml:584
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
-msgstr "反轉捲動方向（自然捲動）"
+msgstr "反轉捲動方向(&N)（自然捲動）"
 
 #: ui/main.qml:600
 #, kde-format
@@ -384,7 +384,7 @@ msgstr "像觸控螢幕的捲動。"
 #: ui/main.qml:608
 #, kde-format
 msgid "Disable horizontal scrolling"
-msgstr "停用水平捲動"
+msgstr "停用水平捲動(&H)"
 
 #: ui/main.qml:625
 #, kde-format
@@ -437,7 +437,7 @@ msgstr "兩指點擊："
 #: ui/main.qml:738
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
-msgstr "右鍵（三指點擊傳出中鍵）"
+msgstr "右鍵(&R)（三指點擊傳出中鍵）"
 
 #: ui/main.qml:739
 #, kde-format
@@ -448,7 +448,7 @@ msgstr "兩指點擊傳出右鍵、三指點擊傳出中鍵。"
 #: ui/main.qml:741
 #, kde-format
 msgid "Middle-click (three-finger tap to right-click)"
-msgstr "中鍵（三指點擊傳出右鍵）"
+msgstr "中鍵(&M)（三指點擊傳出右鍵）"
 
 #: ui/main.qml:742
 #, kde-format
@@ -488,7 +488,7 @@ msgstr "整合右鍵："
 #, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
-msgstr "按右下角"
+msgstr "按右下角(&G)"
 
 #: ui/main.qml:847
 #, kde-format
@@ -524,7 +524,7 @@ msgstr "按下右下角來進行中鍵點擊。"
 #, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press touchpad with two fingers"
-msgstr "用兩指點觸觸控板"
+msgstr "用兩指點觸觸控板(&T)"
 
 #: ui/main.qml:883
 #, kde-format

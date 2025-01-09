@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-26 00:41+0000\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
 "PO-Revision-Date: 2024-03-29 21:20+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -424,38 +424,63 @@ msgstr "桌面與桌布"
 msgid "Select Folder"
 msgstr "選擇資料夾"
 
-#: plugins/folder/foldermodel.cpp:508
+#: plugins/folder/foldermodel.cpp:510
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "重整桌面(&R)"
 
-#: plugins/folder/foldermodel.cpp:508 plugins/folder/foldermodel.cpp:1686
+#: plugins/folder/foldermodel.cpp:510 plugins/folder/foldermodel.cpp:1720
 #, kde-format
 msgid "&Refresh View"
 msgstr "更新檢視(&R)"
 
-#: plugins/folder/foldermodel.cpp:1695
+#: plugins/folder/foldermodel.cpp:869
+#, kde-format
+msgctxt ""
+"@title:notifications Here 'link' refers to a symbolic link to another file "
+"or folder"
+msgid "Link Target Not Found"
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:871
+#, kde-kuit-format
+msgctxt "@info Body text of a system notification"
+msgid ""
+"<filename>%1</filename> points to <filename>%2</filename>, but that could "
+"not be found. It may have been moved or deleted."
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:1729
 #, kde-format
 msgid "&Empty Trash"
 msgstr "清空垃圾桶(&E)"
 
-#: plugins/folder/foldermodel.cpp:1698
+#: plugins/folder/foldermodel.cpp:1732
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore"
 msgstr "回復"
 
-#: plugins/folder/foldermodel.cpp:1701
+#: plugins/folder/foldermodel.cpp:1735
 #, kde-format
 msgid "&Open"
 msgstr "開啟(&O)"
 
-#: plugins/folder/foldermodel.cpp:1818
+#: plugins/folder/foldermodel.cpp:1739
+#, fuzzy, kde-format
+#| msgid "Show all"
+msgctxt ""
+"@action:inmenu open file manager showing the target file or folder that this "
+"link points to"
+msgid "Show Target"
+msgstr "全部顯示"
+
+#: plugins/folder/foldermodel.cpp:1863
 #, kde-format
 msgid "&Paste"
 msgstr "貼上(&P)"
 
-#: plugins/folder/foldermodel.cpp:1934
+#: plugins/folder/foldermodel.cpp:1987
 #, kde-format
 msgid "&Properties"
 msgstr "屬性(&P)"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-26 00:41+0000\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
 "PO-Revision-Date: 2010-01-12 21:50+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <kde-l10n-kn@kde.org>\n"
@@ -471,40 +471,65 @@ msgstr "ಗಣಕತೆರೆಯನ್ನು ಪುನಶ್ಚೇತನಗೊ�
 msgid "Select Folder"
 msgstr "ಎಲ್ಲವನ್ನೂ ಆರಿಸು"
 
-#: plugins/folder/foldermodel.cpp:508
+#: plugins/folder/foldermodel.cpp:510
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "ಗಣಕತೆರೆಯನ್ನು ಪುನಶ್ಚೇತನಗೊಳಿಸು(&R)"
 
-#: plugins/folder/foldermodel.cpp:508 plugins/folder/foldermodel.cpp:1686
+#: plugins/folder/foldermodel.cpp:510 plugins/folder/foldermodel.cpp:1720
 #, kde-format
 msgid "&Refresh View"
 msgstr "ನೋಟವನ್ನು ಪುನಶ್ಚೇತನಗೊಳಿಸು(&R)"
 
-#: plugins/folder/foldermodel.cpp:1695
+#: plugins/folder/foldermodel.cpp:869
+#, kde-format
+msgctxt ""
+"@title:notifications Here 'link' refers to a symbolic link to another file "
+"or folder"
+msgid "Link Target Not Found"
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:871
+#, kde-kuit-format
+msgctxt "@info Body text of a system notification"
+msgid ""
+"<filename>%1</filename> points to <filename>%2</filename>, but that could "
+"not be found. It may have been moved or deleted."
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:1729
 #, fuzzy, kde-format
 #| msgid "&Empty Trash Bin"
 msgid "&Empty Trash"
 msgstr "ಕಸಬುಟ್ಟಿಯನ್ನು ಖಾಲಿಮಾಡು (&E)"
 
-#: plugins/folder/foldermodel.cpp:1698
+#: plugins/folder/foldermodel.cpp:1732
 #, fuzzy, kde-format
 #| msgid "&Restore"
 msgctxt "Restore from trash"
 msgid "Restore"
 msgstr "&ಮರುಸ್ಥಾಪಿಸು (ರಿಸ್ಟೋರ್)"
 
-#: plugins/folder/foldermodel.cpp:1701
+#: plugins/folder/foldermodel.cpp:1735
 #, kde-format
 msgid "&Open"
 msgstr "(&ತ)ತೆರೆ"
 
-#: plugins/folder/foldermodel.cpp:1818
+#: plugins/folder/foldermodel.cpp:1739
+#, fuzzy, kde-format
+#| msgid "Show a place:"
+msgctxt ""
+"@action:inmenu open file manager showing the target file or folder that this "
+"link points to"
+msgid "Show Target"
+msgstr "ಸ್ಥಳವನ್ನು ತೋರಿಸು:"
+
+#: plugins/folder/foldermodel.cpp:1863
 #, kde-format
 msgid "&Paste"
 msgstr "ಅಂಟಿಸು(&P)"
 
-#: plugins/folder/foldermodel.cpp:1934
+#: plugins/folder/foldermodel.cpp:1987
 #, kde-format
 msgid "&Properties"
 msgstr "(&ಗ)ಗುಣಗಳು"
