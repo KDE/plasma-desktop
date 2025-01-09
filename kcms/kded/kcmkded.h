@@ -46,6 +46,7 @@ public:
         UnknownType = -1,
         AutostartType,
         OnDemandType,
+        ManualType,
     };
     Q_ENUM(ModuleType)
 
