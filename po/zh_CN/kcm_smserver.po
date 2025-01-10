@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-desktop/kcm_smserver.pot\n"
-"X-Crowdin-File-ID: 42455\n"
+"X-Crowdin-File: /kf6-stable/messages/plasma-desktop/kcm_smserver.pot\n"
+"X-Crowdin-File-ID: 53134\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -147,20 +147,13 @@ msgid "Ignored applications:"
 msgstr "忽略的应用程序："
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' executable names here (separated by commas or colons, for "
-#| "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
-"在此输入应用程序的可执行名称 (用半角逗号或者冒号分隔，例如“xterm:konsole”或"
-"者“xterm,konsole”)，可以防止这些应用程序和其他会话恢复的应用程序一起自动启"
-"动。"
 
 #: ui/main.qml:166
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-09 00:42+0000\n"
-"PO-Revision-Date: 2024-03-26 05:54+0100\n"
+"PO-Revision-Date: 2025-01-09 04:08+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -437,7 +437,7 @@ msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
 "or folder"
 msgid "Link Target Not Found"
-msgstr ""
+msgstr "ბმულის სამიზნე ვერ მოიძებნა"
 
 #: plugins/folder/foldermodel.cpp:871
 #, kde-kuit-format
@@ -446,6 +446,8 @@ msgid ""
 "<filename>%1</filename> points to <filename>%2</filename>, but that could "
 "not be found. It may have been moved or deleted."
 msgstr ""
+"<filename>%1</filename> მიუთითებს ფაილზე <filename>%2</filename>, მაგრამ ის "
+"აღმოჩენილი არაა. ალბათ, სადმე გადაიტანეთ ან წაშალეთ."
 
 #: plugins/folder/foldermodel.cpp:1729
 #, kde-format
@@ -464,13 +466,12 @@ msgid "&Open"
 msgstr "&გახსნა"
 
 #: plugins/folder/foldermodel.cpp:1739
-#, fuzzy, kde-format
-#| msgid "Show all"
+#, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
 "link points to"
 msgid "Show Target"
-msgstr "ყველას ჩვენება"
+msgstr "სამიზნის ჩვენება"
 
 #: plugins/folder/foldermodel.cpp:1863
 #, kde-format

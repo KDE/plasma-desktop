@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-desktop/plasma_applet_org.kde."
+"X-Crowdin-File: /kf6-stable/messages/plasma-desktop/plasma_applet_org.kde."
 "desktopcontainment.pot\n"
-"X-Crowdin-File-ID: 43473\n"
+"X-Crowdin-File-ID: 51626\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -464,13 +464,12 @@ msgid "&Open"
 msgstr "打开(&O)"
 
 #: plugins/folder/foldermodel.cpp:1739
-#, fuzzy, kde-format
-#| msgid "Show all"
+#, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
 "link points to"
 msgid "Show Target"
-msgstr "显示全部"
+msgstr ""
 
 #: plugins/folder/foldermodel.cpp:1863
 #, kde-format

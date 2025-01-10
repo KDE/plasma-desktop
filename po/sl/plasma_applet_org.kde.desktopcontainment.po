@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-09 00:42+0000\n"
-"PO-Revision-Date: 2024-03-26 06:53+0100\n"
+"PO-Revision-Date: 2025-01-09 07:26+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -440,7 +440,7 @@ msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
 "or folder"
 msgid "Link Target Not Found"
-msgstr ""
+msgstr "Cilja povezave ni bilo mogoče najti"
 
 #: plugins/folder/foldermodel.cpp:871
 #, kde-kuit-format
@@ -449,6 +449,8 @@ msgid ""
 "<filename>%1</filename> points to <filename>%2</filename>, but that could "
 "not be found. It may have been moved or deleted."
 msgstr ""
+"<filename>%1</filename> kaže na <filename>%2</filename>, vendar je ni bilo "
+"mogoče najti. Morda je bila premaknjena ali izbrisana."
 
 #: plugins/folder/foldermodel.cpp:1729
 #, kde-format
@@ -467,13 +469,12 @@ msgid "&Open"
 msgstr "&Odpri"
 
 #: plugins/folder/foldermodel.cpp:1739
-#, fuzzy, kde-format
-#| msgid "Show all"
+#, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
 "link points to"
 msgid "Show Target"
-msgstr "Pokaži vse"
+msgstr "Pokaži cilj"
 
 #: plugins/folder/foldermodel.cpp:1863
 #, kde-format
