@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2010, 2020, 2021, 2022, 2023, 2024 g.sora <g.sora@tiscali.it>
+# SPDX-FileCopyrightText: 2010, 2020, 2021, 2022, 2023, 2024, 2025 g.sora <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-09 00:42+0000\n"
-"PO-Revision-Date: 2024-06-25 09:42+0200\n"
+"PO-Revision-Date: 2025-01-09 18:33+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -154,20 +154,17 @@ msgid "Ignored applications:"
 msgstr "Applicationes ignorate:"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' executable names here (separated by commas or colons, for "
-#| "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
-"Scribe hic nomines executabile de apps (separate per virgulas e duo punctos, "
-"per exemplo 'xterm:konsole' o 'xternm,konsole' ) per impedir illos ab "
-"autoinitiar con altere apps restabilite de session."
+"Scribe identificator de file de scriptorio de apps o, sur X11, nomines a "
+"executar hic (separate per commas o duo punctos, per exemplo 'xterm:org.kde."
+"konsole.desktop' o 'xterm,org.kde.konsole.desktop') per impedir los a "
+"startar automaticamente conjunctemnte a altere apps de session restabilite. "
 
 #: ui/main.qml:166
 #, kde-format

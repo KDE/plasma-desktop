@@ -7,21 +7,21 @@
 # Rinse de Vries <rinse@kde.nl>, 2003, 2004.
 # Wilbert Berendsen <wbsoft@xs4all.nl>, 2003.
 # Rinse de Vries <rinsedevries@kde.nl>, 2004, 2005, 2008.
-# SPDX-FileCopyrightText: 2009, 2013, 2019, 2020, 2021, 2022, 2024 Freek de Kruijf <f.de.kruijf@hetnet.nl>
+# SPDX-FileCopyrightText: 2009, 2013, 2019, 2020, 2021, 2022, 2024, 2025 Freek de Kruijf <f.de.kruijf@hetnet.nl>
 # SPDX-FileCopyrightText: 2024 pieter <pieterkristensen@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-09 00:42+0000\n"
-"PO-Revision-Date: 2024-06-25 12:10+0200\n"
+"PO-Revision-Date: 2025-01-09 14:30+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.12.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
@@ -162,21 +162,18 @@ msgid "Ignored applications:"
 msgstr "Genegeerde toepassingen:"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' executable names here (separated by commas or colons, for "
-#| "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
-"Schrijf de opstart-naam van toepassingen hier (gescheiden door komma's of "
-"dubbele punten, bijvoorbeeld 'xterm:konsole' of 'xterm,konsole') om te "
-"voorkomen dat ze automatisch starten met de andere sessie-herstel "
-"toepassingen."
+"Schrijf hier de bureaublad-bestandsidentifier van toepassingen of, op X11, "
+"de namen van de uitvoerbare programma's (gescheiden door komma's of dubbele "
+"punten, bijvoorbeeld 'xterm:org.kde.konsole.desktop' of 'xterm,org.kde."
+"konsole.desktop') om te voorkomen dat ze automatisch starten samen met "
+"andere sessie-herstel toepassingen."
 
 #: ui/main.qml:166
 #, kde-format

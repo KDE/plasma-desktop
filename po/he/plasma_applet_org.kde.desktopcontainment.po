@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-09 00:42+0000\n"
-"PO-Revision-Date: 2024-03-26 07:39+0200\n"
+"PO-Revision-Date: 2025-01-09 22:08+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -440,7 +440,7 @@ msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
 "or folder"
 msgid "Link Target Not Found"
-msgstr ""
+msgstr "יעד הקישור לא נמצא"
 
 #: plugins/folder/foldermodel.cpp:871
 #, kde-kuit-format
@@ -449,6 +449,8 @@ msgid ""
 "<filename>%1</filename> points to <filename>%2</filename>, but that could "
 "not be found. It may have been moved or deleted."
 msgstr ""
+"<filename>%1</filename> מצביע אל <filename>%2</filename>, אך לא ניתן למצוא "
+"אותו. יכול להיות שהוא הועבר או נמחק."
 
 #: plugins/folder/foldermodel.cpp:1729
 #, kde-format
@@ -467,13 +469,12 @@ msgid "&Open"
 msgstr "&פתיחה"
 
 #: plugins/folder/foldermodel.cpp:1739
-#, fuzzy, kde-format
-#| msgid "Show all"
+#, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
 "link points to"
 msgid "Show Target"
-msgstr "להציג הכול"
+msgstr "הצגת היעד"
 
 #: plugins/folder/foldermodel.cpp:1863
 #, kde-format

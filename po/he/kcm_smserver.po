@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-09 00:42+0000\n"
-"PO-Revision-Date: 2024-06-25 15:01+0300\n"
+"PO-Revision-Date: 2025-01-09 22:10+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -159,20 +159,17 @@ msgid "Ignored applications:"
 msgstr "יישומים בהתעלמות:"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' executable names here (separated by commas or colons, for "
-#| "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
-"יש לכתוב את שמות קובצי ההפעלה של היישומים כאן (מופרדים בפסיקים או נקודתיים, "
-"למשל: ‚xterm:konsole’ או ‚xterm,konsole’) כדי למנוע מהם להיטען אוטומטית יחד "
-"עם יישומים אחרים שמשוחזרים עם ההפעלה."
+"יש לכתוב את מזהה קובץ שולחן העבודה או, ב־X11, את שמות קובצי ההפעלה של "
+"היישומים כאן (מופרדים בפסיקים או נקודתיים, למשל: ‚xterm:org.kde.konsole."
+"desktop’ או ‚xterm,org.kde.konsole.desktop’) כדי למנוע מהם להיטען אוטומטית "
+"יחד עם יישומים אחרים שמשוחזרים עם ההפעלה."
 
 #: ui/main.qml:166
 #, kde-format

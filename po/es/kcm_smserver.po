@@ -1,27 +1,26 @@
-# translation of kcmsmserver.po to Spanish
+# Translation of kcmsmserver.po to Spanish
 # Copyright (C) 2003, 2004, 2005, 2008 Free Software Foundation, Inc.
 #
-# Jaime Robles <jaime@kde.org>, 2003, 2008.
-# Miguel Revilla Rodríguez <yo@miguelrevilla.com>, 2003, 2004.
-# Pablo de Vicente <p.devicente@wanadoo.es>, 2004.
-# Jaime Robles <jaime@robles.nu>, 2005.
-# SPDX-FileCopyrightText: 2010, 2012, 2019, 2020, 2021, 2022, 2024 Eloy Cuadra <ecuadra@eloihr.net>
-# Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2010.
+# SPDX-FileCopyrightText: 2003, 2008 Jaime Robles <jaime@kde.org>
+# SPDX-FileCopyrightText: 2003, 2004 Miguel Revilla Rodríguez <yo@miguelrevilla.com>
+# SPDX-FileCopyrightText: 2004 Pablo de Vicente <p.devicente@wanadoo.es>
+# SPDX-FileCopyrightText: 2005 Jaime Robles <jaime@robles.nu>
+# SPDX-FileCopyrightText: 2010, 2012, 2019, 2020, 2021, 2022, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2010 Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-09 00:42+0000\n"
-"PO-Revision-Date: 2024-06-25 17:57+0200\n"
+"PO-Revision-Date: 2025-01-09 03:53+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"com>\n"
 "First-Translator: Pablo de Vicente <pvicentea@nexo.es>\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.12.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
@@ -162,21 +161,18 @@ msgid "Ignored applications:"
 msgstr "Aplicaciones ignoradas:"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' executable names here (separated by commas or colons, for "
-#| "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
-"Escriba aquí nombres de ejecutables de aplicaciones (separados por comas o "
-"dos puntos, como «xterm:konsole» o «xterm,konsole») para impedir que se "
-"inicien automáticamente junto al resto de aplicaciones de la sesión que se "
-"deben restaurar."
+"Escriba aquí identificadores de archivos de escritorio de aplicaciones o, en "
+"X11, nombres de ejecutables de aplicaciones (separados por comas o dos "
+"puntos, como «xterm:org.kde.konsole.desktop» o «xterm,org.kde.konsole."
+"desktop») para impedir que se inicien automáticamente junto al resto de "
+"aplicaciones de la sesión que se deben restaurar."
 
 #: ui/main.qml:166
 #, kde-format

@@ -1,27 +1,27 @@
 # Translation for kcmsmserver.po to Euskara/Basque (eu).
-# Copyright (C) 2002-2024 This file is copyright:
+# Copyright (C) 2002-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024, 2025 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Marcos  <marcos@euskalgnu.org>, 2002, 2006.
 # Ion Gaztañaga <ion_g_m@hotmail.com>, 2004.
 # Asier Urio Larrea <asieriko@gmail.com>, 2008.
-# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2011, 2014, 2019, 2020, 2021, 2022, 2023, 2024.
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2011, 2014, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
 # Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-09 00:42+0000\n"
-"PO-Revision-Date: 2024-06-28 11:17+0200\n"
+"PO-Revision-Date: 2025-01-09 22:15+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.12.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
@@ -161,20 +161,18 @@ msgid "Ignored applications:"
 msgstr "Ezikusitako aplikazioak:"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' executable names here (separated by commas or colons, for "
-#| "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
-"Idatzi aplikazioen izen exekutagarriak hemen (koma bidez edo puntu eta koma "
-"bidez bereizita, adibidez 'xterm:konsole' edo 'xterm,konsole') haiek saioan "
-"lehengoratutako beste aplikazioekin batera auto-abiatzea saihesteko."
+"Saioarekin lehengoratutako beste aplikazioekin batera automatikoki abiatzea "
+"saihesteko, aplikazioaren mahaigaineko fitxategiaren identifikatzailea edo, "
+"X11-an, exekutagarriaren izenak hemen idatzi (koma edo puntu eta koma bidez "
+"bereizita, adibidez 'xterm:org.kde.konsole.desktop' edo 'xterm,org.kde."
+"konsole.desktop')."
 
 #: ui/main.qml:166
 #, kde-format

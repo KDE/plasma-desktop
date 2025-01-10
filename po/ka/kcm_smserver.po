@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-09 00:42+0000\n"
-"PO-Revision-Date: 2024-06-25 05:20+0200\n"
+"PO-Revision-Date: 2025-01-09 04:07+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -156,20 +156,17 @@ msgid "Ignored applications:"
 msgstr "იგნორირებული აპლიკაციები:"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' executable names here (separated by commas or colons, for "
-#| "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
-"ჩაწერეთ აპების გამშვები ფაილების სახელები აქ (დაშორებული მძიმეებით ან "
-"ორწერტილებით. მაგ: 'xterm:konsole' ან 'xterm,console'), რათა გამორიცხოთ "
-"ისინი სესიის აღდგენისას გაშვებული აპების სიიდან."
+"ჩაწერეთ აპებისს სამუშაო მაგიდის ფაილების სახელები აქ (დაშორებული მძიმეებით "
+"ან ორწერტილებით. მაგ: 'xterm:org.kde.konsole.desktop', ან 'xterm,org.kde."
+"konsole.desktop'), რათა გამორიცხოთ ისინი სესიის აღდგენისას გაშვებული აპების "
+"სიიდან."
 
 #: ui/main.qml:166
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-27 00:43+0000\n"
-"PO-Revision-Date: 2024-11-12 23:55+0200\n"
+"PO-Revision-Date: 2025-01-10 00:59+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: inputsequence.cpp:172
 #, kde-format
@@ -335,22 +335,18 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
 #: ui/ExternalScreenMapping.qml:190
-#, fuzzy, kde-format
-#| msgid "Resize the tablet area"
+#, kde-format
 msgid "Resize the screen area"
-msgstr "Keisti planšetės srities dydį"
+msgstr "Keisti ekrano srities dydį"
 
 #: ui/ExternalScreenMapping.qml:265
-#, fuzzy, kde-format
-#| msgctxt "tablet area position - size"
-#| msgid "%1,%2 - %3×%4"
+#, kde-format
 msgctxt "tablet area position - size"
 msgid "%1%,%2% - %3%×%4%"
-msgstr "%1,%2 - %3×%4"
+msgstr "%1%,%2% – %3%×%4%"
 
 #: ui/ExternalScreenMapping.qml:299
-#, fuzzy, kde-format
-#| msgid "Resize the tablet area"
+#, kde-format
 msgid "Resize the tablet area"
 msgstr "Keisti planšetės srities dydį"
 
@@ -380,21 +376,19 @@ msgstr "Įrenginys:"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
-msgstr ""
+msgstr "Rodymas"
 
 #: ui/main.qml:169
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
-msgstr ""
+msgstr "Rašiklis"
 
 #: ui/main.qml:181
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The pad we are configuring"
-#| msgid "Pad:"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
-msgstr "Kilimėlis:"
+msgstr "Kilimėlis"
 
 #: ui/PadTab.qml:33
 #, kde-format
@@ -418,7 +412,7 @@ msgstr "Kairės rankos veiksena:"
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
-msgstr ""
+msgstr "Įjungti"
 
 #: ui/StylusTab.qml:43
 #, kde-kuit-format
@@ -441,13 +435,13 @@ msgstr "Rašiklio spaudimas:"
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:170
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:181
 #, kde-format
@@ -472,11 +466,10 @@ msgstr ""
 "kurias gauna programos."
 
 #: ui/StylusTab.qml:198
-#, fuzzy, kde-format
-#| msgid "Pen Pressure:"
+#, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
-msgstr "Rašiklio spaudimas:"
+msgstr "Spaudimo rėžis:"
 
 #: ui/StylusTab.qml:225
 #, kde-format
@@ -485,6 +478,8 @@ msgid ""
 "Pressure above or below the threshold will be clamped, and this becomes the "
 "new effective range."
 msgstr ""
+"Aukščiau ar žemiau slenksčio esantis spaudimas bus apribotas ir tai taps "
+"nauju įsigaliojusiu rėžiu."
 
 #: ui/StylusTab.qml:237
 #, kde-format
@@ -521,16 +516,12 @@ msgid "Stylus release X=%1 Y=%2"
 msgstr "Rašiklio atleidimas X=%1 Y=%2"
 
 #: ui/Tester.qml:68
-#, fuzzy, kde-format
-#| msgid "Stylus move X=%1 Y=%2"
+#, kde-format
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
-msgstr "Rašiklio perkėlimas X=%1 Y=%2"
+msgstr "Rašiklio perkėlimas X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
 #: ui/Tester.qml:205
-#, fuzzy, kde-format
-#| msgid ""
-#| "## Legend:\n"
-#| "# X, Y - event coordinate\n"
+#, kde-format
 msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
@@ -539,6 +530,8 @@ msgid ""
 msgstr ""
 "## Legenda:\n"
 "# X, Y – įvykio koordinatė\n"
+"# P – spaudimas\n"
+"# TX,TY – pakrypimas\n"
 
 #: ui/Tester.qml:211
 #, kde-format
