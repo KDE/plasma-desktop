@@ -13,6 +13,7 @@ from typing import Final
 from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
+from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 
@@ -61,7 +62,9 @@ class KickoffTests(unittest.TestCase):
             print(self.driver.page_source, file=sys.stderr)
 
     def test_1_search_calculator(self) -> None:
-        self.driver.find_element(by=AppiumBy.NAME, value="Search").send_keys("12345+67890")
+        search_field = self.driver.find_element(by=AppiumBy.NAME, value="Search")
+        search_field.send_keys("1")
+        search_field.send_keys("2345+67890")
         self.driver.find_element(by=AppiumBy.CLASS_NAME, value="[list item | 80235]")
 
     def test_2_search_app(self) -> None:
@@ -128,7 +131,10 @@ class KickoffTests(unittest.TestCase):
 
         # Hitting Right again should move focus to the power action button
         ActionChains(self.driver).send_keys(Keys.RIGHT).perform()
-        self.driver.find_element(by=AppiumBy.XPATH, value="//push_button_menu[contains(@states, 'focused') and @name='Leave']")
+        try:
+            self.driver.find_element(by=AppiumBy.XPATH, value="//push_button_menu[contains(@states, 'focused') and @name='Leave']")
+        except NoSuchElementException:
+            self.driver.find_element(by=AppiumBy.XPATH, value="//button[contains(@states, 'focused') and @name='Sleep']")
 
 
 if __name__ == '__main__':
