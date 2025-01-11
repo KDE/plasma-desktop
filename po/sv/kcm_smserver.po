@@ -3,20 +3,20 @@
 # Copyright (C) 2000,2002,2003, 2004, 2005, 2008, 2009 Free Software Foundation, Inc.
 #
 # Mattias Newzella <newzella@linux.nu>, 2000,2001,2002,2003, 2004.
-# SPDX-FileCopyrightText: 2004, 2005, 2008, 2009, 2019, 2020, 2021, 2022, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2004, 2005, 2008, 2009, 2019, 2020, 2021, 2022, 2024, 2025 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-09 00:42+0000\n"
-"PO-Revision-Date: 2024-06-25 19:09+0200\n"
+"PO-Revision-Date: 2025-01-10 17:09+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
@@ -154,20 +154,18 @@ msgid "Ignored applications:"
 msgstr "Ignorerade program:"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' executable names here (separated by commas or colons, for "
-#| "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
-"Skriv programmens körbara namn här (skilda åt med kommatecken eller kolon, "
-"till exempel 'xterm:konsole' or 'xterm,konsole') för att förhindra dem från "
-"att starta automatiskt tillsammans med andra sessionsåterställda program."
+"Skriv in skrivbordsfilernas identifierare för programmen, eller på X11, de "
+"körbara filernas namn här (skilda åt med kommatecken eller kolon, till "
+"exempel 'xterm:org.kde.konsole.desktop' eller 'xterm,org.kde.konsole."
+"desktop') för att förhindra dem från att starta automatiskt tillsammans med "
+"andra sessionsåterställda program."
 
 #: ui/main.qml:166
 #, kde-format

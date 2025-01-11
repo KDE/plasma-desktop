@@ -154,6 +154,9 @@ msgid ""
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
+"在此输入应用程序的 desktop 文件标识符，如果在 X11 环境中，则输入可执行名称 "
+"(用半角逗号或者冒号分隔，例如“xterm:org.kde.konsole.desktop”或“xterm,org.kde."
+"konsole.desktop”) 以防止这些应用程序和其他会话恢复的应用程序一起自动启动。"
 
 #: ui/main.qml:166
 #, kde-format
