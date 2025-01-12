@@ -37,14 +37,6 @@ Kirigami.FormLayout {
         checked: kcm.bellSettings.systemBell
         onToggled: kcm.bellSettings.systemBell = checked
     }
-    QQC2.Label {
-        Layout.fillWidth: true
-        text: i18nc("@label", "Emits a sound whenever certain keys are pressed")
-        leftPadding: systemBell.indicator.width
-        textFormat: Text.PlainText
-        elide: Text.ElideRight
-        font: Kirigami.Theme.smallFont
-    }
 
     RowLayout {
         Kirigami.FormData.label: i18nc("Defines if the system will use a sound system bell", "Custom sound:")
@@ -107,14 +99,6 @@ Kirigami.FormLayout {
 
         checked: kcm.bellSettings.visibleBell
         onToggled: kcm.bellSettings.visibleBell = checked
-    }
-    QQC2.Label {
-        Layout.fillWidth: true
-        text: i18nc("@label", "Flashes the screen whenever certain keys are pressed")
-        leftPadding: visibleBell.indicator.width
-        textFormat: Text.PlainText
-        elide: Text.ElideRight
-        font: Kirigami.Theme.smallFont
     }
 
     QQC2.RadioButton {
