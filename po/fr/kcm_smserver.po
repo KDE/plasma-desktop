@@ -8,7 +8,7 @@
 # Nicolas Ternisien <nicolas.ternisien@gmail.com>, 2005, 2008.
 # Sébastien Renard <Sebastien.Renard@digitalfox.org>, 2008.
 # Anne-Marie Mahfouf <annemarie.mahfouf@free.fr>, 2009.
-# SPDX-FileCopyrightText: 2013, 2024 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2013, 2024, 2025 Xavier Besnard <xavier.besnard@kde.org>
 # Simon Depiets <sdepiets@gmail.com>, 2019.
 # Xavier Besnard <xavier.besnard@kde.org>, 2020, 2021, 2022.
 # Xavier Besnard <xavier.besnard@kde.org>, 2022.
@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-09 00:42+0000\n"
-"PO-Revision-Date: 2024-06-27 14:42+0200\n"
+"PO-Revision-Date: 2025-01-10 14:48+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.0\n"
 "X-Text-Markup: kde4\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
@@ -169,21 +169,18 @@ msgid "Ignored applications:"
 msgstr "Applications ignorées :"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' executable names here (separated by commas or colons, for "
-#| "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
-"Veuillez saisir ici les noms des exécutables correspondants aux applications "
-"(séparés par des virgules ou des deux points, par exemple, « xterm:konsole » "
-"ou « xterm, konsole ») pour les empêcher de démarrer automatiquement avec "
-"d'autres applications restaurées en session."
+"Veuillez saisir ici l'identificateur du fichier de bureau de l'application "
+"ou, sous X11, les noms des exécutables (Séparés par des virgules ou un "
+"caractère « Deux points », par exemple, « xterm:org.kde.konsole.desktop » ou "
+"« xterm,org.kde.konsole.desktop ») pour les empêcher de démarrer "
+"automatiquement avec d'autres applications restaurées durant la session."
 
 #: ui/main.qml:166
 #, kde-format
