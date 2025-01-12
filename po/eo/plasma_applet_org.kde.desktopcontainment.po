@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-09 00:42+0000\n"
-"PO-Revision-Date: 2024-03-27 09:18+0100\n"
+"PO-Revision-Date: 2025-01-11 22:49+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: eo <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -439,7 +439,7 @@ msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
 "or folder"
 msgid "Link Target Not Found"
-msgstr ""
+msgstr "Celo de Ligilo ne Troviĝis"
 
 #: plugins/folder/foldermodel.cpp:871
 #, kde-kuit-format
@@ -448,6 +448,8 @@ msgid ""
 "<filename>%1</filename> points to <filename>%2</filename>, but that could "
 "not be found. It may have been moved or deleted."
 msgstr ""
+"<filename>%1</filename> montras al <filename>%2</filename>, sed ne eblis "
+"trovi tiun. Ĝi eble estis movita aŭ forigita."
 
 #: plugins/folder/foldermodel.cpp:1729
 #, kde-format
@@ -466,13 +468,12 @@ msgid "&Open"
 msgstr "&Malfermi"
 
 #: plugins/folder/foldermodel.cpp:1739
-#, fuzzy, kde-format
-#| msgid "Show all"
+#, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
 "link points to"
 msgid "Show Target"
-msgstr "Montri ĉiujn"
+msgstr "Montri Celon"
 
 #: plugins/folder/foldermodel.cpp:1863
 #, kde-format

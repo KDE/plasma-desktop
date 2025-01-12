@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-09 00:42+0000\n"
-"PO-Revision-Date: 2024-06-28 16:51+0200\n"
+"PO-Revision-Date: 2025-01-11 22:49+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -154,23 +154,20 @@ msgstr "Komenci en malplena seanco"
 #: ui/main.qml:141
 #, kde-format
 msgid "Ignored applications:"
-msgstr "Ignorataj aplikaĵoj:"
+msgstr "Ignoritaj aplikaĵoj:"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' executable names here (separated by commas or colons, for "
-#| "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
-"Skribu la efektivigeblajn nomojn de aplikaĵoj ĉi tie (apartigite per komoj "
-"aŭ dupunktoj, ekzemple 'xterm:konsole' aŭ 'xterm,konsole') por malhelpi ilin "
-"aŭtomate ekfunkciigi kune kun aliaj seancaj restaŭrigitaj apps."
+"Skribu labortablan dosier-identigilon aŭ, en X11, efektivigeblan nomon de "
+"aplikaĵoj ĉi tien (apartigite per komoj aŭ dupunktoj, ekzemple 'xterm:"
+"konsole' aŭ 'xterm,konsole') por malhelpi ilin aŭtomate ekfunkciigi kune kun "
+"aliaj seancaj restaŭrigitaj apoj."
 
 #: ui/main.qml:166
 #, kde-format

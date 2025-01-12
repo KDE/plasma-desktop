@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-09 00:42+0000\n"
-"PO-Revision-Date: 2024-04-01 08:12+0200\n"
+"PO-Revision-Date: 2025-01-11 11:22+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -313,7 +314,7 @@ msgstr "Pokaż miniatury podglądu"
 #: package/contents/ui/ConfigIcons.qml:346
 #, kde-format
 msgid "Configure Preview Plugins…"
-msgstr "Ustawienia wtyczek podglądu..."
+msgstr "Ustawienia wtyczek podglądu…"
 
 #: package/contents/ui/ConfigLocation.qml:80
 #, kde-format
@@ -373,7 +374,7 @@ msgstr "Własny tytuł"
 #: package/contents/ui/ConfigLocation.qml:197
 #, kde-format
 msgid "Enter custom title…"
-msgstr "Wpisz własny tytuł..."
+msgstr "Wpisz własny tytuł…"
 
 #: package/contents/ui/ConfigOverlay.qml:98
 #, kde-format
@@ -436,7 +437,7 @@ msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
 "or folder"
 msgid "Link Target Not Found"
-msgstr ""
+msgstr "Nie można znaleźć celu dowiązania"
 
 #: plugins/folder/foldermodel.cpp:871
 #, kde-kuit-format
@@ -445,6 +446,8 @@ msgid ""
 "<filename>%1</filename> points to <filename>%2</filename>, but that could "
 "not be found. It may have been moved or deleted."
 msgstr ""
+"<filename>%1</filename> wskazuje na <filename>%2</filename>, lecz nie można "
+"tego znaleźć. Może zostało przeniesione lub usunięte."
 
 #: plugins/folder/foldermodel.cpp:1729
 #, kde-format
@@ -463,13 +466,12 @@ msgid "&Open"
 msgstr "&Otwórz"
 
 #: plugins/folder/foldermodel.cpp:1739
-#, fuzzy, kde-format
-#| msgid "Show all"
+#, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
 "link points to"
 msgid "Show Target"
-msgstr "Pokaż wszystkie"
+msgstr "Pokaż element docelowy"
 
 #: plugins/folder/foldermodel.cpp:1863
 #, kde-format

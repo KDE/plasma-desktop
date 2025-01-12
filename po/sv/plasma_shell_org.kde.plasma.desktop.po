@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2024, 2025 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-07 00:42+0000\n"
-"PO-Revision-Date: 2024-12-03 20:42+0100\n"
+"PO-Revision-Date: 2025-01-11 12:27+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -503,17 +503,16 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "Ta bort panelen. Åtgärden går inte att ångra."
 
 #: contents/configuration/PanelConfiguration.qml:653
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
-msgstr "Ta bort panel"
+msgstr "Duplicera panel"
 
 #: contents/configuration/PanelConfiguration.qml:657
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
-msgstr ""
+msgstr "Skapa en ny panel med samma inställningar och miniprogram"
 
 #: contents/configuration/PanelConfiguration.qml:666
 #, kde-format
@@ -575,10 +574,9 @@ msgstr ""
 "Dubbelklicka för att återställa."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy, kde-format
-#| msgid "Panel and Desktop Management"
+#, kde-format
 msgid "Manage Panels and Desktops"
-msgstr "Panel och skrivbordshantering"
+msgstr "Hantera paneler och skrivbord"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 #, kde-format
@@ -746,22 +744,19 @@ msgid "Caps Lock is on"
 msgstr "Caps Lock aktiverad"
 
 #: contents/lockscreen/LockScreenUi.qml:285
-#, fuzzy, kde-format
-#| msgid "Sleep"
+#, kde-format
 msgid "Slee&p"
-msgstr "Viloläge"
+msgstr "&Viloläge"
 
 #: contents/lockscreen/LockScreenUi.qml:291
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "&Hibernate"
-msgstr "Dvala"
+msgstr "&Dvala"
 
 #: contents/lockscreen/LockScreenUi.qml:297
-#, fuzzy, kde-format
-#| msgid "Switch User"
+#, kde-format
 msgid "Switch &User"
-msgstr "Byt användare"
+msgstr "&Byt användare"
 
 #: contents/lockscreen/LockScreenUi.qml:358
 #, kde-format
