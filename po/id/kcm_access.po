@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-29 00:42+0000\n"
+"POT-Creation-Date: 2025-01-13 02:38+0000\n"
 "PO-Revision-Date: 2024-10-18 18:48+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -401,68 +401,56 @@ msgstr "Fungsikan"
 
 #: ui/Bell.qml:42
 #, kde-format
-msgctxt "@label"
-msgid "Emits a sound whenever certain keys are pressed"
-msgstr "Bunyikan suara ketika tombol tertentu ditekan"
-
-#: ui/Bell.qml:50
-#, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
 msgstr "Kustom suara:"
 
-#: ui/Bell.qml:83
+#: ui/Bell.qml:75
 #, kde-format
 msgid "Search audio file for the system bell"
 msgstr "Cari file audio untuk bel sistem"
 
-#: ui/Bell.qml:84
+#: ui/Bell.qml:76
 #, kde-format
 msgid "Button search audio file"
 msgstr "Tombol pencarian file audio"
 
-#: ui/Bell.qml:100
+#: ui/Bell.qml:92
 #, kde-format
 msgid "Visual bell:"
 msgstr "Bel visual:"
 
-#: ui/Bell.qml:101
+#: ui/Bell.qml:93
 #, kde-format
 msgctxt "Enable visual bell"
 msgid "Enable"
 msgstr "Fungsikan"
 
-#: ui/Bell.qml:113
-#, kde-format
-msgctxt "@label"
-msgid "Flashes the screen whenever certain keys are pressed"
-msgstr "Kilatkan layar ketika tombol tertentu ditekan"
-
-#: ui/Bell.qml:123
+#: ui/Bell.qml:107
 #, kde-format
 msgctxt "@option:radio Invert screen colors when a system bell is rung"
 msgid "Invert screen colors"
 msgstr "Kebalikan warna layar"
 
-#: ui/Bell.qml:141
+#: ui/Bell.qml:125
 #, kde-format
 msgctxt "@option:radio Flash screen when a system bell is rung"
 msgid "Flash screen"
 msgstr "Layar kilat"
 
-#: ui/Bell.qml:152
+#: ui/Bell.qml:136
 #, kde-format
 msgctxt "Color of the system bell"
 msgid "Color"
 msgstr "Warna"
 
-#: ui/Bell.qml:166
+#: ui/Bell.qml:150
 #, kde-format
 msgctxt "Duration of the system bell"
 msgid "Duration:"
 msgstr "Durasi:"
 
-#: ui/Bell.qml:181 ui/KeyboardFilters.qml:55 ui/KeyboardFilters.qml:151
+#: ui/Bell.qml:165 ui/KeyboardFilters.qml:55 ui/KeyboardFilters.qml:151
 #: ui/MouseNavigation.qml:51 ui/MouseNavigation.qml:73
 #: ui/MouseNavigation.qml:95
 #, kde-format
@@ -471,7 +459,7 @@ msgid_plural "%1 ms"
 msgstr[0] "%1 mdt"
 msgstr[1] "%1 mdt"
 
-#: ui/Bell.qml:185 ui/KeyboardFilters.qml:59 ui/KeyboardFilters.qml:155
+#: ui/Bell.qml:169 ui/KeyboardFilters.qml:59 ui/KeyboardFilters.qml:155
 #: ui/MouseNavigation.qml:55 ui/MouseNavigation.qml:77
 #: ui/MouseNavigation.qml:99
 #, kde-format
@@ -878,6 +866,14 @@ msgstr "Normal"
 msgctxt "@label Large cursor size"
 msgid "Large"
 msgstr "Besar"
+
+#~ msgctxt "@label"
+#~ msgid "Emits a sound whenever certain keys are pressed"
+#~ msgstr "Bunyikan suara ketika tombol tertentu ditekan"
+
+#~ msgctxt "@label"
+#~ msgid "Flashes the screen whenever certain keys are pressed"
+#~ msgstr "Kilatkan layar ketika tombol tertentu ditekan"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid ""

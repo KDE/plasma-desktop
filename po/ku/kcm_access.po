@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-29 00:42+0000\n"
+"POT-Creation-Date: 2025-01-13 02:38+0000\n"
 "PO-Revision-Date: 2009-01-06 14:07+0200\n"
 "Last-Translator: Erdal Ronahi <erdal.ronahi@nospam.gmail.com>\n"
 "Language-Team: Kurdish <kde-i18n-doc@lists.kde.org>\n"
@@ -417,75 +417,60 @@ msgstr ""
 
 #: ui/Bell.qml:42
 #, kde-format
-msgctxt "@label"
-msgid "Emits a sound whenever certain keys are pressed"
-msgstr ""
-
-#: ui/Bell.qml:50
-#, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
 msgstr ""
 
-#: ui/Bell.qml:83
+#: ui/Bell.qml:75
 #, kde-format
 msgid "Search audio file for the system bell"
 msgstr ""
 
-#: ui/Bell.qml:84
+#: ui/Bell.qml:76
 #, kde-format
 msgid "Button search audio file"
 msgstr ""
 
-#: ui/Bell.qml:100
+#: ui/Bell.qml:92
 #, fuzzy, kde-format
 #| msgid "Visible Bell"
 msgid "Visual bell:"
 msgstr "Zingilê Xuya"
 
-#: ui/Bell.qml:101
+#: ui/Bell.qml:93
 #, kde-format
 msgctxt "Enable visual bell"
 msgid "Enable"
 msgstr ""
 
-#: ui/Bell.qml:113
-#, fuzzy, kde-format
-#| msgid "Use system bell whenever a modifier gets latched, locked or unlocked"
-msgctxt "@label"
-msgid "Flashes the screen whenever certain keys are pressed"
-msgstr ""
-"Dema ku guherker kilîtkirin, vekirin an jî tiştekî din guherand, zingila  "
-"pergalê bi kar bîne"
-
-#: ui/Bell.qml:123
+#: ui/Bell.qml:107
 #, fuzzy, kde-format
 #| msgid "I&nvert screen"
 msgctxt "@option:radio Invert screen colors when a system bell is rung"
 msgid "Invert screen colors"
 msgstr "Dîmendêrê vajî bike"
 
-#: ui/Bell.qml:141
+#: ui/Bell.qml:125
 #, fuzzy, kde-format
 #| msgid "F&lash screen"
 msgctxt "@option:radio Flash screen when a system bell is rung"
 msgid "Flash screen"
 msgstr "Ekrana f&laş"
 
-#: ui/Bell.qml:152
+#: ui/Bell.qml:136
 #, kde-format
 msgctxt "Color of the system bell"
 msgid "Color"
 msgstr ""
 
-#: ui/Bell.qml:166
+#: ui/Bell.qml:150
 #, fuzzy, kde-format
 #| msgid "Duration:"
 msgctxt "Duration of the system bell"
 msgid "Duration:"
 msgstr "Demajo"
 
-#: ui/Bell.qml:181 ui/KeyboardFilters.qml:55 ui/KeyboardFilters.qml:151
+#: ui/Bell.qml:165 ui/KeyboardFilters.qml:55 ui/KeyboardFilters.qml:151
 #: ui/MouseNavigation.qml:51 ui/MouseNavigation.qml:73
 #: ui/MouseNavigation.qml:95
 #, fuzzy, kde-format
@@ -495,7 +480,7 @@ msgid_plural "%1 ms"
 msgstr[0] " xul"
 msgstr[1] " xul"
 
-#: ui/Bell.qml:185 ui/KeyboardFilters.qml:59 ui/KeyboardFilters.qml:155
+#: ui/Bell.qml:169 ui/KeyboardFilters.qml:59 ui/KeyboardFilters.qml:155
 #: ui/MouseNavigation.qml:55 ui/MouseNavigation.qml:77
 #: ui/MouseNavigation.qml:99
 #, kde-format
@@ -917,6 +902,15 @@ msgstr ""
 msgctxt "@label Large cursor size"
 msgid "Large"
 msgstr ""
+
+#, fuzzy
+#~| msgid ""
+#~| "Use system bell whenever a modifier gets latched, locked or unlocked"
+#~ msgctxt "@label"
+#~ msgid "Flashes the screen whenever certain keys are pressed"
+#~ msgstr ""
+#~ "Dema ku guherker kilîtkirin, vekirin an jî tiştekî din guherand, zingila  "
+#~ "pergalê bi kar bîne"
 
 #, fuzzy
 #~| msgid "Notification"
