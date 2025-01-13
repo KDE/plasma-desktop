@@ -376,28 +376,9 @@ QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *pa
             name = url.toDisplayString();
         }
 
-        QString iconName;
-
-        const QString protocol = url.scheme();
-        if (!KProtocolInfo::isKnownProtocol(protocol) || KProtocolInfo::isHelperProtocol(protocol)) {
-            const KService::Ptr service = KApplicationTrader::preferredService(QLatin1String("x-scheme-handler/") + protocol);
-            if (service) {
-                iconName = service->icon();
-            } else if (KProtocolInfo::isKnownProtocol(protocol)) {
-                Q_ASSERT(KProtocolInfo::isHelperProtocol(protocol));
-                iconName = KProtocolInfo::icon(protocol);
-            } else {
-                // Should not happen?
-                continue;
-            }
-        } else {
-            const KFileItem fileItem(url, mimetype);
-            iconName = fileItem.iconName();
-        }
-
         QAction *action = new QAction(parent);
         action->setText(name);
-        action->setIcon(QIcon::fromTheme(iconName, QIcon::fromTheme(QStringLiteral("unknown"))));
+        action->setIcon(QIcon::fromTheme(KIO::iconNameForUrl(url)));
         action->setProperty("agent", storageId);
         action->setProperty("entryPath", desktopEntryUrl);
         action->setProperty("mimeType", mimetype);
