@@ -371,8 +371,11 @@ QVariantList Backend::recentDocumentActions(const QUrl &launcherUrl, QObject *pa
         allDownloads = allDownloads && url.toLocalFile().startsWith(downloadsPath);
         allRemoteWithoutFileName = allRemoteWithoutFileName && !url.isLocalFile() && url.fileName().isEmpty();
 
-        QString name = url.fileName();
-        if (name.isEmpty()) {
+        QString name;
+
+        if (url.isLocalFile() && !url.fileName().isEmpty()) {
+            name = url.fileName();
+        } else {
             name = url.toDisplayString();
         }
 
