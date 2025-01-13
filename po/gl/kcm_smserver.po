@@ -5,14 +5,14 @@
 # mvillarino <mvillarino@users.sourceforge.net>, 2007, 2008, 2009.
 # marce villarino <mvillarino@users.sourceforge.net>, 2009.
 # Marce Villarino <mvillarino@gmail.com>, 2009, 2014.
-# SPDX-FileCopyrightText: 2023, 2024 Adrián Chaves (Gallaecio)
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-09 00:42+0000\n"
-"PO-Revision-Date: 2024-06-27 20:58+0200\n"
+"PO-Revision-Date: 2025-01-12 14:36+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -158,21 +158,18 @@ msgid "Ignored applications:"
 msgstr "Aplicacións ignoradas:"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' executable names here (separated by commas or colons, for "
-#| "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
-"Escriba aquí os nomes dos executábeis de aplicacións (separados por comas ou "
-"dous puntos, por exemplo «xterm:konsole» ou «xterm,konsole») para evitar que "
-"se inicien automaticamente xunto co resto de aplicacións ao restaurar a "
-"sesión."
+"Escriba aquí os identificadores de ficheiro de escritorio (ou, en X11, os "
+"nomes dos executábeis) das aplicacións, separados por comas ou dous puntos "
+"(p. ex. «xterm:org.kde.konsole.desktop» ou «xterm,org.kde.konsole.desktop») "
+"para evitar que se inicien automaticamente xunto co resto de aplicacións ao "
+"restaurar a sesión."
 
 #: ui/main.qml:166
 #, kde-format

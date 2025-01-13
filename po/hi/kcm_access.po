@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-29 00:42+0000\n"
+"POT-Creation-Date: 2025-01-13 00:42+0000\n"
 "PO-Revision-Date: 2024-12-15 19:31+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
@@ -420,73 +420,60 @@ msgstr "सक्षम करें"
 
 #: ui/Bell.qml:42
 #, kde-format
-msgctxt "@label"
-msgid "Emits a sound whenever certain keys are pressed"
-msgstr ""
-
-#: ui/Bell.qml:50
-#, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
 msgstr ""
 
-#: ui/Bell.qml:83
+#: ui/Bell.qml:75
 #, kde-format
 msgid "Search audio file for the system bell"
 msgstr ""
 
-#: ui/Bell.qml:84
+#: ui/Bell.qml:76
 #, kde-format
 msgid "Button search audio file"
 msgstr ""
 
-#: ui/Bell.qml:100
+#: ui/Bell.qml:92
 #, fuzzy, kde-format
 #| msgid "Visible Bell"
 msgid "Visual bell:"
 msgstr "दृश्यमय घंटी"
 
-#: ui/Bell.qml:101
+#: ui/Bell.qml:93
 #, kde-format
 msgctxt "Enable visual bell"
 msgid "Enable"
 msgstr "सक्षम करें"
 
-#: ui/Bell.qml:113
-#, fuzzy, kde-format
-#| msgid "Use the system bell whenever a key is rejected"
-msgctxt "@label"
-msgid "Flashes the screen whenever certain keys are pressed"
-msgstr "जब भी कोई कुंजी अस्वीकारा जाए तो तंत्र घंटी इस्तेमाल करें"
-
-#: ui/Bell.qml:123
+#: ui/Bell.qml:107
 #, fuzzy, kde-format
 #| msgid "I&nvert screen"
 msgctxt "@option:radio Invert screen colors when a system bell is rung"
 msgid "Invert screen colors"
 msgstr "स्क्रीन उलटें (&n)"
 
-#: ui/Bell.qml:141
+#: ui/Bell.qml:125
 #, fuzzy, kde-format
 #| msgid "F&lash screen"
 msgctxt "@option:radio Flash screen when a system bell is rung"
 msgid "Flash screen"
 msgstr "स्क्रीन फ्लैश करें (&l)"
 
-#: ui/Bell.qml:152
+#: ui/Bell.qml:136
 #, kde-format
 msgctxt "Color of the system bell"
 msgid "Color"
 msgstr "रंग"
 
-#: ui/Bell.qml:166
+#: ui/Bell.qml:150
 #, fuzzy, kde-format
 #| msgid "Duration:"
 msgctxt "Duration of the system bell"
 msgid "Duration:"
 msgstr "अवधिः"
 
-#: ui/Bell.qml:181 ui/KeyboardFilters.qml:55 ui/KeyboardFilters.qml:151
+#: ui/Bell.qml:165 ui/KeyboardFilters.qml:55 ui/KeyboardFilters.qml:151
 #: ui/MouseNavigation.qml:51 ui/MouseNavigation.qml:73
 #: ui/MouseNavigation.qml:95
 #, fuzzy, kde-format
@@ -496,7 +483,7 @@ msgid_plural "%1 ms"
 msgstr[0] "मि."
 msgstr[1] "मि."
 
-#: ui/Bell.qml:185 ui/KeyboardFilters.qml:59 ui/KeyboardFilters.qml:155
+#: ui/Bell.qml:169 ui/KeyboardFilters.qml:59 ui/KeyboardFilters.qml:155
 #: ui/MouseNavigation.qml:55 ui/MouseNavigation.qml:77
 #: ui/MouseNavigation.qml:99
 #, kde-format
@@ -921,6 +908,12 @@ msgstr ""
 msgctxt "@label Large cursor size"
 msgid "Large"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Use the system bell whenever a key is rejected"
+#~ msgctxt "@label"
+#~ msgid "Flashes the screen whenever certain keys are pressed"
+#~ msgstr "जब भी कोई कुंजी अस्वीकारा जाए तो तंत्र घंटी इस्तेमाल करें"
 
 #, fuzzy
 #~| msgid "Activation Gestures"

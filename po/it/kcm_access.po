@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-29 00:42+0000\n"
+"POT-Creation-Date: 2025-01-13 00:42+0000\n"
 "PO-Revision-Date: 2024-12-01 12:32+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -405,69 +405,56 @@ msgstr "Abilita"
 
 #: ui/Bell.qml:42
 #, kde-format
-msgctxt "@label"
-msgid "Emits a sound whenever certain keys are pressed"
-msgstr "Emette un suono ogni volta che determinati tasti sono premuti"
-
-#: ui/Bell.qml:50
-#, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
 msgstr "Suono personalizzato:"
 
-#: ui/Bell.qml:83
+#: ui/Bell.qml:75
 #, kde-format
 msgid "Search audio file for the system bell"
 msgstr "Cerca file audio per la campanella di sistema"
 
-#: ui/Bell.qml:84
+#: ui/Bell.qml:76
 #, kde-format
 msgid "Button search audio file"
 msgstr "Pulsante ricerca file audio"
 
-#: ui/Bell.qml:100
+#: ui/Bell.qml:92
 #, kde-format
 msgid "Visual bell:"
 msgstr "Campanella visiva:"
 
-#: ui/Bell.qml:101
+#: ui/Bell.qml:93
 #, kde-format
 msgctxt "Enable visual bell"
 msgid "Enable"
 msgstr "Abilita"
 
-#: ui/Bell.qml:113
-#, kde-format
-msgctxt "@label"
-msgid "Flashes the screen whenever certain keys are pressed"
-msgstr ""
-"Fa lampeggiare lo schermo ogni volta che vengono premuti determinati tasti"
-
-#: ui/Bell.qml:123
+#: ui/Bell.qml:107
 #, kde-format
 msgctxt "@option:radio Invert screen colors when a system bell is rung"
 msgid "Invert screen colors"
 msgstr "Inverti i colori dello schermo"
 
-#: ui/Bell.qml:141
+#: ui/Bell.qml:125
 #, kde-format
 msgctxt "@option:radio Flash screen when a system bell is rung"
 msgid "Flash screen"
 msgstr "Fa lampeggiare lo schermo"
 
-#: ui/Bell.qml:152
+#: ui/Bell.qml:136
 #, kde-format
 msgctxt "Color of the system bell"
 msgid "Color"
 msgstr "Colore"
 
-#: ui/Bell.qml:166
+#: ui/Bell.qml:150
 #, kde-format
 msgctxt "Duration of the system bell"
 msgid "Duration:"
 msgstr "Durata:"
 
-#: ui/Bell.qml:181 ui/KeyboardFilters.qml:55 ui/KeyboardFilters.qml:151
+#: ui/Bell.qml:165 ui/KeyboardFilters.qml:55 ui/KeyboardFilters.qml:151
 #: ui/MouseNavigation.qml:51 ui/MouseNavigation.qml:73
 #: ui/MouseNavigation.qml:95
 #, kde-format
@@ -476,7 +463,7 @@ msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
-#: ui/Bell.qml:185 ui/KeyboardFilters.qml:59 ui/KeyboardFilters.qml:155
+#: ui/Bell.qml:169 ui/KeyboardFilters.qml:59 ui/KeyboardFilters.qml:155
 #: ui/MouseNavigation.qml:55 ui/MouseNavigation.qml:77
 #: ui/MouseNavigation.qml:99
 #, kde-format
@@ -888,6 +875,15 @@ msgstr "Normale"
 msgctxt "@label Large cursor size"
 msgid "Large"
 msgstr "Grande"
+
+#~ msgctxt "@label"
+#~ msgid "Emits a sound whenever certain keys are pressed"
+#~ msgstr "Emette un suono ogni volta che determinati tasti sono premuti"
+
+#~ msgctxt "@label"
+#~ msgid "Flashes the screen whenever certain keys are pressed"
+#~ msgstr ""
+#~ "Fa lampeggiare lo schermo ogni volta che vengono premuti determinati tasti"
 
 #~ msgctxt "@info:tooltip"
 #~ msgid ""
