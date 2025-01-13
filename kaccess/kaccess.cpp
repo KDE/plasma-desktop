@@ -460,7 +460,7 @@ void KAccessApp::xkbBellNotify(xcb_xkb_bell_notify_event_t *event)
     QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
                                                       QStringLiteral("/org/kde/KWin/Effect/SystemBell1"),
                                                       QStringLiteral("org.kde.KWin.Effect.SystemBell1"),
-                                                      QStringLiteral("triggerScreen"));
+                                                      QStringLiteral("triggerWindow"));
 
     QDBusConnection::sessionBus().call(msg, QDBus::NoBlock);
 }
