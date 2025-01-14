@@ -6,20 +6,21 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2011, 2013, 2015, 2016, 2017, 2019, 2020, 2021.
 # Frank Steinmetzger <dev-kde@felsenfleischer.de>, 2022.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
+# SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-24 03:46+0000\n"
-"PO-Revision-Date: 2023-02-27 20:14+0100\n"
-"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
+"PO-Revision-Date: 2024-11-19 17:43+0100\n"
+"Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -85,7 +86,7 @@ msgstr "Andere Fenster beim Überfahren von Vorschauen ausblenden"
 #: package/contents/ui/ConfigAppearance.qml:44
 #, kde-format
 msgid "Mark applications that play audio"
-msgstr "Anwendung mit Audio-Wiedergabe markieren"
+msgstr "Anwendungen mit Audio-Wiedergabe markieren"
 
 #: package/contents/ui/ConfigAppearance.qml:52
 #, kde-format
@@ -106,12 +107,12 @@ msgstr "Maximale Anzahl Zeilen:"
 #: package/contents/ui/ConfigAppearance.qml:67
 #, kde-format
 msgid "Always arrange tasks in rows of as many columns"
-msgstr "Fenster immer in Zeilen mit dieser Anzahl Spalten anordnen"
+msgstr "Anwendungen immer in Zeilen mit dieser Anzahl Spalten anordnen"
 
 #: package/contents/ui/ConfigAppearance.qml:67
 #, kde-format
 msgid "Always arrange tasks in columns of as many rows"
-msgstr "Fenster immer in Spalten mit dieser Anzahl Zeilen anordnen"
+msgstr "Anwendungen immer in Spalten mit dieser Anzahl Zeilen anordnen"
 
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
@@ -166,7 +167,7 @@ msgstr "Beim Anklicken einer Anwendungsgruppe:"
 #, kde-format
 msgctxt "Completes the sentence 'Clicking grouped task cycles through tasks' "
 msgid "Cycles through tasks"
-msgstr "Zwischen Anwendungen wechseln"
+msgstr "Wechselt zwischen Anwendungen"
 
 #: package/contents/ui/ConfigBehavior.qml:63
 #, kde-format
@@ -247,18 +248,18 @@ msgstr "Starter getrennt halten"
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Clicking active task:"
-msgstr "Beim Anklicken des aktiven Fensters:"
+msgstr "Beim Anklicken der aktiven Anwendung:"
 
 #: package/contents/ui/ConfigBehavior.qml:122
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
-msgstr "Das Fenster minimieren"
+msgstr "Die Anwendung minimieren"
 
 #: package/contents/ui/ConfigBehavior.qml:127
 #, kde-format
 msgid "Middle-clicking any task:"
-msgstr "Bei Mittelklick auf ein Fenster:"
+msgstr "Bei Mittelklick auf eine Anwendung:"
 
 #: package/contents/ui/ConfigBehavior.qml:131
 #, kde-format
@@ -298,7 +299,7 @@ msgctxt ""
 "Part of a sentence: 'Middle-clicking any task brings it to the current "
 "virtual desktop'"
 msgid "Brings it to the current virtual desktop"
-msgstr "Verschiebt auf aktuelle virtuelle Arbeitsfläche"
+msgstr "Verschiebt es auf die aktuelle virtuelle Arbeitsfläche"
 
 #: package/contents/ui/ConfigBehavior.qml:146
 #, kde-format
@@ -310,7 +311,7 @@ msgstr "Mausrad:"
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
-msgstr "Wechselt zwischen laufenden Anwendungen"
+msgstr "Wechselt zwischen Anwendungen"
 
 #: package/contents/ui/ConfigBehavior.qml:156
 #, kde-format
@@ -366,13 +367,13 @@ msgstr "Unten"
 #: package/contents/ui/ConfigBehavior.qml:233
 #, kde-format
 msgid "To the right"
-msgstr "Am linken Rand"
+msgstr "An der rechten Seite"
 
 #: package/contents/ui/ConfigBehavior.qml:215
 #: package/contents/ui/ConfigBehavior.qml:231
 #, kde-format
 msgid "To the left"
-msgstr "Am rechten Rand"
+msgstr "An der linken Seite"
 
 #: package/contents/ui/ConfigBehavior.qml:227
 #, kde-format
