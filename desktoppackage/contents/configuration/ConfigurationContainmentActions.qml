@@ -44,26 +44,6 @@ Item {
         }
     }
 
-    Component {
-        id: aboutComponent
-
-        Kirigami.OverlaySheet {
-            id: internalAboutDialog
-
-            property alias metaData: aboutPluginPage.metaData
-
-            width: Math.round(root.width * 0.8)
-            onClosed: destroy()
-
-            AboutPlugin {
-                id: aboutPluginPage
-                metaData: internalAboutDialog.metaData
-            }
-
-            Component.onCompleted: open();
-        }
-    }
-
     GridLayout {
         id: mainColumn
         flow: GridLayout.TopToBottom
@@ -152,20 +132,6 @@ Item {
                     enabled: model.hasConfigurationInterface
                     onClicked: {
                         configDialog.currentContainmentActionsModel.showConfiguration(index, this);
-                    }
-                }
-                QQC2.Button {
-                    icon.name: "help-about-symbolic"
-                    width: height
-                    onClicked: {
-                        const metaData = configDialog.currentContainmentActionsModel.aboutMetaData(index);
-                        if (!metaData) {
-                            return;
-                        }
-                        aboutComponent.incubateObject(root.Window.window.contentItem, {
-                            "metaData": metaData,
-                            "title": i18ndc("plasma_shell_org.kde.plasma.desktop", "@title", "About"),
-                        }, Qt.Asynchronous);
                     }
                 }
                 QQC2.Button {
