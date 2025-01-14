@@ -99,6 +99,16 @@ Loader {
 
                 // Lots of spacing with no thumbnails looks bad
                 spacing: Plasmoid.configuration.showToolTips ? Kirigami.Units.gridUnit : 0
+
+                // Required to know whether to display the media player buttons on the first window or not
+                property bool hasTrackInATitle: {
+                    var found = false
+                    for (var i=0; i<model.items.count && !found; i++) {
+                        found = model.items.get(i).model.display.includes(playerData?.track)
+                    }
+                    return found
+                }
+
             }
 
             DelegateModel {
@@ -123,6 +133,7 @@ Loader {
                     isOnAllVirtualDesktops: model.IsOnAllVirtualDesktops
                     virtualDesktops: model.VirtualDesktops
                     activities: model.Activities
+                    hasTrackInATitle: groupToolTipListView.hasTrackInATitle
                 }
             }
         }
