@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kickoff\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-06 00:42+0000\n"
-"PO-Revision-Date: 2024-09-13 17:31+0200\n"
+"PO-Revision-Date: 2024-11-14 14:12+0100\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -100,30 +100,29 @@ msgid "Remove icon"
 msgstr "Symbol entfernen"
 
 #: package/contents/ui/ConfigGeneral.qml:120
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgid "Show applications as:"
-msgstr "Weitere Anwendungen anzeigen:"
+msgstr "Anwendungen anzeigen als:"
 
 #: package/contents/ui/ConfigGeneral.qml:122
 #, kde-format
 msgid "Name only"
-msgstr ""
+msgstr "Nur Name"
 
 #: package/contents/ui/ConfigGeneral.qml:122
 #, kde-format
 msgid "Description only"
-msgstr ""
+msgstr "Nur Beschreibung"
 
 #: package/contents/ui/ConfigGeneral.qml:122
 #, kde-format
 msgid "Name (Description)"
-msgstr ""
+msgstr "Name (Beschreibung)"
 
 #: package/contents/ui/ConfigGeneral.qml:122
 #, kde-format
 msgid "Description (Name)"
-msgstr ""
+msgstr "Beschreibung (Name)"
 
 #: package/contents/ui/ConfigGeneral.qml:132
 #, kde-format
