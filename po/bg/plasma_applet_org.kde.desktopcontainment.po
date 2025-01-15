@@ -3,20 +3,20 @@
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2010, 2011.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-09 00:42+0000\n"
-"PO-Revision-Date: 2024-11-10 12:42+0100\n"
+"PO-Revision-Date: 2025-01-15 00:05+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 25.03.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: package/contents/config/config.qml:16
@@ -439,7 +439,7 @@ msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
 "or folder"
 msgid "Link Target Not Found"
-msgstr ""
+msgstr "Не е намерена целта на връзката"
 
 #: plugins/folder/foldermodel.cpp:871
 #, kde-kuit-format
@@ -448,6 +448,8 @@ msgid ""
 "<filename>%1</filename> points to <filename>%2</filename>, but that could "
 "not be found. It may have been moved or deleted."
 msgstr ""
+"<filename>%1</filename> сочи към <filename>%2</filename>, но не можеда бъде "
+"намерен. Може би е преместен или изтрит."
 
 #: plugins/folder/foldermodel.cpp:1729
 #, kde-format
@@ -466,13 +468,12 @@ msgid "&Open"
 msgstr "&Отваряне"
 
 #: plugins/folder/foldermodel.cpp:1739
-#, fuzzy, kde-format
-#| msgid "Show all"
+#, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
 "link points to"
 msgid "Show Target"
-msgstr "Показване на всички"
+msgstr "Показване на целта"
 
 #: plugins/folder/foldermodel.cpp:1863
 #, kde-format

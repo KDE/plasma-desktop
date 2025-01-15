@@ -3,13 +3,13 @@
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2009.
-# SPDX-FileCopyrightText: 2022, 2024 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022, 2024, 2025 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-09 00:42+0000\n"
-"PO-Revision-Date: 2024-11-10 13:29+0100\n"
+"PO-Revision-Date: 2025-01-15 00:07+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -153,20 +153,18 @@ msgid "Ignored applications:"
 msgstr "Игнориране приложения:"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' executable names here (separated by commas or colons, for "
-#| "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
-"Въведете изпълними имена на  приложения тук (разделени от запетая или "
-"двуеточие,например 'xterm:konsole' или 'xterm,konsole'), за да се "
-"предотврати автоматичното им стартиране заедно с други сесийни приложения."
+"Въведете тук идентификатора на десктоп файла на приложенията или имената на "
+"изпълнимите файлове в X11. (разделени със запетаи или двоеточия, например "
+"'xterm:org.kde.konsole.desktop' или 'xterm,org.kde.konsole.desktop'), за да "
+"предотвратите автоматичното им стартиране заедно с други възстановени от "
+"сесията приложения."
 
 #: ui/main.qml:166
 #, kde-format
