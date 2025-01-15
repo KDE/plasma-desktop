@@ -465,7 +465,8 @@ FocusScope {
             gridView.ctrlPressed = (mouse.modifiers & Qt.ControlModifier);
             gridView.shiftPressed = (mouse.modifiers & Qt.ShiftModifier);
 
-            var item = gridView.itemAt(mouse.x, mouse.y);
+            const mappedPos = mapToItem(gridView.contentItem, mouse.x, mouse.y)
+            var item = gridView.itemAt(mappedPos.x, mappedPos.y);
             var leftEdge = Math.min(gridView.contentX, gridView.originX);
 
             if (!item || item.blank) {
