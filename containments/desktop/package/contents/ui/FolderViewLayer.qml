@@ -374,7 +374,7 @@ FocusScope {
             const actionName = sharedActions[i];
             const modelAction = folderView.model.action(actionName);
             Plasmoid.contextualActions.push(modelAction)
-            if (actionName === "newMenu") {
+            if (actionName === "emptyTrash") {
                 Plasmoid.contextualActions.push(viewPropertiesAction)
             }
         }
