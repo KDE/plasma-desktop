@@ -10,10 +10,13 @@
 #include <QObject>
 #include <QStandardPaths>
 #include <QString>
+#include <qqmlregistration.h>
 
 class DesktopSchemeHelper : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_SINGLETON
 
 public:
     explicit DesktopSchemeHelper(QObject *parent = nullptr);
