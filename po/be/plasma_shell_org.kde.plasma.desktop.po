@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-07 00:42+0000\n"
+"POT-Creation-Date: 2025-01-19 00:42+0000\n"
 "PO-Revision-Date: 2024-11-06 22:00\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -242,19 +242,13 @@ msgstr "Alt"
 msgid "Meta"
 msgstr "Meta"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:95
+#: contents/configuration/ConfigurationContainmentActions.qml:75
 #, kde-format
 msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
 msgid "+"
 msgstr "+"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:167
-#, kde-format
-msgctxt "@title"
-msgid "About"
-msgstr "Пра праграму"
-
-#: contents/configuration/ConfigurationContainmentActions.qml:182
+#: contents/configuration/ConfigurationContainmentActions.qml:148
 #: contents/configuration/MouseEventInputButton.qml:13
 #, kde-format
 msgid "Add Action"
@@ -850,6 +844,10 @@ msgstr "Выйсці з рэжыму рэдагавання"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Індыкатар фокуса панэлі"
+
+#~ msgctxt "@title"
+#~ msgid "About"
+#~ msgstr "Пра праграму"
 
 #~ msgid "Global Themes"
 #~ msgstr "Глабальныя тэмы"

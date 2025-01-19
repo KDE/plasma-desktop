@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-07 00:42+0000\n"
+"POT-Creation-Date: 2025-01-19 00:42+0000\n"
 "PO-Revision-Date: 2025-01-07 06:58+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -241,19 +241,13 @@ msgstr "Alt"
 msgid "Meta"
 msgstr "Meta"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:95
+#: contents/configuration/ConfigurationContainmentActions.qml:75
 #, kde-format
 msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
 msgid "+"
 msgstr "+"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:167
-#, kde-format
-msgctxt "@title"
-msgid "About"
-msgstr "O programu"
-
-#: contents/configuration/ConfigurationContainmentActions.qml:182
+#: contents/configuration/ConfigurationContainmentActions.qml:148
 #: contents/configuration/MouseEventInputButton.qml:13
 #, kde-format
 msgid "Add Action"
@@ -845,6 +839,10 @@ msgstr "Izhod iz urejevalnega načina"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Indikator fokusa plošče"
+
+#~ msgctxt "@title"
+#~ msgid "About"
+#~ msgstr "O programu"
 
 #~ msgid "Global Themes"
 #~ msgstr "Globalne teme"

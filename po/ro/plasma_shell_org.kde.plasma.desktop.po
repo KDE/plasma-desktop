@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-07 00:42+0000\n"
+"POT-Creation-Date: 2025-01-19 00:42+0000\n"
 "PO-Revision-Date: 2024-06-08 17:09+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -238,19 +238,13 @@ msgstr "Alt"
 msgid "Meta"
 msgstr "Meta"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:95
+#: contents/configuration/ConfigurationContainmentActions.qml:75
 #, kde-format
 msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
 msgid "+"
 msgstr "+"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:167
-#, kde-format
-msgctxt "@title"
-msgid "About"
-msgstr "Despre"
-
-#: contents/configuration/ConfigurationContainmentActions.qml:182
+#: contents/configuration/ConfigurationContainmentActions.qml:148
 #: contents/configuration/MouseEventInputButton.qml:13
 #, kde-format
 msgid "Add Action"
@@ -869,6 +863,10 @@ msgstr "Ieși din regim de modificare"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Indicator de focalizare a panoului"
+
+#~ msgctxt "@title"
+#~ msgid "About"
+#~ msgstr "Despre"
 
 #~ msgid "Global Themes"
 #~ msgstr "Tematici globale"

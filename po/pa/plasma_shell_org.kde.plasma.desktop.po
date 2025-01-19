@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-07 00:42+0000\n"
+"POT-Creation-Date: 2025-01-19 00:42+0000\n"
 "PO-Revision-Date: 2024-10-01 21:44-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -235,19 +235,13 @@ msgstr "Alt"
 msgid "Meta"
 msgstr "Meta"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:95
+#: contents/configuration/ConfigurationContainmentActions.qml:75
 #, kde-format
 msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
 msgid "+"
 msgstr "+"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:167
-#, kde-format
-msgctxt "@title"
-msgid "About"
-msgstr "ਇਸ ਬਾਰੇ"
-
-#: contents/configuration/ConfigurationContainmentActions.qml:182
+#: contents/configuration/ConfigurationContainmentActions.qml:148
 #: contents/configuration/MouseEventInputButton.qml:13
 #, kde-format
 msgid "Add Action"
@@ -837,6 +831,10 @@ msgstr "ਸੋਧ ਢੰਗ ਨੂੰ ਛੱਡੋ"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "ਪੈਨਲ ਫੋਕਸ ਸੰਕੇਤਕ"
+
+#~ msgctxt "@title"
+#~ msgid "About"
+#~ msgstr "ਇਸ ਬਾਰੇ"
 
 #~ msgid "Global Themes"
 #~ msgstr "ਗਲੋਬਲ ਥੀਮ"

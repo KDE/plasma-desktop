@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-07 00:42+0000\n"
+"POT-Creation-Date: 2025-01-19 00:42+0000\n"
 "PO-Revision-Date: 2024-09-11 19:57+0900\n"
 "Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -239,19 +239,13 @@ msgstr "Alt"
 msgid "Meta"
 msgstr "Meta"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:95
+#: contents/configuration/ConfigurationContainmentActions.qml:75
 #, kde-format
 msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
 msgid "+"
 msgstr "+"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:167
-#, kde-format
-msgctxt "@title"
-msgid "About"
-msgstr "情報"
-
-#: contents/configuration/ConfigurationContainmentActions.qml:182
+#: contents/configuration/ConfigurationContainmentActions.qml:148
 #: contents/configuration/MouseEventInputButton.qml:13
 #, kde-format
 msgid "Add Action"
@@ -848,6 +842,10 @@ msgstr "編集モードを終了"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "パネルフォーカスインジケータ"
+
+#~ msgctxt "@title"
+#~ msgid "About"
+#~ msgstr "情報"
 
 #~ msgid "Global Themes"
 #~ msgstr "グローバルテーマ"
