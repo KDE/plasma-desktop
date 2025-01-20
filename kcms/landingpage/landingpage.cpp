@@ -71,11 +71,16 @@ void MostUsedModel::setResultModel(ResultModel *model)
     }
 
     auto updateModel = [this]() {
+        auto oldModel = sourceModel();
         if (m_resultModel->rowCount() >= 6) {
             setSourceModel(m_resultModel);
         } else {
             setSourceModel(m_defaultModel);
         }
+        if (oldModel != sourceModel()) {
+            ignoredKCMs.clear();
+        }
+        invalidateFilter();
     };
 
     m_resultModel = model;
@@ -98,14 +103,20 @@ QHash<int, QByteArray> MostUsedModel::roleNames() const
 
 bool MostUsedModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
 {
-    const QString desktopName = sourceModel()->index(source_row, 0, source_parent).data(ResultModel::ResourceRole).toUrl().path();
-    if (desktopName.endsWith(QLatin1String(".desktop"))) {
+    const auto ignoreKCM = [this](const QString &desktopName) {
         const bool isAlreadyIgnored = ignoredKCMs.contains(desktopName);
         if (!isAlreadyIgnored) {
             ignoredKCMs.append(desktopName);
         }
+    };
+
+    const QString desktopName = sourceModel()->index(source_row, 0, source_parent).data(ResultModel::ResourceRole).toUrl().path();
+
+    if (desktopName.endsWith(QLatin1String(".desktop"))) {
+        ignoreKCM(desktopName);
         return false;
     }
+
     KService::Ptr service = KService::serviceByStorageId(desktopName);
     return service && (source_row - ignoredKCMs.size() < 6);
 }
