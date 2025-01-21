@@ -19,16 +19,60 @@ Item {
     property bool checked: false
     property bool windowVisible: false
     property bool panelVisible: true
+
     property bool translucentPanel: false
     property bool sunkenPanel: false
     property bool adaptivePanel: false
+    property bool panelReservesSpace: true
+
     property bool fillAvailable: false
     property int floatingGap: 0
-    property int windowZ: 0
     property var mainIconSource: null
     property int screenHeight: Math.round(screenRect.height / 2)
 
     readonly property bool iconAndLabelsShouldlookSelected: checked || mouseArea.pressed
+
+    function maximizeWindow() {
+
+        hidePanelLater.stop()
+        hidePanel.stop()
+        showPanel.restart()
+
+        moveWindowOverPanel.stop()
+        resetWindowOverPanel.restart()
+
+        maximizeAnimation.restart()
+    }
+    function hidePanel() {
+
+        hidePanelLater.stop()
+        maximizeAnimation.stop()
+        resetMaximize.restart()
+
+        moveWindowOverPanel.stop()
+        resetWindowOverPanel.restart()
+
+        hidePanel.restart()
+    }
+
+    function dodgePanel() {
+
+        hidePanel.stop()
+        showPanel.restart()
+
+        maximizeAnimation.stop()
+        resetMaximize.restart()
+
+        moveWindowOverPanel.restart()
+        hidePanelLater.restart()
+    }
+
+    Timer {
+        id: hidePanelLater
+        interval: Kirigami.Units.veryLongDuration / 2
+        onTriggered: hidePanel.restart()
+        running: false
+    }
 
     signal clicked()
 
@@ -70,13 +114,20 @@ Item {
 
             RowLayout {
                 anchors.fill: parent
+                z: 1
                 Rectangle {
                     id: panelImage
 
-                    implicitWidth: root.isVertical ? Math.round(parent.width / 6) : Math.round(parent.width * (root.fillAvailable ? 1 : 0.8))
+                    property real sunkenValue: 0
+
+                    Component.onCompleted: {
+                        panelImage.sunkenValue = root.sunkenPanel / 2
+                    }
+
+                    implicitWidth: root.isVertical ? Math.round(parent.width / 6) : Math.round(parent.width * (root.fillAvailable ? 1 : 0.7))
                     implicitHeight: root.isVertical ? Math.round(parent.height * (root.fillAvailable ? 1 : 0.8)) : Math.round(parent.height / 4)
                     Layout.alignment: root.alignment
-                    Layout.bottomMargin: root.sunkenPanel * -Math.round(height / 2) + root.floatingGap
+                    Layout.bottomMargin: sunkenValue * -Math.round(height) + root.floatingGap
                     color: root.translucentPanel ? screenRect.color : Kirigami.Theme.backgroundColor
                     opacity: root.translucentPanel ? 0.8 : 1.0
                     border.color: "transparent"
@@ -84,7 +135,33 @@ Item {
                     clip: root.adaptivePanel
                     radius: Kirigami.Units.cornerRadius
 
-                    z: 1
+                    SequentialAnimation on sunkenValue {
+                        id: hidePanel
+                        running: false
+                        NumberAnimation {
+                            to: 0
+                            duration: Kirigami.Units.shortDuration
+                        }
+                        NumberAnimation {
+                            to: 1
+                            duration: Kirigami.Units.veryLongDuration
+                        }
+                        PauseAnimation {
+                            duration: Kirigami.Units.veryLongDuration * 2
+                        }
+                        NumberAnimation {
+                            to: 0.5
+                            duration: Kirigami.Units.veryLongDuration
+                        }
+                    }
+                    SequentialAnimation on sunkenValue {
+                        id: showPanel
+                        running: false
+                        NumberAnimation {
+                            to: 0
+                            duration: Kirigami.Units.shortDuration
+                        }
+                    }
 
                     Loader {
                         id: horizontalAdaptivePanelLoader
@@ -130,16 +207,70 @@ Item {
 
             Rectangle {
                 id: window
-                width: Math.round(parent.width / 2)
-                height: Math.round(parent.height / 2)
+
+                property real maximized: 0
+                property real windowOverPanel: 0
+
+                width: Math.round(parent.width * (0.5 + 0.5 * maximized))
+                height: Math.round(parent.height * (0.5 + 0.5 * maximized) - panelImage.height * root.panelReservesSpace * maximized)
                 visible: root.windowVisible
                 radius: 5
                 color: Kirigami.Theme.highlightColor
                 border.color: "transparent"
 
-                x: root.isVertical ? Math.round(panelImage.x + panelImage.width / 2) : Math.round(screenRect.width / 2 - width / 2) + Kirigami.Units.gridUnit
-                y: root.isVertical ? Math.round(screenRect.height / 2 - height / 2) : Math.round(panelImage.y - height + panelImage.height / 2)
-                z: root.windowZ
+                x: (Math.round(screenRect.width / 2 - width / 2) + Kirigami.Units.gridUnit) * (1 - maximized)
+                y: (Math.round(screenRect.height / 2 - height / 2) - Kirigami.Units.mediumSpacing) * (1 - maximized) + windowOverPanel * Kirigami.Units.mediumSpacing * 2
+                z: 0
+
+                SequentialAnimation on maximized {
+                    id: maximizeAnimation
+                    running: false
+                    NumberAnimation {
+                        to: 0
+                        duration: Kirigami.Units.shortDuration
+                    }
+                    NumberAnimation {
+                        to: 1
+                        duration: Kirigami.Units.longDuration
+                    }
+                    PauseAnimation {
+                        duration: Kirigami.Units.veryLongDuration * 2
+                    }
+                    NumberAnimation {
+                        to: 0
+                        duration: Kirigami.Units.longDuration
+                    }
+                }
+                NumberAnimation on maximized {
+                    id: resetMaximize
+                    running: false
+                    to: 0
+                    duration: Kirigami.Units.shortDuration
+                }
+                SequentialAnimation on windowOverPanel {
+                    id: moveWindowOverPanel
+                    NumberAnimation {
+                        to: 0
+                        duration: Kirigami.Units.shortDuration
+                    }
+                    NumberAnimation {
+                        to: 1
+                        duration: Kirigami.Units.veryLongDuration
+                    }
+                    PauseAnimation {
+                        duration: Kirigami.Units.veryLongDuration * 2
+                    }
+                    NumberAnimation {
+                        to: 0
+                        duration: Kirigami.Units.veryLongDuration
+                    }
+                }
+                NumberAnimation on windowOverPanel {
+                    id: resetWindowOverPanel
+                    running: false
+                    to: 0
+                    duration: Kirigami.Units.shortDuration
+                }
 
                 Row {
                     anchors.top: parent.top

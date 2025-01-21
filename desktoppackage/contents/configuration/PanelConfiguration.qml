@@ -356,18 +356,30 @@ ColumnLayout {
             PanelRepresentation {
                 id: visibilityRepresentation
                 Layout.alignment: Qt.AlignHCenter
-                sunkenPanel: autoHideBox.previewIndex !== 0
+                sunkenPanel: autoHideBox.previewIndex == 1 || autoHideBox.previewIndex == 2
                 onClicked: autoHideBox.popup.visible = true
+                windowVisible: true
+                panelReservesSpace: autoHideBox.previewIndex == 0
             }
             PC3.ComboBox {
                 id: autoHideBox
                 property int previewIndex: popup.visible ? highlightedIndex : currentIndex
+                property int animationIndex: popup.visible ? highlightedIndex : -1
                 model: [
                     i18nd("plasma_shell_org.kde.plasma.desktop", "Always visible"),
                     i18nd("plasma_shell_org.kde.plasma.desktop", "Auto hide"),
                     i18nd("plasma_shell_org.kde.plasma.desktop", "Dodge windows"),
                     i18nd("plasma_shell_org.kde.plasma.desktop", "Windows go below"),
                 ]
+                onAnimationIndexChanged: {
+                    if (animationIndex == 0 || animationIndex == 3) {
+                        visibilityRepresentation.maximizeWindow()
+                    } else if (animationIndex == 1) {
+                        visibilityRepresentation.hidePanel()
+                    } else if (animationIndex == 2) {
+                        visibilityRepresentation.dodgePanel()
+                    }
+                }
                 Layout.alignment: Qt.AlignHCenter
                 Layout.minimumWidth: visibilityRepresentation.width
                 currentIndex: {
