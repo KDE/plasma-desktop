@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-19 00:42+0000\n"
+"POT-Creation-Date: 2025-01-22 00:42+0000\n"
 "PO-Revision-Date: 2024-09-11 19:57+0900\n"
 "Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -377,157 +377,157 @@ msgstr "配置"
 msgid "Center"
 msgstr "中央"
 
-#: contents/configuration/PanelConfiguration.qml:290
+#: contents/configuration/PanelConfiguration.qml:298
 #, kde-format
 msgid "Height"
 msgstr "高さ"
 
-#: contents/configuration/PanelConfiguration.qml:291
+#: contents/configuration/PanelConfiguration.qml:299
 #, kde-format
 msgid "Width"
 msgstr "幅"
 
-#: contents/configuration/PanelConfiguration.qml:310
+#: contents/configuration/PanelConfiguration.qml:318
 #, kde-format
 msgid "Fill height"
 msgstr "高さを埋める"
 
-#: contents/configuration/PanelConfiguration.qml:310
+#: contents/configuration/PanelConfiguration.qml:318
 #, kde-format
 msgid "Fill width"
 msgstr "幅を埋める"
 
-#: contents/configuration/PanelConfiguration.qml:311
+#: contents/configuration/PanelConfiguration.qml:319
 #, kde-format
 msgid "Fit content"
 msgstr "内容に合わせる"
 
-#: contents/configuration/PanelConfiguration.qml:312
+#: contents/configuration/PanelConfiguration.qml:320
 #, kde-format
 msgid "Custom"
 msgstr "カスタム"
 
-#: contents/configuration/PanelConfiguration.qml:338
+#: contents/configuration/PanelConfiguration.qml:353
 #, kde-format
 msgid "Visibility"
 msgstr "表示"
 
-#: contents/configuration/PanelConfiguration.qml:351
+#: contents/configuration/PanelConfiguration.qml:369
 #, kde-format
 msgid "Always visible"
 msgstr "常に表示"
 
-#: contents/configuration/PanelConfiguration.qml:352
+#: contents/configuration/PanelConfiguration.qml:370
 #, kde-format
 msgid "Auto hide"
 msgstr "自動的に隠す"
 
-#: contents/configuration/PanelConfiguration.qml:353
+#: contents/configuration/PanelConfiguration.qml:371
 #, kde-format
 msgid "Dodge windows"
 msgstr "ウィンドウを避ける"
 
-#: contents/configuration/PanelConfiguration.qml:354
+#: contents/configuration/PanelConfiguration.qml:372
 #, fuzzy, kde-format
 #| msgid "Windows Go Below"
 msgid "Windows go below"
 msgstr "ウィンドウを覆う"
 
-#: contents/configuration/PanelConfiguration.qml:397
+#: contents/configuration/PanelConfiguration.qml:432
 #, kde-format
 msgid "Opacity"
 msgstr "透明度"
 
-#: contents/configuration/PanelConfiguration.qml:411
+#: contents/configuration/PanelConfiguration.qml:446
 #, kde-format
 msgid "Adaptive"
 msgstr "自動調整"
 
-#: contents/configuration/PanelConfiguration.qml:412
+#: contents/configuration/PanelConfiguration.qml:447
 #, kde-format
 msgid "Opaque"
 msgstr "不透明"
 
-#: contents/configuration/PanelConfiguration.qml:413
+#: contents/configuration/PanelConfiguration.qml:448
 #, kde-format
 msgid "Translucent"
 msgstr "透明"
 
-#: contents/configuration/PanelConfiguration.qml:436
+#: contents/configuration/PanelConfiguration.qml:479
 #, kde-format
 msgid "Floating"
 msgstr "フローティング"
 
-#: contents/configuration/PanelConfiguration.qml:446
+#: contents/configuration/PanelConfiguration.qml:489
 #, kde-format
 msgid "Style"
 msgstr "スタイル"
 
-#: contents/configuration/PanelConfiguration.qml:486
+#: contents/configuration/PanelConfiguration.qml:529
 #, kde-format
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
 msgstr "修正する"
 
-#: contents/configuration/PanelConfiguration.qml:572
+#: contents/configuration/PanelConfiguration.qml:615
 #, kde-format
 msgid "Panel Width:"
 msgstr "パネルの幅:"
 
-#: contents/configuration/PanelConfiguration.qml:573
+#: contents/configuration/PanelConfiguration.qml:616
 #, kde-format
 msgid "Panel Height:"
 msgstr "パネルの高さ:"
 
-#: contents/configuration/PanelConfiguration.qml:596
+#: contents/configuration/PanelConfiguration.qml:639
 #, kde-format
 msgid "Focus shortcut:"
 msgstr "フォーカスショートカット:"
 
-#: contents/configuration/PanelConfiguration.qml:607
+#: contents/configuration/PanelConfiguration.qml:650
 #, kde-format
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "キーボードショートカットを押してパネルをフォーカス"
 
-#: contents/configuration/PanelConfiguration.qml:641
+#: contents/configuration/PanelConfiguration.qml:684
 #, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "パネルを削除"
 
-#: contents/configuration/PanelConfiguration.qml:644
+#: contents/configuration/PanelConfiguration.qml:687
 #, kde-format
 msgid "Remove this panel; this action is undo-able"
 msgstr "このパネルを削除します。この操作は取り消せません"
 
-#: contents/configuration/PanelConfiguration.qml:653
+#: contents/configuration/PanelConfiguration.qml:696
 #, fuzzy, kde-format
 #| msgid "Remove Panel"
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
 msgstr "パネルを削除"
 
-#: contents/configuration/PanelConfiguration.qml:657
+#: contents/configuration/PanelConfiguration.qml:700
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:666
+#: contents/configuration/PanelConfiguration.qml:709
 #, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "閉じる"
 
-#: contents/configuration/PanelConfiguration.qml:666
+#: contents/configuration/PanelConfiguration.qml:709
 #, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
 msgstr "編集モードを終了"
 
-#: contents/configuration/PanelConfiguration.qml:669
+#: contents/configuration/PanelConfiguration.qml:712
 #, kde-format
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "パネル設定ウィンドウを閉じて編集モードを終了する"
