@@ -14,7 +14,7 @@
 
 class QAction;
 
-class SMServerConfigImpl;
+class SMServerSettings;
 
 class OrgFreedesktopLogin1ManagerInterface;
 
@@ -36,6 +36,8 @@ class SMServerConfig : public KQuickManagedConfigModule
     /// Can setup the firmware
     Q_PROPERTY(bool canFirmwareSetup READ canFirmwareSetup CONSTANT)
 
+    Q_PROPERTY(SMServerSettings *settings READ settings CONSTANT)
+
 public:
     explicit SMServerConfig(QObject *parent, const KPluginMetaData &metaData);
     ~SMServerConfig() override;
@@ -54,6 +56,8 @@ public:
 
     void defaults() override;
 
+    SMServerSettings *settings() const;
+
 public Q_SLOTS:
     void save() override;
 
@@ -70,6 +74,7 @@ private:
     void checkFirmwareSetupRequested();
 
     OrgFreedesktopLogin1ManagerInterface *m_login1Manager = nullptr;
+    SMServerSettings *m_settings;
     QAction *m_rebootNowAction = nullptr;
     bool m_isUefi = false;
     bool m_restartInSetupScreen = false;
