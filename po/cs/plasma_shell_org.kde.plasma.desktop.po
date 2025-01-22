@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-07 00:42+0000\n"
+"POT-Creation-Date: 2025-01-22 02:32+0000\n"
 "PO-Revision-Date: 2024-10-15 11:00+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -382,157 +382,157 @@ msgstr "Zarovnání"
 msgid "Center"
 msgstr "Střed"
 
-#: contents/configuration/PanelConfiguration.qml:290
+#: contents/configuration/PanelConfiguration.qml:298
 #, kde-format
 msgid "Height"
 msgstr "Výška"
 
-#: contents/configuration/PanelConfiguration.qml:291
+#: contents/configuration/PanelConfiguration.qml:299
 #, kde-format
 msgid "Width"
 msgstr "Šířka"
 
-#: contents/configuration/PanelConfiguration.qml:310
+#: contents/configuration/PanelConfiguration.qml:318
 #, kde-format
 msgid "Fill height"
 msgstr "Vyplnit víšku"
 
-#: contents/configuration/PanelConfiguration.qml:310
+#: contents/configuration/PanelConfiguration.qml:318
 #, kde-format
 msgid "Fill width"
 msgstr "Vyplnit šířku"
 
-#: contents/configuration/PanelConfiguration.qml:311
+#: contents/configuration/PanelConfiguration.qml:319
 #, kde-format
 msgid "Fit content"
 msgstr "Přizpůsob obsah"
 
-#: contents/configuration/PanelConfiguration.qml:312
+#: contents/configuration/PanelConfiguration.qml:320
 #, kde-format
 msgid "Custom"
 msgstr "Vlastní"
 
-#: contents/configuration/PanelConfiguration.qml:338
+#: contents/configuration/PanelConfiguration.qml:353
 #, kde-format
 msgid "Visibility"
 msgstr "Viditelnost"
 
-#: contents/configuration/PanelConfiguration.qml:351
+#: contents/configuration/PanelConfiguration.qml:366
 #, kde-format
 msgid "Always visible"
 msgstr "Vždy viditelný"
 
 # 55051 AttribValues/label
-#: contents/configuration/PanelConfiguration.qml:352
+#: contents/configuration/PanelConfiguration.qml:367
 #, kde-format
 msgid "Auto hide"
 msgstr "Automatické schovávání"
 
-#: contents/configuration/PanelConfiguration.qml:353
+#: contents/configuration/PanelConfiguration.qml:368
 #, kde-format
 msgid "Dodge windows"
 msgstr "Vyhýbat se oknům"
 
-#: contents/configuration/PanelConfiguration.qml:354
+#: contents/configuration/PanelConfiguration.qml:369
 #, kde-format
 msgid "Windows go below"
 msgstr "Okna jdou pod"
 
-#: contents/configuration/PanelConfiguration.qml:397
+#: contents/configuration/PanelConfiguration.qml:420
 #, kde-format
 msgid "Opacity"
 msgstr "Krytí"
 
-#: contents/configuration/PanelConfiguration.qml:411
+#: contents/configuration/PanelConfiguration.qml:434
 #, kde-format
 msgid "Adaptive"
 msgstr "Adaptivní"
 
-#: contents/configuration/PanelConfiguration.qml:412
+#: contents/configuration/PanelConfiguration.qml:435
 #, kde-format
 msgid "Opaque"
 msgstr "Neprůhledné"
 
-#: contents/configuration/PanelConfiguration.qml:413
+#: contents/configuration/PanelConfiguration.qml:436
 #, kde-format
 msgid "Translucent"
 msgstr "Průhledné"
 
-#: contents/configuration/PanelConfiguration.qml:436
+#: contents/configuration/PanelConfiguration.qml:467
 #, kde-format
 msgid "Floating"
 msgstr "Plovoucí"
 
-#: contents/configuration/PanelConfiguration.qml:446
+#: contents/configuration/PanelConfiguration.qml:477
 #, kde-format
 msgid "Style"
 msgstr "Styl"
 
-#: contents/configuration/PanelConfiguration.qml:486
+#: contents/configuration/PanelConfiguration.qml:517
 #, kde-format
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
 msgstr "Opravit"
 
-#: contents/configuration/PanelConfiguration.qml:572
+#: contents/configuration/PanelConfiguration.qml:603
 #, kde-format
 msgid "Panel Width:"
 msgstr "Šířka panelu:"
 
-#: contents/configuration/PanelConfiguration.qml:573
+#: contents/configuration/PanelConfiguration.qml:604
 #, kde-format
 msgid "Panel Height:"
 msgstr "Výška panelu:"
 
-#: contents/configuration/PanelConfiguration.qml:596
+#: contents/configuration/PanelConfiguration.qml:627
 #, kde-format
 msgid "Focus shortcut:"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:607
+#: contents/configuration/PanelConfiguration.qml:638
 #, kde-format
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Touto klávesovou zkratkou se přepnete na panel7"
 
-#: contents/configuration/PanelConfiguration.qml:641
+#: contents/configuration/PanelConfiguration.qml:672
 #, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Smazat panel"
 
-#: contents/configuration/PanelConfiguration.qml:644
+#: contents/configuration/PanelConfiguration.qml:675
 #, kde-format
 msgid "Remove this panel; this action is undo-able"
 msgstr "Odstranit tento panel, tento krok nelze vzít zpět"
 
-#: contents/configuration/PanelConfiguration.qml:653
+#: contents/configuration/PanelConfiguration.qml:684
 #, fuzzy, kde-format
 #| msgid "Remove Panel"
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
 msgstr "Odstranit panel"
 
-#: contents/configuration/PanelConfiguration.qml:657
+#: contents/configuration/PanelConfiguration.qml:688
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:666
+#: contents/configuration/PanelConfiguration.qml:697
 #, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Zavřít"
 
-#: contents/configuration/PanelConfiguration.qml:666
+#: contents/configuration/PanelConfiguration.qml:697
 #, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
 msgstr "Ukončit režim úprav"
 
-#: contents/configuration/PanelConfiguration.qml:669
+#: contents/configuration/PanelConfiguration.qml:700
 #, kde-format
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr ""
