@@ -117,7 +117,7 @@ QString LabelGenerator::generatedDisplayLabel()
         return QString();
     }
 
-    QUrl url = QUrl(DesktopSchemeHelper::getFileUrl(m_folderModel->resolvedUrl().toString()));
+    const QUrl url = m_folderModel->resolvedUrl();
 
     if (m_labelMode == 1 /* Default */) {
         if (url.path().length() <= 1) {
