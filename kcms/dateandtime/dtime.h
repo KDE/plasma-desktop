@@ -29,12 +29,14 @@ class ImageSet;
 class Dtime : public QWidget, public Ui::DateAndTime
 {
     Q_OBJECT
+    Q_PROPERTY(QString selectedTimeZone WRITE setSelectedTimeZone READ selectedTimeZone NOTIFY selectedTimeZoneChanged)
 public:
     explicit Dtime(QWidget *parent, bool haveTimedated);
 
     void processHelperErrors(int code);
     void load();
 
+    void setSelectedTimeZone(QString selectedTimeZone);
     QString selectedTimeZone() const;
     QStringList ntpServers() const;
     bool ntpEnabled() const;
@@ -44,6 +46,7 @@ public:
 
 Q_SIGNALS:
     void timeChanged(bool);
+    void selectedTimeZoneChanged(bool);
 
 private Q_SLOTS:
     void configChanged();
@@ -69,6 +72,7 @@ private:
     bool refresh;
     bool ontimeout;
     bool m_haveTimedated;
+    QString m_selectedTimeZone;
 };
 
 class Kclock : public QWidget
