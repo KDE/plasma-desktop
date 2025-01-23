@@ -11,7 +11,6 @@
 pragma ComponentBehavior: Bound
 
 import QtQuick
-import QtQuick.Window
 import QtQuick.Templates as T
 
 import org.kde.plasma.plasmoid
@@ -88,14 +87,6 @@ EmptyPage {
         readonly property real availableHeight: height - topMargin - bottomMargin
         property bool movedWithKeyboard: false
         property bool movedWithWheel: false
-
-        property int pendingIndex: 0
-        Connections {
-            target: root.Window.window
-            function onFrameSwapped() {
-                view.currentIndex = view.pendingIndex;
-            }
-        }
 
         Accessible.role: Accessible.List
 

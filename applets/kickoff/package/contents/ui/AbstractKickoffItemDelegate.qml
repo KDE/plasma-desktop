@@ -182,13 +182,9 @@ T.ItemDelegate {
             if (!root.activeFocus) {
                 root.forceActiveFocus(Qt.MouseFocusReason)
             }
-            // If the view exports a custom property pending Index, use that one
-            // which will do event compression and ensure we don't do omre than a category switch per frame
-            if (root.view.hasOwnProperty("pendingIndex")) {
-                root.view.pendingIndex = index
-            } else {
-                root.view.currentIndex = index
-            }
+            // No need to check currentIndex first because it's
+            // built into QQuickListView::setCurrentIndex() already
+            root.view.currentIndex = index
         }
         onPressed: mouse => {
             // Select and focus on press to improve responsiveness and touch feedback
