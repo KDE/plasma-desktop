@@ -1054,7 +1054,6 @@ FocusScope {
 
                 Keys.onPressed: event => {
                     event.accepted = true;
-
                     if (event.key === Qt.Key_Control) {
                         ctrlPressed = true;
                     } else if (event.key === Qt.Key_Shift) {

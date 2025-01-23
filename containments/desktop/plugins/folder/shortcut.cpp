@@ -25,7 +25,13 @@ void ShortCut::installAsEventFilterFor(QObject *target)
 
 bool ShortCut::eventFilter(QObject *obj, QEvent *e)
 {
-    if (e->type() == QEvent::KeyPress) {
+    if (e->type() == QEvent::ShortcutOverride) {
+        QKeyEvent *keyEvent = static_cast<QKeyEvent *>(e);
+        const int keyInt = keyEvent->modifiers() & ~Qt::KeypadModifier | keyEvent->key();
+        if (KStandardShortcut::paste().contains(QKeySequence(keyInt))) {
+            return true;
+        }
+    } else if (e->type() == QEvent::KeyPress) {
         QKeyEvent *keyEvent = static_cast<QKeyEvent *>(e);
         const int keyInt = keyEvent->modifiers() & ~Qt::KeypadModifier | keyEvent->key();
         if (KStandardShortcut::deleteFile().contains(QKeySequence(keyInt))) {

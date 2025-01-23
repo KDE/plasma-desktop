@@ -2089,6 +2089,9 @@ void FolderModel::cut()
 
 void FolderModel::paste()
 {
+    // The paste action will be triggered regardless, but we need to sync beforehand the enabled status of the paste
+    // action which depends from clipboard contents
+    updateActions();
     if (QAction *action = m_actionCollection.action(QStringLiteral("paste"))) {
         if (!action->isEnabled()) {
             return;
