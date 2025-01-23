@@ -40,10 +40,8 @@ SMServerConfig::SMServerConfig(QObject *parent, const KPluginMetaData &metaData)
                                                                QStringLiteral("/org/freedesktop/login1"),
                                                                QDBusConnection::systemBus(),
                                                                this))
+    , m_settings(new SMServerSettings(this))
 {
-    auto settings = new SMServerSettings(this);
-    qmlRegisterSingletonInstance("org.kde.desktopsession.private", 1, 0, "Settings", settings);
-
     checkFirmwareSetupRequested();
     m_restartInSetupScreenInitial = m_restartInSetupScreen;
 
@@ -160,6 +158,11 @@ void SMServerConfig::defaults()
 {
     KQuickManagedConfigModule::defaults();
     setRestartInSetupScreen(false);
+}
+
+SMServerSettings *SMServerConfig::settings() const
+{
+    return m_settings;
 }
 
 void SMServerConfig::save()

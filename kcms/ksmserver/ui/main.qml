@@ -9,7 +9,6 @@ import QtQuick.Controls 2.10
 import QtQuick.Layouts 1.11
 import org.kde.kirigami as Kirigami
 import QtQuick.Dialogs 6.3
-import org.kde.desktopsession.private 1.0
 import org.kde.kcmutils as KCM
 
 KCM.SimpleKCM {
@@ -78,10 +77,10 @@ KCM.SimpleKCM {
             id: logoutScreenCheckbox
         Kirigami.FormData.label: i18nc("@label beginning of the logical sentence 'Ask for confirmation on shutdown, restart, and logout.'", "Ask for confirmation:")
             text: i18nc("@option:check end of the logical sentence 'Ask for confirmation on shutdown, restart, and logout.'", "On shutdown, restart, and logout")
-            checked: Settings.confirmLogout
-            onToggled: Settings.confirmLogout = checked
+            checked: kcm.settings.confirmLogout
+            onToggled: kcm.settings.confirmLogout = checked
             KCM.SettingStateBinding {
-                configObject: Settings
+                configObject: kcm.settings
                 settingName: "confirmLogout"
             }
         }
@@ -98,10 +97,10 @@ KCM.SimpleKCM {
             id: loginRestore
             Kirigami.FormData.label: i18n("On login, launch apps that were open:")
             text: i18nc("@option:radio Automatic style of session restoration", "On last logout")
-            checked: Settings.loginMode === 0
-            onToggled: Settings.loginMode = 0
+            checked: kcm.settings.loginMode === 0
+            onToggled: kcm.settings.loginMode = 0
             KCM.SettingStateBinding {
-                configObject: Settings
+                configObject: kcm.settings
                 settingName: "loginMode"
             }
         }
@@ -111,10 +110,10 @@ KCM.SimpleKCM {
             RadioButton {
                 id: loginManual
                 text: i18nc("@option:radio Manual style of session restoration", "When session was manually saved")
-                checked: Settings.loginMode === 1
-                onToggled: Settings.loginMode = 1
+                checked: kcm.settings.loginMode === 1
+                onToggled: kcm.settings.loginMode = 1
                 KCM.SettingStateBinding {
-                    configObject: Settings
+                    configObject: kcm.settings
                     settingName: "loginMode"
                 }
             }
@@ -125,10 +124,10 @@ KCM.SimpleKCM {
         RadioButton {
             id: loginEmpty
             text: i18nc("@option:radio Here 'session' refers to the technical concept of session restoration, whereby the windows that were open on logout are re-opened on the next login", "Start with an empty session")
-            checked: Settings.loginMode === 2
-            onToggled: Settings.loginMode = 2
+            checked: kcm.settings.loginMode === 2
+            onToggled: kcm.settings.loginMode = 2
             KCM.SettingStateBinding {
-                configObject: Settings
+                configObject: kcm.settings
                 settingName: "loginMode"
             }
         }
@@ -144,15 +143,15 @@ KCM.SimpleKCM {
 
             TextField {
                 Layout.preferredWidth: Kirigami.Units.gridUnit * 16
-                text: Settings.excludeApps
+                text: kcm.settings.excludeApps
                 enabled: !loginEmpty.checked
                 // onTextEdited instead of onAccepted because otherwise the apply and
                 // reset buttons won't work, since otherwise in many case no change will
                 // be sent to the kconfigXt backend.
-                onTextEdited: Settings.excludeApps = text
+                onTextEdited: kcm.settings.excludeApps = text
 
                 KCM.SettingStateBinding {
-                    configObject: Settings
+                    configObject: kcm.settings
                     settingName: "excludeApps"
                 }
             }
