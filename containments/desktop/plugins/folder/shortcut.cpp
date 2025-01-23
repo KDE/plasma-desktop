@@ -59,10 +59,12 @@ bool ShortCut::eventFilter(QObject *obj, QEvent *e)
             return true;
         }
         if (KStandardShortcut::copy().contains(QKeySequence(keyInt))) {
+            qWarning() << "COPY";
             Q_EMIT copyFile();
             return true;
         }
         if (KStandardShortcut::paste().contains(QKeySequence(keyInt))) {
+            qWarning() << "PASTE";
             Q_EMIT pasteFile();
             return true;
         }
