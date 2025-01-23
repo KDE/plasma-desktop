@@ -36,6 +36,9 @@ Q_SIGNALS:
     void renameFile();
     void moveToTrash();
     void createFolder();
+    void cutFile();
+    void copyFile();
+    void pasteFile();
 
 protected:
     bool eventFilter(QObject *obj, QEvent *e) override;

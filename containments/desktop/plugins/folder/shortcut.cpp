@@ -25,7 +25,17 @@ void ShortCut::installAsEventFilterFor(QObject *target)
 
 bool ShortCut::eventFilter(QObject *obj, QEvent *e)
 {
-    if (e->type() == QEvent::KeyPress) {
+    switch (e->type()) {
+    case QEvent::ShortcutOverride: {
+        // GridView intercepts the cut/copy/paste shortcuts, but then it does nothing with them
+        QKeyEvent *keyEvent = static_cast<QKeyEvent *>(e);
+        const int keyInt = keyEvent->modifiers() & ~Qt::KeypadModifier | keyEvent->key();
+        if (KStandardShortcut::cut().contains(QKeySequence(keyInt)) || KStandardShortcut::copy().contains(QKeySequence(keyInt))
+            || KStandardShortcut::paste().contains(QKeySequence(keyInt))) {
+            return true;
+        }
+    }
+    case QEvent::KeyPress: {
         QKeyEvent *keyEvent = static_cast<QKeyEvent *>(e);
         const int keyInt = keyEvent->modifiers() & ~Qt::KeypadModifier | keyEvent->key();
         if (KStandardShortcut::deleteFile().contains(QKeySequence(keyInt))) {
@@ -44,6 +54,23 @@ bool ShortCut::eventFilter(QObject *obj, QEvent *e)
             Q_EMIT createFolder();
             return true;
         }
+        if (KStandardShortcut::cut().contains(QKeySequence(keyInt))) {
+            Q_EMIT cutFile();
+            return true;
+        }
+        if (KStandardShortcut::copy().contains(QKeySequence(keyInt))) {
+            qWarning() << "COPY";
+            Q_EMIT copyFile();
+            return true;
+        }
+        if (KStandardShortcut::paste().contains(QKeySequence(keyInt))) {
+            qWarning() << "PASTE";
+            Q_EMIT pasteFile();
+            return true;
+        }
+    }
+    default:
+        break;
     }
 
     return QObject::eventFilter(obj, e);
