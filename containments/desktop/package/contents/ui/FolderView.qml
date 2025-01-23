@@ -1055,11 +1055,7 @@ FocusScope {
 
                     onCopyFile: dir.copy()
 
-                    onPasteFile: {
-                        // Make sure paste action is enabled when needed
-                        dir.updateActions();
-                        dir.paste();
-                    }
+                    // for pasteFile() the internal action of FolderModel will manage the shortcut
                 }
 
                 Keys.onPressed: event => {

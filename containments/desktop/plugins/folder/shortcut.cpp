@@ -30,10 +30,15 @@ bool ShortCut::eventFilter(QObject *obj, QEvent *e)
         // GridView intercepts the cut/copy/paste shortcuts, but then it does nothing with them
         QKeyEvent *keyEvent = static_cast<QKeyEvent *>(e);
         const int keyInt = keyEvent->modifiers() & ~Qt::KeypadModifier | keyEvent->key();
-        if (KStandardShortcut::cut().contains(QKeySequence(keyInt)) || KStandardShortcut::copy().contains(QKeySequence(keyInt))
-            || KStandardShortcut::paste().contains(QKeySequence(keyInt))) {
+        if (KStandardShortcut::copy().contains(QKeySequence(keyInt))) {
+            Q_EMIT copyFile();
             return true;
         }
+        if (KStandardShortcut::paste().contains(QKeySequence(keyInt))) {
+            Q_EMIT pasteFile();
+            return true;
+        }
+        break;
     }
     case QEvent::KeyPress: {
         QKeyEvent *keyEvent = static_cast<QKeyEvent *>(e);
@@ -56,14 +61,6 @@ bool ShortCut::eventFilter(QObject *obj, QEvent *e)
         }
         if (KStandardShortcut::cut().contains(QKeySequence(keyInt))) {
             Q_EMIT cutFile();
-            return true;
-        }
-        if (KStandardShortcut::copy().contains(QKeySequence(keyInt))) {
-            Q_EMIT copyFile();
-            return true;
-        }
-        if (KStandardShortcut::paste().contains(QKeySequence(keyInt))) {
-            Q_EMIT pasteFile();
             return true;
         }
     }

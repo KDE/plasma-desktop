@@ -2089,6 +2089,7 @@ void FolderModel::cut()
 
 void FolderModel::paste()
 {
+    updateActions();
     if (QAction *action = m_actionCollection.action(QStringLiteral("paste"))) {
         if (!action->isEnabled()) {
             return;
