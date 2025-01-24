@@ -621,7 +621,11 @@ PlasmaCore.ToolTipArea {
         verticalAlignment: Text.AlignVCenter
         maximumLineCount: Plasmoid.configuration.maxTextLines || undefined
 
-        Accessible.ignored: true
+        // The accessible item of this element is only used for debugging
+        // purposes, and it will never gain focus (thus it won't interfere
+        // with screenreaders).
+        Accessible.ignored: !visible
+        Accessible.name: parent.Accessible.name + "-labelhint"
 
         // use State to avoid unnecessary re-evaluation when the label is invisible
         states: State {
