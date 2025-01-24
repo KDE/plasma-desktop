@@ -182,73 +182,85 @@ LibinputTouchpad::LibinputTouchpad(Display *display, int deviceId)
         }
     }
     m_config = KSharedConfig::openConfig(QStringLiteral("touchpadxlibinputrc"));
+
+    // load "supports" and "default" properties early that determine a CONSTANT-type Q_PROPERTY
+    valueLoader(m_supportsDisableEvents);
+    valueLoader(m_enabledDefault);
+
+    valueLoader(m_tapToClickEnabledByDefault);
+    valueLoader(m_lrmTapButtonMapEnabledByDefault);
+    valueLoader(m_lmrTapButtonMapEnabledByDefault);
+    valueLoader(m_tapAndDragEnabledByDefault);
+    valueLoader(m_tapDragLockEnabledByDefault);
+
+    valueLoader(m_leftHandedEnabledByDefault);
+
+    valueLoader(m_supportsDisableEventsOnExternalMouse);
+    valueLoader(m_disableEventsOnExternalMouseEnabledByDefault);
+    valueLoader(m_disableWhileTypingEnabledByDefault);
+
+    valueLoader(m_middleEmulationEnabledByDefault);
+
+    valueLoader(m_defaultPointerAcceleration);
+    valueLoader(m_supportsPointerAccelerationProfileFlat);
+    valueLoader(m_defaultPointerAccelerationProfileFlat);
+    valueLoader(m_supportsPointerAccelerationProfileAdaptive);
+    valueLoader(m_defaultPointerAccelerationProfileAdaptive);
+
+    valueLoader(m_naturalScrollEnabledByDefault);
+    valueLoader(m_supportsScrollTwoFinger);
+    valueLoader(m_scrollTwoFingerEnabledByDefault);
+    valueLoader(m_supportsScrollEdge);
+    valueLoader(m_scrollEdgeEnabledByDefault);
+    valueLoader(m_supportsScrollOnButtonDown);
+    valueLoader(m_scrollOnButtonDownEnabledByDefault);
+
+    valueLoader(m_supportsClickMethodAreas);
+    valueLoader(m_supportsClickMethodClickfinger);
+
+    // load these early because <member>.avail is used in LibinputTouchpad::supports*()
+    valueLoader(m_leftHanded);
+    valueLoader(m_disableWhileTyping);
+    valueLoader(m_middleEmulation);
+    valueLoader(m_pointerAcceleration);
+    valueLoader(m_naturalScroll);
+    valueLoader(m_horizontalScrolling);
 }
 
 bool LibinputTouchpad::getConfig()
 {
     bool success = true;
 
-    success &= valueLoader(m_supportsDisableEvents);
     success &= valueLoader(m_enabled);
-    success &= valueLoader(m_enabledDefault);
 
-    success &= valueLoader(m_tapToClickEnabledByDefault);
     success &= valueLoader(m_tapToClick);
-    success &= valueLoader(m_lrmTapButtonMapEnabledByDefault);
     success &= valueLoader(m_lrmTapButtonMap);
-    success &= valueLoader(m_lmrTapButtonMapEnabledByDefault);
     success &= valueLoader(m_lmrTapButtonMap);
-    success &= valueLoader(m_tapAndDragEnabledByDefault);
     success &= valueLoader(m_tapAndDrag);
-    success &= valueLoader(m_tapDragLockEnabledByDefault);
     success &= valueLoader(m_tapDragLock);
 
-    success &= valueLoader(m_leftHandedEnabledByDefault);
     success &= valueLoader(m_leftHanded);
 
-    success &= valueLoader(m_supportsDisableEventsOnExternalMouse);
     success &= valueLoader(m_disableEventsOnExternalMouse);
-    success &= valueLoader(m_disableEventsOnExternalMouseEnabledByDefault);
-
-    success &= valueLoader(m_disableWhileTypingEnabledByDefault);
     success &= valueLoader(m_disableWhileTyping);
 
-    success &= valueLoader(m_middleEmulationEnabledByDefault);
     success &= valueLoader(m_middleEmulation);
 
-    success &= valueLoader(m_defaultPointerAcceleration);
     success &= valueLoader(m_pointerAcceleration);
-
-    success &= valueLoader(m_supportsPointerAccelerationProfileFlat);
-    success &= valueLoader(m_defaultPointerAccelerationProfileFlat);
     success &= valueLoader(m_pointerAccelerationProfileFlat);
-    success &= valueLoader(m_supportsPointerAccelerationProfileAdaptive);
-    success &= valueLoader(m_defaultPointerAccelerationProfileAdaptive);
     success &= valueLoader(m_pointerAccelerationProfileAdaptive);
 
-    success &= valueLoader(m_naturalScrollEnabledByDefault);
     success &= valueLoader(m_naturalScroll);
-
     success &= valueLoader(m_horizontalScrolling);
 
-    success &= valueLoader(m_supportsScrollTwoFinger);
-    success &= valueLoader(m_scrollTwoFingerEnabledByDefault);
     success &= valueLoader(m_isScrollTwoFinger);
-
-    success &= valueLoader(m_supportsScrollEdge);
-    success &= valueLoader(m_scrollEdgeEnabledByDefault);
     success &= valueLoader(m_isScrollEdge);
-
-    success &= valueLoader(m_supportsScrollOnButtonDown);
-    success &= valueLoader(m_scrollOnButtonDownEnabledByDefault);
     success &= valueLoader(m_isScrollOnButtonDown);
 
     success &= valueLoader(m_defaultScrollButton);
     success &= valueLoader(m_scrollButton);
 
     // click methods
-    success &= valueLoader(m_supportsClickMethodAreas);
-    success &= valueLoader(m_supportsClickMethodClickfinger);
     success &= valueLoader(m_defaultClickMethodAreas);
     success &= valueLoader(m_defaultClickMethodClickfinger);
     success &= valueLoader(m_clickMethodAreas);
