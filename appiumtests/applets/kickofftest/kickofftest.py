@@ -16,9 +16,10 @@ from appium.webdriver.common.appiumby import AppiumBy
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
 
 sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, os.pardir, "desktop"))
-from desktoptest import start_kactivitymanagerd
+from desktoptest import name_has_owner, start_kactivitymanagerd
 
 WIDGET_ID: Final = "org.kde.plasma.kickoff"
 KDE_VERSION: Final = 6
@@ -71,7 +72,7 @@ class KickoffTests(unittest.TestCase):
         # Emoji Selector is the only actual application we install from workspace :|
         self.driver.find_element(by=AppiumBy.NAME, value="Search").send_keys("Emoji Selector")
         self.driver.find_element(by=AppiumBy.CLASS_NAME, value="[list item | Emoji Selector]").click()
-        time.sleep(1)
+        WebDriverWait(self.driver, 5).until(lambda _: name_has_owner(None, "org.kde.plasma.emojier"))
         subprocess.check_call([f"kquitapp{KDE_VERSION}", "plasma.emojier"])
 
     def test_3_keyboard_navigation(self) -> None:
