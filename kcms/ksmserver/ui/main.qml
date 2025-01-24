@@ -22,33 +22,6 @@ KCM.SimpleKCM {
         spacing : 0
 
         Kirigami.InlineMessage {
-            id: manualSessionRestoreRebootMessage
-            Layout.fillWidth: true
-            position: Kirigami.InlineMessage.Position.Header
-            type: Kirigami.MessageType.Information
-            visible: false
-            text: i18n("The system must be restarted before manual session saving becomes active.")
-            showCloseButton: true
-            actions: [
-                Kirigami.Action {
-                    icon.name: "system-reboot"
-                    text: i18n("Restart")
-                    onTriggered: kcm.reboot();
-                }
-            ]
-            Connections {
-                target: kcm
-                function onKsmserverSettingsChanged() {
-                    if (loginManual.checked) {
-                        manualSessionRestoreRebootMessage.visible = true;
-                    } else {
-                        manualSessionRestoreRebootMessage.visible = false;
-                    }
-                }
-            }
-        }
-
-        Kirigami.InlineMessage {
             Layout.fillWidth: true
             position: Kirigami.InlineMessage.Position.Header
             type: kcm.error.length > 0 ? Kirigami.MessageType.Error : Kirigami.MessageType.Information
