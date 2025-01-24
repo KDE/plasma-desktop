@@ -4,13 +4,13 @@
 # Balázs Úr <urbalazs@gmail.com>, 2013, 2014.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2019.
 # SPDX-FileCopyrightText: 2017, 2020, 2021, 2023 Kiszel Kristóf <kiszel.kristof@gmail.com>
-# SPDX-FileCopyrightText: 2021, 2022, 2024 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2021, 2022, 2024, 2025 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-22 02:32+0000\n"
-"PO-Revision-Date: 2024-09-19 14:23+0200\n"
+"PO-Revision-Date: 2025-01-23 20:51+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -435,8 +435,7 @@ msgid "Dodge windows"
 msgstr "Ablakok kikerülése"
 
 #: contents/configuration/PanelConfiguration.qml:369
-#, fuzzy, kde-format
-#| msgid "Windows Go Below"
+#, kde-format
 msgid "Windows go below"
 msgstr "Az ablakok elé kerülhet"
 
@@ -509,17 +508,17 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "Eltávolítja ezt a panelt; a művelet nem vonható vissza"
 
 #: contents/configuration/PanelConfiguration.qml:684
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
-msgstr "Panel eltávolítása"
+msgstr "Panel klónozása"
 
 #: contents/configuration/PanelConfiguration.qml:688
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
 msgstr ""
+"Létrehoz egy új panelt ugyanazokkal a beállításokkal és kisalkalmazásokkal"
 
 #: contents/configuration/PanelConfiguration.qml:697
 #, kde-format
@@ -581,8 +580,7 @@ msgstr ""
 "Kattintson duplán a visszaállításhoz."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy, kde-format
-#| msgid "Panel and Desktop Management"
+#, kde-format
 msgid "Manage Panels and Desktops"
 msgstr "Panel- és asztalkezelés"
 
@@ -751,22 +749,19 @@ msgid "Caps Lock is on"
 msgstr "A Caps Lock be van kapcsolva"
 
 #: contents/lockscreen/LockScreenUi.qml:285
-#, fuzzy, kde-format
-#| msgid "Sleep"
+#, kde-format
 msgid "Slee&p"
-msgstr "Alvó állapot"
+msgstr "Alvó álla&pot"
 
 #: contents/lockscreen/LockScreenUi.qml:291
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "&Hibernate"
-msgstr "Hibernálás"
+msgstr "&Hibernálás"
 
 #: contents/lockscreen/LockScreenUi.qml:297
-#, fuzzy, kde-format
-#| msgid "Switch User"
+#, kde-format
 msgid "Switch &User"
-msgstr "Felhasználóváltás"
+msgstr "&Felhasználóváltás"
 
 #: contents/lockscreen/LockScreenUi.qml:358
 #, kde-format
