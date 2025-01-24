@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-09 00:42+0000\n"
+"POT-Creation-Date: 2025-01-24 00:43+0000\n"
 "PO-Revision-Date: 2020-10-08 11:46+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -44,50 +44,50 @@ msgstr "Sisselogimisel"
 msgid "Applications to be excluded from session"
 msgstr "Rakendused, mida ei taastata:"
 
-#: ui/main.qml:31
+#: ui/main.qml:30
 #, kde-format
 msgid ""
 "The system must be restarted before manual session saving becomes active."
 msgstr ""
 
-#: ui/main.qml:36
+#: ui/main.qml:35
 #, fuzzy, kde-format
 #| msgid "Restart Now"
 msgid "Restart"
 msgstr "Taaskäivita kohe"
 
-#: ui/main.qml:58
+#: ui/main.qml:57
 #, kde-format
 msgid "Failed to request restart to firmware setup: %1"
 msgstr "Taaskäivitamine püsivara seadistamiseks nurjus: %1"
 
-#: ui/main.qml:59
+#: ui/main.qml:58
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
 msgstr ""
 "Arvuti järgmisel käivitamisel viiakse sind UEFI seadistamise ekraanile."
 
-#: ui/main.qml:60
+#: ui/main.qml:59
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
 msgstr ""
 "Arvuti järgmisel käivitamisel viiakse sind püsivara seadistamise ekraanile."
 
-#: ui/main.qml:65
+#: ui/main.qml:64
 #, kde-format
 msgid "Restart Now"
 msgstr "Taaskäivita kohe"
 
-#: ui/main.qml:74
+#: ui/main.qml:73
 #, fuzzy, kde-format
 #| msgid "General"
 msgctxt "@title:group"
 msgid "General"
 msgstr "Üldine"
 
-#: ui/main.qml:79
+#: ui/main.qml:78
 #, kde-format
 msgctxt ""
 "@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
@@ -95,7 +95,7 @@ msgctxt ""
 msgid "Ask for confirmation:"
 msgstr ""
 
-#: ui/main.qml:80
+#: ui/main.qml:79
 #, kde-format
 msgctxt ""
 "@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
@@ -103,32 +103,32 @@ msgctxt ""
 msgid "On shutdown, restart, and logout"
 msgstr ""
 
-#: ui/main.qml:91
+#: ui/main.qml:90
 #, fuzzy, kde-format
 #| msgid "Session Manager"
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "Seansihaldur"
 
-#: ui/main.qml:99
+#: ui/main.qml:98
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr ""
 
-#: ui/main.qml:100
+#: ui/main.qml:99
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr ""
 
-#: ui/main.qml:113
+#: ui/main.qml:112
 #, fuzzy, kde-format
 #| msgid "Restore &manually saved session"
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "Taastatakse &käsitsi salvestatud seanss"
 
-#: ui/main.qml:122
+#: ui/main.qml:121
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -138,7 +138,7 @@ msgid ""
 "Click it again to replace the set of remembered apps."
 msgstr ""
 
-#: ui/main.qml:127
+#: ui/main.qml:126
 #, fuzzy, kde-format
 #| msgid "Start with an empty &session"
 msgctxt ""
@@ -148,12 +148,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "Käivitatakse tühi s&eanss"
 
-#: ui/main.qml:141
+#: ui/main.qml:140
 #, kde-format
 msgid "Ignored applications:"
 msgstr ""
 
-#: ui/main.qml:160
+#: ui/main.qml:159
 #, kde-format
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
@@ -162,14 +162,14 @@ msgid ""
 "with other session-restored apps."
 msgstr ""
 
-#: ui/main.qml:166
+#: ui/main.qml:165
 #, fuzzy, kde-format
 #| msgid "Firmware Setup"
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "Püsivara seadistus"
 
-#: ui/main.qml:172
+#: ui/main.qml:171
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -177,14 +177,14 @@ msgctxt ""
 msgid "After next restart:"
 msgstr ""
 
-#: ui/main.qml:173
+#: ui/main.qml:172
 #, fuzzy, kde-format
 #| msgid "Enter UEFI setup on next restart"
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "Järgmisel käivitusel avatakse UEFI seadistuste ekraan"
 
-#: ui/main.qml:174
+#: ui/main.qml:173
 #, fuzzy, kde-format
 #| msgid "Enter firmware setup on next restart"
 msgctxt "@option:check"

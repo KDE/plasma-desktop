@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:41+0000\n"
+"POT-Creation-Date: 2025-01-24 00:43+0000\n"
 "PO-Revision-Date: 2005-10-09 00:05+0200\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -53,43 +53,21 @@ msgstr ""
 msgid "Here you can change the system date's day of the month, month and year."
 msgstr "Bu yerda tizimning sanasini (kun, oy, yil) oʻzgartirishingiz mumkin."
 
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: dateandtime.ui:145
+#. i18n: ectx: attribute (title), widget (QQuickWidget, timezoneViewer)
+#: dateandtime.ui:146
 #, fuzzy, kde-format
 #| msgid "Timezone Error"
 msgid "Time Zone"
 msgstr "Vaqt zona xatosi"
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: dateandtime.ui:151
-#, fuzzy, kde-format
-#| msgid "To change the timezone, select your area from the list below"
-msgid "To change the local time zone, select your area from the list below."
-msgstr ""
-"Vaqt zonasini oʻzgartirish uchun quyidagi roʻyxatdan sizga toʻgʻri "
-"keladiganni tanlang"
-
-#. i18n: ectx: property (text), widget (QLabel, m_local)
-#: dateandtime.ui:174
-#, fuzzy, kde-format
-#| msgid "Current local timezone: %1 (%2)"
-msgid "Current local time zone:"
-msgstr "Joriy vaqt zonasi: %1 (%2)"
-
-#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
-#: dateandtime.ui:184
-#, kde-format
-msgid "Search…"
-msgstr ""
-
-#: dtime.cpp:61
+#: dtime.cpp:64
 #, kde-format
 msgid ""
 "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
 "enable automatic updating of date and time."
 msgstr ""
 
-#: dtime.cpp:90
+#: dtime.cpp:93
 #, kde-format
 msgid ""
 "Here you can change the system time. Click into the hours, minutes or "
@@ -100,21 +78,7 @@ msgstr ""
 "qiymatini oʻzgartirish uchun \"pastga\", \"yuqoriga\" tugmalaridan "
 "foydalaning yoki yangi qiymatni toʻgʻridan-toʻgʻri maydonga kiriting."
 
-#: dtime.cpp:121
-#, fuzzy, kde-format
-#| msgid "Current local timezone: %1 (%2)"
-msgctxt "%1 is name of time zone"
-msgid "Current local time zone: %1"
-msgstr "Joriy vaqt zonasi: %1 (%2)"
-
-#: dtime.cpp:123
-#, fuzzy, kde-format
-#| msgid "Current local timezone: %1 (%2)"
-msgctxt "%1 is name of time zone, %2 is its abbreviation"
-msgid "Current local time zone: %1 (%2)"
-msgstr "Joriy vaqt zonasi: %1 (%2)"
-
-#: dtime.cpp:198
+#: dtime.cpp:195
 #, fuzzy, kde-format
 #| msgid ""
 #| "Public Time Server (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,"
@@ -126,29 +90,29 @@ msgstr ""
 "Vaqt serveri (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,north-"
 "america.pool.ntp.org,oceania.pool.ntp.org"
 
-#: dtime.cpp:269
+#: dtime.cpp:270
 #, kde-format
 msgid "Unable to contact time server: %1."
 msgstr ""
 
-#: dtime.cpp:273
+#: dtime.cpp:274
 #, kde-format
 msgid "Can not set date."
 msgstr "Sanani oʻzgartirib boʻlmadi."
 
-#: dtime.cpp:276
+#: dtime.cpp:277
 #, fuzzy, kde-format
 #| msgid "Error setting new timezone."
 msgid "Error setting new time zone."
 msgstr "Vaqt zonasini oʻzgartirishda xato roʻy berdi."
 
-#: dtime.cpp:276
+#: dtime.cpp:277
 #, fuzzy, kde-format
 #| msgid "Timezone Error"
 msgid "Time zone Error"
 msgstr "Vaqt zona xatosi"
 
-#: dtime.cpp:294
+#: dtime.cpp:295
 #, fuzzy, kde-format
 #| msgid ""
 #| "<h1>Date & Time</h1> This control module can be used to set the system "
@@ -170,42 +134,49 @@ msgstr ""
 "maxfiy soʻzi kerak. Agar sana yoki vaqt notoʻgʻri boʻlsa, iltimos tizimning "
 "boshqaruvchisiga xabar bering."
 
-#: k4timezonewidget.cpp:70
-#, kde-format
-msgctxt "Define an area in the time zone, like a town area"
-msgid "Area"
-msgstr ""
-
-#: k4timezonewidget.cpp:70
-#, kde-format
-msgctxt "Time zone"
-msgid "Region"
-msgstr ""
-
-#: k4timezonewidget.cpp:70
-#, kde-format
-msgid "Comment"
-msgstr ""
-
-#: main.cpp:90
+#: main.cpp:91
 #, kde-format
 msgid "Unable to authenticate/execute the action: %1, %2"
 msgstr ""
 
-#: main.cpp:110
+#: main.cpp:111
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr ""
 
-#: main.cpp:121
+#: main.cpp:122
 #, kde-format
 msgid "Unable to set current time"
 msgstr ""
 
-#: main.cpp:131
+#: main.cpp:132
 #, kde-format
 msgid "Unable to set timezone"
 msgstr ""
+
+#, fuzzy
+#~| msgid "To change the timezone, select your area from the list below"
+#~ msgid "To change the local time zone, select your area from the list below."
+#~ msgstr ""
+#~ "Vaqt zonasini oʻzgartirish uchun quyidagi roʻyxatdan sizga toʻgʻri "
+#~ "keladiganni tanlang"
+
+#, fuzzy
+#~| msgid "Current local timezone: %1 (%2)"
+#~ msgid "Current local time zone:"
+#~ msgstr "Joriy vaqt zonasi: %1 (%2)"
+
+#, fuzzy
+#~| msgid "Current local timezone: %1 (%2)"
+#~ msgctxt "%1 is name of time zone"
+#~ msgid "Current local time zone: %1"
+#~ msgstr "Joriy vaqt zonasi: %1 (%2)"
+
+#, fuzzy
+#~| msgid "Current local timezone: %1 (%2)"
+#~ msgctxt "%1 is name of time zone, %2 is its abbreviation"
+#~ msgid "Current local time zone: %1 (%2)"
+#~ msgstr "Joriy vaqt zonasi: %1 (%2)"
 
 #~ msgid "KDE Clock Control Module"
 #~ msgstr "Soat uchun boshqaruv moduli"
