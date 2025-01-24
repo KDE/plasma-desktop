@@ -251,13 +251,18 @@ PlasmoidItem {
         DropArea {
             id: compactDragArea
             anchors.fill: parent
+            onEntered: drag => {
+                if (drag.hasUrls) {
+                    expandOnDragTimer.start()
+                }
+            }
+            onExited: expandOnDragTimer.stop()
         }
 
         Timer {
             id: expandOnDragTimer
             // this is an interaction and not an animation, so we want it as a constant
             interval: 250
-            running: compactDragArea.containsDrag
             onTriggered: kickoff.expanded = true
         }
 
