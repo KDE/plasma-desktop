@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_smserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-24 00:43+0000\n"
+"POT-Creation-Date: 2025-01-25 00:42+0000\n"
 "PO-Revision-Date: 2024-09-29 16:30+0200\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -47,25 +47,12 @@ msgstr "Von Sitzungen auszuschließende Programme:"
 
 #: ui/main.qml:30
 #, kde-format
-msgid ""
-"The system must be restarted before manual session saving becomes active."
-msgstr ""
-"Das System muss neu gestartet werden, damit die manuelle Sitzungsspeicherung "
-"aktiv wird."
-
-#: ui/main.qml:35
-#, kde-format
-msgid "Restart"
-msgstr "Neu starten"
-
-#: ui/main.qml:57
-#, kde-format
 msgid "Failed to request restart to firmware setup: %1"
 msgstr ""
 "Neustart zur Anzeige der Firmware-Einrichtung kann nicht ausgeführt werden: "
 "%1"
 
-#: ui/main.qml:58
+#: ui/main.qml:31
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
@@ -73,7 +60,7 @@ msgstr ""
 "Beim nächsten Neustart des Rechners wird der UEFI-Einrichtungsdialog "
 "angezeigt."
 
-#: ui/main.qml:59
+#: ui/main.qml:32
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
@@ -81,18 +68,18 @@ msgstr ""
 "Beim nächsten Neustart des Rechners wird der Firmware-Einrichtungsdialog "
 "angezeigt."
 
-#: ui/main.qml:64
+#: ui/main.qml:37
 #, kde-format
 msgid "Restart Now"
 msgstr "Jetzt neu starten"
 
-#: ui/main.qml:73
+#: ui/main.qml:46
 #, kde-format
 msgctxt "@title:group"
 msgid "General"
 msgstr "Allgemein"
 
-#: ui/main.qml:78
+#: ui/main.qml:51
 #, kde-format
 msgctxt ""
 "@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
@@ -100,7 +87,7 @@ msgctxt ""
 msgid "Ask for confirmation:"
 msgstr "Um Bestätigung bitten:"
 
-#: ui/main.qml:79
+#: ui/main.qml:52
 #, kde-format
 msgctxt ""
 "@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
@@ -108,30 +95,30 @@ msgctxt ""
 msgid "On shutdown, restart, and logout"
 msgstr "Beim Herunterfahren, Neustart und Ausloggen"
 
-#: ui/main.qml:90
+#: ui/main.qml:63
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "Sitzungswiederherstellung"
 
-#: ui/main.qml:98
+#: ui/main.qml:71
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr "Bei der Anmeldung wiederherzustellende Anwendungen:"
 
-#: ui/main.qml:99
+#: ui/main.qml:72
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr "Bei letzter Abmeldung geöffnete"
 
-#: ui/main.qml:112
+#: ui/main.qml:85
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "Aus manuell gespeicherter Sitzung"
 
-#: ui/main.qml:121
+#: ui/main.qml:94
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -146,7 +133,7 @@ msgstr ""
 "Anmeldung wieder her. Klicken Sie erneut darauf, um den Satz der "
 "gespeicherten Anwendungen zu ersetzen."
 
-#: ui/main.qml:126
+#: ui/main.qml:99
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -155,12 +142,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "Mit leerer Sitzung starten"
 
-#: ui/main.qml:140
+#: ui/main.qml:113
 #, kde-format
 msgid "Ignored applications:"
 msgstr "Ignorierte Anwendungen:"
 
-#: ui/main.qml:159
+#: ui/main.qml:132
 #, fuzzy, kde-format
 #| msgid ""
 #| "Write apps' executable names here (separated by commas or colons, for "
@@ -177,13 +164,13 @@ msgstr ""
 "verhindern, dass sie zusammen mit anderen wiederhergestellten Anwendungen "
 "automatisch gestartet werden."
 
-#: ui/main.qml:165
+#: ui/main.qml:138
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "Firmware"
 
-#: ui/main.qml:171
+#: ui/main.qml:144
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -191,17 +178,26 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "Nach dem nächsten Neustart:"
 
-#: ui/main.qml:172
+#: ui/main.qml:145
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "UEFI-Einrichtungsdialog öffnen"
 
-#: ui/main.qml:173
+#: ui/main.qml:146
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "Firmware-Einrichtungsdialog anzeigen"
+
+#~ msgid ""
+#~ "The system must be restarted before manual session saving becomes active."
+#~ msgstr ""
+#~ "Das System muss neu gestartet werden, damit die manuelle "
+#~ "Sitzungsspeicherung aktiv wird."
+
+#~ msgid "Restart"
+#~ msgstr "Neu starten"
 
 #~ msgctxt "@title:group"
 #~ msgid "Logout Screen"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-24 00:43+0000\n"
+"POT-Creation-Date: 2025-01-25 00:42+0000\n"
 "PO-Revision-Date: 2024-07-08 13:08+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -45,46 +45,35 @@ msgstr "Programmer der skal udelukkes fra session"
 
 #: ui/main.qml:30
 #, kde-format
-msgid ""
-"The system must be restarted before manual session saving becomes active."
-msgstr "Systemet skal genstartes før manuel sessiongemning bliver aktiv."
-
-#: ui/main.qml:35
-#, kde-format
-msgid "Restart"
-msgstr "Genstart"
-
-#: ui/main.qml:57
-#, kde-format
 msgid "Failed to request restart to firmware setup: %1"
 msgstr "Kunne ikke anmode genstart af firmware-opsætning: %1"
 
-#: ui/main.qml:58
+#: ui/main.qml:31
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
 msgstr ""
 "Computeren vil gå ind i UEFI-opsætningsskærmen næste gang den genstartes."
 
-#: ui/main.qml:59
+#: ui/main.qml:32
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
 msgstr ""
 "Computeren vil gå ind i firmware-opsætningsskærmen næste gang den genstartes."
 
-#: ui/main.qml:64
+#: ui/main.qml:37
 #, kde-format
 msgid "Restart Now"
 msgstr "Genstart nu"
 
-#: ui/main.qml:73
+#: ui/main.qml:46
 #, kde-format
 msgctxt "@title:group"
 msgid "General"
 msgstr "Generelt"
 
-#: ui/main.qml:78
+#: ui/main.qml:51
 #, kde-format
 msgctxt ""
 "@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
@@ -92,7 +81,7 @@ msgctxt ""
 msgid "Ask for confirmation:"
 msgstr "Bed om bekræftelse:"
 
-#: ui/main.qml:79
+#: ui/main.qml:52
 #, kde-format
 msgctxt ""
 "@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
@@ -100,30 +89,30 @@ msgctxt ""
 msgid "On shutdown, restart, and logout"
 msgstr "Når der lukkes ned, genstartes og logges ud"
 
-#: ui/main.qml:90
+#: ui/main.qml:63
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "Sessiongendannelse"
 
-#: ui/main.qml:98
+#: ui/main.qml:71
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr "Start apps, der var åbne, når der logges ind:"
 
-#: ui/main.qml:99
+#: ui/main.qml:72
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr "Ved sidste udlogning"
 
-#: ui/main.qml:112
+#: ui/main.qml:85
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "Når session var gemt manuelt"
 
-#: ui/main.qml:121
+#: ui/main.qml:94
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -137,7 +126,7 @@ msgstr ""
 "Plasma huske de apps, der var åbne og gendanne dem ved næste login. Klik på "
 "den igen for at erstatte sættet af huskede apps."
 
-#: ui/main.qml:126
+#: ui/main.qml:99
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -146,12 +135,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "Start med en tom session"
 
-#: ui/main.qml:140
+#: ui/main.qml:113
 #, kde-format
 msgid "Ignored applications:"
 msgstr "Ignorerede applikationer:"
 
-#: ui/main.qml:159
+#: ui/main.qml:132
 #, fuzzy, kde-format
 #| msgid ""
 #| "Write apps' executable names here (separated by commas or colons, for "
@@ -167,13 +156,13 @@ msgstr ""
 "eksempel 'xterm:konsole' eller 'xterm,konsole') for at forhindre dem i at "
 "starte automatisk med de andre sessiongendanelsesapps."
 
-#: ui/main.qml:165
+#: ui/main.qml:138
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "Firmware"
 
-#: ui/main.qml:171
+#: ui/main.qml:144
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -181,17 +170,24 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "Efter næste genstart:"
 
-#: ui/main.qml:172
+#: ui/main.qml:145
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "Gå ind i UEFI-opsætningsskærmen"
 
-#: ui/main.qml:173
+#: ui/main.qml:146
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "Gå ind i firmware-opsætningsskærmen"
+
+#~ msgid ""
+#~ "The system must be restarted before manual session saving becomes active."
+#~ msgstr "Systemet skal genstartes før manuel sessiongemning bliver aktiv."
+
+#~ msgid "Restart"
+#~ msgstr "Genstart"
 
 #~ msgid ""
 #~ "<h1>Session Manager</h1> You can configure the session manager here. This "
