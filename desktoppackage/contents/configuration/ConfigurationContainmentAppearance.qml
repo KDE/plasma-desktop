@@ -96,6 +96,7 @@ Item {
                 Layout.fillWidth: true
                 enabled: main.currentItem.objectName !== "switchContainmentWarningItem"
                 Kirigami.FormData.label: i18nd("plasma_shell_org.kde.plasma.desktop", "Wallpaper type:")
+                Kirigami.FormData.buddyFor: wallpaperComboBox
 
                 QQC2.ComboBox {
                     id: wallpaperComboBox
