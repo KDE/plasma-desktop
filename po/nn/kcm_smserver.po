@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-09 00:42+0000\n"
+"POT-Creation-Date: 2025-01-25 02:37+0000\n"
 "PO-Revision-Date: 2024-07-14 13:03+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -44,24 +44,12 @@ msgstr "Ved innlogging"
 msgid "Applications to be excluded from session"
 msgstr "Program som ikkje skal reknast med i økta"
 
-#: ui/main.qml:31
-#, kde-format
-msgid ""
-"The system must be restarted before manual session saving becomes active."
-msgstr ""
-"Datamaskina må startast på nytt for at manuell øktlagring skal takast i bruk."
-
-#: ui/main.qml:36
-#, kde-format
-msgid "Restart"
-msgstr "Start på nytt"
-
-#: ui/main.qml:58
+#: ui/main.qml:30
 #, kde-format
 msgid "Failed to request restart to firmware setup: %1"
 msgstr "Feil ved førespurnad om omstart for fastvareoppsett: %1"
 
-#: ui/main.qml:59
+#: ui/main.qml:31
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
@@ -69,7 +57,7 @@ msgstr ""
 "Når maskina vert starta på nytt, vil ho starta innstillingane for UEFI-"
 "oppsett."
 
-#: ui/main.qml:60
+#: ui/main.qml:32
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
@@ -77,18 +65,18 @@ msgstr ""
 "Når maskina vert starta på nytt, vil ho starta innstillingane for "
 "fastvareoppsett."
 
-#: ui/main.qml:65
+#: ui/main.qml:37
 #, kde-format
 msgid "Restart Now"
 msgstr "Start på nytt"
 
-#: ui/main.qml:74
+#: ui/main.qml:46
 #, kde-format
 msgctxt "@title:group"
 msgid "General"
 msgstr "Generelt"
 
-#: ui/main.qml:79
+#: ui/main.qml:51
 #, kde-format
 msgctxt ""
 "@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
@@ -96,7 +84,7 @@ msgctxt ""
 msgid "Ask for confirmation:"
 msgstr "Spør om stadfesting:"
 
-#: ui/main.qml:80
+#: ui/main.qml:52
 #, kde-format
 msgctxt ""
 "@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
@@ -104,30 +92,30 @@ msgctxt ""
 msgid "On shutdown, restart, and logout"
 msgstr "Ved avslåing, omstart og utlogging"
 
-#: ui/main.qml:91
+#: ui/main.qml:63
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "Øktgjenoppretting"
 
-#: ui/main.qml:99
+#: ui/main.qml:71
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr "Opna ved innlogging program som var opne:"
 
-#: ui/main.qml:100
+#: ui/main.qml:72
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr "Ved siste utlogging"
 
-#: ui/main.qml:113
+#: ui/main.qml:85
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "Når økta vart manuelt lagra"
 
-#: ui/main.qml:122
+#: ui/main.qml:94
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -142,7 +130,7 @@ msgstr ""
 "innlogging. Trykk på knappen att når du vil oppdatera kva program som skal "
 "hugsast."
 
-#: ui/main.qml:127
+#: ui/main.qml:99
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -151,12 +139,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "Start med tom økt"
 
-#: ui/main.qml:141
+#: ui/main.qml:113
 #, kde-format
 msgid "Ignored applications:"
 msgstr "Ignorer desse programma:"
 
-#: ui/main.qml:160
+#: ui/main.qml:132
 #, fuzzy, kde-format
 #| msgid ""
 #| "Write apps' executable names here (separated by commas or colons, for "
@@ -172,13 +160,13 @@ msgstr ""
 "«xterm:konsole» eller «xterm,konsole») du vil hindra at skal startast "
 "automatisk saman med andre program autostarta frå tidlegare økter."
 
-#: ui/main.qml:166
+#: ui/main.qml:138
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "Fastvare"
 
-#: ui/main.qml:172
+#: ui/main.qml:144
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -186,14 +174,23 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "Etter neste omstart:"
 
-#: ui/main.qml:173
+#: ui/main.qml:145
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "Gå inn i UEFI-oppsettmenyen"
 
-#: ui/main.qml:174
+#: ui/main.qml:146
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "Gå til fastvareoppsett-skjermen"
+
+#~ msgid ""
+#~ "The system must be restarted before manual session saving becomes active."
+#~ msgstr ""
+#~ "Datamaskina må startast på nytt for at manuell øktlagring skal takast i "
+#~ "bruk."
+
+#~ msgid "Restart"
+#~ msgstr "Start på nytt"

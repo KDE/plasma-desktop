@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-09 00:42+0000\n"
+"POT-Creation-Date: 2025-01-25 02:37+0000\n"
 "PO-Revision-Date: 2024-07-25 01:38+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -43,24 +43,12 @@ msgstr "Saat masuk log"
 msgid "Applications to be excluded from session"
 msgstr "Aplikasi yang dekecualikan dari sesi:"
 
-#: ui/main.qml:31
-#, kde-format
-msgid ""
-"The system must be restarted before manual session saving becomes active."
-msgstr ""
-"Sistem harus dinyalakan ulang sebelum penyimpanan sesi manual menjadi aktif."
-
-#: ui/main.qml:36
-#, kde-format
-msgid "Restart"
-msgstr "Nyalakan ulang"
-
-#: ui/main.qml:58
+#: ui/main.qml:30
 #, kde-format
 msgid "Failed to request restart to firmware setup: %1"
 msgstr "Gagal meminta penyalaan ulang untuk pengesetan firmware: %1"
 
-#: ui/main.qml:59
+#: ui/main.qml:31
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
@@ -68,7 +56,7 @@ msgstr ""
 "Di kemudian nanti komputer dinyalakan ulang, itu akan memasuki layar "
 "pengesetan UEFI."
 
-#: ui/main.qml:60
+#: ui/main.qml:32
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
@@ -76,18 +64,18 @@ msgstr ""
 "Di kemudian nanti komputer dinyalakan ulang, itu akan memasuki layar "
 "pengesetan firmware."
 
-#: ui/main.qml:65
+#: ui/main.qml:37
 #, kde-format
 msgid "Restart Now"
 msgstr "Nyalakan Ulang Sekarang"
 
-#: ui/main.qml:74
+#: ui/main.qml:46
 #, kde-format
 msgctxt "@title:group"
 msgid "General"
 msgstr "Umum"
 
-#: ui/main.qml:79
+#: ui/main.qml:51
 #, kde-format
 msgctxt ""
 "@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
@@ -95,7 +83,7 @@ msgctxt ""
 msgid "Ask for confirmation:"
 msgstr "Tanya untuk konfirmasi:"
 
-#: ui/main.qml:80
+#: ui/main.qml:52
 #, kde-format
 msgctxt ""
 "@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
@@ -103,30 +91,30 @@ msgctxt ""
 msgid "On shutdown, restart, and logout"
 msgstr "Saat mematikan, menyalakan ulang, dan keluar log"
 
-#: ui/main.qml:91
+#: ui/main.qml:63
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "Pulihkan Sesi"
 
-#: ui/main.qml:99
+#: ui/main.qml:71
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr "Saat masuk log, luncurkan aplikasi yang kebuka:"
 
-#: ui/main.qml:100
+#: ui/main.qml:72
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr "Saat keluar log terakhir"
 
-#: ui/main.qml:113
+#: ui/main.qml:85
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "Ketika sesi yang disimpan secara manual"
 
-#: ui/main.qml:122
+#: ui/main.qml:94
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -140,7 +128,7 @@ msgstr ""
 "akan mengingat aplikasi yang dibuka dan memulihkannya pada saat masuk log "
 "dikemudian nanti. Mengekliknya kembali untuk mengganti set aplikasi diingat."
 
-#: ui/main.qml:127
+#: ui/main.qml:99
 #, kde-format
 msgctxt ""
 "@option:radio Here 'session' refers to the technical concept of session "
@@ -149,12 +137,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "Mulai dengan sesi kosong"
 
-#: ui/main.qml:141
+#: ui/main.qml:113
 #, kde-format
 msgid "Ignored applications:"
 msgstr "Aplikasi yang diabaikan:"
 
-#: ui/main.qml:160
+#: ui/main.qml:132
 #, fuzzy, kde-format
 #| msgid ""
 #| "Write apps' executable names here (separated by commas or colons, for "
@@ -171,13 +159,13 @@ msgstr ""
 "mencegah mereka dari auto memulai bersama dengan aplikasi yang dipulihkan "
 "pada sesi lainnya."
 
-#: ui/main.qml:166
+#: ui/main.qml:138
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr "Firmware"
 
-#: ui/main.qml:172
+#: ui/main.qml:144
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -185,17 +173,26 @@ msgctxt ""
 msgid "After next restart:"
 msgstr "Sesudah penyalaan ulang selanjutnya:"
 
-#: ui/main.qml:173
+#: ui/main.qml:145
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr "Masuk layar pengesetan UEFI"
 
-#: ui/main.qml:174
+#: ui/main.qml:146
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "Masuk layar pengesetan firmware"
+
+#~ msgid ""
+#~ "The system must be restarted before manual session saving becomes active."
+#~ msgstr ""
+#~ "Sistem harus dinyalakan ulang sebelum penyimpanan sesi manual menjadi "
+#~ "aktif."
+
+#~ msgid "Restart"
+#~ msgstr "Nyalakan ulang"
 
 #~ msgid ""
 #~ "<h1>Session Manager</h1> You can configure the session manager here. This "

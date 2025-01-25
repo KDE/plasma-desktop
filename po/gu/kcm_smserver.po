@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-09 00:42+0000\n"
+"POT-Creation-Date: 2025-01-25 02:37+0000\n"
 "PO-Revision-Date: 2008-11-20 16:11+0530\n"
 "Last-Translator: Pragnesh Radadiya <pg.radadia@gmail.com>\n"
 "Language-Team: Gujarati <kde-i18n-doc@lists.kde.org>\n"
@@ -45,49 +45,37 @@ msgstr "પ્રવેશ સમયે"
 msgid "Applications to be excluded from session"
 msgstr "સત્રમાથી કાઢી નાખવાના કાર્યક્રમો (&x)"
 
-#: ui/main.qml:31
-#, kde-format
-msgid ""
-"The system must be restarted before manual session saving becomes active."
-msgstr ""
-
-#: ui/main.qml:36
-#, fuzzy, kde-format
-#| msgid "&Restart computer"
-msgid "Restart"
-msgstr "ગણકયંત્ર(કોમ્પ્યુટર) પુન:શરૂ કરો (&R)"
-
-#: ui/main.qml:58
+#: ui/main.qml:30
 #, kde-format
 msgid "Failed to request restart to firmware setup: %1"
 msgstr ""
 
-#: ui/main.qml:59
+#: ui/main.qml:31
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
 msgstr ""
 
-#: ui/main.qml:60
+#: ui/main.qml:32
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
 msgstr ""
 
-#: ui/main.qml:65
+#: ui/main.qml:37
 #, fuzzy, kde-format
 #| msgid "&Restart computer"
 msgid "Restart Now"
 msgstr "ગણકયંત્ર(કોમ્પ્યુટર) પુન:શરૂ કરો (&R)"
 
-#: ui/main.qml:74
+#: ui/main.qml:46
 #, fuzzy, kde-format
 #| msgid "General"
 msgctxt "@title:group"
 msgid "General"
 msgstr "સામાન્ય"
 
-#: ui/main.qml:79
+#: ui/main.qml:51
 #, kde-format
 msgctxt ""
 "@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
@@ -95,7 +83,7 @@ msgctxt ""
 msgid "Ask for confirmation:"
 msgstr ""
 
-#: ui/main.qml:80
+#: ui/main.qml:52
 #, kde-format
 msgctxt ""
 "@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
@@ -103,32 +91,32 @@ msgctxt ""
 msgid "On shutdown, restart, and logout"
 msgstr ""
 
-#: ui/main.qml:91
+#: ui/main.qml:63
 #, fuzzy, kde-format
 #| msgid "Session Manager"
 msgctxt "@title:group"
 msgid "Session Restore"
 msgstr "સત્ર વ્યવસ્થાપક"
 
-#: ui/main.qml:99
+#: ui/main.qml:71
 #, kde-format
 msgid "On login, launch apps that were open:"
 msgstr ""
 
-#: ui/main.qml:100
+#: ui/main.qml:72
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
 msgstr ""
 
-#: ui/main.qml:113
+#: ui/main.qml:85
 #, fuzzy, kde-format
 #| msgid "Restore &manually saved session"
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
 msgstr "જાતે બચાવેલ સત્ર પુન: સ્થાપિત કરો (&m)"
 
-#: ui/main.qml:122
+#: ui/main.qml:94
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -138,7 +126,7 @@ msgid ""
 "Click it again to replace the set of remembered apps."
 msgstr ""
 
-#: ui/main.qml:127
+#: ui/main.qml:99
 #, fuzzy, kde-format
 #| msgid "Start with an empty &session"
 msgctxt ""
@@ -148,12 +136,12 @@ msgctxt ""
 msgid "Start with an empty session"
 msgstr "ખાલી સત્ર સાશે શરુઆત કરો (&s)"
 
-#: ui/main.qml:141
+#: ui/main.qml:113
 #, kde-format
 msgid "Ignored applications:"
 msgstr ""
 
-#: ui/main.qml:160
+#: ui/main.qml:132
 #, kde-format
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
@@ -162,13 +150,13 @@ msgid ""
 "with other session-restored apps."
 msgstr ""
 
-#: ui/main.qml:166
+#: ui/main.qml:138
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
 msgstr ""
 
-#: ui/main.qml:172
+#: ui/main.qml:144
 #, kde-format
 msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
@@ -176,17 +164,22 @@ msgctxt ""
 msgid "After next restart:"
 msgstr ""
 
-#: ui/main.qml:173
+#: ui/main.qml:145
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
 msgstr ""
 
-#: ui/main.qml:174
+#: ui/main.qml:146
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr ""
+
+#, fuzzy
+#~| msgid "&Restart computer"
+#~ msgid "Restart"
+#~ msgstr "ગણકયંત્ર(કોમ્પ્યુટર) પુન:શરૂ કરો (&R)"
 
 #~ msgid ""
 #~ "<h1>Session Manager</h1> You can configure the session manager here. This "
