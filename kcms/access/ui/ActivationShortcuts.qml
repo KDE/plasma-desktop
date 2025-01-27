@@ -9,6 +9,7 @@ import QtQuick.Layouts
 import QtQuick.Controls as QQC2
 import org.kde.kcmutils as KCMUtils
 import org.kde.kirigami as Kirigami
+import org.kde.plasma.access.kcm
 
 Kirigami.FormLayout {
 
@@ -66,15 +67,15 @@ Kirigami.FormLayout {
             from: 1
             to: 30
 
-            validator: IntValidator {
-                bottom: Math.min(spinbox.from, spinbox.to)
-                top: Math.max(spinbox.from, spinbox.to)
-            }
-
             textFromValue: (value, locale) => {
                 return i18np("%1 min", "%1 min", value)
             }
 
+
+            validator: IntValidatorWithSuffix {
+                bottom: spinbox.from
+                top: spinbox.top
+            }
             valueFromText: (text, locale) => {
                 return Number.fromLocaleString(locale, text.replace(i18ncp("short for minute(s)", "min", "min"), ""))
             }

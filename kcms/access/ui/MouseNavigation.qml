@@ -9,6 +9,7 @@ import QtQuick.Layouts
 import QtQuick.Controls as QQC2
 import org.kde.kcmutils as KCMUtils
 import org.kde.kirigami as Kirigami
+import org.kde.plasma.access.kcm
 
 Kirigami.FormLayout {
     RowLayout {
@@ -34,6 +35,7 @@ Kirigami.FormLayout {
     }
 
     QQC2.SpinBox {
+        id: accelerationDelay
         Kirigami.FormData.label: i18nc("@label:spinbox", "Acceleration delay:")
 
         from: 1
@@ -50,12 +52,17 @@ Kirigami.FormLayout {
         textFromValue: function(value, locale) {
             return i18np("%1 ms", "%1 ms", value)
         }
+        validator: IntValidatorWithSuffix {
+            bottom: accelerationDelay.from
+            top: accelerationDelay.top
+        }
 
         valueFromText: (text, locale) => {
             return Number.fromLocaleString(locale, text.replace(i18ncp("short for millisecond(s)", "ms", "ms"), ""))
         }
     }
     QQC2.SpinBox {
+        id: repeatInterval
         Kirigami.FormData.label: i18nc("@label:spinbox", "Repeat interval:")
 
         from: 1
@@ -69,6 +76,10 @@ Kirigami.FormLayout {
         value: kcm.mouseSettings.repetitionInterval
         onValueChanged: kcm.mouseSettings.repetitionInterval = value
 
+        validator: IntValidatorWithSuffix {
+            bottom: repeatInterval.from
+            top: repeatInterval.top
+        }
         textFromValue: function(value, locale) {
             return i18np("%1 ms", "%1 ms", value)
         }
@@ -78,6 +89,7 @@ Kirigami.FormLayout {
         }
     }
     QQC2.SpinBox {
+        id: accelerationTime
         Kirigami.FormData.label: i18nc("@label:spinbox", "Acceleration time:")
 
         from: 1
@@ -90,7 +102,10 @@ Kirigami.FormLayout {
 
         value: kcm.mouseSettings.accelerationTime
         onValueChanged: kcm.mouseSettings.accelerationTime = value
-
+        validator: IntValidatorWithSuffix {
+            bottom: accelerationTime.from
+            top: accelerationTime.top
+        }
         textFromValue: function(value, locale) {
             return i18np("%1 ms", "%1 ms", value)
         }
