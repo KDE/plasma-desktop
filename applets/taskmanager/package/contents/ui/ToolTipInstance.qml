@@ -33,6 +33,8 @@ ColumnLayout {
     required property /*list<var>*/ var virtualDesktops // Can't use list<var> because of QTBUG-127600
     required property list<string> activities
 
+    property bool hasTrackInATitle: false
+
     // HACK: Avoid blank space in the tooltip after closing a window
     ListView.onPooled: width = height = 0
     ListView.onReused: width = height = undefined
@@ -115,7 +117,7 @@ ColumnLayout {
                     maximumLineCount: 1
                     Layout.fillWidth: true
                     elide: Text.ElideRight
-                    text: root.titleIncludesTrack ? "" : root.title
+                    text: root.titleIncludesTrack && playerController.active ? "" : root.title
                     color: (headerHoverHandler.visible && headerHoverHighlight.pressed) ? PlasmaCore.Theme.highlightedTextColor : PlasmaCore.Theme.textColor
                     opacity: 0.75
                     visible: root.title.length !== 0 && root.title !== appNameHeading.text
@@ -356,7 +358,11 @@ ColumnLayout {
     // Player controls row, load on demand so group tooltips could be loaded faster
     Loader {
         id: playerController
-        active: toolTipDelegate.playerData && root.index !== -1 // Avoid loading when the instance is going to be destroyed
+        // Only load for one entry, as the controls only apply to one window.
+        // If this is changed in the future, test for index != -1 to avoid loading
+        // when the instance is going to be destroyed
+        active: toolTipDelegate.playerData && ((hasTrackInATitle && albumArtImage.available) || (!hasTrackInATitle && root.index == 0))
+
         asynchronous: true
         visible: active
         Layout.fillWidth: true
@@ -373,7 +379,10 @@ ColumnLayout {
         active: toolTipDelegate.parentTask !== null
              && pulseAudio.item !== null
              && toolTipDelegate.parentTask.hasAudioStream
-             && root.index !== -1 // Avoid loading when the instance is going to be destroyed
+             // Only load for one entry, as the controls only apply to one window.
+             // If this is changed in the future, test for index != -1 to avoid loading
+             // when the instance is going to be destroyed
+             && ((hasTrackInATitle && albumArtImage.available) || (!hasTrackInATitle && root.index == 0))
         asynchronous: true
         visible: active
         Layout.fillWidth: true
