@@ -73,10 +73,11 @@ ColumnLayout {
     spacing: Plasmoid.configuration.showToolTips ? Kirigami.Units.smallSpacing : 0
 
     // text labels + close button
-    RowLayout {
-        id: header
-        // match spacing of DefaultToolTip.qml in plasma-framework
-        spacing: Kirigami.Units.smallSpacing
+    Item {
+        id: headerItem
+        implicitHeight: header.height
+        implicitWidth: header.implicitWidth
+        Layout.fillWidth: true
 
         // This number controls the overall size of the window tooltips
         Layout.maximumWidth: toolTipDelegate.tooltipInstanceMaximumWidth
@@ -85,73 +86,108 @@ ColumnLayout {
         // match margins of DefaultToolTip.qml in plasma-framework
         Layout.margins: toolTipDelegate.isWin && Plasmoid.configuration.showToolTips ? 0 : Kirigami.Units.gridUnit / 2
 
-        // all textlabels
-        ColumnLayout {
-            spacing: 0
-            // app name
-            Kirigami.Heading {
-                id: appNameHeading
-                level: 3
-                maximumLineCount: 1
-                lineHeight: toolTipDelegate.isWin && Plasmoid.configuration.showToolTips ? 1 : appNameHeading.lineHeight
-                Layout.fillWidth: true
-                elide: Text.ElideRight
-                text: toolTipDelegate.appName
-                opacity: root.index === 0 ? 1 : 0
-                visible: text.length !== 0
-                textFormat: Text.PlainText
+        RowLayout {
+            id: header
+            width: parent.width
+            // match spacing of DefaultToolTip.qml in plasma-framework
+            spacing: Kirigami.Units.smallSpacing
+
+            // all textlabels
+            ColumnLayout {
+                spacing: 0
+                // app name
+                Kirigami.Heading {
+                    id: appNameHeading
+                    level: 3
+                    maximumLineCount: 1
+                    Layout.fillWidth: true
+                    lineHeight: toolTipDelegate.isWin && Plasmoid.configuration.showToolTips ? 1 : appNameHeading.lineHeight
+                    elide: Text.ElideRight
+                    text: toolTipDelegate.appName
+                    color: (headerHoverHandler.visible && headerHoverHighlight.pressed) ? PlasmaCore.Theme.highlightedTextColor : PlasmaCore.Theme.textColor
+                    opacity: root.index === 0 ? 1 : 0
+                    visible: text.length !== 0
+                    textFormat: Text.PlainText
+                }
+                // window title
+                PlasmaComponents3.Label {
+                    id: winTitle
+                    maximumLineCount: 1
+                    Layout.fillWidth: true
+                    elide: Text.ElideRight
+                    text: root.titleIncludesTrack ? "" : root.title
+                    color: (headerHoverHandler.visible && headerHoverHighlight.pressed) ? PlasmaCore.Theme.highlightedTextColor : PlasmaCore.Theme.textColor
+                    opacity: 0.75
+                    visible: root.title.length !== 0 && root.title !== appNameHeading.text
+                    textFormat: Text.PlainText
+                }
+                // subtext
+                PlasmaComponents3.Label {
+                    id: subtext
+                    maximumLineCount: 2
+                    Layout.fillWidth: true
+                    elide: Text.ElideRight
+                    text: toolTipDelegate.isWin ? root.generateSubText() : ""
+                    color: (headerHoverHandler.visible && headerHoverHighlight.pressed) ? PlasmaCore.Theme.highlightedTextColor : PlasmaCore.Theme.textColor
+                    opacity: 0.6
+                    visible: text.length !== 0 && text !== appNameHeading.text
+                    textFormat: Text.PlainText
+                }
             }
-            // window title
-            PlasmaComponents3.Label {
-                id: winTitle
-                maximumLineCount: 1
-                Layout.fillWidth: true
-                elide: Text.ElideRight
-                text: root.titleIncludesTrack ? "" : root.title
-                opacity: 0.75
-                visible: root.title.length !== 0 && root.title !== appNameHeading.text
-                textFormat: Text.PlainText
+
+            // Count badge.
+            // The badge itself is inside an item to better center the text in the bubble
+            Item {
+                Layout.alignment: !Plasmoid.configuration.showToolTips && !playerController.active && !volumeControls.active ? Qt.AlignVCenter : Qt.AlignTop
+                Layout.preferredHeight: closeButton.height
+                Layout.preferredWidth: closeButton.width
+                visible: root.index === 0 && toolTipDelegate.smartLauncherCountVisible
+
+                Badge {
+                    anchors.centerIn: parent
+                    height: Kirigami.Units.iconSizes.smallMedium
+                    number: toolTipDelegate.smartLauncherCount
+                }
             }
-            // subtext
-            PlasmaComponents3.Label {
-                id: subtext
-                maximumLineCount: 2
-                Layout.fillWidth: true
-                elide: Text.ElideRight
-                text: toolTipDelegate.isWin ? root.generateSubText() : ""
-                opacity: 0.6
-                visible: text.length !== 0 && text !== appNameHeading.text
-                textFormat: Text.PlainText
+
+            // close button
+            PlasmaComponents3.ToolButton {
+                id: closeButton
+                Layout.alignment: Qt.AlignTop// | Qt.AlignRight
+                Layout.rightMargin: -headerItem.Layout.margins
+                Layout.topMargin: -headerItem.Layout.margins
+                visible: toolTipDelegate.isWin
+                icon.name: "window-close"
+                onClicked: {
+                    backend.cancelHighlightWindows();
+                    tasksModel.requestClose(root.submodelIndex);
+                }
             }
         }
 
-        // Count badge.
-        // The badge itself is inside an item to better center the text in the bubble
-        Item {
-            Layout.alignment: !Plasmoid.configuration.showToolTips && !playerController.active && !volumeControls.active ? Qt.AlignVCenter : Qt.AlignTop
-            Layout.preferredHeight: closeButton.height
-            Layout.preferredWidth: closeButton.width
-            visible: root.index === 0 && toolTipDelegate.smartLauncherCountVisible
-
-            Badge {
-                anchors.centerIn: parent
-                height: Kirigami.Units.iconSizes.smallMedium
-                number: toolTipDelegate.smartLauncherCount
+        // make the header clickable if image tooltips are disabled (and thus there is no other clickable area that activates the window)
+        // headerHoverHandler has to be unloaded after the instance is pooled in order to avoid getting the old containsMouse status when the same instance is reused, so put it in a Loader.
+        Loader {
+            id: headerHoverHandler
+            active: (root.index !== -1) && !Plasmoid.configuration.showToolTips
+            z: -2
+            anchors.fill: headerItem
+            anchors.margins: -headerItem.Layout.margins
+            sourceComponent: ToolTipWindowMouseArea {
+                rootTask: toolTipDelegate.parentTask
+                modelIndex: root.submodelIndex
+                winId: thumbnailSourceItem.winId
             }
         }
 
-        // close button
-        PlasmaComponents3.ToolButton {
-            id: closeButton
-            Layout.alignment: Qt.AlignTop
-            Layout.rightMargin: -header.Layout.margins
-            Layout.topMargin: -header.Layout.margins
-            visible: toolTipDelegate.isWin
-            icon.name: "window-close"
-            onClicked: {
-                backend.cancelHighlightWindows();
-                tasksModel.requestClose(root.submodelIndex);
-            }
+        // There's no PlasmaComponents3 version
+        PlasmaExtras.Highlight {
+            id: headerHoverHighlight
+            anchors.fill: headerHoverHandler
+            z: -1
+            visible: (headerHoverHandler.item as MouseArea)?.containsMouse ?? false
+            pressed: (headerHoverHandler.item as MouseArea)?.containsPress ?? false
+            hovered: true
         }
     }
 
@@ -324,9 +360,9 @@ ColumnLayout {
         asynchronous: true
         visible: active
         Layout.fillWidth: true
-        Layout.maximumWidth: header.Layout.maximumWidth
-        Layout.leftMargin: header.Layout.margins
-        Layout.rightMargin: header.Layout.margins
+        Layout.maximumWidth: headerItem.Layout.maximumWidth
+        Layout.leftMargin: headerItem.Layout.margins
+        Layout.rightMargin: headerItem.Layout.margins
 
         source: "PlayerController.qml"
     }
@@ -341,9 +377,9 @@ ColumnLayout {
         asynchronous: true
         visible: active
         Layout.fillWidth: true
-        Layout.maximumWidth: header.Layout.maximumWidth
-        Layout.leftMargin: header.Layout.margins
-        Layout.rightMargin: header.Layout.margins
+        Layout.maximumWidth: headerItem.Layout.maximumWidth
+        Layout.leftMargin: headerItem.Layout.margins
+        Layout.rightMargin: headerItem.Layout.margins
         sourceComponent: RowLayout {
             PlasmaComponents3.ToolButton { // Mute button
                 icon.width: Kirigami.Units.iconSizes.small
