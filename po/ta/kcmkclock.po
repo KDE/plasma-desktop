@@ -1,13 +1,13 @@
 # Copyright (C).
 #
 # ஆமாச்சு <amachu@ubuntu.com>, 2009.
-# Kishore G <kishore96@gmail.com>, 2021.
+# SPDX-FileCopyrightText: 2021, 2025 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:41+0000\n"
-"PO-Revision-Date: 2021-10-09 21:59+0530\n"
+"PO-Revision-Date: 2025-01-26 17:19+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.08.2\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -55,7 +55,7 @@ msgstr "இங்கே நீங்கள் கணினியின் தே
 #: dateandtime.ui:145
 #, kde-format
 msgid "Time Zone"
-msgstr "கால மண்டலம்"
+msgstr "நேர மண்டலம்"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: dateandtime.ui:151
@@ -130,12 +130,12 @@ msgstr "தேதியை அமைக்க முடியவில்லை.
 #: dtime.cpp:276
 #, kde-format
 msgid "Error setting new time zone."
-msgstr "புதிய கால மண்டலத்தை அமைப்பதில் சிக்கல்."
+msgstr "புதிய நேர மண்டலத்தை அமைப்பதில் சிக்கல்."
 
 #: dtime.cpp:276
 #, kde-format
 msgid "Time zone Error"
-msgstr "கால மண்டல சிக்கல்"
+msgstr "நேர மண்டல சிக்கல்"
 
 #: dtime.cpp:294
 #, kde-format
@@ -187,7 +187,7 @@ msgstr "தற்போதைய நேரத்தை அமைக்க மு
 #: main.cpp:131
 #, kde-format
 msgid "Unable to set timezone"
-msgstr "கால மண்டலத்தை அமைக்க முடியவில்லை"
+msgstr "நேர மண்டலத்தை அமைக்க முடியவில்லை"
 
 #~ msgid "KDE Clock Control Module"
 #~ msgstr "கே.டீ.யீ. கடிகார கட்டுப்பாட்டு கூறு"

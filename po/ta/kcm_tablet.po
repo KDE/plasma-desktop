@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2022, 2024 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2024, 2025 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-27 00:43+0000\n"
-"PO-Revision-Date: 2024-12-15 16:59+0530\n"
+"PO-Revision-Date: 2025-01-26 16:40+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: inputsequence.cpp:172
 #, kde-format
@@ -338,18 +338,15 @@ msgid "Resize the screen area"
 msgstr "திரையின் அளவை மாற்று"
 
 #: ui/ExternalScreenMapping.qml:265
-#, fuzzy, kde-format
-#| msgctxt "tablet area position - size"
-#| msgid "%1,%2 - %3×%4"
+#, kde-format
 msgctxt "tablet area position - size"
 msgid "%1%,%2% - %3%×%4%"
-msgstr "%1,%2 - %3×%4"
+msgstr "%1%,%2% - %3%×%4%"
 
 #: ui/ExternalScreenMapping.qml:299
-#, fuzzy, kde-format
-#| msgid "Resize the screen area"
+#, kde-format
 msgid "Resize the tablet area"
-msgstr "திரையின் அளவை மாற்று"
+msgstr "வரைபலகையின் அளவை மாற்று"
 
 #: ui/main.qml:39
 #, kde-format
@@ -377,21 +374,19 @@ msgstr "சாதனம்:"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
-msgstr ""
+msgstr "திரை"
 
 #: ui/main.qml:169
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
-msgstr ""
+msgstr "பேனா"
 
 #: ui/main.qml:181
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The pad we are configuring"
-#| msgid "Pad:"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
-msgstr "வரைபலகை:"
+msgstr "வரைபலகை"
 
 #: ui/PadTab.qml:33
 #, kde-format
@@ -415,7 +410,7 @@ msgstr "இடதுகை பயன்முறை:"
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
-msgstr ""
+msgstr "இயக்கு"
 
 #: ui/StylusTab.qml:43
 #, kde-kuit-format
@@ -437,13 +432,13 @@ msgstr "பேனா அழுத்தம்:"
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:170
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:181
 #, kde-format
@@ -468,11 +463,10 @@ msgstr ""
 "தீர்மானிக்கும்"
 
 #: ui/StylusTab.qml:198
-#, fuzzy, kde-format
-#| msgid "Pen Pressure:"
+#, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
-msgstr "பேனா அழுத்தம்:"
+msgstr "அழுத்த வீச்சு:"
 
 #: ui/StylusTab.qml:225
 #, kde-format
@@ -481,6 +475,8 @@ msgid ""
 "Pressure above or below the threshold will be clamped, and this becomes the "
 "new effective range."
 msgstr ""
+"அமைக்கப்பட்டுள்ள வரம்பில் அடங்கா அழுத்தத்தின் விளைவு, வரம்பின் எல்லை மதிப்பிற்கான விளைவுபோல் "
+"இருக்கும். அதாவது இந்த வரம்பிற்குள் உள்ள அழுத்த மாறுபாடுகளே கணினியால் பொருட்படுத்தப்படும்."
 
 #: ui/StylusTab.qml:237
 #, kde-format
@@ -517,16 +513,12 @@ msgid "Stylus release X=%1 Y=%2"
 msgstr "எழுதுகோல் தூக்கப்பட்டது: X=%1 Y=%2"
 
 #: ui/Tester.qml:68
-#, fuzzy, kde-format
-#| msgid "Stylus move X=%1 Y=%2"
+#, kde-format
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
-msgstr "எழுதுகோல் நகர்த்தப்பட்டது: X=%1 Y=%2"
+msgstr "எழுதுகோல் நகர்த்தப்பட்டது: X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
 #: ui/Tester.qml:205
-#, fuzzy, kde-format
-#| msgid ""
-#| "## Legend:\n"
-#| "# X, Y - event coordinate\n"
+#, kde-format
 msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
@@ -535,6 +527,8 @@ msgid ""
 msgstr ""
 "## விளக்கம்:\n"
 "# X, Y - நிகழ்வின் ஆயங்கள்\n"
+"# P - அழுத்தம்\n"
+"# TX,TY - சாய்வுநிலை\n"
 
 #: ui/Tester.qml:211
 #, kde-format

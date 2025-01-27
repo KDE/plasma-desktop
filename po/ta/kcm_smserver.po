@@ -1,12 +1,12 @@
 # Copyright (C) 2021 Free Software Foundation, Inc.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2024 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2024, 2025 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmserver 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-25 02:37+0000\n"
-"PO-Revision-Date: 2024-06-30 13:32+0530\n"
+"PO-Revision-Date: 2025-01-26 16:42+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -136,19 +136,16 @@ msgid "Ignored applications:"
 msgstr "பொருட்படுத்தப்படாத செயலிகள்:"
 
 #: ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' executable names here (separated by commas or colons, for "
-#| "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
-"இயக்கவல்ல நிரல்களின் பெயர்களை (காற்- அல்லது முக்காற்-புள்ளிகளால் பிரித்த பட்டியலாக, எ.கா. "
-"'xterm:konsole' அல்லது 'xterm,konsole') இங்கு உள்ளிட்டால், அச்செயலிகளை பிளாஸ்மா "
+"செயலிகளின் பெயர்களை அல்லது, X11-இல், உரிய இயக்கவல்ல நிரல்களின் பெயர்களை, (காற்- அல்லது "
+"முக்காற்-புள்ளிகளால் பிரித்த பட்டியலாக, எ.கா.  'xterm:org.kde.konsole.desktop' "
+"அல்லது 'xterm,org.kde.konsole.desktop') இங்கு உள்ளிட்டால், அச்செயலிகளை பிளாஸ்மா "
 "மீட்டெடுக்காது."
 
 #: ui/main.qml:138

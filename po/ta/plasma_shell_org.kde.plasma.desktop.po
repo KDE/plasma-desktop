@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-22 02:32+0000\n"
-"PO-Revision-Date: 2024-12-08 14:20+0530\n"
+"POT-Creation-Date: 2025-01-27 02:41+0000\n"
+"PO-Revision-Date: 2025-01-26 16:47+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -270,17 +270,17 @@ msgstr "தளவமைப்பு:"
 msgid "Wallpaper type:"
 msgstr "பின்புல படத்தின் வகை:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:119
+#: contents/configuration/ConfigurationContainmentAppearance.qml:120
 #, kde-format
 msgid "Get New Plugins…"
 msgstr "புதிய செருகுநிரல்களை பதிவிறக்கு…"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:193
+#: contents/configuration/ConfigurationContainmentAppearance.qml:194
 #, kde-format
 msgid "Layout changes must be applied before other changes can be made"
 msgstr "தளவமைப்பை மாற்றியதை செயல்படுத்திய பின்னரே மற்ற மாற்றங்களை நீங்கள் செய்யலாம்"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:197
+#: contents/configuration/ConfigurationContainmentAppearance.qml:198
 #, kde-format
 msgid "Apply Now"
 msgstr "இப்போது செயல்படுத்து"
@@ -574,10 +574,9 @@ msgstr ""
 "மீட்டமைக்க இரட்டைக் கிளிக் செய்யவும்."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy, kde-format
-#| msgid "Panel and Desktop Management"
+#, kde-format
 msgid "Manage Panels and Desktops"
-msgstr "பலகை மற்றும் பணிமேடை மேலாண்மை"
+msgstr "பலகைகளையும் பணிமேடைகளையும் நிர்வகி"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 #, kde-format
@@ -743,20 +742,17 @@ msgid "Caps Lock is on"
 msgstr "Caps Lock இயக்கப்பட்டுள்ளது"
 
 #: contents/lockscreen/LockScreenUi.qml:285
-#, fuzzy, kde-format
-#| msgid "Sleep"
+#, kde-format
 msgid "Slee&p"
 msgstr "உறங்கு"
 
 #: contents/lockscreen/LockScreenUi.qml:291
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "&Hibernate"
-msgstr "ஆழுறக்கம்"
+msgstr "ஆழுறங்கு"
 
 #: contents/lockscreen/LockScreenUi.qml:297
-#, fuzzy, kde-format
-#| msgid "Switch User"
+#, kde-format
 msgid "Switch &User"
 msgstr "பயனரை மாற்று"
 
