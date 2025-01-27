@@ -8,13 +8,13 @@
 # Vasee Vaseeharan <vasee@ieee.org>, 2004.
 # Ambalam <tamilpc@ambalam.com>, 2004.
 # root <root@localhost.localdomain>, 2004.
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: libkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-16 00:42+0000\n"
-"PO-Revision-Date: 2024-03-30 22:00+0530\n"
+"PO-Revision-Date: 2025-01-26 16:45+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -443,7 +443,7 @@ msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
 "or folder"
 msgid "Link Target Not Found"
-msgstr ""
+msgstr "இணைப்பின் இலக்கு கண்டுபிடிக்கப்படவில்லை"
 
 #: plugins/folder/foldermodel.cpp:871
 #, kde-kuit-format
@@ -452,6 +452,9 @@ msgid ""
 "<filename>%1</filename> points to <filename>%2</filename>, but that could "
 "not be found. It may have been moved or deleted."
 msgstr ""
+"<filename>%1</filename> எனும் இணைப்பின் இலக்கு <filename>%2</filename> என்பதாக "
+"உள்ளது, ஆனால் அதைக் கண்டுபிடிக்க முடியவில்லை. அது நகர்த்தப்பட்டிருக்கலாம், அல்லது "
+"நீக்கப்பட்டிருக்கலாம்."
 
 #: plugins/folder/foldermodel.cpp:1729
 #, kde-format
@@ -470,13 +473,12 @@ msgid "&Open"
 msgstr "&திற"
 
 #: plugins/folder/foldermodel.cpp:1739
-#, fuzzy, kde-format
-#| msgid "Show all"
+#, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
 "link points to"
 msgid "Show Target"
-msgstr "அனைத்தையும் காட்டு"
+msgstr "இலக்கைக் காட்டு"
 
 #: plugins/folder/foldermodel.cpp:1863
 #, kde-format
