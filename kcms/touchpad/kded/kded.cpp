@@ -93,10 +93,10 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
 
     m_dependencies.addWatchedService("org.kde.plasmashell");
     m_dependencies.addWatchedService("org.kde.kglobalaccel");
-    connect(&m_dependencies, SIGNAL(serviceRegistered(QString)), SLOT(serviceRegistered(QString)));
+    connect(&m_dependencies, &QDBusServiceWatcher::serviceRegistered, this, &TouchpadDisabler::serviceRegistered);
 
-    connect(m_backend, SIGNAL(touchpadStateChanged()), SLOT(updateCurrentState()));
-    connect(m_backend, SIGNAL(touchpadReset()), SLOT(handleReset()));
+    connect(m_backend, &TouchpadBackend::touchpadStateChanged, this, &TouchpadDisabler::updateCurrentState);
+    connect(m_backend, &TouchpadBackend::touchpadReset, this, &TouchpadDisabler::handleReset);
 
     updateCurrentState();
     m_userRequestedState = m_touchpadEnabled;
@@ -105,7 +105,7 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     m_dependencies.setConnection(QDBusConnection::sessionBus());
     QDBusPendingCall async = QDBusConnection::sessionBus().interface()->asyncCall(QLatin1String("ListNames"));
     QDBusPendingCallWatcher *callWatcher = new QDBusPendingCallWatcher(async, this);
-    connect(callWatcher, SIGNAL(finished(QDBusPendingCallWatcher *)), this, SLOT(serviceNameFetchFinished(QDBusPendingCallWatcher *)));
+    connect(callWatcher, &QDBusPendingCallWatcher::finished, this, &TouchpadDisabler::serviceNameFetchFinished);
 
     QDBusConnection::systemBus().connect(QStringLiteral("org.freedesktop.login1"),
                                          QStringLiteral("/org/freedesktop/login1"),
