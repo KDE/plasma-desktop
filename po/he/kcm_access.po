@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-13 00:42+0000\n"
+"POT-Creation-Date: 2025-01-28 00:42+0000\n"
 "PO-Revision-Date: 2024-11-29 10:46+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -31,67 +31,67 @@ msgstr ""
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Lokalize 24.08.3\n"
 
-#: kcmaccess.cpp:117
+#: kcmaccess.cpp:118
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGraph"
 
-#: kcmaccess.cpp:119
+#: kcmaccess.cpp:120
 #, kde-format
 msgid "Hyper"
 msgstr "Hyper"
 
-#: kcmaccess.cpp:121
+#: kcmaccess.cpp:122
 #, kde-format
 msgid "Super"
 msgstr "Super"
 
-#: kcmaccess.cpp:131
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
 msgstr "יש ללחוץ על %1 בזמן ש־NumLock, CapsLock ו־ScrollLock פעילים"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
 msgstr "יש ללחוץ על %1 בזמן ש־CapsLock ו־ScrollLock פעילים"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:134
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
 msgstr "יש ללחוץ על %1 בזמן ש־NumLock ו־ScrollLock פעילים"
 
-#: kcmaccess.cpp:134
+#: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
 msgstr "יש ללחוץ על %1 בזמן ש־ScrollLock פעיל"
 
-#: kcmaccess.cpp:135
+#: kcmaccess.cpp:136
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
 msgstr "יש ללחוץ על %1 בזמן ש־NumLock ו־CapsLock פעילים"
 
-#: kcmaccess.cpp:136
+#: kcmaccess.cpp:137
 #, kde-format
 msgid "Press %1 while CapsLock is active"
 msgstr "יש ללחוץ על %1 בזמן ש־CapsLock פעיל"
 
-#: kcmaccess.cpp:137
+#: kcmaccess.cpp:138
 #, kde-format
 msgid "Press %1 while NumLock is active"
 msgstr "יש ללחוץ על %1 בזמן ש־NumLock פעיל"
 
-#: kcmaccess.cpp:138
+#: kcmaccess.cpp:139
 #, kde-format
 msgid "Press %1"
 msgstr "יש ללחוץ על %1"
 
-#: kcmaccess.cpp:192
+#: kcmaccess.cpp:213
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "לא ניתן להגדיר gsettings ל־Orca‏: „%1” נכשל"
 
-#: kcmaccess.cpp:199
+#: kcmaccess.cpp:220
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "שגיאה: לא ניתן להפעיל את „orca --setup”"
@@ -318,37 +318,37 @@ msgstr "האם ניעור סמן פעיל"
 msgid "Magnification"
 msgstr "הגדלה"
 
-#: ui/ActivationShortcuts.qml:17
+#: ui/ActivationShortcuts.qml:18
 #, kde-format
 msgctxt "@option:check"
 msgid "Activation shortcuts:"
 msgstr "קיצורי דרך להפעלה:"
 
-#: ui/ActivationShortcuts.qml:18
+#: ui/ActivationShortcuts.qml:19
 #, kde-format
 msgctxt "Enable activation shortcuts"
 msgid "Enable"
 msgstr "הפעלה"
 
-#: ui/ActivationShortcuts.qml:30
+#: ui/ActivationShortcuts.qml:31
 #, kde-format
 msgctxt "@label"
 msgid "Press Shift 5 times to enable Sticky Keys"
 msgstr "יש ללחוץ על Shift‏ 5 פעמים כדי להפעיל מקשים דביקים"
 
-#: ui/ActivationShortcuts.qml:37
+#: ui/ActivationShortcuts.qml:38
 #, kde-format
 msgctxt "@label"
 msgid "Hold Shift for 8 seconds to enable Slow Keys"
 msgstr "יש להחזיק את Shift למשך 8 שניות כדי להפעיל מקשים איטיים"
 
-#: ui/ActivationShortcuts.qml:46
+#: ui/ActivationShortcuts.qml:47
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable sticky and slow keys after:"
 msgstr "השבתת מקשים דביקים ואיטיים לאחר:"
 
-#: ui/ActivationShortcuts.qml:75
+#: ui/ActivationShortcuts.qml:71
 #, kde-format
 msgid "%1 min"
 msgid_plural "%1 min"
@@ -357,7 +357,7 @@ msgstr[1] "שתי דק׳"
 msgstr[2] "%1 דק׳"
 msgstr[3] "%1 דק׳"
 
-#: ui/ActivationShortcuts.qml:79
+#: ui/ActivationShortcuts.qml:80
 #, kde-format
 msgctxt "short for minute(s)"
 msgid "min"
@@ -367,27 +367,27 @@ msgstr[1] "דק׳"
 msgstr[2] "דק׳"
 msgstr[3] "דק׳"
 
-#: ui/ActivationShortcuts.qml:88
+#: ui/ActivationShortcuts.qml:89
 #, kde-format
 msgid "When a shortcut is used:"
 msgstr "בעת שימוש במקש קיצור:"
 
-#: ui/ActivationShortcuts.qml:89
+#: ui/ActivationShortcuts.qml:90
 #, kde-format
 msgid "Display a confirmation dialog"
 msgstr "הצגת חלונית אישור"
 
-#: ui/ActivationShortcuts.qml:100
+#: ui/ActivationShortcuts.qml:101
 #, kde-format
 msgid "Ring the system bell"
 msgstr "צלצול בפעמון המערכת"
 
-#: ui/ActivationShortcuts.qml:111
+#: ui/ActivationShortcuts.qml:112
 #, kde-format
 msgid "Show a notification"
 msgstr "הצגת התראה"
 
-#: ui/ActivationShortcuts.qml:122
+#: ui/ActivationShortcuts.qml:123
 #, kde-format
 msgid "Configure Notifications…"
 msgstr "הגדרת התראות…"
@@ -465,9 +465,9 @@ msgctxt "Duration of the system bell"
 msgid "Duration:"
 msgstr "משך:"
 
-#: ui/Bell.qml:165 ui/KeyboardFilters.qml:55 ui/KeyboardFilters.qml:151
-#: ui/MouseNavigation.qml:51 ui/MouseNavigation.qml:73
-#: ui/MouseNavigation.qml:95
+#: ui/Bell.qml:165 ui/KeyboardFilters.qml:56 ui/KeyboardFilters.qml:157
+#: ui/MouseNavigation.qml:53 ui/MouseNavigation.qml:84
+#: ui/MouseNavigation.qml:110
 #, kde-format
 msgid "%1 ms"
 msgid_plural "%1 ms"
@@ -476,9 +476,9 @@ msgstr[1] "שתי מ״ש"
 msgstr[2] "%1 מ״ש"
 msgstr[3] "%1 מ״ש"
 
-#: ui/Bell.qml:169 ui/KeyboardFilters.qml:59 ui/KeyboardFilters.qml:155
-#: ui/MouseNavigation.qml:55 ui/MouseNavigation.qml:77
-#: ui/MouseNavigation.qml:99
+#: ui/Bell.qml:169 ui/KeyboardFilters.qml:65 ui/KeyboardFilters.qml:164
+#: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:88
+#: ui/MouseNavigation.qml:114
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
@@ -562,18 +562,18 @@ msgstr "כחול"
 msgid "Purple"
 msgstr "סגול"
 
-#: ui/KeyboardFilters.qml:17
+#: ui/KeyboardFilters.qml:18
 #, kde-format
 msgid "Slow keys:"
 msgstr "מקשים איטיים:"
 
-#: ui/KeyboardFilters.qml:22
+#: ui/KeyboardFilters.qml:23
 #, kde-format
 msgctxt "Enable slow keys"
 msgid "Enable"
 msgstr "הפעלה"
 
-#: ui/KeyboardFilters.qml:33
+#: ui/KeyboardFilters.qml:34
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -584,47 +584,47 @@ msgstr ""
 "כדי שמקש יתקבל, יש להחזיק אותו עד משך הזמן שהוגדר. שימושי בעת הקשה על יותר "
 "ממקש אחד בו־זמנית או אם יש קושי ללחוץ על המקש המבוקש בפעם הראשונה."
 
-#: ui/KeyboardFilters.qml:40
+#: ui/KeyboardFilters.qml:41
 #, kde-format
 msgctxt "Slow keys Delay"
 msgid "Delay:"
 msgstr "השהיה:"
 
-#: ui/KeyboardFilters.qml:68
+#: ui/KeyboardFilters.qml:74
 #, kde-format
 msgid "Ring system bell:"
 msgstr "צלצול בפעמון המערכת:"
 
-#: ui/KeyboardFilters.qml:69
+#: ui/KeyboardFilters.qml:75
 #, kde-format
 msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
 msgstr "כאשר מקש נ&לחץ"
 
-#: ui/KeyboardFilters.qml:83
+#: ui/KeyboardFilters.qml:89
 #, kde-format
 msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
 msgstr "כאשר מקש מ&תקבל"
 
-#: ui/KeyboardFilters.qml:97
+#: ui/KeyboardFilters.qml:103
 #, kde-format
 msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
 msgstr "כאשר מקש נ&דחה"
 
-#: ui/KeyboardFilters.qml:113
+#: ui/KeyboardFilters.qml:119
 #, kde-format
 msgid "Bounce keys:"
 msgstr "מקשים חוזרים:"
 
-#: ui/KeyboardFilters.qml:118
+#: ui/KeyboardFilters.qml:124
 #, kde-format
 msgctxt "Bounce keys enable"
 msgid "Enable"
 msgstr "הפעלה"
 
-#: ui/KeyboardFilters.qml:129
+#: ui/KeyboardFilters.qml:135
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -636,13 +636,13 @@ msgstr ""
 "ביד שגורמות ללחיצה על מקש כמה פעמים כאשר הכוונה היא ללחוץ על המקש פעם אחת "
 "בלבד."
 
-#: ui/KeyboardFilters.qml:136
+#: ui/KeyboardFilters.qml:142
 #, kde-format
 msgctxt "Bounce keys delay"
 msgid "Delay:"
 msgstr "השהיה:"
 
-#: ui/KeyboardFilters.qml:162
+#: ui/KeyboardFilters.qml:171
 #, kde-format
 msgid "Ring system bell when rejected"
 msgstr "לצלצל בפעמון המערכת בעת דחיית מקש"
@@ -771,19 +771,19 @@ msgctxt "@action:button"
 msgid "Configure Notifications…"
 msgstr "הגדרת התראות…"
 
-#: ui/MouseNavigation.qml:16
+#: ui/MouseNavigation.qml:17
 #, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move cursor:"
 msgstr "שימוש בלוח המספרים כדי להזיז את הסמן:"
 
-#: ui/MouseNavigation.qml:21
+#: ui/MouseNavigation.qml:22
 #, kde-format
 msgctxt "@option:check Enable mouse navigation"
 msgid "Enable"
 msgstr "הפעלה"
 
-#: ui/MouseNavigation.qml:32
+#: ui/MouseNavigation.qml:33
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -799,31 +799,31 @@ msgstr ""
 "המקשים <shortcut>1</shortcut>,‏ <shortcut>3</shortcut>,‏ <shortcut>7</"
 "shortcut> ו־<shortcut>9</shortcut> מאפשרים תנועה אנכית."
 
-#: ui/MouseNavigation.qml:37
+#: ui/MouseNavigation.qml:39
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
 msgstr "השהיית האצה:"
 
-#: ui/MouseNavigation.qml:59
+#: ui/MouseNavigation.qml:66
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr "משך חזרה:"
 
-#: ui/MouseNavigation.qml:81
+#: ui/MouseNavigation.qml:93
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "זמן האצה:"
 
-#: ui/MouseNavigation.qml:103
+#: ui/MouseNavigation.qml:118
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr "מהירות מרבית:"
 
-#: ui/MouseNavigation.qml:117
+#: ui/MouseNavigation.qml:132
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"

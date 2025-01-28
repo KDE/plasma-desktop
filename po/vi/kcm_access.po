@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-13 00:42+0000\n"
+"POT-Creation-Date: 2025-01-28 00:42+0000\n"
 "PO-Revision-Date: 2023-01-08 16:18+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -19,67 +19,67 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 22.12.0\n"
 
-#: kcmaccess.cpp:117
+#: kcmaccess.cpp:118
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGraph"
 
-#: kcmaccess.cpp:119
+#: kcmaccess.cpp:120
 #, kde-format
 msgid "Hyper"
 msgstr "Hyper"
 
-#: kcmaccess.cpp:121
+#: kcmaccess.cpp:122
 #, kde-format
 msgid "Super"
 msgstr "Super"
 
-#: kcmaccess.cpp:131
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
 msgstr "Nhấn %1 khi NumLock, CapsLock và ScrollLock đang bật"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
 msgstr "Nhấn %1 khi CapsLock và ScrollLock đang bật"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:134
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
 msgstr "Nhấn %1 khi NumLock và ScrollLock đang bật"
 
-#: kcmaccess.cpp:134
+#: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
 msgstr "Nhấn %1 khi ScrollLock đang bật"
 
-#: kcmaccess.cpp:135
+#: kcmaccess.cpp:136
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
 msgstr "Nhấn %1 khi NumLock và CapsLock đang bật"
 
-#: kcmaccess.cpp:136
+#: kcmaccess.cpp:137
 #, kde-format
 msgid "Press %1 while CapsLock is active"
 msgstr "Nhấn %1 khi CapsLock đang bật"
 
-#: kcmaccess.cpp:137
+#: kcmaccess.cpp:138
 #, kde-format
 msgid "Press %1 while NumLock is active"
 msgstr "Nhấn %1 khi NumLock đang bật"
 
-#: kcmaccess.cpp:138
+#: kcmaccess.cpp:139
 #, kde-format
 msgid "Press %1"
 msgstr "Nhấn %1"
 
-#: kcmaccess.cpp:192
+#: kcmaccess.cpp:213
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Không đặt được gsettings cho Orca: \"%1\" thất bại"
 
-#: kcmaccess.cpp:199
+#: kcmaccess.cpp:220
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Lỗi: Không khởi chạy được \"orca --setup\""
@@ -308,33 +308,33 @@ msgstr ""
 msgid "Magnification"
 msgstr "Hiện một thông báo"
 
-#: ui/ActivationShortcuts.qml:17
+#: ui/ActivationShortcuts.qml:18
 #, fuzzy, kde-format
 #| msgid "Activation Gestures"
 msgctxt "@option:check"
 msgid "Activation shortcuts:"
 msgstr "Động tác khởi động"
 
-#: ui/ActivationShortcuts.qml:18
+#: ui/ActivationShortcuts.qml:19
 #, fuzzy, kde-format
 #| msgid "Enable"
 msgctxt "Enable activation shortcuts"
 msgid "Enable"
 msgstr "Bật"
 
-#: ui/ActivationShortcuts.qml:30
+#: ui/ActivationShortcuts.qml:31
 #, kde-format
 msgctxt "@label"
 msgid "Press Shift 5 times to enable Sticky Keys"
 msgstr ""
 
-#: ui/ActivationShortcuts.qml:37
+#: ui/ActivationShortcuts.qml:38
 #, kde-format
 msgctxt "@label"
 msgid "Hold Shift for 8 seconds to enable Slow Keys"
 msgstr ""
 
-#: ui/ActivationShortcuts.qml:46
+#: ui/ActivationShortcuts.qml:47
 #, fuzzy, kde-format
 #| msgid ""
 #| "Turn sticky keys and slow keys off after a certain time of inactivity"
@@ -342,14 +342,14 @@ msgctxt "@option:check"
 msgid "Disable sticky and slow keys after:"
 msgstr "Tắt phím dính và phím chậm sau khi không dùng một thời gian"
 
-#: ui/ActivationShortcuts.qml:75
+#: ui/ActivationShortcuts.qml:71
 #, fuzzy, kde-format
 #| msgid " min"
 msgid "%1 min"
 msgid_plural "%1 min"
 msgstr[0] " phút"
 
-#: ui/ActivationShortcuts.qml:79
+#: ui/ActivationShortcuts.qml:80
 #, fuzzy, kde-format
 #| msgid " min"
 msgctxt "short for minute(s)"
@@ -357,29 +357,29 @@ msgid "min"
 msgid_plural "min"
 msgstr[0] " phút"
 
-#: ui/ActivationShortcuts.qml:88
+#: ui/ActivationShortcuts.qml:89
 #, fuzzy, kde-format
 #| msgid "When a gesture is used:"
 msgid "When a shortcut is used:"
 msgstr "Khi một động tác được dùng:"
 
-#: ui/ActivationShortcuts.qml:89
+#: ui/ActivationShortcuts.qml:90
 #, kde-format
 msgid "Display a confirmation dialog"
 msgstr "Hiển thi một hộp thoại xác nhận"
 
-#: ui/ActivationShortcuts.qml:100
+#: ui/ActivationShortcuts.qml:101
 #, fuzzy, kde-format
 #| msgid "Ring the System Bell"
 msgid "Ring the system bell"
 msgstr "Rung chuông hệ thống"
 
-#: ui/ActivationShortcuts.qml:111
+#: ui/ActivationShortcuts.qml:112
 #, kde-format
 msgid "Show a notification"
 msgstr "Hiện một thông báo"
 
-#: ui/ActivationShortcuts.qml:122
+#: ui/ActivationShortcuts.qml:123
 #, kde-format
 msgid "Configure Notifications…"
 msgstr "Cấu hình thông báo…"
@@ -461,18 +461,18 @@ msgctxt "Duration of the system bell"
 msgid "Duration:"
 msgstr "Thời lượng:"
 
-#: ui/Bell.qml:165 ui/KeyboardFilters.qml:55 ui/KeyboardFilters.qml:151
-#: ui/MouseNavigation.qml:51 ui/MouseNavigation.qml:73
-#: ui/MouseNavigation.qml:95
+#: ui/Bell.qml:165 ui/KeyboardFilters.qml:56 ui/KeyboardFilters.qml:157
+#: ui/MouseNavigation.qml:53 ui/MouseNavigation.qml:84
+#: ui/MouseNavigation.qml:110
 #, fuzzy, kde-format
 #| msgid " min"
 msgid "%1 ms"
 msgid_plural "%1 ms"
 msgstr[0] " phút"
 
-#: ui/Bell.qml:169 ui/KeyboardFilters.qml:59 ui/KeyboardFilters.qml:155
-#: ui/MouseNavigation.qml:55 ui/MouseNavigation.qml:77
-#: ui/MouseNavigation.qml:99
+#: ui/Bell.qml:169 ui/KeyboardFilters.qml:65 ui/KeyboardFilters.qml:164
+#: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:88
+#: ui/MouseNavigation.qml:114
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
@@ -554,18 +554,18 @@ msgstr ""
 msgid "Purple"
 msgstr ""
 
-#: ui/KeyboardFilters.qml:17
+#: ui/KeyboardFilters.qml:18
 #, kde-format
 msgid "Slow keys:"
 msgstr "Phím chậm:"
 
-#: ui/KeyboardFilters.qml:22
+#: ui/KeyboardFilters.qml:23
 #, kde-format
 msgctxt "Enable slow keys"
 msgid "Enable"
 msgstr "Bật"
 
-#: ui/KeyboardFilters.qml:33
+#: ui/KeyboardFilters.qml:34
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -574,47 +574,47 @@ msgid ""
 "difficulty pressing the key you want the first time."
 msgstr ""
 
-#: ui/KeyboardFilters.qml:40
+#: ui/KeyboardFilters.qml:41
 #, kde-format
 msgctxt "Slow keys Delay"
 msgid "Delay:"
 msgstr "Độ trễ:"
 
-#: ui/KeyboardFilters.qml:68
+#: ui/KeyboardFilters.qml:74
 #, kde-format
 msgid "Ring system bell:"
 msgstr "Rung chuông hệ thống:"
 
-#: ui/KeyboardFilters.qml:69
+#: ui/KeyboardFilters.qml:75
 #, kde-format
 msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
 msgstr "khi một phím bất kì được &nhấn"
 
-#: ui/KeyboardFilters.qml:83
+#: ui/KeyboardFilters.qml:89
 #, kde-format
 msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
 msgstr "khi một phím bất kì được &chấp nhận"
 
-#: ui/KeyboardFilters.qml:97
+#: ui/KeyboardFilters.qml:103
 #, kde-format
 msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
 msgstr "khi một phím bất kì bị &từ chối"
 
-#: ui/KeyboardFilters.qml:113
+#: ui/KeyboardFilters.qml:119
 #, kde-format
 msgid "Bounce keys:"
 msgstr "Phím nảy:"
 
-#: ui/KeyboardFilters.qml:118
+#: ui/KeyboardFilters.qml:124
 #, kde-format
 msgctxt "Bounce keys enable"
 msgid "Enable"
 msgstr "Bật"
 
-#: ui/KeyboardFilters.qml:129
+#: ui/KeyboardFilters.qml:135
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -623,13 +623,13 @@ msgid ""
 "press once."
 msgstr ""
 
-#: ui/KeyboardFilters.qml:136
+#: ui/KeyboardFilters.qml:142
 #, kde-format
 msgctxt "Bounce keys delay"
 msgid "Delay:"
 msgstr "Độ trễ:"
 
-#: ui/KeyboardFilters.qml:162
+#: ui/KeyboardFilters.qml:171
 #, kde-format
 msgid "Ring system bell when rejected"
 msgstr "Rung chuông hệ thống khi bị từ chối"
@@ -765,21 +765,21 @@ msgctxt "@action:button"
 msgid "Configure Notifications…"
 msgstr "Cấu hình thông báo…"
 
-#: ui/MouseNavigation.qml:16
+#: ui/MouseNavigation.qml:17
 #, fuzzy, kde-format
 #| msgid "Use number pad to move cursor:"
 msgctxt "@option:check"
 msgid "Use number pad to move cursor:"
 msgstr "Dùng bàn phím số để di chuyển con trỏ:"
 
-#: ui/MouseNavigation.qml:21
+#: ui/MouseNavigation.qml:22
 #, fuzzy, kde-format
 #| msgid "Enable"
 msgctxt "@option:check Enable mouse navigation"
 msgid "Enable"
 msgstr "Bật"
 
-#: ui/MouseNavigation.qml:32
+#: ui/MouseNavigation.qml:33
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -790,35 +790,35 @@ msgid ""
 "shortcut>, and <shortcut>9</shortcut> allow for diagonal movement."
 msgstr ""
 
-#: ui/MouseNavigation.qml:37
+#: ui/MouseNavigation.qml:39
 #, fuzzy, kde-format
 #| msgid "Acceleration delay:"
 msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
 msgstr "Độ trễ gia tốc:"
 
-#: ui/MouseNavigation.qml:59
+#: ui/MouseNavigation.qml:66
 #, fuzzy, kde-format
 #| msgid "Repeat interval:"
 msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr "Khoảng lặp lại:"
 
-#: ui/MouseNavigation.qml:81
+#: ui/MouseNavigation.qml:93
 #, fuzzy, kde-format
 #| msgid "Acceleration time:"
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "Thời gian gia tốc:"
 
-#: ui/MouseNavigation.qml:103
+#: ui/MouseNavigation.qml:118
 #, fuzzy, kde-format
 #| msgid "Maximum speed:"
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr "Tốc độ tối đa:"
 
-#: ui/MouseNavigation.qml:117
+#: ui/MouseNavigation.qml:132
 #, fuzzy, kde-format
 #| msgid "Acceleration time:"
 msgctxt "@label:spinbox"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-13 00:42+0000\n"
+"POT-Creation-Date: 2025-01-28 00:42+0000\n"
 "PO-Revision-Date: 2007-08-27 22:45+0530\n"
 "Last-Translator: Manu B <iammanu@gmail.com>\n"
 "Language-Team: Kannada\n"
@@ -18,67 +18,67 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: kcmaccess.cpp:117
+#: kcmaccess.cpp:118
 #, kde-format
 msgid "AltGraph"
 msgstr ""
 
-#: kcmaccess.cpp:119
+#: kcmaccess.cpp:120
 #, kde-format
 msgid "Hyper"
 msgstr "ಅತಿ"
 
-#: kcmaccess.cpp:121
+#: kcmaccess.cpp:122
 #, kde-format
 msgid "Super"
 msgstr "ಉನ್ನತ"
 
-#: kcmaccess.cpp:131
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
 msgstr "NumLock, CapsLock  ಮತ್ತು ScrollLock  ಕ್ರಿಯಾಶೀಲವಾಗಿದ್ದಾಗ  %1 ಅನ್ನು ಒತ್ತಿ"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
 msgstr "CapsLock  ಮತ್ತು ScrollLock  ಕ್ರಿಯಾಶೀಲವಾಗಿದ್ದಾಗ  %1 ಅನ್ನು ಒತ್ತಿ"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:134
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
 msgstr "NumLock, ಮತ್ತು ScrollLock  ಕ್ರಿಯಾಶೀಲವಾಗಿದ್ದಾಗ  %1 ಅನ್ನು ಒತ್ತಿ"
 
-#: kcmaccess.cpp:134
+#: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
 msgstr "ScrollLock  ಕ್ರಿಯಾಶೀಲವಾಗಿದ್ದಾಗ  %1 ಅನ್ನು ಒತ್ತಿ"
 
-#: kcmaccess.cpp:135
+#: kcmaccess.cpp:136
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
 msgstr "NumLock ಮತ್ತು CapsLock  ಕ್ರಿಯಾಶೀಲವಾಗಿದ್ದಾಗ  %1 ಅನ್ನು ಒತ್ತಿ"
 
-#: kcmaccess.cpp:136
+#: kcmaccess.cpp:137
 #, kde-format
 msgid "Press %1 while CapsLock is active"
 msgstr "CapsLock  ಕ್ರಿಯಾಶೀಲವಾಗಿದ್ದಾಗ  %1 ಅನ್ನು ಒತ್ತಿ"
 
-#: kcmaccess.cpp:137
+#: kcmaccess.cpp:138
 #, kde-format
 msgid "Press %1 while NumLock is active"
 msgstr "NumLock  ಕ್ರಿಯಾಶೀಲವಾಗಿದ್ದಾಗ  %1 ಅನ್ನು ಒತ್ತಿ"
 
-#: kcmaccess.cpp:138
+#: kcmaccess.cpp:139
 #, kde-format
 msgid "Press %1"
 msgstr "%1 ಅನ್ನು ಒತ್ತಿ"
 
-#: kcmaccess.cpp:192
+#: kcmaccess.cpp:213
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr ""
 
-#: kcmaccess.cpp:199
+#: kcmaccess.cpp:220
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr ""
@@ -313,32 +313,32 @@ msgstr ""
 msgid "Magnification"
 msgstr "ಸೂಚನೆ"
 
-#: ui/ActivationShortcuts.qml:17
+#: ui/ActivationShortcuts.qml:18
 #, fuzzy, kde-format
 #| msgid "Activation Gestures"
 msgctxt "@option:check"
 msgid "Activation shortcuts:"
 msgstr "ಸಕ್ರಿಯಗೊಳಿಸುವಿಕೆಯ ಸೂಚ್ಯವರ್ತನೆಗಳು (ಗೆಸ್ಚರ್ಸ್)"
 
-#: ui/ActivationShortcuts.qml:18
+#: ui/ActivationShortcuts.qml:19
 #, kde-format
 msgctxt "Enable activation shortcuts"
 msgid "Enable"
 msgstr ""
 
-#: ui/ActivationShortcuts.qml:30
+#: ui/ActivationShortcuts.qml:31
 #, kde-format
 msgctxt "@label"
 msgid "Press Shift 5 times to enable Sticky Keys"
 msgstr ""
 
-#: ui/ActivationShortcuts.qml:37
+#: ui/ActivationShortcuts.qml:38
 #, kde-format
 msgctxt "@label"
 msgid "Hold Shift for 8 seconds to enable Slow Keys"
 msgstr ""
 
-#: ui/ActivationShortcuts.qml:46
+#: ui/ActivationShortcuts.qml:47
 #, fuzzy, kde-format
 #| msgid ""
 #| "Turn sticky keys and slow keys off after a certain time of inactivity"
@@ -348,7 +348,7 @@ msgstr ""
 "ನಿಗದಿಯಾದ ಕಾಲದ ಕ್ರಿಯಾಶೂನ್ಯತೆಯ ನಂತರ ಅಂಟು ಕೀಲಿಕೈಗಳು ಮತ್ತು ಮಂದ ಕೀಲಿಕೈಗಳನ್ನು "
 "ನಿಷ್ಕ್ರಿಯಗೊಳಿಸು"
 
-#: ui/ActivationShortcuts.qml:75
+#: ui/ActivationShortcuts.qml:71
 #, fuzzy, kde-format
 #| msgid " min"
 msgid "%1 min"
@@ -356,7 +356,7 @@ msgid_plural "%1 min"
 msgstr[0] "ನಿಮಿಷ"
 msgstr[1] "ನಿಮಿಷ"
 
-#: ui/ActivationShortcuts.qml:79
+#: ui/ActivationShortcuts.qml:80
 #, fuzzy, kde-format
 #| msgid " min"
 msgctxt "short for minute(s)"
@@ -365,29 +365,29 @@ msgid_plural "min"
 msgstr[0] "ನಿಮಿಷ"
 msgstr[1] "ನಿಮಿಷ"
 
-#: ui/ActivationShortcuts.qml:88
+#: ui/ActivationShortcuts.qml:89
 #, kde-format
 msgid "When a shortcut is used:"
 msgstr ""
 
-#: ui/ActivationShortcuts.qml:89
+#: ui/ActivationShortcuts.qml:90
 #, kde-format
 msgid "Display a confirmation dialog"
 msgstr ""
 
-#: ui/ActivationShortcuts.qml:100
+#: ui/ActivationShortcuts.qml:101
 #, fuzzy, kde-format
 #| msgid "Use &system bell"
 msgid "Ring the system bell"
 msgstr "ವ್ಯ&ವಸ್ಥ್ಯಾ ಗಂಟೆಯನ್ನು ಬಳಸು"
 
-#: ui/ActivationShortcuts.qml:111
+#: ui/ActivationShortcuts.qml:112
 #, fuzzy, kde-format
 #| msgid "Notification"
 msgid "Show a notification"
 msgstr "ಸೂಚನೆ"
 
-#: ui/ActivationShortcuts.qml:122
+#: ui/ActivationShortcuts.qml:123
 #, fuzzy, kde-format
 msgid "Configure Notifications…"
 msgstr "ಸೂಚನೆ"
@@ -470,9 +470,9 @@ msgctxt "Duration of the system bell"
 msgid "Duration:"
 msgstr "ಅವಧಿ:"
 
-#: ui/Bell.qml:165 ui/KeyboardFilters.qml:55 ui/KeyboardFilters.qml:151
-#: ui/MouseNavigation.qml:51 ui/MouseNavigation.qml:73
-#: ui/MouseNavigation.qml:95
+#: ui/Bell.qml:165 ui/KeyboardFilters.qml:56 ui/KeyboardFilters.qml:157
+#: ui/MouseNavigation.qml:53 ui/MouseNavigation.qml:84
+#: ui/MouseNavigation.qml:110
 #, fuzzy, kde-format
 #| msgid " min"
 msgid "%1 ms"
@@ -480,9 +480,9 @@ msgid_plural "%1 ms"
 msgstr[0] "ನಿಮಿಷ"
 msgstr[1] "ನಿಮಿಷ"
 
-#: ui/Bell.qml:169 ui/KeyboardFilters.qml:59 ui/KeyboardFilters.qml:155
-#: ui/MouseNavigation.qml:55 ui/MouseNavigation.qml:77
-#: ui/MouseNavigation.qml:99
+#: ui/Bell.qml:169 ui/KeyboardFilters.qml:65 ui/KeyboardFilters.qml:164
+#: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:88
+#: ui/MouseNavigation.qml:114
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
@@ -564,19 +564,19 @@ msgstr ""
 msgid "Purple"
 msgstr ""
 
-#: ui/KeyboardFilters.qml:17
+#: ui/KeyboardFilters.qml:18
 #, fuzzy, kde-format
 #| msgid "&Use slow keys"
 msgid "Slow keys:"
 msgstr "ಮಂದ ಕೀಲಿಕೈಗಳನ್ನು &ಬಳಸಿ"
 
-#: ui/KeyboardFilters.qml:22
+#: ui/KeyboardFilters.qml:23
 #, kde-format
 msgctxt "Enable slow keys"
 msgid "Enable"
 msgstr ""
 
-#: ui/KeyboardFilters.qml:33
+#: ui/KeyboardFilters.qml:34
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -585,52 +585,52 @@ msgid ""
 "difficulty pressing the key you want the first time."
 msgstr ""
 
-#: ui/KeyboardFilters.qml:40
+#: ui/KeyboardFilters.qml:41
 #, kde-format
 msgctxt "Slow keys Delay"
 msgid "Delay:"
 msgstr ""
 
-#: ui/KeyboardFilters.qml:68
+#: ui/KeyboardFilters.qml:74
 #, fuzzy, kde-format
 #| msgid "Use &system bell"
 msgid "Ring system bell:"
 msgstr "ವ್ಯ&ವಸ್ಥ್ಯಾ ಗಂಟೆಯನ್ನು ಬಳಸು"
 
-#: ui/KeyboardFilters.qml:69
+#: ui/KeyboardFilters.qml:75
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is pressed"
 msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
 msgstr "ಕೀಲಿಕೈಯನ್ನು ಅದುಮಿದಾಗ ವ್ಯವಸ್ಥ್ಯಾ ಗಂಟೆಯನ್ನು &ಬಳಸು"
 
-#: ui/KeyboardFilters.qml:83
+#: ui/KeyboardFilters.qml:89
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is accepted"
 msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
 msgstr "ಕೀಲಿಕೈ ಸ್ವೀಕೃತಗೊಂಡಾಗ  ವ್ಯವಸ್ಥ್ಯಾ ಗಂಟೆಯನ್ನು &ಬಳಸು"
 
-#: ui/KeyboardFilters.qml:97
+#: ui/KeyboardFilters.qml:103
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is rejected"
 msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
 msgstr "ಕೀಲಿಕೈ ತಿರಸ್ಕೃತಗೊಂಡಾಗ ವ್ಯವಸ್ಥ್ಯಾ ಗಂಟೆಯನ್ನು &ಬಳಸು"
 
-#: ui/KeyboardFilters.qml:113
+#: ui/KeyboardFilters.qml:119
 #, fuzzy, kde-format
 #| msgid "Bounce Keys"
 msgid "Bounce keys:"
 msgstr "ಪುಟಿಯುವ (ಬೌನ್ಸ್) ಕೀಲಿಕೈಗಳು"
 
-#: ui/KeyboardFilters.qml:118
+#: ui/KeyboardFilters.qml:124
 #, kde-format
 msgctxt "Bounce keys enable"
 msgid "Enable"
 msgstr ""
 
-#: ui/KeyboardFilters.qml:129
+#: ui/KeyboardFilters.qml:135
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -639,13 +639,13 @@ msgid ""
 "press once."
 msgstr ""
 
-#: ui/KeyboardFilters.qml:136
+#: ui/KeyboardFilters.qml:142
 #, kde-format
 msgctxt "Bounce keys delay"
 msgid "Delay:"
 msgstr ""
 
-#: ui/KeyboardFilters.qml:162
+#: ui/KeyboardFilters.qml:171
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is rejected"
 msgid "Ring system bell when rejected"
@@ -786,19 +786,19 @@ msgctxt "@action:button"
 msgid "Configure Notifications…"
 msgstr "ಸೂಚನೆ"
 
-#: ui/MouseNavigation.qml:16
+#: ui/MouseNavigation.qml:17
 #, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move cursor:"
 msgstr ""
 
-#: ui/MouseNavigation.qml:21
+#: ui/MouseNavigation.qml:22
 #, kde-format
 msgctxt "@option:check Enable mouse navigation"
 msgid "Enable"
 msgstr ""
 
-#: ui/MouseNavigation.qml:32
+#: ui/MouseNavigation.qml:33
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -809,33 +809,33 @@ msgid ""
 "shortcut>, and <shortcut>9</shortcut> allow for diagonal movement."
 msgstr ""
 
-#: ui/MouseNavigation.qml:37
+#: ui/MouseNavigation.qml:39
 #, fuzzy, kde-format
 #| msgid "Acceptance dela&y:"
 msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
 msgstr "ಸ್ವೀಕರಣಾ ವಿಳಂ&ಬ:"
 
-#: ui/MouseNavigation.qml:59
+#: ui/MouseNavigation.qml:66
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr ""
 
-#: ui/MouseNavigation.qml:81
+#: ui/MouseNavigation.qml:93
 #, fuzzy, kde-format
 #| msgid "Acceptance dela&y:"
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "ಸ್ವೀಕರಣಾ ವಿಳಂ&ಬ:"
 
-#: ui/MouseNavigation.qml:103
+#: ui/MouseNavigation.qml:118
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr ""
 
-#: ui/MouseNavigation.qml:117
+#: ui/MouseNavigation.qml:132
 #, fuzzy, kde-format
 #| msgid "Acceptance dela&y:"
 msgctxt "@label:spinbox"
