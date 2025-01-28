@@ -189,7 +189,6 @@ void TouchpadDisabler::handleReset()
     if (!m_workingTouchpadFound) {
         return;
     }
-    touchpadApplySavedConfig();
     m_backend->setTouchpadEnabled(m_userRequestedState);
 }
 
