@@ -68,11 +68,6 @@ void migrateConfig(TouchpadBackend *backend)
     oldConfig->sync();
 }
 
-bool TouchpadDisabler::workingTouchpadFound() const
-{
-    return m_workingTouchpadFound;
-}
-
 void TouchpadDisabler::serviceRegistered(const QString &service)
 {
     if (!m_dependencies.removeWatchedService(service)) {
@@ -139,11 +134,6 @@ void TouchpadDisabler::serviceNameFetchFinished(QDBusPendingCallWatcher *callWat
     }
 }
 
-bool TouchpadDisabler::isEnabled() const
-{
-    return m_touchpadEnabled;
-}
-
 void TouchpadDisabler::updateCurrentState()
 {
     updateWorkingTouchpadFound();
@@ -153,7 +143,6 @@ void TouchpadDisabler::updateCurrentState()
     bool newEnabled = m_backend->isTouchpadEnabled();
     if (newEnabled != m_touchpadEnabled) {
         m_touchpadEnabled = newEnabled;
-        Q_EMIT enabledChanged(m_touchpadEnabled);
     }
 }
 
@@ -206,11 +195,7 @@ void TouchpadDisabler::handleReset()
 
 void TouchpadDisabler::updateWorkingTouchpadFound()
 {
-    bool newWorkingTouchpadFound = m_backend && m_backend->isTouchpadAvailable();
-    if (newWorkingTouchpadFound != m_workingTouchpadFound) {
-        m_workingTouchpadFound = newWorkingTouchpadFound;
-        Q_EMIT workingTouchpadFoundChanged(m_workingTouchpadFound);
-    }
+    m_workingTouchpadFound = m_backend && m_backend->isTouchpadAvailable();
 }
 
 void TouchpadDisabler::onPrepareForSleep(bool sleep)
