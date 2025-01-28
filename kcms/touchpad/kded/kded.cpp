@@ -84,7 +84,6 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     , m_backend(TouchpadBackend::implementation())
     , m_userRequestedState(true)
     , m_touchpadEnabled(true)
-    , m_workingTouchpadFound(false)
 {
     if (!m_backend) {
         return;
@@ -136,7 +135,6 @@ void TouchpadDisabler::serviceNameFetchFinished(QDBusPendingCallWatcher *callWat
 
 void TouchpadDisabler::updateCurrentState()
 {
-    updateWorkingTouchpadFound();
     if (!m_backend->isTouchpadAvailable()) {
         return;
     }
@@ -186,15 +184,10 @@ void TouchpadDisabler::lateInit()
 void TouchpadDisabler::handleReset()
 {
     updateCurrentState();
-    if (!m_workingTouchpadFound) {
+    if (!m_backend->isTouchpadAvailable()) {
         return;
     }
     m_backend->setTouchpadEnabled(m_userRequestedState);
-}
-
-void TouchpadDisabler::updateWorkingTouchpadFound()
-{
-    m_workingTouchpadFound = m_backend && m_backend->isTouchpadAvailable();
 }
 
 void TouchpadDisabler::onPrepareForSleep(bool sleep)
