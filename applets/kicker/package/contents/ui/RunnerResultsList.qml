@@ -21,6 +21,7 @@ FocusScope {
     property alias currentIndex: runnerMatches.currentIndex
     property alias count: runnerMatches.count
     property alias containsMouse: runnerMatches.containsMouse
+    property alias mainSearchField: runnerMatches.mainSearchField
 
     Accessible.name: header.text
     Accessible.role: Accessible.MenuItem

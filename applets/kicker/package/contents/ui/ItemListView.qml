@@ -22,9 +22,9 @@ FocusScope {
 
     signal exited
     signal keyNavigationAtListEnd
-    signal appendSearchText(string text)
 
     property Item focusParent: null
+    property Item mainSearchField: null
     property QtObject dialog: null
     property QtObject childDialog: null
     property bool iconsEnabled: false
@@ -41,10 +41,6 @@ FocusScope {
     property alias count: listView.count
     property alias containsMouse: listener.containsMouse
     property alias resetOnExitDelay: resetIndexTimer.interval
-
-    onFocusParentChanged: {
-        appendSearchText.connect(focusParent.appendSearchText);
-    }
 
     Timer {
         id: dialogSpawnTimer
@@ -66,11 +62,14 @@ FocusScope {
             // Gets reenabled after the dialog spawn causes a focus-in on the dialog window.
             kicker.hideOnWindowDeactivate = false;
 
-            itemList.childDialog = itemListDialogComponent.createObject(itemList);
-            itemList.childDialog.focusParent = itemList;
-            itemList.childDialog.visualParent = listView.currentItem;
-            itemList.childDialog.model = model.modelForRow(listView.currentIndex);
-            itemList.childDialog.visible = true;
+            itemList.childDialog = itemListDialogComponent.createObject(itemList,
+                                        {
+                                            mainSearchField: mainSearchField,
+                                            focusParent: itemList,
+                                            visualParent: listView.currentItem,
+                                            model: model.modelForRow(listView.currentIndex),
+                                            visible: true
+                                        });
 
             windowSystem.forceActive(itemList.childDialog.mainItem);
             itemList.childDialog.mainItem.focus = true;
@@ -96,6 +95,9 @@ FocusScope {
             }
         }
     }
+
+    Keys.priority: Keys.AfterItem
+    Keys.forwardTo: mainSearchField
 
     KQuickControlsAddons.MouseEventListener {
         id: listener
@@ -152,7 +154,7 @@ FocusScope {
                 highlightMoveDuration: 0
 
                 onCountChanged: {
-                    if (currentIndex == 0) {
+                    if (currentIndex == 0 && !mainSearchField.activeFocus) {
                         currentItem?.forceActiveFocus();
                     } else {
                         currentIndex = -1;
@@ -255,22 +257,16 @@ FocusScope {
                 } else if (event.key === Qt.Key_Tab) {
                     //do nothing, and skip appending text
                 } else if (event.text !== "") {
-                    if (/[\x00-\x1F\x7F]/.test(event.text)) {
-                        // We still want to focus it
-                        appendSearchText("");
-                    } else {
-                        appendSearchText(event.text);
+                    if (mainSearchField) {
+                        mainSearchField.forceActiveFocus();
                     }
                 }
             }
+
         }
     }
 
     Component.onCompleted: {
         windowSystem.monitorWindowFocus(itemList);
-
-        if (dialog == null) {
-            appendSearchText.connect(root.appendSearchText);
-        }
     }
 }

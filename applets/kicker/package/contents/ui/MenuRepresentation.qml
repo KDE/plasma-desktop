@@ -29,8 +29,6 @@ FocusScope {
         + (4 * Kirigami.Units.smallSpacing))
     Layout.maximumHeight: Layout.minimumHeight
 
-    signal appendSearchText(string text)
-
     function reset() {
         kicker.hideOnWindowDeactivate = true;
 
@@ -173,6 +171,8 @@ FocusScope {
 
             iconsEnabled: Plasmoid.configuration.showIconsRootLevel
 
+            mainSearchField: searchField
+
             model: rootModel
 
             onKeyNavigationAtListEnd: {
@@ -210,6 +210,8 @@ FocusScope {
                     id: runnerMatches
 
                     visible: runnerModel.modelForRow(index).count > 0
+
+                    mainSearchField: searchField
 
                     onKeyNavigationAtListEnd: {
                         searchField.focus = true;
@@ -427,8 +429,6 @@ FocusScope {
     }
 
     Component.onCompleted: {
-        appendSearchText.connect(searchField.appendText);
-
         kicker.reset.connect(reset);
         windowSystem.hidden.connect(reset);
 

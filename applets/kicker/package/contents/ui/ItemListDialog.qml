@@ -19,6 +19,8 @@ Kicker.SubMenu {
 
     property bool aboutToBeDestroyed: false
 
+    property alias mainSearchField: itemListView.mainSearchField
+
     visible: false
     hideOnWindowDeactivate: kicker.hideOnWindowDeactivate
     location: PlasmaCore.Types.Floating
