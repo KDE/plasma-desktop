@@ -15,7 +15,6 @@
 #endif
 
 #include "logging.h"
-#include "touchpadparameters.h"
 
 #include <QThreadStorage>
 

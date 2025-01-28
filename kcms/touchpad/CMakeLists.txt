@@ -33,12 +33,9 @@ add_library(touchpad_common STATIC
     actions.cpp
     touchpadbackend.cpp
     logging.cpp
-    touchpadparametersbase.cpp
     ${TOUCHPAD_DBUS_SRCS}
 )
 set_property(TARGET touchpad_common PROPERTY POSITION_INDEPENDENT_CODE ON)
-
-kconfig_add_kcfg_files(touchpad_common touchpadparameters.kcfgc)
 
 target_link_libraries(touchpad_common
     PUBLIC
