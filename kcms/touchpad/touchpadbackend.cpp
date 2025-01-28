@@ -21,17 +21,6 @@
 
 #include <KWindowSystem>
 
-void touchpadApplySavedConfig()
-{
-    TouchpadBackend *backend = TouchpadBackend::implementation();
-    if (!backend) {
-        return;
-    }
-
-    TouchpadParameters config;
-    backend->applyConfig(config.values());
-}
-
 void TouchpadBackend::setMode(TouchpadInputBackendMode mode)
 {
     m_mode = mode;

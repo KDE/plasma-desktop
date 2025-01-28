@@ -25,8 +25,6 @@ enum class TouchpadInputBackendMode {
 #endif
 };
 
-void touchpadApplySavedConfig();
-
 class Q_DECL_EXPORT TouchpadBackend : public QObject
 {
     Q_OBJECT
