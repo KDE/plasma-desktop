@@ -38,14 +38,12 @@ private Q_SLOTS:
 
 private:
     void lateInit();
-    void updateWorkingTouchpadFound();
     void showOsd();
 
     TouchpadBackend *m_backend;
     QDBusServiceWatcher m_dependencies;
 
     bool m_userRequestedState, m_touchpadEnabled;
-    bool m_workingTouchpadFound;
 
     bool m_preparingForSleep = false;
 };
