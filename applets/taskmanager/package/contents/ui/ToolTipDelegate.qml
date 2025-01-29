@@ -134,6 +134,7 @@ Loader {
                     virtualDesktops: model.VirtualDesktops
                     activities: model.Activities
                     hasTrackInATitle: groupToolTipListView.hasTrackInATitle
+                    orientation: groupToolTipListView.orientation
                 }
             }
         }

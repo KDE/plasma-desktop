@@ -34,6 +34,7 @@ ColumnLayout {
     required property list<string> activities
 
     property bool hasTrackInATitle: false
+    property int orientation: ListView.Vertical // vertical for compact single-window tooltips
 
     // HACK: Avoid blank space in the tooltip after closing a window
     ListView.onPooled: width = height = 0
@@ -108,7 +109,7 @@ ColumnLayout {
                     text: toolTipDelegate.appName
                     color: (headerHoverHandler.visible && headerHoverHighlight.pressed) ? PlasmaCore.Theme.highlightedTextColor : PlasmaCore.Theme.textColor
                     opacity: root.index === 0 ? 1 : 0
-                    visible: text.length !== 0
+                    visible: (text.length !== 0) && (root.orientation === ListView.Horizontal || root.index === 0)
                     textFormat: Text.PlainText
                 }
                 // window title
@@ -120,7 +121,8 @@ ColumnLayout {
                     text: root.titleIncludesTrack && playerController.active ? "" : root.title
                     color: (headerHoverHandler.visible && headerHoverHighlight.pressed) ? PlasmaCore.Theme.highlightedTextColor : PlasmaCore.Theme.textColor
                     opacity: 0.75
-                    visible: root.title.length !== 0 && root.title !== appNameHeading.text
+                    visible: root.title.length !== 0 && root.title !== appNameHeading.text &&
+                             (root.orientation === ListView.Horizontal || text.length !== 0)
                     textFormat: Text.PlainText
                 }
                 // subtext
