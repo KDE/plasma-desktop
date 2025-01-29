@@ -1726,10 +1726,10 @@ void FolderModel::createActions()
     QAction *del = KStandardAction::deleteFile(this, &FolderModel::deleteSelected, this);
     RemoveAction *remove = new RemoveAction(&m_actionCollection, this);
 
-    QAction *emptyTrash = new QAction(QIcon::fromTheme(QStringLiteral("trash-empty")), i18n("&Empty Trash"), this);
+    QAction *emptyTrash = new QAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("&Empty Trash"), this);
     connect(emptyTrash, &QAction::triggered, this, &FolderModel::emptyTrashBin);
 
-    QAction *restoreFromTrash = new QAction(i18nc("Restore from trash", "Restore"), this);
+    QAction *restoreFromTrash = new QAction(QIcon::fromTheme(QStringLiteral("edit-reset")), i18nc("Restore from trash", "Restore to Former Location"), this);
     connect(restoreFromTrash, &QAction::triggered, this, &FolderModel::restoreSelectedFromTrash);
 
     QAction *actOpen = new QAction(QIcon::fromTheme(QStringLiteral("window-new")), i18n("&Open"), this);
@@ -1829,6 +1829,15 @@ void FolderModel::updateActions()
         }
     }
 
+    if (QAction *moveToTrash = m_actionCollection.action(QStringLiteral("trash"))) {
+        if (isTrashLink) {
+            moveToTrash->setIcon(QIcon::fromTheme(QStringLiteral("edit-delete-remove")));
+            moveToTrash->setText(i18nc("@action:inmenu Removes the trash icon on the desktop", "Remove Trash Icon"));
+        } else {
+            moveToTrash->setIcon(QIcon::fromTheme(QStringLiteral("trash-empty")));
+            moveToTrash->setText(i18n("&Move to Trash"));
+        }
+    }
     if (QAction *emptyTrash = m_actionCollection.action(QStringLiteral("emptyTrash"))) {
         if (isTrash || isTrashLink) {
             emptyTrash->setVisible(true);
@@ -1848,7 +1857,6 @@ void FolderModel::updateActions()
 
     if (QAction *cut = m_actionCollection.action(QStringLiteral("cut"))) {
         cut->setEnabled(itemProperties.supportsDeleting());
-        cut->setVisible(!isTrash);
     }
 
     if (QAction *paste = m_actionCollection.action(QStringLiteral("paste"))) {
@@ -1909,6 +1917,8 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
     } else {
         KFileItemList items;
         QList<QUrl> urls;
+        bool isTrashLink = false;
+        const bool isTrash = (resolvedUrl().scheme() == QLatin1String("trash"));
 
         items.reserve(indexes.count());
         urls.reserve(indexes.count());
@@ -1921,11 +1931,27 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
         }
 
         KFileItemListProperties itemProperties(items);
+        // Check if we're showing the menu for the trash link
+        if (items.count() == 1 && items.at(0).isDesktopFile()) {
+            KDesktopFile file(items.at(0).localPath());
+            if (file.hasLinkType() && file.readUrl() == QLatin1String("trash:/")) {
+                isTrashLink = true;
+            }
+        }
 
         // Start adding the actions:
         // "Open" and "Open with" actions
-        m_fileItemActions->setItemListProperties(itemProperties);
-        m_fileItemActions->insertOpenWithActionsTo(nullptr, menu, QStringList());
+        if (!isTrash && !isTrashLink) {
+            m_fileItemActions->setItemListProperties(itemProperties);
+            m_fileItemActions->insertOpenWithActionsTo(nullptr, menu, QStringList());
+        }
+
+        if (!isTrash) {
+            menu->addAction(m_actionCollection.action(QStringLiteral("emptyTrash")));
+        } else {
+            menu->addAction(m_actionCollection.action(QStringLiteral("restoreFromTrash")));
+        }
+
         menu->addSeparator();
 
         // Add "Show Target" action only if the file *has* a target
@@ -1935,8 +1961,11 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
             menu->addSeparator();
         }
 
-        menu->addAction(m_actionCollection.action(QStringLiteral("cut")));
-        menu->addAction(m_actionCollection.action(QStringLiteral("copy")));
+        if (!isTrashLink) {
+            menu->addAction(m_actionCollection.action(QStringLiteral("cut")));
+            menu->addAction(m_actionCollection.action(QStringLiteral("copy")));
+        }
+
         if (urls.length() == 1) {
             if (items.first().isDir()) {
                 menu->addAction(m_actionCollection.action(QStringLiteral("pasteto")));
@@ -1946,39 +1975,45 @@ void FolderModel::openContextMenu(QQuickItem *visualParent, Qt::KeyboardModifier
         }
 
         menu->addAction(m_actionCollection.action(QStringLiteral("rename")));
-        menu->addSeparator();
-        menu->addAction(m_actionCollection.action(QStringLiteral("restoreFromTrash")));
+
+        if (!isTrashLink) {
+            menu->addSeparator();
+        }
 
         if (isDeleteCommandShown()) {
-            QAction *trashAction = m_actionCollection.action(QStringLiteral("trash"));
+            if (!isTrash) {
+                QAction *trashAction = m_actionCollection.action(QStringLiteral("trash"));
+                menu->addAction(trashAction);
+            }
             QAction *deleteAction = m_actionCollection.action(QStringLiteral("del"));
-            menu->addAction(trashAction);
             menu->addAction(deleteAction);
         } else {
-            if (RemoveAction *removeAction = qobject_cast<RemoveAction *>(m_actionCollection.action(QStringLiteral("remove")))) {
-                removeAction->update();
-                menu->addAction(removeAction);
+            if (!isTrash) {
+                if (RemoveAction *removeAction = qobject_cast<RemoveAction *>(m_actionCollection.action(QStringLiteral("remove")))) {
+                    removeAction->update();
+                    menu->addAction(removeAction);
 
-                // Used to monitor Shift modifier usage while the menu is open, to
-                // swap the Trash and Delete actions.
-                menu->installEventFilter(removeAction);
-                QCoreApplication::instance()->installEventFilter(removeAction);
+                    // Used to monitor Shift modifier usage while the menu is open, to
+                    // swap the Trash and Delete actions.
+                    menu->installEventFilter(removeAction);
+                    QCoreApplication::instance()->installEventFilter(removeAction);
+                }
             }
         }
 
-        menu->addAction(m_actionCollection.action(QStringLiteral("emptyTrash")));
-
         menu->addSeparator();
 
-        m_fileItemActions->addActionsTo(menu);
+        if (!isTrash && !isTrashLink) {
+            m_fileItemActions->addActionsTo(menu);
 
-        // Copy To, Move To
-        KSharedConfig::Ptr dolphin = KSharedConfig::openConfig(QStringLiteral("dolphinrc"));
-        if (KConfigGroup(dolphin, QStringLiteral("General")).readEntry("ShowCopyMoveMenu", false)) {
-            m_copyToMenu->setUrls(urls);
-            m_copyToMenu->setReadOnly(!itemProperties.supportsMoving());
-            m_copyToMenu->addActionsTo(menu);
-            menu->addSeparator();
+            // Copy To, Move To
+            KSharedConfig::Ptr dolphin = KSharedConfig::openConfig(QStringLiteral("dolphinrc"));
+            if (KConfigGroup(dolphin, QStringLiteral("General")).readEntry("ShowCopyMoveMenu", false)) {
+                m_copyToMenu->setUrls(urls);
+                m_copyToMenu->setReadOnly(!itemProperties.supportsMoving());
+                m_copyToMenu->addActionsTo(menu);
+                menu->addSeparator();
+            }
         }
 
         // Properties
