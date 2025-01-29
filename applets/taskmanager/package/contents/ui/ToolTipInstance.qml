@@ -95,6 +95,17 @@ ColumnLayout {
             // match spacing of DefaultToolTip.qml in plasma-framework
             spacing: Kirigami.Units.smallSpacing
 
+            // close button for right edge ltr and left edge rtl
+            LayoutItemProxy {
+                id: closeButtonFlippedItemProxy
+                target: closeButton
+                visible: toolTipDelegate.isWin &&
+                    ((tasks.Plasmoid.location == PlasmaCore.Types.LeftEdge &&
+                      Application.layoutDirection == Qt.RightToLeft) ||
+                     (tasks.Plasmoid.location == PlasmaCore.Types.RightEdge &&
+                      Application.layoutDirection == Qt.LeftToRight))
+            }
+
             // all textlabels
             ColumnLayout {
                 spacing: 0
@@ -157,13 +168,18 @@ ColumnLayout {
                 }
             }
 
+            LayoutItemProxy {
+                target: closeButton
+                visible: toolTipDelegate.isWin && !closeButtonFlippedItemProxy.visible
+            }
+
             // close button
             PlasmaComponents3.ToolButton {
                 id: closeButton
-                Layout.alignment: Qt.AlignTop// | Qt.AlignRight
-                Layout.rightMargin: -headerItem.Layout.margins
+                Layout.alignment: Qt.AlignTop
+                Layout.rightMargin: closeButtonFlippedItemProxy.visible ? headerItem.Layout.margins : -headerItem.Layout.margins
+                Layout.leftMargin: closeButtonFlippedItemProxy.visible ? -headerItem.Layout.margins : headerItem.Layout.margins
                 Layout.topMargin: -headerItem.Layout.margins
-                visible: toolTipDelegate.isWin
                 icon.name: "window-close"
                 onClicked: {
                     backend.cancelHighlightWindows();
