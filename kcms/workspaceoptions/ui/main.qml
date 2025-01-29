@@ -151,6 +151,7 @@ KCM.SimpleKCM {
             QQC2.RadioButton {
                 id: doubleClick
                 text: i18nc("part of a sentence: 'Clicking files or folders selects them'", "Selects them")
+                Accessible.description: doubleClickHelperText.text
                 checked: !kcm.globalsSettings.singleClick
                 onToggled: kcm.globalsSettings.singleClick = false
                 QQC2.ButtonGroup.group: singleClickGroup
@@ -162,6 +163,7 @@ KCM.SimpleKCM {
                 }
             }
             QQC2.Label {
+                id: doubleClickHelperText
                 Layout.fillWidth: true
                 leftPadding: Application.layoutDirection === Qt.LeftToRight ?
                     doubleClick.indicator.width + doubleClick.spacing : doubleClickHelperText.padding
@@ -181,6 +183,7 @@ KCM.SimpleKCM {
             QQC2.RadioButton {
                 id: singleClick
                 text: i18nc("part of a sentence: 'Clicking files or folders opens them'", "Opens them")
+                Accessible.description: singleClickHelperText.text
                 checked: kcm.globalsSettings.singleClick
                 onToggled: kcm.globalsSettings.singleClick = true
                 QQC2.ButtonGroup.group: singleClickGroup
@@ -191,6 +194,7 @@ KCM.SimpleKCM {
                 }
             }
             QQC2.Label {
+                id: singleClickHelperText
                 Layout.fillWidth: true
                 leftPadding: Application.layoutDirection === Qt.LeftToRight ?
                     singleClick.indicator.width + singleClick.spacing : singleClickHelperText.padding
@@ -232,6 +236,7 @@ KCM.SimpleKCM {
             QQC2.RadioButton {
                 id: scrollbarLeftClickNavigatesByPage
                 text: i18nc("@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one page up or down'", "Scrolls one page up or down")
+                Accessible.description: scrollbarLeftClickNavigatesByPageHelperText.text
                 checked: kcm.globalsSettings.scrollbarLeftClickNavigatesByPage
                 onToggled: kcm.globalsSettings.scrollbarLeftClickNavigatesByPage = true
                 QQC2.ButtonGroup.group: scrollHandleBehaviorGroup
@@ -242,6 +247,7 @@ KCM.SimpleKCM {
                 }
             }
             QQC2.Label {
+                id: scrollbarLeftClickNavigatesByPageHelperText
                 Layout.fillWidth: true
                 leftPadding: Application.layoutDirection === Qt.LeftToRight ?
                     scrollbarLeftClickNavigatesByPage.indicator.width + scrollbarLeftClickNavigatesByPage.spacing : scrollbarLeftClickNavigatesByPageHelperText.padding
@@ -283,6 +289,7 @@ KCM.SimpleKCM {
             Kirigami.FormData.label: i18n("Touch Mode:")
             QQC2.RadioButton {
                 text: KWindowSystem.isPlatformWayland ? i18nc("As in: 'Touch Mode is automatically enabled as needed'", "Automatically enable as needed") : i18nc("As in: 'Touch Mode is never enabled'", "Never enabled")
+                Accessible.description: touchModeAlwaysOffRadioButtonHelperText.text
                 checked: kcm.kwinSettings.tabletMode === "auto"
                 onToggled: {
                     if (checked) {
@@ -304,6 +311,7 @@ KCM.SimpleKCM {
 
         QQC2.RadioButton {
             text: i18nc("As in: 'Touch Mode is always enabled'", "Always enabled")
+            Accessible.description: touchModeAlwaysOffRadioButtonHelperText.text
             checked: kcm.kwinSettings.tabletMode === "on"
             onToggled: {
                 if (checked) {
@@ -326,6 +334,7 @@ KCM.SimpleKCM {
                 id: touchModeAlwaysOffRadioButton
                 visible: KWindowSystem.isPlatformWayland
                 text: i18nc("As in: 'Touch Mode is never enabled'", "Never enabled")
+                Accessible.description: touchModeAlwaysOffRadioButtonHelperText.text
                 checked: kcm.kwinSettings.tabletMode === "off"
                 onToggled: {
                     if (checked) {
@@ -340,6 +349,7 @@ KCM.SimpleKCM {
                 }
             }
             QQC2.Label {
+                id: touchModeAlwaysOffRadioButtonHelperText
                 Layout.fillWidth: true
                 Layout.preferredWidth: Kirigami.Units.gridUnit * 20
                 leftPadding: Application.layoutDirection === Qt.LeftToRight ?
