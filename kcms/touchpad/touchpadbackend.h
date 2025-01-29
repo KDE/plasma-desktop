@@ -47,15 +47,6 @@ public:
         return m_mode;
     }
 
-    virtual bool applyConfig(const QVariantHash &)
-    {
-        return false;
-    }
-    virtual bool getConfig(QVariantHash &)
-    {
-        return false;
-    }
-
     virtual bool applyConfig()
     {
         return false;

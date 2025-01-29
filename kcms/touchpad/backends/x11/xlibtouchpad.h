@@ -46,8 +46,6 @@ public:
     {
         return m_supported;
     }
-    bool applyConfig(const QVariantHash &p);
-    bool getConfig(QVariantHash &p);
     virtual bool getConfig()
     {
         return false;
@@ -79,7 +77,6 @@ protected:
     QVariant getParameter(const struct Parameter *);
     struct PropertyInfo *getDevProperty(const QLatin1String &propName);
     void flush();
-    virtual double getPropertyScale(const QString &name) const;
     const Parameter *findParameter(const QString &name);
 
     Display *m_display;

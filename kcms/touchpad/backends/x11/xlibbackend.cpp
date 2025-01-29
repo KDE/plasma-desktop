@@ -108,20 +108,6 @@ XlibTouchpad *XlibBackend::findTouchpad()
     return nullptr;
 }
 
-bool XlibBackend::applyConfig(const QVariantHash &p)
-{
-    if (!m_device) {
-        return false;
-    }
-
-    bool success = m_device->applyConfig(p);
-    if (!success) {
-        m_errorString = i18n("Cannot apply touchpad configuration");
-    }
-
-    return success;
-}
-
 bool XlibBackend::applyConfig()
 {
     if (!m_device) {
@@ -133,19 +119,6 @@ bool XlibBackend::applyConfig()
         m_errorString = i18n("Cannot apply touchpad configuration");
     }
 
-    return success;
-}
-
-bool XlibBackend::getConfig(QVariantHash &p)
-{
-    if (!m_device) {
-        return false;
-    }
-
-    bool success = m_device->getConfig(p);
-    if (!success) {
-        m_errorString = i18n("Cannot read touchpad configuration");
-    }
     return success;
 }
 
