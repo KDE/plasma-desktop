@@ -118,11 +118,14 @@ ColumnLayout {
                     maximumLineCount: 1
                     Layout.fillWidth: true
                     elide: Text.ElideRight
-                    text: root.titleIncludesTrack && playerController.active ? "" : root.title
+                    property bool somethingVisible: (thumbnailSourceItem.visible ||
+                        appNameHeading.visible || subtext.visible)
+                    text: ((root.titleIncludesTrack && playerController.active) ||
+                           (root.title === appNameHeading.text && somethingVisible))
+                          ? "" : root.title
                     color: (headerHoverHandler.visible && headerHoverHighlight.pressed) ? PlasmaCore.Theme.highlightedTextColor : PlasmaCore.Theme.textColor
                     opacity: 0.75
-                    visible: root.title.length !== 0 && root.title !== appNameHeading.text &&
-                             (root.orientation === ListView.Horizontal || text.length !== 0)
+                    visible: root.orientation === ListView.Horizontal || text.length !== 0
                     textFormat: Text.PlainText
                 }
                 // subtext
