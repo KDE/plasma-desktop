@@ -22,13 +22,23 @@ public:
     {
     }
 
-    bool getConfig() override;
-    bool applyConfig() override;
-    bool getDefaultConfig() override;
-    bool isChangedConfig() override;
+    bool getConfig();
+    bool applyConfig();
+    bool getDefaultConfig();
+    bool isChangedConfig();
 
     int touchpadOff() override;
     XcbAtom &touchpadOffAtom() override;
+
+    void setEnabled(bool set) override
+    {
+        m_enabled.set(!set);
+    }
+
+    bool isEnabled() const override
+    {
+        return !m_enabled.val; // underlying X11 property actually stores the "disabled" value
+    }
 
 private:
     template<typename T>
@@ -48,14 +58,6 @@ private:
     bool supportsDisableEvents() const override
     {
         return m_supportsDisableEvents.val;
-    }
-    bool isEnabled() const override
-    {
-        return !m_enabled.val; // underlying X11 property actually stores the "disabled" value
-    }
-    void setEnabled(bool set) override
-    {
-        m_enabled.set(!set);
     }
     //
     // Tapping

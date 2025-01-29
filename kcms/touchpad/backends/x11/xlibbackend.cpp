@@ -81,7 +81,7 @@ XlibBackend::XlibBackend(QObject *parent)
     }
 }
 
-XlibTouchpad *XlibBackend::findTouchpad()
+LibinputTouchpad *XlibBackend::findTouchpad()
 {
     int nDevices = 0;
     std::unique_ptr<XDeviceInfo, DeviceListDeleter> deviceInfo(XListInputDevices(m_display.get(), &nDevices));
@@ -210,7 +210,7 @@ bool XlibBackend::isTouchpadEnabled()
         return false;
     }
 
-    return m_device->enabled();
+    return m_device->isEnabled();
 }
 
 TouchpadBackend::TouchpadOffState XlibBackend::getTouchpadOff()

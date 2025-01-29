@@ -42,24 +42,6 @@ public:
     {
         return m_deviceId;
     }
-    virtual bool getConfig()
-    {
-        return false;
-    }
-    virtual bool applyConfig()
-    {
-        return false;
-    }
-    virtual bool getDefaultConfig()
-    {
-        return false;
-    }
-    virtual bool isChangedConfig()
-    {
-        return false;
-    }
-    void setEnabled(bool enable);
-    bool enabled();
     virtual void setTouchpadOff(int /*touchpadOff*/)
     {
     }
@@ -79,7 +61,7 @@ protected:
     xcb_connection_t *m_connection;
     int m_deviceId;
 
-    XcbAtom m_floatType, m_enabledAtom;
+    XcbAtom m_floatType;
 
     QMap<QLatin1String, std::shared_ptr<XcbAtom>> m_atoms;
 

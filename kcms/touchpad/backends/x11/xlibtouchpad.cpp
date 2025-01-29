@@ -12,7 +12,6 @@ XlibTouchpad::XlibTouchpad(Display *display, int deviceId)
     , m_deviceId(deviceId)
 {
     m_floatType.intern(m_connection, "FLOAT");
-    m_enabledAtom.intern(m_connection, XI_PROP_ENABLED);
 }
 
 void XlibTouchpad::loadSupportedProperties(const Parameter *props)
@@ -103,23 +102,6 @@ bool XlibTouchpad::setParameter(const Parameter *par, const QVariant &value)
 
     m_changed.insert(propName);
     return true;
-}
-
-void XlibTouchpad::setEnabled(bool enable)
-{
-    PropertyInfo enabled(m_display, m_deviceId, m_enabledAtom.atom(), 0);
-    if (enabled.b && *(enabled.b) != enable) {
-        *(enabled.b) = enable;
-        enabled.set();
-    }
-
-    flush();
-}
-
-bool XlibTouchpad::enabled()
-{
-    PropertyInfo enabled(m_display, m_deviceId, m_enabledAtom.atom(), 0);
-    return enabled.value(0).toBool();
 }
 
 const Parameter *XlibTouchpad::findParameter(const QString &name)
