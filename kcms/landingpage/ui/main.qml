@@ -171,7 +171,10 @@ KCMUtils.SimpleKCM {
 
             QQC2.Label {
                 Layout.fillWidth: true
-                leftPadding: doubleClick.indicator.width
+                leftPadding: Application.layoutDirection === Qt.LeftToRight ?
+                    doubleClick.indicator.width + doubleClick.spacing : padding
+                rightPadding: Application.layoutDirection === Qt.RightToLeft ?
+                    doubleClick.indicator.width + doubleClick.spacing : padding
                 text: doubleClick.Accessible.description
                 textFormat: Text.PlainText
                 elide: Text.ElideRight
@@ -200,7 +203,10 @@ KCMUtils.SimpleKCM {
 
             QQC2.Label {
                 Layout.fillWidth: true
-                leftPadding: singleClick.indicator.width
+                leftPadding: Application.layoutDirection === Qt.LeftToRight ?
+                    singleClick.indicator.width + singleClick.spacing : padding
+                rightPadding: Application.layoutDirection === Qt.RightToLeft ?
+                    singleClick.indicator.width + singleClick.spacing : padding
                 text: singleClick.Accessible.description
                 textFormat: Text.PlainText
                 elide: Text.ElideRight
