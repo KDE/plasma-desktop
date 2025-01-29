@@ -22,6 +22,8 @@ FocusScope {
 
     signal exited
     signal keyNavigationAtListEnd
+    signal navigateLeftRequested
+    signal navigateRightRequested
 
     property Item focusParent: null
     property Item mainSearchField: null
@@ -199,16 +201,15 @@ FocusScope {
             }
 
             Keys.onPressed: event => {
-                if (event.key === Qt.Key_Right || event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
-                    if (listView.currentItem !== null && listView.currentItem.hasChildren) {
-                        if (itemList.childDialog === null) {
-                            dialogSpawnTimer.focusOnSpawn = true;
-                            dialogSpawnTimer.restart();
-                        } else {
-                            windowSystem.forceActive(itemList.childDialog.mainItem);
-                            itemList.childDialog.mainItem.focus = true;
-                            itemList.childDialog.mainItem.currentIndex = 0;
-                        }
+                if (listView.currentItem !== null && listView.currentItem.hasChildren &&
+                    (event.key === Qt.Key_Right || event.key === Qt.Key_Return || event.key === Qt.Key_Enter)) {
+                    if (itemList.childDialog === null) {
+                        dialogSpawnTimer.focusOnSpawn = true;
+                        dialogSpawnTimer.restart();
+                    } else {
+                        windowSystem.forceActive(itemList.childDialog.mainItem);
+                        itemList.childDialog.mainItem.focus = true;
+                        itemList.childDialog.mainItem.currentIndex = 0;
                     }
                 } else if (event.key === Qt.Key_Up) {
                     event.accepted = true;
@@ -260,6 +261,10 @@ FocusScope {
                     if (mainSearchField) {
                         mainSearchField.forceActiveFocus();
                     }
+                } else if (event.key === Qt.Key_Left) {
+                    navigateLeftRequested();
+                } else if (event.key === Qt.Key_Right) {
+                    navigateRightRequested();
                 }
             }
 

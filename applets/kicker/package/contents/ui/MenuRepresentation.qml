@@ -229,48 +229,52 @@ FocusScope {
                         }
                     }
 
-                    Keys.onPressed: event => {
+                    onNavigateLeftRequested: {
                         let target = null;
                         const targets = [];
 
-                        switch (event.key) {
-                        case Qt.Key_Right:
-                            for (let i = index + 1; i < runnerModel.count; ++i) {
-                                targets.push(i);
-                            }
+                        for (let i = index - 1; i >= 0; --i) {
+                            targets.push(i);
+                        }
 
-                            for (let i = 0; i < index; ++i) {
-                                targets.push(i);
-                            }
+                        for (let i = runnerModel.count - 1; i > index; --i) {
+                            targets.push(i);
+                        }
 
-                            for (const i of targets) {
-                                if (runnerModel.modelForRow(i).count) {
-                                    target = runnerColumnsRepeater.itemAt(i);
-                                    break;
-                                }
+                        for (const i of targets) {
+                            if (runnerModel.modelForRow(i).count) {
+                                target = runnerColumnsRepeater.itemAt(i);
+                                break;
                             }
-                            break;
-
-                        case Qt.Key_Left:
-                            for (let i = index - 1; i >= 0; --i) {
-                                targets.push(i);
-                            }
-
-                            for (let i = runnerModel.count - 1; i > index; --i) {
-                                targets.push(i);
-                            }
-
-                            for (const i of targets) {
-                                if (runnerModel.modelForRow(i).count) {
-                                    target = runnerColumnsRepeater.itemAt(i);
-                                    break;
-                                }
-                            }
-                            break;
                         }
 
                         if (target) {
-                            event.accepted = true;
+                            currentIndex = -1;
+                            target.currentIndex = 0;
+                            target.focus = true;
+                        }
+                    }
+
+                    onNavigateRightRequested: {
+                        let target = null;
+                        const targets = [];
+
+                        for (let i = index + 1; i < runnerModel.count; ++i) {
+                            targets.push(i);
+                        }
+
+                        for (let i = 0; i < index; ++i) {
+                            targets.push(i);
+                        }
+
+                        for (const i of targets) {
+                            if (runnerModel.modelForRow(i).count) {
+                                target = runnerColumnsRepeater.itemAt(i);
+                                break;
+                            }
+                        }
+
+                        if (target) {
                             currentIndex = -1;
                             target.currentIndex = 0;
                             target.focus = true;
