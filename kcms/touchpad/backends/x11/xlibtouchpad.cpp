@@ -6,16 +6,6 @@
 #include <X11/extensions/XInput2.h>
 #include <xserver-properties.h>
 
-static QVariant negateVariant(const QVariant &value)
-{
-    if (value.typeId() == QMetaType::Type::Double) {
-        return QVariant(-value.toDouble());
-    } else if (value.typeId() == QMetaType::Type::Int) {
-        return QVariant(-value.toInt());
-    }
-    return value;
-}
-
 XlibTouchpad::XlibTouchpad(Display *display, int deviceId)
     : m_display(display)
     , m_connection(XGetXCBConnection(display))
@@ -23,108 +13,6 @@ XlibTouchpad::XlibTouchpad(Display *display, int deviceId)
 {
     m_floatType.intern(m_connection, "FLOAT");
     m_enabledAtom.intern(m_connection, XI_PROP_ENABLED);
-}
-
-bool XlibTouchpad::applyConfig(const QVariantHash &p)
-{
-    m_props.clear();
-
-    bool error = false;
-    for (const QString &name : std::as_const(m_supported)) {
-        QVariantHash::ConstIterator i = p.find(name);
-        if (i == p.end()) {
-            continue;
-        }
-        const Parameter *par = findParameter(name);
-        if (par) {
-            QVariant value(i.value());
-
-            double k = getPropertyScale(name);
-            if (k != 1.0) {
-                bool ok = false;
-                value = QVariant(value.toDouble(&ok) * k);
-                if (!ok) {
-                    error = true;
-                    continue;
-                }
-            }
-
-            if (m_negate.contains(name)) {
-                QVariantHash::ConstIterator i = p.find(m_negate[name]);
-                if (i != p.end() && i.value().toBool()) {
-                    value = negateVariant(value);
-                }
-            }
-
-            if (name == "CoastingSpeed") {
-                QVariantHash::ConstIterator coastingEnabled = p.find("Coasting");
-                if (coastingEnabled != p.end() && !coastingEnabled.value().toBool()) {
-                    value = QVariant(0);
-                }
-            }
-
-            if (!setParameter(par, value)) {
-                error = true;
-            }
-        }
-    }
-
-    flush();
-
-    return !error;
-}
-
-bool XlibTouchpad::getConfig(QVariantHash &p)
-{
-    if (m_supported.isEmpty()) {
-        return false;
-    }
-
-    m_props.clear();
-
-    bool error = false;
-    for (const QString &name : std::as_const(m_supported)) {
-        const Parameter *par = findParameter(name);
-        if (!par) {
-            continue;
-        }
-
-        QVariant value(getParameter(par));
-        if (!value.isValid()) {
-            error = true;
-            continue;
-        }
-
-        double k = getPropertyScale(name);
-        if (k != 1.0) {
-            bool ok = false;
-            value = QVariant(value.toDouble(&ok) / k);
-            if (!ok) {
-                error = true;
-                continue;
-            }
-        }
-
-        if (m_negate.contains(name)) {
-            bool negative = value.toDouble() < 0.0;
-            p[m_negate[name]] = QVariant(negative);
-            if (negative) {
-                value = negateVariant(value);
-            }
-        }
-
-        if (name == "CoastingSpeed") {
-            bool coasting = value.toDouble() != 0.0;
-            p["Coasting"] = QVariant(coasting);
-            if (!coasting) {
-                continue;
-            }
-        }
-
-        p[name] = value;
-    }
-
-    return !error;
 }
 
 void XlibTouchpad::loadSupportedProperties(const Parameter *props)
@@ -163,12 +51,6 @@ void XlibTouchpad::flush()
     m_changed.clear();
 
     XFlush(m_display);
-}
-
-double XlibTouchpad::getPropertyScale(const QString &name) const
-{
-    Q_UNUSED(name);
-    return 1.0;
 }
 
 PropertyInfo *XlibTouchpad::getDevProperty(const QLatin1String &propName)

@@ -32,9 +32,7 @@ public:
     static XlibBackend *initialize(QObject *parent = nullptr);
     ~XlibBackend();
 
-    bool applyConfig(const QVariantHash &) override;
     bool applyConfig() override;
-    bool getConfig(QVariantHash &) override;
     bool getConfig() override;
     bool getDefaultConfig() override;
     bool isChangedConfig() const override;
