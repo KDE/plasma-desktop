@@ -171,7 +171,10 @@ KCM.SimpleKCM {
         QQC2.CheckBox {
             id: disableEventsOnExternalMouse
             text: i18ndc("kcm_touchpad", "@option:check", "Disable while mouse is connected")
-            leftPadding: deviceEnabled.contentItem.leftPadding
+            leftPadding: Application.layoutDirection === Qt.LeftToRight ?
+                deviceEnabled.contentItem.leftPadding : disableEventsOnExternalMouse.padding
+            rightPadding: Application.layoutDirection === Qt.RightToLeft ?
+                deviceEnabled.contentItem.rightPadding : disableEventsOnExternalMouse.padding
 
             function load() {
                 if (!formLayout.enabled) {
@@ -197,7 +200,10 @@ KCM.SimpleKCM {
             QQC2.CheckBox {
                 id: dwt
                 text: i18nd("kcm_touchpad", "Disable while typing")
-                leftPadding: deviceEnabled.contentItem.leftPadding
+                leftPadding: Application.layoutDirection === Qt.LeftToRight ?
+                    deviceEnabled.contentItem.leftPadding : disableEventsOnExternalMouse.padding
+                rightPadding: Application.layoutDirection === Qt.RightToLeft ?
+                    deviceEnabled.contentItem.rightPadding : disableEventsOnExternalMouse.padding
 
                 hoverEnabled: true
                 QQC2.ToolTip {
@@ -224,7 +230,10 @@ KCM.SimpleKCM {
             }
             QQC2.Label {
                 Layout.fillWidth: true
-                leftPadding: dwt.leftPadding + dwt.contentItem.leftPadding
+                leftPadding: Application.layoutDirection === Qt.LeftToRight ?
+                    dwt.leftPadding + dwt.contentItem.leftPadding : dwt.padding
+                rightPadding: Application.layoutDirection === Qt.RightToLeft ?
+                    dwt.rightPadding + dwt.contentItem.rightPadding : dwt.padding
                 text: i18ndc("kcm_touchpad", "@label 'this' refers to the 'disable touchpad while typing' feature", "This can interfere with video games.")
                 textFormat: Text.PlainText
                 elide: Text.ElideRight
@@ -858,7 +867,10 @@ KCM.SimpleKCM {
             QQC2.Label {
                 Layout.fillWidth: true
                 visible: !middleClickMethod.visible
-                leftPadding: rightClickMethodAreas.contentItem.leftPadding
+                leftPadding: Application.layoutDirection === Qt.LeftToRight ?
+                    rightClickMethodAreas.contentItem.leftPadding : rightClickMethodAreas.padding
+                rightPadding: Application.layoutDirection === Qt.RightToLeft ?
+                    rightClickMethodAreas.contentItem.rightPadding : rightClickMethodAreas.padding
                 text: middleEmulation.checked
                     ? i18ndc("kcm_touchpad", "@info shown below radio button", "Middle-click by pressing both bottom corners.")
                     : i18ndc("kcm_touchpad", "@info shown below radio button", "Middle-click by pressing bottom center.")
@@ -895,7 +907,10 @@ KCM.SimpleKCM {
             QQC2.Label {
                 Layout.fillWidth: true
                 visible: !middleClickMethod.visible
-                leftPadding: rightClickMethodClickfinger.contentItem.leftPadding
+                leftPadding: Application.layoutDirection === Qt.LeftToRight ?
+                    rightClickMethodClickfinger.contentItem.leftPadding : rightClickMethodClickfinger.padding
+                rightPadding: Application.layoutDirection === Qt.RightToLeft ?
+                    rightClickMethodClickfinger.contentItem.rightPadding : rightClickMethodClickfinger.padding
                 text: i18ndc("kcm_touchpad", "@info shown below radio button", "Middle-click by pressing with three fingers.")
                 textFormat: Text.PlainText
                 elide: Text.ElideRight
