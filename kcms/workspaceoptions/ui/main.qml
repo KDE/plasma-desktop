@@ -163,7 +163,10 @@ KCM.SimpleKCM {
             }
             QQC2.Label {
                 Layout.fillWidth: true
-                leftPadding: singleClick.indicator.width
+                leftPadding: Application.layoutDirection === Qt.LeftToRight ?
+                    doubleClick.indicator.width + doubleClick.spacing : doubleClickHelperText.padding
+                rightPadding: Application.layoutDirection === Qt.RightToLeft ?
+                    doubleClick.indicator.width + doubleClick.spacing : doubleClickHelperText.padding
                 text: i18n("Open by double-clicking instead")
                 textFormat: Text.PlainText
                 elide: Text.ElideRight
@@ -189,7 +192,10 @@ KCM.SimpleKCM {
             }
             QQC2.Label {
                 Layout.fillWidth: true
-                leftPadding: singleClick.indicator.width
+                leftPadding: Application.layoutDirection === Qt.LeftToRight ?
+                    singleClick.indicator.width + singleClick.spacing : singleClickHelperText.padding
+                rightPadding: Application.layoutDirection === Qt.RightToLeft ?
+                    singleClick.indicator.width + singleClick.spacing : singleClickHelperText.padding
                 text: i18n("Select by clicking on item's selection marker")
                 textFormat: Text.PlainText
                 elide: Text.ElideRight
@@ -237,7 +243,10 @@ KCM.SimpleKCM {
             }
             QQC2.Label {
                 Layout.fillWidth: true
-                leftPadding: scrollbarLeftClickNavigatesByPage.indicator.width
+                leftPadding: Application.layoutDirection === Qt.LeftToRight ?
+                    scrollbarLeftClickNavigatesByPage.indicator.width + scrollbarLeftClickNavigatesByPage.spacing : scrollbarLeftClickNavigatesByPageHelperText.padding
+                rightPadding: Application.layoutDirection === Qt.RightToLeft ?
+                    scrollbarLeftClickNavigatesByPage.indicator.width + scrollbarLeftClickNavigatesByPage.spacing : scrollbarLeftClickNavigatesByPageHelperText.padding
                 text: i18n("Middle-click to scroll to clicked location")
                 textFormat: Text.PlainText
                 elide: Text.ElideRight
@@ -333,7 +342,10 @@ KCM.SimpleKCM {
             QQC2.Label {
                 Layout.fillWidth: true
                 Layout.preferredWidth: Kirigami.Units.gridUnit * 20
-                leftPadding: touchModeAlwaysOffRadioButton.indicator.width
+                leftPadding: Application.layoutDirection === Qt.LeftToRight ?
+                    touchModeAlwaysOffRadioButton.indicator.width + touchModeAlwaysOffRadioButton.spacing : touchModeAlwaysOffRadioButton.padding
+                rightPadding: Application.layoutDirection === Qt.RightToLeft ?
+                    touchModeAlwaysOffRadioButton.indicator.width + touchModeAlwaysOffRadioButton.spacing : touchModeAlwaysOffRadioButtonHelperText.padding
                 text: i18n("In Touch Mode, many elements of the user interface will become larger to more easily accommodate touch interaction.")
                 textFormat: Text.PlainText
                 elide: Text.ElideRight
