@@ -12,13 +12,11 @@
 #include <QStringList>
 #include <QtGui/private/qtx11extras_p.h>
 
-#include "libinputtouchpad.h"
 #include "touchpadbackend.h"
 #include "xlibtouchpad.h"
 
 #include <xcb/xcb.h>
 
-#include "propertyinfo.h"
 #include "xcbatom.h"
 
 class XlibTouchpad;
