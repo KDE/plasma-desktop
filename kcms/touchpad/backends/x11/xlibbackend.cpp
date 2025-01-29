@@ -15,6 +15,7 @@
 #include <config-X11.h>
 
 // Includes are ordered this way because of #defines in Xorg's headers
+#include "libinputtouchpad.h"
 #include "xlibbackend.h" // krazy:exclude=includes
 #include "xlibnotifications.h" // krazy:exclude=includes
 
