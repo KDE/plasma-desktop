@@ -3,20 +3,20 @@
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2008.
 # Maris Nartiss <maris.kde@gmail.com>, 2008.
 # Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
-# SPDX-FileCopyrightText: 2023, 2024 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-25 00:42+0000\n"
-"PO-Revision-Date: 2024-08-15 22:08+0300\n"
+"PO-Revision-Date: 2025-01-27 16:06+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.12.1\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -142,19 +142,16 @@ msgid "Ignored applications:"
 msgstr "Ignorētās programmas:"
 
 #: ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' executable names here (separated by commas or colons, for "
-#| "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
-"Te varat ievadīt programmu izpildīšanas komandas (atdaliet tās ar komatu vai "
-"kolu, piemēram, „xterm:konsole“ vai „xterm,konsole“), lai novērstu to "
+"Rakstiet programmu darbvirsmas datnes identifikatoru vai, ja lietojat X11, "
+"izpilddatnes nosaukumus (atdaliet tos ar komatu vai kolu, piemēram, xterm:"
+"org.kde.konsole.desktop vai xterm,org.kde.konsole.desktop), lai novērstu to "
 "automātisku ieslēgšanu kopā ar citām atjaunotām sesijas programmām."
 
 #: ui/main.qml:138

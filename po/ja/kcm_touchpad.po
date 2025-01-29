@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-23 00:42+0000\n"
+"POT-Creation-Date: 2025-01-29 00:42+0000\n"
 "PO-Revision-Date: 2024-02-23 22:09+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: ja\n"
@@ -51,32 +51,32 @@ msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr ""
 "タッチパッド %1 のデバイス情報の読み込み中に深刻なエラーが発生しました。"
 
-#: backends/x11/xlibbackend.cpp:71
+#: backends/x11/xlibbackend.cpp:68
 #, kde-format
 msgid "Cannot connect to X server"
 msgstr "X サーバに接続できません"
 
-#: backends/x11/xlibbackend.cpp:84 ui/main.qml:99
+#: backends/x11/xlibbackend.cpp:79 ui/main.qml:56
 #, kde-format
 msgid "No touchpad found"
 msgstr "タッチパッドが見つかりません"
 
-#: backends/x11/xlibbackend.cpp:124 backends/x11/xlibbackend.cpp:138
+#: backends/x11/xlibbackend.cpp:119 backends/x11/xlibbackend.cpp:133
 #, kde-format
 msgid "Cannot apply touchpad configuration"
 msgstr "タッチパッドの設定を適用できません"
 
-#: backends/x11/xlibbackend.cpp:152 backends/x11/xlibbackend.cpp:165
+#: backends/x11/xlibbackend.cpp:147 backends/x11/xlibbackend.cpp:160
 #, kde-format
 msgid "Cannot read touchpad configuration"
 msgstr "タッチパッドの設定を読み取れません"
 
-#: backends/x11/xlibbackend.cpp:178
+#: backends/x11/xlibbackend.cpp:173
 #, kde-format
 msgid "Cannot read default touchpad configuration"
 msgstr "デフォルトのタッチパッドの設定を読み込めません"
 
-#: kcm.cpp:105
+#: kcm.cpp:107
 #, kde-format
 msgid ""
 "Error while loading values. See logs for more information. Please restart "
@@ -85,12 +85,12 @@ msgstr ""
 "数値の読み込み中にエラーが発生しました。さらなる情報を得るにはログを確認して"
 "ください。この設定モジュールを再起動してください。"
 
-#: kcm.cpp:108
+#: kcm.cpp:110
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
 msgstr "タッチパッドが見つかりません。タッチパッドを接続してください。"
 
-#: kcm.cpp:117
+#: kcm.cpp:119
 #, kde-format
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
@@ -99,7 +99,7 @@ msgstr ""
 "すべての変更を保存できませんでした。さらなる情報を得るにはログを確認してくだ"
 "さい。この設定モジュールを再起動して再試行してください。"
 
-#: kcm.cpp:136
+#: kcm.cpp:138
 #, kde-format
 msgid ""
 "Error while loading default values. Failed to set some options to their "
@@ -108,7 +108,7 @@ msgstr ""
 "デフォルトの数値の読み込み中にエラーが発生しました。いくつかのオプションにデ"
 "フォルトの数値を設定できませんでした。"
 
-#: kcm.cpp:156
+#: kcm.cpp:154
 #, kde-format
 msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
@@ -117,26 +117,16 @@ msgstr ""
 "新しく追加されたデバイスの読み込み中にエラーが発生しました。再接続してこの設"
 "定モジュールを再起動してください。"
 
-#: kcm.cpp:179
+#: kcm.cpp:169
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
 msgstr "タッチパッドが切断されました。設定ダイアログを閉じました。"
 
-#: kcm.cpp:181
+#: kcm.cpp:171
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr ""
 "タッチパッドが接続解除されました。他のタッチパッドは見つかりませんでした。"
-
-#: kded/kded.cpp:201
-#, kde-format
-msgid "Touchpad was disabled because a mouse was plugged in"
-msgstr "マウスが接続されたためタッチパッドが無効化されました"
-
-#: kded/kded.cpp:204
-#, kde-format
-msgid "Touchpad was enabled because the mouse was unplugged"
-msgstr "マウスが接続解除されたためタッチパッドが有効化されました"
 
 #. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
 #: touchpadparameters.kcfg:27
@@ -229,73 +219,73 @@ msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "左上の端"
 
-#: ui/main.qml:100
+#: ui/main.qml:57
 #, kde-format
 msgid "Connect an external touchpad"
 msgstr "タッチパッドを接続してください"
 
-#: ui/main.qml:114
+#: ui/main.qml:72
 #, kde-format
 msgid "Device:"
 msgstr "デバイス:"
 
-#: ui/main.qml:140
+#: ui/main.qml:97
 #, kde-format
 msgid "General:"
 msgstr "全般:"
 
-#: ui/main.qml:141
+#: ui/main.qml:98
 #, kde-format
 msgid "Device enabled"
 msgstr "デバイスを有効化"
 
-#: ui/main.qml:145
+#: ui/main.qml:104
 #, kde-format
 msgid "Accept input through this device."
 msgstr "このデバイスからの入力を許可"
 
-#: ui/main.qml:169
+#: ui/main.qml:119
 #, fuzzy, kde-format
 #| msgid "Disable while typing"
 msgctxt "@option:check"
 msgid "Disable while mouse is connected"
 msgstr "入力中は無効化"
 
-#: ui/main.qml:195
+#: ui/main.qml:138
 #, kde-format
 msgid "Disable while typing"
 msgstr "入力中は無効化"
 
-#: ui/main.qml:200
+#: ui/main.qml:145
 #, kde-format
 msgid "Disable touchpad while typing to prevent accidental inputs."
 msgstr "誤入力を防ぐため入力中はタッチパッドを無効にする"
 
-#: ui/main.qml:224
+#: ui/main.qml:160
 #, kde-format
 msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
 msgid "This can interfere with video games."
 msgstr ""
 
-#: ui/main.qml:233
+#: ui/main.qml:170
 #, fuzzy, kde-format
 #| msgid "Left handed mode"
 msgid "Left-handed mode"
 msgstr "左利きモード"
 
-#: ui/main.qml:237
+#: ui/main.qml:176
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "左右のボタンを入れ替える"
 
-#: ui/main.qml:263
+#: ui/main.qml:193
 #, fuzzy, kde-format
 #| msgid "Press left and right buttons for middle click"
 msgctxt "@option:check"
 msgid "Press left and right buttons to middle-click"
 msgstr "左右のボタンを押して中クリック"
 
-#: ui/main.qml:267
+#: ui/main.qml:199
 #, fuzzy, kde-format
 #| msgid ""
 #| "Clicking left and right button simultaneously sends middle button click."
@@ -303,7 +293,7 @@ msgctxt "@info:tooltip for checkbox"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr "左右のボタンを同時に押すと中クリックが入力されます。"
 
-#: ui/main.qml:293
+#: ui/main.qml:213
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -311,189 +301,189 @@ msgid ""
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
 
-#: ui/main.qml:303
+#: ui/main.qml:223
 #, kde-format
 msgid "Pointer speed:"
 msgstr "ポインタの速度:"
 
-#: ui/main.qml:401
+#: ui/main.qml:299
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "ポインタの加速:"
 
-#: ui/main.qml:432
+#: ui/main.qml:318
 #, kde-format
 msgid "None"
 msgstr "なし"
 
-#: ui/main.qml:436
+#: ui/main.qml:323
 #, kde-format
 msgid "Cursor moves the same distance as finger."
 msgstr "カーソルは指が動いた距離と同じ長さだけ動きます。"
 
-#: ui/main.qml:445
+#: ui/main.qml:331
 #, kde-format
 msgid "Standard"
 msgstr "標準"
 
-#: ui/main.qml:449
+#: ui/main.qml:336
 #, kde-format
 msgid "Cursor travel distance depends on movement speed of finger."
 msgstr "カーソルが動く距離は指の動く速さによって変動します。"
 
-#: ui/main.qml:463
+#: ui/main.qml:349
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "スクロールの速さ:"
 
-#: ui/main.qml:514
+#: ui/main.qml:400
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "遅く"
 
-#: ui/main.qml:521
+#: ui/main.qml:407
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "速く"
 
-#: ui/main.qml:529
+#: ui/main.qml:415
 #, kde-format
 msgid "Scrolling:"
 msgstr "スクロール:"
 
-#: ui/main.qml:558
+#: ui/main.qml:434
 #, kde-format
 msgid "Two fingers"
 msgstr "二本指"
 
-#: ui/main.qml:562
+#: ui/main.qml:440
 #, kde-format
 msgid "Slide with two fingers scrolls."
 msgstr "二本指でスライドしてスクロール。"
 
-#: ui/main.qml:570
+#: ui/main.qml:448
 #, kde-format
 msgid "Touchpad edges"
 msgstr "タッチパッドの端"
 
-#: ui/main.qml:574
+#: ui/main.qml:454
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
 msgstr "タッチパッドの端をスライドしてスクロール。"
 
-#: ui/main.qml:584
+#: ui/main.qml:463
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "スクロールの方向を反転 (自然なスクロール)"
 
-#: ui/main.qml:600
+#: ui/main.qml:476
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "タッチスクリーンのようなスクロール。"
 
-#: ui/main.qml:608
+#: ui/main.qml:484
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "水平スクロールを無効化"
 
-#: ui/main.qml:625
+#: ui/main.qml:498
 #, fuzzy, kde-format
 #| msgid "Disable horizontal scrolling"
 msgid "Disable horizontal scrolling."
 msgstr "水平スクロールを無効化"
 
-#: ui/main.qml:638
+#: ui/main.qml:511
 #, fuzzy, kde-format
 #| msgid "Tapping:"
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "タップ:"
 
-#: ui/main.qml:639
+#: ui/main.qml:512
 #, fuzzy, kde-format
 #| msgid "Tap-to-click"
 msgctxt "@option:check"
 msgid "Tap-to-click"
 msgstr "タップしてクリック"
 
-#: ui/main.qml:643
+#: ui/main.qml:518
 #, fuzzy, kde-format
 #| msgid "Single tap is left button click."
 msgctxt "@info:tooltip"
 msgid "Single tap to left-click."
 msgstr "シングルタップは左クリックになります。"
 
-#: ui/main.qml:672
+#: ui/main.qml:533
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "タップしてドラッグ"
 
-#: ui/main.qml:676
+#: ui/main.qml:539
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
 msgstr "タップ後にそのまま指を動かすとドラッグになります。"
 
-#: ui/main.qml:703
+#: ui/main.qml:554
 #, kde-format
 msgid "Tap-and-drag lock"
 msgstr "タップ＆ドラッグ ロック"
 
-#: ui/main.qml:707
+#: ui/main.qml:560
 #, kde-format
 msgid "Dragging continues after a short finger lift."
 msgstr "少しの間指を離してもドラッグ状態が継続します。"
 
-#: ui/main.qml:727
+#: ui/main.qml:575
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "二本指タップ:"
 
-#: ui/main.qml:738
+#: ui/main.qml:595
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "右クリック (三本指タップで中クリック)"
 
-#: ui/main.qml:739
+#: ui/main.qml:596
+#, kde-format
+msgid "Right-click"
+msgstr "右クリック"
+
+#: ui/main.qml:606
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
 msgstr "二本指でタップで右クリック、三本指でタップして中クリック。"
 
-#: ui/main.qml:741
+#: ui/main.qml:607
+#, kde-format
+msgid "Tap with two fingers to right-click."
+msgstr "二本指でタップして右クリック。"
+
+#: ui/main.qml:615
 #, fuzzy, kde-format
 #| msgid "Middle-click (three-finger tap right-click)"
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "中クリック (三本指タップで右クリック)"
 
-#: ui/main.qml:742
+#: ui/main.qml:616
+#, kde-format
+msgid "Middle-click"
+msgstr "中クリック"
+
+#: ui/main.qml:626
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
 msgstr "二本指でタップして中クリック、三本指でタップして右クリック。"
 
-#: ui/main.qml:744
-#, kde-format
-msgid "Right-click"
-msgstr "右クリック"
-
-#: ui/main.qml:745
-#, kde-format
-msgid "Tap with two fingers to right-click."
-msgstr "二本指でタップして右クリック。"
-
-#: ui/main.qml:747
-#, kde-format
-msgid "Middle-click"
-msgstr "中クリック"
-
-#: ui/main.qml:748
+#: ui/main.qml:627
 #, kde-format
 msgid "Tap with two fingers to middle-click."
 msgstr "二本指でタップして中クリック。"
 
-#: ui/main.qml:806
+#: ui/main.qml:639
 #, fuzzy, kde-format
 #| msgid "Right-click:"
 msgctxt ""
@@ -502,14 +492,14 @@ msgctxt ""
 msgid "Integrated right-click:"
 msgstr "右クリック:"
 
-#: ui/main.qml:842
+#: ui/main.qml:660
 #, fuzzy, kde-format
 #| msgid "Press bottom-right corner"
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
 msgstr "右下の角を押す"
 
-#: ui/main.qml:847
+#: ui/main.qml:667
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -518,7 +508,7 @@ msgid ""
 "corners."
 msgstr ""
 
-#: ui/main.qml:848
+#: ui/main.qml:668
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -526,40 +516,40 @@ msgid ""
 "Middle-click by pressing the bottom central area."
 msgstr ""
 
-#: ui/main.qml:859
+#: ui/main.qml:679
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr ""
 
-#: ui/main.qml:860
+#: ui/main.qml:680
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr ""
 
-#: ui/main.qml:878
+#: ui/main.qml:698
 #, fuzzy, kde-format
 #| msgid "Press anywhere with two fingers"
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press touchpad with two fingers"
 msgstr "二本指でどこかを押す"
 
-#: ui/main.qml:883
+#: ui/main.qml:705
 #, fuzzy, kde-format
 #| msgid "Tap with two fingers to right-click."
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
 msgstr "二本指でタップして右クリック。"
 
-#: ui/main.qml:895
+#: ui/main.qml:715
 #, fuzzy, kde-format
 #| msgid "Press anywhere with three fingers."
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
 msgstr "三本指でどこかを押してください。"
 
-#: ui/main.qml:914
+#: ui/main.qml:734
 #, fuzzy, kde-format
 #| msgid "Middle-click: "
 msgctxt ""
@@ -568,27 +558,27 @@ msgctxt ""
 msgid "Integrated middle-click:"
 msgstr "中クリック:"
 
-#: ui/main.qml:943
+#: ui/main.qml:755
 #, fuzzy, kde-format
 #| msgid "Press bottom-middle"
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom middle edge"
 msgstr "下辺の中央を押す"
 
-#: ui/main.qml:947
+#: ui/main.qml:761
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the bottom right corner of your touchpad acts as right-click."
 msgstr ""
 
-#: ui/main.qml:955
+#: ui/main.qml:769
 #, fuzzy, kde-format
 #| msgid "Press bottom left and bottom right corners simultaneously"
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom left and bottom right corners"
 msgstr "左下と右下を同時に押す"
 
-#: ui/main.qml:959
+#: ui/main.qml:775
 #, fuzzy, kde-format
 #| msgid "Press bottom left and bottom right corners simultaneously"
 msgctxt "@info:tooltip for radiobutton"
@@ -597,19 +587,25 @@ msgid ""
 "middle-click."
 msgstr "左下と右下を同時に押す"
 
-#: ui/main.qml:968
+#: ui/main.qml:783
 #, fuzzy, kde-format
 #| msgid "Press anywhere with three fingers"
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
 msgstr "三本指でどこかを押す"
 
-#: ui/main.qml:974
+#: ui/main.qml:790
 #, fuzzy, kde-format
 #| msgid "Tap with two fingers to right-click."
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr "二本指でタップして右クリック。"
+
+#~ msgid "Touchpad was disabled because a mouse was plugged in"
+#~ msgstr "マウスが接続されたためタッチパッドが無効化されました"
+
+#~ msgid "Touchpad was enabled because the mouse was unplugged"
+#~ msgstr "マウスが接続解除されたためタッチパッドが有効化されました"
 
 #~ msgid ""
 #~ "Software enabled buttons will be added to bottom portion of your touchpad."
