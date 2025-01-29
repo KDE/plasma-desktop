@@ -26,6 +26,9 @@ KCM.SimpleKCM {
     property Touchpad.InputDevice device: backend.inputDevices[deviceIndex] ?? null
     signal changeSignal()
 
+    LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+    LayoutMirroring.childrenInherit: true
+
     headerPaddingEnabled: false // Let the InlineMessage touch the edges
     header: Kirigami.InlineMessage {
         id: inlineMessage
