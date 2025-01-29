@@ -34,10 +34,6 @@ public:
     bool getConfig() override;
     bool getDefaultConfig() override;
     bool isChangedConfig() const override;
-    QStringList supportedParameters() const override
-    {
-        return m_device ? m_device->supportedParameters() : QStringList();
-    }
     QString errorString() const override
     {
         return m_errorString;

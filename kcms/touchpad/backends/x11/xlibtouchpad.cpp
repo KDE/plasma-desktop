@@ -25,12 +25,6 @@ void XlibTouchpad::loadSupportedProperties(const Parameter *props)
             m_atoms.insert(name, std::make_shared<XcbAtom>(m_connection, param->prop_name));
         }
     }
-
-    for (const Parameter *p = props; p->name; p++) {
-        if (getParameter(p).isValid()) {
-            m_supported.append(p->name);
-        }
-    }
 }
 
 QVariant XlibTouchpad::getParameter(const Parameter *par)
