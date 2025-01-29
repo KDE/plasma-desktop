@@ -64,10 +64,6 @@ public:
         return false;
     }
 
-    virtual QStringList supportedParameters() const
-    {
-        return {};
-    }
     virtual QString errorString() const
     {
         return QString();

@@ -42,10 +42,6 @@ public:
     {
         return m_deviceId;
     }
-    const QStringList &supportedParameters() const
-    {
-        return m_supported;
-    }
     virtual bool getConfig()
     {
         return false;
@@ -89,6 +85,5 @@ protected:
 
     QMap<QLatin1String, struct PropertyInfo> m_props;
     QSet<QLatin1String> m_changed;
-    QStringList m_supported;
     const struct Parameter *m_paramList;
 };
