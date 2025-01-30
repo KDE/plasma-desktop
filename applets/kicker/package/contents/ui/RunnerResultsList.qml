@@ -13,10 +13,13 @@ import org.kde.plasma.components as PlasmaComponents3
 import org.kde.plasma.plasmoid
 
 FocusScope {
+    id: runnerResultsList
     width: runnerMatches.width + vertLine.width + vertLine.anchors.leftMargin + runnerMatches.anchors.leftMargin
     height: parent.height
 
     signal keyNavigationAtListEnd
+    signal navigateLeftRequested
+    signal navigateRightRequested
 
     property alias currentIndex: runnerMatches.currentIndex
     property alias count: runnerMatches.count
@@ -95,6 +98,8 @@ FocusScope {
                 currentIndex = 0;
             }
         }
+        onNavigateLeftRequested: runnerResultsList.navigateLeftRequested()
+        onNavigateRightRequested: runnerResultsList.navigateRightRequested()
     }
 
     Component.onCompleted: {
