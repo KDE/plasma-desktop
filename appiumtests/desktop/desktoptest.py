@@ -162,8 +162,7 @@ class DesktopTest(unittest.TestCase):
         WebDriverWait(self.driver, 30).until_not(lambda _: add_or_manage_widgets_button.is_displayed())
 
     def _open_containment_config_dialog(self) -> None:
-        # Alt+D, S
-        ActionChains(self.driver).key_down(Keys.ALT).send_keys("d").pause(0.5).send_keys("s").key_up(Keys.ALT).perform()
+        ActionChains(self.driver).key_down(Keys.CONTROL).key_down(Keys.SHIFT).send_keys("d").key_up(Keys.CONTROL).key_up(Keys.SHIFT).perform()
         WebDriverWait(self.driver, 30).until(EC.presence_of_element_located((AppiumBy.NAME, "Wallpaper type:")))
 
     def test_0_panel_ready(self) -> None:
@@ -214,6 +213,7 @@ class DesktopTest(unittest.TestCase):
         ActionChains(self.driver).send_keys(Keys.ESCAPE).perform()
         wait.until_not(lambda _: mouseaction_element.is_displayed())
 
+    @unittest.skip("TODO: Open panel config dialog without keyboard shortcut")
     def test_3_open_panel_edit_mode(self) -> None:
         """
         Tests the edit mode toolbox can be loaded

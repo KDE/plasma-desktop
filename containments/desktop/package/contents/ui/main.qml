@@ -399,7 +399,7 @@ ContainmentItem {
             id: configAction
             text: i18n("Desktop and Wallpaper")
             icon.name: "preferences-desktop-wallpaper"
-            shortcut: "alt+d,alt+s"
+            shortcut:"Ctrl+Shift+D"
             onTriggered: Plasmoid.containment.configureRequested(Plasmoid)
         }
 
