@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-13 02:38+0000\n"
+"POT-Creation-Date: 2025-01-30 02:33+0000\n"
 "PO-Revision-Date: 2024-11-29 18:19+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -24,67 +24,67 @@ msgstr ""
 "X-Generator: Lokalize 24.08.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: kcmaccess.cpp:117
+#: kcmaccess.cpp:118
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGraph"
 
-#: kcmaccess.cpp:119
+#: kcmaccess.cpp:120
 #, kde-format
 msgid "Hyper"
 msgstr "Hiper"
 
-#: kcmaccess.cpp:121
+#: kcmaccess.cpp:122
 #, kde-format
 msgid "Super"
 msgstr "Super"
 
-#: kcmaccess.cpp:131
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
 msgstr "Sakatu %1, BlokZenb, BlokMaius eta BlokKorr aktibo daudenean"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
 msgstr "Sakatu %1, BlokMaius eta BlokKorr aktibo daudenean"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:134
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
 msgstr "Sakatu %1, BlokZenb eta BlokKorr aktibo daudenean"
 
-#: kcmaccess.cpp:134
+#: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
 msgstr "Sakatu %1, BlokKorr aktibo dagoenean"
 
-#: kcmaccess.cpp:135
+#: kcmaccess.cpp:136
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
 msgstr "Sakatu %1, BlokZenb eta BlokMaius aktibo daudenean"
 
-#: kcmaccess.cpp:136
+#: kcmaccess.cpp:137
 #, kde-format
 msgid "Press %1 while CapsLock is active"
 msgstr "Sakatu %1, BlokMaius aktibo dagoenean"
 
-#: kcmaccess.cpp:137
+#: kcmaccess.cpp:138
 #, kde-format
 msgid "Press %1 while NumLock is active"
 msgstr "Sakatu %1, BlokZenb aktibo dagoenean"
 
-#: kcmaccess.cpp:138
+#: kcmaccess.cpp:139
 #, kde-format
 msgid "Press %1"
 msgstr "Sakatu %1"
 
-#: kcmaccess.cpp:192
+#: kcmaccess.cpp:213
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Ezin izan dira orcarentzako gsettings ezarri: \"%1\" huts egin du"
 
-#: kcmaccess.cpp:199
+#: kcmaccess.cpp:220
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Errorea: Ezin izan da \"orca --setup\" abiarazi"
@@ -311,44 +311,44 @@ msgstr "Kurtsorea astintzea gaituta dagoen edo ez"
 msgid "Magnification"
 msgstr "Handiagotzea"
 
-#: ui/ActivationShortcuts.qml:17
+#: ui/ActivationShortcuts.qml:18
 #, kde-format
 msgctxt "@option:check"
 msgid "Activation shortcuts:"
 msgstr "Aktibazio-lasterbideak:"
 
-#: ui/ActivationShortcuts.qml:18
+#: ui/ActivationShortcuts.qml:19
 #, kde-format
 msgctxt "Enable activation shortcuts"
 msgid "Enable"
 msgstr "Gaitu"
 
-#: ui/ActivationShortcuts.qml:30
+#: ui/ActivationShortcuts.qml:31
 #, kde-format
 msgctxt "@label"
 msgid "Press Shift 5 times to enable Sticky Keys"
 msgstr "Sakatu Maius. 5 aldiz Tekla Itsaskorrak gaitzeko"
 
-#: ui/ActivationShortcuts.qml:37
+#: ui/ActivationShortcuts.qml:38
 #, kde-format
 msgctxt "@label"
 msgid "Hold Shift for 8 seconds to enable Slow Keys"
 msgstr "Eutsi Maius. 8 segundoz Tekla Motelak gaitzeko"
 
-#: ui/ActivationShortcuts.qml:46
+#: ui/ActivationShortcuts.qml:47
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable sticky and slow keys after:"
 msgstr "Ezgaitu tekla-itsaskorrak eta -motelak hau igarotakoan:"
 
-#: ui/ActivationShortcuts.qml:75
+#: ui/ActivationShortcuts.qml:71
 #, kde-format
 msgid "%1 min"
 msgid_plural "%1 min"
 msgstr[0] "min %1"
 msgstr[1] "%1 min"
 
-#: ui/ActivationShortcuts.qml:79
+#: ui/ActivationShortcuts.qml:80
 #, kde-format
 msgctxt "short for minute(s)"
 msgid "min"
@@ -356,27 +356,27 @@ msgid_plural "min"
 msgstr[0] "min"
 msgstr[1] "min"
 
-#: ui/ActivationShortcuts.qml:88
+#: ui/ActivationShortcuts.qml:89
 #, kde-format
 msgid "When a shortcut is used:"
 msgstr "Lasterbide bat erabiltzean:"
 
-#: ui/ActivationShortcuts.qml:89
+#: ui/ActivationShortcuts.qml:90
 #, kde-format
 msgid "Display a confirmation dialog"
 msgstr "Azaldu berresteko elkarrizketa-koadro bat"
 
-#: ui/ActivationShortcuts.qml:100
+#: ui/ActivationShortcuts.qml:101
 #, kde-format
 msgid "Ring the system bell"
 msgstr "Jo sistemaren txirrina"
 
-#: ui/ActivationShortcuts.qml:111
+#: ui/ActivationShortcuts.qml:112
 #, kde-format
 msgid "Show a notification"
 msgstr "Erakutsi jakinarazpen bat"
 
-#: ui/ActivationShortcuts.qml:122
+#: ui/ActivationShortcuts.qml:123
 #, kde-format
 msgid "Configure Notifications…"
 msgstr "Konfiguratu jakinarazpenak..."
@@ -454,18 +454,18 @@ msgctxt "Duration of the system bell"
 msgid "Duration:"
 msgstr "Iraupena:"
 
-#: ui/Bell.qml:165 ui/KeyboardFilters.qml:55 ui/KeyboardFilters.qml:151
-#: ui/MouseNavigation.qml:51 ui/MouseNavigation.qml:73
-#: ui/MouseNavigation.qml:95
+#: ui/Bell.qml:165 ui/KeyboardFilters.qml:56 ui/KeyboardFilters.qml:157
+#: ui/MouseNavigation.qml:53 ui/MouseNavigation.qml:84
+#: ui/MouseNavigation.qml:110
 #, kde-format
 msgid "%1 ms"
 msgid_plural "%1 ms"
 msgstr[0] "ms %1"
 msgstr[1] "%1 ms"
 
-#: ui/Bell.qml:169 ui/KeyboardFilters.qml:59 ui/KeyboardFilters.qml:155
-#: ui/MouseNavigation.qml:55 ui/MouseNavigation.qml:77
-#: ui/MouseNavigation.qml:99
+#: ui/Bell.qml:169 ui/KeyboardFilters.qml:65 ui/KeyboardFilters.qml:164
+#: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:88
+#: ui/MouseNavigation.qml:114
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
@@ -547,18 +547,18 @@ msgstr "Urdina"
 msgid "Purple"
 msgstr "Purpura"
 
-#: ui/KeyboardFilters.qml:17
+#: ui/KeyboardFilters.qml:18
 #, kde-format
 msgid "Slow keys:"
 msgstr "Tekla motelak:"
 
-#: ui/KeyboardFilters.qml:22
+#: ui/KeyboardFilters.qml:23
 #, kde-format
 msgctxt "Enable slow keys"
 msgid "Enable"
 msgstr "Gaitu"
 
-#: ui/KeyboardFilters.qml:33
+#: ui/KeyboardFilters.qml:34
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -570,47 +570,47 @@ msgstr ""
 "gabe aldiko tekla bat baino gehiago sakatzen baduzu edo sakatu nahi duzun "
 "tekla lehen aldian sakatzeko zailtasuna baduzu."
 
-#: ui/KeyboardFilters.qml:40
+#: ui/KeyboardFilters.qml:41
 #, kde-format
 msgctxt "Slow keys Delay"
 msgid "Delay:"
 msgstr "Atzerapena:"
 
-#: ui/KeyboardFilters.qml:68
+#: ui/KeyboardFilters.qml:74
 #, kde-format
 msgid "Ring system bell:"
 msgstr "Jo sistemaren txirrina:"
 
-#: ui/KeyboardFilters.qml:69
+#: ui/KeyboardFilters.qml:75
 #, kde-format
 msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
 msgstr "edozein tekla sa&katzean"
 
-#: ui/KeyboardFilters.qml:83
+#: ui/KeyboardFilters.qml:89
 #, kde-format
 msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
 msgstr "edozein tekla on&artzen denean"
 
-#: ui/KeyboardFilters.qml:97
+#: ui/KeyboardFilters.qml:103
 #, kde-format
 msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
 msgstr "edozein tekla e&rrefusatzen denean"
 
-#: ui/KeyboardFilters.qml:113
+#: ui/KeyboardFilters.qml:119
 #, kde-format
 msgid "Bounce keys:"
 msgstr "Errebote-teklak:"
 
-#: ui/KeyboardFilters.qml:118
+#: ui/KeyboardFilters.qml:124
 #, kde-format
 msgctxt "Bounce keys enable"
 msgid "Enable"
 msgstr "Gaitu"
 
-#: ui/KeyboardFilters.qml:129
+#: ui/KeyboardFilters.qml:135
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -622,13 +622,13 @@ msgstr ""
 "dardara baduzu, tekla behin bakarrik sakatu nahi eta hainbatetan jarraian "
 "sakatzen baduzu."
 
-#: ui/KeyboardFilters.qml:136
+#: ui/KeyboardFilters.qml:142
 #, kde-format
 msgctxt "Bounce keys delay"
 msgid "Delay:"
 msgstr "Atzerapena:"
 
-#: ui/KeyboardFilters.qml:162
+#: ui/KeyboardFilters.qml:171
 #, kde-format
 msgid "Ring system bell when rejected"
 msgstr "Jo sistemaren txirrina errefusatzean"
@@ -760,19 +760,19 @@ msgctxt "@action:button"
 msgid "Configure Notifications…"
 msgstr "Konfiguratu jakinarazpenak..."
 
-#: ui/MouseNavigation.qml:16
+#: ui/MouseNavigation.qml:17
 #, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move cursor:"
 msgstr "Erabili zenbakizko teklatua kurtsorea mugitzeko:"
 
-#: ui/MouseNavigation.qml:21
+#: ui/MouseNavigation.qml:22
 #, kde-format
 msgctxt "@option:check Enable mouse navigation"
 msgid "Enable"
 msgstr "Gaitu"
 
-#: ui/MouseNavigation.qml:32
+#: ui/MouseNavigation.qml:33
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -789,31 +789,31 @@ msgstr ""
 "shortcut>, <shortcut>7</shortcut>, eta <shortcut>9</shortcut> teklek "
 "mugimendu diagonalak egiten dituzte."
 
-#: ui/MouseNavigation.qml:37
+#: ui/MouseNavigation.qml:39
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
 msgstr "Azelerazioaren atzerapena:"
 
-#: ui/MouseNavigation.qml:59
+#: ui/MouseNavigation.qml:66
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr "Errepikatze-tartea:"
 
-#: ui/MouseNavigation.qml:81
+#: ui/MouseNavigation.qml:93
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "Azelerazio-denbora:"
 
-#: ui/MouseNavigation.qml:103
+#: ui/MouseNavigation.qml:118
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr "Gehienezko abiadura:"
 
-#: ui/MouseNavigation.qml:117
+#: ui/MouseNavigation.qml:132
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"

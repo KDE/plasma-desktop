@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-13 02:38+0000\n"
+"POT-Creation-Date: 2025-01-30 02:33+0000\n"
 "PO-Revision-Date: 2017-12-03 22:53+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -20,82 +20,82 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: kcmaccess.cpp:117
+#: kcmaccess.cpp:118
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGr"
 
-#: kcmaccess.cpp:119
+#: kcmaccess.cpp:120
 #, kde-format
 msgid "Hyper"
 msgstr "Hyper"
 
-#: kcmaccess.cpp:121
+#: kcmaccess.cpp:122
 #, kde-format
 msgid "Super"
 msgstr "Super"
 
-#: kcmaccess.cpp:131
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
 msgstr ""
 "Притисните %1 док су активни NumLock, CapsLock и ScrollLock|/|Притисните "
 "$[аку %1] док су активни NumLock, CapsLock и ScrollLock"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
 msgstr ""
 "Притисните %1 док су активни CapsLock и ScrollLock|/|Притисните $[аку %1] "
 "док су активни CapsLock и ScrollLock"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:134
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
 msgstr ""
 "Притисните %1 док су активни NumLock и ScrollLock|/|Притисните $[аку %1] док "
 "су активни NumLock и ScrollLock"
 
-#: kcmaccess.cpp:134
+#: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
 msgstr ""
 "Притисните %1 док је активан ScrollLock|/|Притисните $[аку %1] док је "
 "активан ScrollLock"
 
-#: kcmaccess.cpp:135
+#: kcmaccess.cpp:136
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
 msgstr ""
 "Притисните %1 док су активни NumLock и CapsLock|/|Притисните $[аку %1] док "
 "су активни NumLock и CapsLock"
 
-#: kcmaccess.cpp:136
+#: kcmaccess.cpp:137
 #, kde-format
 msgid "Press %1 while CapsLock is active"
 msgstr ""
 "Притисните %1 док је активан CapsLock|/|Притисните $[аку %1] док је активан "
 "CapsLock"
 
-#: kcmaccess.cpp:137
+#: kcmaccess.cpp:138
 #, kde-format
 msgid "Press %1 while NumLock is active"
 msgstr ""
 "Притисните %1 док је активан NumLock|/|Притисните $[аку %1] док је активан "
 "NumLock"
 
-#: kcmaccess.cpp:138
+#: kcmaccess.cpp:139
 #, kde-format
 msgid "Press %1"
 msgstr "Притисните %1|/|Притисните $[аку %1]"
 
 # >> %1 is a command line
-#: kcmaccess.cpp:192
+#: kcmaccess.cpp:213
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Не могу да подесим Орку: „%1“ пропало"
 
-#: kcmaccess.cpp:199
+#: kcmaccess.cpp:220
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Грешка: Не могу да покренем „orca --setup“"
@@ -330,32 +330,32 @@ msgstr ""
 msgid "Magnification"
 msgstr "Обавештење"
 
-#: ui/ActivationShortcuts.qml:17
+#: ui/ActivationShortcuts.qml:18
 #, fuzzy, kde-format
 #| msgid "Activation Gestures"
 msgctxt "@option:check"
 msgid "Activation shortcuts:"
 msgstr "Активирајући гестови"
 
-#: ui/ActivationShortcuts.qml:18
+#: ui/ActivationShortcuts.qml:19
 #, kde-format
 msgctxt "Enable activation shortcuts"
 msgid "Enable"
 msgstr ""
 
-#: ui/ActivationShortcuts.qml:30
+#: ui/ActivationShortcuts.qml:31
 #, kde-format
 msgctxt "@label"
 msgid "Press Shift 5 times to enable Sticky Keys"
 msgstr ""
 
-#: ui/ActivationShortcuts.qml:37
+#: ui/ActivationShortcuts.qml:38
 #, kde-format
 msgctxt "@label"
 msgid "Hold Shift for 8 seconds to enable Slow Keys"
 msgstr ""
 
-#: ui/ActivationShortcuts.qml:46
+#: ui/ActivationShortcuts.qml:47
 #, fuzzy, kde-format
 #| msgid ""
 #| "Turn sticky keys and slow keys off after a certain period of inactivity."
@@ -363,7 +363,7 @@ msgctxt "@option:check"
 msgid "Disable sticky and slow keys after:"
 msgstr "Искључи лепљиве и споре тастере после извесног периода неактивности."
 
-#: ui/ActivationShortcuts.qml:75
+#: ui/ActivationShortcuts.qml:71
 #, fuzzy, kde-format
 #| msgid " min"
 msgid "%1 min"
@@ -373,7 +373,7 @@ msgstr[1] " мин."
 msgstr[2] " мин."
 msgstr[3] " мин."
 
-#: ui/ActivationShortcuts.qml:79
+#: ui/ActivationShortcuts.qml:80
 #, fuzzy, kde-format
 #| msgid " min"
 msgctxt "short for minute(s)"
@@ -384,29 +384,29 @@ msgstr[1] " мин."
 msgstr[2] " мин."
 msgstr[3] " мин."
 
-#: ui/ActivationShortcuts.qml:88
+#: ui/ActivationShortcuts.qml:89
 #, kde-format
 msgid "When a shortcut is used:"
 msgstr ""
 
-#: ui/ActivationShortcuts.qml:89
+#: ui/ActivationShortcuts.qml:90
 #, kde-format
 msgid "Display a confirmation dialog"
 msgstr ""
 
-#: ui/ActivationShortcuts.qml:100
+#: ui/ActivationShortcuts.qml:101
 #, fuzzy, kde-format
 #| msgid "Use &system bell"
 msgid "Ring the system bell"
 msgstr "Користи &системско звоно"
 
-#: ui/ActivationShortcuts.qml:111
+#: ui/ActivationShortcuts.qml:112
 #, fuzzy, kde-format
 #| msgid "Notification"
 msgid "Show a notification"
 msgstr "Обавештење"
 
-#: ui/ActivationShortcuts.qml:122
+#: ui/ActivationShortcuts.qml:123
 #, fuzzy, kde-format
 #| msgid "Configure &Notifications..."
 msgid "Configure Notifications…"
@@ -490,9 +490,9 @@ msgctxt "Duration of the system bell"
 msgid "Duration:"
 msgstr "&Трајање:"
 
-#: ui/Bell.qml:165 ui/KeyboardFilters.qml:55 ui/KeyboardFilters.qml:151
-#: ui/MouseNavigation.qml:51 ui/MouseNavigation.qml:73
-#: ui/MouseNavigation.qml:95
+#: ui/Bell.qml:165 ui/KeyboardFilters.qml:56 ui/KeyboardFilters.qml:157
+#: ui/MouseNavigation.qml:53 ui/MouseNavigation.qml:84
+#: ui/MouseNavigation.qml:110
 #, fuzzy, kde-format
 #| msgid " min"
 msgid "%1 ms"
@@ -502,9 +502,9 @@ msgstr[1] " мин."
 msgstr[2] " мин."
 msgstr[3] " мин."
 
-#: ui/Bell.qml:169 ui/KeyboardFilters.qml:59 ui/KeyboardFilters.qml:155
-#: ui/MouseNavigation.qml:55 ui/MouseNavigation.qml:77
-#: ui/MouseNavigation.qml:99
+#: ui/Bell.qml:169 ui/KeyboardFilters.qml:65 ui/KeyboardFilters.qml:164
+#: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:88
+#: ui/MouseNavigation.qml:114
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
@@ -588,19 +588,19 @@ msgstr ""
 msgid "Purple"
 msgstr ""
 
-#: ui/KeyboardFilters.qml:17
+#: ui/KeyboardFilters.qml:18
 #, fuzzy, kde-format
 #| msgid "&Use slow keys"
 msgid "Slow keys:"
 msgstr "Користи с&поре тастере"
 
-#: ui/KeyboardFilters.qml:22
+#: ui/KeyboardFilters.qml:23
 #, kde-format
 msgctxt "Enable slow keys"
 msgid "Enable"
 msgstr ""
 
-#: ui/KeyboardFilters.qml:33
+#: ui/KeyboardFilters.qml:34
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -609,52 +609,52 @@ msgid ""
 "difficulty pressing the key you want the first time."
 msgstr ""
 
-#: ui/KeyboardFilters.qml:40
+#: ui/KeyboardFilters.qml:41
 #, kde-format
 msgctxt "Slow keys Delay"
 msgid "Delay:"
 msgstr ""
 
-#: ui/KeyboardFilters.qml:68
+#: ui/KeyboardFilters.qml:74
 #, fuzzy, kde-format
 #| msgid "Use &system bell"
 msgid "Ring system bell:"
 msgstr "Користи &системско звоно"
 
-#: ui/KeyboardFilters.qml:69
+#: ui/KeyboardFilters.qml:75
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is pressed"
 msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
 msgstr "&Огласи системско звоно увек када се тастер притисне"
 
-#: ui/KeyboardFilters.qml:83
+#: ui/KeyboardFilters.qml:89
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is accepted"
 msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
 msgstr "&Огласи системско звоно увек када се тастер прихвати"
 
-#: ui/KeyboardFilters.qml:97
+#: ui/KeyboardFilters.qml:103
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is rejected"
 msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
 msgstr "&Огласи системско звоно увек када се тастер одбаци"
 
-#: ui/KeyboardFilters.qml:113
+#: ui/KeyboardFilters.qml:119
 #, fuzzy, kde-format
 #| msgid "Bounce Keys"
 msgid "Bounce keys:"
 msgstr "Одскачући тастери"
 
-#: ui/KeyboardFilters.qml:118
+#: ui/KeyboardFilters.qml:124
 #, kde-format
 msgctxt "Bounce keys enable"
 msgid "Enable"
 msgstr ""
 
-#: ui/KeyboardFilters.qml:129
+#: ui/KeyboardFilters.qml:135
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -663,13 +663,13 @@ msgid ""
 "press once."
 msgstr ""
 
-#: ui/KeyboardFilters.qml:136
+#: ui/KeyboardFilters.qml:142
 #, kde-format
 msgctxt "Bounce keys delay"
 msgid "Delay:"
 msgstr ""
 
-#: ui/KeyboardFilters.qml:162
+#: ui/KeyboardFilters.qml:171
 #, fuzzy, kde-format
 #| msgid "&Use system bell whenever a key is rejected"
 msgid "Ring system bell when rejected"
@@ -812,19 +812,19 @@ msgctxt "@action:button"
 msgid "Configure Notifications…"
 msgstr "Подеси &обавештења..."
 
-#: ui/MouseNavigation.qml:16
+#: ui/MouseNavigation.qml:17
 #, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move cursor:"
 msgstr ""
 
-#: ui/MouseNavigation.qml:21
+#: ui/MouseNavigation.qml:22
 #, kde-format
 msgctxt "@option:check Enable mouse navigation"
 msgid "Enable"
 msgstr ""
 
-#: ui/MouseNavigation.qml:32
+#: ui/MouseNavigation.qml:33
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -835,31 +835,31 @@ msgid ""
 "shortcut>, and <shortcut>9</shortcut> allow for diagonal movement."
 msgstr ""
 
-#: ui/MouseNavigation.qml:37
+#: ui/MouseNavigation.qml:39
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
 msgstr ""
 
-#: ui/MouseNavigation.qml:59
+#: ui/MouseNavigation.qml:66
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr ""
 
-#: ui/MouseNavigation.qml:81
+#: ui/MouseNavigation.qml:93
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr ""
 
-#: ui/MouseNavigation.qml:103
+#: ui/MouseNavigation.qml:118
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr ""
 
-#: ui/MouseNavigation.qml:117
+#: ui/MouseNavigation.qml:132
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"

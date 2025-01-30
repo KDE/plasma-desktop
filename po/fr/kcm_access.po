@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-13 02:38+0000\n"
+"POT-Creation-Date: 2025-01-30 02:33+0000\n"
 "PO-Revision-Date: 2024-11-30 10:20+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -31,68 +31,68 @@ msgstr ""
 "X-Generator: Lokalize 24.11.80\n"
 "X-Text-Markup: kde4\n"
 
-#: kcmaccess.cpp:117
+#: kcmaccess.cpp:118
 #, kde-format
 msgid "AltGraph"
 msgstr "AltGraph"
 
-#: kcmaccess.cpp:119
+#: kcmaccess.cpp:120
 #, kde-format
 msgid "Hyper"
 msgstr "Hyper"
 
-#: kcmaccess.cpp:121
+#: kcmaccess.cpp:122
 #, kde-format
 msgid "Super"
 msgstr "Super"
 
-#: kcmaccess.cpp:131
+#: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
 msgstr ""
 "Appuyez sur %1 tant que Verr. Num., Verr. Maj. et Verr. Défil. sont actifs"
 
-#: kcmaccess.cpp:132
+#: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
 msgstr "Appuyez sur %1 tant que Verr. Maj. et Verr. Défil. sont actifs"
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:134
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
 msgstr "Appuyez sur %1 tant que Verr. Num. et Verr. Défil. sont actifs"
 
-#: kcmaccess.cpp:134
+#: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
 msgstr "Appuyez sur %1 tant que Verr. Défil. est actif"
 
-#: kcmaccess.cpp:135
+#: kcmaccess.cpp:136
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
 msgstr "Appuyez sur %1 tant que Verr. Num. et Verr. Maj. sont actifs"
 
-#: kcmaccess.cpp:136
+#: kcmaccess.cpp:137
 #, kde-format
 msgid "Press %1 while CapsLock is active"
 msgstr "Appuyez sur %1 tant que Verr. Maj. est actif"
 
-#: kcmaccess.cpp:137
+#: kcmaccess.cpp:138
 #, kde-format
 msgid "Press %1 while NumLock is active"
 msgstr "Appuyez sur %1 tant que Verr. Num. est actif"
 
-#: kcmaccess.cpp:138
+#: kcmaccess.cpp:139
 #, kde-format
 msgid "Press %1"
 msgstr "Appuyez sur %1"
 
-#: kcmaccess.cpp:192
+#: kcmaccess.cpp:213
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Impossible de définir « qsettings » pour Orca : « %1 » a échoué"
 
-#: kcmaccess.cpp:199
+#: kcmaccess.cpp:220
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Erreur : impossible de lancer « orca --setup »"
@@ -323,19 +323,19 @@ msgstr "Si le mode « Secouer le curseur » est activé"
 msgid "Magnification"
 msgstr "Grossissement"
 
-#: ui/ActivationShortcuts.qml:17
+#: ui/ActivationShortcuts.qml:18
 #, kde-format
 msgctxt "@option:check"
 msgid "Activation shortcuts:"
 msgstr "Raccourcis d'activation :"
 
-#: ui/ActivationShortcuts.qml:18
+#: ui/ActivationShortcuts.qml:19
 #, kde-format
 msgctxt "Enable activation shortcuts"
 msgid "Enable"
 msgstr "Activer"
 
-#: ui/ActivationShortcuts.qml:30
+#: ui/ActivationShortcuts.qml:31
 #, kde-format
 msgctxt "@label"
 msgid "Press Shift 5 times to enable Sticky Keys"
@@ -343,7 +343,7 @@ msgstr ""
 "Veuillez appuyer 5 fois sur la touche « Maj » pour activer les touches avec "
 "auto-maintien."
 
-#: ui/ActivationShortcuts.qml:37
+#: ui/ActivationShortcuts.qml:38
 #, kde-format
 msgctxt "@label"
 msgid "Hold Shift for 8 seconds to enable Slow Keys"
@@ -351,20 +351,20 @@ msgstr ""
 "Maintenez la touche « Maj » appuyée pendant 8 secondes pour l'activation des "
 "touches lentes."
 
-#: ui/ActivationShortcuts.qml:46
+#: ui/ActivationShortcuts.qml:47
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable sticky and slow keys after:"
 msgstr "Désactiver les touches avec auto-maintien et lentes après :"
 
-#: ui/ActivationShortcuts.qml:75
+#: ui/ActivationShortcuts.qml:71
 #, kde-format
 msgid "%1 min"
 msgid_plural "%1 min"
 msgstr[0] "%1 minutes"
 msgstr[1] "%1 minutes"
 
-#: ui/ActivationShortcuts.qml:79
+#: ui/ActivationShortcuts.qml:80
 #, kde-format
 msgctxt "short for minute(s)"
 msgid "min"
@@ -372,27 +372,27 @@ msgid_plural "min"
 msgstr[0] "min"
 msgstr[1] "min"
 
-#: ui/ActivationShortcuts.qml:88
+#: ui/ActivationShortcuts.qml:89
 #, kde-format
 msgid "When a shortcut is used:"
 msgstr "Lorsqu'un raccourci est utilisé :"
 
-#: ui/ActivationShortcuts.qml:89
+#: ui/ActivationShortcuts.qml:90
 #, kde-format
 msgid "Display a confirmation dialog"
 msgstr "Afficher une boîte de dialogue de confirmation"
 
-#: ui/ActivationShortcuts.qml:100
+#: ui/ActivationShortcuts.qml:101
 #, kde-format
 msgid "Ring the system bell"
 msgstr "Faire sonner la cloche du système"
 
-#: ui/ActivationShortcuts.qml:111
+#: ui/ActivationShortcuts.qml:112
 #, kde-format
 msgid "Show a notification"
 msgstr "Afficher une notification"
 
-#: ui/ActivationShortcuts.qml:122
+#: ui/ActivationShortcuts.qml:123
 #, kde-format
 msgid "Configure Notifications…"
 msgstr "Configurer les notifications..."
@@ -470,18 +470,18 @@ msgctxt "Duration of the system bell"
 msgid "Duration:"
 msgstr "Durée :"
 
-#: ui/Bell.qml:165 ui/KeyboardFilters.qml:55 ui/KeyboardFilters.qml:151
-#: ui/MouseNavigation.qml:51 ui/MouseNavigation.qml:73
-#: ui/MouseNavigation.qml:95
+#: ui/Bell.qml:165 ui/KeyboardFilters.qml:56 ui/KeyboardFilters.qml:157
+#: ui/MouseNavigation.qml:53 ui/MouseNavigation.qml:84
+#: ui/MouseNavigation.qml:110
 #, kde-format
 msgid "%1 ms"
 msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
-#: ui/Bell.qml:169 ui/KeyboardFilters.qml:59 ui/KeyboardFilters.qml:155
-#: ui/MouseNavigation.qml:55 ui/MouseNavigation.qml:77
-#: ui/MouseNavigation.qml:99
+#: ui/Bell.qml:169 ui/KeyboardFilters.qml:65 ui/KeyboardFilters.qml:164
+#: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:88
+#: ui/MouseNavigation.qml:114
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
@@ -563,18 +563,18 @@ msgstr "Bleu"
 msgid "Purple"
 msgstr "Violet"
 
-#: ui/KeyboardFilters.qml:17
+#: ui/KeyboardFilters.qml:18
 #, kde-format
 msgid "Slow keys:"
 msgstr "Touches lentes :"
 
-#: ui/KeyboardFilters.qml:22
+#: ui/KeyboardFilters.qml:23
 #, kde-format
 msgctxt "Enable slow keys"
 msgid "Enable"
 msgstr "Activer"
 
-#: ui/KeyboardFilters.qml:33
+#: ui/KeyboardFilters.qml:34
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -587,47 +587,47 @@ msgstr ""
 "ou si vous avez de la difficulté à appuyer sur la touche que vous voulez la "
 "première fois."
 
-#: ui/KeyboardFilters.qml:40
+#: ui/KeyboardFilters.qml:41
 #, kde-format
 msgctxt "Slow keys Delay"
 msgid "Delay:"
 msgstr "Délai :"
 
-#: ui/KeyboardFilters.qml:68
+#: ui/KeyboardFilters.qml:74
 #, kde-format
 msgid "Ring system bell:"
 msgstr "Cloche du système pour la sonnerie :"
 
-#: ui/KeyboardFilters.qml:69
+#: ui/KeyboardFilters.qml:75
 #, kde-format
 msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
 msgstr "&pour n'importe quel appui de touche"
 
-#: ui/KeyboardFilters.qml:83
+#: ui/KeyboardFilters.qml:89
 #, kde-format
 msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
 msgstr "&pour n'importe quelle touche acceptée"
 
-#: ui/KeyboardFilters.qml:97
+#: ui/KeyboardFilters.qml:103
 #, kde-format
 msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
 msgstr "&pour n'importe quelle touche rejetée"
 
-#: ui/KeyboardFilters.qml:113
+#: ui/KeyboardFilters.qml:119
 #, kde-format
 msgid "Bounce keys:"
 msgstr "Touches répétées :"
 
-#: ui/KeyboardFilters.qml:118
+#: ui/KeyboardFilters.qml:124
 #, kde-format
 msgctxt "Bounce keys enable"
 msgid "Enable"
 msgstr "Activer"
 
-#: ui/KeyboardFilters.qml:129
+#: ui/KeyboardFilters.qml:135
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -639,13 +639,13 @@ msgstr ""
 "avez des tremblements de la main vous obligeant à appuyer plusieurs fois sur "
 "une touche alors que vous avez l'intention de n'appuyer qu'une seule fois."
 
-#: ui/KeyboardFilters.qml:136
+#: ui/KeyboardFilters.qml:142
 #, kde-format
 msgctxt "Bounce keys delay"
 msgid "Delay:"
 msgstr "Délai :"
 
-#: ui/KeyboardFilters.qml:162
+#: ui/KeyboardFilters.qml:171
 #, kde-format
 msgid "Ring system bell when rejected"
 msgstr "Faire sonner la cloche système quand une touche est rejetée."
@@ -785,19 +785,19 @@ msgctxt "@action:button"
 msgid "Configure Notifications…"
 msgstr "Configurer les notifications..."
 
-#: ui/MouseNavigation.qml:16
+#: ui/MouseNavigation.qml:17
 #, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move cursor:"
 msgstr "Utiliser le pavé numérique pour le déplacement du pointeur :"
 
-#: ui/MouseNavigation.qml:21
+#: ui/MouseNavigation.qml:22
 #, kde-format
 msgctxt "@option:check Enable mouse navigation"
 msgid "Enable"
 msgstr "Activer"
 
-#: ui/MouseNavigation.qml:32
+#: ui/MouseNavigation.qml:33
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -814,31 +814,31 @@ msgstr ""
 "<shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</shortcut> et "
 "<shortcut>9</shortcut> permettent un mouvement diagonal."
 
-#: ui/MouseNavigation.qml:37
+#: ui/MouseNavigation.qml:39
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
 msgstr "Délai d'accélération :"
 
-#: ui/MouseNavigation.qml:59
+#: ui/MouseNavigation.qml:66
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr "Intervalle de répétition :"
 
-#: ui/MouseNavigation.qml:81
+#: ui/MouseNavigation.qml:93
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "Temps d'accélération :"
 
-#: ui/MouseNavigation.qml:103
+#: ui/MouseNavigation.qml:118
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr "Vitesse maximale :"
 
-#: ui/MouseNavigation.qml:117
+#: ui/MouseNavigation.qml:132
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"

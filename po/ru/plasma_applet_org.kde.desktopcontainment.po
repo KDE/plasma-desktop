@@ -9,13 +9,13 @@
 # Alexander Potashev <aspotashev@gmail.com>, 2010, 2012, 2015, 2016, 2017, 2018, 2019, 2020.
 # Yuri Efremov <yur.arh@gmail.com>, 2011, 2012, 2013.
 # Alexander Lakhin <exclusion@gmail.com>, 2013.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2024.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-16 02:32+0000\n"
-"PO-Revision-Date: 2024-05-18 10:14+0300\n"
+"PO-Revision-Date: 2025-01-29 11:05+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -446,7 +446,7 @@ msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
 "or folder"
 msgid "Link Target Not Found"
-msgstr ""
+msgstr "Целевой файл не найден"
 
 #: plugins/folder/foldermodel.cpp:871
 #, kde-kuit-format
@@ -455,6 +455,8 @@ msgid ""
 "<filename>%1</filename> points to <filename>%2</filename>, but that could "
 "not be found. It may have been moved or deleted."
 msgstr ""
+"<filename> %1</filename> указывает на отсутствующий файл <filename>%2</"
+"filename>, который мог быть перемещён или удалён."
 
 #: plugins/folder/foldermodel.cpp:1729
 #, kde-format
@@ -473,13 +475,12 @@ msgid "&Open"
 msgstr "&Открыть"
 
 #: plugins/folder/foldermodel.cpp:1739
-#, fuzzy, kde-format
-#| msgid "Show all"
+#, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
 "link points to"
 msgid "Show Target"
-msgstr "Показывать все"
+msgstr "Показать цель"
 
 #: plugins/folder/foldermodel.cpp:1863
 #, kde-format

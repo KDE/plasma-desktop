@@ -7,13 +7,13 @@
 # Alexander Potashev <aspotashev@gmail.com>, 2009, 2010, 2011, 2014, 2015, 2016, 2017, 2018, 2019, 2020.
 # Yuri Efremov <yur.arh@gmail.com>, 2011, 2012, 2013.
 # Julia Dronova <juliette.tux@gmail.com>, 2013.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2024.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-27 02:41+0000\n"
-"PO-Revision-Date: 2024-09-20 13:08+0300\n"
+"PO-Revision-Date: 2025-01-29 11:07+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -446,10 +446,9 @@ msgid "Dodge windows"
 msgstr "Скрывать под окнами"
 
 #: contents/configuration/PanelConfiguration.qml:369
-#, fuzzy, kde-format
-#| msgid "Windows Go Below"
+#, kde-format
 msgid "Windows go below"
-msgstr "Поверх окон"
+msgstr "Перекрывать другие окна"
 
 #: contents/configuration/PanelConfiguration.qml:420
 #, kde-format
@@ -521,17 +520,16 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "Удалить панель, необратимое действие"
 
 #: contents/configuration/PanelConfiguration.qml:684
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
-msgstr "Удалить панель"
+msgstr "Дублировать панель"
 
 #: contents/configuration/PanelConfiguration.qml:688
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
-msgstr ""
+msgstr "Создать панель с такими же виджетами и настройками"
 
 #: contents/configuration/PanelConfiguration.qml:697
 #, kde-format
@@ -593,8 +591,7 @@ msgstr ""
 "Двойной щелчок для отмены."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy, kde-format
-#| msgid "Panel and Desktop Management"
+#, kde-format
 msgid "Manage Panels and Desktops"
 msgstr "Управление панелями и рабочими столами"
 
@@ -764,22 +761,19 @@ msgid "Caps Lock is on"
 msgstr "Включён режим Caps Lock"
 
 #: contents/lockscreen/LockScreenUi.qml:285
-#, fuzzy, kde-format
-#| msgid "Sleep"
+#, kde-format
 msgid "Slee&p"
-msgstr "Сон"
+msgstr "Спящий режим"
 
 #: contents/lockscreen/LockScreenUi.qml:291
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "&Hibernate"
-msgstr "Гибернация"
+msgstr "&Гибернация"
 
 #: contents/lockscreen/LockScreenUi.qml:297
-#, fuzzy, kde-format
-#| msgid "Switch User"
+#, kde-format
 msgid "Switch &User"
-msgstr "Переключить пользователя"
+msgstr "Сменить &учётную запись"
 
 #: contents/lockscreen/LockScreenUi.qml:358
 #, kde-format

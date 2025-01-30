@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-16 00:41+0000\n"
+"POT-Creation-Date: 2025-01-30 02:33+0000\n"
 "PO-Revision-Date: 2024-12-13 10:31+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -104,28 +104,28 @@ msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "velur þær"
 
-#: ui/main.qml:167
+#: ui/main.qml:172
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Opnaðu í staðinn með því að tvísmella"
 
-#: ui/main.qml:180
+#: ui/main.qml:185
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "opnar þær"
 
-#: ui/main.qml:193
+#: ui/main.qml:203
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "Veldu með því að smella á valmerkingu atriðis"
 
-#: ui/main.qml:209
+#: ui/main.qml:219
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr "Smellt í skrunstikubrautina:"
 
-#: ui/main.qml:210
+#: ui/main.qml:220
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
@@ -133,7 +133,7 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "skrunar á smellta staðinn"
 
-#: ui/main.qml:228
+#: ui/main.qml:238
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -141,12 +141,12 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "skrunar upp eða niður um síðu"
 
-#: ui/main.qml:241
+#: ui/main.qml:256
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
 msgstr "miðjusmella til að skruna á smellta staðinn"
 
-#: ui/main.qml:255
+#: ui/main.qml:270
 #, kde-format
 msgctxt ""
 "@label for checkbox, part of a complete sentence: 'Middle-click pastes "
@@ -154,7 +154,7 @@ msgctxt ""
 msgid "Middle-click:"
 msgstr "Miðjusmellur:"
 
-#: ui/main.qml:257
+#: ui/main.qml:272
 #, kde-format
 msgctxt ""
 "@option:check part of a complete sentence: 'Middle click pastes selected "
@@ -162,24 +162,24 @@ msgctxt ""
 msgid "Pastes selected text"
 msgstr "Límir valinn texta"
 
-#: ui/main.qml:274
+#: ui/main.qml:289
 #, kde-format
 msgid "Touch Mode:"
 msgstr "Snertistilling:"
 
-#: ui/main.qml:276
+#: ui/main.qml:291
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Gera sjálfkrafa virka eftir þörfum"
 
-#: ui/main.qml:276 ui/main.qml:319
+#: ui/main.qml:291 ui/main.qml:336
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Aldrei virk"
 
-#: ui/main.qml:292
+#: ui/main.qml:308
 #, kde-format
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
@@ -190,13 +190,13 @@ msgstr ""
 "enga mús eða snertiplatta. Til dæmis í fartölvu sem hægt er að breyta í "
 "spjaldtölvu með því að snúa lyklaborðinu eða losa það af."
 
-#: ui/main.qml:297
+#: ui/main.qml:313
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Alltaf virk"
 
-#: ui/main.qml:337
+#: ui/main.qml:359
 #, kde-format
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
@@ -205,12 +205,12 @@ msgstr ""
 "Í snertistillingu stækka margir hlutir í notandaviðmótinu til að auðveldara "
 "sé að nota snertiskipanir."
 
-#: ui/main.qml:355
+#: ui/main.qml:377
 #, kde-format
 msgid "Double-click interval:"
 msgstr "Bil á milli tvísmella:"
 
-#: ui/main.qml:370
+#: ui/main.qml:392
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "%1 ms"
@@ -218,13 +218,13 @@ msgid_plural "%1 ms"
 msgstr[0] "%1 msek."
 msgstr[1] "%1 msek."
 
-#: ui/main.qml:374
+#: ui/main.qml:396
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgstr "msek."
 
-#: ui/main.qml:388
+#: ui/main.qml:410
 #, kde-format
 msgid ""
 "Two clicks within this duration are considered a double-click. Some "
