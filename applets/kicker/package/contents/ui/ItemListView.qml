@@ -201,8 +201,12 @@ FocusScope {
             }
 
             Keys.onPressed: event => {
+                let backArrowKey = (event.key === Qt.Key_Left && Application.layoutDirection === Qt.LeftToRight) ||
+                    (event.key === Qt.Key_Right && Application.layoutDirection === Qt.RightToLeft)
+                let forwardArrowKey = (event.key === Qt.Key_Right && Application.layoutDirection === Qt.LeftToRight) ||
+                    (event.key === Qt.Key_Left && Application.layoutDirection === Qt.RightToLeft)
                 if (listView.currentItem !== null && listView.currentItem.hasChildren &&
-                    (event.key === Qt.Key_Right || event.key === Qt.Key_Return || event.key === Qt.Key_Enter)) {
+                    (forwardArrowKey || event.key === Qt.Key_Return || event.key === Qt.Key_Enter)) {
                     if (itemList.childDialog === null) {
                         dialogSpawnTimer.focusOnSpawn = true;
                         dialogSpawnTimer.restart();
@@ -251,7 +255,7 @@ FocusScope {
                     }
 
                     showChildDialogs = true;
-                } else if (event.key === Qt.Key_Left && dialog != null) {
+                } else if (backArrowKey && dialog != null) {
                     dialog.destroy();
                 } else if (event.key === Qt.Key_Escape) {
                     kicker.expanded = false;
@@ -261,9 +265,9 @@ FocusScope {
                     if (mainSearchField) {
                         mainSearchField.forceActiveFocus();
                     }
-                } else if (event.key === Qt.Key_Left) {
+                } else if (backArrowKey) {
                     navigateLeftRequested();
-                } else if (event.key === Qt.Key_Right) {
+                } else if (forwardArrowKey) {
                     navigateRightRequested();
                 }
             }
