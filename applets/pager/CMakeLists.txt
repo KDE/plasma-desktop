@@ -22,8 +22,4 @@ target_link_libraries(pagerplugin PRIVATE
                       Qt::Qml
                       Qt::Quick)
 
-if (X11_FOUND)
-    target_link_libraries(pagerplugin PRIVATE Qt::GuiPrivate)
-endif()
-
 ecm_finalize_qml_module(pagerplugin)

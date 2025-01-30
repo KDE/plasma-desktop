@@ -27,12 +27,6 @@
 
 #include <config-X11.h>
 
-#if HAVE_X11
-#include <KX11Extras>
-
-#include <QtGui/private/qtx11extras_p.h>
-#endif
-
 #include <PlasmaActivities/Controller>
 
 using namespace TaskManager;
@@ -469,7 +463,8 @@ void PagerModel::moveWindow(const QModelIndex &index,
         dest = QPointF(qMax(dest.x(), qreal(0.0)), qMax(dest.y(), qreal(0.0)));
 
         // Use _NET_MOVERESIZE_WINDOW rather than plain move, so that the WM knows this is a pager request.
-        NETRootInfo info(QX11Info::connection(), NET::Properties());
+        auto x11App = qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
+        NETRootInfo info(x11App->connection(), NET::Properties());
         const int flags = (0x20 << 12) | (0x03 << 8) | 1; // From tool, x/y, northwest gravity.
         const QPoint &d = dest.toPoint();
         info.moveResizeWindowRequest(winIds[0].toUInt(), flags, d.x(), d.y(), 0, 0);
