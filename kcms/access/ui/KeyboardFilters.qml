@@ -10,6 +10,7 @@ import QtQuick.Controls as QQC2
 import org.kde.kcmutils as KCMUtils
 
 import org.kde.kirigami as Kirigami
+import org.kde.plasma.access.kcm
 
 Kirigami.FormLayout {
     RowLayout {
@@ -35,7 +36,7 @@ Kirigami.FormLayout {
     }
 
     QQC2.SpinBox {
-        id: slowKayDelay
+        id: slowKeyDelay
 
         Kirigami.FormData.label: i18nc("Slow keys Delay", "Delay:")
 
@@ -53,6 +54,11 @@ Kirigami.FormLayout {
 
         textFromValue: function(value, locale) {
             return i18np("%1 ms", "%1 ms", value)
+        }
+
+        validator: IntValidatorWithSuffix {
+            bottom: slowKeyDelay.from
+            top: slowKeyDelay.top
         }
 
         valueFromText: (text, locale) => {
@@ -150,7 +156,10 @@ Kirigami.FormLayout {
         textFromValue: function(value, locale) {
             return i18np("%1 ms", "%1 ms", value)
         }
-
+        validator: IntValidatorWithSuffix {
+            bottom: bounceKeysDelay.from
+            top: bounceKeysDelay.top
+        }
         valueFromText: (text, locale) => {
             return Number.fromLocaleString(locale, text.replace(i18ncp("short for millisecond(s)", "ms", "ms"), ""))
         }

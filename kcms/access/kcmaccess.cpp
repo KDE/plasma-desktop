@@ -18,6 +18,7 @@
 #include <QQuickItem>
 #include <QStandardPaths>
 #include <QWindow>
+#include <QValidator>
 #include <QtGui/private/qtx11extras_p.h>
 
 #include <KConfigGroup>
@@ -138,6 +139,25 @@ QString mouseKeysShortcut(Display *display)
                                                        : i18n("Press %1", keyname);
 }
 
+class IntValidatorWithSuffix : public QIntValidator
+{
+    Q_GADGET
+public:
+    State validate(QString &text, int &pos) const override
+    {
+        QString strippedText;
+        QRegularExpression re("\\d+");
+        QRegularExpressionMatchIterator i = re.globalMatch(text);
+
+        QString numbers;
+        while (i.hasNext()) {
+            QRegularExpressionMatch match = i.next();
+            strippedText += match.captured();
+        }
+        return QIntValidator::validate(strippedText, pos);
+    }
+};
+
 KAccessConfig::KAccessConfig(QObject *parent, const KPluginMetaData &metaData)
     : KQuickManagedConfigModule(parent, metaData)
     , m_data(new AccessibilityData(this))
@@ -151,6 +171,7 @@ KAccessConfig::KAccessConfig(QObject *parent, const KPluginMetaData &metaData)
     qmlRegisterAnonymousType<ScreenReaderSettings>("org.kde.plasma.access.kcm", 0);
     qmlRegisterAnonymousType<ShakeCursorSettings>("org.kde.plasma.access.kcm", 0);
     qmlRegisterAnonymousType<ColorblindnessCorrectionSettings>("org.kde.plasma.access.kcm", 0);
+    qmlRegisterType<IntValidatorWithSuffix>("org.kde.plasma.access.kcm", 0, 0, "IntValidatorWithSuffix");
 
     int tryOrcaRun = QProcess::execute(QStringLiteral("orca"), {QStringLiteral("--version")});
     m_screenReaderInstalled = tryOrcaRun != -2;
