@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-16 00:41+0000\n"
+"POT-Creation-Date: 2025-01-30 00:42+0000\n"
 "PO-Revision-Date: 2024-10-29 18:22+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -107,28 +107,28 @@ msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Pilih item"
 
-#: ui/main.qml:167
+#: ui/main.qml:172
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Buka dengan mengeklik ganda sebagai gantinya"
 
-#: ui/main.qml:180
+#: ui/main.qml:185
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Membukanya"
 
-#: ui/main.qml:193
+#: ui/main.qml:203
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "Pilih dengan mengeklik pada penanda seleksi butir"
 
-#: ui/main.qml:209
+#: ui/main.qml:219
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr "Pengeklikan dalam rel bilah gulir:"
 
-#: ui/main.qml:210
+#: ui/main.qml:220
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
@@ -136,7 +136,7 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "Menggulirkan ke lokasi yang diklik"
 
-#: ui/main.qml:228
+#: ui/main.qml:238
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -144,12 +144,12 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "Menggulirkan satu halaman naik atau turun"
 
-#: ui/main.qml:241
+#: ui/main.qml:256
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
 msgstr "Klik-tengah untuk menggulirkan ke lokasi yang diklik"
 
-#: ui/main.qml:255
+#: ui/main.qml:270
 #, kde-format
 msgctxt ""
 "@label for checkbox, part of a complete sentence: 'Middle-click pastes "
@@ -157,7 +157,7 @@ msgctxt ""
 msgid "Middle-click:"
 msgstr "Klik tengah:"
 
-#: ui/main.qml:257
+#: ui/main.qml:272
 #, kde-format
 msgctxt ""
 "@option:check part of a complete sentence: 'Middle click pastes selected "
@@ -165,24 +165,24 @@ msgctxt ""
 msgid "Pastes selected text"
 msgstr "Menempelkan teks yang dipilih"
 
-#: ui/main.qml:274
+#: ui/main.qml:289
 #, kde-format
 msgid "Touch Mode:"
 msgstr "Mode Sentuh:"
 
-#: ui/main.qml:276
+#: ui/main.qml:291
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Fungsikan secara otomatis ketika diperlukan"
 
-#: ui/main.qml:276 ui/main.qml:319
+#: ui/main.qml:291 ui/main.qml:336
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Jangan pernah difungsikan"
 
-#: ui/main.qml:292
+#: ui/main.qml:308
 #, kde-format
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
@@ -193,13 +193,13 @@ msgstr ""
 "layar sentuh tetapi tidak ada mouse atau touchpad. Misalnya: ketika keyboard "
 "laptop yang dapat diubah dibalik atau terlepas."
 
-#: ui/main.qml:297
+#: ui/main.qml:313
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Selalu fungsikan"
 
-#: ui/main.qml:337
+#: ui/main.qml:359
 #, kde-format
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
@@ -208,12 +208,12 @@ msgstr ""
 "Dalam Mode Sentuh, banyak elemen antarmuka pengguna akan menjadi lebih besar "
 "untuk mengakomodasi interaksi sentuh dengan lebih mudah."
 
-#: ui/main.qml:355
+#: ui/main.qml:377
 #, kde-format
 msgid "Double-click interval:"
 msgstr "Interval klik ganda:"
 
-#: ui/main.qml:370
+#: ui/main.qml:392
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "%1 ms"
@@ -221,13 +221,13 @@ msgid_plural "%1 ms"
 msgstr[0] "%1 mdt"
 msgstr[1] "%1 mdt"
 
-#: ui/main.qml:374
+#: ui/main.qml:396
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgstr "mdt"
 
-#: ui/main.qml:388
+#: ui/main.qml:410
 #, kde-format
 msgid ""
 "Two clicks within this duration are considered a double-click. Some "

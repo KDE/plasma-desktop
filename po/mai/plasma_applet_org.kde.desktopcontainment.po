@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-01-30 00:42+0000\n"
 "PO-Revision-Date: 2010-01-29 16:13+0530\n"
 "Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Maithili <maithili.sf.net>\n"
@@ -514,11 +514,10 @@ msgid "&Empty Trash"
 msgstr "रद्दी कए टोकरी खाली करू (&E)"
 
 #: plugins/folder/foldermodel.cpp:1732
-#, fuzzy, kde-format
-#| msgid "&Restore"
+#, kde-format
 msgctxt "Restore from trash"
-msgid "Restore"
-msgstr "घुराबू (&R)"
+msgid "Restore to Former Location"
+msgstr ""
 
 #: plugins/folder/foldermodel.cpp:1735
 #, kde-format
@@ -534,12 +533,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "स्थान देखाबू:"
 
-#: plugins/folder/foldermodel.cpp:1863
+#: plugins/folder/foldermodel.cpp:1835
+#, kde-format
+msgctxt "@action:inmenu Removes the trash icon on the desktop"
+msgid "Remove Trash Icon"
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:1838
+#, kde-format
+msgid "&Move to Trash"
+msgstr "रद्दीमे डालू (&M)"
+
+#: plugins/folder/foldermodel.cpp:1871
 #, kde-format
 msgid "&Paste"
 msgstr "साटू (&P)"
 
-#: plugins/folder/foldermodel.cpp:1987
+#: plugins/folder/foldermodel.cpp:2022
 #, kde-format
 msgid "&Properties"
 msgstr "गुण (&P)"
@@ -714,6 +724,12 @@ msgid "Locked"
 msgstr ""
 
 #, fuzzy
+#~| msgid "&Restore"
+#~ msgctxt "Restore from trash"
+#~ msgid "Restore"
+#~ msgstr "घुराबू (&R)"
+
+#, fuzzy
 #~| msgctxt "On a camera"
 #~| msgid "Aperture:"
 #~ msgid "Features:"
@@ -768,9 +784,6 @@ msgstr ""
 
 #~ msgid "&Reload"
 #~ msgstr "फिनु लोड करू (&R)"
-
-#~ msgid "&Move to Trash"
-#~ msgstr "रद्दीमे डालू (&M)"
 
 #~ msgid "&Delete"
 #~ msgstr "मेटाबू (&D)"

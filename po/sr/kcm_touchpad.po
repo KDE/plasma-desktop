@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-29 00:42+0000\n"
+"POT-Creation-Date: 2025-01-30 00:42+0000\n"
 "PO-Revision-Date: 2017-10-30 23:08+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -50,27 +50,27 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr "Критична грешка при читању основних података уређаја за додирник %1."
 
-#: backends/x11/xlibbackend.cpp:68
+#: backends/x11/xlibbackend.cpp:69
 #, kde-format
 msgid "Cannot connect to X server"
 msgstr "Не могу да се повежем на икс сервер"
 
-#: backends/x11/xlibbackend.cpp:79 ui/main.qml:56
+#: backends/x11/xlibbackend.cpp:80 ui/main.qml:56
 #, kde-format
 msgid "No touchpad found"
 msgstr ""
 
-#: backends/x11/xlibbackend.cpp:119 backends/x11/xlibbackend.cpp:133
+#: backends/x11/xlibbackend.cpp:120
 #, kde-format
 msgid "Cannot apply touchpad configuration"
 msgstr "Не могу да применим поставу додирника."
 
-#: backends/x11/xlibbackend.cpp:147 backends/x11/xlibbackend.cpp:160
+#: backends/x11/xlibbackend.cpp:134
 #, kde-format
 msgid "Cannot read touchpad configuration"
 msgstr "Не могу да прочитам поставу додирника."
 
-#: backends/x11/xlibbackend.cpp:173
+#: backends/x11/xlibbackend.cpp:147
 #, fuzzy, kde-format
 #| msgid "Cannot read touchpad configuration"
 msgid "Cannot read default touchpad configuration"
@@ -132,97 +132,6 @@ msgstr "Додирник откачен. Затворите његов дија�
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Додирник откачен. Нема других додирника."
-
-#. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
-#: touchpadparameters.kcfg:27
-#, kde-format
-msgctxt "Emulated mouse button"
-msgid "No action"
-msgstr "без радње"
-
-#. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
-#: touchpadparameters.kcfg:30
-#, kde-format
-msgctxt "Emulated mouse button"
-msgid "Left button"
-msgstr "лево дугме"
-
-#. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
-#: touchpadparameters.kcfg:33
-#, kde-format
-msgctxt "Emulated mouse button"
-msgid "Middle button"
-msgstr "средње дугме"
-
-#. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
-#: touchpadparameters.kcfg:36
-#, kde-format
-msgctxt "Emulated mouse button"
-msgid "Right button"
-msgstr "десно дугме"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:285
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "All edges"
-msgstr "све ивице"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:288
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Top edge"
-msgstr "горња ивица"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:291
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Top right corner"
-msgstr "горњи десни угао"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:294
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Right edge"
-msgstr "десна ивица"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:297
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Bottom right corner"
-msgstr "доњи десни угао"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:300
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Bottom edge"
-msgstr "доња ивица"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:303
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Bottom left corner"
-msgstr "доњи леви угао"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:306
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Left edge"
-msgstr "лева ивица"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:309
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Top left corner"
-msgstr "доњи леви угао"
 
 #: ui/main.qml:57
 #, kde-format
@@ -615,6 +524,58 @@ msgstr ""
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr ""
+
+#~ msgctxt "Emulated mouse button"
+#~ msgid "No action"
+#~ msgstr "без радње"
+
+#~ msgctxt "Emulated mouse button"
+#~ msgid "Left button"
+#~ msgstr "лево дугме"
+
+#~ msgctxt "Emulated mouse button"
+#~ msgid "Middle button"
+#~ msgstr "средње дугме"
+
+#~ msgctxt "Emulated mouse button"
+#~ msgid "Right button"
+#~ msgstr "десно дугме"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "All edges"
+#~ msgstr "све ивице"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Top edge"
+#~ msgstr "горња ивица"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Top right corner"
+#~ msgstr "горњи десни угао"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Right edge"
+#~ msgstr "десна ивица"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Bottom right corner"
+#~ msgstr "доњи десни угао"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Bottom edge"
+#~ msgstr "доња ивица"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Bottom left corner"
+#~ msgstr "доњи леви угао"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Left edge"
+#~ msgstr "лева ивица"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Top left corner"
+#~ msgstr "доњи леви угао"
 
 #~ msgid "Touchpad was disabled because a mouse was plugged in"
 #~ msgstr "Додирник је деактивиран јер је миш утакнут."

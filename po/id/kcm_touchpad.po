@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-29 00:42+0000\n"
+"POT-Creation-Date: 2025-01-30 00:42+0000\n"
 "PO-Revision-Date: 2024-10-29 18:07+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -49,27 +49,27 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr "Galat kritis saat pembacaan pokok info peranti untuk papan sentuh %1."
 
-#: backends/x11/xlibbackend.cpp:68
+#: backends/x11/xlibbackend.cpp:69
 #, kde-format
 msgid "Cannot connect to X server"
 msgstr "Tidak bisa mengkoneksikan ke server X"
 
-#: backends/x11/xlibbackend.cpp:79 ui/main.qml:56
+#: backends/x11/xlibbackend.cpp:80 ui/main.qml:56
 #, kde-format
 msgid "No touchpad found"
 msgstr "Tidak ada papan sentuh yang ditemukan"
 
-#: backends/x11/xlibbackend.cpp:119 backends/x11/xlibbackend.cpp:133
+#: backends/x11/xlibbackend.cpp:120
 #, kde-format
 msgid "Cannot apply touchpad configuration"
 msgstr "Tidak bisa menerapkan konfigurasi papan sentuh"
 
-#: backends/x11/xlibbackend.cpp:147 backends/x11/xlibbackend.cpp:160
+#: backends/x11/xlibbackend.cpp:134
 #, kde-format
 msgid "Cannot read touchpad configuration"
 msgstr "Tidak bisa membaca konfigurasi papan sentuh"
 
-#: backends/x11/xlibbackend.cpp:173
+#: backends/x11/xlibbackend.cpp:147
 #, kde-format
 msgid "Cannot read default touchpad configuration"
 msgstr "Tidak bisa membaca konfigurasi papan sentuh baku"
@@ -125,97 +125,6 @@ msgstr "Papan sentuh terputus. Tutuplah dialog pengaturan."
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Papan sentuh terputus. Tidak ada papan sentuh lain yang ditemukan."
-
-#. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
-#: touchpadparameters.kcfg:27
-#, kde-format
-msgctxt "Emulated mouse button"
-msgid "No action"
-msgstr "Tidak ada aksi"
-
-#. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
-#: touchpadparameters.kcfg:30
-#, kde-format
-msgctxt "Emulated mouse button"
-msgid "Left button"
-msgstr "Tombol kiri"
-
-#. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
-#: touchpadparameters.kcfg:33
-#, kde-format
-msgctxt "Emulated mouse button"
-msgid "Middle button"
-msgstr "Tombol tengah"
-
-#. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
-#: touchpadparameters.kcfg:36
-#, kde-format
-msgctxt "Emulated mouse button"
-msgid "Right button"
-msgstr "Tombol kanan"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:285
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "All edges"
-msgstr "Semua tepi"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:288
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Top edge"
-msgstr "Tepi atas"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:291
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Top right corner"
-msgstr "Sudut kiri atas"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:294
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Right edge"
-msgstr "Tepi kanan"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:297
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Bottom right corner"
-msgstr "Sudut kanan bawah"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:300
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Bottom edge"
-msgstr "Tepi bawah"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:303
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Bottom left corner"
-msgstr "Sudut kiri bawah"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:306
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Left edge"
-msgstr "Tepi kiri"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:309
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Top left corner"
-msgstr "Sudut kiri atas"
 
 #: ui/main.qml:57
 #, kde-format
@@ -601,6 +510,58 @@ msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr ""
 "Menekan papan sentuh di mana pun dengan tiga jari bertindak sebagai klik "
 "tengah."
+
+#~ msgctxt "Emulated mouse button"
+#~ msgid "No action"
+#~ msgstr "Tidak ada aksi"
+
+#~ msgctxt "Emulated mouse button"
+#~ msgid "Left button"
+#~ msgstr "Tombol kiri"
+
+#~ msgctxt "Emulated mouse button"
+#~ msgid "Middle button"
+#~ msgstr "Tombol tengah"
+
+#~ msgctxt "Emulated mouse button"
+#~ msgid "Right button"
+#~ msgstr "Tombol kanan"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "All edges"
+#~ msgstr "Semua tepi"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Top edge"
+#~ msgstr "Tepi atas"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Top right corner"
+#~ msgstr "Sudut kiri atas"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Right edge"
+#~ msgstr "Tepi kanan"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Bottom right corner"
+#~ msgstr "Sudut kanan bawah"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Bottom edge"
+#~ msgstr "Tepi bawah"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Bottom left corner"
+#~ msgstr "Sudut kiri bawah"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Left edge"
+#~ msgstr "Tepi kiri"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Top left corner"
+#~ msgstr "Sudut kiri atas"
 
 #~ msgid "Touchpad was disabled because a mouse was plugged in"
 #~ msgstr "Papan sentuh telah dinonfungsikan karena mouse telah tercolok"

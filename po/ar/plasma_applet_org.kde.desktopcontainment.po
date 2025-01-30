@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-01-30 00:42+0000\n"
 "PO-Revision-Date: 2025-01-09 17:17+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -459,8 +459,8 @@ msgstr "أ&فرغ المهملات"
 #: plugins/folder/foldermodel.cpp:1732
 #, kde-format
 msgctxt "Restore from trash"
-msgid "Restore"
-msgstr "استعد"
+msgid "Restore to Former Location"
+msgstr ""
 
 #: plugins/folder/foldermodel.cpp:1735
 #, kde-format
@@ -475,12 +475,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "اظهر المقصد"
 
-#: plugins/folder/foldermodel.cpp:1863
+#: plugins/folder/foldermodel.cpp:1835
+#, kde-format
+msgctxt "@action:inmenu Removes the trash icon on the desktop"
+msgid "Remove Trash Icon"
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:1838
+#, kde-format
+msgid "&Move to Trash"
+msgstr "ا&نقل إلى المهملات"
+
+#: plugins/folder/foldermodel.cpp:1871
 #, kde-format
 msgid "&Paste"
 msgstr "أل&صق"
 
-#: plugins/folder/foldermodel.cpp:1987
+#: plugins/folder/foldermodel.cpp:2022
 #, kde-format
 msgid "&Properties"
 msgstr "&خصائص"
@@ -631,6 +642,10 @@ msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "مقفل"
 
+#~ msgctxt "Restore from trash"
+#~ msgid "Restore"
+#~ msgstr "استعد"
+
 #~ msgid "Rotate"
 #~ msgstr "دوّر"
 
@@ -720,9 +735,6 @@ msgstr "مقفل"
 
 #~ msgid "&Reload"
 #~ msgstr "أ&عد التحميل"
-
-#~ msgid "&Move to Trash"
-#~ msgstr "ا&نقل إلى المهملات"
 
 #~ msgid "&Delete"
 #~ msgstr "ا&حذف"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-29 00:42+0000\n"
+"POT-Creation-Date: 2025-01-30 00:42+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -47,27 +47,27 @@ msgstr "查询输入设备失败。请重新打开此设置模块。"
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr "读取触摸板 %1 的基本设备信息时发生严重错误。"
 
-#: backends/x11/xlibbackend.cpp:68
+#: backends/x11/xlibbackend.cpp:69
 #, kde-format
 msgid "Cannot connect to X server"
 msgstr "无法连接到 X 服务器"
 
-#: backends/x11/xlibbackend.cpp:79 ui/main.qml:56
+#: backends/x11/xlibbackend.cpp:80 ui/main.qml:56
 #, kde-format
 msgid "No touchpad found"
 msgstr "没有找到触摸板"
 
-#: backends/x11/xlibbackend.cpp:119 backends/x11/xlibbackend.cpp:133
+#: backends/x11/xlibbackend.cpp:120
 #, kde-format
 msgid "Cannot apply touchpad configuration"
 msgstr "无法应用触摸板配置"
 
-#: backends/x11/xlibbackend.cpp:147 backends/x11/xlibbackend.cpp:160
+#: backends/x11/xlibbackend.cpp:134
 #, kde-format
 msgid "Cannot read touchpad configuration"
 msgstr "无法读取触摸板配置"
 
-#: backends/x11/xlibbackend.cpp:173
+#: backends/x11/xlibbackend.cpp:147
 #, kde-format
 msgid "Cannot read default touchpad configuration"
 msgstr "无法读取默认触摸板配置"
@@ -114,97 +114,6 @@ msgstr "触摸板已断开连接。已关闭它的设置对话框。"
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "触摸板已断开连接。没有找到其他触摸板。"
-
-#. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
-#: touchpadparameters.kcfg:27
-#, kde-format
-msgctxt "Emulated mouse button"
-msgid "No action"
-msgstr "无操作"
-
-#. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
-#: touchpadparameters.kcfg:30
-#, kde-format
-msgctxt "Emulated mouse button"
-msgid "Left button"
-msgstr "左键"
-
-#. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
-#: touchpadparameters.kcfg:33
-#, kde-format
-msgctxt "Emulated mouse button"
-msgid "Middle button"
-msgstr "中键"
-
-#. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
-#: touchpadparameters.kcfg:36
-#, kde-format
-msgctxt "Emulated mouse button"
-msgid "Right button"
-msgstr "右键"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:285
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "All edges"
-msgstr "所有边缘"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:288
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Top edge"
-msgstr "顶部边缘"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:291
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Top right corner"
-msgstr "右上角"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:294
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Right edge"
-msgstr "右边缘"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:297
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Bottom right corner"
-msgstr "右下角"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:300
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Bottom edge"
-msgstr "底部边缘"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:303
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Bottom left corner"
-msgstr "左下角"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:306
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Left edge"
-msgstr "左边缘"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:309
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Top left corner"
-msgstr "左上角"
 
 #: ui/main.qml:57
 #, kde-format
@@ -568,6 +477,58 @@ msgstr "三指按下触摸板"
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr "三指按下触摸板的任意位置时点击中键。"
+
+#~ msgctxt "Emulated mouse button"
+#~ msgid "No action"
+#~ msgstr "无操作"
+
+#~ msgctxt "Emulated mouse button"
+#~ msgid "Left button"
+#~ msgstr "左键"
+
+#~ msgctxt "Emulated mouse button"
+#~ msgid "Middle button"
+#~ msgstr "中键"
+
+#~ msgctxt "Emulated mouse button"
+#~ msgid "Right button"
+#~ msgstr "右键"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "All edges"
+#~ msgstr "所有边缘"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Top edge"
+#~ msgstr "顶部边缘"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Top right corner"
+#~ msgstr "右上角"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Right edge"
+#~ msgstr "右边缘"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Bottom right corner"
+#~ msgstr "右下角"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Bottom edge"
+#~ msgstr "底部边缘"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Bottom left corner"
+#~ msgstr "左下角"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Left edge"
+#~ msgstr "左边缘"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Top left corner"
+#~ msgstr "左上角"
 
 #~ msgid "Touchpad was disabled because a mouse was plugged in"
 #~ msgstr "检测到鼠标插入，触摸板已禁用"

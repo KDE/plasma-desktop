@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-29 00:42+0000\n"
+"POT-Creation-Date: 2025-01-30 00:42+0000\n"
 "PO-Revision-Date: 2024-02-25 09:27-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -47,27 +47,27 @@ msgstr ""
 msgid "Critical error on reading fundamental device infos for touchpad %1."
 msgstr ""
 
-#: backends/x11/xlibbackend.cpp:68
+#: backends/x11/xlibbackend.cpp:69
 #, kde-format
 msgid "Cannot connect to X server"
 msgstr "X ਸਰਵਰ ਨਾਲ ਕਨੈਕਟ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ"
 
-#: backends/x11/xlibbackend.cpp:79 ui/main.qml:56
+#: backends/x11/xlibbackend.cpp:80 ui/main.qml:56
 #, kde-format
 msgid "No touchpad found"
 msgstr "ਕੋਈ ਟੱਚਪੈਡ ਨਹੀਂ ਲੱਭਿਆ"
 
-#: backends/x11/xlibbackend.cpp:119 backends/x11/xlibbackend.cpp:133
+#: backends/x11/xlibbackend.cpp:120
 #, kde-format
 msgid "Cannot apply touchpad configuration"
 msgstr "ਟੱਚਪੈਡ ਸੰਰਚਨਾ ਲਾਗੂ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ"
 
-#: backends/x11/xlibbackend.cpp:147 backends/x11/xlibbackend.cpp:160
+#: backends/x11/xlibbackend.cpp:134
 #, kde-format
 msgid "Cannot read touchpad configuration"
 msgstr "ਟੱਚਪੈਡ ਸੰਰਚਨਾ ਪੜ੍ਹੀ ਨਹੀਂ ਜਾ ਸਕਦੀ"
 
-#: backends/x11/xlibbackend.cpp:173
+#: backends/x11/xlibbackend.cpp:147
 #, kde-format
 msgid "Cannot read default touchpad configuration"
 msgstr "ਮੂਲ ਟੱਚਪੈਡ ਸੰਰਚਨਾ ਪੜ੍ਹੀ ਨਹੀਂ ਜਾ ਸਕਦੀ"
@@ -118,97 +118,6 @@ msgstr "ਟੱਚਪੈਡ ਕਨੈਕਟ ਨਹੀਂ ਹੈ। ਇਸ ਦਾ 
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "ਟੱਚਪੈਡ ਕਨੈਕਟ ਨਹੀਂ ਹੈ। ਕੋਈ ਹੋਰ ਟੱਚਪੈਡ ਨਹੀਂ ਲੱਭੇ।"
-
-#. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
-#: touchpadparameters.kcfg:27
-#, kde-format
-msgctxt "Emulated mouse button"
-msgid "No action"
-msgstr "ਕੋਈ ਐਕਸ਼ਨ ਨਹੀਂ"
-
-#. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
-#: touchpadparameters.kcfg:30
-#, kde-format
-msgctxt "Emulated mouse button"
-msgid "Left button"
-msgstr "ਖੱਬਾ ਬਟਨ"
-
-#. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
-#: touchpadparameters.kcfg:33
-#, kde-format
-msgctxt "Emulated mouse button"
-msgid "Middle button"
-msgstr "ਮਿਡਲ ਬਟਨ"
-
-#. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
-#: touchpadparameters.kcfg:36
-#, kde-format
-msgctxt "Emulated mouse button"
-msgid "Right button"
-msgstr "ਸੱਜਾ ਬਟਨ"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:285
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "All edges"
-msgstr "ਸਾਰੇ ਕੰਢੇ"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:288
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Top edge"
-msgstr "ਉੱਪਰੀ ਕੰਢਾ"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:291
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Top right corner"
-msgstr "ਉੱਤੇ ਸੱਜਾ ਕੋਨਾ"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:294
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Right edge"
-msgstr "ਉੱਤੇ ਸੱਜਾ ਕੰਢਾ"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:297
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Bottom right corner"
-msgstr "ਹੇਠਲਾ ਸੱਜਾ ਕੋਨਾ"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:300
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Bottom edge"
-msgstr "ਹੇਠਲਾ ਕੰਢਾ"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:303
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Bottom left corner"
-msgstr "ਹੇਠਲਾ ਖੱਬਾ ਕੋਨਾ"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:306
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Left edge"
-msgstr "ਖੱਬਾ ਕੰਢਾ"
-
-#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
-#: touchpadparameters.kcfg:309
-#, kde-format
-msgctxt "Touchpad Edge"
-msgid "Top left corner"
-msgstr "ਉੱਤੇ ਖੱਬਾ ਕੋਨਾ"
 
 #: ui/main.qml:57
 #, kde-format
@@ -591,6 +500,58 @@ msgstr "ਤਿੰਨ ਉਂਗਲਾਂ ਨਾਲ ਕਿਤੇ ਵੀ ਦਬਾ�
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr "ਸੱਜੇ ਕਲਿੱਕ ਲਈ ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਟੈਪ ਕਰੋ"
+
+#~ msgctxt "Emulated mouse button"
+#~ msgid "No action"
+#~ msgstr "ਕੋਈ ਐਕਸ਼ਨ ਨਹੀਂ"
+
+#~ msgctxt "Emulated mouse button"
+#~ msgid "Left button"
+#~ msgstr "ਖੱਬਾ ਬਟਨ"
+
+#~ msgctxt "Emulated mouse button"
+#~ msgid "Middle button"
+#~ msgstr "ਮਿਡਲ ਬਟਨ"
+
+#~ msgctxt "Emulated mouse button"
+#~ msgid "Right button"
+#~ msgstr "ਸੱਜਾ ਬਟਨ"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "All edges"
+#~ msgstr "ਸਾਰੇ ਕੰਢੇ"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Top edge"
+#~ msgstr "ਉੱਪਰੀ ਕੰਢਾ"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Top right corner"
+#~ msgstr "ਉੱਤੇ ਸੱਜਾ ਕੋਨਾ"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Right edge"
+#~ msgstr "ਉੱਤੇ ਸੱਜਾ ਕੰਢਾ"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Bottom right corner"
+#~ msgstr "ਹੇਠਲਾ ਸੱਜਾ ਕੋਨਾ"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Bottom edge"
+#~ msgstr "ਹੇਠਲਾ ਕੰਢਾ"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Bottom left corner"
+#~ msgstr "ਹੇਠਲਾ ਖੱਬਾ ਕੋਨਾ"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Left edge"
+#~ msgstr "ਖੱਬਾ ਕੰਢਾ"
+
+#~ msgctxt "Touchpad Edge"
+#~ msgid "Top left corner"
+#~ msgstr "ਉੱਤੇ ਖੱਬਾ ਕੋਨਾ"
 
 #~ msgid "Touchpad was disabled because a mouse was plugged in"
 #~ msgstr "ਮਾਊਸ ਦਾ ਪਲੱਗ ਲੱਗਾ ਹੋਣ ਕਰਕੇ ਟੱਚ-ਪੈਡ ਅਸਮਰੱਥ ਸੀ"

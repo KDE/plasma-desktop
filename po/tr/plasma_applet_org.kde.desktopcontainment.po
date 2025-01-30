@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-01-30 00:42+0000\n"
 "PO-Revision-Date: 2025-01-09 15:40+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -457,8 +457,8 @@ msgstr "&Çöp Kutusunu Boşalt"
 #: plugins/folder/foldermodel.cpp:1732
 #, kde-format
 msgctxt "Restore from trash"
-msgid "Restore"
-msgstr "Geri Yükle"
+msgid "Restore to Former Location"
+msgstr ""
 
 #: plugins/folder/foldermodel.cpp:1735
 #, kde-format
@@ -473,12 +473,24 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Hedefi Göster"
 
-#: plugins/folder/foldermodel.cpp:1863
+#: plugins/folder/foldermodel.cpp:1835
+#, kde-format
+msgctxt "@action:inmenu Removes the trash icon on the desktop"
+msgid "Remove Trash Icon"
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:1838
+#, fuzzy, kde-format
+#| msgid "&Empty Trash"
+msgid "&Move to Trash"
+msgstr "&Çöp Kutusunu Boşalt"
+
+#: plugins/folder/foldermodel.cpp:1871
 #, kde-format
 msgid "&Paste"
 msgstr "&Yapıştır"
 
-#: plugins/folder/foldermodel.cpp:1987
+#: plugins/folder/foldermodel.cpp:2022
 #, kde-format
 msgid "&Properties"
 msgstr "&Özellikler"
@@ -628,6 +640,10 @@ msgstr "Önizlemeleri Göster"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Kilitli"
+
+#~ msgctxt "Restore from trash"
+#~ msgid "Restore"
+#~ msgstr "Geri Yükle"
 
 #~ msgid "Rotate"
 #~ msgstr "Döndür"

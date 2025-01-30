@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-01-30 00:42+0000\n"
 "PO-Revision-Date: 2009-01-06 14:28+0200\n"
 "Last-Translator: Erdal Ronahi <erdal.ronahi@nospam.gmail.com>\n"
 "Language-Team: Kurdish <kde-i18n-doc@lists.kde.org>\n"
@@ -495,11 +495,10 @@ msgid "&Empty Trash"
 msgstr "&Qutiya gilêşê vala bike"
 
 #: plugins/folder/foldermodel.cpp:1732
-#, fuzzy, kde-format
-#| msgid "&Restore"
+#, kde-format
 msgctxt "Restore from trash"
-msgid "Restore"
-msgstr "&Paşde bîne"
+msgid "Restore to Former Location"
+msgstr ""
 
 #: plugins/folder/foldermodel.cpp:1735
 #, kde-format
@@ -514,12 +513,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1863
+#: plugins/folder/foldermodel.cpp:1835
+#, kde-format
+msgctxt "@action:inmenu Removes the trash icon on the desktop"
+msgid "Remove Trash Icon"
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:1838
+#, kde-format
+msgid "&Move to Trash"
+msgstr "Bia&vêje Çopê"
+
+#: plugins/folder/foldermodel.cpp:1871
 #, kde-format
 msgid "&Paste"
 msgstr "&Pêvekirin"
 
-#: plugins/folder/foldermodel.cpp:1987
+#: plugins/folder/foldermodel.cpp:2022
 #, kde-format
 msgid "&Properties"
 msgstr "&Taybetmendî"
@@ -685,6 +695,12 @@ msgid "Locked"
 msgstr ""
 
 #, fuzzy
+#~| msgid "&Restore"
+#~ msgctxt "Restore from trash"
+#~ msgid "Restore"
+#~ msgstr "&Paşde bîne"
+
+#, fuzzy
 #~| msgid "Create &Folder..."
 #~ msgid "&Create Folder"
 #~ msgstr "Peldankê biafirîne..."
@@ -710,9 +726,6 @@ msgstr ""
 
 #~ msgid "&Reload"
 #~ msgstr "&Nûbarkirin"
-
-#~ msgid "&Move to Trash"
-#~ msgstr "Bia&vêje Çopê"
 
 #~ msgid "&Delete"
 #~ msgstr "&Jêbirin "

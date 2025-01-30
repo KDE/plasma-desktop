@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-01-30 00:42+0000\n"
 "PO-Revision-Date: 2025-01-09 14:32+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -459,8 +459,8 @@ msgstr "Prullenbak l&egen"
 #: plugins/folder/foldermodel.cpp:1732
 #, kde-format
 msgctxt "Restore from trash"
-msgid "Restore"
-msgstr "Herstellen"
+msgid "Restore to Former Location"
+msgstr ""
 
 #: plugins/folder/foldermodel.cpp:1735
 #, kde-format
@@ -475,12 +475,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Doel tonen"
 
-#: plugins/folder/foldermodel.cpp:1863
+#: plugins/folder/foldermodel.cpp:1835
+#, kde-format
+msgctxt "@action:inmenu Removes the trash icon on the desktop"
+msgid "Remove Trash Icon"
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:1838
+#, kde-format
+msgid "&Move to Trash"
+msgstr "&Naar prullenbak verplaatsen"
+
+#: plugins/folder/foldermodel.cpp:1871
 #, kde-format
 msgid "&Paste"
 msgstr "P&lakken"
 
-#: plugins/folder/foldermodel.cpp:1987
+#: plugins/folder/foldermodel.cpp:2022
 #, kde-format
 msgid "&Properties"
 msgstr "Eigenscha&ppen"
@@ -631,6 +642,10 @@ msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Vergrendeld"
 
+#~ msgctxt "Restore from trash"
+#~ msgid "Restore"
+#~ msgstr "Herstellen"
+
 #~ msgid "Rotate"
 #~ msgstr "Draaien"
 
@@ -731,9 +746,6 @@ msgstr "Vergrendeld"
 
 #~ msgid "&Reload"
 #~ msgstr "&Herladen"
-
-#~ msgid "&Move to Trash"
-#~ msgstr "&Naar prullenbak verplaatsen"
 
 #~ msgid "&Delete"
 #~ msgstr "Verwij&deren"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-01-30 00:42+0000\n"
 "PO-Revision-Date: 2013-05-28 03:59+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -512,11 +512,10 @@ msgid "&Empty Trash"
 msgstr "'Өшіргендер' шелегін &босату"
 
 #: plugins/folder/foldermodel.cpp:1732
-#, fuzzy, kde-format
-#| msgid "&Restore"
+#, kde-format
 msgctxt "Restore from trash"
-msgid "Restore"
-msgstr "Орнына қайта&ру"
+msgid "Restore to Former Location"
+msgstr ""
 
 #: plugins/folder/foldermodel.cpp:1735
 #, kde-format
@@ -532,12 +531,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Көрсететіні:"
 
-#: plugins/folder/foldermodel.cpp:1863
+#: plugins/folder/foldermodel.cpp:1835
+#, kde-format
+msgctxt "@action:inmenu Removes the trash icon on the desktop"
+msgid "Remove Trash Icon"
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:1838
+#, kde-format
+msgid "&Move to Trash"
+msgstr "Өшірілгендерге &тастау"
+
+#: plugins/folder/foldermodel.cpp:1871
 #, kde-format
 msgid "&Paste"
 msgstr "&Орналастыру"
 
-#: plugins/folder/foldermodel.cpp:1987
+#: plugins/folder/foldermodel.cpp:2022
 #, kde-format
 msgid "&Properties"
 msgstr "Қасиетте&р"
@@ -716,6 +726,12 @@ msgid "Locked"
 msgstr ""
 
 #, fuzzy
+#~| msgid "&Restore"
+#~ msgctxt "Restore from trash"
+#~ msgid "Restore"
+#~ msgstr "Орнына қайта&ру"
+
+#, fuzzy
 #~| msgctxt "Arrange icons in"
 #~| msgid "Rows"
 #~ msgctxt "@item:inlistbox arrangement of icons"
@@ -798,9 +814,6 @@ msgstr ""
 
 #~ msgid "&Reload"
 #~ msgstr "Қ&айта жүктеу"
-
-#~ msgid "&Move to Trash"
-#~ msgstr "Өшірілгендерге &тастау"
 
 #~ msgid "&Delete"
 #~ msgstr "Ө&шіру"

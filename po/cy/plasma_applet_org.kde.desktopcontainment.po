@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-01-30 00:42+0000\n"
 "PO-Revision-Date: 2004-01-05 15:00+0000\n"
 "Last-Translator: KD at KGyfieithu <kyfieithu@dotmon.com>\n"
 "Language-Team: Cymraeg <cy@li.org>\n"
@@ -477,11 +477,10 @@ msgid "&Empty Trash"
 msgstr "Gwagio'r Swbri&el"
 
 #: plugins/folder/foldermodel.cpp:1732
-#, fuzzy, kde-format
-#| msgid "&Restore"
+#, kde-format
 msgctxt "Restore from trash"
-msgid "Restore"
-msgstr "&Adfer"
+msgid "Restore to Former Location"
+msgstr ""
 
 #: plugins/folder/foldermodel.cpp:1735
 #, kde-format
@@ -497,12 +496,24 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Malu Ffeiliau"
 
-#: plugins/folder/foldermodel.cpp:1863
+#: plugins/folder/foldermodel.cpp:1835
+#, kde-format
+msgctxt "@action:inmenu Removes the trash icon on the desktop"
+msgid "Remove Trash Icon"
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:1838
+#, fuzzy, kde-format
+#| msgid "Move to Trash"
+msgid "&Move to Trash"
+msgstr "Symud i'r Sbwriel"
+
+#: plugins/folder/foldermodel.cpp:1871
 #, kde-format
 msgid "&Paste"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1987
+#: plugins/folder/foldermodel.cpp:2022
 #, kde-format
 msgid "&Properties"
 msgstr "&Priodweddau"
@@ -662,6 +673,12 @@ msgid "Locked"
 msgstr ""
 
 #, fuzzy
+#~| msgid "&Restore"
+#~ msgctxt "Restore from trash"
+#~ msgid "Restore"
+#~ msgstr "&Adfer"
+
+#, fuzzy
 #~| msgid "C&ancel"
 #~ msgid "Cancel"
 #~ msgstr "&Diddymu"
@@ -675,11 +692,6 @@ msgstr ""
 #~| msgid "New Folder"
 #~ msgid "Desktop Layout"
 #~ msgstr "Plygell Newydd"
-
-#, fuzzy
-#~| msgid "Move to Trash"
-#~ msgid "&Move to Trash"
-#~ msgstr "Symud i'r Sbwriel"
 
 #, fuzzy
 #~| msgid "Delete Files"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-01-30 00:42+0000\n"
 "PO-Revision-Date: 2025-01-09 18:35+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -456,8 +456,8 @@ msgstr "Vacua corb&e"
 #: plugins/folder/foldermodel.cpp:1732
 #, kde-format
 msgctxt "Restore from trash"
-msgid "Restore"
-msgstr "Restabili"
+msgid "Restore to Former Location"
+msgstr ""
 
 #: plugins/folder/foldermodel.cpp:1735
 #, kde-format
@@ -472,12 +472,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Monstra Objectivo"
 
-#: plugins/folder/foldermodel.cpp:1863
+#: plugins/folder/foldermodel.cpp:1835
+#, kde-format
+msgctxt "@action:inmenu Removes the trash icon on the desktop"
+msgid "Remove Trash Icon"
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:1838
+#, kde-format
+msgid "&Move to Trash"
+msgstr "&Move al Corbe"
+
+#: plugins/folder/foldermodel.cpp:1871
 #, kde-format
 msgid "&Paste"
 msgstr "&Colla"
 
-#: plugins/folder/foldermodel.cpp:1987
+#: plugins/folder/foldermodel.cpp:2022
 #, kde-format
 msgid "&Properties"
 msgstr "&Proprietates"
@@ -628,6 +639,10 @@ msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Blocate"
 
+#~ msgctxt "Restore from trash"
+#~ msgid "Restore"
+#~ msgstr "Restabili"
+
 #~ msgid "Rotate"
 #~ msgstr "Rota"
 
@@ -706,9 +721,6 @@ msgstr "Blocate"
 
 #~ msgid "&Reload"
 #~ msgstr "&Recarga"
-
-#~ msgid "&Move to Trash"
-#~ msgstr "&Move al Corbe"
 
 #~ msgid "&Delete"
 #~ msgstr "De&le"

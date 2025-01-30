@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-01-30 00:42+0000\n"
 "PO-Revision-Date: 2021-09-05 11:41-0700\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik Language Support\n"
@@ -484,8 +484,8 @@ msgstr "&Сабадро холӣ кардан"
 #: plugins/folder/foldermodel.cpp:1732
 #, kde-format
 msgctxt "Restore from trash"
-msgid "Restore"
-msgstr "Барқарорсозӣ"
+msgid "Restore to Former Location"
+msgstr ""
 
 #: plugins/folder/foldermodel.cpp:1735
 #, kde-format
@@ -501,12 +501,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Ҳамаро намоиш додан"
 
-#: plugins/folder/foldermodel.cpp:1863
+#: plugins/folder/foldermodel.cpp:1835
+#, kde-format
+msgctxt "@action:inmenu Removes the trash icon on the desktop"
+msgid "Remove Trash Icon"
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:1838
+#, kde-format
+msgid "&Move to Trash"
+msgstr "&Таҳвил ба сабад"
+
+#: plugins/folder/foldermodel.cpp:1871
 #, kde-format
 msgid "&Paste"
 msgstr "&Часпондан"
 
-#: plugins/folder/foldermodel.cpp:1987
+#: plugins/folder/foldermodel.cpp:2022
 #, kde-format
 msgid "&Properties"
 msgstr "&Хусусиятҳо"
@@ -678,6 +689,10 @@ msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Қулфшуда"
 
+#~ msgctxt "Restore from trash"
+#~ msgid "Restore"
+#~ msgstr "Барқарорсозӣ"
+
 #~ msgid "Rotate"
 #~ msgstr "Даврзанӣ"
 
@@ -792,9 +807,6 @@ msgstr "Қулфшуда"
 
 #~ msgid "&Reload"
 #~ msgstr "&Бозсозӣ"
-
-#~ msgid "&Move to Trash"
-#~ msgstr "&Таҳвил ба сабад"
 
 #~ msgid "&Delete"
 #~ msgstr "&Нест кардан"

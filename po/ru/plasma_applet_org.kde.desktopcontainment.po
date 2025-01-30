@@ -9,13 +9,13 @@
 # Alexander Potashev <aspotashev@gmail.com>, 2010, 2012, 2015, 2016, 2017, 2018, 2019, 2020.
 # Yuri Efremov <yur.arh@gmail.com>, 2011, 2012, 2013.
 # Alexander Lakhin <exclusion@gmail.com>, 2013.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2024.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
-"PO-Revision-Date: 2024-05-18 10:14+0300\n"
+"POT-Creation-Date: 2025-01-30 00:42+0000\n"
+"PO-Revision-Date: 2025-01-29 11:05+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -446,7 +446,7 @@ msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
 "or folder"
 msgid "Link Target Not Found"
-msgstr ""
+msgstr "Целевой файл не найден"
 
 #: plugins/folder/foldermodel.cpp:871
 #, kde-kuit-format
@@ -455,6 +455,8 @@ msgid ""
 "<filename>%1</filename> points to <filename>%2</filename>, but that could "
 "not be found. It may have been moved or deleted."
 msgstr ""
+"<filename> %1</filename> указывает на отсутствующий файл <filename>%2</"
+"filename>, который мог быть перемещён или удалён."
 
 #: plugins/folder/foldermodel.cpp:1729
 #, kde-format
@@ -464,8 +466,8 @@ msgstr "О&чистить корзину"
 #: plugins/folder/foldermodel.cpp:1732
 #, kde-format
 msgctxt "Restore from trash"
-msgid "Restore"
-msgstr "Восстановить"
+msgid "Restore to Former Location"
+msgstr ""
 
 #: plugins/folder/foldermodel.cpp:1735
 #, kde-format
@@ -473,20 +475,30 @@ msgid "&Open"
 msgstr "&Открыть"
 
 #: plugins/folder/foldermodel.cpp:1739
-#, fuzzy, kde-format
-#| msgid "Show all"
+#, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
 "link points to"
 msgid "Show Target"
-msgstr "Показывать все"
+msgstr "Показать цель"
 
-#: plugins/folder/foldermodel.cpp:1863
+#: plugins/folder/foldermodel.cpp:1835
+#, kde-format
+msgctxt "@action:inmenu Removes the trash icon on the desktop"
+msgid "Remove Trash Icon"
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:1838
+#, kde-format
+msgid "&Move to Trash"
+msgstr "У&далить в корзину"
+
+#: plugins/folder/foldermodel.cpp:1871
 #, kde-format
 msgid "&Paste"
 msgstr "Вст&авить"
 
-#: plugins/folder/foldermodel.cpp:1987
+#: plugins/folder/foldermodel.cpp:2022
 #, kde-format
 msgid "&Properties"
 msgstr "&Свойства"
@@ -637,6 +649,10 @@ msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Зафиксировать значки"
 
+#~ msgctxt "Restore from trash"
+#~ msgid "Restore"
+#~ msgstr "Восстановить"
+
 #~ msgid "Rotate"
 #~ msgstr "Повернуть"
 
@@ -736,9 +752,6 @@ msgstr "Зафиксировать значки"
 
 #~ msgid "&Reload"
 #~ msgstr "О&бновить"
-
-#~ msgid "&Move to Trash"
-#~ msgstr "У&далить в корзину"
 
 #~ msgid "&Delete"
 #~ msgstr "&Удалить"

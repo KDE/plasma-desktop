@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-01-30 00:42+0000\n"
 "PO-Revision-Date: 2007-11-01 14:06+0545\n"
 "Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -473,11 +473,10 @@ msgid "&Empty Trash"
 msgstr "रद्दीटोकरी खाली गर्नुहोस्"
 
 #: plugins/folder/foldermodel.cpp:1732
-#, fuzzy, kde-format
-#| msgid "&Restore"
+#, kde-format
 msgctxt "Restore from trash"
-msgid "Restore"
-msgstr "पूर्वावस्थामा ल्याउनुहोस्"
+msgid "Restore to Former Location"
+msgstr ""
 
 #: plugins/folder/foldermodel.cpp:1735
 #, kde-format
@@ -492,12 +491,24 @@ msgctxt ""
 msgid "Show Target"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1863
+#: plugins/folder/foldermodel.cpp:1835
+#, kde-format
+msgctxt "@action:inmenu Removes the trash icon on the desktop"
+msgid "Remove Trash Icon"
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:1838
+#, fuzzy, kde-format
+#| msgid "Move to Trash"
+msgid "&Move to Trash"
+msgstr "रद्दीटोकरीमा सार्नुहोस्"
+
+#: plugins/folder/foldermodel.cpp:1871
 #, kde-format
 msgid "&Paste"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1987
+#: plugins/folder/foldermodel.cpp:2022
 #, kde-format
 msgid "&Properties"
 msgstr "गुण"
@@ -650,6 +661,12 @@ msgid "Locked"
 msgstr ""
 
 #, fuzzy
+#~| msgid "&Restore"
+#~ msgctxt "Restore from trash"
+#~ msgid "Restore"
+#~ msgstr "पूर्वावस्थामा ल्याउनुहोस्"
+
+#, fuzzy
 #~| msgid "C&ancel"
 #~ msgid "Cancel"
 #~ msgstr "रद्द गर्नुहोस्"
@@ -663,11 +680,6 @@ msgstr ""
 #~| msgid "New Folder"
 #~ msgid "Desktop Layout"
 #~ msgstr "नयाँ फोल्डर"
-
-#, fuzzy
-#~| msgid "Move to Trash"
-#~ msgid "&Move to Trash"
-#~ msgstr "रद्दीटोकरीमा सार्नुहोस्"
 
 #, fuzzy
 #~| msgid "Deleting"

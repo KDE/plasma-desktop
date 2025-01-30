@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-16 00:41+0000\n"
+"POT-Creation-Date: 2025-01-30 00:42+0000\n"
 "PO-Revision-Date: 2024-06-09 14:59+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -105,28 +105,28 @@ msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Le selectează"
 
-#: ui/main.qml:167
+#: ui/main.qml:172
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Deschide prin apăsare dublă în schimb"
 
-#: ui/main.qml:180
+#: ui/main.qml:185
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Le deschide"
 
-#: ui/main.qml:193
+#: ui/main.qml:203
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "Se alege apăsând pe marcatorul de selecție al elementului"
 
-#: ui/main.qml:209
+#: ui/main.qml:219
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr "Apăsarea în calea barei de derulare:"
 
-#: ui/main.qml:210
+#: ui/main.qml:220
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
@@ -134,7 +134,7 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "Derulează la locul apăsat"
 
-#: ui/main.qml:228
+#: ui/main.qml:238
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -142,12 +142,12 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "Derulează cu o pagină în sus sau jos"
 
-#: ui/main.qml:241
+#: ui/main.qml:256
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
 msgstr "Clic-mijloc pentru derulare la locul ales"
 
-#: ui/main.qml:255
+#: ui/main.qml:270
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@radio part of a complete sentence: 'Middle click pastes selected text'"
@@ -158,7 +158,7 @@ msgctxt ""
 msgid "Middle-click:"
 msgstr "Clic mijlociu:"
 
-#: ui/main.qml:257
+#: ui/main.qml:272
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@radio part of a complete sentence: 'Middle click pastes selected text'"
@@ -169,24 +169,24 @@ msgctxt ""
 msgid "Pastes selected text"
 msgstr "Lipește textul ales"
 
-#: ui/main.qml:274
+#: ui/main.qml:289
 #, kde-format
 msgid "Touch Mode:"
 msgstr "Regim tactil:"
 
-#: ui/main.qml:276
+#: ui/main.qml:291
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Activează automat după necesitate"
 
-#: ui/main.qml:276 ui/main.qml:319
+#: ui/main.qml:291 ui/main.qml:336
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Niciodată activ"
 
-#: ui/main.qml:292
+#: ui/main.qml:308
 #, kde-format
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
@@ -197,13 +197,13 @@ msgstr ""
 "ecran tactil dar fără maus sau zonă tactilă. De exemplu, când tastatura unui "
 "laptop transformabil e întoarsă invers sau detașată."
 
-#: ui/main.qml:297
+#: ui/main.qml:313
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Activat întotdeauna"
 
-#: ui/main.qml:337
+#: ui/main.qml:359
 #, kde-format
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
@@ -212,12 +212,12 @@ msgstr ""
 "În regim tactil, multe elemente ale interfeței cu utilizatorul vor deveni "
 "mai mari pentru a facilita interacțiunea prin atingeri."
 
-#: ui/main.qml:355
+#: ui/main.qml:377
 #, kde-format
 msgid "Double-click interval:"
 msgstr "Interval dublu-clic:"
 
-#: ui/main.qml:370
+#: ui/main.qml:392
 #, fuzzy, kde-format
 #| msgid "%1 msec"
 #| msgid_plural "%1 msec"
@@ -228,14 +228,14 @@ msgstr[0] "%1 msec"
 msgstr[1] "%1 msec"
 msgstr[2] "%1 de msec"
 
-#: ui/main.qml:374
+#: ui/main.qml:396
 #, fuzzy, kde-format
 #| msgid "msec"
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgstr "msec"
 
-#: ui/main.qml:388
+#: ui/main.qml:410
 #, kde-format
 msgid ""
 "Two clicks within this duration are considered a double-click. Some "

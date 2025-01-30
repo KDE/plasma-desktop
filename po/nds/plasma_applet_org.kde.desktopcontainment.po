@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-01-30 00:42+0000\n"
 "PO-Revision-Date: 2014-08-12 23:57+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -490,11 +490,10 @@ msgid "&Empty Trash"
 msgstr "Affall&tünn leddig maken"
 
 #: plugins/folder/foldermodel.cpp:1732
-#, fuzzy, kde-format
-#| msgid "&Restore"
+#, kde-format
 msgctxt "Restore from trash"
-msgid "Restore"
-msgstr "Wedde&rherstellen"
+msgid "Restore to Former Location"
+msgstr ""
 
 #: plugins/folder/foldermodel.cpp:1735
 #, kde-format
@@ -510,12 +509,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "En Steed wiesen:"
 
-#: plugins/folder/foldermodel.cpp:1863
+#: plugins/folder/foldermodel.cpp:1835
+#, kde-format
+msgctxt "@action:inmenu Removes the trash icon on the desktop"
+msgid "Remove Trash Icon"
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:1838
+#, kde-format
+msgid "&Move to Trash"
+msgstr "Na &Affalltünn verschuven"
+
+#: plugins/folder/foldermodel.cpp:1871
 #, kde-format
 msgid "&Paste"
 msgstr "&Infögen"
 
-#: plugins/folder/foldermodel.cpp:1987
+#: plugins/folder/foldermodel.cpp:2022
 #, kde-format
 msgid "&Properties"
 msgstr "Egenscha&ppen"
@@ -682,6 +692,12 @@ msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Afslaten"
 
+#, fuzzy
+#~| msgid "&Restore"
+#~ msgctxt "Restore from trash"
+#~ msgid "Restore"
+#~ msgstr "Wedde&rherstellen"
+
 #~ msgid "OK"
 #~ msgstr "OK"
 
@@ -768,9 +784,6 @@ msgstr "Afslaten"
 
 #~ msgid "&Reload"
 #~ msgstr "&Nieg laden"
-
-#~ msgid "&Move to Trash"
-#~ msgstr "Na &Affalltünn verschuven"
 
 #~ msgid "&Delete"
 #~ msgstr "&Wegdoon"

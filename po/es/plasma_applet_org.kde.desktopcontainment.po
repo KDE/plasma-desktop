@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-01-30 00:42+0000\n"
 "PO-Revision-Date: 2025-01-09 03:55+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -458,8 +458,8 @@ msgstr "Vaciar la pap&elera"
 #: plugins/folder/foldermodel.cpp:1732
 #, kde-format
 msgctxt "Restore from trash"
-msgid "Restore"
-msgstr "Restaurar"
+msgid "Restore to Former Location"
+msgstr ""
 
 #: plugins/folder/foldermodel.cpp:1735
 #, kde-format
@@ -474,12 +474,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Mostrar destino"
 
-#: plugins/folder/foldermodel.cpp:1863
+#: plugins/folder/foldermodel.cpp:1835
+#, kde-format
+msgctxt "@action:inmenu Removes the trash icon on the desktop"
+msgid "Remove Trash Icon"
+msgstr ""
+
+#: plugins/folder/foldermodel.cpp:1838
+#, kde-format
+msgid "&Move to Trash"
+msgstr "&Mover a la Papelera"
+
+#: plugins/folder/foldermodel.cpp:1871
 #, kde-format
 msgid "&Paste"
 msgstr "&Pegar"
 
-#: plugins/folder/foldermodel.cpp:1987
+#: plugins/folder/foldermodel.cpp:2022
 #, kde-format
 msgid "&Properties"
 msgstr "&Propiedades"
@@ -630,6 +641,10 @@ msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Bloqueado"
 
+#~ msgctxt "Restore from trash"
+#~ msgid "Restore"
+#~ msgstr "Restaurar"
+
 #~ msgid "Rotate"
 #~ msgstr "Rotar"
 
@@ -729,9 +744,6 @@ msgstr "Bloqueado"
 
 #~ msgid "&Reload"
 #~ msgstr "&Volver a cargar"
-
-#~ msgid "&Move to Trash"
-#~ msgstr "&Mover a la Papelera"
 
 #~ msgid "&Delete"
 #~ msgstr "&Borrar"
