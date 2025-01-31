@@ -43,6 +43,7 @@ KCM.ScrollViewKCM {
             icon.name: monitor.state !== Baloo.Global.Suspended ? "media-playback-pause" : "media-playback-start"
             text: monitor.state !== Baloo.Global.Suspended ? i18n("Pause Indexer") : i18n("Resume Indexer")
             visible: kcm.balooSettings.indexingEnabled
+            displayHint: Kirigami.DisplayHint.KeepVisible
             onTriggered: monitor.toggleSuspendState()
         }
     ]
