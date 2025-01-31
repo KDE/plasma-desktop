@@ -1,13 +1,13 @@
 #
 # Tamas Szanto <tszanto@interware.hu>, 2000.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2019, 2020, 2021.
-# SPDX-FileCopyrightText: 2023, 2024 Kristof Kiszel <kiszel.kristof@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Kristof Kiszel <kiszel.kristof@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-25 02:37+0000\n"
-"PO-Revision-Date: 2024-09-14 20:59+0200\n"
+"PO-Revision-Date: 2025-01-30 09:23+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -140,21 +140,18 @@ msgid "Ignored applications:"
 msgstr "Mellőzött alkalmazások:"
 
 #: ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' executable names here (separated by commas or colons, for "
-#| "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
-"Ide írja az alkalmazások végrehajtható állományainak neveit (vesszővel vagy "
-"kettősponttal elválasztva, például például „xterm:konsole” vagy „xterm,"
-"konsole”), hogy megakadályozza azok automatikus elindulását a munkamenet "
-"visszaállításakor."
+"Ide írja az alkalmazások .desktop fájlazonosítóját, vagy X11-en a "
+"végrehajtható állományainak neveit (vesszővel vagy kettősponttal "
+"elválasztva, például például „xterm:org.kde.konsole.desktop” vagy „xterm,org."
+"kde.konsole.desktop”), hogy megakadályozza azok automatikus elindulását a "
+"munkamenet visszaállításakor."
 
 #: ui/main.qml:138
 #, kde-format
