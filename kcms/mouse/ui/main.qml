@@ -224,41 +224,27 @@ KCMUtils.SimpleKCM {
             }
         }
 
-        ColumnLayout {
-            id: accelProfile
+        RowLayout {
+            Kirigami.FormData.buddyFor: accelProfileEnabled
             spacing: Kirigami.Units.smallSpacing
-            Kirigami.FormData.label: i18nd("kcmmouse", "Pointer acceleration:")
-            Kirigami.FormData.buddyFor: accelProfileFlat
-            enabled: root.device?.supportsPointerAccelerationProfileAdaptive ?? false
 
-            QQC2.ButtonGroup {
-                buttons: [accelProfileFlat, accelProfileAdaptive]
-                onClicked: {
+            QQC2.CheckBox {
+                id: accelProfileEnabled
+                text: i18nd("kcmmouse", "Enable pointer acceleration")
+                enabled: root.device?.supportsPointerAccelerationProfileAdaptive ?? false
+                visible: enabled
+                checked: enabled && !(root.device?.pointerAccelerationProfileFlat ?? false)
+
+                onToggled: {
                     if (root.device) {
-                        root.device.pointerAccelerationProfileFlat = accelProfileFlat.checked
-                        root.device.pointerAccelerationProfileAdaptive = accelProfileAdaptive.checked
+                        root.device.pointerAccelerationProfileFlat = !checked
+                        root.device.pointerAccelerationProfileAdaptive = checked
                     }
                 }
             }
 
-            QQC2.RadioButton {
-                id: accelProfileFlat
-                text: i18nd("kcmmouse", "None")
-                checked: accelProfile.enabled && (root.device?.pointerAccelerationProfileFlat ?? false)
-
-                QQC2.ToolTip.delay: 1000
-                QQC2.ToolTip.visible: hovered
-                QQC2.ToolTip.text: i18nd("kcmmouse", "Cursor moves the same distance as the mouse movement.")
-            }
-
-            QQC2.RadioButton {
-                id: accelProfileAdaptive
-                text: i18nd("kcmmouse", "Standard")
-                checked: accelProfile.enabled && (root.device?.pointerAccelerationProfileAdaptive ?? false)
-
-                QQC2.ToolTip.delay: 1000
-                QQC2.ToolTip.visible: hovered
-                QQC2.ToolTip.text: i18nd("kcmmouse", "Cursor travel distance depends on the mouse movement speed.")
+            Kirigami.ContextualHelpButton {
+                toolTipText: i18ndc("kcmmouse", "@info:tooltip from ContextualHelpButton", "When enabled, pointer travel distance increases with faster movement speed.")
             }
         }
 
@@ -268,7 +254,7 @@ KCMUtils.SimpleKCM {
 
         // Scroll Speed aka scroll Factor
         GridLayout {
-            Kirigami.FormData.label: i18nd("kcm_touchpad", "Scrolling speed:")
+            Kirigami.FormData.label: i18nd("kcmmouse", "Scrolling speed:")
             Kirigami.FormData.buddyFor: scrollFactor
             Layout.fillWidth: true
 

@@ -294,49 +294,28 @@ KCM.SimpleKCM {
             }
         }
 
-        ColumnLayout {
-            id: accelProfile
-            Kirigami.FormData.label: i18nd("kcm_touchpad", "Pointer acceleration:")
-            Kirigami.FormData.buddyFor: accelProfileFlat
+        RowLayout {
+            Kirigami.FormData.buddyFor: accelProfileEnabled
             spacing: Kirigami.Units.smallSpacing
-            enabled: root.device?.supportsPointerAccelerationProfileAdaptive ?? false
-            visible: enabled
 
-            QQC2.ButtonGroup {
-                buttons: [accelProfileFlat, accelProfileAdaptive]
-                onClicked: {
+            QQC2.CheckBox {
+                id: accelProfileEnabled
+                text: i18nd("kcm_touchpad", "Enable pointer acceleration")
+                enabled: root.device?.supportsPointerAccelerationProfileAdaptive ?? false
+                visible: enabled
+                checked: enabled && !(root.device?.pointerAccelerationProfileFlat ?? false)
+
+                onToggled: {
                     if (root.device) {
-                        root.device.pointerAccelerationProfileFlat = accelProfileFlat.checked
-                        root.device.pointerAccelerationProfileAdaptive = accelProfileAdaptive.checked
+                        root.device.pointerAccelerationProfileFlat = !checked
+                        root.device.pointerAccelerationProfileAdaptive = checked
                         root.changeSignal()
                     }
                 }
             }
 
-            QQC2.RadioButton {
-                id: accelProfileFlat
-                text: i18nd("kcm_touchpad", "None")
-                checked: accelProfile.enabled && (root.device?.pointerAccelerationProfileFlat ?? false)
-
-                hoverEnabled: true
-                QQC2.ToolTip {
-                    text: i18nd("kcm_touchpad", "Cursor moves the same distance as finger.")
-                    visible: parent.hovered
-                    delay: 1000
-                }
-            }
-
-            QQC2.RadioButton {
-                id: accelProfileAdaptive
-                text: i18nd("kcm_touchpad", "Standard")
-                checked: accelProfile.enabled && (root.device?.pointerAccelerationProfileAdaptive ?? false)
-
-                hoverEnabled: true
-                QQC2.ToolTip {
-                    text: i18nd("kcm_touchpad", "Cursor travel distance depends on movement speed of finger.")
-                    visible: parent.hovered
-                    delay: 1000
-                }
+            Kirigami.ContextualHelpButton {
+                toolTipText: i18ndc("kcm_touchpad", "@info:tooltip from ContextualHelpButton", "When enabled, pointer travel distance increases with faster movement speed.")
             }
         }
 
