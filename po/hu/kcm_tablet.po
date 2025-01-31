@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2021, 2023, 2024 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2021, 2023, 2024, 2025 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-27 00:43+0000\n"
-"PO-Revision-Date: 2024-09-29 20:34+0200\n"
+"PO-Revision-Date: 2025-01-30 09:53+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: inputsequence.cpp:172
 #, kde-format
@@ -54,11 +54,10 @@ msgid "Application-defined"
 msgstr "Alkalmazás által definiált"
 
 #: inputsequence.cpp:194
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pen Button %1"
-msgstr "1. tollgomb:"
+msgstr "%1. tollgomb"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -105,40 +104,33 @@ msgstr "%1 - (%2,%3 %4×%5)"
 #, kde-format
 msgctxt "@item:inlistbox Stretch and fill to the screen"
 msgid "Stretch and Fill"
-msgstr ""
+msgstr "Nyújtás és kitöltés"
 
 #: kcmtablet.cpp:164 ui/DisplayTab.qml:93
-#, fuzzy, kde-format
-#| msgid "Keep Aspect Ratio and Fit Within Screen"
+#, kde-format
 msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
 msgid "Keep Aspect Ratio and Fit"
-msgstr "Arány megőrzése és illesztés a képernyőre"
+msgstr "Méretarány megőrzése és illesztés"
 
 #: kcmtablet.cpp:165 ui/DisplayTab.qml:94
-#, fuzzy, kde-format
-#| msgid "Map to Portion of Screen"
+#, kde-format
 msgctxt "@item:inlistbox Map to portion of the screen"
 msgid "Map to Portion"
-msgstr "Leképezés a képernyő egy részére"
+msgstr "Leképezés egy részre"
 
 #: kcmtablet.cpp:263
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
-msgstr "1. tollgomb:"
+msgstr "%1. tollgomb:"
 
 #: kcmtablet.cpp:264
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button X'"
 msgid "pen button %1"
-msgstr "1. tollgomb"
+msgstr "%1. tollgomb"
 
 #: ui/ActionDialog.qml:25
 #, kde-format
@@ -171,14 +163,10 @@ msgid "Send mouse button click"
 msgstr "Egérkattintás küldése"
 
 #: ui/ActionDialog.qml:132
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt "@option:radio Set this action to a pen button type"
 msgid "Send pen button"
-msgstr "1. tollgomb"
+msgstr "Tollgomb küldése"
 
 #: ui/ActionDialog.qml:150
 #, kde-format
@@ -239,31 +227,22 @@ msgid "Shift"
 msgstr "Shift"
 
 #: ui/ActionDialog.qml:264
-#, fuzzy, kde-format
-#| msgid "Tool Button 1"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
-msgstr "Eszközgomb 1"
+msgstr "1. gomb"
 
 #: ui/ActionDialog.qml:265
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 2'"
-#| msgid "pen button 2"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
-msgstr "2. tollgomb"
+msgstr "2. gomb"
 
 #: ui/ActionDialog.qml:266
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 3'"
-#| msgid "pen button 3"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
-msgstr "3. tollgomb"
+msgstr "3. gomb"
 
 #: ui/ActionDialog.qml:275
 #, kde-format
@@ -335,7 +314,7 @@ msgstr "Tájolás:"
 #: ui/DisplayTab.qml:73
 #, kde-format
 msgid "Not Applicable"
-msgstr ""
+msgstr "Nem alkalmazható"
 
 #: ui/DisplayTab.qml:87
 #, kde-format
@@ -355,24 +334,20 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
 #: ui/ExternalScreenMapping.qml:190
-#, fuzzy, kde-format
-#| msgid "Resize the tablet area"
+#, kde-format
 msgid "Resize the screen area"
-msgstr "Tabletterület átméretezése"
+msgstr "Képernyőterület átméretezése"
 
 #: ui/ExternalScreenMapping.qml:265
-#, fuzzy, kde-format
-#| msgctxt "tablet area position - size"
-#| msgid "%1,%2 - %3×%4"
+#, kde-format
 msgctxt "tablet area position - size"
 msgid "%1%,%2% - %3%×%4%"
-msgstr "%1,%2 - %3×%4"
+msgstr "%1%,%2% - %3%×%4%"
 
 #: ui/ExternalScreenMapping.qml:299
-#, fuzzy, kde-format
-#| msgid "Resize the tablet area"
+#, kde-format
 msgid "Resize the tablet area"
-msgstr "Tabletterület átméretezése"
+msgstr "Rajztáblaterület átméretezése"
 
 #: ui/main.qml:39
 #, kde-format
@@ -400,21 +375,19 @@ msgstr "Eszköz:"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
-msgstr ""
+msgstr "Kijelző"
 
 #: ui/main.qml:169
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
-msgstr ""
+msgstr "Toll"
 
 #: ui/main.qml:181
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The pad we are configuring"
-#| msgid "Pad:"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
-msgstr "Tábla:"
+msgstr "Tábla"
 
 #: ui/PadTab.qml:33
 #, kde-format
@@ -438,7 +411,7 @@ msgstr "Balkezes mód:"
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
-msgstr ""
+msgstr "Bekapcsolás"
 
 #: ui/StylusTab.qml:43
 #, kde-kuit-format
@@ -455,31 +428,31 @@ msgstr ""
 #: ui/StylusTab.qml:102
 #, kde-format
 msgid "Pen Pressure:"
-msgstr ""
+msgstr "Tollnyomás:"
 
 #: ui/StylusTab.qml:162
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:170
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:181
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: ui/StylusTab.qml:189
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
-msgstr ""
+msgstr "0%"
 
 #: ui/StylusTab.qml:193
 #, kde-format
@@ -488,12 +461,14 @@ msgid ""
 "This curve controls the relationship between the pressure on the stylus and "
 "the pressure values received by applications."
 msgstr ""
+"Ez a görbe szabályozza a kapcsolatot a tollra gyakorolt nyomás és az "
+"alkalmazások által kapott nyomásértékek között."
 
 #: ui/StylusTab.qml:198
 #, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
-msgstr ""
+msgstr "Nyomástartomány:"
 
 #: ui/StylusTab.qml:225
 #, kde-format
@@ -502,6 +477,8 @@ msgid ""
 "Pressure above or below the threshold will be clamped, and this becomes the "
 "new effective range."
 msgstr ""
+"A küszöbérték feletti vagy alatti nyomás rögzítésre kerül, és ez lesz az új "
+"effektív tartomány."
 
 #: ui/StylusTab.qml:237
 #, kde-format
@@ -538,16 +515,12 @@ msgid "Stylus release X=%1 Y=%2"
 msgstr "Tollelengedés X=%1 Y=%2"
 
 #: ui/Tester.qml:68
-#, fuzzy, kde-format
-#| msgid "Stylus move X=%1 Y=%2"
+#, kde-format
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
-msgstr "Tollmozgatás X=%1 Y=%2"
+msgstr "Tollmozgatás X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
 #: ui/Tester.qml:205
-#, fuzzy, kde-format
-#| msgid ""
-#| "## Legend:\n"
-#| "# X, Y - event coordinate\n"
+#, kde-format
 msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
@@ -556,6 +529,8 @@ msgid ""
 msgstr ""
 "## Jelmagyarázat:\n"
 "# X, Y - eseménykoordináta\n"
+"# P - nyomás\n"
+"# TX,TX - dőlésszög\n"
 
 #: ui/Tester.qml:211
 #, kde-format
