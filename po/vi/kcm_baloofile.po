@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 00:40+0000\n"
+"POT-Creation-Date: 2025-02-01 02:33+0000\n"
 "PO-Revision-Date: 2023-01-08 16:22+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -27,7 +27,7 @@ msgstr "Tạm dừng lập chỉ mục"
 msgid "Resume Indexer"
 msgstr "Tiếp tục lập chỉ mục"
 
-#: ui/main.qml:60
+#: ui/main.qml:61
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -36,7 +36,7 @@ msgstr ""
 "Việc này sẽ tắt tính năng tìm kiếm tệp trong KRunner và các trình đơn khởi "
 "chạy, và xoá bộ hiển thị siêu dữ liệu mở rộng khỏi tất cả các ứng dụng KDE."
 
-#: ui/main.qml:70
+#: ui/main.qml:71
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -48,12 +48,12 @@ msgstr ""
 "được tạo lại từ đầu. Việc này có thể mất thời gian, tuỳ thuộc vào số lượng "
 "tệp bạn có."
 
-#: ui/main.qml:72
+#: ui/main.qml:73
 #, kde-format
 msgid "Delete Index Data"
 msgstr "Xoá dữ liệu chỉ mục"
 
-#: ui/main.qml:90
+#: ui/main.qml:91
 #, fuzzy, kde-format
 #| msgid ""
 #| "File Search helps you quickly locate all your files based on their "
@@ -65,98 +65,98 @@ msgstr ""
 "\"Tìm kiếm tệp\" giúp bạn nhanh chóng định vị tất cả các tệp dựa trên nội "
 "dung."
 
-#: ui/main.qml:104
+#: ui/main.qml:105
 #, fuzzy, kde-format
 #| msgid "Currently indexing: %1"
 msgctxt "@title:group"
 msgid "File indexing:"
 msgstr "Đang lập chỉ mục: %1"
 
-#: ui/main.qml:105
+#: ui/main.qml:106
 #, kde-format
 msgctxt "@action:check"
 msgid "Enabled"
 msgstr ""
 
-#: ui/main.qml:121
+#: ui/main.qml:122
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
 msgstr ""
 
-#: ui/main.qml:123
+#: ui/main.qml:124
 #, kde-format
 msgid "File names and contents"
 msgstr ""
 
-#: ui/main.qml:136
+#: ui/main.qml:137
 #, kde-format
 msgid "File names only"
 msgstr ""
 
-#: ui/main.qml:155
+#: ui/main.qml:156
 #, fuzzy, kde-format
 #| msgid "Index hidden files and folders"
 msgid "Hidden files and folders"
 msgstr "Lập chỉ mục tệp và thư mục ẩn"
 
-#: ui/main.qml:181
+#: ui/main.qml:182
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr ""
 
-#: ui/main.qml:184
+#: ui/main.qml:185
 #, fuzzy, kde-format
 #| msgid "Start indexing a folder…"
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "Bắt đầu lập chỉ mục một thư mục…"
 
-#: ui/main.qml:192
+#: ui/main.qml:193
 #, fuzzy, kde-format
 #| msgid "Stop indexing a folder…"
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Dừng lập chỉ mục một thư mục…"
 
-#: ui/main.qml:210
+#: ui/main.qml:211
 #, fuzzy, kde-format
 #| msgid "Status: %1, %2% complete"
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
 msgstr "Tình trạng: %1, hoàn thành %2%"
 
-#: ui/main.qml:217
+#: ui/main.qml:218
 #, fuzzy, kde-kuit-format
 #| msgid "Currently indexing: %1"
 msgctxt "@info Currently Indexing"
 msgid "Currently indexing: <filename>%1</filename>"
 msgstr "Đang lập chỉ mục: %1"
 
-#: ui/main.qml:270
+#: ui/main.qml:271
 #, kde-format
 msgid "Not indexed"
 msgstr "Không lập chỉ mục"
 
-#: ui/main.qml:271
+#: ui/main.qml:272
 #, kde-format
 msgid "Indexed"
 msgstr "Lập chỉ mục"
 
-#: ui/main.qml:301
+#: ui/main.qml:302
 #, fuzzy, kde-format
 #| msgid "Delete entry"
 msgctxt "Remove the list item for this filesystem path"
 msgid "Remove entry"
 msgstr "Xoá mục"
 
-#: ui/main.qml:316
+#: ui/main.qml:317
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Chọn một thư mục để thêm vào"
 
-#: ui/main.qml:316
+#: ui/main.qml:317
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Chọn một thư mục để bỏ đi"

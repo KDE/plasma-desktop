@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 00:40+0000\n"
+"POT-Creation-Date: 2025-02-01 02:33+0000\n"
 "PO-Revision-Date: 2024-09-13 15:30+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -29,7 +29,7 @@ msgstr "Indexelés szüneteltetése"
 msgid "Resume Indexer"
 msgstr "Indexelés folytatása"
 
-#: ui/main.qml:60
+#: ui/main.qml:61
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -39,7 +39,7 @@ msgstr ""
 "eltávolítja a kiterjesztett metaadatok megjelenítését minden KDE "
 "alkalmazásból."
 
-#: ui/main.qml:70
+#: ui/main.qml:71
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -50,12 +50,12 @@ msgstr ""
 "újra bekapcsolja az indexelést, a teljes indexet a semmiből kell létrehozni. "
 "Ez időbe telhet, attól függően, mennyi fájlja van."
 
-#: ui/main.qml:72
+#: ui/main.qml:73
 #, kde-format
 msgid "Delete Index Data"
 msgstr "Indexadatok törlése"
 
-#: ui/main.qml:90
+#: ui/main.qml:91
 #, kde-format
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
@@ -64,91 +64,91 @@ msgstr ""
 "A Fájlkeresés segít gyorsan megtalálni a fájljait. Kiválaszthatja, hogy mely "
 "mappákat és milyen típusú fájladatokat indexeljen."
 
-#: ui/main.qml:104
+#: ui/main.qml:105
 #, kde-format
 msgctxt "@title:group"
 msgid "File indexing:"
 msgstr "Fájlindexelés:"
 
-#: ui/main.qml:105
+#: ui/main.qml:106
 #, kde-format
 msgctxt "@action:check"
 msgid "Enabled"
 msgstr "Bekapcsolva"
 
-#: ui/main.qml:121
+#: ui/main.qml:122
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
 msgstr "Indexelendő adatok:"
 
-#: ui/main.qml:123
+#: ui/main.qml:124
 #, kde-format
 msgid "File names and contents"
 msgstr "Fájlnevek és tartalmak"
 
-#: ui/main.qml:136
+#: ui/main.qml:137
 #, kde-format
 msgid "File names only"
 msgstr "Csak fájlnevek"
 
-#: ui/main.qml:155
+#: ui/main.qml:156
 #, kde-format
 msgid "Hidden files and folders"
 msgstr "Rejtett fájlok és mappák"
 
-#: ui/main.qml:181
+#: ui/main.qml:182
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr "Helyek"
 
-#: ui/main.qml:184
+#: ui/main.qml:185
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "Mappaindexelés indítása…"
 
-#: ui/main.qml:192
+#: ui/main.qml:193
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Mappaindexelés leállítása…"
 
-#: ui/main.qml:210
+#: ui/main.qml:211
 #, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
 msgstr "%1, %2% kész"
 
-#: ui/main.qml:217
+#: ui/main.qml:218
 #, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "Currently indexing: <filename>%1</filename>"
 msgstr "Indexelés alatt: <filename>%1</filename>"
 
-#: ui/main.qml:270
+#: ui/main.qml:271
 #, kde-format
 msgid "Not indexed"
 msgstr "Nincs indexelve"
 
-#: ui/main.qml:271
+#: ui/main.qml:272
 #, kde-format
 msgid "Indexed"
 msgstr "Indexelve"
 
-#: ui/main.qml:301
+#: ui/main.qml:302
 #, kde-format
 msgctxt "Remove the list item for this filesystem path"
 msgid "Remove entry"
 msgstr "Bejegyzés eltávolítása"
 
-#: ui/main.qml:316
+#: ui/main.qml:317
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Válassza ki a felvenni kívánt mappát"
 
-#: ui/main.qml:316
+#: ui/main.qml:317
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Válassza ki a kizárni kívánt mappát"

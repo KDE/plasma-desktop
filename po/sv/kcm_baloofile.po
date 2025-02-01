@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 00:40+0000\n"
+"POT-Creation-Date: 2025-02-01 02:33+0000\n"
 "PO-Revision-Date: 2024-08-28 17:29+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -27,7 +27,7 @@ msgstr "Pausa indexering"
 msgid "Resume Indexer"
 msgstr "Återuppta indexering"
 
-#: ui/main.qml:60
+#: ui/main.qml:61
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -36,7 +36,7 @@ msgstr ""
 "Inaktiverar filsökning i Kör program och startmenyer, och tar bort visning "
 "av utökad metadata från alla KDE-program."
 
-#: ui/main.qml:70
+#: ui/main.qml:71
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -47,12 +47,12 @@ msgstr ""
 "om indexering aktiveras igen senare, måste hela indexet skapas om från "
 "början. Det kan ta en stund, beroende på hur många filer du har."
 
-#: ui/main.qml:72
+#: ui/main.qml:73
 #, kde-format
 msgid "Delete Index Data"
 msgstr "Ta bort indexerad data"
 
-#: ui/main.qml:90
+#: ui/main.qml:91
 #, kde-format
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
@@ -61,91 +61,91 @@ msgstr ""
 "Filsökning hjälper dig att snabbt lokalisera dina filer. Du kan välja vilka "
 "kataloger och vilken typ av fildata som indexeras."
 
-#: ui/main.qml:104
+#: ui/main.qml:105
 #, kde-format
 msgctxt "@title:group"
 msgid "File indexing:"
 msgstr "Filindexering"
 
-#: ui/main.qml:105
+#: ui/main.qml:106
 #, kde-format
 msgctxt "@action:check"
 msgid "Enabled"
 msgstr "Aktiverad"
 
-#: ui/main.qml:121
+#: ui/main.qml:122
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
 msgstr "Data att indexera:"
 
-#: ui/main.qml:123
+#: ui/main.qml:124
 #, kde-format
 msgid "File names and contents"
 msgstr "Filnamn och innehåll"
 
-#: ui/main.qml:136
+#: ui/main.qml:137
 #, kde-format
 msgid "File names only"
 msgstr "Bara filnamn"
 
-#: ui/main.qml:155
+#: ui/main.qml:156
 #, kde-format
 msgid "Hidden files and folders"
 msgstr "Dolda filer och kataloger"
 
-#: ui/main.qml:181
+#: ui/main.qml:182
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr "Platser"
 
-#: ui/main.qml:184
+#: ui/main.qml:185
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "Starta indexering av en katalog…"
 
-#: ui/main.qml:192
+#: ui/main.qml:193
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Stoppa indexering av en katalog…"
 
-#: ui/main.qml:210
+#: ui/main.qml:211
 #, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
 msgstr "%1, %2% färdiga"
 
-#: ui/main.qml:217
+#: ui/main.qml:218
 #, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "Currently indexing: <filename>%1</filename>"
 msgstr "Indexerar för närvarande: <filename>%1</filename>"
 
-#: ui/main.qml:270
+#: ui/main.qml:271
 #, kde-format
 msgid "Not indexed"
 msgstr "Inte indexerad"
 
-#: ui/main.qml:271
+#: ui/main.qml:272
 #, kde-format
 msgid "Indexed"
 msgstr "Indexerad"
 
-#: ui/main.qml:301
+#: ui/main.qml:302
 #, kde-format
 msgctxt "Remove the list item for this filesystem path"
 msgid "Remove entry"
 msgstr "Ta bort post"
 
-#: ui/main.qml:316
+#: ui/main.qml:317
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Välj en katalog att inkludera"
 
-#: ui/main.qml:316
+#: ui/main.qml:317
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Välj en katalog att undanta"

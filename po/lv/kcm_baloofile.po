@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 00:40+0000\n"
+"POT-Creation-Date: 2025-02-01 02:33+0000\n"
 "PO-Revision-Date: 2024-09-10 10:22+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -28,7 +28,7 @@ msgstr "Pauzēt indeksētāju"
 msgid "Resume Indexer"
 msgstr "Atsākt indeksētāja darbību"
 
-#: ui/main.qml:60
+#: ui/main.qml:61
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
@@ -37,7 +37,7 @@ msgstr ""
 "Šādā gadījumā nedarbosies „KRunner“ datņu meklēšana un palaišanas izvēlnes, "
 "kā arī vairs netiks rādīti KDE programmu paplašinātie metadati."
 
-#: ui/main.qml:70
+#: ui/main.qml:71
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -48,12 +48,12 @@ msgstr ""
 "ja indeksētāju atkal ieslēgsiet, sistēma visu indeksu veidos no jauna. Tas "
 "aizņems laiku atkarībā no datņu skaita sistēmā."
 
-#: ui/main.qml:72
+#: ui/main.qml:73
 #, kde-format
 msgid "Delete Index Data"
 msgstr "Dzēst indeksa datus"
 
-#: ui/main.qml:90
+#: ui/main.qml:91
 #, kde-format
 msgid ""
 "File Search helps you quickly locate your files. You can choose which "
@@ -62,91 +62,91 @@ msgstr ""
 "Datņu meklētājs palīdz atrast jūsu datnes. Varat izvēlēties, kuras mapes un "
 "kāda tipa dati ir indeksējami."
 
-#: ui/main.qml:104
+#: ui/main.qml:105
 #, kde-format
 msgctxt "@title:group"
 msgid "File indexing:"
 msgstr "Datņu indeksācija:"
 
-#: ui/main.qml:105
+#: ui/main.qml:106
 #, kde-format
 msgctxt "@action:check"
 msgid "Enabled"
 msgstr "Ieslēgta"
 
-#: ui/main.qml:121
+#: ui/main.qml:122
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
 msgstr "Indeksējamie dati:"
 
-#: ui/main.qml:123
+#: ui/main.qml:124
 #, kde-format
 msgid "File names and contents"
 msgstr "Datņu nosaukumi un saturs"
 
-#: ui/main.qml:136
+#: ui/main.qml:137
 #, kde-format
 msgid "File names only"
 msgstr "Tikai datņu nosaukumi"
 
-#: ui/main.qml:155
+#: ui/main.qml:156
 #, kde-format
 msgid "Hidden files and folders"
 msgstr "Paslēptas datnes un mapes"
 
-#: ui/main.qml:181
+#: ui/main.qml:182
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr "Atrašanās vietas"
 
-#: ui/main.qml:184
+#: ui/main.qml:185
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "Sākt mapes indeksāciju…"
 
-#: ui/main.qml:192
+#: ui/main.qml:193
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Apturēt mapes indeksāciju…"
 
-#: ui/main.qml:210
+#: ui/main.qml:211
 #, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
 msgstr "%1, %2% pabeigts"
 
-#: ui/main.qml:217
+#: ui/main.qml:218
 #, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "Currently indexing: <filename>%1</filename>"
 msgstr "Šobrīd indeksē: <filename>%1</filename>"
 
-#: ui/main.qml:270
+#: ui/main.qml:271
 #, kde-format
 msgid "Not indexed"
 msgstr "Nav indeksēts"
 
-#: ui/main.qml:271
+#: ui/main.qml:272
 #, kde-format
 msgid "Indexed"
 msgstr "Indeksēts"
 
-#: ui/main.qml:301
+#: ui/main.qml:302
 #, kde-format
 msgctxt "Remove the list item for this filesystem path"
 msgid "Remove entry"
 msgstr "Dzēst ierakstu"
 
-#: ui/main.qml:316
+#: ui/main.qml:317
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Izvēlēties iekļaujamo mapi"
 
-#: ui/main.qml:316
+#: ui/main.qml:317
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Izvēlēties ignorējamo mapi"
