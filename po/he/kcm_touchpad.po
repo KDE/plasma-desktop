@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-30 00:42+0000\n"
+"POT-Creation-Date: 2025-02-01 00:42+0000\n"
 "PO-Revision-Date: 2024-12-24 07:37+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -206,180 +206,168 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "מהירות סמן:"
 
-#: ui/main.qml:299
-#, kde-format
-msgid "Pointer acceleration:"
+#: ui/main.qml:303
+#, fuzzy, kde-format
+#| msgid "Pointer acceleration:"
+msgid "Enable pointer acceleration"
 msgstr "האצת סמן:"
 
 #: ui/main.qml:318
 #, kde-format
-msgid "None"
-msgstr "ללא"
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"When enabled, pointer travel distance increases with faster movement speed."
+msgstr ""
 
-#: ui/main.qml:323
-#, kde-format
-msgid "Cursor moves the same distance as finger."
-msgstr "הסמן עובר את אותו המרחק כמו האצבע."
-
-#: ui/main.qml:331
-#, kde-format
-msgid "Standard"
-msgstr "רגיל"
-
-#: ui/main.qml:336
-#, kde-format
-msgid "Cursor travel distance depends on movement speed of finger."
-msgstr "מרחק השיוט של הסמן תלוי במהירות תנועת האצבע."
-
-#: ui/main.qml:349
+#: ui/main.qml:328
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "מהירות גלילה:"
 
-#: ui/main.qml:400
+#: ui/main.qml:379
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "איטית יותר"
 
-#: ui/main.qml:407
+#: ui/main.qml:386
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "מהירה יותר"
 
-#: ui/main.qml:415
+#: ui/main.qml:394
 #, kde-format
 msgid "Scrolling:"
 msgstr "גלילה:"
 
-#: ui/main.qml:434
+#: ui/main.qml:413
 #, kde-format
 msgid "Two fingers"
 msgstr "שתי אצבעות"
 
-#: ui/main.qml:440
+#: ui/main.qml:419
 #, kde-format
 msgid "Slide with two fingers scrolls."
 msgstr "החלקה עם שתי אצבעות גוללת."
 
-#: ui/main.qml:448
+#: ui/main.qml:427
 #, kde-format
 msgid "Touchpad edges"
 msgstr "קצוות משטח המגע"
 
-#: ui/main.qml:454
+#: ui/main.qml:433
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
 msgstr "החלקה על קצה משטח המגע גוללת."
 
-#: ui/main.qml:463
+#: ui/main.qml:442
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "היפוך כיוון גלילה (גלילה אופקית)"
 
-#: ui/main.qml:476
+#: ui/main.qml:455
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "גלילה כמו מסך מגע."
 
-#: ui/main.qml:484
+#: ui/main.qml:463
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "השבתת גלילה אופקית"
 
-#: ui/main.qml:498
+#: ui/main.qml:477
 #, kde-format
 msgid "Disable horizontal scrolling."
 msgstr "השבתת גלילה אופקית."
 
-#: ui/main.qml:511
+#: ui/main.qml:490
 #, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "נקישה:"
 
-#: ui/main.qml:512
+#: ui/main.qml:491
 #, kde-format
 msgctxt "@option:check"
 msgid "Tap-to-click"
 msgstr "נקישה ללחיצה"
 
-#: ui/main.qml:518
+#: ui/main.qml:497
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Single tap to left-click."
 msgstr "נקישה בודדת היא לחיצה שמאלית."
 
-#: ui/main.qml:533
+#: ui/main.qml:512
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "נקישה וגרירה"
 
-#: ui/main.qml:539
+#: ui/main.qml:518
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
 msgstr "החלקה על משטח המגע מייד לאחר נקישה גוררת."
 
-#: ui/main.qml:554
+#: ui/main.qml:533
 #, kde-format
 msgid "Tap-and-drag lock"
 msgstr "נעילת נקישה וגרירה"
 
-#: ui/main.qml:560
+#: ui/main.qml:539
 #, kde-format
 msgid "Dragging continues after a short finger lift."
 msgstr "גרירה נמשכת לאחר הרמה מהירה של האצבע."
 
-#: ui/main.qml:575
+#: ui/main.qml:554
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "נקישה בשתי אצבעות:"
 
-#: ui/main.qml:595
+#: ui/main.qml:574
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "לחיצה ימני (נקישה בשלוש אצבעות היא לחיצה אמצעית)"
 
-#: ui/main.qml:596
+#: ui/main.qml:575
 #, kde-format
 msgid "Right-click"
 msgstr "לחיצה ימנית"
 
-#: ui/main.qml:606
+#: ui/main.qml:585
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
 msgstr ""
 "נקישה עם שתי אצבעות היא לחיצה שמאלית, נקישה עם שלוש אצבעות היא לחיצה אמצעית."
 
-#: ui/main.qml:607
+#: ui/main.qml:586
 #, kde-format
 msgid "Tap with two fingers to right-click."
 msgstr "נקישה בשתי אצבעות ללחיצה ימנית."
 
-#: ui/main.qml:615
+#: ui/main.qml:594
 #, kde-format
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "לחיצה אמצעית (נקישה בשלוש אצבעות ללחיצה ימנית)"
 
-#: ui/main.qml:616
+#: ui/main.qml:595
 #, kde-format
 msgid "Middle-click"
 msgstr "לחיצה אמצעית"
 
-#: ui/main.qml:626
+#: ui/main.qml:605
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
 msgstr "נקישה עם שתי אצבעות ללחיצה אמצעית, נקישה בשלוש אצבעות ללחיצה ימני."
 
-#: ui/main.qml:627
+#: ui/main.qml:606
 #, kde-format
 msgid "Tap with two fingers to middle-click."
 msgstr "נקישה בשתי אצבעות ללחיצה אמצעית."
 
-#: ui/main.qml:639
+#: ui/main.qml:618
 #, kde-format
 msgctxt ""
 "@label for radiobutton group, configure right-click with touch-pad "
@@ -387,13 +375,13 @@ msgctxt ""
 msgid "Integrated right-click:"
 msgstr "לחיצה ימנית משולבת:"
 
-#: ui/main.qml:660
+#: ui/main.qml:639
 #, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
 msgstr "לחיצה על הפינה הימנית התחתונה"
 
-#: ui/main.qml:667
+#: ui/main.qml:646
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -404,7 +392,7 @@ msgstr ""
 "לחיצה על הפינה הימנית התחתונה של משטח המגע שלך מתנהגת כמו לחיצה ימנית. לחיצה "
 "אמצעית נוצרת על ידי לחיצה על הפינות השמאלית והימנית התחתונות בו־זמנית."
 
-#: ui/main.qml:668
+#: ui/main.qml:647
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -414,37 +402,37 @@ msgstr ""
 "לחיצה על הפינה הימנית התחתונה של משטח המגע שלך מתנהגת כמו לחיצה ימנית. לחיצה "
 "אמצעית מתקבלת על ידי לחיצה על האזור האמצעי בתחתית."
 
-#: ui/main.qml:679
+#: ui/main.qml:658
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "לחיצה אמצעית על ידי לחיצה על שתי הפינות התחתונות."
 
-#: ui/main.qml:680
+#: ui/main.qml:659
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "לחיצה ימנית בלחיצה במרכז למטה."
 
-#: ui/main.qml:698
+#: ui/main.qml:677
 #, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press touchpad with two fingers"
 msgstr "יש ללחוץ על משטח המגע בשתי אצבעות"
 
-#: ui/main.qml:705
+#: ui/main.qml:684
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
 msgstr "נגיעה במשטח המגע היכן שהוא בשתי אצבעות מתנהגת כמו לחיצה ימנית."
 
-#: ui/main.qml:715
+#: ui/main.qml:694
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
 msgstr "לחיצה אמצעית בלחיצה עם שלוש אצבעות."
 
-#: ui/main.qml:734
+#: ui/main.qml:713
 #, kde-format
 msgctxt ""
 "@label for radiobutton group, configure middle-click with touch-pad "
@@ -452,25 +440,25 @@ msgctxt ""
 msgid "Integrated middle-click:"
 msgstr "לחיצה אמצעית משולבת:"
 
-#: ui/main.qml:755
+#: ui/main.qml:734
 #, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom middle edge"
 msgstr "לחיצה בקצה התחתון באמצע"
 
-#: ui/main.qml:761
+#: ui/main.qml:740
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the bottom right corner of your touchpad acts as right-click."
 msgstr "לחיצה על הפינה הימנית התחתונה של משטח המגע שלך מתנהגת כמו לחיצה ימנית."
 
-#: ui/main.qml:769
+#: ui/main.qml:748
 #, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom left and bottom right corners"
 msgstr "לחיצה על הפינות התחתונות השמאלית והימנית"
 
-#: ui/main.qml:775
+#: ui/main.qml:754
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid ""
@@ -479,17 +467,29 @@ msgid ""
 msgstr ""
 "לחיצה על הפינות התחתונות השמאלית והימנית בו־זמנית מתנהגת כמו לחיצה אמצעית."
 
-#: ui/main.qml:783
+#: ui/main.qml:762
 #, kde-format
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
 msgstr "יש ללחוץ על משטח המגע בשלוש אצבעות"
 
-#: ui/main.qml:790
+#: ui/main.qml:769
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr "נגיעה במשטח המגע היכן שהוא בשלוש אצבעות מתנהגת כמו לחיצה אמצעית."
+
+#~ msgid "None"
+#~ msgstr "ללא"
+
+#~ msgid "Cursor moves the same distance as finger."
+#~ msgstr "הסמן עובר את אותו המרחק כמו האצבע."
+
+#~ msgid "Standard"
+#~ msgstr "רגיל"
+
+#~ msgid "Cursor travel distance depends on movement speed of finger."
+#~ msgstr "מרחק השיוט של הסמן תלוי במהירות תנועת האצבע."
 
 #~ msgctxt "Emulated mouse button"
 #~ msgid "No action"

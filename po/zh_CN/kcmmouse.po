@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-29 00:42+0000\n"
+"POT-Creation-Date: 2025-02-01 00:42+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -181,69 +181,67 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "光标速度："
 
-#: ui/main.qml:230
-#, kde-format
-msgid "Pointer acceleration:"
+#: ui/main.qml:233
+#, fuzzy, kde-format
+#| msgid "Pointer acceleration:"
+msgid "Enable pointer acceleration"
 msgstr "光标加速："
 
-#: ui/main.qml:246
-#, kde-format
-msgid "None"
-msgstr "无"
-
-#: ui/main.qml:251
-#, kde-format
-msgid "Cursor moves the same distance as the mouse movement."
-msgstr "光标移动的距离与鼠标移动的距离相同。"
-
-#: ui/main.qml:256
-#, kde-format
-msgid "Standard"
-msgstr "标准"
-
-#: ui/main.qml:261
-#, kde-format
-msgid "Cursor travel distance depends on the mouse movement speed."
+#: ui/main.qml:247
+#, fuzzy, kde-format
+#| msgid "Cursor travel distance depends on the mouse movement speed."
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"When enabled, pointer travel distance increases with faster movement speed."
 msgstr "光标移动的距离受鼠标的移动速度影响。"
 
-#: ui/main.qml:271
+#: ui/main.qml:257
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "滚动速度："
 
-#: ui/main.qml:321
+#: ui/main.qml:307
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "慢"
 
-#: ui/main.qml:330
+#: ui/main.qml:316
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "快"
 
-#: ui/main.qml:338
+#: ui/main.qml:324
 #, kde-format
 msgid "Scrolling:"
 msgstr "滚动："
 
-#: ui/main.qml:339
+#: ui/main.qml:325
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "反转滚动方向"
 
-#: ui/main.qml:351
+#: ui/main.qml:337
 #, kde-format
 msgid "Touchscreen-like scrolling."
 msgstr "模仿触摸屏的滚动方式。"
 
-#: ui/main.qml:356
+#: ui/main.qml:342
 #, kde-format
 msgid "Press middle button and move mouse to scroll"
 msgstr "按住中键并移动鼠标以滚动"
 
-#: ui/main.qml:368
+#: ui/main.qml:354
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "按住中键时用鼠标滚动。"
+
+#~ msgid "None"
+#~ msgstr "无"
+
+#~ msgid "Cursor moves the same distance as the mouse movement."
+#~ msgstr "光标移动的距离与鼠标移动的距离相同。"
+
+#~ msgid "Standard"
+#~ msgstr "标准"

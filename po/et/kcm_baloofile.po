@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 00:40+0000\n"
+"POT-Creation-Date: 2025-02-01 00:42+0000\n"
 "PO-Revision-Date: 2020-10-07 22:37+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -29,14 +29,14 @@ msgstr "Indekseeritud"
 msgid "Resume Indexer"
 msgstr ""
 
-#: ui/main.qml:60
+#: ui/main.qml:61
 #, kde-format
 msgid ""
 "This will disable file searching in KRunner and launcher menus, and remove "
 "extended metadata display from all KDE applications."
 msgstr ""
 
-#: ui/main.qml:70
+#: ui/main.qml:71
 #, kde-format
 msgid ""
 "Do you want to delete the saved index data? %1 of space will be freed, but "
@@ -44,13 +44,13 @@ msgid ""
 "from scratch. This may take some time, depending on how many files you have."
 msgstr ""
 
-#: ui/main.qml:72
+#: ui/main.qml:73
 #, fuzzy, kde-format
 #| msgid "Delete entry"
 msgid "Delete Index Data"
 msgstr "Kustuta kirje"
 
-#: ui/main.qml:90
+#: ui/main.qml:91
 #, fuzzy, kde-format
 #| msgid ""
 #| "File Search helps you quickly locate all your files based on their "
@@ -60,98 +60,98 @@ msgid ""
 "folders and what types of file data are indexed."
 msgstr "Failiotsing aitab kiiresti leida vajalikud failid nende sinu põhjal."
 
-#: ui/main.qml:104
+#: ui/main.qml:105
 #, fuzzy, kde-format
 #| msgid "Disable indexing"
 msgctxt "@title:group"
 msgid "File indexing:"
 msgstr "Indekseerimise keelamine"
 
-#: ui/main.qml:105
+#: ui/main.qml:106
 #, kde-format
 msgctxt "@action:check"
 msgid "Enabled"
 msgstr ""
 
-#: ui/main.qml:121
+#: ui/main.qml:122
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
 msgstr ""
 
-#: ui/main.qml:123
+#: ui/main.qml:124
 #, kde-format
 msgid "File names and contents"
 msgstr ""
 
-#: ui/main.qml:136
+#: ui/main.qml:137
 #, kde-format
 msgid "File names only"
 msgstr ""
 
-#: ui/main.qml:155
+#: ui/main.qml:156
 #, fuzzy, kde-format
 #| msgid "Index hidden files and folders"
 msgid "Hidden files and folders"
 msgstr "Peidetud failide ja kataloogide indekseerimine"
 
-#: ui/main.qml:181
+#: ui/main.qml:182
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr ""
 
-#: ui/main.qml:184
+#: ui/main.qml:185
 #, fuzzy, kde-format
 #| msgid "Start indexing a folder..."
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "Kataloogi indekseerimise alustamine ..."
 
-#: ui/main.qml:192
+#: ui/main.qml:193
 #, fuzzy, kde-format
 #| msgid "Stop indexing a folder..."
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Kataloogi indekseerimise peatamine ..."
 
-#: ui/main.qml:210
+#: ui/main.qml:211
 #, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
 msgstr ""
 
-#: ui/main.qml:217
+#: ui/main.qml:218
 #, fuzzy, kde-kuit-format
 #| msgid "Full content indexing"
 msgctxt "@info Currently Indexing"
 msgid "Currently indexing: <filename>%1</filename>"
 msgstr "Sisu täielik indekseerimine"
 
-#: ui/main.qml:270
+#: ui/main.qml:271
 #, kde-format
 msgid "Not indexed"
 msgstr "Ei ole indekseeritud"
 
-#: ui/main.qml:271
+#: ui/main.qml:272
 #, kde-format
 msgid "Indexed"
 msgstr "Indekseeritud"
 
-#: ui/main.qml:301
+#: ui/main.qml:302
 #, fuzzy, kde-format
 #| msgid "Delete entry"
 msgctxt "Remove the list item for this filesystem path"
 msgid "Remove entry"
 msgstr "Kustuta kirje"
 
-#: ui/main.qml:316
+#: ui/main.qml:317
 #, fuzzy, kde-format
 #| msgid "Select a folder to filter"
 msgid "Select a folder to include"
 msgstr "Kataloogi valimine filtreerimiseks"
 
-#: ui/main.qml:316
+#: ui/main.qml:317
 #, fuzzy, kde-format
 #| msgid "Select a folder to filter"
 msgid "Select a folder to exclude"

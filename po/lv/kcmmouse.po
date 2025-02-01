@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-29 00:42+0000\n"
+"POT-Creation-Date: 2025-02-01 00:42+0000\n"
 "PO-Revision-Date: 2024-12-01 21:25+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -198,73 +198,71 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "Kursora jutība:"
 
-#: ui/main.qml:230
-#, kde-format
-msgid "Pointer acceleration:"
+#: ui/main.qml:233
+#, fuzzy, kde-format
+#| msgid "Pointer acceleration:"
+msgid "Enable pointer acceleration"
 msgstr "Kursora paātrinājums:"
 
-#: ui/main.qml:246
-#, kde-format
-msgid "None"
-msgstr "Nav"
-
-#: ui/main.qml:251
-#, kde-format
-msgid "Cursor moves the same distance as the mouse movement."
-msgstr "Kursors pārvietojas tikpat tālu, cik peles kustība."
-
-#: ui/main.qml:256
-#, kde-format
-msgid "Standard"
-msgstr "Standarta"
-
-#: ui/main.qml:261
-#, kde-format
-msgid "Cursor travel distance depends on the mouse movement speed."
+#: ui/main.qml:247
+#, fuzzy, kde-format
+#| msgid "Cursor travel distance depends on the mouse movement speed."
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
 "Kursora pārvietošanās attālums ir atkarīgs no peles pārvietošanas ātruma."
 
-#: ui/main.qml:271
+#: ui/main.qml:257
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Kursora jutība:"
 
-#: ui/main.qml:321
+#: ui/main.qml:307
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Lēnāka"
 
-#: ui/main.qml:330
+#: ui/main.qml:316
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Ātrāka"
 
-#: ui/main.qml:338
+#: ui/main.qml:324
 #, kde-format
 msgid "Scrolling:"
 msgstr "Ritināšana:"
 
-#: ui/main.qml:339
+#: ui/main.qml:325
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Ritināt pretējā virzienā"
 
-#: ui/main.qml:351
+#: ui/main.qml:337
 #, kde-format
 msgid "Touchscreen-like scrolling."
 msgstr "Ritināšana kā skārienekrānā."
 
-#: ui/main.qml:356
+#: ui/main.qml:342
 #, kde-format
 msgid "Press middle button and move mouse to scroll"
 msgstr "Lai ritinātu, nospiest vidējo pogu un pārvietot peli"
 
-#: ui/main.qml:368
+#: ui/main.qml:354
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "Ritināšana ar peli, nospiežot peles vidējo pogu."
+
+#~ msgid "None"
+#~ msgstr "Nav"
+
+#~ msgid "Cursor moves the same distance as the mouse movement."
+#~ msgstr "Kursors pārvietojas tikpat tālu, cik peles kustība."
+
+#~ msgid "Standard"
+#~ msgstr "Standarta"
 
 #, fuzzy
 #~| msgctxt "@action:button"

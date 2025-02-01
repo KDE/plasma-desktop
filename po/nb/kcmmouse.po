@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-29 00:42+0000\n"
+"POT-Creation-Date: 2025-02-01 00:42+0000\n"
 "PO-Revision-Date: 2015-04-26 21:24+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -186,69 +186,57 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr ""
 
-#: ui/main.qml:230
-#, kde-format
-msgid "Pointer acceleration:"
+#: ui/main.qml:233
+#, fuzzy, kde-format
+#| msgid "Pointer acceleration:"
+msgid "Enable pointer acceleration"
 msgstr "Pekerakselerasjon:"
 
-#: ui/main.qml:246
+#: ui/main.qml:247
 #, kde-format
-msgid "None"
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
 
-#: ui/main.qml:251
-#, kde-format
-msgid "Cursor moves the same distance as the mouse movement."
-msgstr ""
-
-#: ui/main.qml:256
-#, kde-format
-msgid "Standard"
-msgstr ""
-
-#: ui/main.qml:261
-#, kde-format
-msgid "Cursor travel distance depends on the mouse movement speed."
-msgstr ""
-
-#: ui/main.qml:271
+#: ui/main.qml:257
 #, kde-format
 msgid "Scrolling speed:"
 msgstr ""
 
-#: ui/main.qml:321
+#: ui/main.qml:307
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr ""
 
-#: ui/main.qml:330
+#: ui/main.qml:316
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr ""
 
-#: ui/main.qml:338
+#: ui/main.qml:324
 #, kde-format
 msgid "Scrolling:"
 msgstr ""
 
-#: ui/main.qml:339
+#: ui/main.qml:325
 #, kde-format
 msgid "Invert scroll direction"
 msgstr ""
 
-#: ui/main.qml:351
+#: ui/main.qml:337
 #, kde-format
 msgid "Touchscreen-like scrolling."
 msgstr ""
 
-#: ui/main.qml:356
+#: ui/main.qml:342
 #, kde-format
 msgid "Press middle button and move mouse to scroll"
 msgstr ""
 
-#: ui/main.qml:368
+#: ui/main.qml:354
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr ""

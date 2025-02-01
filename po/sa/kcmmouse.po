@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-29 00:42+0000\n"
+"POT-Creation-Date: 2025-02-01 00:42+0000\n"
 "PO-Revision-Date: 2024-12-20 21:53+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -189,69 +189,67 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "सूचकस्य गतिः :"
 
-#: ui/main.qml:230
-#, kde-format
-msgid "Pointer acceleration:"
+#: ui/main.qml:233
+#, fuzzy, kde-format
+#| msgid "Pointer acceleration:"
+msgid "Enable pointer acceleration"
 msgstr "सूचकत्वरणम् :"
 
-#: ui/main.qml:246
-#, kde-format
-msgid "None"
-msgstr "न कश्चित्"
-
-#: ui/main.qml:251
-#, kde-format
-msgid "Cursor moves the same distance as the mouse movement."
-msgstr "कर्सर मूषकस्य गतिं यावत् दूरं गच्छति ।"
-
-#: ui/main.qml:256
-#, kde-format
-msgid "Standard"
-msgstr "स्तरीय"
-
-#: ui/main.qml:261
-#, kde-format
-msgid "Cursor travel distance depends on the mouse movement speed."
+#: ui/main.qml:247
+#, fuzzy, kde-format
+#| msgid "Cursor travel distance depends on the mouse movement speed."
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"When enabled, pointer travel distance increases with faster movement speed."
 msgstr "कर्सरस्य यात्रायाः दूरी मूषकस्य गतिवेगस्य उपरि निर्भरं भवति ।"
 
-#: ui/main.qml:271
+#: ui/main.qml:257
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "स्क्रॉल गतिः :"
 
-#: ui/main.qml:321
+#: ui/main.qml:307
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "मन्दतरम्"
 
-#: ui/main.qml:330
+#: ui/main.qml:316
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "द्रुततरम्"
 
-#: ui/main.qml:338
+#: ui/main.qml:324
 #, kde-format
 msgid "Scrolling:"
 msgstr "स्क्रॉल करणम् :"
 
-#: ui/main.qml:339
+#: ui/main.qml:325
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "स्क्रॉल दिशां विपर्यययन्तु"
 
-#: ui/main.qml:351
+#: ui/main.qml:337
 #, kde-format
 msgid "Touchscreen-like scrolling."
 msgstr "टचस्क्रीन्-सदृशं स्क्रॉलिंग् ।"
 
-#: ui/main.qml:356
+#: ui/main.qml:342
 #, kde-format
 msgid "Press middle button and move mouse to scroll"
 msgstr "मध्यबटनं नुत्वा स्क्रॉल कर्तुं मूषकं चालयन्तु"
 
-#: ui/main.qml:368
+#: ui/main.qml:354
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "मध्यबटनं निपीड्य मूषकेन स्क्रॉल करणम् ।"
+
+#~ msgid "None"
+#~ msgstr "न कश्चित्"
+
+#~ msgid "Cursor moves the same distance as the mouse movement."
+#~ msgstr "कर्सर मूषकस्य गतिं यावत् दूरं गच्छति ।"
+
+#~ msgid "Standard"
+#~ msgstr "स्तरीय"

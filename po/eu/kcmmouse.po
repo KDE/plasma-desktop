@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-29 00:42+0000\n"
+"POT-Creation-Date: 2025-02-01 00:42+0000\n"
 "PO-Revision-Date: 2024-11-29 18:19+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -197,74 +197,72 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "Erakuslearen abiadura:"
 
-#: ui/main.qml:230
-#, kde-format
-msgid "Pointer acceleration:"
+#: ui/main.qml:233
+#, fuzzy, kde-format
+#| msgid "Pointer acceleration:"
+msgid "Enable pointer acceleration"
 msgstr "Erakuslearen azelerazioa:"
 
-#: ui/main.qml:246
-#, kde-format
-msgid "None"
-msgstr "Bat ere ez"
-
-#: ui/main.qml:251
-#, kde-format
-msgid "Cursor moves the same distance as the mouse movement."
-msgstr "Kurtsorea higitzen da sagua higitutako distantzia bera."
-
-#: ui/main.qml:256
-#, kde-format
-msgid "Standard"
-msgstr "Estandarra"
-
-#: ui/main.qml:261
-#, kde-format
-msgid "Cursor travel distance depends on the mouse movement speed."
+#: ui/main.qml:247
+#, fuzzy, kde-format
+#| msgid "Cursor travel distance depends on the mouse movement speed."
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
 "Kurtsore-ibilbidearen distantzia saguaren higidura abiaduraren araberakoa da."
 
-#: ui/main.qml:271
+#: ui/main.qml:257
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Kiribiltze abiadura:"
 
-#: ui/main.qml:321
+#: ui/main.qml:307
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Mantsoago"
 
-#: ui/main.qml:330
+#: ui/main.qml:316
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Bizkorrago"
 
-#: ui/main.qml:338
+#: ui/main.qml:324
 #, kde-format
 msgid "Scrolling:"
 msgstr "Kiribiltzea:"
 
-#: ui/main.qml:339
+#: ui/main.qml:325
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Alderantzizko kiribiltze-noranzkoa"
 
-#: ui/main.qml:351
+#: ui/main.qml:337
 #, kde-format
 msgid "Touchscreen-like scrolling."
 msgstr "Ukimen-pantailakoa bezalako kiribiltzea."
 
-#: ui/main.qml:356
+#: ui/main.qml:342
 #, kde-format
 msgid "Press middle button and move mouse to scroll"
 msgstr "Sakatu erdiko botoia eta mugitu sagua kiribiltzeko"
 
-#: ui/main.qml:368
+#: ui/main.qml:354
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr ""
 "Saguaren erdiko botoia sakatuta dagoen bitartean saguarekin kiribiltzea."
+
+#~ msgid "None"
+#~ msgstr "Bat ere ez"
+
+#~ msgid "Cursor moves the same distance as the mouse movement."
+#~ msgstr "Kurtsorea higitzen da sagua higitutako distantzia bera."
+
+#~ msgid "Standard"
+#~ msgstr "Estandarra"
 
 #~ msgctxt "@action:button"
 #~ msgid "Bindings for Additional Mouse Buttons"

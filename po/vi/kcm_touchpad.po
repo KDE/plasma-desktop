@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-30 00:42+0000\n"
+"POT-Creation-Date: 2025-02-01 00:42+0000\n"
 "PO-Revision-Date: 2021-09-09 16:18+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -212,186 +212,172 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "Tốc độ con trỏ tối thiểu"
 
-#: ui/main.qml:299
-#, kde-format
-msgid "Pointer acceleration:"
+#: ui/main.qml:303
+#, fuzzy, kde-format
+#| msgid "Pointer acceleration:"
+msgid "Enable pointer acceleration"
 msgstr "Gia tốc con trỏ:"
 
 #: ui/main.qml:318
 #, kde-format
-msgid "None"
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
 
-#: ui/main.qml:323
-#, kde-format
-msgid "Cursor moves the same distance as finger."
-msgstr "Con trỏ di chuyển cùng khoảng cách với ngón tay."
-
-#: ui/main.qml:331
-#, kde-format
-msgid "Standard"
-msgstr ""
-
-#: ui/main.qml:336
-#, kde-format
-msgid "Cursor travel distance depends on movement speed of finger."
-msgstr ""
-"Khoảng cách di chuyển của con trỏ phụ thuộc vào tốc độ di chuyển của ngón "
-"tay."
-
-#: ui/main.qml:349
+#: ui/main.qml:328
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Tốc độ cuộn:"
 
-#: ui/main.qml:400
+#: ui/main.qml:379
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Chậm"
 
-#: ui/main.qml:407
+#: ui/main.qml:386
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Nhanh"
 
-#: ui/main.qml:415
+#: ui/main.qml:394
 #, kde-format
 msgid "Scrolling:"
 msgstr "Cuộn:"
 
-#: ui/main.qml:434
+#: ui/main.qml:413
 #, kde-format
 msgid "Two fingers"
 msgstr "Hai ngón"
 
-#: ui/main.qml:440
+#: ui/main.qml:419
 #, kde-format
 msgid "Slide with two fingers scrolls."
 msgstr "Lướt bằng hai ngón sẽ thực hiện việc cuộn."
 
-#: ui/main.qml:448
+#: ui/main.qml:427
 #, kde-format
 msgid "Touchpad edges"
 msgstr "Các cạnh bàn cảm ứng"
 
-#: ui/main.qml:454
+#: ui/main.qml:433
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
 msgstr "Lướt trên các cạnh bàn cảm ứng sẽ thực hiện việc cuộn."
 
-#: ui/main.qml:463
+#: ui/main.qml:442
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Đảo hướng cuộn (cuộn tự nhiên)"
 
-#: ui/main.qml:476
+#: ui/main.qml:455
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Cuộn như màn hình cảm ứng."
 
-#: ui/main.qml:484
+#: ui/main.qml:463
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "Tắt cuộn ngang"
 
-#: ui/main.qml:498
+#: ui/main.qml:477
 #, fuzzy, kde-format
 #| msgid "Disable horizontal scrolling"
 msgid "Disable horizontal scrolling."
 msgstr "Tắt cuộn ngang"
 
-#: ui/main.qml:511
+#: ui/main.qml:490
 #, fuzzy, kde-format
 #| msgid "Tapping:"
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Vỗ:"
 
-#: ui/main.qml:512
+#: ui/main.qml:491
 #, fuzzy, kde-format
 #| msgid "Tap-to-click"
 msgctxt "@option:check"
 msgid "Tap-to-click"
 msgstr "Vỗ để bấm"
 
-#: ui/main.qml:518
+#: ui/main.qml:497
 #, fuzzy, kde-format
 #| msgid "Single tap is left button click."
 msgctxt "@info:tooltip"
 msgid "Single tap to left-click."
 msgstr "Vỗ đơn là bấm nút trái."
 
-#: ui/main.qml:533
+#: ui/main.qml:512
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "Vỗ và kéo"
 
-#: ui/main.qml:539
+#: ui/main.qml:518
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
 msgstr "Lướt trên bàn cảm ứng ngay sau khi vỗ sẽ thực hiện việc kéo."
 
-#: ui/main.qml:554
+#: ui/main.qml:533
 #, kde-format
 msgid "Tap-and-drag lock"
 msgstr "Khoá vỗ và kéo"
 
-#: ui/main.qml:560
+#: ui/main.qml:539
 #, kde-format
 msgid "Dragging continues after a short finger lift."
 msgstr "Việc kéo tiếp tục sau khi nhấc ngón tay một khoảng thời gian ngắn."
 
-#: ui/main.qml:575
+#: ui/main.qml:554
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "Vỗ hai ngón:"
 
-#: ui/main.qml:595
+#: ui/main.qml:574
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Bấm phải (vỗ ba ngón để bấm giữa)"
 
-#: ui/main.qml:596
+#: ui/main.qml:575
 #, kde-format
 msgid "Right-click"
 msgstr "Bấm phải"
 
-#: ui/main.qml:606
+#: ui/main.qml:585
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
 msgstr "Vỗ bằng hai ngón để bấm phải, vỗ bằng ba ngón để bấm giữa."
 
-#: ui/main.qml:607
+#: ui/main.qml:586
 #, kde-format
 msgid "Tap with two fingers to right-click."
 msgstr "Vỗ bằng hai ngón để bấm phải."
 
-#: ui/main.qml:615
+#: ui/main.qml:594
 #, fuzzy, kde-format
 #| msgid "Middle-click (three-finger tap right-click)"
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "Bấm giữa (vỗ hai ngón để bấm phải)"
 
-#: ui/main.qml:616
+#: ui/main.qml:595
 #, kde-format
 msgid "Middle-click"
 msgstr "Bấm giữa"
 
-#: ui/main.qml:626
+#: ui/main.qml:605
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
 msgstr "Vỗ bằng hai ngón để bấm giữa, vỗ bằng ba ngón để bấm phải."
 
-#: ui/main.qml:627
+#: ui/main.qml:606
 #, kde-format
 msgid "Tap with two fingers to middle-click."
 msgstr "Vỗ bằng hai ngón để bấm giữa."
 
-#: ui/main.qml:639
+#: ui/main.qml:618
 #, fuzzy, kde-format
 #| msgid "Right-click:"
 msgctxt ""
@@ -400,14 +386,14 @@ msgctxt ""
 msgid "Integrated right-click:"
 msgstr "Bấm phải:"
 
-#: ui/main.qml:660
+#: ui/main.qml:639
 #, fuzzy, kde-format
 #| msgid "Press bottom-right corner"
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
 msgstr "Nhấn góc dưới phải"
 
-#: ui/main.qml:667
+#: ui/main.qml:646
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -416,7 +402,7 @@ msgid ""
 "corners."
 msgstr ""
 
-#: ui/main.qml:668
+#: ui/main.qml:647
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -424,40 +410,40 @@ msgid ""
 "Middle-click by pressing the bottom central area."
 msgstr ""
 
-#: ui/main.qml:679
+#: ui/main.qml:658
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr ""
 
-#: ui/main.qml:680
+#: ui/main.qml:659
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr ""
 
-#: ui/main.qml:698
+#: ui/main.qml:677
 #, fuzzy, kde-format
 #| msgid "Press anywhere with two fingers"
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press touchpad with two fingers"
 msgstr "Nhấn bất kì đâu bằng hai ngón"
 
-#: ui/main.qml:705
+#: ui/main.qml:684
 #, fuzzy, kde-format
 #| msgid "Tap with two fingers to right-click."
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
 msgstr "Vỗ bằng hai ngón để bấm phải."
 
-#: ui/main.qml:715
+#: ui/main.qml:694
 #, fuzzy, kde-format
 #| msgid "Press anywhere with three fingers."
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
 msgstr "Nhấn bất kì đâu bằng ba ngón."
 
-#: ui/main.qml:734
+#: ui/main.qml:713
 #, fuzzy, kde-format
 #| msgid "Middle-click: "
 msgctxt ""
@@ -466,27 +452,27 @@ msgctxt ""
 msgid "Integrated middle-click:"
 msgstr "Bấm giữa: "
 
-#: ui/main.qml:755
+#: ui/main.qml:734
 #, fuzzy, kde-format
 #| msgid "Press bottom-middle"
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom middle edge"
 msgstr "Nhấn phần dưới giữa"
 
-#: ui/main.qml:761
+#: ui/main.qml:740
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the bottom right corner of your touchpad acts as right-click."
 msgstr ""
 
-#: ui/main.qml:769
+#: ui/main.qml:748
 #, fuzzy, kde-format
 #| msgid "Press bottom left and bottom right corners simultaneously"
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom left and bottom right corners"
 msgstr "Nhấn đồng thời góc dưới trái và dưới phải"
 
-#: ui/main.qml:775
+#: ui/main.qml:754
 #, fuzzy, kde-format
 #| msgid "Press bottom left and bottom right corners simultaneously"
 msgctxt "@info:tooltip for radiobutton"
@@ -495,19 +481,27 @@ msgid ""
 "middle-click."
 msgstr "Nhấn đồng thời góc dưới trái và dưới phải"
 
-#: ui/main.qml:783
+#: ui/main.qml:762
 #, fuzzy, kde-format
 #| msgid "Press anywhere with three fingers"
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
 msgstr "Nhấn bất kì đâu bằng ba ngón"
 
-#: ui/main.qml:790
+#: ui/main.qml:769
 #, fuzzy, kde-format
 #| msgid "Tap with two fingers to right-click."
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr "Vỗ bằng hai ngón để bấm phải."
+
+#~ msgid "Cursor moves the same distance as finger."
+#~ msgstr "Con trỏ di chuyển cùng khoảng cách với ngón tay."
+
+#~ msgid "Cursor travel distance depends on movement speed of finger."
+#~ msgstr ""
+#~ "Khoảng cách di chuyển của con trỏ phụ thuộc vào tốc độ di chuyển của ngón "
+#~ "tay."
 
 #~ msgctxt "Emulated mouse button"
 #~ msgid "No action"

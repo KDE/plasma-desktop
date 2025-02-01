@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-30 00:42+0000\n"
+"POT-Creation-Date: 2025-02-01 00:42+0000\n"
 "PO-Revision-Date: 2024-12-23 05:51+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -215,179 +215,167 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "კურსორის სიჩქარე:"
 
-#: ui/main.qml:299
-#, kde-format
-msgid "Pointer acceleration:"
+#: ui/main.qml:303
+#, fuzzy, kde-format
+#| msgid "Pointer acceleration:"
+msgid "Enable pointer acceleration"
 msgstr "კურსორის აჩქარება:"
 
 #: ui/main.qml:318
 #, kde-format
-msgid "None"
-msgstr "არაფერი"
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"When enabled, pointer travel distance increases with faster movement speed."
+msgstr ""
 
-#: ui/main.qml:323
-#, kde-format
-msgid "Cursor moves the same distance as finger."
-msgstr "კურსორი იგივე მანძილით გაიწევა, როგორითაც თითი."
-
-#: ui/main.qml:331
-#, kde-format
-msgid "Standard"
-msgstr "სტანდარტული"
-
-#: ui/main.qml:336
-#, kde-format
-msgid "Cursor travel distance depends on movement speed of finger."
-msgstr "კურსორის გადატანის მანძილი თითის მოძრაობის სიჩქარეზეა დამოკიდებული."
-
-#: ui/main.qml:349
+#: ui/main.qml:328
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "აწევ-ჩამოწევის სიჩქარე:"
 
-#: ui/main.qml:400
+#: ui/main.qml:379
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "უფრო ნელა"
 
-#: ui/main.qml:407
+#: ui/main.qml:386
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "უფრო სწრაფი"
 
-#: ui/main.qml:415
+#: ui/main.qml:394
 #, kde-format
 msgid "Scrolling:"
 msgstr "აწევ-ჩამოწევა:"
 
-#: ui/main.qml:434
+#: ui/main.qml:413
 #, kde-format
 msgid "Two fingers"
 msgstr "ორი თითი"
 
-#: ui/main.qml:440
+#: ui/main.qml:419
 #, kde-format
 msgid "Slide with two fingers scrolls."
 msgstr "ორი თითის გასრიალება აწევ-ჩამოწევა."
 
-#: ui/main.qml:448
+#: ui/main.qml:427
 #, kde-format
 msgid "Touchpad edges"
 msgstr "თაჩპედის კიდეები"
 
-#: ui/main.qml:454
+#: ui/main.qml:433
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
 msgstr "თაჩპედის კიდეზე გასრიალება აწევ-ჩამოწევა."
 
-#: ui/main.qml:463
+#: ui/main.qml:442
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "აწევ-ჩამოწევის მიმართულების ინვერსია (ჩვეულებრივი აწევ-ჩამოწევა)"
 
-#: ui/main.qml:476
+#: ui/main.qml:455
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "სენსორული ეკრანის მსგავსი აწევ-ჩამოწევა."
 
-#: ui/main.qml:484
+#: ui/main.qml:463
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "ჰორიზონტალური აწევ-ჩამოწევის გამორთვა"
 
-#: ui/main.qml:498
+#: ui/main.qml:477
 #, kde-format
 msgid "Disable horizontal scrolling."
 msgstr "ჰორიზონტალური აწევ-ჩამოწევის გამორთვა."
 
-#: ui/main.qml:511
+#: ui/main.qml:490
 #, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "დატყაპუნება:"
 
-#: ui/main.qml:512
+#: ui/main.qml:491
 #, kde-format
 msgctxt "@option:check"
 msgid "Tap-to-click"
 msgstr "დასაწკაპუნებლად დაატყაპუნეთ"
 
-#: ui/main.qml:518
+#: ui/main.qml:497
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Single tap to left-click."
 msgstr "მარცხენა წკაპისთვის ერთი ტყაპი."
 
-#: ui/main.qml:533
+#: ui/main.qml:512
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "ტყაპი-და-გადათრევა"
 
-#: ui/main.qml:539
+#: ui/main.qml:518
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
 msgstr "გაასრიალეთ თითი თაჩპედზე, დატყაპუნების შემდეგ."
 
-#: ui/main.qml:554
+#: ui/main.qml:533
 #, kde-format
 msgid "Tap-and-drag lock"
 msgstr "ტყაპი-და-გადათრევის დაბლოკვა"
 
-#: ui/main.qml:560
+#: ui/main.qml:539
 #, kde-format
 msgid "Dragging continues after a short finger lift."
 msgstr "გადათრევა გრძელდება მოკლე თითის აწევის შემდეგ."
 
-#: ui/main.qml:575
+#: ui/main.qml:554
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "ორი თითით ტყაპუნი:"
 
-#: ui/main.qml:595
+#: ui/main.qml:574
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "მარჯვენა-ღილაკის-წკაპი (შუა-ღილაკის-წკაპისთვის სამი თითით დაატყაპუნეთ)"
 
-#: ui/main.qml:596
+#: ui/main.qml:575
 #, kde-format
 msgid "Right-click"
 msgstr "მარჯვენა-წკაპი"
 
-#: ui/main.qml:606
+#: ui/main.qml:585
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
 msgstr "მარჯვენა-წკაპისთვის ორი თითით დაატყაპუნეთ, შუა-წკაპისთვის კი სამით."
 
-#: ui/main.qml:607
+#: ui/main.qml:586
 #, kde-format
 msgid "Tap with two fingers to right-click."
 msgstr "მარჯვენა-წკაპისთვის ორი თითით დაატყაპუნეთ."
 
-#: ui/main.qml:615
+#: ui/main.qml:594
 #, kde-format
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "შუა-წკაპი (მარჯვენა-წკაპისთვის სამი თითით დაატყაპუნეთ)"
 
-#: ui/main.qml:616
+#: ui/main.qml:595
 #, kde-format
 msgid "Middle-click"
 msgstr "შუა-წკაპი"
 
-#: ui/main.qml:626
+#: ui/main.qml:605
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
 msgstr "შუა-წკაპისთვის ორი თითით დაატყაპუნეთ, მარჯვენა-წკაპისთვის კი სამით."
 
-#: ui/main.qml:627
+#: ui/main.qml:606
 #, kde-format
 msgid "Tap with two fingers to middle-click."
 msgstr "შუა-წკაპისთვის ორი თითით დაატყაპუნეთ."
 
-#: ui/main.qml:639
+#: ui/main.qml:618
 #, kde-format
 msgctxt ""
 "@label for radiobutton group, configure right-click with touch-pad "
@@ -395,13 +383,13 @@ msgctxt ""
 msgid "Integrated right-click:"
 msgstr "ჩაშენებული მარჯვენა-წკაპი:"
 
-#: ui/main.qml:660
+#: ui/main.qml:639
 #, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
 msgstr "დააჭირეთ ქვედა-მარჯვენა კუთხეში"
 
-#: ui/main.qml:667
+#: ui/main.qml:646
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -412,7 +400,7 @@ msgstr ""
 "თქვენი თაჩპედის ქვედა მარჯვენა კუთხეში დაჭერა მარჯვენა-წკაპივით იმუშავებს. "
 "შუა-წკაპისთვის ქვედა მარცხენა და ქვედა მარჯვენა კუთხეებს ერთდროულად დააწექით."
 
-#: ui/main.qml:668
+#: ui/main.qml:647
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -422,37 +410,37 @@ msgstr ""
 "თქვენი თაჩპედის ქვედა მარჯვენა კუთხეში დაჭერა მარჯვენა-წკაპად იმუშავებს. შუა-"
 "წკაპი ცენტრალური ალაგის ქვედა ნაწილზე დაჭერით."
 
-#: ui/main.qml:679
+#: ui/main.qml:658
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "შუა-წკაპი ორივე ქვედა კუთხეში დაჭერით."
 
-#: ui/main.qml:680
+#: ui/main.qml:659
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "შუა-წკაპი ქვედა ცენტრში დაჭერით."
 
-#: ui/main.qml:698
+#: ui/main.qml:677
 #, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press touchpad with two fingers"
 msgstr "დააწექით თაჩპედს ორი თითით"
 
-#: ui/main.qml:705
+#: ui/main.qml:684
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
 msgstr "თაჩპედზე ორი თითით დაწოლა მარჯვენა-წკაპად აღიქმება."
 
-#: ui/main.qml:715
+#: ui/main.qml:694
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
 msgstr "შუა-წკაპი სამი თითით დაწოლით."
 
-#: ui/main.qml:734
+#: ui/main.qml:713
 #, kde-format
 msgctxt ""
 "@label for radiobutton group, configure middle-click with touch-pad "
@@ -460,26 +448,26 @@ msgctxt ""
 msgid "Integrated middle-click:"
 msgstr "ჩაშენებული შუა-წკაპი:"
 
-#: ui/main.qml:755
+#: ui/main.qml:734
 #, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom middle edge"
 msgstr "დააჭირეთ ქვედა შუა წიბოს"
 
-#: ui/main.qml:761
+#: ui/main.qml:740
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the bottom right corner of your touchpad acts as right-click."
 msgstr ""
 "თქვენი თაჩპედის ქვედა მარჯვენა კუთხეში დაჭერა მარჯვენა-წკაპივით იმუშავებს."
 
-#: ui/main.qml:769
+#: ui/main.qml:748
 #, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom left and bottom right corners"
 msgstr "ერთდროულად დააწექით ქვედა მარცხენა და ქვედა მარჯვენა კუთხეებს"
 
-#: ui/main.qml:775
+#: ui/main.qml:754
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid ""
@@ -489,17 +477,29 @@ msgstr ""
 "ქვედა მარცხენა და ქვედა მარჯვენა კუთხეების ერთდროული დაწოლა შუა-წკაპად "
 "მუშაობს."
 
-#: ui/main.qml:783
+#: ui/main.qml:762
 #, kde-format
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
 msgstr "დააწექით თაჩპედს სამი თითით"
 
-#: ui/main.qml:790
+#: ui/main.qml:769
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr "თაჩპედზე ორი თითით დაწოლა მარჯვენა-წკაპად აღიქმება."
+
+#~ msgid "None"
+#~ msgstr "არაფერი"
+
+#~ msgid "Cursor moves the same distance as finger."
+#~ msgstr "კურსორი იგივე მანძილით გაიწევა, როგორითაც თითი."
+
+#~ msgid "Standard"
+#~ msgstr "სტანდარტული"
+
+#~ msgid "Cursor travel distance depends on movement speed of finger."
+#~ msgstr "კურსორის გადატანის მანძილი თითის მოძრაობის სიჩქარეზეა დამოკიდებული."
 
 #~ msgctxt "Emulated mouse button"
 #~ msgid "No action"

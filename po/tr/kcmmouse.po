@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-29 00:42+0000\n"
+"POT-Creation-Date: 2025-02-01 00:42+0000\n"
 "PO-Revision-Date: 2024-11-29 15:21+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -205,72 +205,70 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "İşaretçi hızı:"
 
-#: ui/main.qml:230
-#, kde-format
-msgid "Pointer acceleration:"
+#: ui/main.qml:233
+#, fuzzy, kde-format
+#| msgid "Pointer acceleration:"
+msgid "Enable pointer acceleration"
 msgstr "İşaretçi ivmelendirmesi:"
 
-#: ui/main.qml:246
-#, kde-format
-msgid "None"
-msgstr "Yok"
-
-#: ui/main.qml:251
-#, kde-format
-msgid "Cursor moves the same distance as the mouse movement."
-msgstr "İmleç, fare hareketiyle aynı mesafede hareket eder."
-
-#: ui/main.qml:256
-#, kde-format
-msgid "Standard"
-msgstr "Standart"
-
-#: ui/main.qml:261
-#, kde-format
-msgid "Cursor travel distance depends on the mouse movement speed."
+#: ui/main.qml:247
+#, fuzzy, kde-format
+#| msgid "Cursor travel distance depends on the mouse movement speed."
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"When enabled, pointer travel distance increases with faster movement speed."
 msgstr "İmleç hareket mesafesi, fare hareket hızına bağlıdır."
 
-#: ui/main.qml:271
+#: ui/main.qml:257
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Sarma hızı:"
 
-#: ui/main.qml:321
+#: ui/main.qml:307
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Daha yavaş"
 
-#: ui/main.qml:330
+#: ui/main.qml:316
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Daha hızlı"
 
-#: ui/main.qml:338
+#: ui/main.qml:324
 #, kde-format
 msgid "Scrolling:"
 msgstr "Sarma:"
 
-#: ui/main.qml:339
+#: ui/main.qml:325
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Sarma yönünü tersine çevir"
 
-#: ui/main.qml:351
+#: ui/main.qml:337
 #, kde-format
 msgid "Touchscreen-like scrolling."
 msgstr "Dokunmatik ekran gibi sarım."
 
-#: ui/main.qml:356
+#: ui/main.qml:342
 #, kde-format
 msgid "Press middle button and move mouse to scroll"
 msgstr "Orta fare düğmesine bas ve sarmak için fareyi hareket ettir"
 
-#: ui/main.qml:368
+#: ui/main.qml:354
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "Orta düğme basılıyken fare ile sarım."
+
+#~ msgid "None"
+#~ msgstr "Yok"
+
+#~ msgid "Cursor moves the same distance as the mouse movement."
+#~ msgstr "İmleç, fare hareketiyle aynı mesafede hareket eder."
+
+#~ msgid "Standard"
+#~ msgstr "Standart"
 
 #~ msgctxt "@action:button"
 #~ msgid "Bindings for Additional Mouse Buttons"

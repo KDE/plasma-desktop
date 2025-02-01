@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-29 00:42+0000\n"
+"POT-Creation-Date: 2025-02-01 00:42+0000\n"
 "PO-Revision-Date: 2024-03-26 19:21+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -210,75 +210,73 @@ msgstr ""
 msgid "Pointer speed:"
 msgstr "Zeigergeschwindigkeit:"
 
-#: ui/main.qml:230
-#, kde-format
-msgid "Pointer acceleration:"
+#: ui/main.qml:233
+#, fuzzy, kde-format
+#| msgid "Pointer acceleration:"
+msgid "Enable pointer acceleration"
 msgstr "Zeigerbeschleunigung:"
 
-#: ui/main.qml:246
-#, kde-format
-msgid "None"
-msgstr "Keines"
-
-#: ui/main.qml:251
-#, kde-format
-msgid "Cursor moves the same distance as the mouse movement."
-msgstr "Die Bewegung des Zeigers entspricht der Bewegung der Maus."
-
-#: ui/main.qml:256
-#, kde-format
-msgid "Standard"
-msgstr "Standard"
-
-#: ui/main.qml:261
-#, kde-format
-msgid "Cursor travel distance depends on the mouse movement speed."
+#: ui/main.qml:247
+#, fuzzy, kde-format
+#| msgid "Cursor travel distance depends on the mouse movement speed."
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
 "Die Bewegung des Zeigers hängt von der Geschwindigkeit der Bewegung der Maus "
 "ab."
 
-#: ui/main.qml:271
+#: ui/main.qml:257
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Bildlaufgeschwindigkeit:"
 
-#: ui/main.qml:321
+#: ui/main.qml:307
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Langsamer"
 
-#: ui/main.qml:330
+#: ui/main.qml:316
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Schneller"
 
-#: ui/main.qml:338
+#: ui/main.qml:324
 #, kde-format
 msgid "Scrolling:"
 msgstr "Bildlauf:"
 
-#: ui/main.qml:339
+#: ui/main.qml:325
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Laufrichtung umkehren"
 
-#: ui/main.qml:351
+#: ui/main.qml:337
 #, fuzzy, kde-format
 #| msgid "Touchscreen like scrolling."
 msgid "Touchscreen-like scrolling."
 msgstr "Bildlauf wie auf dem Touchscreen."
 
-#: ui/main.qml:356
+#: ui/main.qml:342
 #, kde-format
 msgid "Press middle button and move mouse to scroll"
 msgstr ""
 
-#: ui/main.qml:368
+#: ui/main.qml:354
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr ""
+
+#~ msgid "None"
+#~ msgstr "Keines"
+
+#~ msgid "Cursor moves the same distance as the mouse movement."
+#~ msgstr "Die Bewegung des Zeigers entspricht der Bewegung der Maus."
+
+#~ msgid "Standard"
+#~ msgstr "Standard"
 
 #, fuzzy
 #~| msgctxt "@action:button"
