@@ -1,17 +1,17 @@
 # Translation of kcm_touchpad.po to Catalan (Valencian)
-# Copyright (C) 2015-2024 This_file_is_part_of_KDE
+# Copyright (C) 2015-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# SPDX-FileCopyrightText: 2015, 2017, 2018, 2019, 2020, 2021, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2017, 2018, 2020, 2022.
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
+# Josep M. Ferrer <txemaq@gmail.com>, 2015, 2017, 2018, 2019, 2020, 2021, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-01 00:42+0000\n"
-"PO-Revision-Date: 2024-12-23 10:33+0100\n"
+"PO-Revision-Date: 2025-02-01 10:30+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -223,10 +223,9 @@ msgid "Pointer speed:"
 msgstr "Velocitat del punter:"
 
 #: ui/main.qml:303
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgid "Enable pointer acceleration"
-msgstr "Acceleració del punter:"
+msgstr "Activa l'acceleració del punter"
 
 #: ui/main.qml:318
 #, kde-format
@@ -234,6 +233,8 @@ msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
+"Quan es marca, la distància del moviment del punter augmenta amb una "
+"velocitat de moviment més ràpida."
 
 #: ui/main.qml:328
 #, kde-format
@@ -502,73 +503,3 @@ msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr ""
 "Prement a qualsevol lloc del ratolí tàctil amb tres dits fa com un clic del "
 "mig."
-
-#~ msgid "None"
-#~ msgstr "Sense"
-
-#~ msgid "Cursor moves the same distance as finger."
-#~ msgstr "El cursor es mou la mateixa distància que el dit."
-
-#~ msgid "Standard"
-#~ msgstr "Estàndard"
-
-#~ msgid "Cursor travel distance depends on movement speed of finger."
-#~ msgstr "La distància que recorre depén de la velocitat de moviment del dit."
-
-#~ msgctxt "Emulated mouse button"
-#~ msgid "No action"
-#~ msgstr "Cap acció"
-
-#~ msgctxt "Emulated mouse button"
-#~ msgid "Left button"
-#~ msgstr "Botó esquerre"
-
-#~ msgctxt "Emulated mouse button"
-#~ msgid "Middle button"
-#~ msgstr "Botó del mig"
-
-#~ msgctxt "Emulated mouse button"
-#~ msgid "Right button"
-#~ msgstr "Botó dret"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "All edges"
-#~ msgstr "Totes les vores"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Top edge"
-#~ msgstr "Vora superior"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Top right corner"
-#~ msgstr "Cantó superior dret"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Right edge"
-#~ msgstr "Vora dreta"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Bottom right corner"
-#~ msgstr "Cantó inferior dret"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Bottom edge"
-#~ msgstr "Vora inferior"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Bottom left corner"
-#~ msgstr "Cantó inferior esquerre"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Left edge"
-#~ msgstr "Vora esquerra"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Top left corner"
-#~ msgstr "Cantó superior esquerre"
-
-#~ msgid "Touchpad was disabled because a mouse was plugged in"
-#~ msgstr "El ratolí tàctil s'ha desactivat perquè s'ha connectat un ratolí"
-
-#~ msgid "Touchpad was enabled because the mouse was unplugged"
-#~ msgstr "El ratolí tàctil s'ha activat perquè s'ha desconnectat el ratolí"

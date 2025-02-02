@@ -2,7 +2,7 @@
 # KDE TÜRKÇELEŞTİRME PROJESİ.
 # Copyright (C) 2000,2003, 2004, 2005, 2008 Free Software Foundation, Inc.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Emir SARI <emir_sari@icloud.com>
 # Adem GUNES <adem@alaeddin.cc.selcuk.edu.tr>, 2000.
 # Görkem Çetin <gorkem@kde.org>, 2003.
 # Adil Yıldız <adil_yildiztr@yahoo.com>, 2004.
@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-01 00:42+0000\n"
-"PO-Revision-Date: 2024-11-29 15:21+0300\n"
+"PO-Revision-Date: 2025-02-01 16:34+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -206,18 +206,18 @@ msgid "Pointer speed:"
 msgstr "İşaretçi hızı:"
 
 #: ui/main.qml:233
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgid "Enable pointer acceleration"
-msgstr "İşaretçi ivmelendirmesi:"
+msgstr "İşaretçi ivmelendirmesini etkinleştir"
 
 #: ui/main.qml:247
-#, fuzzy, kde-format
-#| msgid "Cursor travel distance depends on the mouse movement speed."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
-msgstr "İmleç hareket mesafesi, fare hareket hızına bağlıdır."
+msgstr ""
+"Etkinleştirildiğinde, işaretçi hareketinin uzaklığı daha hızlı hareketle "
+"artar."
 
 #: ui/main.qml:257
 #, kde-format

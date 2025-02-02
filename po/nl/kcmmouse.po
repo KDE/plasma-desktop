@@ -12,7 +12,7 @@
 # Wilbert Berendsen <wbsoft@xs4all.nl>, 2003.
 # Rinse de Vries <rinsedevries@kde.nl>, 2004, 2005, 2006, 2007, 2008.
 # Antoon Tolboom <atolboo@casema.nl>, 2008.
-# SPDX-FileCopyrightText: 2010, 2024 Freek de Kruijf <f.de.kruijf@hetnet.nl>
+# SPDX-FileCopyrightText: 2010, 2024, 2025 Freek de Kruijf <f.de.kruijf@hetnet.nl>
 # Freek de Kruijf <freekdekruijf@kde.nl>, 2010, 2011.
 # Freek de Kruijf <freekdekruijf@kde.nl>, 2011, 2013, 2014, 2015, 2016, 2017, 2018, 2020, 2022, 2023.
 # SPDX-FileCopyrightText: 2024 pieter <pieterkristensen@gmail.com>
@@ -21,14 +21,14 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-01 00:42+0000\n"
-"PO-Revision-Date: 2024-11-29 10:45+0100\n"
+"PO-Revision-Date: 2025-02-01 17:26+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
@@ -208,20 +208,18 @@ msgid "Pointer speed:"
 msgstr "Snelheid van aanwijzer:"
 
 #: ui/main.qml:233
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgid "Enable pointer acceleration"
-msgstr "Aanwijzerversnelling:"
+msgstr "Aanwijzerversnelling inschakelen"
 
 #: ui/main.qml:247
-#, fuzzy, kde-format
-#| msgid "Cursor travel distance depends on the mouse movement speed."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
-"Cursor verplaats zich over een afstand die afhangt van de snelheid van de "
-"muis."
+"Indien ingeschakeld, wordt de verplaatsingsafstand van de aanwijzer vergroot "
+"met snellere verplaatsingssnelheid."
 
 #: ui/main.qml:257
 #, kde-format

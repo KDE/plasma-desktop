@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-01 00:42+0000\n"
-"PO-Revision-Date: 2024-12-24 07:37+0200\n"
+"PO-Revision-Date: 2025-02-01 08:48+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -207,17 +207,16 @@ msgid "Pointer speed:"
 msgstr "מהירות סמן:"
 
 #: ui/main.qml:303
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgid "Enable pointer acceleration"
-msgstr "האצת סמן:"
+msgstr "הפעלת האצת סמן"
 
 #: ui/main.qml:318
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
-msgstr ""
+msgstr "כשהאפשרות פעילה, מרחק הטיול של הסמן גדל כתלות במהירות."
 
 #: ui/main.qml:328
 #, kde-format

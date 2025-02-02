@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-01 00:42+0000\n"
-"PO-Revision-Date: 2024-12-23 05:51+0100\n"
+"PO-Revision-Date: 2025-02-01 05:30+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -216,10 +216,9 @@ msgid "Pointer speed:"
 msgstr "კურსორის სიჩქარე:"
 
 #: ui/main.qml:303
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgid "Enable pointer acceleration"
-msgstr "კურსორის აჩქარება:"
+msgstr "კურსორის აჩქარების ჩართვა"
 
 #: ui/main.qml:318
 #, kde-format
@@ -227,6 +226,8 @@ msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
+"როცა ჩართულია, კურსორის გადაადგილების მანძილი იზრდება კურსორის სიჩქარესთან "
+"ერთად."
 
 #: ui/main.qml:328
 #, kde-format

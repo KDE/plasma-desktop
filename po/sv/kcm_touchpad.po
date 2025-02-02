@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-01 00:42+0000\n"
-"PO-Revision-Date: 2025-01-11 12:25+0100\n"
+"PO-Revision-Date: 2025-02-01 08:21+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -216,10 +216,9 @@ msgid "Pointer speed:"
 msgstr "Pekarhastighet:"
 
 #: ui/main.qml:303
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgid "Enable pointer acceleration"
-msgstr "Acceleration för pekare:"
+msgstr "Aktivera pekaracceleration"
 
 #: ui/main.qml:318
 #, kde-format
@@ -227,6 +226,8 @@ msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
+"När aktiverat, ökar pekarens förflyttningsavstånd med snabbare "
+"rörelsehastighet."
 
 #: ui/main.qml:328
 #, kde-format
