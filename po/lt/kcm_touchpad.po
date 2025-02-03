@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-29 02:34+0000\n"
-"PO-Revision-Date: 2024-10-16 01:51+0300\n"
+"PO-Revision-Date: 2025-02-02 23:27+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: actions.cpp:19
 #, kde-format
@@ -250,11 +250,10 @@ msgid "Accept input through this device."
 msgstr "Priimti įvestį per šį įrenginį."
 
 #: ui/main.qml:171
-#, fuzzy, kde-format
-#| msgid "Disable touchpad when mouse is plugged in"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable while mouse is connected"
-msgstr "Prijungus pelę, išjungti jutiklinį kilimėlį"
+msgstr "Išjungti, kol yra prijungta pelė"
 
 #: ui/main.qml:197
 #, kde-format

@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-16 02:32+0000\n"
-"PO-Revision-Date: 2024-04-04 17:07+0300\n"
+"PO-Revision-Date: 2025-02-02 23:21+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -444,7 +444,7 @@ msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
 "or folder"
 msgid "Link Target Not Found"
-msgstr ""
+msgstr "Nuorodos paskirtis nerasta"
 
 #: plugins/folder/foldermodel.cpp:871
 #, kde-kuit-format
@@ -453,6 +453,8 @@ msgid ""
 "<filename>%1</filename> points to <filename>%2</filename>, but that could "
 "not be found. It may have been moved or deleted."
 msgstr ""
+"<filename>%1</filename> nurodo į <filename>%2</filename>, bet jo nepavyko "
+"surasti. Gali būti, kad jis perkeltas arba ištrintas."
 
 #: plugins/folder/foldermodel.cpp:1729
 #, kde-format
@@ -471,13 +473,12 @@ msgid "&Open"
 msgstr "At&verti"
 
 #: plugins/folder/foldermodel.cpp:1739
-#, fuzzy, kde-format
-#| msgid "Show all"
+#, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
 "link points to"
 msgid "Show Target"
-msgstr "Rodyti visus"
+msgstr "Rodyti paskirtį"
 
 #: plugins/folder/foldermodel.cpp:1863
 #, kde-format
