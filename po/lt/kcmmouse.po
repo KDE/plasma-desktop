@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-01 00:42+0000\n"
-"PO-Revision-Date: 2024-12-06 21:41+0200\n"
+"PO-Revision-Date: 2025-02-02 23:40+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
@@ -201,18 +201,18 @@ msgid "Pointer speed:"
 msgstr "Rodyklės greitis:"
 
 #: ui/main.qml:233
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgid "Enable pointer acceleration"
-msgstr "Rodyklės pagreitis:"
+msgstr "Įjungti rodyklės pagreitį"
 
 #: ui/main.qml:247
-#, fuzzy, kde-format
-#| msgid "Cursor travel distance depends on the mouse movement speed."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
-msgstr "Žymeklio kelio atstumas priklauso nuo pelės judesio greičio."
+msgstr ""
+"Kai įjungta, kuo greičiau judinama pelė, tuo labiau padidėja rodyklės "
+"nukeliautas atstumas."
 
 #: ui/main.qml:257
 #, kde-format

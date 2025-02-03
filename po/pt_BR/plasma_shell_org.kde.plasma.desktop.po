@@ -5,20 +5,21 @@
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2014, 2015, 2016, 2019, 2020.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 # SPDX-FileCopyrightText: 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
+# SPDX-FileCopyrightText: 2025 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-27 00:42+0000\n"
-"PO-Revision-Date: 2024-11-14 19:13-0300\n"
-"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
+"PO-Revision-Date: 2025-02-02 00:19-0300\n"
+"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -61,7 +62,7 @@ msgstr "Atividades paradas:"
 #: contents/activitymanager/ActivityManager.qml:122
 #, kde-format
 msgid "Create activity…"
-msgstr "Criar atividade..."
+msgstr "Criar atividade…"
 
 #: contents/activitymanager/Heading.qml:59
 #, kde-format
@@ -367,7 +368,7 @@ msgstr "Inferior"
 #: contents/configuration/PanelConfiguration.qml:174
 #, kde-format
 msgid "Set Position…"
-msgstr "Definir posição..."
+msgstr "Definir posição…"
 
 #: contents/configuration/PanelConfiguration.qml:201
 #, kde-format
@@ -422,7 +423,7 @@ msgstr "Sempre visível"
 #: contents/configuration/PanelConfiguration.qml:370
 #, kde-format
 msgid "Auto hide"
-msgstr "Ocultar automaticamente"
+msgstr "Auto-ocultar"
 
 #: contents/configuration/PanelConfiguration.qml:371
 #, kde-format
@@ -430,10 +431,9 @@ msgid "Dodge windows"
 msgstr "Desviar de janelas"
 
 #: contents/configuration/PanelConfiguration.qml:372
-#, fuzzy, kde-format
-#| msgid "Windows Go Below"
+#, kde-format
 msgid "Windows go below"
-msgstr "As janelas passam para trás"
+msgstr "Janelas passam atrás"
 
 #: contents/configuration/PanelConfiguration.qml:432
 #, kde-format
@@ -504,17 +504,16 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "Exclui este painel; esta ação não pode ser desfeita"
 
 #: contents/configuration/PanelConfiguration.qml:696
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
-msgstr "Remover o painel"
+msgstr "Clonar painel"
 
 #: contents/configuration/PanelConfiguration.qml:700
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
-msgstr ""
+msgstr "Criar um novo painel com as mesmas configurações e miniaplicativos"
 
 #: contents/configuration/PanelConfiguration.qml:709
 #, kde-format
@@ -576,10 +575,9 @@ msgstr ""
 "Clique duplo para redefinir."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy, kde-format
-#| msgid "Panel and Desktop Management"
+#, kde-format
 msgid "Manage Panels and Desktops"
-msgstr "Gerenciamento de painéis e áreas de trabalho"
+msgstr "Gerenciar painéis e áreas de trabalho"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 #, kde-format
@@ -641,17 +639,15 @@ msgid "Undo uninstall"
 msgstr "Desfazer desinstalação"
 
 #: contents/explorer/AppletDelegate.qml:189
-#, fuzzy, kde-format
-#| msgid "Uninstall"
+#, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Uninstall"
 msgstr "Desinstalar"
 
 #: contents/explorer/AppletDelegate.qml:231
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgid "Remove all instances"
-msgstr "Remover o painel"
+msgstr "Remover todas as instâncias"
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -701,8 +697,8 @@ msgstr "Categorias"
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Confirm Removal of One Widget"
 msgid_plural "Confirm Removal of %1 Widgets"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Confirmar a remoção de um widget"
+msgstr[1] "Confirmar a remoção de %1 widgets"
 
 #: contents/explorer/WidgetExplorer.qml:355
 #, kde-format
@@ -749,22 +745,19 @@ msgid "Caps Lock is on"
 msgstr "Caps lock está ativado"
 
 #: contents/lockscreen/LockScreenUi.qml:285
-#, fuzzy, kde-format
-#| msgid "Sleep"
+#, kde-format
 msgid "Slee&p"
-msgstr "Suspender"
+msgstr "Sus&pender"
 
 #: contents/lockscreen/LockScreenUi.qml:291
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "&Hibernate"
-msgstr "Hibernar"
+msgstr "&Hibernar"
 
 #: contents/lockscreen/LockScreenUi.qml:297
-#, fuzzy, kde-format
-#| msgid "Switch User"
+#, kde-format
 msgid "Switch &User"
-msgstr "Trocar usuário"
+msgstr "Alternar &usuário"
 
 #: contents/lockscreen/LockScreenUi.qml:358
 #, kde-format

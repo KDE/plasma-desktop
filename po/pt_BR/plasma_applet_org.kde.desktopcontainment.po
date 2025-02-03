@@ -5,20 +5,21 @@
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2014, 2015, 2016, 2019.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 # SPDX-FileCopyrightText: 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
+# SPDX-FileCopyrightText: 2025 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-30 00:42+0000\n"
-"PO-Revision-Date: 2024-07-20 23:40-0300\n"
-"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
+"PO-Revision-Date: 2025-02-01 23:26-0300\n"
+"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -440,7 +441,7 @@ msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
 "or folder"
 msgid "Link Target Not Found"
-msgstr ""
+msgstr "O destino do link não foi encontrado"
 
 #: plugins/folder/foldermodel.cpp:871
 #, kde-kuit-format
@@ -449,6 +450,8 @@ msgid ""
 "<filename>%1</filename> points to <filename>%2</filename>, but that could "
 "not be found. It may have been moved or deleted."
 msgstr ""
+"<filename>%1</filename> aponta para <filename>%2</filename>, mas este não "
+"foi encontrado. O arquivo pode ter sido movido ou excluído."
 
 #: plugins/folder/foldermodel.cpp:1729
 #, kde-format
@@ -459,7 +462,7 @@ msgstr "&Esvaziar Lixeira"
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
-msgstr ""
+msgstr "Restaurar para o local anterior"
 
 #: plugins/folder/foldermodel.cpp:1735
 #, kde-format
@@ -467,25 +470,23 @@ msgid "&Open"
 msgstr "&Abrir"
 
 #: plugins/folder/foldermodel.cpp:1739
-#, fuzzy, kde-format
-#| msgid "Show all"
+#, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
 "link points to"
 msgid "Show Target"
-msgstr "Mostrar tudo"
+msgstr "Exibir destino"
 
 #: plugins/folder/foldermodel.cpp:1835
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
-msgstr ""
+msgstr "Remover ícone da lixeira"
 
 #: plugins/folder/foldermodel.cpp:1838
-#, fuzzy, kde-format
-#| msgid "&Empty Trash"
+#, kde-format
 msgid "&Move to Trash"
-msgstr "&Esvaziar Lixeira"
+msgstr "&Mover para lixeira"
 
 #: plugins/folder/foldermodel.cpp:1871
 #, kde-format

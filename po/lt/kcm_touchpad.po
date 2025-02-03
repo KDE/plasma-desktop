@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-01 00:42+0000\n"
-"PO-Revision-Date: 2025-01-10 00:51+0200\n"
+"PO-Revision-Date: 2025-02-02 23:37+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -225,10 +225,9 @@ msgid "Pointer speed:"
 msgstr "Rodyklės greitis:"
 
 #: ui/main.qml:303
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgid "Enable pointer acceleration"
-msgstr "Rodyklės pagreitis:"
+msgstr "Įjungti rodyklės pagreitį"
 
 #: ui/main.qml:318
 #, kde-format
@@ -236,6 +235,8 @@ msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
+"Kai įjungta, kuo greičiau judinama pelė, tuo labiau padidėja rodyklės "
+"nukeliautas atstumas."
 
 #: ui/main.qml:328
 #, kde-format

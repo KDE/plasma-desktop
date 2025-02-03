@@ -6,20 +6,21 @@
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2017, 2018, 2019, 2020, 2022, 2023.
 # Thiago Masato Costa Sueto <herzenschein@gmail.com>, 2020, 2021.
 # SPDX-FileCopyrightText: 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
+# SPDX-FileCopyrightText: 2025 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-30 00:42+0000\n"
-"PO-Revision-Date: 2024-11-14 12:09-0300\n"
-"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
+"PO-Revision-Date: 2025-02-02 00:06-0300\n"
+"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: ui/main.qml:23
 #, kde-format
@@ -215,9 +216,7 @@ msgid "Double-click interval:"
 msgstr "Intervalo do clique duplo:"
 
 #: ui/main.qml:392
-#, fuzzy, kde-format
-#| msgid "%1 msec"
-#| msgid_plural "%1 msec"
+#, kde-format
 msgctxt "short for millisecond(s)"
 msgid "%1 ms"
 msgid_plural "%1 ms"
@@ -225,8 +224,7 @@ msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
 #: ui/main.qml:396
-#, fuzzy, kde-format
-#| msgid "msec"
+#, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgstr "ms"

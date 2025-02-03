@@ -1,34 +1,30 @@
-# Translation of kcmkonq to Spanish
-# translation of kcmkonq.po to Spanish
-# traducción de kcmkonq.po a Español
-# Translation to spanish.
-# Copyright (C) 2000-2002.
+# Translation of kcm_desktoppaths.po to Spanish
+# Copyright (C) 2000-2025.
 #
-# Pablo de Vicente <vicente@oan.es>,2000-2002.
-# Jaime Robles <jaime@kde.org>, 2003, 2007, 2008.
-# Pablo de Vicente <vicnte@oan.es>, 2003.
-# Miguel Revilla Rodríguez <yo@miguelrevilla.com>, 2004.
-# Pablo de Vicente <p.devicente@wanadoo.es>, 2004, 2005.
-# Juan Manuel Garcia Molina <juanma@superiodico.net>, 2005.
-# Pablo de Vicente <pablo.devicente@gmail.com>, 2005, 2006.
-# Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
-# SPDX-FileCopyrightText: 2008, 2009, 2014, 2017, 2020, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
-# Javier Vinal <fjvinal@gmail.com>, 2012.
+# SPDX-FileCopyrightText: 2000-2002 Pablo de Vicente <vicente@oan.es>
+# SPDX-FileCopyrightText: 2003, 2007, 2008 Jaime Robles <jaime@kde.org>
+# SPDX-FileCopyrightText: 2003 Pablo de Vicente <vicnte@oan.es>
+# SPDX-FileCopyrightText: 2004 Miguel Revilla Rodríguez <yo@miguelrevilla.com>
+# SPDX-FileCopyrightText: 2004, 2005 Pablo de Vicente <p.devicente@wanadoo.es>
+# SPDX-FileCopyrightText: 2005 Juan Manuel Garcia Molina <juanma@superiodico.net>
+# SPDX-FileCopyrightText: 2005, 2006 Pablo de Vicente <pablo.devicente@gmail.com>
+# SPDX-FileCopyrightText: 2007 Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>
+# SPDX-FileCopyrightText: 2008, 2009, 2014, 2017, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2012 Javier Vinal <fjvinal@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: kcmkonq\n"
+"Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-30 00:41+0000\n"
-"PO-Revision-Date: 2024-08-31 02:21+0200\n"
+"PO-Revision-Date: 2025-02-03 01:16+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"com>\n"
 "First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.12.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: ui/main.qml:52
@@ -149,110 +145,3 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Choose new location"
 msgstr "Seleccionar nueva ubicación"
-
-#~ msgid ""
-#~ "This folder contains all the files which you see on your desktop. You can "
-#~ "change the location of this folder if you want to, and the contents will "
-#~ "move automatically to the new location as well."
-#~ msgstr ""
-#~ "Esta carpeta contiene todos los archivos que ve en su escritorio. Se "
-#~ "puede cambiar la ubicación de esta carpeta si así lo desea, y los "
-#~ "contenidos también serán transferidos automáticamente a la nueva "
-#~ "dirección."
-
-#~ msgid "Documents path:"
-#~ msgstr "Ruta para documentos:"
-
-#~ msgid "Downloads path:"
-#~ msgstr "Ruta para descargas:"
-
-#~ msgid ""
-#~ "This folder will be used by default to load or save pictures from or to."
-#~ msgstr "Esta carpeta será la predeterminada para cargar o guardar imágenes."
-
-#~ msgid "Music path:"
-#~ msgstr "Ruta para música:"
-
-#~ msgid "Templates path:"
-#~ msgstr "Ruta para plantillas:"
-
-#~ msgid "Desktop"
-#~ msgstr "Escritorio"
-
-#~ msgid "Music"
-#~ msgstr "Música"
-
-#~ msgid "Pictures"
-#~ msgstr "Imágenes"
-
-#~ msgid "Videos"
-#~ msgstr "Vídeos"
-
-#~ msgid "Public"
-#~ msgstr "Público"
-
-#~ msgid ""
-#~ "<h1>Paths</h1>\n"
-#~ "This module allows you to choose where in the filesystem the files on "
-#~ "your desktop should be stored.\n"
-#~ "Use the \"Whats This?\" (Shift+F1) to get help on specific options."
-#~ msgstr ""
-#~ "<h1>Rutas</h1>\n"
-#~ "Este módulo le permite elegir en qué parte del sistema de archivos se "
-#~ "almacenan los archivos del escritorio.\n"
-#~ "Use «¿Qué es esto?» (Mayúsculas+F1) para obtener ayuda sobre las opciones "
-#~ "específicas."
-
-#~ msgid "Autostart path:"
-#~ msgstr "Ruta de inicio automático:"
-
-#~ msgid ""
-#~ "This folder contains applications or links to applications (shortcuts) "
-#~ "that you want to have started automatically whenever the session starts. "
-#~ "You can change the location of this folder if you want to, and the "
-#~ "contents will move automatically to the new location as well."
-#~ msgstr ""
-#~ "Esta carpeta contiene aplicaciones o enlaces a aplicaciones (accesos "
-#~ "rápidos) que se iniciarán automáticamente cuando arranque la sesión. Se "
-#~ "puede cambiar la ubicación de esta carpeta si así lo desea, y los "
-#~ "contenidos también serán transferidos automáticamente a la nueva "
-#~ "dirección."
-
-#~ msgid "Autostart"
-#~ msgstr "Inicio automático"
-
-#~ msgid "Movies"
-#~ msgstr "Películas"
-
-#~ msgid ""
-#~ "The path for '%1' has been changed.\n"
-#~ "Do you want the files to be moved from '%2' to '%3'?"
-#~ msgstr ""
-#~ "La ruta de «%1» ha cambiado.\n"
-#~ "¿Desea mover los archivos de «%2» a «%3»?"
-
-#~ msgctxt "Move files from old to new place"
-#~ msgid "Move"
-#~ msgstr "Mover"
-
-#~ msgctxt "Use the new directory but do not move files"
-#~ msgid "Do not Move"
-#~ msgstr "No mover"
-
-#~ msgid ""
-#~ "The path for '%1' has been changed.\n"
-#~ "Do you want to move the directory '%2' to '%3'?"
-#~ msgstr ""
-#~ "La ruta de «%1» ha cambiado.\n"
-#~ "¿Desea mover la carpeta «%2» a «%3»?"
-
-#~ msgctxt "Move the directory"
-#~ msgid "Move"
-#~ msgstr "Mover"
-
-#~ msgctxt "Use the new directory but do not move anything"
-#~ msgid "Do not Move"
-#~ msgstr "No mover"
-
-#~ msgid "Confirmation Required"
-#~ msgstr "Se necesita confirmación"
