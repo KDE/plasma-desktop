@@ -2,8 +2,8 @@
 # SPDX-License-Identifier: CC0-1.0
 
 Dependencies:
-- 'on': ['@all']
-  'require':
+ - 'on': ['@all']
+   'require':
     'frameworks/attica': '@latest-kf6'
     'frameworks/baloo': '@latest-kf6'
     'frameworks/extra-cmake-modules': '@latest-kf6'
@@ -55,11 +55,11 @@ Dependencies:
     'network/kaccounts-integration': '@latest-kf6'
 
 RuntimeDependencies:
-- 'on': ['@all']
-  'require':
-    'plasma/plasma-integration' : '@same'
-- 'on': ['Linux']
-  'require':
+ - 'on': ['@all']
+   'require':
+    'plasma/plasma-integration': '@same'
+ - 'on': ['Linux']
+   'require':
     'frameworks/kded': '@latest-kf6'
     'frameworks/qqc2-desktop-style': '@latest-kf6'
     'network/kio-extras': '@latest-kf6'
@@ -67,5 +67,6 @@ RuntimeDependencies:
     'sdk/selenium-webdriver-at-spi': '@latest-kf6'
 
 Options:
-  ctest-arguments: '--repeat until-pass:5'
-  require-passing-tests-on: [ '@all' ]
+ ctest-arguments: '--repeat until-pass:5'
+ require-passing-tests-on: ['@all']
+ xml-validate-ignore: ['kcms/keyboard/tests/config/base.bad.xml']
