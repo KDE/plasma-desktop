@@ -286,23 +286,30 @@ FocusScope {
                     currentIndex = -1;
                 }
 
-                Keys.onLeftPressed: event => {
-                    if (itemGrid.currentCol() !== 0) {
-                        event.accepted = true;
-                        moveCurrentIndexLeft();
-                    } else {
-                        itemGrid.keyNavLeft();
-                    }
-                }
+                Keys.onPressed: (event) => {
+                    let backArrowKey = (event.key === Qt.Key_Left && Application.layoutDirection === Qt.LeftToRight) ||
+                        (event.key === Qt.Key_Right && Application.layoutDirection === Qt.RightToLeft)
+                    let forwardArrowKey = (event.key === Qt.Key_Right && Application.layoutDirection === Qt.LeftToRight) ||
+                        (event.key === Qt.Key_Left && Application.layoutDirection === Qt.RightToLeft)
 
-                Keys.onRightPressed: event => {
-                    var columns = Math.floor(width / cellWidth);
+                    if (backArrowKey) {
+                        if (itemGrid.currentCol() !== 0) {
+                            // GridView move..() already handles RtL
+                            (event.key === Qt.Key_Left) ? moveCurrentIndexLeft() : moveCurrentIndexRight();
+                        } else {
+                            itemGrid.keyNavLeft();
+                        }
+                        event.accepted = true
+                    } else if (forwardArrowKey) {
+                        var columns = Math.floor(width / cellWidth);
 
-                    if (itemGrid.currentCol() !== columns - 1 && currentIndex !== count -1) {
-                        event.accepted = true;
-                        moveCurrentIndexRight();
-                    } else {
-                        itemGrid.keyNavRight();
+                        if (itemGrid.currentCol() !== columns - 1 && currentIndex !== count -1) {
+                            // GridView move..() already handles RtL
+                            (event.key === Qt.Key_Left) ? moveCurrentIndexLeft() : moveCurrentIndexRight()
+                        } else {
+                            itemGrid.keyNavRight();
+                        }
+                        event.accepted = true
                     }
                 }
 
