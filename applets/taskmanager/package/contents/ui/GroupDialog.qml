@@ -138,7 +138,7 @@ PlasmaCore.Dialog {
 
                 onCountChanged: {
                     if (count > 0) {
-                        backend.cancelHighlightWindows()
+                        tasks.cancelHighlightWindows()
                     } else {
                         groupDialog.visible = false;
                     }

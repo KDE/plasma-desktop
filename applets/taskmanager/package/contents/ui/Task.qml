@@ -202,7 +202,7 @@ PlasmaCore.ToolTipArea {
 
     onHighlightedChanged: {
         // ensure it doesn't get stuck with a window highlighted
-        backend.cancelHighlightWindows();
+        tasks.cancelHighlightWindows();
     }
 
     onPidChanged: updateAudioStreams({delay: false})
@@ -450,7 +450,7 @@ PlasmaCore.ToolTipArea {
                 }
             }
 
-            backend.cancelHighlightWindows();
+            tasks.cancelHighlightWindows();
         }
     }
 

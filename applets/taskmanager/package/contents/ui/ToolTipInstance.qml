@@ -182,7 +182,7 @@ ColumnLayout {
                 Layout.topMargin: -headerItem.Layout.margins
                 icon.name: "window-close"
                 onClicked: {
-                    backend.cancelHighlightWindows();
+                    tasks.cancelHighlightWindows();
                     tasksModel.requestClose(root.submodelIndex);
                 }
             }

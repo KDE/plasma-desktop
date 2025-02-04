@@ -24,7 +24,6 @@ add_library(taskmanagerplugin SHARED ${taskmanagerplugin_SRCS})
 # FIXME Cleanup no longer used libs.
 target_link_libraries(taskmanagerplugin
                       Qt::Core
-                      Qt::DBus
                       Qt::Qml
                       Qt::Quick
                       Plasma::Activities

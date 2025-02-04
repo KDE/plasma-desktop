@@ -25,13 +25,6 @@
 #include <QAction>
 #include <QActionGroup>
 #include <QApplication>
-#include <QDBusConnection>
-#include <QDBusConnectionInterface>
-#include <QDBusMessage>
-#include <QDBusMetaType>
-#include <QDBusPendingCall>
-#include <QDBusReply>
-#include <QDBusServiceWatcher>
 #include <QJsonArray>
 #include <QMenu>
 #include <QQuickItem>
@@ -53,19 +46,10 @@ namespace KAStats = KActivities::Stats;
 using namespace KAStats;
 using namespace KAStats::Terms;
 
-static const QString highlightWindowName = QStringLiteral("org.kde.KWin.HighlightWindow");
-static const QString highlightWindowPath = QStringLiteral("/org/kde/KWin/HighlightWindow");
-static const QString &highlightWindowInterface = highlightWindowName;
-
-static const QString appViewName = QStringLiteral("org.kde.KWin.Effect.WindowView1");
-static const QString appViewPath = QStringLiteral("/org/kde/KWin/Effect/WindowView1");
-static const QString &appViewInterface = appViewName;
-
 static constexpr int NoApplications = 2; // kactivitymanager StatsPlugin WhatToRemember.
 
 Backend::Backend(QObject *parent)
     : QObject(parent)
-    , m_highlightWindows(false)
     , m_actionGroup(new QActionGroup(this))
     , m_activityManagerPluginsSettingsWatcher(KConfigWatcher::create(m_activityManagerPluginsSettings.sharedConfig()))
 {
@@ -82,22 +66,6 @@ Backend::Backend(QObject *parent)
 
 Backend::~Backend()
 {
-}
-
-bool Backend::highlightWindows() const
-{
-    return m_highlightWindows;
-}
-
-void Backend::setHighlightWindows(bool highlight)
-{
-    if (highlight != m_highlightWindows) {
-        m_highlightWindows = highlight;
-
-        updateWindowHighlight();
-
-        Q_EMIT highlightWindowsChanged();
-    }
 }
 
 QUrl Backend::tryDecodeApplicationsUrl(const QUrl &launcherUrl)
@@ -502,18 +470,6 @@ QRect Backend::globalRect(QQuickItem *item) const
     return iconRect;
 }
 
-void Backend::activateWindowView(const QVariant &_winIds)
-{
-    if (!m_windowsToHighlight.isEmpty()) {
-        m_windowsToHighlight.clear();
-        updateWindowHighlight();
-    }
-
-    auto message = QDBusMessage::createMethodCall(appViewName, appViewPath, appViewInterface, QStringLiteral("activate"));
-    message << _winIds.toStringList();
-    QDBusConnection::sessionBus().asyncCall(message);
-}
-
 bool Backend::isApplication(const QUrl &url) const
 {
     if (!url.isValid() || !url.isLocalFile()) {
@@ -528,12 +484,6 @@ bool Backend::isApplication(const QUrl &url) const
 
     KDesktopFile desktopFile(localPath);
     return desktopFile.hasApplicationType();
-}
-
-void Backend::cancelHighlightWindows()
-{
-    m_windowsToHighlight.clear();
-    updateWindowHighlight();
 }
 
 qint64 Backend::parentPid(qint64 pid) const
@@ -561,28 +511,6 @@ qint64 Backend::parentPid(qint64 pid) const
     }
 
     return -1;
-}
-
-void Backend::windowsHovered(const QVariant &_winIds, bool hovered)
-{
-    m_windowsToHighlight.clear();
-
-    if (hovered) {
-        m_windowsToHighlight = _winIds.toStringList();
-    }
-
-    // Avoid flickering when scrolling in the tooltip
-    QTimer::singleShot(0, this, &Backend::updateWindowHighlight);
-}
-
-void Backend::updateWindowHighlight()
-{
-    if (!m_highlightWindows) {
-        return;
-    }
-    auto message = QDBusMessage::createMethodCall(highlightWindowName, highlightWindowPath, highlightWindowInterface, QStringLiteral("highlightWindows"));
-    message << m_windowsToHighlight;
-    QDBusConnection::sessionBus().asyncCall(message);
 }
 
 #include "moc_backend.cpp"
