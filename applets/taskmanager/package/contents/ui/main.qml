@@ -425,8 +425,8 @@ PlasmoidItem {
                 top: parent.top
             }
 
-            height: taskList.childrenRect.height
-            width: taskList.childrenRect.width
+            height: taskList.height
+            width: taskList.width
 
             TaskList {
                 id: taskList
