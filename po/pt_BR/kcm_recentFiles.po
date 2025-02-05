@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2025-02-02 10:46-0300\n"
+"PO-Revision-Date: 2025-02-04 08:44-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -126,8 +126,6 @@ msgstr "Lembrar dos documentos abertos:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_blockedByDefault)
 #: ui/RecentFiles.ui:128
-#, fuzzy, kde-format
-#| msgid "Blacklist applications not on the list"
+#, kde-format
 msgid "Exclude applications not on the list"
-msgstr ""
-"Incluir na lista de proibições todos os aplicativos que não estão na lista"
+msgstr "Excluir aplicativos que não estão na lista"

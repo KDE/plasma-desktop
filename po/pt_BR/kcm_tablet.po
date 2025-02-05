@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2021, 2022, 2023.
-# SPDX-FileCopyrightText: 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
+# SPDX-FileCopyrightText: 2024, 2025 Geraldo Simiao <geraldosimiao@fedoraproject.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-27 00:43+0000\n"
-"PO-Revision-Date: 2024-07-26 12:23-0300\n"
+"PO-Revision-Date: 2025-02-04 09:04-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -16,17 +16,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: inputsequence.cpp:172
 #, kde-format
 msgctxt "@action:button This action is disabled"
 msgid "Disabled"
-msgstr ""
+msgstr "Desabilitado"
 
 #: inputsequence.cpp:175
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "@action:button There is no keybinding"
 msgid "None"
 msgstr "Nenhum"
@@ -35,37 +34,36 @@ msgstr "Nenhum"
 #, kde-format
 msgctxt "@action:button"
 msgid "Left mouse button"
-msgstr ""
+msgstr "Botão esquerdo do mouse"
 
 #: inputsequence.cpp:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Right mouse button"
-msgstr ""
+msgstr "Botão direito do mouse"
 
 #: inputsequence.cpp:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Middle mouse button"
-msgstr ""
+msgstr "Botão do meio do mouse"
 
 #: inputsequence.cpp:192
 #, kde-format
 msgctxt "@action:button"
 msgid "Application-defined"
-msgstr ""
+msgstr "Definido pelo aplicativo"
 
 #: inputsequence.cpp:194
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pen Button %1"
-msgstr "Botão da caneta 1:"
+msgstr "Botão %1 da caneta"
 
 #: kcmtablet.cpp:35
 #, kde-format
 msgid "Default"
-msgstr ""
+msgstr "Padrão"
 
 #: kcmtablet.cpp:36
 #, kde-format
@@ -88,15 +86,14 @@ msgid "Inverted Landscape"
 msgstr "Paisagem invertida"
 
 #: kcmtablet.cpp:89
-#, fuzzy, kde-format
-#| msgid "Follow the active screen"
+#, kde-format
 msgid "Follow the Current Screen"
 msgstr "Seguir a tela ativa"
 
 #: kcmtablet.cpp:94
 #, kde-format
 msgid "All Screens"
-msgstr ""
+msgstr "Todas as telas"
 
 #: kcmtablet.cpp:103
 #, kde-format
@@ -108,78 +105,75 @@ msgstr "%1 - (%2,%3 %4×%5)"
 #, kde-format
 msgctxt "@item:inlistbox Stretch and fill to the screen"
 msgid "Stretch and Fill"
-msgstr ""
+msgstr "Esticar e preencher"
 
 #: kcmtablet.cpp:164 ui/DisplayTab.qml:93
 #, kde-format
 msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
 msgid "Keep Aspect Ratio and Fit"
-msgstr ""
+msgstr "Manter taxa de proporção e preencher"
 
 #: kcmtablet.cpp:165 ui/DisplayTab.qml:94
 #, kde-format
 msgctxt "@item:inlistbox Map to portion of the screen"
 msgid "Map to Portion"
-msgstr ""
+msgstr "Mapear para porção"
 
 #: kcmtablet.cpp:263
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
-msgstr "Botão da caneta 1:"
+msgstr "Botão %1 da caneta:"
 
 #: kcmtablet.cpp:264
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button X'"
 msgid "pen button %1"
-msgstr "Botão da caneta 1:"
+msgstr "botão %1 da caneta"
 
 #: ui/ActionDialog.qml:25
 #, kde-format
 msgctxt "@title Select the action for the tablet button"
 msgid "Select Button Action"
-msgstr ""
+msgstr "Selecione a ação do botão"
 
 #: ui/ActionDialog.qml:74
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when pressing %1:"
-msgstr ""
+msgstr "Escolha que ação será tomada ao pressionar %1:"
 
 #: ui/ActionDialog.qml:88
 #, kde-format
 msgctxt "@option:radio Set this action to an application-defined type"
 msgid "Defer to application"
-msgstr ""
+msgstr "Deixar o aplicativo decidir"
 
 #: ui/ActionDialog.qml:103
 #, kde-format
 msgctxt "@option:radio Set this action to a keyboard type"
 msgid "Send keyboard key"
-msgstr ""
+msgstr "Enviar tecla do teclado"
 
 #: ui/ActionDialog.qml:117
 #, kde-format
 msgctxt "@option:radio Set this action to a mouse type"
 msgid "Send mouse button click"
-msgstr ""
+msgstr "Enviar clique do mouse"
 
 #: ui/ActionDialog.qml:132
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "@option:radio Set this action to a pen button type"
 msgid "Send pen button"
-msgstr "Botão da caneta 1:"
+msgstr "Enviar botão da caneta"
 
 #: ui/ActionDialog.qml:150
 #, kde-format
 msgctxt "@option:radio Disable this action"
 msgid "Do nothing"
-msgstr ""
+msgstr "Não fazer nada"
 
 #: ui/ActionDialog.qml:170
 #, kde-format
@@ -188,81 +182,80 @@ msgid ""
 "This tablet button is forwarded to the focused application, which can decide "
 "how to handle it."
 msgstr ""
+"Este botão do tablet é repassado ao aplicativo em foco, que pode decidir o "
+"que fazer com ele."
 
 #: ui/ActionDialog.qml:198
 #, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left-click"
-msgstr ""
+msgstr "Clique esquerdo"
 
 #: ui/ActionDialog.qml:199
 #, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle-click"
-msgstr ""
+msgstr "Clique do meio"
 
 #: ui/ActionDialog.qml:200
 #, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right-click"
-msgstr ""
+msgstr "Clique direito"
 
 #: ui/ActionDialog.qml:227
 #, kde-format
 msgctxt "@option:check The ctrl modifier on the keyboard"
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 #: ui/ActionDialog.qml:234
 #, kde-format
 msgctxt "@option:check The alt modifier on the keyboard"
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: ui/ActionDialog.qml:241
 #, kde-format
 msgctxt "@option:check The meta modifier on the keyboard"
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: ui/ActionDialog.qml:248
 #, kde-format
 msgctxt "@option:check The shift modifier on the keyboard"
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 #: ui/ActionDialog.qml:264
-#, fuzzy, kde-format
-#| msgid "Tool Button 1"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
-msgstr "Botão de ferramenta 1"
+msgstr "Botão 1"
 
 #: ui/ActionDialog.qml:265
-#, fuzzy, kde-format
-#| msgid "Pen button 2:"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
-msgstr "Botão da caneta 2:"
+msgstr "Botão 2"
 
 #: ui/ActionDialog.qml:266
-#, fuzzy, kde-format
-#| msgid "Pen button 3:"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
-msgstr "Botão da caneta 3:"
+msgstr "Botão 3"
 
 #: ui/ActionDialog.qml:275
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
-msgstr ""
+msgstr "Este botão está desativado e não fará nada."
 
 #: ui/Calibration.qml:31
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
-msgstr ""
+msgstr "Calibração de caneta"
 
 #: ui/Calibration.qml:90
 #, kde-kuit-format
@@ -271,6 +264,8 @@ msgid ""
 "Calibration is completed and saved.<nl/><nl/>Refine the calibration further "
 "or close the window."
 msgstr ""
+"A calibração foi completada e salva.<nl/><nl/>Continue refinando a "
+"calibração ou feche a janela."
 
 #: ui/Calibration.qml:91
 #, kde-kuit-format
@@ -279,35 +274,37 @@ msgid ""
 "Tap the center of each target.<nl/><nl/>Aim for the point where the stylus "
 "tip lands, and ignore the cursor position on the screen."
 msgstr ""
+"Toque o centro de cada alvo.<nl/><nl/>Mire no ponto onde a ponta da caneta "
+"toca, e ignore a posição do cursor na tela."
 
 #: ui/Calibration.qml:97
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
-msgstr ""
+msgstr "Refinar calibração existente"
 
 #: ui/Calibration.qml:106
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
-msgstr ""
+msgstr "Calibrar do zero"
 
 #: ui/Calibration.qml:120
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "Fechar"
 
 #: ui/Calibration.qml:120
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #: ui/DisplayTab.qml:41
 #, kde-format
 msgid "Map to screen:"
-msgstr ""
+msgstr "Mapear para tela:"
 
 #: ui/DisplayTab.qml:67
 #, kde-format
@@ -317,12 +314,12 @@ msgstr "Orientação:"
 #: ui/DisplayTab.qml:73
 #, kde-format
 msgid "Not Applicable"
-msgstr ""
+msgstr "Não aplicável"
 
 #: ui/DisplayTab.qml:87
 #, kde-format
 msgid "Mapped Area:"
-msgstr ""
+msgstr "Área mapeada:"
 
 #: ui/ExternalScreenMapping.qml:110
 #, kde-format
@@ -337,22 +334,18 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
 #: ui/ExternalScreenMapping.qml:190
-#, fuzzy, kde-format
-#| msgid "Resize the tablet area"
+#, kde-format
 msgid "Resize the screen area"
-msgstr "Redimensionar a área do tablet"
+msgstr "Redimensionar a área da tela"
 
 #: ui/ExternalScreenMapping.qml:265
-#, fuzzy, kde-format
-#| msgctxt "tablet area position - size"
-#| msgid "%1,%2 - %3×%4"
+#, kde-format
 msgctxt "tablet area position - size"
 msgid "%1%,%2% - %3%×%4%"
-msgstr "%1,%2 - %3×%4"
+msgstr "%1%,%2% - %3%×%4%"
 
 #: ui/ExternalScreenMapping.qml:299
-#, fuzzy, kde-format
-#| msgid "Resize the tablet area"
+#, kde-format
 msgid "Resize the tablet area"
 msgstr "Redimensionar a área do tablet"
 
@@ -367,11 +360,10 @@ msgid "Connect a drawing tablet"
 msgstr "Conectar a um tablet de desenho"
 
 #: ui/main.qml:48
-#, fuzzy, kde-format
-#| msgid "Tablet"
+#, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr "Tablet"
+msgstr "Testar tablet…"
 
 #: ui/main.qml:97
 #, kde-format
@@ -383,21 +375,19 @@ msgstr "Dispositivo:"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
-msgstr ""
+msgstr "Exibir"
 
 #: ui/main.qml:169
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
-msgstr ""
+msgstr "Caneta"
 
 #: ui/main.qml:181
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The pad we are configuring"
-#| msgid "Pad:"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
-msgstr "Pad:"
+msgstr "Painel"
 
 #: ui/PadTab.qml:33
 #, kde-format
@@ -405,17 +395,15 @@ msgid "Pad button %1:"
 msgstr "Botão do pad %1:"
 
 #: ui/PadTab.qml:36
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad button %1"
-msgstr "Botão do pad %1:"
+msgstr "botão %1 do painel"
 
 #: ui/StylusTab.qml:31
-#, fuzzy, kde-format
-#| msgid "Left-handed mode:"
+#, kde-format
 msgid "Left-handed mode:"
 msgstr "Modo canhoto:"
 
@@ -423,7 +411,7 @@ msgstr "Modo canhoto:"
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
-msgstr ""
+msgstr "Habilitar"
 
 #: ui/StylusTab.qml:43
 #, kde-kuit-format
@@ -433,35 +421,38 @@ msgid ""
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
+"Instrui o dispositivo a acomodar usuários canhotos. Os efeitos variam de "
+"acordo com o dispositivo, mas geralmente invertem a funcionalidade dos "
+"botões do painel, permitindo que o tablet seja usado de cabeça para baixo."
 
 #: ui/StylusTab.qml:102
 #, kde-format
 msgid "Pen Pressure:"
-msgstr ""
+msgstr "Pressão da caneta:"
 
 #: ui/StylusTab.qml:162
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:170
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:181
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: ui/StylusTab.qml:189
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
-msgstr ""
+msgstr "0%"
 
 #: ui/StylusTab.qml:193
 #, kde-format
@@ -470,12 +461,14 @@ msgid ""
 "This curve controls the relationship between the pressure on the stylus and "
 "the pressure values received by applications."
 msgstr ""
+"Esta curva controla a relação entre a pressão exercida sobre a caneta e os "
+"valores de pressão recebidos pelos aplicativos."
 
 #: ui/StylusTab.qml:198
 #, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
-msgstr ""
+msgstr "Faixa de pressão:"
 
 #: ui/StylusTab.qml:225
 #, kde-format
@@ -484,46 +477,47 @@ msgid ""
 "Pressure above or below the threshold will be clamped, and this becomes the "
 "new effective range."
 msgstr ""
+"A pressão acima ou abaixo do limite será fixada, se transformando na nova "
+"faixa efetiva."
 
 #: ui/StylusTab.qml:237
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
-msgstr ""
+msgstr "Calibração em progresso"
 
 #: ui/StylusTab.qml:239
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
-msgstr ""
+msgstr "Calibrar"
 
 #: ui/StylusTab.qml:242
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
-msgstr ""
+msgstr "Calibração não suportada"
 
 #: ui/Tester.qml:25
-#, fuzzy, kde-format
-#| msgid "Tablet"
+#, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
-msgstr "Tablet"
+msgstr "Testador de tablet"
 
 #: ui/Tester.qml:48
 #, kde-format
 msgid "Stylus press X=%1 Y=%2"
-msgstr ""
+msgstr "Pressionou-se a caneta em X=%1 Y=%2"
 
 #: ui/Tester.qml:58
 #, kde-format
 msgid "Stylus release X=%1 Y=%2"
-msgstr ""
+msgstr "Soltou-se a caneta em X=%1 Y=%2"
 
 #: ui/Tester.qml:68
 #, kde-format
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
-msgstr ""
+msgstr "Movimentação da caneta em X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
 #: ui/Tester.qml:205
 #, kde-format
@@ -533,12 +527,16 @@ msgid ""
 "# P - pressure\n"
 "# TX,TY - tilt\n"
 msgstr ""
+"## Legenda:\n"
+"# X, Y - coordenada do evento\n"
+"# P - pressão\n"
+"# TX,TY - inclinação\n"
 
 #: ui/Tester.qml:211
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"
-msgstr ""
+msgstr "Limpar"
 
 #~ msgid "None"
 #~ msgstr "Nenhum"

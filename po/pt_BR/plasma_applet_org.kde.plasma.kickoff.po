@@ -5,13 +5,13 @@
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2014, 2015, 2016.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2017, 2018, 2019, 2021, 2022, 2023.
 # Thiago Masato Costa Sueto <herzenschein@gmail.com>, 2020.
-# SPDX-FileCopyrightText: 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
+# SPDX-FileCopyrightText: 2024, 2025 Geraldo Simiao <geraldosimiao@fedoraproject.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kickoff\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-25 02:37+0000\n"
-"PO-Revision-Date: 2024-11-14 13:41-0300\n"
+"PO-Revision-Date: 2025-02-04 08:51-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -103,30 +103,29 @@ msgid "Remove icon"
 msgstr "Remover ícone"
 
 #: package/contents/ui/ConfigGeneral.qml:120
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgid "Show applications as:"
-msgstr "Mostrar outros aplicativos:"
+msgstr "Mostrar os aplicativos como:"
 
 #: package/contents/ui/ConfigGeneral.qml:122
 #, kde-format
 msgid "Name only"
-msgstr ""
+msgstr "Apenas o nome"
 
 #: package/contents/ui/ConfigGeneral.qml:122
 #, kde-format
 msgid "Description only"
-msgstr ""
+msgstr "Apenas a descrição"
 
 #: package/contents/ui/ConfigGeneral.qml:122
 #, kde-format
 msgid "Name (Description)"
-msgstr ""
+msgstr "Nome (Descrição)"
 
 #: package/contents/ui/ConfigGeneral.qml:122
 #, kde-format
 msgid "Description (Name)"
-msgstr ""
+msgstr "Descrição (Nome)"
 
 #: package/contents/ui/ConfigGeneral.qml:132
 #, kde-format
@@ -178,7 +177,7 @@ msgstr "Desabilitar automaticamente no modo touch"
 #: package/contents/ui/ConfigGeneral.qml:192
 #, kde-format
 msgid "Switch sidebar categories when hovering over them"
-msgstr ""
+msgstr "Alternar as categorias da barra lateral ao passar o mouse sobre elas"
 
 #: package/contents/ui/ConfigGeneral.qml:198
 #, kde-format

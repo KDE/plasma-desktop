@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-25 02:37+0000\n"
-"PO-Revision-Date: 2025-02-02 10:45-0300\n"
+"PO-Revision-Date: 2025-02-04 08:45-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -150,21 +150,18 @@ msgid "Ignored applications:"
 msgstr "Aplicativos ignorados:"
 
 #: ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' executable names here (separated by commas or colons, for "
-#| "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
-"Escreva os nomes dos executáveis dos aplicativos aqui (separados por "
-"vírgulas ou dois pontos, por exemplo 'xterm:konsole' ou 'xterm,konsole') "
-"para preveni-los de iniciar automaticamente junto com os outros aplicativos "
-"restaurados na sessão."
+"Escreva o identificador de arquivo da área de trabalho ou, no X11, os nomes "
+"dos executáveis dos aplicativos aqui (separados por vírgulas ou dois pontos, "
+"por exemplo 'xterm:org.kde.konsole.desktop' ou 'xterm,org.kde.konsole."
+"desktop') para preveni-los de iniciar automaticamente junto com os outros "
+"aplicativos restaurados na sessão."
 
 #: ui/main.qml:138
 #, kde-format

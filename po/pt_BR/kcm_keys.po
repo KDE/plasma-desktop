@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-01 00:42+0000\n"
-"PO-Revision-Date: 2025-02-02 10:46-0300\n"
+"PO-Revision-Date: 2025-02-04 08:44-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -182,11 +182,10 @@ msgid "Application…"
 msgstr "Aplicativo…"
 
 #: ui/main.qml:180
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@action:menu accessible"
 msgid "Add new application"
-msgstr "Aplicativos"
+msgstr "Adicionar novo aplicativo"
 
 #: ui/main.qml:187
 #, kde-format
@@ -195,12 +194,10 @@ msgid "Command or Script…"
 msgstr "Comando ou script…"
 
 #: ui/main.qml:188
-#, fuzzy, kde-format
-#| msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
-#| msgid "Command or Script…"
+#, kde-format
 msgctxt "@action:menu accessible"
 msgid "Add new command or script"
-msgstr "Comando ou script…"
+msgstr "Adicionar novo comando ou script"
 
 #: ui/main.qml:224
 #, kde-format

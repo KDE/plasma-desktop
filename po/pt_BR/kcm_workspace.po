@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-30 02:33+0000\n"
-"PO-Revision-Date: 2025-02-02 10:44-0300\n"
+"PO-Revision-Date: 2025-02-04 08:46-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -215,9 +215,7 @@ msgid "Double-click interval:"
 msgstr "Intervalo do clique duplo:"
 
 #: ui/main.qml:392
-#, fuzzy, kde-format
-#| msgid "%1 msec"
-#| msgid_plural "%1 msec"
+#, kde-format
 msgctxt "short for millisecond(s)"
 msgid "%1 ms"
 msgid_plural "%1 ms"
@@ -225,8 +223,7 @@ msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
 #: ui/main.qml:396
-#, fuzzy, kde-format
-#| msgid "msec"
+#, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgstr "ms"
