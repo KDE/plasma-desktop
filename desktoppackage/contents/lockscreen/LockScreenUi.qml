@@ -108,7 +108,7 @@ Item {
         id: lockScreenRoot
 
         property bool uiVisible: false
-        property bool blockUI: mainStack.depth > 1 || mainBlock.mainPasswordBox.text.length > 0 || inputPanel.keyboardActive
+        property bool blockUI: containsMouse && (mainStack.depth > 1 || mainBlock.mainPasswordBox.text.length > 0 || inputPanel.keyboardActive)
 
         x: parent.x
         y: parent.y
@@ -134,6 +134,9 @@ Item {
             } else {
                 fadeoutTimer.restart();
             }
+        }
+        onExited: {
+            uiVisible = false;
         }
         Keys.onEscapePressed: {
             // If the escape key is pressed, kscreenlocker will turn off the screen.
