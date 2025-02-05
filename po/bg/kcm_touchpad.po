@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-01 00:42+0000\n"
-"PO-Revision-Date: 2024-12-24 16:15+0100\n"
+"PO-Revision-Date: 2025-02-04 13:15+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -217,10 +217,9 @@ msgid "Pointer speed:"
 msgstr "Скорост на показалеца:"
 
 #: ui/main.qml:303
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgid "Enable pointer acceleration"
-msgstr "Ускорение на показалеца:"
+msgstr "Активиране на ускорение на показалеца"
 
 #: ui/main.qml:318
 #, kde-format
@@ -228,6 +227,8 @@ msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
+"Когато е активирано, разстоянието на движение на показалеца се увеличава с "
+"увеличаване на скоростта на движение."
 
 #: ui/main.qml:328
 #, kde-format

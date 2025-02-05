@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-31 00:42+0000\n"
+"POT-Creation-Date: 2025-02-05 00:43+0000\n"
 "PO-Revision-Date: 2017-04-07 00:51+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -831,7 +831,7 @@ msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "Dostupan u %1|/|Dostupan u $[lok %1]"
 
-#: plugin/backend.cpp:315
+#: plugin/backend.cpp:283
 #, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place"
@@ -841,46 +841,46 @@ msgstr[1] "Još %1 mesta"
 msgstr[2] "Još %1 mesta"
 msgstr[3] "Još %1 mesto"
 
-#: plugin/backend.cpp:399
+#: plugin/backend.cpp:367
 #, fuzzy, kde-format
 #| msgid "Forget Recent Documents"
 msgid "Recent Downloads"
 msgstr "Zaboravi nedavne dokumente"
 
-#: plugin/backend.cpp:401
+#: plugin/backend.cpp:369
 #, fuzzy, kde-format
 #| msgid "Forget Recent Documents"
 msgid "Recent Connections"
 msgstr "Zaboravi nedavne dokumente"
 
-#: plugin/backend.cpp:403
+#: plugin/backend.cpp:371
 #, fuzzy, kde-format
 #| msgid "Forget Recent Documents"
 msgid "Recent Places"
 msgstr "Zaboravi nedavne dokumente"
 
-#: plugin/backend.cpp:412
+#: plugin/backend.cpp:380
 #, fuzzy, kde-format
 #| msgid "Forget Recent Documents"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
 msgstr "Zaboravi nedavne dokumente"
 
-#: plugin/backend.cpp:414
+#: plugin/backend.cpp:382
 #, fuzzy, kde-format
 #| msgid "Forget Recent Documents"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
 msgstr "Zaboravi nedavne dokumente"
 
-#: plugin/backend.cpp:416
+#: plugin/backend.cpp:384
 #, fuzzy, kde-format
 #| msgid "Forget Recent Documents"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
 msgstr "Zaboravi nedavne dokumente"
 
-#: plugin/backend.cpp:418
+#: plugin/backend.cpp:386
 #, fuzzy, kde-format
 #| msgid "Forget Recent Documents"
 msgctxt "@action:inmenu"

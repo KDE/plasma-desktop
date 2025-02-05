@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-31 00:42+0000\n"
+"POT-Creation-Date: 2025-02-05 00:43+0000\n"
 "PO-Revision-Date: 2024-11-06 10:32+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: LUGOS\n"
@@ -774,7 +774,7 @@ msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "Na voljo na %1"
 
-#: plugin/backend.cpp:315
+#: plugin/backend.cpp:283
 #, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place"
@@ -784,40 +784,40 @@ msgstr[1] "Še %1 mesti"
 msgstr[2] "Še %1 mesta"
 msgstr[3] "Še %1 mest"
 
-#: plugin/backend.cpp:399
+#: plugin/backend.cpp:367
 #, kde-format
 msgid "Recent Downloads"
 msgstr "Nedavni prejemi"
 
-#: plugin/backend.cpp:401
+#: plugin/backend.cpp:369
 #, kde-format
 msgid "Recent Connections"
 msgstr "Nedavne povezave"
 
-#: plugin/backend.cpp:403
+#: plugin/backend.cpp:371
 #, kde-format
 msgid "Recent Places"
 msgstr "Nedavne lokacije"
 
-#: plugin/backend.cpp:412
+#: plugin/backend.cpp:380
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
 msgstr "Pozabi nedavne prejeme"
 
-#: plugin/backend.cpp:414
+#: plugin/backend.cpp:382
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
 msgstr "Pozabi nedavne povezave"
 
-#: plugin/backend.cpp:416
+#: plugin/backend.cpp:384
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
 msgstr "Pozabi nedavne lokacije"
 
-#: plugin/backend.cpp:418
+#: plugin/backend.cpp:386
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"

@@ -3,13 +3,13 @@
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2010, 2011.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-01 00:42+0000\n"
-"PO-Revision-Date: 2024-11-30 12:55+0100\n"
+"PO-Revision-Date: 2025-02-04 13:16+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -202,20 +202,18 @@ msgid "Pointer speed:"
 msgstr "Скорост на показалеца:"
 
 #: ui/main.qml:233
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgid "Enable pointer acceleration"
-msgstr "Ускорение показалеца на мишката:"
+msgstr "Активиране на ускорение на показалеца"
 
 #: ui/main.qml:247
-#, fuzzy, kde-format
-#| msgid "Cursor travel distance depends on the mouse movement speed."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
-"Разстоянието на движение на курсора зависи от скоростта на движение на "
-"мишката."
+"Когато е активирано, разстоянието на движение на показалеца се увеличава с "
+"увеличаване на скоростта на движение."
 
 #: ui/main.qml:257
 #, kde-format

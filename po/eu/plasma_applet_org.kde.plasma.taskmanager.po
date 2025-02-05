@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-31 00:42+0000\n"
+"POT-Creation-Date: 2025-02-05 00:43+0000\n"
 "PO-Revision-Date: 2024-11-06 18:33+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -772,7 +772,7 @@ msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "%1(e)(a)n erabilgarri"
 
-#: plugin/backend.cpp:315
+#: plugin/backend.cpp:283
 #, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place"
@@ -780,40 +780,40 @@ msgid_plural "%1 more Places"
 msgstr[0] "Leku %1 gehiago"
 msgstr[1] "%1 leku gehiago"
 
-#: plugin/backend.cpp:399
+#: plugin/backend.cpp:367
 #, kde-format
 msgid "Recent Downloads"
 msgstr "Azken aldiko zama-jaitsierak"
 
-#: plugin/backend.cpp:401
+#: plugin/backend.cpp:369
 #, kde-format
 msgid "Recent Connections"
 msgstr "Azken aldiko konexioak"
 
-#: plugin/backend.cpp:403
+#: plugin/backend.cpp:371
 #, kde-format
 msgid "Recent Places"
 msgstr "Azken aldiko lekuak"
 
-#: plugin/backend.cpp:412
+#: plugin/backend.cpp:380
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
 msgstr "Ahaztu azken aldiko zama-jaitsierak"
 
-#: plugin/backend.cpp:414
+#: plugin/backend.cpp:382
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
 msgstr "Ahaztu azken aldiko konexioak"
 
-#: plugin/backend.cpp:416
+#: plugin/backend.cpp:384
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
 msgstr "Ahaztu azken aldiko lekuak"
 
-#: plugin/backend.cpp:418
+#: plugin/backend.cpp:386
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
