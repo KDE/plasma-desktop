@@ -129,6 +129,7 @@ public:
     void setCalibrationMatrix(const QMatrix4x4 &matrix)
     {
         m_calibrationMatrix.set(serializeMatrix(matrix));
+        m_calibrationMatrix.save();
     }
 
     bool calibrationMatrixIsDefault() const
