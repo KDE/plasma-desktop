@@ -19,27 +19,50 @@ class CalibrationTool : public QObject
 {
     Q_OBJECT
 
-    Q_PROPERTY(bool finishedCalibration READ finishedCalibration NOTIFY finishedCalibrationChanged)
+    Q_PROPERTY(State state READ state NOTIFY stateChanged)
     Q_PROPERTY(int currentTarget READ currentTarget NOTIFY currentTargetChanged)
     Q_PROPERTY(float width READ width WRITE setWidth NOTIFY widthChanged)
     Q_PROPERTY(float height READ height WRITE setHeight NOTIFY heightChanged)
+    Q_PROPERTY(int resetSecondsLeft READ resetSecondsLeft NOTIFY resetSecondsLeftChanged)
 
 public:
+    CalibrationTool();
+
     void setWidth(float width);
+
+    /**
+     * @return The width of the calibration window.
+     */
     float width() const;
 
     void setHeight(float height);
-    float height();
 
     /**
-     * @return Whether the calibration has finished. This happesn when all four points on screen are given.
+     * @return The height of the calibration window.
      */
-    bool finishedCalibration() const;
+    float height();
+
+    enum class State {
+        Calibrating, /**< The user is calibrating by touching each point. >*/
+        Confirming, /**< The user is confirming that their calibration works correctly. >*/
+        Testing, /**< The user is testing out their new calibration. >*/
+    };
+    Q_ENUM(State)
+
+    /**
+     * @return The current state of the tool.
+     */
+    State state() const;
 
     /**
      * @return The current target point index. If the calibration only just started, this would be 0 for example.
      */
     int currentTarget() const;
+
+    /**
+     * @return The seconds left in the reset counter.
+     */
+    int resetSecondsLeft() const;
 
 public Q_SLOTS:
     /**
@@ -72,14 +95,14 @@ public Q_SLOTS:
 
 Q_SIGNALS:
     /**
-     * @brief Called when finishedCalibration changed, which can happen either when resetting or finishing a calibration.
+     * @brief Called when the state changed.
      */
-    void finishedCalibrationChanged();
+    void stateChanged();
 
     /**
      * @brief Emitted when the calibration was finished, along with the resulting matrix.
      */
-    void finished(const QMatrix4x4 &matrix);
+    void calibrationCreated(const QMatrix4x4 &matrix);
 
     /**
      * @brief Emitted when the current target point changed. This happens regularly during calibration.
@@ -96,6 +119,16 @@ Q_SIGNALS:
      */
     void heightChanged();
 
+    /**
+     * @brief Emitted when the reset seconds left counter changes.
+     */
+    void resetSecondsLeftChanged();
+
+    /**
+     * @brief Emitted when the device should reset it's calibration matrix to the saved one.
+     */
+    void resetFromSaved();
+
 private:
     void checkIfFinished();
 
@@ -106,9 +139,11 @@ private:
     float m_height = 0.0f;
 
     int m_calibratedTargets = 0;
-    bool m_finishedCalibration = false;
+    State m_state = State::Calibrating;
     std::array<QPointF, 4> m_screenPoints;
     std::array<QPointF, 4> m_touchPoints;
+    int m_resetCountdown = 0;
+    QTimer m_resetTimer;
 
     ca_context *m_canberraContext = nullptr;
 };

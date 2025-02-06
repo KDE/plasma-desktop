@@ -25,7 +25,6 @@ InputDevice::InputDevice(const QString &dbusName, QObject *parent)
     connect(this, &InputDevice::inputAreaChanged, this, &InputDevice::needsSaveChanged);
     connect(this, &InputDevice::pressureRangeMinChanged, this, &InputDevice::needsSaveChanged);
     connect(this, &InputDevice::pressureRangeMaxChanged, this, &InputDevice::needsSaveChanged);
-    connect(this, &InputDevice::calibrationMatrixChanged, this, &InputDevice::needsSaveChanged);
 }
 
 void InputDevice::save()
@@ -40,13 +39,12 @@ void InputDevice::save()
     m_inputArea.save();
     m_pressureRangeMin.save();
     m_pressureRangeMax.save();
-    m_calibrationMatrix.save();
 }
 
 bool InputDevice::isSaveNeeded() const
 {
     return m_leftHanded.changed() || m_orientation.changed() || m_outputName.changed() || m_outputArea.changed() || m_enabled.changed()
-        || m_mapToWorkspace.changed() || m_pressureCurve.changed() || m_inputArea.changed() || m_pressureRangeMin.changed() || m_pressureRangeMax.changed() || m_calibrationMatrix.changed();
+        || m_mapToWorkspace.changed() || m_pressureCurve.changed() || m_inputArea.changed() || m_pressureRangeMin.changed() || m_pressureRangeMax.changed();
 }
 
 void InputDevice::defaults()
@@ -82,7 +80,6 @@ void InputDevice::load()
     m_inputArea.resetFromSaved();
     m_pressureRangeMin.resetFromSaved();
     m_pressureRangeMax.resetFromSaved();
-    m_calibrationMatrix.resetFromSaved();
 }
 
 void InputDevice::setOrientation(int ori)
