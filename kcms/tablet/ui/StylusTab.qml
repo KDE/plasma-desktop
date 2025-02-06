@@ -226,54 +226,78 @@ Kirigami.FormLayout {
         }
     }
 
+    RowLayout {
+        spacing: Kirigami.Units.smallSpacing
 
-    QQC2.Button {
-        // TODO: don't allow calibration across multiple screens again
-        readonly property bool supportsCalibration: root.device.supportsCalibrationMatrix
+        QQC2.Button {
+            // TODO: don't allow calibration across multiple screens again
+            readonly property bool supportsCalibration: root.device.supportsCalibrationMatrix
 
-        text: {
-            if (supportsCalibration) {
-                if (root.calibrationWindowOpen) {
-                    return i18nc("@action:button Calibration in progress", "Calibration in Progress");
-                } else {
-                    return i18nc("@action:button Calibrate the pen display", "Calibrate");
-                }
-            } else {
-                return i18nc("@action:button Pen display doesn't support calibration", "Calibration Not Supported");
-            }
-        }
-        icon.name: "crosshairs"
-        enabled: supportsCalibration && !root.calibrationWindowOpen
-        onClicked: {
-            const component = Qt.createComponent("Calibration.qml");
-            if (component.status === Component.Ready) {
-                let screenIndex = 0;
-                for (let i = 0; i < Qt.application.screens.length; i++) {
-                    if (Qt.application.screens[i].name === root.device.outputName) {
-                        screenIndex = i;
-                        break;
+            text: {
+                if (supportsCalibration) {
+                    if (root.calibrationWindowOpen) {
+                        return i18nc("@action:button Calibration in progress", "Calibration in Progress");
+                    } else {
+                        return i18nc("@action:button Calibrate the pen display", "Calibrate");
                     }
+                } else {
+                    return i18nc("@action:button Pen display doesn't support calibration", "Calibration Not Supported");
                 }
+            }
+            icon.name: "crosshairs"
+            enabled: supportsCalibration && !root.calibrationWindowOpen
+            onClicked: {
+                const component = Qt.createComponent("Calibration.qml");
+                if (component.status === Component.Ready) {
+                    let screenIndex = 0;
+                    for (let i = 0; i < Qt.application.screens.length; i++) {
+                        if (Qt.application.screens[i].name === root.device.outputName) {
+                            screenIndex = i;
+                            break;
+                        }
+                    }
 
-                const window = component.createObject(root, {device: root.device, tabletEvents: root.tabletEvents});
-                // We need to show the window first, because Qt will override screen based on position.
-                // Working around QTBUG-129989
-                window.show();
-                // Then override the screen, try showing it again and now it'll be on the correct screen:
-                window.screen = Qt.application.screens[screenIndex];
-                window.showFullScreen();
-                window.closing.connect((close) => {
-                    root.calibrationWindow = null;
-                });
+                    const window = component.createObject(root, {device: root.device, tabletEvents: root.tabletEvents});
+                    // We need to show the window first, because Qt will override screen based on position.
+                    // Working around QTBUG-129989
+                    window.show();
+                    // Then override the screen, try showing it again and now it'll be on the correct screen:
+                    window.screen = Qt.application.screens[screenIndex];
+                    window.showFullScreen();
+                    window.closing.connect((close) => {
+                        root.calibrationWindow = null;
+                    });
 
-                root.currentCalibrationSysName = root.device.sysName;
-                root.calibrationWindow = window;
+                    root.currentCalibrationSysName = root.device.sysName;
+                    root.calibrationWindow = window;
+                }
+            }
+
+            SettingHighlighter {
+                highlight: !root.device.calibrationMatrixIsDefault
             }
         }
 
-        SettingHighlighter {
-            highlight: !root.device.calibrationMatrixIsDefault
+        QQC2.Button {
+            text: i18nc("@action:button", "Reset Custom Calibration")
+            icon.name: "edit-undo-symbolic"
+            enabled: !root.device.calibrationMatrixIsDefault
+            display: QQC2.AbstractButton.IconOnly
+
+            onClicked: root.device.resetCalibrationMatrix()
+
+            QQC2.ToolTip.text: text
+            QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+            QQC2.ToolTip.visible: hovered
         }
+    }
+
+    QQC2.Label {
+        text: i18nc("@info", "You have manually calibrated this tablet. If it's no longer working correctly, try resetting this first.")
+        visible: !root.device.calibrationMatrixIsDefault
+        textFormat: Text.PlainText
+        elide: Text.ElideRight
+        font: Kirigami.Theme.smallFont
     }
 
     ActionDialog {
