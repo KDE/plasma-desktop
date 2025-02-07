@@ -198,7 +198,7 @@ PlasmoidItem {
         readonly property int iconSize: Kirigami.Units.iconSizes.large
 
         readonly property var sizing: {
-            const displayedIcon = buttonIcon.valid ? buttonIcon : buttonIconFallback;
+            const displayedIcon = imageFallback.visible ? imageFallback : (buttonIcon.valid ? buttonIcon : buttonIconFallback);
 
             let impWidth = 0;
             if (shouldHaveIcon) {
@@ -284,7 +284,7 @@ PlasmoidItem {
                 source: Tools.iconOrDefault(Plasmoid.formFactor, Plasmoid.icon)
                 active: compactRoot.containsMouse || compactDragArea.containsDrag
                 roundToIconSize: implicitHeight === implicitWidth
-                visible: valid
+                visible: valid && !imageFallback.visible
             }
 
             Kirigami.Icon {
@@ -298,7 +298,25 @@ PlasmoidItem {
 
                 source: buttonIcon.valid ? null : Tools.defaultIconName
                 active: compactRoot.containsMouse || compactDragArea.containsDrag
-                visible: !buttonIcon.valid && Plasmoid.icon !== ""
+                visible: !buttonIcon.valid && Plasmoid.icon !== "" && !imageFallback.visible
+            }
+
+            Image {
+                id: imageFallback
+
+                readonly property bool nonSquareImage: sourceSize.width != sourceSize.height
+
+                visible: nonSquareImage && status == Image.Ready
+                source: Plasmoid.icon
+
+                Layout.fillWidth: kickoff.vertical
+                Layout.fillHeight: !kickoff.vertical
+                Layout.preferredWidth: kickoff.vertical ? -1 : height / (implicitHeight / implicitWidth)
+                Layout.preferredHeight: !kickoff.vertical ? -1 : width * (implicitHeight / implicitWidth)
+                Layout.maximumHeight: kickoff.vertical ? -1 : Kirigami.Units.iconSizes.huge
+                Layout.maximumWidth: kickoff.vertical ? Kirigami.Units.iconSizes.huge : -1
+                Layout.alignment: Qt.AlignVCenter | Qt.AlignHCenter
+                fillMode: Image.PreserveAspectFit
             }
 
             PC3.Label {
