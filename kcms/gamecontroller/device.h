@@ -8,6 +8,7 @@
 
 #include <QObject>
 #include <QVector2D>
+#include <QVector>
 
 #include <SDL2/SDL_events.h>
 #include <SDL2/SDL_joystick.h>
@@ -15,6 +16,9 @@
 class Device : public QObject
 {
     Q_OBJECT
+
+    Q_PROPERTY(QVector2D leftAxis READ leftAxisValue NOTIFY leftAxisChanged)
+    Q_PROPERTY(QVector2D rightAxis READ rightAxisValue NOTIFY rightAxisChanged)
 
 public:
     Device(int deviceIndex, QObject *parent = nullptr);
@@ -33,14 +37,16 @@ public:
     bool buttonState(int index) const;
 
     int axisCount() const;
-    int axisValue(int index) const;
+    QVector2D leftAxisValue() const;
+    QVector2D rightAxisValue() const;
 
     int hatCount() const;
     QVector2D hatPosition(int index) const;
 
 Q_SIGNALS:
     void buttonStateChanged(int index);
-    void axisValueChanged(int index);
+    void leftAxisChanged();
+    void rightAxisChanged();
     void hatPositionChanged(int index);
 
 private:
@@ -51,5 +57,7 @@ private:
     void onHatEvent(const SDL_JoyHatEvent &event);
 
     int m_deviceIndex = -1;
+    QVector2D m_leftAxis;
+    QVector2D m_rightAxis;
     SDL_Joystick *m_joystick = nullptr;
 };
