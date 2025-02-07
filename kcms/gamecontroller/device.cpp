@@ -24,6 +24,8 @@ bool Device::open()
     }
 
     m_joystick = SDL_JoystickOpen(m_deviceIndex);
+    m_leftTrigger = 0.0;
+    m_rightTrigger = 0.0;
 
     return m_joystick != nullptr;
 }
@@ -83,6 +85,16 @@ QVector2D Device::rightAxisValue() const
     return m_rightAxis;
 }
 
+float Device::leftTriggerValue() const
+{
+    return m_leftTrigger;
+}
+
+float Device::rightTriggerValue() const
+{
+    return m_rightTrigger;
+}
+
 int Device::hatCount() const
 {
     return SDL_JoystickNumHats(m_joystick);
@@ -128,6 +140,12 @@ void Device::onAxisEvent(const SDL_JoyAxisEvent &event)
     } else if (event.axis == SDL_CONTROLLER_AXIS_RIGHTY) {
         m_rightAxis.setY(value);
         Q_EMIT rightAxisChanged();
+    } else if (event.axis == SDL_CONTROLLER_AXIS_TRIGGERLEFT) {
+        m_leftTrigger = value;
+        Q_EMIT leftTriggerChanged();
+    } else if (event.axis == SDL_CONTROLLER_AXIS_TRIGGERRIGHT) {
+        m_rightTrigger = value;
+        Q_EMIT rightTriggerChanged();
     }
 }
 
