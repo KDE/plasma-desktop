@@ -73,7 +73,7 @@ public:
     int layoutRows() const;
     QSize pagerItemSize() const;
 
-    QList<QVariant> stackingOrder(const QModelIndex &window) const;
+    int stackingOrder(const QModelIndex &window) const;
 
     Q_INVOKABLE void refresh();
 
