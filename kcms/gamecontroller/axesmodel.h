@@ -34,6 +34,8 @@ public:
 private Q_SLOTS:
     void onLeftAxisChanged();
     void onRightAxisChanged();
+    void onLeftTriggerChanged();
+    void onRightTriggerChanged();
 
 private:
     Device *m_device = nullptr;

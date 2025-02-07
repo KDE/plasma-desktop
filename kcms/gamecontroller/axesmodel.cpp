@@ -10,6 +10,11 @@
 
 #include <KLocalizedString>
 
+#define kLeftAxisIndex 0
+#define kRightAxisIndex 2
+#define kLeftTriggerIndex 4
+#define kRightTriggerIndex 5
+
 AxesModel::AxesModel(QObject *parent)
     : QAbstractTableModel(parent)
 {
@@ -30,29 +35,45 @@ void AxesModel::setDevice(Device *device)
     if (m_device != nullptr) {
         disconnect(m_device, &Device::leftAxisChanged, this, &AxesModel::onLeftAxisChanged);
         disconnect(m_device, &Device::rightAxisChanged, this, &AxesModel::onRightAxisChanged);
+        disconnect(m_device, &Device::leftTriggerChanged, this, &AxesModel::onLeftTriggerChanged);
+        disconnect(m_device, &Device::rightTriggerChanged, this, &AxesModel::onRightTriggerChanged);
     }
     m_device = device;
     if (m_device != nullptr) {
         connect(m_device, &Device::leftAxisChanged, this, &AxesModel::onLeftAxisChanged);
         connect(m_device, &Device::rightAxisChanged, this, &AxesModel::onRightAxisChanged);
+        connect(m_device, &Device::leftTriggerChanged, this, &AxesModel::onLeftTriggerChanged);
+        connect(m_device, &Device::rightTriggerChanged, this, &AxesModel::onRightTriggerChanged);
     }
     endResetModel();
 }
 
 void AxesModel::onLeftAxisChanged()
 {
-    const QModelIndex changedIndex = this->index(0, 0);
+    const QModelIndex changedIndex = this->index(kLeftAxisIndex, 0);
     Q_EMIT dataChanged(changedIndex, changedIndex, {Qt::DisplayRole});
-    const QModelIndex changedIndex2 = this->index(1, 0);
+    const QModelIndex changedIndex2 = this->index(kLeftAxisIndex + 1, 0);
     Q_EMIT dataChanged(changedIndex2, changedIndex2, {Qt::DisplayRole});
 }
 
 void AxesModel::onRightAxisChanged()
 {
-    const QModelIndex changedIndex = this->index(2, 0);
+    const QModelIndex changedIndex = this->index(kRightAxisIndex, 0);
     Q_EMIT dataChanged(changedIndex, changedIndex, {Qt::DisplayRole});
-    const QModelIndex changedIndex2 = this->index(3, 0);
+    const QModelIndex changedIndex2 = this->index(kRightAxisIndex + 1, 0);
     Q_EMIT dataChanged(changedIndex2, changedIndex2, {Qt::DisplayRole});
+}
+
+void AxesModel::onLeftTriggerChanged()
+{
+    const QModelIndex changedIndex = this->index(kLeftTriggerIndex, 0);
+    Q_EMIT dataChanged(changedIndex, changedIndex, {Qt::DisplayRole});
+}
+
+void AxesModel::onRightTriggerChanged()
+{
+    const QModelIndex changedIndex = this->index(kRightTriggerIndex, 0);
+    Q_EMIT dataChanged(changedIndex, changedIndex, {Qt::DisplayRole});
 }
 
 int AxesModel::rowCount(const QModelIndex &parent) const
@@ -79,9 +100,16 @@ QVariant AxesModel::data(const QModelIndex &index, int role) const
     }
 
     if (index.column() == 0 && role == Qt::DisplayRole) {
-        // Use left axis for 0 and 1, right for 2 and 3
-        const QVector2D position = (index.row() == 0 || index.row() == 1) ? m_device->leftAxisValue() : m_device->rightAxisValue();
-        return QString::number(position[index.row() % 2]);
+        const auto row = index.row();
+        if (row < 4) {
+            // Use left axis for 0 and 1, right for 2 and 3
+            const QVector2D position = (row == 0 || row == 1) ? m_device->leftAxisValue() : m_device->rightAxisValue();
+            return QString::number(position[row % 2]);
+        } else if (row < 6) {
+            // Left trigger is row 4, right trigger is row 5
+            const float value = row == 4 ? m_device->leftTriggerValue() : m_device->rightTriggerValue();
+            return QString::number(value);
+        }
     }
 
     return {};
