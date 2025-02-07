@@ -24,6 +24,7 @@ bool Device::open()
     }
 
     m_joystick = SDL_JoystickOpen(m_deviceIndex);
+
     return m_joystick != nullptr;
 }
 
@@ -72,9 +73,14 @@ int Device::axisCount() const
     return SDL_JoystickNumAxes(m_joystick);
 }
 
-int Device::axisValue(int index) const
+QVector2D Device::leftAxisValue() const
 {
-    return SDL_JoystickGetAxis(m_joystick, index);
+    return m_leftAxis;
+}
+
+QVector2D Device::rightAxisValue() const
+{
+    return m_rightAxis;
 }
 
 int Device::hatCount() const
@@ -109,7 +115,20 @@ void Device::onButtonEvent(const SDL_JoyButtonEvent &event)
 
 void Device::onAxisEvent(const SDL_JoyAxisEvent &event)
 {
-    Q_EMIT axisValueChanged(event.axis);
+    const float value = static_cast<float>(event.value) / std::numeric_limits<Sint16>::max();
+    if (event.axis == SDL_CONTROLLER_AXIS_LEFTX) {
+        m_leftAxis.setX(value);
+        Q_EMIT leftAxisChanged();
+    } else if (event.axis == SDL_CONTROLLER_AXIS_LEFTY) {
+        m_leftAxis.setY(value);
+        Q_EMIT leftAxisChanged();
+    } else if (event.axis == SDL_CONTROLLER_AXIS_RIGHTX) {
+        m_rightAxis.setX(value);
+        Q_EMIT rightAxisChanged();
+    } else if (event.axis == SDL_CONTROLLER_AXIS_RIGHTY) {
+        m_rightAxis.setY(value);
+        Q_EMIT rightAxisChanged();
+    }
 }
 
 void Device::onHatEvent(const SDL_JoyHatEvent &event)
