@@ -136,6 +136,7 @@ KCM.SimpleKCM {
             QQC2.CheckBox {
                 id: dwt
                 text: i18nd("kcm_touchpad", "Disable while typing")
+                Accessible.description: dwtInfoLabel.text
                 leftPadding: deviceEnabled.contentItem.leftPadding
                 enabled: root.device?.supportsDisableWhileTyping ?? false
                 checked: enabled && (root.device?.disableWhileTyping ?? false)
@@ -155,6 +156,7 @@ KCM.SimpleKCM {
                 }
             }
             QQC2.Label {
+                id: dwtInfoLabel
                 Layout.fillWidth: true
                 leftPadding: dwt.leftPadding + dwt.contentItem.leftPadding
                 text: i18ndc("kcm_touchpad", "@label 'this' refers to the 'disable touchpad while typing' feature", "This can interfere with video games.")
@@ -639,10 +641,11 @@ KCM.SimpleKCM {
                 text: i18ndc("kcm_touchpad", "@option:radio touchpad integrated right-click", "Press bottom-right corner")
                 enabled: root.device?.supportsClickMethodAreas ?? false
                 checked: enabled && (root.device?.clickMethodAreas ?? false)
+                Accessible.description: rightClickMethodAreasInfoLabel.visible ? rightClickMethodAreasInfoLabel.text : ""
 
                 hoverEnabled: true
 
-                property string toolTipText:middleEmulation.checked
+                property string toolTipText: middleEmulation.checked
                     ? i18ndc("kcm_touchpad", "@info:tooltip", "Pressing the bottom right corner of your touchpad acts as right-click. Middle-click by simultaneously pressing the bottom left and bottom right corners.")
                     : i18ndc("kcm_touchpad", "@info:tooltip", "Pressing the bottom right corner of your touchpad acts as right-click. Middle-click by pressing the bottom central area.")
                 QQC2.ToolTip.text: toolTipText
@@ -651,6 +654,7 @@ KCM.SimpleKCM {
             }
 
             QQC2.Label {
+                id: rightClickMethodAreasInfoLabel
                 Layout.fillWidth: true
                 visible: !middleClickMethod.visible
                 leftPadding: rightClickMethodAreas.contentItem.leftPadding
@@ -675,6 +679,7 @@ KCM.SimpleKCM {
             QQC2.RadioButton {
                 id: rightClickMethodClickfinger
                 text: i18ndc("kcm_touchpad", "@option:radio touchpad integrated right-click", "Press touchpad with two fingers")
+                Accessible.description: rightClickMethodClickfingerInfoLabel.visible ? rightClickMethodClickfingerInfoLabel.text : ""
                 topPadding: Kirigami.Units.smallSpacing // in lieu of rightClickMethod.spacing
                 enabled: root.device?.supportsClickMethodClickfinger ?? false
                 checked: enabled && (root.device?.clickMethodClickfinger ?? false)
@@ -688,6 +693,7 @@ KCM.SimpleKCM {
             }
 
             QQC2.Label {
+                id: rightClickMethodClickfingerInfoLabel
                 Layout.fillWidth: true
                 visible: !middleClickMethod.visible
                 leftPadding: rightClickMethodClickfinger.contentItem.leftPadding
