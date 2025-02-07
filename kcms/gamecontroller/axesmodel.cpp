@@ -28,19 +28,31 @@ void AxesModel::setDevice(Device *device)
 
     beginResetModel();
     if (m_device != nullptr) {
-        disconnect(m_device, &Device::axisValueChanged, this, &AxesModel::onAxisValueChanged);
+        disconnect(m_device, &Device::leftAxisChanged, this, &AxesModel::onLeftAxisChanged);
+        disconnect(m_device, &Device::rightAxisChanged, this, &AxesModel::onRightAxisChanged);
     }
     m_device = device;
     if (m_device != nullptr) {
-        connect(m_device, &Device::axisValueChanged, this, &AxesModel::onAxisValueChanged);
+        connect(m_device, &Device::leftAxisChanged, this, &AxesModel::onLeftAxisChanged);
+        connect(m_device, &Device::rightAxisChanged, this, &AxesModel::onRightAxisChanged);
     }
     endResetModel();
 }
 
-void AxesModel::onAxisValueChanged(int index)
+void AxesModel::onLeftAxisChanged()
 {
-    const QModelIndex changedIndex = this->index(index, 0);
+    const QModelIndex changedIndex = this->index(0, 0);
     Q_EMIT dataChanged(changedIndex, changedIndex, {Qt::DisplayRole});
+    const QModelIndex changedIndex2 = this->index(1, 0);
+    Q_EMIT dataChanged(changedIndex2, changedIndex2, {Qt::DisplayRole});
+}
+
+void AxesModel::onRightAxisChanged()
+{
+    const QModelIndex changedIndex = this->index(2, 0);
+    Q_EMIT dataChanged(changedIndex, changedIndex, {Qt::DisplayRole});
+    const QModelIndex changedIndex2 = this->index(3, 0);
+    Q_EMIT dataChanged(changedIndex2, changedIndex2, {Qt::DisplayRole});
 }
 
 int AxesModel::rowCount(const QModelIndex &parent) const
@@ -67,7 +79,9 @@ QVariant AxesModel::data(const QModelIndex &index, int role) const
     }
 
     if (index.column() == 0 && role == Qt::DisplayRole) {
-        return QString::number(m_device->axisValue(index.row()));
+        // Use left axis for 0 and 1, right for 2 and 3
+        const QVector2D position = (index.row() == 0 || index.row() == 1) ? m_device->leftAxisValue() : m_device->rightAxisValue();
+        return QString::number(position[index.row() % 2]);
     }
 
     return {};
