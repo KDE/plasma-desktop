@@ -85,14 +85,26 @@ KCM.SimpleKCM {
                 Layout.alignment: Qt.AlignTop
 
                 QQC2.Label {
-                    text: i18nc("@label Visual representation of an axis position", "Position:")
+                    text: i18nc("@label Visual representation of the axis position for the left axis", "Left position:")
                     textFormat: Text.PlainText
                 }
 
                 PositionWidget {
-                    id: posWidget
+                    id: leftPosWidget
 
-                    device: root.gamepad
+                    device: root.device
+                    leftAxis: true
+                }
+                
+                QQC2.Label {
+                    text: i18nc("@label Visual representation of the axis position for the right axis", "Right position:")
+                    textFormat: Text.PlainText
+                }
+
+                PositionWidget {
+                    id: rightPosWidget
+                    device: root.device
+                    leftAxis: false
                 }
             }
 

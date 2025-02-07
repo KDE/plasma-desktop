@@ -18,11 +18,12 @@ Rectangle {
 
     required property var device
     readonly property color lightColor: Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.2)
+    required property bool leftAxis
 
     readonly property int markWidth: 5
 
-    readonly property real axisXValue: device !== null ? device.axisValue.x : 0
-    readonly property real axisYValue: device !== null ? device.axisValue.y : 0
+    readonly property real axisXValue: device !== null ? leftAxis ? device.leftAxis.x : device.rightAxis.x : 0
+    readonly property real axisYValue: device !== null ? leftAxis ? device.leftAxis.y : device.rightAxis.y : 0
 
     readonly property real axisX: (axisXValue * root.width / 2) + (root.width / 2)
     readonly property real axisY: (axisYValue * root.height / 2) + (root.height / 2)
