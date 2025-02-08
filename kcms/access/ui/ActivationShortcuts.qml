@@ -74,7 +74,7 @@ Kirigami.FormLayout {
 
             validator: IntValidatorWithSuffix {
                 bottom: spinbox.from
-                top: spinbox.top
+                top: spinbox.to
             }
             valueFromText: (text, locale) => {
                 return Number.fromLocaleString(locale, text.replace(i18ncp("short for minute(s)", "min", "min"), ""))

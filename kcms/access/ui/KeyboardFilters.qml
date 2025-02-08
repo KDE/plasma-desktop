@@ -58,7 +58,7 @@ Kirigami.FormLayout {
 
         validator: IntValidatorWithSuffix {
             bottom: slowKeyDelay.from
-            top: slowKeyDelay.top
+            top: slowKeyDelay.to
         }
 
         valueFromText: (text, locale) => {
@@ -158,7 +158,7 @@ Kirigami.FormLayout {
         }
         validator: IntValidatorWithSuffix {
             bottom: bounceKeysDelay.from
-            top: bounceKeysDelay.top
+            top: bounceKeysDelay.to
         }
         valueFromText: (text, locale) => {
             return Number.fromLocaleString(locale, text.replace(i18ncp("short for millisecond(s)", "ms", "ms"), ""))
