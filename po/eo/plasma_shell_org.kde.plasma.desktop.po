@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-27 00:42+0000\n"
+"POT-Creation-Date: 2025-02-08 00:42+0000\n"
 "PO-Revision-Date: 2025-01-11 22:49+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -452,80 +452,96 @@ msgstr "Maldiafana"
 msgid "Translucent"
 msgstr "Diafana"
 
-#: contents/configuration/PanelConfiguration.qml:479
-#, kde-format
+#: contents/configuration/PanelConfiguration.qml:480
+#, fuzzy, kde-format
+#| msgid "Floating"
+msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
 msgstr "Glita"
 
-#: contents/configuration/PanelConfiguration.qml:489
+#: contents/configuration/PanelConfiguration.qml:494
 #, kde-format
-msgid "Style"
-msgstr "Stilo"
+msgctxt "@item:inlistbox Option to disable floating panels or applets"
+msgid "Disabled"
+msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:529
+#: contents/configuration/PanelConfiguration.qml:495
+#, kde-format
+msgctxt "@item:inlistbox Option to make only panel applets always float"
+msgid "Applets only"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:496
+#, fuzzy, kde-format
+#| msgid "Manage Panels and Desktops"
+msgctxt "@item:inlistbox Option to make panel and applets floating"
+msgid "Panel and applets"
+msgstr "Administri Panelojn kaj Labortablojn"
+
+#: contents/configuration/PanelConfiguration.qml:539
 #, kde-format
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
 msgstr "Ripari ĝin"
 
-#: contents/configuration/PanelConfiguration.qml:615
+#: contents/configuration/PanelConfiguration.qml:625
 #, kde-format
 msgid "Panel Width:"
 msgstr "Panel-Larĝeco:"
 
-#: contents/configuration/PanelConfiguration.qml:616
+#: contents/configuration/PanelConfiguration.qml:626
 #, kde-format
 msgid "Panel Height:"
 msgstr "Panel-Larĝeco:"
 
-#: contents/configuration/PanelConfiguration.qml:639
+#: contents/configuration/PanelConfiguration.qml:649
 #, kde-format
 msgid "Focus shortcut:"
 msgstr "Fokus-ŝparvojo:"
 
-#: contents/configuration/PanelConfiguration.qml:650
+#: contents/configuration/PanelConfiguration.qml:660
 #, kde-format
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Premu ĉi tiun klavkombinon por movi fokuson al la Panelo"
 
-#: contents/configuration/PanelConfiguration.qml:684
+#: contents/configuration/PanelConfiguration.qml:694
 #, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Forigi Panelon"
 
-#: contents/configuration/PanelConfiguration.qml:687
+#: contents/configuration/PanelConfiguration.qml:697
 #, kde-format
 msgid "Remove this panel; this action is undo-able"
 msgstr "Forigi ĉi panelon; tiu ago estas malfarebla"
 
-#: contents/configuration/PanelConfiguration.qml:696
+#: contents/configuration/PanelConfiguration.qml:706
 #, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
 msgstr "Kloni Panelon"
 
-#: contents/configuration/PanelConfiguration.qml:700
+#: contents/configuration/PanelConfiguration.qml:710
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
 msgstr "Krei novan panelon kun la samaj metoj kaj apletoj"
 
-#: contents/configuration/PanelConfiguration.qml:709
+#: contents/configuration/PanelConfiguration.qml:719
 #, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Fermi"
 
-#: contents/configuration/PanelConfiguration.qml:709
+#: contents/configuration/PanelConfiguration.qml:719
 #, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
 msgstr "Eliri Redaktan Reĝimon"
 
-#: contents/configuration/PanelConfiguration.qml:712
+#: contents/configuration/PanelConfiguration.qml:722
 #, kde-format
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "Fermi fenestron de Panelagordoj kaj forlasi Redaktan Reĝimon"
@@ -830,10 +846,13 @@ msgstr "Pli"
 msgid "Exit Edit Mode"
 msgstr "Eliri Redaktan Reĝimon"
 
-#: contents/views/Panel.qml:316
+#: contents/views/Panel.qml:318
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Panelfokusa Indikilo"
+
+#~ msgid "Style"
+#~ msgstr "Stilo"
 
 #~ msgctxt "@title"
 #~ msgid "About"

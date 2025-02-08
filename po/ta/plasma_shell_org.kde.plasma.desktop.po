@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-27 00:42+0000\n"
+"POT-Creation-Date: 2025-02-08 00:42+0000\n"
 "PO-Revision-Date: 2025-01-26 16:47+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -448,80 +448,97 @@ msgstr "ஒளி புகாத‍து"
 msgid "Translucent"
 msgstr "ஒளிபுகக்கூடியது"
 
-#: contents/configuration/PanelConfiguration.qml:479
-#, kde-format
+#: contents/configuration/PanelConfiguration.qml:480
+#, fuzzy, kde-format
+#| msgid "Floating"
+msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
 msgstr "மிதப்பது"
 
-#: contents/configuration/PanelConfiguration.qml:489
-#, kde-format
-msgid "Style"
-msgstr "வகை"
+#: contents/configuration/PanelConfiguration.qml:494
+#, fuzzy, kde-format
+#| msgid "%1 (disabled)"
+msgctxt "@item:inlistbox Option to disable floating panels or applets"
+msgid "Disabled"
+msgstr "%1 (முடக்கப்பட்டுள்ளது)"
 
-#: contents/configuration/PanelConfiguration.qml:529
+#: contents/configuration/PanelConfiguration.qml:495
+#, kde-format
+msgctxt "@item:inlistbox Option to make only panel applets always float"
+msgid "Applets only"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:496
+#, fuzzy, kde-format
+#| msgid "Manage Panels and Desktops"
+msgctxt "@item:inlistbox Option to make panel and applets floating"
+msgid "Panel and applets"
+msgstr "பலகைகளையும் பணிமேடைகளையும் நிர்வகி"
+
+#: contents/configuration/PanelConfiguration.qml:539
 #, kde-format
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
 msgstr "இதை சரிசெய்"
 
-#: contents/configuration/PanelConfiguration.qml:615
+#: contents/configuration/PanelConfiguration.qml:625
 #, kde-format
 msgid "Panel Width:"
 msgstr "பலகையின் அகலம்:"
 
-#: contents/configuration/PanelConfiguration.qml:616
+#: contents/configuration/PanelConfiguration.qml:626
 #, kde-format
 msgid "Panel Height:"
 msgstr "பலகையின் உயரம்:"
 
-#: contents/configuration/PanelConfiguration.qml:639
+#: contents/configuration/PanelConfiguration.qml:649
 #, kde-format
 msgid "Focus shortcut:"
 msgstr "குவியப்படுத்தும் சுருக்குவழி:"
 
-#: contents/configuration/PanelConfiguration.qml:650
+#: contents/configuration/PanelConfiguration.qml:660
 #, kde-format
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "பலகையை குவியப்படுத்த இந்த விசைச் சுருக்குவழியை அழுத்துங்கள்"
 
-#: contents/configuration/PanelConfiguration.qml:684
+#: contents/configuration/PanelConfiguration.qml:694
 #, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "பலகையை நீக்கு"
 
-#: contents/configuration/PanelConfiguration.qml:687
+#: contents/configuration/PanelConfiguration.qml:697
 #, kde-format
 msgid "Remove this panel; this action is undo-able"
 msgstr "பலகையை நீக்கும்; இச்செயலை செயல்நீக்கலாம்"
 
-#: contents/configuration/PanelConfiguration.qml:696
+#: contents/configuration/PanelConfiguration.qml:706
 #, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
 msgstr "பலகையின் நகலை உருவாக்கு"
 
-#: contents/configuration/PanelConfiguration.qml:700
+#: contents/configuration/PanelConfiguration.qml:710
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
 msgstr "இதே அமைப்புகளையும் பிளாஸ்மாய்டுகளையும் கொண்டுள்ள புதிய பலகையை உருவாக்கும்"
 
-#: contents/configuration/PanelConfiguration.qml:709
+#: contents/configuration/PanelConfiguration.qml:719
 #, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "மூடு"
 
-#: contents/configuration/PanelConfiguration.qml:709
+#: contents/configuration/PanelConfiguration.qml:719
 #, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
 msgstr "திருத்தும் பயன்முறையிலிருந்து வெளியேறு"
 
-#: contents/configuration/PanelConfiguration.qml:712
+#: contents/configuration/PanelConfiguration.qml:722
 #, kde-format
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "பலகை அமைப்புகளை மூடி திருத்தும் பயன்முறையிலிருந்து வெளியேறும்"
@@ -825,10 +842,13 @@ msgstr "மேலும்"
 msgid "Exit Edit Mode"
 msgstr "திருத்தும் பயன்முறையிலிருந்து வெளியேறு"
 
-#: contents/views/Panel.qml:316
+#: contents/views/Panel.qml:318
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "பலகைக் குவியக்காட்டி"
+
+#~ msgid "Style"
+#~ msgstr "வகை"
 
 #~ msgctxt "@title"
 #~ msgid "About"
@@ -986,9 +1006,6 @@ msgstr "பலகைக் குவியக்காட்டி"
 
 #~ msgid "Makes the panel remain attached to the edge of the screen."
 #~ msgstr "பலகையை திரையின் ஓரத்துடன் இணைந்துள்ளவாறு அமைக்கும்."
-
-#~ msgid "%1 (disabled)"
-#~ msgstr "%1 (முடக்கப்பட்டுள்ளது)"
 
 #~ msgid "Appearance"
 #~ msgstr "தோற்றம்"

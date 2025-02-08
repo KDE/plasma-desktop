@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-27 00:42+0000\n"
+"POT-Creation-Date: 2025-02-08 00:42+0000\n"
 "PO-Revision-Date: 2024-12-24 19:04+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -449,80 +449,97 @@ msgstr "불투명"
 msgid "Translucent"
 msgstr "반투명"
 
-#: contents/configuration/PanelConfiguration.qml:479
-#, kde-format
+#: contents/configuration/PanelConfiguration.qml:480
+#, fuzzy, kde-format
+#| msgid "Floating"
+msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
 msgstr "떠다님"
 
-#: contents/configuration/PanelConfiguration.qml:489
-#, kde-format
-msgid "Style"
-msgstr "스타일"
+#: contents/configuration/PanelConfiguration.qml:494
+#, fuzzy, kde-format
+#| msgid "%1 (disabled)"
+msgctxt "@item:inlistbox Option to disable floating panels or applets"
+msgid "Disabled"
+msgstr "%1(사용 안 함)"
 
-#: contents/configuration/PanelConfiguration.qml:529
+#: contents/configuration/PanelConfiguration.qml:495
+#, kde-format
+msgctxt "@item:inlistbox Option to make only panel applets always float"
+msgid "Applets only"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:496
+#, fuzzy, kde-format
+#| msgid "Panel and Desktop Management"
+msgctxt "@item:inlistbox Option to make panel and applets floating"
+msgid "Panel and applets"
+msgstr "패널과 바탕 화면 관리"
+
+#: contents/configuration/PanelConfiguration.qml:539
 #, kde-format
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
 msgstr "고치기"
 
-#: contents/configuration/PanelConfiguration.qml:615
+#: contents/configuration/PanelConfiguration.qml:625
 #, kde-format
 msgid "Panel Width:"
 msgstr "패널 너비:"
 
-#: contents/configuration/PanelConfiguration.qml:616
+#: contents/configuration/PanelConfiguration.qml:626
 #, kde-format
 msgid "Panel Height:"
 msgstr "패널 높이:"
 
-#: contents/configuration/PanelConfiguration.qml:639
+#: contents/configuration/PanelConfiguration.qml:649
 #, kde-format
 msgid "Focus shortcut:"
 msgstr "포커스 단축키:"
 
-#: contents/configuration/PanelConfiguration.qml:650
+#: contents/configuration/PanelConfiguration.qml:660
 #, kde-format
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "패널에 포커스를 맞추려면 이 키보드 단축키를 누르십시오"
 
-#: contents/configuration/PanelConfiguration.qml:684
+#: contents/configuration/PanelConfiguration.qml:694
 #, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "패널 삭제"
 
-#: contents/configuration/PanelConfiguration.qml:687
+#: contents/configuration/PanelConfiguration.qml:697
 #, kde-format
 msgid "Remove this panel; this action is undo-able"
 msgstr "이 패널을 삭제합니다. 실행 취소할 수 없습니다"
 
-#: contents/configuration/PanelConfiguration.qml:696
+#: contents/configuration/PanelConfiguration.qml:706
 #, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
 msgstr "패널 복제"
 
-#: contents/configuration/PanelConfiguration.qml:700
+#: contents/configuration/PanelConfiguration.qml:710
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
 msgstr "같은 설정과 애플릿을 사용하여 새 패널 만들기"
 
-#: contents/configuration/PanelConfiguration.qml:709
+#: contents/configuration/PanelConfiguration.qml:719
 #, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "닫기"
 
-#: contents/configuration/PanelConfiguration.qml:709
+#: contents/configuration/PanelConfiguration.qml:719
 #, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
 msgstr "편집 모드 끝내기"
 
-#: contents/configuration/PanelConfiguration.qml:712
+#: contents/configuration/PanelConfiguration.qml:722
 #, kde-format
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "패널 설정 창을 닫고 편집 모드 끝내기"
@@ -829,10 +846,13 @@ msgstr "더 보기"
 msgid "Exit Edit Mode"
 msgstr "편집 모드 끝내기"
 
-#: contents/views/Panel.qml:316
+#: contents/views/Panel.qml:318
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "패널 포커스 표시기"
+
+#~ msgid "Style"
+#~ msgstr "스타일"
 
 #~ msgctxt "@title"
 #~ msgid "About"
@@ -945,9 +965,6 @@ msgstr "패널 포커스 표시기"
 #~| msgid "Windows Can Cover"
 #~ msgid "Windows In Front"
 #~ msgstr "창이 덮을 수 있음"
-
-#~ msgid "%1 (disabled)"
-#~ msgstr "%1(사용 안 함)"
 
 #~ msgid "Appearance"
 #~ msgstr "모양"

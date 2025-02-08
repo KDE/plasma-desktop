@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-27 00:42+0000\n"
+"POT-Creation-Date: 2025-02-08 00:42+0000\n"
 "PO-Revision-Date: 2025-01-07 15:10+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -451,80 +451,96 @@ msgstr "Mat"
 msgid "Translucent"
 msgstr "Yarısaydam"
 
-#: contents/configuration/PanelConfiguration.qml:479
-#, kde-format
+#: contents/configuration/PanelConfiguration.qml:480
+#, fuzzy, kde-format
+#| msgid "Floating"
+msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
 msgstr "Yüzer"
 
-#: contents/configuration/PanelConfiguration.qml:489
+#: contents/configuration/PanelConfiguration.qml:494
 #, kde-format
-msgid "Style"
-msgstr "Biçem"
+msgctxt "@item:inlistbox Option to disable floating panels or applets"
+msgid "Disabled"
+msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:529
+#: contents/configuration/PanelConfiguration.qml:495
+#, kde-format
+msgctxt "@item:inlistbox Option to make only panel applets always float"
+msgid "Applets only"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:496
+#, fuzzy, kde-format
+#| msgid "Manage Panels and Desktops"
+msgctxt "@item:inlistbox Option to make panel and applets floating"
+msgid "Panel and applets"
+msgstr "Masaüstlerini ve Panelleri Yönet"
+
+#: contents/configuration/PanelConfiguration.qml:539
 #, kde-format
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
 msgstr "Onar"
 
-#: contents/configuration/PanelConfiguration.qml:615
+#: contents/configuration/PanelConfiguration.qml:625
 #, kde-format
 msgid "Panel Width:"
 msgstr "Panel genişliği:"
 
-#: contents/configuration/PanelConfiguration.qml:616
+#: contents/configuration/PanelConfiguration.qml:626
 #, kde-format
 msgid "Panel Height:"
 msgstr "Panel yüksekliği:"
 
-#: contents/configuration/PanelConfiguration.qml:639
+#: contents/configuration/PanelConfiguration.qml:649
 #, kde-format
 msgid "Focus shortcut:"
 msgstr "Odak kısayolu:"
 
-#: contents/configuration/PanelConfiguration.qml:650
+#: contents/configuration/PanelConfiguration.qml:660
 #, kde-format
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Odağı panele taşımak için bu klavye kısayolunu kullan"
 
-#: contents/configuration/PanelConfiguration.qml:684
+#: contents/configuration/PanelConfiguration.qml:694
 #, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Paneli Sil"
 
-#: contents/configuration/PanelConfiguration.qml:687
+#: contents/configuration/PanelConfiguration.qml:697
 #, kde-format
 msgid "Remove this panel; this action is undo-able"
 msgstr "Bu paneli kaldır; bu eylem geri alınabilir"
 
-#: contents/configuration/PanelConfiguration.qml:696
+#: contents/configuration/PanelConfiguration.qml:706
 #, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
 msgstr "Paneli Klonla"
 
-#: contents/configuration/PanelConfiguration.qml:700
+#: contents/configuration/PanelConfiguration.qml:710
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
 msgstr "Aynı ayarlar ve uygulamacıklar ile yeni bir panel oluştur"
 
-#: contents/configuration/PanelConfiguration.qml:709
+#: contents/configuration/PanelConfiguration.qml:719
 #, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Kapat"
 
-#: contents/configuration/PanelConfiguration.qml:709
+#: contents/configuration/PanelConfiguration.qml:719
 #, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
 msgstr "Düzenleme Kipinden Çık"
 
-#: contents/configuration/PanelConfiguration.qml:712
+#: contents/configuration/PanelConfiguration.qml:722
 #, kde-format
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "Panel ayarlarını kapat ve düzenleme kipinden çık"
@@ -828,10 +844,13 @@ msgstr "Daha Fazla"
 msgid "Exit Edit Mode"
 msgstr "Düzenleme Kipinden Çık"
 
-#: contents/views/Panel.qml:316
+#: contents/views/Panel.qml:318
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Panel Odağı Göstergesi"
+
+#~ msgid "Style"
+#~ msgstr "Biçem"
 
 #~ msgctxt "@title"
 #~ msgid "About"

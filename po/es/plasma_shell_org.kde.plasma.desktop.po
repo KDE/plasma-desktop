@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-27 00:42+0000\n"
+"POT-Creation-Date: 2025-02-08 00:42+0000\n"
 "PO-Revision-Date: 2025-01-07 19:49+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -457,80 +457,97 @@ msgstr "Opaco"
 msgid "Translucent"
 msgstr "Transparente"
 
-#: contents/configuration/PanelConfiguration.qml:479
-#, kde-format
+#: contents/configuration/PanelConfiguration.qml:480
+#, fuzzy, kde-format
+#| msgid "Floating"
+msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
 msgstr "Flotante"
 
-#: contents/configuration/PanelConfiguration.qml:489
-#, kde-format
-msgid "Style"
-msgstr "Estilo"
+#: contents/configuration/PanelConfiguration.qml:494
+#, fuzzy, kde-format
+#| msgid "%1 (disabled)"
+msgctxt "@item:inlistbox Option to disable floating panels or applets"
+msgid "Disabled"
+msgstr "%1 (desactivada)"
 
-#: contents/configuration/PanelConfiguration.qml:529
+#: contents/configuration/PanelConfiguration.qml:495
+#, kde-format
+msgctxt "@item:inlistbox Option to make only panel applets always float"
+msgid "Applets only"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:496
+#, fuzzy, kde-format
+#| msgid "Manage Panels and Desktops"
+msgctxt "@item:inlistbox Option to make panel and applets floating"
+msgid "Panel and applets"
+msgstr "Gestión de paneles y escritorios"
+
+#: contents/configuration/PanelConfiguration.qml:539
 #, kde-format
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
 msgstr "Corregir"
 
-#: contents/configuration/PanelConfiguration.qml:615
+#: contents/configuration/PanelConfiguration.qml:625
 #, kde-format
 msgid "Panel Width:"
 msgstr "Anchura del panel:"
 
-#: contents/configuration/PanelConfiguration.qml:616
+#: contents/configuration/PanelConfiguration.qml:626
 #, kde-format
 msgid "Panel Height:"
 msgstr "Altura del panel:"
 
-#: contents/configuration/PanelConfiguration.qml:639
+#: contents/configuration/PanelConfiguration.qml:649
 #, kde-format
 msgid "Focus shortcut:"
 msgstr "Atajo de teclado para enfocar:"
 
-#: contents/configuration/PanelConfiguration.qml:650
+#: contents/configuration/PanelConfiguration.qml:660
 #, kde-format
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Pulse este atajo de teclado de teclado para mover el foco al panel"
 
-#: contents/configuration/PanelConfiguration.qml:684
+#: contents/configuration/PanelConfiguration.qml:694
 #, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Borrar el panel"
 
-#: contents/configuration/PanelConfiguration.qml:687
+#: contents/configuration/PanelConfiguration.qml:697
 #, kde-format
 msgid "Remove this panel; this action is undo-able"
 msgstr "Eliminar este panel (esta acción se puede deshacer)"
 
-#: contents/configuration/PanelConfiguration.qml:696
+#: contents/configuration/PanelConfiguration.qml:706
 #, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
 msgstr "Clonar panel"
 
-#: contents/configuration/PanelConfiguration.qml:700
+#: contents/configuration/PanelConfiguration.qml:710
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
 msgstr "Crear un nuevo panel con las mismos ajustes y miniaplicaciones"
 
-#: contents/configuration/PanelConfiguration.qml:709
+#: contents/configuration/PanelConfiguration.qml:719
 #, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Cerrar"
 
-#: contents/configuration/PanelConfiguration.qml:709
+#: contents/configuration/PanelConfiguration.qml:719
 #, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
 msgstr "Salir del modo de edición"
 
-#: contents/configuration/PanelConfiguration.qml:712
+#: contents/configuration/PanelConfiguration.qml:722
 #, kde-format
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr ""
@@ -835,10 +852,13 @@ msgstr "Más"
 msgid "Exit Edit Mode"
 msgstr "Salir del modo de edición"
 
-#: contents/views/Panel.qml:316
+#: contents/views/Panel.qml:318
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Indicador de foco del panel"
+
+#~ msgid "Style"
+#~ msgstr "Estilo"
 
 #~ msgctxt "@title"
 #~ msgid "About"
@@ -1017,9 +1037,6 @@ msgstr "Indicador de foco del panel"
 
 #~ msgid "Makes the panel remain attached to the edge of the screen."
 #~ msgstr "Hace que el panel permanezca anclado al borde de la pantalla."
-
-#~ msgid "%1 (disabled)"
-#~ msgstr "%1 (desactivada)"
 
 #~ msgid "Appearance"
 #~ msgstr "Aspecto visual"

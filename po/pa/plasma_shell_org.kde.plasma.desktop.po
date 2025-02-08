@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-27 00:42+0000\n"
+"POT-Creation-Date: 2025-02-08 00:42+0000\n"
 "PO-Revision-Date: 2024-10-01 21:44-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -447,81 +447,98 @@ msgstr "ਧੁੰਦਲਾ"
 msgid "Translucent"
 msgstr "ਬਲੌਰੀਪਨ"
 
-#: contents/configuration/PanelConfiguration.qml:479
-#, kde-format
+#: contents/configuration/PanelConfiguration.qml:480
+#, fuzzy, kde-format
+#| msgid "Floating"
+msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
 msgstr "ਤਰਦਾ"
 
-#: contents/configuration/PanelConfiguration.qml:489
-#, kde-format
-msgid "Style"
-msgstr "ਸਟਾਈਲ"
+#: contents/configuration/PanelConfiguration.qml:494
+#, fuzzy, kde-format
+#| msgid "%1 (disabled)"
+msgctxt "@item:inlistbox Option to disable floating panels or applets"
+msgid "Disabled"
+msgstr "%1 (ਅਸਮਰੱਥ ਹੈ)"
 
-#: contents/configuration/PanelConfiguration.qml:529
+#: contents/configuration/PanelConfiguration.qml:495
+#, kde-format
+msgctxt "@item:inlistbox Option to make only panel applets always float"
+msgid "Applets only"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:496
+#, fuzzy, kde-format
+#| msgid "Panel and Desktop Management"
+msgctxt "@item:inlistbox Option to make panel and applets floating"
+msgid "Panel and applets"
+msgstr "ਪੈਨਲ ਅਤੇ ਡੈਸਕਟਾਪ ਇੰਤਜ਼ਾਮ"
+
+#: contents/configuration/PanelConfiguration.qml:539
 #, kde-format
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
 msgstr "ਇਹ ਠੀਕ ਕਰੋ"
 
-#: contents/configuration/PanelConfiguration.qml:615
+#: contents/configuration/PanelConfiguration.qml:625
 #, kde-format
 msgid "Panel Width:"
 msgstr "ਪੈਨਲ ਦੀ ਚੌੜਾਈ:"
 
-#: contents/configuration/PanelConfiguration.qml:616
+#: contents/configuration/PanelConfiguration.qml:626
 #, kde-format
 msgid "Panel Height:"
 msgstr "ਪੈਨਲ ਦੀ ਚੌੜਾਈ:"
 
-#: contents/configuration/PanelConfiguration.qml:639
+#: contents/configuration/PanelConfiguration.qml:649
 #, kde-format
 msgid "Focus shortcut:"
 msgstr "ਫੋਕਸ ਸ਼ਾਰਟਕੱਟ:"
 
-#: contents/configuration/PanelConfiguration.qml:650
+#: contents/configuration/PanelConfiguration.qml:660
 #, kde-format
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "ਫੋਕਸ ਨੂੰ ਪੈਨਲ ਉੱਤੇ ਭੇਜਣ ਲਈ ਇਸ ਕੀਬੋਰਡ ਸ਼ਾਰਟਕੱਟ ਨੂੰ ਦਬਾਓ"
 
-#: contents/configuration/PanelConfiguration.qml:684
+#: contents/configuration/PanelConfiguration.qml:694
 #, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "ਪੈਨਲ ਨੂੰ ਹਟਾਓ"
 
-#: contents/configuration/PanelConfiguration.qml:687
+#: contents/configuration/PanelConfiguration.qml:697
 #, kde-format
 msgid "Remove this panel; this action is undo-able"
 msgstr "ਇਹ ਪੈਨਲ ਹਟਾਓ; ਇਹ ਕਾਰਵਾਈ ਵਾਪਸ ਲੈਣ ਯੋਗ ਹੈ"
 
-#: contents/configuration/PanelConfiguration.qml:696
+#: contents/configuration/PanelConfiguration.qml:706
 #, fuzzy, kde-format
 #| msgid "Remove Panel"
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
 msgstr "ਪੈਨਲ ਨੂੰ ਹਟਾਓ"
 
-#: contents/configuration/PanelConfiguration.qml:700
+#: contents/configuration/PanelConfiguration.qml:710
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:709
+#: contents/configuration/PanelConfiguration.qml:719
 #, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "ਬੰਦ ਕਰੋ"
 
-#: contents/configuration/PanelConfiguration.qml:709
+#: contents/configuration/PanelConfiguration.qml:719
 #, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
 msgstr "ਸੋਧ ਢੰਗ ਨੂੰ ਛੱਡੋ"
 
-#: contents/configuration/PanelConfiguration.qml:712
+#: contents/configuration/PanelConfiguration.qml:722
 #, kde-format
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "ਪੈਨਲ ਸੈਟਿੰਗ ਵਿੰਡੋ ਨੂੰ ਬੰਦ ਕਰੋ ਅਤੇ ਸੋਧ ਢੰਗ ਵਿੱਚੋਂ ਬਾਹਰ ਜਾਓ"
@@ -827,10 +844,13 @@ msgstr "ਹੋਰ"
 msgid "Exit Edit Mode"
 msgstr "ਸੋਧ ਢੰਗ ਨੂੰ ਛੱਡੋ"
 
-#: contents/views/Panel.qml:316
+#: contents/views/Panel.qml:318
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "ਪੈਨਲ ਫੋਕਸ ਸੰਕੇਤਕ"
+
+#~ msgid "Style"
+#~ msgstr "ਸਟਾਈਲ"
 
 #~ msgctxt "@title"
 #~ msgid "About"
@@ -890,9 +910,6 @@ msgstr "ਪੈਨਲ ਫੋਕਸ ਸੰਕੇਤਕ"
 #~| msgid "Windows Can Cover"
 #~ msgid "Windows In Front"
 #~ msgstr "ਵਿੰਡੋ ਢੱਕ ਸਕਦੀਆਂ ਹਨ"
-
-#~ msgid "%1 (disabled)"
-#~ msgstr "%1 (ਅਸਮਰੱਥ ਹੈ)"
 
 #~ msgid "Appearance"
 #~ msgstr "ਦਿੱਖ"
