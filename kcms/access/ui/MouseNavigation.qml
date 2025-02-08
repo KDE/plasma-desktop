@@ -54,7 +54,7 @@ Kirigami.FormLayout {
         }
         validator: IntValidatorWithSuffix {
             bottom: accelerationDelay.from
-            top: accelerationDelay.top
+            top: accelerationDelay.to
         }
 
         valueFromText: (text, locale) => {
@@ -78,7 +78,7 @@ Kirigami.FormLayout {
 
         validator: IntValidatorWithSuffix {
             bottom: repeatInterval.from
-            top: repeatInterval.top
+            top: repeatInterval.to
         }
         textFromValue: function(value, locale) {
             return i18np("%1 ms", "%1 ms", value)
@@ -104,7 +104,7 @@ Kirigami.FormLayout {
         onValueChanged: kcm.mouseSettings.accelerationTime = value
         validator: IntValidatorWithSuffix {
             bottom: accelerationTime.from
-            top: accelerationTime.top
+            top: accelerationTime.to
         }
         textFromValue: function(value, locale) {
             return i18np("%1 ms", "%1 ms", value)
