@@ -23,6 +23,7 @@ KSvg.FrameSvgItem {
     width: osdItem.width + margins.left + margins.right
     height: osdItem.height + margins.top + margins.bottom
     imagePath: "dialogs/background"
+    layer.enabled: opacity < 1 // prevent opacity layering of ProgressBar.
 
     Kirigami.Theme.inherit: false
     Kirigami.Theme.colorSet: Kirigami.Theme.Window
@@ -46,13 +47,13 @@ KSvg.FrameSvgItem {
     SequentialAnimation {
         id: hideAnimation
         // prevent press and hold from flickering
-        PauseAnimation { duration: Kirigami.Units.shortDuration }
+        PauseAnimation { duration: osd.timeout }
         NumberAnimation {
             target: osd
             property: "opacity"
             from: 1
             to: 0
-            duration: osd.timeout
+            duration: Kirigami.Units.shortDuration
             easing.type: Easing.InQuad
         }
         ScriptAction {
