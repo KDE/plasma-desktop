@@ -45,14 +45,18 @@ KSvg.FrameSvgItem {
 
     SequentialAnimation {
         id: hideAnimation
+        ScriptAction {
+            // prevent opacity layering of ProgressBar.
+            script: osd.layer.enabled = true
+        }
         // prevent press and hold from flickering
-        PauseAnimation { duration: Kirigami.Units.shortDuration }
+        PauseAnimation { duration: osd.timeout }
         NumberAnimation {
             target: osd
             property: "opacity"
             from: 1
             to: 0
-            duration: osd.timeout
+            duration: Kirigami.Units.shortDuration
             easing.type: Easing.InQuad
         }
         ScriptAction {
@@ -61,6 +65,7 @@ KSvg.FrameSvgItem {
                 osd.opacity = 1;
                 osd.icon = "";
                 osd.osdValue = 0;
+                osd.layer.enabled = false;
             }
         }
     }
