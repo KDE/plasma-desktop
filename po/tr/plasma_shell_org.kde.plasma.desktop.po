@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-08 00:42+0000\n"
-"PO-Revision-Date: 2025-01-07 15:10+0300\n"
+"PO-Revision-Date: 2025-02-08 09:20+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -452,8 +452,7 @@ msgid "Translucent"
 msgstr "Yarısaydam"
 
 #: contents/configuration/PanelConfiguration.qml:480
-#, fuzzy, kde-format
-#| msgid "Floating"
+#, kde-format
 msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
 msgstr "Yüzer"
@@ -462,20 +461,19 @@ msgstr "Yüzer"
 #, kde-format
 msgctxt "@item:inlistbox Option to disable floating panels or applets"
 msgid "Disabled"
-msgstr ""
+msgstr "Devre dışı"
 
 #: contents/configuration/PanelConfiguration.qml:495
 #, kde-format
 msgctxt "@item:inlistbox Option to make only panel applets always float"
 msgid "Applets only"
-msgstr ""
+msgstr "Yalnızca uygulamacıklar"
 
 #: contents/configuration/PanelConfiguration.qml:496
-#, fuzzy, kde-format
-#| msgid "Manage Panels and Desktops"
+#, kde-format
 msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
-msgstr "Masaüstlerini ve Panelleri Yönet"
+msgstr "Masaüstleri ve uygulamacıklar"
 
 #: contents/configuration/PanelConfiguration.qml:539
 #, kde-format

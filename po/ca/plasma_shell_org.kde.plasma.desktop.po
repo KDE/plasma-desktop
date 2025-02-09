@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-08 00:42+0000\n"
-"PO-Revision-Date: 2025-01-07 10:10+0100\n"
+"PO-Revision-Date: 2025-02-08 09:12+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -455,8 +455,7 @@ msgid "Translucent"
 msgstr "Translúcid"
 
 #: contents/configuration/PanelConfiguration.qml:480
-#, fuzzy, kde-format
-#| msgid "Floating"
+#, kde-format
 msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
 msgstr "Flotant"
@@ -465,20 +464,19 @@ msgstr "Flotant"
 #, kde-format
 msgctxt "@item:inlistbox Option to disable floating panels or applets"
 msgid "Disabled"
-msgstr ""
+msgstr "Desactivat"
 
 #: contents/configuration/PanelConfiguration.qml:495
 #, kde-format
 msgctxt "@item:inlistbox Option to make only panel applets always float"
 msgid "Applets only"
-msgstr ""
+msgstr "Només miniaplicacions"
 
 #: contents/configuration/PanelConfiguration.qml:496
-#, fuzzy, kde-format
-#| msgid "Manage Panels and Desktops"
+#, kde-format
 msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
-msgstr "Gestió de plafons i escriptoris"
+msgstr "Plafó i miniaplicacions"
 
 #: contents/configuration/PanelConfiguration.qml:539
 #, kde-format
@@ -853,10 +851,3 @@ msgstr "Surt del mode d'edició"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Indicador de focus del plafó"
-
-#~ msgid "Style"
-#~ msgstr "Estil"
-
-#~ msgctxt "@title"
-#~ msgid "About"
-#~ msgstr "Quant a"
