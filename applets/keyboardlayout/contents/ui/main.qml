@@ -22,11 +22,13 @@ PlasmoidItem {
     toolTipMainText: Plasmoid.title
     toolTipSubText: fullRepresentationItem ? fullRepresentationItem.layoutNames.longName : ""
 
+    property bool inEmbeddedContainment: Plasmoid.containment.containmentType === PlasmaCore.Containment.CustomEmbedded
+
     fullRepresentation: KeyboardLayoutSwitcher {
         id: switcher
 
         hoverEnabled: true
-        Plasmoid.status: hasMultipleKeyboardLayouts ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.HiddenStatus
+        Plasmoid.status: hasMultipleKeyboardLayouts ? PlasmaCore.Types.ActiveStatus : inEmbeddedContainment ? PlasmaCore.Types.HiddenStatus : PlasmaCore.Types.PassiveStatus
 
         PlasmaCore.ToolTipArea {
             anchors.fill: parent
