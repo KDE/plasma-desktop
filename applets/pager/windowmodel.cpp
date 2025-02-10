@@ -99,7 +99,7 @@ QVariant WindowModel::data(const QModelIndex &index, int role) const
         return windowGeo.intersected(clampingRect);
     } else if (role == StackingOrder) {
         const auto &winId = TaskFilterProxyModel::data(index, AbstractTasksModel::WinIdList);
-        const int z = d->pagerModel->stackingOrder(index).indexOf(winId);
+        const int z = d->pagerModel->stackingOrder(index);
 
         if (z != -1) {
             return z;

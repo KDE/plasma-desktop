@@ -358,9 +358,9 @@ QSize PagerModel::pagerItemSize() const
     return d->virtualGeometry.size();
 }
 
-QList<QVariant> PagerModel::stackingOrder(const QModelIndex &index) const
+int PagerModel::stackingOrder(const QModelIndex &index) const
 {
-    return index.data(TaskManager::AbstractTasksModel::StackingOrder).toList();
+    return index.data(TaskManager::AbstractTasksModel::StackingOrder).toInt();
 }
 
 void PagerModel::refresh()
