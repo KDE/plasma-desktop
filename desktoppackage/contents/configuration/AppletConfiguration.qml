@@ -351,7 +351,7 @@ Rectangle {
             id: messageDialog
             property var item
             title: i18nd("plasma_shell_org.kde.plasma.desktop", "Apply Settings")
-            subtitle: i18nd("plasma_shell_org.kde.plasma.desktop", "The settings of the current module have changed. Do you want to apply the changes or discard them?")
+            subtitle: i18nd("plasma_shell_org.kde.plasma.desktop", "The current page has unsaved changes. Apply the changes or discard them?")
             standardButtons: Kirigami.Dialog.Apply | Kirigami.Dialog.Discard | Kirigami.Dialog.Cancel
             onApplied: {
                 applyAction.trigger()
