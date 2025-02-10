@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-08 00:42+0000\n"
-"PO-Revision-Date: 2025-01-07 19:33+0100\n"
+"PO-Revision-Date: 2025-02-09 19:30+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -454,31 +454,28 @@ msgid "Translucent"
 msgstr "Zeharrargitsua"
 
 #: contents/configuration/PanelConfiguration.qml:480
-#, fuzzy, kde-format
-#| msgid "Floating"
+#, kde-format
 msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
 msgstr "Higikorra"
 
 #: contents/configuration/PanelConfiguration.qml:494
-#, fuzzy, kde-format
-#| msgid "%1 (disabled)"
+#, kde-format
 msgctxt "@item:inlistbox Option to disable floating panels or applets"
 msgid "Disabled"
-msgstr "%1 (desgaituta)"
+msgstr "Ezgaituta"
 
 #: contents/configuration/PanelConfiguration.qml:495
 #, kde-format
 msgctxt "@item:inlistbox Option to make only panel applets always float"
 msgid "Applets only"
-msgstr ""
+msgstr "Aplikaziotxoak bakarrik"
 
 #: contents/configuration/PanelConfiguration.qml:496
-#, fuzzy, kde-format
-#| msgid "Manage Panels and Desktops"
+#, kde-format
 msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
-msgstr "Panelak eta mahaigainak kudeatzea"
+msgstr "Panelak eta aplikaziotxoak"
 
 #: contents/configuration/PanelConfiguration.qml:539
 #, kde-format

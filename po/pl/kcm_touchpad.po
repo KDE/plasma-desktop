@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-01 00:42+0000\n"
-"PO-Revision-Date: 2025-01-04 07:29+0100\n"
+"PO-Revision-Date: 2025-02-08 17:56+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: actions.cpp:19
 #, kde-format
@@ -214,10 +214,9 @@ msgid "Pointer speed:"
 msgstr "Szybkość wskaźnika:"
 
 #: ui/main.qml:303
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgid "Enable pointer acceleration"
-msgstr "Przyspieszenie wskaźnika:"
+msgstr "Włącz przyspieszenie wskaźnika"
 
 #: ui/main.qml:318
 #, kde-format
@@ -225,6 +224,8 @@ msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
+"Po włączeniu, odległość przemieszczania się wskaźnika wzrasta wraz z "
+"szybszymi ruchami użytkownika."
 
 #: ui/main.qml:328
 #, kde-format
