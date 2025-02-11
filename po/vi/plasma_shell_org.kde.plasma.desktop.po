@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-08 00:42+0000\n"
+"POT-Creation-Date: 2025-02-11 00:43+0000\n"
 "PO-Revision-Date: 2023-01-08 16:18+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -154,10 +154,12 @@ msgid "Apply Settings"
 msgstr "Áp dụng thiết lập"
 
 #: contents/configuration/AppletConfiguration.qml:354
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The settings of the current module have changed. Do you want to apply the "
+#| "changes or discard them?"
 msgid ""
-"The settings of the current module have changed. Do you want to apply the "
-"changes or discard them?"
+"The current page has unsaved changes. Apply the changes or discard them?"
 msgstr ""
 "Thiết lập cho khối hiện tại đã thay đổi. Bạn muốn áp dụng hay loại bỏ các "
 "thay đổi?"
@@ -668,25 +670,25 @@ msgstr "Phụ kiện thay thế"
 msgid "Unsupported Widget"
 msgstr ""
 
-#: contents/explorer/AppletDelegate.qml:172
+#: contents/explorer/AppletDelegate.qml:196
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
 msgstr ""
 
-#: contents/explorer/AppletDelegate.qml:188
+#: contents/explorer/AppletDelegate.qml:212
 #, kde-format
 msgid "Undo uninstall"
 msgstr "Đảo ngược gỡ cài đặt"
 
-#: contents/explorer/AppletDelegate.qml:189
+#: contents/explorer/AppletDelegate.qml:213
 #, fuzzy, kde-format
 #| msgid "Uninstall"
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Uninstall"
 msgstr "Gỡ cài đặt"
 
-#: contents/explorer/AppletDelegate.qml:231
+#: contents/explorer/AppletDelegate.qml:255
 #, fuzzy, kde-format
 #| msgid "Remove Panel"
 msgid "Remove all instances"

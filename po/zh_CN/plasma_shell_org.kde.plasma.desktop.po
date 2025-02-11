@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-08 00:42+0000\n"
+"POT-Creation-Date: 2025-02-11 00:43+0000\n"
 "PO-Revision-Date: 2024-04-23 19:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -155,10 +155,12 @@ msgid "Apply Settings"
 msgstr "应用设置"
 
 #: contents/configuration/AppletConfiguration.qml:354
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The settings of the current module have changed. Do you want to apply the "
+#| "changes or discard them?"
 msgid ""
-"The settings of the current module have changed. Do you want to apply the "
-"changes or discard them?"
+"The current page has unsaved changes. Apply the changes or discard them?"
 msgstr "当前模块的设置已经更改。您想要应用更改还是丢弃更改？"
 
 #: contents/configuration/AppletConfiguration.qml:385
@@ -633,24 +635,24 @@ msgstr "替代挂件"
 msgid "Unsupported Widget"
 msgstr "不支持的挂件"
 
-#: contents/explorer/AppletDelegate.qml:172
+#: contents/explorer/AppletDelegate.qml:196
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
 msgstr "新！"
 
-#: contents/explorer/AppletDelegate.qml:188
+#: contents/explorer/AppletDelegate.qml:212
 #, kde-format
 msgid "Undo uninstall"
 msgstr "撤销卸载"
 
-#: contents/explorer/AppletDelegate.qml:189
+#: contents/explorer/AppletDelegate.qml:213
 #, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Uninstall"
 msgstr "卸载"
 
-#: contents/explorer/AppletDelegate.qml:231
+#: contents/explorer/AppletDelegate.qml:255
 #, kde-format
 msgid "Remove all instances"
 msgstr "移除所有实例"

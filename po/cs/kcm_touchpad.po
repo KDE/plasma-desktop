@@ -154,11 +154,10 @@ msgid "Accept input through this device."
 msgstr "Povolit vstup skrze toto zařízení."
 
 #: ui/main.qml:119
-#, fuzzy, kde-format
-#| msgid "Disable while typing"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable while mouse is connected"
-msgstr "Zakázat při psaní"
+msgstr ""
 
 #: ui/main.qml:138
 #, kde-format
@@ -217,10 +216,9 @@ msgid "Pointer speed:"
 msgstr "Rychlost ukazatele:"
 
 #: ui/main.qml:303
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgid "Enable pointer acceleration"
-msgstr "Zrychlení ukazatele:"
+msgstr ""
 
 #: ui/main.qml:318
 #, kde-format
@@ -488,74 +486,3 @@ msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr ""
 "Klepnutí třemi prsty kdekoliv bude bráno jako kliknutí prostředním tlačítkem "
 "myši."
-
-# žádné parametry funkce v inspektoru funkcí
-#~ msgid "None"
-#~ msgstr "Nic"
-
-#~ msgid "Cursor moves the same distance as finger."
-#~ msgstr "Kurzor se pohybuje o stejnou vzdálenost jako prst."
-
-#~ msgid "Standard"
-#~ msgstr "Standardní"
-
-#~ msgid "Cursor travel distance depends on movement speed of finger."
-#~ msgstr "Kurzor se pohybuje v závislosti na rychlosti pohybu prstu."
-
-#~ msgctxt "Emulated mouse button"
-#~ msgid "No action"
-#~ msgstr "Žádná činnost"
-
-#~ msgctxt "Emulated mouse button"
-#~ msgid "Left button"
-#~ msgstr "Levé tlačítko"
-
-#~ msgctxt "Emulated mouse button"
-#~ msgid "Middle button"
-#~ msgstr "Prostřední tlačítko"
-
-#~ msgctxt "Emulated mouse button"
-#~ msgid "Right button"
-#~ msgstr "Pravé tlačítko"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "All edges"
-#~ msgstr "Všechny okraje"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Top edge"
-#~ msgstr "Horní okraj"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Top right corner"
-#~ msgstr "Pravý horní roh"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Right edge"
-#~ msgstr "Pravý okraj"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Bottom right corner"
-#~ msgstr "Pravý dolní roh"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Bottom edge"
-#~ msgstr "Spodní okraj"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Bottom left corner"
-#~ msgstr "Levý dolní roh"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Left edge"
-#~ msgstr "Levý okraj"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Top left corner"
-#~ msgstr "Levý horní roh"
-
-#~ msgid "Touchpad was disabled because a mouse was plugged in"
-#~ msgstr "Touchpad byl zakázán protože byla připojena myš"
-
-#~ msgid "Touchpad was enabled because the mouse was unplugged"
-#~ msgstr "Touchpad byl povolen protože byla odpojena myš"

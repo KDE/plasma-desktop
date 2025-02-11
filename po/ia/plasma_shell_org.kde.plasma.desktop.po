@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-08 00:42+0000\n"
-"PO-Revision-Date: 2025-01-08 15:54+0100\n"
+"POT-Creation-Date: 2025-02-11 00:43+0000\n"
+"PO-Revision-Date: 2025-02-10 11:33+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -154,10 +154,12 @@ msgid "Apply Settings"
 msgstr "Applica Preferentias"
 
 #: contents/configuration/AppletConfiguration.qml:354
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The settings of the current module have changed. Do you want to apply the "
+#| "changes or discard them?"
 msgid ""
-"The settings of the current module have changed. Do you want to apply the "
-"changes or discard them?"
+"The current page has unsaved changes. Apply the changes or discard them?"
 msgstr ""
 "Le preferentias del modulo currente ha cambiate.Tu vole applicar le "
 "variationes o rejectar los?"
@@ -454,32 +456,28 @@ msgid "Translucent"
 msgstr "Traslucente"
 
 #: contents/configuration/PanelConfiguration.qml:480
-#, fuzzy, kde-format
-#| msgid "Floating"
+#, kde-format
 msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
 msgstr "Fluctuante"
 
 #: contents/configuration/PanelConfiguration.qml:494
-#, fuzzy, kde-format
-#| msgid "%1 (disabled)"
+#, kde-format
 msgctxt "@item:inlistbox Option to disable floating panels or applets"
 msgid "Disabled"
-msgstr "%1 (Dishabilitate)"
+msgstr "Dishabilitate"
 
 #: contents/configuration/PanelConfiguration.qml:495
-#, fuzzy, kde-format
-#| msgid "Applet: "
+#, kde-format
 msgctxt "@item:inlistbox Option to make only panel applets always float"
 msgid "Applets only"
-msgstr "Applet: "
+msgstr "Solmente Applets "
 
 #: contents/configuration/PanelConfiguration.qml:496
-#, fuzzy, kde-format
-#| msgid "Manage Panels and Desktops"
+#, kde-format
 msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
-msgstr "Gere Pannellos e Scriptorios"
+msgstr "Pannellos e applets"
 
 #: contents/configuration/PanelConfiguration.qml:539
 #, kde-format
@@ -644,24 +642,24 @@ msgstr "Widgets alternative"
 msgid "Unsupported Widget"
 msgstr "Widget non supportate"
 
-#: contents/explorer/AppletDelegate.qml:172
+#: contents/explorer/AppletDelegate.qml:196
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
 msgstr "Nove !"
 
-#: contents/explorer/AppletDelegate.qml:188
+#: contents/explorer/AppletDelegate.qml:212
 #, kde-format
 msgid "Undo uninstall"
 msgstr "Annylla De-installa"
 
-#: contents/explorer/AppletDelegate.qml:189
+#: contents/explorer/AppletDelegate.qml:213
 #, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Uninstall"
 msgstr "De-installa"
 
-#: contents/explorer/AppletDelegate.qml:231
+#: contents/explorer/AppletDelegate.qml:255
 #, kde-format
 msgid "Remove all instances"
 msgstr "Remove omne instantias"

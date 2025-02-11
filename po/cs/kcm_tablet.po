@@ -55,11 +55,10 @@ msgid "Application-defined"
 msgstr ""
 
 #: inputsequence.cpp:194
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pen Button %1"
-msgstr "Tlačítko pera 1:"
+msgstr ""
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -115,30 +114,24 @@ msgid "Keep Aspect Ratio and Fit"
 msgstr ""
 
 #: kcmtablet.cpp:165 ui/DisplayTab.qml:94
-#, fuzzy, kde-format
-#| msgid "Map to screen:"
+#, kde-format
 msgctxt "@item:inlistbox Map to portion of the screen"
 msgid "Map to Portion"
-msgstr "Připojit na obrazovku:"
+msgstr ""
 
 #: kcmtablet.cpp:263
-#, fuzzy, kde-format
-#| msgid "Pen button 1:"
+#, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
-msgstr "Tlačítko pera 1:"
+msgstr ""
 
 #: kcmtablet.cpp:264
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button X'"
 msgid "pen button %1"
-msgstr "tlačítko pera 1"
+msgstr ""
 
 #: ui/ActionDialog.qml:25
 #, kde-format
@@ -171,14 +164,10 @@ msgid "Send mouse button click"
 msgstr ""
 
 #: ui/ActionDialog.qml:132
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt "@option:radio Set this action to a pen button type"
 msgid "Send pen button"
-msgstr "tlačítko pera 1"
+msgstr ""
 
 #: ui/ActionDialog.qml:150
 #, kde-format
@@ -237,34 +226,22 @@ msgid "Shift"
 msgstr "Shift"
 
 #: ui/ActionDialog.qml:264
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 1'"
-#| msgid "pen button 1"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
-msgstr "tlačítko pera 1"
+msgstr ""
 
 #: ui/ActionDialog.qml:265
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 2'"
-#| msgid "pen button 2"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
-msgstr "tlačítko pera 2"
+msgstr ""
 
 #: ui/ActionDialog.qml:266
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pen button 3'"
-#| msgid "pen button 3"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
-msgstr "tlačítko pera 3"
+msgstr ""
 
 #: ui/ActionDialog.qml:275
 #, kde-format
@@ -351,18 +328,15 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
 #: ui/ExternalScreenMapping.qml:190
-#, fuzzy, kde-format
-#| msgid "Resize the tablet area"
+#, kde-format
 msgid "Resize the screen area"
-msgstr "Změnit velikost oblasti tabletu"
+msgstr ""
 
 #: ui/ExternalScreenMapping.qml:265
-#, fuzzy, kde-format
-#| msgctxt "tablet area position - size"
-#| msgid "%1,%2 - %3×%4"
+#, kde-format
 msgctxt "tablet area position - size"
 msgid "%1%,%2% - %3%×%4%"
-msgstr "%1,%2 - %3×%4"
+msgstr ""
 
 #: ui/ExternalScreenMapping.qml:299
 #, kde-format
@@ -546,17 +520,3 @@ msgstr ""
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr "Vyprázdnit"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Calibration across multiple screens is not supported."
-#~ msgstr "Kalibrace není podporována."
-
-# žádné parametry funkce v inspektoru funkcí
-#~ msgid "None"
-#~ msgstr "Nic"
-
-#~ msgid "Pen button 2:"
-#~ msgstr "Tlačítko pera 2:"
-
-#~ msgid "Pen button 3:"
-#~ msgstr "Tlačítko pera 3:"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-08 00:42+0000\n"
+"POT-Creation-Date: 2025-02-11 00:43+0000\n"
 "PO-Revision-Date: 2024-12-20 21:53+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -156,10 +156,12 @@ msgid "Apply Settings"
 msgstr "सेटिंग्स् प्रयोजयन्तु"
 
 #: contents/configuration/AppletConfiguration.qml:354
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The settings of the current module have changed. Do you want to apply the "
+#| "changes or discard them?"
 msgid ""
-"The settings of the current module have changed. Do you want to apply the "
-"changes or discard them?"
+"The current page has unsaved changes. Apply the changes or discard them?"
 msgstr ""
 "वर्तमानमॉड्यूलस्य सेटिङ्ग्स् परिवर्तिताः सन्ति । परिवर्तनं प्रयोक्तुं इच्छति वा परित्यक्तुं वा?"
 
@@ -638,24 +640,24 @@ msgstr "वैकल्पिक विजेट्"
 msgid "Unsupported Widget"
 msgstr "असमर्थित विजेट्"
 
-#: contents/explorer/AppletDelegate.qml:172
+#: contents/explorer/AppletDelegate.qml:196
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
 msgstr "नूतनम्‌!"
 
-#: contents/explorer/AppletDelegate.qml:188
+#: contents/explorer/AppletDelegate.qml:212
 #, kde-format
 msgid "Undo uninstall"
 msgstr "विस्थापनं पूर्ववत् कुर्वन्तु"
 
-#: contents/explorer/AppletDelegate.qml:189
+#: contents/explorer/AppletDelegate.qml:213
 #, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Uninstall"
 msgstr "अनइन्स्टॉल"
 
-#: contents/explorer/AppletDelegate.qml:231
+#: contents/explorer/AppletDelegate.qml:255
 #, kde-format
 msgid "Remove all instances"
 msgstr "सर्वाणि उदाहरणानि निष्कासयन्तु"

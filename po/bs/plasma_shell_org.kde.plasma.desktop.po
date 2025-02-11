@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-08 00:42+0000\n"
+"POT-Creation-Date: 2025-02-11 00:43+0000\n"
 "PO-Revision-Date: 2014-12-28 11:53+0000\n"
 "Last-Translator: Ajla Alic <aalic2@etf.unsa.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -159,10 +159,12 @@ msgid "Apply Settings"
 msgstr "Primijeni postavke"
 
 #: contents/configuration/AppletConfiguration.qml:354
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The settings of the current module have changed. Do you want to apply the "
+#| "changes or discard them?"
 msgid ""
-"The settings of the current module have changed. Do you want to apply the "
-"changes or discard them?"
+"The current page has unsaved changes. Apply the changes or discard them?"
 msgstr ""
 "Postavke trenutnog modula su promijenjene. Da li želite da primjenite "
 "promjene ili da ih odbacite?"
@@ -659,26 +661,26 @@ msgstr "Alternative"
 msgid "Unsupported Widget"
 msgstr ""
 
-#: contents/explorer/AppletDelegate.qml:172
+#: contents/explorer/AppletDelegate.qml:196
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
 msgstr ""
 
-#: contents/explorer/AppletDelegate.qml:188
+#: contents/explorer/AppletDelegate.qml:212
 #, fuzzy, kde-format
 #| msgid "Uninstall"
 msgid "Undo uninstall"
 msgstr "Deinstaliraj"
 
-#: contents/explorer/AppletDelegate.qml:189
+#: contents/explorer/AppletDelegate.qml:213
 #, fuzzy, kde-format
 #| msgid "Uninstall"
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Uninstall"
 msgstr "Deinstaliraj"
 
-#: contents/explorer/AppletDelegate.qml:231
+#: contents/explorer/AppletDelegate.qml:255
 #, fuzzy, kde-format
 #| msgid "Remove Panel"
 msgid "Remove all instances"

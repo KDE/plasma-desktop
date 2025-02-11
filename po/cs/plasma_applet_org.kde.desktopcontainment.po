@@ -466,13 +466,12 @@ msgid "&Open"
 msgstr "&Otevřít"
 
 #: plugins/folder/foldermodel.cpp:1739
-#, fuzzy, kde-format
-#| msgid "Show all"
+#, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
 "link points to"
 msgid "Show Target"
-msgstr "Ukázat vše"
+msgstr ""
 
 #: plugins/folder/foldermodel.cpp:1835
 #, kde-format
@@ -481,10 +480,9 @@ msgid "Remove Trash Icon"
 msgstr ""
 
 #: plugins/folder/foldermodel.cpp:1838
-#, fuzzy, kde-format
-#| msgid "&Empty Trash"
+#, kde-format
 msgid "&Move to Trash"
-msgstr "&Vyprázdnit koš"
+msgstr "Pře&sunout do koše"
 
 #: plugins/folder/foldermodel.cpp:1871
 #, kde-format
@@ -641,7 +639,3 @@ msgstr "Zobrazit náhled"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Uzamčeno"
-
-#~ msgctxt "Restore from trash"
-#~ msgid "Restore"
-#~ msgstr "Obnovit"

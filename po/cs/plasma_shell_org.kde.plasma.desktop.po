@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-08 00:42+0000\n"
+"POT-Creation-Date: 2025-02-11 00:43+0000\n"
 "PO-Revision-Date: 2024-10-15 11:00+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -156,10 +156,12 @@ msgid "Apply Settings"
 msgstr "Provést nastavení"
 
 #: contents/configuration/AppletConfiguration.qml:354
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The settings of the current module have changed. Do you want to apply the "
+#| "changes or discard them?"
 msgid ""
-"The settings of the current module have changed. Do you want to apply the "
-"changes or discard them?"
+"The current page has unsaved changes. Apply the changes or discard them?"
 msgstr ""
 "V aktivním modulu jsou neuložené změny. Přejete si změny aplikovat, nebo "
 "zahodit?"
@@ -453,11 +455,10 @@ msgid "Translucent"
 msgstr "Průhledné"
 
 #: contents/configuration/PanelConfiguration.qml:480
-#, fuzzy, kde-format
-#| msgid "Floating"
+#, kde-format
 msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
-msgstr "Plovoucí"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:494
 #, kde-format
@@ -472,11 +473,10 @@ msgid "Applets only"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:496
-#, fuzzy, kde-format
-#| msgid "Panel and Desktop Management"
+#, kde-format
 msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
-msgstr "Správa panelů a pracovních ploch"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:539
 #, kde-format
@@ -517,11 +517,10 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "Odstranit tento panel, tento krok nelze vzít zpět"
 
 #: contents/configuration/PanelConfiguration.qml:706
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
-msgstr "Odstranit panel"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:710
 #, kde-format
@@ -587,10 +586,9 @@ msgid ""
 msgstr ""
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy, kde-format
-#| msgid "Panel and Desktop Management"
+#, kde-format
 msgid "Manage Panels and Desktops"
-msgstr "Správa panelů a pracovních ploch"
+msgstr ""
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 #, kde-format
@@ -640,24 +638,24 @@ msgstr "Alternativní widgety"
 msgid "Unsupported Widget"
 msgstr "Nepodporovaný widget"
 
-#: contents/explorer/AppletDelegate.qml:172
+#: contents/explorer/AppletDelegate.qml:196
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
 msgstr ""
 
-#: contents/explorer/AppletDelegate.qml:188
+#: contents/explorer/AppletDelegate.qml:212
 #, kde-format
 msgid "Undo uninstall"
 msgstr "Vrátit odinstalaci zpět"
 
-#: contents/explorer/AppletDelegate.qml:189
+#: contents/explorer/AppletDelegate.qml:213
 #, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Uninstall"
 msgstr "Odinstalovat"
 
-#: contents/explorer/AppletDelegate.qml:231
+#: contents/explorer/AppletDelegate.qml:255
 #, kde-format
 msgid "Remove all instances"
 msgstr "Odstranit všechny instance"
@@ -759,16 +757,14 @@ msgid "Caps Lock is on"
 msgstr "CapsLock je zapnut"
 
 #: contents/lockscreen/LockScreenUi.qml:285
-#, fuzzy, kde-format
-#| msgid "Sleep"
+#, kde-format
 msgid "Slee&p"
-msgstr "Uspat"
+msgstr ""
 
 #: contents/lockscreen/LockScreenUi.qml:291
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "&Hibernate"
-msgstr "Hibernovat"
+msgstr ""
 
 #: contents/lockscreen/LockScreenUi.qml:297
 #, kde-format
@@ -854,16 +850,3 @@ msgstr "Ukončit režim úprav"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr ""
-
-#~ msgid "Style"
-#~ msgstr "Styl"
-
-#~ msgctxt "@title"
-#~ msgid "About"
-#~ msgstr "O aplikaci"
-
-#~ msgid "Global Themes"
-#~ msgstr "Celkové motivy"
-
-#~ msgid "Display Configuration"
-#~ msgstr "Nastavení zobrazení"
