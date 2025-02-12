@@ -30,15 +30,6 @@ public:
     int touchpadOff() override;
     XcbAtom &touchpadOffAtom() override;
 
-private:
-    template<typename T>
-    bool valueLoader(Prop<T> &prop);
-
-    template<typename T>
-    QString valueWriter(const Prop<T> &prop);
-
-    KSharedConfigPtr m_config;
-
     //
     // general
     QString name() const override
@@ -133,6 +124,15 @@ private:
     {
         return false;
     }
+
+private:
+    template<typename T>
+    bool valueLoader(Prop<T> &prop);
+
+    template<typename T>
+    QString valueWriter(const Prop<T> &prop);
+
+    KSharedConfigPtr m_config;
 
     // Tapping
     Prop<bool> m_lrmTapButtonMapEnabledByDefault = PropBool(this, "lrmTapButtonMapEnabledByDefault");
