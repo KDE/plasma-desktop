@@ -33,7 +33,7 @@ bool KWinWaylandTouchpad::init()
     return valueLoader(m_name) && valueLoader(m_sysName);
 }
 
-bool KWinWaylandTouchpad::getConfig()
+bool KWinWaylandTouchpad::load()
 {
     bool success = true;
 
@@ -104,7 +104,7 @@ bool KWinWaylandTouchpad::getConfig()
     return success;
 }
 
-bool KWinWaylandTouchpad::getDefaultConfig()
+bool KWinWaylandTouchpad::defaults()
 {
     m_enabled.set(true);
     m_leftHanded.set(false);
@@ -133,7 +133,7 @@ bool KWinWaylandTouchpad::getDefaultConfig()
     return true;
 }
 
-bool KWinWaylandTouchpad::applyConfig()
+bool KWinWaylandTouchpad::save()
 {
     QList<QString> msgs;
 
@@ -169,7 +169,7 @@ bool KWinWaylandTouchpad::applyConfig()
     return success;
 }
 
-bool KWinWaylandTouchpad::isChangedConfig() const
+bool KWinWaylandTouchpad::isSaveNeeded() const
 {
     // clang-format off
     return m_enabled.changed() ||

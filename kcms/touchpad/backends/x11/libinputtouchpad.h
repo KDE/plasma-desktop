@@ -22,10 +22,10 @@ public:
     {
     }
 
-    bool getConfig() override;
-    bool applyConfig() override;
-    bool getDefaultConfig() override;
-    bool isChangedConfig() override;
+    bool load() override;
+    bool save() override;
+    bool defaults() override;
+    bool isSaveNeeded() const override;
 
     int touchpadOff() override;
     XcbAtom &touchpadOffAtom() override;
