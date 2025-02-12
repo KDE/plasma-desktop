@@ -82,8 +82,6 @@ void TouchpadDisabler::serviceRegistered(const QString &service)
 TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     : KDEDModule(parent)
     , m_backend(TouchpadBackend::implementation())
-    , m_userRequestedState(true)
-    , m_touchpadEnabled(true)
 {
     if (!m_backend) {
         return;
@@ -98,7 +96,7 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     connect(m_backend, &TouchpadBackend::touchpadReset, this, &TouchpadDisabler::handleReset);
 
     updateCurrentState();
-    m_userRequestedState = m_touchpadEnabled;
+    m_userRequestedSuspend = m_touchpadSuspended;
 
     m_dependencies.setWatchMode(QDBusServiceWatcher::WatchForRegistration);
     m_dependencies.setConnection(QDBusConnection::sessionBus());
@@ -138,28 +136,25 @@ void TouchpadDisabler::updateCurrentState()
     if (!m_backend->isTouchpadAvailable()) {
         return;
     }
-    bool newEnabled = m_backend->isTouchpadEnabled();
-    if (newEnabled != m_touchpadEnabled) {
-        m_touchpadEnabled = newEnabled;
-    }
+    m_touchpadSuspended = m_backend->isTouchpadSuspended();
 }
 
 void TouchpadDisabler::toggle()
 {
-    m_userRequestedState = !m_touchpadEnabled;
-    m_backend->setTouchpadEnabled(m_userRequestedState);
+    m_userRequestedSuspend = !m_touchpadSuspended;
+    m_backend->setTouchpadSuspended(m_userRequestedSuspend);
 }
 
 void TouchpadDisabler::disable()
 {
-    m_userRequestedState = false;
-    m_backend->setTouchpadEnabled(false);
+    m_userRequestedSuspend = true;
+    m_backend->setTouchpadSuspended(true);
 }
 
 void TouchpadDisabler::enable()
 {
-    m_userRequestedState = true;
-    m_backend->setTouchpadEnabled(true);
+    m_userRequestedSuspend = false;
+    m_backend->setTouchpadSuspended(false);
 }
 
 void TouchpadDisabler::lateInit()
@@ -187,7 +182,7 @@ void TouchpadDisabler::handleReset()
     if (!m_backend->isTouchpadAvailable()) {
         return;
     }
-    m_backend->setTouchpadEnabled(m_userRequestedState);
+    m_backend->setTouchpadSuspended(m_userRequestedSuspend);
 }
 
 void TouchpadDisabler::onPrepareForSleep(bool sleep)
@@ -206,7 +201,7 @@ void TouchpadDisabler::showOsd()
                                                       QStringLiteral("org.kde.osdService"),
                                                       QStringLiteral("touchpadEnabledChanged"));
 
-    msg.setArguments({m_backend->isTouchpadEnabled()});
+    msg.setArguments({!m_backend->isTouchpadSuspended()});
 
     QDBusConnection::sessionBus().asyncCall(msg);
 }

@@ -43,7 +43,8 @@ private:
     TouchpadBackend *m_backend;
     QDBusServiceWatcher m_dependencies;
 
-    bool m_userRequestedState, m_touchpadEnabled;
+    bool m_touchpadSuspended = false;
+    bool m_userRequestedSuspend = false;
 
     bool m_preparingForSleep = false;
 };

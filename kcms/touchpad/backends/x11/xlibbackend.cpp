@@ -158,13 +158,13 @@ bool XlibBackend::isChangedConfig() const
     return m_device->isChangedConfig();
 }
 
-void XlibBackend::setTouchpadEnabled(bool enable)
+void XlibBackend::setTouchpadSuspended(bool suspend)
 {
     if (!m_device) {
         return;
     }
 
-    m_device->setEnabled(enable);
+    m_device->setSuspended(suspend);
 
     // FIXME? This should not be needed, m_notifications should trigger
     // a propertyChanged signal when we enable/disable the touchpad,
@@ -199,18 +199,18 @@ void XlibBackend::setTouchpadOff(TouchpadBackend::TouchpadOffState state)
     m_device->setTouchpadOff(touchpadOff);
 }
 
-bool XlibBackend::isTouchpadAvailable()
+bool XlibBackend::isTouchpadAvailable() const
 {
     return m_device != nullptr;
 }
 
-bool XlibBackend::isTouchpadEnabled()
+bool XlibBackend::isTouchpadSuspended() const
 {
     if (!m_device) {
-        return false;
+        return true;
     }
 
-    return m_device->enabled();
+    return m_device->isSuspended();
 }
 
 TouchpadBackend::TouchpadOffState XlibBackend::getTouchpadOff()
