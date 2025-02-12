@@ -58,8 +58,8 @@ public:
     {
         return false;
     }
-    void setEnabled(bool enable);
-    bool enabled();
+    void setSuspended(bool suspended);
+    bool isSuspended();
     virtual void setTouchpadOff(int /*touchpadOff*/)
     {
     }

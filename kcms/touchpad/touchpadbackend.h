@@ -91,15 +91,15 @@ public:
         return TouchpadFullyDisabled;
     }
 
-    virtual bool isTouchpadAvailable()
+    virtual bool isTouchpadAvailable() const
     {
         return false;
     }
-    virtual bool isTouchpadEnabled()
+    virtual bool isTouchpadSuspended() const
     {
         return false;
     }
-    virtual void setTouchpadEnabled(bool)
+    virtual void setTouchpadSuspended(bool)
     {
     }
 
