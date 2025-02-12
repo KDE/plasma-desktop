@@ -46,9 +46,9 @@ public:
     void setTouchpadOff(TouchpadOffState) override;
     TouchpadOffState getTouchpadOff() override;
 
-    bool isTouchpadAvailable() override;
-    bool isTouchpadEnabled() override;
-    void setTouchpadEnabled(bool) override;
+    bool isTouchpadAvailable() const override;
+    bool isTouchpadSuspended() const override;
+    void setTouchpadSuspended(bool) override;
 
     void watchForEvents() override;
 
