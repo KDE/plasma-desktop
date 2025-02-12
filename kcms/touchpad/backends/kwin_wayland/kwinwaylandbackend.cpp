@@ -69,7 +69,7 @@ void KWinWaylandBackend::findTouchpads()
         const QVariant reply = deviceIface.property("touchpad");
         if (reply.isValid() && reply.toBool()) {
             KWinWaylandTouchpad *tp = new KWinWaylandTouchpad(sn);
-            if (!tp->init() || !tp->getConfig()) {
+            if (!tp->init() || !tp->load()) {
                 qCCritical(KCM_TOUCHPAD) << "Error on creating touchpad object" << sn;
                 m_errorString = i18n("Critical error on reading fundamental device infos for touchpad %1.", sn);
                 return;
@@ -83,31 +83,31 @@ void KWinWaylandBackend::findTouchpads()
     }
 }
 
-bool KWinWaylandBackend::applyConfig()
+bool KWinWaylandBackend::save()
 {
     return std::all_of(m_devices.constBegin(), m_devices.constEnd(), [](LibinputCommon *t) {
-        return static_cast<KWinWaylandTouchpad *>(t)->applyConfig();
+        return static_cast<KWinWaylandTouchpad *>(t)->save();
     });
 }
 
-bool KWinWaylandBackend::getConfig()
+bool KWinWaylandBackend::load()
 {
     return std::all_of(m_devices.constBegin(), m_devices.constEnd(), [](LibinputCommon *t) {
-        return static_cast<KWinWaylandTouchpad *>(t)->getConfig();
+        return static_cast<KWinWaylandTouchpad *>(t)->load();
     });
 }
 
-bool KWinWaylandBackend::getDefaultConfig()
+bool KWinWaylandBackend::defaults()
 {
     return std::all_of(m_devices.constBegin(), m_devices.constEnd(), [](LibinputCommon *t) {
-        return static_cast<KWinWaylandTouchpad *>(t)->getDefaultConfig();
+        return static_cast<KWinWaylandTouchpad *>(t)->defaults();
     });
 }
 
-bool KWinWaylandBackend::isChangedConfig() const
+bool KWinWaylandBackend::isSaveNeeded() const
 {
     return std::any_of(m_devices.constBegin(), m_devices.constEnd(), [](LibinputCommon *t) {
-        return static_cast<KWinWaylandTouchpad *>(t)->isChangedConfig();
+        return static_cast<KWinWaylandTouchpad *>(t)->isSaveNeeded();
     });
 }
 
@@ -127,7 +127,7 @@ void KWinWaylandBackend::onDeviceAdded(QString sysName)
     QVariant reply = deviceIface.property("touchpad");
     if (reply.isValid() && reply.toBool()) {
         KWinWaylandTouchpad *tp = new KWinWaylandTouchpad(sysName);
-        if (!tp->init() || !tp->getConfig()) {
+        if (!tp->init() || !tp->load()) {
             Q_EMIT deviceAdded(false);
             return;
         }

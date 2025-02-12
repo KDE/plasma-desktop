@@ -48,7 +48,7 @@ void migrateConfig(TouchpadBackend *backend)
     bool disableOnKeyboardActivity = oldGroup.readEntry("DisableOnKeyboardActivity", true);
 
     // touchpadxlibinputrc uses the device name in the config group - use backend API to write to the correct one
-    backend->getConfig();
+    backend->load();
 
     for (LibinputCommon *device : backend->inputDevices()) { // only touchpads, because TouchpadBackend
         if (device->supportsDisableEventsOnExternalMouse()) {
@@ -62,7 +62,7 @@ void migrateConfig(TouchpadBackend *backend)
         }
     }
 
-    backend->applyConfig();
+    backend->save();
 
     oldConfig->deleteGroup(u"autodisable"_s);
     oldConfig->sync();

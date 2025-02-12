@@ -227,7 +227,7 @@ LibinputTouchpad::LibinputTouchpad(Display *display, int deviceId)
     valueLoader(m_horizontalScrolling);
 }
 
-bool LibinputTouchpad::getConfig()
+bool LibinputTouchpad::load()
 {
     bool success = true;
 
@@ -269,7 +269,7 @@ bool LibinputTouchpad::getConfig()
     return success;
 }
 
-bool LibinputTouchpad::applyConfig()
+bool LibinputTouchpad::save()
 {
     QList<QString> msgs;
 
@@ -302,7 +302,7 @@ bool LibinputTouchpad::applyConfig()
     return success;
 }
 
-bool LibinputTouchpad::getDefaultConfig()
+bool LibinputTouchpad::defaults()
 {
     m_enabled.set(m_enabledDefault);
     m_tapToClick.set(m_tapToClickEnabledByDefault);
@@ -329,7 +329,7 @@ bool LibinputTouchpad::getDefaultConfig()
     return true;
 }
 
-bool LibinputTouchpad::isChangedConfig()
+bool LibinputTouchpad::isSaveNeeded() const
 {
     // clang-format off
     bool changed = m_enabled.changed() ||

@@ -90,8 +90,8 @@ void KCMTouchpad::kcmInit()
 #if BUILD_KCM_TOUCHPAD_X11
     TouchpadBackend *backend = TouchpadBackend::implementation();
     if (backend->getMode() == TouchpadInputBackendMode::XLibinput) {
-        backend->getConfig();
-        backend->applyConfig();
+        backend->load();
+        backend->save();
     }
 #endif
 }
@@ -103,7 +103,7 @@ void KCMTouchpad::load()
         return;
     }
 
-    if (!m_backend->getConfig()) {
+    if (!m_backend->load()) {
         Q_EMIT showMessage(i18n("Error while loading values. See logs for more information. Please restart this configuration module."));
     } else {
         if (!m_backend->deviceCount()) {
@@ -115,7 +115,7 @@ void KCMTouchpad::load()
 
 void KCMTouchpad::save()
 {
-    if (!m_backend->applyConfig()) {
+    if (!m_backend->save()) {
         Q_EMIT showMessage(i18n("Not able to save all changes. See logs for more information. Please restart this configuration module and try again."));
     } else {
         Q_EMIT showMessage(QString());
@@ -124,7 +124,7 @@ void KCMTouchpad::save()
     // load newly written values
     load();
     // in case of error, config still in changed state
-    setNeedsSave(m_backend->isChangedConfig());
+    setNeedsSave(m_backend->isSaveNeeded());
 }
 
 void KCMTouchpad::defaults()
@@ -134,10 +134,10 @@ void KCMTouchpad::defaults()
         return;
     }
 
-    if (!m_backend->getDefaultConfig()) {
+    if (!m_backend->defaults()) {
         Q_EMIT showMessage(i18n("Error while loading default values. Failed to set some options to their default values."));
     }
-    setNeedsSave(m_backend->isChangedConfig());
+    setNeedsSave(m_backend->isSaveNeeded());
 }
 
 void KCMTouchpad::onChange()
@@ -145,7 +145,7 @@ void KCMTouchpad::onChange()
     if (m_backend->deviceCount() > 0) {
         hideErrorMessage();
     }
-    setNeedsSave(m_backend->isChangedConfig());
+    setNeedsSave(m_backend->isSaveNeeded());
 }
 
 void KCMTouchpad::onDeviceAdded(bool success)
@@ -171,7 +171,7 @@ void KCMTouchpad::onDeviceRemoved(int index)
             Q_EMIT showMessage(i18n("Touchpad disconnected. No other touchpads found."), 0 /*Kirigami.MessageType.Information*/);
         }
     }
-    setNeedsSave(m_backend->isChangedConfig());
+    setNeedsSave(m_backend->isSaveNeeded());
 }
 
 void KCMTouchpad::hideErrorMessage()

@@ -23,10 +23,10 @@ public:
 
     bool init();
 
-    bool getConfig();
-    bool getDefaultConfig();
-    bool applyConfig();
-    bool isChangedConfig() const;
+    bool load();
+    bool defaults();
+    bool save();
+    bool isSaveNeeded() const;
 
     //
     // general

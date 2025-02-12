@@ -29,10 +29,10 @@ public:
     static XlibBackend *initialize(QObject *parent = nullptr);
     ~XlibBackend();
 
-    bool applyConfig() override;
-    bool getConfig() override;
-    bool getDefaultConfig() override;
-    bool isChangedConfig() const override;
+    bool save() override;
+    bool load() override;
+    bool defaults() override;
+    bool isSaveNeeded() const override;
     QString errorString() const override
     {
         return m_errorString;
