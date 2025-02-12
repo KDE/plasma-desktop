@@ -17,9 +17,9 @@ DropArea {
     property real scrollDownMargin: 0
     enabled: Plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
     onPositionChanged: drag => {
-        if (drag.source instanceof KickoffGridDelegate || drag.source instanceof KickoffListDelegate) {
-            const source = drag.source
-            const view = drag.source.view
+        if (drag.source === kickoff.dragSource) {
+            const source = kickoff.dragSource.sourceItem
+            const view = source.view
             if (source.view === root.targetView && !view.move.running && !view.moveDisplaced.running) {
                 const pos = mapToItem(view.contentItem, drag.x, drag.y)
                 const targetIndex = view.indexAt(pos.x, pos.y)
@@ -33,7 +33,7 @@ DropArea {
         }
     }
     onDropped: drag => {
-        if (!(drag.source instanceof AbstractKickoffItemDelegate) && drag.hasUrls) {
+        if ((drag.source !== kickoff.dragSource || kickoff.dragSource.sourceItem === null) && drag.hasUrls) {
             const pos = mapToItem(view.contentItem, drag.x, drag.y)
             let targetIndex = view.indexAt(pos.x, pos.y)
             if (targetIndex >= 0) {
