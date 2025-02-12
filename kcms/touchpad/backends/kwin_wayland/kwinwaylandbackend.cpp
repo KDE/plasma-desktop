@@ -86,28 +86,28 @@ void KWinWaylandBackend::findTouchpads()
 bool KWinWaylandBackend::save()
 {
     return std::all_of(m_devices.constBegin(), m_devices.constEnd(), [](LibinputCommon *t) {
-        return static_cast<KWinWaylandTouchpad *>(t)->save();
+        return t->save();
     });
 }
 
 bool KWinWaylandBackend::load()
 {
     return std::all_of(m_devices.constBegin(), m_devices.constEnd(), [](LibinputCommon *t) {
-        return static_cast<KWinWaylandTouchpad *>(t)->load();
+        return t->load();
     });
 }
 
 bool KWinWaylandBackend::defaults()
 {
     return std::all_of(m_devices.constBegin(), m_devices.constEnd(), [](LibinputCommon *t) {
-        return static_cast<KWinWaylandTouchpad *>(t)->defaults();
+        return t->defaults();
     });
 }
 
 bool KWinWaylandBackend::isSaveNeeded() const
 {
     return std::any_of(m_devices.constBegin(), m_devices.constEnd(), [](LibinputCommon *t) {
-        return static_cast<KWinWaylandTouchpad *>(t)->isSaveNeeded();
+        return t->isSaveNeeded();
     });
 }
 

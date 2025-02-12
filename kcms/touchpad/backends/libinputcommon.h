@@ -161,6 +161,11 @@ public:
     {
     }
 
+    virtual bool load() = 0;
+    virtual bool save() = 0;
+    virtual bool defaults() = 0;
+    virtual bool isSaveNeeded() const = 0;
+
     virtual QString name() const = 0;
     virtual bool supportsDisableEvents() const = 0;
     virtual bool isEnabled() const = 0;
