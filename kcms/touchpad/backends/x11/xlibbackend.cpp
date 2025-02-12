@@ -109,13 +109,13 @@ LibinputTouchpad *XlibBackend::findTouchpad()
     return nullptr;
 }
 
-bool XlibBackend::applyConfig()
+bool XlibBackend::save()
 {
     if (!m_device) {
         return false;
     }
 
-    bool success = m_device->applyConfig();
+    bool success = m_device->save();
     if (!success) {
         m_errorString = i18n("Cannot apply touchpad configuration");
     }
@@ -123,39 +123,39 @@ bool XlibBackend::applyConfig()
     return success;
 }
 
-bool XlibBackend::getConfig()
+bool XlibBackend::load()
 {
     if (!m_device) {
         return false;
     }
 
-    bool success = m_device->getConfig();
+    bool success = m_device->load();
     if (!success) {
         m_errorString = i18n("Cannot read touchpad configuration");
     }
     return success;
 }
 
-bool XlibBackend::getDefaultConfig()
+bool XlibBackend::defaults()
 {
     if (!m_device) {
         return false;
     }
 
-    bool success = m_device->getDefaultConfig();
+    bool success = m_device->defaults();
     if (!success) {
         m_errorString = i18n("Cannot read default touchpad configuration");
     }
     return success;
 }
 
-bool XlibBackend::isChangedConfig() const
+bool XlibBackend::isSaveNeeded() const
 {
     if (!m_device) {
         return false;
     }
 
-    return m_device->isChangedConfig();
+    return m_device->isSaveNeeded();
 }
 
 void XlibBackend::setTouchpadSuspended(bool suspend)
