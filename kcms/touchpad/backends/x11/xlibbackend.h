@@ -13,13 +13,12 @@
 #include <QtGui/private/qtx11extras_p.h>
 
 #include "touchpadbackend.h"
-#include "xlibtouchpad.h"
 
 #include <xcb/xcb.h>
 
 #include "xcbatom.h"
 
-class XlibTouchpad;
+class LibinputTouchpad;
 class XlibNotifications;
 
 class XlibBackend : public TouchpadBackend
@@ -73,8 +72,8 @@ protected:
     XcbAtom m_touchpadAtom;
     XcbAtom m_libinputIdentifierAtom;
 
-    XlibTouchpad *findTouchpad();
-    std::unique_ptr<XlibTouchpad> m_device;
+    LibinputTouchpad *findTouchpad();
+    std::unique_ptr<LibinputTouchpad> m_device;
 
     QString m_errorString;
     std::unique_ptr<XlibNotifications> m_notifications;
