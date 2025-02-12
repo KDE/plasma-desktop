@@ -358,11 +358,6 @@ bool LibinputTouchpad::isSaveNeeded() const
     return changed;
 }
 
-int LibinputTouchpad::touchpadOff()
-{
-    return m_enabled.val;
-}
-
 XcbAtom &LibinputTouchpad::touchpadOffAtom()
 {
     return *m_atoms[QLatin1String(LIBINPUT_PROP_SENDEVENTS_ENABLED)].get();
