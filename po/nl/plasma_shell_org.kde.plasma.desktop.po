@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-11 00:43+0000\n"
-"PO-Revision-Date: 2025-02-08 17:23+0100\n"
+"PO-Revision-Date: 2025-02-11 11:29+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -155,15 +155,12 @@ msgid "Apply Settings"
 msgstr "Instellingen toepassen"
 
 #: contents/configuration/AppletConfiguration.qml:354
-#, fuzzy, kde-format
-#| msgid ""
-#| "The settings of the current module have changed. Do you want to apply the "
-#| "changes or discard them?"
+#, kde-format
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
 msgstr ""
-"De instellingen van de huidige module zijn gewijzigd. Wilt u de wijzigingen "
-"toepassen of verwerpen?"
+"De huidige pagina heeft niet opgeslagen wijzigingen. De wijzigingen "
+"toepassen of ze verwerpen?"
 
 #: contents/configuration/AppletConfiguration.qml:385
 #, kde-format

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_shell_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-11 00:43+0000\n"
-"PO-Revision-Date: 2025-02-08 10:56+0100\n"
+"PO-Revision-Date: 2025-02-11 19:52+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -156,15 +156,12 @@ msgid "Apply Settings"
 msgstr "Aplicar preferencias"
 
 #: contents/configuration/AppletConfiguration.qml:354
-#, fuzzy, kde-format
-#| msgid ""
-#| "The settings of the current module have changed. Do you want to apply the "
-#| "changes or discard them?"
+#, kde-format
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
 msgstr ""
-"Las preferencias del módulo actual han cambiado. ¿Desea aplicar los cambios "
-"o descartarlos?"
+"La página actual tiene cambios sin guardar. ¿Quiere aplicar los cambios o "
+"descartarlos?"
 
 #: contents/configuration/AppletConfiguration.qml:385
 #, kde-format
