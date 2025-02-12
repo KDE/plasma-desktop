@@ -78,19 +78,6 @@ public:
         return 0;
     }
 
-    enum TouchpadOffState {
-        TouchpadEnabled,
-        TouchpadTapAndScrollDisabled,
-        TouchpadFullyDisabled,
-    };
-    virtual void setTouchpadOff(TouchpadOffState)
-    {
-    }
-    virtual TouchpadOffState getTouchpadOff()
-    {
-        return TouchpadFullyDisabled;
-    }
-
     virtual bool isTouchpadAvailable() const
     {
         return false;

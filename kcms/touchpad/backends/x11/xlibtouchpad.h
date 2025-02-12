@@ -60,10 +60,6 @@ public:
     }
     void setSuspended(bool suspended);
     bool isSuspended();
-    virtual void setTouchpadOff(int /*touchpadOff*/)
-    {
-    }
-    virtual int touchpadOff() = 0;
 
     virtual XcbAtom &touchpadOffAtom() = 0;
 

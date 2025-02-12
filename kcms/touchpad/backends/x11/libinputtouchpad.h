@@ -27,7 +27,6 @@ public:
     bool defaults() override;
     bool isSaveNeeded() const override;
 
-    int touchpadOff() override;
     XcbAtom &touchpadOffAtom() override;
 
     //

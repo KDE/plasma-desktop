@@ -174,31 +174,6 @@ void XlibBackend::setTouchpadSuspended(bool suspend)
     Q_EMIT touchpadStateChanged();
 }
 
-void XlibBackend::setTouchpadOff(TouchpadBackend::TouchpadOffState state)
-{
-    if (!m_device) {
-        return;
-    }
-
-    int touchpadOff = 0;
-    switch (state) {
-    case TouchpadEnabled:
-        touchpadOff = 0;
-        break;
-    case TouchpadFullyDisabled:
-        touchpadOff = 1;
-        break;
-    case TouchpadTapAndScrollDisabled:
-        touchpadOff = 2;
-        break;
-    default:
-        qCritical() << "Unknown TouchpadOffState" << state;
-        return;
-    }
-
-    m_device->setTouchpadOff(touchpadOff);
-}
-
 bool XlibBackend::isTouchpadAvailable() const
 {
     return m_device != nullptr;
@@ -211,25 +186,6 @@ bool XlibBackend::isTouchpadSuspended() const
     }
 
     return m_device->isSuspended();
-}
-
-TouchpadBackend::TouchpadOffState XlibBackend::getTouchpadOff()
-{
-    if (!m_device) {
-        return TouchpadFullyDisabled;
-    }
-    int value = m_device->touchpadOff();
-    switch (value) {
-    case 0:
-        return TouchpadEnabled;
-    case 1:
-        return TouchpadFullyDisabled;
-    case 2:
-        return TouchpadTapAndScrollDisabled;
-    default:
-        qCritical() << "Unknown TouchpadOff value" << value;
-        return TouchpadFullyDisabled;
-    }
 }
 
 void XlibBackend::touchpadDetached()
