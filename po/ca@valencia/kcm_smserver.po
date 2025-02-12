@@ -1,26 +1,26 @@
 # Translation of kcm_smserver.po to Catalan (Valencian)
-# Copyright (C) 2001-2024 This_file_is_part_of_KDE
+# Copyright (C) 2001-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Sebastià Pla i Sanz <sps@sastia.com>, 2001, 2002, 2004.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2003.
 # Albert Astals Cid <aacid@kde.org>, 2005.
-# SPDX-FileCopyrightText: 2008, 2009, 2010, 2011, 2019, 2020, 2021, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
+# Josep M. Ferrer <txemaq@gmail.com>, 2008, 2009, 2010, 2011, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-25 02:37+0000\n"
-"PO-Revision-Date: 2024-10-27 17:34+0100\n"
+"PO-Revision-Date: 2025-01-09 09:58+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -151,21 +151,17 @@ msgid "Ignored applications:"
 msgstr "Aplicacions ignorades:"
 
 #: ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' executable names here (separated by commas or colons, for "
-#| "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
-"Escriviu ací els noms dels executables de les aplicacions (separats per "
-"comes o punts i comes, per exemple, «xterm:konsole» o «xterm,konsole») per a "
-"evitar que s'inicien automàticament amb les aplicacions restaurades d'altres "
-"sessions."
+"Escriviu ací l'identificador dels fitxers «desktop» de les aplicacions, o en "
+"les X11, els noms dels seus executables (separats per comes o punts i comes, "
+"per exemple, «xterm:konsole» o «xterm,konsole») per a evitar que s'inicien "
+"automàticament amb les aplicacions restaurades d'altres sessions."
 
 #: ui/main.qml:138
 #, kde-format
@@ -192,12 +188,3 @@ msgstr "Entra a la pantalla de configuració de la UEFI"
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "Entra a la pantalla de configuració del microprogramari"
-
-#~ msgid ""
-#~ "The system must be restarted before manual session saving becomes active."
-#~ msgstr ""
-#~ "Cal reiniciar el sistema perquè la guardada manual de la sessió estiga "
-#~ "activa."
-
-#~ msgid "Restart"
-#~ msgstr "Reinicia"
