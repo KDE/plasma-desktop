@@ -23,10 +23,10 @@ public:
 
     bool init();
 
-    bool load();
-    bool defaults();
-    bool save();
-    bool isSaveNeeded() const;
+    bool load() override;
+    bool defaults() override;
+    bool save() override;
+    bool isSaveNeeded() const override;
 
     //
     // general
