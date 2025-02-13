@@ -189,7 +189,9 @@ PC3.Page {
                 }
                 PC3.ToolButton {
                     id: closeButton
+                    text: i18nc("@action:button accessible for close button", "Close Widget Explorer")
                     icon.name: "window-close"
+                    display: PC3.AbstractButton.IconOnly
 
                     KeyNavigation.down: categoryButton
 
@@ -203,6 +205,7 @@ PC3.Page {
                 PlasmaExtras.SearchField {
                     id: searchInput
                     Layout.fillWidth: true
+                    Accessible.name: i18nc("@label:textbox accessible", "Search Widgets")
 
                     KeyNavigation.down: list
                     KeyNavigation.right: categoryButton
@@ -251,7 +254,8 @@ PC3.Page {
         visible: pendingUninstallTimer.applets.length > 0
 
         contentItem: PC3.Button {
-            text: i18ndcp("plasma_shell_org.kde.plasma.desktop", "@action:button uninstall widgets in widget explorer", "Confirm Removal of One Widget", "Confirm Removal of %1 Widgets", pendingUninstallTimer.applets.length)
+            id: uninstallButton
+            text: i18ndcp("plasma_shell_org.kde.plasma.desktop", "@action:button uninstall widgets in widget explorer", "Uninstall (%1 Widget)", "Uninstall (%1 Widgets)", pendingUninstallTimer.applets.length)
             onClicked: pendingUninstallTimer.uninstall()
         }
     }
@@ -345,6 +349,7 @@ PC3.Page {
             }
 
             KeyNavigation.up: searchInput
+            KeyNavigation.down: uninstallButton
         }
     }
 

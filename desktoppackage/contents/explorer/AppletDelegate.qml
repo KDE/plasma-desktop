@@ -24,6 +24,10 @@ Item {
     width: list.cellWidth
     height: list.cellHeight
 
+    Accessible.name: i18nc("@action:button accessible only, %1 is widget name", "Add %1", model.name)  + (model.isSupported ? "" : unsupportedTooltip.mainText)
+    Accessible.description: (model.isSupported ? "" : model.unsupportedMessage) + model.description + (overlayedBadge.visible ? countLabel.Accessible.name : "")
+    Accessible.role: Accessible.Button
+
     HoverHandler {
         id: hoverHandler
         onHoveredChanged: if (hovered) delegate.GridView.view.currentIndex = index
@@ -36,6 +40,7 @@ Item {
     }
 
     PlasmaCore.ToolTipArea {
+        id: unsupportedTooltip
         anchors.fill: parent
         visible: !model.isSupported
         mainText: i18n("Unsupported Widget")
@@ -194,6 +199,9 @@ Item {
                     verticalAlignment: Text.AlignVCenter
                     anchors.centerIn: parent
                     text: (running && delegate.GridView.isCurrentItem) ? running : i18ndc("plasma_shell_org.kde.plasma.desktop", "Text displayed on top of newly installed widgets", "New!")
+                    Accessible.name: running
+                        ? i18ncp("@info:other accessible for badge showing applet count", "%1 widget active", "%1 widgets active", running)
+                        : i18nc(" @info:other accessible for badge indicating new widget", "Recently installed")
                     textFormat: Text.PlainText
                 }
             }
@@ -205,12 +213,17 @@ Item {
                     top: parent.top
                     right: parent.right
                 }
+                text: delegate.pendingUninstall ? i18nd("plasma_shell_org.kde.plasma.desktop", "Cancel Uninstallation")
+                    : i18ndc("plasma_shell_org.kde.plasma.desktop","@info:tooltip uninstall a widget", "Mark for Uninstallation")
                 icon.name: delegate.pendingUninstall ? "edit-undo" : "edit-delete"
+                display: PlasmaComponents.AbstractButton.IconOnly
+                Accessible.description: delegate.pendingUninstall
+                    ? i18nc("@action:button accessible only, %1 is widget name", "Cancel pending uninstallation for widget %1", model.name)
+                    : i18nc("@action:button accessible only, %1 is widget name", "Mark widget %1 for uninstallation. Requires confirmation", model.name)
                 // we don't really "undo" anything but we'll pretend to the user that we do
                 PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
                 PlasmaComponents.ToolTip.visible: hovered
-                PlasmaComponents.ToolTip.text: delegate.pendingUninstall ? i18nd("plasma_shell_org.kde.plasma.desktop", "Undo uninstall")
-                                                    : i18ndc("plasma_shell_org.kde.plasma.desktop","@info:tooltip uninstall a widget", "Uninstall")
+                PlasmaComponents.ToolTip.text: text
                 flat: false
                 visible: model.local && delegate.GridView.isCurrentItem && !dragHandler.active && !touchDragHandler.active
 
@@ -248,11 +261,17 @@ Item {
                     right: uninstallButton.visible ? uninstallButton.left : parent.right
                     rightMargin: uninstallButton.visible ? Kirigami.Units.smallSpacing : 0
                 }
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove all instances")
+                display: PlasmaComponents.AbstractButton.IconOnly
                 icon.name: "edit-clear-all"
+                Accessible.description: i18ncp("@action:button accessible description, %1 number of instances %2 is widget name",
+                                               "Remove running instance of widget %2",
+                                               "Remove all %1 running instanes of widget %2", running ,model.name)
+
                 // we don't really "undo" anything but we'll pretend to the user that we do
                 PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
                 PlasmaComponents.ToolTip.visible: hovered
-                PlasmaComponents.ToolTip.text: i18nd("plasma_shell_org.kde.plasma.desktop", "Remove all instances")
+                PlasmaComponents.ToolTip.text: text
                 flat: false
                 visible: running && delegate.GridView.isCurrentItem && !dragHandler.active
 

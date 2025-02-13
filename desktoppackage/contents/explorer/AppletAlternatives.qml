@@ -115,6 +115,9 @@ PlasmaCore.Dialog {
                     implicitHeight: contentLayout.implicitHeight + Kirigami.Units.smallSpacing * 2
                     width: ListView.view.width
 
+                    Accessible.name: model.name
+                    Accessible.description: model.description
+
                     onHoveredChanged: {
                         if (hovered) {
                             resetCurrentIndex.stop()
