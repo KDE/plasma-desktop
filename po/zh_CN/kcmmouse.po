@@ -182,18 +182,16 @@ msgid "Pointer speed:"
 msgstr "光标速度："
 
 #: ui/main.qml:233
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgid "Enable pointer acceleration"
-msgstr "光标加速："
+msgstr "启用光标加速度"
 
 #: ui/main.qml:247
-#, fuzzy, kde-format
-#| msgid "Cursor travel distance depends on the mouse movement speed."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
-msgstr "光标移动的距离受鼠标的移动速度影响。"
+msgstr "启用后，光标的移动距离会随着移动速度的加快而增加。"
 
 #: ui/main.qml:257
 #, kde-format
@@ -236,12 +234,3 @@ msgstr "按住中键并移动鼠标以滚动"
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "按住中键时用鼠标滚动。"
-
-#~ msgid "None"
-#~ msgstr "无"
-
-#~ msgid "Cursor moves the same distance as the mouse movement."
-#~ msgstr "光标移动的距离与鼠标移动的距离相同。"
-
-#~ msgid "Standard"
-#~ msgstr "标准"

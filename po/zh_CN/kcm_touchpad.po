@@ -200,17 +200,16 @@ msgid "Pointer speed:"
 msgstr "光标速度："
 
 #: ui/main.qml:303
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgid "Enable pointer acceleration"
-msgstr "光标加速："
+msgstr "启用光标加速度"
 
 #: ui/main.qml:318
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
-msgstr ""
+msgstr "启用后，光标的移动距离会随着移动速度的加快而增加。"
 
 #: ui/main.qml:328
 #, kde-format
@@ -465,73 +464,3 @@ msgstr "三指按下触摸板"
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr "三指按下触摸板的任意位置时点击中键。"
-
-#~ msgid "None"
-#~ msgstr "无"
-
-#~ msgid "Cursor moves the same distance as finger."
-#~ msgstr "光标移动的距离与手指移动的距离相同。"
-
-#~ msgid "Standard"
-#~ msgstr "标准"
-
-#~ msgid "Cursor travel distance depends on movement speed of finger."
-#~ msgstr "光标移动的距离取决于手指移动的速度。"
-
-#~ msgctxt "Emulated mouse button"
-#~ msgid "No action"
-#~ msgstr "无操作"
-
-#~ msgctxt "Emulated mouse button"
-#~ msgid "Left button"
-#~ msgstr "左键"
-
-#~ msgctxt "Emulated mouse button"
-#~ msgid "Middle button"
-#~ msgstr "中键"
-
-#~ msgctxt "Emulated mouse button"
-#~ msgid "Right button"
-#~ msgstr "右键"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "All edges"
-#~ msgstr "所有边缘"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Top edge"
-#~ msgstr "顶部边缘"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Top right corner"
-#~ msgstr "右上角"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Right edge"
-#~ msgstr "右边缘"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Bottom right corner"
-#~ msgstr "右下角"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Bottom edge"
-#~ msgstr "底部边缘"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Bottom left corner"
-#~ msgstr "左下角"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Left edge"
-#~ msgstr "左边缘"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Top left corner"
-#~ msgstr "左上角"
-
-#~ msgid "Touchpad was disabled because a mouse was plugged in"
-#~ msgstr "检测到鼠标插入，触摸板已禁用"
-
-#~ msgid "Touchpad was enabled because the mouse was unplugged"
-#~ msgstr "检测到鼠标拔出，触摸板已启用"

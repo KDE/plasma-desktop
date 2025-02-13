@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-01 00:42+0000\n"
-"PO-Revision-Date: 2024-12-28 17:41+0100\n"
+"PO-Revision-Date: 2025-02-12 22:59+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -198,18 +198,16 @@ msgid "Pointer speed:"
 msgstr "Rapideco de la montrilo:"
 
 #: ui/main.qml:233
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgid "Enable pointer acceleration"
-msgstr "Akcelado de la montrilo:"
+msgstr "Ebligi montrilan akcelon"
 
 #: ui/main.qml:247
-#, fuzzy, kde-format
-#| msgid "Cursor travel distance depends on the mouse movement speed."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
-msgstr "Kursora vojaĝdistanco dependas de la musmova rapideco."
+msgstr "Ŝaltite, montrila vojaĝdistanco pliiĝas laŭ plia musmova rapideco."
 
 #: ui/main.qml:257
 #, kde-format
@@ -252,12 +250,3 @@ msgstr "Premu mezan butonon kaj movu muson por rulumi"
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "Rulumante per la muso dum kiam meza butono estas premata."
-
-#~ msgid "None"
-#~ msgstr "Neniu"
-
-#~ msgid "Cursor moves the same distance as the mouse movement."
-#~ msgstr "Kursoro moviĝas la saman distancon kiel la musmovo."
-
-#~ msgid "Standard"
-#~ msgstr "Norma"

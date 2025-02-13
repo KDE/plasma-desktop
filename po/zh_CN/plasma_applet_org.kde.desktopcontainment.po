@@ -458,7 +458,7 @@ msgstr "清空回收站(&E)"
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
-msgstr ""
+msgstr "还原到之前位置"
 
 #: plugins/folder/foldermodel.cpp:1735
 #, kde-format
@@ -477,13 +477,12 @@ msgstr "显示目标"
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
-msgstr ""
+msgstr "移除回收站图标"
 
 #: plugins/folder/foldermodel.cpp:1838
-#, fuzzy, kde-format
-#| msgid "&Empty Trash"
+#, kde-format
 msgid "&Move to Trash"
-msgstr "清空回收站(&E)"
+msgstr "移动到回收站(&M)"
 
 #: plugins/folder/foldermodel.cpp:1871
 #, kde-format
@@ -640,7 +639,3 @@ msgstr "显示预览"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "已锁定"
-
-#~ msgctxt "Restore from trash"
-#~ msgid "Restore"
-#~ msgstr "恢复"

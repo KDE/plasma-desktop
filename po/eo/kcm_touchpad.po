@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-01 00:42+0000\n"
-"PO-Revision-Date: 2024-12-29 19:47+0100\n"
+"PO-Revision-Date: 2025-02-12 07:01+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -214,10 +214,9 @@ msgid "Pointer speed:"
 msgstr "Montrilsaga rapideco:"
 
 #: ui/main.qml:303
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgid "Enable pointer acceleration"
-msgstr "Montrilsaga akcelo:"
+msgstr "Ebligi montrilsagan akcelon"
 
 #: ui/main.qml:318
 #, kde-format
@@ -225,6 +224,8 @@ msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
+"Kiam ĝi estas ebligita, montrilo vojaĝdistanco pliiĝas kun pli rapida "
+"movrapideco."
 
 #: ui/main.qml:328
 #, kde-format
@@ -492,73 +493,3 @@ msgstr "Premi tuŝplaton per tri fingroj"
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr "Premado de la tuŝplato ie ajn per tri fingroj agas kiel meza klako."
-
-#~ msgid "None"
-#~ msgstr "Neniu"
-
-#~ msgid "Cursor moves the same distance as finger."
-#~ msgstr "Kursoro movas la saman distancon kiel fingro."
-
-#~ msgid "Standard"
-#~ msgstr "Norma"
-
-#~ msgid "Cursor travel distance depends on movement speed of finger."
-#~ msgstr "Kursora vojaĝdistanco dependas de movrapideco de fingro."
-
-#~ msgctxt "Emulated mouse button"
-#~ msgid "No action"
-#~ msgstr "Neniu agado"
-
-#~ msgctxt "Emulated mouse button"
-#~ msgid "Left button"
-#~ msgstr "Maldekstra butono"
-
-#~ msgctxt "Emulated mouse button"
-#~ msgid "Middle button"
-#~ msgstr "Meza butono"
-
-#~ msgctxt "Emulated mouse button"
-#~ msgid "Right button"
-#~ msgstr "Dekstra butono"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "All edges"
-#~ msgstr "Ĉiuj randoj"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Top edge"
-#~ msgstr "Supra rando"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Top right corner"
-#~ msgstr "Supra dekstra angulo"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Right edge"
-#~ msgstr "Dekstra rando"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Bottom right corner"
-#~ msgstr "Malsupra dekstra angulo"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Bottom edge"
-#~ msgstr "Malsupra rando"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Bottom left corner"
-#~ msgstr "Malsupra maldekstra angulo"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Left edge"
-#~ msgstr "Maldekstra rando"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Top left corner"
-#~ msgstr "Supra maldekstra angulo"
-
-#~ msgid "Touchpad was disabled because a mouse was plugged in"
-#~ msgstr "Tuŝplato estis malŝaltita ĉar muso estis enŝovita"
-
-#~ msgid "Touchpad was enabled because the mouse was unplugged"
-#~ msgstr "Tuŝplato estis ebligita ĉar la muso estis malkonektita"

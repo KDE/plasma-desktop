@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-11 00:43+0000\n"
-"PO-Revision-Date: 2025-01-11 22:49+0100\n"
+"PO-Revision-Date: 2025-02-12 22:59+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -155,15 +155,12 @@ msgid "Apply Settings"
 msgstr "Apliki Agordojn"
 
 #: contents/configuration/AppletConfiguration.qml:354
-#, fuzzy, kde-format
-#| msgid ""
-#| "The settings of the current module have changed. Do you want to apply the "
-#| "changes or discard them?"
+#, kde-format
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
 msgstr ""
-"La agordoj de la nuna modulo ŝanĝiĝis. Ĉu vi volas apliki la ŝanĝojn aŭ "
-"forĵeti ilin?"
+"La nuna paĝo havas nekonservitajn ŝanĝojn. Ĉu apliki la ŝanĝojn aŭ forĵeti "
+"ilin?"
 
 #: contents/configuration/AppletConfiguration.qml:385
 #, kde-format
@@ -455,30 +452,28 @@ msgid "Translucent"
 msgstr "Diafana"
 
 #: contents/configuration/PanelConfiguration.qml:480
-#, fuzzy, kde-format
-#| msgid "Floating"
+#, kde-format
 msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
-msgstr "Glita"
+msgstr "Gliteco"
 
 #: contents/configuration/PanelConfiguration.qml:494
 #, kde-format
 msgctxt "@item:inlistbox Option to disable floating panels or applets"
 msgid "Disabled"
-msgstr ""
+msgstr "Malŝaltita"
 
 #: contents/configuration/PanelConfiguration.qml:495
 #, kde-format
 msgctxt "@item:inlistbox Option to make only panel applets always float"
 msgid "Applets only"
-msgstr ""
+msgstr "Nur apletoj"
 
 #: contents/configuration/PanelConfiguration.qml:496
-#, fuzzy, kde-format
-#| msgid "Manage Panels and Desktops"
+#, kde-format
 msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
-msgstr "Administri Panelojn kaj Labortablojn"
+msgstr "Panelo kaj apletoj"
 
 #: contents/configuration/PanelConfiguration.qml:539
 #, kde-format
@@ -852,10 +847,3 @@ msgstr "Eliri Redaktan Reĝimon"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Panelfokusa Indikilo"
-
-#~ msgid "Style"
-#~ msgstr "Stilo"
-
-#~ msgctxt "@title"
-#~ msgid "About"
-#~ msgstr "Pri"

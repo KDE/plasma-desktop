@@ -155,13 +155,10 @@ msgid "Apply Settings"
 msgstr "应用设置"
 
 #: contents/configuration/AppletConfiguration.qml:354
-#, fuzzy, kde-format
-#| msgid ""
-#| "The settings of the current module have changed. Do you want to apply the "
-#| "changes or discard them?"
+#, kde-format
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
-msgstr "当前模块的设置已经更改。您想要应用更改还是丢弃更改？"
+msgstr "当前页面包含尚未保存的更改。您想要应用还是放弃这些更改？"
 
 #: contents/configuration/AppletConfiguration.qml:385
 #, kde-format
@@ -450,8 +447,7 @@ msgid "Translucent"
 msgstr "半透明"
 
 #: contents/configuration/PanelConfiguration.qml:480
-#, fuzzy, kde-format
-#| msgid "Floating"
+#, kde-format
 msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
 msgstr "悬浮"
@@ -460,20 +456,19 @@ msgstr "悬浮"
 #, kde-format
 msgctxt "@item:inlistbox Option to disable floating panels or applets"
 msgid "Disabled"
-msgstr ""
+msgstr "已禁用"
 
 #: contents/configuration/PanelConfiguration.qml:495
 #, kde-format
 msgctxt "@item:inlistbox Option to make only panel applets always float"
 msgid "Applets only"
-msgstr ""
+msgstr "仅小程序"
 
 #: contents/configuration/PanelConfiguration.qml:496
-#, fuzzy, kde-format
-#| msgid "Manage Panels and Desktops"
+#, kde-format
 msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
-msgstr "管理面板和桌面"
+msgstr "面板和小程序"
 
 #: contents/configuration/PanelConfiguration.qml:539
 #, kde-format
@@ -845,6 +840,3 @@ msgstr "退出编辑模式"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "面板焦点指示器"
-
-#~ msgid "Style"
-#~ msgstr "风格"
