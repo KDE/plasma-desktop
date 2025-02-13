@@ -6,14 +6,15 @@
   <kcfgfile name="plasmarc" />
   <group name="PlasmaToolTips">
     <entry name="delay" key="Delay" type="Double">
-      <label>Display informational tooltips on mouse hover</label>
+      <label>Display large panel and widget tooltips</label>
+      <tooltip>Allow Plasma widgets to display large panel and widget tooltips on hover</tooltip>
       <default>0.7</default>
     </entry>
   </group>
   <group name="OSD">
     <entry name="osdEnabled" key="Enabled" type="Bool">
-      <label>Display visual feedback for status changes</label>
-      <tooltip>Show an on-screen display to indicate status changes such as brightness or volume</tooltip>
+      <label>Display small popups for status changes</label>
+      <tooltip>Allow Plasma widgets to display small popups for status changes such as brightness or volume</tooltip>
       <default>true</default>
     </entry>
     <entry name="osdKbdLayoutChangedEnabled" key="kbdLayoutChangedEnabled" type="Bool">

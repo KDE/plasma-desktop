@@ -41,26 +41,43 @@ KCM.SimpleKCM {
     Kirigami.FormLayout {
 
         // Visual behavior settings
-        QQC2.CheckBox {
-            Kirigami.FormData.label: i18n("Visual behavior:")
-            text: i18n("Display informational tooltips on mouse hover")
-            checked: kcm.plasmaSettings.delay > 0
-            onCheckedChanged: kcm.plasmaSettings.delay = (checked ? 0.7 : -1)
+        RowLayout {
+            Kirigami.FormData.label: i18nc("Part of the sentence 'Allow Plasma to show panel and widget tooltips'", "Allow Plasma to show:")
+            Kirigami.FormData.buddyFor: tooltipDisablerCheckbox
 
-            KCM.SettingStateBinding {
-                configObject: kcm.plasmaSettings
-                settingName: "delay"
+            spacing: 0
+
+            QQC2.CheckBox {
+                id: tooltipDisablerCheckbox
+                text: i18nc("Part of the sentence 'Allow Plasma to show panel and widget tooltips'", "Panel and widget tooltips")
+                checked: kcm.plasmaSettings.delay > 0
+                onCheckedChanged: kcm.plasmaSettings.delay = (checked ? 0.7 : -1)
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.plasmaSettings
+                    settingName: "delay"
+                }
+            }
+            Kirigami.ContextualHelpButton {
+                toolTipText: i18n("Allows all Plasma panel and desktop widgets to show descriptive tooltips when hovered with the pointer. This setting has no effect on the small tooltips displayed when hovering over individual buttons and other user interface elements.")
             }
         }
 
-        QQC2.CheckBox {
-            text: i18n("Display visual feedback for status changes")
-            checked: kcm.plasmaSettings.osdEnabled
-            onCheckedChanged: kcm.plasmaSettings.osdEnabled = checked
+        RowLayout {
+            spacing: 0
 
-            KCM.SettingStateBinding {
-                configObject: kcm.plasmaSettings
-                settingName: "osdEnabled"
+            QQC2.CheckBox {
+                text: i18nc("Part of the sentence 'Allow Plasma to show OSD popups for status changes'", "OSD popups for status changes")
+                checked: kcm.plasmaSettings.osdEnabled
+                onCheckedChanged: kcm.plasmaSettings.osdEnabled = checked
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.plasmaSettings
+                    settingName: "osdEnabled"
+                }
+            }
+            Kirigami.ContextualHelpButton {
+                toolTipText: i18n("Allows all Plasma widgets to show on-screen display (OSD) popups for changes like volume and brightness level, or audio device switching.")
             }
         }
 

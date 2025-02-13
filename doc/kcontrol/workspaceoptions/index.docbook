@@ -32,7 +32,7 @@
 <variablelist>
 
 <varlistentry>
-<term><guilabel>Display informational tooltips on mouse hover</guilabel></term>
+<term><guilabel>Allow Plasma to show panel and widget tooltips</guilabel></term>
 <listitem>
 <para>If this option is checked, tooltips are displayed hovering items in the
 &plasma; panel or on the desktop.</para>
@@ -40,10 +40,9 @@
 </varlistentry>
 
 <varlistentry>
-<term><guilabel>Display visual feedback for status changes</guilabel></term>
+<term><guilabel>Allow Plasma to show OSD popups for status changes</guilabel></term>
 <listitem>
-<para>If you change &eg; brightness and volume using the keyboard these status
-changes are displayed in an OSD.</para>
+<para>If this option is checked, all Plasma widgets are allowed to show on-screen display (OSD) popups for changes like volume and brightness level, or audio device switching.</para>
 </listitem>
 </varlistentry>
 
