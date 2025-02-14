@@ -413,9 +413,14 @@ FocusScope {
                     }
                 }
             } else if (event.key === Qt.Key_Enter || event.key === Qt.Key_Return) {
-                if (runnerColumns.visible && runnerModel.modelForRow(0).count) {
-                    runnerModel.modelForRow(0).trigger(0, "", null);
-                    kicker.expanded = false;
+                if (runnerColumns.visible) {
+                    for (let i = 0; i < runnerModel.count; ++i) {
+                        if (runnerModel.modelForRow(i).count) {
+                            runnerModel.modelForRow(i).trigger(0, "", null);
+                            kicker.expanded = false;
+                            break;
+                        }
+                    }
                 }
             }
         }
