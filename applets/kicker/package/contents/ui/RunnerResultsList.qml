@@ -94,9 +94,14 @@ FocusScope {
 
         model: runnerModel.modelForRow(index)
 
-        onCountChanged: {
-            if (firstVisible && searchField.focus) {
-                currentIndex = 0;
+        Connections {
+            target: runnerModel
+            function onAnyRunnerFinished () {
+                Qt.callLater( () => { // these come in quickly at the start
+                    if (firstVisible && searchField.focus) {
+                        currentIndex = 0;
+                    }
+                })
             }
         }
         onNavigateLeftRequested: runnerResultsList.navigateLeftRequested()
