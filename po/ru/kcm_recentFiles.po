@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Alexander Yavorsky <kekcuha@gmail.com>, 2022.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2022, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2022-08-10 15:47+0300\n"
+"PO-Revision-Date: 2025-02-13 11:23+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 21.08.3\n"
 
 #. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:10
@@ -130,7 +130,6 @@ msgstr "Запоминать открытые документы:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_blockedByDefault)
 #: ui/RecentFiles.ui:128
-#, fuzzy, kde-format
-#| msgid "Blacklist applications not on the list"
+#, kde-format
 msgid "Exclude applications not on the list"
-msgstr "Заблокировать все приложения, кроме перечисленных"
+msgstr "Исключить приложения, кроме перечисленных"
