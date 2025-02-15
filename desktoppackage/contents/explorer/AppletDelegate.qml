@@ -266,7 +266,7 @@ Item {
                 icon.name: "edit-clear-all"
                 Accessible.description: i18ncp("@action:button accessible description, %1 number of instances %2 is widget name",
                                                "Remove running instance of widget %2",
-                                               "Remove all %1 running instanes of widget %2", running ,model.name)
+                                               "Remove all %1 running instances of widget %2", running ,model.name)
 
                 // we don't really "undo" anything but we'll pretend to the user that we do
                 PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
