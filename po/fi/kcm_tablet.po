@@ -1,6 +1,6 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
 # SPDX-FileCopyrightText: 2022, 2024 Lasse Liehu <lasse.liehu@iki.fi>
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-27 00:43+0000\n"
-"PO-Revision-Date: 2024-12-01 14:59+0200\n"
+"PO-Revision-Date: 2025-01-12 17:05+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -335,18 +335,15 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 – %3×%4"
 
 #: ui/ExternalScreenMapping.qml:190
-#, fuzzy, kde-format
-#| msgid "Resize the tablet area"
+#, kde-format
 msgid "Resize the screen area"
-msgstr "Muuta piirtopöydän kokoa"
+msgstr "Muuta näyttöalueen kokoa"
 
 #: ui/ExternalScreenMapping.qml:265
-#, fuzzy, kde-format
-#| msgctxt "tablet area position - size"
-#| msgid "%1,%2 - %3×%4"
+#, kde-format
 msgctxt "tablet area position - size"
 msgid "%1%,%2% - %3%×%4%"
-msgstr "%1,%2 – %3×%4"
+msgstr "%1 %,%2 % - %3 % × %4 %"
 
 #: ui/ExternalScreenMapping.qml:299
 #, kde-format
@@ -379,21 +376,19 @@ msgstr "Laite:"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
-msgstr ""
+msgstr "Näyttö"
 
 #: ui/main.qml:169
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
-msgstr ""
+msgstr "Kynä"
 
 #: ui/main.qml:181
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The pad we are configuring"
-#| msgid "Pad:"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
-msgstr "Laite:"
+msgstr "Kosketusalusta"
 
 #: ui/PadTab.qml:33
 #, kde-format
@@ -417,7 +412,7 @@ msgstr "Vasenkätinen tila:"
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
-msgstr ""
+msgstr "Käytä"
 
 #: ui/StylusTab.qml:43
 #, kde-kuit-format
@@ -440,13 +435,13 @@ msgstr "Kynän paine:"
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1 %"
 
 #: ui/StylusTab.qml:170
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1 %"
 
 #: ui/StylusTab.qml:181
 #, kde-format
@@ -471,11 +466,10 @@ msgstr ""
 "välisen suhteen."
 
 #: ui/StylusTab.qml:198
-#, fuzzy, kde-format
-#| msgid "Pen Pressure:"
+#, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
-msgstr "Kynän paine:"
+msgstr "Painealue:"
 
 #: ui/StylusTab.qml:225
 #, kde-format
@@ -484,6 +478,8 @@ msgid ""
 "Pressure above or below the threshold will be clamped, and this becomes the "
 "new effective range."
 msgstr ""
+"Yli tai alle kynnysarvon oleva paine rajataan, ja tästä tulee uusi voimassa "
+"oleva ala."
 
 #: ui/StylusTab.qml:237
 #, kde-format
@@ -520,16 +516,12 @@ msgid "Stylus release X=%1 Y=%2"
 msgstr "Kynän vapautus X=%1 Y=%2"
 
 #: ui/Tester.qml:68
-#, fuzzy, kde-format
-#| msgid "Stylus move X=%1 Y=%2"
+#, kde-format
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
-msgstr "Kynän liike X=%1 Y=%2"
+msgstr "Kynän liike X=%1 Y=%2 P=%3 % TX=%4 TY=%5"
 
 #: ui/Tester.qml:205
-#, fuzzy, kde-format
-#| msgid ""
-#| "## Legend:\n"
-#| "# X, Y - event coordinate\n"
+#, kde-format
 msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
@@ -538,6 +530,8 @@ msgid ""
 msgstr ""
 "## Selite:\n"
 "# X, Y - tapahtumakoordinaatti\n"
+"# P – paine\n"
+"# TX, TY – kallistus\n"
 
 #: ui/Tester.qml:211
 #, kde-format
