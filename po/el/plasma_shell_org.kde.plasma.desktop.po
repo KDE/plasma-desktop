@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-11 00:43+0000\n"
+"POT-Creation-Date: 2025-02-15 00:44+0000\n"
 "PO-Revision-Date: 2024-09-19 17:30+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -646,33 +646,77 @@ msgstr "%1 (κύριο)"
 msgid "Alternative Widgets"
 msgstr "Εναλλακτικά συστατικά"
 
-#: contents/explorer/AppletDelegate.qml:41
+#: contents/explorer/AppletDelegate.qml:27
+#, kde-format
+msgctxt "@action:button accessible only, %1 is widget name"
+msgid "Add %1"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:46
 #, kde-format
 msgid "Unsupported Widget"
 msgstr "Μη υποστηριζόμενα συστατικά"
 
-#: contents/explorer/AppletDelegate.qml:196
+#: contents/explorer/AppletDelegate.qml:201
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
 msgstr "Νέο!"
 
-#: contents/explorer/AppletDelegate.qml:212
-#, kde-format
-msgid "Undo uninstall"
-msgstr "Αναίρεση απεγκατάστασης"
+#: contents/explorer/AppletDelegate.qml:203
+#, fuzzy, kde-format
+#| msgid "No widgets available"
+msgctxt "@info:other accessible for badge showing applet count"
+msgid "%1 widget active"
+msgid_plural "%1 widgets active"
+msgstr[0] "Δεν υπάρχουν διαθέσιμα συστατικά"
+msgstr[1] "Δεν υπάρχουν διαθέσιμα συστατικά"
 
-#: contents/explorer/AppletDelegate.qml:213
+#: contents/explorer/AppletDelegate.qml:204
 #, kde-format
-msgctxt "@info:tooltip uninstall a widget"
-msgid "Uninstall"
+msgctxt " @info:other accessible for badge indicating new widget"
+msgid "Recently installed"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:216
+#, fuzzy, kde-format
+#| msgid "Uninstall"
+msgid "Cancel Uninstallation"
 msgstr "Απεγκατάσταση"
 
-#: contents/explorer/AppletDelegate.qml:255
+#: contents/explorer/AppletDelegate.qml:217
+#, kde-format
+msgctxt "@info:tooltip uninstall a widget"
+msgid "Mark for Uninstallation"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:221
+#, kde-format
+msgctxt "@action:button accessible only, %1 is widget name"
+msgid "Cancel pending uninstallation for widget %1"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:222
+#, kde-format
+msgctxt "@action:button accessible only, %1 is widget name"
+msgid "Mark widget %1 for uninstallation. Requires confirmation"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:264
 #, fuzzy, kde-format
 #| msgid "Remove Panel"
 msgid "Remove all instances"
 msgstr "Αφαίρεση πίνακα"
+
+#: contents/explorer/AppletDelegate.qml:268
+#, kde-format
+msgctxt ""
+"@action:button accessible description, %1 number of instances %2 is widget "
+"name"
+msgid "Remove running instance of widget %2"
+msgid_plural "Remove all %1 running instanes of widget %2"
+msgstr[0] ""
+msgstr[1] ""
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -690,7 +734,7 @@ msgid "Uninstall"
 msgstr "Απεγκατάσταση"
 
 #: contents/explorer/WidgetExplorer.qml:140
-#: contents/explorer/WidgetExplorer.qml:220
+#: contents/explorer/WidgetExplorer.qml:223
 #, kde-format
 msgid "All Widgets"
 msgstr "Όλα τα συστατικά"
@@ -712,25 +756,39 @@ msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "Λήψη νέων συστατικών…"
 
-#: contents/explorer/WidgetExplorer.qml:234
+#: contents/explorer/WidgetExplorer.qml:192
+#, kde-format
+msgctxt "@action:button accessible for close button"
+msgid "Close Widget Explorer"
+msgstr ""
+
+#: contents/explorer/WidgetExplorer.qml:208
+#, fuzzy, kde-format
+#| msgid "Lock Widgets"
+msgctxt "@label:textbox accessible"
+msgid "Search Widgets"
+msgstr "Κλείδωμα συστατικών"
+
+#: contents/explorer/WidgetExplorer.qml:237
 #, kde-format
 msgid "Categories"
 msgstr "Κατηγορίες"
 
-#: contents/explorer/WidgetExplorer.qml:254
-#, kde-format
+#: contents/explorer/WidgetExplorer.qml:258
+#, fuzzy, kde-format
+#| msgid "Uninstall widget"
 msgctxt "@action:button uninstall widgets in widget explorer"
-msgid "Confirm Removal of One Widget"
-msgid_plural "Confirm Removal of %1 Widgets"
-msgstr[0] "Επιβεβαίωση αφαίρεσης ενός συστατικού"
-msgstr[1] "Επιβεβαίωση αφαίρεσης %1 συστατικών"
+msgid "Uninstall (%1 Widget)"
+msgid_plural "Uninstall (%1 Widgets)"
+msgstr[0] "Απεγκατάσταση συστατικού"
+msgstr[1] "Απεγκατάσταση συστατικού"
 
-#: contents/explorer/WidgetExplorer.qml:355
+#: contents/explorer/WidgetExplorer.qml:360
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "Δεν υπάρχουν συστατικά που να ταιριάζουν με τους όρους αναζήτησης"
 
-#: contents/explorer/WidgetExplorer.qml:355
+#: contents/explorer/WidgetExplorer.qml:360
 #, kde-format
 msgid "No widgets available"
 msgstr "Δεν υπάρχουν διαθέσιμα συστατικά"
@@ -864,6 +922,19 @@ msgstr "Έξοδος λειτουργίας επεξεργασίας"
 msgid "Panel Focus Indicator"
 msgstr "Δείκτης εστίασης πίνακα"
 
+#~ msgid "Undo uninstall"
+#~ msgstr "Αναίρεση απεγκατάστασης"
+
+#~ msgctxt "@info:tooltip uninstall a widget"
+#~ msgid "Uninstall"
+#~ msgstr "Απεγκατάσταση"
+
+#~ msgctxt "@action:button uninstall widgets in widget explorer"
+#~ msgid "Confirm Removal of One Widget"
+#~ msgid_plural "Confirm Removal of %1 Widgets"
+#~ msgstr[0] "Επιβεβαίωση αφαίρεσης ενός συστατικού"
+#~ msgstr[1] "Επιβεβαίωση αφαίρεσης %1 συστατικών"
+
 #~ msgid "Style"
 #~ msgstr "Στυλ"
 
@@ -876,9 +947,6 @@ msgstr "Δείκτης εστίασης πίνακα"
 
 #~ msgid "Display Configuration"
 #~ msgstr "Διαμόρφωση οθόνης"
-
-#~ msgid "Uninstall widget"
-#~ msgstr "Απεγκατάσταση συστατικού"
 
 #, fuzzy
 #~| msgid "Height"
@@ -924,9 +992,6 @@ msgstr "Δείκτης εστίασης πίνακα"
 #~ msgstr ""
 #~ "Η διάταξη δεν μπορεί να τροποποιηθεί όταν τα γραφικά συστατικά είναι "
 #~ "κλειδωμένα"
-
-#~ msgid "Lock Widgets"
-#~ msgstr "Κλείδωμα συστατικών"
 
 #~ msgid ""
 #~ "This shortcut will activate the applet: it will give the keyboard focus "

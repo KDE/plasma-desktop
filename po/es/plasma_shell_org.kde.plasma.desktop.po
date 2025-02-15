@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-11 00:43+0000\n"
+"POT-Creation-Date: 2025-02-15 00:44+0000\n"
 "PO-Revision-Date: 2025-02-11 19:52+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -636,32 +636,76 @@ msgstr "%1 (principal)"
 msgid "Alternative Widgets"
 msgstr "Elementos gráficos alternativos"
 
-#: contents/explorer/AppletDelegate.qml:41
+#: contents/explorer/AppletDelegate.qml:27
+#, kde-format
+msgctxt "@action:button accessible only, %1 is widget name"
+msgid "Add %1"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:46
 #, kde-format
 msgid "Unsupported Widget"
 msgstr "Elemento gráfico no reconocido"
 
-#: contents/explorer/AppletDelegate.qml:196
+#: contents/explorer/AppletDelegate.qml:201
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
 msgstr "Nuevo"
 
-#: contents/explorer/AppletDelegate.qml:212
-#, kde-format
-msgid "Undo uninstall"
-msgstr "Deshacer la instalación"
+#: contents/explorer/AppletDelegate.qml:203
+#, fuzzy, kde-format
+#| msgid "No widgets available"
+msgctxt "@info:other accessible for badge showing applet count"
+msgid "%1 widget active"
+msgid_plural "%1 widgets active"
+msgstr[0] "Ningún elemento gráfico disponible"
+msgstr[1] "Ningún elemento gráfico disponible"
 
-#: contents/explorer/AppletDelegate.qml:213
+#: contents/explorer/AppletDelegate.qml:204
 #, kde-format
-msgctxt "@info:tooltip uninstall a widget"
-msgid "Uninstall"
+msgctxt " @info:other accessible for badge indicating new widget"
+msgid "Recently installed"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:216
+#, fuzzy, kde-format
+#| msgid "Uninstall"
+msgid "Cancel Uninstallation"
 msgstr "Desinstalar"
 
-#: contents/explorer/AppletDelegate.qml:255
+#: contents/explorer/AppletDelegate.qml:217
+#, kde-format
+msgctxt "@info:tooltip uninstall a widget"
+msgid "Mark for Uninstallation"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:221
+#, kde-format
+msgctxt "@action:button accessible only, %1 is widget name"
+msgid "Cancel pending uninstallation for widget %1"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:222
+#, kde-format
+msgctxt "@action:button accessible only, %1 is widget name"
+msgid "Mark widget %1 for uninstallation. Requires confirmation"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:264
 #, kde-format
 msgid "Remove all instances"
 msgstr "Eliminar todas las instancias"
+
+#: contents/explorer/AppletDelegate.qml:268
+#, kde-format
+msgctxt ""
+"@action:button accessible description, %1 number of instances %2 is widget "
+"name"
+msgid "Remove running instance of widget %2"
+msgid_plural "Remove all %1 running instanes of widget %2"
+msgstr[0] ""
+msgstr[1] ""
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -679,7 +723,7 @@ msgid "Uninstall"
 msgstr "Desinstalar"
 
 #: contents/explorer/WidgetExplorer.qml:140
-#: contents/explorer/WidgetExplorer.qml:220
+#: contents/explorer/WidgetExplorer.qml:223
 #, kde-format
 msgid "All Widgets"
 msgstr "Todos los elementos gráficos"
@@ -701,25 +745,39 @@ msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "Obtener nuevos elementos gráficos..."
 
-#: contents/explorer/WidgetExplorer.qml:234
+#: contents/explorer/WidgetExplorer.qml:192
+#, kde-format
+msgctxt "@action:button accessible for close button"
+msgid "Close Widget Explorer"
+msgstr ""
+
+#: contents/explorer/WidgetExplorer.qml:208
+#, fuzzy, kde-format
+#| msgid "Lock Widgets"
+msgctxt "@label:textbox accessible"
+msgid "Search Widgets"
+msgstr "Bloquear elementos gráficos"
+
+#: contents/explorer/WidgetExplorer.qml:237
 #, kde-format
 msgid "Categories"
 msgstr "Categorías"
 
-#: contents/explorer/WidgetExplorer.qml:254
-#, kde-format
+#: contents/explorer/WidgetExplorer.qml:258
+#, fuzzy, kde-format
+#| msgid "Uninstall widget"
 msgctxt "@action:button uninstall widgets in widget explorer"
-msgid "Confirm Removal of One Widget"
-msgid_plural "Confirm Removal of %1 Widgets"
-msgstr[0] "Confirmar eliminación de 1 elemento gráfico"
-msgstr[1] "Confirmar eliminación de %1 elementos gráficos"
+msgid "Uninstall (%1 Widget)"
+msgid_plural "Uninstall (%1 Widgets)"
+msgstr[0] "Desinstalar elemento gráfico"
+msgstr[1] "Desinstalar elemento gráfico"
 
-#: contents/explorer/WidgetExplorer.qml:355
+#: contents/explorer/WidgetExplorer.qml:360
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "Ningún elemento gráfico satisface la búsqueda"
 
-#: contents/explorer/WidgetExplorer.qml:355
+#: contents/explorer/WidgetExplorer.qml:360
 #, kde-format
 msgid "No widgets available"
 msgstr "Ningún elemento gráfico disponible"
@@ -853,6 +911,19 @@ msgstr "Salir del modo de edición"
 msgid "Panel Focus Indicator"
 msgstr "Indicador de foco del panel"
 
+#~ msgid "Undo uninstall"
+#~ msgstr "Deshacer la instalación"
+
+#~ msgctxt "@info:tooltip uninstall a widget"
+#~ msgid "Uninstall"
+#~ msgstr "Desinstalar"
+
+#~ msgctxt "@action:button uninstall widgets in widget explorer"
+#~ msgid "Confirm Removal of One Widget"
+#~ msgid_plural "Confirm Removal of %1 Widgets"
+#~ msgstr[0] "Confirmar eliminación de 1 elemento gráfico"
+#~ msgstr[1] "Confirmar eliminación de %1 elementos gráficos"
+
 #~ msgid "Style"
 #~ msgstr "Estilo"
 
@@ -865,9 +936,6 @@ msgstr "Indicador de foco del panel"
 
 #~ msgid "Display Configuration"
 #~ msgstr "Configuración de la pantalla"
-
-#~ msgid "Uninstall widget"
-#~ msgstr "Desinstalar elemento gráfico"
 
 #~ msgid "@info:tooltip slider handle"
 #~ msgstr "@info:tooltip tirador de deslizador"
@@ -1055,9 +1123,6 @@ msgstr "Indicador de foco del panel"
 #~ msgstr ""
 #~ "No se puede modificar la distribución mientras estén bloqueados los "
 #~ "elementos gráficos"
-
-#~ msgid "Lock Widgets"
-#~ msgstr "Bloquear elementos gráficos"
 
 #~ msgid ""
 #~ "This shortcut will activate the applet: it will give the keyboard focus "

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-11 00:43+0000\n"
+"POT-Creation-Date: 2025-02-15 00:44+0000\n"
 "PO-Revision-Date: 2024-10-15 11:00+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -633,32 +633,78 @@ msgstr "%1 (primární)"
 msgid "Alternative Widgets"
 msgstr "Alternativní widgety"
 
-#: contents/explorer/AppletDelegate.qml:41
+#: contents/explorer/AppletDelegate.qml:27
+#, kde-format
+msgctxt "@action:button accessible only, %1 is widget name"
+msgid "Add %1"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:46
 #, kde-format
 msgid "Unsupported Widget"
 msgstr "Nepodporovaný widget"
 
-#: contents/explorer/AppletDelegate.qml:196
+#: contents/explorer/AppletDelegate.qml:201
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
 msgstr ""
 
-#: contents/explorer/AppletDelegate.qml:212
-#, kde-format
-msgid "Undo uninstall"
-msgstr "Vrátit odinstalaci zpět"
+#: contents/explorer/AppletDelegate.qml:203
+#, fuzzy, kde-format
+#| msgid "No widgets available"
+msgctxt "@info:other accessible for badge showing applet count"
+msgid "%1 widget active"
+msgid_plural "%1 widgets active"
+msgstr[0] "Nejsou dostupné žádné widgety"
+msgstr[1] "Nejsou dostupné žádné widgety"
+msgstr[2] "Nejsou dostupné žádné widgety"
 
-#: contents/explorer/AppletDelegate.qml:213
+#: contents/explorer/AppletDelegate.qml:204
 #, kde-format
-msgctxt "@info:tooltip uninstall a widget"
-msgid "Uninstall"
+msgctxt " @info:other accessible for badge indicating new widget"
+msgid "Recently installed"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:216
+#, fuzzy, kde-format
+#| msgid "Uninstall"
+msgid "Cancel Uninstallation"
 msgstr "Odinstalovat"
 
-#: contents/explorer/AppletDelegate.qml:255
+#: contents/explorer/AppletDelegate.qml:217
+#, kde-format
+msgctxt "@info:tooltip uninstall a widget"
+msgid "Mark for Uninstallation"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:221
+#, kde-format
+msgctxt "@action:button accessible only, %1 is widget name"
+msgid "Cancel pending uninstallation for widget %1"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:222
+#, kde-format
+msgctxt "@action:button accessible only, %1 is widget name"
+msgid "Mark widget %1 for uninstallation. Requires confirmation"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:264
 #, kde-format
 msgid "Remove all instances"
 msgstr "Odstranit všechny instance"
+
+#: contents/explorer/AppletDelegate.qml:268
+#, kde-format
+msgctxt ""
+"@action:button accessible description, %1 number of instances %2 is widget "
+"name"
+msgid "Remove running instance of widget %2"
+msgid_plural "Remove all %1 running instanes of widget %2"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -676,7 +722,7 @@ msgid "Uninstall"
 msgstr "Odinstalovat"
 
 #: contents/explorer/WidgetExplorer.qml:140
-#: contents/explorer/WidgetExplorer.qml:220
+#: contents/explorer/WidgetExplorer.qml:223
 #, kde-format
 msgid "All Widgets"
 msgstr "Všechny widgety"
@@ -698,26 +744,40 @@ msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "Získat nové widgety…"
 
-#: contents/explorer/WidgetExplorer.qml:234
+#: contents/explorer/WidgetExplorer.qml:192
+#, kde-format
+msgctxt "@action:button accessible for close button"
+msgid "Close Widget Explorer"
+msgstr ""
+
+#: contents/explorer/WidgetExplorer.qml:208
+#, fuzzy, kde-format
+#| msgid "Widgets"
+msgctxt "@label:textbox accessible"
+msgid "Search Widgets"
+msgstr "Widgety"
+
+#: contents/explorer/WidgetExplorer.qml:237
 #, kde-format
 msgid "Categories"
 msgstr "Kategorie"
 
-#: contents/explorer/WidgetExplorer.qml:254
-#, kde-format
+#: contents/explorer/WidgetExplorer.qml:258
+#, fuzzy, kde-format
+#| msgid "Uninstall"
 msgctxt "@action:button uninstall widgets in widget explorer"
-msgid "Confirm Removal of One Widget"
-msgid_plural "Confirm Removal of %1 Widgets"
-msgstr[0] "Potvrdit odstranění jednoho widgetu"
-msgstr[1] "Potvrdit odstranění %1 widgetů"
-msgstr[2] "Potvrdit odstranění %1 widgetů"
+msgid "Uninstall (%1 Widget)"
+msgid_plural "Uninstall (%1 Widgets)"
+msgstr[0] "Odinstalovat"
+msgstr[1] "Odinstalovat"
+msgstr[2] "Odinstalovat"
 
-#: contents/explorer/WidgetExplorer.qml:355
+#: contents/explorer/WidgetExplorer.qml:360
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "Vyhledávacím kritériím neodpovídá žádný widget"
 
-#: contents/explorer/WidgetExplorer.qml:355
+#: contents/explorer/WidgetExplorer.qml:360
 #, kde-format
 msgid "No widgets available"
 msgstr "Nejsou dostupné žádné widgety"
@@ -850,3 +910,17 @@ msgstr "Ukončit režim úprav"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr ""
+
+#~ msgid "Undo uninstall"
+#~ msgstr "Vrátit odinstalaci zpět"
+
+#~ msgctxt "@info:tooltip uninstall a widget"
+#~ msgid "Uninstall"
+#~ msgstr "Odinstalovat"
+
+#~ msgctxt "@action:button uninstall widgets in widget explorer"
+#~ msgid "Confirm Removal of One Widget"
+#~ msgid_plural "Confirm Removal of %1 Widgets"
+#~ msgstr[0] "Potvrdit odstranění jednoho widgetu"
+#~ msgstr[1] "Potvrdit odstranění %1 widgetů"
+#~ msgstr[2] "Potvrdit odstranění %1 widgetů"

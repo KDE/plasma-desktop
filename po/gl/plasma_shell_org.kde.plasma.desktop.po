@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-11 00:43+0000\n"
-"PO-Revision-Date: 2025-01-07 19:50+0100\n"
+"POT-Creation-Date: 2025-02-15 00:44+0000\n"
+"PO-Revision-Date: 2025-02-14 08:16+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -156,15 +156,10 @@ msgid "Apply Settings"
 msgstr "Aplicar a configuración"
 
 #: contents/configuration/AppletConfiguration.qml:354
-#, fuzzy, kde-format
-#| msgid ""
-#| "The settings of the current module have changed. Do you want to apply the "
-#| "changes or discard them?"
+#, kde-format
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
-msgstr ""
-"Cambiouse a configuración do módulo actual. Quere aplicar os cambios ou "
-"descartalos?"
+msgstr "A páxina ten cambios sen gardar. Quere aplicalos ou descartalos?"
 
 #: contents/configuration/AppletConfiguration.qml:385
 #, kde-format
@@ -456,8 +451,7 @@ msgid "Translucent"
 msgstr "Translúcido"
 
 #: contents/configuration/PanelConfiguration.qml:480
-#, fuzzy, kde-format
-#| msgid "Floating"
+#, kde-format
 msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
 msgstr "Flotante"
@@ -466,21 +460,19 @@ msgstr "Flotante"
 #, kde-format
 msgctxt "@item:inlistbox Option to disable floating panels or applets"
 msgid "Disabled"
-msgstr ""
+msgstr "Desactivado"
 
 #: contents/configuration/PanelConfiguration.qml:495
-#, fuzzy, kde-format
-#| msgid "Apply"
+#, kde-format
 msgctxt "@item:inlistbox Option to make only panel applets always float"
 msgid "Applets only"
-msgstr "Aplicar"
+msgstr "Só miniaplicacións"
 
 #: contents/configuration/PanelConfiguration.qml:496
-#, fuzzy, kde-format
-#| msgid "Manage Panels and Desktops"
+#, kde-format
 msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
-msgstr "Xestionar paneis e escritorios"
+msgstr "Paneis e miniaplicacións"
 
 #: contents/configuration/PanelConfiguration.qml:539
 #, kde-format
@@ -638,32 +630,76 @@ msgstr "%1 (principal)"
 msgid "Alternative Widgets"
 msgstr "Trebellos alternativos"
 
-#: contents/explorer/AppletDelegate.qml:41
+#: contents/explorer/AppletDelegate.qml:27
+#, kde-format
+msgctxt "@action:button accessible only, %1 is widget name"
+msgid "Add %1"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:46
 #, kde-format
 msgid "Unsupported Widget"
 msgstr "Trebello incompatíbel"
 
-#: contents/explorer/AppletDelegate.qml:196
+#: contents/explorer/AppletDelegate.qml:201
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
 msgstr "Novo!"
 
-#: contents/explorer/AppletDelegate.qml:212
-#, kde-format
-msgid "Undo uninstall"
-msgstr "Desfacer a desinstalación"
+#: contents/explorer/AppletDelegate.qml:203
+#, fuzzy, kde-format
+#| msgid "No widgets available"
+msgctxt "@info:other accessible for badge showing applet count"
+msgid "%1 widget active"
+msgid_plural "%1 widgets active"
+msgstr[0] "Non hai trebellos dispoñíbeis."
+msgstr[1] "Non hai trebellos dispoñíbeis."
 
-#: contents/explorer/AppletDelegate.qml:213
+#: contents/explorer/AppletDelegate.qml:204
 #, kde-format
-msgctxt "@info:tooltip uninstall a widget"
-msgid "Uninstall"
+msgctxt " @info:other accessible for badge indicating new widget"
+msgid "Recently installed"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:216
+#, fuzzy, kde-format
+#| msgid "Uninstall"
+msgid "Cancel Uninstallation"
 msgstr "Desinstalar"
 
-#: contents/explorer/AppletDelegate.qml:255
+#: contents/explorer/AppletDelegate.qml:217
+#, kde-format
+msgctxt "@info:tooltip uninstall a widget"
+msgid "Mark for Uninstallation"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:221
+#, kde-format
+msgctxt "@action:button accessible only, %1 is widget name"
+msgid "Cancel pending uninstallation for widget %1"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:222
+#, kde-format
+msgctxt "@action:button accessible only, %1 is widget name"
+msgid "Mark widget %1 for uninstallation. Requires confirmation"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:264
 #, kde-format
 msgid "Remove all instances"
 msgstr "Retirar todas as instancias"
+
+#: contents/explorer/AppletDelegate.qml:268
+#, kde-format
+msgctxt ""
+"@action:button accessible description, %1 number of instances %2 is widget "
+"name"
+msgid "Remove running instance of widget %2"
+msgid_plural "Remove all %1 running instanes of widget %2"
+msgstr[0] ""
+msgstr[1] ""
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -681,7 +717,7 @@ msgid "Uninstall"
 msgstr "Desinstalar"
 
 #: contents/explorer/WidgetExplorer.qml:140
-#: contents/explorer/WidgetExplorer.qml:220
+#: contents/explorer/WidgetExplorer.qml:223
 #, kde-format
 msgid "All Widgets"
 msgstr "Todos os trebellos"
@@ -703,25 +739,39 @@ msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "Obter novos trebellos…"
 
-#: contents/explorer/WidgetExplorer.qml:234
+#: contents/explorer/WidgetExplorer.qml:192
+#, kde-format
+msgctxt "@action:button accessible for close button"
+msgid "Close Widget Explorer"
+msgstr ""
+
+#: contents/explorer/WidgetExplorer.qml:208
+#, fuzzy, kde-format
+#| msgid "Lock Widgets"
+msgctxt "@label:textbox accessible"
+msgid "Search Widgets"
+msgstr "Bloquear os trebellos"
+
+#: contents/explorer/WidgetExplorer.qml:237
 #, kde-format
 msgid "Categories"
 msgstr "Categorías"
 
-#: contents/explorer/WidgetExplorer.qml:254
-#, kde-format
+#: contents/explorer/WidgetExplorer.qml:258
+#, fuzzy, kde-format
+#| msgid "Uninstall widget"
 msgctxt "@action:button uninstall widgets in widget explorer"
-msgid "Confirm Removal of One Widget"
-msgid_plural "Confirm Removal of %1 Widgets"
-msgstr[0] "Confirmar a retirada dun trebello"
-msgstr[1] "Confirmar a retirada de %1 trebellos"
+msgid "Uninstall (%1 Widget)"
+msgid_plural "Uninstall (%1 Widgets)"
+msgstr[0] "Desinstalar o trebello"
+msgstr[1] "Desinstalar o trebello"
 
-#: contents/explorer/WidgetExplorer.qml:355
+#: contents/explorer/WidgetExplorer.qml:360
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "Ningún trebello coincide cos termos de busca."
 
-#: contents/explorer/WidgetExplorer.qml:355
+#: contents/explorer/WidgetExplorer.qml:360
 #, kde-format
 msgid "No widgets available"
 msgstr "Non hai trebellos dispoñíbeis."
@@ -855,6 +905,19 @@ msgstr "Desactivar o modo de edición"
 msgid "Panel Focus Indicator"
 msgstr "Indicador de foco do panel"
 
+#~ msgid "Undo uninstall"
+#~ msgstr "Desfacer a desinstalación"
+
+#~ msgctxt "@info:tooltip uninstall a widget"
+#~ msgid "Uninstall"
+#~ msgstr "Desinstalar"
+
+#~ msgctxt "@action:button uninstall widgets in widget explorer"
+#~ msgid "Confirm Removal of One Widget"
+#~ msgid_plural "Confirm Removal of %1 Widgets"
+#~ msgstr[0] "Confirmar a retirada dun trebello"
+#~ msgstr[1] "Confirmar a retirada de %1 trebellos"
+
 #~ msgid "Style"
 #~ msgstr "Estilo"
 
@@ -867,9 +930,6 @@ msgstr "Indicador de foco do panel"
 
 #~ msgid "Display Configuration"
 #~ msgstr "Configuración da pantalla"
-
-#~ msgid "Uninstall widget"
-#~ msgstr "Desinstalar o trebello"
 
 #~ msgid "@info:tooltip slider handle"
 #~ msgstr "Asa esvaradía."
@@ -1007,9 +1067,6 @@ msgstr "Indicador de foco do panel"
 #~ msgid "Layout cannot be changed while widgets are locked"
 #~ msgstr ""
 #~ "Non se pode cambiar a disposición mentres os trebellos estean bloqueados."
-
-#~ msgid "Lock Widgets"
-#~ msgstr "Bloquear os trebellos"
 
 #~ msgid ""
 #~ "This shortcut will activate the applet: it will give the keyboard focus "

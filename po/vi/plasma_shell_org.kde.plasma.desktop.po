@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-11 00:43+0000\n"
+"POT-Creation-Date: 2025-02-15 00:44+0000\n"
 "PO-Revision-Date: 2023-01-08 16:18+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -665,34 +665,75 @@ msgstr "%1 (chính)"
 msgid "Alternative Widgets"
 msgstr "Phụ kiện thay thế"
 
-#: contents/explorer/AppletDelegate.qml:41
+#: contents/explorer/AppletDelegate.qml:27
+#, kde-format
+msgctxt "@action:button accessible only, %1 is widget name"
+msgid "Add %1"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:46
 #, kde-format
 msgid "Unsupported Widget"
 msgstr ""
 
-#: contents/explorer/AppletDelegate.qml:196
+#: contents/explorer/AppletDelegate.qml:201
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
 msgstr ""
 
-#: contents/explorer/AppletDelegate.qml:212
-#, kde-format
-msgid "Undo uninstall"
-msgstr "Đảo ngược gỡ cài đặt"
+#: contents/explorer/AppletDelegate.qml:203
+#, fuzzy, kde-format
+#| msgid "No widgets available"
+msgctxt "@info:other accessible for badge showing applet count"
+msgid "%1 widget active"
+msgid_plural "%1 widgets active"
+msgstr[0] "Không có phụ kiện nào"
 
-#: contents/explorer/AppletDelegate.qml:213
+#: contents/explorer/AppletDelegate.qml:204
+#, kde-format
+msgctxt " @info:other accessible for badge indicating new widget"
+msgid "Recently installed"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:216
 #, fuzzy, kde-format
 #| msgid "Uninstall"
-msgctxt "@info:tooltip uninstall a widget"
-msgid "Uninstall"
+msgid "Cancel Uninstallation"
 msgstr "Gỡ cài đặt"
 
-#: contents/explorer/AppletDelegate.qml:255
+#: contents/explorer/AppletDelegate.qml:217
+#, kde-format
+msgctxt "@info:tooltip uninstall a widget"
+msgid "Mark for Uninstallation"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:221
+#, kde-format
+msgctxt "@action:button accessible only, %1 is widget name"
+msgid "Cancel pending uninstallation for widget %1"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:222
+#, kde-format
+msgctxt "@action:button accessible only, %1 is widget name"
+msgid "Mark widget %1 for uninstallation. Requires confirmation"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:264
 #, fuzzy, kde-format
 #| msgid "Remove Panel"
 msgid "Remove all instances"
 msgstr "Xoá bỏ bảng"
+
+#: contents/explorer/AppletDelegate.qml:268
+#, kde-format
+msgctxt ""
+"@action:button accessible description, %1 number of instances %2 is widget "
+"name"
+msgid "Remove running instance of widget %2"
+msgid_plural "Remove all %1 running instanes of widget %2"
+msgstr[0] ""
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -710,7 +751,7 @@ msgid "Uninstall"
 msgstr "Gỡ cài đặt"
 
 #: contents/explorer/WidgetExplorer.qml:140
-#: contents/explorer/WidgetExplorer.qml:220
+#: contents/explorer/WidgetExplorer.qml:223
 #, kde-format
 msgid "All Widgets"
 msgstr "Tất cả phụ kiện"
@@ -734,24 +775,38 @@ msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "Lấy phụ kiện mới…"
 
-#: contents/explorer/WidgetExplorer.qml:234
+#: contents/explorer/WidgetExplorer.qml:192
+#, kde-format
+msgctxt "@action:button accessible for close button"
+msgid "Close Widget Explorer"
+msgstr ""
+
+#: contents/explorer/WidgetExplorer.qml:208
+#, fuzzy, kde-format
+#| msgid "Widgets"
+msgctxt "@label:textbox accessible"
+msgid "Search Widgets"
+msgstr "Phụ kiện"
+
+#: contents/explorer/WidgetExplorer.qml:237
 #, kde-format
 msgid "Categories"
 msgstr "Các loại"
 
-#: contents/explorer/WidgetExplorer.qml:254
-#, kde-format
+#: contents/explorer/WidgetExplorer.qml:258
+#, fuzzy, kde-format
+#| msgid "Uninstall widget"
 msgctxt "@action:button uninstall widgets in widget explorer"
-msgid "Confirm Removal of One Widget"
-msgid_plural "Confirm Removal of %1 Widgets"
-msgstr[0] ""
+msgid "Uninstall (%1 Widget)"
+msgid_plural "Uninstall (%1 Widgets)"
+msgstr[0] "Gỡ cài đặt phụ kiện"
 
-#: contents/explorer/WidgetExplorer.qml:355
+#: contents/explorer/WidgetExplorer.qml:360
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "Không có phụ kiện nào khớp với các từ khoá tìm kiếm"
 
-#: contents/explorer/WidgetExplorer.qml:355
+#: contents/explorer/WidgetExplorer.qml:360
 #, kde-format
 msgid "No widgets available"
 msgstr "Không có phụ kiện nào"
@@ -887,6 +942,15 @@ msgstr ""
 msgid "Panel Focus Indicator"
 msgstr ""
 
+#~ msgid "Undo uninstall"
+#~ msgstr "Đảo ngược gỡ cài đặt"
+
+#, fuzzy
+#~| msgid "Uninstall"
+#~ msgctxt "@info:tooltip uninstall a widget"
+#~ msgid "Uninstall"
+#~ msgstr "Gỡ cài đặt"
+
 #~ msgctxt "@title"
 #~ msgid "About"
 #~ msgstr "Thông tin"
@@ -895,9 +959,6 @@ msgstr ""
 #~| msgid "Open configuration page"
 #~ msgid "Display Configuration"
 #~ msgstr "Mở trang cấu hình"
-
-#~ msgid "Uninstall widget"
-#~ msgstr "Gỡ cài đặt phụ kiện"
 
 #, fuzzy
 #~| msgid "Right"

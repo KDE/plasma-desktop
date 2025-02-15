@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-11 00:43+0000\n"
+"POT-Creation-Date: 2025-02-15 00:44+0000\n"
 "PO-Revision-Date: 2025-02-11 04:17+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -626,32 +626,76 @@ msgstr "%1 (ძირითადი)"
 msgid "Alternative Widgets"
 msgstr "ალტერნატიული ვიჯეტები"
 
-#: contents/explorer/AppletDelegate.qml:41
+#: contents/explorer/AppletDelegate.qml:27
+#, kde-format
+msgctxt "@action:button accessible only, %1 is widget name"
+msgid "Add %1"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:46
 #, kde-format
 msgid "Unsupported Widget"
 msgstr "მხარდაუჭერელი ვიჯეტი"
 
-#: contents/explorer/AppletDelegate.qml:196
+#: contents/explorer/AppletDelegate.qml:201
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
 msgstr "ახალი!"
 
-#: contents/explorer/AppletDelegate.qml:212
-#, kde-format
-msgid "Undo uninstall"
-msgstr "წაშლის გაუქმება"
+#: contents/explorer/AppletDelegate.qml:203
+#, fuzzy, kde-format
+#| msgid "No widgets available"
+msgctxt "@info:other accessible for badge showing applet count"
+msgid "%1 widget active"
+msgid_plural "%1 widgets active"
+msgstr[0] "ვიჯეტების გარეშე"
+msgstr[1] "ვიჯეტების გარეშე"
 
-#: contents/explorer/AppletDelegate.qml:213
+#: contents/explorer/AppletDelegate.qml:204
+#, kde-format
+msgctxt " @info:other accessible for badge indicating new widget"
+msgid "Recently installed"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:216
+#, fuzzy, kde-format
+#| msgid "Uninstall"
+msgid "Cancel Uninstallation"
+msgstr "ამოშლა"
+
+#: contents/explorer/AppletDelegate.qml:217
 #, kde-format
 msgctxt "@info:tooltip uninstall a widget"
-msgid "Uninstall"
-msgstr "წაშლა"
+msgid "Mark for Uninstallation"
+msgstr ""
 
-#: contents/explorer/AppletDelegate.qml:255
+#: contents/explorer/AppletDelegate.qml:221
+#, kde-format
+msgctxt "@action:button accessible only, %1 is widget name"
+msgid "Cancel pending uninstallation for widget %1"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:222
+#, kde-format
+msgctxt "@action:button accessible only, %1 is widget name"
+msgid "Mark widget %1 for uninstallation. Requires confirmation"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:264
 #, kde-format
 msgid "Remove all instances"
 msgstr "ყველა გაშვებული ასლის წაშლა"
+
+#: contents/explorer/AppletDelegate.qml:268
+#, kde-format
+msgctxt ""
+"@action:button accessible description, %1 number of instances %2 is widget "
+"name"
+msgid "Remove running instance of widget %2"
+msgid_plural "Remove all %1 running instanes of widget %2"
+msgstr[0] ""
+msgstr[1] ""
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -669,7 +713,7 @@ msgid "Uninstall"
 msgstr "ამოშლა"
 
 #: contents/explorer/WidgetExplorer.qml:140
-#: contents/explorer/WidgetExplorer.qml:220
+#: contents/explorer/WidgetExplorer.qml:223
 #, kde-format
 msgid "All Widgets"
 msgstr "ყველა ვიჯეტი"
@@ -691,25 +735,39 @@ msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "ახალი ვიჯეტების მიღება…"
 
-#: contents/explorer/WidgetExplorer.qml:234
+#: contents/explorer/WidgetExplorer.qml:192
+#, kde-format
+msgctxt "@action:button accessible for close button"
+msgid "Close Widget Explorer"
+msgstr ""
+
+#: contents/explorer/WidgetExplorer.qml:208
+#, fuzzy, kde-format
+#| msgid "Widgets"
+msgctxt "@label:textbox accessible"
+msgid "Search Widgets"
+msgstr "ვიჯეტები"
+
+#: contents/explorer/WidgetExplorer.qml:237
 #, kde-format
 msgid "Categories"
 msgstr "კატეგორიები"
 
-#: contents/explorer/WidgetExplorer.qml:254
-#, kde-format
+#: contents/explorer/WidgetExplorer.qml:258
+#, fuzzy, kde-format
+#| msgid "Uninstall widget"
 msgctxt "@action:button uninstall widgets in widget explorer"
-msgid "Confirm Removal of One Widget"
-msgid_plural "Confirm Removal of %1 Widgets"
-msgstr[0] "დაადასტურეთ ვიჯეტის წაშლა"
-msgstr[1] "დაადასტურეთ %1 ვიჯეტის წაშლა"
+msgid "Uninstall (%1 Widget)"
+msgid_plural "Uninstall (%1 Widgets)"
+msgstr[0] "ვიჯეტის წაშლა"
+msgstr[1] "ვიჯეტის წაშლა"
 
-#: contents/explorer/WidgetExplorer.qml:355
+#: contents/explorer/WidgetExplorer.qml:360
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "ვიჯეტების თქვენს ძებნას პასუხები არ აქვს"
 
-#: contents/explorer/WidgetExplorer.qml:355
+#: contents/explorer/WidgetExplorer.qml:360
 #, kde-format
 msgid "No widgets available"
 msgstr "ვიჯეტების გარეშე"
@@ -843,6 +901,19 @@ msgstr "რედაქტირების რეჟიმიდან გა�
 msgid "Panel Focus Indicator"
 msgstr "პანელის ფოკუსის მაჩვენებელი"
 
+#~ msgid "Undo uninstall"
+#~ msgstr "წაშლის გაუქმება"
+
+#~ msgctxt "@info:tooltip uninstall a widget"
+#~ msgid "Uninstall"
+#~ msgstr "წაშლა"
+
+#~ msgctxt "@action:button uninstall widgets in widget explorer"
+#~ msgid "Confirm Removal of One Widget"
+#~ msgid_plural "Confirm Removal of %1 Widgets"
+#~ msgstr[0] "დაადასტურეთ ვიჯეტის წაშლა"
+#~ msgstr[1] "დაადასტურეთ %1 ვიჯეტის წაშლა"
+
 #~ msgid "Style"
 #~ msgstr "სტილი"
 
@@ -855,9 +926,6 @@ msgstr "პანელის ფოკუსის მაჩვენებე�
 
 #~ msgid "Display Configuration"
 #~ msgstr "ეკრანის მორგება"
-
-#~ msgid "Uninstall widget"
-#~ msgstr "ვიჯეტის წაშლა"
 
 #~ msgid "@info:tooltip slider handle"
 #~ msgstr "@info:tooltip slider handle"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-01 00:42+0000\n"
-"PO-Revision-Date: 2024-12-23 17:00+0100\n"
+"PO-Revision-Date: 2025-02-14 08:25+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #: actions.cpp:19
 #, kde-format
@@ -216,10 +216,9 @@ msgid "Pointer speed:"
 msgstr "Velocidade do punteiro:"
 
 #: ui/main.qml:303
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgid "Enable pointer acceleration"
-msgstr "Aceleración do punteiro:"
+msgstr "Activar a aceleración do punteiro."
 
 #: ui/main.qml:318
 #, kde-format
@@ -227,6 +226,8 @@ msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
+"Cando se activa, a distancia de desprazamento do punteiro aumenta a maior "
+"velocidade de movemento."
 
 #: ui/main.qml:328
 #, kde-format

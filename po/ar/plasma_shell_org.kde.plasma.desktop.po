@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-11 00:43+0000\n"
+"POT-Creation-Date: 2025-02-15 00:44+0000\n"
 "PO-Revision-Date: 2025-02-12 17:20+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -628,32 +628,84 @@ msgstr "‏%1 (أولي)"
 msgid "Alternative Widgets"
 msgstr "ودجات بديلة"
 
-#: contents/explorer/AppletDelegate.qml:41
+#: contents/explorer/AppletDelegate.qml:27
+#, kde-format
+msgctxt "@action:button accessible only, %1 is widget name"
+msgid "Add %1"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:46
 #, kde-format
 msgid "Unsupported Widget"
 msgstr "ودجة غير مدعومة"
 
-#: contents/explorer/AppletDelegate.qml:196
+#: contents/explorer/AppletDelegate.qml:201
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
 msgstr "جديد!"
 
-#: contents/explorer/AppletDelegate.qml:212
-#, kde-format
-msgid "Undo uninstall"
-msgstr "تراجع عن إزالة التّثبيت"
+#: contents/explorer/AppletDelegate.qml:203
+#, fuzzy, kde-format
+#| msgid "No widgets available"
+msgctxt "@info:other accessible for badge showing applet count"
+msgid "%1 widget active"
+msgid_plural "%1 widgets active"
+msgstr[0] "لا تتوفر ودجات"
+msgstr[1] "لا تتوفر ودجات"
+msgstr[2] "لا تتوفر ودجات"
+msgstr[3] "لا تتوفر ودجات"
+msgstr[4] "لا تتوفر ودجات"
+msgstr[5] "لا تتوفر ودجات"
 
-#: contents/explorer/AppletDelegate.qml:213
+#: contents/explorer/AppletDelegate.qml:204
 #, kde-format
-msgctxt "@info:tooltip uninstall a widget"
-msgid "Uninstall"
+msgctxt " @info:other accessible for badge indicating new widget"
+msgid "Recently installed"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:216
+#, fuzzy, kde-format
+#| msgid "Uninstall"
+msgid "Cancel Uninstallation"
 msgstr "أزل التّثبيت"
 
-#: contents/explorer/AppletDelegate.qml:255
+#: contents/explorer/AppletDelegate.qml:217
+#, kde-format
+msgctxt "@info:tooltip uninstall a widget"
+msgid "Mark for Uninstallation"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:221
+#, kde-format
+msgctxt "@action:button accessible only, %1 is widget name"
+msgid "Cancel pending uninstallation for widget %1"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:222
+#, kde-format
+msgctxt "@action:button accessible only, %1 is widget name"
+msgid "Mark widget %1 for uninstallation. Requires confirmation"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:264
 #, kde-format
 msgid "Remove all instances"
 msgstr "أزل كل النسخ"
+
+#: contents/explorer/AppletDelegate.qml:268
+#, kde-format
+msgctxt ""
+"@action:button accessible description, %1 number of instances %2 is widget "
+"name"
+msgid "Remove running instance of widget %2"
+msgid_plural "Remove all %1 running instanes of widget %2"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -671,7 +723,7 @@ msgid "Uninstall"
 msgstr "أزل التّثبيت"
 
 #: contents/explorer/WidgetExplorer.qml:140
-#: contents/explorer/WidgetExplorer.qml:220
+#: contents/explorer/WidgetExplorer.qml:223
 #, kde-format
 msgid "All Widgets"
 msgstr "كلّ الودجات"
@@ -693,29 +745,43 @@ msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "اجلب ودجات جديدة..."
 
-#: contents/explorer/WidgetExplorer.qml:234
+#: contents/explorer/WidgetExplorer.qml:192
+#, kde-format
+msgctxt "@action:button accessible for close button"
+msgid "Close Widget Explorer"
+msgstr ""
+
+#: contents/explorer/WidgetExplorer.qml:208
+#, fuzzy, kde-format
+#| msgid "Lock Widgets"
+msgctxt "@label:textbox accessible"
+msgid "Search Widgets"
+msgstr "اقفل الودجات"
+
+#: contents/explorer/WidgetExplorer.qml:237
 #, kde-format
 msgid "Categories"
 msgstr "الفئات"
 
-#: contents/explorer/WidgetExplorer.qml:254
-#, kde-format
+#: contents/explorer/WidgetExplorer.qml:258
+#, fuzzy, kde-format
+#| msgid "Uninstall widget"
 msgctxt "@action:button uninstall widgets in widget explorer"
-msgid "Confirm Removal of One Widget"
-msgid_plural "Confirm Removal of %1 Widgets"
-msgstr[0] "أكد حذف الودجة"
-msgstr[1] "أكد حذف ودجة واحدة"
-msgstr[2] "أكد حذف ودجتين"
-msgstr[3] "أكد حذف %1 ودجات"
-msgstr[4] "أكد حذف %1 ودجة"
-msgstr[5] "أكد حذف %1 ودجة"
+msgid "Uninstall (%1 Widget)"
+msgid_plural "Uninstall (%1 Widgets)"
+msgstr[0] "أزل تثبيت الودجة"
+msgstr[1] "أزل تثبيت الودجة"
+msgstr[2] "أزل تثبيت الودجة"
+msgstr[3] "أزل تثبيت الودجة"
+msgstr[4] "أزل تثبيت الودجة"
+msgstr[5] "أزل تثبيت الودجة"
 
-#: contents/explorer/WidgetExplorer.qml:355
+#: contents/explorer/WidgetExplorer.qml:360
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "لا توجد ودجات مطابقة لشروط البحث"
 
-#: contents/explorer/WidgetExplorer.qml:355
+#: contents/explorer/WidgetExplorer.qml:360
 #, kde-format
 msgid "No widgets available"
 msgstr "لا تتوفر ودجات"
@@ -849,6 +915,23 @@ msgstr "اخرج من نمط التحرير"
 msgid "Panel Focus Indicator"
 msgstr "مؤشر التركيز على اللوحة"
 
+#~ msgid "Undo uninstall"
+#~ msgstr "تراجع عن إزالة التّثبيت"
+
+#~ msgctxt "@info:tooltip uninstall a widget"
+#~ msgid "Uninstall"
+#~ msgstr "أزل التّثبيت"
+
+#~ msgctxt "@action:button uninstall widgets in widget explorer"
+#~ msgid "Confirm Removal of One Widget"
+#~ msgid_plural "Confirm Removal of %1 Widgets"
+#~ msgstr[0] "أكد حذف الودجة"
+#~ msgstr[1] "أكد حذف ودجة واحدة"
+#~ msgstr[2] "أكد حذف ودجتين"
+#~ msgstr[3] "أكد حذف %1 ودجات"
+#~ msgstr[4] "أكد حذف %1 ودجة"
+#~ msgstr[5] "أكد حذف %1 ودجة"
+
 #~ msgid "Style"
 #~ msgstr "النّمط"
 
@@ -861,9 +944,6 @@ msgstr "مؤشر التركيز على اللوحة"
 
 #~ msgid "Display Configuration"
 #~ msgstr "ضبط العرض"
-
-#~ msgid "Uninstall widget"
-#~ msgstr "أزل تثبيت الودجة"
 
 #~ msgctxt "@action:button Done configuring the panel"
 #~ msgid "Done"
@@ -1028,9 +1108,6 @@ msgstr "مؤشر التركيز على اللوحة"
 #~| msgid "Layout cannot be changed whilst widgets are locked"
 #~ msgid "Layout cannot be changed while widgets are locked"
 #~ msgstr "لا يمكن تغير التّخطيط والودجات مقفلة"
-
-#~ msgid "Lock Widgets"
-#~ msgstr "اقفل الودجات"
 
 #~ msgid ""
 #~ "This shortcut will activate the applet: it will give the keyboard focus "

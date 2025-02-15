@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-11 00:43+0000\n"
+"POT-Creation-Date: 2025-02-15 00:44+0000\n"
 "PO-Revision-Date: 2024-11-08 21:05+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -640,32 +640,76 @@ msgstr "%1 (primer)"
 msgid "Alternative Widgets"
 msgstr "Widget Alternatif"
 
-#: contents/explorer/AppletDelegate.qml:41
+#: contents/explorer/AppletDelegate.qml:27
+#, kde-format
+msgctxt "@action:button accessible only, %1 is widget name"
+msgid "Add %1"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:46
 #, kde-format
 msgid "Unsupported Widget"
 msgstr "Widget tak didukung"
 
-#: contents/explorer/AppletDelegate.qml:196
+#: contents/explorer/AppletDelegate.qml:201
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
 msgstr "Baru!"
 
-#: contents/explorer/AppletDelegate.qml:212
-#, kde-format
-msgid "Undo uninstall"
-msgstr "Urung copot"
+#: contents/explorer/AppletDelegate.qml:203
+#, fuzzy, kde-format
+#| msgid "No widgets available"
+msgctxt "@info:other accessible for badge showing applet count"
+msgid "%1 widget active"
+msgid_plural "%1 widgets active"
+msgstr[0] "Tidak ada widget yang tersedia"
+msgstr[1] "Tidak ada widget yang tersedia"
 
-#: contents/explorer/AppletDelegate.qml:213
+#: contents/explorer/AppletDelegate.qml:204
+#, kde-format
+msgctxt " @info:other accessible for badge indicating new widget"
+msgid "Recently installed"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:216
+#, fuzzy, kde-format
+#| msgid "Uninstall"
+msgid "Cancel Uninstallation"
+msgstr "Copot"
+
+#: contents/explorer/AppletDelegate.qml:217
 #, kde-format
 msgctxt "@info:tooltip uninstall a widget"
-msgid "Uninstall"
-msgstr "Hapus instalasi"
+msgid "Mark for Uninstallation"
+msgstr ""
 
-#: contents/explorer/AppletDelegate.qml:255
+#: contents/explorer/AppletDelegate.qml:221
+#, kde-format
+msgctxt "@action:button accessible only, %1 is widget name"
+msgid "Cancel pending uninstallation for widget %1"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:222
+#, kde-format
+msgctxt "@action:button accessible only, %1 is widget name"
+msgid "Mark widget %1 for uninstallation. Requires confirmation"
+msgstr ""
+
+#: contents/explorer/AppletDelegate.qml:264
 #, kde-format
 msgid "Remove all instances"
 msgstr "Hapus semua instansi"
+
+#: contents/explorer/AppletDelegate.qml:268
+#, kde-format
+msgctxt ""
+"@action:button accessible description, %1 number of instances %2 is widget "
+"name"
+msgid "Remove running instance of widget %2"
+msgid_plural "Remove all %1 running instanes of widget %2"
+msgstr[0] ""
+msgstr[1] ""
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -683,7 +727,7 @@ msgid "Uninstall"
 msgstr "Copot"
 
 #: contents/explorer/WidgetExplorer.qml:140
-#: contents/explorer/WidgetExplorer.qml:220
+#: contents/explorer/WidgetExplorer.qml:223
 #, kde-format
 msgid "All Widgets"
 msgstr "Semua Widget"
@@ -705,25 +749,39 @@ msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "Dapatkan Widget Baru..."
 
-#: contents/explorer/WidgetExplorer.qml:234
+#: contents/explorer/WidgetExplorer.qml:192
+#, kde-format
+msgctxt "@action:button accessible for close button"
+msgid "Close Widget Explorer"
+msgstr ""
+
+#: contents/explorer/WidgetExplorer.qml:208
+#, fuzzy, kde-format
+#| msgid "Lock Widgets"
+msgctxt "@label:textbox accessible"
+msgid "Search Widgets"
+msgstr "Kunci Widget"
+
+#: contents/explorer/WidgetExplorer.qml:237
 #, kde-format
 msgid "Categories"
 msgstr "Kategori"
 
-#: contents/explorer/WidgetExplorer.qml:254
-#, kde-format
+#: contents/explorer/WidgetExplorer.qml:258
+#, fuzzy, kde-format
+#| msgid "Uninstall widget"
 msgctxt "@action:button uninstall widgets in widget explorer"
-msgid "Confirm Removal of One Widget"
-msgid_plural "Confirm Removal of %1 Widgets"
-msgstr[0] "Konfirmasi Penghapusan Satu Widget"
-msgstr[1] "Konfirmasi Penghapusan %1 Widget"
+msgid "Uninstall (%1 Widget)"
+msgid_plural "Uninstall (%1 Widgets)"
+msgstr[0] "Copot widget"
+msgstr[1] "Copot widget"
 
-#: contents/explorer/WidgetExplorer.qml:355
+#: contents/explorer/WidgetExplorer.qml:360
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "Tidak ada widget yang cocok dengan butir yang dicari"
 
-#: contents/explorer/WidgetExplorer.qml:355
+#: contents/explorer/WidgetExplorer.qml:360
 #, kde-format
 msgid "No widgets available"
 msgstr "Tidak ada widget yang tersedia"
@@ -860,6 +918,19 @@ msgstr "Keluar Mode Edit"
 msgid "Panel Focus Indicator"
 msgstr "Indikator Fokus Panel"
 
+#~ msgid "Undo uninstall"
+#~ msgstr "Urung copot"
+
+#~ msgctxt "@info:tooltip uninstall a widget"
+#~ msgid "Uninstall"
+#~ msgstr "Hapus instalasi"
+
+#~ msgctxt "@action:button uninstall widgets in widget explorer"
+#~ msgid "Confirm Removal of One Widget"
+#~ msgid_plural "Confirm Removal of %1 Widgets"
+#~ msgstr[0] "Konfirmasi Penghapusan Satu Widget"
+#~ msgstr[1] "Konfirmasi Penghapusan %1 Widget"
+
 #~ msgid "Style"
 #~ msgstr "Gaya"
 
@@ -872,9 +943,6 @@ msgstr "Indikator Fokus Panel"
 
 #~ msgid "Display Configuration"
 #~ msgstr "Konfigurasi Display"
-
-#~ msgid "Uninstall widget"
-#~ msgstr "Copot widget"
 
 #, fuzzy
 #~| msgid "Height"
@@ -934,9 +1002,6 @@ msgstr "Indikator Fokus Panel"
 
 #~ msgid "Layout cannot be changed while widgets are locked"
 #~ msgstr "Tataletak tak bisa diubah saat widget terkunci"
-
-#~ msgid "Lock Widgets"
-#~ msgstr "Kunci Widget"
 
 #~ msgid ""
 #~ "This shortcut will activate the applet: it will give the keyboard focus "
