@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-15 00:44+0000\n"
-"PO-Revision-Date: 2025-02-11 10:32+0300\n"
+"POT-Creation-Date: 2025-02-16 00:43+0000\n"
+"PO-Revision-Date: 2025-02-15 09:51+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -633,7 +633,7 @@ msgstr "Alternatif Araç Takımları"
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Add %1"
-msgstr ""
+msgstr "Ekle: %1"
 
 #: contents/explorer/AppletDelegate.qml:46
 #, kde-format
@@ -647,43 +647,41 @@ msgid "New!"
 msgstr "Yeni!"
 
 #: contents/explorer/AppletDelegate.qml:203
-#, fuzzy, kde-format
-#| msgid "No widgets available"
+#, kde-format
 msgctxt "@info:other accessible for badge showing applet count"
 msgid "%1 widget active"
 msgid_plural "%1 widgets active"
-msgstr[0] "Kullanılabilir araç takımı yok"
-msgstr[1] "Kullanılabilir araç takımı yok"
+msgstr[0] "%1 araç takımı etkin"
+msgstr[1] "%1 araç takımı etkin"
 
 #: contents/explorer/AppletDelegate.qml:204
 #, kde-format
 msgctxt " @info:other accessible for badge indicating new widget"
 msgid "Recently installed"
-msgstr ""
+msgstr "En son kurulan"
 
 #: contents/explorer/AppletDelegate.qml:216
-#, fuzzy, kde-format
-#| msgid "Uninstall"
+#, kde-format
 msgid "Cancel Uninstallation"
-msgstr "Kaldır"
+msgstr "Kurulumu Kaldırmayı İptal Et"
 
 #: contents/explorer/AppletDelegate.qml:217
 #, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Mark for Uninstallation"
-msgstr ""
+msgstr "Kurulumu kaldırma için imle"
 
 #: contents/explorer/AppletDelegate.qml:221
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Cancel pending uninstallation for widget %1"
-msgstr ""
+msgstr "%1 araç takımı için bekleyen kurulum kaldırmayı iptal et"
 
 #: contents/explorer/AppletDelegate.qml:222
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Mark widget %1 for uninstallation. Requires confirmation"
-msgstr ""
+msgstr "%1 araç takımını kurulumunu kaldırma için imle. Onay gerektirir"
 
 #: contents/explorer/AppletDelegate.qml:264
 #, kde-format
@@ -691,14 +689,19 @@ msgid "Remove all instances"
 msgstr "Tüm örnekleri kaldır"
 
 #: contents/explorer/AppletDelegate.qml:268
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@action:button accessible description, %1 number of instances %2 is "
+#| "widget name"
+#| msgid "Remove running instance of widget %2"
+#| msgid_plural "Remove all %1 running instanes of widget %2"
 msgctxt ""
 "@action:button accessible description, %1 number of instances %2 is widget "
 "name"
 msgid "Remove running instance of widget %2"
-msgid_plural "Remove all %1 running instanes of widget %2"
-msgstr[0] ""
-msgstr[1] ""
+msgid_plural "Remove all %1 running instances of widget %2"
+msgstr[0] "%2 araç takımının çalışan örneğini kaldır"
+msgstr[1] "%2 araç takımının çalışan %1 örneğini kaldır"
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -742,14 +745,13 @@ msgstr "Yeni Araç Takımları Al…"
 #, kde-format
 msgctxt "@action:button accessible for close button"
 msgid "Close Widget Explorer"
-msgstr ""
+msgstr "Araç takımı gezginini kapat"
 
 #: contents/explorer/WidgetExplorer.qml:208
-#, fuzzy, kde-format
-#| msgid "Widgets"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Search Widgets"
-msgstr "Araç Takımları"
+msgstr "Araç Takımlarını Ara"
 
 #: contents/explorer/WidgetExplorer.qml:237
 #, kde-format
@@ -757,13 +759,12 @@ msgid "Categories"
 msgstr "Kategoriler"
 
 #: contents/explorer/WidgetExplorer.qml:258
-#, fuzzy, kde-format
-#| msgid "Uninstall widget"
+#, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Uninstall (%1 Widget)"
 msgid_plural "Uninstall (%1 Widgets)"
-msgstr[0] "Araç takımını kaldır"
-msgstr[1] "Araç takımını kaldır"
+msgstr[0] "Kaldır (%1 Araç Takımı)"
+msgstr[1] "Kaldır (%1 Araç Takımı)"
 
 #: contents/explorer/WidgetExplorer.qml:360
 #, kde-format
