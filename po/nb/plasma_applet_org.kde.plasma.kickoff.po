@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-29 02:28+0000\n"
-"PO-Revision-Date: 2018-06-25 23:58+0100\n"
-"Last-Translator: Øystein Steffensen-Alværvik <ystein@posteo.net>\n"
+"PO-Revision-Date: 2025-02-15 17:59+0100\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 24.12.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -23,7 +23,7 @@ msgstr ""
 #: package/contents/config/config.qml:13
 #, kde-format
 msgid "General"
-msgstr ""
+msgstr "Generelt"
 
 #: package/contents/ui/code/tools.js:49
 #, kde-format
@@ -43,12 +43,12 @@ msgstr "På alle aktiviteter"
 #: package/contents/ui/code/tools.js:127
 #, kde-format
 msgid "On the Current Activity"
-msgstr ""
+msgstr "På gjeldende aktivitet"
 
 #: package/contents/ui/code/tools.js:141
 #, kde-format
 msgid "Show in Favorites"
-msgstr ""
+msgstr "Vis i favoritter"
 
 #: package/contents/ui/ConfigGeneral.qml:37
 #, kde-format
@@ -59,7 +59,7 @@ msgstr "Ikon:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
-msgstr ""
+msgstr "Endre ikon på programstarteren"
 
 #: package/contents/ui/ConfigGeneral.qml:44
 #, kde-format
@@ -68,148 +68,150 @@ msgid ""
 "Current icon is %1. Click to open menu to change the current icon or reset "
 "to the default icon."
 msgstr ""
+"Gjeldende ikon er %1. Trykk for å åpne menyen for å endre ikonet eller "
+"tilbakestille til standardikonet."
 
 #: package/contents/ui/ConfigGeneral.qml:48
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
-msgstr ""
+msgstr "Ikonnavn er «%1»"
 
 #: package/contents/ui/ConfigGeneral.qml:81
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
-msgstr ""
+msgstr "Velg …"
 
 #: package/contents/ui/ConfigGeneral.qml:83
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
-msgstr ""
+msgstr "Velg ikon for programstarteren"
 
 #: package/contents/ui/ConfigGeneral.qml:87
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
-msgstr ""
+msgstr "Tilbakestill til standardikon"
 
 #: package/contents/ui/ConfigGeneral.qml:93
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
-msgstr ""
+msgstr "Fjern ikon"
 
 #: package/contents/ui/ConfigGeneral.qml:104
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
-msgstr ""
+msgstr "Tekst-merkelapp"
 
 #: package/contents/ui/ConfigGeneral.qml:106
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
-msgstr ""
+msgstr "Skriv her for å legge til tekst-merkelapp"
 
 #: package/contents/ui/ConfigGeneral.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
-msgstr ""
+msgstr "Tilbakestill meny-tekst"
 
 #: package/contents/ui/ConfigGeneral.qml:135
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
-msgstr ""
+msgstr "Du kan ikke lage en tekst-merkelapp når panelet står loddrett."
 
 #: package/contents/ui/ConfigGeneral.qml:146
 #, kde-format
 msgctxt "General options"
 msgid "General:"
-msgstr ""
+msgstr "Generelt:"
 
 #: package/contents/ui/ConfigGeneral.qml:147
 #, kde-format
 msgid "Always sort applications alphabetically"
-msgstr ""
+msgstr "Sorter alltid programmene alfabetisk"
 
 #: package/contents/ui/ConfigGeneral.qml:152
 #, kde-format
 msgid "Use compact list item style"
-msgstr ""
+msgstr "Bruk kompakt listestil"
 
 #: package/contents/ui/ConfigGeneral.qml:158
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
-msgstr ""
+msgstr "Automatisk slått av i trykkskjerm-modus"
 
 #: package/contents/ui/ConfigGeneral.qml:167
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
-msgstr ""
+msgstr "Sett opp brukte søketillegg …"
 
 #: package/contents/ui/ConfigGeneral.qml:177
 #, kde-format
 msgid "Show favorites:"
-msgstr ""
+msgstr "Vis favoritter:"
 
 #: package/contents/ui/ConfigGeneral.qml:178
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
-msgstr ""
+msgstr "I rutenett"
 
 #: package/contents/ui/ConfigGeneral.qml:186
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
-msgstr ""
+msgstr "I liste"
 
 #: package/contents/ui/ConfigGeneral.qml:194
 #, kde-format
 msgid "Show other applications:"
-msgstr ""
+msgstr "Vis andre programmer:"
 
 #: package/contents/ui/ConfigGeneral.qml:195
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
-msgstr ""
+msgstr "I rutenett"
 
 #: package/contents/ui/ConfigGeneral.qml:203
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
-msgstr ""
+msgstr "I liste"
 
 #: package/contents/ui/ConfigGeneral.qml:215
 #, kde-format
 msgid "Show buttons for:"
-msgstr ""
+msgstr "Vis knapper for:"
 
 #: package/contents/ui/ConfigGeneral.qml:216
 #: package/contents/ui/LeaveButtons.qml:115
 #, kde-format
 msgid "Power"
-msgstr ""
+msgstr "Strøm"
 
 #: package/contents/ui/ConfigGeneral.qml:225
 #, kde-format
 msgid "Session"
-msgstr ""
+msgstr "Økt"
 
 #: package/contents/ui/ConfigGeneral.qml:234
 #, kde-format
 msgid "Power and session"
-msgstr ""
+msgstr "Strøm og økt"
 
 #: package/contents/ui/ConfigGeneral.qml:243
 #, kde-format
 msgid "Show action button captions"
-msgstr ""
+msgstr "Vis tekst på handlingsknapper"
 
 #: package/contents/ui/Footer.qml:97
 #, kde-format
@@ -219,33 +221,33 @@ msgstr "Programmer"
 #: package/contents/ui/Footer.qml:110
 #, kde-format
 msgid "Places"
-msgstr ""
+msgstr "Steder"
 
 #: package/contents/ui/FullRepresentation.qml:145
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
-msgstr ""
+msgstr "Ingen treff"
 
 #: package/contents/ui/Header.qml:64
 #, kde-format
 msgid "Open user settings"
-msgstr ""
+msgstr "Åpne brukerinnstillinger."
 
 #: package/contents/ui/Header.qml:240
 #, kde-format
 msgid "Keep Open"
-msgstr ""
+msgstr "Hold åpen"
 
 #: package/contents/ui/Kickoff.qml:302
 #, kde-format
 msgid "Edit Applications…"
-msgstr ""
+msgstr "Rediger programmer …"
 
 #: package/contents/ui/KickoffGridView.qml:88
 #, kde-format
 msgid "Grid with %1 rows, %2 columns"
-msgstr ""
+msgstr "Rutenett med %1 rader og %2 kolonner"
 
 #: package/contents/ui/LeaveButtons.qml:115
 #, kde-format
@@ -255,22 +257,22 @@ msgstr "Avslutt"
 #: package/contents/ui/LeaveButtons.qml:115
 #, kde-format
 msgid "More"
-msgstr ""
+msgstr "Mer"
 
 #: package/contents/ui/PlacesPage.qml:50
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "Computer"
-msgstr ""
+msgstr "Datamaskin"
 
 #: package/contents/ui/PlacesPage.qml:51
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "History"
-msgstr ""
+msgstr "Historikk"
 
 #: package/contents/ui/PlacesPage.qml:52
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
-msgstr ""
+msgstr "Mest brukte"
