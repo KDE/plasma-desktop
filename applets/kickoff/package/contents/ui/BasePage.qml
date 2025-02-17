@@ -14,6 +14,7 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Templates as T
 import org.kde.ksvg as KSvg
+import org.kde.plasma.plasmoid
 import org.kde.plasma.workspace.trianglemousefilter
 
 FocusScope {
@@ -35,6 +36,7 @@ FocusScope {
 
     TriangleMouseFilter {
         id: sideBarFilter
+        active: Plasmoid.configuration.switchCategoryOnHover
         anchors {
             top: parent.top
             left: parent.left
