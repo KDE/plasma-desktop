@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-16 00:43+0000\n"
-"PO-Revision-Date: 2025-02-15 12:42+0100\n"
+"PO-Revision-Date: 2025-02-16 09:35+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -694,12 +694,7 @@ msgid "Remove all instances"
 msgstr "Elimina totes les instàncies"
 
 #: contents/explorer/AppletDelegate.qml:268
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@action:button accessible description, %1 number of instances %2 is "
-#| "widget name"
-#| msgid "Remove running instance of widget %2"
-#| msgid_plural "Remove all %1 running instanes of widget %2"
+#, kde-format
 msgctxt ""
 "@action:button accessible description, %1 number of instances %2 is widget "
 "name"
