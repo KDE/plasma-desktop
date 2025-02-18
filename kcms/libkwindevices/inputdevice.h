@@ -15,6 +15,8 @@
 
 #include <optional>
 
+#include "kwindevices-logging.h"
+
 class InputDevice : public QObject
 {
     Q_OBJECT
@@ -225,7 +227,7 @@ private:
         {
             int idx = OrgKdeKWinInputDeviceInterface::staticMetaObject.indexOfProperty(propName);
             if (idx < 0) {
-                qDebug() << "there is no" << propName;
+                qCDebug(LIBKWINDEVICES) << "there is no" << propName;
             }
             Q_ASSERT(idx >= 0);
             m_prop = OrgKdeKWinInputDeviceInterface::staticMetaObject.property(idx);
@@ -269,12 +271,29 @@ private:
             }
         }
 
-        void set(T newVal);
+        void set(T newVal) {
+            if (!m_value) {
+                value();
+            }
+        
+            Q_ASSERT(isSupported());
+            if (m_value != newVal) {
+                m_value = newVal;
+                if (m_changedSignalFunction) {
+                    (m_device->*m_changedSignalFunction)();
+                }
+            }
+        }
+
         T defaultValue() const
         {
             return m_defaultValueFunction ? (m_device->m_iface.get()->*m_defaultValueFunction)() : T();
         }
-        bool changed() const;
+        
+        bool changed() const {
+            return m_value.has_value() && m_value.value() != m_configValue;
+        }
+
         void set(const Prop<T> &p)
         {
             set(p.value());
@@ -286,7 +305,20 @@ private:
             return !m_supportedFunction || (iface->*m_supportedFunction)();
         }
 
-        bool save();
+        bool save() {
+            if (!isSupported() || !m_value || m_prop.isConstant()) {
+                qCDebug(LIBKWINDEVICES) << "skipping" << this << m_value.has_value() << isSupported() << m_prop.name();
+                return false;
+            }
+        
+            auto iface = m_device->m_iface.get();
+            const bool ret = m_prop.write(iface, *m_value);
+            if (ret) {
+                m_configValue = *m_value;
+            }
+            return ret;
+        }
+
         bool isDefaults() const
         {
             return m_value == defaultValue();

@@ -15,7 +15,7 @@
 #include <QDBusInterface>
 
 #include "inputdevice.h"
-#include "logging.h"
+#include "kwindevices-logging.h"
 
 DevicesModel::DevicesModel(const QByteArray &kind, QObject *parent)
     : QAbstractListModel(parent)
