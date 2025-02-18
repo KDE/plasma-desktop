@@ -96,15 +96,6 @@ PlasmoidItem {
         acceptedButtons: Qt.NoButton
         hoverEnabled: true
 
-        onContainsMouseChanged: {
-            if (!containsMouse && dragging) {
-                // Somewhat heavy-handed way to clean up after a window delegate drag
-                // exits the window.
-                pagerModel.refresh();
-                dragging = false;
-            }
-        }
-
         onWheel: wheel => {
             // Magic number 120 for common "one click, see:
             // https://doc.qt.io/qt-5/qml-qtquick-wheelevent.html#angleDelta-prop
@@ -552,12 +543,12 @@ PlasmoidItem {
                                         // Will reset the model, destroying the reparented drag delegate that
                                         // is no longer bound to model.Geometry.
                                         root.dragging = false;
-                                        pagerModel.refresh();
                                     } else {
                                         // When there is no dragging (just a click), the event is passed
                                         // to the desktop MouseArea.
                                         desktopMouseArea.clicked(mouse);
                                     }
+                                    pagerModel.refresh();
                                 }
                             }
 
