@@ -8,46 +8,6 @@
 
 #include <QList>
 
-#include "logging.h"
-
-template<typename T>
-bool InputDevice::Prop<T>::save()
-{
-    if (!isSupported() || !m_value || m_prop.isConstant()) {
-        qCDebug(LIBKWINDEVICES) << "skipping" << this << m_value.has_value() << isSupported() << m_prop.name();
-        return false;
-    }
-
-    auto iface = m_device->m_iface.get();
-    const bool ret = m_prop.write(iface, *m_value);
-    if (ret) {
-        m_configValue = *m_value;
-    }
-    return ret;
-}
-
-template<typename T>
-void InputDevice::Prop<T>::set(T newVal)
-{
-    if (!m_value) {
-        value();
-    }
-
-    Q_ASSERT(isSupported());
-    if (m_value != newVal) {
-        m_value = newVal;
-        if (m_changedSignalFunction) {
-            (m_device->*m_changedSignalFunction)();
-        }
-    }
-}
-
-template<typename T>
-bool InputDevice::Prop<T>::changed() const
-{
-    return m_value.has_value() && m_value.value() != m_configValue;
-}
-
 InputDevice::InputDevice(const QString &dbusName, QObject *parent)
     : QObject(parent)
 {

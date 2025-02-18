@@ -3,7 +3,7 @@
 
 ecm_qt_declare_logging_category(kwindevices_SRCS
     HEADER
-        logging.h
+        kwindevices-logging.h
     IDENTIFIER
         LIBKWINDEVICES
     CATEGORY_NAME
