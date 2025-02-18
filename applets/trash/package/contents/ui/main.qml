@@ -44,6 +44,7 @@ PlasmoidItem {
 
         return iconName;
     }
+    Plasmoid.status: hasContents ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
 
     Plasmoid.onActivated: Qt.openUrlExternally("trash:/")
 
