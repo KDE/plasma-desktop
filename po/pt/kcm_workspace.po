@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-30 00:42+0000\n"
+"POT-Creation-Date: 2025-02-18 00:42+0000\n"
 "PO-Revision-Date: 2022-12-18 12:03+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -29,51 +29,70 @@ msgstr "Reiniciar"
 
 #: ui/main.qml:45
 #, kde-format
-msgid "Visual behavior:"
-msgstr "Comportamento visual:"
+msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
+msgid "Allow Plasma to show:"
+msgstr ""
 
-#. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
-#: ui/main.qml:46 workspaceoptions_plasmasettings.kcfg:9
+#: ui/main.qml:52
 #, kde-format
-msgid "Display informational tooltips on mouse hover"
-msgstr "Mostrar dicas informativas à passagem do cursor"
+msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
+msgid "Panel and widget tooltips"
+msgstr ""
 
-#. i18n: ectx: label, entry (osdEnabled), group (OSD)
-#: ui/main.qml:57 workspaceoptions_plasmasettings.kcfg:15
+#: ui/main.qml:62
 #, kde-format
-msgid "Display visual feedback for status changes"
-msgstr "Mostrar uma reacção visual às mudanças de estado"
+msgid ""
+"Allows all Plasma panel and desktop widgets to show descriptive tooltips "
+"when hovered with the pointer. This setting has no effect on the small "
+"tooltips displayed when hovering over individual buttons and other user "
+"interface elements."
+msgstr ""
 
-#: ui/main.qml:75
+#: ui/main.qml:70
+#, fuzzy, kde-format
+#| msgid "Show a popup on layout changes"
+msgctxt ""
+"Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
+msgid "OSD popups for status changes"
+msgstr "Mostrar uma mensagem em caso de mudança da disposição"
+
+#: ui/main.qml:80
+#, kde-format
+msgid ""
+"Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
+"like volume and brightness level, or audio device switching."
+msgstr ""
+
+#: ui/main.qml:92
 #, kde-format
 msgid "Animation speed:"
 msgstr "Velocidade da animação:"
 
-#: ui/main.qml:101
+#: ui/main.qml:118
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "Lenta"
 
-#: ui/main.qml:108
+#: ui/main.qml:125
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr "Instantânea"
 
-#: ui/main.qml:119
+#: ui/main.qml:136
 #, kde-format
 msgctxt "@label"
 msgid "Scrolling:"
 msgstr ""
 
-#: ui/main.qml:123
+#: ui/main.qml:140
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
 msgstr ""
 
-#: ui/main.qml:133
+#: ui/main.qml:150
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -83,41 +102,41 @@ msgid ""
 "setting for enabling and disabling it."
 msgstr ""
 
-#: ui/main.qml:146
+#: ui/main.qml:163
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Ao carregar nos ficheiros ou pastas:"
 
-#: ui/main.qml:153
+#: ui/main.qml:170
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Selecciona-os"
 
-#: ui/main.qml:172
+#: ui/main.qml:189
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Abrir com duplo-click em alternativa"
 
-#: ui/main.qml:185
+#: ui/main.qml:202
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Abre-os"
 
-#: ui/main.qml:203
+#: ui/main.qml:220
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "Seleccionar ao carregar no marcador de selecção do item"
 
-#: ui/main.qml:219
+#: ui/main.qml:236
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr "Ao carregar na barra de deslocamento:"
 
-#: ui/main.qml:220
+#: ui/main.qml:237
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
@@ -125,7 +144,7 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "Desloca-se para a posição carregada"
 
-#: ui/main.qml:238
+#: ui/main.qml:255
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -133,12 +152,12 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "Desloca uma página para cima ou para baixo"
 
-#: ui/main.qml:256
+#: ui/main.qml:273
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
 msgstr "'Click' do botão do meio para se deslocar para a posição carregada"
 
-#: ui/main.qml:270
+#: ui/main.qml:287
 #, fuzzy, kde-format
 #| msgid "Middle Click:"
 msgctxt ""
@@ -147,7 +166,7 @@ msgctxt ""
 msgid "Middle-click:"
 msgstr "Botão do Meio:"
 
-#: ui/main.qml:272
+#: ui/main.qml:289
 #, fuzzy, kde-format
 #| msgid "Paste selected text"
 msgctxt ""
@@ -156,24 +175,24 @@ msgctxt ""
 msgid "Pastes selected text"
 msgstr "Colar o texto seleccionado"
 
-#: ui/main.qml:289
+#: ui/main.qml:306
 #, kde-format
 msgid "Touch Mode:"
 msgstr "Modo Táctil:"
 
-#: ui/main.qml:291
+#: ui/main.qml:308
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Activar automaticamente se necessário"
 
-#: ui/main.qml:291 ui/main.qml:336
+#: ui/main.qml:308 ui/main.qml:353
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Nunca activo"
 
-#: ui/main.qml:308
+#: ui/main.qml:325
 #, kde-format
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
@@ -184,13 +203,13 @@ msgstr ""
 "ecrã táctil mas não detectar nenhum rato ou dispositivo compatível. Por "
 "exemplo: quando o teclado de um portátil convertível for rodado ou destacado."
 
-#: ui/main.qml:313
+#: ui/main.qml:330
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Sempre activo"
 
-#: ui/main.qml:359
+#: ui/main.qml:376
 #, kde-format
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
@@ -199,13 +218,13 @@ msgstr ""
 "No Modo Táctil, muitos elementos da interface do utilizador ficarão maiores "
 "para acomodar mais facilmente as interacções tácteis."
 
-#: ui/main.qml:377
+#: ui/main.qml:394
 #, fuzzy, kde-format
 #| msgid "Open by double-clicking instead"
 msgid "Double-click interval:"
 msgstr "Abrir com duplo-click em alternativa"
 
-#: ui/main.qml:392
+#: ui/main.qml:409
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "%1 ms"
@@ -213,13 +232,13 @@ msgid_plural "%1 ms"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ui/main.qml:396
+#: ui/main.qml:413
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgstr ""
 
-#: ui/main.qml:410
+#: ui/main.qml:427
 #, kde-format
 msgid ""
 "Two clicks within this duration are considered a double-click. Some "
@@ -270,24 +289,53 @@ msgstr "Mudar automaticamente para o modo táctil"
 msgid "Enable middle click selection pasting"
 msgstr "Activar a colagem da selecção com o botão do meio:"
 
-#. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
-#: workspaceoptions_plasmasettings.kcfg:16
+#. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
+#: workspaceoptions_plasmasettings.kcfg:9
+#, kde-format
+msgid "Display large panel and widget tooltips"
+msgstr ""
+
+#. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
+#: workspaceoptions_plasmasettings.kcfg:10
 #, kde-format
 msgid ""
-"Show an on-screen display to indicate status changes such as brightness or "
-"volume"
+"Allow Plasma widgets to display large panel and widget tooltips on hover"
+msgstr ""
+
+#. i18n: ectx: label, entry (osdEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:16
+#, fuzzy, kde-format
+#| msgid "Display visual feedback for status changes"
+msgid "Display small popups for status changes"
+msgstr "Mostrar uma reacção visual às mudanças de estado"
+
+#. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:17
+#, fuzzy, kde-format
+#| msgid ""
+#| "Show an on-screen display to indicate status changes such as brightness "
+#| "or volume"
+msgid ""
+"Allow Plasma widgets to display small popups for status changes such as "
+"brightness or volume"
 msgstr ""
 "Mostrar uma visualização no ecrã para indicar as mudanças de estado, como o "
 "brilho ou o volume"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
-#: workspaceoptions_plasmasettings.kcfg:20
+#: workspaceoptions_plasmasettings.kcfg:21
 #, kde-format
 msgid "OSD on layout change"
 msgstr "OSD por mudança da disposição"
 
 #. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
-#: workspaceoptions_plasmasettings.kcfg:21
+#: workspaceoptions_plasmasettings.kcfg:22
 #, kde-format
 msgid "Show a popup on layout changes"
 msgstr "Mostrar uma mensagem em caso de mudança da disposição"
+
+#~ msgid "Visual behavior:"
+#~ msgstr "Comportamento visual:"
+
+#~ msgid "Display informational tooltips on mouse hover"
+#~ msgstr "Mostrar dicas informativas à passagem do cursor"

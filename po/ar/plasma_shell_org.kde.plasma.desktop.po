@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: KDE 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-16 00:43+0000\n"
-"PO-Revision-Date: 2025-02-12 17:20+0400\n"
+"PO-Revision-Date: 2025-02-17 21:21+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -632,7 +632,7 @@ msgstr "ودجات بديلة"
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Add %1"
-msgstr ""
+msgstr "أضف %1"
 
 #: contents/explorer/AppletDelegate.qml:46
 #, kde-format
@@ -662,19 +662,18 @@ msgstr[5] "لا تتوفر ودجات"
 #, kde-format
 msgctxt " @info:other accessible for badge indicating new widget"
 msgid "Recently installed"
-msgstr ""
+msgstr "المثبتة حديثًا"
 
 #: contents/explorer/AppletDelegate.qml:216
-#, fuzzy, kde-format
-#| msgid "Uninstall"
+#, kde-format
 msgid "Cancel Uninstallation"
-msgstr "أزل التّثبيت"
+msgstr "ألغ إزالة التّثبيت"
 
 #: contents/explorer/AppletDelegate.qml:217
 #, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Mark for Uninstallation"
-msgstr ""
+msgstr "علّم لإزالة التثبيت"
 
 #: contents/explorer/AppletDelegate.qml:221
 #, kde-format
@@ -752,11 +751,10 @@ msgid "Close Widget Explorer"
 msgstr ""
 
 #: contents/explorer/WidgetExplorer.qml:208
-#, fuzzy, kde-format
-#| msgid "Lock Widgets"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Search Widgets"
-msgstr "اقفل الودجات"
+msgstr "ابحث الودجات"
 
 #: contents/explorer/WidgetExplorer.qml:237
 #, kde-format

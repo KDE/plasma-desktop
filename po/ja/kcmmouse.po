@@ -1,5 +1,5 @@
 # Translation of kcminput into Japanese.
-# SPDX-FileCopyrightText: 2023, 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # This file is distributed under the same license as the kdebase package.
 # Noboru Sinohara <shinobo@leo.bekkoame.ne.jp>, 2002.
 # Taiki Komoda <kom@kde.gr.jp>, 2003, 2004.
@@ -14,14 +14,14 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-01 00:42+0000\n"
-"PO-Revision-Date: 2024-01-14 22:35+0900\n"
+"PO-Revision-Date: 2025-01-22 20:51+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.12.1\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -41,7 +41,7 @@ msgstr "%1 の基本的なデバイス情報の読み込み中に深刻なエラ
 #: kcm.cpp:86
 #, kde-format
 msgid "Not able to select appropriate backend"
-msgstr ""
+msgstr "適切なバックエンドを選択できませんでした"
 
 #: kcm.cpp:142
 #, kde-format
@@ -95,12 +95,10 @@ msgid "Pointer device disconnected. No other devices found."
 msgstr "ポインタデバイスが切断されました。他のデバイスは見つかりませんでした。"
 
 #: ui/bindings.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@label for assigning an action to a numbered button"
-#| msgid "Extra Button %1:"
+#, kde-format
 msgctxt "@title"
 msgid "Extra Mouse Buttons"
-msgstr "追加のボタン %1:"
+msgstr "追加のマウスボタン"
 
 #: ui/bindings.qml:70
 #, kde-format
@@ -127,12 +125,10 @@ msgid "Cancel"
 msgstr "キャンセル"
 
 #: ui/bindings.qml:124
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Press a mouse button "
+#, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button"
-msgstr "マウスボタンを押してください"
+msgstr "マウスのボタンを押してください"
 
 #: ui/bindings.qml:125
 #, kde-format
@@ -144,7 +140,7 @@ msgstr "バインディングを追加..."
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
-msgstr ""
+msgstr "追加のボタンを設定..."
 
 #: ui/main.qml:64
 #, kde-format
@@ -167,8 +163,7 @@ msgid "Accept input through this device."
 msgstr "このデバイスからの入力を許可します。"
 
 #: ui/main.qml:107
-#, fuzzy, kde-format
-#| msgid "Left handed mode"
+#, kde-format
 msgid "Left-handed mode"
 msgstr "左利きモード"
 
@@ -178,19 +173,16 @@ msgid "Swap left and right buttons."
 msgstr "左右のボタンを入れ替えます。"
 
 #: ui/main.qml:126
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "左右のボタンを押して中クリック"
 
 #: ui/main.qml:138
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
-msgstr "左右のボタンを同時に押すと中クリックを送信します。"
+msgstr "左右のボタンを同時に押すと中クリックが入力されます。"
 
 #: ui/main.qml:142
 #, kde-format
@@ -199,6 +191,8 @@ msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
+"この設定を有効にすると、クリックのレイテンシが50ミリ秒増加します。この遅延は"
+"左右のボタンが同時に押されたことを正しく検知するために必要です。"
 
 #: ui/main.qml:154
 #, kde-format
@@ -248,49 +242,16 @@ msgid "Invert scroll direction"
 msgstr "スクロール方向を反転"
 
 #: ui/main.qml:337
-#, fuzzy, kde-format
-#| msgid "Touchscreen like scrolling."
+#, kde-format
 msgid "Touchscreen-like scrolling."
 msgstr "タッチスクリーンのようなスクロールです。"
 
 #: ui/main.qml:342
 #, kde-format
 msgid "Press middle button and move mouse to scroll"
-msgstr ""
+msgstr "中ボタンを押しながらマウスを移動してスクロール"
 
 #: ui/main.qml:354
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
-msgstr ""
-
-#~ msgid "None"
-#~ msgstr "なし"
-
-#~ msgid "Cursor moves the same distance as the mouse movement."
-#~ msgstr "カーソルはマウスが動いた距離と同じ長さだけ動きます。"
-
-#~ msgid "Standard"
-#~ msgstr "標準"
-
-#, fuzzy
-#~| msgctxt "@action:button"
-#~| msgid "Re-bind Additional Mouse Buttons…"
-#~ msgctxt "@action:button"
-#~ msgid "Bindings for Additional Mouse Buttons"
-#~ msgstr "追加のマウスボタンをリバインド..."
-
-#~ msgctxt "@action:button"
-#~ msgid "Re-bind Additional Mouse Buttons…"
-#~ msgstr "追加のマウスボタンをリバインド..."
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Fumiaki Okushi,Shinichi Tsunoda,Ryuichi Yamada"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "okushi@kde.gr.jp,tsuno@ngy.1st.ne.jp,ryuichi_ya220@outlook.jp"
-
-#~ msgctxt "@action:button"
-#~ msgid "Go back"
-#~ msgstr "戻る"
+msgstr "中ボタンが押されている間、マウスを動かしてスクロールできます。"

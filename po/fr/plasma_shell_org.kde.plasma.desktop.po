@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-16 00:43+0000\n"
-"PO-Revision-Date: 2025-02-12 09:14+0100\n"
+"PO-Revision-Date: 2025-02-16 18:08+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -648,7 +648,7 @@ msgstr "Composants graphiques alternatifs"
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Add %1"
-msgstr ""
+msgstr "Ajouter %1"
 
 #: contents/explorer/AppletDelegate.qml:46
 #, kde-format
@@ -662,43 +662,43 @@ msgid "New!"
 msgstr "Nouveau !"
 
 #: contents/explorer/AppletDelegate.qml:203
-#, fuzzy, kde-format
-#| msgid "No widgets available"
+#, kde-format
 msgctxt "@info:other accessible for badge showing applet count"
 msgid "%1 widget active"
 msgid_plural "%1 widgets active"
-msgstr[0] "Aucun composant graphique disponible"
-msgstr[1] "Aucun composant graphique disponible"
+msgstr[0] "Composant graphique %1 actif"
+msgstr[1] "%1 composants graphiques actifs"
 
 #: contents/explorer/AppletDelegate.qml:204
 #, kde-format
 msgctxt " @info:other accessible for badge indicating new widget"
 msgid "Recently installed"
-msgstr ""
+msgstr "Récemment installés."
 
 #: contents/explorer/AppletDelegate.qml:216
-#, fuzzy, kde-format
-#| msgid "Uninstall"
+#, kde-format
 msgid "Cancel Uninstallation"
-msgstr "Désinstaller"
+msgstr "Annuler la désinstallation"
 
 #: contents/explorer/AppletDelegate.qml:217
 #, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Mark for Uninstallation"
-msgstr ""
+msgstr "Marquer pour désinstallation"
 
 #: contents/explorer/AppletDelegate.qml:221
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Cancel pending uninstallation for widget %1"
-msgstr ""
+msgstr "Annuler la désinstallation en attente pour le composant graphique %1"
 
 #: contents/explorer/AppletDelegate.qml:222
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Mark widget %1 for uninstallation. Requires confirmation"
 msgstr ""
+"Marquez le composant graphique %1 pour la désinstallation. Nécessite une "
+"confirmation."
 
 #: contents/explorer/AppletDelegate.qml:264
 #, kde-format
@@ -757,14 +757,13 @@ msgstr "Obtenir de nouveaux composants graphiques…"
 #, kde-format
 msgctxt "@action:button accessible for close button"
 msgid "Close Widget Explorer"
-msgstr ""
+msgstr "Fermer l'explorateur de composants graphiques"
 
 #: contents/explorer/WidgetExplorer.qml:208
-#, fuzzy, kde-format
-#| msgid "Lock Widgets"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Search Widgets"
-msgstr "Verrouiller les composants graphiques"
+msgstr "Rechercher des composants graphiques"
 
 #: contents/explorer/WidgetExplorer.qml:237
 #, kde-format
@@ -772,13 +771,12 @@ msgid "Categories"
 msgstr "Catégories"
 
 #: contents/explorer/WidgetExplorer.qml:258
-#, fuzzy, kde-format
-#| msgid "Uninstall widget"
+#, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Uninstall (%1 Widget)"
 msgid_plural "Uninstall (%1 Widgets)"
-msgstr[0] "Désinstaller le composant graphique"
-msgstr[1] "Désinstaller le composant graphique"
+msgstr[0] "Désinstaller (Composant graphique %1)"
+msgstr[1] "Désinstaller (%1 composants graphiques)"
 
 #: contents/explorer/WidgetExplorer.qml:360
 #, kde-format
