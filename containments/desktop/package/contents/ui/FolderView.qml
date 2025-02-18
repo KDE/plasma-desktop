@@ -367,7 +367,9 @@ FocusScope {
         onCanceled: pressCanceled()
 
         onReleased: mouse => {
-            if (hoveredItem && !hoveredItem.blank && mouse.button !== Qt.RightButton) {
+            // if we click on an item, cancel the current selection and select just the clicked icon
+            // the cachedRectangleSelection guards this release being associated with an existing drag
+            if (!gridView.cachedRectangleSelection && hoveredItem && !hoveredItem.blank && mouse.button !== Qt.RightButton) {
                 var pos = mapToItem(hoveredItem.actionsOverlay, mouse.x, mouse.y);
                 if (!(pos.x <= hoveredItem.actionsOverlay.width && pos.y <= hoveredItem.actionsOverlay.height)
                     && (!(gridView.shiftPressed && gridView.currentIndex !== -1) && !gridView.ctrlPressed)) {
