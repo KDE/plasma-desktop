@@ -371,7 +371,7 @@ FocusScope {
                         if (runnerModel.modelForRow(i).count) {
                             const targetList = runnerColumnsRepeater.itemAt(i);
                             targetList.currentIndex = runnerModel.modelForRow(i).count - 1;
-                            targetList.forceActiveFocus();
+                            targetList.currentItem.forceActiveFocus();
                             break;
                         }
                     }
@@ -389,7 +389,7 @@ FocusScope {
                         if (runnerModel.modelForRow(i).count) {
                             const targetList = runnerColumnsRepeater.itemAt(i);
                             targetList.currentIndex = Math.min(1, targetList.count);
-                            targetList.forceActiveFocus();
+                            targetList.currentItem.forceActiveFocus();
                             break;
                         }
                     }

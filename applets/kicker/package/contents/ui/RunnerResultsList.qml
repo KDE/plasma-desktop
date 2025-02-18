@@ -22,6 +22,7 @@ FocusScope {
     signal navigateRightRequested
 
     property alias currentIndex: runnerMatches.currentIndex
+    property alias currentItem: runnerMatches.currentItem
     property alias count: runnerMatches.count
     property alias containsMouse: runnerMatches.containsMouse
     property alias mainSearchField: runnerMatches.mainSearchField
