@@ -98,7 +98,7 @@ public:
 
     QRectF inputArea() const
     {
-        return m_inputArea.value();
+        return m_inputArea.isSupported() ? m_inputArea.value() : QRectF(0, 0, 1, 1);
     }
     void setInputArea(const QRectF &inputArea);
     bool supportsInputArea() const
