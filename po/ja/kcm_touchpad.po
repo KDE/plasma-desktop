@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2023, 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # 百武 朋大 <tomhioo@outlook.jp>, 2019.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2019.
 msgid ""
@@ -6,9 +6,9 @@ msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-10 00:47+0000\n"
-"PO-Revision-Date: 2023-08-12 01:47+0900\n"
+"PO-Revision-Date: 2025-02-15 13:27+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
-"Language-Team: ja\n"
+"Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -114,7 +114,7 @@ msgstr "入力中は無効化"
 #: kcm/libinput/touchpad.qml:171
 #, kde-format
 msgid "Disable touchpad while typing to prevent accidental inputs."
-msgstr "誤入力を防ぐため入力中はタッチパッドを無効にする"
+msgstr "タイプ中にタッチパッドを無効化して誤入力を防止します。"
 
 #: kcm/libinput/touchpad.qml:195
 #, kde-format
@@ -1427,7 +1427,7 @@ msgstr "すべての端"
 #, kde-format
 msgctxt "Touchpad Edge"
 msgid "Top edge"
-msgstr "上端"
+msgstr "上の端"
 
 #. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
 #: touchpadparameters.kcfg:291
