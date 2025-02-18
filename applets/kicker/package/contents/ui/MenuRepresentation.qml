@@ -379,7 +379,7 @@ FocusScope {
             } else if (event.key === Qt.Key_Down) {
                 if (rootList.visible) {
                     rootList.showChildDialogs = false;
-                    rootList.currentIndex = Math.min(1, rootList.count);
+                    rootList.currentIndex = Math.min(rootList.currentIndex + 1, rootList.count);
                     rootList.forceActiveFocus();
                     rootList.showChildDialogs = true;
                 }
@@ -388,8 +388,8 @@ FocusScope {
                     for (let i = 0; i < runnerModel.count; ++i) {
                         if (runnerModel.modelForRow(i).count) {
                             const targetList = runnerColumnsRepeater.itemAt(i);
-                            targetList.currentIndex = Math.min(1, targetList.count);
-                            targetList.currentItem.forceActiveFocus();
+                            targetList.currentIndex = Math.min(targetList.currentIndex + 1, targetList.count);
+                            targetList.forceActiveFocus();
                             break;
                         }
                     }
