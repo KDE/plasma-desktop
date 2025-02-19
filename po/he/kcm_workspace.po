@@ -3,13 +3,13 @@
 #
 # Elkana Bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
-# SPDX-FileCopyrightText: 2023, 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-18 00:42+0000\n"
-"PO-Revision-Date: 2024-09-16 07:49+0300\n"
+"PO-Revision-Date: 2025-02-18 08:14+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: ui/main.qml:23
 #, kde-format
@@ -37,13 +37,13 @@ msgstr "הפעלה מחדש"
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
-msgstr ""
+msgstr "לאפשר לפלזמה להציג:"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr ""
+msgstr "חלוניות צצות ללוח ולווידג׳טים"
 
 #: ui/main.qml:62
 #, kde-format
@@ -53,14 +53,16 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"לאפשר ללוח ולווידג׳טים של פלזמה להציג חלוניות צצות עם תיאורים כאשר עוברים "
+"מעליהם עם העכבר. ההגדרה הזאת לא משפיעה על החלוניות שצצות כשעוברים מעל "
+"כפתורים עצמאיים ורכיבים נוספים בממשק המשתמש."
 
 #: ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
-msgstr "הצגת חלונית עם שינויי פריסת מקלדת"
+msgstr "הצגת חלונית חזית מסך כשקורים שינויים"
 
 #: ui/main.qml:80
 #, kde-format
@@ -68,6 +70,8 @@ msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
+"לאפשר לכל הווידג׳טים של פלזמה להציג חלוניות צצות בחזית המסך (OSD) כשמתרחשים "
+"שינויים כגון בעוצמת השמע או בעוצמת הבהירות או שהתקן השמע מתחלף."
 
 #: ui/main.qml:92
 #, kde-format
@@ -299,7 +303,7 @@ msgstr "הפעלת לחיצה אמצעית להדבקת בחירה"
 #: workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display large panel and widget tooltips"
-msgstr ""
+msgstr "להציג חלוניות צצות גדולות ללוח ולווידג׳טים"
 
 #. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:10
@@ -307,24 +311,24 @@ msgstr ""
 msgid ""
 "Allow Plasma widgets to display large panel and widget tooltips on hover"
 msgstr ""
+"לאפשר לווידג׳טים של פלזמה להציג חלוניות צצות גדולות כשעוברים מעל הלוחות "
+"והווידג׳טים"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
-#, fuzzy, kde-format
-#| msgid "Display visual feedback for status changes"
+#, kde-format
 msgid "Display small popups for status changes"
-msgstr "הצגת משוב חזותי בשינויי מצב"
+msgstr "הצגת חלוניות צצות קטנות כשקורים שינויים"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show an on-screen display to indicate status changes such as brightness "
-#| "or volume"
+#, kde-format
 msgid ""
 "Allow Plasma widgets to display small popups for status changes such as "
 "brightness or volume"
-msgstr "הצגת תצוגה על גבי המסך כדי לציין שינויי מצב כגון בהירות או עוצמת שמע"
+msgstr ""
+"לאפשר לווידג׳טים של פלזמה להציג חלוניות צצות לשינויי מצב כגון בהירות או "
+"עוצמת שמע"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21

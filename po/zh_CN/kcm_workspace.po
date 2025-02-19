@@ -51,12 +51,11 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
-msgstr "在布局更改时显示弹窗通知"
+msgstr ""
 
 #: ui/main.qml:80
 #, kde-format
@@ -302,21 +301,17 @@ msgstr ""
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
-#, fuzzy, kde-format
-#| msgid "Display visual feedback for status changes"
+#, kde-format
 msgid "Display small popups for status changes"
-msgstr "状态变化时显示视觉反馈"
+msgstr ""
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show an on-screen display to indicate status changes such as brightness "
-#| "or volume"
+#, kde-format
 msgid ""
 "Allow Plasma widgets to display small popups for status changes such as "
 "brightness or volume"
-msgstr "显示反映状态变化的屏显信息，如亮度或音量变化等"
+msgstr ""
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21
@@ -329,9 +324,3 @@ msgstr "布局更改时显示屏显信息"
 #, kde-format
 msgid "Show a popup on layout changes"
 msgstr "在布局更改时显示弹窗通知"
-
-#~ msgid "Visual behavior:"
-#~ msgstr "视觉行为："
-
-#~ msgid "Display informational tooltips on mouse hover"
-#~ msgstr "鼠标悬停时显示提示信息"

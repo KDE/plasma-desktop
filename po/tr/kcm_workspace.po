@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Emir SARI <emir_sari@icloud.com>
 # Volkan Gezer <volkangezer@gmail.com>, 2014, 2017, 2021.
 # Emir SARI <emir_sari@icloud.com>, 2023.
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-18 00:42+0000\n"
-"PO-Revision-Date: 2024-09-16 12:10+0300\n"
+"PO-Revision-Date: 2025-02-18 11:10+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #: ui/main.qml:23
 #, kde-format
@@ -37,13 +37,13 @@ msgstr "Yeniden Başlat"
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
-msgstr ""
+msgstr "Plasma’nın şunları göstermesine izin ver:"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr ""
+msgstr "Panel ve araç takımı ipuçları"
 
 #: ui/main.qml:62
 #, kde-format
@@ -53,14 +53,17 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"Tüm Plasma panelleri ve masaüstü araç takımlarının, imleçle üzerine "
+"gelindiğinde açıklayıcı araç ipuçlarını göstermesine izin verir. Bu kuralın, "
+"tek tek düğmelerin ve diğer kullanıcı arabirimi ögelerinin üzerine "
+"gelindiğinde görüntülenen küçük araç ipuçları üzerinde hiçbir etkisi yoktur."
 
 #: ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
-msgstr "Yerleşim değişikliklerinde açılır bir pencere göster"
+msgstr "Durum değişikliklerinde EÜG açılır pencereleri"
 
 #: ui/main.qml:80
 #, kde-format
@@ -68,6 +71,9 @@ msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
+"Tüm Plasma araç takımlarına, ses/parlaklık düzeyi veya ses aygıtı "
+"değişikliği gibi olaylar için ekran üzeri görüntü (OSD/EÜG) göstermelerine "
+"izin verin."
 
 #: ui/main.qml:92
 #, kde-format
@@ -301,7 +307,7 @@ msgstr "Orta tıklama seçim yapıştırmayı etkinleştir"
 #: workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display large panel and widget tooltips"
-msgstr ""
+msgstr "Büyük panel ve araç takımı ipuçlarına izin ver"
 
 #. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:10
@@ -309,26 +315,24 @@ msgstr ""
 msgid ""
 "Allow Plasma widgets to display large panel and widget tooltips on hover"
 msgstr ""
+"Plasma araç takımlarının, imleçle üzerine gelindiğinde büyük panel ve araç "
+"takımı ipuçlarını görüntülemesine izin verin."
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
-#, fuzzy, kde-format
-#| msgid "Display visual feedback for status changes"
+#, kde-format
 msgid "Display small popups for status changes"
-msgstr "Durum değişiklikleri için görsel geri bildirim göster"
+msgstr "Durum değişiklikleri için küçük açılır pencereler görüntüle"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show an on-screen display to indicate status changes such as brightness "
-#| "or volume"
+#, kde-format
 msgid ""
 "Allow Plasma widgets to display small popups for status changes such as "
 "brightness or volume"
 msgstr ""
-"Parlaklık veya ses düzeyi gibi durum değişikliklerini ekran üzerinde (OSD) "
-"gösterin"
+"Plasma araç takımlarının, ses veya parlaklık düzeyi gibi durum "
+"değişikliklerinde küçük açılır pencereler görüntülemesine izin verin."
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21

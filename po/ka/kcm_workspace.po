@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-18 00:42+0000\n"
-"PO-Revision-Date: 2024-09-16 04:21+0200\n"
+"PO-Revision-Date: 2025-02-18 03:57+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.1\n"
+"X-Generator: Poedit 3.5\n"
 
 #: ui/main.qml:23
 #, kde-format
@@ -34,13 +34,13 @@ msgstr "გადატვრთვა"
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
-msgstr ""
+msgstr "Plasma-სთვის უფლების მიცემა, აჩვენოს:"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr ""
+msgstr "პანელის და ვიჯეტის მინიშნებები"
 
 #: ui/main.qml:62
 #, kde-format
@@ -50,14 +50,17 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"უფლებას აძლევს ყველა Plasma-ის პანელის და სამუშაო მაგიდის ვიჯეტებს, აჩვენონ "
+"აღმწერი მინიშნებები, როცა ზედ თაგუნას კურსორს გააჩერებთ. ამ პარამეტრს ძალა "
+"არ აქვს პატარა მინიშნებების ჩვენებაზე, როცა თაგუნა ინდივიდუალური ღილაკების "
+"და სხვა მომხმარებლის ინტერფეისის ელემენტების ზემოდან გიჭირავთ."
 
 #: ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
-msgstr "განლაგების ცვლილებისას მხტუნავის ჩვენება"
+msgstr "OSD მხტუნარები სტატუსის ცვლილებისთვის"
 
 #: ui/main.qml:80
 #, kde-format
@@ -65,6 +68,9 @@ msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
+"საშუალებას აძლევს ყველა Plasma-ის ვიჯეტს, აჩვენოს ეკრანზეჩვენების (OSD) "
+"მხტუნარები ისეთი ცვლილებებისთვის, როგორიცაა ხმის სიძლიერე და ეკრანის "
+"სიკაშკაშის დონე, ან აუდიომოწყობილობის გადართვა."
 
 #: ui/main.qml:92
 #, kde-format
@@ -297,7 +303,7 @@ msgstr "შუა-წკაპით მონიშნულის ჩასმ
 #: workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display large panel and widget tooltips"
-msgstr ""
+msgstr "დიდი პანელისა და ვიჯეტის მინიშნებების ჩვენება"
 
 #. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:10
@@ -305,25 +311,24 @@ msgstr ""
 msgid ""
 "Allow Plasma widgets to display large panel and widget tooltips on hover"
 msgstr ""
+"საშუალებას აძლევს Plasma-ის ვიჯეტებს, თაგუნას კურსორის ზედ გაჩერებისას, დიდი "
+"პანელისა და ვიჯეტის მინიშნებები აჩვენოს"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
-#, fuzzy, kde-format
-#| msgid "Display visual feedback for status changes"
+#, kde-format
 msgid "Display small popups for status changes"
-msgstr "სტატუსის ცვლილებისას ვიზუალური ნიშნების მიცემა"
+msgstr "პატარა მხტუნარების ჩვენება სტატუსის ცვლილებებისთვის"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show an on-screen display to indicate status changes such as brightness "
-#| "or volume"
+#, kde-format
 msgid ""
 "Allow Plasma widgets to display small popups for status changes such as "
 "brightness or volume"
 msgstr ""
-"ეკრანზე ჩვენება ისეთი სტატუსების საჩვენებლად, როგორიცაა სიკაშკაშე და ხმა"
+"საშუალებას აძლევს Plasma-ის ვიჯეტებს, აჩვენონ პატარა მხტუნარები ისეთი "
+"ცვლილებებისთვის, როგორიცაა ხმის დონე და ეკრანის სიკაშკაშე"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21

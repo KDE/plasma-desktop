@@ -4,13 +4,13 @@
 # Franklin Weng <franklin at goodhorse dot idv dot tw>, 2014.
 # Jeff Huang <s8321414@gmail.com>, 2017.
 # pan93412 <pan93412@gmail.com>, 2018, 2019.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-18 00:42+0000\n"
-"PO-Revision-Date: 2024-09-17 07:56+0900\n"
+"PO-Revision-Date: 2025-02-18 16:07+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #: ui/main.qml:23
 #, kde-format
@@ -36,13 +36,13 @@ msgstr "重新啟動"
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
-msgstr ""
+msgstr "允許 Plasma 顯示："
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr ""
+msgstr "面板與元件的工具提示"
 
 #: ui/main.qml:62
 #, kde-format
@@ -52,14 +52,15 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"允許所有 Plasma 面板與桌面元件在指標停留時顯示說明工具提示。這個設定值對於停"
+"留於個別按鈕與其他使用者介面元素的小工具提示不會有效果。"
 
 #: ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
-msgstr "佈局變更時顯示彈出視窗"
+msgstr "狀態變更時的彈出視窗"
 
 #: ui/main.qml:80
 #, kde-format
@@ -67,6 +68,8 @@ msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
+"允許所有 Plasma 元件對於像是音量變更、亮度變更、音訊裝置切換等等狀態變更顯示 "
+"OSD 視覺回饋。"
 
 #: ui/main.qml:92
 #, kde-format

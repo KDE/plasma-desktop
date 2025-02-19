@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2020, 2021, 2022, 2023, 2024 G.Sora <g.sora@tiscali.it>
+# SPDX-FileCopyrightText: 2014, 2020, 2021, 2022, 2023, 2024, 2025 G.Sora <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-18 00:42+0000\n"
-"PO-Revision-Date: 2024-09-16 12:09+0200\n"
+"PO-Revision-Date: 2025-02-18 15:22+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -35,13 +35,13 @@ msgstr "Re-Initia"
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
-msgstr ""
+msgstr "Permitte que Plasma monstra:"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr ""
+msgstr "Consiliosde Pannello e widget"
 
 #: ui/main.qml:62
 #, kde-format
@@ -51,14 +51,17 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"Permitte a omne widgets de scriptorio e pannello de Plasma monstrar "
+"consilios descriptive quando planate con le punctator. Iste preferentia non "
+"ha alcun effecto sur le parve consilios monstrate quando on plana sur "
+"buttones individual e altere elementos de interfacie de usator."
 
 #: ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
-msgstr "Monstra un popup sur modificationes de disposition"
+msgstr "Monstra un popups ODS per modificationes de stato"
 
 #: ui/main.qml:80
 #, kde-format
@@ -66,6 +69,9 @@ msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
+"Permitte a omne widgets de Plasma monstrat  popups de monstrator sur schermo "
+"(OSD) per modificationes como nivello de volumine e brillantia, o commutar "
+"de dispositivo audio."
 
 #: ui/main.qml:92
 #, kde-format
@@ -301,7 +307,7 @@ msgstr "Habilita selection de click de medio de collar"
 #: workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display large panel and widget tooltips"
-msgstr ""
+msgstr "Monstra grande consilios de widget e pannello"
 
 #. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:10
@@ -309,26 +315,24 @@ msgstr ""
 msgid ""
 "Allow Plasma widgets to display large panel and widget tooltips on hover"
 msgstr ""
+"Permitte a widget de Plasma monstrar grande consilios de pannello e widget "
+"quando on plana "
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
-#, fuzzy, kde-format
-#| msgid "Display visual feedback for status changes"
+#, kde-format
 msgid "Display small popups for status changes"
-msgstr "Monstra responsas visual per cambiamentos de stato"
+msgstr "Monstra parve popups per modificationes de stato"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show an on-screen display to indicate status changes such as brightness "
-#| "or volume"
+#, kde-format
 msgid ""
 "Allow Plasma widgets to display small popups for status changes such as "
 "brightness or volume"
 msgstr ""
-"Monstra un on-screen display per indicar modificationes de stato tal como "
-"brillantia o voumine"
+"Permitta a widgets de Plasma monstrar parve popups per modificationes de "
+"stato como brillantia o voumine"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21

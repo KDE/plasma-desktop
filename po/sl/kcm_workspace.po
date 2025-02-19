@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-18 00:42+0000\n"
-"PO-Revision-Date: 2024-09-16 07:18+0200\n"
+"PO-Revision-Date: 2025-02-18 06:43+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -39,13 +39,13 @@ msgstr "Ponovni zagon"
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
-msgstr ""
+msgstr "Dovoli Plasmi prikaz:"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr ""
+msgstr "Namigov za plošče in gradnike"
 
 #: ui/main.qml:62
 #, kde-format
@@ -55,14 +55,17 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"Omogoča, da vse plošče Plasme in gradniki namizja prikažejo opisne namige "
+"orodij, ko se pomaknete s kazalcem nadnje. Ta nastavitev ne vpliva na majhne "
+"namige orodij, ki se prikažejo, ko miškin kazalec premaknete nad posamezne "
+"gumbe in druge elemente uporabniškega vmesnika."
 
 #: ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
-msgstr "Prikaži opozorilno okno ob spremembi razporeditve"
+msgstr "Prikaz pojavnih oken na zaslonu za spremembe stanja"
 
 #: ui/main.qml:80
 #, kde-format
@@ -70,6 +73,9 @@ msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
+"Omogoča vsem gradnikom Plasme, da prikažejo pojavna okna na zaslonu za "
+"spremembe, kot sta raven glasnosti in svetlosti ali preklapljanje zvočne "
+"naprave."
 
 #: ui/main.qml:92
 #, kde-format
@@ -304,7 +310,7 @@ msgstr "Omogoči lepljenje izbire srednjega klika"
 #: workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display large panel and widget tooltips"
-msgstr ""
+msgstr "Prikaži veliko ploščo in opise orodij gradnikov"
 
 #. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:10
@@ -312,25 +318,24 @@ msgstr ""
 msgid ""
 "Allow Plasma widgets to display large panel and widget tooltips on hover"
 msgstr ""
+"Dovoli gradnikom Plasma, da prikažejo veliko ploščo in opise orodij "
+"gradnikov ob lebdenju nad njimi"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
-#, fuzzy, kde-format
-#| msgid "Display visual feedback for status changes"
+#, kde-format
 msgid "Display small popups for status changes"
-msgstr "Prikaži vidni odziv na spremembe stanja"
+msgstr "Prikaži majhna pojavna okna za spremembe stanja"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show an on-screen display to indicate status changes such as brightness "
-#| "or volume"
+#, kde-format
 msgid ""
 "Allow Plasma widgets to display small popups for status changes such as "
 "brightness or volume"
 msgstr ""
-"Prikaži pojavno okno za spremembe stanja, kot so npr. svetlost ali glasnost"
+"Dovoli gradnikom Plasme, da prikažejo majhna pojavna okna za spremembe "
+"stanja, kot sta svetlost ali glasnost"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21
