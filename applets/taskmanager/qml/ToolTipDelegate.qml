@@ -109,6 +109,9 @@ Loader {
                     return found
                 }
 
+                Component.onCompleted: if (parentTask.model.IsActive) {
+                    groupToolTipListView.positionViewAtIndex(tasksModel.activeTask.row, ListView.Center)
+                }
             }
 
             DelegateModel {
@@ -121,7 +124,13 @@ Loader {
                 model: tasksModel
 
                 rootIndex: toolTipDelegate.rootIndex
-                onRootIndexChanged: groupToolTipListView.positionViewAtBeginning() // Fix a visual glitch (when the mouse moves from a tooltip with a moved scrollbar to another tooltip without a scrollbar)
+                onRootIndexChanged: {
+                    if (parentTask.model.IsActive) {
+                            groupToolTipListView.positionViewAtIndex(tasksModel.activeTask.row, ListView.Center)
+                    } else {
+                        groupToolTipListView.positionViewAtBeginning() // Fix a visual glitch (when the mouse moves from a tooltip with a moved scrollbar to another tooltip without a scrollbar)
+                    }
+                }
 
                 delegate: ToolTipInstance {
                     submodelIndex: tasksModel.makeModelIndex(toolTipDelegate.rootIndex.row, index)
