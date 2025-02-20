@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2017, 2018, 2019, 2020, 2021, 2022, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2014, 2017, 2018, 2019, 2020, 2021, 2022, 2024, 2025 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-18 00:42+0000\n"
-"PO-Revision-Date: 2024-09-16 20:03+0200\n"
+"PO-Revision-Date: 2025-02-19 17:06+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: ui/main.qml:23
 #, kde-format
@@ -35,13 +35,13 @@ msgstr "Starta om"
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
-msgstr ""
+msgstr "Tillåt Plasma att visa:"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr ""
+msgstr "Panel och verktygstips för grafiska komponenter"
 
 #: ui/main.qml:62
 #, kde-format
@@ -51,14 +51,17 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"Tillåter Plasmas panel och skrivbordskomponenter att visa beskrivande "
+"verktygstips när muspekaren hålls över dem. inställningen har ingen effekt "
+"för de små verktygstipsen som visas när muspekaren hålls över enskilda "
+"knappar och andra element i användargränssnittet."
 
 #: ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
-msgstr "Visa en meddelanderuta vid layoutändringar"
+msgstr "Skärmmeddelanden vid statusändringar"
 
 #: ui/main.qml:80
 #, kde-format
@@ -66,6 +69,8 @@ msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
+"Tillåter Plasma grafiska komponenter att visa skärmmeddelanden för ändringar "
+"som volym och ljusstyrka, eller byte av ljudenhet."
 
 #: ui/main.qml:92
 #, kde-format
@@ -298,7 +303,7 @@ msgstr "Aktivera inklistring med mittenklick"
 #: workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display large panel and widget tooltips"
-msgstr ""
+msgstr "Visa stor panel och verktygstips för grafiska komponenter"
 
 #. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:10
@@ -306,26 +311,24 @@ msgstr ""
 msgid ""
 "Allow Plasma widgets to display large panel and widget tooltips on hover"
 msgstr ""
+"Tillåt Plasma grafiska komponenter att visa en stor panel och verktygstips "
+"om grafiska komponenter om musen hålls över dem"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
-#, fuzzy, kde-format
-#| msgid "Display visual feedback for status changes"
+#, kde-format
 msgid "Display small popups for status changes"
-msgstr "Visa visuell återmatning för statusändringar"
+msgstr "Visa små meddelanderutor vid statusändringar"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show an on-screen display to indicate status changes such as brightness "
-#| "or volume"
+#, kde-format
 msgid ""
 "Allow Plasma widgets to display small popups for status changes such as "
 "brightness or volume"
 msgstr ""
-"Visa en meddelanderuta på skärmen för att indikera statusändringar som "
-"ljusstyrka eller volym"
+"Tillåt att Plasma grafiska komponenter visar små meddelanderutor vid "
+"statusändringar såsom ljusstyrka eller volym"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21

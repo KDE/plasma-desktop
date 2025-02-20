@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2014, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Freek de Kruijf <freekdekruijf@kde.nl>
 # Luc Castermans <luc.castermans@gmail.com>, 2021.
 # SPDX-FileCopyrightText: 2024 pieter <pieterkristensen@gmail.com>
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-18 00:42+0000\n"
-"PO-Revision-Date: 2024-09-16 12:42+0200\n"
+"PO-Revision-Date: 2025-02-19 18:13+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #: ui/main.qml:23
 #, kde-format
@@ -37,13 +37,13 @@ msgstr "Opnieuw starten"
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
-msgstr ""
+msgstr "Plasma toestaan te tonen:"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr ""
+msgstr "Tekstballonnen van paneel en widgets"
 
 #: ui/main.qml:62
 #, kde-format
@@ -53,14 +53,18 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"Alle Plasma-panelen en bureaubladwidgets toestaan beschrijvende "
+"tekstballonnen te tonen wanneer de aanwijzer er boven zweeft. Deze "
+"instelling heeft geen effect op de kleine tekstballonnen getoond wanneer "
+"boven individuele knoppen en ander elementen in het gebruikersinterface "
+"wordt gezweefd."
 
 #: ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
-msgstr "Een pop-up tonen bij wijziging van indeling"
+msgstr "Op-scherm-tonen (OSD)-popups voor statuswijzigingen"
 
 #: ui/main.qml:80
 #, kde-format
@@ -68,6 +72,9 @@ msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
+"Alle Plasma-widgets toegestaan om op-scherm-tonen (OSD) pop-ups te tonen "
+"voor wijzigingen zoals volume en helderheidsniveaus of omschakelen van "
+"geluidsapparaten."
 
 #: ui/main.qml:92
 #, kde-format
@@ -300,7 +307,7 @@ msgstr "Plakken met midden-klik "
 #: workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display large panel and widget tooltips"
-msgstr ""
+msgstr "Grote tekstballonnen van paneel en widgets tonen"
 
 #. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:10
@@ -308,26 +315,24 @@ msgstr ""
 msgid ""
 "Allow Plasma widgets to display large panel and widget tooltips on hover"
 msgstr ""
+"Plasma-widgets toestaan grote tekstballonnen voor paneel en widgets te tonen "
+"bij er boven zweven"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
-#, fuzzy, kde-format
-#| msgid "Display visual feedback for status changes"
+#, kde-format
 msgid "Display small popups for status changes"
-msgstr "Visuele terugkoppeling voor statuswijzigingen tonen"
+msgstr "Kleine pop-ups voor statuswijzigingen tonen"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show an on-screen display to indicate status changes such as brightness "
-#| "or volume"
+#, kde-format
 msgid ""
 "Allow Plasma widgets to display small popups for status changes such as "
 "brightness or volume"
 msgstr ""
-"Toon een \"on screen display\" om statuswijzigingen aan te geven zoals "
-"helderheid of volume"
+"Plasma-widgets toestaan om kleine pop-ups te tonen voor statuswijzigingen "
+"zoals helderheid of volume"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21

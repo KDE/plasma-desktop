@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-01 00:42+0000\n"
-"PO-Revision-Date: 2025-01-03 16:52+0200\n"
+"PO-Revision-Date: 2025-02-18 18:34+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #: actions.cpp:19
 #, kde-format
@@ -215,10 +215,9 @@ msgid "Pointer speed:"
 msgstr "Rādītāja ātrums:"
 
 #: ui/main.qml:303
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgid "Enable pointer acceleration"
-msgstr "Rādītāja paātrinājums:"
+msgstr "Ieslēgt rādītāja paātrinājumu"
 
 #: ui/main.qml:318
 #, kde-format
@@ -226,6 +225,8 @@ msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
+"Kad ieslēgts, attālums, kādā pārvietojas rādītājs, ir atkarīgs arī no "
+"kustības ātruma."
 
 #: ui/main.qml:328
 #, kde-format
