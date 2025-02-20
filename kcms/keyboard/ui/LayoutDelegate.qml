@@ -30,8 +30,10 @@ Item {
     required property string variant
     required property string variantName
     required property string shortcut
+    required property string displayName
 
     readonly property var view: ListView.view
+    readonly property int keySequenceItemWidth : keySequenceItem.implicitWidth
 
     signal move(int oldIndex, int newIndex)
 
@@ -71,11 +73,36 @@ Item {
                 Layout.fillWidth: true
             }
 
+            QQC2.TextField {
+                Layout.preferredWidth: Kirigami.Units.gridUnit * 3
+                maximumLength: 3
+                horizontalAlignment: Text.AlignHCenter
+                placeholderText: itemDelegate.layout
+                background.visible: activeFocus
+
+                text: itemDelegate.displayName
+                onTextEdited: {
+                    // Immediate response except for "", which resets to default
+                    if (text.length > 0) {
+                        itemDelegate.model.displayName = text
+                    }
+                }
+                onEditingFinished: itemDelegate.model.displayName = text
+                Keys.onEscapePressed: editingFinished()
+            }
+
+            // Spacer to align items to the left of the KeySequenceItem
+            Item {
+                Layout.preferredWidth: itemDelegate.view.maxKeySequenceItemWidth - keySequenceItem.implicitWidth
+            }
+
             KQuickControls.KeySequenceItem {
+                id: keySequenceItem
                 showCancelButton: true
                 modifierlessAllowed: false
                 modifierOnlyAllowed: true
                 keySequence: itemDelegate.shortcut
+                onKeySequenceChanged: itemDelegate.view.maxKeySequenceItemWidthChanged()
                 onCaptureFinished: itemDelegate.model.shortcut = keySequence
             }
 

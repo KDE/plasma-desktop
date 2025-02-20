@@ -257,6 +257,8 @@ KCM.ScrollViewKCM {
             actions: [ configureLayoutsAction, addLayoutAction ]
         }
 
+        readonly property int maxKeySequenceItemWidth: Math.max(...contentItem.children.map(item => item?.keySequenceItemWidth || 0))
+
         delegate: LayoutDelegate {
             id: delegate
             onMove: (oldIndex, newIndex) => kcm.userLayoutModel.move(oldIndex, newIndex)
