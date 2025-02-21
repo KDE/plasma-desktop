@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2015.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-18 00:42+0000\n"
-"PO-Revision-Date: 2024-09-17 08:20+0400\n"
+"PO-Revision-Date: 2025-02-20 09:50+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -35,13 +35,13 @@ msgstr "أعد التّشغيل"
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
-msgstr ""
+msgstr "اسمح لبلازما لعرض:"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr ""
+msgstr "تلميحات اللوح والأداة"
 
 #: ui/main.qml:62
 #, kde-format
@@ -51,14 +51,16 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"يسمح لجميع أدوات لوح البلازما وأدوات سطح المكتب بإظهار تلميحات وصفية عند "
+"التمرير بالمؤشر. ليس لهذا الإعداد أي تأثير على تلميحات الأدوات الصغيرة "
+"المعروضة عند التمرير فوق الأزرار الفردية وعناصر واجهة المستخدم الأخرى."
 
 #: ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
-msgstr "إظهار نافذة منبثقة على تغييرات التخطيط"
+msgstr "نوافذ العرض على الشاشة المنبثقة لتغيير الحالة"
 
 #: ui/main.qml:80
 #, kde-format
@@ -66,6 +68,8 @@ msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
+"يسمح لجميع أدوات بلازما بإظهار النوافذ المنبثقة على الشاشة (OSD) لإجراء "
+"تغييرات مثل مستوى الصوت والسطوع أو تبديل جهاز الصوت."
 
 #: ui/main.qml:92
 #, kde-format
@@ -301,7 +305,7 @@ msgstr "مكن النقر بالرز الأوسط ليلصق التحديد"
 #: workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display large panel and widget tooltips"
-msgstr ""
+msgstr "عرض تلميحات اللوح الكبير وتلميحات الأدوات"
 
 #. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:10
@@ -309,24 +313,23 @@ msgstr ""
 msgid ""
 "Allow Plasma widgets to display large panel and widget tooltips on hover"
 msgstr ""
+"اسمح لأدوات البلازما بعرض تلميحات الأدوات و تلميحات اللوح الكبير عند التحويم"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
-#, fuzzy, kde-format
-#| msgid "Display visual feedback for status changes"
+#, kde-format
 msgid "Display small popups for status changes"
-msgstr "عرض مؤشر مرئي عند تغيير الحالة"
+msgstr "عرض النوافذ المنبثقة الصغيرة لتغيير الحالة"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show an on-screen display to indicate status changes such as brightness "
-#| "or volume"
+#, kde-format
 msgid ""
 "Allow Plasma widgets to display small popups for status changes such as "
 "brightness or volume"
-msgstr "أظهر عرض على الشاشة للإشارة إلى تغييرات الحالة مثل السطوع أو الصوت"
+msgstr ""
+"اسمح لأدوات البلازما بعرض نوافذ منبثقة صغيرة لتغيير الحالة مثل السطوع أو "
+"مستوى الصوت"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21
