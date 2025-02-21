@@ -45,6 +45,13 @@ PlasmaComponents.ScrollView {
 
         Kirigami.SpellCheck.enabled: false
 
+        background: Rectangle {
+            color: Kirigami.Theme.backgroundColor
+            radius: Kirigami.Units.cornerRadius
+            border.color: Kirigami.Theme.highlightColor
+            border.width: 1
+        }
+
         property Item targetItem: null
 
         Binding {
