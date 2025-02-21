@@ -42,6 +42,7 @@ Item {
 
     readonly property bool rightEdge: containment?.plasmoid?.location === PlasmaCore.Types.RightEdge
     readonly property bool bottomEdge: containment?.plasmoid?.location === PlasmaCore.Types.BottomEdge
+    readonly property bool topEdge: containment?.plasmoid?.location === PlasmaCore.Types.topEdge
 
     readonly property int bottomFloatingPadding: Math.round(fixedBottomFloatingPadding * floatingness)
     readonly property int leftFloatingPadding: Math.round(fixedLeftFloatingPadding * floatingness)
@@ -90,7 +91,7 @@ Item {
     // This avoids the panel flashing if it is auto-hide etc and such a window is shown.
     // Examples of such windows: properties of a file on desktop, or portal "open with" dialog
     property bool touchingWindow: false
-    property bool touchingWindowDirect: visibleWindowsModel.count > 0
+    property bool touchingWindowDirect: visibleWindowsModel.count > 0 || (Kirigami.InputMethod.active && !root.topEdge)
     property bool showingDesktop: KWindowSystem.showingDesktop
     Timer {
         id: touchingWindowDebounceTimer
