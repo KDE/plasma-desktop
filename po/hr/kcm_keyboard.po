@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-02 00:41+0000\n"
+"POT-Creation-Date: 2025-02-22 00:43+0000\n"
 "PO-Revision-Date: 2011-03-04 18:44+0100\n"
 "Last-Translator: Marko Dimjasevic <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -155,7 +155,7 @@ msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "Prečac:"
 
-#: ui/LayoutDialog.qml:206 ui/main.qml:285
+#: ui/LayoutDialog.qml:206 ui/main.qml:287
 #, fuzzy, kde-format
 #| msgid "Keyboard Repeat"
 msgctxt "@action:button"
@@ -336,74 +336,74 @@ msgctxt "@title:view"
 msgid "Layouts"
 msgstr "Rasporedi"
 
-#: ui/main.qml:268
+#: ui/main.qml:270
 #, fuzzy, kde-format
 #| msgid "Move Up"
 msgctxt "@action:button"
 msgid "Move Up"
 msgstr "Prema vrhu"
 
-#: ui/main.qml:269
+#: ui/main.qml:271
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout up"
 msgstr ""
 
-#: ui/main.qml:275
+#: ui/main.qml:277
 #, fuzzy, kde-format
 #| msgid "Move Down"
 msgctxt "@action:button"
 msgid "Move Down"
 msgstr "Prema dnu"
 
-#: ui/main.qml:276
+#: ui/main.qml:278
 #, fuzzy, kde-format
 #| msgid "Move Down"
 msgctxt "@action:button accessible"
 msgid "Move %1 layout Down"
 msgstr "Prema dnu"
 
-#: ui/main.qml:286
+#: ui/main.qml:288
 #, fuzzy, kde-format
 #| msgid "Keyboard Repeat"
 msgctxt "@action:button accessible"
 msgid "Preview"
 msgstr "Brzina ponavljanja znaka na tipkovnici"
 
-#: ui/main.qml:294
+#: ui/main.qml:296
 #, fuzzy, kde-format
 #| msgid "Remove"
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "Ukloni"
 
-#: ui/main.qml:295
+#: ui/main.qml:297
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Remove layout %1"
 msgstr ""
 
-#: ui/main.qml:307
+#: ui/main.qml:309
 #, fuzzy, kde-format
 #| msgid "Spare layouts"
 msgctxt "@label:checkbox"
 msgid "Spare layouts:"
 msgstr "Rezervni rasporedi"
 
-#: ui/main.qml:344
+#: ui/main.qml:346
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
 msgstr ""
 
-#: ui/main.qml:376
+#: ui/main.qml:378
 #, fuzzy, kde-format
 #| msgid "Spare layouts"
 msgctxt "@label:textbox completes spinbox, x main layouts"
 msgid "main layouts"
 msgstr "Rezervni rasporedi"
 
-#: ui/main.qml:380
+#: ui/main.qml:382
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -413,14 +413,14 @@ msgid ""
 "shortcut."
 msgstr ""
 
-#: ui/main.qml:385
+#: ui/main.qml:387
 #, fuzzy, kde-format
 #| msgid "Main layout count:"
 msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
 msgstr "Broj glavnih rasporeda:"
 
-#: ui/main.qml:409
+#: ui/main.qml:411
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"

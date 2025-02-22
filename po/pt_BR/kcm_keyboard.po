@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-02 00:41+0000\n"
+"POT-Creation-Date: 2025-02-22 00:43+0000\n"
 "PO-Revision-Date: 2025-02-01 23:18-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -159,7 +159,7 @@ msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "Atalho:"
 
-#: ui/LayoutDialog.qml:206 ui/main.qml:285
+#: ui/LayoutDialog.qml:206 ui/main.qml:287
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview"
@@ -323,67 +323,67 @@ msgctxt "@title:view"
 msgid "Layouts"
 msgstr "Layouts"
 
-#: ui/main.qml:268
+#: ui/main.qml:270
 #, kde-format
 msgctxt "@action:button"
 msgid "Move Up"
 msgstr "Mover para cima"
 
-#: ui/main.qml:269
+#: ui/main.qml:271
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout up"
 msgstr "Mover layout %1 para cima"
 
-#: ui/main.qml:275
+#: ui/main.qml:277
 #, kde-format
 msgctxt "@action:button"
 msgid "Move Down"
 msgstr "Mover para baixo"
 
-#: ui/main.qml:276
+#: ui/main.qml:278
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout Down"
 msgstr "Mover layout %1 para baixo"
 
-#: ui/main.qml:286
+#: ui/main.qml:288
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Preview"
 msgstr "Visualizar"
 
-#: ui/main.qml:294
+#: ui/main.qml:296
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "Remover"
 
-#: ui/main.qml:295
+#: ui/main.qml:297
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Remove layout %1"
 msgstr "Remover layout %1"
 
-#: ui/main.qml:307
+#: ui/main.qml:309
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Spare layouts:"
 msgstr "Layouts adicionais"
 
-#: ui/main.qml:344
+#: ui/main.qml:346
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
 msgstr "Número de layouts principais adicionais"
 
-#: ui/main.qml:376
+#: ui/main.qml:378
 #, kde-format
 msgctxt "@label:textbox completes spinbox, x main layouts"
 msgid "main layouts"
 msgstr "Layouts principais"
 
-#: ui/main.qml:380
+#: ui/main.qml:382
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -397,13 +397,13 @@ msgstr ""
 "ser acessados pelo miniaplicativo indicador de teclado ou ao definir um "
 "atalho personalizado."
 
-#: ui/main.qml:385
+#: ui/main.qml:387
 #, kde-format
 msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
 msgstr "Mudar atalho de layout:"
 
-#: ui/main.qml:409
+#: ui/main.qml:411
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"

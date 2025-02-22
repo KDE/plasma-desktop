@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-02 00:41+0000\n"
+"POT-Creation-Date: 2025-02-22 00:43+0000\n"
 "PO-Revision-Date: 2024-10-02 20:36+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -152,7 +152,7 @@ msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "Скорочення:"
 
-#: ui/LayoutDialog.qml:206 ui/main.qml:285
+#: ui/LayoutDialog.qml:206 ui/main.qml:287
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview"
@@ -316,67 +316,67 @@ msgctxt "@title:view"
 msgid "Layouts"
 msgstr "Розкладки"
 
-#: ui/main.qml:268
+#: ui/main.qml:270
 #, kde-format
 msgctxt "@action:button"
 msgid "Move Up"
 msgstr "Пересунути вище"
 
-#: ui/main.qml:269
+#: ui/main.qml:271
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout up"
 msgstr "Пересунути розкладку %1 вище"
 
-#: ui/main.qml:275
+#: ui/main.qml:277
 #, kde-format
 msgctxt "@action:button"
 msgid "Move Down"
 msgstr "Пересунути нижче"
 
-#: ui/main.qml:276
+#: ui/main.qml:278
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout Down"
 msgstr "Пересунути розкладку %1 нижче"
 
-#: ui/main.qml:286
+#: ui/main.qml:288
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Preview"
 msgstr "Перегляд"
 
-#: ui/main.qml:294
+#: ui/main.qml:296
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "Вилучити"
 
-#: ui/main.qml:295
+#: ui/main.qml:297
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Remove layout %1"
 msgstr "Вилучити розкладку %1"
 
-#: ui/main.qml:307
+#: ui/main.qml:309
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Spare layouts:"
 msgstr "Запасні розкладки:"
 
-#: ui/main.qml:344
+#: ui/main.qml:346
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
 msgstr "Кількість запасних основних розкладок"
 
-#: ui/main.qml:376
+#: ui/main.qml:378
 #, kde-format
 msgctxt "@label:textbox completes spinbox, x main layouts"
 msgid "main layouts"
 msgstr "основні розкладки"
 
-#: ui/main.qml:380
+#: ui/main.qml:382
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -390,13 +390,13 @@ msgstr ""
 "зможете отримувати доступ до них за допомогою аплета індикатора клавіатури "
 "або встановлення нетипового клавіатурного скорочення."
 
-#: ui/main.qml:385
+#: ui/main.qml:387
 #, kde-format
 msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
 msgstr "Змінити скорочення розкладки:"
 
-#: ui/main.qml:409
+#: ui/main.qml:411
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"

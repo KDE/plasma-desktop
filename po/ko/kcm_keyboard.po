@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-02 00:41+0000\n"
+"POT-Creation-Date: 2025-02-22 00:43+0000\n"
 "PO-Revision-Date: 2024-11-29 00:52+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -149,7 +149,7 @@ msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "단축키:"
 
-#: ui/LayoutDialog.qml:206 ui/main.qml:285
+#: ui/LayoutDialog.qml:206 ui/main.qml:287
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview"
@@ -313,67 +313,67 @@ msgctxt "@title:view"
 msgid "Layouts"
 msgstr "레이아웃"
 
-#: ui/main.qml:268
+#: ui/main.qml:270
 #, kde-format
 msgctxt "@action:button"
 msgid "Move Up"
 msgstr "위로 이동"
 
-#: ui/main.qml:269
+#: ui/main.qml:271
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout up"
 msgstr "%1 레이아웃 위로 이동"
 
-#: ui/main.qml:275
+#: ui/main.qml:277
 #, kde-format
 msgctxt "@action:button"
 msgid "Move Down"
 msgstr "아래로 이동"
 
-#: ui/main.qml:276
+#: ui/main.qml:278
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout Down"
 msgstr "%1 레이아웃 아래로 이동"
 
-#: ui/main.qml:286
+#: ui/main.qml:288
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Preview"
 msgstr "미리 보기"
 
-#: ui/main.qml:294
+#: ui/main.qml:296
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "삭제"
 
-#: ui/main.qml:295
+#: ui/main.qml:297
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Remove layout %1"
 msgstr "%1 레이아웃 삭제"
 
-#: ui/main.qml:307
+#: ui/main.qml:309
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Spare layouts:"
 msgstr "예비 레이아웃:"
 
-#: ui/main.qml:344
+#: ui/main.qml:346
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
 msgstr "예비 주 레이아웃 개수"
 
-#: ui/main.qml:376
+#: ui/main.qml:378
 #, kde-format
 msgctxt "@label:textbox completes spinbox, x main layouts"
 msgid "main layouts"
 msgstr "주 레이아웃"
 
-#: ui/main.qml:380
+#: ui/main.qml:382
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -386,13 +386,13 @@ msgstr ""
 "이아웃은 전환 단축키에 포함되지 않으며, 키보드 표시기 애플릿이나 사용자 정의 "
 "단축키로 전환할 수 있습니다."
 
-#: ui/main.qml:385
+#: ui/main.qml:387
 #, kde-format
 msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
 msgstr "레이아웃 단축키 변경:"
 
-#: ui/main.qml:409
+#: ui/main.qml:411
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"

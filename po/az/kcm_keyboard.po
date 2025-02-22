@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-02 00:41+0000\n"
+"POT-Creation-Date: 2025-02-22 00:43+0000\n"
 "PO-Revision-Date: 2024-06-04 19:06+0400\n"
 "Last-Translator: Xəyyam Qocayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -159,7 +159,7 @@ msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "Qısayol:"
 
-#: ui/LayoutDialog.qml:206 ui/main.qml:285
+#: ui/LayoutDialog.qml:206 ui/main.qml:287
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview"
@@ -351,25 +351,25 @@ msgctxt "@title:view"
 msgid "Layouts"
 msgstr "Dil qatları"
 
-#: ui/main.qml:268
+#: ui/main.qml:270
 #, kde-format
 msgctxt "@action:button"
 msgid "Move Up"
 msgstr "Yuxarı köçürmək"
 
-#: ui/main.qml:269
+#: ui/main.qml:271
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout up"
 msgstr ""
 
-#: ui/main.qml:275
+#: ui/main.qml:277
 #, kde-format
 msgctxt "@action:button"
 msgid "Move Down"
 msgstr "Aşağı köçürmək"
 
-#: ui/main.qml:276
+#: ui/main.qml:278
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Move Down"
@@ -377,7 +377,7 @@ msgctxt "@action:button accessible"
 msgid "Move %1 layout Down"
 msgstr "Aşağı köçürmək"
 
-#: ui/main.qml:286
+#: ui/main.qml:288
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Preview"
@@ -385,19 +385,19 @@ msgctxt "@action:button accessible"
 msgid "Preview"
 msgstr "Öncədən baxış"
 
-#: ui/main.qml:294
+#: ui/main.qml:296
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "Silmək"
 
-#: ui/main.qml:295
+#: ui/main.qml:297
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Remove layout %1"
 msgstr ""
 
-#: ui/main.qml:307
+#: ui/main.qml:309
 #, fuzzy, kde-format
 #| msgctxt "@option:checkbox"
 #| msgid "Spare layouts"
@@ -405,13 +405,13 @@ msgctxt "@label:checkbox"
 msgid "Spare layouts:"
 msgstr "Dil qatlarını ayırmaq"
 
-#: ui/main.qml:344
+#: ui/main.qml:346
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
 msgstr ""
 
-#: ui/main.qml:376
+#: ui/main.qml:378
 #, fuzzy, kde-format
 #| msgctxt "@option:checkbox"
 #| msgid "Spare layouts"
@@ -419,7 +419,7 @@ msgctxt "@label:textbox completes spinbox, x main layouts"
 msgid "main layouts"
 msgstr "Dil qatlarını ayırmaq"
 
-#: ui/main.qml:380
+#: ui/main.qml:382
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -429,7 +429,7 @@ msgid ""
 "shortcut."
 msgstr ""
 
-#: ui/main.qml:385
+#: ui/main.qml:387
 #, fuzzy, kde-format
 #| msgctxt "@label:spinbox"
 #| msgid "Main layout count:"
@@ -437,7 +437,7 @@ msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
 msgstr "Əsas dil qatlarının sayı:"
 
-#: ui/main.qml:409
+#: ui/main.qml:411
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"

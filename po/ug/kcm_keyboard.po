@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-02 00:41+0000\n"
+"POT-Creation-Date: 2025-02-22 00:43+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -147,7 +147,7 @@ msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "تېزلەتمە:"
 
-#: ui/LayoutDialog.qml:206 ui/main.qml:285
+#: ui/LayoutDialog.qml:206 ui/main.qml:287
 #, fuzzy, kde-format
 #| msgid "Preview"
 msgctxt "@action:button"
@@ -324,74 +324,74 @@ msgctxt "@title:view"
 msgid "Layouts"
 msgstr "جايلاشتۇرۇشلار"
 
-#: ui/main.qml:268
+#: ui/main.qml:270
 #, fuzzy, kde-format
 #| msgid "Move Up"
 msgctxt "@action:button"
 msgid "Move Up"
 msgstr "ئۈستىگە"
 
-#: ui/main.qml:269
+#: ui/main.qml:271
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout up"
 msgstr ""
 
-#: ui/main.qml:275
+#: ui/main.qml:277
 #, fuzzy, kde-format
 #| msgid "Move Down"
 msgctxt "@action:button"
 msgid "Move Down"
 msgstr "پەسكە"
 
-#: ui/main.qml:276
+#: ui/main.qml:278
 #, fuzzy, kde-format
 #| msgid "Move Down"
 msgctxt "@action:button accessible"
 msgid "Move %1 layout Down"
 msgstr "پەسكە"
 
-#: ui/main.qml:286
+#: ui/main.qml:288
 #, fuzzy, kde-format
 #| msgid "Preview"
 msgctxt "@action:button accessible"
 msgid "Preview"
 msgstr "ئالدىن كۆزەت"
 
-#: ui/main.qml:294
+#: ui/main.qml:296
 #, fuzzy, kde-format
 #| msgid "Remove"
 msgctxt "@action:button"
 msgid "Remove"
 msgstr "چىقىرىۋەت"
 
-#: ui/main.qml:295
+#: ui/main.qml:297
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Remove layout %1"
 msgstr ""
 
-#: ui/main.qml:307
+#: ui/main.qml:309
 #, fuzzy, kde-format
 #| msgid "Configure layouts"
 msgctxt "@label:checkbox"
 msgid "Spare layouts:"
 msgstr "جايلاشتۇرۇشلارنى سەپلە"
 
-#: ui/main.qml:344
+#: ui/main.qml:346
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
 msgstr ""
 
-#: ui/main.qml:376
+#: ui/main.qml:378
 #, fuzzy, kde-format
 #| msgid "Configure layouts"
 msgctxt "@label:textbox completes spinbox, x main layouts"
 msgid "main layouts"
 msgstr "جايلاشتۇرۇشلارنى سەپلە"
 
-#: ui/main.qml:380
+#: ui/main.qml:382
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -401,14 +401,14 @@ msgid ""
 "shortcut."
 msgstr ""
 
-#: ui/main.qml:385
+#: ui/main.qml:387
 #, fuzzy, kde-format
 #| msgid "Main shortcuts:"
 msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
 msgstr "ئاساسىي تېزلەتمىلەر:"
 
-#: ui/main.qml:409
+#: ui/main.qml:411
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
