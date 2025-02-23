@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-01 00:42+0000\n"
+"POT-Creation-Date: 2025-02-23 00:42+0000\n"
 "PO-Revision-Date: 2025-02-02 16:34+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -161,40 +161,40 @@ msgstr "சுட்டி செருகியுள்ளபோது மு�
 msgid "Disable while typing"
 msgstr "தட்டச்சிடும்போது முடக்கு"
 
-#: ui/main.qml:145
+#: ui/main.qml:146
 #, kde-format
 msgid "Disable touchpad while typing to prevent accidental inputs."
 msgstr "தவறுதலான உள்ளீட்டை தவிர்க்க தட்டச்சிடும்போது தொடுபலகையை முடக்கு."
 
-#: ui/main.qml:160
+#: ui/main.qml:162
 #, kde-format
 msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
 msgid "This can interfere with video games."
 msgstr "விளையாட்டுச் செயலிகளின் பயன்பாட்டை இது பாதிக்கலாம்."
 
-#: ui/main.qml:170
+#: ui/main.qml:172
 #, kde-format
 msgid "Left-handed mode"
 msgstr "இடதுகை பயன்முறை"
 
-#: ui/main.qml:176
+#: ui/main.qml:178
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "இடது மற்றும் வலது பட்டன்களை இடமாற்று."
 
-#: ui/main.qml:193
+#: ui/main.qml:195
 #, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons to middle-click"
 msgstr "இடது மற்றும் வலது பட்டன்களை சேர்த்து அழுத்துவது நடு கிளிக்"
 
-#: ui/main.qml:199
+#: ui/main.qml:201
 #, kde-format
 msgctxt "@info:tooltip for checkbox"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr "இடது மற்றும் வலது பட்டன்களை சேர்த்து அழுத்துவது, நடு கிளிக்காக கருதப்படும்."
 
-#: ui/main.qml:213
+#: ui/main.qml:215
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -205,140 +205,140 @@ msgstr ""
 "அதிகரிக்கும். ஒரே நேரத்தில் நிகழும் இடது மற்றும் வலது கிளிக்குகளை சரியாக "
 "அடையாளங்காணஇந்த கூடுதல் தாமதம் தேவை."
 
-#: ui/main.qml:223
+#: ui/main.qml:225
 #, kde-format
 msgid "Pointer speed:"
 msgstr "சுட்டிக்குறியின் வேகம்:"
 
-#: ui/main.qml:303
+#: ui/main.qml:305
 #, kde-format
 msgid "Enable pointer acceleration"
 msgstr "சுட்டிக்குறி வேகவளர்ச்சியை இயக்கு"
 
-#: ui/main.qml:318
+#: ui/main.qml:320
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr "இது இயக்கப்பட்டிருந்தால், சுட்டியை நகர்த்தும் தூரம் கூட அதன் வேகமும் கூடும்."
 
-#: ui/main.qml:328
+#: ui/main.qml:330
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "உருளல் வேகம்:"
 
-#: ui/main.qml:379
+#: ui/main.qml:381
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "மெதுவாக"
 
-#: ui/main.qml:386
+#: ui/main.qml:388
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "வேகமாக"
 
-#: ui/main.qml:394
+#: ui/main.qml:396
 #, kde-format
 msgid "Scrolling:"
 msgstr "உருளல்:"
 
-#: ui/main.qml:413
+#: ui/main.qml:415
 #, kde-format
 msgid "Two fingers"
 msgstr "இரண்டு விரல்கள்"
 
-#: ui/main.qml:419
+#: ui/main.qml:421
 #, kde-format
 msgid "Slide with two fingers scrolls."
 msgstr "இரண்டு விரல்களைக் கொண்டு தேய்த்தல், உருளலாகக் கருதப்படும்."
 
-#: ui/main.qml:427
+#: ui/main.qml:429
 #, kde-format
 msgid "Touchpad edges"
 msgstr "தொடுபலகையின் விளிம்புகள்"
 
-#: ui/main.qml:433
+#: ui/main.qml:435
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
 msgstr "தொடுபலகையின் விளிம்பைத் தேய்த்தல், உருளலாகக் கருதப்படும்."
 
-#: ui/main.qml:442
+#: ui/main.qml:444
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "உருளல் திசையைப் புரட்டு (இயற்கையான உருளல்)"
 
-#: ui/main.qml:455
+#: ui/main.qml:457
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "தொடுதிரையைப் போன்ற உருளல்."
 
-#: ui/main.qml:463
+#: ui/main.qml:465
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "கிடைமட்ட உருளலை முடக்கு"
 
-#: ui/main.qml:477
+#: ui/main.qml:479
 #, kde-format
 msgid "Disable horizontal scrolling."
 msgstr "கிடைமட்ட உருளலை முடக்கு."
 
-#: ui/main.qml:490
+#: ui/main.qml:492
 #, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "தட்டுவது:"
 
-#: ui/main.qml:491
+#: ui/main.qml:493
 #, kde-format
 msgctxt "@option:check"
 msgid "Tap-to-click"
 msgstr "கிளிக் செய்ய தட்டு"
 
-#: ui/main.qml:497
+#: ui/main.qml:499
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Single tap to left-click."
 msgstr "ஒரு முறை தட்டுவது, இடது கிளிக்காக கருதப்படும்."
 
-#: ui/main.qml:512
+#: ui/main.qml:514
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "தட்டி இழு"
 
-#: ui/main.qml:518
+#: ui/main.qml:520
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
 msgstr "தட்டிய உடனே விரலை தொடுபலகையில் தேய்த்தல், இழுத்ததாக கருதப்படும்."
 
-#: ui/main.qml:533
+#: ui/main.qml:535
 #, kde-format
 msgid "Tap-and-drag lock"
 msgstr "தட்டி இழுத்தலைப் பூட்டு"
 
-#: ui/main.qml:539
+#: ui/main.qml:541
 #, kde-format
 msgid "Dragging continues after a short finger lift."
 msgstr ""
 "இழுக்கும்போது சிறிது நேரம் தொடுபலகையை விட்டு விரலை எடுத்தாலும், இழுத்தல் தொடரப்படும்."
 
-#: ui/main.qml:554
+#: ui/main.qml:556
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "இருவிரல் தட்டுதல்:"
 
-#: ui/main.qml:574
+#: ui/main.qml:576
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "வலது க்ளிக் (நடு க்ளிக்குக்கு மூன்று விரல்களைக் கொண்டு தட்டவும்)"
 
-#: ui/main.qml:575
+#: ui/main.qml:577
 #, kde-format
 msgid "Right-click"
 msgstr "வலது க்ளிக்"
 
-#: ui/main.qml:585
+#: ui/main.qml:587
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
@@ -346,22 +346,22 @@ msgstr ""
 "வலது க்ளிக்குக்கு இரண்டு விரல்களைக் கொண்டும், நடு க்ளிக்குக்கு மூன்று விரல்களைக் கொண்டும் "
 "தட்டலாம்."
 
-#: ui/main.qml:586
+#: ui/main.qml:588
 #, kde-format
 msgid "Tap with two fingers to right-click."
 msgstr "வலது க்ளிக்குக்கு இரண்டு விரல்களைக் கொண்டு தட்டலாம்."
 
-#: ui/main.qml:594
+#: ui/main.qml:596
 #, kde-format
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "நடு க்ளிக் (வலது க்ளிக்குக்கு மூன்று விரல்களைக் கொண்டு தட்டவும்)"
 
-#: ui/main.qml:595
+#: ui/main.qml:597
 #, kde-format
 msgid "Middle-click"
 msgstr "நடு க்ளிக்"
 
-#: ui/main.qml:605
+#: ui/main.qml:607
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
@@ -369,12 +369,12 @@ msgstr ""
 "நடு க்ளிக்குக்கு இரண்டு விரல்களைக் கொண்டும், வலது க்ளிக்குக்கு மூன்று விரல்களைக் கொண்டும் "
 "தட்டலாம்."
 
-#: ui/main.qml:606
+#: ui/main.qml:608
 #, kde-format
 msgid "Tap with two fingers to middle-click."
 msgstr "நடு க்ளிக்குக்கு இரண்டு விரல்களைக் கொண்டு தட்டலாம்."
 
-#: ui/main.qml:618
+#: ui/main.qml:620
 #, kde-format
 msgctxt ""
 "@label for radiobutton group, configure right-click with touch-pad "
@@ -382,13 +382,13 @@ msgctxt ""
 msgid "Integrated right-click:"
 msgstr "உள்ளமை வலது கிளிக்:"
 
-#: ui/main.qml:639
+#: ui/main.qml:641
 #, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
 msgstr "வலது-கீழ் மூலையை அழுத்தினால்"
 
-#: ui/main.qml:646
+#: ui/main.qml:649
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -399,7 +399,7 @@ msgstr ""
 "தொடுபலகையின் வலது-கீழ் மூலையை அழுத்துவது வலது கிளிக்காக செயல்படும். நடு கிளிக் செய்ய, "
 "இடது மற்றும் வலது மூலைகளை சேர்த்து அழுத்தவும்."
 
-#: ui/main.qml:647
+#: ui/main.qml:650
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -409,37 +409,37 @@ msgstr ""
 "தொடுபலகையின் வலது-கீழ் மூலையை அழுத்துவது வலது கிளிக்காக செயல்படும். நடு கிளிக் செய்ய, "
 "அடியோரத்தின் நடுப்பகுதியை அழுத்தவும்."
 
-#: ui/main.qml:658
+#: ui/main.qml:662
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "கீழுள்ள இரண்டு மூலைகையும் அழுத்துவது நடு கிளிக்காக கருதப்படும்."
 
-#: ui/main.qml:659
+#: ui/main.qml:663
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "கீழ் ஓரத்தின் நடுப்பகுதியை அழுத்துவது நடு கிளிக்காக கருதப்படும்."
 
-#: ui/main.qml:677
+#: ui/main.qml:681
 #, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press touchpad with two fingers"
 msgstr "எங்கேயாவது இரண்டு விரல்களை கொண்டு அழுத்தினால்"
 
-#: ui/main.qml:684
+#: ui/main.qml:689
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
 msgstr "வலது கிளிக்குக்கு இரண்டு விரல்களைக் கொண்டு தொடுபலகையை எங்கேயேனும் அழுத்தலாம்."
 
-#: ui/main.qml:694
+#: ui/main.qml:700
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
 msgstr "மூன்று விரல்களை கொண்டு அழுத்துவது நடு கிளிக்காக கருதப்படும்."
 
-#: ui/main.qml:713
+#: ui/main.qml:719
 #, kde-format
 msgctxt ""
 "@label for radiobutton group, configure middle-click with touch-pad "
@@ -447,25 +447,25 @@ msgctxt ""
 msgid "Integrated middle-click:"
 msgstr "உள்ளமை நடு கிளிக்:"
 
-#: ui/main.qml:734
+#: ui/main.qml:740
 #, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom middle edge"
 msgstr "நடு-கீழ் ஓரத்தை அழுத்தினால்"
 
-#: ui/main.qml:740
+#: ui/main.qml:746
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the bottom right corner of your touchpad acts as right-click."
 msgstr "தொடுபலகையின் வலது-கீழ் மூலையை அழுத்துவது வலது கிளிக்காக செயல்படும்."
 
-#: ui/main.qml:748
+#: ui/main.qml:754
 #, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom left and bottom right corners"
 msgstr "வலது-கீழ் மற்றும் இடது-கீழ் மூலைகளை சேர்த்து அழுத்தினால்"
 
-#: ui/main.qml:754
+#: ui/main.qml:760
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid ""
@@ -473,13 +473,13 @@ msgid ""
 "middle-click."
 msgstr "வலது-கீழ் மற்றும் இடது-கீழ் மூலைகளை சேர்த்து அழுத்துவது நடு-கிளிக்காக செயல்படும்."
 
-#: ui/main.qml:762
+#: ui/main.qml:768
 #, kde-format
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
 msgstr "மூன்று விரல்களை கொண்டு அழுத்தினால்"
 
-#: ui/main.qml:769
+#: ui/main.qml:775
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."

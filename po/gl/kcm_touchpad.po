@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-01 00:42+0000\n"
+"POT-Creation-Date: 2025-02-23 00:42+0000\n"
 "PO-Revision-Date: 2025-02-14 08:25+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -164,42 +164,42 @@ msgstr "Desactivar mentres haxa un rato conectado."
 msgid "Disable while typing"
 msgstr "Desactivar mentres se teclea"
 
-#: ui/main.qml:145
+#: ui/main.qml:146
 #, kde-format
 msgid "Disable touchpad while typing to prevent accidental inputs."
 msgstr ""
 "Desactivar a área táctil mentres se teclea para evitar tocala por accidente"
 
-#: ui/main.qml:160
+#: ui/main.qml:162
 #, kde-format
 msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
 msgid "This can interfere with video games."
 msgstr "Isto pode interferir con videoxogos."
 
-#: ui/main.qml:170
+#: ui/main.qml:172
 #, kde-format
 msgid "Left-handed mode"
 msgstr "Modo para zurdos"
 
-#: ui/main.qml:176
+#: ui/main.qml:178
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "Intercambiar os botóns esquerdo e dereito."
 
-#: ui/main.qml:193
+#: ui/main.qml:195
 #, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons to middle-click"
 msgstr "Premer os botóns esquerdo e dereito para facer un clic central."
 
-#: ui/main.qml:199
+#: ui/main.qml:201
 #, kde-format
 msgctxt "@info:tooltip for checkbox"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
 "Premer os botóns esquerdo e dereito á vez equivale a premer o botón central."
 
-#: ui/main.qml:213
+#: ui/main.qml:215
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -210,17 +210,17 @@ msgstr ""
 "adicional é necesario para detectar correctamente premas simultáneas dos "
 "botóns esquerdo e dereito."
 
-#: ui/main.qml:223
+#: ui/main.qml:225
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Velocidade do punteiro:"
 
-#: ui/main.qml:303
+#: ui/main.qml:305
 #, kde-format
 msgid "Enable pointer acceleration"
 msgstr "Activar a aceleración do punteiro."
 
-#: ui/main.qml:318
+#: ui/main.qml:320
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -229,123 +229,123 @@ msgstr ""
 "Cando se activa, a distancia de desprazamento do punteiro aumenta a maior "
 "velocidade de movemento."
 
-#: ui/main.qml:328
+#: ui/main.qml:330
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Velocidade de desprazamento:"
 
-#: ui/main.qml:379
+#: ui/main.qml:381
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Máis amodo"
 
-#: ui/main.qml:386
+#: ui/main.qml:388
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Veloz"
 
-#: ui/main.qml:394
+#: ui/main.qml:396
 #, kde-format
 msgid "Scrolling:"
 msgstr "Desprazamento:"
 
-#: ui/main.qml:413
+#: ui/main.qml:415
 #, kde-format
 msgid "Two fingers"
 msgstr "Dous dedos"
 
-#: ui/main.qml:419
+#: ui/main.qml:421
 #, kde-format
 msgid "Slide with two fingers scrolls."
 msgstr "Arrastrar con dous dedos despraza."
 
-#: ui/main.qml:427
+#: ui/main.qml:429
 #, kde-format
 msgid "Touchpad edges"
 msgstr "Bordos da área táctil"
 
-#: ui/main.qml:433
+#: ui/main.qml:435
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
 msgstr "Arrastrar nos bordos da área táctil despraza."
 
-#: ui/main.qml:442
+#: ui/main.qml:444
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Inverter a dirección de desprazamento (desprazamento natural)"
 
-#: ui/main.qml:455
+#: ui/main.qml:457
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Desprazamento como o dunha pantalla táctil."
 
-#: ui/main.qml:463
+#: ui/main.qml:465
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "Desactivar o desprazamento horizontal"
 
-#: ui/main.qml:477
+#: ui/main.qml:479
 #, kde-format
 msgid "Disable horizontal scrolling."
 msgstr "Desactivar o desprazamento horizontal."
 
-#: ui/main.qml:490
+#: ui/main.qml:492
 #, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Toques:"
 
-#: ui/main.qml:491
+#: ui/main.qml:493
 #, kde-format
 msgctxt "@option:check"
 msgid "Tap-to-click"
 msgstr "Tocar para premer."
 
-#: ui/main.qml:497
+#: ui/main.qml:499
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Single tap to left-click."
 msgstr "Un toque para prema esquerda."
 
-#: ui/main.qml:512
+#: ui/main.qml:514
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "Tocar e arrastrar"
 
-#: ui/main.qml:518
+#: ui/main.qml:520
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
 msgstr ""
 "Arrastrando pola área táctil directamente despois de arrastres de toque."
 
-#: ui/main.qml:533
+#: ui/main.qml:535
 #, kde-format
 msgid "Tap-and-drag lock"
 msgstr "Bloqueo de tocar e arrastrar"
 
-#: ui/main.qml:539
+#: ui/main.qml:541
 #, kde-format
 msgid "Dragging continues after a short finger lift."
 msgstr "O arrastre continúa tras levantar brevemente o dedo."
 
-#: ui/main.qml:554
+#: ui/main.qml:556
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "Toque con dous dedos:"
 
-#: ui/main.qml:574
+#: ui/main.qml:576
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Clic dereito (toque con tres dedos para clic central)"
 
-#: ui/main.qml:575
+#: ui/main.qml:577
 #, kde-format
 msgid "Right-click"
 msgstr "Clic dereito"
 
-#: ui/main.qml:585
+#: ui/main.qml:587
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
@@ -353,22 +353,22 @@ msgstr ""
 "Tocar con dous dedos para facer clic dereito, tocar con tres dedos para "
 "facer clic central."
 
-#: ui/main.qml:586
+#: ui/main.qml:588
 #, kde-format
 msgid "Tap with two fingers to right-click."
 msgstr "Tocar con dous dedos para facer clic dereito."
 
-#: ui/main.qml:594
+#: ui/main.qml:596
 #, kde-format
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "Clic central (toque con tres dedos para clic dereito)"
 
-#: ui/main.qml:595
+#: ui/main.qml:597
 #, kde-format
 msgid "Middle-click"
 msgstr "Clic central"
 
-#: ui/main.qml:605
+#: ui/main.qml:607
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
@@ -376,12 +376,12 @@ msgstr ""
 "Tocar con dous dedos para facer clic central, tocar con tres dedos para "
 "facer clic dereito."
 
-#: ui/main.qml:606
+#: ui/main.qml:608
 #, kde-format
 msgid "Tap with two fingers to middle-click."
 msgstr "Tocar con dous dedos para facer clic central."
 
-#: ui/main.qml:618
+#: ui/main.qml:620
 #, kde-format
 msgctxt ""
 "@label for radiobutton group, configure right-click with touch-pad "
@@ -389,13 +389,13 @@ msgctxt ""
 msgid "Integrated right-click:"
 msgstr "Prema dereita integrada:"
 
-#: ui/main.qml:639
+#: ui/main.qml:641
 #, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
 msgstr "Premer a esquina inferior dereita."
 
-#: ui/main.qml:646
+#: ui/main.qml:649
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -407,7 +407,7 @@ msgstr ""
 "dereita. Para unha prema central, prema as esquinas inferior esquerda e "
 "inferior dereita simultaneamente."
 
-#: ui/main.qml:647
+#: ui/main.qml:650
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -417,25 +417,25 @@ msgstr ""
 "Premer a esquina inferior dereita da área táctil equivale a unha prema "
 "dereita. Para unha prema central, prema a zona inferior central."
 
-#: ui/main.qml:658
+#: ui/main.qml:662
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "Premer as dúas esquinas inferiores para facer unha prema central."
 
-#: ui/main.qml:659
+#: ui/main.qml:663
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "Premer o centro inferior para facer unha prema central."
 
-#: ui/main.qml:677
+#: ui/main.qml:681
 #, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press touchpad with two fingers"
 msgstr "Premer a área táctil con dous dedos."
 
-#: ui/main.qml:684
+#: ui/main.qml:689
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
@@ -443,13 +443,13 @@ msgstr ""
 "Premer calquera parte da área central con dous dedos equivale a unha prema "
 "dereita."
 
-#: ui/main.qml:694
+#: ui/main.qml:700
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
 msgstr "Premer con tres dedos para facer unha prema central."
 
-#: ui/main.qml:713
+#: ui/main.qml:719
 #, kde-format
 msgctxt ""
 "@label for radiobutton group, configure middle-click with touch-pad "
@@ -457,13 +457,13 @@ msgctxt ""
 msgid "Integrated middle-click:"
 msgstr "Prema central integrada:"
 
-#: ui/main.qml:734
+#: ui/main.qml:740
 #, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom middle edge"
 msgstr "Premer a esquina inferior central."
 
-#: ui/main.qml:740
+#: ui/main.qml:746
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the bottom right corner of your touchpad acts as right-click."
@@ -471,13 +471,13 @@ msgstr ""
 "Premer a esquina inferior dereita da área central equivale a unha prema "
 "dereita."
 
-#: ui/main.qml:748
+#: ui/main.qml:754
 #, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom left and bottom right corners"
 msgstr "Prema as esquinas inferior esquerda e inferior dereita."
 
-#: ui/main.qml:754
+#: ui/main.qml:760
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid ""
@@ -487,13 +487,13 @@ msgstr ""
 "Premer as esquinas inferior esquerda e inferior dereita simultaneamente "
 "equivale a unha prema central."
 
-#: ui/main.qml:762
+#: ui/main.qml:768
 #, kde-format
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
 msgstr "Premer a área táctil con tres dedos."
 
-#: ui/main.qml:769
+#: ui/main.qml:775
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."

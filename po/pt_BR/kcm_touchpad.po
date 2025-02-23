@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-01 00:42+0000\n"
+"POT-Creation-Date: 2025-02-23 00:42+0000\n"
 "PO-Revision-Date: 2025-02-01 23:55-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -167,36 +167,36 @@ msgstr "Desativar touchpad ao conectar mouse"
 msgid "Disable while typing"
 msgstr "Desativar durante a digitação"
 
-#: ui/main.qml:145
+#: ui/main.qml:146
 #, kde-format
 msgid "Disable touchpad while typing to prevent accidental inputs."
 msgstr ""
 "Desativar o touchpad enquanto estiver digitando para evitar introdução de "
 "dados indesejados."
 
-#: ui/main.qml:160
+#: ui/main.qml:162
 #, kde-format
 msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
 msgid "This can interfere with video games."
 msgstr "Isto pode interferir nos vídeo games"
 
-#: ui/main.qml:170
+#: ui/main.qml:172
 #, kde-format
 msgid "Left-handed mode"
 msgstr "Modo canhoto"
 
-#: ui/main.qml:176
+#: ui/main.qml:178
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "Trocar os botões esquerdo e direito."
 
-#: ui/main.qml:193
+#: ui/main.qml:195
 #, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons to middle-click"
 msgstr "Pressione nos botões esquerdo e direito para simular o botão do meio"
 
-#: ui/main.qml:199
+#: ui/main.qml:201
 #, kde-format
 msgctxt "@info:tooltip for checkbox"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
@@ -204,7 +204,7 @@ msgstr ""
 "Clicar nos botões esquerdo e direito simultaneamente funciona como um clique "
 "do botão do meio."
 
-#: ui/main.qml:213
+#: ui/main.qml:215
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -215,17 +215,17 @@ msgstr ""
 "extra é necessário para detectar corretamente os cliques simultâneos nos "
 "botões esquerdo e direito do mouse."
 
-#: ui/main.qml:223
+#: ui/main.qml:225
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Velocidade do ponteiro:"
 
-#: ui/main.qml:303
+#: ui/main.qml:305
 #, kde-format
 msgid "Enable pointer acceleration"
 msgstr "Ativar aceleração do ponteiro"
 
-#: ui/main.qml:318
+#: ui/main.qml:320
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -234,122 +234,122 @@ msgstr ""
 "Quando habilitado, a distância de movimento do ponteiro aumenta com "
 "movimentações mais rápidas."
 
-#: ui/main.qml:328
+#: ui/main.qml:330
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Velocidade de rolagem:"
 
-#: ui/main.qml:379
+#: ui/main.qml:381
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Mais lento"
 
-#: ui/main.qml:386
+#: ui/main.qml:388
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Mais rápido"
 
-#: ui/main.qml:394
+#: ui/main.qml:396
 #, kde-format
 msgid "Scrolling:"
 msgstr "Rolagem:"
 
-#: ui/main.qml:413
+#: ui/main.qml:415
 #, kde-format
 msgid "Two fingers"
 msgstr "Dois dedos"
 
-#: ui/main.qml:419
+#: ui/main.qml:421
 #, kde-format
 msgid "Slide with two fingers scrolls."
 msgstr "O deslizamento com dois dedos faz a rolagem."
 
-#: ui/main.qml:427
+#: ui/main.qml:429
 #, kde-format
 msgid "Touchpad edges"
 msgstr "Extremidade do touchpad"
 
-#: ui/main.qml:433
+#: ui/main.qml:435
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
 msgstr "Deslizamento nos extremos do touchpad faz a rolagem."
 
-#: ui/main.qml:442
+#: ui/main.qml:444
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Inverter a direção da rolagem (rolagem natural)"
 
-#: ui/main.qml:455
+#: ui/main.qml:457
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Rolagem como em telas sensíveis ao toque."
 
-#: ui/main.qml:463
+#: ui/main.qml:465
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "Desativar a rolagem horizontal"
 
-#: ui/main.qml:477
+#: ui/main.qml:479
 #, kde-format
 msgid "Disable horizontal scrolling."
 msgstr "Desativar a rolagem horizontal"
 
-#: ui/main.qml:490
+#: ui/main.qml:492
 #, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Toques:"
 
-#: ui/main.qml:491
+#: ui/main.qml:493
 #, kde-format
 msgctxt "@option:check"
 msgid "Tap-to-click"
 msgstr "Toque para clicar"
 
-#: ui/main.qml:497
+#: ui/main.qml:499
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Single tap to left-click."
 msgstr "Dê um toque único para clicar com o botão esquerdo."
 
-#: ui/main.qml:512
+#: ui/main.qml:514
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "Toque e arrasto"
 
-#: ui/main.qml:518
+#: ui/main.qml:520
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
 msgstr "Deslocar o dedo após um toque diretamente no touchpad irá arrastar."
 
-#: ui/main.qml:533
+#: ui/main.qml:535
 #, kde-format
 msgid "Tap-and-drag lock"
 msgstr "Bloqueio do toque e arrasto"
 
-#: ui/main.qml:539
+#: ui/main.qml:541
 #, kde-format
 msgid "Dragging continues after a short finger lift."
 msgstr "O arrastamento prossegue após uma elevação curta do dedo."
 
-#: ui/main.qml:554
+#: ui/main.qml:556
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "Toque com dois dedos:"
 
-#: ui/main.qml:574
+#: ui/main.qml:576
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Botão direito (toque com três dedos para o botão do meio)"
 
-#: ui/main.qml:575
+#: ui/main.qml:577
 #, kde-format
 msgid "Right-click"
 msgstr "Botão direito"
 
-#: ui/main.qml:585
+#: ui/main.qml:587
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
@@ -357,22 +357,22 @@ msgstr ""
 "Toque com dois dedos para o botão direito, toque com três dedos para o botão "
 "do meio."
 
-#: ui/main.qml:586
+#: ui/main.qml:588
 #, kde-format
 msgid "Tap with two fingers to right-click."
 msgstr "Toque com dois dedos para o botão direito."
 
-#: ui/main.qml:594
+#: ui/main.qml:596
 #, kde-format
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "Botão do meio (toque com três dedos para clicar o botão direito)"
 
-#: ui/main.qml:595
+#: ui/main.qml:597
 #, kde-format
 msgid "Middle-click"
 msgstr "Botão do meio"
 
-#: ui/main.qml:605
+#: ui/main.qml:607
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
@@ -380,12 +380,12 @@ msgstr ""
 "Toque com dois dedos para o botão do meio, toque com três dedos para o botão "
 "direito."
 
-#: ui/main.qml:606
+#: ui/main.qml:608
 #, kde-format
 msgid "Tap with two fingers to middle-click."
 msgstr "Toque com os dois dedos para o botão do meio."
 
-#: ui/main.qml:618
+#: ui/main.qml:620
 #, kde-format
 msgctxt ""
 "@label for radiobutton group, configure right-click with touch-pad "
@@ -393,13 +393,13 @@ msgctxt ""
 msgid "Integrated right-click:"
 msgstr "Botão integrado do clique direito:"
 
-#: ui/main.qml:639
+#: ui/main.qml:641
 #, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
 msgstr "Pressione o canto inferior direito"
 
-#: ui/main.qml:646
+#: ui/main.qml:649
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -411,7 +411,7 @@ msgstr ""
 "direito. Clique com o botão do meio pressionando simultaneamente os cantos "
 "inferior esquerdo e inferior direito."
 
-#: ui/main.qml:647
+#: ui/main.qml:650
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -422,25 +422,25 @@ msgstr ""
 "o botão direito. Clique com o botão do meio pressionando a área central "
 "inferior."
 
-#: ui/main.qml:658
+#: ui/main.qml:662
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "Clique com o botão do meio pressionando ambos os cantos inferiores."
 
-#: ui/main.qml:659
+#: ui/main.qml:663
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "Clique com o botão do meio pressionando a parte inferior central."
 
-#: ui/main.qml:677
+#: ui/main.qml:681
 #, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press touchpad with two fingers"
 msgstr "Pressione o touchpad com dois dedos"
 
-#: ui/main.qml:684
+#: ui/main.qml:689
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
@@ -448,13 +448,13 @@ msgstr ""
 "Pressionar o touchpad em qualquer lugar com dois dedos funciona como o "
 "clique direito."
 
-#: ui/main.qml:694
+#: ui/main.qml:700
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
 msgstr "Clique o botão do meio pressionando com três dedos."
 
-#: ui/main.qml:713
+#: ui/main.qml:719
 #, kde-format
 msgctxt ""
 "@label for radiobutton group, configure middle-click with touch-pad "
@@ -462,13 +462,13 @@ msgctxt ""
 msgid "Integrated middle-click:"
 msgstr "Botão integrado do clique do meio:"
 
-#: ui/main.qml:734
+#: ui/main.qml:740
 #, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom middle edge"
 msgstr "Pressione a borda inferior central"
 
-#: ui/main.qml:740
+#: ui/main.qml:746
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the bottom right corner of your touchpad acts as right-click."
@@ -476,13 +476,13 @@ msgstr ""
 "Pressionar o canto inferior direito do touchpad funciona como um clique com "
 "o botão direito."
 
-#: ui/main.qml:748
+#: ui/main.qml:754
 #, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom left and bottom right corners"
 msgstr "Pressione os cantos inferiores direito e esquerdo"
 
-#: ui/main.qml:754
+#: ui/main.qml:760
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid ""
@@ -492,13 +492,13 @@ msgstr ""
 "Pressionar os cantos inferior esquerdo e direito simultaneamente funciona "
 "como o clique do meio."
 
-#: ui/main.qml:762
+#: ui/main.qml:768
 #, kde-format
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
 msgstr "Pressione o touchpad com três dedos"
 
-#: ui/main.qml:769
+#: ui/main.qml:775
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
