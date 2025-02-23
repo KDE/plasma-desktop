@@ -112,6 +112,10 @@
       </choices>
       <default>2</default>
     </entry>
+    <entry name="indicateAudioStreams" type="Bool">
+      <label>Whether to indicate applications that are playing audio.</label>
+      <default>true</default>
+    </entry>
     <entry name="interactiveMute" type="Bool">
       <label>Whether to mute applications that are playing audio using audio indicators.</label>
       <default>true</default>
