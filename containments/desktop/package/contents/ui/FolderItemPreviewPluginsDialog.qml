@@ -9,29 +9,29 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
 import org.kde.private.desktopcontainment.folder as Folder
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 
-Kirigami.OverlaySheet {
+Kirigami.Dialog {
     id: dialog
 
     required property var previewPlugins
 
     title: i18n("Preview Plugins")
 
+    preferredWidth: Kirigami.Units.gridUnit * 15
+    standardButtons: Kirigami.Dialog.Ok | Kirigami.Dialog.Cancel
+
+    onAccepted: {
+        configIcons.cfg_previewPlugins = previewPluginsModel.checkedPlugins;
+        dialog.close();
+    }
+    onRejected: {
+        dialog.close();
+        destroy();
+    }
     onClosed: destroy()
 
-    footer: DialogButtonBox {
-        standardButtons: DialogButtonBox.Ok | DialogButtonBox.Cancel
-        onAccepted: {
-            configIcons.cfg_previewPlugins = previewPluginsModel.checkedPlugins;
-            dialog.close();
-        }
-        onRejected: dialog.close();
-    }
-
     ListView {
-        implicitWidth: Kirigami.Units.gridUnit * 15
-
         model: Folder.PreviewPluginsModel {
             id: previewPluginsModel
         }
