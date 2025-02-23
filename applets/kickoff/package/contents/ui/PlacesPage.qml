@@ -10,6 +10,7 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Templates as T
 import org.kde.plasma.extras as PlasmaExtras
+import org.kde.plasma.plasmoid
 
 BasePage {
     id: root
