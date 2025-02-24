@@ -106,13 +106,6 @@ Kirigami.FormLayout {
             bottom: accelerationTime.from
             top: accelerationTime.to
         }
-        textFromValue: function(value, locale) {
-            return i18np("%1 ms", "%1 ms", value)
-        }
-
-        valueFromText: (text, locale) => {
-            return Number.fromLocaleString(locale, text.replace(i18ncp("short for millisecond(s)", "ms", "ms"), ""))
-        }
     }
     QQC2.SpinBox {
         Kirigami.FormData.label:  i18nc("@label:spinbox", "Maximum speed:")
