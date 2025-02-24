@@ -22,6 +22,7 @@ KCMUtils.SimpleKCM {
     property alias cfg_highlightWindows: highlightWindows.checked
     property bool cfg_indicateAudioStreams
     property bool cfg_interactiveMute
+    property bool cfg_tooltipControls
     property alias cfg_fill: fill.checked
     property alias cfg_maxStripes: maxStripes.value
     property alias cfg_forceStripes: forceStripes.checked
@@ -69,6 +70,14 @@ KCMUtils.SimpleKCM {
             checked: cfg_interactiveMute && plasmaPaAvailable
             onToggled: cfg_interactiveMute = checked
             enabled: indicateAudioStreams.checked && plasmaPaAvailable
+        }
+
+        QQC2.CheckBox {
+            id: tooltipControls
+            text: i18nc("@option:check section General", "Show media and volume controls in tooltip")
+            checked: cfg_tooltipControls && plasmaPaAvailable
+            onToggled: cfg_tooltipControls = checked
+            enabled: plasmaPaAvailable
         }
 
         QQC2.CheckBox {

@@ -383,7 +383,9 @@ ColumnLayout {
         // Only load for one entry, as the controls only apply to one window.
         // If this is changed in the future, test for index != -1 to avoid loading
         // when the instance is going to be destroyed
-        active: toolTipDelegate.playerData && ((hasTrackInATitle && albumArtImage.available) || (!hasTrackInATitle && root.index == 0))
+        active: toolTipDelegate.parentTask.tooltipControlsEnabled
+             && toolTipDelegate.playerData
+             && ((hasTrackInATitle && albumArtImage.available) || (!hasTrackInATitle && root.index == 0))
 
         asynchronous: true
         visible: active
@@ -400,6 +402,7 @@ ColumnLayout {
         id: volumeControls
         active: toolTipDelegate.parentTask !== null
              && pulseAudio.item !== null
+             && toolTipDelegate.parentTask.tooltipControlsEnabled
              && toolTipDelegate.parentTask.hasAudioStream
              // Only load for one entry, as the controls only apply to one window.
              // If this is changed in the future, test for index != -1 to avoid loading

@@ -120,6 +120,10 @@
       <label>Whether to mute applications that are playing audio using audio indicators.</label>
       <default>true</default>
     </entry>
+    <entry name="tooltipControls" type="Bool">
+      <label>Whether to show media and volume controls in the tooltip.</label>
+      <default>true</default>
+    </entry>
     <entry name="fill" type="Bool">
       <label>Whether task manager should occupy all available space.</label>
       <default>true</default>
