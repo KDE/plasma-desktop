@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2025-02-24 09:38+0000\n"
 "PO-Revision-Date: 2024-02-25 09:28-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -37,13 +37,17 @@ msgstr "ਜਦੋਂ ਪੈਨਲ ਖੜ੍ਹਵਾਂ ਹੁੰਦੀ ਹੈ �
 msgid "Not applicable when the widget is on the Desktop."
 msgstr "ਡੈਸਕਟਾਪ ਉੱਤੇ ਵਿਜੈਟ ਹੋਣ ਦੌਰਾਨ ਲਾਗੂ ਨਹੀਂ ਹੁੰਦਾ ਹੈ।"
 
-#: contents/ui/main.qml:97
+#: contents/ui/main.qml:81
+#, fuzzy, kde-format
+#| msgid "Show list of opened windows"
+msgctxt "@info:placeholder"
+msgid "No open windows"
+msgstr "ਖੁੱਲ੍ਹੀਆਂ ਵਿੰਡੋਜ਼ ਦੀ ਲਿਸਟ ਵੇਖੋ"
+
+#: contents/ui/main.qml:108
 #, kde-format
 msgid "Plasma Desktop"
 msgstr "ਪਲਾਜ਼ਮਾ ਡੈਸਕਟਾਪ"
-
-#~ msgid "Show list of opened windows"
-#~ msgstr "ਖੁੱਲ੍ਹੀਆਂ ਵਿੰਡੋਜ਼ ਦੀ ਲਿਸਟ ਵੇਖੋ"
 
 #~ msgid "On all desktops"
 #~ msgstr "ਸਭ ਡੈਸਕਟਾਪਾਂ ਉੱਤੇ"

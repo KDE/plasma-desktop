@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2025-02-24 09:38+0000\n"
 "PO-Revision-Date: 2013-09-30 00:57+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -37,7 +37,14 @@ msgstr ""
 msgid "Not applicable when the widget is on the Desktop."
 msgstr ""
 
-#: contents/ui/main.qml:97
+#: contents/ui/main.qml:81
+#, fuzzy, kde-format
+#| msgid "No windows"
+msgctxt "@info:placeholder"
+msgid "No open windows"
+msgstr "Терезелер жоқ"
+
+#: contents/ui/main.qml:108
 #, kde-format
 msgid "Plasma Desktop"
 msgstr ""
@@ -68,6 +75,3 @@ msgstr ""
 
 #~ msgid "Current desktop"
 #~ msgstr "Назардағы үстел"
-
-#~ msgid "No windows"
-#~ msgstr "Терезелер жоқ"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_windowlist\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2025-02-24 09:38+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -37,7 +37,14 @@ msgstr ""
 msgid "Not applicable when the widget is on the Desktop."
 msgstr ""
 
-#: contents/ui/main.qml:97
+#: contents/ui/main.qml:81
+#, fuzzy, kde-format
+#| msgid "No windows"
+msgctxt "@info:placeholder"
+msgid "No open windows"
+msgstr "كۆزنەك يوق"
+
+#: contents/ui/main.qml:108
 #, kde-format
 msgid "Plasma Desktop"
 msgstr ""
@@ -70,6 +77,3 @@ msgstr ""
 
 #~ msgid "Current desktop"
 #~ msgstr "نۆۋەتتىكى ئۈستەلئۈستى"
-
-#~ msgid "No windows"
-#~ msgstr "كۆزنەك يوق"

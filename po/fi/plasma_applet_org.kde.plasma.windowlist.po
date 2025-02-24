@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_windowlist\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:38+0000\n"
+"POT-Creation-Date: 2025-02-24 09:38+0000\n"
 "PO-Revision-Date: 2022-07-11 18:49+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -38,13 +38,17 @@ msgstr "Paneelin ollessa pystysuuntainen näytetään vain kuvakkeet."
 msgid "Not applicable when the widget is on the Desktop."
 msgstr "Ei käytettävissä, kun sovelma on työpöydällä."
 
-#: contents/ui/main.qml:97
+#: contents/ui/main.qml:81
+#, fuzzy, kde-format
+#| msgid "Show list of opened windows"
+msgctxt "@info:placeholder"
+msgid "No open windows"
+msgstr "Näytä auki olevien ikkunoiden luettelo"
+
+#: contents/ui/main.qml:108
 #, kde-format
 msgid "Plasma Desktop"
 msgstr "Plasma-työpöytä"
-
-#~ msgid "Show list of opened windows"
-#~ msgstr "Näytä auki olevien ikkunoiden luettelo"
 
 #~ msgid "On all desktops"
 #~ msgstr "Kaikilla työpöydillä"
