@@ -18,14 +18,16 @@ import org.kde.taskmanager 0.1 as TaskManager
 PlasmoidItem {
     Plasmoid.constraintHints: Plasmoid.CanFillArea
     compactRepresentation: windowListButton
-    fullRepresentation: windowListView
+    fullRepresentation: windowList
     switchWidth: Kirigami.Units.gridUnit * 8
     switchHeight: Kirigami.Units.gridUnit * 6
 
     Component {
-        id: windowListView
+        id: windowList
 
         ListView {
+            id: windowListView
+
             clip: true
             Layout.preferredWidth: Kirigami.Units.gridUnit * 10
             Layout.preferredHeight: Kirigami.Units.gridUnit * 12
@@ -68,6 +70,15 @@ PlasmoidItem {
                 }
 
                 onClicked: tasksModel.requestActivate(tasksModel.makeModelIndex(model.index))
+
+            }
+
+            Kirigami.PlaceholderMessage {
+                anchors.centerIn: parent
+                width: parent.width - (Kirigami.Units.largeSpacing * 2)
+                visible: windowListView.count === 0
+                icon.source: "edit-none"
+                text: i18nc("@info:placeholder", "No open windows")
             }
         }
     }
@@ -125,8 +136,15 @@ PlasmoidItem {
                    }
                 }
 
-                model: tasksModel
-                onClicked: (model) =>
+                property ListModel noWindowModel: ListModel {
+                    ListElement {
+                        display: "No open windows"
+                        decoration: "edit-none"
+                    }
+                }
+
+                model: tasksModel.count === 0 ? noWindowModel : tasksModel
+                onClicked: tasksModel.count === 0 ? null : (model) =>
                     tasksModel.requestActivate(tasksModel.makeModelIndex(model.index))
             }
         }
