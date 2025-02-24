@@ -10,19 +10,20 @@
 # Mthw <jari_45@hotmail.com>, 2018.
 # Dušan Kazik <prescott66@gmail.com>, 2020.
 # SPDX-FileCopyrightText: 2020, 2022, 2023, 2024 Matej Mrenica <matejm98mthw@gmail.com>
+# SPDX-FileCopyrightText: 2025 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-29 00:42+0000\n"
-"PO-Revision-Date: 2024-06-26 14:09+0200\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"PO-Revision-Date: 2025-02-23 13:29+0100\n"
+"Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.12.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
@@ -94,12 +95,10 @@ msgid "Pointer device disconnected. No other devices found."
 msgstr "Ukazovacie zariadenie odpojené. Žiadne iné zariadenie nebolo nájdené."
 
 #: ui/bindings.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@label for assigning an action to a numbered button"
-#| msgid "Extra Button %1:"
+#, kde-format
 msgctxt "@title"
 msgid "Extra Mouse Buttons"
-msgstr "Extra tlačidlo %1:"
+msgstr "Extra tlačidlá myši"
 
 #: ui/bindings.qml:70
 #, kde-format
@@ -164,10 +163,9 @@ msgid "Accept input through this device."
 msgstr "Prijímať vstup cez toto zariadenie."
 
 #: ui/main.qml:107
-#, fuzzy, kde-format
-#| msgid "Left handed mode"
+#, kde-format
 msgid "Left-handed mode"
-msgstr "Pre ľavákov"
+msgstr "Režim ľavej ruky"
 
 #: ui/main.qml:119
 #, kde-format
@@ -175,17 +173,14 @@ msgid "Swap left and right buttons."
 msgstr "Vymeniť ľavé a pravé tlačidlo."
 
 #: ui/main.qml:126
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr ""
 "Stlačením ľavého a pravého tlačidla vykonať kliknutie stredným tlačidlom"
 
 #: ui/main.qml:138
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
@@ -193,11 +188,7 @@ msgstr ""
 "tlačidla."
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
-#| msgid ""
-#| "Activating this setting increases mouse click latency by 50ms. The extra "
-#| "delay is needed to correctly detect simultaneous left and right mouse "
-#| "clicks."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
@@ -265,10 +256,9 @@ msgid "Invert scroll direction"
 msgstr "Obrátiť smer rolovania"
 
 #: ui/main.qml:351
-#, fuzzy, kde-format
-#| msgid "Touchscreen like scrolling."
+#, kde-format
 msgid "Touchscreen-like scrolling."
-msgstr "Rolovanie ako na dotykovej obrazovke."
+msgstr "Scrollovanie ako na dotykovej obrazovke."
 
 #: ui/main.qml:356
 #, kde-format
