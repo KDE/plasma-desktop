@@ -168,15 +168,12 @@ KCMUtils.SimpleKCM {
             text: i18nc("@option:check Part of a sentence: 'Mouse wheel cycles through tasks'", "Cycles through tasks")
         }
 
-        RowLayout {
-            // HACK: Workaround for Kirigami bug 434625
-            // due to which a simple Layout.leftMargin on QQC2.CheckBox doesn't work
-            Item { implicitWidth: Kirigami.Units.gridUnit }
-            QQC2.CheckBox {
-                id: wheelSkipMinimized
-                text: i18nc("@option:check mouse wheel task cycling", "Skip minimized tasks")
-                enabled: wheelEnabled.checked
-            }
+        QQC2.CheckBox {
+            id: wheelSkipMinimized
+            leftPadding: mirrored ? 0 : (wheelEnabled.indicator.width + wheelEnabled.spacing)
+            rightPadding: mirrored ? (wheelEnabled.indicator.width + wheelEnabled.spacing) : 0
+            text: i18nc("@option:check mouse wheel task cycling", "Skip minimized tasks")
+            enabled: wheelEnabled.checked
         }
 
         Item {
