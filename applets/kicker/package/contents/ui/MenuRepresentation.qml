@@ -357,7 +357,12 @@ FocusScope {
             }
         ]
 
+        Keys.priority: Keys.AfterItem // arrow keys should move cursor first
         Keys.onPressed: event => {
+            let backArrowKey = (event.key === Qt.Key_Left && Application.layoutDirection === Qt.LeftToRight) ||
+                (event.key === Qt.Key_Right && Application.layoutDirection === Qt.RightToLeft)
+            let forwardArrowKey = (event.key === Qt.Key_Right && Application.layoutDirection === Qt.LeftToRight) ||
+                (event.key === Qt.Key_Left && Application.layoutDirection === Qt.RightToLeft)
             if (event.key === Qt.Key_Up) {
                 if (rootList.visible) {
                     rootList.showChildDialogs = false;
@@ -394,16 +399,16 @@ FocusScope {
                         }
                     }
                 }
-            } else if (event.key === Qt.Key_Left && cursorPosition === 0) {
+            } else if (backArrowKey) {
                 for (let i = runnerModel.count; i >= 0; --i) {
-                    if (runnerModel.modelForRow(i).count) {
+                    if (runnerModel.modelForRow(i)?.count) {
                         const targetList = runnerColumnsRepeater.itemAt(i);
                         targetList.currentIndex = 0;
                         targetList.currentItem.forceActiveFocus();
                         break;
                     }
                 }
-            } else if (event.key === Qt.Key_Right && cursorPosition === length) {
+            } else if (forwardArrowKey) {
                 for (let i = 1; i < runnerModel.count; ++i) {
                     if (runnerModel.modelForRow(i).count) {
                         const targetList = runnerColumnsRepeater.itemAt(i);
