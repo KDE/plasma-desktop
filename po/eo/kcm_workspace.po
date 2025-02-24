@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-18 00:42+0000\n"
-"PO-Revision-Date: 2025-02-22 21:54+0100\n"
+"PO-Revision-Date: 2025-02-23 13:36+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -36,13 +36,13 @@ msgstr "Rekomenci"
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
-msgstr ""
+msgstr "Permesi al Plasma montri:"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr ""
+msgstr "Panelajn kaj fenestraĵajn helpetojn"
 
 #: ui/main.qml:62
 #, kde-format
@@ -52,6 +52,10 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"Permesas al ĉiuj Plasma-panelaj kaj labortablaj fenestraĵoj montri "
+"priskribajn konsiletojn kiam priŝvebataj per la montrilo. Ĉi tiu agordo ne "
+"efikas sur la malgrandaj konsiletoj montrataj ŝvebante super individuaj "
+"butonoj kaj aliaj uzantinterfacaj elementoj."
 
 #: ui/main.qml:70
 #, kde-format
@@ -66,6 +70,8 @@ msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
+"Permesas al ĉiuj Plasma-fenestraĵoj montri surekranajn (OSD-)ŝprucfenestrojn "
+"pri ŝanĝoj kiel laŭteca kaj brileca nivelo aŭ aŭd-aparatan ŝaltadon."
 
 #: ui/main.qml:92
 #, kde-format
@@ -298,7 +304,7 @@ msgstr "Ebligi mezklakan elekton alglui"
 #: workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display large panel and widget tooltips"
-msgstr ""
+msgstr "Montri grandajn panelajn kaj fenestraĵajn konsiletojn"
 
 #. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:10

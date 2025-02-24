@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-18 00:42+0000\n"
-"PO-Revision-Date: 2025-02-02 00:06-0300\n"
+"PO-Revision-Date: 2025-02-23 19:13-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #: ui/main.qml:23
 #, kde-format
@@ -40,13 +40,13 @@ msgstr "Reiniciar"
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
-msgstr ""
+msgstr "Permitir que o Plasma mostre:"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr ""
+msgstr "Dicas de ferramenta para painéis e widgets"
 
 #: ui/main.qml:62
 #, kde-format
@@ -56,14 +56,17 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"Permite que todos os widgets de painel e área de trabalho exibam dicas de "
+"ferramenta descritivas ao passar o cursor sobre elas. Esta configuração não "
+"tem efeito nas dicas de ferramenta pequenas que são exibidas ao passar o "
+"cursor em botões individuais e outros elementos da interface de usuário."
 
 #: ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
-msgstr "Exibir um popup ao alterar o layout"
+msgstr "Pop-ups OSD para mudanças de status"
 
 #: ui/main.qml:80
 #, kde-format
@@ -71,6 +74,8 @@ msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
+"Permite que todos os widgets do Plasma exibam pop-ups na tela (OSD) para "
+"alterações como nível de volume e brilho, ou troca de dispositivo de áudio."
 
 #: ui/main.qml:92
 #, kde-format
@@ -305,7 +310,7 @@ msgstr "Habilitar a colagem de seleção com o botão do meio"
 #: workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display large panel and widget tooltips"
-msgstr ""
+msgstr "Mostrar grandes dicas de ferramenta para painéis e widgets"
 
 #. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:10
@@ -313,26 +318,24 @@ msgstr ""
 msgid ""
 "Allow Plasma widgets to display large panel and widget tooltips on hover"
 msgstr ""
+"Permitir que widgets do Plasma exibam grandes dicas de ferramenta em painéis "
+"e widgets ao passar o mouse"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
-#, fuzzy, kde-format
-#| msgid "Display visual feedback for status changes"
+#, kde-format
 msgid "Display small popups for status changes"
-msgstr "Exibir retorno visual para alterações de status"
+msgstr "Exibir pequenos pop-ups para alterações de status"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show an on-screen display to indicate status changes such as brightness "
-#| "or volume"
+#, kde-format
 msgid ""
 "Allow Plasma widgets to display small popups for status changes such as "
 "brightness or volume"
 msgstr ""
-"Exibir uma visualização na tela (OSD) indicando mudanças de estado como "
-"brilho ou volume"
+"Permitir que widgets do Plasma exibam pequenos pop-ups para mudanças de "
+"status, como para mudanças no brilho ou volume"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21
@@ -344,7 +347,7 @@ msgstr "OSD ao alterar o layout"
 #: workspaceoptions_plasmasettings.kcfg:22
 #, kde-format
 msgid "Show a popup on layout changes"
-msgstr "Exibir um popup ao alterar o layout"
+msgstr "Exibir um pop-up ao alterar o layout"
 
 #~ msgid "Visual behavior:"
 #~ msgstr "Comportamento do visual:"
