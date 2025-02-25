@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-29 02:34+0000\n"
+"POT-Creation-Date: 2025-02-25 02:34+0000\n"
 "PO-Revision-Date: 2024-12-24 20:16+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -54,7 +54,7 @@ msgstr "टचपैड् %1 कृते मौलिकयन्त्रस�
 msgid "Cannot connect to X server"
 msgstr "X सर्वरेण सह सम्बद्धं कर्तुं न शक्नोति"
 
-#: backends/x11/xlibbackend.cpp:79 ui/main.qml:101
+#: backends/x11/xlibbackend.cpp:79 ui/main.qml:103
 #, kde-format
 msgid "No touchpad found"
 msgstr "न टचपैड् प्राप्तम्"
@@ -215,76 +215,76 @@ msgctxt "Touchpad Edge"
 msgid "Top left corner"
 msgstr "उपरि वामकोणे"
 
-#: ui/main.qml:102
+#: ui/main.qml:104
 #, kde-format
 msgid "Connect an external touchpad"
 msgstr "एकं बाह्यं टचपैड् संयोजयन्तु"
 
-#: ui/main.qml:116
+#: ui/main.qml:118
 #, kde-format
 msgid "Device:"
 msgstr "उपकरणम्‌:"
 
-#: ui/main.qml:142
+#: ui/main.qml:144
 #, kde-format
 msgid "General:"
 msgstr "सामान्य:"
 
-#: ui/main.qml:143
+#: ui/main.qml:145
 #, kde-format
 msgid "Device enabled"
 msgstr "यन्त्रं सक्षमम्"
 
-#: ui/main.qml:147
+#: ui/main.qml:149
 #, kde-format
 msgid "Accept input through this device."
 msgstr "अस्य यन्त्रस्य माध्यमेन निवेशं स्वीकुर्वन्तु।"
 
-#: ui/main.qml:171
+#: ui/main.qml:173
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable while mouse is connected"
 msgstr "मूषकं संयोजितं सति निष्क्रियं कुरु।"
 
-#: ui/main.qml:197
+#: ui/main.qml:202
 #, kde-format
 msgid "Disable while typing"
 msgstr "टङ्कनं कुर्वन् अक्षमं कुर्वन्तु"
 
-#: ui/main.qml:202
+#: ui/main.qml:210
 #, kde-format
 msgid "Disable touchpad while typing to prevent accidental inputs."
 msgstr "आकस्मिकनिवेशं निवारयितुं टङ्कयन् टचपैड् अक्षमं कुर्वन्तु ।"
 
-#: ui/main.qml:226
+#: ui/main.qml:237
 #, kde-format
 msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
 msgid "This can interfere with video games."
 msgstr "एतेन वीडियोक्रीडासु बाधा भवितुम् अर्हति ।"
 
-#: ui/main.qml:235
+#: ui/main.qml:246
 #, kde-format
 msgid "Left-handed mode"
 msgstr "वामहस्तः मोडः"
 
-#: ui/main.qml:239
+#: ui/main.qml:250
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "वाम-दक्षिण-बटनयोः अदला-बदली कुर्वन्तु ।"
 
-#: ui/main.qml:265
+#: ui/main.qml:276
 #, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons to middle-click"
 msgstr "मध्य-क्लिक् कर्तुं वाम-दक्षिण-बटनौ नुदन्तु"
 
-#: ui/main.qml:269
+#: ui/main.qml:280
 #, kde-format
 msgctxt "@info:tooltip for checkbox"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr "वाम-दक्षिण-बटनयोः युगपत् नुदनेन मध्य-क्लिक् इव कार्यं भवति ।"
 
-#: ui/main.qml:295
+#: ui/main.qml:306
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -294,186 +294,186 @@ msgstr ""
 "एतत् सेटिङ्ग् सक्रियीकरणेन क्लिक् विलम्बता 50ms यावत् वर्धते । युगपत् वामदक्षिणबटनदबावस्य "
 "सम्यक् ज्ञातुं अतिरिक्तविलम्बस्य आवश्यकता भवति ।"
 
-#: ui/main.qml:305
+#: ui/main.qml:316
 #, kde-format
 msgid "Pointer speed:"
 msgstr "सूचकस्य गतिः :"
 
-#: ui/main.qml:403
+#: ui/main.qml:414
 #, kde-format
 msgid "Pointer acceleration:"
 msgstr "सूचकत्वरणम् :"
 
-#: ui/main.qml:434
+#: ui/main.qml:445
 #, kde-format
 msgid "None"
 msgstr "न कश्चित्"
 
-#: ui/main.qml:438
+#: ui/main.qml:449
 #, kde-format
 msgid "Cursor moves the same distance as finger."
 msgstr "कर्सरः अङ्गुली इव दूरं गच्छति ।"
 
-#: ui/main.qml:447
+#: ui/main.qml:458
 #, kde-format
 msgid "Standard"
 msgstr "स्तरीय"
 
-#: ui/main.qml:451
+#: ui/main.qml:462
 #, kde-format
 msgid "Cursor travel distance depends on movement speed of finger."
 msgstr "कर्सरस्य यात्रायाः दूरी अङ्गुलीयाः गतिवेगस्य उपरि निर्भरं भवति ।"
 
-#: ui/main.qml:465
+#: ui/main.qml:476
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "स्क्रॉल गतिः :"
 
-#: ui/main.qml:516
+#: ui/main.qml:527
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "मन्दतरम्"
 
-#: ui/main.qml:523
+#: ui/main.qml:534
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "द्रुततरम्"
 
-#: ui/main.qml:531
+#: ui/main.qml:542
 #, kde-format
 msgid "Scrolling:"
 msgstr "स्क्रॉल करणम् :"
 
-#: ui/main.qml:560
+#: ui/main.qml:571
 #, kde-format
 msgid "Two fingers"
 msgstr "अङ्गुलीद्वयम्"
 
-#: ui/main.qml:564
+#: ui/main.qml:575
 #, kde-format
 msgid "Slide with two fingers scrolls."
 msgstr "द्वयोः अङ्गुलयोः स्क्रॉलयोः स्लाइड् कुर्वन्तु।"
 
-#: ui/main.qml:572
+#: ui/main.qml:583
 #, kde-format
 msgid "Touchpad edges"
 msgstr "टचपैड किनारे"
 
-#: ui/main.qml:576
+#: ui/main.qml:587
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
 msgstr "टचपैड् एज्स् स्क्रॉल्स् इत्यत्र स्लाइड् कुर्वन्तु।"
 
-#: ui/main.qml:586
+#: ui/main.qml:597
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "स्क्रॉल दिशा उल्टा (प्राकृतिक स्क्रॉल) 1.1."
 
-#: ui/main.qml:602
+#: ui/main.qml:613
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "स्क्रॉल इव टचस्क्रीन्।"
 
-#: ui/main.qml:610
+#: ui/main.qml:621
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "क्षैतिजस्क्रॉलं निष्क्रियं कुर्वन्तु"
 
-#: ui/main.qml:627
+#: ui/main.qml:638
 #, kde-format
 msgid "Disable horizontal scrolling."
 msgstr "क्षैतिजस्क्रॉलं निष्क्रियं कुर्वन्तु।"
 
-#: ui/main.qml:640
+#: ui/main.qml:651
 #, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "टैपिंग :"
 
-#: ui/main.qml:641
+#: ui/main.qml:652
 #, kde-format
 msgctxt "@option:check"
 msgid "Tap-to-click"
 msgstr "ट्याप्-टू-क्लिक्"
 
-#: ui/main.qml:645
+#: ui/main.qml:656
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Single tap to left-click."
 msgstr "वाम-क्लिक् कर्तुं एकवारं ट्याप् कुर्वन्तु ।"
 
-#: ui/main.qml:674
+#: ui/main.qml:685
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "टैप-एण्ड्-ड्रैग"
 
-#: ui/main.qml:678
+#: ui/main.qml:689
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
 msgstr "ट्याप् ड्रैग् इत्यस्य अनन्तरं प्रत्यक्षतया टचपैड् इत्यस्य उपरि स्लाइडिंग् ।"
 
-#: ui/main.qml:705
+#: ui/main.qml:716
 #, kde-format
 msgid "Tap-and-drag lock"
 msgstr "टैप-एण्ड्-ड्रैग लॉक"
 
-#: ui/main.qml:709
+#: ui/main.qml:720
 #, kde-format
 msgid "Dragging continues after a short finger lift."
 msgstr "अल्पाङ्गुली-उत्थापनस्य अनन्तरं कर्षणं निरन्तरं भवति ।"
 
-#: ui/main.qml:729
+#: ui/main.qml:740
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "द्वि-अङ्गुली-नलः :"
 
-#: ui/main.qml:740
+#: ui/main.qml:751
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "राइट्-क्लिक् (मध्य-क्लिक्-पर्यन्तं त्रि-अङ्गुली-ट्याप्)"
 
-#: ui/main.qml:741
+#: ui/main.qml:752
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
 msgstr ""
 "दक्षिण-क्लिक् कर्तुं अङ्गुलीद्वयेन ट्याप् कुर्वन्तु, मध्य-क्लिक् कर्तुं त्रीणि अङ्गुलीभिः ट्याप् कुर्वन्तु ।"
 
-#: ui/main.qml:743
+#: ui/main.qml:754
 #, kde-format
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "मध्य-क्लिक् (दक्षिण-क्लिक् कर्तुं त्रि-अङ्गुली-ट्याप्)"
 
-#: ui/main.qml:744
+#: ui/main.qml:755
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
 msgstr ""
 "मध्य-क्लिक् कर्तुं अङ्गुलीद्वयेन ट्याप् कुर्वन्तु, राइट्-क्लिक् कर्तुं त्रिभिः अङ्गुलीभिः ट्याप् कुर्वन्तु ।"
 
-#: ui/main.qml:746
+#: ui/main.qml:757
 #, kde-format
 msgid "Right-click"
 msgstr "राइट्-क्लिक् कुर्वन्तु"
 
-#: ui/main.qml:747
+#: ui/main.qml:758
 #, kde-format
 msgid "Tap with two fingers to right-click."
 msgstr "राइट्-क्लिक् कर्तुं अङ्गुलीद्वयेन ट्याप् कुर्वन्तु ।"
 
-#: ui/main.qml:749
+#: ui/main.qml:760
 #, kde-format
 msgid "Middle-click"
 msgstr "मध्य-क्लिक्"
 
-#: ui/main.qml:750
+#: ui/main.qml:761
 #, kde-format
 msgid "Tap with two fingers to middle-click."
 msgstr "मध्य-क्लिक् कर्तुं अङ्गुलीद्वयेन ट्याप् कुर्वन्तु ।"
 
-#: ui/main.qml:808
+#: ui/main.qml:819
 #, kde-format
 msgctxt ""
 "@label for radiobutton group, configure right-click with touch-pad "
@@ -481,13 +481,13 @@ msgctxt ""
 msgid "Integrated right-click:"
 msgstr "एकीकृतं राइट्-क्लिक् :"
 
-#: ui/main.qml:844
+#: ui/main.qml:855
 #, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
 msgstr "अधः-दक्षिणकोणं नुदन्तु"
 
-#: ui/main.qml:849
+#: ui/main.qml:860
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -498,7 +498,7 @@ msgstr ""
 "भवतः टचपैड् इत्यस्य अधः दक्षिणकोणं नुदन् राइट्-क्लिक् इव कार्यं करोति । अधः वाम-अधः-दक्षिण-"
 "कोणयोः युगपत् निपीड्य मध्य-क्लिक् कुर्वन्तु ।"
 
-#: ui/main.qml:850
+#: ui/main.qml:861
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -508,37 +508,37 @@ msgstr ""
 "भवतः टचपैड् इत्यस्य अधः दक्षिणकोणं नुदन् राइट्-क्लिक् इव कार्यं करोति । अधः केन्द्रीयक्षेत्रं "
 "नुत्वा मध्य-क्लिक् कुर्वन्तु ।"
 
-#: ui/main.qml:861
+#: ui/main.qml:875
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "अधः कोणद्वयं दबावन् मध्य-क्लिक् कुर्वन्तु ।"
 
-#: ui/main.qml:862
+#: ui/main.qml:876
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "अधः केन्द्रं नुत्वा मध्य-क्लिक् कुर्वन्तु ।"
 
-#: ui/main.qml:880
+#: ui/main.qml:894
 #, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press touchpad with two fingers"
 msgstr "अङ्गुलीद्वयेन टचपैड् नुदन्तु"
 
-#: ui/main.qml:885
+#: ui/main.qml:899
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
 msgstr "अङ्गुलीद्वयेन कुत्रापि स्पर्शपट्टिकां निपीड्य राइट्-क्लिक् इव कार्यं करोति ।"
 
-#: ui/main.qml:897
+#: ui/main.qml:914
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
 msgstr "त्रिभिः अङ्गुलीभिः निपीड्य मध्य-क्लिक् कुर्वन्तु ।"
 
-#: ui/main.qml:916
+#: ui/main.qml:933
 #, kde-format
 msgctxt ""
 "@label for radiobutton group, configure middle-click with touch-pad "
@@ -546,25 +546,25 @@ msgctxt ""
 msgid "Integrated middle-click:"
 msgstr "एकीकृतं मध्य-क्लिक् :"
 
-#: ui/main.qml:945
+#: ui/main.qml:962
 #, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom middle edge"
 msgstr "अधः मध्यधारं दबावन्तु"
 
-#: ui/main.qml:949
+#: ui/main.qml:966
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the bottom right corner of your touchpad acts as right-click."
 msgstr "भवतः टचपैड् इत्यस्य अधः दक्षिणकोणं नुदन् राइट्-क्लिक् इव कार्यं करोति ।"
 
-#: ui/main.qml:957
+#: ui/main.qml:974
 #, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom left and bottom right corners"
 msgstr "अधः वामकोणं अधः दक्षिणं च कोणं नुदन्तु"
 
-#: ui/main.qml:961
+#: ui/main.qml:978
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid ""
@@ -572,13 +572,13 @@ msgid ""
 "middle-click."
 msgstr "अधः वाम-अधः-दक्षिण-कोणयोः युगपत् निपीडनेन मध्य-क्लिक् इव कार्यं भवति ।"
 
-#: ui/main.qml:970
+#: ui/main.qml:987
 #, kde-format
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
 msgstr "टचपैड् त्रिभिः अङ्गुलीभिः नुदन्तु"
 
-#: ui/main.qml:976
+#: ui/main.qml:993
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
