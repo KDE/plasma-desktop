@@ -19,6 +19,9 @@ DropArea {
     onPositionChanged: drag => {
         if (drag.source === kickoff.dragSource) {
             const source = kickoff.dragSource.sourceItem
+            if (source === null) {
+                return
+            }
             const view = source.view
             if (source.view === root.targetView && !view.move.running && !view.moveDisplaced.running) {
                 const pos = mapToItem(view.contentItem, drag.x, drag.y)
