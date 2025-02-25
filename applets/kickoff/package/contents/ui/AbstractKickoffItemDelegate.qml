@@ -135,30 +135,43 @@ T.ItemDelegate {
         }
     }
 
+    function performDrag(handler: DragHandler): void {
+        if (!handler.active) {
+            kickoff.dragSource.Drag.active = false;
+            kickoff.dragSource.Drag.imageSource = "";
+            kickoff.dragSource.sourceItem = null;
+            return;
+        }
+        root.dragIconItem.grabToImage(result => {
+            if (!handler.active) {
+                return;
+            }
+            kickoff.dragSource.sourceItem = root;
+            kickoff.dragSource.Drag.imageSource = result.url;
+            kickoff.dragSource.Drag.mimeData = {
+                "text/uri-list" : [root.url]
+            };
+            kickoff.dragSource.Drag.active = handler.active;
+        });
+    }
+
     DragHandler {
         id: dragHandler
+        acceptedDevices: PointerDevice.Mouse | PointerDevice.TouchPad | PointerDevice.Stylus
         enabled: root.dragEnabled && root.dragIconItem !== null
         target: null // Using this Item fixes drag and drop causing delegates to reset to a 0 X position and overlapping each other.
 
-        onActiveChanged: {
-            if (!active) {
-                kickoff.dragSource.Drag.active = false;
-                kickoff.dragSource.Drag.imageSource = "";
-                kickoff.dragSource.sourceItem = null;
-                return;
-            }
-            root.dragIconItem.grabToImage(result => {
-                if (!dragHandler.active) {
-                    return;
-                }
-                kickoff.dragSource.sourceItem = root;
-                kickoff.dragSource.Drag.imageSource = result.url;
-                kickoff.dragSource.Drag.mimeData = {
-                    "text/uri-list" : [root.url]
-                };
-                kickoff.dragSource.Drag.active = dragHandler.active;
-            });
-        }
+        onActiveChanged: root.performDrag(this)
+    }
+
+    DragHandler {
+        id: touchDragHandler
+        acceptedDevices: PointerDevice.TouchScreen
+        enabled: dragHandler.enabled
+        target: null
+        yAxis.enabled: false
+
+        onActiveChanged: root.performDrag(this)
     }
 
     MouseArea {
