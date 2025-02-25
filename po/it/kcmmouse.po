@@ -1,5 +1,5 @@
 # translation of kcminput.po to Italian
-# SPDX-FileCopyrightText: 2017, 2018, 2020, 2022, 2023, 2024 Paolo Zamponi <feus73@gmail.com>
+# SPDX-FileCopyrightText: 2017, 2018, 2020, 2022, 2023, 2024, 2025 Paolo Zamponi <feus73@gmail.com>
 # Andrea Rizzi <rizzi@kde.org>, 2003, 2004, 2005, 2007.
 # Pino Toscano <toscano.pino@tiscali.it>, 2006.
 # Luciano Montanaro <mikelima@cirulla.net>, 2008.
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-01 00:42+0000\n"
-"PO-Revision-Date: 2024-12-01 19:18+0100\n"
+"PO-Revision-Date: 2025-02-11 15:49+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
@@ -201,20 +201,18 @@ msgid "Pointer speed:"
 msgstr "Velocità del puntatore:"
 
 #: ui/main.qml:233
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgid "Enable pointer acceleration"
-msgstr "Accelerazione del puntatore:"
+msgstr "Abilita l'accelerazione del puntatore"
 
 #: ui/main.qml:247
-#, fuzzy, kde-format
-#| msgid "Cursor travel distance depends on the mouse movement speed."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
-"La distanza di spostamento del cursore dipende dalla velocità del movimento "
-"del mouse."
+"Quando è abilitata, la distanza di spostamento del cursore aumenta con una "
+"velocità di movimento maggiore."
 
 #: ui/main.qml:257
 #, kde-format

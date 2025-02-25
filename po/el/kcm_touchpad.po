@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-23 00:42+0000\n"
+"POT-Creation-Date: 2025-02-25 00:42+0000\n"
 "PO-Revision-Date: 2024-08-12 21:02+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -57,7 +57,7 @@ msgstr ""
 msgid "Cannot connect to X server"
 msgstr "Αδυναμία σύνδεσης στον διακομιστή X"
 
-#: backends/x11/xlibbackend.cpp:80 ui/main.qml:56
+#: backends/x11/xlibbackend.cpp:80 ui/main.qml:59
 #, kde-format
 msgid "No touchpad found"
 msgstr "Δεν βρέθηκε επιφάνεια αφής"
@@ -129,73 +129,73 @@ msgstr "Αποσύνδεση επιφάνειας αφής. Κλείσιμο τ�
 msgid "Touchpad disconnected. No other touchpads found."
 msgstr "Αποσύνδεση επιφάνειας αφής. Δε βρέθηκαν άλλες επιφάνειες αφής."
 
-#: ui/main.qml:57
+#: ui/main.qml:60
 #, kde-format
 msgid "Connect an external touchpad"
 msgstr "Συνδέστε μια εξωτερική επιφάνεια αφής"
 
-#: ui/main.qml:72
+#: ui/main.qml:75
 #, kde-format
 msgid "Device:"
 msgstr "Συσκευή:"
 
-#: ui/main.qml:97
+#: ui/main.qml:100
 #, kde-format
 msgid "General:"
 msgstr "Γενικά:"
 
-#: ui/main.qml:98
+#: ui/main.qml:101
 #, kde-format
 msgid "Device enabled"
 msgstr "Ενεργή συσκευή"
 
-#: ui/main.qml:104
+#: ui/main.qml:107
 #, kde-format
 msgid "Accept input through this device."
 msgstr "Αποδοχή εισόδου μέσω αυτής της συσκευής."
 
-#: ui/main.qml:119
+#: ui/main.qml:122
 #, fuzzy, kde-format
 #| msgid "Disable touchpad when mouse is plugged in"
 msgctxt "@option:check"
 msgid "Disable while mouse is connected"
 msgstr "Απενεργοποίηση της επιφάνειας αφής όταν συνδέεται το ποντίκι"
 
-#: ui/main.qml:138
+#: ui/main.qml:144
 #, kde-format
 msgid "Disable while typing"
 msgstr "Απενεργοποίηση κατά την πληκτρολόγηση"
 
-#: ui/main.qml:146
+#: ui/main.qml:155
 #, kde-format
 msgid "Disable touchpad while typing to prevent accidental inputs."
 msgstr ""
 "Απενεργοποίηση της επιφάνειας αφής κατά την πληκτρολόγηση για να αποφευχθούν "
 "τυχαίες είσοδοι."
 
-#: ui/main.qml:162
+#: ui/main.qml:174
 #, kde-format
 msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
 msgid "This can interfere with video games."
 msgstr "Αυτό μπορεί να επηρεάσει τα βιντεοπαιχνίδια."
 
-#: ui/main.qml:172
+#: ui/main.qml:184
 #, kde-format
 msgid "Left-handed mode"
 msgstr "Λειτουργία αριστερόχειρα"
 
-#: ui/main.qml:178
+#: ui/main.qml:190
 #, kde-format
 msgid "Swap left and right buttons."
 msgstr "Εναλλαγή αριστερού και δεξιού κουμπιού."
 
-#: ui/main.qml:195
+#: ui/main.qml:207
 #, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons to middle-click"
 msgstr "Πατήστε το αριστερό και το δεξί κουμπί για μεσαίο κλικ"
 
-#: ui/main.qml:201
+#: ui/main.qml:213
 #, kde-format
 msgctxt "@info:tooltip for checkbox"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
@@ -203,7 +203,7 @@ msgstr ""
 "Το ταυτόχρονο πάτημα του αριστερού και του δεξιού κουμπιού λειτουργεί ως "
 "μεσαίο κλικ."
 
-#: ui/main.qml:215
+#: ui/main.qml:227
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -214,141 +214,141 @@ msgstr ""
 "ποντικιού κατά 50ms. Η επιπλέον καθυστέρηση είναι απαραίτητη για τη σωστή "
 "ανίχνευση ταυτόχρονων αριστερών και δεξιών κλικ του ποντικιού."
 
-#: ui/main.qml:225
+#: ui/main.qml:237
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Ταχύτητα δείκτη:"
 
-#: ui/main.qml:305
+#: ui/main.qml:317
 #, fuzzy, kde-format
 #| msgid "Pointer acceleration:"
 msgid "Enable pointer acceleration"
 msgstr "Επιτάχυνση δείκτη:"
 
-#: ui/main.qml:320
+#: ui/main.qml:332
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
 
-#: ui/main.qml:330
+#: ui/main.qml:342
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Ταχύτητα κύλισης:"
 
-#: ui/main.qml:381
+#: ui/main.qml:393
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Αργότερη"
 
-#: ui/main.qml:388
+#: ui/main.qml:400
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Ταχύτερη"
 
-#: ui/main.qml:396
+#: ui/main.qml:408
 #, kde-format
 msgid "Scrolling:"
 msgstr "Κύλιση:"
 
-#: ui/main.qml:415
+#: ui/main.qml:427
 #, kde-format
 msgid "Two fingers"
 msgstr "Δύο δάχτυλα"
 
-#: ui/main.qml:421
+#: ui/main.qml:433
 #, kde-format
 msgid "Slide with two fingers scrolls."
 msgstr "Η ολίσθηση με δύο δάχτυλα κάνει κύλιση."
 
-#: ui/main.qml:429
+#: ui/main.qml:441
 #, kde-format
 msgid "Touchpad edges"
 msgstr "Άκρες επιφάνειας αφής"
 
-#: ui/main.qml:435
+#: ui/main.qml:447
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
 msgstr "Σύρετε τις άκρες της επιφάνειας αφής για κύλιση."
 
-#: ui/main.qml:444
+#: ui/main.qml:456
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Αντιστροφή κατεύθυνσης κύλισης (Φυσική κύλιση)"
 
-#: ui/main.qml:457
+#: ui/main.qml:469
 #, kde-format
 msgid "Touchscreen like scrolling."
 msgstr "Κύλιση σαν οθόνη αφής."
 
-#: ui/main.qml:465
+#: ui/main.qml:477
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "Απενεργοποίηση οριζόντιας κύλισης"
 
-#: ui/main.qml:479
+#: ui/main.qml:491
 #, kde-format
 msgid "Disable horizontal scrolling."
 msgstr "Απενεργοποίηση οριζόντιας κύλισης."
 
-#: ui/main.qml:492
+#: ui/main.qml:504
 #, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Πατώντας:"
 
-#: ui/main.qml:493
+#: ui/main.qml:505
 #, kde-format
 msgctxt "@option:check"
 msgid "Tap-to-click"
 msgstr "Πάτημα για κλικ"
 
-#: ui/main.qml:499
+#: ui/main.qml:511
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Single tap to left-click."
 msgstr "Μονό πάτημα για αριστερό κλικ."
 
-#: ui/main.qml:514
+#: ui/main.qml:526
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "Πάτημα και σύρσιμο"
 
-#: ui/main.qml:520
+#: ui/main.qml:532
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
 msgstr ""
 "Ολίσθηση πάνω από την επιφάνεια αφής απευθείας μετά από σύρσιμο με πατήματα."
 
-#: ui/main.qml:535
+#: ui/main.qml:547
 #, kde-format
 msgid "Tap-and-drag lock"
 msgstr "Κλείδωμα με πάτημα και σύρσιμο"
 
-#: ui/main.qml:541
+#: ui/main.qml:553
 #, kde-format
 msgid "Dragging continues after a short finger lift."
 msgstr "Το σύρσιμο συνεχίζεται μετά από ένα σύντομο σήκωμα των δακτύλων."
 
-#: ui/main.qml:556
+#: ui/main.qml:568
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "Πάτημα με δύο δάχτυλα:"
 
-#: ui/main.qml:576
+#: ui/main.qml:588
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Δεξί κλικ (πατήστε με τρία δάχτυλα για μεσαίο κλικ)"
 
-#: ui/main.qml:577
+#: ui/main.qml:589
 #, kde-format
 msgid "Right-click"
 msgstr "Δεξί κλικ"
 
-#: ui/main.qml:587
+#: ui/main.qml:599
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
@@ -356,22 +356,22 @@ msgstr ""
 "Πατήστε με δύο δάχτυλα για δεξί κλικ, πατήστε με τρία δάχτυλα για μεσαίο "
 "κλικ."
 
-#: ui/main.qml:588
+#: ui/main.qml:600
 #, kde-format
 msgid "Tap with two fingers to right-click."
 msgstr "Πατήστε με δύο δάχτυλα για δεξί κλικ."
 
-#: ui/main.qml:596
+#: ui/main.qml:608
 #, kde-format
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "Μεσαίο κλικ (πατήστε με τρία δάχτυλα για δεξί κλικ)"
 
-#: ui/main.qml:597
+#: ui/main.qml:609
 #, kde-format
 msgid "Middle-click"
 msgstr "Μεσαίο κλικ"
 
-#: ui/main.qml:607
+#: ui/main.qml:619
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
@@ -379,12 +379,12 @@ msgstr ""
 "Πατήστε με δύο δάχτυλα για μεσαίο κλικ, πατήστε με τρία δάχτυλα για δεξί "
 "κλικ."
 
-#: ui/main.qml:608
+#: ui/main.qml:620
 #, kde-format
 msgid "Tap with two fingers to middle-click."
 msgstr "Πατήστε με δύο δάχτυλα για μεσαίο κλικ."
 
-#: ui/main.qml:620
+#: ui/main.qml:632
 #, kde-format
 msgctxt ""
 "@label for radiobutton group, configure right-click with touch-pad "
@@ -392,13 +392,13 @@ msgctxt ""
 msgid "Integrated right-click:"
 msgstr "Ενσωματωμένο δεξί κλικ:"
 
-#: ui/main.qml:641
+#: ui/main.qml:653
 #, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
 msgstr "Πατήστε την κάτω δεξιά γωνία"
 
-#: ui/main.qml:649
+#: ui/main.qml:661
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -410,7 +410,7 @@ msgstr ""
 "κλικ. Μεσαίο κλικ πατώντας ταυτόχρονα την κάτω αριστερή και την κάτω δεξιά "
 "γωνία."
 
-#: ui/main.qml:650
+#: ui/main.qml:662
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -420,25 +420,25 @@ msgstr ""
 "Το πάτημα της κάτω δεξιάς γωνίας της επιφάνειας αφής λειτουργεί ως δεξί "
 "κλικ. Μεσαίο κλικ πατώντας την κάτω κεντρική περιοχή."
 
-#: ui/main.qml:662
+#: ui/main.qml:677
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "Μεσαίο κλικ πατώντας και τις δύο κάτω γωνίες."
 
-#: ui/main.qml:663
+#: ui/main.qml:678
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "Μεσαίο κλικ πατώντας το κάτω κέντρο."
 
-#: ui/main.qml:681
+#: ui/main.qml:696
 #, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press touchpad with two fingers"
 msgstr "Πατήστε την επιφάνειας αφής με δύο δάχτυλα"
 
-#: ui/main.qml:689
+#: ui/main.qml:704
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
@@ -446,13 +446,13 @@ msgstr ""
 "Το πάτημα της επιφάνειας αφής οπουδήποτε με δύο δάχτυλα λειτουργεί ως δεξί "
 "κλικ."
 
-#: ui/main.qml:700
+#: ui/main.qml:718
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
 msgstr "Μεσαίο κλικ πατώντας με τρία δάχτυλα."
 
-#: ui/main.qml:719
+#: ui/main.qml:737
 #, kde-format
 msgctxt ""
 "@label for radiobutton group, configure middle-click with touch-pad "
@@ -460,26 +460,26 @@ msgctxt ""
 msgid "Integrated middle-click:"
 msgstr "Ενσωματωμένο μεσαίο κλικ:"
 
-#: ui/main.qml:740
+#: ui/main.qml:758
 #, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom middle edge"
 msgstr "Πατήστε την κάτω μεσαία άκρη"
 
-#: ui/main.qml:746
+#: ui/main.qml:764
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the bottom right corner of your touchpad acts as right-click."
 msgstr ""
 "Το πάτημα στην κάτω δεξιά γωνίας της επιφάνειας αφής λειτουργεί ως δεξί κλικ."
 
-#: ui/main.qml:754
+#: ui/main.qml:772
 #, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom left and bottom right corners"
 msgstr "Πατήστε τις κάτω αριστερή και κάτω δεξιά γωνίες"
 
-#: ui/main.qml:760
+#: ui/main.qml:778
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid ""
@@ -489,13 +489,13 @@ msgstr ""
 "Το ταυτόχρονο πάτημα στην κάτω αριστερή και την κάτω δεξιά γωνία της "
 "επιφάνειας αφής λειτουργεί ως μεσαίο κλικ."
 
-#: ui/main.qml:768
+#: ui/main.qml:786
 #, kde-format
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
 msgstr "Πατήστε την επιφάνεια αφής οπουδήποτε με τρία δάχτυλα"
 
-#: ui/main.qml:775
+#: ui/main.qml:793
 #, kde-format
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
