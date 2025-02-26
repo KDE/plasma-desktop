@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Fuminobu TAKEYAMA <ftake@geeko.jp>, 2015.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2015, 2022.
@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-16 00:43+0000\n"
-"PO-Revision-Date: 2024-09-11 19:57+0900\n"
-"Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>\n"
+"PO-Revision-Date: 2025-02-23 13:13+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -156,15 +156,12 @@ msgid "Apply Settings"
 msgstr "設定を適用"
 
 #: contents/configuration/AppletConfiguration.qml:354
-#, fuzzy, kde-format
-#| msgid ""
-#| "The settings of the current module have changed. Do you want to apply the "
-#| "changes or discard them?"
+#, kde-format
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
 msgstr ""
-"現在のモジュールの設定が変更されています。変更を適用しますか？それとも破棄し"
-"ますか？"
+"現在のページには未保存の変更があります。変更を適用しますか？それとも破棄しま"
+"すか？"
 
 #: contents/configuration/AppletConfiguration.qml:385
 #, kde-format
@@ -430,8 +427,7 @@ msgid "Dodge windows"
 msgstr "ウィンドウを避ける"
 
 #: contents/configuration/PanelConfiguration.qml:372
-#, fuzzy, kde-format
-#| msgid "Windows Go Below"
+#, kde-format
 msgid "Windows go below"
 msgstr "ウィンドウを覆う"
 
@@ -456,8 +452,7 @@ msgid "Translucent"
 msgstr "透明"
 
 #: contents/configuration/PanelConfiguration.qml:480
-#, fuzzy, kde-format
-#| msgid "Floating"
+#, kde-format
 msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
 msgstr "フローティング"
@@ -466,20 +461,19 @@ msgstr "フローティング"
 #, kde-format
 msgctxt "@item:inlistbox Option to disable floating panels or applets"
 msgid "Disabled"
-msgstr ""
+msgstr "無効"
 
 #: contents/configuration/PanelConfiguration.qml:495
 #, kde-format
 msgctxt "@item:inlistbox Option to make only panel applets always float"
 msgid "Applets only"
-msgstr ""
+msgstr "ウィジェットのみ"
 
 #: contents/configuration/PanelConfiguration.qml:496
-#, fuzzy, kde-format
-#| msgid "Panel and Desktop Management"
+#, kde-format
 msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
-msgstr "パネルとデスクトップの管理"
+msgstr "パネルとウィジェット"
 
 #: contents/configuration/PanelConfiguration.qml:539
 #, kde-format
@@ -520,17 +514,16 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "このパネルを削除します。この操作は取り消せません"
 
 #: contents/configuration/PanelConfiguration.qml:706
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
-msgstr "パネルを削除"
+msgstr "パネルを複製"
 
 #: contents/configuration/PanelConfiguration.qml:710
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
-msgstr ""
+msgstr "同じ設定とウィジェットを持つ新しいパネルを作成する"
 
 #: contents/configuration/PanelConfiguration.qml:719
 #, kde-format
@@ -592,10 +585,9 @@ msgstr ""
 "ダブルクリックでリセット。"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy, kde-format
-#| msgid "Panel and Desktop Management"
+#, kde-format
 msgid "Manage Panels and Desktops"
-msgstr "パネルとデスクトップの管理"
+msgstr "パネルとデスクトップを管理"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 #, kde-format
@@ -642,7 +634,7 @@ msgstr "代替ウィジェット"
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Add %1"
-msgstr ""
+msgstr "%1 を追加"
 
 #: contents/explorer/AppletDelegate.qml:46
 #, kde-format
@@ -656,48 +648,45 @@ msgid "New!"
 msgstr "新規！"
 
 #: contents/explorer/AppletDelegate.qml:203
-#, fuzzy, kde-format
-#| msgid "No widgets available"
+#, kde-format
 msgctxt "@info:other accessible for badge showing applet count"
 msgid "%1 widget active"
 msgid_plural "%1 widgets active"
-msgstr[0] "利用可能なウィジェットはありません"
+msgstr[0] "%1 個アクティブ"
 
 #: contents/explorer/AppletDelegate.qml:204
 #, kde-format
 msgctxt " @info:other accessible for badge indicating new widget"
 msgid "Recently installed"
-msgstr ""
+msgstr "最近インストール"
 
 #: contents/explorer/AppletDelegate.qml:216
-#, fuzzy, kde-format
-#| msgid "Uninstall"
+#, kde-format
 msgid "Cancel Uninstallation"
-msgstr "アンインストール"
+msgstr "アンインストールをキャンセル"
 
 #: contents/explorer/AppletDelegate.qml:217
 #, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Mark for Uninstallation"
-msgstr ""
+msgstr "アンインストール候補にする"
 
 #: contents/explorer/AppletDelegate.qml:221
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Cancel pending uninstallation for widget %1"
-msgstr ""
+msgstr "ウィジェット %1 のアンインストールをキャンセル"
 
 #: contents/explorer/AppletDelegate.qml:222
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Mark widget %1 for uninstallation. Requires confirmation"
-msgstr ""
+msgstr "ウィジェット %1 をアンインストールの候補にします。確認が必要です"
 
 #: contents/explorer/AppletDelegate.qml:264
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgid "Remove all instances"
-msgstr "パネルを削除"
+msgstr "すべてのインスタンスを削除"
 
 #: contents/explorer/AppletDelegate.qml:268
 #, kde-format
@@ -706,7 +695,7 @@ msgctxt ""
 "name"
 msgid "Remove running instance of widget %2"
 msgid_plural "Remove all %1 running instances of widget %2"
-msgstr[0] ""
+msgstr[0] "ウィジェット %2 のすべての実行中のインスタンス (%1個) を削除"
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -738,26 +727,25 @@ msgstr "ウィジェット"
 #, kde-format
 msgctxt "@action:button The word 'new' refers to widgets"
 msgid "Get New…"
-msgstr "新規取得..."
+msgstr "新規入手..."
 
 #: contents/explorer/WidgetExplorer.qml:179
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Widgets…"
-msgstr "新しいウィジェットを取得..."
+msgstr "新しいウィジェットを入手..."
 
 #: contents/explorer/WidgetExplorer.qml:192
 #, kde-format
 msgctxt "@action:button accessible for close button"
 msgid "Close Widget Explorer"
-msgstr ""
+msgstr "ウィジェットエクスプローラを削除"
 
 #: contents/explorer/WidgetExplorer.qml:208
-#, fuzzy, kde-format
-#| msgid "Widgets"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Search Widgets"
-msgstr "ウィジェット"
+msgstr "ウィジェットを検索"
 
 #: contents/explorer/WidgetExplorer.qml:237
 #, kde-format
@@ -765,12 +753,11 @@ msgid "Categories"
 msgstr "カテゴリ"
 
 #: contents/explorer/WidgetExplorer.qml:258
-#, fuzzy, kde-format
-#| msgid "Uninstall widget"
+#, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Uninstall (%1 Widget)"
 msgid_plural "Uninstall (%1 Widgets)"
-msgstr[0] "ウィジェットをアンインストール"
+msgstr[0] "アンインストール (%1 個のウィジェット)"
 
 #: contents/explorer/WidgetExplorer.qml:360
 #, kde-format
@@ -817,22 +804,19 @@ msgid "Caps Lock is on"
 msgstr "Caps Lock が有効です"
 
 #: contents/lockscreen/LockScreenUi.qml:285
-#, fuzzy, kde-format
-#| msgid "Sleep"
+#, kde-format
 msgid "Slee&p"
-msgstr "スリープ"
+msgstr "スリープ(&P)"
 
 #: contents/lockscreen/LockScreenUi.qml:291
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "&Hibernate"
-msgstr "ハイバネート"
+msgstr "ハイバネート(&H)"
 
 #: contents/lockscreen/LockScreenUi.qml:297
-#, fuzzy, kde-format
-#| msgid "Switch User"
+#, kde-format
 msgid "Switch &User"
-msgstr "ユーザの切り替え"
+msgstr "ユーザの切り替え(&U)"
 
 #: contents/lockscreen/LockScreenUi.qml:358
 #, kde-format
@@ -913,33 +897,3 @@ msgstr "編集モードを終了"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "パネルフォーカスインジケータ"
-
-#~ msgid "Undo uninstall"
-#~ msgstr "アンインストールを取り消し"
-
-#, fuzzy
-#~| msgid "Uninstall"
-#~ msgctxt "@info:tooltip uninstall a widget"
-#~ msgid "Uninstall"
-#~ msgstr "アンインストール"
-
-#, fuzzy
-#~| msgid "Confirm Removal Of One Widget"
-#~| msgid_plural "Confirm Removal Of %1 Widgets"
-#~ msgctxt "@action:button uninstall widgets in widget explorer"
-#~ msgid "Confirm Removal of One Widget"
-#~ msgid_plural "Confirm Removal of %1 Widgets"
-#~ msgstr[0] "%1 のウィジェットの削除を確認"
-
-#~ msgid "Style"
-#~ msgstr "スタイル"
-
-#~ msgctxt "@title"
-#~ msgid "About"
-#~ msgstr "情報"
-
-#~ msgid "Global Themes"
-#~ msgstr "グローバルテーマ"
-
-#~ msgid "Display Configuration"
-#~ msgstr "ディスプレイの設定"
