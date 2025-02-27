@@ -72,7 +72,7 @@ Item {
 
     Timer {
         id: hidePanelLater
-        interval: Kirigami.Units.veryLongDuration / 2
+        interval: 200
         onTriggered: hidePanel.restart()
         running: false
     }

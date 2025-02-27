@@ -168,7 +168,7 @@ MouseArea {
 
     Timer {
         id: hideTimer
-        interval: Kirigami.Units.longDuration * 5
+        interval: Kirigami.Units.humanMoment
         onTriggered: configurationArea.currentApplet = null
     }
 
