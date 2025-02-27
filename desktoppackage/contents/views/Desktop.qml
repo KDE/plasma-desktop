@@ -121,7 +121,7 @@ Item {
             id: editModeUiTimer
             property bool editMode: containment?.plasmoid.corona.editMode ?? false
             onEditModeChanged: restart()
-            interval: Kirigami.Units.longDuration
+            interval: 200
         }
     }
 

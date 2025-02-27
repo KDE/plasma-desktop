@@ -83,7 +83,7 @@ Folder.SubDialog {
         Timer {
             id: closeTimer
 
-            interval: Kirigami.Units.longDuration * 2
+            interval: Kirigami.Units.humanMoment
 
             onTriggered: {
                 if (childDialog !== null) {

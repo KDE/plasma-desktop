@@ -232,7 +232,7 @@ PlasmoidItem {
 
     readonly property Component taskInitComponent: Component {
         Timer {
-            interval: Kirigami.Units.longDuration
+            interval: 200
             running: true
 
             onTriggered: {
