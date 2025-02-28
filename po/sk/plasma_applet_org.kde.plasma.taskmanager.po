@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-05 00:43+0000\n"
+"POT-Creation-Date: 2025-02-28 00:43+0000\n"
 "PO-Revision-Date: 2023-12-02 20:15+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -65,34 +65,46 @@ msgctxt "Over 9999 new messages, overlay, keep short"
 msgid "9,999+"
 msgstr "9999+"
 
-#: package/contents/ui/ConfigAppearance.qml:46
+#: package/contents/ui/ConfigAppearance.qml:48
 #, fuzzy, kde-format
 #| msgid "General:"
 msgctxt "@label for several checkboxes"
 msgid "General:"
 msgstr "Všeobecné:"
 
-#: package/contents/ui/ConfigAppearance.qml:47
+#: package/contents/ui/ConfigAppearance.qml:49
 #, fuzzy, kde-format
 #| msgid "Show small window previews when hovering over Tasks"
 msgctxt "@option:check section General"
 msgid "Show small window previews when hovering over tasks"
 msgstr "Zobraziť malé náhľady okien pri prejdení myšou nad úlohami"
 
-#: package/contents/ui/ConfigAppearance.qml:52
+#: package/contents/ui/ConfigAppearance.qml:54
 #, fuzzy, kde-format
 #| msgid "Hide other windows when hovering over previews"
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over previews"
 msgstr "Skryť ostatné okná pri prejdení nad náhľadmi"
 
-#: package/contents/ui/ConfigAppearance.qml:57
+#: package/contents/ui/ConfigAppearance.qml:59
 #, kde-format
 msgctxt "@option:check section General"
-msgid "Use audio indicators to mute tasks"
+msgid "Show an indicator when a task is playing audio"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:65
+#: package/contents/ui/ConfigAppearance.qml:69
+#, kde-format
+msgctxt "@option:check section General"
+msgid "Mute task when clicking indicator"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:77
+#, kde-format
+msgctxt "@option:check section General"
+msgid "Show media and volume controls in tooltip"
+msgstr ""
+
+#: package/contents/ui/ConfigAppearance.qml:85
 #, fuzzy, kde-format
 #| msgctxt "@option:check"
 #| msgid "Fill free space on Panel"
@@ -100,7 +112,7 @@ msgctxt "@option:check section General"
 msgid "Fill free space on panel"
 msgstr "Vyplniť voľné miesto na paneli"
 
-#: package/contents/ui/ConfigAppearance.qml:77
+#: package/contents/ui/ConfigAppearance.qml:97
 #, fuzzy, kde-format
 #| msgctxt "@label:spinbox"
 #| msgid "Maximum rows:"
@@ -108,25 +120,25 @@ msgctxt "@label:listbox"
 msgid "Maximum task width:"
 msgstr "Maximálny počet riadkov:"
 
-#: package/contents/ui/ConfigAppearance.qml:80
+#: package/contents/ui/ConfigAppearance.qml:100
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Narrow"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:81
+#: package/contents/ui/ConfigAppearance.qml:101
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Medium"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:82
+#: package/contents/ui/ConfigAppearance.qml:102
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Wide"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:93
+#: package/contents/ui/ConfigAppearance.qml:113
 #, fuzzy, kde-format
 #| msgctxt "@option: radio"
 #| msgid "Use multi-column view:"
@@ -136,7 +148,7 @@ msgctxt ""
 msgid "Use multi-column view:"
 msgstr "Použite viacstĺpcové zobrazenie:"
 
-#: package/contents/ui/ConfigAppearance.qml:94
+#: package/contents/ui/ConfigAppearance.qml:114
 #, fuzzy, kde-format
 #| msgctxt "@option:radio"
 #| msgid "Use multi-row view:"
@@ -146,7 +158,7 @@ msgctxt ""
 msgid "Use multi-row view:"
 msgstr "Použite viacriadkové zobrazenie:"
 
-#: package/contents/ui/ConfigAppearance.qml:100
+#: package/contents/ui/ConfigAppearance.qml:120
 #, fuzzy, kde-format
 #| msgctxt "Never use multi-column view for Task Manager"
 #| msgid "Never"
@@ -154,7 +166,7 @@ msgctxt "@option:radio Never use multi-column view for Task Manager"
 msgid "Never"
 msgstr "Nikdy"
 
-#: package/contents/ui/ConfigAppearance.qml:110
+#: package/contents/ui/ConfigAppearance.qml:130
 #, fuzzy, kde-format
 #| msgctxt "When to use multi-row view in Task Manager"
 #| msgid "When Panel is low on space and thick enough"
@@ -162,7 +174,7 @@ msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "When panel is low on space and thick enough"
 msgstr "Keď má panel málo miesta a je dostatočne hrubý"
 
-#: package/contents/ui/ConfigAppearance.qml:120
+#: package/contents/ui/ConfigAppearance.qml:140
 #, fuzzy, kde-format
 #| msgctxt "When to use multi-row view in Task Manager"
 #| msgid "Always when Panel is thick enough"
@@ -170,7 +182,7 @@ msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "Always when panel is thick enough"
 msgstr "Vždy, keď je panel dostatočne hrubý"
 
-#: package/contents/ui/ConfigAppearance.qml:127
+#: package/contents/ui/ConfigAppearance.qml:147
 #, fuzzy, kde-format
 #| msgctxt "@label:spinbox"
 #| msgid "Maximum columns:"
@@ -178,7 +190,7 @@ msgctxt "@label:spinbox maximum number of columns for tasks"
 msgid "Maximum columns:"
 msgstr "Maximálny počet stĺpcov:"
 
-#: package/contents/ui/ConfigAppearance.qml:128
+#: package/contents/ui/ConfigAppearance.qml:148
 #, fuzzy, kde-format
 #| msgctxt "@label:spinbox"
 #| msgid "Maximum rows:"
@@ -186,32 +198,32 @@ msgctxt "@label:spinbox maximum number of rows for tasks"
 msgid "Maximum rows:"
 msgstr "Maximálny počet riadkov:"
 
-#: package/contents/ui/ConfigAppearance.qml:138
+#: package/contents/ui/ConfigAppearance.qml:158
 #, fuzzy, kde-format
 #| msgid "Spacing between icons:"
 msgctxt "@label:listbox"
 msgid "Spacing between icons:"
 msgstr "Medzery medzi ikonami:"
 
-#: package/contents/ui/ConfigAppearance.qml:142
+#: package/contents/ui/ConfigAppearance.qml:162
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Malé"
 
-#: package/contents/ui/ConfigAppearance.qml:146
+#: package/contents/ui/ConfigAppearance.qml:166
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Normálne"
 
-#: package/contents/ui/ConfigAppearance.qml:150
+#: package/contents/ui/ConfigAppearance.qml:170
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Veľké"
 
-#: package/contents/ui/ConfigAppearance.qml:176
+#: package/contents/ui/ConfigAppearance.qml:196
 #, fuzzy, kde-format
 #| msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 #| msgid "Automatically set to Large when in Touch Mode"
@@ -482,14 +494,14 @@ msgctxt "@option:check Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
 msgstr "Prepína medzi úlohami"
 
-#: package/contents/ui/ConfigBehavior.qml:177
+#: package/contents/ui/ConfigBehavior.qml:175
 #, fuzzy, kde-format
 #| msgid "Skip minimized tasks"
 msgctxt "@option:check mouse wheel task cycling"
 msgid "Skip minimized tasks"
 msgstr "Preskočiť minimalizované úlohy"
 
-#: package/contents/ui/ConfigBehavior.qml:188
+#: package/contents/ui/ConfigBehavior.qml:185
 #, fuzzy, kde-format
 #| msgid "Show only tasks:"
 msgctxt ""
@@ -497,35 +509,35 @@ msgctxt ""
 msgid "Show only tasks:"
 msgstr "Zobrazovať iba úlohy:"
 
-#: package/contents/ui/ConfigBehavior.qml:189
+#: package/contents/ui/ConfigBehavior.qml:186
 #, fuzzy, kde-format
 #| msgid "From current screen"
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current screen"
 msgstr "Z aktuálnej obrazovky"
 
-#: package/contents/ui/ConfigBehavior.qml:194
+#: package/contents/ui/ConfigBehavior.qml:191
 #, fuzzy, kde-format
 #| msgid "From current desktop"
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current desktop"
 msgstr "Z aktuálnej pracovnej plochy"
 
-#: package/contents/ui/ConfigBehavior.qml:199
+#: package/contents/ui/ConfigBehavior.qml:196
 #, fuzzy, kde-format
 #| msgid "From current activity"
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current activity"
 msgstr "Z aktuálnej aktivity"
 
-#: package/contents/ui/ConfigBehavior.qml:204
+#: package/contents/ui/ConfigBehavior.qml:201
 #, fuzzy, kde-format
 #| msgid "That are minimized"
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "That are minimized"
 msgstr "Ktoré sú minimalizované"
 
-#: package/contents/ui/ConfigBehavior.qml:213
+#: package/contents/ui/ConfigBehavior.qml:210
 #, fuzzy, kde-format
 #| msgid "When panel is hidden:"
 msgctxt ""
@@ -533,44 +545,44 @@ msgctxt ""
 msgid "When panel is hidden:"
 msgstr "Kedy je panel skrytý:"
 
-#: package/contents/ui/ConfigBehavior.qml:214
+#: package/contents/ui/ConfigBehavior.qml:211
 #, fuzzy, kde-format
 #| msgid "Unhide when a window wants attention"
 msgctxt "@option:check completes sentence: When panel is hidden"
 msgid "Unhide when a window wants attention"
 msgstr "Zobraziť, keď chce okno pozornosť"
 
-#: package/contents/ui/ConfigBehavior.qml:226
+#: package/contents/ui/ConfigBehavior.qml:223
 #, fuzzy, kde-format
 #| msgid "New tasks appear:"
 msgctxt "@label for radiobutton group completes sentence like: … on the bottom"
 msgid "New tasks appear:"
 msgstr "Nové úlohy sa zobrazia:"
 
-#: package/contents/ui/ConfigBehavior.qml:230
+#: package/contents/ui/ConfigBehavior.qml:227
 #, fuzzy, kde-format
 #| msgid "On the bottom"
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the bottom"
 msgstr "Dole"
 
-#: package/contents/ui/ConfigBehavior.qml:234
-#: package/contents/ui/ConfigBehavior.qml:253
+#: package/contents/ui/ConfigBehavior.qml:231
+#: package/contents/ui/ConfigBehavior.qml:250
 #, fuzzy, kde-format
 #| msgid "To the right"
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the right"
 msgstr "Napravo"
 
-#: package/contents/ui/ConfigBehavior.qml:236
-#: package/contents/ui/ConfigBehavior.qml:251
+#: package/contents/ui/ConfigBehavior.qml:233
+#: package/contents/ui/ConfigBehavior.qml:248
 #, fuzzy, kde-format
 #| msgid "To the left"
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the left"
 msgstr "Naľavo"
 
-#: package/contents/ui/ConfigBehavior.qml:247
+#: package/contents/ui/ConfigBehavior.qml:244
 #, fuzzy, kde-format
 #| msgid "On the Top"
 msgctxt "@option:check completes sentence: New tasks appear"
@@ -766,13 +778,13 @@ msgstr "Zavrieť všetko"
 msgid "&Close"
 msgstr "&Zavrieť"
 
-#: package/contents/ui/Task.qml:154
+#: package/contents/ui/Task.qml:155
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
 msgstr "Spustiť %1"
 
-#: package/contents/ui/Task.qml:159
+#: package/contents/ui/Task.qml:160
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
@@ -781,84 +793,84 @@ msgstr[0] "Pribudla %1 nová správa."
 msgstr[1] "Pribudli %1 nové správy."
 msgstr[2] "Pribudli %1 nové správy."
 
-#: package/contents/ui/Task.qml:167
+#: package/contents/ui/Task.qml:168
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
 msgstr "Zobraziť popis k úlohe pre %1"
 
-#: package/contents/ui/Task.qml:171
+#: package/contents/ui/Task.qml:172
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
 msgstr "Zobrazenie okien vedľa seba pre %1"
 
-#: package/contents/ui/Task.qml:176
+#: package/contents/ui/Task.qml:177
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
 msgstr "Otvorenie textového zoznamu okien pre %1"
 
-#: package/contents/ui/Task.qml:180
+#: package/contents/ui/Task.qml:181
 #, kde-format
 msgid "Activate %1"
 msgstr "Aktivovať %1"
 
-#: package/contents/ui/ToolTipInstance.qml:432
+#: package/contents/ui/ToolTipInstance.qml:435
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
 msgstr "Zrušiť stlmenie %1"
 
-#: package/contents/ui/ToolTipInstance.qml:433
+#: package/contents/ui/ToolTipInstance.qml:436
 #, kde-format
 msgctxt "button to mute app"
 msgid "Mute %1"
 msgstr "Stlmiť %1"
 
-#: package/contents/ui/ToolTipInstance.qml:451
+#: package/contents/ui/ToolTipInstance.qml:454
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
 msgstr "Prispôsobiť hlasitosť pre %1"
 
-#: package/contents/ui/ToolTipInstance.qml:467
+#: package/contents/ui/ToolTipInstance.qml:470
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/ToolTipInstance.qml:471
+#: package/contents/ui/ToolTipInstance.qml:474
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
 msgstr "100%"
 
-#: package/contents/ui/ToolTipInstance.qml:487
+#: package/contents/ui/ToolTipInstance.qml:490
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "On %1"
 msgstr "Na %1"
 
-#: package/contents/ui/ToolTipInstance.qml:490
+#: package/contents/ui/ToolTipInstance.qml:493
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
 msgstr "Pripnuté ku všetkým pracovným plochám"
 
-#: package/contents/ui/ToolTipInstance.qml:496
+#: package/contents/ui/ToolTipInstance.qml:499
 #, kde-format
 msgctxt "Which virtual desktop a window is currently on"
 msgid "Available on all activities"
 msgstr "Dostupné vo všetkých aktivitách"
 
-#: package/contents/ui/ToolTipInstance.qml:506
+#: package/contents/ui/ToolTipInstance.qml:509
 #, kde-format
 msgctxt "Activities a window is currently on (apart from the current one)"
 msgid "Also available on %1"
 msgstr "Dostupné aj na %1"
 
-#: package/contents/ui/ToolTipInstance.qml:510
+#: package/contents/ui/ToolTipInstance.qml:513
 #, kde-format
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
