@@ -1,17 +1,17 @@
 # Translation of plasma_applet_org.kde.plasma.taskmanager.po to Catalan (Valencian)
-# Copyright (C) 2014-2024 This_file_is_part_of_KDE
+# Copyright (C) 2014-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# SPDX-FileCopyrightText: 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2014, 2015, 2019, 2020.
 # Alfredo Vicente <alviboi@gmail.com>, 2019.
+# Josep M. Ferrer <txemaq@gmail.com>, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-28 00:43+0000\n"
-"PO-Revision-Date: 2024-11-06 09:56+0100\n"
+"PO-Revision-Date: 2025-02-28 09:58+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -92,19 +92,19 @@ msgstr "Oculta les altres finestres en passar per damunt de les vistes prèvies"
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show an indicator when a task is playing audio"
-msgstr ""
+msgstr "Mostra un indicador quan una tasca està reproduint àudio"
 
 #: package/contents/ui/ConfigAppearance.qml:69
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Mute task when clicking indicator"
-msgstr ""
+msgstr "Silencia la tasca fent clic en l'indicador"
 
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show media and volume controls in tooltip"
-msgstr ""
+msgstr "Mostra els controls multimèdia i del volum en el consell d'eina"
 
 #: package/contents/ui/ConfigAppearance.qml:85
 #, kde-format
@@ -833,7 +833,3 @@ msgstr "Oblida els llocs recents"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "Oblida els fitxers recents"
-
-#~ msgctxt "@option:check section General"
-#~ msgid "Use audio indicators to mute tasks"
-#~ msgstr "Utilitza els indicadors d'àudio per a silenciar les tasques"

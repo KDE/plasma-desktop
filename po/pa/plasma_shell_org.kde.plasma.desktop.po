@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2018, 2020, 2021, 2022, 2023, 2024 A S Alam <aalam@users.sf.net>
+# SPDX-FileCopyrightText: 2014, 2015, 2018, 2020, 2021, 2022, 2023, 2024, 2025 A S Alam <aalam@users.sf.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-16 00:43+0000\n"
-"PO-Revision-Date: 2024-10-01 21:44-0500\n"
+"PO-Revision-Date: 2025-02-28 10:50-0600\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
 "Language: pa\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -151,16 +151,13 @@ msgstr "ਕੀਬੋਰਡ ਸ਼ਾਰਟਕਟ"
 #: contents/configuration/AppletConfiguration.qml:353
 #, kde-format
 msgid "Apply Settings"
-msgstr "ਸੈਟਿੰਗ ਲਾਗੂ ਕਰੋ"
+msgstr "ਸੈਟਿੰਗਾਂ ਨੂੰ ਲਾਗੂ ਕਰੋ"
 
 #: contents/configuration/AppletConfiguration.qml:354
-#, fuzzy, kde-format
-#| msgid ""
-#| "The settings of the current module have changed. Do you want to apply the "
-#| "changes or discard them?"
+#, kde-format
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
-msgstr "ਮੌਜੂਦਾ ਮੋਡੀਊਲ ਦੀ ਸੈਟਿੰਗ ਬਦਲੀ ਗਈ ਹੈ। ਕੀ ਤੁਸੀਂ ਬਦਲਾਅ ਲਾਗੂ ਕਰਨੇ ਚਾਹੁੰਦੇ ਹੋ ਜਾਂ ਅਣਡਿੱਠੇ?"
+msgstr "ਮੌਜੂਦਾ ਸਫ਼ੇ ਉੱਤੇ ਨਾ-ਸੰਭਾਲੀਆਂ ਤਬਦੀਲੀਆਂ ਹਨ। ਕੀ ਤੁਸੀਂ ਬਦਲਾਅ ਲਾਗੂ ਕਰਨੇ ਚਾਹੁੰਦੇ ਹੋ ਜਾਂ ਅਣਡਿੱਠੇ?"
 
 #: contents/configuration/AppletConfiguration.qml:385
 #, kde-format
@@ -424,8 +421,7 @@ msgid "Dodge windows"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:372
-#, fuzzy, kde-format
-#| msgid "Windows Go Below"
+#, kde-format
 msgid "Windows go below"
 msgstr "ਵਿੰਡੋ ਹੇਠਾਂ ਕਰੋ"
 
@@ -450,31 +446,28 @@ msgid "Translucent"
 msgstr "ਬਲੌਰੀਪਨ"
 
 #: contents/configuration/PanelConfiguration.qml:480
-#, fuzzy, kde-format
-#| msgid "Floating"
+#, kde-format
 msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
 msgstr "ਤਰਦਾ"
 
 #: contents/configuration/PanelConfiguration.qml:494
-#, fuzzy, kde-format
-#| msgid "%1 (disabled)"
+#, kde-format
 msgctxt "@item:inlistbox Option to disable floating panels or applets"
 msgid "Disabled"
-msgstr "%1 (ਅਸਮਰੱਥ ਹੈ)"
+msgstr "ਅਸਮਰੱਥ ਹੈ"
 
 #: contents/configuration/PanelConfiguration.qml:495
 #, kde-format
 msgctxt "@item:inlistbox Option to make only panel applets always float"
 msgid "Applets only"
-msgstr ""
+msgstr "ਸਿਰਫ਼ ਐਪਲਿਟ"
 
 #: contents/configuration/PanelConfiguration.qml:496
-#, fuzzy, kde-format
-#| msgid "Panel and Desktop Management"
+#, kde-format
 msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
-msgstr "ਪੈਨਲ ਅਤੇ ਡੈਸਕਟਾਪ ਇੰਤਜ਼ਾਮ"
+msgstr "ਪੈਨਲ ਅਤੇ ਐਪਲਿਟ"
 
 #: contents/configuration/PanelConfiguration.qml:539
 #, kde-format
@@ -515,17 +508,16 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "ਇਹ ਪੈਨਲ ਹਟਾਓ; ਇਹ ਕਾਰਵਾਈ ਵਾਪਸ ਲੈਣ ਯੋਗ ਹੈ"
 
 #: contents/configuration/PanelConfiguration.qml:706
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
-msgstr "ਪੈਨਲ ਨੂੰ ਹਟਾਓ"
+msgstr "ਪੈਨਲ ਨੂੰ ਕਲੋਨ ਕਰੋ"
 
 #: contents/configuration/PanelConfiguration.qml:710
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
-msgstr ""
+msgstr "ਉਸੇ ਸੈਟਿੰਗਾਂ ਅਤੇ ਐਪਲਿਟਾਂ ਨਾਲ ਨਵਾਂ ਪੈਨਲ ਬਣਾਓ"
 
 #: contents/configuration/PanelConfiguration.qml:719
 #, kde-format
@@ -585,10 +577,9 @@ msgid ""
 msgstr ""
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy, kde-format
-#| msgid "Panel and Desktop Management"
+#, kde-format
 msgid "Manage Panels and Desktops"
-msgstr "ਪੈਨਲ ਅਤੇ ਡੈਸਕਟਾਪ ਇੰਤਜ਼ਾਮ"
+msgstr "ਪੈਨਲ ਅਤੇ ਡੈਸਕਟਾਪਾਂ ਦਾ ਇੰਤਜ਼ਾਮ"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 #, kde-format
@@ -635,7 +626,7 @@ msgstr "ਬਦਲਵੇਂ ਵਿਜੈੱਟ"
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Add %1"
-msgstr ""
+msgstr "%1 ਨੂੰ ਜੋੜੋ"
 
 #: contents/explorer/AppletDelegate.qml:46
 #, kde-format
@@ -649,31 +640,29 @@ msgid "New!"
 msgstr "ਨਵਾਂ!"
 
 #: contents/explorer/AppletDelegate.qml:203
-#, fuzzy, kde-format
-#| msgid "No widgets available"
+#, kde-format
 msgctxt "@info:other accessible for badge showing applet count"
 msgid "%1 widget active"
 msgid_plural "%1 widgets active"
-msgstr[0] "ਕੋਈ ਵਿਜੈਟ ਮੌਜੂਦ ਨਹੀਂ ਹੈ"
-msgstr[1] "ਕੋਈ ਵਿਜੈਟ ਮੌਜੂਦ ਨਹੀਂ ਹੈ"
+msgstr[0] "%1 ਵਿਜੈਟ ਸਰਗਰਮ"
+msgstr[1] "%1 ਵਿਜੈਟ ਸਰਗਰਮ"
 
 #: contents/explorer/AppletDelegate.qml:204
 #, kde-format
 msgctxt " @info:other accessible for badge indicating new widget"
 msgid "Recently installed"
-msgstr ""
+msgstr "ਸੱਜਰੇ ਇੰਸਟਾਲ ਕੀਤੇ"
 
 #: contents/explorer/AppletDelegate.qml:216
-#, fuzzy, kde-format
-#| msgid "Uninstall"
+#, kde-format
 msgid "Cancel Uninstallation"
-msgstr "ਅਣ-ਇੰਸਟਾਲ"
+msgstr "ਅਣ-ਇੰਸਟਾਲੇਸ਼ਨ ਨੂੰ ਰੱਦ ਕਰੋ"
 
 #: contents/explorer/AppletDelegate.qml:217
 #, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Mark for Uninstallation"
-msgstr ""
+msgstr "ਅਣ-ਇੰਸਟਾਲ ਕਰਨ ਲਈ ਨਿਸ਼ਾਨੀ ਲਾਓ"
 
 #: contents/explorer/AppletDelegate.qml:221
 #, kde-format
@@ -747,11 +736,10 @@ msgid "Close Widget Explorer"
 msgstr ""
 
 #: contents/explorer/WidgetExplorer.qml:208
-#, fuzzy, kde-format
-#| msgid "Lock Widgets"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Search Widgets"
-msgstr "ਵਿਦਜੈੱਟ ਲਾਕ ਕਰੋ"
+msgstr "ਵਿਜੈਟ ਨੂੰ ਖੋਜੋ"
 
 #: contents/explorer/WidgetExplorer.qml:237
 #, kde-format
@@ -759,13 +747,12 @@ msgid "Categories"
 msgstr "ਕੈਟਾਗਰੀਆਂ"
 
 #: contents/explorer/WidgetExplorer.qml:258
-#, fuzzy, kde-format
-#| msgid "Uninstall widget"
+#, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Uninstall (%1 Widget)"
 msgid_plural "Uninstall (%1 Widgets)"
-msgstr[0] "ਵਿਜੈਟ ਅਣ-ਇੰਸਟਾਲ"
-msgstr[1] "ਵਿਜੈਟ ਅਣ-ਇੰਸਟਾਲ"
+msgstr[0] "ਅਣ-ਇੰਸਟਾਲ (%1 ਵਿਜੈਟ)"
+msgstr[1] "ਅਣ-ਇੰਸਟਾਲ (%1 ਵਿਜੈਟ)"
 
 #: contents/explorer/WidgetExplorer.qml:360
 #, kde-format
@@ -812,22 +799,19 @@ msgid "Caps Lock is on"
 msgstr "ਕੈਪਸ ਲਾਕ ਚਾਲੂ ਹੈ"
 
 #: contents/lockscreen/LockScreenUi.qml:285
-#, fuzzy, kde-format
-#| msgid "Sleep"
+#, kde-format
 msgid "Slee&p"
-msgstr "ਸਲੀਪ"
+msgstr "ਸਲੀਪ(&p)"
 
 #: contents/lockscreen/LockScreenUi.qml:291
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "&Hibernate"
-msgstr "ਹਾਈਬਰਨੇਟ"
+msgstr "ਹਾਈਬਰਨੇਟ(&H)"
 
 #: contents/lockscreen/LockScreenUi.qml:297
-#, fuzzy, kde-format
-#| msgid "Switch User"
+#, kde-format
 msgid "Switch &User"
-msgstr "ਵਰਤੋਂਕਾਰ ਨੂੰ ਬਦਲੋ"
+msgstr "ਵਰਤੋਂਕਾਰ ਨੂੰ ਬਦਲੋ(&U)"
 
 #: contents/lockscreen/LockScreenUi.qml:358
 #, kde-format

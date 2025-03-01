@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2018, 2020, 2021, 2022, 2023, 2024 A S Alam <aalam@users.sf.net>
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2018, 2020, 2021, 2022, 2023, 2024, 2025 A S Alam <aalam@users.sf.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-28 00:43+0000\n"
-"PO-Revision-Date: 2024-10-01 21:40-0500\n"
+"PO-Revision-Date: 2025-02-28 10:46-0600\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
 "Language: pa\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -143,7 +143,7 @@ msgctxt ""
 "@label for radio button group, completes sentence: … when panel is low on "
 "space etc."
 msgid "Use multi-row view:"
-msgstr ""
+msgstr "ਬਹੁ-ਕਤਾਰ ਝਲਕ ਨੂੰ ਵਰਤੋਂ:"
 
 #: package/contents/ui/ConfigAppearance.qml:120
 #, kde-format
@@ -152,20 +152,16 @@ msgid "Never"
 msgstr "ਕਦੇ ਨਹੀਂ"
 
 #: package/contents/ui/ConfigAppearance.qml:130
-#, fuzzy, kde-format
-#| msgctxt "When to use multi-row view in Task Manager"
-#| msgid "When Panel is low on space and thick enough"
+#, kde-format
 msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "When panel is low on space and thick enough"
-msgstr "ਜਦੋਂ ਪੈਨ ਉੱਤੇ ਥਾਂ ਘੱਟ ਹੋਵੇ ਅਤੇ ਚੌੜਾ ਕਾਫ਼ੀ ਹੋਵੇ"
+msgstr "ਜਦੋਂ ਪੈਨਲ ਉੱਤੇ ਥਾਂ ਘੱਟ ਹੋਵੇ ਅਤੇ ਚੌੜਾ ਕਾਫ਼ੀ ਹੋਵੇ"
 
 #: package/contents/ui/ConfigAppearance.qml:140
-#, fuzzy, kde-format
-#| msgctxt "When to use multi-row view in Task Manager"
-#| msgid "When Panel is low on space and thick enough"
+#, kde-format
 msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "Always when panel is thick enough"
-msgstr "ਜਦੋਂ ਪੈਨ ਉੱਤੇ ਥਾਂ ਘੱਟ ਹੋਵੇ ਅਤੇ ਚੌੜਾ ਕਾਫ਼ੀ ਹੋਵੇ"
+msgstr "ਹਮੇਸ਼ਾਂ, ਜਦੋਂ ਪੈਨਲ ਚੌੜਾ ਕਾਫ਼ੀ ਹੋਵੇ"
 
 #: package/contents/ui/ConfigAppearance.qml:147
 #, kde-format
@@ -231,7 +227,7 @@ msgstr "ਪਰੋਗਰਾਮ ਨਾਂ ਨਾਲ"
 #, kde-format
 msgctxt "@label:listbox completes sentence like: … cycles through tasks"
 msgid "Clicking grouped task:"
-msgstr ""
+msgstr "ਗਰੁੱਪ ਕੀਤੀ ਟਾਸਕ ਨੂੰ ਕਲਿੱਕ ਕਰਨਾ:"
 
 #: package/contents/ui/ConfigBehavior.qml:67
 #, kde-format
@@ -274,18 +270,16 @@ msgid ""
 msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:91
-#, fuzzy, kde-format
-#| msgid "Combine into single button"
+#, kde-format
 msgctxt "@option:check grouped task"
 msgid "Combine into single button"
-msgstr "ਇਕੱਲੇ ਬਟਨ ਵਜੋਂ ਜੋੜੋ"
+msgstr "ਇਕੱਲੇ ਬਟਨ ਵਿੱਚ ਜੋੜੋ"
 
 #: package/contents/ui/ConfigBehavior.qml:98
-#, fuzzy, kde-format
-#| msgid "Group only when the Task Manager is full"
+#, kde-format
 msgctxt "@option:check grouped task"
 msgid "Group only when the Task Manager is full"
-msgstr "ਸਿਰਫ਼ ਤਾਂ ਹੀ ਗਰੁੱਪ ਬਣਾਓ ਜਦੋਂ ਟਾਸਕ ਮੈਨੇਜਰ ਭਰਿਆ ਹੋਵੇ"
+msgstr "ਜੇ ਟਾਸਕ ਮੈਨੇਜਰ ਭਰਿਆ ਹੋਵੇ ਤਾਂ ਹੀ ਗਰੁੱਪ ਬਣਾਓ"
 
 #: package/contents/ui/ConfigBehavior.qml:110
 #, kde-format
@@ -333,7 +327,7 @@ msgstr "ਲਾਂਚਰਾਂ ਨੂੰ ਵੱਖਰੇ ਰੱਖੋ"
 #, kde-format
 msgctxt "@option:check for icons-and-text task manager"
 msgid "Hide launchers after application startup"
-msgstr ""
+msgstr "ਐਪਲੀਕੇਸ਼ਨ ਸ਼ੁਰੂ ਹੋਣ ਦੇ ਬਾਅਦ ਲਾਂਚਰ ਨੂੰ ਲੁਕਾਓ"
 
 #: package/contents/ui/ConfigBehavior.qml:142
 #, kde-format
@@ -380,11 +374,7 @@ msgid "Opens a new window"
 msgstr "ਨਵੀਂ ਵਿੰਡੋ ਨੂੰ ਖੋਲ੍ਹੋ"
 
 #: package/contents/ui/ConfigBehavior.qml:155
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Part of a sentence: 'Middle-clicking any task minimizes/restores window "
-#| "or group'"
-#| msgid "Minimizes/Restores window or group"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task minimizes/"
 "restores window or group'"
@@ -421,11 +411,10 @@ msgid "Cycles through tasks"
 msgstr "ਟਾਸਕਾਂ ਵਿੱਚ ਚੱਕਰ ਲਾਓ"
 
 #: package/contents/ui/ConfigBehavior.qml:175
-#, fuzzy, kde-format
-#| msgid "Skip minimized tasks"
+#, kde-format
 msgctxt "@option:check mouse wheel task cycling"
 msgid "Skip minimized tasks"
-msgstr "ਘੱਟੋ-ਘੱਟ ਕੀਤੇ ਟਾਸਕ ਛੱਡੋ"
+msgstr "ਘੱਟੋ-ਘੱਟ ਕੀਤੇ ਟਾਸਕਾਂ ਨੂੰ ਛੱਡੋ"
 
 #: package/contents/ui/ConfigBehavior.qml:185
 #, kde-format

@@ -2,21 +2,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2007, 2009, 2018, 2020, 2021, 2022, 2023, 2024 A S Alam <aalam@users.sf.net>
+# SPDX-FileCopyrightText: 2007, 2009, 2018, 2020, 2021, 2022, 2023, 2024, 2025 A S Alam <aalam@users.sf.net>
 # Amanpreet Singh Alam <aalam@users.sf.net>, 2008, 2014, 2015, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-19 00:43+0000\n"
-"PO-Revision-Date: 2024-10-25 23:53-0500\n"
+"PO-Revision-Date: 2025-02-28 10:43-0600\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 24.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: package/contents/config/config.qml:13
@@ -30,10 +30,9 @@ msgid "General:"
 msgstr "ਆਮ:"
 
 #: package/contents/ui/configGeneral.qml:40
-#, fuzzy, kde-format
-#| msgid "Show application icons on window outlines"
+#, kde-format
 msgid "Show window outlines"
-msgstr "ਵਿੰਡੋ ਬਾਹਰਲੀ ਹੱਦ ਉੱਤੇ ਐਪਲੀਕੇਸ਼ਨ ਆਈਕਾਨ ਵੇਖਾਓ"
+msgstr "ਵਿੰਡੋ ਆਉਟਲੁਾਈਨ ਨੂੰ ਵੇਖਾਓ"
 
 #: package/contents/ui/configGeneral.qml:45
 #, kde-format
@@ -166,25 +165,22 @@ msgid "Add Virtual Desktop"
 msgstr "ਵਰਚੁਅਲ ਡੈਸਕਟਾਪ ਨੂੰ ਜੋੜੋ"
 
 #: package/contents/ui/main.qml:589
-#, fuzzy, kde-format
-#| msgid "Remove Virtual Desktop"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Remove Virtual Desktop"
-msgstr "ਵਰਚੁਅਲ ਡੈਸਕਟਾਪ ਹਟਾਓ"
+msgstr "ਵਰਚੁਅਲ ਡੈਸਕਟਾਪ ਨੂੰ ਹਟਾਓ"
 
 #: package/contents/ui/main.qml:596
-#, fuzzy, kde-format
-#| msgid "Configure Virtual Desktops…"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "&Configure Activities…"
-msgstr "ਵਰਚੁਅਲ ਡੈਸਕਟਾਪ ਸੰਰਚਨਾ…"
+msgstr "…ਸਰਗਰਮੀਆਂ ਦੀ ਸੰਰਚਨਾ(&C)"
 
 #: package/contents/ui/main.qml:601
-#, fuzzy, kde-format
-#| msgid "Configure Virtual Desktops…"
+#, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Configure Virtual Desktops…"
-msgstr "ਵਰਚੁਅਲ ਡੈਸਕਟਾਪ ਸੰਰਚਨਾ…"
+msgstr "…ਵਰਚੁਅਲ ਡੈਸਕਟਾਪਾਂ ਦੀ ਸੰਰਚਨਾ"
 
 #~ msgid "Activate %1"
 #~ msgstr "%1 ਸਰਗਰਮ ਕਰੋ"

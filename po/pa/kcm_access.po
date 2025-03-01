@@ -2,21 +2,21 @@
 # Amanpreet Singh Alam <aalam@redhat.com>, 2004, 2005.
 # Amanpreet Singh Brar <amanpreetalam@yahoo.com>, 2005.
 # Amanpreet Singh Brar <aalam@redhat.com>, 2005.
-# SPDX-FileCopyrightText: 2007, 2008, 2021, 2024 A S Alam <aalam@users.sf.net>
+# SPDX-FileCopyrightText: 2007, 2008, 2021, 2024, 2025 A S Alam <aalam@users.sf.net>
 # Amanpreet Singh Alam <aalam@users.sf.net>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-28 00:42+0000\n"
-"PO-Revision-Date: 2024-10-25 23:46-0500\n"
+"PO-Revision-Date: 2025-02-28 10:36-0600\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 24.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 
@@ -543,7 +543,7 @@ msgstr "ਨੀਲਾ"
 #: ui/ColorblindnessCorrection.qml:114
 #, kde-format
 msgid "Purple"
-msgstr ""
+msgstr "ਪਰਪਲ"
 
 #: ui/KeyboardFilters.qml:18
 #, kde-format
@@ -626,11 +626,10 @@ msgid "Ring system bell when rejected"
 msgstr "ਜਦੋਂ ਨਾ-ਮਨਜ਼ੂਰ ਕੀਤੀ ਜਾਵੇ ਤਾਂ ਸਿਸਟਮ ਘੰਟੀ ਵਜਾਓ"
 
 #: ui/main.qml:28
-#, fuzzy, kde-format
-#| msgid "Use System Bell"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "System Bell"
-msgstr "ਸਿਸਟਮ ਘੰਟੀ ਵਰਤੋ"
+msgstr "ਸਿਸਟਮ ਘੰਟੀ"
 
 #: ui/main.qml:33
 #, kde-format
@@ -651,10 +650,9 @@ msgid "Mouse Navigation"
 msgstr "ਮਾਊਸ ਨੇਵੀਗੇਸ਼ਨ"
 
 #: ui/main.qml:48
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgid "Activation Shortcuts"
-msgstr "ਐਕਟੀਵੇਸ਼ਨ ਜੈੱਸਚਰ"
+msgstr "ਐਕਟੀਵੇਸ਼ਨ ਸ਼ਾਰਟਕੱਟ"
 
 #: ui/main.qml:53
 #, kde-format
@@ -666,7 +664,7 @@ msgstr "ਸਕਰੀਨ ਰੀਡਰ"
 #, kde-format
 msgctxt "Correction for color blindness"
 msgid "Color Blindness Correction"
-msgstr ""
+msgstr "ਰੰਗ ਅੰਧਰਾਤਾ ਸੋਧ"
 
 #: ui/main.qml:63
 #, kde-format
@@ -675,15 +673,13 @@ msgid "Shake Cursor"
 msgstr ""
 
 #: ui/ModifierKeys.qml:17
-#, fuzzy, kde-format
-#| msgid "Sticky keys:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sticky keys:"
-msgstr "ਸਟਿੱਕੀ ਸਵਿੱਚਾਂ:"
+msgstr "ਸਟਿੱਕੀ ਸਵਿੱਚਾਂ"
 
 #: ui/ModifierKeys.qml:22
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable sticky keys"
 msgid "Enable"
 msgstr "ਸਮਰੱਥ"
@@ -698,8 +694,7 @@ msgid ""
 msgstr ""
 
 #: ui/ModifierKeys.qml:39
-#, fuzzy, kde-format
-#| msgid "Lock the sticky keys"
+#, kde-format
 msgctxt "@option:check"
 msgid "Lock sticky keys"
 msgstr "ਸਟਿੱਕੀ ਸਵਿੱਚਾਂ ਨੂੰ ਲਾਕ ਕਰੋ"
@@ -723,8 +718,7 @@ msgid "Ring system bell when modifier keys are used"
 msgstr "ਜਦੋਂ ਸੋਧਕ ਸਵਿੱਚਾਂ ਦਬਾਈਆਂ ਜਾਣ ਤਾਂ ਸਿਸਟਮ ਘੰਟੀ ਵਜਾਓ"
 
 #: ui/ModifierKeys.qml:88
-#, fuzzy, kde-format
-#| msgid "Feedback:"
+#, kde-format
 msgctxt "@option:check Feedback options:"
 msgid "Feedback:"
 msgstr "ਫੀਡਬੈਕ:"
@@ -750,22 +744,19 @@ msgid "Show notification when modifier or locking keys are used"
 msgstr "ਜਦੋਂ ਵੀ ਸੋਧ ਜਾਂ ਲਾਕ ਕਰਨ ਵਾਲੀਆਂ ਸਵਿੱਚਾਂ ਵਰਤੀਆਂ ਜਾਣ ਤੋਂ ਨੋਟੀਫਿਕੇਸ਼ਨ ਵੇਖਾਓ"
 
 #: ui/ModifierKeys.qml:120
-#, fuzzy, kde-format
-#| msgid "Configure Notifications…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Notifications…"
 msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਦੀ ਸੰਰਚਨਾ…"
 
 #: ui/MouseNavigation.qml:17
-#, fuzzy, kde-format
-#| msgid "Use number pad to move cursor:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move cursor:"
 msgstr "ਕਰਸਰ ਹਿਲਾਉਣ ਲਈ ਅੰਕ ਪੈਡ ਵਰਤੋਂ:"
 
 #: ui/MouseNavigation.qml:22
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable mouse navigation"
 msgid "Enable"
 msgstr "ਸਮਰੱਥ"
@@ -782,46 +773,40 @@ msgid ""
 msgstr ""
 
 #: ui/MouseNavigation.qml:39
-#, fuzzy, kde-format
-#| msgid "Acceleration delay:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
 msgstr "ਐਕਸਰਲੇਸ਼ਨ ਦੇਰੀ:"
 
 #: ui/MouseNavigation.qml:66
-#, fuzzy, kde-format
-#| msgid "Repeat interval:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr "ਦੁਹਰਾਉਣ ਅੰਤਰਾਲ:"
 
 #: ui/MouseNavigation.qml:93
-#, fuzzy, kde-format
-#| msgid "Acceleration time:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "ਐਕਸਰਲੇਸ਼ਨ ਸਮਾਂ:"
 
 #: ui/MouseNavigation.qml:118
-#, fuzzy, kde-format
-#| msgid "Maximum speed:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr "ਵੱਧੋ-ਵੱਧ ਗਤੀ:"
 
 #: ui/MouseNavigation.qml:132
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
 msgstr "ਪੁਆਇੰਟਰ ਐਕਸਰਲੇਸ਼ਨ:"
 
 #: ui/ScreenReader.qml:20
-#, fuzzy, kde-format
-#| msgid "Launch Orca Screen Reader Configuration…"
+#, kde-format
 msgctxt "@info Placeholder message title"
 msgid "The Orca Screen Reader is not installed"
-msgstr "ਓਰਕਾ ਸਕਰੀਨ ਰੀਡਰ ਸੰਰਚਨਾ ਚਲਾਓ…"
+msgstr "ਓਰਕਾ ਸਕਰੀਨ ਰੀਡਰ ਇੰਸਟਾਲ ਨਹੀਂ ਹੈ"
 
 #: ui/ScreenReader.qml:21
 #, kde-format
@@ -830,8 +815,7 @@ msgid "Please install it, then close and reopen this window"
 msgstr ""
 
 #: ui/ScreenReader.qml:27
-#, fuzzy, kde-format
-#| msgid "Enable Screen Reader"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable Screen Reader"
 msgstr "ਸਕਰੀਨ ਰੀਡਰ ਸਮਰੱਥ ਕਰੋ"
@@ -850,18 +834,16 @@ msgid "Shake cursor to find it:"
 msgstr ""
 
 #: ui/ShakeCursor.qml:16
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable shake cursor effect"
 msgid "Enable"
 msgstr "ਸਮਰੱਥ"
 
 #: ui/ShakeCursor.qml:28
-#, fuzzy, kde-format
-#| msgid "Show a notification"
+#, kde-format
 msgctxt "@label Cursor magnification level"
 msgid "Magnification:"
-msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਵੇਖਾਓ"
+msgstr "ਵੱਡਦਰਸ਼ਨ:"
 
 #: ui/ShakeCursor.qml:55
 #, kde-format
