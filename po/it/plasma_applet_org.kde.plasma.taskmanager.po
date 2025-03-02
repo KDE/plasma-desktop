@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-24 03:46+0000\n"
-"PO-Revision-Date: 2024-08-28 18:56+0200\n"
+"PO-Revision-Date: 2025-03-01 07:52+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -74,7 +74,7 @@ msgstr "Generale:"
 msgid "Show small window previews when hovering over Tasks"
 msgstr ""
 "Mostra anteprime piccole delle finestre quando passi il puntatore sulle "
-"attività"
+"applicazioni"
 
 #: package/contents/ui/ConfigAppearance.qml:39
 #, kde-format
@@ -106,12 +106,14 @@ msgstr "Num. massimo righe:"
 #: package/contents/ui/ConfigAppearance.qml:67
 #, kde-format
 msgid "Always arrange tasks in rows of as many columns"
-msgstr "Disponi sempre le attività in righe con lo stesso numero di colonne"
+msgstr ""
+"Disponi sempre le applicazioni in righe con lo stesso numero di colonne"
 
 #: package/contents/ui/ConfigAppearance.qml:67
 #, kde-format
 msgid "Always arrange tasks in columns of as many rows"
-msgstr "Disponi sempre le attività in colonne con lo stesso numero di righe"
+msgstr ""
+"Disponi sempre le applicazioni in colonne con lo stesso numero di righe"
 
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
@@ -160,13 +162,13 @@ msgstr "In base al nome del programma"
 #: package/contents/ui/ConfigBehavior.qml:55
 #, kde-format
 msgid "Clicking grouped task:"
-msgstr "Il clic su un'attività raggruppata:"
+msgstr "Il clic su un'applicazione raggruppata:"
 
 #: package/contents/ui/ConfigBehavior.qml:62
 #, kde-format
 msgctxt "Completes the sentence 'Clicking grouped task cycles through tasks' "
 msgid "Cycles through tasks"
-msgstr "Scorri tra le attività"
+msgstr "Scorri tra le applicazioni"
 
 #: package/contents/ui/ConfigBehavior.qml:63
 #, kde-format
@@ -247,18 +249,18 @@ msgstr "Mantieni i lanciatori separati"
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Clicking active task:"
-msgstr "Il clic su un'attività attiva:"
+msgstr "Il clic su un'applicazione attiva:"
 
 #: package/contents/ui/ConfigBehavior.qml:122
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
-msgstr "Minimizza l'attività"
+msgstr "Minimizza l'applicazione"
 
 #: package/contents/ui/ConfigBehavior.qml:127
 #, kde-format
 msgid "Middle-clicking any task:"
-msgstr "Il clic del tasto centrale su qualsiasi attività:"
+msgstr "Il clic del tasto centrale su qualsiasi applicazione:"
 
 #: package/contents/ui/ConfigBehavior.qml:131
 #, kde-format
@@ -298,7 +300,7 @@ msgctxt ""
 "Part of a sentence: 'Middle-clicking any task brings it to the current "
 "virtual desktop'"
 msgid "Brings it to the current virtual desktop"
-msgstr "Porta l'attività al desktop virtuale attuale"
+msgstr "Porta l'applicazione al desktop virtuale attuale"
 
 #: package/contents/ui/ConfigBehavior.qml:146
 #, kde-format
@@ -310,12 +312,12 @@ msgstr "Rotella del mouse:"
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
-msgstr "Scorri tra le attività"
+msgstr "Scorri tra le applicazioni"
 
 #: package/contents/ui/ConfigBehavior.qml:156
 #, kde-format
 msgid "Skip minimized tasks"
-msgstr "Salta le attività minimizzate"
+msgstr "Salta le applicazioni minimizzate"
 
 #: package/contents/ui/ConfigBehavior.qml:167
 #, kde-format
@@ -355,7 +357,7 @@ msgstr "Mostra quando una finestra richiede attenzione"
 #: package/contents/ui/ConfigBehavior.qml:205
 #, kde-format
 msgid "New tasks appear:"
-msgstr "Le nuove attività appaiono:"
+msgstr "Le nuove applicazioni appaiono:"
 
 #: package/contents/ui/ConfigBehavior.qml:209
 #, kde-format
@@ -586,7 +588,7 @@ msgstr[1] "Ci sono %1 nuovi messaggi."
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
-msgstr "Mostra suggerimenti attività per %1"
+msgstr "Mostra suggerimenti applicazioni per %1"
 
 #: package/contents/ui/Task.qml:103
 #, kde-format
