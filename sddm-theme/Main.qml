@@ -118,9 +118,11 @@ Item {
             source: clock
             visible: !softwareRendering && config.showClock === "true"
             radius: 6
+            verticalOffset: 1
             samples: 14
-            spread: 0.3
-            color : "black" // shadows should always be black
+            spread: 0.15
+            color : Qt.rgba(0, 0, 0, 0.60)
+            opacity: loginScreenRoot.uiVisible ? 0 : 1
             Behavior on opacity {
                 OpacityAnimator {
                     duration: Kirigami.Units.veryLongDuration * 2
