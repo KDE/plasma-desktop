@@ -200,10 +200,12 @@ Item {
             anchors.fill: clock
             source: clock
             visible: !softwareRendering && config.alwaysShowClock
-            radius: 6
-            samples: 14
-            spread: 0.3
-            color : "black" // shadows should always be black
+            radius: 7
+            verticalOffset: 0.8
+            samples: 15
+            spread: 0.2
+            color : Qt.rgba(0, 0, 0, 0.7)
+            opacity: lockScreenRoot.uiVisible ? 0 : 1
             Behavior on opacity {
                 OpacityAnimator {
                     duration: Kirigami.Units.veryLongDuration * 2
