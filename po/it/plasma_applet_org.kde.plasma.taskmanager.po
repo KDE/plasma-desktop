@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-28 00:43+0000\n"
-"PO-Revision-Date: 2025-01-04 22:14+0100\n"
+"PO-Revision-Date: 2025-03-01 07:52+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -76,7 +76,7 @@ msgctxt "@option:check section General"
 msgid "Show small window previews when hovering over tasks"
 msgstr ""
 "Mostra anteprime piccole delle finestre quando passi il puntatore sulle "
-"attività"
+"applicazioni"
 
 #: package/contents/ui/ConfigAppearance.qml:54
 #, kde-format
@@ -89,19 +89,19 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show an indicator when a task is playing audio"
-msgstr ""
+msgstr "Mostra un indicatore quando un'applicazione sta riproducendo l'audio"
 
 #: package/contents/ui/ConfigAppearance.qml:69
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Mute task when clicking indicator"
-msgstr ""
+msgstr "Mostra un indicatore quando un'applicazione sta riproducendo l'audio"
 
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show media and volume controls in tooltip"
-msgstr ""
+msgstr "Mostra i controlli multimediali e del volume nei suggerimenti"
 
 #: package/contents/ui/ConfigAppearance.qml:85
 #, kde-format
@@ -113,7 +113,7 @@ msgstr "Riempi lo spazio libero sul pannello"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Maximum task width:"
-msgstr "Larghezza massima delle attività:"
+msgstr "Larghezza massima delle applicazioni:"
 
 #: package/contents/ui/ConfigAppearance.qml:100
 #, kde-format
@@ -231,7 +231,7 @@ msgstr "In base al nome del programma"
 #, kde-format
 msgctxt "@label:listbox completes sentence like: … cycles through tasks"
 msgid "Clicking grouped task:"
-msgstr "Il clic su un'attività raggruppata:"
+msgstr "Il clic su un'applicazione raggruppata:"
 
 #: package/contents/ui/ConfigBehavior.qml:67
 #, kde-format
@@ -239,7 +239,7 @@ msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task cycles through "
 "tasks' "
 msgid "Cycles through tasks"
-msgstr "Scorri tra le attività"
+msgstr "Scorri tra le applicazioni"
 
 #: package/contents/ui/ConfigBehavior.qml:68
 #, kde-format
@@ -341,20 +341,20 @@ msgctxt ""
 "@label for checkbox Part of a sentence: 'Clicking active task minimizes the "
 "task'"
 msgid "Clicking active task:"
-msgstr "Il clic su un'attività attiva:"
+msgstr "Il clic su un'applicazione attiva:"
 
 #: package/contents/ui/ConfigBehavior.qml:143
 #, kde-format
 msgctxt ""
 "@option:check Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
-msgstr "Minimizza l'attività"
+msgstr "Minimizza l'applicazione"
 
 #: package/contents/ui/ConfigBehavior.qml:148
 #, kde-format
 msgctxt "@label:listbox completes sentence like: … does nothing"
 msgid "Middle-clicking any task:"
-msgstr "Il clic del tasto centrale su qualsiasi attività:"
+msgstr "Il clic del tasto centrale su qualsiasi applicazione:"
 
 #: package/contents/ui/ConfigBehavior.qml:152
 #, kde-format
@@ -401,7 +401,7 @@ msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task brings it to "
 "the current virtual desktop'"
 msgid "Brings it to the current virtual desktop"
-msgstr "Porta l'attività al desktop virtuale attuale"
+msgstr "Porta l'applicazione al desktop virtuale attuale"
 
 #: package/contents/ui/ConfigBehavior.qml:167
 #, kde-format
@@ -414,13 +414,13 @@ msgstr "Rotella del mouse:"
 #, kde-format
 msgctxt "@option:check Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
-msgstr "Scorri tra le attività"
+msgstr "Scorri tra le applicazioni"
 
 #: package/contents/ui/ConfigBehavior.qml:175
 #, kde-format
 msgctxt "@option:check mouse wheel task cycling"
 msgid "Skip minimized tasks"
-msgstr "Salta le attività minimizzate"
+msgstr "Salta le applicazioni minimizzate"
 
 #: package/contents/ui/ConfigBehavior.qml:185
 #, kde-format
@@ -445,7 +445,7 @@ msgstr "Dal desktop attuale"
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current activity"
-msgstr "Dall'attività attuale"
+msgstr "Dall'applicazione attuale"
 
 #: package/contents/ui/ConfigBehavior.qml:201
 #, kde-format
@@ -470,7 +470,7 @@ msgstr "Mostra quando una finestra richiede attenzione"
 #, kde-format
 msgctxt "@label for radiobutton group completes sentence like: … on the bottom"
 msgid "New tasks appear:"
-msgstr "Le nuove attività appaiono:"
+msgstr "Le nuove applicazioni appaiono:"
 
 #: package/contents/ui/ConfigBehavior.qml:227
 #, kde-format
@@ -705,7 +705,7 @@ msgstr[1] "Ci sono %1 nuovi messaggi."
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
-msgstr "Mostra suggerimenti attività per %1"
+msgstr "Mostra suggerimenti applicazioni per %1"
 
 #: package/contents/ui/Task.qml:172
 #, kde-format

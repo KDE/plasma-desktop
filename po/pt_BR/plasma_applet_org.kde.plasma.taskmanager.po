@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-28 00:43+0000\n"
-"PO-Revision-Date: 2025-01-22 19:30-0300\n"
+"PO-Revision-Date: 2025-03-01 17:03-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -93,19 +93,19 @@ msgstr "Ocultar outras janelas ao passar o mouse sobre as visualizações"
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show an indicator when a task is playing audio"
-msgstr ""
+msgstr "Exibir indicador enquanto uma tarefa reproduz áudio"
 
 #: package/contents/ui/ConfigAppearance.qml:69
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Mute task when clicking indicator"
-msgstr ""
+msgstr "Silenciar tarefas ao clicar no indicador"
 
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show media and volume controls in tooltip"
-msgstr ""
+msgstr "Exibir controles de mídia e volume nas dicas"
 
 #: package/contents/ui/ConfigAppearance.qml:85
 #, kde-format
@@ -267,7 +267,7 @@ msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task shows textual "
 "list' "
 msgid "Shows textual list"
-msgstr "Mostrar lista textual"
+msgstr "Exibir lista textual"
 
 #: package/contents/ui/ConfigBehavior.qml:81
 #, kde-format
@@ -431,7 +431,7 @@ msgstr "Ignorar tarefas minimizadas"
 msgctxt ""
 "@label for checkbox group, completes sentence like: … from current screen"
 msgid "Show only tasks:"
-msgstr "Mostrar apenas as tarefas:"
+msgstr "Exibir apenas as tarefas:"
 
 #: package/contents/ui/ConfigBehavior.qml:186
 #, kde-format
@@ -592,7 +592,7 @@ msgstr "&Nova área de trabalho"
 #: package/contents/ui/ContextMenu.qml:382
 #, kde-format
 msgid "Show in &Activities"
-msgstr "Mostrar nas &atividades"
+msgstr "Exibir nas &atividades"
 
 #: package/contents/ui/ContextMenu.qml:406
 #, kde-format
@@ -709,13 +709,13 @@ msgstr[1] "Existem %1 novas mensagens."
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
-msgstr "Mostrar dicas para %1"
+msgstr "Exibir dicas para %1"
 
 #: package/contents/ui/Task.qml:172
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
-msgstr "Mostrar janelas lado a lado para %1"
+msgstr "Exibir janelas lado a lado para %1"
 
 #: package/contents/ui/Task.qml:177
 #, kde-format

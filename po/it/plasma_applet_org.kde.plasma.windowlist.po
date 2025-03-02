@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Federico Zenith <federico.zenith@member.fsf.org>, 2009, 2014.
-# Luigi Toscano <luigi.toscano@tiscali.it>, 2022.
+# SPDX-FileCopyrightText: 2022, 2025 Luigi Toscano <luigi.toscano@tiscali.it>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_windowlist\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-24 09:38+0000\n"
-"PO-Revision-Date: 2022-07-02 15:20+0200\n"
+"PO-Revision-Date: 2025-02-25 21:23+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #: contents/config/config.qml:13
 #, kde-format
@@ -39,11 +39,10 @@ msgid "Not applicable when the widget is on the Desktop."
 msgstr "Non valido se l'oggetto è sul desktop."
 
 #: contents/ui/main.qml:81
-#, fuzzy, kde-format
-#| msgid "No windows"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "No open windows"
-msgstr "Nessuna finestra"
+msgstr "Nessuna finestra aperta"
 
 #: contents/ui/main.qml:108
 #, kde-format

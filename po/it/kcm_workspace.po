@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Federico Zenith <federico.zenith@member.fsf.org>, 2010, 2011.
-# SPDX-FileCopyrightText: 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Paolo Zamponi <feus73@gmail.com>
+# SPDX-FileCopyrightText: 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Paolo Zamponi <feus73@gmail.com>
 # SPDX-FileCopyrightText: 2024 Vincenzo Reale <smart2128vr@gmail.com>
 #
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-18 00:42+0000\n"
-"PO-Revision-Date: 2024-09-27 17:50+0200\n"
+"PO-Revision-Date: 2025-02-27 15:30+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #: ui/main.qml:23
 #, kde-format
@@ -37,13 +37,13 @@ msgstr "Riavvia"
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
-msgstr ""
+msgstr "Permetti a Plasma di mostrare:"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr ""
+msgstr "I suggerimenti dei pannelli e degli oggetti"
 
 #: ui/main.qml:62
 #, kde-format
@@ -53,14 +53,18 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"Permette a tutti i pannelli di Plasma e agli oggetti desktop di mostrare dei "
+"suggerimenti descrittivi quando ci passi sopra col mouse. Questa "
+"impostazione non ha effetto sui quei piccoli suggerimenti che sono "
+"visualizzati, ad esempio, quando passi col mouse sopra ai pulsanti o agli "
+"altri elementi dell'interfaccia utente."
 
 #: ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
-msgstr "Mostra una finestra a comparsa alla modifica della mappatura"
+msgstr "Un OSD a comparsa per i cambiamenti di stato"
 
 #: ui/main.qml:80
 #, kde-format
@@ -68,6 +72,9 @@ msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
+"Permette a tutti gli oggetti di Plasma di mostrare un on-screen display "
+"(OSD) a comparsa per le modifiche, ad esempio ai livelli di volume o di "
+"luminosità, oppure al cambio del dispositivo audio."
 
 #: ui/main.qml:92
 #, kde-format
@@ -303,7 +310,7 @@ msgstr "Abilita l'incollaggio della selezione col tasto centrale"
 #: workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display large panel and widget tooltips"
-msgstr ""
+msgstr "Visualizza dei suggerimenti grandi per i pannelli e gli oggetti"
 
 #. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:10
@@ -311,26 +318,25 @@ msgstr ""
 msgid ""
 "Allow Plasma widgets to display large panel and widget tooltips on hover"
 msgstr ""
+"Permetti agli oggetti di Plasma di visualizzare al passaggio del mouse dei "
+"suggerimenti grandi per i pannelli e gli oggetti"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
-#, fuzzy, kde-format
-#| msgid "Display visual feedback for status changes"
+#, kde-format
 msgid "Display small popups for status changes"
-msgstr "Visualizza un riscontro visivo per i cambiamenti di stato"
+msgstr ""
+"Visualizza delle finestre a comparsa piccole per i cambiamenti di stato"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show an on-screen display to indicate status changes such as brightness "
-#| "or volume"
+#, kde-format
 msgid ""
 "Allow Plasma widgets to display small popups for status changes such as "
 "brightness or volume"
 msgstr ""
-"Mostra una visualizzazione a schermo per indicare i cambiamenti di stato, "
-"come la luminosità o il volume."
+"Permetti agli oggetti di Plasma di visualizzare delle piccole finestre a "
+"comparsa per i cambiamenti di stato, quali la luminosità o il volume"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21
