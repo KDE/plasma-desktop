@@ -942,7 +942,9 @@ Kicker.DashboardWindow {
                         }
 
                         Keys.onPressed: event => {
-                            if (event.key === Qt.Key_Left) {
+                            let backArrowKey = (event.key === Qt.Key_Left && Application.layoutDirection === Qt.LeftToRight) ||
+                                (event.key === Qt.Key_Right && Application.layoutDirection === Qt.RightToLeft)
+                            if (backArrowKey) {
                                 event.accepted = true;
 
                                 const currentRow = Math.max(0, Math.ceil(currentItem.y / mainGrid.cellHeight) - 1);
