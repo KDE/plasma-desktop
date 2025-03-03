@@ -9,6 +9,7 @@ import QtQuick.Layouts 1.15
 
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
+import org.kde.plasma.workspace.components 2.0 as WorkspaceComponents
 import org.kde.kirigami 2.20 as Kirigami
 
 Kirigami.Icon {
@@ -98,5 +99,31 @@ Kirigami.Icon {
                 }
             }
         }
+    }
+
+    Loader {
+        id: badgeLoader
+
+        anchors.bottom: defaultCompactRepresentation.bottom
+        anchors.right: defaultCompactRepresentation.right
+
+        active: defaultCompactRepresentation.plasmoidItem.badgeText.length != 0
+
+        sourceComponent: WorkspaceComponents.BadgeOverlay {
+            text: defaultCompactRepresentation.plasmoidItem.badgeText
+            icon: defaultCompactRepresentation
+        }
+
+        // Non-default state to center if the badge is wider than the icon
+        states: [
+            State {
+                when: badgeLoader.width >= defaultCompactRepresentation.width
+                AnchorChanges {
+                    target: badgeLoader
+                    anchors.right: undefined
+                    anchors.horizontalCenter: defaultCompactRepresentation.horizontalCenter
+                }
+            }
+        ]
     }
 }
