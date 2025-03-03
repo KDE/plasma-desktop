@@ -768,7 +768,7 @@ Kicker.DashboardWindow {
                             property int mouseCol
                             property bool hasActionList: ((model.favoriteId !== null)
                                 || (("hasActionList" in model) && (model.hasActionList === true)))
-                            property Item menu: actionMenu
+                            property ActionMenu menu: actionMenu
 
                             width: ListView.view.width
                             height: Math.ceil((label.paintedHeight
