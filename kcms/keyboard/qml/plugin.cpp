@@ -5,6 +5,7 @@
 #include <QQmlExtensionPlugin>
 
 #include <flags.h>
+#include <layoutsearchmodel.h>
 
 using namespace Qt::StringLiterals;
 
@@ -22,6 +23,7 @@ public:
         qmlRegisterSingletonType<Flags>(uri, 1, 0, "Flags", [](QQmlEngine *, QJSEngine *) -> QObject * {
             return new Flags;
         });
+        qmlRegisterType<LayoutSearchModel>(uri, 1, 0, "LayoutSearchModel");
     }
 };
 

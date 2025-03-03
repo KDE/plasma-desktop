@@ -11,11 +11,6 @@
 class LayoutModel final : public QAbstractListModel
 {
     Q_OBJECT
-    enum Roles {
-        ShortNameRole = Qt::UserRole + 1,
-        DescripionRole,
-        VariantNameRole,
-    };
 
     struct Data {
         explicit Data(const QString &_name, const QString &_description, const QString &_variantName)
@@ -36,6 +31,11 @@ public:
     Q_INVOKABLE int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     Q_INVOKABLE QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames() const override;
+    enum Roles {
+        ShortNameRole = Qt::UserRole + 1,
+        DescripionRole,
+        VariantNameRole,
+    };
 
 private:
     QList<Data> m_data;
