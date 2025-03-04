@@ -90,7 +90,7 @@ PlasmoidItem {
 
             visible: Plasmoid.configuration.displayStyle === 0 || !flag.valid
 
-            font.pointSize: height
+            font.pointSize: height || Kirigami.Theme.defaultFont.pointSize
             fontSizeMode: Text.Fit
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
