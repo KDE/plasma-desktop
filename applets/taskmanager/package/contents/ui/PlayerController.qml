@@ -19,10 +19,10 @@ import org.kde.kirigami as Kirigami
 import org.kde.plasma.private.mpris as Mpris
 
 RowLayout {
-    enabled: toolTipDelegate.playerData.canControl
+    enabled: toolTipDelegate.playerData?.canControl ?? false
     spacing: Kirigami.Units.smallSpacing
 
-    readonly property bool isPlaying: toolTipDelegate.playerData.playbackStatus === Mpris.PlaybackStatus.Playing
+    readonly property bool isPlaying: toolTipDelegate.playerData?.playbackStatus === Mpris.PlaybackStatus.Playing
 
     ColumnLayout {
         Layout.fillWidth: true
@@ -40,7 +40,7 @@ RowLayout {
                 maximumLineCount: artistText.visible ? 1 : 2
                 wrapMode: Text.NoWrap
                 elide: parent.state ? Text.ElideNone : Text.ElideRight
-                text: toolTipDelegate.playerData.track
+                text: toolTipDelegate.playerData?.track ?? ""
                 textFormat: Text.PlainText
             }
         }
@@ -57,7 +57,7 @@ RowLayout {
                 id: artistText
                 wrapMode: Text.NoWrap
                 elide: parent.state ? Text.ElideNone : Text.ElideRight
-                text: toolTipDelegate.playerData.artist
+                text: toolTipDelegate.playerData?.artist ?? ""
                 font: Kirigami.Theme.smallFont
                 textFormat: Text.PlainText
             }
@@ -65,13 +65,13 @@ RowLayout {
     }
 
     PlasmaComponents3.ToolButton {
-        enabled: toolTipDelegate.playerData.canGoPrevious
+        enabled: toolTipDelegate.playerData?.canGoPrevious ?? false
         icon.name: mirrored ? "media-skip-forward" : "media-skip-backward"
         onClicked: toolTipDelegate.playerData.Previous()
     }
 
     PlasmaComponents3.ToolButton {
-        enabled: isPlaying ? toolTipDelegate.playerData.canPause : toolTipDelegate.playerData.canPlay
+        enabled: (isPlaying ? toolTipDelegate.playerData?.canPause : toolTipDelegate.playerData?.canPlay) ?? false
         icon.name: isPlaying ? "media-playback-pause" : "media-playback-start"
         onClicked: {
             if (!isPlaying) {
@@ -83,7 +83,7 @@ RowLayout {
     }
 
     PlasmaComponents3.ToolButton {
-        enabled: toolTipDelegate.playerData.canGoNext
+        enabled: toolTipDelegate.playerData?.canGoNext ?? false
         icon.name: mirrored ? "media-skip-backward" : "media-skip-forward"
         onClicked: toolTipDelegate.playerData.Next()
     }
