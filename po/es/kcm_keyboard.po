@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 00:43+0000\n"
+"POT-Creation-Date: 2025-03-04 00:42+0000\n"
 "PO-Revision-Date: 2024-10-02 15:59+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -134,13 +134,13 @@ msgctxt "@title:window"
 msgid "Add Layout"
 msgstr "Añadir distribución"
 
-#: ui/LayoutDialog.qml:177
+#: ui/LayoutDialog.qml:180
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
 msgstr "Nombre corto de la distribución"
 
-#: ui/LayoutDialog.qml:187
+#: ui/LayoutDialog.qml:190
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -150,13 +150,13 @@ msgstr ""
 "El nombre abreviado de la distribución seleccionada que se mostrará en la "
 "bandeja del sistema. Puede cambiar este ajuste."
 
-#: ui/LayoutDialog.qml:195
+#: ui/LayoutDialog.qml:198
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "Atajo de teclado:"
 
-#: ui/LayoutDialog.qml:206 ui/main.qml:287
+#: ui/LayoutDialog.qml:209 ui/main.qml:287
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview"

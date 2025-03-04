@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-28 00:43+0000\n"
+"POT-Creation-Date: 2025-03-04 00:42+0000\n"
 "PO-Revision-Date: 2024-11-06 18:33+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -671,18 +671,24 @@ msgstr "&Pantaila-betea"
 msgid "&Shade"
 msgstr "Bil&du"
 
-#: package/contents/ui/ContextMenu.qml:717
+#: package/contents/ui/ContextMenu.qml:713
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&No Titlebar and Frame"
+msgstr ""
+
+#: package/contents/ui/ContextMenu.qml:729
 #, kde-format
 msgid "Allow this program to be grouped"
 msgstr "Baimendu programa hau taldekatu dadin"
 
-#: package/contents/ui/ContextMenu.qml:763
+#: package/contents/ui/ContextMenu.qml:775
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
 msgstr "&Itxi guztia"
 
-#: package/contents/ui/ContextMenu.qml:763
+#: package/contents/ui/ContextMenu.qml:775
 #, kde-format
 msgid "&Close"
 msgstr "&Itxi"

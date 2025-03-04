@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-28 00:43+0000\n"
+"POT-Creation-Date: 2025-03-04 00:42+0000\n"
 "PO-Revision-Date: 2024-11-01 23:10+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -671,18 +671,24 @@ msgstr "&Layar Penuh"
 msgid "&Shade"
 msgstr "&Tirai"
 
-#: package/contents/ui/ContextMenu.qml:717
+#: package/contents/ui/ContextMenu.qml:713
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&No Titlebar and Frame"
+msgstr ""
+
+#: package/contents/ui/ContextMenu.qml:729
 #, kde-format
 msgid "Allow this program to be grouped"
 msgstr "Bolehkan program ini untuk dikelompokkan"
 
-#: package/contents/ui/ContextMenu.qml:763
+#: package/contents/ui/ContextMenu.qml:775
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
 msgstr "&Tutup Semua"
 
-#: package/contents/ui/ContextMenu.qml:763
+#: package/contents/ui/ContextMenu.qml:775
 #, kde-format
 msgid "&Close"
 msgstr "&Tutup"

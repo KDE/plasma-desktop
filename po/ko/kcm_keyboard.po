@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 00:43+0000\n"
+"POT-Creation-Date: 2025-03-04 00:42+0000\n"
 "PO-Revision-Date: 2024-11-29 00:52+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -127,13 +127,13 @@ msgctxt "@title:window"
 msgid "Add Layout"
 msgstr "레이아웃 추가"
 
-#: ui/LayoutDialog.qml:177
+#: ui/LayoutDialog.qml:180
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
 msgstr "레이아웃 이름 표시"
 
-#: ui/LayoutDialog.qml:187
+#: ui/LayoutDialog.qml:190
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -143,13 +143,13 @@ msgstr ""
 "선택한 레이아웃의 축약한 이름이며 시스템 트레이에 표시됩니다. 이 설정을 변경"
 "할 수 있습니다."
 
-#: ui/LayoutDialog.qml:195
+#: ui/LayoutDialog.qml:198
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "단축키:"
 
-#: ui/LayoutDialog.qml:206 ui/main.qml:287
+#: ui/LayoutDialog.qml:209 ui/main.qml:287
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview"

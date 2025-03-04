@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-28 00:43+0000\n"
+"POT-Creation-Date: 2025-03-04 00:42+0000\n"
 "PO-Revision-Date: 2025-02-28 09:58+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -674,18 +674,24 @@ msgstr "Pantalla &completa"
 msgid "&Shade"
 msgstr "&Plega"
 
-#: package/contents/ui/ContextMenu.qml:717
+#: package/contents/ui/ContextMenu.qml:713
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&No Titlebar and Frame"
+msgstr ""
+
+#: package/contents/ui/ContextMenu.qml:729
 #, kde-format
 msgid "Allow this program to be grouped"
 msgstr "Permet que aquest programa s'agrupi"
 
-#: package/contents/ui/ContextMenu.qml:763
+#: package/contents/ui/ContextMenu.qml:775
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
 msgstr "Tan&ca-ho tot"
 
-#: package/contents/ui/ContextMenu.qml:763
+#: package/contents/ui/ContextMenu.qml:775
 #, kde-format
 msgid "&Close"
 msgstr "Tan&ca"

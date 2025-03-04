@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-28 00:43+0000\n"
+"POT-Creation-Date: 2025-03-04 00:42+0000\n"
 "PO-Revision-Date: 2024-11-11 16:03+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -672,18 +672,24 @@ msgstr "全螢幕(&F)"
 msgid "&Shade"
 msgstr "收起(&S)"
 
-#: package/contents/ui/ContextMenu.qml:717
+#: package/contents/ui/ContextMenu.qml:713
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&No Titlebar and Frame"
+msgstr ""
+
+#: package/contents/ui/ContextMenu.qml:729
 #, kde-format
 msgid "Allow this program to be grouped"
 msgstr "允許此程式被分組"
 
-#: package/contents/ui/ContextMenu.qml:763
+#: package/contents/ui/ContextMenu.qml:775
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
 msgstr "全部關閉(&C)"
 
-#: package/contents/ui/ContextMenu.qml:763
+#: package/contents/ui/ContextMenu.qml:775
 #, kde-format
 msgid "&Close"
 msgstr "關閉(&C)"

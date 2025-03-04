@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 00:43+0000\n"
+"POT-Creation-Date: 2025-03-04 00:42+0000\n"
 "PO-Revision-Date: 2025-02-13 11:33+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -140,13 +140,13 @@ msgctxt "@title:window"
 msgid "Add Layout"
 msgstr "Добавить раскладку"
 
-#: ui/LayoutDialog.qml:177
+#: ui/LayoutDialog.qml:180
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
 msgstr "Краткое название раскладки"
 
-#: ui/LayoutDialog.qml:187
+#: ui/LayoutDialog.qml:190
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -156,13 +156,13 @@ msgstr ""
 "Сокращённое название выбранной раскладки, которое будет показано в системном "
 "лотке. Этот параметр возможно изменить самостоятельно."
 
-#: ui/LayoutDialog.qml:195
+#: ui/LayoutDialog.qml:198
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "Комбинация клавиш:"
 
-#: ui/LayoutDialog.qml:206 ui/main.qml:287
+#: ui/LayoutDialog.qml:209 ui/main.qml:287
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview"

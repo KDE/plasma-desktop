@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 00:43+0000\n"
+"POT-Creation-Date: 2025-03-04 00:42+0000\n"
 "PO-Revision-Date: 2024-12-13 22:57+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -134,13 +134,13 @@ msgctxt "@title:window"
 msgid "Add Layout"
 msgstr "Engadir unha disposición"
 
-#: ui/LayoutDialog.qml:177
+#: ui/LayoutDialog.qml:180
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
 msgstr "Nome curto da disposición"
 
-#: ui/LayoutDialog.qml:187
+#: ui/LayoutDialog.qml:190
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -150,13 +150,13 @@ msgstr ""
 "O nome abreviado da disposición seleccionada, que se amosará na zona de "
 "notificacións. Pode cambiar esta opción."
 
-#: ui/LayoutDialog.qml:195
+#: ui/LayoutDialog.qml:198
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "Atallo:"
 
-#: ui/LayoutDialog.qml:206 ui/main.qml:287
+#: ui/LayoutDialog.qml:209 ui/main.qml:287
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview"
