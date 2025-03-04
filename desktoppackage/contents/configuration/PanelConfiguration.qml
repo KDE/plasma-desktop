@@ -360,6 +360,8 @@ ColumnLayout {
                 onClicked: autoHideBox.popup.visible = true
                 windowVisible: true
                 panelReservesSpace: autoHideBox.previewIndex == 0
+                isVertical: dialogRoot.vertical
+                alignment: positionRepresentation.alignment
             }
             PC3.ComboBox {
                 id: autoHideBox
@@ -438,6 +440,8 @@ ColumnLayout {
                 adaptivePanel: transparencyBox.previewIndex === 0
                 translucentPanel: transparencyBox.previewIndex === 2
                 onClicked: transparencyBox.popup.visible = true
+                isVertical: dialogRoot.vertical
+                alignment: positionRepresentation.alignment
             }
             PC3.ComboBox {
                 id: transparencyBox
@@ -486,6 +490,8 @@ ColumnLayout {
                 onClicked: floatingBox.popup.visible = true
                 visibleApplet: true
                 floatingApplet: floatingBox.previewIndex !== 0
+                isVertical: dialogRoot.vertical
+                alignment: positionRepresentation.alignment
             }
             PC3.ComboBox {
                 id: floatingBox

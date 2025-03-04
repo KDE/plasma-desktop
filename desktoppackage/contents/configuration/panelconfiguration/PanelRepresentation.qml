@@ -16,9 +16,15 @@ Item {
     property string tooltip
 
     property bool isVertical: false
+    property bool isHorizontal: !isVertical
     property bool checked: false
     property bool windowVisible: false
     property bool panelVisible: true
+
+    property bool isTop: !!(alignment & Qt.AlignTop)
+    property bool isBottom: !!(alignment & Qt.AlignBottom)
+    property bool isLeft: !!(alignment & Qt.AlignLeft)
+    property bool isRight: !!(alignment & Qt.AlignRight)
 
     property bool translucentPanel: false
     property bool sunkenPanel: false
@@ -130,8 +136,13 @@ Item {
 
                     implicitWidth: root.isVertical ? Math.round(parent.width / 6) : Math.round(parent.width * (root.fillAvailable ? 1 : 0.7))
                     implicitHeight: root.isVertical ? Math.round(parent.height * (root.fillAvailable ? 1 : 0.8)) : Math.round(parent.height / 4)
+
                     Layout.alignment: root.alignment
-                    Layout.bottomMargin: sunkenValue * -Math.round(height) + root.floatingGap
+                    Layout.bottomMargin: root.isBottom ? sunkenValue * -Math.round(height) + root.floatingGap : 0
+                    Layout.topMargin: root.isTop ? sunkenValue * -Math.round(height) + root.floatingGap : 0
+                    Layout.leftMargin: root.isLeft ? sunkenValue * -Math.round(width) + root.floatingGap : 0
+                    Layout.rightMargin: root.isRight ? sunkenValue * -Math.round(width) + root.floatingGap : 0
+
                     color: root.translucentPanel ? screenRect.color : Kirigami.Theme.backgroundColor
                     opacity: root.translucentPanel ? 0.8 : 1.0
                     border.color: "transparent"
@@ -169,7 +180,7 @@ Item {
 
                     Loader {
                         id: horizontalAdaptivePanelLoader
-                        active: root.adaptivePanel && !root.isVertical
+                        active: root.adaptivePanel && root.isHorizontal
                         sourceComponent: Rectangle {
                             anchors.verticalCenter: parent.verticalCenter
                             anchors.left: parent.left
@@ -210,16 +221,23 @@ Item {
             }
 
             Rectangle {
-                x: panelImage.x
-                y: panelImage.y - height + Kirigami.Units.smallSpacing * (root.floatingApplet ? -1 : 1)
+                x: panelImage.x + root.isLeft * panelImage.width - root.isRight * width + root.isVertical * panelSpacing
+                y: panelImage.y + root.isTop * panelImage.height - root.isBottom * height + (root.isHorizontal) * panelSpacing
                 height: Math.round(parent.height / 2)
                 width: Math.round(parent.width / 3)
                 visible: root.visibleApplet
+
+                property int panelSpacing: Kirigami.Units.smallSpacing * (root.floatingApplet ? -1 : 1) * (root.isRight || root.isBottom ? 1 : -1)
 
                 color: window.color
                 radius: 5
 
                 Behavior on y {
+                    NumberAnimation {
+                        duration: Kirigami.Units.shortDuration
+                    }
+                }
+                Behavior on x {
                     NumberAnimation {
                         duration: Kirigami.Units.shortDuration
                     }
@@ -232,15 +250,15 @@ Item {
                 property real maximized: 0
                 property real windowOverPanel: 0
 
-                width: Math.round(parent.width * (0.5 + 0.5 * maximized))
-                height: Math.round(parent.height * (0.5 + 0.5 * maximized) - panelImage.height * root.panelReservesSpace * maximized)
+                width: Math.round(parent.width * (0.4 + 0.6 * maximized) - panelImage.width * root.panelReservesSpace * maximized * root.isVertical)
+                height: Math.round(parent.height * (0.4 + 0.6 * maximized) - panelImage.height * root.panelReservesSpace * maximized * root.isHorizontal)
                 visible: root.windowVisible
                 radius: 5
                 color: Kirigami.Theme.highlightColor
                 border.color: "transparent"
 
-                x: (Math.round(screenRect.width / 2 - width / 2) + Kirigami.Units.gridUnit) * (1 - maximized)
-                y: (Math.round(screenRect.height / 2 - height / 2) - Kirigami.Units.mediumSpacing) * (1 - maximized) + windowOverPanel * Kirigami.Units.mediumSpacing * 2
+                x: Math.round(screenRect.width / 2 - width / 2) * (1 - maximized) + windowOverPanel * Kirigami.Units.mediumSpacing * 2 * root.isVertical * (root.isLeft ? - 1 : 1) + panelImage.width * maximized * root.isLeft * root.panelReservesSpace
+                y: Math.round(screenRect.height / 2 - height / 2) * (1 - maximized) + windowOverPanel * Kirigami.Units.mediumSpacing * 2 * root.isHorizontal * (root.isTop ? - 1 : 1) + panelImage.height * maximized * root.isTop * root.panelReservesSpace
                 z: 0
 
                 SequentialAnimation on maximized {
