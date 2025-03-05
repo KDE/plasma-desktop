@@ -383,7 +383,7 @@ ColumnLayout {
         // Only load for one entry, as the controls only apply to one window.
         // If this is changed in the future, test for index != -1 to avoid loading
         // when the instance is going to be destroyed
-        active: toolTipDelegate.parentTask.tooltipControlsEnabled
+        active: toolTipDelegate.parentTask?.tooltipControlsEnabled
              && toolTipDelegate.playerData
              && ((hasTrackInATitle && albumArtImage.available) || (!hasTrackInATitle && root.index == 0))
 
