@@ -2,21 +2,21 @@
 # Frederik Schwarzer <schwarzer@kde.org>, 2014, 2016, 2020, 2022, 2023.
 # Burkhard Lück <lueck@hube-lueck.de>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
-# SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
+# SPDX-FileCopyrightText: 2024 2025 Flori G <Renner03@protonmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-27 02:41+0000\n"
-"PO-Revision-Date: 2024-10-30 19:43+0100\n"
-"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
+"PO-Revision-Date: 2025-01-21 16:13+0100\n"
+"Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -59,7 +59,7 @@ msgstr "Angehaltene Aktivitäten:"
 #: contents/activitymanager/ActivityManager.qml:122
 #, kde-format
 msgid "Create activity…"
-msgstr "Aktivität erstellen ..."
+msgstr "Aktivität erstellen …"
 
 #: contents/activitymanager/Heading.qml:59
 #, kde-format
@@ -84,7 +84,7 @@ msgstr "In die Zwischenablage kopieren"
 #: contents/applet/AppletError.qml:187
 #, kde-format
 msgid "View Error Details…"
-msgstr "Fehlerdetails anzeigen ..."
+msgstr "Fehlerdetails anzeigen …"
 
 #: contents/applet/CompactApplet.qml:76
 #, kde-format
@@ -142,7 +142,7 @@ msgstr "Übersetzer"
 #: contents/configuration/AboutPlugin.qml:220
 #, kde-format
 msgid "Report a Bug…"
-msgstr "Probleme oder Wünsche berichten ..."
+msgstr "Probleme oder Wünsche berichten …"
 
 #: contents/configuration/AppletConfiguration.qml:76
 #, kde-format
@@ -274,7 +274,7 @@ msgstr "Hintergrundbild-Typ:"
 #: contents/configuration/ConfigurationContainmentAppearance.qml:120
 #, kde-format
 msgid "Get New Plugins…"
-msgstr "Neue Module holen ..."
+msgstr "Neue Module holen …"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:194
 #, kde-format
@@ -435,8 +435,7 @@ msgid "Dodge windows"
 msgstr "Im Hintergrund"
 
 #: contents/configuration/PanelConfiguration.qml:369
-#, fuzzy, kde-format
-#| msgid "Windows Go Below"
+#, kde-format
 msgid "Windows go below"
 msgstr "Im Vordergrund"
 
@@ -512,17 +511,18 @@ msgstr ""
 "Diese Kontrollleiste entfernen; diese Aktion kann rückgängig gemacht werden"
 
 #: contents/configuration/PanelConfiguration.qml:684
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
-msgstr "Kontrollleiste entfernen"
+msgstr "Kontrollleiste klonen"
 
 #: contents/configuration/PanelConfiguration.qml:688
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
 msgstr ""
+"Eine neue Kontrollleiste mit den gleichen Einstellungen und Miniprogrammen "
+"erstellen"
 
 #: contents/configuration/PanelConfiguration.qml:697
 #, kde-format
@@ -585,10 +585,9 @@ msgstr ""
 "Doppelklick zum Zurücksetzen."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy, kde-format
-#| msgid "Panel and Desktop Management"
+#, kde-format
 msgid "Manage Panels and Desktops"
-msgstr "Verwaltung der Kontrollleisten und Arbeitsflächen"
+msgstr "Kontrollleisten und Arbeitsflächen verwalten"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 #, kde-format
@@ -756,22 +755,19 @@ msgid "Caps Lock is on"
 msgstr "Feststelltaste ist aktiviert"
 
 #: contents/lockscreen/LockScreenUi.qml:285
-#, fuzzy, kde-format
-#| msgid "Sleep"
+#, kde-format
 msgid "Slee&p"
-msgstr "Standby-Modus"
+msgstr "&Standby-Modus"
 
 #: contents/lockscreen/LockScreenUi.qml:291
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "&Hibernate"
-msgstr "Ruhezustand"
+msgstr "&Ruhezustand"
 
 #: contents/lockscreen/LockScreenUi.qml:297
-#, fuzzy, kde-format
-#| msgid "Switch User"
+#, kde-format
 msgid "Switch &User"
-msgstr "Benutzer wechseln"
+msgstr "&Benutzer wechseln"
 
 #: contents/lockscreen/LockScreenUi.qml:358
 #, kde-format
