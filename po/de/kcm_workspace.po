@@ -3,13 +3,13 @@
 # Alois Spitzbart <spitz234@hotmail.com>, 2022.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
 # Frederik Schwarzer <schwarzer@kde.org>, 2023.
-# SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
+# SPDX-FileCopyrightText: 2024 2025 Flori G <Renner03@protonmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-18 00:42+0000\n"
-"PO-Revision-Date: 2024-09-16 21:10+0200\n"
+"PO-Revision-Date: 2025-01-25 15:35+0100\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: ui/main.qml:23
 #, kde-format
@@ -232,9 +232,7 @@ msgid "Double-click interval:"
 msgstr "Doppelklick-Intervall:"
 
 #: ui/main.qml:409
-#, fuzzy, kde-format
-#| msgid "%1 msec"
-#| msgid_plural "%1 msec"
+#, kde-format
 msgctxt "short for millisecond(s)"
 msgid "%1 ms"
 msgid_plural "%1 ms"
@@ -242,8 +240,7 @@ msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
 #: ui/main.qml:413
-#, fuzzy, kde-format
-#| msgid "msec"
+#, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgstr "ms"

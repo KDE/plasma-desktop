@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2023, 2024 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-18 00:42+0000\n"
-"PO-Revision-Date: 2024-10-05 11:00+0300\n"
+"PO-Revision-Date: 2025-03-03 17:10+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #: ui/main.qml:23
 #, kde-format
@@ -36,13 +36,13 @@ msgstr "Pārstartēt"
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
-msgstr ""
+msgstr "Ļaut „Plasma“ parādīt:"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr ""
+msgstr "Paneļu un logdaļu paskaidres"
 
 #: ui/main.qml:62
 #, kde-format
@@ -52,14 +52,17 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"Atļauj „Plasma“ paneļiem un darbvirsmas logdaļām, pārliekot peles rādītāju, "
+"parādīt aprakstošas paskaidres. Šis iestatījums neietekmē mazās paskaidrs, "
+"kas redzamas, pārliekot peles rādītāju pāri atsevišķām pogām un citiem "
+"saskarnes elementiem."
 
 #: ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
-msgstr "Parādīt uznirstošu logu, izmainot izkārtojumu"
+msgstr "Mainot statusu, rādīt virsekrāna paziņojumus (OSD)"
 
 #: ui/main.qml:80
 #, kde-format
@@ -67,6 +70,8 @@ msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
+"Ļaut „Plasma“ logdaļai parādīt virsekrāna paziņojumus, kad maināt skaļumu, "
+"ekrāna gaišumu, pārslēdzat audio ierīci u.c."
 
 #: ui/main.qml:92
 #, kde-format
@@ -301,7 +306,7 @@ msgstr "Ieslēgt atlases vidējā klikšķa ielīmēšanu"
 #: workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display large panel and widget tooltips"
-msgstr ""
+msgstr "Rādīt lielas paneļu un logdaļu paskaidres"
 
 #. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:10
@@ -309,26 +314,24 @@ msgstr ""
 msgid ""
 "Allow Plasma widgets to display large panel and widget tooltips on hover"
 msgstr ""
+"Pārliekot peles rādītāju, ļaut „Plasma“ logdaļām parādīt lielas paneļu un "
+"logdaļu paskaidres"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
-#, fuzzy, kde-format
-#| msgid "Display visual feedback for status changes"
+#, kde-format
 msgid "Display small popups for status changes"
-msgstr "Parādīt vizuālu atgriezenisko saiti statusa izmaiņām"
+msgstr "Mainot statusu, rādīt mazas paskaidres"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show an on-screen display to indicate status changes such as brightness "
-#| "or volume"
+#, kde-format
 msgid ""
 "Allow Plasma widgets to display small popups for status changes such as "
 "brightness or volume"
 msgstr ""
-"Ekrānā parādīt virsekrāna indikatoru par statusa izmaiņām, piemēram, ekrāna "
-"spilgtumu vai skaļumu"
+"Atļaut „Plasma“ logdaļām statusa izmaiņu gadījumā, piemēram, mainot ekrāna "
+"gaišumu vai skaļumu, parādīt mazas paskaidres."
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21

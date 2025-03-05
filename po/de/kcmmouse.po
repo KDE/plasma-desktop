@@ -7,6 +7,7 @@
 # Felix Schweighofer <felix.schweighofer@googlemail.com>, 2010.
 # Frederik Schwarzer <schwarzer@kde.org>, 2011, 2016.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
+# SPDX-FileCopyrightText: 2024, 2025 Flori G <Renner03@protonmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmmouse\n"
@@ -37,7 +38,7 @@ msgstr "Kritischer Fehler beim Lesen der Basisinformation des Geräts von %1 ."
 #: kcm.cpp:86
 #, kde-format
 msgid "Not able to select appropriate backend"
-msgstr ""
+msgstr "Es kann kein geeignetes Backend ausgewählt werden"
 
 #: kcm.cpp:142
 #, kde-format
@@ -96,12 +97,10 @@ msgstr ""
 "Das Zeigergerät wurde getrennt, es wurden keine anderen Geräte gefunden."
 
 #: ui/bindings.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@label for assigning an action to a numbered button"
-#| msgid "Extra Button %1:"
+#, kde-format
 msgctxt "@title"
 msgid "Extra Mouse Buttons"
-msgstr "Zusatztaste %1:"
+msgstr "Zusätzliche Maustasten"
 
 #: ui/bindings.qml:70
 #, kde-format
@@ -130,24 +129,22 @@ msgid "Cancel"
 msgstr "Abbrechen"
 
 #: ui/bindings.qml:124
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Press a mouse button "
+#, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button"
-msgstr "Drücken Sie eine Maustaste "
+msgstr "Drücken Sie eine Maustaste"
 
 #: ui/bindings.qml:125
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
-msgstr "Zuordnung hinzufügen ..."
+msgstr "Zuordnung hinzufügen …"
 
 #: ui/main.qml:37
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
-msgstr ""
+msgstr "Zusatztasten einrichten …"
 
 #: ui/main.qml:64
 #, kde-format
@@ -170,8 +167,7 @@ msgid "Accept input through this device."
 msgstr "Eingaben über dieses Gerät annehmen"
 
 #: ui/main.qml:107
-#, fuzzy, kde-format
-#| msgid "Left handed mode"
+#, kde-format
 msgid "Left-handed mode"
 msgstr "Linkshändige Bedienung"
 
@@ -181,16 +177,13 @@ msgid "Swap left and right buttons."
 msgstr "Linke und Rechte Taste tauschen"
 
 #: ui/main.qml:126
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "Linke und rechte Taste für Mittelklick drücken"
 
 #: ui/main.qml:138
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Pressing the left and right button simultaneously acts as middle-click."
 msgstr ""
@@ -204,6 +197,9 @@ msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
+"Die Aktivierung dieser Einstellung erhöht die Klick-Latenzzeit um 50 ms. Die "
+"zusätzliche Verzögerung wird benötigt, um das gleichzeitige Drücken der "
+"linken und rechten Taste korrekt zu erkennen."
 
 #: ui/main.qml:154
 #, kde-format
@@ -263,11 +259,12 @@ msgstr "Bildlauf wie auf dem Touchscreen."
 #, kde-format
 msgid "Press middle button and move mouse to scroll"
 msgstr ""
+"Drücken Sie die mittlere Maustaste und bewegen Sie die Maus um zu scrollen"
 
 #: ui/main.qml:354
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
-msgstr ""
+msgstr "Mit der Maus scrollen, während die mittlere Maustaste gedrückt ist."
 
 #~ msgid "None"
 #~ msgstr "Keines"
