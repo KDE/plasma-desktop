@@ -86,19 +86,19 @@ msgstr "光标悬停在窗口预览上时隐藏其他窗口"
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show an indicator when a task is playing audio"
-msgstr ""
+msgstr "任务播放音频时显示指示角标"
 
 #: package/contents/ui/ConfigAppearance.qml:69
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Mute task when clicking indicator"
-msgstr ""
+msgstr "点击指示角标时静音任务"
 
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show media and volume controls in tooltip"
-msgstr ""
+msgstr "在悬停信息中显示媒体和音量控制"
 
 #: package/contents/ui/ConfigAppearance.qml:85
 #, kde-format
@@ -670,7 +670,7 @@ msgstr "折叠(&S)"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
-msgstr ""
+msgstr "无标题栏和边框(&N)"
 
 #: package/contents/ui/ContextMenu.qml:729
 #, kde-format
@@ -829,7 +829,3 @@ msgstr "忘记最近位置"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "清除最近文件"
-
-#~ msgctxt "@option:check section General"
-#~ msgid "Use audio indicators to mute tasks"
-#~ msgstr "使用音频指示器对任务进行静音操作"

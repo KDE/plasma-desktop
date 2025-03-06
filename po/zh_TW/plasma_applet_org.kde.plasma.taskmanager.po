@@ -8,20 +8,20 @@
 # pan93412 <pan93412@gmail.com>, 2018, 2019, 2020.
 # Franklin Weng <franklin at goodhorse dot idv dot tw>, 2008.
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2008, 2009, 2010.
-# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-04 00:42+0000\n"
-"PO-Revision-Date: 2024-11-11 16:03+0900\n"
+"PO-Revision-Date: 2025-03-05 19:50+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.03.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: package/contents/config/config.qml:13
@@ -92,19 +92,19 @@ msgstr "當游標停留在預覽上時隱藏其他視窗"
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show an indicator when a task is playing audio"
-msgstr ""
+msgstr "工作項目播放音訊時顯示指示器"
 
 #: package/contents/ui/ConfigAppearance.qml:69
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Mute task when clicking indicator"
-msgstr ""
+msgstr "點擊指示器時將該工作項目靜音"
 
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show media and volume controls in tooltip"
-msgstr ""
+msgstr "在工作提示中顯示媒體與音量控制"
 
 #: package/contents/ui/ConfigAppearance.qml:85
 #, kde-format
@@ -676,7 +676,7 @@ msgstr "收起(&S)"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
-msgstr ""
+msgstr "沒有標題列及框架(&N)"
 
 #: package/contents/ui/ContextMenu.qml:729
 #, kde-format
