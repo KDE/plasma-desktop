@@ -30,7 +30,6 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.touchpad.xml
 )
 
 add_library(touchpad_common STATIC
-    actions.cpp
     touchpadbackend.cpp
     logging.cpp
     ${TOUCHPAD_DBUS_SRCS}
@@ -45,7 +44,6 @@ target_link_libraries(touchpad_common
     KF6::ConfigCore
     KF6::WindowSystem
     KF6::I18n
-    KF6::GlobalAccel
 )
 
 add_subdirectory(backends)
@@ -72,3 +70,5 @@ add_custom_command(TARGET kcm_touchpad POST_BUILD
                    COMMAND ${CMAKE_COMMAND} -E create_symlink "../kcms/systemsettings/kcm_touchpad.so" "kcm_touchpad_init.so")
 
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/kcm_touchpad_init.so DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcminit)
+
+install(FILES org.kde.touchpadshortcuts.desktop DESTINATION ${KDE_INSTALL_DATADIR}/kglobalaccel)

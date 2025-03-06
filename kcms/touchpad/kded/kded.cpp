@@ -6,8 +6,6 @@
 
 #include "kded.h"
 
-#include <actions.h>
-
 #include <KConfigGroup>
 #include <KPluginFactory>
 #include <KSharedConfig>
@@ -88,8 +86,9 @@ TouchpadDisabler::TouchpadDisabler(QObject *parent, const QVariantList &)
     }
     migrateConfig(m_backend);
 
+    QDBusConnection::sessionBus().registerService(u"org.kde.touchpad"_s);
+
     m_dependencies.addWatchedService("org.kde.plasmashell");
-    m_dependencies.addWatchedService("org.kde.kglobalaccel");
     connect(&m_dependencies, &QDBusServiceWatcher::serviceRegistered, this, &TouchpadDisabler::serviceRegistered);
 
     connect(m_backend, &TouchpadBackend::touchpadStateChanged, this, &TouchpadDisabler::updateCurrentState);
@@ -143,36 +142,28 @@ void TouchpadDisabler::toggle()
 {
     m_userRequestedSuspend = !m_touchpadSuspended;
     m_backend->setTouchpadSuspended(m_userRequestedSuspend);
+
+    showOsd();
 }
 
 void TouchpadDisabler::disable()
 {
     m_userRequestedSuspend = true;
     m_backend->setTouchpadSuspended(true);
+
+    showOsd();
 }
 
 void TouchpadDisabler::enable()
 {
     m_userRequestedSuspend = false;
     m_backend->setTouchpadSuspended(false);
+
+    showOsd();
 }
 
 void TouchpadDisabler::lateInit()
 {
-    TouchpadGlobalActions *actions = new TouchpadGlobalActions(false, this);
-    connect(actions, &TouchpadGlobalActions::enableTriggered, this, [this] {
-        enable();
-        showOsd();
-    });
-    connect(actions, &TouchpadGlobalActions::disableTriggered, this, [this] {
-        disable();
-        showOsd();
-    });
-    connect(actions, &TouchpadGlobalActions::toggleTriggered, this, [this] {
-        toggle();
-        showOsd();
-    });
-
     updateCurrentState();
 }
 
