@@ -1,0 +1,25 @@
+[Desktop Entry]
+Type=Application
+Name=Touchpad
+Icon=preferences-desktop-touchpad
+Actions=EnableTouchpad;DisableTouchpad;ToggleTouchpad
+StartupNotify=false
+X-KDE-GlobalShortcutType=Service
+
+[Desktop Action EnableTouchpad]
+Name=Enable Touchpad
+Exec=dbus-send --type=method_call --print-reply --dest=org.kde.touchpad /modules/kded_touchpad org.kde.touchpad.enable
+X-KDE-Shortcuts=Touchpad On
+X-KDE-Migrate-Shortcut=kcm_touchpad,Enable Touchpad
+
+[Desktop Action DisableTouchpad]
+Name=Enable Touchpad
+Exec=dbus-send --type=method_call --print-reply --dest=org.kde.touchpad /modules/kded_touchpad org.kde.touchpad.disable
+X-KDE-Shortcuts=Touchpad Off
+X-KDE-Migrate-Shortcut=kcm_touchpad,Disable Touchpad
+
+[Desktop Action ToggleTouchpad]
+Name=Enable Touchpad
+Exec=dbus-send --type=method_call --print-reply --dest=org.kde.touchpad /modules/kded_touchpad org.kde.touchpad.toggle
+X-KDE-Shortcuts=Touchpad Toggle\tMeta+Ctrl+Touchpad Toggle\tMeta+Ctrl+Zenkaku Hankaku
+X-KDE-Migrate-Shortcut=kcm_touchpad,Toggle Touchpad
