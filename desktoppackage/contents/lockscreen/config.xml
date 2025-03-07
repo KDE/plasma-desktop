@@ -6,9 +6,14 @@
   <kcfgfile name=""/>
 
   <group name="General">
+    <!-- TODO Plasma 7: Make this an enum. -->
     <entry name="alwaysShowClock" type="Bool">
       <label>Show a clock.</label>
       <default>true</default>
+    </entry>
+    <entry name="hideClockWhenIdle" type="Bool">
+      <label>Hide clock when prompt is hidden.</label>
+      <default>false</default>
     </entry>
     <entry name="showMediaControls" type="Bool">
       <label>If true, shows any currently playing media along with controls to pause it.</label>

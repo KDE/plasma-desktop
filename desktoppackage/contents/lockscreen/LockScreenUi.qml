@@ -192,6 +192,7 @@ Item {
             mainStack: mainStack
             footer: footer
             clock: clock
+            alwaysShowClock: config.alwaysShowClock && !config.hideClockWhenIdle
         }
 
         DropShadow {
