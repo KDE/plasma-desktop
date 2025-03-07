@@ -3,20 +3,20 @@
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2009, 2010.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-04 00:42+0000\n"
-"PO-Revision-Date: 2024-11-06 15:18+0100\n"
+"PO-Revision-Date: 2025-03-06 19:41+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 25.03.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: package/contents/config/config.qml:13
@@ -89,19 +89,19 @@ msgstr "Скриване на другите прозорци при преми�
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show an indicator when a task is playing audio"
-msgstr ""
+msgstr "Показване на индикатор, когато задача възпроизвежда аудио"
 
 #: package/contents/ui/ConfigAppearance.qml:69
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Mute task when clicking indicator"
-msgstr ""
+msgstr "Заглушаване на задачата при кликване върху индикатора"
 
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show media and volume controls in tooltip"
-msgstr ""
+msgstr "Показване на контроли за мултимедия и сила на звука в подсказка"
 
 #: package/contents/ui/ConfigAppearance.qml:85
 #, kde-format
@@ -675,7 +675,7 @@ msgstr "&Сгъване"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
-msgstr ""
+msgstr "&Без заглавна лента и рамка"
 
 #: package/contents/ui/ContextMenu.qml:729
 #, kde-format
