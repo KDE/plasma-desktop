@@ -30,11 +30,11 @@ Item {
             main.currentItem.saveConfig()
         }
         configDialog.currentWallpaper = appearanceRoot.currentWallpaper;
-        for (var key in configDialog.wallpaperConfiguration) {
+        configDialog.wallpaperConfiguration.keys().forEach(key => {
             if (main.currentItem["cfg_"+key] !== undefined) {
                 configDialog.wallpaperConfiguration[key] = main.currentItem["cfg_"+key]
             }
-        }
+        })
         configDialog.applyWallpaper()
         configDialog.containmentPlugin = appearanceRoot.containmentPlugin
     }
@@ -151,18 +151,18 @@ Item {
                         "configDialog": configDialog
                     }
 
-                    for (var key in wallpaperConfig) {
+                    wallpaperConfig.keys().forEach(key => {
                         props["cfg_" + key] = wallpaperConfig[key]
-                    }
+                    })
 
                     var newItem = replace(Qt.resolvedUrl(sourceFile), props)
 
-                    for (var key in wallpaperConfig) {
+                    wallpaperConfig.keys().forEach(key => {
                         var changedSignal = newItem["cfg_" + key + "Changed"]
                         if (changedSignal) {
                             changedSignal.connect(appearanceRoot.configurationChanged)
                         }
-                    }
+                    })
 
                     const configurationChangedSignal = newItem.configurationChanged
                     if (configurationChangedSignal) {
