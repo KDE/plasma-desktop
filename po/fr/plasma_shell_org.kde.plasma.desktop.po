@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-16 00:43+0000\n"
+"POT-Creation-Date: 2025-03-08 00:45+0000\n"
 "PO-Revision-Date: 2025-02-17 11:42+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -790,25 +790,66 @@ msgstr "Aucun composant graphique ne correspond aux mots clés de la recherche"
 msgid "No widgets available"
 msgstr "Aucun composant graphique disponible"
 
-#: contents/lockscreen/config.qml:19
-#, kde-format
+#: contents/lockscreen/config.qml:24
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Show clock"
 msgctxt "@title: group"
-msgid "Clock:"
-msgstr "Horloge :"
-
-#: contents/lockscreen/config.qml:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Show clock"
+msgid "Show clock:"
 msgstr "Afficher l'horloge"
 
-#: contents/lockscreen/config.qml:33
+#: contents/lockscreen/config.qml:25
+#, fuzzy, kde-format
+#| msgid "Always visible"
+msgctxt "@option:radio Clock always shown"
+msgid "Always"
+msgstr "Toujours visible"
+
+#: contents/lockscreen/config.qml:26
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Show clock"
+msgctxt "@option:radio"
+msgid "Always show clock"
+msgstr "Afficher l'horloge"
+
+#: contents/lockscreen/config.qml:41
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Show under unlocking prompt"
+msgctxt "@option:radio Clock shown only while unlock prompt is visible"
+msgid "On unlocking prompt"
+msgstr "Afficher sous l'invite de déverrouillage"
+
+#: contents/lockscreen/config.qml:42
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Show under unlocking prompt"
+msgctxt "@option:radio"
+msgid "Show clock only on unlocking prompt"
+msgstr "Afficher sous l'invite de déverrouillage"
+
+#: contents/lockscreen/config.qml:55
+#, kde-format
+msgctxt "@option:radio Clock never shown"
+msgid "Never"
+msgstr ""
+
+#: contents/lockscreen/config.qml:56
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Show clock"
+msgctxt "@option:radio"
+msgid "Never show clock"
+msgstr "Afficher l'horloge"
+
+#: contents/lockscreen/config.qml:71
 #, kde-format
 msgctxt "@title: group"
 msgid "Media controls:"
 msgstr "Contrôles multimédia :"
 
-#: contents/lockscreen/config.qml:36
+#: contents/lockscreen/config.qml:74
 #, kde-format
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
@@ -819,33 +860,33 @@ msgstr "Afficher sous l'invite de déverrouillage"
 msgid "Unlocking failed"
 msgstr "Échec du déverrouillage"
 
-#: contents/lockscreen/LockScreenUi.qml:271
+#: contents/lockscreen/LockScreenUi.qml:272
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Le verrouillage en majuscules « Verr. Maj » est activé."
 
-#: contents/lockscreen/LockScreenUi.qml:285
+#: contents/lockscreen/LockScreenUi.qml:286
 #, kde-format
 msgid "Slee&p"
 msgstr "Mettre en &veille"
 
-#: contents/lockscreen/LockScreenUi.qml:291
+#: contents/lockscreen/LockScreenUi.qml:292
 #, kde-format
 msgid "&Hibernate"
 msgstr "&Hiberner"
 
-#: contents/lockscreen/LockScreenUi.qml:297
+#: contents/lockscreen/LockScreenUi.qml:298
 #, kde-format
 msgid "Switch &User"
 msgstr "Changer d'&utilisateur"
 
-#: contents/lockscreen/LockScreenUi.qml:358
+#: contents/lockscreen/LockScreenUi.qml:359
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Clavier virtuel"
 
-#: contents/lockscreen/LockScreenUi.qml:382
+#: contents/lockscreen/LockScreenUi.qml:383
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
@@ -918,6 +959,10 @@ msgstr "Quitter le mode d'édition"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Indicateur de focus pour les panneaux"
+
+#~ msgctxt "@title: group"
+#~ msgid "Clock:"
+#~ msgstr "Horloge :"
 
 #~ msgid "Undo uninstall"
 #~ msgstr "Annuler la désinstallation"

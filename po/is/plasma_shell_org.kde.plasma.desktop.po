@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-16 00:43+0000\n"
+"POT-Creation-Date: 2025-03-08 00:45+0000\n"
 "PO-Revision-Date: 2024-12-13 10:42+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -781,25 +781,66 @@ msgstr "Engar græjur passa við leitarorðin"
 msgid "No widgets available"
 msgstr "Engar græjur í boði"
 
-#: contents/lockscreen/config.qml:19
-#, kde-format
+#: contents/lockscreen/config.qml:24
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Show clock"
 msgctxt "@title: group"
-msgid "Clock:"
-msgstr "Klukka:"
-
-#: contents/lockscreen/config.qml:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Show clock"
+msgid "Show clock:"
 msgstr "Sýna klukku"
 
-#: contents/lockscreen/config.qml:33
+#: contents/lockscreen/config.qml:25
+#, fuzzy, kde-format
+#| msgid "Always visible"
+msgctxt "@option:radio Clock always shown"
+msgid "Always"
+msgstr "Alltaf sýnileg"
+
+#: contents/lockscreen/config.qml:26
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Show clock"
+msgctxt "@option:radio"
+msgid "Always show clock"
+msgstr "Sýna klukku"
+
+#: contents/lockscreen/config.qml:41
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Show under unlocking prompt"
+msgctxt "@option:radio Clock shown only while unlock prompt is visible"
+msgid "On unlocking prompt"
+msgstr "Sýna undir aflæsingarkvaðningu"
+
+#: contents/lockscreen/config.qml:42
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Show under unlocking prompt"
+msgctxt "@option:radio"
+msgid "Show clock only on unlocking prompt"
+msgstr "Sýna undir aflæsingarkvaðningu"
+
+#: contents/lockscreen/config.qml:55
+#, kde-format
+msgctxt "@option:radio Clock never shown"
+msgid "Never"
+msgstr ""
+
+#: contents/lockscreen/config.qml:56
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Show clock"
+msgctxt "@option:radio"
+msgid "Never show clock"
+msgstr "Sýna klukku"
+
+#: contents/lockscreen/config.qml:71
 #, kde-format
 msgctxt "@title: group"
 msgid "Media controls:"
 msgstr "Miðlastýringar:"
 
-#: contents/lockscreen/config.qml:36
+#: contents/lockscreen/config.qml:74
 #, kde-format
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
@@ -810,36 +851,36 @@ msgstr "Sýna undir aflæsingarkvaðningu"
 msgid "Unlocking failed"
 msgstr "Aflæsing tókst ekki"
 
-#: contents/lockscreen/LockScreenUi.qml:271
+#: contents/lockscreen/LockScreenUi.qml:272
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Kveikt á hástafalás (CapsLock)"
 
-#: contents/lockscreen/LockScreenUi.qml:285
+#: contents/lockscreen/LockScreenUi.qml:286
 #, fuzzy, kde-format
 #| msgid "Sleep"
 msgid "Slee&p"
 msgstr "Svæfa"
 
-#: contents/lockscreen/LockScreenUi.qml:291
+#: contents/lockscreen/LockScreenUi.qml:292
 #, fuzzy, kde-format
 #| msgid "Hibernate"
 msgid "&Hibernate"
 msgstr "Leggja í dvala"
 
-#: contents/lockscreen/LockScreenUi.qml:297
+#: contents/lockscreen/LockScreenUi.qml:298
 #, fuzzy, kde-format
 #| msgid "Switch User"
 msgid "Switch &User"
 msgstr "Skipta um notanda"
 
-#: contents/lockscreen/LockScreenUi.qml:358
+#: contents/lockscreen/LockScreenUi.qml:359
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Sýndarlyklaborð"
 
-#: contents/lockscreen/LockScreenUi.qml:382
+#: contents/lockscreen/LockScreenUi.qml:383
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
@@ -912,6 +953,10 @@ msgstr "Loka breytingasniði"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Fókusvísir skjáborðsstiku"
+
+#~ msgctxt "@title: group"
+#~ msgid "Clock:"
+#~ msgstr "Klukka:"
 
 #~ msgid "Undo uninstall"
 #~ msgstr "Afturkalla fjarlægingu"

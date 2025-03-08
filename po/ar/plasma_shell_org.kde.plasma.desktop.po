@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-16 00:43+0000\n"
+"POT-Creation-Date: 2025-03-08 00:45+0000\n"
 "PO-Revision-Date: 2025-02-20 09:43+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -782,25 +782,66 @@ msgstr "لا توجد أدوات مطابقة لشروط البحث"
 msgid "No widgets available"
 msgstr "لا تتوفر أدوات"
 
-#: contents/lockscreen/config.qml:19
-#, kde-format
+#: contents/lockscreen/config.qml:24
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Show clock"
 msgctxt "@title: group"
-msgid "Clock:"
-msgstr "الساعة:"
-
-#: contents/lockscreen/config.qml:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Show clock"
+msgid "Show clock:"
 msgstr "أظهر الساعة"
 
-#: contents/lockscreen/config.qml:33
+#: contents/lockscreen/config.qml:25
+#, fuzzy, kde-format
+#| msgid "Always visible"
+msgctxt "@option:radio Clock always shown"
+msgid "Always"
+msgstr "ظاهرة دائمًا"
+
+#: contents/lockscreen/config.qml:26
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Show clock"
+msgctxt "@option:radio"
+msgid "Always show clock"
+msgstr "أظهر الساعة"
+
+#: contents/lockscreen/config.qml:41
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Show under unlocking prompt"
+msgctxt "@option:radio Clock shown only while unlock prompt is visible"
+msgid "On unlocking prompt"
+msgstr "اعرضها تحت محث فك القفل"
+
+#: contents/lockscreen/config.qml:42
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Show under unlocking prompt"
+msgctxt "@option:radio"
+msgid "Show clock only on unlocking prompt"
+msgstr "اعرضها تحت محث فك القفل"
+
+#: contents/lockscreen/config.qml:55
+#, kde-format
+msgctxt "@option:radio Clock never shown"
+msgid "Never"
+msgstr ""
+
+#: contents/lockscreen/config.qml:56
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Show clock"
+msgctxt "@option:radio"
+msgid "Never show clock"
+msgstr "أظهر الساعة"
+
+#: contents/lockscreen/config.qml:71
 #, kde-format
 msgctxt "@title: group"
 msgid "Media controls:"
 msgstr "متحكمات الوسائط:"
 
-#: contents/lockscreen/config.qml:36
+#: contents/lockscreen/config.qml:74
 #, kde-format
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
@@ -811,33 +852,33 @@ msgstr "اعرضها تحت محث فك القفل"
 msgid "Unlocking failed"
 msgstr "فشل فكّ القفل"
 
-#: contents/lockscreen/LockScreenUi.qml:271
+#: contents/lockscreen/LockScreenUi.qml:272
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "مفتاح Caps Lock مفعّل"
 
-#: contents/lockscreen/LockScreenUi.qml:285
+#: contents/lockscreen/LockScreenUi.qml:286
 #, kde-format
 msgid "Slee&p"
 msgstr "&نَم"
 
-#: contents/lockscreen/LockScreenUi.qml:291
+#: contents/lockscreen/LockScreenUi.qml:292
 #, kde-format
 msgid "&Hibernate"
 msgstr "أ&سبِت"
 
-#: contents/lockscreen/LockScreenUi.qml:297
+#: contents/lockscreen/LockScreenUi.qml:298
 #, kde-format
 msgid "Switch &User"
 msgstr "بدّل ال&مستخدم"
 
-#: contents/lockscreen/LockScreenUi.qml:358
+#: contents/lockscreen/LockScreenUi.qml:359
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "لوحة مفاتيح افتراضية"
 
-#: contents/lockscreen/LockScreenUi.qml:382
+#: contents/lockscreen/LockScreenUi.qml:383
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
@@ -910,6 +951,10 @@ msgstr "اخرج من نمط التحرير"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "مؤشر التركيز على اللوحة"
+
+#~ msgctxt "@title: group"
+#~ msgid "Clock:"
+#~ msgstr "الساعة:"
 
 #~ msgid "Undo uninstall"
 #~ msgstr "تراجع عن إزالة التّثبيت"

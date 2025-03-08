@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-16 00:43+0000\n"
+"POT-Creation-Date: 2025-03-08 00:45+0000\n"
 "PO-Revision-Date: 2023-01-09 09:58+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -818,25 +818,56 @@ msgstr "Não existem elementos correspondentes aos termos da pesquisa"
 msgid "No widgets available"
 msgstr "Sem elementos disponíveis"
 
-#: contents/lockscreen/config.qml:19
+#: contents/lockscreen/config.qml:24
 #, kde-format
 msgctxt "@title: group"
-msgid "Clock:"
+msgid "Show clock:"
 msgstr ""
 
-#: contents/lockscreen/config.qml:22
+#: contents/lockscreen/config.qml:25
+#, fuzzy, kde-format
+#| msgid "Always Visible"
+msgctxt "@option:radio Clock always shown"
+msgid "Always"
+msgstr "Sempre Visível"
+
+#: contents/lockscreen/config.qml:26
 #, kde-format
-msgctxt "@option:check"
-msgid "Show clock"
+msgctxt "@option:radio"
+msgid "Always show clock"
 msgstr ""
 
-#: contents/lockscreen/config.qml:33
+#: contents/lockscreen/config.qml:41
+#, kde-format
+msgctxt "@option:radio Clock shown only while unlock prompt is visible"
+msgid "On unlocking prompt"
+msgstr ""
+
+#: contents/lockscreen/config.qml:42
+#, kde-format
+msgctxt "@option:radio"
+msgid "Show clock only on unlocking prompt"
+msgstr ""
+
+#: contents/lockscreen/config.qml:55
+#, kde-format
+msgctxt "@option:radio Clock never shown"
+msgid "Never"
+msgstr ""
+
+#: contents/lockscreen/config.qml:56
+#, kde-format
+msgctxt "@option:radio"
+msgid "Never show clock"
+msgstr ""
+
+#: contents/lockscreen/config.qml:71
 #, kde-format
 msgctxt "@title: group"
 msgid "Media controls:"
 msgstr ""
 
-#: contents/lockscreen/config.qml:36
+#: contents/lockscreen/config.qml:74
 #, kde-format
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
@@ -847,34 +878,34 @@ msgstr ""
 msgid "Unlocking failed"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:271
+#: contents/lockscreen/LockScreenUi.qml:272
 #, kde-format
 msgid "Caps Lock is on"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:285
+#: contents/lockscreen/LockScreenUi.qml:286
 #, kde-format
 msgid "Slee&p"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:291
+#: contents/lockscreen/LockScreenUi.qml:292
 #, kde-format
 msgid "&Hibernate"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:297
+#: contents/lockscreen/LockScreenUi.qml:298
 #, fuzzy, kde-format
 #| msgid "Switch"
 msgid "Switch &User"
 msgstr "Mudança"
 
-#: contents/lockscreen/LockScreenUi.qml:358
+#: contents/lockscreen/LockScreenUi.qml:359
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr ""
 
-#: contents/lockscreen/LockScreenUi.qml:382
+#: contents/lockscreen/LockScreenUi.qml:383
 #, fuzzy, kde-format
 #| msgid "Switch"
 msgctxt "Button to change keyboard layout"

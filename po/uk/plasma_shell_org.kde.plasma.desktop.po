@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-16 00:43+0000\n"
+"POT-Creation-Date: 2025-03-08 00:45+0000\n"
 "PO-Revision-Date: 2025-02-16 09:45+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -781,25 +781,66 @@ msgstr "Критерію пошуку не задовольняє жоден в�
 msgid "No widgets available"
 msgstr "Немає доступних віджетів"
 
-#: contents/lockscreen/config.qml:19
-#, kde-format
+#: contents/lockscreen/config.qml:24
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Show clock"
 msgctxt "@title: group"
-msgid "Clock:"
-msgstr "Годинник:"
-
-#: contents/lockscreen/config.qml:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Show clock"
+msgid "Show clock:"
 msgstr "Показувати годинник"
 
-#: contents/lockscreen/config.qml:33
+#: contents/lockscreen/config.qml:25
+#, fuzzy, kde-format
+#| msgid "Always visible"
+msgctxt "@option:radio Clock always shown"
+msgid "Always"
+msgstr "Показувати завжди"
+
+#: contents/lockscreen/config.qml:26
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Show clock"
+msgctxt "@option:radio"
+msgid "Always show clock"
+msgstr "Показувати годинник"
+
+#: contents/lockscreen/config.qml:41
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Show under unlocking prompt"
+msgctxt "@option:radio Clock shown only while unlock prompt is visible"
+msgid "On unlocking prompt"
+msgstr "Показувати під запитом щодо розблокування"
+
+#: contents/lockscreen/config.qml:42
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Show under unlocking prompt"
+msgctxt "@option:radio"
+msgid "Show clock only on unlocking prompt"
+msgstr "Показувати під запитом щодо розблокування"
+
+#: contents/lockscreen/config.qml:55
+#, kde-format
+msgctxt "@option:radio Clock never shown"
+msgid "Never"
+msgstr ""
+
+#: contents/lockscreen/config.qml:56
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Show clock"
+msgctxt "@option:radio"
+msgid "Never show clock"
+msgstr "Показувати годинник"
+
+#: contents/lockscreen/config.qml:71
 #, kde-format
 msgctxt "@title: group"
 msgid "Media controls:"
 msgstr "Керування відтворенням:"
 
-#: contents/lockscreen/config.qml:36
+#: contents/lockscreen/config.qml:74
 #, kde-format
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
@@ -810,33 +851,33 @@ msgstr "Показувати під запитом щодо розблокува
 msgid "Unlocking failed"
 msgstr "Помилка розблокування"
 
-#: contents/lockscreen/LockScreenUi.qml:271
+#: contents/lockscreen/LockScreenUi.qml:272
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock увімкнено"
 
-#: contents/lockscreen/LockScreenUi.qml:285
+#: contents/lockscreen/LockScreenUi.qml:286
 #, kde-format
 msgid "Slee&p"
 msgstr "Приз&упинити"
 
-#: contents/lockscreen/LockScreenUi.qml:291
+#: contents/lockscreen/LockScreenUi.qml:292
 #, kde-format
 msgid "&Hibernate"
 msgstr "П&риспати"
 
-#: contents/lockscreen/LockScreenUi.qml:297
+#: contents/lockscreen/LockScreenUi.qml:298
 #, kde-format
 msgid "Switch &User"
 msgstr "З&мінити користувача"
 
-#: contents/lockscreen/LockScreenUi.qml:358
+#: contents/lockscreen/LockScreenUi.qml:359
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Віртуальна клавіатура"
 
-#: contents/lockscreen/LockScreenUi.qml:382
+#: contents/lockscreen/LockScreenUi.qml:383
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
@@ -909,6 +950,10 @@ msgstr "Вийти з режиму редагування"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Індикатор фокусування панелі"
+
+#~ msgctxt "@title: group"
+#~ msgid "Clock:"
+#~ msgstr "Годинник:"
 
 #~ msgid "Undo uninstall"
 #~ msgstr "Скасувати вилучення"

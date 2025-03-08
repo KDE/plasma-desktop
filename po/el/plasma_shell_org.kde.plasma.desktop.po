@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-16 00:43+0000\n"
+"POT-Creation-Date: 2025-03-08 00:45+0000\n"
 "PO-Revision-Date: 2024-09-19 17:30+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -793,25 +793,66 @@ msgstr "Δεν υπάρχουν συστατικά που να ταιριάζο�
 msgid "No widgets available"
 msgstr "Δεν υπάρχουν διαθέσιμα συστατικά"
 
-#: contents/lockscreen/config.qml:19
-#, kde-format
+#: contents/lockscreen/config.qml:24
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Show clock"
 msgctxt "@title: group"
-msgid "Clock:"
-msgstr "Ρολόι:"
-
-#: contents/lockscreen/config.qml:22
-#, kde-format
-msgctxt "@option:check"
-msgid "Show clock"
+msgid "Show clock:"
 msgstr "Εμφάνιση ρολογιού"
 
-#: contents/lockscreen/config.qml:33
+#: contents/lockscreen/config.qml:25
+#, fuzzy, kde-format
+#| msgid "Always visible"
+msgctxt "@option:radio Clock always shown"
+msgid "Always"
+msgstr "Πάντα ορατό"
+
+#: contents/lockscreen/config.qml:26
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Show clock"
+msgctxt "@option:radio"
+msgid "Always show clock"
+msgstr "Εμφάνιση ρολογιού"
+
+#: contents/lockscreen/config.qml:41
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Show under unlocking prompt"
+msgctxt "@option:radio Clock shown only while unlock prompt is visible"
+msgid "On unlocking prompt"
+msgstr "Εμφάνιση κάτω από την προτροπή ξεκλειδώματος"
+
+#: contents/lockscreen/config.qml:42
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Show under unlocking prompt"
+msgctxt "@option:radio"
+msgid "Show clock only on unlocking prompt"
+msgstr "Εμφάνιση κάτω από την προτροπή ξεκλειδώματος"
+
+#: contents/lockscreen/config.qml:55
+#, kde-format
+msgctxt "@option:radio Clock never shown"
+msgid "Never"
+msgstr ""
+
+#: contents/lockscreen/config.qml:56
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Show clock"
+msgctxt "@option:radio"
+msgid "Never show clock"
+msgstr "Εμφάνιση ρολογιού"
+
+#: contents/lockscreen/config.qml:71
 #, kde-format
 msgctxt "@title: group"
 msgid "Media controls:"
 msgstr "Συστατικά ελέγχου πολυμέσων:"
 
-#: contents/lockscreen/config.qml:36
+#: contents/lockscreen/config.qml:74
 #, kde-format
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
@@ -822,33 +863,33 @@ msgstr "Εμφάνιση κάτω από την προτροπή ξεκλειδ�
 msgid "Unlocking failed"
 msgstr "Αποτυχία ξεκλειδώματος"
 
-#: contents/lockscreen/LockScreenUi.qml:271
+#: contents/lockscreen/LockScreenUi.qml:272
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Το Caps Lock είναι ενεργό"
 
-#: contents/lockscreen/LockScreenUi.qml:285
+#: contents/lockscreen/LockScreenUi.qml:286
 #, kde-format
 msgid "Slee&p"
 msgstr "Α&ναστολή"
 
-#: contents/lockscreen/LockScreenUi.qml:291
+#: contents/lockscreen/LockScreenUi.qml:292
 #, kde-format
 msgid "&Hibernate"
 msgstr "Αδρανοποί&ηση"
 
-#: contents/lockscreen/LockScreenUi.qml:297
+#: contents/lockscreen/LockScreenUi.qml:298
 #, kde-format
 msgid "Switch &User"
 msgstr "Εναλλα&γή χρήστη"
 
-#: contents/lockscreen/LockScreenUi.qml:358
+#: contents/lockscreen/LockScreenUi.qml:359
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Εικονικό πληκτρολόγιο"
 
-#: contents/lockscreen/LockScreenUi.qml:382
+#: contents/lockscreen/LockScreenUi.qml:383
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
@@ -921,6 +962,10 @@ msgstr "Έξοδος λειτουργίας επεξεργασίας"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Δείκτης εστίασης πίνακα"
+
+#~ msgctxt "@title: group"
+#~ msgid "Clock:"
+#~ msgstr "Ρολόι:"
 
 #~ msgid "Undo uninstall"
 #~ msgstr "Αναίρεση απεγκατάστασης"
