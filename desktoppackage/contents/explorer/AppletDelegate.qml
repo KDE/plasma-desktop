@@ -20,6 +20,7 @@ Item {
     readonly property string pluginName: model.pluginName
     readonly property bool pendingUninstall: pendingUninstallTimer.applets.indexOf(pluginName) > -1
     readonly property bool pressed: tapHandler.pressed
+    readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
 
     width: list.cellWidth
     height: list.cellHeight
@@ -173,7 +174,7 @@ Item {
                 anchors.fill: parent
                 source: ShaderEffectSource {
                     sourceItem: iconWidget
-                    hideSource: true
+                    hideSource: !softwareRendering
                     live: false
                 }
                 mask: ShaderEffectSource {
