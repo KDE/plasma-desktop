@@ -117,9 +117,9 @@ Item {
             anchors.fill: clock
             source: clock
             visible: !softwareRendering && config.showClock === "true"
-            radius: 6
+            radius: 7
             verticalOffset: 0.8
-            samples: 14
+            samples: 15
             spread: 0.2
             color : Qt.rgba(0, 0, 0, 0.7)
             opacity: loginScreenRoot.uiVisible ? 0 : 1
