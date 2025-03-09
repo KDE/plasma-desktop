@@ -1,15 +1,15 @@
-# Translation of plasma_shell_org to Spanish
-# Copyright (C) 2014-2024 This_file_is_part_of_KDE
+# Spanish translations for plasma_shell_org.kde.plasma.desktop.po package.
+# Copyright (C) 2014-2025 This_file_is_part_of_KDE
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # Automatically generated, 2014.
 # SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma_shell_org\n"
+"Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-08 00:45+0000\n"
-"PO-Revision-Date: 2025-02-16 03:37+0100\n"
+"POT-Creation-Date: 2025-03-09 00:42+0000\n"
+"PO-Revision-Date: 2025-03-09 00:59+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -60,7 +60,7 @@ msgstr "Actividades detenidas:"
 #: contents/activitymanager/ActivityManager.qml:122
 #, kde-format
 msgid "Create activity…"
-msgstr "Crear actividad..."
+msgstr "Crear actividad…"
 
 #: contents/activitymanager/Heading.qml:59
 #, kde-format
@@ -85,7 +85,7 @@ msgstr "Copiar en el portapapeles"
 #: contents/applet/AppletError.qml:187
 #, kde-format
 msgid "View Error Details…"
-msgstr "Ver detalles del error..."
+msgstr "Ver detalles del error…"
 
 #: contents/applet/CompactApplet.qml:76
 #, kde-format
@@ -143,7 +143,7 @@ msgstr "Traductores"
 #: contents/configuration/AboutPlugin.qml:220
 #, kde-format
 msgid "Report a Bug…"
-msgstr "Informar de fallo..."
+msgstr "Informar de fallo…"
 
 #: contents/configuration/AppletConfiguration.qml:76
 #, kde-format
@@ -270,7 +270,7 @@ msgstr "Tipo de fondo del escritorio:"
 #: contents/configuration/ConfigurationContainmentAppearance.qml:120
 #, kde-format
 msgid "Get New Plugins…"
-msgstr "Obtener nuevos complementos..."
+msgstr "Obtener nuevos complementos…"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:194
 #, kde-format
@@ -329,7 +329,7 @@ msgstr "Añadir un separador al panel"
 #: contents/configuration/PanelConfiguration.qml:114
 #, kde-format
 msgid "Add or Manage Widgets…"
-msgstr "Añadir o gestionar elementos gráficos..."
+msgstr "Añadir o gestionar elementos gráficos…"
 
 #: contents/configuration/PanelConfiguration.qml:117
 #, kde-format
@@ -369,7 +369,7 @@ msgstr "Abajo"
 #: contents/configuration/PanelConfiguration.qml:174
 #, kde-format
 msgid "Set Position…"
-msgstr "Definir la posición..."
+msgstr "Definir la posición…"
 
 #: contents/configuration/PanelConfiguration.qml:201
 #, kde-format
@@ -736,13 +736,13 @@ msgstr "Elementos gráficos"
 #, kde-format
 msgctxt "@action:button The word 'new' refers to widgets"
 msgid "Get New…"
-msgstr "Obtener novedades..."
+msgstr "Obtener novedades…"
 
 #: contents/explorer/WidgetExplorer.qml:179
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Widgets…"
-msgstr "Obtener nuevos elementos gráficos..."
+msgstr "Obtener nuevos elementos gráficos…"
 
 #: contents/explorer/WidgetExplorer.qml:192
 #, kde-format
@@ -780,57 +780,46 @@ msgid "No widgets available"
 msgstr "Ningún elemento gráfico disponible"
 
 #: contents/lockscreen/config.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@title: group"
 msgid "Show clock:"
-msgstr "Mostrar el reloj"
+msgstr "Mostrar el reloj:"
 
 #: contents/lockscreen/config.qml:25
-#, fuzzy, kde-format
-#| msgid "Always visible"
+#, kde-format
 msgctxt "@option:radio Clock always shown"
 msgid "Always"
-msgstr "Siempre visible"
+msgstr "Siempre"
 
 #: contents/lockscreen/config.qml:26
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Always show clock"
-msgstr "Mostrar el reloj"
+msgstr "Mostrar siempre el reloj"
 
 #: contents/lockscreen/config.qml:41
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio Clock shown only while unlock prompt is visible"
 msgid "On unlocking prompt"
-msgstr "Mostrar debajo del mensaje de desbloqueo"
+msgstr "Con el mensaje de desbloqueo"
 
 #: contents/lockscreen/config.qml:42
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show clock only on unlocking prompt"
-msgstr "Mostrar debajo del mensaje de desbloqueo"
+msgstr "Mostrar el reloj solo con el mensaje de desbloqueo"
 
 #: contents/lockscreen/config.qml:55
 #, kde-format
 msgctxt "@option:radio Clock never shown"
 msgid "Never"
-msgstr ""
+msgstr "Nunca"
 
 #: contents/lockscreen/config.qml:56
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Never show clock"
-msgstr "Mostrar el reloj"
+msgstr "No mostrar nunca el reloj"
 
 #: contents/lockscreen/config.qml:71
 #, kde-format
@@ -849,33 +838,33 @@ msgstr "Mostrar debajo del mensaje de desbloqueo"
 msgid "Unlocking failed"
 msgstr "El desbloqueo ha fallado"
 
-#: contents/lockscreen/LockScreenUi.qml:272
+#: contents/lockscreen/LockScreenUi.qml:274
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Bloqueo de mayúsculas activado"
 
-#: contents/lockscreen/LockScreenUi.qml:286
+#: contents/lockscreen/LockScreenUi.qml:288
 #, kde-format
 msgid "Slee&p"
 msgstr "Re&poso"
 
-#: contents/lockscreen/LockScreenUi.qml:292
+#: contents/lockscreen/LockScreenUi.qml:294
 #, kde-format
 msgid "&Hibernate"
 msgstr "&Hibernar"
 
-#: contents/lockscreen/LockScreenUi.qml:298
+#: contents/lockscreen/LockScreenUi.qml:300
 #, kde-format
 msgid "Switch &User"
 msgstr "Cambiar &usuario"
 
-#: contents/lockscreen/LockScreenUi.qml:359
+#: contents/lockscreen/LockScreenUi.qml:361
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Teclado virtual"
 
-#: contents/lockscreen/LockScreenUi.qml:383
+#: contents/lockscreen/LockScreenUi.qml:385
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
@@ -948,253 +937,3 @@ msgstr "Salir del modo de edición"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Indicador de foco del panel"
-
-#~ msgctxt "@title: group"
-#~ msgid "Clock:"
-#~ msgstr "Reloj:"
-
-#~ msgid "Undo uninstall"
-#~ msgstr "Deshacer la instalación"
-
-#~ msgctxt "@info:tooltip uninstall a widget"
-#~ msgid "Uninstall"
-#~ msgstr "Desinstalar"
-
-#~ msgctxt "@action:button uninstall widgets in widget explorer"
-#~ msgid "Confirm Removal of One Widget"
-#~ msgid_plural "Confirm Removal of %1 Widgets"
-#~ msgstr[0] "Confirmar eliminación de 1 elemento gráfico"
-#~ msgstr[1] "Confirmar eliminación de %1 elementos gráficos"
-
-#~ msgid "Style"
-#~ msgstr "Estilo"
-
-#~ msgctxt "@title"
-#~ msgid "About"
-#~ msgstr "Acerca de"
-
-#~ msgid "Global Themes"
-#~ msgstr "Temas globales"
-
-#~ msgid "Display Configuration"
-#~ msgstr "Configuración de la pantalla"
-
-#~ msgid "@info:tooltip slider handle"
-#~ msgstr "@info:tooltip tirador de deslizador"
-
-#~ msgctxt "@action:button Done configuring the panel"
-#~ msgid "Done"
-#~ msgstr "Hecho"
-
-#~ msgctxt "@option:check"
-#~ msgid "Keep visible when unlocking prompt disappears"
-#~ msgstr "Mantener visible cuando desaparece el mensaje de desbloqueo"
-
-#~ msgid "Height:"
-#~ msgstr "Altura:"
-
-#~ msgid "Sorry! There was an error loading %1."
-#~ msgstr "Ha ocurrido un error al cargar %1."
-
-#~ msgid "Length"
-#~ msgstr "Longitud"
-
-#~ msgctxt "@action:button Make the panel as big as it can be"
-#~ msgid "Maximize"
-#~ msgstr "Maximizar"
-
-#~ msgid "Make this panel as tall as possible"
-#~ msgstr "Hacer este panel lo más alto posible"
-
-#~ msgid "Make this panel as wide as possible"
-#~ msgstr "Hacer este panel lo más ancho posible"
-
-#~ msgctxt "@action:button Delete the panel"
-#~ msgid "Delete"
-#~ msgstr "Borrar"
-
-#~ msgid ""
-#~ "Aligns a non-maximized panel to the top; no effect when panel is maximized"
-#~ msgstr ""
-#~ "Alinea un panel no maximizado a la parte superior (no tiene efecto en "
-#~ "paneles maximizados)"
-
-#~ msgid ""
-#~ "Aligns a non-maximized panel to the left; no effect when panel is "
-#~ "maximized"
-#~ msgstr ""
-#~ "Alinea un panel no maximizado a la izquierda (no tiene efecto en paneles "
-#~ "maximizados)"
-
-#~ msgid ""
-#~ "Aligns a non-maximized panel to the center; no effect when panel is "
-#~ "maximized"
-#~ msgstr ""
-#~ "Alinea un panel no maximizado al centro (no tiene efecto en paneles "
-#~ "maximizados)"
-
-#~ msgid ""
-#~ "Aligns a non-maximized panel to the bottom; no effect when panel is "
-#~ "maximized"
-#~ msgstr ""
-#~ "Alinea un panel no maximizado a la parte inferior (no tiene efecto en "
-#~ "paneles maximizados)"
-
-#~ msgid ""
-#~ "Aligns a non-maximized panel to the right; no effect when panel is "
-#~ "maximized"
-#~ msgstr ""
-#~ "Alinea un panel no maximizado a la derecha (no tiene efecto en paneles "
-#~ "maximizados)"
-
-#~ msgid ""
-#~ "Panel is hidden, but reveals itself when the cursor touches the panel's "
-#~ "screen edge"
-#~ msgstr ""
-#~ "El panel está oculto, pero se muestra cuando el cursor toca el borde de "
-#~ "la pantalla del panel"
-
-#~ msgid ""
-#~ "Panel is opaque when any windows are touching it, and translucent at "
-#~ "other times"
-#~ msgstr ""
-#~ "El panel es opaco cuando alguna ventana lo toca, aunque se muestra "
-#~ "transparente el resto del tiempo"
-
-#~ msgid "Floating:"
-#~ msgstr "Flotante:"
-
-#~ msgid "Panel visibly floats away from its screen edge"
-#~ msgstr "El panel flota visiblemente alejándose del borde de la pantalla"
-
-#~ msgid "Attached"
-#~ msgstr "Anclado"
-
-#~ msgid "Panel is attached to its screen edge"
-#~ msgstr "El panel está unido al borde de la pantalla"
-
-#~ msgid "More Options…"
-#~ msgstr "Más opciones..."
-
-#~ msgctxt "Minimize the length of this string as much as possible"
-#~ msgid "Drag to move"
-#~ msgstr "Arrastrar para mover"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Use arrow keys to move the panel"
-#~ msgstr "Use las teclas de las flechas para mover el panel"
-
-#~| msgid "Windows Behind"
-#~ msgid "Windows Above"
-#~ msgstr "Ventanas por delante"
-
-#~ msgid ""
-#~ "Like \"Auto-Hide\" but the panel remains visible as long as no windows "
-#~ "are covering it up"
-#~ msgstr ""
-#~ "Como «Ocultar automáticamente», pero el panel permanece visible cuando "
-#~ "ninguna ventana lo cubre"
-
-#~| msgid ""
-#~| "Makes the panel remain visible always but part of the maximized windows "
-#~| "shall go below the panel as though the panel did not exist."
-#~ msgid ""
-#~ "Like \"Always Visible\", but maximized and tiled windows go under the "
-#~ "panel as though it didn't exist"
-#~ msgstr ""
-#~ "Como «Siempre visible», pero las ventanas maximizadas y en cascada se "
-#~ "muestran detrás del panel como si no existiera"
-
-#~ msgid "Windows In Front"
-#~ msgstr "Ventanas por delante"
-
-#~ msgid "Aligns the panel"
-#~ msgstr "Alinea el panel"
-
-#~ msgid "Center aligns the panel if the panel is not maximized."
-#~ msgstr "Alinea el panel al centro si no está maximizado."
-
-#~ msgid ""
-#~ "Makes the panel hidden always but reveals it when mouse enters the area "
-#~ "where the panel would have been if it were not hidden."
-#~ msgstr ""
-#~ "Hace que el panel esté siempre oculto, pero lo revela cuando el ratón "
-#~ "entra en el área donde habría estado el panel si no estuviera oculto."
-
-#~ msgid ""
-#~ "Makes the panel remain visible always but maximized windows shall cover "
-#~ "it. It is revealed when mouse enters the area where the panel would have "
-#~ "been if it were not covered."
-#~ msgstr ""
-#~ "Hace que el panel permanezca visible siempre, aunque las ventanas "
-#~ "maximizadas lo cubrirán. Se revela cuando el ratón entra en el área donde "
-#~ "habría estado el panel si no estuviera cubierto."
-
-#~ msgid "Makes the panel translucent except when some windows touch it."
-#~ msgstr ""
-#~ "Hace que el panel sea transparente, excepto cuando algunas ventanas lo "
-#~ "tocan."
-
-#~ msgid "Makes the panel translucent always."
-#~ msgstr "Hace que el panel siempre sea transparente."
-
-#~ msgid "Makes the panel float from the edge of the screen."
-#~ msgstr "Hace que el panel flote desde el borde de la pantalla."
-
-#~ msgid "Makes the panel remain attached to the edge of the screen."
-#~ msgstr "Hace que el panel permanezca anclado al borde de la pantalla."
-
-#~ msgid "Appearance"
-#~ msgstr "Aspecto visual"
-
-#~ msgid "Search…"
-#~ msgstr "Buscar..."
-
-#~ msgid "Screen Edge"
-#~ msgstr "Borde de la pantalla"
-
-#~ msgid "Click and drag the button to a screen edge to move the panel there."
-#~ msgstr ""
-#~ "Pulse y arrastre el botón a un borde de la pantalla para mover el panel "
-#~ "allí."
-
-#~ msgid "Click and drag the button to resize the panel."
-#~ msgstr "Pulse y arrastre el botón para cambiar el tamaño del panel."
-
-#~ msgid "Layout cannot be changed while widgets are locked"
-#~ msgstr ""
-#~ "No se puede modificar la distribución mientras estén bloqueados los "
-#~ "elementos gráficos"
-
-#~ msgid ""
-#~ "This shortcut will activate the applet: it will give the keyboard focus "
-#~ "to it, and if the applet has a popup (such as the start menu), the popup "
-#~ "will be open."
-#~ msgstr ""
-#~ "Este acceso rápido de teclado activará la miniaplicación: centrará en "
-#~ "ella el foco del teclado y, si la miniaplicación posee una ventana "
-#~ "emergente (como un menú inteligente), se mostrará dicha ventana emergente."
-
-#~ msgid "Stop"
-#~ msgstr "Detener"
-
-#~ msgid "Activity name:"
-#~ msgstr "Nombre de la actividad:"
-
-#~ msgid "Create"
-#~ msgstr "Crear"
-
-#~ msgid "Are you sure you want to delete this activity?"
-#~ msgstr "¿Seguro que desea borrar esta actividad?"
-
-#~ msgctxt "org.kde.plasma.desktop"
-#~ msgid "Ok"
-#~ msgstr "Aceptar"
-
-#~ msgctxt "org.kde.plasma.desktop"
-#~ msgid "Apply"
-#~ msgstr "Aplicar"
-
-#~ msgctxt "org.kde.plasma.desktop"
-#~ msgid "Cancel"
-#~ msgstr "Cancelar"

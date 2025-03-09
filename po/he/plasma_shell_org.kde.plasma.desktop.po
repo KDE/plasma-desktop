@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-08 00:45+0000\n"
-"PO-Revision-Date: 2025-02-15 14:12+0200\n"
+"POT-Creation-Date: 2025-03-09 00:42+0000\n"
+"PO-Revision-Date: 2025-03-08 14:06+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -774,57 +774,46 @@ msgid "No widgets available"
 msgstr "אין יישומונים זמינים"
 
 #: contents/lockscreen/config.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@title: group"
 msgid "Show clock:"
-msgstr "הצגת שעון"
+msgstr "הצגת שעון:"
 
 #: contents/lockscreen/config.qml:25
-#, fuzzy, kde-format
-#| msgid "Always visible"
+#, kde-format
 msgctxt "@option:radio Clock always shown"
 msgid "Always"
-msgstr "גלוי תמיד"
+msgstr "תמיד"
 
 #: contents/lockscreen/config.qml:26
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Always show clock"
-msgstr "הצגת שעון"
+msgstr "תמיד להציג שעון"
 
 #: contents/lockscreen/config.qml:41
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio Clock shown only while unlock prompt is visible"
 msgid "On unlocking prompt"
-msgstr "הצגה תחת בקשת השחרור"
+msgstr "עם בקשת שחרור הנעילה"
 
 #: contents/lockscreen/config.qml:42
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show clock only on unlocking prompt"
-msgstr "הצגה תחת בקשת השחרור"
+msgstr "להציג שעון רק עם בקשת שחרור הנעילה"
 
 #: contents/lockscreen/config.qml:55
 #, kde-format
 msgctxt "@option:radio Clock never shown"
 msgid "Never"
-msgstr ""
+msgstr "אף פעם"
 
 #: contents/lockscreen/config.qml:56
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Never show clock"
-msgstr "הצגת שעון"
+msgstr "לעולם לא להציג שעון"
 
 #: contents/lockscreen/config.qml:71
 #, kde-format
@@ -843,33 +832,33 @@ msgstr "הצגה תחת בקשת השחרור"
 msgid "Unlocking failed"
 msgstr "השחרור נכשל"
 
-#: contents/lockscreen/LockScreenUi.qml:272
+#: contents/lockscreen/LockScreenUi.qml:274
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock דולק"
 
-#: contents/lockscreen/LockScreenUi.qml:286
+#: contents/lockscreen/LockScreenUi.qml:288
 #, kde-format
 msgid "Slee&p"
 msgstr "&שינה"
 
-#: contents/lockscreen/LockScreenUi.qml:292
+#: contents/lockscreen/LockScreenUi.qml:294
 #, kde-format
 msgid "&Hibernate"
 msgstr "&תרדמת"
 
-#: contents/lockscreen/LockScreenUi.qml:298
+#: contents/lockscreen/LockScreenUi.qml:300
 #, kde-format
 msgid "Switch &User"
 msgstr "ה&חלפת משתמש"
 
-#: contents/lockscreen/LockScreenUi.qml:359
+#: contents/lockscreen/LockScreenUi.qml:361
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "מקלדת וירטואלית"
 
-#: contents/lockscreen/LockScreenUi.qml:383
+#: contents/lockscreen/LockScreenUi.qml:385
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-08 00:45+0000\n"
-"PO-Revision-Date: 2025-02-16 07:50+0100\n"
+"POT-Creation-Date: 2025-03-09 00:42+0000\n"
+"PO-Revision-Date: 2025-03-08 07:24+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -783,57 +783,46 @@ msgid "No widgets available"
 msgstr "Gradnikov ni na voljo"
 
 #: contents/lockscreen/config.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@title: group"
 msgid "Show clock:"
-msgstr "Prikaži uro"
+msgstr "Prikaži uro:"
 
 #: contents/lockscreen/config.qml:25
-#, fuzzy, kde-format
-#| msgid "Always visible"
+#, kde-format
 msgctxt "@option:radio Clock always shown"
 msgid "Always"
-msgstr "Vedno vidno"
+msgstr "Vedno"
 
 #: contents/lockscreen/config.qml:26
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Always show clock"
-msgstr "Prikaži uro"
+msgstr "Vedno prikazuj uro"
 
 #: contents/lockscreen/config.qml:41
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio Clock shown only while unlock prompt is visible"
 msgid "On unlocking prompt"
-msgstr "Prikaži pod pozivom za odklepanje"
+msgstr "Pri pozivu za odklepanje"
 
 #: contents/lockscreen/config.qml:42
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show clock only on unlocking prompt"
-msgstr "Prikaži pod pozivom za odklepanje"
+msgstr "Prikaži uro samo pri pozivu za odklepanje"
 
 #: contents/lockscreen/config.qml:55
 #, kde-format
 msgctxt "@option:radio Clock never shown"
 msgid "Never"
-msgstr ""
+msgstr "Nikoli"
 
 #: contents/lockscreen/config.qml:56
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Never show clock"
-msgstr "Prikaži uro"
+msgstr "Nikoli ne prikazuj ure"
 
 #: contents/lockscreen/config.qml:71
 #, kde-format
@@ -852,33 +841,33 @@ msgstr "Prikaži pod pozivom za odklepanje"
 msgid "Unlocking failed"
 msgstr "Odklepanje ni uspelo"
 
-#: contents/lockscreen/LockScreenUi.qml:272
+#: contents/lockscreen/LockScreenUi.qml:274
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock je vklopljen"
 
-#: contents/lockscreen/LockScreenUi.qml:286
+#: contents/lockscreen/LockScreenUi.qml:288
 #, kde-format
 msgid "Slee&p"
 msgstr "Zaspi"
 
-#: contents/lockscreen/LockScreenUi.qml:292
+#: contents/lockscreen/LockScreenUi.qml:294
 #, kde-format
 msgid "&Hibernate"
 msgstr "V mirovanje"
 
-#: contents/lockscreen/LockScreenUi.qml:298
+#: contents/lockscreen/LockScreenUi.qml:300
 #, kde-format
 msgid "Switch &User"
 msgstr "Preklopi uporabnika"
 
-#: contents/lockscreen/LockScreenUi.qml:359
+#: contents/lockscreen/LockScreenUi.qml:361
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Navidezna tipkovnica"
 
-#: contents/lockscreen/LockScreenUi.qml:383
+#: contents/lockscreen/LockScreenUi.qml:385
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-08 00:45+0000\n"
-"PO-Revision-Date: 2025-02-16 04:32+0100\n"
+"POT-Creation-Date: 2025-03-09 00:42+0000\n"
+"PO-Revision-Date: 2025-03-08 06:07+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -769,57 +769,46 @@ msgid "No widgets available"
 msgstr "ვიჯეტების გარეშე"
 
 #: contents/lockscreen/config.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@title: group"
 msgid "Show clock:"
-msgstr "საათის ჩვენება"
+msgstr "საათის ჩვენება:"
 
 #: contents/lockscreen/config.qml:25
-#, fuzzy, kde-format
-#| msgid "Always visible"
+#, kde-format
 msgctxt "@option:radio Clock always shown"
 msgid "Always"
-msgstr "ყოველთვის ხილული"
+msgstr "ყოველთვის"
 
 #: contents/lockscreen/config.qml:26
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Always show clock"
-msgstr "საათის ჩვენება"
+msgstr "საათის ყოველთვის ჩვენება"
 
 #: contents/lockscreen/config.qml:41
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio Clock shown only while unlock prompt is visible"
 msgid "On unlocking prompt"
-msgstr "განბლოკვის შეტყობინების ქვეშ ჩვენება"
+msgstr "განბლოკვის მოთხოვნისას"
 
 #: contents/lockscreen/config.qml:42
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show clock only on unlocking prompt"
-msgstr "განბლოკვის შეტყობინების ქვეშ ჩვენება"
+msgstr "საათის ჩვენება, მხოლოდ განბლოკვის მოთხოვნისას"
 
 #: contents/lockscreen/config.qml:55
 #, kde-format
 msgctxt "@option:radio Clock never shown"
 msgid "Never"
-msgstr ""
+msgstr "არასდროს"
 
 #: contents/lockscreen/config.qml:56
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Never show clock"
-msgstr "საათის ჩვენება"
+msgstr "საათის არასდროს ჩვენება"
 
 #: contents/lockscreen/config.qml:71
 #, kde-format
@@ -838,33 +827,33 @@ msgstr "განბლოკვის შეტყობინების ქ�
 msgid "Unlocking failed"
 msgstr "განბლოკვის შეცდომა"
 
-#: contents/lockscreen/LockScreenUi.qml:272
+#: contents/lockscreen/LockScreenUi.qml:274
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "CapsLock ჩართულია"
 
-#: contents/lockscreen/LockScreenUi.qml:286
+#: contents/lockscreen/LockScreenUi.qml:288
 #, kde-format
 msgid "Slee&p"
 msgstr "ძი&ლი"
 
-#: contents/lockscreen/LockScreenUi.qml:292
+#: contents/lockscreen/LockScreenUi.qml:294
 #, kde-format
 msgid "&Hibernate"
 msgstr "პ&როგრამული ძილი"
 
-#: contents/lockscreen/LockScreenUi.qml:298
+#: contents/lockscreen/LockScreenUi.qml:300
 #, kde-format
 msgid "Switch &User"
 msgstr "მ&ომხმარებლის გადართვა"
 
-#: contents/lockscreen/LockScreenUi.qml:359
+#: contents/lockscreen/LockScreenUi.qml:361
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "ვირტუალური კლავიატურა"
 
-#: contents/lockscreen/LockScreenUi.qml:383
+#: contents/lockscreen/LockScreenUi.qml:385
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
