@@ -198,12 +198,7 @@ ContainmentItem {
         property alias folderViewLayer: folderViewLayer
         property alias appletsLayout: appletsLayout
 
-        Layout.minimumWidth: preferredWidth(isPopup)
-        Layout.minimumHeight: preferredHeight(isPopup)
-
-        Layout.preferredWidth: preferredWidth(false)
-        Layout.preferredHeight: preferredHeight(false)
-        // Maximum size is intentionally unbounded
+        // Layout size bindings are set in Component.onCompleted
 
         preventStealing: true
 
@@ -404,6 +399,17 @@ ContainmentItem {
         }
 
         Component.onCompleted: {
+            // Layout bindings need to be set delayed; the intermediate steps as the other bindings happen cause loops
+            Qt.callLater( () => {
+                dropArea.Layout.minimumWidth = Qt.binding(() => preferredWidth(isPopup))
+                dropArea.Layout.minimumHeight = Qt.binding(() => preferredHeight(isPopup))
+
+                dropArea.Layout.preferredWidth = Qt.binding(() => preferredWidth(false))
+                dropArea.Layout.preferredHeight = Qt.binding(() => preferredHeight(false))
+
+                // Maximum size is intentionally unbounded
+            })
+
             if (!Plasmoid.isContainment) {
                 return;
             }
