@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-09 00:42+0000\n"
+"POT-Creation-Date: 2025-03-10 00:44+0000\n"
 "PO-Revision-Date: 2023-02-19 16:55+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -420,149 +420,149 @@ msgstr ""
 msgid "Visibility"
 msgstr "Görünən"
 
-#: contents/configuration/PanelConfiguration.qml:369
+#: contents/configuration/PanelConfiguration.qml:371
 #, fuzzy, kde-format
 #| msgid "Always Visible"
 msgid "Always visible"
 msgstr "Həmişə görünən"
 
-#: contents/configuration/PanelConfiguration.qml:370
+#: contents/configuration/PanelConfiguration.qml:372
 #, fuzzy, kde-format
 #| msgid "Auto Hide"
 msgid "Auto hide"
 msgstr "Avtomatik gizlətmək"
 
-#: contents/configuration/PanelConfiguration.qml:371
+#: contents/configuration/PanelConfiguration.qml:373
 #, kde-format
 msgid "Dodge windows"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:372
+#: contents/configuration/PanelConfiguration.qml:374
 #, fuzzy, kde-format
 #| msgid "Windows Go Below"
 msgid "Windows go below"
 msgstr "Pəncərə arxada"
 
-#: contents/configuration/PanelConfiguration.qml:432
+#: contents/configuration/PanelConfiguration.qml:434
 #, fuzzy, kde-format
 #| msgid "Opacity"
 msgid "Opacity"
 msgstr "Qeyri-şəffaflıq"
 
-#: contents/configuration/PanelConfiguration.qml:446
+#: contents/configuration/PanelConfiguration.qml:450
 #, kde-format
 msgid "Adaptive"
 msgstr "Uyğunlaşdırılmış"
 
-#: contents/configuration/PanelConfiguration.qml:447
+#: contents/configuration/PanelConfiguration.qml:451
 #, fuzzy, kde-format
 #| msgid "Opaque"
 msgid "Opaque"
 msgstr "Qeyri-şəffaf"
 
-#: contents/configuration/PanelConfiguration.qml:448
+#: contents/configuration/PanelConfiguration.qml:452
 #, fuzzy, kde-format
 #| msgid "Translucent"
 msgid "Translucent"
 msgstr "Şəffaf"
 
-#: contents/configuration/PanelConfiguration.qml:480
+#: contents/configuration/PanelConfiguration.qml:484
 #, fuzzy, kde-format
 #| msgid "Floating Panel"
 msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
 msgstr "Üzən panel"
 
-#: contents/configuration/PanelConfiguration.qml:494
+#: contents/configuration/PanelConfiguration.qml:500
 #, fuzzy, kde-format
 #| msgid "%1 (disabled)"
 msgctxt "@item:inlistbox Option to disable floating panels or applets"
 msgid "Disabled"
 msgstr "%1 (söndürülüb)"
 
-#: contents/configuration/PanelConfiguration.qml:495
+#: contents/configuration/PanelConfiguration.qml:501
 #, kde-format
 msgctxt "@item:inlistbox Option to make only panel applets always float"
 msgid "Applets only"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:496
+#: contents/configuration/PanelConfiguration.qml:502
 #, fuzzy, kde-format
 #| msgid "Panels and Desktops Management"
 msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
 msgstr "Panellərin və İş Masalarının İdarəetməsi"
 
-#: contents/configuration/PanelConfiguration.qml:539
+#: contents/configuration/PanelConfiguration.qml:545
 #, kde-format
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:625
+#: contents/configuration/PanelConfiguration.qml:631
 #, fuzzy, kde-format
 #| msgid "Panel width:"
 msgid "Panel Width:"
 msgstr "Panel eni:"
 
-#: contents/configuration/PanelConfiguration.qml:626
+#: contents/configuration/PanelConfiguration.qml:632
 #, fuzzy, kde-format
 #| msgid "Panel width:"
 msgid "Panel Height:"
 msgstr "Panel eni:"
 
-#: contents/configuration/PanelConfiguration.qml:649
+#: contents/configuration/PanelConfiguration.qml:655
 #, fuzzy, kde-format
 #| msgid "Shortcut"
 msgid "Focus shortcut:"
 msgstr "Qısayol"
 
-#: contents/configuration/PanelConfiguration.qml:660
+#: contents/configuration/PanelConfiguration.qml:666
 #, kde-format
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Diqqəti panelə yönəltmək üçün bu klaviatura qısyolunu istifadə et"
 
-#: contents/configuration/PanelConfiguration.qml:694
+#: contents/configuration/PanelConfiguration.qml:700
 #, fuzzy, kde-format
 #| msgid "Remove Panel"
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Paneli silmək"
 
-#: contents/configuration/PanelConfiguration.qml:697
+#: contents/configuration/PanelConfiguration.qml:703
 #, kde-format
 msgid "Remove this panel; this action is undo-able"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:706
+#: contents/configuration/PanelConfiguration.qml:712
 #, fuzzy, kde-format
 #| msgid "Remove Panel"
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
 msgstr "Paneli silmək"
 
-#: contents/configuration/PanelConfiguration.qml:710
+#: contents/configuration/PanelConfiguration.qml:716
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:719
+#: contents/configuration/PanelConfiguration.qml:725
 #, fuzzy, kde-format
 #| msgid "Close"
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Bağlamaq"
 
-#: contents/configuration/PanelConfiguration.qml:719
+#: contents/configuration/PanelConfiguration.qml:725
 #, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:722
+#: contents/configuration/PanelConfiguration.qml:728
 #, kde-format
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr ""

@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-18 00:42+0000\n"
-"PO-Revision-Date: 2024-10-09 21:35+0530\n"
+"PO-Revision-Date: 2025-03-09 16:36+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: ui/main.qml:23
 #, kde-format
@@ -33,13 +33,13 @@ msgstr "மீள்துவக்கு"
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
-msgstr ""
+msgstr "இவற்றை பிளாஸ்மா காட்டலாம்:"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr ""
+msgstr "பலகைகளிலும் பிளாஸ்மாய்டுகளிலும் கருவித்துப்புகள்"
 
 #: ui/main.qml:62
 #, kde-format
@@ -49,14 +49,15 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"சுட்டியை மேல்வைக்கும்போது பிளாஸ்மா பலகைகளும் பிளாஸ்மாய்டுகளும் காட்டும் கருவித்துப்புகளை "
+"இது கட்டுப்படுத்தும். பட்டன்கள் காட்டும் கருவித்துப்புகளை இது கட்டுப்படுத்தாது."
 
 #: ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
-msgstr "தளவமைப்பு மாறும்போது தெரித்தெழும் அறிவிப்பு காட்டு"
+msgstr "நிலைமாறும்போது திரையின் நடுவில் அறிவிப்புகள்"
 
 #: ui/main.qml:80
 #, kde-format
@@ -64,6 +65,8 @@ msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
+"ஒலியளவு, திரையின் பிரகாசம், ஒலிச்சாதன நிலை போன்றவை மாறும்போது திரையின் நடுவில் ஓர் "
+"அறிவிப்பைக் காட்டும் (OSD எனப்படுவது)."
 
 #: ui/main.qml:92
 #, kde-format
@@ -295,7 +298,7 @@ msgstr "நடு கிளிக்கால் தேர்வை ஒட்ட
 #: workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display large panel and widget tooltips"
-msgstr ""
+msgstr "பலகைகளிலும் பிளாஸ்மாய்டுகளிலும் கருவித்துப்புகளைக் காட்டு"
 
 #. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:10
@@ -303,25 +306,22 @@ msgstr ""
 msgid ""
 "Allow Plasma widgets to display large panel and widget tooltips on hover"
 msgstr ""
+"சுட்டியை மேல்வைக்கும்போது பலகைகளிலும் பிளாஸ்மாய்டுகளிலும் பெரிய கருவித்துப்புகளைக் காட்டு"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
-#, fuzzy, kde-format
-#| msgid "Display visual feedback for status changes"
+#, kde-format
 msgid "Display small popups for status changes"
-msgstr "நிலைமாரும்போது பார்வைமுறை பின்னூட்டம் காட்டு"
+msgstr "நிலைமாரும்போது அறிவிப்புகளை காட்டு"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show an on-screen display to indicate status changes such as brightness "
-#| "or volume"
+#, kde-format
 msgid ""
 "Allow Plasma widgets to display small popups for status changes such as "
 "brightness or volume"
 msgstr ""
-"பிரகாசம் மற்றும் ஒலி அளவு போன்றவற்றின் நிலை மாறும்போது திரையில் ஓர் அறிகுறி காட்டு"
+"பிரகாசம் மற்றும் ஒலி அளவு போன்றவற்றின் நிலை மாறும்போது திரையில் அறிவிப்பைக் காட்டு"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21

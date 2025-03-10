@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-09 00:42+0000\n"
-"PO-Revision-Date: 2025-02-16 16:59+0100\n"
+"POT-Creation-Date: 2025-03-10 00:44+0000\n"
+"PO-Revision-Date: 2025-03-09 11:27+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -415,135 +415,135 @@ msgstr "Personalizzato"
 msgid "Visibility"
 msgstr "Visibilità"
 
-#: contents/configuration/PanelConfiguration.qml:369
+#: contents/configuration/PanelConfiguration.qml:371
 #, kde-format
 msgid "Always visible"
 msgstr "Sempre visibile"
 
-#: contents/configuration/PanelConfiguration.qml:370
+#: contents/configuration/PanelConfiguration.qml:372
 #, kde-format
 msgid "Auto hide"
 msgstr "Nascondi automaticamente"
 
-#: contents/configuration/PanelConfiguration.qml:371
+#: contents/configuration/PanelConfiguration.qml:373
 #, kde-format
 msgid "Dodge windows"
 msgstr "Eludi le finestre"
 
-#: contents/configuration/PanelConfiguration.qml:372
+#: contents/configuration/PanelConfiguration.qml:374
 #, kde-format
 msgid "Windows go below"
 msgstr "Le finestre vanno sotto"
 
-#: contents/configuration/PanelConfiguration.qml:432
+#: contents/configuration/PanelConfiguration.qml:434
 #, kde-format
 msgid "Opacity"
 msgstr "Opacità"
 
-#: contents/configuration/PanelConfiguration.qml:446
+#: contents/configuration/PanelConfiguration.qml:450
 #, kde-format
 msgid "Adaptive"
 msgstr "Flessibile"
 
-#: contents/configuration/PanelConfiguration.qml:447
+#: contents/configuration/PanelConfiguration.qml:451
 #, kde-format
 msgid "Opaque"
 msgstr "Opaco"
 
-#: contents/configuration/PanelConfiguration.qml:448
+#: contents/configuration/PanelConfiguration.qml:452
 #, kde-format
 msgid "Translucent"
 msgstr "Trasparente"
 
-#: contents/configuration/PanelConfiguration.qml:480
+#: contents/configuration/PanelConfiguration.qml:484
 #, kde-format
 msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
 msgstr "Flottante"
 
-#: contents/configuration/PanelConfiguration.qml:494
+#: contents/configuration/PanelConfiguration.qml:500
 #, kde-format
 msgctxt "@item:inlistbox Option to disable floating panels or applets"
 msgid "Disabled"
 msgstr "Disabilitato"
 
-#: contents/configuration/PanelConfiguration.qml:495
+#: contents/configuration/PanelConfiguration.qml:501
 #, kde-format
 msgctxt "@item:inlistbox Option to make only panel applets always float"
 msgid "Applets only"
 msgstr "Solo applet"
 
-#: contents/configuration/PanelConfiguration.qml:496
+#: contents/configuration/PanelConfiguration.qml:502
 #, kde-format
 msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
 msgstr "Pannelli e applet"
 
-#: contents/configuration/PanelConfiguration.qml:539
+#: contents/configuration/PanelConfiguration.qml:545
 #, kde-format
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
 msgstr "Correggilo"
 
-#: contents/configuration/PanelConfiguration.qml:625
+#: contents/configuration/PanelConfiguration.qml:631
 #, kde-format
 msgid "Panel Width:"
 msgstr "Larghezza del pannello:"
 
-#: contents/configuration/PanelConfiguration.qml:626
+#: contents/configuration/PanelConfiguration.qml:632
 #, kde-format
 msgid "Panel Height:"
 msgstr "Altezza del pannello:"
 
-#: contents/configuration/PanelConfiguration.qml:649
+#: contents/configuration/PanelConfiguration.qml:655
 #, kde-format
 msgid "Focus shortcut:"
 msgstr "Scorciatoia per messa a fuoco:"
 
-#: contents/configuration/PanelConfiguration.qml:660
+#: contents/configuration/PanelConfiguration.qml:666
 #, kde-format
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 "Premi questa scorciatoia da tastiera per spostare il fuoco sul pannello"
 
-#: contents/configuration/PanelConfiguration.qml:694
+#: contents/configuration/PanelConfiguration.qml:700
 #, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Elimina pannello"
 
-#: contents/configuration/PanelConfiguration.qml:697
+#: contents/configuration/PanelConfiguration.qml:703
 #, kde-format
 msgid "Remove this panel; this action is undo-able"
 msgstr "Rimuovi questo pannello; questa azione è annullabile"
 
-#: contents/configuration/PanelConfiguration.qml:706
+#: contents/configuration/PanelConfiguration.qml:712
 #, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
 msgstr "Clona pannello"
 
-#: contents/configuration/PanelConfiguration.qml:710
+#: contents/configuration/PanelConfiguration.qml:716
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
 msgstr "Crea un nuovo pannello con le stesse impostazioni e applet"
 
-#: contents/configuration/PanelConfiguration.qml:719
+#: contents/configuration/PanelConfiguration.qml:725
 #, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Chiudi"
 
-#: contents/configuration/PanelConfiguration.qml:719
+#: contents/configuration/PanelConfiguration.qml:725
 #, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
 msgstr "Esci dalla modalità di modifica"
 
-#: contents/configuration/PanelConfiguration.qml:722
+#: contents/configuration/PanelConfiguration.qml:728
 #, kde-format
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr ""
@@ -780,57 +780,46 @@ msgid "No widgets available"
 msgstr "Nessun oggetto disponibile"
 
 #: contents/lockscreen/config.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@title: group"
 msgid "Show clock:"
-msgstr "Mostra l'orologio"
+msgstr "Mostra l'orologio:"
 
 #: contents/lockscreen/config.qml:25
-#, fuzzy, kde-format
-#| msgid "Always visible"
+#, kde-format
 msgctxt "@option:radio Clock always shown"
 msgid "Always"
-msgstr "Sempre visibile"
+msgstr "Sempre"
 
 #: contents/lockscreen/config.qml:26
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Always show clock"
-msgstr "Mostra l'orologio"
+msgstr "Mostra sempre l'orologio"
 
 #: contents/lockscreen/config.qml:41
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio Clock shown only while unlock prompt is visible"
 msgid "On unlocking prompt"
-msgstr "Mostra sotto richiesta di sblocco"
+msgstr "Alla richiesta di sblocco"
 
 #: contents/lockscreen/config.qml:42
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show clock only on unlocking prompt"
-msgstr "Mostra sotto richiesta di sblocco"
+msgstr "Mostra l'orologio solo alla richiesta di sblocco"
 
 #: contents/lockscreen/config.qml:55
 #, kde-format
 msgctxt "@option:radio Clock never shown"
 msgid "Never"
-msgstr ""
+msgstr "Mai"
 
 #: contents/lockscreen/config.qml:56
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Never show clock"
-msgstr "Mostra l'orologio"
+msgstr "Non mostrare mai l'orologio"
 
 #: contents/lockscreen/config.qml:71
 #, kde-format

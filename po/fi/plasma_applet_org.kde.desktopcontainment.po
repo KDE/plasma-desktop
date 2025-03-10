@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2014, 2015, 2016, 2017.
-# SPDX-FileCopyrightText: 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-19 00:43+0000\n"
-"PO-Revision-Date: 2024-10-22 14:53+0300\n"
+"PO-Revision-Date: 2025-02-16 11:03+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -437,7 +437,7 @@ msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
 "or folder"
 msgid "Link Target Not Found"
-msgstr ""
+msgstr "Linkin kohdetta ei löydy"
 
 #: plugins/folder/foldermodel.cpp:871
 #, kde-kuit-format
@@ -446,6 +446,8 @@ msgid ""
 "<filename>%1</filename> points to <filename>%2</filename>, but that could "
 "not be found. It may have been moved or deleted."
 msgstr ""
+"<filename>%1</filename> osoittaa tiedostoon <filename>%2</filename>, jota ei "
+"löydy. Se on ehkä siirretty tai poistettu."
 
 #: plugins/folder/foldermodel.cpp:1729
 #, kde-format
@@ -456,7 +458,7 @@ msgstr "&Tyhjennä roskakori"
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
-msgstr ""
+msgstr "Palauta aiempaan sijaintiin"
 
 #: plugins/folder/foldermodel.cpp:1735
 #, kde-format
@@ -464,23 +466,21 @@ msgid "&Open"
 msgstr "&Avaa"
 
 #: plugins/folder/foldermodel.cpp:1739
-#, fuzzy, kde-format
-#| msgid "Show all"
+#, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
 "link points to"
 msgid "Show Target"
-msgstr "Näytä kaikki"
+msgstr "Näytä kohde"
 
 #: plugins/folder/foldermodel.cpp:1835
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
-msgstr ""
+msgstr "Poista roskakorikuvake"
 
 #: plugins/folder/foldermodel.cpp:1838
-#, fuzzy, kde-format
-#| msgid "&Move to Trash"
+#, kde-format
 msgid "&Move to Trash"
 msgstr "Siirrä &roskakoriin"
 

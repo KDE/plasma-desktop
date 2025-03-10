@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-09 00:42+0000\n"
-"PO-Revision-Date: 2025-01-12 17:06+0200\n"
+"POT-Creation-Date: 2025-03-10 00:44+0000\n"
+"PO-Revision-Date: 2025-02-16 11:04+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -156,15 +156,12 @@ msgid "Apply Settings"
 msgstr "Käytä asetuksia"
 
 #: contents/configuration/AppletConfiguration.qml:354
-#, fuzzy, kde-format
-#| msgid ""
-#| "The settings of the current module have changed. Do you want to apply the "
-#| "changes or discard them?"
+#, kde-format
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
 msgstr ""
-"Nykyisen asetusosion asetukset ovat muuttuneet. Haluatko käyttää muutoksia "
-"vai hylätä ne?"
+"Nykyisellä sivulla on tallentamattomia muutoksia. Otetaanko ne käyttöön vai "
+"hylätään?"
 
 #: contents/configuration/AppletConfiguration.qml:385
 #, kde-format
@@ -413,137 +410,134 @@ msgstr "Mukautettu"
 msgid "Visibility"
 msgstr "Näkyvyys"
 
-#: contents/configuration/PanelConfiguration.qml:369
+#: contents/configuration/PanelConfiguration.qml:371
 #, kde-format
 msgid "Always visible"
 msgstr "Aina näkyvissä"
 
-#: contents/configuration/PanelConfiguration.qml:370
+#: contents/configuration/PanelConfiguration.qml:372
 #, kde-format
 msgid "Auto hide"
 msgstr "Piilota automaattisesti"
 
-#: contents/configuration/PanelConfiguration.qml:371
+#: contents/configuration/PanelConfiguration.qml:373
 #, kde-format
 msgid "Dodge windows"
 msgstr "Välttele ikkunoita"
 
-#: contents/configuration/PanelConfiguration.qml:372
+#: contents/configuration/PanelConfiguration.qml:374
 #, kde-format
 msgid "Windows go below"
 msgstr "Ikkunat menevät alle"
 
-#: contents/configuration/PanelConfiguration.qml:432
+#: contents/configuration/PanelConfiguration.qml:434
 #, kde-format
 msgid "Opacity"
 msgstr "Peittävyys"
 
-#: contents/configuration/PanelConfiguration.qml:446
+#: contents/configuration/PanelConfiguration.qml:450
 #, kde-format
 msgid "Adaptive"
 msgstr "Mukautuva"
 
-#: contents/configuration/PanelConfiguration.qml:447
+#: contents/configuration/PanelConfiguration.qml:451
 #, kde-format
 msgid "Opaque"
 msgstr "Aina peittävä"
 
-#: contents/configuration/PanelConfiguration.qml:448
+#: contents/configuration/PanelConfiguration.qml:452
 #, kde-format
 msgid "Translucent"
 msgstr "Läpikuultava"
 
-#: contents/configuration/PanelConfiguration.qml:480
-#, fuzzy, kde-format
-#| msgid "Floating"
+#: contents/configuration/PanelConfiguration.qml:484
+#, kde-format
 msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
-msgstr "Kelluva"
+msgstr "Kelluminen"
 
-#: contents/configuration/PanelConfiguration.qml:494
-#, fuzzy, kde-format
-#| msgid "%1 (disabled)"
+#: contents/configuration/PanelConfiguration.qml:500
+#, kde-format
 msgctxt "@item:inlistbox Option to disable floating panels or applets"
 msgid "Disabled"
-msgstr "%1 (ei käytössä)"
+msgstr "Ei käytössä"
 
-#: contents/configuration/PanelConfiguration.qml:495
+#: contents/configuration/PanelConfiguration.qml:501
 #, kde-format
 msgctxt "@item:inlistbox Option to make only panel applets always float"
 msgid "Applets only"
-msgstr ""
+msgstr "Vain sovelmat"
 
-#: contents/configuration/PanelConfiguration.qml:496
-#, fuzzy, kde-format
-#| msgid "Panel and Desktop Management"
+#: contents/configuration/PanelConfiguration.qml:502
+#, kde-format
 msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
-msgstr "Paneeli- ja työpöytähallinta"
+msgstr "Paneelit ja sovelmat"
 
-#: contents/configuration/PanelConfiguration.qml:539
+#: contents/configuration/PanelConfiguration.qml:545
 #, kde-format
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
 msgstr "Korjaa"
 
-#: contents/configuration/PanelConfiguration.qml:625
+#: contents/configuration/PanelConfiguration.qml:631
 #, kde-format
 msgid "Panel Width:"
 msgstr "Paneelin leveys:"
 
-#: contents/configuration/PanelConfiguration.qml:626
+#: contents/configuration/PanelConfiguration.qml:632
 #, kde-format
 msgid "Panel Height:"
 msgstr "Paneelin korkeus:"
 
-#: contents/configuration/PanelConfiguration.qml:649
+#: contents/configuration/PanelConfiguration.qml:655
 #, kde-format
 msgid "Focus shortcut:"
 msgstr "Kohdistuksen pikanäppäin:"
 
-#: contents/configuration/PanelConfiguration.qml:660
+#: contents/configuration/PanelConfiguration.qml:666
 #, kde-format
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Siirrä kohdistus paneeliin painamalla tätä pikanäppäintä"
 
-#: contents/configuration/PanelConfiguration.qml:694
+#: contents/configuration/PanelConfiguration.qml:700
 #, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Poista paneeli"
 
-#: contents/configuration/PanelConfiguration.qml:697
+#: contents/configuration/PanelConfiguration.qml:703
 #, kde-format
 msgid "Remove this panel; this action is undo-able"
 msgstr "Poista tämä paneeli – toimintoa ei voi kumota"
 
-#: contents/configuration/PanelConfiguration.qml:706
+#: contents/configuration/PanelConfiguration.qml:712
 #, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
 msgstr "Sulje paneeli"
 
-#: contents/configuration/PanelConfiguration.qml:710
+#: contents/configuration/PanelConfiguration.qml:716
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
 msgstr "Luo uusi paneeli samoin asetuksin ja sovelmin"
 
-#: contents/configuration/PanelConfiguration.qml:719
+#: contents/configuration/PanelConfiguration.qml:725
 #, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Sulje"
 
-#: contents/configuration/PanelConfiguration.qml:719
+#: contents/configuration/PanelConfiguration.qml:725
 #, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
 msgstr "Poistu muokkaustilasta"
 
-#: contents/configuration/PanelConfiguration.qml:722
+#: contents/configuration/PanelConfiguration.qml:728
 #, kde-format
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "Sulje paneeliasetusikkuna ja poistu muokkaustilasta"

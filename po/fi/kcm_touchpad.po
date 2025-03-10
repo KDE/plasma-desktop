@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-25 00:42+0000\n"
-"PO-Revision-Date: 2025-01-12 17:05+0200\n"
+"PO-Revision-Date: 2025-02-16 11:02+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -212,10 +212,9 @@ msgid "Pointer speed:"
 msgstr "Osoittimen nopeus:"
 
 #: ui/main.qml:317
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgid "Enable pointer acceleration"
-msgstr "Osoittimen kiihdytys:"
+msgstr "Käytä osoittimen kiihdytystä"
 
 #: ui/main.qml:332
 #, kde-format
@@ -223,6 +222,7 @@ msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
+"Jos käytössä, osoittimen kulkema matka kasvaa sen liikkuessa nopeammin."
 
 #: ui/main.qml:342
 #, kde-format

@@ -10,7 +10,7 @@
 # Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008.
 # Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2013, 2014, 2015, 2022.
-# SPDX-FileCopyrightText: 2016, 2017, 2018, 2020, 2023, 2024 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2016, 2017, 2018, 2020, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
 #
 # KDE Finnish translation sprint participants:
 # Author: Artnay
@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-01 00:42+0000\n"
-"PO-Revision-Date: 2024-12-01 14:59+0200\n"
+"PO-Revision-Date: 2025-02-16 11:02+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -204,18 +204,17 @@ msgid "Pointer speed:"
 msgstr "Osoittimen nopeus:"
 
 #: ui/main.qml:233
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgid "Enable pointer acceleration"
-msgstr "Osoittimen kiihdytys:"
+msgstr "Käytä osoittimen kiihdytystä"
 
 #: ui/main.qml:247
-#, fuzzy, kde-format
-#| msgid "Cursor travel distance depends on the mouse movement speed."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
-msgstr "Osoittimen kulkema matka riippuu hiiren liikenopeudesta."
+msgstr ""
+"Jos käytössä, osoittimen kulkema matka kasvaa sen liikkuessa nopeammin."
 
 #: ui/main.qml:257
 #, kde-format

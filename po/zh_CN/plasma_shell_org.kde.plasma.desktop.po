@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-09 00:42+0000\n"
+"POT-Creation-Date: 2025-03-10 00:44+0000\n"
 "PO-Revision-Date: 2024-04-23 19:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -406,134 +406,134 @@ msgstr "自定义"
 msgid "Visibility"
 msgstr "显示/隐藏"
 
-#: contents/configuration/PanelConfiguration.qml:369
+#: contents/configuration/PanelConfiguration.qml:371
 #, kde-format
 msgid "Always visible"
 msgstr "总是显示"
 
-#: contents/configuration/PanelConfiguration.qml:370
+#: contents/configuration/PanelConfiguration.qml:372
 #, kde-format
 msgid "Auto hide"
 msgstr "自动隐藏"
 
-#: contents/configuration/PanelConfiguration.qml:371
+#: contents/configuration/PanelConfiguration.qml:373
 #, kde-format
 msgid "Dodge windows"
 msgstr "避开窗口"
 
-#: contents/configuration/PanelConfiguration.qml:372
+#: contents/configuration/PanelConfiguration.qml:374
 #, kde-format
 msgid "Windows go below"
 msgstr "覆盖窗口"
 
-#: contents/configuration/PanelConfiguration.qml:432
+#: contents/configuration/PanelConfiguration.qml:434
 #, kde-format
 msgid "Opacity"
 msgstr "不透明度"
 
-#: contents/configuration/PanelConfiguration.qml:446
+#: contents/configuration/PanelConfiguration.qml:450
 #, kde-format
 msgid "Adaptive"
 msgstr "自适应"
 
-#: contents/configuration/PanelConfiguration.qml:447
+#: contents/configuration/PanelConfiguration.qml:451
 #, kde-format
 msgid "Opaque"
 msgstr "不透明"
 
-#: contents/configuration/PanelConfiguration.qml:448
+#: contents/configuration/PanelConfiguration.qml:452
 #, kde-format
 msgid "Translucent"
 msgstr "半透明"
 
-#: contents/configuration/PanelConfiguration.qml:480
+#: contents/configuration/PanelConfiguration.qml:484
 #, kde-format
 msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
 msgstr "悬浮"
 
-#: contents/configuration/PanelConfiguration.qml:494
+#: contents/configuration/PanelConfiguration.qml:500
 #, kde-format
 msgctxt "@item:inlistbox Option to disable floating panels or applets"
 msgid "Disabled"
 msgstr "已禁用"
 
-#: contents/configuration/PanelConfiguration.qml:495
+#: contents/configuration/PanelConfiguration.qml:501
 #, kde-format
 msgctxt "@item:inlistbox Option to make only panel applets always float"
 msgid "Applets only"
 msgstr "仅小程序"
 
-#: contents/configuration/PanelConfiguration.qml:496
+#: contents/configuration/PanelConfiguration.qml:502
 #, kde-format
 msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
 msgstr "面板和小程序"
 
-#: contents/configuration/PanelConfiguration.qml:539
+#: contents/configuration/PanelConfiguration.qml:545
 #, kde-format
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
 msgstr "修复"
 
-#: contents/configuration/PanelConfiguration.qml:625
+#: contents/configuration/PanelConfiguration.qml:631
 #, kde-format
 msgid "Panel Width:"
 msgstr "面板宽度："
 
-#: contents/configuration/PanelConfiguration.qml:626
+#: contents/configuration/PanelConfiguration.qml:632
 #, kde-format
 msgid "Panel Height:"
 msgstr "面板高度："
 
-#: contents/configuration/PanelConfiguration.qml:649
+#: contents/configuration/PanelConfiguration.qml:655
 #, kde-format
 msgid "Focus shortcut:"
 msgstr "焦点快捷键："
 
-#: contents/configuration/PanelConfiguration.qml:660
+#: contents/configuration/PanelConfiguration.qml:666
 #, kde-format
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "按下此键盘快捷键以移动焦点到面板"
 
-#: contents/configuration/PanelConfiguration.qml:694
+#: contents/configuration/PanelConfiguration.qml:700
 #, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "删除面板"
 
-#: contents/configuration/PanelConfiguration.qml:697
+#: contents/configuration/PanelConfiguration.qml:703
 #, kde-format
 msgid "Remove this panel; this action is undo-able"
 msgstr "移除此面板；此操作可以撤销"
 
-#: contents/configuration/PanelConfiguration.qml:706
+#: contents/configuration/PanelConfiguration.qml:712
 #, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
 msgstr "创建面板副本"
 
-#: contents/configuration/PanelConfiguration.qml:710
+#: contents/configuration/PanelConfiguration.qml:716
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
 msgstr "创建具有相同设置和小程序的新面板"
 
-#: contents/configuration/PanelConfiguration.qml:719
+#: contents/configuration/PanelConfiguration.qml:725
 #, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "关闭"
 
-#: contents/configuration/PanelConfiguration.qml:719
+#: contents/configuration/PanelConfiguration.qml:725
 #, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
 msgstr "退出编辑模式"
 
-#: contents/configuration/PanelConfiguration.qml:722
+#: contents/configuration/PanelConfiguration.qml:728
 #, kde-format
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "关闭面板设置窗口并退出编辑模式"
@@ -768,43 +768,43 @@ msgstr "没有可用的挂件"
 #, kde-format
 msgctxt "@title: group"
 msgid "Show clock:"
-msgstr ""
+msgstr "显示时钟："
 
 #: contents/lockscreen/config.qml:25
 #, kde-format
 msgctxt "@option:radio Clock always shown"
 msgid "Always"
-msgstr ""
+msgstr "始终显示"
 
 #: contents/lockscreen/config.qml:26
 #, kde-format
 msgctxt "@option:radio"
 msgid "Always show clock"
-msgstr ""
+msgstr "始终显示时钟"
 
 #: contents/lockscreen/config.qml:41
 #, kde-format
 msgctxt "@option:radio Clock shown only while unlock prompt is visible"
 msgid "On unlocking prompt"
-msgstr ""
+msgstr "仅在解锁提示时显示"
 
 #: contents/lockscreen/config.qml:42
 #, kde-format
 msgctxt "@option:radio"
 msgid "Show clock only on unlocking prompt"
-msgstr ""
+msgstr "仅在解锁提示时显示时钟"
 
 #: contents/lockscreen/config.qml:55
 #, kde-format
 msgctxt "@option:radio Clock never shown"
 msgid "Never"
-msgstr ""
+msgstr "不显示"
 
 #: contents/lockscreen/config.qml:56
 #, kde-format
 msgctxt "@option:radio"
 msgid "Never show clock"
-msgstr ""
+msgstr "不显示时钟"
 
 #: contents/lockscreen/config.qml:71
 #, kde-format

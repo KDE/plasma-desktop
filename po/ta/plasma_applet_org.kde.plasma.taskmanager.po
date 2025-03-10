@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-04 00:42+0000\n"
-"PO-Revision-Date: 2024-11-17 22:29+0530\n"
+"PO-Revision-Date: 2025-03-09 12:56+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -85,19 +85,19 @@ msgstr "முன்னோட்டங்களின் மீது சுட�
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show an indicator when a task is playing audio"
-msgstr ""
+msgstr "ஒலிவிடும் பணிகளை குறி"
 
 #: package/contents/ui/ConfigAppearance.qml:69
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Mute task when clicking indicator"
-msgstr ""
+msgstr "குறியை கிளிக் செய்கையில் அப்பணியின் ஒலியை அடக்கு"
 
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show media and volume controls in tooltip"
-msgstr ""
+msgstr "கருவித்துப்பில் ஊடக மற்றும் ஒலி கட்டுப்படுத்திகளை காட்டு"
 
 #: package/contents/ui/ConfigAppearance.qml:85
 #, kde-format
@@ -671,7 +671,7 @@ msgstr "&நிழலிடு"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
-msgstr ""
+msgstr "&விளிம்பும் தலைப்புப்பட்டையும் வேண்டாம்"
 
 #: package/contents/ui/ContextMenu.qml:729
 #, kde-format
