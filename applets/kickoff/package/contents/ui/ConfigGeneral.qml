@@ -167,10 +167,17 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: true
         }
 
-        QQC2.CheckBox {
-            id: alphaSort
-            Kirigami.FormData.label: i18nc("General options", "General:")
-            text: i18n("Always sort applications alphabetically")
+        RowLayout {
+            spacing: Kirigami.Units.smallSpacing
+            QQC2.CheckBox {
+                id: alphaSort
+                Kirigami.FormData.label: i18nc("General options", "General:")
+                text: i18nc("@option:check", "Sort applications alphabetically")
+            }
+
+            Kirigami.ContextualHelpButton {
+                toolTipText: i18nc("@info:whatsthis", "This doesn't affect how applications are sorted in either search results or the favorites page.")
+            }
         }
 
         QQC2.CheckBox {
