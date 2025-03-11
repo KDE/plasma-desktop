@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-24 00:42+0000\n"
+"POT-Creation-Date: 2025-03-11 00:42+0000\n"
 "PO-Revision-Date: 2024-01-07 18:32+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -151,34 +151,44 @@ msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "Eticheta textuală nu poate fi adăugată când panoul e vertical."
 
-#: package/contents/ui/ConfigGeneral.qml:172
+#: package/contents/ui/ConfigGeneral.qml:174
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "Generale:"
 
-#: package/contents/ui/ConfigGeneral.qml:173
-#, kde-format
-msgid "Always sort applications alphabetically"
+#: package/contents/ui/ConfigGeneral.qml:175
+#, fuzzy, kde-format
+#| msgid "Always sort applications alphabetically"
+msgctxt "@option:check"
+msgid "Sort applications alphabetically"
 msgstr "Sortează aplicațiile alfabetic întotdeauna"
 
-#: package/contents/ui/ConfigGeneral.qml:178
+#: package/contents/ui/ConfigGeneral.qml:179
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"This doesn't affect how applications are sorted in either search results or "
+"the favorites page."
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:185
 #, kde-format
 msgid "Use compact list item style"
 msgstr "Folosește stil compact pentru elementele listei"
 
-#: package/contents/ui/ConfigGeneral.qml:184
+#: package/contents/ui/ConfigGeneral.qml:191
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "Dezactivată automat în regim tactil"
 
-#: package/contents/ui/ConfigGeneral.qml:192
+#: package/contents/ui/ConfigGeneral.qml:199
 #, kde-format
 msgid "Switch sidebar categories when hovering over them"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:198
+#: package/contents/ui/ConfigGeneral.qml:205
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Configure Enabled Search Plugins…"
@@ -186,79 +196,79 @@ msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
 msgstr "Configurează extensiile de căutare active…"
 
-#: package/contents/ui/ConfigGeneral.qml:208
+#: package/contents/ui/ConfigGeneral.qml:215
 #, kde-format
 msgid "Sidebar position:"
 msgstr "Poziția barei laterale:"
 
-#: package/contents/ui/ConfigGeneral.qml:209
-#: package/contents/ui/ConfigGeneral.qml:217
+#: package/contents/ui/ConfigGeneral.qml:216
+#: package/contents/ui/ConfigGeneral.qml:224
 #, kde-format
 msgid "Right"
 msgstr "Dreapta"
 
-#: package/contents/ui/ConfigGeneral.qml:209
-#: package/contents/ui/ConfigGeneral.qml:217
+#: package/contents/ui/ConfigGeneral.qml:216
+#: package/contents/ui/ConfigGeneral.qml:224
 #, kde-format
 msgid "Left"
 msgstr "Stânga"
 
-#: package/contents/ui/ConfigGeneral.qml:225
+#: package/contents/ui/ConfigGeneral.qml:232
 #, kde-format
 msgid "Show favorites:"
 msgstr "Arată favoritele:"
 
-#: package/contents/ui/ConfigGeneral.qml:226
+#: package/contents/ui/ConfigGeneral.qml:233
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "într-o grilă"
 
-#: package/contents/ui/ConfigGeneral.qml:234
+#: package/contents/ui/ConfigGeneral.qml:241
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "într-o listă"
 
-#: package/contents/ui/ConfigGeneral.qml:242
+#: package/contents/ui/ConfigGeneral.qml:249
 #, kde-format
 msgid "Show other applications:"
 msgstr "Arată alte aplicații:"
 
-#: package/contents/ui/ConfigGeneral.qml:243
+#: package/contents/ui/ConfigGeneral.qml:250
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "într-o grilă"
 
-#: package/contents/ui/ConfigGeneral.qml:251
+#: package/contents/ui/ConfigGeneral.qml:258
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "într-o listă"
 
-#: package/contents/ui/ConfigGeneral.qml:263
+#: package/contents/ui/ConfigGeneral.qml:270
 #, kde-format
 msgid "Show buttons for:"
 msgstr "Arată butoane pentru:"
 
-#: package/contents/ui/ConfigGeneral.qml:264
+#: package/contents/ui/ConfigGeneral.qml:271
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
 msgid "Power"
 msgstr "Alimentare"
 
-#: package/contents/ui/ConfigGeneral.qml:273
+#: package/contents/ui/ConfigGeneral.qml:280
 #, kde-format
 msgid "Session"
 msgstr "Sesiune"
 
-#: package/contents/ui/ConfigGeneral.qml:282
+#: package/contents/ui/ConfigGeneral.qml:289
 #, kde-format
 msgid "Power and session"
 msgstr "Alimentare și sesiune"
 
-#: package/contents/ui/ConfigGeneral.qml:291
+#: package/contents/ui/ConfigGeneral.qml:298
 #, kde-format
 msgid "Show action button captions"
 msgstr "Arată etichete pentru butoane de acțiune"

@@ -10,16 +10,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-10 00:44+0000\n"
-"PO-Revision-Date: 2025-02-23 19:17-0300\n"
-"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
+"POT-Creation-Date: 2025-03-11 00:42+0000\n"
+"PO-Revision-Date: 2025-03-10 00:55-0300\n"
+"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -635,24 +635,24 @@ msgstr "%1 (primária)"
 msgid "Alternative Widgets"
 msgstr "Widgets alternativos"
 
-#: contents/explorer/AppletDelegate.qml:27
+#: contents/explorer/AppletDelegate.qml:28
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Add %1"
 msgstr "Adicionar %1"
 
-#: contents/explorer/AppletDelegate.qml:46
+#: contents/explorer/AppletDelegate.qml:47
 #, kde-format
 msgid "Unsupported Widget"
 msgstr "Widget sem suporte"
 
-#: contents/explorer/AppletDelegate.qml:201
+#: contents/explorer/AppletDelegate.qml:202
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
 msgstr "Novo!"
 
-#: contents/explorer/AppletDelegate.qml:203
+#: contents/explorer/AppletDelegate.qml:204
 #, kde-format
 msgctxt "@info:other accessible for badge showing applet count"
 msgid "%1 widget active"
@@ -660,41 +660,41 @@ msgid_plural "%1 widgets active"
 msgstr[0] "%1 widget ativo"
 msgstr[1] "%1 widgets ativos"
 
-#: contents/explorer/AppletDelegate.qml:204
+#: contents/explorer/AppletDelegate.qml:205
 #, kde-format
 msgctxt " @info:other accessible for badge indicating new widget"
 msgid "Recently installed"
 msgstr "Instalado recentemente"
 
-#: contents/explorer/AppletDelegate.qml:216
+#: contents/explorer/AppletDelegate.qml:217
 #, kde-format
 msgid "Cancel Uninstallation"
 msgstr "Cancelar desinstalação"
 
-#: contents/explorer/AppletDelegate.qml:217
+#: contents/explorer/AppletDelegate.qml:218
 #, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Mark for Uninstallation"
 msgstr "Marcar para desinstalação"
 
-#: contents/explorer/AppletDelegate.qml:221
+#: contents/explorer/AppletDelegate.qml:222
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Cancel pending uninstallation for widget %1"
 msgstr "Cancelar desinstalação pendente do widget %1"
 
-#: contents/explorer/AppletDelegate.qml:222
+#: contents/explorer/AppletDelegate.qml:223
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Mark widget %1 for uninstallation. Requires confirmation"
 msgstr "Marcar o widget %1 para desinstalação. Requer confirmação"
 
-#: contents/explorer/AppletDelegate.qml:264
+#: contents/explorer/AppletDelegate.qml:265
 #, kde-format
 msgid "Remove all instances"
 msgstr "Remover todas as instâncias"
 
-#: contents/explorer/AppletDelegate.qml:268
+#: contents/explorer/AppletDelegate.qml:269
 #, kde-format
 msgctxt ""
 "@action:button accessible description, %1 number of instances %2 is widget "
@@ -778,57 +778,46 @@ msgid "No widgets available"
 msgstr "Nenhum widget disponível"
 
 #: contents/lockscreen/config.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@title: group"
 msgid "Show clock:"
-msgstr "Mostrar relógio"
+msgstr "Mostrar relógio:"
 
 #: contents/lockscreen/config.qml:25
-#, fuzzy, kde-format
-#| msgid "Always visible"
+#, kde-format
 msgctxt "@option:radio Clock always shown"
 msgid "Always"
-msgstr "Sempre visível"
+msgstr "Sempre"
 
 #: contents/lockscreen/config.qml:26
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Always show clock"
-msgstr "Mostrar relógio"
+msgstr "Sempre mostrar o relógio"
 
 #: contents/lockscreen/config.qml:41
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio Clock shown only while unlock prompt is visible"
 msgid "On unlocking prompt"
-msgstr "Mostrar sob o prompt de desbloqueio"
+msgstr "No prompt de desbloqueio"
 
 #: contents/lockscreen/config.qml:42
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show clock only on unlocking prompt"
-msgstr "Mostrar sob o prompt de desbloqueio"
+msgstr "Mostrar o relógio apenas no prompt de desbloqueio"
 
 #: contents/lockscreen/config.qml:55
 #, kde-format
 msgctxt "@option:radio Clock never shown"
 msgid "Never"
-msgstr ""
+msgstr "Nunca"
 
 #: contents/lockscreen/config.qml:56
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Never show clock"
-msgstr "Mostrar relógio"
+msgstr "Nunca mostrar o relógio"
 
 #: contents/lockscreen/config.qml:71
 #, kde-format

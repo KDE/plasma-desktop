@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-24 00:42+0000\n"
+"POT-Creation-Date: 2025-03-11 00:42+0000\n"
 "PO-Revision-Date: 2024-12-08 14:22+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -146,112 +146,122 @@ msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "பலகை செங்குத்தாக இருக்கும்போது காட்சிப்பெயரை அமைக்கு முடியாது."
 
-#: package/contents/ui/ConfigGeneral.qml:172
+#: package/contents/ui/ConfigGeneral.qml:174
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "பொதுவானவை:"
 
-#: package/contents/ui/ConfigGeneral.qml:173
-#, kde-format
-msgid "Always sort applications alphabetically"
+#: package/contents/ui/ConfigGeneral.qml:175
+#, fuzzy, kde-format
+#| msgid "Always sort applications alphabetically"
+msgctxt "@option:check"
+msgid "Sort applications alphabetically"
 msgstr "செயலிகளை எப்போதும் அகரவரிசையாக வகைப்படுத்து"
 
-#: package/contents/ui/ConfigGeneral.qml:178
+#: package/contents/ui/ConfigGeneral.qml:179
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"This doesn't affect how applications are sorted in either search results or "
+"the favorites page."
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:185
 #, kde-format
 msgid "Use compact list item style"
 msgstr "சுருக்கமான காட்சிமுறையை பயன்படுத்து"
 
-#: package/contents/ui/ConfigGeneral.qml:184
+#: package/contents/ui/ConfigGeneral.qml:191
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "பலகைக்கணினி பயன்முறையில் தானாக முடக்கப்படும்"
 
-#: package/contents/ui/ConfigGeneral.qml:192
+#: package/contents/ui/ConfigGeneral.qml:199
 #, kde-format
 msgid "Switch sidebar categories when hovering over them"
 msgstr "ஓரப்பட்டையிலுள்ள பகுப்புகளின் மீது சுட்டியை வைக்கும்போது அவற்றிற்கு தாவு"
 
-#: package/contents/ui/ConfigGeneral.qml:198
+#: package/contents/ui/ConfigGeneral.qml:205
 #, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
 msgstr "தேடல் செருகுநிரல்களை அமை…"
 
-#: package/contents/ui/ConfigGeneral.qml:208
+#: package/contents/ui/ConfigGeneral.qml:215
 #, kde-format
 msgid "Sidebar position:"
 msgstr "ஓரப்பட்டையின் இருப்பிடம்:"
 
-#: package/contents/ui/ConfigGeneral.qml:209
-#: package/contents/ui/ConfigGeneral.qml:217
+#: package/contents/ui/ConfigGeneral.qml:216
+#: package/contents/ui/ConfigGeneral.qml:224
 #, kde-format
 msgid "Right"
 msgstr "வலதில்"
 
-#: package/contents/ui/ConfigGeneral.qml:209
-#: package/contents/ui/ConfigGeneral.qml:217
+#: package/contents/ui/ConfigGeneral.qml:216
+#: package/contents/ui/ConfigGeneral.qml:224
 #, kde-format
 msgid "Left"
 msgstr "இடதில்"
 
-#: package/contents/ui/ConfigGeneral.qml:225
+#: package/contents/ui/ConfigGeneral.qml:232
 #, kde-format
 msgid "Show favorites:"
 msgstr "பிடித்தவற்றை காட்டு:"
 
-#: package/contents/ui/ConfigGeneral.qml:226
+#: package/contents/ui/ConfigGeneral.qml:233
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "நெடுவரிசைகளில்"
 
-#: package/contents/ui/ConfigGeneral.qml:234
+#: package/contents/ui/ConfigGeneral.qml:241
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "பட்டியலாக"
 
-#: package/contents/ui/ConfigGeneral.qml:242
+#: package/contents/ui/ConfigGeneral.qml:249
 #, kde-format
 msgid "Show other applications:"
 msgstr "மற்ற செயலிகளை காட்டு:"
 
-#: package/contents/ui/ConfigGeneral.qml:243
+#: package/contents/ui/ConfigGeneral.qml:250
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "நெடுவரிசைகளில்"
 
-#: package/contents/ui/ConfigGeneral.qml:251
+#: package/contents/ui/ConfigGeneral.qml:258
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "பட்டியலாக"
 
-#: package/contents/ui/ConfigGeneral.qml:263
+#: package/contents/ui/ConfigGeneral.qml:270
 #, kde-format
 msgid "Show buttons for:"
 msgstr "இவற்றிற்கு பட்டன்களை காட்டு:"
 
-#: package/contents/ui/ConfigGeneral.qml:264
+#: package/contents/ui/ConfigGeneral.qml:271
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
 msgid "Power"
 msgstr "ஆற்றல்"
 
-#: package/contents/ui/ConfigGeneral.qml:273
+#: package/contents/ui/ConfigGeneral.qml:280
 #, kde-format
 msgid "Session"
 msgstr "அமர்வு"
 
-#: package/contents/ui/ConfigGeneral.qml:282
+#: package/contents/ui/ConfigGeneral.qml:289
 #, kde-format
 msgid "Power and session"
 msgstr "ஆற்றல் மற்றும் அமர்வு"
 
-#: package/contents/ui/ConfigGeneral.qml:291
+#: package/contents/ui/ConfigGeneral.qml:298
 #, kde-format
 msgid "Show action button captions"
 msgstr "பட்டன்களுக்கு கருவித்துப்புகளை காட்டு"

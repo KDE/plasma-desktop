@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-10 00:44+0000\n"
-"PO-Revision-Date: 2025-02-18 16:09+0900\n"
+"POT-Creation-Date: 2025-03-11 00:42+0000\n"
+"PO-Revision-Date: 2025-03-10 20:23+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.03.70\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -627,67 +627,67 @@ msgstr "%1（主要）"
 msgid "Alternative Widgets"
 msgstr "替代元件"
 
-#: contents/explorer/AppletDelegate.qml:27
+#: contents/explorer/AppletDelegate.qml:28
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Add %1"
 msgstr "加入 %1"
 
-#: contents/explorer/AppletDelegate.qml:46
+#: contents/explorer/AppletDelegate.qml:47
 #, kde-format
 msgid "Unsupported Widget"
 msgstr "不支援的元件"
 
 # 這種時候 (badge for new stuff) 感覺好像通常會直接看到寫 "new!"
 # --Kisaragi
-#: contents/explorer/AppletDelegate.qml:201
+#: contents/explorer/AppletDelegate.qml:202
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
 msgstr "New!"
 
-#: contents/explorer/AppletDelegate.qml:203
+#: contents/explorer/AppletDelegate.qml:204
 #, kde-format
 msgctxt "@info:other accessible for badge showing applet count"
 msgid "%1 widget active"
 msgid_plural "%1 widgets active"
 msgstr[0] "%1 個作用中的元件"
 
-#: contents/explorer/AppletDelegate.qml:204
+#: contents/explorer/AppletDelegate.qml:205
 #, kde-format
 msgctxt " @info:other accessible for badge indicating new widget"
 msgid "Recently installed"
 msgstr "最近安裝"
 
-#: contents/explorer/AppletDelegate.qml:216
+#: contents/explorer/AppletDelegate.qml:217
 #, kde-format
 msgid "Cancel Uninstallation"
 msgstr "取消解除安裝"
 
-#: contents/explorer/AppletDelegate.qml:217
+#: contents/explorer/AppletDelegate.qml:218
 #, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Mark for Uninstallation"
 msgstr "標記解除安裝"
 
-#: contents/explorer/AppletDelegate.qml:221
+#: contents/explorer/AppletDelegate.qml:222
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Cancel pending uninstallation for widget %1"
 msgstr "取消元件 %1 保留中的解除安裝操作"
 
-#: contents/explorer/AppletDelegate.qml:222
+#: contents/explorer/AppletDelegate.qml:223
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Mark widget %1 for uninstallation. Requires confirmation"
 msgstr "標記要解除安裝元件 %1。需要確認"
 
-#: contents/explorer/AppletDelegate.qml:264
+#: contents/explorer/AppletDelegate.qml:265
 #, kde-format
 msgid "Remove all instances"
 msgstr "移除所有實體"
 
-#: contents/explorer/AppletDelegate.qml:268
+#: contents/explorer/AppletDelegate.qml:269
 #, kde-format
 msgctxt ""
 "@action:button accessible description, %1 number of instances %2 is widget "
@@ -769,57 +769,46 @@ msgid "No widgets available"
 msgstr "沒有可用元件"
 
 #: contents/lockscreen/config.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@title: group"
 msgid "Show clock:"
-msgstr "顯示時鐘"
+msgstr "顯示時鐘："
 
 #: contents/lockscreen/config.qml:25
-#, fuzzy, kde-format
-#| msgid "Always visible"
+#, kde-format
 msgctxt "@option:radio Clock always shown"
 msgid "Always"
-msgstr "永遠可見"
+msgstr "總是"
 
 #: contents/lockscreen/config.qml:26
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Always show clock"
-msgstr "顯示時鐘"
+msgstr "總是顯示時鐘"
 
 #: contents/lockscreen/config.qml:41
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio Clock shown only while unlock prompt is visible"
 msgid "On unlocking prompt"
-msgstr "在解除鎖定對話框下方顯示"
+msgstr "解除鎖定對話框出現時"
 
 #: contents/lockscreen/config.qml:42
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show clock only on unlocking prompt"
-msgstr "在解除鎖定對話框下方顯示"
+msgstr "只在解除鎖定對話框出現時顯示時鐘"
 
 #: contents/lockscreen/config.qml:55
 #, kde-format
 msgctxt "@option:radio Clock never shown"
 msgid "Never"
-msgstr ""
+msgstr "永不"
 
 #: contents/lockscreen/config.qml:56
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Never show clock"
-msgstr "顯示時鐘"
+msgstr "不要顯示時鐘"
 
 #: contents/lockscreen/config.qml:71
 #, kde-format

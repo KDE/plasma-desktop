@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-10 00:44+0000\n"
+"POT-Creation-Date: 2025-03-11 00:42+0000\n"
 "PO-Revision-Date: 2025-03-08 09:02+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -633,24 +633,24 @@ msgstr "%1 (основний)"
 msgid "Alternative Widgets"
 msgstr "Альтернативні віджети"
 
-#: contents/explorer/AppletDelegate.qml:27
+#: contents/explorer/AppletDelegate.qml:28
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Add %1"
 msgstr "Додати %1"
 
-#: contents/explorer/AppletDelegate.qml:46
+#: contents/explorer/AppletDelegate.qml:47
 #, kde-format
 msgid "Unsupported Widget"
 msgstr "Непідтримуваний віджет"
 
-#: contents/explorer/AppletDelegate.qml:201
+#: contents/explorer/AppletDelegate.qml:202
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
 msgstr "Новий!"
 
-#: contents/explorer/AppletDelegate.qml:203
+#: contents/explorer/AppletDelegate.qml:204
 #, kde-format
 msgctxt "@info:other accessible for badge showing applet count"
 msgid "%1 widget active"
@@ -660,41 +660,41 @@ msgstr[1] "%1 віджети активні"
 msgstr[2] "%1 віджетів активні"
 msgstr[3] "%1 віджет активний"
 
-#: contents/explorer/AppletDelegate.qml:204
+#: contents/explorer/AppletDelegate.qml:205
 #, kde-format
 msgctxt " @info:other accessible for badge indicating new widget"
 msgid "Recently installed"
 msgstr "Нещодавно встановлені"
 
-#: contents/explorer/AppletDelegate.qml:216
+#: contents/explorer/AppletDelegate.qml:217
 #, kde-format
 msgid "Cancel Uninstallation"
 msgstr "Скасувати вилучення"
 
-#: contents/explorer/AppletDelegate.qml:217
+#: contents/explorer/AppletDelegate.qml:218
 #, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Mark for Uninstallation"
 msgstr "Позначити на вилучення"
 
-#: contents/explorer/AppletDelegate.qml:221
+#: contents/explorer/AppletDelegate.qml:222
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Cancel pending uninstallation for widget %1"
 msgstr "Скасувати вилучення віджета %1 за чергою обробки"
 
-#: contents/explorer/AppletDelegate.qml:222
+#: contents/explorer/AppletDelegate.qml:223
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Mark widget %1 for uninstallation. Requires confirmation"
 msgstr "Позначити віджет %1 для вилучення. Потребує підтвердження"
 
-#: contents/explorer/AppletDelegate.qml:264
+#: contents/explorer/AppletDelegate.qml:265
 #, kde-format
 msgid "Remove all instances"
 msgstr "Вилучити усі екземпляри"
 
-#: contents/explorer/AppletDelegate.qml:268
+#: contents/explorer/AppletDelegate.qml:269
 #, kde-format
 msgctxt ""
 "@action:button accessible description, %1 number of instances %2 is widget "

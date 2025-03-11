@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kickoff\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-24 00:42+0000\n"
+"POT-Creation-Date: 2025-03-11 00:42+0000\n"
 "PO-Revision-Date: 2025-02-02 00:20-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -153,112 +153,122 @@ msgid "A text label cannot be set when the Panel is vertical."
 msgstr ""
 "Uma etiqueta de texto não pode ser definida quando o painel for vertical."
 
-#: package/contents/ui/ConfigGeneral.qml:172
+#: package/contents/ui/ConfigGeneral.qml:174
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "Geral:"
 
-#: package/contents/ui/ConfigGeneral.qml:173
-#, kde-format
-msgid "Always sort applications alphabetically"
+#: package/contents/ui/ConfigGeneral.qml:175
+#, fuzzy, kde-format
+#| msgid "Always sort applications alphabetically"
+msgctxt "@option:check"
+msgid "Sort applications alphabetically"
 msgstr "Sempre classificar os aplicativos alfabeticamente"
 
-#: package/contents/ui/ConfigGeneral.qml:178
+#: package/contents/ui/ConfigGeneral.qml:179
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"This doesn't affect how applications are sorted in either search results or "
+"the favorites page."
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:185
 #, kde-format
 msgid "Use compact list item style"
 msgstr "Usar estilo de itens de lista compacta"
 
-#: package/contents/ui/ConfigGeneral.qml:184
+#: package/contents/ui/ConfigGeneral.qml:191
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "Desabilitar automaticamente no modo touch"
 
-#: package/contents/ui/ConfigGeneral.qml:192
+#: package/contents/ui/ConfigGeneral.qml:199
 #, kde-format
 msgid "Switch sidebar categories when hovering over them"
 msgstr "Alternar categorias da barra lateral ao passar o mouse"
 
-#: package/contents/ui/ConfigGeneral.qml:198
+#: package/contents/ui/ConfigGeneral.qml:205
 #, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
 msgstr "Configurar os plugins de pesquisa…"
 
-#: package/contents/ui/ConfigGeneral.qml:208
+#: package/contents/ui/ConfigGeneral.qml:215
 #, kde-format
 msgid "Sidebar position:"
 msgstr "Posição da barra lateral:"
 
-#: package/contents/ui/ConfigGeneral.qml:209
-#: package/contents/ui/ConfigGeneral.qml:217
+#: package/contents/ui/ConfigGeneral.qml:216
+#: package/contents/ui/ConfigGeneral.qml:224
 #, kde-format
 msgid "Right"
 msgstr "Direita"
 
-#: package/contents/ui/ConfigGeneral.qml:209
-#: package/contents/ui/ConfigGeneral.qml:217
+#: package/contents/ui/ConfigGeneral.qml:216
+#: package/contents/ui/ConfigGeneral.qml:224
 #, kde-format
 msgid "Left"
 msgstr "Esquerda"
 
-#: package/contents/ui/ConfigGeneral.qml:225
+#: package/contents/ui/ConfigGeneral.qml:232
 #, kde-format
 msgid "Show favorites:"
 msgstr "Mostrar favoritos:"
 
-#: package/contents/ui/ConfigGeneral.qml:226
+#: package/contents/ui/ConfigGeneral.qml:233
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "Em uma grade"
 
-#: package/contents/ui/ConfigGeneral.qml:234
+#: package/contents/ui/ConfigGeneral.qml:241
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "Em uma lista"
 
-#: package/contents/ui/ConfigGeneral.qml:242
+#: package/contents/ui/ConfigGeneral.qml:249
 #, kde-format
 msgid "Show other applications:"
 msgstr "Mostrar outros aplicativos:"
 
-#: package/contents/ui/ConfigGeneral.qml:243
+#: package/contents/ui/ConfigGeneral.qml:250
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "Em uma grade"
 
-#: package/contents/ui/ConfigGeneral.qml:251
+#: package/contents/ui/ConfigGeneral.qml:258
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "Em uma lista"
 
-#: package/contents/ui/ConfigGeneral.qml:263
+#: package/contents/ui/ConfigGeneral.qml:270
 #, kde-format
 msgid "Show buttons for:"
 msgstr "Mostrar botões para:"
 
-#: package/contents/ui/ConfigGeneral.qml:264
+#: package/contents/ui/ConfigGeneral.qml:271
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
 msgid "Power"
 msgstr "Energia"
 
-#: package/contents/ui/ConfigGeneral.qml:273
+#: package/contents/ui/ConfigGeneral.qml:280
 #, kde-format
 msgid "Session"
 msgstr "Sessão"
 
-#: package/contents/ui/ConfigGeneral.qml:282
+#: package/contents/ui/ConfigGeneral.qml:289
 #, kde-format
 msgid "Power and session"
 msgstr "Energia e sessão"
 
-#: package/contents/ui/ConfigGeneral.qml:291
+#: package/contents/ui/ConfigGeneral.qml:298
 #, kde-format
 msgid "Show action button captions"
 msgstr "Mostrar legendas dos botões de ação"
