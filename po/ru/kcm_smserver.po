@@ -10,13 +10,13 @@
 # Andrey Cherepanov <skull@kde.ru>, 2009.
 # Alexander Potashev <aspotashev@gmail.com>, 2011, 2019.
 # Alexander Yavorsky <kekcuha@gmail.com>, 2018, 2020, 2021, 2022, 2023.
-# SPDX-FileCopyrightText: 2024 Olesya Gerasimenko <translation-team@basealt.ru>
+# SPDX-FileCopyrightText: 2024, 2025 Olesya Gerasimenko <translation-team@basealt.ru>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-25 02:37+0000\n"
-"PO-Revision-Date: 2024-09-19 16:56+0300\n"
+"PO-Revision-Date: 2025-03-10 14:53+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -153,20 +153,18 @@ msgid "Ignored applications:"
 msgstr "Исключить приложения:"
 
 #: ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' executable names here (separated by commas or colons, for "
-#| "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
-"Укажите имена исполняемых файлов, которые должны быть исключены из списка "
-"автоматически восстанавливаемых приложений. В качестве разделителя "
-"используйте запятую или двоеточие (xterm:konsole или xterm,konsole)."
+"Чтобы исключить приложения из списка автоматически восстанавливаемых, "
+"укажите здесь идентификаторы соответствующих desktop-файлов или, в X11, "
+"имена исполняемых файлов. В качестве разделителя используйте запятую или "
+"двоеточие, например: «xterm:org.kde.konsole.desktop» или «xterm,org.kde."
+"konsole.desktop»."
 
 #: ui/main.qml:138
 #, kde-format
