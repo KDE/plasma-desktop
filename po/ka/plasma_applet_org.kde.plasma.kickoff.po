@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-11 00:42+0000\n"
-"PO-Revision-Date: 2024-12-06 03:57+0100\n"
+"PO-Revision-Date: 2025-03-11 03:07+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -155,8 +155,7 @@ msgid "General:"
 msgstr "ზოგადი:"
 
 #: package/contents/ui/ConfigGeneral.qml:175
-#, fuzzy, kde-format
-#| msgid "Always sort applications alphabetically"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "აპლიკაციების ანბანის მიხედვით დალაგება"
@@ -168,6 +167,8 @@ msgid ""
 "This doesn't affect how applications are sorted in either search results or "
 "the favorites page."
 msgstr ""
+"ეს არ ეხება იმას, როგორ ლაგდება აპლიკაციები ძებნის შედეგების ან რჩეულების "
+"გვერდზე."
 
 #: package/contents/ui/ConfigGeneral.qml:185
 #, kde-format
