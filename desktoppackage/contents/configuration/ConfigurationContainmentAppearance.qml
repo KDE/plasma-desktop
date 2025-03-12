@@ -206,7 +206,7 @@ Item {
         if (configDialog.containmentPlugin !== appearanceRoot.containmentPlugin) {
             main.push(switchContainmentWarning);
             categoriesScroll.enabled = false;
-        } else if (main.currentItem.objectName === "switchContainmentWarningItem") {
+        } else if (main.currentItem?.objectName === "switchContainmentWarningItem") {
             main.pop();
             categoriesScroll.enabled = true;
         }
