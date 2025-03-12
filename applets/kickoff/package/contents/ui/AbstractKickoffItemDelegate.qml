@@ -237,9 +237,10 @@ T.ItemDelegate {
     }
 
     PC3.ToolTip.text: {
-        if (root.labelTruncated && root.descriptionTruncated) {
+        if (root.labelTruncated) {
             return model.display
-        } else if (root.descriptionTruncated || !root.descriptionVisible) {
+        } else if (root.descriptionTruncated || (!root.descriptionVisible && (root.isSearchResult
+                                                                              || Plasmoid.configuration.appNameFormat > 1))) {
             return description
         }
         return ""
