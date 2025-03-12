@@ -193,6 +193,13 @@ Item {
     PlasmaCore.Dialog {
         id: sidePanel
 
+        // If we are currently in edit mode, all panels are being shown
+        // and we use the strictAvailableScreenRect, which accounts for all
+        // of them. If we're not configuring anything, we instead use the
+        // entire screen rect, without fear of overlapping panels.
+        property var referenceRect: containment?.plasmoid.corona.editMode ? desktop.strictAvailableScreenRect : desktop.screenGeometry
+
+
         readonly property bool sideBarOnRightEdge: {
             if (!sidePanelStack.active) {
                 return false;
@@ -222,7 +229,7 @@ Item {
                 return result;
             }
 
-            const rect = desktop.strictAvailableScreenRect;
+            const rect = referenceRect;
             result += rect.x;
 
             if (sideBarOnRightEdge) {
@@ -231,7 +238,7 @@ Item {
 
             return result;
         }
-        y: desktop.y + (containment ? desktop.strictAvailableScreenRect.y : 0)
+        y: desktop.y + (containment ? referenceRect.y : 0)
 
         onVisibleChanged: {
             if (!visible) {
@@ -244,7 +251,7 @@ Item {
             id: sidePanelStack
             asynchronous: true
             width: item ? item.width : 0
-            height: containment ? desktop.strictAvailableScreenRect.height - sidePanel.margins.top - sidePanel.margins.bottom : 1000
+            height: containment ? sidePanel.referenceRect.height - sidePanel.margins.top - sidePanel.margins.bottom : 1000
             state: "closed"
 
             function bindingWithItem(callback: var, defaults: var): var {
