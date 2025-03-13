@@ -166,7 +166,7 @@ Item {
                     width: overlayedBadge.width + Math.round(Kirigami.Units.smallSpacing * 1.5)
                     height: overlayedBadge.height + Math.round(Kirigami.Units.smallSpacing * 1.5)
                     radius: height
-                    visible: running && delegate.GridView.isCurrentItem
+                    visible: (running && delegate.GridView.isCurrentItem) ?? false
                 }
             }
 
@@ -191,7 +191,7 @@ Item {
                 height: Math.round(Kirigami.Units.iconSizes.sizeForLabels * 1.3)
                 radius: height
                 color: (running && delegate.GridView.isCurrentItem) ? Kirigami.Theme.highlightColor : Kirigami.Theme.positiveTextColor
-                visible: (running && delegate.GridView.isCurrentItem) || model.recent
+                visible: ((running && delegate.GridView.isCurrentItem) || model.recent) ?? false
                 onVisibleChanged: maskShaderSource.scheduleUpdate()
 
                 PlasmaComponents.Label {
@@ -226,7 +226,7 @@ Item {
                 PlasmaComponents.ToolTip.visible: hovered
                 PlasmaComponents.ToolTip.text: text
                 flat: false
-                visible: model.local && delegate.GridView.isCurrentItem && !dragHandler.active && !touchDragHandler.active
+                visible: (model.local && delegate.GridView.isCurrentItem && !dragHandler.active && !touchDragHandler.active) ?? false
 
                 onHoveredChanged: {
                     if (hovered) {
@@ -274,7 +274,7 @@ Item {
                 PlasmaComponents.ToolTip.visible: hovered
                 PlasmaComponents.ToolTip.text: text
                 flat: false
-                visible: running && delegate.GridView.isCurrentItem && !dragHandler.active
+                visible: (running && delegate.GridView.isCurrentItem && !dragHandler.active) ?? false
 
                 onHoveredChanged: {
                     if (hovered) {
