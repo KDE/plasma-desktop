@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the pladma-desktop package.
 #
 # Automatically generated, 2014.
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma_applet_org\n"
+"Project-Id-Version: plasma_applet_org.kde.plasma.kickoff\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-11 00:42+0000\n"
-"PO-Revision-Date: 2024-12-06 02:51+0100\n"
+"PO-Revision-Date: 2025-03-13 01:12+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -80,7 +80,7 @@ msgstr "El nombre del icono es «%1»"
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
-msgstr "Escoger..."
+msgstr "Escoger…"
 
 #: package/contents/ui/ConfigGeneral.qml:95
 #, kde-format
@@ -156,11 +156,10 @@ msgid "General:"
 msgstr "General:"
 
 #: package/contents/ui/ConfigGeneral.qml:175
-#, fuzzy, kde-format
-#| msgid "Always sort applications alphabetically"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
-msgstr "Ordenar siempre las aplicaciones alfabéticamente"
+msgstr "Ordenar aplicaciones alfabéticamente"
 
 #: package/contents/ui/ConfigGeneral.qml:179
 #, kde-format
@@ -169,6 +168,8 @@ msgid ""
 "This doesn't affect how applications are sorted in either search results or "
 "the favorites page."
 msgstr ""
+"Esto no afecta a cómo se ordenan las aplicaciones en los resultados de "
+"búsqueda ni en la página de favoritos."
 
 #: package/contents/ui/ConfigGeneral.qml:185
 #, kde-format
@@ -191,7 +192,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
-msgstr "Configurar los complementos de búsqueda..."
+msgstr "Configurar los complementos de búsqueda…"
 
 #: package/contents/ui/ConfigGeneral.qml:215
 #, kde-format
@@ -314,7 +315,7 @@ msgstr "Más"
 #: package/contents/ui/main.qml:354
 #, kde-format
 msgid "Edit Applications…"
-msgstr "Editar aplicaciones..."
+msgstr "Editar aplicaciones…"
 
 #: package/contents/ui/PlacesPage.qml:63
 #, kde-format
@@ -333,202 +334,3 @@ msgstr "Historial"
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Usadas frecuentemente"
-
-#~ msgctxt "@item:inmenu Reset icon to default"
-#~ msgid "Clear Icon"
-#~ msgstr "Borrar icono"
-
-#~ msgid "Search…"
-#~ msgstr "Buscar..."
-
-#~ msgid "Primary actions:"
-#~ msgstr "Acciones principales:"
-
-#~ msgid "Power actions"
-#~ msgstr "Acciones de energía"
-
-#~ msgid "Session actions"
-#~ msgstr "Acciones de sesión"
-
-#~ msgid "Leave…"
-#~ msgstr "Salir..."
-
-#~ msgid "Power…"
-#~ msgstr "Energía..."
-
-#~ msgid "More…"
-#~ msgstr "Más..."
-
-#~ msgid "Updating applications…"
-#~ msgstr "Actualizando aplicaciones..."
-
-#~ msgid "Allow labels to have two lines"
-#~ msgstr "Permitir que las etiquetas tengan dos líneas"
-
-#~ msgid "%2@%3 (%1)"
-#~ msgstr "%2@%3 (%1)"
-
-#~ msgid "%1@%2"
-#~ msgstr "%1@%2"
-
-#~ msgid "List with 1 item"
-#~ msgid_plural "List with %1 items"
-#~ msgstr[0] "Lista con 1 elemento"
-#~ msgstr[1] "Lista con %1 elementos"
-
-#~ msgid "%1 submenu"
-#~ msgstr "Submenú de %1"
-
-#~ msgid "Leave..."
-#~ msgstr "Salir..."
-
-#~ msgid "Power..."
-#~ msgstr "Energía..."
-
-#~ msgid "More..."
-#~ msgstr "Más..."
-
-#~ msgid "Applications updated."
-#~ msgstr "Aplicaciones actualizadas."
-
-#~ msgid "Switch tabs on hover"
-#~ msgstr "Cambiar pestañas al pasar el ratón sobre ellas"
-
-#~ msgid "All Applications"
-#~ msgstr "Todas las aplicaciones"
-
-#~ msgid "Favorites"
-#~ msgstr "Favoritos"
-
-#~ msgid "Often Used"
-#~ msgstr "Usadas con frecuencia"
-
-#~ msgid "Active Tabs"
-#~ msgstr "Pestañas activas"
-
-#~ msgid "Inactive Tabs"
-#~ msgstr "Pestañas inactivas"
-
-#~ msgid ""
-#~ "Drag tabs between the boxes to show/hide them, or reorder the visible "
-#~ "tabs by dragging."
-#~ msgstr ""
-#~ "Arrastre las pestañas entre los cuadros para mostrarlas u ocultarlas, o "
-#~ "cambie el orden de las pestañas visibles arrastrándolas."
-
-#~ msgid "Expand search to bookmarks, files and emails"
-#~ msgstr "Expandir la búsqueda a marcadores, archivos y correo electrónico"
-
-#~ msgid "Appearance"
-#~ msgstr "Aspecto"
-
-#~ msgid "Menu Buttons"
-#~ msgstr "Botones de menú"
-
-#~ msgid "Visible Tabs"
-#~ msgstr "Pestañas visibles"
-
-#~ msgctxt "@title:column"
-#~ msgid "Favorites"
-#~ msgstr "Favoritos"
-
-#~ msgid "Log out"
-#~ msgstr "Cerrar sesión"
-
-#~ msgid "Lock"
-#~ msgstr "Bloquear"
-
-#~ msgid "Lock screen"
-#~ msgstr "Bloquear la pantalla"
-
-#~ msgid "Switch user"
-#~ msgstr "Cambiar usuario"
-
-#~ msgid "Start a parallel session as a different user"
-#~ msgstr "Iniciar una sesión paralela como un usuario distinto"
-
-#~ msgid "Shut down"
-#~ msgstr "Apagar"
-
-#~ msgid "Turn off computer"
-#~ msgstr "Apagar el equipo"
-
-#~ msgctxt "Restart computer"
-#~ msgid "Restart"
-#~ msgstr "Reiniciar"
-
-#~ msgid "Restart computer"
-#~ msgstr "Reiniciar el equipo"
-
-#~ msgid "Save current session for next login"
-#~ msgstr "Guardar la sesión actual para el siguiente inicio"
-
-#~ msgctxt "Puts the system on standby"
-#~ msgid "Standby"
-#~ msgstr "En pausa"
-
-#~ msgid "Pause without logging out"
-#~ msgstr "Pausar sin salir de la sesión"
-
-#~ msgid "Hibernate"
-#~ msgstr "Hibernar"
-
-#~ msgid "Suspend to disk"
-#~ msgstr "Suspender en el disco"
-
-#~ msgid "Suspend"
-#~ msgstr "Suspender"
-
-#~ msgid "Suspend to RAM"
-#~ msgstr "Suspender en memoria"
-
-#~ msgid "System"
-#~ msgstr "Sistema"
-
-#~ msgid "Home Folder"
-#~ msgstr "Carpeta de inicio"
-
-#~ msgid "Network Folders"
-#~ msgstr "Carpetas de red"
-
-#~ msgid "Documents"
-#~ msgstr "Documentos"
-
-#~ msgid "Recently Used Documents"
-#~ msgstr "Documentos usados recientemente"
-
-#~ msgid "Recently Used Applications"
-#~ msgstr "Aplicaciones usadas recientemente"
-
-#~ msgid "Run Command..."
-#~ msgstr "Ejecutar orden..."
-
-#~ msgid "Run a command or a search query"
-#~ msgstr "Ejecutar una orden o una consulta de búsqueda"
-
-#~ msgid "Removable Storage"
-#~ msgstr "Almacenamiento extraíble"
-
-#~ msgid "Show 'Recently Installed'"
-#~ msgstr "Mostrar «Instalado recientemente»"
-
-#~ msgid "Uninstall"
-#~ msgstr "Desinstalar"
-
-#~ msgid "Sort Alphabetically (Z to A)"
-#~ msgstr "Ordenar alfabéticamente (de la Z a la A)"
-
-#~ msgid "Clear Recent Applications"
-#~ msgstr "Borrar las aplicaciones recientes"
-
-#~ msgid "Clear Recent Documents"
-#~ msgstr "Borrar los documentos recientes"
-
-#~ msgid "Sleep"
-#~ msgstr "Dormir"
-
-#~ msgid "Add To Favorites In This Activity Only"
-#~ msgstr "Añadir a favoritos solo en esta actividad"
-
-#~ msgid "Plasma by KDE"
-#~ msgstr "Plasma, por KDE"
