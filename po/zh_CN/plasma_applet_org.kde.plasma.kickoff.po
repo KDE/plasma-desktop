@@ -153,11 +153,10 @@ msgid "General:"
 msgstr "常规："
 
 #: package/contents/ui/ConfigGeneral.qml:175
-#, fuzzy, kde-format
-#| msgid "Always sort applications alphabetically"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
-msgstr "总是按字母顺序排列应用程序"
+msgstr "按字母顺序排列应用程序"
 
 #: package/contents/ui/ConfigGeneral.qml:179
 #, kde-format
@@ -165,7 +164,7 @@ msgctxt "@info:whatsthis"
 msgid ""
 "This doesn't affect how applications are sorted in either search results or "
 "the favorites page."
-msgstr ""
+msgstr "这不会影响应用程序在搜索结果或常用程序页面中的排序方式。"
 
 #: package/contents/ui/ConfigGeneral.qml:185
 #, kde-format
