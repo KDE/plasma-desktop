@@ -38,7 +38,7 @@ TouchpadGlobalActions::TouchpadGlobalActions(bool isConfiguration, QObject *pare
     toggle->setText(i18n("Toggle Touchpad"));
     connect(toggle, SIGNAL(triggered()), SIGNAL(toggleTriggered()));
     bool okToggle =
-        KGlobalAccel::setGlobalShortcut(toggle, QList<QKeySequence>{Qt::Key_TouchpadToggle, Qt::ControlModifier | Qt::MetaModifier | Qt::Key_Zenkaku_Hankaku});
+        KGlobalAccel::setGlobalShortcut(toggle, QList<QKeySequence>{Qt::Key_TouchpadToggle, Qt::ControlModifier | Qt::MetaModifier | Qt::Key_TouchpadToggle, Qt::ControlModifier | Qt::MetaModifier | Qt::Key_Zenkaku_Hankaku});
     if (!okToggle) {
         qWarning() << "Couldn't set global shortcut to Qt::Key_TouchpadToggle. There's another program using it, otherwise file a bug against kcm_touchpad";
     }
