@@ -28,10 +28,6 @@ KCMUtils.SimpleKCM {
 
     readonly property Mouse.InputDevice device: backend.inputDevices[KCMUtils.ConfigModule.currentDeviceIndex] ?? null
 
-    function supportsExtraButtons(device: Mouse.InputDevice): bool {
-        return (device?.supportedButtons ?? 0) & ~(Qt.LeftButton | Qt.RightButton | Qt.MiddleButton);
-    }
-
     header: Header {
         saveLoadMessage: root.KCMUtils.ConfigModule.saveLoadMessage
         hotplugMessage: root.KCMUtils.ConfigModule.hotplugMessage
@@ -341,16 +337,10 @@ KCMUtils.SimpleKCM {
             icon.name: "input-mouse-click-left-symbolic"
             text: i18ndc("kcmmouse", "@action:button", "Configure Extra Buttons…")
 
-            visible: {
-                if (root.backend.isAnonymousInputDevice) {
-                    return false;
-                }
-                return root.backend.buttonMappingCount > 0
-                    || root.backend.inputDevices.some(root.supportsExtraButtons);
-            }
+            visible: root.device?.supportsButtonMapping ?? false
 
-            onClicked: source => {
-                root.KCMUtils.ConfigModule.push("bindings.qml", {deviceName: deviceSelector.currentText});
+            onClicked: {
+                root.KCMUtils.ConfigModule.push("bindings.qml");
             }
         }
     }
