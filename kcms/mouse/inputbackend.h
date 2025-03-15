@@ -73,26 +73,10 @@ public:
         return {};
     }
 
-    Q_INVOKABLE virtual QVariantMap buttonMapping([[maybe_unused]] const QString &deviceName) const
-    {
-        return {};
-    }
-
-    Q_INVOKABLE virtual void setButtonMapping([[maybe_unused]] const QString &deviceName, [[maybe_unused]] const QVariantMap &mapping)
-    {
-    }
-
-    // Because QML can't QVariantMap::count() on its own.
-    Q_INVOKABLE int buttonMappingCount(const QString &deviceName) const
-    {
-        return buttonMapping(deviceName).count();
-    }
-
 Q_SIGNALS:
     void needsSaveChanged();
 
     void inputDevicesChanged();
     void deviceAdded(bool success);
     void deviceRemoved(int index);
-    void buttonMappingChanged();
 };

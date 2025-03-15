@@ -105,6 +105,25 @@ public:
         m_middleEmulation.set(set);
     }
 
+    bool supportsButtonMapping() const override
+    {
+        return false;
+    }
+
+    QVariantMap buttonMapping() const override
+    {
+        return {};
+    }
+
+    int buttonMappingCount() const override
+    {
+        return 0;
+    }
+
+    void setButtonMapping(const QVariantMap &) override
+    {
+    }
+
     //
     // acceleration speed and profile
     bool supportsPointerAcceleration() const override
