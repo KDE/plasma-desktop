@@ -32,9 +32,6 @@ public:
     int deviceCount() const override;
     QList<InputDevice *> inputDevices() const override;
 
-    Q_INVOKABLE QVariantMap buttonMapping(const QString &deviceName) const override;
-    Q_INVOKABLE void setButtonMapping(const QString &deviceName, const QVariantMap &mapping) override;
-
 private Q_SLOTS:
     void onDeviceAdded(QString);
     void onDeviceRemoved(QString);
@@ -45,10 +42,10 @@ private:
     bool forAllDevices(bool (KWinWaylandDevice::*f)()) const;
 
     static KConfigGroup mouseButtonRebindsConfigGroup();
+    void loadButtonRebinds(KWinWaylandDevice *device, const KConfigGroup &buttonGroup);
 
     std::unique_ptr<QDBusInterface> m_deviceManager;
     std::vector<std::unique_ptr<KWinWaylandDevice>> m_devices;
-    QMap<QString, QVariantMap> m_changedButtonMapping;
 
     QString m_errorString;
 };
