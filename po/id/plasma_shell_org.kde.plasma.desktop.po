@@ -1,6 +1,6 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2018, 2019, 2020, 2021, 2022, 2024 Wantoyo <wantoyek@gmail.com>
+# SPDX-FileCopyrightText: 2018, 2019, 2020, 2021, 2022, 2024, 2025 Wantoyo <wantoyek@gmail.com>
 # Aziz Adam Adrian <4.adam.adrian@gmail.com>, 2022.
 # Linerly <linerly@protonmail.com>, 2023.
 #
@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-27 02:41+0000\n"
-"PO-Revision-Date: 2024-11-08 21:05+0700\n"
-"Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
+"PO-Revision-Date: 2025-03-15 07:18+0700\n"
+"Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -433,10 +433,9 @@ msgid "Dodge windows"
 msgstr "Menghindari jendela"
 
 #: contents/configuration/PanelConfiguration.qml:369
-#, fuzzy, kde-format
-#| msgid "Windows Go Below"
+#, kde-format
 msgid "Windows go below"
-msgstr "Jendela Di Bawahnya"
+msgstr "Jendela menuju ke bawahnya"
 
 #: contents/configuration/PanelConfiguration.qml:420
 #, kde-format
@@ -507,17 +506,16 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "Hapus panel ini, tindakan ini dapat diurungkan"
 
 #: contents/configuration/PanelConfiguration.qml:684
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
-msgstr "Hapus Panel"
+msgstr "Panel Clone"
 
 #: contents/configuration/PanelConfiguration.qml:688
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
-msgstr ""
+msgstr "Buat sebuah panel baru dengan applet dan pengaturan yang sama"
 
 #: contents/configuration/PanelConfiguration.qml:697
 #, kde-format
@@ -579,10 +577,9 @@ msgstr ""
 "Klik ganda untuk menyetel ulang."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy, kde-format
-#| msgid "Panel and Desktop Management"
+#, kde-format
 msgid "Manage Panels and Desktops"
-msgstr "Pengelolaan Desktop dan Panel"
+msgstr "Kelola Panel dan Desktop"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 #, kde-format
@@ -641,7 +638,7 @@ msgstr "Baru!"
 #: contents/explorer/AppletDelegate.qml:188
 #, kde-format
 msgid "Undo uninstall"
-msgstr "Urung copot"
+msgstr "Urungkan penghapusan instalasi"
 
 #: contents/explorer/AppletDelegate.qml:189
 #, kde-format
@@ -667,7 +664,7 @@ msgstr "Email:"
 #: contents/explorer/Tooltip.qml:136
 #, kde-format
 msgid "Uninstall"
-msgstr "Copot"
+msgstr "Hapus instalasi"
 
 #: contents/explorer/WidgetExplorer.qml:140
 #: contents/explorer/WidgetExplorer.qml:220
@@ -750,22 +747,19 @@ msgid "Caps Lock is on"
 msgstr "Caps Lock telah nyala"
 
 #: contents/lockscreen/LockScreenUi.qml:285
-#, fuzzy, kde-format
-#| msgid "Sleep"
+#, kde-format
 msgid "Slee&p"
-msgstr "Tidur"
+msgstr "Ti&dur"
 
 #: contents/lockscreen/LockScreenUi.qml:291
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "&Hibernate"
-msgstr "Hibernasi"
+msgstr "&Hibernasi"
 
 #: contents/lockscreen/LockScreenUi.qml:297
-#, fuzzy, kde-format
-#| msgid "Switch User"
+#, kde-format
 msgid "Switch &User"
-msgstr "Beralih Pengguna"
+msgstr "Beralih Pen&gguna"
 
 #: contents/lockscreen/LockScreenUi.qml:358
 #, kde-format
