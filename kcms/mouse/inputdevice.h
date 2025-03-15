@@ -8,6 +8,7 @@
 
 #include <QObject>
 #include <QString>
+#include <QVariantMap>
 
 class InputDevice : public QObject
 {
@@ -30,6 +31,11 @@ class InputDevice : public QObject
     Q_PROPERTY(bool supportsMiddleEmulation READ supportsMiddleEmulation CONSTANT FINAL)
     Q_PROPERTY(bool middleEmulationEnabledByDefault READ middleEmulationEnabledByDefault CONSTANT FINAL)
     Q_PROPERTY(bool middleEmulation READ isMiddleEmulation WRITE setMiddleEmulation NOTIFY middleEmulationChanged FINAL)
+
+    // unique property to the Wayland backend
+    Q_PROPERTY(bool supportsButtonMapping READ supportsButtonMapping CONSTANT FINAL)
+    Q_PROPERTY(QVariantMap buttonMapping READ buttonMapping WRITE setButtonMapping NOTIFY buttonMappingChanged FINAL)
+    Q_PROPERTY(int buttonMappingCount READ buttonMappingCount NOTIFY buttonMappingChanged STORED false FINAL)
 
     //
     // acceleration speed and profile
@@ -54,7 +60,7 @@ class InputDevice : public QObject
     Q_PROPERTY(bool supportsScrollOnButtonDown READ supportsScrollOnButtonDown CONSTANT FINAL)
     Q_PROPERTY(bool scrollOnButtonDownEnabledByDefault READ scrollOnButtonDownEnabledByDefault CONSTANT FINAL)
     Q_PROPERTY(bool scrollOnButtonDown READ isScrollOnButtonDown WRITE setScrollOnButtonDown NOTIFY scrollOnButtonDownChanged FINAL)
-    // The only unique property to the Wayland backend
+    // unique property to the Wayland backend
     Q_PROPERTY(qreal scrollFactor READ scrollFactor WRITE setScrollFactor NOTIFY scrollFactorChanged FINAL)
 
 public:
@@ -86,6 +92,11 @@ public:
 
     virtual bool isMiddleEmulation() const = 0;
     virtual void setMiddleEmulation(bool set) = 0;
+
+    virtual bool supportsButtonMapping() const = 0;
+    virtual QVariantMap buttonMapping() const = 0;
+    virtual int buttonMappingCount() const = 0;
+    virtual void setButtonMapping(const QVariantMap &) = 0;
 
     //
     // acceleration speed and profile
@@ -136,8 +147,9 @@ Q_SIGNALS:
     void pointerAccelerationProfileAdaptiveChanged();
     void enabledChanged();
     void middleEmulationChanged();
+    void buttonMappingChanged();
     void naturalScrollChanged();
     void scrollOnButtonDownChanged();
-    // The only unique property to the Wayland backend
+    // unique property to the Wayland backend
     void scrollFactorChanged();
 };

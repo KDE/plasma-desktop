@@ -40,7 +40,7 @@ KWinWaylandDevice::~KWinWaylandDevice()
 {
 }
 
-bool KWinWaylandDevice::init()
+bool KWinWaylandDevice::initDBus()
 {
     bool success = true;
 
@@ -97,6 +97,13 @@ bool KWinWaylandDevice::init()
     return success;
 }
 
+void KWinWaylandDevice::initButtonMapping(const QVariantMap &initial)
+{
+    m_buttonMapping.avail = true;
+    m_buttonMapping.old = initial;
+    m_buttonMapping.set(initial);
+}
+
 bool KWinWaylandDevice::defaults()
 {
     // general & advanced
@@ -115,7 +122,7 @@ bool KWinWaylandDevice::defaults()
     return true;
 }
 
-bool KWinWaylandDevice::save()
+bool KWinWaylandDevice::saveDBus()
 {
     bool success = true;
 
@@ -141,6 +148,7 @@ bool KWinWaylandDevice::isSaveNeeded() const
     return m_enabled.isSaveNeeded() //
         || m_leftHanded.isSaveNeeded() //
         || m_middleEmulation.isSaveNeeded() //
+        || m_buttonMapping.isSaveNeeded() //
         // acceleration
         || m_pointerAcceleration.isSaveNeeded() //
         || m_pointerAccelerationProfileFlat.isSaveNeeded() //

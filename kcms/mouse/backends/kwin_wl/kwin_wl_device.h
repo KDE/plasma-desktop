@@ -23,10 +23,11 @@ public:
     KWinWaylandDevice(const QString &dbusName);
     ~KWinWaylandDevice() override;
 
-    bool init();
+    bool initDBus();
+    void initButtonMapping(const QVariantMap &initial);
 
     bool defaults();
-    bool save();
+    bool saveDBus();
     bool isSaveNeeded() const;
 
     //
@@ -101,6 +102,27 @@ public:
     void setMiddleEmulation(bool set) override
     {
         m_middleEmulation.set(set);
+    }
+
+    bool supportsButtonMapping() const override
+    {
+        // return true if the device has more mouse buttons than just the standard ones
+        return m_supportedButtons.val & ~(Qt::LeftButton | Qt::RightButton | Qt::MiddleButton);
+    }
+
+    QVariantMap buttonMapping() const override
+    {
+        return m_buttonMapping.val;
+    }
+
+    int buttonMappingCount() const override
+    {
+        return m_buttonMapping.val.count();
+    }
+
+    void setButtonMapping(const QVariantMap &mapping) override
+    {
+        m_buttonMapping.set(mapping);
     }
 
     //
@@ -288,6 +310,8 @@ private:
     Prop<bool> m_supportsMiddleEmulation{this, u"supportsMiddleEmulation"_s};
     Prop<bool> m_middleEmulationEnabledByDefault{this, u"middleEmulationEnabledByDefault"_s};
     Prop<bool> m_middleEmulation{this, u"middleEmulation"_s, &KWinWaylandDevice::middleEmulationChanged};
+
+    Prop<QVariantMap> m_buttonMapping{this, QString(), &KWinWaylandDevice::buttonMappingChanged};
 
     //
     // acceleration speed and profile
