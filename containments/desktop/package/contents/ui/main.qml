@@ -283,7 +283,10 @@ ContainmentItem {
             configKey: "ItemGeometries-" + Math.round(root.screenGeometry.width) + "x" + Math.round(root.screenGeometry.height)
             fallbackConfigKey: root.availableScreenRect.width > root.availableScreenRect.height ? "ItemGeometriesHorizontal" : "ItemGeometriesVertical"
 
-            containment: Plasmoid
+            Binding on containment {
+                value: Plasmoid
+                when: Plasmoid.isContainment
+            }
             containmentItem: root
             editModeCondition: Plasmoid.immutable
                     ? ContainmentLayoutManager.AppletsLayout.Locked
