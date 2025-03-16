@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-11 00:42+0000\n"
-"PO-Revision-Date: 2025-02-16 17:10+0100\n"
+"PO-Revision-Date: 2025-03-15 22:36+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -774,57 +774,46 @@ msgid "No widgets available"
 msgstr "Neniuj fenestraĵoj haveblaj"
 
 #: contents/lockscreen/config.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@title: group"
 msgid "Show clock:"
-msgstr "Montri horloĝon"
+msgstr "Montri horloĝon:"
 
 #: contents/lockscreen/config.qml:25
-#, fuzzy, kde-format
-#| msgid "Always visible"
+#, kde-format
 msgctxt "@option:radio Clock always shown"
 msgid "Always"
-msgstr "Ĉiam videbla"
+msgstr "Ĉiam"
 
 #: contents/lockscreen/config.qml:26
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Always show clock"
-msgstr "Montri horloĝon"
+msgstr "Ĉiam montri horloĝon"
 
 #: contents/lockscreen/config.qml:41
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio Clock shown only while unlock prompt is visible"
 msgid "On unlocking prompt"
-msgstr "Montri sub malŝlos-instigilo"
+msgstr "Je malŝlosado de instigilo"
 
 #: contents/lockscreen/config.qml:42
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show clock only on unlocking prompt"
-msgstr "Montri sub malŝlos-instigilo"
+msgstr "Montri horloĝon nur je malŝloso de instigilo"
 
 #: contents/lockscreen/config.qml:55
 #, kde-format
 msgctxt "@option:radio Clock never shown"
 msgid "Never"
-msgstr ""
+msgstr "Neniam"
 
 #: contents/lockscreen/config.qml:56
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Never show clock"
-msgstr "Montri horloĝon"
+msgstr "Neniam montri horloĝon"
 
 #: contents/lockscreen/config.qml:71
 #, kde-format
@@ -942,7 +931,3 @@ msgstr "Eliri Redaktan Reĝimon"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Panelfokusa Indikilo"
-
-#~ msgctxt "@title: group"
-#~ msgid "Clock:"
-#~ msgstr "Horloĝo:"

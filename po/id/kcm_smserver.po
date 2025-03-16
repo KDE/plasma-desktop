@@ -2,22 +2,22 @@
 # Copyright (C) 2010 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kcmsmserver package.
 # Andhika Padmawan <andhika.padmawan@gmail.com>, 2010.
-# SPDX-FileCopyrightText: 2017, 2018, 2019, 2022, 2024 Wantoyo <wantoyek@gmail.com>
+# SPDX-FileCopyrightText: 2017, 2018, 2019, 2022, 2024, 2025 Wantoyo <wantoyek@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-25 00:42+0000\n"
-"PO-Revision-Date: 2024-07-25 01:38+0700\n"
-"Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
+"PO-Revision-Date: 2025-03-15 06:01+0700\n"
+"Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -143,21 +143,18 @@ msgid "Ignored applications:"
 msgstr "Aplikasi yang diabaikan:"
 
 #: ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' executable names here (separated by commas or colons, for "
-#| "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
-"Tulis nama-nama aplikasi yang dapat dieksekusi di sini (dipisahkan dengan "
-"koma atau titik dua, contohnya 'xterm:konsole' atau 'xterm,konsole') untuk "
-"mencegah mereka dari auto memulai bersama dengan aplikasi yang dipulihkan "
-"pada sesi lainnya."
+"Tulis pengenal file desktop app atau, pada X11, nama-nama yang dapat "
+"dieksekusi di sini (dipisahkan dengan koma atau titik dua, contohnya 'xterm:"
+"org.kde.konsole.desktop' atau 'xterm,org.kde.konsole.desktop') untuk "
+"mencegahnya dari pemulaian otomatis bersama dengan aplikasi lain yang "
+"dipulihkan sesi."
 
 #: ui/main.qml:138
 #, kde-format

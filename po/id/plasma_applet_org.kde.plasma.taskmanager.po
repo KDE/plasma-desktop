@@ -2,7 +2,7 @@
 # Copyright (C) 2010 This_file_is_part_of_KDE
 # This file is distributed under the same license as the plasma_applet_tasks package.
 # Andhika Padmawan <andhika.padmawan@gmail.com>, 2010-2014.
-# SPDX-FileCopyrightText: 2017, 2018, 2019, 2020, 2021, 2022, 2024 Wantoyo <wantoyek@gmail.com>
+# SPDX-FileCopyrightText: 2017, 2018, 2019, 2020, 2021, 2022, 2024, 2025 Wantoyo <wantoyek@gmail.com>
 # Linerly <linerly@protonmail.com>, 2022.
 # Aziz Adam Adrian <4.adam.adrian@gmail.com>, 2022.
 #
@@ -11,15 +11,15 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-04 00:42+0000\n"
-"PO-Revision-Date: 2024-11-01 23:10+0700\n"
-"Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
+"PO-Revision-Date: 2025-03-15 06:59+0700\n"
+"Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -89,19 +89,19 @@ msgstr "Sembunyikan jendela lain ketika melintasi di atas pratinjau"
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show an indicator when a task is playing audio"
-msgstr ""
+msgstr "Tampilkan indikator ketika sebuah tugas sedang memutar audio"
 
 #: package/contents/ui/ConfigAppearance.qml:69
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Mute task when clicking indicator"
-msgstr ""
+msgstr "Senyapkan tugas ketika mengeklik indikator"
 
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show media and volume controls in tooltip"
-msgstr ""
+msgstr "Tampilkan media dan kontrol volume di tips alat"
 
 #: package/contents/ui/ConfigAppearance.qml:85
 #, kde-format
@@ -675,7 +675,7 @@ msgstr "&Tirai"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
-msgstr ""
+msgstr "&Tanpa Bilah Judul dan Kerangka"
 
 #: package/contents/ui/ContextMenu.qml:729
 #, kde-format
