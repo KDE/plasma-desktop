@@ -22,6 +22,13 @@ PlasmoidItem {
     switchWidth: Kirigami.Units.gridUnit * 8
     switchHeight: Kirigami.Units.gridUnit * 6
 
+    TaskManager.TasksModel {
+        id: tasksModel
+
+        sortMode: TaskManager.TasksModel.SortVirtualDesktop
+        groupMode: TaskManager.TasksModel.GroupDisabled
+    }
+
     Component {
         id: windowList
 
@@ -31,12 +38,8 @@ PlasmoidItem {
             clip: true
             Layout.preferredWidth: Kirigami.Units.gridUnit * 10
             Layout.preferredHeight: Kirigami.Units.gridUnit * 12
-            model: TaskManager.TasksModel {
-                id: tasksModel
+            model: tasksModel
 
-                sortMode: TaskManager.TasksModel.SortVirtualDesktop
-                groupMode: TaskManager.TasksModel.GroupDisabled
-            }
             delegate: PlasmaComponents.ItemDelegate {
 
                 width: ListView.view.width
@@ -112,13 +115,6 @@ PlasmoidItem {
                 return tasksModel.data(tasksModel.activeTask, 1 /* decorationrole */)
             } else {
                 return "start-here-kde-symbolic"
-            }
-
-            TaskManager.TasksModel {
-                id: tasksModel
-
-                sortMode: TaskManager.TasksModel.SortVirtualDesktop
-                groupMode: TaskManager.TasksModel.GroupDisabled
             }
 
             PlasmaExtras.ModelContextMenu {
