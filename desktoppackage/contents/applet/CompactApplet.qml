@@ -77,7 +77,7 @@ PlasmaCore.ToolTipArea {
         Accessible.role: Accessible.Button
         Accessible.onPressAction: Plasmoid.activated()
 
-        Keys.onPressed: {
+        Keys.onPressed: event => {
             switch (event.key) {
             case Qt.Key_Space:
             case Qt.Key_Enter:
