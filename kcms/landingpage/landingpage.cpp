@@ -118,7 +118,12 @@ bool MostUsedModel::filterAcceptsRow(int source_row, const QModelIndex &source_p
     }
 
     KService::Ptr service = KService::serviceByStorageId(desktopName);
-    return service && (source_row - ignoredKCMs.size() < 6);
+    if (!service || !service->showOnCurrentPlatform()) {
+        ignoreKCM(desktopName);
+        return false;
+    }
+
+    return source_row - ignoredKCMs.size() < 6;
 }
 
 QVariant MostUsedModel::data(const QModelIndex &index, int role) const
