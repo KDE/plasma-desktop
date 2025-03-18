@@ -93,10 +93,11 @@ AbstractKickoffItemDelegate {
             PC3.Label {
                 id: descriptionLabel
                 Layout.fillWidth: true
-                // Don't want to show descriptions for apps in the category list, because
-                // there's not enough room for them with the category list item height
-                // Also don't display if it's configured to show only name or only descriotion
-                visible: text.length > 0 && text !== label.text && !root.isCategoryListItem && Plasmoid.configuration.appNameFormat > 1
+                visible: {
+                    let isApplicationSearchResult = root.model?.group === "Applications" || root.model?.group === "System Settings"
+                    let isSearchResultWithDescription = root.isSearchResult && (Plasmoid.configuration?.appNameFormat > 1 || !isApplicationSearchResult)
+                    return text.length > 0 && (isSearchResultWithDescription || (text !== label.text && !root.isCategoryListItem && Plasmoid.configuration?.appNameFormat > 1))
+                }
                 enabled: false
                 text: root.description
                 textFormat: Text.PlainText
