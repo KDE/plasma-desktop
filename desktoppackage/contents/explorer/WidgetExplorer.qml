@@ -4,7 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.7
+import QtQuick
 import QtQuick.Controls 2.5 as QQC2
 
 import org.kde.plasma.components 3.0 as PC3
@@ -277,7 +277,16 @@ PC3.Page {
             bottomMargin: footerContainer.visible ? 0 : - main.sidePanel.margins.bottom
         }
 
+        // The scrollbar changing visibiliy can lead to the content size changing due to word wrap
+        // A delayed binding gives some extra time, it'll come to a stop as there's only one scroll bar
+        property bool scrollBarVisible: false
+        Binding on scrollBarVisible {
+            value: list.contentHeight > height
+            delayed: true
+        }
+
         PC3.ScrollBar.horizontal.policy: PC3.ScrollBar.AlwaysOff
+        PC3.ScrollBar.vertical.visible: scrollBarVisible
 
         // hide the flickering by fading in nicely
         opacity: setModelTimer.running ? 0 : 1
