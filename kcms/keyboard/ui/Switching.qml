@@ -71,7 +71,7 @@ KCM.AbstractKCM {
 
 
         QQC2.CheckBox {
-            text: i18nc("@label:checkbox", "Show notification on layout change")
+            text: i18nc("@label:checkbox", "Show OSD popup on layout change")
             checked: kcm.workspaceOptions.osdKbdLayoutChangedEnabled
             onToggled: kcm.workspaceOptions.osdKbdLayoutChangedEnabled = checked
 
