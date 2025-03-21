@@ -285,7 +285,7 @@ Item {
                     height: main.GridView.view.iconSize
 
                     opacity: {
-                        if (root.useListViewMode && selectionButton) {
+                        if (root.useListViewMode && selectionButton.visible) {
                             return 0.3;
                         }
 
