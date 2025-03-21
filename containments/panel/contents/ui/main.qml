@@ -146,6 +146,10 @@ ContainmentItem {
             prefix: ['thick'].concat(panelSvg.prefix)
             imagePath: "widgets/panel-background"
         }
+        KSvg.Svg {
+            id: rootSvg
+            imagePath: "widgets/panel-background"
+        }
         property bool marginAreasEnabled: panelSvg.margins != thickPanelSvg.margins
         property var marginHighlightSvg: KSvg.Svg{imagePath: "widgets/margins-highlight"}
         //Margins are either the size of the margins in the SVG, unless that prevents the panel from being at least half a smallMedium icon) tall at which point we set the margin to whatever allows it to be that...or if it still won't fit, 1.
@@ -370,11 +374,13 @@ ContainmentItem {
 
 //BEGIN UI elements
 
+        property int sideMargin: isHorizontal ? rootSvg.elementSize("hint-side-margin").width : rootSvg.elementSize("hint-side-margin").height
+
         anchors {
-            leftMargin: isHorizontal ? Math.min(dropArea.spacingAtMinSize, panelSvg.fixedMargins.left + currentLayout.rowSpacing) : 0
-            rightMargin: isHorizontal ? Math.min(dropArea.spacingAtMinSize, panelSvg.fixedMargins.right + currentLayout.rowSpacing) : 0
-            topMargin: isHorizontal ? 0 : Math.min(dropArea.spacingAtMinSize, panelSvg.fixedMargins.top + currentLayout.rowSpacing)
-            bottomMargin: isHorizontal ? 0 : Math.min(dropArea.spacingAtMinSize, panelSvg.fixedMargins.bottom + currentLayout.rowSpacing)
+            leftMargin: isHorizontal ? Math.min(dropArea.spacingAtMinSize, panelSvg.fixedMargins.left) + sideMargin : 0
+            rightMargin: isHorizontal ? Math.min(dropArea.spacingAtMinSize, panelSvg.fixedMargins.right) + sideMargin : 0
+            topMargin: isHorizontal ? 0 : Math.min(dropArea.spacingAtMinSize, panelSvg.fixedMargins.top) + sideMargin
+            bottomMargin: isHorizontal ? 0 : Math.min(dropArea.spacingAtMinSize, panelSvg.fixedMargins.bottom) + sideMargin
         }
 
         Item {
@@ -398,8 +404,8 @@ ContainmentItem {
                 delegate: appletContainerComponent
             }
 
-            rowSpacing: Kirigami.Units.smallSpacing
-            columnSpacing: Kirigami.Units.smallSpacing
+            rowSpacing: rootSvg.hasElement("hint-grid-spacing") ? rootSvg.elementSize("hint-grid-spacing").height : Kirigami.Units.smallSpacing
+            columnSpacing: rootSvg.hasElement("hint-grid-spacing") ? rootSvg.elementSize("hint-grid-spacing").height : Kirigami.Units.smallSpacing
 
             x: Qt.application.layoutDirection === Qt.RightToLeft && isHorizontal ? toolBoxSize : 0;
             readonly property int toolBoxSize: !toolBox || !Plasmoid.containment.corona.editMode || Qt.application.layoutDirection === Qt.RightToLeft ? 0 : (isHorizontal ? toolBox.width : toolBox.height)
