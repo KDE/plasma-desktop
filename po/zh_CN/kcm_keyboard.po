@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-04 00:42+0000\n"
+"POT-Creation-Date: 2025-03-22 00:43+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -435,9 +435,11 @@ msgid "Current window only"
 msgstr "仅当前窗口"
 
 #: ui/Switching.qml:74
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:checkbox"
+#| msgid "Show notification on layout change"
 msgctxt "@label:checkbox"
-msgid "Show notification on layout change"
+msgid "Show OSD popup on layout change"
 msgstr "布局更改时显示通知"
 
 #: ui/Switching.qml:86

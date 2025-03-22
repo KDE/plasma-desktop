@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-04 00:42+0000\n"
+"POT-Creation-Date: 2025-03-22 00:43+0000\n"
 "PO-Revision-Date: 2024-11-29 00:52+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -441,9 +441,11 @@ msgid "Current window only"
 msgstr "현재 창만"
 
 #: ui/Switching.qml:74
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:checkbox"
+#| msgid "Show notification on layout change"
 msgctxt "@label:checkbox"
-msgid "Show notification on layout change"
+msgid "Show OSD popup on layout change"
 msgstr "레이아웃 전환 시 알림 표시"
 
 #: ui/Switching.qml:86

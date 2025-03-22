@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-04 00:42+0000\n"
+"POT-Creation-Date: 2025-03-22 00:43+0000\n"
 "PO-Revision-Date: 2025-01-25 21:08+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -446,9 +446,11 @@ msgid "Current window only"
 msgstr "Csak a jelenlegi ablakra"
 
 #: ui/Switching.qml:74
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:checkbox"
+#| msgid "Show notification on layout change"
 msgctxt "@label:checkbox"
-msgid "Show notification on layout change"
+msgid "Show OSD popup on layout change"
 msgstr "Értesítés megjelenítése kiosztásváltozáskor"
 
 #: ui/Switching.qml:86
