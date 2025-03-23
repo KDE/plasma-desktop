@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-22 00:43+0000\n"
-"PO-Revision-Date: 2024-10-02 05:44+0200\n"
+"PO-Revision-Date: 2025-03-22 03:54+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -443,12 +443,10 @@ msgid "Current window only"
 msgstr "მხოლოდ, მიმდინარე ფანჯარა"
 
 #: ui/Switching.qml:74
-#, fuzzy, kde-format
-#| msgctxt "@label:checkbox"
-#| msgid "Show notification on layout change"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Show OSD popup on layout change"
-msgstr "გაფრთხილების ჩვენება განლაგების შეცვლისას"
+msgstr "OSD მხტუნარას ჩვენება განლაგების ცვლილებისას"
 
 #: ui/Switching.qml:86
 #, kde-format

@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-22 00:43+0000\n"
-"PO-Revision-Date: 2024-10-02 06:28+0200\n"
+"PO-Revision-Date: 2025-03-22 11:06+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -447,12 +447,10 @@ msgid "Current window only"
 msgstr "Samo trenutno okno"
 
 #: ui/Switching.qml:74
-#, fuzzy, kde-format
-#| msgctxt "@label:checkbox"
-#| msgid "Show notification on layout change"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Show OSD popup on layout change"
-msgstr "Prikaži obvestilo ob spremembi postavitve"
+msgstr "Pokaži pojavno okno na zaslonu ob spremembi postavitve"
 
 #: ui/Switching.qml:86
 #, kde-format
