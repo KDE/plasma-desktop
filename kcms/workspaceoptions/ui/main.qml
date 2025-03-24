@@ -427,5 +427,51 @@ KCM.SimpleKCM {
                 toolTipText: i18n("Two clicks within this duration are considered a double-click. Some applications may not honor this setting.")
             }
         }
+
+        RowLayout {
+            Layout.fillWidth: true
+            spacing: Kirigami.Units.smallSpacing
+
+            QQC2.Label {
+                Layout.fillWidth: true
+                Layout.preferredWidth: Kirigami.Units.gridUnit * 16
+                text: i18nc("Test double-click speed", "Double-click the folder to test. If it does not change its appearance, increase double-click interval.")
+                textFormat: Text.PlainText
+                wrapMode: Text.WordWrap
+                font: Kirigami.Theme.smallFont
+            }
+
+            QQC2.Frame {
+                Layout.preferredWidth: Kirigami.Units.iconSizes.large
+                Layout.preferredHeight: Kirigami.Units.iconSizes.large
+                Kirigami.Theme.colorSet: Kirigami.Theme.View
+
+                Kirigami.Icon {
+                    id: doubleClickTestIcon
+                    property bool checked: false
+                    anchors.fill: parent
+                    source: checked ? "folder-open" : "folder"
+                }
+
+                MouseArea {
+                    anchors.fill: parent
+                    hoverEnabled: true // for onExited to properly work.
+                    onPressed: {
+                        if (testDoubleClickTimer.running) {
+                            doubleClickTestIcon.checked = !doubleClickTestIcon.checked
+                            testDoubleClickTimer.stop()
+                        } else {
+                            testDoubleClickTimer.start()
+                        }
+                    }
+                    onExited: testDoubleClickTimer.stop()
+                }
+
+                Timer {
+                    id: testDoubleClickTimer
+                    interval: kcm.globalsSettings.doubleClickInterval
+                }
+            }
+        }
     }
 }
