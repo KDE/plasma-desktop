@@ -19,7 +19,9 @@ Item {
 
     Repeater {
         id: instantiator
-        model: Mpris.MultiplexerModel { }
+        model: Mpris.MultiplexerModel {
+            showingActualPlayerName: true
+        }
 
         RowLayout {
             id: controlsRow
