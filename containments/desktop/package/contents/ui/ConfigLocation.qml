@@ -10,10 +10,11 @@ import QtQuick.Layouts 1.15
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kcmutils as KCM
 
 import org.kde.private.desktopcontainment.folder as Folder
 
-Item {
+KCM.SimpleKCM {
     id: configLocation
 
     property string cfg_url

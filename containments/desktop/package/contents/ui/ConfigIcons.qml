@@ -15,10 +15,11 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.iconthemes as KIconThemes
 import org.kde.config // for KAuthorized
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kcmutils as KCM
 
 import org.kde.private.desktopcontainment.folder as Folder
 
-Item {
+KCM.SimpleKCM {
     id: configIcons
 
     property bool isPopup: (Plasmoid.location !== PlasmaCore.Types.Floating)
