@@ -60,7 +60,7 @@ PlasmaCore.ToolTipArea {
     property int previousChildCount: 0
     property alias labelText: label.text
     property QtObject contextMenu: null
-    readonly property bool smartLauncherEnabled: !inPopup && !model.IsStartup
+    readonly property bool smartLauncherEnabled: !inPopup
     property QtObject smartLauncherItem: null
 
     property Item audioStreamIcon: null
@@ -521,7 +521,7 @@ PlasmaCore.ToolTipArea {
 
         anchors.fill: frame
         asynchronous: true
-        active: model.IsWindow && task.smartLauncherItem && task.smartLauncherItem.progressVisible
+        active: task.smartLauncherItem && task.smartLauncherItem.progressVisible
 
         source: "TaskProgressOverlay.qml"
     }
