@@ -9,14 +9,18 @@ import QtQuick.Controls 2.3 as QQC2
 import QtQuick.Layouts 1.0
 
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kcmutils as KCM
 
-Item {
+KCM.SimpleKCM {
     id: root
 
     signal configurationChanged
-    implicitWidth: mainColumn.implicitWidth
-    implicitHeight: mainColumn.implicitHeight
+    // implicitWidth: mainColumn.implicitWidth
+    // implicitHeight: mainColumn.implicitHeight
+    leftPadding: includeMargins ? Kirigami.Units.largeSpacing : 0
+    rightPadding: includeMargins ? Kirigami.Units.largeSpacing : 0
 
+    property bool includeMargins
     property var prettyStrings: {
         "LeftButton": i18nd("plasma_shell_org.kde.plasma.desktop", "Left-Button"),
         "RightButton": i18nd("plasma_shell_org.kde.plasma.desktop", "Right-Button"),
@@ -47,7 +51,6 @@ Item {
     GridLayout {
         id: mainColumn
         flow: GridLayout.TopToBottom
-        y: 25
         width: parent.width
 
         Repeater {

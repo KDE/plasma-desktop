@@ -113,23 +113,18 @@ Rectangle {
         if (item.source) {
             app.isAboutPage = item.source === Qt.resolvedUrl("AboutPlugin.qml");
 
-            if (isContainment) {
-                pushReplace(Qt.resolvedUrl("ConfigurationAppletPage.qml"), {configItem: item});
-            } else {
+            const config = Plasmoid.configuration; // type: KConfigPropertyMap
 
-                const config = Plasmoid.configuration; // type: KConfigPropertyMap
+            const props = {
+                "title": item.name,
+                "includeMargins": item.includeMargins
+            };
 
-                const props = {
-                    "title": item.name
-                };
+            config.keys().forEach(key => {
+                props["cfg_" + key] = config[key];
+            });
 
-                config.keys().forEach(key => {
-                    props["cfg_" + key] = config[key];
-                });
-
-                pushReplace(item.source, props);
-            }
-
+            pushReplace(Qt.resolvedUrl(item.source), props);
         } else if (item.kcm) {
             pushReplace(configurationKcmPageComponent, {kcm: item.kcm, internalPage: item.kcm.mainUi});
         } else {
@@ -152,7 +147,7 @@ Rectangle {
         target: app.pageStack
 
         function onCurrentItemChanged() {
-            if (app.pageStack.currentItem !== null && !isContainment) {
+            if (app.pageStack.currentItem !== null) {
                 const config = Plasmoid.configuration; // type: KConfigPropertyMap
 
                 config.keys().forEach(key => {

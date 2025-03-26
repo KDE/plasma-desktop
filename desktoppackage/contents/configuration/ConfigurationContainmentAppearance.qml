@@ -16,14 +16,19 @@ import org.kde.kcmutils
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.configuration 2.0
 
-Item {
+SimpleKCM {
     id: appearanceRoot
     signal configurationChanged
+
+    leftPadding: includeMargins ? Kirigami.Units.largeSpacing : 0
+    rightPadding: includeMargins ? Kirigami.Units.largeSpacing : 0
+    bottomPadding: 0
 
     property int formAlignment: wallpaperComboBox.Kirigami.ScenePosition.x - appearanceRoot.Kirigami.ScenePosition.x + Kirigami.Units.smallSpacing
     property string currentWallpaper: ""
     property string containmentPlugin: ""
     property alias parentLayout: parentLayout
+    property bool includeMargins
 
     function saveConfig() {
         if (main.currentItem.saveConfig) {
@@ -40,8 +45,8 @@ Item {
     }
 
     ColumnLayout {
-        width: root.availableWidth
-        height: Math.max(implicitHeight, root.availableHeight)
+        width: appearanceRoot.availableWidth
+        height: Math.max(implicitHeight, appearanceRoot.availableHeight)
         spacing: 0 // unless it's 0 there will be an additional gap between two FormLayouts
 
         Component.onCompleted: {
