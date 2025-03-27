@@ -207,6 +207,9 @@ PlasmoidItem {
                 return TaskManager.TasksModel.SortVirtualDesktop;
             case 4:
                 return TaskManager.TasksModel.SortActivity;
+            // 5 is SortLastActivated, skipped
+            case 6:
+                return TaskManager.TasksModel.SortWindowPositionHorizontal;
             default:
                 return TaskManager.TasksModel.SortDisabled;
             }

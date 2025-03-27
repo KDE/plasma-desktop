@@ -14,13 +14,14 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasmoid
 
 import org.kde.plasma.workspace.dbus as DBus
+import org.kde.taskmanager as TaskManager
 
 KCMUtils.SimpleKCM {
     property alias cfg_groupingStrategy: groupingStrategy.currentIndex
     property alias cfg_groupedTaskVisualization: groupedTaskVisualization.currentIndex
     property alias cfg_groupPopups: groupPopups.checked
     property alias cfg_onlyGroupWhenFull: onlyGroupWhenFull.checked
-    property alias cfg_sortingStrategy: sortingStrategy.currentIndex
+    property alias cfg_sortingStrategy: sortingStrategy.currentValue
     property alias cfg_separateLaunchers: separateLaunchers.checked
     property alias cfg_hideLauncherOnStart: hideLauncherOnStart.checked
     property alias cfg_middleClickAction: middleClickAction.currentIndex
@@ -111,11 +112,30 @@ KCMUtils.SimpleKCM {
             Layout.fillWidth: true
             Layout.minimumWidth: Kirigami.Units.gridUnit * 14
             model: [
-                i18nc("@item:inlistbox sort tasks in grouped task", "Do not sort"),
-                i18nc("@item:inlistbox sort tasks in grouped task", "Manually"),
-                i18nc("@item:inlistbox sort tasks in grouped task", "Alphabetically"),
-                i18nc("@item:inlistbox sort tasks in grouped task", "By desktop"),
-                i18nc("@item:inlistbox sort tasks in grouped task", "By activity")
+                {
+                    "text": i18nc("@item:inlistbox sort tasks in grouped task", "Do not sort"),
+                    "value": TaskManager.TasksModel.SortDisabled,
+                },
+                {
+                    "text": i18nc("@item:inlistbox sort tasks in grouped task", "Manually"),
+                    "value": TaskManager.TasksModel.SortManual,
+                },
+                {
+                    "text": i18nc("@item:inlistbox sort tasks in grouped task", "Alphabetically"),
+                    "value": TaskManager.TasksModel.SortAlpha,
+                },
+                {
+                    "text": i18nc("@item:inlistbox sort tasks in grouped task", "By desktop"),
+                    "value": TaskManager.TasksModel.SortVirtualDesktop,
+                },
+                {
+                    "text": i18nc("@item:inlistbox sort tasks in grouped task", "By activity"),
+                    "value": TaskManager.TasksModel.SortActivity,
+                },
+                {
+                    "text": i18nc("@item:inlistbox sort tasks in grouped task", "By horizontal window position"),
+                    "value": TaskManager.TasksModel.SortWindowPositionHorizontal,
+                },
             ]
         }
 
@@ -123,7 +143,7 @@ KCMUtils.SimpleKCM {
             id: separateLaunchers
             visible: (Plasmoid.pluginName !== "org.kde.plasma.icontasks")
             text: i18nc("@option:check configure task sorting", "Keep launchers separate")
-            enabled: sortingStrategy.currentIndex === 1
+            enabled: sortingStrategy.currentValue === TaskManager.TasksModel.SortManual
         }
 
         QQC2.CheckBox {
