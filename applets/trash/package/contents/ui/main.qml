@@ -48,7 +48,7 @@ PlasmoidItem {
 
     Plasmoid.onActivated: Qt.openUrlExternally("trash:/")
 
-    Keys.onPressed: {
+    Keys.onPressed: event => {
         switch (event.key) {
         case Qt.Key_Space:
         case Qt.Key_Enter:
