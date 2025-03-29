@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:43+0000\n"
 "PO-Revision-Date: 2025-02-02 23:37+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -20,26 +20,6 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.5\n"
-
-#: actions.cpp:19
-#, kde-format
-msgid "Touchpad"
-msgstr "Jutiklinis kilimėlis"
-
-#: actions.cpp:22
-#, kde-format
-msgid "Enable Touchpad"
-msgstr "Įjungti jutiklinį kilimėlį"
-
-#: actions.cpp:30
-#, kde-format
-msgid "Disable Touchpad"
-msgstr "Išjungti jutiklinį kilimėlį"
-
-#: actions.cpp:38
-#, kde-format
-msgid "Toggle Touchpad"
-msgstr "Perjungti jutiklinį kilimėlį"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -520,6 +500,18 @@ msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr ""
 "Paspaudimas trimis pirštais bet kurioje jutiklinio kilimėlio vietoje bus "
 "laikomas viduriniojo mygtuko spustelėjimu."
+
+#~ msgid "Touchpad"
+#~ msgstr "Jutiklinis kilimėlis"
+
+#~ msgid "Enable Touchpad"
+#~ msgstr "Įjungti jutiklinį kilimėlį"
+
+#~ msgid "Disable Touchpad"
+#~ msgstr "Išjungti jutiklinį kilimėlį"
+
+#~ msgid "Toggle Touchpad"
+#~ msgstr "Perjungti jutiklinį kilimėlį"
 
 #~ msgid "None"
 #~ msgstr "Nėra"

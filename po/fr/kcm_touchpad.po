@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:43+0000\n"
 "PO-Revision-Date: 2025-02-02 09:32+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -23,26 +23,6 @@ msgstr ""
 "X-Environment: kde\n"
 "X-Generator: Lokalize 24.12.1\n"
 "X-Text-Markup: kde4\n"
-
-#: actions.cpp:19
-#, kde-format
-msgid "Touchpad"
-msgstr "Pavé tactile"
-
-#: actions.cpp:22
-#, kde-format
-msgid "Enable Touchpad"
-msgstr "Activer le pavé tactile"
-
-#: actions.cpp:30
-#, kde-format
-msgid "Disable Touchpad"
-msgstr "Désactiver le pavé tactile"
-
-#: actions.cpp:38
-#, kde-format
-msgid "Toggle Touchpad"
-msgstr "Basculer le pavé tactile"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -515,6 +495,18 @@ msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr ""
 "Un appui n'importe où sur le pavé tactile avec trois doigts est équivalent à "
 "un clic central."
+
+#~ msgid "Touchpad"
+#~ msgstr "Pavé tactile"
+
+#~ msgid "Enable Touchpad"
+#~ msgstr "Activer le pavé tactile"
+
+#~ msgid "Disable Touchpad"
+#~ msgstr "Désactiver le pavé tactile"
+
+#~ msgid "Toggle Touchpad"
+#~ msgstr "Basculer le pavé tactile"
 
 #~ msgid "None"
 #~ msgstr "Aucun"

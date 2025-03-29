@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:43+0000\n"
 "PO-Revision-Date: 2025-02-18 18:34+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -17,26 +17,6 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 "X-Generator: Lokalize 24.12.2\n"
-
-#: actions.cpp:19
-#, kde-format
-msgid "Touchpad"
-msgstr "Skārienpaliktnis"
-
-#: actions.cpp:22
-#, kde-format
-msgid "Enable Touchpad"
-msgstr "Ieslēgt skārienpaliktni"
-
-#: actions.cpp:30
-#, kde-format
-msgid "Disable Touchpad"
-msgstr "Izslēgt skārienpaliktni"
-
-#: actions.cpp:38
-#, kde-format
-msgid "Toggle Touchpad"
-msgstr "Ieslēgt/izslēgt skārienpaliktni"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -499,6 +479,18 @@ msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr ""
 "Pieskaršanās skārienpaliktnim ar trim pirkstiem nozīmē peles vidējās pogas "
 "nospiešanu."
+
+#~ msgid "Touchpad"
+#~ msgstr "Skārienpaliktnis"
+
+#~ msgid "Enable Touchpad"
+#~ msgstr "Ieslēgt skārienpaliktni"
+
+#~ msgid "Disable Touchpad"
+#~ msgstr "Izslēgt skārienpaliktni"
+
+#~ msgid "Toggle Touchpad"
+#~ msgstr "Ieslēgt/izslēgt skārienpaliktni"
 
 #~ msgid "None"
 #~ msgstr "Nav"

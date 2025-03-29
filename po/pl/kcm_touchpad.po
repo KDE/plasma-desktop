@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:43+0000\n"
 "PO-Revision-Date: 2025-02-08 17:56+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -17,26 +17,6 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Generator: Lokalize 24.12.1\n"
-
-#: actions.cpp:19
-#, kde-format
-msgid "Touchpad"
-msgstr "Gładzik"
-
-#: actions.cpp:22
-#, kde-format
-msgid "Enable Touchpad"
-msgstr "Włącz gładzik"
-
-#: actions.cpp:30
-#, kde-format
-msgid "Disable Touchpad"
-msgstr "Wyłącz gładzik"
-
-#: actions.cpp:38
-#, kde-format
-msgid "Toggle Touchpad"
-msgstr "Przełącz gładzik"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -495,6 +475,18 @@ msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr ""
 "Naciśnięcie gładzika w dowolnym miejscu trzema palcami działa jak kliknięcie "
 "środkowym."
+
+#~ msgid "Touchpad"
+#~ msgstr "Gładzik"
+
+#~ msgid "Enable Touchpad"
+#~ msgstr "Włącz gładzik"
+
+#~ msgid "Disable Touchpad"
+#~ msgstr "Wyłącz gładzik"
+
+#~ msgid "Toggle Touchpad"
+#~ msgstr "Przełącz gładzik"
 
 #~ msgid "None"
 #~ msgstr "Brak"

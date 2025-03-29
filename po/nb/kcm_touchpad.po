@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:43+0000\n"
 "PO-Revision-Date: 2015-08-27 17:02+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -18,26 +18,6 @@ msgstr ""
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-
-#: actions.cpp:19
-#, kde-format
-msgid "Touchpad"
-msgstr ""
-
-#: actions.cpp:22
-#, kde-format
-msgid "Enable Touchpad"
-msgstr "Slå på styreplata"
-
-#: actions.cpp:30
-#, kde-format
-msgid "Disable Touchpad"
-msgstr "Slå av styreplata"
-
-#: actions.cpp:38
-#, kde-format
-msgid "Toggle Touchpad"
-msgstr "Slå styreplata av eller på"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -464,3 +444,12 @@ msgstr ""
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr ""
+
+#~ msgid "Enable Touchpad"
+#~ msgstr "Slå på styreplata"
+
+#~ msgid "Disable Touchpad"
+#~ msgstr "Slå av styreplata"
+
+#~ msgid "Toggle Touchpad"
+#~ msgstr "Slå styreplata av eller på"

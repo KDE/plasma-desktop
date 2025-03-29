@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:43+0000\n"
 "PO-Revision-Date: 2025-02-01 07:12+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -19,26 +19,6 @@ msgstr ""
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.5\n"
-
-#: actions.cpp:19
-#, kde-format
-msgid "Touchpad"
-msgstr "Sledilna ploščica"
-
-#: actions.cpp:22
-#, kde-format
-msgid "Enable Touchpad"
-msgstr "Omogoči sledilno ploščico"
-
-#: actions.cpp:30
-#, kde-format
-msgid "Disable Touchpad"
-msgstr "Onemogoči sledilno ploščico"
-
-#: actions.cpp:38
-#, kde-format
-msgid "Toggle Touchpad"
-msgstr "Preklopi sledilno ploščico"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -496,6 +476,18 @@ msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr ""
 "Pritisk sledilne ploščice kjer koli s tremi prsti deluje kot srednji klik."
+
+#~ msgid "Touchpad"
+#~ msgstr "Sledilna ploščica"
+
+#~ msgid "Enable Touchpad"
+#~ msgstr "Omogoči sledilno ploščico"
+
+#~ msgid "Disable Touchpad"
+#~ msgstr "Onemogoči sledilno ploščico"
+
+#~ msgid "Toggle Touchpad"
+#~ msgstr "Preklopi sledilno ploščico"
 
 #~ msgid "None"
 #~ msgstr "Noben"

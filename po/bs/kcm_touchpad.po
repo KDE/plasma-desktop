@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: $2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:43+0000\n"
 "PO-Revision-Date: 2014-12-18 09:49+0000\n"
 "Last-Translator: Timur Ćerimagić <tcerimagic1@etf.unsa.ba>\n"
 "Language-Team: none\n"
@@ -20,27 +20,6 @@ msgstr ""
 "X-Launchpad-Export-Date: 2015-02-15 06:27+0000\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-
-#: actions.cpp:19
-#, fuzzy, kde-format
-#| msgid "Touchpad KCM"
-msgid "Touchpad"
-msgstr "Touchpad KCM"
-
-#: actions.cpp:22
-#, kde-format
-msgid "Enable Touchpad"
-msgstr "Omogući Touchpad"
-
-#: actions.cpp:30
-#, kde-format
-msgid "Disable Touchpad"
-msgstr "Onemogući Touchpad"
-
-#: actions.cpp:38
-#, kde-format
-msgid "Toggle Touchpad"
-msgstr "Prebaci Touchpad"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -497,6 +476,20 @@ msgstr ""
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr ""
+
+#, fuzzy
+#~| msgid "Touchpad KCM"
+#~ msgid "Touchpad"
+#~ msgstr "Touchpad KCM"
+
+#~ msgid "Enable Touchpad"
+#~ msgstr "Omogući Touchpad"
+
+#~ msgid "Disable Touchpad"
+#~ msgstr "Onemogući Touchpad"
+
+#~ msgid "Toggle Touchpad"
+#~ msgstr "Prebaci Touchpad"
 
 #~ msgctxt "Emulated mouse button"
 #~ msgid "No action"

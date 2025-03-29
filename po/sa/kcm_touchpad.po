@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:43+0000\n"
 "PO-Revision-Date: 2024-12-24 20:16+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -18,26 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
 "X-Generator: Lokalize 24.08.2\n"
-
-#: actions.cpp:19
-#, kde-format
-msgid "Touchpad"
-msgstr "टचपैड"
-
-#: actions.cpp:22
-#, kde-format
-msgid "Enable Touchpad"
-msgstr "टचपैड् सक्षमं कुर्वन्तु"
-
-#: actions.cpp:30
-#, kde-format
-msgid "Disable Touchpad"
-msgstr "टचपैड् अक्षमीकरणं कुर्वन्तु"
-
-#: actions.cpp:38
-#, kde-format
-msgid "Toggle Touchpad"
-msgstr "टचपैड् टॉगल कुर्वन्तु"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -480,6 +460,18 @@ msgstr "टचपैड् त्रिभिः अङ्गुलीभिः 
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr "स्पर्शपट्टिकां कुत्रापि त्रिभिः अङ्गुलीभिः निपीड्य मध्य-क्लिक् इव कार्यं करोति ।"
+
+#~ msgid "Touchpad"
+#~ msgstr "टचपैड"
+
+#~ msgid "Enable Touchpad"
+#~ msgstr "टचपैड् सक्षमं कुर्वन्तु"
+
+#~ msgid "Disable Touchpad"
+#~ msgstr "टचपैड् अक्षमीकरणं कुर्वन्तु"
+
+#~ msgid "Toggle Touchpad"
+#~ msgstr "टचपैड् टॉगल कुर्वन्तु"
 
 #~ msgid "None"
 #~ msgstr "न कश्चित्"

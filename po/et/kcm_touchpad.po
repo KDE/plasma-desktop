@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:43+0000\n"
 "PO-Revision-Date: 2020-10-07 23:02+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -17,26 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.08.1\n"
-
-#: actions.cpp:19
-#, kde-format
-msgid "Touchpad"
-msgstr "Puutepadi"
-
-#: actions.cpp:22
-#, kde-format
-msgid "Enable Touchpad"
-msgstr "Luba puutepadi"
-
-#: actions.cpp:30
-#, kde-format
-msgid "Disable Touchpad"
-msgstr "Keela puutepadi"
-
-#: actions.cpp:38
-#, kde-format
-msgid "Toggle Touchpad"
-msgstr "Lülita puutepatja"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -498,6 +478,18 @@ msgstr "Vajutamine ükspuha kuhu kolme sõrmega"
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr "Koputus kahe sõrmega võrdub paremklõpsuga."
+
+#~ msgid "Touchpad"
+#~ msgstr "Puutepadi"
+
+#~ msgid "Enable Touchpad"
+#~ msgstr "Luba puutepadi"
+
+#~ msgid "Disable Touchpad"
+#~ msgstr "Keela puutepadi"
+
+#~ msgid "Toggle Touchpad"
+#~ msgstr "Lülita puutepatja"
 
 #~ msgid "Cursor moves the same distance as finger."
 #~ msgstr "Kursor liigub sama palju nagu sõrm."

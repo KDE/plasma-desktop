@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:43+0000\n"
 "PO-Revision-Date: 2024-12-24 18:56+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -16,26 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 23.08.5\n"
-
-#: actions.cpp:19
-#, kde-format
-msgid "Touchpad"
-msgstr "터치패드"
-
-#: actions.cpp:22
-#, kde-format
-msgid "Enable Touchpad"
-msgstr "터치패드 활성화"
-
-#: actions.cpp:30
-#, kde-format
-msgid "Disable Touchpad"
-msgstr "터치패드 비활성화"
-
-#: actions.cpp:38
-#, kde-format
-msgid "Toggle Touchpad"
-msgstr "터치패드 전환"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -484,6 +464,18 @@ msgstr "터치패드를 세 손가락으로 누르기"
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr "터치패드의 어디든지 세 손가락으로 탭하여 가운데 단추를 클릭합니다."
+
+#~ msgid "Touchpad"
+#~ msgstr "터치패드"
+
+#~ msgid "Enable Touchpad"
+#~ msgstr "터치패드 활성화"
+
+#~ msgid "Disable Touchpad"
+#~ msgstr "터치패드 비활성화"
+
+#~ msgid "Toggle Touchpad"
+#~ msgstr "터치패드 전환"
 
 #~ msgid "None"
 #~ msgstr "없음"

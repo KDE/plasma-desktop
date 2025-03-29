@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:43+0000\n"
 "PO-Revision-Date: 2024-12-13 10:31+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -16,26 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.5\n"
-
-#: actions.cpp:19
-#, kde-format
-msgid "Touchpad"
-msgstr "Snertiplatti"
-
-#: actions.cpp:22
-#, kde-format
-msgid "Enable Touchpad"
-msgstr "Virkja snertiplatta"
-
-#: actions.cpp:30
-#, kde-format
-msgid "Disable Touchpad"
-msgstr "Slökkva á snertiplatta"
-
-#: actions.cpp:38
-#, kde-format
-msgid "Toggle Touchpad"
-msgstr "Virkja/slökkva á snertiplatta"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -494,6 +474,18 @@ msgstr "Ýta á snertiplatta með þremur fingrum"
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr "Ef ýtt er á snertiplattann með þremur fingrum myndar það miðjusmell."
+
+#~ msgid "Touchpad"
+#~ msgstr "Snertiplatti"
+
+#~ msgid "Enable Touchpad"
+#~ msgstr "Virkja snertiplatta"
+
+#~ msgid "Disable Touchpad"
+#~ msgstr "Slökkva á snertiplatta"
+
+#~ msgid "Toggle Touchpad"
+#~ msgstr "Virkja/slökkva á snertiplatta"
 
 #~ msgid "None"
 #~ msgstr "Engin"

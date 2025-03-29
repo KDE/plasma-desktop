@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:43+0000\n"
 "PO-Revision-Date: 2024-06-09 14:58+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -17,26 +17,6 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.12.3\n"
-
-#: actions.cpp:19
-#, kde-format
-msgid "Touchpad"
-msgstr "Zonă tactilă"
-
-#: actions.cpp:22
-#, kde-format
-msgid "Enable Touchpad"
-msgstr "Activează zona tactilă"
-
-#: actions.cpp:30
-#, kde-format
-msgid "Disable Touchpad"
-msgstr "Dezactivează zona tactilă"
-
-#: actions.cpp:38
-#, kde-format
-msgid "Toggle Touchpad"
-msgstr "Comută zona tactilă"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -512,6 +492,18 @@ msgstr "Apasă oriunde cu trei degete"
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr "Tapați cu două degete pentru clic drept."
+
+#~ msgid "Touchpad"
+#~ msgstr "Zonă tactilă"
+
+#~ msgid "Enable Touchpad"
+#~ msgstr "Activează zona tactilă"
+
+#~ msgid "Disable Touchpad"
+#~ msgstr "Dezactivează zona tactilă"
+
+#~ msgid "Toggle Touchpad"
+#~ msgstr "Comută zona tactilă"
 
 #~ msgid "None"
 #~ msgstr "Niciunul"

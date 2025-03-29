@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:43+0000\n"
 "PO-Revision-Date: 2025-02-01 21:07+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -20,26 +20,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.12.1\n"
-
-#: actions.cpp:19
-#, kde-format
-msgid "Touchpad"
-msgstr "Ukimen-sagua"
-
-#: actions.cpp:22
-#, kde-format
-msgid "Enable Touchpad"
-msgstr "Gaitu Ukipen-sagua"
-
-#: actions.cpp:30
-#, kde-format
-msgid "Disable Touchpad"
-msgstr "Desgaitu ukipen-sagua"
-
-#: actions.cpp:38
-#, kde-format
-msgid "Toggle Touchpad"
-msgstr "Gaitu/desgaitu ukipen-sagua"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -502,6 +482,18 @@ msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr ""
 "Ukimen-sagua edozein lekutan hiru hatz erabiliz sakatzea eskuineko klik gisa "
 "jokatzen du."
+
+#~ msgid "Touchpad"
+#~ msgstr "Ukimen-sagua"
+
+#~ msgid "Enable Touchpad"
+#~ msgstr "Gaitu Ukipen-sagua"
+
+#~ msgid "Disable Touchpad"
+#~ msgstr "Desgaitu ukipen-sagua"
+
+#~ msgid "Toggle Touchpad"
+#~ msgstr "Gaitu/desgaitu ukipen-sagua"
 
 #~ msgid "None"
 #~ msgstr "Bat ere ez"

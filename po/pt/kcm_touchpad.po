@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:43+0000\n"
 "PO-Revision-Date: 2020-04-09 10:54+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -19,26 +19,6 @@ msgstr ""
 "X-POFile-SpellExtra: Raspryagayeva Synaptics Osterlund synclient Peter\n"
 "X-POFile-SpellExtra: Mezin Zaytsev Alexander Libinput Roman Gilg tácteis\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#: actions.cpp:19
-#, kde-format
-msgid "Touchpad"
-msgstr "Rato por toque"
-
-#: actions.cpp:22
-#, kde-format
-msgid "Enable Touchpad"
-msgstr "Activar o Rato por Toque"
-
-#: actions.cpp:30
-#, kde-format
-msgid "Disable Touchpad"
-msgstr "Desactivar o Rato por Toque"
-
-#: actions.cpp:38
-#, kde-format
-msgid "Toggle Touchpad"
-msgstr "Comutar o Rato por Toque"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -513,6 +493,18 @@ msgstr "Carregar em qualquer lado com três dedos"
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr "Toque com dois dedos para o botão direito."
+
+#~ msgid "Touchpad"
+#~ msgstr "Rato por toque"
+
+#~ msgid "Enable Touchpad"
+#~ msgstr "Activar o Rato por Toque"
+
+#~ msgid "Disable Touchpad"
+#~ msgstr "Desactivar o Rato por Toque"
+
+#~ msgid "Toggle Touchpad"
+#~ msgstr "Comutar o Rato por Toque"
 
 #~ msgid "Cursor moves the same distance as finger."
 #~ msgstr "O cursor move a mesma distância que o dedo."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:43+0000\n"
 "PO-Revision-Date: 2025-02-02 16:34+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -16,26 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.12.1\n"
-
-#: actions.cpp:19
-#, kde-format
-msgid "Touchpad"
-msgstr "தொடுபலகை"
-
-#: actions.cpp:22
-#, kde-format
-msgid "Enable Touchpad"
-msgstr "தொடுபலகையை இயக்கு"
-
-#: actions.cpp:30
-#, kde-format
-msgid "Disable Touchpad"
-msgstr "தொடுபலகையை முடக்கு"
-
-#: actions.cpp:38
-#, kde-format
-msgid "Toggle Touchpad"
-msgstr "தொடுபலகையின் நிலையை மாற்று"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -484,6 +464,18 @@ msgstr "மூன்று விரல்களை கொண்டு அழு
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr "நடு கிளிக்குக்கு மூன்று விரல்களைக் கொண்டு தொடுபலகையை எங்கேயேனும் அழுத்தலாம்."
+
+#~ msgid "Touchpad"
+#~ msgstr "தொடுபலகை"
+
+#~ msgid "Enable Touchpad"
+#~ msgstr "தொடுபலகையை இயக்கு"
+
+#~ msgid "Disable Touchpad"
+#~ msgstr "தொடுபலகையை முடக்கு"
+
+#~ msgid "Toggle Touchpad"
+#~ msgstr "தொடுபலகையின் நிலையை மாற்று"
 
 #~ msgid "None"
 #~ msgstr "ஏதுமில்லை"

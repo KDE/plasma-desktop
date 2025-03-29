@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:43+0000\n"
 "PO-Revision-Date: 2025-02-03 16:30+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -19,26 +19,6 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 23.08.5\n"
-
-#: actions.cpp:19
-#, kde-format
-msgid "Touchpad"
-msgstr "لوحة اللمس"
-
-#: actions.cpp:22
-#, kde-format
-msgid "Enable Touchpad"
-msgstr "فعّل لوحة اللمس"
-
-#: actions.cpp:30
-#, kde-format
-msgid "Disable Touchpad"
-msgstr "عطّل لوحة اللمس"
-
-#: actions.cpp:38
-#, kde-format
-msgid "Toggle Touchpad"
-msgstr "اقلب لوحة اللمس"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -488,6 +468,18 @@ msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr ""
 "يؤدي الضغط على لوحة اللمس في أي مكان بثلاثة أصابع إلى النقر بزر الفأرة "
 "الأوسط."
+
+#~ msgid "Touchpad"
+#~ msgstr "لوحة اللمس"
+
+#~ msgid "Enable Touchpad"
+#~ msgstr "فعّل لوحة اللمس"
+
+#~ msgid "Disable Touchpad"
+#~ msgstr "عطّل لوحة اللمس"
+
+#~ msgid "Toggle Touchpad"
+#~ msgstr "اقلب لوحة اللمس"
 
 #~ msgid "None"
 #~ msgstr "لا شيء"

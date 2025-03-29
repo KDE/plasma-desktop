@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:43+0000\n"
 "PO-Revision-Date: 2025-02-01 08:48+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -19,26 +19,6 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Lokalize 24.12.0\n"
-
-#: actions.cpp:19
-#, kde-format
-msgid "Touchpad"
-msgstr "משטח מגע"
-
-#: actions.cpp:22
-#, kde-format
-msgid "Enable Touchpad"
-msgstr "הפעלת משטח מגע"
-
-#: actions.cpp:30
-#, kde-format
-msgid "Disable Touchpad"
-msgstr "השבתת משטח מגע"
-
-#: actions.cpp:38
-#, kde-format
-msgid "Toggle Touchpad"
-msgstr "החלפת מצב משטח מגע"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -477,6 +457,18 @@ msgstr "יש ללחוץ על משטח המגע בשלוש אצבעות"
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr "נגיעה במשטח המגע היכן שהוא בשלוש אצבעות מתנהגת כמו לחיצה אמצעית."
+
+#~ msgid "Touchpad"
+#~ msgstr "משטח מגע"
+
+#~ msgid "Enable Touchpad"
+#~ msgstr "הפעלת משטח מגע"
+
+#~ msgid "Disable Touchpad"
+#~ msgstr "השבתת משטח מגע"
+
+#~ msgid "Toggle Touchpad"
+#~ msgstr "החלפת מצב משטח מגע"
 
 #~ msgid "None"
 #~ msgstr "ללא"

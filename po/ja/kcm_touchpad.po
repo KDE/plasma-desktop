@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:43+0000\n"
 "PO-Revision-Date: 2025-02-15 13:27+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -17,26 +17,6 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "X-Generator: Lokalize 24.12.2\n"
-
-#: actions.cpp:19
-#, kde-format
-msgid "Touchpad"
-msgstr "タッチパッド"
-
-#: actions.cpp:22
-#, kde-format
-msgid "Enable Touchpad"
-msgstr "タッチパッドを有効化"
-
-#: actions.cpp:30
-#, kde-format
-msgid "Disable Touchpad"
-msgstr "タッチパッドを無効化"
-
-#: actions.cpp:38
-#, kde-format
-msgid "Toggle Touchpad"
-msgstr "タッチパッドの切り替え"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -482,3 +462,15 @@ msgstr "三本指でタッチパッドを押す"
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr "三本指でタッチパッドのどこかを押すと中クリックが入力されます。"
+
+#~ msgid "Touchpad"
+#~ msgstr "タッチパッド"
+
+#~ msgid "Enable Touchpad"
+#~ msgstr "タッチパッドを有効化"
+
+#~ msgid "Disable Touchpad"
+#~ msgstr "タッチパッドを無効化"
+
+#~ msgid "Toggle Touchpad"
+#~ msgstr "タッチパッドの切り替え"

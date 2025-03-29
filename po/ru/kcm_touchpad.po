@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:43+0000\n"
 "PO-Revision-Date: 2025-02-13 11:41+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -19,26 +19,6 @@ msgstr ""
 "X-Generator: Lokalize 21.08.3\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-
-#: actions.cpp:19
-#, kde-format
-msgid "Touchpad"
-msgstr "Сенсорная панель"
-
-#: actions.cpp:22
-#, kde-format
-msgid "Enable Touchpad"
-msgstr "Включить сенсорную панель"
-
-#: actions.cpp:30
-#, kde-format
-msgid "Disable Touchpad"
-msgstr "Выключить сенсорную панель"
-
-#: actions.cpp:38
-#, kde-format
-msgid "Toggle Touchpad"
-msgstr "Включить или выключить сенсорную панель"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -508,6 +488,18 @@ msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr ""
 "Воспринимать нажатие сенсорной панели тремя пальцами как нажатие средней "
 "кнопки."
+
+#~ msgid "Touchpad"
+#~ msgstr "Сенсорная панель"
+
+#~ msgid "Enable Touchpad"
+#~ msgstr "Включить сенсорную панель"
+
+#~ msgid "Disable Touchpad"
+#~ msgstr "Выключить сенсорную панель"
+
+#~ msgid "Toggle Touchpad"
+#~ msgstr "Включить или выключить сенсорную панель"
 
 #~ msgid "None"
 #~ msgstr "Не использовать"

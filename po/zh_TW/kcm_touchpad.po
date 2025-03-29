@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:43+0000\n"
 "PO-Revision-Date: 2025-02-06 20:38+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -20,26 +20,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 25.03.70\n"
-
-#: actions.cpp:19
-#, kde-format
-msgid "Touchpad"
-msgstr "觸控板"
-
-#: actions.cpp:22
-#, kde-format
-msgid "Enable Touchpad"
-msgstr "開啟觸控板"
-
-#: actions.cpp:30
-#, kde-format
-msgid "Disable Touchpad"
-msgstr "關閉觸控板"
-
-#: actions.cpp:38
-#, kde-format
-msgid "Toggle Touchpad"
-msgstr "切換觸控板"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -469,6 +449,18 @@ msgstr "用三指點觸觸控板"
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr "用三指點觸觸控板任何地方來進行中鍵點擊。"
+
+#~ msgid "Touchpad"
+#~ msgstr "觸控板"
+
+#~ msgid "Enable Touchpad"
+#~ msgstr "開啟觸控板"
+
+#~ msgid "Disable Touchpad"
+#~ msgstr "關閉觸控板"
+
+#~ msgid "Toggle Touchpad"
+#~ msgstr "切換觸控板"
 
 #~ msgid "None"
 #~ msgstr "無(&N)"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:43+0000\n"
 "PO-Revision-Date: 2022-07-31 23:06+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -16,26 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.04.3\n"
-
-#: actions.cpp:19
-#, kde-format
-msgid "Touchpad"
-msgstr "Toxunma paneli"
-
-#: actions.cpp:22
-#, kde-format
-msgid "Enable Touchpad"
-msgstr "Toxunma panelini aktiv etmək"
-
-#: actions.cpp:30
-#, kde-format
-msgid "Disable Touchpad"
-msgstr "Toxunma panelini söndürmək"
-
-#: actions.cpp:38
-#, kde-format
-msgid "Toggle Touchpad"
-msgstr "Toxunma panelini aktiv etmək və ya söndürmək"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -502,6 +482,18 @@ msgstr "Üç barmaqla toxunun"
 msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr "Sağ düymə kliki üçün iki barmaqla toxunmaq."
+
+#~ msgid "Touchpad"
+#~ msgstr "Toxunma paneli"
+
+#~ msgid "Enable Touchpad"
+#~ msgstr "Toxunma panelini aktiv etmək"
+
+#~ msgid "Disable Touchpad"
+#~ msgstr "Toxunma panelini söndürmək"
+
+#~ msgid "Toggle Touchpad"
+#~ msgstr "Toxunma panelini aktiv etmək və ya söndürmək"
 
 #~ msgid "Cursor moves the same distance as finger."
 #~ msgstr "Kursor barmaqla eyni məsafədə hərəkət edir."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:43+0000\n"
 "PO-Revision-Date: 2025-02-01 09:54+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -19,26 +19,6 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.3\n"
-
-#: actions.cpp:19
-#, kde-format
-msgid "Touchpad"
-msgstr "Сенсорна панель"
-
-#: actions.cpp:22
-#, kde-format
-msgid "Enable Touchpad"
-msgstr "Увімкнути сенсорну панель"
-
-#: actions.cpp:30
-#, kde-format
-msgid "Disable Touchpad"
-msgstr "Вимкнути сенсорну панель"
-
-#: actions.cpp:38
-#, kde-format
-msgid "Toggle Touchpad"
-msgstr "Увімкнути або вимкнути сенсорну панель"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -504,6 +484,18 @@ msgctxt "@info:tooltip for radiobutton"
 msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
 msgstr ""
 "Натискання сенсорної панелі будь-де трьома пальцями — клацання середньою."
+
+#~ msgid "Touchpad"
+#~ msgstr "Сенсорна панель"
+
+#~ msgid "Enable Touchpad"
+#~ msgstr "Увімкнути сенсорну панель"
+
+#~ msgid "Disable Touchpad"
+#~ msgstr "Вимкнути сенсорну панель"
+
+#~ msgid "Toggle Touchpad"
+#~ msgstr "Увімкнути або вимкнути сенсорну панель"
 
 #~ msgid "None"
 #~ msgstr "Немає"
