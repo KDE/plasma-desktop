@@ -51,6 +51,8 @@ Name[tg]=Лавҳаи ламсӣ
 Name[tr]=Dokunmatik Yüzey
 Name[uk]=Сенсорна панель
 Name[vi]=Bàn cảm ứng
+Name[x-test]=xxTouchpadxx
+Name[zh_CN]=触摸板
 Name[zh_TW]=觸控板
 Icon=preferences-desktop-touchpad
 Actions=EnableTouchpad;DisableTouchpad;ToggleTouchpad
@@ -59,18 +61,48 @@ X-KDE-GlobalShortcutType=Service
 
 [Desktop Action EnableTouchpad]
 Name=Enable Touchpad
+Name[bg]=Активиране на тъчпада
+Name[ca]=Activa el ratolí tàctil
+Name[ca@valencia]=Activa el ratolí tàctil
+Name[es]=Activar el panel táctil
+Name[ka]=თაჩპედის ჩართვა
+Name[nl]=Touchpad inschakelen
+Name[sl]=Omogoči sledilno ploščico
+Name[tr]=Dokunmatik Yüzeyi Etkinleştir
+Name[uk]=Увімкнути сенсорну панель
+Name[x-test]=xxEnable Touchpadxx
 Exec=dbus-send --type=method_call --print-reply --dest=org.kde.touchpad /modules/kded_touchpad org.kde.touchpad.enable
 X-KDE-Shortcuts=Touchpad On
 X-KDE-Migrate-Shortcut=kcm_touchpad,Enable Touchpad
 
 [Desktop Action DisableTouchpad]
 Name=Enable Touchpad
+Name[bg]=Активиране на тъчпада
+Name[ca]=Activa el ratolí tàctil
+Name[ca@valencia]=Activa el ratolí tàctil
+Name[es]=Activar el panel táctil
+Name[ka]=თაჩპედის ჩართვა
+Name[nl]=Touchpad inschakelen
+Name[sl]=Omogoči sledilno ploščico
+Name[tr]=Dokunmatik Yüzeyi Etkinleştir
+Name[uk]=Увімкнути сенсорну панель
+Name[x-test]=xxEnable Touchpadxx
 Exec=dbus-send --type=method_call --print-reply --dest=org.kde.touchpad /modules/kded_touchpad org.kde.touchpad.disable
 X-KDE-Shortcuts=Touchpad Off
 X-KDE-Migrate-Shortcut=kcm_touchpad,Disable Touchpad
 
 [Desktop Action ToggleTouchpad]
 Name=Enable Touchpad
+Name[bg]=Активиране на тъчпада
+Name[ca]=Activa el ratolí tàctil
+Name[ca@valencia]=Activa el ratolí tàctil
+Name[es]=Activar el panel táctil
+Name[ka]=თაჩპედის ჩართვა
+Name[nl]=Touchpad inschakelen
+Name[sl]=Omogoči sledilno ploščico
+Name[tr]=Dokunmatik Yüzeyi Etkinleştir
+Name[uk]=Увімкнути сенсорну панель
+Name[x-test]=xxEnable Touchpadxx
 Exec=dbus-send --type=method_call --print-reply --dest=org.kde.touchpad /modules/kded_touchpad org.kde.touchpad.toggle
 X-KDE-Shortcuts=Touchpad Toggle\tMeta+Ctrl+Touchpad Toggle\tMeta+Ctrl+Zenkaku Hankaku
 X-KDE-Migrate-Shortcut=kcm_touchpad,Toggle Touchpad
