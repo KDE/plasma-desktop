@@ -156,18 +156,18 @@ SimpleKCM {
                         "configDialog": configDialog
                     }
 
-                    wallpaperConfig.keys().forEach(key => {
-                        props["cfg_" + key] = wallpaperConfig[key]
-                    })
-
                     var newItem = replace(Qt.resolvedUrl(sourceFile), props)
 
                     wallpaperConfig.keys().forEach(key => {
-                        var changedSignal = newItem["cfg_" + key + "Changed"]
-                        if (changedSignal) {
-                            changedSignal.connect(appearanceRoot.configurationChanged)
+                        const cfgKey = "cfg_" + key;
+                        if (cfgKey in newItem) {
+                            newItem[cfgKey] = wallpaperConfig[key];
+                            let changedSignal = main.currentItem[cfgKey + "Changed"]
+                            if (changedSignal) {
+                                changedSignal.connect(appearanceRoot.configurationChanged)
+                            }
                         }
-                    })
+                    });
 
                     const configurationChangedSignal = newItem.configurationChanged
                     if (configurationChangedSignal) {
