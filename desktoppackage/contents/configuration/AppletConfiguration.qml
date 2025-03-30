@@ -36,6 +36,8 @@ Rectangle {
 
     property url currentSource
 
+    property bool wasConfigurationChangedSignalSent: false
+
     function closing() {
         if (applyButton.enabled) {
             messageDialog.item = null;
@@ -63,6 +65,16 @@ Rectangle {
         }
     }
 
+    function isConfigurationChanged() {
+        const config = Plasmoid.configuration;
+        return config.keys().some(key => {
+            const cfgKey = "cfg_" + key
+            if (!app.pageStack.currentItem.hasOwnProperty(cfgKey))
+                return false
+            return config[key] != app.pageStack.currentItem[cfgKey]
+        })
+    }
+
     Connections {
         target: configDialog
         function onClosing(event) {
@@ -88,7 +100,7 @@ Rectangle {
     }
 
     function settingValueChanged() {
-        applyButton.enabled = true;
+        applyButton.enabled = wasConfigurationChangedSignalSent || isConfigurationChanged() || (app?.pageStack?.currentItem?.unsavedChanges ?? false);
     }
 
     function pushReplace(item, config) {
@@ -159,7 +171,15 @@ Rectangle {
 
                 const configurationChangedSignal = app.pageStack.currentItem.configurationChanged;
                 if (configurationChangedSignal) {
-                    configurationChangedSignal.connect(() => root.settingValueChanged());
+                    configurationChangedSignal.connect(() => {
+                        root.wasConfigurationChangedSignalSent = true
+                        root.settingValueChanged()
+                    });
+                }
+
+                const configurationUnsavedChangesSignal = app.pageStack.currentItem.unsavedChangesChanged
+                if (configurationUnsavedChangesSignal) {
+                    configurationUnsavedChangesSignal.connect(() => root.settingValueChanged())
                 }
             }
         }
@@ -429,6 +449,7 @@ Rectangle {
                     root.saveConfig()
                 }
 
+                wasConfigurationChangedSignalSent = false
                 applyButton.enabled = false;
             }
         }
