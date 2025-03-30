@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-19 00:43+0000\n"
+"POT-Creation-Date: 2025-03-30 00:43+0000\n"
 "PO-Revision-Date: 2024-07-27 07:47+0200\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -39,340 +39,340 @@ msgstr "Filter"
 msgid "Back"
 msgstr "Zurück"
 
-#: package/contents/ui/ConfigFilter.qml:61
+#: package/contents/ui/ConfigFilter.qml:63
 #, kde-format
 msgid "Files:"
 msgstr "Dateien:"
 
-#: package/contents/ui/ConfigFilter.qml:62
+#: package/contents/ui/ConfigFilter.qml:64
 #, kde-format
 msgid "Show all"
 msgstr "Alle anzeigen"
 
-#: package/contents/ui/ConfigFilter.qml:62
+#: package/contents/ui/ConfigFilter.qml:64
 #, kde-format
 msgid "Show matching"
 msgstr "Passende anzeigen"
 
-#: package/contents/ui/ConfigFilter.qml:62
+#: package/contents/ui/ConfigFilter.qml:64
 #, kde-format
 msgid "Hide matching"
 msgstr "Passende ausblenden"
 
-#: package/contents/ui/ConfigFilter.qml:67
+#: package/contents/ui/ConfigFilter.qml:69
 #, kde-format
 msgid "File name pattern:"
 msgstr "Dateinamenmuster:"
 
-#: package/contents/ui/ConfigFilter.qml:74
+#: package/contents/ui/ConfigFilter.qml:76
 #, kde-format
 msgid "File types:"
 msgstr "Dateitypen:"
 
-#: package/contents/ui/ConfigFilter.qml:80
+#: package/contents/ui/ConfigFilter.qml:82
 #, kde-format
 msgid "Show hidden files:"
 msgstr "Versteckte Dateien anzeigen:"
 
-#: package/contents/ui/ConfigFilter.qml:130
+#: package/contents/ui/ConfigFilter.qml:111
 #, kde-format
 msgid "File Type"
 msgstr "Dateityp"
 
-#: package/contents/ui/ConfigFilter.qml:131
+#: package/contents/ui/ConfigFilter.qml:112
 #, kde-format
 msgid "Description"
 msgstr "Beschreibung"
 
-#: package/contents/ui/ConfigFilter.qml:203
+#: package/contents/ui/ConfigFilter.qml:182
 #, kde-format
 msgid "Select All"
 msgstr "Alle auswählen"
 
-#: package/contents/ui/ConfigFilter.qml:213
+#: package/contents/ui/ConfigFilter.qml:192
 #, kde-format
 msgid "Deselect All"
 msgstr "Auswahl aufheben"
 
-#: package/contents/ui/ConfigFilter.qml:222
+#: package/contents/ui/ConfigFilter.qml:201
 #, kde-format
 msgid "Switch Sort Order"
 msgstr "Sortier-Reihenfolge umschalten"
 
-#: package/contents/ui/ConfigIcons.qml:64
+#: package/contents/ui/ConfigIcons.qml:65
 #, kde-format
 msgid "Panel button:"
 msgstr "Kontrollleistenknopf:"
 
-#: package/contents/ui/ConfigIcons.qml:70
+#: package/contents/ui/ConfigIcons.qml:71
 #, kde-format
 msgid "Use a custom icon"
 msgstr "Eigenes Symbol verwenden"
 
-#: package/contents/ui/ConfigIcons.qml:103
+#: package/contents/ui/ConfigIcons.qml:104
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Auswählen …"
 
-#: package/contents/ui/ConfigIcons.qml:109
+#: package/contents/ui/ConfigIcons.qml:110
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "Symbol zurücksetzen"
 
-#: package/contents/ui/ConfigIcons.qml:129
+#: package/contents/ui/ConfigIcons.qml:130
 #, kde-format
 msgid "Arrangement:"
 msgstr "Anordnung:"
 
-#: package/contents/ui/ConfigIcons.qml:133
+#: package/contents/ui/ConfigIcons.qml:134
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Left to Right"
 msgstr "Links nach Rechts"
 
-#: package/contents/ui/ConfigIcons.qml:134
+#: package/contents/ui/ConfigIcons.qml:135
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Right to Left"
 msgstr "Rechts nach Links"
 
-#: package/contents/ui/ConfigIcons.qml:135
+#: package/contents/ui/ConfigIcons.qml:136
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Top to Bottom"
 msgstr "Oben nach unten"
 
-#: package/contents/ui/ConfigIcons.qml:144
+#: package/contents/ui/ConfigIcons.qml:145
 #, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align left"
 msgstr "Linksbündig"
 
-#: package/contents/ui/ConfigIcons.qml:145
+#: package/contents/ui/ConfigIcons.qml:146
 #, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align right"
 msgstr "Rechtsbündig"
 
-#: package/contents/ui/ConfigIcons.qml:160
+#: package/contents/ui/ConfigIcons.qml:161
 #, kde-format
 msgid "Lock in place"
 msgstr "Position sperren"
 
-#: package/contents/ui/ConfigIcons.qml:174
+#: package/contents/ui/ConfigIcons.qml:175
 #, kde-format
 msgid "Sorting:"
 msgstr "Sortierung:"
 
-#: package/contents/ui/ConfigIcons.qml:182
+#: package/contents/ui/ConfigIcons.qml:183
 #, kde-format
 msgctxt "@item:inlistbox sort icons manually"
 msgid "Manual"
 msgstr "Manuell"
 
-#: package/contents/ui/ConfigIcons.qml:183
+#: package/contents/ui/ConfigIcons.qml:184
 #, kde-format
 msgctxt "@item:inlistbox sort icons by name"
 msgid "Name"
 msgstr "Name"
 
-#: package/contents/ui/ConfigIcons.qml:184
+#: package/contents/ui/ConfigIcons.qml:185
 #, kde-format
 msgctxt "@item:inlistbox sort icons by size"
 msgid "Size"
 msgstr "Größe"
 
-#: package/contents/ui/ConfigIcons.qml:185
+#: package/contents/ui/ConfigIcons.qml:186
 #, kde-format
 msgctxt "@item:inlistbox sort icons by file type"
 msgid "Type"
 msgstr "Typ"
 
-#: package/contents/ui/ConfigIcons.qml:186
+#: package/contents/ui/ConfigIcons.qml:187
 #, kde-format
 msgctxt "@item:inlistbox sort icons by date"
 msgid "Date"
 msgstr "Datum"
 
-#: package/contents/ui/ConfigIcons.qml:197
+#: package/contents/ui/ConfigIcons.qml:198
 #, kde-format
 msgctxt "@option:check sort icons in descending order"
 msgid "Descending"
 msgstr "Absteigend"
 
-#: package/contents/ui/ConfigIcons.qml:205
+#: package/contents/ui/ConfigIcons.qml:206
 #, kde-format
 msgctxt "@option:check sort icons with folders first"
 msgid "Folders first"
 msgstr "Ordner zuerst"
 
-#: package/contents/ui/ConfigIcons.qml:219
+#: package/contents/ui/ConfigIcons.qml:220
 #, kde-format
 msgctxt "whether to use icon or list view"
 msgid "View mode:"
 msgstr "Ansichtsmodus:"
 
-#: package/contents/ui/ConfigIcons.qml:221
+#: package/contents/ui/ConfigIcons.qml:222
 #, kde-format
 msgctxt "@item:inlistbox show icons in a list"
 msgid "List"
 msgstr "Liste"
 
-#: package/contents/ui/ConfigIcons.qml:222
+#: package/contents/ui/ConfigIcons.qml:223
 #, kde-format
 msgctxt "@item:inlistbox show icons in a grid"
 msgid "Grid"
 msgstr "Gitter"
 
-#: package/contents/ui/ConfigIcons.qml:233
+#: package/contents/ui/ConfigIcons.qml:234
 #, kde-format
 msgid "Icon size:"
 msgstr "Symbolgröße:"
 
-#: package/contents/ui/ConfigIcons.qml:248
+#: package/contents/ui/ConfigIcons.qml:249
 #, kde-format
 msgctxt "@label:slider smallest icon size"
 msgid "Small"
 msgstr "Klein"
 
-#: package/contents/ui/ConfigIcons.qml:257
+#: package/contents/ui/ConfigIcons.qml:258
 #, kde-format
 msgctxt "@label:slider largest icon size"
 msgid "Large"
 msgstr "Groß"
 
-#: package/contents/ui/ConfigIcons.qml:266
+#: package/contents/ui/ConfigIcons.qml:267
 #, kde-format
 msgid "Label width:"
 msgstr "Beschriftungsbreite:"
 
-#: package/contents/ui/ConfigIcons.qml:269
+#: package/contents/ui/ConfigIcons.qml:270
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Narrow"
 msgstr "Schmal"
 
-#: package/contents/ui/ConfigIcons.qml:270
+#: package/contents/ui/ConfigIcons.qml:271
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Medium"
 msgstr "Mittel"
 
-#: package/contents/ui/ConfigIcons.qml:271
+#: package/contents/ui/ConfigIcons.qml:272
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Wide"
 msgstr "Breit"
 
-#: package/contents/ui/ConfigIcons.qml:279
+#: package/contents/ui/ConfigIcons.qml:280
 #, kde-format
 msgid "Text lines:"
 msgstr "Textzeilen:"
 
-#: package/contents/ui/ConfigIcons.qml:295
+#: package/contents/ui/ConfigIcons.qml:296
 #, kde-format
 msgid "When hovering over icons:"
 msgstr "Beim Überfahren von Symbolen:"
 
-#: package/contents/ui/ConfigIcons.qml:297
+#: package/contents/ui/ConfigIcons.qml:298
 #, kde-format
 msgid "Show tooltips"
 msgstr "Kurzinfos anzeigen"
 
-#: package/contents/ui/ConfigIcons.qml:304
+#: package/contents/ui/ConfigIcons.qml:305
 #, kde-format
 msgid "Show selection markers"
 msgstr "Auswahlmarkierungen anzeigen"
 
-#: package/contents/ui/ConfigIcons.qml:311
+#: package/contents/ui/ConfigIcons.qml:312
 #, kde-format
 msgid "Show folder preview popups"
 msgstr "Ordner-Voransichten anzeigen"
 
-#: package/contents/ui/ConfigIcons.qml:321
+#: package/contents/ui/ConfigIcons.qml:322
 #, kde-format
 msgid "Rename:"
 msgstr "Umbenennen:"
 
-#: package/contents/ui/ConfigIcons.qml:325
+#: package/contents/ui/ConfigIcons.qml:326
 #, kde-format
 msgid "Rename inline by clicking selected item's text"
 msgstr ""
 "Direktes Umbenennen durch Klicken auf den Text des ausgewählten Elements"
 
-#: package/contents/ui/ConfigIcons.qml:336
+#: package/contents/ui/ConfigIcons.qml:337
 #, kde-format
 msgid "Previews:"
 msgstr "Vorschauen:"
 
-#: package/contents/ui/ConfigIcons.qml:338
+#: package/contents/ui/ConfigIcons.qml:339
 #, kde-format
 msgid "Show preview thumbnails"
 msgstr "Vorschaubilder anzeigen"
 
-#: package/contents/ui/ConfigIcons.qml:346
+#: package/contents/ui/ConfigIcons.qml:347
 #, kde-format
 msgid "Configure Preview Plugins…"
 msgstr "Vorschaumodule einrichten …"
 
-#: package/contents/ui/ConfigLocation.qml:80
+#: package/contents/ui/ConfigLocation.qml:81
 #, kde-format
 msgid "Show:"
 msgstr "Anzeigen:"
 
-#: package/contents/ui/ConfigLocation.qml:82
+#: package/contents/ui/ConfigLocation.qml:83
 #, kde-format
 msgid "Desktop folder"
 msgstr "Arbeitsflächen-Ordner"
 
-#: package/contents/ui/ConfigLocation.qml:89
+#: package/contents/ui/ConfigLocation.qml:90
 #, kde-format
 msgid "Files linked to the current activity"
 msgstr "Dateien, die mit der aktuellen Aktivität verknüpft sind"
 
-#: package/contents/ui/ConfigLocation.qml:96
+#: package/contents/ui/ConfigLocation.qml:97
 #, kde-format
 msgid "Places panel item:"
 msgstr "Eintrag in der Seitenleiste Orte:"
 
-#: package/contents/ui/ConfigLocation.qml:129
+#: package/contents/ui/ConfigLocation.qml:130
 #, kde-format
 msgid "Custom location:"
 msgstr "Benutzerdefinierter Ort:"
 
-#: package/contents/ui/ConfigLocation.qml:137
+#: package/contents/ui/ConfigLocation.qml:138
 #, kde-format
 msgid "Type path or URL…"
 msgstr "Pfad oder URL eingeben …"
 
-#: package/contents/ui/ConfigLocation.qml:180
+#: package/contents/ui/ConfigLocation.qml:181
 #, kde-format
 msgid "Title:"
 msgstr "Titel:"
 
-#: package/contents/ui/ConfigLocation.qml:182
+#: package/contents/ui/ConfigLocation.qml:183
 #, kde-format
 msgid "None"
 msgstr "Kein"
 
-#: package/contents/ui/ConfigLocation.qml:182
+#: package/contents/ui/ConfigLocation.qml:183
 #, kde-format
 msgid "Default"
 msgstr "Standard"
 
-#: package/contents/ui/ConfigLocation.qml:182
+#: package/contents/ui/ConfigLocation.qml:183
 #, kde-format
 msgid "Full path"
 msgstr "Vollständiger Pfad"
 
-#: package/contents/ui/ConfigLocation.qml:182
+#: package/contents/ui/ConfigLocation.qml:183
 #, kde-format
 msgid "Custom title"
 msgstr "Benutzerdefinierter Titel"
 
-#: package/contents/ui/ConfigLocation.qml:197
+#: package/contents/ui/ConfigLocation.qml:198
 #, kde-format
 msgid "Enter custom title…"
 msgstr "Benutzerdefinierten Titel eingeben …"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-26 00:43+0000\n"
+"POT-Creation-Date: 2025-03-30 00:43+0000\n"
 "PO-Revision-Date: 2025-02-09 19:30+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -94,7 +94,7 @@ msgid "Open %1"
 msgstr "Ireki %1"
 
 #: contents/configuration/AboutPlugin.qml:21
-#: contents/configuration/AppletConfiguration.qml:305
+#: contents/configuration/AppletConfiguration.qml:300
 #, kde-format
 msgid "About"
 msgstr "Honi buruz"
@@ -151,12 +151,12 @@ msgstr "Akats baten berri ematea..."
 msgid "Keyboard Shortcuts"
 msgstr "Teklatuko lasterbideak"
 
-#: contents/configuration/AppletConfiguration.qml:353
+#: contents/configuration/AppletConfiguration.qml:348
 #, kde-format
 msgid "Apply Settings"
 msgstr "Ezarpenak ezarri"
 
-#: contents/configuration/AppletConfiguration.qml:354
+#: contents/configuration/AppletConfiguration.qml:349
 #, fuzzy, kde-format
 #| msgid ""
 #| "The settings of the current module have changed. Do you want to apply the "
@@ -167,17 +167,17 @@ msgstr ""
 "Jarduneko moduluaren ezarpenak aldatu egin dira. Aldaketak ezarri edo "
 "baztertu nahi dituzu?"
 
-#: contents/configuration/AppletConfiguration.qml:385
+#: contents/configuration/AppletConfiguration.qml:380
 #, kde-format
 msgid "OK"
 msgstr "Ados"
 
-#: contents/configuration/AppletConfiguration.qml:392
+#: contents/configuration/AppletConfiguration.qml:387
 #, kde-format
 msgid "Apply"
 msgstr "Ezarri"
 
-#: contents/configuration/AppletConfiguration.qml:398
+#: contents/configuration/AppletConfiguration.qml:393
 #, kde-format
 msgid "Cancel"
 msgstr "Utzi"
@@ -187,100 +187,100 @@ msgstr "Utzi"
 msgid "Open configuration page"
 msgstr "Ireki konfiguratzeko orria"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:21
+#: contents/configuration/ConfigurationContainmentActions.qml:25
 #, kde-format
 msgid "Left-Button"
 msgstr "Ezkerreko botoia"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:22
+#: contents/configuration/ConfigurationContainmentActions.qml:26
 #, kde-format
 msgid "Right-Button"
 msgstr "Eskuineko botoia"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:23
+#: contents/configuration/ConfigurationContainmentActions.qml:27
 #, kde-format
 msgid "Middle-Button"
 msgstr "Erdiko botoia"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:24
+#: contents/configuration/ConfigurationContainmentActions.qml:28
 #, kde-format
 msgid "Back-Button"
 msgstr "Atzera botoia"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:25
+#: contents/configuration/ConfigurationContainmentActions.qml:29
 #, kde-format
 msgid "Forward-Button"
 msgstr "Aurrera botoia"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:27
+#: contents/configuration/ConfigurationContainmentActions.qml:31
 #, kde-format
 msgid "Vertical-Scroll"
 msgstr "Labaintze bertikala"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:28
+#: contents/configuration/ConfigurationContainmentActions.qml:32
 #, kde-format
 msgid "Horizontal-Scroll"
 msgstr "Labaintze horizontala"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:30
+#: contents/configuration/ConfigurationContainmentActions.qml:34
 #, kde-format
 msgid "Shift"
 msgstr "Maius"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:31
+#: contents/configuration/ConfigurationContainmentActions.qml:35
 #, kde-format
 msgid "Ctrl"
 msgstr "Ktrl"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:32
+#: contents/configuration/ConfigurationContainmentActions.qml:36
 #, kde-format
 msgid "Alt"
 msgstr "Alt"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:33
+#: contents/configuration/ConfigurationContainmentActions.qml:37
 #, kde-format
 msgid "Meta"
 msgstr "Meta"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:75
+#: contents/configuration/ConfigurationContainmentActions.qml:78
 #, kde-format
 msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
 msgid "+"
 msgstr "+"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:148
+#: contents/configuration/ConfigurationContainmentActions.qml:151
 #: contents/configuration/MouseEventInputButton.qml:13
 #, kde-format
 msgid "Add Action"
 msgstr "Gehitu ekintza"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:69
+#: contents/configuration/ConfigurationContainmentAppearance.qml:74
 #, kde-format
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "Antolamendu aldaketak mugatu ditu sistemako administratzaileak"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:84
+#: contents/configuration/ConfigurationContainmentAppearance.qml:89
 #, kde-format
 msgid "Layout:"
 msgstr "Antolamendua:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:98
+#: contents/configuration/ConfigurationContainmentAppearance.qml:103
 #, kde-format
 msgid "Wallpaper type:"
 msgstr "Horma-paper mota:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:120
+#: contents/configuration/ConfigurationContainmentAppearance.qml:125
 #, kde-format
 msgid "Get New Plugins…"
 msgstr "Lortu plugin berriak..."
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:194
+#: contents/configuration/ConfigurationContainmentAppearance.qml:199
 #, kde-format
 msgid "Layout changes must be applied before other changes can be made"
 msgstr ""
 "Antolamendu aldaketak ezarri behar dira beste aldaketak egin ahal izateko"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:198
+#: contents/configuration/ConfigurationContainmentAppearance.qml:203
 #, kde-format
 msgid "Apply Now"
 msgstr "Ezarri orain"

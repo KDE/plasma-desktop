@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-19 00:43+0000\n"
+"POT-Creation-Date: 2025-03-30 00:43+0000\n"
 "PO-Revision-Date: 2017-12-15 12:38+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -39,88 +39,88 @@ msgstr "Филтер"
 msgid "Back"
 msgstr "Назад"
 
-#: package/contents/ui/ConfigFilter.qml:61
+#: package/contents/ui/ConfigFilter.qml:63
 #, fuzzy, kde-format
 #| msgid "File types:"
 msgid "Files:"
 msgstr "Типови фајлова:"
 
 # >> @option:radio (that is, semantics thereof)
-#: package/contents/ui/ConfigFilter.qml:62
+#: package/contents/ui/ConfigFilter.qml:64
 #, fuzzy, kde-format
 #| msgid "Show All Files"
 msgid "Show all"
 msgstr "Прикажи све фајлове"
 
 # >> @option:radio (that is, semantics thereof)
-#: package/contents/ui/ConfigFilter.qml:62
+#: package/contents/ui/ConfigFilter.qml:64
 #, fuzzy, kde-format
 #| msgid "Show Files Matching"
 msgid "Show matching"
 msgstr "Прикажи поклопљене фајлове"
 
 # >> @option:radio (that is, semantics thereof)
-#: package/contents/ui/ConfigFilter.qml:62
+#: package/contents/ui/ConfigFilter.qml:64
 #, fuzzy, kde-format
 #| msgid "Hide Files Matching"
 msgid "Hide matching"
 msgstr "Сакриј поклопљене фајлове"
 
-#: package/contents/ui/ConfigFilter.qml:67
+#: package/contents/ui/ConfigFilter.qml:69
 #, kde-format
 msgid "File name pattern:"
 msgstr "Образац имена фајла:"
 
-#: package/contents/ui/ConfigFilter.qml:74
+#: package/contents/ui/ConfigFilter.qml:76
 #, kde-format
 msgid "File types:"
 msgstr "Типови фајлова:"
 
-#: package/contents/ui/ConfigFilter.qml:80
+#: package/contents/ui/ConfigFilter.qml:82
 #, kde-format
 msgid "Show hidden files:"
 msgstr ""
 
 # >> @title:column
-#: package/contents/ui/ConfigFilter.qml:130
+#: package/contents/ui/ConfigFilter.qml:111
 #, fuzzy, kde-format
 #| msgid "File type"
 msgid "File Type"
 msgstr "тип фајла"
 
 # >> @title:column
-#: package/contents/ui/ConfigFilter.qml:131
+#: package/contents/ui/ConfigFilter.qml:112
 #, kde-format
 msgid "Description"
 msgstr "опис"
 
-#: package/contents/ui/ConfigFilter.qml:203
+#: package/contents/ui/ConfigFilter.qml:182
 #, kde-format
 msgid "Select All"
 msgstr "Изабери све"
 
 # На дугмету које треба да је уско.
-#: package/contents/ui/ConfigFilter.qml:213
+#: package/contents/ui/ConfigFilter.qml:192
 #, kde-format
 msgid "Deselect All"
 msgstr "Поништи избор"
 
-#: package/contents/ui/ConfigFilter.qml:222
+#: package/contents/ui/ConfigFilter.qml:201
 #, kde-format
 msgid "Switch Sort Order"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:64
+#: package/contents/ui/ConfigIcons.qml:65
 #, kde-format
 msgid "Panel button:"
 msgstr "Панелско дугме:"
 
-#: package/contents/ui/ConfigIcons.qml:70
+#: package/contents/ui/ConfigIcons.qml:71
 #, kde-format
 msgid "Use a custom icon"
 msgstr "Посебна иконица"
 
-#: package/contents/ui/ConfigIcons.qml:103
+#: package/contents/ui/ConfigIcons.qml:104
 #, fuzzy, kde-format
 #| msgctxt "@item:inmenu Open icon chooser dialog"
 #| msgid "Choose..."
@@ -128,67 +128,67 @@ msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Изабери..."
 
-#: package/contents/ui/ConfigIcons.qml:109
+#: package/contents/ui/ConfigIcons.qml:110
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "Очисти иконицу"
 
-#: package/contents/ui/ConfigIcons.qml:129
+#: package/contents/ui/ConfigIcons.qml:130
 #, kde-format
 msgid "Arrangement:"
 msgstr "Распоред:"
 
-#: package/contents/ui/ConfigIcons.qml:133
+#: package/contents/ui/ConfigIcons.qml:134
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Left to Right"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:134
+#: package/contents/ui/ConfigIcons.qml:135
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Right to Left"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:135
+#: package/contents/ui/ConfigIcons.qml:136
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Top to Bottom"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:144
+#: package/contents/ui/ConfigIcons.qml:145
 #, fuzzy, kde-format
 #| msgid "Align"
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align left"
 msgstr "Поравнај"
 
-#: package/contents/ui/ConfigIcons.qml:145
+#: package/contents/ui/ConfigIcons.qml:146
 #, fuzzy, kde-format
 #| msgid "Align"
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align right"
 msgstr "Поравнај"
 
-#: package/contents/ui/ConfigIcons.qml:160
+#: package/contents/ui/ConfigIcons.qml:161
 #, kde-format
 msgid "Lock in place"
 msgstr "Закључај на месту"
 
-#: package/contents/ui/ConfigIcons.qml:174
+#: package/contents/ui/ConfigIcons.qml:175
 #, kde-format
 msgid "Sorting:"
 msgstr "Ређање:"
 
-#: package/contents/ui/ConfigIcons.qml:182
+#: package/contents/ui/ConfigIcons.qml:183
 #, kde-format
 msgctxt "@item:inlistbox sort icons manually"
 msgid "Manual"
 msgstr ""
 
 # >> @item:inlistbox Sorting:
-#: package/contents/ui/ConfigIcons.qml:183
+#: package/contents/ui/ConfigIcons.qml:184
 #, fuzzy, kde-format
 #| msgid "Name"
 msgctxt "@item:inlistbox sort icons by name"
@@ -196,7 +196,7 @@ msgid "Name"
 msgstr "име"
 
 # >> @item:inlistbox Sorting:
-#: package/contents/ui/ConfigIcons.qml:184
+#: package/contents/ui/ConfigIcons.qml:185
 #, fuzzy, kde-format
 #| msgid "Size"
 msgctxt "@item:inlistbox sort icons by size"
@@ -204,7 +204,7 @@ msgid "Size"
 msgstr "величина"
 
 # >> @item:inlistbox Sorting:
-#: package/contents/ui/ConfigIcons.qml:185
+#: package/contents/ui/ConfigIcons.qml:186
 #, fuzzy, kde-format
 #| msgid "Type"
 msgctxt "@item:inlistbox sort icons by file type"
@@ -212,7 +212,7 @@ msgid "Type"
 msgstr "тип"
 
 # >> @item:inlistbox Sorting:
-#: package/contents/ui/ConfigIcons.qml:186
+#: package/contents/ui/ConfigIcons.qml:187
 #, fuzzy, kde-format
 #| msgid "Date"
 msgctxt "@item:inlistbox sort icons by date"
@@ -220,7 +220,7 @@ msgid "Date"
 msgstr "датум"
 
 # >> @option:check
-#: package/contents/ui/ConfigIcons.qml:197
+#: package/contents/ui/ConfigIcons.qml:198
 #, fuzzy, kde-format
 #| msgid "Descending"
 msgctxt "@option:check sort icons in descending order"
@@ -228,14 +228,14 @@ msgid "Descending"
 msgstr "Опадајуће"
 
 # >> @option:check
-#: package/contents/ui/ConfigIcons.qml:205
+#: package/contents/ui/ConfigIcons.qml:206
 #, fuzzy, kde-format
 #| msgid "Folders first"
 msgctxt "@option:check sort icons with folders first"
 msgid "Folders first"
 msgstr "Прво фасцикле"
 
-#: package/contents/ui/ConfigIcons.qml:219
+#: package/contents/ui/ConfigIcons.qml:220
 #, fuzzy, kde-format
 #| msgctxt "whether to use icon or list view"
 #| msgid "View mode"
@@ -243,27 +243,27 @@ msgctxt "whether to use icon or list view"
 msgid "View mode:"
 msgstr "Режим приказа"
 
-#: package/contents/ui/ConfigIcons.qml:221
+#: package/contents/ui/ConfigIcons.qml:222
 #, fuzzy, kde-format
 #| msgid "List"
 msgctxt "@item:inlistbox show icons in a list"
 msgid "List"
 msgstr "Списак"
 
-#: package/contents/ui/ConfigIcons.qml:222
+#: package/contents/ui/ConfigIcons.qml:223
 #, kde-format
 msgctxt "@item:inlistbox show icons in a grid"
 msgid "Grid"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:233
+#: package/contents/ui/ConfigIcons.qml:234
 #, fuzzy, kde-format
 #| msgid "Icon Size"
 msgid "Icon size:"
 msgstr "Величина иконица"
 
 # >> @item:inrange Size:
-#: package/contents/ui/ConfigIcons.qml:248
+#: package/contents/ui/ConfigIcons.qml:249
 #, fuzzy, kde-format
 #| msgid "Small"
 msgctxt "@label:slider smallest icon size"
@@ -271,166 +271,166 @@ msgid "Small"
 msgstr "мале"
 
 # >> @item:inrange Size:
-#: package/contents/ui/ConfigIcons.qml:257
+#: package/contents/ui/ConfigIcons.qml:258
 #, fuzzy, kde-format
 #| msgid "Large"
 msgctxt "@label:slider largest icon size"
 msgid "Large"
 msgstr "велике"
 
-#: package/contents/ui/ConfigIcons.qml:266
+#: package/contents/ui/ConfigIcons.qml:267
 #, kde-format
 msgid "Label width:"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:269
+#: package/contents/ui/ConfigIcons.qml:270
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Narrow"
 msgstr ""
 
 # >> @item:inmenu Icon Size
-#: package/contents/ui/ConfigIcons.qml:270
+#: package/contents/ui/ConfigIcons.qml:271
 #, fuzzy, kde-format
 #| msgid "Medium"
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Medium"
 msgstr "средње"
 
-#: package/contents/ui/ConfigIcons.qml:271
+#: package/contents/ui/ConfigIcons.qml:272
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Wide"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:279
+#: package/contents/ui/ConfigIcons.qml:280
 #, fuzzy, kde-format
 #| msgid "Text lines"
 msgid "Text lines:"
 msgstr "Редови текста"
 
-#: package/contents/ui/ConfigIcons.qml:295
+#: package/contents/ui/ConfigIcons.qml:296
 #, kde-format
 msgid "When hovering over icons:"
 msgstr ""
 
 # >> @option:check
-#: package/contents/ui/ConfigIcons.qml:297
+#: package/contents/ui/ConfigIcons.qml:298
 #, fuzzy, kde-format
 #| msgid "Tool tips"
 msgid "Show tooltips"
 msgstr "Облачићи"
 
 # >> @option:check
-#: package/contents/ui/ConfigIcons.qml:304
+#: package/contents/ui/ConfigIcons.qml:305
 #, fuzzy, kde-format
 #| msgid "Selection markers"
 msgid "Show selection markers"
 msgstr "Маркери избора"
 
 # >> @option:check
-#: package/contents/ui/ConfigIcons.qml:311
+#: package/contents/ui/ConfigIcons.qml:312
 #, fuzzy, kde-format
 #| msgid "Folder preview popups"
 msgid "Show folder preview popups"
 msgstr "Искакачи прегледа фасцикле"
 
-#: package/contents/ui/ConfigIcons.qml:321
+#: package/contents/ui/ConfigIcons.qml:322
 #, kde-format
 msgid "Rename:"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:325
+#: package/contents/ui/ConfigIcons.qml:326
 #, kde-format
 msgid "Rename inline by clicking selected item's text"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:336
+#: package/contents/ui/ConfigIcons.qml:337
 #, fuzzy, kde-format
 #| msgid "Preview Plugins"
 msgid "Previews:"
 msgstr "Прикључци за преглед"
 
 # >> @option:check
-#: package/contents/ui/ConfigIcons.qml:338
+#: package/contents/ui/ConfigIcons.qml:339
 #, fuzzy, kde-format
 #| msgid "Preview thumbnails"
 msgid "Show preview thumbnails"
 msgstr "Сличице за преглед"
 
-#: package/contents/ui/ConfigIcons.qml:346
+#: package/contents/ui/ConfigIcons.qml:347
 #, fuzzy, kde-format
 #| msgid "More Preview Options..."
 msgid "Configure Preview Plugins…"
 msgstr "Још опција прегледа..."
 
-#: package/contents/ui/ConfigLocation.qml:80
+#: package/contents/ui/ConfigLocation.qml:81
 #, kde-format
 msgid "Show:"
 msgstr ""
 
 # >> @option:radio
-#: package/contents/ui/ConfigLocation.qml:82
+#: package/contents/ui/ConfigLocation.qml:83
 #, fuzzy, kde-format
 #| msgid "Show the Desktop folder"
 msgid "Desktop folder"
 msgstr "Прикажи фасциклу површи"
 
 # >> @option:radio
-#: package/contents/ui/ConfigLocation.qml:89
+#: package/contents/ui/ConfigLocation.qml:90
 #, fuzzy, kde-format
 #| msgid "Show files linked to the current activity"
 msgid "Files linked to the current activity"
 msgstr "Прикажи фајлове повезана са тренутном активношћу"
 
-#: package/contents/ui/ConfigLocation.qml:96
+#: package/contents/ui/ConfigLocation.qml:97
 #, kde-format
 msgid "Places panel item:"
 msgstr ""
 
 # >> @item:inlistbox Title
-#: package/contents/ui/ConfigLocation.qml:129
+#: package/contents/ui/ConfigLocation.qml:130
 #, fuzzy, kde-format
 #| msgid "Custom title"
 msgid "Custom location:"
 msgstr "посебан наслов"
 
-#: package/contents/ui/ConfigLocation.qml:137
+#: package/contents/ui/ConfigLocation.qml:138
 #, fuzzy, kde-format
 #| msgid "Type a path or a URL here"
 msgid "Type path or URL…"
 msgstr "Унесите путању или УРЛ"
 
-#: package/contents/ui/ConfigLocation.qml:180
+#: package/contents/ui/ConfigLocation.qml:181
 #, kde-format
 msgid "Title:"
 msgstr "Наслов:"
 
 # >> @item:inlistbox Title
-#: package/contents/ui/ConfigLocation.qml:182
+#: package/contents/ui/ConfigLocation.qml:183
 #, kde-format
 msgid "None"
 msgstr "никакав"
 
 # >> @item:inlistbox Title
-#: package/contents/ui/ConfigLocation.qml:182
+#: package/contents/ui/ConfigLocation.qml:183
 #, kde-format
 msgid "Default"
 msgstr "подразумеван"
 
 # >> @item:inlistbox Title
-#: package/contents/ui/ConfigLocation.qml:182
+#: package/contents/ui/ConfigLocation.qml:183
 #, kde-format
 msgid "Full path"
 msgstr "пуна путања"
 
 # >> @item:inlistbox Title
-#: package/contents/ui/ConfigLocation.qml:182
+#: package/contents/ui/ConfigLocation.qml:183
 #, kde-format
 msgid "Custom title"
 msgstr "посебан наслов"
 
-#: package/contents/ui/ConfigLocation.qml:197
+#: package/contents/ui/ConfigLocation.qml:198
 #, fuzzy, kde-format
 #| msgid "Enter custom title here"
 msgid "Enter custom title…"

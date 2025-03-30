@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-19 00:43+0000\n"
+"POT-Creation-Date: 2025-03-30 00:43+0000\n"
 "PO-Revision-Date: 2024-05-04 22:45+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -40,339 +40,339 @@ msgstr "フィルタ"
 msgid "Back"
 msgstr "戻る"
 
-#: package/contents/ui/ConfigFilter.qml:61
+#: package/contents/ui/ConfigFilter.qml:63
 #, kde-format
 msgid "Files:"
 msgstr "ファイル:"
 
-#: package/contents/ui/ConfigFilter.qml:62
+#: package/contents/ui/ConfigFilter.qml:64
 #, kde-format
 msgid "Show all"
 msgstr "すべて表示"
 
-#: package/contents/ui/ConfigFilter.qml:62
+#: package/contents/ui/ConfigFilter.qml:64
 #, kde-format
 msgid "Show matching"
 msgstr "マッチするファイルを表示"
 
-#: package/contents/ui/ConfigFilter.qml:62
+#: package/contents/ui/ConfigFilter.qml:64
 #, kde-format
 msgid "Hide matching"
 msgstr "マッチするファイルを隠す"
 
-#: package/contents/ui/ConfigFilter.qml:67
+#: package/contents/ui/ConfigFilter.qml:69
 #, kde-format
 msgid "File name pattern:"
 msgstr "ファイル名パターン:"
 
-#: package/contents/ui/ConfigFilter.qml:74
+#: package/contents/ui/ConfigFilter.qml:76
 #, kde-format
 msgid "File types:"
 msgstr "ファイルタイプ:"
 
-#: package/contents/ui/ConfigFilter.qml:80
+#: package/contents/ui/ConfigFilter.qml:82
 #, kde-format
 msgid "Show hidden files:"
 msgstr "隠しファイルを表示:"
 
-#: package/contents/ui/ConfigFilter.qml:130
+#: package/contents/ui/ConfigFilter.qml:111
 #, kde-format
 msgid "File Type"
 msgstr "ファイルタイプ"
 
-#: package/contents/ui/ConfigFilter.qml:131
+#: package/contents/ui/ConfigFilter.qml:112
 #, kde-format
 msgid "Description"
 msgstr "説明"
 
-#: package/contents/ui/ConfigFilter.qml:203
+#: package/contents/ui/ConfigFilter.qml:182
 #, kde-format
 msgid "Select All"
 msgstr "すべて選択"
 
-#: package/contents/ui/ConfigFilter.qml:213
+#: package/contents/ui/ConfigFilter.qml:192
 #, kde-format
 msgid "Deselect All"
 msgstr "すべて選択解除"
 
-#: package/contents/ui/ConfigFilter.qml:222
+#: package/contents/ui/ConfigFilter.qml:201
 #, kde-format
 msgid "Switch Sort Order"
 msgstr "ソート順を変更"
 
-#: package/contents/ui/ConfigIcons.qml:64
+#: package/contents/ui/ConfigIcons.qml:65
 #, kde-format
 msgid "Panel button:"
 msgstr "パネルのボタン:"
 
-#: package/contents/ui/ConfigIcons.qml:70
+#: package/contents/ui/ConfigIcons.qml:71
 #, kde-format
 msgid "Use a custom icon"
 msgstr "カスタムアイコンを使う"
 
-#: package/contents/ui/ConfigIcons.qml:103
+#: package/contents/ui/ConfigIcons.qml:104
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "選択..."
 
-#: package/contents/ui/ConfigIcons.qml:109
+#: package/contents/ui/ConfigIcons.qml:110
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "アイコンをクリア"
 
-#: package/contents/ui/ConfigIcons.qml:129
+#: package/contents/ui/ConfigIcons.qml:130
 #, kde-format
 msgid "Arrangement:"
 msgstr "配置:"
 
-#: package/contents/ui/ConfigIcons.qml:133
+#: package/contents/ui/ConfigIcons.qml:134
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Left to Right"
 msgstr "左から右"
 
-#: package/contents/ui/ConfigIcons.qml:134
+#: package/contents/ui/ConfigIcons.qml:135
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Right to Left"
 msgstr "右から左"
 
-#: package/contents/ui/ConfigIcons.qml:135
+#: package/contents/ui/ConfigIcons.qml:136
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Top to Bottom"
 msgstr "上から下"
 
-#: package/contents/ui/ConfigIcons.qml:144
+#: package/contents/ui/ConfigIcons.qml:145
 #, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align left"
 msgstr "左揃え"
 
-#: package/contents/ui/ConfigIcons.qml:145
+#: package/contents/ui/ConfigIcons.qml:146
 #, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align right"
 msgstr "右揃え"
 
-#: package/contents/ui/ConfigIcons.qml:160
+#: package/contents/ui/ConfigIcons.qml:161
 #, kde-format
 msgid "Lock in place"
 msgstr "位置を固定する"
 
-#: package/contents/ui/ConfigIcons.qml:174
+#: package/contents/ui/ConfigIcons.qml:175
 #, kde-format
 msgid "Sorting:"
 msgstr "ソート:"
 
-#: package/contents/ui/ConfigIcons.qml:182
+#: package/contents/ui/ConfigIcons.qml:183
 #, kde-format
 msgctxt "@item:inlistbox sort icons manually"
 msgid "Manual"
 msgstr "手動"
 
-#: package/contents/ui/ConfigIcons.qml:183
+#: package/contents/ui/ConfigIcons.qml:184
 #, kde-format
 msgctxt "@item:inlistbox sort icons by name"
 msgid "Name"
 msgstr "名前"
 
-#: package/contents/ui/ConfigIcons.qml:184
+#: package/contents/ui/ConfigIcons.qml:185
 #, kde-format
 msgctxt "@item:inlistbox sort icons by size"
 msgid "Size"
 msgstr "サイズ"
 
-#: package/contents/ui/ConfigIcons.qml:185
+#: package/contents/ui/ConfigIcons.qml:186
 #, kde-format
 msgctxt "@item:inlistbox sort icons by file type"
 msgid "Type"
 msgstr "種類"
 
-#: package/contents/ui/ConfigIcons.qml:186
+#: package/contents/ui/ConfigIcons.qml:187
 #, kde-format
 msgctxt "@item:inlistbox sort icons by date"
 msgid "Date"
 msgstr "日付"
 
-#: package/contents/ui/ConfigIcons.qml:197
+#: package/contents/ui/ConfigIcons.qml:198
 #, kde-format
 msgctxt "@option:check sort icons in descending order"
 msgid "Descending"
 msgstr "降順"
 
-#: package/contents/ui/ConfigIcons.qml:205
+#: package/contents/ui/ConfigIcons.qml:206
 #, kde-format
 msgctxt "@option:check sort icons with folders first"
 msgid "Folders first"
 msgstr "フォルダを先に"
 
-#: package/contents/ui/ConfigIcons.qml:219
+#: package/contents/ui/ConfigIcons.qml:220
 #, kde-format
 msgctxt "whether to use icon or list view"
 msgid "View mode:"
 msgstr "表示モード:"
 
-#: package/contents/ui/ConfigIcons.qml:221
+#: package/contents/ui/ConfigIcons.qml:222
 #, kde-format
 msgctxt "@item:inlistbox show icons in a list"
 msgid "List"
 msgstr "リスト"
 
-#: package/contents/ui/ConfigIcons.qml:222
+#: package/contents/ui/ConfigIcons.qml:223
 #, kde-format
 msgctxt "@item:inlistbox show icons in a grid"
 msgid "Grid"
 msgstr "グリッド"
 
-#: package/contents/ui/ConfigIcons.qml:233
+#: package/contents/ui/ConfigIcons.qml:234
 #, kde-format
 msgid "Icon size:"
 msgstr "アイコンサイズ:"
 
-#: package/contents/ui/ConfigIcons.qml:248
+#: package/contents/ui/ConfigIcons.qml:249
 #, kde-format
 msgctxt "@label:slider smallest icon size"
 msgid "Small"
 msgstr "小"
 
-#: package/contents/ui/ConfigIcons.qml:257
+#: package/contents/ui/ConfigIcons.qml:258
 #, kde-format
 msgctxt "@label:slider largest icon size"
 msgid "Large"
 msgstr "大"
 
-#: package/contents/ui/ConfigIcons.qml:266
+#: package/contents/ui/ConfigIcons.qml:267
 #, kde-format
 msgid "Label width:"
 msgstr "ラベルの幅:"
 
-#: package/contents/ui/ConfigIcons.qml:269
+#: package/contents/ui/ConfigIcons.qml:270
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Narrow"
 msgstr "狭め"
 
-#: package/contents/ui/ConfigIcons.qml:270
+#: package/contents/ui/ConfigIcons.qml:271
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Medium"
 msgstr "普通"
 
-#: package/contents/ui/ConfigIcons.qml:271
+#: package/contents/ui/ConfigIcons.qml:272
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Wide"
 msgstr "広め"
 
-#: package/contents/ui/ConfigIcons.qml:279
+#: package/contents/ui/ConfigIcons.qml:280
 #, kde-format
 msgid "Text lines:"
 msgstr "テキスト行数:"
 
-#: package/contents/ui/ConfigIcons.qml:295
+#: package/contents/ui/ConfigIcons.qml:296
 #, kde-format
 msgid "When hovering over icons:"
 msgstr "アイコンにカーソルを重ねたとき:"
 
-#: package/contents/ui/ConfigIcons.qml:297
+#: package/contents/ui/ConfigIcons.qml:298
 #, kde-format
 msgid "Show tooltips"
 msgstr "ツールチップを表示"
 
-#: package/contents/ui/ConfigIcons.qml:304
+#: package/contents/ui/ConfigIcons.qml:305
 #, kde-format
 msgid "Show selection markers"
 msgstr "選択マーカーを表示"
 
-#: package/contents/ui/ConfigIcons.qml:311
+#: package/contents/ui/ConfigIcons.qml:312
 #, kde-format
 msgid "Show folder preview popups"
 msgstr "フォルダプレビューポップアップを表示"
 
-#: package/contents/ui/ConfigIcons.qml:321
+#: package/contents/ui/ConfigIcons.qml:322
 #, kde-format
 msgid "Rename:"
 msgstr "名前変更:"
 
-#: package/contents/ui/ConfigIcons.qml:325
+#: package/contents/ui/ConfigIcons.qml:326
 #, kde-format
 msgid "Rename inline by clicking selected item's text"
 msgstr "選択されたアイテムのテキストをクリックして名前を変更"
 
-#: package/contents/ui/ConfigIcons.qml:336
+#: package/contents/ui/ConfigIcons.qml:337
 #, kde-format
 msgid "Previews:"
 msgstr "プレビュー:"
 
-#: package/contents/ui/ConfigIcons.qml:338
+#: package/contents/ui/ConfigIcons.qml:339
 #, kde-format
 msgid "Show preview thumbnails"
 msgstr "プレビューのサムネイルを表示"
 
-#: package/contents/ui/ConfigIcons.qml:346
+#: package/contents/ui/ConfigIcons.qml:347
 #, kde-format
 msgid "Configure Preview Plugins…"
 msgstr "プレビュー用のプラグインを設定..."
 
-#: package/contents/ui/ConfigLocation.qml:80
+#: package/contents/ui/ConfigLocation.qml:81
 #, kde-format
 msgid "Show:"
 msgstr "表示:"
 
-#: package/contents/ui/ConfigLocation.qml:82
+#: package/contents/ui/ConfigLocation.qml:83
 #, kde-format
 msgid "Desktop folder"
 msgstr "デスクトップフォルダ"
 
-#: package/contents/ui/ConfigLocation.qml:89
+#: package/contents/ui/ConfigLocation.qml:90
 #, kde-format
 msgid "Files linked to the current activity"
 msgstr "現在のアクティビティにリンクされたファイル"
 
-#: package/contents/ui/ConfigLocation.qml:96
+#: package/contents/ui/ConfigLocation.qml:97
 #, kde-format
 msgid "Places panel item:"
 msgstr "場所パネルのアイテム:"
 
-#: package/contents/ui/ConfigLocation.qml:129
+#: package/contents/ui/ConfigLocation.qml:130
 #, kde-format
 msgid "Custom location:"
 msgstr "特定の場所:"
 
-#: package/contents/ui/ConfigLocation.qml:137
+#: package/contents/ui/ConfigLocation.qml:138
 #, kde-format
 msgid "Type path or URL…"
 msgstr "パスまたは URL を入力..."
 
-#: package/contents/ui/ConfigLocation.qml:180
+#: package/contents/ui/ConfigLocation.qml:181
 #, kde-format
 msgid "Title:"
 msgstr "タイトル:"
 
-#: package/contents/ui/ConfigLocation.qml:182
+#: package/contents/ui/ConfigLocation.qml:183
 #, kde-format
 msgid "None"
 msgstr "なし"
 
-#: package/contents/ui/ConfigLocation.qml:182
+#: package/contents/ui/ConfigLocation.qml:183
 #, kde-format
 msgid "Default"
 msgstr "標準"
 
-#: package/contents/ui/ConfigLocation.qml:182
+#: package/contents/ui/ConfigLocation.qml:183
 #, kde-format
 msgid "Full path"
 msgstr "フルパス"
 
-#: package/contents/ui/ConfigLocation.qml:182
+#: package/contents/ui/ConfigLocation.qml:183
 #, kde-format
 msgid "Custom title"
 msgstr "カスタムタイトル"
 
-#: package/contents/ui/ConfigLocation.qml:197
+#: package/contents/ui/ConfigLocation.qml:198
 #, kde-format
 msgid "Enter custom title…"
 msgstr "ここにカスタムタイトルを入力..."

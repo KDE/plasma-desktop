@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-26 00:43+0000\n"
+"POT-Creation-Date: 2025-03-30 00:43+0000\n"
 "PO-Revision-Date: 2024-06-26 14:11+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -94,7 +94,7 @@ msgid "Open %1"
 msgstr "Otvoriť %1"
 
 #: contents/configuration/AboutPlugin.qml:21
-#: contents/configuration/AppletConfiguration.qml:305
+#: contents/configuration/AppletConfiguration.qml:300
 #, kde-format
 msgid "About"
 msgstr "O"
@@ -151,12 +151,12 @@ msgstr "Nahlásiť chybu…"
 msgid "Keyboard Shortcuts"
 msgstr "Klávesové skratky"
 
-#: contents/configuration/AppletConfiguration.qml:353
+#: contents/configuration/AppletConfiguration.qml:348
 #, kde-format
 msgid "Apply Settings"
 msgstr "Použiť nastavenie"
 
-#: contents/configuration/AppletConfiguration.qml:354
+#: contents/configuration/AppletConfiguration.qml:349
 #, fuzzy, kde-format
 #| msgid ""
 #| "The settings of the current module have changed. Do you want to apply the "
@@ -167,17 +167,17 @@ msgstr ""
 "Nastavenia aktuálneho modulu sa zmenili. Chcete použiť zmeny alebo zahodiť "
 "ich?"
 
-#: contents/configuration/AppletConfiguration.qml:385
+#: contents/configuration/AppletConfiguration.qml:380
 #, kde-format
 msgid "OK"
 msgstr "OK"
 
-#: contents/configuration/AppletConfiguration.qml:392
+#: contents/configuration/AppletConfiguration.qml:387
 #, kde-format
 msgid "Apply"
 msgstr "Použiť"
 
-#: contents/configuration/AppletConfiguration.qml:398
+#: contents/configuration/AppletConfiguration.qml:393
 #, kde-format
 msgid "Cancel"
 msgstr "Zrušiť"
@@ -187,99 +187,99 @@ msgstr "Zrušiť"
 msgid "Open configuration page"
 msgstr "Otvoriť konfiguračnú stránku"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:21
+#: contents/configuration/ConfigurationContainmentActions.qml:25
 #, kde-format
 msgid "Left-Button"
 msgstr "Ľavé tlačidlo"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:22
+#: contents/configuration/ConfigurationContainmentActions.qml:26
 #, kde-format
 msgid "Right-Button"
 msgstr "Pravé tlačidlo"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:23
+#: contents/configuration/ConfigurationContainmentActions.qml:27
 #, kde-format
 msgid "Middle-Button"
 msgstr "Stredné tlačidlo"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:24
+#: contents/configuration/ConfigurationContainmentActions.qml:28
 #, kde-format
 msgid "Back-Button"
 msgstr "Tlačidlo vzad"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:25
+#: contents/configuration/ConfigurationContainmentActions.qml:29
 #, kde-format
 msgid "Forward-Button"
 msgstr "Tlačidlo vpred"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:27
+#: contents/configuration/ConfigurationContainmentActions.qml:31
 #, kde-format
 msgid "Vertical-Scroll"
 msgstr "Vertikálny posun"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:28
+#: contents/configuration/ConfigurationContainmentActions.qml:32
 #, kde-format
 msgid "Horizontal-Scroll"
 msgstr "Horizontálny posun"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:30
+#: contents/configuration/ConfigurationContainmentActions.qml:34
 #, kde-format
 msgid "Shift"
 msgstr "Shift"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:31
+#: contents/configuration/ConfigurationContainmentActions.qml:35
 #, kde-format
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:32
+#: contents/configuration/ConfigurationContainmentActions.qml:36
 #, kde-format
 msgid "Alt"
 msgstr "Alt"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:33
+#: contents/configuration/ConfigurationContainmentActions.qml:37
 #, kde-format
 msgid "Meta"
 msgstr "Meta"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:75
+#: contents/configuration/ConfigurationContainmentActions.qml:78
 #, kde-format
 msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
 msgid "+"
 msgstr "+"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:148
+#: contents/configuration/ConfigurationContainmentActions.qml:151
 #: contents/configuration/MouseEventInputButton.qml:13
 #, kde-format
 msgid "Add Action"
 msgstr "Pridať akciu"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:69
+#: contents/configuration/ConfigurationContainmentAppearance.qml:74
 #, kde-format
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "Zmeny rozloženia boli zakázané systémovým administrátorom"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:84
+#: contents/configuration/ConfigurationContainmentAppearance.qml:89
 #, kde-format
 msgid "Layout:"
 msgstr "Rozloženie:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:98
+#: contents/configuration/ConfigurationContainmentAppearance.qml:103
 #, kde-format
 msgid "Wallpaper type:"
 msgstr "Typ tapety:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:120
+#: contents/configuration/ConfigurationContainmentAppearance.qml:125
 #, kde-format
 msgid "Get New Plugins…"
 msgstr "Získať nové doplnky..."
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:194
+#: contents/configuration/ConfigurationContainmentAppearance.qml:199
 #, kde-format
 msgid "Layout changes must be applied before other changes can be made"
 msgstr "Zmeny rozloženia sa musia použiť pred inými zmenami"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:198
+#: contents/configuration/ConfigurationContainmentAppearance.qml:203
 #, kde-format
 msgid "Apply Now"
 msgstr "Použiť teraz"

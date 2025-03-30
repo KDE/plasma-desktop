@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-26 00:43+0000\n"
+"POT-Creation-Date: 2025-03-30 00:43+0000\n"
 "PO-Revision-Date: 2025-03-08 07:24+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -95,7 +95,7 @@ msgid "Open %1"
 msgstr "Odpri %1"
 
 #: contents/configuration/AboutPlugin.qml:21
-#: contents/configuration/AppletConfiguration.qml:305
+#: contents/configuration/AppletConfiguration.qml:300
 #, kde-format
 msgid "About"
 msgstr "O programu"
@@ -152,12 +152,12 @@ msgstr "Poročaj o hrošču…"
 msgid "Keyboard Shortcuts"
 msgstr "Tipkovne bližnjice"
 
-#: contents/configuration/AppletConfiguration.qml:353
+#: contents/configuration/AppletConfiguration.qml:348
 #, kde-format
 msgid "Apply Settings"
 msgstr "Uveljavi nastavitve"
 
-#: contents/configuration/AppletConfiguration.qml:354
+#: contents/configuration/AppletConfiguration.qml:349
 #, kde-format
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
@@ -165,17 +165,17 @@ msgstr ""
 "Trenutna stran ima neshranjene spremembe. Želite uveljaviti spremembe ali "
 "jih zavreči?"
 
-#: contents/configuration/AppletConfiguration.qml:385
+#: contents/configuration/AppletConfiguration.qml:380
 #, kde-format
 msgid "OK"
 msgstr "OK"
 
-#: contents/configuration/AppletConfiguration.qml:392
+#: contents/configuration/AppletConfiguration.qml:387
 #, kde-format
 msgid "Apply"
 msgstr "Uveljavi"
 
-#: contents/configuration/AppletConfiguration.qml:398
+#: contents/configuration/AppletConfiguration.qml:393
 #, kde-format
 msgid "Cancel"
 msgstr "Prekliči"
@@ -185,101 +185,101 @@ msgstr "Prekliči"
 msgid "Open configuration page"
 msgstr "Odpri stran z nastavitvami"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:21
+#: contents/configuration/ConfigurationContainmentActions.qml:25
 #, kde-format
 msgid "Left-Button"
 msgstr "Levi gumb"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:22
+#: contents/configuration/ConfigurationContainmentActions.qml:26
 #, kde-format
 msgid "Right-Button"
 msgstr "Desni gumb"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:23
+#: contents/configuration/ConfigurationContainmentActions.qml:27
 #, kde-format
 msgid "Middle-Button"
 msgstr "Srednji gumb"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:24
+#: contents/configuration/ConfigurationContainmentActions.qml:28
 #, kde-format
 msgid "Back-Button"
 msgstr "Gumb za premik nazaj"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:25
+#: contents/configuration/ConfigurationContainmentActions.qml:29
 #, kde-format
 msgid "Forward-Button"
 msgstr "Gumb za premik naprej"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:27
+#: contents/configuration/ConfigurationContainmentActions.qml:31
 #, kde-format
 msgid "Vertical-Scroll"
 msgstr "Navpično drsenje"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:28
+#: contents/configuration/ConfigurationContainmentActions.qml:32
 #, kde-format
 msgid "Horizontal-Scroll"
 msgstr "Vodoravno drsenje"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:30
+#: contents/configuration/ConfigurationContainmentActions.qml:34
 #, kde-format
 msgid "Shift"
 msgstr "Dvigalka"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:31
+#: contents/configuration/ConfigurationContainmentActions.qml:35
 #, kde-format
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:32
+#: contents/configuration/ConfigurationContainmentActions.qml:36
 #, kde-format
 msgid "Alt"
 msgstr "Alt"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:33
+#: contents/configuration/ConfigurationContainmentActions.qml:37
 #, kde-format
 msgid "Meta"
 msgstr "Meta"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:75
+#: contents/configuration/ConfigurationContainmentActions.qml:78
 #, kde-format
 msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
 msgid "+"
 msgstr "+"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:148
+#: contents/configuration/ConfigurationContainmentActions.qml:151
 #: contents/configuration/MouseEventInputButton.qml:13
 #, kde-format
 msgid "Add Action"
 msgstr "Dodaj dejanje"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:69
+#: contents/configuration/ConfigurationContainmentAppearance.qml:74
 #, kde-format
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "Spremembe postavitve so dovoljene samo za sistemskega skrbnika"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:84
+#: contents/configuration/ConfigurationContainmentAppearance.qml:89
 #, kde-format
 msgid "Layout:"
 msgstr "Razporeditev:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:98
+#: contents/configuration/ConfigurationContainmentAppearance.qml:103
 #, kde-format
 msgid "Wallpaper type:"
 msgstr "Vrsta slike ozadja:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:120
+#: contents/configuration/ConfigurationContainmentAppearance.qml:125
 #, kde-format
 msgid "Get New Plugins…"
 msgstr "Dobi nove vtičnike…"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:194
+#: contents/configuration/ConfigurationContainmentAppearance.qml:199
 #, kde-format
 msgid "Layout changes must be applied before other changes can be made"
 msgstr ""
 "Dokler ne bodo uveljavljene spremembe razporeditev, ne bo mogoče izvesti "
 "drugih sprememb"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:198
+#: contents/configuration/ConfigurationContainmentAppearance.qml:203
 #, kde-format
 msgid "Apply Now"
 msgstr "Uveljavi zdaj"

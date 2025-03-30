@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-19 00:43+0000\n"
+"POT-Creation-Date: 2025-03-30 00:43+0000\n"
 "PO-Revision-Date: 2010-07-07 15:16+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -46,84 +46,84 @@ msgstr "กรอง"
 msgid "Back"
 msgstr ""
 
-#: package/contents/ui/ConfigFilter.qml:61
+#: package/contents/ui/ConfigFilter.qml:63
 #, fuzzy, kde-format
 #| msgid "File types:"
 msgid "Files:"
 msgstr "ชนิดของแฟ้ม:"
 
-#: package/contents/ui/ConfigFilter.qml:62
+#: package/contents/ui/ConfigFilter.qml:64
 #, fuzzy, kde-format
 #| msgid "Show a place:"
 msgid "Show all"
 msgstr "แสดงสถานที่:"
 
-#: package/contents/ui/ConfigFilter.qml:62
+#: package/contents/ui/ConfigFilter.qml:64
 #, fuzzy, kde-format
 #| msgid "Show Files Matching"
 msgid "Show matching"
 msgstr "แสดงแฟ้มที่เข้าเงื่อนไข"
 
-#: package/contents/ui/ConfigFilter.qml:62
+#: package/contents/ui/ConfigFilter.qml:64
 #, fuzzy, kde-format
 #| msgid "Hide Files Matching"
 msgid "Hide matching"
 msgstr "ซ่อนแฟ้มที่เข้าเงื่อนไข"
 
-#: package/contents/ui/ConfigFilter.qml:67
+#: package/contents/ui/ConfigFilter.qml:69
 #, kde-format
 msgid "File name pattern:"
 msgstr "รูปแบบชื่อแฟ้ม:"
 
-#: package/contents/ui/ConfigFilter.qml:74
+#: package/contents/ui/ConfigFilter.qml:76
 #, kde-format
 msgid "File types:"
 msgstr "ชนิดของแฟ้ม:"
 
-#: package/contents/ui/ConfigFilter.qml:80
+#: package/contents/ui/ConfigFilter.qml:82
 #, fuzzy, kde-format
 #| msgid "Show All Files"
 msgid "Show hidden files:"
 msgstr "แสดงแฟ้มทั้งหมด"
 
-#: package/contents/ui/ConfigFilter.qml:130
+#: package/contents/ui/ConfigFilter.qml:111
 #, fuzzy, kde-format
 #| msgid "File types:"
 msgid "File Type"
 msgstr "ชนิดของแฟ้ม:"
 
-#: package/contents/ui/ConfigFilter.qml:131
+#: package/contents/ui/ConfigFilter.qml:112
 #, kde-format
 msgid "Description"
 msgstr ""
 
-#: package/contents/ui/ConfigFilter.qml:203
+#: package/contents/ui/ConfigFilter.qml:182
 #, kde-format
 msgid "Select All"
 msgstr "เลือกทั้งหมด"
 
-#: package/contents/ui/ConfigFilter.qml:213
+#: package/contents/ui/ConfigFilter.qml:192
 #, kde-format
 msgid "Deselect All"
 msgstr "ยกเลิกเลือกทั้งหมด"
 
-#: package/contents/ui/ConfigFilter.qml:222
+#: package/contents/ui/ConfigFilter.qml:201
 #, kde-format
 msgid "Switch Sort Order"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:64
+#: package/contents/ui/ConfigIcons.qml:65
 #, kde-format
 msgid "Panel button:"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:70
+#: package/contents/ui/ConfigIcons.qml:71
 #, fuzzy, kde-format
 #| msgid "Custom title:"
 msgid "Use a custom icon"
 msgstr "หัวเรื่องกำหนดเอง:"
 
-#: package/contents/ui/ConfigIcons.qml:103
+#: package/contents/ui/ConfigIcons.qml:104
 #, fuzzy, kde-format
 #| msgctxt "@title:menu in Copy To or Move To submenu"
 #| msgid "Browse..."
@@ -131,73 +131,73 @@ msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "เลือก..."
 
-#: package/contents/ui/ConfigIcons.qml:109
+#: package/contents/ui/ConfigIcons.qml:110
 #, fuzzy, kde-format
 #| msgid "Sort Icons"
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "เรียงไอคอน"
 
-#: package/contents/ui/ConfigIcons.qml:129
+#: package/contents/ui/ConfigIcons.qml:130
 #, fuzzy, kde-format
 #| msgid "Arrangement:"
 msgid "Arrangement:"
 msgstr "การจัดเรียง:"
 
-#: package/contents/ui/ConfigIcons.qml:133
+#: package/contents/ui/ConfigIcons.qml:134
 #, fuzzy, kde-format
 #| msgid "Top to Bottom, Left to Right"
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Left to Right"
 msgstr "จากบนลงล่าง, จากซ้ายไปขวา"
 
-#: package/contents/ui/ConfigIcons.qml:134
+#: package/contents/ui/ConfigIcons.qml:135
 #, fuzzy, kde-format
 #| msgid "Top to Bottom, Right to Left"
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Right to Left"
 msgstr "จากบนลงล่าง, จากขวาไปซ้าย"
 
-#: package/contents/ui/ConfigIcons.qml:135
+#: package/contents/ui/ConfigIcons.qml:136
 #, fuzzy, kde-format
 #| msgid "Top to Bottom, Left to Right"
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Top to Bottom"
 msgstr "จากบนลงล่าง, จากซ้ายไปขวา"
 
-#: package/contents/ui/ConfigIcons.qml:144
+#: package/contents/ui/ConfigIcons.qml:145
 #, fuzzy, kde-format
 #| msgid "Align to grid:"
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align left"
 msgstr "เรียงเข้ากับแนวตาราง:"
 
-#: package/contents/ui/ConfigIcons.qml:145
+#: package/contents/ui/ConfigIcons.qml:146
 #, fuzzy, kde-format
 #| msgid "Align to grid:"
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align right"
 msgstr "เรียงเข้ากับแนวตาราง:"
 
-#: package/contents/ui/ConfigIcons.qml:160
+#: package/contents/ui/ConfigIcons.qml:161
 #, fuzzy, kde-format
 #| msgid "Lock in place:"
 msgid "Lock in place"
 msgstr "ล็อคให้อยู่กับที่:"
 
-#: package/contents/ui/ConfigIcons.qml:174
+#: package/contents/ui/ConfigIcons.qml:175
 #, fuzzy, kde-format
 #| msgid "Sorting:"
 msgid "Sorting:"
 msgstr "การเรียงลำดับ:"
 
-#: package/contents/ui/ConfigIcons.qml:182
+#: package/contents/ui/ConfigIcons.qml:183
 #, kde-format
 msgctxt "@item:inlistbox sort icons manually"
 msgid "Manual"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:183
+#: package/contents/ui/ConfigIcons.qml:184
 #, fuzzy, kde-format
 #| msgctxt "Sort icons"
 #| msgid "By Name"
@@ -205,14 +205,14 @@ msgctxt "@item:inlistbox sort icons by name"
 msgid "Name"
 msgstr "ตามชื่อ"
 
-#: package/contents/ui/ConfigIcons.qml:184
+#: package/contents/ui/ConfigIcons.qml:185
 #, fuzzy, kde-format
 #| msgid "Size:"
 msgctxt "@item:inlistbox sort icons by size"
 msgid "Size"
 msgstr "ขนาด:"
 
-#: package/contents/ui/ConfigIcons.qml:185
+#: package/contents/ui/ConfigIcons.qml:186
 #, fuzzy, kde-format
 #| msgctxt "Sort icons"
 #| msgid "By Type"
@@ -220,7 +220,7 @@ msgctxt "@item:inlistbox sort icons by file type"
 msgid "Type"
 msgstr "ตามชนิด"
 
-#: package/contents/ui/ConfigIcons.qml:186
+#: package/contents/ui/ConfigIcons.qml:187
 #, fuzzy, kde-format
 #| msgctxt "Sort icons"
 #| msgid "By Date"
@@ -228,13 +228,13 @@ msgctxt "@item:inlistbox sort icons by date"
 msgid "Date"
 msgstr "ตามวันที่"
 
-#: package/contents/ui/ConfigIcons.qml:197
+#: package/contents/ui/ConfigIcons.qml:198
 #, kde-format
 msgctxt "@option:check sort icons in descending order"
 msgid "Descending"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:205
+#: package/contents/ui/ConfigIcons.qml:206
 #, fuzzy, kde-format
 #| msgctxt "Sort icons"
 #| msgid "Folders First"
@@ -242,187 +242,187 @@ msgctxt "@option:check sort icons with folders first"
 msgid "Folders first"
 msgstr "เรียงโฟลเดอร์ก่อน"
 
-#: package/contents/ui/ConfigIcons.qml:219
+#: package/contents/ui/ConfigIcons.qml:220
 #, kde-format
 msgctxt "whether to use icon or list view"
 msgid "View mode:"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:221
+#: package/contents/ui/ConfigIcons.qml:222
 #, kde-format
 msgctxt "@item:inlistbox show icons in a list"
 msgid "List"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:222
+#: package/contents/ui/ConfigIcons.qml:223
 #, kde-format
 msgctxt "@item:inlistbox show icons in a grid"
 msgid "Grid"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:233
+#: package/contents/ui/ConfigIcons.qml:234
 #, fuzzy, kde-format
 #| msgid "Icon size:"
 msgid "Icon size:"
 msgstr "ขนาดไอคอน:"
 
-#: package/contents/ui/ConfigIcons.qml:248
+#: package/contents/ui/ConfigIcons.qml:249
 #, fuzzy, kde-format
 #| msgid "Small"
 msgctxt "@label:slider smallest icon size"
 msgid "Small"
 msgstr "เล็ก"
 
-#: package/contents/ui/ConfigIcons.qml:257
+#: package/contents/ui/ConfigIcons.qml:258
 #, fuzzy, kde-format
 #| msgid "Large"
 msgctxt "@label:slider largest icon size"
 msgid "Large"
 msgstr "ใหญ่"
 
-#: package/contents/ui/ConfigIcons.qml:266
+#: package/contents/ui/ConfigIcons.qml:267
 #, fuzzy, kde-format
 #| msgid "Label:"
 msgid "Label width:"
 msgstr "ป้ายข้อความ:"
 
-#: package/contents/ui/ConfigIcons.qml:269
+#: package/contents/ui/ConfigIcons.qml:270
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Narrow"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:270
+#: package/contents/ui/ConfigIcons.qml:271
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Medium"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:271
+#: package/contents/ui/ConfigIcons.qml:272
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Wide"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:279
+#: package/contents/ui/ConfigIcons.qml:280
 #, fuzzy, kde-format
 #| msgid " lines"
 msgid "Text lines:"
 msgstr " บรรทัด"
 
-#: package/contents/ui/ConfigIcons.qml:295
+#: package/contents/ui/ConfigIcons.qml:296
 #, kde-format
 msgid "When hovering over icons:"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:297
+#: package/contents/ui/ConfigIcons.qml:298
 #, kde-format
 msgid "Show tooltips"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:304
+#: package/contents/ui/ConfigIcons.qml:305
 #, fuzzy, kde-format
 #| msgid "Select All"
 msgid "Show selection markers"
 msgstr "เลือกทั้งหมด"
 
-#: package/contents/ui/ConfigIcons.qml:311
+#: package/contents/ui/ConfigIcons.qml:312
 #, fuzzy, kde-format
 #| msgid "Previews:"
 msgid "Show folder preview popups"
 msgstr "แสดงตัวอย่าง:"
 
-#: package/contents/ui/ConfigIcons.qml:321
+#: package/contents/ui/ConfigIcons.qml:322
 #, fuzzy, kde-format
 #| msgid "&Rename"
 msgid "Rename:"
 msgstr "เ&ปลี่ยนชื่อ"
 
-#: package/contents/ui/ConfigIcons.qml:325
+#: package/contents/ui/ConfigIcons.qml:326
 #, kde-format
 msgid "Rename inline by clicking selected item's text"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:336
+#: package/contents/ui/ConfigIcons.qml:337
 #, fuzzy, kde-format
 #| msgid "Previews:"
 msgid "Previews:"
 msgstr "แสดงตัวอย่าง:"
 
-#: package/contents/ui/ConfigIcons.qml:338
+#: package/contents/ui/ConfigIcons.qml:339
 #, fuzzy, kde-format
 #| msgid "Previews:"
 msgid "Show preview thumbnails"
 msgstr "แสดงตัวอย่าง:"
 
-#: package/contents/ui/ConfigIcons.qml:346
+#: package/contents/ui/ConfigIcons.qml:347
 #, fuzzy, kde-format
 #| msgid "More Preview Options..."
 msgid "Configure Preview Plugins…"
 msgstr "ตัวเลือกเพิ่มเติมของการแสดงตัวอย่าง..."
 
-#: package/contents/ui/ConfigLocation.qml:80
+#: package/contents/ui/ConfigLocation.qml:81
 #, kde-format
 msgid "Show:"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:82
+#: package/contents/ui/ConfigLocation.qml:83
 #, fuzzy, kde-format
 #| msgid "Show the Desktop folder"
 msgid "Desktop folder"
 msgstr "แสดงโฟลเดอร์พื้นที่ทำงาน"
 
-#: package/contents/ui/ConfigLocation.qml:89
+#: package/contents/ui/ConfigLocation.qml:90
 #, kde-format
 msgid "Files linked to the current activity"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:96
+#: package/contents/ui/ConfigLocation.qml:97
 #, kde-format
 msgid "Places panel item:"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:129
+#: package/contents/ui/ConfigLocation.qml:130
 #, fuzzy, kde-format
 #| msgid "Custom title:"
 msgid "Custom location:"
 msgstr "หัวเรื่องกำหนดเอง:"
 
-#: package/contents/ui/ConfigLocation.qml:137
+#: package/contents/ui/ConfigLocation.qml:138
 #, fuzzy, kde-format
 #| msgid "Type a path or a URL here"
 msgid "Type path or URL…"
 msgstr "ป้อนพาธหรือที่อยู่ URL ที่นี่"
 
-#: package/contents/ui/ConfigLocation.qml:180
+#: package/contents/ui/ConfigLocation.qml:181
 #, fuzzy, kde-format
 #| msgctxt "Music"
 #| msgid "Title:"
 msgid "Title:"
 msgstr "ชื่อเพลง:"
 
-#: package/contents/ui/ConfigLocation.qml:182
+#: package/contents/ui/ConfigLocation.qml:183
 #, kde-format
 msgid "None"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:182
+#: package/contents/ui/ConfigLocation.qml:183
 #, kde-format
 msgid "Default"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:182
+#: package/contents/ui/ConfigLocation.qml:183
 #, kde-format
 msgid "Full path"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:182
+#: package/contents/ui/ConfigLocation.qml:183
 #, fuzzy, kde-format
 #| msgid "Custom title:"
 msgid "Custom title"
 msgstr "หัวเรื่องกำหนดเอง:"
 
-#: package/contents/ui/ConfigLocation.qml:197
+#: package/contents/ui/ConfigLocation.qml:198
 #, fuzzy, kde-format
 #| msgid "Enter a customized title"
 msgid "Enter custom title…"
