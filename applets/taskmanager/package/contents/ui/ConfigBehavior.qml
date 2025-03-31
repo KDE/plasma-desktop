@@ -111,6 +111,8 @@ KCMUtils.SimpleKCM {
             Kirigami.FormData.label: i18nc("@label:listbox sort tasks in grouped task", "Sort:")
             Layout.fillWidth: true
             Layout.minimumWidth: Kirigami.Units.gridUnit * 14
+            textRole: "text"
+            valueRole: "value"
             model: [
                 {
                     "text": i18nc("@item:inlistbox sort tasks in grouped task", "Do not sort"),
