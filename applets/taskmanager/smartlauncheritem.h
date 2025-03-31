@@ -9,14 +9,17 @@
 #include <QObject>
 #include <QUrl>
 #include <QWeakPointer>
+#include <qqmlregistration.h>
 
 #include "smartlauncherbackend.h"
 
 namespace SmartLauncher
 {
+
 class Item : public QObject
 {
     Q_OBJECT
+    QML_NAMED_ELEMENT(SmartLauncherItem)
 
     Q_PROPERTY(QUrl launcherUrl READ launcherUrl WRITE setLauncherUrl NOTIFY launcherUrlChanged)
 

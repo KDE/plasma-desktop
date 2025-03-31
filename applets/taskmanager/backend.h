@@ -12,6 +12,7 @@
 #include <QRect>
 
 #include <netwm.h>
+#include <qqmlregistration.h>
 #include <qwindowdefs.h>
 
 #include "kactivitymanagerd_plugins_settings.h"
@@ -30,6 +31,7 @@ class Consumer;
 class Backend : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
 public:
     enum MiddleClickAction {
