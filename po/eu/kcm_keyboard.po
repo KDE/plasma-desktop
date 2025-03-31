@@ -1,26 +1,26 @@
 # Translation for kcmkeyboard.po to Euskara/Basque (eu).
-# Copyright (C) 2007-2024 This file is copyright:
+# Copyright (C) 2007-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2023, 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
 # marcos <marcos@euskalgnu.org>, 2007.
 # Asier Urio Larrea <asieriko@gmail.com>, 2008.
-# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2010, 2011, 2014, 2018, 2020, 2021, 2024.
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2010, 2011, 2014, 2018, 2020, 2021, 2024, 2025.
 # Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-22 00:43+0000\n"
-"PO-Revision-Date: 2024-10-02 22:50+0200\n"
+"PO-Revision-Date: 2025-03-30 13:38+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 24.12.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #, kde-format
@@ -450,12 +450,10 @@ msgid "Current window only"
 msgstr "Uneko leihoa bakarrik"
 
 #: ui/Switching.qml:74
-#, fuzzy, kde-format
-#| msgctxt "@label:checkbox"
-#| msgid "Show notification on layout change"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Show OSD popup on layout change"
-msgstr "Erakutsi jakinarazpena antolaera aldatzean"
+msgstr "Erakutsi OSD gainerakorra antolaera aldatzean"
 
 #: ui/Switching.qml:86
 #, kde-format

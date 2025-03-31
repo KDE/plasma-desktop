@@ -1,25 +1,25 @@
 # Translation for plasma_applet_org.kde.plasma.windowlist.po to Euskara/Basque (eu).
 # Copyright (C) 2009-2014, Free Software Foundation.
-# Copyright (C) 2015-2022, This file is copyright:
+# Copyright (C) 2015-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # Translators:
 # marcos <marcos@euskalgnu.org>, 2009.
 # Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
-# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2014, 2022.
+# SPDX-FileCopyrightText: 2014, 2022, 2025 Iñigo Salvador Azurmendi <xalba@euskalnet.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_windowlist\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-19 00:43+0000\n"
-"PO-Revision-Date: 2022-07-07 21:40+0200\n"
+"PO-Revision-Date: 2025-03-30 16:22+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 24.12.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: contents/config/config.qml:13
@@ -43,11 +43,10 @@ msgid "Not applicable when the widget is on the Desktop."
 msgstr "Ez da aplikagarria trepeta mahaigainean dagoenean."
 
 #: contents/ui/main.qml:84
-#, fuzzy, kde-format
-#| msgid "No windows"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "No open windows"
-msgstr "Leihorik ez"
+msgstr "Ez dago irekitako leihorik"
 
 #: contents/ui/main.qml:111
 #, kde-format

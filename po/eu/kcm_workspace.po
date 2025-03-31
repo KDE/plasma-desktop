@@ -1,16 +1,16 @@
 # Translation for kcm_workspace.po to Euskara/Basque (eu).
-# Copyright (C) 2018-2024 This file is copyright:
+# Copyright (C) 2018-2025 This file is copyright:
 # This file is distributed under the same license as plasma-desktop package.
-# SPDX-FileCopyrightText: 2023, 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2018, 2019, 2020, 2021, 2022, 2023, 2024.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-18 00:42+0000\n"
-"PO-Revision-Date: 2024-09-30 17:48+0200\n"
+"PO-Revision-Date: 2025-03-30 14:10+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: ui/main.qml:23
 #, kde-format
@@ -38,13 +38,13 @@ msgstr "Berrabiarazi"
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
-msgstr ""
+msgstr "Baimendu Plasmak hauek erakustea:"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr ""
+msgstr "Panelaren eta trepeten tresna-argibideak"
 
 #: ui/main.qml:62
 #, kde-format
@@ -54,14 +54,17 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"Erakuslea gainetik igarotzean, Plasmaren panel eta mahaigaineko trepeta "
+"guztiei tresna-argibide deskribatzaileak erakustea baimentzen die. Ezarpen "
+"honek ez die eragiten, banakako botoien eta interfazeko beste elementu "
+"batzuen gainetik igarotzean erakusten diren tresna-argibide txikiei."
 
 #: ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
-msgstr "Erakutsi leiho gainerakor bat antolaerak aldatzean"
+msgstr "Egoera aldaketetan OSD gainerakorrak"
 
 #: ui/main.qml:80
 #, kde-format
@@ -69,6 +72,9 @@ msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
+"Plasmaren trepeta guztiei, aldaketak ematean, hala nola bolumen edo distira "
+"mailetan, edo audio-gailua trukatzean, pantailan azaltzeko (OSD - on-screen "
+"display) gainerakorrak erakustea baimentzen die."
 
 #: ui/main.qml:92
 #, kde-format
@@ -303,7 +309,7 @@ msgstr "Gaitu erdiko klikarekin hautapena itsastea"
 #: workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display large panel and widget tooltips"
-msgstr ""
+msgstr "Panelen eta trepeten tresna-argibide handiak azaltzea"
 
 #. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:10
@@ -311,26 +317,24 @@ msgstr ""
 msgid ""
 "Allow Plasma widgets to display large panel and widget tooltips on hover"
 msgstr ""
+"Gainetik igarotzean Plamaren trepetek, panel eta trepeten tresna-argibide "
+"handiak azaltzea baimendu"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
-#, fuzzy, kde-format
-#| msgid "Display visual feedback for status changes"
+#, kde-format
 msgid "Display small popups for status changes"
-msgstr "Bistaratu egoera aldaketen ikuste-berrelikadura"
+msgstr "Egoera aldakak ematean gainerakor txikiak azaltzea"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show an on-screen display to indicate status changes such as brightness "
-#| "or volume"
+#, kde-format
 msgid ""
 "Allow Plasma widgets to display small popups for status changes such as "
 "brightness or volume"
 msgstr ""
-"Erakutsi pantailako adierazle bat distira edo bolumena bezalako egoera "
-"aldaketak adierazteko"
+"Plasmaren trepetek, egoera aldaketen aurrean, hala nola distirarena edo "
+"bolumenarena, gainerakor txikiak azaltzea baimendu"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21
