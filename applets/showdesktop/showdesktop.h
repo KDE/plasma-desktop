@@ -7,12 +7,14 @@
 #pragma once
 
 #include <QObject>
+#include <qqmlintegration.h>
 
 #include "kwin_interface.h"
 
 class ShowDesktop : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(bool showingDesktop READ showingDesktop WRITE setShowingDesktop NOTIFY showingDesktopChanged)
 

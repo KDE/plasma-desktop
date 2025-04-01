@@ -2,16 +2,20 @@ plasma_install_package(package org.kde.plasma.showdesktop)
 
 add_definitions(-DTRANSLATION_DOMAIN="plasma_applet_org.kde.plasma.showdesktop")
 
-set(showdesktop_SRCS
-    plugin/showdesktop.cpp
-    plugin/showdesktopplugin.cpp
+ecm_add_qml_module(showdesktopplugin
+    URI org.kde.plasma.private.showdesktop
+    VERSION 0.1
+    GENERATE_PLUGIN_SOURCE
 )
 
-qt_add_dbus_interface(showdesktop_SRCS plugin/org.kde.KWin.xml kwin_interface)
+qt_add_dbus_interface(showdesktop_SRCS org.kde.KWin.xml kwin_interface)
 
-add_library(showdesktopplugin SHARED ${showdesktop_SRCS})
+target_sources(showdesktopplugin PRIVATE
+    showdesktop.cpp
+    ${showdesktop_SRCS}
+)
 
-target_link_libraries(showdesktopplugin
+target_link_libraries(showdesktopplugin PRIVATE
      Qt::Core
      Qt::DBus
      Qt::Qml
@@ -19,5 +23,4 @@ target_link_libraries(showdesktopplugin
      KF6::WindowSystem
     )
 
-install(TARGETS showdesktopplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/showdesktop)
-install(FILES plugin/qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/showdesktop)
+ecm_finalize_qml_module(showdesktopplugin)
