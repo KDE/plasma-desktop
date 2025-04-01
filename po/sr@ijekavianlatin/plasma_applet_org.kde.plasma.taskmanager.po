@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-28 00:43+0000\n"
+"POT-Creation-Date: 2025-04-01 00:43+0000\n"
 "PO-Revision-Date: 2017-04-07 00:51+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -17,6 +17,62 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
+
+#: backend.cpp:283
+#, kde-format
+msgctxt "Show all user Places"
+msgid "%1 more Place"
+msgid_plural "%1 more Places"
+msgstr[0] "Još %1 mesto"
+msgstr[1] "Još %1 mesta"
+msgstr[2] "Još %1 mesta"
+msgstr[3] "Još %1 mesto"
+
+#: backend.cpp:367
+#, fuzzy, kde-format
+#| msgid "Forget Recent Documents"
+msgid "Recent Downloads"
+msgstr "Zaboravi nedavne dokumente"
+
+#: backend.cpp:369
+#, fuzzy, kde-format
+#| msgid "Forget Recent Documents"
+msgid "Recent Connections"
+msgstr "Zaboravi nedavne dokumente"
+
+#: backend.cpp:371
+#, fuzzy, kde-format
+#| msgid "Forget Recent Documents"
+msgid "Recent Places"
+msgstr "Zaboravi nedavne dokumente"
+
+#: backend.cpp:380
+#, fuzzy, kde-format
+#| msgid "Forget Recent Documents"
+msgctxt "@action:inmenu"
+msgid "Forget Recent Downloads"
+msgstr "Zaboravi nedavne dokumente"
+
+#: backend.cpp:382
+#, fuzzy, kde-format
+#| msgid "Forget Recent Documents"
+msgctxt "@action:inmenu"
+msgid "Forget Recent Connections"
+msgstr "Zaboravi nedavne dokumente"
+
+#: backend.cpp:384
+#, fuzzy, kde-format
+#| msgid "Forget Recent Documents"
+msgctxt "@action:inmenu"
+msgid "Forget Recent Places"
+msgstr "Zaboravi nedavne dokumente"
+
+#: backend.cpp:386
+#, fuzzy, kde-format
+#| msgid "Forget Recent Documents"
+msgctxt "@action:inmenu"
+msgid "Forget Recent Files"
+msgstr "Zaboravi nedavne dokumente"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -307,7 +363,7 @@ msgid "Sort:"
 msgstr "Ređanje:"
 
 # >> @item:inlistbox Grouping
-#: package/contents/ui/ConfigBehavior.qml:116
+#: package/contents/ui/ConfigBehavior.qml:118
 #, fuzzy, kde-format
 #| msgid "Do Not Group"
 msgctxt "@item:inlistbox sort tasks in grouped task"
@@ -316,7 +372,7 @@ msgstr "bez grupisanja"
 
 # >> @item:inlistbox Grouping
 # >> @item:inlistbox Sorting
-#: package/contents/ui/ConfigBehavior.qml:120
+#: package/contents/ui/ConfigBehavior.qml:122
 #, fuzzy, kde-format
 #| msgid "Manually"
 msgctxt "@item:inlistbox sort tasks in grouped task"
@@ -324,7 +380,7 @@ msgid "Manually"
 msgstr "ručno"
 
 # >> @item:inlistbox Sorting
-#: package/contents/ui/ConfigBehavior.qml:124
+#: package/contents/ui/ConfigBehavior.qml:126
 #, fuzzy, kde-format
 #| msgid "Alphabetically"
 msgctxt "@item:inlistbox sort tasks in grouped task"
@@ -332,7 +388,7 @@ msgid "Alphabetically"
 msgstr "abecedno"
 
 # >> @item:inlistbox Sorting
-#: package/contents/ui/ConfigBehavior.qml:128
+#: package/contents/ui/ConfigBehavior.qml:130
 #, fuzzy, kde-format
 #| msgid "By Desktop"
 msgctxt "@item:inlistbox sort tasks in grouped task"
@@ -340,34 +396,34 @@ msgid "By desktop"
 msgstr "po površi"
 
 # >> @item:inlistbox Sorting
-#: package/contents/ui/ConfigBehavior.qml:132
+#: package/contents/ui/ConfigBehavior.qml:134
 #, fuzzy, kde-format
 #| msgid "By Activity"
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By activity"
 msgstr "po aktivnosti"
 
-#: package/contents/ui/ConfigBehavior.qml:136
+#: package/contents/ui/ConfigBehavior.qml:138
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By horizontal window position"
 msgstr ""
 
 # >> @option:check
-#: package/contents/ui/ConfigBehavior.qml:145
+#: package/contents/ui/ConfigBehavior.qml:147
 #, fuzzy, kde-format
 #| msgid "Keep launchers separate"
 msgctxt "@option:check configure task sorting"
 msgid "Keep launchers separate"
 msgstr "Drži pokretače razdvojeno"
 
-#: package/contents/ui/ConfigBehavior.qml:152
+#: package/contents/ui/ConfigBehavior.qml:154
 #, kde-format
 msgctxt "@option:check for icons-and-text task manager"
 msgid "Hide launchers after application startup"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:162
+#: package/contents/ui/ConfigBehavior.qml:164
 #, kde-format
 msgctxt ""
 "@label for checkbox Part of a sentence: 'Clicking active task minimizes the "
@@ -375,20 +431,20 @@ msgctxt ""
 msgid "Clicking active task:"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:163
+#: package/contents/ui/ConfigBehavior.qml:165
 #, kde-format
 msgctxt ""
 "@option:check Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:168
+#: package/contents/ui/ConfigBehavior.qml:170
 #, kde-format
 msgctxt "@label:listbox completes sentence like: … does nothing"
 msgid "Middle-clicking any task:"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:172
+#: package/contents/ui/ConfigBehavior.qml:174
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task does nothing'"
@@ -396,7 +452,7 @@ msgid "Does nothing"
 msgstr ""
 
 # >> @item:inlistbox On middle-click:
-#: package/contents/ui/ConfigBehavior.qml:173
+#: package/contents/ui/ConfigBehavior.qml:175
 #, fuzzy, kde-format
 #| msgid "Close Window or Group"
 msgctxt ""
@@ -405,7 +461,7 @@ msgctxt ""
 msgid "Closes window or group"
 msgstr "zatvori prozor ili grupu"
 
-#: package/contents/ui/ConfigBehavior.qml:174
+#: package/contents/ui/ConfigBehavior.qml:176
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task opens a new "
@@ -414,7 +470,7 @@ msgid "Opens a new window"
 msgstr ""
 
 # >> @item:inlistbox On middle-click:
-#: package/contents/ui/ConfigBehavior.qml:175
+#: package/contents/ui/ConfigBehavior.qml:177
 #, fuzzy, kde-format
 #| msgid "Minimize/Restore Window or Group"
 msgctxt ""
@@ -423,7 +479,7 @@ msgctxt ""
 msgid "Minimizes/Restores window or group"
 msgstr "minimizuj/obnovi prozor ili grupu"
 
-#: package/contents/ui/ConfigBehavior.qml:176
+#: package/contents/ui/ConfigBehavior.qml:178
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task toggles "
@@ -432,7 +488,7 @@ msgid "Toggles grouping"
 msgstr ""
 
 # >> @option:check
-#: package/contents/ui/ConfigBehavior.qml:177
+#: package/contents/ui/ConfigBehavior.qml:179
 #, fuzzy, kde-format
 #| msgid "Show only tasks from the current desktop"
 msgctxt ""
@@ -441,28 +497,28 @@ msgctxt ""
 msgid "Brings it to the current virtual desktop"
 msgstr "Samo zadaci na trenutnoj površi"
 
-#: package/contents/ui/ConfigBehavior.qml:187
+#: package/contents/ui/ConfigBehavior.qml:189
 #, kde-format
 msgctxt ""
 "@label for checkbox Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Mouse wheel:"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:188
+#: package/contents/ui/ConfigBehavior.qml:190
 #, fuzzy, kde-format
 #| msgid "Cycle through tasks with mouse wheel"
 msgctxt "@option:check Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
 msgstr "Kruži kroz zadatke na točkić miša"
 
-#: package/contents/ui/ConfigBehavior.qml:195
+#: package/contents/ui/ConfigBehavior.qml:197
 #, kde-format
 msgctxt "@option:check mouse wheel task cycling"
 msgid "Skip minimized tasks"
 msgstr ""
 
 # >> @option:check (checkbox following)
-#: package/contents/ui/ConfigBehavior.qml:205
+#: package/contents/ui/ConfigBehavior.qml:207
 #, fuzzy, kde-format
 #| msgid "Show tooltips"
 msgctxt ""
@@ -471,21 +527,21 @@ msgid "Show only tasks:"
 msgstr "Oblačići"
 
 # >> @option:check
-#: package/contents/ui/ConfigBehavior.qml:206
+#: package/contents/ui/ConfigBehavior.qml:208
 #, fuzzy, kde-format
 #| msgid "Show only tasks from the current screen"
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current screen"
 msgstr "Samo zadaci na trenutnom ekranu"
 
-#: package/contents/ui/ConfigBehavior.qml:211
+#: package/contents/ui/ConfigBehavior.qml:213
 #, fuzzy, kde-format
 #| msgid "Move &To Current Desktop"
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current desktop"
 msgstr "Premesti na &tekuću površ"
 
-#: package/contents/ui/ConfigBehavior.qml:216
+#: package/contents/ui/ConfigBehavior.qml:218
 #, fuzzy, kde-format
 #| msgid "Add To Current Activity"
 msgctxt "@option:check completes sentence: show only tasks"
@@ -493,53 +549,53 @@ msgid "From current activity"
 msgstr "Dodaj u tekuću aktivnost"
 
 # >> @option:check
-#: package/contents/ui/ConfigBehavior.qml:221
+#: package/contents/ui/ConfigBehavior.qml:223
 #, fuzzy, kde-format
 #| msgid "Show only tasks that are minimized"
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "That are minimized"
 msgstr "Samo zadaci koji su minimizovani"
 
-#: package/contents/ui/ConfigBehavior.qml:230
+#: package/contents/ui/ConfigBehavior.qml:232
 #, kde-format
 msgctxt ""
 "@label for checkbox, completes sentence: … unhide if window wants attention"
 msgid "When panel is hidden:"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:231
+#: package/contents/ui/ConfigBehavior.qml:233
 #, kde-format
 msgctxt "@option:check completes sentence: When panel is hidden"
 msgid "Unhide when a window wants attention"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:243
+#: package/contents/ui/ConfigBehavior.qml:245
 #, kde-format
 msgctxt "@label for radiobutton group completes sentence like: … on the bottom"
 msgid "New tasks appear:"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:247
+#: package/contents/ui/ConfigBehavior.qml:249
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the bottom"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:251
-#: package/contents/ui/ConfigBehavior.qml:270
+#: package/contents/ui/ConfigBehavior.qml:253
+#: package/contents/ui/ConfigBehavior.qml:272
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the right"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:253
-#: package/contents/ui/ConfigBehavior.qml:268
+#: package/contents/ui/ConfigBehavior.qml:255
+#: package/contents/ui/ConfigBehavior.qml:270
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the left"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:264
+#: package/contents/ui/ConfigBehavior.qml:266
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the top"
@@ -854,62 +910,6 @@ msgstr "Takođe dostupan u %1|/|Takođe dostupan u $[lok %1]"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "Dostupan u %1|/|Dostupan u $[lok %1]"
-
-#: plugin/backend.cpp:283
-#, kde-format
-msgctxt "Show all user Places"
-msgid "%1 more Place"
-msgid_plural "%1 more Places"
-msgstr[0] "Još %1 mesto"
-msgstr[1] "Još %1 mesta"
-msgstr[2] "Još %1 mesta"
-msgstr[3] "Još %1 mesto"
-
-#: plugin/backend.cpp:367
-#, fuzzy, kde-format
-#| msgid "Forget Recent Documents"
-msgid "Recent Downloads"
-msgstr "Zaboravi nedavne dokumente"
-
-#: plugin/backend.cpp:369
-#, fuzzy, kde-format
-#| msgid "Forget Recent Documents"
-msgid "Recent Connections"
-msgstr "Zaboravi nedavne dokumente"
-
-#: plugin/backend.cpp:371
-#, fuzzy, kde-format
-#| msgid "Forget Recent Documents"
-msgid "Recent Places"
-msgstr "Zaboravi nedavne dokumente"
-
-#: plugin/backend.cpp:380
-#, fuzzy, kde-format
-#| msgid "Forget Recent Documents"
-msgctxt "@action:inmenu"
-msgid "Forget Recent Downloads"
-msgstr "Zaboravi nedavne dokumente"
-
-#: plugin/backend.cpp:382
-#, fuzzy, kde-format
-#| msgid "Forget Recent Documents"
-msgctxt "@action:inmenu"
-msgid "Forget Recent Connections"
-msgstr "Zaboravi nedavne dokumente"
-
-#: plugin/backend.cpp:384
-#, fuzzy, kde-format
-#| msgid "Forget Recent Documents"
-msgctxt "@action:inmenu"
-msgid "Forget Recent Places"
-msgstr "Zaboravi nedavne dokumente"
-
-#: plugin/backend.cpp:386
-#, fuzzy, kde-format
-#| msgid "Forget Recent Documents"
-msgctxt "@action:inmenu"
-msgid "Forget Recent Files"
-msgstr "Zaboravi nedavne dokumente"
 
 #, fuzzy
 #~| msgid "Mark applications that play audio"

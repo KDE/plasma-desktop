@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-28 00:43+0000\n"
+"POT-Creation-Date: 2025-04-01 00:43+0000\n"
 "PO-Revision-Date: 2024-11-19 17:43+0100\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -21,6 +21,53 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.08.3\n"
+
+#: backend.cpp:283
+#, kde-format
+msgctxt "Show all user Places"
+msgid "%1 more Place"
+msgid_plural "%1 more Places"
+msgstr[0] "Ein weiterer Ort"
+msgstr[1] "%1 weitere Orte"
+
+#: backend.cpp:367
+#, kde-format
+msgid "Recent Downloads"
+msgstr "Neueste Downloads"
+
+#: backend.cpp:369
+#, kde-format
+msgid "Recent Connections"
+msgstr "Neueste Verbindungen"
+
+#: backend.cpp:371
+#, kde-format
+msgid "Recent Places"
+msgstr "Zuletzt geöffnete Orte"
+
+#: backend.cpp:380
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Forget Recent Downloads"
+msgstr "Neueste Downloads vergessen"
+
+#: backend.cpp:382
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Forget Recent Connections"
+msgstr "Neueste Verbindungen vergessen"
+
+#: backend.cpp:384
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Forget Recent Places"
+msgstr "Zuletzt geöffnete Orte vergessen"
+
+#: backend.cpp:386
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Forget Recent Files"
+msgstr "Zuletzt geöffnete Dateien vergessen"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -294,55 +341,55 @@ msgctxt "@label:listbox sort tasks in grouped task"
 msgid "Sort:"
 msgstr "Sortieren:"
 
-#: package/contents/ui/ConfigBehavior.qml:116
+#: package/contents/ui/ConfigBehavior.qml:118
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Do not sort"
 msgstr "Nicht sortieren"
 
-#: package/contents/ui/ConfigBehavior.qml:120
+#: package/contents/ui/ConfigBehavior.qml:122
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Manually"
 msgstr "Manuell"
 
-#: package/contents/ui/ConfigBehavior.qml:124
+#: package/contents/ui/ConfigBehavior.qml:126
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Alphabetically"
 msgstr "Alphabetisch"
 
-#: package/contents/ui/ConfigBehavior.qml:128
+#: package/contents/ui/ConfigBehavior.qml:130
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By desktop"
 msgstr "Nach Arbeitsfläche"
 
-#: package/contents/ui/ConfigBehavior.qml:132
+#: package/contents/ui/ConfigBehavior.qml:134
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By activity"
 msgstr "Nach Aktivität"
 
-#: package/contents/ui/ConfigBehavior.qml:136
+#: package/contents/ui/ConfigBehavior.qml:138
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By horizontal window position"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:145
+#: package/contents/ui/ConfigBehavior.qml:147
 #, kde-format
 msgctxt "@option:check configure task sorting"
 msgid "Keep launchers separate"
 msgstr "Starter getrennt halten"
 
-#: package/contents/ui/ConfigBehavior.qml:152
+#: package/contents/ui/ConfigBehavior.qml:154
 #, kde-format
 msgctxt "@option:check for icons-and-text task manager"
 msgid "Hide launchers after application startup"
 msgstr "Starter nach Start der Anwendung ausblenden"
 
-#: package/contents/ui/ConfigBehavior.qml:162
+#: package/contents/ui/ConfigBehavior.qml:164
 #, kde-format
 msgctxt ""
 "@label for checkbox Part of a sentence: 'Clicking active task minimizes the "
@@ -350,27 +397,27 @@ msgctxt ""
 msgid "Clicking active task:"
 msgstr "Beim Anklicken der aktiven Anwendung:"
 
-#: package/contents/ui/ConfigBehavior.qml:163
+#: package/contents/ui/ConfigBehavior.qml:165
 #, kde-format
 msgctxt ""
 "@option:check Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
 msgstr "Die Anwendung minimieren"
 
-#: package/contents/ui/ConfigBehavior.qml:168
+#: package/contents/ui/ConfigBehavior.qml:170
 #, kde-format
 msgctxt "@label:listbox completes sentence like: … does nothing"
 msgid "Middle-clicking any task:"
 msgstr "Bei Mittelklick auf eine Anwendung:"
 
-#: package/contents/ui/ConfigBehavior.qml:172
+#: package/contents/ui/ConfigBehavior.qml:174
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task does nothing'"
 msgid "Does nothing"
 msgstr "Tut nichts"
 
-#: package/contents/ui/ConfigBehavior.qml:173
+#: package/contents/ui/ConfigBehavior.qml:175
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task closes window "
@@ -378,7 +425,7 @@ msgctxt ""
 msgid "Closes window or group"
 msgstr "Schließt Fenster oder Gruppe"
 
-#: package/contents/ui/ConfigBehavior.qml:174
+#: package/contents/ui/ConfigBehavior.qml:176
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task opens a new "
@@ -386,7 +433,7 @@ msgctxt ""
 msgid "Opens a new window"
 msgstr "Öffnet ein neues Fenster"
 
-#: package/contents/ui/ConfigBehavior.qml:175
+#: package/contents/ui/ConfigBehavior.qml:177
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task minimizes/"
@@ -394,7 +441,7 @@ msgctxt ""
 msgid "Minimizes/Restores window or group"
 msgstr "Minimiert/stellt Fenster oder Gruppe wieder her"
 
-#: package/contents/ui/ConfigBehavior.qml:176
+#: package/contents/ui/ConfigBehavior.qml:178
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task toggles "
@@ -402,7 +449,7 @@ msgctxt ""
 msgid "Toggles grouping"
 msgstr "Schaltet Gruppierung um"
 
-#: package/contents/ui/ConfigBehavior.qml:177
+#: package/contents/ui/ConfigBehavior.qml:179
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task brings it to "
@@ -410,96 +457,96 @@ msgctxt ""
 msgid "Brings it to the current virtual desktop"
 msgstr "Verschiebt es auf die aktuelle virtuelle Arbeitsfläche"
 
-#: package/contents/ui/ConfigBehavior.qml:187
+#: package/contents/ui/ConfigBehavior.qml:189
 #, kde-format
 msgctxt ""
 "@label for checkbox Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Mouse wheel:"
 msgstr "Mausrad:"
 
-#: package/contents/ui/ConfigBehavior.qml:188
+#: package/contents/ui/ConfigBehavior.qml:190
 #, kde-format
 msgctxt "@option:check Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
 msgstr "Wechselt zwischen Anwendungen"
 
-#: package/contents/ui/ConfigBehavior.qml:195
+#: package/contents/ui/ConfigBehavior.qml:197
 #, kde-format
 msgctxt "@option:check mouse wheel task cycling"
 msgid "Skip minimized tasks"
 msgstr "Minimierte Anwendungen überspringen"
 
-#: package/contents/ui/ConfigBehavior.qml:205
+#: package/contents/ui/ConfigBehavior.qml:207
 #, kde-format
 msgctxt ""
 "@label for checkbox group, completes sentence like: … from current screen"
 msgid "Show only tasks:"
 msgstr "Nur Anwendungen anzeigen:"
 
-#: package/contents/ui/ConfigBehavior.qml:206
+#: package/contents/ui/ConfigBehavior.qml:208
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current screen"
 msgstr "Vom aktuellen Bildschirm"
 
-#: package/contents/ui/ConfigBehavior.qml:211
+#: package/contents/ui/ConfigBehavior.qml:213
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current desktop"
 msgstr "Von aktueller Arbeitsfläche"
 
-#: package/contents/ui/ConfigBehavior.qml:216
+#: package/contents/ui/ConfigBehavior.qml:218
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current activity"
 msgstr "Von aktueller Aktivität"
 
-#: package/contents/ui/ConfigBehavior.qml:221
+#: package/contents/ui/ConfigBehavior.qml:223
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "That are minimized"
 msgstr "Die minimiert sind"
 
-#: package/contents/ui/ConfigBehavior.qml:230
+#: package/contents/ui/ConfigBehavior.qml:232
 #, kde-format
 msgctxt ""
 "@label for checkbox, completes sentence: … unhide if window wants attention"
 msgid "When panel is hidden:"
 msgstr "Wenn die Kontrollleiste ausgeblendet ist:"
 
-#: package/contents/ui/ConfigBehavior.qml:231
+#: package/contents/ui/ConfigBehavior.qml:233
 #, kde-format
 msgctxt "@option:check completes sentence: When panel is hidden"
 msgid "Unhide when a window wants attention"
 msgstr "Einblenden, wenn ein Fenster Aufmerksamkeit verlangt"
 
-#: package/contents/ui/ConfigBehavior.qml:243
+#: package/contents/ui/ConfigBehavior.qml:245
 #, kde-format
 msgctxt "@label for radiobutton group completes sentence like: … on the bottom"
 msgid "New tasks appear:"
 msgstr "Neue Anwendungen erscheinen:"
 
-#: package/contents/ui/ConfigBehavior.qml:247
+#: package/contents/ui/ConfigBehavior.qml:249
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the bottom"
 msgstr "Unten"
 
-#: package/contents/ui/ConfigBehavior.qml:251
-#: package/contents/ui/ConfigBehavior.qml:270
+#: package/contents/ui/ConfigBehavior.qml:253
+#: package/contents/ui/ConfigBehavior.qml:272
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the right"
 msgstr "An der rechten Seite"
 
-#: package/contents/ui/ConfigBehavior.qml:253
-#: package/contents/ui/ConfigBehavior.qml:268
+#: package/contents/ui/ConfigBehavior.qml:255
+#: package/contents/ui/ConfigBehavior.qml:270
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the left"
 msgstr "An der linken Seite"
 
-#: package/contents/ui/ConfigBehavior.qml:264
+#: package/contents/ui/ConfigBehavior.qml:266
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the top"
@@ -796,53 +843,6 @@ msgstr "Auch verfügbar in %1"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "Verfügbar in %1"
-
-#: plugin/backend.cpp:283
-#, kde-format
-msgctxt "Show all user Places"
-msgid "%1 more Place"
-msgid_plural "%1 more Places"
-msgstr[0] "Ein weiterer Ort"
-msgstr[1] "%1 weitere Orte"
-
-#: plugin/backend.cpp:367
-#, kde-format
-msgid "Recent Downloads"
-msgstr "Neueste Downloads"
-
-#: plugin/backend.cpp:369
-#, kde-format
-msgid "Recent Connections"
-msgstr "Neueste Verbindungen"
-
-#: plugin/backend.cpp:371
-#, kde-format
-msgid "Recent Places"
-msgstr "Zuletzt geöffnete Orte"
-
-#: plugin/backend.cpp:380
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Forget Recent Downloads"
-msgstr "Neueste Downloads vergessen"
-
-#: plugin/backend.cpp:382
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Forget Recent Connections"
-msgstr "Neueste Verbindungen vergessen"
-
-#: plugin/backend.cpp:384
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Forget Recent Places"
-msgstr "Zuletzt geöffnete Orte vergessen"
-
-#: plugin/backend.cpp:386
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Forget Recent Files"
-msgstr "Zuletzt geöffnete Dateien vergessen"
 
 #~ msgctxt "@option:check section General"
 #~ msgid "Use audio indicators to mute tasks"

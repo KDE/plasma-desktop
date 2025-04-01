@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-28 00:43+0000\n"
+"POT-Creation-Date: 2025-04-01 00:43+0000\n"
 "PO-Revision-Date: 2025-03-28 22:26+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -20,6 +20,55 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Lokalize 24.12.2\n"
+
+#: backend.cpp:283
+#, kde-format
+msgctxt "Show all user Places"
+msgid "%1 more Place"
+msgid_plural "%1 more Places"
+msgstr[0] "עוד מקום אחד"
+msgstr[1] "עוד שני מקומות"
+msgstr[2] "עוד %1 מקומות"
+msgstr[3] "עוד %1 מקומות"
+
+#: backend.cpp:367
+#, kde-format
+msgid "Recent Downloads"
+msgstr "הורדות אחרונות"
+
+#: backend.cpp:369
+#, kde-format
+msgid "Recent Connections"
+msgstr "חיבורים אחרונים"
+
+#: backend.cpp:371
+#, kde-format
+msgid "Recent Places"
+msgstr "מקומות אחרונים"
+
+#: backend.cpp:380
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Forget Recent Downloads"
+msgstr "פינוי הורדות אחרונות"
+
+#: backend.cpp:382
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Forget Recent Connections"
+msgstr "פינוי חיבורים אחרונים"
+
+#: backend.cpp:384
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Forget Recent Places"
+msgstr "פינוי מקומות אחרונים"
+
+#: backend.cpp:386
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Forget Recent Files"
+msgstr "פינוי קבצים אחרונים"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -292,55 +341,55 @@ msgctxt "@label:listbox sort tasks in grouped task"
 msgid "Sort:"
 msgstr "מיון:"
 
-#: package/contents/ui/ConfigBehavior.qml:116
+#: package/contents/ui/ConfigBehavior.qml:118
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Do not sort"
 msgstr "לא למיין"
 
-#: package/contents/ui/ConfigBehavior.qml:120
+#: package/contents/ui/ConfigBehavior.qml:122
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Manually"
 msgstr "ידנית"
 
-#: package/contents/ui/ConfigBehavior.qml:124
+#: package/contents/ui/ConfigBehavior.qml:126
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Alphabetically"
 msgstr "לפי האלפבית"
 
-#: package/contents/ui/ConfigBehavior.qml:128
+#: package/contents/ui/ConfigBehavior.qml:130
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By desktop"
 msgstr "לפי שולחן עבודה"
 
-#: package/contents/ui/ConfigBehavior.qml:132
+#: package/contents/ui/ConfigBehavior.qml:134
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By activity"
 msgstr "לפי פעילות"
 
-#: package/contents/ui/ConfigBehavior.qml:136
+#: package/contents/ui/ConfigBehavior.qml:138
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By horizontal window position"
 msgstr "לפי מקום אופקי של חלון"
 
-#: package/contents/ui/ConfigBehavior.qml:145
+#: package/contents/ui/ConfigBehavior.qml:147
 #, kde-format
 msgctxt "@option:check configure task sorting"
 msgid "Keep launchers separate"
 msgstr "שמירה על משגרים מופרדים"
 
-#: package/contents/ui/ConfigBehavior.qml:152
+#: package/contents/ui/ConfigBehavior.qml:154
 #, kde-format
 msgctxt "@option:check for icons-and-text task manager"
 msgid "Hide launchers after application startup"
 msgstr "הסתרת המשגרים לאחר הפעלת היישום"
 
-#: package/contents/ui/ConfigBehavior.qml:162
+#: package/contents/ui/ConfigBehavior.qml:164
 #, kde-format
 msgctxt ""
 "@label for checkbox Part of a sentence: 'Clicking active task minimizes the "
@@ -348,27 +397,27 @@ msgctxt ""
 msgid "Clicking active task:"
 msgstr "לחיצה על משימה פעילה:"
 
-#: package/contents/ui/ConfigBehavior.qml:163
+#: package/contents/ui/ConfigBehavior.qml:165
 #, kde-format
 msgctxt ""
 "@option:check Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
 msgstr "ממזערת את המשימה"
 
-#: package/contents/ui/ConfigBehavior.qml:168
+#: package/contents/ui/ConfigBehavior.qml:170
 #, kde-format
 msgctxt "@label:listbox completes sentence like: … does nothing"
 msgid "Middle-clicking any task:"
 msgstr "לחיצה אמצעית על משימה כלשהי:"
 
-#: package/contents/ui/ConfigBehavior.qml:172
+#: package/contents/ui/ConfigBehavior.qml:174
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task does nothing'"
 msgid "Does nothing"
 msgstr "לא עושה כלום"
 
-#: package/contents/ui/ConfigBehavior.qml:173
+#: package/contents/ui/ConfigBehavior.qml:175
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task closes window "
@@ -376,7 +425,7 @@ msgctxt ""
 msgid "Closes window or group"
 msgstr "סוגרת חלון או קבוצה"
 
-#: package/contents/ui/ConfigBehavior.qml:174
+#: package/contents/ui/ConfigBehavior.qml:176
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task opens a new "
@@ -384,7 +433,7 @@ msgctxt ""
 msgid "Opens a new window"
 msgstr "פותחת חלון חדש"
 
-#: package/contents/ui/ConfigBehavior.qml:175
+#: package/contents/ui/ConfigBehavior.qml:177
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task minimizes/"
@@ -392,7 +441,7 @@ msgctxt ""
 msgid "Minimizes/Restores window or group"
 msgstr "ממזערת/משחזרת חלון או קבוצה"
 
-#: package/contents/ui/ConfigBehavior.qml:176
+#: package/contents/ui/ConfigBehavior.qml:178
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task toggles "
@@ -400,7 +449,7 @@ msgctxt ""
 msgid "Toggles grouping"
 msgstr "מחליפה את הקיבוץ"
 
-#: package/contents/ui/ConfigBehavior.qml:177
+#: package/contents/ui/ConfigBehavior.qml:179
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task brings it to "
@@ -408,96 +457,96 @@ msgctxt ""
 msgid "Brings it to the current virtual desktop"
 msgstr "מקדמת אותה לשולחן העבודה הווירטואלי הנוכחי"
 
-#: package/contents/ui/ConfigBehavior.qml:187
+#: package/contents/ui/ConfigBehavior.qml:189
 #, kde-format
 msgctxt ""
 "@label for checkbox Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Mouse wheel:"
 msgstr "גלגלת עכבר:"
 
-#: package/contents/ui/ConfigBehavior.qml:188
+#: package/contents/ui/ConfigBehavior.qml:190
 #, kde-format
 msgctxt "@option:check Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
 msgstr "עוברת בלולאה בין משימות"
 
-#: package/contents/ui/ConfigBehavior.qml:195
+#: package/contents/ui/ConfigBehavior.qml:197
 #, kde-format
 msgctxt "@option:check mouse wheel task cycling"
 msgid "Skip minimized tasks"
 msgstr "מדלגת על משימות ממוזערות"
 
-#: package/contents/ui/ConfigBehavior.qml:205
+#: package/contents/ui/ConfigBehavior.qml:207
 #, kde-format
 msgctxt ""
 "@label for checkbox group, completes sentence like: … from current screen"
 msgid "Show only tasks:"
 msgstr "הצגת משימות:"
 
-#: package/contents/ui/ConfigBehavior.qml:206
+#: package/contents/ui/ConfigBehavior.qml:208
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current screen"
 msgstr "רק מהמסך הנוכחי"
 
-#: package/contents/ui/ConfigBehavior.qml:211
+#: package/contents/ui/ConfigBehavior.qml:213
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current desktop"
 msgstr "רק משולחן העבודה הנוכחי"
 
-#: package/contents/ui/ConfigBehavior.qml:216
+#: package/contents/ui/ConfigBehavior.qml:218
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current activity"
 msgstr "רק מהפעילות הנוכחית"
 
-#: package/contents/ui/ConfigBehavior.qml:221
+#: package/contents/ui/ConfigBehavior.qml:223
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "That are minimized"
 msgstr "ממוזערות בלבד"
 
-#: package/contents/ui/ConfigBehavior.qml:230
+#: package/contents/ui/ConfigBehavior.qml:232
 #, kde-format
 msgctxt ""
 "@label for checkbox, completes sentence: … unhide if window wants attention"
 msgid "When panel is hidden:"
 msgstr "כאשר הלוח מוסתר:"
 
-#: package/contents/ui/ConfigBehavior.qml:231
+#: package/contents/ui/ConfigBehavior.qml:233
 #, kde-format
 msgctxt "@option:check completes sentence: When panel is hidden"
 msgid "Unhide when a window wants attention"
 msgstr "לבטל את ההסתרה כאשר חלון צריך תשומת לב"
 
-#: package/contents/ui/ConfigBehavior.qml:243
+#: package/contents/ui/ConfigBehavior.qml:245
 #, kde-format
 msgctxt "@label for radiobutton group completes sentence like: … on the bottom"
 msgid "New tasks appear:"
 msgstr "משימות חדשות מופיעות:"
 
-#: package/contents/ui/ConfigBehavior.qml:247
+#: package/contents/ui/ConfigBehavior.qml:249
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the bottom"
 msgstr "למטה"
 
-#: package/contents/ui/ConfigBehavior.qml:251
-#: package/contents/ui/ConfigBehavior.qml:270
+#: package/contents/ui/ConfigBehavior.qml:253
+#: package/contents/ui/ConfigBehavior.qml:272
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the right"
 msgstr "מימין"
 
-#: package/contents/ui/ConfigBehavior.qml:253
-#: package/contents/ui/ConfigBehavior.qml:268
+#: package/contents/ui/ConfigBehavior.qml:255
+#: package/contents/ui/ConfigBehavior.qml:270
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the left"
 msgstr "משמאל"
 
-#: package/contents/ui/ConfigBehavior.qml:264
+#: package/contents/ui/ConfigBehavior.qml:266
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the top"
@@ -796,55 +845,6 @@ msgstr "זמין גם ב־%1"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "זמין ב־%1"
-
-#: plugin/backend.cpp:283
-#, kde-format
-msgctxt "Show all user Places"
-msgid "%1 more Place"
-msgid_plural "%1 more Places"
-msgstr[0] "עוד מקום אחד"
-msgstr[1] "עוד שני מקומות"
-msgstr[2] "עוד %1 מקומות"
-msgstr[3] "עוד %1 מקומות"
-
-#: plugin/backend.cpp:367
-#, kde-format
-msgid "Recent Downloads"
-msgstr "הורדות אחרונות"
-
-#: plugin/backend.cpp:369
-#, kde-format
-msgid "Recent Connections"
-msgstr "חיבורים אחרונים"
-
-#: plugin/backend.cpp:371
-#, kde-format
-msgid "Recent Places"
-msgstr "מקומות אחרונים"
-
-#: plugin/backend.cpp:380
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Forget Recent Downloads"
-msgstr "פינוי הורדות אחרונות"
-
-#: plugin/backend.cpp:382
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Forget Recent Connections"
-msgstr "פינוי חיבורים אחרונים"
-
-#: plugin/backend.cpp:384
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Forget Recent Places"
-msgstr "פינוי מקומות אחרונים"
-
-#: plugin/backend.cpp:386
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Forget Recent Files"
-msgstr "פינוי קבצים אחרונים"
 
 #~ msgctxt "@option:check section General"
 #~ msgid "Use audio indicators to mute tasks"

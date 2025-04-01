@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-28 00:43+0000\n"
+"POT-Creation-Date: 2025-04-01 00:43+0000\n"
 "PO-Revision-Date: 2024-12-01 15:00+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -17,6 +17,53 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 23.08.5\n"
+
+#: backend.cpp:283
+#, kde-format
+msgctxt "Show all user Places"
+msgid "%1 more Place"
+msgid_plural "%1 more Places"
+msgstr[0] "Vielä %1 kohde"
+msgstr[1] "Vielä %1 kohdetta"
+
+#: backend.cpp:367
+#, kde-format
+msgid "Recent Downloads"
+msgstr "Viimeisimmät lataukset"
+
+#: backend.cpp:369
+#, kde-format
+msgid "Recent Connections"
+msgstr "Viimeisimmät yhteydet"
+
+#: backend.cpp:371
+#, kde-format
+msgid "Recent Places"
+msgstr "Viimeisimmät sijainnit"
+
+#: backend.cpp:380
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Forget Recent Downloads"
+msgstr "Unohda viimeisimmät lataukset"
+
+#: backend.cpp:382
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Forget Recent Connections"
+msgstr "Unohda viimeisimmät yhteydet"
+
+#: backend.cpp:384
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Forget Recent Places"
+msgstr "Unohda viimeisimmät sijainnit"
+
+#: backend.cpp:386
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Forget Recent Files"
+msgstr "Unohda viimeisimmät tiedostot"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -291,55 +338,55 @@ msgctxt "@label:listbox sort tasks in grouped task"
 msgid "Sort:"
 msgstr "Lajittelu:"
 
-#: package/contents/ui/ConfigBehavior.qml:116
+#: package/contents/ui/ConfigBehavior.qml:118
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Do not sort"
 msgstr "Älä lajittele"
 
-#: package/contents/ui/ConfigBehavior.qml:120
+#: package/contents/ui/ConfigBehavior.qml:122
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Manually"
 msgstr "Käsin"
 
-#: package/contents/ui/ConfigBehavior.qml:124
+#: package/contents/ui/ConfigBehavior.qml:126
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Alphabetically"
 msgstr "Aakkosta"
 
-#: package/contents/ui/ConfigBehavior.qml:128
+#: package/contents/ui/ConfigBehavior.qml:130
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By desktop"
 msgstr "Työpöydittäin"
 
-#: package/contents/ui/ConfigBehavior.qml:132
+#: package/contents/ui/ConfigBehavior.qml:134
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By activity"
 msgstr "Aktiviteeteittain"
 
-#: package/contents/ui/ConfigBehavior.qml:136
+#: package/contents/ui/ConfigBehavior.qml:138
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By horizontal window position"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:145
+#: package/contents/ui/ConfigBehavior.qml:147
 #, kde-format
 msgctxt "@option:check configure task sorting"
 msgid "Keep launchers separate"
 msgstr "Erota käynnistimet"
 
-#: package/contents/ui/ConfigBehavior.qml:152
+#: package/contents/ui/ConfigBehavior.qml:154
 #, kde-format
 msgctxt "@option:check for icons-and-text task manager"
 msgid "Hide launchers after application startup"
 msgstr "Piilota käynnistimet sovelluksen käynnistyttyä"
 
-#: package/contents/ui/ConfigBehavior.qml:162
+#: package/contents/ui/ConfigBehavior.qml:164
 #, kde-format
 msgctxt ""
 "@label for checkbox Part of a sentence: 'Clicking active task minimizes the "
@@ -347,27 +394,27 @@ msgctxt ""
 msgid "Clicking active task:"
 msgstr "Aktiivisen tehtävän napsautus:"
 
-#: package/contents/ui/ConfigBehavior.qml:163
+#: package/contents/ui/ConfigBehavior.qml:165
 #, kde-format
 msgctxt ""
 "@option:check Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
 msgstr "pienentää tehtävän"
 
-#: package/contents/ui/ConfigBehavior.qml:168
+#: package/contents/ui/ConfigBehavior.qml:170
 #, kde-format
 msgctxt "@label:listbox completes sentence like: … does nothing"
 msgid "Middle-clicking any task:"
 msgstr "Tehtävän napsautus hiiren keskipainikkeella:"
 
-#: package/contents/ui/ConfigBehavior.qml:172
+#: package/contents/ui/ConfigBehavior.qml:174
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task does nothing'"
 msgid "Does nothing"
 msgstr "ei tee mitään"
 
-#: package/contents/ui/ConfigBehavior.qml:173
+#: package/contents/ui/ConfigBehavior.qml:175
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task closes window "
@@ -375,7 +422,7 @@ msgctxt ""
 msgid "Closes window or group"
 msgstr "sulkee ikkunan tai ryhmän"
 
-#: package/contents/ui/ConfigBehavior.qml:174
+#: package/contents/ui/ConfigBehavior.qml:176
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task opens a new "
@@ -383,7 +430,7 @@ msgctxt ""
 msgid "Opens a new window"
 msgstr "avaa uuden ikkunan"
 
-#: package/contents/ui/ConfigBehavior.qml:175
+#: package/contents/ui/ConfigBehavior.qml:177
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task minimizes/"
@@ -391,7 +438,7 @@ msgctxt ""
 msgid "Minimizes/Restores window or group"
 msgstr "pienentää tai palauttaa ikkunan tai ryhmän"
 
-#: package/contents/ui/ConfigBehavior.qml:176
+#: package/contents/ui/ConfigBehavior.qml:178
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task toggles "
@@ -399,7 +446,7 @@ msgctxt ""
 msgid "Toggles grouping"
 msgstr "vaihtaa ryhmitystilaa"
 
-#: package/contents/ui/ConfigBehavior.qml:177
+#: package/contents/ui/ConfigBehavior.qml:179
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task brings it to "
@@ -407,96 +454,96 @@ msgctxt ""
 msgid "Brings it to the current virtual desktop"
 msgstr "tuo sen nykyiselle virtuaalityöpöydälle"
 
-#: package/contents/ui/ConfigBehavior.qml:187
+#: package/contents/ui/ConfigBehavior.qml:189
 #, kde-format
 msgctxt ""
 "@label for checkbox Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Mouse wheel:"
 msgstr "Hiiren rulla:"
 
-#: package/contents/ui/ConfigBehavior.qml:188
+#: package/contents/ui/ConfigBehavior.qml:190
 #, kde-format
 msgctxt "@option:check Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
 msgstr "vaihtaa tehtävien välillä"
 
-#: package/contents/ui/ConfigBehavior.qml:195
+#: package/contents/ui/ConfigBehavior.qml:197
 #, kde-format
 msgctxt "@option:check mouse wheel task cycling"
 msgid "Skip minimized tasks"
 msgstr "Sivuuta pienennetyt tehtävät"
 
-#: package/contents/ui/ConfigBehavior.qml:205
+#: package/contents/ui/ConfigBehavior.qml:207
 #, kde-format
 msgctxt ""
 "@label for checkbox group, completes sentence like: … from current screen"
 msgid "Show only tasks:"
 msgstr "Näytä tehtävät vain:"
 
-#: package/contents/ui/ConfigBehavior.qml:206
+#: package/contents/ui/ConfigBehavior.qml:208
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current screen"
 msgstr "Nykyiseltä näytöltä"
 
-#: package/contents/ui/ConfigBehavior.qml:211
+#: package/contents/ui/ConfigBehavior.qml:213
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current desktop"
 msgstr "Nykyiseltä työpöydältä"
 
-#: package/contents/ui/ConfigBehavior.qml:216
+#: package/contents/ui/ConfigBehavior.qml:218
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current activity"
 msgstr "Nykyisestä aktiviteetista"
 
-#: package/contents/ui/ConfigBehavior.qml:221
+#: package/contents/ui/ConfigBehavior.qml:223
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "That are minimized"
 msgstr "Pienennetyt tehtävät"
 
-#: package/contents/ui/ConfigBehavior.qml:230
+#: package/contents/ui/ConfigBehavior.qml:232
 #, kde-format
 msgctxt ""
 "@label for checkbox, completes sentence: … unhide if window wants attention"
 msgid "When panel is hidden:"
 msgstr "Paneelin ollessa piilossa:"
 
-#: package/contents/ui/ConfigBehavior.qml:231
+#: package/contents/ui/ConfigBehavior.qml:233
 #, kde-format
 msgctxt "@option:check completes sentence: When panel is hidden"
 msgid "Unhide when a window wants attention"
 msgstr "Näytä, kun ikkuna vaatii huomiota"
 
-#: package/contents/ui/ConfigBehavior.qml:243
+#: package/contents/ui/ConfigBehavior.qml:245
 #, kde-format
 msgctxt "@label for radiobutton group completes sentence like: … on the bottom"
 msgid "New tasks appear:"
 msgstr "Uudet tehtävät ilmestyvät:"
 
-#: package/contents/ui/ConfigBehavior.qml:247
+#: package/contents/ui/ConfigBehavior.qml:249
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the bottom"
 msgstr "alas"
 
-#: package/contents/ui/ConfigBehavior.qml:251
-#: package/contents/ui/ConfigBehavior.qml:270
+#: package/contents/ui/ConfigBehavior.qml:253
+#: package/contents/ui/ConfigBehavior.qml:272
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the right"
 msgstr "oikealle"
 
-#: package/contents/ui/ConfigBehavior.qml:253
-#: package/contents/ui/ConfigBehavior.qml:268
+#: package/contents/ui/ConfigBehavior.qml:255
+#: package/contents/ui/ConfigBehavior.qml:270
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the left"
 msgstr "vasemmalle"
 
-#: package/contents/ui/ConfigBehavior.qml:264
+#: package/contents/ui/ConfigBehavior.qml:266
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the top"
@@ -795,53 +842,6 @@ msgstr "Käytettävissä myös aktiviteetissa %1"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "Käytettävissä aktiviteetissa %1"
-
-#: plugin/backend.cpp:283
-#, kde-format
-msgctxt "Show all user Places"
-msgid "%1 more Place"
-msgid_plural "%1 more Places"
-msgstr[0] "Vielä %1 kohde"
-msgstr[1] "Vielä %1 kohdetta"
-
-#: plugin/backend.cpp:367
-#, kde-format
-msgid "Recent Downloads"
-msgstr "Viimeisimmät lataukset"
-
-#: plugin/backend.cpp:369
-#, kde-format
-msgid "Recent Connections"
-msgstr "Viimeisimmät yhteydet"
-
-#: plugin/backend.cpp:371
-#, kde-format
-msgid "Recent Places"
-msgstr "Viimeisimmät sijainnit"
-
-#: plugin/backend.cpp:380
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Forget Recent Downloads"
-msgstr "Unohda viimeisimmät lataukset"
-
-#: plugin/backend.cpp:382
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Forget Recent Connections"
-msgstr "Unohda viimeisimmät yhteydet"
-
-#: plugin/backend.cpp:384
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Forget Recent Places"
-msgstr "Unohda viimeisimmät sijainnit"
-
-#: plugin/backend.cpp:386
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Forget Recent Files"
-msgstr "Unohda viimeisimmät tiedostot"
 
 #~ msgctxt "@option:check section General"
 #~ msgid "Use audio indicators to mute tasks"
