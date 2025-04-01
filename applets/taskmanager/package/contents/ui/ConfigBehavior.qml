@@ -21,7 +21,7 @@ KCMUtils.SimpleKCM {
     property alias cfg_groupedTaskVisualization: groupedTaskVisualization.currentIndex
     property alias cfg_groupPopups: groupPopups.checked
     property alias cfg_onlyGroupWhenFull: onlyGroupWhenFull.checked
-    property alias cfg_sortingStrategy: sortingStrategy.currentValue
+    property int cfg_sortingStrategy
     property alias cfg_separateLaunchers: separateLaunchers.checked
     property alias cfg_hideLauncherOnStart: hideLauncherOnStart.checked
     property alias cfg_middleClickAction: middleClickAction.currentIndex
@@ -139,6 +139,8 @@ KCMUtils.SimpleKCM {
                     "value": TaskManager.TasksModel.SortWindowPositionHorizontal,
                 },
             ]
+            onActivated: cfg_sortingStrategy = currentValue
+            Component.onCompleted: currentIndex = indexOfValue(cfg_sortingStrategy)
         }
 
         QQC2.CheckBox {
