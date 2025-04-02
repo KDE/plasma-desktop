@@ -1,10 +1,10 @@
-# SPDX-FileCopyrightText: 2023, 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-27 00:43+0000\n"
-"PO-Revision-Date: 2024-03-06 17:00+0900\n"
+"PO-Revision-Date: 2025-03-30 19:12+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -14,17 +14,16 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: inputsequence.cpp:172
 #, kde-format
 msgctxt "@action:button This action is disabled"
 msgid "Disabled"
-msgstr ""
+msgstr "無効"
 
 #: inputsequence.cpp:175
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "@action:button There is no keybinding"
 msgid "None"
 msgstr "なし"
@@ -33,37 +32,36 @@ msgstr "なし"
 #, kde-format
 msgctxt "@action:button"
 msgid "Left mouse button"
-msgstr ""
+msgstr "左マウスボタン"
 
 #: inputsequence.cpp:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Right mouse button"
-msgstr ""
+msgstr "右マウスボタン"
 
 #: inputsequence.cpp:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Middle mouse button"
-msgstr ""
+msgstr "中央マウスボタン"
 
 #: inputsequence.cpp:192
 #, kde-format
 msgctxt "@action:button"
 msgid "Application-defined"
-msgstr ""
+msgstr "アプリケーションによる定義"
 
 #: inputsequence.cpp:194
-#, fuzzy, kde-format
-#| msgid "Pen Button 1"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pen Button %1"
-msgstr "ペンボタン 1"
+msgstr "ペンボタン %1"
 
 #: kcmtablet.cpp:35
 #, kde-format
 msgid "Default"
-msgstr ""
+msgstr "デフォルト"
 
 #: kcmtablet.cpp:36
 #, kde-format
@@ -86,15 +84,14 @@ msgid "Inverted Landscape"
 msgstr "横 (反転)"
 
 #: kcmtablet.cpp:89
-#, fuzzy, kde-format
-#| msgid "Follow the active screen"
+#, kde-format
 msgid "Follow the Current Screen"
-msgstr "アクティブなスクリーンに従う"
+msgstr "現在のスクリーンに従う"
 
 #: kcmtablet.cpp:94
 #, kde-format
 msgid "All Screens"
-msgstr ""
+msgstr "すべてのスクリーン"
 
 #: kcmtablet.cpp:103
 #, kde-format
@@ -106,78 +103,75 @@ msgstr "%1 - (%2,%3 %4×%5)"
 #, kde-format
 msgctxt "@item:inlistbox Stretch and fill to the screen"
 msgid "Stretch and Fill"
-msgstr ""
+msgstr "引き伸ばして埋める"
 
 #: kcmtablet.cpp:164 ui/DisplayTab.qml:93
 #, kde-format
 msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
 msgid "Keep Aspect Ratio and Fit"
-msgstr ""
+msgstr "アスペクト比を保って画面に合わせる"
 
 #: kcmtablet.cpp:165 ui/DisplayTab.qml:94
 #, kde-format
 msgctxt "@item:inlistbox Map to portion of the screen"
 msgid "Map to Portion"
-msgstr ""
+msgstr "部分的に割り当て"
 
 #: kcmtablet.cpp:263
-#, fuzzy, kde-format
-#| msgid "Pen Button 1"
+#, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
-msgstr "ペンボタン 1"
+msgstr "ペンボタン %1:"
 
 #: kcmtablet.cpp:264
-#, fuzzy, kde-format
-#| msgid "Pen Button 1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button X'"
 msgid "pen button %1"
-msgstr "ペンボタン 1"
+msgstr "ペンボタン %1"
 
 #: ui/ActionDialog.qml:25
 #, kde-format
 msgctxt "@title Select the action for the tablet button"
 msgid "Select Button Action"
-msgstr ""
+msgstr "ボタンアクションを選択"
 
 #: ui/ActionDialog.qml:74
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when pressing %1:"
-msgstr ""
+msgstr "%1 を押した際に実行されるアクションを選択してください:"
 
 #: ui/ActionDialog.qml:88
 #, kde-format
 msgctxt "@option:radio Set this action to an application-defined type"
 msgid "Defer to application"
-msgstr ""
+msgstr "アプリケーションの設定に従う"
 
 #: ui/ActionDialog.qml:103
 #, kde-format
 msgctxt "@option:radio Set this action to a keyboard type"
 msgid "Send keyboard key"
-msgstr ""
+msgstr "キーボードキー入力を送信"
 
 #: ui/ActionDialog.qml:117
 #, kde-format
 msgctxt "@option:radio Set this action to a mouse type"
 msgid "Send mouse button click"
-msgstr ""
+msgstr "マウスボタンのクリックを送信"
 
 #: ui/ActionDialog.qml:132
-#, fuzzy, kde-format
-#| msgid "Pen Button 1"
+#, kde-format
 msgctxt "@option:radio Set this action to a pen button type"
 msgid "Send pen button"
-msgstr "ペンボタン 1"
+msgstr "ペンボタン入力を送信"
 
 #: ui/ActionDialog.qml:150
 #, kde-format
 msgctxt "@option:radio Disable this action"
 msgid "Do nothing"
-msgstr ""
+msgstr "何もしない"
 
 #: ui/ActionDialog.qml:170
 #, kde-format
@@ -186,81 +180,80 @@ msgid ""
 "This tablet button is forwarded to the focused application, which can decide "
 "how to handle it."
 msgstr ""
+"このタブレットボタンの動作は、フォーカスされたアプリケーションによって決定さ"
+"れます。"
 
 #: ui/ActionDialog.qml:198
 #, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left-click"
-msgstr ""
+msgstr "左クリック"
 
 #: ui/ActionDialog.qml:199
 #, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle-click"
-msgstr ""
+msgstr "中クリック"
 
 #: ui/ActionDialog.qml:200
 #, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right-click"
-msgstr ""
+msgstr "右クリック"
 
 #: ui/ActionDialog.qml:227
 #, kde-format
 msgctxt "@option:check The ctrl modifier on the keyboard"
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 #: ui/ActionDialog.qml:234
 #, kde-format
 msgctxt "@option:check The alt modifier on the keyboard"
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: ui/ActionDialog.qml:241
 #, kde-format
 msgctxt "@option:check The meta modifier on the keyboard"
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: ui/ActionDialog.qml:248
 #, kde-format
 msgctxt "@option:check The shift modifier on the keyboard"
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 #: ui/ActionDialog.qml:264
-#, fuzzy, kde-format
-#| msgid "Pen Button 1"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
-msgstr "ペンボタン 1"
+msgstr "ボタン 1"
 
 #: ui/ActionDialog.qml:265
-#, fuzzy, kde-format
-#| msgid "Pen Button 2"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
-msgstr "ペンボタン 2"
+msgstr "ボタン 2"
 
 #: ui/ActionDialog.qml:266
-#, fuzzy, kde-format
-#| msgid "Pen Button 3"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
-msgstr "ペンボタン 3"
+msgstr "ボタン 3"
 
 #: ui/ActionDialog.qml:275
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
-msgstr ""
+msgstr "このボタンは無効化されているため、押されても何も行いません。"
 
 #: ui/Calibration.qml:31
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
-msgstr ""
+msgstr "ペン補正"
 
 #: ui/Calibration.qml:90
 #, kde-kuit-format
@@ -269,6 +262,8 @@ msgid ""
 "Calibration is completed and saved.<nl/><nl/>Refine the calibration further "
 "or close the window."
 msgstr ""
+"補正は完了し、保存されました。<nl/><nl/>補正を改良するかウィンドウを閉じてく"
+"ださい。"
 
 #: ui/Calibration.qml:91
 #, kde-kuit-format
@@ -277,35 +272,37 @@ msgid ""
 "Tap the center of each target.<nl/><nl/>Aim for the point where the stylus "
 "tip lands, and ignore the cursor position on the screen."
 msgstr ""
+"それぞれのターゲットの中心をタップしてください。<nl/><nl/>スタイラスの芯が着"
+"く点を狙い、画面上のカーソルの位置は無視してください。"
 
 #: ui/Calibration.qml:97
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
-msgstr ""
+msgstr "既存の補正を改善"
 
 #: ui/Calibration.qml:106
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
-msgstr ""
+msgstr "新しく補正"
 
 #: ui/Calibration.qml:120
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "閉じる"
 
 #: ui/Calibration.qml:120
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "キャンセル"
 
 #: ui/DisplayTab.qml:41
 #, kde-format
 msgid "Map to screen:"
-msgstr ""
+msgstr "画面に割り当て:"
 
 #: ui/DisplayTab.qml:67
 #, kde-format
@@ -315,12 +312,12 @@ msgstr "向き:"
 #: ui/DisplayTab.qml:73
 #, kde-format
 msgid "Not Applicable"
-msgstr ""
+msgstr "適用できません"
 
 #: ui/DisplayTab.qml:87
 #, kde-format
 msgid "Mapped Area:"
-msgstr ""
+msgstr "割り当てられた領域:"
 
 #: ui/ExternalScreenMapping.qml:110
 #, kde-format
@@ -335,22 +332,18 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
 #: ui/ExternalScreenMapping.qml:190
-#, fuzzy, kde-format
-#| msgid "Resize the tablet area"
+#, kde-format
 msgid "Resize the screen area"
-msgstr "タブレットエリアのサイズを変更"
+msgstr "画面エリアのサイズを変更"
 
 #: ui/ExternalScreenMapping.qml:265
-#, fuzzy, kde-format
-#| msgctxt "tablet area position - size"
-#| msgid "%1,%2 - %3×%4"
+#, kde-format
 msgctxt "tablet area position - size"
 msgid "%1%,%2% - %3%×%4%"
-msgstr "%1,%2 - %3×%4"
+msgstr "%1%,%2% - %3%×%4%"
 
 #: ui/ExternalScreenMapping.qml:299
-#, fuzzy, kde-format
-#| msgid "Resize the tablet area"
+#, kde-format
 msgid "Resize the tablet area"
 msgstr "タブレットエリアのサイズを変更"
 
@@ -368,7 +361,7 @@ msgstr "お絵描きタブレットを接続してください"
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr ""
+msgstr "タブレットをテスト..."
 
 #: ui/main.qml:97
 #, kde-format
@@ -380,40 +373,35 @@ msgstr "デバイス:"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
-msgstr ""
+msgstr "ディスプレイ"
 
 #: ui/main.qml:169
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
-msgstr ""
+msgstr "ペン"
 
 #: ui/main.qml:181
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The pad we are configuring"
-#| msgid "Pad:"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
-msgstr "パッド:"
+msgstr "パッド"
 
 #: ui/PadTab.qml:33
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgid "Pad button %1:"
-msgstr "ボタン %1:"
+msgstr "ペンボタン %1:"
 
 #: ui/PadTab.qml:36
-#, fuzzy, kde-format
-#| msgid "Button %1:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad button %1"
-msgstr "ボタン %1:"
+msgstr "パッドボタン %1"
 
 #: ui/StylusTab.qml:31
-#, fuzzy, kde-format
-#| msgid "Left-handed mode:"
+#, kde-format
 msgid "Left-handed mode:"
 msgstr "左手モード:"
 
@@ -421,7 +409,7 @@ msgstr "左手モード:"
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
-msgstr ""
+msgstr "有効化"
 
 #: ui/StylusTab.qml:43
 #, kde-kuit-format
@@ -431,35 +419,38 @@ msgid ""
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
+"デバイスに左利きのユーザ向けの設定を使用するよう指示します。デバイスによって"
+"効果は異なりますが、タブレットを上下逆にして使えるようパッドボタンの機能を反"
+"転させることが多いです。"
 
 #: ui/StylusTab.qml:102
 #, kde-format
 msgid "Pen Pressure:"
-msgstr ""
+msgstr "筆圧:"
 
 #: ui/StylusTab.qml:162
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:170
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:181
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: ui/StylusTab.qml:189
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
-msgstr ""
+msgstr "0%"
 
 #: ui/StylusTab.qml:193
 #, kde-format
@@ -487,40 +478,40 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
-msgstr ""
+msgstr "補正中です"
 
 #: ui/StylusTab.qml:239
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
-msgstr ""
+msgstr "補正"
 
 #: ui/StylusTab.qml:242
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
-msgstr ""
+msgstr "補正はサポートされていません"
 
 #: ui/Tester.qml:25
 #, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
-msgstr ""
+msgstr "タブレットテスター"
 
 #: ui/Tester.qml:48
 #, kde-format
 msgid "Stylus press X=%1 Y=%2"
-msgstr ""
+msgstr "スタイラスの加圧 X=%1 Y=%2"
 
 #: ui/Tester.qml:58
 #, kde-format
 msgid "Stylus release X=%1 Y=%2"
-msgstr ""
+msgstr "スタイラスの減圧 X=%1 Y=%2"
 
 #: ui/Tester.qml:68
 #, kde-format
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
-msgstr ""
+msgstr "スタイラスの移動 X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
 #: ui/Tester.qml:205
 #, kde-format
@@ -530,40 +521,13 @@ msgid ""
 "# P - pressure\n"
 "# TX,TY - tilt\n"
 msgstr ""
+"## 凡例:\n"
+"# X, Y - 座標\n"
+"# P - 圧力\n"
+"# TX,TY - 傾き\n"
 
 #: ui/Tester.qml:211
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"
-msgstr ""
-
-#~ msgid "None"
-#~ msgstr "なし"
-
-#, fuzzy
-#~| msgid "Pen Button 2"
-#~ msgid "Pen button 2:"
-#~ msgstr "ペンボタン 2"
-
-#, fuzzy
-#~| msgid "Pen Button 3"
-#~ msgid "Pen button 3:"
-#~ msgstr "ペンボタン 3"
-
-#~ msgid "Primary (default)"
-#~ msgstr "プライマリ (デフォルト)"
-
-#~ msgid "Fit to Output"
-#~ msgstr "出力に合わせる"
-
-#~ msgid "Fit Output in tablet"
-#~ msgstr "タブレットに合わせる"
-
-#~ msgid "Custom size"
-#~ msgstr "指定されたサイズ"
-
-#~ msgid "Target display:"
-#~ msgstr "使用するディスプレイ:"
-
-#~ msgid "Area:"
-#~ msgstr "エリア:"
+msgstr "消去"
