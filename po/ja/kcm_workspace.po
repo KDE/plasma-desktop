@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2023, 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019, 2020.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2021.
 msgid ""
@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-17 00:51+0000\n"
-"PO-Revision-Date: 2024-09-12 22:38+0900\n"
+"PO-Revision-Date: 2025-03-30 19:13+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: package/contents/ui/main.qml:27
 #, kde-format
@@ -98,7 +98,7 @@ msgstr "ダブルクリックして開く"
 #: package/contents/ui/main.qml:175
 #, kde-format
 msgid "Clicking in scrollbar track:"
-msgstr "スクロールエリアをクリックした際の挙動:"
+msgstr "スクロールバーをクリックした際の挙動:"
 
 #: package/contents/ui/main.qml:176
 #, kde-format
@@ -140,7 +140,7 @@ msgstr "タッチモード:"
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
-msgstr "必要なとき自動的に有効化する"
+msgstr "必要なとき自動的に有効化"
 
 #: package/contents/ui/main.qml:238 package/contents/ui/main.qml:267
 #, kde-format
@@ -202,7 +202,7 @@ msgstr "自動的にタッチモードに切り替え"
 #: workspaceoptions_kwinsettings.kcfg:15
 #, kde-format
 msgid "Enable middle click selection pasting"
-msgstr "中クリックでの貼り付けを有効化する"
+msgstr "中クリックでの貼り付けを有効化"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
