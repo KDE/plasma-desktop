@@ -29,6 +29,10 @@ Backend::Backend(QObject *parent)
     , m_jobsModel(nullptr)
     , m_settings(new Settings(this))
 {
+    m_watcher->setConnection(QDBusConnection::sessionBus());
+    m_watcher->setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
+    connect(m_watcher, &QDBusServiceWatcher::serviceUnregistered, this, &Backend::onServiceUnregistered);
+
     setupUnity();
 
     reload();
