@@ -280,7 +280,8 @@ QVariantList Backend::placesActions(const QUrl &launcherUrl, bool showAllPlaces,
         }
 
         QAction *action = new QAction(parent);
-        action->setText(i18ncp("Show all user Places", "%1 more Place", "%1 more Places", totalActionCount - actions.count()));
+        action->setIcon(QIcon::fromTheme(QStringLiteral("view-more-symbolic")));
+        action->setText(i18ncp("Show all user Places", "%1 more Place…", "%1 more Places…", totalActionCount - actions.count()));
         connect(action, &QAction::triggered, this, &Backend::showAllPlaces);
         actions << QVariant::fromValue(action);
     }
