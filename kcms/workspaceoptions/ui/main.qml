@@ -426,5 +426,39 @@ KCM.SimpleKCM {
                 }
             }
         }
+        Item {
+            Kirigami.FormData.isSection: false
+        }
+
+        // Drag&Drop behavior settings
+
+        QQC2.ButtonGroup { id: dndToMoveGroup }
+
+        QQC2.RadioButton {
+            id: dndToMoveDisabler
+            Kirigami.FormData.label: i18n("Drag and drop behavior:")
+            text: i18n("Always ask what to do")
+            enabled: !kcm.globalsSettings.isImmutable("dndToMove")
+            checked: !kcm.globalsSettings.dndToMove
+            onToggled: kcm.globalsSettings.dndToMove = false
+            QQC2.ButtonGroup.group: dndToMoveGroup
+        }
+
+        QQC2.RadioButton {
+            id: dndToMoveEnabler
+            text: i18n("Move files if on the same device")
+            enabled: !kcm.globalsSettings.isImmutable("dndToMove")
+            checked: kcm.globalsSettings.dndToMove
+            onToggled: kcm.globalsSettings.dndToMove = true
+            QQC2.ButtonGroup.group: dndToMoveGroup
+        }
+
+        QQC2.Label {
+            Layout.fillWidth: true
+            visible: dndToMoveEnabler.checked
+            text: i18n("Hold Shift when dropping to show drop options")
+            elide: Text.ElideRight
+            font.pointSize: theme.smallestFont.pointSize
+        }
     }
 }

@@ -9,6 +9,10 @@
       <label>Single click to open files</label>
       <default>false</default>
     </entry>
+    <entry name="dndToMove" key="dndToMove" type="Bool">
+      <label>For local files on the same device, whether dragging and dropping will perform a move operation instead of showing the options menu</label>
+      <default>false</default>
+    </entry>
     <entry name="smoothScroll" key="SmoothScroll" type="Bool">
       <label>Smooth scrolling</label>
       <default>true</default>
