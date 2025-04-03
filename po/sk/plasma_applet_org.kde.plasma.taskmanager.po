@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-01 00:43+0000\n"
+"POT-Creation-Date: 2025-04-03 00:43+0000\n"
 "PO-Revision-Date: 2023-12-02 20:15+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -426,21 +426,21 @@ msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By horizontal window position"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:147
+#: package/contents/ui/ConfigBehavior.qml:149
 #, fuzzy, kde-format
 #| msgid "Keep launchers separate"
 msgctxt "@option:check configure task sorting"
 msgid "Keep launchers separate"
 msgstr "Ponechať spúšťače oddelené"
 
-#: package/contents/ui/ConfigBehavior.qml:154
+#: package/contents/ui/ConfigBehavior.qml:156
 #, fuzzy, kde-format
 #| msgid "Use launcher icons for running applications"
 msgctxt "@option:check for icons-and-text task manager"
 msgid "Hide launchers after application startup"
 msgstr "Použiť ikony spúšťača pre bežiace aplikácie"
 
-#: package/contents/ui/ConfigBehavior.qml:164
+#: package/contents/ui/ConfigBehavior.qml:166
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 #| msgid "Clicking active task:"
@@ -450,7 +450,7 @@ msgctxt ""
 msgid "Clicking active task:"
 msgstr "Kliknutie na aktívnu úlohu:"
 
-#: package/contents/ui/ConfigBehavior.qml:165
+#: package/contents/ui/ConfigBehavior.qml:167
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 #| msgid "Minimizes the task"
@@ -459,14 +459,14 @@ msgctxt ""
 msgid "Minimizes the task"
 msgstr "Minimalizuje úlohu"
 
-#: package/contents/ui/ConfigBehavior.qml:170
+#: package/contents/ui/ConfigBehavior.qml:172
 #, fuzzy, kde-format
 #| msgid "Middle-clicking any task:"
 msgctxt "@label:listbox completes sentence like: … does nothing"
 msgid "Middle-clicking any task:"
 msgstr "Kliknutie stredným tlačidlom na úlohu:"
 
-#: package/contents/ui/ConfigBehavior.qml:174
+#: package/contents/ui/ConfigBehavior.qml:176
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Middle-clicking any task does nothing'"
 #| msgid "Does nothing"
@@ -475,7 +475,7 @@ msgctxt ""
 msgid "Does nothing"
 msgstr "Neurobí nič"
 
-#: package/contents/ui/ConfigBehavior.qml:175
+#: package/contents/ui/ConfigBehavior.qml:177
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Part of a sentence: 'Middle-clicking any task closes window or group'"
@@ -486,7 +486,7 @@ msgctxt ""
 msgid "Closes window or group"
 msgstr "Zatvorí okno alebo skupinu"
 
-#: package/contents/ui/ConfigBehavior.qml:176
+#: package/contents/ui/ConfigBehavior.qml:178
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Middle-clicking any task opens a new window'"
 #| msgid "Opens a new window"
@@ -496,7 +496,7 @@ msgctxt ""
 msgid "Opens a new window"
 msgstr "Otvorí nové okno"
 
-#: package/contents/ui/ConfigBehavior.qml:177
+#: package/contents/ui/ConfigBehavior.qml:179
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Part of a sentence: 'Middle-clicking any task minimizes/restores window "
@@ -508,7 +508,7 @@ msgctxt ""
 msgid "Minimizes/Restores window or group"
 msgstr "Minimalizuje/obnoví okno alebo skupinu"
 
-#: package/contents/ui/ConfigBehavior.qml:178
+#: package/contents/ui/ConfigBehavior.qml:180
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Middle-clicking any task toggles grouping'"
 #| msgid "Toggles grouping"
@@ -518,7 +518,7 @@ msgctxt ""
 msgid "Toggles grouping"
 msgstr "Prepne zoskupovanie"
 
-#: package/contents/ui/ConfigBehavior.qml:179
+#: package/contents/ui/ConfigBehavior.qml:181
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Part of a sentence: 'Middle-clicking any task brings it to the current "
@@ -530,7 +530,7 @@ msgctxt ""
 msgid "Brings it to the current virtual desktop"
 msgstr "Prenesie to na aktuálnu virtuálnu pracovnú plochu"
 
-#: package/contents/ui/ConfigBehavior.qml:189
+#: package/contents/ui/ConfigBehavior.qml:191
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 #| msgid "Mouse wheel:"
@@ -539,7 +539,7 @@ msgctxt ""
 msgid "Mouse wheel:"
 msgstr "Koliesko myši:"
 
-#: package/contents/ui/ConfigBehavior.qml:190
+#: package/contents/ui/ConfigBehavior.qml:192
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Completes the sentence 'Clicking grouped task cycles through tasks' "
@@ -548,14 +548,14 @@ msgctxt "@option:check Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
 msgstr "Prepína medzi úlohami"
 
-#: package/contents/ui/ConfigBehavior.qml:197
+#: package/contents/ui/ConfigBehavior.qml:199
 #, fuzzy, kde-format
 #| msgid "Skip minimized tasks"
 msgctxt "@option:check mouse wheel task cycling"
 msgid "Skip minimized tasks"
 msgstr "Preskočiť minimalizované úlohy"
 
-#: package/contents/ui/ConfigBehavior.qml:207
+#: package/contents/ui/ConfigBehavior.qml:209
 #, fuzzy, kde-format
 #| msgid "Show only tasks:"
 msgctxt ""
@@ -563,35 +563,35 @@ msgctxt ""
 msgid "Show only tasks:"
 msgstr "Zobrazovať iba úlohy:"
 
-#: package/contents/ui/ConfigBehavior.qml:208
+#: package/contents/ui/ConfigBehavior.qml:210
 #, fuzzy, kde-format
 #| msgid "From current screen"
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current screen"
 msgstr "Z aktuálnej obrazovky"
 
-#: package/contents/ui/ConfigBehavior.qml:213
+#: package/contents/ui/ConfigBehavior.qml:215
 #, fuzzy, kde-format
 #| msgid "From current desktop"
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current desktop"
 msgstr "Z aktuálnej pracovnej plochy"
 
-#: package/contents/ui/ConfigBehavior.qml:218
+#: package/contents/ui/ConfigBehavior.qml:220
 #, fuzzy, kde-format
 #| msgid "From current activity"
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current activity"
 msgstr "Z aktuálnej aktivity"
 
-#: package/contents/ui/ConfigBehavior.qml:223
+#: package/contents/ui/ConfigBehavior.qml:225
 #, fuzzy, kde-format
 #| msgid "That are minimized"
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "That are minimized"
 msgstr "Ktoré sú minimalizované"
 
-#: package/contents/ui/ConfigBehavior.qml:232
+#: package/contents/ui/ConfigBehavior.qml:234
 #, fuzzy, kde-format
 #| msgid "When panel is hidden:"
 msgctxt ""
@@ -599,44 +599,44 @@ msgctxt ""
 msgid "When panel is hidden:"
 msgstr "Kedy je panel skrytý:"
 
-#: package/contents/ui/ConfigBehavior.qml:233
+#: package/contents/ui/ConfigBehavior.qml:235
 #, fuzzy, kde-format
 #| msgid "Unhide when a window wants attention"
 msgctxt "@option:check completes sentence: When panel is hidden"
 msgid "Unhide when a window wants attention"
 msgstr "Zobraziť, keď chce okno pozornosť"
 
-#: package/contents/ui/ConfigBehavior.qml:245
+#: package/contents/ui/ConfigBehavior.qml:247
 #, fuzzy, kde-format
 #| msgid "New tasks appear:"
 msgctxt "@label for radiobutton group completes sentence like: … on the bottom"
 msgid "New tasks appear:"
 msgstr "Nové úlohy sa zobrazia:"
 
-#: package/contents/ui/ConfigBehavior.qml:249
+#: package/contents/ui/ConfigBehavior.qml:251
 #, fuzzy, kde-format
 #| msgid "On the bottom"
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the bottom"
 msgstr "Dole"
 
-#: package/contents/ui/ConfigBehavior.qml:253
-#: package/contents/ui/ConfigBehavior.qml:272
+#: package/contents/ui/ConfigBehavior.qml:255
+#: package/contents/ui/ConfigBehavior.qml:274
 #, fuzzy, kde-format
 #| msgid "To the right"
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the right"
 msgstr "Napravo"
 
-#: package/contents/ui/ConfigBehavior.qml:255
-#: package/contents/ui/ConfigBehavior.qml:270
+#: package/contents/ui/ConfigBehavior.qml:257
+#: package/contents/ui/ConfigBehavior.qml:272
 #, fuzzy, kde-format
 #| msgid "To the left"
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the left"
 msgstr "Naľavo"
 
-#: package/contents/ui/ConfigBehavior.qml:266
+#: package/contents/ui/ConfigBehavior.qml:268
 #, fuzzy, kde-format
 #| msgid "On the Top"
 msgctxt "@option:check completes sentence: New tasks appear"

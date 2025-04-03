@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-01 00:43+0000\n"
+"POT-Creation-Date: 2025-04-03 00:43+0000\n"
 "PO-Revision-Date: 2024-11-29 00:40+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -373,19 +373,19 @@ msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By horizontal window position"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:147
+#: package/contents/ui/ConfigBehavior.qml:149
 #, kde-format
 msgctxt "@option:check configure task sorting"
 msgid "Keep launchers separate"
 msgstr "실행기 분리 유지"
 
-#: package/contents/ui/ConfigBehavior.qml:154
+#: package/contents/ui/ConfigBehavior.qml:156
 #, kde-format
 msgctxt "@option:check for icons-and-text task manager"
 msgid "Hide launchers after application startup"
 msgstr "앱 시작 이후 실행기 숨기기"
 
-#: package/contents/ui/ConfigBehavior.qml:164
+#: package/contents/ui/ConfigBehavior.qml:166
 #, kde-format
 msgctxt ""
 "@label for checkbox Part of a sentence: 'Clicking active task minimizes the "
@@ -393,27 +393,27 @@ msgctxt ""
 msgid "Clicking active task:"
 msgstr "활성 작업 클릭 시:"
 
-#: package/contents/ui/ConfigBehavior.qml:165
+#: package/contents/ui/ConfigBehavior.qml:167
 #, kde-format
 msgctxt ""
 "@option:check Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
 msgstr "작업 최소화"
 
-#: package/contents/ui/ConfigBehavior.qml:170
+#: package/contents/ui/ConfigBehavior.qml:172
 #, kde-format
 msgctxt "@label:listbox completes sentence like: … does nothing"
 msgid "Middle-clicking any task:"
 msgstr "임의의 작업 가운데 단추 클릭 시:"
 
-#: package/contents/ui/ConfigBehavior.qml:174
+#: package/contents/ui/ConfigBehavior.qml:176
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task does nothing'"
 msgid "Does nothing"
 msgstr "아무것도 하지 않음"
 
-#: package/contents/ui/ConfigBehavior.qml:175
+#: package/contents/ui/ConfigBehavior.qml:177
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task closes window "
@@ -421,7 +421,7 @@ msgctxt ""
 msgid "Closes window or group"
 msgstr "창 또는 그룹 닫기"
 
-#: package/contents/ui/ConfigBehavior.qml:176
+#: package/contents/ui/ConfigBehavior.qml:178
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task opens a new "
@@ -429,7 +429,7 @@ msgctxt ""
 msgid "Opens a new window"
 msgstr "새 창 열기"
 
-#: package/contents/ui/ConfigBehavior.qml:177
+#: package/contents/ui/ConfigBehavior.qml:179
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task minimizes/"
@@ -437,7 +437,7 @@ msgctxt ""
 msgid "Minimizes/Restores window or group"
 msgstr "창이나 그룹 최소화/복원"
 
-#: package/contents/ui/ConfigBehavior.qml:178
+#: package/contents/ui/ConfigBehavior.qml:180
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task toggles "
@@ -445,7 +445,7 @@ msgctxt ""
 msgid "Toggles grouping"
 msgstr "그룹화 전환"
 
-#: package/contents/ui/ConfigBehavior.qml:179
+#: package/contents/ui/ConfigBehavior.qml:181
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task brings it to "
@@ -453,96 +453,96 @@ msgctxt ""
 msgid "Brings it to the current virtual desktop"
 msgstr "현재 가상 바탕 화면으로 가져오기"
 
-#: package/contents/ui/ConfigBehavior.qml:189
+#: package/contents/ui/ConfigBehavior.qml:191
 #, kde-format
 msgctxt ""
 "@label for checkbox Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Mouse wheel:"
 msgstr "마우스 휠:"
 
-#: package/contents/ui/ConfigBehavior.qml:190
+#: package/contents/ui/ConfigBehavior.qml:192
 #, kde-format
 msgctxt "@option:check Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
 msgstr "작업 전환"
 
-#: package/contents/ui/ConfigBehavior.qml:197
+#: package/contents/ui/ConfigBehavior.qml:199
 #, kde-format
 msgctxt "@option:check mouse wheel task cycling"
 msgid "Skip minimized tasks"
 msgstr "최소화된 작업 건너뛰기"
 
-#: package/contents/ui/ConfigBehavior.qml:207
+#: package/contents/ui/ConfigBehavior.qml:209
 #, kde-format
 msgctxt ""
 "@label for checkbox group, completes sentence like: … from current screen"
 msgid "Show only tasks:"
 msgstr "다음 작업만 표시:"
 
-#: package/contents/ui/ConfigBehavior.qml:208
+#: package/contents/ui/ConfigBehavior.qml:210
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current screen"
 msgstr "현재 화면에 있는 작업만"
 
-#: package/contents/ui/ConfigBehavior.qml:213
+#: package/contents/ui/ConfigBehavior.qml:215
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current desktop"
 msgstr "현재 바탕 화면에 있음"
 
-#: package/contents/ui/ConfigBehavior.qml:218
+#: package/contents/ui/ConfigBehavior.qml:220
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current activity"
 msgstr "현재 활동에 있음"
 
-#: package/contents/ui/ConfigBehavior.qml:223
+#: package/contents/ui/ConfigBehavior.qml:225
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "That are minimized"
 msgstr "최소화됨"
 
-#: package/contents/ui/ConfigBehavior.qml:232
+#: package/contents/ui/ConfigBehavior.qml:234
 #, kde-format
 msgctxt ""
 "@label for checkbox, completes sentence: … unhide if window wants attention"
 msgid "When panel is hidden:"
 msgstr "패널이 숨겨졌을 때:"
 
-#: package/contents/ui/ConfigBehavior.qml:233
+#: package/contents/ui/ConfigBehavior.qml:235
 #, kde-format
 msgctxt "@option:check completes sentence: When panel is hidden"
 msgid "Unhide when a window wants attention"
 msgstr "창이 주의를 끌 때 숨기기 취소"
 
-#: package/contents/ui/ConfigBehavior.qml:245
+#: package/contents/ui/ConfigBehavior.qml:247
 #, kde-format
 msgctxt "@label for radiobutton group completes sentence like: … on the bottom"
 msgid "New tasks appear:"
 msgstr "새 작업이 나타날 때:"
 
-#: package/contents/ui/ConfigBehavior.qml:249
+#: package/contents/ui/ConfigBehavior.qml:251
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the bottom"
 msgstr "아래쪽에"
 
-#: package/contents/ui/ConfigBehavior.qml:253
-#: package/contents/ui/ConfigBehavior.qml:272
+#: package/contents/ui/ConfigBehavior.qml:255
+#: package/contents/ui/ConfigBehavior.qml:274
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the right"
 msgstr "오른쪽에"
 
-#: package/contents/ui/ConfigBehavior.qml:255
-#: package/contents/ui/ConfigBehavior.qml:270
+#: package/contents/ui/ConfigBehavior.qml:257
+#: package/contents/ui/ConfigBehavior.qml:272
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the left"
 msgstr "왼쪽에"
 
-#: package/contents/ui/ConfigBehavior.qml:266
+#: package/contents/ui/ConfigBehavior.qml:268
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the top"
