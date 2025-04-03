@@ -36,6 +36,7 @@ QQC2.ApplicationWindow {
     HoverHandler {
         cursorShape: Qt.BlankCursor
         acceptedDevices: PointerDevice.Stylus
+        enabled: !tool.finishedCalibration
     }
 
     Connections {
@@ -136,6 +137,7 @@ QQC2.ApplicationWindow {
         HoverHandler {
             cursorShape: Qt.BlankCursor
             acceptedDevices: PointerDevice.Stylus
+            enabled: !tool.finishedCalibration
         }
 
         down: {
