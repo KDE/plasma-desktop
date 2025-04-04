@@ -68,7 +68,6 @@ Q_SIGNALS:
     void ksmserverSettingsChanged();
 
 private:
-    bool isSaveNeeded() const override;
     bool isDefaults() const override;
 
     void checkFirmwareSetupRequested();

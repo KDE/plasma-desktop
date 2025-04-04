@@ -139,7 +139,7 @@ KCM.SimpleKCM {
             visible: uefi.visible
         }
 
-        CheckBox {
+        Switch {
             id: uefi
             Kirigami.FormData.label: i18nc("@label:check part of a sentence: After next restart enter UEFI/Firmware setup screen", "After next restart:")
             text: kcm.isUefi ? i18nc("@option:check", "Enter UEFI setup screen")

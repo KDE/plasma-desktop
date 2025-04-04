@@ -144,11 +144,6 @@ bool SMServerConfig::canFirmwareSetup() const
     return m_canFirmwareSetup;
 }
 
-bool SMServerConfig::isSaveNeeded() const
-{
-    return m_restartInSetupScreen != m_restartInSetupScreenInitial;
-}
-
 bool SMServerConfig::isDefaults() const
 {
     return !m_restartInSetupScreen;
