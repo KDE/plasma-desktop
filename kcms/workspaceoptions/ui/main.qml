@@ -438,15 +438,30 @@ KCM.SimpleKCM {
             id: dndToMoveDisabler
             Kirigami.FormData.label: i18n("Drag and drop behavior:")
             text: i18n("Always ask what to do")
+            Accessible.description: dndToMoveDisablerHelperText.text
             enabled: !kcm.globalsSettings.isImmutable("dndToMove")
             checked: !kcm.globalsSettings.dndToMove
             onToggled: kcm.globalsSettings.dndToMove = false
             QQC2.ButtonGroup.group: dndToMoveGroup
         }
 
+        QQC2.Label {
+            id: dndToMoveDisablerHelperText
+            Layout.fillWidth: true
+            leftPadding: Application.layoutDirection === Qt.LeftToRight ?
+                dndToMoveDisabler.indicator.width + dndToMoveDisabler.spacing : dndToMoveDisablerHelperText.padding
+            rightPadding: Application.layoutDirection === Qt.RightToLeft ?
+                dndToMoveDisabler.indicator.width + dndToMoveDisabler.spacing : dndToMoveDisablerHelperText.padding
+            text: i18n("Hold shift to move the file, Hold Ctrl to copy file, Hold Alt to create a symlink, otherwise show a dialog")
+            textFormat: Text.PlainText
+            elide: Text.ElideRight
+            font: Kirigami.Theme.smallFont
+        }
+
         QQC2.RadioButton {
             id: dndToMoveEnabler
             text: i18n("Move files if on the same device")
+            Accessible.description: dndToMoveEnablerHelperText.text
             enabled: !kcm.globalsSettings.isImmutable("dndToMove")
             checked: kcm.globalsSettings.dndToMove
             onToggled: kcm.globalsSettings.dndToMove = true
@@ -454,11 +469,16 @@ KCM.SimpleKCM {
         }
 
         QQC2.Label {
+            id: dndToMoveEnablerHelperText
             Layout.fillWidth: true
-            visible: dndToMoveEnabler.checked
+            leftPadding: Application.layoutDirection === Qt.LeftToRight ?
+                dndToMoveEnabler.indicator.width + dndToMoveEnabler.spacing : dndToMoveEnablerHelperText.padding
+            rightPadding: Application.layoutDirection === Qt.RightToLeft ?
+                dndToMoveEnabler.indicator.width + dndToMoveEnabler.spacing : dndToMoveEnablerHelperText.padding
             text: i18n("Hold Shift when dropping to show drop options")
+            textFormat: Text.PlainText
             elide: Text.ElideRight
-            font.pointSize: theme.smallestFont.pointSize
+            font: Kirigami.Theme.smallFont
         }
     }
 }
