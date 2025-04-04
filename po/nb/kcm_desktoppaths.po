@@ -10,52 +10,52 @@ msgstr ""
 "Project-Id-Version: kcmkonq\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-30 00:41+0000\n"
-"PO-Revision-Date: 2009-11-30 10:08+0100\n"
-"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"PO-Revision-Date: 2025-03-30 07:20+0200\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 24.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Desktop folder:"
-msgstr "Skrivebordsti:"
+msgstr "Skrivebordsmappe:"
 
 #: ui/main.qml:58
 #, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder contains all the files you see on your desktop."
-msgstr ""
+msgstr "Denne mappen inneholder alle filene som du ser på skrivebordet."
 
 #: ui/main.qml:66
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Documents folder:"
-msgstr "Dokumentsti:"
+msgstr "Dokumentmappe:"
 
 #: ui/main.qml:72
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save documents."
 msgstr ""
-"Denne mappa vil bli brukt som standard for å laste eller lagre dokumenter."
+"Denne mappa vil bli brukt som standard for å åpne eller lagre dokumenter."
 
 #: ui/main.qml:80
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Downloads folder:"
-msgstr "Last ned til:"
+msgstr "Nedlastingsmappe:"
 
 #: ui/main.qml:86
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to save your downloaded items."
 msgstr "Denne mappa vil bli brukt som standard for å lagre nedlastede filer."
@@ -64,66 +64,72 @@ msgstr "Denne mappa vil bli brukt som standard for å lagre nedlastede filer."
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Videos folder:"
-msgstr ""
+msgstr "Videoklippmappe:"
 
 #: ui/main.qml:100
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save video files."
-msgstr "Denne mappa vil bli brukt som standard for å laste eller lagre filmer."
+msgstr ""
+"Denne mappa vil bli brukt som standard for å åpne eller lagre videofiler."
 
 #: ui/main.qml:108
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Pictures folder:"
-msgstr "Bilder-sti:"
+msgstr "Bildemappe:"
 
 #: ui/main.qml:114
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save image files."
-msgstr "Denne mappa vil bli brukt som standard for å laste eller lagre filmer."
+msgstr ""
+"Denne mappa vil bli brukt som standard for å åpne eller lagre bildefiler."
 
 #: ui/main.qml:122
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Music folder:"
-msgstr ""
+msgstr "Musikkmappe:"
 
 #: ui/main.qml:128
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save music files."
-msgstr "Denne mappa vil bli brukt som standard for å laste eller lagre musikk."
+msgstr ""
+"Denne mappa vil bli brukt som standard for å åpne eller lagre musikkfiler."
 
 #: ui/main.qml:136
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Public folder:"
-msgstr ""
+msgstr "Offentligmappe:"
 
 #: ui/main.qml:142
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid ""
 "This folder will be used by default for publicly-shared files when network "
 "sharing is enabled."
-msgstr "Denne mappa vil bli brukt som standard for å lagre nedlastede filer."
+msgstr ""
+"Denne mappa vil bli brukt som standard for offentlige delte filer når "
+"nettverksdeling er i bruk."
 
 #: ui/main.qml:150
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Templates folder:"
-msgstr ""
+msgstr "Malmappe:"
 
 #: ui/main.qml:156
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip and accessible description"
 msgid "This folder will be used by default to open or save file templates."
-msgstr "Denne mappa vil bli brukt som standard for å laste eller lagre filmer."
+msgstr ""
+"Denne mappa vil bli brukt som standard for å åpne eller lagre malfiler."
 
 #: ui/UrlRequester.qml:74
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose new location"
-msgstr ""
+msgstr "Velg ny mappe"

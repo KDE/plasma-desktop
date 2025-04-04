@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-08 01:58+0000\n"
-"PO-Revision-Date: 2014-08-10 12:37+0200\n"
-"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"PO-Revision-Date: 2025-03-30 09:02+0200\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -22,17 +22,17 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Bjørn Steensrud"
+msgstr "Bjørn Steensrud,Martin Hansen"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "bjornst@skogkatt.homelinux.org"
+msgstr "bjornst@skogkatt.homelinux.org,mh306602@gmail.com"
 
 #: ActionEditor.cpp:60
 #, kde-format
 msgid "Editing Action '%1'"
-msgstr "Redigerer handling %1"
+msgstr "Redigerer handlinga «%1»"
 
 #: ActionEditor.cpp:162
 #, kde-format
@@ -53,7 +53,7 @@ msgstr "Ugyldig handling"
 #: ActionEditor.ui:17
 #, kde-format
 msgid "Edit Parameter"
-msgstr "Endre parameter"
+msgstr "Rediger parameter"
 
 #. i18n: ectx: property (text), widget (QLabel, LblParameterType)
 #: ActionEditor.ui:43
@@ -65,7 +65,7 @@ msgstr "Parametertype:"
 #: ActionEditor.ui:51
 #, kde-format
 msgid "Property Match"
-msgstr "Egenskapstreff"
+msgstr "Egenskapssamsvar"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
 #: ActionEditor.ui:56
@@ -83,7 +83,7 @@ msgstr "Ikke overlappende innhold"
 #: ActionEditor.ui:66
 #, kde-format
 msgid "Device Interface Match"
-msgstr "Treff enhetsgrensesnitt"
+msgstr "Enhetsgrensesnitt i samsvar"
 
 #. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
 #: ActionEditor.ui:96
@@ -101,7 +101,7 @@ msgstr "Verdinavn:"
 #: ActionEditor.ui:175
 #, kde-format
 msgid "Equals"
-msgstr "er lik"
+msgstr "Er lik"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
 #: ActionEditor.ui:180
@@ -119,13 +119,13 @@ msgstr "Tilbakestill parameter"
 #: ActionEditor.ui:215
 #, kde-format
 msgid "Save Parameter Changes"
-msgstr "Lagre parameterendringer"
+msgstr "Lagre endringer i parameter"
 
 #. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
 #: ActionEditor.ui:247
 #, kde-format
 msgid "Action icon, click to change it"
-msgstr "Handlingsikon, trykk for å endre det"
+msgstr "Handlingsikon. Trykk for å endre det."
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
 #: ActionEditor.ui:254
@@ -154,15 +154,15 @@ msgstr ""
 "Dette kan være en eller flere av følgende utfoldinger,\n"
 "uavhengig av store/små bokstaver:\n"
 "\n"
-"%f: monteringspunkt for enheten – bare lagringsenheter\n"
-"%d: sti til enhetsnoden – bare blokk-enheter\n"
-"%i: identifikasjon til enheten"
+"%f: Monteringspunkt for enheten – bare for enheter med lagringstilgang\n"
+"%d: Adressa til enhetsnoden – bare blokkenheter\n"
+"%i: ID-en til enheten"
 
 #. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
 #: ActionEditor.ui:300
 #, kde-format
 msgid "Devices must match the following parameters for this action:"
-msgstr "Enheter må stemme overens med følgende parameter for denne handlingen:"
+msgstr "Enheter må være i samsvar med følgende parameter for denne handlingen:"
 
 #. i18n: ectx: property (text), widget (QLabel, LblActionName)
 #: AddAction.ui:19
@@ -174,12 +174,12 @@ msgstr "Handlingsnavn:"
 #: AddAction.ui:26
 #, kde-format
 msgid "Enter the name for your new action"
-msgstr "Oppgi navnet på den nye handlingen"
+msgstr "Skriv inn navnet på den nye handling"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
 msgid "Solid Action Desktop File Generator"
-msgstr "Solid Action generator for desktop-fil"
+msgstr "Solid Action skrivebordsfilgenerator"
 
 #: DesktopFileGenerator.cpp:27
 #, kde-format
@@ -213,12 +213,12 @@ msgstr "Enheten må være av type %1"
 #: PredicateItem.cpp:122
 #, kde-format
 msgid "Any of the contained properties must match"
-msgstr "En eller flere av de inneholdte egenskapene må stemme"
+msgstr "Minst én av egenskapene må samsvare"
 
 #: PredicateItem.cpp:125
 #, kde-format
 msgid "All of the contained properties must match"
-msgstr "Alle inneholdte egenskaper må stemme"
+msgstr "Alle egenskapene må være i samsvar"
 
 #: PredicateItem.cpp:134
 #, kde-format
@@ -228,7 +228,7 @@ msgstr "Enhetensegenskapen %1 må være lik %2"
 #: PredicateItem.cpp:137
 #, kde-format
 msgid "The device property %1 must contain %2"
-msgstr "Enhetens egenskap %1 må inneholde %2"
+msgstr "Enhetensegenskapen %1 må inneholde %2"
 
 #: SolidActions.cpp:137
 #, kde-format
@@ -238,7 +238,7 @@ msgstr "Det ser ut til at forutsetningen for denne handlingen ikke er gyldig."
 #: SolidActions.cpp:137
 #, kde-format
 msgid "Error Parsing Device Conditions"
-msgstr "Feil ved tolking av enhetstilstander"
+msgstr "Feil ved tolking av enhetsvilkår"
 
 #: SolidActions.cpp:185
 #, kde-format
@@ -260,10 +260,10 @@ msgstr "Fjern"
 #: SolidActions.ui:29
 #, kde-format
 msgid "Edit…"
-msgstr ""
+msgstr "Rediger …"
 
 #. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
 #: SolidActions.ui:36
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "Legg til …"

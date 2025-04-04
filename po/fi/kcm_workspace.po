@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the kde-workspace package.
 # Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
 # Lasse Liehu <lliehu@kolumbus.fi>, 2010, 2011.
-# SPDX-FileCopyrightText: 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
 #
 # KDE Finnish translation sprint participants:
 # Author: Artnay
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-18 00:42+0000\n"
-"PO-Revision-Date: 2024-10-18 10:59+0300\n"
+"PO-Revision-Date: 2025-03-15 09:07+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: ui/main.qml:23
 #, kde-format
@@ -40,13 +40,13 @@ msgstr "Käynnistä uudelleen"
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
-msgstr ""
+msgstr "Salli Plasman näyttää:"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr ""
+msgstr "paneelin ja sovelmien työkaluvihjeet"
 
 #: ui/main.qml:62
 #, kde-format
@@ -56,14 +56,16 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"Sallii Plasman kaikkien paneeli- ja työpöytäsovelmien näyttää kuvailevan "
+"työkaluvihjeen hiiren leijuessa niiden yllä. Asetus ei vaikuta yksittäisten "
+"painikkeiden ja muiden käyttöliittymäalkioiden pieniin työkaluvihjeisiin."
 
 #: ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
-msgstr "Näytä asettelumuutoksista ponnahdusviesti"
+msgstr "Ruutunäyttö tilan muutoksista"
 
 #: ui/main.qml:80
 #, kde-format
@@ -71,6 +73,8 @@ msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
+"Sallii kaikkien Plasma-sovelmien käyttää ruutunäyttöä (OSD) esimerkiksi "
+"äänenvoimakkuuden ja näytönkirkkauden muuttuessa tai äänilaitteen vaihtuessa."
 
 #: ui/main.qml:92
 #, kde-format
@@ -303,7 +307,7 @@ msgstr "Käytä valinnan liittämiseen hiiren keskipainiketta"
 #: workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display large panel and widget tooltips"
-msgstr ""
+msgstr "Näytä paneelin ja sovelmien suuret työkaluvihjeet"
 
 #. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:10
@@ -311,25 +315,24 @@ msgstr ""
 msgid ""
 "Allow Plasma widgets to display large panel and widget tooltips on hover"
 msgstr ""
+"Sallii Plasma-sovelmien näyttää suuret paneelin ja sovelmien työkaluvihjeet "
+"hiiren leijuessa niiden yllä"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
-#, fuzzy, kde-format
-#| msgid "Display visual feedback for status changes"
+#, kde-format
 msgid "Display small popups for status changes"
-msgstr "Näkyvä palaute tilan muututtua"
+msgstr "Näytä pienet ponnahdusviestit tilan muutoksista"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show an on-screen display to indicate status changes such as brightness "
-#| "or volume"
+#, kde-format
 msgid ""
 "Allow Plasma widgets to display small popups for status changes such as "
 "brightness or volume"
 msgstr ""
-"Näytä tilan kuten kirkkauden tai äänenvoimakkuuden muutoksesta ruutunäyttö"
+"Sallii Plasma-sovelmien näyttää pienet ponnahdusviestit tilan kuten "
+"näytönkirkkauden tai äänenvoimakkuuden muutoksista"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21

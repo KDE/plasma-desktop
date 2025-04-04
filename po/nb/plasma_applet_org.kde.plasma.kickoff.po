@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-11 00:42+0000\n"
-"PO-Revision-Date: 2025-02-15 17:59+0100\n"
+"PO-Revision-Date: 2025-03-25 07:27+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 24.12.3\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -157,11 +157,10 @@ msgid "General:"
 msgstr "Generelt:"
 
 #: package/contents/ui/ConfigGeneral.qml:175
-#, fuzzy, kde-format
-#| msgid "Always sort applications alphabetically"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
-msgstr "Sorter alltid programmene alfabetisk"
+msgstr "Sorter programmene alfabetisk"
 
 #: package/contents/ui/ConfigGeneral.qml:179
 #, kde-format
@@ -170,6 +169,8 @@ msgid ""
 "This doesn't affect how applications are sorted in either search results or "
 "the favorites page."
 msgstr ""
+"Dette påvirker ikke hvordan programmene sorteres i hverken søkeresultatet "
+"eller favorittsiden."
 
 #: package/contents/ui/ConfigGeneral.qml:185
 #, kde-format

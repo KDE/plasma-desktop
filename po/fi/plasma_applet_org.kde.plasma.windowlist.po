@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Tommi Nieminen <translator@legisign.org>, 2010, 2022.
+# SPDX-FileCopyrightText: 2010, 2022, 2025 Tommi Nieminen <translator@legisign.org>
 # Lasse Liehu <lasse.liehu@gmail.com>, 2013, 2016.
 #
 # KDE Finnish translation sprint participants:
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_windowlist\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-19 00:43+0000\n"
-"PO-Revision-Date: 2022-07-11 18:49+0300\n"
+"PO-Revision-Date: 2025-03-15 09:08+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: contents/config/config.qml:13
 #, kde-format
@@ -39,11 +40,10 @@ msgid "Not applicable when the widget is on the Desktop."
 msgstr "Ei käytettävissä, kun sovelma on työpöydällä."
 
 #: contents/ui/main.qml:84
-#, fuzzy, kde-format
-#| msgid "Show list of opened windows"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "No open windows"
-msgstr "Näytä auki olevien ikkunoiden luettelo"
+msgstr "Ei avoimia ikkunoita"
 
 #: contents/ui/main.qml:111
 #, kde-format
