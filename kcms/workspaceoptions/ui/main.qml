@@ -440,8 +440,8 @@ KCM.SimpleKCM {
             text: i18n("Always ask what to do")
             Accessible.description: dndToMoveDisablerHelperText.text
             enabled: !kcm.globalsSettings.isImmutable("dndToMove")
-            checked: !kcm.globalsSettings.dndToMove
-            onToggled: kcm.globalsSettings.dndToMove = false
+            checked: kcm.globalsSettings.dndToMove === 0
+            onToggled: kcm.globalsSettings.dndToMove = 0
             QQC2.ButtonGroup.group: dndToMoveGroup
         }
 
@@ -463,8 +463,8 @@ KCM.SimpleKCM {
             text: i18n("Move files if on the same device")
             Accessible.description: dndToMoveEnablerHelperText.text
             enabled: !kcm.globalsSettings.isImmutable("dndToMove")
-            checked: kcm.globalsSettings.dndToMove
-            onToggled: kcm.globalsSettings.dndToMove = true
+            checked: kcm.globalsSettings.dndToMove === 1
+            onToggled: kcm.globalsSettings.dndToMove = 1
             QQC2.ButtonGroup.group: dndToMoveGroup
         }
 
