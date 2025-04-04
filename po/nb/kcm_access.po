@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-16 02:45+0000\n"
-"PO-Revision-Date: 2015-08-27 17:02+0200\n"
-"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"PO-Revision-Date: 2025-03-30 07:19+0200\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -24,7 +24,7 @@ msgstr ""
 #: kcmaccess.cpp:116
 #, kde-format
 msgid "AltGraph"
-msgstr "AltGraph"
+msgstr "Alt Graph"
 
 #: kcmaccess.cpp:118
 #, kde-format
@@ -39,37 +39,37 @@ msgstr "Super"
 #: kcmaccess.cpp:130
 #, kde-format
 msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
-msgstr "Trykk %1 mens NumLock, CapsLock og ScrollLock er på"
+msgstr "Trykk %1 mens «Num Lock», «Caps Lock» og «Scroll Lock» er på"
 
 #: kcmaccess.cpp:131
 #, kde-format
 msgid "Press %1 while CapsLock and ScrollLock are active"
-msgstr "Trykk %1 mens CapsLock og ScrollLock er på"
+msgstr "Trykk %1 mens «Caps Lock» og «Scroll Lock» er på"
 
 #: kcmaccess.cpp:132
 #, kde-format
 msgid "Press %1 while NumLock and ScrollLock are active"
-msgstr "Trykk %1 mens NumLock og ScrollLock er på"
+msgstr "Trykk %1 mens «Num Lock» og «Scroll Lock» er på"
 
 #: kcmaccess.cpp:133
 #, kde-format
 msgid "Press %1 while ScrollLock is active"
-msgstr "Trykk %1 mens ScrollLock er på"
+msgstr "Trykk %1 mens «Scroll Lock» er på"
 
 #: kcmaccess.cpp:134
 #, kde-format
 msgid "Press %1 while NumLock and CapsLock are active"
-msgstr "Trykk %1 mens NumLock og CapsLock er på"
+msgstr "Trykk %1 mens «Num Lock» og «Caps Lock» er på"
 
 #: kcmaccess.cpp:135
 #, kde-format
 msgid "Press %1 while CapsLock is active"
-msgstr "Trykk %1 mens CapsLock er på"
+msgstr "Trykk %1 mens «Caps Lock» er på"
 
 #: kcmaccess.cpp:136
 #, kde-format
 msgid "Press %1 while NumLock is active"
-msgstr "Trykk %1 mens NumLock er på"
+msgstr "Trykk %1 mens «Num Lock» er på"
 
 #: kcmaccess.cpp:137
 #, kde-format
@@ -79,66 +79,66 @@ msgstr "Trykk %1"
 #: kcmaccess.cpp:182
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
-msgstr ""
+msgstr "Klarte ikke lagre «gsettings» for Orca: Feil ved «%1»"
 
 #: kcmaccess.cpp:189
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
-msgstr ""
+msgstr "Feil: Klarte ikke kjøre «orca --setup»"
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:9
 #, kde-format
 msgid "Use System Bell"
-msgstr ""
+msgstr "Bruk systembjelle"
 
 #. i18n: ectx: label, entry (CustomBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:13
 #, kde-format
 msgid "Customize system bell"
-msgstr ""
+msgstr "Tilpass systembjelle"
 
 #. i18n: ectx: label, entry (CustomBellFile), group (Bell)
 #: kcmaccessibilitybell.kcfg:17
 #, kde-format
 msgid "Sound file for the Bell"
-msgstr ""
+msgstr "Lydfil for bjella"
 
 #. i18n: ectx: label, entry (VisibleBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:20
 #, kde-format
 msgid "Use a visual bell instead of a sound"
-msgstr ""
+msgstr "Bruk visuell bjelle i stedet for lydsignal"
 
 #. i18n: ectx: label, entry (InvertScreen), group (Bell)
 #: kcmaccessibilitybell.kcfg:24
 #, kde-format
 msgid "Invert the system colors on the bell"
-msgstr ""
+msgstr "Snu om skjermfargene i stedet for lydsignal"
 
 #. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
 #: kcmaccessibilitybell.kcfg:28
 #, kde-format
 msgid "Color of the Visible Bell"
-msgstr ""
+msgstr "Farge på visuell bjelle"
 
 #. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
 #: kcmaccessibilitybell.kcfg:32
 #, kde-format
 msgid "Duration of the Visible Bell"
-msgstr ""
+msgstr "Tid for å vise visuell bjelle"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
 #, kde-format
 msgid "Use sticky Keys"
-msgstr ""
+msgstr "Bruk faste valgtaster"
 
 #. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:13
 #, kde-format
 msgid "Lock the sticky keys"
-msgstr ""
+msgstr "Lås faste valgtaster"
 
 #. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:17
@@ -150,67 +150,67 @@ msgstr "Slå av faste valgtaster når to taster blir trykket ned samtidig"
 #: kcmaccessibilitykeyboard.kcfg:21
 #, kde-format
 msgid "Beep on a sticky key press"
-msgstr ""
+msgstr "Spill av pipelyd ved trykk på fast valgtast"
 
 #. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:25
 #, kde-format
 msgid "Toggle keys beep"
-msgstr ""
+msgstr "Slå av/på pipelyd ved tastetrykk"
 
 #. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:29
 #, kde-format
 msgid "Notify when a keyboard modifier is pressed"
-msgstr ""
+msgstr "Varsling når en valgtast trykkes ned"
 
 #. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:33
 #, kde-format
 msgid "Use a timeout delay"
-msgstr ""
+msgstr "Bruk forsinkelse på tidsavbrudd"
 
 #. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:37
 #, kde-format
 msgid "Delay for timeout"
-msgstr ""
+msgstr "Tidsgrense"
 
 #. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:41
 #, kde-format
 msgid "Use a beep for access"
-msgstr ""
+msgstr "Bruk pipelyd for tilgang"
 
 #. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:9
 #, kde-format
 msgid "Use slow keypresses"
-msgstr ""
+msgstr "Bruk trege taster"
 
 #. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:13
 #, kde-format
 msgid "Delay for the key press"
-msgstr ""
+msgstr "Pause for tastetrykk"
 
 #. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:17
 #, kde-format
 msgid "Beep on a slow keypress"
-msgstr ""
+msgstr "Pipelyd ved tregt tastetrykk"
 
 #. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:21
 #, kde-format
 msgid "Beep on an accepted keypress"
-msgstr ""
+msgstr "Pipelyd ved godtatte tastetrykk"
 
 #. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:25
 #, kde-format
 msgid "Beep on a rejected keypress"
-msgstr ""
+msgstr "Pipelyd ved avviste tastetrykk"
 
 #. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:29
@@ -222,218 +222,218 @@ msgstr "Filtertaster"
 #: kcmaccessibilitykeyboardfilters.kcfg:33
 #, kde-format
 msgid "Use a delay for bouncing"
-msgstr ""
+msgstr "Bruk forsinkelse for filtrering"
 
 #. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:37
 #, kde-format
 msgid "Beep if a bounce key event is rejected"
-msgstr ""
+msgstr "Pipelyd ved avvisning av filtertastetrykk"
 
 #. i18n: ectx: label, entry (MouseKeys), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:9
 #, kde-format
 msgid "Use keys to control the mouse"
-msgstr ""
+msgstr "Bruk tastaturet til å styre musepekeren"
 
 #. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:13
 #, kde-format
 msgid "Delay for the mouse movement"
-msgstr ""
+msgstr "Forsinkelse for musebevegelse"
 
 #. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:17
 #, kde-format
 msgid "Repetition interval for the mouse movement"
-msgstr ""
+msgstr "Repetisjonsintervall for musebevegelse"
 
 #. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:21
 #, kde-format
 msgid "Time to hit maximum velocity"
-msgstr ""
+msgstr "Tid til høyeste hastighet"
 
 #. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:25
 #, kde-format
 msgid "Maximum Velocity"
-msgstr ""
+msgstr "Høyeste hastighet"
 
 #. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:29
 #, kde-format
 msgid "Mouse Key Curve"
-msgstr ""
+msgstr "Musetast-kurve"
 
 #. i18n: ectx: label, entry (Gestures), group (Keyboard)
 #: kcmaccessibilitymouse.kcfg:35
 #, kde-format
 msgid "Use Gestures"
-msgstr ""
+msgstr "Bruk musebevegelser"
 
 #. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
 #: kcmaccessibilitymouse.kcfg:39
 #, kde-format
 msgid "Ask for Confirmation for a gesture"
-msgstr ""
+msgstr "Spør om bekreftelse for musebevegelser"
 
 #. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
 #: kcmaccessibilitymouse.kcfg:43
 #, kde-format
 msgid "Confirm access to the Keyboard"
-msgstr ""
+msgstr "Bekfreft tilgang til tastaturet"
 
 #. i18n: ectx: label, entry (Enabled), group (ScreenReader)
 #: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
 #, kde-format
 msgid "Enable Screen Reader"
-msgstr ""
+msgstr "Bruk skjermleser"
 
 #: package/contents/ui/Bell.qml:20
 #, kde-format
 msgid "Please choose an audio file"
-msgstr ""
+msgstr "Velg lydfil"
 
 #: package/contents/ui/Bell.qml:22
 #, kde-format
 msgid "Audio Files (*.mp3 *.ogg *.wav)"
-msgstr ""
+msgstr "Lydfiler (*.mp3 *.ogg *.wav)"
 
 #: package/contents/ui/Bell.qml:31
 #, kde-format
 msgid "Audible bell:"
-msgstr ""
+msgstr "Lydsignal:"
 
 #: package/contents/ui/Bell.qml:32
 #, kde-format
 msgctxt "Enable the system bell"
 msgid "Enable"
-msgstr ""
+msgstr "Slå på"
 
 #: package/contents/ui/Bell.qml:43
 #, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
-msgstr ""
+msgstr "Tilpasset lyd:"
 
 #: package/contents/ui/Bell.qml:76
 #, kde-format
 msgid "Search audio file for the system bell"
-msgstr ""
+msgstr "Søk etter lydfil for systembjella"
 
 #: package/contents/ui/Bell.qml:77
 #, kde-format
 msgid "Button search audio file"
-msgstr ""
+msgstr "Knapp for søk etter lydfil"
 
 #: package/contents/ui/Bell.qml:93
 #, kde-format
 msgid "Visual bell:"
-msgstr ""
+msgstr "Visuell bjelle:"
 
 #: package/contents/ui/Bell.qml:94
 #, kde-format
 msgctxt "Enable visual bell"
 msgid "Enable"
-msgstr ""
+msgstr "Slå på"
 
 #: package/contents/ui/Bell.qml:108
 #, kde-format
 msgctxt "Invert screen on a system bell"
 msgid "Invert Screen"
-msgstr ""
+msgstr "Snu om skjerm"
 
 #: package/contents/ui/Bell.qml:125
 #, kde-format
 msgctxt "Flash screen on a system bell"
 msgid "Flash"
-msgstr ""
+msgstr "Blink"
 
 #: package/contents/ui/Bell.qml:136
 #, kde-format
 msgctxt "Color of the system bell"
 msgid "Color"
-msgstr ""
+msgstr "Farge"
 
 #: package/contents/ui/Bell.qml:147
 #, kde-format
 msgctxt "Duration of the system bell"
 msgid "Duration:"
-msgstr ""
+msgstr "Varighet:"
 
 #: package/contents/ui/KeyboardFilters.qml:18
 #, kde-format
 msgid "Slow keys:"
-msgstr ""
+msgstr "Trege taster:"
 
 #: package/contents/ui/KeyboardFilters.qml:19
 #, kde-format
 msgctxt "Enable slow keys"
 msgid "Enable"
-msgstr ""
+msgstr "Slå på"
 
 #: package/contents/ui/KeyboardFilters.qml:22
 #, kde-format
 msgid ""
 "For a key to be accepted, it has to be held until the set amount of time"
-msgstr ""
+msgstr "Tasten må holdes inne så lenge for at et tastetrykk skal registreres"
 
 #: package/contents/ui/KeyboardFilters.qml:37
 #, kde-format
 msgctxt "Slow keys Delay"
 msgid "Delay:"
-msgstr ""
+msgstr "Forsinkelse:"
 
 #: package/contents/ui/KeyboardFilters.qml:54
 #, kde-format
 msgid "Ring system bell:"
-msgstr ""
+msgstr "Ring systembjella:"
 
 #: package/contents/ui/KeyboardFilters.qml:55
 #, kde-format
 msgctxt "Use system bell when a key is pressed"
 msgid "when any key is &pressed"
-msgstr ""
+msgstr "Ved vilkårlig &tastetrykk"
 
 #: package/contents/ui/KeyboardFilters.qml:69
 #, kde-format
 msgctxt "Use system bell when a key is accepted"
 msgid "when any key is &accepted"
-msgstr ""
+msgstr "Når vilkårlig tastetrykk &godkjennes"
 
 #: package/contents/ui/KeyboardFilters.qml:83
 #, kde-format
 msgctxt "Use system bell when a key is rejected"
 msgid "when any key is &rejected"
-msgstr ""
+msgstr "Når vilkårlig tastetrykk &avvises"
 
 #: package/contents/ui/KeyboardFilters.qml:100
 #, kde-format
 msgid "Bounce keys:"
-msgstr ""
+msgstr "Filtertaster:"
 
 #: package/contents/ui/KeyboardFilters.qml:101
 #, kde-format
 msgctxt "Bounce keys enable"
 msgid "Enable"
-msgstr ""
+msgstr "Slå på"
 
 #: package/contents/ui/KeyboardFilters.qml:104
 #, kde-format
 msgid "Ignore rapid, repeated keypresses of the same key"
-msgstr ""
+msgstr "Ignorer kjappe gjentatte trykk på samme tast"
 
 #: package/contents/ui/KeyboardFilters.qml:119
 #, kde-format
 msgctxt "Bounce keys delay"
 msgid "Delay:"
-msgstr ""
+msgstr "Forsinkelse:"
 
 #: package/contents/ui/KeyboardFilters.qml:134
 #, kde-format
 msgid "Ring system bell when rejected"
-msgstr ""
+msgstr "Ring systembjella ved avvisning"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -441,143 +441,145 @@ msgid ""
 "This module lets you configure the accessibility features such as a screen "
 "reader."
 msgstr ""
+"Denne modulen lar deg sette opp tilgjengelighets-funksjonalitet, for "
+"eksempel en skjermleser."
 
 #: package/contents/ui/main.qml:26
 #, kde-format
 msgctxt "System Bell"
 msgid "Bell"
-msgstr ""
+msgstr "Bjelle"
 
 #: package/contents/ui/main.qml:31
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
-msgstr ""
+msgstr "Valgtaster"
 
 #: package/contents/ui/main.qml:36
 #, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
-msgstr ""
+msgstr "Tastefilter"
 
 #: package/contents/ui/main.qml:41
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
-msgstr ""
+msgstr "Musestyring"
 
 #: package/contents/ui/main.qml:46
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
-msgstr ""
+msgstr "Skjermleser"
 
 #: package/contents/ui/ModifierKeys.qml:16
 #, kde-format
 msgid "Sticky keys:"
-msgstr ""
+msgstr "Faste valgtaster"
 
 #: package/contents/ui/ModifierKeys.qml:17
 #, kde-format
 msgctxt "Enable sticky keys"
 msgid "Enable"
-msgstr ""
+msgstr "Slå på"
 
 #: package/contents/ui/ModifierKeys.qml:28
 #, kde-format
 msgctxt "Lock sticky keys"
 msgid "Lock"
-msgstr ""
+msgstr "Lås"
 
 #: package/contents/ui/ModifierKeys.qml:42
 #, kde-format
 msgid "Disable when two keys are held down"
-msgstr ""
+msgstr "Slå av når to taster holdes nede"
 
 #: package/contents/ui/ModifierKeys.qml:54
 #, kde-format
 msgid "Ring system bell when modifier keys are used"
-msgstr ""
+msgstr "Ring systembjella når valgtaster er i bruk"
 
 #: package/contents/ui/ModifierKeys.qml:71
 #, kde-format
 msgid "Feedback:"
-msgstr ""
+msgstr "Tilbakemelding:"
 
 #: package/contents/ui/ModifierKeys.qml:72
 #, kde-format
 msgid "Ring system bell when locking keys are toggled"
-msgstr ""
+msgstr "Ring systembjella når låsetaster slås av/på"
 
 #: package/contents/ui/ModifierKeys.qml:83
 #, kde-format
 msgid "Show notification when modifier or locking keys are used"
-msgstr ""
+msgstr "Vis varsling når valg- eller låsetaster er i bruk"
 
 #: package/contents/ui/ModifierKeys.qml:95
 #, kde-format
 msgid "Configure Notifications…"
-msgstr ""
+msgstr "Sett opp varslinger …"
 
 #: package/contents/ui/MouseNavigation.qml:17
 #, kde-format
 msgid "Use number pad to move cursor:"
-msgstr ""
+msgstr "Bruk talltastaturet til å flytte pekeren:"
 
 #: package/contents/ui/MouseNavigation.qml:18
 #, kde-format
 msgid "Enable"
-msgstr ""
+msgstr "Slå på"
 
 #: package/contents/ui/MouseNavigation.qml:29
 #, kde-format
 msgid "When a gesture is used:"
-msgstr ""
+msgstr "Når en musebevegelse blir gjort:"
 
 #: package/contents/ui/MouseNavigation.qml:30
 #, kde-format
 msgid "Display a confirmation dialog"
-msgstr ""
+msgstr "Vis bekfreftelsesvindu"
 
 #: package/contents/ui/MouseNavigation.qml:41
 #, kde-format
 msgid "Ring the System Bell"
-msgstr ""
+msgstr "Ring systembjella"
 
 #: package/contents/ui/MouseNavigation.qml:52
 #, kde-format
 msgid "Show a notification"
-msgstr ""
+msgstr "Vis varslingsmelding"
 
 #: package/contents/ui/MouseNavigation.qml:68
 #, kde-format
 msgid "Acceleration delay:"
-msgstr ""
+msgstr "Akselerasjonsforsinkelse:"
 
 #: package/contents/ui/MouseNavigation.qml:82
 #, kde-format
 msgid "Repeat interval:"
-msgstr ""
+msgstr "Repetisjonsintervall:"
 
 #: package/contents/ui/MouseNavigation.qml:96
 #, kde-format
 msgid "Acceleration time:"
-msgstr ""
+msgstr "Akselerasjonstid:"
 
 #: package/contents/ui/MouseNavigation.qml:110
 #, kde-format
 msgid "Maximum speed:"
-msgstr ""
+msgstr "Høyeste hastighet:"
 
 #: package/contents/ui/MouseNavigation.qml:124
 #, kde-format
 msgid "Acceleration profile:"
-msgstr ""
+msgstr "Akselerasjonsprofil:"
 
 #: package/contents/ui/ScreenReader.qml:28
 #, kde-format
 msgid "Launch Orca Screen Reader Configuration…"
-msgstr ""
+msgstr "Sett opp Skjermleseren Orca …"
 
 #: package/contents/ui/ScreenReader.qml:41
 #, kde-format
@@ -585,6 +587,8 @@ msgid ""
 "Please note that you may have to log out or reboot once to allow the screen "
 "reader to work properly."
 msgstr ""
+"Merk at du kanskje må logge ut og inn eller starte maskinen på nytt før "
+"skjermleseren vil fungere skikkelig."
 
 #: package/contents/ui/ScreenReader.qml:42
 #, kde-format
@@ -592,3 +596,6 @@ msgid ""
 "It appears that the Orca Screen Reader is not installed. Please install it "
 "before trying to use this feature, and then log out or reboot"
 msgstr ""
+"Det ser ikke ut til at du har skjermleseren Orca installer. Hvis du vil "
+"bruke denne funksjonen, må du installere Orca og så logge ut og inn eller "
+"starte maskinen på nytt."

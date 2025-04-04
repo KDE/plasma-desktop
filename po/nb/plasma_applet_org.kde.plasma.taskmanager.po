@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-24 03:46+0000\n"
-"PO-Revision-Date: 2013-11-04 23:00+0100\n"
-"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"PO-Revision-Date: 2025-03-25 07:28+0100\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -22,149 +22,149 @@ msgstr ""
 #: package/contents/config/config.qml:13
 #, kde-format
 msgid "Appearance"
-msgstr ""
+msgstr "Utseende"
 
 #: package/contents/config/config.qml:18
 #, kde-format
 msgid "Behavior"
-msgstr "Oppførsel"
+msgstr "Atferd"
 
 #: package/contents/ui/AudioStream.qml:101
 #, kde-format
 msgctxt "@action:button"
 msgid "Unmute"
-msgstr ""
+msgstr "Lyddemping av"
 
 #: package/contents/ui/AudioStream.qml:101
 #, kde-format
 msgctxt "@action:button"
 msgid "Mute"
-msgstr ""
+msgstr "Demp lyd"
 
 #: package/contents/ui/AudioStream.qml:102
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Unmute %1"
-msgstr ""
+msgstr "Slå av lyddemping for %1"
 
 #: package/contents/ui/AudioStream.qml:102
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Mute %1"
-msgstr ""
+msgstr "Demp %1"
 
 #: package/contents/ui/Badge.qml:54
 #, kde-format
 msgctxt "Invalid number of new messages, overlay, keep short"
 msgid "—"
-msgstr ""
+msgstr "–"
 
 #: package/contents/ui/Badge.qml:56
 #, kde-format
 msgctxt "Over 9999 new messages, overlay, keep short"
 msgid "9,999+"
-msgstr ""
+msgstr "9 999+"
 
 #: package/contents/ui/ConfigAppearance.qml:33
 #, kde-format
 msgid "General:"
-msgstr ""
+msgstr "Generelt:"
 
 #: package/contents/ui/ConfigAppearance.qml:34
 #, kde-format
 msgid "Show small window previews when hovering over Tasks"
-msgstr ""
+msgstr "Vis miniversjon av vinduet når pekeren er over en oppgave"
 
 #: package/contents/ui/ConfigAppearance.qml:39
 #, kde-format
 msgid "Hide other windows when hovering over previews"
-msgstr ""
+msgstr "Skjul andre vinduer når pekeren er over miniversjoner av vinduer"
 
 #: package/contents/ui/ConfigAppearance.qml:44
 #, kde-format
 msgid "Mark applications that play audio"
-msgstr ""
+msgstr "Marker programmer som spiller av lyd"
 
 #: package/contents/ui/ConfigAppearance.qml:52
 #, kde-format
 msgctxt "@option:check"
 msgid "Fill free space on Panel"
-msgstr ""
+msgstr "Fyll ledig plass på panelet"
 
 #: package/contents/ui/ConfigAppearance.qml:61
 #, kde-format
 msgid "Maximum columns:"
-msgstr ""
+msgstr "Maks kolonner:"
 
 #: package/contents/ui/ConfigAppearance.qml:61
 #, kde-format
 msgid "Maximum rows:"
-msgstr "Høyeste antall rader:"
+msgstr "Maks rader:"
 
 #: package/contents/ui/ConfigAppearance.qml:67
 #, kde-format
 msgid "Always arrange tasks in rows of as many columns"
-msgstr ""
+msgstr "Sorter alltid oppgaver i rader med så mange kolonner"
 
 #: package/contents/ui/ConfigAppearance.qml:67
 #, kde-format
 msgid "Always arrange tasks in columns of as many rows"
-msgstr ""
+msgstr "Sorter alltid oppgaver i kolonner med så mange rader"
 
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
 msgid "Spacing between icons:"
-msgstr ""
+msgstr "Avstand mellom ikoner:"
 
 #: package/contents/ui/ConfigAppearance.qml:81
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
-msgstr ""
+msgstr "Liten"
 
 #: package/contents/ui/ConfigAppearance.qml:85
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 #: package/contents/ui/ConfigAppearance.qml:89
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
-msgstr ""
+msgstr "Stor"
 
 #: package/contents/ui/ConfigAppearance.qml:113
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
-msgstr ""
+msgstr "Satt automatisk til «Stor» når i trykkskjerm-modus"
 
 #: package/contents/ui/ConfigBehavior.qml:47
 #, kde-format
 msgid "Group:"
-msgstr ""
+msgstr "Gruppering:"
 
 #: package/contents/ui/ConfigBehavior.qml:50
 #, kde-format
 msgid "Do not group"
-msgstr ""
+msgstr "Ikke grupper"
 
 #: package/contents/ui/ConfigBehavior.qml:50
 #, kde-format
 msgid "By program name"
-msgstr ""
+msgstr "Etter programnavn"
 
 #: package/contents/ui/ConfigBehavior.qml:55
 #, kde-format
 msgid "Clicking grouped task:"
-msgstr ""
+msgstr "Trykk på grupperte oppgaver:"
 
 #: package/contents/ui/ConfigBehavior.qml:62
 #, kde-format
 msgctxt "Completes the sentence 'Clicking grouped task cycles through tasks' "
 msgid "Cycles through tasks"
-msgstr ""
+msgstr "Blar gjennom oppgavene"
 
 #: package/contents/ui/ConfigBehavior.qml:63
 #, kde-format
@@ -172,20 +172,20 @@ msgctxt ""
 "Completes the sentence 'Clicking grouped task shows tooltip window "
 "thumbnails' "
 msgid "Shows small window previews"
-msgstr ""
+msgstr "Viser miniversjoner av vindu"
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
 msgctxt ""
 "Completes the sentence 'Clicking grouped task shows windows side by side' "
 msgid "Shows large window previews"
-msgstr ""
+msgstr "Viser storversjoner av vindu"
 
 #: package/contents/ui/ConfigBehavior.qml:65
 #, kde-format
 msgctxt "Completes the sentence 'Clicking grouped task shows textual list' "
 msgid "Shows textual list"
-msgstr ""
+msgstr "Vis tekstliste"
 
 #: package/contents/ui/ConfigBehavior.qml:73
 #, kde-format
@@ -193,26 +193,28 @@ msgid ""
 "The compositor does not support displaying windows side by side, so a "
 "textual list will be displayed instead."
 msgstr ""
+"Sammensetteren støtter ikke visning av vinduer side ved side, så en "
+"tekstliste vises i stedet."
 
 #: package/contents/ui/ConfigBehavior.qml:83
 #, kde-format
 msgid "Combine into single button"
-msgstr ""
+msgstr "Slå sammen til én knapp"
 
 #: package/contents/ui/ConfigBehavior.qml:90
 #, kde-format
 msgid "Group only when the Task Manager is full"
-msgstr ""
+msgstr "Lag bare grupper når oppgavebehandleren er full"
 
 #: package/contents/ui/ConfigBehavior.qml:101
 #, kde-format
 msgid "Sort:"
-msgstr ""
+msgstr "Sortering:"
 
 #: package/contents/ui/ConfigBehavior.qml:104
 #, kde-format
 msgid "Do not sort"
-msgstr ""
+msgstr "Ikke sorter"
 
 #: package/contents/ui/ConfigBehavior.qml:104
 #, kde-format
@@ -227,52 +229,52 @@ msgstr "Alfabetisk"
 #: package/contents/ui/ConfigBehavior.qml:104
 #, kde-format
 msgid "By desktop"
-msgstr ""
+msgstr "Etter skrivebord"
 
 #: package/contents/ui/ConfigBehavior.qml:104
 #, kde-format
 msgid "By activity"
-msgstr ""
+msgstr "Etter aktivitet"
 
 #: package/contents/ui/ConfigBehavior.qml:110
 #, kde-format
 msgid "Keep launchers separate"
-msgstr ""
+msgstr "Hold startere atskilte"
 
 #: package/contents/ui/ConfigBehavior.qml:121
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Clicking active task:"
-msgstr ""
+msgstr "Trykk på gjeldende oppgave:"
 
 #: package/contents/ui/ConfigBehavior.qml:122
 #, kde-format
 msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
-msgstr ""
+msgstr "Minimerer oppgaven"
 
 #: package/contents/ui/ConfigBehavior.qml:127
 #, kde-format
 msgid "Middle-clicking any task:"
-msgstr ""
+msgstr "Midtklikk på en oppgave:"
 
 #: package/contents/ui/ConfigBehavior.qml:131
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task does nothing'"
 msgid "Does nothing"
-msgstr ""
+msgstr "Gjør ingenting"
 
 #: package/contents/ui/ConfigBehavior.qml:132
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task closes window or group'"
 msgid "Closes window or group"
-msgstr ""
+msgstr "Lukker vinduet/gruppa"
 
 #: package/contents/ui/ConfigBehavior.qml:133
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task opens a new window'"
 msgid "Opens a new window"
-msgstr ""
+msgstr "Åpner nytt vindu"
 
 #: package/contents/ui/ConfigBehavior.qml:134
 #, kde-format
@@ -280,13 +282,13 @@ msgctxt ""
 "Part of a sentence: 'Middle-clicking any task minimizes/restores window or "
 "group'"
 msgid "Minimizes/Restores window or group"
-msgstr ""
+msgstr "Minimerer/gjenoppreter vinduet/gruppa"
 
 #: package/contents/ui/ConfigBehavior.qml:135
 #, kde-format
 msgctxt "Part of a sentence: 'Middle-clicking any task toggles grouping'"
 msgid "Toggles grouping"
-msgstr ""
+msgstr "Slår av/på gruppering"
 
 #: package/contents/ui/ConfigBehavior.qml:136
 #, kde-format
@@ -294,158 +296,158 @@ msgctxt ""
 "Part of a sentence: 'Middle-clicking any task brings it to the current "
 "virtual desktop'"
 msgid "Brings it to the current virtual desktop"
-msgstr ""
+msgstr "Henter oppgaven til gjeldende virtuelle skrivebord"
 
 #: package/contents/ui/ConfigBehavior.qml:146
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Mouse wheel:"
-msgstr ""
+msgstr "Musehjul:"
 
 #: package/contents/ui/ConfigBehavior.qml:147
 #, kde-format
 msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
-msgstr ""
+msgstr "Blar gjennom oppgaver"
 
 #: package/contents/ui/ConfigBehavior.qml:156
 #, kde-format
 msgid "Skip minimized tasks"
-msgstr ""
+msgstr "Hopp over minimerte oppgaver"
 
 #: package/contents/ui/ConfigBehavior.qml:167
 #, kde-format
 msgid "Show only tasks:"
-msgstr ""
+msgstr "Vis bare oppgaver:"
 
 #: package/contents/ui/ConfigBehavior.qml:168
 #, kde-format
 msgid "From current screen"
-msgstr ""
+msgstr "Fra gjeldende skjerm"
 
 #: package/contents/ui/ConfigBehavior.qml:173
 #, kde-format
 msgid "From current desktop"
-msgstr ""
+msgstr "Fra gjeldende skrivebord"
 
 #: package/contents/ui/ConfigBehavior.qml:178
 #, kde-format
 msgid "From current activity"
-msgstr ""
+msgstr "Fra gjeldende aktivitet"
 
 #: package/contents/ui/ConfigBehavior.qml:183
 #, kde-format
 msgid "That are minimized"
-msgstr ""
+msgstr "Som er minimerte"
 
 #: package/contents/ui/ConfigBehavior.qml:192
 #, kde-format
 msgid "When panel is hidden:"
-msgstr ""
+msgstr "Når panelet er skjult:"
 
 #: package/contents/ui/ConfigBehavior.qml:193
 #, kde-format
 msgid "Unhide when a window wants attention"
-msgstr ""
+msgstr "Vis panelet når et vindu ber om oppmerksomhet"
 
 #: package/contents/ui/ConfigBehavior.qml:205
 #, kde-format
 msgid "New tasks appear:"
-msgstr ""
+msgstr "Nye oppgaver lages:"
 
 #: package/contents/ui/ConfigBehavior.qml:209
 #, kde-format
 msgid "On the bottom"
-msgstr ""
+msgstr "Nederst"
 
 #: package/contents/ui/ConfigBehavior.qml:213
 #: package/contents/ui/ConfigBehavior.qml:233
 #, kde-format
 msgid "To the right"
-msgstr ""
+msgstr "Til høyre"
 
 #: package/contents/ui/ConfigBehavior.qml:215
 #: package/contents/ui/ConfigBehavior.qml:231
 #, kde-format
 msgid "To the left"
-msgstr ""
+msgstr "Til venstre"
 
 #: package/contents/ui/ConfigBehavior.qml:227
 #, kde-format
 msgid "On the Top"
-msgstr ""
+msgstr "Øverst"
 
 #: package/contents/ui/ContextMenu.qml:95
 #, kde-format
 msgid "Places"
-msgstr ""
+msgstr "Steder"
 
 #: package/contents/ui/ContextMenu.qml:100
 #, kde-format
 msgid "Recent Files"
-msgstr ""
+msgstr "Nylig brukte filer"
 
 #: package/contents/ui/ContextMenu.qml:105
 #, kde-format
 msgid "Actions"
-msgstr ""
+msgstr "Handlinger"
 
 #: package/contents/ui/ContextMenu.qml:170
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
-msgstr ""
+msgstr "Forrige spor"
 
 #: package/contents/ui/ContextMenu.qml:184
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
-msgstr ""
+msgstr "Pause"
 
 #: package/contents/ui/ContextMenu.qml:184
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
-msgstr ""
+msgstr "Spill"
 
 #: package/contents/ui/ContextMenu.qml:202
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
-msgstr ""
+msgstr "Neste spor"
 
 #: package/contents/ui/ContextMenu.qml:213
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
-msgstr ""
+msgstr "Stopp"
 
 #: package/contents/ui/ContextMenu.qml:233
 #, kde-format
 msgctxt "Quit media player app"
 msgid "Quit"
-msgstr ""
+msgstr "Avslutt"
 
 #: package/contents/ui/ContextMenu.qml:248
 #, kde-format
 msgctxt "Open or bring to the front window of media player app"
 msgid "Restore"
-msgstr ""
+msgstr "Gjenopprett"
 
 #: package/contents/ui/ContextMenu.qml:274
 #, kde-format
 msgid "Mute"
-msgstr ""
+msgstr "Demp"
 
 #: package/contents/ui/ContextMenu.qml:285
 #, kde-format
 msgid "Open New Window"
-msgstr ""
+msgstr "Åpne nytt vindu"
 
 #: package/contents/ui/ContextMenu.qml:301
 #, kde-format
 msgid "Move to &Desktop"
-msgstr ""
+msgstr "Flytt til &skrivebord"
 
 #: package/contents/ui/ContextMenu.qml:325
 #, kde-format
@@ -461,7 +463,7 @@ msgstr "&Alle skrivebord"
 #, kde-format
 msgctxt "1 = number of desktop, 2 = desktop name"
 msgid "&%1 %2"
-msgstr ""
+msgstr "&%1 %2"
 
 #: package/contents/ui/ContextMenu.qml:362
 #, kde-format
@@ -471,12 +473,12 @@ msgstr "&Nytt skrivebord"
 #: package/contents/ui/ContextMenu.qml:382
 #, kde-format
 msgid "Show in &Activities"
-msgstr ""
+msgstr "Vis i &aktiviteter"
 
 #: package/contents/ui/ContextMenu.qml:406
 #, kde-format
 msgid "Add To Current Activity"
-msgstr ""
+msgstr "Legg til i gjeldende aktivitet"
 
 #: package/contents/ui/ContextMenu.qml:416
 #, kde-format
@@ -486,43 +488,43 @@ msgstr "Alle aktiviteter"
 #: package/contents/ui/ContextMenu.qml:474
 #, kde-format
 msgid "Move to %1"
-msgstr ""
+msgstr "Flytt til %1"
 
 #: package/contents/ui/ContextMenu.qml:502
 #: package/contents/ui/ContextMenu.qml:519
 #, kde-format
 msgid "&Pin to Task Manager"
-msgstr ""
+msgstr "&Fest til oppgavelinja"
 
 #: package/contents/ui/ContextMenu.qml:572
 #, kde-format
 msgid "On All Activities"
-msgstr ""
+msgstr "På alle aktiviteter"
 
 #: package/contents/ui/ContextMenu.qml:578
 #, kde-format
 msgid "On The Current Activity"
-msgstr ""
+msgstr "På gjeldende aktivitet"
 
 #: package/contents/ui/ContextMenu.qml:603
 #, kde-format
 msgid "Unpin from Task Manager"
-msgstr ""
+msgstr "Løs fra oppgavelinje"
 
 #: package/contents/ui/ContextMenu.qml:618
 #, kde-format
 msgid "More"
-msgstr ""
+msgstr "Mer"
 
 #: package/contents/ui/ContextMenu.qml:627
 #, kde-format
 msgid "&Move"
-msgstr ""
+msgstr "&Flytt"
 
 #: package/contents/ui/ContextMenu.qml:636
 #, kde-format
 msgid "Re&size"
-msgstr ""
+msgstr "Endre &størrelse"
 
 #: package/contents/ui/ContextMenu.qml:650
 #, kde-format
@@ -537,17 +539,17 @@ msgstr "Mi&nimer"
 #: package/contents/ui/ContextMenu.qml:674
 #, kde-format
 msgid "Keep &Above Others"
-msgstr ""
+msgstr "Hold &over andre"
 
 #: package/contents/ui/ContextMenu.qml:684
 #, kde-format
 msgid "Keep &Below Others"
-msgstr ""
+msgstr "Hold &under andre"
 
 #: package/contents/ui/ContextMenu.qml:696
 #, kde-format
 msgid "&Fullscreen"
-msgstr ""
+msgstr "&Fullskjerm"
 
 #: package/contents/ui/ContextMenu.qml:708
 #, kde-format
@@ -557,97 +559,97 @@ msgstr "&Rull opp"
 #: package/contents/ui/ContextMenu.qml:724
 #, kde-format
 msgid "Allow this program to be grouped"
-msgstr "Tillat dette programmet å bli gruppert"
+msgstr "Tillat gruppering av programmet"
 
 #: package/contents/ui/ContextMenu.qml:772
 #, kde-format
 msgid "&Close"
-msgstr ""
+msgstr "&Lukk"
 
 #: package/contents/ui/Task.qml:83
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
-msgstr ""
+msgstr "Start %1"
 
 #: package/contents/ui/Task.qml:88
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
 msgid_plural "There are %1 new messages."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Du har %1 ny melding."
+msgstr[1] "Du har %1 nye meldinger."
 
 #: package/contents/ui/Task.qml:97
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
-msgstr ""
+msgstr "Vis oppgave-hjelpeboble for %1"
 
 #: package/contents/ui/Task.qml:103
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
-msgstr ""
+msgstr "Vis vinduer side ved side for %1"
 
 #: package/contents/ui/Task.qml:108
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
-msgstr ""
+msgstr "Vis tekstliste med vinduer for %1"
 
 #: package/contents/ui/Task.qml:112
 #, kde-format
 msgid "Activate %1"
-msgstr ""
+msgstr "Slå på %1"
 
 #: package/contents/ui/ToolTipInstance.qml:356
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
-msgstr ""
+msgstr "Slå av lyddemping på %1"
 
 #: package/contents/ui/ToolTipInstance.qml:357
 #, kde-format
 msgctxt "button to mute app"
 msgid "Mute %1"
-msgstr ""
+msgstr "Demp lyden på %1"
 
 #: package/contents/ui/ToolTipInstance.qml:380
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
-msgstr ""
+msgstr "Juster lydstyrken for %1"
 
 #: package/contents/ui/ToolTipInstance.qml:396
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: package/contents/ui/ToolTipInstance.qml:399
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
-msgstr ""
+msgstr "100 %"
 
 #: package/contents/ui/ToolTipInstance.qml:423
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "On %1"
-msgstr ""
+msgstr "På %1"
 
 #: package/contents/ui/ToolTipInstance.qml:426
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
-msgstr ""
+msgstr "Festet til alle skrivebordene"
 
 #: package/contents/ui/ToolTipInstance.qml:437
 #, kde-format
 msgctxt "Which virtual desktop a window is currently on"
 msgid "Available on all activities"
-msgstr "Tilgjengelig på alle aktiviteter"
+msgstr "Tilgjengelig i alle aktiviteter"
 
 #: package/contents/ui/ToolTipInstance.qml:459
 #, kde-format
@@ -666,44 +668,44 @@ msgstr "Tilgjengelig på %1"
 msgctxt "Show all user Places"
 msgid "%1 more Place"
 msgid_plural "%1 more Places"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 sted til"
+msgstr[1] "%1 steder til"
 
 #: plugin/backend.cpp:468
 #, kde-format
 msgid "Recent Downloads"
-msgstr ""
+msgstr "Nylige nedlastinger"
 
 #: plugin/backend.cpp:470
 #, kde-format
 msgid "Recent Connections"
-msgstr ""
+msgstr "Nylig brukte tilkoblinger"
 
 #: plugin/backend.cpp:472
 #, kde-format
 msgid "Recent Places"
-msgstr ""
+msgstr "Nylig brukte steder"
 
 #: plugin/backend.cpp:481
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
-msgstr ""
+msgstr "Glem nylige nedlastinger"
 
 #: plugin/backend.cpp:483
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
-msgstr ""
+msgstr "Glem nylig brukte tilkoblinger"
 
 #: plugin/backend.cpp:485
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
-msgstr ""
+msgstr "Glem nylig brukte steder"
 
 #: plugin/backend.cpp:487
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
-msgstr ""
+msgstr "Glem nylig brukte filer"

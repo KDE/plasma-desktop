@@ -1,0 +1,31 @@
+# Translation of plasma_runner_kwin to Norwegian Bokmål
+#
+# SPDX-FileCopyrightText: 2025 Martin Hansen <mh306602@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-15 00:47+0000\n"
+"PO-Revision-Date: 2025-03-25 07:18+0100\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
+"Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
+"Language: nb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.12.3\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: kwin-runner.cpp:41
+#, kde-format
+msgid "Open KWin debug console"
+msgstr "Åpne feilsøkingskonsoll for KWin"
+
+#: kwin-runner.cpp:72
+#, kde-format
+msgid "Opens the KWin (Plasma Window Manager) debug console."
+msgstr "Åpne feilsøkingskonsoll til KWin (vindusbehandleren i Plasma)."

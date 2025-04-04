@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-04 00:47+0000\n"
-"PO-Revision-Date: 2015-02-06 22:25+0100\n"
-"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"PO-Revision-Date: 2025-03-29 13:51+0100\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -24,22 +24,22 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Knut Yrvin"
+msgstr "Knut Yrvin,Martin Hansen"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "knut.yrvin@gmail.com"
+msgstr "knut.yrvin@gmail.com,mh306602@gmail.com"
 
 #: kcmkded.cpp:48
 #, kde-format
 msgid "Background Services"
-msgstr ""
+msgstr "Bakgrunnstjenester"
 
 #: kcmkded.cpp:52
 #, kde-format
 msgid "(c) 2002 Daniel Molkentin, (c) 2020 Kai Uwe Broulik"
-msgstr ""
+msgstr "© 2002 Daniel Molkentin, © 2020 Kai Uwe Broulik"
 
 #: kcmkded.cpp:53
 #, kde-format
@@ -49,32 +49,33 @@ msgstr "Daniel Molkentin"
 #: kcmkded.cpp:54
 #, kde-format
 msgid "Kai Uwe Broulik"
-msgstr ""
+msgstr "Kai Uwe Broulik"
 
 #: kcmkded.cpp:125
 #, kde-format
 msgid "Failed to stop service: %1"
-msgstr ""
+msgstr "Klarte ikke stoppe tjenesten: %1"
 
 #: kcmkded.cpp:127
 #, kde-format
 msgid "Failed to start service: %1"
-msgstr ""
+msgstr "Klarte ikke starte tjenesten: %1"
 
 #: kcmkded.cpp:134
 #, kde-format
 msgid "Failed to stop service."
-msgstr ""
+msgstr "Klarte ikke stoppe tjenesten."
 
 #: kcmkded.cpp:136
 #, kde-format
 msgid "Failed to start service."
-msgstr ""
+msgstr "Klarte ikke starte tjenesten."
 
 #: kcmkded.cpp:234
 #, kde-format
 msgid "Failed to notify KDE Service Manager (kded5) of saved changed: %1"
 msgstr ""
+"Klarte ikke varsle KDE-tjenestebehandleren (kded5) om lagrede endringer: %1"
 
 #: package/contents/ui/main.qml:19
 #, kde-format
@@ -88,6 +89,14 @@ msgid ""
 "vital for Plasma; do not deactivate services if you  do not know what you "
 "are doing.</b></p>"
 msgstr ""
+"<p>Denne modulen gir en oversikt over programtillegene til KDE-Daemon, og "
+"kalt KDE-tjenester. Det finnes to typer tjenester:</p><ul><li>Tjenester som "
+"startes ved oppstart.</li><li>Tjenester som startes når de trengs.</li></"
+"ul><p>Tjenester av den siste typen blir bare vist her som en oversikt, mens "
+"oppstartstjenestene kan du starte og stoppe. Du kan og velge hvilke "
+"tjenester som skal startes ved innlogging.</p><p><b>Vær varsom, da enkelte "
+"tjenester må være på plass for at Plasma skal virke skikkelig. Slå ikke av "
+"tjenester dersom du ikke vet hva du gjør.</b></p>"
 
 #: package/contents/ui/main.qml:38
 #, kde-format
@@ -95,6 +104,8 @@ msgid ""
 "The background services manager (kded5) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
+"Behandleren for bakgrunnstjenester (kded5) kjører ikke. Se til at den er "
+"installert riktig."
 
 #: package/contents/ui/main.qml:47
 #, kde-format
@@ -102,6 +113,8 @@ msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
 msgstr ""
+"Noen tjenester slår seg selv automatisk av dersom de blir manuelt startet "
+"når det ikke er bruk for de."
 
 #: package/contents/ui/main.qml:56
 #, kde-format
@@ -109,23 +122,25 @@ msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded5) was restarted to apply your changes."
 msgstr ""
+"Noen tjenester startes/stoppes automatisk når behandleren for "
+"bakgrunnstjenester (kded5) blir startet på nytt for å ta i bruk endringene."
 
 #: package/contents/ui/main.qml:98
 #, kde-format
 msgid "All Services"
-msgstr ""
+msgstr "Alle tjenester"
 
 #: package/contents/ui/main.qml:99
 #, kde-format
 msgctxt "List running services"
 msgid "Running"
-msgstr ""
+msgstr "Kjører"
 
 #: package/contents/ui/main.qml:100
 #, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
-msgstr ""
+msgstr "Kjører ikke"
 
 #: package/contents/ui/main.qml:136
 #, kde-format
@@ -140,7 +155,7 @@ msgstr "Når-det-trengs-tjenester"
 #: package/contents/ui/main.qml:154
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
-msgstr ""
+msgstr "Slå av/på automatisk lasting av tjenesten ved oppstart"
 
 #: package/contents/ui/main.qml:221
 #, kde-format
@@ -155,9 +170,9 @@ msgstr "Kjører"
 #: package/contents/ui/main.qml:240
 #, kde-format
 msgid "Stop Service"
-msgstr ""
+msgstr "Stopp tjeneste"
 
 #: package/contents/ui/main.qml:240
 #, kde-format
 msgid "Start Service"
-msgstr ""
+msgstr "Start tjeneste"

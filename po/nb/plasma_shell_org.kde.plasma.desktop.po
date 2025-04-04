@@ -6,42 +6,46 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-28 02:41+0000\n"
-"PO-Revision-Date: 2024-03-09 12:44+0100\n"
-"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"PO-Revision-Date: 2025-03-30 09:51+0200\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.12.3\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
 #: contents/activitymanager/ActivityItem.qml:212
 msgid "Currently being used"
-msgstr ""
+msgstr "Blir brukt nå"
 
 #: contents/activitymanager/ActivityItem.qml:252
 msgid ""
 "Move to\n"
 "this activity"
 msgstr ""
+"Flytt til denne\n"
+"aktiviteten"
 
 #: contents/activitymanager/ActivityItem.qml:282
 msgid ""
 "Show also\n"
 "in this activity"
 msgstr ""
+"Vis og i denne\n"
+"aktiviteten"
 
 #: contents/activitymanager/ActivityItem.qml:342
 msgid "Configure"
-msgstr ""
+msgstr "Sett opp"
 
 #: contents/activitymanager/ActivityItem.qml:359
 msgid "Stop activity"
-msgstr ""
+msgstr "Stopp aktivitet"
 
 #: contents/activitymanager/ActivityList.qml:143
 msgid "Stopped activities:"
@@ -49,7 +53,7 @@ msgstr "Stoppede aktiviteter:"
 
 #: contents/activitymanager/ActivityManager.qml:127
 msgid "Create activity…"
-msgstr ""
+msgstr "Legg til aktivitet …"
 
 #: contents/activitymanager/Heading.qml:61
 msgid "Activities"
@@ -57,7 +61,7 @@ msgstr "Aktiviteter"
 
 #: contents/activitymanager/StoppedActivityItem.qml:133
 msgid "Configure activity"
-msgstr ""
+msgstr "Sett opp aktivitet"
 
 #: contents/activitymanager/StoppedActivityItem.qml:148
 msgid "Delete"
@@ -65,37 +69,37 @@ msgstr "Slett"
 
 #: contents/applet/AppletError.qml:123
 msgid "Sorry! There was an error loading %1."
-msgstr ""
+msgstr "Det oppstod dessverre en feil ved lasting av %1."
 
 #: contents/applet/AppletError.qml:161
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Kopier til utklippstavla"
 
 #: contents/applet/AppletError.qml:184
 msgid "View Error Details…"
-msgstr ""
+msgstr "Vis feildetaljer …"
 
 #: contents/applet/CompactApplet.qml:71
 msgid "Open %1"
-msgstr ""
+msgstr "Åpne %1"
 
 #: contents/configuration/AboutPlugin.qml:19
 #: contents/configuration/AppletConfiguration.qml:245
 msgid "About"
-msgstr ""
+msgstr "Om"
 
 #: contents/configuration/AboutPlugin.qml:47
 msgid "Send an email to %1"
-msgstr ""
+msgstr "Send e-post til %1"
 
 #: contents/configuration/AboutPlugin.qml:61
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
-msgstr ""
+msgstr "Åpne hjemmeside: %1"
 
 #: contents/configuration/AboutPlugin.qml:125
 msgid "Copyright"
-msgstr ""
+msgstr "Opphavsrett"
 
 #: contents/configuration/AboutPlugin.qml:145 contents/explorer/Tooltip.qml:93
 msgid "License:"
@@ -104,31 +108,31 @@ msgstr "Lisens:"
 #: contents/configuration/AboutPlugin.qml:148
 msgctxt "@info:whatsthis"
 msgid "View license text"
-msgstr ""
+msgstr "Vis lisenstekst"
 
 #: contents/configuration/AboutPlugin.qml:160
 msgid "Authors"
-msgstr ""
+msgstr "Opphavspersoner"
 
 #: contents/configuration/AboutPlugin.qml:170
 msgid "Credits"
-msgstr ""
+msgstr "Bidragsytere"
 
 #: contents/configuration/AboutPlugin.qml:181
 msgid "Translators"
-msgstr ""
+msgstr "Oversettere"
 
 #: contents/configuration/AboutPlugin.qml:195
 msgid "Report a Bug…"
-msgstr ""
+msgstr "Meld fra om feil …"
 
 #: contents/configuration/AppletConfiguration.qml:56
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Hurtigtaster"
 
 #: contents/configuration/AppletConfiguration.qml:294
 msgid "Apply Settings"
-msgstr "Ta i bruk innstillingene"
+msgstr "Bruk innstillingene"
 
 #: contents/configuration/AppletConfiguration.qml:295
 msgid ""
@@ -153,27 +157,27 @@ msgstr "Avbryt"
 
 #: contents/configuration/ConfigCategoryDelegate.qml:27
 msgid "Open configuration page"
-msgstr ""
+msgstr "Åpne oppsettsiden"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:21
 msgid "Left-Button"
-msgstr "Venstre knapp"
+msgstr "Venstreknapp"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:22
 msgid "Right-Button"
-msgstr "Høyre knapp"
+msgstr "Høyreknapp"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:23
 msgid "Middle-Button"
-msgstr "Midtknappen"
+msgstr "Midtknapp"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:24
 msgid "Back-Button"
-msgstr ""
+msgstr "Tilbakeknapp"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:25
 msgid "Forward-Button"
-msgstr ""
+msgstr "Fremknapp"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:27
 msgid "Vertical-Scroll"
@@ -202,12 +206,12 @@ msgstr "Meta"
 #: contents/configuration/ConfigurationContainmentActions.qml:95
 msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
 msgid "+"
-msgstr ""
+msgstr "+"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:167
 msgctxt "@title"
 msgid "About"
-msgstr ""
+msgstr "Om"
 
 #: contents/configuration/ConfigurationContainmentActions.qml:182
 #: contents/configuration/MouseEventInputButton.qml:13
@@ -216,11 +220,11 @@ msgstr "Legg til handling"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:78
 msgid "Layout changes have been restricted by the system administrator"
-msgstr ""
+msgstr "Oppsettsendringer er låste av systemadministratoren"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:93
 msgid "Layout:"
-msgstr "Utforming:"
+msgstr "Oppsett:"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:107
 msgid "Wallpaper type:"
@@ -228,23 +232,23 @@ msgstr "Type bakgrunn:"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:127
 msgid "Get New Plugins…"
-msgstr ""
+msgstr "Hent nye programtillegg …"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:195
 msgid "Layout changes must be applied before other changes can be made"
-msgstr ""
+msgstr "Du ma ta i bruk oppsettsendringene før du kan gjøre endringer"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:199
 msgid "Apply Now"
-msgstr ""
+msgstr "Bruk nå"
 
 #: contents/configuration/ConfigurationShortcuts.qml:16
 msgid "Shortcuts"
-msgstr ""
+msgstr "Snarveier"
 
 #: contents/configuration/ConfigurationShortcuts.qml:28
 msgid "This shortcut will activate the applet as though it had been clicked."
-msgstr ""
+msgstr "Denne hurtigtasten vil starte skjermelementet som om du trykte på det."
 
 #: contents/configuration/ContainmentConfiguration.qml:29
 msgid "Wallpaper"
@@ -266,7 +270,7 @@ msgstr "Fjern panelet"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:47
 msgid "Panel Alignment"
-msgstr "Panelinnretting"
+msgstr "Panelplassering"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:63
 msgid "Top"
@@ -310,66 +314,68 @@ msgstr "Vinduer går under"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:137
 msgid "Opacity"
-msgstr ""
+msgstr "Gjennomsiktighet"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:154
 msgid "Adaptive"
-msgstr ""
+msgstr "Adaptiv"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:161
 msgid "Opaque"
-msgstr ""
+msgstr "Ugjennomsiktig"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:168
 msgid "Translucent"
-msgstr ""
+msgstr "Gjennomsiktig"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:176
 msgid "Maximize Panel"
-msgstr "Maksimer panel"
+msgstr "Maksimer panelet"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:184
 msgid "Floating Panel"
-msgstr ""
+msgstr "Svevende panel"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:200
 msgid "Shortcut"
-msgstr ""
+msgstr "Snarvei"
 
 #: contents/configuration/panelconfiguration/MoreSettingsMenu.qml:213
 msgid "Press this keyboard shortcut to move focus to the Panel"
-msgstr ""
+msgstr "Bruk hurtigtasten til å flytte fokuset til panelet"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:20
 msgid "Drag to change maximum height."
-msgstr ""
+msgstr "Dra for å endre makshøyden."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:20
 msgid "Drag to change maximum width."
-msgstr ""
+msgstr "Dra for å endre maksbredden."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:20
 #: contents/configuration/panelconfiguration/Ruler.qml:21
 msgid "Double click to reset."
-msgstr ""
+msgstr "Dobbeltklikk for å tilbakestille."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:21
 msgid "Drag to change minimum height."
-msgstr ""
+msgstr "Dra for å endre minimumshøyden."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:21
 msgid "Drag to change minimum width."
-msgstr ""
+msgstr "Dra for å endre minimumsbredden."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:69
 msgid ""
 "Drag to change position on this screen edge.\n"
 "Double click to reset."
 msgstr ""
+"Dra for å endre plassering på denne skjermkanten.\n"
+"Dobbeltklikk for å tilbakestille."
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:24
 msgid "Add Widgets…"
-msgstr ""
+msgstr "Legg til elementer …"
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:25
 msgid "Add Spacer"
@@ -377,25 +383,25 @@ msgstr "Legg til avstandsholder"
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:26
 msgid "More Options…"
-msgstr ""
+msgstr "Flere valg …"
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:222
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Drag to move"
-msgstr ""
+msgstr "Dra for å flytte"
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:261
 msgctxt "@info:tooltip"
 msgid "Use arrow keys to move the panel"
-msgstr ""
+msgstr "Bruk piltastene til å flytte panelet"
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:282
 msgid "Panel width:"
-msgstr ""
+msgstr "Panelbredde:"
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:282
 msgid "Panel height:"
-msgstr ""
+msgstr "Panelhøyde:"
 
 #: contents/configuration/panelconfiguration/ToolBar.qml:402
 #: contents/configuration/ShellContainmentConfiguration.qml:43
@@ -404,32 +410,32 @@ msgstr "Lukk"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 msgid "Panels and Desktops Management"
-msgstr ""
+msgstr "Behandling av paneler og skrivebord"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 msgid ""
 "You can drag Panels and Desktops around to move them to different screens."
-msgstr ""
+msgstr "Du kan dra paneler og skrivebord for å flytte de mellom skjermene."
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:178
 msgid "Swap with Desktop on Screen %1"
-msgstr ""
+msgstr "Bytt til skrivebordet på skjerm %1"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:179
 msgid "Move to Screen %1"
-msgstr ""
+msgstr "Flytt til skjerm %1"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:193
 msgid "Remove Desktop"
-msgstr ""
+msgstr "Fjern skrivebord"
 
 #: contents/configuration/shellcontainmentconfiguration/Delegate.qml:267
 msgid "%1 (primary)"
-msgstr ""
+msgstr "%1 (hovedskjerm)"
 
 #: contents/explorer/AppletAlternatives.qml:63
 msgid "Alternative Widgets"
-msgstr "Alternative skjermelementer"
+msgstr "Alternative elementer"
 
 #: contents/explorer/AppletAlternatives.qml:163
 msgid "Switch"
@@ -437,19 +443,19 @@ msgstr "Bytt"
 
 #: contents/explorer/AppletDelegate.qml:175
 msgid "Undo uninstall"
-msgstr ""
+msgstr "Angre avinstallering"
 
 #: contents/explorer/AppletDelegate.qml:176
 msgid "Uninstall widget"
-msgstr ""
+msgstr "Avinstaller element"
 
 #: contents/explorer/Tooltip.qml:102
 msgid "Author:"
-msgstr "Forfatter:"
+msgstr "Laget av:"
 
 #: contents/explorer/Tooltip.qml:110
 msgid "Email:"
-msgstr "E-post:"
+msgstr "E-postadresse:"
 
 #: contents/explorer/Tooltip.qml:129
 msgid "Uninstall"
@@ -458,15 +464,15 @@ msgstr "Avinstaller"
 #: contents/explorer/WidgetExplorer.qml:134
 #: contents/explorer/WidgetExplorer.qml:245
 msgid "All Widgets"
-msgstr ""
+msgstr "Alle elementer"
 
 #: contents/explorer/WidgetExplorer.qml:199
 msgid "Widgets"
-msgstr "Elementer"
+msgstr "Skjermelementer"
 
 #: contents/explorer/WidgetExplorer.qml:207
 msgid "Get New Widgets…"
-msgstr ""
+msgstr "Hent nye element …"
 
 #: contents/explorer/WidgetExplorer.qml:256
 msgid "Categories"
@@ -474,8 +480,8 @@ msgstr "Kategorier"
 
 #: contents/explorer/WidgetExplorer.qml:339
 msgid "No widgets matched the search terms"
-msgstr ""
+msgstr "Ingen element samsvarer med søketeksten"
 
 #: contents/explorer/WidgetExplorer.qml:339
 msgid "No widgets available"
-msgstr ""
+msgstr "Ingen element er tilgjengelige"

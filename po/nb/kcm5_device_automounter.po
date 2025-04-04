@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-12-10 00:45+0000\n"
-"PO-Revision-Date: 2015-08-27 16:52+0200\n"
-"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"PO-Revision-Date: 2025-03-29 13:39+0100\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -22,12 +22,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Bjørn Steensrud"
+msgstr "Bjørn Steensrud,Martin Hansen"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "bjornst@skogkatt.homelinux.org"
+msgstr "bjornst@skogkatt.homelinux.org,mh306602@gmail.com"
 
 #: DeviceAutomounterKCM.cpp:38
 #, kde-format
@@ -47,7 +47,7 @@ msgstr "Trever Fischer"
 #: DeviceAutomounterKCM.cpp:43
 #, kde-format
 msgid "Original Author"
-msgstr "Opprinnelig forfatter"
+msgstr "Opprinnelig opphavsperson"
 
 #: DeviceAutomounterKCM.cpp:44
 #, kde-format
@@ -57,7 +57,7 @@ msgstr "Kai Uwe Broulik"
 #: DeviceAutomounterKCM.cpp:44
 #, kde-format
 msgid "Plasma 5 Port"
-msgstr "Plasma 5 Port"
+msgstr "Porting til Plasma 5"
 
 #. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
 #: DeviceAutomounterKCM.ui:17
@@ -68,6 +68,11 @@ msgid ""
 "\"Mount all removable media at login\" is unchecked. The same applies for "
 "\"Automount on Attach\"."
 msgstr ""
+"Her er en oversikt over lagringsenheter som systemet kjenner til. Hvis du "
+"har krysset av for «Automonter ved innlogging», blir enheten automatisk "
+"montert selv om du ikke har krysset av for «Monter alle flyttbare "
+"lagringsmedium ved innlogging». Det samme gjelder «Automonter ved "
+"tilkopling»."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:54
@@ -79,11 +84,11 @@ msgid ""
 "system is set to only automatically mount familiar devices, the device will "
 "not be automatically mounted."
 msgstr ""
-"Om denne knappen trykkes vil de markerte enhetene bli «glemtx. Dette er bare "
-"nyttig dersom det er krysset av for «Monter automatisk bare enheter som har "
-"vært montert manuelt tidligere». Når en enhet er glemt og systemet er satt "
-"til å bare montere automatisk kjente enheter, så blir enheten ikke montert "
-"automatisk."
+"Trykk her hvis du ønsker at systemet skal «glemme» å ha satt noen av de "
+"valgte enhetene. Dette er bare nyttig hvis du har krysset av for «Bare "
+"monter automatisk flyttbare lagringsmedium som tidligere er monterte "
+"manuelt». Når en enhet er skjult, blir den ikke automatisk montert med "
+"mindre systemet er satt opp til å montere alle enheter automatisk."
 
 #. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:57
@@ -102,39 +107,46 @@ msgid ""
 "mounted the next time it is seen. Once they have been accessed, however, the "
 "device's contents will be automatically made available to the system."
 msgstr ""
+"Hvis det ikke er krysset av her, blir bare allerede kjente enheter "
+"automatisk monterte. En enhet er «kjent» om den tidligere er montert. For "
+"eksempel, om du kobler til en USB-mediespiller for å lade den, er ikke dette "
+"nok til å registrere den som «kjent». Hvis du ikke har åpnet opp for tilgang "
+"til filene på den, blir den ikke automatisk montert neste gang. Men hvis du "
+"har åpnet noen filer, blir dette husket, og innholdet blir automatisk gjort "
+"tilgjengelig neste gang du kobler enheten til."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
 #: DeviceAutomounterKCM.ui:70
 #, kde-format
 msgid "Automatically mount removable media that have never been mounted before"
-msgstr ""
+msgstr "Avmonter og lagringsmedium som aldri er monterte før"
 
 #: DeviceModel.cpp:52
 #, kde-format
 msgid "Automount Device"
-msgstr ""
+msgstr "Automonter enhet"
 
 #: DeviceModel.cpp:54
 #, kde-format
 msgctxt "As in automount on login"
 msgid "On Login"
-msgstr ""
+msgstr "Ved innlogging"
 
 #: DeviceModel.cpp:56
 #, kde-format
 msgctxt "As in automount on attach"
 msgid "On Attach"
-msgstr ""
+msgstr "Ved tilkobling"
 
 #: DeviceModel.cpp:258
 #, kde-format
 msgid "All Devices"
-msgstr ""
+msgstr "Alle enheter"
 
 #: DeviceModel.cpp:258
 #, kde-format
 msgid "All Known Devices"
-msgstr ""
+msgstr "Alle kjente enheter"
 
 #: DeviceModel.cpp:260
 #, kde-format

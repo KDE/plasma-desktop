@@ -7,16 +7,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-02 00:50+0000\n"
-"PO-Revision-Date: 2018-06-27 19:11+0100\n"
-"Last-Translator: Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail."
-"com>\n"
+"PO-Revision-Date: 2025-03-29 14:02+0100\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 24.12.3\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -24,51 +23,51 @@ msgstr ""
 #: package/contents/ui/main.qml:29
 #, kde-format
 msgid "Position on screen:"
-msgstr ""
+msgstr "Plassering:"
 
 #: package/contents/ui/main.qml:33
 #, kde-format
 msgid "Top"
-msgstr ""
+msgstr "Øverst"
 
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Center"
-msgstr ""
+msgstr "I midten"
 
 #: package/contents/ui/main.qml:53
 #, kde-format
 msgid "Activation:"
-msgstr ""
+msgstr "Start:"
 
 #: package/contents/ui/main.qml:56
 #, kde-format
 msgctxt "@option:check"
 msgid "Activate when pressing any key on the desktop"
-msgstr ""
+msgstr "Start ved tastetrykk på skrivebordet"
 
 #: package/contents/ui/main.qml:69
 #, kde-format
 msgid "History:"
-msgstr ""
+msgstr "Historikk:"
 
 #: package/contents/ui/main.qml:72
 #, kde-format
 msgctxt "@option:check"
 msgid "Remember past searches"
-msgstr ""
+msgstr "Husk tidligere søk"
 
 #: package/contents/ui/main.qml:83
 #, kde-format
 msgctxt "@option:check"
 msgid "Retain last search when re-opening"
-msgstr ""
+msgstr "Ta frem forrige søk ved gjenoppretting"
 
 #: package/contents/ui/main.qml:94
 #, kde-format
 msgctxt "@option:check"
 msgid "Activity-aware (last search and history)"
-msgstr ""
+msgstr "Aktivitetsbasert (forrige søk og historikk)"
 
 #: package/contents/ui/main.qml:109
 #, kde-format
@@ -79,33 +78,33 @@ msgstr "Tøm historikken"
 #, kde-format
 msgctxt "@action:button %1 activity name"
 msgid "Clear History for Activity \"%1\""
-msgstr ""
+msgstr "Tøm historikken for aktiviteten «%1»"
 
 #: package/contents/ui/main.qml:111
 #, kde-format
 msgid "Clear History…"
-msgstr ""
+msgstr "Tøm historikken …"
 
 #: package/contents/ui/main.qml:140
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for all activities"
 msgid "For all activities"
-msgstr ""
+msgstr "For alle aktivitetene"
 
 #: package/contents/ui/main.qml:153
 #, kde-format
 msgctxt "@item:inmenu delete krunner history for this activity"
 msgid "For activity \"%1\""
-msgstr ""
+msgstr "For aktiviteten «%1»"
 
 #: package/contents/ui/main.qml:170
 #, kde-format
 msgctxt "@label"
 msgid "Plugins:"
-msgstr ""
+msgstr "Programtillegg:"
 
 #: package/contents/ui/main.qml:174
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
-msgstr ""
+msgstr "Sett opp påslåtte søketillegg …"
