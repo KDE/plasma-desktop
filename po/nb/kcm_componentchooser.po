@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-26 00:40+0000\n"
-"PO-Revision-Date: 2009-05-09 11:54+0200\n"
-"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"PO-Revision-Date: 2025-03-29 13:20+0100\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: MagicPO 0.4\n"
+"X-Generator: Lokalize 24.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -24,89 +24,89 @@ msgstr ""
 #: applicationmodel.cpp:67
 #, kde-format
 msgid "Other…"
-msgstr ""
+msgstr "Annet …"
 
 #: components/componentchooserarchivemanager.cpp:15
 #, kde-format
 msgid "Select default archive manager"
-msgstr ""
+msgstr "Velg standard arkivbehandler"
 
 #: components/componentchooserbrowser.cpp:13
 #, kde-format
 msgid "Select default browser"
-msgstr ""
+msgstr "Velg standard nettleser"
 
 #: components/componentchooseremail.cpp:20
 #, kde-format
 msgid "Select default e-mail client"
-msgstr ""
+msgstr "Velg standard e-postprogram"
 
 #: components/componentchooserfilemanager.cpp:15
 #, kde-format
 msgid "Select default file manager"
-msgstr ""
+msgstr "Velg standard filbehandler"
 
 #: components/componentchoosergeo.cpp:13
 #, kde-format
 msgid "Select default map"
-msgstr ""
+msgstr "Velg standardkart"
 
 #: components/componentchooserimageviewer.cpp:15
 #, kde-format
 msgid "Select default image viewer"
-msgstr ""
+msgstr "Velg standard bildeviser"
 
 #: components/componentchoosermusicplayer.cpp:15
 #, kde-format
 msgid "Select default music player"
-msgstr ""
+msgstr "Velg standard musikkspiller"
 
 #: components/componentchooserpdfviewer.cpp:11
 #, kde-format
 msgid "Select default PDF viewer"
-msgstr ""
+msgstr "Velg standard PDF-viser"
 
 #: components/componentchoosertel.cpp:17
 #, kde-format
 msgid "Select default dialer application"
-msgstr ""
+msgstr "Velg standard telefonringer"
 
 #: components/componentchooserterminal.cpp:25
 #, kde-format
 msgid "Select default terminal emulator"
-msgstr ""
+msgstr "Velg standard terminalprogram"
 
 #: components/componentchoosertexteditor.cpp:15
 #, kde-format
 msgid "Select default text editor"
-msgstr ""
+msgstr "Velg standard skriveprogram"
 
 #: components/componentchooservideoplayer.cpp:15
 #, kde-format
 msgid "Select default video player"
-msgstr ""
+msgstr "Velg standard videospiller"
 
 #: ui/ComponentOverlay.qml:54
 #, kde-format
 msgid "Details"
-msgstr ""
+msgstr "Detaljer"
 
 #: ui/ComponentOverlay.qml:84
 #, kde-format
 msgid "This application can also open these file types:"
-msgstr ""
+msgstr "Dette prorammet kan og åpne disse filtypene:"
 
 #: ui/ComponentOverlay.qml:98
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 (Currently opens in %2)"
-msgstr ""
+msgstr "%1 (er nå åpnet i %2)"
 
 #: ui/ComponentOverlay.qml:111
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Open All in %1"
-msgstr ""
+msgstr "Åpne alle i %1"
 
 #: ui/ComponentOverlay.qml:130
 #, kde-format
@@ -114,17 +114,19 @@ msgid ""
 "This application does not advertise support for the following file types, "
 "but may be able to open them anyway:"
 msgstr ""
+"Dette programmet sier ikke at det støtter disse filtypene, men det kan være "
+"det likevel kan åpne de:"
 
 #: ui/ComponentOverlay.qml:147
 #, kde-format
 msgctxt "@action:button"
 msgid "Force All to Open in %1"
-msgstr ""
+msgstr "Tving alle til å åpnes i %1"
 
 #: ui/ComponentOverlay.qml:159
 #, kde-format
 msgid "Configure Manually…"
-msgstr ""
+msgstr "Sett opp manuelt …"
 
 #: ui/main.qml:17
 #, kde-format
@@ -132,101 +134,103 @@ msgid ""
 "’%1’ seems to not support the following mimetypes associated with this kind "
 "of application: %2"
 msgstr ""
+"«%1» ser ikke ut til å støtte disse MIME-typene knyttet til denne typen "
+"program: %2"
 
 #: ui/main.qml:34
 #, kde-format
 msgctxt "@info:status"
 msgid "This application may not be able to open all file types."
-msgstr ""
+msgstr "Dette programmet kan kanskje ikke åpne alle filtyper."
 
 #: ui/main.qml:36
 #, kde-format
 msgctxt "@action:button"
 msgid "View Details"
-msgstr ""
+msgstr "Vis detaljer"
 
 #: ui/main.qml:62
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
-msgstr ""
+msgstr "Internett"
 
 #: ui/main.qml:68
 #, kde-format
 msgid "Web browser:"
-msgstr ""
+msgstr "Nettleser:"
 
 #: ui/main.qml:82
 #, kde-format
 msgid "Email client:"
-msgstr ""
+msgstr "E-postprogram:"
 
 #: ui/main.qml:96
 #, kde-format
 msgctxt "Default phone app"
 msgid "Phone Numbers:"
-msgstr ""
+msgstr "Telefonnummer:"
 
 #: ui/main.qml:110
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
-msgstr ""
+msgstr "Multimedia"
 
 #: ui/main.qml:116
 #, kde-format
 msgid "Image viewer:"
-msgstr ""
+msgstr "Bildeviser:"
 
 #: ui/main.qml:130
 #, kde-format
 msgid "Music player:"
-msgstr ""
+msgstr "Musikkspiller:"
 
 #: ui/main.qml:144
 #, kde-format
 msgid "Video player:"
-msgstr ""
+msgstr "Videospiller:"
 
 #: ui/main.qml:158
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
-msgstr ""
+msgstr "Dokumenter"
 
 #: ui/main.qml:164
 #, kde-format
 msgid "Text editor:"
-msgstr ""
+msgstr "Skriveprogram:"
 
 #: ui/main.qml:179
 #, kde-format
 msgid "PDF viewer:"
-msgstr ""
+msgstr "PDF-viser:"
 
 #: ui/main.qml:193
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
-msgstr ""
+msgstr "Verktøy"
 
 #: ui/main.qml:199
 #, kde-format
 msgid "File manager:"
-msgstr ""
+msgstr "Filbehandler:"
 
 #: ui/main.qml:213
 #, kde-format
 msgid "Terminal emulator:"
-msgstr ""
+msgstr "Terminalemulator:"
 
 #: ui/main.qml:227
 #, kde-format
 msgid "Archive manager:"
-msgstr ""
+msgstr "Arkivbehandler:"
 
 #: ui/main.qml:241
 #, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
-msgstr ""
+msgstr "Kart:"

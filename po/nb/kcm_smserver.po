@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-25 02:37+0000\n"
-"PO-Revision-Date: 2009-02-19 21:56+0100\n"
-"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"PO-Revision-Date: 2025-03-30 08:53+0200\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 0.3\n"
+"X-Generator: Lokalize 24.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -23,53 +23,57 @@ msgstr ""
 #: smserversettings.kcfg:9
 #, kde-format
 msgid "Confirm logout"
-msgstr ""
+msgstr "Bekreft utlogging"
 
 #. i18n: ectx: label, entry (shutdownType), group (General)
 #: smserversettings.kcfg:13
 #, kde-format
 msgid "Default leave option"
-msgstr ""
+msgstr "Standardhandling ved avslutting"
 
 #. i18n: ectx: label, entry (loginMode), group (General)
 #: smserversettings.kcfg:22
 #, kde-format
 msgid "On login"
-msgstr ""
+msgstr "Ved innlogging"
 
 #. i18n: ectx: label, entry (excludeApps), group (General)
 #: smserversettings.kcfg:26
 #, kde-format
 msgid "Applications to be excluded from session"
-msgstr ""
+msgstr "Programmer som skal ekskluderes fra økta"
 
 #: ui/main.qml:30
 #, kde-format
 msgid "Failed to request restart to firmware setup: %1"
-msgstr ""
+msgstr "Feil ved forespørsel om omstart for fastvareoppsett: %1"
 
 #: ui/main.qml:31
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the UEFI setup screen."
 msgstr ""
+"Neste gang maskinen startes på nytt, vil den starte innstillingene for UEFI-"
+"oppsett."
 
 #: ui/main.qml:32
 #, kde-format
 msgid ""
 "Next time the computer is restarted, it will enter the firmware setup screen."
 msgstr ""
+"Neste gang maskinen startes på nytt, vil den starte innstillingene for "
+"fastvareoppsett."
 
 #: ui/main.qml:37
 #, kde-format
 msgid "Restart Now"
-msgstr ""
+msgstr "Start på nytt"
 
 #: ui/main.qml:46
 #, kde-format
 msgctxt "@title:group"
 msgid "General"
-msgstr ""
+msgstr "Generelt"
 
 #: ui/main.qml:51
 #, kde-format
@@ -77,7 +81,7 @@ msgctxt ""
 "@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "Ask for confirmation:"
-msgstr ""
+msgstr "Spør om bekreftelse:"
 
 #: ui/main.qml:52
 #, kde-format
@@ -85,30 +89,30 @@ msgctxt ""
 "@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "On shutdown, restart, and logout"
-msgstr ""
+msgstr "Ved avslåing, omstart og utlogging"
 
 #: ui/main.qml:63
 #, kde-format
 msgctxt "@title:group"
 msgid "Session Restore"
-msgstr ""
+msgstr "Øktgjenoppretting"
 
 #: ui/main.qml:71
 #, kde-format
 msgid "On login, launch apps that were open:"
-msgstr ""
+msgstr "Åpne ved innlogging programmer som var åpne:"
 
 #: ui/main.qml:72
 #, kde-format
 msgctxt "@option:radio Automatic style of session restoration"
 msgid "On last logout"
-msgstr ""
+msgstr "Ved siste utlogging"
 
 #: ui/main.qml:85
 #, kde-format
 msgctxt "@option:radio Manual style of session restoration"
 msgid "When session was manually saved"
-msgstr ""
+msgstr "Når økta ble manuelt lagret"
 
 #: ui/main.qml:94
 #, kde-kuit-format
@@ -119,6 +123,11 @@ msgid ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 msgstr ""
+"En knapp med teksten <interface>Lagre økt</interface> vises i "
+"<interface>programstarter</interface>-menyen. Når du trykker på knappen, vil "
+"Plasma huske programmene som er åpne og gjenopprette de ved neste "
+"innlogging. Trykk på knappen når du vil oppdatere hvilke programmer som skal "
+"huskes."
 
 #: ui/main.qml:99
 #, kde-format
@@ -127,12 +136,12 @@ msgctxt ""
 "restoration, whereby the windows that were open on logout are re-opened on "
 "the next login"
 msgid "Start with an empty session"
-msgstr ""
+msgstr "Start med tom økt"
 
 #: ui/main.qml:113
 #, kde-format
 msgid "Ignored applications:"
-msgstr ""
+msgstr "Ignorer disse programmene:"
 
 #: ui/main.qml:132
 #, kde-format
@@ -142,12 +151,16 @@ msgid ""
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
+"Skriv inn navn på skrivebords-ID-filer eller X11-programfiler (skilte med "
+"komma eller kolon, for eksempel «xterm:org.kde.konsole.desktop» eller «xterm,"
+"org.kde.konsole.desktop») du vil hindre at skal startes automatisk sammen "
+"med andre programmer autostartet fra tidligere økter."
 
 #: ui/main.qml:138
 #, kde-format
 msgctxt "@title:group"
 msgid "Firmware"
-msgstr ""
+msgstr "Fastvare"
 
 #: ui/main.qml:144
 #, kde-format
@@ -155,16 +168,16 @@ msgctxt ""
 "@label:check part of a sentence: After next restart enter UEFI/Firmware "
 "setup screen"
 msgid "After next restart:"
-msgstr ""
+msgstr "Etter neste omstart:"
 
 #: ui/main.qml:145
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter UEFI setup screen"
-msgstr ""
+msgstr "Gå til UEFI-oppsettmenyen"
 
 #: ui/main.qml:146
 #, kde-format
 msgctxt "@option:check"
 msgid "Enter firmware setup screen"
-msgstr ""
+msgstr "Gå til fastvareoppsett-skjermen"

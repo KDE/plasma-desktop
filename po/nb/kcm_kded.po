@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: kcmkded\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-29 00:40+0000\n"
-"PO-Revision-Date: 2015-02-06 22:25+0100\n"
-"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"PO-Revision-Date: 2025-03-29 13:51+0100\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -24,27 +24,28 @@ msgstr ""
 #: kcmkded.cpp:115
 #, kde-format
 msgid "Failed to stop service: %1"
-msgstr ""
+msgstr "Klarte ikke stoppe tjenesten: %1"
 
 #: kcmkded.cpp:117
 #, kde-format
 msgid "Failed to start service: %1"
-msgstr ""
+msgstr "Klarte ikke starte tjenesten: %1"
 
 #: kcmkded.cpp:124
 #, kde-format
 msgid "Failed to stop service."
-msgstr ""
+msgstr "Klarte ikke stoppe tjenesten."
 
 #: kcmkded.cpp:126
 #, kde-format
 msgid "Failed to start service."
-msgstr ""
+msgstr "Klarte ikke starte tjenesten."
 
 #: kcmkded.cpp:224
 #, kde-format
 msgid "Failed to notify KDE Service Manager (kded6) of saved changed: %1"
 msgstr ""
+"Klarte ikke varsle KDE-tjenestebehandleren (kded6) om lagrede endringer: %1"
 
 #: ui/main.qml:48
 #, kde-kuit-format
@@ -53,6 +54,8 @@ msgid ""
 "If you're disabling something here to work around an issue, please <link "
 "url='%1'>submit a bug report about it as well.</link>"
 msgstr ""
+"Hvis du slår av noe her for å unngå et problem, <link url='%1'>legg og helst "
+"inn en feilrapport om problemet</link>."
 
 #: ui/main.qml:55
 #, kde-format
@@ -60,6 +63,8 @@ msgid ""
 "The background services manager (kded6) is currently not running. Make sure "
 "it is installed correctly."
 msgstr ""
+"Behandleren for bakgrunnstjenester (kded6) kjører ikke. Se til at den er "
+"installert riktig."
 
 #: ui/main.qml:65
 #, kde-format
@@ -67,6 +72,8 @@ msgid ""
 "Some services disable themselves again when manually started if they are not "
 "useful in the current environment."
 msgstr ""
+"Noen tjenester slår seg selv automatisk av dersom de blir manuelt startet "
+"når det ikke er bruk for de."
 
 #: ui/main.qml:75
 #, kde-format
@@ -74,23 +81,25 @@ msgid ""
 "Some services were automatically started/stopped when the background "
 "services manager (kded6) was restarted to apply your changes."
 msgstr ""
+"Noen tjenester startes/stoppes automatisk når behandleren for "
+"bakgrunnstjenester (kded6) blir startet på nytt for å ta i bruk endringene."
 
 #: ui/main.qml:123
 #, kde-format
 msgid "All Services"
-msgstr ""
+msgstr "Alle tjenester"
 
 #: ui/main.qml:124
 #, kde-format
 msgctxt "List running services"
 msgid "Running"
-msgstr ""
+msgstr "Kjører"
 
 #: ui/main.qml:125
 #, kde-format
 msgctxt "List not running services"
 msgid "Not Running"
-msgstr ""
+msgstr "Kjører ikke"
 
 #: ui/main.qml:162
 #, kde-format
@@ -106,18 +115,18 @@ msgstr "Når-det-trengs-tjenester"
 #, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Disable automatically loading %1 on startup"
-msgstr ""
+msgstr "Slå av automatisk lasting av %1 ved oppstart"
 
 #: ui/main.qml:182
 #, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Enable automatically loading %1 on startup"
-msgstr ""
+msgstr "Slå på automatisk lasting av %1 ved oppstart"
 
 #: ui/main.qml:183
 #, kde-format
 msgid "Toggle automatically loading this service on startup"
-msgstr ""
+msgstr "Slå av/på automatisk lasting av tjenesten ved oppstart"
 
 #: ui/main.qml:227
 #, kde-format
@@ -133,20 +142,20 @@ msgstr "Kjører"
 #, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Stop %1"
-msgstr ""
+msgstr "Stopp %1"
 
 #: ui/main.qml:248
 #, kde-format
 msgctxt "@action:button %1 service name"
 msgid "Start %1"
-msgstr ""
+msgstr "Start %1"
 
 #: ui/main.qml:251
 #, kde-format
 msgid "Stop Service"
-msgstr ""
+msgstr "Stopp tjeneste"
 
 #: ui/main.qml:251
 #, kde-format
 msgid "Start Service"
-msgstr ""
+msgstr "Start tjeneste"
