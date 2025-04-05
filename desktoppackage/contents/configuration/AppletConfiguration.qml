@@ -71,7 +71,8 @@ Rectangle {
             const cfgKey = "cfg_" + key
             if (!app.pageStack.currentItem.hasOwnProperty(cfgKey))
                 return false
-            return config[key] != app.pageStack.currentItem[cfgKey]
+            return config[key] != app.pageStack.currentItem[cfgKey] &&
+                   config[key].toString() != app.pageStack.currentItem[cfgKey].toString()
         })
     }
 
