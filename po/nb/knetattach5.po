@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: knetattach\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-14 00:46+0000\n"
-"PO-Revision-Date: 2011-12-10 12:19+0100\n"
-"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"PO-Revision-Date: 2025-04-04 13:47+0200\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 24.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -24,12 +24,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Knut Yrvin,Eskild Hustvedt"
+msgstr "Knut Yrvin,Eskild Hustvedt,Martin Hansen"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "knut.yrvin@gmail.com,zerodogg@skolelinux.no"
+msgstr "knut.yrvin@gmail.com,zerodogg@skolelinux.no,mh306602@gmail.com"
 
 #: knetattach.cpp:79
 #, kde-format
@@ -37,8 +37,8 @@ msgid ""
 "Enter a name for this <i>WebFolder</i> as well as a server address, port and "
 "folder path to use and press the <b>Save & Connect</b> button."
 msgstr ""
-"Skriv navn for denne <i>vevmappa</i> og tjeneradressen, porten og mappestien "
-"som skal brukes, og trykk <b>Lagre og kople til</b>."
+"Skriv inn navn for denne <i>nettmappa</i> og tjeneradressen, porten og "
+"mappeadressen som skal brukes, og trykk <b>Lagre og kople til</b>."
 
 #: knetattach.cpp:82
 #, kde-format
@@ -47,8 +47,8 @@ msgid ""
 "address, port and folder path to use and press the <b>Save & Connect</b> "
 "button."
 msgstr ""
-"Skriv navn for denne <i>SSH-tilkoblingen</i> og tjeneradressen, porten og "
-"mappestien som skal brukes, og trykk <b>Lagre og kople til</b>."
+"Skriv inn navn for denne <i>SSH-tilkoblingen</i> og tjeneradressen, porten "
+"og mappeadressen som skal brukes, og trykk <b>Lagre og kople til</b>."
 
 #: knetattach.cpp:86
 #, kde-format
@@ -57,8 +57,8 @@ msgid ""
 "server address and folder path to use and press the <b>Save & Connect</b> "
 "button."
 msgstr ""
-"Skriv navn for denne <i>FTP-tilkoblingen</i> og tjeneradressen, porten og "
-"mappestien som skal brukes, og trykk <b>Lagre og kople til</b>."
+"Skriv inn navn for denne <i>FTP-tilkoblingen</i> og tjeneradressen, porten "
+"og mappeadressen som skal brukes, og trykk <b>Lagre og kople til</b>."
 
 #: knetattach.cpp:90
 #, kde-format
@@ -67,9 +67,9 @@ msgid ""
 "server address and folder path to use and press the <b>Save & Connect</b> "
 "button."
 msgstr ""
-"Skriv navn for denne <i>Microsoft Windows-nettverksstasjonen</i> og "
-"tjeneradressen, porten og mappestien som skal brukes, og trykk <b>Lagre og "
-"kople til</b>."
+"Skriv inn navn for denne <i>Microsoft Windows-nettverksstasjonen</i> og "
+"tjeneradressen, porten og mappeadressen som skal brukes, og trykk <b>Lagre "
+"og kople til</b>."
 
 #: knetattach.cpp:208
 #, kde-format
@@ -97,7 +97,7 @@ msgstr "Veiviser for nettverksmappe"
 #: knetattach.ui:18
 #, kde-format
 msgid "Add Network Folder"
-msgstr "Legg til ei nettverksmappe"
+msgstr "Legg til nettverksmappe"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
 #: knetattach.ui:24
@@ -105,7 +105,7 @@ msgstr "Legg til ei nettverksmappe"
 msgid ""
 "Select the type of network folder you wish to connect to and press the Next "
 "button."
-msgstr "Velg typen nettverkmappe som skal kobles opp og trykk Neste-knappen."
+msgstr "Velg typen nettverkmappe som skal kobles opp og trykk så «Neste»."
 
 #. i18n: ectx: property (text), widget (QRadioButton, _recent)
 #: knetattach.ui:65
@@ -117,7 +117,7 @@ msgstr "&Nylig tilkobling:"
 #: knetattach.ui:72
 #, kde-format
 msgid "&WebFolder (webdav)"
-msgstr "&Vevmappe (webdav)"
+msgstr "&Nettmappe (webdav)"
 
 #. i18n: ectx: property (text), widget (QRadioButton, _fish)
 #: knetattach.ui:82
@@ -141,7 +141,7 @@ msgstr "&Microsoft® Windows® network disk"
 #: knetattach.ui:145
 #, kde-format
 msgid "Network Folder Information"
-msgstr "Informasjon om nettmappe"
+msgstr "Informasjon om nettverksmappe"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel4_2)
 #: knetattach.ui:177
@@ -200,7 +200,7 @@ msgstr "&Bruk kryptering"
 #: main.cpp:21 main.cpp:23
 #, kde-format
 msgid "KDE Network Wizard"
-msgstr "KDE nettverksveiviser"
+msgstr "KDE-nettverksveiviser"
 
 #: main.cpp:25
 #, kde-format

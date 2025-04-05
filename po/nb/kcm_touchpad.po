@@ -6,15 +6,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-10 00:47+0000\n"
-"PO-Revision-Date: 2015-08-27 17:02+0200\n"
-"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"PO-Revision-Date: 2025-04-04 13:33+0200\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -22,17 +22,17 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Bjørn Steensrud"
+msgstr "Bjørn Steensrud,Martin Hansen"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "bjornst@skogkatt.homelinux.org"
+msgstr "bjornst@skogkatt.homelinux.org,mh306602@gmail.com"
 
 #: actions.cpp:19
 #, kde-format
 msgid "Touchpad"
-msgstr ""
+msgstr "Styreplate"
 
 #: actions.cpp:22
 #, kde-format
@@ -47,336 +47,344 @@ msgstr "Slå av styreplata"
 #: actions.cpp:38
 #, kde-format
 msgid "Toggle Touchpad"
-msgstr "Slå styreplata av eller på"
+msgstr "Slå av/på styreplata"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:63
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
+"Feil ved søk etter innenheter. Prøv å åpne denne innstillingsmodulen på nytt."
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:78
 #, kde-format
 msgid "Critical error on reading fundamental device infos for touchpad %1."
-msgstr ""
+msgstr "Kritisk feil ved lasting av fundamentale enhetsinfo for styreplata %1."
 
 #: backends/x11/xlibbackend.cpp:74
 #, kde-format
 msgid "Cannot connect to X server"
-msgstr "Kan ikke koble til X-tjeneren"
+msgstr "Klarte ikke koble til X-tjeneren"
 
 #: backends/x11/xlibbackend.cpp:90 kcm/libinput/touchpad.qml:98
 #, kde-format
 msgid "No touchpad found"
-msgstr ""
+msgstr "Fant ingen styreplate"
 
 #: backends/x11/xlibbackend.cpp:136 backends/x11/xlibbackend.cpp:150
 #, kde-format
 msgid "Cannot apply touchpad configuration"
-msgstr "Kan ikke ta i bruk styreplate-oppsettet"
+msgstr "Klarte ikke ta i bruk styreplate-oppsettet"
 
 #: backends/x11/xlibbackend.cpp:164 backends/x11/xlibbackend.cpp:177
 #, kde-format
 msgid "Cannot read touchpad configuration"
-msgstr "Kan ikke lese styreplate-oppsettet"
+msgstr "Klarte ikke lese styreplate-oppsettet"
 
 #: backends/x11/xlibbackend.cpp:190
 #, kde-format
 msgid "Cannot read default touchpad configuration"
-msgstr ""
+msgstr "Klarte ikke lese standard styreplate-oppsett"
 
 #: kcm/libinput/touchpad.qml:112
 #, kde-format
 msgid "Device:"
-msgstr ""
+msgstr "Enhet:"
 
 #: kcm/libinput/touchpad.qml:137
 #, kde-format
 msgid "General:"
-msgstr ""
+msgstr "Generelt:"
 
 #: kcm/libinput/touchpad.qml:139
 #, kde-format
 msgid "Device enabled"
-msgstr ""
+msgstr "Enhet tilgjengelig"
 
 #: kcm/libinput/touchpad.qml:143
 #, kde-format
 msgid "Accept input through this device."
-msgstr ""
+msgstr "Ta imot inndata fra enheten."
 
 #: kcm/libinput/touchpad.qml:167
 #, kde-format
 msgid "Disable while typing"
-msgstr ""
+msgstr "Slå av styreplata under tasting"
 
 #: kcm/libinput/touchpad.qml:171
 #, kde-format
 msgid "Disable touchpad while typing to prevent accidental inputs."
 msgstr ""
+"Slå av styreplata under tasting, for å unngå utilsiktet pekerbevegelser."
 
 #: kcm/libinput/touchpad.qml:195
 #, kde-format
 msgid "Left handed mode"
-msgstr ""
+msgstr "Venstrehåndsmodus"
 
 #: kcm/libinput/touchpad.qml:199
 #, kde-format
 msgid "Swap left and right buttons."
-msgstr ""
+msgstr "Bytt verknad av venstre og høyre knapp."
 
 #: kcm/libinput/touchpad.qml:223
 #, kde-format
 msgid "Press left and right buttons for middle click"
-msgstr ""
+msgstr "Trykk på venstre- og høyreknappen samtidig for midtklikk"
 
 #: kcm/libinput/touchpad.qml:227 kcm/libinput/touchpad.qml:859
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
 msgstr ""
+"Trykk venstre- og høyreknappen samtidig for å sende klikksignal tilsvarende "
+"midtklikk."
 
 #: kcm/libinput/touchpad.qml:258
 #, kde-format
 msgid "Pointer acceleration:"
-msgstr ""
+msgstr "Pekerakselerasjon:"
 
 #: kcm/libinput/touchpad.qml:353
 #, kde-format
 msgid "Acceleration profile:"
-msgstr ""
+msgstr "Akselerasjonsprofil:"
 
 #: kcm/libinput/touchpad.qml:385
 #, kde-format
 msgid "Flat"
-msgstr ""
+msgstr "Flat"
 
 #: kcm/libinput/touchpad.qml:389
 #, kde-format
 msgid "Cursor moves the same distance as finger."
-msgstr ""
+msgstr "Pekeren flytter seg like langt som fingeren."
 
 #: kcm/libinput/touchpad.qml:398
 #, kde-format
 msgid "Adaptive"
-msgstr ""
+msgstr "Adaptiv"
 
 #: kcm/libinput/touchpad.qml:402
 #, kde-format
 msgid "Cursor travel distance depends on movement speed of finger."
 msgstr ""
+"Hvor langt pekeren flytter seg, avhenger av hvor fort fingeren flyttes."
 
 #: kcm/libinput/touchpad.qml:416
 #, kde-format
 msgid "Tapping:"
-msgstr ""
+msgstr "Trykking:"
 
 #: kcm/libinput/touchpad.qml:418
 #, kde-format
 msgid "Tap-to-click"
-msgstr ""
+msgstr "Trykk for å klikke"
 
 #: kcm/libinput/touchpad.qml:422
 #, kde-format
 msgid "Single tap is left button click."
-msgstr ""
+msgstr "Enkelt trykk er venstre museklikk."
 
 #: kcm/libinput/touchpad.qml:451
 #, kde-format
 msgid "Tap-and-drag"
-msgstr ""
+msgstr "Trykk-og-dra"
 
 #: kcm/libinput/touchpad.qml:455
 #, kde-format
 msgid "Sliding over touchpad directly after tap drags."
 msgstr ""
+"Fingergliding over styreplata rett etter klikk skal fungere som draging."
 
 #: kcm/libinput/touchpad.qml:482
 #, kde-format
 msgid "Tap-and-drag lock"
-msgstr ""
+msgstr "Trykk-og-dra-lås"
 
 #: kcm/libinput/touchpad.qml:486
 #, kde-format
 msgid "Dragging continues after a short finger lift."
-msgstr ""
+msgstr "Draging fortsetter etter et kort fingerløft."
 
 #: kcm/libinput/touchpad.qml:505
 #, kde-format
 msgid "Two-finger tap:"
-msgstr ""
+msgstr "Tofingertrykk:"
 
 #: kcm/libinput/touchpad.qml:514
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
-msgstr ""
+msgstr "Høyreklikk (trefingertrykk for midtklikk)"
 
 #: kcm/libinput/touchpad.qml:515
 #, kde-format
 msgid ""
 "Tap with two fingers to right-click, tap with three fingers to middle-click."
 msgstr ""
+"Trykk med to fingre for å høyreklikke, trykk med tre fingre for å midtklikke."
 
 #: kcm/libinput/touchpad.qml:517
 #, kde-format
 msgid "Middle-click (three-finger tap right-click)"
-msgstr ""
+msgstr "Midtklikk (trefingertrykk for høyreklikk)"
 
 #: kcm/libinput/touchpad.qml:518
 #, kde-format
 msgid ""
 "Tap with two fingers to middle-click, tap with three fingers to right-click."
 msgstr ""
+"Trykk med to fingre for å midtklikke og med tre fingre for å høyreklikke."
 
 #: kcm/libinput/touchpad.qml:520
 #, kde-format
 msgid "Right-click"
-msgstr ""
+msgstr "Høyreklikk"
 
 #: kcm/libinput/touchpad.qml:521
 #, kde-format
 msgid "Tap with two fingers to right-click."
-msgstr ""
+msgstr "Trykk med to fingre for å høyreklikke."
 
 #: kcm/libinput/touchpad.qml:523
 #, kde-format
 msgid "Middle-click"
-msgstr ""
+msgstr "Midtklikk"
 
 #: kcm/libinput/touchpad.qml:524
 #, kde-format
 msgid "Tap with two fingers to middle-click."
-msgstr ""
+msgstr "Trykk med to fingre for å midtklikke."
 
 #: kcm/libinput/touchpad.qml:582
 #, kde-format
 msgid "Scrolling:"
-msgstr ""
+msgstr "Rulling:"
 
 #: kcm/libinput/touchpad.qml:612
 #, kde-format
 msgid "Two fingers"
-msgstr ""
+msgstr "To fingre"
 
 #: kcm/libinput/touchpad.qml:616
 #, kde-format
 msgid "Slide with two fingers scrolls."
-msgstr ""
+msgstr "Gli med to fingre for å rulle"
 
 #: kcm/libinput/touchpad.qml:624
 #, kde-format
 msgid "Touchpad edges"
-msgstr ""
+msgstr "Styreplate-kanter"
 
 #: kcm/libinput/touchpad.qml:628
 #, kde-format
 msgid "Slide on the touchpad edges scrolls."
-msgstr ""
+msgstr "Gli fingeren langs kantene av styreplata for å rulle."
 
 #: kcm/libinput/touchpad.qml:638
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
-msgstr ""
+msgstr "Omvendt rulleretning (naturlig rulling)"
 
 #: kcm/libinput/touchpad.qml:654
 #, kde-format
 msgid "Touchscreen like scrolling."
-msgstr ""
+msgstr "Rulling som på en trykkskjerm."
 
 #: kcm/libinput/touchpad.qml:662 kcm/libinput/touchpad.qml:679
 #, kde-format
 msgid "Disable horizontal scrolling"
-msgstr ""
+msgstr "Slå av vannrett rulling"
 
 #: kcm/libinput/touchpad.qml:687
 #, kde-format
 msgid "Scrolling speed:"
-msgstr ""
+msgstr "Rullehastighet:"
 
 #: kcm/libinput/touchpad.qml:736
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
-msgstr ""
+msgstr "Saktere"
 
 #: kcm/libinput/touchpad.qml:742
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
-msgstr ""
+msgstr "Raskere"
 
 #: kcm/libinput/touchpad.qml:751
 #, kde-format
 msgid "Right-click:"
-msgstr ""
+msgstr "Høyreklikk:"
 
 #: kcm/libinput/touchpad.qml:784
 #, kde-format
 msgid "Press bottom-right corner"
-msgstr ""
+msgstr "Trykk nederst til høyre"
 
 #: kcm/libinput/touchpad.qml:788
 #, kde-format
 msgid ""
 "Software enabled buttons will be added to bottom portion of your touchpad."
-msgstr ""
+msgstr "Programvarebaserte knapper blir lagt til nedre delen av styreplata."
 
 #: kcm/libinput/touchpad.qml:796
 #, kde-format
 msgid "Press anywhere with two fingers"
-msgstr ""
+msgstr "Trykk med to fingre hvor som helst"
 
 #: kcm/libinput/touchpad.qml:800
 #, kde-format
 msgid "Tap with two finger to enable right click."
-msgstr ""
+msgstr "Trykk med to fingre for å slå på høyreklikking."
 
 #: kcm/libinput/touchpad.qml:813
 #, kde-format
 msgid "Middle-click: "
-msgstr ""
+msgstr "Midtklikk: "
 
 #: kcm/libinput/touchpad.qml:843
 #, kde-format
 msgid "Press bottom-middle"
-msgstr ""
+msgstr "Trykk nede i midten"
 
 #: kcm/libinput/touchpad.qml:847
 #, kde-format
 msgid ""
 "Software enabled middle-button will be added to bottom portion of your "
 "touchpad."
-msgstr ""
+msgstr "Programvarebasert midtknapp blir lagt til nedre delen av styreplata."
 
 #: kcm/libinput/touchpad.qml:855
 #, kde-format
 msgid "Press bottom left and bottom right corners simultaneously"
-msgstr ""
+msgstr "Trykk nederste venstre- og høyreknappe hjørne samtidig"
 
 #: kcm/libinput/touchpad.qml:868
 #, kde-format
 msgid "Press anywhere with three fingers"
-msgstr ""
+msgstr "Trykk med tre fingre hvor som helst"
 
 #: kcm/libinput/touchpad.qml:874
 #, kde-format
 msgid "Press anywhere with three fingers."
-msgstr ""
+msgstr "Trykk med tre fingre hvor som helst."
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:30
 #: kcm/xlib/touchpadconfigxlib.cpp:82
 #, kde-format
 msgid "Touchpad KCM"
-msgstr "Styreplate KCM"
+msgstr "Styreplate-KCM"
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:32
 #, kde-format
 msgid "System Settings module for managing your touchpad"
-msgstr ""
+msgstr "Modul for oppsett av styreplate"
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:34
 #, kde-format
 msgid "Copyright © 2016 Roman Gilg"
-msgstr ""
+msgstr "© 2016 Roman Gilg"
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:37
 #: kcm/xlib/touchpadconfigxlib.cpp:92
@@ -387,7 +395,7 @@ msgstr "Utvikler"
 #: kcm/libinput/touchpadconfiglibinput.cpp:37
 #, kde-format
 msgid "Roman Gilg"
-msgstr ""
+msgstr "Roman Gilg"
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:91
 #, kde-format
@@ -395,11 +403,13 @@ msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr ""
+"Feil ved innlesing av data. Se loggen for mer informasjon. Prøv å starte "
+"oppsettsmodulen på nytt."
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:94
 #, kde-format
 msgid "No touchpad found. Connect touchpad now."
-msgstr ""
+msgstr "Fant ingen styreplate. Prøv å koble den til."
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:103
 #, kde-format
@@ -407,6 +417,8 @@ msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
 "this configuration module and try again."
 msgstr ""
+"Klarte ikke lagre alle endringene. Se loggen for mer informasjon. Prøv å "
+"starte oppsettsmodulen på nytt og prøv igjen."
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:122
 #, kde-format
@@ -414,6 +426,8 @@ msgid ""
 "Error while loading default values. Failed to set some options to their "
 "default values."
 msgstr ""
+"Klarte ikke laste standardverdiene. Noen av verdiene kunne ikke settes til "
+"standardverdier."
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:142
 #, kde-format
@@ -421,16 +435,18 @@ msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
 "this configuration module."
 msgstr ""
+"Klarte ikke legge til nylig tilkoblet enhet. Prøv og koble den til en gang "
+"til, og start så oppsettsmodulen på nytt."
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:165
 #, kde-format
 msgid "Touchpad disconnected. Closed its setting dialog."
-msgstr ""
+msgstr "Styreplata er koblet fra, og innstillingsvinduet blir derfor lukket."
 
 #: kcm/libinput/touchpadconfiglibinput.cpp:167
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
-msgstr ""
+msgstr "Styreplata er koblet fra. Fant ingen andre styreplater."
 
 #: kcm/xlib/testarea.cpp:20
 #, kde-format
@@ -441,26 +457,26 @@ msgstr "Dra meg"
 #, kde-format
 msgctxt "Mouse button"
 msgid "Left button"
-msgstr "Venstre knapp"
+msgstr "Venstreknapp"
 
 #: kcm/xlib/testbutton.cpp:32
 #, kde-format
 msgctxt "Mouse button"
 msgid "Right button"
-msgstr "Høyre knapp"
+msgstr "Høyreknapp"
 
 #: kcm/xlib/testbutton.cpp:35
 #, kde-format
 msgctxt "Mouse button"
 msgid "Middle button"
-msgstr "Midtknappen"
+msgstr "Midtknapp"
 
 #: kcm/xlib/touchpadconfigxlib.cpp:84
 #, kde-format
 msgid ""
 "System Settings module, daemon and Plasma applet for managing your touchpad"
 msgstr ""
-"Modul for systeminnstillinger, daemon og Plasma-applet for å behandle "
+"Modul for systeminnstillinger, tjeneste og Plasma-element for å håndtere "
 "styreplata"
 
 #: kcm/xlib/touchpadconfigxlib.cpp:86
@@ -475,7 +491,7 @@ msgid ""
 "Copyright © 2002-2005,2007 Peter Osterlund"
 msgstr ""
 "Dette programmet inneholder arbeid som dekkes av denne opphavsrettnotisen:\n"
-"Copyright © 2002-2005,2007 Peter Osterlund"
+"Copyright © 2002–2005, 2007 Peter Osterlund"
 
 #: kcm/xlib/touchpadconfigxlib.cpp:92
 #, kde-format
@@ -513,7 +529,7 @@ msgstr "Peter Osterlund"
 #, kde-format
 msgctxt "Credits"
 msgid "Developer of synclient"
-msgstr "Utvikler synclient"
+msgstr "Utviklet synclient"
 
 #: kcm/xlib/touchpadconfigxlib.cpp:96
 #, kde-format
@@ -537,8 +553,8 @@ msgid ""
 "Active settings don't match saved settings.\n"
 "You currently see saved settings."
 msgstr ""
-"Aktive innstillinger stemmer ikke med lagrede innstillinger.\n"
-"Du ser nå lagrede innstillinger."
+"Aktive innstillinger er ikke i samsvar med lagrede innstillinger.\n"
+"Du ser nå de lagrede innstillingene."
 
 #: kcm/xlib/touchpadconfigxlib.cpp:122
 #, kde-format
@@ -553,27 +569,27 @@ msgstr "Disse innstillingene får ikke virkning i testområdet"
 #: kcm/xlib/touchpadconfigxlib.cpp:164
 #, kde-format
 msgid "Enable/Disable Touchpad"
-msgstr "Slå på/av styreplata"
+msgstr "Slå av/på styreplata"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, KdedForm)
 #: kcm/xlib/ui/kded.ui:14
 #, kde-format
 msgctxt "@title:window"
 msgid "Enable/Disable Touchpad"
-msgstr ""
+msgstr "Slå av/på styreplata"
 
 #. i18n: ectx: property (text), widget (QPushButton, configureShortcutsButton)
 #. i18n: ectx: property (text), widget (QPushButton, configureNotificationsButton)
 #: kcm/xlib/ui/kded.ui:35 kcm/xlib/ui/kded.ui:146
 #, kde-format
 msgid "Configure…"
-msgstr ""
+msgstr "Sett opp …"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/xlib/ui/kded.ui:47
 #, kde-format
 msgid "Keyboard shortcuts:"
-msgstr "Tastatursnarveier:"
+msgstr "Hurtigtaster:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_DisableOnKeyboardActivity)
 #: kcm/xlib/ui/kded.ui:60
@@ -624,7 +640,7 @@ msgstr ""
 #: kcm/xlib/ui/kded.ui:109
 #, kde-format
 msgid "Disable taps and scrolling only"
-msgstr "Slå bare av tapping og rulling"
+msgstr "Slå bare av trykking og rulling"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_DisableWhenMousePluggedIn)
 #: kcm/xlib/ui/kded.ui:119
@@ -666,7 +682,7 @@ msgstr "Pekerbevegelse"
 #, kde-format
 msgctxt "Mouse pointer motion parameters"
 msgid "Speed"
-msgstr "Fart"
+msgstr "Hastighet"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/xlib/ui/pointermotion.ui:29
@@ -679,7 +695,7 @@ msgstr "Minst:"
 #: kcm/xlib/ui/pointermotion.ui:39
 #, kde-format
 msgid "Minimum pointer speed"
-msgstr "Minste pekerfart"
+msgstr "Minste pekerhastighet"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcm/xlib/ui/pointermotion.ui:52
@@ -692,7 +708,7 @@ msgstr "Største:"
 #: kcm/xlib/ui/pointermotion.ui:62
 #, kde-format
 msgid "Maximum pointer speed"
-msgstr "Største pekerfart"
+msgstr "Største pekerhastighet"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcm/xlib/ui/pointermotion.ui:75
@@ -888,7 +904,7 @@ msgstr "Omvendt vannrett rulling"
 #: kcm/xlib/ui/scroll.ui:98
 #, kde-format
 msgid "Two-finger scrolling:"
-msgstr "Rulling med to fingre"
+msgstr "Rulling med to fingre:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #: kcm/xlib/ui/scroll.ui:108
@@ -901,7 +917,7 @@ msgstr "Omvendt rulling:"
 #, kde-format
 msgctxt "Touchpad - Scrolling"
 msgid "Scrolling Distance"
-msgstr "Rulledistanse"
+msgstr "Rulleavstand"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcm/xlib/ui/scroll.ui:138
@@ -915,7 +931,7 @@ msgstr "Loddrett:"
 #: kcm/xlib/ui/scroll.ui:148 kcm/xlib/ui/scroll.ui:177
 #, kde-format
 msgid "Move distance of the finger for a scroll event"
-msgstr "Hvor langt fingeren må flyttes for å utløse en rulle-hendelse"
+msgstr "Hvor langt fingeren må flyttes for å utløse en rullehendelse"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_VertScrollDelta)
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_HorizScrollDelta)
@@ -930,7 +946,7 @@ msgstr " mm"
 #, kde-format
 msgctxt "Scrolling distance"
 msgid "Horizontal:"
-msgstr "Vannett:"
+msgstr "Vannrett:"
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_Coasting)
 #: kcm/xlib/ui/scroll.ui:199
@@ -952,7 +968,7 @@ msgstr "Trilling"
 #, kde-format
 msgctxt "Coasting"
 msgid "Minimum speed:"
-msgstr "Minste fart:"
+msgstr "Minste hastighet:"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_CoastingSpeed)
 #: kcm/xlib/ui/scroll.ui:227
@@ -991,7 +1007,7 @@ msgstr " ruller/sek²"
 #: kcm/xlib/ui/scroll.ui:263
 #, kde-format
 msgid "Corner coasting:"
-msgstr "Hjørnetrilling"
+msgstr "Hjørnetrilling:"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_CornerCoasting)
 #: kcm/xlib/ui/scroll.ui:273
@@ -1031,13 +1047,13 @@ msgstr "Sirkulær rulling"
 #, kde-format
 msgctxt "Circular scrolling"
 msgid "Trigger region:"
-msgstr "Startområde:"
+msgstr "Utløsingsområde:"
 
 #. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_CircScrollTrigger)
 #: kcm/xlib/ui/scroll.ui:316
 #, kde-format
 msgid "Trigger region on the touchpad to start circular scrolling"
-msgstr "Startområde på styreplata for å starte sirkulær rulling"
+msgstr "Utløsingsområde på styreplata for å starte sirkulær rulling"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: kcm/xlib/ui/scroll.ui:323
@@ -1051,6 +1067,7 @@ msgstr "Vinkel:"
 #, kde-format
 msgid "Move angle (degrees) of finger to generate a scroll event"
 msgstr ""
+"Hvor stor vinkel (grader) fingeren må flyttes for å utløse en rullehendelse"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_CircScrollDelta)
 #: kcm/xlib/ui/scroll.ui:348
@@ -1119,15 +1136,15 @@ msgid ""
 "If palm detection should be enabled. Note that this also requires hardware/"
 "firmware support from the touchpad"
 msgstr ""
-"Om håndflate skal kjennes. Merk at dette kreve støtte i maskinvar/fastvare "
-"fra styreplata"
+"Om håndflate skal kjennes. Merk at dette krever at styreplate-maskinvare/"
+"fastvare også støtter dette."
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_PalmDetect)
 #: kcm/xlib/ui/sensitivity.ui:81
 #, kde-format
 msgctxt "Touchpad"
 msgid "Palm Detection"
-msgstr "Kjenn håndflate"
+msgstr "Håndflateoppdagelse"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcm/xlib/ui/sensitivity.ui:93
@@ -1160,13 +1177,13 @@ msgstr "Minste fingertrykk der berøring skal oppfattes som en håndflate"
 #, kde-format
 msgctxt "Touchpad gesture"
 msgid "Taps"
-msgstr "Banking"
+msgstr "Trykking"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_Tapping)
 #: kcm/xlib/ui/tap.ui:28
 #, kde-format
 msgid "Tap to Click"
-msgstr ""
+msgstr "Trykk for å klikke"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/xlib/ui/tap.ui:43
@@ -1179,7 +1196,8 @@ msgstr "En finger:"
 #: kcm/xlib/ui/tap.ui:53
 #, kde-format
 msgid "Which mouse button is reported on a non-corner one-finger tap"
-msgstr "Hvilken museknapp meldes fra et bank med en finger, ikke i et hjørne"
+msgstr ""
+"Hvilken museknapp skal brukes ved trykking med en finger utenfor et hjørne"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcm/xlib/ui/tap.ui:60
@@ -1192,7 +1210,8 @@ msgstr "To fingre:"
 #: kcm/xlib/ui/tap.ui:70
 #, kde-format
 msgid "Which mouse button is reported on a non-corner two-finger tap"
-msgstr "Hvilken museknapp meldes fra et bank med to fingre, ikke i et hjørne"
+msgstr ""
+"Hvilken museknapp skal brukes ved trykking med to fingre utenfor et hjørne"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: kcm/xlib/ui/tap.ui:77
@@ -1205,7 +1224,8 @@ msgstr "Tre fingre:"
 #: kcm/xlib/ui/tap.ui:87
 #, kde-format
 msgid "Which mouse button is reported on a non-corner three-finger tap"
-msgstr "Hvilken museknapp meldes fra et bank med tre fingre, ikke i et hjørne"
+msgstr ""
+"Hvilken museknapp skal brukes ved trykking med tre fingre utenfor et hjørne"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: kcm/xlib/ui/tap.ui:107
@@ -1225,7 +1245,7 @@ msgstr "Øverst til venstre:"
 #: kcm/xlib/ui/tap.ui:144
 #, kde-format
 msgid "Which mouse button is reported on a left top corner tap"
-msgstr "Hvilken museknapp meldes fra et bank i øvre venstre hjørne"
+msgstr "Hvilken museknapp skal brukes ved trykking i øvre venstre hjørne"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: kcm/xlib/ui/tap.ui:151
@@ -1245,19 +1265,19 @@ msgstr "Øverst til høyre:"
 #: kcm/xlib/ui/tap.ui:177
 #, kde-format
 msgid "Which mouse button is reported on a left bottom corner tap"
-msgstr "Hvilken museknapp meldes fra et bank i nedre venstre hjørne"
+msgstr "Hvilken museknapp skal brukes ved trykking i nedre venstre hjørne"
 
 #. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_RTCornerButton)
 #: kcm/xlib/ui/tap.ui:184
 #, kde-format
 msgid "Which mouse button is reported on a right top corner tap"
-msgstr "Hvilken museknapp meldes fra et bank i øvre høyre hjørne"
+msgstr "Hvilken museknapp skal brukes ved trykking i øvre høyre hjørne"
 
 #. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_RBCornerButton)
 #: kcm/xlib/ui/tap.ui:191
 #, kde-format
 msgid "Which mouse button is reported on a right bottom corner tap"
-msgstr "Hvilken museknapp meldes fra et bank i nedre høyre hjørne"
+msgstr "Hvilken museknapp skal brukes ved trykking i nedre høyre hjørne"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: kcm/xlib/ui/tap.ui:214
@@ -1274,14 +1294,14 @@ msgid ""
 "(touching and releasing the finger), then touching again and moving the "
 "finger on the touchpad"
 msgstr ""
-"Denne bevegelsen er en annen måte å dra på. Det gjøres ved å banke (berøre "
+"Denne bevegelsen er en annen måte å dra på. Det gjøres ved å trykke (berøre "
 "og ta vekk fingeren), så berøre igjen og flytte fingeren på styreplata"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_TapAndDragGesture)
 #: kcm/xlib/ui/tap.ui:254
 #, kde-format
 msgid "Tap-and-Drag Gesture"
-msgstr "Bank-og-dra-bevegelse"
+msgstr "Trykk-og-dra-bevegelse"
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_LockedDrags)
 #: kcm/xlib/ui/tap.ui:266
@@ -1291,7 +1311,7 @@ msgid ""
 "gesture is active until you tap a second time, or until timeout expires"
 msgstr ""
 "Hvis dette er slått av slutter bevegelsen når du tar bort fingeren. Hvis det "
-"er slått på er bevegelsen aktiv til du banker en gang til, eller den blir "
+"er slått på er bevegelsen aktiv til du trykker en gang til, eller den blir "
 "avbrutt på tid."
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_LockedDrags)
@@ -1322,7 +1342,7 @@ msgstr ""
 #: kcm/xlib/ui/tap.ui:325
 #, kde-format
 msgid "Tap Detection"
-msgstr "Kjenn bank"
+msgstr "Trykkeoppdagelse"
 
 #. i18n: ectx: property (text), widget (QLabel, label_10)
 #: kcm/xlib/ui/tap.ui:340
@@ -1340,37 +1360,37 @@ msgstr "Største fingerbevegelse:"
 #: kcm/xlib/ui/tap.ui:366
 #, kde-format
 msgid "Maximum time for double tap:"
-msgstr "Lengste tid for dobbeltbank:"
+msgstr "Lengste tid for dobbelttrykking:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_13)
 #: kcm/xlib/ui/tap.ui:379
 #, kde-format
 msgid "Single tap timeout:"
-msgstr "Tidsgrense for enkeltbank:"
+msgstr "Tidsgrense for enkelttrykk:"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_MaxTapTime)
 #: kcm/xlib/ui/tap.ui:389
 #, kde-format
 msgid "Maximum time (in milliseconds) for detecting a tap"
-msgstr "Største tid (i millisekunder) for å kjenne igjen et bank"
+msgstr "Største tid (i millisekunder) for å kjenne igjen et trykk"
 
 #. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_MaxTapMove)
 #: kcm/xlib/ui/tap.ui:408
 #, kde-format
 msgid "Maximum movement of the finger for detecting a tap"
-msgstr "Største fingerbevegelse for å kjenne igjen et bank"
+msgstr "Største fingerbevegelse for å kjenne igjen et trykk"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_MaxDoubleTapTime)
 #: kcm/xlib/ui/tap.ui:427
 #, kde-format
 msgid "Maximum time (in milliseconds) for detecting a double tap"
-msgstr "Største tid (i millisekunder) for å kjenne igjen et dobbelt bank"
+msgstr "Største tid (i millisekunder) for å kjenne igjen et dobbelttrykk"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_SingleTapTimeout)
 #: kcm/xlib/ui/tap.ui:446
 #, kde-format
 msgid "Timeout after a tap to recognize it as a single tap"
-msgstr "Tidsgrense etter et bank for å vite at det er et enkelt bank"
+msgstr "Tidsgrense etter et trykk for å vite at det er et enkelttrykk"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: kcm/xlib/ui/testarea.ui:20
@@ -1382,7 +1402,7 @@ msgstr "Testområde"
 #: kcm/xlib/ui/testarea.ui:29
 #, kde-format
 msgid "Click me"
-msgstr "Trykk meg"
+msgstr "Trykk på meg"
 
 #: kded/kded.cpp:201
 #, kde-format
@@ -1406,21 +1426,21 @@ msgstr "Ingen handling"
 #, kde-format
 msgctxt "Emulated mouse button"
 msgid "Left button"
-msgstr "Venstre knapp"
+msgstr "Venstreknapp"
 
 #. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
 #: touchpadparameters.kcfg:33
 #, kde-format
 msgctxt "Emulated mouse button"
 msgid "Middle button"
-msgstr "Midtknappen"
+msgstr "Midtknapp"
 
 #. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
 #: touchpadparameters.kcfg:36
 #, kde-format
 msgctxt "Emulated mouse button"
 msgid "Right button"
-msgstr "Høyre knapp"
+msgstr "Høyreknapp"
 
 #. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
 #: touchpadparameters.kcfg:285

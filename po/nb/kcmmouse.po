@@ -12,14 +12,14 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-20 00:51+0000\n"
-"PO-Revision-Date: 2015-04-26 21:24+0200\n"
-"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"PO-Revision-Date: 2025-04-04 12:39+0200\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -28,42 +28,44 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Axel Bojer"
+msgstr "Axel Bojer,Martin Hansen"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "fri_programvare@bojer.no"
+msgstr "fri_programvare@bojer.no,mh306602@gmail.com"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:66
 #, kde-format
 msgid "Querying input devices failed. Please reopen this settings module."
 msgstr ""
+"Feil ved søk etter innenheter. Prøv og åpne denne innstillingsmodulen på "
+"nytt."
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:86
 #, kde-format
 msgid "Critical error on reading fundamental device infos of %1."
-msgstr ""
+msgstr "Kritisk feil ved lesing av fundamentale enhetsinfo for %1."
 
 #: kcm/libinput/libinput_config.cpp:36
 #, kde-format
 msgid "Pointer device KCM"
-msgstr ""
+msgstr "KCM for pekerenheter"
 
 #: kcm/libinput/libinput_config.cpp:38
 #, kde-format
 msgid "System Settings module for managing mice and trackballs."
-msgstr ""
+msgstr "Modul for oppsett av mus og styrekuler."
 
 #: kcm/libinput/libinput_config.cpp:40
 #, kde-format
 msgid "Copyright 2018 Roman Gilg"
-msgstr ""
+msgstr "© 2018 Roman Gilg"
 
 #: kcm/libinput/libinput_config.cpp:43 kcm/xlib/xlib_config.cpp:91
 #, kde-format
 msgid "Roman Gilg"
-msgstr ""
+msgstr "Roman Gilg"
 
 #: kcm/libinput/libinput_config.cpp:43
 #, kde-format
@@ -76,11 +78,13 @@ msgid ""
 "Error while loading values. See logs for more information. Please restart "
 "this configuration module."
 msgstr ""
+"Feil ved innlesing av data. Se loggen for mer informasjon. Prøv å starte "
+"oppsettsmodulen på nytt og prøv igjen."
 
 #: kcm/libinput/libinput_config.cpp:114
 #, kde-format
 msgid "No pointer device found. Connect now."
-msgstr ""
+msgstr "Fant ingen pekerenheter. Prøv å koble til en enhet nå."
 
 #: kcm/libinput/libinput_config.cpp:125
 #, kde-format
@@ -88,6 +92,8 @@ msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
 "this configuration module and try again."
 msgstr ""
+"Klarte ikke lagre alle endringene. Se loggen for mer informasjon. Prøv å "
+"starte oppsettsmodulen på nytt og prøv igjen."
 
 #: kcm/libinput/libinput_config.cpp:145
 #, kde-format
@@ -95,6 +101,8 @@ msgid ""
 "Error while loading default values. Failed to set some options to their "
 "default values."
 msgstr ""
+"Klarte ikke laste standardverdiene. Noen av verdiene kunne ikke settes til "
+"standardverdier."
 
 #: kcm/libinput/libinput_config.cpp:167
 #, kde-format
@@ -102,16 +110,18 @@ msgid ""
 "Error while adding newly connected device. Please reconnect it and restart "
 "this configuration module."
 msgstr ""
+"Klarte ikke legge til nylig tilkoblet enhet. Prøv og koble den til en gang "
+"til, og start så oppsettsmodulen på nytt."
 
 #: kcm/libinput/libinput_config.cpp:191
 #, kde-format
 msgid "Pointer device disconnected. Closed its setting dialog."
-msgstr ""
+msgstr "Pekerenheten er koblet fra, og innstillingsvinduet blir derfor lukket."
 
 #: kcm/libinput/libinput_config.cpp:193
 #, kde-format
 msgid "Pointer device disconnected. No other devices found."
-msgstr ""
+msgstr "Pekerenheten er koblet fra. Fant ingen andre enheter."
 
 #: kcm/libinput/main.qml:79
 #, kde-format
@@ -121,48 +131,50 @@ msgstr "Enhet:"
 #: kcm/libinput/main.qml:103 kcm/libinput/main_deviceless.qml:54
 #, kde-format
 msgid "General:"
-msgstr ""
+msgstr "Generelt:"
 
 #: kcm/libinput/main.qml:105
 #, kde-format
 msgid "Device enabled"
-msgstr ""
+msgstr "Enhet tilgjengelig"
 
 #: kcm/libinput/main.qml:124
 #, kde-format
 msgid "Accept input through this device."
-msgstr ""
+msgstr "Ta imot inndata fra enheten."
 
 #: kcm/libinput/main.qml:130 kcm/libinput/main_deviceless.qml:56
 #, kde-format
 msgid "Left handed mode"
-msgstr ""
+msgstr "Venstrehåndsmodus"
 
 #: kcm/libinput/main.qml:149 kcm/libinput/main_deviceless.qml:75
 #, kde-format
 msgid "Swap left and right buttons."
-msgstr ""
+msgstr "Bytt verknad av venstre og høyre knapp."
 
 #: kcm/libinput/main.qml:155 kcm/libinput/main_deviceless.qml:81
 #, kde-format
 msgid "Press left and right buttons for middle-click"
-msgstr ""
+msgstr "Trykk på venstre- og høyreknappen samtidig for midtklikk"
 
 #: kcm/libinput/main.qml:174 kcm/libinput/main_deviceless.qml:100
 #, kde-format
 msgid ""
 "Clicking left and right button simultaneously sends middle button click."
 msgstr ""
+"Trykk venstre- og høyreknappen samtidig for å sende klikksignal tilsvarende "
+"midtklikk."
 
 #: kcm/libinput/main.qml:184 kcm/libinput/main_deviceless.qml:110
 #, kde-format
 msgid "Pointer speed:"
-msgstr ""
+msgstr "Pekerhastighet:"
 
 #: kcm/libinput/main.qml:216 kcm/libinput/main_deviceless.qml:142
 #, kde-format
 msgid "Acceleration profile:"
-msgstr ""
+msgstr "Akselerasjonsprofil:"
 
 #: kcm/libinput/main.qml:247 kcm/libinput/main_deviceless.qml:173
 #, kde-format
@@ -172,97 +184,97 @@ msgstr "Flat"
 #: kcm/libinput/main.qml:250 kcm/libinput/main_deviceless.qml:176
 #, kde-format
 msgid "Cursor moves the same distance as the mouse movement."
-msgstr ""
+msgstr "Pekeren flytter seg like langt som musa."
 
 #: kcm/libinput/main.qml:257 kcm/libinput/main_deviceless.qml:183
 #, kde-format
 msgid "Adaptive"
-msgstr ""
+msgstr "Adaptiv"
 
 #: kcm/libinput/main.qml:260 kcm/libinput/main_deviceless.qml:186
 #, kde-format
 msgid "Cursor travel distance depends on the mouse movement speed."
-msgstr ""
+msgstr "Hvor langt pekeren flytter seg, avhenger av hvor fort musa flyttes."
 
 #: kcm/libinput/main.qml:272 kcm/libinput/main_deviceless.qml:198
 #, kde-format
 msgid "Scrolling:"
-msgstr ""
+msgstr "Rulling:"
 
 #: kcm/libinput/main.qml:274 kcm/libinput/main_deviceless.qml:200
 #, kde-format
 msgid "Invert scroll direction"
-msgstr ""
+msgstr "Omvendt rulleretning"
 
 #: kcm/libinput/main.qml:289 kcm/libinput/main_deviceless.qml:215
 #, kde-format
 msgid "Touchscreen like scrolling."
-msgstr ""
+msgstr "Rulling som på en trykkskjerm."
 
 #: kcm/libinput/main.qml:295
 #, kde-format
 msgid "Scrolling speed:"
-msgstr ""
+msgstr "Rullehastighet:"
 
 #: kcm/libinput/main.qml:343
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
-msgstr ""
+msgstr "Saktere"
 
 #: kcm/libinput/main.qml:349
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
-msgstr ""
+msgstr "Raskere"
 
 #: kcm/libinput/main.qml:360
 #, kde-format
 msgctxt "@action:button"
 msgid "Re-bind Additional Mouse Buttons…"
-msgstr ""
+msgstr "Tilknytt flere museknapper …"
 
 #: kcm/libinput/main.qml:396
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
-msgstr ""
+msgstr "Ekstraknapp %1:"
 
 #: kcm/libinput/main.qml:426
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
-msgstr ""
+msgstr "Trykk på museknappen som du vil knytte en handling til"
 
 #: kcm/libinput/main.qml:427
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
-msgstr ""
+msgstr "Trykk på ny hurtigtast for %1"
 
 #: kcm/libinput/main.qml:431
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: kcm/libinput/main.qml:448
 #, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button "
-msgstr ""
+msgstr "Trykk på en museknapp "
 
 #: kcm/libinput/main.qml:449
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
-msgstr ""
+msgstr "Legg til binding …"
 
 #: kcm/libinput/main.qml:478
 #, kde-format
 msgctxt "@action:button"
 msgid "Go back"
-msgstr ""
+msgstr "Gå tilbake"
 
 #. i18n: ectx: property (whatsThis), widget (QWidget, KCMMouse)
 #: kcm/xlib/kcmmouse.ui:14
@@ -272,7 +284,7 @@ msgid ""
 "in which your pointing device works. Your pointing device may be a mouse, "
 "trackball, or some other hardware that performs a similar function."
 msgstr ""
-"<h1>Mus</h1>Med denne modulen kan du velge hvordan pekeredskapet skal virke. "
+"<h1>Mus</h1>Denne modulen lar deg velge hvordan musa skal fungere. "
 "Istedenfor mus har du kanskje en styrekule "
 "eller annet utstyr som utfører en lignende funksjon."
 
@@ -294,8 +306,8 @@ msgid ""
 msgstr ""
 "Hvis du er venstrehendt, så kanskje du foretrekker å bytte funksjonene til "
 "venstre og høyre knapp på pekeredskapet ditt ved å velge «venstrehendt». "
-"Hvis pekeredskapet ditt har mer enn to knapper vil bare funksjonene på "
-"venstre og høyre knapp bli påvirket. F.eks. vil den midterste knappen på en "
+"Hvis musa di har mer enn to knapper vil bare funksjonene på venstre- og "
+"høyreknapp bli påvirket. For eksempel. vil den midterste knappen på en "
 "treknappers mus forbli uendret."
 
 #. i18n: ectx: property (title), widget (QGroupBox, handedBox)
@@ -308,7 +320,7 @@ msgstr "Knapperekkefølge"
 #: kcm/xlib/kcmmouse.ui:64
 #, kde-format
 msgid "Righ&t handed"
-msgstr "Høyrehend&t"
+msgstr "&Høyrehendt"
 
 #. i18n: ectx: property (text), widget (QRadioButton, leftHanded)
 #: kcm/xlib/kcmmouse.ui:77
@@ -448,7 +460,7 @@ msgid ""
 "If you click with the mouse (e.g. in a multi-line editor) and begin to move "
 "the mouse within the drag start time, a drag operation will be initiated."
 msgstr ""
-"Hvis du klikker med en museknapp (f.eks. i et skriveprogram med flere "
+"Hvis du klikker med en museknapp (for eksempel. i et skriveprogram med flere "
 "linjer) og begynner å flytte musa før starttiden er over, så vil en "
 "draoperasjon settes i gang."
 
@@ -480,13 +492,13 @@ msgstr ""
 #: kcm/xlib/kcmmouse.ui:387
 #, kde-format
 msgid "Keyboard Navigation"
-msgstr ""
+msgstr "Tastaturnavigering"
 
 #. i18n: ectx: property (text), widget (QCheckBox, mouseKeys)
 #: kcm/xlib/kcmmouse.ui:395
 #, kde-format
 msgid "&Move pointer with keyboard (using the num pad)"
-msgstr "Flytt &musepekeren med det numeriske tastaturet"
+msgstr "&Flytt musa med tastaturet (talltastatur)"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: kcm/xlib/kcmmouse.ui:424
@@ -510,7 +522,7 @@ msgstr "Akselerasjons&tid:"
 #: kcm/xlib/kcmmouse.ui:498
 #, kde-format
 msgid "Ma&ximum speed:"
-msgstr "&Høyeste fart:"
+msgstr "&Høyeste hastighet:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, mk_max_speed)
 #: kcm/xlib/kcmmouse.ui:514
@@ -532,7 +544,7 @@ msgstr "Mus"
 #: kcm/xlib/xlib_config.cpp:83
 #, kde-format
 msgid "(c) 1997 - 2018 Mouse developers"
-msgstr ""
+msgstr "© 1997–2018 Musutviklerne"
 
 #: kcm/xlib/xlib_config.cpp:84
 #, kde-format
