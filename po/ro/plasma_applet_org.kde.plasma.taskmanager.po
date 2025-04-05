@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-03 00:43+0000\n"
+"POT-Creation-Date: 2025-04-05 00:43+0000\n"
 "PO-Revision-Date: 2024-06-08 17:07+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -23,49 +23,52 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: backend.cpp:283
-#, kde-format
+#: backend.cpp:284
+#, fuzzy, kde-format
+#| msgctxt "Show all user Places"
+#| msgid "%1 more Place"
+#| msgid_plural "%1 more Places"
 msgctxt "Show all user Places"
-msgid "%1 more Place"
-msgid_plural "%1 more Places"
+msgid "%1 more Place…"
+msgid_plural "%1 more Places…"
 msgstr[0] "Încă %1 loc"
 msgstr[1] "Încă %1 locuri"
 msgstr[2] "Încă %1 de locuri"
 
-#: backend.cpp:367
+#: backend.cpp:368
 #, kde-format
 msgid "Recent Downloads"
 msgstr "Descărcări recente"
 
-#: backend.cpp:369
+#: backend.cpp:370
 #, kde-format
 msgid "Recent Connections"
 msgstr "Conexiuni recente"
 
-#: backend.cpp:371
+#: backend.cpp:372
 #, kde-format
 msgid "Recent Places"
 msgstr "Locuri recente"
 
-#: backend.cpp:380
+#: backend.cpp:381
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
 msgstr "Uită descărcările recente"
 
-#: backend.cpp:382
+#: backend.cpp:383
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
 msgstr "Uită conexiunile recente"
 
-#: backend.cpp:384
+#: backend.cpp:385
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
 msgstr "Uită locurile recente"
 
-#: backend.cpp:386
+#: backend.cpp:387
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-03 00:43+0000\n"
+"POT-Creation-Date: 2025-04-05 00:43+0000\n"
 "PO-Revision-Date: 2024-11-21 20:40\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -22,50 +22,53 @@ msgstr ""
 "plasma_applet_org.kde.plasma.taskmanager.po\n"
 "X-Crowdin-File-ID: 10668\n"
 
-#: backend.cpp:283
-#, kde-format
+#: backend.cpp:284
+#, fuzzy, kde-format
+#| msgctxt "Show all user Places"
+#| msgid "%1 more Place"
+#| msgid_plural "%1 more Places"
 msgctxt "Show all user Places"
-msgid "%1 more Place"
-msgid_plural "%1 more Places"
+msgid "%1 more Place…"
+msgid_plural "%1 more Places…"
 msgstr[0] "Яшчэ %1 размяшчэнне"
 msgstr[1] "Яшчэ %1 размяшчэнні"
 msgstr[2] "Яшчэ %1 размяшчэнняў"
 msgstr[3] "Яшчэ %1 размяшчэнні"
 
-#: backend.cpp:367
+#: backend.cpp:368
 #, kde-format
 msgid "Recent Downloads"
 msgstr "Нядаўнія спампоўванні"
 
-#: backend.cpp:369
+#: backend.cpp:370
 #, kde-format
 msgid "Recent Connections"
 msgstr "Нядаўнія злучэнні"
 
-#: backend.cpp:371
+#: backend.cpp:372
 #, kde-format
 msgid "Recent Places"
 msgstr "Нядаўнія размяшчэнні"
 
-#: backend.cpp:380
+#: backend.cpp:381
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
 msgstr "Забыцца нядаўнія спампоўванні"
 
-#: backend.cpp:382
+#: backend.cpp:383
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
 msgstr "Забыцца нядаўнія злучэнні"
 
-#: backend.cpp:384
+#: backend.cpp:385
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
 msgstr "Забыцца нядаўнія размяшчэнні"
 
-#: backend.cpp:386
+#: backend.cpp:387
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"

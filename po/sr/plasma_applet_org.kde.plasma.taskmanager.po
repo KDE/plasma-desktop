@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-03 00:43+0000\n"
+"POT-Creation-Date: 2025-04-05 00:43+0000\n"
 "PO-Revision-Date: 2017-04-07 00:51+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,56 +18,59 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: backend.cpp:283
-#, kde-format
+#: backend.cpp:284
+#, fuzzy, kde-format
+#| msgctxt "Show all user Places"
+#| msgid "%1 more Place"
+#| msgid_plural "%1 more Places"
 msgctxt "Show all user Places"
-msgid "%1 more Place"
-msgid_plural "%1 more Places"
+msgid "%1 more Place…"
+msgid_plural "%1 more Places…"
 msgstr[0] "Још %1 место"
 msgstr[1] "Још %1 места"
 msgstr[2] "Још %1 места"
 msgstr[3] "Још %1 место"
 
-#: backend.cpp:367
+#: backend.cpp:368
 #, fuzzy, kde-format
 #| msgid "Forget Recent Documents"
 msgid "Recent Downloads"
 msgstr "Заборави недавне документе"
 
-#: backend.cpp:369
+#: backend.cpp:370
 #, fuzzy, kde-format
 #| msgid "Forget Recent Documents"
 msgid "Recent Connections"
 msgstr "Заборави недавне документе"
 
-#: backend.cpp:371
+#: backend.cpp:372
 #, fuzzy, kde-format
 #| msgid "Forget Recent Documents"
 msgid "Recent Places"
 msgstr "Заборави недавне документе"
 
-#: backend.cpp:380
+#: backend.cpp:381
 #, fuzzy, kde-format
 #| msgid "Forget Recent Documents"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
 msgstr "Заборави недавне документе"
 
-#: backend.cpp:382
+#: backend.cpp:383
 #, fuzzy, kde-format
 #| msgid "Forget Recent Documents"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
 msgstr "Заборави недавне документе"
 
-#: backend.cpp:384
+#: backend.cpp:385
 #, fuzzy, kde-format
 #| msgid "Forget Recent Documents"
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
 msgstr "Заборави недавне документе"
 
-#: backend.cpp:386
+#: backend.cpp:387
 #, fuzzy, kde-format
 #| msgid "Forget Recent Documents"
 msgctxt "@action:inmenu"

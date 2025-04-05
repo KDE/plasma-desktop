@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-03 00:43+0000\n"
+"POT-Creation-Date: 2025-04-05 00:43+0000\n"
 "PO-Revision-Date: 2024-07-12 21:04+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -20,48 +20,51 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: backend.cpp:283
-#, kde-format
+#: backend.cpp:284
+#, fuzzy, kde-format
+#| msgctxt "Show all user Places"
+#| msgid "%1 more Place"
+#| msgid_plural "%1 more Places"
 msgctxt "Show all user Places"
-msgid "%1 more Place"
-msgid_plural "%1 more Places"
+msgid "%1 more Place…"
+msgid_plural "%1 more Places…"
 msgstr[0] "%1 stad til"
 msgstr[1] "%1 stadar til"
 
-#: backend.cpp:367
+#: backend.cpp:368
 #, kde-format
 msgid "Recent Downloads"
 msgstr "Nylege nedlastingar"
 
-#: backend.cpp:369
+#: backend.cpp:370
 #, kde-format
 msgid "Recent Connections"
 msgstr "Nyleg brukte tilkoplingar"
 
-#: backend.cpp:371
+#: backend.cpp:372
 #, kde-format
 msgid "Recent Places"
 msgstr "Nyleg brukte stadar"
 
-#: backend.cpp:380
+#: backend.cpp:381
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Downloads"
 msgstr "Gløym nylege nedlastingar"
 
-#: backend.cpp:382
+#: backend.cpp:383
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Connections"
 msgstr "Gløym nyleg brukte tilkoplingar"
 
-#: backend.cpp:384
+#: backend.cpp:385
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Places"
 msgstr "Gløym nyleg brukte stadar"
 
-#: backend.cpp:386
+#: backend.cpp:387
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Forget Recent Files"

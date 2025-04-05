@@ -157,9 +157,6 @@ msgstr "Bruk innstillingar"
 
 #: contents/configuration/AppletConfiguration.qml:369
 #, fuzzy, kde-format
-#| msgid ""
-#| "The settings of the current module have changed. Do you want to apply the "
-#| "changes or discard them?"
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
 msgstr ""
@@ -454,7 +451,6 @@ msgstr "Gjennomsiktig"
 
 #: contents/configuration/PanelConfiguration.qml:484
 #, fuzzy, kde-format
-#| msgid "Floating"
 msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
 msgstr "Flytande"
@@ -473,7 +469,6 @@ msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:502
 #, fuzzy, kde-format
-#| msgid "Panel and Desktop Management"
 msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
 msgstr "Handsaming av panel og skrivebord"
@@ -589,7 +584,6 @@ msgstr ""
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 #, fuzzy, kde-format
-#| msgid "Panel and Desktop Management"
 msgid "Manage Panels and Desktops"
 msgstr "Handsaming av panel og skrivebord"
 
@@ -653,7 +647,6 @@ msgstr ""
 
 #: contents/explorer/AppletDelegate.qml:204
 #, fuzzy, kde-format
-#| msgid "No widgets available"
 msgctxt "@info:other accessible for badge showing applet count"
 msgid "%1 widget active"
 msgid_plural "%1 widgets active"
@@ -668,7 +661,6 @@ msgstr ""
 
 #: contents/explorer/AppletDelegate.qml:217
 #, fuzzy, kde-format
-#| msgid "Uninstall"
 msgid "Cancel Uninstallation"
 msgstr "Avinstaller"
 
@@ -751,7 +743,6 @@ msgstr ""
 
 #: contents/explorer/WidgetExplorer.qml:208
 #, fuzzy, kde-format
-#| msgid "Widgets"
 msgctxt "@label:textbox accessible"
 msgid "Search Widgets"
 msgstr "Skjermelement"
@@ -763,7 +754,6 @@ msgstr "Kategoriar"
 
 #: contents/explorer/WidgetExplorer.qml:258
 #, fuzzy, kde-format
-#| msgid "Uninstall"
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Uninstall (%1 Widget)"
 msgid_plural "Uninstall (%1 Widgets)"
@@ -782,39 +772,30 @@ msgstr "Ingen element er tilgjengelege"
 
 #: contents/lockscreen/config.qml:24
 #, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
 msgctxt "@title: group"
 msgid "Show clock:"
 msgstr "Vis klokke"
 
 #: contents/lockscreen/config.qml:25
 #, fuzzy, kde-format
-#| msgid "Always visible"
 msgctxt "@option:radio Clock always shown"
 msgid "Always"
 msgstr "Alltid synleg"
 
 #: contents/lockscreen/config.qml:26
 #, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
 msgctxt "@option:radio"
 msgid "Always show clock"
 msgstr "Vis klokke"
 
 #: contents/lockscreen/config.qml:41
 #, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
 msgctxt "@option:radio Clock shown only while unlock prompt is visible"
 msgid "On unlocking prompt"
 msgstr "Vis under opplåsingsfeltet"
 
 #: contents/lockscreen/config.qml:42
 #, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
 msgctxt "@option:radio"
 msgid "Show clock only on unlocking prompt"
 msgstr "Vis under opplåsingsfeltet"
@@ -827,8 +808,6 @@ msgstr ""
 
 #: contents/lockscreen/config.qml:56
 #, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
 msgctxt "@option:radio"
 msgid "Never show clock"
 msgstr "Vis klokke"

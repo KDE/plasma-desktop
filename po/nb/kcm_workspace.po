@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-18 00:42+0000\n"
-"PO-Revision-Date: 2011-07-10 14:22+0200\n"
-"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"PO-Revision-Date: 2025-04-04 12:09+0200\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 24.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -25,23 +25,25 @@ msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
 msgstr ""
+"Du må starte datamaskinen på nytt for at endringene i midtklikk-innliming "
+"skal tre i kraft."
 
 #: ui/main.qml:29
 #, kde-format
 msgid "Restart"
-msgstr ""
+msgstr "Start på nytt"
 
 #: ui/main.qml:45
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
-msgstr ""
+msgstr "Tillat Plasma å vise:"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr ""
+msgstr "Hjelpebobler for panel og skjermelementer"
 
 #: ui/main.qml:62
 #, kde-format
@@ -51,13 +53,17 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"Tillater alle Plasma-skjermelementer å vise kunnskapsrike hjelpebobler ved "
+"sveving med musepekeren. Denne innstillingen påvirker ikke de små "
+"hjelpeboblene som vises når du svever musen over enkelte knapper og andre "
+"elementer på brukergrensesnittet."
 
 #: ui/main.qml:70
 #, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
-msgstr ""
+msgstr "Skjermmelding-sprettopp for statusendringer"
 
 #: ui/main.qml:80
 #, kde-format
@@ -65,35 +71,37 @@ msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
+"Tillater alle Plasma-skjermelementer å vise skjermmelding-sprettopp for "
+"endringer som lyd- og lysstyrke, eller ved bytting av lydenhet."
 
 #: ui/main.qml:92
 #, kde-format
 msgid "Animation speed:"
-msgstr ""
+msgstr "Animasjonshastighet:"
 
 #: ui/main.qml:118
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
-msgstr ""
+msgstr "Sakte"
 
 #: ui/main.qml:125
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
-msgstr ""
+msgstr "Med en gang"
 
 #: ui/main.qml:136
 #, kde-format
 msgctxt "@label"
 msgid "Scrolling:"
-msgstr ""
+msgstr "Rulling:"
 
 #: ui/main.qml:140
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
-msgstr ""
+msgstr "Foretrekk jevn rulling"
 
 #: ui/main.qml:150
 #, kde-format
@@ -104,40 +112,44 @@ msgid ""
 "because they either do not support smooth scrolling, or have their own "
 "setting for enabling and disabling it."
 msgstr ""
+"Innstillingen slår av/på animerte overganger ved rulling med musehjulet "
+"eller tastaturet. Ikke alle programmer følger denne innstillingen, enten "
+"fordi de ikke støtter jevn rulling eller fordi de har innstillinger selv for "
+"å slå av/på jevn rulling."
 
 #: ui/main.qml:163
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
-msgstr ""
+msgstr "Trykk på filer og mapper:"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
-msgstr ""
+msgstr "Merker dem"
 
 #: ui/main.qml:189
 #, kde-format
 msgid "Open by double-clicking instead"
-msgstr ""
+msgstr "Åpne bare med dobbeltklikking"
 
 #: ui/main.qml:202
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
-msgstr ""
+msgstr "Åpner dem"
 
 #: ui/main.qml:220
 #, kde-format
 msgid "Select by clicking on item's selection marker"
-msgstr ""
+msgstr "Merk element ved å trykke på markeringsikonet"
 
 #: ui/main.qml:236
 #, kde-format
 msgid "Clicking in scrollbar track:"
-msgstr ""
+msgstr "Klikking i rullefelt:"
 
 #: ui/main.qml:237
 #, kde-format
@@ -145,7 +157,7 @@ msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
 "the clicked location'"
 msgid "Scrolls to the clicked location"
-msgstr ""
+msgstr "Ruller til valgt plass"
 
 #: ui/main.qml:255
 #, kde-format
@@ -153,12 +165,12 @@ msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
 "page up or down'"
 msgid "Scrolls one page up or down"
-msgstr ""
+msgstr "Ruller en side opp/ned"
 
 #: ui/main.qml:273
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
-msgstr ""
+msgstr "Midtklikk for å rulle til valgt plass"
 
 #: ui/main.qml:287
 #, kde-format
@@ -166,7 +178,7 @@ msgctxt ""
 "@label for checkbox, part of a complete sentence: 'Middle-click pastes "
 "selected text'"
 msgid "Middle-click:"
-msgstr ""
+msgstr "Midtklikk:"
 
 #: ui/main.qml:289
 #, kde-format
@@ -174,24 +186,24 @@ msgctxt ""
 "@option:check part of a complete sentence: 'Middle click pastes selected "
 "text'"
 msgid "Pastes selected text"
-msgstr ""
+msgstr "Lim inn merket tekst"
 
 #: ui/main.qml:306
 #, kde-format
 msgid "Touch Mode:"
-msgstr ""
+msgstr "Trykkskjerm-modus:"
 
 #: ui/main.qml:308
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
-msgstr ""
+msgstr "Ta automatisk i bruk ved behov"
 
 #: ui/main.qml:308 ui/main.qml:353
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
-msgstr ""
+msgstr "Alltid av"
 
 #: ui/main.qml:325
 #, kde-format
@@ -200,12 +212,15 @@ msgid ""
 "touchscreen but no mouse or touchpad. For example: when a transformable "
 "laptop's keyboard is flipped around or detached."
 msgstr ""
+"Trykkskjerm-modus tas automatisk i bruk når systemet oppdager en "
+"trykkskjerm, men ingen mus eller styreplate. Et eksempel er når et "
+"fleksibelt tastatur på en bærbar maskin snus rundt eller kobles fra."
 
 #: ui/main.qml:330
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
-msgstr ""
+msgstr "Alltid på"
 
 #: ui/main.qml:376
 #, kde-format
@@ -213,25 +228,27 @@ msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
 "more easily accommodate touch interaction."
 msgstr ""
+"I trykkskjerm-modus blir mange av elementene i brukergrensesnittet større, "
+"slik at det blir lettere å trykke dem med fingeren."
 
 #: ui/main.qml:394
 #, kde-format
 msgid "Double-click interval:"
-msgstr ""
+msgstr "Dobbeltklikkintervall:"
 
 #: ui/main.qml:409
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
 
 #: ui/main.qml:413
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
-msgstr ""
+msgstr "ms"
 
 #: ui/main.qml:427
 #, kde-format
@@ -239,54 +256,56 @@ msgid ""
 "Two clicks within this duration are considered a double-click. Some "
 "applications may not honor this setting."
 msgstr ""
+"To klikk innenfor dette tidsintervallet regnes som et dobbeltklikk. Men merk "
+"at ikke alle programmer tar hensyn til denne innstillingen."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
 #, kde-format
 msgid "Single click to open files"
-msgstr ""
+msgstr "Enkeltklikk for å åpne filer"
 
 #. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:13
 #, kde-format
 msgid "Animation speed"
-msgstr ""
+msgstr "Animasjonshastighet:"
 
 #. i18n: ectx: label, entry (smoothScroll), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:17
 #, kde-format
 msgid "Smooth scrolling"
-msgstr ""
+msgstr "Jevn rulling"
 
 #. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21
 #, kde-format
 msgid "Left-click in scrollbar track moves scrollbar by one page"
-msgstr ""
+msgstr "Venstreklikk i rullelinje flytter rullelinja med én side"
 
 #. i18n: ectx: label, entry (doubleClickInterval), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:25
 #, kde-format
 msgid "Double click interval"
-msgstr ""
+msgstr "Dobbeltklikkintervall"
 
 #. i18n: ectx: label, entry (tabletMode), group (Input)
 #: workspaceoptions_kwinsettings.kcfg:9
 #, kde-format
 msgid "Automatically switch to touch-optimized mode"
-msgstr ""
+msgstr "Bytt automatisk til trykkskjerm-optimert modus"
 
 #. i18n: ectx: label, entry (primarySelection), group (Wayland)
 #: workspaceoptions_kwinsettings.kcfg:15
 #, kde-format
 msgid "Enable middle click selection pasting"
-msgstr ""
+msgstr "Midtklikk for å lime inn utvalget"
 
 #. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display large panel and widget tooltips"
-msgstr ""
+msgstr "Vis forstørret panel og element hjelpebobler"
 
 #. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:10
@@ -294,12 +313,14 @@ msgstr ""
 msgid ""
 "Allow Plasma widgets to display large panel and widget tooltips on hover"
 msgstr ""
+"Tillat Plasma-element å vise forstørret panel og skjermelement hjelpebobler "
+"ved sveving"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
 #, kde-format
 msgid "Display small popups for status changes"
-msgstr ""
+msgstr "Vis små sprettopp for statusendringer"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:17
@@ -308,15 +329,17 @@ msgid ""
 "Allow Plasma widgets to display small popups for status changes such as "
 "brightness or volume"
 msgstr ""
+"Tillat plasma-element å vise små sprettopp for statusendringer som lyd- og "
+"lysstyrke"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21
 #, kde-format
 msgid "OSD on layout change"
-msgstr ""
+msgstr "Skjermmelding ved oppsettsendringer"
 
 #. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:22
 #, kde-format
 msgid "Show a popup on layout changes"
-msgstr ""
+msgstr "Vis sprettopp ved endringer i oppsett"
