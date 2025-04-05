@@ -47,7 +47,7 @@ KCM.SimpleKCM {
 
     KIconThemes.IconDialog {
         id: iconDialog
-        onIconNameChanged: cfg_icon = iconName || "folder-symbolic";
+        onIconNameChanged: iconName => cfg_icon = iconName || "folder-symbolic";
     }
 
     Kirigami.FormLayout {

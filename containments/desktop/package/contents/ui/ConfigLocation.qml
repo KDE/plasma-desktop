@@ -116,7 +116,7 @@ KCM.SimpleKCM {
                     }
                 }
 
-                onActivated: {
+                onActivated: index => {
                     cfg_url = Folder.DesktopSchemeHelper.getDesktopUrl(placesModel.urlForIndex(index));
                 }
             }
