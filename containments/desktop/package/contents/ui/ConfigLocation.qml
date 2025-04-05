@@ -73,7 +73,6 @@ KCM.SimpleKCM {
     }
 
     Kirigami.FormLayout {
-        anchors.horizontalCenter: parent.horizontalCenter
 
         RadioButton {
             id: locationDesktop

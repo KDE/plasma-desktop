@@ -51,12 +51,6 @@ KCM.SimpleKCM {
     }
 
     Kirigami.FormLayout {
-        anchors {
-            top: parent.top
-            left: parent.left
-            right: parent.right
-        }
-
         // Panel button
         RowLayout {
             spacing: Kirigami.Units.smallSpacing
