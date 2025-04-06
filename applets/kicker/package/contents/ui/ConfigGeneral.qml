@@ -135,6 +135,7 @@ KCMUtils.SimpleKCM {
                     icon.name: "edit-clear"
                     onClicked: {
                         configGeneral.cfg_icon = "start-here-kde-symbolic"
+                        configGeneral.cfg_customButtonImage = ""
                         configGeneral.cfg_useCustomButtonImage = false
                     }
                 }
