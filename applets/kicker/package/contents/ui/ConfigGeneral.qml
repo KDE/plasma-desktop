@@ -96,8 +96,10 @@ KCMUtils.SimpleKCM {
                     configGeneral.cfg_useCustomButtonImage = true;
                 }
 
-                onIconNameChanged: iconName => {
-                    setCustomButtonImage(iconName);
+                onAccepted: {
+                    if (iconDialog.iconName != "") {
+                        setCustomButtonImage(iconDialog.iconName)
+                    }
                 }
             }
 
