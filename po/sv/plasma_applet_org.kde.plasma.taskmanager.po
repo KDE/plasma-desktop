@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-05 00:43+0000\n"
-"PO-Revision-Date: 2025-02-28 19:45+0100\n"
+"PO-Revision-Date: 2025-04-05 18:55+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,18 +15,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: backend.cpp:284
-#, fuzzy, kde-format
-#| msgctxt "Show all user Places"
-#| msgid "%1 more Place"
-#| msgid_plural "%1 more Places"
+#, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place…"
 msgid_plural "%1 more Places…"
-msgstr[0] "%1 plats till"
-msgstr[1] "%1 platser till"
+msgstr[0] "%1 plats till…"
+msgstr[1] "%1 platser till…"
 
 #: backend.cpp:368
 #, kde-format
@@ -374,7 +371,7 @@ msgstr "Enligt aktivitet"
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By horizontal window position"
-msgstr ""
+msgstr "Enligt horisontell fönsterposition"
 
 #: package/contents/ui/ConfigBehavior.qml:149
 #, kde-format
@@ -728,7 +725,7 @@ msgstr "Rulla &upp"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
-msgstr ""
+msgstr "Ingen &namnlist och ram"
 
 #: package/contents/ui/ContextMenu.qml:729
 #, kde-format

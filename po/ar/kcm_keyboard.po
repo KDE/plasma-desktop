@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Amine <amineroukh@gmail.com>, 2008.
 # Amine Roukh <amineroukh@gmail.com>, 2008.
-# SPDX-FileCopyrightText: 2008, 2024 zayed <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2008, 2024, 2025 zayed <zayed.alsaidi@gmail.com>
 # Tariq AlWarhi <tariq.alwarhi@gmail.com>, 2010.
 # Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2010, 2021.
 # Abdalrahim Fakhouri <abdilra7eem@yahoo.com>, 2012.
@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-22 00:43+0000\n"
-"PO-Revision-Date: 2024-10-03 07:05+0400\n"
+"PO-Revision-Date: 2025-04-05 12:02+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -446,12 +446,10 @@ msgid "Current window only"
 msgstr "النافذة الحالية فقط"
 
 #: ui/Switching.qml:74
-#, fuzzy, kde-format
-#| msgctxt "@label:checkbox"
-#| msgid "Show notification on layout change"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Show OSD popup on layout change"
-msgstr "أظهر إشعار عند تغيير تخطيط"
+msgstr "أظهر منبثقة فوق النوافذ عند تغيير تخطيط لوحة المفاتيح"
 
 #: ui/Switching.qml:86
 #, kde-format

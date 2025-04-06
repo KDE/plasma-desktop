@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-05 00:43+0000\n"
-"PO-Revision-Date: 2025-03-28 22:26+0300\n"
+"PO-Revision-Date: 2025-04-05 14:57+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -22,17 +22,14 @@ msgstr ""
 "X-Generator: Lokalize 24.12.2\n"
 
 #: backend.cpp:284
-#, fuzzy, kde-format
-#| msgctxt "Show all user Places"
-#| msgid "%1 more Place"
-#| msgid_plural "%1 more Places"
+#, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place…"
 msgid_plural "%1 more Places…"
-msgstr[0] "עוד מקום אחד"
-msgstr[1] "עוד שני מקומות"
-msgstr[2] "עוד %1 מקומות"
-msgstr[3] "עוד %1 מקומות"
+msgstr[0] "עוד מקום אחד…"
+msgstr[1] "עוד שני מקומות…"
+msgstr[2] "עוד %1 מקומות…"
+msgstr[3] "עוד %1 מקומות…"
 
 #: backend.cpp:368
 #, kde-format

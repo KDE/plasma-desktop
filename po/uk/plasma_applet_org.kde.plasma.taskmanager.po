@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-05 00:43+0000\n"
-"PO-Revision-Date: 2025-03-28 12:57+0200\n"
+"PO-Revision-Date: 2025-04-05 11:36+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -21,17 +21,14 @@ msgstr ""
 "X-Generator: Lokalize 23.04.3\n"
 
 #: backend.cpp:284
-#, fuzzy, kde-format
-#| msgctxt "Show all user Places"
-#| msgid "%1 more Place"
-#| msgid_plural "%1 more Places"
+#, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place…"
 msgid_plural "%1 more Places…"
-msgstr[0] "І ще %1 місце"
-msgstr[1] "І ще %1 місця"
-msgstr[2] "І ще %1 місць"
-msgstr[3] "І ще одне місце"
+msgstr[0] "І ще %1 місце…"
+msgstr[1] "І ще %1 місця…"
+msgstr[2] "І ще %1 місць…"
+msgstr[3] "І ще одне місце…"
 
 #: backend.cpp:368
 #, kde-format

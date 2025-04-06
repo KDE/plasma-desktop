@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-05 00:43+0000\n"
-"PO-Revision-Date: 2025-03-28 17:43+0100\n"
+"PO-Revision-Date: 2025-04-05 18:49+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -18,15 +18,12 @@ msgstr ""
 "X-Generator: Lokalize 24.12.3\n"
 
 #: backend.cpp:284
-#, fuzzy, kde-format
-#| msgctxt "Show all user Places"
-#| msgid "%1 more Place"
-#| msgid_plural "%1 more Places"
+#, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place…"
 msgid_plural "%1 more Places…"
-msgstr[0] "%1 plaats meer"
-msgstr[1] "%1 plaatsen meer"
+msgstr[0] "%1 plaats meer…"
+msgstr[1] "%1 plaatsen meer…"
 
 #: backend.cpp:368
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-05 00:43+0000\n"
-"PO-Revision-Date: 2025-03-28 02:55+0100\n"
+"PO-Revision-Date: 2025-04-05 05:26+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -19,15 +19,12 @@ msgstr ""
 "X-Generator: Poedit 3.5\n"
 
 #: backend.cpp:284
-#, fuzzy, kde-format
-#| msgctxt "Show all user Places"
-#| msgid "%1 more Place"
-#| msgid_plural "%1 more Places"
+#, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place…"
 msgid_plural "%1 more Places…"
-msgstr[0] "კიდევ %1 ადგილი"
-msgstr[1] "კიდევ %1 ადგილი"
+msgstr[0] "კიდევ %1 ადგილი…"
+msgstr[1] "კიდევ %1 ადგილი…"
 
 #: backend.cpp:368
 #, kde-format
