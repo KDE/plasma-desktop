@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
 # JungHee Lee <daemul72@gmail.com>, 2021.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-19 02:36+0000\n"
-"PO-Revision-Date: 2024-11-29 00:41+0100\n"
+"PO-Revision-Date: 2025-04-07 00:19+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -72,7 +72,7 @@ msgstr "파일 형식:"
 #: package/contents/ui/ConfigFilter.qml:80
 #, kde-format
 msgid "Show hidden files:"
-msgstr "숨김 파일 표시:"
+msgstr "숨겨진 파일 표시:"
 
 #: package/contents/ui/ConfigFilter.qml:130
 #, kde-format
@@ -437,7 +437,7 @@ msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
 "or folder"
 msgid "Link Target Not Found"
-msgstr ""
+msgstr "링크 대상을 찾을 수 없음"
 
 #: plugins/folder/foldermodel.cpp:871
 #, kde-kuit-format
@@ -446,6 +446,8 @@ msgid ""
 "<filename>%1</filename> points to <filename>%2</filename>, but that could "
 "not be found. It may have been moved or deleted."
 msgstr ""
+"<filename>%1</filename>이(가) <filename>%2</filename>을(를) 가리키지만 대상"
+"을 찾을 수 없습니다. 이동이나 삭제되었을 수도 있습니다."
 
 #: plugins/folder/foldermodel.cpp:1729
 #, kde-format
@@ -464,13 +466,12 @@ msgid "&Open"
 msgstr "열기(&O)"
 
 #: plugins/folder/foldermodel.cpp:1739
-#, fuzzy, kde-format
-#| msgid "Show all"
+#, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
 "link points to"
 msgid "Show Target"
-msgstr "모두 표시"
+msgstr "대상 표시"
 
 #: plugins/folder/foldermodel.cpp:1863
 #, kde-format

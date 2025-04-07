@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
 # JungHee Lee <daemul72@gmail.com>, 2021.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-27 02:41+0000\n"
-"PO-Revision-Date: 2024-12-24 19:04+0100\n"
+"PO-Revision-Date: 2025-04-07 00:22+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -575,8 +575,7 @@ msgstr ""
 "두 번 클릭하여 초기화하십시오."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy, kde-format
-#| msgid "Panel and Desktop Management"
+#, kde-format
 msgid "Manage Panels and Desktops"
 msgstr "패널과 바탕 화면 관리"
 
@@ -743,22 +742,19 @@ msgid "Caps Lock is on"
 msgstr "Caps Lock이 켜져 있음"
 
 #: contents/lockscreen/LockScreenUi.qml:285
-#, fuzzy, kde-format
-#| msgid "Sleep"
+#, kde-format
 msgid "Slee&p"
-msgstr "대기 모드"
+msgstr "대기 모드(&P)"
 
 #: contents/lockscreen/LockScreenUi.qml:291
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "&Hibernate"
-msgstr "최대 절전 모드"
+msgstr "최대 절전 모드(&H)"
 
 #: contents/lockscreen/LockScreenUi.qml:297
-#, fuzzy, kde-format
-#| msgid "Switch User"
+#, kde-format
 msgid "Switch &User"
-msgstr "사용자 전환"
+msgstr "사용자 전환(&U)"
 
 #: contents/lockscreen/LockScreenUi.qml:358
 #, kde-format
