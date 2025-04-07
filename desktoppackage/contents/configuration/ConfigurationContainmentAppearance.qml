@@ -152,16 +152,30 @@ SimpleKCM {
                 const wallpaperConfig = configDialog.wallpaperConfiguration
                 // BUG 407619: wallpaperConfig can be null before calling `ContainmentItem::loadWallpaper()`
                 if (wallpaperConfig && sourceFile) {
-                    var props = {
-                        "configDialog": configDialog
-                    }
+
+                    var props = { configDialog = configDialog }
+
+                    // Some third-party wallpaper plugins need the config keys to be set initially.
+                    // We should not break them within one Plasma major version, but setting everything
+                    // will lead to an error message for every unused property (and some, like KConfigXT
+                    // default values, are used by almost no plugin configuration). We load the config
+                    // page in a temp variable first, then use that to figure out which ones we need to
+                    // set initially.
+                    // TODO Plasma 7: consider whether we can drop this workaround
+                    const temp = Qt.createComponent(Qt.resolvedUrl(sourceFile)).createObject(appearanceRoot, props)
+                    wallpaperConfig.keys().forEach(key => {
+                        const cfgKey = "cfg_" + key;
+                        if (cfgKey in temp) {
+                            props[cfgKey] = wallpaperConfig[key]
+                        }
+                    })
+                    temp.destroy()
 
                     var newItem = replace(Qt.resolvedUrl(sourceFile), props)
 
                     wallpaperConfig.keys().forEach(key => {
                         const cfgKey = "cfg_" + key;
                         if (cfgKey in newItem) {
-                            newItem[cfgKey] = wallpaperConfig[key];
                             let changedSignal = main.currentItem[cfgKey + "Changed"]
                             if (changedSignal) {
                                 changedSignal.connect(appearanceRoot.configurationChanged)
