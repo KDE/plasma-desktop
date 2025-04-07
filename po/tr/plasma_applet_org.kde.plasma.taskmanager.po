@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-05 00:43+0000\n"
-"PO-Revision-Date: 2025-03-28 14:45+0300\n"
+"PO-Revision-Date: 2025-04-07 00:45+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -22,15 +22,12 @@ msgstr ""
 "X-Generator: Lokalize 25.07.70\n"
 
 #: backend.cpp:284
-#, fuzzy, kde-format
-#| msgctxt "Show all user Places"
-#| msgid "%1 more Place"
-#| msgid_plural "%1 more Places"
+#, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place…"
 msgid_plural "%1 more Places…"
-msgstr[0] "%1 yer daha"
-msgstr[1] "%1 yer daha"
+msgstr[0] "%1 Yer Daha…"
+msgstr[1] "%1 Yer Daha…"
 
 #: backend.cpp:368
 #, kde-format

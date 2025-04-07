@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2015, 2017, 2019, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2014, 2015, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-29 00:43+0000\n"
-"PO-Revision-Date: 2024-12-24 18:56+0100\n"
+"PO-Revision-Date: 2025-04-07 00:16+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -189,10 +189,9 @@ msgid "Pointer speed:"
 msgstr "포인터 속도:"
 
 #: ui/main.qml:317
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgid "Enable pointer acceleration"
-msgstr "포인터 가속:"
+msgstr "포인터 가속 활성화"
 
 #: ui/main.qml:332
 #, kde-format
@@ -200,6 +199,7 @@ msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
+"이 설정을 사용하면 포인터 이동 속도가 빨라지면 그만큼 이동 거리가 증가합니다."
 
 #: ui/main.qml:342
 #, kde-format

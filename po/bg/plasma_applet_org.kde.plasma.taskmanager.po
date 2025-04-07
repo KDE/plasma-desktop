@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-05 00:43+0000\n"
-"PO-Revision-Date: 2025-03-29 13:44+0100\n"
+"PO-Revision-Date: 2025-04-06 16:05+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -20,15 +20,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: backend.cpp:284
-#, fuzzy, kde-format
-#| msgctxt "Show all user Places"
-#| msgid "%1 more Place"
-#| msgid_plural "%1 more Places"
+#, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place…"
 msgid_plural "%1 more Places…"
-msgstr[0] "Още %1 място"
-msgstr[1] "Още %1 места"
+msgstr[0] "Още %1 място…"
+msgstr[1] "Още %1 места…"
 
 #: backend.cpp:368
 #, kde-format

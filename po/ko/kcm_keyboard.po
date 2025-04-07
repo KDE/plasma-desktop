@@ -1,7 +1,7 @@
 # Translation of kcmkeyboard to Korean.
 # Copyright (C) 2007-2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kdebase package.
-# SPDX-FileCopyrightText: 2007, 2008, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020, 2021, 2023, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2007, 2008, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2020, 2021, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
 # JungHee Lee <daemul72@gmail.com>, 2021.
 #
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-22 00:43+0000\n"
-"PO-Revision-Date: 2024-11-29 00:52+0100\n"
+"PO-Revision-Date: 2025-04-07 00:14+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -441,12 +441,10 @@ msgid "Current window only"
 msgstr "현재 창만"
 
 #: ui/Switching.qml:74
-#, fuzzy, kde-format
-#| msgctxt "@label:checkbox"
-#| msgid "Show notification on layout change"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Show OSD popup on layout change"
-msgstr "레이아웃 전환 시 알림 표시"
+msgstr "레이아웃 전환 시 OSD 팝업 표시"
 
 #: ui/Switching.qml:86
 #, kde-format

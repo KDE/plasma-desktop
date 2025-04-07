@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
 # JungHee Lee <daemul72@gmail.com>, 2021.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-02 00:43+0000\n"
-"PO-Revision-Date: 2024-12-24 19:04+0100\n"
+"PO-Revision-Date: 2025-04-07 00:22+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -155,15 +155,12 @@ msgid "Apply Settings"
 msgstr "설정 적용"
 
 #: contents/configuration/AppletConfiguration.qml:369
-#, fuzzy, kde-format
-#| msgid ""
-#| "The settings of the current module have changed. Do you want to apply the "
-#| "changes or discard them?"
+#, kde-format
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
 msgstr ""
-"현재 모듈에 저장되지 않은 변경 사항이 있습니다. 변경 사항을 적용하거나 무시하"
-"시겠습니까?"
+"현재 페이지에 저장되지 않은 변경 사항이 있습니다. 변경 사항을 적용하거나 무시"
+"하시겠습니까?"
 
 #: contents/configuration/AppletConfiguration.qml:400
 #, kde-format
@@ -452,31 +449,28 @@ msgid "Translucent"
 msgstr "반투명"
 
 #: contents/configuration/PanelConfiguration.qml:484
-#, fuzzy, kde-format
-#| msgid "Floating"
+#, kde-format
 msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
 msgstr "떠다님"
 
 #: contents/configuration/PanelConfiguration.qml:500
-#, fuzzy, kde-format
-#| msgid "%1 (disabled)"
+#, kde-format
 msgctxt "@item:inlistbox Option to disable floating panels or applets"
 msgid "Disabled"
-msgstr "%1(사용 안 함)"
+msgstr "비활성화됨"
 
 #: contents/configuration/PanelConfiguration.qml:501
 #, kde-format
 msgctxt "@item:inlistbox Option to make only panel applets always float"
 msgid "Applets only"
-msgstr ""
+msgstr "애플릿만"
 
 #: contents/configuration/PanelConfiguration.qml:502
-#, fuzzy, kde-format
-#| msgid "Panel and Desktop Management"
+#, kde-format
 msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
-msgstr "패널과 바탕 화면 관리"
+msgstr "패널과 애플릿"
 
 #: contents/configuration/PanelConfiguration.qml:545
 #, kde-format
@@ -588,8 +582,7 @@ msgstr ""
 "두 번 클릭하여 초기화하십시오."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy, kde-format
-#| msgid "Panel and Desktop Management"
+#, kde-format
 msgid "Manage Panels and Desktops"
 msgstr "패널과 바탕 화면 관리"
 
@@ -638,7 +631,7 @@ msgstr "대안 위젯"
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Add %1"
-msgstr ""
+msgstr "%1 추가"
 
 #: contents/explorer/AppletDelegate.qml:47
 #, kde-format
@@ -652,42 +645,40 @@ msgid "New!"
 msgstr "새 위젯!"
 
 #: contents/explorer/AppletDelegate.qml:204
-#, fuzzy, kde-format
-#| msgid "No widgets available"
+#, kde-format
 msgctxt "@info:other accessible for badge showing applet count"
 msgid "%1 widget active"
 msgid_plural "%1 widgets active"
-msgstr[0] "사용 가능한 위젯 없음"
+msgstr[0] "위젯 %1개 활성화됨"
 
 #: contents/explorer/AppletDelegate.qml:205
 #, kde-format
 msgctxt " @info:other accessible for badge indicating new widget"
 msgid "Recently installed"
-msgstr ""
+msgstr "최근 설치됨"
 
 #: contents/explorer/AppletDelegate.qml:217
-#, fuzzy, kde-format
-#| msgid "Uninstall"
+#, kde-format
 msgid "Cancel Uninstallation"
-msgstr "삭제"
+msgstr "삭제 취소"
 
 #: contents/explorer/AppletDelegate.qml:218
 #, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Mark for Uninstallation"
-msgstr ""
+msgstr "삭제할 것으로 표시"
 
 #: contents/explorer/AppletDelegate.qml:222
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Cancel pending uninstallation for widget %1"
-msgstr ""
+msgstr "%1 위젯의 대기 중인 삭제 취소"
 
 #: contents/explorer/AppletDelegate.qml:223
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Mark widget %1 for uninstallation. Requires confirmation"
-msgstr ""
+msgstr "%1 위젯을 삭제할 것으로 표시합니다. 확인 필요"
 
 #: contents/explorer/AppletDelegate.qml:265
 #, kde-format
@@ -701,7 +692,7 @@ msgctxt ""
 "name"
 msgid "Remove running instance of widget %2"
 msgid_plural "Remove all %1 running instances of widget %2"
-msgstr[0] ""
+msgstr[0] "%2 위젯의 모든 실행 중인 인스턴스 %1개 삭제"
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -745,14 +736,13 @@ msgstr "새 위젯 가져오기…"
 #, kde-format
 msgctxt "@action:button accessible for close button"
 msgid "Close Widget Explorer"
-msgstr ""
+msgstr "위젯 탐색기 닫기"
 
 #: contents/explorer/WidgetExplorer.qml:208
-#, fuzzy, kde-format
-#| msgid "Lock Widgets"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Search Widgets"
-msgstr "위젯 잠금"
+msgstr "위젯 검색"
 
 #: contents/explorer/WidgetExplorer.qml:237
 #, kde-format
@@ -760,12 +750,11 @@ msgid "Categories"
 msgstr "분류"
 
 #: contents/explorer/WidgetExplorer.qml:258
-#, fuzzy, kde-format
-#| msgid "Uninstall widget"
+#, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Uninstall (%1 Widget)"
 msgid_plural "Uninstall (%1 Widgets)"
-msgstr[0] "위젯 삭제"
+msgstr[0] "삭제(위젯 %1개)"
 
 #: contents/explorer/WidgetExplorer.qml:369
 #, kde-format
@@ -778,57 +767,46 @@ msgid "No widgets available"
 msgstr "사용 가능한 위젯 없음"
 
 #: contents/lockscreen/config.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@title: group"
 msgid "Show clock:"
-msgstr "시계 표시"
+msgstr "시계 표시:"
 
 #: contents/lockscreen/config.qml:25
-#, fuzzy, kde-format
-#| msgid "Always visible"
+#, kde-format
 msgctxt "@option:radio Clock always shown"
 msgid "Always"
-msgstr "항상 표시"
+msgstr "항상"
 
 #: contents/lockscreen/config.qml:26
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Always show clock"
-msgstr "시계 표시"
+msgstr "항상 시계 표시"
 
 #: contents/lockscreen/config.qml:41
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio Clock shown only while unlock prompt is visible"
 msgid "On unlocking prompt"
-msgstr "잠금 해제 프롬프트 아래쪽에 표시"
+msgstr "잠금 해제 프롬프트에"
 
 #: contents/lockscreen/config.qml:42
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show clock only on unlocking prompt"
-msgstr "잠금 해제 프롬프트 아래쪽에 표시"
+msgstr "잠금 해제 프롬프트에만 시계 표시"
 
 #: contents/lockscreen/config.qml:55
 #, kde-format
 msgctxt "@option:radio Clock never shown"
 msgid "Never"
-msgstr ""
+msgstr "안 함"
 
 #: contents/lockscreen/config.qml:56
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Never show clock"
-msgstr "시계 표시"
+msgstr "시계 표시 안 함"
 
 #: contents/lockscreen/config.qml:71
 #, kde-format
@@ -853,22 +831,19 @@ msgid "Caps Lock is on"
 msgstr "Caps Lock이 켜져 있음"
 
 #: contents/lockscreen/LockScreenUi.qml:291
-#, fuzzy, kde-format
-#| msgid "Sleep"
+#, kde-format
 msgid "Slee&p"
-msgstr "대기 모드"
+msgstr "대기 모드(&P)"
 
 #: contents/lockscreen/LockScreenUi.qml:297
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "&Hibernate"
-msgstr "최대 절전 모드"
+msgstr "최대 절전 모드(&H)"
 
 #: contents/lockscreen/LockScreenUi.qml:303
-#, fuzzy, kde-format
-#| msgid "Switch User"
+#, kde-format
 msgid "Switch &User"
-msgstr "사용자 전환"
+msgstr "사용자 전환(&U)"
 
 #: contents/lockscreen/LockScreenUi.qml:364
 #, kde-format

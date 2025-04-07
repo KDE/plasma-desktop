@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-30 00:43+0000\n"
+"POT-Creation-Date: 2025-04-07 00:43+0000\n"
 "PO-Revision-Date: 2020-10-08 11:43+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -102,17 +102,17 @@ msgstr "Tühista kõigi valik"
 msgid "Switch Sort Order"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:65
+#: package/contents/ui/ConfigIcons.qml:59
 #, kde-format
 msgid "Panel button:"
 msgstr "Paneelinupp:"
 
-#: package/contents/ui/ConfigIcons.qml:71
+#: package/contents/ui/ConfigIcons.qml:65
 #, kde-format
 msgid "Use a custom icon"
 msgstr "Kohandatud ikooni kasutamine"
 
-#: package/contents/ui/ConfigIcons.qml:104
+#: package/contents/ui/ConfigIcons.qml:98
 #, fuzzy, kde-format
 #| msgctxt "@item:inmenu Open icon chooser dialog"
 #| msgid "Choose..."
@@ -120,289 +120,289 @@ msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Vali..."
 
-#: package/contents/ui/ConfigIcons.qml:110
+#: package/contents/ui/ConfigIcons.qml:104
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "Puhasta ikoon"
 
-#: package/contents/ui/ConfigIcons.qml:130
+#: package/contents/ui/ConfigIcons.qml:124
 #, kde-format
 msgid "Arrangement:"
 msgstr "Paigutus:"
 
-#: package/contents/ui/ConfigIcons.qml:134
+#: package/contents/ui/ConfigIcons.qml:128
 #, fuzzy, kde-format
 #| msgid "Top to Bottom, Left to Right"
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Left to Right"
 msgstr "Ülalt alla, vasakult paremale"
 
-#: package/contents/ui/ConfigIcons.qml:135
+#: package/contents/ui/ConfigIcons.qml:129
 #, fuzzy, kde-format
 #| msgid "Top to Bottom, Right to Left"
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Right to Left"
 msgstr "Ülalt alla, paremalt vasakule"
 
-#: package/contents/ui/ConfigIcons.qml:136
+#: package/contents/ui/ConfigIcons.qml:130
 #, fuzzy, kde-format
 #| msgid "Top to Bottom, Left to Right"
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "Top to Bottom"
 msgstr "Ülalt alla, vasakult paremale"
 
-#: package/contents/ui/ConfigIcons.qml:145
+#: package/contents/ui/ConfigIcons.qml:139
 #, fuzzy, kde-format
 #| msgid "Align left"
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align left"
 msgstr "Joondamine vasakule"
 
-#: package/contents/ui/ConfigIcons.qml:146
+#: package/contents/ui/ConfigIcons.qml:140
 #, fuzzy, kde-format
 #| msgid "Align right"
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Align right"
 msgstr "Joondamine paremale"
 
-#: package/contents/ui/ConfigIcons.qml:161
+#: package/contents/ui/ConfigIcons.qml:155
 #, kde-format
 msgid "Lock in place"
 msgstr "Lukustamine asukohale"
 
-#: package/contents/ui/ConfigIcons.qml:175
+#: package/contents/ui/ConfigIcons.qml:169
 #, kde-format
 msgid "Sorting:"
 msgstr "Sortimine:"
 
-#: package/contents/ui/ConfigIcons.qml:183
+#: package/contents/ui/ConfigIcons.qml:177
 #, fuzzy, kde-format
 #| msgid "Manual"
 msgctxt "@item:inlistbox sort icons manually"
 msgid "Manual"
 msgstr "Käsitsi"
 
-#: package/contents/ui/ConfigIcons.qml:184
+#: package/contents/ui/ConfigIcons.qml:178
 #, fuzzy, kde-format
 #| msgid "Name"
 msgctxt "@item:inlistbox sort icons by name"
 msgid "Name"
 msgstr "Nime järgi"
 
-#: package/contents/ui/ConfigIcons.qml:185
+#: package/contents/ui/ConfigIcons.qml:179
 #, fuzzy, kde-format
 #| msgid "Size"
 msgctxt "@item:inlistbox sort icons by size"
 msgid "Size"
 msgstr "Suuruse järgi"
 
-#: package/contents/ui/ConfigIcons.qml:186
+#: package/contents/ui/ConfigIcons.qml:180
 #, fuzzy, kde-format
 #| msgid "Type"
 msgctxt "@item:inlistbox sort icons by file type"
 msgid "Type"
 msgstr "Tüübi järgi"
 
-#: package/contents/ui/ConfigIcons.qml:187
+#: package/contents/ui/ConfigIcons.qml:181
 #, fuzzy, kde-format
 #| msgid "Date"
 msgctxt "@item:inlistbox sort icons by date"
 msgid "Date"
 msgstr "Kuupäeva järgi"
 
-#: package/contents/ui/ConfigIcons.qml:198
+#: package/contents/ui/ConfigIcons.qml:192
 #, fuzzy, kde-format
 #| msgid "Descending"
 msgctxt "@option:check sort icons in descending order"
 msgid "Descending"
 msgstr "Alanevalt"
 
-#: package/contents/ui/ConfigIcons.qml:206
+#: package/contents/ui/ConfigIcons.qml:200
 #, fuzzy, kde-format
 #| msgid "Folders first"
 msgctxt "@option:check sort icons with folders first"
 msgid "Folders first"
 msgstr "Kataloogid esimesena"
 
-#: package/contents/ui/ConfigIcons.qml:220
+#: package/contents/ui/ConfigIcons.qml:214
 #, kde-format
 msgctxt "whether to use icon or list view"
 msgid "View mode:"
 msgstr "Vaaterežiim:"
 
-#: package/contents/ui/ConfigIcons.qml:222
+#: package/contents/ui/ConfigIcons.qml:216
 #, fuzzy, kde-format
 #| msgid "List"
 msgctxt "@item:inlistbox show icons in a list"
 msgid "List"
 msgstr "Loend"
 
-#: package/contents/ui/ConfigIcons.qml:223
+#: package/contents/ui/ConfigIcons.qml:217
 #, kde-format
 msgctxt "@item:inlistbox show icons in a grid"
 msgid "Grid"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:234
+#: package/contents/ui/ConfigIcons.qml:228
 #, kde-format
 msgid "Icon size:"
 msgstr "Ikooni suurus:"
 
-#: package/contents/ui/ConfigIcons.qml:249
+#: package/contents/ui/ConfigIcons.qml:243
 #, fuzzy, kde-format
 #| msgid "Small"
 msgctxt "@label:slider smallest icon size"
 msgid "Small"
 msgstr "Väike"
 
-#: package/contents/ui/ConfigIcons.qml:258
+#: package/contents/ui/ConfigIcons.qml:252
 #, fuzzy, kde-format
 #| msgid "Large"
 msgctxt "@label:slider largest icon size"
 msgid "Large"
 msgstr "Suur"
 
-#: package/contents/ui/ConfigIcons.qml:267
+#: package/contents/ui/ConfigIcons.qml:261
 #, kde-format
 msgid "Label width:"
 msgstr "Pealdise laius:"
 
-#: package/contents/ui/ConfigIcons.qml:270
+#: package/contents/ui/ConfigIcons.qml:264
 #, fuzzy, kde-format
 #| msgid "Narrow"
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Narrow"
 msgstr "Kitsas"
 
-#: package/contents/ui/ConfigIcons.qml:271
+#: package/contents/ui/ConfigIcons.qml:265
 #, fuzzy, kde-format
 #| msgid "Medium"
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Medium"
 msgstr "Keskmine"
 
-#: package/contents/ui/ConfigIcons.qml:272
+#: package/contents/ui/ConfigIcons.qml:266
 #, fuzzy, kde-format
 #| msgid "Wide"
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Wide"
 msgstr "Lai"
 
-#: package/contents/ui/ConfigIcons.qml:280
+#: package/contents/ui/ConfigIcons.qml:274
 #, kde-format
 msgid "Text lines:"
 msgstr "Tekstiread:"
 
-#: package/contents/ui/ConfigIcons.qml:296
+#: package/contents/ui/ConfigIcons.qml:290
 #, kde-format
 msgid "When hovering over icons:"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:298
+#: package/contents/ui/ConfigIcons.qml:292
 #, fuzzy, kde-format
 #| msgid "Tooltips"
 msgid "Show tooltips"
 msgstr "Kohtspikrid"
 
-#: package/contents/ui/ConfigIcons.qml:305
+#: package/contents/ui/ConfigIcons.qml:299
 #, fuzzy, kde-format
 #| msgid "Selection markers"
 msgid "Show selection markers"
 msgstr "Valikumarkerid"
 
-#: package/contents/ui/ConfigIcons.qml:312
+#: package/contents/ui/ConfigIcons.qml:306
 #, fuzzy, kde-format
 #| msgid "Folder preview popups"
 msgid "Show folder preview popups"
 msgstr "Kataloogi hüpikeelvaatlused"
 
-#: package/contents/ui/ConfigIcons.qml:322
+#: package/contents/ui/ConfigIcons.qml:316
 #, fuzzy, kde-format
 #| msgid "&Rename"
 msgid "Rename:"
 msgstr "&Nimeta ümber"
 
-#: package/contents/ui/ConfigIcons.qml:326
+#: package/contents/ui/ConfigIcons.qml:320
 #, kde-format
 msgid "Rename inline by clicking selected item's text"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:337
+#: package/contents/ui/ConfigIcons.qml:331
 #, fuzzy, kde-format
 #| msgid "Preview In"
 msgid "Previews:"
 msgstr "Eelvaatlus rakenduses"
 
-#: package/contents/ui/ConfigIcons.qml:339
+#: package/contents/ui/ConfigIcons.qml:333
 #, fuzzy, kde-format
 #| msgid "Preview thumbnails"
 msgid "Show preview thumbnails"
 msgstr "Eelvaatluse pisipildid"
 
-#: package/contents/ui/ConfigIcons.qml:347
+#: package/contents/ui/ConfigIcons.qml:341
 #, fuzzy, kde-format
 #| msgid "Configure Preview Plugins..."
 msgid "Configure Preview Plugins…"
 msgstr "Seadista eelvaatluse pluginaid ..."
 
-#: package/contents/ui/ConfigLocation.qml:81
+#: package/contents/ui/ConfigLocation.qml:80
 #, kde-format
 msgid "Show:"
 msgstr "Näidatakse:"
 
-#: package/contents/ui/ConfigLocation.qml:83
+#: package/contents/ui/ConfigLocation.qml:82
 #, kde-format
 msgid "Desktop folder"
 msgstr "Töölauakataloog"
 
-#: package/contents/ui/ConfigLocation.qml:90
+#: package/contents/ui/ConfigLocation.qml:89
 #, kde-format
 msgid "Files linked to the current activity"
 msgstr "Aktiivse tegevusega seotud failid"
 
-#: package/contents/ui/ConfigLocation.qml:97
+#: package/contents/ui/ConfigLocation.qml:96
 #, kde-format
 msgid "Places panel item:"
 msgstr "Asukohapaneeli element:"
 
-#: package/contents/ui/ConfigLocation.qml:130
+#: package/contents/ui/ConfigLocation.qml:129
 #, kde-format
 msgid "Custom location:"
 msgstr "Kohandatud asukoht:"
 
-#: package/contents/ui/ConfigLocation.qml:138
+#: package/contents/ui/ConfigLocation.qml:137
 #, fuzzy, kde-format
 #| msgid "Type path or URL..."
 msgid "Type path or URL…"
 msgstr "Kirjuta siia asukoht või URL ..."
 
-#: package/contents/ui/ConfigLocation.qml:181
+#: package/contents/ui/ConfigLocation.qml:180
 #, kde-format
 msgid "Title:"
 msgstr "Pealkiri:"
 
-#: package/contents/ui/ConfigLocation.qml:183
+#: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "None"
 msgstr "Puudub"
 
-#: package/contents/ui/ConfigLocation.qml:183
+#: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "Default"
 msgstr "Vaikimisi"
 
-#: package/contents/ui/ConfigLocation.qml:183
+#: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "Full path"
 msgstr "Täielik asukoht"
 
-#: package/contents/ui/ConfigLocation.qml:183
+#: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "Custom title"
 msgstr "Kohandatud pealdis"
 
-#: package/contents/ui/ConfigLocation.qml:198
+#: package/contents/ui/ConfigLocation.qml:197
 #, fuzzy, kde-format
 #| msgid "Enter custom title..."
 msgid "Enter custom title…"

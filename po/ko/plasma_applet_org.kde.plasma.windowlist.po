@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2009, 2014, 2020, 2022.
+# SPDX-FileCopyrightText: 2009, 2014, 2020, 2022, 2025 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-19 00:43+0000\n"
-"PO-Revision-Date: 2022-07-13 12:11+0200\n"
+"PO-Revision-Date: 2025-04-07 00:20+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: contents/config/config.qml:13
 #, kde-format
@@ -38,11 +38,10 @@ msgid "Not applicable when the widget is on the Desktop."
 msgstr "위젯이 바탕 화면에 있을 때에는 사용할 수 없습니다."
 
 #: contents/ui/main.qml:84
-#, fuzzy, kde-format
-#| msgid "No windows"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "No open windows"
-msgstr "창 없음"
+msgstr "열린 창 없음"
 
 #: contents/ui/main.qml:111
 #, kde-format

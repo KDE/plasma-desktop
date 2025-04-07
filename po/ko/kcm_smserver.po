@@ -1,7 +1,7 @@
 # Translation of kcmsmserver to Korean.
 # Copyright (C) 2001, 2007 Free Software Foundation, Inc.
 # Yu-Chan, Park <super@susekorea.net>, 2001.
-# SPDX-FileCopyrightText: 2007, 2008, 2009, 2019, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
 # JungHee Lee <daemul72@gmail.com>, 2021.
 #
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-25 00:42+0000\n"
-"PO-Revision-Date: 2024-11-29 00:28+0100\n"
+"PO-Revision-Date: 2025-04-07 00:16+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -138,19 +138,16 @@ msgid "Ignored applications:"
 msgstr "무시할 앱:"
 
 #: ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' executable names here (separated by commas or colons, for "
-#| "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
-"세션에서 앱을 복원할 때 자동으로 시작하지 않을 앱의 실행 파일 이름을 쉼표나 "
-"쌍점으로 구분하여 입력하십시오(예: 'xterm:console' 또는 'xterm,konsole')."
+"세션에서 앱을 복원할 때 자동으로 시작하지 않으려면 앱의 desktop 파일 식별자"
+"나 X11의 경우 실행 파일 이름을 쉼표나 쌍점으로 구분하여 입력하십시오(예: "
+"'xterm:org.kde.konsole.desktop' 또는 'xterm,org.kde.konsole.desktop')."
 
 #: ui/main.qml:138
 #, kde-format

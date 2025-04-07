@@ -1,7 +1,7 @@
 # Translation of plasma_applet_tasks to Korean.
 # Copyright (C) 2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kdebase package.
-# SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2011, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2011, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
 # JungHee Lee <daemul72@gmail.com>, 2019, 2021.
 # 김태경 <kim@taekyeong.me>, 2022.
 #
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-05 00:43+0000\n"
-"PO-Revision-Date: 2024-11-29 00:40+0100\n"
+"PO-Revision-Date: 2025-04-07 00:20+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -21,14 +21,11 @@ msgstr ""
 "X-Generator: Lokalize 23.08.5\n"
 
 #: backend.cpp:284
-#, fuzzy, kde-format
-#| msgctxt "Show all user Places"
-#| msgid "%1 more Place"
-#| msgid_plural "%1 more Places"
+#, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place…"
 msgid_plural "%1 more Places…"
-msgstr[0] "추가 위치 %1개"
+msgstr[0] "추가 위치 %1개…"
 
 #: backend.cpp:368
 #, kde-format
@@ -137,19 +134,19 @@ msgstr "미리 보기 위로 마우스를 가져갈 때 다른 창 숨기기"
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show an indicator when a task is playing audio"
-msgstr ""
+msgstr "작업에서 오디오를 재생 중일 때 표시기 표시"
 
 #: package/contents/ui/ConfigAppearance.qml:69
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Mute task when clicking indicator"
-msgstr ""
+msgstr "표시기를 클릭했을 때 작업 음소거"
 
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show media and volume controls in tooltip"
-msgstr ""
+msgstr "풍선 도움말에 미디어와 음량 제어 표시"
 
 #: package/contents/ui/ConfigAppearance.qml:85
 #, kde-format
@@ -374,7 +371,7 @@ msgstr "활동별로"
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By horizontal window position"
-msgstr ""
+msgstr "수평 창 위치별로"
 
 #: package/contents/ui/ConfigBehavior.qml:149
 #, kde-format
@@ -728,7 +725,7 @@ msgstr "말아 올리기(&S)"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
-msgstr ""
+msgstr "제목 표시줄과 프레임 없음(&N)"
 
 #: package/contents/ui/ContextMenu.qml:729
 #, kde-format

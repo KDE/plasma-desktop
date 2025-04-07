@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2009, 2010, 2011, 2012, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2009, 2010, 2011, 2012, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
 # JungHee Lee <daemul72@gmail.com>, 2021.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-18 00:42+0000\n"
-"PO-Revision-Date: 2024-11-29 00:43+0100\n"
+"PO-Revision-Date: 2025-04-07 00:19+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -35,13 +35,13 @@ msgstr "다시 시작"
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
-msgstr ""
+msgstr "Plasma에서 다음 항목 표시 허용:"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr ""
+msgstr "패널과 위젯 풍선 도움말"
 
 #: ui/main.qml:62
 #, kde-format
@@ -51,14 +51,16 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"모든 Plasma 패널과 바탕 화면 위젯 위에 포인터를 올려 두었을 때 설명하는 풍선 "
+"도움말을 표시합니다. 이 설정은 각각 단추와 사용자 인터페이스 구성 요소 위에 "
+"포인터를 올려 두었을 때 설명하는 작은 풍선 도움말에는 영향을 주지 않습니다."
 
 #: ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
-msgstr "레이아웃 변경 시 팝업 표시"
+msgstr "상태 변경 시 OSD 팝업 표시"
 
 #: ui/main.qml:80
 #, kde-format
@@ -66,6 +68,8 @@ msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
+"모든 Plasma 위젯에서 음량, 밝기 수준, 오디오 장치 전환 등의 변경 시 OSD 팝업 "
+"표시를 허용합니다."
 
 #: ui/main.qml:92
 #, kde-format
@@ -296,7 +300,7 @@ msgstr "가운데 단추 클릭 붙여넣기 활성화"
 #: workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display large panel and widget tooltips"
-msgstr ""
+msgstr "대형 패널과 위젯 풍선 도움말 표시"
 
 #. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:10
@@ -304,24 +308,22 @@ msgstr ""
 msgid ""
 "Allow Plasma widgets to display large panel and widget tooltips on hover"
 msgstr ""
+"Plasma 위젯에 마우스 포인터를 올려 두었을 때 대형 패널과 위젯 풍선 도움말 표"
+"시 허용"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
-#, fuzzy, kde-format
-#| msgid "Display visual feedback for status changes"
+#, kde-format
 msgid "Display small popups for status changes"
-msgstr "상태 변경을 화면에 표시"
+msgstr "상태 변경 시 작은 팝업 표시"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show an on-screen display to indicate status changes such as brightness "
-#| "or volume"
+#, kde-format
 msgid ""
 "Allow Plasma widgets to display small popups for status changes such as "
 "brightness or volume"
-msgstr "밝기 또는 음량 변화와 같은 상태 변화 알림을 화면에 표시"
+msgstr "Plasma 위젯에서 밝기 또는 음량 변화와 같은 상태 변화 알림 표시 허용"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21
