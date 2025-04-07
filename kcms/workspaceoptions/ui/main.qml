@@ -456,6 +456,7 @@ KCM.SimpleKCM {
             textFormat: Text.PlainText
             elide: Text.ElideRight
             font: Kirigami.Theme.smallFont
+            wrapMode: Text.WordWrap
         }
 
         QQC2.RadioButton {
