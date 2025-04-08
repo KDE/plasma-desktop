@@ -161,6 +161,10 @@ Rectangle {
         function onSettingValueChanged() {
             wasConfigurationChangedSignalSent = true;
         }
+
+        function onUnsavedChangesChanged() {
+            root.settingValueChanged()
+        }
     }
 
     Connections {
