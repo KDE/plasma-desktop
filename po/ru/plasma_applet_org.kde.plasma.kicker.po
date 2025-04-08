@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-15 00:40+0000\n"
+"POT-Creation-Date: 2025-04-08 00:43+0000\n"
 "PO-Revision-Date: 2023-12-26 17:04+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -55,119 +55,119 @@ msgstr "Показывать в избранном"
 msgid "Icon:"
 msgstr "Значок:"
 
-#: package/contents/ui/ConfigGeneral.qml:129
+#: package/contents/ui/ConfigGeneral.qml:131
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Выбрать..."
 
-#: package/contents/ui/ConfigGeneral.qml:134
+#: package/contents/ui/ConfigGeneral.qml:136
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "Вернуть стандартный значок"
 
-#: package/contents/ui/ConfigGeneral.qml:152
+#: package/contents/ui/ConfigGeneral.qml:155
 #, kde-format
 msgid "Show applications as:"
 msgstr "Формат наименования программ:"
 
-#: package/contents/ui/ConfigGeneral.qml:154
+#: package/contents/ui/ConfigGeneral.qml:157
 #, kde-format
 msgid "Name only"
 msgstr "Только названия"
 
-#: package/contents/ui/ConfigGeneral.qml:154
+#: package/contents/ui/ConfigGeneral.qml:157
 #, kde-format
 msgid "Description only"
 msgstr "Только описания"
 
-#: package/contents/ui/ConfigGeneral.qml:154
+#: package/contents/ui/ConfigGeneral.qml:157
 #, kde-format
 msgid "Name (Description)"
 msgstr "Название (Описание)"
 
-#: package/contents/ui/ConfigGeneral.qml:154
+#: package/contents/ui/ConfigGeneral.qml:157
 #, kde-format
 msgid "Description (Name)"
 msgstr "Описание (Название)"
 
-#: package/contents/ui/ConfigGeneral.qml:164
+#: package/contents/ui/ConfigGeneral.qml:167
 #, kde-format
 msgid "Behavior:"
 msgstr "Поведение:"
 
-#: package/contents/ui/ConfigGeneral.qml:166
+#: package/contents/ui/ConfigGeneral.qml:169
 #, kde-format
 msgid "Sort applications alphabetically"
 msgstr "Сортировать приложения по алфавиту"
 
-#: package/contents/ui/ConfigGeneral.qml:174
+#: package/contents/ui/ConfigGeneral.qml:177
 #, kde-format
 msgid "Flatten sub-menus to a single level"
 msgstr "Упростить вложенные меню до одного уровня"
 
-#: package/contents/ui/ConfigGeneral.qml:182
+#: package/contents/ui/ConfigGeneral.qml:185
 #, kde-format
 msgid "Show icons on the root level of the menu"
 msgstr "Показывать значки объектов верхнего уровня"
 
-#: package/contents/ui/ConfigGeneral.qml:192
+#: package/contents/ui/ConfigGeneral.qml:195
 #, kde-format
 msgid "Show categories:"
 msgstr "Показывать категории:"
 
-#: package/contents/ui/ConfigGeneral.qml:195
+#: package/contents/ui/ConfigGeneral.qml:198
 #, kde-format
 msgid "Recent applications"
 msgstr "Последние приложения"
 
-#: package/contents/ui/ConfigGeneral.qml:196
+#: package/contents/ui/ConfigGeneral.qml:199
 #, kde-format
 msgid "Often used applications"
 msgstr "Часто используемые приложения"
 
-#: package/contents/ui/ConfigGeneral.qml:203
+#: package/contents/ui/ConfigGeneral.qml:206
 #, kde-format
 msgid "Recent files"
 msgstr "Последние файлы"
 
-#: package/contents/ui/ConfigGeneral.qml:204
+#: package/contents/ui/ConfigGeneral.qml:207
 #, kde-format
 msgid "Often used files"
 msgstr "Часто используемые файлы"
 
-#: package/contents/ui/ConfigGeneral.qml:210
+#: package/contents/ui/ConfigGeneral.qml:213
 #, kde-format
 msgid "Sort items in categories by:"
 msgstr "Сортировка объектов:"
 
 # BUGME: where is this visible in UI? --aspotashev
-#: package/contents/ui/ConfigGeneral.qml:211
+#: package/contents/ui/ConfigGeneral.qml:214
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "По времени последнего использования"
 
-#: package/contents/ui/ConfigGeneral.qml:211
+#: package/contents/ui/ConfigGeneral.qml:214
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
 msgid "Often used"
 msgstr "По частоте использования"
 
-#: package/contents/ui/ConfigGeneral.qml:221
+#: package/contents/ui/ConfigGeneral.qml:224
 #, kde-format
 msgid "Search:"
 msgstr "Поиск:"
 
-#: package/contents/ui/ConfigGeneral.qml:223
+#: package/contents/ui/ConfigGeneral.qml:226
 #, kde-format
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Искать также среди закладок, файлов и электронной почты"
 
-#: package/contents/ui/ConfigGeneral.qml:231
+#: package/contents/ui/ConfigGeneral.qml:234
 #, kde-format
 msgid "Align search results to bottom"
 msgstr "Расположить результаты поиска внизу"
