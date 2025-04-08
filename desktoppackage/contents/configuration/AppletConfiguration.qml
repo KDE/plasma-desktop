@@ -150,8 +150,16 @@ Rectangle {
         target: app.currentConfigPage
         ignoreUnknownSignals: true
 
+        // This is an artifact of old internal architecture. If control beyond the automated
+        // monitoring based on cfg_ properties is required, plasmoids should not emit
+        // settingValueChanged() but configurationChanged() to force prompting the user
+        // for saving changes, or use the unsavedChanges property to dynamically indicate
+        // whether saving is needed in the current state).
+        // We keep it around for now as third-party plasmoids might use it (even though they
+        // really shouldn't as it's not documented).
+        // TODO Plasma 7: remove and document in porting guide.
         function onSettingValueChanged() {
-            applyButton.enabled = true;
+            wasConfigurationChangedSignalSent = true;
         }
     }
 
