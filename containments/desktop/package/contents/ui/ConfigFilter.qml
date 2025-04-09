@@ -39,7 +39,7 @@ KCM.ScrollViewKCM {
             var types = [];
 
             for (var i = 0; i < count; ++i) {
-                types.push(get(i).name);
+                types.push(index(i, 0).data(Qt.UserRole));
             }
 
             mimeTypesModel.checkedTypes = types;
@@ -49,7 +49,7 @@ KCM.ScrollViewKCM {
             var types = [];
 
             for (var i = 0; i < count; ++i) {
-                types.push(get(i).name);
+                types.push(index(i, 0).data(Qt.UserRole));
             }
 
             mimeTypesModel.checkedTypes = mimeTypesModel.checkedTypes
