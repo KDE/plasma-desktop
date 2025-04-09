@@ -62,7 +62,7 @@ Item {
         PlasmaExtras.Menu {
             visualParent: root.visualParent
             property variant actionItem
-            property Item separator: separatorItem
+            property PlasmaExtras.MenuItem separator: separatorItem
             property QtObject showMenu: subShowMenu
 
             placement: {
