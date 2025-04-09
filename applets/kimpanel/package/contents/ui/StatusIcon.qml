@@ -67,7 +67,7 @@ Item {
         anchors.fill: parent
         hoverEnabled: true
         acceptedButtons: Qt.LeftButton | Qt.RightButton
-        onClicked: {
+        onClicked: mouse => {
             statusIcon.triggered(mouse.button);
         }
 
