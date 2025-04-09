@@ -358,7 +358,7 @@ Rectangle {
             bottom: parent.bottom
         }
 
-        pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Breadcrumb
+        pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Auto
         wideScreen: true
         pageStack.globalToolBar.separatorVisible: bottomSeparator.visible
         pageStack.globalToolBar.colorSet: Kirigami.Theme.Window
