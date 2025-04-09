@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-18 00:42+0000\n"
+"POT-Creation-Date: 2025-04-09 00:43+0000\n"
 "PO-Revision-Date: 2024-10-18 17:02+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -251,6 +251,14 @@ msgid ""
 msgstr ""
 "Two clicks within this duration are considered a double-click. Some "
 "applications may not honour this setting."
+
+#: ui/main.qml:438
+#, kde-format
+msgctxt "Test double-click speed"
+msgid ""
+"Double-click the folder to test. If it does not change its appearance, "
+"increase double-click interval."
+msgstr ""
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9

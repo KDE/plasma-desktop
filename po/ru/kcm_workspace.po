@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-18 00:42+0000\n"
+"POT-Creation-Date: 2025-04-09 00:43+0000\n"
 "PO-Revision-Date: 2025-01-29 10:59+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -258,6 +258,14 @@ msgstr ""
 "Два щелчка мышью, выполненные в пределах этого интервала времени, будут "
 "обработаны как двойной щелчок. Обратите внимание: не все приложения "
 "используют значение этого параметра."
+
+#: ui/main.qml:438
+#, kde-format
+msgctxt "Test double-click speed"
+msgid ""
+"Double-click the folder to test. If it does not change its appearance, "
+"increase double-click interval."
+msgstr ""
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9

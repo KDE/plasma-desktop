@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-18 00:42+0000\n"
+"POT-Creation-Date: 2025-04-09 00:43+0000\n"
 "PO-Revision-Date: 2025-02-23 13:36+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -257,6 +257,14 @@ msgid ""
 msgstr ""
 "Du klakoj ene de tiu ĉi daŭro estas konsiderataj duobla klako. Iuj aplikaĵoj "
 "eble ne honoras ĉi tiun agordon."
+
+#: ui/main.qml:438
+#, kde-format
+msgctxt "Test double-click speed"
+msgid ""
+"Double-click the folder to test. If it does not change its appearance, "
+"increase double-click interval."
+msgstr ""
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9

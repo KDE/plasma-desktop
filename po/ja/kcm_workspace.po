@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-18 00:42+0000\n"
+"POT-Creation-Date: 2025-04-09 00:43+0000\n"
 "PO-Revision-Date: 2025-03-30 19:13+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -250,6 +250,14 @@ msgid ""
 msgstr ""
 "この期間にされた2回のクリックがダブルクリックと見なされます。いくつかのアプリ"
 "ケーションはこの設定を無視するかもしれません。"
+
+#: ui/main.qml:438
+#, kde-format
+msgctxt "Test double-click speed"
+msgid ""
+"Double-click the folder to test. If it does not change its appearance, "
+"increase double-click interval."
+msgstr ""
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
