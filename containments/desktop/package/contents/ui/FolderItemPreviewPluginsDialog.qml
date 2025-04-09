@@ -19,6 +19,7 @@ Kirigami.Dialog {
     title: i18n("Preview Plugins")
 
     preferredWidth: Kirigami.Units.gridUnit * 15
+    implicitHeight: Math.round(parent.height * 0.8)
     standardButtons: Kirigami.Dialog.Ok | Kirigami.Dialog.Cancel
 
     onAccepted: {
