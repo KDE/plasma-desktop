@@ -28,7 +28,8 @@ PlasmoidItem {
 
     // For making a bottom to top layout since qml flow can't do that.
     // We just hang the task manager upside down to achieve that.
-    // This mirrors the tasks as well, so we just rotate them again to fix that (see Task.qml).
+    // This mirrors the tasks and group dialog as well, so we un-rotate them
+    // to fix that (see Task.qml and GroupDialog.qml).
     rotation: Plasmoid.configuration.reverseMode && Plasmoid.formFactor === PlasmaCore.Types.Vertical ? 180 : 0
 
     readonly property bool shouldShrinkToZero: tasksModel.count === 0

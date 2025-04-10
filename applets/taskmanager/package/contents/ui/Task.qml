@@ -26,8 +26,9 @@ PlasmaCore.ToolTipArea {
 
     activeFocusOnTab: true
 
-    // To achieve a bottom to top layout, the task manager is rotated by 180 degrees(see main.qml).
-    // This makes the tasks mirrored, so we mirror them again to fix that.
+    // To achieve a bottom-to-top layout on vertical panels, the task manager
+    // is rotated by 180 degrees(see main.qml). This makes the tasks rotated,
+    // so un-rotate them here to fix that.
     rotation: Plasmoid.configuration.reverseMode && Plasmoid.formFactor === PlasmaCore.Types.Vertical ? 180 : 0
 
     implicitHeight: inPopup

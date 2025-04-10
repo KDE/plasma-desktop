@@ -75,6 +75,12 @@ PlasmaCore.Dialog {
 
         PlasmaComponents3.ScrollView {
             id: scrollView
+
+            // To achieve a bottom-to-top layout on vertical panels, the task manager
+            // is rotated by 180 degrees(see main.qml). This makes the group dialog's
+            // items rotated, so un-rotate them here to fix that.
+            rotation: Plasmoid.configuration.reverseMode && Plasmoid.formFactor === PlasmaCore.Types.Vertical ? 180 : 0
+
             anchors.fill: parent
             readonly property bool overflowing: leftPadding > 0 || rightPadding > 0 // Scrollbar is visible
 
