@@ -85,53 +85,6 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: false
         }
 
-        // We want to show the slider in a logarithmic way. ie
-        // move from 4x, 3x, 2x, 1x, 0.5x, 0.25x, 0.125x
-        // 0 is a special case, which means "instant speed / no animations"
-        ColumnLayout {
-            Kirigami.FormData.label: i18n("Animation speed:")
-            Kirigami.FormData.buddyFor: slider
-            Layout.fillWidth: true
-            spacing: Kirigami.Units.smallSpacing
-
-            QQC2.Slider {
-                id: slider
-                Layout.fillWidth: true
-                from: -4
-                to: 4
-                stepSize: 0.5
-                snapMode: QQC2.Slider.SnapAlways
-                onMoved: kcm.globalsSettings.animationDurationFactor =
-                    (value === to) ? 0 : (1.0 / Math.pow(2, value))
-                value: (kcm.globalsSettings.animationDurationFactor === 0)
-                    ? slider.to
-                    : -(Math.log(kcm.globalsSettings.animationDurationFactor) / Math.log(2))
-
-                KCM.SettingStateBinding {
-                    configObject: kcm.globalsSettings
-                    settingName: "animationDurationFactor"
-                }
-            }
-            RowLayout {
-                spacing: 0
-                QQC2.Label {
-                    text: i18nc("Animation speed", "Slow")
-                    textFormat: Text.PlainText
-                }
-                Item {
-                    Layout.fillWidth: true
-                }
-                QQC2.Label {
-                    text: i18nc("Animation speed", "Instant")
-                    textFormat: Text.PlainText
-                }
-            }
-        }
-
-        Item {
-            Kirigami.FormData.isSection: false
-        }
-
         RowLayout {
             Kirigami.FormData.label: i18nc("@label", "Scrolling:")
             spacing: 0
