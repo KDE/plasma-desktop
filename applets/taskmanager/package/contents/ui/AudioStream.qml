@@ -14,7 +14,7 @@ import org.kde.ksvg as KSvg
 Item {
     id: audioStreamIconBox
 
-    width: Math.min(Math.min(iconBox.width, iconBox.height) * 0.4, Kirigami.Units.iconSizes.smallMedium)
+    width: Math.round(Math.min(Math.min(iconBox.width, iconBox.height) * 0.4, Kirigami.Units.iconSizes.smallMedium))
     height: width
     anchors {
         top: frame.top
