@@ -71,7 +71,7 @@ QQC2.ScrollView {
             MouseArea {
                 id: mouseArea
                 anchors.fill: parent
-                hoverEnabled: true
+                hoverEnabled: applicationModel.enabled
                 onClicked: applicationModel.toggleApplicationBlocked(model.index)
             }
         }
