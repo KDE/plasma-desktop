@@ -49,26 +49,6 @@ SimpleKCM {
         height: Math.max(implicitHeight, appearanceRoot.availableHeight)
         spacing: 0 // unless it's 0 there will be an additional gap between two FormLayouts
 
-        Component.onCompleted: {
-            for (var i = 0; i < configDialog.containmentPluginsConfigModel.count; ++i) {
-                var pluginName = configDialog.containmentPluginsConfigModel.data(configDialog.containmentPluginsConfigModel.index(i, 0), ConfigModel.PluginNameRole);
-                if (configDialog.containmentPlugin === pluginName) {
-                    pluginComboBox.currentIndex = i
-                    pluginComboBox.activated(i);
-                    break;
-                }
-            }
-
-            for (var i = 0; i < configDialog.wallpaperConfigModel.count; ++i) {
-                var pluginName = configDialog.wallpaperConfigModel.data(configDialog.wallpaperConfigModel.index(i, 0), ConfigModel.PluginNameRole);
-                if (configDialog.currentWallpaper === pluginName) {
-                    wallpaperComboBox.currentIndex = i
-                    wallpaperComboBox.activated(i);
-                    break;
-                }
-            }
-        }
-
         Kirigami.InlineMessage {
             visible: Plasmoid.immutable || animating
             text: i18nd("plasma_shell_org.kde.plasma.desktop", "Layout changes have been restricted by the system administrator")
@@ -90,11 +70,12 @@ SimpleKCM {
                 enabled: !Plasmoid.immutable
                 model: configDialog.containmentPluginsConfigModel
                 textRole: "name"
+                valueRole: "pluginName"
                 onActivated: {
-                    var model = configDialog.containmentPluginsConfigModel.get(currentIndex)
-                    appearanceRoot.containmentPlugin = model.pluginName
+                    appearanceRoot.containmentPlugin = pluginComboBox.currentValue
                     appearanceRoot.configurationChanged()
                 }
+                Component.onCompleted: currentIndex = indexOfValue(configDialog.containmentPlugin)
             }
 
             RowLayout {
@@ -108,16 +89,20 @@ SimpleKCM {
                     Layout.preferredWidth: Math.max(implicitWidth, pluginComboBox.implicitWidth)
                     model: configDialog.wallpaperConfigModel
                     textRole: "name"
+                    valueRole: "pluginName"
                     onActivated: {
                         var idx = configDialog.wallpaperConfigModel.index(currentIndex, 0)
-                        var pluginName = configDialog.wallpaperConfigModel.data(idx, ConfigModel.PluginNameRole)
-                        if (appearanceRoot.currentWallpaper === pluginName) {
+                        if (appearanceRoot.currentWallpaper === currentValue) {
                             return;
                         }
-                        appearanceRoot.currentWallpaper = pluginName
-                        configDialog.currentWallpaper = pluginName
-                        main.sourceFile = configDialog.wallpaperConfigModel.data(idx, ConfigModel.SourceRole)
+                        appearanceRoot.currentWallpaper = currentValue
+                        configDialog.currentWallpaper = currentValue
+                        main.sourceFile = idx.data(ConfigModel.SourceRole)
                         appearanceRoot.configurationChanged()
+                    }
+                    Component.onCompleted: {
+                        currentIndex = indexOfValue(configDialog.currentWallpaper)
+                        activated(currentIndex)
                     }
                 }
                 NewStuff.Button {
