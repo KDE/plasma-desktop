@@ -35,6 +35,7 @@ SessionManagementScreen {
         // Don't startLogin() here, because the signal is connected to the
         // Escape key as well, for which it wouldn't make sense to trigger
         // login.
+        passwordBox.clear()
         focusFirstVisibleFormControl();
     }
 
