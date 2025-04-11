@@ -17,9 +17,11 @@ KCM.SimpleKCM {
 
     title: i18n("Shortcuts")
 
-    signal configurationChanged
+    property bool unsavedChanges: false
+
     function saveConfig() {
         Plasmoid.globalShortcut = button.keySequence
+        unsavedChanges = false
     }
 
     ColumnLayout {
@@ -36,11 +38,7 @@ KCM.SimpleKCM {
             id: button
             keySequence: Plasmoid.globalShortcut
             modifierOnlyAllowed: true
-            onCaptureFinished: {
-                if (keySequence !== Plasmoid.globalShortcut) {
-                    root.configurationChanged();
-                }
-            }
+            onKeySequenceModified: root.unsavedChanges = keySequence !== Plasmoid.globalShortcut
         }
     }
 }
