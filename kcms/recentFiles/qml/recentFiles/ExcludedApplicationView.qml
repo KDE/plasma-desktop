@@ -1,78 +1,54 @@
 /*   vim:set foldenable foldmethod=marker:
 
     SPDX-FileCopyrightText: 2012 Ivan Cukic <ivan.cukic@kde.org>
+    SPDX-FileCopyrightText: 2025 Nate Graham <nate@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.5
-import QtQuick.Controls 2.5 as QQC2
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as QQC2
 
-import org.kde.kirigami 2.5 as Kirigami
+import org.kde.kirigami as Kirigami
 
 QQC2.ScrollView {
+    id: scrollview
+
+    readonly property bool narrowMode: width < Kirigami.Units.gridUnit * 30
+
     enabled: applicationModel.enabled
     Component.onCompleted: background.visible = true;
 
-    GridView {
-        id: gridView
+    GridLayout {
+        id: grid
+
+        // The delegate brings its own
+        rowSpacing: 0
+        columnSpacing: 0
+
+        columns: scrollview.narrowMode ? 1 : 4
+
         clip: true
-        cellHeight: Kirigami.Units.gridUnit * 5
-        cellWidth: Kirigami.Units.gridUnit * 9
-        model: applicationModel
-        delegate: Item {
-            height: gridView.cellHeight
-            width: gridView.cellWidth
 
-            Rectangle {
-                anchors.fill: parent
-                visible: mouseArea.containsMouse
-                color: Kirigami.Theme.hoverColor
-            }
+        Repeater {
+            model: applicationModel
+            delegate: QQC2.CheckDelegate {
+                Layout.preferredWidth: Math.round(scrollview.availableWidth/ grid.columns) - 1
+                Layout.preferredHeight: scrollview.narrowMode ? -1 : Kirigami.Units.gridUnit * 5
 
-            Kirigami.Icon {
-                id: icon
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.bottom: parent.verticalCenter
-                height: Kirigami.Units.iconSizes.medium
-                width: height
-                source: model.icon
-                opacity: model.blocked ? 0.6 : 1.0
-
-                Behavior on opacity { NumberAnimation { duration: Kirigami.Units.shortDuration } }
-            }
-
-            Kirigami.Icon {
-                anchors.bottom: icon.bottom
-                anchors.right: icon.right
-                height: Kirigami.Units.iconSizes.small
-                width: height
-                source: "emblem-unavailable"
-                opacity: model.blocked ? 1.0 : 0.0
-
-                Behavior on opacity { NumberAnimation { duration: Kirigami.Units.shortDuration } }
-            }
-
-            QQC2.Label {
-                anchors.horizontalCenter: parent.horizontalCenter
-                anchors.top: parent.verticalCenter
-                width: parent.width - 20
-                text: model.title
-                textFormat: Text.PlainText
-                horizontalAlignment: Text.AlignHCenter
-                elide: Text.ElideRight
-                maximumLineCount: 2
-                wrapMode: Text.Wrap
-                opacity: model.blocked ? 0.6 : 1.0
-
-                Behavior on opacity { NumberAnimation { duration: Kirigami.Units.shortDuration } }
-            }
-
-            MouseArea {
-                id: mouseArea
-                anchors.fill: parent
                 hoverEnabled: applicationModel.enabled
-                onClicked: applicationModel.toggleApplicationBlocked(model.index)
+
+                display: scrollview.narrowMode ? QQC2.AbstractButton.TextBesideIcon : QQC2.ItemDelegate.TextUnderIcon
+                icon.name: model.icon
+                icon.height: Kirigami.Settings.isMobile || display === QQC2.ItemDelegate.TextUnderIcon ? Kirigami.Units.iconSizes.medium : Kirigami.Units.iconSizes.smallMedium
+                text: model.title
+
+                opacity: model.blocked ? 0.3 : 1.0
+                Behavior on opacity { NumberAnimation { duration: Kirigami.Units.shortDuration } }
+
+                checked: !model.blocked
+                onToggled: applicationModel.toggleApplicationBlocked(model.index)
             }
         }
     }
