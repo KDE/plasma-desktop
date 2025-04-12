@@ -488,8 +488,10 @@ Item {
                 text: i18nc("@info", "You have manually calibrated this tablet. If it's no longer working correctly, try resetting this first.")
                 visible: !root.device.calibrationMatrixIsDefault
                 textFormat: Text.PlainText
-                elide: Text.ElideRight
+                wrapMode: Text.WordWrap
                 font: Kirigami.Theme.smallFont
+
+                Layout.preferredWidth: 260
             }
 
             ActionDialog {
