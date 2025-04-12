@@ -101,28 +101,42 @@ ColumnLayout {
             Item { Layout.fillWidth: true }
 
             PC3.ToolButton {
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Add Spacer")
-                icon.name: "distribute-horizontal-x"
+                id: addNewButton
 
-                PC3.ToolTip.text: i18nd("plasma_shell_org.kde.plasma.desktop", "Add spacer widget to the panel")
-                PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
-                PC3.ToolTip.visible: hovered
-                onClicked: configDialog.addPanelSpacer()
-            }
+                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button label of button to open a menu that lets you add widgets or spacers",  "Add New")
+                icon.name: "list-add-symbolic"
+                down: addMenu.opened
+                Accessible.role: Accessible.ButtonMenu
 
-            PC3.ToolButton {
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Add or Manage Widgets…")
-                icon.name: "view-group-symbolic"
-
-                PC3.ToolTip.text: i18nd("plasma_shell_org.kde.plasma.desktop", "Open the widget selector to drag and drop widgets to the panel")
-                PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
-                PC3.ToolTip.visible: hovered
                 onClicked: {
-                    configDialog.close()
-                    configDialog.showAddWidgetDialog()
+                    if (addMenu.visible) {
+                        addMenu.dismiss();
+                    } else {
+                        addMenu.open();
+                    }
+                }
+
+                PC3.Menu {
+                    id: addMenu
+                    y: addNewButton.height
+
+                    PC3.MenuItem {
+                        text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:menu add a spacer", "Spacer")
+                        icon.name: "distribute-horizontal-x"
+
+                        onClicked: configDialog.addPanelSpacer()
+                    }
+
+                    PC3.MenuItem {
+                        text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:menu add a widget", "Widgets…")
+                        icon.name: "view-group-symbolic"
+                        onClicked: {
+                            configDialog.close()
+                            configDialog.showAddWidgetDialog()
+                        }
+                    }
                 }
             }
-
         }
     }
 

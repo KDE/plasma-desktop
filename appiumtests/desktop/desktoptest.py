@@ -226,8 +226,8 @@ class DesktopTest(unittest.TestCase):
 
         wait = WebDriverWait(self.driver, 30)
         self.driver.find_element(AppiumBy.NAME, "Configure Panel…").click()
-        widget_button: WebElement = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Add Widgets…")))
-        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Add Spacer")))
+        widget_button: WebElement = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Add New")))
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Clone Panel")))
 
         actions.send_keys(Keys.ESCAPE).perform()
         wait.until_not(lambda _: widget_button.is_displayed())
@@ -354,7 +354,7 @@ class DesktopTest(unittest.TestCase):
                 action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_TOUCH, "finger"))
                 action.pointer_action.move_to_location(int(screen_geometry.width / 2), int(screen_geometry.height - 20)).pointer_down().pause(long_press_time_ms / 1000).pointer_up()
                 action.perform()
-                wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Add Spacer")))  # The panel config dialog is opened
+                wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Add New")))  # The panel config dialog is opened
                 success = True
                 break
             except TimeoutException:
