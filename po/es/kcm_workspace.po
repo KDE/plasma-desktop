@@ -1,4 +1,4 @@
-# Translation of kcm_workspace to Spanish
+# Spanish translations for kcm_workspace.po package.
 # Copyright (C) 2014-2024 This_file_is_part_of_KDE
 # This file is distributed under the same license as the plasma-desktop package.
 #
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-09 00:43+0000\n"
-"PO-Revision-Date: 2025-02-20 00:59+0100\n"
+"PO-Revision-Date: 2025-04-11 20:33+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: ui/main.qml:23
 #, kde-format
@@ -267,6 +267,8 @@ msgid ""
 "Double-click the folder to test. If it does not change its appearance, "
 "increase double-click interval."
 msgstr ""
+"Haga doble clic en la carpeta para probar. Si no cambia de aspecto, aumente "
+"el intervalo de doble clic."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
@@ -352,62 +354,3 @@ msgstr "OSD al cambiar la disposición"
 #, kde-format
 msgid "Show a popup on layout changes"
 msgstr "Mostrar una ventana emergente cuando cambia la disposición"
-
-#~ msgid "Visual behavior:"
-#~ msgstr "Comportamiento visual:"
-
-#~ msgid "Display informational tooltips on mouse hover"
-#~ msgstr "Mostrar ayudas emergentes informativas al situar el ratón encima"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Eloy Cuadra"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "ecuadra@eloihr.net"
-
-#~ msgid "General Behavior"
-#~ msgstr "Comportamiento general"
-
-#~ msgid "System Settings module for configuring general workspace behavior."
-#~ msgstr ""
-#~ "Módulo de las preferencias del sistema para configurar el comportamiento "
-#~ "general del espacio de trabajo."
-
-#~ msgid "Furkan Tokac"
-#~ msgstr "Furkan Tokac"
-
-#~ msgid "Never optimize for touch usage"
-#~ msgstr "No optimizar nunca para uso táctil"
-
-#~ msgid "Always optimize for touch usage"
-#~ msgstr "Optimizar siempre para uso táctil"
-
-#~ msgid "Click behavior:"
-#~ msgstr "Comportamiento del clic:"
-
-#~ msgid "Double-click to open files and folders"
-#~ msgstr "Doble clic para abrir archivos y carpetas"
-
-#~ msgid "Select by single-clicking"
-#~ msgstr "Seleccionar con un solo clic"
-
-#~ msgid "Double-click to open files and folders (single click to select)"
-#~ msgstr ""
-#~ "Doble clic para abrir archivos y carpetas (un solo clic para seleccionar)"
-
-#~ msgid "Plasma Workspace global options"
-#~ msgstr "Opciones globales del espacio de trabajo Plasma"
-
-#~ msgid "(c) 2009 Marco Martin"
-#~ msgstr "© 2009 Marco Martin"
-
-#~ msgid "Marco Martin"
-#~ msgstr "Marco Martin"
-
-#~ msgid "Maintainer"
-#~ msgstr "Responsable"
-
-#~ msgid "Show Informational Tips"
-#~ msgstr "Mostrar consejos informativos"
