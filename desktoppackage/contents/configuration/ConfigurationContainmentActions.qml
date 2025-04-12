@@ -101,19 +101,15 @@ KCM.SimpleKCM {
                 Layout.preferredWidth: 9000
                 model: configDialog.containmentActionConfigModel
                 textRole: "name"
+                valueRole: "pluginName"
                 property bool initialized: false
                 Component.onCompleted: {
-                    for (var i = 0; i < configDialog.containmentActionConfigModel.count; ++i) {
-                        if (configDialog.containmentActionConfigModel.get(i).pluginName === pluginName) {
-                            pluginsCombo.currentIndex = i;
-                            break;
-                        }
-                    }
+                    currentIndex = indexOfValue(pluginName)
                     pluginsCombo.initialized = true;
                 }
                 onActivated: {
                     if (initialized) {
-                        var newPluginName = configDialog.containmentActionConfigModel.get(index).pluginName;
+                        var newPluginName = currentValue;
                         if (newPluginName !== pluginName) {
                             configDialog.currentContainmentActionsModel.update(pluginIndex, action, newPluginName);
                         }
