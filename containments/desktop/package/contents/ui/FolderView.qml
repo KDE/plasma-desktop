@@ -321,8 +321,12 @@ FocusScope {
 
                 if (mouse.buttons & Qt.RightButton) {
                     clearPressState();
-                    dir.openContextMenu(main, mouse.modifiers);
-                    mouse.accepted = true;
+
+                    // If it's the desktop, fall through to the desktop context menu plugin
+                    if (!dir.usedByContainment) {
+                        dir.openContextMenu(main, mouse.modifiers);
+                        mouse.accepted = true;
+                    }
                 }
             } else {
                 pressedItem = hoveredItem;
