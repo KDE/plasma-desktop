@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-27 00:43+0000\n"
+"POT-Creation-Date: 2025-04-13 00:42+0000\n"
 "PO-Revision-Date: 2025-01-10 00:59+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -252,13 +252,21 @@ msgctxt "@info"
 msgid "This button is disabled and will not do anything."
 msgstr "Šis mygtukas yra išjungtas ir nieko nedarys."
 
-#: ui/Calibration.qml:31
+#: ui/Calibration.qml:30
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
 msgstr "Rašiklio kalibravimas"
 
-#: ui/Calibration.qml:90
+#: ui/Calibration.qml:98
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
+"revert to default calibration in %1 seconds.</b>"
+msgstr ""
+
+#: ui/Calibration.qml:102
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -268,35 +276,37 @@ msgstr ""
 "Kalibravimas yra užbaigtas ir įrašytas.<nl/><nl/>Tobulinkite kalibravimą "
 "toliau arba užverkite langą."
 
-#: ui/Calibration.qml:91
-#, kde-kuit-format
+#: ui/Calibration.qml:105
+#, kde-format
 msgctxt "@info"
-msgid ""
-"Tap the center of each target.<nl/><nl/>Aim for the point where the stylus "
-"tip lands, and ignore the cursor position on the screen."
+msgid "Tap the center of each target."
 msgstr ""
-"Bakstelėkite ant kiekvieno objekto centro.<nl/><nl/>Taikykitės į tašką, "
-"kuriame nusileidžia rašiklio galiukas ir nepaisykite žymeklio vietos ekrane."
 
-#: ui/Calibration.qml:97
+#: ui/Calibration.qml:112
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
 msgstr "Tobulinti esamą kalibravimą"
 
-#: ui/Calibration.qml:106
+#: ui/Calibration.qml:121
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset and Try Again"
+msgstr ""
+
+#: ui/Calibration.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
 msgstr "Kalibruoti nuo nulio"
 
-#: ui/Calibration.qml:120
+#: ui/Calibration.qml:135
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
 msgstr "Užverti"
 
-#: ui/Calibration.qml:120
+#: ui/Calibration.qml:135
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
@@ -403,18 +413,18 @@ msgctxt ""
 msgid "pad button %1"
 msgstr "kilimėlio mygtukas %1"
 
-#: ui/StylusTab.qml:31
+#: ui/StylusTab.qml:216
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "Kairės rankos veiksena:"
 
-#: ui/StylusTab.qml:37
+#: ui/StylusTab.qml:222
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
 msgstr "Įjungti"
 
-#: ui/StylusTab.qml:43
+#: ui/StylusTab.qml:228
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -426,36 +436,36 @@ msgstr ""
 "kiekviename įrenginyje skirtingas, bet dažnu atveju tai apkeičia kilimėlio "
 "mygtukų funkcionalumą taip, kad planšetę galima būtų naudoti aukštyn kojomis."
 
-#: ui/StylusTab.qml:102
+#: ui/StylusTab.qml:291
 #, kde-format
 msgid "Pen Pressure:"
 msgstr "Rašiklio spaudimas:"
 
-#: ui/StylusTab.qml:162
+#: ui/StylusTab.qml:351
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/StylusTab.qml:170
+#: ui/StylusTab.qml:359
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/StylusTab.qml:181
+#: ui/StylusTab.qml:370
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr "100%"
 
-#: ui/StylusTab.qml:189
+#: ui/StylusTab.qml:378
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr "0%"
 
-#: ui/StylusTab.qml:193
+#: ui/StylusTab.qml:382
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -465,13 +475,13 @@ msgstr ""
 "Ši kreivė valdo santykį tarp spaudimo ant rašiklio ir spaudimo reikšmių, "
 "kurias gauna programos."
 
-#: ui/StylusTab.qml:198
+#: ui/StylusTab.qml:387
 #, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
 msgstr "Spaudimo rėžis:"
 
-#: ui/StylusTab.qml:225
+#: ui/StylusTab.qml:414
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -481,23 +491,39 @@ msgstr ""
 "Aukščiau ar žemiau slenksčio esantis spaudimas bus apribotas ir tai taps "
 "nauju įsigaliojusiu rėžiu."
 
-#: ui/StylusTab.qml:237
+#: ui/StylusTab.qml:428
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "Vyksta kalibravimas"
 
-#: ui/StylusTab.qml:239
+#: ui/StylusTab.qml:430
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "Kalibruoti"
 
-#: ui/StylusTab.qml:242
+#: ui/StylusTab.qml:433
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "Kalibravimas nepalaikomas"
+
+#: ui/StylusTab.qml:474
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Refine Existing Calibration"
+msgctxt "@action:button"
+msgid "Reset Custom Calibration"
+msgstr "Tobulinti esamą kalibravimą"
+
+#: ui/StylusTab.qml:488
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You have manually calibrated this tablet. If it's no longer working "
+"correctly, try resetting this first."
+msgstr ""
 
 #: ui/Tester.qml:25
 #, kde-format
@@ -538,6 +564,15 @@ msgstr ""
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr "Išvalyti"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Tap the center of each target.<nl/><nl/>Aim for the point where the "
+#~ "stylus tip lands, and ignore the cursor position on the screen."
+#~ msgstr ""
+#~ "Bakstelėkite ant kiekvieno objekto centro.<nl/><nl/>Taikykitės į tašką, "
+#~ "kuriame nusileidžia rašiklio galiukas ir nepaisykite žymeklio vietos "
+#~ "ekrane."
 
 #~ msgctxt "Low pen pressure"
 #~ msgid "Low Pressure"

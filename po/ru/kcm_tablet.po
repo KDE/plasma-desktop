@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-27 00:43+0000\n"
+"POT-Creation-Date: 2025-04-13 00:42+0000\n"
 "PO-Revision-Date: 2025-02-13 11:57+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -253,13 +253,21 @@ msgctxt "@info"
 msgid "This button is disabled and will not do anything."
 msgstr "Эта кнопка отключена, её нажатие ни к чему не приведёт."
 
-#: ui/Calibration.qml:31
+#: ui/Calibration.qml:30
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
 msgstr "Калибровка пера"
 
-#: ui/Calibration.qml:90
+#: ui/Calibration.qml:98
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
+"revert to default calibration in %1 seconds.</b>"
+msgstr ""
+
+#: ui/Calibration.qml:102
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -269,35 +277,37 @@ msgstr ""
 "Калибровка завершена, её данные сохранены.<nl/><nl/>Продолжите калибровку "
 "или закройте это окно."
 
-#: ui/Calibration.qml:91
-#, kde-kuit-format
+#: ui/Calibration.qml:105
+#, kde-format
 msgctxt "@info"
-msgid ""
-"Tap the center of each target.<nl/><nl/>Aim for the point where the stylus "
-"tip lands, and ignore the cursor position on the screen."
+msgid "Tap the center of each target."
 msgstr ""
-"Коснитесь центра каждой цели.<nl/><nl/>Старайтесь попасть в точку, куда "
-"попадает кончик пера, и не обращайте внимание на положение курсора на экране."
 
-#: ui/Calibration.qml:97
+#: ui/Calibration.qml:112
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
 msgstr "Улучшить существующую калибровку"
 
-#: ui/Calibration.qml:106
+#: ui/Calibration.qml:121
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset and Try Again"
+msgstr ""
+
+#: ui/Calibration.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
 msgstr "Калибровать с нуля"
 
-#: ui/Calibration.qml:120
+#: ui/Calibration.qml:135
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
 msgstr "Закрыть"
 
-#: ui/Calibration.qml:120
+#: ui/Calibration.qml:135
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
@@ -404,18 +414,18 @@ msgctxt ""
 msgid "pad button %1"
 msgstr "кнопка устройства %1"
 
-#: ui/StylusTab.qml:31
+#: ui/StylusTab.qml:216
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "Для левшей:"
 
-#: ui/StylusTab.qml:37
+#: ui/StylusTab.qml:222
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
 msgstr "Использовать"
 
-#: ui/StylusTab.qml:43
+#: ui/StylusTab.qml:228
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -428,36 +438,36 @@ msgstr ""
 "включении этой опции выполняется инверсия функций кнопок устройства — "
 "благодаря этому его можно использовать в перевёрнутом виде."
 
-#: ui/StylusTab.qml:102
+#: ui/StylusTab.qml:291
 #, kde-format
 msgid "Pen Pressure:"
 msgstr "Нажим пером:"
 
-#: ui/StylusTab.qml:162
+#: ui/StylusTab.qml:351
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/StylusTab.qml:170
+#: ui/StylusTab.qml:359
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/StylusTab.qml:181
+#: ui/StylusTab.qml:370
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr "100%"
 
-#: ui/StylusTab.qml:189
+#: ui/StylusTab.qml:378
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr "0%"
 
-#: ui/StylusTab.qml:193
+#: ui/StylusTab.qml:382
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -467,13 +477,13 @@ msgstr ""
 "Эта кривая позволяет настроить соотношения между силой нажима на перо и "
 "значением, которое будет передано в приложение."
 
-#: ui/StylusTab.qml:198
+#: ui/StylusTab.qml:387
 #, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
 msgstr "Диапазон нажима:"
 
-#: ui/StylusTab.qml:225
+#: ui/StylusTab.qml:414
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -481,23 +491,39 @@ msgid ""
 "new effective range."
 msgstr "Сила нажатия выше или ниже порогового значения будет ограничена."
 
-#: ui/StylusTab.qml:237
+#: ui/StylusTab.qml:428
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "Выполняется калибровка"
 
-#: ui/StylusTab.qml:239
+#: ui/StylusTab.qml:430
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "Калибровать"
 
-#: ui/StylusTab.qml:242
+#: ui/StylusTab.qml:433
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "Калибровка не поддерживается"
+
+#: ui/StylusTab.qml:474
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Refine Existing Calibration"
+msgctxt "@action:button"
+msgid "Reset Custom Calibration"
+msgstr "Улучшить существующую калибровку"
+
+#: ui/StylusTab.qml:488
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You have manually calibrated this tablet. If it's no longer working "
+"correctly, try resetting this first."
+msgstr ""
 
 #: ui/Tester.qml:25
 #, kde-format
@@ -539,6 +565,15 @@ msgstr ""
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr "Очистить"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Tap the center of each target.<nl/><nl/>Aim for the point where the "
+#~ "stylus tip lands, and ignore the cursor position on the screen."
+#~ msgstr ""
+#~ "Коснитесь центра каждой цели.<nl/><nl/>Старайтесь попасть в точку, куда "
+#~ "попадает кончик пера, и не обращайте внимание на положение курсора на "
+#~ "экране."
 
 #~ msgctxt "@info:tooltip"
 #~ msgid "Calibration across multiple screens is not supported."

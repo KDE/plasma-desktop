@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-27 00:43+0000\n"
+"POT-Creation-Date: 2025-04-13 00:42+0000\n"
 "PO-Revision-Date: 2025-01-26 16:40+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -250,13 +250,21 @@ msgctxt "@info"
 msgid "This button is disabled and will not do anything."
 msgstr "இப்பட்டன் முடக்கப்பட்டுள்ளது; எதுவும் செய்யாது."
 
-#: ui/Calibration.qml:31
+#: ui/Calibration.qml:30
 #, kde-format
 msgctxt "@title"
 msgid "Pen Calibration"
 msgstr "பேனா அளதிருத்தம்"
 
-#: ui/Calibration.qml:90
+#: ui/Calibration.qml:98
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
+"revert to default calibration in %1 seconds.</b>"
+msgstr ""
+
+#: ui/Calibration.qml:102
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -266,35 +274,37 @@ msgstr ""
 "அளதிருத்தம் முடிவடைந்து செமிக்கப்பட்டுள்ளது.<nl/><nl/>அளதிருத்தத்தை மேம்படுத்தலாம் அல்லது "
 "இச்சாளரத்தை மூடலாம்."
 
-#: ui/Calibration.qml:91
-#, kde-kuit-format
+#: ui/Calibration.qml:105
+#, kde-format
 msgctxt "@info"
-msgid ""
-"Tap the center of each target.<nl/><nl/>Aim for the point where the stylus "
-"tip lands, and ignore the cursor position on the screen."
+msgid "Tap the center of each target."
 msgstr ""
-"ஒவ்வொரு இலக்கின் நடுப்பகுதியை தட்டவும்.<nl/><nl/> திரையில் காட்டப்படும் சுட்டிக்குறியை "
-"பொருட்படுத்தாமல் பேனாவின் மீது மட்டும் கவனம் செலுத்தவும்."
 
-#: ui/Calibration.qml:97
+#: ui/Calibration.qml:112
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
 msgstr "ஏற்கனவேயுள்ள அளதிருத்தத்தை மேம்படுத்து"
 
-#: ui/Calibration.qml:106
+#: ui/Calibration.qml:121
+#, kde-format
+msgctxt "@action:button"
+msgid "Reset and Try Again"
+msgstr ""
+
+#: ui/Calibration.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "Calibrate from Scratch"
 msgstr "முதலிலிருந்து அளதிருத்து"
 
-#: ui/Calibration.qml:120
+#: ui/Calibration.qml:135
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
 msgstr "மூடு"
 
-#: ui/Calibration.qml:120
+#: ui/Calibration.qml:135
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
@@ -401,18 +411,18 @@ msgctxt ""
 msgid "pad button %1"
 msgstr "வரைபலகை பட்டன் %1"
 
-#: ui/StylusTab.qml:31
+#: ui/StylusTab.qml:216
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "இடதுகை பயன்முறை:"
 
-#: ui/StylusTab.qml:37
+#: ui/StylusTab.qml:222
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
 msgstr "இயக்கு"
 
-#: ui/StylusTab.qml:43
+#: ui/StylusTab.qml:228
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -423,36 +433,36 @@ msgstr ""
 "இடக்கை பயனர்களுக்கு இணங்குமாறு சாதனத்திறுக் கட்டளையிடும். பெரும்பாலும், இது வரைபலகையைத் "
 "தலைகீழாக பயன்படுத்தும் விதத்தில் பட்டன்களை புரட்டும்."
 
-#: ui/StylusTab.qml:102
+#: ui/StylusTab.qml:291
 #, kde-format
 msgid "Pen Pressure:"
 msgstr "பேனா அழுத்தம்:"
 
-#: ui/StylusTab.qml:162
+#: ui/StylusTab.qml:351
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/StylusTab.qml:170
+#: ui/StylusTab.qml:359
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/StylusTab.qml:181
+#: ui/StylusTab.qml:370
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr "100%"
 
-#: ui/StylusTab.qml:189
+#: ui/StylusTab.qml:378
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr "0%"
 
-#: ui/StylusTab.qml:193
+#: ui/StylusTab.qml:382
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -462,13 +472,13 @@ msgstr ""
 "பேனாமீத் நீங்கள் இடும் அழுத்தம், செயலிக்கு எவ்வாறு மாற்றி அனுப்பப்பட வேண்டுமென்பதை இது "
 "தீர்மானிக்கும்"
 
-#: ui/StylusTab.qml:198
+#: ui/StylusTab.qml:387
 #, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
 msgstr "அழுத்த வீச்சு:"
 
-#: ui/StylusTab.qml:225
+#: ui/StylusTab.qml:414
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -478,23 +488,39 @@ msgstr ""
 "அமைக்கப்பட்டுள்ள வரம்பில் அடங்கா அழுத்தத்தின் விளைவு, வரம்பின் எல்லை மதிப்பிற்கான விளைவுபோல் "
 "இருக்கும். அதாவது இந்த வரம்பிற்குள் உள்ள அழுத்த மாறுபாடுகளே கணினியால் பொருட்படுத்தப்படும்."
 
-#: ui/StylusTab.qml:237
+#: ui/StylusTab.qml:428
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "அளதிருத்தம் செயலிலுள்ளது"
 
-#: ui/StylusTab.qml:239
+#: ui/StylusTab.qml:430
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "அளவொப்புமை"
 
-#: ui/StylusTab.qml:242
+#: ui/StylusTab.qml:433
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "அளதிருத்தம் ஆதரிக்கப்படவில்லை"
+
+#: ui/StylusTab.qml:474
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Refine Existing Calibration"
+msgctxt "@action:button"
+msgid "Reset Custom Calibration"
+msgstr "ஏற்கனவேயுள்ள அளதிருத்தத்தை மேம்படுத்து"
+
+#: ui/StylusTab.qml:488
+#, kde-format
+msgctxt "@info"
+msgid ""
+"You have manually calibrated this tablet. If it's no longer working "
+"correctly, try resetting this first."
+msgstr ""
 
 #: ui/Tester.qml:25
 #, kde-format
@@ -535,6 +561,14 @@ msgstr ""
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr "காலியாக்கு"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Tap the center of each target.<nl/><nl/>Aim for the point where the "
+#~ "stylus tip lands, and ignore the cursor position on the screen."
+#~ msgstr ""
+#~ "ஒவ்வொரு இலக்கின் நடுப்பகுதியை தட்டவும்.<nl/><nl/> திரையில் காட்டப்படும் "
+#~ "சுட்டிக்குறியை பொருட்படுத்தாமல் பேனாவின் மீது மட்டும் கவனம் செலுத்தவும்."
 
 #~ msgctxt "Low pen pressure"
 #~ msgid "Low Pressure"
