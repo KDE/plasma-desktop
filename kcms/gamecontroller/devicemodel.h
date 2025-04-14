@@ -12,7 +12,7 @@
 #include <QMap>
 #include <QPointer>
 
-#include <SDL2/SDL_joystick.h>
+#include <SDL3/SDL_joystick.h>
 
 #include "device.h"
 

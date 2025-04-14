@@ -42,5 +42,5 @@ target_link_libraries(kcm_gamecontroller PRIVATE
     KF6::I18n
     Qt6::Quick
     Qt6::QuickWidgets
-    SDL2::SDL2
+    SDL3::SDL3
 )
