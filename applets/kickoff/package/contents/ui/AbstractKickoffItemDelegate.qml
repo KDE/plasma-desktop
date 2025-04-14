@@ -122,7 +122,8 @@ T.ItemDelegate {
             // Unless we're showing search results, eat the activation if we
             // don't have focus, to prevent the return/enter key from
             // inappropriately activating unfocused items
-            if (!root.activeFocus && !root.isSearchResult) {
+            // Also block activation while dragging.
+            if ((!root.activeFocus && !root.isSearchResult) || dragHandler.active || touchDragHandler.active) {
                 return;
             }
             view.currentIndex = index
