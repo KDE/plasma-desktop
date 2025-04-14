@@ -35,6 +35,20 @@ KCMUtils.SimpleKCM {
     property alias cfg_unhideOnAttention: unhideOnAttention.checked
     property alias cfg_reverseMode: reverseMode.checked
 
+    headerPaddingEnabled: false
+    header: ColumnLayout {
+        spacing: Kirigami.Units.smallSpacing
+
+        Kirigami.InlineMessage {
+            id: annoyingAppWorkaroundMessage
+
+            Layout.fillWidth: true
+            position: Kirigami.InlineMessage.Position.Header
+
+            text: i18nc("@info", "If you're using this setting to work around an application that demands attention too often, first look for a setting in the app to disable that behavior. If you don't find one, consider reporting this as a bug to the app's developer.")
+        }
+    }
+
     DBus.DBusServiceWatcher {
         id: effectWatcher
         busType: DBus.BusType.Session
@@ -233,6 +247,9 @@ KCMUtils.SimpleKCM {
             id: unhideOnAttention
             Kirigami.FormData.label: i18nc("@label for checkbox, completes sentence: … unhide if window wants attention", "When panel is hidden:")
             text: i18nc("@option:check completes sentence: When panel is hidden", "Unhide when a window wants attention")
+            onToggled: {
+                annoyingAppWorkaroundMessage.visible = !unhideOnAttention.checked;
+            }
         }
 
         Item {
