@@ -17,7 +17,6 @@ KCM.SimpleKCM {
     id: root
 
     readonly property var device: deviceCombo.currentValue !== null ? deviceModel.device(deviceCombo.currentValue) : null
-    readonly property var gamepad: deviceCombo.currentValue !== null ? deviceModel.gamepad(deviceCombo.currentValue) : null
 
     Kirigami.PlaceholderMessage {
         icon.name: "input-gamepad"

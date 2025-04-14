@@ -11,6 +11,7 @@
 #include <QVector>
 
 #include <SDL2/SDL_events.h>
+#include <SDL2/SDL_gamecontroller.h>
 #include <SDL2/SDL_joystick.h>
 
 class Device : public QObject
@@ -61,6 +62,9 @@ private:
     void onButtonEvent(const SDL_JoyButtonEvent &event);
     void onAxisEvent(const SDL_JoyAxisEvent &event);
     void onHatEvent(const SDL_JoyHatEvent &event);
+    // The same as above but using SDL_Controller*Event types
+    void onControllerButtonEvent(const SDL_ControllerButtonEvent &event);
+    void onControllerAxisEvent(const SDL_ControllerAxisEvent &event);
 
     int m_deviceIndex = -1;
     QVector2D m_leftAxis;
@@ -68,4 +72,5 @@ private:
     float m_leftTrigger;
     float m_rightTrigger;
     SDL_Joystick *m_joystick = nullptr;
+    SDL_GameController *m_controller = nullptr;
 };

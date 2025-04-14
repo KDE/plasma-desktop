@@ -39,7 +39,6 @@ DeviceModel::~DeviceModel()
     if (initialized) {
         qCDebug(KCM_GAMECONTROLLER) << "Calling SDL_Quit";
         qDeleteAll(m_devices);
-        qDeleteAll(m_gamepads);
         SDL_Quit();
         initialized = false;
     }
@@ -48,11 +47,6 @@ DeviceModel::~DeviceModel()
 Device *DeviceModel::device(SDL_JoystickID id) const
 {
     return m_devices.value(id, nullptr);
-}
-
-Gamepad *DeviceModel::gamepad(SDL_JoystickID id) const
-{
-    return m_gamepads.value(id, nullptr);
 }
 
 int DeviceModel::rowCount(const QModelIndex &parent) const
@@ -117,9 +111,15 @@ void DeviceModel::poll()
                 m_devices.value(event.jhat.which)->onHatEvent(event.jhat);
             }
             break;
+        case SDL_CONTROLLERBUTTONDOWN:
+        case SDL_CONTROLLERBUTTONUP:
+            if (m_devices.contains(event.cbutton.which)) {
+                m_devices.value(event.cbutton.which)->onControllerButtonEvent(event.cbutton);
+            }
+            break;
         case SDL_CONTROLLERAXISMOTION:
-            if (m_gamepads.contains(event.caxis.which)) {
-                m_gamepads.value(event.caxis.which)->onAxisEvent(event.caxis);
+            if (m_devices.contains(event.caxis.which)) {
+                m_devices.value(event.caxis.which)->onControllerAxisEvent(event.caxis);
             }
             break;
         }
@@ -146,19 +146,10 @@ void DeviceModel::addDevice(const int deviceIndex)
         return;
     }
 
-    auto gamepad = std::make_unique<Gamepad>(deviceIndex, this);
-    if (!gamepad->open()) {
-        qCDebug(KCM_GAMECONTROLLER) << "Device" << deviceIndex << "is not a gamepad";
-        gamepad.reset();
-    }
-
     qCDebug(KCM_GAMECONTROLLER) << "Adding device" << deviceIndex << "with ID" << id;
 
     beginInsertRows(QModelIndex(), m_devices.count(), m_devices.count());
     m_devices.insert(id, device.release());
-    if (gamepad) {
-        m_gamepads.insert(id, gamepad.release());
-    }
     endInsertRows();
 
     // Now that we have a device poll every short poll time
@@ -180,10 +171,6 @@ void DeviceModel::removeDevice(const SDL_JoystickID id)
     beginRemoveRows(QModelIndex(), index, index);
     m_devices.value(id)->deleteLater();
     m_devices.remove(id);
-    if (m_gamepads.contains(id)) {
-        m_gamepads.value(id)->deleteLater();
-        m_gamepads.remove(id);
-    }
     endRemoveRows();
 
     if (m_devices.count() == 0) {
