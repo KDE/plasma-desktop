@@ -11,10 +11,12 @@
 #include <QObject>
 #include <QRect>
 #include <QVariantList>
+#include <qqmlregistration.h>
 
 class Kimpanel : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
     Q_PROPERTY(QString auxText MEMBER m_auxText NOTIFY auxTextChanged)
     Q_PROPERTY(bool auxVisible MEMBER m_auxVisible NOTIFY auxTextChanged)
 

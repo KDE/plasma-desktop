@@ -8,10 +8,12 @@
 
 #include <QObject>
 #include <QRect>
+#include <qqmlregistration.h>
 
 class Screen : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 public:
     Screen(QObject *parent = nullptr);
     ~Screen() override;
