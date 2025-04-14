@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-13 00:42+0000\n"
-"PO-Revision-Date: 2024-12-27 07:23+0100\n"
+"PO-Revision-Date: 2025-04-13 08:37+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: inputsequence.cpp:172
 #, kde-format
@@ -264,6 +264,8 @@ msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
 "revert to default calibration in %1 seconds.</b>"
 msgstr ""
+"Tapnite tarče, da potrdite novo umerjanje.<nl/><nl/><b>V %1 sekundah se bo "
+"povrnilo na privzeto umerjanje.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -279,7 +281,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Tap the center of each target."
-msgstr ""
+msgstr "Tapnite sredino vsake tarče."
 
 #: ui/Calibration.qml:112
 #, kde-format
@@ -291,7 +293,7 @@ msgstr "Izboljšajte obstoječe umerjanje"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset and Try Again"
-msgstr ""
+msgstr "Ponastavite in poskusite znova"
 
 #: ui/Calibration.qml:121
 #, kde-format
@@ -508,12 +510,10 @@ msgid "Calibration Not Supported"
 msgstr "Umerjanje ni podprto"
 
 #: ui/StylusTab.qml:474
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Refine Existing Calibration"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
-msgstr "Izboljšajte obstoječe umerjanje"
+msgstr "Ponastavi umerjanje po meri"
 
 #: ui/StylusTab.qml:488
 #, kde-format
@@ -522,6 +522,8 @@ msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
 "correctly, try resetting this first."
 msgstr ""
+"Ta tablični računalnik ste umerili ročno. Če ne deluje več pravilno, ga "
+"poskusite najprej ponastaviti."
 
 #: ui/Tester.qml:25
 #, kde-format

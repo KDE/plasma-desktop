@@ -1,14 +1,14 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2021, 2022, 2024, 2025 Freek de Kruijf <freekdekruijf@kde.nl>
 # SPDX-FileCopyrightText: 2024 pieter <pieterkristensen@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-13 00:42+0000\n"
-"PO-Revision-Date: 2024-12-27 11:07+0100\n"
+"PO-Revision-Date: 2025-04-13 17:37+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: inputsequence.cpp:172
 #, kde-format
@@ -264,6 +264,8 @@ msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
 "revert to default calibration in %1 seconds.</b>"
 msgstr ""
+"Tik opnieuw op de doelen om de nieuwe kalibratie te bevestigen.<nl/><nl/"
+"><b>Zal naar de standaard kalibratie teruggaan in %1 seconden.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -279,7 +281,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Tap the center of each target."
-msgstr ""
+msgstr "Tik op het centrum van elk doel."
 
 #: ui/Calibration.qml:112
 #, kde-format
@@ -291,7 +293,7 @@ msgstr "Bestaande kalibratie verfijnen"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset and Try Again"
-msgstr ""
+msgstr "Reset en opnieuw beginnen"
 
 #: ui/Calibration.qml:121
 #, kde-format
@@ -509,12 +511,10 @@ msgid "Calibration Not Supported"
 msgstr "Kalibratie wordt niet ondersteund"
 
 #: ui/StylusTab.qml:474
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Refine Existing Calibration"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
-msgstr "Bestaande kalibratie verfijnen"
+msgstr "Aangepaste kalibratie resetten"
 
 #: ui/StylusTab.qml:488
 #, kde-format
@@ -523,6 +523,8 @@ msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
 "correctly, try resetting this first."
 msgstr ""
+"U hebt handmatig dit tablet gekalibreerd. Als het niet langer juist werkt, "
+"probeer het eerst te resetten."
 
 #: ui/Tester.qml:25
 #, kde-format

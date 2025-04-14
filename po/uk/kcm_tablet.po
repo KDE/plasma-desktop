@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2021, 2022, 2024.
+# Yuri Chornoivan <yurchor@ukr.net>, 2021, 2022, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-13 00:42+0000\n"
-"PO-Revision-Date: 2024-12-27 21:53+0200\n"
+"PO-Revision-Date: 2025-04-13 09:09+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -264,6 +264,8 @@ msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
 "revert to default calibration in %1 seconds.</b>"
 msgstr ""
+"Торкніться цілей знову, щоб підтвердити нове калібрування.<nl/><nl/"
+"><b>Програма поверне стандартні параметри калібрування за %1 секунд.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -279,7 +281,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Tap the center of each target."
-msgstr ""
+msgstr "Торкніться у центрі кожної з цілей."
 
 #: ui/Calibration.qml:112
 #, kde-format
@@ -291,7 +293,7 @@ msgstr "Удосконалити наявне калібрування"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset and Try Again"
-msgstr ""
+msgstr "Скинути і повторити спробу"
 
 #: ui/Calibration.qml:121
 #, kde-format
@@ -509,12 +511,10 @@ msgid "Calibration Not Supported"
 msgstr "Підтримки калібрування не передбачено"
 
 #: ui/StylusTab.qml:474
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Refine Existing Calibration"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
-msgstr "Удосконалити наявне калібрування"
+msgstr "Скинути нетипове калібрування"
 
 #: ui/StylusTab.qml:488
 #, kde-format
@@ -523,6 +523,8 @@ msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
 "correctly, try resetting this first."
 msgstr ""
+"Калібрування цього планшета виконано вручну. Якщо калібрування не працює, "
+"спробуйте спочатку відновити початкові налаштування."
 
 #: ui/Tester.qml:25
 #, kde-format

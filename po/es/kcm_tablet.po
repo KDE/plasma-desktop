@@ -1,15 +1,15 @@
-# Translation of kcm_tablet to Spanish
-# Copyright (C) 2021 This file is copyright:
+# Spanish translations for kcm_tablet.po package.
+# Copyright (C) 2021-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # Automatically generated, 2021.
-# SPDX-FileCopyrightText: 2021, 2022, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2021, 2022, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-13 00:42+0000\n"
-"PO-Revision-Date: 2024-12-27 03:42+0100\n"
+"PO-Revision-Date: 2025-04-13 19:19+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: inputsequence.cpp:172
 #, kde-format
@@ -265,6 +265,8 @@ msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
 "revert to default calibration in %1 seconds.</b>"
 msgstr ""
+"Toque los puntos de nuevo para confirmar la nueva calibración.<nl/><nl/"
+"><b>Se volverá a la calibración predeterminada en %1 segundos.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -280,7 +282,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Tap the center of each target."
-msgstr ""
+msgstr "Toque el centro de cada punto."
 
 #: ui/Calibration.qml:112
 #, kde-format
@@ -292,7 +294,7 @@ msgstr "Afinar la calibración existente"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset and Try Again"
-msgstr ""
+msgstr "Reiniciar y volver a probar"
 
 #: ui/Calibration.qml:121
 #, kde-format
@@ -374,7 +376,7 @@ msgstr "Conectar una tableta de dibujo"
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr "Probar la tableta..."
+msgstr "Probar la tableta…"
 
 #: ui/main.qml:97
 #, kde-format
@@ -510,12 +512,10 @@ msgid "Calibration Not Supported"
 msgstr "No se permite calibración"
 
 #: ui/StylusTab.qml:474
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Refine Existing Calibration"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
-msgstr "Afinar la calibración existente"
+msgstr "Restaurar la calibración predeterminada"
 
 #: ui/StylusTab.qml:488
 #, kde-format
@@ -524,6 +524,8 @@ msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
 "correctly, try resetting this first."
 msgstr ""
+"Ha calibrado esta tableta de forma manual. Si ya no funciona correctamente, "
+"pruebe a reiniciar esto antes."
 
 #: ui/Tester.qml:25
 #, kde-format
@@ -564,64 +566,3 @@ msgstr ""
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr "Borrar"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Tap the center of each target.<nl/><nl/>Aim for the point where the "
-#~ "stylus tip lands, and ignore the cursor position on the screen."
-#~ msgstr ""
-#~ "Toque el centro de cada objetivo.<nl/><nl/>Apunte al punto donde aterriza "
-#~ "la punta del lápiz e ignore la posición del cursor en la pantalla."
-
-#~ msgctxt "Low pen pressure"
-#~ msgid "Low Pressure"
-#~ msgstr "Baja presión"
-
-#~ msgctxt "High pen pressure"
-#~ msgid "High Pressure"
-#~ msgstr "Alta presión"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Calibration across multiple screens is not supported."
-#~ msgstr "La calibración a través de múltiples pantallas no está permitida."
-
-#~ msgid "Fit to Screen"
-#~ msgstr "Ajustar a la pantalla"
-
-#~ msgid "None"
-#~ msgstr "Ninguno"
-
-#~ msgid "Pen button 2:"
-#~ msgstr "Botón 2 del lápiz:"
-
-#~ msgid "Pen button 3:"
-#~ msgstr "Botón 3 del lápiz:"
-
-#~ msgid "Not Supported"
-#~ msgstr "No permitido"
-
-#~ msgid "Primary (default)"
-#~ msgstr "Primaria (predeterminada)"
-
-#~ msgid "Fit to Output"
-#~ msgstr "Ajustar a la salida"
-
-#~ msgid "Fit Output in tablet"
-#~ msgstr "Ajustar la salida en la tableta"
-
-#~ msgid "Custom size"
-#~ msgstr "Tamaño personalizado"
-
-#~ msgid "Target display:"
-#~ msgstr "Pantalla de destino:"
-
-#~ msgid "Area:"
-#~ msgstr "Área:"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Eloy Cuadra"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "ecuadra@eloihr.net"

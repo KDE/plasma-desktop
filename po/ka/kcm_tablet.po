@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-13 00:42+0000\n"
-"PO-Revision-Date: 2024-12-27 03:43+0100\n"
+"PO-Revision-Date: 2025-04-13 03:38+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -264,6 +264,8 @@ msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
 "revert to default calibration in %1 seconds.</b>"
 msgstr ""
+"დაატყაპუნეთ სამიზნეებზე კიდევ ერთხელ, ახალი კალიბრაციის დასადასტურებლად.<nl/"
+"><nl/><b>ნაგულისხმევ კალიბრაციაზე დაბრუნება მოხდება %1 წამში.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -279,7 +281,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Tap the center of each target."
-msgstr ""
+msgstr "დაატყაპუნეთ თითოქული სამიზნის ცენტრში."
 
 #: ui/Calibration.qml:112
 #, kde-format
@@ -291,7 +293,7 @@ msgstr "არსებული კალიბრაციის დაზუ�
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset and Try Again"
-msgstr ""
+msgstr "ჩამოყრა და თავიდან ცდა"
 
 #: ui/Calibration.qml:121
 #, kde-format
@@ -508,12 +510,10 @@ msgid "Calibration Not Supported"
 msgstr "კალიბრაცია მხარდაჭერილი არაა"
 
 #: ui/StylusTab.qml:474
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Refine Existing Calibration"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
-msgstr "არსებული კალიბრაციის დაზუსტება"
+msgstr "მორგებული კალიბრაციის ჩამოყრა"
 
 #: ui/StylusTab.qml:488
 #, kde-format
@@ -522,6 +522,8 @@ msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
 "correctly, try resetting this first."
 msgstr ""
+"თქვენ ამ ტაბლეტის კალიბრაცია ხელით მოახდინეთ. თუ ის სწორად აღარ მუშაობს, "
+"სცადეთ, ჩამოყაროთ ის."
 
 #: ui/Tester.qml:25
 #, kde-format

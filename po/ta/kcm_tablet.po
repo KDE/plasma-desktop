@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-13 00:42+0000\n"
-"PO-Revision-Date: 2025-01-26 16:40+0530\n"
+"PO-Revision-Date: 2025-04-13 17:58+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: inputsequence.cpp:172
 #, kde-format
@@ -263,6 +263,8 @@ msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
 "revert to default calibration in %1 seconds.</b>"
 msgstr ""
+"புதிய அளவுதிருத்தத்தை உறுதிப்படுத்த குறிகளை மறுபடியும் தட்டவும். <nl/><nl/><b> "
+"இல்லையேல் %1 நொடிகளில் இயல்பிருப்பு மீட்டமைக்கப்படும்.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -278,7 +280,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Tap the center of each target."
-msgstr ""
+msgstr "ஒவ்வொரு குறியின் நடுப்பகுதியை தட்டவும்."
 
 #: ui/Calibration.qml:112
 #, kde-format
@@ -290,7 +292,7 @@ msgstr "ஏற்கனவேயுள்ள அளதிருத்தத்�
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset and Try Again"
-msgstr ""
+msgstr "மீட்டமைத்து மறுபடியும் முயற்சி"
 
 #: ui/Calibration.qml:121
 #, kde-format
@@ -507,12 +509,10 @@ msgid "Calibration Not Supported"
 msgstr "அளதிருத்தம் ஆதரிக்கப்படவில்லை"
 
 #: ui/StylusTab.qml:474
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Refine Existing Calibration"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
-msgstr "ஏற்கனவேயுள்ள அளதிருத்தத்தை மேம்படுத்து"
+msgstr "தனிப்பயன் அளதிருத்தத்தை செயல்நீக்கு"
 
 #: ui/StylusTab.qml:488
 #, kde-format
@@ -521,6 +521,8 @@ msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
 "correctly, try resetting this first."
 msgstr ""
+"இப்பலகையை கைமுறையாக அளவுதிருத்தியுள்ளீர். ஏதேனும் சிக்கலிருந்தால், முதலில் "
+"அளவுதிருத்தத்தை மீட்டமைத்து பார்க்கவும்."
 
 #: ui/Tester.qml:25
 #, kde-format

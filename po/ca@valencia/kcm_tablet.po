@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-13 00:42+0000\n"
-"PO-Revision-Date: 2025-02-22 13:48+0100\n"
+"PO-Revision-Date: 2025-04-13 11:00+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -59,7 +59,7 @@ msgstr "Definit per l'aplicació"
 #, kde-format
 msgctxt "@action:button"
 msgid "Pen Button %1"
-msgstr "Botó %1 del llapis"
+msgstr "Botó «%1» del llapis"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -124,7 +124,7 @@ msgstr "Associa a una porció"
 #, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
-msgstr "Botó %1 del llapis:"
+msgstr "Botó «%1» del llapis:"
 
 #: kcmtablet.cpp:264
 #, kde-format
@@ -132,7 +132,7 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button X'"
 msgid "pen button %1"
-msgstr "botó %1 del llapis"
+msgstr "botó «%1» del llapis"
 
 #: ui/ActionDialog.qml:25
 #, kde-format
@@ -265,6 +265,8 @@ msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
 "revert to default calibration in %1 seconds.</b>"
 msgstr ""
+"Toqueu les dianes per a confirmar el calibratge nou.<nl/><nl/><b>Es tornarà "
+"al calibratge predeterminat d'ací a %1 segons.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -280,7 +282,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Tap the center of each target."
-msgstr ""
+msgstr "Toqueu el centre de cada diana."
 
 #: ui/Calibration.qml:112
 #, kde-format
@@ -292,7 +294,7 @@ msgstr "Refina el calibratge existent"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset and Try Again"
-msgstr ""
+msgstr "Reinicieu i torneu-ho a provar"
 
 #: ui/Calibration.qml:121
 #, kde-format
@@ -411,7 +413,7 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad button %1"
-msgstr "botó %1 de la tauleta gràfica"
+msgstr "botó «%1» de la tauleta gràfica"
 
 #: ui/StylusTab.qml:216
 #, kde-format
@@ -510,12 +512,10 @@ msgid "Calibration Not Supported"
 msgstr "No s'admet el calibratge"
 
 #: ui/StylusTab.qml:474
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Refine Existing Calibration"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
-msgstr "Refina el calibratge existent"
+msgstr "Reinicieu el calibratge personalitzat"
 
 #: ui/StylusTab.qml:488
 #, kde-format
@@ -524,6 +524,8 @@ msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
 "correctly, try resetting this first."
 msgstr ""
+"Heu calibrat manualment esta tauleta. Si ja no funciona correctament, "
+"intenteu reiniciar-la primer."
 
 #: ui/Tester.qml:25
 #, kde-format
@@ -564,11 +566,3 @@ msgstr ""
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr "Neteja"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Tap the center of each target.<nl/><nl/>Aim for the point where the "
-#~ "stylus tip lands, and ignore the cursor position on the screen."
-#~ msgstr ""
-#~ "Toqueu el centre de cada diana.<nl/><nl/>Apunteu cap al punt on aterra la "
-#~ "punta del llapis i ignoreu la posició del cursor en la pantalla."

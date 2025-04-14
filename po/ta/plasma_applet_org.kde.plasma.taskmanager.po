@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-05 00:43+0000\n"
-"PO-Revision-Date: 2025-03-09 12:56+0530\n"
+"PO-Revision-Date: 2025-04-13 17:59+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -18,15 +18,12 @@ msgstr ""
 "X-Generator: Lokalize 24.12.3\n"
 
 #: backend.cpp:284
-#, fuzzy, kde-format
-#| msgctxt "Show all user Places"
-#| msgid "%1 more Place"
-#| msgid_plural "%1 more Places"
+#, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place…"
 msgid_plural "%1 more Places…"
-msgstr[0] "இன்னும் %1 இடம்"
-msgstr[1] "இன்னும் %1 இடங்கள்"
+msgstr[0] "இன்னும் %1 இடம்…"
+msgstr[1] "இன்னும் %1 இடங்கள்…"
 
 #: backend.cpp:368
 #, kde-format
@@ -373,7 +370,7 @@ msgstr "செயல்பாடு வாரியாக"
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By horizontal window position"
-msgstr ""
+msgstr "சாளரத்தின் கிடைமட்ட இருப்பிடத்தைப் பொறுத்து"
 
 #: package/contents/ui/ConfigBehavior.qml:149
 #, kde-format
