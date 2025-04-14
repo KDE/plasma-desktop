@@ -6,6 +6,8 @@
 
 #include "device.h"
 
+#include "logging.h"
+
 Device::Device(int deviceIndex, QObject *parent)
     : QObject(parent)
     , m_deviceIndex(deviceIndex)
@@ -27,6 +29,10 @@ bool Device::open()
     m_leftTrigger = SDL_JoystickGetAxis(m_joystick, SDL_CONTROLLER_AXIS_TRIGGERLEFT);
     m_rightTrigger = SDL_JoystickGetAxis(m_joystick, SDL_CONTROLLER_AXIS_TRIGGERRIGHT);
 
+    m_controller = SDL_GameControllerOpen(m_deviceIndex);
+    if (!m_controller) {
+        qCDebug(KCM_GAMECONTROLLER) << "Device" << m_deviceIndex << "is not a gamepad. using as joystick";
+    }
     return m_joystick != nullptr;
 }
 
@@ -34,6 +40,11 @@ void Device::close()
 {
     if (m_joystick == nullptr) {
         return;
+    }
+
+    if (m_controller) {
+        SDL_GameControllerClose(m_controller);
+        m_controller = nullptr;
     }
 
     SDL_JoystickClose(m_joystick);
@@ -125,7 +136,36 @@ void Device::onButtonEvent(const SDL_JoyButtonEvent &event)
     Q_EMIT buttonStateChanged(event.button);
 }
 
+void Device::onControllerButtonEvent(const SDL_ControllerButtonEvent &event)
+{
+    Q_EMIT buttonStateChanged(event.button);
+}
+
 void Device::onAxisEvent(const SDL_JoyAxisEvent &event)
+{
+    const float value = static_cast<float>(event.value) / std::numeric_limits<Sint16>::max();
+    if (event.axis == SDL_CONTROLLER_AXIS_LEFTX) {
+        m_leftAxis.setX(value);
+        Q_EMIT leftAxisChanged();
+    } else if (event.axis == SDL_CONTROLLER_AXIS_LEFTY) {
+        m_leftAxis.setY(value);
+        Q_EMIT leftAxisChanged();
+    } else if (event.axis == SDL_CONTROLLER_AXIS_RIGHTX) {
+        m_rightAxis.setX(value);
+        Q_EMIT rightAxisChanged();
+    } else if (event.axis == SDL_CONTROLLER_AXIS_RIGHTY) {
+        m_rightAxis.setY(value);
+        Q_EMIT rightAxisChanged();
+    } else if (event.axis == SDL_CONTROLLER_AXIS_TRIGGERLEFT) {
+        m_leftTrigger = value;
+        Q_EMIT leftTriggerChanged();
+    } else if (event.axis == SDL_CONTROLLER_AXIS_TRIGGERRIGHT) {
+        m_rightTrigger = value;
+        Q_EMIT rightTriggerChanged();
+    }
+}
+
+void Device::onControllerAxisEvent(const SDL_ControllerAxisEvent &event)
 {
     const float value = static_cast<float>(event.value) / std::numeric_limits<Sint16>::max();
     if (event.axis == SDL_CONTROLLER_AXIS_LEFTX) {

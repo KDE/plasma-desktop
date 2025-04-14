@@ -15,7 +15,6 @@
 #include <SDL2/SDL_joystick.h>
 
 #include "device.h"
-#include "gamepad.h"
 
 class QTimer;
 
@@ -34,7 +33,6 @@ public:
     virtual ~DeviceModel();
 
     Q_INVOKABLE Device *device(SDL_JoystickID id) const;
-    Q_INVOKABLE Gamepad *gamepad(SDL_JoystickID id) const;
 
     int rowCount(const QModelIndex &parent) const override;
     QVariant data(const QModelIndex &index, int role) const override;
@@ -54,6 +52,5 @@ private:
 
     // Map of sdl indexes to Gamepad devices
     QMap<SDL_JoystickID, Device *> m_devices;
-    QMap<SDL_JoystickID, Gamepad *> m_gamepads;
     QPointer<QTimer> m_timer;
 };
