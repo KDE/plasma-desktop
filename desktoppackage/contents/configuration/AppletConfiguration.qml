@@ -50,6 +50,11 @@ Rectangle {
     function saveConfig() {
         const config = Plasmoid.configuration; // type: KConfigPropertyMap
 
+        // call applet's own config handling first so it can set cfg_ properties if needed
+        if (app.pageStack.currentItem.hasOwnProperty("saveConfig")) {
+            app.pageStack.currentItem.saveConfig()
+        }
+
         config.keys().forEach(key => {
             const cfgKey = "cfg_" + key;
             if (cfgKey in app.pageStack.currentItem) {
