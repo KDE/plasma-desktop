@@ -11,8 +11,8 @@
 #include <QObject>
 #include <QVector2D>
 
-#include <SDL2/SDL_events.h>
-#include <SDL2/SDL_gamecontroller.h>
+#include <SDL3/SDL_events.h>
+#include <SDL3/SDL_gamepad.h>
 
 class Gamepad : public QObject
 {

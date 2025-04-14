@@ -10,8 +10,8 @@
 #include <QVector2D>
 #include <QVector>
 
-#include <SDL2/SDL_events.h>
-#include <SDL2/SDL_joystick.h>
+#include <SDL3/SDL_events.h>
+#include <SDL3/SDL_joystick.h>
 
 class Device : public QObject
 {
