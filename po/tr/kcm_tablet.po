@@ -264,6 +264,8 @@ msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
 "revert to default calibration in %1 seconds.</b>"
 msgstr ""
+"Yeni kalibrasyonu onaylamak için hedeflere dokunun.<nl/><nl/><b>%1 saniye "
+"içinde öntanımlı kalibrasyona geri dönecektir.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -279,7 +281,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Tap the center of each target."
-msgstr ""
+msgstr "Her bir hedefin merkezine dokunun."
 
 #: ui/Calibration.qml:112
 #, kde-format
@@ -291,7 +293,7 @@ msgstr "Var Olan Kalibrasyonu Geliştir"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset and Try Again"
-msgstr ""
+msgstr "Sıfırla ve Yeniden Dene"
 
 #: ui/Calibration.qml:121
 #, kde-format
@@ -510,12 +512,10 @@ msgid "Calibration Not Supported"
 msgstr "Kalibrasyon Desteklenmiyor"
 
 #: ui/StylusTab.qml:474
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Refine Existing Calibration"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
-msgstr "Var Olan Kalibrasyonu Geliştir"
+msgstr "Özel Kalibrasyonu Sıfırla"
 
 #: ui/StylusTab.qml:488
 #, kde-format
@@ -524,6 +524,8 @@ msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
 "correctly, try resetting this first."
 msgstr ""
+"Bu tableti başarıyla elle kalibre ettiniz. Düzgün çalışmıyorsa önce bunu "
+"sıfırlamayı deneyin."
 
 #: ui/Tester.qml:25
 #, kde-format
@@ -564,29 +566,3 @@ msgstr ""
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr "Temizle"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Tap the center of each target.<nl/><nl/>Aim for the point where the "
-#~ "stylus tip lands, and ignore the cursor position on the screen."
-#~ msgstr ""
-#~ "Her bir hedefin merkezine dokunun.<nl/><nl/>Kalem ucunun iniş yaptığı "
-#~ "noktayı hedef alın ve ekrandaki imleç konumunu yok sayın."
-
-#~ msgctxt "Low pen pressure"
-#~ msgid "Low Pressure"
-#~ msgstr "Düşük basınç"
-
-#~ msgctxt "High pen pressure"
-#~ msgid "High Pressure"
-#~ msgstr "Yüksek basınç"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Calibration across multiple screens is not supported."
-#~ msgstr "Birden çok ekran arasında kalibrasyon yapmak desteklenmiyor."
-
-#~ msgid "Fit to Screen"
-#~ msgstr "Ekrana Sığdır"
-
-#~ msgid "None"
-#~ msgstr "Yok"

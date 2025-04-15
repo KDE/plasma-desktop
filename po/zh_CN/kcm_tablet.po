@@ -501,12 +501,10 @@ msgid "Calibration Not Supported"
 msgstr "不支持校准"
 
 #: ui/StylusTab.qml:474
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Refine Existing Calibration"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
-msgstr "优化现有校准"
+msgstr ""
 
 #: ui/StylusTab.qml:488
 #, kde-format
@@ -555,11 +553,3 @@ msgstr ""
 msgctxt "Clear the event log"
 msgid "Clear"
 msgstr "清除"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Tap the center of each target.<nl/><nl/>Aim for the point where the "
-#~ "stylus tip lands, and ignore the cursor position on the screen."
-#~ msgstr ""
-#~ "请点击每个目标的中心点。<nl/><nl/>请以笔尖的物理落点为准，不要理会屏幕显示"
-#~ "的光标位置。"
