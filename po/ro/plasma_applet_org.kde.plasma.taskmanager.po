@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-05 00:43+0000\n"
+"POT-Creation-Date: 2025-04-16 00:43+0000\n"
 "PO-Revision-Date: 2024-06-08 17:07+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -287,35 +287,45 @@ msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch mode"
 msgstr "Treci automat la Mare în regim tactil"
 
-#: package/contents/ui/ConfigBehavior.qml:50
+#: package/contents/ui/ConfigBehavior.qml:48
+#, kde-format
+msgctxt "@info"
+msgid ""
+"If you're using this setting to work around an application that demands "
+"attention too often, first look for a setting in the app to disable that "
+"behavior. If you don't find one, consider reporting this as a bug to the "
+"app's developer."
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:64
 #, fuzzy, kde-format
 #| msgid "Group:"
 msgctxt "@label:listbox how to group tasks"
 msgid "Group:"
 msgstr "Grupează:"
 
-#: package/contents/ui/ConfigBehavior.qml:54
+#: package/contents/ui/ConfigBehavior.qml:68
 #, fuzzy, kde-format
 #| msgid "Do not group"
 msgctxt "@item:inlistbox how to group tasks"
 msgid "Do not group"
 msgstr "Nu grupa"
 
-#: package/contents/ui/ConfigBehavior.qml:55
+#: package/contents/ui/ConfigBehavior.qml:69
 #, fuzzy, kde-format
 #| msgid "By program name"
 msgctxt "@item:inlistbox how to group tasks"
 msgid "By program name"
 msgstr "După denumirea programului"
 
-#: package/contents/ui/ConfigBehavior.qml:61
+#: package/contents/ui/ConfigBehavior.qml:75
 #, fuzzy, kde-format
 #| msgid "Clicking grouped task:"
 msgctxt "@label:listbox completes sentence like: … cycles through tasks"
 msgid "Clicking grouped task:"
 msgstr "Apăsarea pe sarcină grupată:"
 
-#: package/contents/ui/ConfigBehavior.qml:68
+#: package/contents/ui/ConfigBehavior.qml:82
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Completes the sentence 'Clicking grouped task cycles through tasks' "
@@ -326,7 +336,7 @@ msgctxt ""
 msgid "Cycles through tasks"
 msgstr "Ciclează printre sarcini"
 
-#: package/contents/ui/ConfigBehavior.qml:69
+#: package/contents/ui/ConfigBehavior.qml:83
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Completes the sentence 'Clicking grouped task shows tooltip window "
@@ -338,7 +348,7 @@ msgctxt ""
 msgid "Shows small window previews"
 msgstr "Arată previzualizări mici ale ferestrelor"
 
-#: package/contents/ui/ConfigBehavior.qml:70
+#: package/contents/ui/ConfigBehavior.qml:84
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Completes the sentence 'Clicking grouped task shows windows side by side' "
@@ -349,7 +359,7 @@ msgctxt ""
 msgid "Shows large window previews"
 msgstr "Arată previzualizări mari ale ferestrelor"
 
-#: package/contents/ui/ConfigBehavior.qml:71
+#: package/contents/ui/ConfigBehavior.qml:85
 #, fuzzy, kde-format
 #| msgctxt "Completes the sentence 'Clicking grouped task shows textual list' "
 #| msgid "Shows textual list"
@@ -359,7 +369,7 @@ msgctxt ""
 msgid "Shows textual list"
 msgstr "Arată lista textuală"
 
-#: package/contents/ui/ConfigBehavior.qml:82
+#: package/contents/ui/ConfigBehavior.qml:96
 #, fuzzy, kde-format
 #| msgid ""
 #| "The compositor does not support displaying windows side by side, so a "
@@ -372,83 +382,83 @@ msgstr ""
 "Compozitorul nu susține afișarea ferestrelor una lângă alta, deci va fi "
 "afișată în schimb o listă textuală."
 
-#: package/contents/ui/ConfigBehavior.qml:92
+#: package/contents/ui/ConfigBehavior.qml:106
 #, fuzzy, kde-format
 #| msgid "Combine into single button"
 msgctxt "@option:check grouped task"
 msgid "Combine into single button"
 msgstr "Combină într-un singur buton"
 
-#: package/contents/ui/ConfigBehavior.qml:99
+#: package/contents/ui/ConfigBehavior.qml:113
 #, fuzzy, kde-format
 #| msgid "Group only when the Task Manager is full"
 msgctxt "@option:check grouped task"
 msgid "Group only when the Task Manager is full"
 msgstr "Grupează numai când gestionarul de sarcini e plin"
 
-#: package/contents/ui/ConfigBehavior.qml:111
+#: package/contents/ui/ConfigBehavior.qml:125
 #, fuzzy, kde-format
 #| msgid "Sort:"
 msgctxt "@label:listbox sort tasks in grouped task"
 msgid "Sort:"
 msgstr "Sortare:"
 
-#: package/contents/ui/ConfigBehavior.qml:118
+#: package/contents/ui/ConfigBehavior.qml:132
 #, fuzzy, kde-format
 #| msgid "Do not sort"
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Do not sort"
 msgstr "Nu sorta"
 
-#: package/contents/ui/ConfigBehavior.qml:122
+#: package/contents/ui/ConfigBehavior.qml:136
 #, fuzzy, kde-format
 #| msgid "Manually"
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Manually"
 msgstr "Manual"
 
-#: package/contents/ui/ConfigBehavior.qml:126
+#: package/contents/ui/ConfigBehavior.qml:140
 #, fuzzy, kde-format
 #| msgid "Alphabetically"
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Alphabetically"
 msgstr "Alfabetic"
 
-#: package/contents/ui/ConfigBehavior.qml:130
+#: package/contents/ui/ConfigBehavior.qml:144
 #, fuzzy, kde-format
 #| msgid "By desktop"
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By desktop"
 msgstr "După birou"
 
-#: package/contents/ui/ConfigBehavior.qml:134
+#: package/contents/ui/ConfigBehavior.qml:148
 #, fuzzy, kde-format
 #| msgid "By activity"
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By activity"
 msgstr "După activitate"
 
-#: package/contents/ui/ConfigBehavior.qml:138
+#: package/contents/ui/ConfigBehavior.qml:152
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By horizontal window position"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:149
+#: package/contents/ui/ConfigBehavior.qml:163
 #, fuzzy, kde-format
 #| msgid "Keep launchers separate"
 msgctxt "@option:check configure task sorting"
 msgid "Keep launchers separate"
 msgstr "Păstrează lansatorii separați"
 
-#: package/contents/ui/ConfigBehavior.qml:156
+#: package/contents/ui/ConfigBehavior.qml:170
 #, fuzzy, kde-format
 #| msgid "Hide launchers after application startup"
 msgctxt "@option:check for icons-and-text task manager"
 msgid "Hide launchers after application startup"
 msgstr "Ascunde lansatorii după pornirea aplicației"
 
-#: package/contents/ui/ConfigBehavior.qml:166
+#: package/contents/ui/ConfigBehavior.qml:180
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 #| msgid "Clicking active task:"
@@ -458,7 +468,7 @@ msgctxt ""
 msgid "Clicking active task:"
 msgstr "Apăsarea pe sarcina activă:"
 
-#: package/contents/ui/ConfigBehavior.qml:167
+#: package/contents/ui/ConfigBehavior.qml:181
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Clicking active task minimizes the task'"
 #| msgid "Minimizes the task"
@@ -467,14 +477,14 @@ msgctxt ""
 msgid "Minimizes the task"
 msgstr "Minimizează sarcina"
 
-#: package/contents/ui/ConfigBehavior.qml:172
+#: package/contents/ui/ConfigBehavior.qml:186
 #, fuzzy, kde-format
 #| msgid "Middle-clicking any task:"
 msgctxt "@label:listbox completes sentence like: … does nothing"
 msgid "Middle-clicking any task:"
 msgstr "Clic-mijloc pe orice sarcină:"
 
-#: package/contents/ui/ConfigBehavior.qml:176
+#: package/contents/ui/ConfigBehavior.qml:190
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Middle-clicking any task does nothing'"
 #| msgid "Does nothing"
@@ -483,7 +493,7 @@ msgctxt ""
 msgid "Does nothing"
 msgstr "Nu face nimic"
 
-#: package/contents/ui/ConfigBehavior.qml:177
+#: package/contents/ui/ConfigBehavior.qml:191
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Part of a sentence: 'Middle-clicking any task closes window or group'"
@@ -494,7 +504,7 @@ msgctxt ""
 msgid "Closes window or group"
 msgstr "Închide fereastra sau grupul"
 
-#: package/contents/ui/ConfigBehavior.qml:178
+#: package/contents/ui/ConfigBehavior.qml:192
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Middle-clicking any task opens a new window'"
 #| msgid "Opens a new window"
@@ -504,7 +514,7 @@ msgctxt ""
 msgid "Opens a new window"
 msgstr "Deschide o fereastră nouă"
 
-#: package/contents/ui/ConfigBehavior.qml:179
+#: package/contents/ui/ConfigBehavior.qml:193
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Part of a sentence: 'Middle-clicking any task minimizes/restores window "
@@ -516,7 +526,7 @@ msgctxt ""
 msgid "Minimizes/Restores window or group"
 msgstr "Minimizează/restabilește fereastra sau grupul"
 
-#: package/contents/ui/ConfigBehavior.qml:180
+#: package/contents/ui/ConfigBehavior.qml:194
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Middle-clicking any task toggles grouping'"
 #| msgid "Toggles grouping"
@@ -526,7 +536,7 @@ msgctxt ""
 msgid "Toggles grouping"
 msgstr "Comută gruparea"
 
-#: package/contents/ui/ConfigBehavior.qml:181
+#: package/contents/ui/ConfigBehavior.qml:195
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Part of a sentence: 'Middle-clicking any task brings it to the current "
@@ -538,7 +548,7 @@ msgctxt ""
 msgid "Brings it to the current virtual desktop"
 msgstr "O aduce pe biroul virtual curent"
 
-#: package/contents/ui/ConfigBehavior.qml:191
+#: package/contents/ui/ConfigBehavior.qml:205
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 #| msgid "Mouse wheel:"
@@ -547,7 +557,7 @@ msgctxt ""
 msgid "Mouse wheel:"
 msgstr "Rotița mausului:"
 
-#: package/contents/ui/ConfigBehavior.qml:192
+#: package/contents/ui/ConfigBehavior.qml:206
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Completes the sentence 'Clicking grouped task cycles through tasks' "
@@ -556,14 +566,14 @@ msgctxt "@option:check Part of a sentence: 'Mouse wheel cycles through tasks'"
 msgid "Cycles through tasks"
 msgstr "Ciclează printre sarcini"
 
-#: package/contents/ui/ConfigBehavior.qml:199
+#: package/contents/ui/ConfigBehavior.qml:213
 #, fuzzy, kde-format
 #| msgid "Skip minimized tasks"
 msgctxt "@option:check mouse wheel task cycling"
 msgid "Skip minimized tasks"
 msgstr "Sari peste sarcini minimizate"
 
-#: package/contents/ui/ConfigBehavior.qml:209
+#: package/contents/ui/ConfigBehavior.qml:223
 #, fuzzy, kde-format
 #| msgid "Show only tasks:"
 msgctxt ""
@@ -571,35 +581,35 @@ msgctxt ""
 msgid "Show only tasks:"
 msgstr "Arată numai sarcinile:"
 
-#: package/contents/ui/ConfigBehavior.qml:210
+#: package/contents/ui/ConfigBehavior.qml:224
 #, fuzzy, kde-format
 #| msgid "From current screen"
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current screen"
 msgstr "De pe ecranul curent"
 
-#: package/contents/ui/ConfigBehavior.qml:215
+#: package/contents/ui/ConfigBehavior.qml:229
 #, fuzzy, kde-format
 #| msgid "From current desktop"
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current desktop"
 msgstr "De pe biroul curent"
 
-#: package/contents/ui/ConfigBehavior.qml:220
+#: package/contents/ui/ConfigBehavior.qml:234
 #, fuzzy, kde-format
 #| msgid "From current activity"
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current activity"
 msgstr "Din activitatea curentă"
 
-#: package/contents/ui/ConfigBehavior.qml:225
+#: package/contents/ui/ConfigBehavior.qml:239
 #, fuzzy, kde-format
 #| msgid "That are minimized"
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "That are minimized"
 msgstr "Care sunt minimizate"
 
-#: package/contents/ui/ConfigBehavior.qml:234
+#: package/contents/ui/ConfigBehavior.qml:248
 #, fuzzy, kde-format
 #| msgid "When panel is hidden:"
 msgctxt ""
@@ -607,44 +617,44 @@ msgctxt ""
 msgid "When panel is hidden:"
 msgstr "Când panoul e ascuns:"
 
-#: package/contents/ui/ConfigBehavior.qml:235
+#: package/contents/ui/ConfigBehavior.qml:249
 #, fuzzy, kde-format
 #| msgid "Unhide when a window wants attention"
 msgctxt "@option:check completes sentence: When panel is hidden"
 msgid "Unhide when a window wants attention"
 msgstr "Demaschează când o fereastră vrea atenție"
 
-#: package/contents/ui/ConfigBehavior.qml:247
+#: package/contents/ui/ConfigBehavior.qml:264
 #, fuzzy, kde-format
 #| msgid "New tasks appear:"
 msgctxt "@label for radiobutton group completes sentence like: … on the bottom"
 msgid "New tasks appear:"
 msgstr "Sarcinile noi apar:"
 
-#: package/contents/ui/ConfigBehavior.qml:251
+#: package/contents/ui/ConfigBehavior.qml:268
 #, fuzzy, kde-format
 #| msgid "On the bottom"
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the bottom"
 msgstr "La fund"
 
-#: package/contents/ui/ConfigBehavior.qml:255
-#: package/contents/ui/ConfigBehavior.qml:274
+#: package/contents/ui/ConfigBehavior.qml:272
+#: package/contents/ui/ConfigBehavior.qml:291
 #, fuzzy, kde-format
 #| msgid "To the right"
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the right"
 msgstr "La dreapta"
 
-#: package/contents/ui/ConfigBehavior.qml:257
-#: package/contents/ui/ConfigBehavior.qml:272
+#: package/contents/ui/ConfigBehavior.qml:274
+#: package/contents/ui/ConfigBehavior.qml:289
 #, fuzzy, kde-format
 #| msgid "To the left"
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the left"
 msgstr "La stânga"
 
-#: package/contents/ui/ConfigBehavior.qml:268
+#: package/contents/ui/ConfigBehavior.qml:285
 #, fuzzy, kde-format
 #| msgid "On the Top"
 msgctxt "@option:check completes sentence: New tasks appear"

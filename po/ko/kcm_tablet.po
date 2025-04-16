@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-13 00:42+0000\n"
-"PO-Revision-Date: 2025-04-07 00:16+0200\n"
+"PO-Revision-Date: 2025-04-16 00:10+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -263,6 +263,8 @@ msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
 "revert to default calibration in %1 seconds.</b>"
 msgstr ""
+"대상을 다시 탭하여 새 조정을 확인하십시오.<nl/><nl/><b>%1초 후 기존 조정으로 "
+"되돌아갑니다.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -278,7 +280,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Tap the center of each target."
-msgstr ""
+msgstr "각 대상의 가운데를 탭하십시오."
 
 #: ui/Calibration.qml:112
 #, kde-format
@@ -290,7 +292,7 @@ msgstr "기존 조정의 미세 조정"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset and Try Again"
-msgstr ""
+msgstr "초기화 후 다시 시도"
 
 #: ui/Calibration.qml:121
 #, kde-format
@@ -507,12 +509,10 @@ msgid "Calibration Not Supported"
 msgstr "조정을 지원하지 않음"
 
 #: ui/StylusTab.qml:474
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Refine Existing Calibration"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
-msgstr "기존 조정의 미세 조정"
+msgstr "미세 조정 초기화"
 
 #: ui/StylusTab.qml:488
 #, kde-format
@@ -521,6 +521,8 @@ msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
 "correctly, try resetting this first."
 msgstr ""
+"이 태블릿을 수동으로 미세 조정했습니다. 올바르게 작동하지 않는다면 먼저 해당 "
+"미세 조정을 초기화해 보십시오."
 
 #: ui/Tester.qml:25
 #, kde-format

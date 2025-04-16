@@ -261,6 +261,7 @@ msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
 "revert to default calibration in %1 seconds.</b>"
 msgstr ""
+"再次点击目标以确认新的校准。<nl/><nl/><b>无操作 %1 秒后将恢复默认校准。</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -275,7 +276,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Tap the center of each target."
-msgstr ""
+msgstr "点击每个目标的中心。"
 
 #: ui/Calibration.qml:112
 #, kde-format
@@ -287,7 +288,7 @@ msgstr "优化现有校准"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset and Try Again"
-msgstr ""
+msgstr "重置并重新校准"
 
 #: ui/Calibration.qml:121
 #, kde-format
@@ -504,7 +505,7 @@ msgstr "不支持校准"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
-msgstr ""
+msgstr "重置自定义校准"
 
 #: ui/StylusTab.qml:488
 #, kde-format
@@ -512,7 +513,7 @@ msgctxt "@info"
 msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
 "correctly, try resetting this first."
-msgstr ""
+msgstr "您已手动校准了此数位板。如果它不再正常工作，请先重置校准。"
 
 #: ui/Tester.qml:25
 #, kde-format

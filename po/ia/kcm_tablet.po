@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 giovanni <g.sora@tiscali.it>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 giovanni <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-13 00:42+0000\n"
-"PO-Revision-Date: 2024-12-27 12:35+0100\n"
+"PO-Revision-Date: 2025-04-15 15:43+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -263,6 +263,8 @@ msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
 "revert to default calibration in %1 seconds.</b>"
 msgstr ""
+"Tocca le objectivos novemente per confirmar le nove calibration.<nl/><nl/> "
+"<b>Retornera al calibration predefinite in %1 secundas.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -278,7 +280,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Tap the center of each target."
-msgstr ""
+msgstr "Tocca lecentro de cata objectivo."
 
 #: ui/Calibration.qml:112
 #, kde-format
@@ -290,7 +292,7 @@ msgstr "Raffina Calibration Existente"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset and Try Again"
-msgstr ""
+msgstr "Reinitia e essaya novemente"
 
 #: ui/Calibration.qml:121
 #, kde-format
@@ -508,12 +510,10 @@ msgid "Calibration Not Supported"
 msgstr "Calibration non supportate"
 
 #: ui/StylusTab.qml:474
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Refine Existing Calibration"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
-msgstr "Raffina Calibration Existente"
+msgstr "Reinitia Calibration Personalisate"
 
 #: ui/StylusTab.qml:488
 #, kde-format
@@ -522,6 +522,8 @@ msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
 "correctly, try resetting this first."
 msgstr ""
+"Tu ha calibrate manualmente iste tabletta. Si il non es plus functionante "
+"correctemente, primo essaya reinitialisar lo."
 
 #: ui/Tester.qml:25
 #, kde-format
