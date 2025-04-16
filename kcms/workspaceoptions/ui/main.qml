@@ -452,7 +452,7 @@ KCM.SimpleKCM {
                 dndToMoveDisabler.indicator.width + dndToMoveDisabler.spacing : dndToMoveDisablerHelperText.padding
             rightPadding: Application.layoutDirection === Qt.RightToLeft ?
                 dndToMoveDisabler.indicator.width + dndToMoveDisabler.spacing : dndToMoveDisablerHelperText.padding
-            text: i18n("Hold shift to move the file, Hold Ctrl to copy file, Hold Alt to create a symlink, otherwise show a dialog")
+            text: i18n("Hold Shift to move the file, Hold Ctrl to copy file, Hold Shift+Ctrl to create a symlink, otherwise show a dialog")
             textFormat: Text.PlainText
             elide: Text.ElideRight
             font: Kirigami.Theme.smallFont
