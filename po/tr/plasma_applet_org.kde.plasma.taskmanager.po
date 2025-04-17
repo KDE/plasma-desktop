@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-16 00:43+0000\n"
+"POT-Creation-Date: 2025-04-17 00:42+0000\n"
 "PO-Revision-Date: 2025-04-07 00:45+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -265,6 +265,10 @@ msgid ""
 "behavior. If you don't find one, consider reporting this as a bug to the "
 "app's developer."
 msgstr ""
+"Bu ayarı, pek sık ilgi isteyen bir uygulamayı devre dışı bırakmak için "
+"kullanıyorsanız öncelikle bu davranışı iptal eden bir uygulama ayarı var mı "
+"diye bakın. Eğer yoksa bunu uygulamanın geliştiricisine bir istenmeyen "
+"davranış olarak bildirmeyi düşünün."
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
@@ -756,13 +760,13 @@ msgstr "Tümünü &Kapat"
 msgid "&Close"
 msgstr "&Kapat"
 
-#: package/contents/ui/Task.qml:155
+#: package/contents/ui/Task.qml:156
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
 msgstr "Çalıştır: %1"
 
-#: package/contents/ui/Task.qml:160
+#: package/contents/ui/Task.qml:161
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
@@ -770,25 +774,25 @@ msgid_plural "There are %1 new messages."
 msgstr[0] "%1 yeni ileti var."
 msgstr[1] "%1 yeni ileti var."
 
-#: package/contents/ui/Task.qml:168
+#: package/contents/ui/Task.qml:169
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
 msgstr "%1 için görev ipuçlarını göster"
 
-#: package/contents/ui/Task.qml:172
+#: package/contents/ui/Task.qml:173
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
 msgstr "%1 için pencereleri yan yana göster"
 
-#: package/contents/ui/Task.qml:177
+#: package/contents/ui/Task.qml:178
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
 msgstr "%1 için pencerelerin bir listesini aç"
 
-#: package/contents/ui/Task.qml:181
+#: package/contents/ui/Task.qml:182
 #, kde-format
 msgid "Activate %1"
 msgstr "Etkinleştir: %1"
@@ -852,48 +856,3 @@ msgstr "Ayrıca %1 üzerinde de kullanılabilir"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "%1 üzerinde kullanılabilir"
-
-#~ msgctxt "@option:check section General"
-#~ msgid "Use audio indicators to mute tasks"
-#~ msgstr "Görevleri sessize almak için ses göstergeleri kullan"
-
-#~ msgctxt "@option:check section General"
-#~ msgid "Mark applications that play audio"
-#~ msgstr "Ses çalan uygulamaları imle"
-
-#~ msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
-#~ msgid "Cycles through tasks"
-#~ msgstr "Görevler arasında geçiş yapar"
-
-#~ msgctxt "1 = number of desktop, 2 = desktop name"
-#~ msgid "&%1 %2"
-#~ msgstr "&%1 %2"
-
-#~ msgid "Always arrange tasks in rows of as many columns"
-#~ msgstr "Sütunlardaki görevleri her zaman satır sayısı kadar ayarla"
-
-#~ msgid "Always arrange tasks in columns of as many rows"
-#~ msgstr "Sütunlardaki görevleri her zaman satırlar kadar ayarla"
-
-#~ msgid ""
-#~ "Tooltips are disabled, so the windows will be displayed side by side "
-#~ "instead."
-#~ msgstr ""
-#~ "Araç ipuçları devre dışı, bu nedenle bunun yerine pencereler yan yana "
-#~ "görüntülenecek."
-
-#~ msgid ""
-#~ "Tooltips are disabled, and the compositor does not support displaying "
-#~ "windows side by side, so a textual list will be displayed instead"
-#~ msgstr ""
-#~ "Araç ipuçları devre dışı ve bileşikleştirici pencereleri yan yana "
-#~ "görüntülemeyi desteklemiyor, bunun yerine bir metin listesi görüntülenecek"
-
-#~ msgid "Show tooltips"
-#~ msgstr "Araç ipuçlarını göster"
-
-#~ msgctxt ""
-#~ "Completes the sentence 'Clicking grouped task shows tooltip window "
-#~ "thumbnails' "
-#~ msgid "Shows tooltip window thumbnails"
-#~ msgstr "Araç ipucu penceresi küçük resimlerini gösterir"

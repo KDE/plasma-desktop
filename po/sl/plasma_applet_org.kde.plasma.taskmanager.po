@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-16 00:43+0000\n"
-"PO-Revision-Date: 2025-04-05 08:25+0200\n"
+"POT-Creation-Date: 2025-04-17 00:42+0000\n"
+"PO-Revision-Date: 2025-04-16 07:26+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: LUGOS\n"
 "Language: sl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: backend.cpp:284
 #, kde-format
@@ -267,6 +267,10 @@ msgid ""
 "behavior. If you don't find one, consider reporting this as a bug to the "
 "app's developer."
 msgstr ""
+"Če to nastavitev uporabljate za obhod aplikacije, ki prepogosto zahteva "
+"pozornost, najprej poiščite nastavitev v aplikaciji, da onemogočite to "
+"vedenje. Če je ne najdete, razmislite o tem, da to prijavite kot napako "
+"razvijalcu aplikacije."
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
@@ -758,13 +762,13 @@ msgstr "Zapri vse"
 msgid "&Close"
 msgstr "Zapri"
 
-#: package/contents/ui/Task.qml:155
+#: package/contents/ui/Task.qml:156
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
 msgstr "Zaženi %1"
 
-#: package/contents/ui/Task.qml:160
+#: package/contents/ui/Task.qml:161
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
@@ -774,25 +778,25 @@ msgstr[1] "Obstajata %1 novi sporočili."
 msgstr[2] "Obstajajo %1 nova sporočila."
 msgstr[3] "Obstaja %1 novih sporočil."
 
-#: package/contents/ui/Task.qml:168
+#: package/contents/ui/Task.qml:169
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
 msgstr "Prikaži orodni namig za %1"
 
-#: package/contents/ui/Task.qml:172
+#: package/contents/ui/Task.qml:173
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
 msgstr "Prikaže okna enega zraven drugega za %1"
 
-#: package/contents/ui/Task.qml:177
+#: package/contents/ui/Task.qml:178
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
 msgstr "Odpri besedilni seznam oken za %1"
 
-#: package/contents/ui/Task.qml:181
+#: package/contents/ui/Task.qml:182
 #, kde-format
 msgid "Activate %1"
 msgstr "Aktiviraj %1"

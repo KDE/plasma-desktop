@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-16 00:43+0000\n"
-"PO-Revision-Date: 2025-04-05 14:57+0300\n"
+"POT-Creation-Date: 2025-04-17 00:42+0000\n"
+"PO-Revision-Date: 2025-04-16 08:50+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: backend.cpp:284
 #, kde-format
@@ -267,6 +267,9 @@ msgid ""
 "behavior. If you don't find one, consider reporting this as a bug to the "
 "app's developer."
 msgstr ""
+"אם ההגדרה הזאת משמשת אותך לעקוף יישומון שדורש תשומת לב לעתים תכופות מדי, "
+"חשוב קודם כל לחפש הגדרה ביישומון להשבתת ההתנהגות הזאת. אם לא מצאת כזאת, כדאי "
+"לדווח על כך כתקלה למפתחי היישומון."
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
@@ -757,13 +760,13 @@ msgstr "ל&סגור הכול"
 msgid "&Close"
 msgstr "&סגירה"
 
-#: package/contents/ui/Task.qml:155
+#: package/contents/ui/Task.qml:156
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
 msgstr "הרצת %1"
 
-#: package/contents/ui/Task.qml:160
+#: package/contents/ui/Task.qml:161
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
@@ -773,25 +776,25 @@ msgstr[1] "יש שתי הודעות חדשות."
 msgstr[2] "יש %1 הודעות חדשות."
 msgstr[3] "יש %1 הודעות חדשות."
 
-#: package/contents/ui/Task.qml:168
+#: package/contents/ui/Task.qml:169
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
 msgstr "הצגת חלוניות מידע על משימה עבור %1"
 
-#: package/contents/ui/Task.qml:172
+#: package/contents/ui/Task.qml:173
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
 msgstr "הצגת חלונות זה לצד זה עבור %1"
 
-#: package/contents/ui/Task.qml:177
+#: package/contents/ui/Task.qml:178
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
 msgstr "פתיחת רשימת הקשרים של חלונות עבור %1"
 
-#: package/contents/ui/Task.qml:181
+#: package/contents/ui/Task.qml:182
 #, kde-format
 msgid "Activate %1"
 msgstr "הפעלת %1"

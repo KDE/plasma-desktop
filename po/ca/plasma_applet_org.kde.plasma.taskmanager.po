@@ -5,13 +5,13 @@
 #
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2014, 2015, 2019, 2020.
 # Alfredo Vicente <alviboi@gmail.com>, 2019.
-# Josep M. Ferrer <txemaq@gmail.com>, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
+# SPDX-FileCopyrightText: 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-16 00:43+0000\n"
-"PO-Revision-Date: 2025-04-05 10:05+0200\n"
+"POT-Creation-Date: 2025-04-17 00:42+0000\n"
+"PO-Revision-Date: 2025-04-16 11:18+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: backend.cpp:284
 #, kde-format
@@ -268,6 +268,10 @@ msgid ""
 "behavior. If you don't find one, consider reporting this as a bug to the "
 "app's developer."
 msgstr ""
+"Si utilitzeu aquesta opció per a resoldre el problema d'una aplicació que "
+"requereix atenció massa sovint, primer cerqueu una configuració a "
+"l'aplicació per a desactivar aquest comportament. Si no en trobeu cap, "
+"considereu informar d'això com un error al desenvolupador de l'aplicació."
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
@@ -759,13 +763,13 @@ msgstr "Tan&ca-ho tot"
 msgid "&Close"
 msgstr "Tan&ca"
 
-#: package/contents/ui/Task.qml:155
+#: package/contents/ui/Task.qml:156
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
 msgstr "Llança %1"
 
-#: package/contents/ui/Task.qml:160
+#: package/contents/ui/Task.qml:161
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
@@ -773,25 +777,25 @@ msgid_plural "There are %1 new messages."
 msgstr[0] "Hi ha %1 missatge nou."
 msgstr[1] "Hi ha %1 missatges nous."
 
-#: package/contents/ui/Task.qml:168
+#: package/contents/ui/Task.qml:169
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
 msgstr "Mostra els consells de tasca per a %1"
 
-#: package/contents/ui/Task.qml:172
+#: package/contents/ui/Task.qml:173
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
 msgstr "Mostra les finestres una al costat de l'altra per a %1"
 
-#: package/contents/ui/Task.qml:177
+#: package/contents/ui/Task.qml:178
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
 msgstr "Obre una llista de text de les finestres per a %1"
 
-#: package/contents/ui/Task.qml:181
+#: package/contents/ui/Task.qml:182
 #, kde-format
 msgid "Activate %1"
 msgstr "Activa %1"
