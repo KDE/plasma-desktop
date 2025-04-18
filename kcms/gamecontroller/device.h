@@ -18,6 +18,9 @@ class Device : public QObject
 {
     Q_OBJECT
 
+    Q_PROPERTY(QString type READ type CONSTANT)
+    Q_PROPERTY(SDL_GameControllerType controllerType READ controllerType CONSTANT)
+    Q_PROPERTY(QString controllerTypeName READ controllerTypeName CONSTANT)
     Q_PROPERTY(QVector2D leftAxis READ leftAxisValue NOTIFY leftAxisChanged)
     Q_PROPERTY(QVector2D rightAxis READ rightAxisValue NOTIFY rightAxisChanged)
     Q_PROPERTY(float leftTrigger READ leftTriggerValue NOTIFY leftTriggerChanged)
@@ -35,6 +38,12 @@ public:
     SDL_JoystickID id() const;
     QString name() const;
     QString path() const;
+    // Joystick type, wheel, controller, etc.
+    QString type() const;
+    // Gamecontroller type
+    SDL_GameControllerType controllerType() const;
+    // Gamecontroller type name, switch pro, ps5, etc.
+    QString controllerTypeName() const;
 
     bool isVirtual() const;
 
