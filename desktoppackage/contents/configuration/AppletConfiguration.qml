@@ -118,11 +118,6 @@ Rectangle {
         }
         app.currentConfigPage = page;
     }
-    Component {
-        id: configurationKcmPageComponent
-        ConfigurationKcmPage {
-        }
-    }
 
     function open(item) {
         app.isAboutPage = false;
@@ -143,8 +138,6 @@ Rectangle {
             });
 
             pushReplace(Qt.resolvedUrl(item.source), props);
-        } else if (item.kcm) {
-            pushReplace(configurationKcmPageComponent, {kcm: item.kcm, internalPage: item.kcm.mainUi});
         } else {
             app.pageStack.pop();
         }
@@ -304,11 +297,7 @@ Rectangle {
                     onActivated: categories.openCategory(model);
                     highlighted: {
                         if (app.pageStack.currentItem) {
-                            if (model.kcm && app.pageStack.currentItem.kcm) {
-                                return model.kcm == app.pageStack.currentItem.kcm
-                            } else {
-                                return root.currentSource == model.source
-                            }
+                            return root.currentSource == model.source
                         }
                         return false
                     }
@@ -423,7 +412,7 @@ Rectangle {
                     enabled: false
                     icon.name: "dialog-ok-apply"
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Apply")
-                    visible: !app.isAboutPage && app.pageStack.currentItem && (!app.pageStack.currentItem.kcm || app.pageStack.currentItem.kcm.buttons & 4) // 4 = Apply button
+                    visible: !app.isAboutPage && app.pageStack.currentItem
                     onClicked: applyAction.trigger()
                 }
                 QQC2.Button {
