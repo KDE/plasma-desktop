@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-13 00:42+0000\n"
-"PO-Revision-Date: 2025-01-01 17:25+0400\n"
+"PO-Revision-Date: 2025-04-17 09:38+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -264,6 +264,8 @@ msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
 "revert to default calibration in %1 seconds.</b>"
 msgstr ""
+"اطرق على الأهداف مرة أخرى لتأكيد المعايرة الجديدة.<nl/><nl/><b>سيعود إلى "
+"المعايرة المبدئية خلال %1 ثانية.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -277,7 +279,7 @@ msgstr "انتهت المعايرة وحفظت.<nl/><nl/>حسن المعايرة
 #, kde-format
 msgctxt "@info"
 msgid "Tap the center of each target."
-msgstr ""
+msgstr "اطرق وسط كل هدف"
 
 #: ui/Calibration.qml:112
 #, kde-format
@@ -289,7 +291,7 @@ msgstr "حسّن المعايرة الحالية"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset and Try Again"
-msgstr ""
+msgstr "صفّر وحاول مرة أخرى"
 
 #: ui/Calibration.qml:121
 #, kde-format
@@ -505,12 +507,10 @@ msgid "Calibration Not Supported"
 msgstr "المعايرة غير مدعومة"
 
 #: ui/StylusTab.qml:474
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Refine Existing Calibration"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
-msgstr "حسّن المعايرة الحالية"
+msgstr "صفّر المعايرة الحالية"
 
 #: ui/StylusTab.qml:488
 #, kde-format
@@ -519,6 +519,8 @@ msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
 "correctly, try resetting this first."
 msgstr ""
+"لقد عايرت هذا الجهاز اللوحي يدويًا. إذا لم يعد يعمل بشكل صحيح، فحاول إعادة "
+"ضبطه أولًا."
 
 #: ui/Tester.qml:25
 #, kde-format

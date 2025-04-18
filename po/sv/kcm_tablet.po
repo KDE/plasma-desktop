@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-13 00:42+0000\n"
-"PO-Revision-Date: 2025-01-11 12:26+0100\n"
+"PO-Revision-Date: 2025-04-17 12:44+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: inputsequence.cpp:172
 #, kde-format
@@ -263,6 +263,8 @@ msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
 "revert to default calibration in %1 seconds.</b>"
 msgstr ""
+"Tryck på målen igen för att bekräfta den nya kalibreringen.<nl/><nl/"
+"><b>Återgår till standardkalibreringen om %1 sekunder.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -278,7 +280,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Tap the center of each target."
-msgstr ""
+msgstr "Tryck på mitten av varje mål."
 
 #: ui/Calibration.qml:112
 #, kde-format
@@ -290,7 +292,7 @@ msgstr "Förfina befintlig kalibrering"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset and Try Again"
-msgstr ""
+msgstr "Nollställ och försök igen"
 
 #: ui/Calibration.qml:121
 #, kde-format
@@ -508,12 +510,10 @@ msgid "Calibration Not Supported"
 msgstr "Kalibrering stöds inte"
 
 #: ui/StylusTab.qml:474
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Refine Existing Calibration"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
-msgstr "Förfina befintlig kalibrering"
+msgstr "Nollställ egen kalibrering"
 
 #: ui/StylusTab.qml:488
 #, kde-format
@@ -522,6 +522,8 @@ msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
 "correctly, try resetting this first."
 msgstr ""
+"Du har kalibrerat den här ritplattan manuellt. Om det inte längre fungerar "
+"korrekt, försök att nollställa det först."
 
 #: ui/Tester.qml:25
 #, kde-format

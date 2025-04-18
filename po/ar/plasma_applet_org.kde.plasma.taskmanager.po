@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-17 00:42+0000\n"
-"PO-Revision-Date: 2025-04-05 12:01+0400\n"
+"PO-Revision-Date: 2025-04-17 09:37+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -20,19 +20,16 @@ msgstr ""
 "X-Generator: Lokalize 23.08.5\n"
 
 #: backend.cpp:284
-#, fuzzy, kde-format
-#| msgctxt "Show all user Places"
-#| msgid "%1 more Place"
-#| msgid_plural "%1 more Places"
+#, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place…"
 msgid_plural "%1 more Places…"
-msgstr[0] "0 مكان"
-msgstr[1] "مكان واحد"
-msgstr[2] "مكانان"
-msgstr[3] "%1 أماكن"
-msgstr[4] "%1 مكانا"
-msgstr[5] "%1 مكان"
+msgstr[0] "0 مكان…"
+msgstr[1] "مكان واحد أخر…"
+msgstr[2] "مكانان أخران…"
+msgstr[3] "%1 أماكن أخرى …"
+msgstr[4] "%1 مكانًا أخرًا…"
+msgstr[5] "%1 مكان أخر…"
 
 #: backend.cpp:368
 #, kde-format
@@ -270,6 +267,9 @@ msgid ""
 "behavior. If you don't find one, consider reporting this as a bug to the "
 "app's developer."
 msgstr ""
+"إذا كنت تستخدم هذا الإعداد للتغلب على تطبيق يتطلب انتباهًا متكررًا، فابحث أولًا "
+"عن إعداد في التطبيق لتعطيل هذا السلوك. إذا لم تجده، فأبلغ مطور التطبيق بهذا "
+"باعتباره خللًا."
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
