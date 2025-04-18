@@ -17,6 +17,8 @@ KCM.SimpleKCM {
     id: root
 
     readonly property var device: deviceCombo.currentValue !== null ? deviceModel.device(deviceCombo.currentValue) : null
+    readonly property var deviceType: device !== null ? device.type() : null
+    readonly property var deviceControllerType: device !== null ? device.controllerType() : null
 
     Kirigami.PlaceholderMessage {
         icon.name: "input-gamepad"
@@ -69,6 +71,38 @@ KCM.SimpleKCM {
                 valueRole: "id"
 
                 Layout.fillWidth: true
+            }
+        }
+
+        RowLayout {
+            spacing: Kirigami.Units.largeSpacing
+
+            Layout.fillWidth: true
+
+            QQC2.Label {
+                text: i18nc("@label:textbox", "Device type:")
+                textFormat: Text.PlainText
+            }
+
+            QQC2.Label {
+                id: typeLabel
+                text: deviceType
+            }
+        }
+        
+        RowLayout {
+            spacing: Kirigami.Units.largeSpacing
+
+            Layout.fillWidth: true
+
+            QQC2.Label {
+                text: i18nc("@label:textbox", "Controller type:")
+                textFormat: Text.PlainText
+            }
+
+            QQC2.Label {
+                id: controllerTypeLabel
+                text: deviceControllerType
             }
         }
 
