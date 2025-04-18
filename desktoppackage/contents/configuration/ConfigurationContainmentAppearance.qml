@@ -20,15 +20,14 @@ SimpleKCM {
     id: appearanceRoot
     signal configurationChanged
 
-    leftPadding: includeMargins ? Kirigami.Units.largeSpacing : 0
-    rightPadding: includeMargins ? Kirigami.Units.largeSpacing : 0
+    leftPadding: 0 // let wallpaper config touch the edges in case there's a List/GridView'
+    rightPadding: 0
     bottomPadding: 0
 
     property int formAlignment: wallpaperComboBox.Kirigami.ScenePosition.x - appearanceRoot.Kirigami.ScenePosition.x + Kirigami.Units.smallSpacing
     property string currentWallpaper: ""
     property string containmentPlugin: ""
     property alias parentLayout: parentLayout
-    property bool includeMargins
 
     function saveConfig() {
         if (main.currentItem.saveConfig) {

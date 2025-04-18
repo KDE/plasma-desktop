@@ -15,12 +15,7 @@ KCM.SimpleKCM {
     id: root
 
     signal configurationChanged
-    // implicitWidth: mainColumn.implicitWidth
-    // implicitHeight: mainColumn.implicitHeight
-    leftPadding: includeMargins ? Kirigami.Units.largeSpacing : 0
-    rightPadding: includeMargins ? Kirigami.Units.largeSpacing : 0
 
-    property bool includeMargins
     property var prettyStrings: {
         "LeftButton": i18nd("plasma_shell_org.kde.plasma.desktop", "Left-Button"),
         "RightButton": i18nd("plasma_shell_org.kde.plasma.desktop", "Right-Button"),

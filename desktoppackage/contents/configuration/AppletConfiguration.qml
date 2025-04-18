@@ -128,10 +128,7 @@ Rectangle {
 
             const config = Plasmoid.configuration; // type: KConfigPropertyMap
 
-            const props = {
-                "title": item.name,
-                "includeMargins": item.includeMargins
-            };
+            const props = { "title": item.name };
 
             config.keys().forEach(key => {
                 props["cfg_" + key] = config[key];
