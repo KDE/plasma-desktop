@@ -35,6 +35,10 @@ public:
     SDL_JoystickID id() const;
     QString name() const;
     QString path() const;
+    // Joystick type, wheel, controller, etc.
+    Q_INVOKABLE QString type() const;
+    // Gamecontroller type, switch pro, ps5, etc.
+    Q_INVOKABLE QString controllerType() const;
 
     bool isVirtual() const;
 
