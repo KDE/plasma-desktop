@@ -27,6 +27,7 @@ public:
     enum CustomRoles {
         TextRole = Qt::UserRole + 1,
         IDRole,
+        TypeRole,
     };
 
     DeviceModel();

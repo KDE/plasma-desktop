@@ -6,7 +6,39 @@
 
 #include "device.h"
 
+#include <KLocalizedString>
+
 #include "logging.h"
+
+// NOTE: Keep in sync with SDL_JoystickType from SDL_joystick.h
+static QStringList kJoystickTypeNames = {i18n("Unknown"),
+                                         i18n("Game Controller"),
+                                         i18n("Wheel"),
+                                         i18n("Arcade Stick"),
+                                         i18n("Flight Stick"),
+                                         i18n("Dance Pad"),
+                                         i18n("Guitar"),
+                                         i18n("Drum Kit"),
+                                         i18n("Arcade Pad"),
+                                         i18n("Throttle")};
+
+// NOTE: Keep yn sync with SDL_gamecontrollertype from SDL_gamecontroller.h
+static QStringList kControllerTypeNames = {
+    i18n("Unknown"),
+    i18n("XBox 360"),
+    i18n("XBox One"),
+    i18n("Sony Dualshock 3"),
+    i18n("Sony Dualshock 4"),
+    i18n("Switch Pro"),
+    i18n("Virtual"),
+    i18n("Sony Dualsense"),
+    i18n("Amazon Luna"),
+    i18n("Google Stadia"),
+    i18n("NVidia Shield"),
+    i18n("Switch Left Joycon"),
+    i18n("Switch Right Joycon"),
+    i18n("Switch Paired Joycon"),
+};
 
 Device::Device(int deviceIndex, QObject *parent)
     : QObject(parent)
@@ -72,6 +104,29 @@ QString Device::name() const
 QString Device::path() const
 {
     return QString::fromLocal8Bit(SDL_JoystickPath(m_joystick));
+}
+
+QString Device::type() const
+{
+    return kJoystickTypeNames.at(SDL_JoystickGetType(m_joystick));
+}
+
+SDL_GameControllerType Device::controllerType() const
+{
+    if (m_controller) {
+        return SDL_GameControllerGetType(m_controller);
+    }
+    return SDL_CONTROLLER_TYPE_UNKNOWN;
+
+}
+
+QString Device::controllerTypeName() const
+{
+    if (m_controller) {
+        return kControllerTypeNames.at(SDL_GameControllerGetType(m_controller));
+    } else {
+        return i18n("Not a controller");
+    }
 }
 
 bool Device::isVirtual() const
