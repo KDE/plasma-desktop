@@ -1,9 +1,8 @@
 # SPDX-License-Identifier: BSD-3-Clause
 # SPDX-FileCopyrightText: 2023 Harald Sitter <sitter@kde.org>
 
-add_library(kcm_keyboard_declarative SHARED plugin.cpp)
+ecm_add_qml_module(kcm_keyboard_declarative URI "org.kde.plasma.private.kcm_keyboard" SOURCES types.h DEPENDENCIES QtCore GENERATE_PLUGIN_SOURCE)
 
 target_link_libraries(kcm_keyboard_declarative PRIVATE kcm_keyboard_static)
 
-install(TARGETS kcm_keyboard_declarative DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/kcm_keyboard)
-install(FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/kcm_keyboard)
+ecm_finalize_qml_module(kcm_keyboard_declarative)
