@@ -110,6 +110,8 @@ kcmutils_generate_module_data(kcm_keyboard
 add_library(kcm_keyboard_static STATIC ${kcm_keyboard_PART_SRCS})
 set_property(TARGET kcm_keyboard_static PROPERTY POSITION_INDEPENDENT_CODE ON)
 
+qt_extract_metatypes(kcm_keyboard_static)
+
 target_link_libraries(kcm_keyboard_static
     Qt::Concurrent
     Qt::Widgets
