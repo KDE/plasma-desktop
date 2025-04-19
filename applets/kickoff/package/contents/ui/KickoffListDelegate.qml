@@ -109,6 +109,17 @@ AbstractKickoffItemDelegate {
                 color: gridLayout.textColor
             }
         }
+
+        Loader {
+            visible: active
+            active: root.model?.isNewlyInstalled ?? false
+
+            sourceComponent: Badge {
+                text: root.isCategoryListItem ? "" : i18nc("Newly installed app, badge, keep short", "New!")
+                Accessible.name: root.isCategoryListItem ? i18n("There is a newly installed application in this category")
+                                                         : i18n("Newly installed application")
+            }
+        }
     }
 
     Loader {

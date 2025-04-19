@@ -46,6 +46,22 @@ AbstractKickoffItemDelegate {
             animated: false
             selected: root.iconAndLabelsShouldlookSelected
             source: root.decoration || root.icon.name || root.icon.source
+
+            Loader {
+                anchors {
+                    right: parent.right
+                    rightMargin: -root.rightPadding
+                    top: parent.top
+                }
+                visible: active
+                active: root.model?.isNewlyInstalled ?? false
+
+                sourceComponent: Badge {
+                    text: root.isCategoryListItem ? "" : i18nc("Newly installed app, badge, keep short", "New!")
+                    Accessible.name: root.isCategoryListItem ? i18n("There is a newly installed application in this category")
+                                                             : i18n("Newly installed application")
+                }
+            }
         }
 
         PC3.Label {
