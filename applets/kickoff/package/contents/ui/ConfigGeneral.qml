@@ -38,6 +38,7 @@ KCM.SimpleKCM {
     property int cfg_primaryActions: Plasmoid.configuration.primaryActions
     property alias cfg_showActionButtonCaptions: showActionButtonCaptions.checked
     property alias cfg_compactMode: compactModeCheckbox.checked
+    property alias cfg_highlightNewlyInstalledApps: highlightNewlyInstalledAppsCheckbox.checked
     property alias cfg_switchCategoryOnHover: switchCategoryOnHoverCheckbox.checked
 
     Kirigami.FormLayout {
@@ -192,6 +193,11 @@ KCM.SimpleKCM {
             Layout.fillWidth: true
             wrapMode: Text.Wrap
             font: Kirigami.Theme.smallFont
+        }
+
+        QQC2.CheckBox {
+            id: highlightNewlyInstalledAppsCheckbox
+            text: i18n("Highlight newly installed applications")
         }
 
         QQC2.CheckBox {

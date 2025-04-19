@@ -63,6 +63,7 @@ PlasmoidItem {
         showRecentDocs: false
         showPowerSession: false
         showFavoritesPlaceholder: true
+        highlightNewlyInstalledApps: Plasmoid.configuration.highlightNewlyInstalledApps
 
         Component.onCompleted: {
             favoritesModel.initForClient("org.kde.plasma.kickoff.favorites.instance-" + Plasmoid.id)

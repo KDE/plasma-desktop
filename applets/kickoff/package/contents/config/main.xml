@@ -69,5 +69,9 @@
             <label>Whether to allow switching category items on hover</label>
             <default>false</default>
         </entry>
+        <entry name="highlightNewlyInstalledApps" type="Bool">
+            <label>Whether to highlight newly installed applications</label>
+            <default>true</default>
+        </entry>
     </group>
 </kcfg>
