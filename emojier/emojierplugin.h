@@ -7,7 +7,6 @@
 #pragma once
 
 #include <QAbstractItemModel>
-#include <QQmlExtensionPlugin>
 #include <QSortFilterProxyModel>
 
 #include <qqmlregistration.h>
