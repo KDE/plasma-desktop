@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-09 00:43+0000\n"
-"PO-Revision-Date: 2024-12-13 10:31+0000\n"
+"PO-Revision-Date: 2025-04-17 14:47+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -35,13 +35,13 @@ msgstr "Endurræsa"
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
-msgstr ""
+msgstr "Leyfa Plasma að sýna:"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr ""
+msgstr "Vísbendingar fyrir skjáborðsstiku og græjur"
 
 #: ui/main.qml:62
 #, kde-format
@@ -51,14 +51,17 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"Leyfir að sýndar séu lýsandi vísbendingar yfir öllum Plasma-skjáborðsstikum "
+"skjáborðsgræjum þegar bendillinn sveimar yfir. Þessi stilling hefur engin "
+"áhrif á minni vísbendingar sem birtast þegar bendillinn er yfir einstökum "
+"hnöppum og öðrum viðmóthlutum."
 
 #: ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
-msgstr "Sýna sprettiglugga við breytingu á útliti"
+msgstr "Skjátilkynning við stöðubreytingu"
 
 #: ui/main.qml:80
 #, kde-format
@@ -66,6 +69,8 @@ msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
+"Leyfir öllum Plasma-græjum að birta tilkynningu á skjá (OSD) við breytingar "
+"eins og á hljóðstyrk og birtustigi eða þegar skipt er um hljóðtæki."
 
 #: ui/main.qml:92
 #, kde-format
@@ -106,9 +111,9 @@ msgid ""
 "setting for enabling and disabling it."
 msgstr ""
 "Þessi stilling kveikir eða slekkur á hreyfiáhrifum þegar skrunað er með "
-"músarhjóli eða lyklaborðinu. Sum forrit hunsa hugsanlega þessa stillingu þar "
-"sem þau styðja annað hvort ekki mjúkt skrun eða eru með eigin stillingar til "
-"að kveikja og slökkva á því."
+"músarhjóli eða lyklaborðinu. Sum forrit gætu hunsað þessa stillingu þar sem "
+"þau styðja annað hvort ekki mjúkt skrun eða eru með eigin stillingar til að "
+"kveikja og slökkva á því."
 
 #: ui/main.qml:163
 #, kde-format
@@ -259,6 +264,8 @@ msgid ""
 "Double-click the folder to test. If it does not change its appearance, "
 "increase double-click interval."
 msgstr ""
+"Tvísmelltu á möppuna til að prófa. Ef útlit hennar breytist ekki skaltu auka "
+"bilið á milli tvísmellanna."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
@@ -306,7 +313,7 @@ msgstr "Virkja límingu á vali með miðjusmelli"
 #: workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display large panel and widget tooltips"
-msgstr ""
+msgstr "Birta stórar vísbendingar fyrir skjáborðsstiku og græjur"
 
 #. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:10
@@ -314,32 +321,30 @@ msgstr ""
 msgid ""
 "Allow Plasma widgets to display large panel and widget tooltips on hover"
 msgstr ""
+"Leyfa Plasma-græjum að birta stórar vísbendingar fyrir skjáborðsstiku og "
+"græjur undir bendli"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
-#, fuzzy, kde-format
-#| msgid "Display visual feedback for status changes"
+#, kde-format
 msgid "Display small popups for status changes"
-msgstr "Birta sjónræna svörun við stöðubreytingar"
+msgstr "Birta litla sprettiglugga við stöðubreytingar"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show an on-screen display to indicate status changes such as brightness "
-#| "or volume"
+#, kde-format
 msgid ""
 "Allow Plasma widgets to display small popups for status changes such as "
 "brightness or volume"
 msgstr ""
-"Sýna yfirlag á skjá sem sýnir stöðubreytingu, t.d. á birtustigi eða "
-"hljóðstyrk."
+"Leyfa Plasma-græjum að birta litla sprettiglugga við stöðubreytingar eins og "
+"fyrir birtustig eða hljóðstyrk"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21
 #, kde-format
 msgid "OSD on layout change"
-msgstr "Yfirlag á skjá við breytingu á útliti"
+msgstr "Skjátilkynning við breytingu á útliti"
 
 #. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:22

@@ -4,13 +4,13 @@
 #
 # Pjetur G. Hjaltason <pjetur@pjetur.net>, 2003.
 # Sveinn í Felli <sveinki@nett.is>, 2009.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-25 00:42+0000\n"
-"PO-Revision-Date: 2024-07-04 11:32+0000\n"
+"PO-Revision-Date: 2025-04-17 14:21+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -143,20 +143,18 @@ msgid "Ignored applications:"
 msgstr "Hunsuð forrit:"
 
 #: ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' executable names here (separated by commas or colons, for "
-#| "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
-"Skrifaðu keyrsluheiti forrita hér (aðskilin með kommum eða tvípunkti, til "
-"dæmis 'xterm:konsole' eða 'xterm,konsole') til að koma í veg fyrir að þau "
-"ræsist sjálfkrafa ásamt öðrum forritum sem verða opnuð í setunni."
+"Skrifaðu auðkenni fyrir skjáborðsskrá forrits eða (ef X11 er notað) "
+"keyrsluheiti forrita hér (aðskilin með kommum eða tvípunkti, til dæmis "
+"'xterm:org.kde.konsole.desktop' or 'xterm,org.kde.konsole.desktop') til að "
+"koma í veg fyrir að þau ræsist sjálfkrafa ásamt öðrum forritum sem verða "
+"opnuð í endurheimtri setu."
 
 #: ui/main.qml:138
 #, kde-format

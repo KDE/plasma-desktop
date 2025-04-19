@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2023, 2024 gummi <gudmundure@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 gummi <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-01 00:42+0000\n"
-"PO-Revision-Date: 2024-12-13 10:19+0000\n"
+"PO-Revision-Date: 2025-04-17 14:18+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -181,11 +181,10 @@ msgid "Application…"
 msgstr "forriti…"
 
 #: ui/main.qml:180
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@action:menu accessible"
 msgid "Add new application"
-msgstr "Forrit"
+msgstr "Bæta við nýju forriti"
 
 #: ui/main.qml:187
 #, kde-format
@@ -194,12 +193,10 @@ msgid "Command or Script…"
 msgstr "skipun eða skriftu..."
 
 #: ui/main.qml:188
-#, fuzzy, kde-format
-#| msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
-#| msgid "Command or Script…"
+#, kde-format
 msgctxt "@action:menu accessible"
 msgid "Add new command or script"
-msgstr "skipun eða skriftu..."
+msgstr "Bæta við nýrri skipun eða skriftu"
 
 #: ui/main.qml:224
 #, kde-format

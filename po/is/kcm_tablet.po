@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2023, 2024 gummi <gudmundure@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 gummi <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-13 00:42+0000\n"
-"PO-Revision-Date: 2024-12-13 10:28+0000\n"
+"PO-Revision-Date: 2025-04-17 14:28+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -263,6 +263,8 @@ msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
 "revert to default calibration in %1 seconds.</b>"
 msgstr ""
+"Pikkaðu aftur á markpunktana til að staðfesta nýju kvörðunina.<nl/><nl/"
+"><b>Stillir aftur á sjálfgefna kvörðun eftir %1 sekúndur.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -278,7 +280,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Tap the center of each target."
-msgstr ""
+msgstr "Pikkaðu á miðjuna á markpunktunum."
 
 #: ui/Calibration.qml:112
 #, kde-format
@@ -290,7 +292,7 @@ msgstr "Fínstilla fyrirliggjandi kvörðun"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset and Try Again"
-msgstr ""
+msgstr "Endurstilla og reyna aftur"
 
 #: ui/Calibration.qml:121
 #, kde-format
@@ -343,22 +345,18 @@ msgid "%1,%2 - %3×%4"
 msgstr "%1,%2 - %3×%4"
 
 #: ui/ExternalScreenMapping.qml:190
-#, fuzzy, kde-format
-#| msgid "Resize the tablet area"
+#, kde-format
 msgid "Resize the screen area"
-msgstr "Breyta stærð teiknisvæðis"
+msgstr "Breyta stærð skjásvæðis"
 
 #: ui/ExternalScreenMapping.qml:265
-#, fuzzy, kde-format
-#| msgctxt "tablet area position - size"
-#| msgid "%1,%2 - %3×%4"
+#, kde-format
 msgctxt "tablet area position - size"
 msgid "%1%,%2% - %3%×%4%"
-msgstr "%1,%2 - %3×%4"
+msgstr "%1%,%2% - %3%×%4%"
 
 #: ui/ExternalScreenMapping.qml:299
-#, fuzzy, kde-format
-#| msgid "Resize the tablet area"
+#, kde-format
 msgid "Resize the tablet area"
 msgstr "Breyta stærð teiknisvæðis"
 
@@ -388,21 +386,19 @@ msgstr "Tæki:"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
-msgstr ""
+msgstr "Skjár"
 
 #: ui/main.qml:169
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
-msgstr ""
+msgstr "Penni"
 
 #: ui/main.qml:181
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The pad we are configuring"
-#| msgid "Pad:"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
-msgstr "Bakki:"
+msgstr "Bakki"
 
 #: ui/PadTab.qml:33
 #, kde-format
@@ -426,7 +422,7 @@ msgstr "Snið fyrir örvhenta:"
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
-msgstr ""
+msgstr "Virkja"
 
 #: ui/StylusTab.qml:228
 #, kde-kuit-format
@@ -436,9 +432,9 @@ msgid ""
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
-"Segir tækinu að laga sig að örvhentum notendum. Áhrifin eru breytileg eftir "
-"tæki, en oft er virkni bakkahnappanna snúið við þannig að hægt sé að hafa "
-"teikniborðið á hvolfi."
+"Segir tækinu að laga sig að örvhentum notendum. Virknin er breytileg eftir "
+"tæki, en oft er virkni bakkahnappanna snúið við þannig að hægt sé að snúa "
+"teikniborðinu öfugt."
 
 #: ui/StylusTab.qml:291
 #, kde-format
@@ -449,13 +445,13 @@ msgstr "Pennaþrýstingur:"
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:359
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:370
 #, kde-format
@@ -480,11 +476,10 @@ msgstr ""
 "þrýstingsgildanna sem forritið fær send."
 
 #: ui/StylusTab.qml:387
-#, fuzzy, kde-format
-#| msgid "Pen Pressure:"
+#, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
-msgstr "Pennaþrýstingur:"
+msgstr "Þrýstingssvið:"
 
 #: ui/StylusTab.qml:414
 #, kde-format
@@ -493,6 +488,8 @@ msgid ""
 "Pressure above or below the threshold will be clamped, and this becomes the "
 "new effective range."
 msgstr ""
+"Lokað er á þrýsting sem er yfir eða undir mörkunum og þetta verður virka "
+"þrýstingssviðið."
 
 #: ui/StylusTab.qml:428
 #, kde-format
@@ -513,12 +510,10 @@ msgid "Calibration Not Supported"
 msgstr "Kvörðun ekki studd"
 
 #: ui/StylusTab.qml:474
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Refine Existing Calibration"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
-msgstr "Fínstilla fyrirliggjandi kvörðun"
+msgstr "Endurstilla sérsniðna kvörðun"
 
 #: ui/StylusTab.qml:488
 #, kde-format
@@ -527,6 +522,8 @@ msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
 "correctly, try resetting this first."
 msgstr ""
+"Þú hefur kvarðað teikniborðið handvirkt. Ef það virkar ekki lengur rétt "
+"skaltu reyna að endurstilla það fyrst."
 
 #: ui/Tester.qml:25
 #, kde-format
@@ -545,16 +542,12 @@ msgid "Stylus release X=%1 Y=%2"
 msgstr "Pennaslepping X=%1 Y=%2"
 
 #: ui/Tester.qml:68
-#, fuzzy, kde-format
-#| msgid "Stylus move X=%1 Y=%2"
+#, kde-format
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
-msgstr "Pennahreyfing X=%1 Y=%2"
+msgstr "Pennahreyfing X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
 #: ui/Tester.qml:205
-#, fuzzy, kde-format
-#| msgid ""
-#| "## Legend:\n"
-#| "# X, Y - event coordinate\n"
+#, kde-format
 msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
@@ -563,6 +556,8 @@ msgid ""
 msgstr ""
 "## Skýring:\n"
 "# X, Y - atvikshnit\n"
+"# P - þrýstingur\n"
+"# TX,TY - halli\n"
 
 #: ui/Tester.qml:211
 #, kde-format

@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Sveinn í Felli <sveinki@nett.is>, 2008, 2010, 2011, 2016.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-22 00:43+0000\n"
-"PO-Revision-Date: 2024-12-13 10:14+0000\n"
+"PO-Revision-Date: 2025-04-17 14:18+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -87,13 +87,13 @@ msgid ""
 "not supported and  will also trigger this message. These might still work "
 "fine if applied"
 msgstr ""
-"Ekki tókst að hlaða inn lögun og stærð lyklaborðsins. Það bendir oft til "
-"þess að þessi gerð lyklaborðs styðji ekki tiltekna skipan eða tilbrigði "
-"hennar. Þetta vandamál verður líklega líka til staðar þegar þú reynir að "
-"nota þessa samsetningu af gerð lyklaborðs, uppstillingu og tilbrigði.\n"
+"Mistókst að hlaða inn lögun og stærð lyklaborðsins. Oft þýðir það að þessi "
+"gerð lyklaborðs styðji ekki tiltekna skipan eða tilbrigði hennar. Þetta "
+"vandamál kemur sennilega líka upp þegar þú reynir að nota þessa samsetningu "
+"af lyklaborðsgerð, uppstillingu og tilbrigði.\n"
 "Forskoðun á lyklaborðsskipunum sem eru skilgreindar utan xkb-möppu "
 "stýrikerfisins er ekki studd og keyrir einnig þessi skilaboð. Þetta gæti "
-"samt virkað rétt ef þetta er valið"
+"samt alveg virkað rétt ef þetta er valið"
 
 #: ui/KeyBindings.qml:18
 #, kde-format
@@ -144,7 +144,7 @@ msgid ""
 "The abbreviated name of the selected layout, which will be displayed in the "
 "system tray. You can change this setting yourself."
 msgstr ""
-"Stytt heiti á völdu lyklaborðsskipaninni sem birtist í kerfisbakkanum. Þú "
+"Skammstöfun á völdu lyklaborðsskipaninni sem birtist í kerfisbakkanum. Þú "
 "getur breytt þessum stillingum."
 
 #: ui/LayoutDialog.qml:198
@@ -388,7 +388,7 @@ msgid ""
 msgstr ""
 "Þú getur notað allt að 4 aðalskipanir, allar aðrar lyklaborðsskipanir eru "
 "til vara. Varaskipanir eru ekki teknar með þegar flett er í gegnum "
-"skipanirnar, en hægt er að nálgæst þær í gegnum lyklaborðsvísinní "
+"skipanirnar, en hægt er að nálgast þær í gegnum lyklaborðstáknið í "
 "kerfisbakkanum eða með því að setja upp sérsniðinn flýtilykil."
 
 #: ui/main.qml:387
@@ -446,12 +446,10 @@ msgid "Current window only"
 msgstr "Einungis núverandi glugga"
 
 #: ui/Switching.qml:74
-#, fuzzy, kde-format
-#| msgctxt "@label:checkbox"
-#| msgid "Show notification on layout change"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Show OSD popup on layout change"
-msgstr "Sýna tilkynningu þegar lyklaborðsskipan breytist"
+msgstr "Birta skjátilkynningu þegar lyklaborðsskipan breytist"
 
 #: ui/Switching.qml:86
 #, kde-format

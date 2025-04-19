@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Sveinn í Felli <sveinki@nett.is>, 2008, 2009, 2013, 2022.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-15 00:42+0000\n"
-"PO-Revision-Date: 2024-04-14 18:24+0000\n"
+"PO-Revision-Date: 2025-04-17 14:49+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -440,7 +440,7 @@ msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
 "or folder"
 msgid "Link Target Not Found"
-msgstr ""
+msgstr "Viðtökustaður tengils finnst ekki"
 
 #: plugins/folder/foldermodel.cpp:871
 #, kde-kuit-format
@@ -449,6 +449,8 @@ msgid ""
 "<filename>%1</filename> points to <filename>%2</filename>, but that could "
 "not be found. It may have been moved or deleted."
 msgstr ""
+"<filename>%1</filename> bendir á <filename>%2</filename> en hún fannst ekki. "
+"Kannski var hún færð eða henni eytt."
 
 #: plugins/folder/foldermodel.cpp:1729
 #, kde-format
@@ -459,7 +461,7 @@ msgstr "Tæ&ma rusl"
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
-msgstr ""
+msgstr "Endurheimta á fyrri staðsetningu"
 
 #: plugins/folder/foldermodel.cpp:1735
 #, kde-format
@@ -467,19 +469,18 @@ msgid "&Open"
 msgstr "&Opna"
 
 #: plugins/folder/foldermodel.cpp:1739
-#, fuzzy, kde-format
-#| msgid "Show all"
+#, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
 "link points to"
 msgid "Show Target"
-msgstr "Sýna allt"
+msgstr "Sýna viðtökustað"
 
 #: plugins/folder/foldermodel.cpp:1835
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
-msgstr ""
+msgstr "Fjarlægja tákn fyrir rusl"
 
 #: plugins/folder/foldermodel.cpp:1838
 #, kde-format

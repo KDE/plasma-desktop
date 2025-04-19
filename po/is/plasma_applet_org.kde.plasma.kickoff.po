@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-11 00:42+0000\n"
-"PO-Revision-Date: 2024-12-13 10:35+0000\n"
+"PO-Revision-Date: 2025-04-17 15:09+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -154,11 +154,10 @@ msgid "General:"
 msgstr "Almennt:"
 
 #: package/contents/ui/ConfigGeneral.qml:175
-#, fuzzy, kde-format
-#| msgid "Always sort applications alphabetically"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
-msgstr "Alltaf raða forritum í stafrófsröð"
+msgstr "Raða forritum í stafrófsröð"
 
 #: package/contents/ui/ConfigGeneral.qml:179
 #, kde-format
@@ -167,6 +166,8 @@ msgid ""
 "This doesn't affect how applications are sorted in either search results or "
 "the favorites page."
 msgstr ""
+"Þetta breytir því ekki hvernig forritum er raðað annað hvort í "
+"leitarniðurstöðum eða á síðu yfir eftirlæti."
 
 #: package/contents/ui/ConfigGeneral.qml:185
 #, kde-format
@@ -182,7 +183,7 @@ msgstr "Sjálfkrafa óvirkt þegar snertistilling er notuð"
 #: package/contents/ui/ConfigGeneral.qml:199
 #, kde-format
 msgid "Switch sidebar categories when hovering over them"
-msgstr "Skipta um flokka á hliðarstiku við þegar bendill sveimar yfir þeim"
+msgstr "Skipta um flokka á hliðarstiku þegar bendill sveimar yfir þeim"
 
 #: package/contents/ui/ConfigGeneral.qml:205
 #, kde-format
@@ -216,13 +217,13 @@ msgstr "Sýna eftirlæti:"
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
-msgstr "Í reitum"
+msgstr "í reitum"
 
 #: package/contents/ui/ConfigGeneral.qml:241
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
-msgstr "Í lista"
+msgstr "í lista"
 
 #: package/contents/ui/ConfigGeneral.qml:249
 #, kde-format
@@ -233,13 +234,13 @@ msgstr "Sýna önnur forrit:"
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
-msgstr "Í reitum"
+msgstr "í reitum"
 
 #: package/contents/ui/ConfigGeneral.qml:258
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
-msgstr "Í lista"
+msgstr "í lista"
 
 #: package/contents/ui/ConfigGeneral.qml:270
 #, kde-format
@@ -296,7 +297,7 @@ msgstr "Halda opnu"
 #: package/contents/ui/KickoffGridView.qml:102
 #, kde-format
 msgid "Grid with %1 rows, %2 columns"
-msgstr "Reitir með %1 röðum, %2 dálkum"
+msgstr "Reitir í %1 röðum, %2 dálkum"
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format

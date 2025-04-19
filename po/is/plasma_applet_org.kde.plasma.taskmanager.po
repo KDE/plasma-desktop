@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Sveinn í Felli <sveinki@nett.is>, 2008, 2009, 2010, 2011, 2022.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-17 00:42+0000\n"
-"PO-Revision-Date: 2024-12-13 10:41+0000\n"
+"PO-Revision-Date: 2025-04-17 15:39+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -22,15 +22,12 @@ msgstr ""
 "\n"
 
 #: backend.cpp:284
-#, fuzzy, kde-format
-#| msgctxt "Show all user Places"
-#| msgid "%1 more Place"
-#| msgid_plural "%1 more Places"
+#, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place…"
 msgid_plural "%1 more Places…"
-msgstr[0] "%1 Staður í viðbót"
-msgstr[1] "%1 Staðir í viðbót"
+msgstr[0] "%1 staður í viðbót..."
+msgstr[1] "%1 staðir í viðbót..."
 
 #: backend.cpp:368
 #, kde-format
@@ -139,19 +136,19 @@ msgstr "Fela aðra glugga þegar sveimað er yfir forskoðun"
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show an indicator when a task is playing audio"
-msgstr ""
+msgstr "Sýna merki þegar verkefni spilar hljóð"
 
 #: package/contents/ui/ConfigAppearance.qml:69
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Mute task when clicking indicator"
-msgstr ""
+msgstr "Þagga verkefni þegar smellt er á merkið"
 
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show media and volume controls in tooltip"
-msgstr ""
+msgstr "Sýna stýringar fyrir spilun og hljóðstyrk í vísbendingu"
 
 #: package/contents/ui/ConfigAppearance.qml:85
 #, kde-format
@@ -257,7 +254,7 @@ msgstr "Stórt"
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch mode"
-msgstr "Stilla sjálfkrafa á Stórt þegar snertiskjár er notaður"
+msgstr "Stilla sjálfkrafa á Stórt í snertistillingu"
 
 #: package/contents/ui/ConfigBehavior.qml:48
 #, kde-format
@@ -268,6 +265,10 @@ msgid ""
 "behavior. If you don't find one, consider reporting this as a bug to the "
 "app's developer."
 msgstr ""
+"Ef þú notar þessa stillingu til að vinna í kringum forrit sem krefst athygli "
+"of oft, skaltu fyrst leita að stillingu í forritinu til að gera þá hegðun "
+"óvirka. Ef hún finnst ekki skaltu íhuga að tilkynna þetta sem villu til "
+"þróunaraðila forritsins."
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
@@ -299,7 +300,7 @@ msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task cycles through "
 "tasks' "
 msgid "Cycles through tasks"
-msgstr "Flettir í gegnum verkefni"
+msgstr "Flettir í gegnum verkefnin"
 
 #: package/contents/ui/ConfigBehavior.qml:83
 #, kde-format
@@ -387,7 +388,7 @@ msgstr "Eftir athöfnum"
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By horizontal window position"
-msgstr ""
+msgstr "Eftir láréttri stöðu glugga"
 
 #: package/contents/ui/ConfigBehavior.qml:163
 #, kde-format
@@ -399,7 +400,7 @@ msgstr "Halda forritaræsum aðskildum"
 #, kde-format
 msgctxt "@option:check for icons-and-text task manager"
 msgid "Hide launchers after application startup"
-msgstr "Fela forritaræsa eftir að forrit er ræst"
+msgstr "Fela forritaræsa þegar forrit hefur verið ræst"
 
 #: package/contents/ui/ConfigBehavior.qml:180
 #, kde-format
@@ -486,7 +487,7 @@ msgstr "Flettir í gegnum verkefni"
 #, kde-format
 msgctxt "@option:check mouse wheel task cycling"
 msgid "Skip minimized tasks"
-msgstr "Sleppa földum verkefnum"
+msgstr "Sleppa földum forritum"
 
 #: package/contents/ui/ConfigBehavior.qml:223
 #, kde-format
@@ -589,7 +590,7 @@ msgstr "Fyrra lag"
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
-msgstr "Í bið"
+msgstr "Á pásu"
 
 #: package/contents/ui/ContextMenu.qml:179
 #, kde-format
@@ -690,7 +691,7 @@ msgstr "Í núverandi athöfn"
 #: package/contents/ui/ContextMenu.qml:596
 #, kde-format
 msgid "Unpin from Task Manager"
-msgstr "Losa frá Verkefnastjóra"
+msgstr "Losa af Verkefnastjóra"
 
 #: package/contents/ui/ContextMenu.qml:611
 #, kde-format
@@ -741,7 +742,7 @@ msgstr "&Rúlla upp"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
-msgstr ""
+msgstr "&Engin titilstika og rammi"
 
 #: package/contents/ui/ContextMenu.qml:729
 #, kde-format
