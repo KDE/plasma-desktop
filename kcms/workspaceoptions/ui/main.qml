@@ -448,6 +448,7 @@ KCM.SimpleKCM {
         QQC2.Label {
             id: dndToMoveDisablerHelperText
             Layout.fillWidth: true
+            Layout.preferredWidth: Kirigami.Units.gridUnit * 20
             leftPadding: Application.layoutDirection === Qt.LeftToRight ?
                 dndToMoveDisabler.indicator.width + dndToMoveDisabler.spacing : dndToMoveDisablerHelperText.padding
             rightPadding: Application.layoutDirection === Qt.RightToLeft ?
@@ -472,6 +473,7 @@ KCM.SimpleKCM {
         QQC2.Label {
             id: dndToMoveEnablerHelperText
             Layout.fillWidth: true
+            Layout.preferredWidth: Kirigami.Units.gridUnit * 20
             leftPadding: Application.layoutDirection === Qt.LeftToRight ?
                 dndToMoveEnabler.indicator.width + dndToMoveEnabler.spacing : dndToMoveEnablerHelperText.padding
             rightPadding: Application.layoutDirection === Qt.RightToLeft ?
