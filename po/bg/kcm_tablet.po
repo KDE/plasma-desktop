@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2022, 2024 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022, 2024, 2025 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-13 00:42+0000\n"
-"PO-Revision-Date: 2024-12-30 23:13+0100\n"
+"PO-Revision-Date: 2025-04-18 14:08+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.03.70\n"
+"X-Generator: Lokalize 25.07.70\n"
 
 #: inputsequence.cpp:172
 #, kde-format
@@ -263,6 +263,8 @@ msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
 "revert to default calibration in %1 seconds.</b>"
 msgstr ""
+"Докоснете мишените отново, за да потвърдите новото калибриране.<nl/><nl/"
+"><b>Връщане към калибрирането по подразбиране след %1 секунди.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -278,7 +280,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Tap the center of each target."
-msgstr ""
+msgstr "Докоснете центъра на всяка от мишените."
 
 #: ui/Calibration.qml:112
 #, kde-format
@@ -290,7 +292,7 @@ msgstr "Прецизиране на съществуващо калибрира�
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset and Try Again"
-msgstr ""
+msgstr "Нулиране и повторно опитване"
 
 #: ui/Calibration.qml:121
 #, kde-format
@@ -509,12 +511,10 @@ msgid "Calibration Not Supported"
 msgstr "Калибрирането не се поддържа"
 
 #: ui/StylusTab.qml:474
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Refine Existing Calibration"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
-msgstr "Прецизиране на съществуващо калибриране"
+msgstr "Нулиране на потребителското калибриране"
 
 #: ui/StylusTab.qml:488
 #, kde-format
@@ -523,6 +523,8 @@ msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
 "correctly, try resetting this first."
 msgstr ""
+"Ръчно сте калибрирали този таблет. Ако той вече не работи правилно, опитайте "
+"първо да нулирате това."
 
 #: ui/Tester.qml:25
 #, kde-format

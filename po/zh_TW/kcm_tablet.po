@@ -4,13 +4,13 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # Automatically generated, 2022.
-# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-13 00:42+0000\n"
-"PO-Revision-Date: 2024-12-29 01:40+0900\n"
+"PO-Revision-Date: 2025-04-19 15:31+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: inputsequence.cpp:172
 #, kde-format
@@ -264,6 +264,8 @@ msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
 "revert to default calibration in %1 seconds.</b>"
 msgstr ""
+"再次輕點各個目標來確認使用新的校準。<nl/><nl/><b>未確認時將於 %1 秒後還原成預"
+"設校準。</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -277,7 +279,7 @@ msgstr "校準已完成並已儲存。<nl/><nl/>可以繼續加強校準或是�
 #, kde-format
 msgctxt "@info"
 msgid "Tap the center of each target."
-msgstr ""
+msgstr "輕點每個目標的中心。"
 
 #: ui/Calibration.qml:112
 #, kde-format
@@ -289,7 +291,7 @@ msgstr "加強現有校準"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset and Try Again"
-msgstr ""
+msgstr "重設並再試一次"
 
 #: ui/Calibration.qml:121
 #, kde-format
@@ -502,12 +504,10 @@ msgid "Calibration Not Supported"
 msgstr "不支援校準"
 
 #: ui/StylusTab.qml:474
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Refine Existing Calibration"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
-msgstr "加強現有校準"
+msgstr "重設自訂校準"
 
 #: ui/StylusTab.qml:488
 #, kde-format
@@ -515,7 +515,7 @@ msgctxt "@info"
 msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
 "correctly, try resetting this first."
-msgstr ""
+msgstr "您已手動校準了這個繪圖板。如果它目前並非正常運作，請先試著重設校準。"
 
 #: ui/Tester.qml:25
 #, kde-format
