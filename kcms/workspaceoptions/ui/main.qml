@@ -454,7 +454,6 @@ KCM.SimpleKCM {
             rightPadding: Application.layoutDirection === Qt.RightToLeft ?
                 dndToMoveDisabler.indicator.width + dndToMoveDisabler.spacing : dndToMoveDisablerHelperText.padding
             text: xi18nc("@info", "Hold <shortcut>Shift</shortcut> to move, <shortcut>Ctrl</shortcut> to copy, and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise otherwise show a dialog.")
-            textFormat: Text.PlainText
             elide: Text.ElideRight
             font: Kirigami.Theme.smallFont
             wrapMode: Text.WordWrap
@@ -479,7 +478,6 @@ KCM.SimpleKCM {
             rightPadding: Application.layoutDirection === Qt.RightToLeft ?
                 dndToMoveEnabler.indicator.width + dndToMoveEnabler.spacing : dndToMoveEnablerHelperText.padding
             text: xi18nc("@info", "Hold <shortcut>Shift</shortcut> when dropping to show other options")
-            textFormat: Text.PlainText
             elide: Text.ElideRight
             font: Kirigami.Theme.smallFont
         }
