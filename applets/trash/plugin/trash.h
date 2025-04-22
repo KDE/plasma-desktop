@@ -20,6 +20,7 @@ public:
     explicit Trash(QObject *parent = nullptr);
     ~Trash() override = default;
 
+    Q_INVOKABLE void openTrash();
     Q_INVOKABLE void trashUrls(const QList<QUrl> &urls);
     Q_INVOKABLE void emptyTrash();
     Q_INVOKABLE bool canBeTrashed(const QUrl &url) const;

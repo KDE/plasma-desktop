@@ -9,11 +9,21 @@
 #include <QApplication>
 #include <QFileInfo>
 
+#include <KNotificationJobUiDelegate>
+
 #include <KIO/DeleteOrTrashJob>
+#include <KIO/OpenUrlJob>
 
 Trash::Trash(QObject *parent)
     : QObject(parent)
 {
+}
+
+void Trash::openTrash()
+{
+    auto *job = new KIO::OpenUrlJob(QUrl(QStringLiteral("trash:/")));
+    job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
+    job->start();
 }
 
 void Trash::trashUrls(const QList<QUrl> &urls)

@@ -12,6 +12,7 @@ target_link_libraries(trashplugin PRIVATE
         KF6::KIOWidgets
         KF6::CoreAddons # KSharedDataCache required by KImageCache in GuiAddons
         KF6::GuiAddons
+        KF6::Notifications
         Qt::DBus
         )
 

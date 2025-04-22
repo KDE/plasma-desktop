@@ -46,7 +46,7 @@ PlasmoidItem {
     }
     Plasmoid.status: hasContents ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
 
-    Plasmoid.onActivated: Qt.openUrlExternally("trash:/")
+    Plasmoid.onActivated: TrashPrivate.Trash.openTrash()
 
     Keys.onPressed: event => {
         switch (event.key) {
