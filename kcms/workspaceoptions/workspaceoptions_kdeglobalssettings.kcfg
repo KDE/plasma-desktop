@@ -9,7 +9,7 @@
       <label>Single click to open files</label>
       <default>false</default>
     </entry>
-    <entry name="dndToMove" key="dndToMove" type="Enum">
+    <entry name="dndToMove" key="DndToMove" type="Enum">
       <label>For local files on the same device, whether dragging and dropping will perform a move operation instead of showing the options menu</label>
       <choices name="DndBehavior">
         <choice name="AlwaysAsk"/>
