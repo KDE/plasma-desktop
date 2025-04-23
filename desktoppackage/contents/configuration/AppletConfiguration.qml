@@ -123,7 +123,20 @@ Rectangle {
         app.isAboutPage = false;
         root.currentSource = item.source
 
-        if (item.source) {
+        if (item.configUiModule && item.configUiComponent) {
+            root.currentSource = item.configUiModule + item.configUiComponent; // Just for the highlight status
+            const config = Plasmoid.configuration; // type: KConfigPropertyMap
+
+            const props = {
+                "title": item.name,
+            };
+
+            config.keys().forEach(key => {
+                props["cfg_" + key] = config[key];
+            });
+
+            pushReplace(Qt.createComponent(item.configUiModule, item.configUiComponent), props);
+        } else if (item.source) {
             app.isAboutPage = item.source === Qt.resolvedUrl("AboutPlugin.qml");
 
             const config = Plasmoid.configuration; // type: KConfigPropertyMap
@@ -294,7 +307,11 @@ Rectangle {
                     onActivated: categories.openCategory(model);
                     highlighted: {
                         if (app.pageStack.currentItem) {
-                            return root.currentSource == model.source
+                            if (model.configUiModule && model.configUiComponent) {
+                                return root.currentSource == (model.configUiModule + model.configUiComponent)
+                            } else {
+                                return root.currentSource == model.source
+                            }
                         }
                         return false
                     }
