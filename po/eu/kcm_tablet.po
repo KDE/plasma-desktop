@@ -1,16 +1,16 @@
 # Translation for kcm_tablet.po to Euskara/Basque (eu).
-# Copyright (C) 2022-2024 This file is copyright:
+# Copyright (C) 2022-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2022, 2024.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2022, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-13 00:42+0000\n"
-"PO-Revision-Date: 2024-12-28 08:53+0100\n"
+"PO-Revision-Date: 2025-04-22 10:36+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: inputsequence.cpp:172
 #, kde-format
@@ -266,6 +266,8 @@ msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
 "revert to default calibration in %1 seconds.</b>"
 msgstr ""
+"Jomugetan berriz tak egin kalibrazioa berresteko.<nl/><nl/><b>%1 segundotan "
+"lehenetsitako kalibraziora lehengoratuko du.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -281,19 +283,19 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Tap the center of each target."
-msgstr ""
+msgstr "Egin tak jomuga bakoitzaren erdigunean."
 
 #: ui/Calibration.qml:112
 #, kde-format
 msgctxt "@action:button"
 msgid "Refine Existing Calibration"
-msgstr "Dagoen kalibrazioa birfindu"
+msgstr "Dagoen kalibrazioa findu"
 
 #: ui/Calibration.qml:121
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset and Try Again"
-msgstr ""
+msgstr "Berrezarri eta berriz saiatu"
 
 #: ui/Calibration.qml:121
 #, kde-format
@@ -512,12 +514,10 @@ msgid "Calibration Not Supported"
 msgstr "Kalibratzea ez da onartzen"
 
 #: ui/StylusTab.qml:474
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Refine Existing Calibration"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
-msgstr "Dagoen kalibrazioa birfindu"
+msgstr "Berrezarri neurrira eginiko kalibrazioa"
 
 #: ui/StylusTab.qml:488
 #, kde-format
@@ -526,6 +526,8 @@ msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
 "correctly, try resetting this first."
 msgstr ""
+"Tableta hau eskuz kalibratu duzu. Jada behar bezala ez badabil, aurrena saia "
+"zaitez hori berrezartzen."
 
 #: ui/Tester.qml:25
 #, kde-format
