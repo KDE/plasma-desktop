@@ -56,7 +56,12 @@ KCMUtils.AbstractKCM {
         {
             icon: "view-visible",
             title: i18nc("Correction for color blindness", "Color Blindness Correction"),
-            defaultnessKey: "colorblindnessCorrectionIsDefaults",
+            defaultnessKey: "colorblindnessCorrectionIsDefaults"
+        },
+        {
+            icon: "image-invert-symbolic",
+            title: i18nc("@title Category name in sidebar, for inverting screen colors", "Invert"),
+            defaultnessKey: "invertIsDefaults"
         },
         {
             icon: "cursor-arrow",
@@ -171,6 +176,7 @@ KCMUtils.AbstractKCM {
                         ActivationShortcuts {}
                         ScreenReader {}
                         ColorblindnessCorrection {}
+                        Invert {}
                         ShakeCursor {}
                     }
                 }

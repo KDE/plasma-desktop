@@ -20,6 +20,7 @@ class ScreenReaderSettings;
 class AccessibilityData;
 class ShakeCursorSettings;
 class ColorblindnessCorrectionSettings;
+class InvertSettings;
 
 class KAccessConfig : public KQuickManagedConfigModule
 {
@@ -32,6 +33,7 @@ class KAccessConfig : public KQuickManagedConfigModule
     Q_PROPERTY(ScreenReaderSettings *screenReaderSettings READ screenReaderSettings CONSTANT)
     Q_PROPERTY(ShakeCursorSettings *shakeCursorSettings READ shakeCursorSettings CONSTANT)
     Q_PROPERTY(ColorblindnessCorrectionSettings *colorblindnessCorrectionSettings READ colorblindnessCorrectionSettings CONSTANT)
+    Q_PROPERTY(InvertSettings *invertSettings READ invertSettings CONSTANT)
     Q_PROPERTY(QString orcaLaunchFeedback READ orcaLaunchFeedback WRITE setOrcaLaunchFeedback NOTIFY orcaLaunchFeedbackChanged)
     Q_PROPERTY(QString desktopShortcutInfo MEMBER m_desktopShortcutInfo CONSTANT)
     Q_PROPERTY(bool screenReaderInstalled MEMBER m_screenReaderInstalled CONSTANT)
@@ -43,6 +45,7 @@ class KAccessConfig : public KQuickManagedConfigModule
     Q_PROPERTY(bool screenReaderIsDefaults READ screenReaderIsDefaults NOTIFY screenReaderIsDefaultsChanged)
     Q_PROPERTY(bool shakeCursorIsDefaults READ shakeCursorIsDefaults NOTIFY shakeCursorIsDefaultsChanged)
     Q_PROPERTY(bool colorblindnessCorrectionIsDefaults READ colorblindnessCorrectionIsDefaults NOTIFY colorblindnessCorrectionIsDefaultsChanged)
+    Q_PROPERTY(bool invertIsDefaults READ invertIsDefaults NOTIFY invertIsDefaultsChanged)
 
 public:
     KAccessConfig(QObject *parent, const KPluginMetaData &);
@@ -51,6 +54,7 @@ public:
     void save() override;
 
     Q_INVOKABLE void configureKNotify();
+    Q_INVOKABLE void configureInvertShortcuts();
     Q_INVOKABLE void launchOrcaConfiguration();
     Q_INVOKABLE bool orcaInstalled();
 
@@ -64,6 +68,7 @@ public:
     ScreenReaderSettings *screenReaderSettings() const;
     ShakeCursorSettings *shakeCursorSettings() const;
     ColorblindnessCorrectionSettings *colorblindnessCorrectionSettings() const;
+    InvertSettings *invertSettings() const;
 
     bool bellIsDefaults() const;
     bool mouseIsDefaults() const;
@@ -73,6 +78,7 @@ public:
     bool screenReaderIsDefaults() const;
     bool shakeCursorIsDefaults() const;
     bool colorblindnessCorrectionIsDefaults() const;
+    bool invertIsDefaults() const;
 
 Q_SIGNALS:
     void orcaLaunchFeedbackChanged();
@@ -84,6 +90,7 @@ Q_SIGNALS:
     void screenReaderIsDefaultsChanged();
     void shakeCursorIsDefaultsChanged();
     void colorblindnessCorrectionIsDefaultsChanged();
+    void invertIsDefaultsChanged();
 
 private:
     void setOrcaLaunchFeedback(const QString &value);
