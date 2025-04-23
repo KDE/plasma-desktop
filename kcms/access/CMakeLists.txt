@@ -17,13 +17,14 @@ kconfig_add_kcfg_files(kaccess_settings
     kcmaccessibilityscreenreader.kcfgc
     kcmaccessibilityshakecursor.kcfgc
     kcmaccessibilitycolorblindnesscorrection.kcfgc
+    kcmaccessibilityinvert.kcfgc
     GENERATE_MOC)
 
 kcmutils_generate_module_data(kcm_access
     MODULE_DATA_HEADER kcmaccessibilitydata.h
     MODULE_DATA_CLASS_NAME AccessibilityData
-    SETTINGS_HEADERS kcmaccessibilitybell.h kcmaccessibilitykeyboard.h kcmaccessibilitykeyboardfilters.h kcmaccessibilitymouse.h kcmaccessibilityactivationgestures.h kcmaccessibilityscreenreader.h kcmaccessibilityshakecursor.h kcmaccessibilitycolorblindnesscorrection.h
-    SETTINGS_CLASSES BellSettings KeyboardSettings KeyboardFiltersSettings MouseSettings ActivationGesturesSettings ScreenReaderSettings ShakeCursorSettings ColorblindnessCorrectionSettings
+    SETTINGS_HEADERS kcmaccessibilitybell.h kcmaccessibilitykeyboard.h kcmaccessibilitykeyboardfilters.h kcmaccessibilitymouse.h kcmaccessibilityactivationgestures.h kcmaccessibilityscreenreader.h kcmaccessibilityshakecursor.h kcmaccessibilitycolorblindnesscorrection.h kcmaccessibilityinvert.h
+    SETTINGS_CLASSES BellSettings KeyboardSettings KeyboardFiltersSettings MouseSettings ActivationGesturesSettings ScreenReaderSettings ShakeCursorSettings ColorblindnessCorrectionSettings InvertSettings
 )
 
 target_link_libraries(kcm_access PRIVATE
@@ -33,12 +34,14 @@ target_link_libraries(kcm_access PRIVATE
     Qt::GuiPrivate
     KF6::KCMUtils
     KF6::CoreAddons
+    KF6::GlobalAccel
     KF6::GuiAddons
     KF6::I18n
     KF6::NewStuffCore
     KF6::KCMUtilsQuick
     KF6::WindowSystem
     KF6::NotifyConfig
+    KF6::XmlGui
     X11::X11
 )
 
@@ -50,6 +53,7 @@ install(
         kcmaccessibilityscreenreader.kcfg
         kcmaccessibilityshakecursor.kcfg
         kcmaccessibilitycolorblindnesscorrection.kcfg
+        kcmaccessibilityinvert.kcfg
     DESTINATION
         ${KDE_INSTALL_KCFGDIR}
 )
