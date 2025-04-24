@@ -203,7 +203,17 @@ KAccessConfig::~KAccessConfig()
 
 void KAccessConfig::configureKNotify()
 {
-    KNotifyConfigWidget::configure(QApplication::activeWindow(), QStringLiteral("kaccess"));
+    auto *notifyWidget = KNotifyConfigWidget::configure(QApplication::activeWindow(), QStringLiteral("kaccess"));
+
+    // HACK: Make dialog properly modal, non-ideal but safe
+    QDialog *dialog = qobject_cast<QDialog *>(notifyWidget->parent());
+    if (dialog) {
+        dialog->hide();
+        dialog->winId();
+        dialog->windowHandle()->setTransientParent(QApplication::activeWindow()->windowHandle());
+        dialog->setWindowModality(Qt::WindowModal);
+        dialog->show();
+    }
 }
 
 void KAccessConfig::configureInvertShortcuts()
