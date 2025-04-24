@@ -21,6 +21,7 @@ class AccessibilityData;
 class ShakeCursorSettings;
 class ColorblindnessCorrectionSettings;
 class InvertSettings;
+class ZoomMagnifierSettings;
 
 class KAccessConfig : public KQuickManagedConfigModule
 {
@@ -34,6 +35,7 @@ class KAccessConfig : public KQuickManagedConfigModule
     Q_PROPERTY(ShakeCursorSettings *shakeCursorSettings READ shakeCursorSettings CONSTANT)
     Q_PROPERTY(ColorblindnessCorrectionSettings *colorblindnessCorrectionSettings READ colorblindnessCorrectionSettings CONSTANT)
     Q_PROPERTY(InvertSettings *invertSettings READ invertSettings CONSTANT)
+    Q_PROPERTY(ZoomMagnifierSettings *zoomMagnifierSettings READ zoomMagnifierSettings CONSTANT)
     Q_PROPERTY(QString orcaLaunchFeedback READ orcaLaunchFeedback WRITE setOrcaLaunchFeedback NOTIFY orcaLaunchFeedbackChanged)
     Q_PROPERTY(QString desktopShortcutInfo MEMBER m_desktopShortcutInfo CONSTANT)
     Q_PROPERTY(bool screenReaderInstalled MEMBER m_screenReaderInstalled CONSTANT)
@@ -46,6 +48,8 @@ class KAccessConfig : public KQuickManagedConfigModule
     Q_PROPERTY(bool shakeCursorIsDefaults READ shakeCursorIsDefaults NOTIFY shakeCursorIsDefaultsChanged)
     Q_PROPERTY(bool colorblindnessCorrectionIsDefaults READ colorblindnessCorrectionIsDefaults NOTIFY colorblindnessCorrectionIsDefaultsChanged)
     Q_PROPERTY(bool invertIsDefaults READ invertIsDefaults NOTIFY invertIsDefaultsChanged)
+    Q_PROPERTY(bool zoomMagnifierIsDefaults READ zoomMagnifierIsDefaults NOTIFY zoomMagnifierIsDefaultsChanged)
+    Q_PROPERTY(bool isPlatformX11 READ isPlatformX11 CONSTANT)
 
 public:
     KAccessConfig(QObject *parent, const KPluginMetaData &);
@@ -55,10 +59,13 @@ public:
 
     Q_INVOKABLE void configureKNotify();
     Q_INVOKABLE void configureInvertShortcuts();
+    Q_INVOKABLE void configureZoomMagnifyShortcuts();
     Q_INVOKABLE void launchOrcaConfiguration();
     Q_INVOKABLE bool orcaInstalled();
 
     QString orcaLaunchFeedback() const;
+
+    bool isPlatformX11() const;
 
     MouseSettings *mouseSettings() const;
     BellSettings *bellSettings() const;
@@ -69,6 +76,7 @@ public:
     ShakeCursorSettings *shakeCursorSettings() const;
     ColorblindnessCorrectionSettings *colorblindnessCorrectionSettings() const;
     InvertSettings *invertSettings() const;
+    ZoomMagnifierSettings *zoomMagnifierSettings() const;
 
     bool bellIsDefaults() const;
     bool mouseIsDefaults() const;
@@ -79,6 +87,7 @@ public:
     bool shakeCursorIsDefaults() const;
     bool colorblindnessCorrectionIsDefaults() const;
     bool invertIsDefaults() const;
+    bool zoomMagnifierIsDefaults() const;
 
 Q_SIGNALS:
     void orcaLaunchFeedbackChanged();
@@ -91,6 +100,7 @@ Q_SIGNALS:
     void shakeCursorIsDefaultsChanged();
     void colorblindnessCorrectionIsDefaultsChanged();
     void invertIsDefaultsChanged();
+    void zoomMagnifierIsDefaultsChanged();
 
 private:
     void setOrcaLaunchFeedback(const QString &value);

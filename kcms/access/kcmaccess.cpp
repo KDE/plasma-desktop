@@ -47,6 +47,7 @@
 #include "kcmaccessibilitymouse.h"
 #include "kcmaccessibilityscreenreader.h"
 #include "kcmaccessibilityshakecursor.h"
+#include "kcmaccessibilityzoommagnifier.h"
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMAccessFactory, "kcm_access.json", registerPlugin<KAccessConfig>(); registerPlugin<AccessibilityData>();)
 
@@ -176,6 +177,7 @@ KAccessConfig::KAccessConfig(QObject *parent, const KPluginMetaData &metaData)
     qmlRegisterAnonymousType<ShakeCursorSettings>("org.kde.plasma.access.kcm", 0);
     qmlRegisterAnonymousType<ColorblindnessCorrectionSettings>("org.kde.plasma.access.kcm", 0);
     qmlRegisterAnonymousType<InvertSettings>("org.kde.plasma.access.kcm", 0);
+    qmlRegisterAnonymousType<ZoomMagnifierSettings>("org.kde.plasma.access.kcm", 0);
     qmlRegisterType<IntValidatorWithSuffix>("org.kde.plasma.access.kcm", 0, 0, "IntValidatorWithSuffix");
 
     int tryOrcaRun = QProcess::execute(QStringLiteral("orca"), {QStringLiteral("--version")});
@@ -195,6 +197,7 @@ KAccessConfig::KAccessConfig(QObject *parent, const KPluginMetaData &metaData)
             this,
             &KAccessConfig::colorblindnessCorrectionIsDefaultsChanged);
     connect(m_data->invertSettings(), &InvertSettings::configChanged, this, &KAccessConfig::invertIsDefaultsChanged);
+    connect(m_data->zoomMagnifierSettings(), &ZoomMagnifierSettings::configChanged, this, &KAccessConfig::zoomMagnifierIsDefaultsChanged);
 }
 
 KAccessConfig::~KAccessConfig()
@@ -244,6 +247,102 @@ void KAccessConfig::configureInvertShortcuts()
     dialog->configure();
 }
 
+void KAccessConfig::configureZoomMagnifyShortcuts()
+{
+    KShortcutsDialog *dialog = new KShortcutsDialog(KShortcutsEditor::GlobalAction, KShortcutsEditor::LetterShortcutsDisallowed);
+
+    KActionCollection *actionCollection = new KActionCollection(dialog, QStringLiteral("kwin"));
+    actionCollection->setComponentDisplayName(i18n("KWin"));
+
+    if (zoomMagnifierSettings()->zoom()) {
+        // Show zoom effect shortcuts
+        QAction *a;
+
+        a = actionCollection->addAction(KStandardActions::ZoomIn);
+        a->setProperty("isConfigurationAction", true);
+        KGlobalAccel::self()->setDefaultShortcut(a, QList<QKeySequence>() << (Qt::META | Qt::Key_Plus) << (Qt::META | Qt::Key_Equal));
+        KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << (Qt::META | Qt::Key_Plus) << (Qt::META | Qt::Key_Equal));
+
+        a = actionCollection->addAction(KStandardActions::ZoomOut);
+        a->setProperty("isConfigurationAction", true);
+        KGlobalAccel::self()->setDefaultShortcut(a, QList<QKeySequence>() << (Qt::META | Qt::Key_Minus));
+        KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << (Qt::META | Qt::Key_Minus));
+
+        a = actionCollection->addAction(KStandardActions::ActualSize);
+        a->setProperty("isConfigurationAction", true);
+        KGlobalAccel::self()->setDefaultShortcut(a, QList<QKeySequence>() << (Qt::META | Qt::Key_0));
+        KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << (Qt::META | Qt::Key_0));
+
+        a = actionCollection->addAction(QStringLiteral("MoveZoomLeft"));
+        a->setIcon(QIcon::fromTheme(QStringLiteral("go-previous")));
+        a->setText(i18n("Move Left"));
+        a->setProperty("isConfigurationAction", true);
+        KGlobalAccel::self()->setDefaultShortcut(a, QList<QKeySequence>() << (Qt::META | Qt::CTRL | Qt::Key_Left));
+        KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << (Qt::META | Qt::CTRL | Qt::Key_Left));
+
+        a = actionCollection->addAction(QStringLiteral("MoveZoomRight"));
+        a->setIcon(QIcon::fromTheme(QStringLiteral("go-next")));
+        a->setText(i18n("Move Right"));
+        a->setProperty("isConfigurationAction", true);
+        KGlobalAccel::self()->setDefaultShortcut(a, QList<QKeySequence>() << (Qt::META | Qt::CTRL | Qt::Key_Right));
+        KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << (Qt::META | Qt::CTRL | Qt::Key_Right));
+
+        a = actionCollection->addAction(QStringLiteral("MoveZoomUp"));
+        a->setIcon(QIcon::fromTheme(QStringLiteral("go-up")));
+        a->setText(i18n("Move Up"));
+        a->setProperty("isConfigurationAction", true);
+        KGlobalAccel::self()->setDefaultShortcut(a, QList<QKeySequence>() << (Qt::META | Qt::CTRL | Qt::Key_Up));
+        KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << (Qt::META | Qt::CTRL | Qt::Key_Up));
+
+        a = actionCollection->addAction(QStringLiteral("MoveZoomDown"));
+        a->setIcon(QIcon::fromTheme(QStringLiteral("go-down")));
+        a->setText(i18n("Move Down"));
+        a->setProperty("isConfigurationAction", true);
+        KGlobalAccel::self()->setDefaultShortcut(a, QList<QKeySequence>() << (Qt::META | Qt::CTRL | Qt::Key_Down));
+        KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << (Qt::META | Qt::CTRL | Qt::Key_Down));
+
+        a = actionCollection->addAction(QStringLiteral("MoveMouseToFocus"));
+        a->setIcon(QIcon::fromTheme(QStringLiteral("view-restore")));
+        a->setText(i18n("Move Mouse to Focus"));
+        a->setProperty("isConfigurationAction", true);
+        KGlobalAccel::self()->setDefaultShortcut(a, QList<QKeySequence>() << (Qt::META | Qt::Key_F5));
+        KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << (Qt::META | Qt::Key_F5));
+
+        a = actionCollection->addAction(QStringLiteral("MoveMouseToCenter"));
+        a->setIcon(QIcon::fromTheme(QStringLiteral("view-restore")));
+        a->setText(i18n("Move Mouse to Center"));
+        a->setProperty("isConfigurationAction", true);
+        KGlobalAccel::self()->setDefaultShortcut(a, QList<QKeySequence>() << (Qt::META | Qt::Key_F6));
+        KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << (Qt::META | Qt::Key_F6));
+    } else if (zoomMagnifierSettings()->magnifier()) {
+        // Show magnifier effect shortcuts
+        QAction *a;
+
+        a = actionCollection->addAction(KStandardActions::ZoomIn);
+        a->setProperty("isConfigurationAction", true);
+        KGlobalAccel::self()->setDefaultShortcut(a, QList<QKeySequence>() << (Qt::META | Qt::Key_Plus) << (Qt::META | Qt::Key_Equal));
+        KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << (Qt::META | Qt::Key_Plus) << (Qt::META | Qt::Key_Equal));
+
+        a = actionCollection->addAction(KStandardActions::ZoomOut);
+        a->setProperty("isConfigurationAction", true);
+        KGlobalAccel::self()->setDefaultShortcut(a, QList<QKeySequence>() << (Qt::META | Qt::Key_Minus));
+        KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << (Qt::META | Qt::Key_Minus));
+
+        a = actionCollection->addAction(KStandardActions::ActualSize);
+        a->setProperty("isConfigurationAction", true);
+        KGlobalAccel::self()->setDefaultShortcut(a, QList<QKeySequence>() << (Qt::META | Qt::Key_0));
+        KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << (Qt::META | Qt::Key_0));
+    }
+
+    dialog->addCollection(actionCollection);
+    dialog->setAttribute(Qt::WA_DeleteOnClose);
+    dialog->winId();
+    dialog->windowHandle()->setTransientParent(QApplication::activeWindow()->windowHandle());
+    dialog->setWindowModality(Qt::WindowModal);
+
+    dialog->configure();
+}
+
 void KAccessConfig::launchOrcaConfiguration()
 {
     const QStringList gsettingArgs = {QStringLiteral("set"),
@@ -276,6 +375,18 @@ void KAccessConfig::save()
         || m_data->colorblindnessCorrectionSettings()->findItem(QStringLiteral("Intensity"))->isSaveNeeded();
 
     const bool invertSaveNeeded = m_data->invertSettings()->findItem(QStringLiteral("Invert"))->isSaveNeeded();
+
+    const bool zoomMagnifierSaveNeeded = m_data->zoomMagnifierSettings()->findItem(QStringLiteral("Zoom"))->isSaveNeeded()
+        || m_data->zoomMagnifierSettings()->findItem(QStringLiteral("Magnifier"))->isSaveNeeded();
+    const bool zoomSettingsSaveNeeded = m_data->zoomMagnifierSettings()->findItem(QStringLiteral("ZoomZoomFactor"))->isSaveNeeded()
+        || m_data->zoomMagnifierSettings()->findItem(QStringLiteral("ZoomMousePointer"))->isSaveNeeded()
+        || m_data->zoomMagnifierSettings()->findItem(QStringLiteral("ZoomMouseTracking"))->isSaveNeeded()
+        || m_data->zoomMagnifierSettings()->findItem(QStringLiteral("ZoomEnableFocusTracking"))->isSaveNeeded()
+        || m_data->zoomMagnifierSettings()->findItem(QStringLiteral("ZoomEnableTextCaretTracking"))->isSaveNeeded()
+        || m_data->zoomMagnifierSettings()->findItem(QStringLiteral("ZoomPixelGridZoom"))->isSaveNeeded()
+        || m_data->zoomMagnifierSettings()->findItem(QStringLiteral("ZoomPointerAxisGestureModifiers"))->isSaveNeeded();
+    const bool magnifierSettingsSaveNeeded = m_data->zoomMagnifierSettings()->findItem(QStringLiteral("MagnifierWidth"))->isSaveNeeded()
+        || m_data->zoomMagnifierSettings()->findItem(QStringLiteral("MagnifierHeight"))->isSaveNeeded();
 
     KQuickManagedConfigModule::save();
 
@@ -335,6 +446,46 @@ void KAccessConfig::save()
         reloadMessage.setArguments({QStringLiteral("invert")});
         QDBusConnection::sessionBus().call(reloadMessage);
     }
+
+    if (zoomMagnifierSaveNeeded) {
+        // Unload both effects
+        QDBusMessage reloadMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
+                                                                    QStringLiteral("/Effects"),
+                                                                    QStringLiteral("org.kde.kwin.Effects"),
+                                                                    QStringLiteral("unloadEffect"));
+        reloadMessage.setArguments({QStringLiteral("zoom")});
+        QDBusConnection::sessionBus().call(reloadMessage);
+        reloadMessage.setArguments({QStringLiteral("magnifier")});
+        QDBusConnection::sessionBus().call(reloadMessage);
+
+        if (zoomMagnifierSettings()->zoom() || zoomMagnifierSettings()->magnifier()) {
+            // Load the specified effect
+            QDBusMessage reloadMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
+                                                                        QStringLiteral("/Effects"),
+                                                                        QStringLiteral("org.kde.kwin.Effects"),
+                                                                        QStringLiteral("loadEffect"));
+            reloadMessage.setArguments({zoomMagnifierSettings()->zoom() ? QStringLiteral("zoom") : QStringLiteral("magnifier")});
+            QDBusConnection::sessionBus().call(reloadMessage);
+        }
+    }
+
+    if (zoomSettingsSaveNeeded) {
+        QDBusMessage reconfigureMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
+                                                                         QStringLiteral("/Effects"),
+                                                                         QStringLiteral("org.kde.kwin.Effects"),
+                                                                         QStringLiteral("reconfigureEffect"));
+        reconfigureMessage.setArguments({QStringLiteral("zoom")});
+        QDBusConnection::sessionBus().call(reconfigureMessage);
+    }
+
+    if (magnifierSettingsSaveNeeded) {
+        QDBusMessage reconfigureMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
+                                                                         QStringLiteral("/Effects"),
+                                                                         QStringLiteral("org.kde.kwin.Effects"),
+                                                                         QStringLiteral("reconfigureEffect"));
+        reconfigureMessage.setArguments({QStringLiteral("magnifier")});
+        QDBusConnection::sessionBus().call(reconfigureMessage);
+    }
 }
 
 QString KAccessConfig::orcaLaunchFeedback() const
@@ -355,6 +506,11 @@ bool KAccessConfig::orcaInstalled()
     int tryOrcaRun = QProcess::execute(QStringLiteral("orca"), {QStringLiteral("--version")});
     // If the process cannot be started, -2 is returned.
     return tryOrcaRun != -2;
+}
+
+bool KAccessConfig::isPlatformX11() const
+{
+    return QX11Info::isPlatformX11();
 }
 
 MouseSettings *KAccessConfig::mouseSettings() const
@@ -402,6 +558,11 @@ InvertSettings *KAccessConfig::invertSettings() const
     return m_data->invertSettings();
 }
 
+ZoomMagnifierSettings *KAccessConfig::zoomMagnifierSettings() const
+{
+    return m_data->zoomMagnifierSettings();
+}
+
 bool KAccessConfig::bellIsDefaults() const
 {
     return bellSettings()->isDefaults();
@@ -445,6 +606,11 @@ bool KAccessConfig::colorblindnessCorrectionIsDefaults() const
 bool KAccessConfig::invertIsDefaults() const
 {
     return invertSettings()->isDefaults();
+}
+
+bool KAccessConfig::zoomMagnifierIsDefaults() const
+{
+    return zoomMagnifierSettings()->isDefaults();
 }
 
 #include "kcmaccess.moc"
