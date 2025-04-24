@@ -18,13 +18,14 @@ kconfig_add_kcfg_files(kaccess_settings
     kcmaccessibilityshakecursor.kcfgc
     kcmaccessibilitycolorblindnesscorrection.kcfgc
     kcmaccessibilityinvert.kcfgc
+    kcmaccessibilityzoommagnifier.kcfgc
     GENERATE_MOC)
 
 kcmutils_generate_module_data(kcm_access
     MODULE_DATA_HEADER kcmaccessibilitydata.h
     MODULE_DATA_CLASS_NAME AccessibilityData
-    SETTINGS_HEADERS kcmaccessibilitybell.h kcmaccessibilitykeyboard.h kcmaccessibilitykeyboardfilters.h kcmaccessibilitymouse.h kcmaccessibilityactivationgestures.h kcmaccessibilityscreenreader.h kcmaccessibilityshakecursor.h kcmaccessibilitycolorblindnesscorrection.h kcmaccessibilityinvert.h
-    SETTINGS_CLASSES BellSettings KeyboardSettings KeyboardFiltersSettings MouseSettings ActivationGesturesSettings ScreenReaderSettings ShakeCursorSettings ColorblindnessCorrectionSettings InvertSettings
+    SETTINGS_HEADERS kcmaccessibilitybell.h kcmaccessibilitykeyboard.h kcmaccessibilitykeyboardfilters.h kcmaccessibilitymouse.h kcmaccessibilityactivationgestures.h kcmaccessibilityscreenreader.h kcmaccessibilityshakecursor.h kcmaccessibilitycolorblindnesscorrection.h kcmaccessibilityinvert.h kcmaccessibilityzoommagnifier.h
+    SETTINGS_CLASSES BellSettings KeyboardSettings KeyboardFiltersSettings MouseSettings ActivationGesturesSettings ScreenReaderSettings ShakeCursorSettings ColorblindnessCorrectionSettings InvertSettings ZoomMagnifierSettings
 )
 
 target_link_libraries(kcm_access PRIVATE
@@ -54,6 +55,7 @@ install(
         kcmaccessibilityshakecursor.kcfg
         kcmaccessibilitycolorblindnesscorrection.kcfg
         kcmaccessibilityinvert.kcfg
+        kcmaccessibilityzoommagnifier.kcfg
     DESTINATION
         ${KDE_INSTALL_KCFGDIR}
 )

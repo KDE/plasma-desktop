@@ -24,6 +24,11 @@ KCMUtils.AbstractKCM {
 
     property var elements: [
         {
+            icon: "zoom-in",
+            title: i18nc("@title Category name in sidebar", "Zoom & Magnifier"),
+            defaultnessKey: "zoomMagnifierIsDefaults"
+        },
+        {
             icon: "notifications",
             title: i18nc("@title Category name in sidebar", "System Bell"),
             defaultnessKey: "bellIsDefaults"
@@ -159,6 +164,7 @@ KCMUtils.AbstractKCM {
                     height: contentScroll.height
                     currentIndex: listView.currentIndex
 
+                    ZoomMagnifier {}
                     Bell {}
                     ModifierKeys {}
                     KeyboardFilters {}
