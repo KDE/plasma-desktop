@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name="kwinrc"/>
+  <group name="Plugins">
+    <entry name="Zoom" key="zoomEnabled" type="Bool">
+      <label>Whether the Zoom effect is enabled</label>
+      <default>true</default>
+    </entry>
+    <entry name="Magnifier" key="magnifierEnabled" type="Bool">
+      <label>Whether the Magnifier effect is enabled</label>
+      <default>false</default>
+    </entry>
+  </group>
+  <group name="Effect-zoom">
+    <entry name="ZoomZoomFactor" key="ZoomFactor" type="Double">
+      <default>1.2</default>
+    </entry>
+    <entry name="ZoomMousePointer" key="MousePointer" type="UInt">
+      <default>0</default>
+    </entry>
+    <entry name="ZoomMouseTracking" key="MouseTracking" type="UInt">
+      <default>0</default>
+    </entry>
+    <entry name="ZoomEnableFocusTracking" key="EnableFocusTracking" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="ZoomEnableTextCaretTracking" key="EnableTextCaretTracking" type="Bool">
+      <default>false</default>
+    </entry>
+    <entry name="ZoomPixelGridZoom" key="PixelGridZoom" type="Double">
+      <default>15.0</default>
+    </entry>
+    <entry name="ZoomPointerAxisGestureModifiers" key="PointerAxisGestureModifiers" type="String">
+      <default>Meta+Control</default>
+    </entry>
+  </group>
+  <group name="Effect-magnifier">
+    <entry name="MagnifierWidth" key="Width" type="UInt">
+      <default>200</default>
+    </entry>
+    <entry name="MagnifierHeight" key="Height" type="UInt">
+      <default>200</default>
+    </entry>
+  </group>
+</kcfg>
