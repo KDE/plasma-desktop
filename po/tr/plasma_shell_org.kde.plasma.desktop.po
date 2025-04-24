@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-21 00:42+0000\n"
+"POT-Creation-Date: 2025-04-24 00:43+0000\n"
 "PO-Revision-Date: 2025-03-08 14:28+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -93,7 +93,7 @@ msgid "Open %1"
 msgstr "Aç: %1"
 
 #: contents/configuration/AboutPlugin.qml:21
-#: contents/configuration/AppletConfiguration.qml:338
+#: contents/configuration/AppletConfiguration.qml:324
 #, kde-format
 msgid "About"
 msgstr "Hakkında"
@@ -150,12 +150,12 @@ msgstr "Hata Bildir…"
 msgid "Keyboard Shortcuts"
 msgstr "Klavye Kısayolları"
 
-#: contents/configuration/AppletConfiguration.qml:386
+#: contents/configuration/AppletConfiguration.qml:372
 #, kde-format
 msgid "Apply Settings"
 msgstr "Ayarları Uygula"
 
-#: contents/configuration/AppletConfiguration.qml:387
+#: contents/configuration/AppletConfiguration.qml:373
 #, kde-format
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
@@ -163,17 +163,17 @@ msgstr ""
 "Geçerli sayfada kaydedilmemiş değişiklikler var. Değişiklikler uygulansın mı "
 "yoksa atılsın mı?"
 
-#: contents/configuration/AppletConfiguration.qml:418
+#: contents/configuration/AppletConfiguration.qml:404
 #, kde-format
 msgid "OK"
 msgstr "Tamam"
 
-#: contents/configuration/AppletConfiguration.qml:425
+#: contents/configuration/AppletConfiguration.qml:411
 #, kde-format
 msgid "Apply"
 msgstr "Uygula"
 
-#: contents/configuration/AppletConfiguration.qml:431
+#: contents/configuration/AppletConfiguration.qml:417
 #, kde-format
 msgid "Cancel"
 msgstr "İptal"
@@ -183,99 +183,99 @@ msgstr "İptal"
 msgid "Open configuration page"
 msgstr "Yapılandırma sayfasını aç"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:25
+#: contents/configuration/ConfigurationContainmentActions.qml:20
 #, kde-format
 msgid "Left-Button"
 msgstr "Sol Düğme"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:26
+#: contents/configuration/ConfigurationContainmentActions.qml:21
 #, kde-format
 msgid "Right-Button"
 msgstr "Sağ Düğme"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:27
+#: contents/configuration/ConfigurationContainmentActions.qml:22
 #, kde-format
 msgid "Middle-Button"
 msgstr "Orta Düğme"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:28
+#: contents/configuration/ConfigurationContainmentActions.qml:23
 #, kde-format
 msgid "Back-Button"
 msgstr "Geri Düğmesi"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:29
+#: contents/configuration/ConfigurationContainmentActions.qml:24
 #, kde-format
 msgid "Forward-Button"
 msgstr "İleri Düğmesi"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:31
+#: contents/configuration/ConfigurationContainmentActions.qml:26
 #, kde-format
 msgid "Vertical-Scroll"
 msgstr "Dikey Sarma"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:32
+#: contents/configuration/ConfigurationContainmentActions.qml:27
 #, kde-format
 msgid "Horizontal-Scroll"
 msgstr "Yatay Sarma"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:34
+#: contents/configuration/ConfigurationContainmentActions.qml:29
 #, kde-format
 msgid "Shift"
 msgstr "Üst Karakter"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:35
+#: contents/configuration/ConfigurationContainmentActions.qml:30
 #, kde-format
 msgid "Ctrl"
 msgstr "Kontrol"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:36
+#: contents/configuration/ConfigurationContainmentActions.qml:31
 #, kde-format
 msgid "Alt"
 msgstr "Seçenek"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:37
+#: contents/configuration/ConfigurationContainmentActions.qml:32
 #, kde-format
 msgid "Meta"
 msgstr "Meta"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:78
+#: contents/configuration/ConfigurationContainmentActions.qml:73
 #, kde-format
 msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
 msgid "+"
 msgstr "+"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:147
+#: contents/configuration/ConfigurationContainmentActions.qml:142
 #: contents/configuration/MouseEventInputButton.qml:13
 #, kde-format
 msgid "Add Action"
 msgstr "Eylem Ekle"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:54
+#: contents/configuration/ConfigurationContainmentAppearance.qml:53
 #, kde-format
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "Yerleşim değişiklikleri sistem yöneticisi tarafından kısıtlanmış"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:69
+#: contents/configuration/ConfigurationContainmentAppearance.qml:68
 #, kde-format
 msgid "Layout:"
 msgstr "Yerleşim:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:84
+#: contents/configuration/ConfigurationContainmentAppearance.qml:83
 #, kde-format
 msgid "Wallpaper type:"
 msgstr "Duvar kağıdı türü:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:110
+#: contents/configuration/ConfigurationContainmentAppearance.qml:109
 #, kde-format
 msgid "Get New Plugins…"
 msgstr "Yeni Eklentiler Al…"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:198
+#: contents/configuration/ConfigurationContainmentAppearance.qml:197
 #, kde-format
 msgid "Layout changes must be applied before other changes can be made"
 msgstr "Yerleşim değişiklikleri, diğer değişiklikler yapılmadan uygulanmalıdır"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:202
+#: contents/configuration/ConfigurationContainmentAppearance.qml:201
 #, kde-format
 msgid "Apply Now"
 msgstr "Şimdi Uygula"
@@ -295,7 +295,7 @@ msgstr "Aşağıdaki kısayolu kullanarak uygulamacığı etkinleştirebilirsini
 msgid "Wallpaper"
 msgstr "Duvar Kağıdı"
 
-#: contents/configuration/ContainmentConfiguration.qml:33
+#: contents/configuration/ContainmentConfiguration.qml:32
 #, kde-format
 msgid "Mouse Actions"
 msgstr "Fare Eylemleri"

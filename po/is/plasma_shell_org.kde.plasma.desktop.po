@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-21 00:42+0000\n"
+"POT-Creation-Date: 2025-04-24 00:43+0000\n"
 "PO-Revision-Date: 2025-04-17 15:45+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -91,7 +91,7 @@ msgid "Open %1"
 msgstr "Opna %1"
 
 #: contents/configuration/AboutPlugin.qml:21
-#: contents/configuration/AppletConfiguration.qml:338
+#: contents/configuration/AppletConfiguration.qml:324
 #, kde-format
 msgid "About"
 msgstr "Um hugbúnaðinn"
@@ -148,12 +148,12 @@ msgstr "Senda villutilkynningu…"
 msgid "Keyboard Shortcuts"
 msgstr "Flýtilyklar"
 
-#: contents/configuration/AppletConfiguration.qml:386
+#: contents/configuration/AppletConfiguration.qml:372
 #, kde-format
 msgid "Apply Settings"
 msgstr "Virkja stillingar"
 
-#: contents/configuration/AppletConfiguration.qml:387
+#: contents/configuration/AppletConfiguration.qml:373
 #, kde-format
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
@@ -161,17 +161,17 @@ msgstr ""
 "Breytingar á þessari síðu hafa ekki verið vistaðar. Virkja breytingarnar eða "
 "henda þeim?"
 
-#: contents/configuration/AppletConfiguration.qml:418
+#: contents/configuration/AppletConfiguration.qml:404
 #, kde-format
 msgid "OK"
 msgstr "Í lagi"
 
-#: contents/configuration/AppletConfiguration.qml:425
+#: contents/configuration/AppletConfiguration.qml:411
 #, kde-format
 msgid "Apply"
 msgstr "Virkja"
 
-#: contents/configuration/AppletConfiguration.qml:431
+#: contents/configuration/AppletConfiguration.qml:417
 #, kde-format
 msgid "Cancel"
 msgstr "Hætta við"
@@ -181,100 +181,100 @@ msgstr "Hætta við"
 msgid "Open configuration page"
 msgstr "Opna grunnstillingasíðu"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:25
+#: contents/configuration/ConfigurationContainmentActions.qml:20
 #, kde-format
 msgid "Left-Button"
 msgstr "Vinstri hnappur"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:26
+#: contents/configuration/ConfigurationContainmentActions.qml:21
 #, kde-format
 msgid "Right-Button"
 msgstr "Hægri hnappur"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:27
+#: contents/configuration/ConfigurationContainmentActions.qml:22
 #, kde-format
 msgid "Middle-Button"
 msgstr "Miðjuhnappur"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:28
+#: contents/configuration/ConfigurationContainmentActions.qml:23
 #, kde-format
 msgid "Back-Button"
 msgstr "Bakhnappur"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:29
+#: contents/configuration/ConfigurationContainmentActions.qml:24
 #, kde-format
 msgid "Forward-Button"
 msgstr "Áfram-hnappur"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:31
+#: contents/configuration/ConfigurationContainmentActions.qml:26
 #, kde-format
 msgid "Vertical-Scroll"
 msgstr "Lóðrétt skrun"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:32
+#: contents/configuration/ConfigurationContainmentActions.qml:27
 #, kde-format
 msgid "Horizontal-Scroll"
 msgstr "Lárétt skrun"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:34
+#: contents/configuration/ConfigurationContainmentActions.qml:29
 #, kde-format
 msgid "Shift"
 msgstr "Shift"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:35
+#: contents/configuration/ConfigurationContainmentActions.qml:30
 #, kde-format
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:36
+#: contents/configuration/ConfigurationContainmentActions.qml:31
 #, kde-format
 msgid "Alt"
 msgstr "Alt"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:37
+#: contents/configuration/ConfigurationContainmentActions.qml:32
 #, kde-format
 msgid "Meta"
 msgstr "Meta"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:78
+#: contents/configuration/ConfigurationContainmentActions.qml:73
 #, kde-format
 msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
 msgid "+"
 msgstr "+"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:147
+#: contents/configuration/ConfigurationContainmentActions.qml:142
 #: contents/configuration/MouseEventInputButton.qml:13
 #, kde-format
 msgid "Add Action"
 msgstr "Bæta við aðgerð"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:54
+#: contents/configuration/ConfigurationContainmentAppearance.qml:53
 #, kde-format
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "Kerfisstjórinn hefur takmarkað breytingar á útliti"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:69
+#: contents/configuration/ConfigurationContainmentAppearance.qml:68
 #, kde-format
 msgid "Layout:"
 msgstr "Útlit:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:84
+#: contents/configuration/ConfigurationContainmentAppearance.qml:83
 #, kde-format
 msgid "Wallpaper type:"
 msgstr "Gerð veggfóðurs:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:110
+#: contents/configuration/ConfigurationContainmentAppearance.qml:109
 #, kde-format
 msgid "Get New Plugins…"
 msgstr "Sækja nýjar viðbætur…"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:198
+#: contents/configuration/ConfigurationContainmentAppearance.qml:197
 #, kde-format
 msgid "Layout changes must be applied before other changes can be made"
 msgstr ""
 "Breytingar á útliti verður að virkja áður en hægt er að gera aðrar breytingar"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:202
+#: contents/configuration/ConfigurationContainmentAppearance.qml:201
 #, kde-format
 msgid "Apply Now"
 msgstr "Virkja núna"
@@ -294,7 +294,7 @@ msgstr "Þessi flýtilykill virkjar smáforritið eins og smellt hafi verið á 
 msgid "Wallpaper"
 msgstr "Veggfóður"
 
-#: contents/configuration/ContainmentConfiguration.qml:33
+#: contents/configuration/ContainmentConfiguration.qml:32
 #, kde-format
 msgid "Mouse Actions"
 msgstr "Músaraðgerðir"

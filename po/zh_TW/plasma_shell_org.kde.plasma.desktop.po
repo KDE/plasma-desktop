@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-21 00:42+0000\n"
+"POT-Creation-Date: 2025-04-24 00:43+0000\n"
 "PO-Revision-Date: 2025-03-10 20:23+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -94,7 +94,7 @@ msgid "Open %1"
 msgstr "開啟 %1"
 
 #: contents/configuration/AboutPlugin.qml:21
-#: contents/configuration/AppletConfiguration.qml:338
+#: contents/configuration/AppletConfiguration.qml:324
 #, kde-format
 msgid "About"
 msgstr "關於"
@@ -151,28 +151,28 @@ msgstr "回報問題…"
 msgid "Keyboard Shortcuts"
 msgstr "鍵盤快捷鍵"
 
-#: contents/configuration/AppletConfiguration.qml:386
+#: contents/configuration/AppletConfiguration.qml:372
 #, kde-format
 msgid "Apply Settings"
 msgstr "套用設定"
 
-#: contents/configuration/AppletConfiguration.qml:387
+#: contents/configuration/AppletConfiguration.qml:373
 #, kde-format
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
 msgstr "目前頁面有尚未儲存的變更。您要套用還是要捨棄這些變更？"
 
-#: contents/configuration/AppletConfiguration.qml:418
+#: contents/configuration/AppletConfiguration.qml:404
 #, kde-format
 msgid "OK"
 msgstr "確定"
 
-#: contents/configuration/AppletConfiguration.qml:425
+#: contents/configuration/AppletConfiguration.qml:411
 #, kde-format
 msgid "Apply"
 msgstr "套用"
 
-#: contents/configuration/AppletConfiguration.qml:431
+#: contents/configuration/AppletConfiguration.qml:417
 #, kde-format
 msgid "Cancel"
 msgstr "取消"
@@ -182,99 +182,99 @@ msgstr "取消"
 msgid "Open configuration page"
 msgstr "開啟設定頁面"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:25
+#: contents/configuration/ConfigurationContainmentActions.qml:20
 #, kde-format
 msgid "Left-Button"
 msgstr "滑鼠左鍵"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:26
+#: contents/configuration/ConfigurationContainmentActions.qml:21
 #, kde-format
 msgid "Right-Button"
 msgstr "滑鼠右鍵"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:27
+#: contents/configuration/ConfigurationContainmentActions.qml:22
 #, kde-format
 msgid "Middle-Button"
 msgstr "滑鼠中鍵"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:28
+#: contents/configuration/ConfigurationContainmentActions.qml:23
 #, kde-format
 msgid "Back-Button"
 msgstr "向後鍵"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:29
+#: contents/configuration/ConfigurationContainmentActions.qml:24
 #, kde-format
 msgid "Forward-Button"
 msgstr "向前鈕"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:31
+#: contents/configuration/ConfigurationContainmentActions.qml:26
 #, kde-format
 msgid "Vertical-Scroll"
 msgstr "垂直捲軸"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:32
+#: contents/configuration/ConfigurationContainmentActions.qml:27
 #, kde-format
 msgid "Horizontal-Scroll"
 msgstr "水平捲軸"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:34
+#: contents/configuration/ConfigurationContainmentActions.qml:29
 #, kde-format
 msgid "Shift"
 msgstr "Shift"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:35
+#: contents/configuration/ConfigurationContainmentActions.qml:30
 #, kde-format
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:36
+#: contents/configuration/ConfigurationContainmentActions.qml:31
 #, kde-format
 msgid "Alt"
 msgstr "Alt"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:37
+#: contents/configuration/ConfigurationContainmentActions.qml:32
 #, kde-format
 msgid "Meta"
 msgstr "Meta"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:78
+#: contents/configuration/ConfigurationContainmentActions.qml:73
 #, kde-format
 msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
 msgid "+"
 msgstr "+"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:147
+#: contents/configuration/ConfigurationContainmentActions.qml:142
 #: contents/configuration/MouseEventInputButton.qml:13
 #, kde-format
 msgid "Add Action"
 msgstr "新增動作"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:54
+#: contents/configuration/ConfigurationContainmentAppearance.qml:53
 #, kde-format
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "佈局變更已被系統管理員限制"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:69
+#: contents/configuration/ConfigurationContainmentAppearance.qml:68
 #, kde-format
 msgid "Layout:"
 msgstr "佈局："
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:84
+#: contents/configuration/ConfigurationContainmentAppearance.qml:83
 #, kde-format
 msgid "Wallpaper type:"
 msgstr "桌布類型："
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:110
+#: contents/configuration/ConfigurationContainmentAppearance.qml:109
 #, kde-format
 msgid "Get New Plugins…"
 msgstr "取得新的外掛程式…"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:198
+#: contents/configuration/ConfigurationContainmentAppearance.qml:197
 #, kde-format
 msgid "Layout changes must be applied before other changes can be made"
 msgstr "佈局的變動必須在其他變動做出前套用"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:202
+#: contents/configuration/ConfigurationContainmentAppearance.qml:201
 #, kde-format
 msgid "Apply Now"
 msgstr "立刻套用"
@@ -294,7 +294,7 @@ msgstr "此快捷鍵將會如按下般啟用此元件。"
 msgid "Wallpaper"
 msgstr "桌布"
 
-#: contents/configuration/ContainmentConfiguration.qml:33
+#: contents/configuration/ContainmentConfiguration.qml:32
 #, kde-format
 msgid "Mouse Actions"
 msgstr "滑鼠動作"

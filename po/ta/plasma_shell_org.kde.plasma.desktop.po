@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-21 00:42+0000\n"
+"POT-Creation-Date: 2025-04-24 00:43+0000\n"
 "PO-Revision-Date: 2025-02-16 17:01+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -91,7 +91,7 @@ msgid "Open %1"
 msgstr "%1-ஐ திற"
 
 #: contents/configuration/AboutPlugin.qml:21
-#: contents/configuration/AppletConfiguration.qml:338
+#: contents/configuration/AppletConfiguration.qml:324
 #, kde-format
 msgid "About"
 msgstr "பற்றி"
@@ -148,12 +148,12 @@ msgstr "பிழையை தெரிவி…"
 msgid "Keyboard Shortcuts"
 msgstr "விசைப்பலகை சுருக்குவழிகள்"
 
-#: contents/configuration/AppletConfiguration.qml:386
+#: contents/configuration/AppletConfiguration.qml:372
 #, kde-format
 msgid "Apply Settings"
 msgstr "அமைப்புகளை செயல்படுத்து"
 
-#: contents/configuration/AppletConfiguration.qml:387
+#: contents/configuration/AppletConfiguration.qml:373
 #, kde-format
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
@@ -161,17 +161,17 @@ msgstr ""
 "தற்போதைய பக்கத்தின் அமைப்புகள் மாறியுள்ளன. அவற்றை செயல்படுத்த வேண்டுமா, அல்லது கைவிட "
 "வேண்டுமா?"
 
-#: contents/configuration/AppletConfiguration.qml:418
+#: contents/configuration/AppletConfiguration.qml:404
 #, kde-format
 msgid "OK"
 msgstr "சரி"
 
-#: contents/configuration/AppletConfiguration.qml:425
+#: contents/configuration/AppletConfiguration.qml:411
 #, kde-format
 msgid "Apply"
 msgstr "செயல்படுத்து"
 
-#: contents/configuration/AppletConfiguration.qml:431
+#: contents/configuration/AppletConfiguration.qml:417
 #, kde-format
 msgid "Cancel"
 msgstr "ரத்து செய்"
@@ -181,99 +181,99 @@ msgstr "ரத்து செய்"
 msgid "Open configuration page"
 msgstr "விருப்பத்தேர்வு பக்கத்தை திற"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:25
+#: contents/configuration/ConfigurationContainmentActions.qml:20
 #, kde-format
 msgid "Left-Button"
 msgstr "இடது பட்டன்"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:26
+#: contents/configuration/ConfigurationContainmentActions.qml:21
 #, kde-format
 msgid "Right-Button"
 msgstr "வலது பட்டன்"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:27
+#: contents/configuration/ConfigurationContainmentActions.qml:22
 #, kde-format
 msgid "Middle-Button"
 msgstr "நடு பட்டன்"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:28
+#: contents/configuration/ConfigurationContainmentActions.qml:23
 #, kde-format
 msgid "Back-Button"
 msgstr "பின் பட்டன்"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:29
+#: contents/configuration/ConfigurationContainmentActions.qml:24
 #, kde-format
 msgid "Forward-Button"
 msgstr "முன் பட்டன்"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:31
+#: contents/configuration/ConfigurationContainmentActions.qml:26
 #, kde-format
 msgid "Vertical-Scroll"
 msgstr "செங்குத்து உருளல்"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:32
+#: contents/configuration/ConfigurationContainmentActions.qml:27
 #, kde-format
 msgid "Horizontal-Scroll"
 msgstr "கிடைமட்ட உருளல்"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:34
+#: contents/configuration/ConfigurationContainmentActions.qml:29
 #, kde-format
 msgid "Shift"
 msgstr "Shift"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:35
+#: contents/configuration/ConfigurationContainmentActions.qml:30
 #, kde-format
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:36
+#: contents/configuration/ConfigurationContainmentActions.qml:31
 #, kde-format
 msgid "Alt"
 msgstr "Alt"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:37
+#: contents/configuration/ConfigurationContainmentActions.qml:32
 #, kde-format
 msgid "Meta"
 msgstr "Meta"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:78
+#: contents/configuration/ConfigurationContainmentActions.qml:73
 #, kde-format
 msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
 msgid "+"
 msgstr "+"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:147
+#: contents/configuration/ConfigurationContainmentActions.qml:142
 #: contents/configuration/MouseEventInputButton.qml:13
 #, kde-format
 msgid "Add Action"
 msgstr "செயலை சேர்"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:54
+#: contents/configuration/ConfigurationContainmentAppearance.qml:53
 #, kde-format
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "தளவமைப்பு மாற்றங்களை கணினி நிர்வாகி தடைசெய்துள்ளார்"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:69
+#: contents/configuration/ConfigurationContainmentAppearance.qml:68
 #, kde-format
 msgid "Layout:"
 msgstr "தளவமைப்பு:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:84
+#: contents/configuration/ConfigurationContainmentAppearance.qml:83
 #, kde-format
 msgid "Wallpaper type:"
 msgstr "பின்புல படத்தின் வகை:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:110
+#: contents/configuration/ConfigurationContainmentAppearance.qml:109
 #, kde-format
 msgid "Get New Plugins…"
 msgstr "புதிய செருகுநிரல்களை பதிவிறக்கு…"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:198
+#: contents/configuration/ConfigurationContainmentAppearance.qml:197
 #, kde-format
 msgid "Layout changes must be applied before other changes can be made"
 msgstr "தளவமைப்பை மாற்றியதை செயல்படுத்திய பின்னரே மற்ற மாற்றங்களை நீங்கள் செய்யலாம்"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:202
+#: contents/configuration/ConfigurationContainmentAppearance.qml:201
 #, kde-format
 msgid "Apply Now"
 msgstr "இப்போது செயல்படுத்து"
@@ -293,7 +293,7 @@ msgstr "நீங்கள் பிளாஸ்மாய்டை க்ளி�
 msgid "Wallpaper"
 msgstr "பின்புல படம்"
 
-#: contents/configuration/ContainmentConfiguration.qml:33
+#: contents/configuration/ContainmentConfiguration.qml:32
 #, kde-format
 msgid "Mouse Actions"
 msgstr "சுட்டி செயல்கள்"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-09 00:43+0000\n"
+"POT-Creation-Date: 2025-04-24 00:43+0000\n"
 "PO-Revision-Date: 2022-11-14 01:35+0100\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -66,36 +66,19 @@ msgid ""
 "like volume and brightness level, or audio device switching."
 msgstr ""
 
-#: ui/main.qml:92
-#, kde-format
-msgid "Animation speed:"
-msgstr "Animatsiooni kiirus:"
-
-#: ui/main.qml:118
-#, kde-format
-msgctxt "Animation speed"
-msgid "Slow"
-msgstr "Aeglane"
-
-#: ui/main.qml:125
-#, kde-format
-msgctxt "Animation speed"
-msgid "Instant"
-msgstr "Silmapilkne"
-
-#: ui/main.qml:136
+#: ui/main.qml:89
 #, kde-format
 msgctxt "@label"
 msgid "Scrolling:"
 msgstr ""
 
-#: ui/main.qml:140
+#: ui/main.qml:93
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
 msgstr ""
 
-#: ui/main.qml:150
+#: ui/main.qml:103
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -105,41 +88,41 @@ msgid ""
 "setting for enabling and disabling it."
 msgstr ""
 
-#: ui/main.qml:163
+#: ui/main.qml:116
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Ühekordne klõps failil või kataloogil:"
 
-#: ui/main.qml:170
+#: ui/main.qml:123
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Valib selle"
 
-#: ui/main.qml:189
+#: ui/main.qml:142
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Avamiseks tuleb teha topeltklõps"
 
-#: ui/main.qml:202
+#: ui/main.qml:155
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Avab selle"
 
-#: ui/main.qml:220
+#: ui/main.qml:173
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "Valimine klõpsuga elemendi valikumärgisele"
 
-#: ui/main.qml:236
+#: ui/main.qml:189
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr "Klõps kerimisribal:"
 
-#: ui/main.qml:237
+#: ui/main.qml:190
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
@@ -147,7 +130,7 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "Kerib klõpsatud asukohta"
 
-#: ui/main.qml:255
+#: ui/main.qml:208
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -155,12 +138,12 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "Kerib ühe lehe võrra üles või alla"
 
-#: ui/main.qml:273
+#: ui/main.qml:226
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
 msgstr "Keskklõps kerib klõpsatud asukohta"
 
-#: ui/main.qml:287
+#: ui/main.qml:240
 #, fuzzy, kde-format
 #| msgid "Middle Click:"
 msgctxt ""
@@ -169,7 +152,7 @@ msgctxt ""
 msgid "Middle-click:"
 msgstr "Keskklõps:"
 
-#: ui/main.qml:289
+#: ui/main.qml:242
 #, fuzzy, kde-format
 #| msgid "Paste selected text"
 msgctxt ""
@@ -178,24 +161,24 @@ msgctxt ""
 msgid "Pastes selected text"
 msgstr "Asetab valitud teksti"
 
-#: ui/main.qml:306
+#: ui/main.qml:259
 #, kde-format
 msgid "Touch Mode:"
 msgstr "Puuterežiim:"
 
-#: ui/main.qml:308
+#: ui/main.qml:261
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Lülitatakse automaatselt"
 
-#: ui/main.qml:308 ui/main.qml:353
+#: ui/main.qml:261 ui/main.qml:306
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Püsivalt välja lülitatud"
 
-#: ui/main.qml:325
+#: ui/main.qml:278
 #, kde-format
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
@@ -206,13 +189,13 @@ msgstr ""
 "tuvastatakse hiire ja puutepadja puudumine, näiteks hübriidarvuti "
 "klaviatuuri ümberpööramisel või eemaldamisel."
 
-#: ui/main.qml:330
+#: ui/main.qml:283
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Püsivalt sisse lülitatud"
 
-#: ui/main.qml:376
+#: ui/main.qml:329
 #, kde-format
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
@@ -221,13 +204,13 @@ msgstr ""
 "Puuterežiimis kuvatakse paljusid kasutajaliidese elemente suurematena, et "
 "neile oleks hõlpsam sõrmega pihta saada."
 
-#: ui/main.qml:394
+#: ui/main.qml:347
 #, fuzzy, kde-format
 #| msgid "Open by double-clicking instead"
 msgid "Double-click interval:"
 msgstr "Avamiseks tuleb teha topeltklõps"
 
-#: ui/main.qml:409
+#: ui/main.qml:362
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "%1 ms"
@@ -235,20 +218,20 @@ msgid_plural "%1 ms"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ui/main.qml:413
+#: ui/main.qml:366
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgstr ""
 
-#: ui/main.qml:427
+#: ui/main.qml:380
 #, kde-format
 msgid ""
 "Two clicks within this duration are considered a double-click. Some "
 "applications may not honor this setting."
 msgstr ""
 
-#: ui/main.qml:438
+#: ui/main.qml:391
 #, kde-format
 msgctxt "Test double-click speed"
 msgid ""
@@ -262,26 +245,20 @@ msgstr ""
 msgid "Single click to open files"
 msgstr "Ühekordne klõps failide avamiseks"
 
-#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:13
-#, kde-format
-msgid "Animation speed"
-msgstr "Animatsiooni kiirus"
-
 #. i18n: ectx: label, entry (smoothScroll), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:17
+#: workspaceoptions_kdeglobalssettings.kcfg:13
 #, kde-format
 msgid "Smooth scrolling"
 msgstr ""
 
 #. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:21
+#: workspaceoptions_kdeglobalssettings.kcfg:17
 #, kde-format
 msgid "Left-click in scrollbar track moves scrollbar by one page"
 msgstr "Vasakklõps kerimisribal kerib ühe lehe võrra"
 
 #. i18n: ectx: label, entry (doubleClickInterval), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:25
+#: workspaceoptions_kdeglobalssettings.kcfg:21
 #, fuzzy, kde-format
 #| msgid "Open by double-clicking instead"
 msgid "Double click interval"
@@ -338,6 +315,20 @@ msgstr ""
 #, kde-format
 msgid "Show a popup on layout changes"
 msgstr ""
+
+#~ msgid "Animation speed:"
+#~ msgstr "Animatsiooni kiirus:"
+
+#~ msgctxt "Animation speed"
+#~ msgid "Slow"
+#~ msgstr "Aeglane"
+
+#~ msgctxt "Animation speed"
+#~ msgid "Instant"
+#~ msgstr "Silmapilkne"
+
+#~ msgid "Animation speed"
+#~ msgstr "Animatsiooni kiirus"
 
 #~ msgid "Visual behavior:"
 #~ msgstr "Visuaalne käitumine:"

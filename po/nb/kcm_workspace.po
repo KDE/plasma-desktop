@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-09 00:43+0000\n"
+"POT-Creation-Date: 2025-04-24 00:43+0000\n"
 "PO-Revision-Date: 2025-04-04 12:09+0200\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -74,36 +74,19 @@ msgstr ""
 "Tillater alle Plasma-skjermelementer å vise skjermmelding-sprettopp for "
 "endringer som lyd- og lysstyrke, eller ved bytting av lydenhet."
 
-#: ui/main.qml:92
-#, kde-format
-msgid "Animation speed:"
-msgstr "Animasjonshastighet:"
-
-#: ui/main.qml:118
-#, kde-format
-msgctxt "Animation speed"
-msgid "Slow"
-msgstr "Sakte"
-
-#: ui/main.qml:125
-#, kde-format
-msgctxt "Animation speed"
-msgid "Instant"
-msgstr "Med en gang"
-
-#: ui/main.qml:136
+#: ui/main.qml:89
 #, kde-format
 msgctxt "@label"
 msgid "Scrolling:"
 msgstr "Rulling:"
 
-#: ui/main.qml:140
+#: ui/main.qml:93
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
 msgstr "Foretrekk jevn rulling"
 
-#: ui/main.qml:150
+#: ui/main.qml:103
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -117,41 +100,41 @@ msgstr ""
 "fordi de ikke støtter jevn rulling eller fordi de har innstillinger selv for "
 "å slå av/på jevn rulling."
 
-#: ui/main.qml:163
+#: ui/main.qml:116
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Trykk på filer og mapper:"
 
-#: ui/main.qml:170
+#: ui/main.qml:123
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Merker dem"
 
-#: ui/main.qml:189
+#: ui/main.qml:142
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Åpne bare med dobbeltklikking"
 
-#: ui/main.qml:202
+#: ui/main.qml:155
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Åpner dem"
 
-#: ui/main.qml:220
+#: ui/main.qml:173
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "Merk element ved å trykke på markeringsikonet"
 
-#: ui/main.qml:236
+#: ui/main.qml:189
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr "Klikking i rullefelt:"
 
-#: ui/main.qml:237
+#: ui/main.qml:190
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
@@ -159,7 +142,7 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "Ruller til valgt plass"
 
-#: ui/main.qml:255
+#: ui/main.qml:208
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -167,12 +150,12 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "Ruller en side opp/ned"
 
-#: ui/main.qml:273
+#: ui/main.qml:226
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
 msgstr "Midtklikk for å rulle til valgt plass"
 
-#: ui/main.qml:287
+#: ui/main.qml:240
 #, kde-format
 msgctxt ""
 "@label for checkbox, part of a complete sentence: 'Middle-click pastes "
@@ -180,7 +163,7 @@ msgctxt ""
 msgid "Middle-click:"
 msgstr "Midtklikk:"
 
-#: ui/main.qml:289
+#: ui/main.qml:242
 #, kde-format
 msgctxt ""
 "@option:check part of a complete sentence: 'Middle click pastes selected "
@@ -188,24 +171,24 @@ msgctxt ""
 msgid "Pastes selected text"
 msgstr "Lim inn merket tekst"
 
-#: ui/main.qml:306
+#: ui/main.qml:259
 #, kde-format
 msgid "Touch Mode:"
 msgstr "Trykkskjerm-modus:"
 
-#: ui/main.qml:308
+#: ui/main.qml:261
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Ta automatisk i bruk ved behov"
 
-#: ui/main.qml:308 ui/main.qml:353
+#: ui/main.qml:261 ui/main.qml:306
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Alltid av"
 
-#: ui/main.qml:325
+#: ui/main.qml:278
 #, kde-format
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
@@ -216,13 +199,13 @@ msgstr ""
 "trykkskjerm, men ingen mus eller styreplate. Et eksempel er når et "
 "fleksibelt tastatur på en bærbar maskin snus rundt eller kobles fra."
 
-#: ui/main.qml:330
+#: ui/main.qml:283
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Alltid på"
 
-#: ui/main.qml:376
+#: ui/main.qml:329
 #, kde-format
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
@@ -231,12 +214,12 @@ msgstr ""
 "I trykkskjerm-modus blir mange av elementene i brukergrensesnittet større, "
 "slik at det blir lettere å trykke dem med fingeren."
 
-#: ui/main.qml:394
+#: ui/main.qml:347
 #, kde-format
 msgid "Double-click interval:"
 msgstr "Dobbeltklikkintervall:"
 
-#: ui/main.qml:409
+#: ui/main.qml:362
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "%1 ms"
@@ -244,13 +227,13 @@ msgid_plural "%1 ms"
 msgstr[0] "%1 ms"
 msgstr[1] "%1 ms"
 
-#: ui/main.qml:413
+#: ui/main.qml:366
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgstr "ms"
 
-#: ui/main.qml:427
+#: ui/main.qml:380
 #, kde-format
 msgid ""
 "Two clicks within this duration are considered a double-click. Some "
@@ -259,7 +242,7 @@ msgstr ""
 "To klikk innenfor dette tidsintervallet regnes som et dobbeltklikk. Men merk "
 "at ikke alle programmer tar hensyn til denne innstillingen."
 
-#: ui/main.qml:438
+#: ui/main.qml:391
 #, kde-format
 msgctxt "Test double-click speed"
 msgid ""
@@ -273,26 +256,20 @@ msgstr ""
 msgid "Single click to open files"
 msgstr "Enkeltklikk for å åpne filer"
 
-#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:13
-#, kde-format
-msgid "Animation speed"
-msgstr "Animasjonshastighet:"
-
 #. i18n: ectx: label, entry (smoothScroll), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:17
+#: workspaceoptions_kdeglobalssettings.kcfg:13
 #, kde-format
 msgid "Smooth scrolling"
 msgstr "Jevn rulling"
 
 #. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:21
+#: workspaceoptions_kdeglobalssettings.kcfg:17
 #, kde-format
 msgid "Left-click in scrollbar track moves scrollbar by one page"
 msgstr "Venstreklikk i rullelinje flytter rullelinja med én side"
 
 #. i18n: ectx: label, entry (doubleClickInterval), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:25
+#: workspaceoptions_kdeglobalssettings.kcfg:21
 #, kde-format
 msgid "Double click interval"
 msgstr "Dobbeltklikkintervall"
@@ -351,3 +328,17 @@ msgstr "Skjermmelding ved oppsettsendringer"
 #, kde-format
 msgid "Show a popup on layout changes"
 msgstr "Vis sprettopp ved endringer i oppsett"
+
+#~ msgid "Animation speed:"
+#~ msgstr "Animasjonshastighet:"
+
+#~ msgctxt "Animation speed"
+#~ msgid "Slow"
+#~ msgstr "Sakte"
+
+#~ msgctxt "Animation speed"
+#~ msgid "Instant"
+#~ msgstr "Med en gang"
+
+#~ msgid "Animation speed"
+#~ msgstr "Animasjonshastighet:"

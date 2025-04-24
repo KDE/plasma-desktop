@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-09 00:43+0000\n"
+"POT-Creation-Date: 2025-04-24 00:43+0000\n"
 "PO-Revision-Date: 2024-09-19 01:54+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -70,36 +70,19 @@ msgid ""
 "like volume and brightness level, or audio device switching."
 msgstr ""
 
-#: ui/main.qml:92
-#, kde-format
-msgid "Animation speed:"
-msgstr "Animacijos greitis:"
-
-#: ui/main.qml:118
-#, kde-format
-msgctxt "Animation speed"
-msgid "Slow"
-msgstr "Lėtai"
-
-#: ui/main.qml:125
-#, kde-format
-msgctxt "Animation speed"
-msgid "Instant"
-msgstr "Greitai"
-
-#: ui/main.qml:136
+#: ui/main.qml:89
 #, kde-format
 msgctxt "@label"
 msgid "Scrolling:"
 msgstr "Slinkimas:"
 
-#: ui/main.qml:140
+#: ui/main.qml:93
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
 msgstr "Teikti pirmenybę glotniam slinkimui"
 
-#: ui/main.qml:150
+#: ui/main.qml:103
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -113,41 +96,41 @@ msgstr ""
 "nepalaiko glotnaus slinkimo, arba turi savo atskirą nuostatą įjungti ir "
 "išjungti glotnų slinkimą."
 
-#: ui/main.qml:163
+#: ui/main.qml:116
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Spustelėjimas ant failų ar aplankų:"
 
-#: ui/main.qml:170
+#: ui/main.qml:123
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Juos pažymi"
 
-#: ui/main.qml:189
+#: ui/main.qml:142
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Vietoj to, atverti naudojant dvikartį spustelėjimą"
 
-#: ui/main.qml:202
+#: ui/main.qml:155
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Juos atveria"
 
-#: ui/main.qml:220
+#: ui/main.qml:173
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "Žymėti, spustelėjant ant elemento žymėjimo žymeklio"
 
-#: ui/main.qml:236
+#: ui/main.qml:189
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr "Spustelėjimas slankjuostės takelyje:"
 
-#: ui/main.qml:237
+#: ui/main.qml:190
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
@@ -155,7 +138,7 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "Slenka į spustelėtą vietą"
 
-#: ui/main.qml:255
+#: ui/main.qml:208
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -163,12 +146,12 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "Slenka vieną puslapį aukštyn ar žemyn"
 
-#: ui/main.qml:273
+#: ui/main.qml:226
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
 msgstr "Viduriniojo mygtuko spustelėjimas slenka į spustelėtą vietą"
 
-#: ui/main.qml:287
+#: ui/main.qml:240
 #, kde-format
 msgctxt ""
 "@label for checkbox, part of a complete sentence: 'Middle-click pastes "
@@ -176,7 +159,7 @@ msgctxt ""
 msgid "Middle-click:"
 msgstr "Viduriniojo mygtuko spustelėjimas:"
 
-#: ui/main.qml:289
+#: ui/main.qml:242
 #, kde-format
 msgctxt ""
 "@option:check part of a complete sentence: 'Middle click pastes selected "
@@ -184,24 +167,24 @@ msgctxt ""
 msgid "Pastes selected text"
 msgstr "Įdeda žymėtą tekstą"
 
-#: ui/main.qml:306
+#: ui/main.qml:259
 #, kde-format
 msgid "Touch Mode:"
 msgstr "Lietimo veiksena:"
 
-#: ui/main.qml:308
+#: ui/main.qml:261
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Automatiškai įjungti, kai reikia"
 
-#: ui/main.qml:308 ui/main.qml:353
+#: ui/main.qml:261 ui/main.qml:306
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Niekada neįjungta"
 
-#: ui/main.qml:325
+#: ui/main.qml:278
 #, kde-format
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
@@ -213,13 +196,13 @@ msgstr ""
 "kai transformuojamojo nešiojamojo kompiuterio klaviatūra yra apverčiama ar "
 "atjungiama."
 
-#: ui/main.qml:330
+#: ui/main.qml:283
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Visada įjungta"
 
-#: ui/main.qml:376
+#: ui/main.qml:329
 #, kde-format
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
@@ -228,12 +211,12 @@ msgstr ""
 "Lietimo veiksenoje daugelis naudotojo sąsajos elementų taps didesni, kad "
 "būtų lengviau pritaikyti lietimo integraciją."
 
-#: ui/main.qml:394
+#: ui/main.qml:347
 #, kde-format
 msgid "Double-click interval:"
 msgstr "Dvikarčio spustelėjimo intervalas:"
 
-#: ui/main.qml:409
+#: ui/main.qml:362
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "%1 ms"
@@ -243,13 +226,13 @@ msgstr[1] "%1 msek."
 msgstr[2] "%1 msek."
 msgstr[3] "%1 msek."
 
-#: ui/main.qml:413
+#: ui/main.qml:366
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgstr "msek."
 
-#: ui/main.qml:427
+#: ui/main.qml:380
 #, kde-format
 msgid ""
 "Two clicks within this duration are considered a double-click. Some "
@@ -258,7 +241,7 @@ msgstr ""
 "Per šį laikotarpį du spustelėti spustelėjimai bus laikomi dvikarčiu "
 "spustelėjimu. Kai kurios programos gali nepaisyti šios nuostatos."
 
-#: ui/main.qml:438
+#: ui/main.qml:391
 #, kde-format
 msgctxt "Test double-click speed"
 msgid ""
@@ -272,20 +255,14 @@ msgstr ""
 msgid "Single click to open files"
 msgstr "Failams ir aplankams atverti naudoti vienkartį spustelėjimą"
 
-#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:13
-#, kde-format
-msgid "Animation speed"
-msgstr "Animacijos greitis"
-
 #. i18n: ectx: label, entry (smoothScroll), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:17
+#: workspaceoptions_kdeglobalssettings.kcfg:13
 #, kde-format
 msgid "Smooth scrolling"
 msgstr "Glotnus slinkimas"
 
 #. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:21
+#: workspaceoptions_kdeglobalssettings.kcfg:17
 #, kde-format
 msgid "Left-click in scrollbar track moves scrollbar by one page"
 msgstr ""
@@ -293,7 +270,7 @@ msgstr ""
 "per vieną puslapį"
 
 #. i18n: ectx: label, entry (doubleClickInterval), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:25
+#: workspaceoptions_kdeglobalssettings.kcfg:21
 #, kde-format
 msgid "Double click interval"
 msgstr "Dvikarčio spustelėjimo intervalas"
@@ -354,6 +331,20 @@ msgstr "OSD keičiant išdėstymą"
 #, kde-format
 msgid "Show a popup on layout changes"
 msgstr "Rodyti iškylantįjį langą keičiant išdėstymą"
+
+#~ msgid "Animation speed:"
+#~ msgstr "Animacijos greitis:"
+
+#~ msgctxt "Animation speed"
+#~ msgid "Slow"
+#~ msgstr "Lėtai"
+
+#~ msgctxt "Animation speed"
+#~ msgid "Instant"
+#~ msgstr "Greitai"
+
+#~ msgid "Animation speed"
+#~ msgstr "Animacijos greitis"
 
 #~ msgid "Visual behavior:"
 #~ msgstr "Vaizdinė elgsena:"
