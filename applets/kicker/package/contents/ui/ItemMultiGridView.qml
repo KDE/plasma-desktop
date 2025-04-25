@@ -123,9 +123,8 @@ PlasmaComponents.ScrollView {
                         anchors.top: gridViewLabel.bottom
 
                         width: parent.width - Kirigami.Units.gridUnit
-                        height: lineSvg.horLineHeight
 
-                        svg: lineSvg
+                        imagePath: "widgets/line"
                         elementId: "horizontal-line"
                     }
 

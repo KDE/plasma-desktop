@@ -105,12 +105,11 @@ FocusScope {
                 anchors.horizontalCenter: parent.horizontalCenter
 
                 width: Kirigami.Units.iconSizes.medium
-                height: lineSvg.horLineHeight
 
                 visible: (favoriteApps.model && favoriteApps.model.count
                     && favoriteSystemActions.model && favoriteSystemActions.model.count)
 
-                svg: lineSvg
+                imagePath: "widgets/line"
                 elementId: "horizontal-line"
 
                 states: State {

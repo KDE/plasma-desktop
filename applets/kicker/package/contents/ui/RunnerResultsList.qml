@@ -37,12 +37,12 @@ FocusScope {
         anchors.left: parent.left
         anchors.leftMargin: firstVisible ? 0 : Kirigami.Units.smallSpacing
 
-        width: firstVisible ? 0 : lineSvg.vertLineWidth
+        width: firstVisible ? 0 : implicitWidth
         height: parent.height
 
         visible: !firstVisible
 
-        svg: lineSvg
+        imagePath: "widgets/line"
         elementId: "vertical-line"
     }
 

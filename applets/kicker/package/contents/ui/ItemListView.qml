@@ -10,6 +10,7 @@ import org.kde.kirigami as Kirigami
 import org.kde.kquickcontrolsaddons as KQuickControlsAddons
 import org.kde.plasma.components as PlasmaComponents3
 import org.kde.plasma.extras as PlasmaExtras
+import org.kde.ksvg as KSvg
 
 FocusScope {
     id: itemList
@@ -33,7 +34,7 @@ FocusScope {
     property int itemHeight: Math.ceil((Math.max(Kirigami.Units.iconSizes.sizeForLabels, Kirigami.Units.iconSizes.small)
         + Math.max(highlightItemSvg.margins.top + highlightItemSvg.margins.bottom,
         listItemSvg.margins.top + listItemSvg.margins.bottom)) / 2) * 2
-    property int separatorHeight: model.sorted === true ? 0 : lineSvg.horLineHeight + (2 * Kirigami.Units.smallSpacing)
+    property int separatorHeight: model.sorted === true ? 0 : lineMetrics.elementRect.height + (2 * Kirigami.Units.smallSpacing)
 
     property alias currentIndex: listView.currentIndex
     property alias currentItem: listView.currentItem
@@ -43,6 +44,11 @@ FocusScope {
     property alias count: listView.count
     property alias containsMouse: listener.containsMouse
     property alias resetOnExitDelay: resetIndexTimer.interval
+
+    property KSvg.SvgItem lineMetrics: KSvg.SvgItem {
+        imagePath: "widgets/line"
+        elementId: "horizontal-line"
+    }
 
     Timer {
         id: dialogSpawnTimer

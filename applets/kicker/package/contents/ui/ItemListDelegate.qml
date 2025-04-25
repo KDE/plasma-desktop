@@ -241,9 +241,8 @@ Item {
 
         KSvg.SvgItem {
             width: parent.width
-            height: lineSvg.horLineHeight
 
-            svg: lineSvg
+            imagePath: "widgets/line"
             elementId: "horizontal-line"
         }
     }

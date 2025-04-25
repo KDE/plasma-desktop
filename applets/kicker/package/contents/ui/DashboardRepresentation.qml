@@ -336,9 +336,8 @@ Kicker.DashboardWindow {
                     }
 
                     width: parent.width - Kirigami.Units.gridUnit
-                    height: lineSvg.horLineHeight
 
-                    svg: lineSvg
+                    imagePath: "widgets/line"
                     elementId: "horizontal-line"
 
                     opacity: enabled ? 1.0 : 0.3
@@ -550,9 +549,8 @@ Kicker.DashboardWindow {
                         }
 
                         width: parent.width - Kirigami.Units.gridUnit
-                        height: lineSvg.horLineHeight
 
-                        svg: lineSvg
+                        imagePath: "widgets/line"
                         elementId: "horizontal-line"
                     }
 
