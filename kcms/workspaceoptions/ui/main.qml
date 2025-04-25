@@ -432,27 +432,27 @@ KCM.SimpleKCM {
 
         // Drag&Drop behavior settings
 
-        QQC2.ButtonGroup { id: dndToMoveGroup }
+        QQC2.ButtonGroup { id: dndBehaviorGroup }
 
         QQC2.RadioButton {
-            id: dndToMoveDisabler
+            id: dndBehaviorAsk
             Kirigami.FormData.label: i18n("Drag and drop behavior:")
             text: i18n("Always ask what to do")
-            Accessible.description: dndToMoveDisablerHelperText.text
-            enabled: !kcm.globalsSettings.isImmutable("dndToMove")
-            checked: kcm.globalsSettings.dndToMove === 0
-            onToggled: kcm.globalsSettings.dndToMove = 0
-            QQC2.ButtonGroup.group: dndToMoveGroup
+            Accessible.description: dndBehaviorAskHelperText.text
+            enabled: !kcm.globalsSettings.isImmutable("dndBehavior")
+            checked: kcm.globalsSettings.dndBehavior === 0
+            onToggled: kcm.globalsSettings.dndBehavior = 0
+            QQC2.ButtonGroup.group: dndBehaviorGroup
         }
 
         QQC2.Label {
-            id: dndToMoveDisablerHelperText
+            id: dndBehaviorAskHelperText
             Layout.fillWidth: true
             Layout.preferredWidth: Kirigami.Units.gridUnit * 20
             leftPadding: Application.layoutDirection === Qt.LeftToRight ?
-                dndToMoveDisabler.indicator.width + dndToMoveDisabler.spacing : dndToMoveDisablerHelperText.padding
+                dndBehaviorAsk.indicator.width + dndBehaviorAsk.spacing : dndBehaviorAskHelperText.padding
             rightPadding: Application.layoutDirection === Qt.RightToLeft ?
-                dndToMoveDisabler.indicator.width + dndToMoveDisabler.spacing : dndToMoveDisablerHelperText.padding
+                dndBehaviorAsk.indicator.width + dndBehaviorAsk.spacing : dndBehaviorAskHelperText.padding
             text: xi18nc("@info", "Hold <shortcut>Shift</shortcut> to move, <shortcut>Ctrl</shortcut> to copy, and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise otherwise show a dialog.")
             elide: Text.ElideRight
             font: Kirigami.Theme.smallFont
@@ -460,23 +460,23 @@ KCM.SimpleKCM {
         }
 
         QQC2.RadioButton {
-            id: dndToMoveEnabler
+            id: dndBehaviorMove
             text: i18n("Move files if on the same device")
-            Accessible.description: dndToMoveEnablerHelperText.text
-            enabled: !kcm.globalsSettings.isImmutable("dndToMove")
-            checked: kcm.globalsSettings.dndToMove === 1
-            onToggled: kcm.globalsSettings.dndToMove = 1
-            QQC2.ButtonGroup.group: dndToMoveGroup
+            Accessible.description: dndBehaviorMoveHelperText.text
+            enabled: !kcm.globalsSettings.isImmutable("dndBehavior")
+            checked: kcm.globalsSettings.dndBehavior === 1
+            onToggled: kcm.globalsSettings.dndBehavior = 1
+            QQC2.ButtonGroup.group: dndBehaviorGroup
         }
 
         QQC2.Label {
-            id: dndToMoveEnablerHelperText
+            id: dndBehaviorMoveHelperText
             Layout.fillWidth: true
             Layout.preferredWidth: Kirigami.Units.gridUnit * 20
             leftPadding: Application.layoutDirection === Qt.LeftToRight ?
-                dndToMoveEnabler.indicator.width + dndToMoveEnabler.spacing : dndToMoveEnablerHelperText.padding
+                dndBehaviorMove.indicator.width + dndBehaviorMove.spacing : dndBehaviorMoveHelperText.padding
             rightPadding: Application.layoutDirection === Qt.RightToLeft ?
-                dndToMoveEnabler.indicator.width + dndToMoveEnabler.spacing : dndToMoveEnablerHelperText.padding
+                dndBehaviorMove.indicator.width + dndBehaviorMove.spacing : dndBehaviorMoveHelperText.padding
             text: xi18nc("@info", "Hold <shortcut>Shift</shortcut> when dropping to show other options")
             elide: Text.ElideRight
             font: Kirigami.Theme.smallFont
