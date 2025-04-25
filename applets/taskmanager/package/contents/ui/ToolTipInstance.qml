@@ -118,7 +118,7 @@ ColumnLayout {
                     lineHeight: toolTipDelegate.isWin && Plasmoid.configuration.showToolTips ? 1 : appNameHeading.lineHeight
                     elide: Text.ElideRight
                     text: toolTipDelegate.appName
-                    color: (headerHoverHandler.visible && headerHoverHighlight.pressed) ? PlasmaCore.Theme.highlightedTextColor : PlasmaCore.Theme.textColor
+                    color: (headerHoverHandler.visible && headerHoverHighlight.pressed) ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
                     opacity: root.index === 0 ? 1 : 0
                     visible: (text.length !== 0) && (root.orientation === ListView.Horizontal || root.index === 0)
                     textFormat: Text.PlainText
@@ -134,7 +134,7 @@ ColumnLayout {
                     text: ((root.titleIncludesTrack && playerController.active) ||
                            (root.title === appNameHeading.text && somethingVisible))
                           ? "" : root.title
-                    color: (headerHoverHandler.visible && headerHoverHighlight.pressed) ? PlasmaCore.Theme.highlightedTextColor : PlasmaCore.Theme.textColor
+                    color: (headerHoverHandler.visible && headerHoverHighlight.pressed) ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
                     opacity: 0.75
                     visible: root.orientation === ListView.Horizontal || text.length !== 0
                     textFormat: Text.PlainText
@@ -146,7 +146,7 @@ ColumnLayout {
                     Layout.fillWidth: true
                     elide: Text.ElideRight
                     text: toolTipDelegate.isWin ? root.generateSubText() : ""
-                    color: (headerHoverHandler.visible && headerHoverHighlight.pressed) ? PlasmaCore.Theme.highlightedTextColor : PlasmaCore.Theme.textColor
+                    color: (headerHoverHandler.visible && headerHoverHighlight.pressed) ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
                     opacity: 0.6
                     visible: text.length !== 0 && text !== appNameHeading.text
                     textFormat: Text.PlainText
