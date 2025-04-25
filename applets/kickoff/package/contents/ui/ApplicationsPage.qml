@@ -213,7 +213,7 @@ BasePage {
         Connections {
             target: kickoff
             function onExpandedChanged() {
-                if (kickoff.expanded && kickoff.contentArea.currentItem) {
+                if (!kickoff.expanded && kickoff.contentArea.currentItem) {
                     kickoff.contentArea.currentItem.forceActiveFocus()
                 }
             }

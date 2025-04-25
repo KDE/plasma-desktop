@@ -188,7 +188,7 @@ EmptyPage {
         Connections {
             target: kickoff
             function onExpandedChanged() {
-                if (kickoff.expanded) {
+                if (!kickoff.expanded) {
                     view.currentIndex = 0
                     view.positionViewAtBeginning()
                 }
