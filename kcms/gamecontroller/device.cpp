@@ -83,6 +83,10 @@ int Device::buttonCount() const
 
 bool Device::buttonState(int index) const
 {
+    // If we are a game controller, use that api to get button state
+    if (m_controller) {
+        return SDL_GameControllerGetButton(m_controller, static_cast<SDL_GameControllerButton>(index)) != 0;
+    }
     return SDL_JoystickGetButton(m_joystick, index) != 0;
 }
 
