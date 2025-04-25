@@ -30,6 +30,8 @@ public:
     bool open();
     void close();
 
+    // Whether or not this device is a GameController
+    bool isController() const;
     SDL_JoystickID id() const;
     QString name() const;
     QString path() const;

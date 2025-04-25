@@ -51,6 +51,11 @@ void Device::close()
     m_joystick = nullptr;
 }
 
+bool Device::isController() const
+{
+    return m_controller != nullptr;
+}
+
 SDL_JoystickID Device::id() const
 {
     return SDL_JoystickInstanceID(m_joystick);

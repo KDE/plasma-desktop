@@ -97,12 +97,12 @@ void DeviceModel::poll()
             break;
         case SDL_JOYBUTTONDOWN:
         case SDL_JOYBUTTONUP:
-            if (m_devices.contains(event.jbutton.which)) {
+            if (m_devices.contains(event.jbutton.which) && !m_devices.value(event.jaxis.which)->isController()) {
                 m_devices.value(event.jbutton.which)->onButtonEvent(event.jbutton);
             }
             break;
         case SDL_JOYAXISMOTION:
-            if (m_devices.contains(event.jaxis.which)) {
+            if (m_devices.contains(event.jaxis.which) && !m_devices.value(event.jaxis.which)->isController()) {
                 m_devices.value(event.jaxis.which)->onAxisEvent(event.jaxis);
             }
             break;
@@ -113,12 +113,12 @@ void DeviceModel::poll()
             break;
         case SDL_CONTROLLERBUTTONDOWN:
         case SDL_CONTROLLERBUTTONUP:
-            if (m_devices.contains(event.cbutton.which)) {
+            if (m_devices.contains(event.cbutton.which) && m_devices.value(event.cbutton.which)->isController()) {
                 m_devices.value(event.cbutton.which)->onControllerButtonEvent(event.cbutton);
             }
             break;
         case SDL_CONTROLLERAXISMOTION:
-            if (m_devices.contains(event.caxis.which)) {
+            if (m_devices.contains(event.caxis.which) && m_devices.value(event.caxis.which)->isController()) {
                 m_devices.value(event.caxis.which)->onControllerAxisEvent(event.caxis);
             }
             break;
