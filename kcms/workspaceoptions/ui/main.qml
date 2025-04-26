@@ -12,6 +12,8 @@ import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 import org.kde.kwindowsystem
 
+import org.kde.plasma.workspaceoptions.kcm
+
 KCM.SimpleKCM {
     implicitWidth: Kirigami.Units.gridUnit * 40
 
@@ -440,8 +442,8 @@ KCM.SimpleKCM {
             text: i18n("Always ask what to do")
             Accessible.description: dndBehaviorAskHelperText.text
             enabled: !kcm.globalsSettings.isImmutable("dndBehavior")
-            checked: kcm.globalsSettings.dndBehavior === 0
-            onToggled: kcm.globalsSettings.dndBehavior = 0
+            checked: kcm.globalsSettings.dndBehavior === WorkspaceOptionsGlobalsSettings.AlwaysAsk
+            onToggled: kcm.globalsSettings.dndBehavior = WorkspaceOptionsGlobalsSettings.AlwaysAsk
             QQC2.ButtonGroup.group: dndBehaviorGroup
         }
 
@@ -453,7 +455,7 @@ KCM.SimpleKCM {
                 dndBehaviorAsk.indicator.width + dndBehaviorAsk.spacing : dndBehaviorAskHelperText.padding
             rightPadding: Application.layoutDirection === Qt.RightToLeft ?
                 dndBehaviorAsk.indicator.width + dndBehaviorAsk.spacing : dndBehaviorAskHelperText.padding
-            text: xi18nc("@info", "Hold <shortcut>Shift</shortcut> to move, <shortcut>Ctrl</shortcut> to copy, and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise otherwise show a dialog.")
+            text: xi18nc("@info", "Hold <shortcut>Shift</shortcut> to move, <shortcut>Ctrl</shortcut> to copy, and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise show a dialog.")
             elide: Text.ElideRight
             font: Kirigami.Theme.smallFont
             wrapMode: Text.WordWrap
@@ -464,8 +466,8 @@ KCM.SimpleKCM {
             text: i18n("Move files if on the same device")
             Accessible.description: dndBehaviorMoveHelperText.text
             enabled: !kcm.globalsSettings.isImmutable("dndBehavior")
-            checked: kcm.globalsSettings.dndBehavior === 1
-            onToggled: kcm.globalsSettings.dndBehavior = 1
+            checked: kcm.globalsSettings.dndBehavior === WorkspaceOptionsGlobalsSettings.MoveIfSameDevice
+            onToggled: kcm.globalsSettings.dndBehavior = WorkspaceOptionsGlobalsSettings.MoveIfSameDevice
             QQC2.ButtonGroup.group: dndBehaviorGroup
         }
 
@@ -477,7 +479,7 @@ KCM.SimpleKCM {
                 dndBehaviorMove.indicator.width + dndBehaviorMove.spacing : dndBehaviorMoveHelperText.padding
             rightPadding: Application.layoutDirection === Qt.RightToLeft ?
                 dndBehaviorMove.indicator.width + dndBehaviorMove.spacing : dndBehaviorMoveHelperText.padding
-            text: xi18nc("@info", "Hold <shortcut>Shift</shortcut> when dropping to show other options")
+            text: xi18nc("@info", "Hold <shortcut>Shift</shortcut> when dropping to show other options.")
             elide: Text.ElideRight
             font: Kirigami.Theme.smallFont
         }
