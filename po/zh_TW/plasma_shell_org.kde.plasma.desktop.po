@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-24 00:43+0000\n"
+"POT-Creation-Date: 2025-04-26 00:43+0000\n"
 "PO-Revision-Date: 2025-03-10 20:23+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -309,233 +309,237 @@ msgstr "在此輸入"
 msgid "Panel Settings"
 msgstr "面板設定"
 
-#: contents/configuration/PanelConfiguration.qml:104
-#, kde-format
-msgid "Add Spacer"
+#: contents/configuration/PanelConfiguration.qml:106
+#, fuzzy, kde-format
+#| msgctxt "@action:button accessible only, %1 is widget name"
+#| msgid "Add %1"
+msgctxt ""
+"@action:button label of button to open a menu that lets you add widgets or "
+"spacers"
+msgid "Add New"
+msgstr "加入 %1"
+
+#: contents/configuration/PanelConfiguration.qml:124
+#, fuzzy, kde-format
+#| msgid "Add Spacer"
+msgctxt "@action:menu add a spacer"
+msgid "Spacer"
 msgstr "新增空白"
 
-#: contents/configuration/PanelConfiguration.qml:107
-#, kde-format
-msgid "Add spacer widget to the panel"
-msgstr "新增間隔器元件到面板中"
+#: contents/configuration/PanelConfiguration.qml:131
+#, fuzzy, kde-format
+#| msgid "Widgets"
+msgctxt "@action:menu add a widget"
+msgid "Widgets…"
+msgstr "元件"
 
-#: contents/configuration/PanelConfiguration.qml:114
-#, kde-format
-msgid "Add or Manage Widgets…"
-msgstr "新增或管理元件…"
-
-#: contents/configuration/PanelConfiguration.qml:117
-#, kde-format
-msgid "Open the widget selector to drag and drop widgets to the panel"
-msgstr "開啟元件選擇器並將元件拖放到面板上"
-
-#: contents/configuration/PanelConfiguration.qml:146
+#: contents/configuration/PanelConfiguration.qml:160
 #, kde-format
 msgid "Position"
 msgstr "位置"
 
-#: contents/configuration/PanelConfiguration.qml:151
-#: contents/configuration/PanelConfiguration.qml:266
+#: contents/configuration/PanelConfiguration.qml:165
+#: contents/configuration/PanelConfiguration.qml:280
 #, kde-format
 msgid "Top"
 msgstr "上"
 
-#: contents/configuration/PanelConfiguration.qml:152
-#: contents/configuration/PanelConfiguration.qml:268
+#: contents/configuration/PanelConfiguration.qml:166
+#: contents/configuration/PanelConfiguration.qml:282
 #, kde-format
 msgid "Right"
 msgstr "靠右"
 
-#: contents/configuration/PanelConfiguration.qml:153
-#: contents/configuration/PanelConfiguration.qml:266
+#: contents/configuration/PanelConfiguration.qml:167
+#: contents/configuration/PanelConfiguration.qml:280
 #, kde-format
 msgid "Left"
 msgstr "靠左"
 
-#: contents/configuration/PanelConfiguration.qml:154
-#: contents/configuration/PanelConfiguration.qml:268
+#: contents/configuration/PanelConfiguration.qml:168
+#: contents/configuration/PanelConfiguration.qml:282
 #, kde-format
 msgid "Bottom"
 msgstr "下"
 
-#: contents/configuration/PanelConfiguration.qml:174
+#: contents/configuration/PanelConfiguration.qml:188
 #, kde-format
 msgid "Set Position…"
 msgstr "設定位置…"
 
-#: contents/configuration/PanelConfiguration.qml:201
+#: contents/configuration/PanelConfiguration.qml:215
 #, kde-format
 msgid "Alignment"
 msgstr "對齊"
 
-#: contents/configuration/PanelConfiguration.qml:267
+#: contents/configuration/PanelConfiguration.qml:281
 #, kde-format
 msgid "Center"
 msgstr "置中"
 
-#: contents/configuration/PanelConfiguration.qml:298
+#: contents/configuration/PanelConfiguration.qml:312
 #, kde-format
 msgid "Height"
 msgstr "高度"
 
-#: contents/configuration/PanelConfiguration.qml:299
+#: contents/configuration/PanelConfiguration.qml:313
 #, kde-format
 msgid "Width"
 msgstr "寬度"
 
-#: contents/configuration/PanelConfiguration.qml:318
+#: contents/configuration/PanelConfiguration.qml:332
 #, kde-format
 msgid "Fill height"
 msgstr "填滿高度"
 
-#: contents/configuration/PanelConfiguration.qml:318
+#: contents/configuration/PanelConfiguration.qml:332
 #, kde-format
 msgid "Fill width"
 msgstr "填滿寬度"
 
-#: contents/configuration/PanelConfiguration.qml:319
+#: contents/configuration/PanelConfiguration.qml:333
 #, kde-format
 msgid "Fit content"
 msgstr "符合內容"
 
-#: contents/configuration/PanelConfiguration.qml:320
+#: contents/configuration/PanelConfiguration.qml:334
 #, kde-format
 msgid "Custom"
 msgstr "自訂"
 
-#: contents/configuration/PanelConfiguration.qml:353
+#: contents/configuration/PanelConfiguration.qml:367
 #, kde-format
 msgid "Visibility"
 msgstr "可見度"
 
-#: contents/configuration/PanelConfiguration.qml:371
+#: contents/configuration/PanelConfiguration.qml:385
 #, kde-format
 msgid "Always visible"
 msgstr "永遠可見"
 
-#: contents/configuration/PanelConfiguration.qml:372
+#: contents/configuration/PanelConfiguration.qml:386
 #, kde-format
 msgid "Auto hide"
 msgstr "自動隱藏"
 
-#: contents/configuration/PanelConfiguration.qml:373
+#: contents/configuration/PanelConfiguration.qml:387
 #, kde-format
 msgid "Dodge windows"
 msgstr "躲避視窗"
 
-#: contents/configuration/PanelConfiguration.qml:374
+#: contents/configuration/PanelConfiguration.qml:388
 #, kde-format
 msgid "Windows go below"
 msgstr "視窗在下面"
 
-#: contents/configuration/PanelConfiguration.qml:434
+#: contents/configuration/PanelConfiguration.qml:448
 #, kde-format
 msgid "Opacity"
 msgstr "透明度"
 
-#: contents/configuration/PanelConfiguration.qml:450
+#: contents/configuration/PanelConfiguration.qml:464
 #, kde-format
 msgid "Adaptive"
 msgstr "自動調整"
 
-#: contents/configuration/PanelConfiguration.qml:451
+#: contents/configuration/PanelConfiguration.qml:465
 #, kde-format
 msgid "Opaque"
 msgstr "不透明"
 
-#: contents/configuration/PanelConfiguration.qml:452
+#: contents/configuration/PanelConfiguration.qml:466
 #, kde-format
 msgid "Translucent"
 msgstr "半透明"
 
-#: contents/configuration/PanelConfiguration.qml:484
+#: contents/configuration/PanelConfiguration.qml:498
 #, kde-format
 msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
 msgstr "浮動"
 
-#: contents/configuration/PanelConfiguration.qml:500
+#: contents/configuration/PanelConfiguration.qml:514
 #, kde-format
 msgctxt "@item:inlistbox Option to disable floating panels or applets"
 msgid "Disabled"
 msgstr "已停用"
 
-#: contents/configuration/PanelConfiguration.qml:501
+#: contents/configuration/PanelConfiguration.qml:515
 #, kde-format
 msgctxt "@item:inlistbox Option to make only panel applets always float"
 msgid "Applets only"
 msgstr "僅小程式"
 
-#: contents/configuration/PanelConfiguration.qml:502
+#: contents/configuration/PanelConfiguration.qml:516
 #, kde-format
 msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
 msgstr "面板與小程式"
 
-#: contents/configuration/PanelConfiguration.qml:545
+#: contents/configuration/PanelConfiguration.qml:559
 #, kde-format
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
 msgstr "修正它"
 
-#: contents/configuration/PanelConfiguration.qml:631
+#: contents/configuration/PanelConfiguration.qml:645
 #, kde-format
 msgid "Panel Width:"
 msgstr "面板寬度："
 
-#: contents/configuration/PanelConfiguration.qml:632
+#: contents/configuration/PanelConfiguration.qml:646
 #, kde-format
 msgid "Panel Height:"
 msgstr "面板高度："
 
-#: contents/configuration/PanelConfiguration.qml:655
+#: contents/configuration/PanelConfiguration.qml:669
 #, kde-format
 msgid "Focus shortcut:"
 msgstr "取得焦點快捷鍵："
 
-#: contents/configuration/PanelConfiguration.qml:666
+#: contents/configuration/PanelConfiguration.qml:680
 #, kde-format
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "按這個鍵盤快捷鍵來移動焦點到面板上"
 
-#: contents/configuration/PanelConfiguration.qml:700
+#: contents/configuration/PanelConfiguration.qml:714
 #, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "刪除面板"
 
-#: contents/configuration/PanelConfiguration.qml:703
+#: contents/configuration/PanelConfiguration.qml:717
 #, kde-format
 msgid "Remove this panel; this action is undo-able"
 msgstr "移除這個面板；這個動作是可以復原的"
 
-#: contents/configuration/PanelConfiguration.qml:712
+#: contents/configuration/PanelConfiguration.qml:726
 #, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
 msgstr "建立面板複本"
 
-#: contents/configuration/PanelConfiguration.qml:716
+#: contents/configuration/PanelConfiguration.qml:730
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
 msgstr "建立擁有同樣設定值與小程式的新面板"
 
-#: contents/configuration/PanelConfiguration.qml:725
+#: contents/configuration/PanelConfiguration.qml:739
 #, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "關閉"
 
-#: contents/configuration/PanelConfiguration.qml:725
+#: contents/configuration/PanelConfiguration.qml:739
 #, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
 msgstr "離開編輯模式"
 
-#: contents/configuration/PanelConfiguration.qml:728
+#: contents/configuration/PanelConfiguration.qml:742
 #, kde-format
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "關閉面板設定視窗並離開編輯模式"
@@ -926,6 +930,15 @@ msgstr "離開編輯模式"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "面板焦點指示器"
+
+#~ msgid "Add spacer widget to the panel"
+#~ msgstr "新增間隔器元件到面板中"
+
+#~ msgid "Add or Manage Widgets…"
+#~ msgstr "新增或管理元件…"
+
+#~ msgid "Open the widget selector to drag and drop widgets to the panel"
+#~ msgstr "開啟元件選擇器並將元件拖放到面板上"
 
 #~ msgctxt "@title: group"
 #~ msgid "Clock:"

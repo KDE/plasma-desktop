@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-24 00:43+0000\n"
+"POT-Creation-Date: 2025-04-26 00:43+0000\n"
 "PO-Revision-Date: 2024-10-26 11:54+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -312,238 +312,240 @@ msgstr "Input her"
 msgid "Panel Settings"
 msgstr "Panelindstillinger"
 
-#: contents/configuration/PanelConfiguration.qml:104
+#: contents/configuration/PanelConfiguration.qml:106
 #, kde-format
-msgid "Add Spacer"
+msgctxt ""
+"@action:button label of button to open a menu that lets you add widgets or "
+"spacers"
+msgid "Add New"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:124
+#, fuzzy, kde-format
+#| msgid "Add Spacer"
+msgctxt "@action:menu add a spacer"
+msgid "Spacer"
 msgstr "Tilføj afstandsstykke"
 
-#: contents/configuration/PanelConfiguration.qml:107
-#, kde-format
-msgid "Add spacer widget to the panel"
-msgstr "Tilføj afstandsstykkewidget til panelet"
+#: contents/configuration/PanelConfiguration.qml:131
+#, fuzzy, kde-format
+#| msgid "Widgets"
+msgctxt "@action:menu add a widget"
+msgid "Widgets…"
+msgstr "Widgets"
 
-#: contents/configuration/PanelConfiguration.qml:114
-#, kde-format
-msgid "Add or Manage Widgets…"
-msgstr "Tilføj eller indstil widgets…"
-
-#: contents/configuration/PanelConfiguration.qml:117
-#, kde-format
-msgid "Open the widget selector to drag and drop widgets to the panel"
-msgstr "Åbn widgetselektoren for at trække og slippe widgets til panelet"
-
-#: contents/configuration/PanelConfiguration.qml:146
+#: contents/configuration/PanelConfiguration.qml:160
 #, kde-format
 msgid "Position"
 msgstr "Placering"
 
-#: contents/configuration/PanelConfiguration.qml:151
-#: contents/configuration/PanelConfiguration.qml:266
+#: contents/configuration/PanelConfiguration.qml:165
+#: contents/configuration/PanelConfiguration.qml:280
 #, kde-format
 msgid "Top"
 msgstr "Øverst"
 
-#: contents/configuration/PanelConfiguration.qml:152
-#: contents/configuration/PanelConfiguration.qml:268
+#: contents/configuration/PanelConfiguration.qml:166
+#: contents/configuration/PanelConfiguration.qml:282
 #, kde-format
 msgid "Right"
 msgstr "Højre"
 
-#: contents/configuration/PanelConfiguration.qml:153
-#: contents/configuration/PanelConfiguration.qml:266
+#: contents/configuration/PanelConfiguration.qml:167
+#: contents/configuration/PanelConfiguration.qml:280
 #, kde-format
 msgid "Left"
 msgstr "Venstre"
 
-#: contents/configuration/PanelConfiguration.qml:154
-#: contents/configuration/PanelConfiguration.qml:268
+#: contents/configuration/PanelConfiguration.qml:168
+#: contents/configuration/PanelConfiguration.qml:282
 #, kde-format
 msgid "Bottom"
 msgstr "Nederst"
 
-#: contents/configuration/PanelConfiguration.qml:174
+#: contents/configuration/PanelConfiguration.qml:188
 #, kde-format
 msgid "Set Position…"
 msgstr "Sæt placering..."
 
-#: contents/configuration/PanelConfiguration.qml:201
+#: contents/configuration/PanelConfiguration.qml:215
 #, kde-format
 msgid "Alignment"
 msgstr "Tilpasning"
 
-#: contents/configuration/PanelConfiguration.qml:267
+#: contents/configuration/PanelConfiguration.qml:281
 #, kde-format
 msgid "Center"
 msgstr "Centreret"
 
-#: contents/configuration/PanelConfiguration.qml:298
+#: contents/configuration/PanelConfiguration.qml:312
 #, kde-format
 msgid "Height"
 msgstr "Højde"
 
-#: contents/configuration/PanelConfiguration.qml:299
+#: contents/configuration/PanelConfiguration.qml:313
 #, kde-format
 msgid "Width"
 msgstr "Bredde"
 
-#: contents/configuration/PanelConfiguration.qml:318
+#: contents/configuration/PanelConfiguration.qml:332
 #, kde-format
 msgid "Fill height"
 msgstr "Fyld højde"
 
-#: contents/configuration/PanelConfiguration.qml:318
+#: contents/configuration/PanelConfiguration.qml:332
 #, kde-format
 msgid "Fill width"
 msgstr "Fyld bredde"
 
-#: contents/configuration/PanelConfiguration.qml:319
+#: contents/configuration/PanelConfiguration.qml:333
 #, kde-format
 msgid "Fit content"
 msgstr "Tilpas til indhold"
 
-#: contents/configuration/PanelConfiguration.qml:320
+#: contents/configuration/PanelConfiguration.qml:334
 #, kde-format
 msgid "Custom"
 msgstr "Brugerdefineret"
 
-#: contents/configuration/PanelConfiguration.qml:353
+#: contents/configuration/PanelConfiguration.qml:367
 #, kde-format
 msgid "Visibility"
 msgstr "Synlighed"
 
-#: contents/configuration/PanelConfiguration.qml:371
+#: contents/configuration/PanelConfiguration.qml:385
 #, kde-format
 msgid "Always visible"
 msgstr "Altid synlig"
 
-#: contents/configuration/PanelConfiguration.qml:372
+#: contents/configuration/PanelConfiguration.qml:386
 #, kde-format
 msgid "Auto hide"
 msgstr "Skjul automatisk"
 
-#: contents/configuration/PanelConfiguration.qml:373
+#: contents/configuration/PanelConfiguration.qml:387
 #, kde-format
 msgid "Dodge windows"
 msgstr "Undvig vinduer"
 
-#: contents/configuration/PanelConfiguration.qml:374
+#: contents/configuration/PanelConfiguration.qml:388
 #, fuzzy, kde-format
 #| msgid "Windows Go Below"
 msgid "Windows go below"
 msgstr "Vinduer går under"
 
-#: contents/configuration/PanelConfiguration.qml:434
+#: contents/configuration/PanelConfiguration.qml:448
 #, kde-format
 msgid "Opacity"
 msgstr "Opacitet"
 
-#: contents/configuration/PanelConfiguration.qml:450
+#: contents/configuration/PanelConfiguration.qml:464
 #, kde-format
 msgid "Adaptive"
 msgstr "Adaptiv"
 
-#: contents/configuration/PanelConfiguration.qml:451
+#: contents/configuration/PanelConfiguration.qml:465
 #, kde-format
 msgid "Opaque"
 msgstr "Opakt"
 
-#: contents/configuration/PanelConfiguration.qml:452
+#: contents/configuration/PanelConfiguration.qml:466
 #, kde-format
 msgid "Translucent"
 msgstr "Gennemsigtig"
 
-#: contents/configuration/PanelConfiguration.qml:484
+#: contents/configuration/PanelConfiguration.qml:498
 #, fuzzy, kde-format
 #| msgid "Floating"
 msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
 msgstr "Svævende"
 
-#: contents/configuration/PanelConfiguration.qml:500
+#: contents/configuration/PanelConfiguration.qml:514
 #, fuzzy, kde-format
 #| msgid "%1 (disabled)"
 msgctxt "@item:inlistbox Option to disable floating panels or applets"
 msgid "Disabled"
 msgstr "%1 (deaktiveret)"
 
-#: contents/configuration/PanelConfiguration.qml:501
+#: contents/configuration/PanelConfiguration.qml:515
 #, kde-format
 msgctxt "@item:inlistbox Option to make only panel applets always float"
 msgid "Applets only"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:502
+#: contents/configuration/PanelConfiguration.qml:516
 #, fuzzy, kde-format
 #| msgid "Panel and Desktop Management"
 msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
 msgstr "Håndtering af panel og skrivebord"
 
-#: contents/configuration/PanelConfiguration.qml:545
+#: contents/configuration/PanelConfiguration.qml:559
 #, kde-format
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
 msgstr "Fiks det"
 
-#: contents/configuration/PanelConfiguration.qml:631
+#: contents/configuration/PanelConfiguration.qml:645
 #, kde-format
 msgid "Panel Width:"
 msgstr "Panelets bredde:"
 
-#: contents/configuration/PanelConfiguration.qml:632
+#: contents/configuration/PanelConfiguration.qml:646
 #, kde-format
 msgid "Panel Height:"
 msgstr "Panelets højde:"
 
-#: contents/configuration/PanelConfiguration.qml:655
+#: contents/configuration/PanelConfiguration.qml:669
 #, kde-format
 msgid "Focus shortcut:"
 msgstr "Genvej for fokus:"
 
-#: contents/configuration/PanelConfiguration.qml:666
+#: contents/configuration/PanelConfiguration.qml:680
 #, kde-format
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Tryk på tastaturgenvejen for at flytte fokus til panelet"
 
-#: contents/configuration/PanelConfiguration.qml:700
+#: contents/configuration/PanelConfiguration.qml:714
 #, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Fjern panel"
 
-#: contents/configuration/PanelConfiguration.qml:703
+#: contents/configuration/PanelConfiguration.qml:717
 #, kde-format
 msgid "Remove this panel; this action is undo-able"
 msgstr "Fjern dette panel; dette kan ikke fortrydes"
 
-#: contents/configuration/PanelConfiguration.qml:712
+#: contents/configuration/PanelConfiguration.qml:726
 #, fuzzy, kde-format
 #| msgid "Remove Panel"
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
 msgstr "Fjern panel"
 
-#: contents/configuration/PanelConfiguration.qml:716
+#: contents/configuration/PanelConfiguration.qml:730
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:725
+#: contents/configuration/PanelConfiguration.qml:739
 #, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Luk"
 
-#: contents/configuration/PanelConfiguration.qml:725
+#: contents/configuration/PanelConfiguration.qml:739
 #, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
 msgstr "Afslut Redigér-tilstand"
 
-#: contents/configuration/PanelConfiguration.qml:728
+#: contents/configuration/PanelConfiguration.qml:742
 #, kde-format
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "Luk panelindstillingsvindue og afslut Redigér-tilstand"
@@ -956,6 +958,15 @@ msgstr "Afslut Redigér-tilstand"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Fokusindikator for panel"
+
+#~ msgid "Add spacer widget to the panel"
+#~ msgstr "Tilføj afstandsstykkewidget til panelet"
+
+#~ msgid "Add or Manage Widgets…"
+#~ msgstr "Tilføj eller indstil widgets…"
+
+#~ msgid "Open the widget selector to drag and drop widgets to the panel"
+#~ msgstr "Åbn widgetselektoren for at trække og slippe widgets til panelet"
 
 #~ msgctxt "@title: group"
 #~ msgid "Clock:"

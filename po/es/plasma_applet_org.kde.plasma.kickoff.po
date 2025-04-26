@@ -1,15 +1,15 @@
 # Spanish translations for plasma_applet_org.kde.plasma.kickoff.po package.
-# Copyright (C) 2014 This_file_is_part_of_KDE
+# Copyright (C) 2014-2025 This_file_is_part_of_KDE
 # This file is distributed under the same license as the pladma-desktop package.
-#
 # Automatically generated, 2014.
+#
 # SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kickoff\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-25 00:43+0000\n"
-"PO-Revision-Date: 2025-03-13 01:12+0100\n"
+"PO-Revision-Date: 2025-04-25 12:11+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -185,7 +185,7 @@ msgstr "Desactivado automáticamente en modo táctil"
 #: package/contents/ui/ConfigGeneral.qml:200
 #, kde-format
 msgid "Highlight newly installed applications"
-msgstr ""
+msgstr "Resaltar las aplicaciones instaladas recientemente"
 
 #: package/contents/ui/ConfigGeneral.qml:205
 #, kde-format
@@ -307,14 +307,13 @@ msgstr "Mantener abierta"
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "¡Nueva!"
 
 #: package/contents/ui/KickoffGridDelegate.qml:61
 #: package/contents/ui/KickoffListDelegate.qml:121
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgid "Newly installed application"
-msgstr "Mostrar otras aplicaciones:"
+msgstr "Aplicación instalada recientemente"
 
 #: package/contents/ui/KickoffGridView.qml:102
 #, kde-format
@@ -324,7 +323,7 @@ msgstr "Cuadrícula con %1 filas, %2 columnas"
 #: package/contents/ui/KickoffListDelegate.qml:120
 #, kde-format
 msgid "There is a newly installed application in this category"
-msgstr ""
+msgstr "Hay una aplicación instalada recientemente en esta categoría"
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format

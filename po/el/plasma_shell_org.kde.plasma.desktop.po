@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-24 00:43+0000\n"
+"POT-Creation-Date: 2025-04-26 00:43+0000\n"
 "PO-Revision-Date: 2024-09-19 17:30+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -316,240 +316,240 @@ msgstr "Είσοδος εδώ"
 msgid "Panel Settings"
 msgstr "Εφαρμογή ρυθμίσεων"
 
-#: contents/configuration/PanelConfiguration.qml:104
+#: contents/configuration/PanelConfiguration.qml:106
 #, kde-format
-msgid "Add Spacer"
+msgctxt ""
+"@action:button label of button to open a menu that lets you add widgets or "
+"spacers"
+msgid "Add New"
+msgstr ""
+
+#: contents/configuration/PanelConfiguration.qml:124
+#, fuzzy, kde-format
+#| msgid "Add Spacer"
+msgctxt "@action:menu add a spacer"
+msgid "Spacer"
 msgstr "Προσθήκη κενού"
 
-#: contents/configuration/PanelConfiguration.qml:107
-#, kde-format
-msgid "Add spacer widget to the panel"
-msgstr "Προσθήκη συστατικού διαστήματος στον πίνακα"
+#: contents/configuration/PanelConfiguration.qml:131
+#, fuzzy, kde-format
+#| msgid "Widgets"
+msgctxt "@action:menu add a widget"
+msgid "Widgets…"
+msgstr "Συστατικά"
 
-#: contents/configuration/PanelConfiguration.qml:114
-#, kde-format
-msgid "Add or Manage Widgets…"
-msgstr "Προσθήκη συστατικών…"
-
-#: contents/configuration/PanelConfiguration.qml:117
-#, kde-format
-msgid "Open the widget selector to drag and drop widgets to the panel"
-msgstr ""
-"Άνοιγμα του επιλογέα συστατικών για να σύρετε και να αποθέσετε συστατικά "
-"στον πίνακα"
-
-#: contents/configuration/PanelConfiguration.qml:146
+#: contents/configuration/PanelConfiguration.qml:160
 #, kde-format
 msgid "Position"
 msgstr "Θέση"
 
-#: contents/configuration/PanelConfiguration.qml:151
-#: contents/configuration/PanelConfiguration.qml:266
+#: contents/configuration/PanelConfiguration.qml:165
+#: contents/configuration/PanelConfiguration.qml:280
 #, kde-format
 msgid "Top"
 msgstr "Πάνω"
 
-#: contents/configuration/PanelConfiguration.qml:152
-#: contents/configuration/PanelConfiguration.qml:268
+#: contents/configuration/PanelConfiguration.qml:166
+#: contents/configuration/PanelConfiguration.qml:282
 #, kde-format
 msgid "Right"
 msgstr "Δεξιά"
 
-#: contents/configuration/PanelConfiguration.qml:153
-#: contents/configuration/PanelConfiguration.qml:266
+#: contents/configuration/PanelConfiguration.qml:167
+#: contents/configuration/PanelConfiguration.qml:280
 #, kde-format
 msgid "Left"
 msgstr "Αριστερά"
 
-#: contents/configuration/PanelConfiguration.qml:154
-#: contents/configuration/PanelConfiguration.qml:268
+#: contents/configuration/PanelConfiguration.qml:168
+#: contents/configuration/PanelConfiguration.qml:282
 #, kde-format
 msgid "Bottom"
 msgstr "Κάτω"
 
-#: contents/configuration/PanelConfiguration.qml:174
+#: contents/configuration/PanelConfiguration.qml:188
 #, kde-format
 msgid "Set Position…"
 msgstr "Ορισμός θέσης…"
 
-#: contents/configuration/PanelConfiguration.qml:201
+#: contents/configuration/PanelConfiguration.qml:215
 #, kde-format
 msgid "Alignment"
 msgstr "Ευθυγράμμιση"
 
-#: contents/configuration/PanelConfiguration.qml:267
+#: contents/configuration/PanelConfiguration.qml:281
 #, kde-format
 msgid "Center"
 msgstr "Κέντρο"
 
-#: contents/configuration/PanelConfiguration.qml:298
+#: contents/configuration/PanelConfiguration.qml:312
 #, kde-format
 msgid "Height"
 msgstr "Ύψος"
 
-#: contents/configuration/PanelConfiguration.qml:299
+#: contents/configuration/PanelConfiguration.qml:313
 #, kde-format
 msgid "Width"
 msgstr "Πλάτος"
 
-#: contents/configuration/PanelConfiguration.qml:318
+#: contents/configuration/PanelConfiguration.qml:332
 #, kde-format
 msgid "Fill height"
 msgstr "Ύψος γεμίσματος"
 
-#: contents/configuration/PanelConfiguration.qml:318
+#: contents/configuration/PanelConfiguration.qml:332
 #, kde-format
 msgid "Fill width"
 msgstr "Πλάτος γεμίσματος"
 
-#: contents/configuration/PanelConfiguration.qml:319
+#: contents/configuration/PanelConfiguration.qml:333
 #, kde-format
 msgid "Fit content"
 msgstr "Προσαρμογή στο περιεχόμενο"
 
-#: contents/configuration/PanelConfiguration.qml:320
+#: contents/configuration/PanelConfiguration.qml:334
 #, kde-format
 msgid "Custom"
 msgstr "Προσαρμοσμένο"
 
-#: contents/configuration/PanelConfiguration.qml:353
+#: contents/configuration/PanelConfiguration.qml:367
 #, kde-format
 msgid "Visibility"
 msgstr "Ορατότητα"
 
-#: contents/configuration/PanelConfiguration.qml:371
+#: contents/configuration/PanelConfiguration.qml:385
 #, kde-format
 msgid "Always visible"
 msgstr "Πάντα ορατό"
 
-#: contents/configuration/PanelConfiguration.qml:372
+#: contents/configuration/PanelConfiguration.qml:386
 #, kde-format
 msgid "Auto hide"
 msgstr "Αυτόματη απόκρυψη"
 
-#: contents/configuration/PanelConfiguration.qml:373
+#: contents/configuration/PanelConfiguration.qml:387
 #, kde-format
 msgid "Dodge windows"
 msgstr "Αποφυγή παραθύρων"
 
-#: contents/configuration/PanelConfiguration.qml:374
+#: contents/configuration/PanelConfiguration.qml:388
 #, kde-format
 msgid "Windows go below"
 msgstr "Παράθυρα πάνε κάτω"
 
-#: contents/configuration/PanelConfiguration.qml:434
+#: contents/configuration/PanelConfiguration.qml:448
 #, kde-format
 msgid "Opacity"
 msgstr "Αδιαφάνεια"
 
-#: contents/configuration/PanelConfiguration.qml:450
+#: contents/configuration/PanelConfiguration.qml:464
 #, kde-format
 msgid "Adaptive"
 msgstr "Προσαρμοστικό"
 
-#: contents/configuration/PanelConfiguration.qml:451
+#: contents/configuration/PanelConfiguration.qml:465
 #, kde-format
 msgid "Opaque"
 msgstr "Αδιαφανές"
 
-#: contents/configuration/PanelConfiguration.qml:452
+#: contents/configuration/PanelConfiguration.qml:466
 #, kde-format
 msgid "Translucent"
 msgstr "Ημιδιαφανές"
 
-#: contents/configuration/PanelConfiguration.qml:484
+#: contents/configuration/PanelConfiguration.qml:498
 #, fuzzy, kde-format
 #| msgid "Floating"
 msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
 msgstr "Αιωρούμενο"
 
-#: contents/configuration/PanelConfiguration.qml:500
+#: contents/configuration/PanelConfiguration.qml:514
 #, kde-format
 msgctxt "@item:inlistbox Option to disable floating panels or applets"
 msgid "Disabled"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:501
+#: contents/configuration/PanelConfiguration.qml:515
 #, kde-format
 msgctxt "@item:inlistbox Option to make only panel applets always float"
 msgid "Applets only"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:502
+#: contents/configuration/PanelConfiguration.qml:516
 #, fuzzy, kde-format
 #| msgid "Panel and Desktop Management"
 msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
 msgstr "Διαχείριση πίνακα και επιφάνειας εργασίας"
 
-#: contents/configuration/PanelConfiguration.qml:545
+#: contents/configuration/PanelConfiguration.qml:559
 #, kde-format
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
 msgstr "Διόρθωση"
 
-#: contents/configuration/PanelConfiguration.qml:631
+#: contents/configuration/PanelConfiguration.qml:645
 #, kde-format
 msgid "Panel Width:"
 msgstr "Πλάτος πίνακα:"
 
-#: contents/configuration/PanelConfiguration.qml:632
+#: contents/configuration/PanelConfiguration.qml:646
 #, kde-format
 msgid "Panel Height:"
 msgstr "Ύψος πίνακα:"
 
-#: contents/configuration/PanelConfiguration.qml:655
+#: contents/configuration/PanelConfiguration.qml:669
 #, kde-format
 msgid "Focus shortcut:"
 msgstr "Συντόμευση εστίασης:"
 
-#: contents/configuration/PanelConfiguration.qml:666
+#: contents/configuration/PanelConfiguration.qml:680
 #, kde-format
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 "Πατήστε αυτή τη συντόμευση πληκτρολογίου για να μεταφέρετε την εστίαση στον "
 "πίνακα"
 
-#: contents/configuration/PanelConfiguration.qml:700
+#: contents/configuration/PanelConfiguration.qml:714
 #, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Διαγραφή πίνακα"
 
-#: contents/configuration/PanelConfiguration.qml:703
+#: contents/configuration/PanelConfiguration.qml:717
 #, kde-format
 msgid "Remove this panel; this action is undo-able"
 msgstr "Αφαίρεση αυτού του πίνακα; η ενέργεια είναι αναιρέσιμη"
 
-#: contents/configuration/PanelConfiguration.qml:712
+#: contents/configuration/PanelConfiguration.qml:726
 #, fuzzy, kde-format
 #| msgid "Remove Panel"
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
 msgstr "Αφαίρεση πίνακα"
 
-#: contents/configuration/PanelConfiguration.qml:716
+#: contents/configuration/PanelConfiguration.qml:730
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:725
+#: contents/configuration/PanelConfiguration.qml:739
 #, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Κλείσιμο"
 
-#: contents/configuration/PanelConfiguration.qml:725
+#: contents/configuration/PanelConfiguration.qml:739
 #, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
 msgstr "Έγινε"
 
-#: contents/configuration/PanelConfiguration.qml:728
+#: contents/configuration/PanelConfiguration.qml:742
 #, kde-format
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr ""
@@ -962,6 +962,17 @@ msgstr "Έξοδος λειτουργίας επεξεργασίας"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Δείκτης εστίασης πίνακα"
+
+#~ msgid "Add spacer widget to the panel"
+#~ msgstr "Προσθήκη συστατικού διαστήματος στον πίνακα"
+
+#~ msgid "Add or Manage Widgets…"
+#~ msgstr "Προσθήκη συστατικών…"
+
+#~ msgid "Open the widget selector to drag and drop widgets to the panel"
+#~ msgstr ""
+#~ "Άνοιγμα του επιλογέα συστατικών για να σύρετε και να αποθέσετε συστατικά "
+#~ "στον πίνακα"
 
 #~ msgctxt "@title: group"
 #~ msgid "Clock:"

@@ -1,7 +1,7 @@
 # Translation for plasma_applet_org.kde.plasma.kickoff.po to Euskara/Basque (eu)
 # Copyright (C) 2016-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2023, 2024, 2025 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Iñigo Salvador Azurmendi <xalba@ni.eus>, 2016, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-25 00:43+0000\n"
-"PO-Revision-Date: 2025-03-30 16:02+0200\n"
+"PO-Revision-Date: 2025-04-25 14:49+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -186,7 +186,7 @@ msgstr "Automatikoki ezgaitua ukimen moduan"
 #: package/contents/ui/ConfigGeneral.qml:200
 #, kde-format
 msgid "Highlight newly installed applications"
-msgstr ""
+msgstr "Nabarmendu aplikazio instalatu berriak"
 
 #: package/contents/ui/ConfigGeneral.qml:205
 #, kde-format
@@ -307,14 +307,13 @@ msgstr "Eduki irekita"
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Berria!"
 
 #: package/contents/ui/KickoffGridDelegate.qml:61
 #: package/contents/ui/KickoffListDelegate.qml:121
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgid "Newly installed application"
-msgstr "Erakutsi beste aplikazio batzuk:"
+msgstr "Aplikazio instalatu berria"
 
 #: package/contents/ui/KickoffGridView.qml:102
 #, kde-format
@@ -324,7 +323,7 @@ msgstr "%1 errenkada, %2 zutabeko sareta"
 #: package/contents/ui/KickoffListDelegate.qml:120
 #, kde-format
 msgid "There is a newly installed application in this category"
-msgstr ""
+msgstr "Kategoria honetan aplikazio instalatu berri bat dago"
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format

@@ -5,19 +5,20 @@
 # Dusan Kazik <prescott66@gmail.com>, 2020.
 # Ferdinand Galko <galko.ferdinand@gmail.com>, 2023.
 # Matej Mrenica <matejm98mthw@gmail.com>, 2023.
+# SPDX-FileCopyrightText: 2025 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-24 00:43+0000\n"
-"PO-Revision-Date: 2024-06-26 14:11+0200\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"POT-Creation-Date: 2025-04-26 00:43+0000\n"
+"PO-Revision-Date: 2025-04-25 15:27+0200\n"
+"Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 25.04.0\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
@@ -314,277 +315,269 @@ msgstr "Vstup sem"
 msgid "Panel Settings"
 msgstr "Nastavenia panela"
 
-#: contents/configuration/PanelConfiguration.qml:104
-#, kde-format
-msgid "Add Spacer"
+#: contents/configuration/PanelConfiguration.qml:106
+#, fuzzy, kde-format
+#| msgctxt "@action:button accessible only, %1 is widget name"
+#| msgid "Add %1"
+msgctxt ""
+"@action:button label of button to open a menu that lets you add widgets or "
+"spacers"
+msgid "Add New"
+msgstr "Pridať %1"
+
+#: contents/configuration/PanelConfiguration.qml:124
+#, fuzzy, kde-format
+#| msgid "Add Spacer"
+msgctxt "@action:menu add a spacer"
+msgid "Spacer"
 msgstr "Pridať medzeru"
 
-#: contents/configuration/PanelConfiguration.qml:107
-#, kde-format
-msgid "Add spacer widget to the panel"
-msgstr "Pridať oddeľovač na panel."
-
-#: contents/configuration/PanelConfiguration.qml:114
+#: contents/configuration/PanelConfiguration.qml:131
 #, fuzzy, kde-format
-#| msgid "Add Widgets…"
-msgid "Add or Manage Widgets…"
-msgstr "Pridať miniaplikácie..."
+#| msgid "Widgets"
+msgctxt "@action:menu add a widget"
+msgid "Widgets…"
+msgstr "Miniaplikácie"
 
-#: contents/configuration/PanelConfiguration.qml:117
-#, kde-format
-msgid "Open the widget selector to drag and drop widgets to the panel"
-msgstr "Otvorte výber widgetov a presuňte widgety na panel"
-
-#: contents/configuration/PanelConfiguration.qml:146
+#: contents/configuration/PanelConfiguration.qml:160
 #, kde-format
 msgid "Position"
 msgstr "Pozícia"
 
-#: contents/configuration/PanelConfiguration.qml:151
-#: contents/configuration/PanelConfiguration.qml:266
+#: contents/configuration/PanelConfiguration.qml:165
+#: contents/configuration/PanelConfiguration.qml:280
 #, kde-format
 msgid "Top"
 msgstr "Vrch"
 
-#: contents/configuration/PanelConfiguration.qml:152
-#: contents/configuration/PanelConfiguration.qml:268
+#: contents/configuration/PanelConfiguration.qml:166
+#: contents/configuration/PanelConfiguration.qml:282
 #, kde-format
 msgid "Right"
 msgstr "Vpravo"
 
-#: contents/configuration/PanelConfiguration.qml:153
-#: contents/configuration/PanelConfiguration.qml:266
+#: contents/configuration/PanelConfiguration.qml:167
+#: contents/configuration/PanelConfiguration.qml:280
 #, kde-format
 msgid "Left"
 msgstr "Vľavo"
 
-#: contents/configuration/PanelConfiguration.qml:154
-#: contents/configuration/PanelConfiguration.qml:268
+#: contents/configuration/PanelConfiguration.qml:168
+#: contents/configuration/PanelConfiguration.qml:282
 #, kde-format
 msgid "Bottom"
 msgstr "Spodok"
 
-#: contents/configuration/PanelConfiguration.qml:174
+#: contents/configuration/PanelConfiguration.qml:188
 #, kde-format
 msgid "Set Position…"
 msgstr "Nastaviť pozíciu…"
 
-#: contents/configuration/PanelConfiguration.qml:201
+#: contents/configuration/PanelConfiguration.qml:215
 #, kde-format
 msgid "Alignment"
 msgstr "Zarovnanie"
 
-#: contents/configuration/PanelConfiguration.qml:267
+#: contents/configuration/PanelConfiguration.qml:281
 #, kde-format
 msgid "Center"
 msgstr "Vycentrovať"
 
-#: contents/configuration/PanelConfiguration.qml:298
+#: contents/configuration/PanelConfiguration.qml:312
 #, kde-format
 msgid "Height"
 msgstr "Výška"
 
-#: contents/configuration/PanelConfiguration.qml:299
+#: contents/configuration/PanelConfiguration.qml:313
 #, kde-format
 msgid "Width"
 msgstr "Šírka"
 
-#: contents/configuration/PanelConfiguration.qml:318
+#: contents/configuration/PanelConfiguration.qml:332
 #, kde-format
 msgid "Fill height"
 msgstr "Výška výplne"
 
-#: contents/configuration/PanelConfiguration.qml:318
+#: contents/configuration/PanelConfiguration.qml:332
 #, kde-format
 msgid "Fill width"
 msgstr "Šírka výplne"
 
-#: contents/configuration/PanelConfiguration.qml:319
+#: contents/configuration/PanelConfiguration.qml:333
 #, kde-format
 msgid "Fit content"
 msgstr "Prispôsobiť obsah"
 
-#: contents/configuration/PanelConfiguration.qml:320
+#: contents/configuration/PanelConfiguration.qml:334
 #, kde-format
 msgid "Custom"
 msgstr "Vlastný"
 
-#: contents/configuration/PanelConfiguration.qml:353
+#: contents/configuration/PanelConfiguration.qml:367
 #, kde-format
 msgid "Visibility"
 msgstr "Viditeľnosť"
 
-#: contents/configuration/PanelConfiguration.qml:371
+#: contents/configuration/PanelConfiguration.qml:385
 #, kde-format
 msgid "Always visible"
 msgstr "Vždy viditeľný"
 
-#: contents/configuration/PanelConfiguration.qml:372
+#: contents/configuration/PanelConfiguration.qml:386
 #, kde-format
 msgid "Auto hide"
 msgstr "Automaticky skryť"
 
-#: contents/configuration/PanelConfiguration.qml:373
+#: contents/configuration/PanelConfiguration.qml:387
 #, kde-format
 msgid "Dodge windows"
 msgstr "Vyhnúť sa oknám"
 
-#: contents/configuration/PanelConfiguration.qml:374
-#, fuzzy, kde-format
-#| msgid "Windows Go Below"
+#: contents/configuration/PanelConfiguration.qml:388
+#, kde-format
 msgid "Windows go below"
 msgstr "Okná idú pod"
 
-#: contents/configuration/PanelConfiguration.qml:434
+#: contents/configuration/PanelConfiguration.qml:448
 #, kde-format
 msgid "Opacity"
 msgstr "Priehľadnosť"
 
-#: contents/configuration/PanelConfiguration.qml:450
+#: contents/configuration/PanelConfiguration.qml:464
 #, kde-format
 msgid "Adaptive"
 msgstr "Prispôsobivý"
 
-#: contents/configuration/PanelConfiguration.qml:451
+#: contents/configuration/PanelConfiguration.qml:465
 #, kde-format
 msgid "Opaque"
 msgstr "Nepriehľadný"
 
-#: contents/configuration/PanelConfiguration.qml:452
+#: contents/configuration/PanelConfiguration.qml:466
 #, kde-format
 msgid "Translucent"
 msgstr "Priesvitný"
 
-#: contents/configuration/PanelConfiguration.qml:484
-#, fuzzy, kde-format
-#| msgid "Floating"
+#: contents/configuration/PanelConfiguration.qml:498
+#, kde-format
 msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
-msgstr "Plávajúci"
+msgstr "Plávajúce"
 
-#: contents/configuration/PanelConfiguration.qml:500
-#, fuzzy, kde-format
-#| msgid "%1 (disabled)"
+#: contents/configuration/PanelConfiguration.qml:514
+#, kde-format
 msgctxt "@item:inlistbox Option to disable floating panels or applets"
 msgid "Disabled"
-msgstr "%1 (zakázaný)"
+msgstr "Zakázané"
 
-#: contents/configuration/PanelConfiguration.qml:501
+#: contents/configuration/PanelConfiguration.qml:515
 #, kde-format
 msgctxt "@item:inlistbox Option to make only panel applets always float"
 msgid "Applets only"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:502
+#: contents/configuration/PanelConfiguration.qml:516
 #, fuzzy, kde-format
 #| msgid "Panel and Desktop Management"
 msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
 msgstr "Správa panelu a pracovnej plochy"
 
-#: contents/configuration/PanelConfiguration.qml:545
+#: contents/configuration/PanelConfiguration.qml:559
 #, kde-format
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
 msgstr "Opraviť to"
 
-#: contents/configuration/PanelConfiguration.qml:631
+#: contents/configuration/PanelConfiguration.qml:645
 #, kde-format
 msgid "Panel Width:"
 msgstr "Šírka panelu:"
 
-#: contents/configuration/PanelConfiguration.qml:632
+#: contents/configuration/PanelConfiguration.qml:646
 #, kde-format
 msgid "Panel Height:"
 msgstr "Výška panela:"
 
-#: contents/configuration/PanelConfiguration.qml:655
+#: contents/configuration/PanelConfiguration.qml:669
 #, kde-format
 msgid "Focus shortcut:"
 msgstr "Skratka zamerania:"
 
-#: contents/configuration/PanelConfiguration.qml:666
+#: contents/configuration/PanelConfiguration.qml:680
 #, kde-format
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Stlačte túto klávesovú skratku na presun zamerania na panel"
 
-#: contents/configuration/PanelConfiguration.qml:700
+#: contents/configuration/PanelConfiguration.qml:714
 #, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Odstrániť panel"
 
-#: contents/configuration/PanelConfiguration.qml:703
+#: contents/configuration/PanelConfiguration.qml:717
 #, kde-format
 msgid "Remove this panel; this action is undo-able"
 msgstr "Odstrániť tento panel; túto akciu je možné zrušiť"
 
-#: contents/configuration/PanelConfiguration.qml:712
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#: contents/configuration/PanelConfiguration.qml:726
+#, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
-msgstr "Odstrániť panel"
+msgstr "Klonovať panel"
 
-#: contents/configuration/PanelConfiguration.qml:716
+#: contents/configuration/PanelConfiguration.qml:730
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
 msgstr ""
 
-#: contents/configuration/PanelConfiguration.qml:725
-#, fuzzy, kde-format
-#| msgid "Close"
+#: contents/configuration/PanelConfiguration.qml:739
+#, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
-msgstr "Zavrieť"
+msgstr "Zatvoriť"
 
-#: contents/configuration/PanelConfiguration.qml:725
-#, fuzzy, kde-format
-#| msgid "Exit Edit Mode"
+#: contents/configuration/PanelConfiguration.qml:739
+#, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
 msgstr "Ukončiť režim úprav"
 
-#: contents/configuration/PanelConfiguration.qml:728
+#: contents/configuration/PanelConfiguration.qml:742
 #, kde-format
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "Zatvoriť okno nastavení panelu a odísť z režimu úprav"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:32
-#, fuzzy, kde-format
-#| msgid "Drag to change maximum height."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum height."
 msgstr "Potiahnutím zmeníte maximálnu výšku."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:33
-#, fuzzy, kde-format
-#| msgid "Drag to change maximum width."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum width."
 msgstr "Potiahnutím zmeníte maximálnu šírku."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:34
 #: contents/configuration/panelconfiguration/Ruler.qml:39
-#, fuzzy, kde-format
-#| msgid "Double click to reset."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Double-click to reset."
 msgstr "Dvojitým kliknutím obnovíte."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:37
-#, fuzzy, kde-format
-#| msgid "Drag to change minimum height."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum height."
 msgstr "Potiahnutím zmeníte minimálnu výšku."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:38
-#, fuzzy, kde-format
-#| msgid "Drag to change minimum width."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr "Potiahnutím zmeníte minimálnu šírku."
@@ -653,7 +646,7 @@ msgstr "Alternatívne miniaplikácie"
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Add %1"
-msgstr ""
+msgstr "Pridať %1"
 
 #: contents/explorer/AppletDelegate.qml:47
 #, kde-format
@@ -664,7 +657,7 @@ msgstr "Nepodporovaný widget"
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
-msgstr ""
+msgstr "Nové!"
 
 #: contents/explorer/AppletDelegate.qml:204
 #, fuzzy, kde-format
@@ -680,7 +673,7 @@ msgstr[2] "Žiadne miniaplikáciw nie sú dostupné"
 #, kde-format
 msgctxt " @info:other accessible for badge indicating new widget"
 msgid "Recently installed"
-msgstr ""
+msgstr "Nedávno nainštalované"
 
 #: contents/explorer/AppletDelegate.qml:217
 #, fuzzy, kde-format
@@ -707,10 +700,9 @@ msgid "Mark widget %1 for uninstallation. Requires confirmation"
 msgstr ""
 
 #: contents/explorer/AppletDelegate.qml:265
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgid "Remove all instances"
-msgstr "Odstrániť panel"
+msgstr "Odstrániť všetky inštancie"
 
 #: contents/explorer/AppletDelegate.qml:269
 #, kde-format
@@ -750,15 +742,13 @@ msgid "Widgets"
 msgstr "Miniaplikácie"
 
 #: contents/explorer/WidgetExplorer.qml:178
-#, fuzzy, kde-format
-#| msgid "Get New Plugins…"
+#, kde-format
 msgctxt "@action:button The word 'new' refers to widgets"
 msgid "Get New…"
-msgstr "Získať nové doplnky..."
+msgstr "Získať nové..."
 
 #: contents/explorer/WidgetExplorer.qml:179
-#, fuzzy, kde-format
-#| msgid "Get New Widgets…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Get New Widgets…"
 msgstr "Získať nové miniaplikácie..."
@@ -818,7 +808,7 @@ msgstr "Vždy viditeľný"
 #, kde-format
 msgctxt "@option:radio"
 msgid "Always show clock"
-msgstr ""
+msgstr "Zobrazovať hodiny"
 
 #: contents/lockscreen/config.qml:41
 #, fuzzy, kde-format
@@ -871,20 +861,17 @@ msgid "Caps Lock is on"
 msgstr "Funkcia Caps Lock je zapnutá"
 
 #: contents/lockscreen/LockScreenUi.qml:291
-#, fuzzy, kde-format
-#| msgid "Sleep"
+#, kde-format
 msgid "Slee&p"
 msgstr "Uspať"
 
 #: contents/lockscreen/LockScreenUi.qml:297
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "&Hibernate"
 msgstr "Hibernovať"
 
 #: contents/lockscreen/LockScreenUi.qml:303
-#, fuzzy, kde-format
-#| msgid "Switch User"
+#, kde-format
 msgid "Switch &User"
 msgstr "Prepnúť používateľa"
 
@@ -967,6 +954,16 @@ msgstr "Ukončiť režim úprav"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Indikátor zamerania panela"
+
+#~ msgid "Add spacer widget to the panel"
+#~ msgstr "Pridať oddeľovač na panel."
+
+#~| msgid "Add Widgets…"
+#~ msgid "Add or Manage Widgets…"
+#~ msgstr "Pridať alebo spravovať miniaplikácie..."
+
+#~ msgid "Open the widget selector to drag and drop widgets to the panel"
+#~ msgstr "Otvorte výber widgetov a presuňte widgety na panel"
 
 #~ msgctxt "@title: group"
 #~ msgid "Clock:"

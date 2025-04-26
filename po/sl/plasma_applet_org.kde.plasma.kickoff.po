@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-25 00:43+0000\n"
-"PO-Revision-Date: 2025-03-11 09:34+0100\n"
+"PO-Revision-Date: 2025-04-25 07:05+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: LUGOS\n"
 "Language: sl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -187,7 +187,7 @@ msgstr "Samodejno onemogočeno v načinu dotikanja"
 #: package/contents/ui/ConfigGeneral.qml:200
 #, kde-format
 msgid "Highlight newly installed applications"
-msgstr ""
+msgstr "Označi novo nameščene aplikacije"
 
 #: package/contents/ui/ConfigGeneral.qml:205
 #, kde-format
@@ -309,14 +309,13 @@ msgstr "Ohranjaj odprte"
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Nova!"
 
 #: package/contents/ui/KickoffGridDelegate.qml:61
 #: package/contents/ui/KickoffListDelegate.qml:121
-#, fuzzy, kde-format
-#| msgid "Recently Used Applications"
+#, kde-format
 msgid "Newly installed application"
-msgstr "Nedavno uporabljeni programi"
+msgstr "Novo nameščena aplikacija"
 
 #: package/contents/ui/KickoffGridView.qml:102
 #, kde-format
@@ -326,7 +325,7 @@ msgstr "Mreža z %1 vrsticami %2 stolpci"
 #: package/contents/ui/KickoffListDelegate.qml:120
 #, kde-format
 msgid "There is a newly installed application in this category"
-msgstr ""
+msgstr "V tej kategoriji je na novo nameščena aplikacija"
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format

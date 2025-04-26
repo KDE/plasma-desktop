@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-13 00:42+0000\n"
+"POT-Creation-Date: 2025-04-26 00:43+0000\n"
 "PO-Revision-Date: 2025-04-14 10:03+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -434,36 +434,70 @@ msgstr ""
 "du pavé tactile est inversée afin que la tablette puisse être utilisée à "
 "l'envers."
 
-#: ui/StylusTab.qml:291
+#: ui/StylusTab.qml:240
+#, kde-format
+msgctxt ""
+"'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)"
+msgid "Mode:"
+msgstr ""
+
+#: ui/StylusTab.qml:248
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "Pen"
+msgctxt ""
+"Pen mode, where the point on the screen is always where you touch the stylus"
+msgid "Pen"
+msgstr "Stylo"
+
+#: ui/StylusTab.qml:253
+#, kde-format
+msgid "The cursor follows where you touch the pen on the surface"
+msgstr ""
+
+#: ui/StylusTab.qml:274
+#, kde-format
+msgctxt "Mouse mode, or like using the tablet like a giant touchpad"
+msgid "Mouse"
+msgstr ""
+
+#: ui/StylusTab.qml:279
+#, kde-format
+msgid ""
+"Moving the pen on the surface moves the cursor relative to where it was, "
+"like a mouse"
+msgstr ""
+
+#: ui/StylusTab.qml:349
 #, kde-format
 msgid "Pen Pressure:"
 msgstr "Pression du stylet :"
 
-#: ui/StylusTab.qml:351
+#: ui/StylusTab.qml:409
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
 msgstr "%1 %"
 
-#: ui/StylusTab.qml:359
+#: ui/StylusTab.qml:417
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
 msgstr "%1 %"
 
-#: ui/StylusTab.qml:370
+#: ui/StylusTab.qml:428
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr "100 %"
 
-#: ui/StylusTab.qml:378
+#: ui/StylusTab.qml:436
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr "0 %"
 
-#: ui/StylusTab.qml:382
+#: ui/StylusTab.qml:440
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -473,13 +507,13 @@ msgstr ""
 "Cette courbe contrôle la relation entre la pression sur le stylet et les "
 "valeurs de pression reçues par les applications."
 
-#: ui/StylusTab.qml:387
+#: ui/StylusTab.qml:445
 #, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
 msgstr "Intervalle de pression :"
 
-#: ui/StylusTab.qml:414
+#: ui/StylusTab.qml:472
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -489,31 +523,31 @@ msgstr ""
 "La pression au-dessus ou en dessous du seuil sera gelée. Elle deviendra le "
 "nouvel et véritable intervalle."
 
-#: ui/StylusTab.qml:428
+#: ui/StylusTab.qml:486
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "Calibration en cours"
 
-#: ui/StylusTab.qml:430
+#: ui/StylusTab.qml:488
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "Calibrer"
 
-#: ui/StylusTab.qml:433
+#: ui/StylusTab.qml:491
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "Calibration non prise en charge"
 
-#: ui/StylusTab.qml:474
+#: ui/StylusTab.qml:532
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
 msgstr "Ré-initialiser la calibration personnalisée"
 
-#: ui/StylusTab.qml:488
+#: ui/StylusTab.qml:546
 #, kde-format
 msgctxt "@info"
 msgid ""

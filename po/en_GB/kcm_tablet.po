@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-13 00:42+0000\n"
+"POT-Creation-Date: 2025-04-26 00:43+0000\n"
 "PO-Revision-Date: 2024-11-16 12:55+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -440,36 +440,68 @@ msgstr ""
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 
-#: ui/StylusTab.qml:291
+#: ui/StylusTab.qml:240
+#, kde-format
+msgctxt ""
+"'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)"
+msgid "Mode:"
+msgstr ""
+
+#: ui/StylusTab.qml:248
+#, kde-format
+msgctxt ""
+"Pen mode, where the point on the screen is always where you touch the stylus"
+msgid "Pen"
+msgstr ""
+
+#: ui/StylusTab.qml:253
+#, kde-format
+msgid "The cursor follows where you touch the pen on the surface"
+msgstr ""
+
+#: ui/StylusTab.qml:274
+#, kde-format
+msgctxt "Mouse mode, or like using the tablet like a giant touchpad"
+msgid "Mouse"
+msgstr ""
+
+#: ui/StylusTab.qml:279
+#, kde-format
+msgid ""
+"Moving the pen on the surface moves the cursor relative to where it was, "
+"like a mouse"
+msgstr ""
+
+#: ui/StylusTab.qml:349
 #, kde-format
 msgid "Pen Pressure:"
 msgstr "Pen Pressure:"
 
-#: ui/StylusTab.qml:351
+#: ui/StylusTab.qml:409
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
 msgstr ""
 
-#: ui/StylusTab.qml:359
+#: ui/StylusTab.qml:417
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
 msgstr ""
 
-#: ui/StylusTab.qml:370
+#: ui/StylusTab.qml:428
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr "100%"
 
-#: ui/StylusTab.qml:378
+#: ui/StylusTab.qml:436
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr "0%"
 
-#: ui/StylusTab.qml:382
+#: ui/StylusTab.qml:440
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -479,14 +511,14 @@ msgstr ""
 "This curve controls the relationship between the pressure on the stylus and "
 "the pressure values received by applications."
 
-#: ui/StylusTab.qml:387
+#: ui/StylusTab.qml:445
 #, fuzzy, kde-format
 #| msgid "Pen Pressure:"
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
 msgstr "Pen Pressure:"
 
-#: ui/StylusTab.qml:414
+#: ui/StylusTab.qml:472
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -494,25 +526,25 @@ msgid ""
 "new effective range."
 msgstr ""
 
-#: ui/StylusTab.qml:428
+#: ui/StylusTab.qml:486
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "Calibration in Progress"
 
-#: ui/StylusTab.qml:430
+#: ui/StylusTab.qml:488
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "Calibrate"
 
-#: ui/StylusTab.qml:433
+#: ui/StylusTab.qml:491
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "Calibration Not Supported"
 
-#: ui/StylusTab.qml:474
+#: ui/StylusTab.qml:532
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Refine Existing Calibration"
@@ -520,7 +552,7 @@ msgctxt "@action:button"
 msgid "Reset Custom Calibration"
 msgstr "Refine Existing Calibration"
 
-#: ui/StylusTab.qml:488
+#: ui/StylusTab.qml:546
 #, kde-format
 msgctxt "@info"
 msgid ""
