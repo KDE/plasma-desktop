@@ -25,22 +25,46 @@ SimpleKCM {
     bottomPadding: 0
 
     property int formAlignment: wallpaperComboBox.Kirigami.ScenePosition.x - appearanceRoot.Kirigami.ScenePosition.x + Kirigami.Units.smallSpacing
-    property string currentWallpaper: ""
-    property string containmentPlugin: ""
+    property string originalWallpaper: ""
     property alias parentLayout: parentLayout
+    property bool unsavedChanges: false
 
     function saveConfig() {
         if (main.currentItem.saveConfig) {
             main.currentItem.saveConfig()
         }
-        configDialog.currentWallpaper = appearanceRoot.currentWallpaper;
+        configDialog.currentWallpaper = wallpaperComboBox.currentValue
+        appearanceRoot.originalWallpaper = wallpaperComboBox.currentValue
         configDialog.wallpaperConfiguration.keys().forEach(key => {
             if (main.currentItem["cfg_"+key] !== undefined) {
                 configDialog.wallpaperConfiguration[key] = main.currentItem["cfg_"+key]
             }
         })
         configDialog.applyWallpaper()
-        configDialog.containmentPlugin = appearanceRoot.containmentPlugin
+        configDialog.containmentPlugin = pluginComboBox.currentValue
+        appearanceRoot.closeContainmentWarning()
+        appearanceRoot.unsavedChanges = false
+    }
+
+    function checkUnsavedChanges() {
+        const wallpaperConfig = configDialog.wallpaperConfiguration
+        appearanceRoot.unsavedChanges = configDialog.currentWallpaper != appearanceRoot.originalWallpaper ||
+                                        configDialog.containmentPlugin != pluginComboBox.currentValue ||
+                                        wallpaperConfig.keys().some(key => {
+            const cfgKey = "cfg_" + key
+            if (!(cfgKey in main.currentItem) || key.startsWith("PreviewImage") || key.endsWith("Default")) {
+                return false
+            }
+            return main.currentItem[cfgKey] != wallpaperConfig[key] &&
+                   main.currentItem[cfgKey].toString() != wallpaperConfig[key].toString()
+        })
+    }
+
+    function closeContainmentWarning() {
+        if (main.currentItem?.objectName === "switchContainmentWarningItem") {
+            main.pop();
+            categoriesScroll.enabled = true;
+        }
     }
 
     ColumnLayout {
@@ -71,10 +95,18 @@ SimpleKCM {
                 textRole: "name"
                 valueRole: "pluginName"
                 onActivated: {
-                    appearanceRoot.containmentPlugin = pluginComboBox.currentValue
-                    appearanceRoot.configurationChanged()
+                    if (configDialog.containmentPlugin !== pluginComboBox.currentValue) {
+                        main.push(switchContainmentWarning);
+                        categoriesScroll.enabled = false;
+                    } else {
+                        closeContainmentWarning()
+                    }
+                    appearanceRoot.checkUnsavedChanges()
                 }
-                Component.onCompleted: currentIndex = indexOfValue(configDialog.containmentPlugin)
+                Component.onCompleted: {
+                    currentIndex = indexOfValue(configDialog.containmentPlugin)
+                    activated(currentIndex)
+                }
             }
 
             RowLayout {
@@ -91,17 +123,18 @@ SimpleKCM {
                     valueRole: "pluginName"
                     onActivated: {
                         var idx = configDialog.wallpaperConfigModel.index(currentIndex, 0)
-                        if (appearanceRoot.currentWallpaper === currentValue) {
+                        if (configDialog.currentWallpaper === currentValue && main.sourceFile !== "tbd") {
                             return;
                         }
-                        appearanceRoot.currentWallpaper = currentValue
                         configDialog.currentWallpaper = currentValue
                         main.sourceFile = idx.data(ConfigModel.SourceRole)
-                        appearanceRoot.configurationChanged()
+                        appearanceRoot.checkUnsavedChanges()
                     }
                     Component.onCompleted: {
                         currentIndex = indexOfValue(configDialog.currentWallpaper)
+                        appearanceRoot.originalWallpaper = currentValue
                         activated(currentIndex)
+
                     }
                 }
                 NewStuff.Button {
@@ -162,7 +195,7 @@ SimpleKCM {
                         if (cfgKey in newItem) {
                             let changedSignal = main.currentItem[cfgKey + "Changed"]
                             if (changedSignal) {
-                                changedSignal.connect(appearanceRoot.configurationChanged)
+                                changedSignal.connect(appearanceRoot.checkUnsavedChanges)
                             }
                         }
                     });
@@ -199,19 +232,9 @@ SimpleKCM {
                 helpfulAction: QQC2.Action {
                     icon.name: "dialog-ok-apply"
                     text: i18nd("plasma_shell_org.kde.plasma.desktop", "Apply Now")
-                    onTriggered: saveConfig()
+                    onTriggered: appearanceRoot.saveConfig()
                 }
             }
-        }
-    }
-
-    onContainmentPluginChanged: {
-        if (configDialog.containmentPlugin !== appearanceRoot.containmentPlugin) {
-            main.push(switchContainmentWarning);
-            categoriesScroll.enabled = false;
-        } else if (main.currentItem?.objectName === "switchContainmentWarningItem") {
-            main.pop();
-            categoriesScroll.enabled = true;
         }
     }
 }
