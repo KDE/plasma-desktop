@@ -24,18 +24,11 @@ KCM.SimpleKCM {
         unsavedChanges = false
     }
 
-    ColumnLayout {
-        spacing: Kirigami.Units.smallSpacing
-
-        QQC2.Label {
-            Layout.fillWidth: true
-            text: i18nd("plasma_shell_org.kde.plasma.desktop", "This shortcut will activate the applet as though it had been clicked.")
-            textFormat: Text.PlainText
-            wrapMode: Text.WordWrap
-        }
+    Kirigami.FormLayout {
 
         KeySequenceItem {
             id: button
+            Kirigami.FormData.label: i18nc("@action:button set keyboard shortcut for", "Activate widget as if clicked:")
             keySequence: Plasmoid.globalShortcut
             modifierOnlyAllowed: true
             onKeySequenceModified: root.unsavedChanges = keySequence !== Plasmoid.globalShortcut
