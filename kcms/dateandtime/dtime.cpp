@@ -21,7 +21,6 @@
 #include <QQmlEngine>
 #include <QTimeEdit>
 
-#include <KColorScheme>
 #include <KConfig>
 #include <KConfigGroup>
 #include <KMessageBox>

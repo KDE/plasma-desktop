@@ -8,7 +8,6 @@
 
 #include "landingpage.h"
 
-#include <KColorScheme>
 #include <KLocalizedString>
 #include <KPackage/PackageLoader>
 #include <KPluginFactory>

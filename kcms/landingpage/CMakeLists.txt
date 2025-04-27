@@ -16,7 +16,6 @@ target_link_libraries(kcm_landingpage PRIVATE
     Qt::DBus
     KF6::I18n
     KF6::KCMUtilsQuick
-    KF6::ColorScheme
     KF6::ConfigGui
     KF6::Package
     PW::KWorkspace
