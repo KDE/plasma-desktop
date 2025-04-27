@@ -134,7 +134,7 @@ PC3.Page {
         visualParent: categoryButton
         // model set on first invocation
 
-        onClicked: {
+        onClicked: model => {
             list.contentX = 0
             list.contentY = 0
             categoryButton.text = (model.filterData ? model.display : i18nd("plasma_shell_org.kde.plasma.desktop", "All Widgets"))
