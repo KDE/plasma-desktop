@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-26 00:43+0000\n"
-"PO-Revision-Date: 2025-03-08 09:02+0200\n"
+"POT-Creation-Date: 2025-04-27 00:43+0000\n"
+"PO-Revision-Date: 2025-04-26 15:53+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -250,32 +250,32 @@ msgstr "+"
 msgid "Add Action"
 msgstr "Додавання дії"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:53
+#: contents/configuration/ConfigurationContainmentAppearance.qml:77
 #, kde-format
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "Зміни до компонування може вносити лише адміністратор системи"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:68
+#: contents/configuration/ConfigurationContainmentAppearance.qml:92
 #, kde-format
 msgid "Layout:"
 msgstr "Компонування:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:83
+#: contents/configuration/ConfigurationContainmentAppearance.qml:115
 #, kde-format
 msgid "Wallpaper type:"
 msgstr "Тип зображення тла:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:109
+#: contents/configuration/ConfigurationContainmentAppearance.qml:142
 #, kde-format
 msgid "Get New Plugins…"
 msgstr "Отримати нові додатки…"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:197
+#: contents/configuration/ConfigurationContainmentAppearance.qml:230
 #, kde-format
 msgid "Layout changes must be applied before other changes can be made"
 msgstr "Перш ніж вносити інші зміни, слід застосувати зміни у компонуванні"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:201
+#: contents/configuration/ConfigurationContainmentAppearance.qml:234
 #, kde-format
 msgid "Apply Now"
 msgstr "Застосувати зараз"
@@ -313,28 +313,24 @@ msgid "Panel Settings"
 msgstr "Параметри панелі"
 
 #: contents/configuration/PanelConfiguration.qml:106
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible only, %1 is widget name"
-#| msgid "Add %1"
+#, kde-format
 msgctxt ""
 "@action:button label of button to open a menu that lets you add widgets or "
 "spacers"
 msgid "Add New"
-msgstr "Додати %1"
+msgstr "Додати"
 
 #: contents/configuration/PanelConfiguration.qml:124
-#, fuzzy, kde-format
-#| msgid "Add Spacer"
+#, kde-format
 msgctxt "@action:menu add a spacer"
 msgid "Spacer"
-msgstr "Додати розпірку"
+msgstr "Розпірка"
 
 #: contents/configuration/PanelConfiguration.qml:131
-#, fuzzy, kde-format
-#| msgid "Widgets"
+#, kde-format
 msgctxt "@action:menu add a widget"
 msgid "Widgets…"
-msgstr "Віджети"
+msgstr "Віджети…"
 
 #: contents/configuration/PanelConfiguration.qml:160
 #, kde-format

@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-26 00:43+0000\n"
-"PO-Revision-Date: 2025-03-08 10:32+0100\n"
+"POT-Creation-Date: 2025-04-27 00:43+0000\n"
+"PO-Revision-Date: 2025-04-26 10:01+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -253,32 +253,32 @@ msgstr "+"
 msgid "Add Action"
 msgstr "Afig una acció"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:53
+#: contents/configuration/ConfigurationContainmentAppearance.qml:77
 #, kde-format
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "L'administrador del sistema ha restringit els canvis de la disposició"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:68
+#: contents/configuration/ConfigurationContainmentAppearance.qml:92
 #, kde-format
 msgid "Layout:"
 msgstr "Disposició:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:83
+#: contents/configuration/ConfigurationContainmentAppearance.qml:115
 #, kde-format
 msgid "Wallpaper type:"
 msgstr "Tipus de fons de pantalla:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:109
+#: contents/configuration/ConfigurationContainmentAppearance.qml:142
 #, kde-format
 msgid "Get New Plugins…"
 msgstr "Obtín connectors nous…"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:197
+#: contents/configuration/ConfigurationContainmentAppearance.qml:230
 #, kde-format
 msgid "Layout changes must be applied before other changes can be made"
 msgstr "Cal aplicar els canvis de disposició abans de poder fer altres canvis"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:201
+#: contents/configuration/ConfigurationContainmentAppearance.qml:234
 #, kde-format
 msgid "Apply Now"
 msgstr "Aplica ara"
@@ -314,28 +314,24 @@ msgid "Panel Settings"
 msgstr "Configureu el quadro"
 
 #: contents/configuration/PanelConfiguration.qml:106
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible only, %1 is widget name"
-#| msgid "Add %1"
+#, kde-format
 msgctxt ""
 "@action:button label of button to open a menu that lets you add widgets or "
 "spacers"
 msgid "Add New"
-msgstr "Afig %1"
+msgstr "Afig nou"
 
 #: contents/configuration/PanelConfiguration.qml:124
-#, fuzzy, kde-format
-#| msgid "Add Spacer"
+#, kde-format
 msgctxt "@action:menu add a spacer"
 msgid "Spacer"
-msgstr "Afig un espaiador"
+msgstr "Espaiador"
 
 #: contents/configuration/PanelConfiguration.qml:131
-#, fuzzy, kde-format
-#| msgid "Widgets"
+#, kde-format
 msgctxt "@action:menu add a widget"
 msgid "Widgets…"
-msgstr "Ginys"
+msgstr "Ginys…"
 
 #: contents/configuration/PanelConfiguration.qml:160
 #, kde-format
@@ -937,13 +933,3 @@ msgstr "Ix del mode edició"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Indicador de focus del quadro"
-
-#~ msgid "Add spacer widget to the panel"
-#~ msgstr "Afig un giny espaiador al quadro"
-
-#~ msgid "Add or Manage Widgets…"
-#~ msgstr "Afig o gestiona els ginys…"
-
-#~ msgid "Open the widget selector to drag and drop widgets to the panel"
-#~ msgstr ""
-#~ "Obri el selector de ginys per a arrossegar i deixar anar ginys al quadro"

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-26 00:43+0000\n"
-"PO-Revision-Date: 2025-03-08 07:24+0100\n"
+"POT-Creation-Date: 2025-04-27 00:43+0000\n"
+"PO-Revision-Date: 2025-04-26 07:47+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -252,34 +252,34 @@ msgstr "+"
 msgid "Add Action"
 msgstr "Dodaj dejanje"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:53
+#: contents/configuration/ConfigurationContainmentAppearance.qml:77
 #, kde-format
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "Spremembe postavitve so dovoljene samo za sistemskega skrbnika"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:68
+#: contents/configuration/ConfigurationContainmentAppearance.qml:92
 #, kde-format
 msgid "Layout:"
 msgstr "Razporeditev:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:83
+#: contents/configuration/ConfigurationContainmentAppearance.qml:115
 #, kde-format
 msgid "Wallpaper type:"
 msgstr "Vrsta slike ozadja:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:109
+#: contents/configuration/ConfigurationContainmentAppearance.qml:142
 #, kde-format
 msgid "Get New Plugins…"
 msgstr "Dobi nove vtičnike…"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:197
+#: contents/configuration/ConfigurationContainmentAppearance.qml:230
 #, kde-format
 msgid "Layout changes must be applied before other changes can be made"
 msgstr ""
 "Dokler ne bodo uveljavljene spremembe razporeditev, ne bo mogoče izvesti "
 "drugih sprememb"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:201
+#: contents/configuration/ConfigurationContainmentAppearance.qml:234
 #, kde-format
 msgid "Apply Now"
 msgstr "Uveljavi zdaj"
@@ -315,28 +315,24 @@ msgid "Panel Settings"
 msgstr "Nastavitve pulta"
 
 #: contents/configuration/PanelConfiguration.qml:106
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible only, %1 is widget name"
-#| msgid "Add %1"
+#, kde-format
 msgctxt ""
 "@action:button label of button to open a menu that lets you add widgets or "
 "spacers"
 msgid "Add New"
-msgstr "Dodaj %1"
+msgstr "Dodaj nov"
 
 #: contents/configuration/PanelConfiguration.qml:124
-#, fuzzy, kde-format
-#| msgid "Add Spacer"
+#, kde-format
 msgctxt "@action:menu add a spacer"
 msgid "Spacer"
-msgstr "Dodaj distančnik"
+msgstr "Distančnik"
 
 #: contents/configuration/PanelConfiguration.qml:131
-#, fuzzy, kde-format
-#| msgid "Widgets"
+#, kde-format
 msgctxt "@action:menu add a widget"
 msgid "Widgets…"
-msgstr "Gradniki"
+msgstr "Gradnike…"
 
 #: contents/configuration/PanelConfiguration.qml:160
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-25 00:43+0000\n"
-"PO-Revision-Date: 2025-03-11 17:36+0100\n"
+"PO-Revision-Date: 2025-04-25 12:54+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -185,7 +185,7 @@ msgstr "Automatisch uitschakelen wanneer in aanraakmodus"
 #: package/contents/ui/ConfigGeneral.qml:200
 #, kde-format
 msgid "Highlight newly installed applications"
-msgstr ""
+msgstr "Accentueer nieuw geïnstalleerde toepassingen"
 
 #: package/contents/ui/ConfigGeneral.qml:205
 #, kde-format
@@ -306,14 +306,13 @@ msgstr "Open houden"
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Nieuw!"
 
 #: package/contents/ui/KickoffGridDelegate.qml:61
 #: package/contents/ui/KickoffListDelegate.qml:121
-#, fuzzy, kde-format
-#| msgid "Recently Used Applications"
+#, kde-format
 msgid "Newly installed application"
-msgstr "Recent gebruikte programma's"
+msgstr "Nieuw geïnstalleerde toepassing"
 
 #: package/contents/ui/KickoffGridView.qml:102
 #, kde-format
@@ -323,7 +322,7 @@ msgstr "Raster met %1 rijen, %2 kolommen"
 #: package/contents/ui/KickoffListDelegate.qml:120
 #, kde-format
 msgid "There is a newly installed application in this category"
-msgstr ""
+msgstr "Er is een nieuw geïnstalleerde toepassing in deze categorie"
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format

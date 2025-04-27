@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-26 00:43+0000\n"
-"PO-Revision-Date: 2025-03-08 14:06+0200\n"
+"POT-Creation-Date: 2025-04-27 00:43+0000\n"
+"PO-Revision-Date: 2025-04-26 13:42+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -247,32 +247,32 @@ msgstr "+"
 msgid "Add Action"
 msgstr "הוספת פעולה"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:53
+#: contents/configuration/ConfigurationContainmentAppearance.qml:77
 #, kde-format
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "שינוי פריסה הוגבל על ידי הנהלת המערכת"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:68
+#: contents/configuration/ConfigurationContainmentAppearance.qml:92
 #, kde-format
 msgid "Layout:"
 msgstr "פריסה:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:83
+#: contents/configuration/ConfigurationContainmentAppearance.qml:115
 #, kde-format
 msgid "Wallpaper type:"
 msgstr "סוג תמונת רקע:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:109
+#: contents/configuration/ConfigurationContainmentAppearance.qml:142
 #, kde-format
 msgid "Get New Plugins…"
 msgstr "הורדת תוספים חדשים…"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:197
+#: contents/configuration/ConfigurationContainmentAppearance.qml:230
 #, kde-format
 msgid "Layout changes must be applied before other changes can be made"
 msgstr "יש להחיל שינויים בפריסה לפני שניתן לבצע שינויים אחרים"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:201
+#: contents/configuration/ConfigurationContainmentAppearance.qml:234
 #, kde-format
 msgid "Apply Now"
 msgstr "החלה כעת"
@@ -308,28 +308,24 @@ msgid "Panel Settings"
 msgstr "הגדרות לוח"
 
 #: contents/configuration/PanelConfiguration.qml:106
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible only, %1 is widget name"
-#| msgid "Add %1"
+#, kde-format
 msgctxt ""
 "@action:button label of button to open a menu that lets you add widgets or "
 "spacers"
 msgid "Add New"
-msgstr "הוספת %1"
+msgstr "הוספת חדש"
 
 #: contents/configuration/PanelConfiguration.qml:124
-#, fuzzy, kde-format
-#| msgid "Add Spacer"
+#, kde-format
 msgctxt "@action:menu add a spacer"
 msgid "Spacer"
-msgstr "הוספת מפריד"
+msgstr "מפריד"
 
 #: contents/configuration/PanelConfiguration.qml:131
-#, fuzzy, kde-format
-#| msgid "Widgets"
+#, kde-format
 msgctxt "@action:menu add a widget"
 msgid "Widgets…"
-msgstr "יישומונים"
+msgstr "וידג׳טים…"
 
 #: contents/configuration/PanelConfiguration.qml:160
 #, kde-format
