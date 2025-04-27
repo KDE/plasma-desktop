@@ -377,6 +377,7 @@ Rectangle {
                 discarded();
             }
             onDiscarded: {
+                wasConfigurationChangedSignalSent = false;
                 if (item) {
                     root.open(item);
                     messageDialog.close();
