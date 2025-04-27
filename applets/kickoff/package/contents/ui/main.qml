@@ -29,6 +29,9 @@ PlasmoidItem {
     width: Kirigami.Units.iconSizes.huge
     height: Kirigami.Units.iconSizes.huge
 
+    switchWidth: fullRepresentationItem ? fullRepresentationItem.Layout.minimumWidth : Kirigami.Units.iconSizes.huge * 10
+    switchHeight: fullRepresentationItem ? fullRepresentationItem.Layout.minimumHeight : Kirigami.Units.iconSizes.huge * 10
+
     // The properties are defined here instead of the singleton because each
     // instance of Kickoff requires different instances of these properties
 
@@ -180,9 +183,6 @@ PlasmoidItem {
     //END
 
     Plasmoid.icon: Plasmoid.configuration.icon
-
-    switchWidth: fullRepresentationItem ? fullRepresentationItem.Layout.minimumWidth : -1
-    switchHeight: fullRepresentationItem ? fullRepresentationItem.Layout.minimumHeight : -1
 
     preferredRepresentation: compactRepresentation
 
