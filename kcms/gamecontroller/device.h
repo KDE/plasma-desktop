@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include <QMap>
 #include <QObject>
 #include <QVector2D>
 #include <QVector>
@@ -49,6 +50,8 @@ public:
 
     int buttonCount() const;
     bool buttonState(int index) const;
+    // The name of a given button if known
+    QString buttonName(int index) const;
 
     int axisCount() const;
     QVector2D leftAxisValue() const;
@@ -84,4 +87,7 @@ private:
     float m_rightTrigger;
     SDL_Joystick *m_joystick = nullptr;
     SDL_GameController *m_controller = nullptr;
+    // Map of index to SDL_CONTROLLER button type for all buttons this gamecontroller has
+    QMap<int, int> m_buttonType;
+    int m_buttonCount = 0;
 };
