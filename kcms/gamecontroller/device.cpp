@@ -22,7 +22,7 @@ static QStringList kJoystickTypeNames = {i18n("Unknown"),
                                          i18n("Arcade Pad"),
                                          i18n("Throttle")};
 
-// NOTE: Keep yn sync with SDL_gamecontrollertype from SDL_gamecontroller.h
+// NOTE: Keep in sync with SDL_gamecontrollertype from SDL_gamecontroller.h
 static QStringList kControllerTypeNames = {
     i18n("Unknown"),
     i18n("XBox 360"),
@@ -39,6 +39,41 @@ static QStringList kControllerTypeNames = {
     i18n("Switch Right Joycon"),
     i18n("Switch Paired Joycon"),
 };
+
+// NOTE: Keep in sync with SDL_GameControllerButton from SDL_gamecontroller.h
+static QStringList kButtonNames = {
+    i18nc("The game controller button with a letter A on it", "A button"),
+    i18nc("The game controller button with a letter B on it", "B button"),
+    i18nc("The game controller button with a letter X on it", "X button"),
+    i18nc("The game controller button with a letter Y on it", "Y button"),
+    i18nc("The back game controller button", "Back button"),
+    i18nc("The guide game controller button", "Guide button"),
+    i18nc("The start game controller button", "Start button"),
+    i18nc("The button under the game controller's left analog stick", "Left analog stick"),
+    i18nc("The button under the game controller's right analog stick", "Right analog stick"),
+    i18nc("The game controller's left shoulder button", "Left shoulder button"),
+    i18nc("The game controller's right shoulder button", "Right shoulder button"),
+    i18nc("The game controller's d-pad Up button", "D-pad up button"),
+    i18nc("The game controller's d-pad down button", "D-pad down button"),
+    i18nc("The game controller's d-pad left button", "D-pad left button"),
+    i18nc("The game controller's d-pad right button", "D-pad right button"),
+    i18nc("The game controller's miscellaneous button (Share on Xbox, mic on Playstation/Luna, capture on Switch)",
+          "Miscellaneous button"), /* Xbox Series X share button, PS5 microphone button, Nintendo Switch Pro capture button, Amazon Luna microphone button */
+    i18nc("The game controller's 1st paddle button", "Paddle button 1"), /* Xbox Elite paddle P1 (upper left, facing the back) */
+    i18nc("The game controller's 2nd paddle button", "Paddle button 2"), /* Xbox Elite paddle P3 (upper right, facing the back) */
+    i18nc("The game controller's 3rd paddle button", "Paddle button 3"), /* Xbox Elite paddle P2 (lower left, facing the back) */
+    i18nc("The game controller's 4th paddle button", "Paddle button 4"), /* Xbox Elite paddle P4 (lower right, facing the back) */
+    i18nc("The button under the game controller's touchpad", "Touchpad button"), /* PS4/PS5 touchpad button */
+};
+
+QString ButtonToButtonName(SDL_GameControllerButton button)
+{
+    if (button > SDL_CONTROLLER_BUTTON_INVALID && button < SDL_CONTROLLER_BUTTON_MAX) {
+        return kButtonNames.at(button);
+    } else {
+        return i18n("Invalid button value");
+    }
+}
 
 Device::Device(int deviceIndex, QObject *parent)
     : QObject(parent)
@@ -64,9 +99,19 @@ bool Device::open()
         m_leftTrigger = SDL_JoystickGetAxis(m_joystick, SDL_CONTROLLER_AXIS_TRIGGERLEFT);
         m_rightTrigger = SDL_JoystickGetAxis(m_joystick, SDL_CONTROLLER_AXIS_TRIGGERRIGHT);
         qCDebug(KCM_GAMECONTROLLER) << "Device" << m_deviceIndex << "is not a gamepad. using as joystick";
+        m_buttonCount = SDL_JoystickNumButtons(m_joystick);
     } else {
         m_leftTrigger = SDL_GameControllerGetAxis(m_controller, SDL_CONTROLLER_AXIS_TRIGGERLEFT);
         m_rightTrigger = SDL_GameControllerGetAxis(m_controller, SDL_CONTROLLER_AXIS_TRIGGERRIGHT);
+
+        // We have a controller, so check which buttons we have
+        for (int i = 0; i < SDL_CONTROLLER_BUTTON_MAX; ++i) {
+            // If we have this button type, add it to our map and increase count.
+            if (SDL_GameControllerHasButton(m_controller, static_cast<SDL_GameControllerButton>(i))) {
+                m_buttonType[m_buttonCount] = i;
+                m_buttonCount++;
+            }
+        }
     }
     return m_joystick != nullptr;
 }
@@ -136,16 +181,24 @@ bool Device::isVirtual() const
 
 int Device::buttonCount() const
 {
-    return SDL_JoystickNumButtons(m_joystick);
+    return m_buttonCount;
 }
 
 bool Device::buttonState(int index) const
 {
     // If we are a game controller, use that api to get button state
     if (m_controller) {
-        return SDL_GameControllerGetButton(m_controller, static_cast<SDL_GameControllerButton>(index)) != 0;
+        return SDL_GameControllerGetButton(m_controller, static_cast<SDL_GameControllerButton>(m_buttonType.value(index))) != 0;
     }
     return SDL_JoystickGetButton(m_joystick, index) != 0;
+}
+
+QString Device::buttonName(int index) const
+{
+    if (m_controller) {
+        return ButtonToButtonName(static_cast<SDL_GameControllerButton>(m_buttonType.value(index)));
+    }
+    return QString::number(index + 1);
 }
 
 int Device::axisCount() const

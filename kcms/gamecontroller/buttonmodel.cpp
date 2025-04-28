@@ -80,7 +80,7 @@ QVariant ButtonModel::headerData(int section, Qt::Orientation orientation, int r
         if (orientation == Qt::Horizontal && section == 0) {
             return i18nc("@label Button state", "State");
         } else if (orientation == Qt::Vertical) {
-            return QString::number(section + 1);
+            return m_device->buttonName(section);
         }
     }
 
