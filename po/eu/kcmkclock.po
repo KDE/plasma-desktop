@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-24 00:43+0000\n"
+"POT-Creation-Date: 2025-04-28 00:43+0000\n"
 "PO-Revision-Date: 2023-11-09 17:00+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -66,7 +66,7 @@ msgstr "Hemen sistemako dataren hileko eguna, hila eta urtea alda ditzakezu."
 msgid "Time Zone"
 msgstr "Ordu-gunea"
 
-#: dtime.cpp:64
+#: dtime.cpp:63
 #, kde-format
 msgid ""
 "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
@@ -75,7 +75,7 @@ msgstr ""
 "Ez da NTP utilitaterik aurkitu. Instalatu 'ntpdate' edo 'rdate' komandoa, "
 "dataren eta orduaren eguneraketa automatikoa gaitzeko."
 
-#: dtime.cpp:93
+#: dtime.cpp:92
 #, kde-format
 msgid ""
 "Here you can change the system time. Click into the hours, minutes or "
@@ -86,7 +86,7 @@ msgstr ""
 "eremuetan balioa aldatzeko, eskuineko gora eta behera botoiak erabiliz edo "
 "balio berri bat sartuz."
 
-#: dtime.cpp:195
+#: dtime.cpp:194
 #, kde-format
 msgid ""
 "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe."
@@ -96,27 +96,27 @@ msgstr ""
 "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool."
 "ntp.org"
 
-#: dtime.cpp:270
+#: dtime.cpp:269
 #, kde-format
 msgid "Unable to contact time server: %1."
 msgstr "Ezin da jarri harremanetan ordu-zerbitzariarekin: %1."
 
-#: dtime.cpp:274
+#: dtime.cpp:273
 #, kde-format
 msgid "Can not set date."
 msgstr "Ezin da ezarri data."
 
-#: dtime.cpp:277
+#: dtime.cpp:276
 #, kde-format
 msgid "Error setting new time zone."
 msgstr "Errorea ordu-gune berria ezartzean."
 
-#: dtime.cpp:277
+#: dtime.cpp:276
 #, kde-format
 msgid "Time zone Error"
 msgstr "Errorea ordu-gunean"
 
-#: dtime.cpp:295
+#: dtime.cpp:294
 #, kde-format
 msgid ""
 "<h1>Date & Time</h1> This system settings module can be used to set the "

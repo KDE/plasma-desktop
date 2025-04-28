@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-26 00:43+0000\n"
-"PO-Revision-Date: 2025-01-05 18:52+0100\n"
+"PO-Revision-Date: 2025-04-17 09:42+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: inputsequence.cpp:172
 #, kde-format
@@ -263,6 +263,8 @@ msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
 "revert to default calibration in %1 seconds.</b>"
 msgstr ""
+"Tocca di nuovo i bersagli per confermare la nuova calibrazione.<nl/><nl/"
+"><b>Ritorno alla calibrazione predefinita tra %1 secondi.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -278,7 +280,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Tap the center of each target."
-msgstr ""
+msgstr "Tocca il centro di tutti i bersagli."
 
 #: ui/Calibration.qml:112
 #, kde-format
@@ -290,7 +292,7 @@ msgstr "Raffina calibrazione esistente"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset and Try Again"
-msgstr ""
+msgstr "Azzera e prova di nuovo"
 
 #: ui/Calibration.qml:121
 #, kde-format
@@ -542,12 +544,10 @@ msgid "Calibration Not Supported"
 msgstr "Calibrazione non supportata"
 
 #: ui/StylusTab.qml:532
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Refine Existing Calibration"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
-msgstr "Raffina calibrazione esistente"
+msgstr "Azzera la calibrazione personalizzata"
 
 #: ui/StylusTab.qml:546
 #, kde-format
@@ -556,6 +556,8 @@ msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
 "correctly, try resetting this first."
 msgstr ""
+"Questa tavoletta è stata calibrata manualmente: se non funziona più come "
+"dovrebbe, prova prima a reimpostarla."
 
 #: ui/Tester.qml:25
 #, kde-format

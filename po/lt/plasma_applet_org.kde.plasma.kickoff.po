@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-25 00:43+0000\n"
-"PO-Revision-Date: 2024-12-06 21:47+0200\n"
+"PO-Revision-Date: 2025-04-28 01:19+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -160,11 +160,10 @@ msgid "General:"
 msgstr "Bendra:"
 
 #: package/contents/ui/ConfigGeneral.qml:176
-#, fuzzy, kde-format
-#| msgid "Always sort applications alphabetically"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
-msgstr "Visada rikiuoti programas pagal abėcėlę"
+msgstr "Rikiuoti programas pagal abėcėlę"
 
 #: package/contents/ui/ConfigGeneral.qml:180
 #, kde-format
@@ -173,6 +172,8 @@ msgid ""
 "This doesn't affect how applications are sorted in either search results or "
 "the favorites page."
 msgstr ""
+"Tai nepaveikia to, kaip programos yra rikiuojamos paieškos rezultatuose ar "
+"mėgstamų puslapyje."
 
 #: package/contents/ui/ConfigGeneral.qml:186
 #, kde-format
@@ -188,7 +189,7 @@ msgstr "Lietimo veiksenoje yra automatiškai išjungiama"
 #: package/contents/ui/ConfigGeneral.qml:200
 #, kde-format
 msgid "Highlight newly installed applications"
-msgstr ""
+msgstr "Paryškinti naujai įdiegtas programas"
 
 #: package/contents/ui/ConfigGeneral.qml:205
 #, kde-format
@@ -309,14 +310,13 @@ msgstr "Palikti atvertą"
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Nauja!"
 
 #: package/contents/ui/KickoffGridDelegate.qml:61
 #: package/contents/ui/KickoffListDelegate.qml:121
-#, fuzzy, kde-format
-#| msgid "Recently Used Applications"
+#, kde-format
 msgid "Newly installed application"
-msgstr "Paskiausios programos"
+msgstr "Naujai įdiegta programa"
 
 #: package/contents/ui/KickoffGridView.qml:102
 #, kde-format
@@ -326,7 +326,7 @@ msgstr "Tinklelis, kuriame eilučių: %1, stulpelių: %2"
 #: package/contents/ui/KickoffListDelegate.qml:120
 #, kde-format
 msgid "There is a newly installed application in this category"
-msgstr ""
+msgstr "Šioje kategorijoje yra naujai įdiegta programa"
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format

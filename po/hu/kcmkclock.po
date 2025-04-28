@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-24 00:43+0000\n"
+"POT-Creation-Date: 2025-04-28 00:43+0000\n"
 "PO-Revision-Date: 2023-12-15 13:18+0100\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -58,7 +58,7 @@ msgstr "Itt lehet módosítani a rendszerdátum év, hónap és nap mezőjét."
 msgid "Time Zone"
 msgstr "Időzóna"
 
-#: dtime.cpp:64
+#: dtime.cpp:63
 #, kde-format
 msgid ""
 "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
@@ -67,7 +67,7 @@ msgstr ""
 "Nem található NTP-segédprogram. Telepítse az „ntpdate” vagy „rdate” "
 "alkalmazást a dátum és idő atuomatikus frissítésének bekapcsolásához."
 
-#: dtime.cpp:93
+#: dtime.cpp:92
 #, kde-format
 msgid ""
 "Here you can change the system time. Click into the hours, minutes or "
@@ -78,7 +78,7 @@ msgstr ""
 "mezőkre az értékek megváltoztatásához és írja be az új értéket, vagy "
 "használja a fel/le gombokat."
 
-#: dtime.cpp:195
+#: dtime.cpp:194
 #, kde-format
 msgid ""
 "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe."
@@ -88,27 +88,27 @@ msgstr ""
 "europe.pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool."
 "ntp.org"
 
-#: dtime.cpp:270
+#: dtime.cpp:269
 #, kde-format
 msgid "Unable to contact time server: %1."
 msgstr "Nem sikerült elérni ezt az időszolgáltatót: %1."
 
-#: dtime.cpp:274
+#: dtime.cpp:273
 #, kde-format
 msgid "Can not set date."
 msgstr "Nem sikerült beállítani a dátumot."
 
-#: dtime.cpp:277
+#: dtime.cpp:276
 #, kde-format
 msgid "Error setting new time zone."
 msgstr "Nem sikerült beállítani az új időzónát."
 
-#: dtime.cpp:277
+#: dtime.cpp:276
 #, kde-format
 msgid "Time zone Error"
 msgstr "Időzóna-hiba"
 
-#: dtime.cpp:295
+#: dtime.cpp:294
 #, kde-format
 msgid ""
 "<h1>Date & Time</h1> This system settings module can be used to set the "

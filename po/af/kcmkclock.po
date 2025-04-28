@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock stable\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-24 00:43+0000\n"
+"POT-Creation-Date: 2025-04-28 00:43+0000\n"
 "PO-Revision-Date: 2005-09-14 06:00+0200\n"
 "Last-Translator: Kobus Venter <kabousv@therugby.co.za>\n"
 "Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
@@ -60,14 +60,14 @@ msgstr ""
 msgid "Time Zone"
 msgstr "Tydsone Fout"
 
-#: dtime.cpp:64
+#: dtime.cpp:63
 #, kde-format
 msgid ""
 "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
 "enable automatic updating of date and time."
 msgstr ""
 
-#: dtime.cpp:93
+#: dtime.cpp:92
 #, kde-format
 msgid ""
 "Here you can change the system time. Click into the hours, minutes or "
@@ -78,7 +78,7 @@ msgstr ""
 "sekondes veld om die relevante waarde te verander deur òf die op en af "
 "knoppies te gebruik na die regterkant of deur 'n nuwe waarde in te tik."
 
-#: dtime.cpp:195
+#: dtime.cpp:194
 #, fuzzy, kde-format
 #| msgid ""
 #| "Public Time Server (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,"
@@ -90,29 +90,29 @@ msgstr ""
 "Publieke Tyd spaarder (pool.ntp.org),asia.pool.ntp.org,europe.pool.ntp.org,"
 "north-america.pool.ntp.org,oceania.pool.ntp.org"
 
-#: dtime.cpp:270
+#: dtime.cpp:269
 #, kde-format
 msgid "Unable to contact time server: %1."
 msgstr ""
 
-#: dtime.cpp:274
+#: dtime.cpp:273
 #, kde-format
 msgid "Can not set date."
 msgstr "Kan nie datum stel nie."
 
-#: dtime.cpp:277
+#: dtime.cpp:276
 #, fuzzy, kde-format
 #| msgid "Error setting new timezone."
 msgid "Error setting new time zone."
 msgstr "Fout instelling nuwe Tyd Sone."
 
-#: dtime.cpp:277
+#: dtime.cpp:276
 #, fuzzy, kde-format
 #| msgid "Timezone Error"
 msgid "Time zone Error"
 msgstr "Tydsone Fout"
 
-#: dtime.cpp:295
+#: dtime.cpp:294
 #, fuzzy, kde-format
 #| msgid ""
 #| "<h1>Date & Time</h1> This control module can be used to set the system "

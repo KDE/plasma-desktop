@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-24 00:43+0000\n"
+"POT-Creation-Date: 2025-04-28 00:43+0000\n"
 "PO-Revision-Date: 2004-05-23 16:14-0500\n"
 "Last-Translator: Deepayan Sarkar <deepayan@bengalinux.org>\n"
 "Language-Team: Bengali <kde-translation@bengalinux.org>\n"
@@ -55,14 +55,14 @@ msgstr "এখানে আপনি সিস্টেম সময়ের দ�
 msgid "Time Zone"
 msgstr "টাইম জোন সমস্যা"
 
-#: dtime.cpp:64
+#: dtime.cpp:63
 #, kde-format
 msgid ""
 "No NTP utility has been found. Install 'ntpdate' or 'rdate' command to "
 "enable automatic updating of date and time."
 msgstr ""
 
-#: dtime.cpp:93
+#: dtime.cpp:92
 #, fuzzy, kde-format
 msgid ""
 "Here you can change the system time. Click into the hours, minutes or "
@@ -73,34 +73,34 @@ msgstr ""
 "প্রতি পরিবর্তন টি প্রাসঙ্গিক মান হয় ব্যবহার করে টি উপর এবং নীচে প্রতি টি ডানদিক "
 "অথবা দ্বারা প্রবেশ করা একটি নতুন মান."
 
-#: dtime.cpp:195
+#: dtime.cpp:194
 #, kde-format
 msgid ""
 "Public Time Server (pool.ntp.org),        asia.pool.ntp.org,        europe."
 "pool.ntp.org,        north-america.pool.ntp.org,        oceania.pool.ntp.org"
 msgstr ""
 
-#: dtime.cpp:270
+#: dtime.cpp:269
 #, kde-format
 msgid "Unable to contact time server: %1."
 msgstr ""
 
-#: dtime.cpp:274
+#: dtime.cpp:273
 #, kde-format
 msgid "Can not set date."
 msgstr "তারিখ নির্ধারণ করা যায়নি।"
 
-#: dtime.cpp:277
+#: dtime.cpp:276
 #, fuzzy, kde-format
 msgid "Error setting new time zone."
 msgstr "নতুন টাইম জোন নির্ধারণ করাকালীন সমস্যা!"
 
-#: dtime.cpp:277
+#: dtime.cpp:276
 #, fuzzy, kde-format
 msgid "Time zone Error"
 msgstr "টাইম জোন সমস্যা"
 
-#: dtime.cpp:295
+#: dtime.cpp:294
 #, fuzzy, kde-format
 msgid ""
 "<h1>Date & Time</h1> This system settings module can be used to set the "
