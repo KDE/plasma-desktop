@@ -26,9 +26,14 @@ KCMWorkspaceOptions::KCMWorkspaceOptions(QObject *parent, const KPluginMetaData 
     : KQuickManagedConfigModule(parent, metaData)
     , m_data(new WorkspaceOptionsData(this))
 {
-    qmlRegisterAnonymousType<WorkspaceOptionsGlobalsSettings>("org.kde.plasma.workspaceoptions.kcm", 0);
-    qmlRegisterAnonymousType<WorkspaceOptionsPlasmaSettings>("org.kde.plasma.workspaceoptions.kcm", 0);
-    qmlRegisterAnonymousType<WorkspaceOptionsKwinSettings>("org.kde.plasma.workspaceoptions.kcm", 0);
+    qmlRegisterAnonymousType<WorkspaceOptionsPlasmaSettings>("org.kde.plasma.workspaceoptions.kcm", 1);
+    qmlRegisterAnonymousType<WorkspaceOptionsKwinSettings>("org.kde.plasma.workspaceoptions.kcm", 1);
+
+    qmlRegisterUncreatableType<WorkspaceOptionsGlobalsSettings>("org.kde.plasma.workspaceoptions.kcm",
+                                                                1,
+                                                                0,
+                                                                "WorkspaceOptionsGlobalsSettings",
+                                                                QStringLiteral("Registered for enum access only"));
 
     setButtons(Apply | Default | Help);
 }
