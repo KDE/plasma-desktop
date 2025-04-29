@@ -84,9 +84,14 @@
       </choices>
       <default>1</default>
     </entry>
-    <entry name="wheelEnabled" type="Bool">
+    <entry name="wheelEnabled" type="Enum">
       <label>Whether using the mouse wheel with the mouse pointer above the widget should switch between tasks.</label>
-      <default>false</default>
+      <choices>
+        <choice name="None"/>
+        <choice name="AllTask"/>
+        <choice name="TaskOnly"/>
+      </choices>
+      <default>0</default>
     </entry>
     <entry name="wheelSkipMinimized" type="Bool">
       <label>Whether to skip minimized tasks when switching between them using the mouse wheel.</label>

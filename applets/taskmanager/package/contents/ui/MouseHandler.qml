@@ -164,7 +164,7 @@ DropArea {
 
         property bool handleWheelEvents: true
 
-        enabled: handleWheelEvents && Plasmoid.configuration.wheelEnabled
+        enabled: handleWheelEvents && Plasmoid.configuration.wheelEnabled !== 0
 
         onWheel: event => {
             // magic number 15 for common "one scroll"
@@ -180,7 +180,7 @@ DropArea {
             }
             const anchor = dropArea.target.childAt(event.x, event.y);
             while (increment !== 0) {
-                TaskTools.activateNextPrevTask(anchor, increment < 0, Plasmoid.configuration.wheelSkipMinimized, tasks);
+                TaskTools.activateNextPrevTask(anchor, increment < 0, Plasmoid.configuration.wheelSkipMinimized, Plasmoid.configuration.wheelEnabled, tasks);
                 increment += (increment < 0) ? 1 : -1;
             }
         }

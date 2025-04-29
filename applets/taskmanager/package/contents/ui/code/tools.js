@@ -13,9 +13,31 @@
 // Can't be `let`, or else QML counterpart won't be able to assign to it.
 var taskManagerInstanceCount = 0;
 
-function activateNextPrevTask(anchor, next, wheelSkipMinimized, tasks) {
+function activateNextPrevTask(anchor, next, wheelSkipMinimized, wheelEnabled, tasks) {
     // FIXME TODO: Unnecessarily convoluted and costly; optimize.
 
+    //Get the number of open windows for the application
+    const anchorModelIndex = anchor.modelIndex(anchor.index);
+    const winIdList = tasks.tasksModel.data(anchorModelIndex, TaskManager.AbstractTasksModel.WinIdList);
+    const windowCount = winIdList ? winIdList.length : 0;
+
+    if (wheelEnabled === 2) { // TaskOnly
+        // No windows
+        if (windowCount === 0) {
+            return;
+        }
+
+        // Single window
+        if (windowCount === 1) {
+            const isHidden = tasks.tasksModel.data(anchorModelIndex, TaskManager.AbstractTasksModel.IsHidden);
+            if (!wheelSkipMinimized || !isHidden) {
+                tasks.tasksModel.requestActivate(anchorModelIndex);
+            }
+            return;
+        }
+    }
+
+    // Multiple windows
     let taskIndexList = [];
     const activeTaskIndex = tasks.tasksModel.activeTask;
 
@@ -25,7 +47,7 @@ function activateNextPrevTask(anchor, next, wheelSkipMinimized, tasks) {
 
         if (!task.model.IsLauncher && !task.model.IsStartup) {
             if (task.model.IsGroupParent) {
-                if (task === anchor) { // If the anchor is a group parent, collect only windows within the group.
+                if (wheelEnabled === 2 && task === anchor) { // If TaskOnly mode and the anchor is a group parent, collect only windows within the group.
                     taskIndexList = [];
                 }
 
@@ -37,7 +59,7 @@ function activateNextPrevTask(anchor, next, wheelSkipMinimized, tasks) {
                     }
                 }
 
-                if (task === anchor) { // See above.
+                if (wheelEnabled === 2 && task === anchor) { // If TaskOnly mode, break after processing the anchor group.
                     break;
                 }
             } else {

@@ -25,7 +25,7 @@ KCMUtils.SimpleKCM {
     property alias cfg_separateLaunchers: separateLaunchers.checked
     property alias cfg_hideLauncherOnStart: hideLauncherOnStart.checked
     property alias cfg_middleClickAction: middleClickAction.currentIndex
-    property alias cfg_wheelEnabled: wheelEnabled.checked
+    property alias cfg_wheelEnabled: wheelEnabled.currentIndex
     property alias cfg_wheelSkipMinimized: wheelSkipMinimized.checked
     property alias cfg_showOnlyCurrentScreen: showOnlyCurrentScreen.checked
     property alias cfg_showOnlyCurrentDesktop: showOnlyCurrentDesktop.checked
@@ -200,10 +200,16 @@ KCMUtils.SimpleKCM {
             Kirigami.FormData.isSection: true
         }
 
-        QQC2.CheckBox {
+        QQC2.ComboBox {
             id: wheelEnabled
-            Kirigami.FormData.label: i18nc("@label for checkbox Part of a sentence: 'Mouse wheel cycles through tasks'", "Mouse wheel:")
-            text: i18nc("@option:check Part of a sentence: 'Mouse wheel cycles through tasks'", "Cycles through tasks")
+            Kirigami.FormData.label: i18nc("@label:listbox completes sentence like: … does nothing", "Scrolling on a task:")
+            Layout.fillWidth: true
+            Layout.minimumWidth: Kirigami.Units.gridUnit * 14
+            model: [
+                i18nc("@item:inlistbox Part of a sentence: 'Scrolling on any task does nothing'", "Does nothing"),
+                i18nc("@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through all tasks'", "Cycles through all tasks"),
+                i18nc("@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through that task's windows only'", "Cycles through that task's windows"),
+            ]
         }
 
         QQC2.CheckBox {
@@ -211,7 +217,7 @@ KCMUtils.SimpleKCM {
             leftPadding: mirrored ? 0 : (wheelEnabled.indicator.width + wheelEnabled.spacing)
             rightPadding: mirrored ? (wheelEnabled.indicator.width + wheelEnabled.spacing) : 0
             text: i18nc("@option:check mouse wheel task cycling", "Skip minimized tasks")
-            enabled: wheelEnabled.checked
+            enabled: wheelEnabled.currentIndex !== 0 // None
         }
 
         Item {
