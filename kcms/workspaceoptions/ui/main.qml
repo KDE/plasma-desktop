@@ -42,6 +42,11 @@ KCM.SimpleKCM {
 
     Kirigami.FormLayout {
 
+        Item {
+            Kirigami.FormData.isSection: true
+            Kirigami.FormData.label: i18nc("@title:group", "Plasma")
+        }
+
         // Visual behavior settings
         RowLayout {
             Kirigami.FormData.label: i18nc("Part of the sentence 'Allow Plasma to show panel and widget tooltips'", "Allow Plasma to show:")
@@ -83,12 +88,64 @@ KCM.SimpleKCM {
             }
         }
 
+
+        Item {
+            Kirigami.FormData.isSection: true
+            Kirigami.FormData.label: i18nc("@title:group", "Scrolling")
+        }
+
+        QQC2.ButtonGroup { id: scrollHandleBehaviorGroup }
+
+        QQC2.RadioButton {
+            Kirigami.FormData.label: i18n("Clicking in scrollbar track:")
+            text: i18nc("@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to the clicked location'", "Scrolls to the clicked location")
+            checked: !kcm.globalsSettings.scrollbarLeftClickNavigatesByPage
+            onToggled: kcm.globalsSettings.scrollbarLeftClickNavigatesByPage = false
+            QQC2.ButtonGroup.group: scrollHandleBehaviorGroup
+
+            KCM.SettingStateBinding {
+                configObject: kcm.globalsSettings
+                settingName: "scrollbarLeftClickNavigatesByPage"
+                extraEnabledConditions: scrollbarLeftClickNavigatesByPage.enabled
+            }
+        }
+
+        ColumnLayout {
+            Layout.fillWidth: true
+            spacing: 0
+
+            QQC2.RadioButton {
+                id: scrollbarLeftClickNavigatesByPage
+                text: i18nc("@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one page up or down'", "Scrolls one page up or down")
+                Accessible.description: scrollbarLeftClickNavigatesByPageHelperText.text
+                checked: kcm.globalsSettings.scrollbarLeftClickNavigatesByPage
+                onToggled: kcm.globalsSettings.scrollbarLeftClickNavigatesByPage = true
+                QQC2.ButtonGroup.group: scrollHandleBehaviorGroup
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.globalsSettings
+                    settingName: "scrollbarLeftClickNavigatesByPage"
+                }
+            }
+            QQC2.Label {
+                id: scrollbarLeftClickNavigatesByPageHelperText
+                Layout.fillWidth: true
+                leftPadding: Application.layoutDirection === Qt.LeftToRight ?
+                scrollbarLeftClickNavigatesByPage.indicator.width + scrollbarLeftClickNavigatesByPage.spacing : scrollbarLeftClickNavigatesByPageHelperText.padding
+                rightPadding: Application.layoutDirection === Qt.RightToLeft ?
+                scrollbarLeftClickNavigatesByPage.indicator.width + scrollbarLeftClickNavigatesByPage.spacing : scrollbarLeftClickNavigatesByPageHelperText.padding
+                text: i18n("Middle-click to scroll to clicked location")
+                textFormat: Text.PlainText
+                elide: Text.ElideRight
+                font: Kirigami.Theme.smallFont
+            }
+        }
+
         Item {
             Kirigami.FormData.isSection: false
         }
 
         RowLayout {
-            Kirigami.FormData.label: i18nc("@label", "Scrolling:")
             spacing: 0
 
             QQC2.CheckBox {
@@ -106,11 +163,11 @@ KCM.SimpleKCM {
             }
         }
 
+
         Item {
             Kirigami.FormData.isSection: true
+            Kirigami.FormData.label: i18nc("@title:group", "Clicking")
         }
-
-        // Click behavior settings
 
         QQC2.ButtonGroup { id: singleClickGroup }
 
@@ -180,59 +237,6 @@ KCM.SimpleKCM {
         }
 
         Item {
-            Kirigami.FormData.isSection: false
-        }
-
-        // scroll handle settings
-
-        QQC2.ButtonGroup { id: scrollHandleBehaviorGroup }
-
-        QQC2.RadioButton {
-            Kirigami.FormData.label: i18n("Clicking in scrollbar track:")
-            text: i18nc("@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to the clicked location'", "Scrolls to the clicked location")
-            checked: !kcm.globalsSettings.scrollbarLeftClickNavigatesByPage
-            onToggled: kcm.globalsSettings.scrollbarLeftClickNavigatesByPage = false
-            QQC2.ButtonGroup.group: scrollHandleBehaviorGroup
-
-            KCM.SettingStateBinding {
-                configObject: kcm.globalsSettings
-                settingName: "scrollbarLeftClickNavigatesByPage"
-                extraEnabledConditions: scrollbarLeftClickNavigatesByPage.enabled
-            }
-        }
-
-        ColumnLayout {
-            Layout.fillWidth: true
-            spacing: 0
-
-            QQC2.RadioButton {
-                id: scrollbarLeftClickNavigatesByPage
-                text: i18nc("@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one page up or down'", "Scrolls one page up or down")
-                Accessible.description: scrollbarLeftClickNavigatesByPageHelperText.text
-                checked: kcm.globalsSettings.scrollbarLeftClickNavigatesByPage
-                onToggled: kcm.globalsSettings.scrollbarLeftClickNavigatesByPage = true
-                QQC2.ButtonGroup.group: scrollHandleBehaviorGroup
-
-                KCM.SettingStateBinding {
-                    configObject: kcm.globalsSettings
-                    settingName: "scrollbarLeftClickNavigatesByPage"
-                }
-            }
-            QQC2.Label {
-                id: scrollbarLeftClickNavigatesByPageHelperText
-                Layout.fillWidth: true
-                leftPadding: Application.layoutDirection === Qt.LeftToRight ?
-                    scrollbarLeftClickNavigatesByPage.indicator.width + scrollbarLeftClickNavigatesByPage.spacing : scrollbarLeftClickNavigatesByPageHelperText.padding
-                rightPadding: Application.layoutDirection === Qt.RightToLeft ?
-                    scrollbarLeftClickNavigatesByPage.indicator.width + scrollbarLeftClickNavigatesByPage.spacing : scrollbarLeftClickNavigatesByPageHelperText.padding
-                text: i18n("Middle-click to scroll to clicked location")
-                textFormat: Text.PlainText
-                elide: Text.ElideRight
-                font: Kirigami.Theme.smallFont
-            }
-        }
-
-        Item {
             Kirigami.FormData.isSection: true
             visible: primarySelectionRadio.visible
         }
@@ -251,98 +255,13 @@ KCM.SimpleKCM {
             }
         }
 
-        Item {
-            Kirigami.FormData.isSection: true
-        }
-
-        QQC2.ButtonGroup { id: tabletModeBehaviorGroup }
-
-        RowLayout {
-            Kirigami.FormData.label: i18n("Touch Mode:")
-            QQC2.RadioButton {
-                text: KWindowSystem.isPlatformWayland ? i18nc("As in: 'Touch Mode is automatically enabled as needed'", "Automatically enable as needed") : i18nc("As in: 'Touch Mode is never enabled'", "Never enabled")
-                Accessible.description: touchModeAlwaysOffRadioButtonHelperText.text
-                checked: kcm.kwinSettings.tabletMode === "auto"
-                onToggled: {
-                    if (checked) {
-                        kcm.kwinSettings.tabletMode = "auto"
-                    }
-                }
-                QQC2.ButtonGroup.group: tabletModeBehaviorGroup
-
-                KCM.SettingStateBinding {
-                    configObject: kcm.kwinSettings
-                    settingName: "tabletMode"
-                }
-            }
-            Kirigami.ContextualHelpButton {
-                visible: KWindowSystem.isPlatformWayland
-                toolTipText: i18n("Touch Mode will be automatically activated whenever the system detects a touchscreen but no mouse or touchpad. For example: when a transformable laptop's keyboard is flipped around or detached.")
-            }
-        }
-
-        QQC2.RadioButton {
-            text: i18nc("As in: 'Touch Mode is always enabled'", "Always enabled")
-            Accessible.description: touchModeAlwaysOffRadioButtonHelperText.text
-            checked: kcm.kwinSettings.tabletMode === "on"
-            onToggled: {
-                if (checked) {
-                    kcm.kwinSettings.tabletMode = "on"
-                }
-            }
-            QQC2.ButtonGroup.group: tabletModeBehaviorGroup
-
-            KCM.SettingStateBinding {
-                configObject: kcm.kwinSettings
-                settingName: "tabletMode"
-            }
-        }
-
-        ColumnLayout {
-            Layout.fillWidth: true
-            spacing: 0
-
-            QQC2.RadioButton {
-                id: touchModeAlwaysOffRadioButton
-                visible: KWindowSystem.isPlatformWayland
-                text: i18nc("As in: 'Touch Mode is never enabled'", "Never enabled")
-                Accessible.description: touchModeAlwaysOffRadioButtonHelperText.text
-                checked: kcm.kwinSettings.tabletMode === "off"
-                onToggled: {
-                    if (checked) {
-                        kcm.kwinSettings.tabletMode = "off"
-                    }
-                }
-                QQC2.ButtonGroup.group: tabletModeBehaviorGroup
-
-                KCM.SettingStateBinding {
-                    configObject: kcm.kwinSettings
-                    settingName: "tabletMode"
-                }
-            }
-            QQC2.Label {
-                id: touchModeAlwaysOffRadioButtonHelperText
-                Layout.fillWidth: true
-                Layout.preferredWidth: Kirigami.Units.gridUnit * 20
-                leftPadding: Application.layoutDirection === Qt.LeftToRight ?
-                    touchModeAlwaysOffRadioButton.indicator.width + touchModeAlwaysOffRadioButton.spacing : touchModeAlwaysOffRadioButton.padding
-                rightPadding: Application.layoutDirection === Qt.RightToLeft ?
-                    touchModeAlwaysOffRadioButton.indicator.width + touchModeAlwaysOffRadioButton.spacing : touchModeAlwaysOffRadioButtonHelperText.padding
-                text: i18n("In Touch Mode, many elements of the user interface will become larger to more easily accommodate touch interaction.")
-                textFormat: Text.PlainText
-                elide: Text.ElideRight
-                font: Kirigami.Theme.smallFont
-                wrapMode: Text.WordWrap
-            }
-        }
-
         // There is no label for what middle-clicking does when using the
         // "click to zoom the handle" behavior because Qt doesn't invert the
         // middle-click functionality when using this; see
         // https://bugreports.qt.io/browse/QTBUG-80728
 
         Item {
-            Kirigami.FormData.isSection: true
+            Kirigami.FormData.isSection: false
         }
 
         RowLayout {
@@ -428,17 +347,18 @@ KCM.SimpleKCM {
                 }
             }
         }
-        Item {
-            Kirigami.FormData.isSection: false
-        }
 
-        // Drag&Drop behavior settings
+
+        Item {
+            Kirigami.FormData.isSection: true
+            Kirigami.FormData.label: i18n("Drag and Drop")
+        }
 
         QQC2.ButtonGroup { id: dndBehaviorGroup }
 
         QQC2.RadioButton {
             id: dndBehaviorAsk
-            Kirigami.FormData.label: i18n("Drag and drop behavior:")
+            Kirigami.FormData.label: i18n("When dragging files or folders:")
             text: i18n("Always ask what to do")
             Accessible.description: dndBehaviorAskHelperText.text
             enabled: !kcm.globalsSettings.isImmutable("dndBehavior")
@@ -463,7 +383,7 @@ KCM.SimpleKCM {
 
         QQC2.RadioButton {
             id: dndBehaviorMove
-            text: i18n("Move files if on the same device")
+            text: i18n("Move if on the same device")
             Accessible.description: dndBehaviorMoveHelperText.text
             enabled: !kcm.globalsSettings.isImmutable("dndBehavior")
             checked: kcm.globalsSettings.dndBehavior === WorkspaceOptionsGlobalsSettings.MoveIfSameDevice
@@ -482,6 +402,93 @@ KCM.SimpleKCM {
             text: xi18nc("@info", "Hold <shortcut>Shift</shortcut> when dropping to show other options.")
             elide: Text.ElideRight
             font: Kirigami.Theme.smallFont
+        }
+
+
+        Item {
+            Kirigami.FormData.isSection: true
+            Kirigami.FormData.label: i18nc("@title:group", "Touch")
+        }
+
+        QQC2.ButtonGroup { id: tabletModeBehaviorGroup }
+
+        RowLayout {
+            Kirigami.FormData.label: i18n("Enable Touch Mode:")
+            QQC2.RadioButton {
+                text: KWindowSystem.isPlatformWayland ? i18nc("As in: 'Touch Mode is automatically enabled as needed'", "Automatically enable as needed") : i18nc("As in: 'Touch Mode is never enabled'", "Never enabled")
+                Accessible.description: touchModeAlwaysOffRadioButtonHelperText.text
+                checked: kcm.kwinSettings.tabletMode === "auto"
+                onToggled: {
+                    if (checked) {
+                        kcm.kwinSettings.tabletMode = "auto"
+                    }
+                }
+                QQC2.ButtonGroup.group: tabletModeBehaviorGroup
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.kwinSettings
+                    settingName: "tabletMode"
+                }
+            }
+            Kirigami.ContextualHelpButton {
+                visible: KWindowSystem.isPlatformWayland
+                toolTipText: i18n("Touch Mode will be automatically activated whenever the system detects a touchscreen but no mouse or touchpad. For example: when a transformable laptop's keyboard is flipped around or detached.")
+            }
+        }
+
+        QQC2.RadioButton {
+            text: i18nc("As in: 'Touch Mode is always enabled'", "Always active")
+            Accessible.description: touchModeAlwaysOffRadioButtonHelperText.text
+            checked: kcm.kwinSettings.tabletMode === "on"
+            onToggled: {
+                if (checked) {
+                    kcm.kwinSettings.tabletMode = "on"
+                }
+            }
+            QQC2.ButtonGroup.group: tabletModeBehaviorGroup
+
+            KCM.SettingStateBinding {
+                configObject: kcm.kwinSettings
+                settingName: "tabletMode"
+            }
+        }
+
+        ColumnLayout {
+            Layout.fillWidth: true
+            spacing: 0
+
+            QQC2.RadioButton {
+                id: touchModeAlwaysOffRadioButton
+                visible: KWindowSystem.isPlatformWayland
+                text: i18nc("As in: 'Touch Mode is never enabled'", "Disabled")
+                Accessible.description: touchModeAlwaysOffRadioButtonHelperText.text
+                checked: kcm.kwinSettings.tabletMode === "off"
+                onToggled: {
+                    if (checked) {
+                        kcm.kwinSettings.tabletMode = "off"
+                    }
+                }
+                QQC2.ButtonGroup.group: tabletModeBehaviorGroup
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.kwinSettings
+                    settingName: "tabletMode"
+                }
+            }
+            QQC2.Label {
+                id: touchModeAlwaysOffRadioButtonHelperText
+                Layout.fillWidth: true
+                Layout.preferredWidth: Kirigami.Units.gridUnit * 20
+                leftPadding: Application.layoutDirection === Qt.LeftToRight ?
+                touchModeAlwaysOffRadioButton.indicator.width + touchModeAlwaysOffRadioButton.spacing : touchModeAlwaysOffRadioButton.padding
+                rightPadding: Application.layoutDirection === Qt.RightToLeft ?
+                touchModeAlwaysOffRadioButton.indicator.width + touchModeAlwaysOffRadioButton.spacing : touchModeAlwaysOffRadioButtonHelperText.padding
+                text: i18n("In Touch Mode, many elements of the user interface will become larger to more easily accommodate touch interaction.")
+                textFormat: Text.PlainText
+                elide: Text.ElideRight
+                font: Kirigami.Theme.smallFont
+                wrapMode: Text.WordWrap
+            }
         }
     }
 }
