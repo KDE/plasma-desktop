@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-24 00:43+0000\n"
+"POT-Creation-Date: 2025-04-30 00:44+0000\n"
 "PO-Revision-Date: 2024-06-09 14:59+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: ui/main.qml:23
+#: ui/main.qml:25
 #, kde-format
 msgid ""
 "The system must be restarted before changes to the middle-click paste "
@@ -27,24 +27,24 @@ msgstr ""
 "Sistemul trebuie repornit pentru ca modificările lipirii cu clic mijlociu să "
 "intre în vigoare."
 
-#: ui/main.qml:29
+#: ui/main.qml:31
 #, kde-format
 msgid "Restart"
 msgstr "Repornește"
 
-#: ui/main.qml:45
+#: ui/main.qml:47
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
 msgstr ""
 
-#: ui/main.qml:52
+#: ui/main.qml:54
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
 msgstr ""
 
-#: ui/main.qml:62
+#: ui/main.qml:64
 #, kde-format
 msgid ""
 "Allows all Plasma panel and desktop widgets to show descriptive tooltips "
@@ -53,7 +53,7 @@ msgid ""
 "interface elements."
 msgstr ""
 
-#: ui/main.qml:70
+#: ui/main.qml:72
 #, fuzzy, kde-format
 #| msgid "Show a popup on layout changes"
 msgctxt ""
@@ -61,26 +61,26 @@ msgctxt ""
 msgid "OSD popups for status changes"
 msgstr "Arată mesaj plutitor la schimbarea aranjamentului"
 
-#: ui/main.qml:80
+#: ui/main.qml:82
 #, kde-format
 msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
 
-#: ui/main.qml:89
+#: ui/main.qml:91
 #, kde-format
 msgctxt "@label"
 msgid "Scrolling:"
 msgstr "Derulare:"
 
-#: ui/main.qml:93
+#: ui/main.qml:95
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
 msgstr "Preferă derularea lină"
 
-#: ui/main.qml:103
+#: ui/main.qml:105
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -94,41 +94,41 @@ msgstr ""
 "această opțiune fie pentru că nu susține derularea lină, fie pentru că au "
 "propria configurare pentru activarea sau dezactivarea acesteia."
 
-#: ui/main.qml:116
+#: ui/main.qml:118
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Apăsarea pe fișiere sau dosare:"
 
-#: ui/main.qml:123
+#: ui/main.qml:125
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Le selectează"
 
-#: ui/main.qml:142
+#: ui/main.qml:144
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Deschide prin apăsare dublă în schimb"
 
-#: ui/main.qml:155
+#: ui/main.qml:157
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Le deschide"
 
-#: ui/main.qml:173
+#: ui/main.qml:175
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "Se alege apăsând pe marcatorul de selecție al elementului"
 
-#: ui/main.qml:189
+#: ui/main.qml:191
 #, kde-format
 msgid "Clicking in scrollbar track:"
 msgstr "Apăsarea în calea barei de derulare:"
 
-#: ui/main.qml:190
+#: ui/main.qml:192
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
@@ -136,7 +136,7 @@ msgctxt ""
 msgid "Scrolls to the clicked location"
 msgstr "Derulează la locul apăsat"
 
-#: ui/main.qml:208
+#: ui/main.qml:210
 #, kde-format
 msgctxt ""
 "@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
@@ -144,12 +144,12 @@ msgctxt ""
 msgid "Scrolls one page up or down"
 msgstr "Derulează cu o pagină în sus sau jos"
 
-#: ui/main.qml:226
+#: ui/main.qml:228
 #, kde-format
 msgid "Middle-click to scroll to clicked location"
 msgstr "Clic-mijloc pentru derulare la locul ales"
 
-#: ui/main.qml:240
+#: ui/main.qml:242
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@radio part of a complete sentence: 'Middle click pastes selected text'"
@@ -160,7 +160,7 @@ msgctxt ""
 msgid "Middle-click:"
 msgstr "Clic mijlociu:"
 
-#: ui/main.qml:242
+#: ui/main.qml:244
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@radio part of a complete sentence: 'Middle click pastes selected text'"
@@ -171,24 +171,24 @@ msgctxt ""
 msgid "Pastes selected text"
 msgstr "Lipește textul ales"
 
-#: ui/main.qml:259
+#: ui/main.qml:261
 #, kde-format
 msgid "Touch Mode:"
 msgstr "Regim tactil:"
 
-#: ui/main.qml:261
+#: ui/main.qml:263
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Activează automat după necesitate"
 
-#: ui/main.qml:261 ui/main.qml:306
+#: ui/main.qml:263 ui/main.qml:308
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Niciodată activ"
 
-#: ui/main.qml:278
+#: ui/main.qml:280
 #, kde-format
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
@@ -199,13 +199,13 @@ msgstr ""
 "ecran tactil dar fără maus sau zonă tactilă. De exemplu, când tastatura unui "
 "laptop transformabil e întoarsă invers sau detașată."
 
-#: ui/main.qml:283
+#: ui/main.qml:285
 #, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always enabled"
 msgstr "Activat întotdeauna"
 
-#: ui/main.qml:329
+#: ui/main.qml:331
 #, kde-format
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
@@ -214,12 +214,12 @@ msgstr ""
 "În regim tactil, multe elemente ale interfeței cu utilizatorul vor deveni "
 "mai mari pentru a facilita interacțiunea prin atingeri."
 
-#: ui/main.qml:347
+#: ui/main.qml:349
 #, kde-format
 msgid "Double-click interval:"
 msgstr "Interval dublu-clic:"
 
-#: ui/main.qml:362
+#: ui/main.qml:364
 #, fuzzy, kde-format
 #| msgid "%1 msec"
 #| msgid_plural "%1 msec"
@@ -230,14 +230,14 @@ msgstr[0] "%1 msec"
 msgstr[1] "%1 msec"
 msgstr[2] "%1 de msec"
 
-#: ui/main.qml:366
+#: ui/main.qml:368
 #, fuzzy, kde-format
 #| msgid "msec"
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgstr "msec"
 
-#: ui/main.qml:380
+#: ui/main.qml:382
 #, kde-format
 msgid ""
 "Two clicks within this duration are considered a double-click. Some "
@@ -246,12 +246,42 @@ msgstr ""
 "Două clicuri în acest interval sunt considerate ca fiind dublu-clic. Unele "
 "aplicații pot să nu onoreze această configurare."
 
-#: ui/main.qml:391
+#: ui/main.qml:393
 #, kde-format
 msgctxt "Test double-click speed"
 msgid ""
 "Double-click the folder to test. If it does not change its appearance, "
 "increase double-click interval."
+msgstr ""
+
+#: ui/main.qml:441
+#, kde-format
+msgid "Drag and drop behavior:"
+msgstr ""
+
+#: ui/main.qml:442
+#, kde-format
+msgid "Always ask what to do"
+msgstr ""
+
+#: ui/main.qml:458
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Hold <shortcut>Shift</shortcut> to move, <shortcut>Ctrl</shortcut> to copy, "
+"and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise show a "
+"dialog."
+msgstr ""
+
+#: ui/main.qml:466
+#, kde-format
+msgid "Move files if on the same device"
+msgstr ""
+
+#: ui/main.qml:482
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
 msgstr ""
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
@@ -260,20 +290,28 @@ msgstr ""
 msgid "Single click to open files"
 msgstr "Un clic pentru deschiderea fișierelor"
 
-#. i18n: ectx: label, entry (smoothScroll), group (KDE)
+#. i18n: ectx: label, entry (dndBehavior), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:13
+#, kde-format
+msgid ""
+"For local files on the same device, whether dragging and dropping will "
+"perform a move operation instead of showing the options menu"
+msgstr ""
+
+#. i18n: ectx: label, entry (smoothScroll), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:21
 #, kde-format
 msgid "Smooth scrolling"
 msgstr "Derulare lină"
 
 #. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:17
+#: workspaceoptions_kdeglobalssettings.kcfg:25
 #, kde-format
 msgid "Left-click in scrollbar track moves scrollbar by one page"
 msgstr "Clic stâng în calea barei de derulare mută bara cu o pagină"
 
 #. i18n: ectx: label, entry (doubleClickInterval), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:21
+#: workspaceoptions_kdeglobalssettings.kcfg:29
 #, kde-format
 msgid "Double click interval"
 msgstr "Interval dublu-clic"

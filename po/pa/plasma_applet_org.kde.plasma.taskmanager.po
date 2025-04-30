@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-17 00:42+0000\n"
+"POT-Creation-Date: 2025-04-30 00:44+0000\n"
 "PO-Revision-Date: 2025-02-28 10:46-0600\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -464,95 +464,126 @@ msgid "Brings it to the current virtual desktop"
 msgstr "ਇਸ ਨੂੰ ਮੌਜੂਦਾ ਵਰਚੁਅਲ ਡੈਸਕਟਾਪ ਉੱਤੇ ਲਿਆਉਂਦਾ ਹੈ"
 
 #: package/contents/ui/ConfigBehavior.qml:205
-#, kde-format
-msgctxt ""
-"@label for checkbox Part of a sentence: 'Mouse wheel cycles through tasks'"
-msgid "Mouse wheel:"
-msgstr "ਮਾਊਸ ਪਹੀਆ:"
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@label for checkbox group, completes sentence like: … from current screen"
+#| msgid "Show only tasks:"
+msgctxt "@label:listbox completes sentence like: … does nothing"
+msgid "Scrolling on a task:"
+msgstr "ਸਿਰਫ ਟਾਸਕ ਵੇਖਾਓ:"
 
-#: package/contents/ui/ConfigBehavior.qml:206
-#, kde-format
-msgctxt "@option:check Part of a sentence: 'Mouse wheel cycles through tasks'"
-msgid "Cycles through tasks"
+#: package/contents/ui/ConfigBehavior.qml:209
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@item:inlistbox Part of a sentence: 'Middle-clicking any task does "
+#| "nothing'"
+#| msgid "Does nothing"
+msgctxt ""
+"@item:inlistbox Part of a sentence: 'Scrolling on any task does nothing'"
+msgid "Does nothing"
+msgstr "ਕੁਝ ਨਹੀਂ ਕਰਦਾ"
+
+#: package/contents/ui/ConfigBehavior.qml:210
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@item:inlistbox Completes the sentence 'Clicking grouped task cycles "
+#| "through tasks' "
+#| msgid "Cycles through tasks"
+msgctxt ""
+"@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
+"all tasks'"
+msgid "Cycles through all tasks"
 msgstr "ਟਾਸਕਾਂ ਵਿੱਚ ਚੱਕਰ ਲਾਓ"
 
-#: package/contents/ui/ConfigBehavior.qml:213
+#: package/contents/ui/ConfigBehavior.qml:211
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@item:inlistbox Completes the sentence 'Clicking grouped task cycles "
+#| "through tasks' "
+#| msgid "Cycles through tasks"
+msgctxt ""
+"@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
+"that task's windows only'"
+msgid "Cycles through that task's windows"
+msgstr "ਟਾਸਕਾਂ ਵਿੱਚ ਚੱਕਰ ਲਾਓ"
+
+#: package/contents/ui/ConfigBehavior.qml:219
 #, kde-format
 msgctxt "@option:check mouse wheel task cycling"
 msgid "Skip minimized tasks"
 msgstr "ਘੱਟੋ-ਘੱਟ ਕੀਤੇ ਟਾਸਕਾਂ ਨੂੰ ਛੱਡੋ"
 
-#: package/contents/ui/ConfigBehavior.qml:223
+#: package/contents/ui/ConfigBehavior.qml:229
 #, kde-format
 msgctxt ""
 "@label for checkbox group, completes sentence like: … from current screen"
 msgid "Show only tasks:"
 msgstr "ਸਿਰਫ ਟਾਸਕ ਵੇਖਾਓ:"
 
-#: package/contents/ui/ConfigBehavior.qml:224
+#: package/contents/ui/ConfigBehavior.qml:230
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current screen"
 msgstr "ਮੌਜੂਦਾ ਸਕਰੀਨ ਤੋਂ"
 
-#: package/contents/ui/ConfigBehavior.qml:229
+#: package/contents/ui/ConfigBehavior.qml:235
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current desktop"
 msgstr "ਮੌਜੂਦਾ ਡੈਸਕਟਾਪ ਤੋਂ"
 
-#: package/contents/ui/ConfigBehavior.qml:234
+#: package/contents/ui/ConfigBehavior.qml:240
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current activity"
 msgstr "ਮੌਜੂਦਾ ਸਰਗਰਮੀ ਤੋਂ"
 
-#: package/contents/ui/ConfigBehavior.qml:239
+#: package/contents/ui/ConfigBehavior.qml:245
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "That are minimized"
 msgstr "ਜੋ ਘੱਟੋ-ਘੱਟ ਹੋਣ"
 
-#: package/contents/ui/ConfigBehavior.qml:248
+#: package/contents/ui/ConfigBehavior.qml:254
 #, kde-format
 msgctxt ""
 "@label for checkbox, completes sentence: … unhide if window wants attention"
 msgid "When panel is hidden:"
 msgstr "ਜਦੋਂ ਪੈਨਲ ਲੁਕਿਆ ਹੋਵੇ:"
 
-#: package/contents/ui/ConfigBehavior.qml:249
+#: package/contents/ui/ConfigBehavior.qml:255
 #, kde-format
 msgctxt "@option:check completes sentence: When panel is hidden"
 msgid "Unhide when a window wants attention"
 msgstr "ਜਦੋਂ ਵਿੰਡੋ ਨੂੰ ਧਿਆਨ ਲੈਣ ਦੀ ਲੋੜ ਹੋਵੇ ਤਾਂ ਦਿਖਾਓ"
 
-#: package/contents/ui/ConfigBehavior.qml:264
+#: package/contents/ui/ConfigBehavior.qml:270
 #, kde-format
 msgctxt "@label for radiobutton group completes sentence like: … on the bottom"
 msgid "New tasks appear:"
 msgstr "ਨਵੀਆਂ ਟਾਸਕਾਂ ਦਿਸਦੀਆਂ ਹਨ:"
 
-#: package/contents/ui/ConfigBehavior.qml:268
+#: package/contents/ui/ConfigBehavior.qml:274
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the bottom"
 msgstr "ਹੇਠਾਂ"
 
-#: package/contents/ui/ConfigBehavior.qml:272
-#: package/contents/ui/ConfigBehavior.qml:291
+#: package/contents/ui/ConfigBehavior.qml:278
+#: package/contents/ui/ConfigBehavior.qml:297
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the right"
 msgstr "ਸੱਜੇ ਵੱਲ"
 
-#: package/contents/ui/ConfigBehavior.qml:274
-#: package/contents/ui/ConfigBehavior.qml:289
+#: package/contents/ui/ConfigBehavior.qml:280
+#: package/contents/ui/ConfigBehavior.qml:295
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the left"
 msgstr "ਖੱਬੇ ਵੱਲ"
 
-#: package/contents/ui/ConfigBehavior.qml:285
+#: package/contents/ui/ConfigBehavior.qml:291
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the top"
@@ -849,6 +880,16 @@ msgstr "%1 ਉੱਤੇ ਵੀ ਉਪਲੱਬਧ"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "%1 ਉੱਤੇ ਉਪਲੱਬਧ"
+
+#~ msgctxt ""
+#~ "@label for checkbox Part of a sentence: 'Mouse wheel cycles through tasks'"
+#~ msgid "Mouse wheel:"
+#~ msgstr "ਮਾਊਸ ਪਹੀਆ:"
+
+#~ msgctxt ""
+#~ "@option:check Part of a sentence: 'Mouse wheel cycles through tasks'"
+#~ msgid "Cycles through tasks"
+#~ msgstr "ਟਾਸਕਾਂ ਵਿੱਚ ਚੱਕਰ ਲਾਓ"
 
 #~ msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
 #~ msgid "Cycles through tasks"

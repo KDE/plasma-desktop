@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-17 00:42+0000\n"
+"POT-Creation-Date: 2025-04-30 00:44+0000\n"
 "PO-Revision-Date: 2023-01-08 16:15+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -529,30 +529,50 @@ msgstr "Đưa nó đến bàn làm việc ảo hiện tại"
 
 #: package/contents/ui/ConfigBehavior.qml:205
 #, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
-#| msgid "Mouse wheel:"
-msgctxt ""
-"@label for checkbox Part of a sentence: 'Mouse wheel cycles through tasks'"
-msgid "Mouse wheel:"
-msgstr "Nút cuộn chuột:"
+#| msgid "Show only tasks:"
+msgctxt "@label:listbox completes sentence like: … does nothing"
+msgid "Scrolling on a task:"
+msgstr "Chỉ hiện các tác vụ:"
 
-#: package/contents/ui/ConfigBehavior.qml:206
+#: package/contents/ui/ConfigBehavior.qml:209
+#, fuzzy, kde-format
+#| msgctxt "Part of a sentence: 'Middle-clicking any task does nothing'"
+#| msgid "Does nothing"
+msgctxt ""
+"@item:inlistbox Part of a sentence: 'Scrolling on any task does nothing'"
+msgid "Does nothing"
+msgstr "Không làm gì"
+
+#: package/contents/ui/ConfigBehavior.qml:210
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Completes the sentence 'Clicking grouped task cycles through tasks' "
 #| msgid "Cycles through tasks"
-msgctxt "@option:check Part of a sentence: 'Mouse wheel cycles through tasks'"
-msgid "Cycles through tasks"
+msgctxt ""
+"@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
+"all tasks'"
+msgid "Cycles through all tasks"
 msgstr "Xoay vòng qua các tác vụ"
 
-#: package/contents/ui/ConfigBehavior.qml:213
+#: package/contents/ui/ConfigBehavior.qml:211
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Completes the sentence 'Clicking grouped task cycles through tasks' "
+#| msgid "Cycles through tasks"
+msgctxt ""
+"@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
+"that task's windows only'"
+msgid "Cycles through that task's windows"
+msgstr "Xoay vòng qua các tác vụ"
+
+#: package/contents/ui/ConfigBehavior.qml:219
 #, fuzzy, kde-format
 #| msgid "Skip minimized tasks"
 msgctxt "@option:check mouse wheel task cycling"
 msgid "Skip minimized tasks"
 msgstr "Bỏ qua các tác vụ bị thu nhỏ"
 
-#: package/contents/ui/ConfigBehavior.qml:223
+#: package/contents/ui/ConfigBehavior.qml:229
 #, fuzzy, kde-format
 #| msgid "Show only tasks:"
 msgctxt ""
@@ -560,35 +580,35 @@ msgctxt ""
 msgid "Show only tasks:"
 msgstr "Chỉ hiện các tác vụ:"
 
-#: package/contents/ui/ConfigBehavior.qml:224
+#: package/contents/ui/ConfigBehavior.qml:230
 #, fuzzy, kde-format
 #| msgid "From current screen"
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current screen"
 msgstr "Ở màn hình hiện tại"
 
-#: package/contents/ui/ConfigBehavior.qml:229
+#: package/contents/ui/ConfigBehavior.qml:235
 #, fuzzy, kde-format
 #| msgid "From current desktop"
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current desktop"
 msgstr "Ở bàn làm việc hiện tại"
 
-#: package/contents/ui/ConfigBehavior.qml:234
+#: package/contents/ui/ConfigBehavior.qml:240
 #, fuzzy, kde-format
 #| msgid "From current activity"
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current activity"
 msgstr "Ở Hoạt động hiện tại"
 
-#: package/contents/ui/ConfigBehavior.qml:239
+#: package/contents/ui/ConfigBehavior.qml:245
 #, fuzzy, kde-format
 #| msgid "That are minimized"
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "That are minimized"
 msgstr "Đã thu nhỏ"
 
-#: package/contents/ui/ConfigBehavior.qml:248
+#: package/contents/ui/ConfigBehavior.qml:254
 #, fuzzy, kde-format
 #| msgid "When panel is hidden:"
 msgctxt ""
@@ -596,44 +616,44 @@ msgctxt ""
 msgid "When panel is hidden:"
 msgstr "Khi bảng bị ẩn:"
 
-#: package/contents/ui/ConfigBehavior.qml:249
+#: package/contents/ui/ConfigBehavior.qml:255
 #, fuzzy, kde-format
 #| msgid "Unhide when a window wants attention"
 msgctxt "@option:check completes sentence: When panel is hidden"
 msgid "Unhide when a window wants attention"
 msgstr "Ngừng ẩn khi một cửa sổ cần sự chú ý"
 
-#: package/contents/ui/ConfigBehavior.qml:264
+#: package/contents/ui/ConfigBehavior.qml:270
 #, fuzzy, kde-format
 #| msgid "New tasks appear:"
 msgctxt "@label for radiobutton group completes sentence like: … on the bottom"
 msgid "New tasks appear:"
 msgstr "Tác vụ mới hiện ra:"
 
-#: package/contents/ui/ConfigBehavior.qml:268
+#: package/contents/ui/ConfigBehavior.qml:274
 #, fuzzy, kde-format
 #| msgid "On the bottom"
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the bottom"
 msgstr "Ở đáy"
 
-#: package/contents/ui/ConfigBehavior.qml:272
-#: package/contents/ui/ConfigBehavior.qml:291
+#: package/contents/ui/ConfigBehavior.qml:278
+#: package/contents/ui/ConfigBehavior.qml:297
 #, fuzzy, kde-format
 #| msgid "To the right"
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the right"
 msgstr "Ở bên phải"
 
-#: package/contents/ui/ConfigBehavior.qml:274
-#: package/contents/ui/ConfigBehavior.qml:289
+#: package/contents/ui/ConfigBehavior.qml:280
+#: package/contents/ui/ConfigBehavior.qml:295
 #, fuzzy, kde-format
 #| msgid "To the left"
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the left"
 msgstr "Ở bên trái"
 
-#: package/contents/ui/ConfigBehavior.qml:285
+#: package/contents/ui/ConfigBehavior.qml:291
 #, fuzzy, kde-format
 #| msgid "On the Top"
 msgctxt "@option:check completes sentence: New tasks appear"
@@ -931,6 +951,23 @@ msgstr "Còn hiện có ở %1"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "Hiện có ở %1"
+
+#, fuzzy
+#~| msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
+#~| msgid "Mouse wheel:"
+#~ msgctxt ""
+#~ "@label for checkbox Part of a sentence: 'Mouse wheel cycles through tasks'"
+#~ msgid "Mouse wheel:"
+#~ msgstr "Nút cuộn chuột:"
+
+#, fuzzy
+#~| msgctxt ""
+#~| "Completes the sentence 'Clicking grouped task cycles through tasks' "
+#~| msgid "Cycles through tasks"
+#~ msgctxt ""
+#~ "@option:check Part of a sentence: 'Mouse wheel cycles through tasks'"
+#~ msgid "Cycles through tasks"
+#~ msgstr "Xoay vòng qua các tác vụ"
 
 #, fuzzy
 #~| msgid "Mark applications that play audio"

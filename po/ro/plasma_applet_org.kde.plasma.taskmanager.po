@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-17 00:42+0000\n"
+"POT-Creation-Date: 2025-04-30 00:44+0000\n"
 "PO-Revision-Date: 2024-06-08 17:07+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -550,30 +550,50 @@ msgstr "O aduce pe biroul virtual curent"
 
 #: package/contents/ui/ConfigBehavior.qml:205
 #, fuzzy, kde-format
-#| msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
-#| msgid "Mouse wheel:"
-msgctxt ""
-"@label for checkbox Part of a sentence: 'Mouse wheel cycles through tasks'"
-msgid "Mouse wheel:"
-msgstr "Rotița mausului:"
+#| msgid "Show only tasks:"
+msgctxt "@label:listbox completes sentence like: … does nothing"
+msgid "Scrolling on a task:"
+msgstr "Arată numai sarcinile:"
 
-#: package/contents/ui/ConfigBehavior.qml:206
+#: package/contents/ui/ConfigBehavior.qml:209
+#, fuzzy, kde-format
+#| msgctxt "Part of a sentence: 'Middle-clicking any task does nothing'"
+#| msgid "Does nothing"
+msgctxt ""
+"@item:inlistbox Part of a sentence: 'Scrolling on any task does nothing'"
+msgid "Does nothing"
+msgstr "Nu face nimic"
+
+#: package/contents/ui/ConfigBehavior.qml:210
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Completes the sentence 'Clicking grouped task cycles through tasks' "
 #| msgid "Cycles through tasks"
-msgctxt "@option:check Part of a sentence: 'Mouse wheel cycles through tasks'"
-msgid "Cycles through tasks"
+msgctxt ""
+"@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
+"all tasks'"
+msgid "Cycles through all tasks"
 msgstr "Ciclează printre sarcini"
 
-#: package/contents/ui/ConfigBehavior.qml:213
+#: package/contents/ui/ConfigBehavior.qml:211
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Completes the sentence 'Clicking grouped task cycles through tasks' "
+#| msgid "Cycles through tasks"
+msgctxt ""
+"@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
+"that task's windows only'"
+msgid "Cycles through that task's windows"
+msgstr "Ciclează printre sarcini"
+
+#: package/contents/ui/ConfigBehavior.qml:219
 #, fuzzy, kde-format
 #| msgid "Skip minimized tasks"
 msgctxt "@option:check mouse wheel task cycling"
 msgid "Skip minimized tasks"
 msgstr "Sari peste sarcini minimizate"
 
-#: package/contents/ui/ConfigBehavior.qml:223
+#: package/contents/ui/ConfigBehavior.qml:229
 #, fuzzy, kde-format
 #| msgid "Show only tasks:"
 msgctxt ""
@@ -581,35 +601,35 @@ msgctxt ""
 msgid "Show only tasks:"
 msgstr "Arată numai sarcinile:"
 
-#: package/contents/ui/ConfigBehavior.qml:224
+#: package/contents/ui/ConfigBehavior.qml:230
 #, fuzzy, kde-format
 #| msgid "From current screen"
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current screen"
 msgstr "De pe ecranul curent"
 
-#: package/contents/ui/ConfigBehavior.qml:229
+#: package/contents/ui/ConfigBehavior.qml:235
 #, fuzzy, kde-format
 #| msgid "From current desktop"
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current desktop"
 msgstr "De pe biroul curent"
 
-#: package/contents/ui/ConfigBehavior.qml:234
+#: package/contents/ui/ConfigBehavior.qml:240
 #, fuzzy, kde-format
 #| msgid "From current activity"
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current activity"
 msgstr "Din activitatea curentă"
 
-#: package/contents/ui/ConfigBehavior.qml:239
+#: package/contents/ui/ConfigBehavior.qml:245
 #, fuzzy, kde-format
 #| msgid "That are minimized"
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "That are minimized"
 msgstr "Care sunt minimizate"
 
-#: package/contents/ui/ConfigBehavior.qml:248
+#: package/contents/ui/ConfigBehavior.qml:254
 #, fuzzy, kde-format
 #| msgid "When panel is hidden:"
 msgctxt ""
@@ -617,44 +637,44 @@ msgctxt ""
 msgid "When panel is hidden:"
 msgstr "Când panoul e ascuns:"
 
-#: package/contents/ui/ConfigBehavior.qml:249
+#: package/contents/ui/ConfigBehavior.qml:255
 #, fuzzy, kde-format
 #| msgid "Unhide when a window wants attention"
 msgctxt "@option:check completes sentence: When panel is hidden"
 msgid "Unhide when a window wants attention"
 msgstr "Demaschează când o fereastră vrea atenție"
 
-#: package/contents/ui/ConfigBehavior.qml:264
+#: package/contents/ui/ConfigBehavior.qml:270
 #, fuzzy, kde-format
 #| msgid "New tasks appear:"
 msgctxt "@label for radiobutton group completes sentence like: … on the bottom"
 msgid "New tasks appear:"
 msgstr "Sarcinile noi apar:"
 
-#: package/contents/ui/ConfigBehavior.qml:268
+#: package/contents/ui/ConfigBehavior.qml:274
 #, fuzzy, kde-format
 #| msgid "On the bottom"
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the bottom"
 msgstr "La fund"
 
-#: package/contents/ui/ConfigBehavior.qml:272
-#: package/contents/ui/ConfigBehavior.qml:291
+#: package/contents/ui/ConfigBehavior.qml:278
+#: package/contents/ui/ConfigBehavior.qml:297
 #, fuzzy, kde-format
 #| msgid "To the right"
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the right"
 msgstr "La dreapta"
 
-#: package/contents/ui/ConfigBehavior.qml:274
-#: package/contents/ui/ConfigBehavior.qml:289
+#: package/contents/ui/ConfigBehavior.qml:280
+#: package/contents/ui/ConfigBehavior.qml:295
 #, fuzzy, kde-format
 #| msgid "To the left"
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the left"
 msgstr "La stânga"
 
-#: package/contents/ui/ConfigBehavior.qml:285
+#: package/contents/ui/ConfigBehavior.qml:291
 #, fuzzy, kde-format
 #| msgid "On the Top"
 msgctxt "@option:check completes sentence: New tasks appear"
@@ -953,6 +973,23 @@ msgstr "Disponibilă și pe %1"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "Disponibilă pe %1"
+
+#, fuzzy
+#~| msgctxt "Part of a sentence: 'Mouse wheel cycles through tasks'"
+#~| msgid "Mouse wheel:"
+#~ msgctxt ""
+#~ "@label for checkbox Part of a sentence: 'Mouse wheel cycles through tasks'"
+#~ msgid "Mouse wheel:"
+#~ msgstr "Rotița mausului:"
+
+#, fuzzy
+#~| msgctxt ""
+#~| "Completes the sentence 'Clicking grouped task cycles through tasks' "
+#~| msgid "Cycles through tasks"
+#~ msgctxt ""
+#~ "@option:check Part of a sentence: 'Mouse wheel cycles through tasks'"
+#~ msgid "Cycles through tasks"
+#~ msgstr "Ciclează printre sarcini"
 
 #, fuzzy
 #~| msgid "Mark applications that play audio"

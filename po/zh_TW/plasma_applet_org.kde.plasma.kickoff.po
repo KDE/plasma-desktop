@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-25 00:43+0000\n"
-"PO-Revision-Date: 2025-03-24 19:51+0900\n"
+"PO-Revision-Date: 2025-04-30 02:16+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.07.70\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -183,7 +183,7 @@ msgstr "觸控模式時自動停用"
 #: package/contents/ui/ConfigGeneral.qml:200
 #, kde-format
 msgid "Highlight newly installed applications"
-msgstr ""
+msgstr "突顯新安裝的應用程式"
 
 #: package/contents/ui/ConfigGeneral.qml:205
 #, kde-format
@@ -299,19 +299,20 @@ msgstr "開啟使用者設定"
 msgid "Keep Open"
 msgstr "保持開啟"
 
+# 徽章寫「新的！」好像怪怪的。
+# --Kisaragi
 #: package/contents/ui/KickoffGridDelegate.qml:60
 #: package/contents/ui/KickoffListDelegate.qml:119
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "New!"
 
 #: package/contents/ui/KickoffGridDelegate.qml:61
 #: package/contents/ui/KickoffListDelegate.qml:121
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgid "Newly installed application"
-msgstr "其他應用程式顯示方式："
+msgstr "新安裝的應用程式"
 
 #: package/contents/ui/KickoffGridView.qml:102
 #, kde-format
@@ -321,7 +322,7 @@ msgstr "%1 行 %2 列的圖示網格"
 #: package/contents/ui/KickoffListDelegate.qml:120
 #, kde-format
 msgid "There is a newly installed application in this category"
-msgstr ""
+msgstr "這個分類中有新安裝的應用程式"
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-15 00:42+0000\n"
+"POT-Creation-Date: 2025-04-30 00:44+0000\n"
 "PO-Revision-Date: 2024-02-18 14:08+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.4\n"
 
-#: axesmodel.cpp:80 hatmodel.cpp:80
+#: axesmodel.cpp:122 hatmodel.cpp:80
 #, kde-format
 msgctxt "@label Axis value"
 msgid "Value"
@@ -35,41 +35,51 @@ msgctxt "@label Button state"
 msgid "State"
 msgstr "Status"
 
-#: devicemodel.cpp:74
+#: devicemodel.cpp:68
 #, kde-format
 msgctxt "Device name and path"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: ui/main.qml:24
+#: ui/main.qml:23
 #, kde-format
 msgid "No game controllers found"
 msgstr "Geen spelcontrollers gevonden"
 
-#: ui/main.qml:25
+#: ui/main.qml:24
 #, kde-format
 msgid "Connect a wired or wireless controller"
 msgstr "Met een bedrade of draadloze controller verbinden"
 
-#: ui/main.qml:60
+#: ui/main.qml:59
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Device:"
 msgstr "Apparaat:"
 
-#: ui/main.qml:88
-#, kde-format
-msgctxt "@label Visual representation of an axis position"
-msgid "Position:"
+#: ui/main.qml:87
+#, fuzzy, kde-format
+#| msgctxt "@label Visual representation of an axis position"
+#| msgid "Position:"
+msgctxt "@label Visual representation of the axis position for the left axis"
+msgid "Left position:"
 msgstr "Positie:"
 
-#: ui/main.qml:107
+#: ui/main.qml:99
+#, fuzzy, kde-format
+#| msgctxt "@label Visual representation of an axis position"
+#| msgid "Position:"
+msgctxt "@label Visual representation of the axis position for the right axis"
+msgid "Right position:"
+msgstr "Positie:"
+
+#: ui/main.qml:118
 #, kde-format
 msgctxt "@label Gamepad buttons"
 msgid "Buttons:"
 msgstr "Knoppen:"
 
-#: ui/main.qml:129
+#: ui/main.qml:140
 #, kde-format
 msgctxt "@label Gamepad axes (sticks)"
 msgid "Axes:"
