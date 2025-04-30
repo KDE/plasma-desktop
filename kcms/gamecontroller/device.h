@@ -22,6 +22,7 @@ class Device : public QObject
     Q_PROPERTY(QString type READ type CONSTANT)
     Q_PROPERTY(SDL_GameControllerType controllerType READ controllerType CONSTANT)
     Q_PROPERTY(QString controllerTypeName READ controllerTypeName CONSTANT)
+    Q_PROPERTY(QString connectionType READ connectionType CONSTANT)
     Q_PROPERTY(QVector2D leftAxis READ leftAxisValue NOTIFY leftAxisChanged)
     Q_PROPERTY(QVector2D rightAxis READ rightAxisValue NOTIFY rightAxisChanged)
     Q_PROPERTY(float leftTrigger READ leftTriggerValue NOTIFY leftTriggerChanged)
@@ -30,6 +31,13 @@ class Device : public QObject
 public:
     Device(int deviceIndex, QObject *parent = nullptr);
     ~Device();
+
+    enum ConnectionType {
+        UnknownType,
+        USBType,
+        BluetoothType,
+    };
+    Q_ENUM(ConnectionType)
 
     bool open();
     void close();
@@ -45,6 +53,8 @@ public:
     SDL_GameControllerType controllerType() const;
     // Gamecontroller type name, switch pro, ps5, etc.
     QString controllerTypeName() const;
+    // Unknown, USB, Bluetooth
+    QString connectionType() const;
 
     bool isVirtual() const;
 
@@ -70,6 +80,9 @@ Q_SIGNALS:
     void rightTriggerChanged();
     void hatPositionChanged(int index);
 
+    // Possible when going from USB to Bluetooth, or vice versa
+    void connectionTypeChanged();
+
 private:
     friend class DeviceModel;
 
@@ -90,4 +103,5 @@ private:
     // Map of index to SDL_CONTROLLER button type for all buttons this gamecontroller has
     QMap<int, int> m_buttonType;
     int m_buttonCount = 0;
+    ConnectionType m_connectionType = UnknownType;
 };
