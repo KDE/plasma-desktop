@@ -8,7 +8,11 @@
 
 #include <KLocalizedString>
 
+#include <SDL2/SDL_hidapi.h>
+
 #include "logging.h"
+
+#include <QDebug>
 
 // NOTE: Keep in sync with SDL_JoystickType from SDL_joystick.h
 static QStringList kJoystickTypeNames = {i18n("Unknown"),
@@ -66,6 +70,12 @@ static QStringList kButtonNames = {
     i18nc("The button under the game controller's touchpad", "Touchpad button"), /* PS4/PS5 touchpad button */
 };
 
+static QStringList kConnectionTypeString = {
+    i18nc("Unknown controller connection type", "Unknown"),
+    i18nc("USB connected controller", "USB"),
+    i18nc("Bluetooth connected controller", "Bluetooth"),
+};
+
 QString ButtonToButtonName(SDL_GameControllerButton button)
 {
     if (button > SDL_CONTROLLER_BUTTON_INVALID && button < SDL_CONTROLLER_BUTTON_MAX) {
@@ -75,9 +85,27 @@ QString ButtonToButtonName(SDL_GameControllerButton button)
     }
 }
 
+// Get the SDL hid info for the joystick with the given vendor, and product
+SDL_hid_device_info getJoystickHidInfo(short vendor, short product)
+{
+    SDL_hid_device_info *info = SDL_hid_enumerate(vendor, product);
+
+    SDL_hid_device_info result;
+    if (info) {
+        // We found our device, so copy the data we are interested in.
+        // currently only the interface number, but more later maybe
+        result.interface_number = info->interface_number;
+
+        SDL_hid_free_enumeration(info);
+    }
+
+    return result;
+}
+
 Device::Device(int deviceIndex, QObject *parent)
     : QObject(parent)
     , m_deviceIndex(deviceIndex)
+    , m_connectionType(UnknownType)
 {
 }
 
@@ -93,6 +121,15 @@ bool Device::open()
     }
 
     m_joystick = SDL_JoystickOpen(m_deviceIndex);
+
+    short vendor = SDL_JoystickGetVendor(m_joystick);
+    short product = SDL_JoystickGetProduct(m_joystick);
+    SDL_hid_device_info info = getJoystickHidInfo(vendor, product);
+    if (info.interface_number == -1) {
+        m_connectionType = BluetoothType;
+    } else {
+        m_connectionType = USBType;
+    }
 
     m_controller = SDL_GameControllerOpen(m_deviceIndex);
     if (!m_controller) {
@@ -172,6 +209,11 @@ QString Device::controllerTypeName() const
     } else {
         return i18n("Not a controller");
     }
+}
+
+QString Device::connectionType() const
+{
+    return kConnectionTypeString.at(m_connectionType);
 }
 
 bool Device::isVirtual() const

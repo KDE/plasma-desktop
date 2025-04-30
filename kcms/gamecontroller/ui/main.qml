@@ -19,6 +19,7 @@ KCM.SimpleKCM {
     readonly property var device: deviceCombo.currentValue !== null ? deviceModel.device(deviceCombo.currentValue) : null
     readonly property var deviceType: device?.type ?? ""
     readonly property var deviceControllerType: device?.controllerTypeName ?? ""
+    readonly property var deviceConnectionType: device?.connectionType ?? ""
 
     Kirigami.PlaceholderMessage {
         icon.name: "input-gamepad"
@@ -106,6 +107,21 @@ KCM.SimpleKCM {
             }
         }
 
+        RowLayout {
+            spacing: Kirigami.Units.largeSpacing
+
+            Layout.fillWidth: true
+
+            QQC2.Label {
+                text: i18nc("@label:textbox", "Connection type:")
+                textFormat: Text.PlainText
+            }
+
+            QQC2.Label {
+                id: connectionTypeLabel
+                text: deviceConnectionType
+            }
+        }
         RowLayout {
             spacing: Kirigami.Units.largeSpacing
 
