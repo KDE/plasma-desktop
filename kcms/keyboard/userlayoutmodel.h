@@ -39,6 +39,7 @@ public:
     Q_INVOKABLE void remove(int index);
 
     Q_INVOKABLE void addLayout(const QString &layout, const QString &variant, const QKeySequence &shortcut, const QString &displayName = QString());
+    Q_INVOKABLE void setSingleLayout(const QString &layout, const QString &variant, const QKeySequence &shortcut, const QString &displayName = QString());
 
 private:
     QItemSelectionModel *const m_selectionModel;
