@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-30 00:44+0000\n"
+"POT-Creation-Date: 2025-05-01 00:43+0000\n"
 "PO-Revision-Date: 2025-04-10 15:04+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -33,17 +33,23 @@ msgstr "Re-Initia"
 
 #: ui/main.qml:47
 #, kde-format
+msgctxt "@title:group"
+msgid "Plasma"
+msgstr ""
+
+#: ui/main.qml:52
+#, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
 msgstr "Permitte que Plasma monstra:"
 
-#: ui/main.qml:54
+#: ui/main.qml:59
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
 msgstr "Consiliosde Pannello e widget"
 
-#: ui/main.qml:64
+#: ui/main.qml:69
 #, kde-format
 msgid ""
 "Allows all Plasma panel and desktop widgets to show descriptive tooltips "
@@ -56,14 +62,14 @@ msgstr ""
 "ha alcun effecto sur le parve consilios monstrate quando on plana sur "
 "buttones individual e altere elementos de interfacie de usator."
 
-#: ui/main.qml:72
+#: ui/main.qml:77
 #, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
 msgstr "Monstra un popups ODS per modificationes de stato"
 
-#: ui/main.qml:82
+#: ui/main.qml:87
 #, kde-format
 msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
@@ -73,19 +79,47 @@ msgstr ""
 "(OSD) per modificationes como nivello de volumine e brillantia, o commutar "
 "de dispositivo audio."
 
-#: ui/main.qml:91
-#, kde-format
-msgctxt "@label"
-msgid "Scrolling:"
+#: ui/main.qml:94
+#, fuzzy, kde-format
+#| msgctxt "@label"
+#| msgid "Scrolling:"
+msgctxt "@title:group"
+msgid "Scrolling"
 msgstr "Rolar:"
 
-#: ui/main.qml:95
+#: ui/main.qml:100
+#, kde-format
+msgid "Clicking in scrollbar track:"
+msgstr "Cliccar in tracia de barra de rolar:"
+
+#: ui/main.qml:101
+#, kde-format
+msgctxt ""
+"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
+"the clicked location'"
+msgid "Scrolls to the clicked location"
+msgstr "Rola al location cliccate"
+
+#: ui/main.qml:119
+#, kde-format
+msgctxt ""
+"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
+"page up or down'"
+msgid "Scrolls one page up or down"
+msgstr "Rola un pagina in alto o a basso"
+
+#: ui/main.qml:137
+#, kde-format
+msgid "Middle-click to scroll to clicked location"
+msgstr "Clicca in le medio per rolar al location cliccate"
+
+#: ui/main.qml:152
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
 msgstr "Prefere Rolar lisie"
 
-#: ui/main.qml:105
+#: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -99,62 +133,42 @@ msgstr ""
 "disposition perqueillos o nonsupporta rolasr lisie, o ha lor  proprie "
 "configuiration per habilitar o dishabilitar lo."
 
-#: ui/main.qml:118
+#: ui/main.qml:169
+#, kde-format
+msgctxt "@title:group"
+msgid "Clicking"
+msgstr ""
+
+#: ui/main.qml:175
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Pulsante files e dossieres:"
 
-#: ui/main.qml:125
+#: ui/main.qml:182
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Selige illos"
 
-#: ui/main.qml:144
+#: ui/main.qml:201
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Aperi in vice per duple cliccar"
 
-#: ui/main.qml:157
+#: ui/main.qml:214
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Aperi illos"
 
-#: ui/main.qml:175
+#: ui/main.qml:232
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "Selige per cliccar sur le marcator de selection del elemento"
 
-#: ui/main.qml:191
-#, kde-format
-msgid "Clicking in scrollbar track:"
-msgstr "Cliccar in tracia de barra de rolar:"
-
-#: ui/main.qml:192
-#, kde-format
-msgctxt ""
-"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
-"the clicked location'"
-msgid "Scrolls to the clicked location"
-msgstr "Rola al location cliccate"
-
-#: ui/main.qml:210
-#, kde-format
-msgctxt ""
-"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
-"page up or down'"
-msgid "Scrolls one page up or down"
-msgstr "Rola un pagina in alto o a basso"
-
-#: ui/main.qml:228
-#, kde-format
-msgid "Middle-click to scroll to clicked location"
-msgstr "Clicca in le medio per rolar al location cliccate"
-
-#: ui/main.qml:242
+#: ui/main.qml:246
 #, kde-format
 msgctxt ""
 "@label for checkbox, part of a complete sentence: 'Middle-click pastes "
@@ -162,7 +176,7 @@ msgctxt ""
 msgid "Middle-click:"
 msgstr "Click in medio:"
 
-#: ui/main.qml:244
+#: ui/main.qml:248
 #, kde-format
 msgctxt ""
 "@option:check part of a complete sentence: 'Middle click pastes selected "
@@ -170,24 +184,108 @@ msgctxt ""
 msgid "Pastes selected text"
 msgstr "Colla texto selectionate"
 
-#: ui/main.qml:261
+#: ui/main.qml:268
 #, kde-format
-msgid "Touch Mode:"
+msgid "Double-click interval:"
+msgstr "Intervallo de duple pression (click):"
+
+#: ui/main.qml:283
+#, kde-format
+msgctxt "short for millisecond(s)"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
+
+#: ui/main.qml:287
+#, kde-format
+msgctxt "short for millisecond(s)"
+msgid "ms"
+msgstr "ms"
+
+#: ui/main.qml:301
+#, kde-format
+msgid ""
+"Two clicks within this duration are considered a double-click. Some "
+"applications may not honor this setting."
+msgstr ""
+"Duo clicks intra iste duration es considerate un duple-click. Alcun "
+"applicationes pote non honorar iste preferentia."
+
+#: ui/main.qml:312
+#, kde-format
+msgctxt "Test double-click speed"
+msgid ""
+"Double-click the folder to test. If it does not change its appearance, "
+"increase double-click interval."
+msgstr ""
+"Duple pulsa le dossier per essayar. Si il non cambia le apparentia, augmenta "
+"le intervallo de duple pulsar."
+
+#: ui/main.qml:354
+#, kde-format
+msgid "Drag and Drop"
+msgstr ""
+
+#: ui/main.qml:361
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
+#| msgid "Clicking files or folders:"
+msgid "When dragging files or folders:"
+msgstr "Pulsante files e dossieres:"
+
+#: ui/main.qml:362
+#, kde-format
+msgid "Always ask what to do"
+msgstr ""
+
+#: ui/main.qml:378
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Hold <shortcut>Shift</shortcut> to move, <shortcut>Ctrl</shortcut> to copy, "
+"and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise show a "
+"dialog."
+msgstr ""
+
+#: ui/main.qml:386
+#, kde-format
+msgid "Move if on the same device"
+msgstr ""
+
+#: ui/main.qml:402
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
+msgstr ""
+
+#: ui/main.qml:410
+#, fuzzy, kde-format
+#| msgid "Touch Mode:"
+msgctxt "@title:group"
+msgid "Touch"
 msgstr "Modo de Touch (Tocco)"
 
-#: ui/main.qml:263
+#: ui/main.qml:416
+#, fuzzy, kde-format
+#| msgid "Touch Mode:"
+msgid "Enable Touch Mode:"
+msgstr "Modo de Touch (Tocco)"
+
+#: ui/main.qml:418
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Habilitate automaticamente como necessitate"
 
-#: ui/main.qml:263 ui/main.qml:308
+#: ui/main.qml:418
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Jammais habilitate"
 
-#: ui/main.qml:280
+#: ui/main.qml:435
 #, kde-format
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
@@ -199,13 +297,21 @@ msgstr ""
 "exemplo quando un claviero de un laptop trasformabile es girate o  "
 "distaccate."
 
-#: ui/main.qml:285
-#, kde-format
+#: ui/main.qml:440
+#, fuzzy, kde-format
+#| msgctxt "As in: 'Touch Mode is always enabled'"
+#| msgid "Always enabled"
 msgctxt "As in: 'Touch Mode is always enabled'"
-msgid "Always enabled"
+msgid "Always active"
 msgstr "Sempre habilitate"
 
-#: ui/main.qml:331
+#: ui/main.qml:463
+#, kde-format
+msgctxt "As in: 'Touch Mode is never enabled'"
+msgid "Disabled"
+msgstr ""
+
+#: ui/main.qml:486
 #, kde-format
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
@@ -213,74 +319,6 @@ msgid ""
 msgstr ""
 "In modo de tocco (Touch Mode), multe elementos del interfacie de usator "
 "devenira plus grande pro adataptar meliormente al interation de tocco."
-
-#: ui/main.qml:349
-#, kde-format
-msgid "Double-click interval:"
-msgstr "Intervallo de duple pression (click):"
-
-#: ui/main.qml:364
-#, kde-format
-msgctxt "short for millisecond(s)"
-msgid "%1 ms"
-msgid_plural "%1 ms"
-msgstr[0] "%1 ms"
-msgstr[1] "%1 ms"
-
-#: ui/main.qml:368
-#, kde-format
-msgctxt "short for millisecond(s)"
-msgid "ms"
-msgstr "ms"
-
-#: ui/main.qml:382
-#, kde-format
-msgid ""
-"Two clicks within this duration are considered a double-click. Some "
-"applications may not honor this setting."
-msgstr ""
-"Duo clicks intra iste duration es considerate un duple-click. Alcun "
-"applicationes pote non honorar iste preferentia."
-
-#: ui/main.qml:393
-#, kde-format
-msgctxt "Test double-click speed"
-msgid ""
-"Double-click the folder to test. If it does not change its appearance, "
-"increase double-click interval."
-msgstr ""
-"Duple pulsa le dossier per essayar. Si il non cambia le apparentia, augmenta "
-"le intervallo de duple pulsar."
-
-#: ui/main.qml:441
-#, kde-format
-msgid "Drag and drop behavior:"
-msgstr ""
-
-#: ui/main.qml:442
-#, kde-format
-msgid "Always ask what to do"
-msgstr ""
-
-#: ui/main.qml:458
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Hold <shortcut>Shift</shortcut> to move, <shortcut>Ctrl</shortcut> to copy, "
-"and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise show a "
-"dialog."
-msgstr ""
-
-#: ui/main.qml:466
-#, kde-format
-msgid "Move files if on the same device"
-msgstr ""
-
-#: ui/main.qml:482
-#, kde-kuit-format
-msgctxt "@info"
-msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
-msgstr ""
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9

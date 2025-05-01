@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-30 00:44+0000\n"
+"POT-Creation-Date: 2025-05-01 00:43+0000\n"
 "PO-Revision-Date: 2025-01-29 10:59+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -37,17 +37,23 @@ msgstr "Перезагрузить"
 
 #: ui/main.qml:47
 #, kde-format
+msgctxt "@title:group"
+msgid "Plasma"
+msgstr ""
+
+#: ui/main.qml:52
+#, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
 msgstr ""
 
-#: ui/main.qml:54
+#: ui/main.qml:59
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
 msgstr ""
 
-#: ui/main.qml:64
+#: ui/main.qml:69
 #, kde-format
 msgid ""
 "Allows all Plasma panel and desktop widgets to show descriptive tooltips "
@@ -56,7 +62,7 @@ msgid ""
 "interface elements."
 msgstr ""
 
-#: ui/main.qml:72
+#: ui/main.qml:77
 #, fuzzy, kde-format
 #| msgid "Show a popup on layout changes"
 msgctxt ""
@@ -64,26 +70,54 @@ msgctxt ""
 msgid "OSD popups for status changes"
 msgstr "Показывать экранные уведомления при переключении раскладки клавиатуры"
 
-#: ui/main.qml:82
+#: ui/main.qml:87
 #, kde-format
 msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
 
-#: ui/main.qml:91
-#, kde-format
-msgctxt "@label"
-msgid "Scrolling:"
+#: ui/main.qml:94
+#, fuzzy, kde-format
+#| msgctxt "@label"
+#| msgid "Scrolling:"
+msgctxt "@title:group"
+msgid "Scrolling"
 msgstr "Прокрутка:"
 
-#: ui/main.qml:95
+#: ui/main.qml:100
+#, kde-format
+msgid "Clicking in scrollbar track:"
+msgstr "Щелчок по полосе прокрутки:"
+
+#: ui/main.qml:101
+#, kde-format
+msgctxt ""
+"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
+"the clicked location'"
+msgid "Scrolls to the clicked location"
+msgstr "Прокручивает в указанное положение"
+
+#: ui/main.qml:119
+#, kde-format
+msgctxt ""
+"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
+"page up or down'"
+msgid "Scrolls one page up or down"
+msgstr "Прокручивает на одну страницу страницу вверх или вниз"
+
+#: ui/main.qml:137
+#, kde-format
+msgid "Middle-click to scroll to clicked location"
+msgstr "Прокручивание в заданное положение щелчком средней кнопки"
+
+#: ui/main.qml:152
 #, kde-format
 msgctxt "@option:check"
 msgid "Prefer smooth scrolling"
 msgstr "Плавная прокрутка"
 
-#: ui/main.qml:105
+#: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -97,62 +131,42 @@ msgstr ""
 "приложения не поддерживают использование этого параметра, либо используют "
 "свои настройки прокрутки."
 
-#: ui/main.qml:118
+#: ui/main.qml:169
+#, kde-format
+msgctxt "@title:group"
+msgid "Clicking"
+msgstr ""
+
+#: ui/main.qml:175
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Щелчок по файлу или папке:"
 
-#: ui/main.qml:125
+#: ui/main.qml:182
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Выделяет объект"
 
-#: ui/main.qml:144
+#: ui/main.qml:201
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Открывать двойным щелчком"
 
-#: ui/main.qml:157
+#: ui/main.qml:214
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Открывает объект"
 
-#: ui/main.qml:175
+#: ui/main.qml:232
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "Выбирать щелчком по маркёру выделения"
 
-#: ui/main.qml:191
-#, kde-format
-msgid "Clicking in scrollbar track:"
-msgstr "Щелчок по полосе прокрутки:"
-
-#: ui/main.qml:192
-#, kde-format
-msgctxt ""
-"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls to "
-"the clicked location'"
-msgid "Scrolls to the clicked location"
-msgstr "Прокручивает в указанное положение"
-
-#: ui/main.qml:210
-#, kde-format
-msgctxt ""
-"@radio part of a complete sentence: 'Clicking in scrollbar track scrolls one "
-"page up or down'"
-msgid "Scrolls one page up or down"
-msgstr "Прокручивает на одну страницу страницу вверх или вниз"
-
-#: ui/main.qml:228
-#, kde-format
-msgid "Middle-click to scroll to clicked location"
-msgstr "Прокручивание в заданное положение щелчком средней кнопки"
-
-#: ui/main.qml:242
+#: ui/main.qml:246
 #, kde-format
 msgctxt ""
 "@label for checkbox, part of a complete sentence: 'Middle-click pastes "
@@ -160,7 +174,7 @@ msgctxt ""
 msgid "Middle-click:"
 msgstr "Щелчок средней кнопкой:"
 
-#: ui/main.qml:244
+#: ui/main.qml:248
 #, kde-format
 msgctxt ""
 "@option:check part of a complete sentence: 'Middle click pastes selected "
@@ -168,24 +182,109 @@ msgctxt ""
 msgid "Pastes selected text"
 msgstr "Вставляет выделенный текст"
 
-#: ui/main.qml:261
+#: ui/main.qml:268
 #, kde-format
-msgid "Touch Mode:"
+msgid "Double-click interval:"
+msgstr "Интервал двойного щелчка:"
+
+#: ui/main.qml:283
+#, kde-format
+msgctxt "short for millisecond(s)"
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] "%1 мс"
+msgstr[1] "%1 мс"
+msgstr[2] "%1 мс"
+msgstr[3] "%1 мс"
+
+#: ui/main.qml:287
+#, kde-format
+msgctxt "short for millisecond(s)"
+msgid "ms"
+msgstr "мс"
+
+#: ui/main.qml:301
+#, kde-format
+msgid ""
+"Two clicks within this duration are considered a double-click. Some "
+"applications may not honor this setting."
+msgstr ""
+"Два щелчка мышью, выполненные в пределах этого интервала времени, будут "
+"обработаны как двойной щелчок. Обратите внимание: не все приложения "
+"используют значение этого параметра."
+
+#: ui/main.qml:312
+#, kde-format
+msgctxt "Test double-click speed"
+msgid ""
+"Double-click the folder to test. If it does not change its appearance, "
+"increase double-click interval."
+msgstr ""
+
+#: ui/main.qml:354
+#, kde-format
+msgid "Drag and Drop"
+msgstr ""
+
+#: ui/main.qml:361
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
+#| msgid "Clicking files or folders:"
+msgid "When dragging files or folders:"
+msgstr "Щелчок по файлу или папке:"
+
+#: ui/main.qml:362
+#, kde-format
+msgid "Always ask what to do"
+msgstr ""
+
+#: ui/main.qml:378
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Hold <shortcut>Shift</shortcut> to move, <shortcut>Ctrl</shortcut> to copy, "
+"and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise show a "
+"dialog."
+msgstr ""
+
+#: ui/main.qml:386
+#, kde-format
+msgid "Move if on the same device"
+msgstr ""
+
+#: ui/main.qml:402
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
+msgstr ""
+
+#: ui/main.qml:410
+#, fuzzy, kde-format
+#| msgid "Touch Mode:"
+msgctxt "@title:group"
+msgid "Touch"
 msgstr "Сенсорный режим работы:"
 
-#: ui/main.qml:263
+#: ui/main.qml:416
+#, fuzzy, kde-format
+#| msgid "Touch Mode:"
+msgid "Enable Touch Mode:"
+msgstr "Сенсорный режим работы:"
+
+#: ui/main.qml:418
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
 msgstr "Автоматически"
 
-#: ui/main.qml:263 ui/main.qml:308
+#: ui/main.qml:418
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Never enabled"
 msgstr "Никогда не использовать"
 
-#: ui/main.qml:280
+#: ui/main.qml:435
 #, kde-format
 msgid ""
 "Touch Mode will be automatically activated whenever the system detects a "
@@ -196,13 +295,21 @@ msgstr ""
 "экрана если мышь или сенсорная панель отключены, например в случае "
 "переворачивания экрана или отключения клавиатуры от ноутбука-трансформера."
 
-#: ui/main.qml:285
-#, kde-format
+#: ui/main.qml:440
+#, fuzzy, kde-format
+#| msgctxt "As in: 'Touch Mode is always enabled'"
+#| msgid "Always enabled"
 msgctxt "As in: 'Touch Mode is always enabled'"
-msgid "Always enabled"
+msgid "Always active"
 msgstr "Использовать всегда"
 
-#: ui/main.qml:331
+#: ui/main.qml:463
+#, kde-format
+msgctxt "As in: 'Touch Mode is never enabled'"
+msgid "Disabled"
+msgstr ""
+
+#: ui/main.qml:486
 #, kde-format
 msgid ""
 "In Touch Mode, many elements of the user interface will become larger to "
@@ -210,75 +317,6 @@ msgid ""
 msgstr ""
 "В сенсорном режиме работы большое количество элементов пользовательского "
 "интерфейса становятся крупнее, чтобы облегчить работу с ними."
-
-#: ui/main.qml:349
-#, kde-format
-msgid "Double-click interval:"
-msgstr "Интервал двойного щелчка:"
-
-#: ui/main.qml:364
-#, kde-format
-msgctxt "short for millisecond(s)"
-msgid "%1 ms"
-msgid_plural "%1 ms"
-msgstr[0] "%1 мс"
-msgstr[1] "%1 мс"
-msgstr[2] "%1 мс"
-msgstr[3] "%1 мс"
-
-#: ui/main.qml:368
-#, kde-format
-msgctxt "short for millisecond(s)"
-msgid "ms"
-msgstr "мс"
-
-#: ui/main.qml:382
-#, kde-format
-msgid ""
-"Two clicks within this duration are considered a double-click. Some "
-"applications may not honor this setting."
-msgstr ""
-"Два щелчка мышью, выполненные в пределах этого интервала времени, будут "
-"обработаны как двойной щелчок. Обратите внимание: не все приложения "
-"используют значение этого параметра."
-
-#: ui/main.qml:393
-#, kde-format
-msgctxt "Test double-click speed"
-msgid ""
-"Double-click the folder to test. If it does not change its appearance, "
-"increase double-click interval."
-msgstr ""
-
-#: ui/main.qml:441
-#, kde-format
-msgid "Drag and drop behavior:"
-msgstr ""
-
-#: ui/main.qml:442
-#, kde-format
-msgid "Always ask what to do"
-msgstr ""
-
-#: ui/main.qml:458
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"Hold <shortcut>Shift</shortcut> to move, <shortcut>Ctrl</shortcut> to copy, "
-"and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise show a "
-"dialog."
-msgstr ""
-
-#: ui/main.qml:466
-#, kde-format
-msgid "Move files if on the same device"
-msgstr ""
-
-#: ui/main.qml:482
-#, kde-kuit-format
-msgctxt "@info"
-msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
-msgstr ""
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9

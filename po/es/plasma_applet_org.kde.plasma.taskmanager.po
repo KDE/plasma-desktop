@@ -1,4 +1,6 @@
 # Spanish translations for plasma_applet_org.kde.plasma.taskmanager.po package.
+# Copyright (C) 2014-2025 This_file_is_part_of_KDE
+# This file is distributed under the same license as the plasma-desktop package.
 #
 # SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
@@ -6,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-30 00:44+0000\n"
-"PO-Revision-Date: 2025-04-16 11:20+0100\n"
+"PO-Revision-Date: 2025-04-30 19:16+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -14,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: backend.cpp:284
 #, kde-format
@@ -468,48 +470,33 @@ msgid "Brings it to the current virtual desktop"
 msgstr "Se traslada al escritorio virtual actual"
 
 #: package/contents/ui/ConfigBehavior.qml:205
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label for checkbox group, completes sentence like: … from current screen"
-#| msgid "Show only tasks:"
+#, kde-format
 msgctxt "@label:listbox completes sentence like: … does nothing"
 msgid "Scrolling on a task:"
-msgstr "Mostrar solo las tareas:"
+msgstr "Desplazar sobre una tarea:"
 
 #: package/contents/ui/ConfigBehavior.qml:209
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Part of a sentence: 'Middle-clicking any task does "
-#| "nothing'"
-#| msgid "Does nothing"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling on any task does nothing'"
 msgid "Does nothing"
-msgstr "No se hace nada"
+msgstr "No hace nada"
 
 #: package/contents/ui/ConfigBehavior.qml:210
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Completes the sentence 'Clicking grouped task cycles "
-#| "through tasks' "
-#| msgid "Cycles through tasks"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
 "all tasks'"
 msgid "Cycles through all tasks"
-msgstr "Se recorren las tareas"
+msgstr "Se recorren todas las tareas"
 
 #: package/contents/ui/ConfigBehavior.qml:211
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Completes the sentence 'Clicking grouped task cycles "
-#| "through tasks' "
-#| msgid "Cycles through tasks"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
 "that task's windows only'"
 msgid "Cycles through that task's windows"
-msgstr "Se recorren las tareas"
+msgstr "Se recorren las ventanas de dicha tarea"
 
 #: package/contents/ui/ConfigBehavior.qml:219
 #, kde-format
@@ -884,13 +871,3 @@ msgstr "También disponible en %1"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "También en %1"
-
-#~ msgctxt ""
-#~ "@label for checkbox Part of a sentence: 'Mouse wheel cycles through tasks'"
-#~ msgid "Mouse wheel:"
-#~ msgstr "Rueda del ratón:"
-
-#~ msgctxt ""
-#~ "@option:check Part of a sentence: 'Mouse wheel cycles through tasks'"
-#~ msgid "Cycles through tasks"
-#~ msgstr "Se recorren las tareas"
