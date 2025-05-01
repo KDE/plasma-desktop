@@ -161,6 +161,7 @@ void KCMKeyboard::load()
 
 void KCMKeyboard::save()
 {
+    qDebug()  <<  "Saaavingg keyyboardd  seetttings";
     KQuickManagedConfigModule::save();
 
     m_shortcutHelper->save();
@@ -195,6 +196,9 @@ bool KCMKeyboard::isSaveNeeded() const
 
 bool KCMKeyboard::isDefaults() const
 {
+    qDebug() << "isDefaults misc:" << m_data->keyboardMiscSettings()->isDefaults();
+    qDebug() << "isDefaults all :" << (m_data->workspaceOptions()->isDefaults() || m_data->keyboardMiscSettings()->isDefaults() || m_config->isDefaults()
+    || m_shortcutHelper->isSaveNeeded() || m_xkbOptionsModel->xkbOptions() == m_data->keyboardSettings()->xkbOptions());
     return m_data->workspaceOptions()->isDefaults() || m_data->keyboardMiscSettings()->isDefaults() || m_config->isDefaults()
         || m_shortcutHelper->isSaveNeeded() || m_xkbOptionsModel->xkbOptions() == m_data->keyboardSettings()->xkbOptions();
 }
