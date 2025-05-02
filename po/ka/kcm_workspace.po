@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-01 00:43+0000\n"
-"PO-Revision-Date: 2025-04-30 04:37+0200\n"
+"PO-Revision-Date: 2025-05-01 03:41+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -34,7 +34,7 @@ msgstr "გადატვრთვა"
 #, kde-format
 msgctxt "@title:group"
 msgid "Plasma"
-msgstr ""
+msgstr "Plasma"
 
 #: ui/main.qml:52
 #, kde-format
@@ -79,12 +79,10 @@ msgstr ""
 "სიკაშკაშის დონე, ან აუდიომოწყობილობის გადართვა."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling"
-msgstr "აწევ-ჩამოწევა:"
+msgstr "აჩოჩება"
 
 #: ui/main.qml:100
 #, kde-format
@@ -136,7 +134,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "დაწკაპუნება"
 
 #: ui/main.qml:175
 #, kde-format
@@ -222,18 +220,14 @@ msgstr ""
 "შეცვალა, გაზარდეთ ორმაგი წკაპის ინტერვალი."
 
 #: ui/main.qml:354
-#, fuzzy, kde-format
-#| msgid "Drag and drop behavior:"
+#, kde-format
 msgid "Drag and Drop"
-msgstr "გადატანა-დაგდების ქცევა:"
+msgstr "გადათრევა და დაგდება"
 
 #: ui/main.qml:361
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
-#| msgid "Clicking files or folders:"
+#, kde-format
 msgid "When dragging files or folders:"
-msgstr "დაწკაპუნება ფაილზე ან საქაღალდეზე:"
+msgstr "ფაილების, ან საქაღალდეების გადათრევისას:"
 
 #: ui/main.qml:362
 #, kde-format
@@ -253,10 +247,9 @@ msgstr ""
 "შესაქმნელად. სხვა შემთხვევაში ნაჩვენები იქნება დიალოგი."
 
 #: ui/main.qml:386
-#, fuzzy, kde-format
-#| msgid "Move files if on the same device"
+#, kde-format
 msgid "Move if on the same device"
-msgstr "ფაილების გადატანა, თუ მოწყობილობა იგივეა"
+msgstr "გადატანა, თუ იგივე მოწყობილობაზეა"
 
 #: ui/main.qml:402
 #, kde-kuit-format
@@ -267,17 +260,15 @@ msgstr ""
 "დაინახოთ."
 
 #: ui/main.qml:410
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Touch"
-msgstr "შეხების რეჟიმი:"
+msgstr "შეხება"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgid "Enable Touch Mode:"
-msgstr "შეხების რეჟიმი:"
+msgstr "შეხების რეჟიმის ჩართვა:"
 
 #: ui/main.qml:418
 #, kde-format
@@ -303,18 +294,16 @@ msgstr ""
 "კლავიატურა გამოძვრა ან შეაბრუნეთ."
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always enabled"
+#, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always active"
-msgstr "ყოველთვის ჩართულია"
+msgstr "ყოველთვის აქტიურია"
 
 #: ui/main.qml:463
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Disabled"
-msgstr ""
+msgstr "გამორთულია"
 
 #: ui/main.qml:486
 #, kde-format

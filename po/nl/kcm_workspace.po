@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-01 00:43+0000\n"
-"PO-Revision-Date: 2025-04-30 12:12+0200\n"
+"PO-Revision-Date: 2025-05-01 18:51+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -37,7 +37,7 @@ msgstr "Opnieuw starten"
 #, kde-format
 msgctxt "@title:group"
 msgid "Plasma"
-msgstr ""
+msgstr "Plasma"
 
 #: ui/main.qml:52
 #, kde-format
@@ -83,12 +83,10 @@ msgstr ""
 "geluidsapparaten."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling"
-msgstr "Scrollen:"
+msgstr "Schuiven"
 
 #: ui/main.qml:100
 #, kde-format
@@ -140,7 +138,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "Klikken"
 
 #: ui/main.qml:175
 #, kde-format
@@ -226,18 +224,14 @@ msgstr ""
 "verhoog het interval van de dubbelklik."
 
 #: ui/main.qml:354
-#, fuzzy, kde-format
-#| msgid "Drag and drop behavior:"
+#, kde-format
 msgid "Drag and Drop"
-msgstr "Gedrag van slepen en loslaten:"
+msgstr "Slepen en loslaten"
 
 #: ui/main.qml:361
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
-#| msgid "Clicking files or folders:"
+#, kde-format
 msgid "When dragging files or folders:"
-msgstr "Klik op bestand of map:"
+msgstr "Bij slepen van bestanden of mappen:"
 
 #: ui/main.qml:362
 #, kde-format
@@ -257,10 +251,9 @@ msgstr ""
 "symbolische koppeling te maken. Toon anders een dialoog."
 
 #: ui/main.qml:386
-#, fuzzy, kde-format
-#| msgid "Move files if on the same device"
+#, kde-format
 msgid "Move if on the same device"
-msgstr "Geen bestanden indien op hetzelfde apparaat"
+msgstr "Verplaatsen indien op hetzelfde apparaat"
 
 #: ui/main.qml:402
 #, kde-kuit-format
@@ -271,17 +264,15 @@ msgstr ""
 "tonen."
 
 #: ui/main.qml:410
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Touch"
-msgstr "Aanraakmodus:"
+msgstr "Aanraking"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgid "Enable Touch Mode:"
-msgstr "Aanraakmodus:"
+msgstr "Aanraakmodus inschakelen:"
 
 #: ui/main.qml:418
 #, kde-format
@@ -307,18 +298,16 @@ msgstr ""
 "een toetsenbord van een laptop wordt afgekoppeld."
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always enabled"
+#, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always active"
-msgstr "Altijd ingeschakeld"
+msgstr "Altijd actief"
 
 #: ui/main.qml:463
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Disabled"
-msgstr ""
+msgstr "Uitgeschakeld"
 
 #: ui/main.qml:486
 #, kde-format

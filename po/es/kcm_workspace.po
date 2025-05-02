@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-01 00:43+0000\n"
-"PO-Revision-Date: 2025-04-30 19:34+0100\n"
+"PO-Revision-Date: 2025-05-02 02:00+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -36,7 +36,7 @@ msgstr "Reiniciar"
 #, kde-format
 msgctxt "@title:group"
 msgid "Plasma"
-msgstr ""
+msgstr "Plasma"
 
 #: ui/main.qml:52
 #, kde-format
@@ -82,12 +82,10 @@ msgstr ""
 "cambio del dispositivo de sonido."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling"
-msgstr "Desplazamiento:"
+msgstr "Desplazamiento"
 
 #: ui/main.qml:100
 #, kde-format
@@ -139,7 +137,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "Clics"
 
 #: ui/main.qml:175
 #, kde-format
@@ -225,18 +223,14 @@ msgstr ""
 "el intervalo de doble clic."
 
 #: ui/main.qml:354
-#, fuzzy, kde-format
-#| msgid "Drag and drop behavior:"
+#, kde-format
 msgid "Drag and Drop"
-msgstr "Comportamiento de arrastrar y soltar:"
+msgstr "Arrastrar y soltar"
 
 #: ui/main.qml:361
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
-#| msgid "Clicking files or folders:"
+#, kde-format
 msgid "When dragging files or folders:"
-msgstr "Al pulsar archivos o carpetas:"
+msgstr "Al arrastrar archivos o carpetas:"
 
 #: ui/main.qml:362
 #, kde-format
@@ -256,10 +250,9 @@ msgstr ""
 "enlace simbólico. En cualquier otro caso, se muestra un diálogo."
 
 #: ui/main.qml:386
-#, fuzzy, kde-format
-#| msgid "Move files if on the same device"
+#, kde-format
 msgid "Move if on the same device"
-msgstr "Mover archivos si están en el mismo dispositivo"
+msgstr "Mover si están en el mismo dispositivo"
 
 #: ui/main.qml:402
 #, kde-kuit-format
@@ -270,17 +263,15 @@ msgstr ""
 "otras opciones."
 
 #: ui/main.qml:410
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Touch"
-msgstr "Modo táctil:"
+msgstr "Modo táctil"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgid "Enable Touch Mode:"
-msgstr "Modo táctil:"
+msgstr "Activar el modo táctil:"
 
 #: ui/main.qml:418
 #, kde-format
@@ -306,18 +297,16 @@ msgstr ""
 "teclado de un portátil transformable se pliega o se desprende."
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always enabled"
+#, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always active"
-msgstr "Siempre activado"
+msgstr "Siempre activo"
 
 #: ui/main.qml:463
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Disabled"
-msgstr ""
+msgstr "Desactivado"
 
 #: ui/main.qml:486
 #, kde-format

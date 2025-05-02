@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-01 00:43+0000\n"
-"PO-Revision-Date: 2025-04-30 06:54+0200\n"
+"PO-Revision-Date: 2025-05-01 06:09+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -39,7 +39,7 @@ msgstr "Ponovni zagon"
 #, kde-format
 msgctxt "@title:group"
 msgid "Plasma"
-msgstr ""
+msgstr "Plasma"
 
 #: ui/main.qml:52
 #, kde-format
@@ -84,12 +84,10 @@ msgstr ""
 "naprave."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling"
-msgstr "Drsenje:"
+msgstr "Drsenje"
 
 #: ui/main.qml:100
 #, kde-format
@@ -141,7 +139,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "Klikanje"
 
 #: ui/main.qml:175
 #, kde-format
@@ -229,18 +227,14 @@ msgstr ""
 "dvojnega klika."
 
 #: ui/main.qml:354
-#, fuzzy, kde-format
-#| msgid "Drag and drop behavior:"
+#, kde-format
 msgid "Drag and Drop"
-msgstr "Obnašanje vlečenja in spuščanja:"
+msgstr "Vlečenje in spuščanje"
 
 #: ui/main.qml:361
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
-#| msgid "Clicking files or folders:"
+#, kde-format
 msgid "When dragging files or folders:"
-msgstr "Klikanje na datoteke ali mape:"
+msgstr "Pri vlečenju datotek ali map:"
 
 #: ui/main.qml:362
 #, kde-format
@@ -260,10 +254,9 @@ msgstr ""
 "ustvarjanje simbolne povezave. Sicer prikaži pogovorno okno."
 
 #: ui/main.qml:386
-#, fuzzy, kde-format
-#| msgid "Move files if on the same device"
+#, kde-format
 msgid "Move if on the same device"
-msgstr "Premakni datoteke, če so v isti napravi"
+msgstr "Premakni, če so v isti napravi"
 
 #: ui/main.qml:402
 #, kde-kuit-format
@@ -274,17 +267,15 @@ msgstr ""
 "možnosti."
 
 #: ui/main.qml:410
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Touch"
-msgstr "Dotikalni način:"
+msgstr "Dotakni"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgid "Enable Touch Mode:"
-msgstr "Dotikalni način:"
+msgstr "Omogoči dotikalni način:"
 
 #: ui/main.qml:418
 #, kde-format
@@ -310,18 +301,16 @@ msgstr ""
 "preklopi na drugo stran notesnika ali se jo odklopi."
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always enabled"
+#, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always active"
-msgstr "Vedno omogočeno"
+msgstr "Vedno dejavno"
 
 #: ui/main.qml:463
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Disabled"
-msgstr ""
+msgstr "Onemogočeno"
 
 #: ui/main.qml:486
 #, kde-format

@@ -5,13 +5,13 @@
 #
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2020, 2023.
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
-# SPDX-FileCopyrightText: 2014, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
+# Josep M. Ferrer <txemaq@gmail.com>, 2014, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-01 00:43+0000\n"
-"PO-Revision-Date: 2025-04-30 10:51+0200\n"
+"PO-Revision-Date: 2025-05-01 10:36+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: ui/main.qml:25
 #, kde-format
@@ -40,7 +40,7 @@ msgstr "Reinicia"
 #, kde-format
 msgctxt "@title:group"
 msgid "Plasma"
-msgstr ""
+msgstr "Plasma"
 
 #: ui/main.qml:52
 #, kde-format
@@ -86,12 +86,10 @@ msgstr ""
 "dispositius d'àudio."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling"
-msgstr "Desplaçament:"
+msgstr "Desplaçament"
 
 #: ui/main.qml:100
 #, kde-format
@@ -143,7 +141,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "En fer clic"
 
 #: ui/main.qml:175
 #, kde-format
@@ -229,18 +227,14 @@ msgstr ""
 "augmenteu l'interval del doble clic."
 
 #: ui/main.qml:354
-#, fuzzy, kde-format
-#| msgid "Drag and drop behavior:"
+#, kde-format
 msgid "Drag and Drop"
-msgstr "Comportament d'arrossegar i deixar anar:"
+msgstr "Arrossegar i deixar anar"
 
 #: ui/main.qml:361
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
-#| msgid "Clicking files or folders:"
+#, kde-format
 msgid "When dragging files or folders:"
-msgstr "En fer clic a fitxers o carpetes:"
+msgstr "En arrossegar fitxers o carpetes:"
 
 #: ui/main.qml:362
 #, kde-format
@@ -260,10 +254,9 @@ msgstr ""
 "un enllaç simbòlic. En cas contrari mostra un diàleg."
 
 #: ui/main.qml:386
-#, fuzzy, kde-format
-#| msgid "Move files if on the same device"
+#, kde-format
 msgid "Move if on the same device"
-msgstr "Mou els fitxers si estan en el mateix dispositiu"
+msgstr "Mou si estan en el mateix dispositiu"
 
 #: ui/main.qml:402
 #, kde-kuit-format
@@ -274,17 +267,15 @@ msgstr ""
 "opcions."
 
 #: ui/main.qml:410
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Touch"
-msgstr "Mode tàctil:"
+msgstr "Tàctil"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgid "Enable Touch Mode:"
-msgstr "Mode tàctil:"
+msgstr "Activa el mode tàctil:"
 
 #: ui/main.qml:418
 #, kde-format
@@ -310,18 +301,16 @@ msgstr ""
 "teclat d'un ordinador portàtil transformable es giri o se separi."
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always enabled"
+#, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always active"
-msgstr "Sempre activat"
+msgstr "Sempre actiu"
 
 #: ui/main.qml:463
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Disabled"
-msgstr ""
+msgstr "Desactivat"
 
 #: ui/main.qml:486
 #, kde-format
