@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-25 00:43+0000\n"
-"PO-Revision-Date: 2025-03-12 08:43+0100\n"
+"PO-Revision-Date: 2025-05-01 17:21+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -193,7 +193,7 @@ msgstr "Désactivé automatiquement en mode « Tactile »"
 #: package/contents/ui/ConfigGeneral.qml:200
 #, kde-format
 msgid "Highlight newly installed applications"
-msgstr ""
+msgstr "Mettre en évidence les applications nouvellement installées"
 
 #: package/contents/ui/ConfigGeneral.qml:205
 #, kde-format
@@ -314,14 +314,13 @@ msgstr "Conserver ouvert"
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Nouveau !"
 
 #: package/contents/ui/KickoffGridDelegate.qml:61
 #: package/contents/ui/KickoffListDelegate.qml:121
-#, fuzzy, kde-format
-#| msgid "Recently Used Applications"
+#, kde-format
 msgid "Newly installed application"
-msgstr "Applications récemment utilisées"
+msgstr "Applications récemment installées"
 
 #: package/contents/ui/KickoffGridView.qml:102
 #, kde-format
@@ -331,7 +330,7 @@ msgstr "Grille avec %1 lignes et %2 colonnes"
 #: package/contents/ui/KickoffListDelegate.qml:120
 #, kde-format
 msgid "There is a newly installed application in this category"
-msgstr ""
+msgstr "Il y a une application nouvellement installée dans cette catégorie."
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format

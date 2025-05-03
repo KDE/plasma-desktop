@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-27 00:43+0000\n"
-"PO-Revision-Date: 2025-03-09 09:31+0100\n"
+"PO-Revision-Date: 2025-05-01 17:20+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -321,28 +321,24 @@ msgid "Panel Settings"
 msgstr "Configuration des panneaux"
 
 #: contents/configuration/PanelConfiguration.qml:106
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible only, %1 is widget name"
-#| msgid "Add %1"
+#, kde-format
 msgctxt ""
 "@action:button label of button to open a menu that lets you add widgets or "
 "spacers"
 msgid "Add New"
-msgstr "Ajouter %1"
+msgstr "Ajouter un nouveau"
 
 #: contents/configuration/PanelConfiguration.qml:124
-#, fuzzy, kde-format
-#| msgid "Add Spacer"
+#, kde-format
 msgctxt "@action:menu add a spacer"
 msgid "Spacer"
-msgstr "Ajouter un élément séparateur"
+msgstr "Séparateur"
 
 #: contents/configuration/PanelConfiguration.qml:131
-#, fuzzy, kde-format
-#| msgid "Widgets"
+#, kde-format
 msgctxt "@action:menu add a widget"
 msgid "Widgets…"
-msgstr "Composants graphiques"
+msgstr "Composants graphiques..."
 
 #: contents/configuration/PanelConfiguration.qml:160
 #, kde-format

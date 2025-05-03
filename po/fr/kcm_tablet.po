@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-26 00:43+0000\n"
-"PO-Revision-Date: 2025-04-14 10:03+0200\n"
+"PO-Revision-Date: 2025-05-01 17:25+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -439,12 +439,10 @@ msgstr ""
 msgctxt ""
 "'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)"
 msgid "Mode:"
-msgstr ""
+msgstr "Mode :"
 
 #: ui/StylusTab.qml:248
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Pen"
+#, kde-format
 msgctxt ""
 "Pen mode, where the point on the screen is always where you touch the stylus"
 msgid "Pen"
@@ -454,12 +452,13 @@ msgstr "Stylo"
 #, kde-format
 msgid "The cursor follows where you touch the pen on the surface"
 msgstr ""
+"Le curseur suit l'endroit où vous faites toucher la surface par le stylo"
 
 #: ui/StylusTab.qml:274
 #, kde-format
 msgctxt "Mouse mode, or like using the tablet like a giant touchpad"
 msgid "Mouse"
-msgstr ""
+msgstr "Souris"
 
 #: ui/StylusTab.qml:279
 #, kde-format
@@ -467,6 +466,8 @@ msgid ""
 "Moving the pen on the surface moves the cursor relative to where it was, "
 "like a mouse"
 msgstr ""
+"Le déplacement le stylo sur la surface déplace le curseur par rapport à "
+"l'endroit où il se trouvait, de façon similaire à une souris"
 
 #: ui/StylusTab.qml:349
 #, kde-format
