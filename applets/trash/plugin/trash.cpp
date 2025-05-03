@@ -19,6 +19,11 @@ Trash::Trash(QObject *parent)
 {
 }
 
+bool Trash::emptying() const
+{
+    return m_emptying;
+}
+
 void Trash::openTrash()
 {
     auto *job = new KIO::OpenUrlJob(QUrl(QStringLiteral("trash:/")));
@@ -37,6 +42,14 @@ void Trash::emptyTrash()
 {
     using Iface = KIO::AskUserActionInterface;
     auto *job = new KIO::DeleteOrTrashJob({}, Iface::EmptyTrash, Iface::DefaultConfirmation, this);
+    connect(job, &KIO::DeleteOrTrashJob::started, this, [this] {
+        m_emptying = true;
+        Q_EMIT emptyingChanged(true);
+    });
+    connect(job, &KIO::DeleteOrTrashJob::finished, this, [this] {
+        m_emptying = false;
+        Q_EMIT emptyingChanged(false);
+    });
     job->start();
 }
 
