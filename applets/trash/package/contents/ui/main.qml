@@ -30,9 +30,15 @@ PlasmoidItem {
     property bool containsAcceptableDrag: false
 
     Plasmoid.title: i18nc("@title the name of the Trash widget", "Trash")
-    toolTipSubText: hasContents
-        ? i18ncp("@info:status The trash contains this many items in it", "One item", "%1 items", dirModel.count)
-        : i18nc("@info:status The trash is empty", "Empty")
+    toolTipSubText: {
+        if (TrashPrivate.Trash.emptying) {
+            return i18nc("@info:status The trash is being emptied", "Emptying…");
+        } else if (hasContents) {
+            return i18ncp("@info:status The trash contains this many items in it", "One item", "%1 items", dirModel.count);
+        } else {
+            return i18nc("@info:status The trash is empty", "Empty");
+        }
+    }
 
     Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
     Plasmoid.icon: {
@@ -45,6 +51,7 @@ PlasmoidItem {
         return iconName;
     }
     Plasmoid.status: hasContents ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
+    Plasmoid.busy: TrashPrivate.Trash.emptying
 
     Plasmoid.onActivated: TrashPrivate.Trash.openTrash()
 
@@ -76,7 +83,7 @@ PlasmoidItem {
         PlasmaCore.Action {
             text: i18nc("@action:inmenu Empty the trash", "Empty")
             icon.name: "trash-empty-symbolic"
-            enabled: hasContents
+            enabled: hasContents && !TrashPrivate.Trash.emptying
             onTriggered: TrashPrivate.Trash.emptyTrash()
         },
         PlasmaCore.Action {
