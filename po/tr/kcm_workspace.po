@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-01 00:43+0000\n"
-"PO-Revision-Date: 2025-04-30 17:45+0300\n"
+"PO-Revision-Date: 2025-05-03 20:57+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -37,7 +37,7 @@ msgstr "Yeniden Başlat"
 #, kde-format
 msgctxt "@title:group"
 msgid "Plasma"
-msgstr ""
+msgstr "Plasma"
 
 #: ui/main.qml:52
 #, kde-format
@@ -82,12 +82,10 @@ msgstr ""
 "izin verin."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling"
-msgstr "Sarma:"
+msgstr "Sarma"
 
 #: ui/main.qml:100
 #, kde-format
@@ -139,7 +137,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "Tıklama"
 
 #: ui/main.qml:175
 #, kde-format
@@ -225,18 +223,14 @@ msgstr ""
 "aralığını artırın."
 
 #: ui/main.qml:354
-#, fuzzy, kde-format
-#| msgid "Drag and drop behavior:"
+#, kde-format
 msgid "Drag and Drop"
-msgstr "Sürükle–bırak davranışı:"
+msgstr "Sürükle–Bırak"
 
 #: ui/main.qml:361
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
-#| msgid "Clicking files or folders:"
+#, kde-format
 msgid "When dragging files or folders:"
-msgstr "Dosyalara ve klasörlere tıklamak:"
+msgstr "Dosyaları ve klasörleri sürüklerken:"
 
 #: ui/main.qml:362
 #, kde-format
@@ -257,8 +251,7 @@ msgstr ""
 "durumlarda bir iletişim kutusu gösterin."
 
 #: ui/main.qml:386
-#, fuzzy, kde-format
-#| msgid "Move files if on the same device"
+#, kde-format
 msgid "Move if on the same device"
 msgstr "Aynı aygıttaysa taşı"
 
@@ -271,17 +264,15 @@ msgstr ""
 "shortcut> düğmesini basılı tutun."
 
 #: ui/main.qml:410
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Touch"
-msgstr "Dokunmatik Kip:"
+msgstr "Dokunma"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgid "Enable Touch Mode:"
-msgstr "Dokunmatik Kip:"
+msgstr "Dokunmatik kipi etkinleştir:"
 
 #: ui/main.qml:418
 #, kde-format
@@ -308,9 +299,7 @@ msgstr ""
 "veya çıkarıldığında."
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always enabled"
+#, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always active"
 msgstr "Her zaman etkin"
@@ -319,7 +308,7 @@ msgstr "Her zaman etkin"
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Disabled"
-msgstr ""
+msgstr "Devre dışı"
 
 #: ui/main.qml:486
 #, kde-format

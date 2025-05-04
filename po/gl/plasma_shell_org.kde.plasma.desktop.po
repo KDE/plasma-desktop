@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-27 00:43+0000\n"
-"PO-Revision-Date: 2025-03-20 07:54+0100\n"
+"PO-Revision-Date: 2025-05-03 07:03+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -311,28 +311,24 @@ msgid "Panel Settings"
 msgstr "Configuración do panel"
 
 #: contents/configuration/PanelConfiguration.qml:106
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible only, %1 is widget name"
-#| msgid "Add %1"
+#, kde-format
 msgctxt ""
 "@action:button label of button to open a menu that lets you add widgets or "
 "spacers"
 msgid "Add New"
-msgstr "Engadir %1"
+msgstr "Engadir"
 
 #: contents/configuration/PanelConfiguration.qml:124
-#, fuzzy, kde-format
-#| msgid "Add Spacer"
+#, kde-format
 msgctxt "@action:menu add a spacer"
 msgid "Spacer"
-msgstr "Engadir un espazador"
+msgstr "Espazador"
 
 #: contents/configuration/PanelConfiguration.qml:131
-#, fuzzy, kde-format
-#| msgid "Widgets"
+#, kde-format
 msgctxt "@action:menu add a widget"
 msgid "Widgets…"
-msgstr "Trebellos"
+msgstr "Trebellos…"
 
 #: contents/configuration/PanelConfiguration.qml:160
 #, kde-format

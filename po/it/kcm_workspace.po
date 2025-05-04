@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-01 00:43+0000\n"
-"PO-Revision-Date: 2025-04-10 18:06+0200\n"
+"PO-Revision-Date: 2025-05-01 14:51+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: ui/main.qml:25
 #, kde-format
@@ -37,7 +37,7 @@ msgstr "Riavvia"
 #, kde-format
 msgctxt "@title:group"
 msgid "Plasma"
-msgstr ""
+msgstr "Plasma"
 
 #: ui/main.qml:52
 #, kde-format
@@ -83,12 +83,10 @@ msgstr ""
 "luminosità, oppure al cambio del dispositivo audio."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling"
-msgstr "Scorrimento:"
+msgstr "Scorrimento"
 
 #: ui/main.qml:100
 #, kde-format
@@ -141,7 +139,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "Clic"
 
 #: ui/main.qml:175
 #, kde-format
@@ -229,20 +227,17 @@ msgstr ""
 #: ui/main.qml:354
 #, kde-format
 msgid "Drag and Drop"
-msgstr ""
+msgstr "Trascinamento"
 
 #: ui/main.qml:361
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
-#| msgid "Clicking files or folders:"
+#, kde-format
 msgid "When dragging files or folders:"
-msgstr "Facendo clic su file o cartelle:"
+msgstr "Al trascinamento di file o cartelle:"
 
 #: ui/main.qml:362
 #, kde-format
 msgid "Always ask what to do"
-msgstr ""
+msgstr "Chiedi sempre cosa fare"
 
 #: ui/main.qml:378
 #, kde-kuit-format
@@ -252,30 +247,33 @@ msgid ""
 "and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise show a "
 "dialog."
 msgstr ""
+"Tieni premuto <shortcut>Maiusc</shortcut> per spostare, <shortcut>Ctrl</"
+"shortcut> per copiare, e <shortcut>Maiusc+Ctrl</shortcut> per creare un "
+"collegamento simbolico. Diversamente mostra una finestra."
 
 #: ui/main.qml:386
 #, kde-format
 msgid "Move if on the same device"
-msgstr ""
+msgstr "Sposta se sono sullo stesso dispositivo"
 
 #: ui/main.qml:402
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
 msgstr ""
+"Tieni premuto <shortcut>Maiusc</shortcut> al rilascio per mostrare le altre "
+"opzioni."
 
 #: ui/main.qml:410
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Touch"
-msgstr "Modalità tattile:"
+msgstr "Tocco"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgid "Enable Touch Mode:"
-msgstr "Modalità tattile:"
+msgstr "Abilita la modalità tattile:"
 
 #: ui/main.qml:418
 #, kde-format
@@ -301,18 +299,16 @@ msgstr ""
 "tastiera di un computer portatile convertibile viene capovolta o staccata."
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always enabled"
+#, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always active"
-msgstr "Sempre abilitata"
+msgstr "Sempre attiva"
 
 #: ui/main.qml:463
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Disabled"
-msgstr ""
+msgstr "Disabilitata"
 
 #: ui/main.qml:486
 #, kde-format
@@ -336,6 +332,8 @@ msgid ""
 "For local files on the same device, whether dragging and dropping will "
 "perform a move operation instead of showing the options menu"
 msgstr ""
+"Per i file locali sullo stesso dispositivo, se il trascinamento eseguirà un "
+"operazione di spostamento invece di mostrare il menu delle opzioni"
 
 #. i18n: ectx: label, entry (smoothScroll), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21

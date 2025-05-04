@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-01 00:43+0000\n"
-"PO-Revision-Date: 2025-05-01 17:25+0200\n"
+"PO-Revision-Date: 2025-05-02 16:42+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 "X-Text-Markup: kde4\n"
 
 #: ui/main.qml:25
@@ -43,7 +43,7 @@ msgstr "Re-démarrer"
 #, kde-format
 msgctxt "@title:group"
 msgid "Plasma"
-msgstr ""
+msgstr "Plasma"
 
 #: ui/main.qml:52
 #, kde-format
@@ -89,12 +89,10 @@ msgstr ""
 "niveau de luminosité ou le changement de périphérique audio."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling"
-msgstr "Défilement :"
+msgstr "Défilement"
 
 #: ui/main.qml:100
 #, kde-format
@@ -147,7 +145,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "Clic"
 
 #: ui/main.qml:175
 #, kde-format
@@ -236,15 +234,12 @@ msgstr ""
 #: ui/main.qml:354
 #, kde-format
 msgid "Drag and Drop"
-msgstr ""
+msgstr "Glisser et déposer"
 
 #: ui/main.qml:361
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
-#| msgid "Clicking files or folders:"
+#, kde-format
 msgid "When dragging files or folders:"
-msgstr "Cliquer sur les fichiers et les dossiers :"
+msgstr "Lors du glisser de fichiers ou de dossiers :"
 
 #: ui/main.qml:362
 #, kde-format
@@ -259,30 +254,34 @@ msgid ""
 "and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise show a "
 "dialog."
 msgstr ""
+"Maintenez la <shortcut>touche C</shortcut> enfoncée pour déplacer, "
+"<shortcut>« Ctrl »</shortcut> pour copier et <shortcut>« Maj » + « Ctrl »</"
+"shortcut> pour créer un lien symbolique. Sinon, affichez une boîte de "
+"dialogue."
 
 #: ui/main.qml:386
 #, kde-format
 msgid "Move if on the same device"
-msgstr ""
+msgstr "Déplacer les fichiers s'ils se trouvent sur le même périphérique"
 
 #: ui/main.qml:402
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
 msgstr ""
+"Maintenez la <shortcut>touche « Maj » enfoncée</shortcut> pour afficher "
+"d'autres options."
 
 #: ui/main.qml:410
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Touch"
-msgstr "Mode « Tablette » :"
+msgstr "Tactile"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgid "Enable Touch Mode:"
-msgstr "Mode « Tablette » :"
+msgstr "Activer le mode tactile :"
 
 #: ui/main.qml:418
 #, kde-format
@@ -308,18 +307,16 @@ msgstr ""
 "exemple : lorsque le clavier d'un portable modulaire est retourné ou détaché."
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always enabled"
+#, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always active"
-msgstr "Toujours activé"
+msgstr "Toujours actif"
 
 #: ui/main.qml:463
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Disabled"
-msgstr ""
+msgstr "Désactivé"
 
 #: ui/main.qml:486
 #, kde-format
@@ -344,6 +341,9 @@ msgid ""
 "For local files on the same device, whether dragging and dropping will "
 "perform a move operation instead of showing the options menu"
 msgstr ""
+"Pour les fichiers locaux sur le même périphérique, définit si le glisser-"
+"déposer effectuera ou non, une opération de déplacement au lieu d'afficher "
+"le menu des options"
 
 #. i18n: ectx: label, entry (smoothScroll), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21

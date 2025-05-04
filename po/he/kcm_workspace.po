@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-01 00:43+0000\n"
-"PO-Revision-Date: 2025-04-30 09:34+0300\n"
+"PO-Revision-Date: 2025-05-03 14:33+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: ui/main.qml:25
 #, kde-format
@@ -37,7 +37,7 @@ msgstr "הפעלה מחדש"
 #, kde-format
 msgctxt "@title:group"
 msgid "Plasma"
-msgstr ""
+msgstr "פלזמה"
 
 #: ui/main.qml:52
 #, kde-format
@@ -80,12 +80,10 @@ msgstr ""
 "שינויים כגון בעוצמת השמע או בעוצמת הבהירות או שהתקן השמע מתחלף."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling"
-msgstr "גלילה:"
+msgstr "גלילה"
 
 #: ui/main.qml:100
 #, kde-format
@@ -136,7 +134,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "לחיצה"
 
 #: ui/main.qml:175
 #, kde-format
@@ -224,18 +222,14 @@ msgstr ""
 "המרווח בין הלחיצות ללחיצה כפולה."
 
 #: ui/main.qml:354
-#, fuzzy, kde-format
-#| msgid "Drag and drop behavior:"
+#, kde-format
 msgid "Drag and Drop"
-msgstr "התנהגות גרירה ושחרור:"
+msgstr "גרירה ושחרור"
 
 #: ui/main.qml:361
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
-#| msgid "Clicking files or folders:"
+#, kde-format
 msgid "When dragging files or folders:"
-msgstr "לחיצה על קבצים או תיקיות"
+msgstr "לחיצה על קבצים או תיקיות:"
 
 #: ui/main.qml:362
 #, kde-format
@@ -254,10 +248,9 @@ msgstr ""
 "תעתיק, ו־<shortcut>Shift+Ctrl</shortcut> תיצור קישור סמלי. אחרת תוצג חלונית."
 
 #: ui/main.qml:386
-#, fuzzy, kde-format
-#| msgid "Move files if on the same device"
+#, kde-format
 msgid "Move if on the same device"
-msgstr "להעביר קבצים אם זה באותו המכשיר"
+msgstr "להעביר קבצים אם באותו המכשיר"
 
 #: ui/main.qml:402
 #, kde-kuit-format
@@ -268,17 +261,15 @@ msgstr ""
 "נוספות."
 
 #: ui/main.qml:410
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Touch"
-msgstr "מצב מגע:"
+msgstr "מגע"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgid "Enable Touch Mode:"
-msgstr "מצב מגע:"
+msgstr "הפעלת מצב מגע:"
 
 #: ui/main.qml:418
 #, kde-format
@@ -303,9 +294,7 @@ msgstr ""
 "למשל: כאשר מקלדת של מחשב נייד גמיש מקופלת לאחור או מנותקת."
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always enabled"
+#, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always active"
 msgstr "תמיד פעיל"
@@ -314,7 +303,7 @@ msgstr "תמיד פעיל"
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Disabled"
-msgstr ""
+msgstr "מושבת"
 
 #: ui/main.qml:486
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-30 00:44+0000\n"
-"PO-Revision-Date: 2025-04-17 11:56+0200\n"
+"PO-Revision-Date: 2025-04-30 15:46+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: backend.cpp:284
 #, kde-format
@@ -471,48 +471,33 @@ msgid "Brings it to the current virtual desktop"
 msgstr "Porta l'applicazione al desktop virtuale attuale"
 
 #: package/contents/ui/ConfigBehavior.qml:205
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label for checkbox group, completes sentence like: … from current screen"
-#| msgid "Show only tasks:"
+#, kde-format
 msgctxt "@label:listbox completes sentence like: … does nothing"
 msgid "Scrolling on a task:"
-msgstr "Mostra solo le applicazioni"
+msgstr "Scorrimento su un'applicazione:"
 
 #: package/contents/ui/ConfigBehavior.qml:209
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Part of a sentence: 'Middle-clicking any task does "
-#| "nothing'"
-#| msgid "Does nothing"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling on any task does nothing'"
 msgid "Does nothing"
 msgstr "Non fa niente"
 
 #: package/contents/ui/ConfigBehavior.qml:210
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Completes the sentence 'Clicking grouped task cycles "
-#| "through tasks' "
-#| msgid "Cycles through tasks"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
 "all tasks'"
 msgid "Cycles through all tasks"
-msgstr "Scorri tra le applicazioni"
+msgstr "Scorre tutte le applicazioni"
 
 #: package/contents/ui/ConfigBehavior.qml:211
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Completes the sentence 'Clicking grouped task cycles "
-#| "through tasks' "
-#| msgid "Cycles through tasks"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
 "that task's windows only'"
 msgid "Cycles through that task's windows"
-msgstr "Scorri tra le applicazioni"
+msgstr "Scorre le finestre di quell'applicazione"
 
 #: package/contents/ui/ConfigBehavior.qml:219
 #, kde-format
