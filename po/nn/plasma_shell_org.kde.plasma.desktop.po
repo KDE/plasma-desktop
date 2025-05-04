@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-27 02:41+0000\n"
-"PO-Revision-Date: 2024-08-25 12:05+0200\n"
+"PO-Revision-Date: 2025-05-03 12:28+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 25.07.70\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -432,7 +432,7 @@ msgid "Dodge windows"
 msgstr "Vik unna vindauge"
 
 #: contents/configuration/PanelConfiguration.qml:369
-#, fuzzy, kde-format
+#, kde-format
 msgid "Windows go below"
 msgstr "Vindauge kan liggja under"
 
@@ -459,7 +459,7 @@ msgstr "Gjennomsiktig"
 #: contents/configuration/PanelConfiguration.qml:467
 #, kde-format
 msgid "Floating"
-msgstr "Flytande"
+msgstr "Svevande"
 
 #: contents/configuration/PanelConfiguration.qml:477
 #, kde-format
@@ -505,25 +505,25 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "Fjern panelet (kan ikkje angrast)"
 
 #: contents/configuration/PanelConfiguration.qml:684
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
-msgstr "Fjern panelet"
+msgstr "Klon panelet"
 
 #: contents/configuration/PanelConfiguration.qml:688
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
-msgstr ""
+msgstr "Lag eit nytt panel med same innstillingar og panelprogram"
 
 #: contents/configuration/PanelConfiguration.qml:697
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Lukk"
 
 #: contents/configuration/PanelConfiguration.qml:697
-#, fuzzy, kde-format
+#, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
@@ -535,38 +535,38 @@ msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "Lukk panelinnstillingane og avslutt tilpassingsmodus"
 
 #: contents/configuration/panelconfiguration/Ruler.qml:32
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum height."
 msgstr "Dra for å endra makshøgda."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:33
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum width."
 msgstr "Dra for å endra maksbreidda."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:34
 #: contents/configuration/panelconfiguration/Ruler.qml:39
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Double-click to reset."
 msgstr "Dobbeltklikka for å tilbakestilla."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:37
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum height."
 msgstr "Dra for å endra minimumshøgda."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:38
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr "Dra for å endra minimumsbreidda."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:87
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid ""
 "Drag to change position on this screen edge.\n"
@@ -576,9 +576,9 @@ msgstr ""
 "Dobbeltklikk for å tilbakestilla."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy, kde-format
+#, kde-format
 msgid "Manage Panels and Desktops"
-msgstr "Handsaming av panel og skrivebord"
+msgstr "Handsam panel og skrivebord"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 #, kde-format
@@ -630,7 +630,7 @@ msgstr "Ikkje-støtta skjermelement"
 #, kde-format
 msgctxt "Text displayed on top of newly installed widgets"
 msgid "New!"
-msgstr ""
+msgstr "Nytt!"
 
 #: contents/explorer/AppletDelegate.qml:188
 #, kde-format
@@ -638,15 +638,15 @@ msgid "Undo uninstall"
 msgstr "Angra avinstallering"
 
 #: contents/explorer/AppletDelegate.qml:189
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Uninstall"
 msgstr "Avinstaller"
 
 #: contents/explorer/AppletDelegate.qml:231
-#, fuzzy, kde-format
+#, kde-format
 msgid "Remove all instances"
-msgstr "Fjern panelet"
+msgstr "Fjern alle instansar"
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -692,7 +692,7 @@ msgid "Categories"
 msgstr "Kategoriar"
 
 #: contents/explorer/WidgetExplorer.qml:254
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Confirm Removal of One Widget"
 msgid_plural "Confirm Removal of %1 Widgets"
@@ -731,7 +731,7 @@ msgstr "Mediestyring:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
-msgstr "Vis under opplåsingsfeltet"
+msgstr "Vis ved opplåsingsvindauge"
 
 #: contents/lockscreen/LockScreenUi.qml:48
 #, kde-format
@@ -744,19 +744,19 @@ msgid "Caps Lock is on"
 msgstr "«Caps Lock» er på"
 
 #: contents/lockscreen/LockScreenUi.qml:285
-#, fuzzy, kde-format
+#, kde-format
 msgid "Slee&p"
-msgstr "Kvilemodus"
+msgstr "&Kvilemodus"
 
 #: contents/lockscreen/LockScreenUi.qml:291
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Hibernate"
-msgstr "Dvalemodus"
+msgstr "&Dvalemodus"
 
 #: contents/lockscreen/LockScreenUi.qml:297
-#, fuzzy, kde-format
+#, kde-format
 msgid "Switch &User"
-msgstr "Byt brukar"
+msgstr "&Byt brukar"
 
 #: contents/lockscreen/LockScreenUi.qml:358
 #, kde-format
