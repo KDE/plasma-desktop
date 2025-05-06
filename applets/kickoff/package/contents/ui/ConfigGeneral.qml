@@ -169,10 +169,10 @@ KCM.SimpleKCM {
         }
 
         RowLayout {
+            Kirigami.FormData.label: i18nc("General options", "General:")
             spacing: Kirigami.Units.smallSpacing
             QQC2.CheckBox {
                 id: alphaSort
-                Kirigami.FormData.label: i18nc("General options", "General:")
                 text: i18nc("@option:check", "Sort applications alphabetically")
             }
 
