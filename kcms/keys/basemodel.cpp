@@ -185,6 +185,15 @@ QVariant BaseModel::data(const QModelIndex &index, int role) const
             return cg.readEntry("Name");
         }
 
+        // Override the names for Plasma and KWin here because their KAboutData strings are
+        // rather technical, but aren't strictly speaking wrong, so they won't be changed there.
+        if (component.id == QLatin1String("kwin")) {
+            return i18nc("@item:intable", "Window Management");
+        }
+        if (component.id == QLatin1String("plasmashell")) {
+            return i18nc("@item:intable", "Plasma Workspace");
+        }
+
         return component.displayName;
     }
     case Qt::DecorationRole:
