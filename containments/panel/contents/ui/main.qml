@@ -218,15 +218,6 @@ ContainmentItem {
                 property bool inThickArea: false
                 visible: applet.plasmoid?.status !== PlasmaCore.Types.HiddenStatus || (!Plasmoid.immutable && Plasmoid.userConfiguring);
 
-                property bool rootDragging: root.dragAndDropping
-                onRootDraggingChanged: {
-                    if (rootDragging) {
-                        container.applet.visible = false
-                    } else {
-                        container.applet.visible = true
-                    }
-                }
-
                 //when the applet moves caused by its resize, don't animate.
                 //this is completely heuristic, but looks way less "jumpy"
                 property bool movingForResize: false
