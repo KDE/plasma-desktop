@@ -50,7 +50,9 @@ PlasmoidItem {
     readonly property Controller primaryController: isMinimizeAll ? minimizeAllController : peekController
 
     readonly property Controller activeController: {
-        if (minimizeAllController.active) {
+        if (Plasmoid.containment.corona.editMode) {
+            return primaryController;
+        } else if (minimizeAllController.active) {
             return minimizeAllController;
         } else if (peekController.active) {
             return peekController;
