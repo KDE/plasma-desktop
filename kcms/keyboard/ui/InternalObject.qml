@@ -8,8 +8,6 @@ import QtQuick
 
 
 QtObject {
-    id: __internal
-
     readonly property string keyboardRepeatRepeat: "repeat"
     readonly property string keyboardRepeatNothing: "nothing"
     readonly property string keyboardRepeatAccent: "accent"
