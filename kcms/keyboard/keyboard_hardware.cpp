@@ -53,6 +53,7 @@ public:
 
 static void set_repeatrate(int delay, double rate)
 {
+    qDebug() << "set_repeatrate" << delay << rate;
     if (!X11Helper::xkbSupported(nullptr)) {
         qCCritical(KCM_KEYBOARD) << "Failed to set keyboard repeat rate: xkb is not supported";
         return;

@@ -161,7 +161,7 @@ void KCMKeyboard::load()
 
 void KCMKeyboard::save()
 {
-    qDebug()  <<  "Saaavingg keyyboardd  seetttings";
+    qDebug()  <<  "Saving keyyboard  settings";
     KQuickManagedConfigModule::save();
 
     m_shortcutHelper->save();
@@ -177,6 +177,8 @@ void KCMKeyboard::save()
             options.clear();
         }
     }
+
+    qDebug() << "saving to kxkbrc";
     m_data->keyboardSettings()->setXkbOptions(options);
     m_data->keyboardSettings()->save();
 
@@ -190,6 +192,8 @@ void KCMKeyboard::save()
 
 bool KCMKeyboard::isSaveNeeded() const
 {
+    qDebug() << "isSaveNeeded?" << (m_data->workspaceOptions()->isSaveNeeded() || m_data->keyboardMiscSettings()->isSaveNeeded() || m_config->isSaveNeeded()
+    || m_shortcutHelper->isSaveNeeded() || m_xkbOptionsModel->xkbOptions() != m_data->keyboardSettings()->xkbOptions());
     return m_data->workspaceOptions()->isSaveNeeded() || m_data->keyboardMiscSettings()->isSaveNeeded() || m_config->isSaveNeeded()
         || m_shortcutHelper->isSaveNeeded() || m_xkbOptionsModel->xkbOptions() != m_data->keyboardSettings()->xkbOptions();
 }
