@@ -429,5 +429,7 @@ KCM.ScrollViewKCM {
         }
     }
 
-    InternalObject {}
+    InternalObject {
+        id: __internal
+    }
 }
