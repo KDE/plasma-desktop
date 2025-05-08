@@ -50,13 +50,19 @@ KCM.SimpleKCM {
                     target: kcm?.keyboardSettings ?? undefined
 
                     function onKeyboardModelChanged(): void {
-                        keyboardModelComboBox.selectCurrent()
+                        modelCombo.selectCurrent()
                     }
                 }
 
                 function selectCurrent(): void {
                     currentIndex = indexOfValue(kcm.keyboardSettings.keyboardModel);
                     console.log("Set " + kcm.keyboardSettings.keyboardModel + " models.");
+                }
+
+                onCurrentValueChanged: {
+                    // SettingStateBinding doesn't seem to catch change events, so...'
+                    console.log("model changed: " + currentValue)
+                    kcm.keyboardSettings.keyboardModel = currentValue;
                 }
 
                 KCM.SettingStateBinding {
@@ -99,7 +105,7 @@ KCM.SimpleKCM {
             Timer {
                 interval: 5000
                 repeat: true
-                running: true
+                running: false
                 onTriggered: {
                     console.log("ULM: " +  kcm.userLayoutModel)
                     if (kcm.userLayoutModel.rowCount() == 0) {
@@ -107,6 +113,7 @@ KCM.SimpleKCM {
                     } else {
                         console.log("userLayoutModel.count == " + kcm.userLayoutModel.rowCount())
                         var row = kcm.userLayoutModel[0];
+                        console.log(row)
                         if (row) {
                             console.log("Row:  " + row)
                             console.log("layout variant: " + row["layoutName"] + " " + row["variantName"] + " " + row["displayName"])
@@ -143,13 +150,21 @@ KCM.SimpleKCM {
             FormCard.FormSpinBoxDelegate {
                 id: repeatDelaySpinbox
                 Layout.preferredWidth: Kirigami.Units.gridUnit * 8
-                from: 10
+                from: 100
                 to: 5000
                 stepSize: 50
 
                 label: i18nc("@label:textbox Key repeat delay", "Delay:")
                 value: kcm.miscSettings.repeatDelay
-                onValueChanged: kcm.miscSettings.repeatDelay = value
+                onValueChanged: {
+                    if (kcm.miscSettings.keyboardRepeat !== __internal.keyboardRepeatNothing) {
+                        console.log("condition true")
+                    } else {
+                        console.log("condition false")
+                    }
+                    console.log("value changed to " + value)
+                    kcm.miscSettings.repeatDelay = value
+                }
 
                 Accessible.name: i18nc("@label:spinbox accessible", "Key repeat delay %1", textFromValue(value))
 
@@ -244,5 +259,7 @@ KCM.SimpleKCM {
         }
     }
 
-    InternalObject {}
+    InternalObject {
+        id: __internal
+    }
 }
