@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-01 00:42+0000\n"
+"POT-Creation-Date: 2025-05-09 00:43+0000\n"
 "PO-Revision-Date: 2025-03-15 05:46+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -17,11 +17,33 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.12.1\n"
 
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Wantoyèk"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "wantoyek@gmail.com"
+
 #: basemodel.cpp:158
 #, kde-format
 msgctxt "@title:group Launch app"
 msgid "Launch"
 msgstr "Luncurkan"
+
+#: basemodel.cpp:191
+#, kde-format
+msgctxt "@item:intable"
+msgid "Window Management"
+msgstr ""
+
+#: basemodel.cpp:194
+#, kde-format
+msgctxt "@item:intable"
+msgid "Plasma Workspace"
+msgstr ""
 
 #: globalaccelmodel.cpp:235
 #, kde-format
@@ -463,14 +485,6 @@ msgstr "Batalkan penangkapan pintasan baru"
 
 #~ msgid "Import Scheme…"
 #~ msgstr "Impor Skema..."
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Wantoyèk"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "wantoyek@gmail.com"
 
 #~ msgid "Shortcuts"
 #~ msgstr "Pintasan"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-01 00:42+0000\n"
+"POT-Creation-Date: 2025-05-09 00:43+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -17,11 +17,33 @@ msgstr ""
 "X-Crowdin-File: /kf6-trunk/messages/plasma-desktop/kcm_keys.pot\n"
 "X-Crowdin-File-ID: 43753\n"
 
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
 #: basemodel.cpp:158
 #, kde-format
 msgctxt "@title:group Launch app"
 msgid "Launch"
 msgstr "启动"
+
+#: basemodel.cpp:191
+#, kde-format
+msgctxt "@item:intable"
+msgid "Window Management"
+msgstr ""
+
+#: basemodel.cpp:194
+#, kde-format
+msgctxt "@item:intable"
+msgid "Plasma Workspace"
+msgstr ""
 
 #: globalaccelmodel.cpp:235
 #, kde-format

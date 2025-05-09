@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-27 00:43+0000\n"
+"POT-Creation-Date: 2025-05-09 00:43+0000\n"
 "PO-Revision-Date: 2025-02-22 02:27+0100\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -165,17 +165,17 @@ msgstr ""
 "Die Einstellungen im aktuellen Modul wurden geändert. Möchten Sie die "
 "Änderungen anwenden oder verwerfen?"
 
-#: contents/configuration/AppletConfiguration.qml:404
+#: contents/configuration/AppletConfiguration.qml:405
 #, kde-format
 msgid "OK"
 msgstr "OK"
 
-#: contents/configuration/AppletConfiguration.qml:411
+#: contents/configuration/AppletConfiguration.qml:412
 #, kde-format
 msgid "Apply"
 msgstr "Anwenden"
 
-#: contents/configuration/AppletConfiguration.qml:417
+#: contents/configuration/AppletConfiguration.qml:418
 #, kde-format
 msgid "Cancel"
 msgstr "Abbrechen"
@@ -289,12 +289,11 @@ msgstr "Jetzt anwenden"
 msgid "Shortcuts"
 msgstr "Kurzbefehle"
 
-#: contents/configuration/ConfigurationShortcuts.qml:32
+#: contents/configuration/ConfigurationShortcuts.qml:31
 #, kde-format
-msgid "This shortcut will activate the applet as though it had been clicked."
+msgctxt "@action:button set keyboard shortcut for"
+msgid "Activate widget as if clicked:"
 msgstr ""
-"Mit diesem Kurzbefehl wird das Miniprogramm so aktiviert wie beim Klicken "
-"darauf."
 
 #: contents/configuration/ContainmentConfiguration.qml:27
 #, kde-format
@@ -962,6 +961,12 @@ msgstr "Bearbeitungsmodus beenden"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Fokus der Kontrollleiste sichtbar machen"
+
+#~ msgid ""
+#~ "This shortcut will activate the applet as though it had been clicked."
+#~ msgstr ""
+#~ "Mit diesem Kurzbefehl wird das Miniprogramm so aktiviert wie beim Klicken "
+#~ "darauf."
 
 #~ msgid "Add spacer widget to the panel"
 #~ msgstr "Abstandhalter-Miniprogramm zur Kontrollleiste hinzufügen"

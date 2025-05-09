@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-27 00:43+0000\n"
+"POT-Creation-Date: 2025-05-09 00:43+0000\n"
 "PO-Revision-Date: 2025-04-26 04:55+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -158,17 +158,17 @@ msgstr ""
 "მიმდინარე გვერდზე არსებობს შეუნახავი ცვლილებები. გნებავთ, გადაატაროთ ეს "
 "ცვლილებები თუ მოვაშოროთ ისინი?"
 
-#: contents/configuration/AppletConfiguration.qml:404
+#: contents/configuration/AppletConfiguration.qml:405
 #, kde-format
 msgid "OK"
 msgstr "დიახ"
 
-#: contents/configuration/AppletConfiguration.qml:411
+#: contents/configuration/AppletConfiguration.qml:412
 #, kde-format
 msgid "Apply"
 msgstr "გამოყენება"
 
-#: contents/configuration/AppletConfiguration.qml:417
+#: contents/configuration/AppletConfiguration.qml:418
 #, kde-format
 msgid "Cancel"
 msgstr "გაუქმება"
@@ -281,10 +281,11 @@ msgstr "ახლა გადატარება"
 msgid "Shortcuts"
 msgstr "მალსახმობები"
 
-#: contents/configuration/ConfigurationShortcuts.qml:32
+#: contents/configuration/ConfigurationShortcuts.qml:31
 #, kde-format
-msgid "This shortcut will activate the applet as though it had been clicked."
-msgstr "ეს მალსახმობი გაააქტიურებს აპლეტს, თითქოს მას დააწკაპუნეთ."
+msgctxt "@action:button set keyboard shortcut for"
+msgid "Activate widget as if clicked:"
+msgstr ""
 
 #: contents/configuration/ContainmentConfiguration.qml:27
 #, kde-format
@@ -926,6 +927,10 @@ msgstr "რედაქტირების რეჟიმიდან გა�
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "პანელის ფოკუსის მაჩვენებელი"
+
+#~ msgid ""
+#~ "This shortcut will activate the applet as though it had been clicked."
+#~ msgstr "ეს მალსახმობი გაააქტიურებს აპლეტს, თითქოს მას დააწკაპუნეთ."
 
 #~ msgid "Add spacer widget to the panel"
 #~ msgstr "პანელზე გამყოფი ვიჯეტის დამატება"

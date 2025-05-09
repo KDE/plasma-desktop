@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-01 00:42+0000\n"
+"POT-Creation-Date: 2025-05-09 00:43+0000\n"
 "PO-Revision-Date: 2023-01-11 09:27+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -13,10 +13,32 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-POFile-SpellExtra: kksrc sh\n"
 
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
 #: basemodel.cpp:158
 #, kde-format
 msgctxt "@title:group Launch app"
 msgid "Launch"
+msgstr ""
+
+#: basemodel.cpp:191
+#, kde-format
+msgctxt "@item:intable"
+msgid "Window Management"
+msgstr ""
+
+#: basemodel.cpp:194
+#, kde-format
+msgctxt "@item:intable"
+msgid "Plasma Workspace"
 msgstr ""
 
 #: globalaccelmodel.cpp:235

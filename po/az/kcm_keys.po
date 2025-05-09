@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-01 00:42+0000\n"
+"POT-Creation-Date: 2025-05-09 00:43+0000\n"
 "PO-Revision-Date: 2023-02-19 16:39+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -17,10 +17,32 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.2\n"
 
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Xəyyam Qocayev"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "xxmn77@gmail.com"
+
 #: basemodel.cpp:158
 #, kde-format
 msgctxt "@title:group Launch app"
 msgid "Launch"
+msgstr ""
+
+#: basemodel.cpp:191
+#, kde-format
+msgctxt "@item:intable"
+msgid "Window Management"
+msgstr ""
+
+#: basemodel.cpp:194
+#, kde-format
+msgctxt "@item:intable"
+msgid "Plasma Workspace"
 msgstr ""
 
 #: globalaccelmodel.cpp:235
@@ -504,14 +526,6 @@ msgstr "Yeni qısayol tutulmasından imtina etmək"
 
 #~ msgid "Import Scheme…"
 #~ msgstr "Sxem idxal edin…"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Xəyyam Qocayev"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "xxmn77@gmail.com"
 
 #~ msgid "Shortcuts"
 #~ msgstr "Qısayollar"

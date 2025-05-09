@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-01 00:42+0000\n"
+"POT-Creation-Date: 2025-05-09 00:43+0000\n"
 "PO-Revision-Date: 2025-01-19 18:32+0100\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -22,11 +22,33 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.12.1\n"
 
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Frederik Schwarzer"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "schwarzer@kde.org"
+
 #: basemodel.cpp:158
 #, kde-format
 msgctxt "@title:group Launch app"
 msgid "Launch"
 msgstr "Starten"
+
+#: basemodel.cpp:191
+#, kde-format
+msgctxt "@item:intable"
+msgid "Window Management"
+msgstr ""
+
+#: basemodel.cpp:194
+#, kde-format
+msgctxt "@item:intable"
+msgid "Plasma Workspace"
+msgstr ""
 
 #: globalaccelmodel.cpp:235
 #, kde-format
@@ -480,14 +502,6 @@ msgstr "Aufzeichnung des neuen Kurzbefehls abbrechen"
 
 #~ msgid "Import Scheme…"
 #~ msgstr "Schema importieren ..."
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Frederik Schwarzer"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "schwarzer@kde.org"
 
 #~ msgid "Shortcuts"
 #~ msgstr "Kurzbefehle"

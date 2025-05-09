@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-27 00:43+0000\n"
+"POT-Creation-Date: 2025-05-09 00:43+0000\n"
 "PO-Revision-Date: 2025-04-17 15:45+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -161,17 +161,17 @@ msgstr ""
 "Breytingar á þessari síðu hafa ekki verið vistaðar. Virkja breytingarnar eða "
 "henda þeim?"
 
-#: contents/configuration/AppletConfiguration.qml:404
+#: contents/configuration/AppletConfiguration.qml:405
 #, kde-format
 msgid "OK"
 msgstr "Í lagi"
 
-#: contents/configuration/AppletConfiguration.qml:411
+#: contents/configuration/AppletConfiguration.qml:412
 #, kde-format
 msgid "Apply"
 msgstr "Virkja"
 
-#: contents/configuration/AppletConfiguration.qml:417
+#: contents/configuration/AppletConfiguration.qml:418
 #, kde-format
 msgid "Cancel"
 msgstr "Hætta við"
@@ -284,10 +284,11 @@ msgstr "Virkja núna"
 msgid "Shortcuts"
 msgstr "Flýtilyklar"
 
-#: contents/configuration/ConfigurationShortcuts.qml:32
+#: contents/configuration/ConfigurationShortcuts.qml:31
 #, kde-format
-msgid "This shortcut will activate the applet as though it had been clicked."
-msgstr "Þessi flýtilykill virkjar smáforritið eins og smellt hafi verið á það."
+msgctxt "@action:button set keyboard shortcut for"
+msgid "Activate widget as if clicked:"
+msgstr ""
 
 #: contents/configuration/ContainmentConfiguration.qml:27
 #, kde-format
@@ -933,6 +934,11 @@ msgstr "Loka breytisniði"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Fókusvísir skjáborðsstiku"
+
+#~ msgid ""
+#~ "This shortcut will activate the applet as though it had been clicked."
+#~ msgstr ""
+#~ "Þessi flýtilykill virkjar smáforritið eins og smellt hafi verið á það."
 
 #~ msgid "Add spacer widget to the panel"
 #~ msgstr "Bæta bili á skjáborðsstikuna"

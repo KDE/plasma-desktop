@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-27 00:43+0000\n"
+"POT-Creation-Date: 2025-05-09 00:43+0000\n"
 "PO-Revision-Date: 2025-04-26 13:42+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -160,17 +160,17 @@ msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
 msgstr "בעמוד הנוכחי יש שינויים שלא נשמרו. להחיל או לסלק אותם?"
 
-#: contents/configuration/AppletConfiguration.qml:404
+#: contents/configuration/AppletConfiguration.qml:405
 #, kde-format
 msgid "OK"
 msgstr "אישור"
 
-#: contents/configuration/AppletConfiguration.qml:411
+#: contents/configuration/AppletConfiguration.qml:412
 #, kde-format
 msgid "Apply"
 msgstr "החלה"
 
-#: contents/configuration/AppletConfiguration.qml:417
+#: contents/configuration/AppletConfiguration.qml:418
 #, kde-format
 msgid "Cancel"
 msgstr "ביטול"
@@ -282,10 +282,11 @@ msgstr "החלה כעת"
 msgid "Shortcuts"
 msgstr "קיצורי מקשים"
 
-#: contents/configuration/ConfigurationShortcuts.qml:32
+#: contents/configuration/ConfigurationShortcuts.qml:31
 #, kde-format
-msgid "This shortcut will activate the applet as though it had been clicked."
-msgstr "קיצור מקשים זה יפעיל את היישומון כאילו שלחצו עליו."
+msgctxt "@action:button set keyboard shortcut for"
+msgid "Activate widget as if clicked:"
+msgstr ""
 
 #: contents/configuration/ContainmentConfiguration.qml:27
 #, kde-format
@@ -931,6 +932,10 @@ msgstr "יציאה ממצב עריכה"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "מחוון מיקוד לוח"
+
+#~ msgid ""
+#~ "This shortcut will activate the applet as though it had been clicked."
+#~ msgstr "קיצור מקשים זה יפעיל את היישומון כאילו שלחצו עליו."
 
 #~ msgid "Add spacer widget to the panel"
 #~ msgstr "הוספת יישומון מרווח ללוח"

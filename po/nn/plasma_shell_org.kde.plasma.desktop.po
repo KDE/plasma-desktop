@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-27 00:43+0000\n"
+"POT-Creation-Date: 2025-05-09 00:43+0000\n"
 "PO-Revision-Date: 2025-05-03 12:28+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -161,17 +161,17 @@ msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
 msgstr "Denne sida har ulagra endringar. Vil du bruka eller forkasta dei?"
 
-#: contents/configuration/AppletConfiguration.qml:404
+#: contents/configuration/AppletConfiguration.qml:405
 #, kde-format
 msgid "OK"
 msgstr "OK"
 
-#: contents/configuration/AppletConfiguration.qml:411
+#: contents/configuration/AppletConfiguration.qml:412
 #, kde-format
 msgid "Apply"
 msgstr "Bruk"
 
-#: contents/configuration/AppletConfiguration.qml:417
+#: contents/configuration/AppletConfiguration.qml:418
 #, kde-format
 msgid "Cancel"
 msgstr "Avbryt"
@@ -283,10 +283,11 @@ msgstr "Bruk no"
 msgid "Shortcuts"
 msgstr "Snarvegar"
 
-#: contents/configuration/ConfigurationShortcuts.qml:32
+#: contents/configuration/ConfigurationShortcuts.qml:31
 #, kde-format
-msgid "This shortcut will activate the applet as though it had been clicked."
-msgstr "Denne snøggtasten vil starta skjermelementet som om du trykte på det."
+msgctxt "@action:button set keyboard shortcut for"
+msgid "Activate widget as if clicked:"
+msgstr ""
 
 #: contents/configuration/ContainmentConfiguration.qml:27
 #, kde-format
@@ -926,3 +927,8 @@ msgstr "Avslutt tilpassing"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Panelfokus-markør"
+
+#~ msgid ""
+#~ "This shortcut will activate the applet as though it had been clicked."
+#~ msgstr ""
+#~ "Denne snøggtasten vil starta skjermelementet som om du trykte på det."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-27 00:43+0000\n"
+"POT-Creation-Date: 2025-05-09 00:43+0000\n"
 "PO-Revision-Date: 2025-03-15 07:18+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -163,17 +163,17 @@ msgstr ""
 "Halaman saat ini memiliki perubahan yang belum disimpan. Terapkan perubahan "
 "atau membuangnya?"
 
-#: contents/configuration/AppletConfiguration.qml:404
+#: contents/configuration/AppletConfiguration.qml:405
 #, kde-format
 msgid "OK"
 msgstr "Oke"
 
-#: contents/configuration/AppletConfiguration.qml:411
+#: contents/configuration/AppletConfiguration.qml:412
 #, kde-format
 msgid "Apply"
 msgstr "Terapkan"
 
-#: contents/configuration/AppletConfiguration.qml:417
+#: contents/configuration/AppletConfiguration.qml:418
 #, kde-format
 msgid "Cancel"
 msgstr "Batal"
@@ -286,10 +286,11 @@ msgstr "Terapkan Sekarang"
 msgid "Shortcuts"
 msgstr "Pintasan"
 
-#: contents/configuration/ConfigurationShortcuts.qml:32
+#: contents/configuration/ConfigurationShortcuts.qml:31
 #, kde-format
-msgid "This shortcut will activate the applet as though it had been clicked."
-msgstr "Pintasan ini akan mengaktifkan si applet seolah-olah telah diklik."
+msgctxt "@action:button set keyboard shortcut for"
+msgid "Activate widget as if clicked:"
+msgstr ""
 
 #: contents/configuration/ContainmentConfiguration.qml:27
 #, kde-format
@@ -935,6 +936,10 @@ msgstr "Keluar Mode Edit"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Indikator Fokus Panel"
+
+#~ msgid ""
+#~ "This shortcut will activate the applet as though it had been clicked."
+#~ msgstr "Pintasan ini akan mengaktifkan si applet seolah-olah telah diklik."
 
 #~ msgid "Add spacer widget to the panel"
 #~ msgstr "Tambahkan widget spacer ke panel"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-27 00:43+0000\n"
+"POT-Creation-Date: 2025-05-09 00:43+0000\n"
 "PO-Revision-Date: 2024-12-20 21:53+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -165,17 +165,17 @@ msgid ""
 msgstr ""
 "वर्तमानमॉड्यूलस्य सेटिङ्ग्स् परिवर्तिताः सन्ति । परिवर्तनं प्रयोक्तुं इच्छति वा परित्यक्तुं वा?"
 
-#: contents/configuration/AppletConfiguration.qml:404
+#: contents/configuration/AppletConfiguration.qml:405
 #, kde-format
 msgid "OK"
 msgstr "अस्तु"
 
-#: contents/configuration/AppletConfiguration.qml:411
+#: contents/configuration/AppletConfiguration.qml:412
 #, kde-format
 msgid "Apply"
 msgstr "आचरतु"
 
-#: contents/configuration/AppletConfiguration.qml:417
+#: contents/configuration/AppletConfiguration.qml:418
 #, kde-format
 msgid "Cancel"
 msgstr "निरसयतु"
@@ -287,10 +287,11 @@ msgstr "अधुना आवेदनं कुर्वन्तु"
 msgid "Shortcuts"
 msgstr "शॉर्टकट"
 
-#: contents/configuration/ConfigurationShortcuts.qml:32
+#: contents/configuration/ConfigurationShortcuts.qml:31
 #, kde-format
-msgid "This shortcut will activate the applet as though it had been clicked."
-msgstr "एषः शॉर्टकट् एप्लेट् क्लिक् कृतवत् सक्रियं करिष्यति ।"
+msgctxt "@action:button set keyboard shortcut for"
+msgid "Activate widget as if clicked:"
+msgstr ""
 
 #: contents/configuration/ContainmentConfiguration.qml:27
 #, kde-format
@@ -955,6 +956,10 @@ msgstr "सम्पादन मोडतः निर्गच्छन्त�
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "फलक फोकस सूचक"
+
+#~ msgid ""
+#~ "This shortcut will activate the applet as though it had been clicked."
+#~ msgstr "एषः शॉर्टकट् एप्लेट् क्लिक् कृतवत् सक्रियं करिष्यति ।"
 
 #~ msgid "Add spacer widget to the panel"
 #~ msgstr "फलकस्य मध्ये spacer widget योजयन्तु"
