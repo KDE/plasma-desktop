@@ -199,13 +199,6 @@ FolderModel::FolderModel(QObject *parent)
     m_dirModel->setDropsAllowed(KDirModel::DropOnDirectory | KDirModel::DropOnLocalExecutable);
     m_dirModel->dirLister()->setAutoUpdate(true);
 
-    // If we have dropped items queued for moving, go unsorted now.
-    connect(this, &QAbstractItemModel::rowsAboutToBeInserted, this, [this]() {
-        if (!m_dropTargetPositions.isEmpty()) {
-            setSortMode(-1);
-        }
-    });
-
     /*
      * Dropped files may not actually show up as new files, e.g. when we overwrite
      * an existing file. Or files that fail to be listed by the dirLister, or...
@@ -1405,7 +1398,10 @@ void FolderModel::changeSelection(const QItemSelection &selected, const QItemSel
 
 bool FolderModel::isBlank(int row) const
 {
-    if (row < 0) {
+    // Invalid indexes are blank, since they're not created yet
+    // and will be created when needed.
+    const auto idx = index(row, 0);
+    if (row < 0 || !idx.isValid()) {
         return true;
     }
 
