@@ -15,6 +15,8 @@
 #include <SDL2/SDL_gamecontroller.h>
 #include <SDL2/SDL_joystick.h>
 
+struct udev;
+
 class Device : public QObject
 {
     Q_OBJECT
@@ -98,4 +100,6 @@ private:
     QMap<int, int> m_buttonType;
     int m_buttonCount = 0;
     ConnectionType m_connectionType = UnknownType;
+
+    udev *m_udev;
 };
