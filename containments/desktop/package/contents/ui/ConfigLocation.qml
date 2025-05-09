@@ -39,8 +39,8 @@ KCM.SimpleKCM {
             var placeForUrl = placesModel.indexForUrl(cfg_url);
 
             if (placeForUrl !== -1) {
+                locationPlaceValue.currentIndex = placeForUrl; // needs to happen before checking the radiobutton
                 locationPlace.checked = true;
-                locationPlaceValue.currentIndex = placeForUrl;
                 locationCustomValue.text = "";
             } else {
                 locationCustom.checked = true;
