@@ -49,7 +49,7 @@ KCMUtils.AbstractKCM {
             defaultnessKey: "activationGesturesIsDefaults"
         },
         {
-            icon: "audio-input-microphone",
+            icon: "text-speak",
             title: i18nc("System mouse navigation", "Screen Reader"),
             defaultnessKey: "screenReaderIsDefaults"
         },
