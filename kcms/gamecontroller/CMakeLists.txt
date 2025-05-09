@@ -33,6 +33,7 @@ target_sources(kcm_gamecontroller PRIVATE
     buttonmodel.cpp
     hatmodel.cpp
     kcm.cpp
+    udevmatcher.cpp
 )
 
 target_link_libraries(kcm_gamecontroller PRIVATE
@@ -43,4 +44,5 @@ target_link_libraries(kcm_gamecontroller PRIVATE
     Qt6::Quick
     Qt6::QuickWidgets
     SDL2::SDL2
+    udev
 )
