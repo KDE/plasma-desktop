@@ -9,10 +9,10 @@
 #include <KLocalizedString>
 
 #include <SDL2/SDL_hidapi.h>
+#include <libudev.h>
 
 #include "logging.h"
-
-#include <QDebug>
+#include "udevmatcher.h"
 
 // NOTE: Keep in sync with SDL_JoystickType from SDL_joystick.h
 static QStringList kJoystickTypeNames = {i18n("Unknown"),
@@ -86,17 +86,50 @@ QString ButtonToButtonName(SDL_GameControllerButton button)
 }
 
 // Get the SDL hid info for the joystick with the given vendor, and product
-SDL_hid_device_info getJoystickHidInfo(short vendor, short product)
+SDL_hid_device_info getJoystickHidInfo(short vendor, short product, std::string path)
 {
     SDL_hid_device_info *info = SDL_hid_enumerate(vendor, product);
+    SDL_hid_device_info *current = info;
+
+    qCDebug(KCM_GAMECONTROLLER) << "Checking for hidapi with vendor: " << vendor << " and product: " << product;
 
     SDL_hid_device_info result;
     if (info) {
-        // We found our device, so copy the data we are interested in.
-        // currently only the interface number, but more later maybe
-        result.interface_number = info->interface_number;
+        if (!info->next) {
+            // We found our device, so copy the data we are interested in.
+            // currently only the interface number, but more later maybe
+            result.interface_number = info->interface_number;
 
+            qCDebug(KCM_GAMECONTROLLER) << "Found hidapi data for path " << info->path;
+        } else {
+            // Set to unknown in case we don't find a match
+            result.interface_number = -2;
+
+            // There are more than one device with the same vendor and product
+            // so iterate through them looking for ours.
+            qCDebug(KCM_GAMECONTROLLER) << "Found multiple hidapi data with that vendor and product id";
+            UDevMatcher *matcher = UDevMatcher::instance();
+            auto to_match = matcher->deviceToUdevId(path);
+
+            qCDebug(KCM_GAMECONTROLLER) << "Looking for device with this udev id: " << to_match;
+
+            while (current) {
+                auto test_id = matcher->deviceToUdevId(current->path);
+                qCDebug(KCM_GAMECONTROLLER) << "Found device: " << current->path << " udev id: " << test_id;
+
+                if (to_match == test_id) {
+                    result.interface_number = current->interface_number;
+
+                    qCDebug(KCM_GAMECONTROLLER) << "Found hidapi data for path " << current->path;
+                    current = nullptr;
+                } else {
+                    current = current->next;
+                }
+            }
+        }
         SDL_hid_free_enumeration(info);
+    } else {
+        result.interface_number = -2;
     }
 
     return result;
@@ -106,6 +139,7 @@ Device::Device(int deviceIndex, QObject *parent)
     : QObject(parent)
     , m_deviceIndex(deviceIndex)
     , m_connectionType(UnknownType)
+    , m_udev(udev_new())
 {
 }
 
@@ -124,8 +158,13 @@ bool Device::open()
 
     short vendor = SDL_JoystickGetVendor(m_joystick);
     short product = SDL_JoystickGetProduct(m_joystick);
-    SDL_hid_device_info info = getJoystickHidInfo(vendor, product);
-    if (info.interface_number == -1) {
+    auto path = SDL_JoystickPath(m_joystick);
+    qCDebug(KCM_GAMECONTROLLER) << "Device path: " << path;
+    SDL_hid_device_info info = getJoystickHidInfo(vendor, product, path);
+    if (info.interface_number == -2) {
+        // Couldn't find hidapi device, so unknown
+        m_connectionType = UnknownType;
+    } else if (info.interface_number == -1) {
         m_connectionType = BluetoothType;
     } else {
         m_connectionType = USBType;
@@ -166,6 +205,8 @@ void Device::close()
 
     SDL_JoystickClose(m_joystick);
     m_joystick = nullptr;
+    udev_unref(m_udev);
+    m_udev = nullptr;
 }
 
 bool Device::isController() const
