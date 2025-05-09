@@ -167,6 +167,8 @@ if(BUILD_KCM_TABLET)
     pkg_check_modules(LIBWACOM libwacom REQUIRED IMPORTED_TARGET)
 endif()
 
+find_package(libudev)
+
 find_package(SDL2 2.0.16)
 set_package_properties(SDL2 PROPERTIES
         TYPE OPTIONAL
