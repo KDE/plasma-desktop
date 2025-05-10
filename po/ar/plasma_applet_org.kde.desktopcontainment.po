@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-15 00:42+0000\n"
+"POT-Creation-Date: 2025-05-10 00:44+0000\n"
 "PO-Revision-Date: 2025-02-03 16:32+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -423,17 +423,17 @@ msgstr "سطح المكتب والخلفية"
 msgid "Select Folder"
 msgstr "اختر مجلدًا"
 
-#: plugins/folder/foldermodel.cpp:510
+#: plugins/folder/foldermodel.cpp:503
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "أ&نعش سطح المكتب"
 
-#: plugins/folder/foldermodel.cpp:510 plugins/folder/foldermodel.cpp:1720
+#: plugins/folder/foldermodel.cpp:503 plugins/folder/foldermodel.cpp:1716
 #, kde-format
 msgid "&Refresh View"
 msgstr "أ&نعش العرض"
 
-#: plugins/folder/foldermodel.cpp:869
+#: plugins/folder/foldermodel.cpp:862
 #, kde-format
 msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
@@ -441,7 +441,7 @@ msgctxt ""
 msgid "Link Target Not Found"
 msgstr "لم يعثر على رابط المقصد"
 
-#: plugins/folder/foldermodel.cpp:871
+#: plugins/folder/foldermodel.cpp:864
 #, kde-kuit-format
 msgctxt "@info Body text of a system notification"
 msgid ""
@@ -451,23 +451,23 @@ msgstr ""
 "يشير <filename>%1</filename> إلى <filename>%2</filename>، ولكن يعثر العثور "
 "عليه. ربما نقل أو حذف."
 
-#: plugins/folder/foldermodel.cpp:1729
+#: plugins/folder/foldermodel.cpp:1725
 #, kde-format
 msgid "&Empty Trash"
 msgstr "أ&فرغ المهملات"
 
-#: plugins/folder/foldermodel.cpp:1732
+#: plugins/folder/foldermodel.cpp:1728
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr "استعد إلى المكان السابق"
 
-#: plugins/folder/foldermodel.cpp:1735
+#: plugins/folder/foldermodel.cpp:1731
 #, kde-format
 msgid "&Open"
 msgstr "ا&فتح"
 
-#: plugins/folder/foldermodel.cpp:1739
+#: plugins/folder/foldermodel.cpp:1735
 #, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -475,23 +475,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "اظهر المقصد"
 
-#: plugins/folder/foldermodel.cpp:1835
+#: plugins/folder/foldermodel.cpp:1831
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr "أزّل أيقونة سلة المهملات"
 
-#: plugins/folder/foldermodel.cpp:1838
+#: plugins/folder/foldermodel.cpp:1834
 #, kde-format
 msgid "&Move to Trash"
 msgstr "ا&نقل إلى المهملات"
 
-#: plugins/folder/foldermodel.cpp:1871
+#: plugins/folder/foldermodel.cpp:1867
 #, kde-format
 msgid "&Paste"
 msgstr "أل&صق"
 
-#: plugins/folder/foldermodel.cpp:2022
+#: plugins/folder/foldermodel.cpp:2018
 #, kde-format
 msgid "&Properties"
 msgstr "&خصائص"

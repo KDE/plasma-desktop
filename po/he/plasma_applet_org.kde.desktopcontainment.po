@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-15 00:42+0000\n"
+"POT-Creation-Date: 2025-05-10 00:44+0000\n"
 "PO-Revision-Date: 2025-01-30 10:21+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -424,17 +424,17 @@ msgstr "שולחן עבודה ותמונת רקע"
 msgid "Select Folder"
 msgstr "בחירת תיקייה"
 
-#: plugins/folder/foldermodel.cpp:510
+#: plugins/folder/foldermodel.cpp:503
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "&ריענון שולחן העבודה"
 
-#: plugins/folder/foldermodel.cpp:510 plugins/folder/foldermodel.cpp:1720
+#: plugins/folder/foldermodel.cpp:503 plugins/folder/foldermodel.cpp:1716
 #, kde-format
 msgid "&Refresh View"
 msgstr "&ריענון תצוגה"
 
-#: plugins/folder/foldermodel.cpp:869
+#: plugins/folder/foldermodel.cpp:862
 #, kde-format
 msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
@@ -442,7 +442,7 @@ msgctxt ""
 msgid "Link Target Not Found"
 msgstr "יעד הקישור לא נמצא"
 
-#: plugins/folder/foldermodel.cpp:871
+#: plugins/folder/foldermodel.cpp:864
 #, kde-kuit-format
 msgctxt "@info Body text of a system notification"
 msgid ""
@@ -452,23 +452,23 @@ msgstr ""
 "<filename>%1</filename> מצביע אל <filename>%2</filename>, אך לא ניתן למצוא "
 "אותו. יכול להיות שהוא הועבר או נמחק."
 
-#: plugins/folder/foldermodel.cpp:1729
+#: plugins/folder/foldermodel.cpp:1725
 #, kde-format
 msgid "&Empty Trash"
 msgstr "&פינוי פח האשפה"
 
-#: plugins/folder/foldermodel.cpp:1732
+#: plugins/folder/foldermodel.cpp:1728
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr "שחזור ממקום קודם"
 
-#: plugins/folder/foldermodel.cpp:1735
+#: plugins/folder/foldermodel.cpp:1731
 #, kde-format
 msgid "&Open"
 msgstr "&פתיחה"
 
-#: plugins/folder/foldermodel.cpp:1739
+#: plugins/folder/foldermodel.cpp:1735
 #, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -476,23 +476,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "הצגת היעד"
 
-#: plugins/folder/foldermodel.cpp:1835
+#: plugins/folder/foldermodel.cpp:1831
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr "הסרת סמל אשפה"
 
-#: plugins/folder/foldermodel.cpp:1838
+#: plugins/folder/foldermodel.cpp:1834
 #, kde-format
 msgid "&Move to Trash"
 msgstr "ה&עבר לאשפה"
 
-#: plugins/folder/foldermodel.cpp:1871
+#: plugins/folder/foldermodel.cpp:1867
 #, kde-format
 msgid "&Paste"
 msgstr "ה&דבקה"
 
-#: plugins/folder/foldermodel.cpp:2022
+#: plugins/folder/foldermodel.cpp:2018
 #, kde-format
 msgid "&Properties"
 msgstr "מא&פיינים"

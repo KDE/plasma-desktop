@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-01 00:43+0000\n"
-"PO-Revision-Date: 2025-04-10 15:04+0200\n"
+"PO-Revision-Date: 2025-05-09 19:05+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -35,7 +35,7 @@ msgstr "Re-Initia"
 #, kde-format
 msgctxt "@title:group"
 msgid "Plasma"
-msgstr ""
+msgstr "Plasma"
 
 #: ui/main.qml:52
 #, kde-format
@@ -80,12 +80,10 @@ msgstr ""
 "de dispositivo audio."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling"
-msgstr "Rolar:"
+msgstr "Rolar"
 
 #: ui/main.qml:100
 #, kde-format
@@ -137,7 +135,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "Pulsar"
 
 #: ui/main.qml:175
 #, kde-format
@@ -225,20 +223,17 @@ msgstr ""
 #: ui/main.qml:354
 #, kde-format
 msgid "Drag and Drop"
-msgstr ""
+msgstr "Traher e Poner"
 
 #: ui/main.qml:361
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
-#| msgid "Clicking files or folders:"
+#, kde-format
 msgid "When dragging files or folders:"
-msgstr "Pulsante files e dossieres:"
+msgstr "Quando Pulsante files e dossieres:"
 
 #: ui/main.qml:362
 #, kde-format
 msgid "Always ask what to do"
-msgstr ""
+msgstr "Demanda sempre que facer"
 
 #: ui/main.qml:378
 #, kde-kuit-format
@@ -248,30 +243,33 @@ msgid ""
 "and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise show a "
 "dialog."
 msgstr ""
+"Mantene <shortcut>Shift</shortcut> per mover, <shortcut>Ctrl</shortcut> per "
+"copiar, e <shortcut>Shift+Ctrl</shortcut> per crear u symlink (ligamine "
+"simbolic). Alteremente monstra un dialogo."
 
 #: ui/main.qml:386
 #, kde-format
 msgid "Move if on the same device"
-msgstr ""
+msgstr "Move si sur le mesme dispositivo"
 
 #: ui/main.qml:402
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
 msgstr ""
+"Mantene <shortcut>Shift</shortcut> quando deponente per monstrar altere "
+"optiones."
 
 #: ui/main.qml:410
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Touch"
-msgstr "Modo de Touch (Tocco)"
+msgstr "Tocca"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgid "Enable Touch Mode:"
-msgstr "Modo de Touch (Tocco)"
+msgstr "Habilita Modo de Touch (Tocco)"
 
 #: ui/main.qml:418
 #, kde-format
@@ -298,9 +296,7 @@ msgstr ""
 "distaccate."
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always enabled"
+#, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always active"
 msgstr "Sempre habilitate"
@@ -309,7 +305,7 @@ msgstr "Sempre habilitate"
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Disabled"
-msgstr ""
+msgstr "Dishabilitate"
 
 #: ui/main.qml:486
 #, kde-format
@@ -333,6 +329,8 @@ msgid ""
 "For local files on the same device, whether dragging and dropping will "
 "perform a move operation instead of showing the options menu"
 msgstr ""
+"Per files local sur le mesme dispositivo, si traher e deponer executara un "
+"operation de mover in loco de monstrar le menu de optiones"
 
 #. i18n: ectx: label, entry (smoothScroll), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21

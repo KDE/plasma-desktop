@@ -1,5 +1,5 @@
-# Translation of kcm_keys to Spanish
-# Copyright (C) 2020 This file is copyright:
+# Spanish translations for kcm_keys.po package.
+# Copyright (C) 2020-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # Automatically generated, 2020.
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-09 00:43+0000\n"
-"PO-Revision-Date: 2025-01-01 04:58+0100\n"
+"PO-Revision-Date: 2025-05-10 00:23+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -39,13 +39,13 @@ msgstr "Lanzar"
 #, kde-format
 msgctxt "@item:intable"
 msgid "Window Management"
-msgstr ""
+msgstr "Gestión de ventanas"
 
 #: basemodel.cpp:194
 #, kde-format
 msgctxt "@item:intable"
 msgid "Plasma Workspace"
-msgstr ""
+msgstr "Espacio de trabajo Plasma"
 
 #: globalaccelmodel.cpp:235
 #, kde-format
@@ -164,7 +164,7 @@ msgstr "Acciones comunes"
 #, kde-format
 msgctxt "@action:button Import shortcut scheme"
 msgid "Import…"
-msgstr "Importar..."
+msgstr "Importar…"
 
 #: ui/main.qml:50
 #, kde-format
@@ -176,7 +176,7 @@ msgstr "Cancelar exportación"
 #, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export…"
-msgstr "Exportar..."
+msgstr "Exportar…"
 
 #: ui/main.qml:83
 #, kde-format
@@ -207,7 +207,7 @@ msgstr "Añadir nuevo"
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Application…'"
 msgid "Application…"
-msgstr "Aplicación..."
+msgstr "Aplicación…"
 
 #: ui/main.qml:180
 #, kde-format
@@ -219,7 +219,7 @@ msgstr "Añadir nueva aplicación"
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
 msgid "Command or Script…"
-msgstr "Orden o guion..."
+msgstr "Orden o guion…"
 
 #: ui/main.qml:188
 #, kde-format
@@ -337,7 +337,7 @@ msgstr "Orden"
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
-msgstr "Escoger..."
+msgstr "Escoger…"
 
 #: ui/main.qml:482
 #, kde-format
@@ -384,7 +384,7 @@ msgstr "Esquema personalizado"
 #: ui/main.qml:555
 #, kde-format
 msgid "Select File…"
-msgstr "Seleccionar archivo..."
+msgstr "Seleccionar archivo…"
 
 #: ui/main.qml:555
 #, kde-format
@@ -453,7 +453,7 @@ msgstr "Borrar este atajo de teclado"
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
-msgstr "Añadir..."
+msgstr "Añadir…"
 
 #: ui/ShortcutActionDelegate.qml:195
 #, kde-format
@@ -472,35 +472,3 @@ msgstr "Cancelar captura de atajo de teclado"
 msgctxt "@info:tooltip"
 msgid "Cancel capturing of new shortcut"
 msgstr "Cancelar la captura del nuevo atajo de teclado"
-
-#~ msgctxt "Template for file dialog"
-#~ msgid "Script file (*.*sh)"
-#~ msgstr "Archivo de guion (*.*sh)"
-
-#~ msgctxt "@action:button Save shortcut scheme"
-#~ msgid "Save Scheme"
-#~ msgstr "Guardar esquema"
-
-#~ msgid ""
-#~ "Shortcut %1 is already assigned to action '%2' of %3.\n"
-#~ "Do you want to reassign it?"
-#~ msgstr ""
-#~ "El atajo de teclado %1 ya está asignado a la acción «%2» de %3.\n"
-#~ "¿Desea cambiar la asignación?"
-
-#~ msgctxt "@title:window"
-#~ msgid "Found conflict"
-#~ msgstr "Se ha encontrado un conflicto"
-
-#~ msgctxt "@action:button Keep translated text as short as possible"
-#~ msgid "Add Command…"
-#~ msgstr "Añadir orden..."
-
-#~ msgid "Import Scheme…"
-#~ msgstr "Importar esquema..."
-
-#~ msgid "Shortcuts"
-#~ msgstr "Accesos rápidos"
-
-#~ msgid "David Redondo"
-#~ msgstr "David Redondo"
