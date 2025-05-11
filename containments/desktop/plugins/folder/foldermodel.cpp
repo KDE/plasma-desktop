@@ -701,7 +701,7 @@ void FolderModel::setFilterPattern(const QString &pattern)
     }
 
     m_filterPattern = pattern;
-    m_filterPatternMatchAll = (pattern == QLatin1String("*"));
+    m_filterPatternMatchAll = (pattern == QLatin1String("*") || pattern.isEmpty());
 
     const QList<QStringView> patterns = QStringView(pattern).split(QLatin1Char(' '));
     m_regExps.clear();
