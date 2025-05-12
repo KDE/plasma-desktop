@@ -17,7 +17,6 @@ import "code/layoutmetrics.js" as LayoutMetrics
 
 PlasmaCore.PopupPlasmaWindow {
     id: groupDialog
-    visible: true
 
     width: mouseHandler.implicitWidth + leftPadding + rightPadding
     height: mouseHandler.implicitHeight + topPadding + bottomPadding
@@ -29,7 +28,6 @@ PlasmaCore.PopupPlasmaWindow {
 
     margin: (Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentPrefersFloatingApplets) ? Kirigami.Units.largeSpacing : 0
 
-    floating: Plasmoid.location === PlasmaCore.Types.Floating
 
     popupDirection: switch (Plasmoid.location) {
         case PlasmaCore.Types.TopEdge:
@@ -59,6 +57,14 @@ PlasmaCore.PopupPlasmaWindow {
                 return;
             }
         }
+    }
+
+    Component.onCompleted: {
+        // Don't bind visible at creation, otherwise it
+        // vill be made visible before assigning the visual partent
+        // making the window flickering in the center of the screen before being moved
+        // in the correct position
+        visible = true
     }
 
     mainItem: MouseHandler {
