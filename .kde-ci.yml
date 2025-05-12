@@ -69,5 +69,7 @@ RuntimeDependencies:
 Options:
  ctest-arguments: '--repeat until-pass:5'
  require-passing-tests-on: ['Linux/Qt6', 'FreeBSD/Qt6']
- cppcheck-arguments: '--enable=warning,style,performance --suppress-xml=cppcheck-suppressions.xml'
+ cppcheck-arguments: '--enable=warning,style,performance --suppress-xml=cppcheck-suppressions.xml --library=gtk'
+ cppcheck-ignore-files:
+  - autotests
  xml-validate-ignore: ['kcms/keyboard/tests/config/base.bad.xml']
