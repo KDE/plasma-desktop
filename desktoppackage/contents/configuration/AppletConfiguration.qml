@@ -11,6 +11,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.15
 
+import org.kde.kcmutils as KCM
 import org.kde.kirigami as Kirigami
 import org.kde.kitemmodels 1.0 as KItemModels
 import org.kde.plasma.configuration 2.0
@@ -424,10 +425,11 @@ Rectangle {
             background: Item {
                 Kirigami.Separator {
                     id: bottomSeparator
-                    visible: app.pageStack.currentItem
+                    visible: (app.pageStack.currentItem
                         && app.pageStack.currentItem.flickable
+                        && !(app.pageStack.currentItem.flickable instanceof KCMUtils.GridViewKCM)
                         && !(app.pageStack.currentItem.flickable.atYBeginning
-                        && app.pageStack.currentItem.flickable.atYEnd)
+                        && app.pageStack.currentItem.flickable.atYEnd)) ?? false
                     anchors {
                         left: parent.left
                         right: parent.right
