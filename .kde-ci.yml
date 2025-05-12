@@ -64,7 +64,7 @@ RuntimeDependencies:
     'frameworks/qqc2-desktop-style': '@latest-kf6'
     'network/kio-extras': '@latest-kf6'
     'plasma/kactivitymanagerd': '@same'
-    'sdk/selenium-webdriver-at-spi': '@latest-kf6'
+    'sdk/selenium-webdriver-at-spi': '@same'
 
 Options:
  ctest-arguments: '--repeat until-pass:5'
