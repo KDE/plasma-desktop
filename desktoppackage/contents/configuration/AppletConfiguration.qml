@@ -448,12 +448,7 @@ Rectangle {
         QQC2.Action {
             id: applyAction
             onTriggered: {
-                if (isContainment) {
-                    app.pageStack.get(0).saveConfig()
-                } else {
-                    root.saveConfig()
-                }
-
+                root.saveConfig()
                 wasConfigurationChangedSignalSent = false
                 applyButton.enabled = false;
             }
