@@ -76,24 +76,29 @@ KCM.SimpleKCM {
 
         RadioButton {
             id: locationDesktop
+            implicitHeight: locationCustomValue.implicitHeight
 
-            Kirigami.FormData.label: i18n("Show:")
+            Kirigami.FormData.label: i18nc("@title:group form label for radiobutton group", "Show:")
 
-            text: i18n("Desktop folder")
+            text: i18nc("@option:radio", "Desktop folder")
         }
 
         RadioButton {
             id: locationCurrentActivity
             visible: placesModel.activityLinkingEnabled
+            implicitHeight: locationCustomValue.implicitHeight
 
-            text: i18n("Files linked to the current activity")
+            text: i18nc("@option:radio", "Files linked to the current activity")
         }
 
         RowLayout {
+            Layout.fillWidth: true
+            spacing: Kirigami.Units.smallSpacing
             RadioButton {
                 id: locationPlace
 
-                text: i18n("Places panel item:")
+                text: i18nc("@option:radio also label for combobox", "Places panel item:")
+                Layout.minimumWidth: Math.max(locationPlace.implicitWidth, locationCustom.implicitWidth, labelMode.implicitWidth)
 
                 onCheckedChanged: {
                     locationPlaceValue.enabled = checked;
@@ -123,10 +128,13 @@ KCM.SimpleKCM {
         }
 
         RowLayout {
+            Layout.fillWidth: true
+            spacing: Kirigami.Units.smallSpacing
             RadioButton {
                 id: locationCustom
+                Layout.minimumWidth: Math.max(locationPlace.implicitWidth, locationCustom.implicitWidth, labelMode.implicitWidth)
 
-                text: i18n("Custom location:")
+                text: i18nc("@option:radio also label for text field", "Custom location:")
             }
 
             TextField {
@@ -134,7 +142,7 @@ KCM.SimpleKCM {
                 enabled: locationCustom.checked
                 Layout.fillWidth: true
 
-                placeholderText: i18n("Type path or URL…")
+                placeholderText: i18nc("@info:placeholder custom location", "Type path or URL…")
 
                 inputMethodHints: Qt.ImhNoPredictiveText
 
@@ -173,20 +181,24 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: true
         }
 
-        ComboBox {
-            id: labelMode
-            visible: titleVisible
-
-            Kirigami.FormData.label: i18n("Title:")
-
-            model: [i18n("None"), i18n("Default"), i18n("Full path"), i18n("Custom title")]
-        }
-
         RowLayout {
+            Layout.fillWidth: true
+            spacing: Kirigami.Units.smallSpacing
             visible: titleVisible
+            Kirigami.FormData.label: i18nc("@label:textbox custom widget title", "Title:")
 
-            Item {
-                width: Kirigami.Units.gridUnit
+            ComboBox {
+                id: labelMode
+                Layout.minimumWidth: Math.max(locationPlace.implicitWidth, locationCustom.implicitWidth, labelMode.implicitWidth)
+                visible: titleVisible
+
+
+                model: [
+                    i18nc("@item:inlistbox no title", "None"),
+                    i18nc("@item:inlistbox default title", "Default"),
+                    i18nc("@item:inlistbox full path as title", "Full path"),
+                    i18nc("@item:inlistbox title from text input field", "Custom")
+                ]
             }
 
             TextField {
@@ -194,7 +206,7 @@ KCM.SimpleKCM {
                 Layout.fillWidth: true
                 enabled: (labelMode.currentIndex === 3)
 
-                placeholderText: i18n("Enter custom title…")
+                placeholderText: i18nc("@info:placeholder custom window title", "Enter title…")
             }
         }
     }
