@@ -64,11 +64,6 @@ Rectangle {
         })
 
         plasmoid.configuration.writeConfig();
-
-        // For ConfigurationContainmentActions.qml
-        if (app.pageStack.currentItem.hasOwnProperty("saveConfig")) {
-            app.pageStack.currentItem.saveConfig()
-        }
     }
 
     function isConfigurationChanged() {
