@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-19 02:36+0000\n"
+"POT-Creation-Date: 2025-05-13 02:48+0000\n"
 "PO-Revision-Date: 2025-01-10 17:14+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -420,17 +420,17 @@ msgstr "Skrivbord och skrivbordsunderlägg"
 msgid "Select Folder"
 msgstr "Markera katalog"
 
-#: plugins/folder/foldermodel.cpp:510
+#: plugins/folder/foldermodel.cpp:503
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "Uppdate&ra skrivbord"
 
-#: plugins/folder/foldermodel.cpp:510 plugins/folder/foldermodel.cpp:1720
+#: plugins/folder/foldermodel.cpp:503 plugins/folder/foldermodel.cpp:1716
 #, kde-format
 msgid "&Refresh View"
 msgstr "Uppdate&ra vy"
 
-#: plugins/folder/foldermodel.cpp:869
+#: plugins/folder/foldermodel.cpp:862
 #, kde-format
 msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
@@ -438,7 +438,7 @@ msgctxt ""
 msgid "Link Target Not Found"
 msgstr "Länkmål hittades inte"
 
-#: plugins/folder/foldermodel.cpp:871
+#: plugins/folder/foldermodel.cpp:864
 #, kde-kuit-format
 msgctxt "@info Body text of a system notification"
 msgid ""
@@ -448,23 +448,23 @@ msgstr ""
 "<filename>%1</filename> pekar på <filename>%2</filename>, men det kunde inte "
 "hittas. Det kan ha flyttats eller tagits bort."
 
-#: plugins/folder/foldermodel.cpp:1729
+#: plugins/folder/foldermodel.cpp:1725
 #, kde-format
 msgid "&Empty Trash"
 msgstr "Töm papp&erskorg"
 
-#: plugins/folder/foldermodel.cpp:1732
+#: plugins/folder/foldermodel.cpp:1728
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore"
 msgstr "Återställ"
 
-#: plugins/folder/foldermodel.cpp:1735
+#: plugins/folder/foldermodel.cpp:1731
 #, kde-format
 msgid "&Open"
 msgstr "Ö&ppna"
 
-#: plugins/folder/foldermodel.cpp:1739
+#: plugins/folder/foldermodel.cpp:1735
 #, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -472,12 +472,12 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Visa mål"
 
-#: plugins/folder/foldermodel.cpp:1863
+#: plugins/folder/foldermodel.cpp:1859
 #, kde-format
 msgid "&Paste"
 msgstr "K&listra in"
 
-#: plugins/folder/foldermodel.cpp:1987
+#: plugins/folder/foldermodel.cpp:1983
 #, kde-format
 msgid "&Properties"
 msgstr "E&genskaper"

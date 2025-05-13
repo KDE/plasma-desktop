@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-19 02:36+0000\n"
+"POT-Creation-Date: 2025-05-13 02:48+0000\n"
 "PO-Revision-Date: 2025-02-02 23:21+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -428,17 +428,17 @@ msgstr "Darbalaukis ir darbalaukio fonas"
 msgid "Select Folder"
 msgstr "Pasirinkite aplanką"
 
-#: plugins/folder/foldermodel.cpp:510
+#: plugins/folder/foldermodel.cpp:503
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "Į&kelti darbalaukį iš naujo"
 
-#: plugins/folder/foldermodel.cpp:510 plugins/folder/foldermodel.cpp:1720
+#: plugins/folder/foldermodel.cpp:503 plugins/folder/foldermodel.cpp:1716
 #, kde-format
 msgid "&Refresh View"
 msgstr "Įke&lti rodinį iš naujo"
 
-#: plugins/folder/foldermodel.cpp:869
+#: plugins/folder/foldermodel.cpp:862
 #, kde-format
 msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
@@ -446,7 +446,7 @@ msgctxt ""
 msgid "Link Target Not Found"
 msgstr "Nuorodos paskirtis nerasta"
 
-#: plugins/folder/foldermodel.cpp:871
+#: plugins/folder/foldermodel.cpp:864
 #, kde-kuit-format
 msgctxt "@info Body text of a system notification"
 msgid ""
@@ -456,23 +456,23 @@ msgstr ""
 "<filename>%1</filename> nurodo į <filename>%2</filename>, bet jo nepavyko "
 "surasti. Gali būti, kad jis perkeltas arba ištrintas."
 
-#: plugins/folder/foldermodel.cpp:1729
+#: plugins/folder/foldermodel.cpp:1725
 #, kde-format
 msgid "&Empty Trash"
 msgstr "&Išvalyti šiukšlinę"
 
-#: plugins/folder/foldermodel.cpp:1732
+#: plugins/folder/foldermodel.cpp:1728
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore"
 msgstr "Atkurti"
 
-#: plugins/folder/foldermodel.cpp:1735
+#: plugins/folder/foldermodel.cpp:1731
 #, kde-format
 msgid "&Open"
 msgstr "At&verti"
 
-#: plugins/folder/foldermodel.cpp:1739
+#: plugins/folder/foldermodel.cpp:1735
 #, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -480,12 +480,12 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Rodyti paskirtį"
 
-#: plugins/folder/foldermodel.cpp:1863
+#: plugins/folder/foldermodel.cpp:1859
 #, kde-format
 msgid "&Paste"
 msgstr "Į&dėti"
 
-#: plugins/folder/foldermodel.cpp:1987
+#: plugins/folder/foldermodel.cpp:1983
 #, kde-format
 msgid "&Properties"
 msgstr "&Savybės"

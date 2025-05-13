@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-19 02:36+0000\n"
+"POT-Creation-Date: 2025-05-13 02:48+0000\n"
 "PO-Revision-Date: 2017-12-15 12:38+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -481,17 +481,17 @@ msgstr "Подеси површ"
 msgid "Select Folder"
 msgstr "Избор фасцикле"
 
-#: plugins/folder/foldermodel.cpp:510
+#: plugins/folder/foldermodel.cpp:503
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "&Освежи површ"
 
-#: plugins/folder/foldermodel.cpp:510 plugins/folder/foldermodel.cpp:1720
+#: plugins/folder/foldermodel.cpp:503 plugins/folder/foldermodel.cpp:1716
 #, kde-format
 msgid "&Refresh View"
 msgstr "&Освежи приказ"
 
-#: plugins/folder/foldermodel.cpp:869
+#: plugins/folder/foldermodel.cpp:862
 #, kde-format
 msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
@@ -499,7 +499,7 @@ msgctxt ""
 msgid "Link Target Not Found"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:871
+#: plugins/folder/foldermodel.cpp:864
 #, kde-kuit-format
 msgctxt "@info Body text of a system notification"
 msgid ""
@@ -507,25 +507,25 @@ msgid ""
 "not be found. It may have been moved or deleted."
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1729
+#: plugins/folder/foldermodel.cpp:1725
 #, fuzzy, kde-format
 #| msgid "&Empty Trash Bin"
 msgid "&Empty Trash"
 msgstr "&Испразни смеће"
 
-#: plugins/folder/foldermodel.cpp:1732
+#: plugins/folder/foldermodel.cpp:1728
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore"
 msgstr "Врати"
 
-#: plugins/folder/foldermodel.cpp:1735
+#: plugins/folder/foldermodel.cpp:1731
 #, kde-format
 msgid "&Open"
 msgstr "&Отвори"
 
 # >> @option:radio (that is, semantics thereof)
-#: plugins/folder/foldermodel.cpp:1739
+#: plugins/folder/foldermodel.cpp:1735
 #, fuzzy, kde-format
 #| msgid "Show All Files"
 msgctxt ""
@@ -534,12 +534,12 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Прикажи све фајлове"
 
-#: plugins/folder/foldermodel.cpp:1863
+#: plugins/folder/foldermodel.cpp:1859
 #, kde-format
 msgid "&Paste"
 msgstr "&Налепи"
 
-#: plugins/folder/foldermodel.cpp:1987
+#: plugins/folder/foldermodel.cpp:1983
 #, kde-format
 msgid "&Properties"
 msgstr "&Својства"

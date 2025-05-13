@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-19 02:36+0000\n"
+"POT-Creation-Date: 2025-05-13 02:48+0000\n"
 "PO-Revision-Date: 2025-01-27 21:02+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -425,17 +425,17 @@ msgstr "Asztal és háttérkép"
 msgid "Select Folder"
 msgstr "Mappa kiválasztása"
 
-#: plugins/folder/foldermodel.cpp:510
+#: plugins/folder/foldermodel.cpp:503
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "Az asztal &frissítése"
 
-#: plugins/folder/foldermodel.cpp:510 plugins/folder/foldermodel.cpp:1720
+#: plugins/folder/foldermodel.cpp:503 plugins/folder/foldermodel.cpp:1716
 #, kde-format
 msgid "&Refresh View"
 msgstr "A né&zet frissítése"
 
-#: plugins/folder/foldermodel.cpp:869
+#: plugins/folder/foldermodel.cpp:862
 #, kde-format
 msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
@@ -443,7 +443,7 @@ msgctxt ""
 msgid "Link Target Not Found"
 msgstr "A link célja nem található"
 
-#: plugins/folder/foldermodel.cpp:871
+#: plugins/folder/foldermodel.cpp:864
 #, kde-kuit-format
 msgctxt "@info Body text of a system notification"
 msgid ""
@@ -453,23 +453,23 @@ msgstr ""
 "A(z) <filename>%1</filename> a(z) <filename>%2</filename> fájlra mutat, de "
 "az nem található. Talán áthelyezték vagy törölték."
 
-#: plugins/folder/foldermodel.cpp:1729
+#: plugins/folder/foldermodel.cpp:1725
 #, kde-format
 msgid "&Empty Trash"
 msgstr "A Kuka ü&rítése"
 
-#: plugins/folder/foldermodel.cpp:1732
+#: plugins/folder/foldermodel.cpp:1728
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore"
 msgstr "Visszaállítás"
 
-#: plugins/folder/foldermodel.cpp:1735
+#: plugins/folder/foldermodel.cpp:1731
 #, kde-format
 msgid "&Open"
 msgstr "Megny&itás"
 
-#: plugins/folder/foldermodel.cpp:1739
+#: plugins/folder/foldermodel.cpp:1735
 #, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -477,12 +477,12 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Cél megjelenítése"
 
-#: plugins/folder/foldermodel.cpp:1863
+#: plugins/folder/foldermodel.cpp:1859
 #, kde-format
 msgid "&Paste"
 msgstr "&Beillesztés"
 
-#: plugins/folder/foldermodel.cpp:1987
+#: plugins/folder/foldermodel.cpp:1983
 #, kde-format
 msgid "&Properties"
 msgstr "&Tulajdonságok"

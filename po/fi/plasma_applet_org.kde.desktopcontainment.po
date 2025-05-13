@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-19 02:36+0000\n"
+"POT-Creation-Date: 2025-05-13 02:48+0000\n"
 "PO-Revision-Date: 2025-02-16 11:03+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -421,17 +421,17 @@ msgstr "Työpöytä ja tausta"
 msgid "Select Folder"
 msgstr "Valitse kansio"
 
-#: plugins/folder/foldermodel.cpp:510
+#: plugins/folder/foldermodel.cpp:503
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "&Päivitä työpöytä"
 
-#: plugins/folder/foldermodel.cpp:510 plugins/folder/foldermodel.cpp:1720
+#: plugins/folder/foldermodel.cpp:503 plugins/folder/foldermodel.cpp:1716
 #, kde-format
 msgid "&Refresh View"
 msgstr "&Päivitä näkymä"
 
-#: plugins/folder/foldermodel.cpp:869
+#: plugins/folder/foldermodel.cpp:862
 #, kde-format
 msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
@@ -439,7 +439,7 @@ msgctxt ""
 msgid "Link Target Not Found"
 msgstr "Linkin kohdetta ei löydy"
 
-#: plugins/folder/foldermodel.cpp:871
+#: plugins/folder/foldermodel.cpp:864
 #, kde-kuit-format
 msgctxt "@info Body text of a system notification"
 msgid ""
@@ -449,23 +449,23 @@ msgstr ""
 "<filename>%1</filename> osoittaa tiedostoon <filename>%2</filename>, jota ei "
 "löydy. Se on ehkä siirretty tai poistettu."
 
-#: plugins/folder/foldermodel.cpp:1729
+#: plugins/folder/foldermodel.cpp:1725
 #, kde-format
 msgid "&Empty Trash"
 msgstr "&Tyhjennä roskakori"
 
-#: plugins/folder/foldermodel.cpp:1732
+#: plugins/folder/foldermodel.cpp:1728
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore"
 msgstr "Palauta"
 
-#: plugins/folder/foldermodel.cpp:1735
+#: plugins/folder/foldermodel.cpp:1731
 #, kde-format
 msgid "&Open"
 msgstr "&Avaa"
 
-#: plugins/folder/foldermodel.cpp:1739
+#: plugins/folder/foldermodel.cpp:1735
 #, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -473,12 +473,12 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Näytä kohde"
 
-#: plugins/folder/foldermodel.cpp:1863
+#: plugins/folder/foldermodel.cpp:1859
 #, kde-format
 msgid "&Paste"
 msgstr "&Liitä"
 
-#: plugins/folder/foldermodel.cpp:1987
+#: plugins/folder/foldermodel.cpp:1983
 #, kde-format
 msgid "&Properties"
 msgstr "&Ominaisuudet"
