@@ -95,10 +95,6 @@ KCMUtils.SimpleKCM {
                     root.device.enabled = checked
                 }
             }
-
-            QQC2.ToolTip.delay: 1000
-            QQC2.ToolTip.visible: hovered
-            QQC2.ToolTip.text: i18nd("kcmmouse", "Accept input through this device.")
         }
 
         QQC2.CheckBox {
@@ -113,10 +109,6 @@ KCMUtils.SimpleKCM {
                     root.device.leftHanded = checked
                 }
             }
-
-            QQC2.ToolTip.delay: 1000
-            QQC2.ToolTip.visible: hovered
-            QQC2.ToolTip.text: i18nd("kcmmouse", "Swap left and right buttons.")
         }
 
         RowLayout {
@@ -132,10 +124,6 @@ KCMUtils.SimpleKCM {
                         root.device.middleEmulation = checked
                     }
                 }
-
-                QQC2.ToolTip.delay: 1000
-                QQC2.ToolTip.visible: hovered
-                QQC2.ToolTip.text: i18ndc("kcmmouse", "@info:tooltip" ,"Pressing the left and right button simultaneously acts as middle-click.")
             }
 
             Kirigami.ContextualHelpButton {
@@ -331,10 +319,6 @@ KCMUtils.SimpleKCM {
                     root.device.naturalScroll = checked
                 }
             }
-
-            QQC2.ToolTip.delay: 1000
-            QQC2.ToolTip.visible: hovered
-            QQC2.ToolTip.text: i18nd("kcmmouse", "Touchscreen-like scrolling.")
         }
 
         RowLayout {
@@ -352,10 +336,6 @@ KCMUtils.SimpleKCM {
                         root.device.scrollOnButtonDown = checked
                     }
                 }
-
-                QQC2.ToolTip.delay: 1000
-                QQC2.ToolTip.visible: hovered
-                QQC2.ToolTip.text: i18nd("kcmmouse", "Scrolling with the mouse while the middle button is pressed.")
             }
 
             Kirigami.ContextualHelpButton {

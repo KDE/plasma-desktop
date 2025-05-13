@@ -102,13 +102,6 @@ KCM.SimpleKCM {
             enabled: root.device?.supportsDisableEvents ?? false
             checked: root.device && (!root.device.supportsDisableEvents || root.device.enabled)
 
-            hoverEnabled: true
-            QQC2.ToolTip {
-                text: i18nd("kcm_touchpad", "Accept input through this device.")
-                visible: parent.hovered
-                delay: 1000
-            }
-
             onToggled: {
                 if (root.device) {
                     root.device.enabled = checked
@@ -150,13 +143,6 @@ KCM.SimpleKCM {
                 enabled: root.device?.supportsDisableWhileTyping ?? false
                 checked: enabled && (root.device?.disableWhileTyping ?? false)
 
-                hoverEnabled: true
-                QQC2.ToolTip {
-                    text: i18nd("kcm_touchpad", "Disable touchpad while typing to prevent accidental inputs.")
-                    visible: parent.hovered
-                    delay: 1000
-                }
-
                 onToggled: {
                     if (root.device) {
                         root.device.disableWhileTyping = checked
@@ -185,13 +171,6 @@ KCM.SimpleKCM {
             enabled: root.device?.supportsLeftHanded ?? false
             checked: enabled && (root.device?.leftHanded ?? false)
 
-            hoverEnabled: true
-            QQC2.ToolTip {
-                text: i18nd("kcm_touchpad", "Swap left and right buttons.")
-                visible: parent.hovered
-                delay: 1000
-            }
-
             onToggled: {
                 if (root.device) {
                     root.device.leftHanded = checked
@@ -207,13 +186,6 @@ KCM.SimpleKCM {
                 text: i18ndc("kcm_touchpad", "@option:check", "Press left and right buttons to middle-click")
                 enabled: root.device?.supportsMiddleEmulation ?? false
                 checked: enabled && (root.device?.middleEmulation ?? false)
-
-                hoverEnabled: true
-                QQC2.ToolTip {
-                    text: i18ndc("kcm_touchpad", "@info:tooltip for checkbox", "Pressing the left and right button simultaneously acts as middle-click.")
-                    visible: parent.hovered
-                    delay: 1000
-                }
 
                 onToggled: {
                     if (root.device) {
@@ -427,13 +399,6 @@ KCM.SimpleKCM {
                 text: i18nd("kcm_touchpad", "Two fingers")
                 enabled: root.device?.supportsScrollTwoFinger ?? false
                 checked: root.device?.scrollTwoFinger ?? false
-
-                hoverEnabled: true
-                QQC2.ToolTip {
-                    text: i18nd("kcm_touchpad", "Slide with two fingers scrolls.")
-                    visible: parent.hovered
-                    delay: 1000
-                }
             }
 
             QQC2.RadioButton {
@@ -441,13 +406,6 @@ KCM.SimpleKCM {
                 text: i18nd("kcm_touchpad", "Touchpad edges")
                 enabled: root.device?.supportsScrollEdge ?? false
                 checked: root.device?.scrollEdge ?? false
-
-                hoverEnabled: true
-                QQC2.ToolTip {
-                    text: i18nd("kcm_touchpad", "Slide on the touchpad edges scrolls.")
-                    visible: parent.hovered
-                    delay: 1000
-                }
             }
         }
 
@@ -462,13 +420,6 @@ KCM.SimpleKCM {
                     root.device.naturalScroll = checked
                     root.changeSignal()
                 }
-            }
-
-            hoverEnabled: true
-            QQC2.ToolTip {
-                text: i18nd("kcm_touchpad", "Touchscreen like scrolling.")
-                visible: parent.hovered
-                delay: 1000
             }
         }
 
@@ -485,13 +436,6 @@ KCM.SimpleKCM {
                     root.changeSignal()
                 }
             }
-
-            hoverEnabled: true
-            QQC2.ToolTip {
-                text: i18nd("kcm_touchpad", "Disable horizontal scrolling.")
-                visible: parent.hovered
-                delay: 1000
-            }
         }
 
         Item {
@@ -506,13 +450,6 @@ KCM.SimpleKCM {
             enabled: root.device?.tapFingerCount > 0
             checked: enabled && (root.device?.tapToClick ?? false)
 
-            hoverEnabled: true
-            QQC2.ToolTip {
-                text: i18ndc("kcm_touchpad", "@info:tooltip", "Single tap to left-click.")
-                visible: parent.hovered
-                delay: 1000
-            }
-
             onToggled: {
                 if (root.device) {
                     root.device.tapToClick = checked
@@ -521,39 +458,33 @@ KCM.SimpleKCM {
             }
         }
 
-        QQC2.CheckBox {
-            id: tapAndDrag
-            text: i18nd("kcm_touchpad", "Tap-and-drag")
-            enabled: root.device?.tapFingerCount > 0 && tapToClick.checked
-            checked: enabled && (root.device?.tapAndDrag ?? false)
+        RowLayout {
+            spacing: Kirigami.Units.smallSpacing
+            QQC2.CheckBox {
+                id: tapAndDrag
+                text: i18nd("kcm_touchpad", "Tap-and-drag")
+                enabled: root.device?.tapFingerCount > 0 && tapToClick.checked
+                checked: enabled && (root.device?.tapAndDrag ?? false)
 
-            hoverEnabled: true
-            QQC2.ToolTip {
-                text: i18nd("kcm_touchpad", "Sliding over touchpad directly after tap drags.")
-                visible: parent.hovered
-                delay: 1000
+                onToggled: {
+                    if (root.device) {
+                        root.device.tapAndDrag = checked
+                        root.changeSignal()
+                    }
+                }
             }
 
-            onToggled: {
-                if (root.device) {
-                    root.device.tapAndDrag = checked
-                    root.changeSignal()
-                }
+            Kirigami.ContextualHelpButton {
+                toolTipText: i18ndc("kcm_touchpad", "@info:tooltip from ContextualHelpButton", "Tap, then tap and immediately slide finger over the touchpad to drag. Lift finger to drop.")
             }
         }
 
+
         QQC2.CheckBox {
             id: tapAndDragLock
-            text: i18nd("kcm_touchpad", "Tap-and-drag lock")
+            text: i18nd("kcm_touchpad", "Allow briefly lifting finger during tap-and-drag")
             enabled: root.device?.tapFingerCount > 0 && tapAndDrag.checked
             checked: enabled && (root.device?.tapDragLock ?? false)
-
-            hoverEnabled: true
-            QQC2.ToolTip {
-                text: i18nd("kcm_touchpad", "Dragging continues after a short finger lift.")
-                visible: parent.hovered
-                delay: 1000
-            }
 
             onToggled: {
                 if (root.device) {
@@ -589,17 +520,6 @@ KCM.SimpleKCM {
                     : i18nd("kcm_touchpad", "Right-click")
                 )
                 checked: multiTap.enabled && !(root.device?.lmrTapButtonMap ?? false)
-
-                hoverEnabled: true
-                QQC2.ToolTip {
-                    id: multiTapRightClickToolTip
-                    visible: parent.hovered
-                    delay: 1000
-                    text: (root.device?.tapFingerCount > 2
-                        ? i18nd("kcm_touchpad", "Tap with two fingers to right-click, tap with three fingers to middle-click.")
-                        : i18nd("kcm_touchpad", "Tap with two fingers to right-click.")
-                    )
-                }
             }
 
             QQC2.RadioButton {
@@ -609,17 +529,6 @@ KCM.SimpleKCM {
                     : i18nd("kcm_touchpad", "Middle-click")
                 )
                 checked: multiTap.enabled && (root.device?.lmrTapButtonMap ?? false)
-
-                hoverEnabled: true
-                QQC2.ToolTip {
-                    id: multiTapMiddleClickToolTip
-                    visible: parent.hovered
-                    delay: 1000
-                    text: (root.device?.tapFingerCount > 2
-                        ? i18nd("kcm_touchpad", "Tap with two fingers to middle-click, tap with three fingers to right-click.")
-                        : i18nd("kcm_touchpad", "Tap with two fingers to middle-click.")
-                    )
-                }
             }
         }
 
@@ -654,15 +563,6 @@ KCM.SimpleKCM {
                 enabled: root.device?.supportsClickMethodAreas ?? false
                 checked: enabled && (root.device?.clickMethodAreas ?? false)
                 Accessible.description: rightClickMethodAreasInfoLabel.visible ? rightClickMethodAreasInfoLabel.text : ""
-
-                hoverEnabled: true
-
-                property string toolTipText: middleEmulation.checked
-                    ? i18ndc("kcm_touchpad", "@info:tooltip", "Pressing the bottom right corner of your touchpad acts as right-click. Middle-click by simultaneously pressing the bottom left and bottom right corners.")
-                    : i18ndc("kcm_touchpad", "@info:tooltip", "Pressing the bottom right corner of your touchpad acts as right-click. Middle-click by pressing the bottom central area.")
-                QQC2.ToolTip.text: toolTipText
-                QQC2.ToolTip.visible: hovered
-                QQC2.ToolTip.delay: 1000
             }
 
             QQC2.Label {
@@ -679,16 +579,6 @@ KCM.SimpleKCM {
                 textFormat: Text.PlainText
                 elide: Text.ElideRight
                 font: Kirigami.Theme.smallFont
-
-                QQC2.ToolTip.text: rightClickMethodAreas.toolTipText
-                QQC2.ToolTip.visible: labelRightAreasMouseArea.containsMouse
-                QQC2.ToolTip.delay: 1000
-
-                MouseArea {
-                    id: labelRightAreasMouseArea
-                    anchors.fill: parent
-                    hoverEnabled: true
-                }
             }
 
             QQC2.RadioButton {
@@ -698,13 +588,6 @@ KCM.SimpleKCM {
                 topPadding: Kirigami.Units.smallSpacing // in lieu of rightClickMethod.spacing
                 enabled: root.device?.supportsClickMethodClickfinger ?? false
                 checked: enabled && (root.device?.clickMethodClickfinger ?? false)
-
-                hoverEnabled: true
-
-                property string toolTipText: i18ndc("kcm_touchpad", "@info:tooltip for radiobutton", "Pressing the touchpad anywhere with two fingers acts as right-click.")
-                QQC2.ToolTip.text: toolTipText
-                QQC2.ToolTip.visible: hovered
-                QQC2.ToolTip.delay: 1000
             }
 
             QQC2.Label {
@@ -719,16 +602,6 @@ KCM.SimpleKCM {
                 textFormat: Text.PlainText
                 elide: Text.ElideRight
                 font: Kirigami.Theme.smallFont
-
-                QQC2.ToolTip.text: rightClickMethodClickfinger.toolTipText
-                QQC2.ToolTip.visible: labelRightClickfingerMouseArea.containsMouse
-                QQC2.ToolTip.delay: 1000
-
-                MouseArea {
-                    id: labelRightClickfingerMouseArea
-                    anchors.fill: parent
-                    hoverEnabled: true
-                }
             }
         }
 
@@ -758,13 +631,6 @@ KCM.SimpleKCM {
                 text: i18ndc("kcm_touchpad", "@option:radio touchpad integrated middle-click", "Press bottom middle edge")
                 visible: rightClickMethodAreas.checked
                 checked: middleClickMethod.enabled && !(root.device?.middleEmulation ?? false)
-
-                hoverEnabled: true
-                QQC2.ToolTip {
-                    text: i18ndc("kcm_touchpad", "@info:tooltip for radiobutton", "Pressing the bottom right corner of your touchpad acts as right-click.")
-                    visible: parent.hovered
-                    delay: 1000
-                }
             }
 
             QQC2.RadioButton {
@@ -772,13 +638,6 @@ KCM.SimpleKCM {
                 text: i18ndc("kcm_touchpad", "@option:radio touchpad integrated middle-click", "Press bottom left and bottom right corners")
                 visible: rightClickMethodAreas.checked
                 checked: middleClickMethod.enabled && (root.device?.middleEmulation ?? false)
-
-                hoverEnabled: true
-                QQC2.ToolTip {
-                    text: i18ndc("kcm_touchpad", "@info:tooltip for radiobutton", "Pressing the bottom left and bottom right corners simultaneously acts as middle-click.")
-                    visible: parent.hovered
-                    delay: 1000
-                }
             }
 
             QQC2.CheckBox {
@@ -787,13 +646,6 @@ KCM.SimpleKCM {
                 checked: true
                 enabled: false
                 visible: rightClickMethodClickfinger.checked
-
-                hoverEnabled: true
-                QQC2.ToolTip {
-                    text: i18ndc("kcm_touchpad", "@info:tooltip for radiobutton", "Pressing the touchpad anywhere with three fingers acts as middle-click.")
-                    visible: parent.hovered
-                    delay: 1000
-                }
             }
         }
     }
