@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-10 00:44+0000\n"
+"POT-Creation-Date: 2025-05-13 00:43+0000\n"
 "PO-Revision-Date: 2013-03-28 16:09+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -365,72 +365,88 @@ msgstr "पूर्वावलोकन :"
 msgid "Configure Preview Plugins…"
 msgstr "जादा पूर्वावलोकन पर्याय..."
 
-#: package/contents/ui/ConfigLocation.qml:80
-#, kde-format
+#: package/contents/ui/ConfigLocation.qml:81
+#, fuzzy, kde-format
+#| msgid "Show a place:"
+msgctxt "@title:group form label for radiobutton group"
 msgid "Show:"
-msgstr ""
+msgstr "स्थान दर्शवा :"
 
-#: package/contents/ui/ConfigLocation.qml:82
+#: package/contents/ui/ConfigLocation.qml:83
 #, fuzzy, kde-format
 #| msgid "Show the Desktop folder"
+msgctxt "@option:radio"
 msgid "Desktop folder"
 msgstr "डेस्कटॉप संचयीका दर्शवा"
 
-#: package/contents/ui/ConfigLocation.qml:89
+#: package/contents/ui/ConfigLocation.qml:91
 #, fuzzy, kde-format
 #| msgid "Show the files related to the current activity"
+msgctxt "@option:radio"
 msgid "Files linked to the current activity"
 msgstr "वर्तमान कार्यपध्दतीशी संबंधित फाईल्स दर्शवा"
 
-#: package/contents/ui/ConfigLocation.qml:96
+#: package/contents/ui/ConfigLocation.qml:100
 #, kde-format
+msgctxt "@option:radio also label for combobox"
 msgid "Places panel item:"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:129
+#: package/contents/ui/ConfigLocation.qml:137
 #, fuzzy, kde-format
 #| msgid "Custom title"
+msgctxt "@option:radio also label for text field"
 msgid "Custom location:"
 msgstr "ऐच्छिक शिर्षक"
 
-#: package/contents/ui/ConfigLocation.qml:137
+#: package/contents/ui/ConfigLocation.qml:145
 #, fuzzy, kde-format
 #| msgid "Type a path or a URL here"
+msgctxt "@info:placeholder custom location"
 msgid "Type path or URL…"
 msgstr "मार्ग किंवा URL येथे दाखल करा"
 
-#: package/contents/ui/ConfigLocation.qml:180
+#: package/contents/ui/ConfigLocation.qml:188
 #, fuzzy, kde-format
 #| msgctxt "Music"
 #| msgid "Title:"
+msgctxt "@label:textbox custom widget title"
 msgid "Title:"
 msgstr "शिर्षक :"
 
-#: package/contents/ui/ConfigLocation.qml:182
-#, kde-format
+#: package/contents/ui/ConfigLocation.qml:197
+#, fuzzy, kde-format
+#| msgid "None"
+msgctxt "@item:inlistbox no title"
 msgid "None"
 msgstr "काही नाही"
 
-#: package/contents/ui/ConfigLocation.qml:182
-#, kde-format
+#: package/contents/ui/ConfigLocation.qml:198
+#, fuzzy, kde-format
+#| msgid "Default"
+msgctxt "@item:inlistbox default title"
 msgid "Default"
 msgstr "मूलभूत"
 
-#: package/contents/ui/ConfigLocation.qml:182
+#: package/contents/ui/ConfigLocation.qml:199
 #, fuzzy, kde-format
 #| msgid "Full Path"
+msgctxt "@item:inlistbox full path as title"
 msgid "Full path"
 msgstr "पूर्ण मार्ग"
 
-#: package/contents/ui/ConfigLocation.qml:182
-#, kde-format
-msgid "Custom title"
+#: package/contents/ui/ConfigLocation.qml:200
+#, fuzzy, kde-format
+#| msgid "Custom title"
+msgctxt "@item:inlistbox title from text input field"
+msgid "Custom"
 msgstr "ऐच्छिक शिर्षक"
 
-#: package/contents/ui/ConfigLocation.qml:197
+#: package/contents/ui/ConfigLocation.qml:209
 #, fuzzy, kde-format
 #| msgid "Enter custom title here"
-msgid "Enter custom title…"
+msgctxt "@info:placeholder custom window title"
+msgid "Enter title…"
 msgstr "ऐच्छिक शिर्षक येथे दाखल करा"
 
 #: package/contents/ui/ConfigOverlay.qml:98

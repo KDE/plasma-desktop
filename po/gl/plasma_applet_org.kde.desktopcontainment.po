@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-10 00:44+0000\n"
+"POT-Creation-Date: 2025-05-13 00:43+0000\n"
 "PO-Revision-Date: 2025-02-14 08:27+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -316,64 +316,88 @@ msgstr "Amosar as miniaturas de vista previa"
 msgid "Configure Preview Plugins…"
 msgstr "Configurar os complementos de vista previa…"
 
-#: package/contents/ui/ConfigLocation.qml:80
-#, kde-format
+#: package/contents/ui/ConfigLocation.qml:81
+#, fuzzy, kde-format
+#| msgid "Show:"
+msgctxt "@title:group form label for radiobutton group"
 msgid "Show:"
 msgstr "Amosar:"
 
-#: package/contents/ui/ConfigLocation.qml:82
-#, kde-format
+#: package/contents/ui/ConfigLocation.qml:83
+#, fuzzy, kde-format
+#| msgid "Desktop folder"
+msgctxt "@option:radio"
 msgid "Desktop folder"
 msgstr "O cartafol do escritorio"
 
-#: package/contents/ui/ConfigLocation.qml:89
-#, kde-format
+#: package/contents/ui/ConfigLocation.qml:91
+#, fuzzy, kde-format
+#| msgid "Files linked to the current activity"
+msgctxt "@option:radio"
 msgid "Files linked to the current activity"
 msgstr "Os ficheiros asociados coa actividade actual"
 
-#: package/contents/ui/ConfigLocation.qml:96
-#, kde-format
+#: package/contents/ui/ConfigLocation.qml:100
+#, fuzzy, kde-format
+#| msgid "Places panel item:"
+msgctxt "@option:radio also label for combobox"
 msgid "Places panel item:"
 msgstr "Elemento do panel de lugares:"
 
-#: package/contents/ui/ConfigLocation.qml:129
-#, kde-format
+#: package/contents/ui/ConfigLocation.qml:137
+#, fuzzy, kde-format
+#| msgid "Custom location:"
+msgctxt "@option:radio also label for text field"
 msgid "Custom location:"
 msgstr "Lugar personalizado:"
 
-#: package/contents/ui/ConfigLocation.qml:137
-#, kde-format
+#: package/contents/ui/ConfigLocation.qml:145
+#, fuzzy, kde-format
+#| msgid "Type path or URL…"
+msgctxt "@info:placeholder custom location"
 msgid "Type path or URL…"
 msgstr "Escriba unha ruta ou URL…"
 
-#: package/contents/ui/ConfigLocation.qml:180
-#, kde-format
+#: package/contents/ui/ConfigLocation.qml:188
+#, fuzzy, kde-format
+#| msgid "Title:"
+msgctxt "@label:textbox custom widget title"
 msgid "Title:"
 msgstr "Título:"
 
-#: package/contents/ui/ConfigLocation.qml:182
-#, kde-format
+#: package/contents/ui/ConfigLocation.qml:197
+#, fuzzy, kde-format
+#| msgid "None"
+msgctxt "@item:inlistbox no title"
 msgid "None"
 msgstr "Ningunha"
 
-#: package/contents/ui/ConfigLocation.qml:182
-#, kde-format
+#: package/contents/ui/ConfigLocation.qml:198
+#, fuzzy, kde-format
+#| msgid "Default"
+msgctxt "@item:inlistbox default title"
 msgid "Default"
 msgstr "Predeterminada"
 
-#: package/contents/ui/ConfigLocation.qml:182
-#, kde-format
+#: package/contents/ui/ConfigLocation.qml:199
+#, fuzzy, kde-format
+#| msgid "Full path"
+msgctxt "@item:inlistbox full path as title"
 msgid "Full path"
 msgstr "Ruta completa"
 
-#: package/contents/ui/ConfigLocation.qml:182
-#, kde-format
-msgid "Custom title"
+#: package/contents/ui/ConfigLocation.qml:200
+#, fuzzy, kde-format
+#| msgid "Custom title"
+msgctxt "@item:inlistbox title from text input field"
+msgid "Custom"
 msgstr "Título personalizado"
 
-#: package/contents/ui/ConfigLocation.qml:197
-#, kde-format
-msgid "Enter custom title…"
+#: package/contents/ui/ConfigLocation.qml:209
+#, fuzzy, kde-format
+#| msgid "Enter custom title…"
+msgctxt "@info:placeholder custom window title"
+msgid "Enter title…"
 msgstr "Escriba un título personalizado…"
 
 #: package/contents/ui/ConfigOverlay.qml:98

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-10 00:44+0000\n"
+"POT-Creation-Date: 2025-05-13 00:43+0000\n"
 "PO-Revision-Date: 2024-07-07 20:31-0400\n"
 "Last-Translator: Janet Blackquill <uhhadd@gmail.com>\n"
 "Language-Team: C <kde-i18n-doc@kde.org>\n"
@@ -315,64 +315,77 @@ msgstr ""
 msgid "Configure Preview Plugins…"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:80
+#: package/contents/ui/ConfigLocation.qml:81
 #, kde-format
+msgctxt "@title:group form label for radiobutton group"
 msgid "Show:"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:82
-#, kde-format
+#: package/contents/ui/ConfigLocation.qml:83
+#, fuzzy, kde-format
+#| msgid "Desktop and Wallpaper"
+msgctxt "@option:radio"
 msgid "Desktop folder"
-msgstr ""
+msgstr "ijo monsi"
 
-#: package/contents/ui/ConfigLocation.qml:89
+#: package/contents/ui/ConfigLocation.qml:91
 #, kde-format
+msgctxt "@option:radio"
 msgid "Files linked to the current activity"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:96
+#: package/contents/ui/ConfigLocation.qml:100
 #, kde-format
+msgctxt "@option:radio also label for combobox"
 msgid "Places panel item:"
-msgstr ""
-
-#: package/contents/ui/ConfigLocation.qml:129
-#, kde-format
-msgid "Custom location:"
 msgstr ""
 
 #: package/contents/ui/ConfigLocation.qml:137
 #, kde-format
+msgctxt "@option:radio also label for text field"
+msgid "Custom location:"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:145
+#, kde-format
+msgctxt "@info:placeholder custom location"
 msgid "Type path or URL…"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:180
+#: package/contents/ui/ConfigLocation.qml:188
 #, kde-format
+msgctxt "@label:textbox custom widget title"
 msgid "Title:"
-msgstr ""
-
-#: package/contents/ui/ConfigLocation.qml:182
-#, kde-format
-msgid "None"
-msgstr ""
-
-#: package/contents/ui/ConfigLocation.qml:182
-#, kde-format
-msgid "Default"
-msgstr ""
-
-#: package/contents/ui/ConfigLocation.qml:182
-#, kde-format
-msgid "Full path"
-msgstr ""
-
-#: package/contents/ui/ConfigLocation.qml:182
-#, kde-format
-msgid "Custom title"
 msgstr ""
 
 #: package/contents/ui/ConfigLocation.qml:197
 #, kde-format
-msgid "Enter custom title…"
+msgctxt "@item:inlistbox no title"
+msgid "None"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:198
+#, kde-format
+msgctxt "@item:inlistbox default title"
+msgid "Default"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:199
+#, kde-format
+msgctxt "@item:inlistbox full path as title"
+msgid "Full path"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:200
+#, kde-format
+msgctxt "@item:inlistbox title from text input field"
+msgid "Custom"
+msgstr ""
+
+#: package/contents/ui/ConfigLocation.qml:209
+#, kde-format
+msgctxt "@info:placeholder custom window title"
+msgid "Enter title…"
 msgstr ""
 
 #: package/contents/ui/ConfigOverlay.qml:98

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-10 00:44+0000\n"
+"POT-Creation-Date: 2025-05-13 00:43+0000\n"
 "PO-Revision-Date: 2013-09-08 07:04+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -362,71 +362,87 @@ msgstr "ئالدىن كۆزەت:"
 msgid "Configure Preview Plugins…"
 msgstr "تېخىمۇ كۆپ ئالدىن كۆزەت تاللانما…"
 
-#: package/contents/ui/ConfigLocation.qml:80
-#, kde-format
+#: package/contents/ui/ConfigLocation.qml:81
+#, fuzzy, kde-format
+#| msgid "Show a place:"
+msgctxt "@title:group form label for radiobutton group"
 msgid "Show:"
-msgstr ""
+msgstr "بىر ئورۇن كۆرسەت:"
 
-#: package/contents/ui/ConfigLocation.qml:82
+#: package/contents/ui/ConfigLocation.qml:83
 #, fuzzy, kde-format
 #| msgid "Show the Desktop folder"
+msgctxt "@option:radio"
 msgid "Desktop folder"
 msgstr "ئۈستەلئۈستى قىسقۇچنى كۆرسەت"
 
-#: package/contents/ui/ConfigLocation.qml:89
+#: package/contents/ui/ConfigLocation.qml:91
 #, kde-format
+msgctxt "@option:radio"
 msgid "Files linked to the current activity"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:96
+#: package/contents/ui/ConfigLocation.qml:100
 #, kde-format
+msgctxt "@option:radio also label for combobox"
 msgid "Places panel item:"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:129
+#: package/contents/ui/ConfigLocation.qml:137
 #, fuzzy, kde-format
 #| msgid "Custom title"
+msgctxt "@option:radio also label for text field"
 msgid "Custom location:"
 msgstr "ئۆزلەشتۈرگەن ماۋزۇ"
 
-#: package/contents/ui/ConfigLocation.qml:137
+#: package/contents/ui/ConfigLocation.qml:145
 #, fuzzy, kde-format
 #| msgid "Type a path or a URL here"
+msgctxt "@info:placeholder custom location"
 msgid "Type path or URL…"
 msgstr "بۇ يەرگە يولدىن بىرنى ياكى URL نى كىرگۈزۈڭ"
 
-#: package/contents/ui/ConfigLocation.qml:180
+#: package/contents/ui/ConfigLocation.qml:188
 #, fuzzy, kde-format
 #| msgctxt "Music"
 #| msgid "Title:"
+msgctxt "@label:textbox custom widget title"
 msgid "Title:"
 msgstr "ماۋزۇ:"
 
-#: package/contents/ui/ConfigLocation.qml:182
-#, kde-format
+#: package/contents/ui/ConfigLocation.qml:197
+#, fuzzy, kde-format
+#| msgid "None"
+msgctxt "@item:inlistbox no title"
 msgid "None"
 msgstr "يوق"
 
-#: package/contents/ui/ConfigLocation.qml:182
-#, kde-format
+#: package/contents/ui/ConfigLocation.qml:198
+#, fuzzy, kde-format
+#| msgid "Default"
+msgctxt "@item:inlistbox default title"
 msgid "Default"
 msgstr "كۆڭۈلدىكى"
 
-#: package/contents/ui/ConfigLocation.qml:182
+#: package/contents/ui/ConfigLocation.qml:199
 #, fuzzy, kde-format
 #| msgid "Full Path"
+msgctxt "@item:inlistbox full path as title"
 msgid "Full path"
 msgstr "تولۇق يول"
 
-#: package/contents/ui/ConfigLocation.qml:182
-#, kde-format
-msgid "Custom title"
-msgstr "ئۆزلەشتۈرگەن ماۋزۇ"
-
-#: package/contents/ui/ConfigLocation.qml:197
+#: package/contents/ui/ConfigLocation.qml:200
 #, fuzzy, kde-format
 #| msgid "Custom title"
-msgid "Enter custom title…"
+msgctxt "@item:inlistbox title from text input field"
+msgid "Custom"
+msgstr "ئۆزلەشتۈرگەن ماۋزۇ"
+
+#: package/contents/ui/ConfigLocation.qml:209
+#, fuzzy, kde-format
+#| msgid "Custom title"
+msgctxt "@info:placeholder custom window title"
+msgid "Enter title…"
 msgstr "ئۆزلەشتۈرگەن ماۋزۇ"
 
 #: package/contents/ui/ConfigOverlay.qml:98

@@ -286,7 +286,7 @@ msgstr "快捷键"
 #, kde-format
 msgctxt "@action:button set keyboard shortcut for"
 msgid "Activate widget as if clicked:"
-msgstr ""
+msgstr "激活小部件，效果与点击它相同："
 
 #: contents/configuration/ContainmentConfiguration.qml:27
 #, kde-format
@@ -309,28 +309,24 @@ msgid "Panel Settings"
 msgstr "面板设置"
 
 #: contents/configuration/PanelConfiguration.qml:109
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible only, %1 is widget name"
-#| msgid "Add %1"
+#, kde-format
 msgctxt ""
 "@action:button label of button to open a menu that lets you add widgets or "
 "spacers"
 msgid "Add New"
-msgstr "添加 %1"
+msgstr "添加"
 
 #: contents/configuration/PanelConfiguration.qml:127
-#, fuzzy, kde-format
-#| msgid "Add Spacer"
+#, kde-format
 msgctxt "@action:menu add a spacer"
 msgid "Spacer"
-msgstr "添加间距"
+msgstr "间隔"
 
 #: contents/configuration/PanelConfiguration.qml:134
-#, fuzzy, kde-format
-#| msgid "Widgets"
+#, kde-format
 msgctxt "@action:menu add a widget"
 msgid "Widgets…"
-msgstr "挂件"
+msgstr "挂件…"
 
 #: contents/configuration/PanelConfiguration.qml:163
 #, kde-format
@@ -927,16 +923,3 @@ msgstr "退出编辑模式"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "面板焦点指示器"
-
-#~ msgid ""
-#~ "This shortcut will activate the applet as though it had been clicked."
-#~ msgstr "此快捷键将激活这个小程序 (相当于直接点击它的效果)。"
-
-#~ msgid "Add spacer widget to the panel"
-#~ msgstr "添加占位符挂件到面板"
-
-#~ msgid "Add or Manage Widgets…"
-#~ msgstr "添加或者管理挂件…"
-
-#~ msgid "Open the widget selector to drag and drop widgets to the panel"
-#~ msgstr "打开挂件选择器以拖放挂件到面板"

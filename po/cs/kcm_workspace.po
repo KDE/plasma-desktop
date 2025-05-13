@@ -62,12 +62,11 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
-msgstr "Zobrazit vyskakovací okno při změně rozvržení"
+msgstr ""
 
 #: ui/main.qml:87
 #, kde-format
@@ -77,12 +76,10 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling"
-msgstr "Rolování:"
+msgstr ""
 
 #: ui/main.qml:100
 #, kde-format
@@ -223,12 +220,9 @@ msgid "Drag and Drop"
 msgstr "Táhnout a pustit"
 
 #: ui/main.qml:361
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
-#| msgid "Clicking files or folders:"
+#, kde-format
 msgid "When dragging files or folders:"
-msgstr "Klikání na soubory nebo složky:"
+msgstr ""
 
 #: ui/main.qml:362
 #, kde-format
@@ -256,17 +250,15 @@ msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
 msgstr ""
 
 #: ui/main.qml:410
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Touch"
-msgstr "Dotykový režim:"
+msgstr ""
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgid "Enable Touch Mode:"
-msgstr "Dotykový režim:"
+msgstr ""
 
 #: ui/main.qml:418
 #, kde-format
@@ -292,12 +284,10 @@ msgstr ""
 "odklopena dozadu."
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always enabled"
+#, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always active"
-msgstr "Vždy povolen"
+msgstr ""
 
 #: ui/main.qml:463
 #, kde-format
@@ -373,23 +363,17 @@ msgstr ""
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
-#, fuzzy, kde-format
-#| msgid "Display visual feedback for status changes"
+#, kde-format
 msgid "Display small popups for status changes"
-msgstr "Zobrazit vizuální odezvu při změnách stavu"
+msgstr ""
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show an on-screen display to indicate status changes such as brightness "
-#| "or volume"
+#, kde-format
 msgid ""
 "Allow Plasma widgets to display small popups for status changes such as "
 "brightness or volume"
 msgstr ""
-"Zobrazit On Screen Display (OSD) pro upozornění na změnu stavu jako je jas "
-"nebo hlasitost"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21
@@ -402,23 +386,3 @@ msgstr "OSD při změně rozvržení"
 #, kde-format
 msgid "Show a popup on layout changes"
 msgstr "Zobrazit vyskakovací okno při změně rozvržení"
-
-#~ msgid "Animation speed:"
-#~ msgstr "Rychlost animace:"
-
-#~ msgctxt "Animation speed"
-#~ msgid "Slow"
-#~ msgstr "Pomalu"
-
-#~ msgctxt "Animation speed"
-#~ msgid "Instant"
-#~ msgstr "Okamžitě"
-
-#~ msgid "Animation speed"
-#~ msgstr "Rychlost animace"
-
-#~ msgid "Visual behavior:"
-#~ msgstr "Chování vzhledu:"
-
-#~ msgid "Display informational tooltips on mouse hover"
-#~ msgstr "Zobrazit informační nástrojové tipy při přejetí myši"

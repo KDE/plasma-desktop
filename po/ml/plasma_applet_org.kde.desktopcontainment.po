@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-10 00:44+0000\n"
+"POT-Creation-Date: 2025-05-13 00:43+0000\n"
 "PO-Revision-Date: 2019-12-29 20:50+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -333,65 +333,81 @@ msgstr "കണ്ടുനോക്കുന്നതു് പ്രാവര�
 msgid "Configure Preview Plugins…"
 msgstr "കണ്ടുനോക്കുന്നതു് പ്രാവര്‍ത്തികമാക്കുക"
 
-#: package/contents/ui/ConfigLocation.qml:80
-#, kde-format
+#: package/contents/ui/ConfigLocation.qml:81
+#, fuzzy, kde-format
+#| msgid "Show:"
+msgctxt "@title:group form label for radiobutton group"
 msgid "Show:"
 msgstr "കാണിക്കുക:"
 
-#: package/contents/ui/ConfigLocation.qml:82
+#: package/contents/ui/ConfigLocation.qml:83
 #, fuzzy, kde-format
+msgctxt "@option:radio"
 msgid "Desktop folder"
 msgstr "പണിയിട അറ കാണിയ്ക്കുക"
 
-#: package/contents/ui/ConfigLocation.qml:89
-#, kde-format
+#: package/contents/ui/ConfigLocation.qml:91
+#, fuzzy, kde-format
+#| msgid "Files linked to the current activity"
+msgctxt "@option:radio"
 msgid "Files linked to the current activity"
 msgstr "നിലവിലത്തെ പരിപാടിയുമായി ബന്ധപ്പെട്ട ഫയലുകള്‍"
 
-#: package/contents/ui/ConfigLocation.qml:96
+#: package/contents/ui/ConfigLocation.qml:100
 #, kde-format
+msgctxt "@option:radio also label for combobox"
 msgid "Places panel item:"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:129
+#: package/contents/ui/ConfigLocation.qml:137
 #, fuzzy, kde-format
+msgctxt "@option:radio also label for text field"
 msgid "Custom location:"
 msgstr "സ്ഥാനം"
 
-#: package/contents/ui/ConfigLocation.qml:137
+#: package/contents/ui/ConfigLocation.qml:145
 #, fuzzy, kde-format
+msgctxt "@info:placeholder custom location"
 msgid "Type path or URL…"
 msgstr "ഒരു വഴിയോ യുആര്‍എല്ലോ ഇവിടെ ടൈപ്പ് ചെയ്യുക"
 
-#: package/contents/ui/ConfigLocation.qml:180
+#: package/contents/ui/ConfigLocation.qml:188
 #, kde-format
+msgctxt "@label:textbox custom widget title"
 msgid "Title:"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:182
-#, kde-format
+#: package/contents/ui/ConfigLocation.qml:197
+#, fuzzy, kde-format
+#| msgid "None"
+msgctxt "@item:inlistbox no title"
 msgid "None"
 msgstr "ഒന്നുമല്ല"
 
-#: package/contents/ui/ConfigLocation.qml:182
+#: package/contents/ui/ConfigLocation.qml:198
 #, kde-format
+msgctxt "@item:inlistbox default title"
 msgid "Default"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:182
+#: package/contents/ui/ConfigLocation.qml:199
 #, kde-format
+msgctxt "@item:inlistbox full path as title"
 msgid "Full path"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:182
-#, kde-format
-msgid "Custom title"
+#: package/contents/ui/ConfigLocation.qml:200
+#, fuzzy, kde-format
+#| msgid "Custom title"
+msgctxt "@item:inlistbox title from text input field"
+msgid "Custom"
 msgstr "ഇച്ഛാനുസൃത തലക്കെട്ട്"
 
-#: package/contents/ui/ConfigLocation.qml:197
+#: package/contents/ui/ConfigLocation.qml:209
 #, fuzzy, kde-format
 #| msgid "Enter custom title..."
-msgid "Enter custom title…"
+msgctxt "@info:placeholder custom window title"
+msgid "Enter title…"
 msgstr "ഇച്ഛാനുസൃത തലക്കെട്ട് നൽകുക..."
 
 #: package/contents/ui/ConfigOverlay.qml:98

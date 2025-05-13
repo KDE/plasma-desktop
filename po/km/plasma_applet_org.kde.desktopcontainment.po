@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-10 00:44+0000\n"
+"POT-Creation-Date: 2025-05-13 00:43+0000\n"
 "PO-Revision-Date: 2012-06-11 14:32+0700\n"
 "Last-Translator: sutha <sutha@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros>\n"
@@ -364,73 +364,88 @@ msgstr "រ​មើល​ជាមុន ៖"
 msgid "Configure Preview Plugins…"
 msgstr "ជម្រើស​មើលជាមុន​ច្រើនទៀត..."
 
-#: package/contents/ui/ConfigLocation.qml:80
-#, kde-format
+#: package/contents/ui/ConfigLocation.qml:81
+#, fuzzy, kde-format
+#| msgid "Show a place:"
+msgctxt "@title:group form label for radiobutton group"
 msgid "Show:"
-msgstr ""
+msgstr "បង្ហាញ​ទីតាំង ៖"
 
-#: package/contents/ui/ConfigLocation.qml:82
+#: package/contents/ui/ConfigLocation.qml:83
 #, fuzzy, kde-format
 #| msgid "Show the Desktop folder"
+msgctxt "@option:radio"
 msgid "Desktop folder"
 msgstr "បង្ហាញ​ថត​ផ្ទៃតុ"
 
-#: package/contents/ui/ConfigLocation.qml:89
+#: package/contents/ui/ConfigLocation.qml:91
 #, fuzzy, kde-format
 #| msgid "Show the files related to the current activity"
+msgctxt "@option:radio"
 msgid "Files linked to the current activity"
 msgstr "បង្ហាញ​ឯកសារ​ដែល​ទាក់ទង​នឹង​សកម្មភាព​បច្ចុប្បន្ន"
 
-#: package/contents/ui/ConfigLocation.qml:96
+#: package/contents/ui/ConfigLocation.qml:100
 #, kde-format
+msgctxt "@option:radio also label for combobox"
 msgid "Places panel item:"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:129
+#: package/contents/ui/ConfigLocation.qml:137
 #, fuzzy, kde-format
 #| msgid "Custom title:"
+msgctxt "@option:radio also label for text field"
 msgid "Custom location:"
 msgstr "ចំណង​ជើង​ផ្ទាល់ខ្លួន ៖"
 
-#: package/contents/ui/ConfigLocation.qml:137
+#: package/contents/ui/ConfigLocation.qml:145
 #, fuzzy, kde-format
 #| msgid "Type a path or a URL here"
+msgctxt "@info:placeholder custom location"
 msgid "Type path or URL…"
 msgstr "វាយ​ផ្លូវ ឬ​ URL នៅ​ទីនេះ"
 
-#: package/contents/ui/ConfigLocation.qml:180
+#: package/contents/ui/ConfigLocation.qml:188
 #, fuzzy, kde-format
 #| msgctxt "Music"
 #| msgid "Title:"
+msgctxt "@label:textbox custom widget title"
 msgid "Title:"
 msgstr "ចំណង​ជើង ៖"
 
-#: package/contents/ui/ConfigLocation.qml:182
-#, kde-format
+#: package/contents/ui/ConfigLocation.qml:197
+#, fuzzy, kde-format
+#| msgid "None"
+msgctxt "@item:inlistbox no title"
 msgid "None"
 msgstr "គ្មាន​"
 
-#: package/contents/ui/ConfigLocation.qml:182
-#, kde-format
+#: package/contents/ui/ConfigLocation.qml:198
+#, fuzzy, kde-format
+#| msgid "Default"
+msgctxt "@item:inlistbox default title"
 msgid "Default"
 msgstr "លំនាំដើម​"
 
-#: package/contents/ui/ConfigLocation.qml:182
+#: package/contents/ui/ConfigLocation.qml:199
 #, fuzzy, kde-format
 #| msgid "Full path"
+msgctxt "@item:inlistbox full path as title"
 msgid "Full path"
 msgstr "ផ្លូវ​ពេញ​"
 
-#: package/contents/ui/ConfigLocation.qml:182
+#: package/contents/ui/ConfigLocation.qml:200
 #, fuzzy, kde-format
 #| msgid "Custom title:"
-msgid "Custom title"
+msgctxt "@item:inlistbox title from text input field"
+msgid "Custom"
 msgstr "ចំណង​ជើង​ផ្ទាល់ខ្លួន ៖"
 
-#: package/contents/ui/ConfigLocation.qml:197
+#: package/contents/ui/ConfigLocation.qml:209
 #, fuzzy, kde-format
 #| msgid "Custom title:"
-msgid "Enter custom title…"
+msgctxt "@info:placeholder custom window title"
+msgid "Enter title…"
 msgstr "ចំណង​ជើង​ផ្ទាល់ខ្លួន ៖"
 
 #: package/contents/ui/ConfigOverlay.qml:98

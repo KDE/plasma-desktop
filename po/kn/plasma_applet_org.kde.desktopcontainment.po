@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-10 00:44+0000\n"
+"POT-Creation-Date: 2025-05-13 00:43+0000\n"
 "PO-Revision-Date: 2010-01-12 21:50+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <kde-l10n-kn@kde.org>\n"
@@ -358,71 +358,84 @@ msgstr "ಮುನ್ನೋಟಗಳು:"
 msgid "Configure Preview Plugins…"
 msgstr "ಇನ್ನಷ್ಟು ಮುನ್ನೋಟದ ಆಯ್ಕೆಗಳು..."
 
-#: package/contents/ui/ConfigLocation.qml:80
-#, kde-format
+#: package/contents/ui/ConfigLocation.qml:81
+#, fuzzy, kde-format
+#| msgid "Show a place:"
+msgctxt "@title:group form label for radiobutton group"
 msgid "Show:"
-msgstr ""
+msgstr "ಸ್ಥಳವನ್ನು ತೋರಿಸು:"
 
-#: package/contents/ui/ConfigLocation.qml:82
+#: package/contents/ui/ConfigLocation.qml:83
 #, fuzzy, kde-format
 #| msgid "Show the Desktop folder"
+msgctxt "@option:radio"
 msgid "Desktop folder"
 msgstr "ಗಣಕತೆರೆ ಕಡತಕೋಶವನ್ನು ತೋರಿಸು"
 
-#: package/contents/ui/ConfigLocation.qml:89
+#: package/contents/ui/ConfigLocation.qml:91
 #, kde-format
+msgctxt "@option:radio"
 msgid "Files linked to the current activity"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:96
+#: package/contents/ui/ConfigLocation.qml:100
 #, kde-format
+msgctxt "@option:radio also label for combobox"
 msgid "Places panel item:"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:129
+#: package/contents/ui/ConfigLocation.qml:137
 #, fuzzy, kde-format
 #| msgid "Custom Title:"
+msgctxt "@option:radio also label for text field"
 msgid "Custom location:"
 msgstr "ನಿಮ್ಮಿಚ್ಚೆಯ ಶೀರ್ಷಿಕೆ:"
 
-#: package/contents/ui/ConfigLocation.qml:137
+#: package/contents/ui/ConfigLocation.qml:145
 #, fuzzy, kde-format
 #| msgid "Type a path or a URL here"
+msgctxt "@info:placeholder custom location"
 msgid "Type path or URL…"
 msgstr "ತಾಣ ಸೂಚಿ ಅಥವಾ ಕಡತದ ಮಾರ್ಗವನ್ನು ನಮೂದಿಸಿ"
 
-#: package/contents/ui/ConfigLocation.qml:180
+#: package/contents/ui/ConfigLocation.qml:188
 #, fuzzy, kde-format
 #| msgctxt "Music"
 #| msgid "Title:"
+msgctxt "@label:textbox custom widget title"
 msgid "Title:"
 msgstr "ಶೀರ್ಷಿಕೆ:"
 
-#: package/contents/ui/ConfigLocation.qml:182
+#: package/contents/ui/ConfigLocation.qml:197
 #, kde-format
+msgctxt "@item:inlistbox no title"
 msgid "None"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:182
+#: package/contents/ui/ConfigLocation.qml:198
 #, kde-format
+msgctxt "@item:inlistbox default title"
 msgid "Default"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:182
+#: package/contents/ui/ConfigLocation.qml:199
 #, kde-format
+msgctxt "@item:inlistbox full path as title"
 msgid "Full path"
 msgstr ""
 
-#: package/contents/ui/ConfigLocation.qml:182
+#: package/contents/ui/ConfigLocation.qml:200
 #, fuzzy, kde-format
 #| msgid "Custom Title:"
-msgid "Custom title"
+msgctxt "@item:inlistbox title from text input field"
+msgid "Custom"
 msgstr "ನಿಮ್ಮಿಚ್ಚೆಯ ಶೀರ್ಷಿಕೆ:"
 
-#: package/contents/ui/ConfigLocation.qml:197
+#: package/contents/ui/ConfigLocation.qml:209
 #, fuzzy, kde-format
 #| msgid "Enter a customized title"
-msgid "Enter custom title…"
+msgctxt "@info:placeholder custom window title"
+msgid "Enter title…"
 msgstr "ನಿಮ್ಮಿಚ್ಚೆಯ ಶೀರ್ಷಿಕೆಯನ್ನು ನಮೂದಿಸು"
 
 #: package/contents/ui/ConfigOverlay.qml:98

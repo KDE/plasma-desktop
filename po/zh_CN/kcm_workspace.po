@@ -33,7 +33,7 @@ msgstr "重新启动"
 #, kde-format
 msgctxt "@title:group"
 msgid "Plasma"
-msgstr ""
+msgstr "Plasma"
 
 #: ui/main.qml:52
 #, kde-format
@@ -75,12 +75,10 @@ msgstr ""
 "窗。"
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling"
-msgstr "滚动："
+msgstr "滚动"
 
 #: ui/main.qml:100
 #, kde-format
@@ -131,7 +129,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "点击"
 
 #: ui/main.qml:175
 #, kde-format
@@ -216,20 +214,17 @@ msgstr "双击文件夹进行测试。如果它的外观没有发生变化，请
 #: ui/main.qml:354
 #, kde-format
 msgid "Drag and Drop"
-msgstr ""
+msgstr "拖放"
 
 #: ui/main.qml:361
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
-#| msgid "Clicking files or folders:"
+#, kde-format
 msgid "When dragging files or folders:"
-msgstr "单击文件或者文件夹时："
+msgstr "拖动文件或文件夹时："
 
 #: ui/main.qml:362
 #, kde-format
 msgid "Always ask what to do"
-msgstr ""
+msgstr "总是询问要进行什么操作"
 
 #: ui/main.qml:378
 #, kde-kuit-format
@@ -239,30 +234,30 @@ msgid ""
 "and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise show a "
 "dialog."
 msgstr ""
+"按住 <shortcut>Shift</shortcut> 以移动，按住 <shortcut>Ctrl</shortcut> 以复"
+"制，按住 <shortcut>Shift+Ctrl</shortcut> 以创建符号链接。否则显示对话框。"
 
 #: ui/main.qml:386
 #, kde-format
 msgid "Move if on the same device"
-msgstr ""
+msgstr "如果在同一设备上，则移动"
 
 #: ui/main.qml:402
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
-msgstr ""
+msgstr "拖放时按住 <shortcut>Shift</shortcut> 键以显示其他选项。"
 
 #: ui/main.qml:410
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Touch"
-msgstr "触摸模式："
+msgstr "触摸"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgid "Enable Touch Mode:"
-msgstr "触摸模式："
+msgstr "启用触摸模式："
 
 #: ui/main.qml:418
 #, kde-format
@@ -287,9 +282,7 @@ msgstr ""
 "形本的键盘盖翻转180度或拆除时。"
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always enabled"
+#, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always active"
 msgstr "总是启用"
@@ -298,7 +291,7 @@ msgstr "总是启用"
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Disabled"
-msgstr ""
+msgstr "禁用"
 
 #: ui/main.qml:486
 #, kde-format
@@ -320,6 +313,7 @@ msgid ""
 "For local files on the same device, whether dragging and dropping will "
 "perform a move operation instead of showing the options menu"
 msgstr ""
+"对于同一设备上的本地文件，拖放操作是否会执行移动操作，而不是显示选项菜单"
 
 #. i18n: ectx: label, entry (smoothScroll), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21
@@ -389,17 +383,3 @@ msgstr "布局更改时显示屏显信息"
 #, kde-format
 msgid "Show a popup on layout changes"
 msgstr "在布局更改时显示弹窗通知"
-
-#~ msgid "Animation speed:"
-#~ msgstr "动效速度："
-
-#~ msgctxt "Animation speed"
-#~ msgid "Slow"
-#~ msgstr "缓慢"
-
-#~ msgctxt "Animation speed"
-#~ msgid "Instant"
-#~ msgstr "即时"
-
-#~ msgid "Animation speed"
-#~ msgstr "动效速度"

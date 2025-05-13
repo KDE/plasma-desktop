@@ -156,15 +156,10 @@ msgid "Apply Settings"
 msgstr "Provést nastavení"
 
 #: contents/configuration/AppletConfiguration.qml:373
-#, fuzzy, kde-format
-#| msgid ""
-#| "The settings of the current module have changed. Do you want to apply the "
-#| "changes or discard them?"
+#, kde-format
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
 msgstr ""
-"V aktivním modulu jsou neuložené změny. Přejete si změny aplikovat, nebo "
-"zahodit?"
 
 #: contents/configuration/AppletConfiguration.qml:405
 #, kde-format
@@ -323,18 +318,16 @@ msgid "Add New"
 msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:127
-#, fuzzy, kde-format
-#| msgid "Add Spacer"
+#, kde-format
 msgctxt "@action:menu add a spacer"
 msgid "Spacer"
-msgstr "Přidat mezeru"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:134
-#, fuzzy, kde-format
-#| msgid "Widgets"
+#, kde-format
 msgctxt "@action:menu add a widget"
 msgid "Widgets…"
-msgstr "Widgety"
+msgstr ""
 
 #: contents/configuration/PanelConfiguration.qml:163
 #, kde-format
@@ -653,14 +646,13 @@ msgid "New!"
 msgstr ""
 
 #: contents/explorer/AppletDelegate.qml:204
-#, fuzzy, kde-format
-#| msgid "No widgets available"
+#, kde-format
 msgctxt "@info:other accessible for badge showing applet count"
 msgid "%1 widget active"
 msgid_plural "%1 widgets active"
-msgstr[0] "Nejsou dostupné žádné widgety"
-msgstr[1] "Nejsou dostupné žádné widgety"
-msgstr[2] "Nejsou dostupné žádné widgety"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 #: contents/explorer/AppletDelegate.qml:205
 #, kde-format
@@ -669,10 +661,9 @@ msgid "Recently installed"
 msgstr ""
 
 #: contents/explorer/AppletDelegate.qml:217
-#, fuzzy, kde-format
-#| msgid "Uninstall"
+#, kde-format
 msgid "Cancel Uninstallation"
-msgstr "Odinstalovat"
+msgstr ""
 
 #: contents/explorer/AppletDelegate.qml:218
 #, kde-format
@@ -753,11 +744,10 @@ msgid "Close Widget Explorer"
 msgstr ""
 
 #: contents/explorer/WidgetExplorer.qml:208
-#, fuzzy, kde-format
-#| msgid "Widgets"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Search Widgets"
-msgstr "Widgety"
+msgstr ""
 
 #: contents/explorer/WidgetExplorer.qml:237
 #, kde-format
@@ -765,14 +755,13 @@ msgid "Categories"
 msgstr "Kategorie"
 
 #: contents/explorer/WidgetExplorer.qml:258
-#, fuzzy, kde-format
-#| msgid "Uninstall"
+#, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Uninstall (%1 Widget)"
 msgid_plural "Uninstall (%1 Widgets)"
-msgstr[0] "Odinstalovat"
-msgstr[1] "Odinstalovat"
-msgstr[2] "Odinstalovat"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 #: contents/explorer/WidgetExplorer.qml:369
 #, kde-format
@@ -785,43 +774,34 @@ msgid "No widgets available"
 msgstr "Nejsou dostupné žádné widgety"
 
 #: contents/lockscreen/config.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@title: group"
 msgid "Show clock:"
-msgstr "Ukázat hodiny"
+msgstr ""
 
 #: contents/lockscreen/config.qml:25
-#, fuzzy, kde-format
-#| msgid "Always visible"
+#, kde-format
 msgctxt "@option:radio Clock always shown"
 msgid "Always"
-msgstr "Vždy viditelný"
+msgstr ""
 
 #: contents/lockscreen/config.qml:26
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Always show clock"
-msgstr "Ukázat hodiny"
+msgstr ""
 
 #: contents/lockscreen/config.qml:41
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio Clock shown only while unlock prompt is visible"
 msgid "On unlocking prompt"
-msgstr "Zobrazit pod výzvou k odemčení"
+msgstr ""
 
 #: contents/lockscreen/config.qml:42
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show clock only on unlocking prompt"
-msgstr "Zobrazit pod výzvou k odemčení"
+msgstr ""
 
 #: contents/lockscreen/config.qml:55
 #, kde-format
@@ -830,12 +810,10 @@ msgid "Never"
 msgstr ""
 
 #: contents/lockscreen/config.qml:56
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Never show clock"
-msgstr "Ukázat hodiny"
+msgstr ""
 
 #: contents/lockscreen/config.qml:71
 #, kde-format
@@ -953,30 +931,3 @@ msgstr "Ukončit režim úprav"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr ""
-
-#~ msgid ""
-#~ "This shortcut will activate the applet as though it had been clicked."
-#~ msgstr ""
-#~ "Tato klávesová zkratka applet aktivuje stejně jako by na něj uživatel "
-#~ "klikl."
-
-#~ msgid "Add or Manage Widgets…"
-#~ msgstr "Přidat nebo spravovat widgety…"
-
-#~ msgctxt "@title: group"
-#~ msgid "Clock:"
-#~ msgstr "Hodiny:"
-
-#~ msgid "Undo uninstall"
-#~ msgstr "Vrátit odinstalaci zpět"
-
-#~ msgctxt "@info:tooltip uninstall a widget"
-#~ msgid "Uninstall"
-#~ msgstr "Odinstalovat"
-
-#~ msgctxt "@action:button uninstall widgets in widget explorer"
-#~ msgid "Confirm Removal of One Widget"
-#~ msgid_plural "Confirm Removal of %1 Widgets"
-#~ msgstr[0] "Potvrdit odstranění jednoho widgetu"
-#~ msgstr[1] "Potvrdit odstranění %1 widgetů"
-#~ msgstr[2] "Potvrdit odstranění %1 widgetů"
