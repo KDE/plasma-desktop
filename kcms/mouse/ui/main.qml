@@ -337,21 +337,30 @@ KCMUtils.SimpleKCM {
             QQC2.ToolTip.text: i18nd("kcmmouse", "Touchscreen-like scrolling.")
         }
 
-        QQC2.CheckBox {
-            id: scrollOnButtonDown
-            text: i18nd("kcmmouse", "Press middle button and move mouse to scroll")
-            enabled: root.device?.supportsScrollOnButtonDown ?? false
-            checked: enabled && (root.device?.scrollOnButtonDown ?? false)
+        RowLayout {
+            Kirigami.FormData.buddyFor: scrollOnButtonDown
+            spacing: Kirigami.Units.smallSpacing
 
-            onToggled: {
-                if (root.device) {
-                    root.device.scrollOnButtonDown = checked
+            QQC2.CheckBox {
+                id: scrollOnButtonDown
+                text: i18nd("kcmmouse", "Hold down middle button and move mouse to scroll")
+                enabled: root.device?.supportsScrollOnButtonDown ?? false
+                checked: enabled && (root.device?.scrollOnButtonDown ?? false)
+
+                onToggled: {
+                    if (root.device) {
+                        root.device.scrollOnButtonDown = checked
+                    }
                 }
+
+                QQC2.ToolTip.delay: 1000
+                QQC2.ToolTip.visible: hovered
+                QQC2.ToolTip.text: i18nd("kcmmouse", "Scrolling with the mouse while the middle button is pressed.")
             }
 
-            QQC2.ToolTip.delay: 1000
-            QQC2.ToolTip.visible: hovered
-            QQC2.ToolTip.text: i18nd("kcmmouse", "Scrolling with the mouse while the middle button is pressed.")
+            Kirigami.ContextualHelpButton {
+                toolTipText: i18ndc("kcmmouse", "@info:tooltip from ContextualHelpButton", "This will interfere with applications that use middle-button drag, such as some image editors, document viewers, or video games. It may be used on any device, but is intended primarily as a substitute for scroll wheels on devices that do not have any.")
+            }
         }
     }
 }
