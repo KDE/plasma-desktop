@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-13 00:43+0000\n"
-"PO-Revision-Date: 2025-01-30 22:36+0200\n"
+"PO-Revision-Date: 2025-05-13 09:17+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -319,88 +319,76 @@ msgid "Configure Preview Plugins…"
 msgstr "Налаштувати додатки перегляду…"
 
 #: package/contents/ui/ConfigLocation.qml:81
-#, fuzzy, kde-format
-#| msgid "Show:"
+#, kde-format
 msgctxt "@title:group form label for radiobutton group"
 msgid "Show:"
-msgstr "Показ:"
+msgstr "Показати:"
 
 #: package/contents/ui/ConfigLocation.qml:83
-#, fuzzy, kde-format
-#| msgid "Desktop folder"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Desktop folder"
 msgstr "Тека стільниці"
 
 #: package/contents/ui/ConfigLocation.qml:91
-#, fuzzy, kde-format
-#| msgid "Files linked to the current activity"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Files linked to the current activity"
 msgstr "Файли, пов’язані із поточним простором дій"
 
 #: package/contents/ui/ConfigLocation.qml:100
-#, fuzzy, kde-format
-#| msgid "Places panel item:"
+#, kde-format
 msgctxt "@option:radio also label for combobox"
 msgid "Places panel item:"
 msgstr "Пункт «Місця» на панелі:"
 
 #: package/contents/ui/ConfigLocation.qml:137
-#, fuzzy, kde-format
-#| msgid "Custom location:"
+#, kde-format
 msgctxt "@option:radio also label for text field"
 msgid "Custom location:"
 msgstr "Нетипове розташування:"
 
 #: package/contents/ui/ConfigLocation.qml:145
-#, fuzzy, kde-format
-#| msgid "Type path or URL…"
+#, kde-format
 msgctxt "@info:placeholder custom location"
 msgid "Type path or URL…"
 msgstr "Введіть шлях або адресу…"
 
 #: package/contents/ui/ConfigLocation.qml:188
-#, fuzzy, kde-format
-#| msgid "Title:"
+#, kde-format
 msgctxt "@label:textbox custom widget title"
 msgid "Title:"
 msgstr "Заголовок:"
 
 #: package/contents/ui/ConfigLocation.qml:197
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "@item:inlistbox no title"
 msgid "None"
 msgstr "Немає"
 
 #: package/contents/ui/ConfigLocation.qml:198
-#, fuzzy, kde-format
-#| msgid "Default"
+#, kde-format
 msgctxt "@item:inlistbox default title"
 msgid "Default"
 msgstr "Типовий"
 
 #: package/contents/ui/ConfigLocation.qml:199
-#, fuzzy, kde-format
-#| msgid "Full path"
+#, kde-format
 msgctxt "@item:inlistbox full path as title"
 msgid "Full path"
 msgstr "Шлях повністю"
 
 #: package/contents/ui/ConfigLocation.qml:200
-#, fuzzy, kde-format
-#| msgid "Custom title"
+#, kde-format
 msgctxt "@item:inlistbox title from text input field"
 msgid "Custom"
-msgstr "Нетиповий заголовок"
+msgstr "Нетиповий"
 
 #: package/contents/ui/ConfigLocation.qml:209
-#, fuzzy, kde-format
-#| msgid "Enter custom title…"
+#, kde-format
 msgctxt "@info:placeholder custom window title"
 msgid "Enter title…"
-msgstr "Вкажіть нетиповий заголовок…"
+msgstr "Введіть заголовок…"
 
 #: package/contents/ui/ConfigOverlay.qml:98
 #, kde-format

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-01 00:42+0000\n"
+"POT-Creation-Date: 2025-05-14 00:45+0000\n"
 "PO-Revision-Date: 2025-02-01 10:31+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -250,15 +250,26 @@ msgstr "Inverteix la direcció de desplaçament"
 msgid "Touchscreen-like scrolling."
 msgstr "Pantalla tàctil com el desplaçament."
 
-#: ui/main.qml:342
-#, kde-format
-msgid "Press middle button and move mouse to scroll"
+#: ui/main.qml:346
+#, fuzzy, kde-format
+#| msgid "Press middle button and move mouse to scroll"
+msgid "Hold down middle button and move mouse to scroll"
 msgstr "Premeu el botó del mig i mogueu el ratolí per a desplaçar"
 
-#: ui/main.qml:354
+#: ui/main.qml:358
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "Desplaçament amb el ratolí mentre es prem el botó del mig."
+
+#: ui/main.qml:362
+#, kde-format
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"This will interfere with applications that use middle-button drag, such as "
+"some image editors, document viewers, or video games. It may be used on any "
+"device, but is intended primarily as a substitute for scroll wheels on "
+"devices that do not have any."
+msgstr ""
 
 #~ msgid "None"
 #~ msgstr "Sense"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-01 00:42+0000\n"
+"POT-Creation-Date: 2025-05-14 00:45+0000\n"
 "PO-Revision-Date: 2025-04-07 00:19+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -236,15 +236,26 @@ msgstr "스크롤 방향 뒤집기"
 msgid "Touchscreen-like scrolling."
 msgstr "터치스크린 형태 스크롤을 사용합니다."
 
-#: ui/main.qml:342
-#, kde-format
-msgid "Press middle button and move mouse to scroll"
+#: ui/main.qml:346
+#, fuzzy, kde-format
+#| msgid "Press middle button and move mouse to scroll"
+msgid "Hold down middle button and move mouse to scroll"
 msgstr "마우스 가운데 단추를 누르고 이동하여 스크롤"
 
-#: ui/main.qml:354
+#: ui/main.qml:358
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "가운데 단추를 누른 상태에서 마우스를 사용하여 스크롤합니다."
+
+#: ui/main.qml:362
+#, kde-format
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"This will interfere with applications that use middle-button drag, such as "
+"some image editors, document viewers, or video games. It may be used on any "
+"device, but is intended primarily as a substitute for scroll wheels on "
+"devices that do not have any."
+msgstr ""
 
 #~ msgid "None"
 #~ msgstr "없음"

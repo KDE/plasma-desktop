@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-12 00:43+0000\n"
+"POT-Creation-Date: 2025-05-14 00:45+0000\n"
 "PO-Revision-Date: 2025-04-28 13:58+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -95,7 +95,7 @@ msgid "Open %1"
 msgstr "Atverti %1"
 
 #: contents/configuration/AboutPlugin.qml:21
-#: contents/configuration/AppletConfiguration.qml:324
+#: contents/configuration/AppletConfiguration.qml:325
 #, kde-format
 msgid "About"
 msgstr "Apie"
@@ -147,17 +147,17 @@ msgstr "Vertėjai"
 msgid "Report a Bug…"
 msgstr "Pranešti apie klaidą…"
 
-#: contents/configuration/AppletConfiguration.qml:94
+#: contents/configuration/AppletConfiguration.qml:95
 #, kde-format
 msgid "Keyboard Shortcuts"
 msgstr "Spartieji klavišai"
 
-#: contents/configuration/AppletConfiguration.qml:372
+#: contents/configuration/AppletConfiguration.qml:373
 #, kde-format
 msgid "Apply Settings"
 msgstr "Taikyti nuostatas"
 
-#: contents/configuration/AppletConfiguration.qml:373
+#: contents/configuration/AppletConfiguration.qml:374
 #, kde-format
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
@@ -165,17 +165,17 @@ msgstr ""
 "Dabartiniame puslapyje yra neįrašytų pakeitimų. Taikyti pakeitimus ar juos "
 "atmesti?"
 
-#: contents/configuration/AppletConfiguration.qml:405
+#: contents/configuration/AppletConfiguration.qml:406
 #, kde-format
 msgid "OK"
 msgstr "Gerai"
 
-#: contents/configuration/AppletConfiguration.qml:412
+#: contents/configuration/AppletConfiguration.qml:413
 #, kde-format
 msgid "Apply"
 msgstr "Taikyti"
 
-#: contents/configuration/AppletConfiguration.qml:418
+#: contents/configuration/AppletConfiguration.qml:419
 #, kde-format
 msgid "Cancel"
 msgstr "Atsisakyti"
@@ -919,12 +919,6 @@ msgstr "Atkurti ar Pristabdyti mediją"
 msgid "Next track"
 msgstr "Kitas takelis"
 
-#: contents/osd/OsdItem.qml:34
-#, kde-format
-msgctxt "Percentage value"
-msgid "%1%"
-msgstr "%1%"
-
 #: contents/views/DesktopEditMode.qml:121
 #, kde-format
 msgctxt "@action:button"
@@ -940,6 +934,10 @@ msgstr "Išjungti taisymo veikseną"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Skydelio fokusavimo indikatorius"
+
+#~ msgctxt "Percentage value"
+#~ msgid "%1%"
+#~ msgstr "%1%"
 
 #~ msgid ""
 #~ "This shortcut will activate the applet as though it had been clicked."

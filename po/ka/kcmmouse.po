@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-01 00:42+0000\n"
+"POT-Creation-Date: 2025-05-14 00:45+0000\n"
 "PO-Revision-Date: 2025-02-01 05:32+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -240,15 +240,26 @@ msgstr "აწევ-ჩამოწევის მიმართულებ�
 msgid "Touchscreen-like scrolling."
 msgstr "სენსორული ეკრანის მსგავსი აწევ-ჩამოწევა."
 
-#: ui/main.qml:342
-#, kde-format
-msgid "Press middle button and move mouse to scroll"
+#: ui/main.qml:346
+#, fuzzy, kde-format
+#| msgid "Press middle button and move mouse to scroll"
+msgid "Hold down middle button and move mouse to scroll"
 msgstr "დააწექით შუა ღილაკს და გაამოძრავეთ თაგუნა გადასახვევად"
 
-#: ui/main.qml:354
+#: ui/main.qml:358
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "გადახვევა, როცა თაგუნას შუა ღილაკი გიჭირავთ."
+
+#: ui/main.qml:362
+#, kde-format
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"This will interfere with applications that use middle-button drag, such as "
+"some image editors, document viewers, or video games. It may be used on any "
+"device, but is intended primarily as a substitute for scroll wheels on "
+"devices that do not have any."
+msgstr ""
 
 #~ msgid "None"
 #~ msgstr "არაფერი"

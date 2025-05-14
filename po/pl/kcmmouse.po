@@ -1,4 +1,4 @@
-# Version: $Revision: 1702320 $
+# Version: $Revision: 1708795 $
 # translation of kcminput.po to
 # SPDX-FileCopyrightText: 2011, 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Piotr Roszatycki <dexter@debian.org>, 1998-2000.
@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-01 00:42+0000\n"
+"POT-Creation-Date: 2025-05-14 00:45+0000\n"
 "PO-Revision-Date: 2025-02-08 17:56+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -245,15 +245,26 @@ msgstr "Odwróć kierunek przewijania"
 msgid "Touchscreen-like scrolling."
 msgstr "Przewijanie jak na ekranie dotykowym."
 
-#: ui/main.qml:342
-#, kde-format
-msgid "Press middle button and move mouse to scroll"
+#: ui/main.qml:346
+#, fuzzy, kde-format
+#| msgid "Press middle button and move mouse to scroll"
+msgid "Hold down middle button and move mouse to scroll"
 msgstr "Naciśnij środkowy przycisk i przesuń myszą, aby przewinąć"
 
-#: ui/main.qml:354
+#: ui/main.qml:358
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "Przewijanie myszą, przy naciśniętym jej środkowym przycisku."
+
+#: ui/main.qml:362
+#, kde-format
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"This will interfere with applications that use middle-button drag, such as "
+"some image editors, document viewers, or video games. It may be used on any "
+"device, but is intended primarily as a substitute for scroll wheels on "
+"devices that do not have any."
+msgstr ""
 
 #~ msgid "None"
 #~ msgstr "Brak"

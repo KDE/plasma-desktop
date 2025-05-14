@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-13 00:43+0000\n"
-"PO-Revision-Date: 2025-01-30 10:24+0100\n"
+"PO-Revision-Date: 2025-05-13 13:04+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -318,88 +318,76 @@ msgid "Configure Preview Plugins…"
 msgstr "Voorbeeldplug-ins configureren…"
 
 #: package/contents/ui/ConfigLocation.qml:81
-#, fuzzy, kde-format
-#| msgid "Show:"
+#, kde-format
 msgctxt "@title:group form label for radiobutton group"
 msgid "Show:"
 msgstr "Tonen:"
 
 #: package/contents/ui/ConfigLocation.qml:83
-#, fuzzy, kde-format
-#| msgid "Desktop folder"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Desktop folder"
 msgstr "Bureaubladmap"
 
 #: package/contents/ui/ConfigLocation.qml:91
-#, fuzzy, kde-format
-#| msgid "Files linked to the current activity"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Files linked to the current activity"
 msgstr "Bestanden gekoppeld aan de huidige activiteit"
 
 #: package/contents/ui/ConfigLocation.qml:100
-#, fuzzy, kde-format
-#| msgid "Places panel item:"
+#, kde-format
 msgctxt "@option:radio also label for combobox"
 msgid "Places panel item:"
-msgstr "Tonen op Bureaublad:"
+msgstr "Plaatsen van paneelitem:"
 
 #: package/contents/ui/ConfigLocation.qml:137
-#, fuzzy, kde-format
-#| msgid "Custom location:"
+#, kde-format
 msgctxt "@option:radio also label for text field"
 msgid "Custom location:"
 msgstr "Aangepaste locatie:"
 
 #: package/contents/ui/ConfigLocation.qml:145
-#, fuzzy, kde-format
-#| msgid "Type path or URL…"
+#, kde-format
 msgctxt "@info:placeholder custom location"
 msgid "Type path or URL…"
 msgstr "Voer een pad of URL-adres in…"
 
 #: package/contents/ui/ConfigLocation.qml:188
-#, fuzzy, kde-format
-#| msgid "Title:"
+#, kde-format
 msgctxt "@label:textbox custom widget title"
 msgid "Title:"
 msgstr "Titel:"
 
 #: package/contents/ui/ConfigLocation.qml:197
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "@item:inlistbox no title"
 msgid "None"
 msgstr "Geen"
 
 #: package/contents/ui/ConfigLocation.qml:198
-#, fuzzy, kde-format
-#| msgid "Default"
+#, kde-format
 msgctxt "@item:inlistbox default title"
 msgid "Default"
 msgstr "Standaard"
 
 #: package/contents/ui/ConfigLocation.qml:199
-#, fuzzy, kde-format
-#| msgid "Full path"
+#, kde-format
 msgctxt "@item:inlistbox full path as title"
 msgid "Full path"
 msgstr "Volledig pad"
 
 #: package/contents/ui/ConfigLocation.qml:200
-#, fuzzy, kde-format
-#| msgid "Custom title"
+#, kde-format
 msgctxt "@item:inlistbox title from text input field"
 msgid "Custom"
-msgstr "Aangepaste titel"
+msgstr "Aangepast"
 
 #: package/contents/ui/ConfigLocation.qml:209
-#, fuzzy, kde-format
-#| msgid "Enter custom title…"
+#, kde-format
 msgctxt "@info:placeholder custom window title"
 msgid "Enter title…"
-msgstr "Voer aangepaste titel in…"
+msgstr "Voer titel in…"
 
 #: package/contents/ui/ConfigOverlay.qml:98
 #, kde-format

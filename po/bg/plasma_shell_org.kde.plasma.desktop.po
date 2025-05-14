@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-12 00:43+0000\n"
+"POT-Creation-Date: 2025-05-14 00:45+0000\n"
 "PO-Revision-Date: 2025-04-29 22:44+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -91,7 +91,7 @@ msgid "Open %1"
 msgstr "Отваряне на %1"
 
 #: contents/configuration/AboutPlugin.qml:21
-#: contents/configuration/AppletConfiguration.qml:324
+#: contents/configuration/AppletConfiguration.qml:325
 #, kde-format
 msgid "About"
 msgstr "За програмата"
@@ -143,17 +143,17 @@ msgstr "Преводачи"
 msgid "Report a Bug…"
 msgstr "Сигнал за грешка…"
 
-#: contents/configuration/AppletConfiguration.qml:94
+#: contents/configuration/AppletConfiguration.qml:95
 #, kde-format
 msgid "Keyboard Shortcuts"
 msgstr "Комбинация от клавиши"
 
-#: contents/configuration/AppletConfiguration.qml:372
+#: contents/configuration/AppletConfiguration.qml:373
 #, kde-format
 msgid "Apply Settings"
 msgstr "Прилагане на настройките"
 
-#: contents/configuration/AppletConfiguration.qml:373
+#: contents/configuration/AppletConfiguration.qml:374
 #, kde-format
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
@@ -161,17 +161,17 @@ msgstr ""
 "Текущата страница има незапазени променени.Да се приложат ли или да се "
 "отхвърлят?"
 
-#: contents/configuration/AppletConfiguration.qml:405
+#: contents/configuration/AppletConfiguration.qml:406
 #, kde-format
 msgid "OK"
 msgstr "Добре"
 
-#: contents/configuration/AppletConfiguration.qml:412
+#: contents/configuration/AppletConfiguration.qml:413
 #, kde-format
 msgid "Apply"
 msgstr "Прилагане"
 
-#: contents/configuration/AppletConfiguration.qml:418
+#: contents/configuration/AppletConfiguration.qml:419
 #, kde-format
 msgid "Cancel"
 msgstr "Отказ"
@@ -910,12 +910,6 @@ msgstr "Възпроизвеждане или пауза на медия"
 msgid "Next track"
 msgstr "Следващ запис"
 
-#: contents/osd/OsdItem.qml:34
-#, kde-format
-msgctxt "Percentage value"
-msgid "%1%"
-msgstr "%1%"
-
 #: contents/views/DesktopEditMode.qml:121
 #, kde-format
 msgctxt "@action:button"
@@ -931,6 +925,10 @@ msgstr "Излизане от режим на редактиране"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Индикатор за фокус на панела"
+
+#~ msgctxt "Percentage value"
+#~ msgid "%1%"
+#~ msgstr "%1%"
 
 #~ msgid ""
 #~ "This shortcut will activate the applet as though it had been clicked."

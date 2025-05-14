@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-01 00:42+0000\n"
+"POT-Creation-Date: 2025-05-14 00:45+0000\n"
 "PO-Revision-Date: 2025-02-13 11:40+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -260,15 +260,26 @@ msgstr "Изменить направление прокрутки"
 msgid "Touchscreen-like scrolling."
 msgstr "Прокрутка как на сенсорном экране или в Mac OS X."
 
-#: ui/main.qml:342
-#, kde-format
-msgid "Press middle button and move mouse to scroll"
+#: ui/main.qml:346
+#, fuzzy, kde-format
+#| msgid "Press middle button and move mouse to scroll"
+msgid "Hold down middle button and move mouse to scroll"
 msgstr "Нажать среднюю кнопку и переместить мышь для прокрутки"
 
-#: ui/main.qml:354
+#: ui/main.qml:358
 #, kde-format
 msgid "Scrolling with the mouse while the middle button is pressed."
 msgstr "Прокрутка с помощью мыши, когда нажата средняя кнопка."
+
+#: ui/main.qml:362
+#, kde-format
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"This will interfere with applications that use middle-button drag, such as "
+"some image editors, document viewers, or video games. It may be used on any "
+"device, but is intended primarily as a substitute for scroll wheels on "
+"devices that do not have any."
+msgstr ""
 
 #~ msgid "None"
 #~ msgstr "Не использовать"

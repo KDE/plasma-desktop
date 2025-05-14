@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-13 00:43+0000\n"
-"PO-Revision-Date: 2025-01-30 16:45+0300\n"
-"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"PO-Revision-Date: 2025-05-13 19:25+0300\n"
+"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.03.70\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -317,85 +317,73 @@ msgid "Configure Preview Plugins…"
 msgstr "Önizleme Eklentilerini Yapılandır…"
 
 #: package/contents/ui/ConfigLocation.qml:81
-#, fuzzy, kde-format
-#| msgid "Show:"
+#, kde-format
 msgctxt "@title:group form label for radiobutton group"
 msgid "Show:"
 msgstr "Göster:"
 
 #: package/contents/ui/ConfigLocation.qml:83
-#, fuzzy, kde-format
-#| msgid "Desktop folder"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Desktop folder"
 msgstr "Masaüstü klasörü"
 
 #: package/contents/ui/ConfigLocation.qml:91
-#, fuzzy, kde-format
-#| msgid "Files linked to the current activity"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Files linked to the current activity"
-msgstr "Geçerli etkinliğe bağlı dosyalar"
+msgstr "Geçerli etkinliğe bağlantılı dosyalar"
 
 #: package/contents/ui/ConfigLocation.qml:100
-#, fuzzy, kde-format
-#| msgid "Places panel item:"
+#, kde-format
 msgctxt "@option:radio also label for combobox"
 msgid "Places panel item:"
 msgstr "Yerler paneli ögesi:"
 
 #: package/contents/ui/ConfigLocation.qml:137
-#, fuzzy, kde-format
-#| msgid "Custom location:"
+#, kde-format
 msgctxt "@option:radio also label for text field"
 msgid "Custom location:"
 msgstr "Özel konum:"
 
 #: package/contents/ui/ConfigLocation.qml:145
-#, fuzzy, kde-format
-#| msgid "Type path or URL…"
+#, kde-format
 msgctxt "@info:placeholder custom location"
 msgid "Type path or URL…"
 msgstr "Bir yol veya URL yaz…"
 
 #: package/contents/ui/ConfigLocation.qml:188
-#, fuzzy, kde-format
-#| msgid "Title:"
+#, kde-format
 msgctxt "@label:textbox custom widget title"
 msgid "Title:"
 msgstr "Başlık:"
 
 #: package/contents/ui/ConfigLocation.qml:197
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "@item:inlistbox no title"
 msgid "None"
 msgstr "Yok"
 
 #: package/contents/ui/ConfigLocation.qml:198
-#, fuzzy, kde-format
-#| msgid "Default"
+#, kde-format
 msgctxt "@item:inlistbox default title"
 msgid "Default"
 msgstr "Öntanımlı"
 
 #: package/contents/ui/ConfigLocation.qml:199
-#, fuzzy, kde-format
-#| msgid "Full path"
+#, kde-format
 msgctxt "@item:inlistbox full path as title"
 msgid "Full path"
 msgstr "Tam yol"
 
 #: package/contents/ui/ConfigLocation.qml:200
-#, fuzzy, kde-format
-#| msgid "Custom title"
+#, kde-format
 msgctxt "@item:inlistbox title from text input field"
 msgid "Custom"
 msgstr "Özel başlık"
 
 #: package/contents/ui/ConfigLocation.qml:209
-#, fuzzy, kde-format
-#| msgid "Enter custom title…"
+#, kde-format
 msgctxt "@info:placeholder custom window title"
 msgid "Enter title…"
 msgstr "Özelleştirilmiş başlık gir…"

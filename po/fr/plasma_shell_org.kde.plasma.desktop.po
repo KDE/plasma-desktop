@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-12 00:43+0000\n"
+"POT-Creation-Date: 2025-05-14 00:45+0000\n"
 "PO-Revision-Date: 2025-05-10 08:28+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -99,7 +99,7 @@ msgid "Open %1"
 msgstr "Ouvrir %1"
 
 #: contents/configuration/AboutPlugin.qml:21
-#: contents/configuration/AppletConfiguration.qml:324
+#: contents/configuration/AppletConfiguration.qml:325
 #, kde-format
 msgid "About"
 msgstr "À propos"
@@ -151,17 +151,17 @@ msgstr "Traducteurs"
 msgid "Report a Bug…"
 msgstr "Signaler un bogue…"
 
-#: contents/configuration/AppletConfiguration.qml:94
+#: contents/configuration/AppletConfiguration.qml:95
 #, kde-format
 msgid "Keyboard Shortcuts"
 msgstr "Raccourcis clavier"
 
-#: contents/configuration/AppletConfiguration.qml:372
+#: contents/configuration/AppletConfiguration.qml:373
 #, kde-format
 msgid "Apply Settings"
 msgstr "Appliquer les paramètres"
 
-#: contents/configuration/AppletConfiguration.qml:373
+#: contents/configuration/AppletConfiguration.qml:374
 #, kde-format
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
@@ -169,17 +169,17 @@ msgstr ""
 "La page courante contient des modifications non enregistrées. Voulez-vous "
 "les appliquer ou les abandonner ?"
 
-#: contents/configuration/AppletConfiguration.qml:405
+#: contents/configuration/AppletConfiguration.qml:406
 #, kde-format
 msgid "OK"
 msgstr "Ok"
 
-#: contents/configuration/AppletConfiguration.qml:412
+#: contents/configuration/AppletConfiguration.qml:413
 #, kde-format
 msgid "Apply"
 msgstr "Appliquer"
 
-#: contents/configuration/AppletConfiguration.qml:418
+#: contents/configuration/AppletConfiguration.qml:419
 #, kde-format
 msgid "Cancel"
 msgstr "Annuler"
@@ -926,12 +926,6 @@ msgstr "Lire ou mettre en pause un média"
 msgid "Next track"
 msgstr "Piste suivante"
 
-#: contents/osd/OsdItem.qml:34
-#, kde-format
-msgctxt "Percentage value"
-msgid "%1%"
-msgstr "%1 %"
-
 #: contents/views/DesktopEditMode.qml:121
 #, kde-format
 msgctxt "@action:button"
@@ -947,6 +941,10 @@ msgstr "Quitter le mode d'édition"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Indicateur de focus pour les panneaux"
+
+#~ msgctxt "Percentage value"
+#~ msgid "%1%"
+#~ msgstr "%1 %"
 
 #~ msgid ""
 #~ "This shortcut will activate the applet as though it had been clicked."

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-12 00:43+0000\n"
+"POT-Creation-Date: 2025-05-14 00:45+0000\n"
 "PO-Revision-Date: 2024-04-23 19:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -92,7 +92,7 @@ msgid "Open %1"
 msgstr "打开 %1"
 
 #: contents/configuration/AboutPlugin.qml:21
-#: contents/configuration/AppletConfiguration.qml:324
+#: contents/configuration/AppletConfiguration.qml:325
 #, kde-format
 msgid "About"
 msgstr "关于"
@@ -144,33 +144,33 @@ msgstr "翻译人员"
 msgid "Report a Bug…"
 msgstr "报告程序缺陷…"
 
-#: contents/configuration/AppletConfiguration.qml:94
+#: contents/configuration/AppletConfiguration.qml:95
 #, kde-format
 msgid "Keyboard Shortcuts"
 msgstr "键盘快捷键"
 
-#: contents/configuration/AppletConfiguration.qml:372
+#: contents/configuration/AppletConfiguration.qml:373
 #, kde-format
 msgid "Apply Settings"
 msgstr "应用设置"
 
-#: contents/configuration/AppletConfiguration.qml:373
+#: contents/configuration/AppletConfiguration.qml:374
 #, kde-format
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
 msgstr "当前页面包含尚未保存的更改。您想要应用还是放弃这些更改？"
 
-#: contents/configuration/AppletConfiguration.qml:405
+#: contents/configuration/AppletConfiguration.qml:406
 #, kde-format
 msgid "OK"
 msgstr "确定"
 
-#: contents/configuration/AppletConfiguration.qml:412
+#: contents/configuration/AppletConfiguration.qml:413
 #, kde-format
 msgid "Apply"
 msgstr "应用"
 
-#: contents/configuration/AppletConfiguration.qml:418
+#: contents/configuration/AppletConfiguration.qml:419
 #, kde-format
 msgid "Cancel"
 msgstr "取消"
@@ -902,12 +902,6 @@ msgstr "播放或者暂停媒体"
 msgid "Next track"
 msgstr "下一首"
 
-#: contents/osd/OsdItem.qml:34
-#, kde-format
-msgctxt "Percentage value"
-msgid "%1%"
-msgstr "%1%"
-
 #: contents/views/DesktopEditMode.qml:121
 #, kde-format
 msgctxt "@action:button"
@@ -923,3 +917,7 @@ msgstr "退出编辑模式"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "面板焦点指示器"
+
+#~ msgctxt "Percentage value"
+#~ msgid "%1%"
+#~ msgstr "%1%"
