@@ -1,15 +1,15 @@
 # Spanish translations for plasma_applet_org.kde.desktopcontainment.po package.
-# Copyright (C) 2014 This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
-#
+# Copyright (C) 2014-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
 # Automatically generated, 2014.
+#
 # SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma_applet_org\n"
+"Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-13 02:48+0000\n"
-"PO-Revision-Date: 2025-01-09 03:55+0100\n"
+"PO-Revision-Date: 2025-05-13 20:34+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -114,7 +114,7 @@ msgstr "Usar un icono personalizado"
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
-msgstr "Escoger..."
+msgstr "Escoger…"
 
 #: package/contents/ui/ConfigIcons.qml:109
 #, kde-format
@@ -315,7 +315,7 @@ msgstr "Mostrar miniaturas de vistas previas"
 #: package/contents/ui/ConfigIcons.qml:346
 #, kde-format
 msgid "Configure Preview Plugins…"
-msgstr "Configurar complementos de la vista previa..."
+msgstr "Configurar complementos de la vista previa…"
 
 #: package/contents/ui/ConfigLocation.qml:80
 #, kde-format
@@ -345,7 +345,7 @@ msgstr "Ubicación personalizada:"
 #: package/contents/ui/ConfigLocation.qml:137
 #, kde-format
 msgid "Type path or URL…"
-msgstr "Escriba ruta o URL..."
+msgstr "Escriba ruta o URL…"
 
 #: package/contents/ui/ConfigLocation.qml:180
 #, kde-format
@@ -360,7 +360,7 @@ msgstr "Ninguno"
 #: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
 msgid "Default"
-msgstr "Por omisión"
+msgstr "Predeterminado"
 
 #: package/contents/ui/ConfigLocation.qml:182
 #, kde-format
@@ -375,7 +375,7 @@ msgstr "Título personalizado"
 #: package/contents/ui/ConfigLocation.qml:197
 #, kde-format
 msgid "Enter custom title…"
-msgstr "Introduzca un título personalizado..."
+msgstr "Introduzca un título personalizado…"
 
 #: package/contents/ui/ConfigOverlay.qml:98
 #, kde-format
@@ -629,183 +629,3 @@ msgstr "Mostrar vistas previas"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Bloqueado"
-
-#~ msgid "Rotate"
-#~ msgstr "Rotar"
-
-#~ msgid "Open Externally"
-#~ msgstr "Abrir externamente"
-
-#~ msgid "OK"
-#~ msgstr "Aceptar"
-
-#~ msgid "Cancel"
-#~ msgstr "Cancelar"
-
-#~ msgctxt "@item:inlistbox arrangement of icons"
-#~ msgid "Rows"
-#~ msgstr "Filas"
-
-#~ msgctxt "@item:inlistbox arrangement of icons"
-#~ msgid "Columns"
-#~ msgstr "Columnas"
-
-#~ msgctxt "@item:inmenu arrangement of icons"
-#~ msgid "Rows"
-#~ msgstr "Filas"
-
-#~ msgctxt "@item:inmenu arrangement of icons"
-#~ msgid "Columns"
-#~ msgstr "Columnas"
-
-#~ msgid "Features:"
-#~ msgstr "Funcionalidades:"
-
-#~ msgid "Search…"
-#~ msgstr "Buscar..."
-
-#~ msgid "&Create Folder"
-#~ msgstr "&Crear carpeta"
-
-#~ msgid "Tweaks"
-#~ msgstr "Microajustes"
-
-#~ msgid ""
-#~ "With the Desktop Toolbox hidden, right-click on the desktop and choose "
-#~ "'Configure Desktop...' to access this configuration window in the future"
-#~ msgstr ""
-#~ "Con la caja de herramientas del escritorio oculta, pulse con el botón "
-#~ "derecho del ratón sobre el escritorio y elija «Configurar escritorio...» "
-#~ "para acceder a esta ventana de configuración en el futuro."
-
-#~ msgid "Show the desktop toolbox"
-#~ msgstr "Mostrar la caja de herramientas del escritorio"
-
-#~ msgid "Press and hold widgets to move them and reveal their handles"
-#~ msgstr ""
-#~ "Mantener pulsados los elementos gráficos para moverlos y revelar sus asas"
-
-#~ msgid "Widgets unlocked"
-#~ msgstr "Elementos gráficos desbloqueados"
-
-#~ msgid ""
-#~ "You can press and hold widgets to move them and reveal their handles."
-#~ msgstr ""
-#~ "Puede mantener pulsados los elementos gráficos para moverlos y revelar "
-#~ "sus asas."
-
-#~ msgid "Got it"
-#~ msgstr "Entendido"
-
-#~ msgid "Resize"
-#~ msgstr "Cambiar tamaño"
-
-#~ msgid "Size:"
-#~ msgstr "Tamaño:"
-
-#~ msgid "Desktop Layout"
-#~ msgstr "Distribución del escritorio"
-
-#~ msgid "Widget Handling"
-#~ msgstr "Manejo de elementos gráficos"
-
-#~ msgid "Arrange in"
-#~ msgstr "Organizar en"
-
-#~ msgid "Sort by"
-#~ msgstr "Ordenar por"
-
-#~ msgid "Appearance:"
-#~ msgstr "Aspecto:"
-
-#~ msgid "Location:"
-#~ msgstr "Ubicación:"
-
-#~ msgid "Show the Desktop folder"
-#~ msgstr "Mostrar la carpeta del escritorio"
-
-#~ msgid "Specify a folder:"
-#~ msgstr "Especificar una carpeta:"
-
-#~ msgid "&Reload"
-#~ msgstr "&Volver a cargar"
-
-#~ msgid "&Move to Trash"
-#~ msgstr "&Mover a la Papelera"
-
-#~ msgid "&Delete"
-#~ msgstr "&Borrar"
-
-#~ msgid "Align:"
-#~ msgstr "Alinear:"
-
-#~ msgid "Sorting"
-#~ msgstr "Orden"
-
-#~ msgid "Up"
-#~ msgstr "Arriba"
-
-#~ msgid ""
-#~ "Tweaks are experimental options that may become defaults depending on "
-#~ "your feedback."
-#~ msgstr ""
-#~ "Los microajustes son opciones experimentales que pueden convertirse en "
-#~ "opciones por omisión dependiendo de la información que nos proporcione."
-
-#~ msgid "Show Original Directory"
-#~ msgstr "Mostrar el directorio original"
-
-#~ msgid "Show Original File"
-#~ msgstr "Mostrar el archivo original"
-
-#~ msgid "&Configure Trash Bin"
-#~ msgstr "&Configurar la papelera"
-
-#~ msgid "&Bookmark This Page"
-#~ msgstr "&Marcar esta página"
-
-#~ msgid "&Bookmark This Location"
-#~ msgstr "&Marcar esta ubicación"
-
-#~ msgid "&Bookmark This Folder"
-#~ msgstr "&Marcar esta carpeta"
-
-#~ msgid "&Bookmark This Link"
-#~ msgstr "&Marcar este enlace"
-
-#~ msgid "&Bookmark This File"
-#~ msgstr "&Marcar este archivo"
-
-#~ msgctxt "@title:menu"
-#~ msgid "Copy To"
-#~ msgstr "Copiar en"
-
-#~ msgctxt "@title:menu"
-#~ msgid "Move To"
-#~ msgstr "Mover a"
-
-#~ msgctxt "@title:menu"
-#~ msgid "Home Folder"
-#~ msgstr "Carpeta personal"
-
-#~ msgctxt "@title:menu"
-#~ msgid "Root Folder"
-#~ msgstr "Carpeta raíz"
-
-#~ msgctxt "@title:menu in Copy To or Move To submenu"
-#~ msgid "Browse..."
-#~ msgstr "Explorar..."
-
-#~ msgctxt "@title:menu"
-#~ msgid "Copy Here"
-#~ msgstr "Copiar aquí"
-
-#~ msgctxt "@title:menu"
-#~ msgid "Move Here"
-#~ msgstr "Mover aquí"
-
-#~ msgid "Share"
-#~ msgstr "Compartir"
-
-#~ msgid "Icon:"
-#~ msgstr "Icono:"
