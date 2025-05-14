@@ -115,7 +115,7 @@ class KickoffTests(unittest.TestCase):
         # Hitting Right again should move focus to the power action button
         ActionChains(self.driver).send_keys(Keys.RIGHT).perform()
         try:
-            self.driver.find_element(by=AppiumBy.XPATH, value="//push_button_menu[contains(@states, 'focused') and @name='Leave']")
+            self.driver.find_element(by=AppiumBy.XPATH, value="//push_button_menu[contains(@states, 'focused') and @name='Session']")
         except NoSuchElementException:
             self.driver.find_element(by=AppiumBy.XPATH, value="//button[contains(@states, 'focused') and @name='Sleep']")
 
