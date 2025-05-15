@@ -140,28 +140,33 @@ KCMUtils.AbstractKCM {
             color: Kirigami.Theme.backgroundColor
 
             QQC2.ScrollView {
-                id: contentScroll
-                anchors {
-                    fill: parent
-                    leftMargin: Kirigami.Units.largeSpacing
-                    topMargin: Kirigami.Units.largeSpacing
-                }
-                contentWidth: availableWidth - contentItem.leftMargin - contentItem.rightMargin
+                id: scrollView
+                anchors.fill: parent
 
-                StackLayout {
-                    id: stackView
-                    width: contentScroll.width
-                    height: contentScroll.height
-                    currentIndex: listView.currentIndex
+                Item {
+                    width: scrollView.availableWidth
+                    height: Math.max(implicitHeight, scrollView.availableHeight)
+                    // NOTE: No need to calculate implicitWidth, as we don't use it for sizing and
+                    //       if present, the ScrollView will use it to show horizontal scroll bars
+                    //implicitWidth: stackLayout.implicitWidth + Kirigami.Units.gridUnit * 2
+                    implicitHeight: stackLayout.implicitHeight + Kirigami.Units.gridUnit * 2
 
-                    Bell {}
-                    ModifierKeys {}
-                    KeyboardFilters {}
-                    MouseNavigation {}
-                    ActivationShortcuts {}
-                    ScreenReader {}
-                    ColorblindnessCorrection {}
-                    ShakeCursor {}
+                    StackLayout {
+                        id: stackLayout
+                        anchors.fill: parent
+                        anchors.margins: Kirigami.Units.gridUnit
+
+                        currentIndex: listView.currentIndex
+
+                        Bell {}
+                        ModifierKeys {}
+                        KeyboardFilters {}
+                        MouseNavigation {}
+                        ActivationShortcuts {}
+                        ScreenReader {}
+                        ColorblindnessCorrection {}
+                        ShakeCursor {}
+                    }
                 }
             }
         }
