@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-07 00:44+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2025-04-30 02:16+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -259,6 +259,7 @@ msgid "Power"
 msgstr "電源選項"
 
 #: package/contents/ui/ConfigGeneral.qml:286
+#: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
 msgid "Session"
 msgstr "工作階段"
@@ -326,13 +327,13 @@ msgstr "這個分類中有新安裝的應用程式"
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
-msgid "Leave"
-msgstr "離開"
+msgid "More"
+msgstr "更多"
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
-msgid "More"
-msgstr "更多"
+msgid "Session and Power "
+msgstr ""
 
 #: package/contents/ui/main.qml:355
 #, kde-format
@@ -356,6 +357,9 @@ msgstr "歷史紀錄"
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "經常使用"
+
+#~ msgid "Leave"
+#~ msgstr "離開"
 
 #~ msgctxt "@item:inmenu Reset icon to default"
 #~ msgid "Clear Icon"

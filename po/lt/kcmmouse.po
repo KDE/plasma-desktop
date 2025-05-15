@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-14 00:45+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2025-02-02 23:40+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -153,22 +153,12 @@ msgstr "Bendri:"
 msgid "Device enabled"
 msgstr "Įrenginys įjungtas"
 
-#: ui/main.qml:101
-#, kde-format
-msgid "Accept input through this device."
-msgstr "Priimti įvestį per šį įrenginį."
-
-#: ui/main.qml:107
+#: ui/main.qml:103
 #, kde-format
 msgid "Left-handed mode"
 msgstr "Kairės rankos veiksena"
 
-#: ui/main.qml:119
-#, kde-format
-msgid "Swap left and right buttons."
-msgstr "Apkeisti kairįjį ir dešinįjį mygtuką vietomis."
-
-#: ui/main.qml:126
+#: ui/main.qml:118
 #, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
@@ -176,15 +166,7 @@ msgstr ""
 "Vidurinio mygtuko spustelėjimo inicijavimui paspausti dešinįjį ir kairįjį "
 "mygtukus kartu"
 
-#: ui/main.qml:138
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Pressing the left and right button simultaneously acts as middle-click."
-msgstr ""
-"Kairiojo ir dešiniojo mygtukų paspaudimas vienu metu veikia kaip viduriniojo "
-"mygtuko spustelėjimas."
-
-#: ui/main.qml:142
+#: ui/main.qml:130
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -195,17 +177,17 @@ msgstr ""
 "papildoma delsa yra reikalinga, kad būtų teisingai aptinkami vienalaikiai "
 "kairiojo ir dešiniojo mygtuko spustelėjimai."
 
-#: ui/main.qml:154
+#: ui/main.qml:142
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Rodyklės greitis:"
 
-#: ui/main.qml:233
+#: ui/main.qml:221
 #, kde-format
 msgid "Enable pointer acceleration"
 msgstr "Įjungti rodyklės pagreitį"
 
-#: ui/main.qml:247
+#: ui/main.qml:235
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -214,50 +196,40 @@ msgstr ""
 "Kai įjungta, kuo greičiau judinama pelė, tuo labiau padidėja rodyklės "
 "nukeliautas atstumas."
 
-#: ui/main.qml:257
+#: ui/main.qml:245
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Slinkimo greitis:"
 
-#: ui/main.qml:307
+#: ui/main.qml:295
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Lėtesnis"
 
-#: ui/main.qml:316
+#: ui/main.qml:304
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Greitesnis"
 
-#: ui/main.qml:324
+#: ui/main.qml:312
 #, kde-format
 msgid "Scrolling:"
 msgstr "Slinkimas:"
 
-#: ui/main.qml:325
+#: ui/main.qml:313
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Atvirkštinė slinkimo kryptis"
 
-#: ui/main.qml:337
-#, kde-format
-msgid "Touchscreen-like scrolling."
-msgstr "Jutiklinio ekrano tipo slinkimas."
-
-#: ui/main.qml:346
+#: ui/main.qml:330
 #, fuzzy, kde-format
 #| msgid "Press middle button and move mouse to scroll"
 msgid "Hold down middle button and move mouse to scroll"
 msgstr "Paspausti vidurinįjį mygtuką ir judinti pelę, kad būtų slenkama"
 
-#: ui/main.qml:358
-#, kde-format
-msgid "Scrolling with the mouse while the middle button is pressed."
-msgstr "Slinkimas naudojant pelę, kol yra nuspaustas vidurinysis mygtukas."
-
-#: ui/main.qml:362
+#: ui/main.qml:342
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -266,6 +238,25 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+
+#~ msgid "Accept input through this device."
+#~ msgstr "Priimti įvestį per šį įrenginį."
+
+#~ msgid "Swap left and right buttons."
+#~ msgstr "Apkeisti kairįjį ir dešinįjį mygtuką vietomis."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Pressing the left and right button simultaneously acts as middle-click."
+#~ msgstr ""
+#~ "Kairiojo ir dešiniojo mygtukų paspaudimas vienu metu veikia kaip "
+#~ "viduriniojo mygtuko spustelėjimas."
+
+#~ msgid "Touchscreen-like scrolling."
+#~ msgstr "Jutiklinio ekrano tipo slinkimas."
+
+#~ msgid "Scrolling with the mouse while the middle button is pressed."
+#~ msgstr "Slinkimas naudojant pelę, kol yra nuspaustas vidurinysis mygtukas."
 
 #~ msgid "None"
 #~ msgstr "Nėra"

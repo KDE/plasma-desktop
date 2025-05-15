@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-14 00:45+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2024-12-20 21:53+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -147,34 +147,18 @@ msgstr "सामान्य:"
 msgid "Device enabled"
 msgstr "यन्त्रं सक्षमम्"
 
-#: ui/main.qml:101
-#, kde-format
-msgid "Accept input through this device."
-msgstr "अस्य यन्त्रस्य माध्यमेन निवेशं स्वीकुर्वन्तु।"
-
-#: ui/main.qml:107
+#: ui/main.qml:103
 #, kde-format
 msgid "Left-handed mode"
 msgstr "वामहस्तः मोडः"
 
-#: ui/main.qml:119
-#, kde-format
-msgid "Swap left and right buttons."
-msgstr "वाम-दक्षिण-बटनयोः अदला-बदली कुर्वन्तु ।"
-
-#: ui/main.qml:126
+#: ui/main.qml:118
 #, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "मध्य-क्लिक् कृते वाम-दक्षिण-बटनौ नुदन्तु"
 
-#: ui/main.qml:138
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Pressing the left and right button simultaneously acts as middle-click."
-msgstr "वाम-दक्षिण-बटनयोः युगपत् नुदनेन मध्य-क्लिक् इव कार्यं भवति ।"
-
-#: ui/main.qml:142
+#: ui/main.qml:130
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -184,18 +168,18 @@ msgstr ""
 "एतत् सेटिङ्ग् सक्रियीकरणेन क्लिक् विलम्बता 50ms यावत् वर्धते । युगपत् वामदक्षिणबटनदबावस्य "
 "सम्यक् ज्ञातुं अतिरिक्तविलम्बस्य आवश्यकता भवति ।"
 
-#: ui/main.qml:154
+#: ui/main.qml:142
 #, kde-format
 msgid "Pointer speed:"
 msgstr "सूचकस्य गतिः :"
 
-#: ui/main.qml:233
+#: ui/main.qml:221
 #, fuzzy, kde-format
 #| msgid "Pointer acceleration:"
 msgid "Enable pointer acceleration"
 msgstr "सूचकत्वरणम् :"
 
-#: ui/main.qml:247
+#: ui/main.qml:235
 #, fuzzy, kde-format
 #| msgid "Cursor travel distance depends on the mouse movement speed."
 msgctxt "@info:tooltip from ContextualHelpButton"
@@ -203,50 +187,40 @@ msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr "कर्सरस्य यात्रायाः दूरी मूषकस्य गतिवेगस्य उपरि निर्भरं भवति ।"
 
-#: ui/main.qml:257
+#: ui/main.qml:245
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "स्क्रॉल गतिः :"
 
-#: ui/main.qml:307
+#: ui/main.qml:295
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "मन्दतरम्"
 
-#: ui/main.qml:316
+#: ui/main.qml:304
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "द्रुततरम्"
 
-#: ui/main.qml:324
+#: ui/main.qml:312
 #, kde-format
 msgid "Scrolling:"
 msgstr "स्क्रॉल करणम् :"
 
-#: ui/main.qml:325
+#: ui/main.qml:313
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "स्क्रॉल दिशां विपर्यययन्तु"
 
-#: ui/main.qml:337
-#, kde-format
-msgid "Touchscreen-like scrolling."
-msgstr "टचस्क्रीन्-सदृशं स्क्रॉलिंग् ।"
-
-#: ui/main.qml:346
+#: ui/main.qml:330
 #, fuzzy, kde-format
 #| msgid "Press middle button and move mouse to scroll"
 msgid "Hold down middle button and move mouse to scroll"
 msgstr "मध्यबटनं नुत्वा स्क्रॉल कर्तुं मूषकं चालयन्तु"
 
-#: ui/main.qml:358
-#, kde-format
-msgid "Scrolling with the mouse while the middle button is pressed."
-msgstr "मध्यबटनं निपीड्य मूषकेन स्क्रॉल करणम् ।"
-
-#: ui/main.qml:362
+#: ui/main.qml:342
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -255,6 +229,23 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+
+#~ msgid "Accept input through this device."
+#~ msgstr "अस्य यन्त्रस्य माध्यमेन निवेशं स्वीकुर्वन्तु।"
+
+#~ msgid "Swap left and right buttons."
+#~ msgstr "वाम-दक्षिण-बटनयोः अदला-बदली कुर्वन्तु ।"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Pressing the left and right button simultaneously acts as middle-click."
+#~ msgstr "वाम-दक्षिण-बटनयोः युगपत् नुदनेन मध्य-क्लिक् इव कार्यं भवति ।"
+
+#~ msgid "Touchscreen-like scrolling."
+#~ msgstr "टचस्क्रीन्-सदृशं स्क्रॉलिंग् ।"
+
+#~ msgid "Scrolling with the mouse while the middle button is pressed."
+#~ msgstr "मध्यबटनं निपीड्य मूषकेन स्क्रॉल करणम् ।"
 
 #~ msgid "None"
 #~ msgstr "न कश्चित्"

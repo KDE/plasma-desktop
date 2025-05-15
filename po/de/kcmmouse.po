@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-14 00:45+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2024-03-26 19:21+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -161,36 +161,18 @@ msgstr "Allgemein:"
 msgid "Device enabled"
 msgstr "Gerät aktiviert"
 
-#: ui/main.qml:101
-#, kde-format
-msgid "Accept input through this device."
-msgstr "Eingaben über dieses Gerät annehmen"
-
-#: ui/main.qml:107
+#: ui/main.qml:103
 #, kde-format
 msgid "Left-handed mode"
 msgstr "Linkshändige Bedienung"
 
-#: ui/main.qml:119
-#, kde-format
-msgid "Swap left and right buttons."
-msgstr "Linke und Rechte Taste tauschen"
-
-#: ui/main.qml:126
+#: ui/main.qml:118
 #, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "Linke und rechte Taste für Mittelklick drücken"
 
-#: ui/main.qml:138
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Pressing the left and right button simultaneously acts as middle-click."
-msgstr ""
-"Gleichzeitiges Klicken mit der linken und rechten Maustaste emuliert das "
-"Klicken mit der mittleren Maustaste."
-
-#: ui/main.qml:142
+#: ui/main.qml:130
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -201,18 +183,18 @@ msgstr ""
 "zusätzliche Verzögerung wird benötigt, um das gleichzeitige Drücken der "
 "linken und rechten Taste korrekt zu erkennen."
 
-#: ui/main.qml:154
+#: ui/main.qml:142
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Zeigergeschwindigkeit:"
 
-#: ui/main.qml:233
+#: ui/main.qml:221
 #, fuzzy, kde-format
 #| msgid "Pointer acceleration:"
 msgid "Enable pointer acceleration"
 msgstr "Zeigerbeschleunigung:"
 
-#: ui/main.qml:247
+#: ui/main.qml:235
 #, fuzzy, kde-format
 #| msgid "Cursor travel distance depends on the mouse movement speed."
 msgctxt "@info:tooltip from ContextualHelpButton"
@@ -222,52 +204,41 @@ msgstr ""
 "Die Bewegung des Zeigers hängt von der Geschwindigkeit der Bewegung der Maus "
 "ab."
 
-#: ui/main.qml:257
+#: ui/main.qml:245
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Bildlaufgeschwindigkeit:"
 
-#: ui/main.qml:307
+#: ui/main.qml:295
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Langsamer"
 
-#: ui/main.qml:316
+#: ui/main.qml:304
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Schneller"
 
-#: ui/main.qml:324
+#: ui/main.qml:312
 #, kde-format
 msgid "Scrolling:"
 msgstr "Bildlauf:"
 
-#: ui/main.qml:325
+#: ui/main.qml:313
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Laufrichtung umkehren"
 
-#: ui/main.qml:337
-#, fuzzy, kde-format
-#| msgid "Touchscreen like scrolling."
-msgid "Touchscreen-like scrolling."
-msgstr "Bildlauf wie auf dem Touchscreen."
-
-#: ui/main.qml:346
+#: ui/main.qml:330
 #, fuzzy, kde-format
 #| msgid "Press middle button and move mouse to scroll"
 msgid "Hold down middle button and move mouse to scroll"
 msgstr ""
 "Drücken Sie die mittlere Maustaste und bewegen Sie die Maus um zu scrollen"
 
-#: ui/main.qml:358
-#, kde-format
-msgid "Scrolling with the mouse while the middle button is pressed."
-msgstr "Mit der Maus scrollen, während die mittlere Maustaste gedrückt ist."
-
-#: ui/main.qml:362
+#: ui/main.qml:342
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -276,6 +247,27 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+
+#~ msgid "Accept input through this device."
+#~ msgstr "Eingaben über dieses Gerät annehmen"
+
+#~ msgid "Swap left and right buttons."
+#~ msgstr "Linke und Rechte Taste tauschen"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Pressing the left and right button simultaneously acts as middle-click."
+#~ msgstr ""
+#~ "Gleichzeitiges Klicken mit der linken und rechten Maustaste emuliert das "
+#~ "Klicken mit der mittleren Maustaste."
+
+#, fuzzy
+#~| msgid "Touchscreen like scrolling."
+#~ msgid "Touchscreen-like scrolling."
+#~ msgstr "Bildlauf wie auf dem Touchscreen."
+
+#~ msgid "Scrolling with the mouse while the middle button is pressed."
+#~ msgstr "Mit der Maus scrollen, während die mittlere Maustaste gedrückt ist."
 
 #~ msgid "None"
 #~ msgstr "Keines"

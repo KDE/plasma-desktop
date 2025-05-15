@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-07 00:44+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2024-12-22 22:07+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -258,6 +258,7 @@ msgid "Power"
 msgstr "Virta"
 
 #: package/contents/ui/ConfigGeneral.qml:286
+#: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
 msgid "Session"
 msgstr "Istunto"
@@ -324,13 +325,14 @@ msgstr ""
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
-msgid "Leave"
-msgstr "Poistu"
-
-#: package/contents/ui/LeaveButtons.qml:169
-#, kde-format
 msgid "More"
 msgstr "Lisää"
+
+#: package/contents/ui/LeaveButtons.qml:169
+#, fuzzy, kde-format
+#| msgid "Session actions"
+msgid "Session and Power "
+msgstr "Istuntotoiminnot"
 
 #: package/contents/ui/main.qml:355
 #, kde-format
@@ -355,6 +357,9 @@ msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Usein käytetyt"
 
+#~ msgid "Leave"
+#~ msgstr "Poistu"
+
 #~ msgctxt "@item:inmenu Reset icon to default"
 #~ msgid "Clear Icon"
 #~ msgstr "Tyhjennä kuvake"
@@ -368,9 +373,6 @@ msgstr "Usein käytetyt"
 # *** TARKISTA: Onko ”power” tässä virranhallinta vai esim. teho(käyttäjä)asetukset?
 #~ msgid "Power actions"
 #~ msgstr "Virtatoiminnot"
-
-#~ msgid "Session actions"
-#~ msgstr "Istuntotoiminnot"
 
 #~ msgid "Leave…"
 #~ msgstr "Poistu…"

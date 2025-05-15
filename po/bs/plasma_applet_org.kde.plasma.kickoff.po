@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-07 00:44+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2015-02-15 13:05+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -265,6 +265,7 @@ msgid "Power"
 msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:286
+#: package/contents/ui/LeaveButtons.qml:169
 #, fuzzy, kde-format
 #| msgid "Save Session"
 msgid "Session"
@@ -333,13 +334,14 @@ msgstr ""
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
-msgid "Leave"
-msgstr "Napusti"
-
-#: package/contents/ui/LeaveButtons.qml:169
-#, kde-format
 msgid "More"
 msgstr ""
+
+#: package/contents/ui/LeaveButtons.qml:169
+#, fuzzy, kde-format
+#| msgid "Session"
+msgid "Session and Power "
+msgstr "Sesija"
 
 #: package/contents/ui/main.qml:355
 #, fuzzy, kde-format
@@ -367,14 +369,12 @@ msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Nedavno instalirano"
 
+#~ msgid "Leave"
+#~ msgstr "Napusti"
+
 #, fuzzy
 #~ msgid "Search…"
 #~ msgstr "Upišite za pretragu..."
-
-#, fuzzy
-#~| msgid "Session"
-#~ msgid "Session actions"
-#~ msgstr "Sesija"
 
 #, fuzzy
 #~| msgid "Leave"

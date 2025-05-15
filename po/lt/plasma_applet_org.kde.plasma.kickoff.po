@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-07 00:44+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2025-04-28 01:19+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -265,6 +265,7 @@ msgid "Power"
 msgstr "Maitinimas"
 
 #: package/contents/ui/ConfigGeneral.qml:286
+#: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
 msgid "Session"
 msgstr "Seansas"
@@ -330,13 +331,14 @@ msgstr "Šioje kategorijoje yra naujai įdiegta programa"
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
-msgid "Leave"
-msgstr "Išeiti"
-
-#: package/contents/ui/LeaveButtons.qml:169
-#, kde-format
 msgid "More"
 msgstr "Daugiau"
+
+#: package/contents/ui/LeaveButtons.qml:169
+#, fuzzy, kde-format
+#| msgid "Session actions"
+msgid "Session and Power "
+msgstr "Seanso veiksmai"
 
 #: package/contents/ui/main.qml:355
 #, kde-format
@@ -361,6 +363,9 @@ msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Dažniausiai naudojami"
 
+#~ msgid "Leave"
+#~ msgstr "Išeiti"
+
 #~ msgctxt "@item:inmenu Reset icon to default"
 #~ msgid "Clear Icon"
 #~ msgstr "Išvalyti piktogramą"
@@ -373,9 +378,6 @@ msgstr "Dažniausiai naudojami"
 
 #~ msgid "Power actions"
 #~ msgstr "Maitinimo veiksmai"
-
-#~ msgid "Session actions"
-#~ msgstr "Seanso veiksmai"
 
 #~ msgid "Leave…"
 #~ msgstr "Išeiti…"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-07 00:44+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2025-04-05 18:56+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -259,6 +259,7 @@ msgid "Power"
 msgstr "Strömhantering"
 
 #: package/contents/ui/ConfigGeneral.qml:286
+#: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
 msgid "Session"
 msgstr "Session"
@@ -325,13 +326,14 @@ msgstr ""
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
-msgid "Leave"
-msgstr "Gå ifrån"
-
-#: package/contents/ui/LeaveButtons.qml:169
-#, kde-format
 msgid "More"
 msgstr "Mer"
+
+#: package/contents/ui/LeaveButtons.qml:169
+#, fuzzy, kde-format
+#| msgid "Session actions"
+msgid "Session and Power "
+msgstr "Sessionsåtgärder"
 
 #: package/contents/ui/main.qml:355
 #, kde-format
@@ -356,6 +358,9 @@ msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Oftast använda"
 
+#~ msgid "Leave"
+#~ msgstr "Gå ifrån"
+
 #~ msgctxt "@item:inmenu Reset icon to default"
 #~ msgid "Clear Icon"
 #~ msgstr "Rensa ikon"
@@ -368,9 +373,6 @@ msgstr "Oftast använda"
 
 #~ msgid "Power actions"
 #~ msgstr "Kraftåtgärder"
-
-#~ msgid "Session actions"
-#~ msgstr "Sessionsåtgärder"
 
 #~ msgid "Leave…"
 #~ msgstr "Gå ifrån…"

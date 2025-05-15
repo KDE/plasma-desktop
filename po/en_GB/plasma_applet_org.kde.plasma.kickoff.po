@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-07 00:44+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2024-10-18 17:01+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -258,6 +258,7 @@ msgid "Power"
 msgstr "Power"
 
 #: package/contents/ui/ConfigGeneral.qml:286
+#: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
 msgid "Session"
 msgstr "Session"
@@ -324,13 +325,14 @@ msgstr ""
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
-msgid "Leave"
-msgstr "Leave"
-
-#: package/contents/ui/LeaveButtons.qml:169
-#, kde-format
 msgid "More"
 msgstr "More"
+
+#: package/contents/ui/LeaveButtons.qml:169
+#, fuzzy, kde-format
+#| msgid "Session actions"
+msgid "Session and Power "
+msgstr "Session actions"
 
 #: package/contents/ui/main.qml:355
 #, kde-format
@@ -355,6 +357,9 @@ msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Frequently Used"
 
+#~ msgid "Leave"
+#~ msgstr "Leave"
+
 #~ msgctxt "@item:inmenu Reset icon to default"
 #~ msgid "Clear Icon"
 #~ msgstr "Clear Icon"
@@ -367,9 +372,6 @@ msgstr "Frequently Used"
 
 #~ msgid "Power actions"
 #~ msgstr "Power actions"
-
-#~ msgid "Session actions"
-#~ msgstr "Session actions"
 
 #~ msgid "Leave…"
 #~ msgstr "Leave…"

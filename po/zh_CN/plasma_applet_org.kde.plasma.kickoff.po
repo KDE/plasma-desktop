@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-07 00:44+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -256,6 +256,7 @@ msgid "Power"
 msgstr "电源"
 
 #: package/contents/ui/ConfigGeneral.qml:286
+#: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
 msgid "Session"
 msgstr "会话"
@@ -321,13 +322,13 @@ msgstr "此类别中有一个新安装的应用程序"
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
-msgid "Leave"
-msgstr "离开"
+msgid "More"
+msgstr "更多"
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
-msgid "More"
-msgstr "更多"
+msgid "Session and Power "
+msgstr ""
 
 #: package/contents/ui/main.qml:355
 #, kde-format
@@ -351,3 +352,6 @@ msgstr "历史"
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "常用"
+
+#~ msgid "Leave"
+#~ msgstr "离开"

@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-14 00:45+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2025-02-14 08:25+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -168,35 +168,18 @@ msgstr "Xeral:"
 msgid "Device enabled"
 msgstr "Dispositivo activado"
 
-#: ui/main.qml:101
-#, kde-format
-msgid "Accept input through this device."
-msgstr "Aceptar entrada deste dispositivo."
-
-#: ui/main.qml:107
+#: ui/main.qml:103
 #, kde-format
 msgid "Left-handed mode"
 msgstr "Modo para zurdos"
 
-#: ui/main.qml:119
-#, kde-format
-msgid "Swap left and right buttons."
-msgstr "Intercambiar os botóns esquerdo e dereito."
-
-#: ui/main.qml:126
+#: ui/main.qml:118
 #, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "Prema os botóns esquerdo e dereito para facer un clic central."
 
-#: ui/main.qml:138
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Pressing the left and right button simultaneously acts as middle-click."
-msgstr ""
-"Premer os botóns esquerdo e dereito á vez equivale a premer o botón central."
-
-#: ui/main.qml:142
+#: ui/main.qml:130
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -207,17 +190,17 @@ msgstr ""
 "adicional é necesario para detectar correctamente premas simultáneas dos "
 "botóns esquerdo e dereito."
 
-#: ui/main.qml:154
+#: ui/main.qml:142
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Velocidade do punteiro:"
 
-#: ui/main.qml:233
+#: ui/main.qml:221
 #, kde-format
 msgid "Enable pointer acceleration"
 msgstr "Activar a aceleración do punteiro."
 
-#: ui/main.qml:247
+#: ui/main.qml:235
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -226,50 +209,40 @@ msgstr ""
 "Cando se activa, a distancia de desprazamento do punteiro aumenta a maior "
 "velocidade de movemento."
 
-#: ui/main.qml:257
+#: ui/main.qml:245
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Velocidade de desprazamento:"
 
-#: ui/main.qml:307
+#: ui/main.qml:295
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Máis amodo"
 
-#: ui/main.qml:316
+#: ui/main.qml:304
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Veloz"
 
-#: ui/main.qml:324
+#: ui/main.qml:312
 #, kde-format
 msgid "Scrolling:"
 msgstr "Desprazamento:"
 
-#: ui/main.qml:325
+#: ui/main.qml:313
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Inverter a dirección de desprazamento"
 
-#: ui/main.qml:337
-#, kde-format
-msgid "Touchscreen-like scrolling."
-msgstr "Desprazamento como o dunha pantalla táctil."
-
-#: ui/main.qml:346
+#: ui/main.qml:330
 #, fuzzy, kde-format
 #| msgid "Press middle button and move mouse to scroll"
 msgid "Hold down middle button and move mouse to scroll"
 msgstr "Prema o botón central e mova o rato para desprazar."
 
-#: ui/main.qml:358
-#, kde-format
-msgid "Scrolling with the mouse while the middle button is pressed."
-msgstr "Desprazamento co rato mentres se preme o botón central."
-
-#: ui/main.qml:362
+#: ui/main.qml:342
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -278,6 +251,25 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+
+#~ msgid "Accept input through this device."
+#~ msgstr "Aceptar entrada deste dispositivo."
+
+#~ msgid "Swap left and right buttons."
+#~ msgstr "Intercambiar os botóns esquerdo e dereito."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Pressing the left and right button simultaneously acts as middle-click."
+#~ msgstr ""
+#~ "Premer os botóns esquerdo e dereito á vez equivale a premer o botón "
+#~ "central."
+
+#~ msgid "Touchscreen-like scrolling."
+#~ msgstr "Desprazamento como o dunha pantalla táctil."
+
+#~ msgid "Scrolling with the mouse while the middle button is pressed."
+#~ msgstr "Desprazamento co rato mentres se preme o botón central."
 
 #~ msgid "None"
 #~ msgstr "Ningún"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-07 00:44+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2024-09-19 17:29+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -262,6 +262,7 @@ msgid "Power"
 msgstr "Ενέργεια"
 
 #: package/contents/ui/ConfigGeneral.qml:286
+#: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
 msgid "Session"
 msgstr "Συνεδρία"
@@ -328,13 +329,14 @@ msgstr ""
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
-msgid "Leave"
-msgstr "Έξοδος"
-
-#: package/contents/ui/LeaveButtons.qml:169
-#, kde-format
 msgid "More"
 msgstr "Περισσότερα"
+
+#: package/contents/ui/LeaveButtons.qml:169
+#, fuzzy, kde-format
+#| msgid "Session"
+msgid "Session and Power "
+msgstr "Συνεδρία"
 
 #: package/contents/ui/main.qml:355
 #, kde-format
@@ -359,6 +361,9 @@ msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Συχνά χρησιμοποιούμενα"
 
+#~ msgid "Leave"
+#~ msgstr "Έξοδος"
+
 #~ msgctxt "@item:inmenu Reset icon to default"
 #~ msgid "Clear Icon"
 #~ msgstr "Καθαρισμός εικονιδίου"
@@ -367,11 +372,6 @@ msgstr "Συχνά χρησιμοποιούμενα"
 #~| msgid "Search:"
 #~ msgid "Search…"
 #~ msgstr "Αναζήτηση:"
-
-#, fuzzy
-#~| msgid "Session"
-#~ msgid "Session actions"
-#~ msgstr "Συνεδρία"
 
 #, fuzzy
 #~| msgid "Leave"

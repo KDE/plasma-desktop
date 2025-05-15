@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-07 00:44+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2025-04-28 17:34+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -259,6 +259,7 @@ msgid "Power"
 msgstr "الطاقة"
 
 #: package/contents/ui/ConfigGeneral.qml:286
+#: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
 msgid "Session"
 msgstr "الجلسة"
@@ -324,13 +325,14 @@ msgstr "يوجد تطبيق مثبت حديثًا في هذه الفئة"
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
-msgid "Leave"
-msgstr "اترك"
-
-#: package/contents/ui/LeaveButtons.qml:169
-#, kde-format
 msgid "More"
 msgstr "المزيد"
+
+#: package/contents/ui/LeaveButtons.qml:169
+#, fuzzy, kde-format
+#| msgid "Session actions"
+msgid "Session and Power "
+msgstr "إجراءات الجلسة"
 
 #: package/contents/ui/main.qml:355
 #, kde-format
@@ -355,6 +357,9 @@ msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "كثير ما تستخدم"
 
+#~ msgid "Leave"
+#~ msgstr "اترك"
+
 #~ msgctxt "@item:inmenu Reset icon to default"
 #~ msgid "Clear Icon"
 #~ msgstr "امسح الأيقونة"
@@ -367,9 +372,6 @@ msgstr "كثير ما تستخدم"
 
 #~ msgid "Power actions"
 #~ msgstr "إجراءات الطاقة"
-
-#~ msgid "Session actions"
-#~ msgstr "إجراءات الجلسة"
 
 #~ msgid "Leave…"
 #~ msgstr "اترك..."

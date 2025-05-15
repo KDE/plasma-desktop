@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kickoff\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-07 00:44+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2023-11-11 15:38+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -263,6 +263,7 @@ msgid "Power"
 msgstr "Napájanie"
 
 #: package/contents/ui/ConfigGeneral.qml:286
+#: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
 msgid "Session"
 msgstr "Sedenie"
@@ -329,13 +330,14 @@ msgstr ""
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
-msgid "Leave"
-msgstr "Odísť"
-
-#: package/contents/ui/LeaveButtons.qml:169
-#, kde-format
 msgid "More"
 msgstr "Viac"
+
+#: package/contents/ui/LeaveButtons.qml:169
+#, fuzzy, kde-format
+#| msgid "Session actions"
+msgid "Session and Power "
+msgstr "Akcie sedenia"
 
 #: package/contents/ui/main.qml:355
 #, kde-format
@@ -360,6 +362,9 @@ msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Často používané"
 
+#~ msgid "Leave"
+#~ msgstr "Odísť"
+
 #~ msgctxt "@item:inmenu Reset icon to default"
 #~ msgid "Clear Icon"
 #~ msgstr "Vymazať ikonu"
@@ -372,9 +377,6 @@ msgstr "Často používané"
 
 #~ msgid "Power actions"
 #~ msgstr "Akcie napájania"
-
-#~ msgid "Session actions"
-#~ msgstr "Akcie sedenia"
 
 #~ msgid "Leave…"
 #~ msgstr "Odísť..."

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-14 00:45+0000\n"
-"PO-Revision-Date: 2025-02-01 05:32+0100\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"PO-Revision-Date: 2025-05-14 03:32+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
@@ -150,35 +150,18 @@ msgstr "საერთო:"
 msgid "Device enabled"
 msgstr "მოწყობილობა ჩართულია"
 
-#: ui/main.qml:101
-#, kde-format
-msgid "Accept input through this device."
-msgstr "ამ მოწყობილობიდან შემოტანის ჩართვა."
-
-#: ui/main.qml:107
+#: ui/main.qml:103
 #, kde-format
 msgid "Left-handed mode"
 msgstr "ცაცია"
 
-#: ui/main.qml:119
-#, kde-format
-msgid "Swap left and right buttons."
-msgstr "მარჯვენა და მარცხენა ღილაკებისთვის ადგილის შეცვლა."
-
-#: ui/main.qml:126
+#: ui/main.qml:118
 #, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "შუა-წკაპისთვის მარჯვენა და მარცხენა ღილაკებს ერთდროულად დააწექით"
 
-#: ui/main.qml:138
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Pressing the left and right button simultaneously acts as middle-click."
-msgstr ""
-"მარცხენა და მარჯვენა ღილაკებზე ერთდროული წკაპი შუა ღილაკის წკაპს აგზავნის."
-
-#: ui/main.qml:142
+#: ui/main.qml:130
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -189,17 +172,17 @@ msgstr ""
 "დამატებითი დაყოვნება საჭიროა, რომ თაგუნას მარჯვენა და მარცხენა ღილაკების "
 "ერთდროული დაწკაპუნება სწორად ამოვიცნო."
 
-#: ui/main.qml:154
+#: ui/main.qml:142
 #, kde-format
 msgid "Pointer speed:"
 msgstr "კურსორის სიჩქარე:"
 
-#: ui/main.qml:233
+#: ui/main.qml:221
 #, kde-format
 msgid "Enable pointer acceleration"
 msgstr "კურსორის აჩქარების ჩართვა"
 
-#: ui/main.qml:247
+#: ui/main.qml:235
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -208,50 +191,39 @@ msgstr ""
 "როცა ჩართულია, კურსორის გადაადგილების მანძილი იზრდება კურსორის სიჩქარესთან "
 "ერთად."
 
-#: ui/main.qml:257
+#: ui/main.qml:245
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "აწევ-ჩამოწევის სიჩქარე:"
 
-#: ui/main.qml:307
+#: ui/main.qml:295
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "უფრო ნელა"
 
-#: ui/main.qml:316
+#: ui/main.qml:304
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "უფრო სწრაფი"
 
-#: ui/main.qml:324
+#: ui/main.qml:312
 #, kde-format
 msgid "Scrolling:"
 msgstr "აწევ-ჩამოწევა:"
 
-#: ui/main.qml:325
+#: ui/main.qml:313
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "აწევ-ჩამოწევის მიმართულების ინვერსია (ჩვეულებრივი აწევ-ჩამოწევა)"
 
-#: ui/main.qml:337
+#: ui/main.qml:330
 #, kde-format
-msgid "Touchscreen-like scrolling."
-msgstr "სენსორული ეკრანის მსგავსი აწევ-ჩამოწევა."
-
-#: ui/main.qml:346
-#, fuzzy, kde-format
-#| msgid "Press middle button and move mouse to scroll"
 msgid "Hold down middle button and move mouse to scroll"
 msgstr "დააწექით შუა ღილაკს და გაამოძრავეთ თაგუნა გადასახვევად"
 
-#: ui/main.qml:358
-#, kde-format
-msgid "Scrolling with the mouse while the middle button is pressed."
-msgstr "გადახვევა, როცა თაგუნას შუა ღილაკი გიჭირავთ."
-
-#: ui/main.qml:362
+#: ui/main.qml:342
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -260,6 +232,29 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+"ეს ჩაერევა აპლიკაციებთან, რომლებიც შუა-ღილაკით გადათრევას იყენებენ, "
+"მაგალითად, გამოსახულებების რედაქტორები, დოკუმენტების დამთვალიერებლები, ან "
+"თამაშები. შეიძლება, გამოყენებული იყოს ნებისმიერ მოწყობილობაზე, მაგრამ "
+"ძირითადად განკუთვნილია, ჩაანაცვლოს გადამხვევი ბორბალი მოწყობილობებზე, "
+"რომლებსაც ის არ აქვთ."
+
+#~ msgid "Accept input through this device."
+#~ msgstr "ამ მოწყობილობიდან შემოტანის ჩართვა."
+
+#~ msgid "Swap left and right buttons."
+#~ msgstr "მარჯვენა და მარცხენა ღილაკებისთვის ადგილის შეცვლა."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Pressing the left and right button simultaneously acts as middle-click."
+#~ msgstr ""
+#~ "მარცხენა და მარჯვენა ღილაკებზე ერთდროული წკაპი შუა ღილაკის წკაპს აგზავნის."
+
+#~ msgid "Touchscreen-like scrolling."
+#~ msgstr "სენსორული ეკრანის მსგავსი აწევ-ჩამოწევა."
+
+#~ msgid "Scrolling with the mouse while the middle button is pressed."
+#~ msgstr "გადახვევა, როცა თაგუნას შუა ღილაკი გიჭირავთ."
 
 #~ msgid "None"
 #~ msgstr "არაფერი"

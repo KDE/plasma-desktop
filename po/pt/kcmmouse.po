@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-14 00:45+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2022-08-26 02:36+0100\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -159,23 +159,13 @@ msgstr "Geral:"
 msgid "Device enabled"
 msgstr "Dispositivo activo"
 
-#: ui/main.qml:101
-#, kde-format
-msgid "Accept input through this device."
-msgstr "Aceitar a introdução de dados por este dispositivo."
-
-#: ui/main.qml:107
+#: ui/main.qml:103
 #, fuzzy, kde-format
 #| msgid "Left handed mode"
 msgid "Left-handed mode"
 msgstr "Modo esquerdino"
 
-#: ui/main.qml:119
-#, kde-format
-msgid "Swap left and right buttons."
-msgstr "Trocar os botões esquerdo e direito."
-
-#: ui/main.qml:126
+#: ui/main.qml:118
 #, fuzzy, kde-format
 #| msgid "Press left and right buttons for middle-click"
 msgctxt "@option:check"
@@ -183,17 +173,7 @@ msgid "Press left and right buttons for middle-click"
 msgstr ""
 "Carregue nos botões esquerdo e direito para um 'click' do botão do meio"
 
-#: ui/main.qml:138
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
-msgctxt "@info:tooltip"
-msgid "Pressing the left and right button simultaneously acts as middle-click."
-msgstr ""
-"Se carregar nos botões esquerdo e direito em simultâneo, envia um 'click' do "
-"botão do meio."
-
-#: ui/main.qml:142
+#: ui/main.qml:130
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -201,18 +181,18 @@ msgid ""
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
 
-#: ui/main.qml:154
+#: ui/main.qml:142
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Velocidade do ponteiro:"
 
-#: ui/main.qml:233
+#: ui/main.qml:221
 #, fuzzy, kde-format
 #| msgid "Pointer acceleration:"
 msgid "Enable pointer acceleration"
 msgstr "Aceleração do cursor:"
 
-#: ui/main.qml:247
+#: ui/main.qml:235
 #, fuzzy, kde-format
 #| msgid "Cursor travel distance depends on the mouse movement speed."
 msgctxt "@info:tooltip from ContextualHelpButton"
@@ -221,50 +201,39 @@ msgid ""
 msgstr ""
 "A distância de percurso do cursor depende da velocidade do movimento do dedo."
 
-#: ui/main.qml:257
+#: ui/main.qml:245
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Velocidade do deslocamento:"
 
-#: ui/main.qml:307
+#: ui/main.qml:295
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Mais devagar"
 
-#: ui/main.qml:316
+#: ui/main.qml:304
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Mais depressa"
 
-#: ui/main.qml:324
+#: ui/main.qml:312
 #, kde-format
 msgid "Scrolling:"
 msgstr "Deslocamento:"
 
-#: ui/main.qml:325
+#: ui/main.qml:313
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Inverter a direcção do deslocamento"
 
-#: ui/main.qml:337
-#, fuzzy, kde-format
-#| msgid "Touchscreen like scrolling."
-msgid "Touchscreen-like scrolling."
-msgstr "Deslocamento como nos ecrãs tácteis."
-
-#: ui/main.qml:346
+#: ui/main.qml:330
 #, kde-format
 msgid "Hold down middle button and move mouse to scroll"
 msgstr ""
 
-#: ui/main.qml:358
-#, kde-format
-msgid "Scrolling with the mouse while the middle button is pressed."
-msgstr ""
-
-#: ui/main.qml:362
+#: ui/main.qml:342
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -273,6 +242,27 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+
+#~ msgid "Accept input through this device."
+#~ msgstr "Aceitar a introdução de dados por este dispositivo."
+
+#~ msgid "Swap left and right buttons."
+#~ msgstr "Trocar os botões esquerdo e direito."
+
+#, fuzzy
+#~| msgid ""
+#~| "Clicking left and right button simultaneously sends middle button click."
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Pressing the left and right button simultaneously acts as middle-click."
+#~ msgstr ""
+#~ "Se carregar nos botões esquerdo e direito em simultâneo, envia um 'click' "
+#~ "do botão do meio."
+
+#, fuzzy
+#~| msgid "Touchscreen like scrolling."
+#~ msgid "Touchscreen-like scrolling."
+#~ msgstr "Deslocamento como nos ecrãs tácteis."
 
 #~ msgid "Cursor moves the same distance as the mouse movement."
 #~ msgstr "O cursor move a mesma distância que o movimento do rato."

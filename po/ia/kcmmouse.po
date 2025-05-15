@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-14 00:45+0000\n"
-"PO-Revision-Date: 2025-02-04 12:28+0100\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"PO-Revision-Date: 2025-05-14 12:25+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -151,36 +151,18 @@ msgstr "General:"
 msgid "Device enabled"
 msgstr "Dispositivo habilitate"
 
-#: ui/main.qml:101
-#, kde-format
-msgid "Accept input through this device."
-msgstr "Accepta ingresso per iste dispositivo"
-
-#: ui/main.qml:107
+#: ui/main.qml:103
 #, kde-format
 msgid "Left-handed mode"
 msgstr "Modo pro usator de mano sinistre"
 
-#: ui/main.qml:119
-#, kde-format
-msgid "Swap left and right buttons."
-msgstr "Excambia buttones de sinistra e dextera."
-
-#: ui/main.qml:126
+#: ui/main.qml:118
 #, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "Pressa buttones de sinistra e dextera per pulsar in le medio"
 
-#: ui/main.qml:138
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Pressing the left and right button simultaneously acts as middle-click."
-msgstr ""
-"Pulsar buttones de sinistra e dextera simultaneemente age como cliccar in le "
-"medio."
-
-#: ui/main.qml:142
+#: ui/main.qml:130
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -191,17 +173,17 @@ msgstr ""
 "retardo extra es necessitate per relevar correctemente le clicks simultanee "
 "sinistre e dextere."
 
-#: ui/main.qml:154
+#: ui/main.qml:142
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Velocitate de punctator:"
 
-#: ui/main.qml:233
+#: ui/main.qml:221
 #, kde-format
 msgid "Enable pointer acceleration"
 msgstr "Habilita Acceleration de punctator"
 
-#: ui/main.qml:247
+#: ui/main.qml:235
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -210,50 +192,39 @@ msgstr ""
 "Quando habilitate, distantia de viage de puncator augmenta con velocitate de "
 "movivento plus veloce."
 
-#: ui/main.qml:257
+#: ui/main.qml:245
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Velocitate de Rolar:"
 
-#: ui/main.qml:307
+#: ui/main.qml:295
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Lisie (plus lente)"
 
-#: ui/main.qml:316
+#: ui/main.qml:304
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Plus rapide"
 
-#: ui/main.qml:324
+#: ui/main.qml:312
 #, kde-format
 msgid "Scrolling:"
 msgstr "Rolar:"
 
-#: ui/main.qml:325
+#: ui/main.qml:313
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Reverte direction de rolar"
 
-#: ui/main.qml:337
+#: ui/main.qml:330
 #, kde-format
-msgid "Touchscreen-like scrolling."
-msgstr "Rolar como Schermo tactile."
-
-#: ui/main.qml:346
-#, fuzzy, kde-format
-#| msgid "Press middle button and move mouse to scroll"
 msgid "Hold down middle button and move mouse to scroll"
-msgstr "Pressa button in le medie e move le mus per rolar"
+msgstr "Mantene button in le medie e move le mus per rolar"
 
-#: ui/main.qml:358
-#, kde-format
-msgid "Scrolling with the mouse while the middle button is pressed."
-msgstr "Rolar con le mus durante que le buttoin de medie es pressate."
-
-#: ui/main.qml:362
+#: ui/main.qml:342
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -262,6 +233,29 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+"Isto interferera con applicationes que usa traher button in le medie, tal "
+"como alcun editores de imagine, visualisatores de documentos,o jocos video. "
+"Il pote esser usate sur ulle dispositivo, ma es intendite primariemente como "
+"un substituto per rolar rotas sur dispositivos que non ha ulle. "
+
+#~ msgid "Accept input through this device."
+#~ msgstr "Accepta ingresso per iste dispositivo"
+
+#~ msgid "Swap left and right buttons."
+#~ msgstr "Excambia buttones de sinistra e dextera."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Pressing the left and right button simultaneously acts as middle-click."
+#~ msgstr ""
+#~ "Pulsar buttones de sinistra e dextera simultaneemente age como cliccar in "
+#~ "le medio."
+
+#~ msgid "Touchscreen-like scrolling."
+#~ msgstr "Rolar como Schermo tactile."
+
+#~ msgid "Scrolling with the mouse while the middle button is pressed."
+#~ msgstr "Rolar con le mus durante que le buttoin de medie es pressate."
 
 #~ msgid "None"
 #~ msgstr "Necun"

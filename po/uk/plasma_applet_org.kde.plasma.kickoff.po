@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kickoff\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-07 00:44+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2025-04-25 09:22+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -262,6 +262,7 @@ msgid "Power"
 msgstr "Живлення"
 
 #: package/contents/ui/ConfigGeneral.qml:286
+#: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
 msgid "Session"
 msgstr "Сеанс"
@@ -327,13 +328,14 @@ msgstr "У цій категорії є нововстановлена прог�
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
-msgid "Leave"
-msgstr "Вийти"
-
-#: package/contents/ui/LeaveButtons.qml:169
-#, kde-format
 msgid "More"
 msgstr "Інше"
+
+#: package/contents/ui/LeaveButtons.qml:169
+#, fuzzy, kde-format
+#| msgid "Session actions"
+msgid "Session and Power "
+msgstr "Дії з сеансом"
 
 #: package/contents/ui/main.qml:355
 #, kde-format
@@ -358,6 +360,9 @@ msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Часто використовувані"
 
+#~ msgid "Leave"
+#~ msgstr "Вийти"
+
 #~ msgctxt "@item:inmenu Reset icon to default"
 #~ msgid "Clear Icon"
 #~ msgstr "Спорожнити піктограму"
@@ -370,9 +375,6 @@ msgstr "Часто використовувані"
 
 #~ msgid "Power actions"
 #~ msgstr "Дії із живленням"
-
-#~ msgid "Session actions"
-#~ msgstr "Дії з сеансом"
 
 #~ msgid "Leave…"
 #~ msgstr "Вийти…"

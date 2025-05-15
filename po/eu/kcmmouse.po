@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-14 00:45+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2025-02-01 21:08+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -153,35 +153,18 @@ msgstr "Orokorra:"
 msgid "Device enabled"
 msgstr "Gailua gaituta"
 
-#: ui/main.qml:101
-#, kde-format
-msgid "Accept input through this device."
-msgstr "Onartu sarrera gailu honen bidez."
-
-#: ui/main.qml:107
+#: ui/main.qml:103
 #, kde-format
 msgid "Left-handed mode"
 msgstr "Ezkerti modua"
 
-#: ui/main.qml:119
-#, kde-format
-msgid "Swap left and right buttons."
-msgstr "Trukatu ezker eta eskuin botoiak"
-
-#: ui/main.qml:126
+#: ui/main.qml:118
 #, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "Sakatu ezker eta eskuin botoiak erdiko-klik eragiteko"
 
-#: ui/main.qml:138
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Pressing the left and right button simultaneously acts as middle-click."
-msgstr ""
-"Ezker eta eskuin botoiak aldi berean sakatzea erdiko klik gisa jokatzen du."
-
-#: ui/main.qml:142
+#: ui/main.qml:130
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -192,17 +175,17 @@ msgstr ""
 "gehigarria beharrezkoa da ezker eta eskuin botoien aldi bereko sakatzea "
 "antzemateko."
 
-#: ui/main.qml:154
+#: ui/main.qml:142
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Erakuslearen abiadura:"
 
-#: ui/main.qml:233
+#: ui/main.qml:221
 #, kde-format
 msgid "Enable pointer acceleration"
 msgstr "Gaitu erakuslearen azelerazioa"
 
-#: ui/main.qml:247
+#: ui/main.qml:235
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -211,51 +194,40 @@ msgstr ""
 "Gaituta dagoenean, erakuslearen desplazamendu-distantzia handitu egiten da "
 "mugimendu-abiadura azkarragoarekin."
 
-#: ui/main.qml:257
+#: ui/main.qml:245
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Kiribiltze abiadura:"
 
-#: ui/main.qml:307
+#: ui/main.qml:295
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Mantsoago"
 
-#: ui/main.qml:316
+#: ui/main.qml:304
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Bizkorrago"
 
-#: ui/main.qml:324
+#: ui/main.qml:312
 #, kde-format
 msgid "Scrolling:"
 msgstr "Kiribiltzea:"
 
-#: ui/main.qml:325
+#: ui/main.qml:313
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Alderantzizko kiribiltze-noranzkoa"
 
-#: ui/main.qml:337
-#, kde-format
-msgid "Touchscreen-like scrolling."
-msgstr "Ukimen-pantailakoa bezalako kiribiltzea."
-
-#: ui/main.qml:346
+#: ui/main.qml:330
 #, fuzzy, kde-format
 #| msgid "Press middle button and move mouse to scroll"
 msgid "Hold down middle button and move mouse to scroll"
 msgstr "Sakatu erdiko botoia eta mugitu sagua kiribiltzeko"
 
-#: ui/main.qml:358
-#, kde-format
-msgid "Scrolling with the mouse while the middle button is pressed."
-msgstr ""
-"Saguaren erdiko botoia sakatuta dagoen bitartean saguarekin kiribiltzea."
-
-#: ui/main.qml:362
+#: ui/main.qml:342
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -264,6 +236,26 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+
+#~ msgid "Accept input through this device."
+#~ msgstr "Onartu sarrera gailu honen bidez."
+
+#~ msgid "Swap left and right buttons."
+#~ msgstr "Trukatu ezker eta eskuin botoiak"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Pressing the left and right button simultaneously acts as middle-click."
+#~ msgstr ""
+#~ "Ezker eta eskuin botoiak aldi berean sakatzea erdiko klik gisa jokatzen "
+#~ "du."
+
+#~ msgid "Touchscreen-like scrolling."
+#~ msgstr "Ukimen-pantailakoa bezalako kiribiltzea."
+
+#~ msgid "Scrolling with the mouse while the middle button is pressed."
+#~ msgstr ""
+#~ "Saguaren erdiko botoia sakatuta dagoen bitartean saguarekin kiribiltzea."
 
 #~ msgid "None"
 #~ msgstr "Bat ere ez"

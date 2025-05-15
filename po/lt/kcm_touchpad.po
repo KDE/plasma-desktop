@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-29 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2025-02-02 23:37+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -133,46 +133,29 @@ msgstr "Bendri:"
 msgid "Device enabled"
 msgstr "Įrenginys įjungtas"
 
-#: ui/main.qml:107
-#, kde-format
-msgid "Accept input through this device."
-msgstr "Priimti įvestį per šį įrenginį."
-
-#: ui/main.qml:122
+#: ui/main.qml:115
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable while mouse is connected"
 msgstr "Išjungti, kol yra prijungta pelė"
 
-#: ui/main.qml:144
+#: ui/main.qml:137
 #, kde-format
 msgid "Disable while typing"
 msgstr "Išjungti renkant tekstą"
 
-#: ui/main.qml:155
-#, kde-format
-msgid "Disable touchpad while typing to prevent accidental inputs."
-msgstr ""
-"Išjungti jutiklinį kilimėlį, kol yra renkamas tekstas, siekiant neleisti "
-"atsitiktinių įvesčių."
-
-#: ui/main.qml:174
+#: ui/main.qml:160
 #, kde-format
 msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
 msgid "This can interfere with video games."
 msgstr "Tai gali trukdyti video žaidimams."
 
-#: ui/main.qml:184
+#: ui/main.qml:170
 #, kde-format
 msgid "Left-handed mode"
 msgstr "Kairės rankos veiksena"
 
-#: ui/main.qml:190
-#, kde-format
-msgid "Swap left and right buttons."
-msgstr "Apkeisti kairįjį ir dešinįjį mygtuką vietomis."
-
-#: ui/main.qml:207
+#: ui/main.qml:186
 #, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons to middle-click"
@@ -180,15 +163,7 @@ msgstr ""
 "Viduriniojo mygtuko spustelėjimo inicijavimui paspausti dešinįjį ir kairįjį "
 "mygtukus kartu"
 
-#: ui/main.qml:213
-#, kde-format
-msgctxt "@info:tooltip for checkbox"
-msgid "Pressing the left and right button simultaneously acts as middle-click."
-msgstr ""
-"Kairiojo ir dešiniojo mygtukų paspaudimas vienu metu veikia kaip viduriniojo "
-"mygtuko spustelėjimas."
-
-#: ui/main.qml:227
+#: ui/main.qml:199
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -199,17 +174,17 @@ msgstr ""
 "delsa yra reikalinga, kad būtų teisingai aptinkami vienalaikiai kairiojo ir "
 "dešiniojo mygtuko spustelėjimai."
 
-#: ui/main.qml:237
+#: ui/main.qml:209
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Rodyklės greitis:"
 
-#: ui/main.qml:317
+#: ui/main.qml:289
 #, kde-format
 msgid "Enable pointer acceleration"
 msgstr "Įjungti rodyklės pagreitį"
 
-#: ui/main.qml:332
+#: ui/main.qml:304
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -218,164 +193,108 @@ msgstr ""
 "Kai įjungta, kuo greičiau judinama pelė, tuo labiau padidėja rodyklės "
 "nukeliautas atstumas."
 
-#: ui/main.qml:342
+#: ui/main.qml:314
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Slinkimo greitis:"
 
-#: ui/main.qml:393
+#: ui/main.qml:365
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Lėtesnis"
 
-#: ui/main.qml:400
+#: ui/main.qml:372
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Greitesnis"
 
-#: ui/main.qml:408
+#: ui/main.qml:380
 #, kde-format
 msgid "Scrolling:"
 msgstr "Slinkimas:"
 
-#: ui/main.qml:427
+#: ui/main.qml:399
 #, kde-format
 msgid "Two fingers"
 msgstr "Du pirštai"
 
-#: ui/main.qml:433
-#, kde-format
-msgid "Slide with two fingers scrolls."
-msgstr "Slinkti naudojant slinkimą dviem pirštais."
-
-#: ui/main.qml:441
+#: ui/main.qml:406
 #, kde-format
 msgid "Touchpad edges"
 msgstr "Jutiklinio kilimėlio kraštai"
 
-#: ui/main.qml:447
-#, kde-format
-msgid "Slide on the touchpad edges scrolls."
-msgstr "Slinkti slenkant jutiklinio kilimėlio kraštuose."
-
-#: ui/main.qml:456
+#: ui/main.qml:414
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Invertuoti slinkties kryptį (Natūralus slinkimas)"
 
-#: ui/main.qml:469
-#, kde-format
-msgid "Touchscreen like scrolling."
-msgstr "Jutiklinio ekrano tipo slinkimas."
-
-#: ui/main.qml:477
+#: ui/main.qml:428
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "Išjungti horizontalųjį slinkimą"
 
-#: ui/main.qml:491
-#, kde-format
-msgid "Disable horizontal scrolling."
-msgstr "Išjungti horizontalųjį slinkimą."
-
-#: ui/main.qml:504
+#: ui/main.qml:448
 #, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Bakstelėjimas:"
 
-#: ui/main.qml:505
+#: ui/main.qml:449
 #, kde-format
 msgctxt "@option:check"
 msgid "Tap-to-click"
 msgstr "Bakstelėti norint spustelėti"
 
-#: ui/main.qml:511
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Single tap to left-click."
-msgstr ""
-"Bakstelėti vieną kartą, kad būtų inicijuotas kairiojo mygtuko spustelėjimas."
-
-#: ui/main.qml:526
+#: ui/main.qml:465
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "Bakstelėti ir tempti"
 
-#: ui/main.qml:532
+#: ui/main.qml:478
 #, kde-format
-msgid "Sliding over touchpad directly after tap drags."
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"Tap, then tap and immediately slide finger over the touchpad to drag. Lift "
+"finger to drop."
 msgstr ""
-"Braukiant per jutiklinį kilimėlį po bakstelėjimo, bus atliekamas tempimas."
 
-#: ui/main.qml:547
+#: ui/main.qml:485
 #, kde-format
-msgid "Tap-and-drag lock"
-msgstr "Bakstelėjimo ir tempimo užraktas"
+msgid "Allow briefly lifting finger during tap-and-drag"
+msgstr ""
 
-#: ui/main.qml:553
-#, kde-format
-msgid "Dragging continues after a short finger lift."
-msgstr "Po trumpo piršto pakėlimo, tempimas bus tęsiamas."
-
-#: ui/main.qml:568
+#: ui/main.qml:499
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "Bakstelėjimas dviem pirštais:"
 
-#: ui/main.qml:588
+#: ui/main.qml:519
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr ""
 "Dešinysis spustelėjimas (viduriniajam spustelėjimui bakstelėti trimis "
 "pirštais)"
 
-#: ui/main.qml:589
+#: ui/main.qml:520
 #, kde-format
 msgid "Right-click"
 msgstr "Dešinysis spustelėjimas"
 
-#: ui/main.qml:599
-#, kde-format
-msgid ""
-"Tap with two fingers to right-click, tap with three fingers to middle-click."
-msgstr ""
-"Dešiniajam spustelėjimui bakstelėti dviem pirštais, viduriniajam "
-"spustelėjimui bakstelėti trimis pirštais."
-
-#: ui/main.qml:600
-#, kde-format
-msgid "Tap with two fingers to right-click."
-msgstr "Dešiniajam spustelėjimui bakstelėti dviem pirštais."
-
-#: ui/main.qml:608
+#: ui/main.qml:528
 #, kde-format
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr ""
 "Vidurinysis spustelėjimas (dešiniajam spustelėjimui bakstelėti trimis "
 "pirštais)"
 
-#: ui/main.qml:609
+#: ui/main.qml:529
 #, kde-format
 msgid "Middle-click"
 msgstr "Vidurinysis spustelėjimas"
 
-#: ui/main.qml:619
-#, kde-format
-msgid ""
-"Tap with two fingers to middle-click, tap with three fingers to right-click."
-msgstr ""
-"Viduriniajam spustelėjimui bakstelėti dviem pirštais, dešiniajam "
-"spustelėjimui bakstelėti trimis pirštais."
-
-#: ui/main.qml:620
-#, kde-format
-msgid "Tap with two fingers to middle-click."
-msgstr "Viduriniam spustelėjimui bakstelėti dviem pirštais."
-
-#: ui/main.qml:632
+#: ui/main.qml:541
 #, kde-format
 msgctxt ""
 "@label for radiobutton group, configure right-click with touch-pad "
@@ -383,37 +302,13 @@ msgctxt ""
 msgid "Integrated right-click:"
 msgstr "Integruotas dešiniojo mygtuko spustelėjimas:"
 
-#: ui/main.qml:653
+#: ui/main.qml:562
 #, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
 msgstr "Paspausti apatinį dešinįjį kampą"
 
-#: ui/main.qml:661
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Pressing the bottom right corner of your touchpad acts as right-click. "
-"Middle-click by simultaneously pressing the bottom left and bottom right "
-"corners."
-msgstr ""
-"Apatinio dešiniojo jutiklinio kilimėlio kampo paspaudimas bus laikomas "
-"dešiniojo mygtuko spustelėjimu. Inicijuokite viduriniojo mygtuko "
-"spustelėjimą paspausdami vienu metu apatinį kairįjį ir apatinį dešinįjį "
-"kampą."
-
-#: ui/main.qml:662
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Pressing the bottom right corner of your touchpad acts as right-click. "
-"Middle-click by pressing the bottom central area."
-msgstr ""
-"Apatinio dešiniojo jutiklinio kilimėlio kampo paspaudimas bus laikomas "
-"dešiniojo mygtuko spustelėjimu. Inicijuokite viduriniojo mygtuko "
-"spustelėjimą paspausdami apatinę sritį per vidurį."
-
-#: ui/main.qml:677
+#: ui/main.qml:577
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
@@ -421,35 +316,27 @@ msgstr ""
 "Inicijuoti viduriniojo mygtuko spustelėjimą paspaudžiant abu apatinius "
 "kampus."
 
-#: ui/main.qml:678
+#: ui/main.qml:578
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr ""
 "Inicijuoti viduriniojo mygtuko spustelėjimą paspaudžiant apačioje per vidurį."
 
-#: ui/main.qml:696
+#: ui/main.qml:586
 #, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press touchpad with two fingers"
 msgstr "Paspausti jutiklinį kilimėlį dviem pirštais"
 
-#: ui/main.qml:704
-#, kde-format
-msgctxt "@info:tooltip for radiobutton"
-msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
-msgstr ""
-"Paspaudimas dviem pirštais bet kurioje jutiklinio kilimėlio vietoje bus "
-"laikomas dešiniojo mygtuko spustelėjimu."
-
-#: ui/main.qml:718
+#: ui/main.qml:601
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
 msgstr ""
 "Inicijuoti viduriniojo mygtuko spustelėjimą paspaudžiant trimis pirštais."
 
-#: ui/main.qml:737
+#: ui/main.qml:610
 #, kde-format
 msgctxt ""
 "@label for radiobutton group, configure middle-click with touch-pad "
@@ -457,49 +344,137 @@ msgctxt ""
 msgid "Integrated middle-click:"
 msgstr "Integruotas viduriniojo mygtuko spustelėjimas:"
 
-#: ui/main.qml:758
+#: ui/main.qml:631
 #, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom middle edge"
 msgstr "Paspausti apatinį kraštą per vidurį"
 
-#: ui/main.qml:764
-#, kde-format
-msgctxt "@info:tooltip for radiobutton"
-msgid "Pressing the bottom right corner of your touchpad acts as right-click."
-msgstr ""
-"Paspaudimas apatiniame dešiniajame jutiklinio kilimėlio kampe bus laikomas "
-"dešiniojo mygtuko spustelėjimu."
-
-#: ui/main.qml:772
+#: ui/main.qml:638
 #, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom left and bottom right corners"
 msgstr "Paspausti apatinį kairįjį ir apatinį dešinįjį kampą"
 
-#: ui/main.qml:778
-#, kde-format
-msgctxt "@info:tooltip for radiobutton"
-msgid ""
-"Pressing the bottom left and bottom right corners simultaneously acts as "
-"middle-click."
-msgstr ""
-"Apatinio kairiojo ir apatinio dešiniojo kampo paspaudimas bus laikomas "
-"viduriniojo mygtuko spustelėjimu."
-
-#: ui/main.qml:786
+#: ui/main.qml:645
 #, kde-format
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
 msgstr "Paspausti jutiklinį kilimėlį trimis pirštais"
 
-#: ui/main.qml:793
-#, kde-format
-msgctxt "@info:tooltip for radiobutton"
-msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
-msgstr ""
-"Paspaudimas trimis pirštais bet kurioje jutiklinio kilimėlio vietoje bus "
-"laikomas viduriniojo mygtuko spustelėjimu."
+#~ msgid "Accept input through this device."
+#~ msgstr "Priimti įvestį per šį įrenginį."
+
+#~ msgid "Disable touchpad while typing to prevent accidental inputs."
+#~ msgstr ""
+#~ "Išjungti jutiklinį kilimėlį, kol yra renkamas tekstas, siekiant neleisti "
+#~ "atsitiktinių įvesčių."
+
+#~ msgid "Swap left and right buttons."
+#~ msgstr "Apkeisti kairįjį ir dešinįjį mygtuką vietomis."
+
+#~ msgctxt "@info:tooltip for checkbox"
+#~ msgid ""
+#~ "Pressing the left and right button simultaneously acts as middle-click."
+#~ msgstr ""
+#~ "Kairiojo ir dešiniojo mygtukų paspaudimas vienu metu veikia kaip "
+#~ "viduriniojo mygtuko spustelėjimas."
+
+#~ msgid "Slide with two fingers scrolls."
+#~ msgstr "Slinkti naudojant slinkimą dviem pirštais."
+
+#~ msgid "Slide on the touchpad edges scrolls."
+#~ msgstr "Slinkti slenkant jutiklinio kilimėlio kraštuose."
+
+#~ msgid "Touchscreen like scrolling."
+#~ msgstr "Jutiklinio ekrano tipo slinkimas."
+
+#~ msgid "Disable horizontal scrolling."
+#~ msgstr "Išjungti horizontalųjį slinkimą."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Single tap to left-click."
+#~ msgstr ""
+#~ "Bakstelėti vieną kartą, kad būtų inicijuotas kairiojo mygtuko "
+#~ "spustelėjimas."
+
+#~ msgid "Sliding over touchpad directly after tap drags."
+#~ msgstr ""
+#~ "Braukiant per jutiklinį kilimėlį po bakstelėjimo, bus atliekamas tempimas."
+
+#~ msgid "Tap-and-drag lock"
+#~ msgstr "Bakstelėjimo ir tempimo užraktas"
+
+#~ msgid "Dragging continues after a short finger lift."
+#~ msgstr "Po trumpo piršto pakėlimo, tempimas bus tęsiamas."
+
+#~ msgid ""
+#~ "Tap with two fingers to right-click, tap with three fingers to middle-"
+#~ "click."
+#~ msgstr ""
+#~ "Dešiniajam spustelėjimui bakstelėti dviem pirštais, viduriniajam "
+#~ "spustelėjimui bakstelėti trimis pirštais."
+
+#~ msgid "Tap with two fingers to right-click."
+#~ msgstr "Dešiniajam spustelėjimui bakstelėti dviem pirštais."
+
+#~ msgid ""
+#~ "Tap with two fingers to middle-click, tap with three fingers to right-"
+#~ "click."
+#~ msgstr ""
+#~ "Viduriniajam spustelėjimui bakstelėti dviem pirštais, dešiniajam "
+#~ "spustelėjimui bakstelėti trimis pirštais."
+
+#~ msgid "Tap with two fingers to middle-click."
+#~ msgstr "Viduriniam spustelėjimui bakstelėti dviem pirštais."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Pressing the bottom right corner of your touchpad acts as right-click. "
+#~ "Middle-click by simultaneously pressing the bottom left and bottom right "
+#~ "corners."
+#~ msgstr ""
+#~ "Apatinio dešiniojo jutiklinio kilimėlio kampo paspaudimas bus laikomas "
+#~ "dešiniojo mygtuko spustelėjimu. Inicijuokite viduriniojo mygtuko "
+#~ "spustelėjimą paspausdami vienu metu apatinį kairįjį ir apatinį dešinįjį "
+#~ "kampą."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Pressing the bottom right corner of your touchpad acts as right-click. "
+#~ "Middle-click by pressing the bottom central area."
+#~ msgstr ""
+#~ "Apatinio dešiniojo jutiklinio kilimėlio kampo paspaudimas bus laikomas "
+#~ "dešiniojo mygtuko spustelėjimu. Inicijuokite viduriniojo mygtuko "
+#~ "spustelėjimą paspausdami apatinę sritį per vidurį."
+
+#~ msgctxt "@info:tooltip for radiobutton"
+#~ msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
+#~ msgstr ""
+#~ "Paspaudimas dviem pirštais bet kurioje jutiklinio kilimėlio vietoje bus "
+#~ "laikomas dešiniojo mygtuko spustelėjimu."
+
+#~ msgctxt "@info:tooltip for radiobutton"
+#~ msgid ""
+#~ "Pressing the bottom right corner of your touchpad acts as right-click."
+#~ msgstr ""
+#~ "Paspaudimas apatiniame dešiniajame jutiklinio kilimėlio kampe bus "
+#~ "laikomas dešiniojo mygtuko spustelėjimu."
+
+#~ msgctxt "@info:tooltip for radiobutton"
+#~ msgid ""
+#~ "Pressing the bottom left and bottom right corners simultaneously acts as "
+#~ "middle-click."
+#~ msgstr ""
+#~ "Apatinio kairiojo ir apatinio dešiniojo kampo paspaudimas bus laikomas "
+#~ "viduriniojo mygtuko spustelėjimu."
+
+#~ msgctxt "@info:tooltip for radiobutton"
+#~ msgid ""
+#~ "Pressing the touchpad anywhere with three fingers acts as middle-click."
+#~ msgstr ""
+#~ "Paspaudimas trimis pirštais bet kurioje jutiklinio kilimėlio vietoje bus "
+#~ "laikomas viduriniojo mygtuko spustelėjimu."
 
 #~ msgid "Touchpad"
 #~ msgstr "Jutiklinis kilimėlis"

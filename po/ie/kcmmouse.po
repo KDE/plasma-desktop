@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-14 00:45+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2022-11-10 00:39+0700\n"
 "Last-Translator: OIS <mistresssilvara@hotmail.com>\n"
 "Language-Team: Interlingue <kde-i18n-doc@kde.org>\n"
@@ -143,35 +143,19 @@ msgstr "General:"
 msgid "Device enabled"
 msgstr "Aparate es activ"
 
-#: ui/main.qml:101
-#, fuzzy, kde-format
-msgid "Accept input through this device."
-msgstr "Sele_cte un aparate por li intrada de son:"
-
-#: ui/main.qml:107
+#: ui/main.qml:103
 #, fuzzy, kde-format
 #| msgid "Left handed mode"
 msgid "Left-handed mode"
 msgstr "Por levul manu"
 
-#: ui/main.qml:119
-#, fuzzy, kde-format
-msgid "Swap left and right buttons."
-msgstr "Dextri butones del panel de titul"
-
-#: ui/main.qml:126
+#: ui/main.qml:118
 #, fuzzy, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "Dextri butones del panel de titul"
 
-#: ui/main.qml:138
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Pressing the left and right button simultaneously acts as middle-click."
-msgstr ""
-
-#: ui/main.qml:142
+#: ui/main.qml:130
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -179,67 +163,57 @@ msgid ""
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
 
-#: ui/main.qml:154
+#: ui/main.qml:142
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Velocitá del apuntator:"
 
-#: ui/main.qml:233
+#: ui/main.qml:221
 #, fuzzy, kde-format
 #| msgid "Pointer acceleration:"
 msgid "Enable pointer acceleration"
 msgstr "Acceleration del apuntator:"
 
-#: ui/main.qml:247
+#: ui/main.qml:235
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
 
-#: ui/main.qml:257
+#: ui/main.qml:245
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Velocitá de rulament:"
 
-#: ui/main.qml:307
+#: ui/main.qml:295
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Plu lent"
 
-#: ui/main.qml:316
+#: ui/main.qml:304
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Plu rapid"
 
-#: ui/main.qml:324
+#: ui/main.qml:312
 #, kde-format
 msgid "Scrolling:"
 msgstr "Rulament:"
 
-#: ui/main.qml:325
+#: ui/main.qml:313
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Inverter li direction de rulament"
 
-#: ui/main.qml:337
-#, fuzzy, kde-format
-msgid "Touchscreen-like scrolling."
-msgstr "Rulament"
-
-#: ui/main.qml:346
+#: ui/main.qml:330
 #, kde-format
 msgid "Hold down middle button and move mouse to scroll"
 msgstr ""
 
-#: ui/main.qml:358
-#, kde-format
-msgid "Scrolling with the mouse while the middle button is pressed."
-msgstr ""
-
-#: ui/main.qml:362
+#: ui/main.qml:342
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -248,6 +222,18 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+
+#, fuzzy
+#~ msgid "Accept input through this device."
+#~ msgstr "Sele_cte un aparate por li intrada de son:"
+
+#, fuzzy
+#~ msgid "Swap left and right buttons."
+#~ msgstr "Dextri butones del panel de titul"
+
+#, fuzzy
+#~ msgid "Touchscreen-like scrolling."
+#~ msgstr "Rulament"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

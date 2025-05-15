@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-01 00:43+0000\n"
-"PO-Revision-Date: 2025-04-30 07:57+0200\n"
+"PO-Revision-Date: 2025-05-08 18:35+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -35,7 +35,7 @@ msgstr "Рестартиране"
 #, kde-format
 msgctxt "@title:group"
 msgid "Plasma"
-msgstr ""
+msgstr "Plasma"
 
 #: ui/main.qml:52
 #, kde-format
@@ -80,12 +80,10 @@ msgstr ""
 "аудио устройство."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling"
-msgstr "Превъртане:"
+msgstr "Превъртане"
 
 #: ui/main.qml:100
 #, kde-format
@@ -137,7 +135,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "Кликване"
 
 #: ui/main.qml:175
 #, kde-format
@@ -223,18 +221,14 @@ msgstr ""
 "вид, увеличете интервала на двойно щракване."
 
 #: ui/main.qml:354
-#, fuzzy, kde-format
-#| msgid "Drag and drop behavior:"
+#, kde-format
 msgid "Drag and Drop"
-msgstr "Поведение на влаченето с мишката:"
+msgstr "Завличане"
 
 #: ui/main.qml:361
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
-#| msgid "Clicking files or folders:"
+#, kde-format
 msgid "When dragging files or folders:"
-msgstr "Кликването на файлове или папки:"
+msgstr "При влачене на файлове или папки:"
 
 #: ui/main.qml:362
 #, kde-format
@@ -254,10 +248,9 @@ msgstr ""
 "символна връзка. В противен случай се показва диалогов прозорец."
 
 #: ui/main.qml:386
-#, fuzzy, kde-format
-#| msgid "Move files if on the same device"
+#, kde-format
 msgid "Move if on the same device"
-msgstr "Преместване на файловете, ако са на същото устройство"
+msgstr "Преместване, ако са на същото устройство"
 
 #: ui/main.qml:402
 #, kde-kuit-format
@@ -268,17 +261,15 @@ msgstr ""
 "опции."
 
 #: ui/main.qml:410
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Touch"
-msgstr "Таблетен режим:"
+msgstr "Докосване"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgid "Enable Touch Mode:"
-msgstr "Таблетен режим:"
+msgstr "Включване на режим докосване:"
 
 #: ui/main.qml:418
 #, kde-format
@@ -304,9 +295,7 @@ msgstr ""
 "трансформиращ се лаптоп е обърната или отделена."
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always enabled"
+#, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always active"
 msgstr "Винаги активиран"
@@ -315,7 +304,7 @@ msgstr "Винаги активиран"
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Disabled"
-msgstr ""
+msgstr "Деактивиран"
 
 #: ui/main.qml:486
 #, kde-format

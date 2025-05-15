@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-07 00:44+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2025-04-25 12:54+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -261,6 +261,7 @@ msgid "Power"
 msgstr "Energie"
 
 #: package/contents/ui/ConfigGeneral.qml:286
+#: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
 msgid "Session"
 msgstr "Sessie"
@@ -326,13 +327,14 @@ msgstr "Er is een nieuw geïnstalleerde toepassing in deze categorie"
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
-msgid "Leave"
-msgstr "Verlaten"
-
-#: package/contents/ui/LeaveButtons.qml:169
-#, kde-format
 msgid "More"
 msgstr "Meer"
+
+#: package/contents/ui/LeaveButtons.qml:169
+#, fuzzy, kde-format
+#| msgid "Session actions"
+msgid "Session and Power "
+msgstr "Sessie-acties"
 
 #: package/contents/ui/main.qml:355
 #, kde-format
@@ -357,6 +359,9 @@ msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Veel gebruikt"
 
+#~ msgid "Leave"
+#~ msgstr "Verlaten"
+
 #~ msgctxt "@item:inmenu Reset icon to default"
 #~ msgid "Clear Icon"
 #~ msgstr "Pictogram wissen"
@@ -369,9 +374,6 @@ msgstr "Veel gebruikt"
 
 #~ msgid "Power actions"
 #~ msgstr "Energie-acties"
-
-#~ msgid "Session actions"
-#~ msgstr "Sessie-acties"
 
 #~ msgid "Leave…"
 #~ msgstr "Verlaten…"

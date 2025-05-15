@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-07 00:44+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2025-03-25 07:27+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -262,6 +262,7 @@ msgid "Power"
 msgstr "Strøm"
 
 #: package/contents/ui/ConfigGeneral.qml:286
+#: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
 msgid "Session"
 msgstr "Økt"
@@ -328,13 +329,13 @@ msgstr ""
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
-msgid "Leave"
-msgstr "Avslutt"
+msgid "More"
+msgstr "Mer"
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
-msgid "More"
-msgstr "Mer"
+msgid "Session and Power "
+msgstr ""
 
 #: package/contents/ui/main.qml:355
 #, kde-format
@@ -358,3 +359,6 @@ msgstr "Historikk"
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Mest brukte"
+
+#~ msgid "Leave"
+#~ msgstr "Avslutt"

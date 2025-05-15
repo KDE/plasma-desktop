@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-14 00:45+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2024-06-26 14:09+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -158,23 +158,13 @@ msgstr "&Všeobecné:"
 msgid "Device enabled"
 msgstr "Zariadenie povolené"
 
-#: ui/main.qml:101
-#, kde-format
-msgid "Accept input through this device."
-msgstr "Prijímať vstup cez toto zariadenie."
-
-#: ui/main.qml:107
+#: ui/main.qml:103
 #, fuzzy, kde-format
 #| msgid "Left handed mode"
 msgid "Left-handed mode"
 msgstr "Pre ľavákov"
 
-#: ui/main.qml:119
-#, kde-format
-msgid "Swap left and right buttons."
-msgstr "Vymeniť ľavé a pravé tlačidlo."
-
-#: ui/main.qml:126
+#: ui/main.qml:118
 #, fuzzy, kde-format
 #| msgid "Press left and right buttons for middle-click"
 msgctxt "@option:check"
@@ -182,17 +172,7 @@ msgid "Press left and right buttons for middle-click"
 msgstr ""
 "Stlačením ľavého a pravého tlačidla vykonať kliknutie stredným tlačidlom"
 
-#: ui/main.qml:138
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
-msgctxt "@info:tooltip"
-msgid "Pressing the left and right button simultaneously acts as middle-click."
-msgstr ""
-"Stlačenie ľavého a pravého tlačidla myši naraz odošle stlačenie stredného "
-"tlačidla."
-
-#: ui/main.qml:142
+#: ui/main.qml:130
 #, fuzzy, kde-format
 #| msgid ""
 #| "Activating this setting increases mouse click latency by 50ms. The extra "
@@ -207,18 +187,18 @@ msgstr ""
 "Dodatočné oneskorenie je potrebné na správne rozpoznanie súčasných kliknutí "
 "ľavým a pravým tlačidlom myši."
 
-#: ui/main.qml:154
+#: ui/main.qml:142
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Rýchlosť ukazovateľa:"
 
-#: ui/main.qml:233
+#: ui/main.qml:221
 #, fuzzy, kde-format
 #| msgid "Pointer acceleration:"
 msgid "Enable pointer acceleration"
 msgstr "Zrýchlenie ukazovateľa:"
 
-#: ui/main.qml:247
+#: ui/main.qml:235
 #, fuzzy, kde-format
 #| msgid "Cursor travel distance depends on the mouse movement speed."
 msgctxt "@info:tooltip from ContextualHelpButton"
@@ -226,50 +206,39 @@ msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr "Vzdialenosť o akú sa kurzor presunie závisí od rýchlosti pohybu myši."
 
-#: ui/main.qml:257
+#: ui/main.qml:245
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Rýchlosť rolovania:"
 
-#: ui/main.qml:307
+#: ui/main.qml:295
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Pomalšie"
 
-#: ui/main.qml:316
+#: ui/main.qml:304
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Rýchlejšie"
 
-#: ui/main.qml:324
+#: ui/main.qml:312
 #, kde-format
 msgid "Scrolling:"
 msgstr "Rolovanie:"
 
-#: ui/main.qml:325
+#: ui/main.qml:313
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Obrátiť smer rolovania"
 
-#: ui/main.qml:337
-#, fuzzy, kde-format
-#| msgid "Touchscreen like scrolling."
-msgid "Touchscreen-like scrolling."
-msgstr "Rolovanie ako na dotykovej obrazovke."
-
-#: ui/main.qml:346
+#: ui/main.qml:330
 #, kde-format
 msgid "Hold down middle button and move mouse to scroll"
 msgstr ""
 
-#: ui/main.qml:358
-#, kde-format
-msgid "Scrolling with the mouse while the middle button is pressed."
-msgstr ""
-
-#: ui/main.qml:362
+#: ui/main.qml:342
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -278,6 +247,27 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+
+#~ msgid "Accept input through this device."
+#~ msgstr "Prijímať vstup cez toto zariadenie."
+
+#~ msgid "Swap left and right buttons."
+#~ msgstr "Vymeniť ľavé a pravé tlačidlo."
+
+#, fuzzy
+#~| msgid ""
+#~| "Clicking left and right button simultaneously sends middle button click."
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Pressing the left and right button simultaneously acts as middle-click."
+#~ msgstr ""
+#~ "Stlačenie ľavého a pravého tlačidla myši naraz odošle stlačenie stredného "
+#~ "tlačidla."
+
+#, fuzzy
+#~| msgid "Touchscreen like scrolling."
+#~ msgid "Touchscreen-like scrolling."
+#~ msgstr "Rolovanie ako na dotykovej obrazovke."
 
 #~ msgid "None"
 #~ msgstr "Žiadne"

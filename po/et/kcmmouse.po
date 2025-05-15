@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-14 00:45+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2020-04-10 19:47+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -151,39 +151,20 @@ msgstr "Üldine:"
 msgid "Device enabled"
 msgstr "Seadme lubamine"
 
-#: ui/main.qml:101
-#, kde-format
-msgid "Accept input through this device."
-msgstr "Sisendi lubamine selle seadme abil."
-
-#: ui/main.qml:107
+#: ui/main.qml:103
 #, fuzzy, kde-format
 #| msgid "Left handed mode"
 msgid "Left-handed mode"
 msgstr "Vasaku käe režiim"
 
-#: ui/main.qml:119
-#, kde-format
-msgid "Swap left and right buttons."
-msgstr "Vasaku ja parema nupu vahetamine."
-
-#: ui/main.qml:126
+#: ui/main.qml:118
 #, fuzzy, kde-format
 #| msgid "Press left and right buttons for middle-click"
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "Vasaku ja parema nupu klõps asendab keskmise nupu klõpsu"
 
-#: ui/main.qml:138
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
-msgctxt "@info:tooltip"
-msgid "Pressing the left and right button simultaneously acts as middle-click."
-msgstr ""
-"Korraga vasakule ja paremale nupule vajutamine võrdub keskmise nupu klõpsuga."
-
-#: ui/main.qml:142
+#: ui/main.qml:130
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -191,18 +172,18 @@ msgid ""
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
 
-#: ui/main.qml:154
+#: ui/main.qml:142
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Osutusseadme kiirus:"
 
-#: ui/main.qml:233
+#: ui/main.qml:221
 #, fuzzy, kde-format
 #| msgid "Pointer acceleration:"
 msgid "Enable pointer acceleration"
 msgstr "Kursori kiirendus:"
 
-#: ui/main.qml:247
+#: ui/main.qml:235
 #, fuzzy, kde-format
 #| msgid "Cursor travel distance depends on the mouse movement speed."
 msgctxt "@info:tooltip from ContextualHelpButton"
@@ -210,50 +191,39 @@ msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr "Kursori liikumiskaugus sõltub hiire liigutamise kiirusest."
 
-#: ui/main.qml:257
+#: ui/main.qml:245
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Kerimiskiirus:"
 
-#: ui/main.qml:307
+#: ui/main.qml:295
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Aeglasem"
 
-#: ui/main.qml:316
+#: ui/main.qml:304
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Kiirem"
 
-#: ui/main.qml:324
+#: ui/main.qml:312
 #, kde-format
 msgid "Scrolling:"
 msgstr "Kerimine:"
 
-#: ui/main.qml:325
+#: ui/main.qml:313
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Teistpidi kerimissuund"
 
-#: ui/main.qml:337
-#, fuzzy, kde-format
-#| msgid "Touchscreen like scrolling."
-msgid "Touchscreen-like scrolling."
-msgstr "Nagu puuteekraanil kerimine."
-
-#: ui/main.qml:346
+#: ui/main.qml:330
 #, kde-format
 msgid "Hold down middle button and move mouse to scroll"
 msgstr ""
 
-#: ui/main.qml:358
-#, kde-format
-msgid "Scrolling with the mouse while the middle button is pressed."
-msgstr ""
-
-#: ui/main.qml:362
+#: ui/main.qml:342
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -262,6 +232,27 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+
+#~ msgid "Accept input through this device."
+#~ msgstr "Sisendi lubamine selle seadme abil."
+
+#~ msgid "Swap left and right buttons."
+#~ msgstr "Vasaku ja parema nupu vahetamine."
+
+#, fuzzy
+#~| msgid ""
+#~| "Clicking left and right button simultaneously sends middle button click."
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Pressing the left and right button simultaneously acts as middle-click."
+#~ msgstr ""
+#~ "Korraga vasakule ja paremale nupule vajutamine võrdub keskmise nupu "
+#~ "klõpsuga."
+
+#, fuzzy
+#~| msgid "Touchscreen like scrolling."
+#~ msgid "Touchscreen-like scrolling."
+#~ msgstr "Nagu puuteekraanil kerimine."
 
 #~ msgid "Cursor moves the same distance as the mouse movement."
 #~ msgstr "Kursor liigub sama palju nagu hiir."

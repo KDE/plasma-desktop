@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-29 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2025-02-18 18:34+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -127,58 +127,35 @@ msgstr "Vispārīgi:"
 msgid "Device enabled"
 msgstr "Ierīce ir ieslēgta"
 
-#: ui/main.qml:107
-#, kde-format
-msgid "Accept input through this device."
-msgstr "Pieņemt ievadi no šīs ierīces."
-
-#: ui/main.qml:122
+#: ui/main.qml:115
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable while mouse is connected"
 msgstr "Izslēgt, kad ir pievienota pele"
 
-#: ui/main.qml:144
+#: ui/main.qml:137
 #, kde-format
 msgid "Disable while typing"
 msgstr "Izslēgt rakstīšanas laikā"
 
-#: ui/main.qml:155
-#, kde-format
-msgid "Disable touchpad while typing to prevent accidental inputs."
-msgstr ""
-"Izslēgt skārienpaliktni rakstīšanas laikā, lai novērstu nejaušu ievadi."
-
-#: ui/main.qml:174
+#: ui/main.qml:160
 #, kde-format
 msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
 msgid "This can interfere with video games."
 msgstr "Šis iestatījums var traucēt videospēlēs."
 
-#: ui/main.qml:184
+#: ui/main.qml:170
 #, kde-format
 msgid "Left-handed mode"
 msgstr "Kreisās rokas režīms"
 
-#: ui/main.qml:190
-#, kde-format
-msgid "Swap left and right buttons."
-msgstr "Samaina vietā labo un kreiso taustiņu."
-
-#: ui/main.qml:207
+#: ui/main.qml:186
 #, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons to middle-click"
 msgstr "Spiest kopā kreiso un labo taustiņu kā peles vidējo pogu"
 
-#: ui/main.qml:213
-#, kde-format
-msgctxt "@info:tooltip for checkbox"
-msgid "Pressing the left and right button simultaneously acts as middle-click."
-msgstr ""
-"Kreisā un labā taustiņa nospiešana reizē nosūta peles vidējā klikšķa signālu."
-
-#: ui/main.qml:227
+#: ui/main.qml:199
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -189,17 +166,17 @@ msgstr ""
 "ir nepieciešama, lai korekti noteiktu reizē nospiestu kreiso un labo "
 "taustiņu."
 
-#: ui/main.qml:237
+#: ui/main.qml:209
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Rādītāja ātrums:"
 
-#: ui/main.qml:317
+#: ui/main.qml:289
 #, kde-format
 msgid "Enable pointer acceleration"
 msgstr "Ieslēgt rādītāja paātrinājumu"
 
-#: ui/main.qml:332
+#: ui/main.qml:304
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -208,161 +185,105 @@ msgstr ""
 "Kad ieslēgts, attālums, kādā pārvietojas rādītājs, ir atkarīgs arī no "
 "kustības ātruma."
 
-#: ui/main.qml:342
+#: ui/main.qml:314
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Ritināšanas ātrums:"
 
-#: ui/main.qml:393
+#: ui/main.qml:365
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Lēnāks"
 
-#: ui/main.qml:400
+#: ui/main.qml:372
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Ātrāks"
 
-#: ui/main.qml:408
+#: ui/main.qml:380
 #, kde-format
 msgid "Scrolling:"
 msgstr "Ritināšana:"
 
-#: ui/main.qml:427
+#: ui/main.qml:399
 #, kde-format
 msgid "Two fingers"
 msgstr "Divu pirkstu"
 
-#: ui/main.qml:433
-#, kde-format
-msgid "Slide with two fingers scrolls."
-msgstr "Ritināt ar diviem pirkstiem."
-
-#: ui/main.qml:441
+#: ui/main.qml:406
 #, kde-format
 msgid "Touchpad edges"
 msgstr "Skārienpaliktņa malas"
 
-#: ui/main.qml:447
-#, kde-format
-msgid "Slide on the touchpad edges scrolls."
-msgstr "Ritināt, velkot gar skārienpaliktņa malām."
-
-#: ui/main.qml:456
+#: ui/main.qml:414
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Apgriezt ritināšanas virzienu (dabiskā ritināšana)"
 
-#: ui/main.qml:469
-#, kde-format
-msgid "Touchscreen like scrolling."
-msgstr "Ritināšana līdzīgi skārienekrānam."
-
-#: ui/main.qml:477
+#: ui/main.qml:428
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "Izslēgt horizontālo ritināšanu"
 
-#: ui/main.qml:491
-#, kde-format
-msgid "Disable horizontal scrolling."
-msgstr "Izslēgt horizontālo ritināšanu."
-
-#: ui/main.qml:504
+#: ui/main.qml:448
 #, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Pieskaršanās:"
 
-#: ui/main.qml:505
+#: ui/main.qml:449
 #, kde-format
 msgctxt "@option:check"
 msgid "Tap-to-click"
 msgstr "Pieskāriens nozīmē klikšķi"
 
-#: ui/main.qml:511
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Single tap to left-click."
-msgstr "Viens pieskāriens nozīmē kreisās pogas spiedienu."
-
-#: ui/main.qml:526
+#: ui/main.qml:465
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "Pieskarties un vilkt"
 
-#: ui/main.qml:532
+#: ui/main.qml:478
 #, kde-format
-msgid "Sliding over touchpad directly after tap drags."
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"Tap, then tap and immediately slide finger over the touchpad to drag. Lift "
+"finger to drop."
 msgstr ""
-"Pirksta vilkšana pāri skārienpaliktnim pēc pieskāriena uzsāk vilkšanas "
-"darbību."
 
-#: ui/main.qml:547
+#: ui/main.qml:485
 #, kde-format
-msgid "Tap-and-drag lock"
-msgstr "Pieskāriena un vilkšanas fiksēšana"
+msgid "Allow briefly lifting finger during tap-and-drag"
+msgstr ""
 
-#: ui/main.qml:553
-#, kde-format
-msgid "Dragging continues after a short finger lift."
-msgstr "Vilkšana turpinās arī pēc pirksta īsas pacelšanas."
-
-#: ui/main.qml:568
+#: ui/main.qml:499
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "Divu pirkstu pieskāriens:"
 
-#: ui/main.qml:588
+#: ui/main.qml:519
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr ""
 "Labais klikšķis (pieskāriens ar trim pirkstiem kā vidējā taustiņa nospiešana)"
 
-#: ui/main.qml:589
+#: ui/main.qml:520
 #, kde-format
 msgid "Right-click"
 msgstr "Labais klikšķis"
 
-#: ui/main.qml:599
-#, kde-format
-msgid ""
-"Tap with two fingers to right-click, tap with three fingers to middle-click."
-msgstr ""
-"Pieskāriens a diviem pirkstiem atdarina peles kreisā taustiņa klikšķi, ar "
-"trīs — vidējā."
-
-#: ui/main.qml:600
-#, kde-format
-msgid "Tap with two fingers to right-click."
-msgstr "Pieskāriens ar diviem pirkstiem nozīmē peles labās pogas nospiešanu."
-
-#: ui/main.qml:608
+#: ui/main.qml:528
 #, kde-format
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "Vidējais klikšķis (trīs pirkstu pieskāriens ir labais taustiņš)"
 
-#: ui/main.qml:609
+#: ui/main.qml:529
 #, kde-format
 msgid "Middle-click"
 msgstr "Vidējais klikšķis"
 
-#: ui/main.qml:619
-#, kde-format
-msgid ""
-"Tap with two fingers to middle-click, tap with three fingers to right-click."
-msgstr ""
-"Pieskāriens ar diviem pirkstiem atdarina peles vidējā taustiņa nospiešanu, "
-"bet pieskāriens ar trim pirkstiem kā peles labās pogas klikšķis."
-
-#: ui/main.qml:620
-#, kde-format
-msgid "Tap with two fingers to middle-click."
-msgstr "Pieskāriens ar diviem pirkstiem nozīmē peles vidējās pogas nospiešanu"
-
-#: ui/main.qml:632
+#: ui/main.qml:541
 #, kde-format
 msgctxt ""
 "@label for radiobutton group, configure right-click with touch-pad "
@@ -370,67 +291,37 @@ msgctxt ""
 msgid "Integrated right-click:"
 msgstr "Integrēts labais klikšķis:"
 
-#: ui/main.qml:653
+#: ui/main.qml:562
 #, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
 msgstr "Nospiešana apakšējā labajā stūrī"
 
-#: ui/main.qml:661
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Pressing the bottom right corner of your touchpad acts as right-click. "
-"Middle-click by simultaneously pressing the bottom left and bottom right "
-"corners."
-msgstr ""
-"Spiešana uz skārienpaliktņa apakšējā labā stūra uzvedas kā peles labās pogas "
-"nospiešana. Vidējo klikšķi var simulēt, nospiežot reizē apakšējo labo un "
-"kreiso stūri."
-
-#: ui/main.qml:662
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Pressing the bottom right corner of your touchpad acts as right-click. "
-"Middle-click by pressing the bottom central area."
-msgstr ""
-"Apakšējā labā stūra nospiešana skārienpaliktnī uzvedas kā peles labās pogas "
-"nospiešana. Vidējo peles klikšķi varat simulēt, nospiežot apakšā pa vidu."
-
-#: ui/main.qml:677
+#: ui/main.qml:577
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr "Vidējais klikšķis, nospiežot abus apakšējos stūrus"
 
-#: ui/main.qml:678
+#: ui/main.qml:578
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr "Vidējais klikšķis, nospiežot apakšā pa vidu"
 
-#: ui/main.qml:696
+#: ui/main.qml:586
 #, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press touchpad with two fingers"
 msgstr "Nospiest uz skārienpaliktņa ar diviem pirkstiem"
 
-#: ui/main.qml:704
-#, kde-format
-msgctxt "@info:tooltip for radiobutton"
-msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
-msgstr ""
-"Pieskāriens uz skārienpaliktņa ar diviem pirkstiem nozīmē peles labās pogas "
-"nospiešanu."
-
-#: ui/main.qml:718
+#: ui/main.qml:601
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
 msgstr "Vidējais klikšķis ar trīs pirkstu pieskārienu."
 
-#: ui/main.qml:737
+#: ui/main.qml:610
 #, kde-format
 msgctxt ""
 "@label for radiobutton group, configure middle-click with touch-pad "
@@ -438,47 +329,137 @@ msgctxt ""
 msgid "Integrated middle-click:"
 msgstr "Integrēts vidējais klikšķis:"
 
-#: ui/main.qml:758
+#: ui/main.qml:631
 #, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom middle edge"
 msgstr "Nospiešana apakšējai malai pa vidu"
 
-#: ui/main.qml:764
-#, kde-format
-msgctxt "@info:tooltip for radiobutton"
-msgid "Pressing the bottom right corner of your touchpad acts as right-click."
-msgstr ""
-"Skārienpaliktņa apakšējā labā stūra nospiešana darbojas kā labais klikšķis."
-
-#: ui/main.qml:772
+#: ui/main.qml:638
 #, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom left and bottom right corners"
 msgstr "Apakšējā kreisā un labā stūra nospiešana"
 
-#: ui/main.qml:778
-#, kde-format
-msgctxt "@info:tooltip for radiobutton"
-msgid ""
-"Pressing the bottom left and bottom right corners simultaneously acts as "
-"middle-click."
-msgstr ""
-"Apakšējā kreisā un labā stūra nospiešana reizē darbojas kā vidējais klikšķis."
-
-#: ui/main.qml:786
+#: ui/main.qml:645
 #, kde-format
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
 msgstr "Skārienpaliktņa nospiešana ar trim pirkstiem"
 
-#: ui/main.qml:793
-#, kde-format
-msgctxt "@info:tooltip for radiobutton"
-msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
-msgstr ""
-"Pieskaršanās skārienpaliktnim ar trim pirkstiem nozīmē peles vidējās pogas "
-"nospiešanu."
+#~ msgid "Accept input through this device."
+#~ msgstr "Pieņemt ievadi no šīs ierīces."
+
+#~ msgid "Disable touchpad while typing to prevent accidental inputs."
+#~ msgstr ""
+#~ "Izslēgt skārienpaliktni rakstīšanas laikā, lai novērstu nejaušu ievadi."
+
+#~ msgid "Swap left and right buttons."
+#~ msgstr "Samaina vietā labo un kreiso taustiņu."
+
+#~ msgctxt "@info:tooltip for checkbox"
+#~ msgid ""
+#~ "Pressing the left and right button simultaneously acts as middle-click."
+#~ msgstr ""
+#~ "Kreisā un labā taustiņa nospiešana reizē nosūta peles vidējā klikšķa "
+#~ "signālu."
+
+#~ msgid "Slide with two fingers scrolls."
+#~ msgstr "Ritināt ar diviem pirkstiem."
+
+#~ msgid "Slide on the touchpad edges scrolls."
+#~ msgstr "Ritināt, velkot gar skārienpaliktņa malām."
+
+#~ msgid "Touchscreen like scrolling."
+#~ msgstr "Ritināšana līdzīgi skārienekrānam."
+
+#~ msgid "Disable horizontal scrolling."
+#~ msgstr "Izslēgt horizontālo ritināšanu."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Single tap to left-click."
+#~ msgstr "Viens pieskāriens nozīmē kreisās pogas spiedienu."
+
+#~ msgid "Sliding over touchpad directly after tap drags."
+#~ msgstr ""
+#~ "Pirksta vilkšana pāri skārienpaliktnim pēc pieskāriena uzsāk vilkšanas "
+#~ "darbību."
+
+#~ msgid "Tap-and-drag lock"
+#~ msgstr "Pieskāriena un vilkšanas fiksēšana"
+
+#~ msgid "Dragging continues after a short finger lift."
+#~ msgstr "Vilkšana turpinās arī pēc pirksta īsas pacelšanas."
+
+#~ msgid ""
+#~ "Tap with two fingers to right-click, tap with three fingers to middle-"
+#~ "click."
+#~ msgstr ""
+#~ "Pieskāriens a diviem pirkstiem atdarina peles kreisā taustiņa klikšķi, ar "
+#~ "trīs — vidējā."
+
+#~ msgid "Tap with two fingers to right-click."
+#~ msgstr ""
+#~ "Pieskāriens ar diviem pirkstiem nozīmē peles labās pogas nospiešanu."
+
+#~ msgid ""
+#~ "Tap with two fingers to middle-click, tap with three fingers to right-"
+#~ "click."
+#~ msgstr ""
+#~ "Pieskāriens ar diviem pirkstiem atdarina peles vidējā taustiņa "
+#~ "nospiešanu, bet pieskāriens ar trim pirkstiem kā peles labās pogas "
+#~ "klikšķis."
+
+#~ msgid "Tap with two fingers to middle-click."
+#~ msgstr ""
+#~ "Pieskāriens ar diviem pirkstiem nozīmē peles vidējās pogas nospiešanu"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Pressing the bottom right corner of your touchpad acts as right-click. "
+#~ "Middle-click by simultaneously pressing the bottom left and bottom right "
+#~ "corners."
+#~ msgstr ""
+#~ "Spiešana uz skārienpaliktņa apakšējā labā stūra uzvedas kā peles labās "
+#~ "pogas nospiešana. Vidējo klikšķi var simulēt, nospiežot reizē apakšējo "
+#~ "labo un kreiso stūri."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "Pressing the bottom right corner of your touchpad acts as right-click. "
+#~ "Middle-click by pressing the bottom central area."
+#~ msgstr ""
+#~ "Apakšējā labā stūra nospiešana skārienpaliktnī uzvedas kā peles labās "
+#~ "pogas nospiešana. Vidējo peles klikšķi varat simulēt, nospiežot apakšā pa "
+#~ "vidu."
+
+#~ msgctxt "@info:tooltip for radiobutton"
+#~ msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
+#~ msgstr ""
+#~ "Pieskāriens uz skārienpaliktņa ar diviem pirkstiem nozīmē peles labās "
+#~ "pogas nospiešanu."
+
+#~ msgctxt "@info:tooltip for radiobutton"
+#~ msgid ""
+#~ "Pressing the bottom right corner of your touchpad acts as right-click."
+#~ msgstr ""
+#~ "Skārienpaliktņa apakšējā labā stūra nospiešana darbojas kā labais "
+#~ "klikšķis."
+
+#~ msgctxt "@info:tooltip for radiobutton"
+#~ msgid ""
+#~ "Pressing the bottom left and bottom right corners simultaneously acts as "
+#~ "middle-click."
+#~ msgstr ""
+#~ "Apakšējā kreisā un labā stūra nospiešana reizē darbojas kā vidējais "
+#~ "klikšķis."
+
+#~ msgctxt "@info:tooltip for radiobutton"
+#~ msgid ""
+#~ "Pressing the touchpad anywhere with three fingers acts as middle-click."
+#~ msgstr ""
+#~ "Pieskaršanās skārienpaliktnim ar trim pirkstiem nozīmē peles vidējās "
+#~ "pogas nospiešanu."
 
 #~ msgid "Touchpad"
 #~ msgstr "Skārienpaliktnis"

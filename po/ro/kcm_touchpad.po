@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-29 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2024-06-09 14:58+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -128,65 +128,38 @@ msgstr "Generale:"
 msgid "Device enabled"
 msgstr "Dispozitiv activat"
 
-#: ui/main.qml:107
-#, kde-format
-msgid "Accept input through this device."
-msgstr "Acceptă introducerea prin acest dispozitiv."
-
-#: ui/main.qml:122
+#: ui/main.qml:115
 #, fuzzy, kde-format
 #| msgid "Disable touchpad when mouse is plugged in"
 msgctxt "@option:check"
 msgid "Disable while mouse is connected"
 msgstr "Dezactivează zona tactilă la conectarea mausului"
 
-#: ui/main.qml:144
+#: ui/main.qml:137
 #, kde-format
 msgid "Disable while typing"
 msgstr "Dezactivează la tastare"
 
-#: ui/main.qml:155
-#, kde-format
-msgid "Disable touchpad while typing to prevent accidental inputs."
-msgstr ""
-"Dezactivează zona tactilă în timpul tastării pentru a preveni atingeri "
-"accidentale."
-
-#: ui/main.qml:174
+#: ui/main.qml:160
 #, kde-format
 msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
 msgid "This can interfere with video games."
 msgstr ""
 
-#: ui/main.qml:184
+#: ui/main.qml:170
 #, fuzzy, kde-format
 #| msgid "Left handed mode"
 msgid "Left-handed mode"
 msgstr "Regim pentru stângaci"
 
-#: ui/main.qml:190
-#, kde-format
-msgid "Swap left and right buttons."
-msgstr "Schimbă butoanele stâng și drept."
-
-#: ui/main.qml:207
+#: ui/main.qml:186
 #, fuzzy, kde-format
 #| msgid "Press left and right buttons for middle click"
 msgctxt "@option:check"
 msgid "Press left and right buttons to middle-click"
 msgstr "Apasă butoanele stâng și drept pentru clic mijlociu"
 
-#: ui/main.qml:213
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
-msgctxt "@info:tooltip for checkbox"
-msgid "Pressing the left and right button simultaneously acts as middle-click."
-msgstr ""
-"Apăsarea simultană a butoanelor stâng și drept trimite clic de buton din "
-"mijloc."
-
-#: ui/main.qml:227
+#: ui/main.qml:199
 #, fuzzy, kde-format
 #| msgid ""
 #| "Activating this setting increases mouse click latency by 50ms. The extra "
@@ -201,181 +174,125 @@ msgstr ""
 "suplimentară e necesară pentru a depista corect apăsarea simultană a "
 "clicului stâng și drept."
 
-#: ui/main.qml:237
+#: ui/main.qml:209
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Viteză indicator:"
 
-#: ui/main.qml:317
+#: ui/main.qml:289
 #, fuzzy, kde-format
 #| msgid "Pointer acceleration:"
 msgid "Enable pointer acceleration"
 msgstr "Accelerație indicator:"
 
-#: ui/main.qml:332
+#: ui/main.qml:304
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
 
-#: ui/main.qml:342
+#: ui/main.qml:314
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Viteză de derulare:"
 
-#: ui/main.qml:393
+#: ui/main.qml:365
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Mai lentă"
 
-#: ui/main.qml:400
+#: ui/main.qml:372
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Mai rapidă"
 
-#: ui/main.qml:408
+#: ui/main.qml:380
 #, kde-format
 msgid "Scrolling:"
 msgstr "Derulare:"
 
-#: ui/main.qml:427
+#: ui/main.qml:399
 #, kde-format
 msgid "Two fingers"
 msgstr "Două degete"
 
-#: ui/main.qml:433
-#, kde-format
-msgid "Slide with two fingers scrolls."
-msgstr "Glisarea cu două degete va derula."
-
-#: ui/main.qml:441
+#: ui/main.qml:406
 #, kde-format
 msgid "Touchpad edges"
 msgstr "Margini zonă tactilă"
 
-#: ui/main.qml:447
-#, kde-format
-msgid "Slide on the touchpad edges scrolls."
-msgstr "Glisarea pe marginile zonei tactile va derula."
-
-#: ui/main.qml:456
+#: ui/main.qml:414
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Inversează direcția derulării (derulare naturală)"
 
-#: ui/main.qml:469
-#, kde-format
-msgid "Touchscreen like scrolling."
-msgstr "Derulare ca pe ecran tactil."
-
-#: ui/main.qml:477
+#: ui/main.qml:428
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "Dezactivează derularea orizontală"
 
-#: ui/main.qml:491
-#, fuzzy, kde-format
-#| msgid "Disable horizontal scrolling"
-msgid "Disable horizontal scrolling."
-msgstr "Dezactivează derularea orizontală"
-
-#: ui/main.qml:504
+#: ui/main.qml:448
 #, fuzzy, kde-format
 #| msgid "Tapping:"
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Tapare:"
 
-#: ui/main.qml:505
+#: ui/main.qml:449
 #, fuzzy, kde-format
 #| msgid "Tap-to-click"
 msgctxt "@option:check"
 msgid "Tap-to-click"
 msgstr "Tapează-pentru-clic"
 
-#: ui/main.qml:511
-#, fuzzy, kde-format
-#| msgid "Single tap is left button click."
-msgctxt "@info:tooltip"
-msgid "Single tap to left-click."
-msgstr "O singură tapare e clic cu butonul stâng."
-
-#: ui/main.qml:526
+#: ui/main.qml:465
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "Tapează-și-trage"
 
-#: ui/main.qml:532
+#: ui/main.qml:478
 #, kde-format
-msgid "Sliding over touchpad directly after tap drags."
-msgstr "Glisarea peste zona tactilă imediat după tapare va trage."
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"Tap, then tap and immediately slide finger over the touchpad to drag. Lift "
+"finger to drop."
+msgstr ""
 
-#: ui/main.qml:547
+#: ui/main.qml:485
 #, kde-format
-msgid "Tap-and-drag lock"
-msgstr "Blocaj tapează-și-trage"
+msgid "Allow briefly lifting finger during tap-and-drag"
+msgstr ""
 
-#: ui/main.qml:553
-#, kde-format
-msgid "Dragging continues after a short finger lift."
-msgstr "Tragerea continuă după o ridicare scurtă a degetului."
-
-#: ui/main.qml:568
+#: ui/main.qml:499
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "Tapare cu două degete:"
 
-#: ui/main.qml:588
+#: ui/main.qml:519
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Clic drept (tapare cu trei degete pentru clic mijlociu)"
 
-#: ui/main.qml:589
+#: ui/main.qml:520
 #, kde-format
 msgid "Right-click"
 msgstr "Clic drept"
 
-#: ui/main.qml:599
-#, kde-format
-msgid ""
-"Tap with two fingers to right-click, tap with three fingers to middle-click."
-msgstr ""
-"Tapați cu două degete pentru clic drept și cu trei degete pentru clic de "
-"mijloc."
-
-#: ui/main.qml:600
-#, kde-format
-msgid "Tap with two fingers to right-click."
-msgstr "Tapați cu două degete pentru clic drept."
-
-#: ui/main.qml:608
+#: ui/main.qml:528
 #, fuzzy, kde-format
 #| msgid "Middle-click (three-finger tap right-click)"
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "Clic mijlociu (tapare cu trei degete pentru clic drept)"
 
-#: ui/main.qml:609
+#: ui/main.qml:529
 #, kde-format
 msgid "Middle-click"
 msgstr "Clic mijlociu"
 
-#: ui/main.qml:619
-#, kde-format
-msgid ""
-"Tap with two fingers to middle-click, tap with three fingers to right-click."
-msgstr ""
-"Tapați cu două degete pentru clic de mijloc și cu trei degete pentru clic "
-"drept."
-
-#: ui/main.qml:620
-#, kde-format
-msgid "Tap with two fingers to middle-click."
-msgstr "Tapați cu două degete pentru clic de mijloc."
-
-#: ui/main.qml:632
+#: ui/main.qml:541
 #, fuzzy, kde-format
 #| msgid "Right-click:"
 msgctxt ""
@@ -384,64 +301,40 @@ msgctxt ""
 msgid "Integrated right-click:"
 msgstr "Clic drept:"
 
-#: ui/main.qml:653
+#: ui/main.qml:562
 #, fuzzy, kde-format
 #| msgid "Press bottom-right corner"
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
 msgstr "Apasă colțul din dreapta-jos"
 
-#: ui/main.qml:661
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Pressing the bottom right corner of your touchpad acts as right-click. "
-"Middle-click by simultaneously pressing the bottom left and bottom right "
-"corners."
-msgstr ""
-
-#: ui/main.qml:662
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Pressing the bottom right corner of your touchpad acts as right-click. "
-"Middle-click by pressing the bottom central area."
-msgstr ""
-
-#: ui/main.qml:677
+#: ui/main.qml:577
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr ""
 
-#: ui/main.qml:678
+#: ui/main.qml:578
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr ""
 
-#: ui/main.qml:696
+#: ui/main.qml:586
 #, fuzzy, kde-format
 #| msgid "Press anywhere with two fingers"
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press touchpad with two fingers"
 msgstr "Apasă oriunde cu două degete"
 
-#: ui/main.qml:704
-#, fuzzy, kde-format
-#| msgid "Tap with two fingers to right-click."
-msgctxt "@info:tooltip for radiobutton"
-msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
-msgstr "Tapați cu două degete pentru clic drept."
-
-#: ui/main.qml:718
+#: ui/main.qml:601
 #, fuzzy, kde-format
 #| msgid "Press anywhere with three fingers."
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
 msgstr "Apăsați oriunde cu trei degete."
 
-#: ui/main.qml:737
+#: ui/main.qml:610
 #, fuzzy, kde-format
 #| msgid "Middle-click: "
 msgctxt ""
@@ -450,48 +343,117 @@ msgctxt ""
 msgid "Integrated middle-click:"
 msgstr "Clic mijlociu: "
 
-#: ui/main.qml:758
+#: ui/main.qml:631
 #, fuzzy, kde-format
 #| msgid "Press bottom-middle"
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom middle edge"
 msgstr "Apasă colțul din mijloc-jos"
 
-#: ui/main.qml:764
-#, kde-format
-msgctxt "@info:tooltip for radiobutton"
-msgid "Pressing the bottom right corner of your touchpad acts as right-click."
-msgstr ""
-
-#: ui/main.qml:772
+#: ui/main.qml:638
 #, fuzzy, kde-format
 #| msgid "Press bottom left and bottom right corners simultaneously"
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom left and bottom right corners"
 msgstr "Apasă colțurile din stânga-jos și dreapta-jos simultan"
 
-#: ui/main.qml:778
-#, fuzzy, kde-format
-#| msgid "Press bottom left and bottom right corners simultaneously"
-msgctxt "@info:tooltip for radiobutton"
-msgid ""
-"Pressing the bottom left and bottom right corners simultaneously acts as "
-"middle-click."
-msgstr "Apasă colțurile din stânga-jos și dreapta-jos simultan"
-
-#: ui/main.qml:786
+#: ui/main.qml:645
 #, fuzzy, kde-format
 #| msgid "Press anywhere with three fingers"
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
 msgstr "Apasă oriunde cu trei degete"
 
-#: ui/main.qml:793
-#, fuzzy, kde-format
-#| msgid "Tap with two fingers to right-click."
-msgctxt "@info:tooltip for radiobutton"
-msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
-msgstr "Tapați cu două degete pentru clic drept."
+#~ msgid "Accept input through this device."
+#~ msgstr "Acceptă introducerea prin acest dispozitiv."
+
+#~ msgid "Disable touchpad while typing to prevent accidental inputs."
+#~ msgstr ""
+#~ "Dezactivează zona tactilă în timpul tastării pentru a preveni atingeri "
+#~ "accidentale."
+
+#~ msgid "Swap left and right buttons."
+#~ msgstr "Schimbă butoanele stâng și drept."
+
+#, fuzzy
+#~| msgid ""
+#~| "Clicking left and right button simultaneously sends middle button click."
+#~ msgctxt "@info:tooltip for checkbox"
+#~ msgid ""
+#~ "Pressing the left and right button simultaneously acts as middle-click."
+#~ msgstr ""
+#~ "Apăsarea simultană a butoanelor stâng și drept trimite clic de buton din "
+#~ "mijloc."
+
+#~ msgid "Slide with two fingers scrolls."
+#~ msgstr "Glisarea cu două degete va derula."
+
+#~ msgid "Slide on the touchpad edges scrolls."
+#~ msgstr "Glisarea pe marginile zonei tactile va derula."
+
+#~ msgid "Touchscreen like scrolling."
+#~ msgstr "Derulare ca pe ecran tactil."
+
+#, fuzzy
+#~| msgid "Disable horizontal scrolling"
+#~ msgid "Disable horizontal scrolling."
+#~ msgstr "Dezactivează derularea orizontală"
+
+#, fuzzy
+#~| msgid "Single tap is left button click."
+#~ msgctxt "@info:tooltip"
+#~ msgid "Single tap to left-click."
+#~ msgstr "O singură tapare e clic cu butonul stâng."
+
+#~ msgid "Sliding over touchpad directly after tap drags."
+#~ msgstr "Glisarea peste zona tactilă imediat după tapare va trage."
+
+#~ msgid "Tap-and-drag lock"
+#~ msgstr "Blocaj tapează-și-trage"
+
+#~ msgid "Dragging continues after a short finger lift."
+#~ msgstr "Tragerea continuă după o ridicare scurtă a degetului."
+
+#~ msgid ""
+#~ "Tap with two fingers to right-click, tap with three fingers to middle-"
+#~ "click."
+#~ msgstr ""
+#~ "Tapați cu două degete pentru clic drept și cu trei degete pentru clic de "
+#~ "mijloc."
+
+#~ msgid "Tap with two fingers to right-click."
+#~ msgstr "Tapați cu două degete pentru clic drept."
+
+#~ msgid ""
+#~ "Tap with two fingers to middle-click, tap with three fingers to right-"
+#~ "click."
+#~ msgstr ""
+#~ "Tapați cu două degete pentru clic de mijloc și cu trei degete pentru clic "
+#~ "drept."
+
+#~ msgid "Tap with two fingers to middle-click."
+#~ msgstr "Tapați cu două degete pentru clic de mijloc."
+
+#, fuzzy
+#~| msgid "Tap with two fingers to right-click."
+#~ msgctxt "@info:tooltip for radiobutton"
+#~ msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
+#~ msgstr "Tapați cu două degete pentru clic drept."
+
+#, fuzzy
+#~| msgid "Press bottom left and bottom right corners simultaneously"
+#~ msgctxt "@info:tooltip for radiobutton"
+#~ msgid ""
+#~ "Pressing the bottom left and bottom right corners simultaneously acts as "
+#~ "middle-click."
+#~ msgstr "Apasă colțurile din stânga-jos și dreapta-jos simultan"
+
+#, fuzzy
+#~| msgid "Tap with two fingers to right-click."
+#~ msgctxt "@info:tooltip for radiobutton"
+#~ msgid ""
+#~ "Pressing the touchpad anywhere with three fingers acts as middle-click."
+#~ msgstr "Tapați cu două degete pentru clic drept."
 
 #~ msgid "Touchpad"
 #~ msgstr "Zonă tactilă"

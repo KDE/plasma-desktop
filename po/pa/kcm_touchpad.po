@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-29 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2024-02-25 09:27-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -119,61 +119,38 @@ msgstr "ਆਮ:"
 msgid "Device enabled"
 msgstr "ਡਿਵਾਈਸ ਸਮਰੱਥ ਹੈ"
 
-#: ui/main.qml:107
-#, kde-format
-msgid "Accept input through this device."
-msgstr "ਇਸ ਡਿਵਾਈਸ ਰਾਹੀਂ ਇਨਪੁੱਟ ਮਨਜ਼ੂਰ ਕਰੋ"
-
-#: ui/main.qml:122
+#: ui/main.qml:115
 #, fuzzy, kde-format
 #| msgid "Disable while typing"
 msgctxt "@option:check"
 msgid "Disable while mouse is connected"
 msgstr "ਲਿਖਣ ਦੇ ਦੌਰਾਨ ਅਸਮਰੱਥ ਕਰੋ"
 
-#: ui/main.qml:144
+#: ui/main.qml:137
 #, kde-format
 msgid "Disable while typing"
 msgstr "ਲਿਖਣ ਦੇ ਦੌਰਾਨ ਅਸਮਰੱਥ ਕਰੋ"
 
-#: ui/main.qml:155
-#, kde-format
-msgid "Disable touchpad while typing to prevent accidental inputs."
-msgstr "ਗਲਤੀ ਨਾਲ ਇਨਪੁੱਟ ਨੂੰ ਰੋਕਣ ਲਈ ਲਿਖਣ ਦੌਰਾਨ ਟੱਚਪੈਡ ਨੂੰ ਅਸਮਰੱਥ ਕਰੋ।"
-
-#: ui/main.qml:174
+#: ui/main.qml:160
 #, kde-format
 msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
 msgid "This can interfere with video games."
 msgstr ""
 
-#: ui/main.qml:184
+#: ui/main.qml:170
 #, fuzzy, kde-format
 #| msgid "Left handed mode"
 msgid "Left-handed mode"
 msgstr "ਖੱਬੇ ਹੱਥਾ ਢੰਗ"
 
-#: ui/main.qml:190
-#, kde-format
-msgid "Swap left and right buttons."
-msgstr "ਖੱਬੇ ਤੇ ਸੱਜੇ ਬਟਨਾਂ ਨੂੰ ਆਪਸ ਵਿੱਚ ਬਦਲੋ।"
-
-#: ui/main.qml:207
+#: ui/main.qml:186
 #, fuzzy, kde-format
 #| msgid "Press left and right buttons for middle click"
 msgctxt "@option:check"
 msgid "Press left and right buttons to middle-click"
 msgstr "ਵਿਚਲੇ ਬਟਨ ਕਲਿੱਕ ਲਈ ਖੱਬੇ ਅਤੇ ਸੱਜੇ ਦੋਵੇਂ ਬਟਨਾਂ ਨੂੰ ਦਬਾਓ"
 
-#: ui/main.qml:213
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
-msgctxt "@info:tooltip for checkbox"
-msgid "Pressing the left and right button simultaneously acts as middle-click."
-msgstr "ਮਿਡਲ ਬਟਨ ਕਲਿੱਕ ਕਰਨ ਲਈ ਖੱਬੇ ਅਤੇ ਸੱਜੇ ਬਟਨਾਂ ਨੂੰ ਇਕੱਠੇ ਕਲਿੱਕ ਕਰੋ।"
-
-#: ui/main.qml:227
+#: ui/main.qml:199
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -181,177 +158,125 @@ msgid ""
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
 
-#: ui/main.qml:237
+#: ui/main.qml:209
 #, kde-format
 msgid "Pointer speed:"
 msgstr "ਪੁਆਇੰਟਰ ਦੀ ਗਤੀ:"
 
-#: ui/main.qml:317
+#: ui/main.qml:289
 #, fuzzy, kde-format
 #| msgid "Pointer acceleration:"
 msgid "Enable pointer acceleration"
 msgstr "ਪੁਆਇੰਟਰ ਐਕਸਰਲੇਸ਼ਨ:"
 
-#: ui/main.qml:332
+#: ui/main.qml:304
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
 
-#: ui/main.qml:342
+#: ui/main.qml:314
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "ਸਰਕਾਉਣ ਦੀ ਗਤੀ:"
 
-#: ui/main.qml:393
+#: ui/main.qml:365
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "ਵੱਧ ਹੌਲੀ"
 
-#: ui/main.qml:400
+#: ui/main.qml:372
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "ਵੱਧ ਤੇਜ਼"
 
-#: ui/main.qml:408
+#: ui/main.qml:380
 #, kde-format
 msgid "Scrolling:"
 msgstr "ਸਰਕਾਉਣਾ:"
 
-#: ui/main.qml:427
+#: ui/main.qml:399
 #, kde-format
 msgid "Two fingers"
 msgstr "ਦੋ ਉਂਗਲਾਂ"
 
-#: ui/main.qml:433
-#, kde-format
-msgid "Slide with two fingers scrolls."
-msgstr "ਦੋ ਉਂਗਲਾਂ ਸਰਕਾਉਣ ਨਾਲ ਸਕਰੋਲ ਕਰਨਾ।"
-
-#: ui/main.qml:441
+#: ui/main.qml:406
 #, kde-format
 msgid "Touchpad edges"
 msgstr "ਟੱਚਪੈਡ ਕਿਨਾਰੇ"
 
-#: ui/main.qml:447
-#, kde-format
-msgid "Slide on the touchpad edges scrolls."
-msgstr "ਟੱਚ-ਪੈਡ ਕੰਢਿਆਂ ਉੱਤੇ ਸਕਰੋਲ ਕਾਲ ਸਰਕਾਓ।"
-
-#: ui/main.qml:456
+#: ui/main.qml:414
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "ਉਲਟ ਸਕਰੋਲ ਦੀ ਦਿਸ਼ਾ (ਕੁਦਰਤੀ ਸਕਰੋਲਿੰਗ)"
 
-#: ui/main.qml:469
-#, kde-format
-msgid "Touchscreen like scrolling."
-msgstr "ਟੱਚ ਸਕਰੀਨ ਵਾਂਗ ਸਕਰੋਲਿੰਗ"
-
-#: ui/main.qml:477
+#: ui/main.qml:428
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "ਲੇਟਵੇ ਸਰਕਾਉਣਾ ਅਸਮਰੱਥ ਕਰੋ"
 
-#: ui/main.qml:491
-#, fuzzy, kde-format
-#| msgid "Disable horizontal scrolling"
-msgid "Disable horizontal scrolling."
-msgstr "ਲੇਟਵੇ ਸਰਕਾਉਣਾ ਅਸਮਰੱਥ ਕਰੋ"
-
-#: ui/main.qml:504
+#: ui/main.qml:448
 #, fuzzy, kde-format
 #| msgid "Tapping:"
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "ਛੋਹਣਾ:"
 
-#: ui/main.qml:505
+#: ui/main.qml:449
 #, fuzzy, kde-format
 #| msgid "Tap-to-click"
 msgctxt "@option:check"
 msgid "Tap-to-click"
 msgstr "ਕਲਿੱਕ ਕਰਨ ਲਈ ਛੋਹੋ"
 
-#: ui/main.qml:511
-#, fuzzy, kde-format
-#| msgid "Single tap is left button click."
-msgctxt "@info:tooltip"
-msgid "Single tap to left-click."
-msgstr "ਖੱਬਾ ਬਟਨ ਕਲਿੱਕ ਕਰਨ ਲਈ ਇੱਕ ਵਾਰ ਛੋਹੋ"
-
-#: ui/main.qml:526
+#: ui/main.qml:465
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "ਛੋਹੋ-ਤੇ-ਖਿੱਚੋ"
 
-#: ui/main.qml:532
+#: ui/main.qml:478
 #, kde-format
-msgid "Sliding over touchpad directly after tap drags."
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"Tap, then tap and immediately slide finger over the touchpad to drag. Lift "
+"finger to drop."
 msgstr ""
 
-#: ui/main.qml:547
+#: ui/main.qml:485
 #, kde-format
-msgid "Tap-and-drag lock"
-msgstr "ਟੈਪ ਤੇ ਖਿੱਚੋ ਲਾਕ"
-
-#: ui/main.qml:553
-#, kde-format
-msgid "Dragging continues after a short finger lift."
+msgid "Allow briefly lifting finger during tap-and-drag"
 msgstr ""
 
-#: ui/main.qml:568
+#: ui/main.qml:499
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "ਦੋ-ਉਂਗਲ ਨਾਲ ਟੈਪ:"
 
-#: ui/main.qml:588
+#: ui/main.qml:519
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "ਸੱਜਾ ਕਲਿੱਕ (ਮੱਧ-ਕਲਿੱਕ ਲਈ ਤਿੰਨ ਉਂਗਲਾਂ ਨਾਲ ਛੋਹਣਾ)"
 
-#: ui/main.qml:589
+#: ui/main.qml:520
 #, kde-format
 msgid "Right-click"
 msgstr "ਸੱਜਾ-ਕਲਿੱਕ"
 
-#: ui/main.qml:599
-#, kde-format
-msgid ""
-"Tap with two fingers to right-click, tap with three fingers to middle-click."
-msgstr "ਸੱਜੇ ਕਲਿੱਕ ਲਈ ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਛੂਹੋ, ਮਿਡਲ ਕਲਿੱਕ ਲਈ ਤਿੰਨ ਉਂਗਲਾਂ ਨਾਲ ਛੂਹੋ।"
-
-#: ui/main.qml:600
-#, kde-format
-msgid "Tap with two fingers to right-click."
-msgstr "ਸੱਜੇ ਕਲਿੱਕ ਲਈ ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਟੈਪ ਕਰੋ"
-
-#: ui/main.qml:608
+#: ui/main.qml:528
 #, fuzzy, kde-format
 #| msgid "Middle-click (three-finger tap right-click)"
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "ਮਿਡਲ-ਕਲਿੱਕ (ਤਿੰਨ-ਉਂਗਲ ਟੈਪ ਸੱਜਾ ਕਲਿੱਕ)"
 
-#: ui/main.qml:609
+#: ui/main.qml:529
 #, kde-format
 msgid "Middle-click"
 msgstr "ਮੱਧ-ਕਲਿੱਕ"
 
-#: ui/main.qml:619
-#, kde-format
-msgid ""
-"Tap with two fingers to middle-click, tap with three fingers to right-click."
-msgstr "ਮਿਡਲ-ਕਲਿੱਕ ਲਈ ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਛੂਹੋ, ਸੱਜੇ ਕਲਿੱਕ ਲਈ ਤਿੰਨ ਉਂਗਲਾਂ ਨਾਲ ਛੂਹੋ।"
-
-#: ui/main.qml:620
-#, kde-format
-msgid "Tap with two fingers to middle-click."
-msgstr "ਮਿਡਲ-ਕਲਿੱਕ ਲਈ ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਟੈਪ ਕਰੋ"
-
-#: ui/main.qml:632
+#: ui/main.qml:541
 #, fuzzy, kde-format
 #| msgid "Right-click:"
 msgctxt ""
@@ -360,64 +285,40 @@ msgctxt ""
 msgid "Integrated right-click:"
 msgstr "ਸੱਜਾ-ਕਲਿੱਕ:"
 
-#: ui/main.qml:653
+#: ui/main.qml:562
 #, fuzzy, kde-format
 #| msgid "Press bottom-right corner"
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
 msgstr "ਹੇਠਾਂ-ਸੱਜਾ ਕੋਨਾ ਦਬਾਓ"
 
-#: ui/main.qml:661
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Pressing the bottom right corner of your touchpad acts as right-click. "
-"Middle-click by simultaneously pressing the bottom left and bottom right "
-"corners."
-msgstr ""
-
-#: ui/main.qml:662
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Pressing the bottom right corner of your touchpad acts as right-click. "
-"Middle-click by pressing the bottom central area."
-msgstr ""
-
-#: ui/main.qml:677
+#: ui/main.qml:577
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr ""
 
-#: ui/main.qml:678
+#: ui/main.qml:578
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr ""
 
-#: ui/main.qml:696
+#: ui/main.qml:586
 #, fuzzy, kde-format
 #| msgid "Press anywhere with two fingers"
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press touchpad with two fingers"
 msgstr "ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਕਿਤੇ ਵੀ ਦਬਾਓ"
 
-#: ui/main.qml:704
-#, fuzzy, kde-format
-#| msgid "Tap with two fingers to right-click."
-msgctxt "@info:tooltip for radiobutton"
-msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
-msgstr "ਸੱਜੇ ਕਲਿੱਕ ਲਈ ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਟੈਪ ਕਰੋ"
-
-#: ui/main.qml:718
+#: ui/main.qml:601
 #, fuzzy, kde-format
 #| msgid "Press anywhere with three fingers."
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
 msgstr "ਤਿੰਨ ਉਂਗਲਾਂ ਨਾਲ ਕਿਤੇ ਵੀ ਦਬਾਓ।"
 
-#: ui/main.qml:737
+#: ui/main.qml:610
 #, fuzzy, kde-format
 #| msgid "Middle-click: "
 msgctxt ""
@@ -426,48 +327,103 @@ msgctxt ""
 msgid "Integrated middle-click:"
 msgstr "ਮਿਡਲ-ਕਲਿੱਕ:"
 
-#: ui/main.qml:758
+#: ui/main.qml:631
 #, fuzzy, kde-format
 #| msgid "Press bottom-middle"
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom middle edge"
 msgstr "ਹੇਠਾਂ-ਮਿਡਲ ਦਬਾਓ"
 
-#: ui/main.qml:764
-#, kde-format
-msgctxt "@info:tooltip for radiobutton"
-msgid "Pressing the bottom right corner of your touchpad acts as right-click."
-msgstr ""
-
-#: ui/main.qml:772
+#: ui/main.qml:638
 #, fuzzy, kde-format
 #| msgid "Press bottom left and bottom right corners simultaneously"
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom left and bottom right corners"
 msgstr "ਹੇਠਲੇ ਖੱਬੇ ਅਤੇ ਸੱਜੇ ਕੋਨਿਆਂ ਨੂੰ ਇੱਕਠੇ ਦਬਾਓ"
 
-#: ui/main.qml:778
-#, fuzzy, kde-format
-#| msgid "Press bottom left and bottom right corners simultaneously"
-msgctxt "@info:tooltip for radiobutton"
-msgid ""
-"Pressing the bottom left and bottom right corners simultaneously acts as "
-"middle-click."
-msgstr "ਹੇਠਲੇ ਖੱਬੇ ਅਤੇ ਸੱਜੇ ਕੋਨਿਆਂ ਨੂੰ ਇੱਕਠੇ ਦਬਾਓ"
-
-#: ui/main.qml:786
+#: ui/main.qml:645
 #, fuzzy, kde-format
 #| msgid "Press anywhere with three fingers"
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
 msgstr "ਤਿੰਨ ਉਂਗਲਾਂ ਨਾਲ ਕਿਤੇ ਵੀ ਦਬਾਓ"
 
-#: ui/main.qml:793
-#, fuzzy, kde-format
-#| msgid "Tap with two fingers to right-click."
-msgctxt "@info:tooltip for radiobutton"
-msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
-msgstr "ਸੱਜੇ ਕਲਿੱਕ ਲਈ ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਟੈਪ ਕਰੋ"
+#~ msgid "Accept input through this device."
+#~ msgstr "ਇਸ ਡਿਵਾਈਸ ਰਾਹੀਂ ਇਨਪੁੱਟ ਮਨਜ਼ੂਰ ਕਰੋ"
+
+#~ msgid "Disable touchpad while typing to prevent accidental inputs."
+#~ msgstr "ਗਲਤੀ ਨਾਲ ਇਨਪੁੱਟ ਨੂੰ ਰੋਕਣ ਲਈ ਲਿਖਣ ਦੌਰਾਨ ਟੱਚਪੈਡ ਨੂੰ ਅਸਮਰੱਥ ਕਰੋ।"
+
+#~ msgid "Swap left and right buttons."
+#~ msgstr "ਖੱਬੇ ਤੇ ਸੱਜੇ ਬਟਨਾਂ ਨੂੰ ਆਪਸ ਵਿੱਚ ਬਦਲੋ।"
+
+#, fuzzy
+#~| msgid ""
+#~| "Clicking left and right button simultaneously sends middle button click."
+#~ msgctxt "@info:tooltip for checkbox"
+#~ msgid ""
+#~ "Pressing the left and right button simultaneously acts as middle-click."
+#~ msgstr "ਮਿਡਲ ਬਟਨ ਕਲਿੱਕ ਕਰਨ ਲਈ ਖੱਬੇ ਅਤੇ ਸੱਜੇ ਬਟਨਾਂ ਨੂੰ ਇਕੱਠੇ ਕਲਿੱਕ ਕਰੋ।"
+
+#~ msgid "Slide with two fingers scrolls."
+#~ msgstr "ਦੋ ਉਂਗਲਾਂ ਸਰਕਾਉਣ ਨਾਲ ਸਕਰੋਲ ਕਰਨਾ।"
+
+#~ msgid "Slide on the touchpad edges scrolls."
+#~ msgstr "ਟੱਚ-ਪੈਡ ਕੰਢਿਆਂ ਉੱਤੇ ਸਕਰੋਲ ਕਾਲ ਸਰਕਾਓ।"
+
+#~ msgid "Touchscreen like scrolling."
+#~ msgstr "ਟੱਚ ਸਕਰੀਨ ਵਾਂਗ ਸਕਰੋਲਿੰਗ"
+
+#, fuzzy
+#~| msgid "Disable horizontal scrolling"
+#~ msgid "Disable horizontal scrolling."
+#~ msgstr "ਲੇਟਵੇ ਸਰਕਾਉਣਾ ਅਸਮਰੱਥ ਕਰੋ"
+
+#, fuzzy
+#~| msgid "Single tap is left button click."
+#~ msgctxt "@info:tooltip"
+#~ msgid "Single tap to left-click."
+#~ msgstr "ਖੱਬਾ ਬਟਨ ਕਲਿੱਕ ਕਰਨ ਲਈ ਇੱਕ ਵਾਰ ਛੋਹੋ"
+
+#~ msgid "Tap-and-drag lock"
+#~ msgstr "ਟੈਪ ਤੇ ਖਿੱਚੋ ਲਾਕ"
+
+#~ msgid ""
+#~ "Tap with two fingers to right-click, tap with three fingers to middle-"
+#~ "click."
+#~ msgstr "ਸੱਜੇ ਕਲਿੱਕ ਲਈ ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਛੂਹੋ, ਮਿਡਲ ਕਲਿੱਕ ਲਈ ਤਿੰਨ ਉਂਗਲਾਂ ਨਾਲ ਛੂਹੋ।"
+
+#~ msgid "Tap with two fingers to right-click."
+#~ msgstr "ਸੱਜੇ ਕਲਿੱਕ ਲਈ ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਟੈਪ ਕਰੋ"
+
+#~ msgid ""
+#~ "Tap with two fingers to middle-click, tap with three fingers to right-"
+#~ "click."
+#~ msgstr "ਮਿਡਲ-ਕਲਿੱਕ ਲਈ ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਛੂਹੋ, ਸੱਜੇ ਕਲਿੱਕ ਲਈ ਤਿੰਨ ਉਂਗਲਾਂ ਨਾਲ ਛੂਹੋ।"
+
+#~ msgid "Tap with two fingers to middle-click."
+#~ msgstr "ਮਿਡਲ-ਕਲਿੱਕ ਲਈ ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਟੈਪ ਕਰੋ"
+
+#, fuzzy
+#~| msgid "Tap with two fingers to right-click."
+#~ msgctxt "@info:tooltip for radiobutton"
+#~ msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
+#~ msgstr "ਸੱਜੇ ਕਲਿੱਕ ਲਈ ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਟੈਪ ਕਰੋ"
+
+#, fuzzy
+#~| msgid "Press bottom left and bottom right corners simultaneously"
+#~ msgctxt "@info:tooltip for radiobutton"
+#~ msgid ""
+#~ "Pressing the bottom left and bottom right corners simultaneously acts as "
+#~ "middle-click."
+#~ msgstr "ਹੇਠਲੇ ਖੱਬੇ ਅਤੇ ਸੱਜੇ ਕੋਨਿਆਂ ਨੂੰ ਇੱਕਠੇ ਦਬਾਓ"
+
+#, fuzzy
+#~| msgid "Tap with two fingers to right-click."
+#~ msgctxt "@info:tooltip for radiobutton"
+#~ msgid ""
+#~ "Pressing the touchpad anywhere with three fingers acts as middle-click."
+#~ msgstr "ਸੱਜੇ ਕਲਿੱਕ ਲਈ ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਟੈਪ ਕਰੋ"
 
 #~ msgid "Touchpad"
 #~ msgstr "ਟੱਚਪੈਡ"

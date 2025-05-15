@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_kickoff\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-07 00:44+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2025-04-28 09:09+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -260,6 +260,7 @@ msgid "Power"
 msgstr "Alimentazione"
 
 #: package/contents/ui/ConfigGeneral.qml:286
+#: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
 msgid "Session"
 msgstr "Sessione"
@@ -325,13 +326,14 @@ msgstr "C'è una nuova applicazione installata in questa categoria"
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
-msgid "Leave"
-msgstr "Esci"
-
-#: package/contents/ui/LeaveButtons.qml:169
-#, kde-format
 msgid "More"
 msgstr "Altro"
+
+#: package/contents/ui/LeaveButtons.qml:169
+#, fuzzy, kde-format
+#| msgid "Session actions"
+msgid "Session and Power "
+msgstr "Azioni della sessione"
 
 #: package/contents/ui/main.qml:355
 #, kde-format
@@ -356,6 +358,9 @@ msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Utilizzate frequentemente"
 
+#~ msgid "Leave"
+#~ msgstr "Esci"
+
 #~ msgctxt "@item:inmenu Reset icon to default"
 #~ msgid "Clear Icon"
 #~ msgstr "Ripristina icona"
@@ -368,9 +373,6 @@ msgstr "Utilizzate frequentemente"
 
 #~ msgid "Power actions"
 #~ msgstr "Azioni di alimentazione"
-
-#~ msgid "Session actions"
-#~ msgstr "Azioni della sessione"
 
 #~ msgid "Leave…"
 #~ msgstr "Esci…"

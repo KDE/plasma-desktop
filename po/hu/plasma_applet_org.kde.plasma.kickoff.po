@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-07 00:44+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2025-01-27 21:01+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -261,6 +261,7 @@ msgid "Power"
 msgstr "Főkapcsoló"
 
 #: package/contents/ui/ConfigGeneral.qml:286
+#: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
 msgid "Session"
 msgstr "Munkamenet"
@@ -327,13 +328,14 @@ msgstr ""
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
-msgid "Leave"
-msgstr "Kilépés"
-
-#: package/contents/ui/LeaveButtons.qml:169
-#, kde-format
 msgid "More"
 msgstr "Több"
+
+#: package/contents/ui/LeaveButtons.qml:169
+#, fuzzy, kde-format
+#| msgid "Session actions"
+msgid "Session and Power "
+msgstr "Munkamenet-kezelési lehetőségek"
 
 #: package/contents/ui/main.qml:355
 #, kde-format
@@ -358,6 +360,9 @@ msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Gyakran használt"
 
+#~ msgid "Leave"
+#~ msgstr "Kilépés"
+
 #~ msgctxt "@item:inmenu Reset icon to default"
 #~ msgid "Clear Icon"
 #~ msgstr "Ikon visszaállítása"
@@ -370,9 +375,6 @@ msgstr "Gyakran használt"
 
 #~ msgid "Power actions"
 #~ msgstr "Kikapcsolási lehetőségek"
-
-#~ msgid "Session actions"
-#~ msgstr "Munkamenet-kezelési lehetőségek"
 
 #, fuzzy
 #~| msgid "Leave"

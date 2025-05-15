@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-07 00:44+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2025-04-07 00:20+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -259,6 +259,7 @@ msgid "Power"
 msgstr "전원"
 
 #: package/contents/ui/ConfigGeneral.qml:286
+#: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
 msgid "Session"
 msgstr "세션"
@@ -325,13 +326,14 @@ msgstr ""
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
-msgid "Leave"
-msgstr "떠나기"
-
-#: package/contents/ui/LeaveButtons.qml:169
-#, kde-format
 msgid "More"
 msgstr "더 보기"
+
+#: package/contents/ui/LeaveButtons.qml:169
+#, fuzzy, kde-format
+#| msgid "Session actions"
+msgid "Session and Power "
+msgstr "세션 동작"
 
 #: package/contents/ui/main.qml:355
 #, kde-format
@@ -356,6 +358,9 @@ msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "자주 사용함"
 
+#~ msgid "Leave"
+#~ msgstr "떠나기"
+
 #~ msgctxt "@item:inmenu Reset icon to default"
 #~ msgid "Clear Icon"
 #~ msgstr "아이콘 초기화"
@@ -368,9 +373,6 @@ msgstr "자주 사용함"
 
 #~ msgid "Power actions"
 #~ msgstr "전원 동작"
-
-#~ msgid "Session actions"
-#~ msgstr "세션 동작"
 
 #~ msgid "Leave…"
 #~ msgstr "떠나기…"

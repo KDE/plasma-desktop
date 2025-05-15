@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-07 00:44+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2020-10-25 18:49+0100\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -264,6 +264,7 @@ msgid "Power"
 msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:286
+#: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
 msgid "Session"
 msgstr ""
@@ -330,12 +331,12 @@ msgstr ""
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
-msgid "Leave"
-msgstr "Väljumine"
+msgid "More"
+msgstr ""
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
-msgid "More"
+msgid "Session and Power "
 msgstr ""
 
 #: package/contents/ui/main.qml:355
@@ -363,6 +364,9 @@ msgstr "Ajalugu"
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr ""
+
+#~ msgid "Leave"
+#~ msgstr "Väljumine"
 
 #~ msgctxt "@item:inmenu Reset icon to default"
 #~ msgid "Clear Icon"

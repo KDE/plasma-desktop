@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-07 00:44+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2024-10-26 11:48+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -259,6 +259,7 @@ msgid "Power"
 msgstr "Tænd/sluk"
 
 #: package/contents/ui/ConfigGeneral.qml:286
+#: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
 msgid "Session"
 msgstr "Session"
@@ -325,13 +326,14 @@ msgstr ""
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
-msgid "Leave"
-msgstr "Forlad"
-
-#: package/contents/ui/LeaveButtons.qml:169
-#, kde-format
 msgid "More"
 msgstr "Mere"
+
+#: package/contents/ui/LeaveButtons.qml:169
+#, fuzzy, kde-format
+#| msgid "Session"
+msgid "Session and Power "
+msgstr "Session"
 
 #: package/contents/ui/main.qml:355
 #, kde-format
@@ -356,6 +358,9 @@ msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Hyppigt anvendt"
 
+#~ msgid "Leave"
+#~ msgstr "Forlad"
+
 #~ msgctxt "@item:inmenu Reset icon to default"
 #~ msgid "Clear Icon"
 #~ msgstr "Ryd ikon"
@@ -364,11 +369,6 @@ msgstr "Hyppigt anvendt"
 #~| msgid "Search:"
 #~ msgid "Search…"
 #~ msgstr "Søg:"
-
-#, fuzzy
-#~| msgid "Session"
-#~ msgid "Session actions"
-#~ msgstr "Session"
 
 #, fuzzy
 #~| msgid "Leave"

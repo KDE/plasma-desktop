@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-29 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2020-04-09 10:54+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -134,65 +134,38 @@ msgstr "Geral:"
 msgid "Device enabled"
 msgstr "Dispositivo activo"
 
-#: ui/main.qml:107
-#, kde-format
-msgid "Accept input through this device."
-msgstr "Aceitar a introdução de dados por este dispositivo."
-
-#: ui/main.qml:122
+#: ui/main.qml:115
 #, fuzzy, kde-format
 #| msgid "Disable touchpad when mouse is plugged in"
 msgctxt "@option:check"
 msgid "Disable while mouse is connected"
 msgstr "Desactivar o rato por toque ao ligar outro rato"
 
-#: ui/main.qml:144
+#: ui/main.qml:137
 #, kde-format
 msgid "Disable while typing"
 msgstr "Desactivar durante a escrita"
 
-#: ui/main.qml:155
-#, kde-format
-msgid "Disable touchpad while typing to prevent accidental inputs."
-msgstr ""
-"Desactivar o rato por toque enquanto escreve para evitar introdução de dados "
-"sem querer."
-
-#: ui/main.qml:174
+#: ui/main.qml:160
 #, kde-format
 msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
 msgid "This can interfere with video games."
 msgstr ""
 
-#: ui/main.qml:184
+#: ui/main.qml:170
 #, fuzzy, kde-format
 #| msgid "Left handed mode"
 msgid "Left-handed mode"
 msgstr "Modo esquerdino"
 
-#: ui/main.qml:190
-#, kde-format
-msgid "Swap left and right buttons."
-msgstr "Trocar os botões esquerdo e direito."
-
-#: ui/main.qml:207
+#: ui/main.qml:186
 #, fuzzy, kde-format
 #| msgid "Press left and right buttons for middle click"
 msgctxt "@option:check"
 msgid "Press left and right buttons to middle-click"
 msgstr "Carregue nos botões esquerdo e direito para simular o do meio"
 
-#: ui/main.qml:213
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking left and right button simultaneously sends middle button click."
-msgctxt "@info:tooltip for checkbox"
-msgid "Pressing the left and right button simultaneously acts as middle-click."
-msgstr ""
-"Se carregar nos botões esquerdo e direito em simultâneo, envia um 'click' do "
-"botão do meio."
-
-#: ui/main.qml:227
+#: ui/main.qml:199
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -200,183 +173,125 @@ msgid ""
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
 
-#: ui/main.qml:237
+#: ui/main.qml:209
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Velocidade do ponteiro:"
 
-#: ui/main.qml:317
+#: ui/main.qml:289
 #, fuzzy, kde-format
 #| msgid "Pointer acceleration:"
 msgid "Enable pointer acceleration"
 msgstr "Aceleração do cursor:"
 
-#: ui/main.qml:332
+#: ui/main.qml:304
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
 
-#: ui/main.qml:342
+#: ui/main.qml:314
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Velocidade do deslocamento:"
 
-#: ui/main.qml:393
+#: ui/main.qml:365
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Mais devagar"
 
-#: ui/main.qml:400
+#: ui/main.qml:372
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Mais depressa"
 
-#: ui/main.qml:408
+#: ui/main.qml:380
 #, kde-format
 msgid "Scrolling:"
 msgstr "Deslocamento:"
 
-#: ui/main.qml:427
+#: ui/main.qml:399
 #, kde-format
 msgid "Two fingers"
 msgstr "Dois dedos"
 
-#: ui/main.qml:433
-#, kde-format
-msgid "Slide with two fingers scrolls."
-msgstr "O deslizamento com dois dedos faz o deslocamento."
-
-#: ui/main.qml:441
+#: ui/main.qml:406
 #, kde-format
 msgid "Touchpad edges"
 msgstr "Extremos do rato por toque"
 
-#: ui/main.qml:447
-#, kde-format
-msgid "Slide on the touchpad edges scrolls."
-msgstr "Um deslizamento nos extremos do rato por toque faz o deslocamento."
-
-#: ui/main.qml:456
+#: ui/main.qml:414
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Inverter a direcção do deslocamento (deslocamento natural)"
 
-#: ui/main.qml:469
-#, kde-format
-msgid "Touchscreen like scrolling."
-msgstr "Deslocamento como nos ecrãs tácteis."
-
-#: ui/main.qml:477
+#: ui/main.qml:428
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "Desactivar o deslocamento horizontal"
 
-#: ui/main.qml:491
-#, fuzzy, kde-format
-#| msgid "Disable horizontal scrolling"
-msgid "Disable horizontal scrolling."
-msgstr "Desactivar o deslocamento horizontal"
-
-#: ui/main.qml:504
+#: ui/main.qml:448
 #, fuzzy, kde-format
 #| msgid "Tapping:"
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Toques:"
 
-#: ui/main.qml:505
+#: ui/main.qml:449
 #, fuzzy, kde-format
 #| msgid "Tap-to-click"
 msgctxt "@option:check"
 msgid "Tap-to-click"
 msgstr "Toque-para-carregar"
 
-#: ui/main.qml:511
-#, fuzzy, kde-format
-#| msgid "Single tap is left button click."
-msgctxt "@info:tooltip"
-msgid "Single tap to left-click."
-msgstr "Um toque simples é o botão esquerdo do rato."
-
-#: ui/main.qml:526
+#: ui/main.qml:465
 #, kde-format
 msgid "Tap-and-drag"
 msgstr "Toque-e-arrastamento"
 
-#: ui/main.qml:532
+#: ui/main.qml:478
 #, kde-format
-msgid "Sliding over touchpad directly after tap drags."
+msgctxt "@info:tooltip from ContextualHelpButton"
+msgid ""
+"Tap, then tap and immediately slide finger over the touchpad to drag. Lift "
+"finger to drop."
 msgstr ""
-"Ao deslocar o dedo após um toque directo no rato por toque, fará o "
-"arrastamento."
 
-#: ui/main.qml:547
+#: ui/main.qml:485
 #, kde-format
-msgid "Tap-and-drag lock"
-msgstr "Bloqueio do toque-e-arrastamento"
+msgid "Allow briefly lifting finger during tap-and-drag"
+msgstr ""
 
-#: ui/main.qml:553
-#, kde-format
-msgid "Dragging continues after a short finger lift."
-msgstr "O arrastamento prossegue após uma elevação curta do dedo."
-
-#: ui/main.qml:568
+#: ui/main.qml:499
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "Toque com dois dedos:"
 
-#: ui/main.qml:588
+#: ui/main.qml:519
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Botão direito (toque com três dedos para o botão do meio)"
 
-#: ui/main.qml:589
+#: ui/main.qml:520
 #, kde-format
 msgid "Right-click"
 msgstr "Botão direito"
 
-#: ui/main.qml:599
-#, kde-format
-msgid ""
-"Tap with two fingers to right-click, tap with three fingers to middle-click."
-msgstr ""
-"Toque com dois dedos para o botão direito, toque com três dedos para o botão "
-"do meio."
-
-#: ui/main.qml:600
-#, kde-format
-msgid "Tap with two fingers to right-click."
-msgstr "Toque com dois dedos para o botão direito."
-
-#: ui/main.qml:608
+#: ui/main.qml:528
 #, fuzzy, kde-format
 #| msgid "Middle-click (three-finger tap right-click)"
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "Botão do meio (toque com três dedos para o botão direito)"
 
-#: ui/main.qml:609
+#: ui/main.qml:529
 #, kde-format
 msgid "Middle-click"
 msgstr "Botão do meio"
 
-#: ui/main.qml:619
-#, kde-format
-msgid ""
-"Tap with two fingers to middle-click, tap with three fingers to right-click."
-msgstr ""
-"Toque com dois dedos para o botão do meio, toque com três dedos para o botão "
-"direito."
-
-#: ui/main.qml:620
-#, kde-format
-msgid "Tap with two fingers to middle-click."
-msgstr "Toque com os dois dedos para o botão do meio."
-
-#: ui/main.qml:632
+#: ui/main.qml:541
 #, fuzzy, kde-format
 #| msgid "Right-click:"
 msgctxt ""
@@ -385,64 +300,40 @@ msgctxt ""
 msgid "Integrated right-click:"
 msgstr "Botão direito:"
 
-#: ui/main.qml:653
+#: ui/main.qml:562
 #, fuzzy, kde-format
 #| msgid "Press bottom-right corner"
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
 msgstr "Carregar no canto inferior direito"
 
-#: ui/main.qml:661
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Pressing the bottom right corner of your touchpad acts as right-click. "
-"Middle-click by simultaneously pressing the bottom left and bottom right "
-"corners."
-msgstr ""
-
-#: ui/main.qml:662
-#, kde-format
-msgctxt "@info:tooltip"
-msgid ""
-"Pressing the bottom right corner of your touchpad acts as right-click. "
-"Middle-click by pressing the bottom central area."
-msgstr ""
-
-#: ui/main.qml:677
+#: ui/main.qml:577
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
 msgstr ""
 
-#: ui/main.qml:678
+#: ui/main.qml:578
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
 msgstr ""
 
-#: ui/main.qml:696
+#: ui/main.qml:586
 #, fuzzy, kde-format
 #| msgid "Press anywhere with two fingers"
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press touchpad with two fingers"
 msgstr "Carregar em qualquer lado com dois dedos"
 
-#: ui/main.qml:704
-#, fuzzy, kde-format
-#| msgid "Tap with two fingers to right-click."
-msgctxt "@info:tooltip for radiobutton"
-msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
-msgstr "Toque com dois dedos para o botão direito."
-
-#: ui/main.qml:718
+#: ui/main.qml:601
 #, fuzzy, kde-format
 #| msgid "Press anywhere with three fingers."
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
 msgstr "Carregue em qualquer lado com três dedos."
 
-#: ui/main.qml:737
+#: ui/main.qml:610
 #, fuzzy, kde-format
 #| msgid "Middle-click: "
 msgctxt ""
@@ -451,48 +342,119 @@ msgctxt ""
 msgid "Integrated middle-click:"
 msgstr "'Click' do meio: "
 
-#: ui/main.qml:758
+#: ui/main.qml:631
 #, fuzzy, kde-format
 #| msgid "Press bottom-middle"
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom middle edge"
 msgstr "Botão do meio inferior"
 
-#: ui/main.qml:764
-#, kde-format
-msgctxt "@info:tooltip for radiobutton"
-msgid "Pressing the bottom right corner of your touchpad acts as right-click."
-msgstr ""
-
-#: ui/main.qml:772
+#: ui/main.qml:638
 #, fuzzy, kde-format
 #| msgid "Press bottom left and bottom right corners simultaneously"
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom left and bottom right corners"
 msgstr "Carregar em baixo e à esquerda e direita em simultâneo"
 
-#: ui/main.qml:778
-#, fuzzy, kde-format
-#| msgid "Press bottom left and bottom right corners simultaneously"
-msgctxt "@info:tooltip for radiobutton"
-msgid ""
-"Pressing the bottom left and bottom right corners simultaneously acts as "
-"middle-click."
-msgstr "Carregar em baixo e à esquerda e direita em simultâneo"
-
-#: ui/main.qml:786
+#: ui/main.qml:645
 #, fuzzy, kde-format
 #| msgid "Press anywhere with three fingers"
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
 msgstr "Carregar em qualquer lado com três dedos"
 
-#: ui/main.qml:793
-#, fuzzy, kde-format
-#| msgid "Tap with two fingers to right-click."
-msgctxt "@info:tooltip for radiobutton"
-msgid "Pressing the touchpad anywhere with three fingers acts as middle-click."
-msgstr "Toque com dois dedos para o botão direito."
+#~ msgid "Accept input through this device."
+#~ msgstr "Aceitar a introdução de dados por este dispositivo."
+
+#~ msgid "Disable touchpad while typing to prevent accidental inputs."
+#~ msgstr ""
+#~ "Desactivar o rato por toque enquanto escreve para evitar introdução de "
+#~ "dados sem querer."
+
+#~ msgid "Swap left and right buttons."
+#~ msgstr "Trocar os botões esquerdo e direito."
+
+#, fuzzy
+#~| msgid ""
+#~| "Clicking left and right button simultaneously sends middle button click."
+#~ msgctxt "@info:tooltip for checkbox"
+#~ msgid ""
+#~ "Pressing the left and right button simultaneously acts as middle-click."
+#~ msgstr ""
+#~ "Se carregar nos botões esquerdo e direito em simultâneo, envia um 'click' "
+#~ "do botão do meio."
+
+#~ msgid "Slide with two fingers scrolls."
+#~ msgstr "O deslizamento com dois dedos faz o deslocamento."
+
+#~ msgid "Slide on the touchpad edges scrolls."
+#~ msgstr "Um deslizamento nos extremos do rato por toque faz o deslocamento."
+
+#~ msgid "Touchscreen like scrolling."
+#~ msgstr "Deslocamento como nos ecrãs tácteis."
+
+#, fuzzy
+#~| msgid "Disable horizontal scrolling"
+#~ msgid "Disable horizontal scrolling."
+#~ msgstr "Desactivar o deslocamento horizontal"
+
+#, fuzzy
+#~| msgid "Single tap is left button click."
+#~ msgctxt "@info:tooltip"
+#~ msgid "Single tap to left-click."
+#~ msgstr "Um toque simples é o botão esquerdo do rato."
+
+#~ msgid "Sliding over touchpad directly after tap drags."
+#~ msgstr ""
+#~ "Ao deslocar o dedo após um toque directo no rato por toque, fará o "
+#~ "arrastamento."
+
+#~ msgid "Tap-and-drag lock"
+#~ msgstr "Bloqueio do toque-e-arrastamento"
+
+#~ msgid "Dragging continues after a short finger lift."
+#~ msgstr "O arrastamento prossegue após uma elevação curta do dedo."
+
+#~ msgid ""
+#~ "Tap with two fingers to right-click, tap with three fingers to middle-"
+#~ "click."
+#~ msgstr ""
+#~ "Toque com dois dedos para o botão direito, toque com três dedos para o "
+#~ "botão do meio."
+
+#~ msgid "Tap with two fingers to right-click."
+#~ msgstr "Toque com dois dedos para o botão direito."
+
+#~ msgid ""
+#~ "Tap with two fingers to middle-click, tap with three fingers to right-"
+#~ "click."
+#~ msgstr ""
+#~ "Toque com dois dedos para o botão do meio, toque com três dedos para o "
+#~ "botão direito."
+
+#~ msgid "Tap with two fingers to middle-click."
+#~ msgstr "Toque com os dois dedos para o botão do meio."
+
+#, fuzzy
+#~| msgid "Tap with two fingers to right-click."
+#~ msgctxt "@info:tooltip for radiobutton"
+#~ msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
+#~ msgstr "Toque com dois dedos para o botão direito."
+
+#, fuzzy
+#~| msgid "Press bottom left and bottom right corners simultaneously"
+#~ msgctxt "@info:tooltip for radiobutton"
+#~ msgid ""
+#~ "Pressing the bottom left and bottom right corners simultaneously acts as "
+#~ "middle-click."
+#~ msgstr "Carregar em baixo e à esquerda e direita em simultâneo"
+
+#, fuzzy
+#~| msgid "Tap with two fingers to right-click."
+#~ msgctxt "@info:tooltip for radiobutton"
+#~ msgid ""
+#~ "Pressing the touchpad anywhere with three fingers acts as middle-click."
+#~ msgstr "Toque com dois dedos para o botão direito."
 
 #~ msgid "Touchpad"
 #~ msgstr "Rato por toque"

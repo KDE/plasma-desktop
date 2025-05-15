@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-07 00:44+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2025-03-24 14:54-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -258,6 +258,7 @@ msgid "Power"
 msgstr "ਪਾਵਰ"
 
 #: package/contents/ui/ConfigGeneral.qml:286
+#: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
 msgid "Session"
 msgstr "ਸ਼ੈਸ਼ਨ"
@@ -324,13 +325,14 @@ msgstr ""
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
-msgid "Leave"
-msgstr "ਛੱਡੋ"
-
-#: package/contents/ui/LeaveButtons.qml:169
-#, kde-format
 msgid "More"
 msgstr "ਹੋਰ"
+
+#: package/contents/ui/LeaveButtons.qml:169
+#, fuzzy, kde-format
+#| msgid "Session actions"
+msgid "Session and Power "
+msgstr "ਸ਼ੈਸ਼ਨ ਕਾਰਵਾਈਆਂ"
 
 #: package/contents/ui/main.qml:355
 #, kde-format
@@ -355,6 +357,9 @@ msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "ਅਕਸਰ ਵਰਤੇ"
 
+#~ msgid "Leave"
+#~ msgstr "ਛੱਡੋ"
+
 #~ msgctxt "@item:inmenu Reset icon to default"
 #~ msgid "Clear Icon"
 #~ msgstr "ਆਈਕਾਨ ਮਿਟਾਓ"
@@ -367,9 +372,6 @@ msgstr "ਅਕਸਰ ਵਰਤੇ"
 
 #~ msgid "Power actions"
 #~ msgstr "ਪਾਵਰ ਕਾਰਵਾਈਆਂ"
-
-#~ msgid "Session actions"
-#~ msgstr "ਸ਼ੈਸ਼ਨ ਕਾਰਵਾਈਆਂ"
 
 #, fuzzy
 #~| msgid "Leave"

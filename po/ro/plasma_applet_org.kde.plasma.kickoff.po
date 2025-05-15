@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-07 00:44+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2024-01-07 18:32+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -264,6 +264,7 @@ msgid "Power"
 msgstr "Alimentare"
 
 #: package/contents/ui/ConfigGeneral.qml:286
+#: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
 msgid "Session"
 msgstr "Sesiune"
@@ -330,13 +331,13 @@ msgstr ""
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
-msgid "Leave"
-msgstr "Pleacă"
+msgid "More"
+msgstr "Mai multe"
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
-msgid "More"
-msgstr "Mai multe"
+msgid "Session and Power "
+msgstr ""
 
 #: package/contents/ui/main.qml:355
 #, kde-format
@@ -360,3 +361,6 @@ msgstr "Istoric"
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr "Folosite frecvent"
+
+#~ msgid "Leave"
+#~ msgstr "Pleacă"

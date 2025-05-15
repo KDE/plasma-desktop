@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kickoff\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-07 00:44+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2017-09-25 19:53+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -264,6 +264,7 @@ msgid "Power"
 msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:286
+#: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
 msgid "Session"
 msgstr ""
@@ -328,15 +329,14 @@ msgstr ""
 msgid "There is a newly installed application in this category"
 msgstr ""
 
-# >> Leave as in logout, shutdown, reset...
-#: package/contents/ui/LeaveButtons.qml:169
-#, kde-format
-msgid "Leave"
-msgstr "Napusti"
-
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
 msgid "More"
+msgstr ""
+
+#: package/contents/ui/LeaveButtons.qml:169
+#, kde-format
+msgid "Session and Power "
 msgstr ""
 
 #: package/contents/ui/main.qml:355
@@ -364,6 +364,10 @@ msgstr "Istorijat"
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
 msgstr ""
+
+# >> Leave as in logout, shutdown, reset...
+#~ msgid "Leave"
+#~ msgstr "Napusti"
 
 #~ msgid "All Applications"
 #~ msgstr "Svi programi"
