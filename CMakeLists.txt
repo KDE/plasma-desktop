@@ -5,7 +5,7 @@ project(plasma-desktop)
 set(PROJECT_VERSION "6.3.80")
 
 set(PROJECT_DEP_VERSION "6.2.90")
-set(QT_MIN_VERSION "6.7.0")
+set(QT_MIN_VERSION "6.8.0")
 set(KF6_MIN_VERSION "6.14.0")
 set(ACCOUNTSQT_DEP_VERSION "1.13")
 
