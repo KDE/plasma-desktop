@@ -18,12 +18,12 @@ PlasmaCore.ToolTipArea {
     objectName: "org.kde.desktop-CompactApplet"
     anchors.fill: parent
 
-    mainText: plasmoidItem ? plasmoidItem.toolTipMainText : ""
-    subText: plasmoidItem ? plasmoidItem.toolTipSubText : ""
+    mainText: plasmoidItem.toolTipMainText
+    subText: plasmoidItem.toolTipSubText
     location: Plasmoid.location
-    active: plasmoidItem ? !plasmoidItem.expanded : false
-    textFormat: plasmoidItem ? plasmoidItem.toolTipTextFormat : 0
-    mainItem: plasmoidItem && plasmoidItem.toolTipItem ? plasmoidItem.toolTipItem : null
+    active: !plasmoidItem.expanded
+    textFormat: plasmoidItem.toolTipTextFormat
+    mainItem: plasmoidItem.toolTipItem ? plasmoidItem.toolTipItem : null
 
     readonly property bool vertical: location === PlasmaCore.Types.RightEdge || location === PlasmaCore.Types.LeftEdge
 
@@ -136,7 +136,7 @@ PlasmaCore.ToolTipArea {
             }
             return prefix;
         }
-        opacity: plasmoidItem && plasmoidItem.expanded ? 1 : 0
+        opacity: plasmoidItem.expanded ? 1 : 0
         Behavior on opacity {
             NumberAnimation {
                 duration: Kirigami.Units.shortDuration
@@ -198,8 +198,8 @@ PlasmaCore.ToolTipArea {
             ? PlasmaCore.AppletPopup.AtScreenEdges
             : PlasmaCore.AppletPopup.AtScreenEdges | PlasmaCore.AppletPopup.AtPanelEdges
 
-        hideOnWindowDeactivate: root.plasmoidItem && root.plasmoidItem.hideOnWindowDeactivate
-        visible: root.plasmoidItem && root.plasmoidItem.expanded && fullRepresentation
+        hideOnWindowDeactivate: root.plasmoidItem.hideOnWindowDeactivate
+        visible: root.plasmoidItem.expanded && fullRepresentation
         visualParent: root.compactRepresentation
         backgroundHints: (Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentPrefersOpaqueBackground) ? PlasmaCore.AppletPopup.SolidBackground : PlasmaCore.AppletPopup.StandardBackground
         appletInterface: root.plasmoidItem
