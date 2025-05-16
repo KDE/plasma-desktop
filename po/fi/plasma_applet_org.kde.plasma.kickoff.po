@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2013, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2013, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
 # Lasse Liehu <lasse.liehu@gmail.com>, 2013, 2014, 2015, 2016, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2024-12-22 22:07+0200\n"
+"PO-Revision-Date: 2025-04-08 08:23+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -154,11 +154,10 @@ msgid "General:"
 msgstr "Perusasetukset:"
 
 #: package/contents/ui/ConfigGeneral.qml:176
-#, fuzzy, kde-format
-#| msgid "Always sort applications alphabetically"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
-msgstr "Aakkosta sovellukset aina"
+msgstr "Aakkosta sovellukset"
 
 #: package/contents/ui/ConfigGeneral.qml:180
 #, kde-format
@@ -167,6 +166,8 @@ msgid ""
 "This doesn't affect how applications are sorted in either search results or "
 "the favorites page."
 msgstr ""
+"Tämä ei vaikuta siihen, miten sovellukset lajitellaan hakutuloksissa tai "
+"suosikkisivulla."
 
 #: package/contents/ui/ConfigGeneral.qml:186
 #, kde-format

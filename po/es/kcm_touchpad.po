@@ -1,15 +1,15 @@
-# Translation of kcm_touchpad to Spanish
-# Copyright (C) 2015 This_file_is_part_of_KDE
+# Spanish translations for kcm_touchpad.po package.
+# Copyright (C) 2015-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-#
 # Automatically generated, 2015.
+#
 # SPDX-FileCopyrightText: 2015, 2017, 2018, 2019, 2020, 2021, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-02-01 12:13+0100\n"
+"PO-Revision-Date: 2025-05-15 18:55+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -254,11 +254,13 @@ msgid ""
 "Tap, then tap and immediately slide finger over the touchpad to drag. Lift "
 "finger to drop."
 msgstr ""
+"Toque, vuelva a tocar e, inmediatamente, deslice el dedo sobre el panel "
+"táctil para arrastrar. Levante el dedo para soltar."
 
 #: ui/main.qml:485
 #, kde-format
 msgid "Allow briefly lifting finger during tap-and-drag"
-msgstr ""
+msgstr "Permitir levantar el dedo brevemente durante tocar y arrastrar"
 
 #: ui/main.qml:499
 #, kde-format
@@ -348,125 +350,3 @@ msgstr "Pulsar las esquinas inferior derecha e inferior izquierda"
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
 msgstr "Pulsar el panel táctil con tres dedos"
-
-#~ msgid "Accept input through this device."
-#~ msgstr "Aceptar entrada de este dispositivo."
-
-#~ msgid "Disable touchpad while typing to prevent accidental inputs."
-#~ msgstr ""
-#~ "Desactivar el panel táctil al escribir para evitar entradas accidentales."
-
-#~ msgid "Swap left and right buttons."
-#~ msgstr "Intercambiar los botones derecho e izquierdo."
-
-#~ msgctxt "@info:tooltip for checkbox"
-#~ msgid ""
-#~ "Pressing the left and right button simultaneously acts as middle-click."
-#~ msgstr ""
-#~ "La pulsación simultánea de los botones izquierdo y derecho actúa como un "
-#~ "clic del botón central."
-
-#~ msgid "Slide with two fingers scrolls."
-#~ msgstr "Deslice con dos dedos para desplazar."
-
-#~ msgid "Slide on the touchpad edges scrolls."
-#~ msgstr "Deslice sobre los bordes del panel táctil para desplazar."
-
-#~ msgid "Touchscreen like scrolling."
-#~ msgstr "Desplazar como en pantalla táctil."
-
-#~ msgid "Disable horizontal scrolling."
-#~ msgstr "Desactivar el desplazamiento horizontal."
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Single tap to left-click."
-#~ msgstr "Un único toque representa el clic del botón izquierdo."
-
-#~ msgid "Sliding over touchpad directly after tap drags."
-#~ msgstr ""
-#~ "Arrastrar al deslizar sobre el panel táctil directamente tras tocar."
-
-#~ msgid "Tap-and-drag lock"
-#~ msgstr "Bloqueo para tocar y arrastrar"
-
-#~ msgid "Dragging continues after a short finger lift."
-#~ msgstr "El arrastre continúa tras levantar brevemente el dedo."
-
-#~ msgid ""
-#~ "Tap with two fingers to right-click, tap with three fingers to middle-"
-#~ "click."
-#~ msgstr ""
-#~ "Toque con dos dedos para simular un clic derecho, o con tres para un clic "
-#~ "central."
-
-#~ msgid "Tap with two fingers to right-click."
-#~ msgstr "Toque con dos dedos para simular un clic derecho."
-
-#~ msgid ""
-#~ "Tap with two fingers to middle-click, tap with three fingers to right-"
-#~ "click."
-#~ msgstr ""
-#~ "Toque con dos dedos para simular un clic central, o con tres para un clic "
-#~ "derecho."
-
-#~ msgid "Tap with two fingers to middle-click."
-#~ msgstr "Toque con dos dedos para simular un clic central."
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Pressing the bottom right corner of your touchpad acts as right-click. "
-#~ "Middle-click by simultaneously pressing the bottom left and bottom right "
-#~ "corners."
-#~ msgstr ""
-#~ "La pulsación de la esquina inferior derecha del panel táctil actúa como "
-#~ "un clic derecho. Pulse simultáneamente las esquinas inferior derecha e "
-#~ "inferior izquierda para simular un clic central."
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Pressing the bottom right corner of your touchpad acts as right-click. "
-#~ "Middle-click by pressing the bottom central area."
-#~ msgstr ""
-#~ "La pulsación de la esquina inferior derecha del panel táctil actúa como "
-#~ "un clic derecho. Pulse el área inferior central para simular un clic "
-#~ "central."
-
-#~ msgctxt "@info:tooltip for radiobutton"
-#~ msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
-#~ msgstr ""
-#~ "La pulsación de cualquier parte del panel central con dos dedos actúa "
-#~ "como un clic derecho."
-
-#~ msgctxt "@info:tooltip for radiobutton"
-#~ msgid ""
-#~ "Pressing the bottom right corner of your touchpad acts as right-click."
-#~ msgstr ""
-#~ "La pulsación de la esquina inferior derecha del panel táctil actúa como "
-#~ "un clic derecho."
-
-#~ msgctxt "@info:tooltip for radiobutton"
-#~ msgid ""
-#~ "Pressing the bottom left and bottom right corners simultaneously acts as "
-#~ "middle-click."
-#~ msgstr ""
-#~ "La pulsación simultánea de las esquinas inferior derecha e inferior "
-#~ "izquierda actúa como un clic central."
-
-#~ msgctxt "@info:tooltip for radiobutton"
-#~ msgid ""
-#~ "Pressing the touchpad anywhere with three fingers acts as middle-click."
-#~ msgstr ""
-#~ "La pulsación de cualquier parte del panel central con tres dedos actúa "
-#~ "como un clic central."
-
-#~ msgid "Touchpad"
-#~ msgstr "Panel táctil"
-
-#~ msgid "Enable Touchpad"
-#~ msgstr "Activar el panel táctil"
-
-#~ msgid "Disable Touchpad"
-#~ msgstr "Desactivar el panel táctil"
-
-#~ msgid "Toggle Touchpad"
-#~ msgstr "Conmutar el panel táctil"
