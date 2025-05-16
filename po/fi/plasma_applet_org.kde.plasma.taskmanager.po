@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-30 00:44+0000\n"
-"PO-Revision-Date: 2025-03-15 09:08+0200\n"
+"PO-Revision-Date: 2025-04-20 16:42+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -19,15 +19,12 @@ msgstr ""
 "X-Generator: Lokalize 23.08.5\n"
 
 #: backend.cpp:284
-#, fuzzy, kde-format
-#| msgctxt "Show all user Places"
-#| msgid "%1 more Place"
-#| msgid_plural "%1 more Places"
+#, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place…"
 msgid_plural "%1 more Places…"
-msgstr[0] "Vielä %1 kohde"
-msgstr[1] "Vielä %1 kohdetta"
+msgstr[0] "Vielä %1 sijainti…"
+msgstr[1] "Vielä %1 sijaintia…"
 
 #: backend.cpp:368
 #, kde-format
@@ -385,7 +382,7 @@ msgstr "Aktiviteeteittain"
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By horizontal window position"
-msgstr ""
+msgstr "Ikkunan vaakasijainnin mukaan"
 
 #: package/contents/ui/ConfigBehavior.qml:163
 #, kde-format

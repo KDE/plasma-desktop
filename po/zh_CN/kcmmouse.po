@@ -207,7 +207,7 @@ msgstr "反转滚动方向"
 #: ui/main.qml:330
 #, kde-format
 msgid "Hold down middle button and move mouse to scroll"
-msgstr ""
+msgstr "按住中键并移动鼠标以滚动"
 
 #: ui/main.qml:342
 #, kde-format
@@ -218,20 +218,5 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
-
-#~ msgid "Accept input through this device."
-#~ msgstr "接受这个设备的输入。"
-
-#~ msgid "Swap left and right buttons."
-#~ msgstr "交换左键和右键"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Pressing the left and right button simultaneously acts as middle-click."
-#~ msgstr "同时点击左键和右键时进行中键点击。"
-
-#~ msgid "Touchscreen-like scrolling."
-#~ msgstr "模仿触摸屏的滚动方式。"
-
-#~ msgid "Scrolling with the mouse while the middle button is pressed."
-#~ msgstr "按住中键时用鼠标滚动。"
+"这将干扰使用中键拖动的应用程序，例如某些图像编辑器、文档查看器或游戏。此功能"
+"在任意设备上均可使用，但主要用于在没有滚轮设备上替代滚轮的功能。"

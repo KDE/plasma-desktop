@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-23 00:42+0000\n"
+"POT-Creation-Date: 2025-05-16 00:43+0000\n"
 "PO-Revision-Date: 2009-08-08 18:23+0000\n"
 "Last-Translator: Vilson Gjeci <vilsongjeci@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -26,7 +26,15 @@ msgctxt "@title the name of the Trash widget"
 msgid "Trash"
 msgstr "Koshi"
 
-#: contents/ui/main.qml:34
+#: contents/ui/main.qml:35
+#, fuzzy, kde-format
+#| msgctxt "The trash is empty. This is not an action, but a state"
+#| msgid "Empty"
+msgctxt "@info:status The trash is being emptied"
+msgid "Emptying…"
+msgstr "Bosh"
+
+#: contents/ui/main.qml:37
 #, fuzzy, kde-format
 #| msgid "One item"
 #| msgid_plural "%1 items"
@@ -36,7 +44,7 @@ msgid_plural "%1 items"
 msgstr[0] "Një temë"
 msgstr[1] "%1 tema"
 
-#: contents/ui/main.qml:35
+#: contents/ui/main.qml:39
 #, fuzzy, kde-format
 #| msgctxt "The trash is empty. This is not an action, but a state"
 #| msgid "Empty"
@@ -44,14 +52,14 @@ msgctxt "@info:status The trash is empty"
 msgid "Empty"
 msgstr "Bosh"
 
-#: contents/ui/main.qml:72
+#: contents/ui/main.qml:79
 #, fuzzy, kde-format
 #| msgid "&Open"
 msgctxt "@action:inmenu Open the trash"
 msgid "Open"
 msgstr "&Hape"
 
-#: contents/ui/main.qml:77
+#: contents/ui/main.qml:84
 #, fuzzy, kde-format
 #| msgctxt "The trash is empty. This is not an action, but a state"
 #| msgid "Empty"
@@ -59,7 +67,7 @@ msgctxt "@action:inmenu Empty the trash"
 msgid "Empty"
 msgstr "Bosh"
 
-#: contents/ui/main.qml:83
+#: contents/ui/main.qml:90
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Trash Settings…"

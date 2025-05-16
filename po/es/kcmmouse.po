@@ -1,5 +1,5 @@
-# Translation of kcmmouse to Spanish
-# Copyright (C) 2000-2025 This_file_is_part_of_KDE
+# Spanish translations for kcmmouse.po package.
+# Copyright (C) 2000-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # SPDX-FileCopyrightText: 2000, 2001, 2002, 2004, 2005, 2006 Pablo de Vicente <pablo.devicente@gmail.com>
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-02-01 12:14+0100\n"
+"PO-Revision-Date: 2025-05-15 19:49+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.04.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
@@ -140,13 +140,13 @@ msgstr "Pulse un botón del ratón"
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
-msgstr "Añadir asignación..."
+msgstr "Añadir asignación…"
 
 #: ui/main.qml:37
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
-msgstr "Configurar los botones adicionales..."
+msgstr "Configurar los botones adicionales…"
 
 #: ui/main.qml:64
 #, kde-format
@@ -232,10 +232,9 @@ msgid "Invert scroll direction"
 msgstr "Invertir la dirección de desplazamiento"
 
 #: ui/main.qml:330
-#, fuzzy, kde-format
-#| msgid "Press middle button and move mouse to scroll"
+#, kde-format
 msgid "Hold down middle button and move mouse to scroll"
-msgstr "Pulsar el botón central y mover el ratón para desplazar"
+msgstr "Mantener pulsado el botón central y mover el ratón para desplazar"
 
 #: ui/main.qml:342
 #, kde-format
@@ -246,22 +245,8 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
-
-#~ msgid "Accept input through this device."
-#~ msgstr "Aceptar entrada mediante este dispositivo."
-
-#~ msgid "Swap left and right buttons."
-#~ msgstr "Permutar los botones derecho e izquierdo."
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Pressing the left and right button simultaneously acts as middle-click."
-#~ msgstr ""
-#~ "La pulsación simultánea de los botones derecho e izquierdo actúa como un "
-#~ "clic central."
-
-#~ msgid "Touchscreen-like scrolling."
-#~ msgstr "Desplazamiento como en pantalla táctil."
-
-#~ msgid "Scrolling with the mouse while the middle button is pressed."
-#~ msgstr "Desplazar con el ratón mientras se pulsa el botón central."
+"Esto interferirá con las aplicaciones que usen el arrastre con el botón "
+"central, como algunos editores de imágenes, visores de documentos o "
+"videojuegos. Se puede usar en cualquier dispositivo, aunque está pensado "
+"principalmente como un sustituto de la rueda de desplazamiento en los "
+"dispositivos que no disponen de ella."
