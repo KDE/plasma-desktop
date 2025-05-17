@@ -360,8 +360,6 @@ PlasmoidItem {
     ]
 
     Component.onCompleted: {
-        if (Plasmoid.hasOwnProperty("activationTogglesExpanded")) {
-            Plasmoid.activationTogglesExpanded = true
-        }
+        Plasmoid.activationTogglesExpanded = true
     }
 } // root
