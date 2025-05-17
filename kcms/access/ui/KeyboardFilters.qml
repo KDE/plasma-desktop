@@ -147,7 +147,7 @@ Kirigami.FormLayout {
             extraEnabledConditions: kcm.keyboardFiltersSettings.bounceKeys
         }
 
-        from: 100
+        from: 5
         to: 10000
 
         value: kcm.keyboardFiltersSettings.bounceKeysDelay
