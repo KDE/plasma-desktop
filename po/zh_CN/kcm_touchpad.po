@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-desktop/kcm_touchpad.pot\n"
-"X-Crowdin-File-ID: 43419\n"
+"X-Crowdin-File: /kf6-stable/messages/plasma-desktop/kcm_touchpad.pot\n"
+"X-Crowdin-File-ID: 50582\n"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -227,7 +227,7 @@ msgstr "轻触点击"
 #: ui/main.qml:465
 #, kde-format
 msgid "Tap-and-drag"
-msgstr "轻触拖拽"
+msgstr "轻触拖动"
 
 #: ui/main.qml:478
 #, kde-format
@@ -236,11 +236,13 @@ msgid ""
 "Tap, then tap and immediately slide finger over the touchpad to drag. Lift "
 "finger to drop."
 msgstr ""
+"轻触，然后再次轻触并立即在触摸板上滑动手指以拖动对象。手指离开板面以放下对"
+"象。"
 
 #: ui/main.qml:485
 #, kde-format
 msgid "Allow briefly lifting finger during tap-and-drag"
-msgstr ""
+msgstr "轻触拖动时允许手指短暂离开触摸板"
 
 #: ui/main.qml:499
 #, kde-format
