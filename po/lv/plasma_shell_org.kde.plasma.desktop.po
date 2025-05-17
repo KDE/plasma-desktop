@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-05-17 00:43+0000\n"
 "PO-Revision-Date: 2025-03-22 09:29+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -113,7 +113,7 @@ msgstr "Atvērt vietni %1"
 msgid "Copyright"
 msgstr "Autortiesības"
 
-#: contents/configuration/AboutPlugin.qml:158 contents/explorer/Tooltip.qml:94
+#: contents/configuration/AboutPlugin.qml:158
 #, kde-format
 msgid "License:"
 msgstr "Licence:"
@@ -704,21 +704,6 @@ msgstr[0] "Noņemt „%2“ logdaļas palaisto %1 instanci"
 msgstr[1] "Noņemt „%2“ logdaļas palaistās %1 instances"
 msgstr[2] "Noņemt „%2“ logdaļas palaistās %1 instances"
 
-#: contents/explorer/Tooltip.qml:105
-#, kde-format
-msgid "Author:"
-msgstr "Autors:"
-
-#: contents/explorer/Tooltip.qml:115
-#, kde-format
-msgid "Email:"
-msgstr "E-pasts:"
-
-#: contents/explorer/Tooltip.qml:136
-#, kde-format
-msgid "Uninstall"
-msgstr "Atinstalēt"
-
 #: contents/explorer/WidgetExplorer.qml:140
 #: contents/explorer/WidgetExplorer.qml:223
 #, kde-format
@@ -930,6 +915,15 @@ msgstr "Iziet no rediģēšanas režīma"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Paneļa fokusa indikators"
+
+#~ msgid "Author:"
+#~ msgstr "Autors:"
+
+#~ msgid "Email:"
+#~ msgstr "E-pasts:"
+
+#~ msgid "Uninstall"
+#~ msgstr "Atinstalēt"
 
 #~ msgctxt "Percentage value"
 #~ msgid "%1%"

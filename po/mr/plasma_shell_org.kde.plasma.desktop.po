@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-05-17 00:43+0000\n"
 "PO-Revision-Date: 2013-03-28 12:56+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -108,7 +108,7 @@ msgstr ""
 msgid "Copyright"
 msgstr ""
 
-#: contents/configuration/AboutPlugin.qml:158 contents/explorer/Tooltip.qml:94
+#: contents/configuration/AboutPlugin.qml:158
 #, kde-format
 msgid "License:"
 msgstr "परवाना :"
@@ -692,21 +692,6 @@ msgid_plural "Remove all %1 running instances of widget %2"
 msgstr[0] ""
 msgstr[1] ""
 
-#: contents/explorer/Tooltip.qml:105
-#, kde-format
-msgid "Author:"
-msgstr "लेखक :"
-
-#: contents/explorer/Tooltip.qml:115
-#, kde-format
-msgid "Email:"
-msgstr "इमेल :"
-
-#: contents/explorer/Tooltip.qml:136
-#, kde-format
-msgid "Uninstall"
-msgstr "अप्रतिष्ठापन करा"
-
 #: contents/explorer/WidgetExplorer.qml:140
 #: contents/explorer/WidgetExplorer.qml:223
 #, fuzzy, kde-format
@@ -923,6 +908,15 @@ msgstr ""
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr ""
+
+#~ msgid "Author:"
+#~ msgstr "लेखक :"
+
+#~ msgid "Email:"
+#~ msgstr "इमेल :"
+
+#~ msgid "Uninstall"
+#~ msgstr "अप्रतिष्ठापन करा"
 
 #, fuzzy
 #~| msgid "Get new widgets"

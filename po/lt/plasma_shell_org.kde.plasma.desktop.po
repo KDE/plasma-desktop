@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-05-17 00:43+0000\n"
 "PO-Revision-Date: 2025-04-28 13:58+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -116,7 +116,7 @@ msgstr "Atverti internetinę svetainę %1"
 msgid "Copyright"
 msgstr "Autorių teisės"
 
-#: contents/configuration/AboutPlugin.qml:158 contents/explorer/Tooltip.qml:94
+#: contents/configuration/AboutPlugin.qml:158
 #, kde-format
 msgid "License:"
 msgstr "Licencija:"
@@ -707,21 +707,6 @@ msgstr[1] "Pašalinti visus %1 veikiančius valdiklio %2 egzempliorius"
 msgstr[2] "Pašalinti visus %1 veikiančių valdiklio %2 egzempliorių"
 msgstr[3] "Pašalinti visus %1 veikiantį valdiklio %2 egzempliorių"
 
-#: contents/explorer/Tooltip.qml:105
-#, kde-format
-msgid "Author:"
-msgstr "Autorius:"
-
-#: contents/explorer/Tooltip.qml:115
-#, kde-format
-msgid "Email:"
-msgstr "El. paštas:"
-
-#: contents/explorer/Tooltip.qml:136
-#, kde-format
-msgid "Uninstall"
-msgstr "Pašalinti"
-
 #: contents/explorer/WidgetExplorer.qml:140
 #: contents/explorer/WidgetExplorer.qml:223
 #, kde-format
@@ -934,6 +919,15 @@ msgstr "Išjungti taisymo veikseną"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Skydelio fokusavimo indikatorius"
+
+#~ msgid "Author:"
+#~ msgstr "Autorius:"
+
+#~ msgid "Email:"
+#~ msgstr "El. paštas:"
+
+#~ msgid "Uninstall"
+#~ msgstr "Pašalinti"
 
 #~ msgctxt "Percentage value"
 #~ msgid "%1%"

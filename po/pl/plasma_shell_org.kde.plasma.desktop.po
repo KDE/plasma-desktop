@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-05-17 00:43+0000\n"
 "PO-Revision-Date: 2025-02-15 11:13+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -113,7 +113,7 @@ msgstr "Otwórz stronę sieciową %1"
 msgid "Copyright"
 msgstr "Prawa autorskie"
 
-#: contents/configuration/AboutPlugin.qml:158 contents/explorer/Tooltip.qml:94
+#: contents/configuration/AboutPlugin.qml:158
 #, kde-format
 msgid "License:"
 msgstr "Licencja:"
@@ -702,21 +702,6 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: contents/explorer/Tooltip.qml:105
-#, kde-format
-msgid "Author:"
-msgstr "Autor:"
-
-#: contents/explorer/Tooltip.qml:115
-#, kde-format
-msgid "Email:"
-msgstr "Adres pocztowy:"
-
-#: contents/explorer/Tooltip.qml:136
-#, kde-format
-msgid "Uninstall"
-msgstr "Usuń "
-
 #: contents/explorer/WidgetExplorer.qml:140
 #: contents/explorer/WidgetExplorer.qml:223
 #, kde-format
@@ -941,6 +926,15 @@ msgstr "Wyjdź z trybu dostosowywania"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Wskaźnik bycia na pasku"
+
+#~ msgid "Author:"
+#~ msgstr "Autor:"
+
+#~ msgid "Email:"
+#~ msgstr "Adres pocztowy:"
+
+#~ msgid "Uninstall"
+#~ msgstr "Usuń "
 
 #~ msgctxt "Percentage value"
 #~ msgid "%1%"

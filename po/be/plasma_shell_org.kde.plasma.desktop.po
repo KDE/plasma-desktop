@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-05-17 00:43+0000\n"
 "PO-Revision-Date: 2024-11-06 22:00\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -117,7 +117,7 @@ msgstr "Адкрыць вэб-сайт %1"
 msgid "Copyright"
 msgstr "Аўтарскія правы"
 
-#: contents/configuration/AboutPlugin.qml:158 contents/explorer/Tooltip.qml:94
+#: contents/configuration/AboutPlugin.qml:158
 #, kde-format
 msgid "License:"
 msgstr "Ліцэнзія:"
@@ -718,21 +718,6 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: contents/explorer/Tooltip.qml:105
-#, kde-format
-msgid "Author:"
-msgstr "Стваральнік:"
-
-#: contents/explorer/Tooltip.qml:115
-#, kde-format
-msgid "Email:"
-msgstr "Электронная пошта:"
-
-#: contents/explorer/Tooltip.qml:136
-#, kde-format
-msgid "Uninstall"
-msgstr "Выдаліць"
-
 #: contents/explorer/WidgetExplorer.qml:140
 #: contents/explorer/WidgetExplorer.qml:223
 #, kde-format
@@ -961,6 +946,15 @@ msgstr "Выйсці з рэжыму рэдагавання"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Індыкатар фокуса панэлі"
+
+#~ msgid "Author:"
+#~ msgstr "Стваральнік:"
+
+#~ msgid "Email:"
+#~ msgstr "Электронная пошта:"
+
+#~ msgid "Uninstall"
+#~ msgstr "Выдаліць"
 
 #~ msgctxt "Percentage value"
 #~ msgid "%1%"

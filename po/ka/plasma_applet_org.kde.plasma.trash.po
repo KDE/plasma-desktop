@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-16 00:43+0000\n"
-"PO-Revision-Date: 2023-08-12 06:09+0200\n"
+"PO-Revision-Date: 2025-05-16 03:37+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.6\n"
 
 #: contents/ui/main.qml:32
 #, kde-format
@@ -25,12 +25,10 @@ msgid "Trash"
 msgstr "ნაგვის ყუთი"
 
 #: contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgctxt "@info:status The trash is empty"
-#| msgid "Empty"
+#, kde-format
 msgctxt "@info:status The trash is being emptied"
 msgid "Emptying…"
-msgstr "ცარიელი"
+msgstr "დაცარიელება…"
 
 #: contents/ui/main.qml:37
 #, kde-format

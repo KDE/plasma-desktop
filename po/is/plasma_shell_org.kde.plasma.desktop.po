@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-05-17 00:43+0000\n"
 "PO-Revision-Date: 2025-04-17 15:45+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -112,7 +112,7 @@ msgstr "Opna vefsíðu %1"
 msgid "Copyright"
 msgstr "Höfundarréttur"
 
-#: contents/configuration/AboutPlugin.qml:158 contents/explorer/Tooltip.qml:94
+#: contents/configuration/AboutPlugin.qml:158
 #, kde-format
 msgid "License:"
 msgstr "Notkunarleyfi:"
@@ -703,21 +703,6 @@ msgid_plural "Remove all %1 running instances of widget %2"
 msgstr[0] "Fjarlægja tilvik í keyrslu af græju %2"
 msgstr[1] "Fjarlæga öll %1 tilvik í keyrslu af græju %2"
 
-#: contents/explorer/Tooltip.qml:105
-#, kde-format
-msgid "Author:"
-msgstr "Höfundur:"
-
-#: contents/explorer/Tooltip.qml:115
-#, kde-format
-msgid "Email:"
-msgstr "Netfang:"
-
-#: contents/explorer/Tooltip.qml:136
-#, kde-format
-msgid "Uninstall"
-msgstr "Fjarlægja"
-
 #: contents/explorer/WidgetExplorer.qml:140
 #: contents/explorer/WidgetExplorer.qml:223
 #, kde-format
@@ -928,6 +913,15 @@ msgstr "Loka breytisniði"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Fókusvísir skjáborðsstiku"
+
+#~ msgid "Author:"
+#~ msgstr "Höfundur:"
+
+#~ msgid "Email:"
+#~ msgstr "Netfang:"
+
+#~ msgid "Uninstall"
+#~ msgstr "Fjarlægja"
 
 #~ msgctxt "Percentage value"
 #~ msgid "%1%"

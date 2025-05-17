@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-05-17 00:43+0000\n"
 "PO-Revision-Date: 2025-05-09 11:01+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -117,7 +117,7 @@ msgstr "Obri el lloc web %1"
 msgid "Copyright"
 msgstr "Drets d'autoria"
 
-#: contents/configuration/AboutPlugin.qml:158 contents/explorer/Tooltip.qml:94
+#: contents/configuration/AboutPlugin.qml:158
 #, kde-format
 msgid "License:"
 msgstr "Llicència:"
@@ -703,21 +703,6 @@ msgid_plural "Remove all %1 running instances of widget %2"
 msgstr[0] "Elimina la instancia en execució del giny %2"
 msgstr[1] "Elimina totes les %1 instàncies en execució del giny %2"
 
-#: contents/explorer/Tooltip.qml:105
-#, kde-format
-msgid "Author:"
-msgstr "Autoria:"
-
-#: contents/explorer/Tooltip.qml:115
-#, kde-format
-msgid "Email:"
-msgstr "Correu electrònic:"
-
-#: contents/explorer/Tooltip.qml:136
-#, kde-format
-msgid "Uninstall"
-msgstr "Desinstal·la"
-
 #: contents/explorer/WidgetExplorer.qml:140
 #: contents/explorer/WidgetExplorer.qml:223
 #, kde-format
@@ -928,6 +913,15 @@ msgstr "Ix del mode edició"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Indicador de focus del quadro"
+
+#~ msgid "Author:"
+#~ msgstr "Autoria:"
+
+#~ msgid "Email:"
+#~ msgstr "Correu electrònic:"
+
+#~ msgid "Uninstall"
+#~ msgstr "Desinstal·la"
 
 #~ msgctxt "Percentage value"
 #~ msgid "%1%"

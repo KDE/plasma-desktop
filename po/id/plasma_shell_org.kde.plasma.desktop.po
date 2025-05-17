@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-05-17 00:43+0000\n"
 "PO-Revision-Date: 2025-03-15 07:18+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -114,7 +114,7 @@ msgstr "Buka situs %1"
 msgid "Copyright"
 msgstr "Hak Cipta"
 
-#: contents/configuration/AboutPlugin.qml:158 contents/explorer/Tooltip.qml:94
+#: contents/configuration/AboutPlugin.qml:158
 #, kde-format
 msgid "License:"
 msgstr "Lisensi:"
@@ -705,21 +705,6 @@ msgid_plural "Remove all %1 running instances of widget %2"
 msgstr[0] "Hapus instansi widget %1 yang berjalan"
 msgstr[1] "Hapus semua %1 instansi widget %2 yang berjalan"
 
-#: contents/explorer/Tooltip.qml:105
-#, kde-format
-msgid "Author:"
-msgstr "Penulis:"
-
-#: contents/explorer/Tooltip.qml:115
-#, kde-format
-msgid "Email:"
-msgstr "Email:"
-
-#: contents/explorer/Tooltip.qml:136
-#, kde-format
-msgid "Uninstall"
-msgstr "Hapus instalasi"
-
 #: contents/explorer/WidgetExplorer.qml:140
 #: contents/explorer/WidgetExplorer.qml:223
 #, kde-format
@@ -930,6 +915,15 @@ msgstr "Keluar Mode Edit"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Indikator Fokus Panel"
+
+#~ msgid "Author:"
+#~ msgstr "Penulis:"
+
+#~ msgid "Email:"
+#~ msgstr "Email:"
+
+#~ msgid "Uninstall"
+#~ msgstr "Hapus instalasi"
 
 #~ msgctxt "Percentage value"
 #~ msgid "%1%"

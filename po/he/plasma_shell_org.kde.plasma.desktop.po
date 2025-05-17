@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-05-17 00:43+0000\n"
 "PO-Revision-Date: 2025-05-09 07:52+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -113,7 +113,7 @@ msgstr "פתיחת האתר %1"
 msgid "Copyright"
 msgstr "זכויות יוצרים"
 
-#: contents/configuration/AboutPlugin.qml:158 contents/explorer/Tooltip.qml:94
+#: contents/configuration/AboutPlugin.qml:158
 #, kde-format
 msgid "License:"
 msgstr "רישיון:"
@@ -699,21 +699,6 @@ msgstr[1] "הסרת שני עותקים פעיל של וידג׳ט %2"
 msgstr[2] "הסרת %1 עותקים פעיל של וידג׳ט %2"
 msgstr[3] "הסרת %1 עותקים פעיל של וידג׳ט %2"
 
-#: contents/explorer/Tooltip.qml:105
-#, kde-format
-msgid "Author:"
-msgstr "מחבר:"
-
-#: contents/explorer/Tooltip.qml:115
-#, kde-format
-msgid "Email:"
-msgstr "דוא״ל:"
-
-#: contents/explorer/Tooltip.qml:136
-#, kde-format
-msgid "Uninstall"
-msgstr "הסרה"
-
 #: contents/explorer/WidgetExplorer.qml:140
 #: contents/explorer/WidgetExplorer.qml:223
 #, kde-format
@@ -926,6 +911,15 @@ msgstr "יציאה ממצב עריכה"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "מחוון מיקוד לוח"
+
+#~ msgid "Author:"
+#~ msgstr "מחבר:"
+
+#~ msgid "Email:"
+#~ msgstr "דוא״ל:"
+
+#~ msgid "Uninstall"
+#~ msgstr "הסרה"
 
 #~ msgctxt "Percentage value"
 #~ msgid "%1%"

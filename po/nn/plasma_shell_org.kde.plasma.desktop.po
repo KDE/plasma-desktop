@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-05-17 00:43+0000\n"
 "PO-Revision-Date: 2025-05-03 12:28+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -114,7 +114,7 @@ msgstr "Opna heime­side: %1"
 msgid "Copyright"
 msgstr "Opphavsrett"
 
-#: contents/configuration/AboutPlugin.qml:158 contents/explorer/Tooltip.qml:94
+#: contents/configuration/AboutPlugin.qml:158
 #, kde-format
 msgid "License:"
 msgstr "Lisens:"
@@ -696,21 +696,6 @@ msgid_plural "Remove all %1 running instances of widget %2"
 msgstr[0] "Fjern køyrande instans av elementet %2"
 msgstr[1] "Fjern alle %1 køyrande instansar av elementet %2"
 
-#: contents/explorer/Tooltip.qml:105
-#, kde-format
-msgid "Author:"
-msgstr "Laga av:"
-
-#: contents/explorer/Tooltip.qml:115
-#, kde-format
-msgid "Email:"
-msgstr "E-postadresse:"
-
-#: contents/explorer/Tooltip.qml:136
-#, kde-format
-msgid "Uninstall"
-msgstr "Avinstaller"
-
 #: contents/explorer/WidgetExplorer.qml:140
 #: contents/explorer/WidgetExplorer.qml:223
 #, kde-format
@@ -921,6 +906,15 @@ msgstr "Avslutt tilpassing"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Panelfokus-markør"
+
+#~ msgid "Author:"
+#~ msgstr "Laga av:"
+
+#~ msgid "Email:"
+#~ msgstr "E-postadresse:"
+
+#~ msgid "Uninstall"
+#~ msgstr "Avinstaller"
 
 #~ msgctxt "Percentage value"
 #~ msgid "%1%"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-05-17 00:43+0000\n"
 "PO-Revision-Date: 2025-05-09 13:26+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -115,7 +115,7 @@ msgstr "Відкрити сайт %1"
 msgid "Copyright"
 msgstr "Авторські права"
 
-#: contents/configuration/AboutPlugin.qml:158 contents/explorer/Tooltip.qml:94
+#: contents/configuration/AboutPlugin.qml:158
 #, kde-format
 msgid "License:"
 msgstr "Ліцензування:"
@@ -703,21 +703,6 @@ msgstr[1] "Вилучити усі %1 запущені екземпляри ві
 msgstr[2] "Вилучити усі %1 запущених екземплярів віджета %2"
 msgstr[3] "Вилучити запущений екземпляр віджета %2"
 
-#: contents/explorer/Tooltip.qml:105
-#, kde-format
-msgid "Author:"
-msgstr "Автор:"
-
-#: contents/explorer/Tooltip.qml:115
-#, kde-format
-msgid "Email:"
-msgstr "Ел. пошта:"
-
-#: contents/explorer/Tooltip.qml:136
-#, kde-format
-msgid "Uninstall"
-msgstr "Вилучити"
-
 #: contents/explorer/WidgetExplorer.qml:140
 #: contents/explorer/WidgetExplorer.qml:223
 #, kde-format
@@ -930,6 +915,15 @@ msgstr "Вийти з режиму редагування"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Індикатор фокусування панелі"
+
+#~ msgid "Author:"
+#~ msgstr "Автор:"
+
+#~ msgid "Email:"
+#~ msgstr "Ел. пошта:"
+
+#~ msgid "Uninstall"
+#~ msgstr "Вилучити"
 
 #~ msgctxt "Percentage value"
 #~ msgid "%1%"

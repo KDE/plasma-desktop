@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-05-17 00:43+0000\n"
 "PO-Revision-Date: 2025-05-10 13:45+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -115,7 +115,7 @@ msgstr "افتح موقع %1"
 msgid "Copyright"
 msgstr "حقوق النسخ"
 
-#: contents/configuration/AboutPlugin.qml:158 contents/explorer/Tooltip.qml:94
+#: contents/configuration/AboutPlugin.qml:158
 #, kde-format
 msgid "License:"
 msgstr "الرّخصة:"
@@ -706,21 +706,6 @@ msgstr[3] "أزل %1 المثيلات المشغلة حاليا للأداة %2"
 msgstr[4] "أزل %1 مثيلًا مشغلًا حاليا للأداة %2"
 msgstr[5] "أزل %1 مثيل مشغل حاليا للأداة %2"
 
-#: contents/explorer/Tooltip.qml:105
-#, kde-format
-msgid "Author:"
-msgstr "المؤلّف:"
-
-#: contents/explorer/Tooltip.qml:115
-#, kde-format
-msgid "Email:"
-msgstr "البريد الإلكترونيّ:"
-
-#: contents/explorer/Tooltip.qml:136
-#, kde-format
-msgid "Uninstall"
-msgstr "أزل التّثبيت"
-
 #: contents/explorer/WidgetExplorer.qml:140
 #: contents/explorer/WidgetExplorer.qml:223
 #, kde-format
@@ -935,6 +920,15 @@ msgstr "اخرج من نمط التحرير"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "مؤشر التركيز على اللوحة"
+
+#~ msgid "Author:"
+#~ msgstr "المؤلّف:"
+
+#~ msgid "Email:"
+#~ msgstr "البريد الإلكترونيّ:"
+
+#~ msgid "Uninstall"
+#~ msgstr "أزل التّثبيت"
 
 #~ msgctxt "Percentage value"
 #~ msgid "%1%"
