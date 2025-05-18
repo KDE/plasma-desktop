@@ -59,7 +59,8 @@ msgstr "找不到任何指標裝置。請現在連接。"
 msgid ""
 "Not able to save all changes. See logs for more information. Please restart "
 "this configuration module and try again."
-msgstr "無法儲存所有變更。請見紀錄檔以取得更多資訊。請重新啟動本設定模組並再次嘗試。"
+msgstr ""
+"無法儲存所有變更。請見紀錄檔以取得更多資訊。請重新啟動本設定模組並再次嘗試。"
 
 #: kcm.cpp:172
 #, kde-format
@@ -165,7 +166,8 @@ msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
-msgstr "啟用此設定會使點擊增加 50 毫秒的延遲。這個延遲用來偵測左右鍵的同時按下。"
+msgstr ""
+"啟用此設定會使點擊增加 50 毫秒的延遲。這個延遲用來偵測左右鍵的同時按下。"
 
 #: ui/main.qml:142
 #, kde-format
@@ -213,7 +215,6 @@ msgstr "反轉捲動方向(&I)"
 
 #: ui/main.qml:330
 #, kde-format
-#| msgid "Press middle button and move mouse to scroll"
 msgid "Hold down middle button and move mouse to scroll"
 msgstr "按住滑鼠中鍵並移動滑鼠來捲動(&R)"
 
@@ -226,7 +227,9 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
-"這會與使用中鍵拖曳的應用程式衝突，像是某些影像編輯器、文件檢視器或是遊戲等等。這個功能支援任何裝置，但主要的用意是在沒有滾輪的裝置上作為滾輪的替代使用。"
+"這會與使用中鍵拖曳的應用程式衝突，像是某些影像編輯器、文件檢視器或是遊戲等"
+"等。這個功能支援任何裝置，但主要的用意是在沒有滾輪的裝置上作為滾輪的替代使"
+"用。"
 
 #~ msgid "Accept input through this device."
 #~ msgstr "透過此裝置同意輸入"

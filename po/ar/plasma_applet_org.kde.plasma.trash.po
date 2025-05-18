@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, 2017.
-# SPDX-FileCopyrightText: 2021, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-16 00:43+0000\n"
-"PO-Revision-Date: 2024-01-17 17:48+0400\n"
+"PO-Revision-Date: 2025-05-17 18:01+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: contents/ui/main.qml:32
 #, kde-format
@@ -25,12 +26,10 @@ msgid "Trash"
 msgstr "المهملات"
 
 #: contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgctxt "@info:status The trash is empty"
-#| msgid "Empty"
+#, kde-format
 msgctxt "@info:status The trash is being emptied"
 msgid "Emptying…"
-msgstr "فارغة"
+msgstr "يفرّغ…"
 
 #: contents/ui/main.qml:37
 #, kde-format
