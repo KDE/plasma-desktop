@@ -225,19 +225,19 @@ KCMUtils.SimpleKCM {
         }
 
         QQC2.CheckBox {
-            id: showOnlyCurrentScreen
-            Kirigami.FormData.label: i18nc("@label for checkbox group, completes sentence like: … from current screen", "Show only tasks:")
-            text: i18nc("@option:check completes sentence: show only tasks", "From current screen")
-        }
-
-        QQC2.CheckBox {
             id: showOnlyCurrentDesktop
-            text: i18nc("@option:check completes sentence: show only tasks", "From current desktop")
+            Kirigami.FormData.label: i18nc("@label for checkbox group, completes sentence like: … from current screen", "Show only tasks:")
+            text: i18nc("@option:check completes sentence: show only tasks", "From the current desktop")
         }
 
         QQC2.CheckBox {
             id: showOnlyCurrentActivity
-            text: i18nc("@option:check completes sentence: show only tasks", "From current activity")
+            text: i18nc("@option:check completes sentence: show only tasks", "From the current activity")
+        }
+
+        QQC2.CheckBox {
+            id: showOnlyCurrentScreen
+            text: i18nc("@option:check completes sentence: show only tasks", "From the current screen")
         }
 
         QQC2.CheckBox {
