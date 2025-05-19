@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-17 00:43+0000\n"
-"PO-Revision-Date: 2025-02-16 17:01+0530\n"
+"PO-Revision-Date: 2025-05-18 20:57+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -287,7 +287,7 @@ msgstr "சுருக்குவழிகள்"
 #, kde-format
 msgctxt "@action:button set keyboard shortcut for"
 msgid "Activate widget as if clicked:"
-msgstr ""
+msgstr "பிளாஸ்மாய்டை கிளிக் செய்தது போல இயக்கு"
 
 #: contents/configuration/ContainmentConfiguration.qml:27
 #, kde-format
@@ -310,28 +310,24 @@ msgid "Panel Settings"
 msgstr "பலகைக்கான அமைப்புகள்"
 
 #: contents/configuration/PanelConfiguration.qml:109
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible only, %1 is widget name"
-#| msgid "Add %1"
+#, kde-format
 msgctxt ""
 "@action:button label of button to open a menu that lets you add widgets or "
 "spacers"
 msgid "Add New"
-msgstr "%1 தனை சேர்"
+msgstr "புதியதைச் சேர்"
 
 #: contents/configuration/PanelConfiguration.qml:127
-#, fuzzy, kde-format
-#| msgid "Add Spacer"
+#, kde-format
 msgctxt "@action:menu add a spacer"
 msgid "Spacer"
-msgstr "இடைவெளியை சேர்"
+msgstr "இடைவெளி"
 
 #: contents/configuration/PanelConfiguration.qml:134
-#, fuzzy, kde-format
-#| msgid "Widgets"
+#, kde-format
 msgctxt "@action:menu add a widget"
 msgid "Widgets…"
-msgstr "பிளாஸ்மாய்டுகள்"
+msgstr "பிளாஸ்மாய்டுகள்…"
 
 #: contents/configuration/PanelConfiguration.qml:163
 #, kde-format
@@ -760,57 +756,46 @@ msgid "No widgets available"
 msgstr "பிளாஸ்மாய்டுகள் ஏதுமில்லை"
 
 #: contents/lockscreen/config.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@title: group"
 msgid "Show clock:"
-msgstr "கடிகாரத்தைக் காட்டு"
+msgstr "கடிகாரத்தைக் காட்டு:"
 
 #: contents/lockscreen/config.qml:25
-#, fuzzy, kde-format
-#| msgid "Always visible"
+#, kde-format
 msgctxt "@option:radio Clock always shown"
 msgid "Always"
-msgstr "எப்போது காட்டப்படும்"
+msgstr "எப்போதும்"
 
 #: contents/lockscreen/config.qml:26
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Always show clock"
-msgstr "கடிகாரத்தைக் காட்டு"
+msgstr "கடிகாரத்தை எப்போதும் காட்டு"
 
 #: contents/lockscreen/config.qml:41
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio Clock shown only while unlock prompt is visible"
 msgid "On unlocking prompt"
-msgstr "திறப்பதற்கான பட்டனுக்கு அடியில் காட்டு"
+msgstr "திறப்பதற்கான பட்டன் காட்டப்படும்போது மட்டும்"
 
 #: contents/lockscreen/config.qml:42
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show clock only on unlocking prompt"
-msgstr "திறப்பதற்கான பட்டனுக்கு அடியில் காட்டு"
+msgstr "திறப்பதற்கான பட்டன் காட்டப்படும்போது மட்டும் கடிகாரத்தைக் காட்டு"
 
 #: contents/lockscreen/config.qml:55
 #, kde-format
 msgctxt "@option:radio Clock never shown"
 msgid "Never"
-msgstr ""
+msgstr "ஒருபோதும் வேண்டாம்"
 
 #: contents/lockscreen/config.qml:56
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Never show clock"
-msgstr "கடிகாரத்தைக் காட்டு"
+msgstr "கடிகாரத்தை ஒருபோதும் காட்டாதே"
 
 #: contents/lockscreen/config.qml:71
 #, kde-format

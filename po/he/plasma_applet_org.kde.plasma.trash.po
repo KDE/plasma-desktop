@@ -6,13 +6,13 @@
 # Diego Iastrubni <elcuco@kde.org>, 2012, 2013.
 # elkana bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
-# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2025 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.trash\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-16 00:43+0000\n"
-"PO-Revision-Date: 2023-10-22 08:58+0300\n"
+"PO-Revision-Date: 2025-05-16 13:46+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: contents/ui/main.qml:32
 #, kde-format
@@ -30,12 +30,10 @@ msgid "Trash"
 msgstr "אשפה"
 
 #: contents/ui/main.qml:35
-#, fuzzy, kde-format
-#| msgctxt "@info:status The trash is empty"
-#| msgid "Empty"
+#, kde-format
 msgctxt "@info:status The trash is being emptied"
 msgid "Emptying…"
-msgstr "ריק"
+msgstr "מתרוקן…"
 
 #: contents/ui/main.qml:37
 #, kde-format
