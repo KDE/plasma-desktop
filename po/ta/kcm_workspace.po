@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-01 00:43+0000\n"
-"PO-Revision-Date: 2025-04-13 18:10+0530\n"
+"PO-Revision-Date: 2025-05-18 20:51+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: ui/main.qml:25
 #, kde-format
@@ -33,7 +33,7 @@ msgstr "மீள்துவக்கு"
 #, kde-format
 msgctxt "@title:group"
 msgid "Plasma"
-msgstr ""
+msgstr "பிளாஸ்மா"
 
 #: ui/main.qml:52
 #, kde-format
@@ -75,12 +75,10 @@ msgstr ""
 "அறிவிப்பைக் காட்டும் (OSD எனப்படுவது)."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling"
-msgstr "உருளல்:"
+msgstr "உருள்வது"
 
 #: ui/main.qml:100
 #, kde-format
@@ -131,7 +129,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "கிளிக் செய்வது"
 
 #: ui/main.qml:175
 #, kde-format
@@ -219,20 +217,17 @@ msgstr ""
 #: ui/main.qml:354
 #, kde-format
 msgid "Drag and Drop"
-msgstr ""
+msgstr "இழுத்துப் போடுவது"
 
 #: ui/main.qml:361
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
-#| msgid "Clicking files or folders:"
+#, kde-format
 msgid "When dragging files or folders:"
-msgstr "கோப்புகள் அல்லது அடைவுகளை க்ளிக் செய்தல்:"
+msgstr "கோப்புகளை அல்லது அடைவுகளை இழுத்துப் போடும்போது:"
 
 #: ui/main.qml:362
 #, kde-format
 msgid "Always ask what to do"
-msgstr ""
+msgstr "என்ன செய்வதென எப்போதும் கேள்"
 
 #: ui/main.qml:378
 #, kde-kuit-format
@@ -242,30 +237,32 @@ msgid ""
 "and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise show a "
 "dialog."
 msgstr ""
+"நகர்த்த <shortcut>Shift</shortcut> தனை அழுத்தவும், நகலெடுக்க <shortcut>Ctrl</"
+"shortcut> தனை அழுத்தவும், அல்லது இணைப்பை உண்டாக்க <shortcut>Shift+Ctrl</shortcut> "
+"தனை அழுத்தவும். இவை எதையும் அழுத்தாக பட்சத்தில் என்ன செய்வதென கேட்கும் சாளரத்தைக் காட்டும்."
 
 #: ui/main.qml:386
 #, kde-format
 msgid "Move if on the same device"
-msgstr ""
+msgstr "அதே சாதனத்திலிருந்தால் நகர்த்து"
 
 #: ui/main.qml:402
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
 msgstr ""
+"மற்ற விருப்பங்களைக் காட்ட, போடும்போது <shortcut>Shift</shortcut> தனை அழுத்தவும்."
 
 #: ui/main.qml:410
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Touch"
-msgstr "தொடுதல் பயன்முறை:"
+msgstr "தொடுவது"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgid "Enable Touch Mode:"
-msgstr "தொடுதல் பயன்முறை:"
+msgstr "தொடுதல் பயன்முறையை இயக்குவது:"
 
 #: ui/main.qml:418
 #, kde-format
@@ -291,9 +288,7 @@ msgstr ""
 "மடிக்கப்படும்போதோ."
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always enabled"
+#, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always active"
 msgstr "எப்போதும் இயக்கு"
@@ -302,7 +297,7 @@ msgstr "எப்போதும் இயக்கு"
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Disabled"
-msgstr ""
+msgstr "முடக்கு"
 
 #: ui/main.qml:486
 #, kde-format
@@ -326,6 +321,8 @@ msgid ""
 "For local files on the same device, whether dragging and dropping will "
 "perform a move operation instead of showing the options menu"
 msgstr ""
+"ஒரே சாதனத்திலுள்ள உள்ளமை கோப்புகளை இழுத்துப் போடும்போது, பட்டியைக் காட்டாமல் நேரடியாக "
+"நகர்த்த வேண்டுமா."
 
 #. i18n: ectx: label, entry (smoothScroll), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21

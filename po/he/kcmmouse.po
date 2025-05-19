@@ -14,13 +14,13 @@
 # tahmar1900 <tahmar1900@gmail.com>, 2009.
 # Elkana Bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
-# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-02-01 08:48+0200\n"
+"PO-Revision-Date: 2025-05-16 13:55+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -29,7 +29,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
@@ -226,10 +226,9 @@ msgid "Invert scroll direction"
 msgstr "היפוך כיוון הגלילה"
 
 #: ui/main.qml:330
-#, fuzzy, kde-format
-#| msgid "Press middle button and move mouse to scroll"
+#, kde-format
 msgid "Hold down middle button and move mouse to scroll"
-msgstr "לחיצה על הכפתור האמצעי והזזת העכבר תגלול"
+msgstr "החזקת הכפתור האמצעי והזזת העכבר תגלול"
 
 #: ui/main.qml:342
 #, kde-format
@@ -240,6 +239,9 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+"זה יפריע ליישומים שמשתמשים בגרירה עם לחצן אמצעי, כגון עורכי תמונות, מציגי "
+"מסמכים או משחקי וידאו. אפשר להשתמש בזה בכל התקן שהוא אבל מיועד בעיקר להחלפת "
+"גלגלת העכבר בהתקנים שאין להם כזאת."
 
 #~ msgid "Accept input through this device."
 #~ msgstr "קבלת קלט דרך ההתקן הזה."

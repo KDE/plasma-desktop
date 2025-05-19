@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-02-02 16:35+0530\n"
+"PO-Revision-Date: 2025-05-18 20:39+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
@@ -214,10 +214,9 @@ msgid "Invert scroll direction"
 msgstr "உருளல் திசையைப் புரட்டு"
 
 #: ui/main.qml:330
-#, fuzzy, kde-format
-#| msgid "Press middle button and move mouse to scroll"
+#, kde-format
 msgid "Hold down middle button and move mouse to scroll"
-msgstr "உருள நடு பட்டனை அழுத்தி சுட்டியை நகர்த்து"
+msgstr "உருள நடு பட்டனை அழுத்தியபடியே சுட்டியை நகர்த்து"
 
 #: ui/main.qml:342
 #, kde-format
@@ -228,6 +227,10 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+"நடு பட்டனை அழுத்தியபடியே இழுக்கும் செய்கையைப் பயன்படுத்தும் செயலிகளுடன் (எ.கா. சில "
+"படத்திருத்திகள், ஆவணக்காட்டிகள், அல்லது விளையாட்டு செயலிகள்) இது குறுக்கிடும். "
+"இருப்பினும், உருள் சக்கரத்தைக் கொண்டிராத சுட்டிகளைப் பயன்படுத்துவோருக்கு உதவியாக இது "
+"இருக்கும்."
 
 #~ msgid "Accept input through this device."
 #~ msgstr "இந்த சாதனத்தின் வாயிலாக உள்ளீட்டை ஏற்க."
