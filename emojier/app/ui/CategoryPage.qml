@@ -83,6 +83,7 @@ Kirigami.ScrollablePage {
 
         QQC2.ToolButton {
             visible: view.showClearHistoryButton
+            enabled: emojiView.count > 0
             text: i18n("Clear History")
             icon.name: "edit-clear-history"
             onClicked: {
