@@ -2,7 +2,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024 Alexander Yavorsky <kekcuha@gmail.com>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024, 2025 Alexander Yavorsky <kekcuha@gmail.com>
 # Nick Shaforostoff <shaforostoff@kde.ru>, 2008, 2009.
 # Leonid Kanter <leon@asplinux.ru>, 2008.
 # Artem Sereda <overmind88@gmail.com>, 2008.
@@ -16,14 +16,14 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-30 00:44+0000\n"
-"PO-Revision-Date: 2024-11-17 17:14+0300\n"
+"PO-Revision-Date: 2025-05-18 21:24+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 25.04.1\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Environment: kde\n"
@@ -31,10 +31,7 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 
 #: backend.cpp:284
-#, fuzzy, kde-format
-#| msgctxt "Show all user Places"
-#| msgid "%1 more Place"
-#| msgid_plural "%1 more Places"
+#, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place…"
 msgid_plural "%1 more Places…"
@@ -152,19 +149,21 @@ msgstr "Скрывать другие окна при наведении ука�
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show an indicator when a task is playing audio"
-msgstr ""
+msgstr "Показывать индикатор при воспроизведении звука"
 
 #: package/contents/ui/ConfigAppearance.qml:69
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Mute task when clicking indicator"
-msgstr ""
+msgstr "Отключать звук щелчком по индикатору"
 
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show media and volume controls in tooltip"
 msgstr ""
+"Показывать во всплывающей подсказке сведения об источнике звука и кнопки "
+"управления громкостью"
 
 #: package/contents/ui/ConfigAppearance.qml:85
 #, kde-format
@@ -483,48 +482,33 @@ msgid "Brings it to the current virtual desktop"
 msgstr "Перенести на текущий рабочий стол"
 
 #: package/contents/ui/ConfigBehavior.qml:205
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label for checkbox group, completes sentence like: … from current screen"
-#| msgid "Show only tasks:"
+#, kde-format
 msgctxt "@label:listbox completes sentence like: … does nothing"
 msgid "Scrolling on a task:"
-msgstr "Показывать приложения:"
+msgstr "При прокручивании на значке:"
 
 #: package/contents/ui/ConfigBehavior.qml:209
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Part of a sentence: 'Middle-clicking any task does "
-#| "nothing'"
-#| msgid "Does nothing"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling on any task does nothing'"
 msgid "Does nothing"
 msgstr "Не делать ничего"
 
 #: package/contents/ui/ConfigBehavior.qml:210
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Completes the sentence 'Clicking grouped task cycles "
-#| "through tasks' "
-#| msgid "Cycles through tasks"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
 "all tasks'"
 msgid "Cycles through all tasks"
-msgstr "Переключение между приложениями"
+msgstr "Переключаться между всеми приложениями"
 
 #: package/contents/ui/ConfigBehavior.qml:211
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Completes the sentence 'Clicking grouped task cycles "
-#| "through tasks' "
-#| msgid "Cycles through tasks"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
 "that task's windows only'"
 msgid "Cycles through that task's windows"
-msgstr "Переключение между приложениями"
+msgstr "Переключаться между окнами приложения"
 
 #: package/contents/ui/ConfigBehavior.qml:219
 #, kde-format
@@ -785,7 +769,7 @@ msgstr "&Свернуть в заголовок"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
-msgstr ""
+msgstr "С&крыть заголовок и границы окна"
 
 #: package/contents/ui/ContextMenu.qml:729
 #, kde-format
