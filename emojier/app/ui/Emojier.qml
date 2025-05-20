@@ -155,7 +155,11 @@ Kirigami.ApplicationWindow {
     }
 
     Component.onCompleted: {
-        recentAction.trigger();
+        if (recentEmojiModel.count > 0) {
+            recentAction.trigger();
+        } else {
+            searchAction.trigger();
+        }
 
         const incubator = drawerComponent.incubateObject(window);
         if (incubator.status !== Component.Ready) {
