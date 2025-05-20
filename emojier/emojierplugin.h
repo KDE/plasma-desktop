@@ -53,13 +53,15 @@ class RecentEmojiModel : public AbstractEmojiModel
 {
     Q_OBJECT
     QML_ELEMENT
-    Q_PROPERTY(int count READ rowCount CONSTANT)
+    Q_PROPERTY(int count READ rowCount NOTIFY countChanged)
 public:
     RecentEmojiModel();
 
     Q_SCRIPTABLE void includeRecent(const QString &emoji, const QString &emojiDescription);
 
     Q_INVOKABLE void clearHistory();
+
+    Q_SIGNAL void countChanged();
 
 private:
     void refresh();

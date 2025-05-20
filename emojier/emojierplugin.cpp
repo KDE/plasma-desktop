@@ -106,6 +106,8 @@ RecentEmojiModel::RecentEmojiModel()
 
 void RecentEmojiModel::includeRecent(const QString &emoji, const QString &emojiDescription)
 {
+    const auto oldCount = m_emoji.count();
+
     QStringList recent = m_settings.recent();
     QStringList recentDescriptions = m_settings.recentDescriptions();
 
@@ -135,6 +137,10 @@ void RecentEmojiModel::includeRecent(const QString &emoji, const QString &emojiD
     m_settings.setRecent(recent);
     m_settings.setRecentDescriptions(recentDescriptions);
     m_settings.save();
+
+    if (m_emoji.count() != oldCount) {
+        Q_EMIT countChanged();
+    }
 }
 
 void RecentEmojiModel::clearHistory()
@@ -143,11 +149,13 @@ void RecentEmojiModel::clearHistory()
     m_settings.setRecentDescriptions(QStringList());
     m_settings.save();
 
-    refresh();
+    refresh(); // emits countChanged.
 }
 
 void RecentEmojiModel::refresh()
 {
+    const auto oldCount = m_emoji.count();
+
     beginResetModel();
     auto recent = m_settings.recent();
     auto recentDescriptions = m_settings.recentDescriptions();
@@ -157,6 +165,10 @@ void RecentEmojiModel::refresh()
         m_emoji += {c, recentDescriptions.at(i++), 0, {}};
     }
     endResetModel();
+
+    if (m_emoji.count() != oldCount) {
+        Q_EMIT countChanged();
+    }
 }
 
 QString CategoryModelFilter::category() const
