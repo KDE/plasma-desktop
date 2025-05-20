@@ -16,12 +16,13 @@ var taskManagerInstanceCount = 0;
 function activateNextPrevTask(anchor, next, wheelSkipMinimized, wheelEnabled, tasks) {
     // FIXME TODO: Unnecessarily convoluted and costly; optimize.
 
-    //Get the number of open windows for the application
-    const anchorModelIndex = anchor.modelIndex(anchor.index);
-    const winIdList = tasks.tasksModel.data(anchorModelIndex, TaskManager.AbstractTasksModel.WinIdList);
-    const windowCount = winIdList ? winIdList.length : 0;
-
     if (wheelEnabled === 2) { // TaskOnly
+        // anchor can be undefined if scrolling on an empty area
+        if (!anchor) return;
+        // Get the number of open windows for the application
+        const anchorModelIndex = anchor.modelIndex(anchor.index);
+        const winIdList = tasks.tasksModel.data(anchorModelIndex, TaskManager.AbstractTasksModel.WinIdList);
+        const windowCount = winIdList ? winIdList.length : 0;
         // No windows
         if (windowCount === 0) {
             return;
