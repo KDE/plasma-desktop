@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-30 00:44+0000\n"
+"POT-Creation-Date: 2025-05-21 00:44+0000\n"
 "PO-Revision-Date: 2008-10-05 10:49+0300\n"
 "Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian Latin <i18n@mova.org>\n"
@@ -483,7 +483,7 @@ msgstr "Pakazvaj zadańni tolki ź dziejnaha rabočaha stała"
 #, fuzzy, kde-format
 #| msgid "Show tooltips:"
 msgctxt "@label:listbox completes sentence like: … does nothing"
-msgid "Scrolling on a task:"
+msgid "Scrolling behavior:"
 msgstr "Pakazvaj padkazki:"
 
 #: package/contents/ui/ConfigBehavior.qml:209
@@ -496,17 +496,17 @@ msgstr ""
 #: package/contents/ui/ConfigBehavior.qml:210
 #, kde-format
 msgctxt ""
-"@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
-"all tasks'"
+"@item:inlistbox Part of a sentence: 'Scrolling anywhere switches through all "
+"tasks'"
 msgid "Cycles through all tasks"
 msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:211
 #, kde-format
 msgctxt ""
-"@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
-"that task's windows only'"
-msgid "Cycles through that task's windows"
+"@item:inlistbox Part of a sentence: 'Scrolling on a task switches between "
+"that task's windows'"
+msgid "Cycles through the selected task windows"
 msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:219
@@ -525,23 +525,23 @@ msgstr "Pakazvaj padkazki:"
 
 #: package/contents/ui/ConfigBehavior.qml:230
 #, fuzzy, kde-format
-#| msgid "Only show tasks from the current screen"
+#| msgid "By Desktop"
 msgctxt "@option:check completes sentence: show only tasks"
-msgid "From current screen"
-msgstr "Pakazvaj zadańni tolki ź dziejnaha ekrana"
+msgid "From the current desktop"
+msgstr "Pavodle stałoŭ"
 
 #: package/contents/ui/ConfigBehavior.qml:235
 #, fuzzy, kde-format
-#| msgid "By Desktop"
+#| msgid "Only show tasks from the current screen"
 msgctxt "@option:check completes sentence: show only tasks"
-msgid "From current desktop"
-msgstr "Pavodle stałoŭ"
+msgid "From the current activity"
+msgstr "Pakazvaj zadańni tolki ź dziejnaha ekrana"
 
 #: package/contents/ui/ConfigBehavior.qml:240
 #, fuzzy, kde-format
 #| msgid "Only show tasks from the current screen"
 msgctxt "@option:check completes sentence: show only tasks"
-msgid "From current activity"
+msgid "From the current screen"
 msgstr "Pakazvaj zadańni tolki ź dziejnaha ekrana"
 
 #: package/contents/ui/ConfigBehavior.qml:245

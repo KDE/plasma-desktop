@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-30 00:44+0000\n"
+"POT-Creation-Date: 2025-05-21 00:44+0000\n"
 "PO-Revision-Date: 2025-04-17 15:39+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -476,7 +476,7 @@ msgstr "Færir á núverandi sýndarskjáborð"
 #| "@label for checkbox group, completes sentence like: … from current screen"
 #| msgid "Show only tasks:"
 msgctxt "@label:listbox completes sentence like: … does nothing"
-msgid "Scrolling on a task:"
+msgid "Scrolling behavior:"
 msgstr "Sýna einungis verkefni:"
 
 #: package/contents/ui/ConfigBehavior.qml:209
@@ -497,8 +497,8 @@ msgstr "Gerir ekkert"
 #| "through tasks' "
 #| msgid "Cycles through tasks"
 msgctxt ""
-"@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
-"all tasks'"
+"@item:inlistbox Part of a sentence: 'Scrolling anywhere switches through all "
+"tasks'"
 msgid "Cycles through all tasks"
 msgstr "Flettir í gegnum verkefnin"
 
@@ -509,9 +509,9 @@ msgstr "Flettir í gegnum verkefnin"
 #| "through tasks' "
 #| msgid "Cycles through tasks"
 msgctxt ""
-"@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
-"that task's windows only'"
-msgid "Cycles through that task's windows"
+"@item:inlistbox Part of a sentence: 'Scrolling on a task switches between "
+"that task's windows'"
+msgid "Cycles through the selected task windows"
 msgstr "Flettir í gegnum verkefnin"
 
 #: package/contents/ui/ConfigBehavior.qml:219
@@ -528,22 +528,28 @@ msgid "Show only tasks:"
 msgstr "Sýna einungis verkefni:"
 
 #: package/contents/ui/ConfigBehavior.qml:230
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@option:check completes sentence: show only tasks"
+#| msgid "From current desktop"
 msgctxt "@option:check completes sentence: show only tasks"
-msgid "From current screen"
-msgstr "Af núverandi skjá"
-
-#: package/contents/ui/ConfigBehavior.qml:235
-#, kde-format
-msgctxt "@option:check completes sentence: show only tasks"
-msgid "From current desktop"
+msgid "From the current desktop"
 msgstr "Af núverandi skjáborði"
 
-#: package/contents/ui/ConfigBehavior.qml:240
-#, kde-format
+#: package/contents/ui/ConfigBehavior.qml:235
+#, fuzzy, kde-format
+#| msgctxt "@option:check completes sentence: show only tasks"
+#| msgid "From current activity"
 msgctxt "@option:check completes sentence: show only tasks"
-msgid "From current activity"
+msgid "From the current activity"
 msgstr "Úr núverandi athöfn"
+
+#: package/contents/ui/ConfigBehavior.qml:240
+#, fuzzy, kde-format
+#| msgctxt "@option:check completes sentence: show only tasks"
+#| msgid "From current screen"
+msgctxt "@option:check completes sentence: show only tasks"
+msgid "From the current screen"
+msgstr "Af núverandi skjá"
 
 #: package/contents/ui/ConfigBehavior.qml:245
 #, kde-format

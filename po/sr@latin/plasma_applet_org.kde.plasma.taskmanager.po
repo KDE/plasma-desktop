@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-30 00:44+0000\n"
+"POT-Creation-Date: 2025-05-21 00:44+0000\n"
 "PO-Revision-Date: 2017-04-07 00:51+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -515,7 +515,7 @@ msgstr "Samo zadaci na trenutnoj površi"
 #, fuzzy, kde-format
 #| msgid "Show tooltips"
 msgctxt "@label:listbox completes sentence like: … does nothing"
-msgid "Scrolling on a task:"
+msgid "Scrolling behavior:"
 msgstr "Oblačići"
 
 #: package/contents/ui/ConfigBehavior.qml:209
@@ -529,8 +529,8 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Cycle through tasks with mouse wheel"
 msgctxt ""
-"@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
-"all tasks'"
+"@item:inlistbox Part of a sentence: 'Scrolling anywhere switches through all "
+"tasks'"
 msgid "Cycles through all tasks"
 msgstr "Kruži kroz zadatke na točkić miša"
 
@@ -538,9 +538,9 @@ msgstr "Kruži kroz zadatke na točkić miša"
 #, fuzzy, kde-format
 #| msgid "Cycle through tasks with mouse wheel"
 msgctxt ""
-"@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
-"that task's windows only'"
-msgid "Cycles through that task's windows"
+"@item:inlistbox Part of a sentence: 'Scrolling on a task switches between "
+"that task's windows'"
+msgid "Cycles through the selected task windows"
 msgstr "Kruži kroz zadatke na točkić miša"
 
 #: package/contents/ui/ConfigBehavior.qml:219
@@ -558,27 +558,27 @@ msgctxt ""
 msgid "Show only tasks:"
 msgstr "Oblačići"
 
-# >> @option:check
 #: package/contents/ui/ConfigBehavior.qml:230
-#, fuzzy, kde-format
-#| msgid "Show only tasks from the current screen"
-msgctxt "@option:check completes sentence: show only tasks"
-msgid "From current screen"
-msgstr "Samo zadaci na trenutnom ekranu"
-
-#: package/contents/ui/ConfigBehavior.qml:235
 #, fuzzy, kde-format
 #| msgid "Move &To Current Desktop"
 msgctxt "@option:check completes sentence: show only tasks"
-msgid "From current desktop"
+msgid "From the current desktop"
 msgstr "Premesti na &tekuću površ"
 
-#: package/contents/ui/ConfigBehavior.qml:240
+#: package/contents/ui/ConfigBehavior.qml:235
 #, fuzzy, kde-format
 #| msgid "Add To Current Activity"
 msgctxt "@option:check completes sentence: show only tasks"
-msgid "From current activity"
+msgid "From the current activity"
 msgstr "Dodaj u tekuću aktivnost"
+
+# >> @option:check
+#: package/contents/ui/ConfigBehavior.qml:240
+#, fuzzy, kde-format
+#| msgid "Show only tasks from the current screen"
+msgctxt "@option:check completes sentence: show only tasks"
+msgid "From the current screen"
+msgstr "Samo zadaci na trenutnom ekranu"
 
 # >> @option:check
 #: package/contents/ui/ConfigBehavior.qml:245

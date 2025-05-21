@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-30 00:44+0000\n"
+"POT-Creation-Date: 2025-05-21 00:44+0000\n"
 "PO-Revision-Date: 2021-11-04 09:14+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -493,7 +493,7 @@ msgstr "Jenož nadawki na aktualnym dźěłowym powjerchu pokazać"
 #, fuzzy, kde-format
 #| msgid "Show only tasks:"
 msgctxt "@label:listbox completes sentence like: … does nothing"
-msgid "Scrolling on a task:"
+msgid "Scrolling behavior:"
 msgstr "Jenož nadawki pokazać:"
 
 #: package/contents/ui/ConfigBehavior.qml:209
@@ -509,8 +509,8 @@ msgstr ""
 #| "Completes the sentence 'Clicking grouped task cycles through tasks' "
 #| msgid "Cycles through tasks"
 msgctxt ""
-"@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
-"all tasks'"
+"@item:inlistbox Part of a sentence: 'Scrolling anywhere switches through all "
+"tasks'"
 msgid "Cycles through all tasks"
 msgstr "Cyklisce po nadawkach chodźi"
 
@@ -520,9 +520,9 @@ msgstr "Cyklisce po nadawkach chodźi"
 #| "Completes the sentence 'Clicking grouped task cycles through tasks' "
 #| msgid "Cycles through tasks"
 msgctxt ""
-"@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
-"that task's windows only'"
-msgid "Cycles through that task's windows"
+"@item:inlistbox Part of a sentence: 'Scrolling on a task switches between "
+"that task's windows'"
+msgid "Cycles through the selected task windows"
 msgstr "Cyklisce po nadawkach chodźi"
 
 #: package/contents/ui/ConfigBehavior.qml:219
@@ -541,23 +541,23 @@ msgstr "Jenož nadawki pokazać:"
 
 #: package/contents/ui/ConfigBehavior.qml:230
 #, fuzzy, kde-format
-#| msgid "Only show tasks from the current screen"
+#| msgid "By Desktop"
 msgctxt "@option:check completes sentence: show only tasks"
-msgid "From current screen"
-msgstr "Jenož nadawki na aktualnej wobrazowce pokazać"
+msgid "From the current desktop"
+msgstr "Po dźěłowych powjerchach"
 
 #: package/contents/ui/ConfigBehavior.qml:235
 #, fuzzy, kde-format
-#| msgid "By Desktop"
+#| msgid "Only show tasks from the current screen"
 msgctxt "@option:check completes sentence: show only tasks"
-msgid "From current desktop"
-msgstr "Po dźěłowych powjerchach"
+msgid "From the current activity"
+msgstr "Jenož nadawki na aktualnej wobrazowce pokazać"
 
 #: package/contents/ui/ConfigBehavior.qml:240
 #, fuzzy, kde-format
 #| msgid "Only show tasks from the current screen"
 msgctxt "@option:check completes sentence: show only tasks"
-msgid "From current activity"
+msgid "From the current screen"
 msgstr "Jenož nadawki na aktualnej wobrazowce pokazać"
 
 #: package/contents/ui/ConfigBehavior.qml:245

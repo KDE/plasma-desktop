@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks trunk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-30 00:44+0000\n"
+"POT-Creation-Date: 2025-05-21 00:44+0000\n"
 "PO-Revision-Date: 2008-11-25 02:43-0800\n"
 "Last-Translator: Praveen Arimbrathodiyil <pravi.a@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -467,7 +467,7 @@ msgstr "ഇപ്പോഴത്തെ പണിയിടത്തിലെ ജ�
 #: package/contents/ui/ConfigBehavior.qml:205
 #, fuzzy, kde-format
 msgctxt "@label:listbox completes sentence like: … does nothing"
-msgid "Scrolling on a task:"
+msgid "Scrolling behavior:"
 msgstr "സൂചനകള്‍ കാണിയ്ക്കുക:"
 
 #: package/contents/ui/ConfigBehavior.qml:209
@@ -480,17 +480,17 @@ msgstr ""
 #: package/contents/ui/ConfigBehavior.qml:210
 #, kde-format
 msgctxt ""
-"@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
-"all tasks'"
+"@item:inlistbox Part of a sentence: 'Scrolling anywhere switches through all "
+"tasks'"
 msgid "Cycles through all tasks"
 msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:211
 #, kde-format
 msgctxt ""
-"@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
-"that task's windows only'"
-msgid "Cycles through that task's windows"
+"@item:inlistbox Part of a sentence: 'Scrolling on a task switches between "
+"that task's windows'"
+msgid "Cycles through the selected task windows"
 msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:219
@@ -509,19 +509,19 @@ msgstr "സൂചനകള്‍ കാണിയ്ക്കുക:"
 #: package/contents/ui/ConfigBehavior.qml:230
 #, fuzzy, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
-msgid "From current screen"
-msgstr "ഇപ്പോഴത്തെ സ്ക്രീനിലെ ജോലികള്‍ മാത്രം കാണിയ്ക്കുക"
+msgid "From the current desktop"
+msgstr "പണിയിടം അനുസരിച്ച്"
 
 #: package/contents/ui/ConfigBehavior.qml:235
 #, fuzzy, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
-msgid "From current desktop"
-msgstr "പണിയിടം അനുസരിച്ച്"
+msgid "From the current activity"
+msgstr "ഇപ്പോഴത്തെ സ്ക്രീനിലെ ജോലികള്‍ മാത്രം കാണിയ്ക്കുക"
 
 #: package/contents/ui/ConfigBehavior.qml:240
 #, fuzzy, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
-msgid "From current activity"
+msgid "From the current screen"
 msgstr "ഇപ്പോഴത്തെ സ്ക്രീനിലെ ജോലികള്‍ മാത്രം കാണിയ്ക്കുക"
 
 #: package/contents/ui/ConfigBehavior.qml:245

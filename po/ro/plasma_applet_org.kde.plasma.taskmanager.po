@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-30 00:44+0000\n"
+"POT-Creation-Date: 2025-05-21 00:44+0000\n"
 "PO-Revision-Date: 2024-06-08 17:07+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -552,7 +552,7 @@ msgstr "O aduce pe biroul virtual curent"
 #, fuzzy, kde-format
 #| msgid "Show only tasks:"
 msgctxt "@label:listbox completes sentence like: … does nothing"
-msgid "Scrolling on a task:"
+msgid "Scrolling behavior:"
 msgstr "Arată numai sarcinile:"
 
 #: package/contents/ui/ConfigBehavior.qml:209
@@ -570,8 +570,8 @@ msgstr "Nu face nimic"
 #| "Completes the sentence 'Clicking grouped task cycles through tasks' "
 #| msgid "Cycles through tasks"
 msgctxt ""
-"@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
-"all tasks'"
+"@item:inlistbox Part of a sentence: 'Scrolling anywhere switches through all "
+"tasks'"
 msgid "Cycles through all tasks"
 msgstr "Ciclează printre sarcini"
 
@@ -581,9 +581,9 @@ msgstr "Ciclează printre sarcini"
 #| "Completes the sentence 'Clicking grouped task cycles through tasks' "
 #| msgid "Cycles through tasks"
 msgctxt ""
-"@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
-"that task's windows only'"
-msgid "Cycles through that task's windows"
+"@item:inlistbox Part of a sentence: 'Scrolling on a task switches between "
+"that task's windows'"
+msgid "Cycles through the selected task windows"
 msgstr "Ciclează printre sarcini"
 
 #: package/contents/ui/ConfigBehavior.qml:219
@@ -603,24 +603,24 @@ msgstr "Arată numai sarcinile:"
 
 #: package/contents/ui/ConfigBehavior.qml:230
 #, fuzzy, kde-format
-#| msgid "From current screen"
+#| msgid "From current desktop"
 msgctxt "@option:check completes sentence: show only tasks"
-msgid "From current screen"
-msgstr "De pe ecranul curent"
+msgid "From the current desktop"
+msgstr "De pe biroul curent"
 
 #: package/contents/ui/ConfigBehavior.qml:235
 #, fuzzy, kde-format
-#| msgid "From current desktop"
+#| msgid "From current activity"
 msgctxt "@option:check completes sentence: show only tasks"
-msgid "From current desktop"
-msgstr "De pe biroul curent"
+msgid "From the current activity"
+msgstr "Din activitatea curentă"
 
 #: package/contents/ui/ConfigBehavior.qml:240
 #, fuzzy, kde-format
-#| msgid "From current activity"
+#| msgid "From current screen"
 msgctxt "@option:check completes sentence: show only tasks"
-msgid "From current activity"
-msgstr "Din activitatea curentă"
+msgid "From the current screen"
+msgstr "De pe ecranul curent"
 
 #: package/contents/ui/ConfigBehavior.qml:245
 #, fuzzy, kde-format
