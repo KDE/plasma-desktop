@@ -371,14 +371,9 @@ FocusScope {
                 }
 
                 if (runnerColumns.visible) {
-                    for (let i = 0; i < runnerModel.count; ++i) {
-                        if (runnerModel.modelForRow(i).count) {
-                            const targetList = runnerColumnsRepeater.itemAt(i);
-                            targetList.currentIndex = runnerModel.modelForRow(i).count - 1;
-                            targetList.currentItem.forceActiveFocus();
-                            break;
-                        }
-                    }
+                    const targetList =  runnerColumns.visibleChildren[0];
+                    targetList.currentIndex = targetList.count-1;
+                    targetList.currentItem.forceActiveFocus();
                 }
             } else if (event.key === Qt.Key_Down) {
                 if (rootList.visible) {
@@ -389,33 +384,19 @@ FocusScope {
                 }
 
                 if (runnerColumns.visible) {
-                    for (let i = 0; i < runnerModel.count; ++i) {
-                        if (runnerModel.modelForRow(i).count) {
-                            const targetList = runnerColumnsRepeater.itemAt(i);
-                            targetList.currentIndex = Math.min(targetList.currentIndex + 1, targetList.count);
-                            targetList.currentItem.forceActiveFocus();
-                            break;
-                        }
-                    }
+                    const targetList =  runnerColumns.visibleChildren[0];
+                    targetList.currentIndex = Math.min(targetList.currentIndex + 1, targetList.count);
+                    targetList.currentItem.forceActiveFocus();
                 }
-            } else if (backArrowKey) {
-                for (let i = runnerModel.count; i >= 0; --i) {
-                    if (runnerModel.modelForRow(i)?.count) {
-                        const targetList = runnerColumnsRepeater.itemAt(i);
-                        targetList.currentIndex = 0;
-                        targetList.currentItem.forceActiveFocus();
-                        break;
-                    }
-                }
-            } else if (forwardArrowKey) {
-                for (let i = 1; i < runnerModel.count; ++i) {
-                    if (runnerModel.modelForRow(i).count) {
-                        const targetList = runnerColumnsRepeater.itemAt(i);
-                        targetList.currentIndex = 0;
-                        targetList.currentItem.forceActiveFocus();
-                        break;
-                    }
-                }
+            } else if (backArrowKey && runnerColumns.visibleChildren.length > 2) {
+                runnerColumns.visibleChildren[0].currentIndex = -1;
+                const targetList = runnerColumns.visibleChildren[runnerColumns.visibleChildren.length-2];
+                targetList.currentIndex = 0;
+                targetList.forceActiveFocus(Qt.BacktabFocusReason);
+            } else if (forwardArrowKey && runnerColumns.visibleChildren.length > 2) {
+                runnerColumns.visibleChildren[0].currentIndex = -1;
+                runnerColumns.visibleChildren[1].currentIndex = 0;
+                runnerColumns.visibleChildren[1].forceActiveFocus(Qt.TabFocusReason);
             } else if (event.key === Qt.Key_Enter || event.key === Qt.Key_Return) {
                 if (runnerColumns.visible) {
                     for (let i = 0; i < runnerModel.count; ++i) {
