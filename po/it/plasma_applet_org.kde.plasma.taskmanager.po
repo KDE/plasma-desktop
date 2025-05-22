@@ -3,12 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Dario Panico <Dareus_Persarumrex@fastwebnet.it>, 2008.
 # SPDX-FileCopyrightText: 2010, 2011, 2013, 2014, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Vincenzo Reale <smart2128vr@gmail.com>
+# SPDX-FileCopyrightText: 2025 Paolo Zamponi <feus73@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-30 00:44+0000\n"
-"PO-Revision-Date: 2025-04-30 15:46+0200\n"
+"PO-Revision-Date: 2025-05-21 14:50+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: backend.cpp:284
 #, kde-format
@@ -346,7 +347,7 @@ msgstr "Combina in un singolo pulsante"
 #, kde-format
 msgctxt "@option:check grouped task"
 msgid "Group only when the Task Manager is full"
-msgstr "Raggruppa solo quando la barra delle applicazioni è piena"
+msgstr "Raggruppa solo quando il gestore dei processi è pieno"
 
 #: package/contents/ui/ConfigBehavior.qml:125
 #, kde-format
@@ -692,7 +693,7 @@ msgstr "Sposta a %1"
 #: package/contents/ui/ContextMenu.qml:514
 #, kde-format
 msgid "&Pin to Task Manager"
-msgstr "Blocca sulla barra delle a&pplicazioni"
+msgstr "Blocca sul gestore dei &processi"
 
 #: package/contents/ui/ContextMenu.qml:566
 #, kde-format
@@ -707,7 +708,7 @@ msgstr "Nell'attività attuale"
 #: package/contents/ui/ContextMenu.qml:596
 #, kde-format
 msgid "Unpin from Task Manager"
-msgstr "Rimuovi dalla barra delle applicazioni"
+msgstr "Rimuovi dal gestore dei processi"
 
 #: package/contents/ui/ContextMenu.qml:611
 #, kde-format

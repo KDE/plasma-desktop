@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-02-11 15:49+0100\n"
+"PO-Revision-Date: 2025-05-17 09:31+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
@@ -224,10 +224,9 @@ msgid "Invert scroll direction"
 msgstr "Inverti la direzione di scorrimento"
 
 #: ui/main.qml:330
-#, fuzzy, kde-format
-#| msgid "Press middle button and move mouse to scroll"
+#, kde-format
 msgid "Hold down middle button and move mouse to scroll"
-msgstr "Premi il pulsante centrale e sposta il mouse per scorrere"
+msgstr "Tieni premuto il pulsante centrale e sposta il mouse per scorrere"
 
 #: ui/main.qml:342
 #, kde-format
@@ -238,6 +237,11 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+"Questo interferisce con le applicazioni che utilizzano il trascinamento col "
+"tasto centrale, ad esempio alcuni editor di immagini, certi visori di "
+"documenti, o qualche videogioco. Può essere utilizzato su qualsiasi "
+"dispositivo, ma è inteso principalmente come sostituto delle rotelle di "
+"scorrimento sui dispositivi che non ne hanno."
 
 #~ msgid "Accept input through this device."
 #~ msgstr "Accetta input da questo dispositivo."
