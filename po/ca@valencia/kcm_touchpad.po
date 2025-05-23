@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-02-01 10:30+0100\n"
+"PO-Revision-Date: 2025-05-15 10:23+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -245,7 +245,7 @@ msgstr "Tocs:"
 #, kde-format
 msgctxt "@option:check"
 msgid "Tap-to-click"
-msgstr "Toc per a fer clic"
+msgstr "Toc per a clicar"
 
 #: ui/main.qml:465
 #, kde-format
@@ -259,11 +259,13 @@ msgid ""
 "Tap, then tap and immediately slide finger over the touchpad to drag. Lift "
 "finger to drop."
 msgstr ""
+"Toqueu, després toqueu i llisqueu immediatament el dit sobre el ratolí "
+"tàctil per a arrossegar. Aixequeu el dit per a deixar anar."
 
 #: ui/main.qml:485
 #, kde-format
 msgid "Allow briefly lifting finger during tap-and-drag"
-msgstr ""
+msgstr "Permet aixecar breument el dit durant el toc i l'arrossegament"
 
 #: ui/main.qml:499
 #, kde-format
@@ -353,122 +355,3 @@ msgstr "Premeu els cantons inferiors esquerra i dreta"
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
 msgstr "Premeu el ratolí tàctil amb tres dits"
-
-#~ msgid "Accept input through this device."
-#~ msgstr "Accepta l'entrada a través d'este dispositiu."
-
-#~ msgid "Disable touchpad while typing to prevent accidental inputs."
-#~ msgstr ""
-#~ "Desactiva el ratolí tàctil en teclejar per a evitar entrades accidentals."
-
-#~ msgid "Swap left and right buttons."
-#~ msgstr "Intercanvia el botó esquerre i el dret."
-
-#~ msgctxt "@info:tooltip for checkbox"
-#~ msgid ""
-#~ "Pressing the left and right button simultaneously acts as middle-click."
-#~ msgstr ""
-#~ "En prémer simultàniament al botó dret i esquerre fa com un clic del mig."
-
-#~ msgid "Slide with two fingers scrolls."
-#~ msgstr "Desplaçament en lliscar dos dits."
-
-#~ msgid "Slide on the touchpad edges scrolls."
-#~ msgstr "Desplaçament en lliscar a les vores del ratolí tàctil."
-
-#~ msgid "Touchscreen like scrolling."
-#~ msgstr "Pantalla tàctil com el desplaçament."
-
-#~ msgid "Disable horizontal scrolling."
-#~ msgstr "Desactiva el desplaçament horitzontal."
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Single tap to left-click."
-#~ msgstr "Un toc únic és un clic esquerre."
-
-#~ msgid "Sliding over touchpad directly after tap drags."
-#~ msgstr ""
-#~ "Arrossega en lliscar directament sobre el ratolí tàctil després d'un toc."
-
-#~ msgid "Tap-and-drag lock"
-#~ msgstr "Bloqueig de tocar i arrossegar"
-
-#~ msgid "Dragging continues after a short finger lift."
-#~ msgstr "L'arrossegament continua després d'una elevació curta del dit."
-
-#~ msgid ""
-#~ "Tap with two fingers to right-click, tap with three fingers to middle-"
-#~ "click."
-#~ msgstr ""
-#~ "Un toc amb dos dits per al clic dret, un toc amb tres dits per al clic "
-#~ "del mig."
-
-#~ msgid "Tap with two fingers to right-click."
-#~ msgstr "Un toc amb dos dits per al clic dret."
-
-#~ msgid ""
-#~ "Tap with two fingers to middle-click, tap with three fingers to right-"
-#~ "click."
-#~ msgstr ""
-#~ "Un toc amb dos dits per al clic del mig, un toc amb tres dits per al clic "
-#~ "dret."
-
-#~ msgid "Tap with two fingers to middle-click."
-#~ msgstr "Un toc amb dos dits per al clic del mig."
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Pressing the bottom right corner of your touchpad acts as right-click. "
-#~ "Middle-click by simultaneously pressing the bottom left and bottom right "
-#~ "corners."
-#~ msgstr ""
-#~ "Prement el cantó inferior dret del ratolí tàctil fa com un clic dret. Feu "
-#~ "clic del mig prement simultàniament els cantons inferiors esquerra i "
-#~ "dreta."
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Pressing the bottom right corner of your touchpad acts as right-click. "
-#~ "Middle-click by pressing the bottom central area."
-#~ msgstr ""
-#~ "Prement el cantó inferior dret del ratolí tàctil fa com un clic dret. Feu "
-#~ "clic del mig prement l'àrea central inferior."
-
-#~ msgctxt "@info:tooltip for radiobutton"
-#~ msgid "Pressing the touchpad anywhere with two fingers acts as right-click."
-#~ msgstr ""
-#~ "Prement a qualsevol lloc del ratolí tàctil amb dos dits fa com un clic "
-#~ "dret."
-
-#~ msgctxt "@info:tooltip for radiobutton"
-#~ msgid ""
-#~ "Pressing the bottom right corner of your touchpad acts as right-click."
-#~ msgstr ""
-#~ "Prement el cantó inferior dret del ratolí tàctil fa com un clic dret."
-
-#~ msgctxt "@info:tooltip for radiobutton"
-#~ msgid ""
-#~ "Pressing the bottom left and bottom right corners simultaneously acts as "
-#~ "middle-click."
-#~ msgstr ""
-#~ "En prémer simultàniament els cantons inferiors esquerra i dreta fa com un "
-#~ "clic del mig."
-
-#~ msgctxt "@info:tooltip for radiobutton"
-#~ msgid ""
-#~ "Pressing the touchpad anywhere with three fingers acts as middle-click."
-#~ msgstr ""
-#~ "Prement a qualsevol lloc del ratolí tàctil amb tres dits fa com un clic "
-#~ "del mig."
-
-#~ msgid "Touchpad"
-#~ msgstr "Ratolí tàctil"
-
-#~ msgid "Enable Touchpad"
-#~ msgstr "Activa el ratolí tàctil"
-
-#~ msgid "Disable Touchpad"
-#~ msgstr "Desactiva el ratolí tàctil"
-
-#~ msgid "Toggle Touchpad"
-#~ msgstr "Activa o desactiva el ratolí tàctil"
