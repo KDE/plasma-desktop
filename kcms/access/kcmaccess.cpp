@@ -189,6 +189,7 @@ KAccessConfig::KAccessConfig(QObject *parent, const KPluginMetaData &metaData)
             &ColorblindnessCorrectionSettings::configChanged,
             this,
             &KAccessConfig::colorblindnessCorrectionIsDefaultsChanged);
+    connect(m_data->screenReaderSettings(), &ScreenReaderSettings::EnabledChanged, this, &KAccessConfig::screenReaderEnabledChanged);
 }
 
 KAccessConfig::~KAccessConfig()
@@ -232,6 +233,8 @@ void KAccessConfig::save()
         || m_data->colorblindnessCorrectionSettings()->findItem(QStringLiteral("Intensity"))->isSaveNeeded();
 
     KQuickManagedConfigModule::save();
+
+    Q_EMIT screenReaderActiveChanged();
 
     if (bellSettings()->systemBell() || bellSettings()->customBell() || bellSettings()->visibleBell()) {
         KConfig _cfg(QStringLiteral("kdeglobals"), KConfig::NoGlobals);
@@ -380,6 +383,19 @@ bool KAccessConfig::shakeCursorIsDefaults() const
 bool KAccessConfig::colorblindnessCorrectionIsDefaults() const
 {
     return colorblindnessCorrectionSettings()->isDefaults();
+}
+
+bool KAccessConfig::isScreenReaderActive()
+{
+    const bool enabled = this->m_data->screenReaderSettings()->enabled();
+    const bool saveNeeded = this->m_data->screenReaderSettings()->isSaveNeeded();
+
+    return enabled && !saveNeeded;
+}
+
+void KAccessConfig::screenReaderEnabledChanged()
+{
+    Q_EMIT this->screenReaderActiveChanged();
 }
 
 #include "kcmaccess.moc"

@@ -43,6 +43,7 @@ class KAccessConfig : public KQuickManagedConfigModule
     Q_PROPERTY(bool screenReaderIsDefaults READ screenReaderIsDefaults NOTIFY screenReaderIsDefaultsChanged)
     Q_PROPERTY(bool shakeCursorIsDefaults READ shakeCursorIsDefaults NOTIFY shakeCursorIsDefaultsChanged)
     Q_PROPERTY(bool colorblindnessCorrectionIsDefaults READ colorblindnessCorrectionIsDefaults NOTIFY colorblindnessCorrectionIsDefaultsChanged)
+    Q_PROPERTY(bool screenReaderActive READ isScreenReaderActive NOTIFY screenReaderActiveChanged)
 
 public:
     KAccessConfig(QObject *parent, const KPluginMetaData &);
@@ -78,12 +79,14 @@ Q_SIGNALS:
     void orcaLaunchFeedbackChanged();
     void bellIsDefaultsChanged();
     void mouseIsDefaultsChanged();
+
     void keyboardFiltersIsDefaultsChanged();
     void keyboardModifiersIsDefaultsChanged();
     void activationGesturesIsDefaultsChanged();
     void screenReaderIsDefaultsChanged();
     void shakeCursorIsDefaultsChanged();
     void colorblindnessCorrectionIsDefaultsChanged();
+    void screenReaderActiveChanged();
 
 private:
     void setOrcaLaunchFeedback(const QString &value);
@@ -92,4 +95,6 @@ private:
     QString m_orcaLaunchFeedback;
     QString m_desktopShortcutInfo;
     bool m_screenReaderInstalled;
+    bool isScreenReaderActive();
+    void screenReaderEnabledChanged();
 };

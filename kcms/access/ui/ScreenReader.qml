@@ -39,7 +39,7 @@ Item {
             text: i18nc("@action:button", "Launch Orca Screen Reader Configuration…")
 
             visible: screenReaderInstalled
-            enabled: !kcm.screenReaderSettings.isImmutable("Enabled") && screenReaderInstalled && kcm.screenReaderSettings.enabled
+            enabled: !kcm.screenReaderSettings.isImmutable("Enabled") && screenReaderInstalled && kcm.screenReaderActive
 
             onClicked: kcm.launchOrcaConfiguration()
         }
