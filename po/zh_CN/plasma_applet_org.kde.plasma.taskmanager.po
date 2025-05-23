@@ -464,12 +464,10 @@ msgid "Brings it to the current virtual desktop"
 msgstr "移动到当前虚拟桌面"
 
 #: package/contents/ui/ConfigBehavior.qml:205
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox completes sentence like: … does nothing"
-#| msgid "Scrolling on a task:"
+#, kde-format
 msgctxt "@label:listbox completes sentence like: … does nothing"
 msgid "Scrolling behavior:"
-msgstr "在任务上滚动时："
+msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:209
 #, kde-format
@@ -479,28 +477,20 @@ msgid "Does nothing"
 msgstr "无操作"
 
 #: package/contents/ui/ConfigBehavior.qml:210
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
-#| "all tasks'"
-#| msgid "Cycles through all tasks"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling anywhere switches through all "
 "tasks'"
 msgid "Cycles through all tasks"
-msgstr "循环切换所有任务"
+msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:211
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
-#| "that task's windows only'"
-#| msgid "Cycles through that task's windows"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling on a task switches between "
 "that task's windows'"
 msgid "Cycles through the selected task windows"
-msgstr "循环切换该任务的窗口"
+msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:219
 #, kde-format
@@ -516,28 +506,22 @@ msgid "Show only tasks:"
 msgstr "显示的任务："
 
 #: package/contents/ui/ConfigBehavior.qml:230
-#, fuzzy, kde-format
-#| msgctxt "@option:check completes sentence: show only tasks"
-#| msgid "From current desktop"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current desktop"
-msgstr "当前桌面的任务"
+msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:235
-#, fuzzy, kde-format
-#| msgctxt "@option:check completes sentence: show only tasks"
-#| msgid "From current activity"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current activity"
-msgstr "当前活动的任务"
+msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:240
-#, fuzzy, kde-format
-#| msgctxt "@option:check completes sentence: show only tasks"
-#| msgid "From current screen"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current screen"
-msgstr "当前屏幕的任务"
+msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:245
 #, kde-format

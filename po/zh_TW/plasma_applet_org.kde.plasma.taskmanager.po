@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-21 00:44+0000\n"
-"PO-Revision-Date: 2025-05-01 17:37+0900\n"
+"PO-Revision-Date: 2025-05-22 14:00+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -470,12 +470,10 @@ msgid "Brings it to the current virtual desktop"
 msgstr "將它移至目前虛擬桌面"
 
 #: package/contents/ui/ConfigBehavior.qml:205
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox completes sentence like: … does nothing"
-#| msgid "Scrolling on a task:"
+#, kde-format
 msgctxt "@label:listbox completes sentence like: … does nothing"
 msgid "Scrolling behavior:"
-msgstr "在工作上捲動："
+msgstr "捲動行為："
 
 #: package/contents/ui/ConfigBehavior.qml:209
 #, kde-format
@@ -485,11 +483,7 @@ msgid "Does nothing"
 msgstr "什麼都不做"
 
 #: package/contents/ui/ConfigBehavior.qml:210
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
-#| "all tasks'"
-#| msgid "Cycles through all tasks"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling anywhere switches through all "
 "tasks'"
@@ -497,16 +491,12 @@ msgid "Cycles through all tasks"
 msgstr "循環切換所有工作"
 
 #: package/contents/ui/ConfigBehavior.qml:211
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
-#| "that task's windows only'"
-#| msgid "Cycles through that task's windows"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling on a task switches between "
 "that task's windows'"
 msgid "Cycles through the selected task windows"
-msgstr "循環切換該工作的視窗"
+msgstr "循環切換所選工作的視窗"
 
 #: package/contents/ui/ConfigBehavior.qml:219
 #, kde-format
@@ -522,25 +512,19 @@ msgid "Show only tasks:"
 msgstr "只顯示哪些工作："
 
 #: package/contents/ui/ConfigBehavior.qml:230
-#, fuzzy, kde-format
-#| msgctxt "@option:check completes sentence: show only tasks"
-#| msgid "From current desktop"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current desktop"
 msgstr "目前桌面上的"
 
 #: package/contents/ui/ConfigBehavior.qml:235
-#, fuzzy, kde-format
-#| msgctxt "@option:check completes sentence: show only tasks"
-#| msgid "From current activity"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current activity"
 msgstr "目前活動裡的"
 
 #: package/contents/ui/ConfigBehavior.qml:240
-#, fuzzy, kde-format
-#| msgctxt "@option:check completes sentence: show only tasks"
-#| msgid "From current screen"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current screen"
 msgstr "目前螢幕上的"
