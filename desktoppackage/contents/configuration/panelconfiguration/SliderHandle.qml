@@ -67,33 +67,37 @@ KSvg.SvgItem {
 
     function syncPos() {
         if (dialogRoot.vertical) {
+            let newY = 0
             if (alignment === Qt.AlignRight) {
-                y = root.parent.height - (value + offset + root.height/2)
+                newY = root.parent.height - (value + offset + root.height/2)
             } else if (alignment === Qt.AlignLeft) {
-                y = value + offset - root.height/2
+                newY = value + offset - root.height/2
             } else {
                 if (root.alignment & Qt.AlignRight) {
-                    y = root.parent.height/2 - value/2 + offset - root.height/2
+                    newY = root.parent.height/2 - value/2 + offset - root.height/2
                 } else if (root.alignment & Qt.AlignLeft) {
-                    y = root.parent.height/2 + value/2 + offset - root.height/2
+                    newY = root.parent.height/2 + value/2 + offset - root.height/2
                 } else {
-                    y = root.parent.height/2 + value + offset -root.height/2
+                    newY = root.parent.height/2 + value + offset -root.height/2
                 }
             }
+            y = Math.max(-height/2, Math.min(parent.height - height/2, newY))
         } else {
+            let newX = 0
             if (alignment === Qt.AlignRight) {
-                x = root.parent.width - (value + offset + root.width/2)
+                newX = root.parent.width - (value + offset + root.width/2)
             } else if (alignment === Qt.AlignLeft) {
-                x = value + offset - root.width/2
+                newX = value + offset - root.width/2
             } else {
                 if (root.alignment & Qt.AlignRight) {
-                    x = root.parent.width/2 - value/2 + offset - root.width/2
+                    newX = root.parent.width/2 - value/2 + offset - root.width/2
                 } else if (root.alignment & Qt.AlignLeft) {
-                    x = root.parent.width/2 + value/2 + offset -root.width/2
+                    newX = root.parent.width/2 + value/2 + offset -root.width/2
                 } else {
-                    x = root.parent.width/2 + value + offset -root.width/2
+                    newX = root.parent.width/2 + value + offset -root.width/2
                 }
             }
+            x = Math.max(-width/2, Math.min(parent.width - width/2, newX))
         }
     }
     onValueChanged: syncPos()
