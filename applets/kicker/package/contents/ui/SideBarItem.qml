@@ -10,10 +10,11 @@ import org.kde.kirigami as Kirigami
 import org.kde.kquickcontrolsaddons as KQuickControlsAddons
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasmoid
+import org.kde.plasma.components as PC3
 
 import "code/tools.js" as Tools
 
-Item {
+PC3.ToolButton {
     id: item
 
     width: root.width
@@ -21,6 +22,12 @@ Item {
 
     signal actionTriggered(string actionId, var actionArgument)
     signal aboutToShowActionMenu(var actionMenu)
+    activeFocusOnTab: false
+
+    text: model.display
+    display: PC3.AbstractButton.IconOnly
+    icon.source: model.decoration
+
 
     property bool hasActionList: ((model.favoriteId !== null)
         || (("hasActionList" in model) && (model.hasActionList !== null)))
@@ -37,6 +44,8 @@ Item {
         }
     }
 
+    Keys.onSpacePressed: repeater.model.trigger(index, "", null);
+
     function openActionMenu(visualParent, x, y) {
         aboutToShowActionMenu(actionMenu);
         actionMenu.visualParent = visualParent;
@@ -49,14 +58,6 @@ Item {
         onActionClicked: (actionId, actionArgument) => {
             actionTriggered(actionId, actionArgument);
         }
-    }
-
-    Kirigami.Icon {
-        anchors.fill: parent
-
-        active: toolTip.containsMouse
-
-        source: model.decoration
     }
 
     KQuickControlsAddons.MouseEventListener {
