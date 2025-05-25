@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-04-25 15:27+0200\n"
+"PO-Revision-Date: 2025-05-24 17:55+0200\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
@@ -317,28 +317,24 @@ msgid "Panel Settings"
 msgstr "Nastavenia panela"
 
 #: contents/configuration/PanelConfiguration.qml:109
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible only, %1 is widget name"
-#| msgid "Add %1"
+#, kde-format
 msgctxt ""
 "@action:button label of button to open a menu that lets you add widgets or "
 "spacers"
 msgid "Add New"
-msgstr "Pridať %1"
+msgstr "Pridať nový"
 
 #: contents/configuration/PanelConfiguration.qml:127
-#, fuzzy, kde-format
-#| msgid "Add Spacer"
+#, kde-format
 msgctxt "@action:menu add a spacer"
 msgid "Spacer"
-msgstr "Pridať medzeru"
+msgstr "Oddeľovač"
 
 #: contents/configuration/PanelConfiguration.qml:134
-#, fuzzy, kde-format
-#| msgid "Widgets"
+#, kde-format
 msgctxt "@action:menu add a widget"
 msgid "Widgets…"
-msgstr "Miniaplikácie"
+msgstr "Miniaplikácie…"
 
 #: contents/configuration/PanelConfiguration.qml:163
 #, kde-format
@@ -799,11 +795,10 @@ msgid "Show clock:"
 msgstr ""
 
 #: contents/lockscreen/config.qml:25
-#, fuzzy, kde-format
-#| msgid "Always visible"
+#, kde-format
 msgctxt "@option:radio Clock always shown"
 msgid "Always"
-msgstr "Vždy viditeľný"
+msgstr "Vždy"
 
 #: contents/lockscreen/config.qml:26
 #, kde-format
@@ -831,7 +826,7 @@ msgstr "Zobraziť pod výzvou na odomknutie"
 #, kde-format
 msgctxt "@option:radio Clock never shown"
 msgid "Never"
-msgstr ""
+msgstr "Nikdy"
 
 #: contents/lockscreen/config.qml:56
 #, kde-format

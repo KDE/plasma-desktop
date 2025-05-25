@@ -2,30 +2,30 @@
 # Roman Paholik <wizzardsk@gmail.com>, 2021.
 # SPDX-FileCopyrightText: 2022, 2023, 2024 Matej Mrenica <matejm98mthw@gmail.com>
 # Ferdinand Galko <galko.ferdinand@gmail.com>, 2023.
+# SPDX-FileCopyrightText: 2025 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-26 00:43+0000\n"
-"PO-Revision-Date: 2024-06-26 14:08+0200\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"PO-Revision-Date: 2025-05-24 18:02+0200\n"
+"Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 25.04.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: inputsequence.cpp:172
 #, kde-format
 msgctxt "@action:button This action is disabled"
 msgid "Disabled"
-msgstr ""
+msgstr "Zakázané"
 
 #: inputsequence.cpp:175
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "@action:button There is no keybinding"
 msgid "None"
 msgstr "Žiadne"
@@ -142,7 +142,7 @@ msgstr "Tlačidlo %1:"
 #, kde-format
 msgctxt "@title Select the action for the tablet button"
 msgid "Select Button Action"
-msgstr ""
+msgstr "Vybrať akciu tlačidla"
 
 #: ui/ActionDialog.qml:74
 #, kde-format
@@ -179,7 +179,7 @@ msgstr "Tlačidlo %1:"
 #, kde-format
 msgctxt "@option:radio Disable this action"
 msgid "Do nothing"
-msgstr ""
+msgstr "Nerobiť nič"
 
 #: ui/ActionDialog.qml:170
 #, kde-format
@@ -193,64 +193,61 @@ msgstr ""
 #, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left-click"
-msgstr ""
+msgstr "Ľavý klik"
 
 #: ui/ActionDialog.qml:199
 #, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle-click"
-msgstr ""
+msgstr "Stredný klik"
 
 #: ui/ActionDialog.qml:200
 #, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right-click"
-msgstr ""
+msgstr "Pravý klik"
 
 #: ui/ActionDialog.qml:227
 #, kde-format
 msgctxt "@option:check The ctrl modifier on the keyboard"
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 #: ui/ActionDialog.qml:234
 #, kde-format
 msgctxt "@option:check The alt modifier on the keyboard"
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 #: ui/ActionDialog.qml:241
 #, kde-format
 msgctxt "@option:check The meta modifier on the keyboard"
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #: ui/ActionDialog.qml:248
 #, kde-format
 msgctxt "@option:check The shift modifier on the keyboard"
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 #: ui/ActionDialog.qml:264
-#, fuzzy, kde-format
-#| msgid "Tool Button 1"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
-msgstr "Tlačidlo nástroja 1"
+msgstr "Tlačidlo 1"
 
 #: ui/ActionDialog.qml:265
-#, fuzzy, kde-format
-#| msgid "Tool Button 2"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
-msgstr "Tlačidlo nástroja 2"
+msgstr "Tlačidlo 2"
 
 #: ui/ActionDialog.qml:266
-#, fuzzy, kde-format
-#| msgid "Tool Button 3"
+#, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
-msgstr "Tlačidlo nástroja 3"
+msgstr "Tlačidlo 3"
 
 #: ui/ActionDialog.qml:275
 #, kde-format
@@ -308,13 +305,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
-msgstr ""
+msgstr "Zavrieť"
 
 #: ui/Calibration.qml:135
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Zrušiť"
 
 #: ui/DisplayTab.qml:41
 #, kde-format
@@ -363,8 +360,7 @@ msgid "%1%,%2% - %3%×%4%"
 msgstr "%1,%2 - %3×%4"
 
 #: ui/ExternalScreenMapping.qml:299
-#, fuzzy, kde-format
-#| msgid "Resize the tablet area"
+#, kde-format
 msgid "Resize the tablet area"
 msgstr "Zmena veľkosti oblasti tabletu"
 
@@ -396,21 +392,19 @@ msgstr "Zariadenie:"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
-msgstr ""
+msgstr "Obrazovka"
 
 #: ui/main.qml:169
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
-msgstr ""
+msgstr "Pero"
 
 #: ui/main.qml:181
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The pad we are configuring"
-#| msgid "Pad:"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
-msgstr "Podložka:"
+msgstr "Podložka"
 
 #: ui/PadTab.qml:33
 #, fuzzy, kde-format
@@ -436,7 +430,7 @@ msgstr "Režim ľavej ruky:"
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
-msgstr ""
+msgstr "Povoliť"
 
 #: ui/StylusTab.qml:228
 #, kde-kuit-format
@@ -452,14 +446,14 @@ msgstr ""
 msgctxt ""
 "'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)"
 msgid "Mode:"
-msgstr ""
+msgstr "Režim:"
 
 #: ui/StylusTab.qml:248
 #, kde-format
 msgctxt ""
 "Pen mode, where the point on the screen is always where you touch the stylus"
 msgid "Pen"
-msgstr ""
+msgstr "Pero"
 
 #: ui/StylusTab.qml:253
 #, kde-format
@@ -470,7 +464,7 @@ msgstr ""
 #, kde-format
 msgctxt "Mouse mode, or like using the tablet like a giant touchpad"
 msgid "Mouse"
-msgstr ""
+msgstr "Myš"
 
 #: ui/StylusTab.qml:279
 #, kde-format
@@ -540,7 +534,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
-msgstr ""
+msgstr "Kalibrovať"
 
 #: ui/StylusTab.qml:491
 #, kde-format
