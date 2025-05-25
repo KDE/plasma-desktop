@@ -83,8 +83,8 @@ msgstr ""
 "<qt>El calibratge està a punt de comprovar l'interval de valors que "
 "proporciona el dispositiu. <br /><br />Moveu <b>l'eix %1 %2</b> del "
 "dispositiu fins a la posició <b>central</b>.<br /><br />Premeu qualsevol "
-"botó del dispositiu o cliqueu en el botó «Següent» per a continuar amb el "
-"pas següent.</qt>"
+"botó del dispositiu o cliqueu damunt del botó «Següent» per a continuar amb "
+"el pas següent.</qt>"
 
 #: caldialog.cpp:133
 #, kde-format
@@ -97,7 +97,7 @@ msgstr ""
 "<qt>El calibratge ara comprovarà l'interval de valors que proporciona el "
 "dispositiu. <br /><br />Moveu <b>l'eix %1 %2</b> del dispositiu fins a la "
 "posició <b>màxima</b>. <br /><br />Premeu qualsevol botó del dispositiu o "
-"cliqueu en el botó «Següent» per a continuar amb el pas següent.</qt>"
+"cliqueu damunt del botó «Següent» per a continuar amb el pas següent.</qt>"
 
 #: caldialog.cpp:160 joywidget.cpp:329 joywidget.cpp:365
 #, kde-format
@@ -228,14 +228,14 @@ msgstr ""
 "als eixos, podeu intentar de solucionar-ho amb el calibratge.<br />Este "
 "mòdul prova de trobar tots els dispositius de palanca de control disponibles "
 "comprovant /dev/js[0-4] i /dev/input/js[0-4] <br />Si teniu un altre fitxer "
-"dispositiu, introduïu-lo al quadro combinat.<br />La llista de botons mostra "
-"l'estat dels botons de la palanca de control, la llista d'eixos mostra el "
-"valor actual per a tots els eixos. <br />NOTA: el controlador de dispositius "
-"actual de Linux (nucli 2.4, 2.6) només pot detectar automàticament<ul> "
-"<li>palanca amb 2 eixos i 4 botons</li> <li>palanca amb 3 eixos i 4 botons</"
-"li> <li>palanca amb 4 eixos i 4 botons</li> <li>palanques Saitek Cyborg "
-"«digital»</li></ul>(Per a més detalls podeu mirar a Linux source/"
-"Documentation/input/joystick.txt)"
+"dispositiu, introduïu-lo en el quadro combinat.<br />La llista de botons "
+"mostra l'estat dels botons de la palanca de control, la llista d'eixos "
+"mostra el valor actual per a tots els eixos. <br />NOTA: el controlador de "
+"dispositius actual de Linux (nucli 2.4, 2.6) només pot detectar "
+"automàticament<ul> <li>palanca amb 2 eixos i 4 botons</li> <li>palanca amb 3 "
+"eixos i 4 botons</li> <li>palanca amb 4 eixos i 4 botons</li> <li>palanques "
+"Saitek Cyborg «digital»</li></ul>(Per a més detalls podeu mirar a Linux "
+"source/Documentation/input/joystick.txt)"
 
 #: joywidget.cpp:67
 #, kde-format
@@ -335,7 +335,7 @@ msgid ""
 msgstr ""
 "<qt>El calibratge està a punt de comprovar la precisió.<br /><br /><b>Moveu "
 "tots els eixos fins a la posició central i no torneu a tocar la palanca.</"
-"b><br /><br />Cliqueu «D'acord» per a iniciar el calibratge.</qt>"
+"b><br /><br />Cliqueu damunt «D'acord» per a iniciar el calibratge.</qt>"
 
 #: joywidget.cpp:367
 #, kde-format

@@ -183,7 +183,7 @@ msgstr "Tocs:"
 #: kcm/libinput/touchpad.qml:418
 #, kde-format
 msgid "Tap-to-click"
-msgstr "Toc per a fer clic"
+msgstr "Toc per a clicar"
 
 #: kcm/libinput/touchpad.qml:422
 #, kde-format
@@ -1112,7 +1112,7 @@ msgid ""
 "corner will seamlessly switch over from vertical to circular scrolling"
 msgstr ""
 "Quan s'utilitza conjuntament amb el desplaçament vertical, en tocar el cantó "
-"dret superior o inferior es canviarà amb fluïdesa des del desplaçament "
+"superior dret o inferior es canviarà amb fluïdesa des del desplaçament "
 "vertical al circular"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, SensitivityForm)
@@ -1213,7 +1213,7 @@ msgstr "Tocs"
 #: kcm/xlib/ui/tap.ui:28
 #, kde-format
 msgid "Tap to Click"
-msgstr "Toc per a fer clic"
+msgstr "Toc per a clicar"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm/xlib/ui/tap.ui:43
@@ -1348,9 +1348,9 @@ msgid ""
 "If off, a tap-and-drag gesture ends when you release the finger. If on, the "
 "gesture is active until you tap a second time, or until timeout expires"
 msgstr ""
-"Si no se selecciona, un gest de tocar i arrossegar finalitzarà quan "
-"s'aixeque el dit. Si se selecciona, el gest estarà funcionant fins que hi "
-"feu un segon toc, o fins que s'exhaurisca el temps d'espera"
+"Si està inactiva, un gest de tocar i arrossegar finalitzarà quan s'aixeque "
+"el dit. Si està marcada, el gest estarà funcionant fins que hi feu un segon "
+"toc, o fins que s'exhaurisca el temps d'espera"
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_LockedDrags)
 #: kcm/xlib/ui/tap.ui:269
