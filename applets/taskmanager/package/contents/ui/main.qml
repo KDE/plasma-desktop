@@ -406,6 +406,26 @@ PlasmoidItem {
             id: tmf
             filterTimeOut: 300
             active: tasks.toolTipAreaItem && tasks.toolTipAreaItem.toolTipOpen
+            edgeLine: {
+                const tt = openWindowToolTipDelegate;
+                if (!tt.visible) {
+                    return [];  // empty array uses default edge calculation built in to TMF
+                }
+                const coords = tmf.mapFromItem(tt, tt.x, tt.y);
+                switch (Plasmoid.location) {
+                case PlasmaCore.Types.BottomEdge:
+                    return [coords.x, 0, coords.x + tt.width, 0];
+                case PlasmaCore.Types.TopEdge:
+                    return [coords.x, tmf.height, coords.x + tt.width, tmf.height];
+                case PlasmaCore.Types.LeftEdge:
+                    return [tmf.width, coords.y, tmf.height, coords.y + tt.height];
+                case PlasmaCore.Types.RightEdge:
+                    return [0, coords.y, 0, coords.y + tt.height];
+                default:
+                    return [coords.x, tmf.height, coords.x + tt.width, tmf.height];
+                }
+                return [coords.x, coords.y + tt.height, coords.x + tt.width, coords.y + tt.height]
+            }
             blockFirstEnter: false
 
             edge: {
