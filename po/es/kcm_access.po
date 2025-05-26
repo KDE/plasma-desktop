@@ -1,17 +1,19 @@
-# Translation of kcmaccess to Spanish
+# Spanish translations for kcm_access.po package.
+# Copyright (C) 2001-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
 #
 # SPDX-FileCopyrightText: 2001, 2002, 2005, 2006 Pablo de Vicente <pablo.devicente@gmail.com>
 # SPDX-FileCopyrightText: 2003, 2005, 2007, 2008 Jaime Robles <jaime@kde.org>
 # SPDX-FileCopyrightText: 2003 Miguel Revilla Rodríguez <yo@miguelrevilla.com>
-# SPDX-FileCopyrightText: 2005, 2010, 2014, 2015, 2017, 2019, 2020, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2005, 2010, 2014, 2015, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 # SPDX-FileCopyrightText: 2007 Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>
 # SPDX-FileCopyrightText: 2012 Javier Vinal <fjvinal@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: kcmaccess\n"
+"Project-Id-Version: kcm_access\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-28 00:42+0000\n"
-"PO-Revision-Date: 2024-11-30 02:06+0100\n"
+"PO-Revision-Date: 2025-05-26 00:55+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -378,7 +380,7 @@ msgstr "Mostrar una notificación"
 #: ui/ActivationShortcuts.qml:123
 #, kde-format
 msgid "Configure Notifications…"
-msgstr "Configurar notificaciones..."
+msgstr "Configurar notificaciones…"
 
 #: ui/Bell.qml:19
 #, kde-format
@@ -763,7 +765,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Notifications…"
-msgstr "Configurar notificaciones..."
+msgstr "Configurar notificaciones…"
 
 #: ui/MouseNavigation.qml:17
 #, kde-format
@@ -846,7 +848,7 @@ msgstr "Activar el lector de pantalla"
 #, kde-format
 msgctxt "@action:button"
 msgid "Launch Orca Screen Reader Configuration…"
-msgstr "Lanzar la configuración del lector de pantalla Orca..."
+msgstr "Lanzar la configuración del lector de pantalla Orca…"
 
 #: ui/ShakeCursor.qml:15
 #, kde-format
@@ -877,293 +879,3 @@ msgstr "Normal"
 msgctxt "@label Large cursor size"
 msgid "Large"
 msgstr "Grande"
-
-#~ msgctxt "@label"
-#~ msgid "Emits a sound whenever certain keys are pressed"
-#~ msgstr "Emite un sonido cuando se pulsan ciertas teclas"
-
-#~ msgctxt "@label"
-#~ msgid "Flashes the screen whenever certain keys are pressed"
-#~ msgstr "Hace que parpadee la pantalla cuando se pulsan ciertas teclas"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Once locked, the “sticky” state of modifier keys will not be disabled "
-#~ "until a keyboard shortcut is finished or until a non-modifier key is "
-#~ "pressed."
-#~ msgstr ""
-#~ "Una vez bloqueado, el estado «adhesivo» de las teclas modificadoras no se "
-#~ "desactivará hasta finalizar un atajo de teclado o hasta que se pulse una "
-#~ "tecla no modificadora."
-
-#~ msgid "Activation:"
-#~ msgstr "Activación:"
-
-#~ msgid "Use gestures for activating sticky keys and slow keys"
-#~ msgstr ""
-#~ "Usar gestos para activar las «teclas adhesivas» y las «teclas lentas»"
-
-#~ msgctxt "Flash screen on a system bell"
-#~ msgid "Flash"
-#~ msgstr "Parpadear"
-
-#~ msgid ""
-#~ "For a key to be accepted, it has to be held until the set amount of time"
-#~ msgstr ""
-#~ "Para que se acepte una clave, debe mantenerse durante el tiempo "
-#~ "establecido"
-
-#~ msgid "Ignore rapid, repeated keypresses of the same key"
-#~ msgstr "Ignorar pulsaciones rápidas y repetidas de la mista tecla"
-
-#~ msgctxt "System Bell"
-#~ msgid "Bell"
-#~ msgstr "Timbre"
-
-#~ msgctxt "Enable sticky keys"
-#~ msgid "Enable"
-#~ msgstr "Activar"
-
-#~ msgctxt "Lock sticky keys"
-#~ msgid "Lock"
-#~ msgstr "Bloquear"
-
-#~ msgid ""
-#~ "Please note that you may have to log out or reboot once to allow the "
-#~ "screen reader to work properly."
-#~ msgstr ""
-#~ "Tenga en cuenta que debe volver a iniciar sesión o reiniciar el equipo "
-#~ "para que el lector de pantalla funcione correctamente."
-
-#~ msgid ""
-#~ "It appears that the Orca Screen Reader is not installed. Please install "
-#~ "it before trying to use this feature, and then log out or reboot"
-#~ msgstr ""
-#~ "Parece que el lector de pantalla Orca no está instalado. Instálelo antes "
-#~ "de usar esta funcionalidad y vuelva a iniciar sesión o reinicie el equipo."
-
-#~ msgid "Acceleration profile:"
-#~ msgstr "Perfil de aceleración:"
-
-#~ msgid ""
-#~ "This module lets you configure the accessibility features such as a "
-#~ "screen reader."
-#~ msgstr ""
-#~ "Este módulo le permite configurar las funciones de accesibilidad, como el "
-#~ "lector de pantalla."
-
-#~ msgid "Maximum velocity"
-#~ msgstr "Velocidad máxima"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Eloy Cuadra,Jaime Robles,Pablo de Vicente,José Luis Sánchez"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr ""
-#~ "ecuadra@eloihr.net,jaime@kde.org,pvicentea@wanadoo.es,joseluis@valux.org"
-
-#~ msgid "Accessibility"
-#~ msgstr "Accesibilidad"
-
-#~ msgid "(c) 2000, Matthias Hoelzer-Kluepfel"
-#~ msgstr "© 2000, Matthias Hoelzer-Kluepfel"
-
-#~ msgid "Matthias Hoelzer-Kluepfel"
-#~ msgstr "Matthias Hoelzer-Kluepfel"
-
-#~ msgid "Author"
-#~ msgstr "Autor"
-
-#~ msgid "Automatically turn off the sticky keys after an interval"
-#~ msgstr "Desactivar automáticamente las teclas adhesivas tras un intervalo"
-
-#~ msgid "Ring when toggling accessibility features with gestures"
-#~ msgstr ""
-#~ "Emitir un sonido al cambiar las funciones de accesibilidad con gestos"
-
-#~ msgid "Use gestures to activate"
-#~ msgstr "Usar gestos para activar"
-
-#~ msgid "Disable After:"
-#~ msgstr "Desactivar tras:"
-
-#~ msgid "Color of the System bell"
-#~ msgstr "Color del timbre del sistema"
-
-#~ msgid ""
-#~ "If this option is checked, the default system bell will be used. Usually, "
-#~ "this is just a \"beep\"."
-#~ msgstr ""
-#~ "Si esta opción está marcada, se usará el timbre por omisión del sistema. "
-#~ "Normalmente es un pitido."
-
-#~ msgid ""
-#~ "Check this option if you want to use a customized bell, playing a sound "
-#~ "file. If you do this, you will probably want to turn off the system bell."
-#~ msgstr ""
-#~ "Marque esta opción si quiere usar un sonido personalizado, reproduciendo "
-#~ "un archivo de sonido. Si elige esta opción, probablemente querrá "
-#~ "desactivar el sonido del sistema."
-
-#~ msgid "Us&e customized bell"
-#~ msgstr "Usar timbr&e personalizado"
-
-#~ msgid ""
-#~ "If the option \"Use customized bell\" is enabled, you can choose a sound "
-#~ "file here. Click \"Browse...\" to choose a sound file using the file "
-#~ "dialog."
-#~ msgstr ""
-#~ "Si se activa la opción «Usar sonido personalizado», puede escoger un "
-#~ "archivo de sonido. Pulse «Explorar ...» para escoger un archivo de sonido "
-#~ "utilizando el cuadro de diálogo de archivos."
-
-#~ msgid "Sound &to play:"
-#~ msgstr "Sonido a re&producir:"
-
-#~ msgid "Browse..."
-#~ msgstr "Explorar..."
-
-#~ msgid ""
-#~ "This option will turn on the \"visual bell\", i.e. a visual notification "
-#~ "shown every time that normally just a bell would occur. This is "
-#~ "especially useful for deaf people."
-#~ msgstr ""
-#~ "Esta opción activara el «timbre visual», es decir, se mostrará una "
-#~ "notificación visual en las ocasiones en que, normalmente, simplemente se "
-#~ "produciría un sonido. Esto es especialmente útil para personas sordas."
-
-#~ msgid "&Use visual bell"
-#~ msgstr "&Usar timbre visual"
-
-#~ msgid ""
-#~ "The screen will turn to a custom color for the amount of time specified "
-#~ "below."
-#~ msgstr ""
-#~ "La pantalla mostrará un color personalizado durante el periodo de tiempo "
-#~ "especificado más abajo."
-
-#~ msgid ""
-#~ "All screen colors will be inverted for the amount of time specified below."
-#~ msgstr ""
-#~ "Todos los colores de la pantalla serán invertidos durante el periodo de "
-#~ "tiempo especificado más abajo."
-
-#~ msgid ""
-#~ "Click here to choose the color used for the \"flash screen\" visible bell."
-#~ msgstr ""
-#~ "Pulse aquí para escoger el color utilizado para «iluminar la pantalla» en "
-#~ "el modo timbre visual."
-
-#~ msgid ""
-#~ "Here you can customize the duration of the \"visible bell\" effect being "
-#~ "shown."
-#~ msgstr ""
-#~ "Aquí puede personalizar la duración del «timbre visual» que se mostrará."
-
-#~ msgid " msec"
-#~ msgstr " mseg"
-
-#~ msgid "Use system bell whenever a modifier gets latched, locked or unlocked"
-#~ msgstr ""
-#~ "Usar el timbre del sistema cuando un modificador queda retenido, "
-#~ "bloqueado o desbloqueado"
-
-#~ msgid "Locking Keys"
-#~ msgstr "Teclas de bloqueo"
-
-#~ msgid "Use system bell whenever a locking key gets activated or deactivated"
-#~ msgstr ""
-#~ "Usar el timbre del sistema cuando se activa o desactiva una tecla de "
-#~ "bloqueo"
-
-#~ msgid "Slo&w Keys"
-#~ msgstr "Teclas le&ntas"
-
-#~ msgid "Use bou&nce keys"
-#~ msgstr "Usar teclas &rebotantes"
-
-#~ msgid "Activation &Gestures"
-#~ msgstr "&Gestos de activación"
-
-#~ msgid ""
-#~ "Use the system bell whenever a gesture is used to toggle an accessibility "
-#~ "feature"
-#~ msgstr ""
-#~ "Usar el timbre del sistema cada vez que se use un gesto para activar o "
-#~ "desactivar una función de accesibilidad"
-
-#~ msgid ""
-#~ "If this option is checked, KDE will show a confirmation dialog whenever a "
-#~ "keyboard accessibility feature is turned on or off.\n"
-#~ "Ensure you know what you are doing if you uncheck it, as the keyboard "
-#~ "accessibility settings will then always be applied without confirmation."
-#~ msgstr ""
-#~ "Si esta casilla está marcada, KDE mostrará una ventana de confirmación "
-#~ "cada vez que se active o desactive una característica de accesibilidad "
-#~ "del teclado.\n"
-#~ "Sea cuidadoso, pues si desmarca la casilla, las opciones de accesibilidad "
-#~ "del teclado se aplicarán siempre sin confirmación."
-
-#~ msgid ""
-#~ "Show a confirmation dialog whenever a keyboard accessibility feature is "
-#~ "toggled"
-#~ msgstr ""
-#~ "Mostrar un diálogo de confirmación cada vez que se active o desactive una "
-#~ "función de accesibilidad del teclado"
-
-#~ msgid ""
-#~ "Use Plasma's notification mechanism whenever a keyboard accessibility "
-#~ "feature is toggled"
-#~ msgstr ""
-#~ "Usar el mecanismo de notificación de Plasma cuando se activa o desactiva "
-#~ "una característica de accesibilidad del teclado"
-
-#~ msgid "&Move pointer with keyboard (using the num pad)"
-#~ msgstr "&Mover el puntero con el teclado (usando el bloque numérico)"
-
-#~ msgid " pixel/sec"
-#~ msgstr " píxeles/s"
-
-#~ msgid "Screen reader enabled"
-#~ msgstr "Lector de pantalla activado"
-
-#~ msgid ""
-#~ "Here you can activate keyboard gestures that turn on the following "
-#~ "features: \n"
-#~ "Sticky keys: Press Shift key 5 consecutive times\n"
-#~ "Slow keys: Hold down Shift for 8 seconds"
-#~ msgstr ""
-#~ "Aquí puede activar los gestos de teclado que habilitarán las siguientes "
-#~ "funcionalidades: \n"
-#~ "Teclas adhesivas: Pulse «Mayúsculas» 5 veces consecutivas.\n"
-#~ "Teclas lentas: Mantenga pulsada «Mayúsculas» durante 8 segundos."
-
-#~ msgid ""
-#~ "Here you can activate keyboard gestures that turn on the following "
-#~ "features: \n"
-#~ "Mouse Keys: %1\n"
-#~ "Sticky keys: Press Shift key 5 consecutive times\n"
-#~ "Slow keys: Hold down Shift for 8 seconds"
-#~ msgstr ""
-#~ "Aquí puede activar los gestos de teclado que habilitarán las siguientes "
-#~ "funcionalidades: \n"
-#~ "Teclas de ratón: %1\n"
-#~ "Teclas adhesivas: Pulse «Mayúsculas» 5 veces consecutivas.\n"
-#~ "Teclas lentas: Mantenga pulsada «Mayúsculas» durante 8 segundos"
-
-#~ msgid "Form"
-#~ msgstr "Formulario"
-
-#~ msgid "D&ebounce time:"
-#~ msgstr "Tiempo de r&ebote:"
-
-#~ msgid "Timeout:"
-#~ msgstr "Intervalo:"
-
-#~ msgid "kaccess"
-#~ msgstr "kaccess"
-
-#~ msgid "*.wav|WAV Files"
-#~ msgstr "*.wav|Archivos WAV"

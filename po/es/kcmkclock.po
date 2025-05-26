@@ -1,30 +1,28 @@
-# Translation of kcmkclock to Spanish
-# translation of kcmkclock.po to Spanish
-# Translation to spanish
-# Copyright (C) 2001-2002.
+# Spanish translations for kcmkclock.po package.
+# Copyright (C) 2001-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
 #
-# Pablo de Vicente <vicente@oan.es>, 2001-2002.
-# Jaime Robles <jaime@kde.org>, 2003, 2005, 2008.
-# Miguel Revilla Rodríguez <yo@miguelrevilla.com>, 2004.
-# Pablo de Vicente <p.devicente@wanadoo.es>, 2004, 2005.
-# Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
-# Jaime Robles <jaime@robles.es>, 2009.
-# Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2010.
-# Javier Vinal <fjvinal@gmail.com>, 2012.
-# SPDX-FileCopyrightText: 2013, 2014, 2015, 2019, 2021, 2023 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2001-2002 Pablo de Vicente <vicente@oan.es>
+# SPDX-FileCopyrightText: 2003, 2005, 2008 Jaime Robles <jaime@kde.org>
+# SPDX-FileCopyrightText: 2004 Miguel Revilla Rodríguez <yo@miguelrevilla.com>
+# SPDX-FileCopyrightText: 2004, 2005 Pablo de Vicente <p.devicente@wanadoo.es>
+# SPDX-FileCopyrightText: 2007 Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>
+# SPDX-FileCopyrightText: 2009 Jaime Robles <jaime@robles.es>
+# SPDX-FileCopyrightText: 2010 Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>
+# SPDX-FileCopyrightText: 2012 Javier Vinal <fjvinal@gmail.com>
+# SPDX-FileCopyrightText: 2013, 2014, 2015, 2019, 2021, 2023, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-28 00:43+0000\n"
-"PO-Revision-Date: 2023-11-08 12:54+0100\n"
+"PO-Revision-Date: 2025-05-26 00:41+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"com>\n"
 "First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
 "X-Generator: Lokalize 23.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
@@ -155,75 +153,3 @@ msgstr "No ha sido posible fijar la hora actual"
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "No ha sido posible fijar la zona horaria"
-
-#~ msgid "To change the local time zone, select your area from the list below."
-#~ msgstr ""
-#~ "Para cambiar la zona horaria local, seleccione su área en la lista "
-#~ "inferior."
-
-#~ msgid "Current local time zone:"
-#~ msgstr "Zona horaria local actual:"
-
-#~ msgid "Search…"
-#~ msgstr "Buscar..."
-
-#~ msgctxt "%1 is name of time zone"
-#~ msgid "Current local time zone: %1"
-#~ msgstr "Zona horaria local actual: %1"
-
-#~ msgctxt "%1 is name of time zone, %2 is its abbreviation"
-#~ msgid "Current local time zone: %1 (%2)"
-#~ msgstr "Zona horaria local actual: %1 (%2)"
-
-#~ msgctxt "Define an area in the time zone, like a town area"
-#~ msgid "Area"
-#~ msgstr "Área"
-
-#~ msgctxt "Time zone"
-#~ msgid "Region"
-#~ msgstr "Región"
-
-#~ msgid "Comment"
-#~ msgstr "Comentario"
-
-#~ msgid "KDE Clock Control Module"
-#~ msgstr "Módulo de control del reloj de KDE"
-
-#~ msgid "(c) 1996 - 2001 Luca Montecchiani"
-#~ msgstr "© 1996 - 2001 Luca Montecchiani"
-
-#~ msgid "Luca Montecchiani"
-#~ msgstr "Luca Montecchiani"
-
-#~ msgid "Original author"
-#~ msgstr "Autor original"
-
-#~ msgid "Paul Campbell"
-#~ msgstr "Paul Campbell"
-
-#~ msgid "Current Maintainer"
-#~ msgstr "Encargado actual"
-
-#~ msgid "Benjamin Meyer"
-#~ msgstr "Benjamin Meyer"
-
-#~ msgid "Added NTP support"
-#~ msgstr "Añadida implementación de NTP"
-
-#~ msgid ""
-#~ "<h1>Date & Time</h1> This control module can be used to set the system "
-#~ "date and time. As these settings do not only affect you as a user, but "
-#~ "rather the whole system, you can only change these settings when you "
-#~ "start the System Settings as root. If you do not have the root password, "
-#~ "but feel the system time should be corrected, please contact your system "
-#~ "administrator."
-#~ msgstr ""
-#~ "<h1>Fecha y hora</h1> Este módulo de control puede usarse para ajustar la "
-#~ "fecha y hora del sistema. Como estos cambios no solo le afectan como "
-#~ "usuario, sino a todo el sistema, solo puede cambiar estos valores si "
-#~ "inicia las Preferencias del sistema como superusuario. Si no tiene la "
-#~ "contraseña de superusuario pero cree que debería cambiarse la fecha y "
-#~ "hora del sistema, por favor, contacte con el administrador del sistema."
-
-#~ msgid "kcmclock"
-#~ msgstr "kcmclock"

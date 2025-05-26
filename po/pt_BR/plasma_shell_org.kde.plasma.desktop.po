@@ -11,15 +11,15 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-03-10 00:55-0300\n"
-"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
+"PO-Revision-Date: 2025-05-24 23:27-0300\n"
+"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -294,7 +294,7 @@ msgstr "Atalhos"
 #, kde-format
 msgctxt "@action:button set keyboard shortcut for"
 msgid "Activate widget as if clicked:"
-msgstr ""
+msgstr "Ativar o widget como se fosse clicado:"
 
 #: contents/configuration/ContainmentConfiguration.qml:27
 #, kde-format
@@ -317,28 +317,24 @@ msgid "Panel Settings"
 msgstr "Configurações do painel"
 
 #: contents/configuration/PanelConfiguration.qml:109
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible only, %1 is widget name"
-#| msgid "Add %1"
+#, kde-format
 msgctxt ""
 "@action:button label of button to open a menu that lets you add widgets or "
 "spacers"
 msgid "Add New"
-msgstr "Adicionar %1"
+msgstr "Adicionar novo"
 
 #: contents/configuration/PanelConfiguration.qml:127
-#, fuzzy, kde-format
-#| msgid "Add Spacer"
+#, kde-format
 msgctxt "@action:menu add a spacer"
 msgid "Spacer"
-msgstr "Adicionar espaçador"
+msgstr "Espaçador"
 
 #: contents/configuration/PanelConfiguration.qml:134
-#, fuzzy, kde-format
-#| msgid "Widgets"
+#, kde-format
 msgctxt "@action:menu add a widget"
 msgid "Widgets…"
-msgstr "Widgets"
+msgstr "Widgets…"
 
 #: contents/configuration/PanelConfiguration.qml:163
 #, kde-format

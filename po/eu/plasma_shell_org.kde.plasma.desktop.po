@@ -1,7 +1,7 @@
 # Translation for plasma_shell_org.kde.plasma.desktop.po to Euskara/Basque (eu).
 # Copyright (C) 2017-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2023, 2024, 2025 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Iñigo Salvador Azurmendi <xalba@ni.eus>, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-03-30 16:18+0200\n"
+"PO-Revision-Date: 2025-05-25 18:06+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -291,7 +291,7 @@ msgstr "Lasterbideak"
 #, kde-format
 msgctxt "@action:button set keyboard shortcut for"
 msgid "Activate widget as if clicked:"
-msgstr ""
+msgstr "Aktibatu trepeta klik egin balitzaio bezala:"
 
 #: contents/configuration/ContainmentConfiguration.qml:27
 #, kde-format
@@ -314,28 +314,24 @@ msgid "Panel Settings"
 msgstr "Panelaren ezarpenak"
 
 #: contents/configuration/PanelConfiguration.qml:109
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible only, %1 is widget name"
-#| msgid "Add %1"
+#, kde-format
 msgctxt ""
 "@action:button label of button to open a menu that lets you add widgets or "
 "spacers"
 msgid "Add New"
-msgstr "Gehitu %1"
+msgstr "Gehitu berria"
 
 #: contents/configuration/PanelConfiguration.qml:127
-#, fuzzy, kde-format
-#| msgid "Add Spacer"
+#, kde-format
 msgctxt "@action:menu add a spacer"
 msgid "Spacer"
-msgstr "Gehitu bereizlea"
+msgstr "Bereizlea"
 
 #: contents/configuration/PanelConfiguration.qml:134
-#, fuzzy, kde-format
-#| msgid "Widgets"
+#, kde-format
 msgctxt "@action:menu add a widget"
 msgid "Widgets…"
-msgstr "Trepetak"
+msgstr "Trepetak…"
 
 #: contents/configuration/PanelConfiguration.qml:163
 #, kde-format

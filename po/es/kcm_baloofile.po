@@ -1,12 +1,14 @@
-# Translation of kcm_baloofile to Spanish
+# Spanish translations for kcm_baloofile.po package.
+# Copyright (C) 2014-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2014, 2017, 2019, 2020, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2014, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_baloofile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-01 00:42+0000\n"
-"PO-Revision-Date: 2024-08-29 00:44+0200\n"
+"PO-Revision-Date: 2025-05-26 00:36+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -105,13 +107,13 @@ msgstr "Ubicaciones"
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
-msgstr "Empezar a indexar una carpeta..."
+msgstr "Empezar a indexar una carpeta…"
 
 #: ui/main.qml:193
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
-msgstr "Detener la indexación de una carpeta..."
+msgstr "Detener la indexación de una carpeta…"
 
 #: ui/main.qml:211
 #, kde-format
@@ -150,87 +152,3 @@ msgstr "Seleccionar una carpeta a incluir"
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Seleccionar una carpeta a excluir"
-
-#~ msgctxt "@label indexing status"
-#~ msgid "Status:"
-#~ msgstr "Estado:"
-
-#~ msgctxt "@label file currently being indexed"
-#~ msgid "Currently indexing:"
-#~ msgstr "Indexando actualmente:"
-
-#~ msgid "The system must be restarted before these changes will take effect."
-#~ msgstr "Debe reiniciar el sistema para que estos cambios tengan efecto."
-
-#~ msgctxt "@action:button"
-#~ msgid "Restart"
-#~ msgstr "Reiniciar"
-
-#~ msgid "Enable File Search"
-#~ msgstr "Activar la búsqueda de archivos"
-
-#~ msgid "Also index file content"
-#~ msgstr "Indexar también el contenido de los archivos"
-
-#~ msgid "Folder specific configuration:"
-#~ msgstr "Configuración específica de la carpeta:"
-
-#~ msgid ""
-#~ "This module lets you configure the file indexer and search functionality."
-#~ msgstr ""
-#~ "Este módulo le permite configurar el indexador de archivos y la función "
-#~ "de búsqueda."
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Eloy Cuadra"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "ecuadra@eloihr.net"
-
-#~ msgid "File Search"
-#~ msgstr "Búsqueda de archivos"
-
-#~ msgid "Copyright 2007-2010 Sebastian Trüg"
-#~ msgstr "Copyright 2007-2010 Sebastian Trüg"
-
-#~ msgid "Sebastian Trüg"
-#~ msgstr "Sebastian Trüg"
-
-#~ msgid "Vishesh Handa"
-#~ msgstr "Vishesh Handa"
-
-#~ msgid "Tomaz Canabrava"
-#~ msgstr "Tomaz Canabrava"
-
-#~ msgid "Add folder configuration…"
-#~ msgstr "Añadir configuración de carpeta..."
-
-#~ msgid "%1 is included."
-#~ msgstr "%1 está incluida."
-
-#~ msgid "%1 is excluded."
-#~ msgstr "%1 está excluida."
-
-#~ msgid "Do not search in these locations:"
-#~ msgstr "No buscar en estas ubicaciones:"
-
-#~ msgid "Select the folder which should be excluded"
-#~ msgstr "Seleccione la carpeta que se debe excluir"
-
-#~ msgid ""
-#~ "Not allowed to exclude root folder, please disable File Search if you do "
-#~ "not want it"
-#~ msgstr ""
-#~ "No se puede excluir la carpeta raíz. Por favor, desactive la búsqueda de "
-#~ "archivos si no desea incluirla."
-
-#~ msgid "Folder's parent %1 is already excluded"
-#~ msgstr "La carpeta superior %1 ya está excluida"
-
-#~ msgid "Configure File Search"
-#~ msgstr "Configurar la búsqueda de archivos"
-
-#~ msgid "The root directory is always hidden"
-#~ msgstr "El directorio raíz siempre está oculto"

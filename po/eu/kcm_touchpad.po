@@ -1,7 +1,7 @@
 # Translation for kcm_touchpad.po to Euskara/Basque (eu).
 # Copyright (C) 2017-2025 This file is copyright:
 # This file is distributed under the same license as plasma-desktop package.
-# SPDX-FileCopyrightText: 2024, 2025 KDE euskaraz proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024, 2025 KDE euskaraz proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Ander Elortondo <ander.elor@gmail.com>, 2017.
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-02-01 21:07+0100\n"
+"PO-Revision-Date: 2025-05-25 17:28+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -255,11 +255,13 @@ msgid ""
 "Tap, then tap and immediately slide finger over the touchpad to drag. Lift "
 "finger to drop."
 msgstr ""
+"Egin tak, ondoren egin tak eta berehala hatza ukimen-saguaren gainean "
+"irristatu arrastatzeko. Altxatu hatza jaregiteko."
 
 #: ui/main.qml:485
 #, kde-format
 msgid "Allow briefly lifting finger during tap-and-drag"
-msgstr ""
+msgstr "Hatza laburki altxatzen utzi tak egin eta arrastatzean"
 
 #: ui/main.qml:499
 #, kde-format

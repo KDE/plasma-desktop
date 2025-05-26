@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-26 00:43+0000\n"
-"PO-Revision-Date: 2025-04-22 10:36+0200\n"
+"PO-Revision-Date: 2025-05-25 17:22+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: inputsequence.cpp:172
 #, kde-format
@@ -445,12 +445,10 @@ msgstr ""
 msgctxt ""
 "'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)"
 msgid "Mode:"
-msgstr ""
+msgstr "Modua:"
 
 #: ui/StylusTab.qml:248
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Pen"
+#, kde-format
 msgctxt ""
 "Pen mode, where the point on the screen is always where you touch the stylus"
 msgid "Pen"
@@ -459,13 +457,13 @@ msgstr "Arkatza"
 #: ui/StylusTab.qml:253
 #, kde-format
 msgid "The cursor follows where you touch the pen on the surface"
-msgstr ""
+msgstr "Kurtsoreak arkatza gainazalean ukitzen duzun lekua jarraitzen du"
 
 #: ui/StylusTab.qml:274
 #, kde-format
 msgctxt "Mouse mode, or like using the tablet like a giant touchpad"
 msgid "Mouse"
-msgstr ""
+msgstr "Sagua"
 
 #: ui/StylusTab.qml:279
 #, kde-format
@@ -473,6 +471,8 @@ msgid ""
 "Moving the pen on the surface moves the cursor relative to where it was, "
 "like a mouse"
 msgstr ""
+"Arkatza gainazalean mugitzean kurtsorea zegoen tokiarekiko erlatibo mugitzen "
+"du, sagu batekin bezala"
 
 #: ui/StylusTab.qml:349
 #, kde-format

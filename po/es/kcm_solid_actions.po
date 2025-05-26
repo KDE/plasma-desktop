@@ -1,25 +1,25 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Spanish translations for kcm_solid_actions.po package.
+# Copyright (C) 2009-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
 #
-# Ignacio Poggi <ignaciop.3@gmail.com>, 2009.
-# Jaime Robles <jaime@kde.org>, 2009.
-# Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2009.
-# Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2010.
-# Javier Vinal <fjvinal@gmail.com>, 2012.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2014, 2021.
+# SPDX-FileCopyrightText: 2009 Ignacio Poggi <ignaciop.3@gmail.com>
+# SPDX-FileCopyrightText: 2009 Jaime Robles <jaime@kde.org>
+# SPDX-FileCopyrightText: 2009 Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>
+# SPDX-FileCopyrightText: 2010 Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>
+# SPDX-FileCopyrightText: 2012 Javier Vinal <fjvinal@gmail.com>
+# SPDX-FileCopyrightText: 2014, 2021, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-08 01:58+0000\n"
-"PO-Revision-Date: 2021-05-27 00:52+0200\n"
+"PO-Revision-Date: 2025-05-26 00:40+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"com>\n"
 "X-Generator: Lokalize 21.04.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
@@ -263,28 +263,10 @@ msgstr "Eliminar"
 #: SolidActions.ui:29
 #, kde-format
 msgid "Edit…"
-msgstr "Editar..."
+msgstr "Editar…"
 
 #. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
 #: SolidActions.ui:36
 #, kde-format
 msgid "Add…"
-msgstr "Añadir..."
-
-#~ msgid "Solid Device Actions Editor"
-#~ msgstr "Editor de acciones del dispositivo Solid"
-
-#~ msgid "Solid Device Actions Control Panel Module"
-#~ msgstr "Módulo del panel de control de acciones del dispositivo Solid"
-
-#~ msgid "(c) 2009, 2014 Solid Device Actions team"
-#~ msgstr "© 2009, 2014 Equipo de acciones de los dispositivos Solid"
-
-#~ msgid "Port to Plasma 5"
-#~ msgstr "Adaptación a Plasma 5"
-
-#~ msgid "Edit..."
-#~ msgstr "Editar..."
-
-#~ msgid "Add..."
-#~ msgstr "Añadir..."
+msgstr "Añadir…"

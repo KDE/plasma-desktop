@@ -1,15 +1,15 @@
 # Spanish translations for kcm_krunnersettings.po package.
-# Copyright (C) 2022 This file is copyright:
+# Copyright (C) 2022-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-#
 # Automatically generated, 2022.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2022, 2023.
+#
+# SPDX-FileCopyrightText: 2022, 2023, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_krunnersettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-02 02:36+0000\n"
-"PO-Revision-Date: 2023-06-26 00:44+0200\n"
+"PO-Revision-Date: 2025-05-26 00:39+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -71,7 +71,7 @@ msgstr "Terminación automática activada"
 #: ui/main.qml:92
 #, kde-format
 msgid "Clear History…"
-msgstr "Borrar el historial..."
+msgstr "Borrar el historial…"
 
 #: ui/main.qml:115
 #, kde-format
@@ -95,23 +95,4 @@ msgstr "Complementos:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Enabled Search Plugins…"
-msgstr "Configurar los complementos de búsqueda activados..."
-
-#~ msgctxt "@option:check"
-#~ msgid "Remember past searches"
-#~ msgstr "Recordar las búsquedas anteriores"
-
-#~ msgctxt "@option:check"
-#~ msgid "Retain last search when re-opening"
-#~ msgstr "Retener la última búsqueda al volver a abrir"
-
-#~ msgctxt "@option:check"
-#~ msgid "Activity-aware (last search and history)"
-#~ msgstr "Tener en cuenta la actividad (última búsqueda e historial)"
-
-#~ msgid "Clear History"
-#~ msgstr "Borrar el historial"
-
-#~ msgctxt "@action:button %1 activity name"
-#~ msgid "Clear History for Activity \"%1\""
-#~ msgstr "Borrar el historial para la actividad «%1»"
+msgstr "Configurar los complementos de búsqueda activados…"

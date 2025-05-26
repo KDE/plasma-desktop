@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-03-15 09:11+0200\n"
+"PO-Revision-Date: 2025-05-25 10:10+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -22,7 +22,7 @@ msgstr ""
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
 msgid "Currently being used"
-msgstr "Käytössä"
+msgstr "Nyt käytössä"
 
 #: contents/activitymanager/ActivityItem.qml:245
 #, kde-format
@@ -290,7 +290,7 @@ msgstr "Pikanäppäimet"
 #, kde-format
 msgctxt "@action:button set keyboard shortcut for"
 msgid "Activate widget as if clicked:"
-msgstr ""
+msgstr "Aktivoi sovelma kuin napsautettuna:"
 
 #: contents/configuration/ContainmentConfiguration.qml:27
 #, kde-format
@@ -313,28 +313,24 @@ msgid "Panel Settings"
 msgstr "Paneeliasetukset"
 
 #: contents/configuration/PanelConfiguration.qml:109
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible only, %1 is widget name"
-#| msgid "Add %1"
+#, kde-format
 msgctxt ""
 "@action:button label of button to open a menu that lets you add widgets or "
 "spacers"
 msgid "Add New"
-msgstr "Lisää %1"
+msgstr "Lisää uusi"
 
 #: contents/configuration/PanelConfiguration.qml:127
-#, fuzzy, kde-format
-#| msgid "Add Spacer"
+#, kde-format
 msgctxt "@action:menu add a spacer"
 msgid "Spacer"
-msgstr "Lisää erotin"
+msgstr "Erotin"
 
 #: contents/configuration/PanelConfiguration.qml:134
-#, fuzzy, kde-format
-#| msgid "Widgets"
+#, kde-format
 msgctxt "@action:menu add a widget"
 msgid "Widgets…"
-msgstr "Sovelmat"
+msgstr "Sovelmat…"
 
 #: contents/configuration/PanelConfiguration.qml:163
 #, kde-format
