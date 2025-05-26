@@ -1,15 +1,15 @@
 # Spanish translations for kcm_plasmasearch.po package.
-# Copyright (C) 2022 This file is copyright:
+# Copyright (C) 2022-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-#
 # Automatically generated, 2022.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+#
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_plasmasearch\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-12 00:43+0000\n"
-"PO-Revision-Date: 2024-05-25 01:39+0200\n"
+"PO-Revision-Date: 2025-05-26 00:46+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -32,12 +32,12 @@ msgstr "Complementos disponibles"
 #: plasmasearch/ui/main.qml:25
 #, kde-format
 msgid "Configure KRunner…"
-msgstr "Configurar KRunner..."
+msgstr "Configurar KRunner…"
 
 #: plasmasearch/ui/main.qml:30
 #, kde-format
 msgid "Get New Plugins…"
-msgstr "Obtener nuevos complementos..."
+msgstr "Obtener nuevos complementos…"
 
 #: plasmasearch/ui/main.qml:45
 #, kde-format
@@ -300,7 +300,3 @@ msgctxt "@info"
 msgid "Failed to run install command: <message>%1</message>"
 msgstr ""
 "La ejecución de la orden de instalación ha fallado: <message>%1</message>"
-
-#~ msgctxt "@info:shell"
-#~ msgid "Path to archive."
-#~ msgstr "Ruta al archivo comprimido."

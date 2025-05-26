@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-02-16 11:02+0200\n"
+"PO-Revision-Date: 2025-05-25 09:14+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -226,8 +226,7 @@ msgid "Invert scroll direction"
 msgstr "Käännä vierityssuunta"
 
 #: ui/main.qml:330
-#, fuzzy, kde-format
-#| msgid "Press middle button and move mouse to scroll"
+#, kde-format
 msgid "Hold down middle button and move mouse to scroll"
 msgstr "Vieritä painamalla keskipainiketta ja liikuttamalla hiirtä"
 
@@ -240,6 +239,10 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+"Tämä häiritsee sovelluksia, jotka käyttävät keskipainiketta vetämiseen, "
+"kuten joitakin kuvamuokkaimia, asiakirjakatselimia ja videopelejä. Sitä voi "
+"käyttää millä tahansa laitteella, mutta ensisijaisesti sen on tarkoitettu "
+"korvaavan puuttuvaa hiiren rullaa."
 
 #~ msgid "Accept input through this device."
 #~ msgstr "Hyväksy tältä laitteesta tuleva syöte."

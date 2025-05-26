@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-01 00:43+0000\n"
-"PO-Revision-Date: 2025-03-15 09:07+0200\n"
+"PO-Revision-Date: 2025-05-25 09:11+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -40,7 +40,7 @@ msgstr "Käynnistä uudelleen"
 #, kde-format
 msgctxt "@title:group"
 msgid "Plasma"
-msgstr ""
+msgstr "Plasma"
 
 #: ui/main.qml:52
 #, kde-format
@@ -83,12 +83,10 @@ msgstr ""
 "äänenvoimakkuuden ja näytönkirkkauden muuttuessa tai äänilaitteen vaihtuessa."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling"
-msgstr "Vieritys:"
+msgstr "Vieritys"
 
 #: ui/main.qml:100
 #, kde-format
@@ -140,7 +138,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "Napsautus"
 
 #: ui/main.qml:175
 #, kde-format
@@ -222,24 +220,23 @@ msgid ""
 "Double-click the folder to test. If it does not change its appearance, "
 "increase double-click interval."
 msgstr ""
+"Kokeile kaksoisnapsauttamalla kansiota. Ellei sen ulkoasu muuta, lisää "
+"kaksoisnapsautuksen aikaväliä."
 
 #: ui/main.qml:354
 #, kde-format
 msgid "Drag and Drop"
-msgstr ""
+msgstr "Vedä ja pudota"
 
 #: ui/main.qml:361
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
-#| msgid "Clicking files or folders:"
+#, kde-format
 msgid "When dragging files or folders:"
-msgstr "Kertanapsautus:"
+msgstr "Vedettäessä tiedostoja ja kansioita:"
 
 #: ui/main.qml:362
 #, kde-format
 msgid "Always ask what to do"
-msgstr ""
+msgstr "Kysy aina, mitä tehdään"
 
 #: ui/main.qml:378
 #, kde-kuit-format
@@ -249,30 +246,31 @@ msgid ""
 "and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise show a "
 "dialog."
 msgstr ""
+"Siirrä painamalla <shortcut>Vaihto</shortcut>, kopioi painamalla "
+"<shortcut>Ctrl</shortcut> tai luo symlinkki painamalla <shortcut>Vaihto"
+"+Ctrl</shortcut>; muuten näytä valintaikkuna."
 
 #: ui/main.qml:386
 #, kde-format
 msgid "Move if on the same device"
-msgstr ""
+msgstr "Siirrä, jos laite on sama"
 
 #: ui/main.qml:402
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
-msgstr ""
+msgstr "Näytä valinnat painamalla pudotettaessa <shortcut>Vaihto</shortcut>."
 
 #: ui/main.qml:410
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Touch"
-msgstr "Kosketustila:"
+msgstr "Kosketus"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgid "Enable Touch Mode:"
-msgstr "Kosketustila:"
+msgstr "Käytä kosketustilaa"
 
 #: ui/main.qml:418
 #, kde-format
@@ -298,9 +296,7 @@ msgstr ""
 "hybridikannettavan näppäimistö käännetään tai irrotetaan."
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always enabled"
+#, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always active"
 msgstr "Aina käytössä"
@@ -309,7 +305,7 @@ msgstr "Aina käytössä"
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Disabled"
-msgstr ""
+msgstr "Ei käytössä"
 
 #: ui/main.qml:486
 #, kde-format
@@ -333,6 +329,8 @@ msgid ""
 "For local files on the same device, whether dragging and dropping will "
 "perform a move operation instead of showing the options menu"
 msgstr ""
+"Tehdäänkö vedettäessä ja pudotettaessa siirto toimenpidevalikon näyttämisen "
+"sijaan, kun kyse on paikallisista tiedostoista samalla laitteella"
 
 #. i18n: ectx: label, entry (smoothScroll), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21

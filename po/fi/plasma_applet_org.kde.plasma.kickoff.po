@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-04-08 08:23+0300\n"
+"PO-Revision-Date: 2025-05-25 09:15+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -183,7 +183,7 @@ msgstr "Poistetaan kosketustilassa automaattisesti käytöstä"
 #: package/contents/ui/ConfigGeneral.qml:200
 #, kde-format
 msgid "Highlight newly installed applications"
-msgstr ""
+msgstr "Korosta vasta-asennetut sovellukset"
 
 #: package/contents/ui/ConfigGeneral.qml:205
 #, kde-format
@@ -305,14 +305,13 @@ msgstr "Pidä avoinna"
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Uusi!"
 
 #: package/contents/ui/KickoffGridDelegate.qml:61
 #: package/contents/ui/KickoffListDelegate.qml:121
-#, fuzzy, kde-format
-#| msgid "Recently Used Applications"
+#, kde-format
 msgid "Newly installed application"
-msgstr "Äskettäin käytetyt sovellukset"
+msgstr "Vasta-asennettu sovellus"
 
 #: package/contents/ui/KickoffGridView.qml:102
 #, kde-format
@@ -322,7 +321,7 @@ msgstr "%1 rivin × %2 sarakkeen ruudukko"
 #: package/contents/ui/KickoffListDelegate.qml:120
 #, kde-format
 msgid "There is a newly installed application in this category"
-msgstr ""
+msgstr "Tässä luokassa on vasta-asennettu sovellus"
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
@@ -330,10 +329,9 @@ msgid "More"
 msgstr "Lisää"
 
 #: package/contents/ui/LeaveButtons.qml:169
-#, fuzzy, kde-format
-#| msgid "Session actions"
+#, kde-format
 msgid "Session and Power "
-msgstr "Istuntotoiminnot"
+msgstr "Istunto ja virta "
 
 #: package/contents/ui/main.qml:355
 #, kde-format

@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-02-01 23:56-0300\n"
+"PO-Revision-Date: 2025-05-24 23:23-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
@@ -233,10 +233,9 @@ msgid "Invert scroll direction"
 msgstr "Inverter direção da rolagem"
 
 #: ui/main.qml:330
-#, fuzzy, kde-format
-#| msgid "Press middle button and move mouse to scroll"
+#, kde-format
 msgid "Hold down middle button and move mouse to scroll"
-msgstr "Pressione o botão do meio e mova o mouse para rolar"
+msgstr "Segure o botão do meio e mova o mouse para rolar"
 
 #: ui/main.qml:342
 #, kde-format
@@ -247,6 +246,10 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+"Isso irá interferir em aplicativos que usam o arraste com botão do meio, "
+"como alguns editores de imagem, leitores de documentos ou jogos. Você pode "
+"utilizaressa função com qualquer dispositivo, mas seu principal uso é "
+"substituir rodas de rolagem em dispositivos que não a possuem."
 
 #~ msgid "Accept input through this device."
 #~ msgstr "Aceitar entradas através deste dispositivo."
