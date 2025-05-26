@@ -15,14 +15,30 @@ import org.kde.plasma.plasmoid
 
 import "code/layoutmetrics.js" as LayoutMetrics
 
-PlasmaCore.Dialog {
+PlasmaCore.PopupPlasmaWindow {
     id: groupDialog
-    visible: true
 
-    type: PlasmaCore.Dialog.PopupMenu
-    flags: Qt.WindowStaysOnTopHint
-    hideOnWindowDeactivate: true
-    location: Plasmoid.location
+    width: mouseHandler.implicitWidth + leftPadding + rightPadding
+    height: mouseHandler.implicitHeight + topPadding + bottomPadding
+
+    animated: true
+    removeBorderStrategy: Plasmoid.location === PlasmaCore.Types.Floating
+            ? PlasmaCore.AppletPopup.AtScreenEdges
+            : PlasmaCore.AppletPopup.AtScreenEdges | PlasmaCore.AppletPopup.AtPanelEdges
+
+    margin: (Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentPrefersFloatingApplets) ? Kirigami.Units.largeSpacing : 0
+
+
+    popupDirection: switch (Plasmoid.location) {
+        case PlasmaCore.Types.TopEdge:
+            return Qt.BottomEdge
+        case PlasmaCore.Types.LeftEdge:
+            return Qt.RightEdge
+        case PlasmaCore.Types.RightEdge:
+            return Qt.LeftEdge
+        default:
+            return Qt.TopEdge
+    }
 
     readonly property real preferredWidth: Screen.width / 3
     readonly property real preferredHeight: Screen.height / 2
@@ -43,10 +59,18 @@ PlasmaCore.Dialog {
         }
     }
 
+    Component.onCompleted: {
+        // Don't bind visible at creation, otherwise it
+        // vill be made visible before assigning the visual partent
+        // making the window flickering in the center of the screen before being moved
+        // in the correct position
+        visible = true
+    }
+
     mainItem: MouseHandler {
         id: mouseHandler
-        width: Math.min(groupDialog.preferredWidth, Math.max(groupListView.maxWidth, groupDialog.visualParent.width))
-        height: Math.min(groupDialog.preferredHeight, groupListView.maxHeight)
+        implicitWidth: Math.min(groupDialog.preferredWidth, Math.max(groupListView.maxWidth, groupDialog.visualParent.width))
+        implicitHeight: Math.min(groupDialog.preferredHeight, groupListView.maxHeight)
 
         target: groupListView
         handleWheelEvents: !scrollView.overflowing
