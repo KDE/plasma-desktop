@@ -295,15 +295,18 @@ FocusScope {
                 editor.commit();
             }
 
+            var index = gridView.indexAt(mouse.x, mouse.y);
+            var indexItem = gridView.itemAtIndex(index);
+
+            if (indexItem && indexItem.iconArea) { // update position in case of touch or untriggered hover
+                gridView.currentIndex = index;
+                hoveredItem = indexItem;
+            } else {
+                gridView.currentIndex = -1
+                hoveredItem = null;
+            }
+
             if (mouse.source === Qt.MouseEventSynthesizedByQt) {
-                var index = gridView.indexAt(mouse.x, mouse.y);
-                var indexItem = gridView.itemAtIndex(index);
-                if (indexItem && indexItem.iconArea) {
-                    gridView.currentIndex = index;
-                    hoveredItem = indexItem;
-                } else {
-                    hoveredItem = null;
-                }
                 if (gridView.hoveredItem && gridView.hoveredItem.toolTip.active) {
                     gridView.hoveredItem.toolTip.hideToolTip();
                 }
