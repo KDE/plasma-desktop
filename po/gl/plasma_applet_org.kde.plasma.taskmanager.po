@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-21 00:44+0000\n"
-"PO-Revision-Date: 2025-03-05 06:58+0100\n"
+"PO-Revision-Date: 2025-05-26 09:30+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -22,18 +22,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: backend.cpp:284
-#, fuzzy, kde-format
-#| msgctxt "Show all user Places"
-#| msgid "%1 more Place"
-#| msgid_plural "%1 more Places"
+#, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place…"
 msgid_plural "%1 more Places…"
-msgstr[0] "%1 lugar máis"
-msgstr[1] "%1 lugares máis"
+msgstr[0] "%1 lugar máis…"
+msgstr[1] "%1 lugares máis…"
 
 #: backend.cpp:368
 #, kde-format
@@ -271,6 +268,10 @@ msgid ""
 "behavior. If you don't find one, consider reporting this as a bug to the "
 "app's developer."
 msgstr ""
+"Se usa esta opción porque unha aplicación require atención con demasiada "
+"frecuencia, busque primeiro unha opción na aplicación para desactivar ese "
+"comportamento. Se non atopa unha opción así, considere informar diso como un "
+"fallo a quen desenvolve a aplicación."
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
@@ -390,7 +391,7 @@ msgstr "Por actividade"
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By horizontal window position"
-msgstr ""
+msgstr "Pola posición horizontal da xanela"
 
 #: package/contents/ui/ConfigBehavior.qml:163
 #, kde-format
@@ -473,48 +474,33 @@ msgid "Brings it to the current virtual desktop"
 msgstr "Tráea ao escritorio virtual actual"
 
 #: package/contents/ui/ConfigBehavior.qml:205
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label for checkbox group, completes sentence like: … from current screen"
-#| msgid "Show only tasks:"
+#, kde-format
 msgctxt "@label:listbox completes sentence like: … does nothing"
 msgid "Scrolling behavior:"
-msgstr "Só amosar as tarefas:"
+msgstr "Comportamento de desprazamento:"
 
 #: package/contents/ui/ConfigBehavior.qml:209
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Part of a sentence: 'Middle-clicking any task does "
-#| "nothing'"
-#| msgid "Does nothing"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling on any task does nothing'"
 msgid "Does nothing"
 msgstr "Non fai nada"
 
 #: package/contents/ui/ConfigBehavior.qml:210
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Completes the sentence 'Clicking grouped task cycles "
-#| "through tasks' "
-#| msgid "Cycles through tasks"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling anywhere switches through all "
 "tasks'"
 msgid "Cycles through all tasks"
-msgstr "Circula polas tarefas"
+msgstr "Circula por todas as tarefas"
 
 #: package/contents/ui/ConfigBehavior.qml:211
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Completes the sentence 'Clicking grouped task cycles "
-#| "through tasks' "
-#| msgid "Cycles through tasks"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling on a task switches between "
 "that task's windows'"
 msgid "Cycles through the selected task windows"
-msgstr "Circula polas tarefas"
+msgstr "Circula polas xanelas da tarefa seleccionada"
 
 #: package/contents/ui/ConfigBehavior.qml:219
 #, kde-format
@@ -530,25 +516,19 @@ msgid "Show only tasks:"
 msgstr "Só amosar as tarefas:"
 
 #: package/contents/ui/ConfigBehavior.qml:230
-#, fuzzy, kde-format
-#| msgctxt "@option:check completes sentence: show only tasks"
-#| msgid "From current desktop"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current desktop"
 msgstr "Do escritorio actual."
 
 #: package/contents/ui/ConfigBehavior.qml:235
-#, fuzzy, kde-format
-#| msgctxt "@option:check completes sentence: show only tasks"
-#| msgid "From current activity"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current activity"
 msgstr "Da actividade actual."
 
 #: package/contents/ui/ConfigBehavior.qml:240
-#, fuzzy, kde-format
-#| msgctxt "@option:check completes sentence: show only tasks"
-#| msgid "From current screen"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current screen"
 msgstr "Da pantalla actual."
