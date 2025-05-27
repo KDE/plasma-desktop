@@ -164,6 +164,7 @@ FocusScope {
             anchors.top: parent.top
 
             minimumWidth: root.Layout.minimumWidth - sideBar.width - mainRow.spacing
+            maximumWidth: minimumWidth
             height: ((rootModel.count - rootModel.separatorCount) * itemHeight) + (rootModel.separatorCount * separatorHeight)
 
             visible: searchField.text === ""
