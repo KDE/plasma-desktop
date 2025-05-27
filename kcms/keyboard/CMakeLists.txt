@@ -74,7 +74,6 @@ set( kcm_keyboard_PART_SRCS
     x11_helper.cpp
     xkb_helper.cpp
     xkb_rules.cpp
-    keyboardmodel.cpp
     shortcuthelper.cpp
     xkboptionsmodel.cpp
     layoutmodel.cpp

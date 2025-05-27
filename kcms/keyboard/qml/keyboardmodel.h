@@ -7,10 +7,12 @@
 #pragma once
 
 #include <QAbstractListModel>
+#include <qqmlregistration.h>
 
 class KeyboardModel final : public QAbstractListModel
 {
     Q_OBJECT
+    QML_ELEMENT
 
     enum Roles {
         DescriptionRole = Qt::UserRole + 1,
