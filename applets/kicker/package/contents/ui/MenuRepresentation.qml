@@ -18,9 +18,8 @@ FocusScope {
 
     focus: true
 
-    Layout.minimumWidth: (sideBar.width + (sideBar.width ? mainRow.spacing : 0)
-        + Math.max(searchField.defaultWidth, runnerColumns.width))
-    Layout.maximumWidth: Math.max(mainRow.width, Layout.minimumWidth); // mainRow.width is constrained by rootList.maximumWidth
+    Layout.minimumWidth: mainRow.width
+    Layout.maximumWidth: Layout.minimumWidth
 
     Layout.minimumHeight: Math.max(((rootModel.count - rootModel.separatorCount) * rootList.itemHeight)
         + (rootModel.separatorCount * rootList.separatorHeight)
@@ -42,6 +41,8 @@ FocusScope {
         id: mainRow
 
         height: parent.height
+        width: sideBar.width + (sideBar.width ? mainRow.spacing : 0) +
+            Math.max((runnerColumns.visible ? runnerColumns.width : rootList.width), searchField.defaultWidth)
 
         spacing: Kirigami.Units.smallSpacing
 
@@ -163,8 +164,8 @@ FocusScope {
 
             anchors.top: parent.top
 
-            minimumWidth: root.Layout.minimumWidth - sideBar.width - mainRow.spacing
-            maximumWidth: minimumWidth
+            minimumWidth: searchField.defaultWidth
+            maximumWidth: Math.round(minimumWidth * 1.5)
             height: ((rootModel.count - rootModel.separatorCount) * itemHeight) + (rootModel.separatorCount * separatorHeight)
 
             visible: searchField.text === ""
