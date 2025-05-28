@@ -85,6 +85,12 @@ BasePage {
         // But to trigger model data update, set initial value to 0
         property int appsModelRow: 0
         readonly property Kicker.AppsModel appsModel: kickoff.rootModel.modelForRow(appsModelRow)
+        Connections {
+            target: kickoff.rootModel
+            function onRefreshed() { // recalculate appsModel binding on rootModel refresh;
+                stackView.appsModelRowChanged() // modelForRow does not create dependency
+            }
+        }
         focus: true
         initialItem: preferredFavoritesViewComponent
 
