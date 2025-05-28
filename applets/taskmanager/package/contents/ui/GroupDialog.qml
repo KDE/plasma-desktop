@@ -27,6 +27,11 @@ PlasmaCore.PopupPlasmaWindow {
             : PlasmaCore.AppletPopup.AtScreenEdges | PlasmaCore.AppletPopup.AtPanelEdges
 
     margin: (Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentPrefersFloatingApplets) ? Kirigami.Units.largeSpacing : 0
+    onActiveChanged: {
+        if (!active) {
+            visible = false;
+        }
+    }
 
 
     popupDirection: switch (Plasmoid.location) {
