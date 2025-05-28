@@ -27,7 +27,7 @@ KCM.ScrollViewKCM {
 
     KItemModels.KSortFilterProxyModel {
         id: keyboardsProxy
-        sourceModel: kcm?.keyboards ?? undefined
+        sourceModel: KCMKeyboard.KeyboardModel {}
         sortRoleName: "description"
         sortOrder: Qt.AscendingOrder
     }

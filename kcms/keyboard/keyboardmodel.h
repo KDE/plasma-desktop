@@ -7,10 +7,12 @@
 #pragma once
 
 #include <QAbstractListModel>
+#include <qqmlregistration.h>
 
-class KeyboardModel final : public QAbstractListModel
+class KeyboardModel : public QAbstractListModel
 {
     Q_OBJECT
+    QML_ELEMENT
 
     enum Roles {
         DescriptionRole = Qt::UserRole + 1,
@@ -18,7 +20,7 @@ class KeyboardModel final : public QAbstractListModel
     };
 
 public:
-    explicit KeyboardModel(QObject *parent) noexcept;
+    explicit KeyboardModel() noexcept;
 
     Q_INVOKABLE int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     Q_INVOKABLE QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;

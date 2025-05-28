@@ -74,7 +74,6 @@ set( kcm_keyboard_PART_SRCS
     x11_helper.cpp
     xkb_helper.cpp
     xkb_rules.cpp
-    keyboardmodel.cpp
     shortcuthelper.cpp
     xkboptionsmodel.cpp
     layoutmodel.cpp
@@ -135,11 +134,24 @@ target_link_libraries(kcm_keyboard kcm_keyboard_static)
 
 configure_file(config-keyboard.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-keyboard.h)
 
+# Declarative module
+ecm_add_qml_module(kcm_keyboard_declarative
+    URI "org.kde.plasma.private.kcm_keyboard"
+    GENERATE_PLUGIN_SOURCE
+    SOURCES
+        keyboardmodel.cpp
+        types.h
+    DEPENDENCIES
+        QtCore
+)
+
+target_link_libraries(kcm_keyboard_declarative PRIVATE kcm_keyboard_static)
+
+ecm_finalize_qml_module(kcm_keyboard_declarative)
+
 # Unit tests
 if(BUILD_TESTING)
     add_subdirectory( tests )
 endif()
 
 add_dependencies(kcm_keyboard tastenbrett)
-
-add_subdirectory(qml)

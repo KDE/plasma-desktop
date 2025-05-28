@@ -10,8 +10,8 @@
 
 #include "xkb_rules.h"
 
-KeyboardModel::KeyboardModel(QObject *parent) noexcept
-    : QAbstractListModel(parent)
+KeyboardModel::KeyboardModel() noexcept
+    : QAbstractListModel()
 {
 }
 

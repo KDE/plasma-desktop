@@ -1,6 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2010 Andriy Rysin <rysin@kde.org>
     SPDX-FileCopyrightText: 2021 Cyril Rossi <cyril.rossi@enioka.com>
+    SPDX-FileCopyrightText: 2025 Kristen McWilliam <kristen@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -14,7 +15,6 @@ class WorkspaceOptions;
 class KeyboardMiscSettings;
 class KeyboardSettings;
 class KeyboardConfig;
-class KeyboardModel;
 class ShortcutHelper;
 class LayoutModel;
 class UserLayoutModel;
@@ -40,7 +40,6 @@ class KCMKeyboard final : public KQuickManagedConfigModule
     Q_PROPERTY(KeyboardSettings *keyboardSettings READ keyboardSettings CONSTANT)
     Q_PROPERTY(LayoutModel *layouts READ layouts CONSTANT)
     Q_PROPERTY(UserLayoutModel *userLayoutModel READ userLayoutModel CONSTANT)
-    Q_PROPERTY(KeyboardModel *keyboards READ keyboards CONSTANT)
     Q_PROPERTY(ShortcutHelper *shortcutHelper READ shortcutHelper CONSTANT)
     Q_PROPERTY(XkbOptionsModel *xkbOptionsModel READ xkbOptionsModel CONSTANT)
 
@@ -55,7 +54,6 @@ public:
     KeyboardSettings *keyboardSettings() const;
     LayoutModel *layouts() const;
     UserLayoutModel *userLayoutModel() const;
-    KeyboardModel *keyboards() const;
     ShortcutHelper *shortcutHelper() const;
     XkbOptionsModel *xkbOptionsModel() const;
 
@@ -82,7 +80,6 @@ private:
 
     LayoutModel *const m_layoutModel;
     UserLayoutModel *const m_userLayoutModel;
-    KeyboardModel *const m_keyboardModel;
     ShortcutHelper *const m_shortcutHelper;
     XkbOptionsModel *const m_xkbOptionsModel;
 };

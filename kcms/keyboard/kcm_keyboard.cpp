@@ -1,6 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2010 Andriy Rysin <rysin@kde.org>
     SPDX-FileCopyrightText: 2021 Cyril Rossi <cyril.rossi@enioka.com>
+    SPDX-FileCopyrightText: 2025 Kristen McWilliam <kristen@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -16,7 +17,6 @@
 #include "keyboard_config.h"
 #include "keyboard_dbus.h"
 #include "keyboardmiscsettings.h"
-#include "keyboardmodel.h"
 #include "keyboardsettings.h"
 #include "keyboardsettingsdata.h"
 #include "layoutmodel.h"
@@ -35,7 +35,6 @@ KCMKeyboard::KCMKeyboard(QObject *parent, const KPluginMetaData &data)
     , m_config(new KeyboardConfig(m_data->keyboardSettings(), this))
     , m_layoutModel(new LayoutModel(this))
     , m_userLayoutModel(new UserLayoutModel(m_config, this))
-    , m_keyboardModel(new KeyboardModel(this))
     , m_shortcutHelper(new ShortcutHelper(this))
     , m_xkbOptionsModel(new XkbOptionsModel(this))
 {
@@ -105,11 +104,6 @@ LayoutModel *KCMKeyboard::layouts() const
 UserLayoutModel *KCMKeyboard::userLayoutModel() const
 {
     return m_userLayoutModel;
-}
-
-KeyboardModel *KCMKeyboard::keyboards() const
-{
-    return m_keyboardModel;
 }
 
 ShortcutHelper *KCMKeyboard::shortcutHelper() const
