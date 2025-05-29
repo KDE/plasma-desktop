@@ -71,7 +71,7 @@ Kirigami.Icon {
         onPressed: wasExpanded = plasmoidItem.expanded
         onClicked: mouse => {
             if (mouse.button === Qt.MiddleButton) {
-                defaultCompactRepresentation.plasmoidItem.Plasmoid.secondaryActivated();
+                Plasmoid.secondaryActivated();
             } else {
                 defaultCompactRepresentation.plasmoidItem.expanded = !wasExpanded;
             }
