@@ -67,7 +67,7 @@ Kirigami.FormLayout {
     QQC2.CheckBox {
         id: showMediaControls
         Kirigami.FormData.label: i18ndc("plasma_shell_org.kde.plasma.desktop",
-                                        "@title: group",
+                                        "@title: group UI controls for playback of multimedia content",
                                         "Media controls:")
         text: i18ndc("plasma_shell_org.kde.plasma.desktop",
                      "@option:check",
