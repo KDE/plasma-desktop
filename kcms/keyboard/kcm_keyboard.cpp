@@ -19,7 +19,6 @@
 #include "keyboardmiscsettings.h"
 #include "keyboardsettings.h"
 #include "keyboardsettingsdata.h"
-#include "layoutmodel.h"
 #include "shortcuthelper.h"
 #include "tastenbrett.h"
 #include "userlayoutmodel.h"
@@ -33,7 +32,6 @@ KCMKeyboard::KCMKeyboard(QObject *parent, const KPluginMetaData &data)
     : KQuickManagedConfigModule(parent, data)
     , m_data(new KeyboardSettingsData(this))
     , m_config(new KeyboardConfig(m_data->keyboardSettings(), this))
-    , m_layoutModel(new LayoutModel(this))
     , m_userLayoutModel(new UserLayoutModel(m_config, this))
     , m_shortcutHelper(new ShortcutHelper(this))
     , m_xkbOptionsModel(new XkbOptionsModel(this))
@@ -94,11 +92,6 @@ KeyboardMiscSettings *KCMKeyboard::miscSettings() const
 KeyboardSettings *KCMKeyboard::keyboardSettings() const
 {
     return m_data->keyboardSettings();
-}
-
-LayoutModel *KCMKeyboard::layouts() const
-{
-    return m_layoutModel;
 }
 
 UserLayoutModel *KCMKeyboard::userLayoutModel() const

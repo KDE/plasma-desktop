@@ -76,7 +76,6 @@ set( kcm_keyboard_PART_SRCS
     xkb_rules.cpp
     shortcuthelper.cpp
     xkboptionsmodel.cpp
-    layoutmodel.cpp
     userlayoutmodel.cpp
     layoutsearchmodel.cpp
 )
@@ -140,6 +139,7 @@ ecm_add_qml_module(kcm_keyboard_declarative
     GENERATE_PLUGIN_SOURCE
     SOURCES
         keyboardmodel.cpp
+        layoutmodel.cpp
         types.h
     DEPENDENCIES
         QtCore

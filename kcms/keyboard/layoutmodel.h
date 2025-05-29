@@ -7,10 +7,12 @@
 #pragma once
 
 #include <QAbstractListModel>
+#include <qqmlintegration.h>
 
-class LayoutModel final : public QAbstractListModel
+class LayoutModel : public QAbstractListModel
 {
     Q_OBJECT
+    QML_ELEMENT
 
     struct Data {
         explicit Data(const QString &_name, const QString &_description, const QString &_variantName)
@@ -26,7 +28,7 @@ class LayoutModel final : public QAbstractListModel
     };
 
 public:
-    explicit LayoutModel(QObject *parent) noexcept;
+    explicit LayoutModel() noexcept;
 
     Q_INVOKABLE int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     Q_INVOKABLE QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;

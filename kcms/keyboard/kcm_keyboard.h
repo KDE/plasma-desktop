@@ -16,7 +16,6 @@ class KeyboardMiscSettings;
 class KeyboardSettings;
 class KeyboardConfig;
 class ShortcutHelper;
-class LayoutModel;
 class UserLayoutModel;
 class XkbOptionsModel;
 
@@ -38,7 +37,6 @@ class KCMKeyboard final : public KQuickManagedConfigModule
     Q_PROPERTY(WorkspaceOptions *workspaceOptions READ workspaceOptions CONSTANT)
     Q_PROPERTY(KeyboardMiscSettings *miscSettings READ miscSettings CONSTANT)
     Q_PROPERTY(KeyboardSettings *keyboardSettings READ keyboardSettings CONSTANT)
-    Q_PROPERTY(LayoutModel *layouts READ layouts CONSTANT)
     Q_PROPERTY(UserLayoutModel *userLayoutModel READ userLayoutModel CONSTANT)
     Q_PROPERTY(ShortcutHelper *shortcutHelper READ shortcutHelper CONSTANT)
     Q_PROPERTY(XkbOptionsModel *xkbOptionsModel READ xkbOptionsModel CONSTANT)
@@ -52,7 +50,6 @@ public:
     WorkspaceOptions *workspaceOptions() const;
     KeyboardMiscSettings *miscSettings() const;
     KeyboardSettings *keyboardSettings() const;
-    LayoutModel *layouts() const;
     UserLayoutModel *userLayoutModel() const;
     ShortcutHelper *shortcutHelper() const;
     XkbOptionsModel *xkbOptionsModel() const;
@@ -78,7 +75,6 @@ private:
     KeyboardSettingsData *const m_data;
     KeyboardConfig *const m_config;
 
-    LayoutModel *const m_layoutModel;
     UserLayoutModel *const m_userLayoutModel;
     ShortcutHelper *const m_shortcutHelper;
     XkbOptionsModel *const m_xkbOptionsModel;

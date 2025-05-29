@@ -43,7 +43,7 @@ Kirigami.Dialog {
 
     KCMKeyboard.LayoutSearchModel {
         id: layoutSearchProxy
-        sourceModel: kcm?.layouts ?? undefined
+        sourceModel: KCMKeyboard.LayoutModel {}
         searchString: ""
     }
 
