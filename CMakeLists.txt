@@ -153,7 +153,7 @@ set_package_properties(KF6QQC2DesktopStyle PROPERTIES
 )
 
 if(BUILD_KCM_TABLET)
-    find_package(WaylandProtocols 1.25)
+    find_package(WaylandProtocols 1.44)
     set_package_properties(WaylandProtocols PROPERTIES
         TYPE REQUIRED
         PURPOSE "Collection of Wayland protocols that add functionality not available in the Wayland core protocol"
