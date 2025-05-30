@@ -299,11 +299,13 @@ Item {
                 text: i18nd("kcm_tablet", "Resize the tablet area")
                 QQC2.ToolTip {
                     text: inputAreaSizeHandle.text
-                    visible: parent.hovered
+                    visible: parent.hovered && !resizeHandler.active
                     delay: Kirigami.Units.toolTipDelay
                 }
 
                 DragHandler {
+                    id: resizeHandler
+
                     cursorShape: Qt.SizeFDiagCursor
                     target: parent
                     onActiveChanged: { outputAreaView.inputChanged = true }
