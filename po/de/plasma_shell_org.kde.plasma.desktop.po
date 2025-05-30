@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-17 00:43+0000\n"
+"POT-Creation-Date: 2025-05-30 00:44+0000\n"
 "PO-Revision-Date: 2025-04-17 10:04+0200\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -830,8 +830,10 @@ msgid "Never show clock"
 msgstr "Uhr anzeigen"
 
 #: contents/lockscreen/config.qml:71
-#, kde-format
-msgctxt "@title: group"
+#, fuzzy, kde-format
+#| msgctxt "@title: group"
+#| msgid "Media controls:"
+msgctxt "@title: group UI controls for playback of multimedia content"
 msgid "Media controls:"
 msgstr "Mediensteuerung:"
 

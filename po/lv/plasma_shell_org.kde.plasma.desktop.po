@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-17 00:43+0000\n"
-"PO-Revision-Date: 2025-03-22 09:29+0200\n"
+"POT-Creation-Date: 2025-05-30 00:44+0000\n"
+"PO-Revision-Date: 2025-05-28 16:54+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -288,7 +288,7 @@ msgstr "Saīsnes"
 #, kde-format
 msgctxt "@action:button set keyboard shortcut for"
 msgid "Activate widget as if clicked:"
-msgstr ""
+msgstr "Ieslēgt logdaļu it kā uz tās noklikšķinātu:"
 
 #: contents/configuration/ContainmentConfiguration.qml:27
 #, kde-format
@@ -311,28 +311,24 @@ msgid "Panel Settings"
 msgstr "Paneļa iestatījumi"
 
 #: contents/configuration/PanelConfiguration.qml:109
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible only, %1 is widget name"
-#| msgid "Add %1"
+#, kde-format
 msgctxt ""
 "@action:button label of button to open a menu that lets you add widgets or "
 "spacers"
 msgid "Add New"
-msgstr "Pievienot „%1“"
+msgstr "Pievienot jaunu"
 
 #: contents/configuration/PanelConfiguration.qml:127
-#, fuzzy, kde-format
-#| msgid "Add Spacer"
+#, kde-format
 msgctxt "@action:menu add a spacer"
 msgid "Spacer"
-msgstr "Pievienot sadalītāju"
+msgstr "Sadalītājs"
 
 #: contents/configuration/PanelConfiguration.qml:134
-#, fuzzy, kde-format
-#| msgid "Widgets"
+#, kde-format
 msgctxt "@action:menu add a widget"
 msgid "Widgets…"
-msgstr "Logdaļas"
+msgstr "Logdaļas…"
 
 #: contents/configuration/PanelConfiguration.qml:163
 #, kde-format
@@ -806,8 +802,10 @@ msgid "Never show clock"
 msgstr "Nekad nerādīt savu pulksteni"
 
 #: contents/lockscreen/config.qml:71
-#, kde-format
-msgctxt "@title: group"
+#, fuzzy, kde-format
+#| msgctxt "@title: group"
+#| msgid "Media controls:"
+msgctxt "@title: group UI controls for playback of multimedia content"
 msgid "Media controls:"
 msgstr "Multivides vadība:"
 

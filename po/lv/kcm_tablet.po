@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-26 00:43+0000\n"
-"PO-Revision-Date: 2025-01-03 16:52+0200\n"
+"PO-Revision-Date: 2025-05-28 17:10+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: inputsequence.cpp:172
 #, kde-format
@@ -264,6 +264,8 @@ msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
 "revert to default calibration in %1 seconds.</b>"
 msgstr ""
+"Atkārtoti pieskarieties mērķim, lai apstiprinātu jauno kalibrāciju.<nl/><nl/"
+"><b>Pēc %1 sekundēm sistēma atgriezīsies pie noklusējuma kalibrācijas.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -279,7 +281,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Tap the center of each target."
-msgstr ""
+msgstr "Pieskarieties katra mērķa centram."
 
 #: ui/Calibration.qml:112
 #, kde-format
@@ -291,7 +293,7 @@ msgstr "Uzlabot esošo kalibrāciju"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset and Try Again"
-msgstr ""
+msgstr "Atiestatīt un mēģināt vēlreiz"
 
 #: ui/Calibration.qml:121
 #, kde-format
@@ -440,12 +442,10 @@ msgstr ""
 msgctxt ""
 "'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)"
 msgid "Mode:"
-msgstr ""
+msgstr "Režīms:"
 
 #: ui/StylusTab.qml:248
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Pen"
+#, kde-format
 msgctxt ""
 "Pen mode, where the point on the screen is always where you touch the stylus"
 msgid "Pen"
@@ -454,13 +454,13 @@ msgstr "Zīmulis"
 #: ui/StylusTab.qml:253
 #, kde-format
 msgid "The cursor follows where you touch the pen on the surface"
-msgstr ""
+msgstr "Kursors seko vietai, kurā pieskaraties ar zīmuli uz virsmas"
 
 #: ui/StylusTab.qml:274
 #, kde-format
 msgctxt "Mouse mode, or like using the tablet like a giant touchpad"
 msgid "Mouse"
-msgstr ""
+msgstr "Pele"
 
 #: ui/StylusTab.qml:279
 #, kde-format
@@ -468,6 +468,8 @@ msgid ""
 "Moving the pen on the surface moves the cursor relative to where it was, "
 "like a mouse"
 msgstr ""
+"Zīmuļa pārvietošana pa virsmu relatīvi pārvieto peles rādītāju, atdarinot "
+"peli"
 
 #: ui/StylusTab.qml:349
 #, kde-format
@@ -543,12 +545,10 @@ msgid "Calibration Not Supported"
 msgstr "Kalibrēšana nav atbalstīta"
 
 #: ui/StylusTab.qml:532
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Refine Existing Calibration"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
-msgstr "Uzlabot esošo kalibrāciju"
+msgstr "Atiestatīt pielāgoto kalibrāciju"
 
 #: ui/StylusTab.qml:546
 #, kde-format
@@ -557,6 +557,8 @@ msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
 "correctly, try resetting this first."
 msgstr ""
+"Šī grafiskā planšete ir manuāli kalibrēta. Ja tā nestrādā korekti, mēģiniet "
+"to atiestatīt."
 
 #: ui/Tester.qml:25
 #, kde-format

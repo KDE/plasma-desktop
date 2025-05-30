@@ -3,14 +3,14 @@
 #
 # Artem Sereda <overmind88@gmail.com>, 2009.
 # Alexander Potashev <aspotashev@gmail.com>, 2014, 2016.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2022.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2022, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-19 00:43+0000\n"
-"PO-Revision-Date: 2022-09-24 14:05+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2025-05-29 21:38+0200\n"
+"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -44,11 +44,10 @@ msgid "Not applicable when the widget is on the Desktop."
 msgstr "Функция недоступна при размещении виджета на рабочем столе."
 
 #: contents/ui/main.qml:84
-#, fuzzy, kde-format
-#| msgid "No windows"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "No open windows"
-msgstr "Нет окон"
+msgstr "Не открыто ни одно окно"
 
 #: contents/ui/main.qml:111
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-01 00:43+0000\n"
-"PO-Revision-Date: 2025-03-03 17:10+0200\n"
+"PO-Revision-Date: 2025-05-28 17:44+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: ui/main.qml:25
 #, kde-format
@@ -24,8 +24,8 @@ msgid ""
 "The system must be restarted before changes to the middle-click paste "
 "setting can take effect."
 msgstr ""
-"Pirms izmaiņu pielietošanas saistībā ar vidējā klikšķa ielīmēšanu, sistēma "
-"ir jāpārstartē."
+"Peles vidējā klikšķi ielīmēšanas iestatījumi būs spēkā tikai pēc sistēmas "
+"pārstartēšanas."
 
 #: ui/main.qml:31
 #, kde-format
@@ -36,7 +36,7 @@ msgstr "Pārstartēt"
 #, kde-format
 msgctxt "@title:group"
 msgid "Plasma"
-msgstr ""
+msgstr "Plasma"
 
 #: ui/main.qml:52
 #, kde-format
@@ -80,12 +80,10 @@ msgstr ""
 "ekrāna gaišumu, pārslēdzat audio ierīci u.c."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling"
-msgstr "Ritināšana:"
+msgstr "Ritināšana"
 
 #: ui/main.qml:100
 #, kde-format
@@ -137,7 +135,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "Klikšķināšana"
 
 #: ui/main.qml:175
 #, kde-format
@@ -220,24 +218,23 @@ msgid ""
 "Double-click the folder to test. If it does not change its appearance, "
 "increase double-click interval."
 msgstr ""
+"Lai pārbaudītu, veiciet dubultklikšķi uz mapes. Ja mape nemaina savu "
+"izskatu, palieliniet dubultklikšķa intervālu."
 
 #: ui/main.qml:354
 #, kde-format
 msgid "Drag and Drop"
-msgstr ""
+msgstr "Vilkšana un nomešana"
 
 #: ui/main.qml:361
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
-#| msgid "Clicking files or folders:"
+#, kde-format
 msgid "When dragging files or folders:"
-msgstr "Klikšķis uz datnēm vai mapēm:"
+msgstr "Velkot datnes vai mapes:"
 
 #: ui/main.qml:362
 #, kde-format
 msgid "Always ask what to do"
-msgstr ""
+msgstr "Vienmēr jautāt, ko darīt"
 
 #: ui/main.qml:378
 #, kde-kuit-format
@@ -247,30 +244,34 @@ msgid ""
 "and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise show a "
 "dialog."
 msgstr ""
+"Lai pārvietotu, turiet nospiestu <shortcut>Shift</shortcut> taustiņu, lai "
+"kopētu — <shortcut>Ctrl</shortcut> taustiņu, bet, lai izveidotu simbolisko "
+"saiti — <shortcut>Shift+Ctrl</shortcut> taustiņu kombināciju. Pretējā "
+"gadījumā jautās, ko darīt."
 
 #: ui/main.qml:386
 #, kde-format
 msgid "Move if on the same device"
-msgstr ""
+msgstr "Pārvietot, ja darbība notiek tajā pašā ierīcē"
 
 #: ui/main.qml:402
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
 msgstr ""
+"Lai redzētu citas iespējas, turiet nospiestu <shortcut>Shift</shortcut> "
+"taustiņu."
 
 #: ui/main.qml:410
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Touch"
-msgstr "Skārienjutīgais režīms:"
+msgstr "Skārienjutība"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgid "Enable Touch Mode:"
-msgstr "Skārienjutīgais režīms:"
+msgstr "Ieslēgt skārienjutīgo režīmu:"
 
 #: ui/main.qml:418
 #, kde-format
@@ -297,9 +298,7 @@ msgstr ""
 "vai atvienota."
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always enabled"
+#, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always active"
 msgstr "Vienmēr ieslēgts"
@@ -308,7 +307,7 @@ msgstr "Vienmēr ieslēgts"
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Disabled"
-msgstr ""
+msgstr "Izslēgts"
 
 #: ui/main.qml:486
 #, kde-format
@@ -332,6 +331,8 @@ msgid ""
 "For local files on the same device, whether dragging and dropping will "
 "perform a move operation instead of showing the options menu"
 msgstr ""
+"Veicot vilkšanu un nomešanu ar lokālām datnēm vienas ierīces ietvaros, "
+"sistēma veiks pārvietošanas darbību un nejautās, ko darīt."
 
 #. i18n: ectx: label, entry (smoothScroll), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21
