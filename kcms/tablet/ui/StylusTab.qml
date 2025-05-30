@@ -137,73 +137,73 @@ Item {
                         path: "m13.169 10.8 0.7313-10.032 2.1791-0.5257 2.1632 0.5257 0.7313 10.032h-2.8948z"
                     }
                 }
-            }
 
-            Rectangle {
-                id: firstButton
+                Rectangle {
+                    id: firstButton
 
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                    top: parent.top
-                    topMargin: 140
+                    anchors {
+                        horizontalCenter: parent.horizontalCenter
+                        top: parent.top
+                        topMargin: 55
+                    }
+
+                    visible: buttonRepeater.count >= 1
+                    implicitWidth: 10
+                    implicitHeight: 25
+
+                    topLeftRadius: Kirigami.Units.cornerRadius
+                    topRightRadius: Kirigami.Units.cornerRadius
+                    color: "transparent"
+
+                    border {
+                        color: Kirigami.Theme.textColor
+                        width: 1
+                    }
                 }
 
-                visible: buttonRepeater.count >= 1
-                implicitWidth: 10
-                implicitHeight: 25
+                Rectangle {
+                    id: secondButton
 
-                topLeftRadius: Kirigami.Units.cornerRadius
-                topRightRadius: Kirigami.Units.cornerRadius
-                color: "transparent"
+                    anchors {
+                        horizontalCenter: parent.horizontalCenter
+                        top: parent.top
+                        topMargin: 79
+                    }
 
-                border {
-                    color: Kirigami.Theme.textColor
-                    width: 1
-                }
-            }
+                    visible: buttonRepeater.count >= 2
+                    implicitWidth: 10
+                    implicitHeight: 35
 
-            Rectangle {
-                id: secondButton
+                    bottomLeftRadius: Kirigami.Units.cornerRadius
+                    bottomRightRadius: Kirigami.Units.cornerRadius
+                    color: "transparent"
 
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                    top: parent.top
-                    topMargin: 165
-                }
-
-                visible: buttonRepeater.count >= 2
-                implicitWidth: 10
-                implicitHeight: 35
-
-                bottomLeftRadius: Kirigami.Units.cornerRadius
-                bottomRightRadius: Kirigami.Units.cornerRadius
-                color: "transparent"
-
-                border {
-                    color: Kirigami.Theme.textColor
-                    width: 1
-                }
-            }
-
-            Rectangle {
-                id: thirdButton
-
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                    top: parent.top
-                    topMargin: 210
+                    border {
+                        color: Kirigami.Theme.textColor
+                        width: 1
+                    }
                 }
 
-                visible: buttonRepeater.count >= 3
-                implicitWidth: 10
-                implicitHeight: 20
+                Rectangle {
+                    id: thirdButton
 
-                radius: Kirigami.Units.cornerRadius
-                color: "transparent"
+                    anchors {
+                        horizontalCenter: parent.horizontalCenter
+                        top: parent.top
+                        topMargin: 125
+                    }
 
-                border {
-                    color: Kirigami.Theme.textColor
-                    width: 1
+                    visible: buttonRepeater.count >= 3
+                    implicitWidth: 10
+                    implicitHeight: 20
+
+                    radius: Kirigami.Units.cornerRadius
+                    color: "transparent"
+
+                    border {
+                        color: Kirigami.Theme.textColor
+                        width: 1
+                    }
                 }
             }
         }
