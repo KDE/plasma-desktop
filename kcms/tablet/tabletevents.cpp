@@ -5,7 +5,7 @@
 */
 
 #include "tabletevents.h"
-#include "qwayland-tablet-unstable-v2.h"
+#include "qwayland-tablet-v2.h"
 #include <QQuickWindow>
 #include <QWaylandClientExtensionTemplate>
 #include <qguiapplication.h>

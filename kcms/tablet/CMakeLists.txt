@@ -22,7 +22,7 @@ if (Qt6_VERSION VERSION_GREATER_EQUAL "6.8.0")
 endif()
 qt6_generate_wayland_protocol_client_sources(kcm_tablet
     ${private_code_option}
-    FILES ${WaylandProtocols_DATADIR}/unstable/tablet/tablet-unstable-v2.xml
+    FILES ${WaylandProtocols_DATADIR}/stable/tablet/tablet-v2.xml
 )
 
 ecm_qt_install_logging_categories(
