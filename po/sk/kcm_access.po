@@ -9,19 +9,20 @@
 # Mthw <jari_45@hotmail.com>, 2018.
 # SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024 Matej Mrenica <matejm98mthw@gmail.com>
 # Ferdinand Galko <galko.ferdinand@gmail.com>, 2023.
+# SPDX-FileCopyrightText: 2025 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-28 00:42+0000\n"
-"PO-Revision-Date: 2024-06-26 14:10+0200\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"PO-Revision-Date: 2025-05-30 20:43+0200\n"
+"Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 25.04.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: kcmaccess.cpp:118
@@ -320,8 +321,7 @@ msgid "Activation shortcuts:"
 msgstr "Aktivačné gestá"
 
 #: ui/ActivationShortcuts.qml:19
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "Enable activation shortcuts"
 msgid "Enable"
 msgstr "Povoliť"
@@ -364,10 +364,9 @@ msgstr[1] "min"
 msgstr[2] "min"
 
 #: ui/ActivationShortcuts.qml:89
-#, fuzzy, kde-format
-#| msgid "When a gesture is used:"
+#, kde-format
 msgid "When a shortcut is used:"
-msgstr "Keď je použité gesto:"
+msgstr "Keď je použitá skratka:"
 
 #: ui/ActivationShortcuts.qml:90
 #, kde-format
@@ -508,7 +507,7 @@ msgstr "Povoliť"
 #, kde-format
 msgctxt "@label"
 msgid "Mode:"
-msgstr ""
+msgstr "Režim:"
 
 #: ui/ColorblindnessCorrection.qml:41
 #, kde-format
@@ -532,7 +531,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label"
 msgid "Intensity:"
-msgstr ""
+msgstr "Intenzita:"
 
 #: ui/ColorblindnessCorrection.qml:81
 #, kde-format
@@ -549,22 +548,22 @@ msgstr ""
 #: ui/ColorblindnessCorrection.qml:111
 #, kde-format
 msgid "Red"
-msgstr ""
+msgstr "Červená"
 
 #: ui/ColorblindnessCorrection.qml:112
 #, kde-format
 msgid "Green"
-msgstr ""
+msgstr "Zelená"
 
 #: ui/ColorblindnessCorrection.qml:113
 #, kde-format
 msgid "Blue"
-msgstr ""
+msgstr "Modrá"
 
 #: ui/ColorblindnessCorrection.qml:114
 #, kde-format
 msgid "Purple"
-msgstr ""
+msgstr "Fialová"
 
 #: ui/KeyboardFilters.qml:18
 #, kde-format
@@ -647,11 +646,10 @@ msgid "Ring system bell when rejected"
 msgstr "Použiť systémový zvonček keď je odmietnutý"
 
 #: ui/main.qml:28
-#, fuzzy, kde-format
-#| msgid "Use System Bell"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "System Bell"
-msgstr "Použiť systémový zvonček"
+msgstr "Systémový zvonček"
 
 #: ui/main.qml:33
 #, kde-format
@@ -696,15 +694,13 @@ msgid "Shake Cursor"
 msgstr "Zatriasť kurzorom"
 
 #: ui/ModifierKeys.qml:17
-#, fuzzy, kde-format
-#| msgid "Sticky keys:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sticky keys:"
 msgstr "Lepkavé klávesy:"
 
 #: ui/ModifierKeys.qml:22
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable sticky keys"
 msgid "Enable"
 msgstr "Povoliť"
@@ -719,8 +715,7 @@ msgid ""
 msgstr ""
 
 #: ui/ModifierKeys.qml:39
-#, fuzzy, kde-format
-#| msgid "Lock the sticky keys"
+#, kde-format
 msgctxt "@option:check"
 msgid "Lock sticky keys"
 msgstr "Uzamknúť lepkavé klávesy"
@@ -744,8 +739,7 @@ msgid "Ring system bell when modifier keys are used"
 msgstr "Použiť systémový zvonček vždy keď je stlačený modifikačný kláves"
 
 #: ui/ModifierKeys.qml:88
-#, fuzzy, kde-format
-#| msgid "Feedback:"
+#, kde-format
 msgctxt "@option:check Feedback options:"
 msgid "Feedback:"
 msgstr "Odozva:"
@@ -764,30 +758,26 @@ msgid "The locking keys are Caps Lock, Num Lock, and Scroll Lock."
 msgstr ""
 
 #: ui/ModifierKeys.qml:108
-#, fuzzy, kde-format
-#| msgid "Show notification when modifier or locking keys are used"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show notification when modifier or locking keys are used"
 msgstr ""
 "Zobraziť upozornenie, keď sa používajú modifikátory alebo uzamykacie klávesy"
 
 #: ui/ModifierKeys.qml:120
-#, fuzzy, kde-format
-#| msgid "Configure Notifications…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Notifications…"
 msgstr "Nastaviť notifikácie..."
 
 #: ui/MouseNavigation.qml:17
-#, fuzzy, kde-format
-#| msgid "Use number pad to move cursor:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move cursor:"
 msgstr "Používať číselnú klávesnicu na ovládanie kurzoru:"
 
 #: ui/MouseNavigation.qml:22
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable mouse navigation"
 msgid "Enable"
 msgstr "Povoliť"
@@ -804,36 +794,31 @@ msgid ""
 msgstr ""
 
 #: ui/MouseNavigation.qml:39
-#, fuzzy, kde-format
-#| msgid "Acceleration delay:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
 msgstr "Oneskorenie zrýchlenia:"
 
 #: ui/MouseNavigation.qml:66
-#, fuzzy, kde-format
-#| msgid "Repeat interval:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr "Interval opakovania:"
 
 #: ui/MouseNavigation.qml:93
-#, fuzzy, kde-format
-#| msgid "Acceleration time:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "Čas zrýchlenia:"
 
 #: ui/MouseNavigation.qml:118
-#, fuzzy, kde-format
-#| msgid "Maximum speed:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr "Maximálna rýchlosť:"
 
 #: ui/MouseNavigation.qml:132
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
 msgstr "Zrýchlenie ukazovateľa:"
@@ -852,15 +837,13 @@ msgid "Please install it, then close and reopen this window"
 msgstr ""
 
 #: ui/ScreenReader.qml:27
-#, fuzzy, kde-format
-#| msgid "Enable Screen Reader"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable Screen Reader"
 msgstr "Povoliť čítačku obrazovky"
 
 #: ui/ScreenReader.qml:39
-#, fuzzy, kde-format
-#| msgid "Launch Orca Screen Reader Configuration…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Launch Orca Screen Reader Configuration…"
 msgstr "Spustiť konfiguráciu čítačky obrazovky Orca..."

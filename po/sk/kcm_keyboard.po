@@ -4,19 +4,20 @@
 # Michal Sulek <misurel@gmail.com>, 2011.
 # Roman Paholík <wizzardsk@gmail.com>, 2012, 2014, 2016, 2017.
 # SPDX-FileCopyrightText: 2020, 2021, 2023, 2024 Matej Mrenica <matejm98mthw@gmail.com>
+# SPDX-FileCopyrightText: 2025 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-22 00:43+0000\n"
-"PO-Revision-Date: 2024-06-26 14:09+0200\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"PO-Revision-Date: 2025-05-30 20:42+0200\n"
+"Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 25.04.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #, kde-format
@@ -76,13 +77,7 @@ msgid "Keyboard layout visualization"
 msgstr "Vizualizácia rozloženia klávesnice"
 
 #: tastenbrett/main.cpp:139
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid ""
-#| "The keyboard geometry failed to load. This often indicates that the "
-#| "selected model does not support a specific layout or layout variant. This "
-#| "problem will likely also present when you try to use this combination of "
-#| "model, layout and variant."
+#, kde-format
 msgctxt "@label"
 msgid ""
 "The keyboard geometry failed to load. This often indicates that the selected "
@@ -93,23 +88,22 @@ msgid ""
 "not supported and  will also trigger this message. These might still work "
 "fine if applied"
 msgstr ""
-"Načítanie geometrie klávesnice sa nepodarilo. To často naznačuje, že vybraný "
+"Geometriu klávesnice sa nepodarilo načítať. To často znamená, že vybraný "
 "model nepodporuje konkrétne rozloženie alebo variant rozloženia. Tento "
-"problém sa pravdepodobne vyskytne aj vtedy, keď sa pokúsite použiť túto "
-"kombináciu modelu, usporiadania a variantu."
+"problém sa pravdepodobne objaví aj pri pokuse o použitie tejto kombinácie "
+"modelu, rozloženia a variantu.\n"
+"Náhľad na rozloženia, ktoré sú definované mimo adresára xkb vášho systému, "
+"je nepodporované a tiež vyvolá túto správu. Tieto môžu stále fungovať v "
+"poriadku, ak sa použijú"
 
 #: ui/KeyBindings.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Key Bindings"
+#, kde-format
 msgctxt "@title"
 msgid "Key Bindings"
 msgstr "Klávesové skratky"
 
 #: ui/KeyBindings.qml:62
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure keyboard options"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Configure keyboard options"
 msgstr "Nastaviť možnosti klávesnice"
@@ -118,19 +112,19 @@ msgstr "Nastaviť možnosti klávesnice"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset"
-msgstr ""
+msgstr "Obnoviť"
 
 #: ui/KeyBindings.qml:134
 #, kde-format
 msgctxt "@info accessible"
 msgid "Reset selected options for this group"
-msgstr ""
+msgstr "Obnoviť vybrané možnosti pre túto skupinu"
 
 #: ui/KeyBindings.qml:135
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Reset selected options for this group"
-msgstr ""
+msgstr "Obnoviť vybrané možnosti pre túto skupinu"
 
 #: ui/LayoutDialog.qml:20
 #, kde-format
@@ -139,11 +133,10 @@ msgid "Add Layout"
 msgstr "Pridať rozloženie"
 
 #: ui/LayoutDialog.qml:180
-#, fuzzy, kde-format
-#| msgid "Show layout indicator"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
-msgstr "Zobraziť indikátor rozloženia"
+msgstr "Krátky názov rozloženia"
 
 #: ui/LayoutDialog.qml:190
 #, kde-format
@@ -152,6 +145,8 @@ msgid ""
 "The abbreviated name of the selected layout, which will be displayed in the "
 "system tray. You can change this setting yourself."
 msgstr ""
+"Skrátený názov vybraného rozloženia, ktorý sa zobrazí v systémovej lište. "
+"Toto nastavenie môžete zmeniť sami."
 
 #: ui/LayoutDialog.qml:198
 #, kde-format
@@ -169,28 +164,22 @@ msgstr "Náhľad"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Switching…"
-msgstr ""
+msgstr "Nastaviť prepínanie…"
 
 #: ui/main.qml:38
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure Layouts"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Configure Switching"
-msgstr "Nastaviť rozloženia"
+msgstr "Nastaviť prepínanie"
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Key Bindings"
+#, kde-format
 msgctxt "@action:button"
 msgid "Key Bindings"
 msgstr "Klávesové skratky"
 
 #: ui/main.qml:45
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Key Bindings"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Key Bindings"
 msgstr "Klávesové skratky"
@@ -199,12 +188,10 @@ msgstr "Klávesové skratky"
 #, kde-format
 msgctxt "@action:button Layout"
 msgid "Add…"
-msgstr ""
+msgstr "Pridať…"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Layout"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add layout"
 msgstr "Pridať rozloženie"
@@ -213,12 +200,10 @@ msgstr "Pridať rozloženie"
 #, kde-format
 msgctxt "@label:checkbox configure layouts option"
 msgid "Enable"
-msgstr ""
+msgstr "Povoliť"
 
 #: ui/main.qml:60
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure Layouts"
+#, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Configure Layouts"
 msgstr "Nastaviť rozloženia"
@@ -227,35 +212,28 @@ msgstr "Nastaviť rozloženia"
 #, kde-format
 msgctxt "@label:listbox Keyboard model"
 msgid "Model:"
-msgstr ""
+msgstr "Model:"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgctxt "@title:group"
-#| msgid "NumLock on Plasma Startup:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "NumLock on startup:"
-msgstr "NumLock pri štarte Plasma:"
+msgstr "NumLock pri štarte:"
 
 #: ui/main.qml:112
-#, fuzzy, kde-format
-#| msgctxt "@option:radio"
-#| msgid "Turn On"
+#, kde-format
 msgctxt "@item:inlistbox Turn on \"NumLock\" on startup"
 msgid "Turn on"
 msgstr "Zapnúť"
 
 #: ui/main.qml:116
-#, fuzzy, kde-format
-#| msgid "Turn o&ff"
+#, kde-format
 msgctxt "@item:inlistbox Turn off \"NumLock\" on startup"
 msgid "Turn off"
-msgstr "&Vypnúť"
+msgstr "Vypnúť"
 
 #: ui/main.qml:120
-#, fuzzy, kde-format
-#| msgctxt "@option:radio"
-#| msgid "Leave unchanged"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Leave \"NumLock\" at whatever it was set to before Plasma "
 "started up"
@@ -263,23 +241,19 @@ msgid "Leave unchanged"
 msgstr "Ponechať nezmenené"
 
 #: ui/main.qml:146
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Key repeat:"
-msgstr "Opakovanie klávesov"
+msgstr "Opakovanie klávesov:"
 
 #: ui/main.qml:155
-#, fuzzy, kde-format
-#| msgid "Keyboard Repeat"
+#, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Key repeat"
 msgstr "Opakovanie klávesov"
 
 #: ui/main.qml:166
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Delay:"
+#, kde-format
 msgctxt "@label:textbox Key repeat delay"
 msgid "Delay:"
 msgstr "Oneskorenie:"
@@ -288,25 +262,22 @@ msgstr "Oneskorenie:"
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat delay %1"
-msgstr ""
+msgstr "Oneskorenie opakovania klávesov %1"
 
 #: ui/main.qml:188
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "%1 ms"
-msgstr ""
+msgstr "%1 ms"
 
 #: ui/main.qml:192
-#, fuzzy, kde-format
-#| msgid " ms"
+#, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "ms"
-msgstr " ms"
+msgstr "ms"
 
 #: ui/main.qml:205
-#, fuzzy, kde-format
-#| msgctxt "@label:slider"
-#| msgid "Rate:"
+#, kde-format
 msgctxt "@label:textbox Key repeat rate"
 msgid "Rate:"
 msgstr "Rýchlosť:"
@@ -315,18 +286,16 @@ msgstr "Rýchlosť:"
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat rate %1"
-msgstr ""
+msgstr "Rýchlosť opakovania klávesov %1"
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid " repeats/s"
+#, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "%1 repeats/s"
-msgstr " opakovaní/s"
+msgstr "%1 opakovaní/s"
 
 #: ui/main.qml:231
-#, fuzzy, kde-format
-#| msgid " repeats/s"
+#, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "repeats/s"
 msgstr " opakovaní/s"
@@ -344,9 +313,7 @@ msgid "Type here to test settings"
 msgstr "Tu si vyskúšajte vaše nastavenia"
 
 #: ui/main.qml:256
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Layouts"
+#, kde-format
 msgctxt "@title:view"
 msgid "Layouts"
 msgstr "Rozloženia"
@@ -361,7 +328,7 @@ msgstr "Posunúť hore"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout up"
-msgstr ""
+msgstr "Presunúť rozloženie %1 nahor"
 
 #: ui/main.qml:277
 #, kde-format
@@ -370,17 +337,13 @@ msgid "Move Down"
 msgstr "Posunúť dole"
 
 #: ui/main.qml:278
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Move %1 layout Down"
-msgstr "Posunúť dole"
+msgstr "Presunúť rozloženie %1 nadol"
 
 #: ui/main.qml:288
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Preview"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Preview"
 msgstr "Náhľad"
@@ -395,29 +358,25 @@ msgstr "Odstrániť"
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Remove layout %1"
-msgstr ""
+msgstr "Odstrániť rozloženie %1"
 
 #: ui/main.qml:309
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Spare layouts:"
-msgstr "Náhradné rozloženia"
+msgstr "Náhradné rozloženia:"
 
 #: ui/main.qml:346
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
-msgstr ""
+msgstr "Počet ušetrených hlavných rozložení"
 
 #: ui/main.qml:378
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@label:textbox completes spinbox, x main layouts"
 msgid "main layouts"
-msgstr "Náhradné rozloženia"
+msgstr "hlavné rozloženia"
 
 #: ui/main.qml:382
 #, kde-format
@@ -428,66 +387,64 @@ msgid ""
 "accessed through the keyboard indicator applet or by setting a custom "
 "shortcut."
 msgstr ""
+"Môžete mať až 4 hlavné rozloženia, všetky ostatné rozloženia sú náhradné. "
+"Náhradné rozloženia nie sú zahrnuté pri cyklickom prechádzaní rozloženiami, "
+"ale môžete k nim pristupovať prostredníctvom appletu indikátora klávesnice "
+"alebo nastavením vlastnej skratky."
 
 #: ui/main.qml:387
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
-msgstr "Počet hlavných rozložení:"
+msgstr "Skratka zmeny rozloženia:"
 
 #: ui/main.qml:411
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
-msgstr ""
+msgstr "alebo"
 
 #: ui/Switching.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Configure Layouts"
+#, kde-format
 msgctxt "@title"
 msgid "Configure Switching"
-msgstr "Nastaviť rozloženia"
+msgstr "Nastaviť prepínanie"
 
 #: ui/Switching.qml:23
 #, kde-format
 msgctxt "@title:group"
 msgid "Behavior"
-msgstr ""
+msgstr "Správanie"
 
 #: ui/Switching.qml:28
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox"
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Switching layout affects:"
-msgstr "Počet hlavných rozložení:"
+msgstr "Prepínanie rozloženia ovplyvňuje:"
 
 #: ui/Switching.qml:35
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows"
-msgstr ""
+msgstr "Všetky okná"
 
 #: ui/Switching.qml:39
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows on current desktop"
-msgstr ""
+msgstr "Všetky okná na aktuálnej ploche"
 
 #: ui/Switching.qml:43
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "All windows of current application"
-msgstr ""
+msgstr "Všetky okná aktuálnej aplikácie"
 
 #: ui/Switching.qml:47
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Current window only"
-msgstr ""
+msgstr "Iba aktuálne okno"
 
 #: ui/Switching.qml:74
 #, fuzzy, kde-format
@@ -498,35 +455,28 @@ msgid "Show OSD popup on layout change"
 msgstr "Zobraziť vyskakovacie okno pri zmene rozloženia"
 
 #: ui/Switching.qml:86
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:group"
 msgid "Shortcuts"
-msgstr "Skratka"
+msgstr "Skratky"
 
 #: ui/Switching.qml:91 ui/Switching.qml:153
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Change layout:"
-msgstr "Náhradné rozloženia"
+msgstr "Zmeniť rozloženie:"
 
 #: ui/Switching.qml:112
-#, fuzzy, kde-format
-#| msgid "Switch to Last-Used Keyboard Layout"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Switch to last used layout:"
-msgstr "Prepnutie na naposledy použité rozloženie klávesnice"
+msgstr "Prepnutie na naposledy použité rozloženie klávesnice:"
 
 #: ui/Switching.qml:133
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Shortcut"
+#, kde-format
 msgctxt "@title:group"
 msgid "Legacy Shortcuts"
-msgstr "Skratka"
+msgstr "Zastarané skratky"
 
 #: ui/Switching.qml:141
 #, kde-kuit-format
@@ -537,14 +487,16 @@ msgid ""
 "Wayland.<nl/><nl/>Setting these shortcuts will take you to the Key bindings "
 "page."
 msgstr ""
+"Staršie X11 skratky umožňujú jemnejšie ovládanie skratiek len pre "
+"modifikátory a majú o niečo lepšiu podporu v systéme X11 v okrajových "
+"prípadoch. Môžu sa používať aj na Waylande.<nl/><nl/>Nastavením týchto "
+"skratiek sa dostanete na stránku Klávesový skratky."
 
 #: ui/Switching.qml:182
-#, fuzzy, kde-format
-#| msgctxt "@option:textbox"
-#| msgid "Alternative shortcut:"
+#, kde-format
 msgctxt "@option:textbox"
 msgid "Alternative symbols:"
-msgstr "Alternatívne skratky:"
+msgstr "Alternatívne znaky:"
 
 #: ui/Switching.qml:208
 #, kde-format
@@ -553,6 +505,8 @@ msgid ""
 "Modifier keys can be used to type additional characters, symbols, and "
 "diacritical marks."
 msgstr ""
+"Modifikačné klávesy môžete použiť na písanie ďalších znakov, symbolov a "
+"diakritické znamienka."
 
 #: xkboptionsmodel.cpp:165
 #, kde-format

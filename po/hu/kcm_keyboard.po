@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-22 00:43+0000\n"
-"PO-Revision-Date: 2025-01-25 21:08+0100\n"
+"PO-Revision-Date: 2025-05-30 23:16+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -446,12 +446,10 @@ msgid "Current window only"
 msgstr "Csak a jelenlegi ablakra"
 
 #: ui/Switching.qml:74
-#, fuzzy, kde-format
-#| msgctxt "@label:checkbox"
-#| msgid "Show notification on layout change"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Show OSD popup on layout change"
-msgstr "Értesítés megjelenítése kiosztásváltozáskor"
+msgstr "Képernyőkijelzés megjelenítése kiosztásváltozáskor"
 
 #: ui/Switching.qml:86
 #, kde-format
