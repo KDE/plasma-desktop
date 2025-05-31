@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-22 00:43+0000\n"
-"PO-Revision-Date: 2025-05-24 18:04+0200\n"
+"PO-Revision-Date: 2025-05-30 20:30+0200\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -77,13 +77,7 @@ msgid "Keyboard layout visualization"
 msgstr "Vizualizácia rozloženia klávesnice"
 
 #: tastenbrett/main.cpp:139
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid ""
-#| "The keyboard geometry failed to load. This often indicates that the "
-#| "selected model does not support a specific layout or layout variant. This "
-#| "problem will likely also present when you try to use this combination of "
-#| "model, layout and variant."
+#, kde-format
 msgctxt "@label"
 msgid ""
 "The keyboard geometry failed to load. This often indicates that the selected "
@@ -94,10 +88,13 @@ msgid ""
 "not supported and  will also trigger this message. These might still work "
 "fine if applied"
 msgstr ""
-"Načítanie geometrie klávesnice sa nepodarilo. To často naznačuje, že vybraný "
+"Geometriu klávesnice sa nepodarilo načítať. To často znamená, že vybraný "
 "model nepodporuje konkrétne rozloženie alebo variant rozloženia. Tento "
-"problém sa pravdepodobne vyskytne aj vtedy, keď sa pokúsite použiť túto "
-"kombináciu modelu, usporiadania a variantu."
+"problém sa pravdepodobne objaví aj pri pokuse o použitie tejto kombinácie "
+"modelu, rozloženia a variantu.\n"
+"Náhľad na rozloženia, ktoré sú definované mimo adresára xkb vášho systému, "
+"je nepodporované a tiež vyvolá túto správu. Tieto môžu stále fungovať v "
+"poriadku, ak sa použijú"
 
 #: ui/KeyBindings.qml:18
 #, kde-format
@@ -121,13 +118,13 @@ msgstr "Obnoviť"
 #, kde-format
 msgctxt "@info accessible"
 msgid "Reset selected options for this group"
-msgstr ""
+msgstr "Obnoviť vybrané možnosti pre túto skupinu"
 
 #: ui/KeyBindings.qml:135
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Reset selected options for this group"
-msgstr ""
+msgstr "Obnoviť vybrané možnosti pre túto skupinu"
 
 #: ui/LayoutDialog.qml:20
 #, kde-format
@@ -148,6 +145,8 @@ msgid ""
 "The abbreviated name of the selected layout, which will be displayed in the "
 "system tray. You can change this setting yourself."
 msgstr ""
+"Skrátený názov vybraného rozloženia, ktorý sa zobrazí v systémovej lište. "
+"Toto nastavenie môžete zmeniť sami."
 
 #: ui/LayoutDialog.qml:198
 #, kde-format
@@ -287,7 +286,7 @@ msgstr "Rýchlosť:"
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat rate %1"
-msgstr ""
+msgstr "Rýchlosť opakovania klávesov %1"
 
 #: ui/main.qml:227
 #, kde-format
@@ -371,7 +370,7 @@ msgstr "Náhradné rozloženia:"
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
-msgstr ""
+msgstr "Počet ušetrených hlavných rozložení"
 
 #: ui/main.qml:378
 #, kde-format
@@ -388,6 +387,10 @@ msgid ""
 "accessed through the keyboard indicator applet or by setting a custom "
 "shortcut."
 msgstr ""
+"Môžete mať až 4 hlavné rozloženia, všetky ostatné rozloženia sú náhradné. "
+"Náhradné rozloženia nie sú zahrnuté pri cyklickom prechádzaní rozloženiami, "
+"ale môžete k nim pristupovať prostredníctvom appletu indikátora klávesnice "
+"alebo nastavením vlastnej skratky."
 
 #: ui/main.qml:387
 #, kde-format
@@ -484,6 +487,10 @@ msgid ""
 "Wayland.<nl/><nl/>Setting these shortcuts will take you to the Key bindings "
 "page."
 msgstr ""
+"Staršie X11 skratky umožňujú jemnejšie ovládanie skratiek len pre "
+"modifikátory a majú o niečo lepšiu podporu v systéme X11 v okrajových "
+"prípadoch. Môžu sa používať aj na Waylande.<nl/><nl/>Nastavením týchto "
+"skratiek sa dostanete na stránku Klávesový skratky."
 
 #: ui/Switching.qml:182
 #, kde-format
@@ -498,6 +505,8 @@ msgid ""
 "Modifier keys can be used to type additional characters, symbols, and "
 "diacritical marks."
 msgstr ""
+"Modifikačné klávesy môžete použiť na písanie ďalších znakov, symbolov a "
+"diakritické znamienka."
 
 #: xkboptionsmodel.cpp:165
 #, kde-format

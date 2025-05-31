@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-04-05 18:56+0200\n"
+"PO-Revision-Date: 2025-05-30 15:24+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -183,7 +183,7 @@ msgstr "Automatiskt inaktiverat i pekläge"
 #: package/contents/ui/ConfigGeneral.qml:200
 #, kde-format
 msgid "Highlight newly installed applications"
-msgstr ""
+msgstr "Markera nyinstallerade program"
 
 #: package/contents/ui/ConfigGeneral.qml:205
 #, kde-format
@@ -305,14 +305,13 @@ msgstr "Behåll öppet"
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Nytt."
 
 #: package/contents/ui/KickoffGridDelegate.qml:61
 #: package/contents/ui/KickoffListDelegate.qml:121
-#, fuzzy, kde-format
-#| msgid "Recently Used Applications"
+#, kde-format
 msgid "Newly installed application"
-msgstr "Senaste program"
+msgstr "Nyinstallerat program"
 
 #: package/contents/ui/KickoffGridView.qml:102
 #, kde-format
@@ -322,7 +321,7 @@ msgstr "Rutnät med %1 rader, %2 kolumner"
 #: package/contents/ui/KickoffListDelegate.qml:120
 #, kde-format
 msgid "There is a newly installed application in this category"
-msgstr ""
+msgstr "Det finns ett nyinstallerat program i kategorin"
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
@@ -330,10 +329,9 @@ msgid "More"
 msgstr "Mer"
 
 #: package/contents/ui/LeaveButtons.qml:169
-#, fuzzy, kde-format
-#| msgid "Session actions"
+#, kde-format
 msgid "Session and Power "
-msgstr "Sessionsåtgärder"
+msgstr "Session och ström"
 
 #: package/contents/ui/main.qml:355
 #, kde-format
