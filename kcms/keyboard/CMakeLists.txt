@@ -137,6 +137,8 @@ configure_file(config-keyboard.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-keyboa
 ecm_add_qml_module(kcm_keyboard_declarative
     URI "org.kde.plasma.private.kcm_keyboard"
     GENERATE_PLUGIN_SOURCE
+    QML_FILES
+        ui/LayoutSelector.qml
     SOURCES
         keyboardmodel.cpp
         layoutmodel.cpp
