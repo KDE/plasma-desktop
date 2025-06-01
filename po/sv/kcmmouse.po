@@ -12,14 +12,14 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-02-01 08:21+0100\n"
+"PO-Revision-Date: 2025-05-31 12:44+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
@@ -222,10 +222,9 @@ msgid "Invert scroll direction"
 msgstr "Omvänd rullningsriktning"
 
 #: ui/main.qml:330
-#, fuzzy, kde-format
-#| msgid "Press middle button and move mouse to scroll"
+#, kde-format
 msgid "Hold down middle button and move mouse to scroll"
-msgstr "Tryck på mittenknappen och flytta musen för att rulla"
+msgstr "Håll nere mittenknappen och flytta musen för att rulla"
 
 #: ui/main.qml:342
 #, kde-format
@@ -236,6 +235,10 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+"Det stör program som använder dra med mittenknappen, som till exempel vissa "
+"bildeditorer, dokumentvisare eller videospel. Det kan användas på vilken "
+"enhet som helst, men är främst avsett som en ersättning för mushjul på "
+"enheter som inte har några."
 
 #~ msgid "Accept input through this device."
 #~ msgstr "Acceptera inmatning via enheten."
