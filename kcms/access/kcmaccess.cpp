@@ -19,7 +19,6 @@
 #include <QStandardPaths>
 #include <QValidator>
 #include <QWindow>
-#include <QtGui/private/qtx11extras_p.h>
 
 #include <KActionCollection>
 #include <KConfigGroup>
@@ -30,12 +29,7 @@
 #include <KPluginFactory>
 #include <KSharedConfig>
 #include <KShortcutsDialog>
-#include <X11/XKBlib.h>
-#include <X11/Xlib.h>
-
-#define XK_MISCELLANY
-#define XK_XKB_KEYS
-#include <X11/keysymdef.h>
+#include <KWindowSystem>
 
 #include "kcmaccessibilityactivationgestures.h"
 #include "kcmaccessibilitybell.h"
@@ -50,99 +44,6 @@
 #include "kcmaccessibilityzoommagnifier.h"
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMAccessFactory, "kcm_access.json", registerPlugin<KAccessConfig>(); registerPlugin<AccessibilityData>();)
-
-QString mouseKeysShortcut(Display *display)
-{
-    // Calculate the keycode
-    KeySym sym = XK_MouseKeys_Enable;
-    KeyCode code = XKeysymToKeycode(display, sym);
-    if (code == 0) {
-        sym = XK_Pointer_EnableKeys;
-        code = XKeysymToKeycode(display, sym);
-        if (code == 0)
-            return QString(); // No shortcut available?
-    }
-
-    // Calculate the modifiers by searching the keysym in the X keyboard mapping
-    XkbDescPtr xkbdesc = XkbGetMap(display, XkbKeyTypesMask | XkbKeySymsMask, XkbUseCoreKbd);
-    if (!xkbdesc)
-        return QString(); // Failed to obtain the mapping from server
-
-    bool found = false;
-    unsigned char modifiers = 0;
-    int groups = XkbKeyNumGroups(xkbdesc, code);
-    for (int grp = 0; grp < groups && !found; grp++) {
-        int levels = XkbKeyGroupWidth(xkbdesc, code, grp);
-        for (int level = 0; level < levels && !found; level++) {
-            if (sym == XkbKeySymEntry(xkbdesc, code, level, grp)) {
-                // keysym found => determine modifiers
-                int typeIdx = xkbdesc->map->key_sym_map[code].kt_index[grp];
-                XkbKeyTypePtr type = &(xkbdesc->map->types[typeIdx]);
-                for (int i = 0; i < type->map_count && !found; i++) {
-                    if (type->map[i].active && (type->map[i].level == level)) {
-                        modifiers = type->map[i].mods.mask;
-                        found = true;
-                    }
-                }
-            }
-        }
-    }
-    XkbFreeClientMap(xkbdesc, 0, true);
-
-    if (!found)
-        return QString(); // Somehow the keycode -> keysym mapping is flawed
-
-    XEvent ev;
-    ev.type = KeyPress;
-    ev.xkey.display = display;
-    ev.xkey.keycode = code;
-    ev.xkey.state = 0;
-    int key;
-    KKeyServer::xEventToQt(&ev, &key);
-    QString keyname = QKeySequence(key).toString();
-
-    unsigned int AltMask = KKeyServer::modXAlt();
-    unsigned int WinMask = KKeyServer::modXMeta();
-    unsigned int NumMask = KKeyServer::modXNumLock();
-    unsigned int ScrollMask = KKeyServer::modXScrollLock();
-
-    unsigned int MetaMask = XkbKeysymToModifiers(display, XK_Meta_L);
-    unsigned int SuperMask = XkbKeysymToModifiers(display, XK_Super_L);
-    unsigned int HyperMask = XkbKeysymToModifiers(display, XK_Hyper_L);
-    unsigned int AltGrMask = XkbKeysymToModifiers(display, XK_Mode_switch) | XkbKeysymToModifiers(display, XK_ISO_Level3_Shift)
-        | XkbKeysymToModifiers(display, XK_ISO_Level3_Latch) | XkbKeysymToModifiers(display, XK_ISO_Level3_Lock);
-
-    unsigned int mods = ShiftMask | ControlMask | AltMask | WinMask | LockMask | NumMask | ScrollMask;
-
-    AltGrMask &= ~mods;
-    MetaMask &= ~(mods | AltGrMask);
-    SuperMask &= ~(mods | AltGrMask | MetaMask);
-    HyperMask &= ~(mods | AltGrMask | MetaMask | SuperMask);
-
-    if ((modifiers & AltGrMask) != 0)
-        keyname = i18n("AltGraph") + QLatin1Char('+') + keyname;
-    if ((modifiers & HyperMask) != 0)
-        keyname = i18n("Hyper") + QLatin1Char('+') + keyname;
-    if ((modifiers & SuperMask) != 0)
-        keyname = i18n("Super") + QLatin1Char('+') + keyname;
-    if ((modifiers & WinMask) != 0)
-        keyname = QKeySequence(Qt::META).toString() + QLatin1Char('+') + keyname;
-    if ((modifiers & AltMask) != 0)
-        keyname = QKeySequence(Qt::ALT).toString() + QLatin1Char('+') + keyname;
-    if ((modifiers & ControlMask) != 0)
-        keyname = QKeySequence(Qt::CTRL).toString() + QLatin1Char('+') + keyname;
-    if ((modifiers & ShiftMask) != 0)
-        keyname = QKeySequence(Qt::SHIFT).toString() + QLatin1Char('+') + keyname;
-
-    return modifiers & ScrollMask & LockMask & NumMask ? i18n("Press %1 while NumLock, CapsLock and ScrollLock are active", keyname)
-        : modifiers & ScrollMask & LockMask            ? i18n("Press %1 while CapsLock and ScrollLock are active", keyname)
-        : modifiers & ScrollMask & NumMask             ? i18n("Press %1 while NumLock and ScrollLock are active", keyname)
-        : modifiers & ScrollMask                       ? i18n("Press %1 while ScrollLock is active", keyname)
-        : modifiers & LockMask & NumMask               ? i18n("Press %1 while NumLock and CapsLock are active", keyname)
-        : modifiers & LockMask                         ? i18n("Press %1 while CapsLock is active", keyname)
-        : modifiers & NumMask                          ? i18n("Press %1 while NumLock is active", keyname)
-                                                       : i18n("Press %1", keyname);
-}
 
 class IntValidatorWithSuffix : public QIntValidator
 {
@@ -166,7 +67,6 @@ public:
 KAccessConfig::KAccessConfig(QObject *parent, const KPluginMetaData &metaData)
     : KQuickManagedConfigModule(parent, metaData)
     , m_data(new AccessibilityData(this))
-    , m_desktopShortcutInfo(QX11Info::isPlatformX11() ? mouseKeysShortcut(QX11Info::display()) : QString())
 {
     qmlRegisterAnonymousType<MouseSettings>("org.kde.plasma.access.kcm", 0);
     qmlRegisterAnonymousType<BellSettings>("org.kde.plasma.access.kcm", 0);
@@ -510,7 +410,7 @@ bool KAccessConfig::orcaInstalled()
 
 bool KAccessConfig::isPlatformX11() const
 {
-    return QX11Info::isPlatformX11();
+    return KWindowSystem::isPlatformX11();
 }
 
 MouseSettings *KAccessConfig::mouseSettings() const
