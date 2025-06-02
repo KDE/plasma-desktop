@@ -37,7 +37,6 @@ class KAccessConfig : public KQuickManagedConfigModule
     Q_PROPERTY(InvertSettings *invertSettings READ invertSettings CONSTANT)
     Q_PROPERTY(ZoomMagnifierSettings *zoomMagnifierSettings READ zoomMagnifierSettings CONSTANT)
     Q_PROPERTY(QString orcaLaunchFeedback READ orcaLaunchFeedback WRITE setOrcaLaunchFeedback NOTIFY orcaLaunchFeedbackChanged)
-    Q_PROPERTY(QString desktopShortcutInfo MEMBER m_desktopShortcutInfo CONSTANT)
     Q_PROPERTY(bool screenReaderInstalled MEMBER m_screenReaderInstalled CONSTANT)
     Q_PROPERTY(bool bellIsDefaults READ bellIsDefaults NOTIFY bellIsDefaultsChanged)
     Q_PROPERTY(bool mouseIsDefaults READ mouseIsDefaults NOTIFY mouseIsDefaultsChanged)
@@ -107,6 +106,5 @@ private:
 
     AccessibilityData *m_data;
     QString m_orcaLaunchFeedback;
-    QString m_desktopShortcutInfo;
     bool m_screenReaderInstalled;
 };
