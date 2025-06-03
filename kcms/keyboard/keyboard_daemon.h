@@ -6,12 +6,12 @@
 
 #pragma once
 
+#include <KConfigWatcher>
 #include <KDEDModule>
 #include <QStringList>
 #include <optional>
 
 #include "bindings.h"
-#include "keyboard_dbus.h"
 #include "layout_memory.h"
 #include "layoutnames.h"
 
@@ -25,6 +25,7 @@ class Q_DECL_EXPORT KeyboardDaemon : public KDEDModule
     Q_CLASSINFO("D-Bus Interface", "org.kde.KeyboardLayouts")
 
     KeyboardSettings *keyboardSettings;
+    KConfigWatcher::Ptr keyboardSettingsWatcher;
     KeyboardConfig *keyboardConfig;
     KeyboardLayoutActionCollection *actionCollection;
     XInputEventNotifier *xEventNotifier;

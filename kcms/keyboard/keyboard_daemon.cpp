@@ -28,6 +28,7 @@ K_PLUGIN_CLASS_WITH_JSON(KeyboardDaemon, "kded_keyboard.json")
 KeyboardDaemon::KeyboardDaemon(QObject *parent, const QList<QVariant> &)
     : KDEDModule(parent)
     , keyboardSettings(new KeyboardSettings(this))
+    , keyboardSettingsWatcher(KConfigWatcher::create(keyboardSettings->sharedConfig()))
     , keyboardConfig(new KeyboardConfig(keyboardSettings, this))
     , actionCollection(nullptr)
     , xEventNotifier(nullptr)
@@ -35,11 +36,6 @@ KeyboardDaemon::KeyboardDaemon(QObject *parent, const QList<QVariant> &)
 {
     if (!X11Helper::xkbSupported(nullptr))
         return;
-
-    QDBusConnection dbus = QDBusConnection::sessionBus();
-    dbus.registerService(KEYBOARD_DBUS_SERVICE_NAME);
-    dbus.registerObject(KEYBOARD_DBUS_OBJECT_PATH, this, QDBusConnection::ExportScriptableSlots | QDBusConnection::ExportScriptableSignals);
-    dbus.connect(QString(), KEYBOARD_DBUS_OBJECT_PATH, KEYBOARD_DBUS_SERVICE_NAME, KEYBOARD_DBUS_CONFIG_RELOAD_MESSAGE, this, SLOT(configureKeyboard()));
 
     LayoutNames::registerMetaType();
 
@@ -59,11 +55,6 @@ KeyboardDaemon::~KeyboardDaemon()
     LayoutMemoryPersister layoutMemoryPersister(layoutMemory);
     layoutMemoryPersister.setGlobalLayout(X11Helper::getCurrentLayout());
     layoutMemoryPersister.save();
-
-    QDBusConnection dbus = QDBusConnection::sessionBus();
-    dbus.disconnect(QString(), KEYBOARD_DBUS_OBJECT_PATH, KEYBOARD_DBUS_SERVICE_NAME, KEYBOARD_DBUS_CONFIG_RELOAD_MESSAGE, this, SLOT(configureKeyboard()));
-    dbus.unregisterObject(KEYBOARD_DBUS_OBJECT_PATH);
-    dbus.unregisterService(KEYBOARD_DBUS_SERVICE_NAME);
 
     unregisterListeners();
     unregisterShortcut();
@@ -158,6 +149,7 @@ void KeyboardDaemon::registerListeners()
     connect(xEventNotifier, &XInputEventNotifier::newKeyboardDevice, this, &KeyboardDaemon::configureKeyboard);
     connect(xEventNotifier, &XEventNotifier::layoutMapChanged, this, &KeyboardDaemon::layoutMapChanged);
     connect(xEventNotifier, &XEventNotifier::layoutChanged, this, &KeyboardDaemon::layoutChangedSlot);
+    connect(keyboardSettingsWatcher.data(), &KConfigWatcher::configChanged, this, &KeyboardDaemon::configureKeyboard);
     xEventNotifier->start();
 }
 
@@ -170,6 +162,7 @@ void KeyboardDaemon::unregisterListeners()
         disconnect(xEventNotifier, &XEventNotifier::layoutChanged, this, &KeyboardDaemon::layoutChangedSlot);
         disconnect(xEventNotifier, &XEventNotifier::layoutMapChanged, this, &KeyboardDaemon::layoutMapChanged);
     }
+    disconnect(keyboardSettingsWatcher.data(), &KConfigWatcher::configChanged, this, &KeyboardDaemon::configureKeyboard);
 }
 
 void KeyboardDaemon::layoutChangedSlot()

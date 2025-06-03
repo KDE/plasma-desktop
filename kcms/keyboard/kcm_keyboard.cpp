@@ -15,7 +15,6 @@
 
 #include "bindings.h"
 #include "keyboard_config.h"
-#include "keyboard_dbus.h"
 #include "keyboardmiscsettings.h"
 #include "keyboardsettings.h"
 #include "keyboardsettingsdata.h"
@@ -169,9 +168,6 @@ void KCMKeyboard::save()
     m_shortcutHelper->actionColletion()->setLayoutShortcuts(m_config->layouts());
     m_config->save();
     m_userLayoutModel->reset();
-
-    QDBusMessage message = QDBusMessage::createSignal(KEYBOARD_DBUS_OBJECT_PATH, KEYBOARD_DBUS_SERVICE_NAME, KEYBOARD_DBUS_CONFIG_RELOAD_MESSAGE);
-    QDBusConnection::sessionBus().send(message);
 }
 
 bool KCMKeyboard::isSaveNeeded() const
