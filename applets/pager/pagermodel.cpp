@@ -211,6 +211,8 @@ QVariant PagerModel::data(const QModelIndex &index, int role) const
         }
     } else if (role == TasksModel) {
         return QVariant::fromValue(d->windowModels.at(index.row()));
+    } else if (role == Position) {
+        return d->virtualDesktopInfo->position(d->virtualDesktopInfo->desktopNames().at(index.row()));
     }
 
     return QVariant();
