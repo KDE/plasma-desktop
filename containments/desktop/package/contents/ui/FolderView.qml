@@ -101,7 +101,7 @@ FocusScope {
             }
 
             var pos = mapToItem(gridView.contentItem, x, y);
-            var item = gridView.itemAt(pos.x, pos.y);
+            var item = gridView.safeItemAt(pos.x, pos.y);
 
             if (item && item.isDir) {
                 hoveredItem = item;
@@ -120,7 +120,7 @@ FocusScope {
     }
 
     function dropItemAt(pos) {
-        var item = gridView.itemAt(pos.x, pos.y);
+        var item = gridView.safeItemAt(pos.x, pos.y);
 
         if (item) {
             if (item.blank) {
@@ -142,9 +142,9 @@ FocusScope {
 
     function drop(target, event, pos) {
         var dropPos = mapToItem(gridView.contentItem, pos.x, pos.y);
-        var dropIndex = gridView.indexAt(dropPos.x, dropPos.y);
+        var dropIndex = gridView.safeIndexAt(dropPos.x, dropPos.y);
         var dragPos = mapToItem(gridView.contentItem, listener.dragX, listener.dragY);
-        var dragIndex = gridView.indexAt(dragPos.x, dragPos.y);
+        var dragIndex = gridView.safeIndexAt(dragPos.x, dragPos.y);
 
         if (listener.dragX === -1 || dragIndex !== dropIndex) {
             dir.drop(target, event, dropItemAt(dropPos), root.isContainment && !Plasmoid.immutable);
@@ -269,6 +269,7 @@ FocusScope {
         }
 
         onPressed: mouse => {
+
             // Ignore press events outside the viewport (i.e. on scrollbars).
             if (!scrollArea.viewport.contains(Qt.point(mouse.x, mouse.y))) {
                 return;
@@ -296,7 +297,7 @@ FocusScope {
             }
 
             const mappedPos = mapToItem(gridView.contentItem, mouse.x, mouse.y)
-            var index = gridView.indexAt(mappedPos.x, mappedPos.y);
+            var index = gridView.safeIndexAt(mappedPos.x, mappedPos.y);
             var indexItem = gridView.itemAtIndex(index);
 
             if (indexItem && indexItem.iconArea) { // update position in case of touch or untriggered hover
@@ -476,17 +477,11 @@ FocusScope {
             gridView.shiftPressed = (mouse.modifiers & Qt.ShiftModifier);
 
             const mappedPos = mapToItem(gridView.contentItem, mouse.x, mouse.y)
-            var item = gridView.itemAt(mappedPos.x, mappedPos.y);
+            var item = gridView.safeItemAt(mappedPos.x, mappedPos.y);
             var leftEdge = Math.min(gridView.contentX, gridView.originX);
 
             if (!item || item.blank) {
                 if (gridView.hoveredItem && !root.containsDrag && (!dialog || !dialog.containsDrag) && !gridView.hoveredItem.popupDialog) {
-                    gridView.hoveredItem = null;
-                }
-            } else {
-                var fPos = mapToItem(item.frame, mouse.x, mouse.y);
-
-                if (fPos.x < 0 || fPos.y < 0 || fPos.x > item.frame.width || fPos.y > item.frame.height) {
                     gridView.hoveredItem = null;
                 }
             }
@@ -717,6 +712,28 @@ FocusScope {
                 boundsBehavior: Flickable.StopAtBounds
                 focus: true
 
+                // itemAt returns the item that's in the cell at
+                // coordinates x, y, even if it's smaller than it.
+                // safeItemAt checks if x, y is actually within the
+                // element within the cell.
+                function safeItemAt(x, y) {
+                    let item = itemAt(x, y)
+                    if (!item) return;
+                    let coord = mapFromItem(gridView.contentItem, x, y)
+                    coord = item.mapFromItem(gridView, coord.x, coord.y)
+                    if (!item.contains(coord)) {
+                        return
+                    }
+                    return item;
+                }
+
+                function safeIndexAt(x, y) {
+                    if (safeItemAt(x, y)) {
+                        return indexAt(x, y)
+                    }
+                    return -1
+                }
+
                 PlasmaComponents.ScrollBar.vertical: PlasmaComponents.ScrollBar {
                     id: verticalScrollBar
                 }
@@ -767,7 +784,7 @@ FocusScope {
 
                 delegate: FolderItemDelegate {
                     width: gridView.cellWidth
-                    height: gridView.cellHeight
+                    height: contentHeight || gridView.cellHeight
                     isOnRootView: main.isRootView
                 }
 
@@ -962,34 +979,9 @@ FocusScope {
                                 itemX = (rows ? gridView.width : gridView.contentItem.width) - itemX;
                             }
 
-                            // Check if the rubberband intersects this cell first to avoid doing more
-                            // expensive work.
-                            if (rubberBand.intersects(Qt.rect(itemX + Kirigami.Units.smallSpacing, itemY + Kirigami.Units.smallSpacing,
-                                cWidth, cHeight))) {
-                                var item = gridView.contentItem.childAt(itemX + midWidth, itemY + midHeight);
-
-                                // If this is a visible item, check for intersection with the actual
-                                // icon or label rects for better feel.
-                                if (item && item.iconArea) {
-                                    var iconRect = Qt.rect(itemX + item.iconArea.x, itemY + item.iconArea.y,
-                                        item.iconArea.width, item.iconArea.height);
-
-                                    if (rubberBand.intersects(iconRect)) {
-                                        indices.push(index);
-                                        continue;
-                                    }
-
-                                    var labelRect = Qt.rect(itemX + item.labelArea.x, itemY + item.labelArea.y,
-                                        item.labelArea.width, item.labelArea.height);
-
-                                    if (rubberBand.intersects(labelRect)) {
-                                        indices.push(index);
-                                        continue;
-                                    }
-                                } else {
-                                    // Otherwise be content with the cell intersection.
-                                    indices.push(index);
-                                }
+                            var item = gridView.contentItem.childAt(itemX + midWidth, itemY + midHeight);
+                            if (rubberBand.intersects(Qt.rect(item.x, item.y, item.width, item.height))) {
+                                indices.push(index)
                             }
                         }
                     }
