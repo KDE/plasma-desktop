@@ -312,7 +312,7 @@ PlasmoidItem {
                 readonly property string desktopId: isActivityPager ? model.TasksModel.activity : model.TasksModel.virtualDesktop
                 readonly property bool active: (index === pagerModel.currentPage)
 
-                mainText: model.display+"BAH"+model.Position
+                mainText: model.display
                 // our ToolTip has maximumLineCount of 8 which doesn't fit but QML doesn't
                 // respect that in RichText so we effectively can put in as much as we like :)
                 // it also gives us more flexibility when it comes to styling the <li>
