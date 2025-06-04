@@ -39,7 +39,6 @@ public:
 
     enum AdditionalRoles {
         TasksModel = Qt::UserRole + 1,
-        Position
     };
     Q_ENUM(AdditionalRoles)
 
