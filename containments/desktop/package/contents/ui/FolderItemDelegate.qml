@@ -36,6 +36,7 @@ Item {
     property Item hoverArea:       loader.item ? loader.item.hoverArea      : null
     property Item frame:           loader.item ? loader.item.frame          : null
     property Item toolTip:         loader.item ? loader.item.toolTip        : null
+    property int contentHeight: loader.item && !root.useListViewMode ? loader.item.contentHeight : null
     Accessible.name: name
     Accessible.role: Accessible.Canvas
 
@@ -108,6 +109,7 @@ Item {
             property Item toolTip: toolTip
             property Item selectionButton: selectionButtonComponent.createObject(actions)
             property Item popupButton: null
+            property int contentHeight: frameLoader.height + frameLoader.y * 2
 
             readonly property bool iconAndLabelsShouldlookSelected: impl.hovered
 
@@ -162,6 +164,7 @@ Item {
 
             PlasmaCore.ToolTipArea {
                 id: toolTip
+                anchors.fill: impl
 
                 active: (Plasmoid.configuration.toolTips || label.truncated)
                         && popupDialog === null
