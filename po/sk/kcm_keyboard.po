@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-22 00:43+0000\n"
-"PO-Revision-Date: 2025-05-30 20:30+0200\n"
+"PO-Revision-Date: 2025-06-03 19:15+0200\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -447,12 +447,10 @@ msgid "Current window only"
 msgstr "Iba aktuálne okno"
 
 #: ui/Switching.qml:74
-#, fuzzy, kde-format
-#| msgctxt "@option:checkbox"
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Show OSD popup on layout change"
-msgstr "Zobraziť vyskakovacie okno pri zmene rozloženia"
+msgstr "Zobraziť OSD pri zmene rozloženia"
 
 #: ui/Switching.qml:86
 #, kde-format
