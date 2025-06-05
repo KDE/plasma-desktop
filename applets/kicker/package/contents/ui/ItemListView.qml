@@ -44,6 +44,7 @@ FocusScope {
     property alias count: listView.count
     property alias containsMouse: listener.containsMouse
     property alias resetOnExitDelay: resetIndexTimer.interval
+    property alias mouseMoved: listView.mouseMoved
 
     property KSvg.SvgItem lineMetrics: KSvg.SvgItem {
         imagePath: "widgets/line"
@@ -136,6 +137,7 @@ FocusScope {
 
                 property bool showChildDialogs: true
                 property int eligibleWidth: width
+                property bool mouseMoved: true // child dialogs can activate immediately
 
                 currentIndex: -1
 

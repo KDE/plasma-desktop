@@ -113,6 +113,10 @@ Item {
         }
 
         onPositionChanged: mouse => {
+            if (!item.ListView.view.mouseMoved) {
+                item.ListView.view.mouseMoved = true;
+                return;
+            }
             if (pressX !== -1 && model.url && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
                 dragHelper.startDrag(kicker, model.url, model.decoration);
                 mousePressed = false;
