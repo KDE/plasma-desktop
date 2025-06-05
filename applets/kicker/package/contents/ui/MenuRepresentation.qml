@@ -52,6 +52,8 @@ FocusScope {
         KSvg.FrameSvgItem {
             id: sideBar
 
+            property bool onTopPanel: Plasmoid.location === PlasmaCore.Types.TopEdge
+
             visible: width > 0
 
             width: (globalFavorites && systemFavorites
@@ -62,99 +64,88 @@ FocusScope {
             imagePath: "widgets/frame"
             prefix: "plain"
 
-            SideBarSection {
-                id: favoriteApps
+            activeFocusOnTab: true
+            onActiveFocusChanged: (onTopPanel ? favoriteSystemActions : favoriteApps).forceActiveFocus(Qt.TabFocusReason)
+            KeyNavigation.right: rootList
+            Keys.onPressed: event => {
+                let backArrowKey = (event.key === Qt.Key_Left && Application.layoutDirection === Qt.LeftToRight) ||
+                    (event.key === Qt.Key_Right && Application.layoutDirection === Qt.RightToLeft)
+                let forwardArrowKey = (event.key === Qt.Key_Right && Application.layoutDirection === Qt.LeftToRight) ||
+                    (event.key === Qt.Key_Left && Application.layoutDirection === Qt.RightToLeft)
 
+                if (backArrowKey & runnerColumns.visibleChildren.length > 1) {
+                    const targetList = runnerColumns.visibleChildren[runnerColumns.visibleChildren.length-2]
+                    targetList.currentIndex = 0
+                    targetList.forceActiveFocus(Qt.BacktabFocusReason)
+                    event.accepted = true
+                }
+                if (forwardArrowKey) {
+                    if (runnerColumns.visible) {
+                        runnerColumns.visibleChildren[0].currentIndex = 0
+                        runnerColumns.visibleChildren[0].forceActiveFocus(Qt.TabFocusReason)
+                    } else {
+                        rootList.showChildDialogs = false;
+                        rootList.currentIndex = 0
+                        rootList.forceActiveFocus(Qt.TabFocusReason)
+                        rootList.showChildDialogs = true;
+                    }
+                }
+            }
+
+            ColumnLayout {
                 anchors.top: parent.top
-                anchors.topMargin: sideBar.margins.top
-
-                height: (sideBar.height - sideBar.margins.top - sideBar.margins.bottom
-                    - favoriteSystemActions.height - sidebarSeparator.height - (4 * Kirigami.Units.smallSpacing))
-
-                model: globalFavorites
-
-                states: State {
-                    name: "top"
-                    when: Plasmoid.location === PlasmaCore.Types.TopEdge
-
-                    AnchorChanges {
-                        target: favoriteApps
-                        anchors.top: undefined
-                        anchors.bottom: parent.bottom
-                    }
-
-                    PropertyChanges {
-                        target: favoriteApps
-                        anchors.topMargin: undefined
-                        anchors.bottomMargin: sideBar.margins.bottom
-                    }
-                }
-
-                Binding {
-                    target: globalFavorites
-                    property: "iconSize"
-                    value: Kirigami.Units.iconSizes.medium
-                    restoreMode: Binding.RestoreBinding
-                }
-            }
-
-            KSvg.SvgItem {
-                id: sidebarSeparator
-
-                anchors.bottom: favoriteSystemActions.top
-                anchors.bottomMargin: (2 * Kirigami.Units.smallSpacing)
                 anchors.horizontalCenter: parent.horizontalCenter
+                height: Math.max(implicitHeight, parent.height)
 
-                width: Kirigami.Units.iconSizes.medium
+                LayoutItemProxy {
+                    target: sideBar.onTopPanel ? favoriteSystemActions : favoriteApps
+                }
+                LayoutItemProxy {
+                    target: sidebarSeparator
+                }
+                LayoutItemProxy {
+                    target: sideBar.onTopPanel ? favoriteApps : favoriteSystemActions
+                }
 
-                visible: (favoriteApps.model && favoriteApps.model.count
-                    && favoriteSystemActions.model && favoriteSystemActions.model.count)
+                SideBarSection {
+                    id: favoriteApps
 
-                imagePath: "widgets/line"
-                elementId: "horizontal-line"
+                    Layout.fillHeight: true
 
-                states: State {
-                    name: "top"
-                    when: Plasmoid.location === PlasmaCore.Types.TopEdge
+                    KeyNavigation.up: favoriteSystemActions.bottomSideBarItem
+                    KeyNavigation.down: favoriteSystemActions
 
-                    AnchorChanges {
-                        target: sidebarSeparator
-                        anchors.top: favoriteSystemActions.bottom
-                        anchors.bottom: undefined
+                    model: globalFavorites
 
-                    }
-
-                    PropertyChanges {
-                        target: sidebarSeparator
-                        anchors.topMargin: (2 * Kirigami.Units.smallSpacing)
-                        anchors.bottomMargin: undefined
+                    Binding {
+                        target: globalFavorites
+                        property: "iconSize"
+                        value: Kirigami.Units.iconSizes.medium
+                        restoreMode: Binding.RestoreBinding
                     }
                 }
-            }
 
-            SideBarSection {
-                id: favoriteSystemActions
+                KSvg.SvgItem {
+                    id: sidebarSeparator
 
-                anchors.bottom: parent.bottom
-                anchors.bottomMargin: sideBar.margins.bottom
+                    Layout.fillWidth: true
+                    Layout.leftMargin: Kirigami.Units.smallSpacing
+                    Layout.rightMargin: Layout.leftMargin
+                    Layout.alignment: Qt.AlignHCenter
 
-                model: systemFavorites
+                    visible: (favoriteApps.model && favoriteApps.model.count
+                        && favoriteSystemActions.model && favoriteSystemActions.model.count)
 
-                states: State {
-                    name: "top"
-                    when: Plasmoid.location === PlasmaCore.Types.TopEdge
+                    imagePath: "widgets/line"
+                    elementId: "horizontal-line"
+                }
 
-                    AnchorChanges {
-                        target: favoriteSystemActions
-                        anchors.top: parent.top
-                        anchors.bottom: undefined
-                    }
+                SideBarSection {
+                    id: favoriteSystemActions
 
-                    PropertyChanges {
-                        target: favoriteSystemActions
-                        anchors.topMargin: sideBar.margins.top
-                        anchors.bottomMargin: undefined
-                    }
+                    model: systemFavorites
+                    KeyNavigation.up: favoriteApps.bottomSideBarItem
+                    KeyNavigation.down: favoriteApps
                 }
             }
         }
@@ -176,6 +167,10 @@ FocusScope {
 
             model: rootModel
 
+            onNavigateLeftRequested: {
+                currentIndex = -1
+                sideBar.forceActiveFocus(Qt.TabFocusReason)
+            }
             onKeyNavigationAtListEnd: {
                 searchField.focus = true;
             }
@@ -238,10 +233,6 @@ FocusScope {
                             targets.push(i);
                         }
 
-                        for (let i = runnerModel.count - 1; i > index; --i) {
-                            targets.push(i);
-                        }
-
                         for (const i of targets) {
                             if (runnerModel.modelForRow(i).count) {
                                 target = runnerColumnsRepeater.itemAt(i);
@@ -253,6 +244,9 @@ FocusScope {
                             currentIndex = -1;
                             target.currentIndex = 0;
                             target.focus = true;
+                        } else {
+                            currentIndex = -1;
+                            sideBar.forceActiveFocus(Qt.TabFocusReason)
                         }
                     }
 
@@ -264,10 +258,6 @@ FocusScope {
                             targets.push(i);
                         }
 
-                        for (let i = 0; i < index; ++i) {
-                            targets.push(i);
-                        }
-
                         for (const i of targets) {
                             if (runnerModel.modelForRow(i).count) {
                                 target = runnerColumnsRepeater.itemAt(i);
@@ -279,6 +269,9 @@ FocusScope {
                             currentIndex = -1;
                             target.currentIndex = 0;
                             target.focus = true;
+                        } else {
+                            currentIndex = -1;
+                            sideBar.forceActiveFocus(Qt.TabFocusReason)
                         }
                     }
                 }
@@ -390,11 +383,11 @@ FocusScope {
                     targetList.currentIndex = Math.min(targetList.currentIndex + 1, targetList.count);
                     targetList.currentItem.forceActiveFocus();
                 }
-            } else if (backArrowKey && runnerColumns.visibleChildren.length > 2) {
-                runnerColumns.visibleChildren[0].currentIndex = -1;
-                const targetList = runnerColumns.visibleChildren[runnerColumns.visibleChildren.length-2];
-                targetList.currentIndex = 0;
-                targetList.forceActiveFocus(Qt.BacktabFocusReason);
+            } else if (backArrowKey) {
+                if (runnerColumns.visible) {
+                    runnerColumns.visibleChildren[0].currentIndex = -1;
+                }
+                sideBar.forceActiveFocus(Qt.TabFocusReason)
             } else if (forwardArrowKey && runnerColumns.visibleChildren.length > 2) {
                 runnerColumns.visibleChildren[0].currentIndex = -1;
                 runnerColumns.visibleChildren[1].currentIndex = 0;
