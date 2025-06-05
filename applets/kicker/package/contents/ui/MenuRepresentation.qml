@@ -49,6 +49,7 @@ PlasmaComponents3.ScrollView {
         kicker.hideOnWindowDeactivate = true;
 
         rootList.currentIndex = -1;
+        rootList.mouseMoved = false;
 
         searchField.text = "";
         searchField.focus = true;
@@ -183,6 +184,8 @@ PlasmaComponents3.ScrollView {
             visible: searchField.text === ""
 
             iconsEnabled: Plasmoid.configuration.showIconsRootLevel
+
+            mouseMoved: false // don't hover-activate until mouse is moved to not interfere with keyboard use
 
             mainSearchField: searchField
 
