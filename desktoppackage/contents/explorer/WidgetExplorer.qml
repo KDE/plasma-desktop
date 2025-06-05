@@ -205,7 +205,7 @@ PC3.Page {
                 PlasmaExtras.SearchField {
                     id: searchInput
                     Layout.fillWidth: true
-                    Accessible.name: i18nc("@label:textbox accessible", "Search Widgets")
+                    Accessible.name: i18nc("@label:textbox accessible", "Search through widgets")
 
                     KeyNavigation.down: list
                     KeyNavigation.right: categoryButton

@@ -114,10 +114,12 @@ KCM.SimpleKCM {
         QQC2.RadioButton {
             id: doesNothingRadio
 
-            Kirigami.FormData.label: isActivityPager ? i18n("Selecting current Activity:") : i18n("Selecting current virtual desktop:")
+            Kirigami.FormData.label: isActivityPager
+                ? i18nc("@label Start of the sentence 'Selecting current activity does nothing/shows the desktop'", "Selecting current Activity:")
+                : i18nc("@label Start of the sentence 'Selecting current virtual desktop does nothing/shows the desktop'", "Selecting current virtual desktop:")
 
             QQC2.ButtonGroup.group: currentDesktopSelectedGroup
-            text: i18n("Does nothing")
+            text: i18nc("option:check completes the sentence 'Selecting current activity/virtual desktop does nothing'", "Does nothing")
             checked: cfg_currentDesktopSelected === 0
             onToggled: if (checked) cfg_currentDesktopSelected = 0;
         }
@@ -125,7 +127,7 @@ KCM.SimpleKCM {
         QQC2.RadioButton {
             id: showsDesktopRadio
             QQC2.ButtonGroup.group: currentDesktopSelectedGroup
-            text: i18n("Shows the desktop")
+            text: i18nc("option:check completes the sentence 'Selecting current activity/virtual desktop shows the desktop'", "Shows the desktop")
             checked: cfg_currentDesktopSelected === 1
             onToggled: if (checked) cfg_currentDesktopSelected = 1;
         }

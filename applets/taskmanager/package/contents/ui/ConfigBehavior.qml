@@ -202,13 +202,13 @@ KCMUtils.SimpleKCM {
 
         QQC2.ComboBox {
             id: wheelEnabled
-            Kirigami.FormData.label: i18nc("@label:listbox completes sentence like: … does nothing", "Scrolling behavior:")
+            Kirigami.FormData.label: i18nc("@label:listbox Part of a sentence: 'Scrolling behavior does nothing/cycles through tasks/cycles through the selected task's windows'", "Scrolling behavior:")
             Layout.fillWidth: true
             Layout.minimumWidth: Kirigami.Units.gridUnit * 14
             model: [
-                i18nc("@item:inlistbox Part of a sentence: 'Scrolling on any task does nothing'", "Does nothing"),
-                i18nc("@item:inlistbox Part of a sentence: 'Scrolling anywhere switches through all tasks'", "Cycles through all tasks"),
-                i18nc("@item:inlistbox Part of a sentence: 'Scrolling on a task switches between that task's windows'", "Cycles through the selected task windows"),
+                i18nc("@item:inlistbox Part of a sentence: 'Scrolling behavior does nothing'", "Does nothing"),
+                i18nc("@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through all tasks'", "Cycles through all tasks"),
+                i18nc("@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through the hovered task's windows'", "Cycles through the hovered task’s windows"),
             ]
         }
 
