@@ -83,8 +83,9 @@ Item {
                     modelData.actionId,
                     modelData.actionArgument
                 )
-                if (modelActionTriggered) {
-                    kickoff.expanded = false
+                // close early (if marked as such) to be more responsive to user input
+                if (modelActionTriggered && root.plasmoid.hideOnWindowDeactivate) {
+                    root.plasmoid.expanded = false
                 }
             }
         }
