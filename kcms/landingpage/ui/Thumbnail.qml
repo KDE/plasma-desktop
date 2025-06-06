@@ -17,7 +17,7 @@ import org.kde.kirigami as Kirigami
 QQC2.RadioButton {
     id: delegate
 
-    property alias imageSource: image.source
+    property alias preview: previewArea.data
 
     implicitWidth: contentItem.implicitWidth
     implicitHeight: contentItem.implicitHeight
@@ -51,15 +51,10 @@ QQC2.RadioButton {
                 }
             }
 
-            Image {
-                id: image
-                anchors {
-                    fill: parent
-                    margins: Kirigami.Units.smallSpacing
-                }
-                asynchronous: true
-                sourceSize: Qt.size(width * Screen.devicePixelRatio,
-                                    height * Screen.devicePixelRatio)
+            Item {
+                id: previewArea
+                anchors.fill: parent
+                anchors.margins: Kirigami.Units.smallSpacing
             }
         }
 

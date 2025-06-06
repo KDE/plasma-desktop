@@ -49,6 +49,7 @@ find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Svg
     Concurrent
     Core5Compat
+    ShaderTools
     Sql # kcms/activities
 )
 
@@ -173,6 +174,7 @@ set_package_properties(SDL2 PROPERTIES
         PURPOSE "Required for building Game Controller KCM"
 )
 
+find_package(LibKLookAndFeel ${PROJECT_DEP_VERSION} CONFIG REQUIRED)
 find_package(LibKWorkspace ${PROJECT_DEP_VERSION} CONFIG REQUIRED)
 find_package(LibNotificationManager ${PROJECT_DEP_VERSION} CONFIG REQUIRED)
 find_package(LibTaskManager ${PROJECT_DEP_VERSION} CONFIG REQUIRED)

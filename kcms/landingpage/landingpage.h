@@ -7,7 +7,6 @@
 
 #pragma once
 
-#include <KPackage/Package>
 #include <KQuickManagedConfigModule>
 
 #include <QAction>
@@ -51,29 +50,12 @@ private:
     mutable QStringList ignoredKCMs;
 };
 
-class LookAndFeelGroup : public QObject
-{
-    Q_OBJECT
-    Q_PROPERTY(QString id READ id CONSTANT)
-    Q_PROPERTY(QString name READ name CONSTANT)
-    Q_PROPERTY(QUrl thumbnail READ thumbnail CONSTANT)
-
-public:
-    LookAndFeelGroup(QObject *parent = nullptr);
-    QString id() const;
-    QString name() const;
-    QUrl thumbnail() const;
-
-    KPackage::Package m_package;
-};
-
 class KCMLandingPage : public KQuickManagedConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(MostUsedModel *mostUsedModel READ mostUsedModel CONSTANT)
     Q_PROPERTY(LandingPageGlobalsSettings *globalsSettings READ globalsSettings CONSTANT)
-    Q_PROPERTY(LookAndFeelGroup *defaultLightLookAndFeel READ defaultLightLookAndFeel CONSTANT)
-    Q_PROPERTY(LookAndFeelGroup *defaultDarkLookAndFeel READ defaultDarkLookAndFeel CONSTANT)
+    Q_PROPERTY(QString defaultLookAndFeelPackage READ defaultLookAndFeelPackage CONSTANT)
 
 public:
     KCMLandingPage(QObject *parent, const KPluginMetaData &metaData);
@@ -84,9 +66,7 @@ public:
     MostUsedModel *mostUsedModel() const;
 
     LandingPageGlobalsSettings *globalsSettings() const;
-
-    LookAndFeelGroup *defaultLightLookAndFeel() const;
-    LookAndFeelGroup *defaultDarkLookAndFeel() const;
+    QString defaultLookAndFeelPackage() const;
 
     Q_INVOKABLE void openKCM(const QString &kcm);
 
@@ -97,9 +77,6 @@ public Q_SLOTS:
 
 private:
     LandingPageData *m_data = nullptr;
-
-    LookAndFeelGroup *m_defaultLightLookAndFeel = nullptr;
-    LookAndFeelGroup *m_defaultDarkLookAndFeel = nullptr;
 
     MostUsedModel *m_mostUsedModel = nullptr;
 };
