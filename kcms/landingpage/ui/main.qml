@@ -15,6 +15,8 @@ import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCMUtils
 
+import org.kde.plasma.landingpage.kcm
+
 KCMUtils.SimpleKCM {
     id: root
 
@@ -37,31 +39,115 @@ KCMUtils.SimpleKCM {
 
             QQC2.ButtonGroup { id: themeGroup }
 
-            Thumbnail {
-                imageSource: kcm.defaultLightLookAndFeel.thumbnail
-                text: kcm.defaultLightLookAndFeel.name
-                checked: kcm.globalsSettings.lookAndFeelPackage === kcm.defaultLightLookAndFeel.id
-                QQC2.ButtonGroup.group: themeGroup
+            LookAndFeelBox {
+                text: lightLookAndFeelMetaData.name
+                checked: !kcm.globalsSettings.automaticLookAndFeel && kcm.globalsSettings.lookAndFeelPackage === kcm.globalsSettings.defaultLightLookAndFeel
+                group: themeGroup
 
-                onToggled: kcm.globalsSettings.lookAndFeelPackage = kcm.defaultLightLookAndFeel.id
+                availablePackages: LookAndFeelCrawler {
+                    variant: LookAndFeelCrawler.Light
+                }
 
-                KCMUtils.SettingStateBinding {
-                    configObject: kcm.globalsSettings
-                    settingName: "lookAndFeelPackage"
+                preview: Image {
+                    id: lightLookAndFeelPreview
+                    anchors.fill: parent
+                    asynchronous: true
+                    layer.enabled: true
+                    sourceSize: Qt.size(width * Screen.devicePixelRatio, height * Screen.devicePixelRatio)
+                    source: lightLookAndFeelMetaData.preview
+                }
+
+                onToggled: {
+                    kcm.globalsSettings.automaticLookAndFeel = false;
+                    kcm.globalsSettings.lookAndFeelPackage = kcm.globalsSettings.defaultLightLookAndFeel;
+                }
+
+                onAccepted: (lnfId) => {
+                    kcm.globalsSettings.defaultLightLookAndFeel = lnfId;
+                }
+
+                KCMUtils.SettingHighlighter {
+                    highlight: kcm.globalsSettings.automaticLookAndFeel || kcm.globalsSettings.lookAndFeelPackage != kcm.defaultLookAndFeelPackage
+                }
+
+                LookAndFeelMetaData {
+                    id: lightLookAndFeelMetaData
+                    packageId: kcm.globalsSettings.defaultLightLookAndFeel
                 }
             }
+
+            LookAndFeelBox {
+                text: darkLookAndFeelMetaData.name
+                checked: !kcm.globalsSettings.automaticLookAndFeel && kcm.globalsSettings.lookAndFeelPackage === kcm.globalsSettings.defaultDarkLookAndFeel
+                group: themeGroup
+
+                availablePackages: LookAndFeelCrawler {
+                    variant: LookAndFeelCrawler.Dark
+                }
+
+                preview: Image {
+                    id: darkLookAndFeelPreview
+                    anchors.fill: parent
+                    asynchronous: true
+                    layer.enabled: true
+                    sourceSize: Qt.size(width * Screen.devicePixelRatio, height * Screen.devicePixelRatio)
+                    source: darkLookAndFeelMetaData.preview
+                }
+
+                onToggled: {
+                    kcm.globalsSettings.automaticLookAndFeel = false;
+                    kcm.globalsSettings.lookAndFeelPackage = kcm.globalsSettings.defaultDarkLookAndFeel;
+                }
+
+                onAccepted: (lnfId) => {
+                    kcm.globalsSettings.defaultDarkLookAndFeel = lnfId;
+                }
+
+                KCMUtils.SettingHighlighter {
+                    highlight: kcm.globalsSettings.automaticLookAndFeel || kcm.globalsSettings.lookAndFeelPackage != kcm.defaultLookAndFeelPackage
+                }
+
+                LookAndFeelMetaData {
+                    id: darkLookAndFeelMetaData
+                    packageId: kcm.globalsSettings.defaultDarkLookAndFeel
+                }
+            }
+
             Thumbnail {
-                imageSource: kcm.defaultDarkLookAndFeel.thumbnail
-                text: kcm.defaultDarkLookAndFeel.name
-                checked: kcm.globalsSettings.lookAndFeelPackage === kcm.defaultDarkLookAndFeel.id
+                text: i18nc("Switch between dark and light look and feel packages automatically", "Automatic")
+                checked: kcm.globalsSettings.automaticLookAndFeel
+                QQC2.ToolTip.text: i18n('Use "%1" during day and "%2" during night', lightLookAndFeelMetaData.name, darkLookAndFeelMetaData.name)
+                QQC2.ToolTip.visible: autoLookAndFeelHoverHandler.hovered
+                QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                 QQC2.ButtonGroup.group: themeGroup
 
-                onToggled: kcm.globalsSettings.lookAndFeelPackage = kcm.defaultDarkLookAndFeel.id
+                preview: SplitView {
+                    anchors.fill: parent
+                    first: lightLookAndFeelPreview
+                    second: darkLookAndFeelPreview
+                    shutter: 0.15
 
-                KCMUtils.SettingStateBinding {
-                    configObject: kcm.globalsSettings
-                    settingName: "lookAndFeelPackage"
+                    Kirigami.Icon {
+                        anchors.right: parent.right
+                        anchors.top: parent.top
+                        anchors.margins: Kirigami.Units.smallSpacing
+                        source: "lighttable"
+                        isMask: true
+                        color: "white"
+                        width: Kirigami.Units.iconSizes.smallMedium
+                        height: width
+                    }
                 }
+
+                onToggled: {
+                    kcm.globalsSettings.automaticLookAndFeel = true;
+                }
+
+                KCMUtils.SettingHighlighter {
+                    highlight: kcm.globalsSettings.automaticLookAndFeel || kcm.globalsSettings.lookAndFeelPackage != kcm.defaultLookAndFeelPackage
+                }
+
+                HoverHandler { id: autoLookAndFeelHoverHandler }
             }
         }
 

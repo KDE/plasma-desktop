@@ -49,6 +49,7 @@ find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Svg
     Concurrent
     Core5Compat
+    ShaderTools
     Sql # kcms/activities
 )
 
