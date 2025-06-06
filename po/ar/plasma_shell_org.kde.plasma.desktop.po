@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-30 00:44+0000\n"
+"POT-Creation-Date: 2025-06-06 00:44+0000\n"
 "PO-Revision-Date: 2025-05-31 10:51+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -736,9 +736,11 @@ msgid "Close Widget Explorer"
 msgstr "أغلق متصفح الأدوات"
 
 #: contents/explorer/WidgetExplorer.qml:208
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:textbox accessible"
+#| msgid "Search Widgets"
 msgctxt "@label:textbox accessible"
-msgid "Search Widgets"
+msgid "Search through widgets"
 msgstr "ابحث عن أدوات"
 
 #: contents/explorer/WidgetExplorer.qml:237

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-30 00:44+0000\n"
+"POT-Creation-Date: 2025-06-06 00:44+0000\n"
 "PO-Revision-Date: 2025-05-30 19:16+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -732,9 +732,11 @@ msgid "Close Widget Explorer"
 msgstr "Itxi trepeta esploratzailea"
 
 #: contents/explorer/WidgetExplorer.qml:208
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:textbox accessible"
+#| msgid "Search Widgets"
 msgctxt "@label:textbox accessible"
-msgid "Search Widgets"
+msgid "Search through widgets"
 msgstr "Bilatu trepetak"
 
 #: contents/explorer/WidgetExplorer.qml:237

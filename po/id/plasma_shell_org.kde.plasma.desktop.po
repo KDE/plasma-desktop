@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-30 00:44+0000\n"
+"POT-Creation-Date: 2025-06-06 00:44+0000\n"
 "PO-Revision-Date: 2025-03-15 07:18+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -735,9 +735,11 @@ msgid "Close Widget Explorer"
 msgstr "Tutup Widget Explorer"
 
 #: contents/explorer/WidgetExplorer.qml:208
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:textbox accessible"
+#| msgid "Search Widgets"
 msgctxt "@label:textbox accessible"
-msgid "Search Widgets"
+msgid "Search through widgets"
 msgstr "Widget Pencarian"
 
 #: contents/explorer/WidgetExplorer.qml:237

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-30 00:44+0000\n"
+"POT-Creation-Date: 2025-06-06 00:44+0000\n"
 "PO-Revision-Date: 2025-05-28 16:54+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -730,9 +730,11 @@ msgid "Close Widget Explorer"
 msgstr "Aizvērt logdaļu pārlūku"
 
 #: contents/explorer/WidgetExplorer.qml:208
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:textbox accessible"
+#| msgid "Search Widgets"
 msgctxt "@label:textbox accessible"
-msgid "Search Widgets"
+msgid "Search through widgets"
 msgstr "Meklēt logdaļas"
 
 #: contents/explorer/WidgetExplorer.qml:237

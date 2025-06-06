@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-19 00:43+0000\n"
+"POT-Creation-Date: 2025-06-06 00:44+0000\n"
 "PO-Revision-Date: 2010-01-08 08:13+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -102,26 +102,39 @@ msgstr ""
 msgid "Desktop name"
 msgstr "ឈ្មោះ​ផ្ទៃតុ"
 
-#: package/contents/ui/configGeneral.qml:117
+#: package/contents/ui/configGeneral.qml:118
 #, fuzzy, kde-format
 #| msgid "Selecting current desktop:"
+msgctxt ""
+"@label Start of the sentence 'Selecting current activity does nothing/shows "
+"the desktop'"
 msgid "Selecting current Activity:"
 msgstr "ជ្រើស​ផ្ទៃតុ​បច្ចុប្បន្ន ៖"
 
-#: package/contents/ui/configGeneral.qml:117
+#: package/contents/ui/configGeneral.qml:119
 #, fuzzy, kde-format
 #| msgid "Selecting current desktop:"
+msgctxt ""
+"@label Start of the sentence 'Selecting current virtual desktop does nothing/"
+"shows the desktop'"
 msgid "Selecting current virtual desktop:"
 msgstr "ជ្រើស​ផ្ទៃតុ​បច្ចុប្បន្ន ៖"
 
-#: package/contents/ui/configGeneral.qml:120
-#, kde-format
+#: package/contents/ui/configGeneral.qml:122
+#, fuzzy, kde-format
+#| msgid "Does nothing"
+msgctxt ""
+"option:check completes the sentence 'Selecting current activity/virtual "
+"desktop does nothing'"
 msgid "Does nothing"
 msgstr "មិនធ្វើ​អ្វី​ទាំងអស់"
 
-#: package/contents/ui/configGeneral.qml:128
+#: package/contents/ui/configGeneral.qml:130
 #, fuzzy, kde-format
 #| msgid "Shows desktop"
+msgctxt ""
+"option:check completes the sentence 'Selecting current activity/virtual "
+"desktop shows the desktop'"
 msgid "Shows the desktop"
 msgstr "បង្ហាញ​ផ្ទៃតុ"
 

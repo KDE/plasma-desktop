@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-19 00:43+0000\n"
+"POT-Creation-Date: 2025-06-06 00:44+0000\n"
 "PO-Revision-Date: 2009-11-03 10:46+0100\n"
 "Last-Translator: Andrej Dundovic <adundovi@gmail.com>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -103,26 +103,39 @@ msgstr ""
 msgid "Desktop name"
 msgstr "Naziv radne površine"
 
-#: package/contents/ui/configGeneral.qml:117
+#: package/contents/ui/configGeneral.qml:118
 #, fuzzy, kde-format
 #| msgid "Selecting current desktop:"
+msgctxt ""
+"@label Start of the sentence 'Selecting current activity does nothing/shows "
+"the desktop'"
 msgid "Selecting current Activity:"
 msgstr "Odabirem trenutnu radnu površinu:"
 
-#: package/contents/ui/configGeneral.qml:117
+#: package/contents/ui/configGeneral.qml:119
 #, fuzzy, kde-format
 #| msgid "Selecting current desktop:"
+msgctxt ""
+"@label Start of the sentence 'Selecting current virtual desktop does nothing/"
+"shows the desktop'"
 msgid "Selecting current virtual desktop:"
 msgstr "Odabirem trenutnu radnu površinu:"
 
-#: package/contents/ui/configGeneral.qml:120
-#, kde-format
+#: package/contents/ui/configGeneral.qml:122
+#, fuzzy, kde-format
+#| msgid "Does nothing"
+msgctxt ""
+"option:check completes the sentence 'Selecting current activity/virtual "
+"desktop does nothing'"
 msgid "Does nothing"
 msgstr "Ne čini ništa"
 
-#: package/contents/ui/configGeneral.qml:128
+#: package/contents/ui/configGeneral.qml:130
 #, fuzzy, kde-format
 #| msgid "Shows desktop"
+msgctxt ""
+"option:check completes the sentence 'Selecting current activity/virtual "
+"desktop shows the desktop'"
 msgid "Shows the desktop"
 msgstr "Prikaži radnu površinu"
 

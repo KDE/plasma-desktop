@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-19 00:43+0000\n"
+"POT-Creation-Date: 2025-06-06 00:44+0000\n"
 "PO-Revision-Date: 2024-11-20 08:42\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -103,23 +103,39 @@ msgstr "Назва пакоя"
 msgid "Desktop name"
 msgstr "Назва працоўнага стала"
 
-#: package/contents/ui/configGeneral.qml:117
-#, kde-format
+#: package/contents/ui/configGeneral.qml:118
+#, fuzzy, kde-format
+#| msgid "Selecting current Activity:"
+msgctxt ""
+"@label Start of the sentence 'Selecting current activity does nothing/shows "
+"the desktop'"
 msgid "Selecting current Activity:"
 msgstr "Выбар бягучага пакоя:"
 
-#: package/contents/ui/configGeneral.qml:117
-#, kde-format
+#: package/contents/ui/configGeneral.qml:119
+#, fuzzy, kde-format
+#| msgid "Selecting current virtual desktop:"
+msgctxt ""
+"@label Start of the sentence 'Selecting current virtual desktop does nothing/"
+"shows the desktop'"
 msgid "Selecting current virtual desktop:"
 msgstr "Выбар бягучага віртуальнага працоўнага стала:"
 
-#: package/contents/ui/configGeneral.qml:120
-#, kde-format
+#: package/contents/ui/configGeneral.qml:122
+#, fuzzy, kde-format
+#| msgid "Does nothing"
+msgctxt ""
+"option:check completes the sentence 'Selecting current activity/virtual "
+"desktop does nothing'"
 msgid "Does nothing"
 msgstr "Нічога не рабіць"
 
-#: package/contents/ui/configGeneral.qml:128
-#, kde-format
+#: package/contents/ui/configGeneral.qml:130
+#, fuzzy, kde-format
+#| msgid "Shows the desktop"
+msgctxt ""
+"option:check completes the sentence 'Selecting current activity/virtual "
+"desktop shows the desktop'"
 msgid "Shows the desktop"
 msgstr "Паказвае працоўны стол"
 

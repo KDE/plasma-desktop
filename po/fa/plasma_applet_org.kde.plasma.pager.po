@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-19 00:43+0000\n"
+"POT-Creation-Date: 2025-06-06 00:44+0000\n"
 "PO-Revision-Date: 2008-04-18 14:31+0330\n"
 "Last-Translator: Saied Taghavi <s.taghavi@gmail.com>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -97,24 +97,37 @@ msgstr ""
 msgid "Desktop name"
 msgstr "نمایش &شمارهٔ رومیزی"
 
-#: package/contents/ui/configGeneral.qml:117
-#, kde-format
-msgid "Selecting current Activity:"
-msgstr ""
-
-#: package/contents/ui/configGeneral.qml:117
+#: package/contents/ui/configGeneral.qml:118
 #, fuzzy, kde-format
 #| msgid "&Configure Desktops..."
+msgctxt ""
+"@label Start of the sentence 'Selecting current activity does nothing/shows "
+"the desktop'"
+msgid "Selecting current Activity:"
+msgstr "&پیکربندی رومیزی‌ها..."
+
+#: package/contents/ui/configGeneral.qml:119
+#, fuzzy, kde-format
+#| msgid "&Configure Desktops..."
+msgctxt ""
+"@label Start of the sentence 'Selecting current virtual desktop does nothing/"
+"shows the desktop'"
 msgid "Selecting current virtual desktop:"
 msgstr "&پیکربندی رومیزی‌ها..."
 
-#: package/contents/ui/configGeneral.qml:120
+#: package/contents/ui/configGeneral.qml:122
 #, kde-format
+msgctxt ""
+"option:check completes the sentence 'Selecting current activity/virtual "
+"desktop does nothing'"
 msgid "Does nothing"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:128
+#: package/contents/ui/configGeneral.qml:130
 #, kde-format
+msgctxt ""
+"option:check completes the sentence 'Selecting current activity/virtual "
+"desktop shows the desktop'"
 msgid "Shows the desktop"
 msgstr ""
 

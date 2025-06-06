@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-19 00:43+0000\n"
+"POT-Creation-Date: 2025-06-06 00:44+0000\n"
 "PO-Revision-Date: 2024-09-22 16:39+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -100,23 +100,39 @@ msgstr "Aktivitetsnamn"
 msgid "Desktop name"
 msgstr "Skrivebordsnamn"
 
-#: package/contents/ui/configGeneral.qml:117
-#, kde-format
+#: package/contents/ui/configGeneral.qml:118
+#, fuzzy, kde-format
+#| msgid "Selecting current Activity:"
+msgctxt ""
+"@label Start of the sentence 'Selecting current activity does nothing/shows "
+"the desktop'"
 msgid "Selecting current Activity:"
 msgstr "Vel gjeldande aktivitet:"
 
-#: package/contents/ui/configGeneral.qml:117
-#, kde-format
+#: package/contents/ui/configGeneral.qml:119
+#, fuzzy, kde-format
+#| msgid "Selecting current virtual desktop:"
+msgctxt ""
+"@label Start of the sentence 'Selecting current virtual desktop does nothing/"
+"shows the desktop'"
 msgid "Selecting current virtual desktop:"
 msgstr "Vel gjeldande virtuelle skrivebord:"
 
-#: package/contents/ui/configGeneral.qml:120
-#, kde-format
+#: package/contents/ui/configGeneral.qml:122
+#, fuzzy, kde-format
+#| msgid "Does nothing"
+msgctxt ""
+"option:check completes the sentence 'Selecting current activity/virtual "
+"desktop does nothing'"
 msgid "Does nothing"
 msgstr "Gjer ikkje noko"
 
-#: package/contents/ui/configGeneral.qml:128
-#, kde-format
+#: package/contents/ui/configGeneral.qml:130
+#, fuzzy, kde-format
+#| msgid "Shows the desktop"
+msgctxt ""
+"option:check completes the sentence 'Selecting current activity/virtual "
+"desktop shows the desktop'"
 msgid "Shows the desktop"
 msgstr "Viser skrivebordet"
 

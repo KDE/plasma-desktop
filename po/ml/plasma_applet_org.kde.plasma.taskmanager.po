@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks trunk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-21 00:44+0000\n"
+"POT-Creation-Date: 2025-06-06 00:44+0000\n"
 "PO-Revision-Date: 2008-11-25 02:43-0800\n"
 "Last-Translator: Praveen Arimbrathodiyil <pravi.a@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -466,21 +466,22 @@ msgstr "ഇപ്പോഴത്തെ പണിയിടത്തിലെ ജ�
 
 #: package/contents/ui/ConfigBehavior.qml:205
 #, fuzzy, kde-format
-msgctxt "@label:listbox completes sentence like: … does nothing"
+msgctxt ""
+"@label:listbox Part of a sentence: 'Scrolling behavior does nothing/cycles "
+"through tasks/cycles through the selected task's windows'"
 msgid "Scrolling behavior:"
 msgstr "സൂചനകള്‍ കാണിയ്ക്കുക:"
 
 #: package/contents/ui/ConfigBehavior.qml:209
 #, kde-format
-msgctxt ""
-"@item:inlistbox Part of a sentence: 'Scrolling on any task does nothing'"
+msgctxt "@item:inlistbox Part of a sentence: 'Scrolling behavior does nothing'"
 msgid "Does nothing"
 msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:210
 #, kde-format
 msgctxt ""
-"@item:inlistbox Part of a sentence: 'Scrolling anywhere switches through all "
+"@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through all "
 "tasks'"
 msgid "Cycles through all tasks"
 msgstr ""
@@ -488,9 +489,9 @@ msgstr ""
 #: package/contents/ui/ConfigBehavior.qml:211
 #, kde-format
 msgctxt ""
-"@item:inlistbox Part of a sentence: 'Scrolling on a task switches between "
-"that task's windows'"
-msgid "Cycles through the selected task windows"
+"@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through the "
+"hovered task's windows'"
+msgid "Cycles through the hovered task’s windows"
 msgstr ""
 
 #: package/contents/ui/ConfigBehavior.qml:219

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-19 00:43+0000\n"
+"POT-Creation-Date: 2025-06-06 00:44+0000\n"
 "PO-Revision-Date: 2010-01-03 21:59+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <kde-l10n-kn@kde.org>\n"
@@ -100,26 +100,39 @@ msgstr ""
 msgid "Desktop name"
 msgstr "ಗಣಕತೆರೆಯ ಹೆಸರು"
 
-#: package/contents/ui/configGeneral.qml:117
+#: package/contents/ui/configGeneral.qml:118
 #, fuzzy, kde-format
 #| msgid "Selecting current desktop:"
+msgctxt ""
+"@label Start of the sentence 'Selecting current activity does nothing/shows "
+"the desktop'"
 msgid "Selecting current Activity:"
 msgstr "ಪ್ರಸ್ತುತ ಗಣಕತೆರೆಯನ್ನು ಆರಿಸಲಾಗುತ್ತದೆ:"
 
-#: package/contents/ui/configGeneral.qml:117
+#: package/contents/ui/configGeneral.qml:119
 #, fuzzy, kde-format
 #| msgid "Selecting current desktop:"
+msgctxt ""
+"@label Start of the sentence 'Selecting current virtual desktop does nothing/"
+"shows the desktop'"
 msgid "Selecting current virtual desktop:"
 msgstr "ಪ್ರಸ್ತುತ ಗಣಕತೆರೆಯನ್ನು ಆರಿಸಲಾಗುತ್ತದೆ:"
 
-#: package/contents/ui/configGeneral.qml:120
-#, kde-format
+#: package/contents/ui/configGeneral.qml:122
+#, fuzzy, kde-format
+#| msgid "Does nothing"
+msgctxt ""
+"option:check completes the sentence 'Selecting current activity/virtual "
+"desktop does nothing'"
 msgid "Does nothing"
 msgstr "ಏನನ್ನೂ ಮಾಡದು"
 
-#: package/contents/ui/configGeneral.qml:128
+#: package/contents/ui/configGeneral.qml:130
 #, fuzzy, kde-format
 #| msgid "Shows desktop"
+msgctxt ""
+"option:check completes the sentence 'Selecting current activity/virtual "
+"desktop shows the desktop'"
 msgid "Shows the desktop"
 msgstr "ಗಣಕತೆರೆಯನ್ನು ತೋರಿಸು"
 
