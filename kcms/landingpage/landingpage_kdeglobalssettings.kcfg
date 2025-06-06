@@ -15,6 +15,10 @@
       <label>Single click to open files</label>
       <default>false</default>
     </entry>
+    <entry name="automaticLookAndFeel" key="AutomaticLookAndFeel" type="Bool">
+      <label>Switch the look and feel package depending on time of day</label>
+      <default>false</default>
+    </entry>
     <entry name="lookAndFeelPackage" key="LookAndFeelPackage" type="String">
       <label>Global Look and Feel package</label>
       <default>org.kde.breeze.desktop</default>
