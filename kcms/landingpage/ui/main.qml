@@ -15,6 +15,8 @@ import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCMUtils
 
+import org.kde.plasma.landingpage.kcm
+
 KCMUtils.SimpleKCM {
     id: root
 
@@ -38,30 +40,86 @@ KCMUtils.SimpleKCM {
             QQC2.ButtonGroup { id: themeGroup }
 
             Thumbnail {
-                imageSource: kcm.defaultLightLookAndFeel.thumbnail
                 text: kcm.defaultLightLookAndFeel.name
-                checked: kcm.globalsSettings.lookAndFeelPackage === kcm.defaultLightLookAndFeel.id
+                checked: !kcm.globalsSettings.automaticDarkLightLookAndFeel && kcm.globalsSettings.lookAndFeelPackage === kcm.defaultLightLookAndFeel.id
                 QQC2.ButtonGroup.group: themeGroup
 
-                onToggled: kcm.globalsSettings.lookAndFeelPackage = kcm.defaultLightLookAndFeel.id
+                preview: Image {
+                    id: lightLookAndFeelPreview
+                    anchors.fill: parent
+                    asynchronous: true
+                    layer.enabled: true
+                    sourceSize: Qt.size(width * Screen.devicePixelRatio, height * Screen.devicePixelRatio)
+                    source: kcm.defaultLightLookAndFeel.thumbnail
+                }
 
-                KCMUtils.SettingStateBinding {
-                    configObject: kcm.globalsSettings
-                    settingName: "lookAndFeelPackage"
+                onToggled: {
+                    kcm.globalsSettings.automaticDarkLightLookAndFeel = false;
+                    kcm.globalsSettings.lookAndFeelPackage = kcm.defaultLightLookAndFeel.id;
+                }
+
+                KCMUtils.SettingHighlighter {
+                    highlight: kcm.globalsSettings.automaticDarkLightLookAndFeel || kcm.globalsSettings.lookAndFeelPackage != kcm.defaultLookAndFeelPackage
                 }
             }
             Thumbnail {
-                imageSource: kcm.defaultDarkLookAndFeel.thumbnail
                 text: kcm.defaultDarkLookAndFeel.name
-                checked: kcm.globalsSettings.lookAndFeelPackage === kcm.defaultDarkLookAndFeel.id
+                checked: !kcm.globalsSettings.automaticDarkLightLookAndFeel && kcm.globalsSettings.lookAndFeelPackage === kcm.defaultDarkLookAndFeel.id
                 QQC2.ButtonGroup.group: themeGroup
 
-                onToggled: kcm.globalsSettings.lookAndFeelPackage = kcm.defaultDarkLookAndFeel.id
-
-                KCMUtils.SettingStateBinding {
-                    configObject: kcm.globalsSettings
-                    settingName: "lookAndFeelPackage"
+                preview: Image {
+                    id: darkLookAndFeelPreview
+                    anchors.fill: parent
+                    asynchronous: true
+                    layer.enabled: true
+                    sourceSize: Qt.size(width * Screen.devicePixelRatio, height * Screen.devicePixelRatio)
+                    source: kcm.defaultDarkLookAndFeel.thumbnail
                 }
+
+                onToggled: {
+                    kcm.globalsSettings.automaticDarkLightLookAndFeel = false;
+                    kcm.globalsSettings.lookAndFeelPackage = kcm.defaultDarkLookAndFeel.id;
+                }
+
+                KCMUtils.SettingHighlighter {
+                    highlight: kcm.globalsSettings.automaticDarkLightLookAndFeel || kcm.globalsSettings.lookAndFeelPackage != kcm.defaultLookAndFeelPackage
+                }
+            }
+            Thumbnail {
+                text: i18nc("Switch between dark and light look and feel packages automatically", "Auto")
+                checked: kcm.globalsSettings.automaticDarkLightLookAndFeel
+                QQC2.ToolTip.text: i18n('Use "%1" during day and "%2" during night', kcm.defaultLightLookAndFeel.name, kcm.defaultDarkLookAndFeel.name)
+                QQC2.ToolTip.visible: autoLookAndFeelHoverHandler.hovered
+                QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                QQC2.ButtonGroup.group: themeGroup
+
+                preview: SplitView {
+                    anchors.fill: parent
+                    first: lightLookAndFeelPreview
+                    second: darkLookAndFeelPreview
+                    shutter: 0.15
+
+                    Kirigami.Icon {
+                        anchors.right: parent.right
+                        anchors.top: parent.top
+                        anchors.margins: Kirigami.Units.smallSpacing
+                        source: "lighttable"
+                        isMask: true
+                        color: "white"
+                        width: Kirigami.Units.iconSizes.smallMedium
+                        height: width
+                    }
+                }
+
+                onToggled: {
+                    kcm.globalsSettings.automaticDarkLightLookAndFeel = true;
+                }
+
+                KCMUtils.SettingHighlighter {
+                    highlight: kcm.globalsSettings.automaticDarkLightLookAndFeel || kcm.globalsSettings.lookAndFeelPackage != kcm.defaultLookAndFeelPackage
+                }
+
+                HoverHandler { id: autoLookAndFeelHoverHandler }
             }
         }
 

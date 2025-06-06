@@ -74,6 +74,7 @@ class KCMLandingPage : public KQuickManagedConfigModule
     Q_PROPERTY(LandingPageGlobalsSettings *globalsSettings READ globalsSettings CONSTANT)
     Q_PROPERTY(LookAndFeelGroup *defaultLightLookAndFeel READ defaultLightLookAndFeel CONSTANT)
     Q_PROPERTY(LookAndFeelGroup *defaultDarkLookAndFeel READ defaultDarkLookAndFeel CONSTANT)
+    Q_PROPERTY(QString defaultLookAndFeelPackage READ defaultLookAndFeelPackage CONSTANT)
 
 public:
     KCMLandingPage(QObject *parent, const KPluginMetaData &metaData);
@@ -87,6 +88,7 @@ public:
 
     LookAndFeelGroup *defaultLightLookAndFeel() const;
     LookAndFeelGroup *defaultDarkLookAndFeel() const;
+    QString defaultLookAndFeelPackage() const;
 
     Q_INVOKABLE void openKCM(const QString &kcm);
 

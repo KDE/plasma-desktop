@@ -1,7 +1,18 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_landingpage\")
 
-kcmutils_add_qml_kcm(kcm_landingpage SOURCES landingpage.cpp landingpagedata.cpp)
+kcmutils_add_qml_kcm(kcm_landingpage SOURCES landingpage.cpp landingpagedata.cpp splititem.cpp splitnode.cpp)
+
+qt_add_shaders(kcm_landingpage "shaders"
+    PRECOMPILE
+    BATCHABLE
+    OPTIMIZED
+    PREFIX
+        "/kcms/landingpage/shaders"
+    FILES
+        "split.frag"
+        "split.vert"
+)
 
 kcmutils_generate_module_data(kcm_landingpage
     MODULE_DATA_HEADER landingpagedata.h
