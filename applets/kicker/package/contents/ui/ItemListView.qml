@@ -140,6 +140,7 @@ FocusScope {
                 property bool mouseMoved: true // child dialogs can activate immediately
 
                 currentIndex: -1
+                focus: true
 
                 clip: height < contentHeight + topMargin + bottomMargin
                 boundsBehavior: Flickable.StopAtBounds
