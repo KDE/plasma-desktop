@@ -190,10 +190,6 @@ KCMLandingPage::KCMLandingPage(QObject *parent, const KPluginMetaData &metaData)
 
     m_defaultLightLookAndFeel->m_package.setPath(globalsSettings()->defaultLightLookAndFeel());
     m_defaultDarkLookAndFeel->m_package.setPath(globalsSettings()->defaultDarkLookAndFeel());
-
-    connect(globalsSettings(), &LandingPageGlobalsSettings::lookAndFeelPackageChanged, this, [this]() {
-        m_lnfDirty = true;
-    });
 }
 
 inline void swap(QJsonValueRef v1, QJsonValueRef v2)
@@ -215,6 +211,8 @@ LandingPageGlobalsSettings *KCMLandingPage::globalsSettings() const
 
 void KCMLandingPage::save()
 {
+    const bool applyNewLnf = globalsSettings()->findItem(QStringLiteral("lookAndFeelPackage"))->isSaveNeeded();
+
     KQuickManagedConfigModule::save();
 
     QDBusMessage message = QDBusMessage::createSignal("/KGlobalSettings", "org.kde.KGlobalSettings", "notifyChange");
@@ -224,7 +222,7 @@ void KCMLandingPage::save()
     message.setArguments(args);
     QDBusConnection::sessionBus().send(message);
 
-    if (m_lnfDirty) {
+    if (applyNewLnf) {
         QProcess::startDetached(QStringLiteral("plasma-apply-lookandfeel"), QStringList({QStringLiteral("-a"), globalsSettings()->lookAndFeelPackage()}));
     }
 }
