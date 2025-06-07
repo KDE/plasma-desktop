@@ -102,6 +102,4 @@ private:
     LookAndFeelGroup *m_defaultDarkLookAndFeel = nullptr;
 
     MostUsedModel *m_mostUsedModel = nullptr;
-
-    bool m_lnfDirty = false;
 };
