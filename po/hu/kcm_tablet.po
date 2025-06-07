@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-26 00:43+0000\n"
-"PO-Revision-Date: 2025-01-30 09:53+0100\n"
+"PO-Revision-Date: 2025-06-06 22:12+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: inputsequence.cpp:172
 #, kde-format
@@ -263,6 +263,8 @@ msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
 "revert to default calibration in %1 seconds.</b>"
 msgstr ""
+"Koppintson a célokra ismét az új kalibráció megerősítéséhez.<nl/><nl/><b>Az "
+"alapértelmezett kalibráció visszaállítása %1 másodperc múlva.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -278,7 +280,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Tap the center of each target."
-msgstr ""
+msgstr "Koppintson a célok közepére."
 
 #: ui/Calibration.qml:112
 #, kde-format
@@ -290,7 +292,7 @@ msgstr "Korábbi kalibráció finomítása"
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset and Try Again"
-msgstr ""
+msgstr "Visszaállítás és újrapróbálás"
 
 #: ui/Calibration.qml:121
 #, kde-format
@@ -439,12 +441,10 @@ msgstr ""
 msgctxt ""
 "'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)"
 msgid "Mode:"
-msgstr ""
+msgstr "Mód:"
 
 #: ui/StylusTab.qml:248
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Pen"
+#, kde-format
 msgctxt ""
 "Pen mode, where the point on the screen is always where you touch the stylus"
 msgid "Pen"
@@ -453,13 +453,13 @@ msgstr "Toll"
 #: ui/StylusTab.qml:253
 #, kde-format
 msgid "The cursor follows where you touch the pen on the surface"
-msgstr ""
+msgstr "A kurzor követi, hogy hol érinti a tollat a felülethez"
 
 #: ui/StylusTab.qml:274
 #, kde-format
 msgctxt "Mouse mode, or like using the tablet like a giant touchpad"
 msgid "Mouse"
-msgstr ""
+msgstr "Egér"
 
 #: ui/StylusTab.qml:279
 #, kde-format
@@ -467,6 +467,8 @@ msgid ""
 "Moving the pen on the surface moves the cursor relative to where it was, "
 "like a mouse"
 msgstr ""
+"A tollat a felületen mozgatva a kurzor a korábbi helyéhez képest mozog, mint "
+"az egér"
 
 #: ui/StylusTab.qml:349
 #, kde-format
@@ -542,12 +544,10 @@ msgid "Calibration Not Supported"
 msgstr "Kalibráció nem támogatott"
 
 #: ui/StylusTab.qml:532
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Refine Existing Calibration"
+#, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
-msgstr "Korábbi kalibráció finomítása"
+msgstr "Egyéni kalibráció visszaállítása"
 
 #: ui/StylusTab.qml:546
 #, kde-format
@@ -556,6 +556,8 @@ msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
 "correctly, try resetting this first."
 msgstr ""
+"Ezt a rajztáblát saját kezűleg kalibrálta. Ha nem működik megfelelően többé, "
+"először próbálja meg visszaállítani ezt."
 
 #: ui/Tester.qml:25
 #, kde-format

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-01-27 21:03+0100\n"
+"PO-Revision-Date: 2025-06-06 22:36+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
@@ -178,18 +178,18 @@ msgid "Pointer speed:"
 msgstr "Mutató sebessége:"
 
 #: ui/main.qml:221
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgid "Enable pointer acceleration"
-msgstr "Az egérmutató gyorsítása:"
+msgstr "Mutatógyorsítás bekapcsolása"
 
 #: ui/main.qml:235
-#, fuzzy, kde-format
-#| msgid "Cursor travel distance depends on the mouse movement speed."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
-msgstr "A kurzor által megtett út az egér mozgási sebességétől függ."
+msgstr ""
+"Ha be van kapcsolva, a mutató mozgási távolsága a gyorsabb mozgási "
+"sebességgel nő."
 
 #: ui/main.qml:245
 #, kde-format
@@ -219,10 +219,10 @@ msgid "Invert scroll direction"
 msgstr "Görgetés irányának megfordítása"
 
 #: ui/main.qml:330
-#, fuzzy, kde-format
-#| msgid "Press middle button and move mouse to scroll"
+#, kde-format
 msgid "Hold down middle button and move mouse to scroll"
-msgstr "Nyomja meg a középső egérgombot és mozgassa az egeret a görgetéshez"
+msgstr ""
+"Tartsa lenyomva a középső egérgombot és mozgassa az egeret a görgetéshez"
 
 #: ui/main.qml:342
 #, kde-format
@@ -233,6 +233,10 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+"Ez zavarni fogja a középső gomb húzását használó alkalmazásokat, mint "
+"példáulegyes képszerkesztők, dokumentummegjelenítők vagy videojátékok. "
+"Bármilyen eszközön használható, de elsősorban a görgetőkerekek "
+"helyettesítésére szolgál olyan eszközökön, amelyek nem rendelkeznek azzal."
 
 #~ msgid "Accept input through this device."
 #~ msgstr "Bemenet fogadása erről az eszközről."

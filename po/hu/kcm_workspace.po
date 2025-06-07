@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-01 00:43+0000\n"
-"PO-Revision-Date: 2025-01-25 21:53+0100\n"
+"PO-Revision-Date: 2025-06-06 22:33+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: ui/main.qml:25
 #, kde-format
@@ -36,19 +36,19 @@ msgstr "Újraindítás"
 #, kde-format
 msgctxt "@title:group"
 msgid "Plasma"
-msgstr ""
+msgstr "Plasma"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
-msgstr ""
+msgstr "A Plasma megjelenítheti:"
 
 #: ui/main.qml:59
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr ""
+msgstr "Panelek és felületi elemek buboréksúgóit"
 
 #: ui/main.qml:69
 #, kde-format
@@ -58,14 +58,17 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"Lehetővé teszi a Plasma paneljeinek és asztali felületi elemeinek részletes "
+"buboréksúgók megjelenítését, ha rájuk mutatnak. Ez a beállítás nincs "
+"hatással az egyedi gombokra és a felhasználói felület egyéb elemeire "
+"rámutatáskor megjelenített kis buboréksúgókra."
 
 #: ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
-msgstr "Felugró megjelenítése elrendezésváltozáskor"
+msgstr "Képernyőn megjelenő felugrók megjelenítése elrendezésváltozáskor"
 
 #: ui/main.qml:87
 #, kde-format
@@ -73,14 +76,14 @@ msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
+"Lehetővé teszi minden Plasma felületi elemnek képernyőn megjelenő felugrók "
+"megjelenítését például a hangerő, a fényerő vagy a hangeszköz változásakor."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling"
-msgstr "Görgetés:"
+msgstr "Görgetés"
 
 #: ui/main.qml:100
 #, kde-format
@@ -132,7 +135,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "Kattintás"
 
 #: ui/main.qml:175
 #, kde-format
@@ -214,24 +217,23 @@ msgid ""
 "Double-click the folder to test. If it does not change its appearance, "
 "increase double-click interval."
 msgstr ""
+"Kattintson duplán a tesztelni kívánt mappára. Ha nem változik a megjelenése, "
+"növelje a dupla kattintás időközét."
 
 #: ui/main.qml:354
 #, kde-format
 msgid "Drag and Drop"
-msgstr ""
+msgstr "Fogd és vidd"
 
 #: ui/main.qml:361
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
-#| msgid "Clicking files or folders:"
+#, kde-format
 msgid "When dragging files or folders:"
-msgstr "Fájlokra vagy mappákra kattintáskor:"
+msgstr "Fájlok vagy mappák húzásakor:"
 
 #: ui/main.qml:362
 #, kde-format
 msgid "Always ask what to do"
-msgstr ""
+msgstr "Rákérdezés mindig"
 
 #: ui/main.qml:378
 #, kde-kuit-format
@@ -241,30 +243,34 @@ msgid ""
 "and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise show a "
 "dialog."
 msgstr ""
+"Tartsa lenyomva a <shortcut>Shiftet</shortcut> az áthelyezéshez, a "
+"<shortcut>Ctrl</shortcut>-t a másoláshoz és a <shortcut>Shift+Ctrl</"
+"shortcut>-t szimbolikus link létrehozásához. Egyébként egy párbeszédablakot "
+"jelenít meg."
 
 #: ui/main.qml:386
 #, kde-format
 msgid "Move if on the same device"
-msgstr ""
+msgstr "Áthelyezés, ha ugyanaz az eszköz"
 
 #: ui/main.qml:402
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
 msgstr ""
+"Tartsa lenyomva a <shortcut>Shiftet</shortcut> ejtéskor egyéb lehetőségek "
+"megjelenítéséhez."
 
 #: ui/main.qml:410
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Touch"
-msgstr "Érintés mód:"
+msgstr "Érintés"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgid "Enable Touch Mode:"
-msgstr "Érintés mód:"
+msgstr "Érintés mód bekapcsolása:"
 
 #: ui/main.qml:418
 #, kde-format
@@ -290,18 +296,16 @@ msgstr ""
 "laptop billentyűzete körbe van fordítva, vagy leválasztva."
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always enabled"
+#, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always active"
-msgstr "Mindig bekapcsolva"
+msgstr "Mindig aktív"
 
 #: ui/main.qml:463
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Disabled"
-msgstr ""
+msgstr "Kikapcsolva"
 
 #: ui/main.qml:486
 #, kde-format
@@ -325,6 +329,8 @@ msgid ""
 "For local files on the same device, whether dragging and dropping will "
 "perform a move operation instead of showing the options menu"
 msgstr ""
+"Az ugyanazon eszközön lévő helyi fájlok esetén a fogd és vidd áthelyezést "
+"hajtson-e végre, vagy egy menüt jelenítsen-e meg a lehetőségekkel"
 
 #. i18n: ectx: label, entry (smoothScroll), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21
@@ -361,7 +367,7 @@ msgstr "Középső gombos kijelölés beillesztésének bekapcsolása"
 #: workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display large panel and widget tooltips"
-msgstr ""
+msgstr "Nagy buboréksúgók megjelenítése a paneleken és felületi elemeken"
 
 #. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:10
@@ -369,26 +375,24 @@ msgstr ""
 msgid ""
 "Allow Plasma widgets to display large panel and widget tooltips on hover"
 msgstr ""
+"Engedélyezi a Plasma felületi elemeknek nagy buboréksúgók megjelenítését "
+"panelekre és felületi elemekre mutatáskor"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
-#, fuzzy, kde-format
-#| msgid "Display visual feedback for status changes"
+#, kde-format
 msgid "Display small popups for status changes"
-msgstr "Vizuális visszajelzések megjelenítése állapotváltozáskor"
+msgstr "Kis felugró ablakok megjelenítése állapotváltozások esetén"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show an on-screen display to indicate status changes such as brightness "
-#| "or volume"
+#, kde-format
 msgid ""
 "Allow Plasma widgets to display small popups for status changes such as "
 "brightness or volume"
 msgstr ""
-"Képernyőkijelzés megjelenítése állapotváltozásokkor, mint például a fény- "
-"vagy hangerő"
+"Engedélyezi a Plasma felületi elemeknek, hogy kis felugró ablakokat "
+"jelenítsenek meg az állapotváltozásokhoz, mint például fényerő vagy hangerő"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21

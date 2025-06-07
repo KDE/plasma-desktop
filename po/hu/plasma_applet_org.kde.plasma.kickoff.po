@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-05-27 22:05+0200\n"
+"PO-Revision-Date: 2025-06-06 22:47+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -169,6 +169,8 @@ msgid ""
 "This doesn't affect how applications are sorted in either search results or "
 "the favorites page."
 msgstr ""
+"Ez nem befolyásolja az alkalmazások rendezését a keresési eredményekben vagy "
+"a kedvencek oldalon."
 
 #: package/contents/ui/ConfigGeneral.qml:186
 #, kde-format
@@ -184,7 +186,7 @@ msgstr "Automatikus kikapcsolás Érintés módban"
 #: package/contents/ui/ConfigGeneral.qml:200
 #, kde-format
 msgid "Highlight newly installed applications"
-msgstr ""
+msgstr "Újonnan telepített alkalmazások kiemelése"
 
 #: package/contents/ui/ConfigGeneral.qml:205
 #, kde-format
@@ -306,14 +308,13 @@ msgstr "Tartsa nyitva"
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Új!"
 
 #: package/contents/ui/KickoffGridDelegate.qml:61
 #: package/contents/ui/KickoffListDelegate.qml:121
-#, fuzzy, kde-format
-#| msgid "Recently Used Applications"
+#, kde-format
 msgid "Newly installed application"
-msgstr "Nemrég használt alkalmazások"
+msgstr "Frissen telepített alkalmazás"
 
 #: package/contents/ui/KickoffGridView.qml:102
 #, kde-format
@@ -323,7 +324,7 @@ msgstr "Rács %1 sorral és %2 oszloppal"
 #: package/contents/ui/KickoffListDelegate.qml:120
 #, kde-format
 msgid "There is a newly installed application in this category"
-msgstr ""
+msgstr "Van egy újonnan telepített alkalmazás ebben a kategóriában"
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
@@ -331,10 +332,9 @@ msgid "More"
 msgstr "Több"
 
 #: package/contents/ui/LeaveButtons.qml:169
-#, fuzzy, kde-format
-#| msgid "Session actions"
+#, kde-format
 msgid "Session and Power "
-msgstr "Munkamenet-kezelési lehetőségek"
+msgstr "Munkamenet és teljesítmény "
 
 #: package/contents/ui/main.qml:355
 #, kde-format
