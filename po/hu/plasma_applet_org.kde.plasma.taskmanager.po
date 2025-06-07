@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-06 00:44+0000\n"
-"PO-Revision-Date: 2025-01-27 21:00+0100\n"
+"PO-Revision-Date: 2025-06-06 22:45+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -18,18 +18,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: backend.cpp:284
-#, fuzzy, kde-format
-#| msgctxt "Show all user Places"
-#| msgid "%1 more Place"
-#| msgid_plural "%1 more Places"
+#, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place…"
 msgid_plural "%1 more Places…"
-msgstr[0] "%1 további hely"
-msgstr[1] "%1 további hely"
+msgstr[0] "%1 további hely…"
+msgstr[1] "%1 további hely…"
 
 #: backend.cpp:368
 #, kde-format
@@ -138,19 +135,19 @@ msgstr "Egyéb ablakok elrejtése az előnézetekre mutatáskor"
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show an indicator when a task is playing audio"
-msgstr ""
+msgstr "Jelző megjelenítése, amikor egy feladat hangot játszik le"
 
 #: package/contents/ui/ConfigAppearance.qml:69
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Mute task when clicking indicator"
-msgstr ""
+msgstr "Feladat némítása a jelzőre kattintáskor"
 
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show media and volume controls in tooltip"
-msgstr ""
+msgstr "Média- és hangvezérlők megjelenítése a buboréksúgóban"
 
 #: package/contents/ui/ConfigAppearance.qml:85
 #, kde-format
@@ -267,6 +264,10 @@ msgid ""
 "behavior. If you don't find one, consider reporting this as a bug to the "
 "app's developer."
 msgstr ""
+"Ha ezt a beállítást egy olyan alkalmazás megkerülésére használja, amelyik "
+"túl gyakran igényel figyelmet, először keressen egy olyan beállítást az "
+"alkalmazásban, amellyel letilthatja azt a viselkedést. Ha nem talál ilyet, "
+"fontolja meg, hogy hibaként jelenti ezt az alkalmazás fejlesztőjének."
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
@@ -374,19 +375,19 @@ msgstr "Betűrendben"
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By desktop"
-msgstr "Asztalonként"
+msgstr "Asztal szerint"
 
 #: package/contents/ui/ConfigBehavior.qml:148
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By activity"
-msgstr "Aktivitásonként"
+msgstr "Aktivitás szerint"
 
 #: package/contents/ui/ConfigBehavior.qml:152
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By horizontal window position"
-msgstr ""
+msgstr "Vízszintes ablakpozíció szerint"
 
 #: package/contents/ui/ConfigBehavior.qml:163
 #, kde-format
@@ -492,14 +493,14 @@ msgstr "Ne tegyen semmit"
 #: package/contents/ui/ConfigBehavior.qml:210
 #, fuzzy, kde-format
 #| msgctxt ""
-#| "@item:inlistbox Completes the sentence 'Clicking grouped task cycles "
-#| "through tasks' "
-#| msgid "Cycles through tasks"
+#| "@item:inlistbox Part of a sentence: 'Scrolling anywhere switches through "
+#| "all tasks'"
+#| msgid "Cycles through all tasks"
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through all "
 "tasks'"
 msgid "Cycles through all tasks"
-msgstr "Váltás az alkalmazások között"
+msgstr "Váltás az összes feladat között"
 
 #: package/contents/ui/ConfigBehavior.qml:211
 #, fuzzy, kde-format
@@ -778,7 +779,7 @@ msgstr "&Felgördítés"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
-msgstr ""
+msgstr "&Nincs címsor és keret"
 
 #: package/contents/ui/ContextMenu.qml:729
 #, kde-format
@@ -893,7 +894,6 @@ msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "Elérhető ezen: %1"
 
-#, fuzzy
 #~| msgctxt ""
 #~| "@item:inlistbox Part of a sentence: 'Middle-clicking any task does "
 #~| "nothing'"

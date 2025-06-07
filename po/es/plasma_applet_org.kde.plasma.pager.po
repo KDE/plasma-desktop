@@ -10,14 +10,14 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-06 00:44+0000\n"
-"PO-Revision-Date: 2025-05-26 00:52+0100\n"
+"PO-Revision-Date: 2025-06-06 19:54+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: package/contents/config/config.qml:13
@@ -102,8 +102,7 @@ msgid "Desktop name"
 msgstr "Nombre del escritorio"
 
 #: package/contents/ui/configGeneral.qml:118
-#, fuzzy, kde-format
-#| msgid "Selecting current Activity:"
+#, kde-format
 msgctxt ""
 "@label Start of the sentence 'Selecting current activity does nothing/shows "
 "the desktop'"
@@ -111,8 +110,7 @@ msgid "Selecting current Activity:"
 msgstr "Al seleccionar la actividad actual:"
 
 #: package/contents/ui/configGeneral.qml:119
-#, fuzzy, kde-format
-#| msgid "Selecting current virtual desktop:"
+#, kde-format
 msgctxt ""
 "@label Start of the sentence 'Selecting current virtual desktop does nothing/"
 "shows the desktop'"
@@ -120,22 +118,20 @@ msgid "Selecting current virtual desktop:"
 msgstr "Al seleccionar el escritorio virtual actual:"
 
 #: package/contents/ui/configGeneral.qml:122
-#, fuzzy, kde-format
-#| msgid "Does nothing"
+#, kde-format
 msgctxt ""
 "option:check completes the sentence 'Selecting current activity/virtual "
 "desktop does nothing'"
 msgid "Does nothing"
-msgstr "No hacer nada"
+msgstr "No se hace nada"
 
 #: package/contents/ui/configGeneral.qml:130
-#, fuzzy, kde-format
-#| msgid "Shows the desktop"
+#, kde-format
 msgctxt ""
 "option:check completes the sentence 'Selecting current activity/virtual "
 "desktop shows the desktop'"
 msgid "Shows the desktop"
-msgstr "Mostrar el escritorio"
+msgstr "Se muestra el escritorio"
 
 #: package/contents/ui/main.qml:86
 #, kde-format

@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2013, 2014, 2016, 2018, 2019, 2021, 2022, 2024.
+# Yuri Chornoivan <yurchor@ukr.net>, 2013, 2014, 2016, 2018, 2019, 2021, 2022, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-06 00:44+0000\n"
-"PO-Revision-Date: 2024-08-31 09:55+0300\n"
+"PO-Revision-Date: 2025-06-06 13:58+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -102,8 +102,7 @@ msgid "Desktop name"
 msgstr "Назва стільниці"
 
 #: package/contents/ui/configGeneral.qml:118
-#, fuzzy, kde-format
-#| msgid "Selecting current Activity:"
+#, kde-format
 msgctxt ""
 "@label Start of the sentence 'Selecting current activity does nothing/shows "
 "the desktop'"
@@ -111,8 +110,7 @@ msgid "Selecting current Activity:"
 msgstr "Вибір поточного простору дій:"
 
 #: package/contents/ui/configGeneral.qml:119
-#, fuzzy, kde-format
-#| msgid "Selecting current virtual desktop:"
+#, kde-format
 msgctxt ""
 "@label Start of the sentence 'Selecting current virtual desktop does nothing/"
 "shows the desktop'"
@@ -120,8 +118,7 @@ msgid "Selecting current virtual desktop:"
 msgstr "Вибір поточної віртуальної стільниці:"
 
 #: package/contents/ui/configGeneral.qml:122
-#, fuzzy, kde-format
-#| msgid "Does nothing"
+#, kde-format
 msgctxt ""
 "option:check completes the sentence 'Selecting current activity/virtual "
 "desktop does nothing'"
@@ -129,8 +126,7 @@ msgid "Does nothing"
 msgstr "Ніяких дій"
 
 #: package/contents/ui/configGeneral.qml:130
-#, fuzzy, kde-format
-#| msgid "Shows the desktop"
+#, kde-format
 msgctxt ""
 "option:check completes the sentence 'Selecting current activity/virtual "
 "desktop shows the desktop'"

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-01-25 21:53+0100\n"
+"PO-Revision-Date: 2025-06-06 22:15+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -172,10 +172,9 @@ msgid "Pointer speed:"
 msgstr "Mutató sebessége:"
 
 #: ui/main.qml:289
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgid "Enable pointer acceleration"
-msgstr "Az egérmutató gyorsítása:"
+msgstr "Mutatógyorsítás bekapcsolása"
 
 #: ui/main.qml:304
 #, kde-format
@@ -183,6 +182,8 @@ msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
+"Ha be van kapcsolva, a mutató mozgási távolsága a gyorsabb mozgási "
+"sebességgel nő."
 
 #: ui/main.qml:314
 #, kde-format
@@ -250,11 +251,13 @@ msgid ""
 "Tap, then tap and immediately slide finger over the touchpad to drag. Lift "
 "finger to drop."
 msgstr ""
+"Koppintson, majd koppintson és azonnal csúsztassa az ujját az érintőtáblán a "
+"húzáshoz. Emelje fel az ujját az ejtéshez."
 
 #: ui/main.qml:485
 #, kde-format
 msgid "Allow briefly lifting finger during tap-and-drag"
-msgstr ""
+msgstr "Az ujj rövid felemelésének engedélyezése a koppintás és húzás során"
 
 #: ui/main.qml:499
 #, kde-format
