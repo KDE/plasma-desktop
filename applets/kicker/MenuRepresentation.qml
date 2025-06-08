@@ -33,7 +33,7 @@ PlasmaComponents3.ScrollView {
 
     contentWidth: mainRow.implicitWidth
 
-    Layout.minimumHeight: Math.max(sideBar.implicitHeight, rootList.implicitHeight + rootList.Layout.bottomMargin)
+    Layout.minimumHeight: Math.min(Math.max(sideBar.implicitHeight, rootList.implicitHeight + rootList.Layout.bottomMargin), Math.round(Screen.height * 0.8))
     Layout.maximumHeight: Layout.minimumHeight
 
     function ensureVisible(item: Item) : void {
@@ -98,7 +98,7 @@ PlasmaComponents3.ScrollView {
 
             Layout.fillHeight: true
 
-            implicitWidth: Math.max(favoriteApps.implicitWidth, favoriteSystemActions.implicitWidth) + margins.left + margins.right
+            implicitWidth: Math.max(favoriteApps.implicitWidth, favoriteSystemActions.implicitWidth) + margins.left + margins.right + sideBarScrollView.actualScrollBarWidth
             implicitHeight: sideBarLayout.implicitHeight + margins.top + margins.bottom
 
             imagePath: "widgets/frame"
@@ -130,71 +130,104 @@ PlasmaComponents3.ScrollView {
                 target.forceActiveFocus(Qt.TabFocusReason)
             }
             KeyNavigation.right: rootList
-            Keys.onLeftPressed: event => handleLeftRightArrow(event)
-            Keys.onRightPressed: event => handleLeftRightArrow(event)
 
-            ColumnLayout {
-                id: sideBarLayout
+            PlasmaComponents3.ScrollView {
+                id: sideBarScrollView
+
                 anchors.top: parent.top
                 anchors.horizontalCenter: parent.horizontalCenter
-                height: Math.max(implicitHeight, parent.height)
-                width: parent.width
+                height: parent.height
 
-                Accessible.role: Accessible.List
-                Accessible.name: i18nc("@title:group accessible name for favorite group in sidebar", "Favorites")
+                PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
 
-                LayoutItemProxy {
-                    target: sideBar.onTopPanel ? favoriteSystemActions : favoriteApps
-                    Layout.topMargin: sideBar.margins.top
-                }
-                KSvg.SvgItem {
-                    id: sidebarSeparator
-
-                    Layout.fillWidth: true
-                    Layout.leftMargin: Kirigami.Units.smallSpacing
-                    Layout.rightMargin: Layout.leftMargin
-                    Layout.alignment: Qt.AlignHCenter
-
-                    visible: (favoriteApps.model && favoriteApps.model.count
-                        && favoriteSystemActions.model && favoriteSystemActions.model.count)
-
-                    imagePath: "widgets/line"
-                    elementId: "horizontal-line"
-                }
-                LayoutItemProxy {
-                    target: sideBar.onTopPanel ? favoriteApps : favoriteSystemActions
-                    Layout.topMargin: sideBar.margins.bottom
+                readonly property int actualScrollBarWidth: scrollBarVisible ? sideBarScrollView.PlasmaComponents3.ScrollBar.vertical.width : 0
+                property bool scrollBarVisible
+                Binding on scrollBarVisible {
+                    value: sideBarScrollView.contentHeight > sideBarScrollView.height
+                    delayed: true // this needs to be delayed or it can get stuck in a resize loop
                 }
 
-                SideBarSection {
-                    id: favoriteApps
-
-                    Layout.fillHeight: true
-                    Layout.alignment: Qt.AlignHCenter
-
-                    KeyNavigation.up: favoriteSystemActions.bottomSideBarItem
-                    KeyNavigation.down: favoriteSystemActions
-
-                    model: root.globalFavorites
-                    onInteractionConcluded: root.interactionConcluded()
-
-                    Binding {
-                        target: root.globalFavorites
-                        property: "iconSize"
-                        value: Kirigami.Units.iconSizes.medium
-                        restoreMode: Binding.RestoreBinding
+                function ensureVisible(item: Item) {
+                    let flickable = (contentItem as Flickable)
+                    let actualItemY = flickable.mapFromItem(item, 0, 0).y
+                    let viewYPosition = (item.height <= contentItem.height)
+                        ? Math.round(actualItemY + item.height / 2 - contentItem.height / 2)
+                        : actualItemY
+                    console.log(actualItemY, flickable.contentY)
+                    if (actualItemY < flickable.contentY) {
+                        flickable.contentY = Math.max(0, viewYPosition)
+                    } else if ((actualItemY + item.height) > (flickable.contentY + flickable.height)) {
+                        flickable.contentY = Math.min(flickable.contentHeight - flickable.height, viewYPosition)
                     }
+                    flickable.returnToBounds()
                 }
 
-                SideBarSection {
-                    id: favoriteSystemActions
+                ColumnLayout {
+                    id: sideBarLayout
+                    height: Math.max(implicitHeight, parent.height)
+                    width: parent.width
 
-                    Layout.alignment: Qt.AlignHCenter
+                    Accessible.role: Accessible.List
+                    Accessible.name: i18nc("@title:group accessible name for favorite group in sidebar", "Favorites")
 
-                    model: root.systemFavorites
-                    onInteractionConcluded: root.interactionConcluded()
-                    KeyNavigation.up: favoriteApps.bottomSideBarItem
-                    KeyNavigation.down: favoriteApps
+                    Keys.onLeftPressed: event => sideBar.handleLeftRightArrow(event)
+                    Keys.onRightPressed: event => sideBar.handleLeftRightArrow(event)
+
+                    LayoutItemProxy {
+                        target: sideBar.onTopPanel ? favoriteSystemActions : favoriteApps
+                        Layout.topMargin: sideBar.margins.top
+                    }
+                    KSvg.SvgItem {
+                        id: sidebarSeparator
+
+                        Layout.fillWidth: true
+                        Layout.leftMargin: Kirigami.Units.smallSpacing
+                        Layout.rightMargin: Layout.leftMargin
+                        Layout.alignment: Qt.AlignHCenter
+
+                        visible: (favoriteApps.model && favoriteApps.model.count
+                            && favoriteSystemActions.model && favoriteSystemActions.model.count)
+
+                        imagePath: "widgets/line"
+                        elementId: "horizontal-line"
+                    }
+                    LayoutItemProxy {
+                        target: sideBar.onTopPanel ? favoriteApps : favoriteSystemActions
+                        Layout.topMargin: sideBar.margins.bottom
+                    }
+
+                    SideBarSection {
+                        id: favoriteApps
+
+                        Layout.fillHeight: true
+                        Layout.alignment: Qt.AlignHCenter
+
+                        KeyNavigation.up: favoriteSystemActions.bottomSideBarItem
+                        KeyNavigation.down: favoriteSystemActions
+
+                        model: root.globalFavorites
+                        onItemFocused: item => sideBarScrollView.ensureVisible(item)
+                        onInteractionConcluded: root.interactionConcluded()
+
+                        Binding {
+                            target: root.globalFavorites
+                            property: "iconSize"
+                            value: Kirigami.Units.iconSizes.medium
+                            restoreMode: Binding.RestoreBinding
+                        }
+                    }
+
+                    SideBarSection {
+                        id: favoriteSystemActions
+
+                        Layout.alignment: Qt.AlignHCenter
+
+                        model: root.systemFavorites
+                        onItemFocused: item => sideBarScrollView.ensureVisible(item)
+                        onInteractionConcluded: root.interactionConcluded()
+                        KeyNavigation.up: favoriteApps.bottomSideBarItem
+                        KeyNavigation.down: favoriteApps
+                    }
                 }
             }
         }

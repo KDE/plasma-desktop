@@ -22,6 +22,7 @@ DropArea {
     readonly property SideBarItem bottomSideBarItem: repeater.itemAt(repeater.count - 1) as SideBarItem
 
     signal interactionConcluded
+    signal itemFocused(Item item)
 
     onActiveFocusChanged: (repeater.itemAt(0) ?? KeyNavigation.down).forceActiveFocus(Qt.TabFocusReason)
 
@@ -83,6 +84,7 @@ DropArea {
                     }
                 }
                 onInteractionConcluded: root.interactionConcluded()
+                onActiveFocusChanged: if (activeFocus) root.itemFocused(this)
             }
 
             onCountChanged: {
