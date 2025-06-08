@@ -20,6 +20,7 @@ PlasmoidItem {
     anchors.fill: parent
 
     signal reset
+    signal modelRefreshed
 
     property bool isDash: Plasmoid.pluginName === "org.kde.plasma.kickerdash"
 
@@ -246,7 +247,7 @@ PlasmoidItem {
         windowSystem.focusIn.connect(enableHideOnWindowDeactivate);
         kicker.hideOnWindowDeactivate = true;
 
-        rootModel.refreshed.connect(reset);
+        rootModel.refreshed.connect(modelRefreshed);
 
         dragHelper.dropped.connect(resetDragSource);
     }
