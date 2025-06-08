@@ -9,6 +9,7 @@
 #include "inputdevice.h"
 #include "logging.h"
 #include "tabletevents.h"
+#include "tabletmoduledata.h"
 
 #include <KConfigGroup>
 #include <KLocalizedString>
@@ -18,7 +19,7 @@
 #include <QScreen>
 #include <QStandardItemModel>
 
-K_PLUGIN_FACTORY_WITH_JSON(TabletFactory, "kcm_tablet.json", registerPlugin<Tablet>();)
+K_PLUGIN_FACTORY_WITH_JSON(TabletFactory, "kcm_tablet.json", registerPlugin<Tablet>(); registerPlugin<TabletModuleData>();)
 
 class OrientationsModel : public QStandardItemModel
 {
