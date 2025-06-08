@@ -36,6 +36,7 @@ target_sources(kcm_tablet PRIVATE
     calibrationtool.cpp
     inputsequence.cpp
     tabletsmodel.cpp
+    tabletmoduledata.cpp
 )
 
 target_link_libraries(kcm_tablet PRIVATE
@@ -44,6 +45,7 @@ target_link_libraries(kcm_tablet PRIVATE
     KF6::ConfigCore
     KF6::GuiAddons
     KF6::I18n
+    KF6::KCMUtils
     KF6::KCMUtilsQuick
 
     Qt::DBus
