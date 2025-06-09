@@ -248,7 +248,7 @@ Item {
                 height: root.useListViewMode
                                 ? parent.height
                                 // the smallSpacings are for padding
-                                : icon.height + (Kirigami.Units.gridUnit * label.lineCount) + (Kirigami.Units.smallSpacing * 3)
+                                : icon.height + label.implicitHeight + (Kirigami.Units.smallSpacing * 3)
 
                 Kirigami.Icon {
                     id: icon
