@@ -456,7 +456,13 @@ PlasmaComponents3.ScrollView {
     }
 
     Component.onCompleted: {
-        kicker.reset.connect(reset);
+        kicker.modelRefreshed.connect(() => {
+            const searchTerm = searchField.text
+            root.reset()
+            runnerModel.clear() // runnerModel is on a timer, clearing and setting query is too fast to work
+            searchField.text = searchTerm
+        });
+        kicker.reset.connect(reset)
         windowSystem.hidden.connect(reset);
 
         rootModel.refresh();
