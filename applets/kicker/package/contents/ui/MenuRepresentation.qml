@@ -9,17 +9,20 @@ import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 import org.kde.ksvg as KSvg
+import org.kde.plasma.components as PlasmaComponents3
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.plasma.plasmoid
 
-FocusScope {
+PlasmaComponents3.ScrollView {
     id: root
 
     focus: true
 
-    Layout.minimumWidth: mainRow.width
+    Layout.minimumWidth: Math.min(mainRow.width, Screen.width - Kirigami.Units.largeSpacing * 4)
     Layout.maximumWidth: Layout.minimumWidth
+
+    contentWidth: mainRow.width
 
     Layout.minimumHeight: Math.max(((rootModel.count - rootModel.separatorCount) * rootList.itemHeight)
         + (rootModel.separatorCount * rootList.separatorHeight)
@@ -27,6 +30,20 @@ FocusScope {
         + favoriteApps.contentHeight + favoriteSystemActions.contentHeight + sidebarSeparator.height
         + (4 * Kirigami.Units.smallSpacing))
     Layout.maximumHeight: Layout.minimumHeight
+
+    function ensureVisible(item: Item) : void {
+        var actualItemX = item.x
+        var viewXPosition = (item.width <= contentItem.width)
+        ? Math.round(actualItemX + item.width / 2 - contentItem.width / 2)
+        : actualItemX
+        if (actualItemX < contentItem.contentX) {
+            contentItem.contentX = Math.max(0, viewXPosition)
+        } else if ((actualItemX + item.width) > (contentItem.contentX + contentItem.width)) {
+            contentItem.contentX = Math.min(contentItem.contentWidth - contentItem.width, viewXPosition)
+        }
+        contentItem.returnToBounds()
+    }
+
 
     function reset() {
         kicker.hideOnWindowDeactivate = true;
@@ -65,7 +82,9 @@ FocusScope {
             prefix: "plain"
 
             activeFocusOnTab: true
-            onActiveFocusChanged: (onTopPanel ? favoriteSystemActions : favoriteApps).forceActiveFocus(Qt.TabFocusReason)
+            onActiveFocusChanged: if (activeFocus) {
+                (onTopPanel ? favoriteSystemActions : favoriteApps).forceActiveFocus(Qt.TabFocusReason)
+            }
             KeyNavigation.right: rootList
             Keys.onPressed: event => {
                 let backArrowKey = (event.key === Qt.Key_Left && Application.layoutDirection === Qt.LeftToRight) ||
@@ -77,12 +96,14 @@ FocusScope {
                     const targetList = runnerColumns.visibleChildren[runnerColumns.visibleChildren.length-2]
                     targetList.currentIndex = 0
                     targetList.forceActiveFocus(Qt.BacktabFocusReason)
+                    root.ensureVisible(targetList)
                     event.accepted = true
                 }
                 if (forwardArrowKey) {
                     if (runnerColumns.visible) {
                         runnerColumns.visibleChildren[0].currentIndex = 0
                         runnerColumns.visibleChildren[0].forceActiveFocus(Qt.TabFocusReason)
+                        root.ensureVisible(runnerColumns.visibleChildren[0])
                     } else {
                         rootList.showChildDialogs = false;
                         rootList.currentIndex = 0
@@ -170,6 +191,7 @@ FocusScope {
             onNavigateLeftRequested: {
                 currentIndex = -1
                 sideBar.forceActiveFocus(Qt.TabFocusReason)
+                root.ensureVisible(sideBar)
             }
             onKeyNavigationAtListEnd: {
                 searchField.focus = true;
@@ -244,9 +266,11 @@ FocusScope {
                             currentIndex = -1;
                             target.currentIndex = 0;
                             target.focus = true;
+                            root.ensureVisible(target)
                         } else {
                             currentIndex = -1;
                             sideBar.forceActiveFocus(Qt.TabFocusReason)
+                            root.ensureVisible(sideBar)
                         }
                     }
 
@@ -269,9 +293,11 @@ FocusScope {
                             currentIndex = -1;
                             target.currentIndex = 0;
                             target.focus = true;
+                            root.ensureVisible(target)
                         } else {
                             currentIndex = -1;
                             sideBar.forceActiveFocus(Qt.TabFocusReason)
+                            root.ensureVisible(sideBar)
                         }
                     }
                 }
@@ -369,7 +395,9 @@ FocusScope {
                     const targetList =  runnerColumns.visibleChildren[0];
                     targetList.currentIndex = targetList.count-1;
                     targetList.currentItem.forceActiveFocus();
+                    root.ensureVisible(targetList)
                 }
+                event.accepted = true;
             } else if (event.key === Qt.Key_Down) {
                 if (rootList.visible) {
                     rootList.showChildDialogs = false;
@@ -382,16 +410,22 @@ FocusScope {
                     const targetList =  runnerColumns.visibleChildren[0];
                     targetList.currentIndex = Math.min(targetList.currentIndex + 1, targetList.count);
                     targetList.currentItem.forceActiveFocus();
+                    root.ensureVisible(targetList)
                 }
+                event.accepted = true;
             } else if (backArrowKey) {
                 if (runnerColumns.visible) {
                     runnerColumns.visibleChildren[0].currentIndex = -1;
                 }
                 sideBar.forceActiveFocus(Qt.TabFocusReason)
+                root.ensureVisible(sideBar)
+                event.accepted = true;
             } else if (forwardArrowKey && runnerColumns.visibleChildren.length > 2) {
                 runnerColumns.visibleChildren[0].currentIndex = -1;
                 runnerColumns.visibleChildren[1].currentIndex = 0;
                 runnerColumns.visibleChildren[1].forceActiveFocus(Qt.TabFocusReason);
+                root.ensureVisible(runnerColumns.visibleChildren[1])
+                event.accepted = true;
             } else if (event.key === Qt.Key_Enter || event.key === Qt.Key_Return) {
                 if (runnerColumns.visible) {
                     for (let i = 0; i < runnerModel.count; ++i) {
@@ -402,6 +436,7 @@ FocusScope {
                         }
                     }
                 }
+                event.accepted = true;
             }
         }
 
