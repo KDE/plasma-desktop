@@ -9,7 +9,7 @@ import QtQuick
 import org.kde.draganddrop as DnD
 import org.kde.kirigami as Kirigami
 
-DnD.DropArea {
+DropArea {
     id: root
 
     implicitWidth: Kirigami.Units.iconSizes.medium + Kirigami.Units.smallSpacing * 2
@@ -25,16 +25,15 @@ DnD.DropArea {
 
     onActiveFocusChanged: repeater.itemAt(0).forceActiveFocus(Qt.TabFocusReason)
 
-    onDragMove: event => {
+    onPositionChanged: event => {
         if (flow.animating) {
             return;
         }
 
-        const above = flow.childAt(event.x, event.y),
-              source = kicker.dragSource;
+        const above = flow.childAt(event.x, event.y)
 
-        if (above && source && above !== source && source.parent === flow) {
-            repeater.model.moveRow(source.itemIndex, above.itemIndex);
+        if (above && event.source && above !== event.source && event.source.parent === flow) {
+            repeater.model.moveRow(event.source.itemIndex, above.itemIndex);
         }
     }
 

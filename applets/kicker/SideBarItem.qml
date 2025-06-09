@@ -45,6 +45,9 @@ PC3.ToolButton {
     }
 
     function activate() : void {
+        if (dragHandler.active) {
+            return
+        }
         repeater.model.trigger(index, "", null);
         kicker.expanded = false;
     }
@@ -52,6 +55,7 @@ PC3.ToolButton {
     Keys.onSpacePressed: activate()
     Keys.onReturnPressed: activate()
     Keys.onEnterPressed: activate()
+    onClicked: activate()
 
     function openActionMenu(visualParent, x, y) {
         aboutToShowActionMenu(actionMenu);
@@ -67,83 +71,30 @@ PC3.ToolButton {
         }
     }
 
-    KQuickControlsAddons.MouseEventListener {
-        id: listener
-
-        anchors {
-            fill: parent
-            leftMargin: - sideBar.margins.left
-            rightMargin: - sideBar.margins.right
-        }
-
-        enabled: (item.parent && !item.parent.animating)
-
-        property bool pressed: false
-        property int pressX: -1
-        property int pressY: -1
-
-        hoverEnabled: true
-        acceptedButtons: Qt.LeftButton | Qt.RightButton
-
-        onPressed: mouse => {
-            if (mouse.buttons & Qt.RightButton) {
-                if (item.hasActionList) {
-                    item.openActionMenu(item, mouse.x, mouse.y);
-                }
-            } else {
-                pressed = true;
-                pressX = mouse.x;
-                pressY = mouse.y;
-            }
-        }
-
-        onReleased: mouse => {
-            if (pressed) {
-                repeater.model.trigger(index, "", null);
-                kicker.expanded = false;
-            }
-
-            pressed = false;
-            pressX = -1;
-            pressY = -1;
-        }
-
-        onContainsMouseChanged: containsMouseChanged => {
-            if (!containsMouse) {
-                pressed = false;
-                pressX = -1;
-                pressY = -1;
-            }
-        }
-
-        onPositionChanged: mouse => {
-            if (pressX !== -1 && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
-                kicker.dragSource = item;
-                dragHelper.startDrag(kicker, model.url, model.icon);
-                pressed = false;
-                pressX = -1;
-                pressY = -1;
-
-                return;
-            }
+    DragHandler {
+        id: dragHandler
+        target: null
+        onActiveChanged: if (active) {
+            item.contentItem.grabToImage(function(result) {
+                item.Drag.imageSource = result.url
+                item.Drag.active = true // using a binding can cause loop warnings when unexpanding
+            })
+        } else {
+            item.Drag.active = false
         }
     }
-
-    PlasmaCore.ToolTipArea {
-        id: toolTip
-
-        mainText: model.display
-
-        anchors {
-            fill: parent
-            leftMargin: - sideBar.margins.left
-            rightMargin: - sideBar.margins.right
-        }
-
-        interactive: false
-        // It must be floating now as PopupPlasmaWindow allows the tooltip to cover the parent window only in that case
-        location: PlasmaCore.Types.Floating
-
-        mainItem: toolTipDelegate
+    Drag.dragType: Drag.Automatic
+    Drag.mimeData: {
+        "text/uri-list" : [model.url]
     }
+
+    MouseArea {
+        anchors.fill: parent
+        acceptedButtons: Qt.RightButton
+        onPressed: mouse => item.openActionMenu(item, mouse.x, mouse.y)
+    }
+
+    PC3.ToolTip.text: item.text
+    PC3.ToolTip.visible: item,hovered
+    PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
 }
