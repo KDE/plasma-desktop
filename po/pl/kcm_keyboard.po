@@ -1,15 +1,15 @@
 # translation of kcmkeyboard.po to
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Marta Rybczyńska <kde-i18n@rybczynska.net>, 2007, 2008, 2010.
-# SPDX-FileCopyrightText: 2011, 2012, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# SPDX-FileCopyrightText: 2011, 2012, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-22 00:43+0000\n"
-"PO-Revision-Date: 2024-10-05 12:24+0200\n"
+"PO-Revision-Date: 2025-06-08 08:08+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -18,6 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -443,12 +444,10 @@ msgid "Current window only"
 msgstr "Tylko bieżące okno"
 
 #: ui/Switching.qml:74
-#, fuzzy, kde-format
-#| msgctxt "@label:checkbox"
-#| msgid "Show notification on layout change"
+#, kde-format
 msgctxt "@label:checkbox"
 msgid "Show OSD popup on layout change"
-msgstr "Pokaż powiadomienie po zmianie układu"
+msgstr "Pokaż okno OSD po zmianie układu"
 
 #: ui/Switching.qml:86
 #, kde-format

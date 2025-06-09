@@ -8,13 +8,13 @@
 # Jeff Huang <s8321414@gmail.com>, 2016.
 # pan93412 <pan93412@gmail.com>, 2018, 2019.
 # Chaoting Liu <brli@chakralinux.org>, 2021.
-# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-06 00:44+0000\n"
-"PO-Revision-Date: 2024-09-10 02:22+0900\n"
+"PO-Revision-Date: 2025-06-08 23:54+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "dot tw>\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 25.07.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: package/contents/config/config.qml:13
@@ -107,8 +107,7 @@ msgid "Desktop name"
 msgstr "桌面名稱"
 
 #: package/contents/ui/configGeneral.qml:118
-#, fuzzy, kde-format
-#| msgid "Selecting current Activity:"
+#, kde-format
 msgctxt ""
 "@label Start of the sentence 'Selecting current activity does nothing/shows "
 "the desktop'"
@@ -116,8 +115,7 @@ msgid "Selecting current Activity:"
 msgstr "選取目前活動："
 
 #: package/contents/ui/configGeneral.qml:119
-#, fuzzy, kde-format
-#| msgid "Selecting current virtual desktop:"
+#, kde-format
 msgctxt ""
 "@label Start of the sentence 'Selecting current virtual desktop does nothing/"
 "shows the desktop'"
@@ -125,8 +123,7 @@ msgid "Selecting current virtual desktop:"
 msgstr "選取目前虛擬桌面："
 
 #: package/contents/ui/configGeneral.qml:122
-#, fuzzy, kde-format
-#| msgid "Does nothing"
+#, kde-format
 msgctxt ""
 "option:check completes the sentence 'Selecting current activity/virtual "
 "desktop does nothing'"
@@ -134,8 +131,7 @@ msgid "Does nothing"
 msgstr "不做任何事"
 
 #: package/contents/ui/configGeneral.qml:130
-#, fuzzy, kde-format
-#| msgid "Shows the desktop"
+#, kde-format
 msgctxt ""
 "option:check completes the sentence 'Selecting current activity/virtual "
 "desktop shows the desktop'"
