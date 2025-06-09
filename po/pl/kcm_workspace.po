@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# SPDX-FileCopyrightText: 2014, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-01 00:43+0000\n"
-"PO-Revision-Date: 2024-09-21 12:37+0200\n"
+"PO-Revision-Date: 2025-06-08 08:22+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: ui/main.qml:25
 #, kde-format
@@ -35,19 +36,19 @@ msgstr "Uruchom ponownie"
 #, kde-format
 msgctxt "@title:group"
 msgid "Plasma"
-msgstr ""
+msgstr "Plazma"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
-msgstr ""
+msgstr "Zezwól Plazmie na pokazanie:"
 
 #: ui/main.qml:59
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr ""
+msgstr "Podpowiedzi na pasku i elementach interfejsu"
 
 #: ui/main.qml:69
 #, kde-format
@@ -57,14 +58,17 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"Zezwala wszystkim paskom Plazmy i elementom interfejsu na pulpicie na "
+"pokazanie opisowych podpowiedzi po najechaniu na nie wskaźnikiem. To "
+"ustawienie ma ma wpływu małe podpowiedzi pokazywane po najechaniu na dane "
+"przyciski i inne elementy interfejsu użytkownika."
 
 #: ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
-msgstr "Pokaż okno wysuwne przy zmianie układu"
+msgstr "Okna OSD po zmianie stanu"
 
 #: ui/main.qml:87
 #, kde-format
@@ -72,14 +76,15 @@ msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
+"Zezwala wszystkim elementom interfejsu Plazmy na pokazywanie okien "
+"wyświetlacza ekranowego (OSD) przy zmianach głośności, jasności, czy "
+"przełączeniu urządzenia dźwiękowego."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling"
-msgstr "Przewijanie:"
+msgstr "Przewijanie"
 
 #: ui/main.qml:100
 #, kde-format
@@ -131,7 +136,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "Klikanie"
 
 #: ui/main.qml:175
 #, kde-format
@@ -214,24 +219,23 @@ msgid ""
 "Double-click the folder to test. If it does not change its appearance, "
 "increase double-click interval."
 msgstr ""
+"Kliknij dwukrotnie na katalogu, aby wypróbować. Jeśli nie zmienia to jego "
+"wyglądu, to zwiększ okres dwukrotnego kliknięcia."
 
 #: ui/main.qml:354
 #, kde-format
 msgid "Drag and Drop"
-msgstr ""
+msgstr "Przeciągnij i upuść"
 
 #: ui/main.qml:361
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
-#| msgid "Clicking files or folders:"
+#, kde-format
 msgid "When dragging files or folders:"
-msgstr "Kliknięcie na plik lub katalog:"
+msgstr "Przy przeciąganiu plików lub katalogów:"
 
 #: ui/main.qml:362
 #, kde-format
 msgid "Always ask what to do"
-msgstr ""
+msgstr "Za każdym razem pytaj, co zrobić"
 
 #: ui/main.qml:378
 #, kde-kuit-format
@@ -241,30 +245,33 @@ msgid ""
 "and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise show a "
 "dialog."
 msgstr ""
+"Przytrzymaj <shortcut>Shift</shortcut> aby przenieść, <shortcut>Ctrl</"
+"shortcut> aby skopiować oraz <shortcut>Shift+Ctrl</shortcut> aby utworzyć "
+"dowiązanie symboliczne. W przeciwnym przypadku pokaż okno."
 
 #: ui/main.qml:386
 #, kde-format
 msgid "Move if on the same device"
-msgstr ""
+msgstr "Przenieś, gdy na tym samym urządzeniu"
 
 #: ui/main.qml:402
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
 msgstr ""
+"Przytrzymaj <shortcut>Shift</shortcut> przy upuszczaniu, aby pokazać inne "
+"możliwości."
 
 #: ui/main.qml:410
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Touch"
-msgstr "Tryb dotykowy:"
+msgstr "Dotyk"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgid "Enable Touch Mode:"
-msgstr "Tryb dotykowy:"
+msgstr "Włącz tryb dotykowy:"
 
 #: ui/main.qml:418
 #, kde-format
@@ -290,9 +297,7 @@ msgstr ""
 "przekształcalnego laptopa zostanie obrócona lub odłączona."
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always enabled"
+#, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always active"
 msgstr "Zawsze włączony"
@@ -301,7 +306,7 @@ msgstr "Zawsze włączony"
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Disabled"
-msgstr ""
+msgstr "Wyłączone"
 
 #: ui/main.qml:486
 #, kde-format
@@ -325,6 +330,9 @@ msgid ""
 "For local files on the same device, whether dragging and dropping will "
 "perform a move operation instead of showing the options menu"
 msgstr ""
+"Określa, czy przeciąganie i upuszczanie będzie oznaczać przeniesienie "
+"zamiast pokazania menu możliwości, dla plików lokalnych na tym samym "
+"urządzeniu"
 
 #. i18n: ectx: label, entry (smoothScroll), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21
@@ -362,7 +370,7 @@ msgstr "Włącz wklejanie na środkowy przycisk"
 #: workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display large panel and widget tooltips"
-msgstr ""
+msgstr "Wyświetl duże podpowiedzi na pasku i elementach interfejsu"
 
 #. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:10
@@ -370,26 +378,24 @@ msgstr ""
 msgid ""
 "Allow Plasma widgets to display large panel and widget tooltips on hover"
 msgstr ""
+"Zezwól elementom interfejsu Plazmy na wyświetlanie dużych podpowiedzi na "
+"pasku i elementach interfejsu"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
-#, fuzzy, kde-format
-#| msgid "Display visual feedback for status changes"
+#, kde-format
 msgid "Display small popups for status changes"
-msgstr "Wyświetlaj informację zwrotną po zmianie stanu"
+msgstr "Wyświetlaj małe okna po zmianie stanu"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show an on-screen display to indicate status changes such as brightness "
-#| "or volume"
+#, kde-format
 msgid ""
 "Allow Plasma widgets to display small popups for status changes such as "
 "brightness or volume"
 msgstr ""
-"Pokaż wyświetlanie na ekranie, które pokazuje zmiany stanu takie jak "
-"jasność, czy głośność"
+"Zezwól Plazmie na wyświetlanie małych okien po zmianie poziomów jasności czy "
+"głośności"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21
