@@ -1266,6 +1266,9 @@ FocusScope {
             }
 
             onMove: (x, y, urls) => {
+                if (!positioner.enabled) {
+                    return;
+                }
                 var rows = (gridView.flow === GridView.FlowLeftToRight);
                 var axis = rows ? gridView.width : gridView.height;
                 var step = rows ? cellWidth : cellHeight;
