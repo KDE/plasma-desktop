@@ -57,27 +57,18 @@ Kirigami.ApplicationWindow {
     }
 
     Kirigami.Action {
-        id: searchAction
+        id: allAction
         checked: window.pageStack.get(0).title === text
-        text: i18n("Search")
-        icon.name: "search"
-        shortcut: StandardKey.Find
+        text: i18nc("@title:page All emojis", "All")
+        icon.name: "view-list-icons"
 
         onTriggered: source => {
             window.pageStack.replace(Qt.resolvedUrl("CategoryPage.qml"), {
                 title: text,
                 category: "",
                 model: emoji,
-                showSearch: true,
             });
         }
-    }
-
-    CategoryAction {
-        id: allAction
-        text: i18n("All")
-        icon.name: "view-list-icons"
-        category: ""
     }
 
     Component {
@@ -142,7 +133,7 @@ Kirigami.ApplicationWindow {
                         return;
                     }
 
-                    const actions = [recentAction, searchAction, allAction];
+                    const actions = [recentAction, allAction];
                     for (let i = 0; i < count; ++i) {
                         actions.push(this.objectAt(i));
                     }
@@ -158,7 +149,7 @@ Kirigami.ApplicationWindow {
         if (recentEmojiModel.count > 0) {
             recentAction.trigger();
         } else {
-            searchAction.trigger();
+            allAction.trigger();
         }
 
         const incubator = drawerComponent.incubateObject(window);

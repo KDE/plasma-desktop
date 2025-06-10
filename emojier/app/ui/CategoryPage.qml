@@ -16,7 +16,6 @@ Kirigami.ScrollablePage {
     property alias model: emojiModel.sourceModel
     property string searchText: ""
     property alias category: filter.category
-    property bool showSearch: false
     property bool showClearHistoryButton: false
 
     leftPadding: undefined
@@ -27,31 +26,36 @@ Kirigami.ScrollablePage {
         if (event.key === Qt.Key_Escape) {
             Qt.quit()
         }
-        if (event.text.length > 0 && !view.showSearch && event.modifiers === Qt.NoModifier) {
+        if (event.text.length > 0 && event.modifiers === Qt.NoModifier) {
             // We want to prevent unprintable characters like backspace
             model = emoji
             searchText += /[\x00-\x1F\x7F]/.test(event.text) ? "" : event.text
-            showSearch = true
-            title = i18n("Search")
+            text: i18nc("@title:page All emojis", "All")
             category = ""
         }
     }
 
     titleDelegate: RowLayout {
+        id: titleRowLayout
+
         Layout.fillWidth: true
         Layout.preferredWidth: view.width
+
+        spacing: Kirigami.Units.smallSpacing
 
         Kirigami.Heading {
             text: view.title
             textFormat: Text.PlainText
+            elide: Text.ElideRight
             Layout.fillWidth: true
         }
 
         Kirigami.SearchField {
             id: searchField
             Layout.fillWidth: true
+            Layout.minimumWidth: Kirigami.Units.gridUnit * 5
+            Layout.maximumWidth: (Kirigami.Units.gridUnit * 15) - clearHistoryButton.effectiveWidth
             text: view.searchText
-            visible: view.showSearch
             inputMethodHints: Qt.ImhNoPredictiveText
 
             onTextChanged: {
@@ -67,9 +71,7 @@ Kirigami.ScrollablePage {
                 }
             }
             Component.onCompleted: {
-                if (visible) {
-                    Qt.callLater(forceActiveFocus);
-                }
+                Qt.callLater(forceActiveFocus);
             }
             Keys.onEscapePressed: event => {
                 if (text) {
@@ -82,6 +84,10 @@ Kirigami.ScrollablePage {
         }
 
         QQC2.ToolButton {
+            id: clearHistoryButton
+
+            readonly property int effectiveWidth: !visible ? 0 : implicitWidth + titleRowLayout.spacing
+
             visible: view.showClearHistoryButton
             enabled: emojiView.count > 0
             text: i18n("Clear History")
