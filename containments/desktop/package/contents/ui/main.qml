@@ -91,7 +91,7 @@ ContainmentItem {
     }
 
     function preferredWidth(forMinimumSize: bool): real {
-        if (isContainment || !folderViewLayer.ready) {
+        if ((isContainment || !folderViewLayer.ready) || (isPopup && !compactRepresentationItem.visible)) {
             return -1;
         } else if (useListViewMode) {
             return (forMinimumSize ? folderViewLayer.view.cellHeight * 4 : Kirigami.Units.gridUnit * 16);
@@ -102,7 +102,7 @@ ContainmentItem {
 
     function preferredHeight(forMinimumSize: bool): real {
         let height;
-        if (isContainment || !folderViewLayer.ready) {
+        if ((isContainment || !folderViewLayer.ready) || (isPopup && !compactRepresentationItem.visible)) {
             return -1;
         } else if (useListViewMode) {
             height = (folderViewLayer.view.cellHeight * (forMinimumSize ? 1 : 15)) + Kirigami.Units.smallSpacing;
