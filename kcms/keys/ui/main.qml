@@ -63,6 +63,29 @@ KCM.AbstractKCM {
                     exportActive = true
                 }
             }
+        },
+        Kirigami.Action {
+            text: i18nc("@action:button Add new shortcut", "Add New")
+            icon.name: "list-add-symbolic"
+            displayHint: Kirigami.DisplayHint.KeepVisible
+
+            enabled: !exportActive
+
+            Kirigami.Action {
+                icon.name: "applications-all-symbolic"
+                text: i18nc("@action:menu End of the sentence 'Add New Application…'", "Application…")
+                Accessible.name: i18nc("@action:menu accessible", "Add new application")
+                Accessible.role: Accessible.MenuItem
+                onTriggered: kcm.addApplication(root)
+            }
+
+            Kirigami.Action {
+                icon.name: "scriptnew-symbolic"
+                text: i18nc("@action:menu End of the sentence 'Add New Command or Script…'", "Command or Script…")
+                Accessible.name: i18nc("@action:menu accessible", "Add new command or script")
+                Accessible.role: Accessible.MenuItem
+                onTriggered: addCommandDialog.open()
+            }
         }
     ]
 
@@ -159,37 +182,6 @@ KCM.AbstractKCM {
                             target: components
                             property: "currentIndex"
                             value: transition.ViewTransition.index
-                        }
-                    }
-
-                    headerPositioning: ListView.OverlayHeader
-                    header: Kirigami.InlineViewHeader {
-                        width: ListView.view.width
-                        Kirigami.ActionToolBar {
-                            alignment: Qt.AlignRight
-                            enabled: !exportActive
-
-                            actions: Kirigami.Action {
-                                text: i18nc("@action:button Add new shortcut", "Add New")
-                                icon.name: "list-add-symbolic"
-                                displayHint: Kirigami.DisplayHint.KeepVisible
-
-                                Kirigami.Action {
-                                    icon.name: "applications-all-symbolic"
-                                    text: i18nc("@action:menu End of the sentence 'Add New Application…'", "Application…")
-                                    Accessible.name: i18nc("@action:menu accessible", "Add new application")
-                                    Accessible.role: Accessible.MenuItem
-                                    onTriggered: kcm.addApplication(root)
-                                }
-
-                                Kirigami.Action {
-                                    icon.name: "scriptnew-symbolic"
-                                    text: i18nc("@action:menu End of the sentence 'Add New Command or Script…'", "Command or Script…")
-                                    Accessible.name: i18nc("@action:menu accessible", "Add new command or script")
-                                    Accessible.role: Accessible.MenuItem
-                                    onTriggered: addCommandDialog.open()
-                                }
-                            }
                         }
                     }
 
