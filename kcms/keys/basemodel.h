@@ -19,6 +19,7 @@ class KConfigBase;
 namespace ComponentNS
 {
 KGLOBALACCELMODEL_EXPORT Q_NAMESPACE enum ComponentType {
+    SendInput,
     Application,
     Command,
     SystemService,

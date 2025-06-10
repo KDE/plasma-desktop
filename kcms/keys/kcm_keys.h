@@ -14,6 +14,7 @@
 class FilteredShortcutsModel;
 class KGlobalAccelInterface;
 class GlobalAccelModel;
+class SendInputModel;
 class ShortcutsModel;
 class StandardShortcutsModel;
 
@@ -63,6 +64,7 @@ private:
 
     QString m_lastError;
     FilteredShortcutsModel *m_filteredModel;
+    SendInputModel *m_sendInputModel;
     GlobalAccelModel *m_globalAccelModel;
     ShortcutsModel *m_shortcutsModel;
     StandardShortcutsModel *m_standardShortcutsModel;

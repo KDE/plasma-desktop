@@ -24,6 +24,7 @@ target_sources(kglobalaccelmodel PRIVATE
     basemodel.cpp
     filteredmodel.cpp
     globalaccelmodel.cpp
+    sendinputmodel.cpp
     shortcutsmodel.cpp
     standardshortcutsmodel.cpp
     ${kcm_keys_DBUS_SRCS}

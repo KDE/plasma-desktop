@@ -30,6 +30,7 @@
 #include "globalaccelmodel.h"
 #include "kcmkeys_debug.h"
 #include "keysdata.h"
+#include "sendinputmodel.h"
 #include "shortcutsmodel.h"
 #include "standardshortcutsmodel.h"
 
@@ -55,8 +56,10 @@ KCMKeys::KCMKeys(QObject *parent, const KPluginMetaData &metaData, const QVarian
     if (!m_globalAccelModel->isValid()) {
         setError(i18n("Failed to communicate with global shortcuts daemon"));
     }
+    m_sendInputModel = new SendInputModel(this);
     m_standardShortcutsModel = new StandardShortcutsModel(this);
     m_shortcutsModel = new ShortcutsModel(this);
+    m_shortcutsModel->addSourceModel(m_sendInputModel);
     m_shortcutsModel->addSourceModel(m_globalAccelModel);
     m_shortcutsModel->addSourceModel(m_standardShortcutsModel);
     m_filteredModel = new FilteredShortcutsModel(this);
@@ -64,6 +67,10 @@ KCMKeys::KCMKeys(QObject *parent, const KPluginMetaData &metaData, const QVarian
 
     m_argument = args.isEmpty() ? QString() : args.first().toString();
     connect(m_shortcutsModel, &QAbstractItemModel::dataChanged, this, [this] {
+        setNeedsSave(m_globalAccelModel->needsSave() || m_standardShortcutsModel->needsSave());
+        setRepresentsDefaults(m_globalAccelModel->isDefault() && m_standardShortcutsModel->isDefault());
+    });
+    connect(m_sendInputModel, &QAbstractItemModel::dataChanged, this, [this] {
         setNeedsSave(m_globalAccelModel->needsSave() || m_standardShortcutsModel->needsSave());
         setRepresentsDefaults(m_globalAccelModel->isDefault() && m_standardShortcutsModel->isDefault());
     });
@@ -88,18 +95,21 @@ KCMKeys::KCMKeys(QObject *parent, const KPluginMetaData &metaData, const QVarian
 
 void KCMKeys::load()
 {
+    m_sendInputModel->load();
     m_globalAccelModel->load();
     m_standardShortcutsModel->load();
 }
 
 void KCMKeys::save()
 {
+    m_sendInputModel->save();
     m_globalAccelModel->save();
     m_standardShortcutsModel->save();
 }
 
 void KCMKeys::defaults()
 {
+    m_sendInputModel->defaults();
     m_globalAccelModel->defaults();
     m_standardShortcutsModel->defaults();
 }
