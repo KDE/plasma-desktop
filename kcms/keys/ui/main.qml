@@ -24,7 +24,7 @@ KCM.AbstractKCM {
     framedView: false
 
     // order must be in sync with ComponentType enum in basemodel.h
-    readonly property var sectionNames: [i18n("Applications"), i18n("Commands"), i18n("System Services"), i18n("Common Actions")]
+    readonly property var sectionNames: [i18n("Send Input"), i18n("Applications"), i18n("Commands"), i18n("System Services"), i18n("Common Actions")]
 
     property alias exportActive: exportInfo.visible
     readonly property bool errorOccured: kcm.lastError !== ""
@@ -37,34 +37,14 @@ KCM.AbstractKCM {
     }
 
     actions: [
-        Kirigami.Action {
+        /*Kirigami.Action {
             enabled: !exportActive
             icon.name: "document-import-symbolic"
             text: i18nc("@action:button Import shortcut scheme", "Import…")
             // TODO: enable once Kirigami actions can have Accessible.name set (QT 6.8)
             // Accessible.name: i18nc("@action:button accessible", "Import shortcut scheme")
             onTriggered: importSheet.open()
-        }, Kirigami.Action {
-            icon.name: exportActive ? "dialog-cancel-symbolic" : "document-export-symbolic"
-            text: exportActive
-                  ? i18nc("@action:button", "Cancel Export")
-                  : i18nc("@action:button Export shortcut scheme", "Export…")
-            // TODO: enable once Kirigami actions can have Accessible.name set  (QT 6.8)
-            // Accessible.name: exportActive
-            //     ? text
-            //     : i18nc("@action:button accessible", "Export shortcut scheme")
-            onTriggered: {
-                if (exportActive) {
-                    exportActive = false
-                } else if (kcm.needsSave) {
-                    exportWarning.visible = true
-                } else {
-                    search.text = ""
-                    exportActive = true
-                }
-            }
-        },
-        Kirigami.Action {
+        },*/ Kirigami.Action {
             text: i18nc("@action:button Add new shortcut", "Add New")
             icon.name: "list-add-symbolic"
             displayHint: Kirigami.DisplayHint.KeepVisible
@@ -86,13 +66,44 @@ KCM.AbstractKCM {
                 Accessible.role: Accessible.MenuItem
                 onTriggered: addCommandDialog.open()
             }
+        }, Kirigami.Action {
+            // icon.name: exportActive ? "dialog-cancel-symbolic" : "document-export-symbolic"
+            // text: exportActive
+            //       ? i18nc("@action:button", "Cancel Export")
+            //       : i18nc("@action:button Export shortcut scheme", "Export…")
+            icon.name: "dialog-cancel-symbolic"
+            displayHint: Kirigami.DisplayHint.KeepVisible
+            text: i18nc("@action:button", "Cancel Assignment")
+            // TODO: enable once Kirigami actions can have Accessible.name set  (QT 6.8)
+            // Accessible.name: exportActive
+            //     ? text
+            //     : i18nc("@action:button accessible", "Export shortcut scheme")
+            onTriggered: {
+                if (exportActive) {
+                    exportActive = false
+                } else if (kcm.needsSave) {
+                    exportWarning.visible = true
+                } else {
+                    search.text = ""
+                    exportActive = true
+                }
+            }
         }
     ]
+
+    title: i18n("Assign Action")
 
     headerPaddingEnabled: false // Let the InlineMessage touch the edges
     header: ColumnLayout {
         spacing: 0
 
+        Kirigami.InlineMessage {
+            Layout.fillWidth: true
+            visible: true // MOCKUP, baby
+            text: i18n("Select an action for the gesture \"Swipe Up with 3 Fingers (Touchpad)\"")
+            position: Kirigami.InlineMessage.Position.Header
+            type: Kirigami.MessageType.Information
+        }
         Kirigami.InlineMessage {
             Layout.fillWidth: true
             visible: errorOccured

@@ -215,6 +215,9 @@ QVariant BaseModel::data(const QModelIndex &index, int role) const
         if (component.type == ComponentNS::Command) {
             return true;
         }
+        if (component.type == ComponentNS::SendInput) {
+            return false;
+        }
 
         if (component.id.endsWith(".desktop")) {
             // desktopfile-based system services cannot be removed
@@ -290,6 +293,7 @@ QHash<int, QByteArray> BaseModel::roleNames() const
         {Qt::DecorationRole, QByteArrayLiteral("decoration")},
         {SectionRole, QByteArrayLiteral("section")},
         {ComponentRole, QByteArrayLiteral("component")},
+        {ActionRole, QByteArrayLiteral("actionId")},
         {ActiveShortcutsRole, QByteArrayLiteral("activeShortcuts")},
         {DefaultShortcutsRole, QByteArrayLiteral("defaultShortcuts")},
         {CustomShortcutsRole, QByteArrayLiteral("customShortcuts")},

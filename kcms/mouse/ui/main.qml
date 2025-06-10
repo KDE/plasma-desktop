@@ -22,6 +22,20 @@ import org.kde.plasma.private.kcm_mouse as Mouse
 KCMUtils.SimpleKCM {
     id: root
 
+    actions: [
+        Kirigami.Action {
+            text: i18nc("@action:button", "Configure Screen Edges…")
+            icon.name: "bordertool-symbolic"
+            displayHint: Kirigami.DisplayHint.KeepVisible
+        },
+        Kirigami.Action {
+            text: i18nc("@action:button", "Configure Gestures…")
+            icon.name: "draw-polyline-symbolic"
+            displayHint: Kirigami.DisplayHint.KeepVisible
+            onTriggered: root.KCMUtils.ConfigModule.push("bindings.qml")
+        }
+    ]
+
     // Would be nice to use a `required` qualifier, but KQuickManagedConfigModule doesn't
     // have an API to provide a mapping of initial properties for the root page.
     readonly property Mouse.InputBackend backend: KCMUtils.ConfigModule.inputBackend
@@ -31,6 +45,34 @@ KCMUtils.SimpleKCM {
     header: Header {
         saveLoadMessage: root.KCMUtils.ConfigModule.saveLoadMessage
         hotplugMessage: root.KCMUtils.ConfigModule.hotplugMessage
+    }
+
+    topPadding: 0
+    ColumnLayout {
+        spacing: 0
+    Kirigami.NavigationTabBar {
+        Layout.fillWidth: true
+
+        Kirigami.Theme.inherit: false
+        Kirigami.Theme.colorSet: Kirigami.Theme.Window
+
+        actions: [
+            Kirigami.Action {
+                text: i18n("General")
+                icon.name: "cursor-arrow-symbolic"
+                checked: false
+            },
+            Kirigami.Action {
+                text: i18n("Mouse")
+                icon.name: "input-mouse-symbolic"
+                checked: true
+            },
+            Kirigami.Action {
+                text: i18n("Touchpad")
+                icon.name: "input-touchpad-symbolic"
+                checked: false
+            }
+        ]
     }
 
     Kirigami.FormLayout {
@@ -332,5 +374,6 @@ KCMUtils.SimpleKCM {
                 root.KCMUtils.ConfigModule.push("bindings.qml");
             }
         }
+    }
     }
 }

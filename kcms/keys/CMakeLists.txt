@@ -8,6 +8,7 @@ target_sources(kcm_keys PRIVATE
     kcm_keys.cpp
     filteredmodel.cpp
     globalaccelmodel.cpp
+    sendinputmodel.cpp
     shortcutsmodel.cpp
     standardshortcutsmodel.cpp
     keysdata.cpp
