@@ -18,6 +18,7 @@ namespace ComponentNS
 {
 Q_NAMESPACE
 enum ComponentType {
+    SendInput,
     Application,
     Command,
     SystemService,
