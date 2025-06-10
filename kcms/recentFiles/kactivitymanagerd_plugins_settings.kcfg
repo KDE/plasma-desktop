@@ -8,7 +8,7 @@
    <group name="Plugin-org.kde.ActivityManager.Resources.Scoring">
      <entry name="keepHistoryFor" key="keep-history-for" type="Int">
        <label>How many months keep the activity history</label>
-       <default>0</default>
+       <default>4</default>
      </entry>
      <entry name="blockedByDefault" key="blocked-by-default" type="Bool">
         <default>false</default>
