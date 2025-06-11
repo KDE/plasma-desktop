@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-06 00:44+0000\n"
-"PO-Revision-Date: 2025-04-07 00:22+0200\n"
+"PO-Revision-Date: 2025-06-10 22:36+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: contents/activitymanager/ActivityItem.qml:205
 #, kde-format
@@ -288,7 +288,7 @@ msgstr "단축키"
 #, kde-format
 msgctxt "@action:button set keyboard shortcut for"
 msgid "Activate widget as if clicked:"
-msgstr ""
+msgstr "클릭한 것처럼 위젯 활성화:"
 
 #: contents/configuration/ContainmentConfiguration.qml:27
 #, kde-format
@@ -311,28 +311,24 @@ msgid "Panel Settings"
 msgstr "패널 설정"
 
 #: contents/configuration/PanelConfiguration.qml:109
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible only, %1 is widget name"
-#| msgid "Add %1"
+#, kde-format
 msgctxt ""
 "@action:button label of button to open a menu that lets you add widgets or "
 "spacers"
 msgid "Add New"
-msgstr "%1 추가"
+msgstr "새로 추가"
 
 #: contents/configuration/PanelConfiguration.qml:127
-#, fuzzy, kde-format
-#| msgid "Add Spacer"
+#, kde-format
 msgctxt "@action:menu add a spacer"
 msgid "Spacer"
-msgstr "공백 추가"
+msgstr "간격 띄우기"
 
 #: contents/configuration/PanelConfiguration.qml:134
-#, fuzzy, kde-format
-#| msgid "Widgets"
+#, kde-format
 msgctxt "@action:menu add a widget"
 msgid "Widgets…"
-msgstr "위젯"
+msgstr "위젯…"
 
 #: contents/configuration/PanelConfiguration.qml:163
 #, kde-format
@@ -729,9 +725,7 @@ msgid "Close Widget Explorer"
 msgstr "위젯 탐색기 닫기"
 
 #: contents/explorer/WidgetExplorer.qml:208
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox accessible"
-#| msgid "Search Widgets"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Search through widgets"
 msgstr "위젯 검색"
@@ -801,9 +795,7 @@ msgid "Never show clock"
 msgstr "시계 표시 안 함"
 
 #: contents/lockscreen/config.qml:71
-#, fuzzy, kde-format
-#| msgctxt "@title: group"
-#| msgid "Media controls:"
+#, kde-format
 msgctxt "@title: group UI controls for playback of multimedia content"
 msgid "Media controls:"
 msgstr "미디어 제어:"

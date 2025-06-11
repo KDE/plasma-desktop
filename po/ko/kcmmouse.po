@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-04-07 00:19+0200\n"
+"PO-Revision-Date: 2025-06-10 22:33+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
@@ -215,10 +215,9 @@ msgid "Invert scroll direction"
 msgstr "스크롤 방향 뒤집기"
 
 #: ui/main.qml:330
-#, fuzzy, kde-format
-#| msgid "Press middle button and move mouse to scroll"
+#, kde-format
 msgid "Hold down middle button and move mouse to scroll"
-msgstr "마우스 가운데 단추를 누르고 이동하여 스크롤"
+msgstr "마우스 가운데 단추를 누르면서 이동하여 스크롤"
 
 #: ui/main.qml:342
 #, kde-format
@@ -229,6 +228,9 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+"일부 그림 편집기, 문서 뷰어, 게임 등 가운데 단추 드래그를 사용하는 앱에서는 "
+"의도한 대로 작동하지 않을 수도 있습니다. 장치에 관계 없이 사용할 수 있으나, "
+"스크롤 휠이 없는 장치에서 스크롤 휠 대체용으로 사용될 것을 가정했습니다."
 
 #~ msgid "Accept input through this device."
 #~ msgstr "이 장치가 보내는 입력을 받아 들입니다."

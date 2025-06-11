@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2024, 2025 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-30 00:44+0000\n"
-"PO-Revision-Date: 2024-02-19 21:39+0100\n"
+"PO-Revision-Date: 2025-06-10 22:29+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: axesmodel.cpp:122 hatmodel.cpp:80
 #, kde-format
@@ -58,20 +58,16 @@ msgid "Device:"
 msgstr "장치:"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgctxt "@label Visual representation of an axis position"
-#| msgid "Position:"
+#, kde-format
 msgctxt "@label Visual representation of the axis position for the left axis"
 msgid "Left position:"
-msgstr "위치:"
+msgstr "왼쪽 위치:"
 
 #: ui/main.qml:99
-#, fuzzy, kde-format
-#| msgctxt "@label Visual representation of an axis position"
-#| msgid "Position:"
+#, kde-format
 msgctxt "@label Visual representation of the axis position for the right axis"
 msgid "Right position:"
-msgstr "위치:"
+msgstr "오른쪽 위치:"
 
 #: ui/main.qml:118
 #, kde-format
