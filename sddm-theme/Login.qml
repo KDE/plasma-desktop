@@ -64,7 +64,7 @@ SessionManagementScreen {
 
         footer.enabled = false
         mainStack.enabled = false
-        userListComponent.userList.opacity = 0.5
+        userListComponent.userList.opacity = 0.75
 
         // This is partly because it looks nicer, but more importantly it
         // works round a Qt bug that can trigger if the app is closed with a

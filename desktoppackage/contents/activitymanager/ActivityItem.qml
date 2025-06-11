@@ -7,6 +7,7 @@
 import QtQuick 2.0
 
 import org.kde.plasma.components 3.0 as PlasmaComponents
+import org.kde.plasma.extras as PlasmaExtras
 import org.kde.plasma.activityswitcher as ActivitySwitcher
 import org.kde.kirigami 2.20 as Kirigami
 
@@ -126,7 +127,7 @@ Item {
                 topMargin  : 2 * Kirigami.Units.smallSpacing
             }
 
-            Text {
+            PlasmaExtras.ShadowedLabel {
                 id: title
 
                 color   : "white"
@@ -142,13 +143,12 @@ Item {
                 }
             }
 
-            Text {
+            PlasmaExtras.ShadowedLabel {
                 id: description
 
                 color   : "white"
                 elide   : Text.ElideRight
                 text    : model.description
-                opacity : .6
 
                 anchors {
                     top   : title.bottom
@@ -194,12 +194,11 @@ Item {
                 visible : false
             }
 
-            Text {
+            PlasmaExtras.ShadowedLabel {
                 id: lastUsedDate
 
                 color   : "white"
                 elide   : Text.ElideRight
-                opacity : .6
 
                 text: root.current ?
                         i18nd("plasma_shell_org.kde.plasma.desktop", "Currently being used") :
