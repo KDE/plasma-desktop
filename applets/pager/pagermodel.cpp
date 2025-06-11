@@ -58,6 +58,7 @@ public:
     static VirtualDesktopInfo *virtualDesktopInfo;
     QMetaObject::Connection virtualDesktopNumberConn;
     QMetaObject::Connection virtualDesktopNamesConn;
+    QMetaObject::Connection virtualDesktopPositionsConn;
 
     QList<WindowModel *> windowModels;
 
@@ -126,6 +127,12 @@ void PagerModel::Private::refreshDataSource()
             }
         });
 
+        virtualDesktopPositionsConn = QObject::connect(virtualDesktopInfo, &VirtualDesktopInfo::desktopPositionsChanged, q, [this]() {
+            if (q->rowCount()) {
+                q->refresh();
+            }
+        });
+
         QObject::disconnect(activityNumberConn);
         QObject::disconnect(activityNamesConn);
 
@@ -144,6 +151,7 @@ void PagerModel::Private::refreshDataSource()
 
         QObject::disconnect(virtualDesktopNumberConn);
         QObject::disconnect(virtualDesktopNamesConn);
+        QObject::disconnect(virtualDesktopPositionsConn);
 
         QObject::disconnect(virtualDesktopInfo, &VirtualDesktopInfo::currentDesktopChanged, q, &PagerModel::currentPageChanged);
         QObject::connect(activityInfo, &ActivityInfo::currentActivityChanged, q, &PagerModel::currentPageChanged, Qt::UniqueConnection);
@@ -251,6 +259,7 @@ void PagerModel::setEnabled(bool enabled)
         disconnect(d->activityNamesConn);
         disconnect(d->virtualDesktopNumberConn);
         disconnect(d->virtualDesktopNamesConn);
+        disconnect(d->virtualDesktopPositionsConn);
 
         qDeleteAll(d->windowModels);
         d->windowModels.clear();
