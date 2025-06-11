@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-01 00:43+0000\n"
-"PO-Revision-Date: 2025-04-16 00:11+0200\n"
+"PO-Revision-Date: 2025-06-10 22:32+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: ui/main.qml:25
 #, kde-format
@@ -35,7 +35,7 @@ msgstr "다시 시작"
 #, kde-format
 msgctxt "@title:group"
 msgid "Plasma"
-msgstr ""
+msgstr "Plasma"
 
 #: ui/main.qml:52
 #, kde-format
@@ -78,12 +78,10 @@ msgstr ""
 "표시를 허용합니다."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling"
-msgstr "스크롤:"
+msgstr "스크롤"
 
 #: ui/main.qml:100
 #, kde-format
@@ -135,7 +133,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "클릭"
 
 #: ui/main.qml:175
 #, kde-format
@@ -222,20 +220,17 @@ msgstr ""
 #: ui/main.qml:354
 #, kde-format
 msgid "Drag and Drop"
-msgstr ""
+msgstr "드래그 앤 드롭"
 
 #: ui/main.qml:361
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
-#| msgid "Clicking files or folders:"
+#, kde-format
 msgid "When dragging files or folders:"
-msgstr "파일 또는 폴더 클릭:"
+msgstr "파일이나 폴더를 드래그할 때:"
 
 #: ui/main.qml:362
 #, kde-format
 msgid "Always ask what to do"
-msgstr ""
+msgstr "항상 원하는 것 묻기"
 
 #: ui/main.qml:378
 #, kde-kuit-format
@@ -245,30 +240,33 @@ msgid ""
 "and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise show a "
 "dialog."
 msgstr ""
+"<shortcut>Shift</shortcut> 키를 누르고 있으면 이동, <shortcut>Ctrl</"
+"shortcut> 키를 누르고 있으면 복사, <shortcut>Shift+Ctrl</shortcut> 키를 누르"
+"고 있으면 심볼릭 링크를 생성합니다. 그렇지 않으면 대화 상자를 표시합니다."
 
 #: ui/main.qml:386
 #, kde-format
 msgid "Move if on the same device"
-msgstr ""
+msgstr "같은 장치에 있을 때에는 이동"
 
 #: ui/main.qml:402
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
 msgstr ""
+"드롭할 때 <shortcut>Shift</shortcut> 키를 누르고 있으면 다른 옵션을 표시합니"
+"다."
 
 #: ui/main.qml:410
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Touch"
-msgstr "터치 모드:"
+msgstr "터치"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgid "Enable Touch Mode:"
-msgstr "터치 모드:"
+msgstr "터치 모드 활성화:"
 
 #: ui/main.qml:418
 #, kde-format
@@ -293,18 +291,16 @@ msgstr ""
 "로 활성화합니다. 예: 컨버터블 노트북의 키보드가 뒤집혔거나 분리되었을 때."
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always enabled"
+#, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always active"
-msgstr "항상 사용함"
+msgstr "항상 활성화"
 
 #: ui/main.qml:463
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Disabled"
-msgstr ""
+msgstr "사용 안 함"
 
 #: ui/main.qml:486
 #, kde-format
@@ -328,6 +324,8 @@ msgid ""
 "For local files on the same device, whether dragging and dropping will "
 "perform a move operation instead of showing the options menu"
 msgstr ""
+"같은 장치에 있는 로컬 파일을 드래그 앤 드롭할 때에는 옵션 메뉴를 표시하지 않"
+"고 이동 작업 수행"
 
 #. i18n: ectx: label, entry (smoothScroll), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21

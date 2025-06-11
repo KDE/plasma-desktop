@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-04-07 00:20+0200\n"
+"PO-Revision-Date: 2025-06-10 22:33+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -183,7 +183,7 @@ msgstr "터치 모드에서 자동으로 비활성화됨"
 #: package/contents/ui/ConfigGeneral.qml:200
 #, kde-format
 msgid "Highlight newly installed applications"
-msgstr ""
+msgstr "새로 설치한 앱 강조"
 
 #: package/contents/ui/ConfigGeneral.qml:205
 #, kde-format
@@ -305,14 +305,13 @@ msgstr "열린 상태로 유지"
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "새 앱!"
 
 #: package/contents/ui/KickoffGridDelegate.qml:61
 #: package/contents/ui/KickoffListDelegate.qml:121
-#, fuzzy, kde-format
-#| msgid "Recently Used Applications"
+#, kde-format
 msgid "Newly installed application"
-msgstr "최근 사용된 프로그램"
+msgstr "새로 설치한 앱"
 
 #: package/contents/ui/KickoffGridView.qml:102
 #, kde-format
@@ -322,7 +321,7 @@ msgstr "%1줄, %2칸 크기 격자"
 #: package/contents/ui/KickoffListDelegate.qml:120
 #, kde-format
 msgid "There is a newly installed application in this category"
-msgstr ""
+msgstr "이 분류에 새로 설치한 앱이 있음"
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
@@ -330,10 +329,9 @@ msgid "More"
 msgstr "더 보기"
 
 #: package/contents/ui/LeaveButtons.qml:169
-#, fuzzy, kde-format
-#| msgid "Session actions"
+#, kde-format
 msgid "Session and Power "
-msgstr "세션 동작"
+msgstr "세션과 전원 "
 
 #: package/contents/ui/main.qml:355
 #, kde-format

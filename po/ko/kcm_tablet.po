@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-26 00:43+0000\n"
-"PO-Revision-Date: 2025-04-16 00:10+0200\n"
+"PO-Revision-Date: 2025-06-10 22:29+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: inputsequence.cpp:172
 #, kde-format
@@ -440,12 +440,10 @@ msgstr ""
 msgctxt ""
 "'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)"
 msgid "Mode:"
-msgstr ""
+msgstr "모드:"
 
 #: ui/StylusTab.qml:248
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Pen"
+#, kde-format
 msgctxt ""
 "Pen mode, where the point on the screen is always where you touch the stylus"
 msgid "Pen"
@@ -454,20 +452,20 @@ msgstr "펜"
 #: ui/StylusTab.qml:253
 #, kde-format
 msgid "The cursor follows where you touch the pen on the surface"
-msgstr ""
+msgstr "펜이 표면에 닿는 위치로 커서를 이동"
 
 #: ui/StylusTab.qml:274
 #, kde-format
 msgctxt "Mouse mode, or like using the tablet like a giant touchpad"
 msgid "Mouse"
-msgstr ""
+msgstr "마우스"
 
 #: ui/StylusTab.qml:279
 #, kde-format
 msgid ""
 "Moving the pen on the surface moves the cursor relative to where it was, "
 "like a mouse"
-msgstr ""
+msgstr "펜을 표면에서 이동하면 마우스처럼 기존 위치에 상대적으로 커서 이동"
 
 #: ui/StylusTab.qml:349
 #, kde-format

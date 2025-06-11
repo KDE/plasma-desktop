@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-28 02:39+0000\n"
-"PO-Revision-Date: 2025-04-07 00:19+0200\n"
+"PO-Revision-Date: 2025-06-10 22:33+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -317,88 +317,76 @@ msgid "Configure Preview Plugins…"
 msgstr "미리 보기 플러그인 설정…"
 
 #: package/contents/ui/ConfigLocation.qml:81
-#, fuzzy, kde-format
-#| msgid "Show:"
+#, kde-format
 msgctxt "@title:group form label for radiobutton group"
 msgid "Show:"
 msgstr "표시:"
 
 #: package/contents/ui/ConfigLocation.qml:83
-#, fuzzy, kde-format
-#| msgid "Desktop folder"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Desktop folder"
 msgstr "바탕 화면 폴더"
 
 #: package/contents/ui/ConfigLocation.qml:91
-#, fuzzy, kde-format
-#| msgid "Files linked to the current activity"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Files linked to the current activity"
 msgstr "현재 활동과 연결된 파일만 표시"
 
 #: package/contents/ui/ConfigLocation.qml:100
-#, fuzzy, kde-format
-#| msgid "Places panel item:"
+#, kde-format
 msgctxt "@option:radio also label for combobox"
 msgid "Places panel item:"
 msgstr "위치 패널 항목:"
 
 #: package/contents/ui/ConfigLocation.qml:137
-#, fuzzy, kde-format
-#| msgid "Custom location:"
+#, kde-format
 msgctxt "@option:radio also label for text field"
 msgid "Custom location:"
 msgstr "사용자 정의 위치:"
 
 #: package/contents/ui/ConfigLocation.qml:145
-#, fuzzy, kde-format
-#| msgid "Type path or URL…"
+#, kde-format
 msgctxt "@info:placeholder custom location"
 msgid "Type path or URL…"
 msgstr "경로나 URL 입력…"
 
 #: package/contents/ui/ConfigLocation.qml:188
-#, fuzzy, kde-format
-#| msgid "Title:"
+#, kde-format
 msgctxt "@label:textbox custom widget title"
 msgid "Title:"
 msgstr "제목:"
 
 #: package/contents/ui/ConfigLocation.qml:197
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "@item:inlistbox no title"
 msgid "None"
 msgstr "없음"
 
 #: package/contents/ui/ConfigLocation.qml:198
-#, fuzzy, kde-format
-#| msgid "Default"
+#, kde-format
 msgctxt "@item:inlistbox default title"
 msgid "Default"
 msgstr "기본값"
 
 #: package/contents/ui/ConfigLocation.qml:199
-#, fuzzy, kde-format
-#| msgid "Full path"
+#, kde-format
 msgctxt "@item:inlistbox full path as title"
 msgid "Full path"
 msgstr "전체 경로"
 
 #: package/contents/ui/ConfigLocation.qml:200
-#, fuzzy, kde-format
-#| msgid "Custom title"
+#, kde-format
 msgctxt "@item:inlistbox title from text input field"
 msgid "Custom"
-msgstr "사용자 정의 제목"
+msgstr "사용자 정의"
 
 #: package/contents/ui/ConfigLocation.qml:209
-#, fuzzy, kde-format
-#| msgid "Enter custom title…"
+#, kde-format
 msgctxt "@info:placeholder custom window title"
 msgid "Enter title…"
-msgstr "사용자 정의 제목 입력…"
+msgstr "제목을 입력하십시오…"
 
 #: package/contents/ui/ConfigOverlay.qml:98
 #, kde-format

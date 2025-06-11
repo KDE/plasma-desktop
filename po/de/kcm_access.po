@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2024 Alois Spitzbart <spitz234@hotmail.com>
+# SPDX-FileCopyrightText: 2024, 2025 Alois Spitzbart <spitz234@hotmail.com>
 # SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
 # Thomas Diehl <thd@kde.org>, 2002, 2003.
 # Stephan Johach <hunsum@gmx.de>, 2005.
@@ -12,15 +12,15 @@ msgstr ""
 "Project-Id-Version: kcm_access\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-28 00:42+0000\n"
-"PO-Revision-Date: 2024-08-27 19:59+0200\n"
-"Last-Translator: Flori G <Renner03@protonmail.com>\n"
+"PO-Revision-Date: 2025-04-27 16:14+0200\n"
+"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: kcmaccess.cpp:118
 #, kde-format
@@ -169,7 +169,7 @@ msgstr "Dauer des sichtbaren Signals"
 #: kcmaccessibilitycolorblindnesscorrection.kcfg:13
 #, kde-format
 msgid "Whether Colorblindness Correction is enabled"
-msgstr ""
+msgstr "Gibt an, ob die Korrektur für Farbenblindheit aktiviert ist"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
@@ -311,15 +311,13 @@ msgid "Magnification"
 msgstr "Vergrößerung"
 
 #: ui/ActivationShortcuts.qml:18
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgctxt "@option:check"
 msgid "Activation shortcuts:"
-msgstr "Aktivierungsgesten"
+msgstr "Kurzbefehle zur Aktivierung:"
 
 #: ui/ActivationShortcuts.qml:19
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "Enable activation shortcuts"
 msgid "Enable"
 msgstr "Aktivieren"
@@ -328,34 +326,29 @@ msgstr "Aktivieren"
 #, kde-format
 msgctxt "@label"
 msgid "Press Shift 5 times to enable Sticky Keys"
-msgstr ""
+msgstr "Umschalt 5-mal drücken um klebende Tasten zu aktivieren"
 
 #: ui/ActivationShortcuts.qml:38
 #, kde-format
 msgctxt "@label"
 msgid "Hold Shift for 8 seconds to enable Slow Keys"
-msgstr ""
+msgstr "Umschalt 8 Sekunden lang drücken um verlangsamte Tasten zu aktivieren"
 
 #: ui/ActivationShortcuts.qml:47
-#, fuzzy, kde-format
-#| msgid ""
-#| "Turn sticky keys and slow keys off after a certain period of inactivity."
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable sticky and slow keys after:"
-msgstr ""
-"Klebende und verlangsamte Tasten bei Inaktivität automatisch deaktivieren"
+msgstr "Klebende und verlangsamte Tasten deaktivieren nach:"
 
 #: ui/ActivationShortcuts.qml:71
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid "%1 min"
 msgid_plural "%1 min"
-msgstr[0] " Min."
-msgstr[1] " Min."
+msgstr[0] "%1 Min."
+msgstr[1] "%1 Min."
 
 #: ui/ActivationShortcuts.qml:80
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgctxt "short for minute(s)"
 msgid "min"
 msgid_plural "min"
@@ -363,10 +356,9 @@ msgstr[0] " Min."
 msgstr[1] " Min."
 
 #: ui/ActivationShortcuts.qml:89
-#, fuzzy, kde-format
-#| msgid "When a gesture is used:"
+#, kde-format
 msgid "When a shortcut is used:"
-msgstr "Wenn eine Geste benutzt wird:"
+msgstr "Wenn ein Kurzbefehl benutzt wird:"
 
 #: ui/ActivationShortcuts.qml:90
 #, kde-format
@@ -374,8 +366,7 @@ msgid "Display a confirmation dialog"
 msgstr "Bestätigungsdialog anzeigen"
 
 #: ui/ActivationShortcuts.qml:101
-#, fuzzy, kde-format
-#| msgid "Ring the System Bell"
+#, kde-format
 msgid "Ring the system bell"
 msgstr "Signalton des Systems verwenden"
 
@@ -439,19 +430,16 @@ msgid "Enable"
 msgstr "Aktivieren"
 
 #: ui/Bell.qml:107
-#, fuzzy, kde-format
-#| msgctxt "Invert screen on a system bell"
-#| msgid "Invert Screen"
+#, kde-format
 msgctxt "@option:radio Invert screen colors when a system bell is rung"
 msgid "Invert screen colors"
-msgstr "Bildschirm invertieren"
+msgstr "Bildschirmfarben umkehren"
 
 #: ui/Bell.qml:125
-#, fuzzy, kde-format
-#| msgid "F&lash screen"
+#, kde-format
 msgctxt "@option:radio Flash screen when a system bell is rung"
 msgid "Flash screen"
-msgstr "Aufleuchten des &Bildschirms"
+msgstr "Aufleuchten des Bildschirms"
 
 #: ui/Bell.qml:136
 #, kde-format
@@ -468,12 +456,11 @@ msgstr "Dauer:"
 #: ui/Bell.qml:165 ui/KeyboardFilters.qml:56 ui/KeyboardFilters.qml:157
 #: ui/MouseNavigation.qml:53 ui/MouseNavigation.qml:84
 #: ui/MouseNavigation.qml:110
-#, fuzzy, kde-format
-#| msgid " min"
+#, kde-format
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] " Min."
-msgstr[1] " Min."
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
 
 #: ui/Bell.qml:169 ui/KeyboardFilters.qml:65 ui/KeyboardFilters.qml:164
 #: ui/MouseNavigation.qml:61 ui/MouseNavigation.qml:88
@@ -482,18 +469,17 @@ msgstr[1] " Min."
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ms"
+msgstr[1] "ms"
 
 #: ui/ColorblindnessCorrection.qml:22
 #, kde-format
 msgctxt "@label"
 msgid "Color blindness correction:"
-msgstr ""
+msgstr "Korrektur für Farbenblindheit:"
 
 #: ui/ColorblindnessCorrection.qml:23
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable color blindness correction effect"
 msgid "Enable"
 msgstr "Aktivieren"
@@ -502,63 +488,63 @@ msgstr "Aktivieren"
 #, kde-format
 msgctxt "@label"
 msgid "Mode:"
-msgstr ""
+msgstr "Modus:"
 
 #: ui/ColorblindnessCorrection.qml:41
 #, kde-format
 msgctxt "@option"
 msgid "Protanopia (red weak)"
-msgstr ""
+msgstr "Protanopie (Rotschwäche)"
 
 #: ui/ColorblindnessCorrection.qml:42
 #, kde-format
 msgctxt "@option"
 msgid "Deuteranopia (green weak)"
-msgstr ""
+msgstr "Deuteranopie (Grünschwäche)"
 
 #: ui/ColorblindnessCorrection.qml:43
 #, kde-format
 msgctxt "@option"
 msgid "Tritanopia (blue-yellow)"
-msgstr ""
+msgstr "Tritanopie (Blau-Gelb)"
 
 #: ui/ColorblindnessCorrection.qml:58
 #, kde-format
 msgctxt "@label"
 msgid "Intensity:"
-msgstr ""
+msgstr "Intensität:"
 
 #: ui/ColorblindnessCorrection.qml:81
 #, kde-format
 msgctxt "@label Mild color blindness correction intensity"
 msgid "Mild"
-msgstr ""
+msgstr "Sanft"
 
 #: ui/ColorblindnessCorrection.qml:88
 #, kde-format
 msgctxt "@label Intense color blindness correction intensity"
 msgid "Intense"
-msgstr ""
+msgstr "Kräftig"
 
 #: ui/ColorblindnessCorrection.qml:111
 #, kde-format
 msgid "Red"
-msgstr ""
+msgstr "Rot"
 
 #: ui/ColorblindnessCorrection.qml:112
 #, kde-format
 msgid "Green"
-msgstr ""
+msgstr "Grün"
 
 #: ui/ColorblindnessCorrection.qml:113
 #, kde-format
 msgid "Blue"
-msgstr ""
+msgstr "Blau"
 
 #: ui/ColorblindnessCorrection.qml:114
 #, kde-format
 msgid "Purple"
-msgstr ""
+msgstr "Lila"
 
 #: ui/KeyboardFilters.qml:18
 #, kde-format
@@ -579,6 +565,10 @@ msgid ""
 "Useful if you accidentally type more than one key at a time or have "
 "difficulty pressing the key you want the first time."
 msgstr ""
+"Damit eine Taste angenommen wird, muss sie eine bestimmte Zeit lang gedrückt "
+"werden. Nützlich, wenn Sie versehentlich auf mehr als eine Taste drücken "
+"oder wenn Sie Schwierigkeiten haben, die gewünschte Taste beim ersten Mal zu "
+"treffen."
 
 #: ui/KeyboardFilters.qml:41
 #, kde-format
@@ -628,6 +618,9 @@ msgid ""
 "tremors that cause you to press a key multiple times when you only intend to "
 "press once."
 msgstr ""
+"Schnelle, wiederholte Tastendrücke auf dieselbe Taste werden ignoriert. "
+"Nützlich, wenn Sie aufgrund eines Handzitterns eine Taste mehrmals drücken, "
+"obwohl Sie sie nur einmal drücken wollten."
 
 #: ui/KeyboardFilters.qml:142
 #, kde-format
@@ -641,11 +634,10 @@ msgid "Ring system bell when rejected"
 msgstr "Signalton verwenden, wenn zurückgewiesen"
 
 #: ui/main.qml:28
-#, fuzzy, kde-format
-#| msgid "Use System Bell"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "System Bell"
-msgstr "Signalton des Systems verwenden"
+msgstr "Signalton des Systems"
 
 #: ui/main.qml:33
 #, kde-format
@@ -666,10 +658,9 @@ msgid "Mouse Navigation"
 msgstr "Mausnavigation"
 
 #: ui/main.qml:48
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgid "Activation Shortcuts"
-msgstr "Aktivierungsgesten"
+msgstr "Kurzbefehle zur Aktivierung"
 
 #: ui/main.qml:53
 #, kde-format
@@ -681,7 +672,7 @@ msgstr "Screenreader"
 #, kde-format
 msgctxt "Correction for color blindness"
 msgid "Color Blindness Correction"
-msgstr ""
+msgstr "Korrektur für Farbenblindheit"
 
 #: ui/main.qml:63
 #, kde-format
@@ -690,15 +681,13 @@ msgid "Shake Cursor"
 msgstr "Zeiger schütteln"
 
 #: ui/ModifierKeys.qml:17
-#, fuzzy, kde-format
-#| msgid "Sticky keys:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sticky keys:"
 msgstr "Klebende Tasten:"
 
 #: ui/ModifierKeys.qml:22
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable sticky keys"
 msgid "Enable"
 msgstr "Aktivieren"
@@ -711,13 +700,15 @@ msgid ""
 "though they “stick in place” and no longer need to be held down when typing "
 "a keyboard shortcut."
 msgstr ""
+"Sondertasten wie Strg, Umschalt, Alt und die Meta-/Super-/Windows-Taste "
+"verhalten sich so, als ob sie „an Ort und Stelle bleiben“ und müssen nicht "
+"mehr gedrückt gehalten werden, wenn ein Tastaturkurzbefehl eingegeben wird."
 
 #: ui/ModifierKeys.qml:39
-#, fuzzy, kde-format
-#| msgid "Lock the sticky keys"
+#, kde-format
 msgctxt "@option:check"
 msgid "Lock sticky keys"
-msgstr "„Klebende“ Tasten einrasten"
+msgstr "Klebende Tasten einrasten"
 
 #: ui/ModifierKeys.qml:51
 #, kde-format
@@ -726,6 +717,9 @@ msgid ""
 "Pressing a modifier key twice will keep it in active state until pressed "
 "again."
 msgstr ""
+"Sobald sie gesperrt sind, wird der „klebrige“ Status der Sondertasten nicht "
+"deaktiviert, bis ein Tastatur-Kurzbefehl abgeschlossen oder eine Nicht-"
+"Sondertaste gedrückt wird."
 
 #: ui/ModifierKeys.qml:57
 #, kde-format
@@ -738,50 +732,45 @@ msgid "Ring system bell when modifier keys are used"
 msgstr "Signalton verwenden, wenn eine Sondertaste gedrückt wurde"
 
 #: ui/ModifierKeys.qml:88
-#, fuzzy, kde-format
-#| msgid "Feedback:"
+#, kde-format
 msgctxt "@option:check Feedback options:"
 msgid "Feedback:"
 msgstr "Rückmeldung:"
 
 #: ui/ModifierKeys.qml:93
-#, fuzzy, kde-format
-#| msgid "Ring system bell when locking keys are toggled"
+#, kde-format
 msgctxt "@option:check"
 msgid "Ring system bell when locking keys are used"
-msgstr "Signalton verwenden, wenn Sperrtasten umgeschaltet wurden"
+msgstr "Signalton verwenden, wenn Sperrtasten verwendet werden"
 
 #: ui/ModifierKeys.qml:104
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The locking keys are Caps Lock, Num Lock, and Scroll Lock."
 msgstr ""
+"Die Sperrtasten sind Feststelltaste, NumLock-Taste und ScrollLock-Taste."
 
 #: ui/ModifierKeys.qml:108
-#, fuzzy, kde-format
-#| msgid "Show notification when modifier or locking keys are used"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show notification when modifier or locking keys are used"
 msgstr ""
 "Benachrichtigung anzeigen, wenn Sonder- oder Sperrtasten gedrückt wurden"
 
 #: ui/ModifierKeys.qml:120
-#, fuzzy, kde-format
-#| msgid "Configure Notifications…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Notifications…"
 msgstr "Benachrichtigungen festlegen ..."
 
 #: ui/MouseNavigation.qml:17
-#, fuzzy, kde-format
-#| msgid "Use number pad to move cursor:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move cursor:"
 msgstr "Zahlenblock verwenden um den Mauszeiger zu bewegen:"
 
 #: ui/MouseNavigation.qml:22
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable mouse navigation"
 msgid "Enable"
 msgstr "Aktivieren"
@@ -796,65 +785,65 @@ msgid ""
 "up). The keys <shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</"
 "shortcut>, and <shortcut>9</shortcut> allow for diagonal movement."
 msgstr ""
+"Die Tasten des Zehnerblocks  <shortcut>5</shortcut> funktioniert wie ein "
+"Mausklick. Die Tasten <shortcut>2</shortcut>, <shortcut>4</shortcut>, "
+"<shortcut>6</shortcut> und <shortcut>8</shortcut> ermöglichen eine "
+"rechtwinkelige Bewegung (nach unten, links, rechts und oben). Die Tasten "
+"<shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</shortcut> und "
+"<shortcut>9</shortcut> ermöglichen eine diagonale Bewegung."
 
 #: ui/MouseNavigation.qml:39
-#, fuzzy, kde-format
-#| msgid "Acceleration delay:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
 msgstr "Zeigerverzögerung:"
 
 #: ui/MouseNavigation.qml:66
-#, fuzzy, kde-format
-#| msgid "Repeat interval:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Repeat interval:"
 msgstr "Wiederholungsabstand:"
 
 #: ui/MouseNavigation.qml:93
-#, fuzzy, kde-format
-#| msgid "Acceleration time:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "Zeigerbeschleunigung:"
 
 #: ui/MouseNavigation.qml:118
-#, fuzzy, kde-format
-#| msgid "Maximum speed:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr "Maximale Geschwindigkeit:"
 
 #: ui/MouseNavigation.qml:132
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
 msgstr "Zeigerbeschleunigung:"
 
 #: ui/ScreenReader.qml:20
-#, fuzzy, kde-format
-#| msgid "Launch Orca Screen Reader Configuration…"
+#, kde-format
 msgctxt "@info Placeholder message title"
 msgid "The Orca Screen Reader is not installed"
-msgstr "Orca-Screenreader-Einrichtung starten ..."
+msgstr "Orca-Screenreader ist nicht installiert"
 
 #: ui/ScreenReader.qml:21
 #, kde-format
 msgctxt "@info Placeholder message explanation"
 msgid "Please install it, then close and reopen this window"
 msgstr ""
+"Bitte installieren Sie ihn, dann schließen Sie dieses Fenster und öffnen es "
+"erneut"
 
 #: ui/ScreenReader.qml:27
-#, fuzzy, kde-format
-#| msgid "Enable Screen Reader"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable Screen Reader"
 msgstr "Screenreader aktivieren"
 
 #: ui/ScreenReader.qml:39
-#, fuzzy, kde-format
-#| msgid "Launch Orca Screen Reader Configuration…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Launch Orca Screen Reader Configuration…"
 msgstr "Orca-Screenreader-Einrichtung starten ..."
