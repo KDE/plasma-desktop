@@ -48,39 +48,6 @@ Kirigami.FormLayout {
             enabled: kcm.zoomMagnifierSettings.zoom
 
             QQC2.SpinBox {
-                id: zoomZoomFactorSpinBox
-                Kirigami.FormData.label: i18nc("@label:spinbox", "Zoom factor:")
-
-                from: toInt(1.05)
-                to: toInt(4)
-                stepSize: toInt(0.05)
-
-                validator: IntValidator {
-                    bottom: Math.min(zoomZoomFactorSpinBox.from, zoomZoomFactorSpinBox.to)
-                    top: Math.max(zoomZoomFactorSpinBox.from, zoomZoomFactorSpinBox.to)
-                }
-
-                textFromValue: (value, locale) => fromInt(value).toLocaleString(locale, 'f', 2)
-                valueFromText: (text, locale) => Math.round(toInt(Number.fromLocaleString(locale, text)))
-
-                value: toInt(kcm.zoomMagnifierSettings.zoomZoomFactor)
-                onValueModified: kcm.zoomMagnifierSettings.zoomZoomFactor = fromInt(value)
-
-                function toInt(value: double) : int {
-                    return value * 20;
-                }
-
-                function fromInt(value: int) : double {
-                    return value / 20;
-                }
-
-                KCM.SettingStateBinding {
-                    configObject: kcm.zoomMagnifierSettings
-                    settingName: "ZoomZoomFactor"
-                }
-            }
-
-            QQC2.SpinBox {
                 id: zoomPixelGridZoomSpinBox
                 Kirigami.FormData.label: i18nc("@label:spinbox", "Show pixel grid at zoom level:")
 
@@ -296,6 +263,7 @@ Kirigami.FormLayout {
     }
 
     QQC2.RadioButton {
+        id: noneRadioButton
         QQC2.ButtonGroup.group: effectGroup
 
         text: i18nc("@option:check, disable zoom/magnify effect", "Disabled")
@@ -303,6 +271,44 @@ Kirigami.FormLayout {
         onToggled: { kcm.zoomMagnifierSettings.zoom = false; kcm.zoomMagnifierSettings.magnifier = false; }
 
         KCM.SettingHighlighter { highlight: !kcm.zoomMagnifierSettings.zoom }
+    }
+
+    Item {
+        Kirigami.FormData.isSection: true
+    }
+
+    QQC2.SpinBox {
+        id: sharedZoomFactorSpinBox
+        Kirigami.FormData.label: i18nc("@label:spinbox", "Zoom factor:")
+
+        from: toInt(1.05)
+        to: toInt(4)
+        stepSize: toInt(0.05)
+
+        validator: IntValidator {
+            bottom: Math.min(sharedZoomFactorSpinBox.from, sharedZoomFactorSpinBox.to)
+            top: Math.max(sharedZoomFactorSpinBox.from, sharedZoomFactorSpinBox.to)
+        }
+
+        textFromValue: (value, locale) => fromInt(value).toLocaleString(locale, 'f', 2)
+        valueFromText: (text, locale) => Math.round(toInt(Number.fromLocaleString(locale, text)))
+
+        value: toInt(kcm.zoomMagnifierSettings.sharedZoomFactor)
+        onValueModified: kcm.zoomMagnifierSettings.sharedZoomFactor = fromInt(value)
+
+        function toInt(value: double) : int {
+            return value * 20;
+        }
+
+        function fromInt(value: int) : double {
+            return value / 20;
+        }
+
+        KCM.SettingStateBinding {
+            configObject: kcm.zoomMagnifierSettings
+            settingName: "SharedZoomFactor"
+            extraEnabledConditions: kcm.zoomMagnifierSettings.zoom || kcm.zoomMagnifierSettings.magnifier
+        }
     }
 
     Item {
