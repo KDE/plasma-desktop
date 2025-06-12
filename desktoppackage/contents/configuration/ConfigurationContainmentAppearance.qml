@@ -169,8 +169,10 @@ SimpleKCM {
                 const wallpaperConfig = configDialog.wallpaperConfiguration
                 // BUG 407619: wallpaperConfig can be null before calling `ContainmentItem::loadWallpaper()`
                 if (wallpaperConfig && sourceFile) {
-
-                    var props = { configDialog = configDialog }
+                    var props = {
+                        "configDialog": configDialog,
+                        "wallpaperConfiguration": Qt.binding(() => Plasmoid.wallpaperGraphicsObject.configuration)
+                    }
 
                     // Some third-party wallpaper plugins need the config keys to be set initially.
                     // We should not break them within one Plasma major version, but setting everything
