@@ -617,7 +617,7 @@ PlasmaCore.ToolTipArea {
             bottomMargin: taskFrame.margins.bottom
         }
 
-        wrapMode: (maximumLineCount === 1) ? Text.NoWrap : Text.Wrap
+        wrapMode: (maximumLineCount === 1) ? Text.NoWrap : Text.WrapAnywhere
         elide: Text.ElideRight
         textFormat: Text.PlainText
         verticalAlignment: Text.AlignVCenter
