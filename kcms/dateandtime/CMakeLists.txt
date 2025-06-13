@@ -26,8 +26,6 @@ target_link_libraries(kcm_clock
     KF6::KIOCore
     KF6::KIOWidgets
     KF6::Svg
-    ICU::i18n
-    ICU::uc
 )
 install(TARGETS kcm_clock  DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings_qwidgets )
 
