@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-22 00:44+0000\n"
+"POT-Creation-Date: 2025-06-13 00:44+0000\n"
 "PO-Revision-Date: 2022-08-11 14:20+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -45,35 +45,37 @@ msgstr "ryuichi_ya220@outlook.jp"
 msgid "Replace an existing instance"
 msgstr "既存のインスタンスを置換"
 
-#: app/ui/CategoryPage.qml:35 app/ui/Emojier.qml:62
-#, kde-format
-msgid "Search"
-msgstr "検索"
+#: app/ui/CategoryPage.qml:33 app/ui/Emojier.qml:62
+#, fuzzy, kde-format
+#| msgid "All"
+msgctxt "@title:page All emojis"
+msgid "All"
+msgstr "すべて"
 
-#: app/ui/CategoryPage.qml:87
+#: app/ui/CategoryPage.qml:93
 #, kde-format
 msgid "Clear History"
 msgstr "履歴をクリア"
 
-#: app/ui/CategoryPage.qml:113
+#: app/ui/CategoryPage.qml:119
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Character"
 msgstr ""
 
-#: app/ui/CategoryPage.qml:116 app/ui/CategoryPage.qml:124
+#: app/ui/CategoryPage.qml:122 app/ui/CategoryPage.qml:130
 #: app/ui/Emojier.qml:40
 #, kde-format
 msgid "%1 copied to the clipboard"
 msgstr "%1 がクリップボードにコピーされました"
 
-#: app/ui/CategoryPage.qml:121
+#: app/ui/CategoryPage.qml:127
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Description"
 msgstr ""
 
-#: app/ui/CategoryPage.qml:211
+#: app/ui/CategoryPage.qml:217
 #, kde-format
 msgid "No recent Emojis"
 msgstr "最近使用した絵文字はありません"
@@ -83,12 +85,7 @@ msgstr "最近使用した絵文字はありません"
 msgid "Recent"
 msgstr "最近"
 
-#: app/ui/Emojier.qml:78
-#, kde-format
-msgid "All"
-msgstr "すべて"
-
-#: app/ui/Emojier.qml:89
+#: app/ui/Emojier.qml:80
 #, kde-format
 msgid "Categories"
 msgstr "カテゴリ"
@@ -142,3 +139,6 @@ msgstr ""
 msgctxt "Emoji Category"
 msgid "Flags"
 msgstr ""
+
+#~ msgid "Search"
+#~ msgstr "検索"

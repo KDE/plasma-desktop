@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-28 00:42+0000\n"
+"POT-Creation-Date: 2025-06-13 00:44+0000\n"
 "PO-Revision-Date: 2025-02-28 10:36-0600\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -20,67 +20,57 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 
-#: kcmaccess.cpp:118
+#: kcmaccess.cpp:127 kcmaccess.cpp:155
 #, kde-format
-msgid "AltGraph"
-msgstr "AltGraph"
+msgid "KWin"
+msgstr ""
 
-#: kcmaccess.cpp:120
+#: kcmaccess.cpp:130
 #, kde-format
-msgid "Hyper"
-msgstr "ਹਾਇਪਰ"
-
-#: kcmaccess.cpp:122
-#, kde-format
-msgid "Super"
-msgstr "ਸੁਪਰ"
-
-#: kcmaccess.cpp:132
-#, kde-format
-msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
-msgstr "ਜਦੋਂ ਨਮ-ਲਾਕ, ਕੈਪਸ-ਲਾਕ ਅਤੇ ਸਕਰੋਲ-ਲਾਕ ਐਕਟਿਵ ਹੋਣ ਤਾਂ %1 ਦੱਬੋ।"
-
-#: kcmaccess.cpp:133
-#, kde-format
-msgid "Press %1 while CapsLock and ScrollLock are active"
-msgstr "ਜਦੋਂ ਕੈਪਸ-ਲਾਕ ਅਤੇ ਸਕਰੋਲ-ਲਾਕ ਐਕਟਿਵ ਹੋਣ ਤਾਂ %1 ਦੱਬੋ।"
-
-#: kcmaccess.cpp:134
-#, kde-format
-msgid "Press %1 while NumLock and ScrollLock are active"
-msgstr "ਜਦੋਂ ਨਮ-ਲਾਕ ਅਤੇ ਸਕਰੋਲ-ਲਾਕ ਐਕਟਿਵ ਹੋਣ ਤਾਂ %1 ਦੱਬੋ।"
-
-#: kcmaccess.cpp:135
-#, kde-format
-msgid "Press %1 while ScrollLock is active"
-msgstr "ਜਦੋਂ ਸਕਰੋਲ-ਲਾਕ ਐਕਟਿਵ ਹੋਵੇ ਤਾਂ %1 ਦੱਬੋ।"
+msgid "Toggle Invert Effect"
+msgstr ""
 
 #: kcmaccess.cpp:136
 #, kde-format
-msgid "Press %1 while NumLock and CapsLock are active"
-msgstr "ਜਦੋਂ ਨਮ-ਲਾਕ ਅਤੇ ਕੈਪਸ-ਲਾਕ ਐਕਟਿਵ ਹੋਣ ਤਾਂ %1 ਦੱਬੋ।"
+msgid "Toggle Invert Effect on Window"
+msgstr ""
 
-#: kcmaccess.cpp:137
+#: kcmaccess.cpp:178
 #, kde-format
-msgid "Press %1 while CapsLock is active"
-msgstr "ਜਦੋਂ ਕੈਪਸ-ਲਾਕ ਐਕਟਿਵ ਹੋਵੇ ਤਾਂ %1 ਦੱਬੋ।"
+msgid "Move Left"
+msgstr ""
 
-#: kcmaccess.cpp:138
+#: kcmaccess.cpp:185
 #, kde-format
-msgid "Press %1 while NumLock is active"
-msgstr "NumLock ਐਕਟਿਵ ਹੋਣ ਤੇ %1 ਦਬਾਉ"
+msgid "Move Right"
+msgstr ""
 
-#: kcmaccess.cpp:139
+#: kcmaccess.cpp:192
 #, kde-format
-msgid "Press %1"
-msgstr "%1 ਦੱਬੋ"
+msgid "Move Up"
+msgstr ""
+
+#: kcmaccess.cpp:199
+#, kde-format
+msgid "Move Down"
+msgstr ""
+
+#: kcmaccess.cpp:206
+#, kde-format
+msgid "Move Mouse to Focus"
+msgstr ""
 
 #: kcmaccess.cpp:213
+#, kde-format
+msgid "Move Mouse to Center"
+msgstr ""
+
+#: kcmaccess.cpp:256
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr ""
 
-#: kcmaccess.cpp:220
+#: kcmaccess.cpp:263
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr ""
@@ -167,6 +157,12 @@ msgstr "ਦਿੱਖ ਘੰਟੀ ਦਾ ਅੰਤਰਾਲ"
 #: kcmaccessibilitycolorblindnesscorrection.kcfg:13
 #, kde-format
 msgid "Whether Colorblindness Correction is enabled"
+msgstr ""
+
+#. i18n: ectx: label, entry (Invert), group (Plugins)
+#: kcmaccessibilityinvert.kcfg:9
+#, kde-format
+msgid "Whether the Invert effect is enabled"
 msgstr ""
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
@@ -306,6 +302,18 @@ msgstr ""
 #, kde-format
 msgid "Magnification"
 msgstr "ਵੱਡਦਰਸ਼ਨ"
+
+#. i18n: ectx: label, entry (Zoom), group (Plugins)
+#: kcmaccessibilityzoommagnifier.kcfg:9
+#, kde-format
+msgid "Whether the Zoom effect is enabled"
+msgstr ""
+
+#. i18n: ectx: label, entry (Magnifier), group (Plugins)
+#: kcmaccessibilityzoommagnifier.kcfg:13
+#, kde-format
+msgid "Whether the Magnifier effect is enabled"
+msgstr ""
 
 #: ui/ActivationShortcuts.qml:18
 #, kde-format
@@ -545,6 +553,33 @@ msgstr "ਨੀਲਾ"
 msgid "Purple"
 msgstr "ਪਰਪਲ"
 
+#: ui/Invert.qml:22
+#, kde-format
+msgctxt "@label"
+msgid "Invert:"
+msgstr ""
+
+#: ui/Invert.qml:23
+#, fuzzy, kde-format
+#| msgctxt "Enable activation shortcuts"
+#| msgid "Enable"
+msgctxt "@option check, Enable invert effect"
+msgid "Enable"
+msgstr "ਸਮਰੱਥ"
+
+#: ui/Invert.qml:38
+#, kde-format
+msgctxt "@label Hint for invert effect enable button"
+msgid "Use shortcuts to toggle inverting display and window colors"
+msgstr ""
+
+#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:319
+#, fuzzy, kde-format
+#| msgid "Configure Notifications…"
+msgctxt "@action:button"
+msgid "Configure Shortcuts…"
+msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਦੀ ਸੰਰਚਨਾ…"
+
 #: ui/KeyboardFilters.qml:18
 #, kde-format
 msgid "Slow keys:"
@@ -628,45 +663,57 @@ msgstr "ਜਦੋਂ ਨਾ-ਮਨਜ਼ੂਰ ਕੀਤੀ ਜਾਵੇ ਤਾ�
 #: ui/main.qml:28
 #, kde-format
 msgctxt "@title Category name in sidebar"
+msgid "Zoom & Magnifier"
+msgstr ""
+
+#: ui/main.qml:33
+#, kde-format
+msgctxt "@title Category name in sidebar"
 msgid "System Bell"
 msgstr "ਸਿਸਟਮ ਘੰਟੀ"
 
-#: ui/main.qml:33
+#: ui/main.qml:38
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr "ਸੋਧਕ ਸਵਿੱਚਾਂ"
 
-#: ui/main.qml:38
+#: ui/main.qml:43
 #, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr "ਕੀ-ਬੋਰਡ ਫਿਲਟਰ"
 
-#: ui/main.qml:43
+#: ui/main.qml:48
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr "ਮਾਊਸ ਨੇਵੀਗੇਸ਼ਨ"
 
-#: ui/main.qml:48
+#: ui/main.qml:53
 #, kde-format
 msgid "Activation Shortcuts"
 msgstr "ਐਕਟੀਵੇਸ਼ਨ ਸ਼ਾਰਟਕੱਟ"
 
-#: ui/main.qml:53
+#: ui/main.qml:58
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
 msgstr "ਸਕਰੀਨ ਰੀਡਰ"
 
-#: ui/main.qml:58
+#: ui/main.qml:63
 #, kde-format
 msgctxt "Correction for color blindness"
 msgid "Color Blindness Correction"
 msgstr "ਰੰਗ ਅੰਧਰਾਤਾ ਸੋਧ"
 
-#: ui/main.qml:63
+#: ui/main.qml:68
+#, kde-format
+msgctxt "@title Category name in sidebar, for inverting screen colors"
+msgid "Invert"
+msgstr ""
+
+#: ui/main.qml:73
 #, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"
@@ -856,6 +903,195 @@ msgstr "ਸਧਾਰਨ"
 msgctxt "@label Large cursor size"
 msgid "Large"
 msgstr "ਵੱਡਾ"
+
+#: ui/ZoomMagnifier.qml:21
+#, kde-format
+msgctxt "@label, followed by 'full screen' or 'magnify region'"
+msgid "Zoom:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:23
+#, fuzzy, kde-format
+#| msgctxt "@option:radio Flash screen when a system bell is rung"
+#| msgid "Flash screen"
+msgctxt "@option:check, enable zoom effect, following 'Zoom:'"
+msgid "Full screen"
+msgstr "ਫਲੈਸ਼ ਸਕਰੀਨ"
+
+#: ui/ZoomMagnifier.qml:52
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Show pixel grid at zoom level:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:84
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Mouse pointer:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:86
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Scale"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:86
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Keep"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:86
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Hide"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:97
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Mouse tracking:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:99
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Proportional"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:99
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Centered"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:99
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Push"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:99
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Disabled"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:110
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable focus tracking"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:121
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable text caret tracking"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:132
+#, kde-format
+msgctxt "@label"
+msgid "Scroll gesture modifier keys:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:170
+#, kde-format
+msgctxt "@info:tooltip, indicates feature unavailable on X11"
+msgid "Zoom scroll gestures are only available on Wayland."
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:176
+#, fuzzy, kde-format
+#| msgid "Ring system bell when modifier keys are used"
+msgctxt "@label Hint for scroll gestures"
+msgid "Scroll while modifier keys are pressed to zoom"
+msgstr "ਜਦੋਂ ਸੋਧਕ ਸਵਿੱਚਾਂ ਦਬਾਈਆਂ ਜਾਣ ਤਾਂ ਸਿਸਟਮ ਘੰਟੀ ਵਜਾਓ"
+
+#: ui/ZoomMagnifier.qml:188
+#, fuzzy, kde-format
+#| msgid "Magnification"
+msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
+msgid "Magnify region"
+msgstr "ਵੱਡਦਰਸ਼ਨ"
+
+#: ui/ZoomMagnifier.qml:215
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Width:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:226 ui/ZoomMagnifier.qml:251
+#, kde-format
+msgctxt "short for pixel(s)"
+msgid "%1 px"
+msgid_plural "%1 px"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ui/ZoomMagnifier.qml:227 ui/ZoomMagnifier.qml:252
+#, kde-format
+msgctxt "short for pixel(s)"
+msgid "px"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:240
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Height:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:269
+#, kde-format
+msgctxt "@option:check, disable zoom/magnify effect"
+msgid "Disabled"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:282
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Zoom factor:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:329
+#, kde-format
+msgctxt "@label Hint for zoom/magnify effect usage"
+msgid "Use shortcuts to control zoom"
+msgstr ""
+
+#~ msgid "AltGraph"
+#~ msgstr "AltGraph"
+
+#~ msgid "Hyper"
+#~ msgstr "ਹਾਇਪਰ"
+
+#~ msgid "Super"
+#~ msgstr "ਸੁਪਰ"
+
+#~ msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
+#~ msgstr "ਜਦੋਂ ਨਮ-ਲਾਕ, ਕੈਪਸ-ਲਾਕ ਅਤੇ ਸਕਰੋਲ-ਲਾਕ ਐਕਟਿਵ ਹੋਣ ਤਾਂ %1 ਦੱਬੋ।"
+
+#~ msgid "Press %1 while CapsLock and ScrollLock are active"
+#~ msgstr "ਜਦੋਂ ਕੈਪਸ-ਲਾਕ ਅਤੇ ਸਕਰੋਲ-ਲਾਕ ਐਕਟਿਵ ਹੋਣ ਤਾਂ %1 ਦੱਬੋ।"
+
+#~ msgid "Press %1 while NumLock and ScrollLock are active"
+#~ msgstr "ਜਦੋਂ ਨਮ-ਲਾਕ ਅਤੇ ਸਕਰੋਲ-ਲਾਕ ਐਕਟਿਵ ਹੋਣ ਤਾਂ %1 ਦੱਬੋ।"
+
+#~ msgid "Press %1 while ScrollLock is active"
+#~ msgstr "ਜਦੋਂ ਸਕਰੋਲ-ਲਾਕ ਐਕਟਿਵ ਹੋਵੇ ਤਾਂ %1 ਦੱਬੋ।"
+
+#~ msgid "Press %1 while NumLock and CapsLock are active"
+#~ msgstr "ਜਦੋਂ ਨਮ-ਲਾਕ ਅਤੇ ਕੈਪਸ-ਲਾਕ ਐਕਟਿਵ ਹੋਣ ਤਾਂ %1 ਦੱਬੋ।"
+
+#~ msgid "Press %1 while CapsLock is active"
+#~ msgstr "ਜਦੋਂ ਕੈਪਸ-ਲਾਕ ਐਕਟਿਵ ਹੋਵੇ ਤਾਂ %1 ਦੱਬੋ।"
+
+#~ msgid "Press %1 while NumLock is active"
+#~ msgstr "NumLock ਐਕਟਿਵ ਹੋਣ ਤੇ %1 ਦਬਾਉ"
+
+#~ msgid "Press %1"
+#~ msgstr "%1 ਦੱਬੋ"
 
 #, fuzzy
 #~| msgid "Use the system bell whenever a key is rejected"

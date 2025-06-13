@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-28 00:42+0000\n"
+"POT-Creation-Date: 2025-06-13 00:44+0000\n"
 "PO-Revision-Date: 2025-01-26 16:48+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -16,68 +16,57 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.12.1\n"
 
-#: kcmaccess.cpp:118
+#: kcmaccess.cpp:127 kcmaccess.cpp:155
 #, kde-format
-msgid "AltGraph"
-msgstr "AltGraph"
-
-#: kcmaccess.cpp:120
-#, kde-format
-msgid "Hyper"
-msgstr "ஹைப்பர்"
-
-#: kcmaccess.cpp:122
-#, kde-format
-msgid "Super"
-msgstr "சூப்பர்"
-
-#: kcmaccess.cpp:132
-#, kde-format
-msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
+msgid "KWin"
 msgstr ""
-"எண் பூட்டு, எழுத்துகள் பூட்டு மற்றும் உருளல் பூட்டு செயலில் இருக்கும்போது %1ஐ அழுத்து."
 
-#: kcmaccess.cpp:133
+#: kcmaccess.cpp:130
 #, kde-format
-msgid "Press %1 while CapsLock and ScrollLock are active"
-msgstr "எழுத்துகள் பூட்டும் உருளல் பூட்டும் செயலில் இருக்கும்போது %1ஐ அழுத்து"
-
-#: kcmaccess.cpp:134
-#, kde-format
-msgid "Press %1 while NumLock and ScrollLock are active"
-msgstr "எண் பூட்டும் உருளல் பூட்டும் செயலில் இருக்கும்போது %1ஐ அழுத்து"
-
-#: kcmaccess.cpp:135
-#, kde-format
-msgid "Press %1 while ScrollLock is active"
-msgstr "உருளல் பூட்டு செயலில் இருக்கும்போது %1ஐ அழுத்து"
+msgid "Toggle Invert Effect"
+msgstr ""
 
 #: kcmaccess.cpp:136
 #, kde-format
-msgid "Press %1 while NumLock and CapsLock are active"
-msgstr "எண் பூட்டும் எழுத்துகள் பூட்டும் செயலில் இருக்கும்போது %1ஐ அழுத்து"
+msgid "Toggle Invert Effect on Window"
+msgstr ""
 
-#: kcmaccess.cpp:137
+#: kcmaccess.cpp:178
 #, kde-format
-msgid "Press %1 while CapsLock is active"
-msgstr "எழுத்துகள் பூட்டு செயலில் இருக்கும்போது %1ஐ அழுத்து"
+msgid "Move Left"
+msgstr ""
 
-#: kcmaccess.cpp:138
+#: kcmaccess.cpp:185
 #, kde-format
-msgid "Press %1 while NumLock is active"
-msgstr "எண் பூட்டு செயலில் இருக்கும்போது %1ஐ அழுத்து"
+msgid "Move Right"
+msgstr ""
 
-#: kcmaccess.cpp:139
+#: kcmaccess.cpp:192
 #, kde-format
-msgid "Press %1"
-msgstr "%1ஐ அழுத்து"
+msgid "Move Up"
+msgstr ""
+
+#: kcmaccess.cpp:199
+#, kde-format
+msgid "Move Down"
+msgstr ""
+
+#: kcmaccess.cpp:206
+#, kde-format
+msgid "Move Mouse to Focus"
+msgstr ""
 
 #: kcmaccess.cpp:213
+#, kde-format
+msgid "Move Mouse to Center"
+msgstr ""
+
+#: kcmaccess.cpp:256
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "Orca-வுக்கு gsettings-ஐ அமைக்க முடியவில்லை: \"%1\" தோல்வியடைந்தது"
 
-#: kcmaccess.cpp:220
+#: kcmaccess.cpp:263
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "சிக்கல்: \"orca --setup\"-ஐ இயக்க முடியவில்லை"
@@ -165,6 +154,13 @@ msgstr "காட்சிவழி மணி நீடிக்கும் க
 #, kde-format
 msgid "Whether Colorblindness Correction is enabled"
 msgstr "நிறக்குருடு பயன்முறை இயக்கப்பட்டுள்ளதா"
+
+#. i18n: ectx: label, entry (Invert), group (Plugins)
+#: kcmaccessibilityinvert.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Whether Shake Cursor is enabled"
+msgid "Whether the Invert effect is enabled"
+msgstr "சுட்டிக்குறியை ஆட்டுவது இயக்கப்பட்டுள்ளதா"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
@@ -303,6 +299,20 @@ msgstr "சுட்டிக்குறியை ஆட்டுவது இ�
 #, kde-format
 msgid "Magnification"
 msgstr "பெரிதாக்குவது"
+
+#. i18n: ectx: label, entry (Zoom), group (Plugins)
+#: kcmaccessibilityzoommagnifier.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Whether Shake Cursor is enabled"
+msgid "Whether the Zoom effect is enabled"
+msgstr "சுட்டிக்குறியை ஆட்டுவது இயக்கப்பட்டுள்ளதா"
+
+#. i18n: ectx: label, entry (Magnifier), group (Plugins)
+#: kcmaccessibilityzoommagnifier.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Whether Shake Cursor is enabled"
+msgid "Whether the Magnifier effect is enabled"
+msgstr "சுட்டிக்குறியை ஆட்டுவது இயக்கப்பட்டுள்ளதா"
 
 #: ui/ActivationShortcuts.qml:18
 #, kde-format
@@ -540,6 +550,33 @@ msgstr "நீலம்"
 msgid "Purple"
 msgstr "ஊதா"
 
+#: ui/Invert.qml:22
+#, kde-format
+msgctxt "@label"
+msgid "Invert:"
+msgstr ""
+
+#: ui/Invert.qml:23
+#, fuzzy, kde-format
+#| msgctxt "Enable activation shortcuts"
+#| msgid "Enable"
+msgctxt "@option check, Enable invert effect"
+msgid "Enable"
+msgstr "இயக்கு"
+
+#: ui/Invert.qml:38
+#, kde-format
+msgctxt "@label Hint for invert effect enable button"
+msgid "Use shortcuts to toggle inverting display and window colors"
+msgstr ""
+
+#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:319
+#, fuzzy, kde-format
+#| msgid "Configure Notifications…"
+msgctxt "@action:button"
+msgid "Configure Shortcuts…"
+msgstr "அறிவிப்புகளை அமை…"
+
 #: ui/KeyboardFilters.qml:18
 #, kde-format
 msgid "Slow keys:"
@@ -627,45 +664,57 @@ msgstr "மறுக்கப்படும்போது கணினி ம�
 #: ui/main.qml:28
 #, kde-format
 msgctxt "@title Category name in sidebar"
+msgid "Zoom & Magnifier"
+msgstr ""
+
+#: ui/main.qml:33
+#, kde-format
+msgctxt "@title Category name in sidebar"
 msgid "System Bell"
 msgstr "கணினி மணி"
 
-#: ui/main.qml:33
+#: ui/main.qml:38
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr "மாற்றி விசைகள்"
 
-#: ui/main.qml:38
+#: ui/main.qml:43
 #, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr "விசைப்பலகை வடிகட்டிகள்"
 
-#: ui/main.qml:43
+#: ui/main.qml:48
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr "சுட்டிவழி உலாவல்"
 
-#: ui/main.qml:48
+#: ui/main.qml:53
 #, kde-format
 msgid "Activation Shortcuts"
 msgstr "தூண்டுவதற்கான சுருக்குவழிகள்"
 
-#: ui/main.qml:53
+#: ui/main.qml:58
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
 msgstr "திரை வாசிப்பான்"
 
-#: ui/main.qml:58
+#: ui/main.qml:63
 #, kde-format
 msgctxt "Correction for color blindness"
 msgid "Color Blindness Correction"
 msgstr "நிறக்குருடு பயன்முறை"
 
-#: ui/main.qml:63
+#: ui/main.qml:68
+#, kde-format
+msgctxt "@title Category name in sidebar, for inverting screen colors"
+msgid "Invert"
+msgstr ""
+
+#: ui/main.qml:73
 #, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"
@@ -854,6 +903,197 @@ msgstr "இயல்பானது"
 msgctxt "@label Large cursor size"
 msgid "Large"
 msgstr "பெரியது"
+
+#: ui/ZoomMagnifier.qml:21
+#, kde-format
+msgctxt "@label, followed by 'full screen' or 'magnify region'"
+msgid "Zoom:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:23
+#, fuzzy, kde-format
+#| msgctxt "@option:radio Flash screen when a system bell is rung"
+#| msgid "Flash screen"
+msgctxt "@option:check, enable zoom effect, following 'Zoom:'"
+msgid "Full screen"
+msgstr "திரையை மின்னச்செய்"
+
+#: ui/ZoomMagnifier.qml:52
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Show pixel grid at zoom level:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:84
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Mouse pointer:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:86
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Scale"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:86
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Keep"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:86
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Hide"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:97
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Mouse tracking:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:99
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Proportional"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:99
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Centered"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:99
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Push"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:99
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Disabled"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:110
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable focus tracking"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:121
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable text caret tracking"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:132
+#, kde-format
+msgctxt "@label"
+msgid "Scroll gesture modifier keys:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:170
+#, kde-format
+msgctxt "@info:tooltip, indicates feature unavailable on X11"
+msgid "Zoom scroll gestures are only available on Wayland."
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:176
+#, fuzzy, kde-format
+#| msgid "Ring system bell when modifier keys are used"
+msgctxt "@label Hint for scroll gestures"
+msgid "Scroll while modifier keys are pressed to zoom"
+msgstr "மாற்றி விசைகள் பயன்படுத்தப்படும்போது கணினி மணியை ஒலிக்கச்செய்"
+
+#: ui/ZoomMagnifier.qml:188
+#, fuzzy, kde-format
+#| msgid "Magnification"
+msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
+msgid "Magnify region"
+msgstr "பெரிதாக்குவது"
+
+#: ui/ZoomMagnifier.qml:215
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Width:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:226 ui/ZoomMagnifier.qml:251
+#, kde-format
+msgctxt "short for pixel(s)"
+msgid "%1 px"
+msgid_plural "%1 px"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ui/ZoomMagnifier.qml:227 ui/ZoomMagnifier.qml:252
+#, kde-format
+msgctxt "short for pixel(s)"
+msgid "px"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:240
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Height:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:269
+#, kde-format
+msgctxt "@option:check, disable zoom/magnify effect"
+msgid "Disabled"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:282
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Zoom factor:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:329
+#, fuzzy, kde-format
+#| msgid "Use keys to control the mouse"
+msgctxt "@label Hint for zoom/magnify effect usage"
+msgid "Use shortcuts to control zoom"
+msgstr "சுட்டியை இயக்க விசைகளை பயன்படுத்து"
+
+#~ msgid "AltGraph"
+#~ msgstr "AltGraph"
+
+#~ msgid "Hyper"
+#~ msgstr "ஹைப்பர்"
+
+#~ msgid "Super"
+#~ msgstr "சூப்பர்"
+
+#~ msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
+#~ msgstr ""
+#~ "எண் பூட்டு, எழுத்துகள் பூட்டு மற்றும் உருளல் பூட்டு செயலில் இருக்கும்போது %1ஐ அழுத்து."
+
+#~ msgid "Press %1 while CapsLock and ScrollLock are active"
+#~ msgstr "எழுத்துகள் பூட்டும் உருளல் பூட்டும் செயலில் இருக்கும்போது %1ஐ அழுத்து"
+
+#~ msgid "Press %1 while NumLock and ScrollLock are active"
+#~ msgstr "எண் பூட்டும் உருளல் பூட்டும் செயலில் இருக்கும்போது %1ஐ அழுத்து"
+
+#~ msgid "Press %1 while ScrollLock is active"
+#~ msgstr "உருளல் பூட்டு செயலில் இருக்கும்போது %1ஐ அழுத்து"
+
+#~ msgid "Press %1 while NumLock and CapsLock are active"
+#~ msgstr "எண் பூட்டும் எழுத்துகள் பூட்டும் செயலில் இருக்கும்போது %1ஐ அழுத்து"
+
+#~ msgid "Press %1 while CapsLock is active"
+#~ msgstr "எழுத்துகள் பூட்டு செயலில் இருக்கும்போது %1ஐ அழுத்து"
+
+#~ msgid "Press %1 while NumLock is active"
+#~ msgstr "எண் பூட்டு செயலில் இருக்கும்போது %1ஐ அழுத்து"
+
+#~ msgid "Press %1"
+#~ msgstr "%1ஐ அழுத்து"
 
 #~ msgctxt "@label"
 #~ msgid "Emits a sound whenever certain keys are pressed"

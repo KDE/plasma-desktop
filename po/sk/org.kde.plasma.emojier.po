@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: org.kde.plasma.emojier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-22 00:44+0000\n"
+"POT-Creation-Date: 2025-06-13 00:44+0000\n"
 "PO-Revision-Date: 2023-03-16 18:06+0100\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -45,35 +45,37 @@ msgstr "wizzardsk@gmail.com,prescott66@gmail.com"
 msgid "Replace an existing instance"
 msgstr "Nahradiť existujúcu inštanciu"
 
-#: app/ui/CategoryPage.qml:35 app/ui/Emojier.qml:62
-#, kde-format
-msgid "Search"
-msgstr "Hľadať"
+#: app/ui/CategoryPage.qml:33 app/ui/Emojier.qml:62
+#, fuzzy, kde-format
+#| msgid "All"
+msgctxt "@title:page All emojis"
+msgid "All"
+msgstr "Všetko"
 
-#: app/ui/CategoryPage.qml:87
+#: app/ui/CategoryPage.qml:93
 #, kde-format
 msgid "Clear History"
 msgstr "Vyčistiť históriu"
 
-#: app/ui/CategoryPage.qml:113
+#: app/ui/CategoryPage.qml:119
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Character"
 msgstr "Kopírovať znak"
 
-#: app/ui/CategoryPage.qml:116 app/ui/CategoryPage.qml:124
+#: app/ui/CategoryPage.qml:122 app/ui/CategoryPage.qml:130
 #: app/ui/Emojier.qml:40
 #, kde-format
 msgid "%1 copied to the clipboard"
 msgstr "%1 skopírované do schránky"
 
-#: app/ui/CategoryPage.qml:121
+#: app/ui/CategoryPage.qml:127
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Description"
 msgstr "Kopírovať popis"
 
-#: app/ui/CategoryPage.qml:211
+#: app/ui/CategoryPage.qml:217
 #, kde-format
 msgid "No recent Emojis"
 msgstr "Žiadne nedávne emotikony"
@@ -83,12 +85,7 @@ msgstr "Žiadne nedávne emotikony"
 msgid "Recent"
 msgstr "Nedávne"
 
-#: app/ui/Emojier.qml:78
-#, kde-format
-msgid "All"
-msgstr "Všetko"
-
-#: app/ui/Emojier.qml:89
+#: app/ui/Emojier.qml:80
 #, kde-format
 msgid "Categories"
 msgstr "Kategórie"
@@ -142,6 +139,9 @@ msgstr "Symboly"
 msgctxt "Emoji Category"
 msgid "Flags"
 msgstr "Vlajky"
+
+#~ msgid "Search"
+#~ msgstr "Hľadať"
 
 #~ msgid "Search…"
 #~ msgstr "Hľadať..."

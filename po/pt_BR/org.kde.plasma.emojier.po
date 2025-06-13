@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-22 00:44+0000\n"
+"POT-Creation-Date: 2025-06-13 00:44+0000\n"
 "PO-Revision-Date: 2023-03-21 10:01-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -46,35 +46,37 @@ msgstr "alvarenga@kde.org"
 msgid "Replace an existing instance"
 msgstr "Substituir uma instância existente"
 
-#: app/ui/CategoryPage.qml:35 app/ui/Emojier.qml:62
-#, kde-format
-msgid "Search"
-msgstr "Pesquisar"
+#: app/ui/CategoryPage.qml:33 app/ui/Emojier.qml:62
+#, fuzzy, kde-format
+#| msgid "All"
+msgctxt "@title:page All emojis"
+msgid "All"
+msgstr "Tudo"
 
-#: app/ui/CategoryPage.qml:87
+#: app/ui/CategoryPage.qml:93
 #, kde-format
 msgid "Clear History"
 msgstr "Limpar histórico"
 
-#: app/ui/CategoryPage.qml:113
+#: app/ui/CategoryPage.qml:119
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Character"
 msgstr "Copiar caractere"
 
-#: app/ui/CategoryPage.qml:116 app/ui/CategoryPage.qml:124
+#: app/ui/CategoryPage.qml:122 app/ui/CategoryPage.qml:130
 #: app/ui/Emojier.qml:40
 #, kde-format
 msgid "%1 copied to the clipboard"
 msgstr "%1 copiado para a área de transferência"
 
-#: app/ui/CategoryPage.qml:121
+#: app/ui/CategoryPage.qml:127
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Description"
 msgstr "Copiar descrição"
 
-#: app/ui/CategoryPage.qml:211
+#: app/ui/CategoryPage.qml:217
 #, kde-format
 msgid "No recent Emojis"
 msgstr "Nenhum emoji recente"
@@ -84,12 +86,7 @@ msgstr "Nenhum emoji recente"
 msgid "Recent"
 msgstr "Recentes"
 
-#: app/ui/Emojier.qml:78
-#, kde-format
-msgid "All"
-msgstr "Tudo"
-
-#: app/ui/Emojier.qml:89
+#: app/ui/Emojier.qml:80
 #, kde-format
 msgid "Categories"
 msgstr "Categorias"
@@ -143,6 +140,9 @@ msgstr "Símbolos"
 msgctxt "Emoji Category"
 msgid "Flags"
 msgstr "Bandeiras"
+
+#~ msgid "Search"
+#~ msgstr "Pesquisar"
 
 #~ msgid "Search…"
 #~ msgstr "Pesquisar..."

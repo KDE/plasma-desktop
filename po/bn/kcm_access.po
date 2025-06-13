@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-28 00:42+0000\n"
+"POT-Creation-Date: 2025-06-13 00:44+0000\n"
 "PO-Revision-Date: 2006-01-04 13:00-0600\n"
 "Last-Translator: Deepayan Sarkar <deepayan@bengalinux.org>\n"
 "Language-Team: Bengali <kde-translation@bengalinux.org>\n"
@@ -15,67 +15,57 @@ msgstr ""
 "X-Generator: KBabel 1.9.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: kcmaccess.cpp:118
+#: kcmaccess.cpp:127 kcmaccess.cpp:155
 #, kde-format
-msgid "AltGraph"
+msgid "KWin"
 msgstr ""
 
-#: kcmaccess.cpp:120
+#: kcmaccess.cpp:130
 #, kde-format
-msgid "Hyper"
-msgstr ""
-
-#: kcmaccess.cpp:122
-#, kde-format
-msgid "Super"
-msgstr ""
-
-#: kcmaccess.cpp:132
-#, kde-format
-msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
-msgstr ""
-
-#: kcmaccess.cpp:133
-#, kde-format
-msgid "Press %1 while CapsLock and ScrollLock are active"
-msgstr ""
-
-#: kcmaccess.cpp:134
-#, kde-format
-msgid "Press %1 while NumLock and ScrollLock are active"
-msgstr ""
-
-#: kcmaccess.cpp:135
-#, kde-format
-msgid "Press %1 while ScrollLock is active"
+msgid "Toggle Invert Effect"
 msgstr ""
 
 #: kcmaccess.cpp:136
 #, kde-format
-msgid "Press %1 while NumLock and CapsLock are active"
+msgid "Toggle Invert Effect on Window"
 msgstr ""
 
-#: kcmaccess.cpp:137
+#: kcmaccess.cpp:178
 #, kde-format
-msgid "Press %1 while CapsLock is active"
+msgid "Move Left"
 msgstr ""
 
-#: kcmaccess.cpp:138
+#: kcmaccess.cpp:185
 #, kde-format
-msgid "Press %1 while NumLock is active"
+msgid "Move Right"
 msgstr ""
 
-#: kcmaccess.cpp:139
+#: kcmaccess.cpp:192
 #, kde-format
-msgid "Press %1"
+msgid "Move Up"
+msgstr ""
+
+#: kcmaccess.cpp:199
+#, kde-format
+msgid "Move Down"
+msgstr ""
+
+#: kcmaccess.cpp:206
+#, kde-format
+msgid "Move Mouse to Focus"
 msgstr ""
 
 #: kcmaccess.cpp:213
 #, kde-format
+msgid "Move Mouse to Center"
+msgstr ""
+
+#: kcmaccess.cpp:256
+#, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr ""
 
-#: kcmaccess.cpp:220
+#: kcmaccess.cpp:263
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr ""
@@ -165,6 +155,12 @@ msgstr ""
 #: kcmaccessibilitycolorblindnesscorrection.kcfg:13
 #, kde-format
 msgid "Whether Colorblindness Correction is enabled"
+msgstr ""
+
+#. i18n: ectx: label, entry (Invert), group (Plugins)
+#: kcmaccessibilityinvert.kcfg:9
+#, kde-format
+msgid "Whether the Invert effect is enabled"
 msgstr ""
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
@@ -307,6 +303,18 @@ msgstr ""
 #: kcmaccessibilityshakecursor.kcfg:15
 #, kde-format
 msgid "Magnification"
+msgstr ""
+
+#. i18n: ectx: label, entry (Zoom), group (Plugins)
+#: kcmaccessibilityzoommagnifier.kcfg:9
+#, kde-format
+msgid "Whether the Zoom effect is enabled"
+msgstr ""
+
+#. i18n: ectx: label, entry (Magnifier), group (Plugins)
+#: kcmaccessibilityzoommagnifier.kcfg:13
+#, kde-format
+msgid "Whether the Magnifier effect is enabled"
 msgstr ""
 
 #: ui/ActivationShortcuts.qml:18
@@ -551,6 +559,30 @@ msgstr ""
 msgid "Purple"
 msgstr ""
 
+#: ui/Invert.qml:22
+#, kde-format
+msgctxt "@label"
+msgid "Invert:"
+msgstr ""
+
+#: ui/Invert.qml:23
+#, kde-format
+msgctxt "@option check, Enable invert effect"
+msgid "Enable"
+msgstr ""
+
+#: ui/Invert.qml:38
+#, kde-format
+msgctxt "@label Hint for invert effect enable button"
+msgid "Use shortcuts to toggle inverting display and window colors"
+msgstr ""
+
+#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:319
+#, kde-format
+msgctxt "@action:button"
+msgid "Configure Shortcuts…"
+msgstr ""
+
 #: ui/KeyboardFilters.qml:18
 #, fuzzy, kde-format
 #| msgid "&Use slow keys"
@@ -636,48 +668,60 @@ msgid "Ring system bell when rejected"
 msgstr ""
 
 #: ui/main.qml:28
+#, kde-format
+msgctxt "@title Category name in sidebar"
+msgid "Zoom & Magnifier"
+msgstr ""
+
+#: ui/main.qml:33
 #, fuzzy, kde-format
 #| msgid "Use &system bell"
 msgctxt "@title Category name in sidebar"
 msgid "System Bell"
 msgstr "সিস্টে&ম ঘণ্টা ব্যবহার কর"
 
-#: ui/main.qml:33
+#: ui/main.qml:38
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr ""
 
-#: ui/main.qml:38
+#: ui/main.qml:43
 #, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr ""
 
-#: ui/main.qml:43
+#: ui/main.qml:48
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr ""
 
-#: ui/main.qml:48
+#: ui/main.qml:53
 #, kde-format
 msgid "Activation Shortcuts"
 msgstr ""
 
-#: ui/main.qml:53
+#: ui/main.qml:58
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
 msgstr ""
 
-#: ui/main.qml:58
+#: ui/main.qml:63
 #, kde-format
 msgctxt "Correction for color blindness"
 msgid "Color Blindness Correction"
 msgstr ""
 
-#: ui/main.qml:63
+#: ui/main.qml:68
+#, kde-format
+msgctxt "@title Category name in sidebar, for inverting screen colors"
+msgid "Invert"
+msgstr ""
+
+#: ui/main.qml:73
 #, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"
@@ -865,6 +909,159 @@ msgstr ""
 #, kde-format
 msgctxt "@label Large cursor size"
 msgid "Large"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:21
+#, kde-format
+msgctxt "@label, followed by 'full screen' or 'magnify region'"
+msgid "Zoom:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:23
+#, fuzzy, kde-format
+#| msgid "F&lash screen"
+msgctxt "@option:check, enable zoom effect, following 'Zoom:'"
+msgid "Full screen"
+msgstr "ফ্ল্যা&শ স্ক্রীণ"
+
+#: ui/ZoomMagnifier.qml:52
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Show pixel grid at zoom level:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:84
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Mouse pointer:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:86
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Scale"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:86
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Keep"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:86
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Hide"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:97
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Mouse tracking:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:99
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Proportional"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:99
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Centered"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:99
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Push"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:99
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Disabled"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:110
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable focus tracking"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:121
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable text caret tracking"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:132
+#, kde-format
+msgctxt "@label"
+msgid "Scroll gesture modifier keys:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:170
+#, kde-format
+msgctxt "@info:tooltip, indicates feature unavailable on X11"
+msgid "Zoom scroll gestures are only available on Wayland."
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:176
+#, kde-format
+msgctxt "@label Hint for scroll gestures"
+msgid "Scroll while modifier keys are pressed to zoom"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:188
+#, kde-format
+msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
+msgid "Magnify region"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:215
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Width:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:226 ui/ZoomMagnifier.qml:251
+#, kde-format
+msgctxt "short for pixel(s)"
+msgid "%1 px"
+msgid_plural "%1 px"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ui/ZoomMagnifier.qml:227 ui/ZoomMagnifier.qml:252
+#, kde-format
+msgctxt "short for pixel(s)"
+msgid "px"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:240
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Height:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:269
+#, kde-format
+msgctxt "@option:check, disable zoom/magnify effect"
+msgid "Disabled"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:282
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Zoom factor:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:329
+#, kde-format
+msgctxt "@label Hint for zoom/magnify effect usage"
+msgid "Use shortcuts to control zoom"
 msgstr ""
 
 #, fuzzy

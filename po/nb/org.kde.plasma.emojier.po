@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-22 00:44+0000\n"
+"POT-Creation-Date: 2025-06-13 00:44+0000\n"
 "PO-Revision-Date: 2025-04-04 09:54+0200\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -45,35 +45,37 @@ msgstr "mh306602@gmail.com"
 msgid "Replace an existing instance"
 msgstr "Erstatt en instans som finnes fra før"
 
-#: app/ui/CategoryPage.qml:35 app/ui/Emojier.qml:62
-#, kde-format
-msgid "Search"
-msgstr "Søk"
+#: app/ui/CategoryPage.qml:33 app/ui/Emojier.qml:62
+#, fuzzy, kde-format
+#| msgid "All"
+msgctxt "@title:page All emojis"
+msgid "All"
+msgstr "Alle"
 
-#: app/ui/CategoryPage.qml:87
+#: app/ui/CategoryPage.qml:93
 #, kde-format
 msgid "Clear History"
 msgstr "Tøm historikk"
 
-#: app/ui/CategoryPage.qml:113
+#: app/ui/CategoryPage.qml:119
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Character"
 msgstr "Kopier tegn"
 
-#: app/ui/CategoryPage.qml:116 app/ui/CategoryPage.qml:124
+#: app/ui/CategoryPage.qml:122 app/ui/CategoryPage.qml:130
 #: app/ui/Emojier.qml:40
 #, kde-format
 msgid "%1 copied to the clipboard"
 msgstr "%1 kopiert til utklippstavla"
 
-#: app/ui/CategoryPage.qml:121
+#: app/ui/CategoryPage.qml:127
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Description"
 msgstr "Kopier beskrivelse"
 
-#: app/ui/CategoryPage.qml:211
+#: app/ui/CategoryPage.qml:217
 #, kde-format
 msgid "No recent Emojis"
 msgstr "Ingen nylige emojier"
@@ -83,12 +85,7 @@ msgstr "Ingen nylige emojier"
 msgid "Recent"
 msgstr "Nylige"
 
-#: app/ui/Emojier.qml:78
-#, kde-format
-msgid "All"
-msgstr "Alle"
-
-#: app/ui/Emojier.qml:89
+#: app/ui/Emojier.qml:80
 #, kde-format
 msgid "Categories"
 msgstr "Kategorier"
@@ -142,3 +139,6 @@ msgstr "Symboler"
 msgctxt "Emoji Category"
 msgid "Flags"
 msgstr "Flagg"
+
+#~ msgid "Search"
+#~ msgstr "Søk"

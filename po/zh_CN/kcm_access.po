@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-28 00:42+0000\n"
+"POT-Creation-Date: 2025-06-13 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -17,67 +17,57 @@ msgstr ""
 "X-Crowdin-File: /kf6-trunk/messages/plasma-desktop/kcm_access.pot\n"
 "X-Crowdin-File-ID: 43201\n"
 
-#: kcmaccess.cpp:118
+#: kcmaccess.cpp:127 kcmaccess.cpp:155
 #, kde-format
-msgid "AltGraph"
-msgstr "AltGr 键"
+msgid "KWin"
+msgstr ""
 
-#: kcmaccess.cpp:120
+#: kcmaccess.cpp:130
 #, kde-format
-msgid "Hyper"
-msgstr "Hyper"
-
-#: kcmaccess.cpp:122
-#, kde-format
-msgid "Super"
-msgstr "Super"
-
-#: kcmaccess.cpp:132
-#, kde-format
-msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
-msgstr "NumLock、CapsLock、ScrollLock 激活时按 %1"
-
-#: kcmaccess.cpp:133
-#, kde-format
-msgid "Press %1 while CapsLock and ScrollLock are active"
-msgstr "CapsLock、ScrollLock 激活时按 %1"
-
-#: kcmaccess.cpp:134
-#, kde-format
-msgid "Press %1 while NumLock and ScrollLock are active"
-msgstr "NumLock、ScrollLock 激活时按 %1"
-
-#: kcmaccess.cpp:135
-#, kde-format
-msgid "Press %1 while ScrollLock is active"
-msgstr "ScrollLock 激活时按 %1"
+msgid "Toggle Invert Effect"
+msgstr ""
 
 #: kcmaccess.cpp:136
 #, kde-format
-msgid "Press %1 while NumLock and CapsLock are active"
-msgstr "NumLock、CapsLock 激活时按 %1"
+msgid "Toggle Invert Effect on Window"
+msgstr ""
 
-#: kcmaccess.cpp:137
+#: kcmaccess.cpp:178
 #, kde-format
-msgid "Press %1 while CapsLock is active"
-msgstr "CapsLock 激活时按 %1"
+msgid "Move Left"
+msgstr ""
 
-#: kcmaccess.cpp:138
+#: kcmaccess.cpp:185
 #, kde-format
-msgid "Press %1 while NumLock is active"
-msgstr "NumLock 激活时按 %1"
+msgid "Move Right"
+msgstr ""
 
-#: kcmaccess.cpp:139
+#: kcmaccess.cpp:192
 #, kde-format
-msgid "Press %1"
-msgstr "按 %1"
+msgid "Move Up"
+msgstr ""
+
+#: kcmaccess.cpp:199
+#, kde-format
+msgid "Move Down"
+msgstr ""
+
+#: kcmaccess.cpp:206
+#, kde-format
+msgid "Move Mouse to Focus"
+msgstr ""
 
 #: kcmaccess.cpp:213
+#, kde-format
+msgid "Move Mouse to Center"
+msgstr ""
+
+#: kcmaccess.cpp:256
 #, kde-format
 msgid "Could not set gsettings for Orca: \"%1\" failed"
 msgstr "无法为 Orca 设置 gsettings：“%1”失败"
 
-#: kcmaccess.cpp:220
+#: kcmaccess.cpp:263
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "错误：无法启动“orca --setup”"
@@ -165,6 +155,13 @@ msgstr "视觉提示持续时间"
 #, kde-format
 msgid "Whether Colorblindness Correction is enabled"
 msgstr "是否启用色盲校正"
+
+#. i18n: ectx: label, entry (Invert), group (Plugins)
+#: kcmaccessibilityinvert.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Whether Shake Cursor is enabled"
+msgid "Whether the Invert effect is enabled"
+msgstr "启用了抖动后放大光标时"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
@@ -303,6 +300,20 @@ msgstr "启用了抖动后放大光标时"
 #, kde-format
 msgid "Magnification"
 msgstr "放大"
+
+#. i18n: ectx: label, entry (Zoom), group (Plugins)
+#: kcmaccessibilityzoommagnifier.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Whether Shake Cursor is enabled"
+msgid "Whether the Zoom effect is enabled"
+msgstr "启用了抖动后放大光标时"
+
+#. i18n: ectx: label, entry (Magnifier), group (Plugins)
+#: kcmaccessibilityzoommagnifier.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Whether Shake Cursor is enabled"
+msgid "Whether the Magnifier effect is enabled"
+msgstr "启用了抖动后放大光标时"
 
 #: ui/ActivationShortcuts.qml:18
 #, kde-format
@@ -536,6 +547,33 @@ msgstr "蓝"
 msgid "Purple"
 msgstr "紫"
 
+#: ui/Invert.qml:22
+#, kde-format
+msgctxt "@label"
+msgid "Invert:"
+msgstr ""
+
+#: ui/Invert.qml:23
+#, fuzzy, kde-format
+#| msgctxt "Enable activation shortcuts"
+#| msgid "Enable"
+msgctxt "@option check, Enable invert effect"
+msgid "Enable"
+msgstr "启用"
+
+#: ui/Invert.qml:38
+#, kde-format
+msgctxt "@label Hint for invert effect enable button"
+msgid "Use shortcuts to toggle inverting display and window colors"
+msgstr ""
+
+#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:319
+#, fuzzy, kde-format
+#| msgid "Configure Notifications…"
+msgctxt "@action:button"
+msgid "Configure Shortcuts…"
+msgstr "配置通知…"
+
 #: ui/KeyboardFilters.qml:18
 #, kde-format
 msgid "Slow keys:"
@@ -623,45 +661,57 @@ msgstr "拒绝按键时发出系统提示"
 #: ui/main.qml:28
 #, kde-format
 msgctxt "@title Category name in sidebar"
+msgid "Zoom & Magnifier"
+msgstr ""
+
+#: ui/main.qml:33
+#, kde-format
+msgctxt "@title Category name in sidebar"
 msgid "System Bell"
 msgstr "系统提示"
 
-#: ui/main.qml:33
+#: ui/main.qml:38
 #, kde-format
 msgctxt "System Modifier Keys"
 msgid "Modifier Keys"
 msgstr "修饰键"
 
-#: ui/main.qml:38
+#: ui/main.qml:43
 #, kde-format
 msgctxt "System keyboard filters"
 msgid "Keyboard Filters"
 msgstr "键盘输入过滤"
 
-#: ui/main.qml:43
+#: ui/main.qml:48
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Mouse Navigation"
 msgstr "鼠标导航"
 
-#: ui/main.qml:48
+#: ui/main.qml:53
 #, kde-format
 msgid "Activation Shortcuts"
 msgstr "激活快捷键"
 
-#: ui/main.qml:53
+#: ui/main.qml:58
 #, kde-format
 msgctxt "System mouse navigation"
 msgid "Screen Reader"
 msgstr "屏幕阅读器"
 
-#: ui/main.qml:58
+#: ui/main.qml:63
 #, kde-format
 msgctxt "Correction for color blindness"
 msgid "Color Blindness Correction"
 msgstr "色盲校正"
 
-#: ui/main.qml:63
+#: ui/main.qml:68
+#, kde-format
+msgctxt "@title Category name in sidebar, for inverting screen colors"
+msgid "Invert"
+msgstr ""
+
+#: ui/main.qml:73
 #, kde-format
 msgctxt "Shake cursor to find it"
 msgid "Shake Cursor"
@@ -855,3 +905,192 @@ msgstr "正常"
 msgctxt "@label Large cursor size"
 msgid "Large"
 msgstr "大"
+
+#: ui/ZoomMagnifier.qml:21
+#, kde-format
+msgctxt "@label, followed by 'full screen' or 'magnify region'"
+msgid "Zoom:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:23
+#, fuzzy, kde-format
+#| msgctxt "@option:radio Flash screen when a system bell is rung"
+#| msgid "Flash screen"
+msgctxt "@option:check, enable zoom effect, following 'Zoom:'"
+msgid "Full screen"
+msgstr "闪烁屏幕"
+
+#: ui/ZoomMagnifier.qml:52
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Show pixel grid at zoom level:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:84
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Mouse pointer:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:86
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Scale"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:86
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Keep"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:86
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Hide"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:97
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Mouse tracking:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:99
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Proportional"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:99
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Centered"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:99
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Push"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:99
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Disabled"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:110
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable focus tracking"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:121
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable text caret tracking"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:132
+#, kde-format
+msgctxt "@label"
+msgid "Scroll gesture modifier keys:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:170
+#, kde-format
+msgctxt "@info:tooltip, indicates feature unavailable on X11"
+msgid "Zoom scroll gestures are only available on Wayland."
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:176
+#, fuzzy, kde-format
+#| msgid "Ring system bell when modifier keys are used"
+msgctxt "@label Hint for scroll gestures"
+msgid "Scroll while modifier keys are pressed to zoom"
+msgstr "修饰键按下时发出系统提示"
+
+#: ui/ZoomMagnifier.qml:188
+#, fuzzy, kde-format
+#| msgid "Magnification"
+msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
+msgid "Magnify region"
+msgstr "放大"
+
+#: ui/ZoomMagnifier.qml:215
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Width:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:226 ui/ZoomMagnifier.qml:251
+#, kde-format
+msgctxt "short for pixel(s)"
+msgid "%1 px"
+msgid_plural "%1 px"
+msgstr[0] ""
+
+#: ui/ZoomMagnifier.qml:227 ui/ZoomMagnifier.qml:252
+#, kde-format
+msgctxt "short for pixel(s)"
+msgid "px"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:240
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Height:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:269
+#, kde-format
+msgctxt "@option:check, disable zoom/magnify effect"
+msgid "Disabled"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:282
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Zoom factor:"
+msgstr ""
+
+#: ui/ZoomMagnifier.qml:329
+#, fuzzy, kde-format
+#| msgid "Use keys to control the mouse"
+msgctxt "@label Hint for zoom/magnify effect usage"
+msgid "Use shortcuts to control zoom"
+msgstr "使用键盘控制鼠标"
+
+#~ msgid "AltGraph"
+#~ msgstr "AltGr 键"
+
+#~ msgid "Hyper"
+#~ msgstr "Hyper"
+
+#~ msgid "Super"
+#~ msgstr "Super"
+
+#~ msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
+#~ msgstr "NumLock、CapsLock、ScrollLock 激活时按 %1"
+
+#~ msgid "Press %1 while CapsLock and ScrollLock are active"
+#~ msgstr "CapsLock、ScrollLock 激活时按 %1"
+
+#~ msgid "Press %1 while NumLock and ScrollLock are active"
+#~ msgstr "NumLock、ScrollLock 激活时按 %1"
+
+#~ msgid "Press %1 while ScrollLock is active"
+#~ msgstr "ScrollLock 激活时按 %1"
+
+#~ msgid "Press %1 while NumLock and CapsLock are active"
+#~ msgstr "NumLock、CapsLock 激活时按 %1"
+
+#~ msgid "Press %1 while CapsLock is active"
+#~ msgstr "CapsLock 激活时按 %1"
+
+#~ msgid "Press %1 while NumLock is active"
+#~ msgstr "NumLock 激活时按 %1"
+
+#~ msgid "Press %1"
+#~ msgstr "按 %1"

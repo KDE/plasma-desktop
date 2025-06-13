@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: org.kde.plasma.emojier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-22 00:44+0000\n"
+"POT-Creation-Date: 2025-06-13 00:44+0000\n"
 "PO-Revision-Date: 2025-05-26 01:13+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -46,35 +46,37 @@ msgstr "ecuadra@eloihr.net"
 msgid "Replace an existing instance"
 msgstr "Sustituir una instancia existente"
 
-#: app/ui/CategoryPage.qml:35 app/ui/Emojier.qml:62
-#, kde-format
-msgid "Search"
-msgstr "Buscar"
+#: app/ui/CategoryPage.qml:33 app/ui/Emojier.qml:62
+#, fuzzy, kde-format
+#| msgid "All"
+msgctxt "@title:page All emojis"
+msgid "All"
+msgstr "Todas"
 
-#: app/ui/CategoryPage.qml:87
+#: app/ui/CategoryPage.qml:93
 #, kde-format
 msgid "Clear History"
 msgstr "Borrar el historial"
 
-#: app/ui/CategoryPage.qml:113
+#: app/ui/CategoryPage.qml:119
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Character"
 msgstr "Copiara carácter"
 
-#: app/ui/CategoryPage.qml:116 app/ui/CategoryPage.qml:124
+#: app/ui/CategoryPage.qml:122 app/ui/CategoryPage.qml:130
 #: app/ui/Emojier.qml:40
 #, kde-format
 msgid "%1 copied to the clipboard"
 msgstr "%1 copiado en el portapapeles"
 
-#: app/ui/CategoryPage.qml:121
+#: app/ui/CategoryPage.qml:127
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Description"
 msgstr "Copiar descripción"
 
-#: app/ui/CategoryPage.qml:211
+#: app/ui/CategoryPage.qml:217
 #, kde-format
 msgid "No recent Emojis"
 msgstr "No hay emojis recientes"
@@ -84,12 +86,7 @@ msgstr "No hay emojis recientes"
 msgid "Recent"
 msgstr "Recientes"
 
-#: app/ui/Emojier.qml:78
-#, kde-format
-msgid "All"
-msgstr "Todas"
-
-#: app/ui/Emojier.qml:89
+#: app/ui/Emojier.qml:80
 #, kde-format
 msgid "Categories"
 msgstr "Categorías"
@@ -143,3 +140,6 @@ msgstr "Símbolos"
 msgctxt "Emoji Category"
 msgid "Flags"
 msgstr "Banderas"
+
+#~ msgid "Search"
+#~ msgstr "Buscar"

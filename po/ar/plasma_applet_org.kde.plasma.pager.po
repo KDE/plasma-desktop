@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, 2016, 2017.
-# SPDX-FileCopyrightText: 2021, 2022, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-06 00:44+0000\n"
-"PO-Revision-Date: 2024-09-05 10:18+0400\n"
+"PO-Revision-Date: 2025-06-12 12:14+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -101,8 +101,7 @@ msgid "Desktop name"
 msgstr "اسم سطح المكتب"
 
 #: package/contents/ui/configGeneral.qml:118
-#, fuzzy, kde-format
-#| msgid "Selecting current Activity:"
+#, kde-format
 msgctxt ""
 "@label Start of the sentence 'Selecting current activity does nothing/shows "
 "the desktop'"
@@ -110,8 +109,7 @@ msgid "Selecting current Activity:"
 msgstr "تحديد النشاط الحالي:"
 
 #: package/contents/ui/configGeneral.qml:119
-#, fuzzy, kde-format
-#| msgid "Selecting current virtual desktop:"
+#, kde-format
 msgctxt ""
 "@label Start of the sentence 'Selecting current virtual desktop does nothing/"
 "shows the desktop'"
@@ -119,17 +117,15 @@ msgid "Selecting current virtual desktop:"
 msgstr "تحديد سطح المكتب الافتراضي الحالي:"
 
 #: package/contents/ui/configGeneral.qml:122
-#, fuzzy, kde-format
-#| msgid "Does nothing"
+#, kde-format
 msgctxt ""
 "option:check completes the sentence 'Selecting current activity/virtual "
 "desktop does nothing'"
 msgid "Does nothing"
-msgstr "لا يفعل شيئا"
+msgstr "لا يفعل شيئًا"
 
 #: package/contents/ui/configGeneral.qml:130
-#, fuzzy, kde-format
-#| msgid "Shows the desktop"
+#, kde-format
 msgctxt ""
 "option:check completes the sentence 'Selecting current activity/virtual "
 "desktop shows the desktop'"
