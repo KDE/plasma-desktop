@@ -192,7 +192,7 @@ PlasmaCore.Dialog {
                                 font.pointSize: Kirigami.Theme.smallFont.pointSize
                                 font.family: Kirigami.Theme.smallFont.family
                                 font.bold: model.pluginName === alternativesHelper.currentPlugin
-                                opacity: 0.6
+                                opacity: 0.75
                                 maximumLineCount: 2
                                 wrapMode: Text.WordWrap
                                 elide: Text.ElideRight

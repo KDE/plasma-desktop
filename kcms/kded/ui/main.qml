@@ -217,7 +217,7 @@ KCM.ScrollViewKCM {
                     QQC2.Label {
                         id: statusLabel
                         horizontalAlignment: Text.AlignRight
-                        opacity: model.status === Private.KCM.Running ? 1 : delegate.hovered ? 0.8 : 0.6
+                        opacity: model.status === Private.KCM.Running ? 1 : 0.75
                         color: model.status === Private.KCM.Running
                             ? Kirigami.Theme.positiveTextColor
                             : (titleSubtitle.selected ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor)

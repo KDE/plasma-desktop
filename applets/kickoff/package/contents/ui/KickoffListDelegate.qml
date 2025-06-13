@@ -98,7 +98,7 @@ AbstractKickoffItemDelegate {
                     let isSearchResultWithDescription = root.isSearchResult && (Plasmoid.configuration?.appNameFormat > 1 || !isApplicationSearchResult)
                     return text.length > 0 && (isSearchResultWithDescription || (text !== label.text && !root.isCategoryListItem && Plasmoid.configuration?.appNameFormat > 1))
                 }
-                enabled: false
+                opacity: 0.75
                 text: root.description
                 textFormat: Text.PlainText
                 font: Kirigami.Theme.smallFont
