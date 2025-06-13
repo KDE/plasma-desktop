@@ -5,6 +5,7 @@
 */
 
 import QtQuick
+import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
@@ -16,6 +17,10 @@ Kirigami.ApplicationWindow {
     id: window
 
     minimumWidth: Math.round(minimumHeight * 1.25)
+    // Correct height required for no scrolling — drawer's header's
+    // implicit height is used instead of height, so add the difference
+    minimumHeight: drawer.contentHeight + (drawer.header.height - drawer.header.implicitHeight)
+
     width: Kirigami.Units.gridUnit * 25
     height: Kirigami.Units.gridUnit * 25
 
@@ -71,76 +76,67 @@ Kirigami.ApplicationWindow {
         }
     }
 
-    Component {
-        id: drawerComponent
+    globalDrawer: Kirigami.GlobalDrawer {
+        id: drawer
 
-        Kirigami.GlobalDrawer {
-            id: drawer
+        collapsible: !topContent.activeFocus
+        showHeaderWhenCollapsed: true
+        collapseButtonVisible: false
+        collapsed: true
+        modal: false
 
-            title: i18n("Categories")
-            collapsible: !topContent.activeFocus
-            collapsed: true
-            modal: false
+        actions: [recentAction, allAction]
 
-            header: Kirigami.AbstractApplicationHeader {
-                topPadding: Kirigami.Units.smallSpacing
-                bottomPadding: Kirigami.Units.smallSpacing
-                leftPadding: Kirigami.Units.largeSpacing
-                rightPadding: Kirigami.Units.smallSpacing
+        header: Kirigami.AbstractApplicationHeader {
+            leftPadding: Kirigami.Units.smallSpacing
+            rightPadding: Kirigami.Units.smallSpacing
 
-                Kirigami.Heading {
-                    anchors {
-                        left: parent.left
-                        right: parent.right
+            QQC2.ToolButton {
+                anchors.left: parent.left
+                anchors.right: parent.right
+                text: drawer.collapsed ? "" : qsTr("Close Sidebar")
+                icon.name: {
+                    if (drawer.collapsed) {
+                        return Qt.application.layoutDirection === Qt.RightToLeft ? "sidebar-expand-right" : "sidebar-expand-left";
+                    } else {
+                        return Qt.application.layoutDirection === Qt.RightToLeft ? "sidebar-collapse-right" : "sidebar-collapse-left";
                     }
-                    level: 1
-                    elide: Text.ElideRight
-                    text: drawer.title
-                    textFormat: Text.PlainText
                 }
+
+                onClicked: drawer.collapsed = !drawer.collapsed
+
+                QQC2.ToolTip.visible: drawer.collapsed && (Kirigami.Settings.tabletMode ? pressed : hovered)
+                QQC2.ToolTip.text: qsTr("Open Sidebar")
+                QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+            }
+        }
+
+        function getIcon(category: string): string {
+            switch (category.trim()) {
+                case 'Activities': return 'games-highscores'
+                case 'Animals and Nature': return 'animal'
+                case 'Flags': return 'flag'
+                case 'Food and Drink': return 'food'
+                case 'Objects': return 'object'
+                case 'People and Body': return 'user'
+                case 'Smileys and Emotion': return 'smiley'
+                case 'Symbols': return 'checkmark'
+                case 'Travel and Places': return 'globe'
+                default: return 'folder'
+            }
+        }
+
+        Instantiator {
+            id: instantiator
+
+            model: emoji.categories
+            delegate: CategoryAction {
+                category: modelData
+                icon.name: drawer.getIcon(category)
             }
 
-            function getIcon(category: string): string {
-                switch (category.trim()) {
-                    case 'Activities': return 'games-highscores'
-                    case 'Animals and Nature': return 'animal'
-                    case 'Flags': return 'flag'
-                    case 'Food and Drink': return 'food'
-                    case 'Objects': return 'object'
-                    case 'People and Body': return 'user'
-                    case 'Smileys and Emotion': return 'smiley'
-                    case 'Symbols': return 'checkmark'
-                    case 'Travel and Places': return 'globe'
-                    default: return 'folder'
-                }
-            }
-
-            Instantiator {
-                id: instantiator
-
-                property int loadCount: 0
-
-                asynchronous: true
-                model: emoji.categories
-
-                CategoryAction {
-                    category: modelData
-                    icon.name: drawer.getIcon(category)
-                }
-
-                onObjectAdded: (index, object) => {
-                    if (++loadCount !== model.length) {
-                        return;
-                    }
-
-                    const actions = [recentAction, allAction];
-                    for (let i = 0; i < count; ++i) {
-                        actions.push(this.objectAt(i));
-                    }
-                    drawer.actions = actions;
-                    // The extra gridUnit is to account for the header that appears when expanded
-                    window.minimumHeight = Qt.binding(() => drawer.contentHeight + Kirigami.Units.gridUnit * 2);
-                }
+            onObjectAdded: (index, object) => {
+                drawer.actions.push(object);
             }
         }
     }
@@ -150,17 +146,6 @@ Kirigami.ApplicationWindow {
             recentAction.trigger();
         } else {
             allAction.trigger();
-        }
-
-        const incubator = drawerComponent.incubateObject(window);
-        if (incubator.status !== Component.Ready) {
-            incubator.onStatusChanged = function(status) {
-                if (status === Component.Ready) {
-                    window.globalDrawer = incubator.object;
-                }
-            };
-        } else {
-            window.globalDrawer = incubator.object;
         }
     }
 }
