@@ -25,6 +25,9 @@
 
 K_PLUGIN_CLASS_WITH_JSON(KeyboardDaemon, "kded_keyboard.json")
 
+static const QString s_keyboardService = QStringLiteral("org.kde.keyboard");
+static const QString s_keyboardObject = QStringLiteral("/Layouts");
+
 KeyboardDaemon::KeyboardDaemon(QObject *parent, const QList<QVariant> &)
     : KDEDModule(parent)
     , keyboardSettings(new KeyboardSettings(this))
@@ -36,6 +39,10 @@ KeyboardDaemon::KeyboardDaemon(QObject *parent, const QList<QVariant> &)
 {
     if (!X11Helper::xkbSupported(nullptr))
         return;
+
+    QDBusConnection dbus = QDBusConnection::sessionBus();
+    dbus.registerService(s_keyboardService);
+    dbus.registerObject(s_keyboardObject, this, QDBusConnection::ExportScriptableSlots | QDBusConnection::ExportScriptableSignals);
 
     LayoutNames::registerMetaType();
 
@@ -55,6 +62,10 @@ KeyboardDaemon::~KeyboardDaemon()
     LayoutMemoryPersister layoutMemoryPersister(layoutMemory);
     layoutMemoryPersister.setGlobalLayout(X11Helper::getCurrentLayout());
     layoutMemoryPersister.save();
+
+    QDBusConnection dbus = QDBusConnection::sessionBus();
+    dbus.unregisterObject(s_keyboardObject);
+    dbus.unregisterService(s_keyboardService);
 
     unregisterListeners();
     unregisterShortcut();
