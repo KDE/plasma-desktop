@@ -61,13 +61,31 @@ Kirigami.ScrollablePage {
             onTextChanged: {
                 forceActiveFocus()
                 emojiModel.search = text
-                if (emojiView.currentIndex < 0) {
-                    Qt.callLater(function() {
-                        emojiView.currentIndex = 0
-                    })
+
+                // Always focus the first item if there is one
+                if (emojiView.count === 0) {
+                    emojiView.currentIndex = -1;
+                } else {
+                    emojiView.currentIndex = 0;
                 }
-                else {
-                    emojiView.currentIndex = 0
+
+                // If nothing was found, try again with all emojis
+                if (emojiView.currentIndex < 0) {
+                    let anythingChanged = false;
+
+                    if (view.category.length > 0) {
+                        view.category = "";
+                        anythingChanged = true;
+                    }
+
+                    if (view.model != emoji) {
+                        view.model = emoji;
+                        anythingChanged = true;
+                    }
+
+                    if (anythingChanged) {
+                        view.title = i18nc("@title:page All emojis", "All");
+                    }
                 }
             }
             Component.onCompleted: {
