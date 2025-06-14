@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-13 00:44+0000\n"
+"POT-Creation-Date: 2025-06-14 00:44+0000\n"
 "PO-Revision-Date: 2023-01-31 19:13+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -44,37 +44,37 @@ msgstr "sdepiets@gmail.com"
 msgid "Replace an existing instance"
 msgstr "Remplacer une instance existante"
 
-#: app/ui/CategoryPage.qml:33 app/ui/Emojier.qml:62
+#: app/ui/CategoryPage.qml:33 app/ui/CategoryPage.qml:87 app/ui/Emojier.qml:62
 #, fuzzy, kde-format
 #| msgid "All"
 msgctxt "@title:page All emojis"
 msgid "All"
 msgstr "Toutes"
 
-#: app/ui/CategoryPage.qml:93
+#: app/ui/CategoryPage.qml:111
 #, kde-format
 msgid "Clear History"
 msgstr "Effacer l'historique"
 
-#: app/ui/CategoryPage.qml:119
+#: app/ui/CategoryPage.qml:137
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Character"
 msgstr "Copier un caractère"
 
-#: app/ui/CategoryPage.qml:122 app/ui/CategoryPage.qml:130
+#: app/ui/CategoryPage.qml:140 app/ui/CategoryPage.qml:148
 #: app/ui/Emojier.qml:40
 #, kde-format
 msgid "%1 copied to the clipboard"
 msgstr "%1 copié dans le presse-papier"
 
-#: app/ui/CategoryPage.qml:127
+#: app/ui/CategoryPage.qml:145
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Description"
 msgstr "Copier une description"
 
-#: app/ui/CategoryPage.qml:217
+#: app/ui/CategoryPage.qml:235
 #, kde-format
 msgid "No recent Emojis"
 msgstr "Aucune émoticône récente"

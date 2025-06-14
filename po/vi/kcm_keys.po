@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-09 00:43+0000\n"
+"POT-Creation-Date: 2025-06-14 00:44+0000\n"
 "PO-Revision-Date: 2023-01-08 16:27+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -182,32 +182,13 @@ msgctxt "@action:button Export shortcut scheme"
 msgid "Export…"
 msgstr "Xuất khẩu quy hoạch…"
 
-#: ui/main.qml:83
-#, kde-format
-msgid "Cannot export scheme while there are unsaved changes"
-msgstr "Không thể xuất khẩu quy hoạch khi có các thay đổi chưa được lưu"
-
-#: ui/main.qml:96
-#, kde-format
-msgid ""
-"Select the components below that should be included in the exported scheme"
-msgstr ""
-"Chọn các thành phần bên dưới sẽ được bao gồm trong quy hoạch được xuất khẩu"
-
-#: ui/main.qml:103
-#, fuzzy, kde-format
-#| msgid "Export Scheme…"
-msgctxt "@action:button Export shortcut scheme"
-msgid "Export"
-msgstr "Xuất khẩu quy hoạch…"
-
-#: ui/main.qml:173
+#: ui/main.qml:68
 #, kde-format
 msgctxt "@action:button Add new shortcut"
 msgid "Add New"
 msgstr ""
 
-#: ui/main.qml:179
+#: ui/main.qml:76
 #, fuzzy, kde-format
 #| msgctxt "@action:button Keep translated text as short as possible"
 #| msgid "Add Application…"
@@ -215,27 +196,46 @@ msgctxt "@action:menu End of the sentence 'Add New Application…'"
 msgid "Application…"
 msgstr "Thêm ứng dụng…"
 
-#: ui/main.qml:180
+#: ui/main.qml:77
 #, fuzzy, kde-format
 #| msgid "Applications"
 msgctxt "@action:menu accessible"
 msgid "Add new application"
 msgstr "Ứng dụng"
 
-#: ui/main.qml:187
+#: ui/main.qml:84
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
 msgid "Command or Script…"
 msgstr ""
 
-#: ui/main.qml:188
+#: ui/main.qml:85
 #, fuzzy, kde-format
 #| msgid "Enter a command or the full path to a script file:"
 msgctxt "@action:menu accessible"
 msgid "Add new command or script"
 msgstr "Nhập một lệnh hoặc đường dẫn đầy đủ đến một tệp kịch bản:"
 
-#: ui/main.qml:224
+#: ui/main.qml:106
+#, kde-format
+msgid "Cannot export scheme while there are unsaved changes"
+msgstr "Không thể xuất khẩu quy hoạch khi có các thay đổi chưa được lưu"
+
+#: ui/main.qml:119
+#, kde-format
+msgid ""
+"Select the components below that should be included in the exported scheme"
+msgstr ""
+"Chọn các thành phần bên dưới sẽ được bao gồm trong quy hoạch được xuất khẩu"
+
+#: ui/main.qml:126
+#, fuzzy, kde-format
+#| msgid "Export Scheme…"
+msgctxt "@action:button Export shortcut scheme"
+msgid "Export"
+msgstr "Xuất khẩu quy hoạch…"
+
+#: ui/main.qml:216
 #, fuzzy, kde-format
 #| msgid "Export Scheme…"
 msgctxt ""
@@ -243,7 +243,7 @@ msgctxt ""
 msgid "Export %1"
 msgstr "Xuất khẩu quy hoạch…"
 
-#: ui/main.qml:233
+#: ui/main.qml:225
 #, fuzzy, kde-format
 #| msgctxt "@tooltip:button %1 is the text of a custom command"
 #| msgid "Edit command for %1"
@@ -251,7 +251,7 @@ msgctxt "@action:button accessible %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "Sửa lệnh cho %1"
 
-#: ui/main.qml:249
+#: ui/main.qml:241
 #, fuzzy, kde-format
 #| msgctxt "@tooltip:button %1 is the text of a custom command"
 #| msgid "Edit command for %1"
@@ -259,131 +259,131 @@ msgctxt "@info:tooltip %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "Sửa lệnh cho %1"
 
-#: ui/main.qml:257
+#: ui/main.qml:249
 #, fuzzy, kde-format
 #| msgid "Remove all shortcuts for %1"
 msgctxt "@action:button accessible %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Xoá tất cả phím tắt cho %1"
 
-#: ui/main.qml:267
+#: ui/main.qml:259
 #, fuzzy, kde-format
 #| msgid "Remove all shortcuts for %1"
 msgctxt "@info:tooltip %1 is the text of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Xoá tất cả phím tắt cho %1"
 
-#: ui/main.qml:274
+#: ui/main.qml:266
 #, fuzzy, kde-format
 #| msgid "Undo deletion"
 msgctxt "@action:button accessible"
 msgid "Undo deletion"
 msgstr "Đảo ngược việc xoá"
 
-#: ui/main.qml:279
+#: ui/main.qml:271
 #, fuzzy, kde-format
 #| msgid "Undo deletion"
 msgctxt "@info:tooltip"
 msgid "Undo deletion"
 msgstr "Đảo ngược việc xoá"
 
-#: ui/main.qml:333
+#: ui/main.qml:325
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "Không có mục nào khớp với các từ khoá tìm kiếm"
 
-#: ui/main.qml:366
+#: ui/main.qml:358
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Chọn một mục trong danh sách để xem các phím tắt của nó tại đây"
 
-#: ui/main.qml:378
+#: ui/main.qml:370
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "Xuất khẩu quy hoạch phím tắt"
 
-#: ui/main.qml:378 ui/main.qml:520
+#: ui/main.qml:370 ui/main.qml:512
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Nhập khẩu quy hoạch phím tắt"
 
-#: ui/main.qml:380
+#: ui/main.qml:372
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Quy hoạch phím tắt (*.kksrc)"
 
-#: ui/main.qml:407
+#: ui/main.qml:399
 #, kde-format
 msgid "Edit Command"
 msgstr "Sửa lệnh"
 
-#: ui/main.qml:407
+#: ui/main.qml:399
 #, kde-format
 msgid "Add Command"
 msgstr "Thêm lệnh"
 
-#: ui/main.qml:429
+#: ui/main.qml:421
 #, kde-format
 msgid "Save"
 msgstr "Lưu"
 
-#: ui/main.qml:429
+#: ui/main.qml:421
 #, kde-format
 msgid "Add"
 msgstr "Thêm"
 
-#: ui/main.qml:459
+#: ui/main.qml:451
 #, fuzzy, kde-format
 #| msgid "Enter a command or the full path to a script file:"
 msgid "Enter a command or choose a script file:"
 msgstr "Nhập một lệnh hoặc đường dẫn đầy đủ đến một tệp kịch bản:"
 
-#: ui/main.qml:468
+#: ui/main.qml:460
 #, fuzzy, kde-format
 #| msgid "Commands"
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
 msgstr "Lệnh"
 
-#: ui/main.qml:474
+#: ui/main.qml:466
 #, fuzzy, kde-format
 #| msgid "Commands"
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "Lệnh"
 
-#: ui/main.qml:481
+#: ui/main.qml:473
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr ""
 
-#: ui/main.qml:482
+#: ui/main.qml:474
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr ""
 
-#: ui/main.qml:490
+#: ui/main.qml:482
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
 msgstr ""
 
-#: ui/main.qml:491
+#: ui/main.qml:483
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
 msgstr ""
 
-#: ui/main.qml:503
+#: ui/main.qml:495
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr ""
 
-#: ui/main.qml:505
+#: ui/main.qml:497
 #, kde-format
 msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
@@ -391,22 +391,22 @@ msgctxt ""
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr ""
 
-#: ui/main.qml:528
+#: ui/main.qml:520
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Chọn quy hoạch để nhập khẩu:"
 
-#: ui/main.qml:547
+#: ui/main.qml:539
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Quy hoạch tự chọn"
 
-#: ui/main.qml:555
+#: ui/main.qml:547
 #, kde-format
 msgid "Select File…"
 msgstr "Chọn tệp…"
 
-#: ui/main.qml:555
+#: ui/main.qml:547
 #, kde-format
 msgid "Import"
 msgstr "Nhập khẩu"

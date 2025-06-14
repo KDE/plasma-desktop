@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2025 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-13 00:44+0000\n"
-"PO-Revision-Date: 2023-01-31 12:25+0100\n"
+"POT-Creation-Date: 2025-06-14 00:44+0000\n"
+"PO-Revision-Date: 2025-06-13 11:39+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: app/emojier.cpp:42 app/emojier.cpp:44
 #, kde-format
@@ -44,37 +44,36 @@ msgstr "freekdekruijf@kde.nl"
 msgid "Replace an existing instance"
 msgstr "Een bestaand exemplaar vervangen"
 
-#: app/ui/CategoryPage.qml:33 app/ui/Emojier.qml:62
-#, fuzzy, kde-format
-#| msgid "All"
+#: app/ui/CategoryPage.qml:33 app/ui/CategoryPage.qml:87 app/ui/Emojier.qml:62
+#, kde-format
 msgctxt "@title:page All emojis"
 msgid "All"
 msgstr "Alles"
 
-#: app/ui/CategoryPage.qml:93
+#: app/ui/CategoryPage.qml:111
 #, kde-format
 msgid "Clear History"
 msgstr "Geschiedenis wissen"
 
-#: app/ui/CategoryPage.qml:119
+#: app/ui/CategoryPage.qml:137
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Character"
 msgstr "Teken kopiëren"
 
-#: app/ui/CategoryPage.qml:122 app/ui/CategoryPage.qml:130
+#: app/ui/CategoryPage.qml:140 app/ui/CategoryPage.qml:148
 #: app/ui/Emojier.qml:40
 #, kde-format
 msgid "%1 copied to the clipboard"
 msgstr "%1 gekopieerd naar het klembord"
 
-#: app/ui/CategoryPage.qml:127
+#: app/ui/CategoryPage.qml:145
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Description"
 msgstr "Beschrijving kopiëren"
 
-#: app/ui/CategoryPage.qml:217
+#: app/ui/CategoryPage.qml:235
 #, kde-format
 msgid "No recent Emojis"
 msgstr "Geen recente emoji's"

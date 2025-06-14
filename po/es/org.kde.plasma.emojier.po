@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: org.kde.plasma.emojier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-13 00:44+0000\n"
-"PO-Revision-Date: 2025-05-26 01:13+0100\n"
+"POT-Creation-Date: 2025-06-14 00:44+0000\n"
+"PO-Revision-Date: 2025-06-13 12:15+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: app/emojier.cpp:42 app/emojier.cpp:44
 #, kde-format
@@ -46,37 +46,36 @@ msgstr "ecuadra@eloihr.net"
 msgid "Replace an existing instance"
 msgstr "Sustituir una instancia existente"
 
-#: app/ui/CategoryPage.qml:33 app/ui/Emojier.qml:62
-#, fuzzy, kde-format
-#| msgid "All"
+#: app/ui/CategoryPage.qml:33 app/ui/CategoryPage.qml:87 app/ui/Emojier.qml:62
+#, kde-format
 msgctxt "@title:page All emojis"
 msgid "All"
-msgstr "Todas"
+msgstr "Todos"
 
-#: app/ui/CategoryPage.qml:93
+#: app/ui/CategoryPage.qml:111
 #, kde-format
 msgid "Clear History"
 msgstr "Borrar el historial"
 
-#: app/ui/CategoryPage.qml:119
+#: app/ui/CategoryPage.qml:137
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Character"
 msgstr "Copiara carácter"
 
-#: app/ui/CategoryPage.qml:122 app/ui/CategoryPage.qml:130
+#: app/ui/CategoryPage.qml:140 app/ui/CategoryPage.qml:148
 #: app/ui/Emojier.qml:40
 #, kde-format
 msgid "%1 copied to the clipboard"
 msgstr "%1 copiado en el portapapeles"
 
-#: app/ui/CategoryPage.qml:127
+#: app/ui/CategoryPage.qml:145
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Description"
 msgstr "Copiar descripción"
 
-#: app/ui/CategoryPage.qml:217
+#: app/ui/CategoryPage.qml:235
 #, kde-format
 msgid "No recent Emojis"
 msgstr "No hay emojis recientes"
@@ -140,6 +139,3 @@ msgstr "Símbolos"
 msgctxt "Emoji Category"
 msgid "Flags"
 msgstr "Banderas"
-
-#~ msgid "Search"
-#~ msgstr "Buscar"

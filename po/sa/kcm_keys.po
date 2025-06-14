@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-09 00:43+0000\n"
+"POT-Creation-Date: 2025-06-14 00:44+0000\n"
 "PO-Revision-Date: 2024-12-25 19:37+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -174,49 +174,32 @@ msgctxt "@action:button Export shortcut scheme"
 msgid "Export…"
 msgstr "निर्यात…"
 
-#: ui/main.qml:83
-#, kde-format
-msgid "Cannot export scheme while there are unsaved changes"
-msgstr "असरक्षितपरिवर्तनानि सन्ति चेत् योजना निर्यातयितुं न शक्नोति"
-
-#: ui/main.qml:96
-#, kde-format
-msgid ""
-"Select the components below that should be included in the exported scheme"
-msgstr "निर्यातितयोजनायां समाविष्टानि घटकानि अधोलिखितानि चिनुत"
-
-#: ui/main.qml:103
-#, kde-format
-msgctxt "@action:button Export shortcut scheme"
-msgid "Export"
-msgstr "निर्यात"
-
-#: ui/main.qml:173
+#: ui/main.qml:68
 #, kde-format
 msgctxt "@action:button Add new shortcut"
 msgid "Add New"
 msgstr "New योजयतु"
 
-#: ui/main.qml:179
+#: ui/main.qml:76
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Application…'"
 msgid "Application…"
 msgstr "अनुप्रयोगः…"
 
-#: ui/main.qml:180
+#: ui/main.qml:77
 #, fuzzy, kde-format
 #| msgid "Applications"
 msgctxt "@action:menu accessible"
 msgid "Add new application"
 msgstr "अनुप्रयोगाः"
 
-#: ui/main.qml:187
+#: ui/main.qml:84
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
 msgid "Command or Script…"
 msgstr "आदेशः वा स्क्रिप्ट् वा..."
 
-#: ui/main.qml:188
+#: ui/main.qml:85
 #, fuzzy, kde-format
 #| msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
 #| msgid "Command or Script…"
@@ -224,143 +207,160 @@ msgctxt "@action:menu accessible"
 msgid "Add new command or script"
 msgstr "आदेशः वा स्क्रिप्ट् वा..."
 
-#: ui/main.qml:224
+#: ui/main.qml:106
+#, kde-format
+msgid "Cannot export scheme while there are unsaved changes"
+msgstr "असरक्षितपरिवर्तनानि सन्ति चेत् योजना निर्यातयितुं न शक्नोति"
+
+#: ui/main.qml:119
+#, kde-format
+msgid ""
+"Select the components below that should be included in the exported scheme"
+msgstr "निर्यातितयोजनायां समाविष्टानि घटकानि अधोलिखितानि चिनुत"
+
+#: ui/main.qml:126
+#, kde-format
+msgctxt "@action:button Export shortcut scheme"
+msgid "Export"
+msgstr "निर्यात"
+
+#: ui/main.qml:216
 #, kde-format
 msgctxt ""
 "@option:check accessible export shortcuts %1 is application/group name"
 msgid "Export %1"
 msgstr "निर्यातं %1"
 
-#: ui/main.qml:233
+#: ui/main.qml:225
 #, kde-format
 msgctxt "@action:button accessible %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "%1 कृते आदेशं सम्पादयन्तु"
 
-#: ui/main.qml:249
+#: ui/main.qml:241
 #, kde-format
 msgctxt "@info:tooltip %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "%1 कृते आदेशं सम्पादयन्तु"
 
-#: ui/main.qml:257
+#: ui/main.qml:249
 #, kde-format
 msgctxt "@action:button accessible %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "%1 कृते सर्वाणि शॉर्टकट् अपसारयन्तु"
 
-#: ui/main.qml:267
+#: ui/main.qml:259
 #, kde-format
 msgctxt "@info:tooltip %1 is the text of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "%1 कृते सर्वाणि शॉर्टकट् अपसारयन्तु"
 
-#: ui/main.qml:274
+#: ui/main.qml:266
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Undo deletion"
 msgstr "लोपं पूर्ववत कुर्वन्तु"
 
-#: ui/main.qml:279
+#: ui/main.qml:271
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo deletion"
 msgstr "लोपं पूर्ववत कुर्वन्तु"
 
-#: ui/main.qml:333
+#: ui/main.qml:325
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "अन्वेषणपदैः सह कोऽपि द्रव्यः न मेलति स्म"
 
-#: ui/main.qml:366
+#: ui/main.qml:358
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "अत्र तस्य शॉर्टकट् द्रष्टुं सूचीतः एकं द्रव्यं चिनोतु"
 
-#: ui/main.qml:378
+#: ui/main.qml:370
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "निर्यात शॉर्टकट योजना"
 
-#: ui/main.qml:378 ui/main.qml:520
+#: ui/main.qml:370 ui/main.qml:512
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "आयात शॉर्टकट योजना"
 
-#: ui/main.qml:380
+#: ui/main.qml:372
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "शॉर्टकट योजना (*.kksrc) 1.1."
 
-#: ui/main.qml:407
+#: ui/main.qml:399
 #, kde-format
 msgid "Edit Command"
 msgstr "सम्पादन आदेश"
 
-#: ui/main.qml:407
+#: ui/main.qml:399
 #, kde-format
 msgid "Add Command"
 msgstr "Add Command इति"
 
-#: ui/main.qml:429
+#: ui/main.qml:421
 #, kde-format
 msgid "Save"
 msgstr "रक्ष्"
 
-#: ui/main.qml:429
+#: ui/main.qml:421
 #, kde-format
 msgid "Add"
 msgstr "संयोजयति"
 
-#: ui/main.qml:459
+#: ui/main.qml:451
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "आदेशं प्रविशतु अथवा स्क्रिप्ट् सञ्चिकां चिनोतु:"
 
-#: ui/main.qml:468
+#: ui/main.qml:460
 #, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
 msgstr "आदेश:"
 
-#: ui/main.qml:474
+#: ui/main.qml:466
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "आदेश"
 
-#: ui/main.qml:481
+#: ui/main.qml:473
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "चिनोतु…"
 
-#: ui/main.qml:482
+#: ui/main.qml:474
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "स्क्रिप्ट् सञ्चिकां चिनोतु"
 
-#: ui/main.qml:490
+#: ui/main.qml:482
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
 msgstr "नामः:"
 
-#: ui/main.qml:491
+#: ui/main.qml:483
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
 msgstr "अत्र नाम प्रविशतु"
 
-#: ui/main.qml:503
+#: ui/main.qml:495
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Script File इति चिनोतु"
 
-#: ui/main.qml:505
+#: ui/main.qml:497
 #, kde-format
 msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
@@ -368,22 +368,22 @@ msgctxt ""
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "स्क्रिप्ट् सञ्चिकाः (.sh, .bash, .zsh इत्यादयः) (*.*sh)"
 
-#: ui/main.qml:528
+#: ui/main.qml:520
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "आयातार्थं योजनां चिनोतु :"
 
-#: ui/main.qml:547
+#: ui/main.qml:539
 #, kde-format
 msgid "Custom Scheme"
 msgstr "कस्टम योजना"
 
-#: ui/main.qml:555
+#: ui/main.qml:547
 #, kde-format
 msgid "Select File…"
 msgstr "सञ्चिकां चिनोतु..."
 
-#: ui/main.qml:555
+#: ui/main.qml:547
 #, kde-format
 msgid "Import"
 msgstr "आयात"

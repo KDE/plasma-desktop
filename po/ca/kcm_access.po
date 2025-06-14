@@ -1,19 +1,19 @@
 # Translation of kcm_access.po to Catalan
-# Copyright (C) 2000-2024 This_file_is_part_of_KDE
+# Copyright (C) 2000-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# SPDX-FileCopyrightText: 2007, 2008, 2009, 2014, 2015, 2017, 2019, 2020, 2021, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
 # Sebastià Pla i Sanz <sps@sastia.com>, 2000, 2001, 2004, 2005, 2006.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2002, 2003, 2012, 2015, 2016, 2020.
 # Orestes Mas Casals <orestes@tsc.upc.edu>, 2008.
 # Alfredo Vicente <alviboi@gmail.com>, 2019.
+# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2014, 2015, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-13 00:44+0000\n"
-"PO-Revision-Date: 2024-11-29 09:16+0100\n"
+"PO-Revision-Date: 2025-06-13 10:09+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -27,47 +27,47 @@ msgstr ""
 #: kcmaccess.cpp:127 kcmaccess.cpp:155
 #, kde-format
 msgid "KWin"
-msgstr ""
+msgstr "KWin"
 
 #: kcmaccess.cpp:130
 #, kde-format
 msgid "Toggle Invert Effect"
-msgstr ""
+msgstr "Commuta l'efecte d'inversió"
 
 #: kcmaccess.cpp:136
 #, kde-format
 msgid "Toggle Invert Effect on Window"
-msgstr ""
+msgstr "Commuta l'efecte d'inversió a la finestra"
 
 #: kcmaccess.cpp:178
 #, kde-format
 msgid "Move Left"
-msgstr ""
+msgstr "Mou a l'esquerra"
 
 #: kcmaccess.cpp:185
 #, kde-format
 msgid "Move Right"
-msgstr ""
+msgstr "Mou a la dreta"
 
 #: kcmaccess.cpp:192
 #, kde-format
 msgid "Move Up"
-msgstr ""
+msgstr "Mou amunt"
 
 #: kcmaccess.cpp:199
 #, kde-format
 msgid "Move Down"
-msgstr ""
+msgstr "Mou avall"
 
 #: kcmaccess.cpp:206
 #, kde-format
 msgid "Move Mouse to Focus"
-msgstr ""
+msgstr "Mou el ratolí al focus"
 
 #: kcmaccess.cpp:213
 #, kde-format
 msgid "Move Mouse to Center"
-msgstr ""
+msgstr "Mou el ratolí al centre"
 
 #: kcmaccess.cpp:256
 #, kde-format
@@ -165,10 +165,9 @@ msgstr "Si s'ha activat la correcció del daltonisme"
 
 #. i18n: ectx: label, entry (Invert), group (Plugins)
 #: kcmaccessibilityinvert.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Invert effect is enabled"
-msgstr "Si s'ha activat Sacseja el cursor"
+msgstr "Si s'ha activat l'efecte d'inversió"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
@@ -311,17 +310,15 @@ msgstr "Ampliació"
 
 #. i18n: ectx: label, entry (Zoom), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Zoom effect is enabled"
-msgstr "Si s'ha activat Sacseja el cursor"
+msgstr "Si s'ha activat l'efecte de zoom"
 
 #. i18n: ectx: label, entry (Magnifier), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Magnifier effect is enabled"
-msgstr "Si s'ha activat Sacseja el cursor"
+msgstr "Si s'ha activat l'efecte de lupa"
 
 #: ui/ActivationShortcuts.qml:18
 #, kde-format
@@ -566,12 +563,10 @@ msgstr "Púrpura"
 #, kde-format
 msgctxt "@label"
 msgid "Invert:"
-msgstr ""
+msgstr "Inverteix:"
 
 #: ui/Invert.qml:23
-#, fuzzy, kde-format
-#| msgctxt "Enable activation shortcuts"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable invert effect"
 msgid "Enable"
 msgstr "Activa"
@@ -581,13 +576,14 @@ msgstr "Activa"
 msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
 msgstr ""
+"Usa les dreceres per a commutar la inversió de colors a la pantalla i les "
+"finestres"
 
 #: ui/Invert.qml:49 ui/ZoomMagnifier.qml:319
-#, fuzzy, kde-format
-#| msgid "Configure Notifications…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Shortcuts…"
-msgstr "Configura les notificacions…"
+msgstr "Configura les dreceres…"
 
 #: ui/KeyboardFilters.qml:18
 #, kde-format
@@ -679,7 +675,7 @@ msgstr "Fes sonar el timbre quan es rebutgi"
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Zoom & Magnifier"
-msgstr ""
+msgstr "Zoom i lupa"
 
 #: ui/main.qml:33
 #, kde-format
@@ -726,7 +722,7 @@ msgstr "Correcció del daltonisme"
 #, kde-format
 msgctxt "@title Category name in sidebar, for inverting screen colors"
 msgid "Invert"
-msgstr ""
+msgstr "Inverteix"
 
 #: ui/main.qml:73
 #, kde-format
@@ -933,196 +929,151 @@ msgstr "Gran"
 #, kde-format
 msgctxt "@label, followed by 'full screen' or 'magnify region'"
 msgid "Zoom:"
-msgstr ""
+msgstr "Zoom:"
 
 #: ui/ZoomMagnifier.qml:23
-#, fuzzy, kde-format
-#| msgctxt "@option:radio Flash screen when a system bell is rung"
-#| msgid "Flash screen"
+#, kde-format
 msgctxt "@option:check, enable zoom effect, following 'Zoom:'"
 msgid "Full screen"
-msgstr "Flaix de la pantalla"
+msgstr "Pantalla completa"
 
 #: ui/ZoomMagnifier.qml:52
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Show pixel grid at zoom level:"
-msgstr ""
+msgstr "Mostra la quadrícula de píxels al nivell de zoom:"
 
 #: ui/ZoomMagnifier.qml:84
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Mouse pointer:"
-msgstr ""
+msgstr "Punter del ratolí:"
 
 #: ui/ZoomMagnifier.qml:86
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scale"
-msgstr ""
+msgstr "Escala"
 
 #: ui/ZoomMagnifier.qml:86
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Keep"
-msgstr ""
+msgstr "Mantén"
 
 #: ui/ZoomMagnifier.qml:86
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Hide"
-msgstr ""
+msgstr "Oculta"
 
 #: ui/ZoomMagnifier.qml:97
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Mouse tracking:"
-msgstr ""
+msgstr "Seguiment del ratolí:"
 
 #: ui/ZoomMagnifier.qml:99
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Proportional"
-msgstr ""
+msgstr "Proporcional"
 
 #: ui/ZoomMagnifier.qml:99
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
-msgstr ""
+msgstr "Centrat"
 
 #: ui/ZoomMagnifier.qml:99
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Push"
-msgstr ""
+msgstr "Empeny"
 
 #: ui/ZoomMagnifier.qml:99
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Disabled"
-msgstr ""
+msgstr "Desactivat"
 
 #: ui/ZoomMagnifier.qml:110
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable focus tracking"
-msgstr ""
+msgstr "Activa el seguiment del focus"
 
 #: ui/ZoomMagnifier.qml:121
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable text caret tracking"
-msgstr ""
+msgstr "Activa el seguiment del cursor de text"
 
 #: ui/ZoomMagnifier.qml:132
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
-msgstr ""
+msgstr "Tecles modificadores de gestos de desplaçament:"
 
 #: ui/ZoomMagnifier.qml:170
 #, kde-format
 msgctxt "@info:tooltip, indicates feature unavailable on X11"
 msgid "Zoom scroll gestures are only available on Wayland."
 msgstr ""
+"Els gestos de desplaçament del zoom només estan disponibles al Wayland."
 
 #: ui/ZoomMagnifier.qml:176
-#, fuzzy, kde-format
-#| msgid "Ring system bell when modifier keys are used"
+#, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
-msgstr "Fes sonar el timbre del sistema quan s'usin les tecles modificadores"
+msgstr "Desplaceu mentre es premen les tecles modificadores per a fer zoom"
 
 #: ui/ZoomMagnifier.qml:188
-#, fuzzy, kde-format
-#| msgid "Magnification"
+#, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
-msgstr "Ampliació"
+msgstr "Regió a ampliar"
 
 #: ui/ZoomMagnifier.qml:215
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
-msgstr ""
+msgstr "Amplada:"
 
 #: ui/ZoomMagnifier.qml:226 ui/ZoomMagnifier.qml:251
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
 msgid_plural "%1 px"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 px"
+msgstr[1] "%1 px"
 
 #: ui/ZoomMagnifier.qml:227 ui/ZoomMagnifier.qml:252
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
-msgstr ""
+msgstr "px"
 
 #: ui/ZoomMagnifier.qml:240
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
-msgstr ""
+msgstr "Alçada:"
 
 #: ui/ZoomMagnifier.qml:269
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
-msgstr ""
+msgstr "Desactivat"
 
 #: ui/ZoomMagnifier.qml:282
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
-msgstr ""
+msgstr "Factor de zoom:"
 
 #: ui/ZoomMagnifier.qml:329
-#, fuzzy, kde-format
-#| msgid "Use keys to control the mouse"
+#, kde-format
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
-msgstr "Usa tecles per a controlar el ratolí"
-
-#~ msgid "AltGraph"
-#~ msgstr "AltGr"
-
-#~ msgid "Hyper"
-#~ msgstr "Hyper"
-
-#~ msgid "Super"
-#~ msgstr "Súper"
-
-#~ msgid "Press %1 while NumLock, CapsLock and ScrollLock are active"
-#~ msgstr "Premeu %1 mentre Bloq Núm, Bloq Maj i Bloq Despl estan actives"
-
-#~ msgid "Press %1 while CapsLock and ScrollLock are active"
-#~ msgstr "Premeu %1 mentre Bloq Maj i Bloq Despl estan actives"
-
-#~ msgid "Press %1 while NumLock and ScrollLock are active"
-#~ msgstr "Premeu %1 mentre Bloq Núm i Bloq Despl estan actives"
-
-#~ msgid "Press %1 while ScrollLock is active"
-#~ msgstr "Premeu %1 mentre Bloq Despl està activa"
-
-#~ msgid "Press %1 while NumLock and CapsLock are active"
-#~ msgstr "Premeu %1 mentre Bloq Núm i Bloq Maj estan actives"
-
-#~ msgid "Press %1 while CapsLock is active"
-#~ msgstr "Premeu %1 mentre Bloq Maj està activa"
-
-#~ msgid "Press %1 while NumLock is active"
-#~ msgstr "Premeu %1 mentre Bloq Núm està activa"
-
-#~ msgid "Press %1"
-#~ msgstr "Premeu %1"
-
-#~ msgctxt "@label"
-#~ msgid "Emits a sound whenever certain keys are pressed"
-#~ msgstr "Emet un so quan es premen determinades tecles"
-
-#~ msgctxt "@label"
-#~ msgid "Flashes the screen whenever certain keys are pressed"
-#~ msgstr "La pantalla fa un flaix quan es premen determinades tecles"
+msgstr "Usa dreceres per a controlar el zoom"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-09 00:43+0000\n"
+"POT-Creation-Date: 2025-06-14 00:44+0000\n"
 "PO-Revision-Date: 2025-05-09 23:52+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -175,191 +175,191 @@ msgctxt "@action:button Export shortcut scheme"
 msgid "Export…"
 msgstr "Dışa Aktar…"
 
-#: ui/main.qml:83
+#: ui/main.qml:68
+#, kde-format
+msgctxt "@action:button Add new shortcut"
+msgid "Add New"
+msgstr "Yeni Ekle"
+
+#: ui/main.qml:76
+#, kde-format
+msgctxt "@action:menu End of the sentence 'Add New Application…'"
+msgid "Application…"
+msgstr "Uygulama…"
+
+#: ui/main.qml:77
+#, kde-format
+msgctxt "@action:menu accessible"
+msgid "Add new application"
+msgstr "Yeni uygulama ekle"
+
+#: ui/main.qml:84
+#, kde-format
+msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
+msgid "Command or Script…"
+msgstr "Komut veya Betik…"
+
+#: ui/main.qml:85
+#, kde-format
+msgctxt "@action:menu accessible"
+msgid "Add new command or script"
+msgstr "Yeni komut veya betik ekle"
+
+#: ui/main.qml:106
 #, kde-format
 msgid "Cannot export scheme while there are unsaved changes"
 msgstr "Kaydedilmemiş değişiklikler varken şema dışa aktarılamaz"
 
-#: ui/main.qml:96
+#: ui/main.qml:119
 #, kde-format
 msgid ""
 "Select the components below that should be included in the exported scheme"
 msgstr ""
 "Dışa aktarılan şemaya dahil edilmesi gereken bileşenleri aşağıdan seçin"
 
-#: ui/main.qml:103
+#: ui/main.qml:126
 #, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export"
 msgstr "Dışa Aktar"
 
-#: ui/main.qml:173
-#, kde-format
-msgctxt "@action:button Add new shortcut"
-msgid "Add New"
-msgstr "Yeni Ekle"
-
-#: ui/main.qml:179
-#, kde-format
-msgctxt "@action:menu End of the sentence 'Add New Application…'"
-msgid "Application…"
-msgstr "Uygulama…"
-
-#: ui/main.qml:180
-#, kde-format
-msgctxt "@action:menu accessible"
-msgid "Add new application"
-msgstr "Yeni uygulama ekle"
-
-#: ui/main.qml:187
-#, kde-format
-msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
-msgid "Command or Script…"
-msgstr "Komut veya Betik…"
-
-#: ui/main.qml:188
-#, kde-format
-msgctxt "@action:menu accessible"
-msgid "Add new command or script"
-msgstr "Yeni komut veya betik ekle"
-
-#: ui/main.qml:224
+#: ui/main.qml:216
 #, kde-format
 msgctxt ""
 "@option:check accessible export shortcuts %1 is application/group name"
 msgid "Export %1"
 msgstr "Dışa Aktar: %1"
 
-#: ui/main.qml:233
+#: ui/main.qml:225
 #, kde-format
 msgctxt "@action:button accessible %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "%1 için düzenleme komutu"
 
-#: ui/main.qml:249
+#: ui/main.qml:241
 #, kde-format
 msgctxt "@info:tooltip %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "%1 için düzenleme komutu"
 
-#: ui/main.qml:257
+#: ui/main.qml:249
 #, kde-format
 msgctxt "@action:button accessible %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "%1 için olan bütün kısayolları kaldır"
 
-#: ui/main.qml:267
+#: ui/main.qml:259
 #, kde-format
 msgctxt "@info:tooltip %1 is the text of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "%1 için olan bütün kısayolları kaldır"
 
-#: ui/main.qml:274
+#: ui/main.qml:266
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Undo deletion"
 msgstr "Silme işlemini geri al"
 
-#: ui/main.qml:279
+#: ui/main.qml:271
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo deletion"
 msgstr "Silme işlemini geri al"
 
-#: ui/main.qml:333
+#: ui/main.qml:325
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "Arama terimleriyle eşleşen öge yok"
 
-#: ui/main.qml:366
+#: ui/main.qml:358
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Kısayollarını görüntülemek için listeden bir öge seçin"
 
-#: ui/main.qml:378
+#: ui/main.qml:370
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "Kısayol Şemasını Dışa Aktar"
 
-#: ui/main.qml:378 ui/main.qml:520
+#: ui/main.qml:370 ui/main.qml:512
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Kısayol Şemasını İçe Aktar"
 
-#: ui/main.qml:380
+#: ui/main.qml:372
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Kısayol Şeması (*.kksrc)"
 
-#: ui/main.qml:407
+#: ui/main.qml:399
 #, kde-format
 msgid "Edit Command"
 msgstr "Komutu Düzenle"
 
-#: ui/main.qml:407
+#: ui/main.qml:399
 #, kde-format
 msgid "Add Command"
 msgstr "Komut Ekle"
 
-#: ui/main.qml:429
+#: ui/main.qml:421
 #, kde-format
 msgid "Save"
 msgstr "Kaydet"
 
-#: ui/main.qml:429
+#: ui/main.qml:421
 #, kde-format
 msgid "Add"
 msgstr "Ekle"
 
-#: ui/main.qml:459
+#: ui/main.qml:451
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "Bir komut gir veya bir betik dosyası seç:"
 
-#: ui/main.qml:468
+#: ui/main.qml:460
 #, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
 msgstr "Komut:"
 
-#: ui/main.qml:474
+#: ui/main.qml:466
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "Komut"
 
-#: ui/main.qml:481
+#: ui/main.qml:473
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Seç…"
 
-#: ui/main.qml:482
+#: ui/main.qml:474
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Betik dosyası seç"
 
-#: ui/main.qml:490
+#: ui/main.qml:482
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
 msgstr "Ad:"
 
-#: ui/main.qml:491
+#: ui/main.qml:483
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
 msgstr "Buraya ad gir"
 
-#: ui/main.qml:503
+#: ui/main.qml:495
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Betik Dosyası Seç"
 
-#: ui/main.qml:505
+#: ui/main.qml:497
 #, kde-format
 msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
@@ -367,22 +367,22 @@ msgctxt ""
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "Betik dosyaları (.sh, .bash, .zsh vb.) (*.*sh)"
 
-#: ui/main.qml:528
+#: ui/main.qml:520
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "İçe aktarılacak şemayı seç:"
 
-#: ui/main.qml:547
+#: ui/main.qml:539
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Özel Şema"
 
-#: ui/main.qml:555
+#: ui/main.qml:547
 #, kde-format
 msgid "Select File…"
 msgstr "Dosya Seç…"
 
-#: ui/main.qml:555
+#: ui/main.qml:547
 #, kde-format
 msgid "Import"
 msgstr "İçe Aktar"

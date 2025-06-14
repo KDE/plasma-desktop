@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-13 00:44+0000\n"
-"PO-Revision-Date: 2023-04-09 08:49+0200\n"
+"POT-Creation-Date: 2025-06-14 00:44+0000\n"
+"PO-Revision-Date: 2025-06-13 03:57+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.6\n"
 
 #: app/emojier.cpp:42 app/emojier.cpp:44
 #, kde-format
@@ -45,37 +45,36 @@ msgstr "Temuri.doghonadze@gmail.com"
 msgid "Replace an existing instance"
 msgstr "გაშვებული ასლის ჩანაცვლება"
 
-#: app/ui/CategoryPage.qml:33 app/ui/Emojier.qml:62
-#, fuzzy, kde-format
-#| msgid "All"
+#: app/ui/CategoryPage.qml:33 app/ui/CategoryPage.qml:87 app/ui/Emojier.qml:62
+#, kde-format
 msgctxt "@title:page All emojis"
 msgid "All"
 msgstr "ყველა"
 
-#: app/ui/CategoryPage.qml:93
+#: app/ui/CategoryPage.qml:111
 #, kde-format
 msgid "Clear History"
 msgstr "ისტორიის გაწმენდა"
 
-#: app/ui/CategoryPage.qml:119
+#: app/ui/CategoryPage.qml:137
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Character"
 msgstr "სიმბლოს კოპირება"
 
-#: app/ui/CategoryPage.qml:122 app/ui/CategoryPage.qml:130
+#: app/ui/CategoryPage.qml:140 app/ui/CategoryPage.qml:148
 #: app/ui/Emojier.qml:40
 #, kde-format
 msgid "%1 copied to the clipboard"
 msgstr "დაკოპირდა გაცვლის ბაფერში: %1"
 
-#: app/ui/CategoryPage.qml:127
+#: app/ui/CategoryPage.qml:145
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Description"
 msgstr "აღწერის კოპირება"
 
-#: app/ui/CategoryPage.qml:217
+#: app/ui/CategoryPage.qml:235
 #, kde-format
 msgid "No recent Emojis"
 msgstr "ემოჯიების გარეშე"

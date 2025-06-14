@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-09 00:43+0000\n"
+"POT-Creation-Date: 2025-06-14 00:44+0000\n"
 "PO-Revision-Date: 2025-05-30 20:41+0200\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -178,12 +178,42 @@ msgctxt "@action:button Export shortcut scheme"
 msgid "Export…"
 msgstr "Exportovať..."
 
-#: ui/main.qml:83
+#: ui/main.qml:68
+#, kde-format
+msgctxt "@action:button Add new shortcut"
+msgid "Add New"
+msgstr "Pridať nový"
+
+#: ui/main.qml:76
+#, kde-format
+msgctxt "@action:menu End of the sentence 'Add New Application…'"
+msgid "Application…"
+msgstr "Aplikácia…"
+
+#: ui/main.qml:77
+#, kde-format
+msgctxt "@action:menu accessible"
+msgid "Add new application"
+msgstr "Pridať novú aplikáciu"
+
+#: ui/main.qml:84
+#, kde-format
+msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
+msgid "Command or Script…"
+msgstr "Príkaz alebo skript..."
+
+#: ui/main.qml:85
+#, kde-format
+msgctxt "@action:menu accessible"
+msgid "Add new command or script"
+msgstr "Pridať nový príkaz alebo skript"
+
+#: ui/main.qml:106
 #, kde-format
 msgid "Cannot export scheme while there are unsaved changes"
 msgstr "Nie je možné exportovať schému pokým existujú neuložené zmeny"
 
-#: ui/main.qml:96
+#: ui/main.qml:119
 #, kde-format
 msgid ""
 "Select the components below that should be included in the exported scheme"
@@ -191,179 +221,149 @@ msgstr ""
 "Vyberte nižšie uvedené komponenty, ktoré sa majú zahrnúť do exportovanej "
 "schémy"
 
-#: ui/main.qml:103
+#: ui/main.qml:126
 #, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export"
 msgstr "Exportovať"
 
-#: ui/main.qml:173
-#, kde-format
-msgctxt "@action:button Add new shortcut"
-msgid "Add New"
-msgstr "Pridať nový"
-
-#: ui/main.qml:179
-#, kde-format
-msgctxt "@action:menu End of the sentence 'Add New Application…'"
-msgid "Application…"
-msgstr "Aplikácia…"
-
-#: ui/main.qml:180
-#, kde-format
-msgctxt "@action:menu accessible"
-msgid "Add new application"
-msgstr "Pridať novú aplikáciu"
-
-#: ui/main.qml:187
-#, kde-format
-msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
-msgid "Command or Script…"
-msgstr "Príkaz alebo skript..."
-
-#: ui/main.qml:188
-#, kde-format
-msgctxt "@action:menu accessible"
-msgid "Add new command or script"
-msgstr "Pridať nový príkaz alebo skript"
-
-#: ui/main.qml:224
+#: ui/main.qml:216
 #, kde-format
 msgctxt ""
 "@option:check accessible export shortcuts %1 is application/group name"
 msgid "Export %1"
 msgstr "Exportovať %1"
 
-#: ui/main.qml:233
+#: ui/main.qml:225
 #, kde-format
 msgctxt "@action:button accessible %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "Upraviť príkaz pre %1"
 
-#: ui/main.qml:249
+#: ui/main.qml:241
 #, kde-format
 msgctxt "@info:tooltip %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "Upraviť príkaz pre %1"
 
-#: ui/main.qml:257
+#: ui/main.qml:249
 #, kde-format
 msgctxt "@action:button accessible %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Odstrániť všetky skratky pre %1"
 
-#: ui/main.qml:267
+#: ui/main.qml:259
 #, kde-format
 msgctxt "@info:tooltip %1 is the text of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Odstrániť všetky skratky pre %1"
 
-#: ui/main.qml:274
+#: ui/main.qml:266
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Undo deletion"
 msgstr "Vrátiť odstránenie"
 
-#: ui/main.qml:279
+#: ui/main.qml:271
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo deletion"
 msgstr "Vrátiť odstránenie"
 
-#: ui/main.qml:333
+#: ui/main.qml:325
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "Hľadaným výrazom nezodpovedajú žiadne položky"
 
-#: ui/main.qml:366
+#: ui/main.qml:358
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Vyberte položku zo zoznamu na zobrazenie jej skratiek"
 
-#: ui/main.qml:378
+#: ui/main.qml:370
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "Exportovať schému skratiek"
 
-#: ui/main.qml:378 ui/main.qml:520
+#: ui/main.qml:370 ui/main.qml:512
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Importovať schému skratiek"
 
-#: ui/main.qml:380
+#: ui/main.qml:372
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Schéma skratiek (*.kksrc)"
 
-#: ui/main.qml:407
+#: ui/main.qml:399
 #, kde-format
 msgid "Edit Command"
 msgstr "Upraviť príkaz"
 
-#: ui/main.qml:407
+#: ui/main.qml:399
 #, kde-format
 msgid "Add Command"
 msgstr "Pridať príkaz"
 
-#: ui/main.qml:429
+#: ui/main.qml:421
 #, kde-format
 msgid "Save"
 msgstr "Uložiť"
 
-#: ui/main.qml:429
+#: ui/main.qml:421
 #, kde-format
 msgid "Add"
 msgstr "Pridať"
 
-#: ui/main.qml:459
+#: ui/main.qml:451
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "Zadajte príkaz alebo vyberte skriptový súbor:"
 
-#: ui/main.qml:468
+#: ui/main.qml:460
 #, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
 msgstr "Príkaz:"
 
-#: ui/main.qml:474
+#: ui/main.qml:466
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "Príkaz"
 
-#: ui/main.qml:481
+#: ui/main.qml:473
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Vybrať..."
 
-#: ui/main.qml:482
+#: ui/main.qml:474
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Vybrať skriptový súbor"
 
-#: ui/main.qml:490
+#: ui/main.qml:482
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
 msgstr "Názov:"
 
-#: ui/main.qml:491
+#: ui/main.qml:483
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
 msgstr "Tu zadajte meno"
 
-#: ui/main.qml:503
+#: ui/main.qml:495
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Vybrať skriptový súbor"
 
-#: ui/main.qml:505
+#: ui/main.qml:497
 #, kde-format
 msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
@@ -371,22 +371,22 @@ msgctxt ""
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "Súbory skriptov (.sh, .bash, .zsh, etc.) (*.*sh)"
 
-#: ui/main.qml:528
+#: ui/main.qml:520
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Vyberte schému na import:"
 
-#: ui/main.qml:547
+#: ui/main.qml:539
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Vlastná schéma"
 
-#: ui/main.qml:555
+#: ui/main.qml:547
 #, kde-format
 msgid "Select File…"
 msgstr "Vybrať súbor..."
 
-#: ui/main.qml:555
+#: ui/main.qml:547
 #, kde-format
 msgid "Import"
 msgstr "Importovať"

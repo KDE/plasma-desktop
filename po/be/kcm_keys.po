@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-09 00:43+0000\n"
+"POT-Creation-Date: 2025-06-14 00:44+0000\n"
 "PO-Revision-Date: 2024-11-21 20:40\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -177,50 +177,32 @@ msgctxt "@action:button Export shortcut scheme"
 msgid "Export…"
 msgstr "Экспартаванне…"
 
-#: ui/main.qml:83
-#, kde-format
-msgid "Cannot export scheme while there are unsaved changes"
-msgstr "Немагчыма экспартаваць схему, пакуль ёсць незахаваныя змены"
-
-#: ui/main.qml:96
-#, kde-format
-msgid ""
-"Select the components below that should be included in the exported scheme"
-msgstr ""
-"Абярыце ніжэй кампаненты, якія патрэбна ўключыць у схему для экспартавання"
-
-#: ui/main.qml:103
-#, kde-format
-msgctxt "@action:button Export shortcut scheme"
-msgid "Export"
-msgstr "Экспартаванне"
-
-#: ui/main.qml:173
+#: ui/main.qml:68
 #, kde-format
 msgctxt "@action:button Add new shortcut"
 msgid "Add New"
 msgstr "Дадаць"
 
-#: ui/main.qml:179
+#: ui/main.qml:76
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Application…'"
 msgid "Application…"
 msgstr "Праграма…"
 
-#: ui/main.qml:180
+#: ui/main.qml:77
 #, fuzzy, kde-format
 #| msgid "Applications"
 msgctxt "@action:menu accessible"
 msgid "Add new application"
 msgstr "Праграмы"
 
-#: ui/main.qml:187
+#: ui/main.qml:84
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
 msgid "Command or Script…"
 msgstr "Каманда або скрыпт…"
 
-#: ui/main.qml:188
+#: ui/main.qml:85
 #, fuzzy, kde-format
 #| msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
 #| msgid "Command or Script…"
@@ -228,143 +210,161 @@ msgctxt "@action:menu accessible"
 msgid "Add new command or script"
 msgstr "Каманда або скрыпт…"
 
-#: ui/main.qml:224
+#: ui/main.qml:106
+#, kde-format
+msgid "Cannot export scheme while there are unsaved changes"
+msgstr "Немагчыма экспартаваць схему, пакуль ёсць незахаваныя змены"
+
+#: ui/main.qml:119
+#, kde-format
+msgid ""
+"Select the components below that should be included in the exported scheme"
+msgstr ""
+"Абярыце ніжэй кампаненты, якія патрэбна ўключыць у схему для экспартавання"
+
+#: ui/main.qml:126
+#, kde-format
+msgctxt "@action:button Export shortcut scheme"
+msgid "Export"
+msgstr "Экспартаванне"
+
+#: ui/main.qml:216
 #, kde-format
 msgctxt ""
 "@option:check accessible export shortcuts %1 is application/group name"
 msgid "Export %1"
 msgstr "Экспартаваць %1"
 
-#: ui/main.qml:233
+#: ui/main.qml:225
 #, kde-format
 msgctxt "@action:button accessible %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "Рэдагаваць каманду для %1"
 
-#: ui/main.qml:249
+#: ui/main.qml:241
 #, kde-format
 msgctxt "@info:tooltip %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "Рэдагаваць каманду для %1"
 
-#: ui/main.qml:257
+#: ui/main.qml:249
 #, kde-format
 msgctxt "@action:button accessible %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Выдаліць усе спалучэнні клавіш для %1"
 
-#: ui/main.qml:267
+#: ui/main.qml:259
 #, kde-format
 msgctxt "@info:tooltip %1 is the text of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Выдаліць усе спалучэнні клавіш для %1"
 
-#: ui/main.qml:274
+#: ui/main.qml:266
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Undo deletion"
 msgstr "Адрабіць выдаленне"
 
-#: ui/main.qml:279
+#: ui/main.qml:271
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo deletion"
 msgstr "Адрабіць выдаленне"
 
-#: ui/main.qml:333
+#: ui/main.qml:325
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "Няма элементаў, якія адпавядаюць умовам пошуку"
 
-#: ui/main.qml:366
+#: ui/main.qml:358
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Абярыце элемент са спіса, каб убачыць тут яго спалучэнні клавіш"
 
-#: ui/main.qml:378
+#: ui/main.qml:370
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "Экспартаванне схемы спалучэнняў клавіш"
 
-#: ui/main.qml:378 ui/main.qml:520
+#: ui/main.qml:370 ui/main.qml:512
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Імпартаванне схемы спалучэнняў клавіш"
 
-#: ui/main.qml:380
+#: ui/main.qml:372
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Схема спалучэнняў клавіш (*.kksrc)"
 
-#: ui/main.qml:407
+#: ui/main.qml:399
 #, kde-format
 msgid "Edit Command"
 msgstr "Рэдагаваць каманду"
 
-#: ui/main.qml:407
+#: ui/main.qml:399
 #, kde-format
 msgid "Add Command"
 msgstr "Дадаць каманду"
 
-#: ui/main.qml:429
+#: ui/main.qml:421
 #, kde-format
 msgid "Save"
 msgstr "Захаваць"
 
-#: ui/main.qml:429
+#: ui/main.qml:421
 #, kde-format
 msgid "Add"
 msgstr "Дадаць"
 
-#: ui/main.qml:459
+#: ui/main.qml:451
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "Увядзіце каманду або абярыце файл скрыпта:"
 
-#: ui/main.qml:468
+#: ui/main.qml:460
 #, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
 msgstr "Каманда:"
 
-#: ui/main.qml:474
+#: ui/main.qml:466
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "Каманда"
 
-#: ui/main.qml:481
+#: ui/main.qml:473
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Абраць…"
 
-#: ui/main.qml:482
+#: ui/main.qml:474
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Абраць файл скрыпта"
 
-#: ui/main.qml:490
+#: ui/main.qml:482
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
 msgstr "Назва:"
 
-#: ui/main.qml:491
+#: ui/main.qml:483
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
 msgstr "Увядзіце сюды назву"
 
-#: ui/main.qml:503
+#: ui/main.qml:495
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Абраць файл скрыпта"
 
-#: ui/main.qml:505
+#: ui/main.qml:497
 #, kde-format
 msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
@@ -372,22 +372,22 @@ msgctxt ""
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "Файлы скрыптоў (.sh, .bash, .zsh, etc.) (*.*sh)"
 
-#: ui/main.qml:528
+#: ui/main.qml:520
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Абярыце схему для імпартавання:"
 
-#: ui/main.qml:547
+#: ui/main.qml:539
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Адвольная схема"
 
-#: ui/main.qml:555
+#: ui/main.qml:547
 #, kde-format
 msgid "Select File…"
 msgstr "Абраць файл…"
 
-#: ui/main.qml:555
+#: ui/main.qml:547
 #, kde-format
 msgid "Import"
 msgstr "Імпартаванне"
