@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-14 00:44+0000\n"
-"PO-Revision-Date: 2023-02-02 11:54+0400\n"
+"PO-Revision-Date: 2025-06-14 17:15+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: app/emojier.cpp:42 app/emojier.cpp:44
 #, kde-format
@@ -45,8 +46,7 @@ msgid "Replace an existing instance"
 msgstr "استبدل نسخة موجودة"
 
 #: app/ui/CategoryPage.qml:33 app/ui/CategoryPage.qml:87 app/ui/Emojier.qml:62
-#, fuzzy, kde-format
-#| msgid "All"
+#, kde-format
 msgctxt "@title:page All emojis"
 msgid "All"
 msgstr "الكلّ"

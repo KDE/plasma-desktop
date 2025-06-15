@@ -1,16 +1,16 @@
 # Translation of org.kde.plasma.emojier.po to Catalan (Valencian)
-# Copyright (C) 2019-2023 This_file_is_part_of_KDE
+# Copyright (C) 2019-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 # or the same license as the source of its messages in English.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2019, 2020, 2021, 2022, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2019, 2020, 2021, 2022, 2023, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-14 00:44+0000\n"
-"PO-Revision-Date: 2023-01-31 10:07+0100\n"
+"PO-Revision-Date: 2025-06-13 10:01+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: app/emojier.cpp:42 app/emojier.cpp:44
 #, kde-format
@@ -48,11 +48,10 @@ msgid "Replace an existing instance"
 msgstr "Substituïx una instància existent"
 
 #: app/ui/CategoryPage.qml:33 app/ui/CategoryPage.qml:87 app/ui/Emojier.qml:62
-#, fuzzy, kde-format
-#| msgid "All"
+#, kde-format
 msgctxt "@title:page All emojis"
 msgid "All"
-msgstr "Tot"
+msgstr "Tots"
 
 #: app/ui/CategoryPage.qml:111
 #, kde-format
@@ -141,6 +140,3 @@ msgstr "Símbols"
 msgctxt "Emoji Category"
 msgid "Flags"
 msgstr "Banderes"
-
-#~ msgid "Search"
-#~ msgstr "Busca"
