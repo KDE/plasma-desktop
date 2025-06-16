@@ -4,7 +4,7 @@
 # Andrea RIZZI <rizzi@kde.org>, 2005.
 # Giovanni Venturi <jumpyj@tiscali.it>, 2006.
 # Pino Toscano <toscano.pino@tiscali.it>, 2006.
-# SPDX-FileCopyrightText: 2014, 2015, 2017, 2019, 2020, 2021, 2022, 2023, 2024 Vincenzo Reale <smart2128vr@gmail.com>
+# SPDX-FileCopyrightText: 2014, 2015, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Vincenzo Reale <smart2128vr@gmail.com>
 # SPDX-FileCopyrightText: 2025 Paolo Zamponi <feus73@gmail.com>
 #
 msgid ""
@@ -12,60 +12,60 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-13 00:44+0000\n"
-"PO-Revision-Date: 2025-01-16 14:59+0100\n"
-"Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
+"PO-Revision-Date: 2025-06-14 09:08+0200\n"
+"Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: kcmaccess.cpp:127 kcmaccess.cpp:155
 #, kde-format
 msgid "KWin"
-msgstr ""
+msgstr "KWin"
 
 #: kcmaccess.cpp:130
 #, kde-format
 msgid "Toggle Invert Effect"
-msgstr ""
+msgstr "Attiva/disattiva effetto inversione"
 
 #: kcmaccess.cpp:136
 #, kde-format
 msgid "Toggle Invert Effect on Window"
-msgstr ""
+msgstr "Attiva/disattiva effetto inversione sulla finestra"
 
 #: kcmaccess.cpp:178
 #, kde-format
 msgid "Move Left"
-msgstr ""
+msgstr "Sposta a sinistra"
 
 #: kcmaccess.cpp:185
 #, kde-format
 msgid "Move Right"
-msgstr ""
+msgstr "Sposta a destra"
 
 #: kcmaccess.cpp:192
 #, kde-format
 msgid "Move Up"
-msgstr ""
+msgstr "Sposta in alto"
 
 #: kcmaccess.cpp:199
 #, kde-format
 msgid "Move Down"
-msgstr ""
+msgstr "Sposta in basso"
 
 #: kcmaccess.cpp:206
 #, kde-format
 msgid "Move Mouse to Focus"
-msgstr ""
+msgstr "Sposta il mouse sul fuoco"
 
 #: kcmaccess.cpp:213
 #, kde-format
 msgid "Move Mouse to Center"
-msgstr ""
+msgstr "Sposta il mouse al centro"
 
 #: kcmaccess.cpp:256
 #, kde-format
@@ -163,10 +163,9 @@ msgstr "Se la correzione del daltonismo è abilitata"
 
 #. i18n: ectx: label, entry (Invert), group (Plugins)
 #: kcmaccessibilityinvert.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Invert effect is enabled"
-msgstr "Se Scuoti il puntatore è abilitata"
+msgstr "Se l'effetto Inverti è abilitato"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
@@ -310,17 +309,15 @@ msgstr "Ingrandimento"
 
 #. i18n: ectx: label, entry (Zoom), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Zoom effect is enabled"
-msgstr "Se Scuoti il puntatore è abilitata"
+msgstr "Se l'effetto Ingrandimento è abilitato"
 
 #. i18n: ectx: label, entry (Magnifier), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Magnifier effect is enabled"
-msgstr "Se Scuoti il puntatore è abilitata"
+msgstr "Se l'effetto Lente d'ingrandimento è abilitato"
 
 #: ui/ActivationShortcuts.qml:18
 #, kde-format
@@ -563,12 +560,10 @@ msgstr "Viola"
 #, kde-format
 msgctxt "@label"
 msgid "Invert:"
-msgstr ""
+msgstr "Inverti:"
 
 #: ui/Invert.qml:23
-#, fuzzy, kde-format
-#| msgctxt "Enable activation shortcuts"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable invert effect"
 msgid "Enable"
 msgstr "Abilita"
@@ -578,13 +573,14 @@ msgstr "Abilita"
 msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
 msgstr ""
+"Utilizza le scorciatoie per attivare/disattivare l'inversione dei colori di "
+"visualizzazione e delle finestre"
 
 #: ui/Invert.qml:49 ui/ZoomMagnifier.qml:319
-#, fuzzy, kde-format
-#| msgid "Configure Notifications…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Shortcuts…"
-msgstr "Configura le notifiche..."
+msgstr "Configura le scorciatoie…"
 
 #: ui/KeyboardFilters.qml:18
 #, kde-format
@@ -676,7 +672,7 @@ msgstr "Suona la campanella di sistema se rifiutato"
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Zoom & Magnifier"
-msgstr ""
+msgstr "Zoom e lente d'ingrandimento"
 
 #: ui/main.qml:33
 #, kde-format
@@ -723,7 +719,7 @@ msgstr "Correzione del daltonismo"
 #, kde-format
 msgctxt "@title Category name in sidebar, for inverting screen colors"
 msgid "Invert"
-msgstr ""
+msgstr "Inverti"
 
 #: ui/main.qml:73
 #, kde-format
@@ -931,161 +927,154 @@ msgstr "Grande"
 #, kde-format
 msgctxt "@label, followed by 'full screen' or 'magnify region'"
 msgid "Zoom:"
-msgstr ""
+msgstr "Ingrandimento:"
 
 #: ui/ZoomMagnifier.qml:23
-#, fuzzy, kde-format
-#| msgctxt "@option:radio Flash screen when a system bell is rung"
-#| msgid "Flash screen"
+#, kde-format
 msgctxt "@option:check, enable zoom effect, following 'Zoom:'"
 msgid "Full screen"
-msgstr "Fa lampeggiare lo schermo"
+msgstr "Schermo intero"
 
 #: ui/ZoomMagnifier.qml:52
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Show pixel grid at zoom level:"
-msgstr ""
+msgstr "Mostra la griglia dei pixel al livello di zoom:"
 
 #: ui/ZoomMagnifier.qml:84
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Mouse pointer:"
-msgstr ""
+msgstr "Puntatore del mouse:"
 
 #: ui/ZoomMagnifier.qml:86
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scale"
-msgstr ""
+msgstr "Scala"
 
 #: ui/ZoomMagnifier.qml:86
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Keep"
-msgstr ""
+msgstr "Mantieni"
 
 #: ui/ZoomMagnifier.qml:86
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Hide"
-msgstr ""
+msgstr "Nascondi"
 
 #: ui/ZoomMagnifier.qml:97
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Mouse tracking:"
-msgstr ""
+msgstr "Inseguimento del mouse:"
 
 #: ui/ZoomMagnifier.qml:99
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Proportional"
-msgstr ""
+msgstr "Proporzionale"
 
 #: ui/ZoomMagnifier.qml:99
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
-msgstr ""
+msgstr "Centrato"
 
 #: ui/ZoomMagnifier.qml:99
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Push"
-msgstr ""
+msgstr "Push"
 
 #: ui/ZoomMagnifier.qml:99
-#, fuzzy, kde-format
-#| msgid "Disable After:"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Disabled"
-msgstr "Disabilita dopo:"
+msgstr "Disabilitato"
 
 #: ui/ZoomMagnifier.qml:110
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable focus tracking"
-msgstr ""
+msgstr "Abilita l'inseguimento del punto focale"
 
 #: ui/ZoomMagnifier.qml:121
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable text caret tracking"
-msgstr ""
+msgstr "Abilita il tracciamento del cursore del testo"
 
 #: ui/ZoomMagnifier.qml:132
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
-msgstr ""
+msgstr "Tasti modificatori del gesto di scorrimento:"
 
 #: ui/ZoomMagnifier.qml:170
 #, kde-format
 msgctxt "@info:tooltip, indicates feature unavailable on X11"
 msgid "Zoom scroll gestures are only available on Wayland."
 msgstr ""
+"I gesti di scorrimento per l'ingrandimento sono disponibili solo su Wayland."
 
 #: ui/ZoomMagnifier.qml:176
-#, fuzzy, kde-format
-#| msgid "Ring system bell when modifier keys are used"
+#, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
-msgstr ""
-"Suona la campanella di sistema quando vengono utilizzati i tasti modificatori"
+msgstr "Scorri durante la pressione dei tasti modificatori per ingrandire"
 
 #: ui/ZoomMagnifier.qml:188
-#, fuzzy, kde-format
-#| msgid "Magnification"
+#, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
-msgstr "Ingrandimento"
+msgstr "Ingrandisci la regione"
 
 #: ui/ZoomMagnifier.qml:215
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
-msgstr ""
+msgstr "Larghezza:"
 
 #: ui/ZoomMagnifier.qml:226 ui/ZoomMagnifier.qml:251
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
 msgid_plural "%1 px"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 px"
+msgstr[1] "%1 px"
 
 #: ui/ZoomMagnifier.qml:227 ui/ZoomMagnifier.qml:252
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
-msgstr ""
+msgstr "px"
 
 #: ui/ZoomMagnifier.qml:240
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
-msgstr ""
+msgstr "Altezza:"
 
 #: ui/ZoomMagnifier.qml:269
-#, fuzzy, kde-format
-#| msgid "Disable After:"
+#, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
-msgstr "Disabilita dopo:"
+msgstr "Disabilitato"
 
 #: ui/ZoomMagnifier.qml:282
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
-msgstr ""
+msgstr "Fattore di ingrandimento:"
 
 #: ui/ZoomMagnifier.qml:329
-#, fuzzy, kde-format
-#| msgid "Use keys to control the mouse"
+#, kde-format
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
-msgstr "Usa i tasti per controllare il mouse"
+msgstr "Utilizza le scorciatoie per controllare l'ingrandimento"
 
 #~ msgid "AltGraph"
 #~ msgstr "Alt Gr"

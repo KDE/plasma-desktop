@@ -20,47 +20,47 @@ msgstr ""
 #: kcmaccess.cpp:127 kcmaccess.cpp:155
 #, kde-format
 msgid "KWin"
-msgstr ""
+msgstr "KWin"
 
 #: kcmaccess.cpp:130
 #, kde-format
 msgid "Toggle Invert Effect"
-msgstr ""
+msgstr "开启/关闭全局反相显示"
 
 #: kcmaccess.cpp:136
 #, kde-format
 msgid "Toggle Invert Effect on Window"
-msgstr ""
+msgstr "开启/关闭窗口反相显示"
 
 #: kcmaccess.cpp:178
 #, kde-format
 msgid "Move Left"
-msgstr ""
+msgstr "向左移动"
 
 #: kcmaccess.cpp:185
 #, kde-format
 msgid "Move Right"
-msgstr ""
+msgstr "向右移动"
 
 #: kcmaccess.cpp:192
 #, kde-format
 msgid "Move Up"
-msgstr ""
+msgstr "向上移动"
 
 #: kcmaccess.cpp:199
 #, kde-format
 msgid "Move Down"
-msgstr ""
+msgstr "向下移动"
 
 #: kcmaccess.cpp:206
 #, kde-format
 msgid "Move Mouse to Focus"
-msgstr ""
+msgstr "移动鼠标到焦点"
 
 #: kcmaccess.cpp:213
 #, kde-format
 msgid "Move Mouse to Center"
-msgstr ""
+msgstr "移动鼠标到中央"
 
 #: kcmaccess.cpp:256
 #, kde-format
@@ -160,7 +160,7 @@ msgstr "是否启用色盲校正"
 #: kcmaccessibilityinvert.kcfg:9
 #, kde-format
 msgid "Whether the Invert effect is enabled"
-msgstr ""
+msgstr "是否启用反相显示特效"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
@@ -304,13 +304,13 @@ msgstr "放大"
 #: kcmaccessibilityzoommagnifier.kcfg:9
 #, kde-format
 msgid "Whether the Zoom effect is enabled"
-msgstr ""
+msgstr "是否启用缩放特效"
 
 #. i18n: ectx: label, entry (Magnifier), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:13
 #, kde-format
 msgid "Whether the Magnifier effect is enabled"
-msgstr ""
+msgstr "是否启用放大特效"
 
 #: ui/ActivationShortcuts.qml:18
 #, kde-format
@@ -548,7 +548,7 @@ msgstr "紫"
 #, kde-format
 msgctxt "@label"
 msgid "Invert:"
-msgstr ""
+msgstr "反相："
 
 #: ui/Invert.qml:23
 #, kde-format
@@ -560,13 +560,13 @@ msgstr "启用"
 #, kde-format
 msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
-msgstr ""
+msgstr "使用快捷键切换反相显示器和窗口颜色"
 
 #: ui/Invert.qml:49 ui/ZoomMagnifier.qml:319
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Shortcuts…"
-msgstr ""
+msgstr "配置快捷键…"
 
 #: ui/KeyboardFilters.qml:18
 #, kde-format
@@ -656,7 +656,7 @@ msgstr "拒绝按键时发出系统提示"
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Zoom & Magnifier"
-msgstr ""
+msgstr "缩放和放大"
 
 #: ui/main.qml:33
 #, kde-format
@@ -703,7 +703,7 @@ msgstr "色盲校正"
 #, kde-format
 msgctxt "@title Category name in sidebar, for inverting screen colors"
 msgid "Invert"
-msgstr ""
+msgstr "反相"
 
 #: ui/main.qml:73
 #, kde-format
@@ -904,149 +904,149 @@ msgstr "大"
 #, kde-format
 msgctxt "@label, followed by 'full screen' or 'magnify region'"
 msgid "Zoom:"
-msgstr ""
+msgstr "缩放："
 
 #: ui/ZoomMagnifier.qml:23
 #, kde-format
 msgctxt "@option:check, enable zoom effect, following 'Zoom:'"
 msgid "Full screen"
-msgstr ""
+msgstr "全屏"
 
 #: ui/ZoomMagnifier.qml:52
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Show pixel grid at zoom level:"
-msgstr ""
+msgstr "显示网格的缩放级别："
 
 #: ui/ZoomMagnifier.qml:84
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Mouse pointer:"
-msgstr ""
+msgstr "鼠标光标："
 
 #: ui/ZoomMagnifier.qml:86
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scale"
-msgstr ""
+msgstr "缩放"
 
 #: ui/ZoomMagnifier.qml:86
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Keep"
-msgstr ""
+msgstr "保持"
 
 #: ui/ZoomMagnifier.qml:86
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Hide"
-msgstr ""
+msgstr "隐藏"
 
 #: ui/ZoomMagnifier.qml:97
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Mouse tracking:"
-msgstr ""
+msgstr "鼠标跟踪："
 
 #: ui/ZoomMagnifier.qml:99
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Proportional"
-msgstr ""
+msgstr "比例"
 
 #: ui/ZoomMagnifier.qml:99
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
-msgstr ""
+msgstr "居中"
 
 #: ui/ZoomMagnifier.qml:99
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Push"
-msgstr ""
+msgstr "外推"
 
 #: ui/ZoomMagnifier.qml:99
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Disabled"
-msgstr ""
+msgstr "禁用"
 
 #: ui/ZoomMagnifier.qml:110
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable focus tracking"
-msgstr ""
+msgstr "启用焦点跟踪"
 
 #: ui/ZoomMagnifier.qml:121
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable text caret tracking"
-msgstr ""
+msgstr "启用文本光标跟踪"
 
 #: ui/ZoomMagnifier.qml:132
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
-msgstr ""
+msgstr "滚动手势修饰键："
 
 #: ui/ZoomMagnifier.qml:170
 #, kde-format
 msgctxt "@info:tooltip, indicates feature unavailable on X11"
 msgid "Zoom scroll gestures are only available on Wayland."
-msgstr ""
+msgstr "缩放滚动手势仅在 Wayland 环境下可用。"
 
 #: ui/ZoomMagnifier.qml:176
 #, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
-msgstr ""
+msgstr "按住修饰键并滚动时缩放"
 
 #: ui/ZoomMagnifier.qml:188
 #, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
-msgstr ""
+msgstr "放大区域"
 
 #: ui/ZoomMagnifier.qml:215
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
-msgstr ""
+msgstr "宽度："
 
 #: ui/ZoomMagnifier.qml:226 ui/ZoomMagnifier.qml:251
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
 msgid_plural "%1 px"
-msgstr[0] ""
+msgstr[0] "%1 像素"
 
 #: ui/ZoomMagnifier.qml:227 ui/ZoomMagnifier.qml:252
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
-msgstr ""
+msgstr "像素"
 
 #: ui/ZoomMagnifier.qml:240
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
-msgstr ""
+msgstr "高度："
 
 #: ui/ZoomMagnifier.qml:269
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
-msgstr ""
+msgstr "禁用"
 
 #: ui/ZoomMagnifier.qml:282
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
-msgstr ""
+msgstr "缩放倍数："
 
 #: ui/ZoomMagnifier.qml:329
 #, kde-format
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
-msgstr ""
+msgstr "使用快捷键控制缩放"
