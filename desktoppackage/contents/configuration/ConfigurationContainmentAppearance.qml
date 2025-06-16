@@ -117,6 +117,13 @@ SimpleKCM {
 
                 QQC2.ComboBox {
                     id: wallpaperComboBox
+
+                    function selectCurrentWallpaperPlugin() {
+                        currentIndex = indexOfValue(configDialog.currentWallpaper)
+                        appearanceRoot.originalWallpaper = currentValue
+                        activated(currentIndex)
+                    }
+
                     Layout.preferredWidth: Math.max(implicitWidth, pluginComboBox.implicitWidth)
                     model: configDialog.wallpaperConfigModel
                     textRole: "name"
@@ -131,10 +138,15 @@ SimpleKCM {
                         appearanceRoot.checkUnsavedChanges()
                     }
                     Component.onCompleted: {
-                        currentIndex = indexOfValue(configDialog.currentWallpaper)
-                        appearanceRoot.originalWallpaper = currentValue
-                        activated(currentIndex)
+                        selectCurrentWallpaperPlugin();
+                    }
 
+                    Connections {
+                        enabled: true
+                        target: configDialog.wallpaperConfigModel
+                        function onWallpaperPluginsChanged() {
+                            wallpaperComboBox.selectCurrentWallpaperPlugin();
+                        }
                     }
                 }
                 NewStuff.Button {
