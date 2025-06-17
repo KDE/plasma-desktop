@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2024 Alois.spitzbart <spitz234@hotmail.com>
+# SPDX-FileCopyrightText: 2024, 2025 Alois.spitzbart <spitz234@hotmail.com>
 # Burkhard Lück <lueck@hube-lueck.de>, 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2021.
 # Frederik Schwarzer <schwarzer@kde.org>, 2016.
 # Frank Steinmetzger <dev@felsenfleischer.de>, 2020, 2021.
@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2024-10-06 18:48+0200\n"
+"PO-Revision-Date: 2025-06-06 21:53+0200\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -130,11 +130,10 @@ msgid "Device enabled"
 msgstr "Gerät aktiviert"
 
 #: ui/main.qml:115
-#, fuzzy, kde-format
-#| msgid "Disable touchpad when mouse is plugged in"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable while mouse is connected"
-msgstr "Touchpad abschalten, wenn eine Maus angeschlossen ist"
+msgstr "Deaktivieren, während eine Maus angeschlossen ist"
 
 #: ui/main.qml:137
 #, kde-format
@@ -175,10 +174,9 @@ msgid "Pointer speed:"
 msgstr "Zeigergeschwindigkeit:"
 
 #: ui/main.qml:289
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgid "Enable pointer acceleration"
-msgstr "Zeigerbeschleunigung:"
+msgstr "Zeigerbeschleunigung aktivieren"
 
 #: ui/main.qml:304
 #, kde-format
@@ -186,6 +184,8 @@ msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
+"Ist dies aktiviert, legt der Zeiger mehr Weg zurück, wenn er schneller "
+"bewegt wird."
 
 #: ui/main.qml:314
 #, kde-format
@@ -253,11 +253,13 @@ msgid ""
 "Tap, then tap and immediately slide finger over the touchpad to drag. Lift "
 "finger to drop."
 msgstr ""
+"Berühren, dann berühren und sofort den Finger über das Touchpad ziehen, um "
+"zu ziehen. Den Finger anheben, um abzulegen."
 
 #: ui/main.qml:485
 #, kde-format
 msgid "Allow briefly lifting finger during tap-and-drag"
-msgstr ""
+msgstr "Kurzes Anheben des Fingers beim Tippen und Ziehen zulassen"
 
 #: ui/main.qml:499
 #, kde-format

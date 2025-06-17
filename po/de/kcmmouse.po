@@ -8,20 +8,21 @@
 # Frederik Schwarzer <schwarzer@kde.org>, 2011, 2016.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
 # SPDX-FileCopyrightText: 2024, 2025 Flori G <Renner03@protonmail.com>
+# SPDX-FileCopyrightText: 2025 Alois Spitzbart <spitz234@hotmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2024-03-26 19:21+0100\n"
-"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
+"PO-Revision-Date: 2025-06-06 21:56+0200\n"
+"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
@@ -189,20 +190,18 @@ msgid "Pointer speed:"
 msgstr "Zeigergeschwindigkeit:"
 
 #: ui/main.qml:221
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgid "Enable pointer acceleration"
-msgstr "Zeigerbeschleunigung:"
+msgstr "Zeigerbeschleunigung aktivieren"
 
 #: ui/main.qml:235
-#, fuzzy, kde-format
-#| msgid "Cursor travel distance depends on the mouse movement speed."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
-"Die Bewegung des Zeigers hängt von der Geschwindigkeit der Bewegung der Maus "
-"ab."
+"Ist dies aktiviert, legt der Zeiger mehr Weg zurück, wenn er schneller "
+"bewegt wird."
 
 #: ui/main.qml:245
 #, kde-format
@@ -232,8 +231,7 @@ msgid "Invert scroll direction"
 msgstr "Laufrichtung umkehren"
 
 #: ui/main.qml:330
-#, fuzzy, kde-format
-#| msgid "Press middle button and move mouse to scroll"
+#, kde-format
 msgid "Hold down middle button and move mouse to scroll"
 msgstr ""
 "Drücken Sie die mittlere Maustaste und bewegen Sie die Maus um zu scrollen"
@@ -247,6 +245,10 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+"Dies stört Anwendungen, die das Ziehen mit der mittleren Taste verwenden, "
+"wie z. B. einige Bildbearbeitungsprogramme, Dokumentbetrachter oder "
+"Videospiele. Es kann auf jedem Gerät verwendet werden, ist aber in erster "
+"Linie als Mausrad-Ersatz auf Geräten gedacht, die keines haben."
 
 #~ msgid "Accept input through this device."
 #~ msgstr "Eingaben über dieses Gerät annehmen"

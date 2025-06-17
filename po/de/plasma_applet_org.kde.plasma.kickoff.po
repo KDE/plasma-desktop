@@ -3,20 +3,21 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2014, 2015, 2017, 2018, 2019, 2021.
 # Jannick Kuhr <kde-dev@kuhr.org>, 2023.
 # SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
+# SPDX-FileCopyrightText: 2025 Alois Spitzbart <spitz234@hotmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kickoff\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2024-11-14 14:12+0100\n"
-"Last-Translator: Flori G <Renner03@protonmail.com>\n"
+"PO-Revision-Date: 2025-06-07 11:08+0200\n"
+"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -155,11 +156,10 @@ msgid "General:"
 msgstr "Allgemein:"
 
 #: package/contents/ui/ConfigGeneral.qml:176
-#, fuzzy, kde-format
-#| msgid "Always sort applications alphabetically"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
-msgstr "Anwendungen immer alphabetisch sortieren"
+msgstr "Anwendungen alphabetisch sortieren"
 
 #: package/contents/ui/ConfigGeneral.qml:180
 #, kde-format
@@ -168,6 +168,8 @@ msgid ""
 "This doesn't affect how applications are sorted in either search results or "
 "the favorites page."
 msgstr ""
+"Dies beeinflusst nicht, wie Anwendungen in den Suchergebnissen oder in der "
+"Favoritenseite sortiert werden."
 
 #: package/contents/ui/ConfigGeneral.qml:186
 #, kde-format
@@ -183,12 +185,12 @@ msgstr "Im Touch-Modus automatisch deaktiviert"
 #: package/contents/ui/ConfigGeneral.qml:200
 #, kde-format
 msgid "Highlight newly installed applications"
-msgstr ""
+msgstr "Neu installierte Anwendungen hervorheben"
 
 #: package/contents/ui/ConfigGeneral.qml:205
 #, kde-format
 msgid "Switch sidebar categories when hovering over them"
-msgstr ""
+msgstr "Seitenleistenkategorien beim Überfahren umschalten"
 
 #: package/contents/ui/ConfigGeneral.qml:211
 #, kde-format
@@ -305,14 +307,13 @@ msgstr "Offen halten"
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Neu!"
 
 #: package/contents/ui/KickoffGridDelegate.qml:61
 #: package/contents/ui/KickoffListDelegate.qml:121
-#, fuzzy, kde-format
-#| msgid "Recently Used Applications"
+#, kde-format
 msgid "Newly installed application"
-msgstr "Verlauf (Anwendungen)"
+msgstr "Neu installierte Anwendung"
 
 #: package/contents/ui/KickoffGridView.qml:102
 #, kde-format
@@ -322,7 +323,7 @@ msgstr "Gitter mit %1 Zeilen, %2 Spalten"
 #: package/contents/ui/KickoffListDelegate.qml:120
 #, kde-format
 msgid "There is a newly installed application in this category"
-msgstr ""
+msgstr "Es gibt eine neu installierte Anwendung in dieser Kategorie"
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
