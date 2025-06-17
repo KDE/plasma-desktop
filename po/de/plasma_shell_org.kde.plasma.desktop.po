@@ -3,20 +3,21 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
 # SPDX-FileCopyrightText: 2024, 2025 Flori G <Renner03@protonmail.com>
+# SPDX-FileCopyrightText: 2025 Alois Spitzbart <spitz234@hotmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-14 00:44+0000\n"
-"PO-Revision-Date: 2025-04-17 10:04+0200\n"
-"Last-Translator: Flori G <Renner03@protonmail.com>\n"
+"POT-Creation-Date: 2025-06-17 00:44+0000\n"
+"PO-Revision-Date: 2025-06-07 11:59+0200\n"
+"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: contents/activitymanager/ActivityItem.qml:204
 #, kde-format
@@ -155,14 +156,11 @@ msgid "Apply Settings"
 msgstr "Einstellungen anwenden"
 
 #: contents/configuration/AppletConfiguration.qml:369
-#, fuzzy, kde-format
-#| msgid ""
-#| "The settings of the current module have changed. Do you want to apply the "
-#| "changes or discard them?"
+#, kde-format
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
 msgstr ""
-"Die Einstellungen im aktuellen Modul wurden geändert. Möchten Sie die "
+"Die aktuelle Seite hat nicht gespeicherte Änderungen. Möchten Sie die "
 "Änderungen anwenden oder verwerfen?"
 
 #: contents/configuration/AppletConfiguration.qml:401
@@ -267,19 +265,19 @@ msgstr "Layout:"
 msgid "Wallpaper type:"
 msgstr "Hintergrundbild-Typ:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:142
+#: contents/configuration/ConfigurationContainmentAppearance.qml:154
 #, kde-format
 msgid "Get New Plugins…"
 msgstr "Neue Module holen …"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:232
+#: contents/configuration/ConfigurationContainmentAppearance.qml:244
 #, kde-format
 msgid "Layout changes must be applied before other changes can be made"
 msgstr ""
 "Layout-Änderungen müssen angewendet werden, bevor eine weitere Bearbeitung "
 "möglich ist"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:236
+#: contents/configuration/ConfigurationContainmentAppearance.qml:248
 #, kde-format
 msgid "Apply Now"
 msgstr "Jetzt anwenden"
@@ -293,7 +291,7 @@ msgstr "Kurzbefehle"
 #, kde-format
 msgctxt "@action:button set keyboard shortcut for"
 msgid "Activate widget as if clicked:"
-msgstr ""
+msgstr "Miniprogramm aktivieren, als ob es angeklickt würde:"
 
 #: contents/configuration/ContainmentConfiguration.qml:27
 #, kde-format
@@ -321,21 +319,19 @@ msgctxt ""
 "@action:button label of button to open a menu that lets you add widgets or "
 "spacers"
 msgid "Add New"
-msgstr ""
+msgstr "Neue hinzufügen"
 
 #: contents/configuration/PanelConfiguration.qml:127
-#, fuzzy, kde-format
-#| msgid "Add Spacer"
+#, kde-format
 msgctxt "@action:menu add a spacer"
 msgid "Spacer"
-msgstr "Abstandhalter hinzufügen"
+msgstr "Abstandhalter"
 
 #: contents/configuration/PanelConfiguration.qml:134
-#, fuzzy, kde-format
-#| msgid "Widgets"
+#, kde-format
 msgctxt "@action:menu add a widget"
 msgid "Widgets…"
-msgstr "Miniprogramme"
+msgstr "Miniprogramme …"
 
 #: contents/configuration/PanelConfiguration.qml:163
 #, kde-format
@@ -457,31 +453,28 @@ msgid "Translucent"
 msgstr "Durchscheinend"
 
 #: contents/configuration/PanelConfiguration.qml:501
-#, fuzzy, kde-format
-#| msgid "Floating"
+#, kde-format
 msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
 msgstr "Schwebend"
 
 #: contents/configuration/PanelConfiguration.qml:517
-#, fuzzy, kde-format
-#| msgid "%1 (disabled)"
+#, kde-format
 msgctxt "@item:inlistbox Option to disable floating panels or applets"
 msgid "Disabled"
-msgstr "%1 (Deaktiviert)"
+msgstr "Deaktiviert"
 
 #: contents/configuration/PanelConfiguration.qml:518
 #, kde-format
 msgctxt "@item:inlistbox Option to make only panel applets always float"
 msgid "Applets only"
-msgstr ""
+msgstr "Nur Miniprogramme"
 
 #: contents/configuration/PanelConfiguration.qml:519
-#, fuzzy, kde-format
-#| msgid "Panel and Desktop Management"
+#, kde-format
 msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
-msgstr "Verwaltung der Kontrollleisten und Arbeitsflächen"
+msgstr "Kontrollleiste und Miniprogramme"
 
 #: contents/configuration/PanelConfiguration.qml:562
 #, kde-format
@@ -649,7 +642,7 @@ msgstr "Alternative Miniprogramme"
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Add %1"
-msgstr ""
+msgstr "„%1“ hinzufügen"
 
 #: contents/explorer/AppletDelegate.qml:47
 #, kde-format
@@ -663,43 +656,41 @@ msgid "New!"
 msgstr "Neu"
 
 #: contents/explorer/AppletDelegate.qml:204
-#, fuzzy, kde-format
-#| msgid "No widgets available"
+#, kde-format
 msgctxt "@info:other accessible for badge showing applet count"
 msgid "%1 widget active"
 msgid_plural "%1 widgets active"
-msgstr[0] "Keine Miniprogramme verfügbar"
-msgstr[1] "Keine Miniprogramme verfügbar"
+msgstr[0] "Ein Miniprogramm aktiv"
+msgstr[1] "%1 Miniprogramme aktiv"
 
 #: contents/explorer/AppletDelegate.qml:205
 #, kde-format
 msgctxt " @info:other accessible for badge indicating new widget"
 msgid "Recently installed"
-msgstr ""
+msgstr "Kürzlich installiert"
 
 #: contents/explorer/AppletDelegate.qml:217
-#, fuzzy, kde-format
-#| msgid "Uninstall"
+#, kde-format
 msgid "Cancel Uninstallation"
-msgstr "Deinstallieren"
+msgstr "Deinstallieren abbrechen"
 
 #: contents/explorer/AppletDelegate.qml:218
 #, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Mark for Uninstallation"
-msgstr ""
+msgstr "Zum Deinstallieren vormerken"
 
 #: contents/explorer/AppletDelegate.qml:222
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Cancel pending uninstallation for widget %1"
-msgstr ""
+msgstr "Anstehende Deinstallation für Miniprogramm %1 abbrechen"
 
 #: contents/explorer/AppletDelegate.qml:223
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Mark widget %1 for uninstallation. Requires confirmation"
-msgstr ""
+msgstr "Miniprogramm %1 zum Deinstallieren vormerken. Bestätigung erforderlich"
 
 #: contents/explorer/AppletDelegate.qml:265
 #, kde-format
@@ -713,8 +704,8 @@ msgctxt ""
 "name"
 msgid "Remove running instance of widget %2"
 msgid_plural "Remove all %1 running instances of widget %2"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Laufende Instanz von Miniprogramm %2 entfernen"
+msgstr[1] "Alle %1 laufenden Instanzen von Miniprogramm %2 entfernen"
 
 #: contents/explorer/WidgetExplorer.qml:140
 #: contents/explorer/WidgetExplorer.qml:223
@@ -743,14 +734,13 @@ msgstr "Neue Miniprogramme holen …"
 #, kde-format
 msgctxt "@action:button accessible for close button"
 msgid "Close Widget Explorer"
-msgstr ""
+msgstr "Auswahl für Miniprogramme schließen"
 
 #: contents/explorer/WidgetExplorer.qml:208
-#, fuzzy, kde-format
-#| msgid "Lock Widgets"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Search through widgets"
-msgstr "Miniprogramme sperren"
+msgstr "Miniprogramme"
 
 #: contents/explorer/WidgetExplorer.qml:237
 #, kde-format
@@ -758,13 +748,12 @@ msgid "Categories"
 msgstr "Kategorien"
 
 #: contents/explorer/WidgetExplorer.qml:258
-#, fuzzy, kde-format
-#| msgid "Uninstall widget"
+#, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Uninstall (%1 Widget)"
 msgid_plural "Uninstall (%1 Widgets)"
 msgstr[0] "Miniprogramm deinstallieren"
-msgstr[1] "Miniprogramm deinstallieren"
+msgstr[1] "%1 Miniprogramme deinstallieren"
 
 #: contents/explorer/WidgetExplorer.qml:369
 #, kde-format
@@ -777,57 +766,46 @@ msgid "No widgets available"
 msgstr "Keine Miniprogramme verfügbar"
 
 #: contents/lockscreen/config.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@title: group"
 msgid "Show clock:"
-msgstr "Uhr anzeigen"
+msgstr "Uhr anzeigen:"
 
 #: contents/lockscreen/config.qml:25
-#, fuzzy, kde-format
-#| msgid "Always visible"
+#, kde-format
 msgctxt "@option:radio Clock always shown"
 msgid "Always"
-msgstr "Begrenzend"
+msgstr "Immer"
 
 #: contents/lockscreen/config.qml:26
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Always show clock"
-msgstr "Uhr anzeigen"
+msgstr "Uhr immer anzeigen"
 
 #: contents/lockscreen/config.qml:41
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio Clock shown only while unlock prompt is visible"
 msgid "On unlocking prompt"
-msgstr "Unter Entsperr-Aufforderung anzeigen"
+msgstr "In Entsperr-Aufforderung"
 
 #: contents/lockscreen/config.qml:42
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show clock only on unlocking prompt"
-msgstr "Unter Entsperr-Aufforderung anzeigen"
+msgstr "Uhr nur in der Entsperr-Aufforderung anzeigen"
 
 #: contents/lockscreen/config.qml:55
 #, kde-format
 msgctxt "@option:radio Clock never shown"
 msgid "Never"
-msgstr ""
+msgstr "Nie"
 
 #: contents/lockscreen/config.qml:56
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Never show clock"
-msgstr "Uhr anzeigen"
+msgstr "Uhr niemals anzeigen"
 
 #: contents/lockscreen/config.qml:71
 #, fuzzy, kde-format
