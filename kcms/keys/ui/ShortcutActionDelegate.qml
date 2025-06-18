@@ -15,6 +15,10 @@ import org.kde.kcmutils as KCM
 QQC2.ItemDelegate {
     id: root
 
+    signal gestureActionSelected
+    signal shouldToggleEditing // mockup-only hack
+    property bool editing: false
+
     property bool showExpandButton: true
 
     readonly property bool selected: highlighted || down
@@ -28,7 +32,8 @@ QQC2.ItemDelegate {
     action: QQC2.Action {
         id: expandAction
         onTriggered: {
-            shortcutsList.selectedIndex = (root.state === "expanded") ? -1 : index;
+            shortcutsList.selectedIndex = /*(root.state === "expanded") ? -1 :*/ index;
+            root.gestureActionSelected();
         }
     }
     // Accessible.name: root.state === "expanded" ? i18n("Editing shortcut: %1", displayLabel.text) : displayLabel.text + keySequenceList.text
@@ -81,6 +86,7 @@ QQC2.ItemDelegate {
                     text: i18nc("@action:button", "Enter text...")
                     icon.name: "edit-entry-symbolic"
                     property string snippet
+                    onClicked: root.shouldToggleEditing()
                 }
                 Item {
                     Layout.fillWidth: true
@@ -121,11 +127,14 @@ QQC2.ItemDelegate {
                 // QQC2.ToolButton {
                 QQC2.Button {
                     Layout.alignment: Qt.AlignRight
-                    id: assignButton
-                    text: i18nc("@action:button Assign action to (gesture) trigger", "Assign")
+                    id: selectActionButton
+                    text: root.editing ?
+                        i18nc("@action:button Assign action to (gesture) trigger", "Assign") :
+                        i18nc("@action:button Add new gesture to trigger this selected action", "Add…")
                     icon.name: "dialog-ok-symbolic"
                     enabled: { (!sendKeySequenceItem.visible && !textSnippetCustomizationButton.visible) || sendKeySequenceItem.keySequence != "" || textSnippetCustomizationButton.snippet != "" }
                     activeFocusOnTab: false
+                    onClicked: root.action.trigger()
                 }
             }
         }
