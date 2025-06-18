@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-14 00:44+0000\n"
+"POT-Creation-Date: 2025-06-18 00:44+0000\n"
 "PO-Revision-Date: 2024-03-15 01:17+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
@@ -44,7 +44,7 @@ msgstr "alministradores@softastur.org"
 msgid "Replace an existing instance"
 msgstr ""
 
-#: app/ui/CategoryPage.qml:33 app/ui/CategoryPage.qml:87 app/ui/Emojier.qml:62
+#: app/ui/CategoryPage.qml:33 app/ui/CategoryPage.qml:87 app/ui/Emojier.qml:67
 #, kde-format
 msgctxt "@title:page All emojis"
 msgid "All"
@@ -62,7 +62,7 @@ msgid "Copy Character"
 msgstr ""
 
 #: app/ui/CategoryPage.qml:140 app/ui/CategoryPage.qml:148
-#: app/ui/Emojier.qml:40
+#: app/ui/Emojier.qml:45
 #, kde-format
 msgid "%1 copied to the clipboard"
 msgstr ""
@@ -78,14 +78,9 @@ msgstr ""
 msgid "No recent Emojis"
 msgstr ""
 
-#: app/ui/Emojier.qml:46
+#: app/ui/Emojier.qml:51
 #, kde-format
 msgid "Recent"
-msgstr ""
-
-#: app/ui/Emojier.qml:80
-#, kde-format
-msgid "Categories"
 msgstr ""
 
 #: emojicategory.cpp:14

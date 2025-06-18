@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-14 00:44+0000\n"
+"POT-Creation-Date: 2025-06-18 00:44+0000\n"
 "PO-Revision-Date: 2024-11-20 08:42\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -49,7 +49,7 @@ msgstr "nashtlumach@gmail.com"
 msgid "Replace an existing instance"
 msgstr "Замяніць наяўны асобнік"
 
-#: app/ui/CategoryPage.qml:33 app/ui/CategoryPage.qml:87 app/ui/Emojier.qml:62
+#: app/ui/CategoryPage.qml:33 app/ui/CategoryPage.qml:87 app/ui/Emojier.qml:67
 #, fuzzy, kde-format
 #| msgid "All"
 msgctxt "@title:page All emojis"
@@ -68,7 +68,7 @@ msgid "Copy Character"
 msgstr "Скапіяваць знак"
 
 #: app/ui/CategoryPage.qml:140 app/ui/CategoryPage.qml:148
-#: app/ui/Emojier.qml:40
+#: app/ui/Emojier.qml:45
 #, kde-format
 msgid "%1 copied to the clipboard"
 msgstr "Элемент %1 скапіяваны ў буфер абмену"
@@ -84,15 +84,10 @@ msgstr "Скапіяваць апісанне"
 msgid "No recent Emojis"
 msgstr "Няма нядаўна выкарыстаных эмодзі"
 
-#: app/ui/Emojier.qml:46
+#: app/ui/Emojier.qml:51
 #, kde-format
 msgid "Recent"
 msgstr "Нядаўнія"
-
-#: app/ui/Emojier.qml:80
-#, kde-format
-msgid "Categories"
-msgstr "Катэгорыі"
 
 #: emojicategory.cpp:14
 msgctxt "Emoji Category"
@@ -143,6 +138,9 @@ msgstr "Сімвалы"
 msgctxt "Emoji Category"
 msgid "Flags"
 msgstr "Сцягі"
+
+#~ msgid "Categories"
+#~ msgstr "Катэгорыі"
 
 #~ msgid "Search"
 #~ msgstr "Пошук"

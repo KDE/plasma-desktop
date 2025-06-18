@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-14 00:44+0000\n"
+"POT-Creation-Date: 2025-06-18 00:44+0000\n"
 "PO-Revision-Date: 2025-06-13 10:01+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -47,7 +47,7 @@ msgstr "txemaq@gmail.com"
 msgid "Replace an existing instance"
 msgstr "Substitueix una instància existent"
 
-#: app/ui/CategoryPage.qml:33 app/ui/CategoryPage.qml:87 app/ui/Emojier.qml:62
+#: app/ui/CategoryPage.qml:33 app/ui/CategoryPage.qml:87 app/ui/Emojier.qml:67
 #, kde-format
 msgctxt "@title:page All emojis"
 msgid "All"
@@ -65,7 +65,7 @@ msgid "Copy Character"
 msgstr "Còpia el caràcter"
 
 #: app/ui/CategoryPage.qml:140 app/ui/CategoryPage.qml:148
-#: app/ui/Emojier.qml:40
+#: app/ui/Emojier.qml:45
 #, kde-format
 msgid "%1 copied to the clipboard"
 msgstr "S'ha copiat %1 al porta-retalls"
@@ -81,15 +81,10 @@ msgstr "Copia la descripció"
 msgid "No recent Emojis"
 msgstr "No hi ha cap emoji recent"
 
-#: app/ui/Emojier.qml:46
+#: app/ui/Emojier.qml:51
 #, kde-format
 msgid "Recent"
 msgstr "Recent"
-
-#: app/ui/Emojier.qml:80
-#, kde-format
-msgid "Categories"
-msgstr "Categories"
 
 #: emojicategory.cpp:14
 msgctxt "Emoji Category"
@@ -140,3 +135,6 @@ msgstr "Símbols"
 msgctxt "Emoji Category"
 msgid "Flags"
 msgstr "Banderes"
+
+#~ msgid "Categories"
+#~ msgstr "Categories"

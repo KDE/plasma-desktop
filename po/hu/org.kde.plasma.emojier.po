@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-14 00:44+0000\n"
+"POT-Creation-Date: 2025-06-18 00:44+0000\n"
 "PO-Revision-Date: 2023-12-15 13:26+0100\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -44,7 +44,7 @@ msgstr "kiszel.kristof@gmail.com"
 msgid "Replace an existing instance"
 msgstr "Meglévő példány cseréje"
 
-#: app/ui/CategoryPage.qml:33 app/ui/CategoryPage.qml:87 app/ui/Emojier.qml:62
+#: app/ui/CategoryPage.qml:33 app/ui/CategoryPage.qml:87 app/ui/Emojier.qml:67
 #, fuzzy, kde-format
 #| msgid "All"
 msgctxt "@title:page All emojis"
@@ -63,7 +63,7 @@ msgid "Copy Character"
 msgstr "Karakter másolása"
 
 #: app/ui/CategoryPage.qml:140 app/ui/CategoryPage.qml:148
-#: app/ui/Emojier.qml:40
+#: app/ui/Emojier.qml:45
 #, kde-format
 msgid "%1 copied to the clipboard"
 msgstr "A(z) %1 a vágólapra került"
@@ -79,15 +79,10 @@ msgstr "Leírás másolása"
 msgid "No recent Emojis"
 msgstr "Nincsenek legutóbi emodzsik"
 
-#: app/ui/Emojier.qml:46
+#: app/ui/Emojier.qml:51
 #, kde-format
 msgid "Recent"
 msgstr "Legutóbbiak"
-
-#: app/ui/Emojier.qml:80
-#, kde-format
-msgid "Categories"
-msgstr "Kategóriák"
 
 #: emojicategory.cpp:14
 msgctxt "Emoji Category"
@@ -138,6 +133,9 @@ msgstr "Szimbólumok"
 msgctxt "Emoji Category"
 msgid "Flags"
 msgstr "Zászlók"
+
+#~ msgid "Categories"
+#~ msgstr "Kategóriák"
 
 #~ msgid "Search"
 #~ msgstr "Keresés"

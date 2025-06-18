@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-14 00:44+0000\n"
+"POT-Creation-Date: 2025-06-18 00:44+0000\n"
 "PO-Revision-Date: 2024-07-08 13:19+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -45,7 +45,7 @@ msgstr "mschlander@opensuse.org"
 msgid "Replace an existing instance"
 msgstr "Erstat en eksisterende instans"
 
-#: app/ui/CategoryPage.qml:33 app/ui/CategoryPage.qml:87 app/ui/Emojier.qml:62
+#: app/ui/CategoryPage.qml:33 app/ui/CategoryPage.qml:87 app/ui/Emojier.qml:67
 #, fuzzy, kde-format
 #| msgid "All"
 msgctxt "@title:page All emojis"
@@ -64,7 +64,7 @@ msgid "Copy Character"
 msgstr "Kopiér karakter"
 
 #: app/ui/CategoryPage.qml:140 app/ui/CategoryPage.qml:148
-#: app/ui/Emojier.qml:40
+#: app/ui/Emojier.qml:45
 #, kde-format
 msgid "%1 copied to the clipboard"
 msgstr "%1 kopieret til udklipsholderen"
@@ -80,15 +80,10 @@ msgstr "Kopiér beskrivelse"
 msgid "No recent Emojis"
 msgstr "Ingen nylige emojier"
 
-#: app/ui/Emojier.qml:46
+#: app/ui/Emojier.qml:51
 #, kde-format
 msgid "Recent"
 msgstr "Nylige"
-
-#: app/ui/Emojier.qml:80
-#, kde-format
-msgid "Categories"
-msgstr "Kategorier"
 
 #: emojicategory.cpp:14
 msgctxt "Emoji Category"
@@ -139,6 +134,9 @@ msgstr "Symboler"
 msgctxt "Emoji Category"
 msgid "Flags"
 msgstr "Flag"
+
+#~ msgid "Categories"
+#~ msgstr "Kategorier"
 
 #~ msgid "Search"
 #~ msgstr "Søg"

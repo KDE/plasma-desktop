@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-14 00:44+0000\n"
+"POT-Creation-Date: 2025-06-18 00:44+0000\n"
 "PO-Revision-Date: 2023-03-01 00:32+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -45,7 +45,7 @@ msgstr "kde@peremen.name"
 msgid "Replace an existing instance"
 msgstr "실행 중인 인스턴스 대체"
 
-#: app/ui/CategoryPage.qml:33 app/ui/CategoryPage.qml:87 app/ui/Emojier.qml:62
+#: app/ui/CategoryPage.qml:33 app/ui/CategoryPage.qml:87 app/ui/Emojier.qml:67
 #, fuzzy, kde-format
 #| msgid "All"
 msgctxt "@title:page All emojis"
@@ -64,7 +64,7 @@ msgid "Copy Character"
 msgstr "문자 복사"
 
 #: app/ui/CategoryPage.qml:140 app/ui/CategoryPage.qml:148
-#: app/ui/Emojier.qml:40
+#: app/ui/Emojier.qml:45
 #, kde-format
 msgid "%1 copied to the clipboard"
 msgstr "클립보드에 %1 복사됨"
@@ -80,15 +80,10 @@ msgstr "설명 복사"
 msgid "No recent Emojis"
 msgstr "최근에 사용한 이모지 없음"
 
-#: app/ui/Emojier.qml:46
+#: app/ui/Emojier.qml:51
 #, kde-format
 msgid "Recent"
 msgstr "최근"
-
-#: app/ui/Emojier.qml:80
-#, kde-format
-msgid "Categories"
-msgstr "분류"
 
 #: emojicategory.cpp:14
 msgctxt "Emoji Category"
@@ -139,6 +134,9 @@ msgstr "기호"
 msgctxt "Emoji Category"
 msgid "Flags"
 msgstr "깃발"
+
+#~ msgid "Categories"
+#~ msgstr "분류"
 
 #~ msgid "Search"
 #~ msgstr "검색"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-14 00:44+0000\n"
+"POT-Creation-Date: 2025-06-18 00:44+0000\n"
 "PO-Revision-Date: 2025-06-13 13:15+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -45,7 +45,7 @@ msgstr "doktormesut@gmail.com, emir_sari@icloud.com"
 msgid "Replace an existing instance"
 msgstr "Var olan bir örneği değiştir"
 
-#: app/ui/CategoryPage.qml:33 app/ui/CategoryPage.qml:87 app/ui/Emojier.qml:62
+#: app/ui/CategoryPage.qml:33 app/ui/CategoryPage.qml:87 app/ui/Emojier.qml:67
 #, kde-format
 msgctxt "@title:page All emojis"
 msgid "All"
@@ -63,7 +63,7 @@ msgid "Copy Character"
 msgstr "Karakteri Kopyala"
 
 #: app/ui/CategoryPage.qml:140 app/ui/CategoryPage.qml:148
-#: app/ui/Emojier.qml:40
+#: app/ui/Emojier.qml:45
 #, kde-format
 msgid "%1 copied to the clipboard"
 msgstr "%1 panoya kopyalandı"
@@ -79,15 +79,10 @@ msgstr "Açıklamayı Kopyala"
 msgid "No recent Emojis"
 msgstr "Yakın zamanda kullanılmış Emoji yok"
 
-#: app/ui/Emojier.qml:46
+#: app/ui/Emojier.qml:51
 #, kde-format
 msgid "Recent"
 msgstr "Son"
-
-#: app/ui/Emojier.qml:80
-#, kde-format
-msgid "Categories"
-msgstr "Kategoriler"
 
 #: emojicategory.cpp:14
 msgctxt "Emoji Category"
@@ -138,6 +133,9 @@ msgstr "Semboller"
 msgctxt "Emoji Category"
 msgid "Flags"
 msgstr "Bayraklar"
+
+#~ msgid "Categories"
+#~ msgstr "Kategoriler"
 
 #~ msgid "Search"
 #~ msgstr "Ara"

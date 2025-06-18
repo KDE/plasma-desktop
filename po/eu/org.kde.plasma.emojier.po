@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-14 00:44+0000\n"
+"POT-Creation-Date: 2025-06-18 00:44+0000\n"
 "PO-Revision-Date: 2023-02-04 09:26+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -47,7 +47,7 @@ msgstr "xalba@euskalnet.net"
 msgid "Replace an existing instance"
 msgstr "Ordeztu aurrez dagoen instantzia bat"
 
-#: app/ui/CategoryPage.qml:33 app/ui/CategoryPage.qml:87 app/ui/Emojier.qml:62
+#: app/ui/CategoryPage.qml:33 app/ui/CategoryPage.qml:87 app/ui/Emojier.qml:67
 #, fuzzy, kde-format
 #| msgid "All"
 msgctxt "@title:page All emojis"
@@ -66,7 +66,7 @@ msgid "Copy Character"
 msgstr "Kopiatu karakterea"
 
 #: app/ui/CategoryPage.qml:140 app/ui/CategoryPage.qml:148
-#: app/ui/Emojier.qml:40
+#: app/ui/Emojier.qml:45
 #, kde-format
 msgid "%1 copied to the clipboard"
 msgstr "%1 arbelera kopiatu da"
@@ -82,15 +82,10 @@ msgstr "Kopiatu deskribapena"
 msgid "No recent Emojis"
 msgstr "Ez dago azken aldiko Emojirik"
 
-#: app/ui/Emojier.qml:46
+#: app/ui/Emojier.qml:51
 #, kde-format
 msgid "Recent"
 msgstr "Azken aldikoa"
-
-#: app/ui/Emojier.qml:80
-#, kde-format
-msgid "Categories"
-msgstr "Kategoriak"
 
 #: emojicategory.cpp:14
 msgctxt "Emoji Category"
@@ -141,6 +136,9 @@ msgstr "Ikurrak"
 msgctxt "Emoji Category"
 msgid "Flags"
 msgstr "Banderak"
+
+#~ msgid "Categories"
+#~ msgstr "Kategoriak"
 
 #~ msgid "Search"
 #~ msgstr "Bilatu"

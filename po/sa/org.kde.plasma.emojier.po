@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-14 00:44+0000\n"
+"POT-Creation-Date: 2025-06-18 00:44+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -46,7 +46,7 @@ msgstr "skkalwar999@gmail.com"
 msgid "Replace an existing instance"
 msgstr "विद्यमानं दृष्टान्तं प्रतिस्थापयन्तु"
 
-#: app/ui/CategoryPage.qml:33 app/ui/CategoryPage.qml:87 app/ui/Emojier.qml:62
+#: app/ui/CategoryPage.qml:33 app/ui/CategoryPage.qml:87 app/ui/Emojier.qml:67
 #, fuzzy, kde-format
 #| msgid "All"
 msgctxt "@title:page All emojis"
@@ -65,7 +65,7 @@ msgid "Copy Character"
 msgstr "प्रतिलिपि वर्ण"
 
 #: app/ui/CategoryPage.qml:140 app/ui/CategoryPage.qml:148
-#: app/ui/Emojier.qml:40
+#: app/ui/Emojier.qml:45
 #, kde-format
 msgid "%1 copied to the clipboard"
 msgstr "%1 क्लिप्बोर्ड् प्रति प्रतिलिखितम्"
@@ -81,15 +81,10 @@ msgstr "प्रतिलिपि विवरण"
 msgid "No recent Emojis"
 msgstr "अद्यतन इमोजिस् नास्ति"
 
-#: app/ui/Emojier.qml:46
+#: app/ui/Emojier.qml:51
 #, kde-format
 msgid "Recent"
 msgstr "सद्यस्क"
-
-#: app/ui/Emojier.qml:80
-#, kde-format
-msgid "Categories"
-msgstr "श्रेणियाँ"
 
 #: emojicategory.cpp:14
 msgctxt "Emoji Category"
@@ -140,6 +135,9 @@ msgstr "प्रतीकाः"
 msgctxt "Emoji Category"
 msgid "Flags"
 msgstr "ध्वजाः"
+
+#~ msgid "Categories"
+#~ msgstr "श्रेणियाँ"
 
 #~ msgid "Search"
 #~ msgstr "अन्वेषण"

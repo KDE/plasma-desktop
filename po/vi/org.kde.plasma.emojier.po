@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-14 00:44+0000\n"
+"POT-Creation-Date: 2025-06-18 00:44+0000\n"
 "PO-Revision-Date: 2022-10-01 18:03+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -44,7 +44,7 @@ msgstr "phu.nguyen@kdemail.net"
 msgid "Replace an existing instance"
 msgstr "Thay thế một hiện thể đã có"
 
-#: app/ui/CategoryPage.qml:33 app/ui/CategoryPage.qml:87 app/ui/Emojier.qml:62
+#: app/ui/CategoryPage.qml:33 app/ui/CategoryPage.qml:87 app/ui/Emojier.qml:67
 #, fuzzy, kde-format
 #| msgid "All"
 msgctxt "@title:page All emojis"
@@ -63,7 +63,7 @@ msgid "Copy Character"
 msgstr ""
 
 #: app/ui/CategoryPage.qml:140 app/ui/CategoryPage.qml:148
-#: app/ui/Emojier.qml:40
+#: app/ui/Emojier.qml:45
 #, kde-format
 msgid "%1 copied to the clipboard"
 msgstr "%1 được chép vào bảng nháp"
@@ -79,15 +79,10 @@ msgstr ""
 msgid "No recent Emojis"
 msgstr "Không có hình biểu cảm nào gần đây"
 
-#: app/ui/Emojier.qml:46
+#: app/ui/Emojier.qml:51
 #, kde-format
 msgid "Recent"
 msgstr "Gần đây"
-
-#: app/ui/Emojier.qml:80
-#, kde-format
-msgid "Categories"
-msgstr "Các loại"
 
 #: emojicategory.cpp:14
 msgctxt "Emoji Category"
@@ -138,6 +133,9 @@ msgstr "Kí hiệu"
 msgctxt "Emoji Category"
 msgid "Flags"
 msgstr "Cờ"
+
+#~ msgid "Categories"
+#~ msgstr "Các loại"
 
 #~ msgid "Search"
 #~ msgstr "Tìm kiếm"
