@@ -20,7 +20,7 @@ PC3.Frame {
     background: Rectangle {
         implicitHeight: badge.text !== "" ? Math.round(Kirigami.Units.iconSizes.sizeForLabels * 1.3) : 0
         radius: badge.text !== "" ? Kirigami.Units.cornerRadius : height / 2
-        color: Kirigami.Theme.positiveTextColor
+        color: badge.text !== "" ? Kirigami.Theme.positiveBackgroundColor : Kirigami.Theme.positiveTextColor
     }
 
     Item {
@@ -30,6 +30,7 @@ PC3.Frame {
         PC3.Label {
             id: badgeLabel
             text: badge.text
+            color: Kirigami.Theme.textColor
             font.bold: true
             font.pixelSize: Kirigami.Theme.smallFont.pixelSize
             visible: text !== ""
