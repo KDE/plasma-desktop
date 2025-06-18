@@ -39,14 +39,14 @@ KCM.AbstractKCM {
     }
 
     actions: [
-        Kirigami.Action {
+        /*Kirigami.Action {
             enabled: !exportActive
             icon.name: "document-import-symbolic"
             text: i18nc("@action:button Import shortcut scheme", "Import…")
             // TODO: enable once Kirigami actions can have Accessible.name set (QT 6.8)
             // Accessible.name: i18nc("@action:button accessible", "Import shortcut scheme")
             onTriggered: importSheet.open()
-        }, Kirigami.Action {
+        },*/ Kirigami.Action {
             text: i18nc("@action:button Add new shortcut", "Add New")
             icon.name: "list-add-symbolic"
             displayHint: Kirigami.DisplayHint.KeepVisible
@@ -68,7 +68,7 @@ KCM.AbstractKCM {
                 Accessible.role: Accessible.MenuItem
                 onTriggered: addCommandDialog.open()
             }
-        }, Kirigami.Action {
+        }/*, Kirigami.Action {
             icon.name: exportActive ? "dialog-cancel-symbolic" : "document-export-symbolic"
             text: exportActive
                   ? i18nc("@action:button", "Cancel Export")
@@ -77,24 +77,48 @@ KCM.AbstractKCM {
             // Accessible.name: exportActive
             //     ? text
             //     : i18nc("@action:button accessible", "Export shortcut scheme")
-            onTriggered: kcm.push("SelectGestureAction.qml")
-            // onTriggered: {
-            //     if (exportActive) {
-            //         exportActive = false
-            //     } else if (kcm.needsSave) {
-            //         exportWarning.visible = true
-            //     } else {
-            //         search.text = ""
-            //         exportActive = true
-            //     }
-            // }
-        }
+            onTriggered: {
+                if (exportActive) {
+                    exportActive = false
+                } else if (kcm.needsSave) {
+                    exportWarning.visible = true
+                } else {
+                    search.text = ""
+                    exportActive = true
+                }
+            }
+        }*/
     ]
+
+    property bool editing: false
+    title: i18n("Select Action for Gesture")
 
     headerPaddingEnabled: false // Let the InlineMessage touch the edges
     header: ColumnLayout {
         spacing: 0
 
+        Kirigami.InlineMessage {
+            Layout.fillWidth: true
+            visible: root.editing
+            text: i18n("Touchpad gesture \"%1\" is configured to trigger \"%2\".", "Swipe Up with 3 Fingers", "Cycle through Window Overview and Desktop Grid")
+            position: Kirigami.InlineMessage.Position.Header
+            type: Kirigami.MessageType.Information
+            actions: [
+                Kirigami.Action {
+                    icon.name: "dialog-cancel-symbolic"
+                    text: i18nc("@action:button", "Change Gesture…")
+                    onTriggered: {
+                        selectGestureDialog.editing = root.editing;
+                        selectGestureDialog.open();
+                    }
+                }/*,
+                Kirigami.Action {
+                    icon.name: "dialog-cancel-symbolic"
+                    text: i18nc("@action:button", "Cancel")
+                    Accessible.name: i18nc("@action:button accessible", "Cancel editing this gesture")
+                }*/
+            ]
+        }
         Kirigami.InlineMessage {
             Layout.fillWidth: true
             visible: errorOccured
@@ -178,7 +202,6 @@ KCM.AbstractKCM {
                     clip: true
                     model: kcm.filteredModel
                     activeFocusOnTab: true
-                    onActiveFocusChanged: currentIndex = Math.max(currentIndex, 0)
                     add: Transition {
                         id: transition
                         PropertyAction {
@@ -345,12 +368,17 @@ KCM.AbstractKCM {
                     clip:true
                     id: shortcutsList
                     property int selectedIndex: -1
-                    activeFocusOnTab: true
                     model: DelegateModel {
                         id: dm
                         model: rootIndex.valid ?  kcm.filteredModel : undefined
                         delegate: ShortcutActionDelegate {
+                            editing: root.editing
                             showExpandButton: shortcutsList.count > 1
+                            onGestureActionSelected: {
+                                selectGestureDialog.editing = root.editing;
+                                selectGestureDialog.open();
+                            }
+                            onShouldToggleEditing: root.editing = !root.editing;
                         }
                         KeyNavigation.left: components
                     }
@@ -567,5 +595,205 @@ KCM.AbstractKCM {
             }
         ]
     }
-}
 
+
+    Kirigami.PromptDialog {
+        id: selectGestureDialog
+        parent: root
+        property bool editing: false
+        property string componentName: ""
+        property string oldExec: ""
+        property string name: ""
+
+        title: editing ? i18n("Change Gesture") : i18n("Add Gesture")
+        //iconName: 'folder-script-symbolic'
+
+        onVisibleChanged: {
+            if (visible) {
+                gestureType.forceActiveFocus();
+                // cmdField.clear();
+                // nameField.clear();
+                // cmdField.forceActiveFocus();
+                // if (editing) {
+                //     cmdField.text = oldExec;
+                //     nameField.text = name;
+                //     cmdField.selectAll();
+                // }
+            }
+        }
+
+        // standardButtonActions are located to the left of customFooterActions, which is against
+        // KDE HIG where Cancel should be to the right of the "OK"-style action
+        //standardButtons: Kirigami.Dialog.Cancel
+
+        customFooterActions: [
+            Kirigami.Action {
+                text: preAssignedActionMessage.visible ? i18n("Replace Assigned Action") :
+                    selectGestureDialog.editing ? i18n("Update Gesture") :
+                    i18n("Add Gesture")
+                icon.name: (preAssignedActionMessage.visible || selectGestureDialog.editing) ? "dialog-ok-symbolic" : // replace or update
+                    "list-add-symbolic"
+                onTriggered: selectGestureDialog.accept()
+                //enabled: cmdField.length > 0
+            },
+            Kirigami.Action {
+                text: i18n("Cancel")
+                icon.name: "dialog-cancel-symbolic"
+                onTriggered: selectGestureDialog.reject()
+            }
+        ]
+
+        ColumnLayout {
+            spacing: Kirigami.Units.smallSpacing
+
+            Kirigami.FormLayout {
+                KirigamiAddonsComponents.RadioSelector {
+                    id: gestureCategory
+                    Layout.fillWidth: true
+                    Kirigami.FormData.isSection: true
+                    visible: !selectGestureDialog.editing
+
+                    actions: [
+                        Kirigami.Action {
+                            text: i18nc("Type of Gesture", "Stroke")
+                            icon.name: "draw-polyline-symbolic"
+                            checked: false
+                        },
+                        Kirigami.Action {
+                            text: i18nc("Type of Gesture", "Touchpad")
+                            icon.name: "input-touchpad-symbolic"
+                            checked: true
+                        },
+                        Kirigami.Action {
+                            text: i18nc("Type of Gesture", "Scroll")
+                            icon.name: "gnumeric-object-scrollbar" // TODO: obviously this can't be the final icon, just look at the name
+                            checked: false
+                        }
+                    ]
+                }
+                Kirigami.Separator {
+                    Kirigami.FormData.isSection: true
+                    visible: gestureCategory.visible
+                }
+
+                RowLayout {
+                    id: gestureType
+                    Kirigami.FormData.label: i18nc("@label:combobox Type of gesture (e.g. swipe)", "Gesture:")
+                    Layout.fillWidth: true
+                    Layout.leftMargin: shortcutsScroll.x
+                    Layout.alignment: Qt.AlignLeft
+                    spacing: Kirigami.Units.smallSpacing
+
+                    QQC2.RadioButton {
+                        text: i18n("Swipe")
+                        checked: true
+                    }
+                    QQC2.RadioButton {
+                        text: i18n("Pinch")
+                    }
+                    QQC2.RadioButton {
+                        text: i18n("Rotate")
+                    }
+                    QQC2.RadioButton {
+                        text: i18n("Hold")
+                    }
+                }
+                QQC2.ComboBox {
+                    Layout.fillWidth: true
+                    model: ListModel {
+                        ListElement { name: "with 2 fingers"; value: 0 }
+                        ListElement { name: "with 3 fingers"; value: 1 }
+                        ListElement { name: "with 4 fingers"; value: 2 }
+                    }
+                    textRole: "name"
+                    valueRole: "value"
+                    currentIndex: 1
+                }
+                GridLayout {
+                    columns: 3
+                    Kirigami.FormData.label: i18nc("@label:combobox Direction of gesture (e.g. swipe up)", "Direction:")
+                    QQC2.Button {
+                        id: swipeUpLeftButton
+                        text: "↖"
+                        checkable: true
+                    }
+                    QQC2.Button {
+                        id: swipeUpButton
+                        text: "↑"
+                        checkable: true
+                        checked: true
+                    }
+                    QQC2.Button {
+                        id: swipeUpRightButton
+                        text: "↗"
+                        checkable: true
+                    }
+                    QQC2.Button {
+                        text: "←"
+                        checkable: true
+                    }
+                    Item {
+                        // no center button
+                    }
+                    QQC2.Button {
+                        text: "→"
+                        checkable: true
+                    }
+                    QQC2.Button {
+                        text: "↙"
+                        checkable: true
+                    }
+                    QQC2.Button {
+                        text: "↓"
+                        checkable: true
+                    }
+                    QQC2.Button {
+                        text: "↘"
+                        checkable: true
+                    }
+                }
+                KQuickControls.KeySequenceItem {
+                    Kirigami.FormData.label: i18nc("@label:button", "Require modifier keys:")
+
+                    modifierlessAllowed: false
+                    modifierOnlyAllowed: true
+                    multiKeyShortcutsAllowed: false
+                    checkForConflictsAgainst: KQuickControls.ShortcutType.None
+
+                    // onCaptureFinished: {
+                    //     const copy = root.device.buttonMapping
+                    //     copy[buttonData.buttonName] = keySequence
+                    //     root.device.buttonMapping = copy
+                    // }
+                }
+
+                Kirigami.InlineMessage {
+                    id: selectedActionMessage
+                    visible: !preAssignedActionMessage.visible
+                    Layout.fillWidth: true
+                    Kirigami.FormData.isSection: true
+
+                    text: i18n("This gesture will trigger \"%1\".", "Maximize Window")
+                    icon.source: "kwin"
+                }
+                Kirigami.InlineMessage {
+                    id: preAssignedActionMessage
+                    Layout.fillWidth: true
+                    Kirigami.FormData.isSection: true
+                    visible: swipeUpButton.checked
+                    type: Kirigami.MessageType.Warning
+
+                    text: i18n("\"%1\" is already assigned to this gesture. Assign \"%2\" instead?", "Cycle through Window Overview and Desktop Grid", "Maximize Window")
+                    icon.source: "kwin"
+                }
+            }
+
+            // QQC2.Label {
+            //     Layout.fillWidth: true
+            //     text: i18n("something about assigning an action")
+            //     textFormat: Text.PlainText
+            //     wrapMode: Text.Wrap
+            // }
+        }
+    }
+}
