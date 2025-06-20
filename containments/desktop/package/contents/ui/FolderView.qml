@@ -295,7 +295,8 @@ FocusScope {
                 editor.commit();
             }
 
-            var index = gridView.indexAt(mouse.x, mouse.y);
+            const mappedPos = mapToItem(gridView.contentItem, mouse.x, mouse.y)
+            var index = gridView.indexAt(mappedPos.x, mappedPos.y);
             var indexItem = gridView.itemAtIndex(index);
 
             if (indexItem && indexItem.iconArea) { // update position in case of touch or untriggered hover
