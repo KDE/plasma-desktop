@@ -10,14 +10,14 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-30 00:44+0000\n"
-"PO-Revision-Date: 2025-05-24 17:59+0200\n"
+"PO-Revision-Date: 2025-06-20 21:33+0200\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: backend.cpp:284
@@ -404,14 +404,14 @@ msgctxt ""
 "@label for checkbox Part of a sentence: 'Clicking active task minimizes the "
 "task'"
 msgid "Clicking active task:"
-msgstr "1Kliknutie na aktívnu úlohu:"
+msgstr "Kliknutie na aktívnu úlohu:"
 
 #: package/contents/ui/ConfigBehavior.qml:181
 #, kde-format
 msgctxt ""
 "@option:check Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
-msgstr "1Minimalizuje úlohu"
+msgstr "Minimalizuje úlohu"
 
 #: package/contents/ui/ConfigBehavior.qml:186
 #, kde-format
@@ -432,7 +432,7 @@ msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task closes window "
 "or group'"
 msgid "Closes window or group"
-msgstr "1Zatvorí okno alebo skupinu"
+msgstr "Zatvorí okno alebo skupinu"
 
 #: package/contents/ui/ConfigBehavior.qml:192
 #, kde-format
@@ -506,13 +506,13 @@ msgstr "Preskočiť minimalizované úlohy"
 msgctxt ""
 "@label for checkbox group, completes sentence like: … from current screen"
 msgid "Show only tasks:"
-msgstr "1Zobrazovať iba úlohy:"
+msgstr "Zobrazovať iba úlohy:"
 
 #: package/contents/ui/ConfigBehavior.qml:230
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current screen"
-msgstr "1Z aktuálnej obrazovky"
+msgstr "Z aktuálnej obrazovky"
 
 #: package/contents/ui/ConfigBehavior.qml:235
 #, kde-format
@@ -524,7 +524,7 @@ msgstr "Z aktuálnej pracovnej plochy"
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From current activity"
-msgstr "1Z aktuálnej aktivity"
+msgstr "Z aktuálnej aktivity"
 
 #: package/contents/ui/ConfigBehavior.qml:245
 #, kde-format
@@ -549,7 +549,7 @@ msgstr "Zobraziť, keď chce okno pozornosť"
 #, kde-format
 msgctxt "@label for radiobutton group completes sentence like: … on the bottom"
 msgid "New tasks appear:"
-msgstr "1Nové úlohy sa zobrazia:"
+msgstr "Nové úlohy sa zobrazia:"
 
 #: package/contents/ui/ConfigBehavior.qml:274
 #, kde-format
