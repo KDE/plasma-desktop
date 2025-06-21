@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-17 00:44+0000\n"
-"PO-Revision-Date: 2025-05-28 16:54+0300\n"
+"PO-Revision-Date: 2025-06-19 20:11+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:204
 #, kde-format
@@ -730,12 +730,10 @@ msgid "Close Widget Explorer"
 msgstr "Aizvērt logdaļu pārlūku"
 
 #: contents/explorer/WidgetExplorer.qml:208
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox accessible"
-#| msgid "Search Widgets"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Search through widgets"
-msgstr "Meklēt logdaļas"
+msgstr "Meklēt cauri logdaļām"
 
 #: contents/explorer/WidgetExplorer.qml:237
 #, kde-format
@@ -804,9 +802,7 @@ msgid "Never show clock"
 msgstr "Nekad nerādīt savu pulksteni"
 
 #: contents/lockscreen/config.qml:71
-#, fuzzy, kde-format
-#| msgctxt "@title: group"
-#| msgid "Media controls:"
+#, kde-format
 msgctxt "@title: group UI controls for playback of multimedia content"
 msgid "Media controls:"
 msgstr "Multivides vadība:"
