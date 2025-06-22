@@ -8,6 +8,7 @@ import QtQuick 2.15
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.private.desktopcontainment.folder as Folder
@@ -75,6 +76,15 @@ Folder.SubDialog {
                 if (!dragInProgressAnywhere && !dialog.visible) {
                     dialog.destroy();
                 }
+            }
+        }
+
+        Loader {
+            anchors.centerIn: parent
+            width: parent.width - (Kirigami.Units.gridUnit * 4)
+            active: folderView.view.count === 0
+            sourceComponent: PlasmaExtras.PlaceholderMessage {
+                text: i18nc("@info:placeholder", "Folder is empty")
             }
         }
     }
