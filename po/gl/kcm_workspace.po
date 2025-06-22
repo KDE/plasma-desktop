@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-01 00:43+0000\n"
-"PO-Revision-Date: 2025-02-19 07:24+0100\n"
+"PO-Revision-Date: 2025-06-19 10:36+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: ui/main.qml:25
 #, kde-format
@@ -36,7 +36,7 @@ msgstr "Reiniciar"
 #, kde-format
 msgctxt "@title:group"
 msgid "Plasma"
-msgstr ""
+msgstr "Plasma"
 
 #: ui/main.qml:52
 #, kde-format
@@ -80,12 +80,10 @@ msgstr ""
 "aspectos como o volume e o brillo, ou o dispositivo de son."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling"
-msgstr "Desprazamento:"
+msgstr "Desprazamento"
 
 #: ui/main.qml:100
 #, kde-format
@@ -137,7 +135,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "Presión"
 
 #: ui/main.qml:175
 #, kde-format
@@ -219,24 +217,23 @@ msgid ""
 "Double-click the folder to test. If it does not change its appearance, "
 "increase double-click interval."
 msgstr ""
+"Faga unha prema dupla no cartafol para probar. Se non cambia de aparencia, "
+"aumente o intervalo de prema dupla."
 
 #: ui/main.qml:354
 #, kde-format
 msgid "Drag and Drop"
-msgstr ""
+msgstr "Arrastrar e soltar"
 
 #: ui/main.qml:361
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
-#| msgid "Clicking files or folders:"
+#, kde-format
 msgid "When dragging files or folders:"
-msgstr "Premer ficheiros e cartafoles:"
+msgstr "Ao arrastrar ficheiros e cartafoles:"
 
 #: ui/main.qml:362
 #, kde-format
 msgid "Always ask what to do"
-msgstr ""
+msgstr "Preguntar sempre que facer"
 
 #: ui/main.qml:378
 #, kde-kuit-format
@@ -246,30 +243,32 @@ msgid ""
 "and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise show a "
 "dialog."
 msgstr ""
+"Manter premida <shortcut>Maiús</shortcut> para mover, <shortcut>Ctrl</"
+"shortcut> para copiar, e <shortcut>Maiús+Ctrl</shortcut> para crear unha "
+"ligazón simbólica. Senón, amosar un diálogo."
 
 #: ui/main.qml:386
 #, kde-format
 msgid "Move if on the same device"
-msgstr ""
+msgstr "Mover se o dispositivo é o mesmo"
 
 #: ui/main.qml:402
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
 msgstr ""
+"Manter <shortcut>Maiús</shortcut> ao soltar para amosar outras opcións."
 
 #: ui/main.qml:410
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Touch"
-msgstr "Modo táctil:"
+msgstr "Tacto"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgid "Enable Touch Mode:"
-msgstr "Modo táctil:"
+msgstr "Activar o modo táctil:"
 
 #: ui/main.qml:418
 #, kde-format
@@ -295,9 +294,7 @@ msgstr ""
 "dun portátil transformábel se lle dá a volta ou se desconecta."
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always enabled"
+#, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always active"
 msgstr "Sempre activo"
@@ -306,7 +303,7 @@ msgstr "Sempre activo"
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Disabled"
-msgstr ""
+msgstr "Desactivado"
 
 #: ui/main.qml:486
 #, kde-format
@@ -330,6 +327,8 @@ msgid ""
 "For local files on the same device, whether dragging and dropping will "
 "perform a move operation instead of showing the options menu"
 msgstr ""
+"No caso de ficheiros locais no mesmo dispositivo, se arrastrar e soltar "
+"moverá en vez de amosar o menú de opcións."
 
 #. i18n: ectx: label, entry (smoothScroll), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21

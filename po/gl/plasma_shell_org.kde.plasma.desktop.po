@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-17 00:44+0000\n"
-"PO-Revision-Date: 2025-05-16 11:26+0200\n"
+"PO-Revision-Date: 2025-06-19 09:46+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:204
 #, kde-format
@@ -729,12 +729,10 @@ msgid "Close Widget Explorer"
 msgstr "Pechar o explorador de trebellos"
 
 #: contents/explorer/WidgetExplorer.qml:208
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox accessible"
-#| msgid "Search Widgets"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Search through widgets"
-msgstr "Buscar nos trebellos"
+msgstr "Buscar trebellos"
 
 #: contents/explorer/WidgetExplorer.qml:237
 #, kde-format
@@ -802,9 +800,7 @@ msgid "Never show clock"
 msgstr "Non amosar nunca o reloxo."
 
 #: contents/lockscreen/config.qml:71
-#, fuzzy, kde-format
-#| msgctxt "@title: group"
-#| msgid "Media controls:"
+#, kde-format
 msgctxt "@title: group UI controls for playback of multimedia content"
 msgid "Media controls:"
 msgstr "Controis de reprodución:"
