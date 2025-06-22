@@ -295,7 +295,7 @@ int Positioner::rowCount(const QModelIndex &parent) const
             if (parent.isValid()) {
                 return 0;
             } else {
-                return lastRow() + 1;
+                return lastRow() > 0 ? lastRow() + 1 : 0;
             }
         } else {
             return m_folderModel->rowCount(parent);
