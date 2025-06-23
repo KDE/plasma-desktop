@@ -768,6 +768,7 @@ FocusScope {
                 delegate: FolderItemDelegate {
                     width: gridView.cellWidth
                     height: gridView.cellHeight
+                    isOnRootView: main.isRootView
                 }
 
                 onContentXChanged: {
