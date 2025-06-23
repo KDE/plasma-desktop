@@ -19,6 +19,11 @@ Kirigami.FormLayout {
 
     required property var device
 
+    function settingsRestored(): void {
+        // we have to reload this manually because it's function-based
+        outputsCombo.currentIndex = outputsCombo.findCurrentIndex();
+    }
+
     function reloadOutputView(): void {
         const initialOutputArea = root.device.outputArea;
         if (initialOutputArea === Qt.rect(0, 0, 1, 1)) {
@@ -42,14 +47,7 @@ Kirigami.FormLayout {
         model: OutputsModel {
             id: outputsModel
         }
-        currentIndex: {
-
-            if (count === 0) {
-                return -1
-            }
-
-            outputsModel.rowForDevice(root.device)
-        }
+        currentIndex: findCurrentIndex()
         textRole: "display"
         onActivated: index => {
             root.device.outputName = outputsModel.outputNameAt(index)
@@ -60,6 +58,14 @@ Kirigami.FormLayout {
                 outputAreaCombo.currentIndex = 0;
             }
             root.reloadOutputView();
+        }
+
+        function findCurrentIndex(): int {
+            if (count === 0) {
+                return -1;
+            }
+
+            return outputsModel.rowForDevice(root.device);
         }
     }
 
