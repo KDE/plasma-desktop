@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-17 00:44+0000\n"
-"PO-Revision-Date: 2025-05-03 12:28+0200\n"
+"PO-Revision-Date: 2025-06-22 11:08+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.07.70\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:204
 #, kde-format
@@ -287,7 +287,7 @@ msgstr "Snarvegar"
 #, kde-format
 msgctxt "@action:button set keyboard shortcut for"
 msgid "Activate widget as if clicked:"
-msgstr ""
+msgstr "Start elementet som om det vart trykt på:"
 
 #: contents/configuration/ContainmentConfiguration.qml:27
 #, kde-format
@@ -726,9 +726,7 @@ msgid "Close Widget Explorer"
 msgstr "Lukk utforskar for skjermelement"
 
 #: contents/explorer/WidgetExplorer.qml:208
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox accessible"
-#| msgid "Search Widgets"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Search through widgets"
 msgstr "Søk etter element"
@@ -799,9 +797,7 @@ msgid "Never show clock"
 msgstr "Vis aldri klokka"
 
 #: contents/lockscreen/config.qml:71
-#, fuzzy, kde-format
-#| msgctxt "@title: group"
-#| msgid "Media controls:"
+#, kde-format
 msgctxt "@title: group UI controls for playback of multimedia content"
 msgid "Media controls:"
 msgstr "Mediestyring:"

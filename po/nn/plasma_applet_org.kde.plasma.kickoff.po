@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-06 00:44+0000\n"
-"PO-Revision-Date: 2024-09-22 16:39+0200\n"
+"PO-Revision-Date: 2025-06-22 11:06+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -156,10 +156,10 @@ msgid "General:"
 msgstr "Generelt:"
 
 #: package/contents/ui/ConfigGeneral.qml:176
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
-msgstr "Sorter alltid programma alfabetisk"
+msgstr "Sorter program alfabetisk"
 
 #: package/contents/ui/ConfigGeneral.qml:180
 #, kde-format
@@ -168,6 +168,8 @@ msgid ""
 "This doesn't affect how applications are sorted in either search results or "
 "the favorites page."
 msgstr ""
+"Dette påverkar ikkje korleis programma vert sorterte i søkjeresultata eller "
+"på favorittsida."
 
 #: package/contents/ui/ConfigGeneral.qml:186
 #, kde-format
@@ -183,12 +185,12 @@ msgstr "Vert automatisk slått av i trykksjerm-modus"
 #: package/contents/ui/ConfigGeneral.qml:200
 #, kde-format
 msgid "Highlight newly installed applications"
-msgstr ""
+msgstr "Marker nyleg installerte program"
 
 #: package/contents/ui/ConfigGeneral.qml:205
 #, kde-format
 msgid "Switch sidebar categories when hovering over them"
-msgstr ""
+msgstr "Byt kategori i sidestolpen når peikaren er over"
 
 #: package/contents/ui/ConfigGeneral.qml:211
 #, kde-format
@@ -305,14 +307,13 @@ msgstr "Hald open"
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Nytt!"
 
 #: package/contents/ui/KickoffGridDelegate.qml:61
 #: package/contents/ui/KickoffListDelegate.qml:121
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgid "Newly installed application"
-msgstr "Vis andre program:"
+msgstr "Nyleg installert program"
 
 #: package/contents/ui/KickoffGridView.qml:102
 #, kde-format
@@ -322,7 +323,7 @@ msgstr "Rutenett med %1 rader og %2 kolonnar"
 #: package/contents/ui/KickoffListDelegate.qml:120
 #, kde-format
 msgid "There is a newly installed application in this category"
-msgstr ""
+msgstr "Det finst eit nyleg installert program i denne kategorien"
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
@@ -332,7 +333,7 @@ msgstr "Meir"
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
 msgid "Session and Power"
-msgstr ""
+msgstr "Økt og straum"
 
 #: package/contents/ui/main.qml:355
 #, kde-format
