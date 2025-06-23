@@ -140,8 +140,11 @@ PlasmoidItem {
                 }
 
                 model: tasksModel.count === 0 ? noWindowModel : tasksModel
-                onClicked: tasksModel.count === 0 ? null : (model) =>
-                    tasksModel.requestActivate(tasksModel.makeModelIndex(model.index))
+                onClicked: (model) => {
+                    if (tasksModel.count > 0) {
+                        tasksModel.requestActivate(tasksModel.makeModelIndex(model.index));
+                    }
+                }
             }
         }
     }
