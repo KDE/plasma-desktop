@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kickoff\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-05-24 17:54+0200\n"
+"PO-Revision-Date: 2025-06-22 11:21+0200\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -169,6 +169,8 @@ msgid ""
 "This doesn't affect how applications are sorted in either search results or "
 "the favorites page."
 msgstr ""
+"Nemá to vplyv na to, ako sú aplikácie zoradené vo výsledkoch vyhľadávania "
+"ani na stránke obľúbených položiek."
 
 #: package/contents/ui/ConfigGeneral.qml:186
 #, kde-format
@@ -184,7 +186,7 @@ msgstr "Automaticky vypnuté v dotykovom režime"
 #: package/contents/ui/ConfigGeneral.qml:200
 #, kde-format
 msgid "Highlight newly installed applications"
-msgstr ""
+msgstr "Zvýrazniť nové nainštalované aplikácie"
 
 #: package/contents/ui/ConfigGeneral.qml:205
 #, kde-format
@@ -310,10 +312,9 @@ msgstr "Nové!"
 
 #: package/contents/ui/KickoffGridDelegate.qml:61
 #: package/contents/ui/KickoffListDelegate.qml:121
-#, fuzzy, kde-format
-#| msgid "Recently Used Applications"
+#, kde-format
 msgid "Newly installed application"
-msgstr "Naposledy použité aplikácie"
+msgstr "Nová nainštalovaná aplikácia"
 
 #: package/contents/ui/KickoffGridView.qml:102
 #, kde-format
@@ -323,7 +324,7 @@ msgstr "Mriežka s %1 riadkami, %2 stĺpcami"
 #: package/contents/ui/KickoffListDelegate.qml:120
 #, kde-format
 msgid "There is a newly installed application in this category"
-msgstr ""
+msgstr "V tejto kategórii je nová nainštalovaná aplikácia"
 
 #: package/contents/ui/LeaveButtons.qml:169
 #, kde-format
@@ -331,10 +332,9 @@ msgid "More"
 msgstr "Viac"
 
 #: package/contents/ui/LeaveButtons.qml:169
-#, fuzzy, kde-format
-#| msgid "Session actions"
+#, kde-format
 msgid "Session and Power "
-msgstr "Akcie sedenia"
+msgstr "Sedenie a napájanie"
 
 #: package/contents/ui/main.qml:355
 #, kde-format

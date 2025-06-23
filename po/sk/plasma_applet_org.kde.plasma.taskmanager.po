@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-30 00:44+0000\n"
-"PO-Revision-Date: 2025-06-20 21:33+0200\n"
+"PO-Revision-Date: 2025-06-22 11:12+0200\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -136,19 +136,19 @@ msgstr "Skryť ostatné okná pri prejdení nad náhľadmi"
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show an indicator when a task is playing audio"
-msgstr ""
+msgstr "Zobraziť indikátor počas prehrávania zvuku"
 
 #: package/contents/ui/ConfigAppearance.qml:69
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Mute task when clicking indicator"
-msgstr ""
+msgstr "Stlmiť úlohu po kliknutí na indikátor"
 
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show media and volume controls in tooltip"
-msgstr ""
+msgstr "Zobrazovať ovládanie médií a hlasitosti v tooltipe"
 
 #: package/contents/ui/ConfigAppearance.qml:85
 #, kde-format
@@ -265,6 +265,10 @@ msgid ""
 "behavior. If you don't find one, consider reporting this as a bug to the "
 "app's developer."
 msgstr ""
+"Ak toto nastavenie používate na to, aby ste obišli aplikáciu, ktorá si "
+"príliš často vyžaduje pozornosť, najprv vyhľadajte v aplikácii nastavenie, "
+"ktoré toto správanie zakáže. Ak ho nenájdete, zvážte nahlásenie tejto chyby "
+"vývojárovi aplikácie."
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
@@ -384,7 +388,7 @@ msgstr "Podľa aktivity"
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By horizontal window position"
-msgstr ""
+msgstr "Podľa horizontálnej polohy okna"
 
 #: package/contents/ui/ConfigBehavior.qml:163
 #, kde-format

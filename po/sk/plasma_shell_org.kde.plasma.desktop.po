@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-17 02:37+0000\n"
-"PO-Revision-Date: 2025-05-30 20:32+0200\n"
+"PO-Revision-Date: 2025-06-22 12:59+0200\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: contents/activitymanager/ActivityItem.qml:204
@@ -158,15 +158,10 @@ msgid "Apply Settings"
 msgstr "Použiť nastavenie"
 
 #: contents/configuration/AppletConfiguration.qml:369
-#, fuzzy, kde-format
-#| msgid ""
-#| "The settings of the current module have changed. Do you want to apply the "
-#| "changes or discard them?"
+#, kde-format
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
-msgstr ""
-"Nastavenia aktuálneho modulu sa zmenili. Chcete použiť zmeny alebo zahodiť "
-"ich?"
+msgstr "Aktuálna stránka má neuložené zmeny. Použiť zmeny alebo ich zahodiť?"
 
 #: contents/configuration/AppletConfiguration.qml:401
 #, kde-format
@@ -294,7 +289,7 @@ msgstr "Klávesové skratky"
 #, kde-format
 msgctxt "@action:button set keyboard shortcut for"
 msgid "Activate widget as if clicked:"
-msgstr ""
+msgstr "Aktivácia widgetu ako po kliknutí:"
 
 #: contents/configuration/ContainmentConfiguration.qml:27
 #, kde-format
@@ -471,14 +466,13 @@ msgstr "Zakázané"
 #, kde-format
 msgctxt "@item:inlistbox Option to make only panel applets always float"
 msgid "Applets only"
-msgstr ""
+msgstr "Iba applety"
 
 #: contents/configuration/PanelConfiguration.qml:519
-#, fuzzy, kde-format
-#| msgid "Panel and Desktop Management"
+#, kde-format
 msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
-msgstr "Správa panelu a pracovnej plochy"
+msgstr "Panel a applety"
 
 #: contents/configuration/PanelConfiguration.qml:562
 #, kde-format
@@ -528,7 +522,7 @@ msgstr "Klonovať panel"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
-msgstr ""
+msgstr "Vytvoriť nový panel s rovnakými nastaveniami a appletmi"
 
 #: contents/configuration/PanelConfiguration.qml:742
 #, kde-format
@@ -580,10 +574,7 @@ msgid "Drag to change minimum width."
 msgstr "Potiahnutím zmeníte minimálnu šírku."
 
 #: contents/configuration/panelconfiguration/Ruler.qml:87
-#, fuzzy, kde-format
-#| msgid ""
-#| "Drag to change position on this screen edge.\n"
-#| "Double click to reset."
+#, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid ""
 "Drag to change position on this screen edge.\n"
@@ -593,10 +584,9 @@ msgstr ""
 "Dvojitým kliknutím obnovíte nastavenie."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy, kde-format
-#| msgid "Panel and Desktop Management"
+#, kde-format
 msgid "Manage Panels and Desktops"
-msgstr "Správa panelu a pracovnej plochy"
+msgstr "Správa panelov a pracovnej plochy"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 #, kde-format
@@ -657,14 +647,13 @@ msgid "New!"
 msgstr "Nové!"
 
 #: contents/explorer/AppletDelegate.qml:204
-#, fuzzy, kde-format
-#| msgid "No widgets available"
+#, kde-format
 msgctxt "@info:other accessible for badge showing applet count"
 msgid "%1 widget active"
 msgid_plural "%1 widgets active"
-msgstr[0] "Žiadne miniaplikáciw nie sú dostupné"
-msgstr[1] "Žiadne miniaplikáciw nie sú dostupné"
-msgstr[2] "Žiadne miniaplikáciw nie sú dostupné"
+msgstr[0] "%1 widget aktívny"
+msgstr[1] "%1 widgety aktívne"
+msgstr[2] "%1 widgetov aktívnych"
 
 #: contents/explorer/AppletDelegate.qml:205
 #, kde-format
@@ -673,28 +662,27 @@ msgid "Recently installed"
 msgstr "Nedávno nainštalované"
 
 #: contents/explorer/AppletDelegate.qml:217
-#, fuzzy, kde-format
-#| msgid "Uninstall"
+#, kde-format
 msgid "Cancel Uninstallation"
-msgstr "Odinštalovať"
+msgstr "Zrušiť odinštalovanie"
 
 #: contents/explorer/AppletDelegate.qml:218
 #, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Mark for Uninstallation"
-msgstr ""
+msgstr "Označiť na odinštalovanie"
 
 #: contents/explorer/AppletDelegate.qml:222
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Cancel pending uninstallation for widget %1"
-msgstr ""
+msgstr "Zrušiť čakajúce odinštalovanie widgetu %1"
 
 #: contents/explorer/AppletDelegate.qml:223
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Mark widget %1 for uninstallation. Requires confirmation"
-msgstr ""
+msgstr "Označiť widget %1 na odinštalovanie. Vyžaduje potvrdenie"
 
 #: contents/explorer/AppletDelegate.qml:265
 #, kde-format
@@ -708,9 +696,9 @@ msgctxt ""
 "name"
 msgid "Remove running instance of widget %2"
 msgid_plural "Remove all %1 running instances of widget %2"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Odstrániť spustenú inštanciu widgetu %2"
+msgstr[1] "Odstrániť všetky %1 spustené inštancie widgetu %2"
+msgstr[2] "Odstrániť všetkých %1 spustené inštancie widgetu %2"
 
 #: contents/explorer/Tooltip.qml:105
 #, kde-format
@@ -754,14 +742,13 @@ msgstr "Získať nové miniaplikácie..."
 #, kde-format
 msgctxt "@action:button accessible for close button"
 msgid "Close Widget Explorer"
-msgstr ""
+msgstr "Zatvoriť prehliadač widgetov"
 
 #: contents/explorer/WidgetExplorer.qml:208
-#, fuzzy, kde-format
-#| msgid "Lock Widgets"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Search Widgets"
-msgstr "Zamknúť widgety"
+msgstr "Hľadať widgety"
 
 #: contents/explorer/WidgetExplorer.qml:237
 #, kde-format
@@ -769,14 +756,13 @@ msgid "Categories"
 msgstr "Kategórie"
 
 #: contents/explorer/WidgetExplorer.qml:258
-#, fuzzy, kde-format
-#| msgid "Uninstall widget"
+#, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Uninstall (%1 Widget)"
 msgid_plural "Uninstall (%1 Widgets)"
-msgstr[0] "Odinštalovať miniaplikáciu"
-msgstr[1] "Odinštalovať miniaplikáciu"
-msgstr[2] "Odinštalovať miniaplikáciu"
+msgstr[0] "Odinštalovať (%1 miniaplikáciu)"
+msgstr[1] "Odinštalovať (%1 miniaplikácie)"
+msgstr[2] "Odinštalovať (%1 miniaplikácií)"
 
 #: contents/explorer/WidgetExplorer.qml:369
 #, kde-format
@@ -807,20 +793,16 @@ msgid "Always show clock"
 msgstr "Zobrazovať hodiny"
 
 #: contents/lockscreen/config.qml:41
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio Clock shown only while unlock prompt is visible"
 msgid "On unlocking prompt"
-msgstr "Zobraziť pod výzvou na odomknutie"
+msgstr "Pod výzvou na odomknutie"
 
 #: contents/lockscreen/config.qml:42
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show clock only on unlocking prompt"
-msgstr "Zobraziť pod výzvou na odomknutie"
+msgstr "Zobraziť hodiny iba pod výzvou na odomknutie"
 
 #: contents/lockscreen/config.qml:55
 #, kde-format
@@ -832,7 +814,7 @@ msgstr "Nikdy"
 #, kde-format
 msgctxt "@option:radio"
 msgid "Never show clock"
-msgstr ""
+msgstr "Nikdy nezobrazovať hodiny"
 
 #: contents/lockscreen/config.qml:71
 #, kde-format

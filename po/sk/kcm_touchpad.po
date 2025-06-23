@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-05-24 18:01+0200\n"
+"PO-Revision-Date: 2025-06-22 11:28+0200\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
@@ -128,11 +128,10 @@ msgid "Device enabled"
 msgstr "Zariadenie povolené"
 
 #: ui/main.qml:115
-#, fuzzy, kde-format
-#| msgid "Disable touchpad when mouse is plugged in"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable while mouse is connected"
-msgstr "Zakázať touchpad, keď je pripojená myš"
+msgstr "Zakázať, keď je myš pripojená"
 
 #: ui/main.qml:137
 #, kde-format
@@ -143,7 +142,7 @@ msgstr "Zakázať touchpad pri písaní"
 #, kde-format
 msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
 msgid "This can interfere with video games."
-msgstr ""
+msgstr "To môže zasahovať do videohier."
 
 #: ui/main.qml:170
 #, kde-format
@@ -184,6 +183,8 @@ msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
+"Keď je táto funkcia zapnutá, vzdialenosť pohybu ukazovateľa sa zvyšuje s "
+"vyššou rýchlosťou pohybu."
 
 #: ui/main.qml:314
 #, kde-format
@@ -251,11 +252,13 @@ msgid ""
 "Tap, then tap and immediately slide finger over the touchpad to drag. Lift "
 "finger to drop."
 msgstr ""
+"Ťuknite na položku, potom ťuknite na položku a ihneď ťahajte prstom po "
+"dotykovej ploche. Zdvihnutím prsta pustíte."
 
 #: ui/main.qml:485
 #, kde-format
 msgid "Allow briefly lifting finger during tap-and-drag"
-msgstr ""
+msgstr "Povolenie krátkeho zdvihnutia prsta počas ťuknutia a potiahnutia"
 
 #: ui/main.qml:499
 #, kde-format
@@ -283,13 +286,12 @@ msgid "Middle-click"
 msgstr "Stredný klik"
 
 #: ui/main.qml:541
-#, fuzzy, kde-format
-#| msgid "Right-click:"
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, configure right-click with touch-pad "
 "integrated button (pressing into the touchpad)"
 msgid "Integrated right-click:"
-msgstr "Pravý klik:"
+msgstr "Integrovaný pravý klik:"
 
 #: ui/main.qml:562
 #, kde-format
@@ -301,13 +303,13 @@ msgstr "Stlačte pravý dolný roh"
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
-msgstr ""
+msgstr "Stlačenie oboch spodných rohov spôsobí stredné kliknutie."
 
 #: ui/main.qml:578
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
-msgstr ""
+msgstr "Stlačenie spodného stredu spôsobí stredné kliknutie."
 
 #: ui/main.qml:586
 #, kde-format
@@ -316,24 +318,21 @@ msgid "Press touchpad with two fingers"
 msgstr "Stlačte touchpad dvoma prstami"
 
 #: ui/main.qml:601
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers."
+#, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
-msgstr "Stlačte hocikde s troma prstami."
+msgstr "Stlačenie tromi prstami spôsobí stredné kliknutie."
 
 #: ui/main.qml:610
-#, fuzzy, kde-format
-#| msgid "Middle-click: "
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, configure middle-click with touch-pad "
 "integrated button (pressing into the touchpad)"
 msgid "Integrated middle-click:"
-msgstr "Stredný klik:"
+msgstr "Integrovaný stredný klik:"
 
 #: ui/main.qml:631
-#, fuzzy, kde-format
-#| msgid "Press bottom-middle"
+#, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom middle edge"
 msgstr "Stlačte na spodu v strede"

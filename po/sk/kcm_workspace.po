@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-01 00:43+0000\n"
-"PO-Revision-Date: 2025-05-24 18:01+0200\n"
+"PO-Revision-Date: 2025-06-22 11:50+0200\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: ui/main.qml:25
@@ -43,13 +43,13 @@ msgstr "Plasma"
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
-msgstr ""
+msgstr "Povoliť Plasme zobrazovať:"
 
 #: ui/main.qml:59
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr ""
+msgstr "Tooltipy panelov a widgetov"
 
 #: ui/main.qml:69
 #, kde-format
@@ -59,14 +59,17 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"Umožňuje všetkým panelom Plasma a widgetom na ploche zobrazovať popisné "
+"tooltipy po nabehnutí ukazovateľom. Toto nastavenie nemá vplyv na malé "
+"tooltipy zobrazené pri prejdení kurzorom nad jednotlivými tlačidlami a inými "
+"prvkami používateľského rozhrania."
 
 #: ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
-msgstr "Zobraziť vyskakovacie okno pri zmene rozloženia"
+msgstr "OSD pri zmene stavu"
 
 #: ui/main.qml:87
 #, kde-format
@@ -74,12 +77,15 @@ msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
+"Umožňuje všetkým widgetom Plasma zobrazovať vyskakovacie okná na obrazovke "
+"(OSD) pre zmeny, ako je úroveň hlasitosti a jasu alebo prepínanie zvukových "
+"zariadení."
 
 #: ui/main.qml:94
 #, kde-format
 msgctxt "@title:group"
 msgid "Scrolling"
-msgstr "Rolovanie"
+msgstr "Skrolovanie"
 
 #: ui/main.qml:100
 #, kde-format
@@ -131,7 +137,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "Klikanie"
 
 #: ui/main.qml:175
 #, kde-format
@@ -213,25 +219,22 @@ msgctxt "Test double-click speed"
 msgid ""
 "Double-click the folder to test. If it does not change its appearance, "
 "increase double-click interval."
-msgstr ""
+msgstr "Interval dvojitého kliknutia."
 
 #: ui/main.qml:354
 #, kde-format
 msgid "Drag and Drop"
-msgstr "Pretiahnuť "
+msgstr "Kliknutie a presun"
 
 #: ui/main.qml:361
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
-#| msgid "Clicking files or folders:"
+#, kde-format
 msgid "When dragging files or folders:"
-msgstr "Kliknutie na súbory alebo priečinky:"
+msgstr "Pri presúvaní súborov alebo priečinkov:"
 
 #: ui/main.qml:362
 #, kde-format
 msgid "Always ask what to do"
-msgstr ""
+msgstr "Vždy sa pýtať"
 
 #: ui/main.qml:378
 #, kde-kuit-format
@@ -241,17 +244,21 @@ msgid ""
 "and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise show a "
 "dialog."
 msgstr ""
+"Držaním <shortcut>Shiftu</shortcut> presunúť, <shortcut>Ctrl</shortcut> "
+"kopírovať, a <shortcut>Shift+Ctrl</shortcut> na vytvorenie symlinku. Inak sa "
+"zobrazí dialóg."
 
 #: ui/main.qml:386
 #, kde-format
 msgid "Move if on the same device"
-msgstr ""
+msgstr "Presunúť, ak je cieľ na tom istom zariadení"
 
 #: ui/main.qml:402
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
 msgstr ""
+"Podržaním <shortcut>Shiftu</shortcut> pri púšťaní zobrazíte ďalšie možnosti."
 
 #: ui/main.qml:410
 #, kde-format
@@ -260,16 +267,15 @@ msgid "Touch"
 msgstr "Dotyková"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgid "Enable Touch Mode:"
-msgstr "Dotykový režim:"
+msgstr "Povoliť dotykový režim:"
 
 #: ui/main.qml:418
 #, kde-format
 msgctxt "As in: 'Touch Mode is automatically enabled as needed'"
 msgid "Automatically enable as needed"
-msgstr "Automatické zapnutie podľa potreby"
+msgstr "Automaticky podľa potreby"
 
 #: ui/main.qml:418
 #, kde-format
@@ -289,9 +295,7 @@ msgstr ""
 "prenosného počítača je otočená alebo odpojená."
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always enabled"
+#, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always active"
 msgstr "Vždy povolené"
@@ -324,6 +328,8 @@ msgid ""
 "For local files on the same device, whether dragging and dropping will "
 "perform a move operation instead of showing the options menu"
 msgstr ""
+"Pre miestne súbory v tom istom zariadení, či sa pri ťahaní a púšťaní vykoná "
+"operácia presunutia namiesto zobrazenia ponuky možností"
 
 #. i18n: ectx: label, entry (smoothScroll), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21
@@ -361,7 +367,7 @@ msgstr "Povoliť vkladanie výberu stredným tlačidlom"
 #: workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display large panel and widget tooltips"
-msgstr ""
+msgstr "Zobrazenie veľkých panelov a panelov widgetov"
 
 #. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:10
@@ -369,24 +375,24 @@ msgstr ""
 msgid ""
 "Allow Plasma widgets to display large panel and widget tooltips on hover"
 msgstr ""
+"Umožniť widgetom Plasma zobrazovať veľké panely a tooltipy widgetov pri "
+"nabehnutí na ne"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
-#, fuzzy, kde-format
-#| msgid "Display visual feedback for status changes"
+#, kde-format
 msgid "Display small popups for status changes"
-msgstr "Zobraziť vizuálnu odozvu pre zmeny stavu"
+msgstr "Zobraziť malé vyskakovacie okná pre zmeny stavu"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show an on-screen display to indicate status changes such as brightness "
-#| "or volume"
+#, kde-format
 msgid ""
 "Allow Plasma widgets to display small popups for status changes such as "
 "brightness or volume"
-msgstr "Zobraziť OSD pre indikáciu zmeny stavu ako jas a hlasitosť."
+msgstr ""
+"Umožniť widgetom Plasma zobrazovať malé vyskakovacie okná pre zmeny stavu, "
+"ako je jas alebo hlasitosť"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21
