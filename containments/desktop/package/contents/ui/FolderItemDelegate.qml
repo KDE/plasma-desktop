@@ -27,6 +27,7 @@ Item {
     property bool blank:         model.blank
     property bool selected:      model.blank ? false : model.selected
     property bool isDir:           loader.item ? loader.item.isDir : false
+    property bool isOnRootView: false
     property QtObject popupDialog: loader.item ? loader.item.popupDialog    : null
     property Item iconArea:        loader.item ? loader.item.iconArea       : null
     property Item label:           loader.item ? loader.item.label          : null
@@ -345,7 +346,7 @@ Item {
                     ]
 
                     color: {
-                        if (Plasmoid.isContainment) {
+                        if (main.isOnRootView) {
                             // In this situation there's a shadow or a background rect, both of which are always black
                             return "white";
                         }
@@ -358,7 +359,7 @@ Item {
 
                     }
                     visible: !renaming
-                    renderShadow: Plasmoid.isContainment && !renaming
+                    renderShadow: main.isOnRootView && !renaming
                     opacity: model.isHidden ? 0.6 : 1
 
                     text: main.nameWrapped
