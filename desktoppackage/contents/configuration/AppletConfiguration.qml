@@ -52,7 +52,7 @@ Rectangle {
         const config = Plasmoid.configuration; // type: KConfigPropertyMap
 
         // call applet's own config handling first so it can set cfg_ properties if needed
-        if (app.pageStack.currentItem.hasOwnProperty("saveConfig")) {
+        if (app.pageStack.currentItem.saveConfig) {
             app.pageStack.currentItem.saveConfig()
         }
 
