@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-13 00:44+0000\n"
+"POT-Creation-Date: 2025-06-25 00:44+0000\n"
 "PO-Revision-Date: 2025-04-22 11:03+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -143,14 +143,16 @@ msgstr "Invertér systemfarverne når klokken bipper"
 
 #. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
 #: kcmaccessibilitybell.kcfg:28
-#, kde-format
-msgid "Color of the Visible Bell"
+#, fuzzy, kde-format
+#| msgid "Color of the Visible Bell"
+msgid "Color of the Visual Bell"
 msgstr "Farve på synlig klokke"
 
 #. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
 #: kcmaccessibilitybell.kcfg:32
-#, kde-format
-msgid "Duration of the Visible Bell"
+#, fuzzy, kde-format
+#| msgid "Duration of the Visible Bell"
+msgid "Duration of the Visual Bell"
 msgstr "Varighed af synlig klokke"
 
 #. i18n: ectx: label, entry (ColorblindnessCorrection), group (Plugins)

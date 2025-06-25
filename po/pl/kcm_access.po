@@ -1,4 +1,4 @@
-# Version: $Revision: 1711073 $
+# Version: $Revision: 1712013 $
 # translation of kcmaccess.po to
 # SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2019, 2021, 2022, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-13 00:44+0000\n"
+"POT-Creation-Date: 2025-06-25 00:44+0000\n"
 "PO-Revision-Date: 2024-12-07 12:16+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -143,14 +143,16 @@ msgstr "Odwróć barwy systemowe na dzwonku"
 
 #. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
 #: kcmaccessibilitybell.kcfg:28
-#, kde-format
-msgid "Color of the Visible Bell"
+#, fuzzy, kde-format
+#| msgid "Color of the Visible Bell"
+msgid "Color of the Visual Bell"
 msgstr "Barwa widzialnego dzwonka"
 
 #. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
 #: kcmaccessibilitybell.kcfg:32
-#, kde-format
-msgid "Duration of the Visible Bell"
+#, fuzzy, kde-format
+#| msgid "Duration of the Visible Bell"
+msgid "Duration of the Visual Bell"
 msgstr "Czas trwania widzialnego dzwonka"
 
 #. i18n: ectx: label, entry (ColorblindnessCorrection), group (Plugins)

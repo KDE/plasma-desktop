@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-13 00:44+0000\n"
+"POT-Creation-Date: 2025-06-25 00:44+0000\n"
 "PO-Revision-Date: 2025-06-14 17:14+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -149,14 +149,16 @@ msgstr "اعكس ألوان النظام على الجرس"
 
 #. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
 #: kcmaccessibilitybell.kcfg:28
-#, kde-format
-msgid "Color of the Visible Bell"
+#, fuzzy, kde-format
+#| msgid "Color of the Visible Bell"
+msgid "Color of the Visual Bell"
 msgstr "لون الجرس المرئي"
 
 #. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
 #: kcmaccessibilitybell.kcfg:32
-#, kde-format
-msgid "Duration of the Visible Bell"
+#, fuzzy, kde-format
+#| msgid "Duration of the Visible Bell"
+msgid "Duration of the Visual Bell"
 msgstr "مدة الجرس المرئي"
 
 #. i18n: ectx: label, entry (ColorblindnessCorrection), group (Plugins)

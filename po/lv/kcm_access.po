@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-13 00:44+0000\n"
+"POT-Creation-Date: 2025-06-25 00:44+0000\n"
 "PO-Revision-Date: 2025-06-19 19:16+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -144,14 +144,16 @@ msgstr "Zvana brīdī invertēt sistēmas krāsas"
 
 #. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
 #: kcmaccessibilitybell.kcfg:28
-#, kde-format
-msgid "Color of the Visible Bell"
+#, fuzzy, kde-format
+#| msgid "Color of the Visible Bell"
+msgid "Color of the Visual Bell"
 msgstr "Vizuāla zvana krāsa"
 
 #. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
 #: kcmaccessibilitybell.kcfg:32
-#, kde-format
-msgid "Duration of the Visible Bell"
+#, fuzzy, kde-format
+#| msgid "Duration of the Visible Bell"
+msgid "Duration of the Visual Bell"
 msgstr "Vizuāla zvana ilgums"
 
 #. i18n: ectx: label, entry (ColorblindnessCorrection), group (Plugins)

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-13 00:44+0000\n"
+"POT-Creation-Date: 2025-06-25 00:44+0000\n"
 "PO-Revision-Date: 2024-06-08 17:04+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -140,14 +140,16 @@ msgstr "Inversează culorile sistemului la clopoțel"
 
 #. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
 #: kcmaccessibilitybell.kcfg:28
-#, kde-format
-msgid "Color of the Visible Bell"
+#, fuzzy, kde-format
+#| msgid "Color of the Visible Bell"
+msgid "Color of the Visual Bell"
 msgstr "Culoarea clopoțelului vizibil"
 
 #. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
 #: kcmaccessibilitybell.kcfg:32
-#, kde-format
-msgid "Duration of the Visible Bell"
+#, fuzzy, kde-format
+#| msgid "Duration of the Visible Bell"
+msgid "Duration of the Visual Bell"
 msgstr "Durata clopoțelului vizibil"
 
 #. i18n: ectx: label, entry (ColorblindnessCorrection), group (Plugins)

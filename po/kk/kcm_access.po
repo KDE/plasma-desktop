@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-13 00:44+0000\n"
+"POT-Creation-Date: 2025-06-25 00:44+0000\n"
 "PO-Revision-Date: 2008-05-12 11:33+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh\n"
@@ -144,14 +144,15 @@ msgstr ""
 #: kcmaccessibilitybell.kcfg:28
 #, fuzzy, kde-format
 #| msgid "Use &system bell"
-msgid "Color of the Visible Bell"
+msgid "Color of the Visual Bell"
 msgstr "&Жүйелік қоңырауы қолданылсын"
 
 #. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
 #: kcmaccessibilitybell.kcfg:32
-#, kde-format
-msgid "Duration of the Visible Bell"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Use &system bell"
+msgid "Duration of the Visual Bell"
+msgstr "&Жүйелік қоңырауы қолданылсын"
 
 #. i18n: ectx: label, entry (ColorblindnessCorrection), group (Plugins)
 #: kcmaccessibilitycolorblindnesscorrection.kcfg:13
