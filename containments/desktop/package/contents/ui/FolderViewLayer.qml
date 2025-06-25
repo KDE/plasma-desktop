@@ -206,7 +206,7 @@ FocusScope {
         anchors.bottom: parent.bottom
 
         focus: true
-        isRootView: true
+        isRootView: isContainment
         positionerApplet: Plasmoid
 
         url: Plasmoid.configuration.url
