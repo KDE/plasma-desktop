@@ -44,7 +44,14 @@ PC3.ToolButton {
         }
     }
 
-    Keys.onSpacePressed: repeater.model.trigger(index, "", null);
+    function activate() : void {
+        repeater.model.trigger(index, "", null);
+        kicker.expanded = false;
+    }
+
+    Keys.onSpacePressed: activate()
+    Keys.onReturnPressed: activate()
+    Keys.onEnterPressed: activate()
 
     function openActionMenu(visualParent, x, y) {
         aboutToShowActionMenu(actionMenu);
