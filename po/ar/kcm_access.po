@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-25 00:44+0000\n"
-"PO-Revision-Date: 2025-06-14 17:14+0400\n"
+"PO-Revision-Date: 2025-06-26 10:28+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -149,15 +149,13 @@ msgstr "اعكس ألوان النظام على الجرس"
 
 #. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
 #: kcmaccessibilitybell.kcfg:28
-#, fuzzy, kde-format
-#| msgid "Color of the Visible Bell"
+#, kde-format
 msgid "Color of the Visual Bell"
 msgstr "لون الجرس المرئي"
 
 #. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
 #: kcmaccessibilitybell.kcfg:32
-#, fuzzy, kde-format
-#| msgid "Duration of the Visible Bell"
+#, kde-format
 msgid "Duration of the Visual Bell"
 msgstr "مدة الجرس المرئي"
 
@@ -169,10 +167,9 @@ msgstr "ما إذا كان تصحيح عمى الألوان ممكّنًا أم 
 
 #. i18n: ectx: label, entry (Invert), group (Plugins)
 #: kcmaccessibilityinvert.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Invert effect is enabled"
-msgstr "ما إذا مُكّن اهتزاز المؤشر"
+msgstr "ما إذا كان تأثير العكس ممكنًا"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
@@ -314,17 +311,15 @@ msgstr "التكبير"
 
 #. i18n: ectx: label, entry (Zoom), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Zoom effect is enabled"
-msgstr "ما إذا مُكّن اهتزاز المؤشر"
+msgstr "ما إذا كان تأثير التكبير ممكنًا"
 
 #. i18n: ectx: label, entry (Magnifier), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Magnifier effect is enabled"
-msgstr "ما إذا مُكّن اهتزاز المؤشر"
+msgstr "ما إذا كان تأثير عدسة التكبيرة ممكنًا"
 
 #: ui/ActivationShortcuts.qml:18
 #, kde-format
@@ -595,7 +590,7 @@ msgstr "مكّن"
 #, kde-format
 msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
-msgstr ""
+msgstr "استخدم الاختصارات لتبديل عكس ألوان العرض والنافذة"
 
 #: ui/Invert.qml:49 ui/ZoomMagnifier.qml:319
 #, kde-format
@@ -693,7 +688,7 @@ msgstr "قرع جرس النظام عند الرفض"
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Zoom & Magnifier"
-msgstr ""
+msgstr "التقريب والتكبير"
 
 #: ui/main.qml:33
 #, kde-format
@@ -1022,7 +1017,7 @@ msgstr "مكّن تتبع التركيز"
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable text caret tracking"
-msgstr ""
+msgstr "مكّن تتبع علامة الإقحام النصية"
 
 #: ui/ZoomMagnifier.qml:132
 #, kde-format
@@ -1034,14 +1029,13 @@ msgstr "المفاتيح المغيِّرة لإيماءة التمرير:"
 #, kde-format
 msgctxt "@info:tooltip, indicates feature unavailable on X11"
 msgid "Zoom scroll gestures are only available on Wayland."
-msgstr ""
+msgstr "إيماءات تمرير التكبير/التصغير متاحة فقط على وايلاند."
 
 #: ui/ZoomMagnifier.qml:176
-#, fuzzy, kde-format
-#| msgid "Ring system bell when modifier keys are used"
+#, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
-msgstr "اقرع جرس النظام عند استخدام المفاتيح المغيِّرة"
+msgstr "مرر أثناء الضغط على مفاتيح التعديل للتكبير"
 
 #: ui/ZoomMagnifier.qml:188
 #, kde-format
