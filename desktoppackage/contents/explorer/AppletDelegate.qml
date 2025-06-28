@@ -26,7 +26,7 @@ Item {
     height: list.cellHeight
 
     Accessible.name: i18nc("@action:button accessible only, %1 is widget name", "Add %1", model.name)  + (model.isSupported ? "" : unsupportedTooltip.mainText)
-    Accessible.description: (model.isSupported ? "" : model.unsupportedMessage) + model.description + (overlayedBadge.visible ? countLabel.Accessible.name : "")
+    Accessible.description: (model.isSupported ? "" : model.unsupportedMessage) + model.description + (overlayedBadge.visible ? overlayedBadge.Accessible.name : "")
     Accessible.role: Accessible.Button
 
     HoverHandler {
@@ -185,28 +185,19 @@ Item {
                 }
             }
 
-            Rectangle {
+            Kirigami.Badge {
                 id: overlayedBadge
-                width: countLabel.width + height
-                height: Math.round(Kirigami.Units.iconSizes.sizeForLabels * 1.3)
-                radius: height
-                color: (running && delegate.GridView.isCurrentItem) ? Kirigami.Theme.highlightColor : Kirigami.Theme.positiveTextColor
+
                 visible: ((running && delegate.GridView.isCurrentItem) || model.recent) ?? false
                 onVisibleChanged: maskShaderSource.scheduleUpdate()
 
-                PlasmaComponents.Label {
-                    id: countLabel
-                    height: parent.height
-                    verticalAlignment: Text.AlignVCenter
-                    anchors.centerIn: parent
-                    text: (running && delegate.GridView.isCurrentItem) ? running : i18ndc("plasma_shell_org.kde.plasma.desktop", "Text displayed on top of newly installed widgets", "New!")
-                    Accessible.name: running
-                        ? i18ncp("@info:other accessible for badge showing applet count", "%1 widget active", "%1 widgets active", running)
-                        : i18nc(" @info:other accessible for badge indicating new widget", "Recently installed")
-                    textFormat: Text.PlainText
-                }
-            }
+                backgroundColor: (running && delegate.GridView.isCurrentItem) ? Kirigami.Theme.activeBackgroundColor : Kirigami.Theme.positiveBackgroundColor
 
+                text: (running && delegate.GridView.isCurrentItem) ? running : i18ndc("plasma_shell_org.kde.plasma.desktop", "Text displayed on top of newly installed widgets", "New!")
+                Accessible.name: running
+                    ? i18ncp("@info:other accessible for badge showing applet count", "%1 widget active", "%1 widgets active", running)
+                    : i18nc(" @info:other accessible for badge indicating new widget", "Recently installed")
+            }
 
             PlasmaComponents.ToolButton {
                 id: uninstallButton

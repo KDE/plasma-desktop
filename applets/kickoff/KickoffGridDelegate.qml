@@ -56,7 +56,9 @@ AbstractKickoffItemDelegate {
                 visible: active
                 active: root.model?.isNewlyInstalled ?? false
 
-                sourceComponent: Badge {
+                sourceComponent: Kirigami.Badge {
+                    backgroundColor: Kirigami.Theme.positiveTextColor
+
                     text: i18nc("Newly installed app, badge, keep short", "New!")
                     Accessible.name: i18n("Newly installed application")
                 }

@@ -105,12 +105,7 @@ AbstractKickoffItemDelegate {
             visible: active
             active: root.model?.isNewlyInstalled ?? false
 
-            sourceComponent: Badge {
-                text: root.isCategoryListItem ? "" : Accessible.name
-                Accessible.name: i18nc("Newly installed app, badge, keep short", "New!")
-                Accessible.description: root.isCategoryListItem ? i18n("There is a newly installed application in this category")
-                                                         : i18n("Newly installed application")
-            }
+            sourceComponent: root.isCategoryListItem ? dotComponent : newBadgeComponent
         }
     }
 
@@ -130,6 +125,33 @@ AbstractKickoffItemDelegate {
 
             svg: KickoffSingleton.lineSvg
             elementId: "horizontal-line"
+        }
+    }
+
+    Component {
+        id: newBadgeComponent
+        Kirigami.Badge {
+            backgroundColor: Kirigami.Theme.positiveBackgroundColor
+
+            text: i18nc("Newly installed app, badge, keep short", "New!")
+            Accessible.description: i18n("Newly installed application")
+
+        }
+    }
+
+    Component {
+        id: dotComponent
+        Rectangle {
+            readonly property int size: Kirigami.Units.largeSpacing
+
+            implicitWidth: size
+            implicitHeight: size
+            radius: height / 2
+
+            color: Kirigami.Theme.positiveTextColor
+
+            Accessible.name: i18nc("Newly installed app, badge, keep short", "New!")
+            Accessible.description: i18n("There is a newly installed application in this category")
         }
     }
 }

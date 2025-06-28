@@ -8,7 +8,6 @@ QML_SOURCES
     ActionMenu.qml
     ApplicationsPage.qml
     BasePage.qml
-    Badge.qml
     ConfigGeneral.qml
     DropAreaGridView.qml
     DropAreaListView.qml
