@@ -211,7 +211,16 @@ SimpleKCM {
         id: displayTab
 
         DisplayTab {
+            id: tab
+
             device: root.device
+
+            Connections {
+                target: kcm
+                function onSettingsRestored(): void {
+                    tab.settingsRestored();
+                }
+            }
         }
     }
 
