@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-26 00:43+0000\n"
+"POT-Creation-Date: 2025-06-29 00:44+0000\n"
 "PO-Revision-Date: 2024-12-29 19:47+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -101,19 +101,19 @@ msgctxt "model - (x,y widthxheight)"
 msgid "%1 - (%2,%3 %4×%5)"
 msgstr "%1 - (%2,%3 %4×%5)"
 
-#: kcmtablet.cpp:163 ui/DisplayTab.qml:91 ui/DisplayTab.qml:92
+#: kcmtablet.cpp:163 ui/DisplayTab.qml:97 ui/DisplayTab.qml:98
 #, kde-format
 msgctxt "@item:inlistbox Stretch and fill to the screen"
 msgid "Stretch and Fill"
 msgstr "Streĉi kaj Plenigi"
 
-#: kcmtablet.cpp:164 ui/DisplayTab.qml:93
+#: kcmtablet.cpp:164 ui/DisplayTab.qml:99
 #, kde-format
 msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
 msgid "Keep Aspect Ratio and Fit"
 msgstr "Teni Bildformaton kaj Ĝisrandigi"
 
-#: kcmtablet.cpp:165 ui/DisplayTab.qml:94
+#: kcmtablet.cpp:165 ui/DisplayTab.qml:100
 #, kde-format
 msgctxt "@item:inlistbox Map to portion of the screen"
 msgid "Map to Portion"
@@ -311,22 +311,22 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Nuligi"
 
-#: ui/DisplayTab.qml:41
+#: ui/DisplayTab.qml:46
 #, kde-format
 msgid "Map to screen:"
 msgstr "Mapi al ekrano:"
 
-#: ui/DisplayTab.qml:67
+#: ui/DisplayTab.qml:73
 #, kde-format
 msgid "Orientation:"
 msgstr "Orientiĝo:"
 
-#: ui/DisplayTab.qml:73
+#: ui/DisplayTab.qml:79
 #, kde-format
 msgid "Not Applicable"
 msgstr "Ne Aplikebla"
 
-#: ui/DisplayTab.qml:87
+#: ui/DisplayTab.qml:93
 #, kde-format
 msgid "Mapped Area:"
 msgstr "Mapita Areo:"
