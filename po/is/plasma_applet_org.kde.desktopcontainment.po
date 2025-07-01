@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-07-01 00:43+0000\n"
 "PO-Revision-Date: 2025-04-17 14:49+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -437,6 +437,13 @@ msgid ""
 msgstr ""
 "Það eru mjög margar skrár og möppur á skjáborðinu. Það getur valdið villum "
 "og hægri vinnslu. Þú mátt gjarnan færa þær eitthvert annað."
+
+#: package/contents/ui/FolderViewDialog.qml:87
+#, fuzzy, kde-format
+#| msgid "This folder is empty."
+msgctxt "@info:placeholder"
+msgid "Folder is empty"
+msgstr "Þessi mappa er tóm."
 
 #: package/contents/ui/main.qml:398
 #, kde-format
@@ -1007,9 +1014,6 @@ msgstr "Læst"
 #~ msgstr ""
 #~ "<html><head/><body><p><span style=\" font-weight:400;\">Titill:</span></"
 #~ "p></body></html>"
-
-#~ msgid "This folder is empty."
-#~ msgstr "Þessi mappa er tóm."
 
 #~ msgctxt "Music"
 #~ msgid "Artist:"

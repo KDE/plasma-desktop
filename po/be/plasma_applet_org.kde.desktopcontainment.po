@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-07-01 00:43+0000\n"
 "PO-Revision-Date: 2024-11-20 08:42\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -441,6 +441,14 @@ msgid ""
 msgstr ""
 "На працоўным стале шмат файлаў і каталогаў. Праз гэта могуць узнікаць "
 "памылкі і праблемы з прадукцыйнасцю. Перамясціце частку з іх у іншае месца."
+
+#: package/contents/ui/FolderViewDialog.qml:87
+#, fuzzy, kde-format
+#| msgctxt "@option:check sort icons with folders first"
+#| msgid "Folders first"
+msgctxt "@info:placeholder"
+msgid "Folder is empty"
+msgstr "Спачатку каталогі"
 
 #: package/contents/ui/main.qml:398
 #, kde-format

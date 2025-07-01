@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-07-01 00:43+0000\n"
 "PO-Revision-Date: 2025-02-08 17:57+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -433,6 +433,14 @@ msgid ""
 msgstr ""
 "Na pulpicie znajduje się wiele plików i katalogów. Może to powodować błędy i "
 "spowalniać pracę. Rozważ przeniesienie ich w inne miejsce."
+
+#: package/contents/ui/FolderViewDialog.qml:87
+#, fuzzy, kde-format
+#| msgctxt "@option:check sort icons with folders first"
+#| msgid "Folders first"
+msgctxt "@info:placeholder"
+msgid "Folder is empty"
+msgstr "Najpierw katalogi"
 
 #: package/contents/ui/main.qml:398
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-07-01 00:43+0000\n"
 "PO-Revision-Date: 2024-05-04 22:45+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -436,6 +436,14 @@ msgstr ""
 "デスクトップに大量のファイルとフォルダがあります。これはバグやパフォーマンス"
 "の問題を引き起こす可能性があります。いくつかのファイル/フォルダを他の場所に移"
 "動させることを検討してください。"
+
+#: package/contents/ui/FolderViewDialog.qml:87
+#, fuzzy, kde-format
+#| msgctxt "@option:check sort icons with folders first"
+#| msgid "Folders first"
+msgctxt "@info:placeholder"
+msgid "Folder is empty"
+msgstr "フォルダを先に"
 
 #: package/contents/ui/main.qml:398
 #, kde-format

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-07-01 00:43+0000\n"
 "PO-Revision-Date: 2025-05-28 16:58+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -427,6 +427,13 @@ msgid ""
 msgstr ""
 "Uz darbvirsmas ir daudz mapju un datņu. Tas var samazināt ierīces "
 "veiktspēju, tāpēc ir ieteicams tos pārvietot citur."
+
+#: package/contents/ui/FolderViewDialog.qml:87
+#, fuzzy, kde-format
+#| msgid "This folder is empty."
+msgctxt "@info:placeholder"
+msgid "Folder is empty"
+msgstr "Šī mape ir tukša."
 
 #: package/contents/ui/main.qml:398
 #, kde-format
@@ -1143,9 +1150,6 @@ msgstr "Slēgts"
 
 #~ msgid "Check the file types you want icon previews for:"
 #~ msgstr "Atzīmējiet failus, kuriem vēlaties ikonu priekšskatījumus:"
-
-#~ msgid "This folder is empty."
-#~ msgstr "Šī mape ir tukša."
 
 #~ msgctxt "Music"
 #~ msgid "Artist:"

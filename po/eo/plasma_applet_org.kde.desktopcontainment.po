@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-07-01 00:43+0000\n"
 "PO-Revision-Date: 2025-03-22 22:36+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: eo <kde-i18n-doc@kde.org>\n"
@@ -436,6 +436,14 @@ msgstr ""
 "Estas multaj dosieroj kaj dosierujoj sur la labortablo. Tio povas kaŭzi "
 "cimojn kaj rendimentajn problemojn. Bonvolu konsideri movi kelkajn el ili "
 "aliloken."
+
+#: package/contents/ui/FolderViewDialog.qml:87
+#, fuzzy, kde-format
+#| msgctxt "@option:check sort icons with folders first"
+#| msgid "Folders first"
+msgctxt "@info:placeholder"
+msgid "Folder is empty"
+msgstr "Dosierujoj unue"
 
 #: package/contents/ui/main.qml:398
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-07-01 00:43+0000\n"
 "PO-Revision-Date: 2025-03-25 07:27+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -436,6 +436,14 @@ msgid ""
 msgstr ""
 "Du har mange filer og mapper på skrivebordet. Dette kan føre til feil og "
 "dårlig ytelse. Vurder derfor å flytte noen av filene/mappene et annet sted."
+
+#: package/contents/ui/FolderViewDialog.qml:87
+#, fuzzy, kde-format
+#| msgctxt "@option:check sort icons with folders first"
+#| msgid "Folders first"
+msgctxt "@info:placeholder"
+msgid "Folder is empty"
+msgstr "Mapper først"
 
 #: package/contents/ui/main.qml:398
 #, kde-format

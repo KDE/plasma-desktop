@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase/plasma_applet_folderview.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-07-01 00:43+0000\n"
 "PO-Revision-Date: 2008-05-19 07:19-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -480,6 +480,13 @@ msgid ""
 "There are a lot of files and folders on the desktop. This can cause bugs and "
 "performance issues. Please consider moving some of them elsewhere."
 msgstr ""
+
+#: package/contents/ui/FolderViewDialog.qml:87
+#, fuzzy, kde-format
+#| msgid "This folder is empty."
+msgctxt "@info:placeholder"
+msgid "Folder is empty"
+msgstr "Tá an fillteán seo folamh."
 
 #: package/contents/ui/main.qml:398
 #, fuzzy, kde-format
@@ -1261,9 +1268,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Cuir tic leis na cineálacha comhaid a ndéanfar réamhamharc orthu i "
 #~ "ndeilbhíní:"
-
-#~ msgid "This folder is empty."
-#~ msgstr "Tá an fillteán seo folamh."
 
 #~ msgctxt "Music"
 #~ msgid "Artist:"

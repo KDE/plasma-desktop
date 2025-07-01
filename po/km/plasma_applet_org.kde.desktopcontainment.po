@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-07-01 00:43+0000\n"
 "PO-Revision-Date: 2012-06-11 14:32+0700\n"
 "Last-Translator: sutha <sutha@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros>\n"
@@ -481,6 +481,13 @@ msgid ""
 "There are a lot of files and folders on the desktop. This can cause bugs and "
 "performance issues. Please consider moving some of them elsewhere."
 msgstr ""
+
+#: package/contents/ui/FolderViewDialog.qml:87
+#, fuzzy, kde-format
+#| msgid "This folder is empty."
+msgctxt "@info:placeholder"
+msgid "Folder is empty"
+msgstr "ថត​នេះ​ទទេ ។"
 
 #: package/contents/ui/main.qml:398
 #, fuzzy, kde-format
@@ -1216,9 +1223,6 @@ msgstr ""
 
 #~ msgid "Check the file types you want icon previews for:"
 #~ msgstr "ពិនិត្យ​មើល​ប្រភេទ​ឯកសារ​ ដែល​អ្នក​ចង់​ឃើញ​ការ​មើល​រូបតំណាង​ជា​មុន​សម្រាប់ ៖"
-
-#~ msgid "This folder is empty."
-#~ msgstr "ថត​នេះ​ទទេ ។"
 
 #~ msgctxt "Music"
 #~ msgid "Artist:"

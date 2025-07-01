@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-07-01 00:43+0000\n"
 "PO-Revision-Date: 2011-07-12 17:59+0200\n"
 "Last-Translator: Marko Dimjašević <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -483,6 +483,13 @@ msgid ""
 "There are a lot of files and folders on the desktop. This can cause bugs and "
 "performance issues. Please consider moving some of them elsewhere."
 msgstr ""
+
+#: package/contents/ui/FolderViewDialog.qml:87
+#, fuzzy, kde-format
+#| msgid "This folder is empty."
+msgctxt "@info:placeholder"
+msgid "Folder is empty"
+msgstr "Ova mapa je prazna."
 
 #: package/contents/ui/main.qml:398
 #, fuzzy, kde-format
@@ -1017,9 +1024,6 @@ msgstr ""
 #~ msgstr[0] "%1 datoteka."
 #~ msgstr[1] "%1 datoteke."
 #~ msgstr[2] "%1 datoteka."
-
-#~ msgid "This folder is empty."
-#~ msgstr "Ova mapa je prazna."
 
 #~ msgid "Header"
 #~ msgstr "Zaglavlje"

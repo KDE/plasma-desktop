@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-07-01 00:43+0000\n"
 "PO-Revision-Date: 2025-05-25 17:50+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -428,6 +428,13 @@ msgstr ""
 "Mahaigainean fitxategi eta karpeta mordoa dago. Horrek akatsak eta "
 "errendimendu arazoak eragin litzake. Mesedez, hartu kontuan haietako batzuk "
 "beste nonbaitera mugitzea."
+
+#: package/contents/ui/FolderViewDialog.qml:87
+#, fuzzy, kde-format
+#| msgid "This folder is empty."
+msgctxt "@info:placeholder"
+msgid "Folder is empty"
+msgstr "Karpeta hau hutsik dago."
 
 #: package/contents/ui/main.qml:398
 #, kde-format
@@ -1202,9 +1209,6 @@ msgstr "Giltzatuta"
 
 #~ msgid "Check the file types you want icon previews for:"
 #~ msgstr "Markatu ikonoaren aurrebistak erakustea nahi duzun fitxategi motak:"
-
-#~ msgid "This folder is empty."
-#~ msgstr "Karpeta hau hutsik dago."
 
 #~ msgctxt "Music"
 #~ msgid "Artist:"

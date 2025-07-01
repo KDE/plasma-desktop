@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-07-01 00:43+0000\n"
 "PO-Revision-Date: 2024-06-08 17:06+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -437,6 +437,13 @@ msgstr ""
 "Sunt multe fișiere și dosare pe birou. Aceasta poate provoca defecțiuni și "
 "probleme de performanță. Încercați să mutați unele dintre acestea în altă "
 "parte."
+
+#: package/contents/ui/FolderViewDialog.qml:87
+#, fuzzy, kde-format
+#| msgid "This folder is empty."
+msgctxt "@info:placeholder"
+msgid "Folder is empty"
+msgstr "Acest dosar este gol."
 
 #: package/contents/ui/main.qml:398
 #, kde-format
@@ -1191,9 +1198,6 @@ msgstr "Blocat"
 
 #~ msgid "Check the file types you want icon previews for:"
 #~ msgstr "Bifați tipurile de fișier pentru care doriți previzualizări:"
-
-#~ msgid "This folder is empty."
-#~ msgstr "Acest dosar este gol."
 
 #~ msgctxt "Music"
 #~ msgid "Artist:"
