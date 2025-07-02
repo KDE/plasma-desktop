@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-25 00:44+0000\n"
-"PO-Revision-Date: 2025-06-15 18:08+0900\n"
+"PO-Revision-Date: 2025-07-01 19:28+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -132,7 +132,7 @@ msgstr "響鈴用的音效檔"
 #: kcmaccessibilitybell.kcfg:20
 #, kde-format
 msgid "Use a visual bell instead of a sound"
-msgstr "使用可視化響鈴而非音效響鈴"
+msgstr "使用視覺響鈴而非音效響鈴"
 
 #. i18n: ectx: label, entry (InvertScreen), group (Bell)
 #: kcmaccessibilitybell.kcfg:24
@@ -142,17 +142,15 @@ msgstr "觸發響鈴時反轉系統色彩"
 
 #. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
 #: kcmaccessibilitybell.kcfg:28
-#, fuzzy, kde-format
-#| msgid "Color of the Visible Bell"
+#, kde-format
 msgid "Color of the Visual Bell"
-msgstr "可視化響鈴的色彩"
+msgstr "視覺響鈴的色彩"
 
 #. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
 #: kcmaccessibilitybell.kcfg:32
-#, fuzzy, kde-format
-#| msgid "Duration of the Visible Bell"
+#, kde-format
 msgid "Duration of the Visual Bell"
-msgstr "可視化響鈴的持續時間"
+msgstr "視覺響鈴的持續時間"
 
 #. i18n: ectx: label, entry (ColorblindnessCorrection), group (Plugins)
 #: kcmaccessibilitycolorblindnesscorrection.kcfg:13
@@ -425,7 +423,7 @@ msgstr "按鈕搜尋音效檔"
 #: ui/Bell.qml:92
 #, kde-format
 msgid "Visual bell:"
-msgstr "可視化響鈴："
+msgstr "視覺響鈴："
 
 #: ui/Bell.qml:93
 #, kde-format
