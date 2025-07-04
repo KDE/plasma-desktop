@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-01 00:43+0000\n"
-"PO-Revision-Date: 2025-05-31 12:45+0200\n"
+"PO-Revision-Date: 2025-07-03 15:53+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -423,12 +423,10 @@ msgstr ""
 "prestandaproblem. Överväg att flytta några av dem till en annan plats."
 
 #: package/contents/ui/FolderViewDialog.qml:87
-#, fuzzy, kde-format
-#| msgctxt "@option:check sort icons with folders first"
-#| msgid "Folders first"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Folder is empty"
-msgstr "Kataloger först"
+msgstr "Katalogen är tom"
 
 #: package/contents/ui/main.qml:398
 #, kde-format
