@@ -68,5 +68,5 @@ RuntimeDependencies:
 
 Options:
  ctest-arguments: '--repeat until-pass:5'
- require-passing-tests-on: ['Linux/Qt6', 'FreeBSD/Qt6']
+ require-passing-tests-on: ['@all']
  xml-validate-ignore: ['kcms/keyboard/tests/config/base.bad.xml']
