@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-10 00:44+0000\n"
+"POT-Creation-Date: 2025-07-05 00:44+0000\n"
 "PO-Revision-Date: 2023-07-14 16:39+0200\n"
 "Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
 "Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
@@ -19,174 +19,174 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: package/contents/config/config.qml:13
-#, kde-format
-msgid "General"
-msgstr "Všeobecné"
-
-#: package/contents/ui/code/tools.js:43
+#: code/tools.js:43
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "Odstrániť z obľúbených"
 
-#: package/contents/ui/code/tools.js:47
+#: code/tools.js:47
 #, kde-format
 msgid "Add to Favorites"
 msgstr "Pridať do obľúbených"
 
-#: package/contents/ui/code/tools.js:73
+#: code/tools.js:73
 #, kde-format
 msgid "On All Activities"
 msgstr "Na všetkých aktivitách"
 
-#: package/contents/ui/code/tools.js:123
+#: code/tools.js:123
 #, kde-format
 msgid "On the Current Activity"
 msgstr "Na aktuálnej aktivite"
 
-#: package/contents/ui/code/tools.js:137
+#: code/tools.js:137
 #, kde-format
 msgid "Show in Favorites"
 msgstr "Zobraziť v obľúbených"
 
-#: package/contents/ui/ConfigGeneral.qml:46
+#: config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Všeobecné"
+
+#: ConfigGeneral.qml:46
 #, kde-format
 msgid "Icon:"
 msgstr "Ikona:"
 
-#: package/contents/ui/ConfigGeneral.qml:131
+#: ConfigGeneral.qml:131
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Vybrať..."
 
-#: package/contents/ui/ConfigGeneral.qml:136
+#: ConfigGeneral.qml:136
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "Vymazať ikonu"
 
-#: package/contents/ui/ConfigGeneral.qml:155
+#: ConfigGeneral.qml:155
 #, kde-format
 msgid "Show applications as:"
 msgstr "Zobraziť aplikáciu ako:"
 
-#: package/contents/ui/ConfigGeneral.qml:157
+#: ConfigGeneral.qml:157
 #, kde-format
 msgid "Name only"
 msgstr "Iba názov"
 
-#: package/contents/ui/ConfigGeneral.qml:157
+#: ConfigGeneral.qml:157
 #, kde-format
 msgid "Description only"
 msgstr "Len popis"
 
-#: package/contents/ui/ConfigGeneral.qml:157
+#: ConfigGeneral.qml:157
 #, kde-format
 msgid "Name (Description)"
 msgstr "Názov (popis)"
 
-#: package/contents/ui/ConfigGeneral.qml:157
+#: ConfigGeneral.qml:157
 #, kde-format
 msgid "Description (Name)"
 msgstr "Popis (názov)"
 
-#: package/contents/ui/ConfigGeneral.qml:167
+#: ConfigGeneral.qml:167
 #, kde-format
 msgid "Behavior:"
 msgstr "Správanie:"
 
-#: package/contents/ui/ConfigGeneral.qml:169
+#: ConfigGeneral.qml:169
 #, kde-format
 msgid "Sort applications alphabetically"
 msgstr "Zoradiť podľa abecedy"
 
-#: package/contents/ui/ConfigGeneral.qml:177
+#: ConfigGeneral.qml:177
 #, kde-format
 msgid "Flatten sub-menus to a single level"
 msgstr "Sploštiť ponuku na jednoduchú úroveň"
 
-#: package/contents/ui/ConfigGeneral.qml:185
+#: ConfigGeneral.qml:185
 #, kde-format
 msgid "Show icons on the root level of the menu"
 msgstr "Zobraziť ikony na koreňovej úrovni ponuky"
 
-#: package/contents/ui/ConfigGeneral.qml:195
+#: ConfigGeneral.qml:195
 #, kde-format
 msgid "Show categories:"
 msgstr "Zobraziť kategórie:"
 
-#: package/contents/ui/ConfigGeneral.qml:198
+#: ConfigGeneral.qml:198
 #, kde-format
 msgid "Recent applications"
 msgstr "Nedávne aplikácie"
 
-#: package/contents/ui/ConfigGeneral.qml:199
+#: ConfigGeneral.qml:199
 #, kde-format
 msgid "Often used applications"
 msgstr "Často používané aplikácie"
 
-#: package/contents/ui/ConfigGeneral.qml:206
+#: ConfigGeneral.qml:206
 #, kde-format
 msgid "Recent files"
 msgstr "Nedávne súbory"
 
-#: package/contents/ui/ConfigGeneral.qml:207
+#: ConfigGeneral.qml:207
 #, kde-format
 msgid "Often used files"
 msgstr "Často používané súbory"
 
-#: package/contents/ui/ConfigGeneral.qml:213
+#: ConfigGeneral.qml:213
 #, kde-format
 msgid "Sort items in categories by:"
 msgstr "Zoradiť položky v kategóriách podľa:"
 
-#: package/contents/ui/ConfigGeneral.qml:214
+#: ConfigGeneral.qml:214
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "Nedávno použité"
 
-#: package/contents/ui/ConfigGeneral.qml:214
+#: ConfigGeneral.qml:214
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
 msgid "Often used"
 msgstr "Často používané"
 
-#: package/contents/ui/ConfigGeneral.qml:224
+#: ConfigGeneral.qml:224
 #, kde-format
 msgid "Search:"
 msgstr "Hľadať:"
 
-#: package/contents/ui/ConfigGeneral.qml:226
+#: ConfigGeneral.qml:226
 #, kde-format
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Rozbaliť hľadanie na záložky, súbory a e-maily"
 
-#: package/contents/ui/ConfigGeneral.qml:234
+#: ConfigGeneral.qml:234
 #, kde-format
 msgid "Align search results to bottom"
 msgstr "Zarovnať výsledky hľadania na spodok"
 
-#: package/contents/ui/DashboardRepresentation.qml:227
+#: DashboardRepresentation.qml:227
 #, kde-format
 msgid "Searching for '%1'"
 msgstr "Vyhľadáva sa \"%1\""
 
-#: package/contents/ui/DashboardRepresentation.qml:227
+#: DashboardRepresentation.qml:227
 #, kde-format
 msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
 msgid "Type to search…"
 msgstr "Písať na hľadanie...."
 
-#: package/contents/ui/DashboardRepresentation.qml:323
+#: DashboardRepresentation.qml:323
 #, kde-format
 msgid "Favorites"
 msgstr "Obľúbené"
 
-#: package/contents/ui/main.qml:235
+#: main.qml:235
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Upraviť aplikácie..."

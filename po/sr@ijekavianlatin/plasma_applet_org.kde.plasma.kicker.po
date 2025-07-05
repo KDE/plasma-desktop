@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-10 00:44+0000\n"
+"POT-Creation-Date: 2025-07-05 00:44+0000\n"
 "PO-Revision-Date: 2017-09-25 19:53+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,44 +18,44 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: package/contents/config/config.qml:13
-#, kde-format
-msgid "General"
-msgstr "Opšte"
-
-#: package/contents/ui/code/tools.js:43
+#: code/tools.js:43
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "Ukloni iz omiljenih"
 
-#: package/contents/ui/code/tools.js:47
+#: code/tools.js:47
 #, kde-format
 msgid "Add to Favorites"
 msgstr "Dodaj u omiljene"
 
-#: package/contents/ui/code/tools.js:73
+#: code/tools.js:73
 #, kde-format
 msgid "On All Activities"
 msgstr "Na svim aktivnostima"
 
-#: package/contents/ui/code/tools.js:123
+#: code/tools.js:123
 #, fuzzy, kde-format
 #| msgid "On The Current Activity"
 msgid "On the Current Activity"
 msgstr "Na tekućoj aktivnosti"
 
-#: package/contents/ui/code/tools.js:137
+#: code/tools.js:137
 #, fuzzy, kde-format
 #| msgid "Show In Favorites"
 msgid "Show in Favorites"
 msgstr "Prikaži u omiljenima"
 
-#: package/contents/ui/ConfigGeneral.qml:46
+#: config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Opšte"
+
+#: ConfigGeneral.qml:46
 #, kde-format
 msgid "Icon:"
 msgstr "Ikonica:"
 
-#: package/contents/ui/ConfigGeneral.qml:131
+#: ConfigGeneral.qml:131
 #, fuzzy, kde-format
 #| msgctxt "@item:inmenu Open icon chooser dialog"
 #| msgid "Choose..."
@@ -63,80 +63,80 @@ msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Izaberi..."
 
-#: package/contents/ui/ConfigGeneral.qml:136
+#: ConfigGeneral.qml:136
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "Očisti ikonicu"
 
-#: package/contents/ui/ConfigGeneral.qml:155
+#: ConfigGeneral.qml:155
 #, kde-format
 msgid "Show applications as:"
 msgstr "Prikazuj programe kao:"
 
 # >> @item:inlistbox
-#: package/contents/ui/ConfigGeneral.qml:157
+#: ConfigGeneral.qml:157
 #, kde-format
 msgid "Name only"
 msgstr "samo ime"
 
 # >> @item:inlistbox
-#: package/contents/ui/ConfigGeneral.qml:157
+#: ConfigGeneral.qml:157
 #, kde-format
 msgid "Description only"
 msgstr "samo opis"
 
 # >> @item:inlistbox
-#: package/contents/ui/ConfigGeneral.qml:157
+#: ConfigGeneral.qml:157
 #, kde-format
 msgid "Name (Description)"
 msgstr "ime (opis)"
 
 # >> @item:inlistbox
-#: package/contents/ui/ConfigGeneral.qml:157
+#: ConfigGeneral.qml:157
 #, kde-format
 msgid "Description (Name)"
 msgstr "opis (ime)"
 
 # >> @title:group
-#: package/contents/ui/ConfigGeneral.qml:167
+#: ConfigGeneral.qml:167
 #, fuzzy, kde-format
 #| msgid "Behavior"
 msgid "Behavior:"
 msgstr "Ponašanje"
 
-#: package/contents/ui/ConfigGeneral.qml:169
+#: ConfigGeneral.qml:169
 #, fuzzy, kde-format
 #| msgid "Sort alphabetically"
 msgid "Sort applications alphabetically"
 msgstr "Poređaj abecedno"
 
 # >> @option:check
-#: package/contents/ui/ConfigGeneral.qml:177
+#: ConfigGeneral.qml:177
 #, fuzzy, kde-format
 #| msgid "Flatten menu to a single level"
 msgid "Flatten sub-menus to a single level"
 msgstr "Meni spljošten na jedan nivo"
 
-#: package/contents/ui/ConfigGeneral.qml:185
+#: ConfigGeneral.qml:185
 #, kde-format
 msgid "Show icons on the root level of the menu"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:195
+#: ConfigGeneral.qml:195
 #, fuzzy, kde-format
 #| msgid "Categories"
 msgid "Show categories:"
 msgstr "Kategorije"
 
-#: package/contents/ui/ConfigGeneral.qml:198
+#: ConfigGeneral.qml:198
 #, fuzzy, kde-format
 #| msgid "Recent Applications"
 msgid "Recent applications"
 msgstr ""
 "Nedavni programi|/|$[svojstva gen 'nedavnih programa' aku 'nedavne programe']"
 
-#: package/contents/ui/ConfigGeneral.qml:199
+#: ConfigGeneral.qml:199
 #, fuzzy, kde-format
 #| msgid "Often Used Applications"
 msgid "Often used applications"
@@ -144,7 +144,7 @@ msgstr ""
 "Često korišćeni programi|/|$[svojstva gen 'često korišćenih programa' aku "
 "'često korišćene programe']"
 
-#: package/contents/ui/ConfigGeneral.qml:206
+#: ConfigGeneral.qml:206
 #, fuzzy, kde-format
 #| msgid "Recent Documents"
 msgid "Recent files"
@@ -152,18 +152,18 @@ msgstr ""
 "Nedavni dokumenti|/|$[svojstva gen 'nedavnih dokumenata' aku 'nedavne "
 "dokumente']"
 
-#: package/contents/ui/ConfigGeneral.qml:207
+#: ConfigGeneral.qml:207
 #, fuzzy, kde-format
 #| msgid "Often used"
 msgid "Often used files"
 msgstr "Često korišćeno"
 
-#: package/contents/ui/ConfigGeneral.qml:213
+#: ConfigGeneral.qml:213
 #, kde-format
 msgid "Sort items in categories by:"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:214
+#: ConfigGeneral.qml:214
 #, fuzzy, kde-format
 #| msgid "Recently used"
 msgctxt ""
@@ -171,7 +171,7 @@ msgctxt ""
 msgid "Recently used"
 msgstr "Nedavno korišćeno"
 
-#: package/contents/ui/ConfigGeneral.qml:214
+#: ConfigGeneral.qml:214
 #, fuzzy, kde-format
 #| msgid "Often used"
 msgctxt ""
@@ -180,43 +180,43 @@ msgid "Often used"
 msgstr "Često korišćeno"
 
 # >> @title:group
-#: package/contents/ui/ConfigGeneral.qml:224
+#: ConfigGeneral.qml:224
 #, fuzzy, kde-format
 #| msgid "Search"
 msgid "Search:"
 msgstr "Pretraga"
 
 # >> @option:check
-#: package/contents/ui/ConfigGeneral.qml:226
+#: ConfigGeneral.qml:226
 #, kde-format
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Pretražuj i obeleživače, fajlove i e‑poštu"
 
 # >> @option:check
-#: package/contents/ui/ConfigGeneral.qml:234
+#: ConfigGeneral.qml:234
 #, kde-format
 msgid "Align search results to bottom"
 msgstr "Ravnaj rezultate pretrage uz dno"
 
 # >> @info:progress
-#: package/contents/ui/DashboardRepresentation.qml:227
+#: DashboardRepresentation.qml:227
 #, kde-format
 msgid "Searching for '%1'"
 msgstr "Tražim „%1“..."
 
-#: package/contents/ui/DashboardRepresentation.qml:227
+#: DashboardRepresentation.qml:227
 #, fuzzy, kde-format
 #| msgid "Type to search."
 msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
 msgid "Type to search…"
 msgstr "Unesite nešto za traženje."
 
-#: package/contents/ui/DashboardRepresentation.qml:323
+#: DashboardRepresentation.qml:323
 #, kde-format
 msgid "Favorites"
 msgstr "Omiljeno"
 
-#: package/contents/ui/main.qml:235
+#: main.qml:235
 #, fuzzy, kde-format
 #| msgid "Edit Applications..."
 msgid "Edit Applications…"

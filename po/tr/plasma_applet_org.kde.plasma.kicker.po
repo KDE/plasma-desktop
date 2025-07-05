@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-10 00:44+0000\n"
+"POT-Creation-Date: 2025-07-05 00:44+0000\n"
 "PO-Revision-Date: 2024-03-18 18:50+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -19,174 +19,174 @@ msgstr ""
 "X-Generator: Lokalize 24.02.0\n"
 "X-POOTLE-MTIME: 1413102230.000000\n"
 
-#: package/contents/config/config.qml:13
-#, kde-format
-msgid "General"
-msgstr "Genel"
-
-#: package/contents/ui/code/tools.js:43
+#: code/tools.js:43
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "Sık Kullanılanlardan Kaldır"
 
-#: package/contents/ui/code/tools.js:47
+#: code/tools.js:47
 #, kde-format
 msgid "Add to Favorites"
 msgstr "Sık Kullanılanlara Ekle"
 
-#: package/contents/ui/code/tools.js:73
+#: code/tools.js:73
 #, kde-format
 msgid "On All Activities"
 msgstr "Tüm Etkinliklerde"
 
-#: package/contents/ui/code/tools.js:123
+#: code/tools.js:123
 #, kde-format
 msgid "On the Current Activity"
 msgstr "Yalnızca Geçerli Etkinlikte"
 
-#: package/contents/ui/code/tools.js:137
+#: code/tools.js:137
 #, kde-format
 msgid "Show in Favorites"
 msgstr "Sık Kullanılanlarda Göster"
 
-#: package/contents/ui/ConfigGeneral.qml:46
+#: config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Genel"
+
+#: ConfigGeneral.qml:46
 #, kde-format
 msgid "Icon:"
 msgstr "Simge:"
 
-#: package/contents/ui/ConfigGeneral.qml:131
+#: ConfigGeneral.qml:131
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Seç…"
 
-#: package/contents/ui/ConfigGeneral.qml:136
+#: ConfigGeneral.qml:136
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "Simgeyi Temizle"
 
-#: package/contents/ui/ConfigGeneral.qml:155
+#: ConfigGeneral.qml:155
 #, kde-format
 msgid "Show applications as:"
 msgstr "Uygulamaları göster:"
 
-#: package/contents/ui/ConfigGeneral.qml:157
+#: ConfigGeneral.qml:157
 #, kde-format
 msgid "Name only"
 msgstr "Yalnızca ad"
 
-#: package/contents/ui/ConfigGeneral.qml:157
+#: ConfigGeneral.qml:157
 #, kde-format
 msgid "Description only"
 msgstr "Yalnızca tanım"
 
-#: package/contents/ui/ConfigGeneral.qml:157
+#: ConfigGeneral.qml:157
 #, kde-format
 msgid "Name (Description)"
 msgstr "Ad (Açıklama)"
 
-#: package/contents/ui/ConfigGeneral.qml:157
+#: ConfigGeneral.qml:157
 #, kde-format
 msgid "Description (Name)"
 msgstr "Açıklama (Ad)"
 
-#: package/contents/ui/ConfigGeneral.qml:167
+#: ConfigGeneral.qml:167
 #, kde-format
 msgid "Behavior:"
 msgstr "Davranış:"
 
-#: package/contents/ui/ConfigGeneral.qml:169
+#: ConfigGeneral.qml:169
 #, kde-format
 msgid "Sort applications alphabetically"
 msgstr "Uygulamaları abecesel olarak sırala"
 
-#: package/contents/ui/ConfigGeneral.qml:177
+#: ConfigGeneral.qml:177
 #, kde-format
 msgid "Flatten sub-menus to a single level"
 msgstr "Tek bir düzeyde düzleştirilmiş alt menüler"
 
-#: package/contents/ui/ConfigGeneral.qml:185
+#: ConfigGeneral.qml:185
 #, kde-format
 msgid "Show icons on the root level of the menu"
 msgstr "Menünün kök düzeyindeki simgeleri göster"
 
-#: package/contents/ui/ConfigGeneral.qml:195
+#: ConfigGeneral.qml:195
 #, kde-format
 msgid "Show categories:"
 msgstr "Kategorileri göster:"
 
-#: package/contents/ui/ConfigGeneral.qml:198
+#: ConfigGeneral.qml:198
 #, kde-format
 msgid "Recent applications"
 msgstr "Son uygulamalar"
 
-#: package/contents/ui/ConfigGeneral.qml:199
+#: ConfigGeneral.qml:199
 #, kde-format
 msgid "Often used applications"
 msgstr "Sık kullanılan uygulamalar"
 
-#: package/contents/ui/ConfigGeneral.qml:206
+#: ConfigGeneral.qml:206
 #, kde-format
 msgid "Recent files"
 msgstr "Son dosyalar"
 
-#: package/contents/ui/ConfigGeneral.qml:207
+#: ConfigGeneral.qml:207
 #, kde-format
 msgid "Often used files"
 msgstr "Sık kullanılan dosyalar"
 
-#: package/contents/ui/ConfigGeneral.qml:213
+#: ConfigGeneral.qml:213
 #, kde-format
 msgid "Sort items in categories by:"
 msgstr "Ögeleri kategorilerde şuna göre sırala:"
 
-#: package/contents/ui/ConfigGeneral.qml:214
+#: ConfigGeneral.qml:214
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "Son kullanılanlar"
 
-#: package/contents/ui/ConfigGeneral.qml:214
+#: ConfigGeneral.qml:214
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
 msgid "Often used"
 msgstr "Sık kullanılan"
 
-#: package/contents/ui/ConfigGeneral.qml:224
+#: ConfigGeneral.qml:224
 #, kde-format
 msgid "Search:"
 msgstr "Ara:"
 
-#: package/contents/ui/ConfigGeneral.qml:226
+#: ConfigGeneral.qml:226
 #, kde-format
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Aramayı yer imlerine, dosyalara ve e-postalara genişlet"
 
-#: package/contents/ui/ConfigGeneral.qml:234
+#: ConfigGeneral.qml:234
 #, kde-format
 msgid "Align search results to bottom"
 msgstr "Arama sonuçlarını aşağıya hizala"
 
-#: package/contents/ui/DashboardRepresentation.qml:227
+#: DashboardRepresentation.qml:227
 #, kde-format
 msgid "Searching for '%1'"
 msgstr "“%1” aranıyor"
 
-#: package/contents/ui/DashboardRepresentation.qml:227
+#: DashboardRepresentation.qml:227
 #, kde-format
 msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
 msgid "Type to search…"
 msgstr "Aramak için yaz…"
 
-#: package/contents/ui/DashboardRepresentation.qml:323
+#: DashboardRepresentation.qml:323
 #, kde-format
 msgid "Favorites"
 msgstr "Sık Kullanılanlar"
 
-#: package/contents/ui/main.qml:235
+#: main.qml:235
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Uygulamaları Düzenle…"

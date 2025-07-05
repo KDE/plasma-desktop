@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kickoff\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-06 00:44+0000\n"
+"POT-Creation-Date: 2025-07-05 00:44+0000\n"
 "PO-Revision-Date: 2025-06-06 13:58+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -20,48 +20,48 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: package/contents/config/config.qml:13
-#, kde-format
-msgid "General"
-msgstr "Загальне"
-
-#: package/contents/ui/code/tools.js:32
+#: code/tools.js:32
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "Вилучити з улюблених"
 
-#: package/contents/ui/code/tools.js:36
+#: code/tools.js:36
 #, kde-format
 msgid "Add to Favorites"
 msgstr "Додати до улюблених"
 
-#: package/contents/ui/code/tools.js:60
+#: code/tools.js:60
 #, kde-format
 msgid "On All Activities"
 msgstr "На усіх просторах дій"
 
-#: package/contents/ui/code/tools.js:110
+#: code/tools.js:110
 #, kde-format
 msgid "On the Current Activity"
 msgstr "На поточному просторі дій"
 
-#: package/contents/ui/code/tools.js:124
+#: code/tools.js:124
 #, kde-format
 msgid "Show in Favorites"
 msgstr "Показати в «Улюбленому»"
 
-#: package/contents/ui/ConfigGeneral.qml:48
+#: config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Загальне"
+
+#: ConfigGeneral.qml:48
 #, kde-format
 msgid "Icon:"
 msgstr "Піктограма:"
 
-#: package/contents/ui/ConfigGeneral.qml:54
+#: ConfigGeneral.qml:54
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr "Змінити піктограму засобу запуску програм"
 
-#: package/contents/ui/ConfigGeneral.qml:55
+#: ConfigGeneral.qml:55
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -71,98 +71,98 @@ msgstr ""
 "Поточною піктограмою є %1. Натисніть, щоб відкрити меню для зміни поточної "
 "піктограми або відновлення типової піктограми."
 
-#: package/contents/ui/ConfigGeneral.qml:59
+#: ConfigGeneral.qml:59
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
 msgstr "Назвою піктограми є «%1»"
 
-#: package/contents/ui/ConfigGeneral.qml:94
+#: ConfigGeneral.qml:94
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Вибрати…"
 
-#: package/contents/ui/ConfigGeneral.qml:96
+#: ConfigGeneral.qml:96
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr "Виберіть піктограму засобу запуску програм"
 
-#: package/contents/ui/ConfigGeneral.qml:100
+#: ConfigGeneral.qml:100
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "Повернутися до типової піктограми"
 
-#: package/contents/ui/ConfigGeneral.qml:106
+#: ConfigGeneral.qml:106
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "Вилучити піктограму"
 
-#: package/contents/ui/ConfigGeneral.qml:121
+#: ConfigGeneral.qml:121
 #, kde-format
 msgid "Show applications as:"
 msgstr "Показ програм:"
 
-#: package/contents/ui/ConfigGeneral.qml:123
+#: ConfigGeneral.qml:123
 #, kde-format
 msgid "Name only"
 msgstr "лише назви"
 
-#: package/contents/ui/ConfigGeneral.qml:123
+#: ConfigGeneral.qml:123
 #, kde-format
 msgid "Description only"
 msgstr "лише описи"
 
-#: package/contents/ui/ConfigGeneral.qml:123
+#: ConfigGeneral.qml:123
 #, kde-format
 msgid "Name (Description)"
 msgstr "назва (опис)"
 
-#: package/contents/ui/ConfigGeneral.qml:123
+#: ConfigGeneral.qml:123
 #, kde-format
 msgid "Description (Name)"
 msgstr "опис (назва)"
 
-#: package/contents/ui/ConfigGeneral.qml:133
+#: ConfigGeneral.qml:133
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "Текстова мітка:"
 
-#: package/contents/ui/ConfigGeneral.qml:135
+#: ConfigGeneral.qml:135
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "Тут ви можете додати текстову мітку"
 
-#: package/contents/ui/ConfigGeneral.qml:149
+#: ConfigGeneral.qml:149
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr "Відновити мітку меню"
 
-#: package/contents/ui/ConfigGeneral.qml:162
+#: ConfigGeneral.qml:162
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "Не можна встановлювати текстову мітку, якщо панель є вертикальною."
 
-#: package/contents/ui/ConfigGeneral.qml:172
+#: ConfigGeneral.qml:172
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "Загальне:"
 
-#: package/contents/ui/ConfigGeneral.qml:176
+#: ConfigGeneral.qml:176
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Впорядкувати програми за абеткою"
 
-#: package/contents/ui/ConfigGeneral.qml:180
+#: ConfigGeneral.qml:180
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -172,188 +172,182 @@ msgstr ""
 "Це не стосуватимуться упорядковування програм у результатах пошуку або на "
 "сторінці улюблених програм."
 
-#: package/contents/ui/ConfigGeneral.qml:186
+#: ConfigGeneral.qml:186
 #, kde-format
 msgid "Use compact list item style"
 msgstr "Компактний стиль пунктів списку"
 
-#: package/contents/ui/ConfigGeneral.qml:192
+#: ConfigGeneral.qml:192
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "Автоматично вимикається у режимі сенсорного керування"
 
-#: package/contents/ui/ConfigGeneral.qml:200
+#: ConfigGeneral.qml:200
 #, kde-format
 msgid "Highlight newly installed applications"
 msgstr "Підсвічувати нововстановлені програми"
 
-#: package/contents/ui/ConfigGeneral.qml:205
+#: ConfigGeneral.qml:205
 #, kde-format
 msgid "Switch sidebar categories when hovering over them"
 msgstr "Перемикати категорії бічної панелі, якщо на них наведено вказівник"
 
-#: package/contents/ui/ConfigGeneral.qml:211
+#: ConfigGeneral.qml:211
 #, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
 msgstr "Налаштувати додатки пошуку…"
 
-#: package/contents/ui/ConfigGeneral.qml:221
+#: ConfigGeneral.qml:221
 #, kde-format
 msgid "Sidebar position:"
 msgstr "Розташування бічної панелі:"
 
-#: package/contents/ui/ConfigGeneral.qml:222
-#: package/contents/ui/ConfigGeneral.qml:230
+#: ConfigGeneral.qml:222 ConfigGeneral.qml:230
 #, kde-format
 msgid "Right"
 msgstr "Праворуч"
 
-#: package/contents/ui/ConfigGeneral.qml:222
-#: package/contents/ui/ConfigGeneral.qml:230
+#: ConfigGeneral.qml:222 ConfigGeneral.qml:230
 #, kde-format
 msgid "Left"
 msgstr "Ліворуч"
 
-#: package/contents/ui/ConfigGeneral.qml:238
+#: ConfigGeneral.qml:238
 #, kde-format
 msgid "Show favorites:"
 msgstr "Показувати «Улюблені»:"
 
-#: package/contents/ui/ConfigGeneral.qml:239
+#: ConfigGeneral.qml:239
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "У таблиці"
 
-#: package/contents/ui/ConfigGeneral.qml:247
+#: ConfigGeneral.qml:247
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "У списку"
 
-#: package/contents/ui/ConfigGeneral.qml:255
+#: ConfigGeneral.qml:255
 #, kde-format
 msgid "Show other applications:"
 msgstr "Показати інші програми:"
 
-#: package/contents/ui/ConfigGeneral.qml:256
+#: ConfigGeneral.qml:256
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "У таблиці"
 
-#: package/contents/ui/ConfigGeneral.qml:264
+#: ConfigGeneral.qml:264
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "У списку"
 
-#: package/contents/ui/ConfigGeneral.qml:276
+#: ConfigGeneral.qml:276
 #, kde-format
 msgid "Show buttons for:"
 msgstr "Показати кнопки:"
 
-#: package/contents/ui/ConfigGeneral.qml:277
-#: package/contents/ui/LeaveButtons.qml:169
+#: ConfigGeneral.qml:277 LeaveButtons.qml:169
 #, kde-format
 msgid "Power"
 msgstr "Живлення"
 
-#: package/contents/ui/ConfigGeneral.qml:286
-#: package/contents/ui/LeaveButtons.qml:169
+#: ConfigGeneral.qml:286 LeaveButtons.qml:169
 #, kde-format
 msgid "Session"
 msgstr "Сеанс"
 
-#: package/contents/ui/ConfigGeneral.qml:295
+#: ConfigGeneral.qml:295
 #, kde-format
 msgid "Power and session"
 msgstr "Живлення і сеансу"
 
-#: package/contents/ui/ConfigGeneral.qml:304
+#: ConfigGeneral.qml:304
 #, kde-format
 msgid "Show action button captions"
 msgstr "Показати підписи до кнопок дій"
 
-#: package/contents/ui/Footer.qml:101
+#: Footer.qml:101
 #, kde-format
 msgid "Applications"
 msgstr "Програми"
 
-#: package/contents/ui/Footer.qml:117
+#: Footer.qml:117
 #, kde-format
 msgid "Places"
 msgstr "Місця"
 
-#: package/contents/ui/FullRepresentation.qml:154
+#: FullRepresentation.qml:154
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
 msgstr "Немає відповідників"
 
-#: package/contents/ui/Header.qml:86
+#: Header.qml:86
 #, kde-format
 msgid "Open user settings"
 msgstr "Відкрити параметри користувача"
 
-#: package/contents/ui/Header.qml:266
+#: Header.qml:266
 #, kde-format
 msgid "Keep Open"
 msgstr "Тримати відкритим"
 
-#: package/contents/ui/KickoffGridDelegate.qml:60
-#: package/contents/ui/KickoffListDelegate.qml:119
+#: KickoffGridDelegate.qml:60 KickoffListDelegate.qml:119
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
 msgstr "Нове!"
 
-#: package/contents/ui/KickoffGridDelegate.qml:61
-#: package/contents/ui/KickoffListDelegate.qml:121
+#: KickoffGridDelegate.qml:61 KickoffListDelegate.qml:121
 #, kde-format
 msgid "Newly installed application"
 msgstr "Нововстановлена програма"
 
-#: package/contents/ui/KickoffGridView.qml:102
+#: KickoffGridView.qml:102
 #, kde-format
 msgid "Grid with %1 rows, %2 columns"
 msgstr "Таблиця з %1 рядків, %2 стовпчиків"
 
-#: package/contents/ui/KickoffListDelegate.qml:120
+#: KickoffListDelegate.qml:120
 #, kde-format
 msgid "There is a newly installed application in this category"
 msgstr "У цій категорії є нововстановлена програма"
 
-#: package/contents/ui/LeaveButtons.qml:169
+#: LeaveButtons.qml:169
 #, kde-format
 msgid "More"
 msgstr "Інше"
 
-#: package/contents/ui/LeaveButtons.qml:169
+#: LeaveButtons.qml:169
 #, kde-format
 msgid "Session and Power"
 msgstr "Сеанс і живлення"
 
-#: package/contents/ui/main.qml:355
+#: main.qml:355
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Змінити список програм…"
 
-#: package/contents/ui/PlacesPage.qml:63
+#: PlacesPage.qml:63
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "Computer"
 msgstr "Комп'ютер"
 
-#: package/contents/ui/PlacesPage.qml:64
+#: PlacesPage.qml:64
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "History"
 msgstr "Журнал"
 
-#: package/contents/ui/PlacesPage.qml:65
+#: PlacesPage.qml:65
 #, kde-format
 msgctxt "category in Places sidebar"
 msgid "Frequently Used"
