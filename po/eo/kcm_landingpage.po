@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:45+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2024-03-28 09:21+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo.org>\n"
@@ -17,38 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#. i18n: ectx: label, entry (colorScheme), group (General)
-#: landingpage_kdeglobalssettings.kcfg:9
-#, kde-format
-msgid "Color scheme name"
-msgstr "Nomo de koloraro"
-
-#. i18n: ectx: label, entry (singleClick), group (KDE)
-#: landingpage_kdeglobalssettings.kcfg:15
-#, kde-format
-msgid "Single click to open files"
-msgstr "Ununura alklako por malfermi dosierojn"
-
-#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
-#: landingpage_kdeglobalssettings.kcfg:19
-#, kde-format
-msgid "Global Look and Feel package"
-msgstr "Pako por ĉiea aspekto kaj sento"
-
-#. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
-#. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
-#: landingpage_kdeglobalssettings.kcfg:23
-#: landingpage_kdeglobalssettings.kcfg:27
-#, kde-format
-msgid "Global Look and Feel package, alternate"
-msgstr "Pako por ĉiea aspekto kaj sento, alterna"
-
-#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
-#: landingpage_kdeglobalssettings.kcfg:31
-#, kde-format
-msgid "Animation speed"
-msgstr "Animacia rapideco"
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -120,3 +88,18 @@ msgstr "Pliaj Kondut-Agordoj…"
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "Plej Uzitaj Paĝoj:"
+
+#~ msgid "Color scheme name"
+#~ msgstr "Nomo de koloraro"
+
+#~ msgid "Single click to open files"
+#~ msgstr "Ununura alklako por malfermi dosierojn"
+
+#~ msgid "Global Look and Feel package"
+#~ msgstr "Pako por ĉiea aspekto kaj sento"
+
+#~ msgid "Global Look and Feel package, alternate"
+#~ msgstr "Pako por ĉiea aspekto kaj sento, alterna"
+
+#~ msgid "Animation speed"
+#~ msgstr "Animacia rapideco"

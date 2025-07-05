@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-24 00:47+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-03-23 07:41+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -95,33 +95,6 @@ msgstr "Jangan lacak penggunaan untuk aktivitas ini"
 msgid "Shortcut for switching:"
 msgstr "Pintasan untuk mengalihkan:"
 
-#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:10
-#, kde-format
-msgid "How many months keep the activity history"
-msgstr "Seberapa bulan menjaga histori aktivitas"
-
-#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:17
-#, kde-format
-msgid "Which data to keep in activity history"
-msgstr "Data mana yang dijaga dalam histori aktivitas"
-
-#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:21
-#, kde-format
-msgid "List of Applications whose activity history to save"
-msgstr ""
-"Daftar Aplikasi-aplikasi yang berada di histori aktivitas untuk disimpan"
-
-#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:24
-#, kde-format
-msgid "List of Applications whose activity history not to save"
-msgstr ""
-"Daftar Aplikasi-aplikasi yang berada di histori aktivitas yang tidak untuk "
-"disimpan"
-
 #: MainConfigurationWidget.cpp:33
 #, kde-format
 msgid "Switching"
@@ -161,23 +134,29 @@ msgctxt "@action"
 msgid "Walk through activities (Reverse)"
 msgstr "Berjalan melalui aktivitas (Kebalikan)"
 
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_virtualDesktopSwitchEnabled)
-#: ui/SwitchingTabBase.ui:22
-#, kde-format
-msgid "Remember for each activity (needs restart)"
-msgstr "Ingat untuk masing-masing aktivitas (memerlukan penyalaan ulang)"
+#~ msgid "How many months keep the activity history"
+#~ msgstr "Seberapa bulan menjaga histori aktivitas"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: ui/SwitchingTabBase.ui:29
-#, kde-format
-msgid "Current virtual desktop:"
-msgstr "Desktop virtual saat ini:"
+#~ msgid "Which data to keep in activity history"
+#~ msgstr "Data mana yang dijaga dalam histori aktivitas"
 
-#. i18n: ectx: property (text), widget (QLabel, label_1)
-#: ui/SwitchingTabBase.ui:38
-#, kde-format
-msgid "Shortcuts:"
-msgstr "Pintasan:"
+#~ msgid "List of Applications whose activity history to save"
+#~ msgstr ""
+#~ "Daftar Aplikasi-aplikasi yang berada di histori aktivitas untuk disimpan"
+
+#~ msgid "List of Applications whose activity history not to save"
+#~ msgstr ""
+#~ "Daftar Aplikasi-aplikasi yang berada di histori aktivitas yang tidak "
+#~ "untuk disimpan"
+
+#~ msgid "Remember for each activity (needs restart)"
+#~ msgstr "Ingat untuk masing-masing aktivitas (memerlukan penyalaan ulang)"
+
+#~ msgid "Current virtual desktop:"
+#~ msgstr "Desktop virtual saat ini:"
+
+#~ msgid "Shortcuts:"
+#~ msgstr "Pintasan:"
 
 #~ msgid "Privacy"
 #~ msgstr "Privasi"

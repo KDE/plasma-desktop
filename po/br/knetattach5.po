@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase/knetattach.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-14 00:46+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2004-09-20 15:44+0200\n"
 "Last-Translator: Thierry Vignaud <tvignaud@mandriva.com>\n"
 "Language-Team: br <LL@li.org>\n"
@@ -72,116 +72,6 @@ msgstr "Enrollañ && K&evreañ"
 msgid "C&onnect"
 msgstr "K&evreañ"
 
-#. i18n: ectx: property (windowTitle), widget (QWizard, KNetAttach)
-#: knetattach.ui:14
-#, kde-format
-msgid "Network Folder Wizard"
-msgstr "Skoazeller renkell rouedad"
-
-#. i18n: ectx: property (title), widget (QWizardPage, _folderType)
-#: knetattach.ui:18
-#, kde-format
-msgid "Add Network Folder"
-msgstr "Ouzhpennañ ur renkell rouedad"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: knetattach.ui:24
-#, kde-format
-msgid ""
-"Select the type of network folder you wish to connect to and press the Next "
-"button."
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, _recent)
-#: knetattach.ui:65
-#, kde-format
-msgid "&Recent connection:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, _webfolder)
-#: knetattach.ui:72
-#, kde-format
-msgid "&WebFolder (webdav)"
-msgstr "&RenkellGwiad (webdav)"
-
-#. i18n: ectx: property (text), widget (QRadioButton, _fish)
-#: knetattach.ui:82
-#, kde-format
-msgid "&Secure shell (ssh)"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, _ftp)
-#: knetattach.ui:111
-#, kde-format
-msgid "FT&P"
-msgstr "FT&P"
-
-#. i18n: ectx: property (text), widget (QRadioButton, _smb)
-#: knetattach.ui:118
-#, kde-format
-msgid "&Microsoft® Windows® network drive"
-msgstr ""
-
-#. i18n: ectx: property (title), widget (QWizardPage, _folderParameters)
-#: knetattach.ui:145
-#, kde-format
-msgid "Network Folder Information"
-msgstr "Titouroù diwar-benn ar renkell rouedad"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel4_2)
-#: knetattach.ui:177
-#, kde-format
-msgid "&Name:"
-msgstr "&Anv :"
-
-#. i18n: ectx: property (text), widget (QLabel, _userText)
-#: knetattach.ui:196
-#, kde-format
-msgid "&User:"
-msgstr "&Arveriad :"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: knetattach.ui:222
-#, kde-format
-msgid "Se&rver:"
-msgstr "Se&rvijer :"
-
-#. i18n: ectx: property (text), widget (QLabel, _portText)
-#: knetattach.ui:248
-#, kde-format
-msgid "&Port:"
-msgstr "&Porzh :"
-
-#. i18n: ectx: property (text), widget (QLabel, _protocol)
-#: knetattach.ui:283
-#, kde-format
-msgid "&Protocol:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: knetattach.ui:313
-#, kde-format
-msgid "&Folder:"
-msgstr "&Renkell :"
-
-#. i18n: ectx: property (text), widget (QLabel, _encodingText)
-#: knetattach.ui:335
-#, kde-format
-msgid "Encoding:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, _createIcon)
-#: knetattach.ui:351
-#, kde-format
-msgid "Cr&eate an icon for this remote folder"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, _useEncryption)
-#: knetattach.ui:361
-#, kde-format
-msgid "&Use encryption"
-msgstr "&Implijit enrinegadur"
-
 #: main.cpp:21 main.cpp:23
 #, kde-format
 msgid "KDE Network Wizard"
@@ -201,3 +91,36 @@ msgstr "George Staikos"
 #, kde-format
 msgid "Primary author and maintainer"
 msgstr "Oberour kentañ ha ratreer"
+
+#~ msgid "Network Folder Wizard"
+#~ msgstr "Skoazeller renkell rouedad"
+
+#~ msgid "Add Network Folder"
+#~ msgstr "Ouzhpennañ ur renkell rouedad"
+
+#~ msgid "&WebFolder (webdav)"
+#~ msgstr "&RenkellGwiad (webdav)"
+
+#~ msgid "FT&P"
+#~ msgstr "FT&P"
+
+#~ msgid "Network Folder Information"
+#~ msgstr "Titouroù diwar-benn ar renkell rouedad"
+
+#~ msgid "&Name:"
+#~ msgstr "&Anv :"
+
+#~ msgid "&User:"
+#~ msgstr "&Arveriad :"
+
+#~ msgid "Se&rver:"
+#~ msgstr "Se&rvijer :"
+
+#~ msgid "&Port:"
+#~ msgstr "&Porzh :"
+
+#~ msgid "&Folder:"
+#~ msgstr "&Renkell :"
+
+#~ msgid "&Use encryption"
+#~ msgstr "&Implijit enrinegadur"

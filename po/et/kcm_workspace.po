@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-17 00:51+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-11-14 01:35+0100\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -35,14 +35,12 @@ msgstr ""
 msgid "Visual behavior:"
 msgstr "Visuaalne käitumine:"
 
-#. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
-#: package/contents/ui/main.qml:51 workspaceoptions_plasmasettings.kcfg:9
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "Teabevihjete kuvamine hiirekursori all"
 
-#. i18n: ectx: label, entry (osdEnabled), group (OSD)
-#: package/contents/ui/main.qml:62 workspaceoptions_plasmasettings.kcfg:15
+#: package/contents/ui/main.qml:62
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "Visuaalse tagasiside kuvamine olekumuutuste korral"
@@ -172,55 +170,14 @@ msgstr ""
 "Puuterežiimis kuvatakse paljusid kasutajaliidese elemente suurematena, et "
 "neile oleks hõlpsam sõrmega pihta saada."
 
-#. i18n: ectx: label, entry (singleClick), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:9
-#, kde-format
-msgid "Single click to open files"
-msgstr "Ühekordne klõps failide avamiseks"
+#~ msgid "Single click to open files"
+#~ msgstr "Ühekordne klõps failide avamiseks"
 
-#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:13
-#, kde-format
-msgid "Animation speed"
-msgstr "Animatsiooni kiirus"
+#~ msgid "Animation speed"
+#~ msgstr "Animatsiooni kiirus"
 
-#. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:17
-#, kde-format
-msgid "Left-click in scrollbar track moves scrollbar by one page"
-msgstr "Vasakklõps kerimisribal kerib ühe lehe võrra"
-
-#. i18n: ectx: label, entry (tabletMode), group (Input)
-#: workspaceoptions_kwinsettings.kcfg:9
-#, kde-format
-msgid "Automatically switch to touch-optimized mode"
-msgstr ""
-
-#. i18n: ectx: label, entry (primarySelection), group (Wayland)
-#: workspaceoptions_kwinsettings.kcfg:15
-#, kde-format
-msgid "Enable middle click selection pasting"
-msgstr ""
-
-#. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
-#: workspaceoptions_plasmasettings.kcfg:16
-#, kde-format
-msgid ""
-"Show an on-screen display to indicate status changes such as brightness or "
-"volume"
-msgstr ""
-
-#. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
-#: workspaceoptions_plasmasettings.kcfg:20
-#, kde-format
-msgid "OSD on layout change"
-msgstr ""
-
-#. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
-#: workspaceoptions_plasmasettings.kcfg:21
-#, kde-format
-msgid "Show a popup on layout changes"
-msgstr ""
+#~ msgid "Left-click in scrollbar track moves scrollbar by one page"
+#~ msgstr "Vasakklõps kerimisribal kerib ühe lehe võrra"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

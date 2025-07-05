@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-02-04 15:50+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -58,67 +58,6 @@ msgstr "Kai Uwe Broulik"
 #, kde-format
 msgid "Plasma 5 Port"
 msgstr "Portare la Plasma 5"
-
-#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
-#: DeviceAutomounterKCM.ui:17
-#, kde-format
-msgid ""
-"This list contains the storage devices known to the system. If \"Automount "
-"on Login\" is checked, the device will be automatically mounted even though "
-"\"Mount all removable media at login\" is unchecked. The same applies for "
-"\"Automount on Attach\"."
-msgstr ""
-"Această listă conține dispozitivele de stocare cunoscute sistemului. Dacă "
-"„Montează automat la autentificare” este bifat, dispozitivul va fi montat "
-"automat chiar dacă „Montează toate mediile amovibile la autentificare” este "
-"debifat. Același lucru se aplică și pentru „Montează automat la atașare”."
-
-#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
-#: DeviceAutomounterKCM.ui:54
-#, kde-format
-msgid ""
-"Clicking this button causes the selected devices to be 'forgotten'. This is "
-"only useful if \"Only automatically mount removable media that has been "
-"manually mounted before\" is checked. Once a device is forgotten and the "
-"system is set to only automatically mount familiar devices, the device will "
-"not be automatically mounted."
-msgstr ""
-"Apăsarea acestui buton face ca dispozitivul ales să fie „uitat”. Acest lucru "
-"este folositor doar dacă „Montează automat numai mediile amovibile ce au "
-"fost montate manual anterior” este bifată. Odată ce un dispozitiv este uitat "
-"și sistemul este configurat să monteze automat doar dispozitivele familiare, "
-"acesta nu va mai fi montat automat."
-
-#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
-#: DeviceAutomounterKCM.ui:57
-#, kde-format
-msgid "Forget Device"
-msgstr "Uită dispozitivul"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
-#: DeviceAutomounterKCM.ui:67
-#, kde-format
-msgid ""
-"When this is not checked, only remembered devices will be automatically "
-"mounted. A device is 'remembered' if it has ever been mounted before. For "
-"instance, plugging in a USB media player to charge is not sufficient to "
-"'remember' it - if the files are not accessed, it will not be automatically "
-"mounted the next time it is seen. Once they have been accessed, however, the "
-"device's contents will be automatically made available to the system."
-msgstr ""
-"Când nu e bifată, doar dispozitivele memorate vor fi montate automat. Un "
-"dispozitiv este „memorat” dacă a mai fost vreodată montat înainte. De "
-"exemplu, conectarea unui dispozitiv USB de redare media pentru a-l încărca "
-"nu este suficient ca să fie „memorat” – dacă fișierele nu sunt accesate, nu "
-"va fi montat automat data următoare când este văzut. Totuși, odată ce au "
-"fost accesate, conținutul dispozitivelor va fi făcut disponibil în mod "
-"automat sistemului."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
-#: DeviceAutomounterKCM.ui:70
-#, kde-format
-msgid "Automatically mount removable media that have never been mounted before"
-msgstr "Montează automat mediile amovibile ce nu au fost montate anterior"
 
 #: DeviceModel.cpp:52
 #, kde-format
@@ -181,6 +120,55 @@ msgstr "Acest dispozitiv va fi montat automat la atașare."
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "Acest dispozitiv nu va fi montat automat la atașare."
+
+#~ msgid ""
+#~ "This list contains the storage devices known to the system. If "
+#~ "\"Automount on Login\" is checked, the device will be automatically "
+#~ "mounted even though \"Mount all removable media at login\" is unchecked. "
+#~ "The same applies for \"Automount on Attach\"."
+#~ msgstr ""
+#~ "Această listă conține dispozitivele de stocare cunoscute sistemului. Dacă "
+#~ "„Montează automat la autentificare” este bifat, dispozitivul va fi montat "
+#~ "automat chiar dacă „Montează toate mediile amovibile la autentificare” "
+#~ "este debifat. Același lucru se aplică și pentru „Montează automat la "
+#~ "atașare”."
+
+#~ msgid ""
+#~ "Clicking this button causes the selected devices to be 'forgotten'. This "
+#~ "is only useful if \"Only automatically mount removable media that has "
+#~ "been manually mounted before\" is checked. Once a device is forgotten and "
+#~ "the system is set to only automatically mount familiar devices, the "
+#~ "device will not be automatically mounted."
+#~ msgstr ""
+#~ "Apăsarea acestui buton face ca dispozitivul ales să fie „uitat”. Acest "
+#~ "lucru este folositor doar dacă „Montează automat numai mediile amovibile "
+#~ "ce au fost montate manual anterior” este bifată. Odată ce un dispozitiv "
+#~ "este uitat și sistemul este configurat să monteze automat doar "
+#~ "dispozitivele familiare, acesta nu va mai fi montat automat."
+
+#~ msgid "Forget Device"
+#~ msgstr "Uită dispozitivul"
+
+#~ msgid ""
+#~ "When this is not checked, only remembered devices will be automatically "
+#~ "mounted. A device is 'remembered' if it has ever been mounted before. For "
+#~ "instance, plugging in a USB media player to charge is not sufficient to "
+#~ "'remember' it - if the files are not accessed, it will not be "
+#~ "automatically mounted the next time it is seen. Once they have been "
+#~ "accessed, however, the device's contents will be automatically made "
+#~ "available to the system."
+#~ msgstr ""
+#~ "Când nu e bifată, doar dispozitivele memorate vor fi montate automat. Un "
+#~ "dispozitiv este „memorat” dacă a mai fost vreodată montat înainte. De "
+#~ "exemplu, conectarea unui dispozitiv USB de redare media pentru a-l "
+#~ "încărca nu este suficient ca să fie „memorat” – dacă fișierele nu sunt "
+#~ "accesate, nu va fi montat automat data următoare când este văzut. Totuși, "
+#~ "odată ce au fost accesate, conținutul dispozitivelor va fi făcut "
+#~ "disponibil în mod automat sistemului."
+
+#~ msgid ""
+#~ "Automatically mount removable media that have never been mounted before"
+#~ msgstr "Montează automat mediile amovibile ce nu au fost montate anterior"
 
 #~ msgid ""
 #~ "If any removable storage devices are connected to your system when you "

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2024-03-30 19:46\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -57,60 +57,6 @@ msgstr "Kai Uwe Broulik"
 #, kde-format
 msgid "Plasma 5 Port"
 msgstr "Plasma 5 移植"
-
-#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
-#: DeviceAutomounterKCM.ui:17
-#, kde-format
-msgid ""
-"This list contains the storage devices known to the system. If \"Automount "
-"on Login\" is checked, the device will be automatically mounted even though "
-"\"Mount all removable media at login\" is unchecked. The same applies for "
-"\"Automount on Attach\"."
-msgstr ""
-"此列表包含本机系统已知的存储设备。 设备的“登录时”选框被勾选后，它将在系统登录"
-"到桌面时自动挂载，即使“登录时自动挂载所有可移动设备”选框未被勾选。此规则同样"
-"适用于设备的“插入时”选框。"
-
-#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
-#: DeviceAutomounterKCM.ui:54
-#, kde-format
-msgid ""
-"Clicking this button causes the selected devices to be 'forgotten'. This is "
-"only useful if \"Only automatically mount removable media that has been "
-"manually mounted before\" is checked. Once a device is forgotten and the "
-"system is set to only automatically mount familiar devices, the device will "
-"not be automatically mounted."
-msgstr ""
-"点击此按钮会“忘记”所选的设备。这只有在“仅自动挂载手动挂载过的可移动设备”选中"
-"时有用。设备记录删除后，KDE 将只自动挂载曾经挂载过的设备，不会自动挂载此设"
-"备。"
-
-#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
-#: DeviceAutomounterKCM.ui:57
-#, kde-format
-msgid "Forget Device"
-msgstr "忘记设备"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
-#: DeviceAutomounterKCM.ui:67
-#, kde-format
-msgid ""
-"When this is not checked, only remembered devices will be automatically "
-"mounted. A device is 'remembered' if it has ever been mounted before. For "
-"instance, plugging in a USB media player to charge is not sufficient to "
-"'remember' it - if the files are not accessed, it will not be automatically "
-"mounted the next time it is seen. Once they have been accessed, however, the "
-"device's contents will be automatically made available to the system."
-msgstr ""
-"不勾选此项时，只有记录的设备将被挂载。“记录”的设备是指曾被挂载过的设备，例"
-"如，仅插入 USB 媒体播放器进行充电而不访问文件，不会被记录。在下次遇到该播放器"
-"时不会自动挂载它。只要访问过，设备将被自动挂载以使系统能访问其内容。"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
-#: DeviceAutomounterKCM.ui:70
-#, kde-format
-msgid "Automatically mount removable media that have never been mounted before"
-msgstr "自动挂载新的可移动设备"
 
 #: DeviceModel.cpp:52
 #, kde-format
@@ -173,3 +119,44 @@ msgstr "设备插入时自动挂载。"
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "设备插入时不自动挂载。"
+
+#~ msgid ""
+#~ "This list contains the storage devices known to the system. If "
+#~ "\"Automount on Login\" is checked, the device will be automatically "
+#~ "mounted even though \"Mount all removable media at login\" is unchecked. "
+#~ "The same applies for \"Automount on Attach\"."
+#~ msgstr ""
+#~ "此列表包含本机系统已知的存储设备。 设备的“登录时”选框被勾选后，它将在系统"
+#~ "登录到桌面时自动挂载，即使“登录时自动挂载所有可移动设备”选框未被勾选。此规"
+#~ "则同样适用于设备的“插入时”选框。"
+
+#~ msgid ""
+#~ "Clicking this button causes the selected devices to be 'forgotten'. This "
+#~ "is only useful if \"Only automatically mount removable media that has "
+#~ "been manually mounted before\" is checked. Once a device is forgotten and "
+#~ "the system is set to only automatically mount familiar devices, the "
+#~ "device will not be automatically mounted."
+#~ msgstr ""
+#~ "点击此按钮会“忘记”所选的设备。这只有在“仅自动挂载手动挂载过的可移动设备”选"
+#~ "中时有用。设备记录删除后，KDE 将只自动挂载曾经挂载过的设备，不会自动挂载此"
+#~ "设备。"
+
+#~ msgid "Forget Device"
+#~ msgstr "忘记设备"
+
+#~ msgid ""
+#~ "When this is not checked, only remembered devices will be automatically "
+#~ "mounted. A device is 'remembered' if it has ever been mounted before. For "
+#~ "instance, plugging in a USB media player to charge is not sufficient to "
+#~ "'remember' it - if the files are not accessed, it will not be "
+#~ "automatically mounted the next time it is seen. Once they have been "
+#~ "accessed, however, the device's contents will be automatically made "
+#~ "available to the system."
+#~ msgstr ""
+#~ "不勾选此项时，只有记录的设备将被挂载。“记录”的设备是指曾被挂载过的设备，例"
+#~ "如，仅插入 USB 媒体播放器进行充电而不访问文件，不会被记录。在下次遇到该播"
+#~ "放器时不会自动挂载它。只要访问过，设备将被自动挂载以使系统能访问其内容。"
+
+#~ msgid ""
+#~ "Automatically mount removable media that have never been mounted before"
+#~ msgstr "自动挂载新的可移动设备"

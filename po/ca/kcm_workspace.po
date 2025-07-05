@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-17 00:51+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-07-07 10:03+0200\n"
 "Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -41,14 +41,12 @@ msgstr "Reinicia"
 msgid "Visual behavior:"
 msgstr "Comportament visual:"
 
-#. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
-#: package/contents/ui/main.qml:51 workspaceoptions_plasmasettings.kcfg:9
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "Mostra els consells informatius en passar-hi per sobre amb el ratolí"
 
-#. i18n: ectx: label, entry (osdEnabled), group (OSD)
-#: package/contents/ui/main.qml:62 workspaceoptions_plasmasettings.kcfg:15
+#: package/contents/ui/main.qml:62
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "Mostra retroalimentació visual per als canvis d'estat"
@@ -178,54 +176,30 @@ msgstr ""
 "En el mode tàctil, molts elements de la interfície d'usuari es faran més "
 "grans per adaptar-se més fàcilment a la interacció tàctil."
 
-#. i18n: ectx: label, entry (singleClick), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:9
-#, kde-format
-msgid "Single click to open files"
-msgstr "Clic únic per a obrir fitxers"
+#~ msgid "Single click to open files"
+#~ msgstr "Clic únic per a obrir fitxers"
 
-#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:13
-#, kde-format
-msgid "Animation speed"
-msgstr "Velocitat de l'animació"
+#~ msgid "Animation speed"
+#~ msgstr "Velocitat de l'animació"
 
-#. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:17
-#, kde-format
-msgid "Left-click in scrollbar track moves scrollbar by one page"
-msgstr "Fer clic esquerre a la barra de desplaçament desplaça una pàgina"
+#~ msgid "Left-click in scrollbar track moves scrollbar by one page"
+#~ msgstr "Fer clic esquerre a la barra de desplaçament desplaça una pàgina"
 
-#. i18n: ectx: label, entry (tabletMode), group (Input)
-#: workspaceoptions_kwinsettings.kcfg:9
-#, kde-format
-msgid "Automatically switch to touch-optimized mode"
-msgstr "Canvia automàticament al mode optimitzat per als tocs"
+#~ msgid "Automatically switch to touch-optimized mode"
+#~ msgstr "Canvia automàticament al mode optimitzat per als tocs"
 
-#. i18n: ectx: label, entry (primarySelection), group (Wayland)
-#: workspaceoptions_kwinsettings.kcfg:15
-#, kde-format
-msgid "Enable middle click selection pasting"
-msgstr "Activa l'enganxament de la selecció amb el clic del mig"
+#~ msgid "Enable middle click selection pasting"
+#~ msgstr "Activa l'enganxament de la selecció amb el clic del mig"
 
-#. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
-#: workspaceoptions_plasmasettings.kcfg:16
-#, kde-format
-msgid ""
-"Show an on-screen display to indicate status changes such as brightness or "
-"volume"
-msgstr ""
-"Mostra un missatge en pantalla per a indicar canvis d'estat com la "
-"lluminositat o el volum"
+#~ msgid ""
+#~ "Show an on-screen display to indicate status changes such as brightness "
+#~ "or volume"
+#~ msgstr ""
+#~ "Mostra un missatge en pantalla per a indicar canvis d'estat com la "
+#~ "lluminositat o el volum"
 
-#. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
-#: workspaceoptions_plasmasettings.kcfg:20
-#, kde-format
-msgid "OSD on layout change"
-msgstr "OSD en canviar de disposició"
+#~ msgid "OSD on layout change"
+#~ msgstr "OSD en canviar de disposició"
 
-#. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
-#: workspaceoptions_plasmasettings.kcfg:21
-#, kde-format
-msgid "Show a popup on layout changes"
-msgstr "Mostra un missatge emergent en canvis de disposició"
+#~ msgid "Show a popup on layout changes"
+#~ msgstr "Mostra un missatge emergent en canvis de disposició"

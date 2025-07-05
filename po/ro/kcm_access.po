@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-16 02:45+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2024-01-07 18:15+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -81,211 +81,6 @@ msgstr "Nu s-au putut stabili gsettings pentru Orca: „%1” a eșuat"
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Eroare: Nu s-a putut lansa „orca --setup”"
-
-#. i18n: ectx: label, entry (SystemBell), group (Bell)
-#: kcmaccessibilitybell.kcfg:9
-#, kde-format
-msgid "Use System Bell"
-msgstr "Folosește clopoțel de sistem"
-
-#. i18n: ectx: label, entry (CustomBell), group (Bell)
-#: kcmaccessibilitybell.kcfg:13
-#, kde-format
-msgid "Customize system bell"
-msgstr "Personalizează clopoțelul de sistem"
-
-#. i18n: ectx: label, entry (CustomBellFile), group (Bell)
-#: kcmaccessibilitybell.kcfg:17
-#, kde-format
-msgid "Sound file for the Bell"
-msgstr "Fișier cu sunet pentru clopoțel"
-
-#. i18n: ectx: label, entry (VisibleBell), group (Bell)
-#: kcmaccessibilitybell.kcfg:20
-#, kde-format
-msgid "Use a visual bell instead of a sound"
-msgstr "Folosește clopoțel vizual în loc de sunet"
-
-#. i18n: ectx: label, entry (InvertScreen), group (Bell)
-#: kcmaccessibilitybell.kcfg:24
-#, kde-format
-msgid "Invert the system colors on the bell"
-msgstr "Inversează culorile sistemului la clopoțel"
-
-#. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
-#: kcmaccessibilitybell.kcfg:28
-#, kde-format
-msgid "Color of the Visible Bell"
-msgstr "Culoarea clopoțelului vizibil"
-
-#. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
-#: kcmaccessibilitybell.kcfg:32
-#, kde-format
-msgid "Duration of the Visible Bell"
-msgstr "Durata clopoțelului vizibil"
-
-#. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:9
-#, kde-format
-msgid "Use sticky Keys"
-msgstr "Folosește taste lipicioase"
-
-#. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:13
-#, kde-format
-msgid "Lock the sticky keys"
-msgstr "Blochează taste lipicioase"
-
-#. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:17
-#, kde-format
-msgid "Turn sticky keys off when two keys are pressed simultaneously"
-msgstr ""
-"(Dez)activează tastele lipicioase când două taste sunt apăsate simultan"
-
-#. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:21
-#, kde-format
-msgid "Beep on a sticky key press"
-msgstr "Piuie la apăsarea unei taste lipicioase"
-
-#. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:25
-#, kde-format
-msgid "Toggle keys beep"
-msgstr "Comută piuitul tastelor"
-
-#. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:29
-#, kde-format
-msgid "Notify when a keyboard modifier is pressed"
-msgstr "Notifică când e apăsat un modificator de tastatură"
-
-#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:33
-#, kde-format
-msgid "Use a timeout delay"
-msgstr "Folosește întârziere pentru expirare"
-
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:37
-#, kde-format
-msgid "Delay for timeout"
-msgstr "Întârziere pentru expirare"
-
-#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:41
-#, kde-format
-msgid "Use a beep for access"
-msgstr "Folosește piuit pentru acces"
-
-#. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:9
-#, kde-format
-msgid "Use slow keypresses"
-msgstr "Folosește apăsări lente de taste"
-
-#. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:13
-#, kde-format
-msgid "Delay for the key press"
-msgstr "Întârziere pentru apăsarea tastei"
-
-#. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:17
-#, kde-format
-msgid "Beep on a slow keypress"
-msgstr "Piuie la apăsare lentă de tastă"
-
-#. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:21
-#, kde-format
-msgid "Beep on an accepted keypress"
-msgstr "Piuie la apăsare de tastă acceptată"
-
-#. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:25
-#, kde-format
-msgid "Beep on a rejected keypress"
-msgstr "Piuie la apăsare de tastă respinsă"
-
-#. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:29
-#, kde-format
-msgid "Bounce Keys"
-msgstr "Taste săritoare"
-
-#. i18n: ectx: label, entry (BounceKeysDelay), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:33
-#, kde-format
-msgid "Use a delay for bouncing"
-msgstr "Folosește întârziere pentru salturi"
-
-#. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:37
-#, kde-format
-msgid "Beep if a bounce key event is rejected"
-msgstr "Piuie dacă e respins un eveniment de tastă săritoare"
-
-#. i18n: ectx: label, entry (MouseKeys), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:9
-#, kde-format
-msgid "Use keys to control the mouse"
-msgstr "Folosește taste pentru a controla mausul"
-
-#. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:13
-#, kde-format
-msgid "Delay for the mouse movement"
-msgstr "Întârziere pentru mișcarea mausului"
-
-#. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:17
-#, kde-format
-msgid "Repetition interval for the mouse movement"
-msgstr "Interval de repetare pentru mișcarea mausului"
-
-#. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:21
-#, kde-format
-msgid "Time to hit maximum velocity"
-msgstr "Durata până la atingerea vitezei maxime"
-
-#. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:25
-#, kde-format
-msgid "Maximum Velocity"
-msgstr "Viteză maximă"
-
-#. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:29
-#, kde-format
-msgid "Mouse Key Curve"
-msgstr "Curbă pentru taste maus"
-
-#. i18n: ectx: label, entry (Gestures), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:35
-#, kde-format
-msgid "Use Gestures"
-msgstr "Folosește gesturi"
-
-#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:39
-#, kde-format
-msgid "Ask for Confirmation for a gesture"
-msgstr "Cere confirmarea pentru un gest"
-
-#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:43
-#, kde-format
-msgid "Confirm access to the Keyboard"
-msgstr "Confirmă accesul la tastatură"
-
-#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
-#: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
-#, kde-format
-msgid "Enable Screen Reader"
-msgstr "Activează cititorul de ecran"
 
 #: package/contents/ui/Bell.qml:20
 #, kde-format
@@ -575,6 +370,11 @@ msgstr "Viteză maximă:"
 msgid "Acceleration profile:"
 msgstr "Profil de accelerare:"
 
+#: package/contents/ui/ScreenReader.qml:17
+#, kde-format
+msgid "Enable Screen Reader"
+msgstr "Activează cititorul de ecran"
+
 #: package/contents/ui/ScreenReader.qml:28
 #, kde-format
 msgid "Launch Orca Screen Reader Configuration…"
@@ -598,6 +398,106 @@ msgstr ""
 "Se pare că cititorul de ecran Orca nu e instalat. Instalați-l înainte de a "
 "încerca să folosiți această caracteristică, apoi ieșiți din sistem sau "
 "reporniți-l"
+
+#~ msgid "Use System Bell"
+#~ msgstr "Folosește clopoțel de sistem"
+
+#~ msgid "Customize system bell"
+#~ msgstr "Personalizează clopoțelul de sistem"
+
+#~ msgid "Sound file for the Bell"
+#~ msgstr "Fișier cu sunet pentru clopoțel"
+
+#~ msgid "Use a visual bell instead of a sound"
+#~ msgstr "Folosește clopoțel vizual în loc de sunet"
+
+#~ msgid "Invert the system colors on the bell"
+#~ msgstr "Inversează culorile sistemului la clopoțel"
+
+#~ msgid "Color of the Visible Bell"
+#~ msgstr "Culoarea clopoțelului vizibil"
+
+#~ msgid "Duration of the Visible Bell"
+#~ msgstr "Durata clopoțelului vizibil"
+
+#~ msgid "Use sticky Keys"
+#~ msgstr "Folosește taste lipicioase"
+
+#~ msgid "Lock the sticky keys"
+#~ msgstr "Blochează taste lipicioase"
+
+#~ msgid "Turn sticky keys off when two keys are pressed simultaneously"
+#~ msgstr ""
+#~ "(Dez)activează tastele lipicioase când două taste sunt apăsate simultan"
+
+#~ msgid "Beep on a sticky key press"
+#~ msgstr "Piuie la apăsarea unei taste lipicioase"
+
+#~ msgid "Toggle keys beep"
+#~ msgstr "Comută piuitul tastelor"
+
+#~ msgid "Notify when a keyboard modifier is pressed"
+#~ msgstr "Notifică când e apăsat un modificator de tastatură"
+
+#~ msgid "Use a timeout delay"
+#~ msgstr "Folosește întârziere pentru expirare"
+
+#~ msgid "Delay for timeout"
+#~ msgstr "Întârziere pentru expirare"
+
+#~ msgid "Use a beep for access"
+#~ msgstr "Folosește piuit pentru acces"
+
+#~ msgid "Use slow keypresses"
+#~ msgstr "Folosește apăsări lente de taste"
+
+#~ msgid "Delay for the key press"
+#~ msgstr "Întârziere pentru apăsarea tastei"
+
+#~ msgid "Beep on a slow keypress"
+#~ msgstr "Piuie la apăsare lentă de tastă"
+
+#~ msgid "Beep on an accepted keypress"
+#~ msgstr "Piuie la apăsare de tastă acceptată"
+
+#~ msgid "Beep on a rejected keypress"
+#~ msgstr "Piuie la apăsare de tastă respinsă"
+
+#~ msgid "Bounce Keys"
+#~ msgstr "Taste săritoare"
+
+#~ msgid "Use a delay for bouncing"
+#~ msgstr "Folosește întârziere pentru salturi"
+
+#~ msgid "Beep if a bounce key event is rejected"
+#~ msgstr "Piuie dacă e respins un eveniment de tastă săritoare"
+
+#~ msgid "Use keys to control the mouse"
+#~ msgstr "Folosește taste pentru a controla mausul"
+
+#~ msgid "Delay for the mouse movement"
+#~ msgstr "Întârziere pentru mișcarea mausului"
+
+#~ msgid "Repetition interval for the mouse movement"
+#~ msgstr "Interval de repetare pentru mișcarea mausului"
+
+#~ msgid "Time to hit maximum velocity"
+#~ msgstr "Durata până la atingerea vitezei maxime"
+
+#~ msgid "Maximum Velocity"
+#~ msgstr "Viteză maximă"
+
+#~ msgid "Mouse Key Curve"
+#~ msgstr "Curbă pentru taste maus"
+
+#~ msgid "Use Gestures"
+#~ msgstr "Folosește gesturi"
+
+#~ msgid "Ask for Confirmation for a gesture"
+#~ msgstr "Cere confirmarea pentru un gest"
+
+#~ msgid "Confirm access to the Keyboard"
+#~ msgstr "Confirmă accesul la tastatură"
 
 #~ msgid "Maximum velocity"
 #~ msgstr "Viteză maximă"

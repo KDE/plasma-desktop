@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-17 00:51+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2025-03-30 19:13+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -37,14 +37,12 @@ msgstr "再起動"
 msgid "Visual behavior:"
 msgstr "視覚的挙動:"
 
-#. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
-#: package/contents/ui/main.qml:51 workspaceoptions_plasmasettings.kcfg:9
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "ホバー時に情報ツールチップを表示"
 
-#. i18n: ectx: label, entry (osdEnabled), group (OSD)
-#: package/contents/ui/main.qml:62 workspaceoptions_plasmasettings.kcfg:15
+#: package/contents/ui/main.qml:62
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "状態変更時に視覚フィードバックを表示"
@@ -174,53 +172,30 @@ msgstr ""
 "タッチモードをオンにすると、ユーザインターフェースが大きくなりタッチ操作がし"
 "やすくなります。"
 
-#. i18n: ectx: label, entry (singleClick), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:9
-#, kde-format
-msgid "Single click to open files"
-msgstr "シングルクリックでファイルを開く"
+#~ msgid "Single click to open files"
+#~ msgstr "シングルクリックでファイルを開く"
 
-#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:13
-#, kde-format
-msgid "Animation speed"
-msgstr "アニメーションの速度"
+#~ msgid "Animation speed"
+#~ msgstr "アニメーションの速度"
 
-#. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:17
-#, kde-format
-msgid "Left-click in scrollbar track moves scrollbar by one page"
-msgstr "スクロールエリアを左クリックしてスクロールバーを1ページ分動かす"
+#~ msgid "Left-click in scrollbar track moves scrollbar by one page"
+#~ msgstr "スクロールエリアを左クリックしてスクロールバーを1ページ分動かす"
 
-#. i18n: ectx: label, entry (tabletMode), group (Input)
-#: workspaceoptions_kwinsettings.kcfg:9
-#, kde-format
-msgid "Automatically switch to touch-optimized mode"
-msgstr "自動的にタッチモードに切り替え"
+#~ msgid "Automatically switch to touch-optimized mode"
+#~ msgstr "自動的にタッチモードに切り替え"
 
-#. i18n: ectx: label, entry (primarySelection), group (Wayland)
-#: workspaceoptions_kwinsettings.kcfg:15
-#, kde-format
-msgid "Enable middle click selection pasting"
-msgstr "中クリックでの貼り付けを有効化"
+#~ msgid "Enable middle click selection pasting"
+#~ msgstr "中クリックでの貼り付けを有効化"
 
-#. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
-#: workspaceoptions_plasmasettings.kcfg:16
-#, kde-format
-msgid ""
-"Show an on-screen display to indicate status changes such as brightness or "
-"volume"
-msgstr ""
-"明るさや音量などの状態が変更された時にオンスクリーンディスプレイ (OSD) を表示"
+#~ msgid ""
+#~ "Show an on-screen display to indicate status changes such as brightness "
+#~ "or volume"
+#~ msgstr ""
+#~ "明るさや音量などの状態が変更された時にオンスクリーンディスプレイ (OSD) を"
+#~ "表示"
 
-#. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
-#: workspaceoptions_plasmasettings.kcfg:20
-#, kde-format
-msgid "OSD on layout change"
-msgstr "レイアウト変更時に OSD を表示"
+#~ msgid "OSD on layout change"
+#~ msgstr "レイアウト変更時に OSD を表示"
 
-#. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
-#: workspaceoptions_plasmasettings.kcfg:21
-#, kde-format
-msgid "Show a popup on layout changes"
-msgstr "レイアウト変更時にポップアップを表示"
+#~ msgid "Show a popup on layout changes"
+#~ msgstr "レイアウト変更時にポップアップを表示"

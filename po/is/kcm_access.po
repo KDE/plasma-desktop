@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-16 02:45+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-03-15 20:25+0000\n"
 "Last-Translator: gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -87,211 +87,6 @@ msgstr "Tókst ekki að velja gsettings-stillingar fyrir Orca: \"%1\" mistókst.
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Villa: Tókst ekki að keyra \"orca --setup\""
-
-#. i18n: ectx: label, entry (SystemBell), group (Bell)
-#: kcmaccessibilitybell.kcfg:9
-#, kde-format
-msgid "Use System Bell"
-msgstr "Nota kerfisbjöllu"
-
-#. i18n: ectx: label, entry (CustomBell), group (Bell)
-#: kcmaccessibilitybell.kcfg:13
-#, kde-format
-msgid "Customize system bell"
-msgstr "Grunnstilla kerfisbjöllu"
-
-#. i18n: ectx: label, entry (CustomBellFile), group (Bell)
-#: kcmaccessibilitybell.kcfg:17
-#, kde-format
-msgid "Sound file for the Bell"
-msgstr "Hljóðskrá fyrir bjöllu"
-
-#. i18n: ectx: label, entry (VisibleBell), group (Bell)
-#: kcmaccessibilitybell.kcfg:20
-#, kde-format
-msgid "Use a visual bell instead of a sound"
-msgstr "Nota sjónræna bjöllu í staðinn fyrir hljóð"
-
-#. i18n: ectx: label, entry (InvertScreen), group (Bell)
-#: kcmaccessibilitybell.kcfg:24
-#, kde-format
-msgid "Invert the system colors on the bell"
-msgstr "Umsnúa kerfislitum með bjöllu"
-
-#. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
-#: kcmaccessibilitybell.kcfg:28
-#, kde-format
-msgid "Color of the Visible Bell"
-msgstr "Litur sjónrænu bjöllunnar"
-
-#. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
-#: kcmaccessibilitybell.kcfg:32
-#, kde-format
-msgid "Duration of the Visible Bell"
-msgstr "Tímalengd sjónrænu bjöllunnar"
-
-#. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:9
-#, kde-format
-msgid "Use sticky Keys"
-msgstr "Nota festilykla"
-
-#. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:13
-#, kde-format
-msgid "Lock the sticky keys"
-msgstr "Læsa festilyklunum"
-
-#. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:17
-#, kde-format
-msgid "Turn sticky keys off when two keys are pressed simultaneously"
-msgstr "Slökkva á festilyklum þegar ýtt er samtímis á tvo lykla"
-
-#. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:21
-#, kde-format
-msgid "Beep on a sticky key press"
-msgstr "Píp heyrist þegar ýtt er á festilykla"
-
-#. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:25
-#, kde-format
-msgid "Toggle keys beep"
-msgstr "Víxla lyklapípi"
-
-#. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:29
-#, kde-format
-msgid "Notify when a keyboard modifier is pressed"
-msgstr "Láta vita þegar ýtt er á breytilykil"
-
-#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:33
-#, kde-format
-msgid "Use a timeout delay"
-msgstr "Nota tímamörk"
-
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:37
-#, fuzzy, kde-format
-#| msgid "Delay for the mouse movement"
-msgid "Delay for timeout"
-msgstr "Töf fyrir músarhreyfinguna"
-
-#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:41
-#, kde-format
-msgid "Use a beep for access"
-msgstr "Nota píp fyrir aðgang"
-
-#. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:9
-#, kde-format
-msgid "Use slow keypresses"
-msgstr "Nota hæga lykla"
-
-#. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:13
-#, kde-format
-msgid "Delay for the key press"
-msgstr "Töf þegar ýtt er á lykil"
-
-#. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:17
-#, kde-format
-msgid "Beep on a slow keypress"
-msgstr "Píp heyrist þegar ýtt er á hæga lykla"
-
-#. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:21
-#, kde-format
-msgid "Beep on an accepted keypress"
-msgstr "Píp við samþykkta lyklaborðsaðgerð"
-
-#. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:25
-#, kde-format
-msgid "Beep on a rejected keypress"
-msgstr "Píp við ósamþykkta lyklaborðsaðgerð"
-
-#. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:29
-#, kde-format
-msgid "Bounce Keys"
-msgstr "Hopplyklar"
-
-#. i18n: ectx: label, entry (BounceKeysDelay), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:33
-#, kde-format
-msgid "Use a delay for bouncing"
-msgstr "Nota töf fyrir hopp"
-
-#. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:37
-#, kde-format
-msgid "Beep if a bounce key event is rejected"
-msgstr "Píp ef hopplyklaaðgerð er hafnað"
-
-#. i18n: ectx: label, entry (MouseKeys), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:9
-#, kde-format
-msgid "Use keys to control the mouse"
-msgstr "Nota lykla til að stjórna músinni"
-
-#. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:13
-#, kde-format
-msgid "Delay for the mouse movement"
-msgstr "Töf fyrir músarhreyfinguna"
-
-#. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:17
-#, kde-format
-msgid "Repetition interval for the mouse movement"
-msgstr "Endurtekningarbil fyrir músarhreyfingu"
-
-#. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:21
-#, kde-format
-msgid "Time to hit maximum velocity"
-msgstr "Tími þegar hámarkshraða er náð"
-
-#. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:25
-#, kde-format
-msgid "Maximum Velocity"
-msgstr "Hámarkshraði"
-
-#. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:29
-#, kde-format
-msgid "Mouse Key Curve"
-msgstr "Kúrva músarlykla"
-
-#. i18n: ectx: label, entry (Gestures), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:35
-#, kde-format
-msgid "Use Gestures"
-msgstr "Nota hreyfiskipanir"
-
-#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:39
-#, kde-format
-msgid "Ask for Confirmation for a gesture"
-msgstr "Biðja um staðfestingu fyrir hreyfiskipun"
-
-#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:43
-#, kde-format
-msgid "Confirm access to the Keyboard"
-msgstr "Staðfesta aðgang að lyklaborðinu"
-
-#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
-#: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
-#, kde-format
-msgid "Enable Screen Reader"
-msgstr "Virkja skjálesara"
 
 #: package/contents/ui/Bell.qml:20
 #, kde-format
@@ -580,6 +375,11 @@ msgstr "Hámarkshraði:"
 msgid "Acceleration profile:"
 msgstr "Hröðunarsnið:"
 
+#: package/contents/ui/ScreenReader.qml:17
+#, kde-format
+msgid "Enable Screen Reader"
+msgstr "Virkja skjálesara"
+
 #: package/contents/ui/ScreenReader.qml:28
 #, kde-format
 msgid "Launch Orca Screen Reader Configuration…"
@@ -602,6 +402,107 @@ msgid ""
 msgstr ""
 "Orca skjálesarinn virðist ekki vera uppsettur. Settu forritið upp áður en þú "
 "notar þennan eiginleika, og skráðu þig svo út eða endurræstu"
+
+#~ msgid "Use System Bell"
+#~ msgstr "Nota kerfisbjöllu"
+
+#~ msgid "Customize system bell"
+#~ msgstr "Grunnstilla kerfisbjöllu"
+
+#~ msgid "Sound file for the Bell"
+#~ msgstr "Hljóðskrá fyrir bjöllu"
+
+#~ msgid "Use a visual bell instead of a sound"
+#~ msgstr "Nota sjónræna bjöllu í staðinn fyrir hljóð"
+
+#~ msgid "Invert the system colors on the bell"
+#~ msgstr "Umsnúa kerfislitum með bjöllu"
+
+#~ msgid "Color of the Visible Bell"
+#~ msgstr "Litur sjónrænu bjöllunnar"
+
+#~ msgid "Duration of the Visible Bell"
+#~ msgstr "Tímalengd sjónrænu bjöllunnar"
+
+#~ msgid "Use sticky Keys"
+#~ msgstr "Nota festilykla"
+
+#~ msgid "Lock the sticky keys"
+#~ msgstr "Læsa festilyklunum"
+
+#~ msgid "Turn sticky keys off when two keys are pressed simultaneously"
+#~ msgstr "Slökkva á festilyklum þegar ýtt er samtímis á tvo lykla"
+
+#~ msgid "Beep on a sticky key press"
+#~ msgstr "Píp heyrist þegar ýtt er á festilykla"
+
+#~ msgid "Toggle keys beep"
+#~ msgstr "Víxla lyklapípi"
+
+#~ msgid "Notify when a keyboard modifier is pressed"
+#~ msgstr "Láta vita þegar ýtt er á breytilykil"
+
+#~ msgid "Use a timeout delay"
+#~ msgstr "Nota tímamörk"
+
+#, fuzzy
+#~| msgid "Delay for the mouse movement"
+#~ msgid "Delay for timeout"
+#~ msgstr "Töf fyrir músarhreyfinguna"
+
+#~ msgid "Use a beep for access"
+#~ msgstr "Nota píp fyrir aðgang"
+
+#~ msgid "Use slow keypresses"
+#~ msgstr "Nota hæga lykla"
+
+#~ msgid "Delay for the key press"
+#~ msgstr "Töf þegar ýtt er á lykil"
+
+#~ msgid "Beep on a slow keypress"
+#~ msgstr "Píp heyrist þegar ýtt er á hæga lykla"
+
+#~ msgid "Beep on an accepted keypress"
+#~ msgstr "Píp við samþykkta lyklaborðsaðgerð"
+
+#~ msgid "Beep on a rejected keypress"
+#~ msgstr "Píp við ósamþykkta lyklaborðsaðgerð"
+
+#~ msgid "Bounce Keys"
+#~ msgstr "Hopplyklar"
+
+#~ msgid "Use a delay for bouncing"
+#~ msgstr "Nota töf fyrir hopp"
+
+#~ msgid "Beep if a bounce key event is rejected"
+#~ msgstr "Píp ef hopplyklaaðgerð er hafnað"
+
+#~ msgid "Use keys to control the mouse"
+#~ msgstr "Nota lykla til að stjórna músinni"
+
+#~ msgid "Delay for the mouse movement"
+#~ msgstr "Töf fyrir músarhreyfinguna"
+
+#~ msgid "Repetition interval for the mouse movement"
+#~ msgstr "Endurtekningarbil fyrir músarhreyfingu"
+
+#~ msgid "Time to hit maximum velocity"
+#~ msgstr "Tími þegar hámarkshraða er náð"
+
+#~ msgid "Maximum Velocity"
+#~ msgstr "Hámarkshraði"
+
+#~ msgid "Mouse Key Curve"
+#~ msgstr "Kúrva músarlykla"
+
+#~ msgid "Use Gestures"
+#~ msgstr "Nota hreyfiskipanir"
+
+#~ msgid "Ask for Confirmation for a gesture"
+#~ msgstr "Biðja um staðfestingu fyrir hreyfiskipun"
+
+#~ msgid "Confirm access to the Keyboard"
+#~ msgstr "Staðfesta aðgang að lyklaborðinu"
 
 #~ msgid "Maximum velocity"
 #~ msgstr "Hámarkshraði"

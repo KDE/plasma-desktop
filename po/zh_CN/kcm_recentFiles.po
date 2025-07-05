@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 02:26+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2024-03-30 19:46\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -16,30 +16,6 @@ msgstr ""
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /kf5-stable/messages/plasma-desktop/kcm_recentFiles.pot\n"
 "X-Crowdin-File-ID: 40978\n"
-
-#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:10
-#, kde-format
-msgid "How many months keep the activity history"
-msgstr "活动历史记录保留的月数"
-
-#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:17
-#, kde-format
-msgid "Which data to keep in activity history"
-msgstr "活动历史记录保存的数据"
-
-#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:21
-#, kde-format
-msgid "List of Applications whose activity history to save"
-msgstr "保存活动历史的应用程序列表"
-
-#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:24
-#, kde-format
-msgid "List of Applications whose activity history not to save"
-msgstr "不保存活动历史的应用程序列表"
 
 #: kcm_recentFiles.cpp:64
 #, kde-format
@@ -80,50 +56,38 @@ msgctxt "for in 'keep history for 5 months'"
 msgid "For "
 msgstr "保存时间 "
 
-#. i18n: ectx: property (text), widget (KMessageWidget, messageWidget)
-#: ui/RecentFiles.ui:17
-#, kde-format
-msgid "Cleared the activity history."
-msgstr "已清除活动历史记录。"
+#~ msgid "How many months keep the activity history"
+#~ msgstr "活动历史记录保留的月数"
 
-#. i18n: ectx: property (text), widget (QLabel, labelKeepHistory)
-#: ui/RecentFiles.ui:36
-#, kde-format
-msgid "Keep history:"
-msgstr "保存历史记录："
+#~ msgid "Which data to keep in activity history"
+#~ msgstr "活动历史记录保存的数据"
 
-#. i18n: ectx: property (text), widget (QPushButton, buttonClearRecentHistory)
-#: ui/RecentFiles.ui:48
-#, kde-format
-msgid "Clear History"
-msgstr "清除历史记录"
+#~ msgid "List of Applications whose activity history to save"
+#~ msgstr "保存活动历史的应用程序列表"
 
-#. i18n: ectx: property (text), widget (QRadioButton, radioRememberAllApplications)
-#: ui/RecentFiles.ui:70
-#, kde-format
-msgid "For a&ll applications"
-msgstr "对所有程序(&L)"
+#~ msgid "List of Applications whose activity history not to save"
+#~ msgstr "不保存活动历史的应用程序列表"
 
-#. i18n: ectx: property (text), widget (QRadioButton, radioDontRememberApplications)
-#: ui/RecentFiles.ui:80
-#, kde-format
-msgid "&Do not remember"
-msgstr "不要记住(&D)"
+#~ msgid "Cleared the activity history."
+#~ msgstr "已清除活动历史记录。"
 
-#. i18n: ectx: property (text), widget (QRadioButton, radioRememberSpecificApplications)
-#: ui/RecentFiles.ui:87
-#, kde-format
-msgid "O&nly for specific applications:"
-msgstr "只对特定程序(&N)："
+#~ msgid "Keep history:"
+#~ msgstr "保存历史记录："
 
-#. i18n: ectx: property (text), widget (QLabel, labelRememberDocuments)
-#: ui/RecentFiles.ui:97
-#, kde-format
-msgid "Remember opened documents:"
-msgstr "记住打开过的文档："
+#~ msgid "Clear History"
+#~ msgstr "清除历史记录"
 
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_blockedByDefault)
-#: ui/RecentFiles.ui:130
-#, kde-format
-msgid "Blacklist applications not on the list"
-msgstr "黑名单中的应用程序不显示在列表中"
+#~ msgid "For a&ll applications"
+#~ msgstr "对所有程序(&L)"
+
+#~ msgid "&Do not remember"
+#~ msgstr "不要记住(&D)"
+
+#~ msgid "O&nly for specific applications:"
+#~ msgstr "只对特定程序(&N)："
+
+#~ msgid "Remember opened documents:"
+#~ msgstr "记住打开过的文档："
+
+#~ msgid "Blacklist applications not on the list"
+#~ msgstr "黑名单中的应用程序不显示在列表中"

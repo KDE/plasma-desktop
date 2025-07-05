@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-16 02:45+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2024-03-30 19:46\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -81,210 +81,6 @@ msgstr "无法为 Orca 设置 gsettings：“%1”失败"
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "错误：无法启动“orca --setup”"
-
-#. i18n: ectx: label, entry (SystemBell), group (Bell)
-#: kcmaccessibilitybell.kcfg:9
-#, kde-format
-msgid "Use System Bell"
-msgstr "使用系统声音提示"
-
-#. i18n: ectx: label, entry (CustomBell), group (Bell)
-#: kcmaccessibilitybell.kcfg:13
-#, kde-format
-msgid "Customize system bell"
-msgstr "自定义系统声音提示"
-
-#. i18n: ectx: label, entry (CustomBellFile), group (Bell)
-#: kcmaccessibilitybell.kcfg:17
-#, kde-format
-msgid "Sound file for the Bell"
-msgstr "声音提示音频文件"
-
-#. i18n: ectx: label, entry (VisibleBell), group (Bell)
-#: kcmaccessibilitybell.kcfg:20
-#, kde-format
-msgid "Use a visual bell instead of a sound"
-msgstr "使用视觉提示替代声音"
-
-#. i18n: ectx: label, entry (InvertScreen), group (Bell)
-#: kcmaccessibilitybell.kcfg:24
-#, kde-format
-msgid "Invert the system colors on the bell"
-msgstr "提示时反相显示系统颜色"
-
-#. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
-#: kcmaccessibilitybell.kcfg:28
-#, kde-format
-msgid "Color of the Visible Bell"
-msgstr "视觉提示颜色"
-
-#. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
-#: kcmaccessibilitybell.kcfg:32
-#, kde-format
-msgid "Duration of the Visible Bell"
-msgstr "视觉提示持续时间"
-
-#. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:9
-#, kde-format
-msgid "Use sticky Keys"
-msgstr "使用粘滞键"
-
-#. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:13
-#, kde-format
-msgid "Lock the sticky keys"
-msgstr "锁定粘滞键"
-
-#. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:17
-#, kde-format
-msgid "Turn sticky keys off when two keys are pressed simultaneously"
-msgstr "同时按下两个按键时关闭粘滞键"
-
-#. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:21
-#, kde-format
-msgid "Beep on a sticky key press"
-msgstr "按下粘滞键时发出声音提示"
-
-#. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:25
-#, kde-format
-msgid "Toggle keys beep"
-msgstr "按键声音提示开关"
-
-#. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:29
-#, kde-format
-msgid "Notify when a keyboard modifier is pressed"
-msgstr "按下键盘修饰键时通知"
-
-#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:33
-#, kde-format
-msgid "Use a timeout delay"
-msgstr "使用超时延迟"
-
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:37
-#, kde-format
-msgid "Delay for timeout"
-msgstr "超时延迟"
-
-#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:41
-#, kde-format
-msgid "Use a beep for access"
-msgstr "为无障碍辅助功能使用声音提示"
-
-#. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:9
-#, kde-format
-msgid "Use slow keypresses"
-msgstr "使用慢速键"
-
-#. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:13
-#, kde-format
-msgid "Delay for the key press"
-msgstr "按键输入的延迟时间"
-
-#. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:17
-#, kde-format
-msgid "Beep on a slow keypress"
-msgstr "按下慢速键时发出声音提示"
-
-#. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:21
-#, kde-format
-msgid "Beep on an accepted keypress"
-msgstr "按键被接受时发出声音提示"
-
-#. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:25
-#, kde-format
-msgid "Beep on a rejected keypress"
-msgstr "按键被拒绝时发出系统提示"
-
-#. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:29
-#, kde-format
-msgid "Bounce Keys"
-msgstr "防抖键"
-
-#. i18n: ectx: label, entry (BounceKeysDelay), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:33
-#, kde-format
-msgid "Use a delay for bouncing"
-msgstr "使用延迟防止重复输入"
-
-#. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:37
-#, kde-format
-msgid "Beep if a bounce key event is rejected"
-msgstr "防抖键拒绝按键输入时发出声音提示"
-
-#. i18n: ectx: label, entry (MouseKeys), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:9
-#, kde-format
-msgid "Use keys to control the mouse"
-msgstr "使用键盘控制鼠标"
-
-#. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:13
-#, kde-format
-msgid "Delay for the mouse movement"
-msgstr "鼠标移动的延迟时间"
-
-#. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:17
-#, kde-format
-msgid "Repetition interval for the mouse movement"
-msgstr "鼠标移动的重复间隔时间"
-
-#. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:21
-#, kde-format
-msgid "Time to hit maximum velocity"
-msgstr "到达最大速度所需时间"
-
-#. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:25
-#, kde-format
-msgid "Maximum Velocity"
-msgstr "最大速度"
-
-#. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:29
-#, kde-format
-msgid "Mouse Key Curve"
-msgstr "鼠标键加速曲线"
-
-#. i18n: ectx: label, entry (Gestures), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:35
-#, kde-format
-msgid "Use Gestures"
-msgstr "使用手势"
-
-#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:39
-#, kde-format
-msgid "Ask for Confirmation for a gesture"
-msgstr "请求确认手势"
-
-#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:43
-#, kde-format
-msgid "Confirm access to the Keyboard"
-msgstr "确认访问键盘"
-
-#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
-#: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
-#, kde-format
-msgid "Enable Screen Reader"
-msgstr "启用屏幕阅读器"
 
 #: package/contents/ui/Bell.qml:20
 #, kde-format
@@ -570,6 +366,11 @@ msgstr "最大速度："
 msgid "Acceleration profile:"
 msgstr "加速曲线："
 
+#: package/contents/ui/ScreenReader.qml:17
+#, kde-format
+msgid "Enable Screen Reader"
+msgstr "启用屏幕阅读器"
+
 #: package/contents/ui/ScreenReader.qml:28
 #, kde-format
 msgid "Launch Orca Screen Reader Configuration…"
@@ -588,3 +389,102 @@ msgid ""
 "It appears that the Orca Screen Reader is not installed. Please install it "
 "before trying to use this feature, and then log out or reboot"
 msgstr "Orca 屏幕阅读器可能尚未安装。请先安装它，然后注销或者重新启动系统"
+
+#~ msgid "Use System Bell"
+#~ msgstr "使用系统声音提示"
+
+#~ msgid "Customize system bell"
+#~ msgstr "自定义系统声音提示"
+
+#~ msgid "Sound file for the Bell"
+#~ msgstr "声音提示音频文件"
+
+#~ msgid "Use a visual bell instead of a sound"
+#~ msgstr "使用视觉提示替代声音"
+
+#~ msgid "Invert the system colors on the bell"
+#~ msgstr "提示时反相显示系统颜色"
+
+#~ msgid "Color of the Visible Bell"
+#~ msgstr "视觉提示颜色"
+
+#~ msgid "Duration of the Visible Bell"
+#~ msgstr "视觉提示持续时间"
+
+#~ msgid "Use sticky Keys"
+#~ msgstr "使用粘滞键"
+
+#~ msgid "Lock the sticky keys"
+#~ msgstr "锁定粘滞键"
+
+#~ msgid "Turn sticky keys off when two keys are pressed simultaneously"
+#~ msgstr "同时按下两个按键时关闭粘滞键"
+
+#~ msgid "Beep on a sticky key press"
+#~ msgstr "按下粘滞键时发出声音提示"
+
+#~ msgid "Toggle keys beep"
+#~ msgstr "按键声音提示开关"
+
+#~ msgid "Notify when a keyboard modifier is pressed"
+#~ msgstr "按下键盘修饰键时通知"
+
+#~ msgid "Use a timeout delay"
+#~ msgstr "使用超时延迟"
+
+#~ msgid "Delay for timeout"
+#~ msgstr "超时延迟"
+
+#~ msgid "Use a beep for access"
+#~ msgstr "为无障碍辅助功能使用声音提示"
+
+#~ msgid "Use slow keypresses"
+#~ msgstr "使用慢速键"
+
+#~ msgid "Delay for the key press"
+#~ msgstr "按键输入的延迟时间"
+
+#~ msgid "Beep on a slow keypress"
+#~ msgstr "按下慢速键时发出声音提示"
+
+#~ msgid "Beep on an accepted keypress"
+#~ msgstr "按键被接受时发出声音提示"
+
+#~ msgid "Beep on a rejected keypress"
+#~ msgstr "按键被拒绝时发出系统提示"
+
+#~ msgid "Bounce Keys"
+#~ msgstr "防抖键"
+
+#~ msgid "Use a delay for bouncing"
+#~ msgstr "使用延迟防止重复输入"
+
+#~ msgid "Beep if a bounce key event is rejected"
+#~ msgstr "防抖键拒绝按键输入时发出声音提示"
+
+#~ msgid "Use keys to control the mouse"
+#~ msgstr "使用键盘控制鼠标"
+
+#~ msgid "Delay for the mouse movement"
+#~ msgstr "鼠标移动的延迟时间"
+
+#~ msgid "Repetition interval for the mouse movement"
+#~ msgstr "鼠标移动的重复间隔时间"
+
+#~ msgid "Time to hit maximum velocity"
+#~ msgstr "到达最大速度所需时间"
+
+#~ msgid "Maximum Velocity"
+#~ msgstr "最大速度"
+
+#~ msgid "Mouse Key Curve"
+#~ msgstr "鼠标键加速曲线"
+
+#~ msgid "Use Gestures"
+#~ msgstr "使用手势"
+
+#~ msgid "Ask for Confirmation for a gesture"
+#~ msgstr "请求确认手势"
+
+#~ msgid "Confirm access to the Keyboard"
+#~ msgstr "确认访问键盘"

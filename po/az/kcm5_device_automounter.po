@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-10-17 16:17+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -56,66 +56,6 @@ msgstr "Kai Uwe Broulik"
 #, kde-format
 msgid "Plasma 5 Port"
 msgstr "Plasma 5 Port"
-
-#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
-#: DeviceAutomounterKCM.ui:17
-#, kde-format
-msgid ""
-"This list contains the storage devices known to the system. If \"Automount "
-"on Login\" is checked, the device will be automatically mounted even though "
-"\"Mount all removable media at login\" is unchecked. The same applies for "
-"\"Automount on Attach\"."
-msgstr ""
-"Bu siyahı sistemə tanış olan yaddaş cihazlarından ibarətdir. Əgər \"Girişdə "
-"avtomatik qoşulsun\" seçimi işarələnibsə, hətta \"Bütün çıxarılabilən "
-"qurğular girişdə qoşulsun\" seçimi işarələnməsə də cihaz avtomatik "
-"qoşulacaqdır. Bu həmçinin, \"Əlavə edildikdə avtomatik qoşulsun\" seçiminə "
-"də şamil edilir."
-
-#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
-#: DeviceAutomounterKCM.ui:54
-#, kde-format
-msgid ""
-"Clicking this button causes the selected devices to be 'forgotten'. This is "
-"only useful if \"Only automatically mount removable media that has been "
-"manually mounted before\" is checked. Once a device is forgotten and the "
-"system is set to only automatically mount familiar devices, the device will "
-"not be automatically mounted."
-msgstr ""
-"Bu düyməyə vurmaqda seçilmiş qurğu sistem tərəfindən 'unudulur'. Bu əgər "
-"\"Yalnız əvvəllər əllə qoşulan çıxarılabilən daşıyıcıları avtomatik qoş\" "
-"aktiv olunduqda faydalı ola bilər. Əgər bu aktiv olunubsa və daşıyıcı "
-"unudulan kimi göstərilibsə, həmin daşıyıcı növbəti dəfə avtomatik "
-"qoşulmayacaq."
-
-#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
-#: DeviceAutomounterKCM.ui:57
-#, kde-format
-msgid "Forget Device"
-msgstr "Cihazı Unutmaq"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
-#: DeviceAutomounterKCM.ui:67
-#, kde-format
-msgid ""
-"When this is not checked, only remembered devices will be automatically "
-"mounted. A device is 'remembered' if it has ever been mounted before. For "
-"instance, plugging in a USB media player to charge is not sufficient to "
-"'remember' it - if the files are not accessed, it will not be automatically "
-"mounted the next time it is seen. Once they have been accessed, however, the "
-"device's contents will be automatically made available to the system."
-msgstr ""
-"Əgər işarələnməyibsə yalnız yaddaşda saxlanılan qurğular avtomatik "
-"qoşulacaqdır. Daşıyıcı əgər əvvəl heç olmasa bir dəfə qoşulubsa o zaman o "
-"'yaddaşdadır'. Əgər daşıyıcı, fayl və məlumat mübadiləsi olmadan və yalnız "
-"enerji doldurmaq üçün qoşulubsa o zaman həmin qurğu yaddaşda qoşulan qurğu "
-"kimi qalmayacaq.və növbəti dəfə avtomatik qoşulma baş verməyəcək. "
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
-#: DeviceAutomounterKCM.ui:70
-#, kde-format
-msgid "Automatically mount removable media that have never been mounted before"
-msgstr "Əvvəllər heç vaxt qoşulmayan cihaz avtomatik qoşulsun"
 
 #: DeviceModel.cpp:52
 #, kde-format
@@ -178,6 +118,54 @@ msgstr "Bu cihaz qoşulsuqda avtomatik tanınancaq."
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "Bu cihaz qoşulsuqda avtomatik tanınmayacaq"
+
+#~ msgid ""
+#~ "This list contains the storage devices known to the system. If "
+#~ "\"Automount on Login\" is checked, the device will be automatically "
+#~ "mounted even though \"Mount all removable media at login\" is unchecked. "
+#~ "The same applies for \"Automount on Attach\"."
+#~ msgstr ""
+#~ "Bu siyahı sistemə tanış olan yaddaş cihazlarından ibarətdir. Əgər "
+#~ "\"Girişdə avtomatik qoşulsun\" seçimi işarələnibsə, hətta \"Bütün "
+#~ "çıxarılabilən qurğular girişdə qoşulsun\" seçimi işarələnməsə də cihaz "
+#~ "avtomatik qoşulacaqdır. Bu həmçinin, \"Əlavə edildikdə avtomatik qoşulsun"
+#~ "\" seçiminə də şamil edilir."
+
+#~ msgid ""
+#~ "Clicking this button causes the selected devices to be 'forgotten'. This "
+#~ "is only useful if \"Only automatically mount removable media that has "
+#~ "been manually mounted before\" is checked. Once a device is forgotten and "
+#~ "the system is set to only automatically mount familiar devices, the "
+#~ "device will not be automatically mounted."
+#~ msgstr ""
+#~ "Bu düyməyə vurmaqda seçilmiş qurğu sistem tərəfindən 'unudulur'. Bu əgər "
+#~ "\"Yalnız əvvəllər əllə qoşulan çıxarılabilən daşıyıcıları avtomatik qoş\" "
+#~ "aktiv olunduqda faydalı ola bilər. Əgər bu aktiv olunubsa və daşıyıcı "
+#~ "unudulan kimi göstərilibsə, həmin daşıyıcı növbəti dəfə avtomatik "
+#~ "qoşulmayacaq."
+
+#~ msgid "Forget Device"
+#~ msgstr "Cihazı Unutmaq"
+
+#~ msgid ""
+#~ "When this is not checked, only remembered devices will be automatically "
+#~ "mounted. A device is 'remembered' if it has ever been mounted before. For "
+#~ "instance, plugging in a USB media player to charge is not sufficient to "
+#~ "'remember' it - if the files are not accessed, it will not be "
+#~ "automatically mounted the next time it is seen. Once they have been "
+#~ "accessed, however, the device's contents will be automatically made "
+#~ "available to the system."
+#~ msgstr ""
+#~ "Əgər işarələnməyibsə yalnız yaddaşda saxlanılan qurğular avtomatik "
+#~ "qoşulacaqdır. Daşıyıcı əgər əvvəl heç olmasa bir dəfə qoşulubsa o zaman o "
+#~ "'yaddaşdadır'. Əgər daşıyıcı, fayl və məlumat mübadiləsi olmadan və "
+#~ "yalnız enerji doldurmaq üçün qoşulubsa o zaman həmin qurğu yaddaşda "
+#~ "qoşulan qurğu kimi qalmayacaq.və növbəti dəfə avtomatik qoşulma baş "
+#~ "verməyəcək. "
+
+#~ msgid ""
+#~ "Automatically mount removable media that have never been mounted before"
+#~ msgstr "Əvvəllər heç vaxt qoşulmayan cihaz avtomatik qoşulsun"
 
 #~ msgid ""
 #~ "If any removable storage devices are connected to your system when you "

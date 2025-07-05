@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-17 00:51+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-01-25 07:37+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -35,14 +35,12 @@ msgstr "გადატვრთვა"
 msgid "Visual behavior:"
 msgstr "ვიზუალური ქცევა:"
 
-#. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
-#: package/contents/ui/main.qml:51 workspaceoptions_plasmasettings.kcfg:9
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "თაგუნას გადატარებისას საინფორმაციო მხტუნავების ჩვენება"
 
-#. i18n: ectx: label, entry (osdEnabled), group (OSD)
-#: package/contents/ui/main.qml:62 workspaceoptions_plasmasettings.kcfg:15
+#: package/contents/ui/main.qml:62
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "სტატუსის ცვლილებისას ვიზუალური ნიშნების მიცემა"
@@ -172,53 +170,29 @@ msgstr ""
 "სენსორული ეკრანის რეჟიმში მომხმარებლის ინტერფეისის ძირითადი ნაწილის ზომა "
 "შესამჩნევად იზრდება მათზე თითის მორტყმის გასაადვილებლად."
 
-#. i18n: ectx: label, entry (singleClick), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:9
-#, kde-format
-msgid "Single click to open files"
-msgstr "ერთი წკაპი ფაილის გასახსნელად"
+#~ msgid "Single click to open files"
+#~ msgstr "ერთი წკაპი ფაილის გასახსნელად"
 
-#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:13
-#, kde-format
-msgid "Animation speed"
-msgstr "ანიმაციის სიჩქარე"
+#~ msgid "Animation speed"
+#~ msgstr "ანიმაციის სიჩქარე"
 
-#. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:17
-#, kde-format
-msgid "Left-click in scrollbar track moves scrollbar by one page"
-msgstr "ჩოჩიაზე მარცხენა წკაპი მას 1 გერდით გადააადგილებს"
+#~ msgid "Left-click in scrollbar track moves scrollbar by one page"
+#~ msgstr "ჩოჩიაზე მარცხენა წკაპი მას 1 გერდით გადააადგილებს"
 
-#. i18n: ectx: label, entry (tabletMode), group (Input)
-#: workspaceoptions_kwinsettings.kcfg:9
-#, kde-format
-msgid "Automatically switch to touch-optimized mode"
-msgstr "სენსორულ-ეკრანზე ოპტიმიზირებულ რეჟიმზე ავტომატური გადართვა"
+#~ msgid "Automatically switch to touch-optimized mode"
+#~ msgstr "სენსორულ-ეკრანზე ოპტიმიზირებულ რეჟიმზე ავტომატური გადართვა"
 
-#. i18n: ectx: label, entry (primarySelection), group (Wayland)
-#: workspaceoptions_kwinsettings.kcfg:15
-#, kde-format
-msgid "Enable middle click selection pasting"
-msgstr "შუა-წკაპით მონიშნულის ჩასმის ჩართვა"
+#~ msgid "Enable middle click selection pasting"
+#~ msgstr "შუა-წკაპით მონიშნულის ჩასმის ჩართვა"
 
-#. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
-#: workspaceoptions_plasmasettings.kcfg:16
-#, kde-format
-msgid ""
-"Show an on-screen display to indicate status changes such as brightness or "
-"volume"
-msgstr ""
-"ეკრანზე ჩვენება ისეთი სტატუსების საჩვენებლად, როგორიცაა სიკაშკაშე და ხმა"
+#~ msgid ""
+#~ "Show an on-screen display to indicate status changes such as brightness "
+#~ "or volume"
+#~ msgstr ""
+#~ "ეკრანზე ჩვენება ისეთი სტატუსების საჩვენებლად, როგორიცაა სიკაშკაშე და ხმა"
 
-#. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
-#: workspaceoptions_plasmasettings.kcfg:20
-#, kde-format
-msgid "OSD on layout change"
-msgstr "OSD განლაგების ცვლილების შემთხვევაში"
+#~ msgid "OSD on layout change"
+#~ msgstr "OSD განლაგების ცვლილების შემთხვევაში"
 
-#. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
-#: workspaceoptions_plasmasettings.kcfg:21
-#, kde-format
-msgid "Show a popup on layout changes"
-msgstr "განლაგების ცვლილებისას მხტუნავის ჩვენება"
+#~ msgid "Show a popup on layout changes"
+#~ msgstr "განლაგების ცვლილებისას მხტუნავის ჩვენება"

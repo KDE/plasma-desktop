@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2004-07-03 07:15+0100\n"
 "Last-Translator: KD at KGyfieithu <kyfieithu@dotmon.com>\n"
 "Language-Team: Cymraeg <cy@li.org>\n"
@@ -28,57 +28,6 @@ msgstr "KGyfieithu"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kyfieithu@dotmon.com"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: dateandtime.ui:22
-#, kde-format
-msgid "Date and Time"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
-#: dateandtime.ui:30
-#, kde-format
-msgid "Set date and time &automatically"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
-#: dateandtime.ui:53
-#, kde-format
-msgid "&Time server:"
-msgstr ""
-
-#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
-#: dateandtime.ui:86
-#, kde-format
-msgid "Here you can change the system date's day of the month, month and year."
-msgstr ""
-"Gallwch newid yma diwrnod y mis, mis a blwyddyn sy'n cael eu dangos am "
-"ddyddiad y cysawd."
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: dateandtime.ui:122
-#, fuzzy, kde-format
-#| msgid "Timezone Error"
-msgid "Time Zone"
-msgstr "Gwall Cylchfa Amser"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: dateandtime.ui:128
-#, fuzzy, kde-format
-msgid "To change the local time zone, select your area from the list below."
-msgstr "I newid y gylchfa amser, dewiswch eich ardal o'r rhestr isod:"
-
-#. i18n: ectx: property (text), widget (QLabel, m_local)
-#: dateandtime.ui:151
-#, fuzzy, kde-format
-msgid "Current local time zone:"
-msgstr "Cylchfa amser gyfredol:"
-
-#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
-#: dateandtime.ui:161
-#, kde-format
-msgid "Search…"
-msgstr ""
 
 #: dtime.cpp:61
 #, kde-format
@@ -244,6 +193,25 @@ msgstr ""
 #, kde-format
 msgid "Unable to set timezone"
 msgstr ""
+
+#~ msgid ""
+#~ "Here you can change the system date's day of the month, month and year."
+#~ msgstr ""
+#~ "Gallwch newid yma diwrnod y mis, mis a blwyddyn sy'n cael eu dangos am "
+#~ "ddyddiad y cysawd."
+
+#, fuzzy
+#~| msgid "Timezone Error"
+#~ msgid "Time Zone"
+#~ msgstr "Gwall Cylchfa Amser"
+
+#, fuzzy
+#~ msgid "To change the local time zone, select your area from the list below."
+#~ msgstr "I newid y gylchfa amser, dewiswch eich ardal o'r rhestr isod:"
+
+#, fuzzy
+#~ msgid "Current local time zone:"
+#~ msgstr "Cylchfa amser gyfredol:"
 
 #~ msgid "kcmclock"
 #~ msgstr "kcmclock"

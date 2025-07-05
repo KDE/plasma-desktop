@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-08-20 23:06-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -34,55 +34,6 @@ msgid "Your emails"
 msgstr ""
 "shinobo@leo.bekkoame.ne.jp, fumiaki@okushi.com,tsuno@ngy.1st.ne.jp,"
 "ryuichi_ya220@outlook.jp"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: dateandtime.ui:22
-#, kde-format
-msgid "Date and Time"
-msgstr "日付と時刻"
-
-#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
-#: dateandtime.ui:30
-#, kde-format
-msgid "Set date and time &automatically"
-msgstr "日付と時刻を自動的に設定する(&A)"
-
-#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
-#: dateandtime.ui:53
-#, kde-format
-msgid "&Time server:"
-msgstr "タイムサーバ(&T):"
-
-#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
-#: dateandtime.ui:86
-#, kde-format
-msgid "Here you can change the system date's day of the month, month and year."
-msgstr "ここでシステムの日付を変更します。"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: dateandtime.ui:122
-#, kde-format
-msgid "Time Zone"
-msgstr "タイムゾーン"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: dateandtime.ui:128
-#, kde-format
-msgid "To change the local time zone, select your area from the list below."
-msgstr ""
-"ローカルタイムゾーンを変更するには、下のリストからエリアを選択してください。"
-
-#. i18n: ectx: property (text), widget (QLabel, m_local)
-#: dateandtime.ui:151
-#, kde-format
-msgid "Current local time zone:"
-msgstr "現在のローカルタイムゾーン:"
-
-#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
-#: dateandtime.ui:161
-#, kde-format
-msgid "Search…"
-msgstr "検索..."
 
 #: dtime.cpp:61
 #, kde-format
@@ -232,3 +183,30 @@ msgstr "現在時間を設定できません"
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "タイムゾーンを設定できません"
+
+#~ msgid "Date and Time"
+#~ msgstr "日付と時刻"
+
+#~ msgid "Set date and time &automatically"
+#~ msgstr "日付と時刻を自動的に設定する(&A)"
+
+#~ msgid "&Time server:"
+#~ msgstr "タイムサーバ(&T):"
+
+#~ msgid ""
+#~ "Here you can change the system date's day of the month, month and year."
+#~ msgstr "ここでシステムの日付を変更します。"
+
+#~ msgid "Time Zone"
+#~ msgstr "タイムゾーン"
+
+#~ msgid "To change the local time zone, select your area from the list below."
+#~ msgstr ""
+#~ "ローカルタイムゾーンを変更するには、下のリストからエリアを選択してくださ"
+#~ "い。"
+
+#~ msgid "Current local time zone:"
+#~ msgstr "現在のローカルタイムゾーン:"
+
+#~ msgid "Search…"
+#~ msgstr "検索..."

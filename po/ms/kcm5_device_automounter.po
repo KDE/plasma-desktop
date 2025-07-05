@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_device_automounter\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2011-01-08 23:06+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -58,52 +58,6 @@ msgstr ""
 #: DeviceAutomounterKCM.cpp:44
 #, kde-format
 msgid "Plasma 5 Port"
-msgstr ""
-
-#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
-#: DeviceAutomounterKCM.ui:17
-#, kde-format
-msgid ""
-"This list contains the storage devices known to the system. If \"Automount "
-"on Login\" is checked, the device will be automatically mounted even though "
-"\"Mount all removable media at login\" is unchecked. The same applies for "
-"\"Automount on Attach\"."
-msgstr ""
-
-#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
-#: DeviceAutomounterKCM.ui:54
-#, kde-format
-msgid ""
-"Clicking this button causes the selected devices to be 'forgotten'. This is "
-"only useful if \"Only automatically mount removable media that has been "
-"manually mounted before\" is checked. Once a device is forgotten and the "
-"system is set to only automatically mount familiar devices, the device will "
-"not be automatically mounted."
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
-#: DeviceAutomounterKCM.ui:57
-#, fuzzy, kde-format
-#| msgid "Device"
-msgid "Forget Device"
-msgstr "Peranti"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
-#: DeviceAutomounterKCM.ui:67
-#, kde-format
-msgid ""
-"When this is not checked, only remembered devices will be automatically "
-"mounted. A device is 'remembered' if it has ever been mounted before. For "
-"instance, plugging in a USB media player to charge is not sufficient to "
-"'remember' it - if the files are not accessed, it will not be automatically "
-"mounted the next time it is seen. Once they have been accessed, however, the "
-"device's contents will be automatically made available to the system."
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
-#: DeviceAutomounterKCM.ui:70
-#, kde-format
-msgid "Automatically mount removable media that have never been mounted before"
 msgstr ""
 
 #: DeviceModel.cpp:52
@@ -169,3 +123,8 @@ msgstr ""
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr ""
+
+#, fuzzy
+#~| msgid "Device"
+#~ msgid "Forget Device"
+#~ msgstr "Peranti"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2010-11-14 23:53+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -45,128 +45,6 @@ msgstr "nama atau tidak tidak."
 #, fuzzy, kde-format
 msgid "Invalid action"
 msgstr "Tidak sah"
-
-#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
-#: ActionEditor.ui:17
-#, kde-format
-msgid "Edit Parameter"
-msgstr "Sunting Parameter"
-
-#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
-#: ActionEditor.ui:43
-#, kde-format
-msgid "Parameter type:"
-msgstr "Jenis parameter:"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:51
-#, fuzzy, kde-format
-msgid "Property Match"
-msgstr "Ciri-ciri Padan"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:56
-#, kde-format
-msgid "Content Conjunction"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:61
-#, kde-format
-msgid "Content Disjunction"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:66
-#, fuzzy, kde-format
-msgid "Device Interface Match"
-msgstr "Peranti Antaramuka Padan"
-
-#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
-#: ActionEditor.ui:96
-#, fuzzy, kde-format
-msgid "Device type:"
-msgstr "Peranti:"
-
-#. i18n: ectx: property (text), widget (QLabel, LblValueName)
-#: ActionEditor.ui:135
-#, fuzzy, kde-format
-msgid "Value name:"
-msgstr "Nilai nama:"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
-#: ActionEditor.ui:175
-#, kde-format
-msgid "Equals"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
-#: ActionEditor.ui:180
-#, kde-format
-msgid "Contains"
-msgstr "Mengandungi"
-
-#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
-#: ActionEditor.ui:208
-#, fuzzy, kde-format
-msgid "Reset Parameter"
-msgstr "Set semula Parameter"
-
-#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
-#: ActionEditor.ui:215
-#, fuzzy, kde-format
-msgid "Save Parameter Changes"
-msgstr "Simpan Parameter Perubahan"
-
-#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
-#: ActionEditor.ui:247
-#, fuzzy, kde-format
-msgid "Action icon, click to change it"
-msgstr "Aksi ke "
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
-#: ActionEditor.ui:254
-#, fuzzy, kde-format
-msgid "Action name"
-msgstr "Aksi nama"
-
-#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
-#: ActionEditor.ui:271
-#, kde-format
-msgid "Command: "
-msgstr "Arahan: "
-
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
-#: ActionEditor.ui:283
-#, fuzzy, no-c-format, kde-format
-msgid ""
-"Command that will trigger the action\n"
-"This can include any or all of the following case insensitive expands:\n"
-"\n"
-"%f: The mountpoint for the device - Storage Access devices only\n"
-"%d: Path to the device node - Block devices only\n"
-"%i: The identifier of the device"
-msgstr ""
-"Arahan atau semua peranti Storan Laluan ke  peranti Jenis blok peranti "
-"pengecam peranti"
-
-#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
-#: ActionEditor.ui:300
-#, fuzzy, kde-format
-msgid "Devices must match the following parameters for this action:"
-msgstr "Peranti:"
-
-#. i18n: ectx: property (text), widget (QLabel, LblActionName)
-#: AddAction.ui:19
-#, fuzzy, kde-format
-msgid "Action name:"
-msgstr "Aksi nama:"
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
-#: AddAction.ui:26
-#, fuzzy, kde-format
-msgid "Enter the name for your new action"
-msgstr "Masuk nama baru"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -262,23 +140,76 @@ msgstr "Tiada Tindakan Dipilih"
 msgid "Cannot be deleted"
 msgstr "Tidak boleh dipadam"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
-#: SolidActions.ui:22
-#, kde-format
-msgid "Remove"
-msgstr "Buang"
+#~ msgid "Edit Parameter"
+#~ msgstr "Sunting Parameter"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
-#: SolidActions.ui:29
-#, kde-format
-msgid "Edit…"
-msgstr ""
+#~ msgid "Parameter type:"
+#~ msgstr "Jenis parameter:"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
-#: SolidActions.ui:36
-#, kde-format
-msgid "Add…"
-msgstr ""
+#, fuzzy
+#~ msgid "Property Match"
+#~ msgstr "Ciri-ciri Padan"
+
+#, fuzzy
+#~ msgid "Device Interface Match"
+#~ msgstr "Peranti Antaramuka Padan"
+
+#, fuzzy
+#~ msgid "Device type:"
+#~ msgstr "Peranti:"
+
+#, fuzzy
+#~ msgid "Value name:"
+#~ msgstr "Nilai nama:"
+
+#~ msgid "Contains"
+#~ msgstr "Mengandungi"
+
+#, fuzzy
+#~ msgid "Reset Parameter"
+#~ msgstr "Set semula Parameter"
+
+#, fuzzy
+#~ msgid "Save Parameter Changes"
+#~ msgstr "Simpan Parameter Perubahan"
+
+#, fuzzy
+#~ msgid "Action icon, click to change it"
+#~ msgstr "Aksi ke "
+
+#, fuzzy
+#~ msgid "Action name"
+#~ msgstr "Aksi nama"
+
+#~ msgid "Command: "
+#~ msgstr "Arahan: "
+
+#, fuzzy
+#~ msgid ""
+#~ "Command that will trigger the action\n"
+#~ "This can include any or all of the following case insensitive expands:\n"
+#~ "\n"
+#~ "%f: The mountpoint for the device - Storage Access devices only\n"
+#~ "%d: Path to the device node - Block devices only\n"
+#~ "%i: The identifier of the device"
+#~ msgstr ""
+#~ "Arahan atau semua peranti Storan Laluan ke  peranti Jenis blok peranti "
+#~ "pengecam peranti"
+
+#, fuzzy
+#~ msgid "Devices must match the following parameters for this action:"
+#~ msgstr "Peranti:"
+
+#, fuzzy
+#~ msgid "Action name:"
+#~ msgstr "Aksi nama:"
+
+#, fuzzy
+#~ msgid "Enter the name for your new action"
+#~ msgstr "Masuk nama baru"
+
+#~ msgid "Remove"
+#~ msgstr "Buang"
 
 #~ msgid "Edit..."
 #~ msgstr "Sunting..."

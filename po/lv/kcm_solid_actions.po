@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2011-07-08 13:33+0300\n"
 "Last-Translator: Rūdofls Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
@@ -49,132 +49,6 @@ msgstr ""
 #, kde-format
 msgid "Invalid action"
 msgstr "Nederīga darbība"
-
-#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
-#: ActionEditor.ui:17
-#, kde-format
-msgid "Edit Parameter"
-msgstr "Rediģēt parametru"
-
-#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
-#: ActionEditor.ui:43
-#, kde-format
-msgid "Parameter type:"
-msgstr "Parametra veids:"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:51
-#, kde-format
-msgid "Property Match"
-msgstr "Īpašība atbilst"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:56
-#, kde-format
-msgid "Content Conjunction"
-msgstr "Satura konjunkcija"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:61
-#, kde-format
-msgid "Content Disjunction"
-msgstr "Satura disjunkcija"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:66
-#, kde-format
-msgid "Device Interface Match"
-msgstr "Ierīces saskarne atbilst"
-
-#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
-#: ActionEditor.ui:96
-#, kde-format
-msgid "Device type:"
-msgstr "Ierīces tips:"
-
-#. i18n: ectx: property (text), widget (QLabel, LblValueName)
-#: ActionEditor.ui:135
-#, kde-format
-msgid "Value name:"
-msgstr "Vērtības nosaukums:"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
-#: ActionEditor.ui:175
-#, kde-format
-msgid "Equals"
-msgstr "Vienāds ar"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
-#: ActionEditor.ui:180
-#, kde-format
-msgid "Contains"
-msgstr "Satur"
-
-#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
-#: ActionEditor.ui:208
-#, kde-format
-msgid "Reset Parameter"
-msgstr "Atstatīt parametru"
-
-#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
-#: ActionEditor.ui:215
-#, kde-format
-msgid "Save Parameter Changes"
-msgstr "Saglabāt parametra izmaiņas"
-
-#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
-#: ActionEditor.ui:247
-#, kde-format
-msgid "Action icon, click to change it"
-msgstr "Darbības ikona, nospiediet lai izmainītu"
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
-#: ActionEditor.ui:254
-#, kde-format
-msgid "Action name"
-msgstr "Darbības nosaukums"
-
-#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
-#: ActionEditor.ui:271
-#, kde-format
-msgid "Command: "
-msgstr "Komanda: "
-
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
-#: ActionEditor.ui:283
-#, no-c-format, kde-format
-msgid ""
-"Command that will trigger the action\n"
-"This can include any or all of the following case insensitive expands:\n"
-"\n"
-"%f: The mountpoint for the device - Storage Access devices only\n"
-"%d: Path to the device node - Block devices only\n"
-"%i: The identifier of the device"
-msgstr ""
-"Komanda, kas veiks darbību\n"
-"Tā var saturēt šādus reģistrnejūtīgus aizvietotājus:\n"
-"\n"
-"%f: Ierīces montēšanas punkts - tikai glabāšanas ierīcēm\n"
-"%d: Ierīces mezgla ceļš - tika bloka ierīcēm\n"
-"%i: Ierīces identifikators "
-
-#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
-#: ActionEditor.ui:300
-#, kde-format
-msgid "Devices must match the following parameters for this action:"
-msgstr "Ierīcēm ir jāatbilst šiem parametriem, lai varētu veikt darbību:"
-
-#. i18n: ectx: property (text), widget (QLabel, LblActionName)
-#: AddAction.ui:19
-#, kde-format
-msgid "Action name:"
-msgstr "Darbības nosaukums: "
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
-#: AddAction.ui:26
-#, kde-format
-msgid "Enter the name for your new action"
-msgstr "Ievadiet jaunās darbības nosaukumu"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -272,23 +146,77 @@ msgstr "Nav izvēlēta darbība"
 msgid "Cannot be deleted"
 msgstr "Nevar izdzēst"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
-#: SolidActions.ui:22
-#, kde-format
-msgid "Remove"
-msgstr "Izņemt"
+#~ msgid "Edit Parameter"
+#~ msgstr "Rediģēt parametru"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
-#: SolidActions.ui:29
-#, kde-format
-msgid "Edit…"
-msgstr ""
+#~ msgid "Parameter type:"
+#~ msgstr "Parametra veids:"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
-#: SolidActions.ui:36
-#, kde-format
-msgid "Add…"
-msgstr ""
+#~ msgid "Property Match"
+#~ msgstr "Īpašība atbilst"
+
+#~ msgid "Content Conjunction"
+#~ msgstr "Satura konjunkcija"
+
+#~ msgid "Content Disjunction"
+#~ msgstr "Satura disjunkcija"
+
+#~ msgid "Device Interface Match"
+#~ msgstr "Ierīces saskarne atbilst"
+
+#~ msgid "Device type:"
+#~ msgstr "Ierīces tips:"
+
+#~ msgid "Value name:"
+#~ msgstr "Vērtības nosaukums:"
+
+#~ msgid "Equals"
+#~ msgstr "Vienāds ar"
+
+#~ msgid "Contains"
+#~ msgstr "Satur"
+
+#~ msgid "Reset Parameter"
+#~ msgstr "Atstatīt parametru"
+
+#~ msgid "Save Parameter Changes"
+#~ msgstr "Saglabāt parametra izmaiņas"
+
+#~ msgid "Action icon, click to change it"
+#~ msgstr "Darbības ikona, nospiediet lai izmainītu"
+
+#~ msgid "Action name"
+#~ msgstr "Darbības nosaukums"
+
+#~ msgid "Command: "
+#~ msgstr "Komanda: "
+
+#~ msgid ""
+#~ "Command that will trigger the action\n"
+#~ "This can include any or all of the following case insensitive expands:\n"
+#~ "\n"
+#~ "%f: The mountpoint for the device - Storage Access devices only\n"
+#~ "%d: Path to the device node - Block devices only\n"
+#~ "%i: The identifier of the device"
+#~ msgstr ""
+#~ "Komanda, kas veiks darbību\n"
+#~ "Tā var saturēt šādus reģistrnejūtīgus aizvietotājus:\n"
+#~ "\n"
+#~ "%f: Ierīces montēšanas punkts - tikai glabāšanas ierīcēm\n"
+#~ "%d: Ierīces mezgla ceļš - tika bloka ierīcēm\n"
+#~ "%i: Ierīces identifikators "
+
+#~ msgid "Devices must match the following parameters for this action:"
+#~ msgstr "Ierīcēm ir jāatbilst šiem parametriem, lai varētu veikt darbību:"
+
+#~ msgid "Action name:"
+#~ msgstr "Darbības nosaukums: "
+
+#~ msgid "Enter the name for your new action"
+#~ msgstr "Ievadiet jaunās darbības nosaukumu"
+
+#~ msgid "Remove"
+#~ msgstr "Izņemt"
 
 #~ msgid "Edit..."
 #~ msgstr "Rediģēt..."

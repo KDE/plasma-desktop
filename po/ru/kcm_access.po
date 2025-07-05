@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-16 02:45+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-07-22 14:42+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -92,210 +92,6 @@ msgstr "Не удалось изменить конфигурацию Orca пр�
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Не удалось запустить «orca --setup»."
-
-#. i18n: ectx: label, entry (SystemBell), group (Bell)
-#: kcmaccessibilitybell.kcfg:9
-#, kde-format
-msgid "Use System Bell"
-msgstr "Использовать системный сигнал"
-
-#. i18n: ectx: label, entry (CustomBell), group (Bell)
-#: kcmaccessibilitybell.kcfg:13
-#, kde-format
-msgid "Customize system bell"
-msgstr "Настроить системный сигнал"
-
-#. i18n: ectx: label, entry (CustomBellFile), group (Bell)
-#: kcmaccessibilitybell.kcfg:17
-#, kde-format
-msgid "Sound file for the Bell"
-msgstr "Звуковой файл сигнала"
-
-#. i18n: ectx: label, entry (VisibleBell), group (Bell)
-#: kcmaccessibilitybell.kcfg:20
-#, kde-format
-msgid "Use a visual bell instead of a sound"
-msgstr "Использовать визуальное уведомление вместо звука"
-
-#. i18n: ectx: label, entry (InvertScreen), group (Bell)
-#: kcmaccessibilitybell.kcfg:24
-#, kde-format
-msgid "Invert the system colors on the bell"
-msgstr "Инвертировать системные цвета при уведомлении"
-
-#. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
-#: kcmaccessibilitybell.kcfg:28
-#, kde-format
-msgid "Color of the Visible Bell"
-msgstr "Цвет системного сигнала"
-
-#. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
-#: kcmaccessibilitybell.kcfg:32
-#, kde-format
-msgid "Duration of the Visible Bell"
-msgstr "Длительность системного сигнала"
-
-#. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:9
-#, kde-format
-msgid "Use sticky Keys"
-msgstr "Использовать «залипающие» клавиши"
-
-#. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:13
-#, kde-format
-msgid "Lock the sticky keys"
-msgstr "Закрепить залипающие клавиши"
-
-#. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:17
-#, kde-format
-msgid "Turn sticky keys off when two keys are pressed simultaneously"
-msgstr "Выключать залипающие клавиши при одновременном нажатии двух клавиш"
-
-#. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:21
-#, kde-format
-msgid "Beep on a sticky key press"
-msgstr "Проигрывать звук при нажатии залипающих клавиш"
-
-#. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:25
-#, kde-format
-msgid "Toggle keys beep"
-msgstr "Вкл/выкл звук залипающих клавиш"
-
-#. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:29
-#, kde-format
-msgid "Notify when a keyboard modifier is pressed"
-msgstr "Уведомлять при нажатии клавиши-модификатора"
-
-#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:33
-#, kde-format
-msgid "Use a timeout delay"
-msgstr "Применять задержку"
-
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:37
-#, kde-format
-msgid "Delay for timeout"
-msgstr "Задержка"
-
-#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:41
-#, kde-format
-msgid "Use a beep for access"
-msgstr "Применять звуковой сигнал для доступа"
-
-#. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:9
-#, kde-format
-msgid "Use slow keypresses"
-msgstr "Использовать замедленное нажатие клавиш"
-
-#. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:13
-#, kde-format
-msgid "Delay for the key press"
-msgstr "Задержка при нажатии"
-
-#. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:17
-#, kde-format
-msgid "Beep on a slow keypress"
-msgstr "Проигрывать звук при замедленном нажатии"
-
-#. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:21
-#, kde-format
-msgid "Beep on an accepted keypress"
-msgstr "Проигрывать звук при принятом нажатии"
-
-#. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:25
-#, kde-format
-msgid "Beep on a rejected keypress"
-msgstr "Проигрывать звук при отклонённом нажатии"
-
-#. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:29
-#, kde-format
-msgid "Bounce Keys"
-msgstr "«Прыгающие» клавиши"
-
-#. i18n: ectx: label, entry (BounceKeysDelay), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:33
-#, kde-format
-msgid "Use a delay for bouncing"
-msgstr "Задержка для «прыгающих» клавиш"
-
-#. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:37
-#, kde-format
-msgid "Beep if a bounce key event is rejected"
-msgstr "Проигрывать звук, если событие «прыгающих» клавиш будет отклонено"
-
-#. i18n: ectx: label, entry (MouseKeys), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:9
-#, kde-format
-msgid "Use keys to control the mouse"
-msgstr "Управлять мышкой при помощи клавиш"
-
-#. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:13
-#, kde-format
-msgid "Delay for the mouse movement"
-msgstr "Задержка для движений мыши"
-
-#. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:17
-#, kde-format
-msgid "Repetition interval for the mouse movement"
-msgstr "Интервал для повторных движений мыши"
-
-#. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:21
-#, kde-format
-msgid "Time to hit maximum velocity"
-msgstr "Время для достижения максимальной скорости перемещения"
-
-#. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:25
-#, kde-format
-msgid "Maximum Velocity"
-msgstr "Максимальная скорость перемещения"
-
-#. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:29
-#, kde-format
-msgid "Mouse Key Curve"
-msgstr "Кривая кнопки мыши"
-
-#. i18n: ectx: label, entry (Gestures), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:35
-#, kde-format
-msgid "Use Gestures"
-msgstr "Использовать жесты"
-
-#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:39
-#, kde-format
-msgid "Ask for Confirmation for a gesture"
-msgstr "Запрашивать подтверждение жеста"
-
-#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:43
-#, kde-format
-msgid "Confirm access to the Keyboard"
-msgstr "Подтверждать доступ к клавиатуре"
-
-#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
-#: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
-#, kde-format
-msgid "Enable Screen Reader"
-msgstr "Включить средство чтения с экрана"
 
 #: package/contents/ui/Bell.qml:20
 #, kde-format
@@ -590,6 +386,11 @@ msgstr "Максимальная скорость:"
 msgid "Acceleration profile:"
 msgstr "Профиль ускорения:"
 
+#: package/contents/ui/ScreenReader.qml:17
+#, kde-format
+msgid "Enable Screen Reader"
+msgstr "Включить средство чтения с экрана"
+
 #: package/contents/ui/ScreenReader.qml:28
 #, kde-format
 msgid "Launch Orca Screen Reader Configuration…"
@@ -613,6 +414,105 @@ msgstr ""
 "Кажется, средство чтения с экрана «Orca» не установлено. Установите "
 "программу прежде, чем пытаться использовать эти возможности. После установки "
 "необходимо будет выполнить выход из системы или перезагрузку."
+
+#~ msgid "Use System Bell"
+#~ msgstr "Использовать системный сигнал"
+
+#~ msgid "Customize system bell"
+#~ msgstr "Настроить системный сигнал"
+
+#~ msgid "Sound file for the Bell"
+#~ msgstr "Звуковой файл сигнала"
+
+#~ msgid "Use a visual bell instead of a sound"
+#~ msgstr "Использовать визуальное уведомление вместо звука"
+
+#~ msgid "Invert the system colors on the bell"
+#~ msgstr "Инвертировать системные цвета при уведомлении"
+
+#~ msgid "Color of the Visible Bell"
+#~ msgstr "Цвет системного сигнала"
+
+#~ msgid "Duration of the Visible Bell"
+#~ msgstr "Длительность системного сигнала"
+
+#~ msgid "Use sticky Keys"
+#~ msgstr "Использовать «залипающие» клавиши"
+
+#~ msgid "Lock the sticky keys"
+#~ msgstr "Закрепить залипающие клавиши"
+
+#~ msgid "Turn sticky keys off when two keys are pressed simultaneously"
+#~ msgstr "Выключать залипающие клавиши при одновременном нажатии двух клавиш"
+
+#~ msgid "Beep on a sticky key press"
+#~ msgstr "Проигрывать звук при нажатии залипающих клавиш"
+
+#~ msgid "Toggle keys beep"
+#~ msgstr "Вкл/выкл звук залипающих клавиш"
+
+#~ msgid "Notify when a keyboard modifier is pressed"
+#~ msgstr "Уведомлять при нажатии клавиши-модификатора"
+
+#~ msgid "Use a timeout delay"
+#~ msgstr "Применять задержку"
+
+#~ msgid "Delay for timeout"
+#~ msgstr "Задержка"
+
+#~ msgid "Use a beep for access"
+#~ msgstr "Применять звуковой сигнал для доступа"
+
+#~ msgid "Use slow keypresses"
+#~ msgstr "Использовать замедленное нажатие клавиш"
+
+#~ msgid "Delay for the key press"
+#~ msgstr "Задержка при нажатии"
+
+#~ msgid "Beep on a slow keypress"
+#~ msgstr "Проигрывать звук при замедленном нажатии"
+
+#~ msgid "Beep on an accepted keypress"
+#~ msgstr "Проигрывать звук при принятом нажатии"
+
+#~ msgid "Beep on a rejected keypress"
+#~ msgstr "Проигрывать звук при отклонённом нажатии"
+
+#~ msgid "Bounce Keys"
+#~ msgstr "«Прыгающие» клавиши"
+
+#~ msgid "Use a delay for bouncing"
+#~ msgstr "Задержка для «прыгающих» клавиш"
+
+#~ msgid "Beep if a bounce key event is rejected"
+#~ msgstr "Проигрывать звук, если событие «прыгающих» клавиш будет отклонено"
+
+#~ msgid "Use keys to control the mouse"
+#~ msgstr "Управлять мышкой при помощи клавиш"
+
+#~ msgid "Delay for the mouse movement"
+#~ msgstr "Задержка для движений мыши"
+
+#~ msgid "Repetition interval for the mouse movement"
+#~ msgstr "Интервал для повторных движений мыши"
+
+#~ msgid "Time to hit maximum velocity"
+#~ msgstr "Время для достижения максимальной скорости перемещения"
+
+#~ msgid "Maximum Velocity"
+#~ msgstr "Максимальная скорость перемещения"
+
+#~ msgid "Mouse Key Curve"
+#~ msgstr "Кривая кнопки мыши"
+
+#~ msgid "Use Gestures"
+#~ msgstr "Использовать жесты"
+
+#~ msgid "Ask for Confirmation for a gesture"
+#~ msgstr "Запрашивать подтверждение жеста"
+
+#~ msgid "Confirm access to the Keyboard"
+#~ msgstr "Подтверждать доступ к клавиатуре"
 
 #~ msgid "Maximum velocity"
 #~ msgstr "Максимальная скорость перемещения"

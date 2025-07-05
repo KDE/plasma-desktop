@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-05-26 14:33+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
@@ -48,134 +48,6 @@ msgstr ""
 #, kde-format
 msgid "Invalid action"
 msgstr "Ongeldige actie"
-
-#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
-#: ActionEditor.ui:17
-#, kde-format
-msgid "Edit Parameter"
-msgstr "Parameter bewerken"
-
-#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
-#: ActionEditor.ui:43
-#, kde-format
-msgid "Parameter type:"
-msgstr "Parametertype:"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:51
-#, kde-format
-msgid "Property Match"
-msgstr "Overeenkomst in eigenschap"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:56
-#, kde-format
-msgid "Content Conjunction"
-msgstr "Inhoud samengevoegd"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:61
-#, kde-format
-msgid "Content Disjunction"
-msgstr "Inhoud gesplitst"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:66
-#, kde-format
-msgid "Device Interface Match"
-msgstr "Apparaatinterface komt overeen"
-
-#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
-#: ActionEditor.ui:96
-#, kde-format
-msgid "Device type:"
-msgstr "Apparaattype:"
-
-#. i18n: ectx: property (text), widget (QLabel, LblValueName)
-#: ActionEditor.ui:135
-#, kde-format
-msgid "Value name:"
-msgstr "Naam van waarde:"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
-#: ActionEditor.ui:175
-#, kde-format
-msgid "Equals"
-msgstr "Gelijk aan"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
-#: ActionEditor.ui:180
-#, kde-format
-msgid "Contains"
-msgstr "Bevat"
-
-#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
-#: ActionEditor.ui:208
-#, kde-format
-msgid "Reset Parameter"
-msgstr "Parameter resetten"
-
-#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
-#: ActionEditor.ui:215
-#, kde-format
-msgid "Save Parameter Changes"
-msgstr "Parameter wijzigingen opslaan"
-
-#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
-#: ActionEditor.ui:247
-#, kde-format
-msgid "Action icon, click to change it"
-msgstr "Actiepictogram, klik om het te wijzigen"
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
-#: ActionEditor.ui:254
-#, kde-format
-msgid "Action name"
-msgstr "Actienaam"
-
-#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
-#: ActionEditor.ui:271
-#, kde-format
-msgid "Command: "
-msgstr "Commando: "
-
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
-#: ActionEditor.ui:283
-#, no-c-format, kde-format
-msgid ""
-"Command that will trigger the action\n"
-"This can include any or all of the following case insensitive expands:\n"
-"\n"
-"%f: The mountpoint for the device - Storage Access devices only\n"
-"%d: Path to the device node - Block devices only\n"
-"%i: The identifier of the device"
-msgstr ""
-"Commando dat de actie laat gebeuren\n"
-"Dit kan enig of alle van de volgende hhofdletterongevoelige expansies "
-"inhouden:\n"
-"\n"
-"%f: Het koppelpunt voor het apparaat - alleen toegang tot opslagapparaten\n"
-"%d: Pad naar de apparaatnode - Alleen blokapparaten\n"
-"%i: De identificatie van het apparaat"
-
-#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
-#: ActionEditor.ui:300
-#, kde-format
-msgid "Devices must match the following parameters for this action:"
-msgstr ""
-"Apparaten moeten overeenkomen met de volgende parameters voor deze actie:"
-
-#. i18n: ectx: property (text), widget (QLabel, LblActionName)
-#: AddAction.ui:19
-#, kde-format
-msgid "Action name:"
-msgstr "Actienaam:"
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
-#: AddAction.ui:26
-#, kde-format
-msgid "Enter the name for your new action"
-msgstr "Voer de naam in van uw nieuwe actie"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -271,23 +143,86 @@ msgstr "Geen actie geselecteerd"
 msgid "Cannot be deleted"
 msgstr "Verwijderen kan niet"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
-#: SolidActions.ui:22
-#, kde-format
-msgid "Remove"
-msgstr "Verwijderen"
+#~ msgid "Edit Parameter"
+#~ msgstr "Parameter bewerken"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
-#: SolidActions.ui:29
-#, kde-format
-msgid "Edit…"
-msgstr "Bewerken…"
+#~ msgid "Parameter type:"
+#~ msgstr "Parametertype:"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
-#: SolidActions.ui:36
-#, kde-format
-msgid "Add…"
-msgstr "Toevoegen…"
+#~ msgid "Property Match"
+#~ msgstr "Overeenkomst in eigenschap"
+
+#~ msgid "Content Conjunction"
+#~ msgstr "Inhoud samengevoegd"
+
+#~ msgid "Content Disjunction"
+#~ msgstr "Inhoud gesplitst"
+
+#~ msgid "Device Interface Match"
+#~ msgstr "Apparaatinterface komt overeen"
+
+#~ msgid "Device type:"
+#~ msgstr "Apparaattype:"
+
+#~ msgid "Value name:"
+#~ msgstr "Naam van waarde:"
+
+#~ msgid "Equals"
+#~ msgstr "Gelijk aan"
+
+#~ msgid "Contains"
+#~ msgstr "Bevat"
+
+#~ msgid "Reset Parameter"
+#~ msgstr "Parameter resetten"
+
+#~ msgid "Save Parameter Changes"
+#~ msgstr "Parameter wijzigingen opslaan"
+
+#~ msgid "Action icon, click to change it"
+#~ msgstr "Actiepictogram, klik om het te wijzigen"
+
+#~ msgid "Action name"
+#~ msgstr "Actienaam"
+
+#~ msgid "Command: "
+#~ msgstr "Commando: "
+
+#~ msgid ""
+#~ "Command that will trigger the action\n"
+#~ "This can include any or all of the following case insensitive expands:\n"
+#~ "\n"
+#~ "%f: The mountpoint for the device - Storage Access devices only\n"
+#~ "%d: Path to the device node - Block devices only\n"
+#~ "%i: The identifier of the device"
+#~ msgstr ""
+#~ "Commando dat de actie laat gebeuren\n"
+#~ "Dit kan enig of alle van de volgende hhofdletterongevoelige expansies "
+#~ "inhouden:\n"
+#~ "\n"
+#~ "%f: Het koppelpunt voor het apparaat - alleen toegang tot "
+#~ "opslagapparaten\n"
+#~ "%d: Pad naar de apparaatnode - Alleen blokapparaten\n"
+#~ "%i: De identificatie van het apparaat"
+
+#~ msgid "Devices must match the following parameters for this action:"
+#~ msgstr ""
+#~ "Apparaten moeten overeenkomen met de volgende parameters voor deze actie:"
+
+#~ msgid "Action name:"
+#~ msgstr "Actienaam:"
+
+#~ msgid "Enter the name for your new action"
+#~ msgstr "Voer de naam in van uw nieuwe actie"
+
+#~ msgid "Remove"
+#~ msgstr "Verwijderen"
+
+#~ msgid "Edit…"
+#~ msgstr "Bewerken…"
+
+#~ msgid "Add…"
+#~ msgstr "Toevoegen…"
 
 #~ msgid "Edit..."
 #~ msgstr "Bewerken..."

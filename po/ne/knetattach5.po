@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: knetattach\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-14 00:46+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2007-08-20 11:02+0545\n"
 "Last-Translator: Nabin Gautam <nabin@mpp.org.np>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -84,117 +84,6 @@ msgstr "बचत र जडान गर्नुहोस्"
 msgid "C&onnect"
 msgstr "जडान गर्नुहोस्"
 
-#. i18n: ectx: property (windowTitle), widget (QWizard, KNetAttach)
-#: knetattach.ui:14
-#, kde-format
-msgid "Network Folder Wizard"
-msgstr "सञ्जाल फोल्डर विजार्ड"
-
-#. i18n: ectx: property (title), widget (QWizardPage, _folderType)
-#: knetattach.ui:18
-#, kde-format
-msgid "Add Network Folder"
-msgstr "सञ्जाल फोल्डर थप्नुहोस्"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: knetattach.ui:24
-#, kde-format
-msgid ""
-"Select the type of network folder you wish to connect to and press the Next "
-"button."
-msgstr ""
-"तपाईँले जडान गर्न चाहनुभएको सञ्जाल फोल्डरको प्रकार चयन गर्नुहोस् र अगाडि बटन थिच्नुहोस् ।"
-
-#. i18n: ectx: property (text), widget (QRadioButton, _recent)
-#: knetattach.ui:65
-#, kde-format
-msgid "&Recent connection:"
-msgstr "हालको जडान:"
-
-#. i18n: ectx: property (text), widget (QRadioButton, _webfolder)
-#: knetattach.ui:72
-#, kde-format
-msgid "&WebFolder (webdav)"
-msgstr "वेब फोल्डर (वेबड्याभ)"
-
-#. i18n: ectx: property (text), widget (QRadioButton, _fish)
-#: knetattach.ui:82
-#, kde-format
-msgid "&Secure shell (ssh)"
-msgstr "सुरक्षित शेल (ssh)"
-
-#. i18n: ectx: property (text), widget (QRadioButton, _ftp)
-#: knetattach.ui:111
-#, kde-format
-msgid "FT&P"
-msgstr "एफटीपी"
-
-#. i18n: ectx: property (text), widget (QRadioButton, _smb)
-#: knetattach.ui:118
-#, kde-format
-msgid "&Microsoft® Windows® network drive"
-msgstr "माइक्रोसफ्ट® विन्डोज® सञ्जाल ड्राइभ"
-
-#. i18n: ectx: property (title), widget (QWizardPage, _folderParameters)
-#: knetattach.ui:145
-#, kde-format
-msgid "Network Folder Information"
-msgstr "सञ्जाल फोल्डर सूचना"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel4_2)
-#: knetattach.ui:177
-#, kde-format
-msgid "&Name:"
-msgstr "नाम:"
-
-#. i18n: ectx: property (text), widget (QLabel, _userText)
-#: knetattach.ui:196
-#, kde-format
-msgid "&User:"
-msgstr "प्रयोगकर्ता:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: knetattach.ui:222
-#, kde-format
-msgid "Se&rver:"
-msgstr "सर्भर:"
-
-#. i18n: ectx: property (text), widget (QLabel, _portText)
-#: knetattach.ui:248
-#, kde-format
-msgid "&Port:"
-msgstr "पोर्ट:"
-
-#. i18n: ectx: property (text), widget (QLabel, _protocol)
-#: knetattach.ui:283
-#, kde-format
-msgid "&Protocol:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: knetattach.ui:313
-#, kde-format
-msgid "&Folder:"
-msgstr "फोल्डर:"
-
-#. i18n: ectx: property (text), widget (QLabel, _encodingText)
-#: knetattach.ui:335
-#, kde-format
-msgid "Encoding:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, _createIcon)
-#: knetattach.ui:351
-#, kde-format
-msgid "Cr&eate an icon for this remote folder"
-msgstr "यो टाढाको फोल्डरका लागि एउटा प्रतिमा सिर्जना गर्नुहोस्"
-
-#. i18n: ectx: property (text), widget (QCheckBox, _useEncryption)
-#: knetattach.ui:361
-#, kde-format
-msgid "&Use encryption"
-msgstr "गुप्तिकरण प्रयोग गर्नुहोस्"
-
 #: main.cpp:21 main.cpp:23
 #, kde-format
 msgid "KDE Network Wizard"
@@ -214,6 +103,58 @@ msgstr "जर्ज स्टाइकोस"
 #, kde-format
 msgid "Primary author and maintainer"
 msgstr "प्राथमिक लेखक र मर्मतकर्ता"
+
+#~ msgid "Network Folder Wizard"
+#~ msgstr "सञ्जाल फोल्डर विजार्ड"
+
+#~ msgid "Add Network Folder"
+#~ msgstr "सञ्जाल फोल्डर थप्नुहोस्"
+
+#~ msgid ""
+#~ "Select the type of network folder you wish to connect to and press the "
+#~ "Next button."
+#~ msgstr ""
+#~ "तपाईँले जडान गर्न चाहनुभएको सञ्जाल फोल्डरको प्रकार चयन गर्नुहोस् र अगाडि बटन "
+#~ "थिच्नुहोस् ।"
+
+#~ msgid "&Recent connection:"
+#~ msgstr "हालको जडान:"
+
+#~ msgid "&WebFolder (webdav)"
+#~ msgstr "वेब फोल्डर (वेबड्याभ)"
+
+#~ msgid "&Secure shell (ssh)"
+#~ msgstr "सुरक्षित शेल (ssh)"
+
+#~ msgid "FT&P"
+#~ msgstr "एफटीपी"
+
+#~ msgid "&Microsoft® Windows® network drive"
+#~ msgstr "माइक्रोसफ्ट® विन्डोज® सञ्जाल ड्राइभ"
+
+#~ msgid "Network Folder Information"
+#~ msgstr "सञ्जाल फोल्डर सूचना"
+
+#~ msgid "&Name:"
+#~ msgstr "नाम:"
+
+#~ msgid "&User:"
+#~ msgstr "प्रयोगकर्ता:"
+
+#~ msgid "Se&rver:"
+#~ msgstr "सर्भर:"
+
+#~ msgid "&Port:"
+#~ msgstr "पोर्ट:"
+
+#~ msgid "&Folder:"
+#~ msgstr "फोल्डर:"
+
+#~ msgid "Cr&eate an icon for this remote folder"
+#~ msgstr "यो टाढाको फोल्डरका लागि एउटा प्रतिमा सिर्जना गर्नुहोस्"
+
+#~ msgid "&Use encryption"
+#~ msgstr "गुप्तिकरण प्रयोग गर्नुहोस्"
 
 #~ msgid ""
 #~ "Enter a name for this <i>%1</i> as well as the server address, port and "

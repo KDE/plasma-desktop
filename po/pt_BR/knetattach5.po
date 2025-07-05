@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: knetattach\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-14 00:46+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2016-01-17 09:32-0200\n"
 "Last-Translator: André Marcelo Alvarenga <alvarenga@kde.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_br@kde.org>\n"
@@ -89,118 +89,6 @@ msgstr "Salvar e c&onectar"
 msgid "C&onnect"
 msgstr "C&onectar"
 
-#. i18n: ectx: property (windowTitle), widget (QWizard, KNetAttach)
-#: knetattach.ui:14
-#, kde-format
-msgid "Network Folder Wizard"
-msgstr "Assistente de pastas de rede"
-
-#. i18n: ectx: property (title), widget (QWizardPage, _folderType)
-#: knetattach.ui:18
-#, kde-format
-msgid "Add Network Folder"
-msgstr "Adicionar pasta de rede"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: knetattach.ui:24
-#, kde-format
-msgid ""
-"Select the type of network folder you wish to connect to and press the Next "
-"button."
-msgstr ""
-"Selecione o tipo de pasta de rede na qual deseja se conectar e pressione o "
-"botão Próximo."
-
-#. i18n: ectx: property (text), widget (QRadioButton, _recent)
-#: knetattach.ui:65
-#, kde-format
-msgid "&Recent connection:"
-msgstr "Conexão &recente:"
-
-#. i18n: ectx: property (text), widget (QRadioButton, _webfolder)
-#: knetattach.ui:72
-#, kde-format
-msgid "&WebFolder (webdav)"
-msgstr "&WebFolder (webdav)"
-
-#. i18n: ectx: property (text), widget (QRadioButton, _fish)
-#: knetattach.ui:82
-#, kde-format
-msgid "&Secure shell (ssh)"
-msgstr "&Shell seguro (ssh)"
-
-#. i18n: ectx: property (text), widget (QRadioButton, _ftp)
-#: knetattach.ui:111
-#, kde-format
-msgid "FT&P"
-msgstr "FT&P"
-
-#. i18n: ectx: property (text), widget (QRadioButton, _smb)
-#: knetattach.ui:118
-#, kde-format
-msgid "&Microsoft® Windows® network drive"
-msgstr "Drive de rede do &Microsoft® Windows®"
-
-#. i18n: ectx: property (title), widget (QWizardPage, _folderParameters)
-#: knetattach.ui:145
-#, kde-format
-msgid "Network Folder Information"
-msgstr "Informações sobre a pasta de rede"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel4_2)
-#: knetattach.ui:177
-#, kde-format
-msgid "&Name:"
-msgstr "&Nome:"
-
-#. i18n: ectx: property (text), widget (QLabel, _userText)
-#: knetattach.ui:196
-#, kde-format
-msgid "&User:"
-msgstr "&Usuário:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: knetattach.ui:222
-#, kde-format
-msgid "Se&rver:"
-msgstr "Se&rvidor:"
-
-#. i18n: ectx: property (text), widget (QLabel, _portText)
-#: knetattach.ui:248
-#, kde-format
-msgid "&Port:"
-msgstr "&Porta:"
-
-#. i18n: ectx: property (text), widget (QLabel, _protocol)
-#: knetattach.ui:283
-#, kde-format
-msgid "&Protocol:"
-msgstr "&Protocolo:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: knetattach.ui:313
-#, kde-format
-msgid "&Folder:"
-msgstr "&Pasta:"
-
-#. i18n: ectx: property (text), widget (QLabel, _encodingText)
-#: knetattach.ui:335
-#, kde-format
-msgid "Encoding:"
-msgstr "Codificação:"
-
-#. i18n: ectx: property (text), widget (QCheckBox, _createIcon)
-#: knetattach.ui:351
-#, kde-format
-msgid "Cr&eate an icon for this remote folder"
-msgstr "C&riar um ícone para esta pasta remota"
-
-#. i18n: ectx: property (text), widget (QCheckBox, _useEncryption)
-#: knetattach.ui:361
-#, kde-format
-msgid "&Use encryption"
-msgstr "&Usar criptografia"
-
 #: main.cpp:21 main.cpp:23
 #, kde-format
 msgid "KDE Network Wizard"
@@ -220,3 +108,61 @@ msgstr "George Staikos"
 #, kde-format
 msgid "Primary author and maintainer"
 msgstr "Autor primário e mantenedor"
+
+#~ msgid "Network Folder Wizard"
+#~ msgstr "Assistente de pastas de rede"
+
+#~ msgid "Add Network Folder"
+#~ msgstr "Adicionar pasta de rede"
+
+#~ msgid ""
+#~ "Select the type of network folder you wish to connect to and press the "
+#~ "Next button."
+#~ msgstr ""
+#~ "Selecione o tipo de pasta de rede na qual deseja se conectar e pressione "
+#~ "o botão Próximo."
+
+#~ msgid "&Recent connection:"
+#~ msgstr "Conexão &recente:"
+
+#~ msgid "&WebFolder (webdav)"
+#~ msgstr "&WebFolder (webdav)"
+
+#~ msgid "&Secure shell (ssh)"
+#~ msgstr "&Shell seguro (ssh)"
+
+#~ msgid "FT&P"
+#~ msgstr "FT&P"
+
+#~ msgid "&Microsoft® Windows® network drive"
+#~ msgstr "Drive de rede do &Microsoft® Windows®"
+
+#~ msgid "Network Folder Information"
+#~ msgstr "Informações sobre a pasta de rede"
+
+#~ msgid "&Name:"
+#~ msgstr "&Nome:"
+
+#~ msgid "&User:"
+#~ msgstr "&Usuário:"
+
+#~ msgid "Se&rver:"
+#~ msgstr "Se&rvidor:"
+
+#~ msgid "&Port:"
+#~ msgstr "&Porta:"
+
+#~ msgid "&Protocol:"
+#~ msgstr "&Protocolo:"
+
+#~ msgid "&Folder:"
+#~ msgstr "&Pasta:"
+
+#~ msgid "Encoding:"
+#~ msgstr "Codificação:"
+
+#~ msgid "Cr&eate an icon for this remote folder"
+#~ msgstr "C&riar um ícone para esta pasta remota"
+
+#~ msgid "&Use encryption"
+#~ msgstr "&Usar criptografia"

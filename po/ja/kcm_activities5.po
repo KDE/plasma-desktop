@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_activities\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-24 00:47+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-08-20 23:03-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -97,30 +97,6 @@ msgstr "このアクティビティの使用状況を追跡しない"
 msgid "Shortcut for switching:"
 msgstr "切り替えのショートカット:"
 
-#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:10
-#, kde-format
-msgid "How many months keep the activity history"
-msgstr "アクティビティの履歴を残す月数"
-
-#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:17
-#, kde-format
-msgid "Which data to keep in activity history"
-msgstr "アクティビティの履歴で残すデータ"
-
-#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:21
-#, kde-format
-msgid "List of Applications whose activity history to save"
-msgstr "アクティビティの履歴を保存するアプリケーションのリスト"
-
-#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:24
-#, kde-format
-msgid "List of Applications whose activity history not to save"
-msgstr "アクティビティの履歴を保存しないアプリケーションのリスト"
-
 #: MainConfigurationWidget.cpp:33
 #, kde-format
 msgid "Switching"
@@ -160,20 +136,23 @@ msgctxt "@action"
 msgid "Walk through activities (Reverse)"
 msgstr "アクティビティ間を移動 (反転)"
 
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_virtualDesktopSwitchEnabled)
-#: ui/SwitchingTabBase.ui:22
-#, kde-format
-msgid "Remember for each activity (needs restart)"
-msgstr "それぞれのアクティビティごとに記憶する (再起動が必要)"
+#~ msgid "How many months keep the activity history"
+#~ msgstr "アクティビティの履歴を残す月数"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: ui/SwitchingTabBase.ui:29
-#, kde-format
-msgid "Current virtual desktop:"
-msgstr "現在の仮想デスクトップ:"
+#~ msgid "Which data to keep in activity history"
+#~ msgstr "アクティビティの履歴で残すデータ"
 
-#. i18n: ectx: property (text), widget (QLabel, label_1)
-#: ui/SwitchingTabBase.ui:38
-#, kde-format
-msgid "Shortcuts:"
-msgstr "ショートカット:"
+#~ msgid "List of Applications whose activity history to save"
+#~ msgstr "アクティビティの履歴を保存するアプリケーションのリスト"
+
+#~ msgid "List of Applications whose activity history not to save"
+#~ msgstr "アクティビティの履歴を保存しないアプリケーションのリスト"
+
+#~ msgid "Remember for each activity (needs restart)"
+#~ msgstr "それぞれのアクティビティごとに記憶する (再起動が必要)"
+
+#~ msgid "Current virtual desktop:"
+#~ msgstr "現在の仮想デスクトップ:"
+
+#~ msgid "Shortcuts:"
+#~ msgstr "ショートカット:"

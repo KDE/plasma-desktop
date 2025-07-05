@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2009-12-19 18:42+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -25,58 +25,6 @@ msgstr "Johannes Peeringa, Berend Ytsma"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ",berendy@bigfoot.com"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: dateandtime.ui:22
-#, kde-format
-msgid "Date and Time"
-msgstr "Datum en tiid"
-
-#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
-#: dateandtime.ui:30
-#, fuzzy, kde-format
-#| msgid "Set date and time &automatically:"
-msgid "Set date and time &automatically"
-msgstr "Datum en tiid &automatysk ynstelle:"
-
-#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
-#: dateandtime.ui:53
-#, fuzzy, kde-format
-#| msgid "Time server:"
-msgid "&Time server:"
-msgstr "Tiid tsjinner"
-
-#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
-#: dateandtime.ui:86
-#, kde-format
-msgid "Here you can change the system date's day of the month, month and year."
-msgstr "Hjir kinne jo de dei, moanne en it jier fan de systeemdatum feroarje."
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: dateandtime.ui:122
-#, kde-format
-msgid "Time Zone"
-msgstr "Tiidsône"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: dateandtime.ui:128
-#, kde-format
-msgid "To change the local time zone, select your area from the list below."
-msgstr ""
-"Om de lokale tiidsône te feroarjen, selektearje jo gebiet út de ûndersteande "
-"list"
-
-#. i18n: ectx: property (text), widget (QLabel, m_local)
-#: dateandtime.ui:151
-#, kde-format
-msgid "Current local time zone:"
-msgstr "Aktive lokale tiidsône:"
-
-#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
-#: dateandtime.ui:161
-#, kde-format
-msgid "Search…"
-msgstr ""
 
 #: dtime.cpp:61
 #, kde-format
@@ -237,6 +185,35 @@ msgstr "Koe gjin kontakt krije mei de tiidstsjinner: %1."
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set timezone"
 msgstr "Koe gjin kontakt krije mei de tiidstsjinner: %1."
+
+#~ msgid "Date and Time"
+#~ msgstr "Datum en tiid"
+
+#, fuzzy
+#~| msgid "Set date and time &automatically:"
+#~ msgid "Set date and time &automatically"
+#~ msgstr "Datum en tiid &automatysk ynstelle:"
+
+#, fuzzy
+#~| msgid "Time server:"
+#~ msgid "&Time server:"
+#~ msgstr "Tiid tsjinner"
+
+#~ msgid ""
+#~ "Here you can change the system date's day of the month, month and year."
+#~ msgstr ""
+#~ "Hjir kinne jo de dei, moanne en it jier fan de systeemdatum feroarje."
+
+#~ msgid "Time Zone"
+#~ msgstr "Tiidsône"
+
+#~ msgid "To change the local time zone, select your area from the list below."
+#~ msgstr ""
+#~ "Om de lokale tiidsône te feroarjen, selektearje jo gebiet út de "
+#~ "ûndersteande list"
+
+#~ msgid "Current local time zone:"
+#~ msgstr "Aktive lokale tiidsône:"
 
 #~ msgid "kcmclock"
 #~ msgstr "kcmklok"

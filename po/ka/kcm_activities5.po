@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-24 00:47+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-09-02 07:43+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -96,30 +96,6 @@ msgstr "ამ აქტივობისთვის ყურადღებ�
 msgid "Shortcut for switching:"
 msgstr "გადართვის მალსახმობი:"
 
-#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:10
-#, kde-format
-msgid "How many months keep the activity history"
-msgstr "რამდენი თვით იქნება შენახული აქტივობის ისტორია"
-
-#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:17
-#, kde-format
-msgid "Which data to keep in activity history"
-msgstr "რომელი მონაცემები იქნება შენახული აქტივობის ისტორიაში"
-
-#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:21
-#, kde-format
-msgid "List of Applications whose activity history to save"
-msgstr "მათი აქტივობის შესანახი აპლიკაციების სია"
-
-#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:24
-#, kde-format
-msgid "List of Applications whose activity history not to save"
-msgstr "მათი აქტივობის არ-შესანახი აპლიკაციების სია"
-
 #: MainConfigurationWidget.cpp:33
 #, kde-format
 msgid "Switching"
@@ -159,20 +135,23 @@ msgctxt "@action"
 msgid "Walk through activities (Reverse)"
 msgstr "აქტივობების განხილვა (პირიქით)"
 
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_virtualDesktopSwitchEnabled)
-#: ui/SwitchingTabBase.ui:22
-#, kde-format
-msgid "Remember for each activity (needs restart)"
-msgstr "ყველა აქტივობის დამახსოვრება (საჭიროა გადატვირთვა)"
+#~ msgid "How many months keep the activity history"
+#~ msgstr "რამდენი თვით იქნება შენახული აქტივობის ისტორია"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: ui/SwitchingTabBase.ui:29
-#, kde-format
-msgid "Current virtual desktop:"
-msgstr "მიმდინარე ვირტუალური სამუშაო მაგიდა:"
+#~ msgid "Which data to keep in activity history"
+#~ msgstr "რომელი მონაცემები იქნება შენახული აქტივობის ისტორიაში"
 
-#. i18n: ectx: property (text), widget (QLabel, label_1)
-#: ui/SwitchingTabBase.ui:38
-#, kde-format
-msgid "Shortcuts:"
-msgstr "მალსახმობები:"
+#~ msgid "List of Applications whose activity history to save"
+#~ msgstr "მათი აქტივობის შესანახი აპლიკაციების სია"
+
+#~ msgid "List of Applications whose activity history not to save"
+#~ msgstr "მათი აქტივობის არ-შესანახი აპლიკაციების სია"
+
+#~ msgid "Remember for each activity (needs restart)"
+#~ msgstr "ყველა აქტივობის დამახსოვრება (საჭიროა გადატვირთვა)"
+
+#~ msgid "Current virtual desktop:"
+#~ msgstr "მიმდინარე ვირტუალური სამუშაო მაგიდა:"
+
+#~ msgid "Shortcuts:"
+#~ msgstr "მალსახმობები:"

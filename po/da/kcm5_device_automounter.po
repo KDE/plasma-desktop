@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-08-20 17:29+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -56,66 +56,6 @@ msgstr "Kai Uwe Broulik"
 #, kde-format
 msgid "Plasma 5 Port"
 msgstr "Portering til Plasma 5"
-
-#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
-#: DeviceAutomounterKCM.ui:17
-#, kde-format
-msgid ""
-"This list contains the storage devices known to the system. If \"Automount "
-"on Login\" is checked, the device will be automatically mounted even though "
-"\"Mount all removable media at login\" is unchecked. The same applies for "
-"\"Automount on Attach\"."
-msgstr ""
-"Denne liste indeholder de lagringsenheder der er kendte af systemet. Hvis "
-"\"Automontér ved login\" er markeret, vil enheden blive monteret automatisk, "
-"selvom \"Montér alle flytbare medier ved login\" er afmarkeret. Det samme "
-"gælder for \"Automontér ved tilslutning\"."
-
-#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
-#: DeviceAutomounterKCM.ui:54
-#, kde-format
-msgid ""
-"Clicking this button causes the selected devices to be 'forgotten'. This is "
-"only useful if \"Only automatically mount removable media that has been "
-"manually mounted before\" is checked. Once a device is forgotten and the "
-"system is set to only automatically mount familiar devices, the device will "
-"not be automatically mounted."
-msgstr ""
-"Tryk på denne knap får de valgte enheder til at blive \"glemt\". Dette er "
-"kun nyttigt hvis \"Montér kun flytbare medier automatisk, der er blevet "
-"monteret manuelt før\" er markeret. Når en enhed er glemt og systemet er sat "
-"til kun at montere kendte enheder automatisk, vil enheden ikke blive "
-"monteret automatisk."
-
-#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
-#: DeviceAutomounterKCM.ui:57
-#, kde-format
-msgid "Forget Device"
-msgstr "Glem enhed"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
-#: DeviceAutomounterKCM.ui:67
-#, kde-format
-msgid ""
-"When this is not checked, only remembered devices will be automatically "
-"mounted. A device is 'remembered' if it has ever been mounted before. For "
-"instance, plugging in a USB media player to charge is not sufficient to "
-"'remember' it - if the files are not accessed, it will not be automatically "
-"mounted the next time it is seen. Once they have been accessed, however, the "
-"device's contents will be automatically made available to the system."
-msgstr ""
-"Når dette ikke er markeret, vil kun huskede enheder blive monteret "
-"automatisk. En enhed \"huskes\" hvis den er blevet monteret før. For "
-"eksempel er tilslutning af en USB-medieafspiller for at oplade den ikke "
-"tilstrækkeligt til at den huskes. Hvis filerne ikke tilgås, vil den ikke "
-"blive monteret automatisk næste gang den ses. Når de er blevet tilgået, vil "
-"enhedens indhold dog automatisk blive gjort tilgængeligt for systemet."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
-#: DeviceAutomounterKCM.ui:70
-#, kde-format
-msgid "Automatically mount removable media that have never been mounted before"
-msgstr "Montér automatisk flytbare medier, der aldrig er blevet monteret før"
 
 #: DeviceModel.cpp:52
 #, kde-format
@@ -178,6 +118,54 @@ msgstr "Denne enhed vil automatisk blive monteret ved tilslutning."
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "Denne enhed vil ikke blive monteret automatisk ved tilslutning."
+
+#~ msgid ""
+#~ "This list contains the storage devices known to the system. If "
+#~ "\"Automount on Login\" is checked, the device will be automatically "
+#~ "mounted even though \"Mount all removable media at login\" is unchecked. "
+#~ "The same applies for \"Automount on Attach\"."
+#~ msgstr ""
+#~ "Denne liste indeholder de lagringsenheder der er kendte af systemet. Hvis "
+#~ "\"Automontér ved login\" er markeret, vil enheden blive monteret "
+#~ "automatisk, selvom \"Montér alle flytbare medier ved login\" er "
+#~ "afmarkeret. Det samme gælder for \"Automontér ved tilslutning\"."
+
+#~ msgid ""
+#~ "Clicking this button causes the selected devices to be 'forgotten'. This "
+#~ "is only useful if \"Only automatically mount removable media that has "
+#~ "been manually mounted before\" is checked. Once a device is forgotten and "
+#~ "the system is set to only automatically mount familiar devices, the "
+#~ "device will not be automatically mounted."
+#~ msgstr ""
+#~ "Tryk på denne knap får de valgte enheder til at blive \"glemt\". Dette er "
+#~ "kun nyttigt hvis \"Montér kun flytbare medier automatisk, der er blevet "
+#~ "monteret manuelt før\" er markeret. Når en enhed er glemt og systemet er "
+#~ "sat til kun at montere kendte enheder automatisk, vil enheden ikke blive "
+#~ "monteret automatisk."
+
+#~ msgid "Forget Device"
+#~ msgstr "Glem enhed"
+
+#~ msgid ""
+#~ "When this is not checked, only remembered devices will be automatically "
+#~ "mounted. A device is 'remembered' if it has ever been mounted before. For "
+#~ "instance, plugging in a USB media player to charge is not sufficient to "
+#~ "'remember' it - if the files are not accessed, it will not be "
+#~ "automatically mounted the next time it is seen. Once they have been "
+#~ "accessed, however, the device's contents will be automatically made "
+#~ "available to the system."
+#~ msgstr ""
+#~ "Når dette ikke er markeret, vil kun huskede enheder blive monteret "
+#~ "automatisk. En enhed \"huskes\" hvis den er blevet monteret før. For "
+#~ "eksempel er tilslutning af en USB-medieafspiller for at oplade den ikke "
+#~ "tilstrækkeligt til at den huskes. Hvis filerne ikke tilgås, vil den ikke "
+#~ "blive monteret automatisk næste gang den ses. Når de er blevet tilgået, "
+#~ "vil enhedens indhold dog automatisk blive gjort tilgængeligt for systemet."
+
+#~ msgid ""
+#~ "Automatically mount removable media that have never been mounted before"
+#~ msgstr ""
+#~ "Montér automatisk flytbare medier, der aldrig er blevet monteret før"
 
 #~ msgid ""
 #~ "If any removable storage devices are connected to your system when you "

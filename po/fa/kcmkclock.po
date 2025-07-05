@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2012-01-12 16:58+0330\n"
 "Last-Translator: Mohammad Reza Mirdamadi <mohi@linuxshop.ir>\n"
 "Language-Team: Farsi (Persian) <>\n"
@@ -28,57 +28,6 @@ msgstr "محمدرضا میردامادی , نازنین کاظمی"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mohi@linuxshop.ir , kazemi@itland.ir"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: dateandtime.ui:22
-#, kde-format
-msgid "Date and Time"
-msgstr "تاریخ و زمان"
-
-#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
-#: dateandtime.ui:30
-#, fuzzy, kde-format
-#| msgid "Set date and time &automatically:"
-msgid "Set date and time &automatically"
-msgstr "تنظیم &خودکار تاریخ و زمان:‌"
-
-#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
-#: dateandtime.ui:53
-#, fuzzy, kde-format
-#| msgid "Time server:"
-msgid "&Time server:"
-msgstr "کارساز &زمان‌:"
-
-#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
-#: dateandtime.ui:86
-#, kde-format
-msgid "Here you can change the system date's day of the month, month and year."
-msgstr "در اینجا می‌توانید روز، ماه و سال تاریخ سیستم را تغییر دهید."
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: dateandtime.ui:122
-#, kde-format
-msgid "Time Zone"
-msgstr "ناحیه زمانی"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: dateandtime.ui:128
-#, kde-format
-msgid "To change the local time zone, select your area from the list below."
-msgstr "برای تغییر ناحیه زمانی محلی، ناحیه خود را از فهرست زیر انتخاب نمایید."
-
-#. i18n: ectx: property (text), widget (QLabel, m_local)
-#: dateandtime.ui:151
-#, kde-format
-msgid "Current local time zone:"
-msgstr "ناحیه زمانی محلی جاری:"
-
-#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
-#: dateandtime.ui:161
-#, fuzzy, kde-format
-#| msgid "Search"
-msgid "Search…"
-msgstr "جستجو"
 
 #: dtime.cpp:61
 #, kde-format
@@ -252,6 +201,38 @@ msgstr "قادر به تماس با کارساز زمان نیست: %1."
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set timezone"
 msgstr "قادر به تماس با کارساز زمان نیست: %1."
+
+#~ msgid "Date and Time"
+#~ msgstr "تاریخ و زمان"
+
+#, fuzzy
+#~| msgid "Set date and time &automatically:"
+#~ msgid "Set date and time &automatically"
+#~ msgstr "تنظیم &خودکار تاریخ و زمان:‌"
+
+#, fuzzy
+#~| msgid "Time server:"
+#~ msgid "&Time server:"
+#~ msgstr "کارساز &زمان‌:"
+
+#~ msgid ""
+#~ "Here you can change the system date's day of the month, month and year."
+#~ msgstr "در اینجا می‌توانید روز، ماه و سال تاریخ سیستم را تغییر دهید."
+
+#~ msgid "Time Zone"
+#~ msgstr "ناحیه زمانی"
+
+#~ msgid "To change the local time zone, select your area from the list below."
+#~ msgstr ""
+#~ "برای تغییر ناحیه زمانی محلی، ناحیه خود را از فهرست زیر انتخاب نمایید."
+
+#~ msgid "Current local time zone:"
+#~ msgstr "ناحیه زمانی محلی جاری:"
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgid "Search…"
+#~ msgstr "جستجو"
 
 #~ msgid "kcmclock"
 #~ msgstr "kcmclock"

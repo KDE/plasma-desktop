@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2014-08-11 11:56+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -46,134 +46,6 @@ msgstr ""
 #, kde-format
 msgid "Invalid action"
 msgstr "Leeg Akschoon"
-
-#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
-#: ActionEditor.ui:17
-#, kde-format
-msgid "Edit Parameter"
-msgstr "Parameter bewerken"
-
-#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
-#: ActionEditor.ui:43
-#, kde-format
-msgid "Parameter type:"
-msgstr "Parameter-Typ:"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:51
-#, kde-format
-msgid "Property Match"
-msgstr "Egenschap passt"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:56
-#, kde-format
-msgid "Content Conjunction"
-msgstr "Inholt höört tosamen"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:61
-#, kde-format
-msgid "Content Disjunction"
-msgstr "Inholt höört nich tosamen"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:66
-#, kde-format
-msgid "Device Interface Match"
-msgstr "Reedschap-Koppelsteed passt"
-
-#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
-#: ActionEditor.ui:96
-#, kde-format
-msgid "Device type:"
-msgstr "Reedschap-Typ:"
-
-#. i18n: ectx: property (text), widget (QLabel, LblValueName)
-#: ActionEditor.ui:135
-#, kde-format
-msgid "Value name:"
-msgstr "Weertnaam:"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
-#: ActionEditor.ui:175
-#, kde-format
-msgid "Equals"
-msgstr "Is liek mit"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
-#: ActionEditor.ui:180
-#, kde-format
-msgid "Contains"
-msgstr "Bargt"
-
-#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
-#: ActionEditor.ui:208
-#, kde-format
-msgid "Reset Parameter"
-msgstr "Parameter torüchsetten"
-
-#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
-#: ActionEditor.ui:215
-#, kde-format
-msgid "Save Parameter Changes"
-msgstr "Ännert Parameters sekern"
-
-#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
-#: ActionEditor.ui:247
-#, kde-format
-msgid "Action icon, click to change it"
-msgstr "Klick hier, wenn Du dit Akschoon-Lüttbild ännern wullt"
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
-#: ActionEditor.ui:254
-#, kde-format
-msgid "Action name"
-msgstr "Akschoonnaam"
-
-#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
-#: ActionEditor.ui:271
-#, kde-format
-msgid "Command: "
-msgstr "Befehl:"
-
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
-#: ActionEditor.ui:283
-#, no-c-format, kde-format
-msgid ""
-"Command that will trigger the action\n"
-"This can include any or all of the following case insensitive expands:\n"
-"\n"
-"%f: The mountpoint for the device - Storage Access devices only\n"
-"%d: Path to the device node - Block devices only\n"
-"%i: The identifier of the device"
-msgstr ""
-"Befehl, de de Akschoon utlööst\n"
-"Kann all vun disse Platzhollers bruken (kiekt nich op Groot- un "
-"Lüttschrieven):\n"
-"\n"
-"%f: De Reedschap ehr Inhangsteed - bloots bi Spiekerreedschappen\n"
-"%d: Padd na den Reedschap-Knütt - bloots bi Blockreedschappen\n"
-"%i: De Reedschap-Beteker"
-
-#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
-#: ActionEditor.ui:300
-#, kde-format
-msgid "Devices must match the following parameters for this action:"
-msgstr ""
-"För disse Akschoon mööt de nakamen Parameters op de Reedschappen passen:"
-
-#. i18n: ectx: property (text), widget (QLabel, LblActionName)
-#: AddAction.ui:19
-#, kde-format
-msgid "Action name:"
-msgstr "Akschoonnaam:"
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
-#: AddAction.ui:26
-#, kde-format
-msgid "Enter the name for your new action"
-msgstr "Giff den Naam för Dien nieg Akschoon in."
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -269,23 +141,79 @@ msgstr "Keen Akschoon utsöcht"
 msgid "Cannot be deleted"
 msgstr "Lett sik nich wegdoon"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
-#: SolidActions.ui:22
-#, kde-format
-msgid "Remove"
-msgstr "Wegmaken"
+#~ msgid "Edit Parameter"
+#~ msgstr "Parameter bewerken"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
-#: SolidActions.ui:29
-#, kde-format
-msgid "Edit…"
-msgstr ""
+#~ msgid "Parameter type:"
+#~ msgstr "Parameter-Typ:"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
-#: SolidActions.ui:36
-#, kde-format
-msgid "Add…"
-msgstr ""
+#~ msgid "Property Match"
+#~ msgstr "Egenschap passt"
+
+#~ msgid "Content Conjunction"
+#~ msgstr "Inholt höört tosamen"
+
+#~ msgid "Content Disjunction"
+#~ msgstr "Inholt höört nich tosamen"
+
+#~ msgid "Device Interface Match"
+#~ msgstr "Reedschap-Koppelsteed passt"
+
+#~ msgid "Device type:"
+#~ msgstr "Reedschap-Typ:"
+
+#~ msgid "Value name:"
+#~ msgstr "Weertnaam:"
+
+#~ msgid "Equals"
+#~ msgstr "Is liek mit"
+
+#~ msgid "Contains"
+#~ msgstr "Bargt"
+
+#~ msgid "Reset Parameter"
+#~ msgstr "Parameter torüchsetten"
+
+#~ msgid "Save Parameter Changes"
+#~ msgstr "Ännert Parameters sekern"
+
+#~ msgid "Action icon, click to change it"
+#~ msgstr "Klick hier, wenn Du dit Akschoon-Lüttbild ännern wullt"
+
+#~ msgid "Action name"
+#~ msgstr "Akschoonnaam"
+
+#~ msgid "Command: "
+#~ msgstr "Befehl:"
+
+#~ msgid ""
+#~ "Command that will trigger the action\n"
+#~ "This can include any or all of the following case insensitive expands:\n"
+#~ "\n"
+#~ "%f: The mountpoint for the device - Storage Access devices only\n"
+#~ "%d: Path to the device node - Block devices only\n"
+#~ "%i: The identifier of the device"
+#~ msgstr ""
+#~ "Befehl, de de Akschoon utlööst\n"
+#~ "Kann all vun disse Platzhollers bruken (kiekt nich op Groot- un "
+#~ "Lüttschrieven):\n"
+#~ "\n"
+#~ "%f: De Reedschap ehr Inhangsteed - bloots bi Spiekerreedschappen\n"
+#~ "%d: Padd na den Reedschap-Knütt - bloots bi Blockreedschappen\n"
+#~ "%i: De Reedschap-Beteker"
+
+#~ msgid "Devices must match the following parameters for this action:"
+#~ msgstr ""
+#~ "För disse Akschoon mööt de nakamen Parameters op de Reedschappen passen:"
+
+#~ msgid "Action name:"
+#~ msgstr "Akschoonnaam:"
+
+#~ msgid "Enter the name for your new action"
+#~ msgstr "Giff den Naam för Dien nieg Akschoon in."
+
+#~ msgid "Remove"
+#~ msgstr "Wegmaken"
 
 #~ msgid "Edit..."
 #~ msgstr "Bewerken..."

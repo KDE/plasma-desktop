@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2019-07-26 15:08+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: lt\n"
@@ -49,67 +49,36 @@ msgstr "David Edmundson"
 msgid "Maintainer"
 msgstr "Prižiūrėtojas"
 
-#. i18n: ectx: property (text), widget (KMessageWidget, kmessagewidget)
-#: kcmqtquicksettingswidget.ui:23
-#, kde-format
-msgid ""
-"These settings adjust the QtQuick settings used by Plasma. Only adjust if "
-"you know what you are doing."
-msgstr ""
-"Šios nuostatos reguliuoja Plasma naudojamas QtQuick nuostatas. Reguliuokite "
-"tik tuo atveju, jei žinote ką darote."
+#~ msgid ""
+#~ "These settings adjust the QtQuick settings used by Plasma. Only adjust if "
+#~ "you know what you are doing."
+#~ msgstr ""
+#~ "Šios nuostatos reguliuoja Plasma naudojamas QtQuick nuostatas. "
+#~ "Reguliuokite tik tuo atveju, jei žinote ką darote."
 
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcmqtquicksettingswidget.ui:38
-#, kde-format
-msgid "Rendering Backend:"
-msgstr "Atvaizdavimo vidinė pusė:"
+#~ msgid "Rendering Backend:"
+#~ msgstr "Atvaizdavimo vidinė pusė:"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
-#: kcmqtquicksettingswidget.ui:46 kcmqtquicksettingswidget.ui:79
-#, kde-format
-msgid "Automatic"
-msgstr "Automatiškai"
+#~ msgid "Automatic"
+#~ msgstr "Automatiškai"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
-#: kcmqtquicksettingswidget.ui:51
-#, kde-format
-msgid "Open GL"
-msgstr "Open GL"
+#~ msgid "Open GL"
+#~ msgstr "Open GL"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
-#: kcmqtquicksettingswidget.ui:56
-#, kde-format
-msgid "Software"
-msgstr "Programinė įranga"
+#~ msgid "Software"
+#~ msgstr "Programinė įranga"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcmqtquicksettingswidget.ui:64
-#, kde-format
-msgid "GL Core Profile:"
-msgstr "GL branduolio profilis:"
+#~ msgid "GL Core Profile:"
+#~ msgstr "GL branduolio profilis:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcmqtquicksettingswidget.ui:71
-#, kde-format
-msgid "Render Loop:"
-msgstr "Atvaizdavimo ciklas:"
+#~ msgid "Render Loop:"
+#~ msgstr "Atvaizdavimo ciklas:"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
-#: kcmqtquicksettingswidget.ui:84
-#, kde-format
-msgid "Basic"
-msgstr "Pagrindinis"
+#~ msgid "Basic"
+#~ msgstr "Pagrindinis"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
-#: kcmqtquicksettingswidget.ui:89
-#, kde-format
-msgid "Threaded"
-msgstr "Gijomis"
+#~ msgid "Threaded"
+#~ msgstr "Gijomis"
 
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ForceGlCoreProfile)
-#: kcmqtquicksettingswidget.ui:97
-#, kde-format
-msgid "Force"
-msgstr "Priverstinai"
+#~ msgid "Force"
+#~ msgstr "Priverstinai"

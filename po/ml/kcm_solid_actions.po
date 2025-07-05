@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2019-12-12 22:50+0000\n"
 "Last-Translator: Vivek KJ Pazhedath <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ്  <smc-"
@@ -44,126 +44,6 @@ msgstr ""
 #, kde-format
 msgid "Invalid action"
 msgstr "അസാധുവായ പ്രവൃത്തി"
-
-#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
-#: ActionEditor.ui:17
-#, fuzzy, kde-format
-msgid "Edit Parameter"
-msgstr "ആവശ്യത്തിന്റെ തരം:"
-
-#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
-#: ActionEditor.ui:43
-#, fuzzy, kde-format
-msgid "Parameter type:"
-msgstr "ആവശ്യത്തിന്റെ തരം:"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:51
-#, kde-format
-msgid "Property Match"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:56
-#, kde-format
-msgid "Content Conjunction"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:61
-#, kde-format
-msgid "Content Disjunction"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:66
-#, kde-format
-msgid "Device Interface Match"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
-#: ActionEditor.ui:96
-#, kde-format
-msgid "Device type:"
-msgstr "ഉപകരണ തരം:"
-
-#. i18n: ectx: property (text), widget (QLabel, LblValueName)
-#: ActionEditor.ui:135
-#, kde-format
-msgid "Value name:"
-msgstr ""
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
-#: ActionEditor.ui:175
-#, kde-format
-msgid "Equals"
-msgstr "തുല്യം"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
-#: ActionEditor.ui:180
-#, kde-format
-msgid "Contains"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
-#: ActionEditor.ui:208
-#, fuzzy, kde-format
-msgid "Reset Parameter"
-msgstr "ആവശ്യത്തിന്റെ തരം:"
-
-#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
-#: ActionEditor.ui:215
-#, kde-format
-msgid "Save Parameter Changes"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
-#: ActionEditor.ui:247
-#, kde-format
-msgid "Action icon, click to change it"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
-#: ActionEditor.ui:254
-#, kde-format
-msgid "Action name"
-msgstr "നടപടിയുടെ പേരു്"
-
-#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
-#: ActionEditor.ui:271
-#, kde-format
-msgid "Command: "
-msgstr "ആജ്ഞ:"
-
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
-#: ActionEditor.ui:283
-#, no-c-format, kde-format
-msgid ""
-"Command that will trigger the action\n"
-"This can include any or all of the following case insensitive expands:\n"
-"\n"
-"%f: The mountpoint for the device - Storage Access devices only\n"
-"%d: Path to the device node - Block devices only\n"
-"%i: The identifier of the device"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
-#: ActionEditor.ui:300
-#, kde-format
-msgid "Devices must match the following parameters for this action:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, LblActionName)
-#: AddAction.ui:19
-#, kde-format
-msgid "Action name:"
-msgstr "നടപടിയുടെ പേരു്:"
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
-#: AddAction.ui:26
-#, kde-format
-msgid "Enter the name for your new action"
-msgstr "പുതിയ നടപടിയുടെ പേരു നല്‍കുക"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -257,23 +137,38 @@ msgstr "പ്രവൃത്തി തെരഞ്ഞെടുത്തില�
 msgid "Cannot be deleted"
 msgstr "നീക്കം ചെയ്യാന്‍ സാധ്യമല്ല"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
-#: SolidActions.ui:22
-#, kde-format
-msgid "Remove"
-msgstr "നീക്കം ചെയ്യുക"
+#, fuzzy
+#~ msgid "Edit Parameter"
+#~ msgstr "ആവശ്യത്തിന്റെ തരം:"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
-#: SolidActions.ui:29
-#, kde-format
-msgid "Edit…"
-msgstr ""
+#, fuzzy
+#~ msgid "Parameter type:"
+#~ msgstr "ആവശ്യത്തിന്റെ തരം:"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
-#: SolidActions.ui:36
-#, kde-format
-msgid "Add…"
-msgstr ""
+#~ msgid "Device type:"
+#~ msgstr "ഉപകരണ തരം:"
+
+#~ msgid "Equals"
+#~ msgstr "തുല്യം"
+
+#, fuzzy
+#~ msgid "Reset Parameter"
+#~ msgstr "ആവശ്യത്തിന്റെ തരം:"
+
+#~ msgid "Action name"
+#~ msgstr "നടപടിയുടെ പേരു്"
+
+#~ msgid "Command: "
+#~ msgstr "ആജ്ഞ:"
+
+#~ msgid "Action name:"
+#~ msgstr "നടപടിയുടെ പേരു്:"
+
+#~ msgid "Enter the name for your new action"
+#~ msgstr "പുതിയ നടപടിയുടെ പേരു നല്‍കുക"
+
+#~ msgid "Remove"
+#~ msgstr "നീക്കം ചെയ്യുക"
 
 #~ msgid "Edit..."
 #~ msgstr "മാറ്റുക..."

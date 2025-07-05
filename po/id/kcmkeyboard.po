@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2024-10-29 21:18+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -51,37 +51,6 @@ msgctxt "layout - variant"
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#. i18n: ectx: property (windowTitle), widget (QDialog, AddLayoutDialog)
-#: kcm_add_layout_dialog.ui:14
-#, kde-format
-msgid "Add Layout"
-msgstr "Tambah Tata Letak"
-
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, layoutSearchField)
-#: kcm_add_layout_dialog.ui:20
-#, kde-format
-msgid "Search…"
-msgstr "Cari..."
-
-#. i18n: ectx: property (text), widget (QLabel, shortcutLabel)
-#: kcm_add_layout_dialog.ui:45
-#, kde-format
-msgid "Shortcut:"
-msgstr "Pintasan:"
-
-#. i18n: ectx: property (text), widget (QLabel, labelLabel)
-#: kcm_add_layout_dialog.ui:55
-#, kde-format
-msgid "Label:"
-msgstr "Label:"
-
-#. i18n: ectx: property (text), widget (QPushButton, prevbutton)
-#. i18n: ectx: property (text), widget (QPushButton, previewButton)
-#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:315
-#, kde-format
-msgid "Preview"
-msgstr "Pratinjau"
-
 #: kcm_keyboard.cpp:32
 #, kde-format
 msgid "KDE Keyboard Control Module"
@@ -100,208 +69,6 @@ msgid ""
 msgstr ""
 "<h1>Papan Ketik</h1> Modul kendali ini dapat digunakan untuk mengonfigurasi "
 "parameter dan tata letak papan ketik."
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
-#: kcm_keyboard.ui:18
-#, kde-format
-msgid "Hardware"
-msgstr "Perangkat Keras"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm_keyboard.ui:33
-#, kde-format
-msgid "Keyboard &model:"
-msgstr "Model &papan ketik:"
-
-#. i18n: ectx: property (whatsThis), widget (QComboBox, keyboardModelComboBox)
-#: kcm_keyboard.ui:53
-#, kde-format
-msgid ""
-"Here you can choose a keyboard model. This setting is independent of your "
-"keyboard layout and refers to the \"hardware\" model, i.e. the way your "
-"keyboard is manufactured. Modern keyboards that come with your computer "
-"usually have two extra keys and are referred to as \"104-key\" models, which "
-"is probably what you want if you do not know what kind of keyboard you "
-"have.\n"
-msgstr ""
-"Di sini Anda dapat memilih model papan ketik. Setelan ini independen dari "
-"tata letak papan ketik Anda dan merujuk ke model \"perangkat keras\", "
-"misalnya kode pembuatan papan ketik Anda. Papan Ketik modern yang disertakan "
-"dalam komputer Anda biasanya mempunyai dua tombol ekstra yang disebut "
-"sebagai model \"tombol 104\", yang mungkin Anda inginkan jika Anda tidak "
-"tahu jenis papan ketik yang Anda miliki.\n"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabLayouts)
-#: kcm_keyboard.ui:94
-#, kde-format
-msgid "Layouts"
-msgstr "Tata Letak"
-
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, switchingPolicyGroupBox)
-#: kcm_keyboard.ui:102
-#, kde-format
-msgid ""
-"If you select \"Application\" or \"Window\" switching policy, changing the "
-"keyboard layout will only affect the current application or window."
-msgstr ""
-"Jika Anda memilih kebijakan penggantian \"Aplikasi\" atau \"Jendela\", "
-"mengubah tata letak papan ketik hanya akan mempengaruhi aplikasi atau "
-"jendela saat ini."
-
-#. i18n: ectx: property (title), widget (QGroupBox, switchingPolicyGroupBox)
-#: kcm_keyboard.ui:105
-#, kde-format
-msgid "Switching Policy"
-msgstr "Kebijakan Pengalihan"
-
-#. i18n: ectx: property (text), widget (QRadioButton, switchByGlobalRadioBtn)
-#: kcm_keyboard.ui:111
-#, kde-format
-msgid "&Global"
-msgstr "&Global"
-
-#. i18n: ectx: property (text), widget (QRadioButton, switchByDesktopRadioBtn)
-#: kcm_keyboard.ui:124
-#, kde-format
-msgid "&Desktop"
-msgstr "&Desktop"
-
-#. i18n: ectx: property (text), widget (QRadioButton, switchByApplicationRadioBtn)
-#: kcm_keyboard.ui:134
-#, kde-format
-msgid "&Application"
-msgstr "&Aplikasi"
-
-#. i18n: ectx: property (text), widget (QRadioButton, switchByWindowRadioBtn)
-#: kcm_keyboard.ui:144
-#, kde-format
-msgid "&Window"
-msgstr "&Jendela"
-
-#. i18n: ectx: property (title), widget (QGroupBox, shortcutsGroupBox)
-#: kcm_keyboard.ui:157
-#, kde-format
-msgid "Shortcuts for Switching Layout"
-msgstr "Pintasan untuk Tata Letak Pengalihan"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm_keyboard.ui:163
-#, kde-format
-msgid "Main shortcuts:"
-msgstr "Pintasan utama:"
-
-#. i18n: ectx: property (whatsThis), widget (QPushButton, xkbGrpShortcutBtn)
-#: kcm_keyboard.ui:176
-#, kde-format
-msgid ""
-"This is a shortcut for switching layouts which is handled by X.org. It "
-"allows modifier-only shortcuts."
-msgstr ""
-"Ini adalah pintasan untuk mengalihkan tata letak yang ditangani oleh X.org. "
-"Itu membolehkan hanya pemodif pintasan."
-
-#. i18n: ectx: property (text), widget (QPushButton, xkbGrpShortcutBtn)
-#. i18n: ectx: property (text), widget (QPushButton, xkb3rdLevelShortcutBtn)
-#: kcm_keyboard.ui:179 kcm_keyboard.ui:209
-#, kde-format
-msgctxt "no shortcut defined"
-msgid "None"
-msgstr "Nihil"
-
-#. i18n: ectx: property (text), widget (QToolButton, xkbGrpClearBtn)
-#. i18n: ectx: property (text), widget (QToolButton, xkb3rdLevelClearBtn)
-#: kcm_keyboard.ui:186 kcm_keyboard.ui:216
-#, kde-format
-msgid "…"
-msgstr "…"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm_keyboard.ui:193
-#, kde-format
-msgid "3rd level shortcuts:"
-msgstr "Pintasan level ketiga:"
-
-#. i18n: ectx: property (whatsThis), widget (QPushButton, xkb3rdLevelShortcutBtn)
-#: kcm_keyboard.ui:206
-#, kde-format
-msgid ""
-"This is a shortcut for switching to a third level of the active layout (if "
-"it has one) which is handled by X.org. It allows modifier-only shortcuts."
-msgstr ""
-"Ini adalah pintasan untuk mengganti ke tata letak aktiv level ketiga (jika "
-"punya) yang ditangani oleh X.org. Ini membolehkan hanya pemodif pintasan."
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm_keyboard.ui:223
-#, kde-format
-msgid "Alternative shortcut:"
-msgstr "Pintasan alternatif:"
-
-#. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, kdeKeySequence)
-#: kcm_keyboard.ui:236
-#, kde-format
-msgid ""
-"This is a shortcut for switching layouts. It does not support modifier-only "
-"shortcuts and also may not work in some situations (e.g. if popup is active "
-"or from screensaver)."
-msgstr ""
-"Ini adalah pintasan untuk mengalihkan tata letak. Itu tidaklah mendukung "
-"pintasan hanya pemodif dan juga tidak bekerja dalam situasi tertentu (mis. "
-"jika sembulan aktiv atau dari screensaver)."
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
-#: kcm_keyboard.ui:261
-#, kde-format
-msgid "Configure layouts"
-msgstr "Konfigurasikan tata letak"
-
-#. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
-#: kcm_keyboard.ui:275
-#, kde-format
-msgid "Add"
-msgstr "Tambah"
-
-#. i18n: ectx: property (text), widget (QPushButton, removeLayoutBtn)
-#: kcm_keyboard.ui:285
-#, kde-format
-msgid "Remove"
-msgstr "Buang"
-
-#. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
-#: kcm_keyboard.ui:295
-#, kde-format
-msgid "Move Up"
-msgstr "Pindah Naik"
-
-#. i18n: ectx: property (text), widget (QPushButton, moveDownBtn)
-#: kcm_keyboard.ui:305
-#, kde-format
-msgid "Move Down"
-msgstr "Pindah Turun"
-
-#. i18n: ectx: property (text), widget (QCheckBox, layoutLoopingCheckBox)
-#: kcm_keyboard.ui:350
-#, kde-format
-msgid "Spare layouts"
-msgstr "Kosongkan tata letak"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm_keyboard.ui:382
-#, kde-format
-msgid "Main layout count:"
-msgstr "Hitungan tata letak utama:"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
-#: kcm_keyboard.ui:412
-#, kde-format
-msgid "Advanced"
-msgstr "Tingkat Lanjut"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_resetOldXkbOptions)
-#: kcm_keyboard.ui:418
-#, kde-format
-msgid "&Configure keyboard options"
-msgstr "&Konfigurasikan opsi papan ketik"
 
 #: kcm_keyboard_widget.cpp:211
 #, kde-format
@@ -360,131 +127,6 @@ msgctxt "variant"
 msgid "Default"
 msgstr "Baku"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcmmiscwidget.ui:31
-#, kde-format
-msgid "When a key is held:"
-msgstr "Ketika sebuah tombol telah ditahan:"
-
-#. i18n: ectx: property (text), widget (QRadioButton, accentMenuRadioButton)
-#: kcmmiscwidget.ui:38
-#, kde-format
-msgid "&Show accented and similar characters "
-msgstr "&Tampilkan beraksen dan karakter serupa"
-
-#. i18n: ectx: property (text), widget (QRadioButton, repeatRadioButton)
-#: kcmmiscwidget.ui:45
-#, kde-format
-msgid "&Repeat the key"
-msgstr "&Ulangi tombol"
-
-#. i18n: ectx: property (text), widget (QRadioButton, nothingRadioButton)
-#: kcmmiscwidget.ui:52
-#, kde-format
-msgid "&Do nothing"
-msgstr "&Jangan lakukan apa-apa"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcmmiscwidget.ui:66
-#, kde-format
-msgid "Test area:"
-msgstr "Area uji:"
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, lineEdit)
-#: kcmmiscwidget.ui:73
-#, kde-format
-msgid ""
-"Allows to test keyboard repeat and click volume (just don't forget to apply "
-"the changes)."
-msgstr ""
-"Memungkinkan tes perulangan papan ketik dan volume klik (hanya jangan lupa "
-"untuk menyimpan perubahannya)."
-
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, numlockGroupBox)
-#: kcmmiscwidget.ui:82
-#, kde-format
-msgid ""
-"If supported, this option allows you to setup the state of NumLock after "
-"Plasma startup.<p>You can configure NumLock to be turned on or off, or "
-"configure Plasma not to set NumLock state."
-msgstr ""
-"Jika didukung, opsi ini memungkinkan Anda untuk mengeset kondisi NumLock "
-"setelah hidupkan Plasma.<p>Anda dapat mengonfigurasi NumLock untuk "
-"dinyalakan atau dimatikan, atau mengkonfigurasi Plasma untuk tidak mengeset "
-"kondisi NumLock."
-
-#. i18n: ectx: property (title), widget (QGroupBox, numlockGroupBox)
-#: kcmmiscwidget.ui:85
-#, kde-format
-msgid "NumLock on Plasma Startup"
-msgstr "NumLock saat pemulaian Plasma"
-
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton1)
-#: kcmmiscwidget.ui:97
-#, kde-format
-msgid "T&urn on"
-msgstr "N&yalakan"
-
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton2)
-#: kcmmiscwidget.ui:104
-#, kde-format
-msgid "&Turn off"
-msgstr "&Padamkan"
-
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton3)
-#: kcmmiscwidget.ui:111
-#, kde-format
-msgid "Leave unchan&ged"
-msgstr "Biarkan t&ak diubah"
-
-#. i18n: ectx: property (text), widget (QLabel, lblRate)
-#: kcmmiscwidget.ui:148
-#, kde-format
-msgid "&Rate:"
-msgstr "&Kecepatan:"
-
-#. i18n: ectx: property (whatsThis), widget (QSlider, delaySlider)
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, kcfg_repeatDelay)
-#: kcmmiscwidget.ui:164 kcmmiscwidget.ui:202
-#, kde-format
-msgid ""
-"If supported, this option allows you to set the delay after which a pressed "
-"key will start generating keycodes. The 'Repeat rate' option controls the "
-"frequency of these keycodes."
-msgstr ""
-"Jika didukung, opsi ini memungkinkan Anda untuk mengatur jeda setelah "
-"penekanan tombol yang akan memunculkan karakter. Opsi 'kecepatan perulangan' "
-"mengendalikan frekuensi karakter ini."
-
-#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, kcfg_repeatRate)
-#. i18n: ectx: property (whatsThis), widget (QSlider, rateSlider)
-#: kcmmiscwidget.ui:192 kcmmiscwidget.ui:212
-#, kde-format
-msgid ""
-"If supported, this option allows you to set the rate at which keycodes are "
-"generated while a key is pressed."
-msgstr ""
-"Jika didukung, opsi ini memungkinkan Anda untuk mengatur kecepatan karakter "
-"yang dimunculkan ketika tombol ditekan."
-
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_repeatRate)
-#: kcmmiscwidget.ui:195
-#, kde-format
-msgid " repeats/s"
-msgstr " perulangan/d"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_repeatDelay)
-#: kcmmiscwidget.ui:205
-#, kde-format
-msgid " ms"
-msgstr " md"
-
-#. i18n: ectx: property (text), widget (QLabel, lblDelay)
-#: kcmmiscwidget.ui:246
-#, kde-format
-msgid "&Delay:"
-msgstr "&Tunda:"
-
 #: tastenbrett/main.cpp:57
 #, kde-format
 msgctxt "app display name"
@@ -510,6 +152,211 @@ msgstr ""
 "dipilih tidak mendukung tata letak atau tata letak tertentu. Masalah ini "
 "kemungkinan akan hadir ketika Anda mencoba menggunakan kombinasi model, tata "
 "letak dan varian ini."
+
+#~ msgid "Add Layout"
+#~ msgstr "Tambah Tata Letak"
+
+#~ msgid "Search…"
+#~ msgstr "Cari..."
+
+#~ msgid "Shortcut:"
+#~ msgstr "Pintasan:"
+
+#~ msgid "Label:"
+#~ msgstr "Label:"
+
+#~ msgid "Preview"
+#~ msgstr "Pratinjau"
+
+#~ msgid "Hardware"
+#~ msgstr "Perangkat Keras"
+
+#~ msgid "Keyboard &model:"
+#~ msgstr "Model &papan ketik:"
+
+#~ msgid ""
+#~ "Here you can choose a keyboard model. This setting is independent of your "
+#~ "keyboard layout and refers to the \"hardware\" model, i.e. the way your "
+#~ "keyboard is manufactured. Modern keyboards that come with your computer "
+#~ "usually have two extra keys and are referred to as \"104-key\" models, "
+#~ "which is probably what you want if you do not know what kind of keyboard "
+#~ "you have.\n"
+#~ msgstr ""
+#~ "Di sini Anda dapat memilih model papan ketik. Setelan ini independen dari "
+#~ "tata letak papan ketik Anda dan merujuk ke model \"perangkat keras\", "
+#~ "misalnya kode pembuatan papan ketik Anda. Papan Ketik modern yang "
+#~ "disertakan dalam komputer Anda biasanya mempunyai dua tombol ekstra yang "
+#~ "disebut sebagai model \"tombol 104\", yang mungkin Anda inginkan jika "
+#~ "Anda tidak tahu jenis papan ketik yang Anda miliki.\n"
+
+#~ msgid "Layouts"
+#~ msgstr "Tata Letak"
+
+#~ msgid ""
+#~ "If you select \"Application\" or \"Window\" switching policy, changing "
+#~ "the keyboard layout will only affect the current application or window."
+#~ msgstr ""
+#~ "Jika Anda memilih kebijakan penggantian \"Aplikasi\" atau \"Jendela\", "
+#~ "mengubah tata letak papan ketik hanya akan mempengaruhi aplikasi atau "
+#~ "jendela saat ini."
+
+#~ msgid "Switching Policy"
+#~ msgstr "Kebijakan Pengalihan"
+
+#~ msgid "&Global"
+#~ msgstr "&Global"
+
+#~ msgid "&Desktop"
+#~ msgstr "&Desktop"
+
+#~ msgid "&Application"
+#~ msgstr "&Aplikasi"
+
+#~ msgid "&Window"
+#~ msgstr "&Jendela"
+
+#~ msgid "Shortcuts for Switching Layout"
+#~ msgstr "Pintasan untuk Tata Letak Pengalihan"
+
+#~ msgid "Main shortcuts:"
+#~ msgstr "Pintasan utama:"
+
+#~ msgid ""
+#~ "This is a shortcut for switching layouts which is handled by X.org. It "
+#~ "allows modifier-only shortcuts."
+#~ msgstr ""
+#~ "Ini adalah pintasan untuk mengalihkan tata letak yang ditangani oleh X."
+#~ "org. Itu membolehkan hanya pemodif pintasan."
+
+#~ msgctxt "no shortcut defined"
+#~ msgid "None"
+#~ msgstr "Nihil"
+
+#~ msgid "…"
+#~ msgstr "…"
+
+#~ msgid "3rd level shortcuts:"
+#~ msgstr "Pintasan level ketiga:"
+
+#~ msgid ""
+#~ "This is a shortcut for switching to a third level of the active layout "
+#~ "(if it has one) which is handled by X.org. It allows modifier-only "
+#~ "shortcuts."
+#~ msgstr ""
+#~ "Ini adalah pintasan untuk mengganti ke tata letak aktiv level ketiga "
+#~ "(jika punya) yang ditangani oleh X.org. Ini membolehkan hanya pemodif "
+#~ "pintasan."
+
+#~ msgid "Alternative shortcut:"
+#~ msgstr "Pintasan alternatif:"
+
+#~ msgid ""
+#~ "This is a shortcut for switching layouts. It does not support modifier-"
+#~ "only shortcuts and also may not work in some situations (e.g. if popup is "
+#~ "active or from screensaver)."
+#~ msgstr ""
+#~ "Ini adalah pintasan untuk mengalihkan tata letak. Itu tidaklah mendukung "
+#~ "pintasan hanya pemodif dan juga tidak bekerja dalam situasi tertentu "
+#~ "(mis. jika sembulan aktiv atau dari screensaver)."
+
+#~ msgid "Configure layouts"
+#~ msgstr "Konfigurasikan tata letak"
+
+#~ msgid "Add"
+#~ msgstr "Tambah"
+
+#~ msgid "Remove"
+#~ msgstr "Buang"
+
+#~ msgid "Move Up"
+#~ msgstr "Pindah Naik"
+
+#~ msgid "Move Down"
+#~ msgstr "Pindah Turun"
+
+#~ msgid "Spare layouts"
+#~ msgstr "Kosongkan tata letak"
+
+#~ msgid "Main layout count:"
+#~ msgstr "Hitungan tata letak utama:"
+
+#~ msgid "Advanced"
+#~ msgstr "Tingkat Lanjut"
+
+#~ msgid "&Configure keyboard options"
+#~ msgstr "&Konfigurasikan opsi papan ketik"
+
+#~ msgid "When a key is held:"
+#~ msgstr "Ketika sebuah tombol telah ditahan:"
+
+#~ msgid "&Show accented and similar characters "
+#~ msgstr "&Tampilkan beraksen dan karakter serupa"
+
+#~ msgid "&Repeat the key"
+#~ msgstr "&Ulangi tombol"
+
+#~ msgid "&Do nothing"
+#~ msgstr "&Jangan lakukan apa-apa"
+
+#~ msgid "Test area:"
+#~ msgstr "Area uji:"
+
+#~ msgid ""
+#~ "Allows to test keyboard repeat and click volume (just don't forget to "
+#~ "apply the changes)."
+#~ msgstr ""
+#~ "Memungkinkan tes perulangan papan ketik dan volume klik (hanya jangan "
+#~ "lupa untuk menyimpan perubahannya)."
+
+#~ msgid ""
+#~ "If supported, this option allows you to setup the state of NumLock after "
+#~ "Plasma startup.<p>You can configure NumLock to be turned on or off, or "
+#~ "configure Plasma not to set NumLock state."
+#~ msgstr ""
+#~ "Jika didukung, opsi ini memungkinkan Anda untuk mengeset kondisi NumLock "
+#~ "setelah hidupkan Plasma.<p>Anda dapat mengonfigurasi NumLock untuk "
+#~ "dinyalakan atau dimatikan, atau mengkonfigurasi Plasma untuk tidak "
+#~ "mengeset kondisi NumLock."
+
+#~ msgid "NumLock on Plasma Startup"
+#~ msgstr "NumLock saat pemulaian Plasma"
+
+#~ msgid "T&urn on"
+#~ msgstr "N&yalakan"
+
+#~ msgid "&Turn off"
+#~ msgstr "&Padamkan"
+
+#~ msgid "Leave unchan&ged"
+#~ msgstr "Biarkan t&ak diubah"
+
+#~ msgid "&Rate:"
+#~ msgstr "&Kecepatan:"
+
+#~ msgid ""
+#~ "If supported, this option allows you to set the delay after which a "
+#~ "pressed key will start generating keycodes. The 'Repeat rate' option "
+#~ "controls the frequency of these keycodes."
+#~ msgstr ""
+#~ "Jika didukung, opsi ini memungkinkan Anda untuk mengatur jeda setelah "
+#~ "penekanan tombol yang akan memunculkan karakter. Opsi 'kecepatan "
+#~ "perulangan' mengendalikan frekuensi karakter ini."
+
+#~ msgid ""
+#~ "If supported, this option allows you to set the rate at which keycodes "
+#~ "are generated while a key is pressed."
+#~ msgstr ""
+#~ "Jika didukung, opsi ini memungkinkan Anda untuk mengatur kecepatan "
+#~ "karakter yang dimunculkan ketika tombol ditekan."
+
+#~ msgid " repeats/s"
+#~ msgstr " perulangan/d"
+
+#~ msgid " ms"
+#~ msgstr " md"
+
+#~ msgid "&Delay:"
+#~ msgstr "&Tunda:"
 
 #~ msgid "KDE Keyboard Layout Switcher"
 #~ msgstr "Pengalih Tataletak Keyboard KDE"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-11-16 20:08+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -57,64 +57,6 @@ msgstr "Kai Uwe Broulik"
 #, kde-format
 msgid "Plasma 5 Port"
 msgstr "نقل إلى بلازما 5"
-
-#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
-#: DeviceAutomounterKCM.ui:17
-#, kde-format
-msgid ""
-"This list contains the storage devices known to the system. If \"Automount "
-"on Login\" is checked, the device will be automatically mounted even though "
-"\"Mount all removable media at login\" is unchecked. The same applies for "
-"\"Automount on Attach\"."
-msgstr ""
-"هذه القائمة تحتوي على الأجهزة المعروفة لكِيدِي إذا كان \"اوصل عند الولوج\" "
-"مُعلم عليه فإن الأجهزة ستوصل تلقائياً  حتى لو كان \"اوصل الأجهزة القابلة للحمل "
-"عند الولوج\" غير مُعلم عليه، وسيتم تطبيق الإجراء نفسه على \"إلحاق الإجهزة "
-"تلقائياً\"."
-
-#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
-#: DeviceAutomounterKCM.ui:54
-#, kde-format
-msgid ""
-"Clicking this button causes the selected devices to be 'forgotten'. This is "
-"only useful if \"Only automatically mount removable media that has been "
-"manually mounted before\" is checked. Once a device is forgotten and the "
-"system is set to only automatically mount familiar devices, the device will "
-"not be automatically mounted."
-msgstr ""
-"النقر على هذا الزر يجعل كِيدِي 'تنسى' الأجهزة المحدّدة. هذا مفيد فقط إذا كان "
-"الخيار \"أوصل فقط الأجهزة القابلة للحمل التي سبق وصلها يدوياً من قبل\" مُحدّداً. "
-"في حال نسيان الجهاز وضبط كِيدِي على الوصل التلقائي للأجهزة المألوفة فقط، فلن "
-"يتم وصل الجهاز المنسي تلقائياً."
-
-#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
-#: DeviceAutomounterKCM.ui:57
-#, kde-format
-msgid "Forget Device"
-msgstr "انس الجهاز"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
-#: DeviceAutomounterKCM.ui:67
-#, kde-format
-msgid ""
-"When this is not checked, only remembered devices will be automatically "
-"mounted. A device is 'remembered' if it has ever been mounted before. For "
-"instance, plugging in a USB media player to charge is not sufficient to "
-"'remember' it - if the files are not accessed, it will not be automatically "
-"mounted the next time it is seen. Once they have been accessed, however, the "
-"device's contents will be automatically made available to the system."
-msgstr ""
-"عند عدم تعيين هذا الخيار، سيتم ضمّ الأجهزة التي تتذكرها كِيدِي فقط.الأجهزة "
-"\"المُتذكرة\" هي التي سبق وصلها من قبل. فمثلاً ليس كافياً وصل مشغلات وسائط USB "
-"لتذكرها طالما لم يتم النفاذ إلى الملفات بداخلها. ستقوم كِيدِي بضمّ الجهاز "
-"تلقائيًّا في المرة القادمة التي تراه فيها. لكن عند النفاذ إلى ملفات الجهاز، "
-"فسيصير محتوى الجهاز متوفّراً للنظام."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
-#: DeviceAutomounterKCM.ui:70
-#, kde-format
-msgid "Automatically mount removable media that have never been mounted before"
-msgstr "أوصل آليا الأجهزة القابلة للحمل التي لم يسبق وصلها من قبل قط."
 
 #: DeviceModel.cpp:52
 #, kde-format
@@ -177,6 +119,51 @@ msgstr "هذا الجهاز سيوصل تلقائياً عند الإلحاق"
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "هذا الجهاز لن يوصل تلقائياً عند الإلحاق"
+
+#~ msgid ""
+#~ "This list contains the storage devices known to the system. If "
+#~ "\"Automount on Login\" is checked, the device will be automatically "
+#~ "mounted even though \"Mount all removable media at login\" is unchecked. "
+#~ "The same applies for \"Automount on Attach\"."
+#~ msgstr ""
+#~ "هذه القائمة تحتوي على الأجهزة المعروفة لكِيدِي إذا كان \"اوصل عند الولوج\" "
+#~ "مُعلم عليه فإن الأجهزة ستوصل تلقائياً  حتى لو كان \"اوصل الأجهزة القابلة "
+#~ "للحمل عند الولوج\" غير مُعلم عليه، وسيتم تطبيق الإجراء نفسه على \"إلحاق "
+#~ "الإجهزة تلقائياً\"."
+
+#~ msgid ""
+#~ "Clicking this button causes the selected devices to be 'forgotten'. This "
+#~ "is only useful if \"Only automatically mount removable media that has "
+#~ "been manually mounted before\" is checked. Once a device is forgotten and "
+#~ "the system is set to only automatically mount familiar devices, the "
+#~ "device will not be automatically mounted."
+#~ msgstr ""
+#~ "النقر على هذا الزر يجعل كِيدِي 'تنسى' الأجهزة المحدّدة. هذا مفيد فقط إذا كان "
+#~ "الخيار \"أوصل فقط الأجهزة القابلة للحمل التي سبق وصلها يدوياً من قبل\" "
+#~ "مُحدّداً. في حال نسيان الجهاز وضبط كِيدِي على الوصل التلقائي للأجهزة المألوفة "
+#~ "فقط، فلن يتم وصل الجهاز المنسي تلقائياً."
+
+#~ msgid "Forget Device"
+#~ msgstr "انس الجهاز"
+
+#~ msgid ""
+#~ "When this is not checked, only remembered devices will be automatically "
+#~ "mounted. A device is 'remembered' if it has ever been mounted before. For "
+#~ "instance, plugging in a USB media player to charge is not sufficient to "
+#~ "'remember' it - if the files are not accessed, it will not be "
+#~ "automatically mounted the next time it is seen. Once they have been "
+#~ "accessed, however, the device's contents will be automatically made "
+#~ "available to the system."
+#~ msgstr ""
+#~ "عند عدم تعيين هذا الخيار، سيتم ضمّ الأجهزة التي تتذكرها كِيدِي فقط.الأجهزة "
+#~ "\"المُتذكرة\" هي التي سبق وصلها من قبل. فمثلاً ليس كافياً وصل مشغلات وسائط "
+#~ "USB لتذكرها طالما لم يتم النفاذ إلى الملفات بداخلها. ستقوم كِيدِي بضمّ "
+#~ "الجهاز تلقائيًّا في المرة القادمة التي تراه فيها. لكن عند النفاذ إلى ملفات "
+#~ "الجهاز، فسيصير محتوى الجهاز متوفّراً للنظام."
+
+#~ msgid ""
+#~ "Automatically mount removable media that have never been mounted before"
+#~ msgstr "أوصل آليا الأجهزة القابلة للحمل التي لم يسبق وصلها من قبل قط."
 
 #~ msgid ""
 #~ "If any removable storage devices are connected to your system when you "

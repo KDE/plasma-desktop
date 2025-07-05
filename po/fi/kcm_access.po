@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-16 02:45+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-09-26 18:03+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -89,212 +89,6 @@ msgstr "Ei voitu asettaa Orcan gsettings-asetusta: ”%1” epäonnistui"
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Virhe: Ei voitu käynnistää ”orca --setup”"
-
-#. i18n: ectx: label, entry (SystemBell), group (Bell)
-#: kcmaccessibilitybell.kcfg:9
-#, kde-format
-msgid "Use System Bell"
-msgstr "Käytä järjestelmän äänimerkkiä"
-
-#. i18n: ectx: label, entry (CustomBell), group (Bell)
-#: kcmaccessibilitybell.kcfg:13
-#, kde-format
-msgid "Customize system bell"
-msgstr "Mukauta järjestelmän äänimerkkiä"
-
-#. i18n: ectx: label, entry (CustomBellFile), group (Bell)
-#: kcmaccessibilitybell.kcfg:17
-#, kde-format
-msgid "Sound file for the Bell"
-msgstr "Äänimerkin äänitiedosto"
-
-#. i18n: ectx: label, entry (VisibleBell), group (Bell)
-#: kcmaccessibilitybell.kcfg:20
-#, kde-format
-msgid "Use a visual bell instead of a sound"
-msgstr "Käytä näkyvää ilmoitusta äänen sijaan"
-
-#. i18n: ectx: label, entry (InvertScreen), group (Bell)
-#: kcmaccessibilitybell.kcfg:24
-#, kde-format
-msgid "Invert the system colors on the bell"
-msgstr "Kääntää kellon järjestelmävärit"
-
-#. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
-#: kcmaccessibilitybell.kcfg:28
-#, kde-format
-msgid "Color of the Visible Bell"
-msgstr "Näkyvän äänimerkin väri"
-
-#. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
-#: kcmaccessibilitybell.kcfg:32
-#, kde-format
-msgid "Duration of the Visible Bell"
-msgstr "Näkyvän äänimerkin kesto"
-
-#. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:9
-#, kde-format
-msgid "Use sticky Keys"
-msgstr "Käytä alas jääviä näppäimiä"
-
-#. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:13
-#, kde-format
-msgid "Lock the sticky keys"
-msgstr "Lukitse alas jäävät näppäimet"
-
-#. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:17
-#, kde-format
-msgid "Turn sticky keys off when two keys are pressed simultaneously"
-msgstr ""
-"Poista alas jäävien näppäinten tila kun kahta näppäintä painetaan samaan "
-"aikaan"
-
-#. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:21
-#, kde-format
-msgid "Beep on a sticky key press"
-msgstr "Anna äänimerkki painettaessa alas jääviä näppäimiä"
-
-#. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:25
-#, kde-format
-msgid "Toggle keys beep"
-msgstr "Käytä/älä käytä näppäinpainallusääniä"
-
-#. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:29
-#, kde-format
-msgid "Notify when a keyboard modifier is pressed"
-msgstr "Ilmoita painettaessa muuntonäppäintä"
-
-#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:33
-#, kde-format
-msgid "Use a timeout delay"
-msgstr "Käytä aikakatkaisuviivettä"
-
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:37
-#, kde-format
-msgid "Delay for timeout"
-msgstr "Aikakatkaisun viive"
-
-#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:41
-#, kde-format
-msgid "Use a beep for access"
-msgstr "Anna äänimerkki käyttöoikeudesta"
-
-#. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:9
-#, kde-format
-msgid "Use slow keypresses"
-msgstr "Käytä hitaita näppäimiä"
-
-#. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:13
-#, kde-format
-msgid "Delay for the key press"
-msgstr "Näppäinpainalluksen viive"
-
-#. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:17
-#, kde-format
-msgid "Beep on a slow keypress"
-msgstr "Anna hitaasta näppäinpainalluksesta äänimerkki"
-
-#. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:21
-#, kde-format
-msgid "Beep on an accepted keypress"
-msgstr "Anna hyväksytystä näppäinpainalluksesta äänimerkki"
-
-#. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:25
-#, kde-format
-msgid "Beep on a rejected keypress"
-msgstr "Anna hylätystä näppäinpainalluksesta äänimerkki"
-
-#. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:29
-#, kde-format
-msgid "Bounce Keys"
-msgstr "Toistavat näppäimet"
-
-#. i18n: ectx: label, entry (BounceKeysDelay), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:33
-#, kde-format
-msgid "Use a delay for bouncing"
-msgstr "Aseta toistamisviive"
-
-#. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:37
-#, kde-format
-msgid "Beep if a bounce key event is rejected"
-msgstr "Anna äänimerkki, jos näppäintoisto estetään"
-
-#. i18n: ectx: label, entry (MouseKeys), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:9
-#, kde-format
-msgid "Use keys to control the mouse"
-msgstr "Ohjaa hiirtä näppäimin"
-
-#. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:13
-#, kde-format
-msgid "Delay for the mouse movement"
-msgstr "Hiiren liikkeen viive"
-
-#. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:17
-#, kde-format
-msgid "Repetition interval for the mouse movement"
-msgstr "Hiiren liikkeen toistoväli"
-
-#. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:21
-#, kde-format
-msgid "Time to hit maximum velocity"
-msgstr "Aika enimmäisnopeuteen"
-
-#. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:25
-#, kde-format
-msgid "Maximum Velocity"
-msgstr "Enimmäisnopeus"
-
-#. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:29
-#, kde-format
-msgid "Mouse Key Curve"
-msgstr "Hiiripainikekäyrä"
-
-#. i18n: ectx: label, entry (Gestures), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:35
-#, kde-format
-msgid "Use Gestures"
-msgstr "Käytä eleitä"
-
-#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:39
-#, kde-format
-msgid "Ask for Confirmation for a gesture"
-msgstr "Pyydä vahvistamaan ele"
-
-#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:43
-#, kde-format
-msgid "Confirm access to the Keyboard"
-msgstr "Vahvista näppäimistön käyttöoikeus"
-
-#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
-#: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
-#, kde-format
-msgid "Enable Screen Reader"
-msgstr "Käytä näyttölukijaa"
 
 #: package/contents/ui/Bell.qml:20
 #, kde-format
@@ -580,6 +374,11 @@ msgstr "Enimmäisnopeus:"
 msgid "Acceleration profile:"
 msgstr "Kiihdytysprofiili:"
 
+#: package/contents/ui/ScreenReader.qml:17
+#, kde-format
+msgid "Enable Screen Reader"
+msgstr "Käytä näyttölukijaa"
+
 #: package/contents/ui/ScreenReader.qml:28
 #, kde-format
 msgid "Launch Orca Screen Reader Configuration…"
@@ -602,6 +401,107 @@ msgid ""
 msgstr ""
 "Orca-näyttölukijaa ei vaikuta olevan asennettu. Ennen kuin yrität käytät "
 "tätä ominaisuutta, asenna se ja kirjaudu ulos tai käynnistä kone uudelleen"
+
+#~ msgid "Use System Bell"
+#~ msgstr "Käytä järjestelmän äänimerkkiä"
+
+#~ msgid "Customize system bell"
+#~ msgstr "Mukauta järjestelmän äänimerkkiä"
+
+#~ msgid "Sound file for the Bell"
+#~ msgstr "Äänimerkin äänitiedosto"
+
+#~ msgid "Use a visual bell instead of a sound"
+#~ msgstr "Käytä näkyvää ilmoitusta äänen sijaan"
+
+#~ msgid "Invert the system colors on the bell"
+#~ msgstr "Kääntää kellon järjestelmävärit"
+
+#~ msgid "Color of the Visible Bell"
+#~ msgstr "Näkyvän äänimerkin väri"
+
+#~ msgid "Duration of the Visible Bell"
+#~ msgstr "Näkyvän äänimerkin kesto"
+
+#~ msgid "Use sticky Keys"
+#~ msgstr "Käytä alas jääviä näppäimiä"
+
+#~ msgid "Lock the sticky keys"
+#~ msgstr "Lukitse alas jäävät näppäimet"
+
+#~ msgid "Turn sticky keys off when two keys are pressed simultaneously"
+#~ msgstr ""
+#~ "Poista alas jäävien näppäinten tila kun kahta näppäintä painetaan samaan "
+#~ "aikaan"
+
+#~ msgid "Beep on a sticky key press"
+#~ msgstr "Anna äänimerkki painettaessa alas jääviä näppäimiä"
+
+#~ msgid "Toggle keys beep"
+#~ msgstr "Käytä/älä käytä näppäinpainallusääniä"
+
+#~ msgid "Notify when a keyboard modifier is pressed"
+#~ msgstr "Ilmoita painettaessa muuntonäppäintä"
+
+#~ msgid "Use a timeout delay"
+#~ msgstr "Käytä aikakatkaisuviivettä"
+
+#~ msgid "Delay for timeout"
+#~ msgstr "Aikakatkaisun viive"
+
+#~ msgid "Use a beep for access"
+#~ msgstr "Anna äänimerkki käyttöoikeudesta"
+
+#~ msgid "Use slow keypresses"
+#~ msgstr "Käytä hitaita näppäimiä"
+
+#~ msgid "Delay for the key press"
+#~ msgstr "Näppäinpainalluksen viive"
+
+#~ msgid "Beep on a slow keypress"
+#~ msgstr "Anna hitaasta näppäinpainalluksesta äänimerkki"
+
+#~ msgid "Beep on an accepted keypress"
+#~ msgstr "Anna hyväksytystä näppäinpainalluksesta äänimerkki"
+
+#~ msgid "Beep on a rejected keypress"
+#~ msgstr "Anna hylätystä näppäinpainalluksesta äänimerkki"
+
+#~ msgid "Bounce Keys"
+#~ msgstr "Toistavat näppäimet"
+
+#~ msgid "Use a delay for bouncing"
+#~ msgstr "Aseta toistamisviive"
+
+#~ msgid "Beep if a bounce key event is rejected"
+#~ msgstr "Anna äänimerkki, jos näppäintoisto estetään"
+
+#~ msgid "Use keys to control the mouse"
+#~ msgstr "Ohjaa hiirtä näppäimin"
+
+#~ msgid "Delay for the mouse movement"
+#~ msgstr "Hiiren liikkeen viive"
+
+#~ msgid "Repetition interval for the mouse movement"
+#~ msgstr "Hiiren liikkeen toistoväli"
+
+#~ msgid "Time to hit maximum velocity"
+#~ msgstr "Aika enimmäisnopeuteen"
+
+#~ msgid "Maximum Velocity"
+#~ msgstr "Enimmäisnopeus"
+
+#~ msgid "Mouse Key Curve"
+#~ msgstr "Hiiripainikekäyrä"
+
+#~ msgid "Use Gestures"
+#~ msgstr "Käytä eleitä"
+
+#~ msgid "Ask for Confirmation for a gesture"
+#~ msgstr "Pyydä vahvistamaan ele"
+
+#~ msgid "Confirm access to the Keyboard"
+#~ msgstr "Vahvista näppäimistön käyttöoikeus"
 
 #~ msgid "Maximum velocity"
 #~ msgstr "Enimmäisnopeus"

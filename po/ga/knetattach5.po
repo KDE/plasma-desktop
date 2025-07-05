@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase/knetattach\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-14 00:46+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2004-12-11 21:17-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -87,118 +87,6 @@ msgstr "Sábháil agus C&eangail"
 msgid "C&onnect"
 msgstr "C&eangail"
 
-#. i18n: ectx: property (windowTitle), widget (QWizard, KNetAttach)
-#: knetattach.ui:14
-#, kde-format
-msgid "Network Folder Wizard"
-msgstr "Treoraí Fillteáin Líonra"
-
-#. i18n: ectx: property (title), widget (QWizardPage, _folderType)
-#: knetattach.ui:18
-#, kde-format
-msgid "Add Network Folder"
-msgstr "Cuir Fillteán Líonra Leis"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: knetattach.ui:24
-#, kde-format
-msgid ""
-"Select the type of network folder you wish to connect to and press the Next "
-"button."
-msgstr ""
-"Roghnaigh cineál an fhillteáin líonra lenar mian leat a cheangal agus brúigh "
-"cnaipe Ar Aghaidh."
-
-#. i18n: ectx: property (text), widget (QRadioButton, _recent)
-#: knetattach.ui:65
-#, kde-format
-msgid "&Recent connection:"
-msgstr "Ceangal le &déanaí:"
-
-#. i18n: ectx: property (text), widget (QRadioButton, _webfolder)
-#: knetattach.ui:72
-#, kde-format
-msgid "&WebFolder (webdav)"
-msgstr "Fillteán &Gréasáin (webdav)"
-
-#. i18n: ectx: property (text), widget (QRadioButton, _fish)
-#: knetattach.ui:82
-#, kde-format
-msgid "&Secure shell (ssh)"
-msgstr "Blao&sc dhaingean (ssh)"
-
-#. i18n: ectx: property (text), widget (QRadioButton, _ftp)
-#: knetattach.ui:111
-#, kde-format
-msgid "FT&P"
-msgstr "FT&P"
-
-#. i18n: ectx: property (text), widget (QRadioButton, _smb)
-#: knetattach.ui:118
-#, kde-format
-msgid "&Microsoft® Windows® network drive"
-msgstr "Tiomántán líonra &Microsoft® Windows®"
-
-#. i18n: ectx: property (title), widget (QWizardPage, _folderParameters)
-#: knetattach.ui:145
-#, kde-format
-msgid "Network Folder Information"
-msgstr "Eolas faoin Fhillteán Líonra"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel4_2)
-#: knetattach.ui:177
-#, kde-format
-msgid "&Name:"
-msgstr "Ai&nm:"
-
-#. i18n: ectx: property (text), widget (QLabel, _userText)
-#: knetattach.ui:196
-#, kde-format
-msgid "&User:"
-msgstr "Ú&sáideoir:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: knetattach.ui:222
-#, kde-format
-msgid "Se&rver:"
-msgstr "F&reastalaí:"
-
-#. i18n: ectx: property (text), widget (QLabel, _portText)
-#: knetattach.ui:248
-#, kde-format
-msgid "&Port:"
-msgstr "&Port:"
-
-#. i18n: ectx: property (text), widget (QLabel, _protocol)
-#: knetattach.ui:283
-#, kde-format
-msgid "&Protocol:"
-msgstr "&Prótacal:"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: knetattach.ui:313
-#, kde-format
-msgid "&Folder:"
-msgstr "&Fillteán:"
-
-#. i18n: ectx: property (text), widget (QLabel, _encodingText)
-#: knetattach.ui:335
-#, kde-format
-msgid "Encoding:"
-msgstr "Ionchódú:"
-
-#. i18n: ectx: property (text), widget (QCheckBox, _createIcon)
-#: knetattach.ui:351
-#, kde-format
-msgid "Cr&eate an icon for this remote folder"
-msgstr "Cruthaigh d&eilbhín le haghaidh an fhillteáin chianda seo"
-
-#. i18n: ectx: property (text), widget (QCheckBox, _useEncryption)
-#: knetattach.ui:361
-#, kde-format
-msgid "&Use encryption"
-msgstr "&Criptigh"
-
 #: main.cpp:21 main.cpp:23
 #, kde-format
 msgid "KDE Network Wizard"
@@ -218,6 +106,64 @@ msgstr "George Staikos"
 #, kde-format
 msgid "Primary author and maintainer"
 msgstr "Príomhúdar agus cothaitheoir"
+
+#~ msgid "Network Folder Wizard"
+#~ msgstr "Treoraí Fillteáin Líonra"
+
+#~ msgid "Add Network Folder"
+#~ msgstr "Cuir Fillteán Líonra Leis"
+
+#~ msgid ""
+#~ "Select the type of network folder you wish to connect to and press the "
+#~ "Next button."
+#~ msgstr ""
+#~ "Roghnaigh cineál an fhillteáin líonra lenar mian leat a cheangal agus "
+#~ "brúigh cnaipe Ar Aghaidh."
+
+#~ msgid "&Recent connection:"
+#~ msgstr "Ceangal le &déanaí:"
+
+#~ msgid "&WebFolder (webdav)"
+#~ msgstr "Fillteán &Gréasáin (webdav)"
+
+#~ msgid "&Secure shell (ssh)"
+#~ msgstr "Blao&sc dhaingean (ssh)"
+
+#~ msgid "FT&P"
+#~ msgstr "FT&P"
+
+#~ msgid "&Microsoft® Windows® network drive"
+#~ msgstr "Tiomántán líonra &Microsoft® Windows®"
+
+#~ msgid "Network Folder Information"
+#~ msgstr "Eolas faoin Fhillteán Líonra"
+
+#~ msgid "&Name:"
+#~ msgstr "Ai&nm:"
+
+#~ msgid "&User:"
+#~ msgstr "Ú&sáideoir:"
+
+#~ msgid "Se&rver:"
+#~ msgstr "F&reastalaí:"
+
+#~ msgid "&Port:"
+#~ msgstr "&Port:"
+
+#~ msgid "&Protocol:"
+#~ msgstr "&Prótacal:"
+
+#~ msgid "&Folder:"
+#~ msgstr "&Fillteán:"
+
+#~ msgid "Encoding:"
+#~ msgstr "Ionchódú:"
+
+#~ msgid "Cr&eate an icon for this remote folder"
+#~ msgstr "Cruthaigh d&eilbhín le haghaidh an fhillteáin chianda seo"
+
+#~ msgid "&Use encryption"
+#~ msgstr "&Criptigh"
 
 #~ msgid ""
 #~ "Enter a name for this <i>%1</i> as well as the server address, port and "

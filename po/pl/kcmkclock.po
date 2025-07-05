@@ -1,5 +1,5 @@
 # translation of kcmkclock.po to Polish
-# Version: $Revision: 1681059 $
+# Version: $Revision: 1712705 $
 # translation of kcmkclock.po to
 # KTranslator Generated File
 # SPDX-FileCopyrightText: 2011, 2012, 2013, 2015, 2016, 2017, 2019, 2021, 2023 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-06-06 07:08+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -30,54 +30,6 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 "mrudolf@kdewebdev.org, norbert@kde.com.pl, lukasz.wojnilowicz@gmail.com"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: dateandtime.ui:22
-#, kde-format
-msgid "Date and Time"
-msgstr "Data i czas"
-
-#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
-#: dateandtime.ui:30
-#, kde-format
-msgid "Set date and time &automatically"
-msgstr "Sam ust&awiaj datę i czas"
-
-#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
-#: dateandtime.ui:53
-#, kde-format
-msgid "&Time server:"
-msgstr "&Serwer czasu:"
-
-#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
-#: dateandtime.ui:86
-#, kde-format
-msgid "Here you can change the system date's day of the month, month and year."
-msgstr "Tutaj można zmienić dzień, miesiąc i rok w dacie systemowej."
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: dateandtime.ui:122
-#, kde-format
-msgid "Time Zone"
-msgstr "Strefa czasowa"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: dateandtime.ui:128
-#, kde-format
-msgid "To change the local time zone, select your area from the list below."
-msgstr "Aby zmienić strefę czasową, wybierz region z listy poniżej."
-
-#. i18n: ectx: property (text), widget (QLabel, m_local)
-#: dateandtime.ui:151
-#, kde-format
-msgid "Current local time zone:"
-msgstr "Bieżąca strefa czasowa:"
-
-#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
-#: dateandtime.ui:161
-#, kde-format
-msgid "Search…"
-msgstr "Szukaj..."
 
 #: dtime.cpp:61
 #, kde-format
@@ -229,6 +181,31 @@ msgstr "Nie można ustawić bieżącego czasu"
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "Nie można ustawić strefy czasowej"
+
+#~ msgid "Date and Time"
+#~ msgstr "Data i czas"
+
+#~ msgid "Set date and time &automatically"
+#~ msgstr "Sam ust&awiaj datę i czas"
+
+#~ msgid "&Time server:"
+#~ msgstr "&Serwer czasu:"
+
+#~ msgid ""
+#~ "Here you can change the system date's day of the month, month and year."
+#~ msgstr "Tutaj można zmienić dzień, miesiąc i rok w dacie systemowej."
+
+#~ msgid "Time Zone"
+#~ msgstr "Strefa czasowa"
+
+#~ msgid "To change the local time zone, select your area from the list below."
+#~ msgstr "Aby zmienić strefę czasową, wybierz region z listy poniżej."
+
+#~ msgid "Current local time zone:"
+#~ msgstr "Bieżąca strefa czasowa:"
+
+#~ msgid "Search…"
+#~ msgstr "Szukaj..."
 
 #~ msgid "kcmclock"
 #~ msgstr "kcmclock"

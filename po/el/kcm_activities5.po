@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-24 00:47+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2016-06-04 15:11+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -99,32 +99,6 @@ msgstr "Ιδιωτική - να μην καταγράφεται η χρήση γ
 msgid "Shortcut for switching:"
 msgstr "Συντόμευση για εναλλαγή σε αυτή τη δραστηριότητα:"
 
-#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:10
-#, fuzzy, kde-format
-#| msgid "Clear recent history"
-msgid "How many months keep the activity history"
-msgstr "Καθαρισμός πρόσφατου ιστορικού"
-
-#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:17
-#, fuzzy, kde-format
-#| msgid "Clear recent history"
-msgid "Which data to keep in activity history"
-msgstr "Καθαρισμός πρόσφατου ιστορικού"
-
-#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:21
-#, kde-format
-msgid "List of Applications whose activity history to save"
-msgstr ""
-
-#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:24
-#, kde-format
-msgid "List of Applications whose activity history not to save"
-msgstr ""
-
 #: MainConfigurationWidget.cpp:33
 #, kde-format
 msgid "Switching"
@@ -167,28 +141,28 @@ msgctxt "@action"
 msgid "Walk through activities (Reverse)"
 msgstr "Διάσχιση δραστηριοτήτων (αντίστροφα)"
 
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_virtualDesktopSwitchEnabled)
-#: ui/SwitchingTabBase.ui:22
-#, fuzzy, kde-format
-#| msgid ""
-#| "Remember the current virtual desktop for each activity (needs restart)"
-msgid "Remember for each activity (needs restart)"
-msgstr ""
-"Απομνημόνευση της τρέχουσας εικονικής επιφάνειας εργασίας για κάθε "
-"δραστηριότητα (απαιτείται επανεκκίνηση)"
+#, fuzzy
+#~| msgid "Clear recent history"
+#~ msgid "How many months keep the activity history"
+#~ msgstr "Καθαρισμός πρόσφατου ιστορικού"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: ui/SwitchingTabBase.ui:29
-#, kde-format
-msgid "Current virtual desktop:"
-msgstr ""
+#, fuzzy
+#~| msgid "Clear recent history"
+#~ msgid "Which data to keep in activity history"
+#~ msgstr "Καθαρισμός πρόσφατου ιστορικού"
 
-#. i18n: ectx: property (text), widget (QLabel, label_1)
-#: ui/SwitchingTabBase.ui:38
-#, fuzzy, kde-format
-#| msgid "Shortcuts"
-msgid "Shortcuts:"
-msgstr "Συντομεύσεις"
+#, fuzzy
+#~| msgid ""
+#~| "Remember the current virtual desktop for each activity (needs restart)"
+#~ msgid "Remember for each activity (needs restart)"
+#~ msgstr ""
+#~ "Απομνημόνευση της τρέχουσας εικονικής επιφάνειας εργασίας για κάθε "
+#~ "δραστηριότητα (απαιτείται επανεκκίνηση)"
+
+#, fuzzy
+#~| msgid "Shortcuts"
+#~ msgid "Shortcuts:"
+#~ msgstr "Συντομεύσεις"
 
 #~ msgid "Privacy"
 #~ msgstr "Ιδιωτικότητα"

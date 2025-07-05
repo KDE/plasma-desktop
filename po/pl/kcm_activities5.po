@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-24 00:47+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2024-11-23 14:22+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -96,30 +96,6 @@ msgstr "Nie śledź wykonywania tej aktywności"
 msgid "Shortcut for switching:"
 msgstr "Skrót do przełączania na tę aktywność:"
 
-#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:10
-#, kde-format
-msgid "How many months keep the activity history"
-msgstr "Historię z ilu miesięcy aktywności przechowywać"
-
-#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:17
-#, kde-format
-msgid "Which data to keep in activity history"
-msgstr "Jakie dane przechowywać w historii aktywności"
-
-#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:21
-#, kde-format
-msgid "List of Applications whose activity history to save"
-msgstr "Spis aplikacji, których historię aktywności zachowywać"
-
-#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:24
-#, kde-format
-msgid "List of Applications whose activity history not to save"
-msgstr "Spis aplikacji, których historię aktywności nie zachować"
-
 #: MainConfigurationWidget.cpp:33
 #, kde-format
 msgid "Switching"
@@ -159,23 +135,26 @@ msgctxt "@action"
 msgid "Walk through activities (Reverse)"
 msgstr "Przechodzenie pomiędzy aktywnościami (odwrotnie)"
 
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_virtualDesktopSwitchEnabled)
-#: ui/SwitchingTabBase.ui:22
-#, kde-format
-msgid "Remember for each activity (needs restart)"
-msgstr "Pamiętaj dla każdej aktywności (wymaga ponownego uruchomienia)"
+#~ msgid "How many months keep the activity history"
+#~ msgstr "Historię z ilu miesięcy aktywności przechowywać"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: ui/SwitchingTabBase.ui:29
-#, kde-format
-msgid "Current virtual desktop:"
-msgstr "Bieżący pulpit wirtualny:"
+#~ msgid "Which data to keep in activity history"
+#~ msgstr "Jakie dane przechowywać w historii aktywności"
 
-#. i18n: ectx: property (text), widget (QLabel, label_1)
-#: ui/SwitchingTabBase.ui:38
-#, kde-format
-msgid "Shortcuts:"
-msgstr "Skróty:"
+#~ msgid "List of Applications whose activity history to save"
+#~ msgstr "Spis aplikacji, których historię aktywności zachowywać"
+
+#~ msgid "List of Applications whose activity history not to save"
+#~ msgstr "Spis aplikacji, których historię aktywności nie zachować"
+
+#~ msgid "Remember for each activity (needs restart)"
+#~ msgstr "Pamiętaj dla każdej aktywności (wymaga ponownego uruchomienia)"
+
+#~ msgid "Current virtual desktop:"
+#~ msgstr "Bieżący pulpit wirtualny:"
+
+#~ msgid "Shortcuts:"
+#~ msgstr "Skróty:"
 
 #~ msgid "Privacy"
 #~ msgstr "Prywatność"

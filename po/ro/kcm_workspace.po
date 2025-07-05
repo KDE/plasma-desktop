@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-17 00:51+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-04-10 18:52+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -37,14 +37,12 @@ msgstr "Repornește"
 msgid "Visual behavior:"
 msgstr "Comportament vizual:"
 
-#. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
-#: package/contents/ui/main.qml:51 workspaceoptions_plasmasettings.kcfg:9
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "Arată indicii informative la planarea mausului"
 
-#. i18n: ectx: label, entry (osdEnabled), group (OSD)
-#: package/contents/ui/main.qml:62 workspaceoptions_plasmasettings.kcfg:15
+#: package/contents/ui/main.qml:62
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "Arată reacții vizuale pentru schimbări de stare"
@@ -174,57 +172,33 @@ msgstr ""
 "În regim tactil, multe elemente ale interfeței cu utilizatorul vor deveni "
 "mai mari pentru a facilita interacțiunea prin atingeri."
 
-#. i18n: ectx: label, entry (singleClick), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:9
-#, kde-format
-msgid "Single click to open files"
-msgstr "Un clic pentru deschiderea fișierelor"
+#~ msgid "Single click to open files"
+#~ msgstr "Un clic pentru deschiderea fișierelor"
 
-#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:13
-#, kde-format
-msgid "Animation speed"
-msgstr "Viteza animației"
+#~ msgid "Animation speed"
+#~ msgstr "Viteza animației"
 
-#. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:17
-#, kde-format
-msgid "Left-click in scrollbar track moves scrollbar by one page"
-msgstr "Clic stâng în calea barei de derulare mută bara cu o pagină"
+#~ msgid "Left-click in scrollbar track moves scrollbar by one page"
+#~ msgstr "Clic stâng în calea barei de derulare mută bara cu o pagină"
 
-#. i18n: ectx: label, entry (tabletMode), group (Input)
-#: workspaceoptions_kwinsettings.kcfg:9
-#, kde-format
-msgid "Automatically switch to touch-optimized mode"
-msgstr "Schimbă automat la regimul optimizat pentru atingeri"
+#~ msgid "Automatically switch to touch-optimized mode"
+#~ msgstr "Schimbă automat la regimul optimizat pentru atingeri"
 
-#. i18n: ectx: label, entry (primarySelection), group (Wayland)
-#: workspaceoptions_kwinsettings.kcfg:15
-#, kde-format
-msgid "Enable middle click selection pasting"
-msgstr "Activează lipirea selecției cu clic mijlociu"
+#~ msgid "Enable middle click selection pasting"
+#~ msgstr "Activează lipirea selecției cu clic mijlociu"
 
-#. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
-#: workspaceoptions_plasmasettings.kcfg:16
-#, kde-format
-msgid ""
-"Show an on-screen display to indicate status changes such as brightness or "
-"volume"
-msgstr ""
-"Arată afișaj pe ecran pentru a indica schimbări de stare ca luminozitatea și "
-"volumul"
+#~ msgid ""
+#~ "Show an on-screen display to indicate status changes such as brightness "
+#~ "or volume"
+#~ msgstr ""
+#~ "Arată afișaj pe ecran pentru a indica schimbări de stare ca luminozitatea "
+#~ "și volumul"
 
-#. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
-#: workspaceoptions_plasmasettings.kcfg:20
-#, kde-format
-msgid "OSD on layout change"
-msgstr "OSD la schimbarea aranjamentului"
+#~ msgid "OSD on layout change"
+#~ msgstr "OSD la schimbarea aranjamentului"
 
-#. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
-#: workspaceoptions_plasmasettings.kcfg:21
-#, kde-format
-msgid "Show a popup on layout changes"
-msgstr "Arată mesaj plutitor la schimbarea aranjamentului"
+#~ msgid "Show a popup on layout changes"
+#~ msgstr "Arată mesaj plutitor la schimbarea aranjamentului"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

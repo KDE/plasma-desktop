@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2009-12-10 20:48+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -30,58 +30,6 @@ msgstr "Michôł Òstrowsczi, Mark Kwidzińsczi"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "michol@linuxcsb.org, mark@linuxcsb.org"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: dateandtime.ui:22
-#, kde-format
-msgid "Date and Time"
-msgstr "Datum ë czas"
-
-#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
-#: dateandtime.ui:30
-#, fuzzy, kde-format
-#| msgid "Set date and time &automatically:"
-msgid "Set date and time &automatically"
-msgstr "Nastôwi &aùtomatno datum ë czas:"
-
-#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
-#: dateandtime.ui:53
-#, fuzzy, kde-format
-#| msgid "Time server:"
-msgid "&Time server:"
-msgstr "Czas serwera:"
-
-#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
-#: dateandtime.ui:86
-#, kde-format
-msgid "Here you can change the system date's day of the month, month and year."
-msgstr "Tuwò mòżesz zmienic systemòwi datum, dzéń, miesąc ë rok."
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: dateandtime.ui:122
-#, kde-format
-msgid "Time Zone"
-msgstr "Czasowô cona"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: dateandtime.ui:128
-#, kde-format
-msgid "To change the local time zone, select your area from the list below."
-msgstr ""
-"Bë zmienic lokalną czasową conã, wëbiérzë swòją òbéńdã z nôslédny lëstë"
-
-#. i18n: ectx: property (text), widget (QLabel, m_local)
-#: dateandtime.ui:151
-#, fuzzy, kde-format
-#| msgid "Current local time zone:"
-msgid "Current local time zone:"
-msgstr "Aktualnô môlowô czasowô cona: %1 (%2)"
-
-#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
-#: dateandtime.ui:161
-#, kde-format
-msgid "Search…"
-msgstr ""
 
 #: dtime.cpp:61
 #, kde-format
@@ -241,6 +189,35 @@ msgstr "Nié mòże sparłączëc sã z serwerą czasu: %1."
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set timezone"
 msgstr "Nié mòże sparłączëc sã z serwerą czasu: %1."
+
+#~ msgid "Date and Time"
+#~ msgstr "Datum ë czas"
+
+#, fuzzy
+#~| msgid "Set date and time &automatically:"
+#~ msgid "Set date and time &automatically"
+#~ msgstr "Nastôwi &aùtomatno datum ë czas:"
+
+#, fuzzy
+#~| msgid "Time server:"
+#~ msgid "&Time server:"
+#~ msgstr "Czas serwera:"
+
+#~ msgid ""
+#~ "Here you can change the system date's day of the month, month and year."
+#~ msgstr "Tuwò mòżesz zmienic systemòwi datum, dzéń, miesąc ë rok."
+
+#~ msgid "Time Zone"
+#~ msgstr "Czasowô cona"
+
+#~ msgid "To change the local time zone, select your area from the list below."
+#~ msgstr ""
+#~ "Bë zmienic lokalną czasową conã, wëbiérzë swòją òbéńdã z nôslédny lëstë"
+
+#, fuzzy
+#~| msgid "Current local time zone:"
+#~ msgid "Current local time zone:"
+#~ msgstr "Aktualnô môlowô czasowô cona: %1 (%2)"
 
 #~ msgid "kcmclock"
 #~ msgstr "kcmclock"

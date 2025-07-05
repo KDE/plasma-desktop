@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2004-07-08 17:18+0200\n"
 "Last-Translator: Thierry Vignaud <tvignaud.com>\n"
 "Language-Team: Brezhoneg <Suav.Icb.fr>\n"
@@ -163,31 +163,15 @@ msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr ""
 
-#. i18n: ectx: label, entry (confirmLogout), group (General)
-#: smserversettings.kcfg:9
-#, kde-format
-msgid "Confirm logout"
-msgstr ""
+#, fuzzy
+#~| msgid "Default Shutdown Option"
+#~ msgid "Default leave option"
+#~ msgstr "Dibab lazhañ dre ziouer"
 
-#. i18n: ectx: label, entry (shutdownType), group (General)
-#: smserversettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Default Shutdown Option"
-msgid "Default leave option"
-msgstr "Dibab lazhañ dre ziouer"
-
-#. i18n: ectx: label, entry (loginMode), group (General)
-#: smserversettings.kcfg:22
-#, fuzzy, kde-format
-#| msgid "On Login"
-msgid "On login"
-msgstr "Pa gevreañ"
-
-#. i18n: ectx: label, entry (excludeApps), group (General)
-#: smserversettings.kcfg:26
-#, kde-format
-msgid "Applications to be excluded from session"
-msgstr ""
+#, fuzzy
+#~| msgid "On Login"
+#~ msgid "On login"
+#~ msgstr "Pa gevreañ"
 
 #, fuzzy
 #~| msgid "Default Shutdown Option"

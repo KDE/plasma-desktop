@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2004-05-23 16:14-0500\n"
 "Last-Translator: Deepayan Sarkar <deepayan@bengalinux.org>\n"
 "Language-Team: Bengali <kde-translation@bengalinux.org>\n"
@@ -24,54 +24,6 @@ msgstr "দীপায়ন সরকার"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "deepayan@bengalinux.org"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: dateandtime.ui:22
-#, kde-format
-msgid "Date and Time"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
-#: dateandtime.ui:30
-#, kde-format
-msgid "Set date and time &automatically"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
-#: dateandtime.ui:53
-#, kde-format
-msgid "&Time server:"
-msgstr ""
-
-#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
-#: dateandtime.ui:86
-#, kde-format
-msgid "Here you can change the system date's day of the month, month and year."
-msgstr "এখানে আপনি সিস্টেম সময়ের দিন, মাস এবং বছর পরিবর্তন করতে পারেন।"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: dateandtime.ui:122
-#, fuzzy, kde-format
-msgid "Time Zone"
-msgstr "টাইম জোন সমস্যা"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: dateandtime.ui:128
-#, fuzzy, kde-format
-msgid "To change the local time zone, select your area from the list below."
-msgstr "টাইম জোন পরিবর্তন করতে নীচের তালিকা থেকে আপনার অঞ্চলটি নির্বাচন করুন:"
-
-#. i18n: ectx: property (text), widget (QLabel, m_local)
-#: dateandtime.ui:151
-#, fuzzy, kde-format
-msgid "Current local time zone:"
-msgstr "বর্তমান টাইম জোন:"
-
-#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
-#: dateandtime.ui:161
-#, kde-format
-msgid "Search…"
-msgstr ""
 
 #: dtime.cpp:61
 #, kde-format
@@ -220,6 +172,22 @@ msgstr ""
 #, kde-format
 msgid "Unable to set timezone"
 msgstr ""
+
+#~ msgid ""
+#~ "Here you can change the system date's day of the month, month and year."
+#~ msgstr "এখানে আপনি সিস্টেম সময়ের দিন, মাস এবং বছর পরিবর্তন করতে পারেন।"
+
+#, fuzzy
+#~ msgid "Time Zone"
+#~ msgstr "টাইম জোন সমস্যা"
+
+#, fuzzy
+#~ msgid "To change the local time zone, select your area from the list below."
+#~ msgstr "টাইম জোন পরিবর্তন করতে নীচের তালিকা থেকে আপনার অঞ্চলটি নির্বাচন করুন:"
+
+#, fuzzy
+#~ msgid "Current local time zone:"
+#~ msgstr "বর্তমান টাইম জোন:"
 
 #~ msgid "kcmclock"
 #~ msgstr "kcmclock"

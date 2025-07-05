@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-14 00:46+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2024-03-30 19:46\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -81,116 +81,6 @@ msgstr "保存并连接(&O)"
 msgid "C&onnect"
 msgstr "连接(&O)"
 
-#. i18n: ectx: property (windowTitle), widget (QWizard, KNetAttach)
-#: knetattach.ui:14
-#, kde-format
-msgid "Network Folder Wizard"
-msgstr "网络文件夹向导"
-
-#. i18n: ectx: property (title), widget (QWizardPage, _folderType)
-#: knetattach.ui:18
-#, kde-format
-msgid "Add Network Folder"
-msgstr "添加网络文件夹"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
-#: knetattach.ui:24
-#, kde-format
-msgid ""
-"Select the type of network folder you wish to connect to and press the Next "
-"button."
-msgstr "选择您想要连接的网络文件夹类型，然后按下一步按钮。"
-
-#. i18n: ectx: property (text), widget (QRadioButton, _recent)
-#: knetattach.ui:65
-#, kde-format
-msgid "&Recent connection:"
-msgstr "最近的连接(&R)："
-
-#. i18n: ectx: property (text), widget (QRadioButton, _webfolder)
-#: knetattach.ui:72
-#, kde-format
-msgid "&WebFolder (webdav)"
-msgstr "&Web 文件夹(webdav)"
-
-#. i18n: ectx: property (text), widget (QRadioButton, _fish)
-#: knetattach.ui:82
-#, kde-format
-msgid "&Secure shell (ssh)"
-msgstr "安全 &Shell(ssh)"
-
-#. i18n: ectx: property (text), widget (QRadioButton, _ftp)
-#: knetattach.ui:111
-#, kde-format
-msgid "FT&P"
-msgstr "FT&P"
-
-#. i18n: ectx: property (text), widget (QRadioButton, _smb)
-#: knetattach.ui:118
-#, kde-format
-msgid "&Microsoft® Windows® network drive"
-msgstr "&Microsoft(R) Windows(R) 网络驱动器"
-
-#. i18n: ectx: property (title), widget (QWizardPage, _folderParameters)
-#: knetattach.ui:145
-#, kde-format
-msgid "Network Folder Information"
-msgstr "网络文件夹信息"
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel4_2)
-#: knetattach.ui:177
-#, kde-format
-msgid "&Name:"
-msgstr "名称(&N)："
-
-#. i18n: ectx: property (text), widget (QLabel, _userText)
-#: knetattach.ui:196
-#, kde-format
-msgid "&User:"
-msgstr "用户(&U)："
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel1)
-#: knetattach.ui:222
-#, kde-format
-msgid "Se&rver:"
-msgstr "服务器(&R)："
-
-#. i18n: ectx: property (text), widget (QLabel, _portText)
-#: knetattach.ui:248
-#, kde-format
-msgid "&Port:"
-msgstr "端口(&P)："
-
-#. i18n: ectx: property (text), widget (QLabel, _protocol)
-#: knetattach.ui:283
-#, kde-format
-msgid "&Protocol:"
-msgstr "协议(&P)："
-
-#. i18n: ectx: property (text), widget (QLabel, textLabel3)
-#: knetattach.ui:313
-#, kde-format
-msgid "&Folder:"
-msgstr "文件夹(&F)："
-
-#. i18n: ectx: property (text), widget (QLabel, _encodingText)
-#: knetattach.ui:335
-#, kde-format
-msgid "Encoding:"
-msgstr "编码："
-
-#. i18n: ectx: property (text), widget (QCheckBox, _createIcon)
-#: knetattach.ui:351
-#, kde-format
-msgid "Cr&eate an icon for this remote folder"
-msgstr "为此远程文件夹创建图标(&E)"
-
-#. i18n: ectx: property (text), widget (QCheckBox, _useEncryption)
-#: knetattach.ui:361
-#, kde-format
-msgid "&Use encryption"
-msgstr "使用加密(&U)"
-
 #: main.cpp:21 main.cpp:23
 #, kde-format
 msgid "KDE Network Wizard"
@@ -210,3 +100,59 @@ msgstr "George Staikos"
 #, kde-format
 msgid "Primary author and maintainer"
 msgstr "主要作者和维护者"
+
+#~ msgid "Network Folder Wizard"
+#~ msgstr "网络文件夹向导"
+
+#~ msgid "Add Network Folder"
+#~ msgstr "添加网络文件夹"
+
+#~ msgid ""
+#~ "Select the type of network folder you wish to connect to and press the "
+#~ "Next button."
+#~ msgstr "选择您想要连接的网络文件夹类型，然后按下一步按钮。"
+
+#~ msgid "&Recent connection:"
+#~ msgstr "最近的连接(&R)："
+
+#~ msgid "&WebFolder (webdav)"
+#~ msgstr "&Web 文件夹(webdav)"
+
+#~ msgid "&Secure shell (ssh)"
+#~ msgstr "安全 &Shell(ssh)"
+
+#~ msgid "FT&P"
+#~ msgstr "FT&P"
+
+#~ msgid "&Microsoft® Windows® network drive"
+#~ msgstr "&Microsoft(R) Windows(R) 网络驱动器"
+
+#~ msgid "Network Folder Information"
+#~ msgstr "网络文件夹信息"
+
+#~ msgid "&Name:"
+#~ msgstr "名称(&N)："
+
+#~ msgid "&User:"
+#~ msgstr "用户(&U)："
+
+#~ msgid "Se&rver:"
+#~ msgstr "服务器(&R)："
+
+#~ msgid "&Port:"
+#~ msgstr "端口(&P)："
+
+#~ msgid "&Protocol:"
+#~ msgstr "协议(&P)："
+
+#~ msgid "&Folder:"
+#~ msgstr "文件夹(&F)："
+
+#~ msgid "Encoding:"
+#~ msgstr "编码："
+
+#~ msgid "Cr&eate an icon for this remote folder"
+#~ msgstr "为此远程文件夹创建图标(&E)"
+
+#~ msgid "&Use encryption"
+#~ msgstr "使用加密(&U)"

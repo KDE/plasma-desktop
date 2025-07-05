@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-17 00:51+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2024-09-18 13:43+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -39,14 +39,12 @@ msgstr "Restartovat"
 msgid "Visual behavior:"
 msgstr "Chování vzhledu:"
 
-#. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
-#: package/contents/ui/main.qml:51 workspaceoptions_plasmasettings.kcfg:9
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "Zobrazit informační nástrojové tipy při přejetí myši"
 
-#. i18n: ectx: label, entry (osdEnabled), group (OSD)
-#: package/contents/ui/main.qml:62 workspaceoptions_plasmasettings.kcfg:15
+#: package/contents/ui/main.qml:62
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "Zobrazit vizuální odezvu při změnách stavu"
@@ -176,54 +174,31 @@ msgstr ""
 "V dotykovém režimu bude spousta prvků uživatelského rozhraní zvětšena aby "
 "tyto byly snáze použitelné dotykem."
 
-#. i18n: ectx: label, entry (singleClick), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:9
-#, kde-format
-msgid "Single click to open files"
-msgstr "Jedno kliknutí otevírá soubory"
+#~ msgid "Single click to open files"
+#~ msgstr "Jedno kliknutí otevírá soubory"
 
-#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:13
-#, kde-format
-msgid "Animation speed"
-msgstr "Rychlost animace"
+#~ msgid "Animation speed"
+#~ msgstr "Rychlost animace"
 
-#. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:17
-#, kde-format
-msgid "Left-click in scrollbar track moves scrollbar by one page"
-msgstr "Kliknutí levým tlačítkem myši na posuvník jej posune o jednu stránku"
+#~ msgid "Left-click in scrollbar track moves scrollbar by one page"
+#~ msgstr ""
+#~ "Kliknutí levým tlačítkem myši na posuvník jej posune o jednu stránku"
 
-#. i18n: ectx: label, entry (tabletMode), group (Input)
-#: workspaceoptions_kwinsettings.kcfg:9
-#, kde-format
-msgid "Automatically switch to touch-optimized mode"
-msgstr "Automaticky přepnout do dotykového režimu"
+#~ msgid "Automatically switch to touch-optimized mode"
+#~ msgstr "Automaticky přepnout do dotykového režimu"
 
-#. i18n: ectx: label, entry (primarySelection), group (Wayland)
-#: workspaceoptions_kwinsettings.kcfg:15
-#, kde-format
-msgid "Enable middle click selection pasting"
-msgstr "Povolit vložení výběru kliknutím prostředním tlačítkem myši"
+#~ msgid "Enable middle click selection pasting"
+#~ msgstr "Povolit vložení výběru kliknutím prostředním tlačítkem myši"
 
-#. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
-#: workspaceoptions_plasmasettings.kcfg:16
-#, kde-format
-msgid ""
-"Show an on-screen display to indicate status changes such as brightness or "
-"volume"
-msgstr ""
-"Zobrazit On Screen Display (OSD) pro upozornění na změnu stavu jako je jas "
-"nebo hlasitost"
+#~ msgid ""
+#~ "Show an on-screen display to indicate status changes such as brightness "
+#~ "or volume"
+#~ msgstr ""
+#~ "Zobrazit On Screen Display (OSD) pro upozornění na změnu stavu jako je "
+#~ "jas nebo hlasitost"
 
-#. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
-#: workspaceoptions_plasmasettings.kcfg:20
-#, kde-format
-msgid "OSD on layout change"
-msgstr "OSD při změně rozvržení"
+#~ msgid "OSD on layout change"
+#~ msgstr "OSD při změně rozvržení"
 
-#. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
-#: workspaceoptions_plasmasettings.kcfg:21
-#, kde-format
-msgid "Show a popup on layout changes"
-msgstr "Zobrazit vyskakovací okno při změně rozvržení"
+#~ msgid "Show a popup on layout changes"
+#~ msgstr "Zobrazit vyskakovací okno při změně rozvržení"

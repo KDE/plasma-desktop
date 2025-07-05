@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-10-18 08:37+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -60,69 +60,6 @@ msgstr "Kai Uwe Broulik"
 #, kde-format
 msgid "Plasma 5 Port"
 msgstr "Predelava za Plasmo 5"
-
-#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
-#: DeviceAutomounterKCM.ui:17
-#, kde-format
-msgid ""
-"This list contains the storage devices known to the system. If \"Automount "
-"on Login\" is checked, the device will be automatically mounted even though "
-"\"Mount all removable media at login\" is unchecked. The same applies for "
-"\"Automount on Attach\"."
-msgstr ""
-"Ta seznam vsebuje znane naprave za shranjevanje. Če je omogočeno »Samodejno "
-"priklopi ob prijavi«, bo naprava priklopljena samodejno, četudi možnost »Ob "
-"prijavi priklopi vse odstranljive nosilce« ni omogočena. Isto velja za "
-"»Samodejno priklopi ob priključitvi«."
-
-#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
-#: DeviceAutomounterKCM.ui:54
-#, kde-format
-msgid ""
-"Clicking this button causes the selected devices to be 'forgotten'. This is "
-"only useful if \"Only automatically mount removable media that has been "
-"manually mounted before\" is checked. Once a device is forgotten and the "
-"system is set to only automatically mount familiar devices, the device will "
-"not be automatically mounted."
-msgstr ""
-"Klik na ta gumb prisili sistem, da pozabi na obstoj izbranih naprav. To je "
-"uporabno, samo če je omogočena možnost »Samodejno priklopi samo odstranljive "
-"nosilce, ki so že bili ročno priklopljeni«. Ko je naprava pozabljena in je "
-"sistem nastavljen, da samodejno priklopi samo znane naprave, naprava ne bo "
-"priklopljena samodejno."
-
-#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
-#: DeviceAutomounterKCM.ui:57
-#, kde-format
-msgid "Forget Device"
-msgstr "Pozabi napravo"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
-#: DeviceAutomounterKCM.ui:67
-#, kde-format
-msgid ""
-"When this is not checked, only remembered devices will be automatically "
-"mounted. A device is 'remembered' if it has ever been mounted before. For "
-"instance, plugging in a USB media player to charge is not sufficient to "
-"'remember' it - if the files are not accessed, it will not be automatically "
-"mounted the next time it is seen. Once they have been accessed, however, the "
-"device's contents will be automatically made available to the system."
-msgstr ""
-"Ko je to ni omogočeno, bodo samodejno priklopljene samo naprave, ki si jih "
-"je sistem zapomnil. Sistem si je napravo zapomnil, če je bila priklopljena "
-"že kdaj prej. Na primer, če ste samo priključili USB predstavnostni "
-"predvajalnik zaradi polnjenja z energijo ni dovolj, da si ga sistem zapomni. "
-"Če niste dostopali do datotek, naslednjič ne bo samodejno priklopljen, ko bo "
-"zaznan. Ko ste dostopali do datotek, pa si bo sistem to zapomnil in s "
-"samodejnim priklopom omogočil dostop do vsebine."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
-#: DeviceAutomounterKCM.ui:70
-#, kde-format
-msgid "Automatically mount removable media that have never been mounted before"
-msgstr ""
-"Samodejno priklopi odstranljive nosilce, ki še nikoli prej niso bili "
-"priklopljeni"
 
 #: DeviceModel.cpp:52
 #, kde-format
@@ -185,6 +122,57 @@ msgstr "Ta naprava bo ob priključitvi priklopljena samodejno."
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "Ta naprava ob priključitvi ne bo priklopljena samodejno."
+
+#~ msgid ""
+#~ "This list contains the storage devices known to the system. If "
+#~ "\"Automount on Login\" is checked, the device will be automatically "
+#~ "mounted even though \"Mount all removable media at login\" is unchecked. "
+#~ "The same applies for \"Automount on Attach\"."
+#~ msgstr ""
+#~ "Ta seznam vsebuje znane naprave za shranjevanje. Če je omogočeno "
+#~ "»Samodejno priklopi ob prijavi«, bo naprava priklopljena samodejno, "
+#~ "četudi možnost »Ob prijavi priklopi vse odstranljive nosilce« ni "
+#~ "omogočena. Isto velja za »Samodejno priklopi ob priključitvi«."
+
+#~ msgid ""
+#~ "Clicking this button causes the selected devices to be 'forgotten'. This "
+#~ "is only useful if \"Only automatically mount removable media that has "
+#~ "been manually mounted before\" is checked. Once a device is forgotten and "
+#~ "the system is set to only automatically mount familiar devices, the "
+#~ "device will not be automatically mounted."
+#~ msgstr ""
+#~ "Klik na ta gumb prisili sistem, da pozabi na obstoj izbranih naprav. To "
+#~ "je uporabno, samo če je omogočena možnost »Samodejno priklopi samo "
+#~ "odstranljive nosilce, ki so že bili ročno priklopljeni«. Ko je naprava "
+#~ "pozabljena in je sistem nastavljen, da samodejno priklopi samo znane "
+#~ "naprave, naprava ne bo priklopljena samodejno."
+
+#~ msgid "Forget Device"
+#~ msgstr "Pozabi napravo"
+
+#~ msgid ""
+#~ "When this is not checked, only remembered devices will be automatically "
+#~ "mounted. A device is 'remembered' if it has ever been mounted before. For "
+#~ "instance, plugging in a USB media player to charge is not sufficient to "
+#~ "'remember' it - if the files are not accessed, it will not be "
+#~ "automatically mounted the next time it is seen. Once they have been "
+#~ "accessed, however, the device's contents will be automatically made "
+#~ "available to the system."
+#~ msgstr ""
+#~ "Ko je to ni omogočeno, bodo samodejno priklopljene samo naprave, ki si "
+#~ "jih je sistem zapomnil. Sistem si je napravo zapomnil, če je bila "
+#~ "priklopljena že kdaj prej. Na primer, če ste samo priključili USB "
+#~ "predstavnostni predvajalnik zaradi polnjenja z energijo ni dovolj, da si "
+#~ "ga sistem zapomni. Če niste dostopali do datotek, naslednjič ne bo "
+#~ "samodejno priklopljen, ko bo zaznan. Ko ste dostopali do datotek, pa si "
+#~ "bo sistem to zapomnil in s samodejnim priklopom omogočil dostop do "
+#~ "vsebine."
+
+#~ msgid ""
+#~ "Automatically mount removable media that have never been mounted before"
+#~ msgstr ""
+#~ "Samodejno priklopi odstranljive nosilce, ki še nikoli prej niso bili "
+#~ "priklopljeni"
 
 #~ msgid ""
 #~ "If any removable storage devices are connected to your system when you "

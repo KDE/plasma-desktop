@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-04-02 21:43+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -46,132 +46,6 @@ msgstr ""
 #, kde-format
 msgid "Invalid action"
 msgstr "செல்லுபடியாகாத செயல்முறை"
-
-#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
-#: ActionEditor.ui:17
-#, kde-format
-msgid "Edit Parameter"
-msgstr "நிபந்தனையை திருத்துதல்"
-
-#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
-#: ActionEditor.ui:43
-#, kde-format
-msgid "Parameter type:"
-msgstr "நிபந்தனையின் வகை:"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:51
-#, kde-format
-msgid "Property Match"
-msgstr "பண்பு பொருத்தம்"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:56
-#, kde-format
-msgid "Content Conjunction"
-msgstr "அடங்கியுள்ளவை அனைத்தும் உண்மை"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:61
-#, kde-format
-msgid "Content Disjunction"
-msgstr "அடங்கியுள்ளவற்றில் ஏதேனும் உண்மை"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:66
-#, kde-format
-msgid "Device Interface Match"
-msgstr "சாதன இடைமுகப்பு பொருத்தம்"
-
-#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
-#: ActionEditor.ui:96
-#, kde-format
-msgid "Device type:"
-msgstr "சாதன வகை:"
-
-#. i18n: ectx: property (text), widget (QLabel, LblValueName)
-#: ActionEditor.ui:135
-#, kde-format
-msgid "Value name:"
-msgstr "இப்பண்பு:"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
-#: ActionEditor.ui:175
-#, kde-format
-msgid "Equals"
-msgstr "இதற்கு சம‍ம்"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
-#: ActionEditor.ui:180
-#, kde-format
-msgid "Contains"
-msgstr "இதை கொண்டது"
-
-#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
-#: ActionEditor.ui:208
-#, kde-format
-msgid "Reset Parameter"
-msgstr "நிபந்தனையை மீட்டமை"
-
-#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
-#: ActionEditor.ui:215
-#, kde-format
-msgid "Save Parameter Changes"
-msgstr "நிபந்தனைக்கான மாற்றங்களை சேமி"
-
-#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
-#: ActionEditor.ui:247
-#, kde-format
-msgid "Action icon, click to change it"
-msgstr "செயல்முறைக்கான சின்னம், மாற்ற க்ளிக் செய்யவும்"
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
-#: ActionEditor.ui:254
-#, kde-format
-msgid "Action name"
-msgstr "செயல்முறையின் பெயர்"
-
-#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
-#: ActionEditor.ui:271
-#, kde-format
-msgid "Command: "
-msgstr "கட்டளை: "
-
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
-#: ActionEditor.ui:283
-#, no-c-format, kde-format
-msgid ""
-"Command that will trigger the action\n"
-"This can include any or all of the following case insensitive expands:\n"
-"\n"
-"%f: The mountpoint for the device - Storage Access devices only\n"
-"%d: Path to the device node - Block devices only\n"
-"%i: The identifier of the device"
-msgstr ""
-"செயலை இயக்க பயன்படுத்த வேண்டிய கட்டளை\n"
-"இதில் கீழ்வரும் (பெரிய/சிறிய எழுத்து அறியாத) கொள்ளிடங்களை பயன்படுத்தலாம்:\n"
-"\n"
-"%f: சாதனத்தின் ஏற்ற மையம் - சேமிப்பக சாதனங்களுக்கு மட்டும்\n"
-"%d: சாதன node-ற்கான பாதை - Block சாதனங்கள் மட்டும்\n"
-"%i: சாதனத்தின் அடையாளம்"
-
-#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
-#: ActionEditor.ui:300
-#, kde-format
-msgid "Devices must match the following parameters for this action:"
-msgstr "இச்செயலுக்கு, சாதனங்கள் கீழ்வரும் நிபந்தனைகளை நிறைவு செய்ய வேண்டும்:"
-
-#. i18n: ectx: property (text), widget (QLabel, LblActionName)
-#: AddAction.ui:19
-#, kde-format
-msgid "Action name:"
-msgstr "செயல்முறையின் பெயர்:"
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
-#: AddAction.ui:26
-#, kde-format
-msgid "Enter the name for your new action"
-msgstr "புதிய செயலுக்கான பெயரை உள்ளிடவும்"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -265,20 +139,80 @@ msgstr "எந்த செயலும் தேர்ந்தெடுக்�
 msgid "Cannot be deleted"
 msgstr "நீக்க முடியாது"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
-#: SolidActions.ui:22
-#, kde-format
-msgid "Remove"
-msgstr "நீக்கு"
+#~ msgid "Edit Parameter"
+#~ msgstr "நிபந்தனையை திருத்துதல்"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
-#: SolidActions.ui:29
-#, kde-format
-msgid "Edit…"
-msgstr "திருத்து…"
+#~ msgid "Parameter type:"
+#~ msgstr "நிபந்தனையின் வகை:"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
-#: SolidActions.ui:36
-#, kde-format
-msgid "Add…"
-msgstr "சேர்…"
+#~ msgid "Property Match"
+#~ msgstr "பண்பு பொருத்தம்"
+
+#~ msgid "Content Conjunction"
+#~ msgstr "அடங்கியுள்ளவை அனைத்தும் உண்மை"
+
+#~ msgid "Content Disjunction"
+#~ msgstr "அடங்கியுள்ளவற்றில் ஏதேனும் உண்மை"
+
+#~ msgid "Device Interface Match"
+#~ msgstr "சாதன இடைமுகப்பு பொருத்தம்"
+
+#~ msgid "Device type:"
+#~ msgstr "சாதன வகை:"
+
+#~ msgid "Value name:"
+#~ msgstr "இப்பண்பு:"
+
+#~ msgid "Equals"
+#~ msgstr "இதற்கு சம‍ம்"
+
+#~ msgid "Contains"
+#~ msgstr "இதை கொண்டது"
+
+#~ msgid "Reset Parameter"
+#~ msgstr "நிபந்தனையை மீட்டமை"
+
+#~ msgid "Save Parameter Changes"
+#~ msgstr "நிபந்தனைக்கான மாற்றங்களை சேமி"
+
+#~ msgid "Action icon, click to change it"
+#~ msgstr "செயல்முறைக்கான சின்னம், மாற்ற க்ளிக் செய்யவும்"
+
+#~ msgid "Action name"
+#~ msgstr "செயல்முறையின் பெயர்"
+
+#~ msgid "Command: "
+#~ msgstr "கட்டளை: "
+
+#~ msgid ""
+#~ "Command that will trigger the action\n"
+#~ "This can include any or all of the following case insensitive expands:\n"
+#~ "\n"
+#~ "%f: The mountpoint for the device - Storage Access devices only\n"
+#~ "%d: Path to the device node - Block devices only\n"
+#~ "%i: The identifier of the device"
+#~ msgstr ""
+#~ "செயலை இயக்க பயன்படுத்த வேண்டிய கட்டளை\n"
+#~ "இதில் கீழ்வரும் (பெரிய/சிறிய எழுத்து அறியாத) கொள்ளிடங்களை பயன்படுத்தலாம்:\n"
+#~ "\n"
+#~ "%f: சாதனத்தின் ஏற்ற மையம் - சேமிப்பக சாதனங்களுக்கு மட்டும்\n"
+#~ "%d: சாதன node-ற்கான பாதை - Block சாதனங்கள் மட்டும்\n"
+#~ "%i: சாதனத்தின் அடையாளம்"
+
+#~ msgid "Devices must match the following parameters for this action:"
+#~ msgstr "இச்செயலுக்கு, சாதனங்கள் கீழ்வரும் நிபந்தனைகளை நிறைவு செய்ய வேண்டும்:"
+
+#~ msgid "Action name:"
+#~ msgstr "செயல்முறையின் பெயர்:"
+
+#~ msgid "Enter the name for your new action"
+#~ msgstr "புதிய செயலுக்கான பெயரை உள்ளிடவும்"
+
+#~ msgid "Remove"
+#~ msgstr "நீக்கு"
+
+#~ msgid "Edit…"
+#~ msgstr "திருத்து…"
+
+#~ msgid "Add…"
+#~ msgstr "சேர்…"

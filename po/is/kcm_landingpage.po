@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:45+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-12-10 18:50+0000\n"
 "Last-Translator: gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -17,38 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.08.3\n"
-
-#. i18n: ectx: label, entry (colorScheme), group (General)
-#: landingpage_kdeglobalssettings.kcfg:9
-#, kde-format
-msgid "Color scheme name"
-msgstr "Heiti litastefs"
-
-#. i18n: ectx: label, entry (singleClick), group (KDE)
-#: landingpage_kdeglobalssettings.kcfg:15
-#, kde-format
-msgid "Single click to open files"
-msgstr "Smella einu sinni til að opna skrár"
-
-#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
-#: landingpage_kdeglobalssettings.kcfg:19
-#, kde-format
-msgid "Global Look and Feel package"
-msgstr "Pakki fyrir útlit og áferð fyrir allt kerfið"
-
-#. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
-#. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
-#: landingpage_kdeglobalssettings.kcfg:23
-#: landingpage_kdeglobalssettings.kcfg:27
-#, kde-format
-msgid "Global Look and Feel package, alternate"
-msgstr "Pakki fyrir útlit og áferð fyrir allt kerfið, til vara"
-
-#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
-#: landingpage_kdeglobalssettings.kcfg:31
-#, kde-format
-msgid "Animation speed"
-msgstr "Hraði hreyfinga"
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -120,6 +88,21 @@ msgstr "Fleiri hegðunarstillingar…"
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "Mest notuðu síðurnar:"
+
+#~ msgid "Color scheme name"
+#~ msgstr "Heiti litastefs"
+
+#~ msgid "Single click to open files"
+#~ msgstr "Smella einu sinni til að opna skrár"
+
+#~ msgid "Global Look and Feel package"
+#~ msgstr "Pakki fyrir útlit og áferð fyrir allt kerfið"
+
+#~ msgid "Global Look and Feel package, alternate"
+#~ msgstr "Pakki fyrir útlit og áferð fyrir allt kerfið, til vara"
+
+#~ msgid "Animation speed"
+#~ msgstr "Hraði hreyfinga"
 
 #~ msgid "Plasma"
 #~ msgstr "Plasma"

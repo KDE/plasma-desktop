@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-17 00:51+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-12-20 11:20-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -39,14 +39,12 @@ msgstr "Reiniciar"
 msgid "Visual behavior:"
 msgstr "Comportamento do visual:"
 
-#. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
-#: package/contents/ui/main.qml:51 workspaceoptions_plasmasettings.kcfg:9
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "Exibir dicas informativas ao passar com o mouse"
 
-#. i18n: ectx: label, entry (osdEnabled), group (OSD)
-#: package/contents/ui/main.qml:62 workspaceoptions_plasmasettings.kcfg:15
+#: package/contents/ui/main.qml:62
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "Exibir retorno visual para alterações de status"
@@ -176,59 +174,35 @@ msgstr ""
 "No modo de toque muitos elementos da interface se tornarão maiores para "
 "acomodar mais facilmente as interações com os toques."
 
-#. i18n: ectx: label, entry (singleClick), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:9
-#, kde-format
-msgid "Single click to open files"
-msgstr "Clique único para abrir arquivos"
+#~ msgid "Single click to open files"
+#~ msgstr "Clique único para abrir arquivos"
 
-#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:13
-#, kde-format
-msgid "Animation speed"
-msgstr "Velocidade da animação"
+#~ msgid "Animation speed"
+#~ msgstr "Velocidade da animação"
 
-#. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:17
-#, kde-format
-msgid "Left-click in scrollbar track moves scrollbar by one page"
-msgstr ""
-"Clique com o botão esquerdo na barra de rolagem move a barra de rolagem em "
-"uma página"
+#~ msgid "Left-click in scrollbar track moves scrollbar by one page"
+#~ msgstr ""
+#~ "Clique com o botão esquerdo na barra de rolagem move a barra de rolagem "
+#~ "em uma página"
 
-#. i18n: ectx: label, entry (tabletMode), group (Input)
-#: workspaceoptions_kwinsettings.kcfg:9
-#, kde-format
-msgid "Automatically switch to touch-optimized mode"
-msgstr "Alterar automaticamente para o modo otimizado para o toque"
+#~ msgid "Automatically switch to touch-optimized mode"
+#~ msgstr "Alterar automaticamente para o modo otimizado para o toque"
 
-#. i18n: ectx: label, entry (primarySelection), group (Wayland)
-#: workspaceoptions_kwinsettings.kcfg:15
-#, kde-format
-msgid "Enable middle click selection pasting"
-msgstr "Habilitar a colagem de seleção com o botão do meio"
+#~ msgid "Enable middle click selection pasting"
+#~ msgstr "Habilitar a colagem de seleção com o botão do meio"
 
-#. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
-#: workspaceoptions_plasmasettings.kcfg:16
-#, kde-format
-msgid ""
-"Show an on-screen display to indicate status changes such as brightness or "
-"volume"
-msgstr ""
-"Exibir uma visualização na tela (OSD) indicando mudanças de estado como "
-"brilho ou volume"
+#~ msgid ""
+#~ "Show an on-screen display to indicate status changes such as brightness "
+#~ "or volume"
+#~ msgstr ""
+#~ "Exibir uma visualização na tela (OSD) indicando mudanças de estado como "
+#~ "brilho ou volume"
 
-#. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
-#: workspaceoptions_plasmasettings.kcfg:20
-#, kde-format
-msgid "OSD on layout change"
-msgstr "OSD ao alterar o layout"
+#~ msgid "OSD on layout change"
+#~ msgstr "OSD ao alterar o layout"
 
-#. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
-#: workspaceoptions_plasmasettings.kcfg:21
-#, kde-format
-msgid "Show a popup on layout changes"
-msgstr "Exibir um popup ao alterar o layout"
+#~ msgid "Show a popup on layout changes"
+#~ msgstr "Exibir um popup ao alterar o layout"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

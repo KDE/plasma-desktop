@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:45+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2024-03-30 19:46\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -16,38 +16,6 @@ msgstr ""
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /kf5-stable/messages/plasma-desktop/kcm_landingpage.pot\n"
 "X-Crowdin-File-ID: 25454\n"
-
-#. i18n: ectx: label, entry (colorScheme), group (General)
-#: landingpage_kdeglobalssettings.kcfg:9
-#, kde-format
-msgid "Color scheme name"
-msgstr "配色方案名称"
-
-#. i18n: ectx: label, entry (singleClick), group (KDE)
-#: landingpage_kdeglobalssettings.kcfg:15
-#, kde-format
-msgid "Single click to open files"
-msgstr "单击打开文件/文件夹"
-
-#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
-#: landingpage_kdeglobalssettings.kcfg:19
-#, kde-format
-msgid "Global Look and Feel package"
-msgstr "全局界面外观主题包"
-
-#. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
-#. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
-#: landingpage_kdeglobalssettings.kcfg:23
-#: landingpage_kdeglobalssettings.kcfg:27
-#, kde-format
-msgid "Global Look and Feel package, alternate"
-msgstr "全局界面外观主题包, 备选"
-
-#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
-#: landingpage_kdeglobalssettings.kcfg:31
-#, kde-format
-msgid "Animation speed"
-msgstr "动效速度"
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -119,3 +87,18 @@ msgstr "更多行为设置…"
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "最常用页面："
+
+#~ msgid "Color scheme name"
+#~ msgstr "配色方案名称"
+
+#~ msgid "Single click to open files"
+#~ msgstr "单击打开文件/文件夹"
+
+#~ msgid "Global Look and Feel package"
+#~ msgstr "全局界面外观主题包"
+
+#~ msgid "Global Look and Feel package, alternate"
+#~ msgstr "全局界面外观主题包, 备选"
+
+#~ msgid "Animation speed"
+#~ msgstr "动效速度"

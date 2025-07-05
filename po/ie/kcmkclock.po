@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-11-10 00:01+0700\n"
 "Last-Translator: OIS <mistresssilvara@hotmail.com>\n"
 "Language-Team: Interlingue <kde-i18n-doc@kde.org>\n"
@@ -27,54 +27,6 @@ msgstr "OIS"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mistresssilvara@hotmail.com"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: dateandtime.ui:22
-#, kde-format
-msgid "Date and Time"
-msgstr "Date e hora"
-
-#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
-#: dateandtime.ui:30
-#, kde-format
-msgid "Set date and time &automatically"
-msgstr "&Adjustar li date e hora automaticmen"
-
-#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
-#: dateandtime.ui:53
-#, kde-format
-msgid "&Time server:"
-msgstr "Servitor de &témpor:"
-
-#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
-#: dateandtime.ui:86
-#, kde-format
-msgid "Here you can change the system date's day of the month, month and year."
-msgstr "Ci on posse adjustar li die, mensu e annu del date del sistema."
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: dateandtime.ui:122
-#, kde-format
-msgid "Time Zone"
-msgstr "Zone horari"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: dateandtime.ui:128
-#, kde-format
-msgid "To change the local time zone, select your area from the list below."
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, m_local)
-#: dateandtime.ui:151
-#, kde-format
-msgid "Current local time zone:"
-msgstr "Actual zone horari:"
-
-#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
-#: dateandtime.ui:161
-#, kde-format
-msgid "Search…"
-msgstr "Serchar..."
 
 #: dtime.cpp:61
 #, kde-format
@@ -215,3 +167,25 @@ msgstr "Ne successat assignar li actual hora"
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "Ne successat assignar li zone horari"
+
+#~ msgid "Date and Time"
+#~ msgstr "Date e hora"
+
+#~ msgid "Set date and time &automatically"
+#~ msgstr "&Adjustar li date e hora automaticmen"
+
+#~ msgid "&Time server:"
+#~ msgstr "Servitor de &témpor:"
+
+#~ msgid ""
+#~ "Here you can change the system date's day of the month, month and year."
+#~ msgstr "Ci on posse adjustar li die, mensu e annu del date del sistema."
+
+#~ msgid "Time Zone"
+#~ msgstr "Zone horari"
+
+#~ msgid "Current local time zone:"
+#~ msgstr "Actual zone horari:"
+
+#~ msgid "Search…"
+#~ msgstr "Serchar..."

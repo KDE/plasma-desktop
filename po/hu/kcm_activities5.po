@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-24 00:47+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-09-01 09:25+0200\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -96,32 +96,6 @@ msgstr "Ne kövesse ezen aktivitás használatát"
 msgid "Shortcut for switching:"
 msgstr "Gyorsbillentyű a váltáshoz:"
 
-#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:10
-#, kde-format
-msgid "How many months keep the activity history"
-msgstr "Hány hónapig őrződjenek meg az aktivitás előzményei"
-
-#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:17
-#, kde-format
-msgid "Which data to keep in activity history"
-msgstr "Mely adatokat őrződjenek meg az aktivitás előzményeiben"
-
-#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:21
-#, kde-format
-msgid "List of Applications whose activity history to save"
-msgstr ""
-"Azon alkalmazások listája, amiknek az aktivitáselőzményeit menteni kell"
-
-#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:24
-#, kde-format
-msgid "List of Applications whose activity history not to save"
-msgstr ""
-"Azon alkalmazások listája, amiknek az aktivitáselőzményeit nem kell menteni"
-
 #: MainConfigurationWidget.cpp:33
 #, kde-format
 msgid "Switching"
@@ -161,23 +135,29 @@ msgctxt "@action"
 msgid "Walk through activities (Reverse)"
 msgstr "Aktivitások bejárása (fordított sorrendben)"
 
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_virtualDesktopSwitchEnabled)
-#: ui/SwitchingTabBase.ui:22
-#, kde-format
-msgid "Remember for each activity (needs restart)"
-msgstr "Megjegyzés minden aktivitáshoz (újraindítást igényel)"
+#~ msgid "How many months keep the activity history"
+#~ msgstr "Hány hónapig őrződjenek meg az aktivitás előzményei"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: ui/SwitchingTabBase.ui:29
-#, kde-format
-msgid "Current virtual desktop:"
-msgstr "Jelenlegi virtuális asztal:"
+#~ msgid "Which data to keep in activity history"
+#~ msgstr "Mely adatokat őrződjenek meg az aktivitás előzményeiben"
 
-#. i18n: ectx: property (text), widget (QLabel, label_1)
-#: ui/SwitchingTabBase.ui:38
-#, kde-format
-msgid "Shortcuts:"
-msgstr "Gyorsbillentyűk:"
+#~ msgid "List of Applications whose activity history to save"
+#~ msgstr ""
+#~ "Azon alkalmazások listája, amiknek az aktivitáselőzményeit menteni kell"
+
+#~ msgid "List of Applications whose activity history not to save"
+#~ msgstr ""
+#~ "Azon alkalmazások listája, amiknek az aktivitáselőzményeit nem kell "
+#~ "menteni"
+
+#~ msgid "Remember for each activity (needs restart)"
+#~ msgstr "Megjegyzés minden aktivitáshoz (újraindítást igényel)"
+
+#~ msgid "Current virtual desktop:"
+#~ msgstr "Jelenlegi virtuális asztal:"
+
+#~ msgid "Shortcuts:"
+#~ msgstr "Gyorsbillentyűk:"
 
 #~ msgid "Privacy"
 #~ msgstr "Adatvédelem"

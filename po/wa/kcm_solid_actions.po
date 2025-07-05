@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2010-08-19 22:11+0200\n"
 "Last-Translator: Jean Cayron et Odile Lambert <jean.cayron@gmail.com>\n"
 "Language-Team: Walloon <linux@walon.org>\n"
@@ -48,127 +48,6 @@ msgstr ""
 #, kde-format
 msgid "Invalid action"
 msgstr "Faitindje nén valåbe"
-
-#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
-#: ActionEditor.ui:17
-#, kde-format
-msgid "Edit Parameter"
-msgstr "Candjî paramete"
-
-#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
-#: ActionEditor.ui:43
-#, kde-format
-msgid "Parameter type:"
-msgstr "Sôre di paramete :"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:51
-#, kde-format
-msgid "Property Match"
-msgstr "Li prôpieté corespond"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:56
-#, kde-format
-msgid "Content Conjunction"
-msgstr "Etroclaedje di l' ådvins"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:61
-#, kde-format
-msgid "Content Disjunction"
-msgstr "Distroclaedje di l' ådvins"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:66
-#, kde-format
-msgid "Device Interface Match"
-msgstr "Corespondance di l' eterface di l' éndjin"
-
-#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
-#: ActionEditor.ui:96
-#, kde-format
-msgid "Device type:"
-msgstr "Sôre d' éndjin :"
-
-#. i18n: ectx: property (text), widget (QLabel, LblValueName)
-#: ActionEditor.ui:135
-#, kde-format
-msgid "Value name:"
-msgstr "No del valixhance :"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
-#: ActionEditor.ui:175
-#, kde-format
-msgid "Equals"
-msgstr "Ewal a"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
-#: ActionEditor.ui:180
-#, kde-format
-msgid "Contains"
-msgstr "A dvins"
-
-#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
-#: ActionEditor.ui:208
-#, kde-format
-msgid "Reset Parameter"
-msgstr "Rimete paramete a zero"
-
-#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
-#: ActionEditor.ui:215
-#, kde-format
-msgid "Save Parameter Changes"
-msgstr "Schaper les candjmints do paramete"
-
-#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
-#: ActionEditor.ui:247
-#, kde-format
-msgid "Action icon, click to change it"
-msgstr "Imådjete di faitindje, clitchîz pol candjî"
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
-#: ActionEditor.ui:254
-#, kde-format
-msgid "Action name"
-msgstr "No do faitindje"
-
-#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
-#: ActionEditor.ui:271
-#, kde-format
-msgid "Command: "
-msgstr "Comande : "
-
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
-#: ActionEditor.ui:283
-#, no-c-format, kde-format
-msgid ""
-"Command that will trigger the action\n"
-"This can include any or all of the following case insensitive expands:\n"
-"\n"
-"%f: The mountpoint for the device - Storage Access devices only\n"
-"%d: Path to the device node - Block devices only\n"
-"%i: The identifier of the device"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
-#: ActionEditor.ui:300
-#, kde-format
-msgid "Devices must match the following parameters for this action:"
-msgstr ""
-"Les éndjins dvèt coresponde ås parametes shuvant po c' faitindje chal :"
-
-#. i18n: ectx: property (text), widget (QLabel, LblActionName)
-#: AddAction.ui:19
-#, kde-format
-msgid "Action name:"
-msgstr "No do faitindje :"
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
-#: AddAction.ui:26
-#, kde-format
-msgid "Enter the name for your new action"
-msgstr "Tapez l' no po vosse novea faitindje"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -265,23 +144,63 @@ msgstr "Nou faitindje di tchoezi"
 msgid "Cannot be deleted"
 msgstr "Ni sait nén esse disfacé"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
-#: SolidActions.ui:22
-#, kde-format
-msgid "Remove"
-msgstr "Oister"
+#~ msgid "Edit Parameter"
+#~ msgstr "Candjî paramete"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
-#: SolidActions.ui:29
-#, kde-format
-msgid "Edit…"
-msgstr ""
+#~ msgid "Parameter type:"
+#~ msgstr "Sôre di paramete :"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
-#: SolidActions.ui:36
-#, kde-format
-msgid "Add…"
-msgstr ""
+#~ msgid "Property Match"
+#~ msgstr "Li prôpieté corespond"
+
+#~ msgid "Content Conjunction"
+#~ msgstr "Etroclaedje di l' ådvins"
+
+#~ msgid "Content Disjunction"
+#~ msgstr "Distroclaedje di l' ådvins"
+
+#~ msgid "Device Interface Match"
+#~ msgstr "Corespondance di l' eterface di l' éndjin"
+
+#~ msgid "Device type:"
+#~ msgstr "Sôre d' éndjin :"
+
+#~ msgid "Value name:"
+#~ msgstr "No del valixhance :"
+
+#~ msgid "Equals"
+#~ msgstr "Ewal a"
+
+#~ msgid "Contains"
+#~ msgstr "A dvins"
+
+#~ msgid "Reset Parameter"
+#~ msgstr "Rimete paramete a zero"
+
+#~ msgid "Save Parameter Changes"
+#~ msgstr "Schaper les candjmints do paramete"
+
+#~ msgid "Action icon, click to change it"
+#~ msgstr "Imådjete di faitindje, clitchîz pol candjî"
+
+#~ msgid "Action name"
+#~ msgstr "No do faitindje"
+
+#~ msgid "Command: "
+#~ msgstr "Comande : "
+
+#~ msgid "Devices must match the following parameters for this action:"
+#~ msgstr ""
+#~ "Les éndjins dvèt coresponde ås parametes shuvant po c' faitindje chal :"
+
+#~ msgid "Action name:"
+#~ msgstr "No do faitindje :"
+
+#~ msgid "Enter the name for your new action"
+#~ msgstr "Tapez l' no po vosse novea faitindje"
+
+#~ msgid "Remove"
+#~ msgstr "Oister"
 
 #~ msgid "Edit..."
 #~ msgstr "Candjî..."

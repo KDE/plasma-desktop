@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2010-05-23 12:51+0700\n"
 "Last-Translator: Phuwanat Sakornsakolpat <narachai@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -47,132 +47,6 @@ msgstr ""
 #, kde-format
 msgid "Invalid action"
 msgstr "การกระทำใช้ไม่ได้"
-
-#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
-#: ActionEditor.ui:17
-#, kde-format
-msgid "Edit Parameter"
-msgstr "แก้ไขพารามิเตอร์"
-
-#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
-#: ActionEditor.ui:43
-#, kde-format
-msgid "Parameter type:"
-msgstr "ชนิดของพารามิเตอร์:"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:51
-#, kde-format
-msgid "Property Match"
-msgstr "คุณสมบัติเข้าคู่กัน"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:56
-#, kde-format
-msgid "Content Conjunction"
-msgstr "การรวมกันของเนื้อหา"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:61
-#, kde-format
-msgid "Content Disjunction"
-msgstr "การแยกกันของเนื้อหา"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:66
-#, kde-format
-msgid "Device Interface Match"
-msgstr "ส่วนเชื่อมต่ออุปกรณ์เข้าคู่กัน"
-
-#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
-#: ActionEditor.ui:96
-#, kde-format
-msgid "Device type:"
-msgstr "ประเภทของอุปกรณ์:"
-
-#. i18n: ectx: property (text), widget (QLabel, LblValueName)
-#: ActionEditor.ui:135
-#, kde-format
-msgid "Value name:"
-msgstr "ชื่อของค่า:"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
-#: ActionEditor.ui:175
-#, kde-format
-msgid "Equals"
-msgstr "เท่ากับ"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
-#: ActionEditor.ui:180
-#, kde-format
-msgid "Contains"
-msgstr "บรรจุอยู่"
-
-#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
-#: ActionEditor.ui:208
-#, kde-format
-msgid "Reset Parameter"
-msgstr "ตั้งค่าพารามิเตอร์ใหม่"
-
-#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
-#: ActionEditor.ui:215
-#, kde-format
-msgid "Save Parameter Changes"
-msgstr "จัดเก็บการเปลี่ยนแปลงของพารามิเตอร์"
-
-#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
-#: ActionEditor.ui:247
-#, kde-format
-msgid "Action icon, click to change it"
-msgstr "ไอคอนการกระทำ, คลิกเพื่อเปลี่ยนมัน"
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
-#: ActionEditor.ui:254
-#, kde-format
-msgid "Action name"
-msgstr "ชื่อการกระทำ"
-
-#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
-#: ActionEditor.ui:271
-#, kde-format
-msgid "Command: "
-msgstr "คำสั่ง: "
-
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
-#: ActionEditor.ui:283
-#, no-c-format, kde-format
-msgid ""
-"Command that will trigger the action\n"
-"This can include any or all of the following case insensitive expands:\n"
-"\n"
-"%f: The mountpoint for the device - Storage Access devices only\n"
-"%d: Path to the device node - Block devices only\n"
-"%i: The identifier of the device"
-msgstr ""
-"คำสั่งที่จะกระตุ้นการกระทำนี้\n"
-"ซึ่งมันจะถูกรวมการแยกแยะตัวพิมพ์ใหญ่/เล็กต่อไปนี้บางตัวหรือทั้งหมด:\n"
-"\n"
-"%f: จุดเมานท์ของอุปกรณ์ - อุปกรณ์จัดเก็บข้อมูลเท่านั้น\n"
-"%d: พาธไปยังโหนดอุปกรณ์ - อุปกรณ์แบบบล็อกเท่านั้น\n"
-"%i: ค่าแสดงตัวอุปกรณ์"
-
-#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
-#: ActionEditor.ui:300
-#, kde-format
-msgid "Devices must match the following parameters for this action:"
-msgstr "อุปกรณ์จะต้องเข้าคู่กับพารามิเตอร์ต่าง ๆ ต่อไปนี้ของการกระทำนี้:"
-
-#. i18n: ectx: property (text), widget (QLabel, LblActionName)
-#: AddAction.ui:19
-#, kde-format
-msgid "Action name:"
-msgstr "ชื่อการกระทำ:"
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
-#: AddAction.ui:26
-#, kde-format
-msgid "Enter the name for your new action"
-msgstr "ป้อนชื่อของการกระทำใหม่ของคุณ"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -268,23 +142,77 @@ msgstr "ยังไม่ได้เลือกการกระทำ"
 msgid "Cannot be deleted"
 msgstr "ไม่สามารถลบได้"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
-#: SolidActions.ui:22
-#, kde-format
-msgid "Remove"
-msgstr "ลบออก"
+#~ msgid "Edit Parameter"
+#~ msgstr "แก้ไขพารามิเตอร์"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
-#: SolidActions.ui:29
-#, kde-format
-msgid "Edit…"
-msgstr ""
+#~ msgid "Parameter type:"
+#~ msgstr "ชนิดของพารามิเตอร์:"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
-#: SolidActions.ui:36
-#, kde-format
-msgid "Add…"
-msgstr ""
+#~ msgid "Property Match"
+#~ msgstr "คุณสมบัติเข้าคู่กัน"
+
+#~ msgid "Content Conjunction"
+#~ msgstr "การรวมกันของเนื้อหา"
+
+#~ msgid "Content Disjunction"
+#~ msgstr "การแยกกันของเนื้อหา"
+
+#~ msgid "Device Interface Match"
+#~ msgstr "ส่วนเชื่อมต่ออุปกรณ์เข้าคู่กัน"
+
+#~ msgid "Device type:"
+#~ msgstr "ประเภทของอุปกรณ์:"
+
+#~ msgid "Value name:"
+#~ msgstr "ชื่อของค่า:"
+
+#~ msgid "Equals"
+#~ msgstr "เท่ากับ"
+
+#~ msgid "Contains"
+#~ msgstr "บรรจุอยู่"
+
+#~ msgid "Reset Parameter"
+#~ msgstr "ตั้งค่าพารามิเตอร์ใหม่"
+
+#~ msgid "Save Parameter Changes"
+#~ msgstr "จัดเก็บการเปลี่ยนแปลงของพารามิเตอร์"
+
+#~ msgid "Action icon, click to change it"
+#~ msgstr "ไอคอนการกระทำ, คลิกเพื่อเปลี่ยนมัน"
+
+#~ msgid "Action name"
+#~ msgstr "ชื่อการกระทำ"
+
+#~ msgid "Command: "
+#~ msgstr "คำสั่ง: "
+
+#~ msgid ""
+#~ "Command that will trigger the action\n"
+#~ "This can include any or all of the following case insensitive expands:\n"
+#~ "\n"
+#~ "%f: The mountpoint for the device - Storage Access devices only\n"
+#~ "%d: Path to the device node - Block devices only\n"
+#~ "%i: The identifier of the device"
+#~ msgstr ""
+#~ "คำสั่งที่จะกระตุ้นการกระทำนี้\n"
+#~ "ซึ่งมันจะถูกรวมการแยกแยะตัวพิมพ์ใหญ่/เล็กต่อไปนี้บางตัวหรือทั้งหมด:\n"
+#~ "\n"
+#~ "%f: จุดเมานท์ของอุปกรณ์ - อุปกรณ์จัดเก็บข้อมูลเท่านั้น\n"
+#~ "%d: พาธไปยังโหนดอุปกรณ์ - อุปกรณ์แบบบล็อกเท่านั้น\n"
+#~ "%i: ค่าแสดงตัวอุปกรณ์"
+
+#~ msgid "Devices must match the following parameters for this action:"
+#~ msgstr "อุปกรณ์จะต้องเข้าคู่กับพารามิเตอร์ต่าง ๆ ต่อไปนี้ของการกระทำนี้:"
+
+#~ msgid "Action name:"
+#~ msgstr "ชื่อการกระทำ:"
+
+#~ msgid "Enter the name for your new action"
+#~ msgstr "ป้อนชื่อของการกระทำใหม่ของคุณ"
+
+#~ msgid "Remove"
+#~ msgstr "ลบออก"
 
 #~ msgid "Edit..."
 #~ msgstr "แก้ไข..."

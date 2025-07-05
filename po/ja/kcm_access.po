@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-16 02:45+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2024-09-11 17:21+0900\n"
 "Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>\n"
 "Language-Team: ja\n"
@@ -89,210 +89,6 @@ msgstr "Orca のために gsetttings を設定できませんでした: \"%1\" �
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "エラー: \"orca --setup\" を起動できませんでした"
-
-#. i18n: ectx: label, entry (SystemBell), group (Bell)
-#: kcmaccessibilitybell.kcfg:9
-#, kde-format
-msgid "Use System Bell"
-msgstr "システムベルを使う"
-
-#. i18n: ectx: label, entry (CustomBell), group (Bell)
-#: kcmaccessibilitybell.kcfg:13
-#, kde-format
-msgid "Customize system bell"
-msgstr "システムベルをカスタマイズ"
-
-#. i18n: ectx: label, entry (CustomBellFile), group (Bell)
-#: kcmaccessibilitybell.kcfg:17
-#, kde-format
-msgid "Sound file for the Bell"
-msgstr "ベルの音声ファイル"
-
-#. i18n: ectx: label, entry (VisibleBell), group (Bell)
-#: kcmaccessibilitybell.kcfg:20
-#, kde-format
-msgid "Use a visual bell instead of a sound"
-msgstr "音声の代わりに視覚的ベルを使用する"
-
-#. i18n: ectx: label, entry (InvertScreen), group (Bell)
-#: kcmaccessibilitybell.kcfg:24
-#, kde-format
-msgid "Invert the system colors on the bell"
-msgstr "ベルが鳴ったときシステムの色を反転させる"
-
-#. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
-#: kcmaccessibilitybell.kcfg:28
-#, kde-format
-msgid "Color of the Visible Bell"
-msgstr "視覚的ベルの色"
-
-#. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
-#: kcmaccessibilitybell.kcfg:32
-#, kde-format
-msgid "Duration of the Visible Bell"
-msgstr "視覚的ベルの持続時間"
-
-#. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:9
-#, kde-format
-msgid "Use sticky Keys"
-msgstr "スティッキーキーを使う"
-
-#. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:13
-#, kde-format
-msgid "Lock the sticky keys"
-msgstr "スティッキーキーをロック"
-
-#. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:17
-#, kde-format
-msgid "Turn sticky keys off when two keys are pressed simultaneously"
-msgstr "二つのキーが同時に押されたときスティッキーキーを無効にする"
-
-#. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:21
-#, kde-format
-msgid "Beep on a sticky key press"
-msgstr "スティッキーキーが押されたときビープ音を鳴らす"
-
-#. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:25
-#, kde-format
-msgid "Toggle keys beep"
-msgstr "トグルキーのビープ音"
-
-#. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:29
-#, kde-format
-msgid "Notify when a keyboard modifier is pressed"
-msgstr "修飾キーが押されたとき通知する"
-
-#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:33
-#, kde-format
-msgid "Use a timeout delay"
-msgstr "タイムアウト遅延を使用する"
-
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:37
-#, kde-format
-msgid "Delay for timeout"
-msgstr "タイムアウトの遅延"
-
-#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:41
-#, kde-format
-msgid "Use a beep for access"
-msgstr "アクセスにビープ音を使用する"
-
-#. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:9
-#, kde-format
-msgid "Use slow keypresses"
-msgstr "スローキーを使う"
-
-#. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:13
-#, kde-format
-msgid "Delay for the key press"
-msgstr "キー押し下げの遅延"
-
-#. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:17
-#, kde-format
-msgid "Beep on a slow keypress"
-msgstr "スローキーが押されたときビープ音を鳴らす"
-
-#. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:21
-#, kde-format
-msgid "Beep on an accepted keypress"
-msgstr "キー押下が受け付けられたときビープ音を鳴らす"
-
-#. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:25
-#, kde-format
-msgid "Beep on a rejected keypress"
-msgstr "キー押下が拒否されたときビープ音を鳴らす"
-
-#. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:29
-#, kde-format
-msgid "Bounce Keys"
-msgstr "バウンスキー (二度打ち防止機能)"
-
-#. i18n: ectx: label, entry (BounceKeysDelay), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:33
-#, kde-format
-msgid "Use a delay for bouncing"
-msgstr "二度打ち防止のために入力の間隔を設定"
-
-#. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:37
-#, kde-format
-msgid "Beep if a bounce key event is rejected"
-msgstr "バウンスキーイベントが拒否されたときビープ音を鳴らす"
-
-#. i18n: ectx: label, entry (MouseKeys), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:9
-#, kde-format
-msgid "Use keys to control the mouse"
-msgstr "キーを使用してポインタを移動"
-
-#. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:13
-#, kde-format
-msgid "Delay for the mouse movement"
-msgstr "ポインタ移動の遅延"
-
-#. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:17
-#, kde-format
-msgid "Repetition interval for the mouse movement"
-msgstr "マウス移動のリピート間隔"
-
-#. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:21
-#, kde-format
-msgid "Time to hit maximum velocity"
-msgstr "最大速度に到達するまでの時間"
-
-#. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:25
-#, kde-format
-msgid "Maximum Velocity"
-msgstr "最大速度"
-
-#. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:29
-#, kde-format
-msgid "Mouse Key Curve"
-msgstr "マウスキーのカーブ"
-
-#. i18n: ectx: label, entry (Gestures), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:35
-#, kde-format
-msgid "Use Gestures"
-msgstr "ジェスチャーを使用"
-
-#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:39
-#, kde-format
-msgid "Ask for Confirmation for a gesture"
-msgstr "ジェスチャー実行の確認を求める"
-
-#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:43
-#, kde-format
-msgid "Confirm access to the Keyboard"
-msgstr "キーボードへのアクセスを確認"
-
-#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
-#: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
-#, kde-format
-msgid "Enable Screen Reader"
-msgstr "スクリーンリーダを有効化"
 
 #: package/contents/ui/Bell.qml:20
 #, kde-format
@@ -583,6 +379,11 @@ msgstr "最大速度:"
 msgid "Acceleration profile:"
 msgstr "加速プロファイル:"
 
+#: package/contents/ui/ScreenReader.qml:17
+#, kde-format
+msgid "Enable Screen Reader"
+msgstr "スクリーンリーダを有効化"
+
 #: package/contents/ui/ScreenReader.qml:28
 #, kde-format
 msgid "Launch Orca Screen Reader Configuration…"
@@ -605,3 +406,102 @@ msgid ""
 msgstr ""
 "Orca スクリーンリーダがインストールされていないようです。この機能を使用するに"
 "は、Orca をインストールして再ログイン/再起動してください。"
+
+#~ msgid "Use System Bell"
+#~ msgstr "システムベルを使う"
+
+#~ msgid "Customize system bell"
+#~ msgstr "システムベルをカスタマイズ"
+
+#~ msgid "Sound file for the Bell"
+#~ msgstr "ベルの音声ファイル"
+
+#~ msgid "Use a visual bell instead of a sound"
+#~ msgstr "音声の代わりに視覚的ベルを使用する"
+
+#~ msgid "Invert the system colors on the bell"
+#~ msgstr "ベルが鳴ったときシステムの色を反転させる"
+
+#~ msgid "Color of the Visible Bell"
+#~ msgstr "視覚的ベルの色"
+
+#~ msgid "Duration of the Visible Bell"
+#~ msgstr "視覚的ベルの持続時間"
+
+#~ msgid "Use sticky Keys"
+#~ msgstr "スティッキーキーを使う"
+
+#~ msgid "Lock the sticky keys"
+#~ msgstr "スティッキーキーをロック"
+
+#~ msgid "Turn sticky keys off when two keys are pressed simultaneously"
+#~ msgstr "二つのキーが同時に押されたときスティッキーキーを無効にする"
+
+#~ msgid "Beep on a sticky key press"
+#~ msgstr "スティッキーキーが押されたときビープ音を鳴らす"
+
+#~ msgid "Toggle keys beep"
+#~ msgstr "トグルキーのビープ音"
+
+#~ msgid "Notify when a keyboard modifier is pressed"
+#~ msgstr "修飾キーが押されたとき通知する"
+
+#~ msgid "Use a timeout delay"
+#~ msgstr "タイムアウト遅延を使用する"
+
+#~ msgid "Delay for timeout"
+#~ msgstr "タイムアウトの遅延"
+
+#~ msgid "Use a beep for access"
+#~ msgstr "アクセスにビープ音を使用する"
+
+#~ msgid "Use slow keypresses"
+#~ msgstr "スローキーを使う"
+
+#~ msgid "Delay for the key press"
+#~ msgstr "キー押し下げの遅延"
+
+#~ msgid "Beep on a slow keypress"
+#~ msgstr "スローキーが押されたときビープ音を鳴らす"
+
+#~ msgid "Beep on an accepted keypress"
+#~ msgstr "キー押下が受け付けられたときビープ音を鳴らす"
+
+#~ msgid "Beep on a rejected keypress"
+#~ msgstr "キー押下が拒否されたときビープ音を鳴らす"
+
+#~ msgid "Bounce Keys"
+#~ msgstr "バウンスキー (二度打ち防止機能)"
+
+#~ msgid "Use a delay for bouncing"
+#~ msgstr "二度打ち防止のために入力の間隔を設定"
+
+#~ msgid "Beep if a bounce key event is rejected"
+#~ msgstr "バウンスキーイベントが拒否されたときビープ音を鳴らす"
+
+#~ msgid "Use keys to control the mouse"
+#~ msgstr "キーを使用してポインタを移動"
+
+#~ msgid "Delay for the mouse movement"
+#~ msgstr "ポインタ移動の遅延"
+
+#~ msgid "Repetition interval for the mouse movement"
+#~ msgstr "マウス移動のリピート間隔"
+
+#~ msgid "Time to hit maximum velocity"
+#~ msgstr "最大速度に到達するまでの時間"
+
+#~ msgid "Maximum Velocity"
+#~ msgstr "最大速度"
+
+#~ msgid "Mouse Key Curve"
+#~ msgstr "マウスキーのカーブ"
+
+#~ msgid "Use Gestures"
+#~ msgstr "ジェスチャーを使用"
+
+#~ msgid "Ask for Confirmation for a gesture"
+#~ msgstr "ジェスチャー実行の確認を求める"
+
+#~ msgid "Confirm access to the Keyboard"
+#~ msgstr "キーボードへのアクセスを確認"

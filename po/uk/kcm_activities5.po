@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_activities5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-24 00:47+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-05-26 09:24+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -99,30 +99,6 @@ msgstr "Не стежити за діями у цьому просторі"
 msgid "Shortcut for switching:"
 msgstr "Скорочення для перемикання:"
 
-#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:10
-#, kde-format
-msgid "How many months keep the activity history"
-msgstr "Кількість місяців, протягом яких зберігатиметься журнал просторів дій"
-
-#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:17
-#, kde-format
-msgid "Which data to keep in activity history"
-msgstr "Типи даних, які зберігатимуться у журналі просторів дій."
-
-#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:21
-#, kde-format
-msgid "List of Applications whose activity history to save"
-msgstr "Список програм, журнал просторів дій яких слід зберігати"
-
-#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:24
-#, kde-format
-msgid "List of Applications whose activity history not to save"
-msgstr "Список програм, журнал просторів дій яких не слід зберігати"
-
 #: MainConfigurationWidget.cpp:33
 #, kde-format
 msgid "Switching"
@@ -162,23 +138,27 @@ msgctxt "@action"
 msgid "Walk through activities (Reverse)"
 msgstr "Перехід списком просторів дій (зворотний)"
 
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_virtualDesktopSwitchEnabled)
-#: ui/SwitchingTabBase.ui:22
-#, kde-format
-msgid "Remember for each activity (needs restart)"
-msgstr "Запам’ятовувати для кожного простору дій (потребує перезапуску)"
+#~ msgid "How many months keep the activity history"
+#~ msgstr ""
+#~ "Кількість місяців, протягом яких зберігатиметься журнал просторів дій"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: ui/SwitchingTabBase.ui:29
-#, kde-format
-msgid "Current virtual desktop:"
-msgstr "Поточна віртуальна стільниця:"
+#~ msgid "Which data to keep in activity history"
+#~ msgstr "Типи даних, які зберігатимуться у журналі просторів дій."
 
-#. i18n: ectx: property (text), widget (QLabel, label_1)
-#: ui/SwitchingTabBase.ui:38
-#, kde-format
-msgid "Shortcuts:"
-msgstr "Скорочення:"
+#~ msgid "List of Applications whose activity history to save"
+#~ msgstr "Список програм, журнал просторів дій яких слід зберігати"
+
+#~ msgid "List of Applications whose activity history not to save"
+#~ msgstr "Список програм, журнал просторів дій яких не слід зберігати"
+
+#~ msgid "Remember for each activity (needs restart)"
+#~ msgstr "Запам’ятовувати для кожного простору дій (потребує перезапуску)"
+
+#~ msgid "Current virtual desktop:"
+#~ msgstr "Поточна віртуальна стільниця:"
+
+#~ msgid "Shortcuts:"
+#~ msgstr "Скорочення:"
 
 #~ msgid "Privacy"
 #~ msgstr "Конфіденційність"

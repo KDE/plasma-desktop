@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_device_automounter\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-09-13 08:27+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -58,69 +58,6 @@ msgstr "Kai Uwe Broulik"
 #, kde-format
 msgid "Plasma 5 Port"
 msgstr "Port Plasma 5"
-
-#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
-#: DeviceAutomounterKCM.ui:17
-#, kde-format
-msgid ""
-"This list contains the storage devices known to the system. If \"Automount "
-"on Login\" is checked, the device will be automatically mounted even though "
-"\"Mount all removable media at login\" is unchecked. The same applies for "
-"\"Automount on Attach\"."
-msgstr ""
-"Daftar ini berisi peranti penyimpan yang dikenal oleh sistem. Jika "
-"\"Autokait saat Login\" dicentang, peranti akan secara otomatis dikaitkan "
-"bahkan jika \"Kaitkan semua media dapat-dilepas saat login\" tidak "
-"dicentang. Hal yang sama berlaku untuk \"Autokait saat Dicantolkan\"."
-
-#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
-#: DeviceAutomounterKCM.ui:54
-#, kde-format
-msgid ""
-"Clicking this button causes the selected devices to be 'forgotten'. This is "
-"only useful if \"Only automatically mount removable media that has been "
-"manually mounted before\" is checked. Once a device is forgotten and the "
-"system is set to only automatically mount familiar devices, the device will "
-"not be automatically mounted."
-msgstr ""
-"Klik pada tombol ini menyebabkan peranti terpilih akan 'dilupakan'. Ini "
-"hanya berguna jika \"Secara otomatis hanya mengaitkan media dapat dilepas "
-"yang secara manual telah dikaitkan sebelumnya\" dicentang. Sekali sebuah "
-"peranti dilupakan dan sistem diatur untuk secara otomatis hanya mengaitkan "
-"peranti yang familiar, peranti tidak akan dikaitkan secara otomatis."
-
-#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
-#: DeviceAutomounterKCM.ui:57
-#, kde-format
-msgid "Forget Device"
-msgstr "Lupakan Peranti"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
-#: DeviceAutomounterKCM.ui:67
-#, kde-format
-msgid ""
-"When this is not checked, only remembered devices will be automatically "
-"mounted. A device is 'remembered' if it has ever been mounted before. For "
-"instance, plugging in a USB media player to charge is not sufficient to "
-"'remember' it - if the files are not accessed, it will not be automatically "
-"mounted the next time it is seen. Once they have been accessed, however, the "
-"device's contents will be automatically made available to the system."
-msgstr ""
-"Jika ini dicentang, hanya peranti yang diingat yang akan secara otomatis "
-"dikaitkan. Sebuah peranti akan 'diingat' jika sebelumnya pernah dikaitkan. "
-"Misalnya, menancapkan sebuah pemutar media USB untuk mengecas baterai belum "
-"cukup untuk dikatakan sebagai 'diingat' - jika filenya tidak diakses, maka "
-"tidak akan secara otomatis mengaitkan pemutar ketika lain kali terlihat. "
-"Namun sekali peranti telah diakses, konten peranti akan secara otomatis "
-"tersedia oleh sistem."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
-#: DeviceAutomounterKCM.ui:70
-#, kde-format
-msgid "Automatically mount removable media that have never been mounted before"
-msgstr ""
-"Secara otomatis mengaitkan media dapat-dilepas yang belum pernah dikaitkan "
-"sebelumnya"
 
 #: DeviceModel.cpp:52
 #, kde-format
@@ -183,6 +120,57 @@ msgstr "Perangkat ini akan secara otomatis dikaitkan saat tercantol."
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "Perangkat ini tidak akan secara otomatis dikaitkan saat tercantol."
+
+#~ msgid ""
+#~ "This list contains the storage devices known to the system. If "
+#~ "\"Automount on Login\" is checked, the device will be automatically "
+#~ "mounted even though \"Mount all removable media at login\" is unchecked. "
+#~ "The same applies for \"Automount on Attach\"."
+#~ msgstr ""
+#~ "Daftar ini berisi peranti penyimpan yang dikenal oleh sistem. Jika "
+#~ "\"Autokait saat Login\" dicentang, peranti akan secara otomatis dikaitkan "
+#~ "bahkan jika \"Kaitkan semua media dapat-dilepas saat login\" tidak "
+#~ "dicentang. Hal yang sama berlaku untuk \"Autokait saat Dicantolkan\"."
+
+#~ msgid ""
+#~ "Clicking this button causes the selected devices to be 'forgotten'. This "
+#~ "is only useful if \"Only automatically mount removable media that has "
+#~ "been manually mounted before\" is checked. Once a device is forgotten and "
+#~ "the system is set to only automatically mount familiar devices, the "
+#~ "device will not be automatically mounted."
+#~ msgstr ""
+#~ "Klik pada tombol ini menyebabkan peranti terpilih akan 'dilupakan'. Ini "
+#~ "hanya berguna jika \"Secara otomatis hanya mengaitkan media dapat dilepas "
+#~ "yang secara manual telah dikaitkan sebelumnya\" dicentang. Sekali sebuah "
+#~ "peranti dilupakan dan sistem diatur untuk secara otomatis hanya "
+#~ "mengaitkan peranti yang familiar, peranti tidak akan dikaitkan secara "
+#~ "otomatis."
+
+#~ msgid "Forget Device"
+#~ msgstr "Lupakan Peranti"
+
+#~ msgid ""
+#~ "When this is not checked, only remembered devices will be automatically "
+#~ "mounted. A device is 'remembered' if it has ever been mounted before. For "
+#~ "instance, plugging in a USB media player to charge is not sufficient to "
+#~ "'remember' it - if the files are not accessed, it will not be "
+#~ "automatically mounted the next time it is seen. Once they have been "
+#~ "accessed, however, the device's contents will be automatically made "
+#~ "available to the system."
+#~ msgstr ""
+#~ "Jika ini dicentang, hanya peranti yang diingat yang akan secara otomatis "
+#~ "dikaitkan. Sebuah peranti akan 'diingat' jika sebelumnya pernah "
+#~ "dikaitkan. Misalnya, menancapkan sebuah pemutar media USB untuk mengecas "
+#~ "baterai belum cukup untuk dikatakan sebagai 'diingat' - jika filenya "
+#~ "tidak diakses, maka tidak akan secara otomatis mengaitkan pemutar ketika "
+#~ "lain kali terlihat. Namun sekali peranti telah diakses, konten peranti "
+#~ "akan secara otomatis tersedia oleh sistem."
+
+#~ msgid ""
+#~ "Automatically mount removable media that have never been mounted before"
+#~ msgstr ""
+#~ "Secara otomatis mengaitkan media dapat-dilepas yang belum pernah "
+#~ "dikaitkan sebelumnya"
 
 #~ msgid ""
 #~ "If any removable storage devices are connected to your system when you "

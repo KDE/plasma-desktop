@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2009-11-11 11:56+0530\n"
 "Last-Translator: danishka <danishka@gmail.com>\n"
 "Language-Team: Sinhala <danishka@gmail.com>\n"
@@ -26,58 +26,6 @@ msgstr "ඩනිෂ්ක නවින්"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "danishka@gmail.com"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: dateandtime.ui:22
-#, kde-format
-msgid "Date and Time"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
-#: dateandtime.ui:30
-#, fuzzy, kde-format
-#| msgid "Set date and time &automatically:"
-msgid "Set date and time &automatically"
-msgstr "ස්වයංක්‍රීයව දිනය හා වේලාව සකසන්න (&a)"
-
-#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
-#: dateandtime.ui:53
-#, kde-format
-msgid "&Time server:"
-msgstr ""
-
-#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
-#: dateandtime.ui:86
-#, kde-format
-msgid "Here you can change the system date's day of the month, month and year."
-msgstr "මෙහිදී ඔබට පද්ධති දිනයේ , මාසයේ දිනයම් මාසය හා වසර සැකසිය හැක."
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: dateandtime.ui:122
-#, fuzzy, kde-format
-#| msgid "Time zone Error"
-msgid "Time Zone"
-msgstr "වේලා කලාප දෝෂය"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: dateandtime.ui:128
-#, fuzzy, kde-format
-#| msgid "To change the local time zone, select your area from the list below"
-msgid "To change the local time zone, select your area from the list below."
-msgstr "දේශීය වේලාකලාපය වෙනස් කිරීමට, පහත ලැයිස්තුවෙන් ඔබේ ප්‍රදේශය තෝරාගන්න"
-
-#. i18n: ectx: property (text), widget (QLabel, m_local)
-#: dateandtime.ui:151
-#, fuzzy, kde-format
-#| msgid "Current local time zone: %1 (%2)"
-msgid "Current local time zone:"
-msgstr "වත්මන් දේශීය වේලා කලාපය: %1 (%2)"
-
-#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
-#: dateandtime.ui:161
-#, kde-format
-msgid "Search…"
-msgstr ""
 
 #: dtime.cpp:61
 #, kde-format
@@ -246,6 +194,30 @@ msgstr "වේලා ධාරකය සම්බන්ධ කරගත නො�
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set timezone"
 msgstr "වේලා ධාරකය සම්බන්ධ කරගත නොහැක: %1."
+
+#, fuzzy
+#~| msgid "Set date and time &automatically:"
+#~ msgid "Set date and time &automatically"
+#~ msgstr "ස්වයංක්‍රීයව දිනය හා වේලාව සකසන්න (&a)"
+
+#~ msgid ""
+#~ "Here you can change the system date's day of the month, month and year."
+#~ msgstr "මෙහිදී ඔබට පද්ධති දිනයේ , මාසයේ දිනයම් මාසය හා වසර සැකසිය හැක."
+
+#, fuzzy
+#~| msgid "Time zone Error"
+#~ msgid "Time Zone"
+#~ msgstr "වේලා කලාප දෝෂය"
+
+#, fuzzy
+#~| msgid "To change the local time zone, select your area from the list below"
+#~ msgid "To change the local time zone, select your area from the list below."
+#~ msgstr "දේශීය වේලාකලාපය වෙනස් කිරීමට, පහත ලැයිස්තුවෙන් ඔබේ ප්‍රදේශය තෝරාගන්න"
+
+#, fuzzy
+#~| msgid "Current local time zone: %1 (%2)"
+#~ msgid "Current local time zone:"
+#~ msgstr "වත්මන් දේශීය වේලා කලාපය: %1 (%2)"
 
 #~ msgid "kcmclock"
 #~ msgstr "kcmclock"

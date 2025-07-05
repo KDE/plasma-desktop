@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-06-26 19:41+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -46,132 +46,6 @@ msgstr ""
 #, kde-format
 msgid "Invalid action"
 msgstr "Neplatná akcia"
-
-#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
-#: ActionEditor.ui:17
-#, kde-format
-msgid "Edit Parameter"
-msgstr "Upraviť parameter"
-
-#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
-#: ActionEditor.ui:43
-#, kde-format
-msgid "Parameter type:"
-msgstr "Typ parametra:"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:51
-#, kde-format
-msgid "Property Match"
-msgstr "Zhoda vo vlastnosti"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:56
-#, kde-format
-msgid "Content Conjunction"
-msgstr "Logický súčin (AND)"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:61
-#, kde-format
-msgid "Content Disjunction"
-msgstr "Logický súčet (OR)"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:66
-#, kde-format
-msgid "Device Interface Match"
-msgstr "Zhoda v rozhraní zariadenia"
-
-#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
-#: ActionEditor.ui:96
-#, kde-format
-msgid "Device type:"
-msgstr "Typ zariadenia:"
-
-#. i18n: ectx: property (text), widget (QLabel, LblValueName)
-#: ActionEditor.ui:135
-#, kde-format
-msgid "Value name:"
-msgstr "Názov hodnoty:"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
-#: ActionEditor.ui:175
-#, kde-format
-msgid "Equals"
-msgstr "Rovná sa"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
-#: ActionEditor.ui:180
-#, kde-format
-msgid "Contains"
-msgstr "Obsahuje"
-
-#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
-#: ActionEditor.ui:208
-#, kde-format
-msgid "Reset Parameter"
-msgstr "Obnoviť parameter"
-
-#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
-#: ActionEditor.ui:215
-#, kde-format
-msgid "Save Parameter Changes"
-msgstr "Uložiť zmeny parametrov"
-
-#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
-#: ActionEditor.ui:247
-#, kde-format
-msgid "Action icon, click to change it"
-msgstr "Ikona akcie, kliknite pre zmenu"
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
-#: ActionEditor.ui:254
-#, kde-format
-msgid "Action name"
-msgstr "Názov akcie"
-
-#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
-#: ActionEditor.ui:271
-#, kde-format
-msgid "Command: "
-msgstr "Príkaz: "
-
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
-#: ActionEditor.ui:283
-#, no-c-format, kde-format
-msgid ""
-"Command that will trigger the action\n"
-"This can include any or all of the following case insensitive expands:\n"
-"\n"
-"%f: The mountpoint for the device - Storage Access devices only\n"
-"%d: Path to the device node - Block devices only\n"
-"%i: The identifier of the device"
-msgstr ""
-"Príkaz, ktorý spustí akciu\n"
-"Toto môže zahrňovať akékoľvek alebo všetky zastupiteľné znaky:\n"
-"\n"
-"%f: Prípojný bod zariadenia - len pre typy úložného zariadenia\n"
-"%d: Cesta k uzlu zariadenia - len blokové zariadenia\n"
-"%i: Identifikátor zariadenia"
-
-#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
-#: ActionEditor.ui:300
-#, kde-format
-msgid "Devices must match the following parameters for this action:"
-msgstr "Zariadenia musia odpovedať nasledujúcim parametrom pre túto akciu:"
-
-#. i18n: ectx: property (text), widget (QLabel, LblActionName)
-#: AddAction.ui:19
-#, kde-format
-msgid "Action name:"
-msgstr "Názov akcie:"
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
-#: AddAction.ui:26
-#, kde-format
-msgid "Enter the name for your new action"
-msgstr "Zadajte názov novej akcie"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -267,23 +141,83 @@ msgstr "Nie je vybraná žiadna akcia"
 msgid "Cannot be deleted"
 msgstr "Nedá sa odstrániť"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
-#: SolidActions.ui:22
-#, kde-format
-msgid "Remove"
-msgstr "Odstrániť"
+#~ msgid "Edit Parameter"
+#~ msgstr "Upraviť parameter"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
-#: SolidActions.ui:29
-#, kde-format
-msgid "Edit…"
-msgstr "Upraviť..."
+#~ msgid "Parameter type:"
+#~ msgstr "Typ parametra:"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
-#: SolidActions.ui:36
-#, kde-format
-msgid "Add…"
-msgstr "Pridať..."
+#~ msgid "Property Match"
+#~ msgstr "Zhoda vo vlastnosti"
+
+#~ msgid "Content Conjunction"
+#~ msgstr "Logický súčin (AND)"
+
+#~ msgid "Content Disjunction"
+#~ msgstr "Logický súčet (OR)"
+
+#~ msgid "Device Interface Match"
+#~ msgstr "Zhoda v rozhraní zariadenia"
+
+#~ msgid "Device type:"
+#~ msgstr "Typ zariadenia:"
+
+#~ msgid "Value name:"
+#~ msgstr "Názov hodnoty:"
+
+#~ msgid "Equals"
+#~ msgstr "Rovná sa"
+
+#~ msgid "Contains"
+#~ msgstr "Obsahuje"
+
+#~ msgid "Reset Parameter"
+#~ msgstr "Obnoviť parameter"
+
+#~ msgid "Save Parameter Changes"
+#~ msgstr "Uložiť zmeny parametrov"
+
+#~ msgid "Action icon, click to change it"
+#~ msgstr "Ikona akcie, kliknite pre zmenu"
+
+#~ msgid "Action name"
+#~ msgstr "Názov akcie"
+
+#~ msgid "Command: "
+#~ msgstr "Príkaz: "
+
+#~ msgid ""
+#~ "Command that will trigger the action\n"
+#~ "This can include any or all of the following case insensitive expands:\n"
+#~ "\n"
+#~ "%f: The mountpoint for the device - Storage Access devices only\n"
+#~ "%d: Path to the device node - Block devices only\n"
+#~ "%i: The identifier of the device"
+#~ msgstr ""
+#~ "Príkaz, ktorý spustí akciu\n"
+#~ "Toto môže zahrňovať akékoľvek alebo všetky zastupiteľné znaky:\n"
+#~ "\n"
+#~ "%f: Prípojný bod zariadenia - len pre typy úložného zariadenia\n"
+#~ "%d: Cesta k uzlu zariadenia - len blokové zariadenia\n"
+#~ "%i: Identifikátor zariadenia"
+
+#~ msgid "Devices must match the following parameters for this action:"
+#~ msgstr "Zariadenia musia odpovedať nasledujúcim parametrom pre túto akciu:"
+
+#~ msgid "Action name:"
+#~ msgstr "Názov akcie:"
+
+#~ msgid "Enter the name for your new action"
+#~ msgstr "Zadajte názov novej akcie"
+
+#~ msgid "Remove"
+#~ msgstr "Odstrániť"
+
+#~ msgid "Edit…"
+#~ msgstr "Upraviť..."
+
+#~ msgid "Add…"
+#~ msgstr "Pridať..."
 
 #~ msgid "Edit..."
 #~ msgstr "Upraviť..."

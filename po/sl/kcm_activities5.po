@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-24 00:47+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-07-21 07:52+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -98,30 +98,6 @@ msgstr "Ne sledi uporabi te dejavnosti"
 msgid "Shortcut for switching:"
 msgstr "Bližnjica za preklop:"
 
-#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:10
-#, kde-format
-msgid "How many months keep the activity history"
-msgstr "Koliko mesecev naj se hrani zgodovina dejavnosti"
-
-#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:17
-#, kde-format
-msgid "Which data to keep in activity history"
-msgstr "Katere podatke hraniti v zgodovini dejavnosti"
-
-#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:21
-#, kde-format
-msgid "List of Applications whose activity history to save"
-msgstr "Seznam programov z zgodovino dejavnosti za shranjevanje"
-
-#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:24
-#, kde-format
-msgid "List of Applications whose activity history not to save"
-msgstr "Seznam programov z zgodovino dejavnosti, ki je ne bi shranili"
-
 #: MainConfigurationWidget.cpp:33
 #, kde-format
 msgid "Switching"
@@ -161,23 +137,26 @@ msgctxt "@action"
 msgid "Walk through activities (Reverse)"
 msgstr "Sprehod med dejavnostmi (obratno)"
 
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_virtualDesktopSwitchEnabled)
-#: ui/SwitchingTabBase.ui:22
-#, kde-format
-msgid "Remember for each activity (needs restart)"
-msgstr "Zapomni si vsako dejavnost (zahteva ponovni zagon)"
+#~ msgid "How many months keep the activity history"
+#~ msgstr "Koliko mesecev naj se hrani zgodovina dejavnosti"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: ui/SwitchingTabBase.ui:29
-#, kde-format
-msgid "Current virtual desktop:"
-msgstr "Trenutno virtualno namizje:"
+#~ msgid "Which data to keep in activity history"
+#~ msgstr "Katere podatke hraniti v zgodovini dejavnosti"
 
-#. i18n: ectx: property (text), widget (QLabel, label_1)
-#: ui/SwitchingTabBase.ui:38
-#, kde-format
-msgid "Shortcuts:"
-msgstr "Bližnjice:"
+#~ msgid "List of Applications whose activity history to save"
+#~ msgstr "Seznam programov z zgodovino dejavnosti za shranjevanje"
+
+#~ msgid "List of Applications whose activity history not to save"
+#~ msgstr "Seznam programov z zgodovino dejavnosti, ki je ne bi shranili"
+
+#~ msgid "Remember for each activity (needs restart)"
+#~ msgstr "Zapomni si vsako dejavnost (zahteva ponovni zagon)"
+
+#~ msgid "Current virtual desktop:"
+#~ msgstr "Trenutno virtualno namizje:"
+
+#~ msgid "Shortcuts:"
+#~ msgstr "Bližnjice:"
 
 #~ msgid "Privacy"
 #~ msgstr "Zasebnost"

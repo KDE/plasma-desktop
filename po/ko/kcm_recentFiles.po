@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 02:26+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-05-28 02:25+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -16,30 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 23.08.5\n"
-
-#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:10
-#, kde-format
-msgid "How many months keep the activity history"
-msgstr "활동 기록을 저장할 개월 수"
-
-#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:17
-#, kde-format
-msgid "Which data to keep in activity history"
-msgstr "활동 기록에 저장할 데이터"
-
-#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:21
-#, kde-format
-msgid "List of Applications whose activity history to save"
-msgstr "활동 기록을 저장할 앱 목록"
-
-#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:24
-#, kde-format
-msgid "List of Applications whose activity history not to save"
-msgstr "활동 기록을 저장하지 않을 앱 목록"
 
 #: kcm_recentFiles.cpp:64
 #, kde-format
@@ -80,50 +56,38 @@ msgctxt "for in 'keep history for 5 months'"
 msgid "For "
 msgstr "기한:"
 
-#. i18n: ectx: property (text), widget (KMessageWidget, messageWidget)
-#: ui/RecentFiles.ui:17
-#, kde-format
-msgid "Cleared the activity history."
-msgstr "활동 기록을 삭제합니다."
+#~ msgid "How many months keep the activity history"
+#~ msgstr "활동 기록을 저장할 개월 수"
 
-#. i18n: ectx: property (text), widget (QLabel, labelKeepHistory)
-#: ui/RecentFiles.ui:36
-#, kde-format
-msgid "Keep history:"
-msgstr "과거 기록 저장:"
+#~ msgid "Which data to keep in activity history"
+#~ msgstr "활동 기록에 저장할 데이터"
 
-#. i18n: ectx: property (text), widget (QPushButton, buttonClearRecentHistory)
-#: ui/RecentFiles.ui:48
-#, kde-format
-msgid "Clear History"
-msgstr "과거 기록 삭제"
+#~ msgid "List of Applications whose activity history to save"
+#~ msgstr "활동 기록을 저장할 앱 목록"
 
-#. i18n: ectx: property (text), widget (QRadioButton, radioRememberAllApplications)
-#: ui/RecentFiles.ui:70
-#, kde-format
-msgid "For a&ll applications"
-msgstr "모든 앱에 대해서(&L)"
+#~ msgid "List of Applications whose activity history not to save"
+#~ msgstr "활동 기록을 저장하지 않을 앱 목록"
 
-#. i18n: ectx: property (text), widget (QRadioButton, radioDontRememberApplications)
-#: ui/RecentFiles.ui:80
-#, kde-format
-msgid "&Do not remember"
-msgstr "기억하지 않음(&D)"
+#~ msgid "Cleared the activity history."
+#~ msgstr "활동 기록을 삭제합니다."
 
-#. i18n: ectx: property (text), widget (QRadioButton, radioRememberSpecificApplications)
-#: ui/RecentFiles.ui:87
-#, kde-format
-msgid "O&nly for specific applications:"
-msgstr "다음 앱에 대해서(&N):"
+#~ msgid "Keep history:"
+#~ msgstr "과거 기록 저장:"
 
-#. i18n: ectx: property (text), widget (QLabel, labelRememberDocuments)
-#: ui/RecentFiles.ui:97
-#, kde-format
-msgid "Remember opened documents:"
-msgstr "열었던 문서 기억:"
+#~ msgid "Clear History"
+#~ msgstr "과거 기록 삭제"
 
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_blockedByDefault)
-#: ui/RecentFiles.ui:130
-#, kde-format
-msgid "Blacklist applications not on the list"
-msgstr "이 목록에 없는 앱 차단"
+#~ msgid "For a&ll applications"
+#~ msgstr "모든 앱에 대해서(&L)"
+
+#~ msgid "&Do not remember"
+#~ msgstr "기억하지 않음(&D)"
+
+#~ msgid "O&nly for specific applications:"
+#~ msgstr "다음 앱에 대해서(&N):"
+
+#~ msgid "Remember opened documents:"
+#~ msgstr "열었던 문서 기억:"
+
+#~ msgid "Blacklist applications not on the list"
+#~ msgstr "이 목록에 없는 앱 차단"

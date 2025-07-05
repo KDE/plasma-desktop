@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-16 02:45+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-07-17 05:11+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -82,210 +82,6 @@ msgstr "Orca-სთვის gsettings-ის დაყენების შე
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "შეცდომა: \"orca --setup\" -ის გაშვების შეცდომა"
-
-#. i18n: ectx: label, entry (SystemBell), group (Bell)
-#: kcmaccessibilitybell.kcfg:9
-#, kde-format
-msgid "Use System Bell"
-msgstr "სისტემური ზარის გამოყენება"
-
-#. i18n: ectx: label, entry (CustomBell), group (Bell)
-#: kcmaccessibilitybell.kcfg:13
-#, kde-format
-msgid "Customize system bell"
-msgstr "სისტემური ზარის მორგება"
-
-#. i18n: ectx: label, entry (CustomBellFile), group (Bell)
-#: kcmaccessibilitybell.kcfg:17
-#, kde-format
-msgid "Sound file for the Bell"
-msgstr "სისტემური ზარის დაკვრა"
-
-#. i18n: ectx: label, entry (VisibleBell), group (Bell)
-#: kcmaccessibilitybell.kcfg:20
-#, kde-format
-msgid "Use a visual bell instead of a sound"
-msgstr "ხმის მაგიერ ვიზუალური ზარის გამოყენება"
-
-#. i18n: ectx: label, entry (InvertScreen), group (Bell)
-#: kcmaccessibilitybell.kcfg:24
-#, kde-format
-msgid "Invert the system colors on the bell"
-msgstr "ფერების ინვერსია ზარის დაკვრის დროს"
-
-#. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
-#: kcmaccessibilitybell.kcfg:28
-#, kde-format
-msgid "Color of the Visible Bell"
-msgstr "ხილული ზარის ფერი"
-
-#. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
-#: kcmaccessibilitybell.kcfg:32
-#, kde-format
-msgid "Duration of the Visible Bell"
-msgstr "ხილული ზარის ხანგრძლივობა"
-
-#. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:9
-#, kde-format
-msgid "Use sticky Keys"
-msgstr "წებოვანი ღილაკების გამოყენება"
-
-#. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:13
-#, kde-format
-msgid "Lock the sticky keys"
-msgstr "წებოვანი ღილაკების დაბლოკვა"
-
-#. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:17
-#, kde-format
-msgid "Turn sticky keys off when two keys are pressed simultaneously"
-msgstr "ორი ღილაკის ერთდროულად დაწოლისას წებოვანი ღილაკების გათიშვა"
-
-#. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:21
-#, kde-format
-msgid "Beep on a sticky key press"
-msgstr "პიპინი, როცა წებოვან ღილაკებს დააწვებით"
-
-#. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:25
-#, kde-format
-msgid "Toggle keys beep"
-msgstr "ღილაკების გადართვის პიპინი"
-
-#. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:29
-#, kde-format
-msgid "Notify when a keyboard modifier is pressed"
-msgstr "შეტყობინება, როცა კლავიატურის მოდიფიკატორს დააწვებით"
-
-#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:33
-#, kde-format
-msgid "Use a timeout delay"
-msgstr "დაყოვნების ვადის გამოყენება"
-
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:37
-#, kde-format
-msgid "Delay for timeout"
-msgstr "მოლოდინის ვადის დაყოვნება"
-
-#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:41
-#, kde-format
-msgid "Use a beep for access"
-msgstr "წვდომისთვის პიპინის გამოყენება"
-
-#. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:9
-#, kde-format
-msgid "Use slow keypresses"
-msgstr "ღილაკებზე ნელი დაწოლის გამოყენება"
-
-#. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:13
-#, kde-format
-msgid "Delay for the key press"
-msgstr "ღილაკის დაწოლის დაყოვნება"
-
-#. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:17
-#, kde-format
-msgid "Beep on a slow keypress"
-msgstr "პიპინი ღილაკების ნელა დაწყოლაზე"
-
-#. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:21
-#, kde-format
-msgid "Beep on an accepted keypress"
-msgstr "პიპინი დათანხმებულ ღილაკებზე"
-
-#. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:25
-#, kde-format
-msgid "Beep on a rejected keypress"
-msgstr "პიპინი უარყოფილ ღილაკებზე"
-
-#. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:29
-#, kde-format
-msgid "Bounce Keys"
-msgstr "მხტუნავი ღილაკები"
-
-#. i18n: ectx: label, entry (BounceKeysDelay), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:33
-#, kde-format
-msgid "Use a delay for bouncing"
-msgstr "ხტუნვისას დაყოვნების გამოყენება"
-
-#. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:37
-#, kde-format
-msgid "Beep if a bounce key event is rejected"
-msgstr "დაპიპინება, თუ მხტუნავი ღილაკის მოვლენა უარყოფილია"
-
-#. i18n: ectx: label, entry (MouseKeys), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:9
-#, kde-format
-msgid "Use keys to control the mouse"
-msgstr "თაგუნას საკონტროლოდ ღილაკები გამოიყენეთ"
-
-#. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:13
-#, kde-format
-msgid "Delay for the mouse movement"
-msgstr "თაგუნას მოძრაობის დაყოვნება"
-
-#. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:17
-#, kde-format
-msgid "Repetition interval for the mouse movement"
-msgstr "გამეორების ინტერვალი თაგუნას მოძრაობისთვის"
-
-#. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:21
-#, kde-format
-msgid "Time to hit maximum velocity"
-msgstr "მაქსიმალური აჩქარების მიღწევის დრო"
-
-#. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:25
-#, kde-format
-msgid "Maximum Velocity"
-msgstr "მაქსიმალური აჩქარება"
-
-#. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:29
-#, kde-format
-msgid "Mouse Key Curve"
-msgstr "თაგუნას ღილაკის მრუდი"
-
-#. i18n: ectx: label, entry (Gestures), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:35
-#, kde-format
-msgid "Use Gestures"
-msgstr "ჟესტების გამოყენება"
-
-#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:39
-#, kde-format
-msgid "Ask for Confirmation for a gesture"
-msgstr "ჟესტის დადასტურების მოთხოვნა"
-
-#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:43
-#, kde-format
-msgid "Confirm access to the Keyboard"
-msgstr "კლავიატურასთან წვდომის დადასტურება"
-
-#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
-#: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
-#, kde-format
-msgid "Enable Screen Reader"
-msgstr "ეკრანის მკითხველის ჩართვა"
 
 #: package/contents/ui/Bell.qml:20
 #, kde-format
@@ -573,6 +369,11 @@ msgstr "მაქსიმალური სიჩქარე:"
 msgid "Acceleration profile:"
 msgstr "აჩქარების პროფილი:"
 
+#: package/contents/ui/ScreenReader.qml:17
+#, kde-format
+msgid "Enable Screen Reader"
+msgstr "ეკრანის მკითხველის ჩართვა"
+
 #: package/contents/ui/ScreenReader.qml:28
 #, kde-format
 msgid "Launch Orca Screen Reader Configuration…"
@@ -596,6 +397,105 @@ msgstr ""
 "როგორც ჩანს, Orca - ეკრანი წამკითხველი დაყენებული არაა. სანამ ცდით, ეს "
 "ფუნქცია გამოიყენოთ, დააყენეთ ის და ან გადით და თავიდან შემოდით, ან "
 "გადატვირთეთ კომპიუტერი"
+
+#~ msgid "Use System Bell"
+#~ msgstr "სისტემური ზარის გამოყენება"
+
+#~ msgid "Customize system bell"
+#~ msgstr "სისტემური ზარის მორგება"
+
+#~ msgid "Sound file for the Bell"
+#~ msgstr "სისტემური ზარის დაკვრა"
+
+#~ msgid "Use a visual bell instead of a sound"
+#~ msgstr "ხმის მაგიერ ვიზუალური ზარის გამოყენება"
+
+#~ msgid "Invert the system colors on the bell"
+#~ msgstr "ფერების ინვერსია ზარის დაკვრის დროს"
+
+#~ msgid "Color of the Visible Bell"
+#~ msgstr "ხილული ზარის ფერი"
+
+#~ msgid "Duration of the Visible Bell"
+#~ msgstr "ხილული ზარის ხანგრძლივობა"
+
+#~ msgid "Use sticky Keys"
+#~ msgstr "წებოვანი ღილაკების გამოყენება"
+
+#~ msgid "Lock the sticky keys"
+#~ msgstr "წებოვანი ღილაკების დაბლოკვა"
+
+#~ msgid "Turn sticky keys off when two keys are pressed simultaneously"
+#~ msgstr "ორი ღილაკის ერთდროულად დაწოლისას წებოვანი ღილაკების გათიშვა"
+
+#~ msgid "Beep on a sticky key press"
+#~ msgstr "პიპინი, როცა წებოვან ღილაკებს დააწვებით"
+
+#~ msgid "Toggle keys beep"
+#~ msgstr "ღილაკების გადართვის პიპინი"
+
+#~ msgid "Notify when a keyboard modifier is pressed"
+#~ msgstr "შეტყობინება, როცა კლავიატურის მოდიფიკატორს დააწვებით"
+
+#~ msgid "Use a timeout delay"
+#~ msgstr "დაყოვნების ვადის გამოყენება"
+
+#~ msgid "Delay for timeout"
+#~ msgstr "მოლოდინის ვადის დაყოვნება"
+
+#~ msgid "Use a beep for access"
+#~ msgstr "წვდომისთვის პიპინის გამოყენება"
+
+#~ msgid "Use slow keypresses"
+#~ msgstr "ღილაკებზე ნელი დაწოლის გამოყენება"
+
+#~ msgid "Delay for the key press"
+#~ msgstr "ღილაკის დაწოლის დაყოვნება"
+
+#~ msgid "Beep on a slow keypress"
+#~ msgstr "პიპინი ღილაკების ნელა დაწყოლაზე"
+
+#~ msgid "Beep on an accepted keypress"
+#~ msgstr "პიპინი დათანხმებულ ღილაკებზე"
+
+#~ msgid "Beep on a rejected keypress"
+#~ msgstr "პიპინი უარყოფილ ღილაკებზე"
+
+#~ msgid "Bounce Keys"
+#~ msgstr "მხტუნავი ღილაკები"
+
+#~ msgid "Use a delay for bouncing"
+#~ msgstr "ხტუნვისას დაყოვნების გამოყენება"
+
+#~ msgid "Beep if a bounce key event is rejected"
+#~ msgstr "დაპიპინება, თუ მხტუნავი ღილაკის მოვლენა უარყოფილია"
+
+#~ msgid "Use keys to control the mouse"
+#~ msgstr "თაგუნას საკონტროლოდ ღილაკები გამოიყენეთ"
+
+#~ msgid "Delay for the mouse movement"
+#~ msgstr "თაგუნას მოძრაობის დაყოვნება"
+
+#~ msgid "Repetition interval for the mouse movement"
+#~ msgstr "გამეორების ინტერვალი თაგუნას მოძრაობისთვის"
+
+#~ msgid "Time to hit maximum velocity"
+#~ msgstr "მაქსიმალური აჩქარების მიღწევის დრო"
+
+#~ msgid "Maximum Velocity"
+#~ msgstr "მაქსიმალური აჩქარება"
+
+#~ msgid "Mouse Key Curve"
+#~ msgstr "თაგუნას ღილაკის მრუდი"
+
+#~ msgid "Use Gestures"
+#~ msgstr "ჟესტების გამოყენება"
+
+#~ msgid "Ask for Confirmation for a gesture"
+#~ msgstr "ჟესტის დადასტურების მოთხოვნა"
+
+#~ msgid "Confirm access to the Keyboard"
+#~ msgstr "კლავიატურასთან წვდომის დადასტურება"
 
 #~ msgid "Maximum velocity"
 #~ msgstr "მაქსიმალური აჩქარება"

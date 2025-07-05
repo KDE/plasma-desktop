@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-14 02:26+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-12-20 11:23-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -16,30 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 21.12.3\n"
-
-#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:10
-#, kde-format
-msgid "How many months keep the activity history"
-msgstr "Quantos meses manter o histórico de atividades"
-
-#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:17
-#, kde-format
-msgid "Which data to keep in activity history"
-msgstr "Quais dados serão mantidos no histórico de atividades"
-
-#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:21
-#, kde-format
-msgid "List of Applications whose activity history to save"
-msgstr "Lista dos aplicativos cujo histórico de atividade salvar"
-
-#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
-#: kactivitymanagerd_plugins_settings.kcfg:24
-#, kde-format
-msgid "List of Applications whose activity history not to save"
-msgstr "Lista dos aplicativos cujo histórico de atividade não salvar"
 
 #: kcm_recentFiles.cpp:64
 #, kde-format
@@ -81,51 +57,39 @@ msgctxt "for in 'keep history for 5 months'"
 msgid "For "
 msgstr "por "
 
-#. i18n: ectx: property (text), widget (KMessageWidget, messageWidget)
-#: ui/RecentFiles.ui:17
-#, kde-format
-msgid "Cleared the activity history."
-msgstr "Limpeza do histórico de atividades concluída."
+#~ msgid "How many months keep the activity history"
+#~ msgstr "Quantos meses manter o histórico de atividades"
 
-#. i18n: ectx: property (text), widget (QLabel, labelKeepHistory)
-#: ui/RecentFiles.ui:36
-#, kde-format
-msgid "Keep history:"
-msgstr "Manter histórico:"
+#~ msgid "Which data to keep in activity history"
+#~ msgstr "Quais dados serão mantidos no histórico de atividades"
 
-#. i18n: ectx: property (text), widget (QPushButton, buttonClearRecentHistory)
-#: ui/RecentFiles.ui:48
-#, kde-format
-msgid "Clear History"
-msgstr "Limpar histórico"
+#~ msgid "List of Applications whose activity history to save"
+#~ msgstr "Lista dos aplicativos cujo histórico de atividade salvar"
 
-#. i18n: ectx: property (text), widget (QRadioButton, radioRememberAllApplications)
-#: ui/RecentFiles.ui:70
-#, kde-format
-msgid "For a&ll applications"
-msgstr "Para todos os ap&licativos"
+#~ msgid "List of Applications whose activity history not to save"
+#~ msgstr "Lista dos aplicativos cujo histórico de atividade não salvar"
 
-#. i18n: ectx: property (text), widget (QRadioButton, radioDontRememberApplications)
-#: ui/RecentFiles.ui:80
-#, kde-format
-msgid "&Do not remember"
-msgstr "&Não lembrar"
+#~ msgid "Cleared the activity history."
+#~ msgstr "Limpeza do histórico de atividades concluída."
 
-#. i18n: ectx: property (text), widget (QRadioButton, radioRememberSpecificApplications)
-#: ui/RecentFiles.ui:87
-#, kde-format
-msgid "O&nly for specific applications:"
-msgstr "Ape&nas para aplicativos específicos:"
+#~ msgid "Keep history:"
+#~ msgstr "Manter histórico:"
 
-#. i18n: ectx: property (text), widget (QLabel, labelRememberDocuments)
-#: ui/RecentFiles.ui:97
-#, kde-format
-msgid "Remember opened documents:"
-msgstr "Lembrar dos documentos abertos:"
+#~ msgid "Clear History"
+#~ msgstr "Limpar histórico"
 
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_blockedByDefault)
-#: ui/RecentFiles.ui:130
-#, kde-format
-msgid "Blacklist applications not on the list"
-msgstr ""
-"Incluir na lista de proibições todos os aplicativos que não estão na lista"
+#~ msgid "For a&ll applications"
+#~ msgstr "Para todos os ap&licativos"
+
+#~ msgid "&Do not remember"
+#~ msgstr "&Não lembrar"
+
+#~ msgid "O&nly for specific applications:"
+#~ msgstr "Ape&nas para aplicativos específicos:"
+
+#~ msgid "Remember opened documents:"
+#~ msgstr "Lembrar dos documentos abertos:"
+
+#~ msgid "Blacklist applications not on the list"
+#~ msgstr ""
+#~ "Incluir na lista de proibições todos os aplicativos que não estão na lista"

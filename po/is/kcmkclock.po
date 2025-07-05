@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-12-10 20:29+0000\n"
 "Last-Translator: gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -33,56 +33,6 @@ msgstr "Richard Allen, Sveinn í Felli,Guðmundur Erlingsson"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ra@ra.is, sv1@fellsnet.is,gudmundure@gmail.com"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: dateandtime.ui:22
-#, kde-format
-msgid "Date and Time"
-msgstr "Dagsetning og tími"
-
-#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
-#: dateandtime.ui:30
-#, kde-format
-msgid "Set date and time &automatically"
-msgstr "Stilla klukku og d&agsetningu sjálfkrafa"
-
-#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
-#: dateandtime.ui:53
-#, kde-format
-msgid "&Time server:"
-msgstr "&Tímaþjónn:"
-
-#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
-#: dateandtime.ui:86
-#, kde-format
-msgid "Here you can change the system date's day of the month, month and year."
-msgstr "Hér getur þú breytt degi, mánuði og ártali í klukku tölvunnar."
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: dateandtime.ui:122
-#, kde-format
-msgid "Time Zone"
-msgstr "Tímabelti"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: dateandtime.ui:128
-#, kde-format
-msgid "To change the local time zone, select your area from the list below."
-msgstr ""
-"Til að breyta tímabeltinu velurðu svæðið sem þú býrð í úr listanum fyrir "
-"neðan."
-
-#. i18n: ectx: property (text), widget (QLabel, m_local)
-#: dateandtime.ui:151
-#, kde-format
-msgid "Current local time zone:"
-msgstr "Núverandi tímabelti:"
-
-#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
-#: dateandtime.ui:161
-#, kde-format
-msgid "Search…"
-msgstr "Leita…"
 
 #: dtime.cpp:61
 #, kde-format
@@ -237,6 +187,33 @@ msgstr "Tókst ekki að stilla núverandi tíma"
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "Tókst ekki að stilla tímabelti"
+
+#~ msgid "Date and Time"
+#~ msgstr "Dagsetning og tími"
+
+#~ msgid "Set date and time &automatically"
+#~ msgstr "Stilla klukku og d&agsetningu sjálfkrafa"
+
+#~ msgid "&Time server:"
+#~ msgstr "&Tímaþjónn:"
+
+#~ msgid ""
+#~ "Here you can change the system date's day of the month, month and year."
+#~ msgstr "Hér getur þú breytt degi, mánuði og ártali í klukku tölvunnar."
+
+#~ msgid "Time Zone"
+#~ msgstr "Tímabelti"
+
+#~ msgid "To change the local time zone, select your area from the list below."
+#~ msgstr ""
+#~ "Til að breyta tímabeltinu velurðu svæðið sem þú býrð í úr listanum fyrir "
+#~ "neðan."
+
+#~ msgid "Current local time zone:"
+#~ msgstr "Núverandi tímabelti:"
+
+#~ msgid "Search…"
+#~ msgstr "Leita…"
 
 #~ msgid "kcmclock"
 #~ msgstr "kcmclock"

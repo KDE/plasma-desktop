@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:45+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-06-08 19:36+0800\n"
 "Last-Translator: Chaoting Liu <brli@chakralinux.org>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -13,38 +13,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 3.0.1\n"
-
-#. i18n: ectx: label, entry (colorScheme), group (General)
-#: landingpage_kdeglobalssettings.kcfg:9
-#, kde-format
-msgid "Color scheme name"
-msgstr "配色名稱"
-
-#. i18n: ectx: label, entry (singleClick), group (KDE)
-#: landingpage_kdeglobalssettings.kcfg:15
-#, kde-format
-msgid "Single click to open files"
-msgstr "單擊開啟檔案"
-
-#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
-#: landingpage_kdeglobalssettings.kcfg:19
-#, kde-format
-msgid "Global Look and Feel package"
-msgstr "全域「外觀與感覺」套件"
-
-#. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
-#. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
-#: landingpage_kdeglobalssettings.kcfg:23
-#: landingpage_kdeglobalssettings.kcfg:27
-#, kde-format
-msgid "Global Look and Feel package, alternate"
-msgstr "全域「外觀與感覺」套件（替代）"
-
-#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
-#: landingpage_kdeglobalssettings.kcfg:31
-#, kde-format
-msgid "Animation speed"
-msgstr "動畫速度"
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -116,6 +84,21 @@ msgstr "更多行為設定…"
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "常用頁面："
+
+#~ msgid "Color scheme name"
+#~ msgstr "配色名稱"
+
+#~ msgid "Single click to open files"
+#~ msgstr "單擊開啟檔案"
+
+#~ msgid "Global Look and Feel package"
+#~ msgstr "全域「外觀與感覺」套件"
+
+#~ msgid "Global Look and Feel package, alternate"
+#~ msgstr "全域「外觀與感覺」套件（替代）"
+
+#~ msgid "Animation speed"
+#~ msgstr "動畫速度"
 
 #~ msgid "Plasma"
 #~ msgstr "Plasma"

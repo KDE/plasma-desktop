@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:45+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-02-20 20:55+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -16,38 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 23.08.5\n"
-
-#. i18n: ectx: label, entry (colorScheme), group (General)
-#: landingpage_kdeglobalssettings.kcfg:9
-#, kde-format
-msgid "Color scheme name"
-msgstr "색 구성표 이름"
-
-#. i18n: ectx: label, entry (singleClick), group (KDE)
-#: landingpage_kdeglobalssettings.kcfg:15
-#, kde-format
-msgid "Single click to open files"
-msgstr "한 번 클릭해서 파일 열기"
-
-#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
-#: landingpage_kdeglobalssettings.kcfg:19
-#, kde-format
-msgid "Global Look and Feel package"
-msgstr "전역 모습과 느낌 패키지"
-
-#. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
-#. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
-#: landingpage_kdeglobalssettings.kcfg:23
-#: landingpage_kdeglobalssettings.kcfg:27
-#, kde-format
-msgid "Global Look and Feel package, alternate"
-msgstr "전역 모습과 느낌 패키지, 대체"
-
-#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
-#: landingpage_kdeglobalssettings.kcfg:31
-#, kde-format
-msgid "Animation speed"
-msgstr "애니메이션 속도"
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -119,6 +87,21 @@ msgstr "더 많은 행동 설정…"
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "자주 사용하는 페이지:"
+
+#~ msgid "Color scheme name"
+#~ msgstr "색 구성표 이름"
+
+#~ msgid "Single click to open files"
+#~ msgstr "한 번 클릭해서 파일 열기"
+
+#~ msgid "Global Look and Feel package"
+#~ msgstr "전역 모습과 느낌 패키지"
+
+#~ msgid "Global Look and Feel package, alternate"
+#~ msgstr "전역 모습과 느낌 패키지, 대체"
+
+#~ msgid "Animation speed"
+#~ msgstr "애니메이션 속도"
 
 #~ msgid "Plasma"
 #~ msgstr "Plasma"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2005-10-09 00:05+0200\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -27,60 +27,6 @@ msgstr "Mashrab Quvatov"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kmashrab@uni-bremen.de"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: dateandtime.ui:22
-#, kde-format
-msgid "Date and Time"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
-#: dateandtime.ui:30
-#, fuzzy, kde-format
-#| msgid "Set date and time &automatically:"
-msgid "Set date and time &automatically"
-msgstr "Sana va vaqtni &avto-oʻrnatish:"
-
-#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
-#: dateandtime.ui:53
-#, kde-format
-msgid "&Time server:"
-msgstr ""
-
-#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
-#: dateandtime.ui:86
-#, kde-format
-msgid "Here you can change the system date's day of the month, month and year."
-msgstr "Bu yerda tizimning sanasini (kun, oy, yil) oʻzgartirishingiz mumkin."
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: dateandtime.ui:122
-#, fuzzy, kde-format
-#| msgid "Timezone Error"
-msgid "Time Zone"
-msgstr "Vaqt zona xatosi"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: dateandtime.ui:128
-#, fuzzy, kde-format
-#| msgid "To change the timezone, select your area from the list below"
-msgid "To change the local time zone, select your area from the list below."
-msgstr ""
-"Vaqt zonasini oʻzgartirish uchun quyidagi roʻyxatdan sizga toʻgʻri "
-"keladiganni tanlang"
-
-#. i18n: ectx: property (text), widget (QLabel, m_local)
-#: dateandtime.ui:151
-#, fuzzy, kde-format
-#| msgid "Current local timezone: %1 (%2)"
-msgid "Current local time zone:"
-msgstr "Joriy vaqt zonasi: %1 (%2)"
-
-#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
-#: dateandtime.ui:161
-#, kde-format
-msgid "Search…"
-msgstr ""
 
 #: dtime.cpp:61
 #, kde-format
@@ -250,6 +196,33 @@ msgstr ""
 #, kde-format
 msgid "Unable to set timezone"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Set date and time &automatically:"
+#~ msgid "Set date and time &automatically"
+#~ msgstr "Sana va vaqtni &avto-oʻrnatish:"
+
+#~ msgid ""
+#~ "Here you can change the system date's day of the month, month and year."
+#~ msgstr ""
+#~ "Bu yerda tizimning sanasini (kun, oy, yil) oʻzgartirishingiz mumkin."
+
+#, fuzzy
+#~| msgid "Timezone Error"
+#~ msgid "Time Zone"
+#~ msgstr "Vaqt zona xatosi"
+
+#, fuzzy
+#~| msgid "To change the timezone, select your area from the list below"
+#~ msgid "To change the local time zone, select your area from the list below."
+#~ msgstr ""
+#~ "Vaqt zonasini oʻzgartirish uchun quyidagi roʻyxatdan sizga toʻgʻri "
+#~ "keladiganni tanlang"
+
+#, fuzzy
+#~| msgid "Current local timezone: %1 (%2)"
+#~ msgid "Current local time zone:"
+#~ msgstr "Joriy vaqt zonasi: %1 (%2)"
 
 #~ msgid "kcmclock"
 #~ msgstr "kcmclock"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-16 02:45+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2024-03-21 09:47+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -84,210 +84,6 @@ msgstr "Ne eblis agordi g-agordojn por Orca: \"%1\" malsukcesis"
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Eraro: Ne eblis lanĉi \"orca --setup\""
-
-#. i18n: ectx: label, entry (SystemBell), group (Bell)
-#: kcmaccessibilitybell.kcfg:9
-#, kde-format
-msgid "Use System Bell"
-msgstr "Uzi Sistempepon"
-
-#. i18n: ectx: label, entry (CustomBell), group (Bell)
-#: kcmaccessibilitybell.kcfg:13
-#, kde-format
-msgid "Customize system bell"
-msgstr "Adapti sistempepon"
-
-#. i18n: ectx: label, entry (CustomBellFile), group (Bell)
-#: kcmaccessibilitybell.kcfg:17
-#, kde-format
-msgid "Sound file for the Bell"
-msgstr "Sondosiero por la Sonorilo"
-
-#. i18n: ectx: label, entry (VisibleBell), group (Bell)
-#: kcmaccessibilitybell.kcfg:20
-#, kde-format
-msgid "Use a visual bell instead of a sound"
-msgstr "Uzi vidan sonorilon anstataŭ sono"
-
-#. i18n: ectx: label, entry (InvertScreen), group (Bell)
-#: kcmaccessibilitybell.kcfg:24
-#, kde-format
-msgid "Invert the system colors on the bell"
-msgstr "Inversigi la sistemajn kolorojn sur la sonorilo"
-
-#. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
-#: kcmaccessibilitybell.kcfg:28
-#, kde-format
-msgid "Color of the Visible Bell"
-msgstr "Koloro de la Videbla Pepo"
-
-#. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
-#: kcmaccessibilitybell.kcfg:32
-#, kde-format
-msgid "Duration of the Visible Bell"
-msgstr "Daŭro de la Videbla Sonorilo"
-
-#. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:9
-#, kde-format
-msgid "Use sticky Keys"
-msgstr "Uzi fiksajn klavojn"
-
-#. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:13
-#, kde-format
-msgid "Lock the sticky keys"
-msgstr "Ŝlosi la fiksajn klavojn"
-
-#. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:17
-#, kde-format
-msgid "Turn sticky keys off when two keys are pressed simultaneously"
-msgstr "Malaktivigi la fiksajn klavojn kiam du klavoj estas samtempe premitaj"
-
-#. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:21
-#, kde-format
-msgid "Beep on a sticky key press"
-msgstr "Pepi je premo de fiksa klavo"
-
-#. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:25
-#, kde-format
-msgid "Toggle keys beep"
-msgstr "Ŝaltilo klavoj pepas"
-
-#. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:29
-#, kde-format
-msgid "Notify when a keyboard modifier is pressed"
-msgstr "Sciigi kiam klavarmodifilo estas premata"
-
-#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:33
-#, kde-format
-msgid "Use a timeout delay"
-msgstr "Uzi tempoprokraston"
-
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:37
-#, kde-format
-msgid "Delay for timeout"
-msgstr "Prokrasto por eltempiĝo"
-
-#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:41
-#, kde-format
-msgid "Use a beep for access"
-msgstr "Uzi pepon por aliro"
-
-#. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:9
-#, kde-format
-msgid "Use slow keypresses"
-msgstr "Uzi malrapidajn klavpremojn"
-
-#. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:13
-#, kde-format
-msgid "Delay for the key press"
-msgstr "Prokrasto por la klavopremo"
-
-#. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:17
-#, kde-format
-msgid "Beep on a slow keypress"
-msgstr "Pepi je malrapida klavopremo"
-
-#. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:21
-#, kde-format
-msgid "Beep on an accepted keypress"
-msgstr "Pepi je akceptita klavopremo"
-
-#. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:25
-#, kde-format
-msgid "Beep on a rejected keypress"
-msgstr "Pepi je malakceptita klavopremo"
-
-#. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:29
-#, kde-format
-msgid "Bounce Keys"
-msgstr "Prokrastaj klavoj"
-
-#. i18n: ectx: label, entry (BounceKeysDelay), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:33
-#, kde-format
-msgid "Use a delay for bouncing"
-msgstr "Uzi prokraston por resalti"
-
-#. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:37
-#, kde-format
-msgid "Beep if a bounce key event is rejected"
-msgstr "Pepi se resalto ŝlosila evento estas malakceptita"
-
-#. i18n: ectx: label, entry (MouseKeys), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:9
-#, kde-format
-msgid "Use keys to control the mouse"
-msgstr "Uzi klavojn por gvidi la muson"
-
-#. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:13
-#, kde-format
-msgid "Delay for the mouse movement"
-msgstr "Prokrasto por la musmovo"
-
-#. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:17
-#, kde-format
-msgid "Repetition interval for the mouse movement"
-msgstr "Ripeta intervalo por la musmovo"
-
-#. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:21
-#, kde-format
-msgid "Time to hit maximum velocity"
-msgstr "Tempo por trafi maksimuman rapidecon"
-
-#. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:25
-#, kde-format
-msgid "Maximum Velocity"
-msgstr "Maksimuma Rapideco"
-
-#. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:29
-#, kde-format
-msgid "Mouse Key Curve"
-msgstr "Musklava Kurbo"
-
-#. i18n: ectx: label, entry (Gestures), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:35
-#, kde-format
-msgid "Use Gestures"
-msgstr "Uzi Gestojn"
-
-#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:39
-#, kde-format
-msgid "Ask for Confirmation for a gesture"
-msgstr "Peti Konfirmon por gesto"
-
-#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:43
-#, kde-format
-msgid "Confirm access to the Keyboard"
-msgstr "Konfirmi aliron al la Klavaro"
-
-#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
-#: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
-#, kde-format
-msgid "Enable Screen Reader"
-msgstr "Ebligi Ekranlegilon"
 
 #: package/contents/ui/Bell.qml:20
 #, kde-format
@@ -575,6 +371,11 @@ msgstr "Maksimuma rapido:"
 msgid "Acceleration profile:"
 msgstr "Akceladprofilo:"
 
+#: package/contents/ui/ScreenReader.qml:17
+#, kde-format
+msgid "Enable Screen Reader"
+msgstr "Ebligi Ekranlegilon"
+
 #: package/contents/ui/ScreenReader.qml:28
 #, kde-format
 msgid "Launch Orca Screen Reader Configuration…"
@@ -597,3 +398,103 @@ msgid ""
 msgstr ""
 "Ŝajnas, ke la Orca Ekranlegilo ne estas instalita. Bonvolu instali ĝin antaŭ "
 "ol provi uzi ĉi tiun funkcion, kaj poste elsaluti aŭ rekomenci"
+
+#~ msgid "Use System Bell"
+#~ msgstr "Uzi Sistempepon"
+
+#~ msgid "Customize system bell"
+#~ msgstr "Adapti sistempepon"
+
+#~ msgid "Sound file for the Bell"
+#~ msgstr "Sondosiero por la Sonorilo"
+
+#~ msgid "Use a visual bell instead of a sound"
+#~ msgstr "Uzi vidan sonorilon anstataŭ sono"
+
+#~ msgid "Invert the system colors on the bell"
+#~ msgstr "Inversigi la sistemajn kolorojn sur la sonorilo"
+
+#~ msgid "Color of the Visible Bell"
+#~ msgstr "Koloro de la Videbla Pepo"
+
+#~ msgid "Duration of the Visible Bell"
+#~ msgstr "Daŭro de la Videbla Sonorilo"
+
+#~ msgid "Use sticky Keys"
+#~ msgstr "Uzi fiksajn klavojn"
+
+#~ msgid "Lock the sticky keys"
+#~ msgstr "Ŝlosi la fiksajn klavojn"
+
+#~ msgid "Turn sticky keys off when two keys are pressed simultaneously"
+#~ msgstr ""
+#~ "Malaktivigi la fiksajn klavojn kiam du klavoj estas samtempe premitaj"
+
+#~ msgid "Beep on a sticky key press"
+#~ msgstr "Pepi je premo de fiksa klavo"
+
+#~ msgid "Toggle keys beep"
+#~ msgstr "Ŝaltilo klavoj pepas"
+
+#~ msgid "Notify when a keyboard modifier is pressed"
+#~ msgstr "Sciigi kiam klavarmodifilo estas premata"
+
+#~ msgid "Use a timeout delay"
+#~ msgstr "Uzi tempoprokraston"
+
+#~ msgid "Delay for timeout"
+#~ msgstr "Prokrasto por eltempiĝo"
+
+#~ msgid "Use a beep for access"
+#~ msgstr "Uzi pepon por aliro"
+
+#~ msgid "Use slow keypresses"
+#~ msgstr "Uzi malrapidajn klavpremojn"
+
+#~ msgid "Delay for the key press"
+#~ msgstr "Prokrasto por la klavopremo"
+
+#~ msgid "Beep on a slow keypress"
+#~ msgstr "Pepi je malrapida klavopremo"
+
+#~ msgid "Beep on an accepted keypress"
+#~ msgstr "Pepi je akceptita klavopremo"
+
+#~ msgid "Beep on a rejected keypress"
+#~ msgstr "Pepi je malakceptita klavopremo"
+
+#~ msgid "Bounce Keys"
+#~ msgstr "Prokrastaj klavoj"
+
+#~ msgid "Use a delay for bouncing"
+#~ msgstr "Uzi prokraston por resalti"
+
+#~ msgid "Beep if a bounce key event is rejected"
+#~ msgstr "Pepi se resalto ŝlosila evento estas malakceptita"
+
+#~ msgid "Use keys to control the mouse"
+#~ msgstr "Uzi klavojn por gvidi la muson"
+
+#~ msgid "Delay for the mouse movement"
+#~ msgstr "Prokrasto por la musmovo"
+
+#~ msgid "Repetition interval for the mouse movement"
+#~ msgstr "Ripeta intervalo por la musmovo"
+
+#~ msgid "Time to hit maximum velocity"
+#~ msgstr "Tempo por trafi maksimuman rapidecon"
+
+#~ msgid "Maximum Velocity"
+#~ msgstr "Maksimuma Rapideco"
+
+#~ msgid "Mouse Key Curve"
+#~ msgstr "Musklava Kurbo"
+
+#~ msgid "Use Gestures"
+#~ msgstr "Uzi Gestojn"
+
+#~ msgid "Ask for Confirmation for a gesture"
+#~ msgstr "Peti Konfirmon por gesto"
+
+#~ msgid "Confirm access to the Keyboard"
+#~ msgstr "Konfirmi aliron al la Klavaro"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_landingpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 02:45+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2025-01-21 14:48+0100\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -17,38 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.08.0\n"
-
-#. i18n: ectx: label, entry (colorScheme), group (General)
-#: landingpage_kdeglobalssettings.kcfg:9
-#, kde-format
-msgid "Color scheme name"
-msgstr "Name des Farbschemas"
-
-#. i18n: ectx: label, entry (singleClick), group (KDE)
-#: landingpage_kdeglobalssettings.kcfg:15
-#, kde-format
-msgid "Single click to open files"
-msgstr "Einfachklick zum Öffnen von Dateien"
-
-#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
-#: landingpage_kdeglobalssettings.kcfg:19
-#, kde-format
-msgid "Global Look and Feel package"
-msgstr "Paket mit globalem Erscheinungsbild"
-
-#. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
-#. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
-#: landingpage_kdeglobalssettings.kcfg:23
-#: landingpage_kdeglobalssettings.kcfg:27
-#, kde-format
-msgid "Global Look and Feel package, alternate"
-msgstr "Paket mit alternativem globalem Erscheinungsbild"
-
-#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
-#: landingpage_kdeglobalssettings.kcfg:31
-#, kde-format
-msgid "Animation speed"
-msgstr "Animationsgeschwindigkeit"
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -120,6 +88,21 @@ msgstr "Weitere Einstellungen zum Verhalten …"
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "Meistgenutzte Seiten:"
+
+#~ msgid "Color scheme name"
+#~ msgstr "Name des Farbschemas"
+
+#~ msgid "Single click to open files"
+#~ msgstr "Einfachklick zum Öffnen von Dateien"
+
+#~ msgid "Global Look and Feel package"
+#~ msgstr "Paket mit globalem Erscheinungsbild"
+
+#~ msgid "Global Look and Feel package, alternate"
+#~ msgstr "Paket mit alternativem globalem Erscheinungsbild"
+
+#~ msgid "Animation speed"
+#~ msgstr "Animationsgeschwindigkeit"
 
 #~ msgid "Plasma"
 #~ msgstr "Plasma"

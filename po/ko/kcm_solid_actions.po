@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-05-28 02:27+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -45,132 +45,6 @@ msgstr ""
 #, kde-format
 msgid "Invalid action"
 msgstr "잘못된 동작"
-
-#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
-#: ActionEditor.ui:17
-#, kde-format
-msgid "Edit Parameter"
-msgstr "인자 편집하기"
-
-#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
-#: ActionEditor.ui:43
-#, kde-format
-msgid "Parameter type:"
-msgstr "인자 종류:"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:51
-#, kde-format
-msgid "Property Match"
-msgstr "속성 일치"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:56
-#, kde-format
-msgid "Content Conjunction"
-msgstr "내용 연결"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:61
-#, kde-format
-msgid "Content Disjunction"
-msgstr "내용 연결 끊기"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:66
-#, kde-format
-msgid "Device Interface Match"
-msgstr "장치 인터페이스 일치"
-
-#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
-#: ActionEditor.ui:96
-#, kde-format
-msgid "Device type:"
-msgstr "장치 종류:"
-
-#. i18n: ectx: property (text), widget (QLabel, LblValueName)
-#: ActionEditor.ui:135
-#, kde-format
-msgid "Value name:"
-msgstr "값 이름:"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
-#: ActionEditor.ui:175
-#, kde-format
-msgid "Equals"
-msgstr "같음"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
-#: ActionEditor.ui:180
-#, kde-format
-msgid "Contains"
-msgstr "포함함"
-
-#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
-#: ActionEditor.ui:208
-#, kde-format
-msgid "Reset Parameter"
-msgstr "인자 초기화"
-
-#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
-#: ActionEditor.ui:215
-#, kde-format
-msgid "Save Parameter Changes"
-msgstr "인자 변경 사항 저장"
-
-#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
-#: ActionEditor.ui:247
-#, kde-format
-msgid "Action icon, click to change it"
-msgstr "동작 아이콘, 클릭하면 바꿀 수 있습니다"
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
-#: ActionEditor.ui:254
-#, kde-format
-msgid "Action name"
-msgstr "동작 이름"
-
-#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
-#: ActionEditor.ui:271
-#, kde-format
-msgid "Command: "
-msgstr "명령:"
-
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
-#: ActionEditor.ui:283
-#, no-c-format, kde-format
-msgid ""
-"Command that will trigger the action\n"
-"This can include any or all of the following case insensitive expands:\n"
-"\n"
-"%f: The mountpoint for the device - Storage Access devices only\n"
-"%d: Path to the device node - Block devices only\n"
-"%i: The identifier of the device"
-msgstr ""
-"동작을 실행할 명령입니다.\n"
-"다음 문자열은 자동으로 확장되며, 대소문자를 구분하지 않습니다.\n"
-"\n"
-"%f: 장치 마운트 지점, 저장소 장치만 해당\n"
-"%d: 장치 노드, 블록 장치만 해당\n"
-"%i: 장치 식별자"
-
-#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
-#: ActionEditor.ui:300
-#, kde-format
-msgid "Devices must match the following parameters for this action:"
-msgstr "이 동작을 실행하려면 장치가 다음 조건과 일치해야 합니다:"
-
-#. i18n: ectx: property (text), widget (QLabel, LblActionName)
-#: AddAction.ui:19
-#, kde-format
-msgid "Action name:"
-msgstr "동작 이름:"
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
-#: AddAction.ui:26
-#, kde-format
-msgid "Enter the name for your new action"
-msgstr "새 동작의 이름을 입력하십시오"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -266,23 +140,83 @@ msgstr "동작이 선택되지 않음"
 msgid "Cannot be deleted"
 msgstr "삭제할 수 없음"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
-#: SolidActions.ui:22
-#, kde-format
-msgid "Remove"
-msgstr "삭제"
+#~ msgid "Edit Parameter"
+#~ msgstr "인자 편집하기"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
-#: SolidActions.ui:29
-#, kde-format
-msgid "Edit…"
-msgstr "편집…"
+#~ msgid "Parameter type:"
+#~ msgstr "인자 종류:"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
-#: SolidActions.ui:36
-#, kde-format
-msgid "Add…"
-msgstr "추가…"
+#~ msgid "Property Match"
+#~ msgstr "속성 일치"
+
+#~ msgid "Content Conjunction"
+#~ msgstr "내용 연결"
+
+#~ msgid "Content Disjunction"
+#~ msgstr "내용 연결 끊기"
+
+#~ msgid "Device Interface Match"
+#~ msgstr "장치 인터페이스 일치"
+
+#~ msgid "Device type:"
+#~ msgstr "장치 종류:"
+
+#~ msgid "Value name:"
+#~ msgstr "값 이름:"
+
+#~ msgid "Equals"
+#~ msgstr "같음"
+
+#~ msgid "Contains"
+#~ msgstr "포함함"
+
+#~ msgid "Reset Parameter"
+#~ msgstr "인자 초기화"
+
+#~ msgid "Save Parameter Changes"
+#~ msgstr "인자 변경 사항 저장"
+
+#~ msgid "Action icon, click to change it"
+#~ msgstr "동작 아이콘, 클릭하면 바꿀 수 있습니다"
+
+#~ msgid "Action name"
+#~ msgstr "동작 이름"
+
+#~ msgid "Command: "
+#~ msgstr "명령:"
+
+#~ msgid ""
+#~ "Command that will trigger the action\n"
+#~ "This can include any or all of the following case insensitive expands:\n"
+#~ "\n"
+#~ "%f: The mountpoint for the device - Storage Access devices only\n"
+#~ "%d: Path to the device node - Block devices only\n"
+#~ "%i: The identifier of the device"
+#~ msgstr ""
+#~ "동작을 실행할 명령입니다.\n"
+#~ "다음 문자열은 자동으로 확장되며, 대소문자를 구분하지 않습니다.\n"
+#~ "\n"
+#~ "%f: 장치 마운트 지점, 저장소 장치만 해당\n"
+#~ "%d: 장치 노드, 블록 장치만 해당\n"
+#~ "%i: 장치 식별자"
+
+#~ msgid "Devices must match the following parameters for this action:"
+#~ msgstr "이 동작을 실행하려면 장치가 다음 조건과 일치해야 합니다:"
+
+#~ msgid "Action name:"
+#~ msgstr "동작 이름:"
+
+#~ msgid "Enter the name for your new action"
+#~ msgstr "새 동작의 이름을 입력하십시오"
+
+#~ msgid "Remove"
+#~ msgstr "삭제"
+
+#~ msgid "Edit…"
+#~ msgstr "편집…"
+
+#~ msgid "Add…"
+#~ msgstr "추가…"
 
 #~ msgid "Edit..."
 #~ msgstr "편집..."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-17 00:51+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2024-05-09 16:47+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -38,14 +38,12 @@ msgstr "Riavvia"
 msgid "Visual behavior:"
 msgstr "Comportamento visivo:"
 
-#. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
-#: package/contents/ui/main.qml:51 workspaceoptions_plasmasettings.kcfg:9
+#: package/contents/ui/main.qml:51
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "Visualizza i suggerimenti informativi al passaggio del mouse"
 
-#. i18n: ectx: label, entry (osdEnabled), group (OSD)
-#: package/contents/ui/main.qml:62 workspaceoptions_plasmasettings.kcfg:15
+#: package/contents/ui/main.qml:62
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "Visualizza un riscontro visivo per i cambiamenti di stato"
@@ -175,59 +173,35 @@ msgstr ""
 "Per adattarsi più facilmente all'interazione al tocco, nella modalità "
 "tattile molti elementi dell'interfaccia utente diventeranno più grandi."
 
-#. i18n: ectx: label, entry (singleClick), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:9
-#, kde-format
-msgid "Single click to open files"
-msgstr "Clic singolo per aprire i file"
+#~ msgid "Single click to open files"
+#~ msgstr "Clic singolo per aprire i file"
 
-#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:13
-#, kde-format
-msgid "Animation speed"
-msgstr "Velocità di animazione"
+#~ msgid "Animation speed"
+#~ msgstr "Velocità di animazione"
 
-#. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
-#: workspaceoptions_kdeglobalssettings.kcfg:17
-#, kde-format
-msgid "Left-click in scrollbar track moves scrollbar by one page"
-msgstr ""
-"Un clic sinistro sulla traccia della barra di scorrimento sposta la barra di "
-"scorrimento di una pagina"
+#~ msgid "Left-click in scrollbar track moves scrollbar by one page"
+#~ msgstr ""
+#~ "Un clic sinistro sulla traccia della barra di scorrimento sposta la barra "
+#~ "di scorrimento di una pagina"
 
-#. i18n: ectx: label, entry (tabletMode), group (Input)
-#: workspaceoptions_kwinsettings.kcfg:9
-#, kde-format
-msgid "Automatically switch to touch-optimized mode"
-msgstr "Passa automaticamente nella modalità ottimizzata per il tocco"
+#~ msgid "Automatically switch to touch-optimized mode"
+#~ msgstr "Passa automaticamente nella modalità ottimizzata per il tocco"
 
-#. i18n: ectx: label, entry (primarySelection), group (Wayland)
-#: workspaceoptions_kwinsettings.kcfg:15
-#, kde-format
-msgid "Enable middle click selection pasting"
-msgstr "Abilita l'incollaggio della selezione col tasto centrale"
+#~ msgid "Enable middle click selection pasting"
+#~ msgstr "Abilita l'incollaggio della selezione col tasto centrale"
 
-#. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
-#: workspaceoptions_plasmasettings.kcfg:16
-#, kde-format
-msgid ""
-"Show an on-screen display to indicate status changes such as brightness or "
-"volume"
-msgstr ""
-"Mostra una visualizzazione a schermo per indicare i cambiamenti di stato, "
-"come la luminosità o il volume."
+#~ msgid ""
+#~ "Show an on-screen display to indicate status changes such as brightness "
+#~ "or volume"
+#~ msgstr ""
+#~ "Mostra una visualizzazione a schermo per indicare i cambiamenti di stato, "
+#~ "come la luminosità o il volume."
 
-#. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
-#: workspaceoptions_plasmasettings.kcfg:20
-#, kde-format
-msgid "OSD on layout change"
-msgstr "OSD alla modifica della mappatura"
+#~ msgid "OSD on layout change"
+#~ msgstr "OSD alla modifica della mappatura"
 
-#. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
-#: workspaceoptions_plasmasettings.kcfg:21
-#, kde-format
-msgid "Show a popup on layout changes"
-msgstr "Mostra una finestra a comparsa alla modifica della mappatura"
+#~ msgid "Show a popup on layout changes"
+#~ msgstr "Mostra una finestra a comparsa alla modifica della mappatura"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

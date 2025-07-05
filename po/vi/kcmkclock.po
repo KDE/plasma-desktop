@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-05-26 21:17+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -28,56 +28,6 @@ msgstr "Nguyễn Hùng Phú,Phan Vĩnh Thịnh"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "phu.nguyen@kdemail.net,teppi82@gmail.com"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: dateandtime.ui:22
-#, kde-format
-msgid "Date and Time"
-msgstr "Ngày giờ"
-
-#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
-#: dateandtime.ui:30
-#, kde-format
-msgid "Set date and time &automatically"
-msgstr "Tự động đặt ngày &giờ"
-
-#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
-#: dateandtime.ui:53
-#, kde-format
-msgid "&Time server:"
-msgstr "Máy chủ &thời gian:"
-
-#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
-#: dateandtime.ui:86
-#, kde-format
-msgid "Here you can change the system date's day of the month, month and year."
-msgstr "Tại đây bạn có thể thay đổi ngày tháng năm của hệ thống."
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: dateandtime.ui:122
-#, kde-format
-msgid "Time Zone"
-msgstr "Múi giờ"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: dateandtime.ui:128
-#, kde-format
-msgid "To change the local time zone, select your area from the list below."
-msgstr ""
-"Để thay đổi múi giờ địa phương, hãy chọn vùng của bạn trong danh sách bên "
-"dưới."
-
-#. i18n: ectx: property (text), widget (QLabel, m_local)
-#: dateandtime.ui:151
-#, kde-format
-msgid "Current local time zone:"
-msgstr "Múi giờ địa phương hiện tại:"
-
-#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
-#: dateandtime.ui:161
-#, kde-format
-msgid "Search…"
-msgstr "Tìm kiếm…"
 
 #: dtime.cpp:61
 #, kde-format
@@ -233,3 +183,30 @@ msgstr "Không thể đặt giờ hiện tại"
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "Không thể đặt múi giờ"
+
+#~ msgid "Date and Time"
+#~ msgstr "Ngày giờ"
+
+#~ msgid "Set date and time &automatically"
+#~ msgstr "Tự động đặt ngày &giờ"
+
+#~ msgid "&Time server:"
+#~ msgstr "Máy chủ &thời gian:"
+
+#~ msgid ""
+#~ "Here you can change the system date's day of the month, month and year."
+#~ msgstr "Tại đây bạn có thể thay đổi ngày tháng năm của hệ thống."
+
+#~ msgid "Time Zone"
+#~ msgstr "Múi giờ"
+
+#~ msgid "To change the local time zone, select your area from the list below."
+#~ msgstr ""
+#~ "Để thay đổi múi giờ địa phương, hãy chọn vùng của bạn trong danh sách bên "
+#~ "dưới."
+
+#~ msgid "Current local time zone:"
+#~ msgstr "Múi giờ địa phương hiện tại:"
+
+#~ msgid "Search…"
+#~ msgstr "Tìm kiếm…"

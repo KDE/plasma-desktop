@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-10-09 09:13-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -49,37 +49,6 @@ msgctxt "layout - variant"
 msgid "%1 - %2"
 msgstr "%1 - %2"
 
-#. i18n: ectx: property (windowTitle), widget (QDialog, AddLayoutDialog)
-#: kcm_add_layout_dialog.ui:14
-#, kde-format
-msgid "Add Layout"
-msgstr "ਲੇਆਉਟ ਨੂੰ ਜੋੜੋ"
-
-#. i18n: ectx: property (placeholderText), widget (QLineEdit, layoutSearchField)
-#: kcm_add_layout_dialog.ui:20
-#, kde-format
-msgid "Search…"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, shortcutLabel)
-#: kcm_add_layout_dialog.ui:45
-#, kde-format
-msgid "Shortcut:"
-msgstr "ਸ਼ਾਰਟਕੱਟ:"
-
-#. i18n: ectx: property (text), widget (QLabel, labelLabel)
-#: kcm_add_layout_dialog.ui:55
-#, kde-format
-msgid "Label:"
-msgstr "ਲੇਬਲ:"
-
-#. i18n: ectx: property (text), widget (QPushButton, prevbutton)
-#. i18n: ectx: property (text), widget (QPushButton, previewButton)
-#: kcm_add_layout_dialog.ui:76 kcm_keyboard.ui:315
-#, kde-format
-msgid "Preview"
-msgstr "ਝਲਕ"
-
 #: kcm_keyboard.cpp:32
 #, kde-format
 msgid "KDE Keyboard Control Module"
@@ -97,208 +66,6 @@ msgid ""
 "parameters and layouts."
 msgstr ""
 "<h1>ਕੀਬੋਰਡ</h1> ਇਹ ਕੰਟਰੋਲ ਮੋਡੀਊਲ ਕੀਬੋਰਡ ਪੈਰਾਮੀਟਰ ਤੇ ਲੇਆਉਟ ਸੰਰਚਨਾ ਕਰਨ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabHardware)
-#: kcm_keyboard.ui:18
-#, kde-format
-msgid "Hardware"
-msgstr "ਹਾਰਡਵੇਅਰ"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: kcm_keyboard.ui:33
-#, kde-format
-msgid "Keyboard &model:"
-msgstr "ਕੀਬੋਰਡ ਮਾਡਲ(&m):"
-
-#. i18n: ectx: property (whatsThis), widget (QComboBox, keyboardModelComboBox)
-#: kcm_keyboard.ui:53
-#, kde-format
-msgid ""
-"Here you can choose a keyboard model. This setting is independent of your "
-"keyboard layout and refers to the \"hardware\" model, i.e. the way your "
-"keyboard is manufactured. Modern keyboards that come with your computer "
-"usually have two extra keys and are referred to as \"104-key\" models, which "
-"is probably what you want if you do not know what kind of keyboard you "
-"have.\n"
-msgstr ""
-"ਏਥੇ ਤੁਸੀਂ ਇੱਕ ਕੀ-ਬੋਰਡ ਮਾਡਲ ਦੀ ਚੋਣ ਕਰ ਸਕਦੇ ਹੋ। ਇਹ ਸੈਟਿੰਗ ਤੁਹਾਡੇ ਕੀ-ਬੋਰਡ ਉੱਤੇ ਨਿਰਭਰ ਨਹੀਂ ਕਰਦੀ "
-"ਹੈ ਅਤੇ \"ਡਿਵਾਈਸ\" ਮਾਡਲ ਨਾਲ ਸਬੰਧਤ ਹੈ, ਕਿ ਕਿਵੇਂ ਤੁਹਾਡਾ ਕੀ-ਬੋਰਡ ਬਣਾਇਆ ਗਿਆ ਹੈ। ਨਵੇਂ ਕੀ-ਬੋਰਡ, "
-"ਜੋ ਕਿ ਤੁਹਾਡੇ ਕੰਪਿਊਟਰਾਂ ਨਾਲ ਆਉਦੇ ਹਨ, ਉਹਨਾਂ ਵਿੱਚ ਦੋ ਵੱਧ ਸਵਿੱਚਾਂ ਹੁੰਦੀਆਂ ਹਨ ਅਤੇ ਉਹਨਾਂ ਨੂੰ \"104-"
-"ਸਵਿੱਚ\" ਮਾਡਲ ਕਿਹਾ ਜਾਂਦਾ ਹੈ, ਜੋ ਕਿ ਤੁਸੀਂ ਚਾਹੋਗੇ, ਜਦੋਂ ਕਿ ਤੁਸੀਂ ਇਹ ਨਹੀਂ ਜਾਣਦੇ ਹੋ ਕਿ ਤੁਹਾਡੇ ਕੋਲ "
-"ਕਿਹੜਾ ਕੀ-ਬੋਰਡ ਹੈ।\n"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabLayouts)
-#: kcm_keyboard.ui:94
-#, kde-format
-msgid "Layouts"
-msgstr "ਲੇਆਉਟ"
-
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, switchingPolicyGroupBox)
-#: kcm_keyboard.ui:102
-#, kde-format
-msgid ""
-"If you select \"Application\" or \"Window\" switching policy, changing the "
-"keyboard layout will only affect the current application or window."
-msgstr ""
-"ਜੇਕਰ ਤੁਸੀਂ \"ਐਪਲੀਕੇਸ਼ਨ\" ਜਾਂ \"ਵਿੰਡੋ\" ਬਦਲਣ ਪਾਲਸੀ ਦੀ ਚੋਣ ਕੀਤੀ ਤਾਂ ਕੀ-ਬੋਰਡ ਬਦਲਣ ਨਾਲ ਸਿਰਫ਼ "
-"ਮੌਜੂਦਾ ਐਪਲੀਕੇਸ਼ਨ ਜਾਂ ਵਿੰਡੋ ਹੀ ਪਰਭਾਵਿਤ ਹੋਵੇਗੀ।"
-
-#. i18n: ectx: property (title), widget (QGroupBox, switchingPolicyGroupBox)
-#: kcm_keyboard.ui:105
-#, kde-format
-msgid "Switching Policy"
-msgstr "ਬਦਲਣ ਦੀ ਪਾਲਸੀ"
-
-#. i18n: ectx: property (text), widget (QRadioButton, switchByGlobalRadioBtn)
-#: kcm_keyboard.ui:111
-#, kde-format
-msgid "&Global"
-msgstr "ਗਲੋਬਲ(&G)"
-
-#. i18n: ectx: property (text), widget (QRadioButton, switchByDesktopRadioBtn)
-#: kcm_keyboard.ui:124
-#, kde-format
-msgid "&Desktop"
-msgstr "ਡੈਸਕਟਾਪ(&D)"
-
-#. i18n: ectx: property (text), widget (QRadioButton, switchByApplicationRadioBtn)
-#: kcm_keyboard.ui:134
-#, kde-format
-msgid "&Application"
-msgstr "ਐਪਲੀਕੇਸ਼ਨ(&A)"
-
-#. i18n: ectx: property (text), widget (QRadioButton, switchByWindowRadioBtn)
-#: kcm_keyboard.ui:144
-#, kde-format
-msgid "&Window"
-msgstr "ਵਿੰਡੋ(&W)"
-
-#. i18n: ectx: property (title), widget (QGroupBox, shortcutsGroupBox)
-#: kcm_keyboard.ui:157
-#, kde-format
-msgid "Shortcuts for Switching Layout"
-msgstr "ਲੇਆਉਟ ਬਦਲਣ ਲਈ ਸ਼ਾਰਟਕੱਟ"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcm_keyboard.ui:163
-#, kde-format
-msgid "Main shortcuts:"
-msgstr "ਮੁੱਖ ਸ਼ਾਰਟਕੱਟ:"
-
-#. i18n: ectx: property (whatsThis), widget (QPushButton, xkbGrpShortcutBtn)
-#: kcm_keyboard.ui:176
-#, kde-format
-msgid ""
-"This is a shortcut for switching layouts which is handled by X.org. It "
-"allows modifier-only shortcuts."
-msgstr ""
-"ਇਹ ਸ਼ਾਰਟਕੱਟ ਲੇਆਉਟ ਬਦਲਣ ਲਈ ਹੈ, ਜੋ ਕਿ X.org ਰਾਹੀਂ ਹੈਂਡਲ ਕੀਤਾ ਜਾਂਦਾ ਹੈ। ਇਹ ਕੇਵਲ ਮੋਡੀਫਾਇਰ "
-"ਸ਼ਾਰਟਕੱਟ ਲਈ ਹੀ ਹੈ।"
-
-#. i18n: ectx: property (text), widget (QPushButton, xkbGrpShortcutBtn)
-#. i18n: ectx: property (text), widget (QPushButton, xkb3rdLevelShortcutBtn)
-#: kcm_keyboard.ui:179 kcm_keyboard.ui:209
-#, kde-format
-msgctxt "no shortcut defined"
-msgid "None"
-msgstr "ਕੋਈ ਨਹੀਂ"
-
-#. i18n: ectx: property (text), widget (QToolButton, xkbGrpClearBtn)
-#. i18n: ectx: property (text), widget (QToolButton, xkb3rdLevelClearBtn)
-#: kcm_keyboard.ui:186 kcm_keyboard.ui:216
-#, kde-format
-msgid "…"
-msgstr "…"
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: kcm_keyboard.ui:193
-#, kde-format
-msgid "3rd level shortcuts:"
-msgstr "3ਜੇ ਪੱਧਰ ਦੇ ਸ਼ਾਰਟਕੱਟ:"
-
-#. i18n: ectx: property (whatsThis), widget (QPushButton, xkb3rdLevelShortcutBtn)
-#: kcm_keyboard.ui:206
-#, kde-format
-msgid ""
-"This is a shortcut for switching to a third level of the active layout (if "
-"it has one) which is handled by X.org. It allows modifier-only shortcuts."
-msgstr ""
-"ਇਹ ਸ਼ਾਰਟਕੱਟ ਸਰਗਰਮ ਖਾਕੇ ਲਈ ਤੀਜੇ ਪੱਧਰ ਨੂੰ ਬਦਲਣ ਲਈ ਹੈ (ਜੇ ਹੋਵੇ ਤਾਂ), ਜੋ ਕਿ X.org ਰਾਹੀਂ ਹੈਂਡਲ "
-"ਕੀਤਾ ਜਾਂਦਾ ਹੈ। ਇਹ ਕੇਵਲ ਮੋਡੀਫਾਇਰ ਸ਼ਾਰਟਕੱਟਾਂ ਲਈ ਹੀ ਹੈ।"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcm_keyboard.ui:223
-#, kde-format
-msgid "Alternative shortcut:"
-msgstr "ਬਦਲਵਾਂ ਸ਼ਾਰਟਕੱਟ:"
-
-#. i18n: ectx: property (whatsThis), widget (KKeySequenceWidget, kdeKeySequence)
-#: kcm_keyboard.ui:236
-#, fuzzy, kde-format
-#| msgid ""
-#| "This is a shortcut for switching layouts which is handled by X.org. It "
-#| "allows modifier-only shortcuts."
-msgid ""
-"This is a shortcut for switching layouts. It does not support modifier-only "
-"shortcuts and also may not work in some situations (e.g. if popup is active "
-"or from screensaver)."
-msgstr ""
-"ਇਹ ਸ਼ਾਰਟਕੱਟ ਲੇਆਉਟ ਬਦਲਣ ਲਈ ਹੈ, ਜੋ ਕਿ X.org ਰਾਹੀਂ ਹੈਂਡਲ ਕੀਤਾ ਜਾਂਦਾ ਹੈ। ਇਹ ਕੇਵਲ ਮੋਡੀਫਾਇਰ "
-"ਸ਼ਾਰਟਕੱਟ ਲਈ ਹੀ ਹੈ।"
-
-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
-#: kcm_keyboard.ui:261
-#, kde-format
-msgid "Configure layouts"
-msgstr "ਲੇਆਉਟ ਸੰਰਚਨਾ"
-
-#. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
-#: kcm_keyboard.ui:275
-#, kde-format
-msgid "Add"
-msgstr "ਸ਼ਾਮਲ"
-
-#. i18n: ectx: property (text), widget (QPushButton, removeLayoutBtn)
-#: kcm_keyboard.ui:285
-#, kde-format
-msgid "Remove"
-msgstr "ਹਟਾਓ"
-
-#. i18n: ectx: property (text), widget (QPushButton, moveUpBtn)
-#: kcm_keyboard.ui:295
-#, kde-format
-msgid "Move Up"
-msgstr "ਉੱਤੇ ਭੇਜੋ"
-
-#. i18n: ectx: property (text), widget (QPushButton, moveDownBtn)
-#: kcm_keyboard.ui:305
-#, kde-format
-msgid "Move Down"
-msgstr "ਹੇਠਾਂ ਭੇਜੋ"
-
-#. i18n: ectx: property (text), widget (QCheckBox, layoutLoopingCheckBox)
-#: kcm_keyboard.ui:350
-#, kde-format
-msgid "Spare layouts"
-msgstr "ਵਾਧੂ ਲੇਆਉਟ"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: kcm_keyboard.ui:382
-#, kde-format
-msgid "Main layout count:"
-msgstr "ਮੁੱਖ ਲੇਆਉਟ ਗਿਣਤੀ:"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
-#: kcm_keyboard.ui:412
-#, kde-format
-msgid "Advanced"
-msgstr "ਤਕਨੀਕੀ"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_resetOldXkbOptions)
-#: kcm_keyboard.ui:418
-#, kde-format
-msgid "&Configure keyboard options"
-msgstr "ਕੀਬੋਰਡ ਚੋਣਾਂ ਸੰਰਚਨਾ(&C)"
 
 #: kcm_keyboard_widget.cpp:211
 #, kde-format
@@ -357,120 +124,6 @@ msgctxt "variant"
 msgid "Default"
 msgstr "ਡਿਫਾਲਟ"
 
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#: kcmmiscwidget.ui:31
-#, kde-format
-msgid "When a key is held:"
-msgstr "ਜਦੋਂ ਸਵਿੱਚ ਨੱਪੀ ਹੋਵੇ:"
-
-#. i18n: ectx: property (text), widget (QRadioButton, accentMenuRadioButton)
-#: kcmmiscwidget.ui:38
-#, kde-format
-msgid "&Show accented and similar characters "
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, repeatRadioButton)
-#: kcmmiscwidget.ui:45
-#, kde-format
-msgid "&Repeat the key"
-msgstr "ਸਵਿੱਚ ਨੂੰ ਦੁਹਰਾਓ(&R)"
-
-#. i18n: ectx: property (text), widget (QRadioButton, nothingRadioButton)
-#: kcmmiscwidget.ui:52
-#, kde-format
-msgid "&Do nothing"
-msgstr "ਕੁਝ ਨਾ ਕਰੋ(&D)"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: kcmmiscwidget.ui:66
-#, kde-format
-msgid "Test area:"
-msgstr "ਟੈਸਟ ਖੇਤਰ:"
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, lineEdit)
-#: kcmmiscwidget.ui:73
-#, kde-format
-msgid ""
-"Allows to test keyboard repeat and click volume (just don't forget to apply "
-"the changes)."
-msgstr ""
-
-#. i18n: ectx: property (whatsThis), widget (QGroupBox, numlockGroupBox)
-#: kcmmiscwidget.ui:82
-#, kde-format
-msgid ""
-"If supported, this option allows you to setup the state of NumLock after "
-"Plasma startup.<p>You can configure NumLock to be turned on or off, or "
-"configure Plasma not to set NumLock state."
-msgstr ""
-
-#. i18n: ectx: property (title), widget (QGroupBox, numlockGroupBox)
-#: kcmmiscwidget.ui:85
-#, kde-format
-msgid "NumLock on Plasma Startup"
-msgstr "ਪਲਾਜ਼ਮਾ ਸਟਾਰਟ-ਅੱਪ ਸਮੇਂ NumLock"
-
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton1)
-#: kcmmiscwidget.ui:97
-#, kde-format
-msgid "T&urn on"
-msgstr "ਚਾਲੂ ਕਰੋ(&u)"
-
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton2)
-#: kcmmiscwidget.ui:104
-#, kde-format
-msgid "&Turn off"
-msgstr "ਬੰਦ ਕਰੋ(&T)"
-
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton3)
-#: kcmmiscwidget.ui:111
-#, kde-format
-msgid "Leave unchan&ged"
-msgstr "ਅਣ-ਬਦਲਿਆ ਛੱਡੋ(&g)"
-
-#. i18n: ectx: property (text), widget (QLabel, lblRate)
-#: kcmmiscwidget.ui:148
-#, kde-format
-msgid "&Rate:"
-msgstr "ਰੇਟ(&R):"
-
-#. i18n: ectx: property (whatsThis), widget (QSlider, delaySlider)
-#. i18n: ectx: property (whatsThis), widget (QSpinBox, kcfg_repeatDelay)
-#: kcmmiscwidget.ui:164 kcmmiscwidget.ui:202
-#, kde-format
-msgid ""
-"If supported, this option allows you to set the delay after which a pressed "
-"key will start generating keycodes. The 'Repeat rate' option controls the "
-"frequency of these keycodes."
-msgstr ""
-
-#. i18n: ectx: property (whatsThis), widget (QDoubleSpinBox, kcfg_repeatRate)
-#. i18n: ectx: property (whatsThis), widget (QSlider, rateSlider)
-#: kcmmiscwidget.ui:192 kcmmiscwidget.ui:212
-#, kde-format
-msgid ""
-"If supported, this option allows you to set the rate at which keycodes are "
-"generated while a key is pressed."
-msgstr ""
-
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_repeatRate)
-#: kcmmiscwidget.ui:195
-#, kde-format
-msgid " repeats/s"
-msgstr " ਦੁਹਰਾਉ/s"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_repeatDelay)
-#: kcmmiscwidget.ui:205
-#, kde-format
-msgid " ms"
-msgstr " ms"
-
-#. i18n: ectx: property (text), widget (QLabel, lblDelay)
-#: kcmmiscwidget.ui:246
-#, kde-format
-msgid "&Delay:"
-msgstr "ਦੇਰੀ(&D):"
-
 #: tastenbrett/main.cpp:57
 #, kde-format
 msgctxt "app display name"
@@ -492,6 +145,172 @@ msgid ""
 "will likely also present when you try to use this combination of model, "
 "layout and variant."
 msgstr ""
+
+#~ msgid "Add Layout"
+#~ msgstr "ਲੇਆਉਟ ਨੂੰ ਜੋੜੋ"
+
+#~ msgid "Shortcut:"
+#~ msgstr "ਸ਼ਾਰਟਕੱਟ:"
+
+#~ msgid "Label:"
+#~ msgstr "ਲੇਬਲ:"
+
+#~ msgid "Preview"
+#~ msgstr "ਝਲਕ"
+
+#~ msgid "Hardware"
+#~ msgstr "ਹਾਰਡਵੇਅਰ"
+
+#~ msgid "Keyboard &model:"
+#~ msgstr "ਕੀਬੋਰਡ ਮਾਡਲ(&m):"
+
+#~ msgid ""
+#~ "Here you can choose a keyboard model. This setting is independent of your "
+#~ "keyboard layout and refers to the \"hardware\" model, i.e. the way your "
+#~ "keyboard is manufactured. Modern keyboards that come with your computer "
+#~ "usually have two extra keys and are referred to as \"104-key\" models, "
+#~ "which is probably what you want if you do not know what kind of keyboard "
+#~ "you have.\n"
+#~ msgstr ""
+#~ "ਏਥੇ ਤੁਸੀਂ ਇੱਕ ਕੀ-ਬੋਰਡ ਮਾਡਲ ਦੀ ਚੋਣ ਕਰ ਸਕਦੇ ਹੋ। ਇਹ ਸੈਟਿੰਗ ਤੁਹਾਡੇ ਕੀ-ਬੋਰਡ ਉੱਤੇ ਨਿਰਭਰ ਨਹੀਂ "
+#~ "ਕਰਦੀ ਹੈ ਅਤੇ \"ਡਿਵਾਈਸ\" ਮਾਡਲ ਨਾਲ ਸਬੰਧਤ ਹੈ, ਕਿ ਕਿਵੇਂ ਤੁਹਾਡਾ ਕੀ-ਬੋਰਡ ਬਣਾਇਆ ਗਿਆ ਹੈ। ਨਵੇਂ "
+#~ "ਕੀ-ਬੋਰਡ, ਜੋ ਕਿ ਤੁਹਾਡੇ ਕੰਪਿਊਟਰਾਂ ਨਾਲ ਆਉਦੇ ਹਨ, ਉਹਨਾਂ ਵਿੱਚ ਦੋ ਵੱਧ ਸਵਿੱਚਾਂ ਹੁੰਦੀਆਂ ਹਨ ਅਤੇ ਉਹਨਾਂ "
+#~ "ਨੂੰ \"104-ਸਵਿੱਚ\" ਮਾਡਲ ਕਿਹਾ ਜਾਂਦਾ ਹੈ, ਜੋ ਕਿ ਤੁਸੀਂ ਚਾਹੋਗੇ, ਜਦੋਂ ਕਿ ਤੁਸੀਂ ਇਹ ਨਹੀਂ ਜਾਣਦੇ ਹੋ "
+#~ "ਕਿ ਤੁਹਾਡੇ ਕੋਲ ਕਿਹੜਾ ਕੀ-ਬੋਰਡ ਹੈ।\n"
+
+#~ msgid "Layouts"
+#~ msgstr "ਲੇਆਉਟ"
+
+#~ msgid ""
+#~ "If you select \"Application\" or \"Window\" switching policy, changing "
+#~ "the keyboard layout will only affect the current application or window."
+#~ msgstr ""
+#~ "ਜੇਕਰ ਤੁਸੀਂ \"ਐਪਲੀਕੇਸ਼ਨ\" ਜਾਂ \"ਵਿੰਡੋ\" ਬਦਲਣ ਪਾਲਸੀ ਦੀ ਚੋਣ ਕੀਤੀ ਤਾਂ ਕੀ-ਬੋਰਡ ਬਦਲਣ ਨਾਲ "
+#~ "ਸਿਰਫ਼ ਮੌਜੂਦਾ ਐਪਲੀਕੇਸ਼ਨ ਜਾਂ ਵਿੰਡੋ ਹੀ ਪਰਭਾਵਿਤ ਹੋਵੇਗੀ।"
+
+#~ msgid "Switching Policy"
+#~ msgstr "ਬਦਲਣ ਦੀ ਪਾਲਸੀ"
+
+#~ msgid "&Global"
+#~ msgstr "ਗਲੋਬਲ(&G)"
+
+#~ msgid "&Desktop"
+#~ msgstr "ਡੈਸਕਟਾਪ(&D)"
+
+#~ msgid "&Application"
+#~ msgstr "ਐਪਲੀਕੇਸ਼ਨ(&A)"
+
+#~ msgid "&Window"
+#~ msgstr "ਵਿੰਡੋ(&W)"
+
+#~ msgid "Shortcuts for Switching Layout"
+#~ msgstr "ਲੇਆਉਟ ਬਦਲਣ ਲਈ ਸ਼ਾਰਟਕੱਟ"
+
+#~ msgid "Main shortcuts:"
+#~ msgstr "ਮੁੱਖ ਸ਼ਾਰਟਕੱਟ:"
+
+#~ msgid ""
+#~ "This is a shortcut for switching layouts which is handled by X.org. It "
+#~ "allows modifier-only shortcuts."
+#~ msgstr ""
+#~ "ਇਹ ਸ਼ਾਰਟਕੱਟ ਲੇਆਉਟ ਬਦਲਣ ਲਈ ਹੈ, ਜੋ ਕਿ X.org ਰਾਹੀਂ ਹੈਂਡਲ ਕੀਤਾ ਜਾਂਦਾ ਹੈ। ਇਹ ਕੇਵਲ ਮੋਡੀਫਾਇਰ "
+#~ "ਸ਼ਾਰਟਕੱਟ ਲਈ ਹੀ ਹੈ।"
+
+#~ msgctxt "no shortcut defined"
+#~ msgid "None"
+#~ msgstr "ਕੋਈ ਨਹੀਂ"
+
+#~ msgid "…"
+#~ msgstr "…"
+
+#~ msgid "3rd level shortcuts:"
+#~ msgstr "3ਜੇ ਪੱਧਰ ਦੇ ਸ਼ਾਰਟਕੱਟ:"
+
+#~ msgid ""
+#~ "This is a shortcut for switching to a third level of the active layout "
+#~ "(if it has one) which is handled by X.org. It allows modifier-only "
+#~ "shortcuts."
+#~ msgstr ""
+#~ "ਇਹ ਸ਼ਾਰਟਕੱਟ ਸਰਗਰਮ ਖਾਕੇ ਲਈ ਤੀਜੇ ਪੱਧਰ ਨੂੰ ਬਦਲਣ ਲਈ ਹੈ (ਜੇ ਹੋਵੇ ਤਾਂ), ਜੋ ਕਿ X.org ਰਾਹੀਂ ਹੈਂਡਲ "
+#~ "ਕੀਤਾ ਜਾਂਦਾ ਹੈ। ਇਹ ਕੇਵਲ ਮੋਡੀਫਾਇਰ ਸ਼ਾਰਟਕੱਟਾਂ ਲਈ ਹੀ ਹੈ।"
+
+#~ msgid "Alternative shortcut:"
+#~ msgstr "ਬਦਲਵਾਂ ਸ਼ਾਰਟਕੱਟ:"
+
+#, fuzzy
+#~| msgid ""
+#~| "This is a shortcut for switching layouts which is handled by X.org. It "
+#~| "allows modifier-only shortcuts."
+#~ msgid ""
+#~ "This is a shortcut for switching layouts. It does not support modifier-"
+#~ "only shortcuts and also may not work in some situations (e.g. if popup is "
+#~ "active or from screensaver)."
+#~ msgstr ""
+#~ "ਇਹ ਸ਼ਾਰਟਕੱਟ ਲੇਆਉਟ ਬਦਲਣ ਲਈ ਹੈ, ਜੋ ਕਿ X.org ਰਾਹੀਂ ਹੈਂਡਲ ਕੀਤਾ ਜਾਂਦਾ ਹੈ। ਇਹ ਕੇਵਲ ਮੋਡੀਫਾਇਰ "
+#~ "ਸ਼ਾਰਟਕੱਟ ਲਈ ਹੀ ਹੈ।"
+
+#~ msgid "Configure layouts"
+#~ msgstr "ਲੇਆਉਟ ਸੰਰਚਨਾ"
+
+#~ msgid "Add"
+#~ msgstr "ਸ਼ਾਮਲ"
+
+#~ msgid "Remove"
+#~ msgstr "ਹਟਾਓ"
+
+#~ msgid "Move Up"
+#~ msgstr "ਉੱਤੇ ਭੇਜੋ"
+
+#~ msgid "Move Down"
+#~ msgstr "ਹੇਠਾਂ ਭੇਜੋ"
+
+#~ msgid "Spare layouts"
+#~ msgstr "ਵਾਧੂ ਲੇਆਉਟ"
+
+#~ msgid "Main layout count:"
+#~ msgstr "ਮੁੱਖ ਲੇਆਉਟ ਗਿਣਤੀ:"
+
+#~ msgid "Advanced"
+#~ msgstr "ਤਕਨੀਕੀ"
+
+#~ msgid "&Configure keyboard options"
+#~ msgstr "ਕੀਬੋਰਡ ਚੋਣਾਂ ਸੰਰਚਨਾ(&C)"
+
+#~ msgid "When a key is held:"
+#~ msgstr "ਜਦੋਂ ਸਵਿੱਚ ਨੱਪੀ ਹੋਵੇ:"
+
+#~ msgid "&Repeat the key"
+#~ msgstr "ਸਵਿੱਚ ਨੂੰ ਦੁਹਰਾਓ(&R)"
+
+#~ msgid "&Do nothing"
+#~ msgstr "ਕੁਝ ਨਾ ਕਰੋ(&D)"
+
+#~ msgid "Test area:"
+#~ msgstr "ਟੈਸਟ ਖੇਤਰ:"
+
+#~ msgid "NumLock on Plasma Startup"
+#~ msgstr "ਪਲਾਜ਼ਮਾ ਸਟਾਰਟ-ਅੱਪ ਸਮੇਂ NumLock"
+
+#~ msgid "T&urn on"
+#~ msgstr "ਚਾਲੂ ਕਰੋ(&u)"
+
+#~ msgid "&Turn off"
+#~ msgstr "ਬੰਦ ਕਰੋ(&T)"
+
+#~ msgid "Leave unchan&ged"
+#~ msgstr "ਅਣ-ਬਦਲਿਆ ਛੱਡੋ(&g)"
+
+#~ msgid "&Rate:"
+#~ msgstr "ਰੇਟ(&R):"
+
+#~ msgid " repeats/s"
+#~ msgstr " ਦੁਹਰਾਉ/s"
+
+#~ msgid " ms"
+#~ msgstr " ms"
+
+#~ msgid "&Delay:"
+#~ msgstr "ਦੇਰੀ(&D):"
 
 #~ msgid "KDE Keyboard Layout Switcher"
 #~ msgstr "ਕੇਡੀਈ ਕੀਬੋਰਡ ਲੇਆਉਟ ਸਵਿੱਚਰ"

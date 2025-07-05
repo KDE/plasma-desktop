@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-06-07 16:51+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -40,55 +40,6 @@ msgstr ""
 "teemu.rytilahti@kde-fi.org, eleknader@phnet.fi, ilpo@iki.fi, piippo@cc."
 "helsinki.fi, elias.julkunen@gmail.com, karvonen.jorma@gmail.com, "
 "translator@legisign.org, lasse.liehu@gmail.com, jiri.gronroos+kde@iki.fi"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: dateandtime.ui:22
-#, kde-format
-msgid "Date and Time"
-msgstr "Aika ja päiväys"
-
-#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
-#: dateandtime.ui:30
-#, kde-format
-msgid "Set date and time &automatically"
-msgstr "Aseta kellonaika ja päiväys &automaattisesti"
-
-#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
-#: dateandtime.ui:53
-#, kde-format
-msgid "&Time server:"
-msgstr "A&ikapalvelin:"
-
-#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
-#: dateandtime.ui:86
-#, kde-format
-msgid "Here you can change the system date's day of the month, month and year."
-msgstr "Tässä kohdassa voit vaihtaa järjestelmän päiväystä."
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: dateandtime.ui:122
-#, kde-format
-msgid "Time Zone"
-msgstr "Aikavyöhyke"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: dateandtime.ui:128
-#, kde-format
-msgid "To change the local time zone, select your area from the list below."
-msgstr ""
-"Muuta paikallinen aikavyöhyke valitsemalla alueesi alla olevasta luettelosta."
-
-#. i18n: ectx: property (text), widget (QLabel, m_local)
-#: dateandtime.ui:151
-#, kde-format
-msgid "Current local time zone:"
-msgstr "Nykyinen aikavyöhyke:"
-
-#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
-#: dateandtime.ui:161
-#, kde-format
-msgid "Search…"
-msgstr "Etsi…"
 
 #: dtime.cpp:61
 #, kde-format
@@ -241,6 +192,33 @@ msgstr "Nykyisen ajan asettaminen epäonnistui"
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "Aikavyöhykkeen asettaminen epäonnistui"
+
+#~ msgid "Date and Time"
+#~ msgstr "Aika ja päiväys"
+
+#~ msgid "Set date and time &automatically"
+#~ msgstr "Aseta kellonaika ja päiväys &automaattisesti"
+
+#~ msgid "&Time server:"
+#~ msgstr "A&ikapalvelin:"
+
+#~ msgid ""
+#~ "Here you can change the system date's day of the month, month and year."
+#~ msgstr "Tässä kohdassa voit vaihtaa järjestelmän päiväystä."
+
+#~ msgid "Time Zone"
+#~ msgstr "Aikavyöhyke"
+
+#~ msgid "To change the local time zone, select your area from the list below."
+#~ msgstr ""
+#~ "Muuta paikallinen aikavyöhyke valitsemalla alueesi alla olevasta "
+#~ "luettelosta."
+
+#~ msgid "Current local time zone:"
+#~ msgstr "Nykyinen aikavyöhyke:"
+
+#~ msgid "Search…"
+#~ msgstr "Etsi…"
 
 #~ msgid "kcmclock"
 #~ msgstr "kcmclock"

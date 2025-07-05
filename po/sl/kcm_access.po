@@ -1,7 +1,7 @@
 # translation of kcmaccess.po to Slovenian
 # Translation of kcmaccess.po to Slovenian
 # SLOVENIAN TRANSLATION OF KCMACCESS.
-# $Id: kcm_access.po 1656077 2023-07-18 03:51:18Z scripty $
+# $Id: kcm_access.po 1712705 2025-07-05 03:36:47Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2005, 2006 Free Software Foundation, Inc.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-16 02:45+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-07-16 09:18+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -91,210 +91,6 @@ msgstr "Ni bilo mogoče nastaviti gsettings za Orco: \"%1\" ni uspelo"
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Napaka: ni bilo mogoče zagnati »orca --setup«"
-
-#. i18n: ectx: label, entry (SystemBell), group (Bell)
-#: kcmaccessibilitybell.kcfg:9
-#, kde-format
-msgid "Use System Bell"
-msgstr "Uporabi sistemski zvonec"
-
-#. i18n: ectx: label, entry (CustomBell), group (Bell)
-#: kcmaccessibilitybell.kcfg:13
-#, kde-format
-msgid "Customize system bell"
-msgstr "Prilagodi sistemski zvonec"
-
-#. i18n: ectx: label, entry (CustomBellFile), group (Bell)
-#: kcmaccessibilitybell.kcfg:17
-#, kde-format
-msgid "Sound file for the Bell"
-msgstr "Zvočna datoteka za zvonec"
-
-#. i18n: ectx: label, entry (VisibleBell), group (Bell)
-#: kcmaccessibilitybell.kcfg:20
-#, kde-format
-msgid "Use a visual bell instead of a sound"
-msgstr "Uporabi vizualni zvonec namesto zvoka"
-
-#. i18n: ectx: label, entry (InvertScreen), group (Bell)
-#: kcmaccessibilitybell.kcfg:24
-#, kde-format
-msgid "Invert the system colors on the bell"
-msgstr "Obrnite sistemske barve na zvoncu"
-
-#. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
-#: kcmaccessibilitybell.kcfg:28
-#, kde-format
-msgid "Color of the Visible Bell"
-msgstr "Barva vizualnega zvonca"
-
-#. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
-#: kcmaccessibilitybell.kcfg:32
-#, kde-format
-msgid "Duration of the Visible Bell"
-msgstr "Trajanje vizualnega zvonca"
-
-#. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:9
-#, kde-format
-msgid "Use sticky Keys"
-msgstr "Uporabi lepljive tipke"
-
-#. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:13
-#, kde-format
-msgid "Lock the sticky keys"
-msgstr "Zakleni lepljive tipke"
-
-#. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:17
-#, kde-format
-msgid "Turn sticky keys off when two keys are pressed simultaneously"
-msgstr "Ko sta obenem pritisnjeni dve tipki, izključi lepljive tipke"
-
-#. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:21
-#, kde-format
-msgid "Beep on a sticky key press"
-msgstr "Zapiskaj ob pritisku lepljive tipke"
-
-#. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:25
-#, kde-format
-msgid "Toggle keys beep"
-msgstr "Preklopi piskanje ob tipkanju"
-
-#. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:29
-#, kde-format
-msgid "Notify when a keyboard modifier is pressed"
-msgstr "Obvesti kadar je pritisnjen modifikator tipkovnice"
-
-#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:33
-#, kde-format
-msgid "Use a timeout delay"
-msgstr "Uporabi zakasnitev"
-
-#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:37
-#, kde-format
-msgid "Delay for timeout"
-msgstr "Zakasnitev za časovno omejitev"
-
-#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
-#: kcmaccessibilitykeyboard.kcfg:41
-#, kde-format
-msgid "Use a beep for access"
-msgstr "Uporabi pisk za dostop"
-
-#. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:9
-#, kde-format
-msgid "Use slow keypresses"
-msgstr "Uporabi počasne tipke"
-
-#. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:13
-#, kde-format
-msgid "Delay for the key press"
-msgstr "Zamuda pri pritisku tipke"
-
-#. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:17
-#, kde-format
-msgid "Beep on a slow keypress"
-msgstr "Zapiskaj ob počasnem pritisku tipke"
-
-#. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:21
-#, kde-format
-msgid "Beep on an accepted keypress"
-msgstr "Zapiskaj ob sprejetem pritisku tipke"
-
-#. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:25
-#, kde-format
-msgid "Beep on a rejected keypress"
-msgstr "Zapiskaj ob zavrnjenem pritisku tipke"
-
-#. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:29
-#, kde-format
-msgid "Bounce Keys"
-msgstr "Odbijajoče tipke"
-
-#. i18n: ectx: label, entry (BounceKeysDelay), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:33
-#, kde-format
-msgid "Use a delay for bouncing"
-msgstr "Uporabi zamudo ob odbijanju"
-
-#. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
-#: kcmaccessibilitykeyboardfilters.kcfg:37
-#, kde-format
-msgid "Beep if a bounce key event is rejected"
-msgstr "Zapiskaj, če je zavrnjen dogodek odbijajoče tipke"
-
-#. i18n: ectx: label, entry (MouseKeys), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:9
-#, kde-format
-msgid "Use keys to control the mouse"
-msgstr "Uporabi tipke za kontrolo miške"
-
-#. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:13
-#, kde-format
-msgid "Delay for the mouse movement"
-msgstr "Zamuda za gibanje miške"
-
-#. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:17
-#, kde-format
-msgid "Repetition interval for the mouse movement"
-msgstr "Interval ponavljanja za premikanje miške"
-
-#. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:21
-#, kde-format
-msgid "Time to hit maximum velocity"
-msgstr "Čas da doseže največjo hitrost"
-
-#. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:25
-#, kde-format
-msgid "Maximum Velocity"
-msgstr "Največja hitrost"
-
-#. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
-#: kcmaccessibilitymouse.kcfg:29
-#, kde-format
-msgid "Mouse Key Curve"
-msgstr "Krivulja tipke miške"
-
-#. i18n: ectx: label, entry (Gestures), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:35
-#, kde-format
-msgid "Use Gestures"
-msgstr "Uporabi geste"
-
-#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:39
-#, kde-format
-msgid "Ask for Confirmation for a gesture"
-msgstr "Prosi za potrditev geste"
-
-#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
-#: kcmaccessibilitymouse.kcfg:43
-#, kde-format
-msgid "Confirm access to the Keyboard"
-msgstr "Potrdi dostop do tipkovnice"
-
-#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
-#: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
-#, kde-format
-msgid "Enable Screen Reader"
-msgstr "Omogoči bralnik zaslona"
 
 #: package/contents/ui/Bell.qml:20
 #, kde-format
@@ -583,6 +379,11 @@ msgstr "Največja hitrost:"
 msgid "Acceleration profile:"
 msgstr "Profil pospeševanja:"
 
+#: package/contents/ui/ScreenReader.qml:17
+#, kde-format
+msgid "Enable Screen Reader"
+msgstr "Omogoči bralnik zaslona"
+
 #: package/contents/ui/ScreenReader.qml:28
 #, kde-format
 msgid "Launch Orca Screen Reader Configuration…"
@@ -605,6 +406,105 @@ msgid ""
 msgstr ""
 "Vse kaže, da bralnik zaslona Orca ni nameščen. Namestite ga pred poskusom "
 "uporabe te možnosti, potem se odjavite in ponovno zaženite računalnik"
+
+#~ msgid "Use System Bell"
+#~ msgstr "Uporabi sistemski zvonec"
+
+#~ msgid "Customize system bell"
+#~ msgstr "Prilagodi sistemski zvonec"
+
+#~ msgid "Sound file for the Bell"
+#~ msgstr "Zvočna datoteka za zvonec"
+
+#~ msgid "Use a visual bell instead of a sound"
+#~ msgstr "Uporabi vizualni zvonec namesto zvoka"
+
+#~ msgid "Invert the system colors on the bell"
+#~ msgstr "Obrnite sistemske barve na zvoncu"
+
+#~ msgid "Color of the Visible Bell"
+#~ msgstr "Barva vizualnega zvonca"
+
+#~ msgid "Duration of the Visible Bell"
+#~ msgstr "Trajanje vizualnega zvonca"
+
+#~ msgid "Use sticky Keys"
+#~ msgstr "Uporabi lepljive tipke"
+
+#~ msgid "Lock the sticky keys"
+#~ msgstr "Zakleni lepljive tipke"
+
+#~ msgid "Turn sticky keys off when two keys are pressed simultaneously"
+#~ msgstr "Ko sta obenem pritisnjeni dve tipki, izključi lepljive tipke"
+
+#~ msgid "Beep on a sticky key press"
+#~ msgstr "Zapiskaj ob pritisku lepljive tipke"
+
+#~ msgid "Toggle keys beep"
+#~ msgstr "Preklopi piskanje ob tipkanju"
+
+#~ msgid "Notify when a keyboard modifier is pressed"
+#~ msgstr "Obvesti kadar je pritisnjen modifikator tipkovnice"
+
+#~ msgid "Use a timeout delay"
+#~ msgstr "Uporabi zakasnitev"
+
+#~ msgid "Delay for timeout"
+#~ msgstr "Zakasnitev za časovno omejitev"
+
+#~ msgid "Use a beep for access"
+#~ msgstr "Uporabi pisk za dostop"
+
+#~ msgid "Use slow keypresses"
+#~ msgstr "Uporabi počasne tipke"
+
+#~ msgid "Delay for the key press"
+#~ msgstr "Zamuda pri pritisku tipke"
+
+#~ msgid "Beep on a slow keypress"
+#~ msgstr "Zapiskaj ob počasnem pritisku tipke"
+
+#~ msgid "Beep on an accepted keypress"
+#~ msgstr "Zapiskaj ob sprejetem pritisku tipke"
+
+#~ msgid "Beep on a rejected keypress"
+#~ msgstr "Zapiskaj ob zavrnjenem pritisku tipke"
+
+#~ msgid "Bounce Keys"
+#~ msgstr "Odbijajoče tipke"
+
+#~ msgid "Use a delay for bouncing"
+#~ msgstr "Uporabi zamudo ob odbijanju"
+
+#~ msgid "Beep if a bounce key event is rejected"
+#~ msgstr "Zapiskaj, če je zavrnjen dogodek odbijajoče tipke"
+
+#~ msgid "Use keys to control the mouse"
+#~ msgstr "Uporabi tipke za kontrolo miške"
+
+#~ msgid "Delay for the mouse movement"
+#~ msgstr "Zamuda za gibanje miške"
+
+#~ msgid "Repetition interval for the mouse movement"
+#~ msgstr "Interval ponavljanja za premikanje miške"
+
+#~ msgid "Time to hit maximum velocity"
+#~ msgstr "Čas da doseže največjo hitrost"
+
+#~ msgid "Maximum Velocity"
+#~ msgstr "Največja hitrost"
+
+#~ msgid "Mouse Key Curve"
+#~ msgstr "Krivulja tipke miške"
+
+#~ msgid "Use Gestures"
+#~ msgstr "Uporabi geste"
+
+#~ msgid "Ask for Confirmation for a gesture"
+#~ msgstr "Prosi za potrditev geste"
+
+#~ msgid "Confirm access to the Keyboard"
+#~ msgstr "Potrdi dostop do tipkovnice"
 
 #~ msgid "Maximum velocity"
 #~ msgstr "Največja hitrost"

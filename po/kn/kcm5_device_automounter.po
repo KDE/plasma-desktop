@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-10 00:45+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2010-01-15 13:12+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <kde-l10n-kn@kde.org>\n"
@@ -58,93 +58,6 @@ msgstr ""
 #, kde-format
 msgid "Plasma 5 Port"
 msgstr ""
-
-#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
-#: DeviceAutomounterKCM.ui:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "This list contains the storage devices known to KDE. If \"Automount on "
-#| "Login\" is checked, the device will be automatically mounted even though "
-#| "\"Mount all removable media at login\" is unchecked. The same applies for "
-#| "\"Automount on Attach\".\n"
-#| "\n"
-#| "If \"Enable automatic mounting of removable media\" is unchecked, the "
-#| "overrides do not apply and no devices will be automatically mounted."
-msgid ""
-"This list contains the storage devices known to the system. If \"Automount "
-"on Login\" is checked, the device will be automatically mounted even though "
-"\"Mount all removable media at login\" is unchecked. The same applies for "
-"\"Automount on Attach\"."
-msgstr ""
-"ಈ ಪಟ್ಟಿಯು ಕೆಡಿಇಗೆ ತಿಳಿದಿರುವ ಶೇಖರಣಾ ಸಾಧನಗಳನ್ನು ಒಳಗೊಂಡಿದೆ. ಒಂದು ವೇಳೆ \"ಪ್ರವೇಶಿಸುವ "
-"ವೇಳೆ ಸ್ವಯಂ ಆರೋಹಿಸು\" ಅನ್ನು ಗುರುತು ಮಾಡಿದ್ದರೆ, ಸಾಧನವು ತಾನಾಗಿಯೆ ಆರೋಹಿತಗೊಳ್ಳುತ್ತದೆ; "
-"\"ಪ್ರವೇಶಿಸುವ ವೇಳೆ ಎಲ್ಲಾ ಹೊರತೆಗೆಯಬಲ್ಲ ಮಾಧ್ಯಮಗಳನ್ನು ಆರೋಹಿಸು\" ಅನ್ನು ಗುರುತು ಹಾಕದೆ "
-"ಇದ್ದರೂ ಸಹ.\n"
-"\n"
-"\"ಹೊರತೆಗೆಯಬಲ್ಲ ಮಾಧ್ಯಮಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಆರೋಹಿಸಿ\" ಅನ್ನು ಶಕ್ತಗೊಳಿಸದೆ ಇದ್ದರೂ ಸಹ "
-"ಅತಿಕ್ರಮಣಗಳು ಅನ್ವಯಿಸುವುದಿಲ್ಲ ಹಾಗು ಸಾಧನಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಆರೋಹಿಸುವುದಿಲ್ಲ."
-
-#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
-#: DeviceAutomounterKCM.ui:54
-#, fuzzy, kde-format
-#| msgid ""
-#| "Clicking this button causes KDE to 'forget' that the selected devices "
-#| "ever existed. This is only useful if \"Only automatically mount removable "
-#| "media that has been manually mounted before\" is checked. Once a device "
-#| "is forgotten and KDE is set to only automatically mount familiar devices, "
-#| "the device will not be automatically mounted."
-msgid ""
-"Clicking this button causes the selected devices to be 'forgotten'. This is "
-"only useful if \"Only automatically mount removable media that has been "
-"manually mounted before\" is checked. Once a device is forgotten and the "
-"system is set to only automatically mount familiar devices, the device will "
-"not be automatically mounted."
-msgstr ""
-"ಈ ಗುಂಡಿಯನ್ನು ಗುರುತು ಹಾಕಿದ್ದಲ್ಲಿ, ಇದು ಆಯ್ದ ಸಾಧನಗಳು ಹಿಂದೆ ಇದ್ದವೆಂಬುದನ್ನೇ ಕೆಡಿಇಯು  "
-"ಮರೆಯುವಂತೆ ಮಾಡುತ್ತದೆ. \"ಮೊದಲು ಕೈಯಾರೆ ಆರೋಹಿಸಲಾದ ಹೊರ ತೆಗೆಯಬಹುದಾದ ಮಾಧ್ಯಮಗಳನ್ನು  "
-"ಮಾತ್ರ ತಾನಾಗಿಯೆ ಆರೋಹಿಸು\" ಎನ್ನುವ ಆಯ್ಕೆಯನ್ನು ಗುರುತು ಮಾಡಿದ್ದಾಗ ಮಾತ್ರ ಇದು "
-"ಪ್ರಯೋಜನಕಾರಿಯಾಗುತ್ತದೆ."
-
-#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
-#: DeviceAutomounterKCM.ui:57
-#, kde-format
-msgid "Forget Device"
-msgstr "ಸಾಧನವನ್ನು ಮರೆತುಬಿಡು"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
-#: DeviceAutomounterKCM.ui:67
-#, fuzzy, kde-format
-#| msgid ""
-#| "When this is checked, KDE will only automatically mount devices it "
-#| "remembers. A device is 'remembered' if it has ever been mounted before. e."
-#| "g. plugging in a USB media player to charge. If the files are not "
-#| "accessed, KDE will not automatically mount the player next time it is "
-#| "seen. Once they have been accessed, however, KDE will remember to "
-#| "automatically make the contents accessible to your system."
-msgid ""
-"When this is not checked, only remembered devices will be automatically "
-"mounted. A device is 'remembered' if it has ever been mounted before. For "
-"instance, plugging in a USB media player to charge is not sufficient to "
-"'remember' it - if the files are not accessed, it will not be automatically "
-"mounted the next time it is seen. Once they have been accessed, however, the "
-"device's contents will be automatically made available to the system."
-msgstr ""
-"ಇದನ್ನು ಗುರುತು ಮಾಡಿದ್ದರೆ, ಕೆಡಿಇಯು ತಾನು ನೆನಪಿನಲ್ಲಿರಿಸಿಕೊಂಡ ಸಾಧನಗಳನ್ನು ಮಾತ್ರ ಸ್ವಯಂ "
-"ಆರೋಹಿಸುತ್ತದೆ. ಸಾಧನವನ್ನು ಹಿಂದೆಂದಾದರೂ  ಆರೋಹಿಸಲಾಗಿದ್ದರೆ ಮಾತ್ರ ಅದನ್ನು "
-"'ನೆನಪಿಟ್ಟುಕೊಳ್ಳಲಾಗುತ್ತದೆ'. ಉದಾ:ಯುಎಸ್‌ಬಿ ಮಾಧ್ಯಮ ಚಾಲಕವನ್ನು ಚಾರ್ಜ್ ಮಾಡಲು ಗಣಕಕ್ಕೆ "
-"ಜೋಡಿಸುವಿಕೆ. ಕಡತಗಳನ್ನು ಬಳಸದಿದ್ದರೆ, ಕೆಡಿಇಯು ಚಾಲಕವನ್ನು ಮುಂದಿನ ಬಾರಿ ತಾನಾಗಿಯೆ "
-"ಆರೋಹಿಸದು. ಒಮ್ಮೆ ಅವನ್ನು ಬಳಸಿದಲ್ಲಿ, ಕೆಡಿಇಯು ಮುಂದಿನ ಬಾರಿ ಅದರಲ್ಲಿದ್ದ ಮಾಹಿತಿಯನ್ನು ನಿಮ್ಮ "
-"ವ್ಯವಸ್ಥೆಯಲ್ಲಿ ಬಳಸುವಂತೆ ಒದಗಿಸಲು ಮರೆಯುವುದಿಲ್ಲ."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
-#: DeviceAutomounterKCM.ui:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Only automatically mount removable media that has been manually mounted "
-#| "before"
-msgid "Automatically mount removable media that have never been mounted before"
-msgstr ""
-"ಈ ಮೊದಲು ಭೌತಿಕವಾಗಿ ಆರೋಹಿಸಲಾದ ಹೊರ ತೆಗೆಯಬಹುದಾದ ಮಾಧ್ಯಮಗಳನ್ನು ಮಾತ್ರ ಸ್ವಯಂ ಆರೋಹಿಸು."
 
 #: DeviceModel.cpp:52
 #, fuzzy, kde-format
@@ -209,6 +122,84 @@ msgstr "ಈ ಸಾಧನವನ್ನು  ಜೋಡಿಸಿದೊಡನೆ ತ�
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "ಈ ಸಾಧನವನ್ನು  ಜೋಡಿಸಿದೊಡನೆ ತಾನಾಗಿಯೆ ಆರೋಹಿಸಲಾಗುವುದಿಲ್ಲ."
+
+#, fuzzy
+#~| msgid ""
+#~| "This list contains the storage devices known to KDE. If \"Automount on "
+#~| "Login\" is checked, the device will be automatically mounted even though "
+#~| "\"Mount all removable media at login\" is unchecked. The same applies "
+#~| "for \"Automount on Attach\".\n"
+#~| "\n"
+#~| "If \"Enable automatic mounting of removable media\" is unchecked, the "
+#~| "overrides do not apply and no devices will be automatically mounted."
+#~ msgid ""
+#~ "This list contains the storage devices known to the system. If "
+#~ "\"Automount on Login\" is checked, the device will be automatically "
+#~ "mounted even though \"Mount all removable media at login\" is unchecked. "
+#~ "The same applies for \"Automount on Attach\"."
+#~ msgstr ""
+#~ "ಈ ಪಟ್ಟಿಯು ಕೆಡಿಇಗೆ ತಿಳಿದಿರುವ ಶೇಖರಣಾ ಸಾಧನಗಳನ್ನು ಒಳಗೊಂಡಿದೆ. ಒಂದು ವೇಳೆ "
+#~ "\"ಪ್ರವೇಶಿಸುವ ವೇಳೆ ಸ್ವಯಂ ಆರೋಹಿಸು\" ಅನ್ನು ಗುರುತು ಮಾಡಿದ್ದರೆ, ಸಾಧನವು ತಾನಾಗಿಯೆ "
+#~ "ಆರೋಹಿತಗೊಳ್ಳುತ್ತದೆ; \"ಪ್ರವೇಶಿಸುವ ವೇಳೆ ಎಲ್ಲಾ ಹೊರತೆಗೆಯಬಲ್ಲ ಮಾಧ್ಯಮಗಳನ್ನು ಆರೋಹಿಸು\" "
+#~ "ಅನ್ನು ಗುರುತು ಹಾಕದೆ ಇದ್ದರೂ ಸಹ.\n"
+#~ "\n"
+#~ "\"ಹೊರತೆಗೆಯಬಲ್ಲ ಮಾಧ್ಯಮಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಆರೋಹಿಸಿ\" ಅನ್ನು ಶಕ್ತಗೊಳಿಸದೆ ಇದ್ದರೂ ಸಹ "
+#~ "ಅತಿಕ್ರಮಣಗಳು ಅನ್ವಯಿಸುವುದಿಲ್ಲ ಹಾಗು ಸಾಧನಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಆರೋಹಿಸುವುದಿಲ್ಲ."
+
+#, fuzzy
+#~| msgid ""
+#~| "Clicking this button causes KDE to 'forget' that the selected devices "
+#~| "ever existed. This is only useful if \"Only automatically mount "
+#~| "removable media that has been manually mounted before\" is checked. Once "
+#~| "a device is forgotten and KDE is set to only automatically mount "
+#~| "familiar devices, the device will not be automatically mounted."
+#~ msgid ""
+#~ "Clicking this button causes the selected devices to be 'forgotten'. This "
+#~ "is only useful if \"Only automatically mount removable media that has "
+#~ "been manually mounted before\" is checked. Once a device is forgotten and "
+#~ "the system is set to only automatically mount familiar devices, the "
+#~ "device will not be automatically mounted."
+#~ msgstr ""
+#~ "ಈ ಗುಂಡಿಯನ್ನು ಗುರುತು ಹಾಕಿದ್ದಲ್ಲಿ, ಇದು ಆಯ್ದ ಸಾಧನಗಳು ಹಿಂದೆ ಇದ್ದವೆಂಬುದನ್ನೇ ಕೆಡಿಇಯು  "
+#~ "ಮರೆಯುವಂತೆ ಮಾಡುತ್ತದೆ. \"ಮೊದಲು ಕೈಯಾರೆ ಆರೋಹಿಸಲಾದ ಹೊರ ತೆಗೆಯಬಹುದಾದ ಮಾಧ್ಯಮಗಳನ್ನು  "
+#~ "ಮಾತ್ರ ತಾನಾಗಿಯೆ ಆರೋಹಿಸು\" ಎನ್ನುವ ಆಯ್ಕೆಯನ್ನು ಗುರುತು ಮಾಡಿದ್ದಾಗ ಮಾತ್ರ ಇದು "
+#~ "ಪ್ರಯೋಜನಕಾರಿಯಾಗುತ್ತದೆ."
+
+#~ msgid "Forget Device"
+#~ msgstr "ಸಾಧನವನ್ನು ಮರೆತುಬಿಡು"
+
+#, fuzzy
+#~| msgid ""
+#~| "When this is checked, KDE will only automatically mount devices it "
+#~| "remembers. A device is 'remembered' if it has ever been mounted before. "
+#~| "e.g. plugging in a USB media player to charge. If the files are not "
+#~| "accessed, KDE will not automatically mount the player next time it is "
+#~| "seen. Once they have been accessed, however, KDE will remember to "
+#~| "automatically make the contents accessible to your system."
+#~ msgid ""
+#~ "When this is not checked, only remembered devices will be automatically "
+#~ "mounted. A device is 'remembered' if it has ever been mounted before. For "
+#~ "instance, plugging in a USB media player to charge is not sufficient to "
+#~ "'remember' it - if the files are not accessed, it will not be "
+#~ "automatically mounted the next time it is seen. Once they have been "
+#~ "accessed, however, the device's contents will be automatically made "
+#~ "available to the system."
+#~ msgstr ""
+#~ "ಇದನ್ನು ಗುರುತು ಮಾಡಿದ್ದರೆ, ಕೆಡಿಇಯು ತಾನು ನೆನಪಿನಲ್ಲಿರಿಸಿಕೊಂಡ ಸಾಧನಗಳನ್ನು ಮಾತ್ರ ಸ್ವಯಂ "
+#~ "ಆರೋಹಿಸುತ್ತದೆ. ಸಾಧನವನ್ನು ಹಿಂದೆಂದಾದರೂ  ಆರೋಹಿಸಲಾಗಿದ್ದರೆ ಮಾತ್ರ ಅದನ್ನು "
+#~ "'ನೆನಪಿಟ್ಟುಕೊಳ್ಳಲಾಗುತ್ತದೆ'. ಉದಾ:ಯುಎಸ್‌ಬಿ ಮಾಧ್ಯಮ ಚಾಲಕವನ್ನು ಚಾರ್ಜ್ ಮಾಡಲು ಗಣಕಕ್ಕೆ "
+#~ "ಜೋಡಿಸುವಿಕೆ. ಕಡತಗಳನ್ನು ಬಳಸದಿದ್ದರೆ, ಕೆಡಿಇಯು ಚಾಲಕವನ್ನು ಮುಂದಿನ ಬಾರಿ ತಾನಾಗಿಯೆ "
+#~ "ಆರೋಹಿಸದು. ಒಮ್ಮೆ ಅವನ್ನು ಬಳಸಿದಲ್ಲಿ, ಕೆಡಿಇಯು ಮುಂದಿನ ಬಾರಿ ಅದರಲ್ಲಿದ್ದ ಮಾಹಿತಿಯನ್ನು "
+#~ "ನಿಮ್ಮ ವ್ಯವಸ್ಥೆಯಲ್ಲಿ ಬಳಸುವಂತೆ ಒದಗಿಸಲು ಮರೆಯುವುದಿಲ್ಲ."
+
+#, fuzzy
+#~| msgid ""
+#~| "Only automatically mount removable media that has been manually mounted "
+#~| "before"
+#~ msgid ""
+#~ "Automatically mount removable media that have never been mounted before"
+#~ msgstr ""
+#~ "ಈ ಮೊದಲು ಭೌತಿಕವಾಗಿ ಆರೋಹಿಸಲಾದ ಹೊರ ತೆಗೆಯಬಹುದಾದ ಮಾಧ್ಯಮಗಳನ್ನು ಮಾತ್ರ ಸ್ವಯಂ ಆರೋಹಿಸು."
 
 #, fuzzy
 #~| msgid ""

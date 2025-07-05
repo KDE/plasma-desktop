@@ -1,7 +1,7 @@
 # translation of kcmkclock.po to Slovenian
 # Translation of kcmkclock.po to Slovenian
 # SLOVENIAN TRANSLATION OF KCMKCLOCK.
-# $Id: kcmkclock.po 1619958 2022-02-27 01:39:10Z scripty $
+# $Id: kcmkclock.po 1712705 2025-07-05 03:36:47Z scripty $
 # $Source$
 #
 # Copyright (C) 2000, 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-27 00:49+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-05-27 08:10+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -39,57 +39,6 @@ msgid "Your emails"
 msgstr ""
 "jlp@holodeck1.com,roman.maurer@amis.net,andrejm@ubuntu.si,matjaz.jeran@amis."
 "net"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: dateandtime.ui:22
-#, kde-format
-msgid "Date and Time"
-msgstr "Datum in čas"
-
-#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
-#: dateandtime.ui:30
-#, kde-format
-msgid "Set date and time &automatically"
-msgstr "Čas in datum nastavi s&amodejno"
-
-#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
-#: dateandtime.ui:53
-#, kde-format
-msgid "&Time server:"
-msgstr "Časovni s&trežnik:"
-
-#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
-#: dateandtime.ui:86
-#, kde-format
-msgid "Here you can change the system date's day of the month, month and year."
-msgstr ""
-"Tu lahko spremenite sistemsko nastavitev dneva v mesecu, meseca in leta."
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: dateandtime.ui:122
-#, kde-format
-msgid "Time Zone"
-msgstr "Časovni pas"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: dateandtime.ui:128
-#, kde-format
-msgid "To change the local time zone, select your area from the list below."
-msgstr ""
-"Za spremembo krajevnega časovnega pasu s spodnjega seznama izberite ustrezno "
-"območje."
-
-#. i18n: ectx: property (text), widget (QLabel, m_local)
-#: dateandtime.ui:151
-#, kde-format
-msgid "Current local time zone:"
-msgstr "Trenutni krajevni časovni pas:"
-
-#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
-#: dateandtime.ui:161
-#, kde-format
-msgid "Search…"
-msgstr "Poišči…"
 
 #: dtime.cpp:61
 #, kde-format
@@ -245,6 +194,34 @@ msgstr "Ni bilo mogoče nastaviti trenutnega časa"
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "Ni bilo mogoče nastaviti časovnega pasu"
+
+#~ msgid "Date and Time"
+#~ msgstr "Datum in čas"
+
+#~ msgid "Set date and time &automatically"
+#~ msgstr "Čas in datum nastavi s&amodejno"
+
+#~ msgid "&Time server:"
+#~ msgstr "Časovni s&trežnik:"
+
+#~ msgid ""
+#~ "Here you can change the system date's day of the month, month and year."
+#~ msgstr ""
+#~ "Tu lahko spremenite sistemsko nastavitev dneva v mesecu, meseca in leta."
+
+#~ msgid "Time Zone"
+#~ msgstr "Časovni pas"
+
+#~ msgid "To change the local time zone, select your area from the list below."
+#~ msgstr ""
+#~ "Za spremembo krajevnega časovnega pasu s spodnjega seznama izberite "
+#~ "ustrezno območje."
+
+#~ msgid "Current local time zone:"
+#~ msgstr "Trenutni krajevni časovni pas:"
+
+#~ msgid "Search…"
+#~ msgstr "Poišči…"
 
 #~ msgid "kcmclock"
 #~ msgstr "kcmclock"

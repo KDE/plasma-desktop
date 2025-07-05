@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-09-06 01:02+0800\n"
 "Last-Translator: Chaoting Liu <brli@chakralinux.org>\n"
 "Language-Team: C <kde-i18n-doc@kde.org>\n"
@@ -48,132 +48,6 @@ msgstr ""
 #, kde-format
 msgid "Invalid action"
 msgstr "不合法的動作"
-
-#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
-#: ActionEditor.ui:17
-#, kde-format
-msgid "Edit Parameter"
-msgstr "編輯參數"
-
-#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
-#: ActionEditor.ui:43
-#, kde-format
-msgid "Parameter type:"
-msgstr "參數型態："
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:51
-#, kde-format
-msgid "Property Match"
-msgstr "屬性比對"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:56
-#, kde-format
-msgid "Content Conjunction"
-msgstr "內容連接"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:61
-#, kde-format
-msgid "Content Disjunction"
-msgstr "內容分離"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:66
-#, kde-format
-msgid "Device Interface Match"
-msgstr "裝置介面比對"
-
-#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
-#: ActionEditor.ui:96
-#, kde-format
-msgid "Device type:"
-msgstr "裝置類型："
-
-#. i18n: ectx: property (text), widget (QLabel, LblValueName)
-#: ActionEditor.ui:135
-#, kde-format
-msgid "Value name:"
-msgstr "數值名稱："
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
-#: ActionEditor.ui:175
-#, kde-format
-msgid "Equals"
-msgstr "等於"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
-#: ActionEditor.ui:180
-#, kde-format
-msgid "Contains"
-msgstr "包含"
-
-#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
-#: ActionEditor.ui:208
-#, kde-format
-msgid "Reset Parameter"
-msgstr "重置參數"
-
-#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
-#: ActionEditor.ui:215
-#, kde-format
-msgid "Save Parameter Changes"
-msgstr "儲存參數變更"
-
-#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
-#: ActionEditor.ui:247
-#, kde-format
-msgid "Action icon, click to change it"
-msgstr "動作圖示，點擊以變更"
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
-#: ActionEditor.ui:254
-#, kde-format
-msgid "Action name"
-msgstr "動作名稱"
-
-#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
-#: ActionEditor.ui:271
-#, kde-format
-msgid "Command: "
-msgstr "指令："
-
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
-#: ActionEditor.ui:283
-#, no-c-format, kde-format
-msgid ""
-"Command that will trigger the action\n"
-"This can include any or all of the following case insensitive expands:\n"
-"\n"
-"%f: The mountpoint for the device - Storage Access devices only\n"
-"%d: Path to the device node - Block devices only\n"
-"%i: The identifier of the device"
-msgstr ""
-"觸發此動作的指令\n"
-"可以包含以下的參數：\n"
-"\n"
-"%f：裝置的掛載點 - 只適用於儲存裝置\n"
-"%d：裝置的節點路徑 - 只適用於區塊裝置\n"
-"%i：裝置的識別子"
-
-#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
-#: ActionEditor.ui:300
-#, kde-format
-msgid "Devices must match the following parameters for this action:"
-msgstr "裝置必須符合此動作的以下參數："
-
-#. i18n: ectx: property (text), widget (QLabel, LblActionName)
-#: AddAction.ui:19
-#, kde-format
-msgid "Action name:"
-msgstr "動作名稱："
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
-#: AddAction.ui:26
-#, kde-format
-msgid "Enter the name for your new action"
-msgstr "請輸入您的新動作的名稱"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -267,23 +141,83 @@ msgstr "沒有選取動作"
 msgid "Cannot be deleted"
 msgstr "無法刪除"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
-#: SolidActions.ui:22
-#, kde-format
-msgid "Remove"
-msgstr "移除"
+#~ msgid "Edit Parameter"
+#~ msgstr "編輯參數"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
-#: SolidActions.ui:29
-#, kde-format
-msgid "Edit…"
-msgstr "編輯…"
+#~ msgid "Parameter type:"
+#~ msgstr "參數型態："
 
-#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
-#: SolidActions.ui:36
-#, kde-format
-msgid "Add…"
-msgstr "新增…"
+#~ msgid "Property Match"
+#~ msgstr "屬性比對"
+
+#~ msgid "Content Conjunction"
+#~ msgstr "內容連接"
+
+#~ msgid "Content Disjunction"
+#~ msgstr "內容分離"
+
+#~ msgid "Device Interface Match"
+#~ msgstr "裝置介面比對"
+
+#~ msgid "Device type:"
+#~ msgstr "裝置類型："
+
+#~ msgid "Value name:"
+#~ msgstr "數值名稱："
+
+#~ msgid "Equals"
+#~ msgstr "等於"
+
+#~ msgid "Contains"
+#~ msgstr "包含"
+
+#~ msgid "Reset Parameter"
+#~ msgstr "重置參數"
+
+#~ msgid "Save Parameter Changes"
+#~ msgstr "儲存參數變更"
+
+#~ msgid "Action icon, click to change it"
+#~ msgstr "動作圖示，點擊以變更"
+
+#~ msgid "Action name"
+#~ msgstr "動作名稱"
+
+#~ msgid "Command: "
+#~ msgstr "指令："
+
+#~ msgid ""
+#~ "Command that will trigger the action\n"
+#~ "This can include any or all of the following case insensitive expands:\n"
+#~ "\n"
+#~ "%f: The mountpoint for the device - Storage Access devices only\n"
+#~ "%d: Path to the device node - Block devices only\n"
+#~ "%i: The identifier of the device"
+#~ msgstr ""
+#~ "觸發此動作的指令\n"
+#~ "可以包含以下的參數：\n"
+#~ "\n"
+#~ "%f：裝置的掛載點 - 只適用於儲存裝置\n"
+#~ "%d：裝置的節點路徑 - 只適用於區塊裝置\n"
+#~ "%i：裝置的識別子"
+
+#~ msgid "Devices must match the following parameters for this action:"
+#~ msgstr "裝置必須符合此動作的以下參數："
+
+#~ msgid "Action name:"
+#~ msgstr "動作名稱："
+
+#~ msgid "Enter the name for your new action"
+#~ msgstr "請輸入您的新動作的名稱"
+
+#~ msgid "Remove"
+#~ msgstr "移除"
+
+#~ msgid "Edit…"
+#~ msgstr "編輯…"
+
+#~ msgid "Add…"
+#~ msgstr "新增…"
 
 #~ msgid "Edit..."
 #~ msgstr "編輯..."

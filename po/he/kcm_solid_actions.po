@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-06-26 00:19+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2025-06-21 15:47+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -52,132 +52,6 @@ msgstr ""
 #, kde-format
 msgid "Invalid action"
 msgstr "פעולה שגויה"
-
-#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
-#: ActionEditor.ui:17
-#, kde-format
-msgid "Edit Parameter"
-msgstr "ערוך ארגומנט"
-
-#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
-#: ActionEditor.ui:43
-#, kde-format
-msgid "Parameter type:"
-msgstr "סוג הארגומנט:"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:51
-#, kde-format
-msgid "Property Match"
-msgstr "התאמה של מאפיין"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:56
-#, kde-format
-msgid "Content Conjunction"
-msgstr "צומת של תוכן"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:61
-#, kde-format
-msgid "Content Disjunction"
-msgstr "פיצל של תוכן"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
-#: ActionEditor.ui:66
-#, kde-format
-msgid "Device Interface Match"
-msgstr "התאמה של מזהה התקן"
-
-#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
-#: ActionEditor.ui:96
-#, kde-format
-msgid "Device type:"
-msgstr "סוג התקן:"
-
-#. i18n: ectx: property (text), widget (QLabel, LblValueName)
-#: ActionEditor.ui:135
-#, kde-format
-msgid "Value name:"
-msgstr "שם ערך:"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
-#: ActionEditor.ui:175
-#, kde-format
-msgid "Equals"
-msgstr "שווה"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
-#: ActionEditor.ui:180
-#, kde-format
-msgid "Contains"
-msgstr "מכיל"
-
-#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
-#: ActionEditor.ui:208
-#, kde-format
-msgid "Reset Parameter"
-msgstr "אפס ארגומנט"
-
-#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
-#: ActionEditor.ui:215
-#, kde-format
-msgid "Save Parameter Changes"
-msgstr "שמור את שינוי הארגומנט"
-
-#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
-#: ActionEditor.ui:247
-#, kde-format
-msgid "Action icon, click to change it"
-msgstr "סמל פעולה, הקלק כדי לשנותו"
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
-#: ActionEditor.ui:254
-#, kde-format
-msgid "Action name"
-msgstr "שם פעולה:"
-
-#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
-#: ActionEditor.ui:271
-#, kde-format
-msgid "Command: "
-msgstr "פקודה:"
-
-#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
-#: ActionEditor.ui:283
-#, no-c-format, kde-format
-msgid ""
-"Command that will trigger the action\n"
-"This can include any or all of the following case insensitive expands:\n"
-"\n"
-"%f: The mountpoint for the device - Storage Access devices only\n"
-"%d: Path to the device node - Block devices only\n"
-"%i: The identifier of the device"
-msgstr ""
-"הפקודה שתפעיל את הפעולה\n"
-"הפעולה הזאת יכולה להכיל את אחד מההרחבות הבאת:\n"
-"\n"
-"%f: מיקום החיבור של ההתקן - התקני גישה בלבד\n"
-"%d: המיקום של ה־device node - רק התקני block\n"
-"%i: המזהה של ההתקן"
-
-#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
-#: ActionEditor.ui:300
-#, kde-format
-msgid "Devices must match the following parameters for this action:"
-msgstr "ההתקנים לא תואמים את הארגומנטים של הפעולה הזאת:"
-
-#. i18n: ectx: property (text), widget (QLabel, LblActionName)
-#: AddAction.ui:19
-#, kde-format
-msgid "Action name:"
-msgstr "שם הפעולה:"
-
-#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
-#: AddAction.ui:26
-#, kde-format
-msgid "Enter the name for your new action"
-msgstr "הכנס שם לפעולה החדשה"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -273,23 +147,77 @@ msgstr "לא נבחרה פעולה"
 msgid "Cannot be deleted"
 msgstr "לא ניתן להימחק"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
-#: SolidActions.ui:22
-#, kde-format
-msgid "Remove"
-msgstr "הסר"
+#~ msgid "Edit Parameter"
+#~ msgstr "ערוך ארגומנט"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
-#: SolidActions.ui:29
-#, kde-format
-msgid "Edit…"
-msgstr ""
+#~ msgid "Parameter type:"
+#~ msgstr "סוג הארגומנט:"
 
-#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
-#: SolidActions.ui:36
-#, kde-format
-msgid "Add…"
-msgstr ""
+#~ msgid "Property Match"
+#~ msgstr "התאמה של מאפיין"
+
+#~ msgid "Content Conjunction"
+#~ msgstr "צומת של תוכן"
+
+#~ msgid "Content Disjunction"
+#~ msgstr "פיצל של תוכן"
+
+#~ msgid "Device Interface Match"
+#~ msgstr "התאמה של מזהה התקן"
+
+#~ msgid "Device type:"
+#~ msgstr "סוג התקן:"
+
+#~ msgid "Value name:"
+#~ msgstr "שם ערך:"
+
+#~ msgid "Equals"
+#~ msgstr "שווה"
+
+#~ msgid "Contains"
+#~ msgstr "מכיל"
+
+#~ msgid "Reset Parameter"
+#~ msgstr "אפס ארגומנט"
+
+#~ msgid "Save Parameter Changes"
+#~ msgstr "שמור את שינוי הארגומנט"
+
+#~ msgid "Action icon, click to change it"
+#~ msgstr "סמל פעולה, הקלק כדי לשנותו"
+
+#~ msgid "Action name"
+#~ msgstr "שם פעולה:"
+
+#~ msgid "Command: "
+#~ msgstr "פקודה:"
+
+#~ msgid ""
+#~ "Command that will trigger the action\n"
+#~ "This can include any or all of the following case insensitive expands:\n"
+#~ "\n"
+#~ "%f: The mountpoint for the device - Storage Access devices only\n"
+#~ "%d: Path to the device node - Block devices only\n"
+#~ "%i: The identifier of the device"
+#~ msgstr ""
+#~ "הפקודה שתפעיל את הפעולה\n"
+#~ "הפעולה הזאת יכולה להכיל את אחד מההרחבות הבאת:\n"
+#~ "\n"
+#~ "%f: מיקום החיבור של ההתקן - התקני גישה בלבד\n"
+#~ "%d: המיקום של ה־device node - רק התקני block\n"
+#~ "%i: המזהה של ההתקן"
+
+#~ msgid "Devices must match the following parameters for this action:"
+#~ msgstr "ההתקנים לא תואמים את הארגומנטים של הפעולה הזאת:"
+
+#~ msgid "Action name:"
+#~ msgstr "שם הפעולה:"
+
+#~ msgid "Enter the name for your new action"
+#~ msgstr "הכנס שם לפעולה החדשה"
+
+#~ msgid "Remove"
+#~ msgstr "הסר"
 
 #~ msgid "Edit..."
 #~ msgstr "ערוך..."
