@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-11-22 22:05+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -64,6 +64,68 @@ msgstr "Kai Uwe Broulik"
 #, kde-format
 msgid "Plasma 5 Port"
 msgstr "Перенос в Plasma 5"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, kde-format
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"Это список внешних носителей информации, известных системе. Если отмечен "
+"пункт «Монтировать при входе в систему», устройство будет автоматически "
+"монтировано даже если пункт «Монтировать все внешние носители при входе в "
+"систему» не отмечен. Аналогично действует пункт «Монтировать при "
+"подключении»."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"При нажатии этой кнопки система «забудет» о выбранных носителях информации. "
+"Это может быть полезно только если отмечен пункт «Автоматически монтировать "
+"только те носители, которые были ранее монтированы вручную». Если этот пункт "
+"отмечен, и носитель объявлен забытым, носитель не будет автоматически "
+"монтироваться."
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "Забыть о носителе информации"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, kde-format
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"Если этот пункт не отмечен, KDE будет автоматически монтировать только "
+"носители информации, которые она помнит. Носитель «запоминается», если он "
+"был хотя бы один раз смонтирован. Если носитель был подсоединён, но не был "
+"смонтирован (например, если вы подключили аудиоплеер, чтобы зарядить его), "
+"KDE не будет автоматически его монтировать при последующих подключениях."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, kde-format
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr ""
+"Автоматически монтировать те носители, которые никогда ранее не были "
+"смонтированы вручную"
 
 #: DeviceModel.cpp:52
 #, kde-format
@@ -127,56 +189,6 @@ msgstr "Этот носитель будет автоматически монт
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "Этот носитель не будет автоматически монтироваться при подключении."
-
-#~ msgid ""
-#~ "This list contains the storage devices known to the system. If "
-#~ "\"Automount on Login\" is checked, the device will be automatically "
-#~ "mounted even though \"Mount all removable media at login\" is unchecked. "
-#~ "The same applies for \"Automount on Attach\"."
-#~ msgstr ""
-#~ "Это список внешних носителей информации, известных системе. Если отмечен "
-#~ "пункт «Монтировать при входе в систему», устройство будет автоматически "
-#~ "монтировано даже если пункт «Монтировать все внешние носители при входе в "
-#~ "систему» не отмечен. Аналогично действует пункт «Монтировать при "
-#~ "подключении»."
-
-#~ msgid ""
-#~ "Clicking this button causes the selected devices to be 'forgotten'. This "
-#~ "is only useful if \"Only automatically mount removable media that has "
-#~ "been manually mounted before\" is checked. Once a device is forgotten and "
-#~ "the system is set to only automatically mount familiar devices, the "
-#~ "device will not be automatically mounted."
-#~ msgstr ""
-#~ "При нажатии этой кнопки система «забудет» о выбранных носителях "
-#~ "информации. Это может быть полезно только если отмечен пункт "
-#~ "«Автоматически монтировать только те носители, которые были ранее "
-#~ "монтированы вручную». Если этот пункт отмечен, и носитель объявлен "
-#~ "забытым, носитель не будет автоматически монтироваться."
-
-#~ msgid "Forget Device"
-#~ msgstr "Забыть о носителе информации"
-
-#~ msgid ""
-#~ "When this is not checked, only remembered devices will be automatically "
-#~ "mounted. A device is 'remembered' if it has ever been mounted before. For "
-#~ "instance, plugging in a USB media player to charge is not sufficient to "
-#~ "'remember' it - if the files are not accessed, it will not be "
-#~ "automatically mounted the next time it is seen. Once they have been "
-#~ "accessed, however, the device's contents will be automatically made "
-#~ "available to the system."
-#~ msgstr ""
-#~ "Если этот пункт не отмечен, KDE будет автоматически монтировать только "
-#~ "носители информации, которые она помнит. Носитель «запоминается», если он "
-#~ "был хотя бы один раз смонтирован. Если носитель был подсоединён, но не "
-#~ "был смонтирован (например, если вы подключили аудиоплеер, чтобы зарядить "
-#~ "его), KDE не будет автоматически его монтировать при последующих "
-#~ "подключениях."
-
-#~ msgid ""
-#~ "Automatically mount removable media that have never been mounted before"
-#~ msgstr ""
-#~ "Автоматически монтировать те носители, которые никогда ранее не были "
-#~ "смонтированы вручную"
 
 #~ msgid ""
 #~ "If any removable storage devices are connected to your system when you "

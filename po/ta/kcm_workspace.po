@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-12-20 19:59+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -34,12 +34,14 @@ msgstr "மீள்துவக்கு"
 msgid "Visual behavior:"
 msgstr "பார்வைமுறை நடத்தை:"
 
-#: package/contents/ui/main.qml:51
+#. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
+#: package/contents/ui/main.qml:51 workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "சுட்டியை மேல்வைக்கும்போது கருவித்துப்புகளை காட்டு"
 
-#: package/contents/ui/main.qml:62
+#. i18n: ectx: label, entry (osdEnabled), group (OSD)
+#: package/contents/ui/main.qml:62 workspaceoptions_plasmasettings.kcfg:15
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "நிலைமாரும்போது பார்வைமுறை பின்னூட்டம் காட்டு"
@@ -169,32 +171,56 @@ msgstr ""
 "தொடுதல் பயன்முறையில், எளிதில் தொடக்கூடிய வித‍த்தில் இடைமுகப்பின் பல உருப்புகள் "
 "பெரிதாக்கப்படும்."
 
-#~ msgid "Single click to open files"
-#~ msgstr "ஒற்றை க்ளிக் கோப்புகளை திறக்கும்"
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Single click to open files"
+msgstr "ஒற்றை க்ளிக் கோப்புகளை திறக்கும்"
 
-#~ msgid "Animation speed"
-#~ msgstr "அசைவூட்ட வேகம்"
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:13
+#, kde-format
+msgid "Animation speed"
+msgstr "அசைவூட்ட வேகம்"
 
-#~ msgid "Left-click in scrollbar track moves scrollbar by one page"
-#~ msgstr "உருள் பட்டையில் க்ளிக் செய்தல் ஒரு பக்க அளவு நகரும்"
+#. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:17
+#, kde-format
+msgid "Left-click in scrollbar track moves scrollbar by one page"
+msgstr "உருள் பட்டையில் க்ளிக் செய்தல் ஒரு பக்க அளவு நகரும்"
 
-#~ msgid "Automatically switch to touch-optimized mode"
-#~ msgstr "தொடுதல் பயன்முறைக்கு தானாக மாறு"
+#. i18n: ectx: label, entry (tabletMode), group (Input)
+#: workspaceoptions_kwinsettings.kcfg:9
+#, kde-format
+msgid "Automatically switch to touch-optimized mode"
+msgstr "தொடுதல் பயன்முறைக்கு தானாக மாறு"
 
-#~ msgid "Enable middle click selection pasting"
-#~ msgstr "நடு கிளிக்கால் தேர்வை ஒட்டவிடு"
+#. i18n: ectx: label, entry (primarySelection), group (Wayland)
+#: workspaceoptions_kwinsettings.kcfg:15
+#, kde-format
+msgid "Enable middle click selection pasting"
+msgstr "நடு கிளிக்கால் தேர்வை ஒட்டவிடு"
 
-#~ msgid ""
-#~ "Show an on-screen display to indicate status changes such as brightness "
-#~ "or volume"
-#~ msgstr ""
-#~ "பிரகாசம் மற்றும் ஒலி அளவு போன்றவற்றின் நிலை மாறும்போது திரையில் ஓர் அறிகுறி காட்டு"
+#. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:16
+#, kde-format
+msgid ""
+"Show an on-screen display to indicate status changes such as brightness or "
+"volume"
+msgstr ""
+"பிரகாசம் மற்றும் ஒலி அளவு போன்றவற்றின் நிலை மாறும்போது திரையில் ஓர் அறிகுறி காட்டு"
 
-#~ msgid "OSD on layout change"
-#~ msgstr "தளவமைப்பு மாறும்போது அறிகுறி காட்டு"
+#. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:20
+#, kde-format
+msgid "OSD on layout change"
+msgstr "தளவமைப்பு மாறும்போது அறிகுறி காட்டு"
 
-#~ msgid "Show a popup on layout changes"
-#~ msgstr "தளவமைப்பு மாறும்போது தெரித்தெழும் அறிவிப்பு காட்டு"
+#. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:21
+#, kde-format
+msgid "Show a popup on layout changes"
+msgstr "தளவமைப்பு மாறும்போது தெரித்தெழும் அறிவிப்பு காட்டு"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-01-03 12:10+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -50,6 +50,135 @@ msgstr ""
 #, kde-format
 msgid "Invalid action"
 msgstr "Acció no vàlida"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
+#: ActionEditor.ui:17
+#, kde-format
+msgid "Edit Parameter"
+msgstr "Edita el paràmetre"
+
+#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
+#: ActionEditor.ui:43
+#, kde-format
+msgid "Parameter type:"
+msgstr "Tipus de paràmetre:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:51
+#, kde-format
+msgid "Property Match"
+msgstr "Coincidència de la propietat"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:56
+#, kde-format
+msgid "Content Conjunction"
+msgstr "Conjunció del contingut"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:61
+#, kde-format
+msgid "Content Disjunction"
+msgstr "Disjunció del contingut"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:66
+#, kde-format
+msgid "Device Interface Match"
+msgstr "Coincidència de la interfície del dispositiu"
+
+#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
+#: ActionEditor.ui:96
+#, kde-format
+msgid "Device type:"
+msgstr "Tipus de dispositiu:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblValueName)
+#: ActionEditor.ui:135
+#, kde-format
+msgid "Value name:"
+msgstr "Nom del valor:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:175
+#, kde-format
+msgid "Equals"
+msgstr "Iguals"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:180
+#, kde-format
+msgid "Contains"
+msgstr "Conté"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
+#: ActionEditor.ui:208
+#, kde-format
+msgid "Reset Parameter"
+msgstr "Reinicia el paràmetre"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
+#: ActionEditor.ui:215
+#, kde-format
+msgid "Save Parameter Changes"
+msgstr "Guarda els canvis del paràmetre"
+
+#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
+#: ActionEditor.ui:247
+#, kde-format
+msgid "Action icon, click to change it"
+msgstr "Icona d'acció, cliqueu-hi per a canviar-lo"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
+#: ActionEditor.ui:254
+#, kde-format
+msgid "Action name"
+msgstr "Nom de l'acció"
+
+#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
+#: ActionEditor.ui:271
+#, kde-format
+msgid "Command: "
+msgstr "Ordre: "
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
+#: ActionEditor.ui:283
+#, no-c-format, kde-format
+msgid ""
+"Command that will trigger the action\n"
+"This can include any or all of the following case insensitive expands:\n"
+"\n"
+"%f: The mountpoint for the device - Storage Access devices only\n"
+"%d: Path to the device node - Block devices only\n"
+"%i: The identifier of the device"
+msgstr ""
+"L'ordre que activarà l'acció\n"
+"Esta pot incloure qualsevol o totes de les expansions següents sense "
+"distinció entre majúscules i minúscules:\n"
+"\n"
+"%f: el punt de muntatge per al dispositiu -només dispositius d'accés "
+"d'emmagatzematge-\n"
+"%d: camí cap al node del dispositiu -només dispositius de blocs-\n"
+"%i: l'identificador del dispositiu"
+
+#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
+#: ActionEditor.ui:300
+#, kde-format
+msgid "Devices must match the following parameters for this action:"
+msgstr ""
+"Els dispositius han de satisfer els paràmetres següents per a esta acció:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblActionName)
+#: AddAction.ui:19
+#, kde-format
+msgid "Action name:"
+msgstr "Nom de l'acció:"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
+#: AddAction.ui:26
+#, kde-format
+msgid "Enter the name for your new action"
+msgstr "Introduïu el nom de la nova acció"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -147,83 +276,20 @@ msgstr "No s'ha seleccionat cap acció"
 msgid "Cannot be deleted"
 msgstr "No es pot suprimir"
 
-#~ msgid "Edit Parameter"
-#~ msgstr "Edita el paràmetre"
+#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
+#: SolidActions.ui:22
+#, kde-format
+msgid "Remove"
+msgstr "Elimina"
 
-#~ msgid "Parameter type:"
-#~ msgstr "Tipus de paràmetre:"
+#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
+#: SolidActions.ui:29
+#, kde-format
+msgid "Edit…"
+msgstr "Edita…"
 
-#~ msgid "Property Match"
-#~ msgstr "Coincidència de la propietat"
-
-#~ msgid "Content Conjunction"
-#~ msgstr "Conjunció del contingut"
-
-#~ msgid "Content Disjunction"
-#~ msgstr "Disjunció del contingut"
-
-#~ msgid "Device Interface Match"
-#~ msgstr "Coincidència de la interfície del dispositiu"
-
-#~ msgid "Device type:"
-#~ msgstr "Tipus de dispositiu:"
-
-#~ msgid "Value name:"
-#~ msgstr "Nom del valor:"
-
-#~ msgid "Equals"
-#~ msgstr "Iguals"
-
-#~ msgid "Contains"
-#~ msgstr "Conté"
-
-#~ msgid "Reset Parameter"
-#~ msgstr "Reinicia el paràmetre"
-
-#~ msgid "Save Parameter Changes"
-#~ msgstr "Guarda els canvis del paràmetre"
-
-#~ msgid "Action icon, click to change it"
-#~ msgstr "Icona d'acció, cliqueu-hi per a canviar-lo"
-
-#~ msgid "Action name"
-#~ msgstr "Nom de l'acció"
-
-#~ msgid "Command: "
-#~ msgstr "Ordre: "
-
-#~ msgid ""
-#~ "Command that will trigger the action\n"
-#~ "This can include any or all of the following case insensitive expands:\n"
-#~ "\n"
-#~ "%f: The mountpoint for the device - Storage Access devices only\n"
-#~ "%d: Path to the device node - Block devices only\n"
-#~ "%i: The identifier of the device"
-#~ msgstr ""
-#~ "L'ordre que activarà l'acció\n"
-#~ "Esta pot incloure qualsevol o totes de les expansions següents sense "
-#~ "distinció entre majúscules i minúscules:\n"
-#~ "\n"
-#~ "%f: el punt de muntatge per al dispositiu -només dispositius d'accés "
-#~ "d'emmagatzematge-\n"
-#~ "%d: camí cap al node del dispositiu -només dispositius de blocs-\n"
-#~ "%i: l'identificador del dispositiu"
-
-#~ msgid "Devices must match the following parameters for this action:"
-#~ msgstr ""
-#~ "Els dispositius han de satisfer els paràmetres següents per a esta acció:"
-
-#~ msgid "Action name:"
-#~ msgstr "Nom de l'acció:"
-
-#~ msgid "Enter the name for your new action"
-#~ msgstr "Introduïu el nom de la nova acció"
-
-#~ msgid "Remove"
-#~ msgstr "Elimina"
-
-#~ msgid "Edit…"
-#~ msgstr "Edita…"
-
-#~ msgid "Add…"
-#~ msgstr "Afig…"
+#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
+#: SolidActions.ui:36
+#, kde-format
+msgid "Add…"
+msgstr "Afig…"

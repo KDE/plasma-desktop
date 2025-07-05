@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2009-01-16 22:16+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
@@ -27,6 +27,58 @@ msgstr "కృష్ణబాబు కె , విజయ్ కిరణ్ క
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "k.meetme@gmail.com,infyquest@gmail.com"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: dateandtime.ui:22
+#, kde-format
+msgid "Date and Time"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: dateandtime.ui:30
+#, fuzzy, kde-format
+#| msgid "Set date and time &automatically:"
+msgid "Set date and time &automatically"
+msgstr "తేదీ మరియు సమయంను స్వయంచాలకంగా అమర్చు:"
+
+#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
+#: dateandtime.ui:53
+#, kde-format
+msgid "&Time server:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: dateandtime.ui:86
+#, kde-format
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr "మీరు యిక్కడ సిస్టమ్ తేదీయొక్క నెల తేదీను, నెలను మరియు సంవత్సరమును మార్చ గలరు."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: dateandtime.ui:122
+#, fuzzy, kde-format
+#| msgid "Time zone Error"
+msgid "Time Zone"
+msgstr "సమయ క్షేత్రపు దోషము"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dateandtime.ui:128
+#, fuzzy, kde-format
+#| msgid "To change the local time zone, select your area from the list below"
+msgid "To change the local time zone, select your area from the list below."
+msgstr "స్థానిక సమయ క్షేత్రమును మార్చుటకు, మీ ప్రాంతమును క్రింది జాబితానుండి యెంపికచేయుము"
+
+#. i18n: ectx: property (text), widget (QLabel, m_local)
+#: dateandtime.ui:151
+#, fuzzy, kde-format
+#| msgid "Current local time zone: %1 (%2)"
+msgid "Current local time zone:"
+msgstr "ప్రస్తుత స్థానిక సమయ క్షేత్రము: %1 (%2)"
+
+#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
+#: dateandtime.ui:161
+#, kde-format
+msgid "Search…"
+msgstr ""
 
 #: dtime.cpp:61
 #, kde-format
@@ -171,30 +223,6 @@ msgstr "టైమ్ సెర్వర్‌ను సంప్రదించ�
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set timezone"
 msgstr "టైమ్ సెర్వర్‌ను సంప్రదించలేక పోయింది: %1"
-
-#, fuzzy
-#~| msgid "Set date and time &automatically:"
-#~ msgid "Set date and time &automatically"
-#~ msgstr "తేదీ మరియు సమయంను స్వయంచాలకంగా అమర్చు:"
-
-#~ msgid ""
-#~ "Here you can change the system date's day of the month, month and year."
-#~ msgstr "మీరు యిక్కడ సిస్టమ్ తేదీయొక్క నెల తేదీను, నెలను మరియు సంవత్సరమును మార్చ గలరు."
-
-#, fuzzy
-#~| msgid "Time zone Error"
-#~ msgid "Time Zone"
-#~ msgstr "సమయ క్షేత్రపు దోషము"
-
-#, fuzzy
-#~| msgid "To change the local time zone, select your area from the list below"
-#~ msgid "To change the local time zone, select your area from the list below."
-#~ msgstr "స్థానిక సమయ క్షేత్రమును మార్చుటకు, మీ ప్రాంతమును క్రింది జాబితానుండి యెంపికచేయుము"
-
-#, fuzzy
-#~| msgid "Current local time zone: %1 (%2)"
-#~ msgid "Current local time zone:"
-#~ msgstr "ప్రస్తుత స్థానిక సమయ క్షేత్రము: %1 (%2)"
 
 #~ msgid "kcmclock"
 #~ msgstr "kcmclock"

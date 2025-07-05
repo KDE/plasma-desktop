@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-03-24 15:39+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -37,12 +37,14 @@ msgstr "Yeniden Başlat"
 msgid "Visual behavior:"
 msgstr "Görsel davranış:"
 
-#: package/contents/ui/main.qml:51
+#. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
+#: package/contents/ui/main.qml:51 workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "Fareyle üzerine gelindiğinde bilgi amaçlı araç ipuçlarını göster"
 
-#: package/contents/ui/main.qml:62
+#. i18n: ectx: label, entry (osdEnabled), group (OSD)
+#: package/contents/ui/main.qml:62 workspaceoptions_plasmasettings.kcfg:15
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "Durum değişiklikleri için görsel geri bildirim göster"
@@ -173,30 +175,54 @@ msgstr ""
 "Dokunmatik Kip'te, kullanıcı arayüzünün bir çok ögesi dokunmatik kullanımı "
 "kolaylaştırmak adına daha büyük olacaktır."
 
-#~ msgid "Single click to open files"
-#~ msgstr "Dosyaları açmak için tek tıkla"
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Single click to open files"
+msgstr "Dosyaları açmak için tek tıkla"
 
-#~ msgid "Animation speed"
-#~ msgstr "Canlandırma hızı"
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:13
+#, kde-format
+msgid "Animation speed"
+msgstr "Canlandırma hızı"
 
-#~ msgid "Left-click in scrollbar track moves scrollbar by one page"
-#~ msgstr "Sarma çubuğu alanında sol tık bir sayfa hareket ettirir"
+#. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:17
+#, kde-format
+msgid "Left-click in scrollbar track moves scrollbar by one page"
+msgstr "Sarma çubuğu alanında sol tık bir sayfa hareket ettirir"
 
-#~ msgid "Automatically switch to touch-optimized mode"
-#~ msgstr "Dokunmatik kipe kendiğinden geç"
+#. i18n: ectx: label, entry (tabletMode), group (Input)
+#: workspaceoptions_kwinsettings.kcfg:9
+#, kde-format
+msgid "Automatically switch to touch-optimized mode"
+msgstr "Dokunmatik kipe kendiğinden geç"
 
-#~ msgid "Enable middle click selection pasting"
-#~ msgstr "Orta tıklama seçim yapıştırmayı etkinleştir"
+#. i18n: ectx: label, entry (primarySelection), group (Wayland)
+#: workspaceoptions_kwinsettings.kcfg:15
+#, kde-format
+msgid "Enable middle click selection pasting"
+msgstr "Orta tıklama seçim yapıştırmayı etkinleştir"
 
-#~ msgid ""
-#~ "Show an on-screen display to indicate status changes such as brightness "
-#~ "or volume"
-#~ msgstr ""
-#~ "Parlaklık veya ses düzeyi gibi durum değişikliklerini ekran üzerinde "
-#~ "(OSD) gösterin"
+#. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:16
+#, kde-format
+msgid ""
+"Show an on-screen display to indicate status changes such as brightness or "
+"volume"
+msgstr ""
+"Parlaklık veya ses düzeyi gibi durum değişikliklerini ekran üzerinde (OSD) "
+"gösterin"
 
-#~ msgid "OSD on layout change"
-#~ msgstr "Düzen değişikliğinde OSD"
+#. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:20
+#, kde-format
+msgid "OSD on layout change"
+msgstr "Düzen değişikliğinde OSD"
 
-#~ msgid "Show a popup on layout changes"
-#~ msgstr "Düzen değişikliklerinde açılır bir pencere göster"
+#. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:21
+#, kde-format
+msgid "Show a popup on layout changes"
+msgstr "Düzen değişikliklerinde açılır bir pencere göster"

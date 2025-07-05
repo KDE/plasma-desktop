@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2009-01-09 16:29+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
 "Language-Team: Bengali INDIA <fedora-trans-bn_IN@redhat.com>\n"
@@ -167,25 +167,33 @@ msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr ""
 
-#, fuzzy
-#~| msgid "Conf&irm logout"
-#~ msgid "Confirm logout"
-#~ msgstr "লগ-আউটের সময় নিশ্চিত করা হবে (&i)"
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgid "Confirm logout"
+msgstr "লগ-আউটের সময় নিশ্চিত করা হবে (&i)"
 
-#, fuzzy
-#~| msgid "Default Shutdown Option"
-#~ msgid "Default leave option"
-#~ msgstr "বন্ধ করার জন্য ডিফল্ট বিকল্প"
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Default Shutdown Option"
+msgid "Default leave option"
+msgstr "বন্ধ করার জন্য ডিফল্ট বিকল্প"
 
-#, fuzzy
-#~| msgid "On Login"
-#~ msgid "On login"
-#~ msgstr "লগ-ইনের সময়"
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:22
+#, fuzzy, kde-format
+#| msgid "On Login"
+msgid "On login"
+msgstr "লগ-ইনের সময়"
 
-#, fuzzy
-#~| msgid "Applications to be e&xcluded from sessions:"
-#~ msgid "Applications to be excluded from session"
-#~ msgstr "সেশানের মধ্যে যে অ্যাপ্লিকেশনগুলি অন্তর্ভুক্ত করা হবে না: (&x)"
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:26
+#, fuzzy, kde-format
+#| msgid "Applications to be e&xcluded from sessions:"
+msgid "Applications to be excluded from session"
+msgstr "সেশানের মধ্যে যে অ্যাপ্লিকেশনগুলি অন্তর্ভুক্ত করা হবে না: (&x)"
 
 #, fuzzy
 #~| msgid "Default Shutdown Option"

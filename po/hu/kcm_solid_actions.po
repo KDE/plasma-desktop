@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-09-04 09:15+0200\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -47,6 +47,134 @@ msgstr ""
 #, kde-format
 msgid "Invalid action"
 msgstr "Érvénytelen művelet"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
+#: ActionEditor.ui:17
+#, kde-format
+msgid "Edit Parameter"
+msgstr "Paraméter szerkesztése"
+
+#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
+#: ActionEditor.ui:43
+#, kde-format
+msgid "Parameter type:"
+msgstr "Paramétertípus:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:51
+#, kde-format
+msgid "Property Match"
+msgstr "Tulajdonság egyezés"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:56
+#, kde-format
+msgid "Content Conjunction"
+msgstr "Tartalom összekapcsolás"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:61
+#, kde-format
+msgid "Content Disjunction"
+msgstr "Tartalom szétválasztás"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:66
+#, kde-format
+msgid "Device Interface Match"
+msgstr "Eszközcsatoló egyezés"
+
+#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
+#: ActionEditor.ui:96
+#, kde-format
+msgid "Device type:"
+msgstr "Eszköztípus:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblValueName)
+#: ActionEditor.ui:135
+#, kde-format
+msgid "Value name:"
+msgstr "Érték neve:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:175
+#, kde-format
+msgid "Equals"
+msgstr "Egyenlő ezzel:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:180
+#, kde-format
+msgid "Contains"
+msgstr "Tartalmazza ezt:"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
+#: ActionEditor.ui:208
+#, kde-format
+msgid "Reset Parameter"
+msgstr "Paraméter visszaállítása"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
+#: ActionEditor.ui:215
+#, kde-format
+msgid "Save Parameter Changes"
+msgstr "Paramétermódosítások mentése"
+
+#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
+#: ActionEditor.ui:247
+#, kde-format
+msgid "Action icon, click to change it"
+msgstr "Műveletikon, kattintson a módosításához"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
+#: ActionEditor.ui:254
+#, kde-format
+msgid "Action name"
+msgstr "Műveletnév"
+
+#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
+#: ActionEditor.ui:271
+#, kde-format
+msgid "Command: "
+msgstr "Parancs: "
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
+#: ActionEditor.ui:283
+#, no-c-format, kde-format
+msgid ""
+"Command that will trigger the action\n"
+"This can include any or all of the following case insensitive expands:\n"
+"\n"
+"%f: The mountpoint for the device - Storage Access devices only\n"
+"%d: Path to the device node - Block devices only\n"
+"%i: The identifier of the device"
+msgstr ""
+"A parancs nem fogja előidézni a műveletet\n"
+"Ez magába foglalhatja a következő kis- és nagybetűérzékeny kiterjesztések "
+"bármelyikét vagy az összeset:\n"
+"\n"
+"%f:  Az eszköz csatolási pontja - Csak tárolóeszközök\n"
+"%d: Eszközcsomópont útvonala - Csak blokkeszközök\n"
+"%i: Az eszköz azonosítója"
+
+#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
+#: ActionEditor.ui:300
+#, kde-format
+msgid "Devices must match the following parameters for this action:"
+msgstr ""
+"Az eszköznek illeszkednie kell a következő paraméterekre ehhez a művelethez:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblActionName)
+#: AddAction.ui:19
+#, kde-format
+msgid "Action name:"
+msgstr "Műveletnév:"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
+#: AddAction.ui:26
+#, kde-format
+msgid "Enter the name for your new action"
+msgstr "Adja meg az új művelet nevét"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -142,86 +270,23 @@ msgstr "Nincs kijelölve művelet"
 msgid "Cannot be deleted"
 msgstr "Nem törölhető"
 
-#~ msgid "Edit Parameter"
-#~ msgstr "Paraméter szerkesztése"
+#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
+#: SolidActions.ui:22
+#, kde-format
+msgid "Remove"
+msgstr "Eltávolítás"
 
-#~ msgid "Parameter type:"
-#~ msgstr "Paramétertípus:"
+#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
+#: SolidActions.ui:29
+#, kde-format
+msgid "Edit…"
+msgstr "Szerkesztés…"
 
-#~ msgid "Property Match"
-#~ msgstr "Tulajdonság egyezés"
-
-#~ msgid "Content Conjunction"
-#~ msgstr "Tartalom összekapcsolás"
-
-#~ msgid "Content Disjunction"
-#~ msgstr "Tartalom szétválasztás"
-
-#~ msgid "Device Interface Match"
-#~ msgstr "Eszközcsatoló egyezés"
-
-#~ msgid "Device type:"
-#~ msgstr "Eszköztípus:"
-
-#~ msgid "Value name:"
-#~ msgstr "Érték neve:"
-
-#~ msgid "Equals"
-#~ msgstr "Egyenlő ezzel:"
-
-#~ msgid "Contains"
-#~ msgstr "Tartalmazza ezt:"
-
-#~ msgid "Reset Parameter"
-#~ msgstr "Paraméter visszaállítása"
-
-#~ msgid "Save Parameter Changes"
-#~ msgstr "Paramétermódosítások mentése"
-
-#~ msgid "Action icon, click to change it"
-#~ msgstr "Műveletikon, kattintson a módosításához"
-
-#~ msgid "Action name"
-#~ msgstr "Műveletnév"
-
-#~ msgid "Command: "
-#~ msgstr "Parancs: "
-
-#~ msgid ""
-#~ "Command that will trigger the action\n"
-#~ "This can include any or all of the following case insensitive expands:\n"
-#~ "\n"
-#~ "%f: The mountpoint for the device - Storage Access devices only\n"
-#~ "%d: Path to the device node - Block devices only\n"
-#~ "%i: The identifier of the device"
-#~ msgstr ""
-#~ "A parancs nem fogja előidézni a műveletet\n"
-#~ "Ez magába foglalhatja a következő kis- és nagybetűérzékeny kiterjesztések "
-#~ "bármelyikét vagy az összeset:\n"
-#~ "\n"
-#~ "%f:  Az eszköz csatolási pontja - Csak tárolóeszközök\n"
-#~ "%d: Eszközcsomópont útvonala - Csak blokkeszközök\n"
-#~ "%i: Az eszköz azonosítója"
-
-#~ msgid "Devices must match the following parameters for this action:"
-#~ msgstr ""
-#~ "Az eszköznek illeszkednie kell a következő paraméterekre ehhez a "
-#~ "művelethez:"
-
-#~ msgid "Action name:"
-#~ msgstr "Műveletnév:"
-
-#~ msgid "Enter the name for your new action"
-#~ msgstr "Adja meg az új művelet nevét"
-
-#~ msgid "Remove"
-#~ msgstr "Eltávolítás"
-
-#~ msgid "Edit…"
-#~ msgstr "Szerkesztés…"
-
-#~ msgid "Add…"
-#~ msgstr "Hozzáadás…"
+#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
+#: SolidActions.ui:36
+#, kde-format
+msgid "Add…"
+msgstr "Hozzáadás…"
 
 #~ msgid "Edit..."
 #~ msgstr "Szerkesztés…"

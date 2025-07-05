@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-11-09 20:08+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -31,6 +31,56 @@ msgstr "Wolfram Diestel,Oliver Kellogg"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "wolfram@steloj.de,okellogg@users.sourceforge.net"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: dateandtime.ui:22
+#, kde-format
+msgid "Date and Time"
+msgstr "Dato kaj Tempo"
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: dateandtime.ui:30
+#, kde-format
+msgid "Set date and time &automatically"
+msgstr "Meti daton kaj tempon &aŭtomate"
+
+#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
+#: dateandtime.ui:53
+#, kde-format
+msgid "&Time server:"
+msgstr "&Temposervilo:"
+
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: dateandtime.ui:86
+#, kde-format
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr ""
+"Tie ĉi vi povas ŝanĝi la monatan tagon, monaton kaj jaron de la sistemdato."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: dateandtime.ui:122
+#, kde-format
+msgid "Time Zone"
+msgstr "Tempzono"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dateandtime.ui:128
+#, kde-format
+msgid "To change the local time zone, select your area from the list below."
+msgstr ""
+"Por ŝanĝi la lokan tempozonon, elektu vian regionon de la malsupra listo"
+
+#. i18n: ectx: property (text), widget (QLabel, m_local)
+#: dateandtime.ui:151
+#, kde-format
+msgid "Current local time zone:"
+msgstr "Aktuala loka tempozono:"
+
+#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
+#: dateandtime.ui:161
+#, kde-format
+msgid "Search…"
+msgstr "Serĉi…"
 
 #: dtime.cpp:61
 #, kde-format
@@ -183,31 +233,3 @@ msgstr "Ne eblas meti aktualan tempon"
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "Ne eblas meti tempzonon"
-
-#~ msgid "Date and Time"
-#~ msgstr "Dato kaj Tempo"
-
-#~ msgid "Set date and time &automatically"
-#~ msgstr "Meti daton kaj tempon &aŭtomate"
-
-#~ msgid "&Time server:"
-#~ msgstr "&Temposervilo:"
-
-#~ msgid ""
-#~ "Here you can change the system date's day of the month, month and year."
-#~ msgstr ""
-#~ "Tie ĉi vi povas ŝanĝi la monatan tagon, monaton kaj jaron de la "
-#~ "sistemdato."
-
-#~ msgid "Time Zone"
-#~ msgstr "Tempzono"
-
-#~ msgid "To change the local time zone, select your area from the list below."
-#~ msgstr ""
-#~ "Por ŝanĝi la lokan tempozonon, elektu vian regionon de la malsupra listo"
-
-#~ msgid "Current local time zone:"
-#~ msgstr "Aktuala loka tempozono:"
-
-#~ msgid "Search…"
-#~ msgstr "Serĉi…"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_landingpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-06-26 14:57+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -15,6 +15,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 22.04.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#. i18n: ectx: label, entry (colorScheme), group (General)
+#: landingpage_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Color scheme name"
+msgstr "Názov farebnej schémy"
+
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:15
+#, kde-format
+msgid "Single click to open files"
+msgstr "Jeden klik na otvorenie súborov"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:19
+#, kde-format
+msgid "Global Look and Feel package"
+msgstr "Balíček Globálny vzhľad a dojem"
+
+#. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
+#. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:23
+#: landingpage_kdeglobalssettings.kcfg:27
+#, kde-format
+msgid "Global Look and Feel package, alternate"
+msgstr "Balíček Globálny vzhľad a dojem, alternatívny"
+
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:31
+#, kde-format
+msgid "Animation speed"
+msgstr "Rýchlosť animácií"
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -86,21 +118,6 @@ msgstr "Ďalšie nastavenia správania..."
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "Najpoužívanejšie stránky:"
-
-#~ msgid "Color scheme name"
-#~ msgstr "Názov farebnej schémy"
-
-#~ msgid "Single click to open files"
-#~ msgstr "Jeden klik na otvorenie súborov"
-
-#~ msgid "Global Look and Feel package"
-#~ msgstr "Balíček Globálny vzhľad a dojem"
-
-#~ msgid "Global Look and Feel package, alternate"
-#~ msgstr "Balíček Globálny vzhľad a dojem, alternatívny"
-
-#~ msgid "Animation speed"
-#~ msgstr "Rýchlosť animácií"
 
 #~ msgid "Plasma"
 #~ msgstr "Plasma"

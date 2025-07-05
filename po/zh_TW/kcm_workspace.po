@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-02-07 20:15+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -37,12 +37,14 @@ msgstr "重新啟動"
 msgid "Visual behavior:"
 msgstr "視覺行為："
 
-#: package/contents/ui/main.qml:51
+#. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
+#: package/contents/ui/main.qml:51 workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "顯示游標停留時的訊息提示"
 
-#: package/contents/ui/main.qml:62
+#. i18n: ectx: label, entry (osdEnabled), group (OSD)
+#: package/contents/ui/main.qml:62 workspaceoptions_plasmasettings.kcfg:15
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "顯示狀態變更的視覺回饋"
@@ -169,31 +171,55 @@ msgid ""
 "more easily accommodate touch interaction."
 msgstr "觸控模式會讓使用者介面許多元素變大，讓觸控操作更容易。"
 
-#~ msgid "Single click to open files"
-#~ msgstr "按一下開啟檔案"
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Single click to open files"
+msgstr "按一下開啟檔案"
 
-#~ msgid "Animation speed"
-#~ msgstr "動畫速度"
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:13
+#, kde-format
+msgid "Animation speed"
+msgstr "動畫速度"
 
-#~ msgid "Left-click in scrollbar track moves scrollbar by one page"
-#~ msgstr "左鍵捲軸列軌道："
+#. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:17
+#, kde-format
+msgid "Left-click in scrollbar track moves scrollbar by one page"
+msgstr "左鍵捲軸列軌道："
 
-#~ msgid "Automatically switch to touch-optimized mode"
-#~ msgstr "自動切換到為觸控最佳化的模式"
+#. i18n: ectx: label, entry (tabletMode), group (Input)
+#: workspaceoptions_kwinsettings.kcfg:9
+#, kde-format
+msgid "Automatically switch to touch-optimized mode"
+msgstr "自動切換到為觸控最佳化的模式"
 
-#~ msgid "Enable middle click selection pasting"
-#~ msgstr "啟用中鍵點擊貼上選取"
+#. i18n: ectx: label, entry (primarySelection), group (Wayland)
+#: workspaceoptions_kwinsettings.kcfg:15
+#, kde-format
+msgid "Enable middle click selection pasting"
+msgstr "啟用中鍵點擊貼上選取"
 
-#~ msgid ""
-#~ "Show an on-screen display to indicate status changes such as brightness "
-#~ "or volume"
-#~ msgstr "使用螢幕顯示（OSD）來顯示亮度或音量等等的狀態變更"
+#. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:16
+#, kde-format
+msgid ""
+"Show an on-screen display to indicate status changes such as brightness or "
+"volume"
+msgstr "使用螢幕顯示（OSD）來顯示亮度或音量等等的狀態變更"
 
-#~ msgid "OSD on layout change"
-#~ msgstr "佈局變更時的螢幕顯示"
+#. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:20
+#, kde-format
+msgid "OSD on layout change"
+msgstr "佈局變更時的螢幕顯示"
 
-#~ msgid "Show a popup on layout changes"
-#~ msgstr "佈局變更時顯示彈出視窗"
+#. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:21
+#, kde-format
+msgid "Show a popup on layout changes"
+msgstr "佈局變更時顯示彈出視窗"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

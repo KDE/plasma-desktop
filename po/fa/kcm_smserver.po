@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2007-02-01 10:26+0330\n"
 "Last-Translator: Nazanin Kazemi <kazemi@itland.ir>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -171,25 +171,33 @@ msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr ""
 
-#, fuzzy
-#~| msgid "Conf&irm logout"
-#~ msgid "Confirm logout"
-#~ msgstr "&تأیید‌ خروج‌"
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgid "Confirm logout"
+msgstr "&تأیید‌ خروج‌"
 
-#, fuzzy
-#~| msgid "Default Shutdown Option"
-#~ msgid "Default leave option"
-#~ msgstr "گزینه تعطیل پیش‌فرض"
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Default Shutdown Option"
+msgid "Default leave option"
+msgstr "گزینه تعطیل پیش‌فرض"
 
-#, fuzzy
-#~| msgid "On Login"
-#~ msgid "On login"
-#~ msgstr "هنگام ورود"
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:22
+#, fuzzy, kde-format
+#| msgid "On Login"
+msgid "On login"
+msgstr "هنگام ورود"
 
-#, fuzzy
-#~| msgid "Applications to be e&xcluded from sessions:"
-#~ msgid "Applications to be excluded from session"
-#~ msgstr "کاربردهای &استخراج‌شده از نشستها:‌"
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:26
+#, fuzzy, kde-format
+#| msgid "Applications to be e&xcluded from sessions:"
+msgid "Applications to be excluded from session"
+msgstr "کاربردهای &استخراج‌شده از نشستها:‌"
 
 #, fuzzy
 #~| msgid "Default Shutdown Option"

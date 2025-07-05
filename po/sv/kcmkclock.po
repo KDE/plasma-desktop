@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-05-27 18:51+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -33,6 +33,54 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 "awl@hem.passagen.se,newzella@linux.nu,per.lindstrom@osd.privataccess.nu"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: dateandtime.ui:22
+#, kde-format
+msgid "Date and Time"
+msgstr "Datum och tid"
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: dateandtime.ui:30
+#, kde-format
+msgid "Set date and time &automatically"
+msgstr "Ställ in datum och tid &automatiskt"
+
+#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
+#: dateandtime.ui:53
+#, kde-format
+msgid "&Time server:"
+msgstr "&Tidserver:"
+
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: dateandtime.ui:86
+#, kde-format
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr "Här kan du ändra dag i månaden, månad och år för systemdatumet."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: dateandtime.ui:122
+#, kde-format
+msgid "Time Zone"
+msgstr "Tidszon"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dateandtime.ui:128
+#, kde-format
+msgid "To change the local time zone, select your area from the list below."
+msgstr "För att ändra tidszon, välj ditt område från listan nedan."
+
+#. i18n: ectx: property (text), widget (QLabel, m_local)
+#: dateandtime.ui:151
+#, kde-format
+msgid "Current local time zone:"
+msgstr "Aktuell lokal tidszon:"
+
+#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
+#: dateandtime.ui:161
+#, kde-format
+msgid "Search…"
+msgstr "Sök…"
 
 #: dtime.cpp:61
 #, kde-format
@@ -187,31 +235,6 @@ msgstr "Kan inte ställa in aktuell tid"
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "Kan inte ställa in tidszon"
-
-#~ msgid "Date and Time"
-#~ msgstr "Datum och tid"
-
-#~ msgid "Set date and time &automatically"
-#~ msgstr "Ställ in datum och tid &automatiskt"
-
-#~ msgid "&Time server:"
-#~ msgstr "&Tidserver:"
-
-#~ msgid ""
-#~ "Here you can change the system date's day of the month, month and year."
-#~ msgstr "Här kan du ändra dag i månaden, månad och år för systemdatumet."
-
-#~ msgid "Time Zone"
-#~ msgstr "Tidszon"
-
-#~ msgid "To change the local time zone, select your area from the list below."
-#~ msgstr "För att ändra tidszon, välj ditt område från listan nedan."
-
-#~ msgid "Current local time zone:"
-#~ msgstr "Aktuell lokal tidszon:"
-
-#~ msgid "Search…"
-#~ msgstr "Sök…"
 
 #~ msgid "kcmclock"
 #~ msgstr "IM klocka"

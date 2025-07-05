@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_device_automounter\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-05-10 20:16+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -57,6 +57,67 @@ msgstr ""
 #, kde-format
 msgid "Plasma 5 Port"
 msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, kde-format
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"Tiu listo enhavas ĉiujn konatajn memorilojn de la sistemo. Se \"Aŭtomate "
+"muntas je ensaluto\" estas enŝaltita, la memoriljo estos aŭtomate muntitaj "
+"kvankam \"Munti ĉiujn forpreneblajn komunikilojn je ensaluto\" estas "
+"nemarkita. La sama validas pori \"Aŭtomate muntas je konektiĝo\"."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"Klakante tiun butonon 'forgesos' la elektitan aparaton. Tio estasnur utila "
+"se la opcio \"Nur aŭtomate munti forpreneblajn memorilojn kiuj estis permane "
+"muntita antaŭe\" estas ŝaltita. Kiam la aparato estas forgesita kaj "
+"lasistemo estas agordita por munti aŭtomate nur 'konataj' aparatoj, la "
+"aparatone estos aŭtomate muntita."
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "Forgesu Aparaton"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, kde-format
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"Kiam tio estas neŝaltita, nur memoritaj aparatoj estos aŭtomate muntitaj."
+"Aparato estas 'memoritaj' se ĝi iam estis muntita antaŭe. Ekzemple,se vi "
+"konektas USB memoriloj  por ŝarĝi, tio ne sufiĉas por 'memori' ĝin- Se la "
+"dosieroj ne estis atingitaj, la aparato ne estos aŭtomate muntita "
+"venontfoje. Kiam dosiero estos atingita, tiam, la enhavo estos aŭtomate "
+"disponebla al la sistemo."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, kde-format
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr ""
+"Aŭtomate munti forpreneblajn memorilojn kiuj neniam estis muntitaj antaŭe"
 
 #: DeviceModel.cpp:52
 #, kde-format
@@ -119,51 +180,3 @@ msgstr "Tiu aparato estos aŭtomate muntita je konektiĝo"
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "Tiu aparato NE estos aŭtomate muntita je konektiĝo"
-
-#~ msgid ""
-#~ "This list contains the storage devices known to the system. If "
-#~ "\"Automount on Login\" is checked, the device will be automatically "
-#~ "mounted even though \"Mount all removable media at login\" is unchecked. "
-#~ "The same applies for \"Automount on Attach\"."
-#~ msgstr ""
-#~ "Tiu listo enhavas ĉiujn konatajn memorilojn de la sistemo. Se \"Aŭtomate "
-#~ "muntas je ensaluto\" estas enŝaltita, la memoriljo estos aŭtomate "
-#~ "muntitaj kvankam \"Munti ĉiujn forpreneblajn komunikilojn je ensaluto\" "
-#~ "estas nemarkita. La sama validas pori \"Aŭtomate muntas je konektiĝo\"."
-
-#~ msgid ""
-#~ "Clicking this button causes the selected devices to be 'forgotten'. This "
-#~ "is only useful if \"Only automatically mount removable media that has "
-#~ "been manually mounted before\" is checked. Once a device is forgotten and "
-#~ "the system is set to only automatically mount familiar devices, the "
-#~ "device will not be automatically mounted."
-#~ msgstr ""
-#~ "Klakante tiun butonon 'forgesos' la elektitan aparaton. Tio estasnur "
-#~ "utila se la opcio \"Nur aŭtomate munti forpreneblajn memorilojn kiuj "
-#~ "estis permane muntita antaŭe\" estas ŝaltita. Kiam la aparato estas "
-#~ "forgesita kaj lasistemo estas agordita por munti aŭtomate nur 'konataj' "
-#~ "aparatoj, la aparatone estos aŭtomate muntita."
-
-#~ msgid "Forget Device"
-#~ msgstr "Forgesu Aparaton"
-
-#~ msgid ""
-#~ "When this is not checked, only remembered devices will be automatically "
-#~ "mounted. A device is 'remembered' if it has ever been mounted before. For "
-#~ "instance, plugging in a USB media player to charge is not sufficient to "
-#~ "'remember' it - if the files are not accessed, it will not be "
-#~ "automatically mounted the next time it is seen. Once they have been "
-#~ "accessed, however, the device's contents will be automatically made "
-#~ "available to the system."
-#~ msgstr ""
-#~ "Kiam tio estas neŝaltita, nur memoritaj aparatoj estos aŭtomate muntitaj."
-#~ "Aparato estas 'memoritaj' se ĝi iam estis muntita antaŭe. Ekzemple,se vi "
-#~ "konektas USB memoriloj  por ŝarĝi, tio ne sufiĉas por 'memori' ĝin- Se la "
-#~ "dosieroj ne estis atingitaj, la aparato ne estos aŭtomate muntita "
-#~ "venontfoje. Kiam dosiero estos atingita, tiam, la enhavo estos aŭtomate "
-#~ "disponebla al la sistemo."
-
-#~ msgid ""
-#~ "Automatically mount removable media that have never been mounted before"
-#~ msgstr ""
-#~ "Aŭtomate munti forpreneblajn memorilojn kiuj neniam estis muntitaj antaŭe"

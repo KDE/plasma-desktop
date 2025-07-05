@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-06-26 21:15+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -44,6 +44,132 @@ msgstr ""
 #, kde-format
 msgid "Invalid action"
 msgstr "إجراء غير صحيح"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
+#: ActionEditor.ui:17
+#, kde-format
+msgid "Edit Parameter"
+msgstr "حرر المعاملات"
+
+#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
+#: ActionEditor.ui:43
+#, kde-format
+msgid "Parameter type:"
+msgstr "نوع المعامل:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:51
+#, kde-format
+msgid "Property Match"
+msgstr "تطابق الخاصية"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:56
+#, kde-format
+msgid "Content Conjunction"
+msgstr "اقتران المحتوى"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:61
+#, kde-format
+msgid "Content Disjunction"
+msgstr "فصل المحتوى"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:66
+#, kde-format
+msgid "Device Interface Match"
+msgstr "تطابق واجهة الجهاز"
+
+#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
+#: ActionEditor.ui:96
+#, kde-format
+msgid "Device type:"
+msgstr "نوع الجهاز:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblValueName)
+#: ActionEditor.ui:135
+#, kde-format
+msgid "Value name:"
+msgstr "اسم القيمة:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:175
+#, kde-format
+msgid "Equals"
+msgstr "يساوي"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:180
+#, kde-format
+msgid "Contains"
+msgstr "يحوي"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
+#: ActionEditor.ui:208
+#, kde-format
+msgid "Reset Parameter"
+msgstr "صفر المعاملات"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
+#: ActionEditor.ui:215
+#, kde-format
+msgid "Save Parameter Changes"
+msgstr "احفظ تغييرات المعاملات"
+
+#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
+#: ActionEditor.ui:247
+#, kde-format
+msgid "Action icon, click to change it"
+msgstr "أيقونة الإجراء ، انقر لتغيرها"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
+#: ActionEditor.ui:254
+#, kde-format
+msgid "Action name"
+msgstr "اسم الإجراء"
+
+#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
+#: ActionEditor.ui:271
+#, kde-format
+msgid "Command: "
+msgstr "الأمر:"
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
+#: ActionEditor.ui:283
+#, no-c-format, kde-format
+msgid ""
+"Command that will trigger the action\n"
+"This can include any or all of the following case insensitive expands:\n"
+"\n"
+"%f: The mountpoint for the device - Storage Access devices only\n"
+"%d: Path to the device node - Block devices only\n"
+"%i: The identifier of the device"
+msgstr ""
+"الأمر الذي سيطلق الإجراء\n"
+"يحوي هذا أي أو كل توسع غير حساس التالية:\n"
+"\n"
+"%f: نقطة ضم الجهاز - فقط أجهزة الوصول إلى التخزين.\n"
+"%d: مسار عقدة الجهاز - فقط أجهزة المناطق\n"
+"%i: معرف الجهاز"
+
+#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
+#: ActionEditor.ui:300
+#, kde-format
+msgid "Devices must match the following parameters for this action:"
+msgstr "يجب أن تطابق الأجهزة المعاملات التالية لهذا الإجراء:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblActionName)
+#: AddAction.ui:19
+#, kde-format
+msgid "Action name:"
+msgstr "اسم الإجراء:"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
+#: AddAction.ui:26
+#, kde-format
+msgid "Enter the name for your new action"
+msgstr "أدخل اسم لإجراءك الجديد:"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -137,83 +263,23 @@ msgstr "لم يختر أي إجراء"
 msgid "Cannot be deleted"
 msgstr "لا يمكن حذفه"
 
-#~ msgid "Edit Parameter"
-#~ msgstr "حرر المعاملات"
+#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
+#: SolidActions.ui:22
+#, kde-format
+msgid "Remove"
+msgstr "أزل"
 
-#~ msgid "Parameter type:"
-#~ msgstr "نوع المعامل:"
+#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
+#: SolidActions.ui:29
+#, kde-format
+msgid "Edit…"
+msgstr "حرّر…"
 
-#~ msgid "Property Match"
-#~ msgstr "تطابق الخاصية"
-
-#~ msgid "Content Conjunction"
-#~ msgstr "اقتران المحتوى"
-
-#~ msgid "Content Disjunction"
-#~ msgstr "فصل المحتوى"
-
-#~ msgid "Device Interface Match"
-#~ msgstr "تطابق واجهة الجهاز"
-
-#~ msgid "Device type:"
-#~ msgstr "نوع الجهاز:"
-
-#~ msgid "Value name:"
-#~ msgstr "اسم القيمة:"
-
-#~ msgid "Equals"
-#~ msgstr "يساوي"
-
-#~ msgid "Contains"
-#~ msgstr "يحوي"
-
-#~ msgid "Reset Parameter"
-#~ msgstr "صفر المعاملات"
-
-#~ msgid "Save Parameter Changes"
-#~ msgstr "احفظ تغييرات المعاملات"
-
-#~ msgid "Action icon, click to change it"
-#~ msgstr "أيقونة الإجراء ، انقر لتغيرها"
-
-#~ msgid "Action name"
-#~ msgstr "اسم الإجراء"
-
-#~ msgid "Command: "
-#~ msgstr "الأمر:"
-
-#~ msgid ""
-#~ "Command that will trigger the action\n"
-#~ "This can include any or all of the following case insensitive expands:\n"
-#~ "\n"
-#~ "%f: The mountpoint for the device - Storage Access devices only\n"
-#~ "%d: Path to the device node - Block devices only\n"
-#~ "%i: The identifier of the device"
-#~ msgstr ""
-#~ "الأمر الذي سيطلق الإجراء\n"
-#~ "يحوي هذا أي أو كل توسع غير حساس التالية:\n"
-#~ "\n"
-#~ "%f: نقطة ضم الجهاز - فقط أجهزة الوصول إلى التخزين.\n"
-#~ "%d: مسار عقدة الجهاز - فقط أجهزة المناطق\n"
-#~ "%i: معرف الجهاز"
-
-#~ msgid "Devices must match the following parameters for this action:"
-#~ msgstr "يجب أن تطابق الأجهزة المعاملات التالية لهذا الإجراء:"
-
-#~ msgid "Action name:"
-#~ msgstr "اسم الإجراء:"
-
-#~ msgid "Enter the name for your new action"
-#~ msgstr "أدخل اسم لإجراءك الجديد:"
-
-#~ msgid "Remove"
-#~ msgstr "أزل"
-
-#~ msgid "Edit…"
-#~ msgstr "حرّر…"
-
-#~ msgid "Add…"
-#~ msgstr "أضف…"
+#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
+#: SolidActions.ui:36
+#, kde-format
+msgid "Add…"
+msgstr "أضف…"
 
 #~ msgid "Edit..."
 #~ msgstr "حرر..."

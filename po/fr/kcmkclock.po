@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2024-04-26 11:56+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -38,6 +38,57 @@ msgstr "Thibaut Cousin, Nicolas Ternisien, Maxime Corteel"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "cousin@kde.org, nicolas.ternisien@gmail.com, mcorteel@gmail.com"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: dateandtime.ui:22
+#, kde-format
+msgid "Date and Time"
+msgstr "Date et heure"
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: dateandtime.ui:30
+#, kde-format
+msgid "Set date and time &automatically"
+msgstr "Définir &automatiquement la date et l'heure"
+
+#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
+#: dateandtime.ui:53
+#, kde-format
+msgid "&Time server:"
+msgstr "Serveur de &temps :"
+
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: dateandtime.ui:86
+#, kde-format
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr ""
+"Vous pouvez changer ici le jour, le mois et l'année de la date système."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: dateandtime.ui:122
+#, kde-format
+msgid "Time Zone"
+msgstr "Fuseau horaire"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dateandtime.ui:128
+#, kde-format
+msgid "To change the local time zone, select your area from the list below."
+msgstr ""
+"Pour changer de fuseau horaire, sélectionnez votre zone dans la liste ci-"
+"dessous."
+
+#. i18n: ectx: property (text), widget (QLabel, m_local)
+#: dateandtime.ui:151
+#, kde-format
+msgid "Current local time zone:"
+msgstr "Fuseau horaire actuel :"
+
+#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
+#: dateandtime.ui:161
+#, kde-format
+msgid "Search…"
+msgstr "Rechercher…"
 
 #: dtime.cpp:61
 #, kde-format
@@ -196,34 +247,6 @@ msgstr "Impossible de régler l'heure actuelle"
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "Impossible de régler le fuseau horaire"
-
-#~ msgid "Date and Time"
-#~ msgstr "Date et heure"
-
-#~ msgid "Set date and time &automatically"
-#~ msgstr "Définir &automatiquement la date et l'heure"
-
-#~ msgid "&Time server:"
-#~ msgstr "Serveur de &temps :"
-
-#~ msgid ""
-#~ "Here you can change the system date's day of the month, month and year."
-#~ msgstr ""
-#~ "Vous pouvez changer ici le jour, le mois et l'année de la date système."
-
-#~ msgid "Time Zone"
-#~ msgstr "Fuseau horaire"
-
-#~ msgid "To change the local time zone, select your area from the list below."
-#~ msgstr ""
-#~ "Pour changer de fuseau horaire, sélectionnez votre zone dans la liste ci-"
-#~ "dessous."
-
-#~ msgid "Current local time zone:"
-#~ msgstr "Fuseau horaire actuel :"
-
-#~ msgid "Search…"
-#~ msgstr "Rechercher…"
 
 #~ msgid "kcmclock"
 #~ msgstr "kcmclock"

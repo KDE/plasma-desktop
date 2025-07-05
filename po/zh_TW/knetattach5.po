@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: knetattach\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2011-12-10 19:24+0800\n"
 "Last-Translator: Franklin <franklin@goodhorse.idv.tw>\n"
 "Language-Team: Chinese Traditional <zh-l10n@lists.linux.org.tw>\n"
@@ -83,6 +83,116 @@ msgstr "儲存並連線(&O)"
 msgid "C&onnect"
 msgstr "連線(&O)"
 
+#. i18n: ectx: property (windowTitle), widget (QWizard, KNetAttach)
+#: knetattach.ui:14
+#, kde-format
+msgid "Network Folder Wizard"
+msgstr "網路資料夾精靈"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderType)
+#: knetattach.ui:18
+#, kde-format
+msgid "Add Network Folder"
+msgstr "新增網路資料夾"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: knetattach.ui:24
+#, kde-format
+msgid ""
+"Select the type of network folder you wish to connect to and press the Next "
+"button."
+msgstr "請選擇您要連接的網路資料夾的型態，然後按「下一步」。"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _recent)
+#: knetattach.ui:65
+#, kde-format
+msgid "&Recent connection:"
+msgstr "最近的連線(&R)："
+
+#. i18n: ectx: property (text), widget (QRadioButton, _webfolder)
+#: knetattach.ui:72
+#, kde-format
+msgid "&WebFolder (webdav)"
+msgstr "Web 資料夾(webdav)(&W)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _fish)
+#: knetattach.ui:82
+#, kde-format
+msgid "&Secure shell (ssh)"
+msgstr "SSH(&S)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _ftp)
+#: knetattach.ui:111
+#, kde-format
+msgid "FT&P"
+msgstr "FTP(&P)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _smb)
+#: knetattach.ui:118
+#, kde-format
+msgid "&Microsoft® Windows® network drive"
+msgstr "Microsoft® Windows® 網路磁碟機(&M)"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderParameters)
+#: knetattach.ui:145
+#, kde-format
+msgid "Network Folder Information"
+msgstr "網路資料夾資訊"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel4_2)
+#: knetattach.ui:177
+#, kde-format
+msgid "&Name:"
+msgstr "名稱(&N)："
+
+#. i18n: ectx: property (text), widget (QLabel, _userText)
+#: knetattach.ui:196
+#, kde-format
+msgid "&User:"
+msgstr "使用者(&U)："
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: knetattach.ui:222
+#, kde-format
+msgid "Se&rver:"
+msgstr "伺服器(&R)："
+
+#. i18n: ectx: property (text), widget (QLabel, _portText)
+#: knetattach.ui:248
+#, kde-format
+msgid "&Port:"
+msgstr "埠號(&P)："
+
+#. i18n: ectx: property (text), widget (QLabel, _protocol)
+#: knetattach.ui:283
+#, kde-format
+msgid "&Protocol:"
+msgstr "協定(&P)："
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: knetattach.ui:313
+#, kde-format
+msgid "&Folder:"
+msgstr "資料夾(&F)："
+
+#. i18n: ectx: property (text), widget (QLabel, _encodingText)
+#: knetattach.ui:335
+#, kde-format
+msgid "Encoding:"
+msgstr "編碼："
+
+#. i18n: ectx: property (text), widget (QCheckBox, _createIcon)
+#: knetattach.ui:351
+#, kde-format
+msgid "Cr&eate an icon for this remote folder"
+msgstr "為遠端資料夾產生圖示(&E)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _useEncryption)
+#: knetattach.ui:361
+#, kde-format
+msgid "&Use encryption"
+msgstr "加密(&U)"
+
 #: main.cpp:21 main.cpp:23
 #, kde-format
 msgid "KDE Network Wizard"
@@ -102,59 +212,3 @@ msgstr "George Staikos"
 #, kde-format
 msgid "Primary author and maintainer"
 msgstr "主要作者與維護者"
-
-#~ msgid "Network Folder Wizard"
-#~ msgstr "網路資料夾精靈"
-
-#~ msgid "Add Network Folder"
-#~ msgstr "新增網路資料夾"
-
-#~ msgid ""
-#~ "Select the type of network folder you wish to connect to and press the "
-#~ "Next button."
-#~ msgstr "請選擇您要連接的網路資料夾的型態，然後按「下一步」。"
-
-#~ msgid "&Recent connection:"
-#~ msgstr "最近的連線(&R)："
-
-#~ msgid "&WebFolder (webdav)"
-#~ msgstr "Web 資料夾(webdav)(&W)"
-
-#~ msgid "&Secure shell (ssh)"
-#~ msgstr "SSH(&S)"
-
-#~ msgid "FT&P"
-#~ msgstr "FTP(&P)"
-
-#~ msgid "&Microsoft® Windows® network drive"
-#~ msgstr "Microsoft® Windows® 網路磁碟機(&M)"
-
-#~ msgid "Network Folder Information"
-#~ msgstr "網路資料夾資訊"
-
-#~ msgid "&Name:"
-#~ msgstr "名稱(&N)："
-
-#~ msgid "&User:"
-#~ msgstr "使用者(&U)："
-
-#~ msgid "Se&rver:"
-#~ msgstr "伺服器(&R)："
-
-#~ msgid "&Port:"
-#~ msgstr "埠號(&P)："
-
-#~ msgid "&Protocol:"
-#~ msgstr "協定(&P)："
-
-#~ msgid "&Folder:"
-#~ msgstr "資料夾(&F)："
-
-#~ msgid "Encoding:"
-#~ msgstr "編碼："
-
-#~ msgid "Cr&eate an icon for this remote folder"
-#~ msgstr "為遠端資料夾產生圖示(&E)"
-
-#~ msgid "&Use encryption"
-#~ msgstr "加密(&U)"

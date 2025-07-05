@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-01-15 09:26+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -16,6 +16,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr "Domyślna przeglądarka sieci"
 
 #: componentchooser.cpp:74 componentchooserterminal.cpp:74
 #, kde-format
@@ -82,9 +88,6 @@ msgstr "Mapa:"
 msgctxt "Default phone app"
 msgid "Dialer:"
 msgstr "Wybierak numerów:"
-
-#~ msgid "Default web browser"
-#~ msgstr "Domyślna przeglądarka sieci"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

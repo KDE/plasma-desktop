@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2014-10-11 13:23+0300\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -48,6 +48,135 @@ msgstr ""
 #, kde-format
 msgid "Invalid action"
 msgstr "Μη έγκυρη ενέργεια"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
+#: ActionEditor.ui:17
+#, kde-format
+msgid "Edit Parameter"
+msgstr "Επεξεργασία παραμέτρου"
+
+#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
+#: ActionEditor.ui:43
+#, kde-format
+msgid "Parameter type:"
+msgstr "Τύπος παραμέτρου:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:51
+#, kde-format
+msgid "Property Match"
+msgstr "Ταίριασμα ιδιοτήτων"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:56
+#, kde-format
+msgid "Content Conjunction"
+msgstr "Σύζευξη περιεχομένου"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:61
+#, kde-format
+msgid "Content Disjunction"
+msgstr "Διάζευξη περιεχομένου"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:66
+#, kde-format
+msgid "Device Interface Match"
+msgstr "Ταίριασμα διασύνδεσης συσκευής"
+
+#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
+#: ActionEditor.ui:96
+#, kde-format
+msgid "Device type:"
+msgstr "Τύπος συσκευής:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblValueName)
+#: ActionEditor.ui:135
+#, kde-format
+msgid "Value name:"
+msgstr "Όνομα τιμής:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:175
+#, kde-format
+msgid "Equals"
+msgstr "Ισούται με"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:180
+#, kde-format
+msgid "Contains"
+msgstr "Περιέχει"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
+#: ActionEditor.ui:208
+#, kde-format
+msgid "Reset Parameter"
+msgstr "Επαναφορά παραμέτρου"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
+#: ActionEditor.ui:215
+#, kde-format
+msgid "Save Parameter Changes"
+msgstr "Αποθήκευση αλλαγών παραμέτρου"
+
+#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
+#: ActionEditor.ui:247
+#, kde-format
+msgid "Action icon, click to change it"
+msgstr "Εικονίδιο ενέργειας, κλικ για αλλαγή"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
+#: ActionEditor.ui:254
+#, kde-format
+msgid "Action name"
+msgstr "Όνομα ενέργειας"
+
+#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
+#: ActionEditor.ui:271
+#, kde-format
+msgid "Command: "
+msgstr "Εντολή: "
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
+#: ActionEditor.ui:283
+#, no-c-format, kde-format
+msgid ""
+"Command that will trigger the action\n"
+"This can include any or all of the following case insensitive expands:\n"
+"\n"
+"%f: The mountpoint for the device - Storage Access devices only\n"
+"%d: Path to the device node - Block devices only\n"
+"%i: The identifier of the device"
+msgstr ""
+"Η εντολή που θα εκτελεστεί από την ενέργεια\n"
+"Αυτό μπορεί να συμπεριλαμβάνει οποιονδήποτε από τους παρακάτω "
+"αντικαταστάτες:\n"
+"\n"
+"%f: Το σημείο προσάρτησης της συσκευής - μόνο για συσκευές αποθήκευσης\n"
+"%d: Διαδρομή στον κόμβο της συσκευής - μόνο για συσκευές τμημάτων\n"
+"%i: Το αναγνωριστικό της συσκευής"
+
+#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
+#: ActionEditor.ui:300
+#, kde-format
+msgid "Devices must match the following parameters for this action:"
+msgstr ""
+"Οι συσκευές πρέπει να ταιριάζουν με τις παρακάτω παραμέτρους γι' αυτήν την "
+"ενέργεια:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblActionName)
+#: AddAction.ui:19
+#, kde-format
+msgid "Action name:"
+msgstr "Όνομα ενέργειας:"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
+#: AddAction.ui:26
+#, kde-format
+msgid "Enter the name for your new action"
+msgstr "Εισάγετε το όνομα της νέας ενέργειας"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -143,80 +272,23 @@ msgstr "Δεν επιλέχθηκε ενέργεια"
 msgid "Cannot be deleted"
 msgstr "Αδυναμία διαγραφής"
 
-#~ msgid "Edit Parameter"
-#~ msgstr "Επεξεργασία παραμέτρου"
+#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
+#: SolidActions.ui:22
+#, kde-format
+msgid "Remove"
+msgstr "Αφαίρεση"
 
-#~ msgid "Parameter type:"
-#~ msgstr "Τύπος παραμέτρου:"
+#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
+#: SolidActions.ui:29
+#, kde-format
+msgid "Edit…"
+msgstr ""
 
-#~ msgid "Property Match"
-#~ msgstr "Ταίριασμα ιδιοτήτων"
-
-#~ msgid "Content Conjunction"
-#~ msgstr "Σύζευξη περιεχομένου"
-
-#~ msgid "Content Disjunction"
-#~ msgstr "Διάζευξη περιεχομένου"
-
-#~ msgid "Device Interface Match"
-#~ msgstr "Ταίριασμα διασύνδεσης συσκευής"
-
-#~ msgid "Device type:"
-#~ msgstr "Τύπος συσκευής:"
-
-#~ msgid "Value name:"
-#~ msgstr "Όνομα τιμής:"
-
-#~ msgid "Equals"
-#~ msgstr "Ισούται με"
-
-#~ msgid "Contains"
-#~ msgstr "Περιέχει"
-
-#~ msgid "Reset Parameter"
-#~ msgstr "Επαναφορά παραμέτρου"
-
-#~ msgid "Save Parameter Changes"
-#~ msgstr "Αποθήκευση αλλαγών παραμέτρου"
-
-#~ msgid "Action icon, click to change it"
-#~ msgstr "Εικονίδιο ενέργειας, κλικ για αλλαγή"
-
-#~ msgid "Action name"
-#~ msgstr "Όνομα ενέργειας"
-
-#~ msgid "Command: "
-#~ msgstr "Εντολή: "
-
-#~ msgid ""
-#~ "Command that will trigger the action\n"
-#~ "This can include any or all of the following case insensitive expands:\n"
-#~ "\n"
-#~ "%f: The mountpoint for the device - Storage Access devices only\n"
-#~ "%d: Path to the device node - Block devices only\n"
-#~ "%i: The identifier of the device"
-#~ msgstr ""
-#~ "Η εντολή που θα εκτελεστεί από την ενέργεια\n"
-#~ "Αυτό μπορεί να συμπεριλαμβάνει οποιονδήποτε από τους παρακάτω "
-#~ "αντικαταστάτες:\n"
-#~ "\n"
-#~ "%f: Το σημείο προσάρτησης της συσκευής - μόνο για συσκευές αποθήκευσης\n"
-#~ "%d: Διαδρομή στον κόμβο της συσκευής - μόνο για συσκευές τμημάτων\n"
-#~ "%i: Το αναγνωριστικό της συσκευής"
-
-#~ msgid "Devices must match the following parameters for this action:"
-#~ msgstr ""
-#~ "Οι συσκευές πρέπει να ταιριάζουν με τις παρακάτω παραμέτρους γι' αυτήν "
-#~ "την ενέργεια:"
-
-#~ msgid "Action name:"
-#~ msgstr "Όνομα ενέργειας:"
-
-#~ msgid "Enter the name for your new action"
-#~ msgstr "Εισάγετε το όνομα της νέας ενέργειας"
-
-#~ msgid "Remove"
-#~ msgstr "Αφαίρεση"
+#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
+#: SolidActions.ui:36
+#, kde-format
+msgid "Add…"
+msgstr ""
 
 #~ msgid "Edit..."
 #~ msgstr "Επεξεργασία..."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kappfinder\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2008-07-04 11:50+0530\n"
 "Last-Translator: ANI PETER|അനി പീറ്റര്‍ <peter.ani@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -168,24 +168,32 @@ msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr ""
 
-#, fuzzy
-#~| msgid "Conf&irm logout"
-#~ msgid "Confirm logout"
-#~ msgstr "പുറത്തുപോകല്‍ ഉ&റപ്പാക്കുക"
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgid "Confirm logout"
+msgstr "പുറത്തുപോകല്‍ ഉ&റപ്പാക്കുക"
 
-#, fuzzy
-#~ msgid "Default leave option"
-#~ msgstr "അടച്ചു പൂട്ടുന്നതിനു് സ്വതവേയുള്ള ഉപാധി"
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:13
+#, fuzzy, kde-format
+msgid "Default leave option"
+msgstr "അടച്ചു പൂട്ടുന്നതിനു് സ്വതവേയുള്ള ഉപാധി"
 
-#, fuzzy
-#~| msgid "On Login"
-#~ msgid "On login"
-#~ msgstr "അകത്തുകയറുമ്പോള്‍"
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:22
+#, fuzzy, kde-format
+#| msgid "On Login"
+msgid "On login"
+msgstr "അകത്തുകയറുമ്പോള്‍"
 
-#, fuzzy
-#~| msgid "Applications to be e&xcluded from sessions:"
-#~ msgid "Applications to be excluded from session"
-#~ msgstr "സെഷനുകളില്‍ നിന്നും &മാറ്റേണ്ട പ്രയോഗങ്ങള്‍:"
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:26
+#, fuzzy, kde-format
+#| msgid "Applications to be e&xcluded from sessions:"
+msgid "Applications to be excluded from session"
+msgstr "സെഷനുകളില്‍ നിന്നും &മാറ്റേണ്ട പ്രയോഗങ്ങള്‍:"
 
 #, fuzzy
 #~ msgid "Default option:"

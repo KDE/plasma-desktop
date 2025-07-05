@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-06-07 16:49+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -48,6 +48,133 @@ msgstr ""
 #, kde-format
 msgid "Invalid action"
 msgstr "Virheellinen toiminto"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
+#: ActionEditor.ui:17
+#, kde-format
+msgid "Edit Parameter"
+msgstr "Muokkausparametri"
+
+#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
+#: ActionEditor.ui:43
+#, kde-format
+msgid "Parameter type:"
+msgstr "Parametrityyppi:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:51
+#, kde-format
+msgid "Property Match"
+msgstr "Ominaisuustäsmäys"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:56
+#, kde-format
+msgid "Content Conjunction"
+msgstr "Sisältöliittäminen"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:61
+#, kde-format
+msgid "Content Disjunction"
+msgstr "Sisällön disjunktio"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:66
+#, kde-format
+msgid "Device Interface Match"
+msgstr "Laiterajapinnan täsmäys"
+
+#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
+#: ActionEditor.ui:96
+#, kde-format
+msgid "Device type:"
+msgstr "Laitetyyppi:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblValueName)
+#: ActionEditor.ui:135
+#, kde-format
+msgid "Value name:"
+msgstr "Arvon nimi:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:175
+#, kde-format
+msgid "Equals"
+msgstr "Yhtäsuuruudet"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:180
+#, kde-format
+msgid "Contains"
+msgstr "Sisältää"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
+#: ActionEditor.ui:208
+#, kde-format
+msgid "Reset Parameter"
+msgstr "Alkuarvopalautusparametri"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
+#: ActionEditor.ui:215
+#, kde-format
+msgid "Save Parameter Changes"
+msgstr "Tallenna parametrimuutokset"
+
+#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
+#: ActionEditor.ui:247
+#, kde-format
+msgid "Action icon, click to change it"
+msgstr "Toimintokuvake, vaihda se napsauttamalla"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
+#: ActionEditor.ui:254
+#, kde-format
+msgid "Action name"
+msgstr "Toimintonimi"
+
+#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
+#: ActionEditor.ui:271
+#, kde-format
+msgid "Command: "
+msgstr "Komento: "
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
+#: ActionEditor.ui:283
+#, no-c-format, kde-format
+msgid ""
+"Command that will trigger the action\n"
+"This can include any or all of the following case insensitive expands:\n"
+"\n"
+"%f: The mountpoint for the device - Storage Access devices only\n"
+"%d: Path to the device node - Block devices only\n"
+"%i: The identifier of the device"
+msgstr ""
+"Komento, joka laukaisee toiminnon\n"
+"Tämä voi sisältää minkä tahansa tai kaikki seuraavan tapauksen kirjainkoosta "
+"riippumattomat laajennukset:\n"
+"\n"
+"%f: Laitteen liitäntäpiste - Vain tallennuslaitteille\n"
+"%d: Polku laitteen solmuun - Vain lohkolaitteille\n"
+"%i: Laitteen tunniste"
+
+#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
+#: ActionEditor.ui:300
+#, kde-format
+msgid "Devices must match the following parameters for this action:"
+msgstr "Laitteiden on täsmättävä seuraaviin parametreihin tässä toiminnossa:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblActionName)
+#: AddAction.ui:19
+#, kde-format
+msgid "Action name:"
+msgstr "Toimintonimi:"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
+#: AddAction.ui:26
+#, kde-format
+msgid "Enter the name for your new action"
+msgstr "Kirjoita uuden toimintosi nimi"
 
 # Solid tarkoittaa kehysohjelmistoa, joka tunnistaa tietokoneeseen liitetyt laitteet
 #: DesktopFileGenerator.cpp:25
@@ -145,85 +272,23 @@ msgstr "Toimintoa ei ole valittu"
 msgid "Cannot be deleted"
 msgstr "Ei voida poistaa"
 
-#~ msgid "Edit Parameter"
-#~ msgstr "Muokkausparametri"
+#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
+#: SolidActions.ui:22
+#, kde-format
+msgid "Remove"
+msgstr "Poista"
 
-#~ msgid "Parameter type:"
-#~ msgstr "Parametrityyppi:"
+#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
+#: SolidActions.ui:29
+#, kde-format
+msgid "Edit…"
+msgstr "Muokkaa…"
 
-#~ msgid "Property Match"
-#~ msgstr "Ominaisuustäsmäys"
-
-#~ msgid "Content Conjunction"
-#~ msgstr "Sisältöliittäminen"
-
-#~ msgid "Content Disjunction"
-#~ msgstr "Sisällön disjunktio"
-
-#~ msgid "Device Interface Match"
-#~ msgstr "Laiterajapinnan täsmäys"
-
-#~ msgid "Device type:"
-#~ msgstr "Laitetyyppi:"
-
-#~ msgid "Value name:"
-#~ msgstr "Arvon nimi:"
-
-#~ msgid "Equals"
-#~ msgstr "Yhtäsuuruudet"
-
-#~ msgid "Contains"
-#~ msgstr "Sisältää"
-
-#~ msgid "Reset Parameter"
-#~ msgstr "Alkuarvopalautusparametri"
-
-#~ msgid "Save Parameter Changes"
-#~ msgstr "Tallenna parametrimuutokset"
-
-#~ msgid "Action icon, click to change it"
-#~ msgstr "Toimintokuvake, vaihda se napsauttamalla"
-
-#~ msgid "Action name"
-#~ msgstr "Toimintonimi"
-
-#~ msgid "Command: "
-#~ msgstr "Komento: "
-
-#~ msgid ""
-#~ "Command that will trigger the action\n"
-#~ "This can include any or all of the following case insensitive expands:\n"
-#~ "\n"
-#~ "%f: The mountpoint for the device - Storage Access devices only\n"
-#~ "%d: Path to the device node - Block devices only\n"
-#~ "%i: The identifier of the device"
-#~ msgstr ""
-#~ "Komento, joka laukaisee toiminnon\n"
-#~ "Tämä voi sisältää minkä tahansa tai kaikki seuraavan tapauksen "
-#~ "kirjainkoosta riippumattomat laajennukset:\n"
-#~ "\n"
-#~ "%f: Laitteen liitäntäpiste - Vain tallennuslaitteille\n"
-#~ "%d: Polku laitteen solmuun - Vain lohkolaitteille\n"
-#~ "%i: Laitteen tunniste"
-
-#~ msgid "Devices must match the following parameters for this action:"
-#~ msgstr ""
-#~ "Laitteiden on täsmättävä seuraaviin parametreihin tässä toiminnossa:"
-
-#~ msgid "Action name:"
-#~ msgstr "Toimintonimi:"
-
-#~ msgid "Enter the name for your new action"
-#~ msgstr "Kirjoita uuden toimintosi nimi"
-
-#~ msgid "Remove"
-#~ msgstr "Poista"
-
-#~ msgid "Edit…"
-#~ msgstr "Muokkaa…"
-
-#~ msgid "Add…"
-#~ msgstr "Lisää…"
+#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
+#: SolidActions.ui:36
+#, kde-format
+msgid "Add…"
+msgstr "Lisää…"
 
 #~ msgid "Edit..."
 #~ msgstr "Muokkaa…"

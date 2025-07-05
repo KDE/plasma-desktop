@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -42,6 +42,128 @@ msgstr ""
 #: ActionEditor.cpp:163
 #, kde-format
 msgid "Invalid action"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
+#: ActionEditor.ui:17
+#, fuzzy, kde-format
+#| msgid "Reset Parameter"
+msgid "Edit Parameter"
+msgstr "پارامېتىرلارنى ئەسلىگە قايتۇر"
+
+#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
+#: ActionEditor.ui:43
+#, fuzzy, kde-format
+#| msgid "Reset Parameter"
+msgid "Parameter type:"
+msgstr "پارامېتىرلارنى ئەسلىگە قايتۇر"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:51
+#, kde-format
+msgid "Property Match"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:56
+#, kde-format
+msgid "Content Conjunction"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:61
+#, kde-format
+msgid "Content Disjunction"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:66
+#, kde-format
+msgid "Device Interface Match"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
+#: ActionEditor.ui:96
+#, kde-format
+msgid "Device type:"
+msgstr "ئۈسكۈنە تىپى:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblValueName)
+#: ActionEditor.ui:135
+#, kde-format
+msgid "Value name:"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:175
+#, kde-format
+msgid "Equals"
+msgstr "تەڭلىك"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:180
+#, kde-format
+msgid "Contains"
+msgstr "ئۆز ئىچىگە ئالغان"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
+#: ActionEditor.ui:208
+#, kde-format
+msgid "Reset Parameter"
+msgstr "پارامېتىرلارنى ئەسلىگە قايتۇر"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
+#: ActionEditor.ui:215
+#, kde-format
+msgid "Save Parameter Changes"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
+#: ActionEditor.ui:247
+#, kde-format
+msgid "Action icon, click to change it"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
+#: ActionEditor.ui:254
+#, kde-format
+msgid "Action name"
+msgstr "مەشغۇلات ئاتى"
+
+#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
+#: ActionEditor.ui:271
+#, kde-format
+msgid "Command: "
+msgstr "بۇيرۇق: "
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
+#: ActionEditor.ui:283
+#, no-c-format, kde-format
+msgid ""
+"Command that will trigger the action\n"
+"This can include any or all of the following case insensitive expands:\n"
+"\n"
+"%f: The mountpoint for the device - Storage Access devices only\n"
+"%d: Path to the device node - Block devices only\n"
+"%i: The identifier of the device"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
+#: ActionEditor.ui:300
+#, kde-format
+msgid "Devices must match the following parameters for this action:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, LblActionName)
+#: AddAction.ui:19
+#, kde-format
+msgid "Action name:"
+msgstr "مەشغۇلات ئاتى:"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
+#: AddAction.ui:26
+#, kde-format
+msgid "Enter the name for your new action"
 msgstr ""
 
 #: DesktopFileGenerator.cpp:25
@@ -136,39 +258,23 @@ msgstr ""
 msgid "Cannot be deleted"
 msgstr "ئۆچۈرگىلى بولمىدى"
 
-#, fuzzy
-#~| msgid "Reset Parameter"
-#~ msgid "Edit Parameter"
-#~ msgstr "پارامېتىرلارنى ئەسلىگە قايتۇر"
+#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
+#: SolidActions.ui:22
+#, kde-format
+msgid "Remove"
+msgstr "چىقىرىۋەت"
 
-#, fuzzy
-#~| msgid "Reset Parameter"
-#~ msgid "Parameter type:"
-#~ msgstr "پارامېتىرلارنى ئەسلىگە قايتۇر"
+#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
+#: SolidActions.ui:29
+#, kde-format
+msgid "Edit…"
+msgstr ""
 
-#~ msgid "Device type:"
-#~ msgstr "ئۈسكۈنە تىپى:"
-
-#~ msgid "Equals"
-#~ msgstr "تەڭلىك"
-
-#~ msgid "Contains"
-#~ msgstr "ئۆز ئىچىگە ئالغان"
-
-#~ msgid "Reset Parameter"
-#~ msgstr "پارامېتىرلارنى ئەسلىگە قايتۇر"
-
-#~ msgid "Action name"
-#~ msgstr "مەشغۇلات ئاتى"
-
-#~ msgid "Command: "
-#~ msgstr "بۇيرۇق: "
-
-#~ msgid "Action name:"
-#~ msgstr "مەشغۇلات ئاتى:"
-
-#~ msgid "Remove"
-#~ msgstr "چىقىرىۋەت"
+#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
+#: SolidActions.ui:36
+#, kde-format
+msgid "Add…"
+msgstr ""
 
 #~ msgid "Edit..."
 #~ msgstr "تەھرىر…"

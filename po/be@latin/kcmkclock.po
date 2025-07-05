@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2008-12-11 22:05+0200\n"
 "Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian Latin <i18n@mova.org>\n"
@@ -29,6 +29,60 @@ msgstr "Ihar Hračyška"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ihar.hrachyshka@gmail.com"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: dateandtime.ui:22
+#, kde-format
+msgid "Date and Time"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: dateandtime.ui:30
+#, fuzzy, kde-format
+#| msgid "Set date and time &automatically:"
+msgid "Set date and time &automatically"
+msgstr "&Aŭtamatyčna nastaŭlaj datu j čas:"
+
+#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
+#: dateandtime.ui:53
+#, kde-format
+msgid "&Time server:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: dateandtime.ui:86
+#, kde-format
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr "Tut možna źmianić datu, miesiac i hod dla ŭsioj systemy."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: dateandtime.ui:122
+#, fuzzy, kde-format
+#| msgid "Time zone Error"
+msgid "Time Zone"
+msgstr "Pamyłka časavaha pojasu"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dateandtime.ui:128
+#, fuzzy, kde-format
+#| msgid "To change the local time zone, select your area from the list below"
+msgid "To change the local time zone, select your area from the list below."
+msgstr ""
+"Kab źmianić miascovy časavy pojas, vybiery ź nižejšaha śpisu svajo miesca "
+"pałažeńnia."
+
+#. i18n: ectx: property (text), widget (QLabel, m_local)
+#: dateandtime.ui:151
+#, fuzzy, kde-format
+#| msgid "Current local time zone: %1 (%2)"
+msgid "Current local time zone:"
+msgstr "Dziejny miascovy časavy pojas: %1 (%2)"
+
+#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
+#: dateandtime.ui:161
+#, kde-format
+msgid "Search…"
+msgstr ""
 
 #: dtime.cpp:61
 #, kde-format
@@ -168,32 +222,6 @@ msgstr "Nie ŭdałosia spałučycca z serveram času: %1"
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set timezone"
 msgstr "Nie ŭdałosia spałučycca z serveram času: %1"
-
-#, fuzzy
-#~| msgid "Set date and time &automatically:"
-#~ msgid "Set date and time &automatically"
-#~ msgstr "&Aŭtamatyčna nastaŭlaj datu j čas:"
-
-#~ msgid ""
-#~ "Here you can change the system date's day of the month, month and year."
-#~ msgstr "Tut možna źmianić datu, miesiac i hod dla ŭsioj systemy."
-
-#, fuzzy
-#~| msgid "Time zone Error"
-#~ msgid "Time Zone"
-#~ msgstr "Pamyłka časavaha pojasu"
-
-#, fuzzy
-#~| msgid "To change the local time zone, select your area from the list below"
-#~ msgid "To change the local time zone, select your area from the list below."
-#~ msgstr ""
-#~ "Kab źmianić miascovy časavy pojas, vybiery ź nižejšaha śpisu svajo miesca "
-#~ "pałažeńnia."
-
-#, fuzzy
-#~| msgid "Current local time zone: %1 (%2)"
-#~ msgid "Current local time zone:"
-#~ msgstr "Dziejny miascovy časavy pojas: %1 (%2)"
 
 #~ msgid "kcmclock"
 #~ msgstr "kcmclock"

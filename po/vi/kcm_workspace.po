@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-01-08 16:20+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -36,12 +36,14 @@ msgstr "Khởi động lại"
 msgid "Visual behavior:"
 msgstr "Ứng xử trực quan:"
 
-#: package/contents/ui/main.qml:51
+#. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
+#: package/contents/ui/main.qml:51 workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "Hiển thị chú giải thông tin khi đảo chuột"
 
-#: package/contents/ui/main.qml:62
+#. i18n: ectx: label, entry (osdEnabled), group (OSD)
+#: package/contents/ui/main.qml:62 workspaceoptions_plasmasettings.kcfg:15
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "Hiển thị phản hồi trực quan cho các thay đổi trạng thái"
@@ -171,33 +173,57 @@ msgstr ""
 "Trong chế độ cảm ứng, nhiều yếu tố của giao diện người dùng sẽ trở nên lớn "
 "hơn để dễ dàng đáp ứng với các tương tác cảm ứng hơn."
 
-#~ msgid "Single click to open files"
-#~ msgstr "Bấm đơn để mở tệp"
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Single click to open files"
+msgstr "Bấm đơn để mở tệp"
 
-#~ msgid "Animation speed"
-#~ msgstr "Tốc độ hiệu ứng động"
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:13
+#, kde-format
+msgid "Animation speed"
+msgstr "Tốc độ hiệu ứng động"
 
-#~ msgid "Left-click in scrollbar track moves scrollbar by one page"
-#~ msgstr "Bấm trái trong rãnh thanh cuộn sẽ di chuyển thanh cuộn đi một trang"
+#. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:17
+#, kde-format
+msgid "Left-click in scrollbar track moves scrollbar by one page"
+msgstr "Bấm trái trong rãnh thanh cuộn sẽ di chuyển thanh cuộn đi một trang"
 
-#~ msgid "Automatically switch to touch-optimized mode"
-#~ msgstr "Tự động chuyển sang chế độ được tối ưu hoá cho cảm ứng"
+#. i18n: ectx: label, entry (tabletMode), group (Input)
+#: workspaceoptions_kwinsettings.kcfg:9
+#, kde-format
+msgid "Automatically switch to touch-optimized mode"
+msgstr "Tự động chuyển sang chế độ được tối ưu hoá cho cảm ứng"
 
-#~ msgid "Enable middle click selection pasting"
-#~ msgstr "Bật dán phần bôi đen bằng bấm giữa"
+#. i18n: ectx: label, entry (primarySelection), group (Wayland)
+#: workspaceoptions_kwinsettings.kcfg:15
+#, kde-format
+msgid "Enable middle click selection pasting"
+msgstr "Bật dán phần bôi đen bằng bấm giữa"
 
-#~ msgid ""
-#~ "Show an on-screen display to indicate status changes such as brightness "
-#~ "or volume"
-#~ msgstr ""
-#~ "Hiện một ô hiện nổi để cho biết các thay đổi trạng thái như độ sáng hay "
-#~ "âm lượng"
+#. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:16
+#, kde-format
+msgid ""
+"Show an on-screen display to indicate status changes such as brightness or "
+"volume"
+msgstr ""
+"Hiện một ô hiện nổi để cho biết các thay đổi trạng thái như độ sáng hay âm "
+"lượng"
 
-#~ msgid "OSD on layout change"
-#~ msgstr "Ô hiện nổi khi thay đổi bố cục"
+#. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:20
+#, kde-format
+msgid "OSD on layout change"
+msgstr "Ô hiện nổi khi thay đổi bố cục"
 
-#~ msgid "Show a popup on layout changes"
-#~ msgstr "Hiện một ô bật lên khi có thay đổi bố cục"
+#. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:21
+#, kde-format
+msgid "Show a popup on layout changes"
+msgstr "Hiện một ô bật lên khi có thay đổi bố cục"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-08-05 22:54+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -46,6 +46,136 @@ msgstr ""
 #, kde-format
 msgid "Invalid action"
 msgstr "Action invalide"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
+#: ActionEditor.ui:17
+#, kde-format
+msgid "Edit Parameter"
+msgstr "Edita parametro"
+
+#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
+#: ActionEditor.ui:43
+#, kde-format
+msgid "Parameter type:"
+msgstr "Typo de parametro"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:51
+#, kde-format
+msgid "Property Match"
+msgstr "Proprietate coincidente"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:56
+#, kde-format
+msgid "Content Conjunction"
+msgstr "Conjunction de contento"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:61
+#, kde-format
+msgid "Content Disjunction"
+msgstr "Disjunction de contento"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:66
+#, kde-format
+msgid "Device Interface Match"
+msgstr "Interfacie de dispositivo coincidente"
+
+#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
+#: ActionEditor.ui:96
+#, kde-format
+msgid "Device type:"
+msgstr "Typo de dispositivo:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblValueName)
+#: ActionEditor.ui:135
+#, kde-format
+msgid "Value name:"
+msgstr "Nomine de valor:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:175
+#, kde-format
+msgid "Equals"
+msgstr "Equales"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:180
+#, kde-format
+msgid "Contains"
+msgstr "Il contine"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
+#: ActionEditor.ui:208
+#, kde-format
+msgid "Reset Parameter"
+msgstr "Reinitiar parametro"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
+#: ActionEditor.ui:215
+#, kde-format
+msgid "Save Parameter Changes"
+msgstr "Salveguarda modificationes de parametro"
+
+#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
+#: ActionEditor.ui:247
+#, kde-format
+msgid "Action icon, click to change it"
+msgstr "icone de action, tu  pressa pro modificar lo"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
+#: ActionEditor.ui:254
+#, kde-format
+msgid "Action name"
+msgstr "Nomine de Action"
+
+#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
+#: ActionEditor.ui:271
+#, kde-format
+msgid "Command: "
+msgstr "Commando: "
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
+#: ActionEditor.ui:283
+#, no-c-format, kde-format
+msgid ""
+"Command that will trigger the action\n"
+"This can include any or all of the following case insensitive expands:\n"
+"\n"
+"%f: The mountpoint for the device - Storage Access devices only\n"
+"%d: Path to the device node - Block devices only\n"
+"%i: The identifier of the device"
+msgstr ""
+"Commando que discatenara le action\n"
+"Isto pote includer ulle del sequente expansiones que non ha differentias "
+"inter majusculas e minusculas:\n"
+"\n"
+"%f: Le puncto de montage pro le dispositivo - solmente pro dispositivos de "
+"accesso de immagazinage\n"
+"%d: percurso al nodo de dispositivo - solmente pro dispositivo a blocos\n"
+"%i: le identificator de dispositivo"
+
+#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
+#: ActionEditor.ui:300
+#, kde-format
+msgid "Devices must match the following parameters for this action:"
+msgstr ""
+"Dispositivos debe esser coincidente con le sequente parametros pro iste "
+"action:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblActionName)
+#: AddAction.ui:19
+#, kde-format
+msgid "Action name:"
+msgstr "Nomine de Action:"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
+#: AddAction.ui:26
+#, kde-format
+msgid "Enter the name for your new action"
+msgstr "Entra le nomine pro tu nove action"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -141,87 +271,23 @@ msgstr "Nulle action on seligeva"
 msgid "Cannot be deleted"
 msgstr "Il non pote esser cancellate"
 
-#~ msgid "Edit Parameter"
-#~ msgstr "Edita parametro"
+#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
+#: SolidActions.ui:22
+#, kde-format
+msgid "Remove"
+msgstr "Remove"
 
-#~ msgid "Parameter type:"
-#~ msgstr "Typo de parametro"
+#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
+#: SolidActions.ui:29
+#, kde-format
+msgid "Edit…"
+msgstr "Modifica…"
 
-#~ msgid "Property Match"
-#~ msgstr "Proprietate coincidente"
-
-#~ msgid "Content Conjunction"
-#~ msgstr "Conjunction de contento"
-
-#~ msgid "Content Disjunction"
-#~ msgstr "Disjunction de contento"
-
-#~ msgid "Device Interface Match"
-#~ msgstr "Interfacie de dispositivo coincidente"
-
-#~ msgid "Device type:"
-#~ msgstr "Typo de dispositivo:"
-
-#~ msgid "Value name:"
-#~ msgstr "Nomine de valor:"
-
-#~ msgid "Equals"
-#~ msgstr "Equales"
-
-#~ msgid "Contains"
-#~ msgstr "Il contine"
-
-#~ msgid "Reset Parameter"
-#~ msgstr "Reinitiar parametro"
-
-#~ msgid "Save Parameter Changes"
-#~ msgstr "Salveguarda modificationes de parametro"
-
-#~ msgid "Action icon, click to change it"
-#~ msgstr "icone de action, tu  pressa pro modificar lo"
-
-#~ msgid "Action name"
-#~ msgstr "Nomine de Action"
-
-#~ msgid "Command: "
-#~ msgstr "Commando: "
-
-#~ msgid ""
-#~ "Command that will trigger the action\n"
-#~ "This can include any or all of the following case insensitive expands:\n"
-#~ "\n"
-#~ "%f: The mountpoint for the device - Storage Access devices only\n"
-#~ "%d: Path to the device node - Block devices only\n"
-#~ "%i: The identifier of the device"
-#~ msgstr ""
-#~ "Commando que discatenara le action\n"
-#~ "Isto pote includer ulle del sequente expansiones que non ha differentias "
-#~ "inter majusculas e minusculas:\n"
-#~ "\n"
-#~ "%f: Le puncto de montage pro le dispositivo - solmente pro dispositivos "
-#~ "de accesso de immagazinage\n"
-#~ "%d: percurso al nodo de dispositivo - solmente pro dispositivo a blocos\n"
-#~ "%i: le identificator de dispositivo"
-
-#~ msgid "Devices must match the following parameters for this action:"
-#~ msgstr ""
-#~ "Dispositivos debe esser coincidente con le sequente parametros pro iste "
-#~ "action:"
-
-#~ msgid "Action name:"
-#~ msgstr "Nomine de Action:"
-
-#~ msgid "Enter the name for your new action"
-#~ msgstr "Entra le nomine pro tu nove action"
-
-#~ msgid "Remove"
-#~ msgstr "Remove"
-
-#~ msgid "Edit…"
-#~ msgstr "Modifica…"
-
-#~ msgid "Add…"
-#~ msgstr "Adde…"
+#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
+#: SolidActions.ui:36
+#, kde-format
+msgid "Add…"
+msgstr "Adde…"
 
 #~ msgid "Edit..."
 #~ msgstr "Edita ..."

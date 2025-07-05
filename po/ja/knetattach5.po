@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: knetattach\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2006-06-10 14:00+0900\n"
 "Last-Translator: Yukiko Bando <ybando@k6.dion.ne.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -83,6 +83,118 @@ msgstr "保存して接続(&O)"
 msgid "C&onnect"
 msgstr "接続(&O)"
 
+#. i18n: ectx: property (windowTitle), widget (QWizard, KNetAttach)
+#: knetattach.ui:14
+#, kde-format
+msgid "Network Folder Wizard"
+msgstr "ネットワーク フォルダ ウィザード"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderType)
+#: knetattach.ui:18
+#, kde-format
+msgid "Add Network Folder"
+msgstr "ネットワークフォルダを追加"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: knetattach.ui:24
+#, kde-format
+msgid ""
+"Select the type of network folder you wish to connect to and press the Next "
+"button."
+msgstr ""
+"接続するネットワークフォルダのタイプを選択し、「次へ」ボタンを押してくださ"
+"い。"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _recent)
+#: knetattach.ui:65
+#, kde-format
+msgid "&Recent connection:"
+msgstr "最近の接続(&R):"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _webfolder)
+#: knetattach.ui:72
+#, kde-format
+msgid "&WebFolder (webdav)"
+msgstr "ウェブフォルダ (webdav) (&W)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _fish)
+#: knetattach.ui:82
+#, kde-format
+msgid "&Secure shell (ssh)"
+msgstr "セキュアシェル (ssh) (&S)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _ftp)
+#: knetattach.ui:111
+#, kde-format
+msgid "FT&P"
+msgstr "FTP(&P)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _smb)
+#: knetattach.ui:118
+#, kde-format
+msgid "&Microsoft® Windows® network drive"
+msgstr "Microsoft® Windows® ネットワークドライブ(&M)"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderParameters)
+#: knetattach.ui:145
+#, kde-format
+msgid "Network Folder Information"
+msgstr "ネットワークフォルダ情報"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel4_2)
+#: knetattach.ui:177
+#, kde-format
+msgid "&Name:"
+msgstr "名前(&N):"
+
+#. i18n: ectx: property (text), widget (QLabel, _userText)
+#: knetattach.ui:196
+#, kde-format
+msgid "&User:"
+msgstr "ユーザ(&U):"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: knetattach.ui:222
+#, kde-format
+msgid "Se&rver:"
+msgstr "サーバ(&R):"
+
+#. i18n: ectx: property (text), widget (QLabel, _portText)
+#: knetattach.ui:248
+#, kde-format
+msgid "&Port:"
+msgstr "ポート(&P):"
+
+#. i18n: ectx: property (text), widget (QLabel, _protocol)
+#: knetattach.ui:283
+#, kde-format
+msgid "&Protocol:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: knetattach.ui:313
+#, kde-format
+msgid "&Folder:"
+msgstr "フォルダ(&F):"
+
+#. i18n: ectx: property (text), widget (QLabel, _encodingText)
+#: knetattach.ui:335
+#, kde-format
+msgid "Encoding:"
+msgstr "エンコーディング:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _createIcon)
+#: knetattach.ui:351
+#, kde-format
+msgid "Cr&eate an icon for this remote folder"
+msgstr "リモートフォルダのアイコンを作成(&E)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _useEncryption)
+#: knetattach.ui:361
+#, kde-format
+msgid "&Use encryption"
+msgstr "暗号化を使用(&U)"
+
 #: main.cpp:21 main.cpp:23
 #, kde-format
 msgid "KDE Network Wizard"
@@ -102,58 +214,3 @@ msgstr "George Staikos"
 #, kde-format
 msgid "Primary author and maintainer"
 msgstr "主作者とメンテナ"
-
-#~ msgid "Network Folder Wizard"
-#~ msgstr "ネットワーク フォルダ ウィザード"
-
-#~ msgid "Add Network Folder"
-#~ msgstr "ネットワークフォルダを追加"
-
-#~ msgid ""
-#~ "Select the type of network folder you wish to connect to and press the "
-#~ "Next button."
-#~ msgstr ""
-#~ "接続するネットワークフォルダのタイプを選択し、「次へ」ボタンを押してくださ"
-#~ "い。"
-
-#~ msgid "&Recent connection:"
-#~ msgstr "最近の接続(&R):"
-
-#~ msgid "&WebFolder (webdav)"
-#~ msgstr "ウェブフォルダ (webdav) (&W)"
-
-#~ msgid "&Secure shell (ssh)"
-#~ msgstr "セキュアシェル (ssh) (&S)"
-
-#~ msgid "FT&P"
-#~ msgstr "FTP(&P)"
-
-#~ msgid "&Microsoft® Windows® network drive"
-#~ msgstr "Microsoft® Windows® ネットワークドライブ(&M)"
-
-#~ msgid "Network Folder Information"
-#~ msgstr "ネットワークフォルダ情報"
-
-#~ msgid "&Name:"
-#~ msgstr "名前(&N):"
-
-#~ msgid "&User:"
-#~ msgstr "ユーザ(&U):"
-
-#~ msgid "Se&rver:"
-#~ msgstr "サーバ(&R):"
-
-#~ msgid "&Port:"
-#~ msgstr "ポート(&P):"
-
-#~ msgid "&Folder:"
-#~ msgstr "フォルダ(&F):"
-
-#~ msgid "Encoding:"
-#~ msgstr "エンコーディング:"
-
-#~ msgid "Cr&eate an icon for this remote folder"
-#~ msgstr "リモートフォルダのアイコンを作成(&E)"
-
-#~ msgid "&Use encryption"
-#~ msgstr "暗号化を使用(&U)"

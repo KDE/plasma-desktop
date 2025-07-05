@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-05-27 18:52+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -47,6 +47,133 @@ msgstr ""
 #, kde-format
 msgid "Invalid action"
 msgstr "Ogiltig åtgärd"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
+#: ActionEditor.ui:17
+#, kde-format
+msgid "Edit Parameter"
+msgstr "Redigera parameter"
+
+#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
+#: ActionEditor.ui:43
+#, kde-format
+msgid "Parameter type:"
+msgstr "Parametertyp:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:51
+#, kde-format
+msgid "Property Match"
+msgstr "Egenskap matchar"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:56
+#, kde-format
+msgid "Content Conjunction"
+msgstr "Innehållskonjunktion"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:61
+#, kde-format
+msgid "Content Disjunction"
+msgstr "Innehållsdisjunktion"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:66
+#, kde-format
+msgid "Device Interface Match"
+msgstr "Enhetsgränssnitt matchar"
+
+#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
+#: ActionEditor.ui:96
+#, kde-format
+msgid "Device type:"
+msgstr "Enhetstyp:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblValueName)
+#: ActionEditor.ui:135
+#, kde-format
+msgid "Value name:"
+msgstr "Värdenamn:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:175
+#, kde-format
+msgid "Equals"
+msgstr "Är lika med"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:180
+#, kde-format
+msgid "Contains"
+msgstr "Innehåller"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
+#: ActionEditor.ui:208
+#, kde-format
+msgid "Reset Parameter"
+msgstr "Återställ parameter"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
+#: ActionEditor.ui:215
+#, kde-format
+msgid "Save Parameter Changes"
+msgstr "Spara parameterändringar"
+
+#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
+#: ActionEditor.ui:247
+#, kde-format
+msgid "Action icon, click to change it"
+msgstr "Åtgärdsikon, klicka för att ändra den"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
+#: ActionEditor.ui:254
+#, kde-format
+msgid "Action name"
+msgstr "Åtgärdsnamn"
+
+#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
+#: ActionEditor.ui:271
+#, kde-format
+msgid "Command: "
+msgstr "Kommando: "
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
+#: ActionEditor.ui:283
+#, no-c-format, kde-format
+msgid ""
+"Command that will trigger the action\n"
+"This can include any or all of the following case insensitive expands:\n"
+"\n"
+"%f: The mountpoint for the device - Storage Access devices only\n"
+"%d: Path to the device node - Block devices only\n"
+"%i: The identifier of the device"
+msgstr ""
+"Kommando som utför åtgärden.\n"
+"Det kan omfatta någon eller alla följande skiftlägesokänsliga "
+"platsmarkörer:\n"
+"\n"
+"%f: Enhetens monteringsplats, bara för lagringsenheter\n"
+"%d: Sökväg till enhetens nod, bara för blockenheter\n"
+"%i: Enhetens identifierare"
+
+#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
+#: ActionEditor.ui:300
+#, kde-format
+msgid "Devices must match the following parameters for this action:"
+msgstr "Enheter måste matcha följande parametrar för åtgärden:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblActionName)
+#: AddAction.ui:19
+#, kde-format
+msgid "Action name:"
+msgstr "Åtgärdsnamn:"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
+#: AddAction.ui:26
+#, kde-format
+msgid "Enter the name for your new action"
+msgstr "Ange namn på den nya åtgärden"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -142,84 +269,23 @@ msgstr "Ingen åtgärd markerad"
 msgid "Cannot be deleted"
 msgstr "Kan inte tas bort"
 
-#~ msgid "Edit Parameter"
-#~ msgstr "Redigera parameter"
+#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
+#: SolidActions.ui:22
+#, kde-format
+msgid "Remove"
+msgstr "Ta bort"
 
-#~ msgid "Parameter type:"
-#~ msgstr "Parametertyp:"
+#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
+#: SolidActions.ui:29
+#, kde-format
+msgid "Edit…"
+msgstr "Redigera…"
 
-#~ msgid "Property Match"
-#~ msgstr "Egenskap matchar"
-
-#~ msgid "Content Conjunction"
-#~ msgstr "Innehållskonjunktion"
-
-#~ msgid "Content Disjunction"
-#~ msgstr "Innehållsdisjunktion"
-
-#~ msgid "Device Interface Match"
-#~ msgstr "Enhetsgränssnitt matchar"
-
-#~ msgid "Device type:"
-#~ msgstr "Enhetstyp:"
-
-#~ msgid "Value name:"
-#~ msgstr "Värdenamn:"
-
-#~ msgid "Equals"
-#~ msgstr "Är lika med"
-
-#~ msgid "Contains"
-#~ msgstr "Innehåller"
-
-#~ msgid "Reset Parameter"
-#~ msgstr "Återställ parameter"
-
-#~ msgid "Save Parameter Changes"
-#~ msgstr "Spara parameterändringar"
-
-#~ msgid "Action icon, click to change it"
-#~ msgstr "Åtgärdsikon, klicka för att ändra den"
-
-#~ msgid "Action name"
-#~ msgstr "Åtgärdsnamn"
-
-#~ msgid "Command: "
-#~ msgstr "Kommando: "
-
-#~ msgid ""
-#~ "Command that will trigger the action\n"
-#~ "This can include any or all of the following case insensitive expands:\n"
-#~ "\n"
-#~ "%f: The mountpoint for the device - Storage Access devices only\n"
-#~ "%d: Path to the device node - Block devices only\n"
-#~ "%i: The identifier of the device"
-#~ msgstr ""
-#~ "Kommando som utför åtgärden.\n"
-#~ "Det kan omfatta någon eller alla följande skiftlägesokänsliga "
-#~ "platsmarkörer:\n"
-#~ "\n"
-#~ "%f: Enhetens monteringsplats, bara för lagringsenheter\n"
-#~ "%d: Sökväg till enhetens nod, bara för blockenheter\n"
-#~ "%i: Enhetens identifierare"
-
-#~ msgid "Devices must match the following parameters for this action:"
-#~ msgstr "Enheter måste matcha följande parametrar för åtgärden:"
-
-#~ msgid "Action name:"
-#~ msgstr "Åtgärdsnamn:"
-
-#~ msgid "Enter the name for your new action"
-#~ msgstr "Ange namn på den nya åtgärden"
-
-#~ msgid "Remove"
-#~ msgstr "Ta bort"
-
-#~ msgid "Edit…"
-#~ msgstr "Redigera…"
-
-#~ msgid "Add…"
-#~ msgstr "Lägg till…"
+#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
+#: SolidActions.ui:36
+#, kde-format
+msgid "Add…"
+msgstr "Lägg till…"
 
 #~ msgid "Edit..."
 #~ msgstr "Redigera..."

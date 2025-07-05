@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-04-02 21:33+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -16,6 +16,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.03.80\n"
+
+#. i18n: ectx: label, entry (colorScheme), group (General)
+#: landingpage_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Color scheme name"
+msgstr "நிறத் திட்டமுறையின் பெயர்"
+
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:15
+#, kde-format
+msgid "Single click to open files"
+msgstr "ஒரு முறை க்ளிக் செய்தால் கோப்புகளைத் திற"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:19
+#, kde-format
+msgid "Global Look and Feel package"
+msgstr "பொதுவான தோற்றத் தொகுப்பு"
+
+#. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
+#. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:23
+#: landingpage_kdeglobalssettings.kcfg:27
+#, kde-format
+msgid "Global Look and Feel package, alternate"
+msgstr "மாற்று பொதுத் தோற்றத் தொகுப்பு"
+
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:31
+#, kde-format
+msgid "Animation speed"
+msgstr "அசைவூட்டத்தின் வேகம்"
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -87,21 +119,6 @@ msgstr "நடத்தை சம்பந்தப்பட்ட கூடு�
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "அடிக்கடி பயன்படுத்தப்படும் பக்கங்கள்:"
-
-#~ msgid "Color scheme name"
-#~ msgstr "நிறத் திட்டமுறையின் பெயர்"
-
-#~ msgid "Single click to open files"
-#~ msgstr "ஒரு முறை க்ளிக் செய்தால் கோப்புகளைத் திற"
-
-#~ msgid "Global Look and Feel package"
-#~ msgstr "பொதுவான தோற்றத் தொகுப்பு"
-
-#~ msgid "Global Look and Feel package, alternate"
-#~ msgstr "மாற்று பொதுத் தோற்றத் தொகுப்பு"
-
-#~ msgid "Animation speed"
-#~ msgstr "அசைவூட்டத்தின் வேகம்"
 
 #~ msgid "Plasma"
 #~ msgstr "பிளாஸ்மா"

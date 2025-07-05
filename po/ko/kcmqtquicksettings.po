@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2024-12-24 18:56+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -47,36 +47,67 @@ msgstr "David Edmundson"
 msgid "Maintainer"
 msgstr "관리자"
 
-#~ msgid ""
-#~ "These settings adjust the QtQuick settings used by Plasma. Only adjust if "
-#~ "you know what you are doing."
-#~ msgstr ""
-#~ "Plasma에서 사용하는 Qt Quick 설정을 조정합니다. 무엇을 하는지 알고 있는 경"
-#~ "우에만 조정하십시오."
+#. i18n: ectx: property (text), widget (KMessageWidget, kmessagewidget)
+#: kcmqtquicksettingswidget.ui:23
+#, kde-format
+msgid ""
+"These settings adjust the QtQuick settings used by Plasma. Only adjust if "
+"you know what you are doing."
+msgstr ""
+"Plasma에서 사용하는 Qt Quick 설정을 조정합니다. 무엇을 하는지 알고 있는 경우"
+"에만 조정하십시오."
 
-#~ msgid "Rendering Backend:"
-#~ msgstr "렌더링 백엔드:"
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcmqtquicksettingswidget.ui:38
+#, kde-format
+msgid "Rendering Backend:"
+msgstr "렌더링 백엔드:"
 
-#~ msgid "Automatic"
-#~ msgstr "자동"
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
+#: kcmqtquicksettingswidget.ui:46 kcmqtquicksettingswidget.ui:79
+#, kde-format
+msgid "Automatic"
+msgstr "자동"
 
-#~ msgid "Open GL"
-#~ msgstr "OpenGL"
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
+#: kcmqtquicksettingswidget.ui:51
+#, kde-format
+msgid "Open GL"
+msgstr "OpenGL"
 
-#~ msgid "Software"
-#~ msgstr "소프트웨어"
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
+#: kcmqtquicksettingswidget.ui:56
+#, kde-format
+msgid "Software"
+msgstr "소프트웨어"
 
-#~ msgid "GL Core Profile:"
-#~ msgstr "GL 코어 프로필:"
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcmqtquicksettingswidget.ui:64
+#, kde-format
+msgid "GL Core Profile:"
+msgstr "GL 코어 프로필:"
 
-#~ msgid "Render Loop:"
-#~ msgstr "렌더 루프:"
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: kcmqtquicksettingswidget.ui:71
+#, kde-format
+msgid "Render Loop:"
+msgstr "렌더 루프:"
 
-#~ msgid "Basic"
-#~ msgstr "기본"
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
+#: kcmqtquicksettingswidget.ui:84
+#, kde-format
+msgid "Basic"
+msgstr "기본"
 
-#~ msgid "Threaded"
-#~ msgstr "스레드"
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
+#: kcmqtquicksettingswidget.ui:89
+#, kde-format
+msgid "Threaded"
+msgstr "스레드"
 
-#~ msgid "Force"
-#~ msgstr "강제"
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ForceGlCoreProfile)
+#: kcmqtquicksettingswidget.ui:97
+#, kde-format
+msgid "Force"
+msgstr "강제"

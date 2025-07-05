@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2008-01-02 03:10+0100\n"
 "Last-Translator: \n"
 "Language-Team:  <ku@li.org>\n"
@@ -165,10 +165,30 @@ msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr ""
 
-#, fuzzy
-#~| msgid "On Login"
-#~ msgid "On login"
-#~ msgstr "Dema Têketinê"
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, kde-format
+msgid "Confirm logout"
+msgstr ""
+
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:13
+#, kde-format
+msgid "Default leave option"
+msgstr ""
+
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:22
+#, fuzzy, kde-format
+#| msgid "On Login"
+msgid "On login"
+msgstr "Dema Têketinê"
+
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:26
+#, kde-format
+msgid "Applications to be excluded from session"
+msgstr ""
 
 #, fuzzy
 #~| msgid "&Restart computer"

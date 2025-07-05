@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-12-01 23:10+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -60,11 +60,17 @@ msgstr "Aurreikusi Plasta pantaila"
 msgid "Uninstall"
 msgstr "Desinstalatu"
 
-#~ msgid "For future use"
-#~ msgstr "Etorkizunean erabiltzeko"
+#. i18n: ectx: label, entry (engine), group (KSplash)
+#: splashscreensettings.kcfg:12
+#, kde-format
+msgid "For future use"
+msgstr "Etorkizunean erabiltzeko"
 
-#~ msgid "Name of the current splash theme"
-#~ msgstr "Uneko plasta gaiaren izena"
+#. i18n: ectx: label, entry (theme), group (KSplash)
+#: splashscreensettings.kcfg:16
+#, kde-format
+msgid "Name of the current splash theme"
+msgstr "Uneko plasta gaiaren izena"
 
 #~ msgid "&Get New Splash Screens…"
 #~ msgstr "&Lortu Plasta pantaila berriak..."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_activities\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-05-29 14:40+0200\n"
 "Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -96,6 +96,31 @@ msgstr "Non tracciare l'utilizzo di questa attività"
 msgid "Shortcut for switching:"
 msgstr "Scorciatoia per cambiare:"
 
+#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:10
+#, kde-format
+msgid "How many months keep the activity history"
+msgstr "Per quanti mesi tenere la cronologia delle attività"
+
+#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:17
+#, kde-format
+msgid "Which data to keep in activity history"
+msgstr "Quali dati tenere nella cronologia delle attività"
+
+#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:21
+#, kde-format
+msgid "List of Applications whose activity history to save"
+msgstr "Lista delle applicazioni la cui cronologia delle attività è da salvare"
+
+#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:24
+#, kde-format
+msgid "List of Applications whose activity history not to save"
+msgstr ""
+"Lista delle applicazioni la cui cronologia delle attività non è da salvare"
+
 #: MainConfigurationWidget.cpp:33
 #, kde-format
 msgid "Switching"
@@ -135,28 +160,23 @@ msgctxt "@action"
 msgid "Walk through activities (Reverse)"
 msgstr "Passa tra le attività (inverso)"
 
-#~ msgid "How many months keep the activity history"
-#~ msgstr "Per quanti mesi tenere la cronologia delle attività"
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_virtualDesktopSwitchEnabled)
+#: ui/SwitchingTabBase.ui:22
+#, kde-format
+msgid "Remember for each activity (needs restart)"
+msgstr "Ricorda per ciascuna attività (richiede il riavvio)"
 
-#~ msgid "Which data to keep in activity history"
-#~ msgstr "Quali dati tenere nella cronologia delle attività"
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/SwitchingTabBase.ui:29
+#, kde-format
+msgid "Current virtual desktop:"
+msgstr "Desktop virtuale attuale:"
 
-#~ msgid "List of Applications whose activity history to save"
-#~ msgstr ""
-#~ "Lista delle applicazioni la cui cronologia delle attività è da salvare"
-
-#~ msgid "List of Applications whose activity history not to save"
-#~ msgstr ""
-#~ "Lista delle applicazioni la cui cronologia delle attività non è da salvare"
-
-#~ msgid "Remember for each activity (needs restart)"
-#~ msgstr "Ricorda per ciascuna attività (richiede il riavvio)"
-
-#~ msgid "Current virtual desktop:"
-#~ msgstr "Desktop virtuale attuale:"
-
-#~ msgid "Shortcuts:"
-#~ msgstr "Scorciatoie:"
+#. i18n: ectx: property (text), widget (QLabel, label_1)
+#: ui/SwitchingTabBase.ui:38
+#, kde-format
+msgid "Shortcuts:"
+msgstr "Scorciatoie:"
 
 #~ msgid "Privacy"
 #~ msgstr "Riservatezza"

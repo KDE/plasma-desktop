@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-09-24 13:48+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -39,12 +39,14 @@ msgstr "Перезагрузить"
 msgid "Visual behavior:"
 msgstr "Визуальное поведение:"
 
-#: package/contents/ui/main.qml:51
+#. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
+#: package/contents/ui/main.qml:51 workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "Всплывающие подсказки при наведении курсора мыши"
 
-#: package/contents/ui/main.qml:62
+#. i18n: ectx: label, entry (osdEnabled), group (OSD)
+#: package/contents/ui/main.qml:62 workspaceoptions_plasmasettings.kcfg:15
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "Показывать уведомления при регулировке устройств"
@@ -174,34 +176,57 @@ msgstr ""
 "В сенсорном режиме работы большое количество элементов пользовательского "
 "интерфейса становятся крупнее, чтобы облегчить работу с ними."
 
-#~ msgid "Single click to open files"
-#~ msgstr "Одинарный щелчок для открытия файлов"
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Single click to open files"
+msgstr "Одинарный щелчок для открытия файлов"
 
-#~ msgid "Animation speed"
-#~ msgstr "Скорость анимации"
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:13
+#, kde-format
+msgid "Animation speed"
+msgstr "Скорость анимации"
 
-#~ msgid "Left-click in scrollbar track moves scrollbar by one page"
-#~ msgstr "Прокрутка на одну страницу по щелчку по полосе прокрутки"
+#. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:17
+#, kde-format
+msgid "Left-click in scrollbar track moves scrollbar by one page"
+msgstr "Прокрутка на одну страницу по щелчку по полосе прокрутки"
 
-#~ msgid "Automatically switch to touch-optimized mode"
-#~ msgstr "Автоматическое переключение в сенсорный режим работы"
+#. i18n: ectx: label, entry (tabletMode), group (Input)
+#: workspaceoptions_kwinsettings.kcfg:9
+#, kde-format
+msgid "Automatically switch to touch-optimized mode"
+msgstr "Автоматическое переключение в сенсорный режим работы"
 
-#~ msgid "Enable middle click selection pasting"
-#~ msgstr "Щелчок средней кнопкой вставляет выделенный текст"
+#. i18n: ectx: label, entry (primarySelection), group (Wayland)
+#: workspaceoptions_kwinsettings.kcfg:15
+#, kde-format
+msgid "Enable middle click selection pasting"
+msgstr "Щелчок средней кнопкой вставляет выделенный текст"
 
-#~ msgid ""
-#~ "Show an on-screen display to indicate status changes such as brightness "
-#~ "or volume"
-#~ msgstr ""
-#~ "Показывать экранные уведомления об изменении, например, яркости экрана "
-#~ "или громкости."
+#. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:16
+#, kde-format
+msgid ""
+"Show an on-screen display to indicate status changes such as brightness or "
+"volume"
+msgstr ""
+"Показывать экранные уведомления об изменении, например, яркости экрана или "
+"громкости."
 
-#~ msgid "OSD on layout change"
-#~ msgstr "Экранные уведомления при смене раскладки"
+#. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:20
+#, kde-format
+msgid "OSD on layout change"
+msgstr "Экранные уведомления при смене раскладки"
 
-#~ msgid "Show a popup on layout changes"
-#~ msgstr ""
-#~ "Показывать экранные уведомления при переключении раскладки клавиатуры"
+#. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:21
+#, kde-format
+msgid "Show a popup on layout changes"
+msgstr "Показывать экранные уведомления при переключении раскладки клавиатуры"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2015-01-06 23:58+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -50,6 +50,131 @@ msgstr ""
 #, kde-format
 msgid "Invalid action"
 msgstr "Loša radnja"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
+#: ActionEditor.ui:17
+#, kde-format
+msgid "Edit Parameter"
+msgstr "Uređivanje parametra"
+
+#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
+#: ActionEditor.ui:43
+#, kde-format
+msgid "Parameter type:"
+msgstr "Tip parametra:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:51
+#, kde-format
+msgid "Property Match"
+msgstr "Poklapanje svojstva"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:56
+#, kde-format
+msgid "Content Conjunction"
+msgstr "Konjunkcija sadržaja"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:61
+#, kde-format
+msgid "Content Disjunction"
+msgstr "Disjunkcija sadržaja"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:66
+#, kde-format
+msgid "Device Interface Match"
+msgstr "Poklapanje sučelja uređaja"
+
+#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
+#: ActionEditor.ui:96
+#, kde-format
+msgid "Device type:"
+msgstr "Tip uređaja:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblValueName)
+#: ActionEditor.ui:135
+#, kde-format
+msgid "Value name:"
+msgstr "Ime vrijednosti:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:175
+#, kde-format
+msgid "Equals"
+msgstr "Jednako"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:180
+#, kde-format
+msgid "Contains"
+msgstr "Sadrži"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
+#: ActionEditor.ui:208
+#, kde-format
+msgid "Reset Parameter"
+msgstr "Resetuj parametar"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
+#: ActionEditor.ui:215
+#, kde-format
+msgid "Save Parameter Changes"
+msgstr "Sačuvaj izmjene parametra"
+
+#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
+#: ActionEditor.ui:247
+#, kde-format
+msgid "Action icon, click to change it"
+msgstr "Ikona radnje, kliknite da je izmijenite."
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
+#: ActionEditor.ui:254
+#, kde-format
+msgid "Action name"
+msgstr "Ime radnje."
+
+#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
+#: ActionEditor.ui:271
+#, kde-format
+msgid "Command: "
+msgstr "Naredba: "
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
+#: ActionEditor.ui:283
+#, no-c-format, kde-format
+msgid ""
+"Command that will trigger the action\n"
+"This can include any or all of the following case insensitive expands:\n"
+"\n"
+"%f: The mountpoint for the device - Storage Access devices only\n"
+"%d: Path to the device node - Block devices only\n"
+"%i: The identifier of the device"
+msgstr ""
+"<p>Naredba koja okida radnju. Može sadržati sljedeća proširenja (bez "
+"razlikovanja veličine slova):</p><ul><li><icode>%f</icode> — tačka "
+"montiranja uređaja (samo za skladišne uređaje)</li><li><icode>%d</icode> — "
+"putanja do čvora uređaja (samo za blokovske uređaje)</li><li><icode>%i</"
+"icode> — identifikator uređaja</li></ul>"
+
+#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
+#: ActionEditor.ui:300
+#, kde-format
+msgid "Devices must match the following parameters for this action:"
+msgstr "Uređaji moraju poklopiti sljedeće parametre za ovu radnju:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblActionName)
+#: AddAction.ui:19
+#, kde-format
+msgid "Action name:"
+msgstr "Ime radnje:"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
+#: AddAction.ui:26
+#, kde-format
+msgid "Enter the name for your new action"
+msgstr "Unesite ime za novu radnju."
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -149,76 +274,23 @@ msgstr "Nema izabrane radnje"
 msgid "Cannot be deleted"
 msgstr "Ne može se obrisati"
 
-#~ msgid "Edit Parameter"
-#~ msgstr "Uređivanje parametra"
+#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
+#: SolidActions.ui:22
+#, kde-format
+msgid "Remove"
+msgstr "Ukloni"
 
-#~ msgid "Parameter type:"
-#~ msgstr "Tip parametra:"
+#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
+#: SolidActions.ui:29
+#, kde-format
+msgid "Edit…"
+msgstr ""
 
-#~ msgid "Property Match"
-#~ msgstr "Poklapanje svojstva"
-
-#~ msgid "Content Conjunction"
-#~ msgstr "Konjunkcija sadržaja"
-
-#~ msgid "Content Disjunction"
-#~ msgstr "Disjunkcija sadržaja"
-
-#~ msgid "Device Interface Match"
-#~ msgstr "Poklapanje sučelja uređaja"
-
-#~ msgid "Device type:"
-#~ msgstr "Tip uređaja:"
-
-#~ msgid "Value name:"
-#~ msgstr "Ime vrijednosti:"
-
-#~ msgid "Equals"
-#~ msgstr "Jednako"
-
-#~ msgid "Contains"
-#~ msgstr "Sadrži"
-
-#~ msgid "Reset Parameter"
-#~ msgstr "Resetuj parametar"
-
-#~ msgid "Save Parameter Changes"
-#~ msgstr "Sačuvaj izmjene parametra"
-
-#~ msgid "Action icon, click to change it"
-#~ msgstr "Ikona radnje, kliknite da je izmijenite."
-
-#~ msgid "Action name"
-#~ msgstr "Ime radnje."
-
-#~ msgid "Command: "
-#~ msgstr "Naredba: "
-
-#~ msgid ""
-#~ "Command that will trigger the action\n"
-#~ "This can include any or all of the following case insensitive expands:\n"
-#~ "\n"
-#~ "%f: The mountpoint for the device - Storage Access devices only\n"
-#~ "%d: Path to the device node - Block devices only\n"
-#~ "%i: The identifier of the device"
-#~ msgstr ""
-#~ "<p>Naredba koja okida radnju. Može sadržati sljedeća proširenja (bez "
-#~ "razlikovanja veličine slova):</p><ul><li><icode>%f</icode> — tačka "
-#~ "montiranja uređaja (samo za skladišne uređaje)</li><li><icode>%d</icode> "
-#~ "— putanja do čvora uređaja (samo za blokovske uređaje)</li><li><icode>%i</"
-#~ "icode> — identifikator uređaja</li></ul>"
-
-#~ msgid "Devices must match the following parameters for this action:"
-#~ msgstr "Uređaji moraju poklopiti sljedeće parametre za ovu radnju:"
-
-#~ msgid "Action name:"
-#~ msgstr "Ime radnje:"
-
-#~ msgid "Enter the name for your new action"
-#~ msgstr "Unesite ime za novu radnju."
-
-#~ msgid "Remove"
-#~ msgstr "Ukloni"
+#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
+#: SolidActions.ui:36
+#, kde-format
+msgid "Add…"
+msgstr ""
 
 #~ msgid "Edit..."
 #~ msgstr "Izmijeni..."

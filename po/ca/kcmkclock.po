@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-05-26 10:43+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -32,6 +32,57 @@ msgstr "Sebastià Pla i Sanz,Ivan Lloro Boada"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "sps@sastia.com,antispam@wanadoo.es"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: dateandtime.ui:22
+#, kde-format
+msgid "Date and Time"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: dateandtime.ui:30
+#, kde-format
+msgid "Set date and time &automatically"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
+#: dateandtime.ui:53
+#, kde-format
+msgid "&Time server:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: dateandtime.ui:86
+#, kde-format
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: dateandtime.ui:122
+#, fuzzy, kde-format
+#| msgid "Time zone Error"
+msgid "Time Zone"
+msgstr "Error en zona horària"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dateandtime.ui:128
+#, kde-format
+msgid "To change the local time zone, select your area from the list below."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_local)
+#: dateandtime.ui:151
+#, fuzzy, kde-format
+#| msgctxt "%1 is name of time zone"
+#| msgid "Current local time zone: %1"
+msgid "Current local time zone:"
+msgstr "Zona horària local actual: %1"
+
+#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
+#: dateandtime.ui:161
+#, kde-format
+msgid "Search…"
+msgstr ""
 
 #: dtime.cpp:61
 #, kde-format
@@ -186,30 +237,3 @@ msgstr "No s'ha pogut establir l'hora actual"
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "No s'ha pogut establir la zona horària"
-
-#~ msgid "Date and Time"
-#~ msgstr "Data i hora"
-
-#~ msgid "Set date and time &automatically"
-#~ msgstr "Estableix la data i hora &automàticament"
-
-#~ msgid "&Time server:"
-#~ msgstr "Servidor d'&hora:"
-
-#~ msgid ""
-#~ "Here you can change the system date's day of the month, month and year."
-#~ msgstr "Aquí podeu canviar el dia, el mes i l'any de la data del sistema."
-
-#~ msgid "Time Zone"
-#~ msgstr "Zona horària"
-
-#~ msgid "To change the local time zone, select your area from the list below."
-#~ msgstr ""
-#~ "Per a canviar la zona horària local, seleccioneu l'àrea de la llista que "
-#~ "segueix."
-
-#~ msgid "Current local time zone:"
-#~ msgstr "Zona horària local actual:"
-
-#~ msgid "Search…"
-#~ msgstr "Cerca…"

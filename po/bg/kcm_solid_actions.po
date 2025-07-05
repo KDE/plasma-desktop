@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-05-22 08:24+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
@@ -47,6 +47,134 @@ msgstr ""
 #, kde-format
 msgid "Invalid action"
 msgstr "Неправилно действие"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
+#: ActionEditor.ui:17
+#, kde-format
+msgid "Edit Parameter"
+msgstr "Редактиране на параметър"
+
+#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
+#: ActionEditor.ui:43
+#, kde-format
+msgid "Parameter type:"
+msgstr "Вид параметър:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:51
+#, kde-format
+msgid "Property Match"
+msgstr "Съвпадение на свойствата"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:56
+#, kde-format
+msgid "Content Conjunction"
+msgstr "Събиране на съдържанието"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:61
+#, kde-format
+msgid "Content Disjunction"
+msgstr "Разделяне на съдържанието"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:66
+#, kde-format
+msgid "Device Interface Match"
+msgstr "Съвпадение на интерфейса на устройството"
+
+#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
+#: ActionEditor.ui:96
+#, kde-format
+msgid "Device type:"
+msgstr "Вид устройство:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblValueName)
+#: ActionEditor.ui:135
+#, kde-format
+msgid "Value name:"
+msgstr "Име на стойност:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:175
+#, kde-format
+msgid "Equals"
+msgstr "Съвпада с"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:180
+#, kde-format
+msgid "Contains"
+msgstr "Съдържа"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
+#: ActionEditor.ui:208
+#, kde-format
+msgid "Reset Parameter"
+msgstr "Връщане на параметъра"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
+#: ActionEditor.ui:215
+#, kde-format
+msgid "Save Parameter Changes"
+msgstr "Запазване промените в параметъра"
+
+#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
+#: ActionEditor.ui:247
+#, kde-format
+msgid "Action icon, click to change it"
+msgstr "Икона за действието. Натиснете за смяна."
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
+#: ActionEditor.ui:254
+#, kde-format
+msgid "Action name"
+msgstr "Име на действие"
+
+#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
+#: ActionEditor.ui:271
+#, kde-format
+msgid "Command: "
+msgstr "Команда:"
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
+#: ActionEditor.ui:283
+#, no-c-format, kde-format
+msgid ""
+"Command that will trigger the action\n"
+"This can include any or all of the following case insensitive expands:\n"
+"\n"
+"%f: The mountpoint for the device - Storage Access devices only\n"
+"%d: Path to the device node - Block devices only\n"
+"%i: The identifier of the device"
+msgstr ""
+"Команда, задействана от действието\n"
+"Може да включва някое или всички от следните:\n"
+"\n"
+"%f: Точка на монтиране на устройството. Само за устройства за съхраняване на "
+"данни\n"
+"%d: Път до възела на устройството. Само за блокови устройства\n"
+"%i: Идентификатор на устройството"
+
+#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
+#: ActionEditor.ui:300
+#, kde-format
+msgid "Devices must match the following parameters for this action:"
+msgstr ""
+"За това действие устройствата трябва да съвпадат по следните параметри:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblActionName)
+#: AddAction.ui:19
+#, kde-format
+msgid "Action name:"
+msgstr "Име на действието:"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
+#: AddAction.ui:26
+#, kde-format
+msgid "Enter the name for your new action"
+msgstr "Въведете име за новото действие"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -142,82 +270,20 @@ msgstr "Не е избрано действие"
 msgid "Cannot be deleted"
 msgstr "Не може да бъде изтрито"
 
-#~ msgid "Edit Parameter"
-#~ msgstr "Редактиране на параметър"
+#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
+#: SolidActions.ui:22
+#, kde-format
+msgid "Remove"
+msgstr "Премахване"
 
-#~ msgid "Parameter type:"
-#~ msgstr "Вид параметър:"
+#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
+#: SolidActions.ui:29
+#, kde-format
+msgid "Edit…"
+msgstr "Редактиране…"
 
-#~ msgid "Property Match"
-#~ msgstr "Съвпадение на свойствата"
-
-#~ msgid "Content Conjunction"
-#~ msgstr "Събиране на съдържанието"
-
-#~ msgid "Content Disjunction"
-#~ msgstr "Разделяне на съдържанието"
-
-#~ msgid "Device Interface Match"
-#~ msgstr "Съвпадение на интерфейса на устройството"
-
-#~ msgid "Device type:"
-#~ msgstr "Вид устройство:"
-
-#~ msgid "Value name:"
-#~ msgstr "Име на стойност:"
-
-#~ msgid "Equals"
-#~ msgstr "Съвпада с"
-
-#~ msgid "Contains"
-#~ msgstr "Съдържа"
-
-#~ msgid "Reset Parameter"
-#~ msgstr "Връщане на параметъра"
-
-#~ msgid "Save Parameter Changes"
-#~ msgstr "Запазване промените в параметъра"
-
-#~ msgid "Action icon, click to change it"
-#~ msgstr "Икона за действието. Натиснете за смяна."
-
-#~ msgid "Action name"
-#~ msgstr "Име на действие"
-
-#~ msgid "Command: "
-#~ msgstr "Команда:"
-
-#~ msgid ""
-#~ "Command that will trigger the action\n"
-#~ "This can include any or all of the following case insensitive expands:\n"
-#~ "\n"
-#~ "%f: The mountpoint for the device - Storage Access devices only\n"
-#~ "%d: Path to the device node - Block devices only\n"
-#~ "%i: The identifier of the device"
-#~ msgstr ""
-#~ "Команда, задействана от действието\n"
-#~ "Може да включва някое или всички от следните:\n"
-#~ "\n"
-#~ "%f: Точка на монтиране на устройството. Само за устройства за съхраняване "
-#~ "на данни\n"
-#~ "%d: Път до възела на устройството. Само за блокови устройства\n"
-#~ "%i: Идентификатор на устройството"
-
-#~ msgid "Devices must match the following parameters for this action:"
-#~ msgstr ""
-#~ "За това действие устройствата трябва да съвпадат по следните параметри:"
-
-#~ msgid "Action name:"
-#~ msgstr "Име на действието:"
-
-#~ msgid "Enter the name for your new action"
-#~ msgstr "Въведете име за новото действие"
-
-#~ msgid "Remove"
-#~ msgstr "Премахване"
-
-#~ msgid "Edit…"
-#~ msgstr "Редактиране…"
-
-#~ msgid "Add…"
-#~ msgstr "Добавяне…"
+#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
+#: SolidActions.ui:36
+#, kde-format
+msgid "Add…"
+msgstr "Добавяне…"

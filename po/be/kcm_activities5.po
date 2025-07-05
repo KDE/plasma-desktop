@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-10-12 04:08\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -99,6 +99,30 @@ msgstr "Не адсочваць выкарыстанне гэтага пакоя
 msgid "Shortcut for switching:"
 msgstr "Спалучэнне клавіш для пераключэння:"
 
+#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:10
+#, kde-format
+msgid "How many months keep the activity history"
+msgstr "Колькасць месяцаў захоўвання гісторыі"
+
+#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:17
+#, kde-format
+msgid "Which data to keep in activity history"
+msgstr "Тыпы даных для захоўвання ў гісторыі"
+
+#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:21
+#, kde-format
+msgid "List of Applications whose activity history to save"
+msgstr "Спіс праграм, гісторыя якіх будзе захоўвацца"
+
+#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:24
+#, kde-format
+msgid "List of Applications whose activity history not to save"
+msgstr "Спіс праграм, гісторыя якіх не будзе захоўвацца"
+
 #: MainConfigurationWidget.cpp:33
 #, kde-format
 msgid "Switching"
@@ -138,23 +162,20 @@ msgctxt "@action"
 msgid "Walk through activities (Reverse)"
 msgstr "Пераход паміж пакоямі (адваротны кірунак)"
 
-#~ msgid "How many months keep the activity history"
-#~ msgstr "Колькасць месяцаў захоўвання гісторыі"
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_virtualDesktopSwitchEnabled)
+#: ui/SwitchingTabBase.ui:22
+#, kde-format
+msgid "Remember for each activity (needs restart)"
+msgstr "Запамінаць для кожнага пакоя (спатрэбіцца перазапуск)"
 
-#~ msgid "Which data to keep in activity history"
-#~ msgstr "Тыпы даных для захоўвання ў гісторыі"
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/SwitchingTabBase.ui:29
+#, kde-format
+msgid "Current virtual desktop:"
+msgstr "Бягучы віртуальны працоўны стол:"
 
-#~ msgid "List of Applications whose activity history to save"
-#~ msgstr "Спіс праграм, гісторыя якіх будзе захоўвацца"
-
-#~ msgid "List of Applications whose activity history not to save"
-#~ msgstr "Спіс праграм, гісторыя якіх не будзе захоўвацца"
-
-#~ msgid "Remember for each activity (needs restart)"
-#~ msgstr "Запамінаць для кожнага пакоя (спатрэбіцца перазапуск)"
-
-#~ msgid "Current virtual desktop:"
-#~ msgstr "Бягучы віртуальны працоўны стол:"
-
-#~ msgid "Shortcuts:"
-#~ msgstr "Спалучэнні клавіш:"
+#. i18n: ectx: property (text), widget (QLabel, label_1)
+#: ui/SwitchingTabBase.ui:38
+#, kde-format
+msgid "Shortcuts:"
+msgstr "Спалучэнні клавіш:"

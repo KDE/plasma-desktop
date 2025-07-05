@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmserver 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-12-27 22:05+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -173,17 +173,29 @@ msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "சாதனநிரல் (firmware) அமைப்புகளில் நுழை"
 
-#~ msgid "Confirm logout"
-#~ msgstr "வெளியேறும்போது உறுதி செய்"
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, kde-format
+msgid "Confirm logout"
+msgstr "வெளியேறும்போது உறுதி செய்"
 
-#~ msgid "Default leave option"
-#~ msgstr "இயல்பிருப்பு வெளியேற்ற முறை"
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:13
+#, kde-format
+msgid "Default leave option"
+msgstr "இயல்பிருப்பு வெளியேற்ற முறை"
 
-#~ msgid "On login"
-#~ msgstr "நுழையும்போது"
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:22
+#, kde-format
+msgid "On login"
+msgstr "நுழையும்போது"
 
-#~ msgid "Applications to be excluded from session"
-#~ msgstr "அமர்வில் உட்படக்கூடாத செயலிகள்"
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:26
+#, kde-format
+msgid "Applications to be excluded from session"
+msgstr "அமர்வில் உட்படக்கூடாத செயலிகள்"
 
 #~ msgid "Default option:"
 #~ msgstr "இயல்பிருப்பு தேர்வு:"

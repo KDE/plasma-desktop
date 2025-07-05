@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_device_automounter\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-09-24 14:45+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -66,6 +66,72 @@ msgstr "Kai Uwe Broulik"
 #, kde-format
 msgid "Plasma 5 Port"
 msgstr "Port Plasma 5"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, kde-format
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"Cette liste contient les périphériques de stockage connus du système. Si "
+"l'option « Montage automatique lors de la connexion » est cochée, le "
+"périphérique sera automatiquement monté, même si l'option « Monter tous les "
+"média amovibles lors de la connexion » est décoché. Il en va de même pour le "
+"paramètre « Montage automatique lors du raccordement »."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"Cliquer sur ce bouton amène les périphériques sélectionnés à être "
+"« oubliés ». Cette fonction n'est utile que si l'option « Ne monter "
+"automatiquement que le média amovible ayant été monté manuellement "
+"auparavant » est cochée. Dès lors qu'un périphérique est oublié et que le "
+"système est paramétré pour ne monter automatiquement que les périphériques "
+"habituels, le périphérique ne sera pas monté automatiquement."
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "Oublier un périphérique"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, kde-format
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"Lorsque cette option est cochée, seuls les périphériques mémorisés seront "
+"automatiquement montés. Un périphérique est « mémorisé » s'il a déjà été "
+"monté auparavant. Par exemple, la connexion à chaud d'un lecteur multimédia "
+"« USB » à charger n'est pas suffisant pour le « mémoriser ». S'il n'y a "
+"aucun accès aux fichiers, il ne sera pas automatiquement monté la prochaine "
+"fois qu'il sera détecté. Cependant, dès qu'un accès aux fichiers est "
+"effectué, le contenu du périphérique sera automatiquement mis à la "
+"disposition du système."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, kde-format
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr ""
+"Ne monter automatiquement des média amovibles que s'ils ont été montés "
+"manuellement auparavant"
 
 #: DeviceModel.cpp:52
 #, kde-format
@@ -130,60 +196,6 @@ msgstr "Ce périphérique sera monté automatiquement lors de son raccordement."
 msgid "This device will not be automatically mounted when attached."
 msgstr ""
 "Ce périphérique ne sera pas monté automatiquement lors de son raccordement."
-
-#~ msgid ""
-#~ "This list contains the storage devices known to the system. If "
-#~ "\"Automount on Login\" is checked, the device will be automatically "
-#~ "mounted even though \"Mount all removable media at login\" is unchecked. "
-#~ "The same applies for \"Automount on Attach\"."
-#~ msgstr ""
-#~ "Cette liste contient les périphériques de stockage connus du système. Si "
-#~ "l'option « Montage automatique lors de la connexion » est cochée, le "
-#~ "périphérique sera automatiquement monté, même si l'option « Monter tous "
-#~ "les média amovibles lors de la connexion » est décoché. Il en va de même "
-#~ "pour le paramètre « Montage automatique lors du raccordement »."
-
-#~ msgid ""
-#~ "Clicking this button causes the selected devices to be 'forgotten'. This "
-#~ "is only useful if \"Only automatically mount removable media that has "
-#~ "been manually mounted before\" is checked. Once a device is forgotten and "
-#~ "the system is set to only automatically mount familiar devices, the "
-#~ "device will not be automatically mounted."
-#~ msgstr ""
-#~ "Cliquer sur ce bouton amène les périphériques sélectionnés à être "
-#~ "« oubliés ». Cette fonction n'est utile que si l'option « Ne monter "
-#~ "automatiquement que le média amovible ayant été monté manuellement "
-#~ "auparavant » est cochée. Dès lors qu'un périphérique est oublié et que le "
-#~ "système est paramétré pour ne monter automatiquement que les "
-#~ "périphériques habituels, le périphérique ne sera pas monté "
-#~ "automatiquement."
-
-#~ msgid "Forget Device"
-#~ msgstr "Oublier un périphérique"
-
-#~ msgid ""
-#~ "When this is not checked, only remembered devices will be automatically "
-#~ "mounted. A device is 'remembered' if it has ever been mounted before. For "
-#~ "instance, plugging in a USB media player to charge is not sufficient to "
-#~ "'remember' it - if the files are not accessed, it will not be "
-#~ "automatically mounted the next time it is seen. Once they have been "
-#~ "accessed, however, the device's contents will be automatically made "
-#~ "available to the system."
-#~ msgstr ""
-#~ "Lorsque cette option est cochée, seuls les périphériques mémorisés seront "
-#~ "automatiquement montés. Un périphérique est « mémorisé » s'il a déjà été "
-#~ "monté auparavant. Par exemple, la connexion à chaud d'un lecteur "
-#~ "multimédia « USB » à charger n'est pas suffisant pour le « mémoriser ». "
-#~ "S'il n'y a aucun accès aux fichiers, il ne sera pas automatiquement monté "
-#~ "la prochaine fois qu'il sera détecté. Cependant, dès qu'un accès aux "
-#~ "fichiers est effectué, le contenu du périphérique sera automatiquement "
-#~ "mis à la disposition du système."
-
-#~ msgid ""
-#~ "Automatically mount removable media that have never been mounted before"
-#~ msgstr ""
-#~ "Ne monter automatiquement des média amovibles que s'ils ont été montés "
-#~ "manuellement auparavant"
 
 #~ msgid ""
 #~ "If any removable storage devices are connected to your system when you "

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2004-12-03 14:52-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -27,6 +27,58 @@ msgstr "Séamus Ó Ciardhuáin,Kevin Scannell"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "seoc@iolfree.ie,kscanne@gmail.com"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: dateandtime.ui:22
+#, kde-format
+msgid "Date and Time"
+msgstr "Dáta agus Am"
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: dateandtime.ui:30
+#, fuzzy, kde-format
+#| msgid "Set date and time &automatically:"
+msgid "Set date and time &automatically"
+msgstr "Socr&aigh an dáta agus an t-am go huathoibríoch:"
+
+#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
+#: dateandtime.ui:53
+#, fuzzy, kde-format
+#| msgid "Time server:"
+msgid "&Time server:"
+msgstr "Freastalaí ama:"
+
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: dateandtime.ui:86
+#, kde-format
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr "Is féidir leat dáta an chórais (lá, mí, bliain) a athrú anseo."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: dateandtime.ui:122
+#, kde-format
+msgid "Time Zone"
+msgstr "Crios Ama"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dateandtime.ui:128
+#, kde-format
+msgid "To change the local time zone, select your area from the list below."
+msgstr ""
+"Chun an crios ama logánta a athrú, roghnaigh do cheantar as an liosta thíos."
+
+#. i18n: ectx: property (text), widget (QLabel, m_local)
+#: dateandtime.ui:151
+#, kde-format
+msgid "Current local time zone:"
+msgstr "Crios ama reatha:"
+
+#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
+#: dateandtime.ui:161
+#, fuzzy, kde-format
+#| msgid "Search"
+msgid "Search…"
+msgstr "Cuardaigh"
 
 #: dtime.cpp:61
 #, kde-format
@@ -188,39 +240,6 @@ msgstr "Ní féidir dul i dteagmháil leis an bhfreastalaí ama: %1."
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set timezone"
 msgstr "Ní féidir dul i dteagmháil leis an bhfreastalaí ama: %1."
-
-#~ msgid "Date and Time"
-#~ msgstr "Dáta agus Am"
-
-#, fuzzy
-#~| msgid "Set date and time &automatically:"
-#~ msgid "Set date and time &automatically"
-#~ msgstr "Socr&aigh an dáta agus an t-am go huathoibríoch:"
-
-#, fuzzy
-#~| msgid "Time server:"
-#~ msgid "&Time server:"
-#~ msgstr "Freastalaí ama:"
-
-#~ msgid ""
-#~ "Here you can change the system date's day of the month, month and year."
-#~ msgstr "Is féidir leat dáta an chórais (lá, mí, bliain) a athrú anseo."
-
-#~ msgid "Time Zone"
-#~ msgstr "Crios Ama"
-
-#~ msgid "To change the local time zone, select your area from the list below."
-#~ msgstr ""
-#~ "Chun an crios ama logánta a athrú, roghnaigh do cheantar as an liosta "
-#~ "thíos."
-
-#~ msgid "Current local time zone:"
-#~ msgstr "Crios ama reatha:"
-
-#, fuzzy
-#~| msgid "Search"
-#~ msgid "Search…"
-#~ msgstr "Cuardaigh"
 
 #~ msgid "kcmclock"
 #~ msgstr "kcmclock"

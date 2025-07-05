@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-09-02 07:37+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -17,6 +17,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.1.1\n"
+
+#. i18n: ectx: label, entry (colorScheme), group (General)
+#: landingpage_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Color scheme name"
+msgstr "ფერების სქემის სახელი"
+
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:15
+#, kde-format
+msgid "Single click to open files"
+msgstr "ერთი წკაპი ფაილის გასახსნელად"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:19
+#, kde-format
+msgid "Global Look and Feel package"
+msgstr "გარეგნობის გლობალური პაკეტი"
+
+#. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
+#. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:23
+#: landingpage_kdeglobalssettings.kcfg:27
+#, kde-format
+msgid "Global Look and Feel package, alternate"
+msgstr "გარეგნობის გლობალური პაკეტი, ალტერნატიული"
+
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:31
+#, kde-format
+msgid "Animation speed"
+msgstr "ანიმაციის სიჩქარე"
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -88,21 +120,6 @@ msgstr "ქცევის მეტი პარამეტრი…"
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "ყველაზე ხშირად გამოყენებული გვერდები:"
-
-#~ msgid "Color scheme name"
-#~ msgstr "ფერების სქემის სახელი"
-
-#~ msgid "Single click to open files"
-#~ msgstr "ერთი წკაპი ფაილის გასახსნელად"
-
-#~ msgid "Global Look and Feel package"
-#~ msgstr "გარეგნობის გლობალური პაკეტი"
-
-#~ msgid "Global Look and Feel package, alternate"
-#~ msgstr "გარეგნობის გლობალური პაკეტი, ალტერნატიული"
-
-#~ msgid "Animation speed"
-#~ msgstr "ანიმაციის სიჩქარე"
 
 #~ msgid "Plasma"
 #~ msgstr "Plasma"

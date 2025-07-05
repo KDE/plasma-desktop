@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2024-03-30 19:46\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -34,12 +34,14 @@ msgstr "重新启动"
 msgid "Visual behavior:"
 msgstr "视觉行为："
 
-#: package/contents/ui/main.qml:51
+#. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
+#: package/contents/ui/main.qml:51 workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "鼠标悬停时显示提示信息"
 
-#: package/contents/ui/main.qml:62
+#. i18n: ectx: label, entry (osdEnabled), group (OSD)
+#: package/contents/ui/main.qml:62 workspaceoptions_plasmasettings.kcfg:15
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "状态变化时显示视觉反馈"
@@ -166,28 +168,52 @@ msgid ""
 "more easily accommodate touch interaction."
 msgstr "在触摸模式下，用户界面的许多元素将被放大，以便适应触摸操作。"
 
-#~ msgid "Single click to open files"
-#~ msgstr "单击打开文件/文件夹"
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Single click to open files"
+msgstr "单击打开文件/文件夹"
 
-#~ msgid "Animation speed"
-#~ msgstr "动效速度"
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:13
+#, kde-format
+msgid "Animation speed"
+msgstr "动效速度"
 
-#~ msgid "Left-click in scrollbar track moves scrollbar by one page"
-#~ msgstr "左键单击滚动条空白位置可以滚动一页距离"
+#. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:17
+#, kde-format
+msgid "Left-click in scrollbar track moves scrollbar by one page"
+msgstr "左键单击滚动条空白位置可以滚动一页距离"
 
-#~ msgid "Automatically switch to touch-optimized mode"
-#~ msgstr "自动切换到触摸模式"
+#. i18n: ectx: label, entry (tabletMode), group (Input)
+#: workspaceoptions_kwinsettings.kcfg:9
+#, kde-format
+msgid "Automatically switch to touch-optimized mode"
+msgstr "自动切换到触摸模式"
 
-#~ msgid "Enable middle click selection pasting"
-#~ msgstr "启用中键点击粘贴选中内容"
+#. i18n: ectx: label, entry (primarySelection), group (Wayland)
+#: workspaceoptions_kwinsettings.kcfg:15
+#, kde-format
+msgid "Enable middle click selection pasting"
+msgstr "启用中键点击粘贴选中内容"
 
-#~ msgid ""
-#~ "Show an on-screen display to indicate status changes such as brightness "
-#~ "or volume"
-#~ msgstr "显示反映状态变化的屏显信息，如亮度或音量变化等"
+#. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:16
+#, kde-format
+msgid ""
+"Show an on-screen display to indicate status changes such as brightness or "
+"volume"
+msgstr "显示反映状态变化的屏显信息，如亮度或音量变化等"
 
-#~ msgid "OSD on layout change"
-#~ msgstr "布局更改时显示屏显信息"
+#. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:20
+#, kde-format
+msgid "OSD on layout change"
+msgstr "布局更改时显示屏显信息"
 
-#~ msgid "Show a popup on layout changes"
-#~ msgstr "在布局更改时显示弹窗通知"
+#. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:21
+#, kde-format
+msgid "Show a popup on layout changes"
+msgstr "在布局更改时显示弹窗通知"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_device_automounter\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2011-08-16 18:00+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <kde-i18n-doc@kde.org>\n"
@@ -57,6 +57,85 @@ msgstr ""
 #, kde-format
 msgid "Plasma 5 Port"
 msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, fuzzy, kde-format
+#| msgid ""
+#| "This list contains the storage devices known to the system. If "
+#| "\"Automount on Login\" is checked, the device will be automatically "
+#| "mounted even though \"Mount all removable media at login\" is unchecked. "
+#| "The same applies for \"Automount on Attach\".\n"
+#| "\n"
+#| "If \"Enable automatic mounting of removable media\" is unchecked, the "
+#| "overrides do not apply and no devices will be automatically mounted."
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"මෙම ලැයිස්තුවෙයි පද්ධතිය හඳුනන ගබඩා උපකරණ දැක්වෙයි. \"පිවිසීමෙහි දී ස්වයංක්‍රීය රැඳවීම\" සක්‍රීය "
+"කර ඇතිනම්, \"පිවිසිමේදී සියළු ඉවත්කල හැකි මාධයය රඳවන්න\" සලකුණු කර නොතිබුනද එම උපකරණ ස්වයංක්‍"
+"රීයව රැඳවේ. එයම \"ඈඳීමේදී ස්වයං රැඳචීම\" ටද අදාල වේ\".\n"
+"\n"
+"\"ඉවත්කල හැකි මාධ්‍යය සඳහා ස්වයංක්‍රීය රැඳචීම\" සලකුණු කර නොමැති නම්, අතික්‍රමණය නොයෙදෙන අතර "
+"කිසිඳු උපකරණයක් ස්වයංක්‍රීයව නොරැඳවේ."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"මෙම බොත්තම එබීම තොරාගත් උපකරණ 'අමතක' කරවීමට සමත්ය. මෙය \"පෙරදී ශ්‍රමිකව රැඳවූ ඉවත්කල "
+"හැකි මාධ්‍යය පමණක් ස්වයංක්‍රීයව රඳවන්න\" සලකුණු කර ඇතිනම් පමණක් ප්‍රයෝජනවත් වේ. උපකරණයක් අමතක "
+"කර ඇතිවිට හා පද්ධතිය හුරුපුරුදු උපකරණ පමණක් ස්වයංක්‍රීයව රැඳවීමට සකසා ඇතිවිට. එම උපකරණය ස්වයංක්‍"
+"රීයව නොරැඳවේ."
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "උපකරණය අමතක කරන්න"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, fuzzy, kde-format
+#| msgid ""
+#| "When this is checked, only remembered devices will be automatically "
+#| "mounted. A device is 'remembered' if it has ever been mounted before. For "
+#| "instance, plugging in a USB media player to charge is not sufficient to "
+#| "'remember' it - if the files are not accessed, it will not be "
+#| "automatically mounted the next time it is seen. Once they have been "
+#| "accessed, however, the device's contents will be automatically made "
+#| "available to the system."
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"මෙය සලකුණු කර ඇති විට, මතක තබාගත් උපකරණ පමණක් ස්වයංක්‍රීයව රැඳවේ. උපකරණයක් මතක තබාගනුයේ "
+"එය පෙරදී එක්වරක් හෝ රඳවා ඇත්නම් පමණි. උදාහරණක් ලෙස, USB ගීත වාදකයක් ගොනු වලට නොපිවිසී "
+"ආරෝපණය සඳහා පමණක් සවිකිරීම එය මතක තබාගැනීමට ප්‍රමාණවත් නොවේ, එය ඊළග වතාවේදී ස්වයංක්‍රීයව "
+"නොරැඳවෙනු ඇත. කෙසේ වුවත් එයට පිවිසි විට එහි අන්තර්ගතය ස්වයංක්‍රීයව පද්ධතියට භාවිත කල හැකි වනු "
+"ඇත."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, fuzzy, kde-format
+#| msgid ""
+#| "Only automatically mount removable media that has been manually mounted "
+#| "before"
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr "පෙරදී ශ්‍රමිකව රැඳවූ ඉවත්කල හැකි මාධ්‍යය පමණක් ස්වයංක්‍රීයව රඳවන්න"
 
 #: DeviceModel.cpp:52
 #, fuzzy, kde-format
@@ -121,75 +200,6 @@ msgstr "මෙම උපකරණය සබඳකල විට ස්වයං�
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "මෙම උපකරණය සබඳ කල විට ස්වයංක්‍රීයව නොරැඳවේ."
-
-#, fuzzy
-#~| msgid ""
-#~| "This list contains the storage devices known to the system. If "
-#~| "\"Automount on Login\" is checked, the device will be automatically "
-#~| "mounted even though \"Mount all removable media at login\" is unchecked. "
-#~| "The same applies for \"Automount on Attach\".\n"
-#~| "\n"
-#~| "If \"Enable automatic mounting of removable media\" is unchecked, the "
-#~| "overrides do not apply and no devices will be automatically mounted."
-#~ msgid ""
-#~ "This list contains the storage devices known to the system. If "
-#~ "\"Automount on Login\" is checked, the device will be automatically "
-#~ "mounted even though \"Mount all removable media at login\" is unchecked. "
-#~ "The same applies for \"Automount on Attach\"."
-#~ msgstr ""
-#~ "මෙම ලැයිස්තුවෙයි පද්ධතිය හඳුනන ගබඩා උපකරණ දැක්වෙයි. \"පිවිසීමෙහි දී ස්වයංක්‍රීය රැඳවීම\" සක්‍"
-#~ "රීය කර ඇතිනම්, \"පිවිසිමේදී සියළු ඉවත්කල හැකි මාධයය රඳවන්න\" සලකුණු කර නොතිබුනද එම උපකරණ "
-#~ "ස්වයංක්‍රීයව රැඳවේ. එයම \"ඈඳීමේදී ස්වයං රැඳචීම\" ටද අදාල වේ\".\n"
-#~ "\n"
-#~ "\"ඉවත්කල හැකි මාධ්‍යය සඳහා ස්වයංක්‍රීය රැඳචීම\" සලකුණු කර නොමැති නම්, අතික්‍රමණය නොයෙදෙන "
-#~ "අතර කිසිඳු උපකරණයක් ස්වයංක්‍රීයව නොරැඳවේ."
-
-#~ msgid ""
-#~ "Clicking this button causes the selected devices to be 'forgotten'. This "
-#~ "is only useful if \"Only automatically mount removable media that has "
-#~ "been manually mounted before\" is checked. Once a device is forgotten and "
-#~ "the system is set to only automatically mount familiar devices, the "
-#~ "device will not be automatically mounted."
-#~ msgstr ""
-#~ "මෙම බොත්තම එබීම තොරාගත් උපකරණ 'අමතක' කරවීමට සමත්ය. මෙය \"පෙරදී ශ්‍රමිකව රැඳවූ ඉවත්කල "
-#~ "හැකි මාධ්‍යය පමණක් ස්වයංක්‍රීයව රඳවන්න\" සලකුණු කර ඇතිනම් පමණක් ප්‍රයෝජනවත් වේ. උපකරණයක් "
-#~ "අමතක කර ඇතිවිට හා පද්ධතිය හුරුපුරුදු උපකරණ පමණක් ස්වයංක්‍රීයව රැඳවීමට සකසා ඇතිවිට. එම "
-#~ "උපකරණය ස්වයංක්‍රීයව නොරැඳවේ."
-
-#~ msgid "Forget Device"
-#~ msgstr "උපකරණය අමතක කරන්න"
-
-#, fuzzy
-#~| msgid ""
-#~| "When this is checked, only remembered devices will be automatically "
-#~| "mounted. A device is 'remembered' if it has ever been mounted before. "
-#~| "For instance, plugging in a USB media player to charge is not sufficient "
-#~| "to 'remember' it - if the files are not accessed, it will not be "
-#~| "automatically mounted the next time it is seen. Once they have been "
-#~| "accessed, however, the device's contents will be automatically made "
-#~| "available to the system."
-#~ msgid ""
-#~ "When this is not checked, only remembered devices will be automatically "
-#~ "mounted. A device is 'remembered' if it has ever been mounted before. For "
-#~ "instance, plugging in a USB media player to charge is not sufficient to "
-#~ "'remember' it - if the files are not accessed, it will not be "
-#~ "automatically mounted the next time it is seen. Once they have been "
-#~ "accessed, however, the device's contents will be automatically made "
-#~ "available to the system."
-#~ msgstr ""
-#~ "මෙය සලකුණු කර ඇති විට, මතක තබාගත් උපකරණ පමණක් ස්වයංක්‍රීයව රැඳවේ. උපකරණයක් මතක "
-#~ "තබාගනුයේ එය පෙරදී එක්වරක් හෝ රඳවා ඇත්නම් පමණි. උදාහරණක් ලෙස, USB ගීත වාදකයක් ගොනු "
-#~ "වලට නොපිවිසී ආරෝපණය සඳහා පමණක් සවිකිරීම එය මතක තබාගැනීමට ප්‍රමාණවත් නොවේ, එය ඊළග "
-#~ "වතාවේදී ස්වයංක්‍රීයව නොරැඳවෙනු ඇත. කෙසේ වුවත් එයට පිවිසි විට එහි අන්තර්ගතය ස්වයංක්‍රීයව "
-#~ "පද්ධතියට භාවිත කල හැකි වනු ඇත."
-
-#, fuzzy
-#~| msgid ""
-#~| "Only automatically mount removable media that has been manually mounted "
-#~| "before"
-#~ msgid ""
-#~ "Automatically mount removable media that have never been mounted before"
-#~ msgstr "පෙරදී ශ්‍රමිකව රැඳවූ ඉවත්කල හැකි මාධ්‍යය පමණක් ස්වයංක්‍රීයව රඳවන්න"
 
 #~ msgid ""
 #~ "If any removable storage devices are connected to your system when you "

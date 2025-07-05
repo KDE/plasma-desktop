@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-10-09 09:15-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -47,29 +47,65 @@ msgstr ""
 msgid "Maintainer"
 msgstr "ਪਰਬੰਧਕ"
 
-#~ msgid "Rendering Backend:"
-#~ msgstr "ਰੈਂਡਰ ਕਰਨ ਵਾਲਾ ਬੈਕਐਂਡ:"
+#. i18n: ectx: property (text), widget (KMessageWidget, kmessagewidget)
+#: kcmqtquicksettingswidget.ui:23
+#, kde-format
+msgid ""
+"These settings adjust the QtQuick settings used by Plasma. Only adjust if "
+"you know what you are doing."
+msgstr ""
 
-#~ msgid "Automatic"
-#~ msgstr "ਆਟੋਮੈਟਿਕ"
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcmqtquicksettingswidget.ui:38
+#, kde-format
+msgid "Rendering Backend:"
+msgstr "ਰੈਂਡਰ ਕਰਨ ਵਾਲਾ ਬੈਕਐਂਡ:"
 
-#~ msgid "Open GL"
-#~ msgstr "ਓਪਨ GL"
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
+#: kcmqtquicksettingswidget.ui:46 kcmqtquicksettingswidget.ui:79
+#, kde-format
+msgid "Automatic"
+msgstr "ਆਟੋਮੈਟਿਕ"
 
-#~ msgid "Software"
-#~ msgstr "ਸਾਫਟਵੇਅਰ"
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
+#: kcmqtquicksettingswidget.ui:51
+#, kde-format
+msgid "Open GL"
+msgstr "ਓਪਨ GL"
 
-#~ msgid "GL Core Profile:"
-#~ msgstr "GL ਕੋਰ ਪਰੋਫਾਇਲ:"
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
+#: kcmqtquicksettingswidget.ui:56
+#, kde-format
+msgid "Software"
+msgstr "ਸਾਫਟਵੇਅਰ"
 
-#~ msgid "Render Loop:"
-#~ msgstr "ਰੈਂਡਰ ਲੂਪ:"
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcmqtquicksettingswidget.ui:64
+#, kde-format
+msgid "GL Core Profile:"
+msgstr "GL ਕੋਰ ਪਰੋਫਾਇਲ:"
 
-#~ msgid "Basic"
-#~ msgstr "ਮੂਲ"
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: kcmqtquicksettingswidget.ui:71
+#, kde-format
+msgid "Render Loop:"
+msgstr "ਰੈਂਡਰ ਲੂਪ:"
 
-#~ msgid "Threaded"
-#~ msgstr "ਥਰਿੱਡ"
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
+#: kcmqtquicksettingswidget.ui:84
+#, kde-format
+msgid "Basic"
+msgstr "ਮੂਲ"
 
-#~ msgid "Force"
-#~ msgstr "ਮਜ਼ਬੂਰ"
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
+#: kcmqtquicksettingswidget.ui:89
+#, kde-format
+msgid "Threaded"
+msgstr "ਥਰਿੱਡ"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ForceGlCoreProfile)
+#: kcmqtquicksettingswidget.ui:97
+#, kde-format
+msgid "Force"
+msgstr "ਮਜ਼ਬੂਰ"

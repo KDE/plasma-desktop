@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-12-26 10:01\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -40,12 +40,14 @@ msgstr "Перазапусціць"
 msgid "Visual behavior:"
 msgstr "Візуальныя паводзіны:"
 
-#: package/contents/ui/main.qml:51
+#. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
+#: package/contents/ui/main.qml:51 workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "Паказваць падказкі пры навядзенні курсора"
 
-#: package/contents/ui/main.qml:62
+#. i18n: ectx: label, entry (osdEnabled), group (OSD)
+#: package/contents/ui/main.qml:62 workspaceoptions_plasmasettings.kcfg:15
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "Паказваць візуальнае апавяшчэнне пры змене стану"
@@ -176,32 +178,56 @@ msgstr ""
 "У сэнсарным рэжыме многія элементы інтэрфейсу карыстальніка павялічваюцца, "
 "каб было зручней узаемадзейнічаць з імі."
 
-#~ msgid "Single click to open files"
-#~ msgstr "Адкрываць файлы адным пстрыканнем"
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Single click to open files"
+msgstr "Адкрываць файлы адным пстрыканнем"
 
-#~ msgid "Animation speed"
-#~ msgstr "Хуткасць анімацыі"
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:13
+#, kde-format
+msgid "Animation speed"
+msgstr "Хуткасць анімацыі"
 
-#~ msgid "Left-click in scrollbar track moves scrollbar by one page"
-#~ msgstr ""
-#~ "Пстрыканне левай кнопкай мышы па паласе пракручвання перамяшчае на адну "
-#~ "старонку"
+#. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:17
+#, kde-format
+msgid "Left-click in scrollbar track moves scrollbar by one page"
+msgstr ""
+"Пстрыканне левай кнопкай мышы па паласе пракручвання перамяшчае на адну "
+"старонку"
 
-#~ msgid "Automatically switch to touch-optimized mode"
-#~ msgstr ""
-#~ "Аўтаматычнае пераключэнне у рэжым, аптымізаваны для сэнсарнага кіравання"
+#. i18n: ectx: label, entry (tabletMode), group (Input)
+#: workspaceoptions_kwinsettings.kcfg:9
+#, kde-format
+msgid "Automatically switch to touch-optimized mode"
+msgstr ""
+"Аўтаматычнае пераключэнне у рэжым, аптымізаваны для сэнсарнага кіравання"
 
-#~ msgid "Enable middle click selection pasting"
-#~ msgstr ""
-#~ "Уключыць устаўлянне абраных элементаў пстрыканнем сярэдняй кнопкай мышы"
+#. i18n: ectx: label, entry (primarySelection), group (Wayland)
+#: workspaceoptions_kwinsettings.kcfg:15
+#, kde-format
+msgid "Enable middle click selection pasting"
+msgstr ""
+"Уключыць устаўлянне абраных элементаў пстрыканнем сярэдняй кнопкай мышы"
 
-#~ msgid ""
-#~ "Show an on-screen display to indicate status changes such as brightness "
-#~ "or volume"
-#~ msgstr "Паказваць выплыўныя апавяшчэнні пра змену яркасці, гучнасці і інш."
+#. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:16
+#, kde-format
+msgid ""
+"Show an on-screen display to indicate status changes such as brightness or "
+"volume"
+msgstr "Паказваць выплыўныя апавяшчэнні пра змену яркасці, гучнасці і інш."
 
-#~ msgid "OSD on layout change"
-#~ msgstr "Апавяшчэнне пры змене раскладкі"
+#. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:20
+#, kde-format
+msgid "OSD on layout change"
+msgstr "Апавяшчэнне пры змене раскладкі"
 
-#~ msgid "Show a popup on layout changes"
-#~ msgstr "Паказваць выплыўныя апавяшчэнні пры змене раскладкі"
+#. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:21
+#, kde-format
+msgid "Show a popup on layout changes"
+msgstr "Паказваць выплыўныя апавяшчэнні пры змене раскладкі"

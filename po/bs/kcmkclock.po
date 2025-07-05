@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2014-10-20 19:34+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -29,6 +29,59 @@ msgstr "Samir Ribić"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "samir.ribic@etf.unsa.ba"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: dateandtime.ui:22
+#, kde-format
+msgid "Date and Time"
+msgstr "Datum i vrijeme"
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: dateandtime.ui:30
+#, fuzzy, kde-format
+#| msgid "Set date and time &automatically:"
+msgid "Set date and time &automatically"
+msgstr "&Automatski podesi datum i vrijeme:"
+
+#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
+#: dateandtime.ui:53
+#, fuzzy, kde-format
+#| msgid "Time server:"
+msgid "&Time server:"
+msgstr "Server vremena:"
+
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: dateandtime.ui:86
+#, kde-format
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr ""
+"Ovdje možete izmijeniti dan u mjesecu, mjesec i godinu sistemskog datuma."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: dateandtime.ui:122
+#, kde-format
+msgid "Time Zone"
+msgstr "Vremenska zona"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dateandtime.ui:128
+#, kde-format
+msgid "To change the local time zone, select your area from the list below."
+msgstr ""
+"Za promjenu lokalne vremenske zone, izaberite područje sa donjeg spiska."
+
+#. i18n: ectx: property (text), widget (QLabel, m_local)
+#: dateandtime.ui:151
+#, kde-format
+msgid "Current local time zone:"
+msgstr "Trenutna lokalna vremenska zona:"
+
+#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
+#: dateandtime.ui:161
+#, fuzzy, kde-format
+#| msgid "Search"
+msgid "Search…"
+msgstr "Pretraživanje"
 
 #: dtime.cpp:61
 #, kde-format
@@ -188,36 +241,3 @@ msgstr "Ne mogu da stupim u vezu sa serverom: %1."
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set timezone"
 msgstr "Ne mogu da stupim u vezu sa serverom: %1."
-
-#~ msgid "Date and Time"
-#~ msgstr "Datum i vrijeme"
-
-#, fuzzy
-#~| msgid "Set date and time &automatically:"
-#~ msgid "Set date and time &automatically"
-#~ msgstr "&Automatski podesi datum i vrijeme:"
-
-#, fuzzy
-#~| msgid "Time server:"
-#~ msgid "&Time server:"
-#~ msgstr "Server vremena:"
-
-#~ msgid ""
-#~ "Here you can change the system date's day of the month, month and year."
-#~ msgstr ""
-#~ "Ovdje možete izmijeniti dan u mjesecu, mjesec i godinu sistemskog datuma."
-
-#~ msgid "Time Zone"
-#~ msgstr "Vremenska zona"
-
-#~ msgid "To change the local time zone, select your area from the list below."
-#~ msgstr ""
-#~ "Za promjenu lokalne vremenske zone, izaberite područje sa donjeg spiska."
-
-#~ msgid "Current local time zone:"
-#~ msgstr "Trenutna lokalna vremenska zona:"
-
-#, fuzzy
-#~| msgid "Search"
-#~ msgid "Search…"
-#~ msgstr "Pretraživanje"

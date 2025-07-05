@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-05-28 19:33+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -57,11 +57,17 @@ msgstr "Aşılış ekranına öncədən baxış"
 msgid "Uninstall"
 msgstr "Silin"
 
-#~ msgid "For future use"
-#~ msgstr "Gələcəkdə istifadə üçün"
+#. i18n: ectx: label, entry (engine), group (KSplash)
+#: splashscreensettings.kcfg:12
+#, kde-format
+msgid "For future use"
+msgstr "Gələcəkdə istifadə üçün"
 
-#~ msgid "Name of the current splash theme"
-#~ msgstr "Cari açılış mövzusunun adı"
+#. i18n: ectx: label, entry (theme), group (KSplash)
+#: splashscreensettings.kcfg:16
+#, kde-format
+msgid "Name of the current splash theme"
+msgstr "Cari açılış mövzusunun adı"
 
 #~ msgid "&Get New Splash Screens…"
 #~ msgstr "Yeni Açılış ekranı mövzuları &almaq…"

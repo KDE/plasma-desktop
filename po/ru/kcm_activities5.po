@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-05-29 13:29+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -100,6 +100,31 @@ msgstr "Не запоминать статистику использовани�
 msgid "Shortcut for switching:"
 msgstr "Комбинация клавиш для переключения:"
 
+#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:10
+#, kde-format
+msgid "How many months keep the activity history"
+msgstr "Срок хранения статистики использования в месяцах"
+
+#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:17
+#, kde-format
+msgid "Which data to keep in activity history"
+msgstr "Типы событий для сохранения в статистике использования"
+
+#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:21
+#, kde-format
+msgid "List of Applications whose activity history to save"
+msgstr "Список приложений, статистика использования которых будет сохраняться"
+
+#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:24
+#, kde-format
+msgid "List of Applications whose activity history not to save"
+msgstr ""
+"Список приложений, статистика использования которых не будет сохраняться"
+
 #: MainConfigurationWidget.cpp:33
 #, kde-format
 msgid "Switching"
@@ -139,28 +164,23 @@ msgctxt "@action"
 msgid "Walk through activities (Reverse)"
 msgstr "На одну комнату назад"
 
-#~ msgid "How many months keep the activity history"
-#~ msgstr "Срок хранения статистики использования в месяцах"
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_virtualDesktopSwitchEnabled)
+#: ui/SwitchingTabBase.ui:22
+#, kde-format
+msgid "Remember for each activity (needs restart)"
+msgstr "Запоминать для каждой комнаты (потребуется перезапуск)"
 
-#~ msgid "Which data to keep in activity history"
-#~ msgstr "Типы событий для сохранения в статистике использования"
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/SwitchingTabBase.ui:29
+#, kde-format
+msgid "Current virtual desktop:"
+msgstr "Текущий рабочий стол:"
 
-#~ msgid "List of Applications whose activity history to save"
-#~ msgstr ""
-#~ "Список приложений, статистика использования которых будет сохраняться"
-
-#~ msgid "List of Applications whose activity history not to save"
-#~ msgstr ""
-#~ "Список приложений, статистика использования которых не будет сохраняться"
-
-#~ msgid "Remember for each activity (needs restart)"
-#~ msgstr "Запоминать для каждой комнаты (потребуется перезапуск)"
-
-#~ msgid "Current virtual desktop:"
-#~ msgstr "Текущий рабочий стол:"
-
-#~ msgid "Shortcuts:"
-#~ msgstr "Комбинации клавиш:"
+#. i18n: ectx: property (text), widget (QLabel, label_1)
+#: ui/SwitchingTabBase.ui:38
+#, kde-format
+msgid "Shortcuts:"
+msgstr "Комбинации клавиш:"
 
 #~ msgid "Privacy"
 #~ msgstr "Конфиденциальность"

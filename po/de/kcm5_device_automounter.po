@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_device_automounter\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-02-27 19:50+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -58,6 +58,69 @@ msgstr "Kai Uwe Broulik"
 #, kde-format
 msgid "Plasma 5 Port"
 msgstr "Plasma 5 Port"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, kde-format
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"Diese Liste zeigt alle Geräte, die dem System bekannt sind. Wenn die "
+"Einstellung „Automatisches Einhängen beim Anmelden“ aktiviert ist, wird das "
+"Gerät automatisch eingebunden, selbst wenn die Einstellung „Alle "
+"Wechselmedien beim Anmelden einhängen” nicht aktiviert ist. Das Gleiche gilt "
+"für die Einstellung „Automatisches Einhängen beim Anschluss des Gerätes“."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"Durch Drücken dieses Knopfes werden die ausgewählten Geräte „vergessen“. "
+"Dies ist nur nützlich, wenn Sie die Funktion „Nur Geräte automatisch "
+"einhängen, die schon zuvor eingehängt waren“ verwenden. Wenn ein Gerät "
+"vergessen wird, wird es zukünftig nicht mehr automatisch durch diese "
+"Funktion eingehängt."
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "Gerät vergessen"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, kde-format
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"Wenn diese Einstellung nicht aktiviert ist, werden nur Geräte automatisch "
+"eingehängt, die auch schon zuvor einmal eingehängt waren. Ein USB-"
+"Medienspieler, der lediglich zum Laden eingehängt war, wird hier nicht "
+"berücksichtigt, da dabei auf keine Dateien zugegriffen wurde. Daher wird der "
+"Medienspieler beim nächsten Anschließen nicht automatisch eingehängt. Wenn "
+"allerdings einmal auf Dateien zugegriffen wurde, wird der Inhalt des "
+"Medienspielers auch beim nächsten Mal verfügbar gemacht."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, kde-format
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr ""
+"Wechselmedien automatisch einhängen, die noch nie zuvor eingehängt waren"
 
 #: DeviceModel.cpp:52
 #, kde-format
@@ -122,57 +185,6 @@ msgstr ""
 msgid "This device will not be automatically mounted when attached."
 msgstr ""
 "Dieses Gerät wird nicht automatisch eingehängt, sobald es angeschlossen wird."
-
-#~ msgid ""
-#~ "This list contains the storage devices known to the system. If "
-#~ "\"Automount on Login\" is checked, the device will be automatically "
-#~ "mounted even though \"Mount all removable media at login\" is unchecked. "
-#~ "The same applies for \"Automount on Attach\"."
-#~ msgstr ""
-#~ "Diese Liste zeigt alle Geräte, die dem System bekannt sind. Wenn die "
-#~ "Einstellung „Automatisches Einhängen beim Anmelden“ aktiviert ist, wird "
-#~ "das Gerät automatisch eingebunden, selbst wenn die Einstellung „Alle "
-#~ "Wechselmedien beim Anmelden einhängen” nicht aktiviert ist. Das Gleiche "
-#~ "gilt für die Einstellung „Automatisches Einhängen beim Anschluss des "
-#~ "Gerätes“."
-
-#~ msgid ""
-#~ "Clicking this button causes the selected devices to be 'forgotten'. This "
-#~ "is only useful if \"Only automatically mount removable media that has "
-#~ "been manually mounted before\" is checked. Once a device is forgotten and "
-#~ "the system is set to only automatically mount familiar devices, the "
-#~ "device will not be automatically mounted."
-#~ msgstr ""
-#~ "Durch Drücken dieses Knopfes werden die ausgewählten Geräte „vergessen“. "
-#~ "Dies ist nur nützlich, wenn Sie die Funktion „Nur Geräte automatisch "
-#~ "einhängen, die schon zuvor eingehängt waren“ verwenden. Wenn ein Gerät "
-#~ "vergessen wird, wird es zukünftig nicht mehr automatisch durch diese "
-#~ "Funktion eingehängt."
-
-#~ msgid "Forget Device"
-#~ msgstr "Gerät vergessen"
-
-#~ msgid ""
-#~ "When this is not checked, only remembered devices will be automatically "
-#~ "mounted. A device is 'remembered' if it has ever been mounted before. For "
-#~ "instance, plugging in a USB media player to charge is not sufficient to "
-#~ "'remember' it - if the files are not accessed, it will not be "
-#~ "automatically mounted the next time it is seen. Once they have been "
-#~ "accessed, however, the device's contents will be automatically made "
-#~ "available to the system."
-#~ msgstr ""
-#~ "Wenn diese Einstellung nicht aktiviert ist, werden nur Geräte automatisch "
-#~ "eingehängt, die auch schon zuvor einmal eingehängt waren. Ein USB-"
-#~ "Medienspieler, der lediglich zum Laden eingehängt war, wird hier nicht "
-#~ "berücksichtigt, da dabei auf keine Dateien zugegriffen wurde. Daher wird "
-#~ "der Medienspieler beim nächsten Anschließen nicht automatisch eingehängt. "
-#~ "Wenn allerdings einmal auf Dateien zugegriffen wurde, wird der Inhalt des "
-#~ "Medienspielers auch beim nächsten Mal verfügbar gemacht."
-
-#~ msgid ""
-#~ "Automatically mount removable media that have never been mounted before"
-#~ msgstr ""
-#~ "Wechselmedien automatisch einhängen, die noch nie zuvor eingehängt waren"
 
 #~ msgid ""
 #~ "If any removable storage devices are connected to your system when you "

@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-05-27 00:57+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -38,6 +38,55 @@ msgstr "Eloy Cuadra,Jaime Robles,Pablo de Vicente"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ecuadra@eloihr.net,jaime@kde.org,vicente@oan.es"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: dateandtime.ui:22
+#, kde-format
+msgid "Date and Time"
+msgstr "Fecha y hora"
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: dateandtime.ui:30
+#, kde-format
+msgid "Set date and time &automatically"
+msgstr "Poner fecha y hora &automáticamente:"
+
+#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
+#: dateandtime.ui:53
+#, kde-format
+msgid "&Time server:"
+msgstr "Servidor &horario:"
+
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: dateandtime.ui:86
+#, kde-format
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr "Aquí puede cambiar el día del mes, mes y año de la fecha del sistema."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: dateandtime.ui:122
+#, kde-format
+msgid "Time Zone"
+msgstr "Zona horaria"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dateandtime.ui:128
+#, kde-format
+msgid "To change the local time zone, select your area from the list below."
+msgstr ""
+"Para cambiar la zona horaria local, seleccione su área en la lista inferior."
+
+#. i18n: ectx: property (text), widget (QLabel, m_local)
+#: dateandtime.ui:151
+#, kde-format
+msgid "Current local time zone:"
+msgstr "Zona horaria local actual:"
+
+#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
+#: dateandtime.ui:161
+#, kde-format
+msgid "Search…"
+msgstr "Buscar..."
 
 #: dtime.cpp:61
 #, kde-format
@@ -193,34 +242,6 @@ msgstr "No ha sido posible fijar la hora actual"
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "No ha sido posible fijar la zona horaria"
-
-#~ msgid "Date and Time"
-#~ msgstr "Fecha y hora"
-
-#~ msgid "Set date and time &automatically"
-#~ msgstr "Poner fecha y hora &automáticamente:"
-
-#~ msgid "&Time server:"
-#~ msgstr "Servidor &horario:"
-
-#~ msgid ""
-#~ "Here you can change the system date's day of the month, month and year."
-#~ msgstr ""
-#~ "Aquí puede cambiar el día del mes, mes y año de la fecha del sistema."
-
-#~ msgid "Time Zone"
-#~ msgstr "Zona horaria"
-
-#~ msgid "To change the local time zone, select your area from the list below."
-#~ msgstr ""
-#~ "Para cambiar la zona horaria local, seleccione su área en la lista "
-#~ "inferior."
-
-#~ msgid "Current local time zone:"
-#~ msgstr "Zona horaria local actual:"
-
-#~ msgid "Search…"
-#~ msgstr "Buscar..."
 
 #~ msgid "kcmclock"
 #~ msgstr "kcmclock"

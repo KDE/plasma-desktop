@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-10-09 07:48-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -95,6 +95,30 @@ msgstr "ਇਸ ਸਰਗਰਮੀ ਲਈ ਵਰਤੋਂ ਨੂੰ ਟਰੈਕ 
 msgid "Shortcut for switching:"
 msgstr "ਬਦਲਣ ਲਈ ਸ਼ਾਰਟਕੱਟ:"
 
+#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:10
+#, kde-format
+msgid "How many months keep the activity history"
+msgstr "ਸਰਗਰਮੀ ਦੇ ਅਤੀਤ ਨੂੰ ਕਿੰਨੇ ਮਹੀਨਿਆ ਤੱਕ ਰੱਖਣਾ ਹੈ"
+
+#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:17
+#, kde-format
+msgid "Which data to keep in activity history"
+msgstr "ਸਰਗਰਮੀ ਅਤੀਤ ਵਿੱਚ ਕਿਹੜਾ ਡਾਟਾ ਰੱਖਣਾ ਹੈ"
+
+#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:21
+#, kde-format
+msgid "List of Applications whose activity history to save"
+msgstr "ਐਪਲੀਕੇਸ਼ਨਾਂ ਦੀ ਸੂਚੀ, ਜਿਹਨਾਂ ਦੇ ਸਰਗਰਮੀ ਅਤੀਤ ਨੂੰ ਸੰਭਾਲਣਾ ਹੈ"
+
+#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:24
+#, kde-format
+msgid "List of Applications whose activity history not to save"
+msgstr "ਐਪਲੀਕੇਸ਼ਨਾਂ ਦੀ ਸੂਚੀ, ਜਿਹਨਾਂ ਦੇ ਸਰਗਰਮੀ ਅਤੀਤ ਨੂੰ ਨਹੀਂ ਸੰਭਾਲਣਾ ਹੈ"
+
 #: MainConfigurationWidget.cpp:33
 #, kde-format
 msgid "Switching"
@@ -134,26 +158,23 @@ msgctxt "@action"
 msgid "Walk through activities (Reverse)"
 msgstr "ਸਰਗਰਮੀਆਂ ਨੂੰ ਵੇਖੋ (ਉਲਟ)"
 
-#~ msgid "How many months keep the activity history"
-#~ msgstr "ਸਰਗਰਮੀ ਦੇ ਅਤੀਤ ਨੂੰ ਕਿੰਨੇ ਮਹੀਨਿਆ ਤੱਕ ਰੱਖਣਾ ਹੈ"
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_virtualDesktopSwitchEnabled)
+#: ui/SwitchingTabBase.ui:22
+#, kde-format
+msgid "Remember for each activity (needs restart)"
+msgstr "ਹਰ ਸਰਗਰਮੀ ਲਈ ਯਾਦ ਰੱਖੋ (ਮੁੜ-ਚਾਲੂ ਕਰਨ ਦੀ ਲੋੜ ਹੈ)"
 
-#~ msgid "Which data to keep in activity history"
-#~ msgstr "ਸਰਗਰਮੀ ਅਤੀਤ ਵਿੱਚ ਕਿਹੜਾ ਡਾਟਾ ਰੱਖਣਾ ਹੈ"
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/SwitchingTabBase.ui:29
+#, kde-format
+msgid "Current virtual desktop:"
+msgstr "ਮੌਜੂਦਾ ਵਰਚੁਅਲ ਡੈਸਕਟਾਪ:"
 
-#~ msgid "List of Applications whose activity history to save"
-#~ msgstr "ਐਪਲੀਕੇਸ਼ਨਾਂ ਦੀ ਸੂਚੀ, ਜਿਹਨਾਂ ਦੇ ਸਰਗਰਮੀ ਅਤੀਤ ਨੂੰ ਸੰਭਾਲਣਾ ਹੈ"
-
-#~ msgid "List of Applications whose activity history not to save"
-#~ msgstr "ਐਪਲੀਕੇਸ਼ਨਾਂ ਦੀ ਸੂਚੀ, ਜਿਹਨਾਂ ਦੇ ਸਰਗਰਮੀ ਅਤੀਤ ਨੂੰ ਨਹੀਂ ਸੰਭਾਲਣਾ ਹੈ"
-
-#~ msgid "Remember for each activity (needs restart)"
-#~ msgstr "ਹਰ ਸਰਗਰਮੀ ਲਈ ਯਾਦ ਰੱਖੋ (ਮੁੜ-ਚਾਲੂ ਕਰਨ ਦੀ ਲੋੜ ਹੈ)"
-
-#~ msgid "Current virtual desktop:"
-#~ msgstr "ਮੌਜੂਦਾ ਵਰਚੁਅਲ ਡੈਸਕਟਾਪ:"
-
-#~ msgid "Shortcuts:"
-#~ msgstr "ਸ਼ਾਰਟਕੱਟ:"
+#. i18n: ectx: property (text), widget (QLabel, label_1)
+#: ui/SwitchingTabBase.ui:38
+#, kde-format
+msgid "Shortcuts:"
+msgstr "ਸ਼ਾਰਟਕੱਟ:"
 
 #~ msgid "Privacy"
 #~ msgstr "ਪਰਦੇਦਾਰੀ"

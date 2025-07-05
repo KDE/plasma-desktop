@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-07-26 11:19+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -182,17 +182,29 @@ msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "Gå till inställningsskärm för fast programvara"
 
-#~ msgid "Confirm logout"
-#~ msgstr "Bekräfta utloggning"
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, kde-format
+msgid "Confirm logout"
+msgstr "Bekräfta utloggning"
 
-#~ msgid "Default leave option"
-#~ msgstr "Förvalt alternativ när datorn lämnas"
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:13
+#, kde-format
+msgid "Default leave option"
+msgstr "Förvalt alternativ när datorn lämnas"
 
-#~ msgid "On login"
-#~ msgstr "Vid inloggning"
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:22
+#, kde-format
+msgid "On login"
+msgstr "Vid inloggning"
 
-#~ msgid "Applications to be excluded from session"
-#~ msgstr "Program som ska undantas från session"
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:26
+#, kde-format
+msgid "Applications to be excluded from session"
+msgstr "Program som ska undantas från session"
 
 #, fuzzy
 #~| msgid "Default leave option:"

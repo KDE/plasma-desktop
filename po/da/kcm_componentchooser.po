@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-08-20 17:40+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -17,6 +17,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr "Standard webbrowser"
 
 #: componentchooser.cpp:74 componentchooserterminal.cpp:74
 #, kde-format
@@ -83,9 +89,6 @@ msgstr "Kort:"
 msgctxt "Default phone app"
 msgid "Dialer:"
 msgstr "Opkaldstastatur:"
-
-#~ msgid "Default web browser"
-#~ msgstr "Standard webbrowser"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

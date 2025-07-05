@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-11-02 19:31\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -33,6 +33,54 @@ msgstr "Ігар Грачышка, Antikruk"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "komzpa@licei2.com, nashtlumach@gmail.com"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: dateandtime.ui:22
+#, kde-format
+msgid "Date and Time"
+msgstr "Дата і час"
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: dateandtime.ui:30
+#, kde-format
+msgid "Set date and time &automatically"
+msgstr "Аўтаматычнае &вызначэнне даты і часу"
+
+#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
+#: dateandtime.ui:53
+#, kde-format
+msgid "&Time server:"
+msgstr "Сервер &часу:"
+
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: dateandtime.ui:86
+#, kde-format
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr "Тут вы можаце змяніць дзень, месяц і год."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: dateandtime.ui:122
+#, kde-format
+msgid "Time Zone"
+msgstr "Часавы пояс"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dateandtime.ui:128
+#, kde-format
+msgid "To change the local time zone, select your area from the list below."
+msgstr "Каб змяніць часавы пояс, абярыце свой рэгіён са спіса."
+
+#. i18n: ectx: property (text), widget (QLabel, m_local)
+#: dateandtime.ui:151
+#, kde-format
+msgid "Current local time zone:"
+msgstr "Часавы пояс бягучай мясцовасці:"
+
+#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
+#: dateandtime.ui:161
+#, kde-format
+msgid "Search…"
+msgstr "Пошук…"
 
 #: dtime.cpp:61
 #, kde-format
@@ -186,31 +234,6 @@ msgstr "Не ўдалося прызначыць бягучы час"
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "Не ўдалося прызначыць часавы пояс"
-
-#~ msgid "Date and Time"
-#~ msgstr "Дата і час"
-
-#~ msgid "Set date and time &automatically"
-#~ msgstr "Аўтаматычнае &вызначэнне даты і часу"
-
-#~ msgid "&Time server:"
-#~ msgstr "Сервер &часу:"
-
-#~ msgid ""
-#~ "Here you can change the system date's day of the month, month and year."
-#~ msgstr "Тут вы можаце змяніць дзень, месяц і год."
-
-#~ msgid "Time Zone"
-#~ msgstr "Часавы пояс"
-
-#~ msgid "To change the local time zone, select your area from the list below."
-#~ msgstr "Каб змяніць часавы пояс, абярыце свой рэгіён са спіса."
-
-#~ msgid "Current local time zone:"
-#~ msgstr "Часавы пояс бягучай мясцовасці:"
-
-#~ msgid "Search…"
-#~ msgstr "Пошук…"
 
 #~ msgid "kcmclock"
 #~ msgstr "kcmclock"

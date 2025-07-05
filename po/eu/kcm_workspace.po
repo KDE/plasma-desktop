@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-12-17 10:26+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque\n"
@@ -39,12 +39,14 @@ msgstr "Berrabiarazi"
 msgid "Visual behavior:"
 msgstr "Ikuste-jokabidea:"
 
-#: package/contents/ui/main.qml:51
+#. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
+#: package/contents/ui/main.qml:51 workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "Bistaratu informatzeko argibideak sagua gainetik igarotzean"
 
-#: package/contents/ui/main.qml:62
+#. i18n: ectx: label, entry (osdEnabled), group (OSD)
+#: package/contents/ui/main.qml:62 workspaceoptions_plasmasettings.kcfg:15
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "Bistaratu egoera aldaketen ikuste-berrelikadura"
@@ -174,35 +176,59 @@ msgstr ""
 "Ukimen moduan, erabiltzailearen interfazearen elementu asko handiago egingo "
 "dira ukimen-elkarrekintza errazteko."
 
-#~ msgid "Single click to open files"
-#~ msgstr "Klik bakuna fitxategiak irekitzeko"
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Single click to open files"
+msgstr "Klik bakuna fitxategiak irekitzeko"
 
-#~ msgid "Animation speed"
-#~ msgstr "Animazioaren abiadura"
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:13
+#, kde-format
+msgid "Animation speed"
+msgstr "Animazioaren abiadura"
 
-#~ msgid "Left-click in scrollbar track moves scrollbar by one page"
-#~ msgstr ""
-#~ "Ezker-klik kiribiltzeko-barraren bidean kiribiltzeko-barra orri bete "
-#~ "mugitzen du"
+#. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:17
+#, kde-format
+msgid "Left-click in scrollbar track moves scrollbar by one page"
+msgstr ""
+"Ezker-klik kiribiltzeko-barraren bidean kiribiltzeko-barra orri bete "
+"mugitzen du"
 
-#~ msgid "Automatically switch to touch-optimized mode"
-#~ msgstr "Automatikoki aldatu ukimenerako optimizatutako modura"
+#. i18n: ectx: label, entry (tabletMode), group (Input)
+#: workspaceoptions_kwinsettings.kcfg:9
+#, kde-format
+msgid "Automatically switch to touch-optimized mode"
+msgstr "Automatikoki aldatu ukimenerako optimizatutako modura"
 
-#~ msgid "Enable middle click selection pasting"
-#~ msgstr "Gaitu erdiko klikarekin hautapena itsastea"
+#. i18n: ectx: label, entry (primarySelection), group (Wayland)
+#: workspaceoptions_kwinsettings.kcfg:15
+#, kde-format
+msgid "Enable middle click selection pasting"
+msgstr "Gaitu erdiko klikarekin hautapena itsastea"
 
-#~ msgid ""
-#~ "Show an on-screen display to indicate status changes such as brightness "
-#~ "or volume"
-#~ msgstr ""
-#~ "Erakutsi pantailako adierazle bat distira edo bolumena bezalako egoera "
-#~ "aldaketak adierazteko"
+#. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:16
+#, kde-format
+msgid ""
+"Show an on-screen display to indicate status changes such as brightness or "
+"volume"
+msgstr ""
+"Erakutsi pantailako adierazle bat distira edo bolumena bezalako egoera "
+"aldaketak adierazteko"
 
-#~ msgid "OSD on layout change"
-#~ msgstr "OSDa antolaerak aldatzean"
+#. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:20
+#, kde-format
+msgid "OSD on layout change"
+msgstr "OSDa antolaerak aldatzean"
 
-#~ msgid "Show a popup on layout changes"
-#~ msgstr "Erakutsi leiho gainerakor bat antolaerak aldatzean"
+#. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:21
+#, kde-format
+msgid "Show a popup on layout changes"
+msgstr "Erakutsi leiho gainerakor bat antolaerak aldatzean"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: knetattach\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-03-24 19:44+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -88,6 +88,116 @@ msgstr "&Kaydet ve Bağlan"
 msgid "C&onnect"
 msgstr "&Bağlan"
 
+#. i18n: ectx: property (windowTitle), widget (QWizard, KNetAttach)
+#: knetattach.ui:14
+#, kde-format
+msgid "Network Folder Wizard"
+msgstr "Ağ Klasörü Sihirbazı"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderType)
+#: knetattach.ui:18
+#, kde-format
+msgid "Add Network Folder"
+msgstr "Ağ Klasörü Ekle"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: knetattach.ui:24
+#, kde-format
+msgid ""
+"Select the type of network folder you wish to connect to and press the Next "
+"button."
+msgstr "Bağlantı kurulacak ağ klasörünü seçin ve Sonraki düğmesine tıklayın."
+
+#. i18n: ectx: property (text), widget (QRadioButton, _recent)
+#: knetattach.ui:65
+#, kde-format
+msgid "&Recent connection:"
+msgstr "&Son bağlantı:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _webfolder)
+#: knetattach.ui:72
+#, kde-format
+msgid "&WebFolder (webdav)"
+msgstr "&Web Klasörü (webdav)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _fish)
+#: knetattach.ui:82
+#, kde-format
+msgid "&Secure shell (ssh)"
+msgstr "&Güvenli kabuk (ssh)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _ftp)
+#: knetattach.ui:111
+#, kde-format
+msgid "FT&P"
+msgstr "&FTP"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _smb)
+#: knetattach.ui:118
+#, kde-format
+msgid "&Microsoft® Windows® network drive"
+msgstr "&Microsoft® Windows® ağ sürücüsü"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderParameters)
+#: knetattach.ui:145
+#, kde-format
+msgid "Network Folder Information"
+msgstr "Ağ Klasörü Bilgisi"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel4_2)
+#: knetattach.ui:177
+#, kde-format
+msgid "&Name:"
+msgstr "&Ad:"
+
+#. i18n: ectx: property (text), widget (QLabel, _userText)
+#: knetattach.ui:196
+#, kde-format
+msgid "&User:"
+msgstr "&Kullanıcı:"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: knetattach.ui:222
+#, kde-format
+msgid "Se&rver:"
+msgstr "&Sunucu:"
+
+#. i18n: ectx: property (text), widget (QLabel, _portText)
+#: knetattach.ui:248
+#, kde-format
+msgid "&Port:"
+msgstr "K&apı:"
+
+#. i18n: ectx: property (text), widget (QLabel, _protocol)
+#: knetattach.ui:283
+#, kde-format
+msgid "&Protocol:"
+msgstr "&Protokol:"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: knetattach.ui:313
+#, kde-format
+msgid "&Folder:"
+msgstr "K&lasör:"
+
+#. i18n: ectx: property (text), widget (QLabel, _encodingText)
+#: knetattach.ui:335
+#, kde-format
+msgid "Encoding:"
+msgstr "Kodlama:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _createIcon)
+#: knetattach.ui:351
+#, kde-format
+msgid "Cr&eate an icon for this remote folder"
+msgstr "&Bu uzak klasör için bir simge oluştur"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _useEncryption)
+#: knetattach.ui:361
+#, kde-format
+msgid "&Use encryption"
+msgstr "Ş&ifreleme kullan"
+
 #: main.cpp:21 main.cpp:23
 #, kde-format
 msgid "KDE Network Wizard"
@@ -107,60 +217,3 @@ msgstr "George Staikos"
 #, kde-format
 msgid "Primary author and maintainer"
 msgstr "Yazar ve bakımcı"
-
-#~ msgid "Network Folder Wizard"
-#~ msgstr "Ağ Klasörü Sihirbazı"
-
-#~ msgid "Add Network Folder"
-#~ msgstr "Ağ Klasörü Ekle"
-
-#~ msgid ""
-#~ "Select the type of network folder you wish to connect to and press the "
-#~ "Next button."
-#~ msgstr ""
-#~ "Bağlantı kurulacak ağ klasörünü seçin ve Sonraki düğmesine tıklayın."
-
-#~ msgid "&Recent connection:"
-#~ msgstr "&Son bağlantı:"
-
-#~ msgid "&WebFolder (webdav)"
-#~ msgstr "&Web Klasörü (webdav)"
-
-#~ msgid "&Secure shell (ssh)"
-#~ msgstr "&Güvenli kabuk (ssh)"
-
-#~ msgid "FT&P"
-#~ msgstr "&FTP"
-
-#~ msgid "&Microsoft® Windows® network drive"
-#~ msgstr "&Microsoft® Windows® ağ sürücüsü"
-
-#~ msgid "Network Folder Information"
-#~ msgstr "Ağ Klasörü Bilgisi"
-
-#~ msgid "&Name:"
-#~ msgstr "&Ad:"
-
-#~ msgid "&User:"
-#~ msgstr "&Kullanıcı:"
-
-#~ msgid "Se&rver:"
-#~ msgstr "&Sunucu:"
-
-#~ msgid "&Port:"
-#~ msgstr "K&apı:"
-
-#~ msgid "&Protocol:"
-#~ msgstr "&Protokol:"
-
-#~ msgid "&Folder:"
-#~ msgstr "K&lasör:"
-
-#~ msgid "Encoding:"
-#~ msgstr "Kodlama:"
-
-#~ msgid "Cr&eate an icon for this remote folder"
-#~ msgstr "&Bu uzak klasör için bir simge oluştur"
-
-#~ msgid "&Use encryption"
-#~ msgstr "Ş&ifreleme kullan"

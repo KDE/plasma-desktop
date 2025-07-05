@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-09-02 07:48+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -82,6 +82,117 @@ msgstr "&შენახვა && შეერთება"
 msgid "C&onnect"
 msgstr "&მიერთება"
 
+#. i18n: ectx: property (windowTitle), widget (QWizard, KNetAttach)
+#: knetattach.ui:14
+#, kde-format
+msgid "Network Folder Wizard"
+msgstr "ქსელური საქაღალდის მორგება"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderType)
+#: knetattach.ui:18
+#, kde-format
+msgid "Add Network Folder"
+msgstr "ქსელური საქაღალდის დამატება"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: knetattach.ui:24
+#, kde-format
+msgid ""
+"Select the type of network folder you wish to connect to and press the Next "
+"button."
+msgstr ""
+"აირჩიეთ, რა ტიპის საქაღალდის მიბმა გნებავთ და დააწექით ღილაკს \"შემდეგ\"."
+
+#. i18n: ectx: property (text), widget (QRadioButton, _recent)
+#: knetattach.ui:65
+#, kde-format
+msgid "&Recent connection:"
+msgstr "&ახლახანს მიერთებული:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _webfolder)
+#: knetattach.ui:72
+#, kde-format
+msgid "&WebFolder (webdav)"
+msgstr "&ვებსაქაღალდე (webdav)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _fish)
+#: knetattach.ui:82
+#, kde-format
+msgid "&Secure shell (ssh)"
+msgstr "&დაცული გარსი (ssh)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _ftp)
+#: knetattach.ui:111
+#, kde-format
+msgid "FT&P"
+msgstr "FT&P"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _smb)
+#: knetattach.ui:118
+#, kde-format
+msgid "&Microsoft® Windows® network drive"
+msgstr "&Microsoft® Windows® ქსელური დისკი"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderParameters)
+#: knetattach.ui:145
+#, kde-format
+msgid "Network Folder Information"
+msgstr "ქსელური საქაღალდის ინფორმაცია"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel4_2)
+#: knetattach.ui:177
+#, kde-format
+msgid "&Name:"
+msgstr "&სახელი:"
+
+#. i18n: ectx: property (text), widget (QLabel, _userText)
+#: knetattach.ui:196
+#, kde-format
+msgid "&User:"
+msgstr "&მომხმარებელი:"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: knetattach.ui:222
+#, kde-format
+msgid "Se&rver:"
+msgstr "&სერვერი:"
+
+#. i18n: ectx: property (text), widget (QLabel, _portText)
+#: knetattach.ui:248
+#, kde-format
+msgid "&Port:"
+msgstr "&პორტი:"
+
+#. i18n: ectx: property (text), widget (QLabel, _protocol)
+#: knetattach.ui:283
+#, kde-format
+msgid "&Protocol:"
+msgstr "&პროტოკოლი:"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: knetattach.ui:313
+#, kde-format
+msgid "&Folder:"
+msgstr "&საქაღალდე:"
+
+#. i18n: ectx: property (text), widget (QLabel, _encodingText)
+#: knetattach.ui:335
+#, kde-format
+msgid "Encoding:"
+msgstr "კოდირება:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _createIcon)
+#: knetattach.ui:351
+#, kde-format
+msgid "Cr&eate an icon for this remote folder"
+msgstr "ქსელური საქაღალდისთვის ხატულის დადება"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _useEncryption)
+#: knetattach.ui:361
+#, kde-format
+msgid "&Use encryption"
+msgstr "&დაშიფვრის გამოყენება"
+
 #: main.cpp:21 main.cpp:23
 #, kde-format
 msgid "KDE Network Wizard"
@@ -101,60 +212,3 @@ msgstr "George Staikos"
 #, kde-format
 msgid "Primary author and maintainer"
 msgstr "პროექტის მიმდინარე ხელმძღვანელი, ავტორი"
-
-#~ msgid "Network Folder Wizard"
-#~ msgstr "ქსელური საქაღალდის მორგება"
-
-#~ msgid "Add Network Folder"
-#~ msgstr "ქსელური საქაღალდის დამატება"
-
-#~ msgid ""
-#~ "Select the type of network folder you wish to connect to and press the "
-#~ "Next button."
-#~ msgstr ""
-#~ "აირჩიეთ, რა ტიპის საქაღალდის მიბმა გნებავთ და დააწექით ღილაკს \"შემდეგ\"."
-
-#~ msgid "&Recent connection:"
-#~ msgstr "&ახლახანს მიერთებული:"
-
-#~ msgid "&WebFolder (webdav)"
-#~ msgstr "&ვებსაქაღალდე (webdav)"
-
-#~ msgid "&Secure shell (ssh)"
-#~ msgstr "&დაცული გარსი (ssh)"
-
-#~ msgid "FT&P"
-#~ msgstr "FT&P"
-
-#~ msgid "&Microsoft® Windows® network drive"
-#~ msgstr "&Microsoft® Windows® ქსელური დისკი"
-
-#~ msgid "Network Folder Information"
-#~ msgstr "ქსელური საქაღალდის ინფორმაცია"
-
-#~ msgid "&Name:"
-#~ msgstr "&სახელი:"
-
-#~ msgid "&User:"
-#~ msgstr "&მომხმარებელი:"
-
-#~ msgid "Se&rver:"
-#~ msgstr "&სერვერი:"
-
-#~ msgid "&Port:"
-#~ msgstr "&პორტი:"
-
-#~ msgid "&Protocol:"
-#~ msgstr "&პროტოკოლი:"
-
-#~ msgid "&Folder:"
-#~ msgstr "&საქაღალდე:"
-
-#~ msgid "Encoding:"
-#~ msgstr "კოდირება:"
-
-#~ msgid "Cr&eate an icon for this remote folder"
-#~ msgstr "ქსელური საქაღალდისთვის ხატულის დადება"
-
-#~ msgid "&Use encryption"
-#~ msgstr "&დაშიფვრის გამოყენება"

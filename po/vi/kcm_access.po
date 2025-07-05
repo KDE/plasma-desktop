@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-01-08 16:18+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -83,6 +83,211 @@ msgstr "Không đặt được gsettings cho Orca: \"%1\" thất bại"
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Lỗi: Không khởi chạy được \"orca --setup\""
+
+#. i18n: ectx: label, entry (SystemBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:9
+#, kde-format
+msgid "Use System Bell"
+msgstr "Dùng chuông hệ thống"
+
+#. i18n: ectx: label, entry (CustomBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:13
+#, kde-format
+msgid "Customize system bell"
+msgstr "Tuỳ biến chuông hệ thống"
+
+#. i18n: ectx: label, entry (CustomBellFile), group (Bell)
+#: kcmaccessibilitybell.kcfg:17
+#, kde-format
+msgid "Sound file for the Bell"
+msgstr "Tệp âm thanh cho chuông"
+
+#. i18n: ectx: label, entry (VisibleBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:20
+#, kde-format
+msgid "Use a visual bell instead of a sound"
+msgstr "Dùng một chuông khả thị thay vì một âm thanh"
+
+#. i18n: ectx: label, entry (InvertScreen), group (Bell)
+#: kcmaccessibilitybell.kcfg:24
+#, kde-format
+msgid "Invert the system colors on the bell"
+msgstr "Đảo màu hệ thống khi có chuông"
+
+#. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
+#: kcmaccessibilitybell.kcfg:28
+#, kde-format
+msgid "Color of the Visible Bell"
+msgstr "Màu của chuông khả thị"
+
+#. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
+#: kcmaccessibilitybell.kcfg:32
+#, kde-format
+msgid "Duration of the Visible Bell"
+msgstr "Thời lượng của chuông khả thị"
+
+#. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:9
+#, kde-format
+msgid "Use sticky Keys"
+msgstr "Dùng phím dính"
+
+#. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:13
+#, kde-format
+msgid "Lock the sticky keys"
+msgstr "Khoá phím dính"
+
+#. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:17
+#, kde-format
+msgid "Turn sticky keys off when two keys are pressed simultaneously"
+msgstr "Tắt phím dính khi nhấn hai phím đồng thời"
+
+#. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:21
+#, kde-format
+msgid "Beep on a sticky key press"
+msgstr "Kêu bíp khi nhấn phím dính"
+
+#. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:25
+#, kde-format
+msgid "Toggle keys beep"
+msgstr "Các phím bật/tắt kêu bíp"
+
+#. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:29
+#, kde-format
+msgid "Notify when a keyboard modifier is pressed"
+msgstr "Thông báo khi nhấn phím bổ trợ"
+
+#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:33
+#, kde-format
+msgid "Use a timeout delay"
+msgstr "Dùng một khoảng trễ"
+
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:37
+#, fuzzy, kde-format
+#| msgid "Delay for the mouse movement"
+msgid "Delay for timeout"
+msgstr "Độ trễ cho di chuyển chuột"
+
+#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:41
+#, kde-format
+msgid "Use a beep for access"
+msgstr "Dùng tiếng bíp để hỗ trợ"
+
+#. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:9
+#, kde-format
+msgid "Use slow keypresses"
+msgstr "Dùng sự nhấn phím chậm"
+
+#. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:13
+#, kde-format
+msgid "Delay for the key press"
+msgstr "Độ trễ cho việc nhấn phím"
+
+#. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:17
+#, kde-format
+msgid "Beep on a slow keypress"
+msgstr "Kêu bíp khi nhấn phím chậm"
+
+#. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:21
+#, kde-format
+msgid "Beep on an accepted keypress"
+msgstr "Kêu bíp khi nhấn phím được chấp nhận"
+
+#. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:25
+#, kde-format
+msgid "Beep on a rejected keypress"
+msgstr "Kêu bíp khi nhấn phím bị từ chối"
+
+#. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:29
+#, kde-format
+msgid "Bounce Keys"
+msgstr "Phím nảy"
+
+#. i18n: ectx: label, entry (BounceKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:33
+#, kde-format
+msgid "Use a delay for bouncing"
+msgstr "Dùng một độ trễ cho việc nảy"
+
+#. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:37
+#, kde-format
+msgid "Beep if a bounce key event is rejected"
+msgstr "Kêu bíp nếu một sự kiện phím nảy bị từ chối"
+
+#. i18n: ectx: label, entry (MouseKeys), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:9
+#, kde-format
+msgid "Use keys to control the mouse"
+msgstr "Dùng các phím để điều khiển chuột"
+
+#. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:13
+#, kde-format
+msgid "Delay for the mouse movement"
+msgstr "Độ trễ cho di chuyển chuột"
+
+#. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:17
+#, kde-format
+msgid "Repetition interval for the mouse movement"
+msgstr "Khoảng lặp lại cho di chuyển chuột"
+
+#. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:21
+#, kde-format
+msgid "Time to hit maximum velocity"
+msgstr "Thời gian để đạt tốc độ tối đa"
+
+#. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:25
+#, kde-format
+msgid "Maximum Velocity"
+msgstr "Tốc độ tối đa"
+
+#. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:29
+#, kde-format
+msgid "Mouse Key Curve"
+msgstr "Đường cong phím chuột"
+
+#. i18n: ectx: label, entry (Gestures), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:35
+#, kde-format
+msgid "Use Gestures"
+msgstr "Dùng động tác"
+
+#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:39
+#, kde-format
+msgid "Ask for Confirmation for a gesture"
+msgstr "Yêu cầu xác nhận động tác"
+
+#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:43
+#, kde-format
+msgid "Confirm access to the Keyboard"
+msgstr "Xác nhận truy cập bàn phím"
+
+#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
+#: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
+#, kde-format
+msgid "Enable Screen Reader"
+msgstr "Bật trình đọc màn hình"
 
 #: package/contents/ui/Bell.qml:20
 #, kde-format
@@ -371,11 +576,6 @@ msgstr "Tốc độ tối đa:"
 msgid "Acceleration profile:"
 msgstr "Hồ sơ gia tốc:"
 
-#: package/contents/ui/ScreenReader.qml:17
-#, kde-format
-msgid "Enable Screen Reader"
-msgstr "Bật trình đọc màn hình"
-
 #: package/contents/ui/ScreenReader.qml:28
 #, kde-format
 msgid "Launch Orca Screen Reader Configuration…"
@@ -398,107 +598,6 @@ msgid ""
 msgstr ""
 "Có vẻ là trình đọc màn hình Orca chưa được cài đặt. Vui lòng cài đặt nó "
 "trước khi thử dùng tính năng này, rồi đăng xuất hoặc khởi động lại"
-
-#~ msgid "Use System Bell"
-#~ msgstr "Dùng chuông hệ thống"
-
-#~ msgid "Customize system bell"
-#~ msgstr "Tuỳ biến chuông hệ thống"
-
-#~ msgid "Sound file for the Bell"
-#~ msgstr "Tệp âm thanh cho chuông"
-
-#~ msgid "Use a visual bell instead of a sound"
-#~ msgstr "Dùng một chuông khả thị thay vì một âm thanh"
-
-#~ msgid "Invert the system colors on the bell"
-#~ msgstr "Đảo màu hệ thống khi có chuông"
-
-#~ msgid "Color of the Visible Bell"
-#~ msgstr "Màu của chuông khả thị"
-
-#~ msgid "Duration of the Visible Bell"
-#~ msgstr "Thời lượng của chuông khả thị"
-
-#~ msgid "Use sticky Keys"
-#~ msgstr "Dùng phím dính"
-
-#~ msgid "Lock the sticky keys"
-#~ msgstr "Khoá phím dính"
-
-#~ msgid "Turn sticky keys off when two keys are pressed simultaneously"
-#~ msgstr "Tắt phím dính khi nhấn hai phím đồng thời"
-
-#~ msgid "Beep on a sticky key press"
-#~ msgstr "Kêu bíp khi nhấn phím dính"
-
-#~ msgid "Toggle keys beep"
-#~ msgstr "Các phím bật/tắt kêu bíp"
-
-#~ msgid "Notify when a keyboard modifier is pressed"
-#~ msgstr "Thông báo khi nhấn phím bổ trợ"
-
-#~ msgid "Use a timeout delay"
-#~ msgstr "Dùng một khoảng trễ"
-
-#, fuzzy
-#~| msgid "Delay for the mouse movement"
-#~ msgid "Delay for timeout"
-#~ msgstr "Độ trễ cho di chuyển chuột"
-
-#~ msgid "Use a beep for access"
-#~ msgstr "Dùng tiếng bíp để hỗ trợ"
-
-#~ msgid "Use slow keypresses"
-#~ msgstr "Dùng sự nhấn phím chậm"
-
-#~ msgid "Delay for the key press"
-#~ msgstr "Độ trễ cho việc nhấn phím"
-
-#~ msgid "Beep on a slow keypress"
-#~ msgstr "Kêu bíp khi nhấn phím chậm"
-
-#~ msgid "Beep on an accepted keypress"
-#~ msgstr "Kêu bíp khi nhấn phím được chấp nhận"
-
-#~ msgid "Beep on a rejected keypress"
-#~ msgstr "Kêu bíp khi nhấn phím bị từ chối"
-
-#~ msgid "Bounce Keys"
-#~ msgstr "Phím nảy"
-
-#~ msgid "Use a delay for bouncing"
-#~ msgstr "Dùng một độ trễ cho việc nảy"
-
-#~ msgid "Beep if a bounce key event is rejected"
-#~ msgstr "Kêu bíp nếu một sự kiện phím nảy bị từ chối"
-
-#~ msgid "Use keys to control the mouse"
-#~ msgstr "Dùng các phím để điều khiển chuột"
-
-#~ msgid "Delay for the mouse movement"
-#~ msgstr "Độ trễ cho di chuyển chuột"
-
-#~ msgid "Repetition interval for the mouse movement"
-#~ msgstr "Khoảng lặp lại cho di chuyển chuột"
-
-#~ msgid "Time to hit maximum velocity"
-#~ msgstr "Thời gian để đạt tốc độ tối đa"
-
-#~ msgid "Maximum Velocity"
-#~ msgstr "Tốc độ tối đa"
-
-#~ msgid "Mouse Key Curve"
-#~ msgstr "Đường cong phím chuột"
-
-#~ msgid "Use Gestures"
-#~ msgstr "Dùng động tác"
-
-#~ msgid "Ask for Confirmation for a gesture"
-#~ msgstr "Yêu cầu xác nhận động tác"
-
-#~ msgid "Confirm access to the Keyboard"
-#~ msgstr "Xác nhận truy cập bàn phím"
 
 #~ msgid "Maximum velocity"
 #~ msgstr "Tốc độ tối đa"

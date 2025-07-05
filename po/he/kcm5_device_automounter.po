@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm5_device_automounter\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2017-05-16 06:52-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -65,6 +65,85 @@ msgstr "Kai Uwe Broulik"
 #, kde-format
 msgid "Plasma 5 Port"
 msgstr "יציאת פלזמה 5"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, fuzzy, kde-format
+#| msgid ""
+#| "This list contains the storage devices known to the system. If "
+#| "\"Automount on Login\" is checked, the device will be automatically "
+#| "mounted even though \"Mount all removable media at login\" is unchecked. "
+#| "The same applies for \"Automount on Attach\".\n"
+#| "\n"
+#| "If \"Enable automatic mounting of removable media\" is unchecked, the "
+#| "overrides do not apply and no devices will be automatically mounted."
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"הרשימה כוללת את התקני האחסון הידועים ל־KDE. אם תיבת \"עיגון אוטומטי בעת "
+"התחברות למערכת\" מסומנת, ההתקן יעוגן באופן אוטומטי אף שהתיבה \"עגן את כל "
+"המדיה הנשלפת בעת התחברות למערכת\" אינה מסומנת. אותה ההתייחסות גם כלפי התיבה "
+"\"עיגון אוטומטי בעת חיבור למחשב\".\n"
+"\n"
+"אם התיבה \"אפשר עיגון אוטומטי של מדיה נשלפת\" אינה מסומנת, העקיפה לא תתאפשר, "
+"ואף התקן לא יעוגן באופן אוטומטי."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"לחיצה על כפתור זה תגרום \"לשכוח\" שההתקנים הנבחרים היו קיימים אי פעם. דבר זה "
+"שימושי אם התיבה \"עגן אוטומטית רק מדיה נשלפת שעוגנה באופן ידני בעבר\" "
+"מסומנת. כאשר התקן נשכח והמערכת מוגדרת לעיגון אוטומטי של התקנים מוכרים בלבד, "
+"התקנים אלו לא יעוגנו באופן אוטומטי."
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "שכח התקן"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, fuzzy, kde-format
+#| msgid ""
+#| "When this is checked, only remembered devices will be automatically "
+#| "mounted. A device is 'remembered' if it has ever been mounted before. For "
+#| "instance, plugging in a USB media player to charge is not sufficient to "
+#| "'remember' it - if the files are not accessed, it will not be "
+#| "automatically mounted the next time it is seen. Once they have been "
+#| "accessed, however, the device's contents will be automatically made "
+#| "available to the system."
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"בעת שתיבה זו מסומנת, KDE יעגן אוטומטית רק התקנים אותם הוא מוכר. התקן נחשב "
+"\"מוכר\" אם אי פעם הוא עוגן. לדוגמה חיבור נגן USB לצורך הטענה, אם לא ניגשו "
+"אל הקבצים, KDE לא יעגן אוטומטית את הנגן בעת חיבור עתידי.  אך אם ניגשו אל "
+"הקבצים, KDE יזכור בעתיד לגרום באופן אוטומטי שהתוכן יהיה נגיש למערכת שלך."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, fuzzy, kde-format
+#| msgid ""
+#| "Only automatically mount removable media that has been manually mounted "
+#| "before"
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr "עגן אוטומטית רק מדיה נשלפת שעוגנה באופן ידני בעבר."
 
 #: DeviceModel.cpp:52
 #, fuzzy, kde-format
@@ -129,76 +208,6 @@ msgstr "ההתקן יעוגן באופן אוטומטי בעת חיבור ההת
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "ההתקן לא יעוגן באופן אוטומטי בעת חיבור ההתקן למחשב"
-
-#, fuzzy
-#~| msgid ""
-#~| "This list contains the storage devices known to the system. If "
-#~| "\"Automount on Login\" is checked, the device will be automatically "
-#~| "mounted even though \"Mount all removable media at login\" is unchecked. "
-#~| "The same applies for \"Automount on Attach\".\n"
-#~| "\n"
-#~| "If \"Enable automatic mounting of removable media\" is unchecked, the "
-#~| "overrides do not apply and no devices will be automatically mounted."
-#~ msgid ""
-#~ "This list contains the storage devices known to the system. If "
-#~ "\"Automount on Login\" is checked, the device will be automatically "
-#~ "mounted even though \"Mount all removable media at login\" is unchecked. "
-#~ "The same applies for \"Automount on Attach\"."
-#~ msgstr ""
-#~ "הרשימה כוללת את התקני האחסון הידועים ל־KDE. אם תיבת \"עיגון אוטומטי בעת "
-#~ "התחברות למערכת\" מסומנת, ההתקן יעוגן באופן אוטומטי אף שהתיבה \"עגן את כל "
-#~ "המדיה הנשלפת בעת התחברות למערכת\" אינה מסומנת. אותה ההתייחסות גם כלפי "
-#~ "התיבה \"עיגון אוטומטי בעת חיבור למחשב\".\n"
-#~ "\n"
-#~ "אם התיבה \"אפשר עיגון אוטומטי של מדיה נשלפת\" אינה מסומנת, העקיפה לא "
-#~ "תתאפשר, ואף התקן לא יעוגן באופן אוטומטי."
-
-#~ msgid ""
-#~ "Clicking this button causes the selected devices to be 'forgotten'. This "
-#~ "is only useful if \"Only automatically mount removable media that has "
-#~ "been manually mounted before\" is checked. Once a device is forgotten and "
-#~ "the system is set to only automatically mount familiar devices, the "
-#~ "device will not be automatically mounted."
-#~ msgstr ""
-#~ "לחיצה על כפתור זה תגרום \"לשכוח\" שההתקנים הנבחרים היו קיימים אי פעם. דבר "
-#~ "זה שימושי אם התיבה \"עגן אוטומטית רק מדיה נשלפת שעוגנה באופן ידני בעבר\" "
-#~ "מסומנת. כאשר התקן נשכח והמערכת מוגדרת לעיגון אוטומטי של התקנים מוכרים "
-#~ "בלבד, התקנים אלו לא יעוגנו באופן אוטומטי."
-
-#~ msgid "Forget Device"
-#~ msgstr "שכח התקן"
-
-#, fuzzy
-#~| msgid ""
-#~| "When this is checked, only remembered devices will be automatically "
-#~| "mounted. A device is 'remembered' if it has ever been mounted before. "
-#~| "For instance, plugging in a USB media player to charge is not sufficient "
-#~| "to 'remember' it - if the files are not accessed, it will not be "
-#~| "automatically mounted the next time it is seen. Once they have been "
-#~| "accessed, however, the device's contents will be automatically made "
-#~| "available to the system."
-#~ msgid ""
-#~ "When this is not checked, only remembered devices will be automatically "
-#~ "mounted. A device is 'remembered' if it has ever been mounted before. For "
-#~ "instance, plugging in a USB media player to charge is not sufficient to "
-#~ "'remember' it - if the files are not accessed, it will not be "
-#~ "automatically mounted the next time it is seen. Once they have been "
-#~ "accessed, however, the device's contents will be automatically made "
-#~ "available to the system."
-#~ msgstr ""
-#~ "בעת שתיבה זו מסומנת, KDE יעגן אוטומטית רק התקנים אותם הוא מוכר. התקן נחשב "
-#~ "\"מוכר\" אם אי פעם הוא עוגן. לדוגמה חיבור נגן USB לצורך הטענה, אם לא "
-#~ "ניגשו אל הקבצים, KDE לא יעגן אוטומטית את הנגן בעת חיבור עתידי.  אך אם "
-#~ "ניגשו אל הקבצים, KDE יזכור בעתיד לגרום באופן אוטומטי שהתוכן יהיה נגיש "
-#~ "למערכת שלך."
-
-#, fuzzy
-#~| msgid ""
-#~| "Only automatically mount removable media that has been manually mounted "
-#~| "before"
-#~ msgid ""
-#~ "Automatically mount removable media that have never been mounted before"
-#~ msgstr "עגן אוטומטית רק מדיה נשלפת שעוגנה באופן ידני בעבר."
 
 #~ msgid ""
 #~ "If any removable storage devices are connected to your system when you "

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-02-07 20:12+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -59,8 +59,17 @@ msgstr "預覽啟動畫面"
 msgid "Uninstall"
 msgstr "解除安裝"
 
-#~ msgid "Name of the current splash theme"
-#~ msgstr "目前的啟動畫面主題名稱"
+#. i18n: ectx: label, entry (engine), group (KSplash)
+#: splashscreensettings.kcfg:12
+#, kde-format
+msgid "For future use"
+msgstr ""
+
+#. i18n: ectx: label, entry (theme), group (KSplash)
+#: splashscreensettings.kcfg:16
+#, kde-format
+msgid "Name of the current splash theme"
+msgstr "目前的啟動畫面主題名稱"
 
 #~ msgid "&Get New Splash Screens…"
 #~ msgstr "取得新啟動畫面(&G)…"

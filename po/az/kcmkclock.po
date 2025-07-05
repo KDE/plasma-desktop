@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-07-31 23:06+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -26,6 +26,56 @@ msgstr "Xəyyam Qocayev"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "xxmn77@gmail.com"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: dateandtime.ui:22
+#, kde-format
+msgid "Date and Time"
+msgstr "Tarix və Vaxt"
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: dateandtime.ui:30
+#, kde-format
+msgid "Set date and time &automatically"
+msgstr "Tarix və Vaxtın &avtomatik təyin edilməsi"
+
+#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
+#: dateandtime.ui:53
+#, kde-format
+msgid "&Time server:"
+msgstr "&Vaxt serveri:"
+
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: dateandtime.ui:86
+#, kde-format
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr ""
+"Burada siz sistemdəki tarixin gününü, ayını və ilini dəyişə bilərsiniz."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: dateandtime.ui:122
+#, kde-format
+msgid "Time Zone"
+msgstr "Saat Qurşağı"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dateandtime.ui:128
+#, kde-format
+msgid "To change the local time zone, select your area from the list below."
+msgstr ""
+"Lokal saat qurşağını dəyişmək üçün aşağıdakı siyahıdan olduğunuz yeri seçin."
+
+#. i18n: ectx: property (text), widget (QLabel, m_local)
+#: dateandtime.ui:151
+#, kde-format
+msgid "Current local time zone:"
+msgstr "hazırkı lokal saat qurşağı:"
+
+#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
+#: dateandtime.ui:161
+#, kde-format
+msgid "Search…"
+msgstr "Axtarış..."
 
 #: dtime.cpp:61
 #, kde-format
@@ -181,31 +231,3 @@ msgstr "Cari vaxtı qurmaq olmur"
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "Saat qurşağını təyin etmək olmur"
-
-#~ msgid "Date and Time"
-#~ msgstr "Tarix və Vaxt"
-
-#~ msgid "Set date and time &automatically"
-#~ msgstr "Tarix və Vaxtın &avtomatik təyin edilməsi"
-
-#~ msgid "&Time server:"
-#~ msgstr "&Vaxt serveri:"
-
-#~ msgid ""
-#~ "Here you can change the system date's day of the month, month and year."
-#~ msgstr ""
-#~ "Burada siz sistemdəki tarixin gününü, ayını və ilini dəyişə bilərsiniz."
-
-#~ msgid "Time Zone"
-#~ msgstr "Saat Qurşağı"
-
-#~ msgid "To change the local time zone, select your area from the list below."
-#~ msgstr ""
-#~ "Lokal saat qurşağını dəyişmək üçün aşağıdakı siyahıdan olduğunuz yeri "
-#~ "seçin."
-
-#~ msgid "Current local time zone:"
-#~ msgstr "hazırkı lokal saat qurşağı:"
-
-#~ msgid "Search…"
-#~ msgstr "Axtarış..."

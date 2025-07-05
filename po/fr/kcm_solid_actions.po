@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-05-27 14:33+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -54,6 +54,137 @@ msgstr ""
 #, kde-format
 msgid "Invalid action"
 msgstr "Action non valable"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
+#: ActionEditor.ui:17
+#, kde-format
+msgid "Edit Parameter"
+msgstr "Modifier un paramètre"
+
+#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
+#: ActionEditor.ui:43
+#, kde-format
+msgid "Parameter type:"
+msgstr "Type de paramètre :"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:51
+#, kde-format
+msgid "Property Match"
+msgstr "Correspondance de la propriété"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:56
+#, kde-format
+msgid "Content Conjunction"
+msgstr "Conjonction de contenu"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:61
+#, kde-format
+msgid "Content Disjunction"
+msgstr "Disjonction de contenu"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:66
+#, kde-format
+msgid "Device Interface Match"
+msgstr "Correspondance de l'interface du périphérique"
+
+#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
+#: ActionEditor.ui:96
+#, kde-format
+msgid "Device type:"
+msgstr "Type de périphérique :"
+
+#. i18n: ectx: property (text), widget (QLabel, LblValueName)
+#: ActionEditor.ui:135
+#, kde-format
+msgid "Value name:"
+msgstr "Nom de la valeur :"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:175
+#, kde-format
+msgid "Equals"
+msgstr "Égale"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:180
+#, kde-format
+msgid "Contains"
+msgstr "Contient"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
+#: ActionEditor.ui:208
+#, kde-format
+msgid "Reset Parameter"
+msgstr "Réinitialiser un paramètre"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
+#: ActionEditor.ui:215
+#, kde-format
+msgid "Save Parameter Changes"
+msgstr "Enregistrer les modifications de paramètres"
+
+#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
+#: ActionEditor.ui:247
+#, kde-format
+msgid "Action icon, click to change it"
+msgstr "Icône de l'action, cliquez pour la modifier"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
+#: ActionEditor.ui:254
+#, kde-format
+msgid "Action name"
+msgstr "Nom de l'action"
+
+#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
+#: ActionEditor.ui:271
+#, kde-format
+msgid "Command: "
+msgstr "Commande : "
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
+#: ActionEditor.ui:283
+#, no-c-format, kde-format
+msgid ""
+"Command that will trigger the action\n"
+"This can include any or all of the following case insensitive expands:\n"
+"\n"
+"%f: The mountpoint for the device - Storage Access devices only\n"
+"%d: Path to the device node - Block devices only\n"
+"%i: The identifier of the device"
+msgstr ""
+"Commande qui déclenchera l'action\n"
+"Elle peut inclure toutes ou l'une quelconque des extensions insensibles à la "
+"casse suivantes :\n"
+"\n"
+"%f : le point de montage du périphérique -périphériques d'accès mémoire "
+"seuls\n"
+"%d : emplacement du nœud de périphérique - uniquement périphériques en mode "
+"« bloc »\n"
+"%i : l'identifiant du périphérique"
+
+#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
+#: ActionEditor.ui:300
+#, kde-format
+msgid "Devices must match the following parameters for this action:"
+msgstr ""
+"Les périphériques doivent correspondre aux paramètres suivants pour cette "
+"action :"
+
+#. i18n: ectx: property (text), widget (QLabel, LblActionName)
+#: AddAction.ui:19
+#, kde-format
+msgid "Action name:"
+msgstr "Nom de l'action :"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
+#: AddAction.ui:26
+#, kde-format
+msgid "Enter the name for your new action"
+msgstr "Saisissez le nom de votre nouvelle action"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -151,88 +282,23 @@ msgstr "Aucune action sélectionnée"
 msgid "Cannot be deleted"
 msgstr "Suppression impossible"
 
-#~ msgid "Edit Parameter"
-#~ msgstr "Modifier un paramètre"
+#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
+#: SolidActions.ui:22
+#, kde-format
+msgid "Remove"
+msgstr "Supprimer"
 
-#~ msgid "Parameter type:"
-#~ msgstr "Type de paramètre :"
+#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
+#: SolidActions.ui:29
+#, kde-format
+msgid "Edit…"
+msgstr "Modifier…"
 
-#~ msgid "Property Match"
-#~ msgstr "Correspondance de la propriété"
-
-#~ msgid "Content Conjunction"
-#~ msgstr "Conjonction de contenu"
-
-#~ msgid "Content Disjunction"
-#~ msgstr "Disjonction de contenu"
-
-#~ msgid "Device Interface Match"
-#~ msgstr "Correspondance de l'interface du périphérique"
-
-#~ msgid "Device type:"
-#~ msgstr "Type de périphérique :"
-
-#~ msgid "Value name:"
-#~ msgstr "Nom de la valeur :"
-
-#~ msgid "Equals"
-#~ msgstr "Égale"
-
-#~ msgid "Contains"
-#~ msgstr "Contient"
-
-#~ msgid "Reset Parameter"
-#~ msgstr "Réinitialiser un paramètre"
-
-#~ msgid "Save Parameter Changes"
-#~ msgstr "Enregistrer les modifications de paramètres"
-
-#~ msgid "Action icon, click to change it"
-#~ msgstr "Icône de l'action, cliquez pour la modifier"
-
-#~ msgid "Action name"
-#~ msgstr "Nom de l'action"
-
-#~ msgid "Command: "
-#~ msgstr "Commande : "
-
-#~ msgid ""
-#~ "Command that will trigger the action\n"
-#~ "This can include any or all of the following case insensitive expands:\n"
-#~ "\n"
-#~ "%f: The mountpoint for the device - Storage Access devices only\n"
-#~ "%d: Path to the device node - Block devices only\n"
-#~ "%i: The identifier of the device"
-#~ msgstr ""
-#~ "Commande qui déclenchera l'action\n"
-#~ "Elle peut inclure toutes ou l'une quelconque des extensions insensibles à "
-#~ "la casse suivantes :\n"
-#~ "\n"
-#~ "%f : le point de montage du périphérique -périphériques d'accès mémoire "
-#~ "seuls\n"
-#~ "%d : emplacement du nœud de périphérique - uniquement périphériques en "
-#~ "mode « bloc »\n"
-#~ "%i : l'identifiant du périphérique"
-
-#~ msgid "Devices must match the following parameters for this action:"
-#~ msgstr ""
-#~ "Les périphériques doivent correspondre aux paramètres suivants pour cette "
-#~ "action :"
-
-#~ msgid "Action name:"
-#~ msgstr "Nom de l'action :"
-
-#~ msgid "Enter the name for your new action"
-#~ msgstr "Saisissez le nom de votre nouvelle action"
-
-#~ msgid "Remove"
-#~ msgstr "Supprimer"
-
-#~ msgid "Edit…"
-#~ msgstr "Modifier…"
-
-#~ msgid "Add…"
-#~ msgstr "Ajouter…"
+#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
+#: SolidActions.ui:36
+#, kde-format
+msgid "Add…"
+msgstr "Ajouter…"
 
 #~ msgid "Edit..."
 #~ msgstr "Modifier..."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-07-03 14:23+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -95,6 +95,30 @@ msgstr "Bu İş otağının işini izləməmək"
 msgid "Shortcut for switching:"
 msgstr "Dəyişdirmək üçün qısayol:"
 
+#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:10
+#, kde-format
+msgid "How many months keep the activity history"
+msgstr "İş otağı tarixçəsini neçə ay saxlamaq"
+
+#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:17
+#, kde-format
+msgid "Which data to keep in activity history"
+msgstr "İş otağı tarixçəsində hansı məlumatları saxlamaq"
+
+#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:21
+#, kde-format
+msgid "List of Applications whose activity history to save"
+msgstr "İş otağı tarixini saxlamaq üçün tətbiqlərin siyahısı"
+
+#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:24
+#, kde-format
+msgid "List of Applications whose activity history not to save"
+msgstr "İş otağı tarixini saxlamayan tətbiqlərin siyahısı"
+
 #: MainConfigurationWidget.cpp:33
 #, kde-format
 msgid "Switching"
@@ -134,26 +158,23 @@ msgctxt "@action"
 msgid "Walk through activities (Reverse)"
 msgstr "İş otaqlarında gəzinmək (Əksinə)"
 
-#~ msgid "How many months keep the activity history"
-#~ msgstr "İş otağı tarixçəsini neçə ay saxlamaq"
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_virtualDesktopSwitchEnabled)
+#: ui/SwitchingTabBase.ui:22
+#, kde-format
+msgid "Remember for each activity (needs restart)"
+msgstr "Hər İş otağı üçün yadda saxlamaq (yenidən başladılmalı)"
 
-#~ msgid "Which data to keep in activity history"
-#~ msgstr "İş otağı tarixçəsində hansı məlumatları saxlamaq"
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/SwitchingTabBase.ui:29
+#, kde-format
+msgid "Current virtual desktop:"
+msgstr "Hazırkı virtual İş masası:"
 
-#~ msgid "List of Applications whose activity history to save"
-#~ msgstr "İş otağı tarixini saxlamaq üçün tətbiqlərin siyahısı"
-
-#~ msgid "List of Applications whose activity history not to save"
-#~ msgstr "İş otağı tarixini saxlamayan tətbiqlərin siyahısı"
-
-#~ msgid "Remember for each activity (needs restart)"
-#~ msgstr "Hər İş otağı üçün yadda saxlamaq (yenidən başladılmalı)"
-
-#~ msgid "Current virtual desktop:"
-#~ msgstr "Hazırkı virtual İş masası:"
-
-#~ msgid "Shortcuts:"
-#~ msgstr "Qısayollar:"
+#. i18n: ectx: property (text), widget (QLabel, label_1)
+#: ui/SwitchingTabBase.ui:38
+#, kde-format
+msgid "Shortcuts:"
+msgstr "Qısayollar:"
 
 #~ msgid "Privacy"
 #~ msgstr "Məxfilik"

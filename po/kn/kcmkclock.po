@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2007-09-09 13:10+0530\n"
 "Last-Translator: Manu B <iammanu@gmail.com>\n"
 "Language-Team: Kannada\n"
@@ -27,6 +27,58 @@ msgstr "ಮನು .ಬಿ"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "iammanu@gmail.com"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: dateandtime.ui:22
+#, kde-format
+msgid "Date and Time"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: dateandtime.ui:30
+#, fuzzy, kde-format
+#| msgid "Set date and time &automatically:"
+msgid "Set date and time &automatically"
+msgstr "ಸ್ವಯಂಚಾಲಿ&ತವಾಗಿ ದಿನಾಂಕ ಮತ್ತು ಸಮಯವನ್ನು ನಿಗದಿಗೊಳಿಸು:"
+
+#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
+#: dateandtime.ui:53
+#, kde-format
+msgid "&Time server:"
+msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: dateandtime.ui:86
+#, kde-format
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: dateandtime.ui:122
+#, fuzzy, kde-format
+#| msgid "Timezone Error"
+msgid "Time Zone"
+msgstr "ಕಾಲವಲಯ ದೋಷ"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dateandtime.ui:128
+#, fuzzy, kde-format
+#| msgid "To change the timezone, select your area from the list below"
+msgid "To change the local time zone, select your area from the list below."
+msgstr "ಕಾಲವಲಯವನ್ನು ಬದಲಿಸಲು ಕೆಳಗಿನ ಯಾದಿಯಲ್ಲಿ ನಿಮ್ಮ ಪ್ರದೇಶವನ್ನು ಆರಿಸಿ"
+
+#. i18n: ectx: property (text), widget (QLabel, m_local)
+#: dateandtime.ui:151
+#, fuzzy, kde-format
+#| msgid "Current local timezone: %1 (%2)"
+msgid "Current local time zone:"
+msgstr "ಪ್ರಸ್ತುತ ಸ್ಥಳೀಯ ಕಾಲವಲಯ: %1 (%2)"
+
+#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
+#: dateandtime.ui:161
+#, kde-format
+msgid "Search…"
+msgstr ""
 
 #: dtime.cpp:61
 #, kde-format
@@ -173,26 +225,6 @@ msgstr "ಸಮಯ ಪರಿಚಾರಕ: %1 ಅನ್ನು ಸಂಪರ್ಕ�
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set timezone"
 msgstr "ಸಮಯ ಪರಿಚಾರಕ: %1 ಅನ್ನು ಸಂಪರ್ಕಿಸಲಾಗಲಿಲ್ಲ."
-
-#, fuzzy
-#~| msgid "Set date and time &automatically:"
-#~ msgid "Set date and time &automatically"
-#~ msgstr "ಸ್ವಯಂಚಾಲಿ&ತವಾಗಿ ದಿನಾಂಕ ಮತ್ತು ಸಮಯವನ್ನು ನಿಗದಿಗೊಳಿಸು:"
-
-#, fuzzy
-#~| msgid "Timezone Error"
-#~ msgid "Time Zone"
-#~ msgstr "ಕಾಲವಲಯ ದೋಷ"
-
-#, fuzzy
-#~| msgid "To change the timezone, select your area from the list below"
-#~ msgid "To change the local time zone, select your area from the list below."
-#~ msgstr "ಕಾಲವಲಯವನ್ನು ಬದಲಿಸಲು ಕೆಳಗಿನ ಯಾದಿಯಲ್ಲಿ ನಿಮ್ಮ ಪ್ರದೇಶವನ್ನು ಆರಿಸಿ"
-
-#, fuzzy
-#~| msgid "Current local timezone: %1 (%2)"
-#~ msgid "Current local time zone:"
-#~ msgstr "ಪ್ರಸ್ತುತ ಸ್ಥಳೀಯ ಕಾಲವಲಯ: %1 (%2)"
 
 #~ msgid "kcmclock"
 #~ msgstr "ಕೆಸಿಎಂಗಡಿಯಾರ"

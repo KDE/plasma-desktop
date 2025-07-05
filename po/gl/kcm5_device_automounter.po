@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-10-10 15:48+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -57,6 +57,67 @@ msgstr "Kai Uwe Broulik"
 #, kde-format
 msgid "Plasma 5 Port"
 msgstr "Adaptación a Plasma 5."
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, kde-format
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"Esta lista contén os dispositivos de almacenamento que coñece o sistema. Se "
+"marcou «Montar automaticamente ao acceder» o dispositivo montarase "
+"automaticamente mesmo se non escolleu «Montar todos os dispositivos "
+"extraíbeis ao acceder». O mesmo aplícase a «Montar automaticamente ao "
+"conectar»."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"Se preme este botón «esquecerá» que os dispositivos escollidos existen. Isto "
+"só é útil se marca «Montar automaticamente só os medios extraíbeis que antes "
+"fosen montados manualmente». Tras esquecer un dispositivo e se configura o "
+"sistema para que só monte automaticamente os dispositivos familiares, non se "
+"montará automaticamente este dispositivo."
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "Esquecer este dispositivo"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, kde-format
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"Se non marca esta opción, só se montarán automaticamente os dispositivos que "
+"lembre. Os dispositivos hanse «lembrar» se fosen montados algunha vez antes, "
+"p.ex., non abonda con conectar un reprodutor multimedia USB para cargalo "
+"para lembralo. Se non accedeu aos ficheiros non se ha montar automaticamente "
+"a vindeira vez que se vexa. Porén unha vez que accedese a eles o contido do "
+"dispositivo hase facer accesíbel automaticamente para o sistema."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, kde-format
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr "Montar automaticamente os medios extraíbeis que nunca se montasen."
 
 #: DeviceModel.cpp:52
 #, kde-format
@@ -119,55 +180,6 @@ msgstr "Este dispositivo montarase automaticamente cando se conecte."
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "Este dispositivo non se montará automaticamente cando se conecte."
-
-#~ msgid ""
-#~ "This list contains the storage devices known to the system. If "
-#~ "\"Automount on Login\" is checked, the device will be automatically "
-#~ "mounted even though \"Mount all removable media at login\" is unchecked. "
-#~ "The same applies for \"Automount on Attach\"."
-#~ msgstr ""
-#~ "Esta lista contén os dispositivos de almacenamento que coñece o sistema. "
-#~ "Se marcou «Montar automaticamente ao acceder» o dispositivo montarase "
-#~ "automaticamente mesmo se non escolleu «Montar todos os dispositivos "
-#~ "extraíbeis ao acceder». O mesmo aplícase a «Montar automaticamente ao "
-#~ "conectar»."
-
-#~ msgid ""
-#~ "Clicking this button causes the selected devices to be 'forgotten'. This "
-#~ "is only useful if \"Only automatically mount removable media that has "
-#~ "been manually mounted before\" is checked. Once a device is forgotten and "
-#~ "the system is set to only automatically mount familiar devices, the "
-#~ "device will not be automatically mounted."
-#~ msgstr ""
-#~ "Se preme este botón «esquecerá» que os dispositivos escollidos existen. "
-#~ "Isto só é útil se marca «Montar automaticamente só os medios extraíbeis "
-#~ "que antes fosen montados manualmente». Tras esquecer un dispositivo e se "
-#~ "configura o sistema para que só monte automaticamente os dispositivos "
-#~ "familiares, non se montará automaticamente este dispositivo."
-
-#~ msgid "Forget Device"
-#~ msgstr "Esquecer este dispositivo"
-
-#~ msgid ""
-#~ "When this is not checked, only remembered devices will be automatically "
-#~ "mounted. A device is 'remembered' if it has ever been mounted before. For "
-#~ "instance, plugging in a USB media player to charge is not sufficient to "
-#~ "'remember' it - if the files are not accessed, it will not be "
-#~ "automatically mounted the next time it is seen. Once they have been "
-#~ "accessed, however, the device's contents will be automatically made "
-#~ "available to the system."
-#~ msgstr ""
-#~ "Se non marca esta opción, só se montarán automaticamente os dispositivos "
-#~ "que lembre. Os dispositivos hanse «lembrar» se fosen montados algunha vez "
-#~ "antes, p.ex., non abonda con conectar un reprodutor multimedia USB para "
-#~ "cargalo para lembralo. Se non accedeu aos ficheiros non se ha montar "
-#~ "automaticamente a vindeira vez que se vexa. Porén unha vez que accedese a "
-#~ "eles o contido do dispositivo hase facer accesíbel automaticamente para o "
-#~ "sistema."
-
-#~ msgid ""
-#~ "Automatically mount removable media that have never been mounted before"
-#~ msgstr "Montar automaticamente os medios extraíbeis que nunca se montasen."
 
 #~ msgid ""
 #~ "If any removable storage devices are connected to your system when you "

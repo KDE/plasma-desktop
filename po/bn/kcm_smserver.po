@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2004-05-22 22:42-0500\n"
 "Last-Translator: Deepayan Sarkar <deepayan@bengalinux.org>\n"
 "Language-Team: Bengali <kde-translation@bengalinux.org>\n"
@@ -167,19 +167,31 @@ msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr ""
 
-#, fuzzy
-#~| msgid "Conf&irm logout"
-#~ msgid "Confirm logout"
-#~ msgstr "ল&গ-আউট অনুমোদন"
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgid "Confirm logout"
+msgstr "ল&গ-আউট অনুমোদন"
 
-#, fuzzy
-#~| msgid "On Login"
-#~ msgid "On login"
-#~ msgstr "লগ-ইন করাকালীন"
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:13
+#, kde-format
+msgid "Default leave option"
+msgstr ""
 
-#, fuzzy
-#~ msgid "Applications to be excluded from session"
-#~ msgstr "সেশন থেকে যে সব অ্যাপলিকেশন বহির্ভূত হবে:"
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:22
+#, fuzzy, kde-format
+#| msgid "On Login"
+msgid "On login"
+msgstr "লগ-ইন করাকালীন"
+
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:26
+#, fuzzy, kde-format
+msgid "Applications to be excluded from session"
+msgstr "সেশন থেকে যে সব অ্যাপলিকেশন বহির্ভূত হবে:"
 
 #, fuzzy
 #~| msgid "&Restart computer"

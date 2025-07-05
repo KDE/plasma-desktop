@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-05-26 21:17+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -45,6 +45,133 @@ msgstr ""
 #, kde-format
 msgid "Invalid action"
 msgstr "Hành động không hợp lệ"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
+#: ActionEditor.ui:17
+#, kde-format
+msgid "Edit Parameter"
+msgstr "Sửa tham số"
+
+#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
+#: ActionEditor.ui:43
+#, kde-format
+msgid "Parameter type:"
+msgstr "Kiểu tham số:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:51
+#, kde-format
+msgid "Property Match"
+msgstr "Khớp thuộc tính"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:56
+#, kde-format
+msgid "Content Conjunction"
+msgstr "Kết hợp nội dung"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:61
+#, kde-format
+msgid "Content Disjunction"
+msgstr "Chia tách nội dung"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:66
+#, kde-format
+msgid "Device Interface Match"
+msgstr "Khớp giao diện thiết bị"
+
+#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
+#: ActionEditor.ui:96
+#, kde-format
+msgid "Device type:"
+msgstr "Kiểu thiết bị:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblValueName)
+#: ActionEditor.ui:135
+#, kde-format
+msgid "Value name:"
+msgstr "Tên giá trị:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:175
+#, kde-format
+msgid "Equals"
+msgstr "Bằng"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:180
+#, kde-format
+msgid "Contains"
+msgstr "Chứa"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
+#: ActionEditor.ui:208
+#, kde-format
+msgid "Reset Parameter"
+msgstr "Đặt lại tham số"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
+#: ActionEditor.ui:215
+#, kde-format
+msgid "Save Parameter Changes"
+msgstr "Lưu các thay đổi tham số"
+
+#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
+#: ActionEditor.ui:247
+#, kde-format
+msgid "Action icon, click to change it"
+msgstr "Biểu tượng hành động, bấm để đổi"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
+#: ActionEditor.ui:254
+#, kde-format
+msgid "Action name"
+msgstr "Tên hành động"
+
+#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
+#: ActionEditor.ui:271
+#, kde-format
+msgid "Command: "
+msgstr "Lệnh: "
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
+#: ActionEditor.ui:283
+#, no-c-format, kde-format
+msgid ""
+"Command that will trigger the action\n"
+"This can include any or all of the following case insensitive expands:\n"
+"\n"
+"%f: The mountpoint for the device - Storage Access devices only\n"
+"%d: Path to the device node - Block devices only\n"
+"%i: The identifier of the device"
+msgstr ""
+"Lệnh sẽ kích hoạt hành động\n"
+"Có thể bao gồm bất kì hoặc tất cả các chuỗi mở rộng không phân biệt hoa "
+"thường sau đây:\n"
+"\n"
+"%f: điểm gắn kết cho thiết bị - chỉ với các thiết bị truy cập lưu trữ\n"
+"%d: đường dẫn đến nút thiết bị - chỉ với các thiết bị khối\n"
+"%i: mã định danh của thiết bị"
+
+#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
+#: ActionEditor.ui:300
+#, kde-format
+msgid "Devices must match the following parameters for this action:"
+msgstr "Thiết bị phải khớp với các tham số sau cho hành động này:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblActionName)
+#: AddAction.ui:19
+#, kde-format
+msgid "Action name:"
+msgstr "Tên hành động:"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
+#: AddAction.ui:26
+#, kde-format
+msgid "Enter the name for your new action"
+msgstr "Nhập tên cho hành động mới"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -140,84 +267,23 @@ msgstr "Chưa chọn hành động nào"
 msgid "Cannot be deleted"
 msgstr "Không thể xoá"
 
-#~ msgid "Edit Parameter"
-#~ msgstr "Sửa tham số"
+#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
+#: SolidActions.ui:22
+#, kde-format
+msgid "Remove"
+msgstr "Xoá"
 
-#~ msgid "Parameter type:"
-#~ msgstr "Kiểu tham số:"
+#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
+#: SolidActions.ui:29
+#, kde-format
+msgid "Edit…"
+msgstr "Sửa…"
 
-#~ msgid "Property Match"
-#~ msgstr "Khớp thuộc tính"
-
-#~ msgid "Content Conjunction"
-#~ msgstr "Kết hợp nội dung"
-
-#~ msgid "Content Disjunction"
-#~ msgstr "Chia tách nội dung"
-
-#~ msgid "Device Interface Match"
-#~ msgstr "Khớp giao diện thiết bị"
-
-#~ msgid "Device type:"
-#~ msgstr "Kiểu thiết bị:"
-
-#~ msgid "Value name:"
-#~ msgstr "Tên giá trị:"
-
-#~ msgid "Equals"
-#~ msgstr "Bằng"
-
-#~ msgid "Contains"
-#~ msgstr "Chứa"
-
-#~ msgid "Reset Parameter"
-#~ msgstr "Đặt lại tham số"
-
-#~ msgid "Save Parameter Changes"
-#~ msgstr "Lưu các thay đổi tham số"
-
-#~ msgid "Action icon, click to change it"
-#~ msgstr "Biểu tượng hành động, bấm để đổi"
-
-#~ msgid "Action name"
-#~ msgstr "Tên hành động"
-
-#~ msgid "Command: "
-#~ msgstr "Lệnh: "
-
-#~ msgid ""
-#~ "Command that will trigger the action\n"
-#~ "This can include any or all of the following case insensitive expands:\n"
-#~ "\n"
-#~ "%f: The mountpoint for the device - Storage Access devices only\n"
-#~ "%d: Path to the device node - Block devices only\n"
-#~ "%i: The identifier of the device"
-#~ msgstr ""
-#~ "Lệnh sẽ kích hoạt hành động\n"
-#~ "Có thể bao gồm bất kì hoặc tất cả các chuỗi mở rộng không phân biệt hoa "
-#~ "thường sau đây:\n"
-#~ "\n"
-#~ "%f: điểm gắn kết cho thiết bị - chỉ với các thiết bị truy cập lưu trữ\n"
-#~ "%d: đường dẫn đến nút thiết bị - chỉ với các thiết bị khối\n"
-#~ "%i: mã định danh của thiết bị"
-
-#~ msgid "Devices must match the following parameters for this action:"
-#~ msgstr "Thiết bị phải khớp với các tham số sau cho hành động này:"
-
-#~ msgid "Action name:"
-#~ msgstr "Tên hành động:"
-
-#~ msgid "Enter the name for your new action"
-#~ msgstr "Nhập tên cho hành động mới"
-
-#~ msgid "Remove"
-#~ msgstr "Xoá"
-
-#~ msgid "Edit…"
-#~ msgstr "Sửa…"
-
-#~ msgid "Add…"
-#~ msgstr "Thêm…"
+#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
+#: SolidActions.ui:36
+#, kde-format
+msgid "Add…"
+msgstr "Thêm…"
 
 #~ msgid "Edit..."
 #~ msgstr "Sửa…"

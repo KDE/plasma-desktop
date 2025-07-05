@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2024-08-30 16:33+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -84,6 +84,219 @@ msgstr "Selhalo nastavení gsettings pro Orca: \"%1\" selhalo"
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Chyba: \"orca --setup\" nelze spustit"
+
+#. i18n: ectx: label, entry (SystemBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:9
+#, kde-format
+msgid "Use System Bell"
+msgstr "Používat systémový zvonek"
+
+#. i18n: ectx: label, entry (CustomBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:13
+#, kde-format
+msgid "Customize system bell"
+msgstr "Přizpůsobit systémový zvonek"
+
+#. i18n: ectx: label, entry (CustomBellFile), group (Bell)
+#: kcmaccessibilitybell.kcfg:17
+#, kde-format
+msgid "Sound file for the Bell"
+msgstr "Soubor zvuku pro zvonek"
+
+#. i18n: ectx: label, entry (VisibleBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:20
+#, kde-format
+msgid "Use a visual bell instead of a sound"
+msgstr "Používat vizuální zvonek namísto zvuku"
+
+#. i18n: ectx: label, entry (InvertScreen), group (Bell)
+#: kcmaccessibilitybell.kcfg:24
+#, kde-format
+msgid "Invert the system colors on the bell"
+msgstr "Invertovat systémové barvy při zvonění"
+
+#. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
+#: kcmaccessibilitybell.kcfg:28
+#, kde-format
+msgid "Color of the Visible Bell"
+msgstr "Barva viditelného zvonku"
+
+#. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
+#: kcmaccessibilitybell.kcfg:32
+#, kde-format
+msgid "Duration of the Visible Bell"
+msgstr "Doba trvání viditelného zvonku"
+
+#. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:9
+#, kde-format
+msgid "Use sticky Keys"
+msgstr "Používat kombinace kláves jedním prstem"
+
+#. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Use sticky Keys"
+msgid "Lock the sticky keys"
+msgstr "Používat kombinace kláves jedním prstem"
+
+#. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:17
+#, kde-format
+msgid "Turn sticky keys off when two keys are pressed simultaneously"
+msgstr ""
+"Vypnout kombinace kláves jedním prstem při současném stisku dvou kláves"
+
+#. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:21
+#, kde-format
+msgid "Beep on a sticky key press"
+msgstr ""
+
+#. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:25
+#, kde-format
+msgid "Toggle keys beep"
+msgstr ""
+
+#. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:29
+#, fuzzy, kde-format
+#| msgctxt "Use system bell when a key is pressed"
+#| msgid "when any key is &pressed"
+msgid "Notify when a keyboard modifier is pressed"
+msgstr "&pokud je stisknuta kterákoliv klávesa"
+
+#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:33
+#, kde-format
+msgid "Use a timeout delay"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:37
+#, kde-format
+msgid "Delay for timeout"
+msgstr "Časový limit"
+
+#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:41
+#, kde-format
+msgid "Use a beep for access"
+msgstr ""
+
+#. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:9
+#, kde-format
+msgid "Use slow keypresses"
+msgstr ""
+
+#. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Delay for timeout"
+msgid "Delay for the key press"
+msgstr "Časový limit"
+
+#. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:17
+#, kde-format
+msgid "Beep on a slow keypress"
+msgstr ""
+
+#. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:21
+#, kde-format
+msgid "Beep on an accepted keypress"
+msgstr ""
+
+#. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:25
+#, kde-format
+msgid "Beep on a rejected keypress"
+msgstr ""
+
+#. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:29
+#, kde-format
+msgid "Bounce Keys"
+msgstr "Zabránit &vícenásobnému stisku klávesy"
+
+#. i18n: ectx: label, entry (BounceKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:33
+#, kde-format
+msgid "Use a delay for bouncing"
+msgstr ""
+
+#. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:37
+#, fuzzy, kde-format
+#| msgctxt "Use system bell when a key is rejected"
+#| msgid "when any key is &rejected"
+msgid "Beep if a bounce key event is rejected"
+msgstr "pokud je odmítnuta kte&rákoliv klávesa"
+
+#. i18n: ectx: label, entry (MouseKeys), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:9
+#, kde-format
+msgid "Use keys to control the mouse"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Delay for timeout"
+msgid "Delay for the mouse movement"
+msgstr "Časový limit"
+
+#. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:17
+#, kde-format
+msgid "Repetition interval for the mouse movement"
+msgstr ""
+
+#. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:21
+#, fuzzy, kde-format
+#| msgid "Maximum Velocity"
+msgid "Time to hit maximum velocity"
+msgstr "Maximální rychlost"
+
+#. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:25
+#, kde-format
+msgid "Maximum Velocity"
+msgstr "Maximální rychlost"
+
+#. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:29
+#, kde-format
+msgid "Mouse Key Curve"
+msgstr ""
+
+#. i18n: ectx: label, entry (Gestures), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:35
+#, kde-format
+msgid "Use Gestures"
+msgstr "Použít gesta myši"
+
+#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:39
+#, kde-format
+msgid "Ask for Confirmation for a gesture"
+msgstr ""
+
+#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:43
+#, kde-format
+msgid "Confirm access to the Keyboard"
+msgstr ""
+
+#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
+#: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
+#, kde-format
+msgid "Enable Screen Reader"
+msgstr "Povolit čtení obrazovky"
 
 #: package/contents/ui/Bell.qml:20
 #, kde-format
@@ -371,11 +584,6 @@ msgstr "Maximální rychlost:"
 msgid "Acceleration profile:"
 msgstr "Profil zrychlování:"
 
-#: package/contents/ui/ScreenReader.qml:17
-#, kde-format
-msgid "Enable Screen Reader"
-msgstr "Povolit čtení obrazovky"
-
 #: package/contents/ui/ScreenReader.qml:28
 #, kde-format
 msgid "Launch Orca Screen Reader Configuration…"
@@ -396,43 +604,3 @@ msgid ""
 "It appears that the Orca Screen Reader is not installed. Please install it "
 "before trying to use this feature, and then log out or reboot"
 msgstr ""
-
-#~ msgid "Use System Bell"
-#~ msgstr "Používat systémový zvonek"
-
-#~ msgid "Customize system bell"
-#~ msgstr "Přizpůsobit systémový zvonek"
-
-#~ msgid "Sound file for the Bell"
-#~ msgstr "Soubor zvuku pro zvonek"
-
-#~ msgid "Use a visual bell instead of a sound"
-#~ msgstr "Používat vizuální zvonek namísto zvuku"
-
-#~ msgid "Invert the system colors on the bell"
-#~ msgstr "Invertovat systémové barvy při zvonění"
-
-#~ msgid "Color of the Visible Bell"
-#~ msgstr "Barva viditelného zvonku"
-
-#~ msgid "Duration of the Visible Bell"
-#~ msgstr "Doba trvání viditelného zvonku"
-
-#~ msgid "Use sticky Keys"
-#~ msgstr "Používat kombinace kláves jedním prstem"
-
-#~ msgid "Turn sticky keys off when two keys are pressed simultaneously"
-#~ msgstr ""
-#~ "Vypnout kombinace kláves jedním prstem při současném stisku dvou kláves"
-
-#~ msgid "Delay for timeout"
-#~ msgstr "Časový limit"
-
-#~ msgid "Bounce Keys"
-#~ msgstr "Zabránit &vícenásobnému stisku klávesy"
-
-#~ msgid "Maximum Velocity"
-#~ msgstr "Maximální rychlost"
-
-#~ msgid "Use Gestures"
-#~ msgstr "Použít gesta myši"

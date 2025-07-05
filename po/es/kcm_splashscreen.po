@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_splashscreen\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-11-30 17:37+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -59,11 +59,17 @@ msgstr "Vista previa de la pantalla de bienvenida"
 msgid "Uninstall"
 msgstr "Desinstalar"
 
-#~ msgid "For future use"
-#~ msgstr "Para uso futuro"
+#. i18n: ectx: label, entry (engine), group (KSplash)
+#: splashscreensettings.kcfg:12
+#, kde-format
+msgid "For future use"
+msgstr "Para uso futuro"
 
-#~ msgid "Name of the current splash theme"
-#~ msgstr "Nombre del tema de pantalla de bienvenida actual"
+#. i18n: ectx: label, entry (theme), group (KSplash)
+#: splashscreensettings.kcfg:16
+#, kde-format
+msgid "Name of the current splash theme"
+msgstr "Nombre del tema de pantalla de bienvenida actual"
 
 #~ msgid "&Get New Splash Screens…"
 #~ msgstr "&Obtener nuevas pantallas de bienvenida..."

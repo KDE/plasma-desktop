@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-09-09 16:18+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -564,6 +564,833 @@ msgstr "Các thiết lập này sẽ không có tác dụng trong vùng kiểm t
 msgid "Enable/Disable Touchpad"
 msgstr "Bật/tắt bàn cảm ứng"
 
+#. i18n: ectx: property (windowTitle), widget (QWidget, KdedForm)
+#: kcm/xlib/ui/kded.ui:14
+#, kde-format
+msgctxt "@title:window"
+msgid "Enable/Disable Touchpad"
+msgstr "Bật/tắt bàn cảm ứng"
+
+#. i18n: ectx: property (text), widget (QPushButton, configureShortcutsButton)
+#. i18n: ectx: property (text), widget (QPushButton, configureNotificationsButton)
+#: kcm/xlib/ui/kded.ui:35 kcm/xlib/ui/kded.ui:146
+#, kde-format
+msgid "Configure…"
+msgstr "Cấu hình…"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcm/xlib/ui/kded.ui:47
+#, kde-format
+msgid "Keyboard shortcuts:"
+msgstr "Phím tắt:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_DisableOnKeyboardActivity)
+#: kcm/xlib/ui/kded.ui:60
+#, kde-format
+msgid "Disable touchpad when typing"
+msgstr "Tắt bàn cảm ứng khi đang gõ"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: kcm/xlib/ui/kded.ui:75
+#, kde-format
+msgid "Timeout:"
+msgstr "Thời hạn:"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_KeyboardActivityTimeoutMs)
+#: kcm/xlib/ui/kded.ui:86
+#, kde-format
+msgid ""
+"If there was no keyboard activity for more than specified\n"
+"number of milliseconds, touchpad will be enabled again"
+msgstr ""
+"Nếu không có hành động bàn phím nào trong số mi-li giây\n"
+"được chỉ đinh, bàn cảm ứng sẽ được bật lại"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_LockedDragTimeout)
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_MaxTapTime)
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_MaxDoubleTapTime)
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_SingleTapTimeout)
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_KeyboardActivityTimeoutMs)
+#: kcm/xlib/ui/kded.ui:98 kcm/xlib/ui/tap.ui:306 kcm/xlib/ui/tap.ui:401
+#: kcm/xlib/ui/tap.ui:439 kcm/xlib/ui/tap.ui:458
+#, kde-format
+msgid " ms"
+msgstr " ms"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_OnlyDisableTapAndScrollOnKeyboardActivity)
+#: kcm/xlib/ui/kded.ui:106
+#, kde-format
+msgid ""
+"Disable click emulation and scrolling.\n"
+"You will be still able to move pointer using touchpad and perform clicks "
+"with hardware buttons."
+msgstr ""
+"Tắt cuộn và giả lập bấm.\n"
+"Bạn vẫn có thể di chuyển con trỏ bằng bàn cảm ứng và bấm bằng các nút phần "
+"cứng."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_OnlyDisableTapAndScrollOnKeyboardActivity)
+#: kcm/xlib/ui/kded.ui:109
+#, kde-format
+msgid "Disable taps and scrolling only"
+msgstr "Chỉ tắt vỗ và cuộn"
+
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_DisableWhenMousePluggedIn)
+#: kcm/xlib/ui/kded.ui:119
+#, kde-format
+msgid "Disable touchpad when mouse is plugged in"
+msgstr "Tắt bàn cảm ứng khi chuột được cắm vào"
+
+#. i18n: ectx: property (text), widget (QLabel, notificationsLabel)
+#: kcm/xlib/ui/kded.ui:136
+#, kde-format
+msgid "Notifications:"
+msgstr "Thông báo:"
+
+#. i18n: ectx: property (text), widget (QLabel, ignoredDevLabel)
+#: kcm/xlib/ui/kded.ui:158
+#, kde-format
+msgid "Ignored devices:"
+msgstr "Bỏ qua các thiết bị:"
+
+#. i18n: ectx: property (toolTip), widget (KEditListWidget, kcfg_MouseBlacklist)
+#: kcm/xlib/ui/kded.ui:169
+#, kde-format
+msgid ""
+"Some devices might be incorrectly treated as a mouse.\n"
+"You can add them to this list so that they will be ignored when they're "
+"plugged in."
+msgstr ""
+"Một số thiết bị có thể bị nhận diện sai thành chuột.\n"
+"Bạn có thể thêm chúng vào danh sách này để bỏ qua khi chúng được cắm vào."
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, PointerMotionForm)
+#: kcm/xlib/ui/pointermotion.ui:14
+#, kde-format
+msgid "Pointer Motion"
+msgstr "Chuyển động của con trỏ"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: kcm/xlib/ui/pointermotion.ui:20
+#, kde-format
+msgctxt "Mouse pointer motion parameters"
+msgid "Speed"
+msgstr "Tốc độ"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcm/xlib/ui/pointermotion.ui:29
+#, kde-format
+msgctxt "Minimum pointer movement speed"
+msgid "Minimum:"
+msgstr "Tối thiểu:"
+
+#. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_MinSpeed)
+#: kcm/xlib/ui/pointermotion.ui:39
+#, kde-format
+msgid "Minimum pointer speed"
+msgstr "Tốc độ con trỏ tối thiểu"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcm/xlib/ui/pointermotion.ui:52
+#, kde-format
+msgctxt "Maximum pointer movement speed"
+msgid "Maximum:"
+msgstr "Tối đa:"
+
+#. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_MaxSpeed)
+#: kcm/xlib/ui/pointermotion.ui:62
+#, kde-format
+msgid "Maximum pointer speed"
+msgstr "Tốc độ con trỏ tối đa"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: kcm/xlib/ui/pointermotion.ui:75
+#, kde-format
+msgctxt "Pointer acceleration"
+msgid "Acceleration:"
+msgstr "Gia tốc:"
+
+#. i18n: ectx: property (toolTip), widget (CustomSlider, kcfg_AccelFactor)
+#: kcm/xlib/ui/pointermotion.ui:85
+#, kde-format
+msgid "Acceleration factor for normal pointer movements"
+msgstr "Hệ số gia tốc cho các chuyển động thông thường của con trỏ"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: kcm/xlib/ui/pointermotion.ui:101
+#, kde-format
+msgctxt "Pointer motion"
+msgid "Pressure-Dependent Motion"
+msgstr "Chuyển động dựa trên áp lực"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: kcm/xlib/ui/pointermotion.ui:113
+#, kde-format
+msgctxt "Pressure-dependent pointer motion"
+msgid "Minimum pressure:"
+msgstr "Áp lực tối thiểu:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: kcm/xlib/ui/pointermotion.ui:123
+#, kde-format
+msgctxt "Pressure-dependent pointer motion"
+msgid "Minimum factor:"
+msgstr "Hệ số tối thiểu:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: kcm/xlib/ui/pointermotion.ui:133
+#, kde-format
+msgctxt "Pressure-dependent pointer motion"
+msgid "Maximum pressure:"
+msgstr "Áp lực tối đa:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: kcm/xlib/ui/pointermotion.ui:143
+#, kde-format
+msgctxt "Pressure-dependent pointer motion"
+msgid "Maximum factor:"
+msgstr "Hệ số tối đa:"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PressureMotionMinZ)
+#: kcm/xlib/ui/pointermotion.ui:153
+#, kde-format
+msgid "Finger pressure at which minimum pressure motion factor is applied"
+msgstr "Áp lực của ngón tay mà tại đó hệ số chuyển động tối thiểu được áp dụng"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PressureMotionMaxZ)
+#: kcm/xlib/ui/pointermotion.ui:166
+#, kde-format
+msgid "Finger pressure at which maximum pressure motion factor is applied"
+msgstr "Áp lực của ngón tay mà tại đó hệ số chuyển động tối đa được áp dụng"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_PressureMotionMinFactor)
+#: kcm/xlib/ui/pointermotion.ui:179
+#, kde-format
+msgid "Lowest setting for pressure motion factor"
+msgstr "Thiết lập nhỏ nhất cho hệ số chuyển động"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_PressureMotionMaxFactor)
+#: kcm/xlib/ui/pointermotion.ui:189
+#, kde-format
+msgid "Greatest setting for pressure motion factor"
+msgstr "Thiết lập lớn nhất cho hệ số chuyển động"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: kcm/xlib/ui/pointermotion.ui:202
+#, kde-format
+msgctxt "Pointer motion"
+msgid "Noise Cancellation"
+msgstr "Khử nhiễu"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: kcm/xlib/ui/pointermotion.ui:214
+#, kde-format
+msgctxt "Noise cancellation"
+msgid "Vertical:"
+msgstr "Dọc:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: kcm/xlib/ui/pointermotion.ui:224
+#, kde-format
+msgctxt "Noise cancellation"
+msgid "Horizontal:"
+msgstr "Ngang:"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_VertHysteresis)
+#: kcm/xlib/ui/pointermotion.ui:234
+#, kde-format
+msgid ""
+"The minimum vertical hardware distance required to generate motion events"
+msgstr ""
+"Khoảng cách phần cứng theo chiều dọc tối thiểu cần thiết để sinh sự kiện "
+"chuyển động"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_VertHysteresis)
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_HorizHysteresis)
+#: kcm/xlib/ui/pointermotion.ui:243 kcm/xlib/ui/pointermotion.ui:259
+#, kde-format
+msgid " units"
+msgstr " đơn vị"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_HorizHysteresis)
+#: kcm/xlib/ui/pointermotion.ui:250
+#, kde-format
+msgid ""
+"The minimum horizontal hardware distance required to generate motion events"
+msgstr ""
+"Khoảng cách phần cứng theo chiều ngang tối thiểu cần thiết để sinh sự kiện "
+"chuyển động"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, ScrollForm)
+#: kcm/xlib/ui/scroll.ui:14
+#, kde-format
+msgid "Scrolling"
+msgstr "Cuộn"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: kcm/xlib/ui/scroll.ui:28
+#, kde-format
+msgid "Edge scrolling:"
+msgstr "Cuộn ở cạnh:"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_VertEdgeScroll)
+#: kcm/xlib/ui/scroll.ui:38
+#, kde-format
+msgid "Enable vertical scrolling when dragging along the right edge"
+msgstr "Cho phép cuộn dọc khi kéo dọc theo cạnh phải"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_VertEdgeScroll)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_VertTwoFingerScroll)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_InvertVertScroll)
+#: kcm/xlib/ui/scroll.ui:41 kcm/xlib/ui/scroll.ui:61 kcm/xlib/ui/scroll.ui:81
+#, kde-format
+msgctxt "Scrolling direction"
+msgid "Vertical"
+msgstr "Dọc"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_HorizEdgeScroll)
+#: kcm/xlib/ui/scroll.ui:48
+#, kde-format
+msgid "Enable horizontal scrolling when dragging along the bottom edge"
+msgstr "Cho phép cuộn ngang khi kéo dọc theo cạnh dưới"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HorizEdgeScroll)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_HorizTwoFingerScroll)
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_InvertHorizScroll)
+#: kcm/xlib/ui/scroll.ui:51 kcm/xlib/ui/scroll.ui:71 kcm/xlib/ui/scroll.ui:91
+#, kde-format
+msgctxt "Scrolling direction"
+msgid "Horizontal"
+msgstr "Ngang"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_VertTwoFingerScroll)
+#: kcm/xlib/ui/scroll.ui:58
+#, kde-format
+msgid ""
+"Enable vertical scrolling when dragging with two fingers anywhere on the "
+"touchpad"
+msgstr "Cho phép cuộn dọc khi kéo bằng hai ngón ở bất kì đâu trên bàn cảm ứng"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_HorizTwoFingerScroll)
+#: kcm/xlib/ui/scroll.ui:68
+#, kde-format
+msgid ""
+"Enable horizontal scrolling when dragging with two fingers anywhere on the "
+"touchpad"
+msgstr ""
+"Cho phép cuộn ngang khi kéo bằng hai ngón ở bất kì đâu trên bàn cảm ứng"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_InvertVertScroll)
+#: kcm/xlib/ui/scroll.ui:78
+#, kde-format
+msgid "Reverse vertical scrolling"
+msgstr "Đảo hướng cuộn dọc"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_InvertHorizScroll)
+#: kcm/xlib/ui/scroll.ui:88
+#, kde-format
+msgid "Reverse horizontal scrolling"
+msgstr "Đảo hướng cuộn ngang"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: kcm/xlib/ui/scroll.ui:98
+#, kde-format
+msgid "Two-finger scrolling:"
+msgstr "Cuộn hai ngón:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: kcm/xlib/ui/scroll.ui:108
+#, kde-format
+msgid "Reverse scrolling:"
+msgstr "Đảo hướng cuộn:"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: kcm/xlib/ui/scroll.ui:126
+#, kde-format
+msgctxt "Touchpad - Scrolling"
+msgid "Scrolling Distance"
+msgstr "Khoảng cách cuộn"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: kcm/xlib/ui/scroll.ui:138
+#, kde-format
+msgctxt "Scrolling distance"
+msgid "Vertical:"
+msgstr "Dọc:"
+
+#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_VertScrollDelta)
+#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_HorizScrollDelta)
+#: kcm/xlib/ui/scroll.ui:148 kcm/xlib/ui/scroll.ui:177
+#, kde-format
+msgid "Move distance of the finger for a scroll event"
+msgstr "Khoảng cách ngón tay di chuyển cho một sự kiện cuộn"
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_VertScrollDelta)
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_HorizScrollDelta)
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_MaxTapMove)
+#: kcm/xlib/ui/scroll.ui:157 kcm/xlib/ui/scroll.ui:186 kcm/xlib/ui/tap.ui:417
+#, kde-format
+msgid " mm"
+msgstr " mm"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: kcm/xlib/ui/scroll.ui:167
+#, kde-format
+msgctxt "Scrolling distance"
+msgid "Horizontal:"
+msgstr "Ngang:"
+
+#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_Coasting)
+#: kcm/xlib/ui/scroll.ui:199
+#, kde-format
+msgid ""
+"Continue scrolling after the finger is released from the edge of the touchpad"
+msgstr "Tiếp tục cuộn sau khi ngón tay thả ra khỏi cạnh của bàn cảm ứng"
+
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_Coasting)
+#: kcm/xlib/ui/scroll.ui:202
+#, kde-format
+msgctxt "Touchpad - Scrolling"
+msgid "Coasting"
+msgstr "Trôi"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcm/xlib/ui/scroll.ui:217
+#, kde-format
+msgctxt "Coasting"
+msgid "Minimum speed:"
+msgstr "Tốc độ tối thiểu:"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_CoastingSpeed)
+#: kcm/xlib/ui/scroll.ui:227
+#, kde-format
+msgid ""
+"Your finger needs to produce this many scrolls per second in order to start "
+"coasting"
+msgstr "Ngón tay cần tạo ra từng này lần cuộn mỗi giây để có thể bắt đầu trôi"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_CoastingSpeed)
+#: kcm/xlib/ui/scroll.ui:233
+#, kde-format
+msgid " scrolls/sec"
+msgstr " cuộn/giây"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcm/xlib/ui/scroll.ui:240
+#, kde-format
+msgctxt "Coasting"
+msgid "Deceleration:"
+msgstr "Giảm tốc:"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_CoastingFriction)
+#: kcm/xlib/ui/scroll.ui:250
+#, kde-format
+msgid "Number of scrolls/second² to decrease the coasting speed"
+msgstr "Số lần cuộn/giây² để giảm tốc độ trôi"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_CoastingFriction)
+#: kcm/xlib/ui/scroll.ui:256
+#, kde-format
+msgid " scrolls/sec²"
+msgstr " cuộn/giây²"
+
+#. i18n: ectx: property (text), widget (QLabel, label_11)
+#: kcm/xlib/ui/scroll.ui:263
+#, kde-format
+msgid "Corner coasting:"
+msgstr "Trôi ở góc:"
+
+#. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_CornerCoasting)
+#: kcm/xlib/ui/scroll.ui:273
+#, kde-format
+msgid ""
+"Enable edge scrolling to continue while the finger stays in an edge corner"
+msgstr "Cho phép cuộn ở cạnh tiếp tục trong khi ngón tay giữ ở một góc"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_CornerCoasting)
+#: kcm/xlib/ui/scroll.ui:276
+#, kde-format
+msgctxt "Coasting"
+msgid "Enable"
+msgstr "Bật"
+
+#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_CircularScrolling)
+#: kcm/xlib/ui/scroll.ui:288
+#, kde-format
+msgid ""
+"Scrolling is engaged when a drag starts in the given trigger region.\n"
+"Moving your finger in clockwise circles around the center of the touchpad\n"
+"will scroll down and counter clockwise motion will scroll up"
+msgstr ""
+"Việc cuộn được tiến hành khi một thao tác kéo bắt đầu trong vùng kích hoạt\n"
+"đã định. Di chuyển ngón tay theo vòng tròn xuôi chiều đồng hồ quanh tâm của\n"
+"bàn cảm ứng sẽ cuộn xuống và ngược chiều đồng hồ sẽ cuộn lên"
+
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_CircularScrolling)
+#: kcm/xlib/ui/scroll.ui:291
+#, kde-format
+msgctxt "Touchpad - Scrolling"
+msgid "Circular Scrolling"
+msgstr "Cuộn tròn"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: kcm/xlib/ui/scroll.ui:306
+#, kde-format
+msgctxt "Circular scrolling"
+msgid "Trigger region:"
+msgstr "Vùng kích hoạt:"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_CircScrollTrigger)
+#: kcm/xlib/ui/scroll.ui:316
+#, kde-format
+msgid "Trigger region on the touchpad to start circular scrolling"
+msgstr "Vùng kích hoạt trên bàn cảm ứng để bắt đầu cuộn theo vòng tròn"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: kcm/xlib/ui/scroll.ui:323
+#, kde-format
+msgctxt "Circular scrolling"
+msgid "Angle:"
+msgstr "Góc:"
+
+#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_CircScrollDelta)
+#: kcm/xlib/ui/scroll.ui:345
+#, kde-format
+msgid "Move angle (degrees) of finger to generate a scroll event"
+msgstr "Góc di chuyển (độ) của ngón tay để sinh một sự kiện cuộn"
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, kcfg_CircScrollDelta)
+#: kcm/xlib/ui/scroll.ui:348
+#, kde-format
+msgctxt "suffix - degrees (angle)"
+msgid "°"
+msgstr "°"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: kcm/xlib/ui/scroll.ui:355
+#, kde-format
+msgid ""
+"When used together with vertical scrolling, hitting the upper or lower right "
+"corner will seamlessly switch over from vertical to circular scrolling"
+msgstr ""
+"Khi dùng cùng với cuộn dọc, chạm vào góc trên hoặc dưới bên phải sẽ nhanh "
+"chóng chuyển từ cuộn dọc sang cuộn tròn"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, SensitivityForm)
+#: kcm/xlib/ui/sensitivity.ui:14
+#, kde-format
+msgid "Sensitivity"
+msgstr "Độ nhạy"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: kcm/xlib/ui/sensitivity.ui:20
+#, kde-format
+msgctxt "Touchpad"
+msgid "Sensitivity"
+msgstr "Độ nhạy"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcm/xlib/ui/sensitivity.ui:29
+#, kde-format
+msgid "Pressure for detecting a touch:"
+msgstr "Áp lực để phát hiện một lần chạm:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcm/xlib/ui/sensitivity.ui:39
+#, kde-format
+msgid "Pressure for detecting a release:"
+msgstr "Áp lực để phát hiện một lần thả:"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_FingerHigh)
+#: kcm/xlib/ui/sensitivity.ui:49
+#, kde-format
+msgid ""
+"When finger pressure goes above this value, the driver counts it as a touch"
+msgstr ""
+"Khi áp lực ngón tay vượt quá giá trị này, trình điều khiển ghi nhận một lần "
+"chạm"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_FingerLow)
+#: kcm/xlib/ui/sensitivity.ui:62
+#, kde-format
+msgid ""
+"When finger pressure drops below this value, the driver counts it as a "
+"release"
+msgstr ""
+"Khi áp lực ngón tay giảm quá giá trị này, trình điều khiển ghi nhận một lần "
+"thả"
+
+#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_PalmDetect)
+#: kcm/xlib/ui/sensitivity.ui:78
+#, kde-format
+msgid ""
+"If palm detection should be enabled. Note that this also requires hardware/"
+"firmware support from the touchpad"
+msgstr ""
+"Có bật phát hiện bàn tay hay không. Lưu ý rằng việc này còn cần có hỗ trợ "
+"phần cứng/phần sụn của bàn cảm ứng"
+
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_PalmDetect)
+#: kcm/xlib/ui/sensitivity.ui:81
+#, kde-format
+msgctxt "Touchpad"
+msgid "Palm Detection"
+msgstr "Phát hiện bàn tay"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: kcm/xlib/ui/sensitivity.ui:93
+#, kde-format
+msgctxt "Palm detection"
+msgid "Minimum width:"
+msgstr "Độ rộng tối thiểu:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: kcm/xlib/ui/sensitivity.ui:103
+#, kde-format
+msgctxt "Palm detection"
+msgid "Minimum pressure:"
+msgstr "Áp lực tối thiểu:"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PalmMinWidth)
+#: kcm/xlib/ui/sensitivity.ui:113
+#, kde-format
+msgid "Minimum finger width at which touch is considered a palm"
+msgstr "Độ rộng ngón tay tối thiểu mà việc chạm được coi là bàn tay"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PalmMinZ)
+#: kcm/xlib/ui/sensitivity.ui:129
+#, kde-format
+msgid "Minimum finger pressure at which touch is considered a palm"
+msgstr "Áp lực ngón tay tối thiểu mà việc chạm được coi là bàn tay"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, TapForm)
+#: kcm/xlib/ui/tap.ui:14
+#, kde-format
+msgctxt "Touchpad gesture"
+msgid "Taps"
+msgstr "Vỗ"
+
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_Tapping)
+#: kcm/xlib/ui/tap.ui:28
+#, kde-format
+msgid "Tap to Click"
+msgstr "Vỗ để bấm"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcm/xlib/ui/tap.ui:43
+#, kde-format
+msgctxt "Tapping"
+msgid "One finger:"
+msgstr "Một ngón:"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_OneFingerTapButton)
+#: kcm/xlib/ui/tap.ui:53
+#, kde-format
+msgid "Which mouse button is reported on a non-corner one-finger tap"
+msgstr "Nút chuột nào được nhận với một lần vỗ một ngón không ở góc"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: kcm/xlib/ui/tap.ui:60
+#, kde-format
+msgctxt "Tapping"
+msgid "Two fingers:"
+msgstr "Hai ngón:"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_TwoFingerTapButton)
+#: kcm/xlib/ui/tap.ui:70
+#, kde-format
+msgid "Which mouse button is reported on a non-corner two-finger tap"
+msgstr "Nút chuột nào được nhận với một lần vỗ hai ngón không ở góc"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: kcm/xlib/ui/tap.ui:77
+#, kde-format
+msgctxt "Tapping"
+msgid "Three fingers:"
+msgstr "Ba ngón:"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_ThreeFingerTapButton)
+#: kcm/xlib/ui/tap.ui:87
+#, kde-format
+msgid "Which mouse button is reported on a non-corner three-finger tap"
+msgstr "Nút chuột nào được nhận với một lần vỗ ba ngón không ở góc"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+#: kcm/xlib/ui/tap.ui:107
+#, kde-format
+msgctxt "Touchpad"
+msgid "Corners"
+msgstr "Góc"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: kcm/xlib/ui/tap.ui:131
+#, kde-format
+msgctxt "Touchpad corner"
+msgid "Top left:"
+msgstr "Trái trên:"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_LTCornerButton)
+#: kcm/xlib/ui/tap.ui:144
+#, kde-format
+msgid "Which mouse button is reported on a left top corner tap"
+msgstr "Nút chuột nào được nhận với một lần vỗ ở góc trên trái"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: kcm/xlib/ui/tap.ui:151
+#, kde-format
+msgctxt "Touchpad corner"
+msgid "Bottom left:"
+msgstr "Trái dưới:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: kcm/xlib/ui/tap.ui:164
+#, kde-format
+msgctxt "Touchpad corner"
+msgid "Top right:"
+msgstr "Phải trên:"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_LBCornerButton)
+#: kcm/xlib/ui/tap.ui:177
+#, kde-format
+msgid "Which mouse button is reported on a left bottom corner tap"
+msgstr "Nút chuột nào được nhận với một lần vỗ ở góc dưới trái"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_RTCornerButton)
+#: kcm/xlib/ui/tap.ui:184
+#, kde-format
+msgid "Which mouse button is reported on a right top corner tap"
+msgstr "Nút chuột nào được nhận với một lần vỗ ở góc trên phải"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_RBCornerButton)
+#: kcm/xlib/ui/tap.ui:191
+#, kde-format
+msgid "Which mouse button is reported on a right bottom corner tap"
+msgstr "Nút chuột nào được nhận với một lần vỗ ở góc dưới phải"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: kcm/xlib/ui/tap.ui:214
+#, kde-format
+msgctxt "Touchpad corner"
+msgid "Bottom right:"
+msgstr "Phải dưới:"
+
+#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_TapAndDragGesture)
+#: kcm/xlib/ui/tap.ui:251
+#, kde-format
+msgid ""
+"This gesture is an alternative way of dragging. It is performed by tapping "
+"(touching and releasing the finger), then touching again and moving the "
+"finger on the touchpad"
+msgstr ""
+"Động tác này là một cách khác để kéo. Nó được thực hiện bằng cách vỗ (chạm "
+"và thả ngón tay), rồi lại chạm và di chuyển ngón tay trên bàn cảm ứng"
+
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_TapAndDragGesture)
+#: kcm/xlib/ui/tap.ui:254
+#, kde-format
+msgid "Tap-and-Drag Gesture"
+msgstr "Động tác vỗ và kéo"
+
+#. i18n: ectx: property (toolTip), widget (QGroupBox, kcfg_LockedDrags)
+#: kcm/xlib/ui/tap.ui:266
+#, kde-format
+msgid ""
+"If off, a tap-and-drag gesture ends when you release the finger. If on, the "
+"gesture is active until you tap a second time, or until timeout expires"
+msgstr ""
+"Nếu tắt, một động tác vỗ và kéo sẽ kết thúc khi bạn thả ngón tay. Nếu bật, "
+"động tác sẽ còn hoạt động cho đến khi bạn vỗ một lần nữa, hoặc khi hết giờ"
+
+#. i18n: ectx: property (title), widget (QGroupBox, kcfg_LockedDrags)
+#: kcm/xlib/ui/tap.ui:269
+#, kde-format
+msgctxt "Touchpad gesture"
+msgid "Locked Drags"
+msgstr "Kéo bị khoá"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: kcm/xlib/ui/tap.ui:284
+#, kde-format
+msgctxt "Locked drags"
+msgid "Timeout:"
+msgstr "Thời hạn:"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_LockedDragTimeout)
+#: kcm/xlib/ui/tap.ui:294
+#, kde-format
+msgid ""
+"How long it takes (in milliseconds) for the \"Locked Drags\" mode to be "
+"automatically turned off after the finger is released from the touchpad"
+msgstr ""
+"Thời gian (bằng mi-li giây) để chế độ \"Kéo bị khoá\" được tự động tắt sau "
+"khi ngón tay thả ra khỏi bàn cảm ứng"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
+#: kcm/xlib/ui/tap.ui:325
+#, kde-format
+msgid "Tap Detection"
+msgstr "Phát hiện vỗ"
+
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: kcm/xlib/ui/tap.ui:340
+#, kde-format
+msgid "Maximum time:"
+msgstr "Thời gian tối đa:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_11)
+#: kcm/xlib/ui/tap.ui:353
+#, kde-format
+msgid "Maximum finger movement:"
+msgstr "Di chuyển ngón tay tối đa:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_12)
+#: kcm/xlib/ui/tap.ui:366
+#, kde-format
+msgid "Maximum time for double tap:"
+msgstr "Thời gian tối đa cho vỗ đúp:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_13)
+#: kcm/xlib/ui/tap.ui:379
+#, kde-format
+msgid "Single tap timeout:"
+msgstr "Thời hạn vỗ đơn:"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_MaxTapTime)
+#: kcm/xlib/ui/tap.ui:389
+#, kde-format
+msgid "Maximum time (in milliseconds) for detecting a tap"
+msgstr "Thời gian tối đa (bằng mi-li giây) để phát hiện một lần vỗ"
+
+#. i18n: ectx: property (toolTip), widget (QDoubleSpinBox, kcfg_MaxTapMove)
+#: kcm/xlib/ui/tap.ui:408
+#, kde-format
+msgid "Maximum movement of the finger for detecting a tap"
+msgstr "Di chuyển tối đa của ngón tay để phát hiện một lần vỗ"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_MaxDoubleTapTime)
+#: kcm/xlib/ui/tap.ui:427
+#, kde-format
+msgid "Maximum time (in milliseconds) for detecting a double tap"
+msgstr "Thời gian tối đa (bằng mi-li giây) để phát hiện một lần vỗ đúp"
+
+#. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_SingleTapTimeout)
+#: kcm/xlib/ui/tap.ui:446
+#, kde-format
+msgid "Timeout after a tap to recognize it as a single tap"
+msgstr "Thời hạn sau một lần vỗ để ghi nhận nó là một lần vỗ đơn"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: kcm/xlib/ui/testarea.ui:20
+#, kde-format
+msgid "Testing area"
+msgstr "Vùng kiểm thử"
+
+#. i18n: ectx: property (text), widget (TestButton, pushButton)
+#: kcm/xlib/ui/testarea.ui:29
+#, kde-format
+msgid "Click me"
+msgstr "Bấm vào đây"
+
 #: kded/kded.cpp:201
 #, kde-format
 msgid "Touchpad was disabled because a mouse was plugged in"
@@ -574,526 +1401,93 @@ msgstr "Bàn cảm ứng đã được tắt vì chuột đã được cắm và
 msgid "Touchpad was enabled because the mouse was unplugged"
 msgstr "Bàn cảm ứng đã được bật vì chuột đã được rút ra"
 
-#~ msgctxt "@title:window"
-#~ msgid "Enable/Disable Touchpad"
-#~ msgstr "Bật/tắt bàn cảm ứng"
-
-#~ msgid "Configure…"
-#~ msgstr "Cấu hình…"
-
-#~ msgid "Keyboard shortcuts:"
-#~ msgstr "Phím tắt:"
-
-#~ msgid "Disable touchpad when typing"
-#~ msgstr "Tắt bàn cảm ứng khi đang gõ"
-
-#~ msgid "Timeout:"
-#~ msgstr "Thời hạn:"
-
-#~ msgid ""
-#~ "If there was no keyboard activity for more than specified\n"
-#~ "number of milliseconds, touchpad will be enabled again"
-#~ msgstr ""
-#~ "Nếu không có hành động bàn phím nào trong số mi-li giây\n"
-#~ "được chỉ đinh, bàn cảm ứng sẽ được bật lại"
-
-#~ msgid " ms"
-#~ msgstr " ms"
-
-#~ msgid ""
-#~ "Disable click emulation and scrolling.\n"
-#~ "You will be still able to move pointer using touchpad and perform clicks "
-#~ "with hardware buttons."
-#~ msgstr ""
-#~ "Tắt cuộn và giả lập bấm.\n"
-#~ "Bạn vẫn có thể di chuyển con trỏ bằng bàn cảm ứng và bấm bằng các nút "
-#~ "phần cứng."
-
-#~ msgid "Disable taps and scrolling only"
-#~ msgstr "Chỉ tắt vỗ và cuộn"
-
-#~ msgid "Disable touchpad when mouse is plugged in"
-#~ msgstr "Tắt bàn cảm ứng khi chuột được cắm vào"
-
-#~ msgid "Notifications:"
-#~ msgstr "Thông báo:"
-
-#~ msgid "Ignored devices:"
-#~ msgstr "Bỏ qua các thiết bị:"
-
-#~ msgid ""
-#~ "Some devices might be incorrectly treated as a mouse.\n"
-#~ "You can add them to this list so that they will be ignored when they're "
-#~ "plugged in."
-#~ msgstr ""
-#~ "Một số thiết bị có thể bị nhận diện sai thành chuột.\n"
-#~ "Bạn có thể thêm chúng vào danh sách này để bỏ qua khi chúng được cắm vào."
-
-#~ msgid "Pointer Motion"
-#~ msgstr "Chuyển động của con trỏ"
-
-#~ msgctxt "Mouse pointer motion parameters"
-#~ msgid "Speed"
-#~ msgstr "Tốc độ"
-
-#~ msgctxt "Minimum pointer movement speed"
-#~ msgid "Minimum:"
-#~ msgstr "Tối thiểu:"
-
-#~ msgid "Minimum pointer speed"
-#~ msgstr "Tốc độ con trỏ tối thiểu"
-
-#~ msgctxt "Maximum pointer movement speed"
-#~ msgid "Maximum:"
-#~ msgstr "Tối đa:"
-
-#~ msgid "Maximum pointer speed"
-#~ msgstr "Tốc độ con trỏ tối đa"
-
-#~ msgctxt "Pointer acceleration"
-#~ msgid "Acceleration:"
-#~ msgstr "Gia tốc:"
-
-#~ msgid "Acceleration factor for normal pointer movements"
-#~ msgstr "Hệ số gia tốc cho các chuyển động thông thường của con trỏ"
-
-#~ msgctxt "Pointer motion"
-#~ msgid "Pressure-Dependent Motion"
-#~ msgstr "Chuyển động dựa trên áp lực"
-
-#~ msgctxt "Pressure-dependent pointer motion"
-#~ msgid "Minimum pressure:"
-#~ msgstr "Áp lực tối thiểu:"
-
-#~ msgctxt "Pressure-dependent pointer motion"
-#~ msgid "Minimum factor:"
-#~ msgstr "Hệ số tối thiểu:"
-
-#~ msgctxt "Pressure-dependent pointer motion"
-#~ msgid "Maximum pressure:"
-#~ msgstr "Áp lực tối đa:"
-
-#~ msgctxt "Pressure-dependent pointer motion"
-#~ msgid "Maximum factor:"
-#~ msgstr "Hệ số tối đa:"
-
-#~ msgid "Finger pressure at which minimum pressure motion factor is applied"
-#~ msgstr ""
-#~ "Áp lực của ngón tay mà tại đó hệ số chuyển động tối thiểu được áp dụng"
-
-#~ msgid "Finger pressure at which maximum pressure motion factor is applied"
-#~ msgstr "Áp lực của ngón tay mà tại đó hệ số chuyển động tối đa được áp dụng"
-
-#~ msgid "Lowest setting for pressure motion factor"
-#~ msgstr "Thiết lập nhỏ nhất cho hệ số chuyển động"
-
-#~ msgid "Greatest setting for pressure motion factor"
-#~ msgstr "Thiết lập lớn nhất cho hệ số chuyển động"
-
-#~ msgctxt "Pointer motion"
-#~ msgid "Noise Cancellation"
-#~ msgstr "Khử nhiễu"
-
-#~ msgctxt "Noise cancellation"
-#~ msgid "Vertical:"
-#~ msgstr "Dọc:"
-
-#~ msgctxt "Noise cancellation"
-#~ msgid "Horizontal:"
-#~ msgstr "Ngang:"
-
-#~ msgid ""
-#~ "The minimum vertical hardware distance required to generate motion events"
-#~ msgstr ""
-#~ "Khoảng cách phần cứng theo chiều dọc tối thiểu cần thiết để sinh sự kiện "
-#~ "chuyển động"
-
-#~ msgid " units"
-#~ msgstr " đơn vị"
-
-#~ msgid ""
-#~ "The minimum horizontal hardware distance required to generate motion "
-#~ "events"
-#~ msgstr ""
-#~ "Khoảng cách phần cứng theo chiều ngang tối thiểu cần thiết để sinh sự "
-#~ "kiện chuyển động"
-
-#~ msgid "Scrolling"
-#~ msgstr "Cuộn"
-
-#~ msgid "Edge scrolling:"
-#~ msgstr "Cuộn ở cạnh:"
-
-#~ msgid "Enable vertical scrolling when dragging along the right edge"
-#~ msgstr "Cho phép cuộn dọc khi kéo dọc theo cạnh phải"
-
-#~ msgctxt "Scrolling direction"
-#~ msgid "Vertical"
-#~ msgstr "Dọc"
-
-#~ msgid "Enable horizontal scrolling when dragging along the bottom edge"
-#~ msgstr "Cho phép cuộn ngang khi kéo dọc theo cạnh dưới"
-
-#~ msgctxt "Scrolling direction"
-#~ msgid "Horizontal"
-#~ msgstr "Ngang"
-
-#~ msgid ""
-#~ "Enable vertical scrolling when dragging with two fingers anywhere on the "
-#~ "touchpad"
-#~ msgstr ""
-#~ "Cho phép cuộn dọc khi kéo bằng hai ngón ở bất kì đâu trên bàn cảm ứng"
-
-#~ msgid ""
-#~ "Enable horizontal scrolling when dragging with two fingers anywhere on "
-#~ "the touchpad"
-#~ msgstr ""
-#~ "Cho phép cuộn ngang khi kéo bằng hai ngón ở bất kì đâu trên bàn cảm ứng"
-
-#~ msgid "Reverse vertical scrolling"
-#~ msgstr "Đảo hướng cuộn dọc"
-
-#~ msgid "Reverse horizontal scrolling"
-#~ msgstr "Đảo hướng cuộn ngang"
-
-#~ msgid "Two-finger scrolling:"
-#~ msgstr "Cuộn hai ngón:"
-
-#~ msgid "Reverse scrolling:"
-#~ msgstr "Đảo hướng cuộn:"
-
-#~ msgctxt "Touchpad - Scrolling"
-#~ msgid "Scrolling Distance"
-#~ msgstr "Khoảng cách cuộn"
-
-#~ msgctxt "Scrolling distance"
-#~ msgid "Vertical:"
-#~ msgstr "Dọc:"
-
-#~ msgid "Move distance of the finger for a scroll event"
-#~ msgstr "Khoảng cách ngón tay di chuyển cho một sự kiện cuộn"
-
-#~ msgid " mm"
-#~ msgstr " mm"
-
-#~ msgctxt "Scrolling distance"
-#~ msgid "Horizontal:"
-#~ msgstr "Ngang:"
-
-#~ msgid ""
-#~ "Continue scrolling after the finger is released from the edge of the "
-#~ "touchpad"
-#~ msgstr "Tiếp tục cuộn sau khi ngón tay thả ra khỏi cạnh của bàn cảm ứng"
-
-#~ msgctxt "Touchpad - Scrolling"
-#~ msgid "Coasting"
-#~ msgstr "Trôi"
-
-#~ msgctxt "Coasting"
-#~ msgid "Minimum speed:"
-#~ msgstr "Tốc độ tối thiểu:"
-
-#~ msgid ""
-#~ "Your finger needs to produce this many scrolls per second in order to "
-#~ "start coasting"
-#~ msgstr ""
-#~ "Ngón tay cần tạo ra từng này lần cuộn mỗi giây để có thể bắt đầu trôi"
-
-#~ msgid " scrolls/sec"
-#~ msgstr " cuộn/giây"
-
-#~ msgctxt "Coasting"
-#~ msgid "Deceleration:"
-#~ msgstr "Giảm tốc:"
-
-#~ msgid "Number of scrolls/second² to decrease the coasting speed"
-#~ msgstr "Số lần cuộn/giây² để giảm tốc độ trôi"
-
-#~ msgid " scrolls/sec²"
-#~ msgstr " cuộn/giây²"
-
-#~ msgid "Corner coasting:"
-#~ msgstr "Trôi ở góc:"
-
-#~ msgid ""
-#~ "Enable edge scrolling to continue while the finger stays in an edge corner"
-#~ msgstr "Cho phép cuộn ở cạnh tiếp tục trong khi ngón tay giữ ở một góc"
-
-#~ msgctxt "Coasting"
-#~ msgid "Enable"
-#~ msgstr "Bật"
-
-#~ msgid ""
-#~ "Scrolling is engaged when a drag starts in the given trigger region.\n"
-#~ "Moving your finger in clockwise circles around the center of the "
-#~ "touchpad\n"
-#~ "will scroll down and counter clockwise motion will scroll up"
-#~ msgstr ""
-#~ "Việc cuộn được tiến hành khi một thao tác kéo bắt đầu trong vùng kích "
-#~ "hoạt\n"
-#~ "đã định. Di chuyển ngón tay theo vòng tròn xuôi chiều đồng hồ quanh tâm "
-#~ "của\n"
-#~ "bàn cảm ứng sẽ cuộn xuống và ngược chiều đồng hồ sẽ cuộn lên"
-
-#~ msgctxt "Touchpad - Scrolling"
-#~ msgid "Circular Scrolling"
-#~ msgstr "Cuộn tròn"
-
-#~ msgctxt "Circular scrolling"
-#~ msgid "Trigger region:"
-#~ msgstr "Vùng kích hoạt:"
-
-#~ msgid "Trigger region on the touchpad to start circular scrolling"
-#~ msgstr "Vùng kích hoạt trên bàn cảm ứng để bắt đầu cuộn theo vòng tròn"
-
-#~ msgctxt "Circular scrolling"
-#~ msgid "Angle:"
-#~ msgstr "Góc:"
-
-#~ msgid "Move angle (degrees) of finger to generate a scroll event"
-#~ msgstr "Góc di chuyển (độ) của ngón tay để sinh một sự kiện cuộn"
-
-#~ msgctxt "suffix - degrees (angle)"
-#~ msgid "°"
-#~ msgstr "°"
-
-#~ msgid ""
-#~ "When used together with vertical scrolling, hitting the upper or lower "
-#~ "right corner will seamlessly switch over from vertical to circular "
-#~ "scrolling"
-#~ msgstr ""
-#~ "Khi dùng cùng với cuộn dọc, chạm vào góc trên hoặc dưới bên phải sẽ nhanh "
-#~ "chóng chuyển từ cuộn dọc sang cuộn tròn"
-
-#~ msgid "Sensitivity"
-#~ msgstr "Độ nhạy"
-
-#~ msgctxt "Touchpad"
-#~ msgid "Sensitivity"
-#~ msgstr "Độ nhạy"
-
-#~ msgid "Pressure for detecting a touch:"
-#~ msgstr "Áp lực để phát hiện một lần chạm:"
-
-#~ msgid "Pressure for detecting a release:"
-#~ msgstr "Áp lực để phát hiện một lần thả:"
-
-#~ msgid ""
-#~ "When finger pressure goes above this value, the driver counts it as a "
-#~ "touch"
-#~ msgstr ""
-#~ "Khi áp lực ngón tay vượt quá giá trị này, trình điều khiển ghi nhận một "
-#~ "lần chạm"
-
-#~ msgid ""
-#~ "When finger pressure drops below this value, the driver counts it as a "
-#~ "release"
-#~ msgstr ""
-#~ "Khi áp lực ngón tay giảm quá giá trị này, trình điều khiển ghi nhận một "
-#~ "lần thả"
-
-#~ msgid ""
-#~ "If palm detection should be enabled. Note that this also requires "
-#~ "hardware/firmware support from the touchpad"
-#~ msgstr ""
-#~ "Có bật phát hiện bàn tay hay không. Lưu ý rằng việc này còn cần có hỗ trợ "
-#~ "phần cứng/phần sụn của bàn cảm ứng"
-
-#~ msgctxt "Touchpad"
-#~ msgid "Palm Detection"
-#~ msgstr "Phát hiện bàn tay"
-
-#~ msgctxt "Palm detection"
-#~ msgid "Minimum width:"
-#~ msgstr "Độ rộng tối thiểu:"
-
-#~ msgctxt "Palm detection"
-#~ msgid "Minimum pressure:"
-#~ msgstr "Áp lực tối thiểu:"
-
-#~ msgid "Minimum finger width at which touch is considered a palm"
-#~ msgstr "Độ rộng ngón tay tối thiểu mà việc chạm được coi là bàn tay"
-
-#~ msgid "Minimum finger pressure at which touch is considered a palm"
-#~ msgstr "Áp lực ngón tay tối thiểu mà việc chạm được coi là bàn tay"
-
-#~ msgctxt "Touchpad gesture"
-#~ msgid "Taps"
-#~ msgstr "Vỗ"
-
-#~ msgid "Tap to Click"
-#~ msgstr "Vỗ để bấm"
-
-#~ msgctxt "Tapping"
-#~ msgid "One finger:"
-#~ msgstr "Một ngón:"
-
-#~ msgid "Which mouse button is reported on a non-corner one-finger tap"
-#~ msgstr "Nút chuột nào được nhận với một lần vỗ một ngón không ở góc"
-
-#~ msgctxt "Tapping"
-#~ msgid "Two fingers:"
-#~ msgstr "Hai ngón:"
-
-#~ msgid "Which mouse button is reported on a non-corner two-finger tap"
-#~ msgstr "Nút chuột nào được nhận với một lần vỗ hai ngón không ở góc"
-
-#~ msgctxt "Tapping"
-#~ msgid "Three fingers:"
-#~ msgstr "Ba ngón:"
-
-#~ msgid "Which mouse button is reported on a non-corner three-finger tap"
-#~ msgstr "Nút chuột nào được nhận với một lần vỗ ba ngón không ở góc"
-
-#~ msgctxt "Touchpad"
-#~ msgid "Corners"
-#~ msgstr "Góc"
-
-#~ msgctxt "Touchpad corner"
-#~ msgid "Top left:"
-#~ msgstr "Trái trên:"
-
-#~ msgid "Which mouse button is reported on a left top corner tap"
-#~ msgstr "Nút chuột nào được nhận với một lần vỗ ở góc trên trái"
-
-#~ msgctxt "Touchpad corner"
-#~ msgid "Bottom left:"
-#~ msgstr "Trái dưới:"
-
-#~ msgctxt "Touchpad corner"
-#~ msgid "Top right:"
-#~ msgstr "Phải trên:"
-
-#~ msgid "Which mouse button is reported on a left bottom corner tap"
-#~ msgstr "Nút chuột nào được nhận với một lần vỗ ở góc dưới trái"
-
-#~ msgid "Which mouse button is reported on a right top corner tap"
-#~ msgstr "Nút chuột nào được nhận với một lần vỗ ở góc trên phải"
-
-#~ msgid "Which mouse button is reported on a right bottom corner tap"
-#~ msgstr "Nút chuột nào được nhận với một lần vỗ ở góc dưới phải"
-
-#~ msgctxt "Touchpad corner"
-#~ msgid "Bottom right:"
-#~ msgstr "Phải dưới:"
-
-#~ msgid ""
-#~ "This gesture is an alternative way of dragging. It is performed by "
-#~ "tapping (touching and releasing the finger), then touching again and "
-#~ "moving the finger on the touchpad"
-#~ msgstr ""
-#~ "Động tác này là một cách khác để kéo. Nó được thực hiện bằng cách vỗ "
-#~ "(chạm và thả ngón tay), rồi lại chạm và di chuyển ngón tay trên bàn cảm "
-#~ "ứng"
-
-#~ msgid "Tap-and-Drag Gesture"
-#~ msgstr "Động tác vỗ và kéo"
-
-#~ msgid ""
-#~ "If off, a tap-and-drag gesture ends when you release the finger. If on, "
-#~ "the gesture is active until you tap a second time, or until timeout "
-#~ "expires"
-#~ msgstr ""
-#~ "Nếu tắt, một động tác vỗ và kéo sẽ kết thúc khi bạn thả ngón tay. Nếu "
-#~ "bật, động tác sẽ còn hoạt động cho đến khi bạn vỗ một lần nữa, hoặc khi "
-#~ "hết giờ"
-
-#~ msgctxt "Touchpad gesture"
-#~ msgid "Locked Drags"
-#~ msgstr "Kéo bị khoá"
-
-#~ msgctxt "Locked drags"
-#~ msgid "Timeout:"
-#~ msgstr "Thời hạn:"
-
-#~ msgid ""
-#~ "How long it takes (in milliseconds) for the \"Locked Drags\" mode to be "
-#~ "automatically turned off after the finger is released from the touchpad"
-#~ msgstr ""
-#~ "Thời gian (bằng mi-li giây) để chế độ \"Kéo bị khoá\" được tự động tắt "
-#~ "sau khi ngón tay thả ra khỏi bàn cảm ứng"
-
-#~ msgid "Tap Detection"
-#~ msgstr "Phát hiện vỗ"
-
-#~ msgid "Maximum time:"
-#~ msgstr "Thời gian tối đa:"
-
-#~ msgid "Maximum finger movement:"
-#~ msgstr "Di chuyển ngón tay tối đa:"
-
-#~ msgid "Maximum time for double tap:"
-#~ msgstr "Thời gian tối đa cho vỗ đúp:"
-
-#~ msgid "Single tap timeout:"
-#~ msgstr "Thời hạn vỗ đơn:"
-
-#~ msgid "Maximum time (in milliseconds) for detecting a tap"
-#~ msgstr "Thời gian tối đa (bằng mi-li giây) để phát hiện một lần vỗ"
-
-#~ msgid "Maximum movement of the finger for detecting a tap"
-#~ msgstr "Di chuyển tối đa của ngón tay để phát hiện một lần vỗ"
-
-#~ msgid "Maximum time (in milliseconds) for detecting a double tap"
-#~ msgstr "Thời gian tối đa (bằng mi-li giây) để phát hiện một lần vỗ đúp"
-
-#~ msgid "Timeout after a tap to recognize it as a single tap"
-#~ msgstr "Thời hạn sau một lần vỗ để ghi nhận nó là một lần vỗ đơn"
-
-#~ msgid "Testing area"
-#~ msgstr "Vùng kiểm thử"
-
-#~ msgid "Click me"
-#~ msgstr "Bấm vào đây"
-
-#~ msgctxt "Emulated mouse button"
-#~ msgid "No action"
-#~ msgstr "Không hành động"
-
-#~ msgctxt "Emulated mouse button"
-#~ msgid "Left button"
-#~ msgstr "Nút trái"
-
-#~ msgctxt "Emulated mouse button"
-#~ msgid "Middle button"
-#~ msgstr "Nút giữa"
-
-#~ msgctxt "Emulated mouse button"
-#~ msgid "Right button"
-#~ msgstr "Nút phải"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "All edges"
-#~ msgstr "Tất cả các cạnh"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Top edge"
-#~ msgstr "Cạnh trên"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Top right corner"
-#~ msgstr "Góc phải trên"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Right edge"
-#~ msgstr "Cạnh phải"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Bottom right corner"
-#~ msgstr "Góc phải dưới"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Bottom edge"
-#~ msgstr "Cạnh dưới"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Bottom left corner"
-#~ msgstr "Góc trái dưới"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Left edge"
-#~ msgstr "Cạnh trái"
-
-#~ msgctxt "Touchpad Edge"
-#~ msgid "Top left corner"
-#~ msgstr "Góc trái trên"
+#. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
+#: touchpadparameters.kcfg:27
+#, kde-format
+msgctxt "Emulated mouse button"
+msgid "No action"
+msgstr "Không hành động"
+
+#. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
+#: touchpadparameters.kcfg:30
+#, kde-format
+msgctxt "Emulated mouse button"
+msgid "Left button"
+msgstr "Nút trái"
+
+#. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
+#: touchpadparameters.kcfg:33
+#, kde-format
+msgctxt "Emulated mouse button"
+msgid "Middle button"
+msgstr "Nút giữa"
+
+#. i18n: ectx: label, entry ($(TapAction)Button), group (parameters)
+#: touchpadparameters.kcfg:36
+#, kde-format
+msgctxt "Emulated mouse button"
+msgid "Right button"
+msgstr "Nút phải"
+
+#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
+#: touchpadparameters.kcfg:285
+#, kde-format
+msgctxt "Touchpad Edge"
+msgid "All edges"
+msgstr "Tất cả các cạnh"
+
+#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
+#: touchpadparameters.kcfg:288
+#, kde-format
+msgctxt "Touchpad Edge"
+msgid "Top edge"
+msgstr "Cạnh trên"
+
+#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
+#: touchpadparameters.kcfg:291
+#, kde-format
+msgctxt "Touchpad Edge"
+msgid "Top right corner"
+msgstr "Góc phải trên"
+
+#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
+#: touchpadparameters.kcfg:294
+#, kde-format
+msgctxt "Touchpad Edge"
+msgid "Right edge"
+msgstr "Cạnh phải"
+
+#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
+#: touchpadparameters.kcfg:297
+#, kde-format
+msgctxt "Touchpad Edge"
+msgid "Bottom right corner"
+msgstr "Góc phải dưới"
+
+#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
+#: touchpadparameters.kcfg:300
+#, kde-format
+msgctxt "Touchpad Edge"
+msgid "Bottom edge"
+msgstr "Cạnh dưới"
+
+#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
+#: touchpadparameters.kcfg:303
+#, kde-format
+msgctxt "Touchpad Edge"
+msgid "Bottom left corner"
+msgstr "Góc trái dưới"
+
+#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
+#: touchpadparameters.kcfg:306
+#, kde-format
+msgctxt "Touchpad Edge"
+msgid "Left edge"
+msgstr "Cạnh trái"
+
+#. i18n: ectx: label, entry (CircScrollTrigger), group (parameters)
+#: touchpadparameters.kcfg:309
+#, kde-format
+msgctxt "Touchpad Edge"
+msgid "Top left corner"
+msgstr "Góc trái trên"

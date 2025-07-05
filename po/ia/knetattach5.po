@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2024-05-20 15:23+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -87,6 +87,118 @@ msgstr "Salva && C&onnecte"
 msgid "C&onnect"
 msgstr "C&onnecte"
 
+#. i18n: ectx: property (windowTitle), widget (QWizard, KNetAttach)
+#: knetattach.ui:14
+#, kde-format
+msgid "Network Folder Wizard"
+msgstr "Assistente de dossier de rete"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderType)
+#: knetattach.ui:18
+#, kde-format
+msgid "Add Network Folder"
+msgstr "Adde dossier de rete"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: knetattach.ui:24
+#, kde-format
+msgid ""
+"Select the type of network folder you wish to connect to and press the Next "
+"button."
+msgstr ""
+"Selectiona le typo de dossier de rete que tu vole connecter e tu pressa le "
+"button de proxime."
+
+#. i18n: ectx: property (text), widget (QRadioButton, _recent)
+#: knetattach.ui:65
+#, kde-format
+msgid "&Recent connection:"
+msgstr "Connexion &Recente"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _webfolder)
+#: knetattach.ui:72
+#, kde-format
+msgid "&WebFolder (webdav)"
+msgstr "Dossier de &Web (webdav)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _fish)
+#: knetattach.ui:82
+#, kde-format
+msgid "&Secure shell (ssh)"
+msgstr "&Secur shell (ssh)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _ftp)
+#: knetattach.ui:111
+#, kde-format
+msgid "FT&P"
+msgstr "FT&P"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _smb)
+#: knetattach.ui:118
+#, kde-format
+msgid "&Microsoft® Windows® network drive"
+msgstr "Drive de rete de &Microsoft Windows"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderParameters)
+#: knetattach.ui:145
+#, kde-format
+msgid "Network Folder Information"
+msgstr "Information de dossier de rete"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel4_2)
+#: knetattach.ui:177
+#, kde-format
+msgid "&Name:"
+msgstr "&Nomine:"
+
+#. i18n: ectx: property (text), widget (QLabel, _userText)
+#: knetattach.ui:196
+#, kde-format
+msgid "&User:"
+msgstr "&Usator:"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: knetattach.ui:222
+#, kde-format
+msgid "Se&rver:"
+msgstr "Se&rvitor:"
+
+#. i18n: ectx: property (text), widget (QLabel, _portText)
+#: knetattach.ui:248
+#, kde-format
+msgid "&Port:"
+msgstr "&Porto:"
+
+#. i18n: ectx: property (text), widget (QLabel, _protocol)
+#: knetattach.ui:283
+#, kde-format
+msgid "&Protocol:"
+msgstr "&Protocollo:"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: knetattach.ui:313
+#, kde-format
+msgid "&Folder:"
+msgstr "&Dossier:"
+
+#. i18n: ectx: property (text), widget (QLabel, _encodingText)
+#: knetattach.ui:335
+#, kde-format
+msgid "Encoding:"
+msgstr "Codifica:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _createIcon)
+#: knetattach.ui:351
+#, kde-format
+msgid "Cr&eate an icon for this remote folder"
+msgstr "Cr&ea un icone pro iste remote dossier"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _useEncryption)
+#: knetattach.ui:361
+#, kde-format
+msgid "&Use encryption"
+msgstr "&Usa cryptation"
+
 #: main.cpp:21 main.cpp:23
 #, kde-format
 msgid "KDE Network Wizard"
@@ -106,64 +218,6 @@ msgstr "George Staikos"
 #, kde-format
 msgid "Primary author and maintainer"
 msgstr "Autor principal e mantenitor"
-
-#~ msgid "Network Folder Wizard"
-#~ msgstr "Assistente de dossier de rete"
-
-#~ msgid "Add Network Folder"
-#~ msgstr "Adde dossier de rete"
-
-#~ msgid ""
-#~ "Select the type of network folder you wish to connect to and press the "
-#~ "Next button."
-#~ msgstr ""
-#~ "Selectiona le typo de dossier de rete que tu vole connecter e tu pressa "
-#~ "le button de proxime."
-
-#~ msgid "&Recent connection:"
-#~ msgstr "Connexion &Recente"
-
-#~ msgid "&WebFolder (webdav)"
-#~ msgstr "Dossier de &Web (webdav)"
-
-#~ msgid "&Secure shell (ssh)"
-#~ msgstr "&Secur shell (ssh)"
-
-#~ msgid "FT&P"
-#~ msgstr "FT&P"
-
-#~ msgid "&Microsoft® Windows® network drive"
-#~ msgstr "Drive de rete de &Microsoft Windows"
-
-#~ msgid "Network Folder Information"
-#~ msgstr "Information de dossier de rete"
-
-#~ msgid "&Name:"
-#~ msgstr "&Nomine:"
-
-#~ msgid "&User:"
-#~ msgstr "&Usator:"
-
-#~ msgid "Se&rver:"
-#~ msgstr "Se&rvitor:"
-
-#~ msgid "&Port:"
-#~ msgstr "&Porto:"
-
-#~ msgid "&Protocol:"
-#~ msgstr "&Protocollo:"
-
-#~ msgid "&Folder:"
-#~ msgstr "&Dossier:"
-
-#~ msgid "Encoding:"
-#~ msgstr "Codifica:"
-
-#~ msgid "Cr&eate an icon for this remote folder"
-#~ msgstr "Cr&ea un icone pro iste remote dossier"
-
-#~ msgid "&Use encryption"
-#~ msgstr "&Usa cryptation"
 
 #~ msgid ""
 #~ "Enter a name for this <i>%1</i> as well as the server address, port and "

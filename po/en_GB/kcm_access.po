@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2024-06-02 12:16+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -83,6 +83,210 @@ msgstr "Could not set gsettings for Orca: \"%1\" failed"
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Error: Could not launch \"orca --setup\""
+
+#. i18n: ectx: label, entry (SystemBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:9
+#, kde-format
+msgid "Use System Bell"
+msgstr "Use System Bell"
+
+#. i18n: ectx: label, entry (CustomBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:13
+#, kde-format
+msgid "Customize system bell"
+msgstr "Customise system bell"
+
+#. i18n: ectx: label, entry (CustomBellFile), group (Bell)
+#: kcmaccessibilitybell.kcfg:17
+#, kde-format
+msgid "Sound file for the Bell"
+msgstr "Sound file for the Bell"
+
+#. i18n: ectx: label, entry (VisibleBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:20
+#, kde-format
+msgid "Use a visual bell instead of a sound"
+msgstr "Use a visual bell instead of a sound"
+
+#. i18n: ectx: label, entry (InvertScreen), group (Bell)
+#: kcmaccessibilitybell.kcfg:24
+#, kde-format
+msgid "Invert the system colors on the bell"
+msgstr "Invert the system colours on the bell"
+
+#. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
+#: kcmaccessibilitybell.kcfg:28
+#, kde-format
+msgid "Color of the Visible Bell"
+msgstr "Colour of the Visible Bell"
+
+#. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
+#: kcmaccessibilitybell.kcfg:32
+#, kde-format
+msgid "Duration of the Visible Bell"
+msgstr "Duration of the Visible Bell"
+
+#. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:9
+#, kde-format
+msgid "Use sticky Keys"
+msgstr "Use sticky Keys"
+
+#. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:13
+#, kde-format
+msgid "Lock the sticky keys"
+msgstr "Lock the sticky keys"
+
+#. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:17
+#, kde-format
+msgid "Turn sticky keys off when two keys are pressed simultaneously"
+msgstr "Turn sticky keys off when two keys are pressed simultaneously"
+
+#. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:21
+#, kde-format
+msgid "Beep on a sticky key press"
+msgstr "Beep on a sticky key press"
+
+#. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:25
+#, kde-format
+msgid "Toggle keys beep"
+msgstr "Toggle keys beep"
+
+#. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:29
+#, kde-format
+msgid "Notify when a keyboard modifier is pressed"
+msgstr "Notify when a keyboard modifier is pressed"
+
+#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:33
+#, kde-format
+msgid "Use a timeout delay"
+msgstr "Use a timeout delay"
+
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:37
+#, kde-format
+msgid "Delay for timeout"
+msgstr "Delay for timeout"
+
+#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:41
+#, kde-format
+msgid "Use a beep for access"
+msgstr "Use a beep for access"
+
+#. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:9
+#, kde-format
+msgid "Use slow keypresses"
+msgstr "Use slow keypresses"
+
+#. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:13
+#, kde-format
+msgid "Delay for the key press"
+msgstr "Delay for the key press"
+
+#. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:17
+#, kde-format
+msgid "Beep on a slow keypress"
+msgstr "Beep on a slow keypress"
+
+#. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:21
+#, kde-format
+msgid "Beep on an accepted keypress"
+msgstr "Beep on an accepted keypress"
+
+#. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:25
+#, kde-format
+msgid "Beep on a rejected keypress"
+msgstr "Beep on a rejected keypress"
+
+#. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:29
+#, kde-format
+msgid "Bounce Keys"
+msgstr "Bounce Keys"
+
+#. i18n: ectx: label, entry (BounceKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:33
+#, kde-format
+msgid "Use a delay for bouncing"
+msgstr "Use a delay for bouncing"
+
+#. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:37
+#, kde-format
+msgid "Beep if a bounce key event is rejected"
+msgstr "Beep if a bounce key event is rejected"
+
+#. i18n: ectx: label, entry (MouseKeys), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:9
+#, kde-format
+msgid "Use keys to control the mouse"
+msgstr "Use keys to control the mouse"
+
+#. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:13
+#, kde-format
+msgid "Delay for the mouse movement"
+msgstr "Delay for the mouse movement"
+
+#. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:17
+#, kde-format
+msgid "Repetition interval for the mouse movement"
+msgstr "Repetition interval for the mouse movement"
+
+#. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:21
+#, kde-format
+msgid "Time to hit maximum velocity"
+msgstr "Time to hit maximum velocity"
+
+#. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:25
+#, kde-format
+msgid "Maximum Velocity"
+msgstr "Maximum Velocity"
+
+#. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:29
+#, kde-format
+msgid "Mouse Key Curve"
+msgstr "Mouse Key Curve"
+
+#. i18n: ectx: label, entry (Gestures), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:35
+#, kde-format
+msgid "Use Gestures"
+msgstr "Use Gestures"
+
+#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:39
+#, kde-format
+msgid "Ask for Confirmation for a gesture"
+msgstr "Ask for Confirmation for a gesture"
+
+#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:43
+#, kde-format
+msgid "Confirm access to the Keyboard"
+msgstr "Confirm access to the Keyboard"
+
+#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
+#: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
+#, kde-format
+msgid "Enable Screen Reader"
+msgstr "Enable Screen Reader"
 
 #: package/contents/ui/Bell.qml:20
 #, kde-format
@@ -371,11 +575,6 @@ msgstr "Maximum speed:"
 msgid "Acceleration profile:"
 msgstr "Acceleration profile:"
 
-#: package/contents/ui/ScreenReader.qml:17
-#, kde-format
-msgid "Enable Screen Reader"
-msgstr "Enable Screen Reader"
-
 #: package/contents/ui/ScreenReader.qml:28
 #, kde-format
 msgid "Launch Orca Screen Reader Configuration…"
@@ -398,105 +597,6 @@ msgid ""
 msgstr ""
 "It appears that the Orca Screen Reader is not installed. Please install it "
 "before trying to use this feature, and then log out or reboot"
-
-#~ msgid "Use System Bell"
-#~ msgstr "Use System Bell"
-
-#~ msgid "Customize system bell"
-#~ msgstr "Customise system bell"
-
-#~ msgid "Sound file for the Bell"
-#~ msgstr "Sound file for the Bell"
-
-#~ msgid "Use a visual bell instead of a sound"
-#~ msgstr "Use a visual bell instead of a sound"
-
-#~ msgid "Invert the system colors on the bell"
-#~ msgstr "Invert the system colours on the bell"
-
-#~ msgid "Color of the Visible Bell"
-#~ msgstr "Colour of the Visible Bell"
-
-#~ msgid "Duration of the Visible Bell"
-#~ msgstr "Duration of the Visible Bell"
-
-#~ msgid "Use sticky Keys"
-#~ msgstr "Use sticky Keys"
-
-#~ msgid "Lock the sticky keys"
-#~ msgstr "Lock the sticky keys"
-
-#~ msgid "Turn sticky keys off when two keys are pressed simultaneously"
-#~ msgstr "Turn sticky keys off when two keys are pressed simultaneously"
-
-#~ msgid "Beep on a sticky key press"
-#~ msgstr "Beep on a sticky key press"
-
-#~ msgid "Toggle keys beep"
-#~ msgstr "Toggle keys beep"
-
-#~ msgid "Notify when a keyboard modifier is pressed"
-#~ msgstr "Notify when a keyboard modifier is pressed"
-
-#~ msgid "Use a timeout delay"
-#~ msgstr "Use a timeout delay"
-
-#~ msgid "Delay for timeout"
-#~ msgstr "Delay for timeout"
-
-#~ msgid "Use a beep for access"
-#~ msgstr "Use a beep for access"
-
-#~ msgid "Use slow keypresses"
-#~ msgstr "Use slow keypresses"
-
-#~ msgid "Delay for the key press"
-#~ msgstr "Delay for the key press"
-
-#~ msgid "Beep on a slow keypress"
-#~ msgstr "Beep on a slow keypress"
-
-#~ msgid "Beep on an accepted keypress"
-#~ msgstr "Beep on an accepted keypress"
-
-#~ msgid "Beep on a rejected keypress"
-#~ msgstr "Beep on a rejected keypress"
-
-#~ msgid "Bounce Keys"
-#~ msgstr "Bounce Keys"
-
-#~ msgid "Use a delay for bouncing"
-#~ msgstr "Use a delay for bouncing"
-
-#~ msgid "Beep if a bounce key event is rejected"
-#~ msgstr "Beep if a bounce key event is rejected"
-
-#~ msgid "Use keys to control the mouse"
-#~ msgstr "Use keys to control the mouse"
-
-#~ msgid "Delay for the mouse movement"
-#~ msgstr "Delay for the mouse movement"
-
-#~ msgid "Repetition interval for the mouse movement"
-#~ msgstr "Repetition interval for the mouse movement"
-
-#~ msgid "Time to hit maximum velocity"
-#~ msgstr "Time to hit maximum velocity"
-
-#~ msgid "Maximum Velocity"
-#~ msgstr "Maximum Velocity"
-
-#~ msgid "Mouse Key Curve"
-#~ msgstr "Mouse Key Curve"
-
-#~ msgid "Use Gestures"
-#~ msgstr "Use Gestures"
-
-#~ msgid "Ask for Confirmation for a gesture"
-#~ msgstr "Ask for Confirmation for a gesture"
-
-#~ msgid "Confirm access to the Keyboard"
-#~ msgstr "Confirm access to the Keyboard"
 
 #~ msgid "Maximum velocity"
 #~ msgstr "Maximum velocity"

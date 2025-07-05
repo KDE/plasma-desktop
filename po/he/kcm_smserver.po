@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2017-05-16 06:53-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -178,25 +178,33 @@ msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr ""
 
-#, fuzzy
-#~| msgid "Conf&irm logout"
-#~ msgid "Confirm logout"
-#~ msgstr "בקש אישור לי&ציאה"
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Conf&irm logout"
+msgid "Confirm logout"
+msgstr "בקש אישור לי&ציאה"
 
-#, fuzzy
-#~| msgid "Default Leave Option"
-#~ msgid "Default leave option"
-#~ msgstr "אפשרות יציאה ברירת מחדל"
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Default Leave Option"
+msgid "Default leave option"
+msgstr "אפשרות יציאה ברירת מחדל"
 
-#, fuzzy
-#~| msgid "On Login"
-#~ msgid "On login"
-#~ msgstr "בעת הכניסה למערכת"
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:22
+#, fuzzy, kde-format
+#| msgid "On Login"
+msgid "On login"
+msgstr "בעת הכניסה למערכת"
 
-#, fuzzy
-#~| msgid "Applications to be e&xcluded from sessions:"
-#~ msgid "Applications to be excluded from session"
-#~ msgstr "יישומים ש&אין לשמור בהפעלות: "
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:26
+#, fuzzy, kde-format
+#| msgid "Applications to be e&xcluded from sessions:"
+msgid "Applications to be excluded from session"
+msgstr "יישומים ש&אין לשמור בהפעלות: "
 
 #, fuzzy
 #~| msgid "Default Leave Option"

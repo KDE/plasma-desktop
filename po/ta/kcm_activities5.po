@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-08-05 20:55+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -95,6 +95,30 @@ msgstr "இந்த செயல்பாட்டில் பயன்பட�
 msgid "Shortcut for switching:"
 msgstr "இதற்கு தாவுவதற்கான சுருக்குவழி:"
 
+#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:10
+#, kde-format
+msgid "How many months keep the activity history"
+msgstr "எத்தனை மாதங்களுக்கு செயல்பாடு வரலாற்றை வைத்திருக்க வேண்டும்"
+
+#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:17
+#, kde-format
+msgid "Which data to keep in activity history"
+msgstr "எந்த விவரங்களை செயல்பாடு வரலாற்றில் வைத்திருக்க வேண்டும்"
+
+#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:21
+#, kde-format
+msgid "List of Applications whose activity history to save"
+msgstr "எந்த செயலிகளுக்கான செயல்பாடு வரலாற்றை சேமிக்க வேண்டுமோ, அவற்றின் பட்டியல்"
+
+#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:24
+#, kde-format
+msgid "List of Applications whose activity history not to save"
+msgstr "எந்த செயலிகளுக்கான செயல்பாடு வரலாற்றை சேமிக்க கூடாதோ, அவற்றின் பட்டியல்"
+
 #: MainConfigurationWidget.cpp:33
 #, kde-format
 msgid "Switching"
@@ -134,26 +158,23 @@ msgctxt "@action"
 msgid "Walk through activities (Reverse)"
 msgstr "செயல்பாடுகளின் பட்டியலில் பின்னோக்கி செல்"
 
-#~ msgid "How many months keep the activity history"
-#~ msgstr "எத்தனை மாதங்களுக்கு செயல்பாடு வரலாற்றை வைத்திருக்க வேண்டும்"
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_virtualDesktopSwitchEnabled)
+#: ui/SwitchingTabBase.ui:22
+#, kde-format
+msgid "Remember for each activity (needs restart)"
+msgstr "ஒவ்வொரு செயல்பாட்டிற்கும் நினைவில் கொள்"
 
-#~ msgid "Which data to keep in activity history"
-#~ msgstr "எந்த விவரங்களை செயல்பாடு வரலாற்றில் வைத்திருக்க வேண்டும்"
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/SwitchingTabBase.ui:29
+#, kde-format
+msgid "Current virtual desktop:"
+msgstr "தற்போதைய மெய்நிகர் பணிமேடை:"
 
-#~ msgid "List of Applications whose activity history to save"
-#~ msgstr "எந்த செயலிகளுக்கான செயல்பாடு வரலாற்றை சேமிக்க வேண்டுமோ, அவற்றின் பட்டியல்"
-
-#~ msgid "List of Applications whose activity history not to save"
-#~ msgstr "எந்த செயலிகளுக்கான செயல்பாடு வரலாற்றை சேமிக்க கூடாதோ, அவற்றின் பட்டியல்"
-
-#~ msgid "Remember for each activity (needs restart)"
-#~ msgstr "ஒவ்வொரு செயல்பாட்டிற்கும் நினைவில் கொள்"
-
-#~ msgid "Current virtual desktop:"
-#~ msgstr "தற்போதைய மெய்நிகர் பணிமேடை:"
-
-#~ msgid "Shortcuts:"
-#~ msgstr "சுருக்குவழிகள்:"
+#. i18n: ectx: property (text), widget (QLabel, label_1)
+#: ui/SwitchingTabBase.ui:38
+#, kde-format
+msgid "Shortcuts:"
+msgstr "சுருக்குவழிகள்:"
 
 #~ msgid "Privacy"
 #~ msgstr "தனியுரிமை"

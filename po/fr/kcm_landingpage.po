@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-09-24 14:42+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -13,6 +13,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 23.08.5\n"
+
+#. i18n: ectx: label, entry (colorScheme), group (General)
+#: landingpage_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Color scheme name"
+msgstr "Nom du thème de couleurs"
+
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:15
+#, kde-format
+msgid "Single click to open files"
+msgstr "Un simple clic pour ouvrir des fichiers"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:19
+#, kde-format
+msgid "Global Look and Feel package"
+msgstr "Un ensemble global d'apparence et d'ergonomie"
+
+#. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
+#. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:23
+#: landingpage_kdeglobalssettings.kcfg:27
+#, kde-format
+msgid "Global Look and Feel package, alternate"
+msgstr "Un ensemble global alternatif d'apparence et d'ergonomie"
+
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:31
+#, kde-format
+msgid "Animation speed"
+msgstr "Vitesse d'animation"
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -84,21 +116,6 @@ msgstr "Plus de paramètres de comportement..."
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "Pages les plus utilisées :"
-
-#~ msgid "Color scheme name"
-#~ msgstr "Nom du thème de couleurs"
-
-#~ msgid "Single click to open files"
-#~ msgstr "Un simple clic pour ouvrir des fichiers"
-
-#~ msgid "Global Look and Feel package"
-#~ msgstr "Un ensemble global d'apparence et d'ergonomie"
-
-#~ msgid "Global Look and Feel package, alternate"
-#~ msgstr "Un ensemble global alternatif d'apparence et d'ergonomie"
-
-#~ msgid "Animation speed"
-#~ msgstr "Vitesse d'animation"
 
 #~ msgid "Plasma"
 #~ msgstr "Plasma"

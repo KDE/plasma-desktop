@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_componentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-01-09 09:42+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -22,6 +22,12 @@ msgstr ""
 "X-Generator: Lokalize 20.12.0\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#. i18n: ectx: label, entry (browserApplication), group (General)
+#: browser_settings.kcfg:9
+#, kde-format
+msgid "Default web browser"
+msgstr "Типова програма для перегляду інтернету"
 
 #: componentchooser.cpp:74 componentchooserterminal.cpp:74
 #, kde-format
@@ -88,9 +94,6 @@ msgstr "Карта:"
 msgctxt "Default phone app"
 msgid "Dialer:"
 msgstr "Засіб набирання:"
-
-#~ msgid "Default web browser"
-#~ msgstr "Типова програма для перегляду інтернету"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

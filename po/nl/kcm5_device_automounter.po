@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-10-17 12:30+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -56,6 +56,71 @@ msgstr "Kai Uwe Broulik"
 #, kde-format
 msgid "Plasma 5 Port"
 msgstr "Plasma 5 overzetten"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, kde-format
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"Deze lijst bevat de opslagapparaten die bekend zijn bij het systeem. Als "
+"\"Automatisch aankoppelen bij inloggen\" is geactiveerd zal het apparaat "
+"automatisch worden aangekoppeld zelfs als \"Alle verwijderbare media bij "
+"aanmelden aankoppelen\" niet is aangevinkt. Hetzelfde geldt voor "
+"\"Automatisch aankoppelen bij insteken\"."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"Op deze knop klikken heeft tot gevolg dat dat de geselecteerde apparaten "
+"worden 'vergeten'. Dit is alleen bruikbaar als \"Alleen automatisch "
+"verwijderbare media aankoppelen die eerder handmatig zijn aangekoppeld\" is "
+"geactiveerd. Wanneer een apparaat vergeten is en het systeem is ingesteld om "
+"alleen automatisch bekende apparaten aan te koppelen, dan zal het apparaat "
+"niet automatisch worden aangekoppeld."
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "Apparaat vergeten"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, kde-format
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"Indien dit niet is aangevinkt zullen alleen apparaten die zijn onthouden "
+"automatisch worden aangekoppeld. Een apparaat wordt 'onthouden' als het al "
+"eens eerder werd aangekoppeld. Voorbeeld: het inpluggen van een USB-"
+"mediaspeler om op te laden, is niet genoeg om het te onthouden. Als de "
+"bestanden erop niet worden benaderd zal het de volgende keer niet "
+"automatisch aankoppelen. Vanaf het moment dat de bestanden wel worden "
+"gebruikt zullen deze in het vervolg wel beschikbaar worden gemaakt."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, kde-format
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr ""
+"Verwijderbare media automatisch aankoppelen als ze nooit eerder zijn "
+"aangekoppeld"
 
 #: DeviceModel.cpp:52
 #, kde-format
@@ -120,58 +185,6 @@ msgstr "Dit apparaat zal automatisch worden aangekoppeld bij het insteken."
 msgid "This device will not be automatically mounted when attached."
 msgstr ""
 "Dit apparaat zal niet automatisch worden aangekoppeld bij het insteken."
-
-#~ msgid ""
-#~ "This list contains the storage devices known to the system. If "
-#~ "\"Automount on Login\" is checked, the device will be automatically "
-#~ "mounted even though \"Mount all removable media at login\" is unchecked. "
-#~ "The same applies for \"Automount on Attach\"."
-#~ msgstr ""
-#~ "Deze lijst bevat de opslagapparaten die bekend zijn bij het systeem. Als "
-#~ "\"Automatisch aankoppelen bij inloggen\" is geactiveerd zal het apparaat "
-#~ "automatisch worden aangekoppeld zelfs als \"Alle verwijderbare media bij "
-#~ "aanmelden aankoppelen\" niet is aangevinkt. Hetzelfde geldt voor "
-#~ "\"Automatisch aankoppelen bij insteken\"."
-
-#~ msgid ""
-#~ "Clicking this button causes the selected devices to be 'forgotten'. This "
-#~ "is only useful if \"Only automatically mount removable media that has "
-#~ "been manually mounted before\" is checked. Once a device is forgotten and "
-#~ "the system is set to only automatically mount familiar devices, the "
-#~ "device will not be automatically mounted."
-#~ msgstr ""
-#~ "Op deze knop klikken heeft tot gevolg dat dat de geselecteerde apparaten "
-#~ "worden 'vergeten'. Dit is alleen bruikbaar als \"Alleen automatisch "
-#~ "verwijderbare media aankoppelen die eerder handmatig zijn aangekoppeld\" "
-#~ "is geactiveerd. Wanneer een apparaat vergeten is en het systeem is "
-#~ "ingesteld om alleen automatisch bekende apparaten aan te koppelen, dan "
-#~ "zal het apparaat niet automatisch worden aangekoppeld."
-
-#~ msgid "Forget Device"
-#~ msgstr "Apparaat vergeten"
-
-#~ msgid ""
-#~ "When this is not checked, only remembered devices will be automatically "
-#~ "mounted. A device is 'remembered' if it has ever been mounted before. For "
-#~ "instance, plugging in a USB media player to charge is not sufficient to "
-#~ "'remember' it - if the files are not accessed, it will not be "
-#~ "automatically mounted the next time it is seen. Once they have been "
-#~ "accessed, however, the device's contents will be automatically made "
-#~ "available to the system."
-#~ msgstr ""
-#~ "Indien dit niet is aangevinkt zullen alleen apparaten die zijn onthouden "
-#~ "automatisch worden aangekoppeld. Een apparaat wordt 'onthouden' als het "
-#~ "al eens eerder werd aangekoppeld. Voorbeeld: het inpluggen van een USB-"
-#~ "mediaspeler om op te laden, is niet genoeg om het te onthouden. Als de "
-#~ "bestanden erop niet worden benaderd zal het de volgende keer niet "
-#~ "automatisch aankoppelen. Vanaf het moment dat de bestanden wel worden "
-#~ "gebruikt zullen deze in het vervolg wel beschikbaar worden gemaakt."
-
-#~ msgid ""
-#~ "Automatically mount removable media that have never been mounted before"
-#~ msgstr ""
-#~ "Verwijderbare media automatisch aankoppelen als ze nooit eerder zijn "
-#~ "aangekoppeld"
 
 #~ msgid ""
 #~ "If any removable storage devices are connected to your system when you "

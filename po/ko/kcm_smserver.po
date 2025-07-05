@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-03-01 00:26+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -174,17 +174,29 @@ msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "펌웨어 설정 화면 진입"
 
-#~ msgid "Confirm logout"
-#~ msgstr "로그아웃 확인"
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, kde-format
+msgid "Confirm logout"
+msgstr "로그아웃 확인"
 
-#~ msgid "Default leave option"
-#~ msgstr "기본 떠나기 옵션"
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:13
+#, kde-format
+msgid "Default leave option"
+msgstr "기본 떠나기 옵션"
 
-#~ msgid "On login"
-#~ msgstr "로그인할 때"
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:22
+#, kde-format
+msgid "On login"
+msgstr "로그인할 때"
 
-#~ msgid "Applications to be excluded from session"
-#~ msgstr "세션에서 제외할 앱"
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:26
+#, kde-format
+msgid "Applications to be excluded from session"
+msgstr "세션에서 제외할 앱"
 
 #, fuzzy
 #~| msgid "Default leave option:"

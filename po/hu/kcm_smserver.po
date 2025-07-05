@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2024-03-01 22:01+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -185,17 +185,29 @@ msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "Belépés a firmware-beállító képernyőre"
 
-#~ msgid "Confirm logout"
-#~ msgstr "Megerősítés kérése kijelentkezésnél"
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, kde-format
+msgid "Confirm logout"
+msgstr "Megerősítés kérése kijelentkezésnél"
 
-#~ msgid "Default leave option"
-#~ msgstr "Alapértelmezett kilépési mód"
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:13
+#, kde-format
+msgid "Default leave option"
+msgstr "Alapértelmezett kilépési mód"
 
-#~ msgid "On login"
-#~ msgstr "Bejelentkezéskor"
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:22
+#, kde-format
+msgid "On login"
+msgstr "Bejelentkezéskor"
 
-#~ msgid "Applications to be excluded from session"
-#~ msgstr "Az állapotkezelésből kizárandó alkalmazások:"
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:26
+#, kde-format
+msgid "Applications to be excluded from session"
+msgstr "Az állapotkezelésből kizárandó alkalmazások:"
 
 #, fuzzy
 #~| msgid "Default leave option:"

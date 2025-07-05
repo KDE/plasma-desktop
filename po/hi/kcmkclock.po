@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-07-10 10:57+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -28,6 +28,54 @@ msgstr "रविशंकर श्रीवास्तव, जी. करू�
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "raviratlami@aol.in, raghu@raghukamath.com"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: dateandtime.ui:22
+#, kde-format
+msgid "Date and Time"
+msgstr "दिनांक व समय"
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: dateandtime.ui:30
+#, kde-format
+msgid "Set date and time &automatically"
+msgstr "दिनांक और समय स्वचालित रूप से सेट करें (&a)"
+
+#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
+#: dateandtime.ui:53
+#, kde-format
+msgid "&Time server:"
+msgstr "समय सर्वर :(&T)"
+
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: dateandtime.ui:86
+#, kde-format
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr "यहाँ आप तंत्र की तारीख़, दिन, माह तथा वर्ष परिवर्तित कर सकते हैं।"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: dateandtime.ui:122
+#, kde-format
+msgid "Time Zone"
+msgstr "समय क्षेत्र"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dateandtime.ui:128
+#, kde-format
+msgid "To change the local time zone, select your area from the list below."
+msgstr "समय क्षेत्र बदलने के लिए, नीचे दी गई सूची में से अपना क्षेत्र चुनें।"
+
+#. i18n: ectx: property (text), widget (QLabel, m_local)
+#: dateandtime.ui:151
+#, kde-format
+msgid "Current local time zone:"
+msgstr "वर्तमान स्थानीय समय क्षेत्रः"
+
+#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
+#: dateandtime.ui:161
+#, kde-format
+msgid "Search…"
+msgstr "खोजें…"
 
 #: dtime.cpp:61
 #, kde-format
@@ -179,31 +227,6 @@ msgstr "वर्तमान समय नियत करने में अ�
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "समय क्षेत्र नियत करने में असमर्थ"
-
-#~ msgid "Date and Time"
-#~ msgstr "दिनांक व समय"
-
-#~ msgid "Set date and time &automatically"
-#~ msgstr "दिनांक और समय स्वचालित रूप से सेट करें (&a)"
-
-#~ msgid "&Time server:"
-#~ msgstr "समय सर्वर :(&T)"
-
-#~ msgid ""
-#~ "Here you can change the system date's day of the month, month and year."
-#~ msgstr "यहाँ आप तंत्र की तारीख़, दिन, माह तथा वर्ष परिवर्तित कर सकते हैं।"
-
-#~ msgid "Time Zone"
-#~ msgstr "समय क्षेत्र"
-
-#~ msgid "To change the local time zone, select your area from the list below."
-#~ msgstr "समय क्षेत्र बदलने के लिए, नीचे दी गई सूची में से अपना क्षेत्र चुनें।"
-
-#~ msgid "Current local time zone:"
-#~ msgstr "वर्तमान स्थानीय समय क्षेत्रः"
-
-#~ msgid "Search…"
-#~ msgstr "खोजें…"
 
 #~ msgid "kcmclock"
 #~ msgstr "केसीएमक्लॉक"

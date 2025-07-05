@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-07-22 13:29+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -18,6 +18,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 23.08.5\n"
+
+#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:10
+#, kde-format
+msgid "How many months keep the activity history"
+msgstr "Montako kuukautta aktiviteetin historiaa säilytetään"
+
+#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:17
+#, kde-format
+msgid "Which data to keep in activity history"
+msgstr "Mitä tietoja aktiviteetin historiassa säilytetään"
+
+#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:21
+#, kde-format
+msgid "List of Applications whose activity history to save"
+msgstr "Sovellukset, joiden aktiviteettihistoria tallennetaan"
+
+#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:24
+#, kde-format
+msgid "List of Applications whose activity history not to save"
+msgstr "Sovellukset, joiden aktiviteettihistoriaa ei tallenneta"
 
 #: kcm_recentFiles.cpp:64
 #, kde-format
@@ -60,38 +84,50 @@ msgctxt "for in 'keep history for 5 months'"
 msgid "For "
 msgstr " "
 
-#~ msgid "How many months keep the activity history"
-#~ msgstr "Montako kuukautta aktiviteetin historiaa säilytetään"
+#. i18n: ectx: property (text), widget (KMessageWidget, messageWidget)
+#: ui/RecentFiles.ui:17
+#, kde-format
+msgid "Cleared the activity history."
+msgstr "Aktiviteetin historia tyhjennetty."
 
-#~ msgid "Which data to keep in activity history"
-#~ msgstr "Mitä tietoja aktiviteetin historiassa säilytetään"
+#. i18n: ectx: property (text), widget (QLabel, labelKeepHistory)
+#: ui/RecentFiles.ui:36
+#, kde-format
+msgid "Keep history:"
+msgstr "Säilytä historia:"
 
-#~ msgid "List of Applications whose activity history to save"
-#~ msgstr "Sovellukset, joiden aktiviteettihistoria tallennetaan"
+#. i18n: ectx: property (text), widget (QPushButton, buttonClearRecentHistory)
+#: ui/RecentFiles.ui:48
+#, kde-format
+msgid "Clear History"
+msgstr "Tyhjennä historia"
 
-#~ msgid "List of Applications whose activity history not to save"
-#~ msgstr "Sovellukset, joiden aktiviteettihistoriaa ei tallenneta"
+#. i18n: ectx: property (text), widget (QRadioButton, radioRememberAllApplications)
+#: ui/RecentFiles.ui:70
+#, kde-format
+msgid "For a&ll applications"
+msgstr "&Kaikkien sovellusten tiedostot"
 
-#~ msgid "Cleared the activity history."
-#~ msgstr "Aktiviteetin historia tyhjennetty."
+#. i18n: ectx: property (text), widget (QRadioButton, radioDontRememberApplications)
+#: ui/RecentFiles.ui:80
+#, kde-format
+msgid "&Do not remember"
+msgstr "&Älä muista tiedostoja"
 
-#~ msgid "Keep history:"
-#~ msgstr "Säilytä historia:"
+#. i18n: ectx: property (text), widget (QRadioButton, radioRememberSpecificApplications)
+#: ui/RecentFiles.ui:87
+#, kde-format
+msgid "O&nly for specific applications:"
+msgstr "&Vain valituille sovelluksille:"
 
-#~ msgid "Clear History"
-#~ msgstr "Tyhjennä historia"
+#. i18n: ectx: property (text), widget (QLabel, labelRememberDocuments)
+#: ui/RecentFiles.ui:97
+#, kde-format
+msgid "Remember opened documents:"
+msgstr "Muista avatut tiedostot:"
 
-#~ msgid "For a&ll applications"
-#~ msgstr "&Kaikkien sovellusten tiedostot"
-
-#~ msgid "&Do not remember"
-#~ msgstr "&Älä muista tiedostoja"
-
-#~ msgid "O&nly for specific applications:"
-#~ msgstr "&Vain valituille sovelluksille:"
-
-#~ msgid "Remember opened documents:"
-#~ msgstr "Muista avatut tiedostot:"
-
-#~ msgid "Blacklist applications not on the list"
-#~ msgstr "Estä sovellukset, joita ei ole luettelossa"
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_blockedByDefault)
+#: ui/RecentFiles.ui:130
+#, kde-format
+msgid "Blacklist applications not on the list"
+msgstr "Estä sovellukset, joita ei ole luettelossa"

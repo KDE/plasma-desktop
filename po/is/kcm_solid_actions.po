@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-12-10 19:42+0000\n"
 "Last-Translator: gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -50,6 +50,133 @@ msgstr ""
 #, kde-format
 msgid "Invalid action"
 msgstr "Ógild aðgerð"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
+#: ActionEditor.ui:17
+#, kde-format
+msgid "Edit Parameter"
+msgstr "Breyta færibreytu"
+
+#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
+#: ActionEditor.ui:43
+#, kde-format
+msgid "Parameter type:"
+msgstr "Tegund færibreytu:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:51
+#, kde-format
+msgid "Property Match"
+msgstr "Samsvörun eiginleika"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:56
+#, kde-format
+msgid "Content Conjunction"
+msgstr "Samtenging efnis"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:61
+#, kde-format
+msgid "Content Disjunction"
+msgstr "Sundurtekning efnis"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:66
+#, kde-format
+msgid "Device Interface Match"
+msgstr "Samsvörun tækisviðmóts"
+
+#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
+#: ActionEditor.ui:96
+#, kde-format
+msgid "Device type:"
+msgstr "Tegund tækis:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblValueName)
+#: ActionEditor.ui:135
+#, kde-format
+msgid "Value name:"
+msgstr "Heiti gildis:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:175
+#, kde-format
+msgid "Equals"
+msgstr "Er jafnt og"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:180
+#, kde-format
+msgid "Contains"
+msgstr "Inniheldur"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
+#: ActionEditor.ui:208
+#, kde-format
+msgid "Reset Parameter"
+msgstr "Endurstilla færibreytu"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
+#: ActionEditor.ui:215
+#, kde-format
+msgid "Save Parameter Changes"
+msgstr "Vista breytingar færibreytu"
+
+#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
+#: ActionEditor.ui:247
+#, kde-format
+msgid "Action icon, click to change it"
+msgstr "Tákn aðgerðar, smelltu til að breyta"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
+#: ActionEditor.ui:254
+#, kde-format
+msgid "Action name"
+msgstr "Heiti aðgerðar"
+
+#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
+#: ActionEditor.ui:271
+#, kde-format
+msgid "Command: "
+msgstr "Skipun: "
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
+#: ActionEditor.ui:283
+#, no-c-format, kde-format
+msgid ""
+"Command that will trigger the action\n"
+"This can include any or all of the following case insensitive expands:\n"
+"\n"
+"%f: The mountpoint for the device - Storage Access devices only\n"
+"%d: Path to the device node - Block devices only\n"
+"%i: The identifier of the device"
+msgstr ""
+"Skipunin virkjar aðgerðina\n"
+"Þetta getur falið í sér einhvern eða alla af eftirfarandi viðaukum:\n"
+"\n"
+"%f: Tengistaðinn fyrir tækið - einungis geymslumiðlar (Direct Storage Access "
+"Device)\n"
+"%d: Slóð á tækishnút - einungis bálktæki (Block devices)\n"
+"%i: Kennimerki tækisins"
+
+#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
+#: ActionEditor.ui:300
+#, kde-format
+msgid "Devices must match the following parameters for this action:"
+msgstr "Tæki verða að samsvara eftirfarandi færibreytum fyrir þessa aðgerð:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblActionName)
+#: AddAction.ui:19
+#, kde-format
+msgid "Action name:"
+msgstr "Heiti aðgerðar:"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
+#: AddAction.ui:26
+#, kde-format
+msgid "Enter the name for your new action"
+msgstr "Settu inn heiti fyrir nýju aðgerðina"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -145,84 +272,23 @@ msgstr "Engin aðgerð valin"
 msgid "Cannot be deleted"
 msgstr "Er ekki hægt að eyða"
 
-#~ msgid "Edit Parameter"
-#~ msgstr "Breyta færibreytu"
+#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
+#: SolidActions.ui:22
+#, kde-format
+msgid "Remove"
+msgstr "Fjarlægja"
 
-#~ msgid "Parameter type:"
-#~ msgstr "Tegund færibreytu:"
+#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
+#: SolidActions.ui:29
+#, kde-format
+msgid "Edit…"
+msgstr "Breyta…"
 
-#~ msgid "Property Match"
-#~ msgstr "Samsvörun eiginleika"
-
-#~ msgid "Content Conjunction"
-#~ msgstr "Samtenging efnis"
-
-#~ msgid "Content Disjunction"
-#~ msgstr "Sundurtekning efnis"
-
-#~ msgid "Device Interface Match"
-#~ msgstr "Samsvörun tækisviðmóts"
-
-#~ msgid "Device type:"
-#~ msgstr "Tegund tækis:"
-
-#~ msgid "Value name:"
-#~ msgstr "Heiti gildis:"
-
-#~ msgid "Equals"
-#~ msgstr "Er jafnt og"
-
-#~ msgid "Contains"
-#~ msgstr "Inniheldur"
-
-#~ msgid "Reset Parameter"
-#~ msgstr "Endurstilla færibreytu"
-
-#~ msgid "Save Parameter Changes"
-#~ msgstr "Vista breytingar færibreytu"
-
-#~ msgid "Action icon, click to change it"
-#~ msgstr "Tákn aðgerðar, smelltu til að breyta"
-
-#~ msgid "Action name"
-#~ msgstr "Heiti aðgerðar"
-
-#~ msgid "Command: "
-#~ msgstr "Skipun: "
-
-#~ msgid ""
-#~ "Command that will trigger the action\n"
-#~ "This can include any or all of the following case insensitive expands:\n"
-#~ "\n"
-#~ "%f: The mountpoint for the device - Storage Access devices only\n"
-#~ "%d: Path to the device node - Block devices only\n"
-#~ "%i: The identifier of the device"
-#~ msgstr ""
-#~ "Skipunin virkjar aðgerðina\n"
-#~ "Þetta getur falið í sér einhvern eða alla af eftirfarandi viðaukum:\n"
-#~ "\n"
-#~ "%f: Tengistaðinn fyrir tækið - einungis geymslumiðlar (Direct Storage "
-#~ "Access Device)\n"
-#~ "%d: Slóð á tækishnút - einungis bálktæki (Block devices)\n"
-#~ "%i: Kennimerki tækisins"
-
-#~ msgid "Devices must match the following parameters for this action:"
-#~ msgstr "Tæki verða að samsvara eftirfarandi færibreytum fyrir þessa aðgerð:"
-
-#~ msgid "Action name:"
-#~ msgstr "Heiti aðgerðar:"
-
-#~ msgid "Enter the name for your new action"
-#~ msgstr "Settu inn heiti fyrir nýju aðgerðina"
-
-#~ msgid "Remove"
-#~ msgstr "Fjarlægja"
-
-#~ msgid "Edit…"
-#~ msgstr "Breyta…"
-
-#~ msgid "Add…"
-#~ msgstr "Bæta við…"
+#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
+#: SolidActions.ui:36
+#, kde-format
+msgid "Add…"
+msgstr "Bæta við…"
 
 #~ msgid "Edit..."
 #~ msgstr "Breyta..."

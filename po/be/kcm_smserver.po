@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-12-25 17:09\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -182,17 +182,29 @@ msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "Увайдзіце ў праграму кіравання прашыўкай пры наступным перазапуску"
 
-#~ msgid "Confirm logout"
-#~ msgstr "Пацвярджэнне выхаду"
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, kde-format
+msgid "Confirm logout"
+msgstr "Пацвярджэнне выхаду"
 
-#~ msgid "Default leave option"
-#~ msgstr "Прадвызначаны параметр выхаду"
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:13
+#, kde-format
+msgid "Default leave option"
+msgstr "Прадвызначаны параметр выхаду"
 
-#~ msgid "On login"
-#~ msgstr "Падчас уваходу"
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:22
+#, kde-format
+msgid "On login"
+msgstr "Падчас уваходу"
 
-#~ msgid "Applications to be excluded from session"
-#~ msgstr "Праграмы будуць выключаныя з сеанса"
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:26
+#, kde-format
+msgid "Applications to be excluded from session"
+msgstr "Праграмы будуць выключаныя з сеанса"
 
 #, fuzzy
 #~| msgid "Default leave option:"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-07-06 09:44+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -84,6 +84,118 @@ msgstr "Saxlayın və Q&oşulun"
 msgid "C&onnect"
 msgstr "Q&oşulun"
 
+#. i18n: ectx: property (windowTitle), widget (QWizard, KNetAttach)
+#: knetattach.ui:14
+#, kde-format
+msgid "Network Folder Wizard"
+msgstr "Şəbəkə qovluğunun əlavə edilməsi"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderType)
+#: knetattach.ui:18
+#, kde-format
+msgid "Add Network Folder"
+msgstr "Yeni Şəbəkə Qovluğu əlavə etmək"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: knetattach.ui:24
+#, kde-format
+msgid ""
+"Select the type of network folder you wish to connect to and press the Next "
+"button."
+msgstr ""
+"Bağlantı üçün istədiyiniz şəbəkə qovluğu növünü seçin və İrəli düyməsinə "
+"vürün"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _recent)
+#: knetattach.ui:65
+#, kde-format
+msgid "&Recent connection:"
+msgstr "&Sonuncu bağlantı:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _webfolder)
+#: knetattach.ui:72
+#, kde-format
+msgid "&WebFolder (webdav)"
+msgstr "&Veb Qovluq (webdav)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _fish)
+#: knetattach.ui:82
+#, kde-format
+msgid "&Secure shell (ssh)"
+msgstr "&SSH qoluğu"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _ftp)
+#: knetattach.ui:111
+#, kde-format
+msgid "FT&P"
+msgstr "FT&P"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _smb)
+#: knetattach.ui:118
+#, kde-format
+msgid "&Microsoft® Windows® network drive"
+msgstr "&Microsoft® Windows® şəbəkə diski"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderParameters)
+#: knetattach.ui:145
+#, kde-format
+msgid "Network Folder Information"
+msgstr "Şəbəkə Qovluğu Məlumatları"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel4_2)
+#: knetattach.ui:177
+#, kde-format
+msgid "&Name:"
+msgstr "&Adı:"
+
+#. i18n: ectx: property (text), widget (QLabel, _userText)
+#: knetattach.ui:196
+#, kde-format
+msgid "&User:"
+msgstr "&İstifadəçi:"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: knetattach.ui:222
+#, kde-format
+msgid "Se&rver:"
+msgstr "Se&rver:"
+
+#. i18n: ectx: property (text), widget (QLabel, _portText)
+#: knetattach.ui:248
+#, kde-format
+msgid "&Port:"
+msgstr "&Port:"
+
+#. i18n: ectx: property (text), widget (QLabel, _protocol)
+#: knetattach.ui:283
+#, kde-format
+msgid "&Protocol:"
+msgstr "&Protokol:"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: knetattach.ui:313
+#, kde-format
+msgid "&Folder:"
+msgstr "Q&ovluq:"
+
+#. i18n: ectx: property (text), widget (QLabel, _encodingText)
+#: knetattach.ui:335
+#, kde-format
+msgid "Encoding:"
+msgstr "Şifrələmə:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _createIcon)
+#: knetattach.ui:351
+#, kde-format
+msgid "Cr&eate an icon for this remote folder"
+msgstr "Uzaqdakı qovluq üçün ad s&eçin"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _useEncryption)
+#: knetattach.ui:361
+#, kde-format
+msgid "&Use encryption"
+msgstr "Şifrələməni &istifadə etmək"
+
 #: main.cpp:21 main.cpp:23
 #, kde-format
 msgid "KDE Network Wizard"
@@ -103,61 +215,3 @@ msgstr "George Staikos"
 #, kde-format
 msgid "Primary author and maintainer"
 msgstr "Müəllif və Himayəçi"
-
-#~ msgid "Network Folder Wizard"
-#~ msgstr "Şəbəkə qovluğunun əlavə edilməsi"
-
-#~ msgid "Add Network Folder"
-#~ msgstr "Yeni Şəbəkə Qovluğu əlavə etmək"
-
-#~ msgid ""
-#~ "Select the type of network folder you wish to connect to and press the "
-#~ "Next button."
-#~ msgstr ""
-#~ "Bağlantı üçün istədiyiniz şəbəkə qovluğu növünü seçin və İrəli düyməsinə "
-#~ "vürün"
-
-#~ msgid "&Recent connection:"
-#~ msgstr "&Sonuncu bağlantı:"
-
-#~ msgid "&WebFolder (webdav)"
-#~ msgstr "&Veb Qovluq (webdav)"
-
-#~ msgid "&Secure shell (ssh)"
-#~ msgstr "&SSH qoluğu"
-
-#~ msgid "FT&P"
-#~ msgstr "FT&P"
-
-#~ msgid "&Microsoft® Windows® network drive"
-#~ msgstr "&Microsoft® Windows® şəbəkə diski"
-
-#~ msgid "Network Folder Information"
-#~ msgstr "Şəbəkə Qovluğu Məlumatları"
-
-#~ msgid "&Name:"
-#~ msgstr "&Adı:"
-
-#~ msgid "&User:"
-#~ msgstr "&İstifadəçi:"
-
-#~ msgid "Se&rver:"
-#~ msgstr "Se&rver:"
-
-#~ msgid "&Port:"
-#~ msgstr "&Port:"
-
-#~ msgid "&Protocol:"
-#~ msgstr "&Protokol:"
-
-#~ msgid "&Folder:"
-#~ msgstr "Q&ovluq:"
-
-#~ msgid "Encoding:"
-#~ msgstr "Şifrələmə:"
-
-#~ msgid "Cr&eate an icon for this remote folder"
-#~ msgstr "Uzaqdakı qovluq üçün ad s&eçin"
-
-#~ msgid "&Use encryption"
-#~ msgstr "Şifrələməni &istifadə etmək"

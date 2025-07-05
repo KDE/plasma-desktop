@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-06-26 19:40+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -32,6 +32,54 @@ msgstr "Branislav Gajdoš,Stanislav Višňovský,Miroslav Dávid"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "brian@linuxee.sk,visnovsky@nenya.ms.mff.cuni.cz,mirodav@gmail.com"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: dateandtime.ui:22
+#, kde-format
+msgid "Date and Time"
+msgstr "Dátum a čas"
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: dateandtime.ui:30
+#, kde-format
+msgid "Set date and time &automatically"
+msgstr "Nastaviť dátum a čas &automaticky"
+
+#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
+#: dateandtime.ui:53
+#, kde-format
+msgid "&Time server:"
+msgstr "Časový server:"
+
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: dateandtime.ui:86
+#, kde-format
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr "Tu môžete zmeniť deň v mesiaci, mesiac a rok."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: dateandtime.ui:122
+#, kde-format
+msgid "Time Zone"
+msgstr "Časové pásmo"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dateandtime.ui:128
+#, kde-format
+msgid "To change the local time zone, select your area from the list below."
+msgstr "Pre zmenu časového pásma si vyberte vašu oblasť zo zoznamu dole."
+
+#. i18n: ectx: property (text), widget (QLabel, m_local)
+#: dateandtime.ui:151
+#, kde-format
+msgid "Current local time zone:"
+msgstr "Aktuálne časové pásmo:"
+
+#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
+#: dateandtime.ui:161
+#, kde-format
+msgid "Search…"
+msgstr "Hľadať..."
 
 #: dtime.cpp:61
 #, kde-format
@@ -184,31 +232,6 @@ msgstr "Nepodarilo sa nastaviť aktuálny čas"
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "Nepodarilo sa nastaviť časové pásmo"
-
-#~ msgid "Date and Time"
-#~ msgstr "Dátum a čas"
-
-#~ msgid "Set date and time &automatically"
-#~ msgstr "Nastaviť dátum a čas &automaticky"
-
-#~ msgid "&Time server:"
-#~ msgstr "Časový server:"
-
-#~ msgid ""
-#~ "Here you can change the system date's day of the month, month and year."
-#~ msgstr "Tu môžete zmeniť deň v mesiaci, mesiac a rok."
-
-#~ msgid "Time Zone"
-#~ msgstr "Časové pásmo"
-
-#~ msgid "To change the local time zone, select your area from the list below."
-#~ msgstr "Pre zmenu časového pásma si vyberte vašu oblasť zo zoznamu dole."
-
-#~ msgid "Current local time zone:"
-#~ msgstr "Aktuálne časové pásmo:"
-
-#~ msgid "Search…"
-#~ msgstr "Hľadať..."
 
 #~ msgid "kcmclock"
 #~ msgstr "kcmclock"

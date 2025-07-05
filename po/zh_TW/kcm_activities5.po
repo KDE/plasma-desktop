@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_activities5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-09-06 01:01+0800\n"
 "Last-Translator: Chaoting Liu <brli@chakralinux.org>\n"
 "Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
@@ -97,6 +97,30 @@ msgstr "請勿追蹤此活動的使用量"
 msgid "Shortcut for switching:"
 msgstr "切換快速鍵："
 
+#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:10
+#, kde-format
+msgid "How many months keep the activity history"
+msgstr "保留幾個月的活動記錄"
+
+#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:17
+#, kde-format
+msgid "Which data to keep in activity history"
+msgstr "哪些資料要在活動記錄中保留"
+
+#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:21
+#, kde-format
+msgid "List of Applications whose activity history to save"
+msgstr "要儲存其活動歷史記錄的應用程式列表"
+
+#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:24
+#, kde-format
+msgid "List of Applications whose activity history not to save"
+msgstr "不儲存其活動歷史記錄的應用程式列表"
+
 #: MainConfigurationWidget.cpp:33
 #, kde-format
 msgid "Switching"
@@ -136,26 +160,23 @@ msgctxt "@action"
 msgid "Walk through activities (Reverse)"
 msgstr "瀏覽活動（反向）"
 
-#~ msgid "How many months keep the activity history"
-#~ msgstr "保留幾個月的活動記錄"
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_virtualDesktopSwitchEnabled)
+#: ui/SwitchingTabBase.ui:22
+#, kde-format
+msgid "Remember for each activity (needs restart)"
+msgstr "記錄每個活動 (需要重新啟動)"
 
-#~ msgid "Which data to keep in activity history"
-#~ msgstr "哪些資料要在活動記錄中保留"
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/SwitchingTabBase.ui:29
+#, kde-format
+msgid "Current virtual desktop:"
+msgstr "目前虛擬桌面："
 
-#~ msgid "List of Applications whose activity history to save"
-#~ msgstr "要儲存其活動歷史記錄的應用程式列表"
-
-#~ msgid "List of Applications whose activity history not to save"
-#~ msgstr "不儲存其活動歷史記錄的應用程式列表"
-
-#~ msgid "Remember for each activity (needs restart)"
-#~ msgstr "記錄每個活動 (需要重新啟動)"
-
-#~ msgid "Current virtual desktop:"
-#~ msgstr "目前虛擬桌面："
-
-#~ msgid "Shortcuts:"
-#~ msgstr "快速鍵："
+#. i18n: ectx: property (text), widget (QLabel, label_1)
+#: ui/SwitchingTabBase.ui:38
+#, kde-format
+msgid "Shortcuts:"
+msgstr "快速鍵："
 
 #~ msgid "Privacy"
 #~ msgstr "隱私"

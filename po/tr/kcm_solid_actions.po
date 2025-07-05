@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-03-24 17:37+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -48,6 +48,132 @@ msgstr ""
 #, kde-format
 msgid "Invalid action"
 msgstr "Geçersiz eylem"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
+#: ActionEditor.ui:17
+#, kde-format
+msgid "Edit Parameter"
+msgstr "Parametreyi Düzenle"
+
+#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
+#: ActionEditor.ui:43
+#, kde-format
+msgid "Parameter type:"
+msgstr "Parametre türü:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:51
+#, kde-format
+msgid "Property Match"
+msgstr "Özellik Eşleşmesi"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:56
+#, kde-format
+msgid "Content Conjunction"
+msgstr "İçerik Bağlantısı"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:61
+#, kde-format
+msgid "Content Disjunction"
+msgstr "İçerik Ayrılığı"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:66
+#, kde-format
+msgid "Device Interface Match"
+msgstr "Aygıt Arayüzü Eşleşmesi"
+
+#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
+#: ActionEditor.ui:96
+#, kde-format
+msgid "Device type:"
+msgstr "Aygıt türü:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblValueName)
+#: ActionEditor.ui:135
+#, kde-format
+msgid "Value name:"
+msgstr "Değer adı:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:175
+#, kde-format
+msgid "Equals"
+msgstr "Eşit"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:180
+#, kde-format
+msgid "Contains"
+msgstr "İçeren"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
+#: ActionEditor.ui:208
+#, kde-format
+msgid "Reset Parameter"
+msgstr "Parametreyi Sıfırla"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
+#: ActionEditor.ui:215
+#, kde-format
+msgid "Save Parameter Changes"
+msgstr "Parametre Değişikliklerini Kaydet"
+
+#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
+#: ActionEditor.ui:247
+#, kde-format
+msgid "Action icon, click to change it"
+msgstr "Eylem dimgesi, değiştirmek için tıklayın"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
+#: ActionEditor.ui:254
+#, kde-format
+msgid "Action name"
+msgstr "Eylem adı"
+
+#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
+#: ActionEditor.ui:271
+#, kde-format
+msgid "Command: "
+msgstr "Komut: "
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
+#: ActionEditor.ui:283
+#, no-c-format, kde-format
+msgid ""
+"Command that will trigger the action\n"
+"This can include any or all of the following case insensitive expands:\n"
+"\n"
+"%f: The mountpoint for the device - Storage Access devices only\n"
+"%d: Path to the device node - Block devices only\n"
+"%i: The identifier of the device"
+msgstr ""
+"Eylemi tetikleyecek komut\n"
+"Aşağıdakilerden birini veya hepsini kapsayabilir:\n"
+"\n"
+"%f: Aygıtın bağlanma noktası - Yalnızca depolama aygıtları\n"
+"%d: Aygıt düğümü konumu - Yalnızca blok aygıtlar\n"
+"%i: Aygıt tanımlayıcı"
+
+#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
+#: ActionEditor.ui:300
+#, kde-format
+msgid "Devices must match the following parameters for this action:"
+msgstr "Bu eylem için aygıtın şu parametrelerle örtüşmesi gerekiyor:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblActionName)
+#: AddAction.ui:19
+#, kde-format
+msgid "Action name:"
+msgstr "Eylem adı:"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
+#: AddAction.ui:26
+#, kde-format
+msgid "Enter the name for your new action"
+msgstr "Yeni eyleminizin adını girin"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -143,80 +269,20 @@ msgstr "Hiçbir Eylem Seçilmedi"
 msgid "Cannot be deleted"
 msgstr "Silinemez"
 
-#~ msgid "Edit Parameter"
-#~ msgstr "Parametreyi Düzenle"
+#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
+#: SolidActions.ui:22
+#, kde-format
+msgid "Remove"
+msgstr "Kaldır"
 
-#~ msgid "Parameter type:"
-#~ msgstr "Parametre türü:"
+#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
+#: SolidActions.ui:29
+#, kde-format
+msgid "Edit…"
+msgstr "Düzenle…"
 
-#~ msgid "Property Match"
-#~ msgstr "Özellik Eşleşmesi"
-
-#~ msgid "Content Conjunction"
-#~ msgstr "İçerik Bağlantısı"
-
-#~ msgid "Content Disjunction"
-#~ msgstr "İçerik Ayrılığı"
-
-#~ msgid "Device Interface Match"
-#~ msgstr "Aygıt Arayüzü Eşleşmesi"
-
-#~ msgid "Device type:"
-#~ msgstr "Aygıt türü:"
-
-#~ msgid "Value name:"
-#~ msgstr "Değer adı:"
-
-#~ msgid "Equals"
-#~ msgstr "Eşit"
-
-#~ msgid "Contains"
-#~ msgstr "İçeren"
-
-#~ msgid "Reset Parameter"
-#~ msgstr "Parametreyi Sıfırla"
-
-#~ msgid "Save Parameter Changes"
-#~ msgstr "Parametre Değişikliklerini Kaydet"
-
-#~ msgid "Action icon, click to change it"
-#~ msgstr "Eylem dimgesi, değiştirmek için tıklayın"
-
-#~ msgid "Action name"
-#~ msgstr "Eylem adı"
-
-#~ msgid "Command: "
-#~ msgstr "Komut: "
-
-#~ msgid ""
-#~ "Command that will trigger the action\n"
-#~ "This can include any or all of the following case insensitive expands:\n"
-#~ "\n"
-#~ "%f: The mountpoint for the device - Storage Access devices only\n"
-#~ "%d: Path to the device node - Block devices only\n"
-#~ "%i: The identifier of the device"
-#~ msgstr ""
-#~ "Eylemi tetikleyecek komut\n"
-#~ "Aşağıdakilerden birini veya hepsini kapsayabilir:\n"
-#~ "\n"
-#~ "%f: Aygıtın bağlanma noktası - Yalnızca depolama aygıtları\n"
-#~ "%d: Aygıt düğümü konumu - Yalnızca blok aygıtlar\n"
-#~ "%i: Aygıt tanımlayıcı"
-
-#~ msgid "Devices must match the following parameters for this action:"
-#~ msgstr "Bu eylem için aygıtın şu parametrelerle örtüşmesi gerekiyor:"
-
-#~ msgid "Action name:"
-#~ msgstr "Eylem adı:"
-
-#~ msgid "Enter the name for your new action"
-#~ msgstr "Yeni eyleminizin adını girin"
-
-#~ msgid "Remove"
-#~ msgstr "Kaldır"
-
-#~ msgid "Edit…"
-#~ msgstr "Düzenle…"
-
-#~ msgid "Add…"
-#~ msgstr "Ekle…"
+#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
+#: SolidActions.ui:36
+#, kde-format
+msgid "Add…"
+msgstr "Ekle…"

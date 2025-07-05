@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-12-24 02:15+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -34,6 +34,54 @@ msgstr "Eric Cheng"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ericc@shinewave.com.tw"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: dateandtime.ui:22
+#, kde-format
+msgid "Date and Time"
+msgstr "日期與時間"
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: dateandtime.ui:30
+#, kde-format
+msgid "Set date and time &automatically"
+msgstr "自動設定日期與時刻(&A)"
+
+#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
+#: dateandtime.ui:53
+#, kde-format
+msgid "&Time server:"
+msgstr "時間伺服器(&T)："
+
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: dateandtime.ui:86
+#, kde-format
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr "您可以在這裡調整系統當月的第幾天，月份和年份。"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: dateandtime.ui:122
+#, kde-format
+msgid "Time Zone"
+msgstr "時區"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dateandtime.ui:128
+#, kde-format
+msgid "To change the local time zone, select your area from the list below."
+msgstr "要改變本地時區，從下面的清單選擇您的區域。"
+
+#. i18n: ectx: property (text), widget (QLabel, m_local)
+#: dateandtime.ui:151
+#, kde-format
+msgid "Current local time zone:"
+msgstr "目前本地時區："
+
+#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
+#: dateandtime.ui:161
+#, kde-format
+msgid "Search…"
+msgstr "搜尋…"
 
 #: dtime.cpp:61
 #, kde-format
@@ -181,28 +229,3 @@ msgstr "無法設定目前時間"
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "無法設定時區"
-
-#~ msgid "Date and Time"
-#~ msgstr "日期與時間"
-
-#~ msgid "Set date and time &automatically"
-#~ msgstr "自動設定日期與時刻(&A)"
-
-#~ msgid "&Time server:"
-#~ msgstr "時間伺服器(&T)："
-
-#~ msgid ""
-#~ "Here you can change the system date's day of the month, month and year."
-#~ msgstr "您可以在這裡調整系統當月的第幾天，月份和年份。"
-
-#~ msgid "Time Zone"
-#~ msgstr "時區"
-
-#~ msgid "To change the local time zone, select your area from the list below."
-#~ msgstr "要改變本地時區，從下面的清單選擇您的區域。"
-
-#~ msgid "Current local time zone:"
-#~ msgstr "目前本地時區："
-
-#~ msgid "Search…"
-#~ msgstr "搜尋…"

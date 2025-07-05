@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_activities5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2017-05-16 11:33-0400\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -100,6 +100,32 @@ msgstr "פרטי – אל תעקוב אחר השימוש בפעילות זו"
 msgid "Shortcut for switching:"
 msgstr "קיצור דרך להחלפת פעילויות:"
 
+#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:10
+#, fuzzy, kde-format
+#| msgid "Clear recent history"
+msgid "How many months keep the activity history"
+msgstr "נקה היסטוריה"
+
+#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Clear recent history"
+msgid "Which data to keep in activity history"
+msgstr "נקה היסטוריה"
+
+#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:21
+#, kde-format
+msgid "List of Applications whose activity history to save"
+msgstr ""
+
+#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:24
+#, kde-format
+msgid "List of Applications whose activity history not to save"
+msgstr ""
+
 #: MainConfigurationWidget.cpp:33
 #, kde-format
 msgid "Switching"
@@ -142,26 +168,26 @@ msgctxt "@action"
 msgid "Walk through activities (Reverse)"
 msgstr "עבור בין פעילויות (בסדר הפוך)"
 
-#, fuzzy
-#~| msgid "Clear recent history"
-#~ msgid "How many months keep the activity history"
-#~ msgstr "נקה היסטוריה"
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_virtualDesktopSwitchEnabled)
+#: ui/SwitchingTabBase.ui:22
+#, fuzzy, kde-format
+#| msgid ""
+#| "Remember the current virtual desktop for each activity (needs restart)"
+msgid "Remember for each activity (needs restart)"
+msgstr "זכור את השולחן העבודה הוירטואלי לכל פעילות (דורש הפעלה מחדש)"
 
-#, fuzzy
-#~| msgid "Clear recent history"
-#~ msgid "Which data to keep in activity history"
-#~ msgstr "נקה היסטוריה"
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/SwitchingTabBase.ui:29
+#, kde-format
+msgid "Current virtual desktop:"
+msgstr ""
 
-#, fuzzy
-#~| msgid ""
-#~| "Remember the current virtual desktop for each activity (needs restart)"
-#~ msgid "Remember for each activity (needs restart)"
-#~ msgstr "זכור את השולחן העבודה הוירטואלי לכל פעילות (דורש הפעלה מחדש)"
-
-#, fuzzy
-#~| msgid "Shortcuts"
-#~ msgid "Shortcuts:"
-#~ msgstr "קיצורי דרך"
+#. i18n: ectx: property (text), widget (QLabel, label_1)
+#: ui/SwitchingTabBase.ui:38
+#, fuzzy, kde-format
+#| msgid "Shortcuts"
+msgid "Shortcuts:"
+msgstr "קיצורי דרך"
 
 #~ msgid "Privacy"
 #~ msgstr "פרטיות"

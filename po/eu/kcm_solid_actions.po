@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-07-02 21:24+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -51,6 +51,133 @@ msgstr ""
 #, kde-format
 msgid "Invalid action"
 msgstr "Ekintza baliogabea"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
+#: ActionEditor.ui:17
+#, kde-format
+msgid "Edit Parameter"
+msgstr "Editatu parametroa"
+
+#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
+#: ActionEditor.ui:43
+#, kde-format
+msgid "Parameter type:"
+msgstr "Parametro mota:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:51
+#, kde-format
+msgid "Property Match"
+msgstr "Propietateen bat-etortzea"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:56
+#, kde-format
+msgid "Content Conjunction"
+msgstr "Edukiaren konjuntzioa"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:61
+#, kde-format
+msgid "Content Disjunction"
+msgstr "Edukiaren disjuntzioa"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:66
+#, kde-format
+msgid "Device Interface Match"
+msgstr "Gailu-interfazea bat dator"
+
+#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
+#: ActionEditor.ui:96
+#, kde-format
+msgid "Device type:"
+msgstr "Gailu mota:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblValueName)
+#: ActionEditor.ui:135
+#, kde-format
+msgid "Value name:"
+msgstr "Balioaren izena:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:175
+#, kde-format
+msgid "Equals"
+msgstr "Berdin"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:180
+#, kde-format
+msgid "Contains"
+msgstr "Hau du:"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
+#: ActionEditor.ui:208
+#, kde-format
+msgid "Reset Parameter"
+msgstr "Berrezarri parametroa"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
+#: ActionEditor.ui:215
+#, kde-format
+msgid "Save Parameter Changes"
+msgstr "Gorde parametroaren aldaketak"
+
+#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
+#: ActionEditor.ui:247
+#, kde-format
+msgid "Action icon, click to change it"
+msgstr "Ekintzaren ikonoa, klikatu aldatzeko"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
+#: ActionEditor.ui:254
+#, kde-format
+msgid "Action name"
+msgstr "Ekintzaren izena"
+
+#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
+#: ActionEditor.ui:271
+#, kde-format
+msgid "Command: "
+msgstr "Komandoa: "
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
+#: ActionEditor.ui:283
+#, no-c-format, kde-format
+msgid ""
+"Command that will trigger the action\n"
+"This can include any or all of the following case insensitive expands:\n"
+"\n"
+"%f: The mountpoint for the device - Storage Access devices only\n"
+"%d: Path to the device node - Block devices only\n"
+"%i: The identifier of the device"
+msgstr ""
+"Ekintza abiaraziko duen komandoa\n"
+"Honek maiuskulak/minuskulak bereizten ez dituzten hedapen hauetako bat edo "
+"guztiak izan ditzake:\n"
+"\n"
+"%f: Gailua muntatzeko puntua - Biltegia atzitzeko gailuak soilik\n"
+"%d: Gailuaren nodora daraman bidea - Blokeko gailuak soilik\n"
+"%i: Gailuaren identifikatzailea"
+
+#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
+#: ActionEditor.ui:300
+#, kde-format
+msgid "Devices must match the following parameters for this action:"
+msgstr "Gailuek bat etorri behar dute parametro hauekin ekintza honetarako:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblActionName)
+#: AddAction.ui:19
+#, kde-format
+msgid "Action name:"
+msgstr "Ekintzaren izena:"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
+#: AddAction.ui:26
+#, kde-format
+msgid "Enter the name for your new action"
+msgstr "Idatzi ekintza berriarentzako izena"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -146,84 +273,23 @@ msgstr "Ez da ekintzarik hautatu"
 msgid "Cannot be deleted"
 msgstr "Ezin da ezabatu"
 
-#~ msgid "Edit Parameter"
-#~ msgstr "Editatu parametroa"
+#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
+#: SolidActions.ui:22
+#, kde-format
+msgid "Remove"
+msgstr "Kendu"
 
-#~ msgid "Parameter type:"
-#~ msgstr "Parametro mota:"
+#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
+#: SolidActions.ui:29
+#, kde-format
+msgid "Edit…"
+msgstr "Editatu…"
 
-#~ msgid "Property Match"
-#~ msgstr "Propietateen bat-etortzea"
-
-#~ msgid "Content Conjunction"
-#~ msgstr "Edukiaren konjuntzioa"
-
-#~ msgid "Content Disjunction"
-#~ msgstr "Edukiaren disjuntzioa"
-
-#~ msgid "Device Interface Match"
-#~ msgstr "Gailu-interfazea bat dator"
-
-#~ msgid "Device type:"
-#~ msgstr "Gailu mota:"
-
-#~ msgid "Value name:"
-#~ msgstr "Balioaren izena:"
-
-#~ msgid "Equals"
-#~ msgstr "Berdin"
-
-#~ msgid "Contains"
-#~ msgstr "Hau du:"
-
-#~ msgid "Reset Parameter"
-#~ msgstr "Berrezarri parametroa"
-
-#~ msgid "Save Parameter Changes"
-#~ msgstr "Gorde parametroaren aldaketak"
-
-#~ msgid "Action icon, click to change it"
-#~ msgstr "Ekintzaren ikonoa, klikatu aldatzeko"
-
-#~ msgid "Action name"
-#~ msgstr "Ekintzaren izena"
-
-#~ msgid "Command: "
-#~ msgstr "Komandoa: "
-
-#~ msgid ""
-#~ "Command that will trigger the action\n"
-#~ "This can include any or all of the following case insensitive expands:\n"
-#~ "\n"
-#~ "%f: The mountpoint for the device - Storage Access devices only\n"
-#~ "%d: Path to the device node - Block devices only\n"
-#~ "%i: The identifier of the device"
-#~ msgstr ""
-#~ "Ekintza abiaraziko duen komandoa\n"
-#~ "Honek maiuskulak/minuskulak bereizten ez dituzten hedapen hauetako bat "
-#~ "edo guztiak izan ditzake:\n"
-#~ "\n"
-#~ "%f: Gailua muntatzeko puntua - Biltegia atzitzeko gailuak soilik\n"
-#~ "%d: Gailuaren nodora daraman bidea - Blokeko gailuak soilik\n"
-#~ "%i: Gailuaren identifikatzailea"
-
-#~ msgid "Devices must match the following parameters for this action:"
-#~ msgstr "Gailuek bat etorri behar dute parametro hauekin ekintza honetarako:"
-
-#~ msgid "Action name:"
-#~ msgstr "Ekintzaren izena:"
-
-#~ msgid "Enter the name for your new action"
-#~ msgstr "Idatzi ekintza berriarentzako izena"
-
-#~ msgid "Remove"
-#~ msgstr "Kendu"
-
-#~ msgid "Edit…"
-#~ msgstr "Editatu…"
-
-#~ msgid "Add…"
-#~ msgstr "Gehitu…"
+#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
+#: SolidActions.ui:36
+#, kde-format
+msgid "Add…"
+msgstr "Gehitu…"
 
 #~ msgid "Edit..."
 #~ msgstr "Editatu..."

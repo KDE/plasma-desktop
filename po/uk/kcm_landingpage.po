@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_landingpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-02-12 08:59+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -19,6 +19,38 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 20.12.0\n"
+
+#. i18n: ectx: label, entry (colorScheme), group (General)
+#: landingpage_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Color scheme name"
+msgstr "Назва схеми кольорів"
+
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:15
+#, kde-format
+msgid "Single click to open files"
+msgstr "Одинарне клацання для відкриття файлів"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:19
+#, kde-format
+msgid "Global Look and Feel package"
+msgstr "Загальний пакунок вигляду і поведінки"
+
+#. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
+#. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:23
+#: landingpage_kdeglobalssettings.kcfg:27
+#, kde-format
+msgid "Global Look and Feel package, alternate"
+msgstr "Загальний пакунок вигляду і поведінки, альтернатива"
+
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:31
+#, kde-format
+msgid "Animation speed"
+msgstr "Швидкість анімації"
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -90,21 +122,6 @@ msgstr "Додаткові параметри поведінки…"
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "Найвикористовуваніші сторінки:"
-
-#~ msgid "Color scheme name"
-#~ msgstr "Назва схеми кольорів"
-
-#~ msgid "Single click to open files"
-#~ msgstr "Одинарне клацання для відкриття файлів"
-
-#~ msgid "Global Look and Feel package"
-#~ msgstr "Загальний пакунок вигляду і поведінки"
-
-#~ msgid "Global Look and Feel package, alternate"
-#~ msgstr "Загальний пакунок вигляду і поведінки, альтернатива"
-
-#~ msgid "Animation speed"
-#~ msgstr "Швидкість анімації"
 
 #~ msgid "Plasma"
 #~ msgstr "Плазма"

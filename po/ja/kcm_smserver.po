@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2024-01-14 21:03-0800\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -183,14 +183,26 @@ msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "ファームウェア設定画面に入る"
 
-#~ msgid "Confirm logout"
-#~ msgstr "ログアウトを確認する"
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, kde-format
+msgid "Confirm logout"
+msgstr "ログアウトを確認する"
 
-#~ msgid "Default leave option"
-#~ msgstr "デフォルトの終了オプション"
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:13
+#, kde-format
+msgid "Default leave option"
+msgstr "デフォルトの終了オプション"
 
-#~ msgid "On login"
-#~ msgstr "ログイン時"
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:22
+#, kde-format
+msgid "On login"
+msgstr "ログイン時"
 
-#~ msgid "Applications to be excluded from session"
-#~ msgstr "セッションから除外するアプリケーション"
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:26
+#, kde-format
+msgid "Applications to be excluded from session"
+msgstr "セッションから除外するアプリケーション"

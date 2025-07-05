@@ -1,7 +1,7 @@
 # translation of kcmsmserver.po to Slovenian
 # Translation of kcmsmserver.po to Slovenian
 # KDEBASE translation to Slovenian language.
-# $Id: kcm_smserver.po 1712705 2025-07-05 03:36:47Z scripty $
+# $Id: kcm_smserver.po 1712710 2025-07-05 06:09:14Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2004, 2005 Free Software Foundation, Inc.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-01-02 20:29+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -193,17 +193,29 @@ msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "Vstopi v nastavitev strojne programske opreme"
 
-#~ msgid "Confirm logout"
-#~ msgstr "Potrditev odjave"
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, kde-format
+msgid "Confirm logout"
+msgstr "Potrditev odjave"
 
-#~ msgid "Default leave option"
-#~ msgstr "Privzeta možnost zapustitve"
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:13
+#, kde-format
+msgid "Default leave option"
+msgstr "Privzeta možnost zapustitve"
 
-#~ msgid "On login"
-#~ msgstr "Ob prijavi"
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:22
+#, kde-format
+msgid "On login"
+msgstr "Ob prijavi"
 
-#~ msgid "Applications to be excluded from session"
-#~ msgstr "Aplikacije, ki naj bi bile izključene iz seje"
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:26
+#, kde-format
+msgid "Applications to be excluded from session"
+msgstr "Aplikacije, ki naj bi bile izključene iz seje"
 
 #, fuzzy
 #~| msgid "Default leave option:"

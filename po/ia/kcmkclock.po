@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-08-05 23:16+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -27,6 +27,56 @@ msgstr "Giovanni Sora"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "g.sora@tiscali.it"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: dateandtime.ui:22
+#, kde-format
+msgid "Date and Time"
+msgstr "Data e Tempore"
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: dateandtime.ui:30
+#, kde-format
+msgid "Set date and time &automatically"
+msgstr "Fixa &automaticamente data e tempore"
+
+#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
+#: dateandtime.ui:53
+#, kde-format
+msgid "&Time server:"
+msgstr "Servitor de &Tempore:"
+
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: dateandtime.ui:86
+#, kde-format
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr ""
+"Ci tu pote cambiar die del mense, le mense e le anno de data de systema, "
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: dateandtime.ui:122
+#, kde-format
+msgid "Time Zone"
+msgstr "Fuso Horari"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dateandtime.ui:128
+#, kde-format
+msgid "To change the local time zone, select your area from the list below."
+msgstr ""
+"Pro cambiar le fuso horari local, tu selige un area ex le lista a basso."
+
+#. i18n: ectx: property (text), widget (QLabel, m_local)
+#: dateandtime.ui:151
+#, kde-format
+msgid "Current local time zone:"
+msgstr "Currente fuso horari  local:"
+
+#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
+#: dateandtime.ui:161
+#, kde-format
+msgid "Search…"
+msgstr "Cerca…"
 
 #: dtime.cpp:61
 #, kde-format
@@ -183,33 +233,6 @@ msgstr "Incapace a fixar le tempore currente"
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "Incapace  a fixare le fuso horari"
-
-#~ msgid "Date and Time"
-#~ msgstr "Data e Tempore"
-
-#~ msgid "Set date and time &automatically"
-#~ msgstr "Fixa &automaticamente data e tempore"
-
-#~ msgid "&Time server:"
-#~ msgstr "Servitor de &Tempore:"
-
-#~ msgid ""
-#~ "Here you can change the system date's day of the month, month and year."
-#~ msgstr ""
-#~ "Ci tu pote cambiar die del mense, le mense e le anno de data de systema, "
-
-#~ msgid "Time Zone"
-#~ msgstr "Fuso Horari"
-
-#~ msgid "To change the local time zone, select your area from the list below."
-#~ msgstr ""
-#~ "Pro cambiar le fuso horari local, tu selige un area ex le lista a basso."
-
-#~ msgid "Current local time zone:"
-#~ msgstr "Currente fuso horari  local:"
-
-#~ msgid "Search…"
-#~ msgstr "Cerca…"
 
 #~ msgid "kcmclock"
 #~ msgstr "kcmclock"

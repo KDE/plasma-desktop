@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2012-06-13 15:26+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -27,6 +27,57 @@ msgstr "ខឹម សុខែម, អេង វណ្ណៈ, អោក ពិ�
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "khoemsokhem@khmeros.info,​​evannak@khmeros.info,piseth_dv@khmeros.info"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: dateandtime.ui:22
+#, kde-format
+msgid "Date and Time"
+msgstr "កាលបរិច្ឆេទ និង​ពេលវេលា"
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: dateandtime.ui:30
+#, fuzzy, kde-format
+#| msgid "Set date and time &automatically:"
+msgid "Set date and time &automatically"
+msgstr "កំណត់​កាល​បរិច្ឆេទ និង​ពេល​វេលា​ស្វ័យប្រវត្តិ ៖"
+
+#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
+#: dateandtime.ui:53
+#, fuzzy, kde-format
+#| msgid "Time server:"
+msgid "&Time server:"
+msgstr "ម៉ាស៊ីន​បម្រើ​ពេលវេលា ៖"
+
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: dateandtime.ui:86
+#, kde-format
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr "នៅ​ទីនេះ​អ្នក​អាច​ផ្លាស់ប្តូរ​ថ្ងៃ​របស់​ខែ ខែ​ និង​ឆ្នាំ​នៃ​កាល​បរិច្ឆេទ​របស់​ប្រព័ន្ធ ។"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: dateandtime.ui:122
+#, kde-format
+msgid "Time Zone"
+msgstr "​តំបន់​ពេល​វេលា"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dateandtime.ui:128
+#, kde-format
+msgid "To change the local time zone, select your area from the list below."
+msgstr "ដើម្បី​ផ្លាស់ប្ដូរ​តំបន់​ពេលវេលា​មូលដ្ឋាន ជ្រើស​តំបន់​របស់​អ្នក​ពី​បញ្ជីខាង​ក្រោម ។"
+
+#. i18n: ectx: property (text), widget (QLabel, m_local)
+#: dateandtime.ui:151
+#, kde-format
+msgid "Current local time zone:"
+msgstr "តំបន់​ពេលវេលា​​មូលដ្ឋាន​បច្ចុប្បន្ន ៖"
+
+#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
+#: dateandtime.ui:161
+#, fuzzy, kde-format
+#| msgid "Search"
+msgid "Search…"
+msgstr "ស្វែងរក"
 
 #: dtime.cpp:61
 #, kde-format
@@ -185,37 +236,6 @@ msgstr "មិន​អាច​ទាក់ទង​ម៉ាស៊ីន​ប
 #| msgid "Unable to contact time server: %1."
 msgid "Unable to set timezone"
 msgstr "មិន​អាច​ទាក់ទង​ម៉ាស៊ីន​បម្រើ​ពេល​វេលា ៖ %1 ។"
-
-#~ msgid "Date and Time"
-#~ msgstr "កាលបរិច្ឆេទ និង​ពេលវេលា"
-
-#, fuzzy
-#~| msgid "Set date and time &automatically:"
-#~ msgid "Set date and time &automatically"
-#~ msgstr "កំណត់​កាល​បរិច្ឆេទ និង​ពេល​វេលា​ស្វ័យប្រវត្តិ ៖"
-
-#, fuzzy
-#~| msgid "Time server:"
-#~ msgid "&Time server:"
-#~ msgstr "ម៉ាស៊ីន​បម្រើ​ពេលវេលា ៖"
-
-#~ msgid ""
-#~ "Here you can change the system date's day of the month, month and year."
-#~ msgstr "នៅ​ទីនេះ​អ្នក​អាច​ផ្លាស់ប្តូរ​ថ្ងៃ​របស់​ខែ ខែ​ និង​ឆ្នាំ​នៃ​កាល​បរិច្ឆេទ​របស់​ប្រព័ន្ធ ។"
-
-#~ msgid "Time Zone"
-#~ msgstr "​តំបន់​ពេល​វេលា"
-
-#~ msgid "To change the local time zone, select your area from the list below."
-#~ msgstr "ដើម្បី​ផ្លាស់ប្ដូរ​តំបន់​ពេលវេលា​មូលដ្ឋាន ជ្រើស​តំបន់​របស់​អ្នក​ពី​បញ្ជីខាង​ក្រោម ។"
-
-#~ msgid "Current local time zone:"
-#~ msgstr "តំបន់​ពេលវេលា​​មូលដ្ឋាន​បច្ចុប្បន្ន ៖"
-
-#, fuzzy
-#~| msgid "Search"
-#~ msgid "Search…"
-#~ msgstr "ស្វែងរក"
 
 #~ msgid "kcmclock"
 #~ msgstr "kcmclock"

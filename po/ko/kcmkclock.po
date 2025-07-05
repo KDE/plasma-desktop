@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-05-28 02:28+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -27,6 +27,54 @@ msgstr "박신조"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@peremen.name"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: dateandtime.ui:22
+#, kde-format
+msgid "Date and Time"
+msgstr "날짜와 시간"
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: dateandtime.ui:30
+#, kde-format
+msgid "Set date and time &automatically"
+msgstr "자동으로 시간과 날짜 설정하기(&A)"
+
+#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
+#: dateandtime.ui:53
+#, kde-format
+msgid "&Time server:"
+msgstr "시간 서버(&T):"
+
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: dateandtime.ui:86
+#, kde-format
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr "이 곳에서 시스템의 년, 월, 일을 설정할 수 있습니다."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: dateandtime.ui:122
+#, kde-format
+msgid "Time Zone"
+msgstr "시간대"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dateandtime.ui:128
+#, kde-format
+msgid "To change the local time zone, select your area from the list below."
+msgstr "지역 시간대를 변경하려면 아래 목록에서 지역을 선택하십시오."
+
+#. i18n: ectx: property (text), widget (QLabel, m_local)
+#: dateandtime.ui:151
+#, kde-format
+msgid "Current local time zone:"
+msgstr "현재 지역 시간대:"
+
+#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
+#: dateandtime.ui:161
+#, kde-format
+msgid "Search…"
+msgstr "검색…"
 
 #: dtime.cpp:61
 #, kde-format
@@ -176,31 +224,6 @@ msgstr "현재 시간을 설정할 수 없음"
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "시간대를 설정할 수 없음"
-
-#~ msgid "Date and Time"
-#~ msgstr "날짜와 시간"
-
-#~ msgid "Set date and time &automatically"
-#~ msgstr "자동으로 시간과 날짜 설정하기(&A)"
-
-#~ msgid "&Time server:"
-#~ msgstr "시간 서버(&T):"
-
-#~ msgid ""
-#~ "Here you can change the system date's day of the month, month and year."
-#~ msgstr "이 곳에서 시스템의 년, 월, 일을 설정할 수 있습니다."
-
-#~ msgid "Time Zone"
-#~ msgstr "시간대"
-
-#~ msgid "To change the local time zone, select your area from the list below."
-#~ msgstr "지역 시간대를 변경하려면 아래 목록에서 지역을 선택하십시오."
-
-#~ msgid "Current local time zone:"
-#~ msgstr "현재 지역 시간대:"
-
-#~ msgid "Search…"
-#~ msgstr "검색…"
 
 #~ msgid "kcmclock"
 #~ msgstr "kcmclock"

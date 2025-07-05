@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-10-12 04:09\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -51,36 +51,67 @@ msgstr "David Edmundson"
 msgid "Maintainer"
 msgstr "Суправаджальнік"
 
-#~ msgid ""
-#~ "These settings adjust the QtQuick settings used by Plasma. Only adjust if "
-#~ "you know what you are doing."
-#~ msgstr ""
-#~ "Гэта налады QtQuick, якія выкарыстоўвае Plasma. Змяняйце іх толькі, калі "
-#~ "ведаеце, што робіце."
+#. i18n: ectx: property (text), widget (KMessageWidget, kmessagewidget)
+#: kcmqtquicksettingswidget.ui:23
+#, kde-format
+msgid ""
+"These settings adjust the QtQuick settings used by Plasma. Only adjust if "
+"you know what you are doing."
+msgstr ""
+"Гэта налады QtQuick, якія выкарыстоўвае Plasma. Змяняйце іх толькі, калі "
+"ведаеце, што робіце."
 
-#~ msgid "Rendering Backend:"
-#~ msgstr "Рухавік рэндэрынгу:"
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcmqtquicksettingswidget.ui:38
+#, kde-format
+msgid "Rendering Backend:"
+msgstr "Рухавік рэндэрынгу:"
 
-#~ msgid "Automatic"
-#~ msgstr "Аўтаматычна"
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
+#: kcmqtquicksettingswidget.ui:46 kcmqtquicksettingswidget.ui:79
+#, kde-format
+msgid "Automatic"
+msgstr "Аўтаматычна"
 
-#~ msgid "Open GL"
-#~ msgstr "Open GL"
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
+#: kcmqtquicksettingswidget.ui:51
+#, kde-format
+msgid "Open GL"
+msgstr "Open GL"
 
-#~ msgid "Software"
-#~ msgstr "Праграмнае забеспячэнне"
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
+#: kcmqtquicksettingswidget.ui:56
+#, kde-format
+msgid "Software"
+msgstr "Праграмнае забеспячэнне"
 
-#~ msgid "GL Core Profile:"
-#~ msgstr "Профіль GL Core:"
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcmqtquicksettingswidget.ui:64
+#, kde-format
+msgid "GL Core Profile:"
+msgstr "Профіль GL Core:"
 
-#~ msgid "Render Loop:"
-#~ msgstr "Цыкл рэндэрынгу:"
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: kcmqtquicksettingswidget.ui:71
+#, kde-format
+msgid "Render Loop:"
+msgstr "Цыкл рэндэрынгу:"
 
-#~ msgid "Basic"
-#~ msgstr "Базавы"
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
+#: kcmqtquicksettingswidget.ui:84
+#, kde-format
+msgid "Basic"
+msgstr "Базавы"
 
-#~ msgid "Threaded"
-#~ msgstr "Шматструменевы"
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
+#: kcmqtquicksettingswidget.ui:89
+#, kde-format
+msgid "Threaded"
+msgstr "Шматструменевы"
 
-#~ msgid "Force"
-#~ msgstr "Прымусова"
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ForceGlCoreProfile)
+#: kcmqtquicksettingswidget.ui:97
+#, kde-format
+msgid "Force"
+msgstr "Прымусова"

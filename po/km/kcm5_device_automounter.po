@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_device_automounter\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2010-05-11 08:36+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -60,6 +60,85 @@ msgstr ""
 #, kde-format
 msgid "Plasma 5 Port"
 msgstr ""
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, fuzzy, kde-format
+#| msgid ""
+#| "This list contains the storage devices known to the system. If "
+#| "\"Automount on Login\" is checked, the device will be automatically "
+#| "mounted even though \"Mount all removable media at login\" is unchecked. "
+#| "The same applies for \"Automount on Attach\".\n"
+#| "\n"
+#| "If \"Enable automatic mounting of removable media\" is unchecked, the "
+#| "overrides do not apply and no devices will be automatically mounted."
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"បញ្ជី​នេះ​មាន​ឧបករណ៍​ផ្ទុក​ដែល​​ស្គាល់​ទៅកាន់​ប្រព័ន្ធ​ ។ ប្រសិនបើ​បាន​គូស​ធីក​ប្រអប់ \"ម៉ោន​ដោយ​ស្វ័យ​ប្រវត្តិ​នៅ​ពេល​"
+"ចូល\" ឧបករណ៍​នឹង​ត្រូវ​បាន​ម៉ោន​ដោយ​ស្វ័យ​ប្រវត្តិ​ទោះ​បី​ជា \"ម៉ោន​មេឌៀ​ចល័ត​ទាំងអស់​នៅ​ពេល​ចូល\" មិន​ត្រូវ​បាន​គូស​"
+"ធីក​ក៏​ដោយ ។ ទាំង​ពីរ​នេះ​អនុវត្ត​សម្រាប់ \"ម៉ោន​ដោយ​ស្វ័យ​ប្រវត្តិ​នៅ​ពេល​ភ្ជាប់​ជាមួយ​\" ។\n"
+"\n"
+"ប្រសិន \"បើក​ការ​ម៉ោន​​​​មេឌៀ​ចល័ត​​ដោយ​ស្វ័យ​ប្រវត្តិ\" មិន​ត្រូវ​បាន​គូស​ធីក ការ​បដិសេធ​មិន​អនុវត្ត​ និង​គ្មាន​ឧបករណ៍​"
+"នឹង​ត្រូវ​បាន​ម៉ោន​ដោយ​​ស្វ័យ​ប្រវត្តិ​ទេ ។"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"ចុច​ប៊ូតុង​នេះ​ធ្វើ​ឲ្យ 'ភ្លេច' ឧបករណ៍​ដែល​បាន​ជ្រើស ។ វា​មានប្រយោជន៍​ប្រសិន​បើ \"ម៉ោន​មេឌៀ​ចល័ត​ដោយ​ស្វ័យ​"
+"ប្រវត្តិ​ ដែល​ត្រូវ​បាន​ម៉ោន​ដោយ​ដៃ​ពីមុន\" ត្រូវ​បាន​គូស​ធីក​ក៏​ដោយ ។ នៅ​ពេល​ដែល​ឧបករណ៍​ត្រូវ​បាន​បំភ្លេច​ ហើយ​​"
+"ប្រព័ន្ធ​ត្រូវ​បាន​កំណត់​​​ទៅ​ម៉ោន​ឧបករណ៍​ស្រដៀង​គ្នា​ដោយ​ស្វ័យ​ប្រវត្តិ ឧបករណ៍​នឹង​មិន​ត្រូវ​បាន​ម៉ោន​ដោយ​ស្វ័យ​ប្រវត្តិ​​ឡើយ​ "
+"។"
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "បំភ្លេច​ឧបករណ៍"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, fuzzy, kde-format
+#| msgid ""
+#| "When this is checked, only remembered devices will be automatically "
+#| "mounted. A device is 'remembered' if it has ever been mounted before. For "
+#| "instance, plugging in a USB media player to charge is not sufficient to "
+#| "'remember' it - if the files are not accessed, it will not be "
+#| "automatically mounted the next time it is seen. Once they have been "
+#| "accessed, however, the device's contents will be automatically made "
+#| "available to the system."
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"នៅ​ពេល​ត្រូវ​បាន​គូស​ធីក នឹង​ម៉ោន​ឧបករណ៍​ដោយ​ស្វ័យ​ប្រវត្តិ​ដែល​វា​ចងចាំ ។ ឧបករណ៍​ 'ត្រូវ​បាន​ចងចាំ' ប្រសិនបើ​វា​"
+"មិន​ត្រូវ​បាន​ម៉ោន​ពីមុន ។ ឧទាហរណ៍ កម្មវិធី​នៅ​ក្នុង​កម្មវិធី​ចាក់​មេឌៀ USB ដើម្បី​បញ្ចូល​មិន​គ្រប់គ្រាន់​ដើម្បី "
+"'ចងចាំ' វា - ប្រសិនបើ​ឯកសារ​មិន​ត្រូវ​បាន​ចូល​ដំណើរការ​​​ទេ ​វា​នឹង​មិន​​ម៉ោន​កម្មវិធី​ចាក់​ដោយ​ស្វ័យ​ប្រវត្តិ​នៅ​ពេល​"
+"ក្រោយ​ទេ​ ។ នៅ​ពេល​ដែល​ពួកវា​ត្រូវ​បាន​ចូល​ដំណើរការ​ ទោះ​ជា​យ៉ាង​ណា​ក៏​ដោយ វា​នឹង​ចងចាំ​ដើម្បី​បង្កើត​មាតិកា​ដោយ​"
+"ស្វ័យ​ប្រវត្តិ​ដែល​អាច​​ចូលដំណើរការ​ទៅ​កាន់​ប្រព័ន្ធ​ ។"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, fuzzy, kde-format
+#| msgid ""
+#| "Only automatically mount removable media that has been manually mounted "
+#| "before"
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr "ម៉ោន​តែ​មេឌៀ​ចល័ត​ដោយ​ស្វ័យ​ប្រវត្តិ​ប៉ុណ្ណោះ ដែល​ត្រូវបានម៉ោន​ដោយដៃ​ពី​មុន"
 
 #: DeviceModel.cpp:52
 #, fuzzy, kde-format
@@ -124,75 +203,6 @@ msgstr "ឧបករណ៍​នេះ​នឹង​ត្រូវ​បាន
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "ឧបករណ៍​នេះ​នឹង​មិន​ត្រូវ​បាន​ម៉ោន​ដោយ​ស្វ័យ​ប្រវត្តិ​ទេ​នៅពេល​ដែល​បានភ្ជាប់ ។"
-
-#, fuzzy
-#~| msgid ""
-#~| "This list contains the storage devices known to the system. If "
-#~| "\"Automount on Login\" is checked, the device will be automatically "
-#~| "mounted even though \"Mount all removable media at login\" is unchecked. "
-#~| "The same applies for \"Automount on Attach\".\n"
-#~| "\n"
-#~| "If \"Enable automatic mounting of removable media\" is unchecked, the "
-#~| "overrides do not apply and no devices will be automatically mounted."
-#~ msgid ""
-#~ "This list contains the storage devices known to the system. If "
-#~ "\"Automount on Login\" is checked, the device will be automatically "
-#~ "mounted even though \"Mount all removable media at login\" is unchecked. "
-#~ "The same applies for \"Automount on Attach\"."
-#~ msgstr ""
-#~ "បញ្ជី​នេះ​មាន​ឧបករណ៍​ផ្ទុក​ដែល​​ស្គាល់​ទៅកាន់​ប្រព័ន្ធ​ ។ ប្រសិនបើ​បាន​គូស​ធីក​ប្រអប់ \"ម៉ោន​ដោយ​ស្វ័យ​ប្រវត្តិ​នៅ​"
-#~ "ពេល​ចូល\" ឧបករណ៍​នឹង​ត្រូវ​បាន​ម៉ោន​ដោយ​ស្វ័យ​ប្រវត្តិ​ទោះ​បី​ជា \"ម៉ោន​មេឌៀ​ចល័ត​ទាំងអស់​នៅ​ពេល​ចូល\" មិន​ត្រូវ​"
-#~ "បាន​គូស​ធីក​ក៏​ដោយ ។ ទាំង​ពីរ​នេះ​អនុវត្ត​សម្រាប់ \"ម៉ោន​ដោយ​ស្វ័យ​ប្រវត្តិ​នៅ​ពេល​ភ្ជាប់​ជាមួយ​\" ។\n"
-#~ "\n"
-#~ "ប្រសិន \"បើក​ការ​ម៉ោន​​​​មេឌៀ​ចល័ត​​ដោយ​ស្វ័យ​ប្រវត្តិ\" មិន​ត្រូវ​បាន​គូស​ធីក ការ​បដិសេធ​មិន​អនុវត្ត​ និង​គ្មាន​"
-#~ "ឧបករណ៍​នឹង​ត្រូវ​បាន​ម៉ោន​ដោយ​​ស្វ័យ​ប្រវត្តិ​ទេ ។"
-
-#~ msgid ""
-#~ "Clicking this button causes the selected devices to be 'forgotten'. This "
-#~ "is only useful if \"Only automatically mount removable media that has "
-#~ "been manually mounted before\" is checked. Once a device is forgotten and "
-#~ "the system is set to only automatically mount familiar devices, the "
-#~ "device will not be automatically mounted."
-#~ msgstr ""
-#~ "ចុច​ប៊ូតុង​នេះ​ធ្វើ​ឲ្យ 'ភ្លេច' ឧបករណ៍​ដែល​បាន​ជ្រើស ។ វា​មានប្រយោជន៍​ប្រសិន​បើ \"ម៉ោន​មេឌៀ​ចល័ត​ដោយ​"
-#~ "ស្វ័យ​ប្រវត្តិ​ ដែល​ត្រូវ​បាន​ម៉ោន​ដោយ​ដៃ​ពីមុន\" ត្រូវ​បាន​គូស​ធីក​ក៏​ដោយ ។ នៅ​ពេល​ដែល​ឧបករណ៍​ត្រូវ​បាន​បំភ្លេច​ "
-#~ "ហើយ​​ប្រព័ន្ធ​ត្រូវ​បាន​កំណត់​​​ទៅ​ម៉ោន​ឧបករណ៍​ស្រដៀង​គ្នា​ដោយ​ស្វ័យ​ប្រវត្តិ ឧបករណ៍​នឹង​មិន​ត្រូវ​បាន​ម៉ោន​ដោយ​ស្វ័យ​"
-#~ "ប្រវត្តិ​​ឡើយ​ ។"
-
-#~ msgid "Forget Device"
-#~ msgstr "បំភ្លេច​ឧបករណ៍"
-
-#, fuzzy
-#~| msgid ""
-#~| "When this is checked, only remembered devices will be automatically "
-#~| "mounted. A device is 'remembered' if it has ever been mounted before. "
-#~| "For instance, plugging in a USB media player to charge is not sufficient "
-#~| "to 'remember' it - if the files are not accessed, it will not be "
-#~| "automatically mounted the next time it is seen. Once they have been "
-#~| "accessed, however, the device's contents will be automatically made "
-#~| "available to the system."
-#~ msgid ""
-#~ "When this is not checked, only remembered devices will be automatically "
-#~ "mounted. A device is 'remembered' if it has ever been mounted before. For "
-#~ "instance, plugging in a USB media player to charge is not sufficient to "
-#~ "'remember' it - if the files are not accessed, it will not be "
-#~ "automatically mounted the next time it is seen. Once they have been "
-#~ "accessed, however, the device's contents will be automatically made "
-#~ "available to the system."
-#~ msgstr ""
-#~ "នៅ​ពេល​ត្រូវ​បាន​គូស​ធីក នឹង​ម៉ោន​ឧបករណ៍​ដោយ​ស្វ័យ​ប្រវត្តិ​ដែល​វា​ចងចាំ ។ ឧបករណ៍​ 'ត្រូវ​បាន​ចងចាំ' ប្រសិនបើ​"
-#~ "វា​មិន​ត្រូវ​បាន​ម៉ោន​ពីមុន ។ ឧទាហរណ៍ កម្មវិធី​នៅ​ក្នុង​កម្មវិធី​ចាក់​មេឌៀ USB ដើម្បី​បញ្ចូល​មិន​គ្រប់គ្រាន់​"
-#~ "ដើម្បី 'ចងចាំ' វា - ប្រសិនបើ​ឯកសារ​មិន​ត្រូវ​បាន​ចូល​ដំណើរការ​​​ទេ ​វា​នឹង​មិន​​ម៉ោន​កម្មវិធី​ចាក់​ដោយ​ស្វ័យ​"
-#~ "ប្រវត្តិ​នៅ​ពេល​ក្រោយ​ទេ​ ។ នៅ​ពេល​ដែល​ពួកវា​ត្រូវ​បាន​ចូល​ដំណើរការ​ ទោះ​ជា​យ៉ាង​ណា​ក៏​ដោយ វា​នឹង​ចងចាំ​ដើម្បី​"
-#~ "បង្កើត​មាតិកា​ដោយ​ស្វ័យ​ប្រវត្តិ​ដែល​អាច​​ចូលដំណើរការ​ទៅ​កាន់​ប្រព័ន្ធ​ ។"
-
-#, fuzzy
-#~| msgid ""
-#~| "Only automatically mount removable media that has been manually mounted "
-#~| "before"
-#~ msgid ""
-#~ "Automatically mount removable media that have never been mounted before"
-#~ msgstr "ម៉ោន​តែ​មេឌៀ​ចល័ត​ដោយ​ស្វ័យ​ប្រវត្តិ​ប៉ុណ្ណោះ ដែល​ត្រូវបានម៉ោន​ដោយដៃ​ពី​មុន"
 
 #~ msgid ""
 #~ "If any removable storage devices are connected to your system when you "

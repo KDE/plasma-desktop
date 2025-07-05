@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-05-28 02:25+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -95,6 +95,30 @@ msgstr "이 활동의 사용 내역 기록하지 않기"
 msgid "Shortcut for switching:"
 msgstr "전환 단축키:"
 
+#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:10
+#, kde-format
+msgid "How many months keep the activity history"
+msgstr "활동 기록을 저장할 개월 수"
+
+#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:17
+#, kde-format
+msgid "Which data to keep in activity history"
+msgstr "활동 기록에 저장할 데이터"
+
+#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:21
+#, kde-format
+msgid "List of Applications whose activity history to save"
+msgstr "활동 기록을 저장할 앱 목록"
+
+#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:24
+#, kde-format
+msgid "List of Applications whose activity history not to save"
+msgstr "활동 기록을 저장하지 않을 앱 목록"
+
 #: MainConfigurationWidget.cpp:33
 #, kde-format
 msgid "Switching"
@@ -134,26 +158,23 @@ msgctxt "@action"
 msgid "Walk through activities (Reverse)"
 msgstr "활동간 전환(거꾸로)"
 
-#~ msgid "How many months keep the activity history"
-#~ msgstr "활동 기록을 저장할 개월 수"
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_virtualDesktopSwitchEnabled)
+#: ui/SwitchingTabBase.ui:22
+#, kde-format
+msgid "Remember for each activity (needs restart)"
+msgstr "각 활동별 설정 기억(다시 시작 필요)"
 
-#~ msgid "Which data to keep in activity history"
-#~ msgstr "활동 기록에 저장할 데이터"
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: ui/SwitchingTabBase.ui:29
+#, kde-format
+msgid "Current virtual desktop:"
+msgstr "현재 가상 바탕 화면:"
 
-#~ msgid "List of Applications whose activity history to save"
-#~ msgstr "활동 기록을 저장할 앱 목록"
-
-#~ msgid "List of Applications whose activity history not to save"
-#~ msgstr "활동 기록을 저장하지 않을 앱 목록"
-
-#~ msgid "Remember for each activity (needs restart)"
-#~ msgstr "각 활동별 설정 기억(다시 시작 필요)"
-
-#~ msgid "Current virtual desktop:"
-#~ msgstr "현재 가상 바탕 화면:"
-
-#~ msgid "Shortcuts:"
-#~ msgstr "단축키:"
+#. i18n: ectx: property (text), widget (QLabel, label_1)
+#: ui/SwitchingTabBase.ui:38
+#, kde-format
+msgid "Shortcuts:"
+msgstr "단축키:"
 
 #~ msgid "Privacy"
 #~ msgstr "개인 정보"

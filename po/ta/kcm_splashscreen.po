@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-12-01 22:01+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -57,11 +57,17 @@ msgstr "துவக்கத் திரையின் முன்னோட�
 msgid "Uninstall"
 msgstr "நிறுவல் நீக்கு"
 
-#~ msgid "For future use"
-#~ msgstr "வருங்கால பயன்பாட்டிற்கு"
+#. i18n: ectx: label, entry (engine), group (KSplash)
+#: splashscreensettings.kcfg:12
+#, kde-format
+msgid "For future use"
+msgstr "வருங்கால பயன்பாட்டிற்கு"
 
-#~ msgid "Name of the current splash theme"
-#~ msgstr "தற்போதைய துவக்கத் திரை திட்டத்தின் பெயர்"
+#. i18n: ectx: label, entry (theme), group (KSplash)
+#: splashscreensettings.kcfg:16
+#, kde-format
+msgid "Name of the current splash theme"
+msgstr "தற்போதைய துவக்கத் திரை திட்டத்தின் பெயர்"
 
 #~ msgid "&Get New Splash Screens…"
 #~ msgstr "புதிய துவக்கத் திரைகளை &பெறு…"

@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2015-10-14 19:53+0300\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -39,6 +39,57 @@ msgid "Your emails"
 msgstr ""
 "sdramis@egnatia.ee.auth.gr,d.kamenopoulos@mail.ntua.gr,manolis@koppermind."
 "homelinux.org,sngeorgaras@otenet.gr"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: dateandtime.ui:22
+#, kde-format
+msgid "Date and Time"
+msgstr "Ημερομηνία και ώρα"
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
+#: dateandtime.ui:30
+#, kde-format
+msgid "Set date and time &automatically"
+msgstr "&Αυτόματη ρύθμιση ημερομηνίας και ώρας"
+
+#. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
+#: dateandtime.ui:53
+#, kde-format
+msgid "&Time server:"
+msgstr "&Εξυπηρετητής ώρας:"
+
+#. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
+#: dateandtime.ui:86
+#, kde-format
+msgid "Here you can change the system date's day of the month, month and year."
+msgstr "Εδώ μπορείτε να αλλάξετε την ημερομηνία του συστήματος."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: dateandtime.ui:122
+#, kde-format
+msgid "Time Zone"
+msgstr "Ζώνη ώρας"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: dateandtime.ui:128
+#, kde-format
+msgid "To change the local time zone, select your area from the list below."
+msgstr ""
+"Για να τροποποιήσετε τη ζώνη ώρας, επιλέξτε την περιοχή σας από την παρακάτω "
+"λίστα."
+
+#. i18n: ectx: property (text), widget (QLabel, m_local)
+#: dateandtime.ui:151
+#, kde-format
+msgid "Current local time zone:"
+msgstr "Τρέχουσα τοπική ζώνη ώρας:"
+
+#. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
+#: dateandtime.ui:161
+#, fuzzy, kde-format
+#| msgid "Search"
+msgid "Search…"
+msgstr "Αναζήτηση"
 
 #: dtime.cpp:61
 #, kde-format
@@ -196,35 +247,6 @@ msgstr "Αδυναμία καθορισμού της τρέχουσας ώρας
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "Αδυναμία καθορισμού της ζώνης ώρας"
-
-#~ msgid "Date and Time"
-#~ msgstr "Ημερομηνία και ώρα"
-
-#~ msgid "Set date and time &automatically"
-#~ msgstr "&Αυτόματη ρύθμιση ημερομηνίας και ώρας"
-
-#~ msgid "&Time server:"
-#~ msgstr "&Εξυπηρετητής ώρας:"
-
-#~ msgid ""
-#~ "Here you can change the system date's day of the month, month and year."
-#~ msgstr "Εδώ μπορείτε να αλλάξετε την ημερομηνία του συστήματος."
-
-#~ msgid "Time Zone"
-#~ msgstr "Ζώνη ώρας"
-
-#~ msgid "To change the local time zone, select your area from the list below."
-#~ msgstr ""
-#~ "Για να τροποποιήσετε τη ζώνη ώρας, επιλέξτε την περιοχή σας από την "
-#~ "παρακάτω λίστα."
-
-#~ msgid "Current local time zone:"
-#~ msgstr "Τρέχουσα τοπική ζώνη ώρας:"
-
-#, fuzzy
-#~| msgid "Search"
-#~ msgid "Search…"
-#~ msgstr "Αναζήτηση"
 
 #~ msgid "kcmclock"
 #~ msgstr "kcmclock"

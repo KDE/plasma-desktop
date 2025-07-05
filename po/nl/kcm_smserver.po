@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-12-26 10:48+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -190,17 +190,29 @@ msgctxt "@option:check"
 msgid "Enter firmware setup screen"
 msgstr "Het firmware setup-scherm starten"
 
-#~ msgid "Confirm logout"
-#~ msgstr "Afmelden bevestigen"
+#. i18n: ectx: label, entry (confirmLogout), group (General)
+#: smserversettings.kcfg:9
+#, kde-format
+msgid "Confirm logout"
+msgstr "Afmelden bevestigen"
 
-#~ msgid "Default leave option"
-#~ msgstr "Standaard afmeldoptie"
+#. i18n: ectx: label, entry (shutdownType), group (General)
+#: smserversettings.kcfg:13
+#, kde-format
+msgid "Default leave option"
+msgstr "Standaard afmeldoptie"
 
-#~ msgid "On login"
-#~ msgstr "Bij aanmelden"
+#. i18n: ectx: label, entry (loginMode), group (General)
+#: smserversettings.kcfg:22
+#, kde-format
+msgid "On login"
+msgstr "Bij aanmelden"
 
-#~ msgid "Applications to be excluded from session"
-#~ msgstr "Uit te sluiten toepassingen van sessie"
+#. i18n: ectx: label, entry (excludeApps), group (General)
+#: smserversettings.kcfg:26
+#, kde-format
+msgid "Applications to be excluded from session"
+msgstr "Uit te sluiten toepassingen van sessie"
 
 #~ msgid "Default option:"
 #~ msgstr "Standaardoptie:"

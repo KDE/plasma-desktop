@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_activities\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2024-01-25 14:59+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -17,6 +17,30 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "X-Generator: Lokalize 23.08.4\n"
+
+#. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:10
+#, kde-format
+msgid "How many months keep the activity history"
+msgstr "アクティビティの履歴を残す期間"
+
+#. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:17
+#, kde-format
+msgid "Which data to keep in activity history"
+msgstr "アクティビティの履歴を残すデータの種類"
+
+#. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:21
+#, kde-format
+msgid "List of Applications whose activity history to save"
+msgstr "アクティビティの履歴を保存するアプリケーションのリスト"
+
+#. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
+#: kactivitymanagerd_plugins_settings.kcfg:24
+#, kde-format
+msgid "List of Applications whose activity history not to save"
+msgstr "アクティビティの履歴を保存しないアプリケーションのリスト"
 
 #: kcm_recentFiles.cpp:64
 #, kde-format
@@ -57,38 +81,50 @@ msgctxt "for in 'keep history for 5 months'"
 msgid "For "
 msgstr " "
 
-#~ msgid "How many months keep the activity history"
-#~ msgstr "アクティビティの履歴を残す期間"
+#. i18n: ectx: property (text), widget (KMessageWidget, messageWidget)
+#: ui/RecentFiles.ui:17
+#, kde-format
+msgid "Cleared the activity history."
+msgstr "アクティビティの履歴を消去しました。"
 
-#~ msgid "Which data to keep in activity history"
-#~ msgstr "アクティビティの履歴を残すデータの種類"
+#. i18n: ectx: property (text), widget (QLabel, labelKeepHistory)
+#: ui/RecentFiles.ui:36
+#, kde-format
+msgid "Keep history:"
+msgstr "履歴を残す:"
 
-#~ msgid "List of Applications whose activity history to save"
-#~ msgstr "アクティビティの履歴を保存するアプリケーションのリスト"
+#. i18n: ectx: property (text), widget (QPushButton, buttonClearRecentHistory)
+#: ui/RecentFiles.ui:48
+#, kde-format
+msgid "Clear History"
+msgstr "履歴を消去"
 
-#~ msgid "List of Applications whose activity history not to save"
-#~ msgstr "アクティビティの履歴を保存しないアプリケーションのリスト"
+#. i18n: ectx: property (text), widget (QRadioButton, radioRememberAllApplications)
+#: ui/RecentFiles.ui:70
+#, kde-format
+msgid "For a&ll applications"
+msgstr "すべてのアプリケーション(&L)"
 
-#~ msgid "Cleared the activity history."
-#~ msgstr "アクティビティの履歴を消去しました。"
+#. i18n: ectx: property (text), widget (QRadioButton, radioDontRememberApplications)
+#: ui/RecentFiles.ui:80
+#, kde-format
+msgid "&Do not remember"
+msgstr "記憶しない(&D)"
 
-#~ msgid "Keep history:"
-#~ msgstr "履歴を残す:"
+#. i18n: ectx: property (text), widget (QRadioButton, radioRememberSpecificApplications)
+#: ui/RecentFiles.ui:87
+#, kde-format
+msgid "O&nly for specific applications:"
+msgstr "指定されたアプリケーションのみ(&N):"
 
-#~ msgid "Clear History"
-#~ msgstr "履歴を消去"
+#. i18n: ectx: property (text), widget (QLabel, labelRememberDocuments)
+#: ui/RecentFiles.ui:97
+#, kde-format
+msgid "Remember opened documents:"
+msgstr "開かれた文書を記憶する:"
 
-#~ msgid "For a&ll applications"
-#~ msgstr "すべてのアプリケーション(&L)"
-
-#~ msgid "&Do not remember"
-#~ msgstr "記憶しない(&D)"
-
-#~ msgid "O&nly for specific applications:"
-#~ msgstr "指定されたアプリケーションのみ(&N):"
-
-#~ msgid "Remember opened documents:"
-#~ msgstr "開かれた文書を記憶する:"
-
-#~ msgid "Blacklist applications not on the list"
-#~ msgstr "リストにないアプリケーションをブラックリストに追加"
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_blockedByDefault)
+#: ui/RecentFiles.ui:130
+#, kde-format
+msgid "Blacklist applications not on the list"
+msgstr "リストにないアプリケーションをブラックリストに追加"

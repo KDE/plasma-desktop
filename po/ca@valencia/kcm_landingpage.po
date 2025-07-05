@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-02-12 10:54+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -19,6 +19,38 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 "X-Generator: Lokalize 20.12.0\n"
+
+#. i18n: ectx: label, entry (colorScheme), group (General)
+#: landingpage_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Color scheme name"
+msgstr "Nom de l'esquema de color"
+
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:15
+#, kde-format
+msgid "Single click to open files"
+msgstr "Clic únic per a obrir fitxers"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:19
+#, kde-format
+msgid "Global Look and Feel package"
+msgstr "Paquet d'aspecte i comportament global"
+
+#. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
+#. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:23
+#: landingpage_kdeglobalssettings.kcfg:27
+#, kde-format
+msgid "Global Look and Feel package, alternate"
+msgstr "Paquet d'aspecte i comportament global, alternatiu"
+
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:31
+#, kde-format
+msgid "Animation speed"
+msgstr "Velocitat de l'animació"
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -90,18 +122,3 @@ msgstr "Més opcions de comportament…"
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "Pàgines més utilitzades:"
-
-#~ msgid "Color scheme name"
-#~ msgstr "Nom de l'esquema de color"
-
-#~ msgid "Single click to open files"
-#~ msgstr "Clic únic per a obrir fitxers"
-
-#~ msgid "Global Look and Feel package"
-#~ msgstr "Paquet d'aspecte i comportament global"
-
-#~ msgid "Global Look and Feel package, alternate"
-#~ msgstr "Paquet d'aspecte i comportament global, alternatiu"
-
-#~ msgid "Animation speed"
-#~ msgstr "Velocitat de l'animació"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_device_automounter\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-12-10 19:49+0000\n"
 "Last-Translator: gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -61,6 +61,67 @@ msgstr "Kai Uwe Broulik"
 #, kde-format
 msgid "Plasma 5 Port"
 msgstr "Aðlögun að Plasma 5"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, kde-format
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"Þetta er listi yfir öll geymslutæki sem kerfið þekkir. Ef hakað er við "
+"\"Tengja við innskráningu\" verður tækið sjálfkrafa tengt jafnvel þótt ekki "
+"sé hakað við \"Tengja öll útskiptanleg tæki við innskráningu\". Það sama á "
+"við um \"Tengja þegar tæki er sett í samband\"."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"Ef smellt er á þennan hnapp \"gleymir\" tölvan völdum tækjum. Þetta virkar "
+"bara ef hakað er við \"Aðeins tengja sjálfvirkt útskiptanlegt tæki sem hefur "
+"verið tengd handvirkt áður\". Þegar tæki er gleymt og  kerfið er sett upp "
+"til að einungis tengja sjálfvirkt þekkt tæki, þá verður tækið ekki tengt "
+"sjálfkrafa inn í skráakerfið."
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "Gleyma tæki"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, kde-format
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"Þegar ekki er hakað er við þetta verða aðeins tæki sem munað er eftir tengd "
+"sjálfvirkt inn í skráakerfi. Munað er eftir tæki ef það hefur verið tengt "
+"einhvern tímann áður. Til dæmis er ekki nóg að tengja USB-spilara til að "
+"hlaða rafhlöðuna til að kerfið muni eftir honum; ef skrár á honum hafa ekki "
+"verið lesnar tengist hann ekki sjálfvirkt í skráakerfið næst þegar hannsést. "
+"Ef skrár á honum hafa verið lesnar áður verður efni á spilaranum sjálfkrafa "
+"aðgengilegt í kerfinu."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, kde-format
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr "Tengja sjálfkrafa útskiptanleg tæki sem hafa ekki tengst áður"
 
 #: DeviceModel.cpp:52
 #, kde-format
@@ -123,54 +184,6 @@ msgstr "Þetta tæki verður tengt sjálfkrafa þegar það er sett í samband."
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "Þetta tæki verður ekki tengt sjálfkrafa þegar það er sett í samband."
-
-#~ msgid ""
-#~ "This list contains the storage devices known to the system. If "
-#~ "\"Automount on Login\" is checked, the device will be automatically "
-#~ "mounted even though \"Mount all removable media at login\" is unchecked. "
-#~ "The same applies for \"Automount on Attach\"."
-#~ msgstr ""
-#~ "Þetta er listi yfir öll geymslutæki sem kerfið þekkir. Ef hakað er við "
-#~ "\"Tengja við innskráningu\" verður tækið sjálfkrafa tengt jafnvel þótt "
-#~ "ekki sé hakað við \"Tengja öll útskiptanleg tæki við innskráningu\". Það "
-#~ "sama á við um \"Tengja þegar tæki er sett í samband\"."
-
-#~ msgid ""
-#~ "Clicking this button causes the selected devices to be 'forgotten'. This "
-#~ "is only useful if \"Only automatically mount removable media that has "
-#~ "been manually mounted before\" is checked. Once a device is forgotten and "
-#~ "the system is set to only automatically mount familiar devices, the "
-#~ "device will not be automatically mounted."
-#~ msgstr ""
-#~ "Ef smellt er á þennan hnapp \"gleymir\" tölvan völdum tækjum. Þetta "
-#~ "virkar bara ef hakað er við \"Aðeins tengja sjálfvirkt útskiptanlegt tæki "
-#~ "sem hefur verið tengd handvirkt áður\". Þegar tæki er gleymt og  kerfið "
-#~ "er sett upp til að einungis tengja sjálfvirkt þekkt tæki, þá verður tækið "
-#~ "ekki tengt sjálfkrafa inn í skráakerfið."
-
-#~ msgid "Forget Device"
-#~ msgstr "Gleyma tæki"
-
-#~ msgid ""
-#~ "When this is not checked, only remembered devices will be automatically "
-#~ "mounted. A device is 'remembered' if it has ever been mounted before. For "
-#~ "instance, plugging in a USB media player to charge is not sufficient to "
-#~ "'remember' it - if the files are not accessed, it will not be "
-#~ "automatically mounted the next time it is seen. Once they have been "
-#~ "accessed, however, the device's contents will be automatically made "
-#~ "available to the system."
-#~ msgstr ""
-#~ "Þegar ekki er hakað er við þetta verða aðeins tæki sem munað er eftir "
-#~ "tengd sjálfvirkt inn í skráakerfi. Munað er eftir tæki ef það hefur verið "
-#~ "tengt einhvern tímann áður. Til dæmis er ekki nóg að tengja USB-spilara "
-#~ "til að hlaða rafhlöðuna til að kerfið muni eftir honum; ef skrár á honum "
-#~ "hafa ekki verið lesnar tengist hann ekki sjálfvirkt í skráakerfið næst "
-#~ "þegar hannsést. Ef skrár á honum hafa verið lesnar áður verður efni á "
-#~ "spilaranum sjálfkrafa aðgengilegt í kerfinu."
-
-#~ msgid ""
-#~ "Automatically mount removable media that have never been mounted before"
-#~ msgstr "Tengja sjálfkrafa útskiptanleg tæki sem hafa ekki tengst áður"
 
 #~ msgid ""
 #~ "If any removable storage devices are connected to your system when you "

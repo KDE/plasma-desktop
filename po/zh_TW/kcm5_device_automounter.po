@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-06-29 12:32+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -60,6 +60,61 @@ msgstr "Kai Uwe Broulik"
 #, kde-format
 msgid "Plasma 5 Port"
 msgstr "移植到 Plasma 5"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, kde-format
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"這個清單包含了系統認識的儲存裝置。若是勾選了「登入時自動掛載」，則即使您未勾"
+"選「登入時掛載所有可移除媒體」，它還是會自動掛載。相同的，「連上時自動掛載」"
+"也是一樣的作法。"
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"點擊此按鍵會丟棄選取裝置的資訊。這只在「只自動掛載過去曾手動掛載過的可移除媒"
+"體」被勾選的狀況下才有用。當裝置資訊被丟棄，而系統被設定成只自動掛載認識的裝"
+"置時，該裝置將不會被自動掛載。"
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "忘掉裝置"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, kde-format
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"當此選項未勾選，只有記得的裝置會被自動掛載。「記住」此裝置表示該裝置以前有被"
+"掛載過。也就是說，光是插入一個 USB 碟是不足以讓它被「記住」的。若是沒有存取任"
+"何檔案，則下次將它插入電腦時不會自動掛載。不過，只要有存取檔案，之後裝置將被"
+"自動掛載，讓它的內容可以在系統上使用。"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, kde-format
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr "自動掛載從未掛載過的可移除媒體"
 
 #: DeviceModel.cpp:52
 #, kde-format
@@ -122,48 +177,6 @@ msgstr "此裝置會在插入時自動掛載。"
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "此裝置不會在插入時自動掛載。"
-
-#~ msgid ""
-#~ "This list contains the storage devices known to the system. If "
-#~ "\"Automount on Login\" is checked, the device will be automatically "
-#~ "mounted even though \"Mount all removable media at login\" is unchecked. "
-#~ "The same applies for \"Automount on Attach\"."
-#~ msgstr ""
-#~ "這個清單包含了系統認識的儲存裝置。若是勾選了「登入時自動掛載」，則即使您未"
-#~ "勾選「登入時掛載所有可移除媒體」，它還是會自動掛載。相同的，「連上時自動掛"
-#~ "載」也是一樣的作法。"
-
-#~ msgid ""
-#~ "Clicking this button causes the selected devices to be 'forgotten'. This "
-#~ "is only useful if \"Only automatically mount removable media that has "
-#~ "been manually mounted before\" is checked. Once a device is forgotten and "
-#~ "the system is set to only automatically mount familiar devices, the "
-#~ "device will not be automatically mounted."
-#~ msgstr ""
-#~ "點擊此按鍵會丟棄選取裝置的資訊。這只在「只自動掛載過去曾手動掛載過的可移除"
-#~ "媒體」被勾選的狀況下才有用。當裝置資訊被丟棄，而系統被設定成只自動掛載認識"
-#~ "的裝置時，該裝置將不會被自動掛載。"
-
-#~ msgid "Forget Device"
-#~ msgstr "忘掉裝置"
-
-#~ msgid ""
-#~ "When this is not checked, only remembered devices will be automatically "
-#~ "mounted. A device is 'remembered' if it has ever been mounted before. For "
-#~ "instance, plugging in a USB media player to charge is not sufficient to "
-#~ "'remember' it - if the files are not accessed, it will not be "
-#~ "automatically mounted the next time it is seen. Once they have been "
-#~ "accessed, however, the device's contents will be automatically made "
-#~ "available to the system."
-#~ msgstr ""
-#~ "當此選項未勾選，只有記得的裝置會被自動掛載。「記住」此裝置表示該裝置以前有"
-#~ "被掛載過。也就是說，光是插入一個 USB 碟是不足以讓它被「記住」的。若是沒有"
-#~ "存取任何檔案，則下次將它插入電腦時不會自動掛載。不過，只要有存取檔案，之後"
-#~ "裝置將被自動掛載，讓它的內容可以在系統上使用。"
-
-#~ msgid ""
-#~ "Automatically mount removable media that have never been mounted before"
-#~ msgstr "自動掛載從未掛載過的可移除媒體"
 
 #~ msgid ""
 #~ "If any removable storage devices are connected to your system when you "

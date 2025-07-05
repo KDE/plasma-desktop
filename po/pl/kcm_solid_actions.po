@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-06-06 07:09+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -48,6 +48,133 @@ msgstr ""
 #, kde-format
 msgid "Invalid action"
 msgstr "Niepoprawne działanie"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
+#: ActionEditor.ui:17
+#, kde-format
+msgid "Edit Parameter"
+msgstr "Edytuj parametr"
+
+#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
+#: ActionEditor.ui:43
+#, kde-format
+msgid "Parameter type:"
+msgstr "Rodzaj parametru:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:51
+#, kde-format
+msgid "Property Match"
+msgstr "Właściwość pasuje"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:56
+#, kde-format
+msgid "Content Conjunction"
+msgstr "Koniunkcja treści"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:61
+#, kde-format
+msgid "Content Disjunction"
+msgstr "Dysjunkcja treści"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:66
+#, kde-format
+msgid "Device Interface Match"
+msgstr "Interfejsu urządzenia pasuje"
+
+#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
+#: ActionEditor.ui:96
+#, kde-format
+msgid "Device type:"
+msgstr "Rodzaj urządzenia:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblValueName)
+#: ActionEditor.ui:135
+#, kde-format
+msgid "Value name:"
+msgstr "Nazwa wartości:"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:175
+#, kde-format
+msgid "Equals"
+msgstr "Równa się"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:180
+#, kde-format
+msgid "Contains"
+msgstr "Zawiera"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
+#: ActionEditor.ui:208
+#, kde-format
+msgid "Reset Parameter"
+msgstr "Wyzeruj parametr"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
+#: ActionEditor.ui:215
+#, kde-format
+msgid "Save Parameter Changes"
+msgstr "Wprowadź zmianę parametru"
+
+#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
+#: ActionEditor.ui:247
+#, kde-format
+msgid "Action icon, click to change it"
+msgstr "Ikona działania; kliknij, aby zmienić"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
+#: ActionEditor.ui:254
+#, kde-format
+msgid "Action name"
+msgstr "Nazwa działania"
+
+#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
+#: ActionEditor.ui:271
+#, kde-format
+msgid "Command: "
+msgstr "Polecenie:"
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
+#: ActionEditor.ui:283
+#, no-c-format, kde-format
+msgid ""
+"Command that will trigger the action\n"
+"This can include any or all of the following case insensitive expands:\n"
+"\n"
+"%f: The mountpoint for the device - Storage Access devices only\n"
+"%d: Path to the device node - Block devices only\n"
+"%i: The identifier of the device"
+msgstr ""
+"Polecenie, które wywoła działanie\n"
+"Może zawierać jeden lub wszystkie rozszerzenia bez rozróżniania wielkości "
+"liter\"\n"
+"\n"
+"%f: Punkt montowania urządzenia - tylko nośniki danych\n"
+"%d: Ścieżka do węzła urządzenia: tylko urządzenia blokowe\n"
+"%i: Identyfikator urządzenia"
+
+#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
+#: ActionEditor.ui:300
+#, kde-format
+msgid "Devices must match the following parameters for this action:"
+msgstr "Urządzenia muszą spełniać poniższe warunki dla tego działania:"
+
+#. i18n: ectx: property (text), widget (QLabel, LblActionName)
+#: AddAction.ui:19
+#, kde-format
+msgid "Action name:"
+msgstr "Nazwa działania:"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
+#: AddAction.ui:26
+#, kde-format
+msgid "Enter the name for your new action"
+msgstr "Podaj nazwę nowego działania"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -144,84 +271,23 @@ msgstr "Nie wybrano żadnego działania"
 msgid "Cannot be deleted"
 msgstr "Nie można usunąć"
 
-#~ msgid "Edit Parameter"
-#~ msgstr "Edytuj parametr"
+#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
+#: SolidActions.ui:22
+#, kde-format
+msgid "Remove"
+msgstr "Usuń"
 
-#~ msgid "Parameter type:"
-#~ msgstr "Rodzaj parametru:"
+#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
+#: SolidActions.ui:29
+#, kde-format
+msgid "Edit…"
+msgstr "Edytuj…"
 
-#~ msgid "Property Match"
-#~ msgstr "Właściwość pasuje"
-
-#~ msgid "Content Conjunction"
-#~ msgstr "Koniunkcja treści"
-
-#~ msgid "Content Disjunction"
-#~ msgstr "Dysjunkcja treści"
-
-#~ msgid "Device Interface Match"
-#~ msgstr "Interfejsu urządzenia pasuje"
-
-#~ msgid "Device type:"
-#~ msgstr "Rodzaj urządzenia:"
-
-#~ msgid "Value name:"
-#~ msgstr "Nazwa wartości:"
-
-#~ msgid "Equals"
-#~ msgstr "Równa się"
-
-#~ msgid "Contains"
-#~ msgstr "Zawiera"
-
-#~ msgid "Reset Parameter"
-#~ msgstr "Wyzeruj parametr"
-
-#~ msgid "Save Parameter Changes"
-#~ msgstr "Wprowadź zmianę parametru"
-
-#~ msgid "Action icon, click to change it"
-#~ msgstr "Ikona działania; kliknij, aby zmienić"
-
-#~ msgid "Action name"
-#~ msgstr "Nazwa działania"
-
-#~ msgid "Command: "
-#~ msgstr "Polecenie:"
-
-#~ msgid ""
-#~ "Command that will trigger the action\n"
-#~ "This can include any or all of the following case insensitive expands:\n"
-#~ "\n"
-#~ "%f: The mountpoint for the device - Storage Access devices only\n"
-#~ "%d: Path to the device node - Block devices only\n"
-#~ "%i: The identifier of the device"
-#~ msgstr ""
-#~ "Polecenie, które wywoła działanie\n"
-#~ "Może zawierać jeden lub wszystkie rozszerzenia bez rozróżniania wielkości "
-#~ "liter\"\n"
-#~ "\n"
-#~ "%f: Punkt montowania urządzenia - tylko nośniki danych\n"
-#~ "%d: Ścieżka do węzła urządzenia: tylko urządzenia blokowe\n"
-#~ "%i: Identyfikator urządzenia"
-
-#~ msgid "Devices must match the following parameters for this action:"
-#~ msgstr "Urządzenia muszą spełniać poniższe warunki dla tego działania:"
-
-#~ msgid "Action name:"
-#~ msgstr "Nazwa działania:"
-
-#~ msgid "Enter the name for your new action"
-#~ msgstr "Podaj nazwę nowego działania"
-
-#~ msgid "Remove"
-#~ msgstr "Usuń"
-
-#~ msgid "Edit…"
-#~ msgstr "Edytuj…"
-
-#~ msgid "Add…"
-#~ msgstr "Dodaj…"
+#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
+#: SolidActions.ui:36
+#, kde-format
+msgid "Add…"
+msgstr "Dodaj…"
 
 #~ msgid "Edit..."
 #~ msgstr "Edytuj..."

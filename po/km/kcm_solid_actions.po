@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2012-06-13 15:41+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -49,6 +49,132 @@ msgstr ""
 #, kde-format
 msgid "Invalid action"
 msgstr "សកម្មភាព​មិន​ត្រឹមត្រូវ"
+
+#. i18n: ectx: property (title), widget (QGroupBox, GbParameter)
+#: ActionEditor.ui:17
+#, kde-format
+msgid "Edit Parameter"
+msgstr "កែសម្រួល​ប៉ារ៉ាម៉ែត្រ"
+
+#. i18n: ectx: property (text), widget (QLabel, LblParameterType)
+#: ActionEditor.ui:43
+#, kde-format
+msgid "Parameter type:"
+msgstr "ប្រភេទ​ប៉ារ៉ាម៉ែត្រ ៖"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:51
+#, kde-format
+msgid "Property Match"
+msgstr "ការ​ផ្គូផ្គង​លក្ខណសម្បត្តិ"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:56
+#, kde-format
+msgid "Content Conjunction"
+msgstr "កា​រភ្ជាប់​មាតិកា"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:61
+#, kde-format
+msgid "Content Disjunction"
+msgstr "ផ្ដាច់​មាតិកា"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
+#: ActionEditor.ui:66
+#, kde-format
+msgid "Device Interface Match"
+msgstr "ផ្គូផ្គង​ចំណុច​ប្រទាក់​ឧបករណ៍"
+
+#. i18n: ectx: property (text), widget (QLabel, LblDeviceType)
+#: ActionEditor.ui:96
+#, kde-format
+msgid "Device type:"
+msgstr "ប្រភេទ​ឧបករណ៍ ៖"
+
+#. i18n: ectx: property (text), widget (QLabel, LblValueName)
+#: ActionEditor.ui:135
+#, kde-format
+msgid "Value name:"
+msgstr "ឈ្មោះ​តម្លៃ ៖"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:175
+#, kde-format
+msgid "Equals"
+msgstr "ស្មើ"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
+#: ActionEditor.ui:180
+#, kde-format
+msgid "Contains"
+msgstr "មាន"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterReset)
+#: ActionEditor.ui:208
+#, kde-format
+msgid "Reset Parameter"
+msgstr "កំណត់ប៉ារ៉ាម៉ែត្រ​ឡើង​វិញ"
+
+#. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
+#: ActionEditor.ui:215
+#, kde-format
+msgid "Save Parameter Changes"
+msgstr "រក្សា​ទុក​ការ​ផ្លាស់ប្ដូរ​ប៉ារ៉ាម៉ែត្រ"
+
+#. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
+#: ActionEditor.ui:247
+#, kde-format
+msgid "Action icon, click to change it"
+msgstr "រូបតំណាង​សកម្មភាព ចុច​ដើម្បី​ផ្លាស់ប្ដូរ​វា"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
+#: ActionEditor.ui:254
+#, kde-format
+msgid "Action name"
+msgstr "ឈ្មោះ​សកម្មភាព"
+
+#. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
+#: ActionEditor.ui:271
+#, kde-format
+msgid "Command: "
+msgstr "ពាក្យ​បញ្ជា ៖"
+
+#. i18n: ectx: property (toolTip), widget (KUrlRequester, LeActionCommand)
+#: ActionEditor.ui:283
+#, no-c-format, kde-format
+msgid ""
+"Command that will trigger the action\n"
+"This can include any or all of the following case insensitive expands:\n"
+"\n"
+"%f: The mountpoint for the device - Storage Access devices only\n"
+"%d: Path to the device node - Block devices only\n"
+"%i: The identifier of the device"
+msgstr ""
+"ពាក្យ​បញ្ជា​ដែល​នឹង​កេះ​សកម្មភាព\n"
+"វា​អាច​រួម​បញ្ចូល​ការ​ពង្រីក​អក្សរតូចធំ​ដូច​ខាងក្រោម ៖\n"
+"\n"
+"%f: ចំណុច​ម៉ោន​សម្រាប់​ឧបករណ៍ - អាច​ចូលដំណើរការ​ឧបករណ៍​​នៃ​ការ​ផ្ទុក​\n"
+"%d: ផ្លូវ​ទៅ​ថ្នាំង​ឧបករណ៍ - ទប់ស្កាត់​តែ​ឧបករណ៍​ប៉ុណ្ណោះ\n"
+"%i: ឧបករណ៍​កំណត់​អត្តសញ្ញាណ​របស់​ឧបករណ៍"
+
+#. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
+#: ActionEditor.ui:300
+#, kde-format
+msgid "Devices must match the following parameters for this action:"
+msgstr "ឧបករណ៍​ត្រូវ​តែ​ផ្គូផ្គង​ប៉ារ៉ាម៉ែត្រ​ដូច​ខាងក្រោម​សម្រាប់​សកម្មភាព​នេះ ៖"
+
+#. i18n: ectx: property (text), widget (QLabel, LblActionName)
+#: AddAction.ui:19
+#, kde-format
+msgid "Action name:"
+msgstr "ឈ្មោះ​សកម្មភាព ៖"
+
+#. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionName)
+#: AddAction.ui:26
+#, kde-format
+msgid "Enter the name for your new action"
+msgstr "បញ្ចូល​ឈ្មោះ​សម្រាប់​សកម្មភាព​ថ្មី​របស់​អ្នក"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -143,77 +269,23 @@ msgstr "គ្មាន​សកម្មភាព​បាន​ជ្រើស
 msgid "Cannot be deleted"
 msgstr "មិនអាច​ត្រូ​វបានលុប​ទេ"
 
-#~ msgid "Edit Parameter"
-#~ msgstr "កែសម្រួល​ប៉ារ៉ាម៉ែត្រ"
+#. i18n: ectx: property (text), widget (QPushButton, PbDeleteAction)
+#: SolidActions.ui:22
+#, kde-format
+msgid "Remove"
+msgstr "យក​​ចេញ"
 
-#~ msgid "Parameter type:"
-#~ msgstr "ប្រភេទ​ប៉ារ៉ាម៉ែត្រ ៖"
+#. i18n: ectx: property (text), widget (QPushButton, PbEditAction)
+#: SolidActions.ui:29
+#, kde-format
+msgid "Edit…"
+msgstr ""
 
-#~ msgid "Property Match"
-#~ msgstr "ការ​ផ្គូផ្គង​លក្ខណសម្បត្តិ"
-
-#~ msgid "Content Conjunction"
-#~ msgstr "កា​រភ្ជាប់​មាតិកា"
-
-#~ msgid "Content Disjunction"
-#~ msgstr "ផ្ដាច់​មាតិកា"
-
-#~ msgid "Device Interface Match"
-#~ msgstr "ផ្គូផ្គង​ចំណុច​ប្រទាក់​ឧបករណ៍"
-
-#~ msgid "Device type:"
-#~ msgstr "ប្រភេទ​ឧបករណ៍ ៖"
-
-#~ msgid "Value name:"
-#~ msgstr "ឈ្មោះ​តម្លៃ ៖"
-
-#~ msgid "Equals"
-#~ msgstr "ស្មើ"
-
-#~ msgid "Contains"
-#~ msgstr "មាន"
-
-#~ msgid "Reset Parameter"
-#~ msgstr "កំណត់ប៉ារ៉ាម៉ែត្រ​ឡើង​វិញ"
-
-#~ msgid "Save Parameter Changes"
-#~ msgstr "រក្សា​ទុក​ការ​ផ្លាស់ប្ដូរ​ប៉ារ៉ាម៉ែត្រ"
-
-#~ msgid "Action icon, click to change it"
-#~ msgstr "រូបតំណាង​សកម្មភាព ចុច​ដើម្បី​ផ្លាស់ប្ដូរ​វា"
-
-#~ msgid "Action name"
-#~ msgstr "ឈ្មោះ​សកម្មភាព"
-
-#~ msgid "Command: "
-#~ msgstr "ពាក្យ​បញ្ជា ៖"
-
-#~ msgid ""
-#~ "Command that will trigger the action\n"
-#~ "This can include any or all of the following case insensitive expands:\n"
-#~ "\n"
-#~ "%f: The mountpoint for the device - Storage Access devices only\n"
-#~ "%d: Path to the device node - Block devices only\n"
-#~ "%i: The identifier of the device"
-#~ msgstr ""
-#~ "ពាក្យ​បញ្ជា​ដែល​នឹង​កេះ​សកម្មភាព\n"
-#~ "វា​អាច​រួម​បញ្ចូល​ការ​ពង្រីក​អក្សរតូចធំ​ដូច​ខាងក្រោម ៖\n"
-#~ "\n"
-#~ "%f: ចំណុច​ម៉ោន​សម្រាប់​ឧបករណ៍ - អាច​ចូលដំណើរការ​ឧបករណ៍​​នៃ​ការ​ផ្ទុក​\n"
-#~ "%d: ផ្លូវ​ទៅ​ថ្នាំង​ឧបករណ៍ - ទប់ស្កាត់​តែ​ឧបករណ៍​ប៉ុណ្ណោះ\n"
-#~ "%i: ឧបករណ៍​កំណត់​អត្តសញ្ញាណ​របស់​ឧបករណ៍"
-
-#~ msgid "Devices must match the following parameters for this action:"
-#~ msgstr "ឧបករណ៍​ត្រូវ​តែ​ផ្គូផ្គង​ប៉ារ៉ាម៉ែត្រ​ដូច​ខាងក្រោម​សម្រាប់​សកម្មភាព​នេះ ៖"
-
-#~ msgid "Action name:"
-#~ msgstr "ឈ្មោះ​សកម្មភាព ៖"
-
-#~ msgid "Enter the name for your new action"
-#~ msgstr "បញ្ចូល​ឈ្មោះ​សម្រាប់​សកម្មភាព​ថ្មី​របស់​អ្នក"
-
-#~ msgid "Remove"
-#~ msgstr "យក​​ចេញ"
+#. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
+#: SolidActions.ui:36
+#, kde-format
+msgid "Add…"
+msgstr ""
 
 #~ msgid "Edit..."
 #~ msgstr "កែសម្រួល..."

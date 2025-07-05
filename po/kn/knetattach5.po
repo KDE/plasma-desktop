@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: knetattach\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2007-09-10 22:50+0530\n"
 "Last-Translator: Mahesh <mahesh@pal.ece.iisc.ernet.in>\n"
 "Language-Team:  <en@li.org>\n"
@@ -89,6 +89,117 @@ msgstr "ಉಳಿಸು ಮತ್ತು (&ಸ)ಸಂಪರ್ಕಿಸು"
 msgid "C&onnect"
 msgstr "ಸಂ&ಪರ್ಕಿಸು"
 
+#. i18n: ectx: property (windowTitle), widget (QWizard, KNetAttach)
+#: knetattach.ui:14
+#, kde-format
+msgid "Network Folder Wizard"
+msgstr "ಜಾಲ ಕಡತ ಕೋಶದ ಮಾಂತ್ರಿಕ"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderType)
+#: knetattach.ui:18
+#, kde-format
+msgid "Add Network Folder"
+msgstr "ಜಾಲಧ ಕಡತ ಕೋಶವನ್ನು ಸೇರಿಸು"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: knetattach.ui:24
+#, kde-format
+msgid ""
+"Select the type of network folder you wish to connect to and press the Next "
+"button."
+msgstr ""
+"ನೀವು ಸಂಪರ್ಕಿಸಲಿಚ್ಛಿಸುವ ಜಾಲಧ ಕಡತ ಕದದ ಶವರ್ಗವನ್ನು ಆಯ್ಕೆಮಾಡಿ 'ಮುಂದೆ' ಗುಂಡಿಯನ್ನು ಅದುಮಿ."
+
+#. i18n: ectx: property (text), widget (QRadioButton, _recent)
+#: knetattach.ui:65
+#, kde-format
+msgid "&Recent connection:"
+msgstr "ಇ(&ತ)ತ್ತೀಚೆಗಿನ ಸಂಪರ್ಕ:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _webfolder)
+#: knetattach.ui:72
+#, kde-format
+msgid "&WebFolder (webdav)"
+msgstr "ಅಂ&ತರ್ಜಾಲ ಕಡತ ಕೋಶ "
+
+#. i18n: ectx: property (text), widget (QRadioButton, _fish)
+#: knetattach.ui:82
+#, kde-format
+msgid "&Secure shell (ssh)"
+msgstr "(&ಸ)ಸುಭದ್ರ ಆದೇಶಗ್ರಾಹಿ (ssh)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _ftp)
+#: knetattach.ui:111
+#, kde-format
+msgid "FT&P"
+msgstr "ಕಡತ ವರ್ಗಾವಣೆ ಪ್ರಕ್ರ&ಮ"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _smb)
+#: knetattach.ui:118
+#, kde-format
+msgid "&Microsoft® Windows® network drive"
+msgstr "&Microsoft® Windows® ಜಾಲ ಚಾಲಕ"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderParameters)
+#: knetattach.ui:145
+#, kde-format
+msgid "Network Folder Information"
+msgstr "ಜಾಲಧ ಕಡತ ಕೋಶದ ಮಾಹಿತಿ"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel4_2)
+#: knetattach.ui:177
+#, kde-format
+msgid "&Name:"
+msgstr "(&ಹ)ಹೆಸರು:"
+
+#. i18n: ectx: property (text), widget (QLabel, _userText)
+#: knetattach.ui:196
+#, kde-format
+msgid "&User:"
+msgstr "&ಬಳಕೆದಾರ:"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: knetattach.ui:222
+#, kde-format
+msgid "Se&rver:"
+msgstr "&ಪರಿಚಾರಕ:"
+
+#. i18n: ectx: property (text), widget (QLabel, _portText)
+#: knetattach.ui:248
+#, kde-format
+msgid "&Port:"
+msgstr "ಸಂ&ಪರ್ಕ ಕಿಂಡಿ:"
+
+#. i18n: ectx: property (text), widget (QLabel, _protocol)
+#: knetattach.ui:283
+#, kde-format
+msgid "&Protocol:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: knetattach.ui:313
+#, kde-format
+msgid "&Folder:"
+msgstr "&ಕಡತ ಕೋಶ:"
+
+#. i18n: ectx: property (text), widget (QLabel, _encodingText)
+#: knetattach.ui:335
+#, kde-format
+msgid "Encoding:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, _createIcon)
+#: knetattach.ui:351
+#, kde-format
+msgid "Cr&eate an icon for this remote folder"
+msgstr "ಈ ದೂರಸ್ಥ ಕಡತ ಕೋಶದ ಚಿಹ್ನೆಯನ್ನು ಸೃಷ್ಟಿ(&ಸ)ಸು"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _useEncryption)
+#: knetattach.ui:361
+#, kde-format
+msgid "&Use encryption"
+msgstr "ಗೂಢ (&ಲ)ಲಿಪೀಕರಣವನ್ನುಪಯೋಗಿಸು"
+
 #: main.cpp:21 main.cpp:23
 #, kde-format
 msgid "KDE Network Wizard"
@@ -108,58 +219,6 @@ msgstr "George Staikos"
 #, kde-format
 msgid "Primary author and maintainer"
 msgstr "ಮುಖ್ಯ ಕರ್ತೃ ಮತ್ತು ಪಾಲಕ"
-
-#~ msgid "Network Folder Wizard"
-#~ msgstr "ಜಾಲ ಕಡತ ಕೋಶದ ಮಾಂತ್ರಿಕ"
-
-#~ msgid "Add Network Folder"
-#~ msgstr "ಜಾಲಧ ಕಡತ ಕೋಶವನ್ನು ಸೇರಿಸು"
-
-#~ msgid ""
-#~ "Select the type of network folder you wish to connect to and press the "
-#~ "Next button."
-#~ msgstr ""
-#~ "ನೀವು ಸಂಪರ್ಕಿಸಲಿಚ್ಛಿಸುವ ಜಾಲಧ ಕಡತ ಕದದ ಶವರ್ಗವನ್ನು ಆಯ್ಕೆಮಾಡಿ 'ಮುಂದೆ' ಗುಂಡಿಯನ್ನು "
-#~ "ಅದುಮಿ."
-
-#~ msgid "&Recent connection:"
-#~ msgstr "ಇ(&ತ)ತ್ತೀಚೆಗಿನ ಸಂಪರ್ಕ:"
-
-#~ msgid "&WebFolder (webdav)"
-#~ msgstr "ಅಂ&ತರ್ಜಾಲ ಕಡತ ಕೋಶ "
-
-#~ msgid "&Secure shell (ssh)"
-#~ msgstr "(&ಸ)ಸುಭದ್ರ ಆದೇಶಗ್ರಾಹಿ (ssh)"
-
-#~ msgid "FT&P"
-#~ msgstr "ಕಡತ ವರ್ಗಾವಣೆ ಪ್ರಕ್ರ&ಮ"
-
-#~ msgid "&Microsoft® Windows® network drive"
-#~ msgstr "&Microsoft® Windows® ಜಾಲ ಚಾಲಕ"
-
-#~ msgid "Network Folder Information"
-#~ msgstr "ಜಾಲಧ ಕಡತ ಕೋಶದ ಮಾಹಿತಿ"
-
-#~ msgid "&Name:"
-#~ msgstr "(&ಹ)ಹೆಸರು:"
-
-#~ msgid "&User:"
-#~ msgstr "&ಬಳಕೆದಾರ:"
-
-#~ msgid "Se&rver:"
-#~ msgstr "&ಪರಿಚಾರಕ:"
-
-#~ msgid "&Port:"
-#~ msgstr "ಸಂ&ಪರ್ಕ ಕಿಂಡಿ:"
-
-#~ msgid "&Folder:"
-#~ msgstr "&ಕಡತ ಕೋಶ:"
-
-#~ msgid "Cr&eate an icon for this remote folder"
-#~ msgstr "ಈ ದೂರಸ್ಥ ಕಡತ ಕೋಶದ ಚಿಹ್ನೆಯನ್ನು ಸೃಷ್ಟಿ(&ಸ)ಸು"
-
-#~ msgid "&Use encryption"
-#~ msgstr "ಗೂಢ (&ಲ)ಲಿಪೀಕರಣವನ್ನುಪಯೋಗಿಸು"
 
 #~ msgid ""
 #~ "Enter a name for this <i>%1</i> as well as the server address, port and "

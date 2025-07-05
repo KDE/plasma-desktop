@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmworkspaceoptions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-01-20 20:28+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -36,12 +36,14 @@ msgstr "Reštartovať"
 msgid "Visual behavior:"
 msgstr "Vizuálne správanie:"
 
-#: package/contents/ui/main.qml:51
+#. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
+#: package/contents/ui/main.qml:51 workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "Zobraziť informačné tipy pri prechode myšou"
 
-#: package/contents/ui/main.qml:62
+#. i18n: ectx: label, entry (osdEnabled), group (OSD)
+#: package/contents/ui/main.qml:62 workspaceoptions_plasmasettings.kcfg:15
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "Zobraziť vizuálnu odozvu pre zmeny stavu"
@@ -171,33 +173,57 @@ msgstr ""
 "V dotykovom režime sa mnohé prvky používateľského rozhrania zväčšia, aby sa "
 "ľahšie prispôsobili dotykovej interakcii."
 
-#~ msgid "Single click to open files"
-#~ msgstr "Jeden klik na otvorenie súborov"
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Single click to open files"
+msgstr "Jeden klik na otvorenie súborov"
 
-#~ msgid "Animation speed"
-#~ msgstr "Rýchlosť animácií"
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:13
+#, kde-format
+msgid "Animation speed"
+msgstr "Rýchlosť animácií"
 
-#~ msgid "Left-click in scrollbar track moves scrollbar by one page"
-#~ msgstr ""
-#~ "Kliknutie ľavým tlačidlom myši v stope posúvača posúva posúvač o jednu "
-#~ "stránku"
+#. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:17
+#, kde-format
+msgid "Left-click in scrollbar track moves scrollbar by one page"
+msgstr ""
+"Kliknutie ľavým tlačidlom myši v stope posúvača posúva posúvač o jednu "
+"stránku"
 
-#~ msgid "Automatically switch to touch-optimized mode"
-#~ msgstr "Automaticky prepnúť do dotykového režimu"
+#. i18n: ectx: label, entry (tabletMode), group (Input)
+#: workspaceoptions_kwinsettings.kcfg:9
+#, kde-format
+msgid "Automatically switch to touch-optimized mode"
+msgstr "Automaticky prepnúť do dotykového režimu"
 
-#~ msgid "Enable middle click selection pasting"
-#~ msgstr "Povoliť vkladanie výberu stredným tlačidlom"
+#. i18n: ectx: label, entry (primarySelection), group (Wayland)
+#: workspaceoptions_kwinsettings.kcfg:15
+#, kde-format
+msgid "Enable middle click selection pasting"
+msgstr "Povoliť vkladanie výberu stredným tlačidlom"
 
-#~ msgid ""
-#~ "Show an on-screen display to indicate status changes such as brightness "
-#~ "or volume"
-#~ msgstr "Zobraziť OSD pre indikáciu zmeny stavu ako jas a hlasitosť."
+#. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:16
+#, kde-format
+msgid ""
+"Show an on-screen display to indicate status changes such as brightness or "
+"volume"
+msgstr "Zobraziť OSD pre indikáciu zmeny stavu ako jas a hlasitosť."
 
-#~ msgid "OSD on layout change"
-#~ msgstr "OSD pri zmene rozloženia"
+#. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:20
+#, kde-format
+msgid "OSD on layout change"
+msgstr "OSD pri zmene rozloženia"
 
-#~ msgid "Show a popup on layout changes"
-#~ msgstr "Zobraziť vyskakovacie okno pri zmene rozloženia"
+#. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:21
+#, kde-format
+msgid "Show a popup on layout changes"
+msgstr "Zobraziť vyskakovacie okno pri zmene rozloženia"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

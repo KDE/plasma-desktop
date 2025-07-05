@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-12-27 13:05+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -87,6 +87,210 @@ msgstr "Orca için gsettings ayarlanamadı: \"%1\" başarısız oldu"
 #, kde-format
 msgid "Error: Could not launch \"orca --setup\""
 msgstr "Hata: \"orca --setup\" başlatılamadı"
+
+#. i18n: ectx: label, entry (SystemBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:9
+#, kde-format
+msgid "Use System Bell"
+msgstr "Sistem Zilini Kullan"
+
+#. i18n: ectx: label, entry (CustomBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:13
+#, kde-format
+msgid "Customize system bell"
+msgstr "Sistem zilini özelleştir"
+
+#. i18n: ectx: label, entry (CustomBellFile), group (Bell)
+#: kcmaccessibilitybell.kcfg:17
+#, kde-format
+msgid "Sound file for the Bell"
+msgstr "Zil için ses dosyası"
+
+#. i18n: ectx: label, entry (VisibleBell), group (Bell)
+#: kcmaccessibilitybell.kcfg:20
+#, kde-format
+msgid "Use a visual bell instead of a sound"
+msgstr "Sesli değil de görsel bir zil kullan"
+
+#. i18n: ectx: label, entry (InvertScreen), group (Bell)
+#: kcmaccessibilitybell.kcfg:24
+#, kde-format
+msgid "Invert the system colors on the bell"
+msgstr "Zildeki sistem renklerini ters çevir"
+
+#. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
+#: kcmaccessibilitybell.kcfg:28
+#, kde-format
+msgid "Color of the Visible Bell"
+msgstr "Görünür Zilin Rengi"
+
+#. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
+#: kcmaccessibilitybell.kcfg:32
+#, kde-format
+msgid "Duration of the Visible Bell"
+msgstr "Görünür Zilin Süresi"
+
+#. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:9
+#, kde-format
+msgid "Use sticky Keys"
+msgstr "Yapışkan düğmeleri &kullan"
+
+#. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:13
+#, kde-format
+msgid "Lock the sticky keys"
+msgstr "&Yapışkan düğmeleri kilitle"
+
+#. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:17
+#, kde-format
+msgid "Turn sticky keys off when two keys are pressed simultaneously"
+msgstr "Yapışkan düğmeleri iki düğme eş zamanlı olarak basıldığında kapat"
+
+#. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:21
+#, kde-format
+msgid "Beep on a sticky key press"
+msgstr "Yapışkan düğme basımında bip sesi çıkar"
+
+#. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:25
+#, kde-format
+msgid "Toggle keys beep"
+msgstr "Düğme bip sesini aç/kapat"
+
+#. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:29
+#, kde-format
+msgid "Notify when a keyboard modifier is pressed"
+msgstr "Bir klavye niteleyicisi basıldığında bildir"
+
+#. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:33
+#, kde-format
+msgid "Use a timeout delay"
+msgstr "Zaman aşımı gecikmesi kullan"
+
+#. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:37
+#, kde-format
+msgid "Delay for timeout"
+msgstr "Zaman aşımı için gecikme"
+
+#. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
+#: kcmaccessibilitykeyboard.kcfg:41
+#, kde-format
+msgid "Use a beep for access"
+msgstr "Erişim için bir bip sesi kullan"
+
+#. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:9
+#, kde-format
+msgid "Use slow keypresses"
+msgstr "Yavaş düğme basımları kullan"
+
+#. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:13
+#, kde-format
+msgid "Delay for the key press"
+msgstr "Düğmeye basma gecikmesi"
+
+#. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:17
+#, kde-format
+msgid "Beep on a slow keypress"
+msgstr "Düğmeye yavaş basıldığında bip sesi"
+
+#. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:21
+#, kde-format
+msgid "Beep on an accepted keypress"
+msgstr "Kabul edilen bir düğmeye basıldığında bip sesi"
+
+#. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:25
+#, kde-format
+msgid "Beep on a rejected keypress"
+msgstr "Reddedilen bir düğmeye basıldığında bip sesi"
+
+#. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:29
+#, kde-format
+msgid "Bounce Keys"
+msgstr "Sıçrama düğmeleri"
+
+#. i18n: ectx: label, entry (BounceKeysDelay), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:33
+#, kde-format
+msgid "Use a delay for bouncing"
+msgstr "Sıçrama için bir gecikme kullan"
+
+#. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
+#: kcmaccessibilitykeyboardfilters.kcfg:37
+#, kde-format
+msgid "Beep if a bounce key event is rejected"
+msgstr "Bir sıçrama düğme etkinliği reddedilirse bip sesi çıkar"
+
+#. i18n: ectx: label, entry (MouseKeys), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:9
+#, kde-format
+msgid "Use keys to control the mouse"
+msgstr "Fareyi denetlemek için düğmeleri kullan"
+
+#. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:13
+#, kde-format
+msgid "Delay for the mouse movement"
+msgstr "Fare hareketi için gecikme"
+
+#. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:17
+#, kde-format
+msgid "Repetition interval for the mouse movement"
+msgstr "Fare hareketi için yineleme aralığı"
+
+#. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:21
+#, kde-format
+msgid "Time to hit maximum velocity"
+msgstr "En yüksek hıza ulaşma zamanı"
+
+#. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:25
+#, kde-format
+msgid "Maximum Velocity"
+msgstr "En Yüksek Hız"
+
+#. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
+#: kcmaccessibilitymouse.kcfg:29
+#, kde-format
+msgid "Mouse Key Curve"
+msgstr "Fare Düğmesi Eğrisi"
+
+#. i18n: ectx: label, entry (Gestures), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:35
+#, kde-format
+msgid "Use Gestures"
+msgstr "Hareketleri Kullan"
+
+#. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:39
+#, kde-format
+msgid "Ask for Confirmation for a gesture"
+msgstr "Bir hareket için onay iste"
+
+#. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
+#: kcmaccessibilitymouse.kcfg:43
+#, kde-format
+msgid "Confirm access to the Keyboard"
+msgstr "Klavyeye erişimi onayla"
+
+#. i18n: ectx: label, entry (Enabled), group (ScreenReader)
+#: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17
+#, kde-format
+msgid "Enable Screen Reader"
+msgstr "Ekran Okuyucusunu Etkinleştir"
 
 #: package/contents/ui/Bell.qml:20
 #, kde-format
@@ -375,11 +579,6 @@ msgstr "En yüksek hız:"
 msgid "Acceleration profile:"
 msgstr "İvmelenme profili:"
 
-#: package/contents/ui/ScreenReader.qml:17
-#, kde-format
-msgid "Enable Screen Reader"
-msgstr "Ekran Okuyucusunu Etkinleştir"
-
 #: package/contents/ui/ScreenReader.qml:28
 #, kde-format
 msgid "Launch Orca Screen Reader Configuration…"
@@ -402,105 +601,6 @@ msgid ""
 msgstr ""
 "Görünüşe göre Orca Screen Reader kurulu değil. Lütfen bu özelliği kullanmaya "
 "çalışmadan önce kurun ve ardından oturumu kapatın veya yeniden başlatın"
-
-#~ msgid "Use System Bell"
-#~ msgstr "Sistem Zilini Kullan"
-
-#~ msgid "Customize system bell"
-#~ msgstr "Sistem zilini özelleştir"
-
-#~ msgid "Sound file for the Bell"
-#~ msgstr "Zil için ses dosyası"
-
-#~ msgid "Use a visual bell instead of a sound"
-#~ msgstr "Sesli değil de görsel bir zil kullan"
-
-#~ msgid "Invert the system colors on the bell"
-#~ msgstr "Zildeki sistem renklerini ters çevir"
-
-#~ msgid "Color of the Visible Bell"
-#~ msgstr "Görünür Zilin Rengi"
-
-#~ msgid "Duration of the Visible Bell"
-#~ msgstr "Görünür Zilin Süresi"
-
-#~ msgid "Use sticky Keys"
-#~ msgstr "Yapışkan düğmeleri &kullan"
-
-#~ msgid "Lock the sticky keys"
-#~ msgstr "&Yapışkan düğmeleri kilitle"
-
-#~ msgid "Turn sticky keys off when two keys are pressed simultaneously"
-#~ msgstr "Yapışkan düğmeleri iki düğme eş zamanlı olarak basıldığında kapat"
-
-#~ msgid "Beep on a sticky key press"
-#~ msgstr "Yapışkan düğme basımında bip sesi çıkar"
-
-#~ msgid "Toggle keys beep"
-#~ msgstr "Düğme bip sesini aç/kapat"
-
-#~ msgid "Notify when a keyboard modifier is pressed"
-#~ msgstr "Bir klavye niteleyicisi basıldığında bildir"
-
-#~ msgid "Use a timeout delay"
-#~ msgstr "Zaman aşımı gecikmesi kullan"
-
-#~ msgid "Delay for timeout"
-#~ msgstr "Zaman aşımı için gecikme"
-
-#~ msgid "Use a beep for access"
-#~ msgstr "Erişim için bir bip sesi kullan"
-
-#~ msgid "Use slow keypresses"
-#~ msgstr "Yavaş düğme basımları kullan"
-
-#~ msgid "Delay for the key press"
-#~ msgstr "Düğmeye basma gecikmesi"
-
-#~ msgid "Beep on a slow keypress"
-#~ msgstr "Düğmeye yavaş basıldığında bip sesi"
-
-#~ msgid "Beep on an accepted keypress"
-#~ msgstr "Kabul edilen bir düğmeye basıldığında bip sesi"
-
-#~ msgid "Beep on a rejected keypress"
-#~ msgstr "Reddedilen bir düğmeye basıldığında bip sesi"
-
-#~ msgid "Bounce Keys"
-#~ msgstr "Sıçrama düğmeleri"
-
-#~ msgid "Use a delay for bouncing"
-#~ msgstr "Sıçrama için bir gecikme kullan"
-
-#~ msgid "Beep if a bounce key event is rejected"
-#~ msgstr "Bir sıçrama düğme etkinliği reddedilirse bip sesi çıkar"
-
-#~ msgid "Use keys to control the mouse"
-#~ msgstr "Fareyi denetlemek için düğmeleri kullan"
-
-#~ msgid "Delay for the mouse movement"
-#~ msgstr "Fare hareketi için gecikme"
-
-#~ msgid "Repetition interval for the mouse movement"
-#~ msgstr "Fare hareketi için yineleme aralığı"
-
-#~ msgid "Time to hit maximum velocity"
-#~ msgstr "En yüksek hıza ulaşma zamanı"
-
-#~ msgid "Maximum Velocity"
-#~ msgstr "En Yüksek Hız"
-
-#~ msgid "Mouse Key Curve"
-#~ msgstr "Fare Düğmesi Eğrisi"
-
-#~ msgid "Use Gestures"
-#~ msgstr "Hareketleri Kullan"
-
-#~ msgid "Ask for Confirmation for a gesture"
-#~ msgstr "Bir hareket için onay iste"
-
-#~ msgid "Confirm access to the Keyboard"
-#~ msgstr "Klavyeye erişimi onayla"
 
 #~ msgid "Maximum velocity"
 #~ msgstr "En yüksek hız"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2024-03-01 22:01+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -58,11 +58,17 @@ msgstr "Nyitóképernyő előnézete"
 msgid "Uninstall"
 msgstr "Eltávolítás"
 
-#~ msgid "For future use"
-#~ msgstr "Jövőbeni használatra"
+#. i18n: ectx: label, entry (engine), group (KSplash)
+#: splashscreensettings.kcfg:12
+#, kde-format
+msgid "For future use"
+msgstr "Jövőbeni használatra"
 
-#~ msgid "Name of the current splash theme"
-#~ msgstr "A jelenlegi nyitóképernyő-téma neve"
+#. i18n: ectx: label, entry (theme), group (KSplash)
+#: splashscreensettings.kcfg:16
+#, kde-format
+msgid "Name of the current splash theme"
+msgstr "A jelenlegi nyitóképernyő-téma neve"
 
 #~ msgid "&Get New Splash Screens…"
 #~ msgstr "Új &nyitóképernyők letöltése…"

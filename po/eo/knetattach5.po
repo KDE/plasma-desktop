@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: knetattach\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-04-08 17:16+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -90,6 +90,118 @@ msgstr "Konservi kaj k&onekti"
 msgid "C&onnect"
 msgstr "K&onekti"
 
+#. i18n: ectx: property (windowTitle), widget (QWizard, KNetAttach)
+#: knetattach.ui:14
+#, kde-format
+msgid "Network Folder Wizard"
+msgstr "Reta dosieruja asistilo"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderType)
+#: knetattach.ui:18
+#, kde-format
+msgid "Add Network Folder"
+msgstr "Adoni retan dosierujon"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: knetattach.ui:24
+#, kde-format
+msgid ""
+"Select the type of network folder you wish to connect to and press the Next "
+"button."
+msgstr ""
+"Elektu tian specon de reta dosierujo al kia vi deziras konekton kaj premu la "
+"'Sekva' butonon."
+
+#. i18n: ectx: property (text), widget (QRadioButton, _recent)
+#: knetattach.ui:65
+#, kde-format
+msgid "&Recent connection:"
+msgstr "&Lasta konekto:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _webfolder)
+#: knetattach.ui:72
+#, kde-format
+msgid "&WebFolder (webdav)"
+msgstr "&Retdosierujo (webdav)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _fish)
+#: knetattach.ui:82
+#, kde-format
+msgid "&Secure shell (ssh)"
+msgstr "&Sekurŝelo (ssh)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _ftp)
+#: knetattach.ui:111
+#, kde-format
+msgid "FT&P"
+msgstr "FT&P"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _smb)
+#: knetattach.ui:118
+#, kde-format
+msgid "&Microsoft® Windows® network drive"
+msgstr "&Microsoft® Vindoza reta diskingo"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderParameters)
+#: knetattach.ui:145
+#, kde-format
+msgid "Network Folder Information"
+msgstr "Informoj pri reta dosierujo"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel4_2)
+#: knetattach.ui:177
+#, kde-format
+msgid "&Name:"
+msgstr "&Nomo:"
+
+#. i18n: ectx: property (text), widget (QLabel, _userText)
+#: knetattach.ui:196
+#, kde-format
+msgid "&User:"
+msgstr "&Uzanto:"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: knetattach.ui:222
+#, kde-format
+msgid "Se&rver:"
+msgstr "Se&rvilo:"
+
+#. i18n: ectx: property (text), widget (QLabel, _portText)
+#: knetattach.ui:248
+#, kde-format
+msgid "&Port:"
+msgstr "&Pordo:"
+
+#. i18n: ectx: property (text), widget (QLabel, _protocol)
+#: knetattach.ui:283
+#, kde-format
+msgid "&Protocol:"
+msgstr "&Protokolo:"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: knetattach.ui:313
+#, kde-format
+msgid "&Folder:"
+msgstr "&Dosierujo:"
+
+#. i18n: ectx: property (text), widget (QLabel, _encodingText)
+#: knetattach.ui:335
+#, kde-format
+msgid "Encoding:"
+msgstr "Kodigo:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _createIcon)
+#: knetattach.ui:351
+#, kde-format
+msgid "Cr&eate an icon for this remote folder"
+msgstr "Kr&ei piktogramon por ĉi tiu fora dosierujo"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _useEncryption)
+#: knetattach.ui:361
+#, kde-format
+msgid "&Use encryption"
+msgstr "&Uzi ĉifradon"
+
 #: main.cpp:21 main.cpp:23
 #, kde-format
 msgid "KDE Network Wizard"
@@ -109,61 +221,3 @@ msgstr "George Staikos"
 #, kde-format
 msgid "Primary author and maintainer"
 msgstr "Ĉefa aŭtoro kaj prizorganto"
-
-#~ msgid "Network Folder Wizard"
-#~ msgstr "Reta dosieruja asistilo"
-
-#~ msgid "Add Network Folder"
-#~ msgstr "Adoni retan dosierujon"
-
-#~ msgid ""
-#~ "Select the type of network folder you wish to connect to and press the "
-#~ "Next button."
-#~ msgstr ""
-#~ "Elektu tian specon de reta dosierujo al kia vi deziras konekton kaj premu "
-#~ "la 'Sekva' butonon."
-
-#~ msgid "&Recent connection:"
-#~ msgstr "&Lasta konekto:"
-
-#~ msgid "&WebFolder (webdav)"
-#~ msgstr "&Retdosierujo (webdav)"
-
-#~ msgid "&Secure shell (ssh)"
-#~ msgstr "&Sekurŝelo (ssh)"
-
-#~ msgid "FT&P"
-#~ msgstr "FT&P"
-
-#~ msgid "&Microsoft® Windows® network drive"
-#~ msgstr "&Microsoft® Vindoza reta diskingo"
-
-#~ msgid "Network Folder Information"
-#~ msgstr "Informoj pri reta dosierujo"
-
-#~ msgid "&Name:"
-#~ msgstr "&Nomo:"
-
-#~ msgid "&User:"
-#~ msgstr "&Uzanto:"
-
-#~ msgid "Se&rver:"
-#~ msgstr "Se&rvilo:"
-
-#~ msgid "&Port:"
-#~ msgstr "&Pordo:"
-
-#~ msgid "&Protocol:"
-#~ msgstr "&Protokolo:"
-
-#~ msgid "&Folder:"
-#~ msgstr "&Dosierujo:"
-
-#~ msgid "Encoding:"
-#~ msgstr "Kodigo:"
-
-#~ msgid "Cr&eate an icon for this remote folder"
-#~ msgstr "Kr&ei piktogramon por ĉi tiu fora dosierujo"
-
-#~ msgid "&Use encryption"
-#~ msgstr "&Uzi ĉifradon"

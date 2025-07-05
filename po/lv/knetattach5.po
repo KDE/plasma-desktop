@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: knetattach\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2012-01-09 05:14+0200\n"
 "Last-Translator: Einars Sprugis <einars8@gmail.com>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
@@ -87,6 +87,118 @@ msgstr "Saglabāt un savien&oties"
 msgid "C&onnect"
 msgstr "Savien&oties"
 
+#. i18n: ectx: property (windowTitle), widget (QWizard, KNetAttach)
+#: knetattach.ui:14
+#, kde-format
+msgid "Network Folder Wizard"
+msgstr "Tīkla mapju palīgs"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderType)
+#: knetattach.ui:18
+#, kde-format
+msgid "Add Network Folder"
+msgstr "Pievienot tīkla mapi"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+#: knetattach.ui:24
+#, kde-format
+msgid ""
+"Select the type of network folder you wish to connect to and press the Next "
+"button."
+msgstr ""
+"Norādiet tīkla mapes veidu, kurai gribat pieslēgties, un spiediet pogu "
+"\"Tālāk\"."
+
+#. i18n: ectx: property (text), widget (QRadioButton, _recent)
+#: knetattach.ui:65
+#, kde-format
+msgid "&Recent connection:"
+msgstr "&Nesenais pieslēgums:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _webfolder)
+#: knetattach.ui:72
+#, kde-format
+msgid "&WebFolder (webdav)"
+msgstr "&Tīmekļa mape (webdav)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _fish)
+#: knetattach.ui:82
+#, kde-format
+msgid "&Secure shell (ssh)"
+msgstr "&Drošā čaula (ssh)"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _ftp)
+#: knetattach.ui:111
+#, kde-format
+msgid "FT&P"
+msgstr "FT&P"
+
+#. i18n: ectx: property (text), widget (QRadioButton, _smb)
+#: knetattach.ui:118
+#, kde-format
+msgid "&Microsoft® Windows® network drive"
+msgstr "&Microsoft® Windows® tīkla disks"
+
+#. i18n: ectx: property (title), widget (QWizardPage, _folderParameters)
+#: knetattach.ui:145
+#, kde-format
+msgid "Network Folder Information"
+msgstr "Informācija par tīkla mapi"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel4_2)
+#: knetattach.ui:177
+#, kde-format
+msgid "&Name:"
+msgstr "&Nosaukums:"
+
+#. i18n: ectx: property (text), widget (QLabel, _userText)
+#: knetattach.ui:196
+#, kde-format
+msgid "&User:"
+msgstr "&Lietotājs:"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: knetattach.ui:222
+#, kde-format
+msgid "Se&rver:"
+msgstr "Se&rveris:"
+
+#. i18n: ectx: property (text), widget (QLabel, _portText)
+#: knetattach.ui:248
+#, kde-format
+msgid "&Port:"
+msgstr "&Ports:"
+
+#. i18n: ectx: property (text), widget (QLabel, _protocol)
+#: knetattach.ui:283
+#, kde-format
+msgid "&Protocol:"
+msgstr "&Protokols:"
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel3)
+#: knetattach.ui:313
+#, kde-format
+msgid "&Folder:"
+msgstr "&Mape:"
+
+#. i18n: ectx: property (text), widget (QLabel, _encodingText)
+#: knetattach.ui:335
+#, kde-format
+msgid "Encoding:"
+msgstr "Kodējums:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _createIcon)
+#: knetattach.ui:351
+#, kde-format
+msgid "Cr&eate an icon for this remote folder"
+msgstr "Izv&eidot ikonu šim tīkla diskam"
+
+#. i18n: ectx: property (text), widget (QCheckBox, _useEncryption)
+#: knetattach.ui:361
+#, kde-format
+msgid "&Use encryption"
+msgstr "&Lietot šifrēšanu"
+
 #: main.cpp:21 main.cpp:23
 #, kde-format
 msgid "KDE Network Wizard"
@@ -106,64 +218,6 @@ msgstr "Džordžs Staikoss (George Staikos)"
 #, kde-format
 msgid "Primary author and maintainer"
 msgstr "Pamatautors un uzturētājs"
-
-#~ msgid "Network Folder Wizard"
-#~ msgstr "Tīkla mapju palīgs"
-
-#~ msgid "Add Network Folder"
-#~ msgstr "Pievienot tīkla mapi"
-
-#~ msgid ""
-#~ "Select the type of network folder you wish to connect to and press the "
-#~ "Next button."
-#~ msgstr ""
-#~ "Norādiet tīkla mapes veidu, kurai gribat pieslēgties, un spiediet pogu "
-#~ "\"Tālāk\"."
-
-#~ msgid "&Recent connection:"
-#~ msgstr "&Nesenais pieslēgums:"
-
-#~ msgid "&WebFolder (webdav)"
-#~ msgstr "&Tīmekļa mape (webdav)"
-
-#~ msgid "&Secure shell (ssh)"
-#~ msgstr "&Drošā čaula (ssh)"
-
-#~ msgid "FT&P"
-#~ msgstr "FT&P"
-
-#~ msgid "&Microsoft® Windows® network drive"
-#~ msgstr "&Microsoft® Windows® tīkla disks"
-
-#~ msgid "Network Folder Information"
-#~ msgstr "Informācija par tīkla mapi"
-
-#~ msgid "&Name:"
-#~ msgstr "&Nosaukums:"
-
-#~ msgid "&User:"
-#~ msgstr "&Lietotājs:"
-
-#~ msgid "Se&rver:"
-#~ msgstr "Se&rveris:"
-
-#~ msgid "&Port:"
-#~ msgstr "&Ports:"
-
-#~ msgid "&Protocol:"
-#~ msgstr "&Protokols:"
-
-#~ msgid "&Folder:"
-#~ msgstr "&Mape:"
-
-#~ msgid "Encoding:"
-#~ msgstr "Kodējums:"
-
-#~ msgid "Cr&eate an icon for this remote folder"
-#~ msgstr "Izv&eidot ikonu šim tīkla diskam"
-
-#~ msgid "&Use encryption"
-#~ msgstr "&Lietot šifrēšanu"
 
 #~ msgid ""
 #~ "Enter a name for this <i>%1</i> as well as the server address, port and "

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_workspace.\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-11-04 19:37+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -37,12 +37,14 @@ msgstr "Rekomenci"
 msgid "Visual behavior:"
 msgstr "Vida konduto:"
 
-#: package/contents/ui/main.qml:51
+#. i18n: ectx: label, entry (delay), group (PlasmaToolTips)
+#: package/contents/ui/main.qml:51 workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display informational tooltips on mouse hover"
 msgstr "Montri informajn konsiletojn sur musoŝvebado"
 
-#: package/contents/ui/main.qml:62
+#. i18n: ectx: label, entry (osdEnabled), group (OSD)
+#: package/contents/ui/main.qml:62 workspaceoptions_plasmasettings.kcfg:15
 #, kde-format
 msgid "Display visual feedback for status changes"
 msgstr "Montri vidajn komentojn pri statusaj ŝanĝoj"
@@ -172,30 +174,53 @@ msgstr ""
 "En Tuŝa Reĝimo, multaj elementoj de la uzantinterfaco fariĝos pli grandaj "
 "por pli facile akomodi tuŝan interagon."
 
-#~ msgid "Single click to open files"
-#~ msgstr "Ununura alklako por malfermi dosierojn"
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Single click to open files"
+msgstr "Ununura alklako por malfermi dosierojn"
 
-#~ msgid "Animation speed"
-#~ msgstr "Animacia rapideco"
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:13
+#, kde-format
+msgid "Animation speed"
+msgstr "Animacia rapideco"
 
-#~ msgid "Left-click in scrollbar track moves scrollbar by one page"
-#~ msgstr "Maldekstre alklaku en rulbreto trako movas rulobreton je unu paĝo"
+#. i18n: ectx: label, entry (scrollbarLeftClickNavigatesByPage), group (KDE)
+#: workspaceoptions_kdeglobalssettings.kcfg:17
+#, kde-format
+msgid "Left-click in scrollbar track moves scrollbar by one page"
+msgstr "Maldekstre alklaku en rulbreto trako movas rulobreton je unu paĝo"
 
-#~ msgid "Automatically switch to touch-optimized mode"
-#~ msgstr "Aŭtomate ŝanĝi al tuŝ-optimumigita reĝimo"
+#. i18n: ectx: label, entry (tabletMode), group (Input)
+#: workspaceoptions_kwinsettings.kcfg:9
+#, kde-format
+msgid "Automatically switch to touch-optimized mode"
+msgstr "Aŭtomate ŝanĝi al tuŝ-optimumigita reĝimo"
 
-#~ msgid "Enable middle click selection pasting"
-#~ msgstr "Ebligi mezklakan elekton alglui"
+#. i18n: ectx: label, entry (primarySelection), group (Wayland)
+#: workspaceoptions_kwinsettings.kcfg:15
+#, kde-format
+msgid "Enable middle click selection pasting"
+msgstr "Ebligi mezklakan elekton alglui"
 
-#~ msgid ""
-#~ "Show an on-screen display to indicate status changes such as brightness "
-#~ "or volume"
-#~ msgstr ""
-#~ "Montri ekranan ekranon por indiki statusajn ŝanĝojn kiel brilecon aŭ "
-#~ "laŭtecon"
+#. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:16
+#, kde-format
+msgid ""
+"Show an on-screen display to indicate status changes such as brightness or "
+"volume"
+msgstr ""
+"Montri ekranan ekranon por indiki statusajn ŝanĝojn kiel brilecon aŭ laŭtecon"
 
-#~ msgid "OSD on layout change"
-#~ msgstr "OSD pri aranĝoŝanĝo"
+#. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:20
+#, kde-format
+msgid "OSD on layout change"
+msgstr "OSD pri aranĝoŝanĝo"
 
-#~ msgid "Show a popup on layout changes"
-#~ msgstr "Montri ŝprucfenestron pri aranĝoŝanĝoj"
+#. i18n: ectx: tooltip, entry (osdKbdLayoutChangedEnabled), group (OSD)
+#: workspaceoptions_plasmasettings.kcfg:21
+#, kde-format
+msgid "Show a popup on layout changes"
+msgstr "Montri ŝprucfenestron pri aranĝoŝanĝoj"

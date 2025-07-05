@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmqtquicksettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2024-12-27 10:42+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -48,36 +48,67 @@ msgstr "David Edmundson"
 msgid "Maintainer"
 msgstr "Prizorganto"
 
-#~ msgid ""
-#~ "These settings adjust the QtQuick settings used by Plasma. Only adjust if "
-#~ "you know what you are doing."
-#~ msgstr ""
-#~ "Ĉi tiuj agordoj ĝustigas la QtQuick-agordojn uzatajn de Plasma. Ĝustigu "
-#~ "nur se vi scias, kion vi faras."
+#. i18n: ectx: property (text), widget (KMessageWidget, kmessagewidget)
+#: kcmqtquicksettingswidget.ui:23
+#, kde-format
+msgid ""
+"These settings adjust the QtQuick settings used by Plasma. Only adjust if "
+"you know what you are doing."
+msgstr ""
+"Ĉi tiuj agordoj ĝustigas la QtQuick-agordojn uzatajn de Plasma. Ĝustigu nur "
+"se vi scias, kion vi faras."
 
-#~ msgid "Rendering Backend:"
-#~ msgstr "Bildiga Backend:"
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kcmqtquicksettingswidget.ui:38
+#, kde-format
+msgid "Rendering Backend:"
+msgstr "Bildiga Backend:"
 
-#~ msgid "Automatic"
-#~ msgstr "Aŭtomata"
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
+#: kcmqtquicksettingswidget.ui:46 kcmqtquicksettingswidget.ui:79
+#, kde-format
+msgid "Automatic"
+msgstr "Aŭtomata"
 
-#~ msgid "Open GL"
-#~ msgstr "OpenGL"
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
+#: kcmqtquicksettingswidget.ui:51
+#, kde-format
+msgid "Open GL"
+msgstr "OpenGL"
 
-#~ msgid "Software"
-#~ msgstr "Programaro"
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
+#: kcmqtquicksettingswidget.ui:56
+#, kde-format
+msgid "Software"
+msgstr "Programaro"
 
-#~ msgid "GL Core Profile:"
-#~ msgstr "GL Kerna Profilo:"
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kcmqtquicksettingswidget.ui:64
+#, kde-format
+msgid "GL Core Profile:"
+msgstr "GL Kerna Profilo:"
 
-#~ msgid "Render Loop:"
-#~ msgstr "Bildiga Buklo:"
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: kcmqtquicksettingswidget.ui:71
+#, kde-format
+msgid "Render Loop:"
+msgstr "Bildiga Buklo:"
 
-#~ msgid "Basic"
-#~ msgstr "Baza"
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
+#: kcmqtquicksettingswidget.ui:84
+#, kde-format
+msgid "Basic"
+msgstr "Baza"
 
-#~ msgid "Threaded"
-#~ msgstr "Fadenigita"
+#. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
+#: kcmqtquicksettingswidget.ui:89
+#, kde-format
+msgid "Threaded"
+msgstr "Fadenigita"
 
-#~ msgid "Force"
-#~ msgstr "Forto"
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ForceGlCoreProfile)
+#: kcmqtquicksettingswidget.ui:97
+#, kde-format
+msgid "Force"
+msgstr "Forto"

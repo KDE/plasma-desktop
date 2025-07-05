@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-06-21 07:32+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -58,11 +58,17 @@ msgstr "Vista previa da pantalla de inicio"
 msgid "Uninstall"
 msgstr "Desinstalar"
 
-#~ msgid "For future use"
-#~ msgstr "Para uso futuro"
+#. i18n: ectx: label, entry (engine), group (KSplash)
+#: splashscreensettings.kcfg:12
+#, kde-format
+msgid "For future use"
+msgstr "Para uso futuro"
 
-#~ msgid "Name of the current splash theme"
-#~ msgstr "Nome do tema de pantalla de inicio actual"
+#. i18n: ectx: label, entry (theme), group (KSplash)
+#: splashscreensettings.kcfg:16
+#, kde-format
+msgid "Name of the current splash theme"
+msgstr "Nome do tema de pantalla de inicio actual"
 
 #, fuzzy
 #~| msgid "&Get New Splash Screens..."

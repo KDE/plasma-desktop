@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-10-11 11:53+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -57,11 +57,17 @@ msgstr "पूर्वावलोकन स्पलैश स्क्री�
 msgid "Uninstall"
 msgstr "स्थापना रद्द करें"
 
-#~ msgid "For future use"
-#~ msgstr "भविष्य के उपयोग के लिए"
+#. i18n: ectx: label, entry (engine), group (KSplash)
+#: splashscreensettings.kcfg:12
+#, kde-format
+msgid "For future use"
+msgstr "भविष्य के उपयोग के लिए"
 
-#~ msgid "Name of the current splash theme"
-#~ msgstr "वर्तमान स्प्लैश प्रसंग का नाम"
+#. i18n: ectx: label, entry (theme), group (KSplash)
+#: splashscreensettings.kcfg:16
+#, kde-format
+msgid "Name of the current splash theme"
+msgstr "वर्तमान स्प्लैश प्रसंग का नाम"
 
 #~ msgid "&Get New Splash Screens…"
 #~ msgstr "नई स्प्लैश स्क्रीन प्राप्त करें… (&G)"

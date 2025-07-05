@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-02-12 11:49+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -17,6 +17,38 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 23.08.5\n"
+
+#. i18n: ectx: label, entry (colorScheme), group (General)
+#: landingpage_kdeglobalssettings.kcfg:9
+#, kde-format
+msgid "Color scheme name"
+msgstr "اسم تشكيلة الألوان"
+
+#. i18n: ectx: label, entry (singleClick), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:15
+#, kde-format
+msgid "Single click to open files"
+msgstr "نقرة مفردة لفتح الملفات"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:19
+#, kde-format
+msgid "Global Look and Feel package"
+msgstr "حزمة الشكل والمظهر الشامل"
+
+#. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
+#. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:23
+#: landingpage_kdeglobalssettings.kcfg:27
+#, kde-format
+msgid "Global Look and Feel package, alternate"
+msgstr "حزمة الشكل والمظهر الشامل البديلة"
+
+#. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:31
+#, kde-format
+msgid "Animation speed"
+msgstr "سرعة التحريك"
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -88,21 +120,6 @@ msgstr "المزيد من إعدادات السلوك..."
 #, kde-format
 msgid "Most Used Pages:"
 msgstr "أكثر الصفحات استخدما:"
-
-#~ msgid "Color scheme name"
-#~ msgstr "اسم تشكيلة الألوان"
-
-#~ msgid "Single click to open files"
-#~ msgstr "نقرة مفردة لفتح الملفات"
-
-#~ msgid "Global Look and Feel package"
-#~ msgstr "حزمة الشكل والمظهر الشامل"
-
-#~ msgid "Global Look and Feel package, alternate"
-#~ msgstr "حزمة الشكل والمظهر الشامل البديلة"
-
-#~ msgid "Animation speed"
-#~ msgstr "سرعة التحريك"
 
 #~ msgid "Plasma"
 #~ msgstr "بلازما"

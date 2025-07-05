@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-10-17 16:24+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -57,6 +57,67 @@ msgstr "Kai Uwe Broulik"
 #, kde-format
 msgid "Plasma 5 Port"
 msgstr "Plasma 5 port"
+
+#. i18n: ectx: property (whatsThis), widget (QTreeView, deviceView)
+#: DeviceAutomounterKCM.ui:17
+#, kde-format
+msgid ""
+"This list contains the storage devices known to the system. If \"Automount "
+"on Login\" is checked, the device will be automatically mounted even though "
+"\"Mount all removable media at login\" is unchecked. The same applies for "
+"\"Automount on Attach\"."
+msgstr ""
+"Ez a lista a KDE által ismert eszközöket tartalmazza. Ha az „Automatikus "
+"csatolás bejelentkezéskor” be van kapcsolva, az eszköz automatikusan "
+"csatolva lesz, még ha az „Összes cserélhető eszköz csatolása "
+"bejelentkezéskor” ki is van kapcsolva. Ugyanez érvényez az „Automatikus "
+"csatolás csatlakoztatáskor” beállításra is."
+
+#. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:54
+#, kde-format
+msgid ""
+"Clicking this button causes the selected devices to be 'forgotten'. This is "
+"only useful if \"Only automatically mount removable media that has been "
+"manually mounted before\" is checked. Once a device is forgotten and the "
+"system is set to only automatically mount familiar devices, the device will "
+"not be automatically mounted."
+msgstr ""
+"Erre a gombra kattintva a KDE „elfelejti”, hogy a kijelölt eszköz valaha is "
+"létezett. Ez csak akkor hasznos, ha a „Csak a korábban kézzel csatolt "
+"cserélhető eszközök automatikus csatolása” be van kapcsolva. Amint egy "
+"eszköz elfelejtődik, és a KDE csak az ismert eszközök automatikus "
+"csatolására lesz beállítva, az eszköz nem lesz többé automatikusan csatolva."
+
+#. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
+#: DeviceAutomounterKCM.ui:57
+#, kde-format
+msgid "Forget Device"
+msgstr "Eszköz elfelejtése"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:67
+#, kde-format
+msgid ""
+"When this is not checked, only remembered devices will be automatically "
+"mounted. A device is 'remembered' if it has ever been mounted before. For "
+"instance, plugging in a USB media player to charge is not sufficient to "
+"'remember' it - if the files are not accessed, it will not be automatically "
+"mounted the next time it is seen. Once they have been accessed, however, the "
+"device's contents will be automatically made available to the system."
+msgstr ""
+"Ha nincs kapcsolva, a KDE csak a megjegyzett eszközöket csatolja "
+"automatikusan. Egy „megjegyzett”, ha korábban csatolva volt. Például egy USB "
+"médialejátszót nem elég bedugni töltésre: ha nem volt fájlművelet (például "
+"fájlböngésés), a KDE nem csatolja automatikusan következő alkalommal. Amint "
+"fájlművelet történik, a KDE megjegyzi, és automatikusan csatolja és "
+"elérhetővé teszi az eszköz tartalmát a rendszernek."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
+#: DeviceAutomounterKCM.ui:70
+#, kde-format
+msgid "Automatically mount removable media that have never been mounted before"
+msgstr "A korábban soha nem csatolt cserélhető eszközök automatikus csatolása"
 
 #: DeviceModel.cpp:52
 #, kde-format
@@ -119,56 +180,6 @@ msgstr "Az eszköz automatikusan csatolva lesz csatlakoztatáskor."
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
 msgstr "Az eszköz nem lesz automatikusan csatolva csatlakoztatáskor."
-
-#~ msgid ""
-#~ "This list contains the storage devices known to the system. If "
-#~ "\"Automount on Login\" is checked, the device will be automatically "
-#~ "mounted even though \"Mount all removable media at login\" is unchecked. "
-#~ "The same applies for \"Automount on Attach\"."
-#~ msgstr ""
-#~ "Ez a lista a KDE által ismert eszközöket tartalmazza. Ha az „Automatikus "
-#~ "csatolás bejelentkezéskor” be van kapcsolva, az eszköz automatikusan "
-#~ "csatolva lesz, még ha az „Összes cserélhető eszköz csatolása "
-#~ "bejelentkezéskor” ki is van kapcsolva. Ugyanez érvényez az „Automatikus "
-#~ "csatolás csatlakoztatáskor” beállításra is."
-
-#~ msgid ""
-#~ "Clicking this button causes the selected devices to be 'forgotten'. This "
-#~ "is only useful if \"Only automatically mount removable media that has "
-#~ "been manually mounted before\" is checked. Once a device is forgotten and "
-#~ "the system is set to only automatically mount familiar devices, the "
-#~ "device will not be automatically mounted."
-#~ msgstr ""
-#~ "Erre a gombra kattintva a KDE „elfelejti”, hogy a kijelölt eszköz valaha "
-#~ "is létezett. Ez csak akkor hasznos, ha a „Csak a korábban kézzel csatolt "
-#~ "cserélhető eszközök automatikus csatolása” be van kapcsolva. Amint egy "
-#~ "eszköz elfelejtődik, és a KDE csak az ismert eszközök automatikus "
-#~ "csatolására lesz beállítva, az eszköz nem lesz többé automatikusan "
-#~ "csatolva."
-
-#~ msgid "Forget Device"
-#~ msgstr "Eszköz elfelejtése"
-
-#~ msgid ""
-#~ "When this is not checked, only remembered devices will be automatically "
-#~ "mounted. A device is 'remembered' if it has ever been mounted before. For "
-#~ "instance, plugging in a USB media player to charge is not sufficient to "
-#~ "'remember' it - if the files are not accessed, it will not be "
-#~ "automatically mounted the next time it is seen. Once they have been "
-#~ "accessed, however, the device's contents will be automatically made "
-#~ "available to the system."
-#~ msgstr ""
-#~ "Ha nincs kapcsolva, a KDE csak a megjegyzett eszközöket csatolja "
-#~ "automatikusan. Egy „megjegyzett”, ha korábban csatolva volt. Például egy "
-#~ "USB médialejátszót nem elég bedugni töltésre: ha nem volt fájlművelet "
-#~ "(például fájlböngésés), a KDE nem csatolja automatikusan következő "
-#~ "alkalommal. Amint fájlművelet történik, a KDE megjegyzi, és automatikusan "
-#~ "csatolja és elérhetővé teszi az eszköz tartalmát a rendszernek."
-
-#~ msgid ""
-#~ "Automatically mount removable media that have never been mounted before"
-#~ msgstr ""
-#~ "A korábban soha nem csatolt cserélhető eszközök automatikus csatolása"
 
 #~ msgid ""
 #~ "If any removable storage devices are connected to your system when you "
