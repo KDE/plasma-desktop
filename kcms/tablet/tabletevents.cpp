@@ -11,6 +11,52 @@
 #include <qguiapplication.h>
 #include <qtwaylandclientversion.h>
 
+class TabletPadDial : public QObject, public QtWayland::zwp_tablet_pad_dial_v2
+{
+public:
+    TabletPadDial(TabletEvents *events, ::zwp_tablet_pad_dial_v2 *t)
+        : QObject(events)
+        , QtWayland::zwp_tablet_pad_dial_v2(t)
+        , m_events(events)
+    {
+    }
+
+    ~TabletPadDial()
+    {
+        destroy();
+    }
+
+    void zwp_tablet_pad_dial_v2_delta(int32_t value120) override
+    {
+        Q_EMIT m_events->dialDelta(value120);
+    }
+
+    TabletEvents *const m_events;
+};
+
+class TabletPadGroup : public QObject, public QtWayland::zwp_tablet_pad_group_v2
+{
+public:
+    TabletPadGroup(TabletEvents *events, ::zwp_tablet_pad_group_v2 *t)
+        : QObject(events)
+        , QtWayland::zwp_tablet_pad_group_v2(t)
+        , m_events(events)
+    {
+    }
+
+    ~TabletPadGroup()
+    {
+        destroy();
+    }
+
+    void zwp_tablet_pad_group_v2_dial(zwp_tablet_pad_dial_v2 *dial) override
+    {
+        new TabletPadDial(m_events, dial);
+    }
+
+    TabletEvents *const m_events;
+};
+
 class TabletPad : public QObject, public QtWayland::zwp_tablet_pad_v2
 {
 public:
@@ -39,6 +85,11 @@ public:
     void zwp_tablet_pad_v2_button(uint32_t /*time*/, uint32_t button, uint32_t state) override
     {
         Q_EMIT m_events->padButtonReceived(m_path, button, state);
+    }
+
+    void zwp_tablet_pad_v2_group(zwp_tablet_pad_group_v2 *pad_group) override
+    {
+        new TabletPadGroup(m_events, pad_group);
     }
 
     TabletEvents *const m_events;
@@ -122,7 +173,7 @@ class TabletManager : public QWaylandClientExtensionTemplate<TabletManager>, pub
 {
 public:
     TabletManager(TabletEvents *q)
-        : QWaylandClientExtensionTemplate<TabletManager>(ZWP_TABLET_MANAGER_V2_GET_TABLET_SEAT_SINCE_VERSION)
+        : QWaylandClientExtensionTemplate<TabletManager>(2)
         , q(q)
     {
         setParent(q);

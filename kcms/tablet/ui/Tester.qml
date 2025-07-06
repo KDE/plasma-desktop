@@ -78,6 +78,12 @@ QQC2.ApplicationWindow {
             }
             scrollLogToBottom();
         }
+
+        function onDialDelta(value120: int): void {
+            console.info(value120);
+            penLogText.append(i18nd("kcm_tablet", "Pad dial moved V120=%1", value120));
+            scrollLogToBottom();
+        }
     }
 
     Item {

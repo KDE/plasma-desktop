@@ -20,4 +20,5 @@ Q_SIGNALS:
     void toolDown(uint32_t hardware_serial_hi, uint32_t hardware_serial_lo, double x, double y);
     void toolMotion(uint32_t hardware_serial_hi, uint32_t hardware_serial_lo, double x, double y, double pressure, double tilt_x, double tilt_y);
     void toolUp(uint32_t hardware_serial_hi, uint32_t hardware_serial_lo, double x, double y);
+    void dialDelta(int value120);
 };
