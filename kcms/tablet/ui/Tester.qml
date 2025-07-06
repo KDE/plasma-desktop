@@ -69,6 +69,15 @@ QQC2.ApplicationWindow {
                 scrollLogToBottom();
             }
         }
+
+        function onPadButtonReceived(path: string, button: int, pressed: bool): void {
+            if (pressed) {
+                penLogText.append(i18nd("kcm_tablet", "Pad button press B=%1", button));
+            } else {
+                penLogText.append(i18nd("kcm_tablet", "Pad button release B=%1", button));
+            }
+            scrollLogToBottom();
+        }
     }
 
     Item {
