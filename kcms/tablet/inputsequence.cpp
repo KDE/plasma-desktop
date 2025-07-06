@@ -40,8 +40,8 @@ InputSequence::InputSequence(const QStringList &config)
     } else if (type == u"AxisKey"_s) {
         setType(Type::RelativeKeyboard);
 
-        if (config.size() == 3) {
-            relativeKeyData() = {config.at(1), config.at(2)};
+        if (config.size() == 4) {
+            relativeKeyData() = {config.at(1), config.at(2), config.at(3).toInt()};
         }
     } else if (type == u"MouseButton"_s) {
         setType(Type::Mouse);
@@ -106,7 +106,7 @@ void InputSequence::setType(const Type type)
             m_data = KeyData{QString{}};
             break;
         case Type::RelativeKeyboard:
-            m_data = RelativeKeyData{QString{}, QString{}};
+            m_data = RelativeKeyData{QString{}, QString{}, 120};
             break;
         case Type::Mouse:
             m_data = MouseData{.button = Qt::LeftButton, .modifiers = {}};
@@ -132,7 +132,7 @@ QStringList InputSequence::toConfigFormat() const
     case Type::RelativeKeyboard: {
         const auto upKey = relativeKeyData().up.toString(QKeySequence::PortableText);
         const auto downKey = relativeKeyData().down.toString(QKeySequence::PortableText);
-        return QStringList{u"AxisKey"_s, upKey, downKey};
+        return QStringList{u"AxisKey"_s, upKey, downKey, QString::number(relativeKeyData().threshold)};
     }
     case Type::Mouse: {
         const auto mouse = mouseData();
@@ -266,6 +266,16 @@ QKeySequence InputSequence::downKeySequence() const
 void InputSequence::setDownKeySequence(const QKeySequence &sequence)
 {
     relativeKeyData().down = sequence;
+}
+
+int InputSequence::threshold() const
+{
+    return relativeKeyData().threshold;
+}
+
+void InputSequence::setThreshold(const int threshold)
+{
+    relativeKeyData().threshold = threshold;
 }
 
 Qt::MouseButton InputSequence::mouseButton() const

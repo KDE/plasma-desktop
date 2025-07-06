@@ -26,6 +26,7 @@ InputDevice::InputDevice(const QString &dbusName, QObject *parent)
     connect(this, &InputDevice::pressureRangeMinChanged, this, &InputDevice::needsSaveChanged);
     connect(this, &InputDevice::pressureRangeMaxChanged, this, &InputDevice::needsSaveChanged);
     connect(this, &InputDevice::relativeChanged, this, &InputDevice::needsSaveChanged);
+    connect(m_iface.get(), &OrgKdeKWinInputDeviceInterface::currentModesChanged, this, &InputDevice::currentModesChanged);
 }
 
 void InputDevice::save()

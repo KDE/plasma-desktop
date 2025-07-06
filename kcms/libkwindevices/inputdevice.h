@@ -45,6 +45,9 @@ class InputDevice : public QObject
     Q_PROPERTY(bool supportsPressureRange READ supportsPressureRange CONSTANT)
     Q_PROPERTY(bool relative READ isRelative WRITE setRelative NOTIFY relativeChanged)
     Q_PROPERTY(quint32 tabletPadDialCount READ tabletPadDialCount CONSTANT)
+    Q_PROPERTY(quint32 tabletPadRingCount READ tabletPadRingCount CONSTANT)
+    Q_PROPERTY(QList<unsigned int> numModes READ numModes CONSTANT)
+    Q_PROPERTY(QList<unsigned int> currentModes READ currentModes NOTIFY currentModesChanged)
 
 public:
     InputDevice(const QString &dbusName, QObject *parent);
@@ -195,6 +198,21 @@ public:
         return m_tabletPadDialCount.value();
     }
 
+    quint32 tabletPadRingCount() const
+    {
+        return m_tabletPadRingCount.value();
+    }
+
+    QList<unsigned int> numModes() const
+    {
+        return m_numModes.value();
+    }
+
+    QList<unsigned int> currentModes() const
+    {
+        return m_currentModes.value();
+    }
+
     QString deviceGroup() const
     {
         return m_deviceGroup.value();
@@ -232,6 +250,7 @@ Q_SIGNALS:
     void pressureRangeMaxChanged();
     void calibrationMatrixChanged();
     void relativeChanged();
+    void currentModesChanged();
 
 private:
     template<typename T>
@@ -401,6 +420,9 @@ private:
 
     Prop<quint32> m_tabletPadButtonCount = Prop<quint32>(this, "tabletPadButtonCount");
     Prop<quint32> m_tabletPadDialCount = Prop<quint32>(this, "tabletPadDialCount");
+    Prop<quint32> m_tabletPadRingCount = Prop<quint32>(this, "tabletPadRingCount");
+    Prop<QList<unsigned int>> m_numModes = Prop<QList<unsigned int>>(this, "numModes");
+    Prop<QList<unsigned int>> m_currentModes = Prop<QList<unsigned int>>(this, "currentModes", nullptr, nullptr, &InputDevice::currentModesChanged);
 
     Prop<double> m_pressureRangeMin = Prop<double>(this,
                                                    "pressureRangeMin",
