@@ -95,6 +95,16 @@ public:
     Q_INVOKABLE void setDownKeySequence(const QKeySequence &sequence);
 
     /**
+     * @return The threshold before keyboard events are emitted. Will assert on a non-RelativeKeyboard type sequence.
+     */
+    Q_INVOKABLE int threshold() const;
+
+    /**
+     * @brief Sets the threshold before keyboard events are emitted. Will assert on a non-RelativeKeyboard type sequence.
+     */
+    Q_INVOKABLE void setThreshold(int threshold);
+
+    /**
      * @return The mouse buttons to be emitted. Will assert on a non-Mouse type sequence.
      */
     Q_INVOKABLE Qt::MouseButton mouseButton() const;
@@ -129,6 +139,7 @@ private:
     struct RelativeKeyData {
         QKeySequence up;
         QKeySequence down;
+        int threshold = 120;
     };
 
     struct MouseSequence {

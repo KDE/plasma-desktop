@@ -356,16 +356,36 @@ void Tablet::save()
     m_tabletsModel->save();
 
     auto generalGroup = KSharedConfig::openConfig("kcminputrc")->group("ButtonRebinds");
+    // regular rebinds
     for (const auto &device : QStringList{"Tablet", "TabletTool", "TabletDial"}) {
         for (auto it = m_unsavedMappings[device].cbegin(), itEnd = m_unsavedMappings[device].cend(); it != itEnd; ++it) {
-            auto group = generalGroup.group(device).group(it.key());
+            auto configGroup = generalGroup.group(device).group(it.key());
             for (auto itDevice = it->cbegin(), itDeviceEnd = it->cend(); itDevice != itDeviceEnd; ++itDevice) {
+                const auto [button, group] = itDevice.key();
+
                 const auto key = itDevice->toConfigFormat();
-                const auto button = QString::number(itDevice.key());
                 if (key.isEmpty()) {
-                    group.deleteEntry(button, KConfig::Notify);
+                    configGroup.deleteEntry(QString::number(button), KConfig::Notify);
                 } else {
-                    group.writeEntry(button, key, KConfig::Notify);
+                    configGroup.writeEntry(QString::number(button), key, KConfig::Notify);
+                }
+            }
+        }
+    }
+    // mode-based rebinds
+    for (const auto &device : QStringList{"TabletRing"}) {
+        for (auto it = m_unsavedMappings[device].cbegin(), itEnd = m_unsavedMappings[device].cend(); it != itEnd; ++it) {
+            auto configGroup = generalGroup.group(device).group(it.key());
+            for (auto itDevice = it->cbegin(), itDeviceEnd = it->cend(); itDevice != itDeviceEnd; ++itDevice) {
+                const auto [button, mode] = itDevice.key();
+
+                auto modeGroup = configGroup.group(QString::number(mode));
+
+                const auto key = itDevice->toConfigFormat();
+                if (key.isEmpty()) {
+                    modeGroup.deleteEntry(QString::number(button), KConfig::Notify);
+                } else {
+                    modeGroup.writeEntry(QString::number(button), key, KConfig::Notify);
                 }
             }
         }
@@ -377,37 +397,31 @@ void Tablet::save()
 void Tablet::defaults()
 {
     m_tabletsModel->defaults();
-
     m_unsavedMappings.clear();
-    const auto generalGroup = KSharedConfig::openConfig("kcminputrc")->group("ButtonRebinds");
-    for (const auto &deviceType : QStringList{"Tablet", "TabletTool", "TabletDial"}) {
-        auto tabletGroup = generalGroup.group(deviceType);
-        const auto tablets = tabletGroup.groupList();
-        for (const auto &deviceName : tablets) {
-            const auto buttons = tabletGroup.group(deviceName).keyList();
-            for (const auto &button : buttons) {
-                m_unsavedMappings[deviceType][deviceName][button.toUInt()] = {};
-            }
-        }
-    }
     Q_EMIT settingsRestored();
 }
 
 void Tablet::assignPadButtonMapping(const QString &deviceName, uint button, const InputSequence &keySequence)
 {
-    m_unsavedMappings["Tablet"][deviceName][button] = keySequence;
+    m_unsavedMappings["Tablet"][deviceName][{button, 0}] = keySequence;
     Q_EMIT settingsRestored();
 }
 
 void Tablet::assignPadDialMapping(const QString &deviceName, uint button, const InputSequence &keySequence)
 {
-    m_unsavedMappings["TabletDial"][deviceName][button] = keySequence;
+    m_unsavedMappings["TabletDial"][deviceName][{button, 0}] = keySequence;
+    Q_EMIT settingsRestored();
+}
+
+void Tablet::assignPadRingMapping(const QString &deviceName, uint button, uint group, const InputSequence &keySequence)
+{
+    m_unsavedMappings["TabletRing"][deviceName][{button, group}] = keySequence;
     Q_EMIT settingsRestored();
 }
 
 void Tablet::assignToolButtonMapping(const QString &deviceName, uint button, const InputSequence &keySequence)
 {
-    m_unsavedMappings["TabletTool"][deviceName][button] = keySequence;
+    m_unsavedMappings["TabletTool"][deviceName][{button, 0}] = keySequence;
     Q_EMIT settingsRestored();
 }
 
@@ -417,8 +431,8 @@ InputSequence Tablet::padButtonMapping(const QString &deviceName, uint button) c
         return {};
     }
 
-    if (const auto &device = m_unsavedMappings["Tablet"][deviceName]; device.contains(button)) {
-        return device.value(button);
+    if (const auto &device = m_unsavedMappings["Tablet"][deviceName]; device.contains({button, 0})) {
+        return device.value({button, 0});
     }
 
     const auto cfg = KSharedConfig::openConfig("kcminputrc");
@@ -433,13 +447,29 @@ InputSequence Tablet::padDialMapping(const QString &deviceName, uint button) con
         return {};
     }
 
-    if (const auto &device = m_unsavedMappings["TabletDial"][deviceName]; device.contains(button)) {
-        return device.value(button);
+    if (const auto &device = m_unsavedMappings["TabletDial"][deviceName]; device.contains({button, 0})) {
+        return device.value({button, 0});
     }
 
     const auto cfg = KSharedConfig::openConfig("kcminputrc");
     const auto group = cfg->group("ButtonRebinds").group("TabletDial").group(deviceName);
     const auto sequence = group.readEntry(QString::number(button), QStringList());
+    return InputSequence(sequence);
+}
+
+InputSequence Tablet::padRingMapping(const QString &deviceName, uint button, uint mode) const
+{
+    if (deviceName.isEmpty()) {
+        return {};
+    }
+
+    if (const auto &device = m_unsavedMappings["TabletRing"][deviceName]; device.contains({button, mode})) {
+        return device.value({button, mode});
+    }
+
+    const auto cfg = KSharedConfig::openConfig("kcminputrc");
+    const auto configGroup = cfg->group("ButtonRebinds").group("TabletRing").group(deviceName).group(QString::number(mode));
+    const auto sequence = configGroup.readEntry(QString::number(button), QStringList());
     return InputSequence(sequence);
 }
 
@@ -449,8 +479,8 @@ InputSequence Tablet::toolButtonMapping(const QString &deviceName, uint button) 
         return {};
     }
 
-    if (const auto &device = m_unsavedMappings["TabletTool"][deviceName]; device.contains(button)) {
-        return device.value(button);
+    if (const auto &device = m_unsavedMappings["TabletTool"][deviceName]; device.contains({button, 0})) {
+        return device.value({button, 0});
     }
 
     const auto cfg = KSharedConfig::openConfig("kcminputrc");

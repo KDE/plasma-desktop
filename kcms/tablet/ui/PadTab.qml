@@ -22,6 +22,73 @@ Kirigami.FormLayout {
     required property KCM.TabletEvents tabletEvents
 
     Repeater {
+        id: ringRepeater
+        model: root.padDevice.tabletPadRingCount
+
+        // TODO: we should make this generic enough for all bindings
+        // TODO: this doesn't take into account mode groups the ring is in
+        delegate: ColumnLayout {
+            id: ringDelegate
+
+            spacing: Kirigami.Units.smallSpacing
+
+            required property int index
+
+            Kirigami.FormData.label: i18nd("kcm_tablet", "Pad ring %1:", index + 1)
+
+            Repeater {
+                id: modesRepeater
+
+                model: root.padDevice.numModes[0]
+
+                delegate: RowLayout {
+                    id: modeLayout
+
+                    required property int index
+
+                    spacing: Kirigami.Units.largeSpacing
+
+                    QQC2.Label {
+                        text: modeLayout.index + 1
+                        color: Kirigami.Theme.disabledTextColor
+                        font.bold: root.padDevice.currentModes[0] === modeLayout.index
+                    }
+
+                    ActionBinding {
+                        id: seq
+
+                        name: i18ndc("kcm_tablet", "@info Meant to be inserted into an existing sentence like 'configuring pad ring/dial 0'", "pad ring/dial %1", ringDelegate.index + 1)
+                        supportsPenButton: false
+                        supportsRelativeEvents: true
+
+                        function refreshInputSequence(): void {
+                            seq.inputSequence = kcm.padRingMapping(root.padDevice.name, ringDelegate.index, modeLayout.index)
+                        }
+
+                        inputSequence: kcm.padRingMapping(root.padDevice.name, ringDelegate.index, modeLayout.index)
+                        Connections {
+                            target: kcm
+
+                            function onSettingsRestored() {
+                                seq.refreshInputSequence();
+                            }
+                        }
+
+                        onGotInputSequence: sequence => {
+                            kcm.assignPadRingMapping(root.padDevice.name, ringDelegate.index, modeLayout.index, sequence)
+                        }
+
+                        SettingHighlighter {
+                            // Currently, application-defined is the default
+                            highlight: seq.inputSequence.type !== KCM.InputSequence.ApplicationDefined
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    Repeater {
         id: dialRepeater
         model: root.padDevice.tabletPadDialCount
 

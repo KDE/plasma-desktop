@@ -42,9 +42,11 @@ public:
 
     Q_SCRIPTABLE void assignPadButtonMapping(const QString &deviceName, uint button, const InputSequence &keySequence);
     Q_SCRIPTABLE void assignPadDialMapping(const QString &deviceName, uint button, const InputSequence &keySequence);
+    Q_SCRIPTABLE void assignPadRingMapping(const QString &deviceName, uint button, uint group, const InputSequence &keySequence);
     Q_SCRIPTABLE void assignToolButtonMapping(const QString &deviceName, uint button, const InputSequence &keySequence);
     Q_SCRIPTABLE InputSequence padButtonMapping(const QString &deviceName, uint button) const;
     Q_SCRIPTABLE InputSequence padDialMapping(const QString &deviceName, uint button) const;
+    Q_SCRIPTABLE InputSequence padRingMapping(const QString &deviceName, uint button, uint mode) const;
     Q_SCRIPTABLE InputSequence toolButtonMapping(const QString &deviceName, uint button) const;
 
     Q_SCRIPTABLE QString toSerializedCurve(const QPointF &controlPoint1, const QPointF &controlPoint2);
@@ -60,6 +62,6 @@ private:
     void refreshNeedsSave();
 
     TabletsModel *m_tabletsModel;
-    QHash<QString, QHash<QString, QHash<uint, InputSequence>>> m_unsavedMappings;
+    QHash<QString, QHash<QString, QHash<QPair<uint, uint>, InputSequence>>> m_unsavedMappings;
     WacomDeviceDatabase *m_db = nullptr;
 };
