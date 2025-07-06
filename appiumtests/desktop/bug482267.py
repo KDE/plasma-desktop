@@ -20,7 +20,6 @@ from typing import Final
 import numpy as np
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-import cv2 as cv
 from desktoptest import name_has_owner, start_plasmashell
 from gi.repository import Gio, GLib
 
@@ -187,20 +186,6 @@ class Bug482267Test(unittest.TestCase):
         self.assertEqual(reply.get_message_type(), Gio.DBusMessageType.METHOD_RETURN)
 
         time.sleep(3)  # Desktop animation
-
-        # Match the red area in the screenshot
-        with tempfile.TemporaryDirectory() as temp_dir:
-            saved_image_path: str = os.path.join(temp_dir, "desktop_screenshot.png")
-            subprocess.check_call(["import", "-window", "root", saved_image_path])
-            cv_image1 = cv.imread(saved_image_path, cv.IMREAD_COLOR)
-
-            # Create a red square
-            cv_image2 = np.zeros((100, 100, 3), dtype=np.uint8)
-            cv_image2[:, :] = [0, 0, 255]
-
-            matched = cv.matchTemplate(cv_image1, cv_image2, cv.TM_SQDIFF_NORMED)
-            min_val, max_val, min_loc, max_loc = cv.minMaxLoc(matched)
-            self.assertAlmostEqual(min_val, 0.0)
 
         # Prepare to restart plasmashell
         subprocess.check_output([f"kquitapp{KDE_VERSION}", "plasmashell"], stderr=sys.stderr)

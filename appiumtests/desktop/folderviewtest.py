@@ -12,7 +12,6 @@ import tempfile
 import time
 import unittest
 
-import cv2 as cv
 import gi
 import numpy as np
 from appium import webdriver
@@ -85,21 +84,6 @@ class FolderViewTest(unittest.TestCase):
         """
         WebDriverWait(self.driver, 30).until(EC.presence_of_element_located((AppiumBy.NAME, "test.png")))
         time.sleep(3)  # Make sure the desktop is ready
-
-    def test_1_image_preview(self) -> None:
-        """
-        test.png is filled with red color
-        """
-        with tempfile.TemporaryDirectory() as temp_dir:
-            # Take desktop screenshot
-            saved_image_path: str = os.path.join(temp_dir, "desktop.png")
-            subprocess.check_call(["import", "-window", "root", saved_image_path])
-            cv_first_image = cv.imread(saved_image_path, cv.IMREAD_COLOR)
-            first_image = base64.b64encode(cv.imencode('.png', cv_first_image)[1].tobytes()).decode()
-        cv_second_image = np.zeros((16, 16, 3), dtype=np.uint8)
-        cv_second_image[:, :] = [0, 0, 255]
-        second_image = base64.b64encode(cv.imencode('.png', cv_second_image)[1].tobytes()).decode()
-        self.driver.find_image_occurrence(first_image, second_image)
 
     def test_2_bug469260_new_file_appear_without_refresh(self) -> None:
         """

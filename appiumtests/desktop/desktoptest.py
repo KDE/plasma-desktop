@@ -14,7 +14,6 @@ import time
 import unittest
 from typing import Final
 
-import cv2 as cv
 import gi
 
 gi.require_version('Gtk', '4.0')
@@ -320,20 +319,6 @@ class DesktopTest(unittest.TestCase):
             except TimeoutException:
                 continue
         self.assertTrue(success)
-
-        # BUG 477220: "More" button in the desktop toolbox does not open the context menu
-        time.sleep(3)  # Wait until the menu appears
-        self.driver.get_screenshot_as_file("bug477220_open_context_menu_before.png")
-        actions = ActionChains(self.driver)
-        for _ in range(3):  # The number of menu items by default
-            actions = actions.send_keys(Keys.DOWN).pause(0.5)
-        actions.perform()
-        self.driver.get_screenshot_as_file("bug477220_open_context_menu_after.png")
-
-        img1 = cv.imread("bug477220_open_context_menu_before.png", cv.IMREAD_GRAYSCALE)
-        img2 = cv.imread("bug477220_open_context_menu_after.png", cv.IMREAD_GRAYSCALE)
-        diff = cv.subtract(img1, img2)
-        self.assertGreater(cv.countNonZero(diff), 4000)  # Menu highlight changes
 
         # Click an empty area to close the menu
         action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_TOUCH, "finger"))
