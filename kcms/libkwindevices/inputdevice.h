@@ -45,6 +45,7 @@ class InputDevice : public QObject
     Q_PROPERTY(bool supportsPressureRange READ supportsPressureRange CONSTANT)
     Q_PROPERTY(bool relative READ isRelative WRITE setRelative NOTIFY relativeChanged)
     Q_PROPERTY(quint32 tabletPadDialCount READ tabletPadDialCount CONSTANT)
+    Q_PROPERTY(quint32 tabletPadRingCount READ tabletPadRingCount CONSTANT)
 
 public:
     InputDevice(const QString &dbusName, QObject *parent);
@@ -193,6 +194,11 @@ public:
     quint32 tabletPadDialCount() const
     {
         return m_tabletPadDialCount.value();
+    }
+
+    quint32 tabletPadRingCount() const
+    {
+        return m_tabletPadRingCount.value();
     }
 
     QString deviceGroup() const
@@ -401,6 +407,7 @@ private:
 
     Prop<quint32> m_tabletPadButtonCount = Prop<quint32>(this, "tabletPadButtonCount");
     Prop<quint32> m_tabletPadDialCount = Prop<quint32>(this, "tabletPadDialCount");
+    Prop<quint32> m_tabletPadRingCount = Prop<quint32>(this, "tabletPadRingCount");
 
     Prop<double> m_pressureRangeMin = Prop<double>(this,
                                                    "pressureRangeMin",

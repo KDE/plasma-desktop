@@ -22,6 +22,44 @@ Kirigami.FormLayout {
     required property KCM.TabletEvents tabletEvents
 
     Repeater {
+        id: ringRepeater
+        model: root.padDevice.tabletPadRingCount
+
+        delegate: ActionBinding {
+            id: seq
+
+            required property int index
+
+            Kirigami.FormData.label: i18nd("kcm_tablet", "Pad ring %1:", index + 1)
+
+            name: i18ndc("kcm_tablet", "@info Meant to be inserted into an existing sentence like 'configuring pad ring 0'", "pad ring %1", index + 1)
+            supportsPenButton: false
+            supportsRelativeEvents: true
+
+            function refreshInputSequence(): void {
+                seq.inputSequence = kcm.padRingMapping(root.padDevice.name, index)
+            }
+
+            inputSequence: kcm.padRingMapping(root.padDevice.name, index)
+            Connections {
+                target: kcm
+                function onSettingsRestored() {
+                    refreshInputSequence();
+                }
+            }
+
+            onGotInputSequence: sequence => {
+                kcm.assignPadRingMapping(root.padDevice.name, index, sequence)
+            }
+
+            SettingHighlighter {
+                // Currently, application-defined is the default
+                highlight: seq.inputSequence.type !== KCM.InputSequence.ApplicationDefined
+            }
+        }
+    }
+
+    Repeater {
         id: dialRepeater
         model: root.padDevice.tabletPadDialCount
 
