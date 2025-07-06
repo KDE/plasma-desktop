@@ -9,19 +9,19 @@ import QtQuick.Layouts
 import QtQuick.Controls as QQC2
 
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.tablet.kcm
+import org.kde.plasma.tablet.kcm as KCM
 import org.kde.kcmutils
 import org.kde.kquickcontrols
 
 Kirigami.Dialog {
     id: actionDialog
 
-    property inputSequence inputSequence
+    property KCM.inputSequence inputSequence
     property string name
     property bool supportsPenButton
     property bool supportsRelativeEvents
 
-    signal gotInputSequence(sequence: inputSequence)
+    signal gotInputSequence(sequence: KCM.inputSequence)
 
     title: supportsRelativeEvents ?
         i18ndc("kcm_tablet", "@title Select the action for the tablet dial", "Select Dial Action")
@@ -43,19 +43,19 @@ Kirigami.Dialog {
 
     function refreshDialogData(): void {
         switch (inputSequence.type) {
-            case InputSequence.Disabled:
+            case KCM.InputSequence.Disabled:
                 disabledRadio.checked = true;
                 break;
-            case InputSequence.Keyboard:
+            case KCM.InputSequence.Keyboard:
                 keyboardRadio.checked = true;
                 seq.keySequence = inputSequence.keySequence();
                 break;
-            case InputSequence.RelativeKeyboard:
+            case KCM.InputSequence.RelativeKeyboard:
                 relativeKeyboardRadio.checked = true;
                 upSeq.keySequence = inputSequence.upKeySequence();
                 downSeq.keySequence = inputSequence.downKeySequence();
                 break;
-            case InputSequence.Mouse:
+            case KCM.InputSequence.Mouse:
                 mouseRadio.checked = true;
                 clickCombo.currentIndex = clickCombo.indexOfValue(inputSequence.mouseButton());
 
@@ -66,13 +66,13 @@ Kirigami.Dialog {
                 metaCheckbox.checked = checkFlag(Qt.MetaModifier);
                 shiftCheckbox.checked = checkFlag(Qt.ShiftModifier);
                 break;
-            case InputSequence.Pen:
+            case KCM.InputSequence.Pen:
                 penRadio.checked = true;
                 break;
-            case InputSequence.Scroll:
+            case KCM.InputSequence.Scroll:
                 scrollRadio.checked = true;
                 break;
-            case InputSequence.ApplicationDefined:
+            case KCM.InputSequence.ApplicationDefined:
                 applicationRadio.checked = true;
                 break;
         }
@@ -103,7 +103,7 @@ Kirigami.Dialog {
             QQC2.ButtonGroup.group: radioGroup
 
             onToggled: {
-                inputSequence.type = InputSequence.ApplicationDefined;
+                inputSequence.type = KCM.InputSequence.ApplicationDefined;
                 refreshDialogData();
             }
         }
@@ -119,7 +119,7 @@ Kirigami.Dialog {
             QQC2.ButtonGroup.group: radioGroup
 
             onToggled: {
-                inputSequence.type = InputSequence.Keyboard;
+                inputSequence.type = KCM.InputSequence.Keyboard;
                 refreshDialogData();
             }
         }
@@ -135,7 +135,7 @@ Kirigami.Dialog {
             QQC2.ButtonGroup.group: radioGroup
 
             onToggled: {
-                inputSequence.type = InputSequence.RelativeKeyboard;
+                inputSequence.type = KCM.InputSequence.RelativeKeyboard;
                 refreshDialogData();
             }
         }
@@ -151,7 +151,7 @@ Kirigami.Dialog {
             QQC2.ButtonGroup.group: radioGroup
 
             onToggled: {
-                inputSequence.type = InputSequence.Mouse;
+                inputSequence.type = KCM.InputSequence.Mouse;
                 refreshDialogData();
             }
         }
@@ -168,7 +168,7 @@ Kirigami.Dialog {
             QQC2.ButtonGroup.group: radioGroup
 
             onToggled: {
-                inputSequence.type = InputSequence.Pen;
+                inputSequence.type = KCM.InputSequence.Pen;
                 refreshDialogData();
             }
         }
@@ -185,7 +185,7 @@ Kirigami.Dialog {
             QQC2.ButtonGroup.group: radioGroup
 
             onToggled: {
-                inputSequence.type = InputSequence.Scroll;
+                inputSequence.type = KCM.InputSequence.Scroll;
                 refreshDialogData();
             }
         }
@@ -200,7 +200,7 @@ Kirigami.Dialog {
             QQC2.ButtonGroup.group: radioGroup
 
             onToggled: {
-                inputSequence.type = InputSequence.Disabled;
+                inputSequence.type = KCM.InputSequence.Disabled;
                 refreshDialogData();
             }
         }

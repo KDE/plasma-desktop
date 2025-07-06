@@ -12,14 +12,14 @@ import QtQuick.Controls as QQC2
 import QtQuick.Shapes
 
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.tablet.kcm
+import org.kde.plasma.tablet.kcm as KCM
 import org.kde.kcmutils
 import org.kde.kquickcontrols
 
 Item {
     id: outputAreaView
     
-    required property var device
+    required property KCM.InputDevice device
     required property int mode
     required property bool displayVisible
 
@@ -27,7 +27,7 @@ Item {
     readonly property bool fitAspectRatio: mode === 1
     readonly property bool mapToPortion: mode === 2
 
-    function setOutputAreaMode(mode): void {
+    function setOutputAreaMode(mode: int): void {
         if (mode === 0) {
             // If fit to screen, use the whole size of the display
             outputAreaItem.x = 0
@@ -53,7 +53,7 @@ Item {
         }
     }
 
-    function setOutputArea(outputArea): void {
+    function setOutputArea(outputArea: rect): void {
         outputAreaItem.x = Qt.binding(() => outputArea.x * outputItem.outputWidth);
         outputAreaItem.y = Qt.binding(() => outputArea.y * outputItem.outputHeight);
         outputAreaItem.width = Qt.binding(() => tabletSizeHandle.x);
@@ -62,7 +62,7 @@ Item {
         tabletSizeHandle.y = Qt.binding(() => outputArea.height * outputItem.outputHeight);
     }
 
-    function setInputArea(inputArea): void {
+    function setInputArea(inputArea: rect): void {
         inputAreaItem.x = Qt.binding(() => inputArea.x * tabletItem.outputWidth);
         inputAreaItem.y = Qt.binding(() => inputArea.y * tabletItem.outputHeight);
         inputAreaItem.width = Qt.binding(() => inputAreaSizeHandle.x);

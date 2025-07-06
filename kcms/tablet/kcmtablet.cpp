@@ -297,7 +297,7 @@ Tablet::Tablet(QObject *parent, const KPluginMetaData &metaData)
     qmlRegisterType<OrientationsModel>("org.kde.plasma.tablet.kcm", 1, 0, "OrientationsModel");
     qmlRegisterType<StylusButtonsModel>("org.kde.plasma.tablet.kcm", 1, 1, "StylusButtonsModel");
     qmlRegisterType<TabletEvents>("org.kde.plasma.tablet.kcm", 1, 1, "TabletEvents");
-    qmlRegisterAnonymousType<InputDevice>("org.kde.plasma.tablet.kcm", 1);
+    qmlRegisterUncreatableType<InputDevice>("org.kde.plasma.tablet.kcm", 1, 0, "InputDevice", "Access from C++ only");
     qmlRegisterType<CalibrationTool>("org.kde.plasma.tablet.kcm", 1, 1, "CalibrationTool");
     // This looks weird, but the first type here is the value type. The second type is here is just for the enumerations.
     // Yes, this IS what they suggest you do: https://doc.qt.io/qt-6/qtqml-cppintegration-definetypes.html#value-types-with-enumerations

@@ -10,7 +10,7 @@ import QtQuick.Controls as QQC2
 import QtQuick.Shapes
 
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.tablet.kcm
+import org.kde.plasma.tablet.kcm as KCM
 import org.kde.kcmutils
 import org.kde.kquickcontrols
 
@@ -18,8 +18,8 @@ SimpleKCM {
     id: root
 
     property bool testerWindowOpen: false
-    property QtObject device
-    property QtObject padDevice
+    property KCM.InputDevice device
+    property KCM.InputDevice padDevice
 
     ConfigModule.buttons: ConfigModule.Default | ConfigModule.Apply
 
@@ -53,7 +53,7 @@ SimpleKCM {
                 if (component.status === Component.Ready) {
                     const window = component.createObject(root, {tabletEvents: events});
                     window.showNormal();
-                    window.closing.connect((close) => {
+                    window.closing.connect(close => {
                         root.testerWindowOpen = false;
                     });
 
@@ -199,7 +199,7 @@ SimpleKCM {
             Layout.fillWidth: true
             Layout.fillHeight: true
 
-            TabletEvents {
+            KCM.TabletEvents {
                 id: events
 
                 anchors.fill: parent

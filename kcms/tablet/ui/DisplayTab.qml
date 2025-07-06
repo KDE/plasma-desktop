@@ -10,14 +10,14 @@ import QtQuick.Controls as QQC2
 import QtQuick.Shapes
 
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.tablet.kcm
+import org.kde.plasma.tablet.kcm as KCM
 import org.kde.kcmutils
 import org.kde.kquickcontrols
 
 Kirigami.FormLayout {
     id: root
 
-    required property var device
+    required property KCM.InputDevice device
 
     function settingsRestored(): void {
         // we have to reload this manually because it's function-based
@@ -44,7 +44,7 @@ Kirigami.FormLayout {
     QQC2.ComboBox {
         id: outputsCombo
         Kirigami.FormData.label: i18nd("kcm_tablet", "Map to screen:")
-        model: OutputsModel {
+        model: KCM.OutputsModel {
             id: outputsModel
         }
         currentIndex: findCurrentIndex()
@@ -71,7 +71,7 @@ Kirigami.FormLayout {
 
     QQC2.ComboBox {
         Kirigami.FormData.label: i18nd("kcm_tablet", "Orientation:")
-        model: OrientationsModel {
+        model: KCM.OrientationsModel {
             id: orientationsModel
         }
         enabled: root.device && root.device.supportsOrientation

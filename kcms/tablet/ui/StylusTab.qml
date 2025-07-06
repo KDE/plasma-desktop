@@ -10,7 +10,7 @@ import QtQuick.Controls as QQC2
 import QtQuick.Shapes
 
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.tablet.kcm
+import org.kde.plasma.tablet.kcm as KCM
 import org.kde.kcmutils
 import org.kde.kquickcontrols
 
@@ -18,8 +18,8 @@ Item {
     id: root
 
     required property var db
-    required property var device
-    required property var tabletEvents
+    required property KCM.InputDevice device
+    required property KCM.TabletEvents tabletEvents
 
     readonly property bool calibrationWindowOpen: calibrationWindow !== null
     property Calibration calibrationWindow
@@ -294,7 +294,7 @@ Item {
             Repeater {
                 id: buttonRepeater
 
-                model: StylusButtonsModel {
+                model: KCM.StylusButtonsModel {
                     device: root.device
                     db: root.db
                 }
@@ -302,18 +302,18 @@ Item {
                 delegate: ActionBinding {
                     id: seq
 
-                    required property var modelData
+                    required property string label
+                    required property int index
+                    required name
 
-                    Kirigami.FormData.label: (buttonPressed ? "<b>" : "") + modelData.label + (buttonPressed ? "</b>" : "")
+                    Kirigami.FormData.label: (buttonPressed ? "<b>" : "") + label + (buttonPressed ? "</b>" : "")
                     property bool buttonPressed: false
-
-                    name: modelData.name
 
                     Connections {
                         target: root.tabletEvents
 
-                        function onToolButtonReceived(hardware_serial_hi, hardware_serial_lo, button, pressed) {
-                            if (button !== modelData.value) {
+                        function onToolButtonReceived(hardware_serial_hi: int, hardware_serial_lo: int, button: int, pressed: bool): void {
+                            if (button !== seq.index) {
                                 return;
                             }
                             seq.buttonPressed = pressed;
@@ -329,18 +329,18 @@ Item {
                     }
 
                     function refreshInputSequence(): void {
-                        seq.inputSequence = kcm.toolButtonMapping(root.device.name, modelData.value);
+                        seq.inputSequence = kcm.toolButtonMapping(root.device.name, seq.index);
                     }
 
                     Component.onCompleted: refreshInputSequence()
 
                     onGotInputSequence: sequence => {
-                        kcm.assignToolButtonMapping(root.device.name, modelData.value, sequence);
+                        kcm.assignToolButtonMapping(root.device.name, seq.index, sequence);
                     }
 
                     SettingHighlighter {
                         // Currently, application-defined is the default
-                        highlight: seq.inputSequence.type !== InputSequence.ApplicationDefined
+                        highlight: seq.inputSequence.type !== KCM.InputSequence.ApplicationDefined
                     }
                 }
             }

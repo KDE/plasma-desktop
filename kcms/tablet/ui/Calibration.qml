@@ -11,15 +11,15 @@ import QtQuick.Shapes
 import QtQuick.Controls as QQC2
 
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.tablet.kcm
+import org.kde.plasma.tablet.kcm as KCM
 
 QQC2.ApplicationWindow {
     id: root
 
-    required property var device
-    required property var tabletEvents
+    required property KCM.InputDevice device
+    required property KCM.TabletEvents tabletEvents
 
-    property CalibrationTool tool: CalibrationTool {
+    property KCM.CalibrationTool tool: KCM.CalibrationTool {
         onCalibrationCreated: matrix => tool.setCalibrationMatrix(device, matrix)
         onResetFromSaved: root.device.resetCalibrationMatrix()
     }
@@ -34,7 +34,7 @@ QQC2.ApplicationWindow {
 
     onClosing: {
         // Make sure to reset it back to default if the user closes the window for any reason and hasn't confirmed
-        if (tool.state === CalibrationTool.Confirming) {
+        if (tool.state === KCM.CalibrationTool.Confirming) {
             root.device.resetCalibrationMatrix()
         }
     }
@@ -94,11 +94,11 @@ QQC2.ApplicationWindow {
             horizontalAlignment: Text.AlignHCenter
 
             text: {
-                if (tool.state === CalibrationTool.Confirming) {
+                if (tool.state === KCM.CalibrationTool.Confirming) {
                     return xi18nc("@info", "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will revert to default calibration in %1 seconds.</b>", tool.resetSecondsLeft)
                 }
 
-                if (tool.state === CalibrationTool.Testing) {
+                if (tool.state === KCM.CalibrationTool.Testing) {
                     return xi18nc("@info", "Calibration is completed and saved.<nl/><nl/>Refine the calibration further or close the window.");
                 }
 
@@ -107,7 +107,7 @@ QQC2.ApplicationWindow {
         }
 
         QQC2.Button {
-            visible: tool.state === CalibrationTool.Testing
+            visible: tool.state === KCM.CalibrationTool.Testing
 
             text: i18nc("@action:button", "Refine Existing Calibration")
             icon.name: "edit-redo"
@@ -118,10 +118,10 @@ QQC2.ApplicationWindow {
         }
 
         QQC2.Button {
-            text: tool.state === CalibrationTool.Confirming ? i18nc("@action:button", "Reset and Try Again") : i18nc("@action:button", "Calibrate from Scratch")
+            text: tool.state === KCM.CalibrationTool.Confirming ? i18nc("@action:button", "Reset and Try Again") : i18nc("@action:button", "Calibrate from Scratch")
             icon.name: "kt-restore-defaults"
             focus: true
-            visible: tool.state === CalibrationTool.Confirming || tool.state === CalibrationTool.Testing
+            visible: tool.state === KCM.CalibrationTool.Confirming || tool.state === KCM.CalibrationTool.Testing
 
             onClicked: {
                 tool.restoreDefaults(root.device);
@@ -132,7 +132,7 @@ QQC2.ApplicationWindow {
         }
 
         QQC2.Button {
-            text: tool.state === CalibrationTool.Testing ? i18nc("@action:button", "Close") : i18nc("@action:button", "Cancel")
+            text: tool.state === KCM.CalibrationTool.Testing ? i18nc("@action:button", "Close") : i18nc("@action:button", "Cancel")
             icon.name: "dialog-cancel"
 
             onClicked: root.close()
@@ -185,7 +185,7 @@ QQC2.ApplicationWindow {
     }
 
     component PairTargetPath: Item {
-        required property var anchor
+        required property Item anchor
 
         visible: anchor.visible
 
@@ -207,7 +207,7 @@ QQC2.ApplicationWindow {
     Target {
         id: topLeftAnchor
 
-        visible: tool.state === CalibrationTool.Testing || tool.currentTarget === 0
+        visible: tool.state === KCM.CalibrationTool.Testing || tool.currentTarget === 0
 
         anchors {
             left: parent.left
@@ -224,7 +224,7 @@ QQC2.ApplicationWindow {
     Target {
         id: topRightAnchor
 
-        visible: tool.state === CalibrationTool.Testing || tool.currentTarget === 1
+        visible: tool.state === KCM.CalibrationTool.Testing || tool.currentTarget === 1
 
         anchors {
             right: parent.right
@@ -241,7 +241,7 @@ QQC2.ApplicationWindow {
     Target {
         id: bottomLeftAnchor
 
-        visible: tool.state === CalibrationTool.Testing || tool.currentTarget === 2
+        visible: tool.state === KCM.CalibrationTool.Testing || tool.currentTarget === 2
 
         anchors {
             left: parent.left
@@ -258,7 +258,7 @@ QQC2.ApplicationWindow {
     Target {
         id: bottomRightAnchor
 
-        visible: tool.state === CalibrationTool.Testing || tool.currentTarget === 3
+        visible: tool.state === KCM.CalibrationTool.Testing || tool.currentTarget === 3
 
         anchors {
             right: parent.right

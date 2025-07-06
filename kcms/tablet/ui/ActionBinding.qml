@@ -9,39 +9,39 @@ import QtQuick.Layouts
 import QtQuick.Controls as QQC2
 
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.tablet.kcm
+import org.kde.plasma.tablet.kcm as KCM
 import org.kde.kcmutils
 import org.kde.kquickcontrols
 
 QQC2.Button {
     id: root
 
-    property inputSequence inputSequence
-    property string name
+    required property string name
+    property KCM.inputSequence inputSequence
     property bool supportsPenButton: true
     property bool supportsRelativeEvents: false
 
-    signal gotInputSequence(sequence: inputSequence)
+    signal gotInputSequence(sequence: KCM.inputSequence)
 
     icon.name: {
         switch (inputSequence.type) {
-            case InputSequence.Disabled:
+            case KCM.InputSequence.Disabled:
                 return "action-unavailable-symbolic";
-            case InputSequence.Keyboard:
+            case KCM.InputSequence.Keyboard:
                 return "input-keyboard-symbolic";
-            case InputSequence.Mouse:
+            case KCM.InputSequence.Mouse:
                 return "input-mouse-symbolic";
-            case InputSequence.Pen:
+            case KCM.InputSequence.Pen:
                 return "tool_pen-symbolic";
-            case InputSequence.Scroll:
+            case KCM.InputSequence.Scroll:
                 return "input-mouse-click-middle";
-            case InputSequence.ApplicationDefined:
+            case KCM.InputSequence.ApplicationDefined:
                 return "applications-all-symbolic";
         }
     }
     text: inputSequence.toString()
 
-    function moveUpSequence(sequence: inputSequence): void {
+    function moveUpSequence(sequence: KCM.inputSequence): void {
         root.gotInputSequence(sequence);
         actionDialog.gotInputSequence.disconnect(moveUpSequence);
     }

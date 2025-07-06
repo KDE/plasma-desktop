@@ -10,16 +10,16 @@ import QtQuick.Controls as QQC2
 import QtQuick.Shapes
 
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.tablet.kcm
+import org.kde.plasma.tablet.kcm as KCM
 import org.kde.kcmutils
 import org.kde.kquickcontrols
 
 Kirigami.FormLayout {
     id: root
 
-    required property var device
-    required property var padDevice
-    required property var tabletEvents
+    required property KCM.InputDevice device
+    required property KCM.InputDevice padDevice
+    required property KCM.TabletEvents tabletEvents
 
     Repeater {
         id: dialRepeater
@@ -28,19 +28,19 @@ Kirigami.FormLayout {
         delegate: ActionBinding {
             id: seq
 
-            required property var modelData
+            required property int index
 
-            Kirigami.FormData.label: i18nd("kcm_tablet", "Pad dial %1:", modelData + 1)
+            Kirigami.FormData.label: i18nd("kcm_tablet", "Pad dial %1:", index + 1)
 
-            name: i18ndc("kcm_tablet", "@info Meant to be inserted into an existing sentence like 'configuring pad button 0'", "pad dial %1", modelData + 1)
+            name: i18ndc("kcm_tablet", "@info Meant to be inserted into an existing sentence like 'configuring pad button 0'", "pad dial %1", index + 1)
             supportsPenButton: false
             supportsRelativeEvents: true
 
             function refreshInputSequence(): void {
-                seq.inputSequence = kcm.padDialMapping(root.padDevice.name, modelData)
+                seq.inputSequence = kcm.padDialMapping(root.padDevice.name, index)
             }
 
-            inputSequence: kcm.padDialMapping(root.padDevice.name, modelData)
+            inputSequence: kcm.padDialMapping(root.padDevice.name, index)
             Connections {
                 target: kcm
                 function onSettingsRestored() {
@@ -49,12 +49,12 @@ Kirigami.FormLayout {
             }
 
             onGotInputSequence: sequence => {
-                kcm.assignPadDialMapping(root.padDevice.name, modelData, sequence)
+                kcm.assignPadDialMapping(root.padDevice.name, index, sequence)
             }
 
             SettingHighlighter {
                 // Currently, application-defined is the default
-                highlight: seq.inputSequence.type !== InputSequence.ApplicationDefined
+                highlight: seq.inputSequence.type !== KCM.InputSequence.ApplicationDefined
             }
         }
     }
@@ -66,18 +66,18 @@ Kirigami.FormLayout {
         delegate: ActionBinding {
             id: seq
 
-            required property var modelData
+            required property int index
 
-            Kirigami.FormData.label: (buttonPressed ? "<b>" : "") + i18nd("kcm_tablet", "Pad button %1:", modelData + 1) + (buttonPressed ? "</b>" : "")
+            Kirigami.FormData.label: (buttonPressed ? "<b>" : "") + i18nd("kcm_tablet", "Pad button %1:", index + 1) + (buttonPressed ? "</b>" : "")
             property bool buttonPressed: false
 
-            name: i18ndc("kcm_tablet", "@info Meant to be inserted into an existing sentence like 'configuring pad button 0'", "pad button %1", modelData + 1)
+            name: i18ndc("kcm_tablet", "@info Meant to be inserted into an existing sentence like 'configuring pad button 0'", "pad button %1", index + 1)
             supportsPenButton: false
 
             Connections {
                 target: root.tabletEvents
                 function onPadButtonReceived(path, button, pressed) {
-                    if (button !== modelData || !path.endsWith(root.padDevice.sysName)) {
+                    if (button !== index || !path.endsWith(root.padDevice.sysName)) {
                         return;
                     }
                     seq.buttonPressed = pressed
@@ -85,10 +85,10 @@ Kirigami.FormLayout {
             }
 
             function refreshInputSequence(): void {
-                seq.inputSequence = kcm.padButtonMapping(root.padDevice.name, modelData)
+                seq.inputSequence = kcm.padButtonMapping(root.padDevice.name, index)
             }
 
-            inputSequence: kcm.padButtonMapping(root.padDevice.name, modelData)
+            inputSequence: kcm.padButtonMapping(root.padDevice.name, index)
             Connections {
                 target: kcm
                 function onSettingsRestored() {
@@ -97,12 +97,12 @@ Kirigami.FormLayout {
             }
 
             onGotInputSequence: sequence => {
-                kcm.assignPadButtonMapping(root.padDevice.name, modelData, sequence)
+                kcm.assignPadButtonMapping(root.padDevice.name, index, sequence)
             }
 
             SettingHighlighter {
                 // Currently, application-defined is the default
-                highlight: seq.inputSequence.type !== InputSequence.ApplicationDefined
+                highlight: seq.inputSequence.type !== KCM.InputSequence.ApplicationDefined
             }
         }
     }

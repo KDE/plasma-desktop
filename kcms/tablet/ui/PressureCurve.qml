@@ -11,7 +11,7 @@ import QtQuick.Shapes
 import QtQuick.Controls as QQC2
 
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.tablet.kcm 1.0
+import org.kde.plasma.tablet.kcm as KCM
 
 QQC2.Control {
     id: root

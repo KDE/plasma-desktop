@@ -11,12 +11,12 @@ import QtQuick.Shapes
 import QtQuick.Controls as QQC2
 
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.tablet.kcm
+import org.kde.plasma.tablet.kcm as Tablet
 
 QQC2.ApplicationWindow {
     id: root
 
-    required property var tabletEvents
+    required property Tablet.TabletEvents tabletEvents
     property bool toolDown: false
 
     minimumWidth: 400
