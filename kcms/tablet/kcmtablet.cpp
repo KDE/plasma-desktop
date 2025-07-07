@@ -498,5 +498,4 @@ TabletsModel *Tablet::tabletsModel() const
 }
 
 #include "kcmtablet.moc"
-
 #include "moc_kcmtablet.cpp"
