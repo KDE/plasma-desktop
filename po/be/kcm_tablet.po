@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-29 00:44+0000\n"
+"POT-Creation-Date: 2025-07-07 00:43+0000\n"
 "PO-Revision-Date: 2024-11-21 20:40\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -22,47 +22,66 @@ msgstr ""
 "kcm_tablet.po\n"
 "X-Crowdin-File-ID: 10624\n"
 
-#: inputsequence.cpp:172
+#: inputsequence.cpp:191
 #, kde-format
 msgctxt "@action:button This action is disabled"
 msgid "Disabled"
 msgstr "Адключана"
 
-#: inputsequence.cpp:175
+#: inputsequence.cpp:194
 #, kde-format
 msgctxt "@action:button There is no keybinding"
 msgid "None"
 msgstr "Няма"
 
-#: inputsequence.cpp:182
+#: inputsequence.cpp:209
+#, kde-format
+msgctxt "@action:button Two keybinds for a dial, up & down"
+msgid "%1 && %2"
+msgstr ""
+
+#: inputsequence.cpp:216
+#, fuzzy, kde-format
+#| msgid "None"
+msgctxt "@action:button There is no keybindings"
+msgid "None"
+msgstr "Няма"
+
+#: inputsequence.cpp:221
 #, kde-format
 msgctxt "@action:button"
 msgid "Left mouse button"
 msgstr "Левая кнопка мышы"
 
-#: inputsequence.cpp:184
+#: inputsequence.cpp:223
 #, kde-format
 msgctxt "@action:button"
 msgid "Right mouse button"
 msgstr "Правая кнопка мышы"
 
-#: inputsequence.cpp:186
+#: inputsequence.cpp:225
 #, kde-format
 msgctxt "@action:button"
 msgid "Middle mouse button"
 msgstr "Сярэдняя кнопка мышы"
 
-#: inputsequence.cpp:192
+#: inputsequence.cpp:231
 #, kde-format
 msgctxt "@action:button"
 msgid "Application-defined"
 msgstr "Вызначаецца праграмай"
 
-#: inputsequence.cpp:194
+#: inputsequence.cpp:233
 #, kde-format
 msgctxt "@action:button"
 msgid "Pen Button %1"
 msgstr "Кнопка стылуса %1"
+
+#: inputsequence.cpp:235
+#, kde-format
+msgctxt "@action:button"
+msgid "Scroll wheel"
+msgstr ""
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -137,49 +156,79 @@ msgctxt ""
 msgid "pen button %1"
 msgstr "кнопка стылуса %1"
 
-#: ui/ActionDialog.qml:25
+#: ui/ActionDialog.qml:27
+#, fuzzy, kde-format
+#| msgctxt "@title Select the action for the tablet button"
+#| msgid "Select Button Action"
+msgctxt "@title Select the action for the tablet dial"
+msgid "Select Dial Action"
+msgstr "Абраць дзеянне кнопкі"
+
+#: ui/ActionDialog.qml:28
 #, kde-format
 msgctxt "@title Select the action for the tablet button"
 msgid "Select Button Action"
 msgstr "Абраць дзеянне кнопкі"
 
-#: ui/ActionDialog.qml:74
+#: ui/ActionDialog.qml:86
+#, fuzzy, kde-format
+#| msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
+#| msgid "Choose what action will be taken when pressing %1:"
+msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
+msgid "Choose what action will be taken when rotating %1:"
+msgstr "Абраць дзеянне, якое будзе выканана пры націсканні %1:"
+
+#: ui/ActionDialog.qml:87
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when pressing %1:"
 msgstr "Абраць дзеянне, якое будзе выканана пры націсканні %1:"
 
-#: ui/ActionDialog.qml:88
+#: ui/ActionDialog.qml:101
 #, kde-format
 msgctxt "@option:radio Set this action to an application-defined type"
 msgid "Defer to application"
 msgstr "Адтэрмінаванне для праграмы"
 
-#: ui/ActionDialog.qml:103
+#: ui/ActionDialog.qml:116
 #, kde-format
 msgctxt "@option:radio Set this action to a keyboard type"
 msgid "Send keyboard key"
 msgstr "Адправіць клавішу клавіятуры"
 
-#: ui/ActionDialog.qml:117
+#: ui/ActionDialog.qml:132
+#, fuzzy, kde-format
+#| msgctxt "@option:radio Set this action to a keyboard type"
+#| msgid "Send keyboard key"
+msgctxt "@option:radio Set this action to a up/down keyboard type"
+msgid "Send keyboard keys"
+msgstr "Адправіць клавішу клавіятуры"
+
+#: ui/ActionDialog.qml:147
 #, kde-format
 msgctxt "@option:radio Set this action to a mouse type"
 msgid "Send mouse button click"
 msgstr "Адправіць пстрыканне левай кнопкай мышы"
 
-#: ui/ActionDialog.qml:132
+#: ui/ActionDialog.qml:163
 #, kde-format
 msgctxt "@option:radio Set this action to a pen button type"
 msgid "Send pen button"
 msgstr "Адправіць кнопку стылуса"
 
-#: ui/ActionDialog.qml:150
+#: ui/ActionDialog.qml:180
+#, kde-format
+msgctxt "@option:radio Set this action to a scroll wheel type type"
+msgid "Act as scroll wheel"
+msgstr ""
+
+#: ui/ActionDialog.qml:198
 #, kde-format
 msgctxt "@option:radio Disable this action"
 msgid "Do nothing"
 msgstr "Нічога не рабіць"
 
-#: ui/ActionDialog.qml:170
+#: ui/ActionDialog.qml:218
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -189,67 +238,83 @@ msgstr ""
 "Гэтая кнопка планшэта перанакіроўваецца мэтавай праграме, якая можа "
 "вырашыць, як яе апрацоўваць."
 
-#: ui/ActionDialog.qml:198
+#: ui/ActionDialog.qml:249
+#, kde-format
+msgid "Up:"
+msgstr ""
+
+#: ui/ActionDialog.qml:263
+#, kde-format
+msgid "Down:"
+msgstr ""
+
+#: ui/ActionDialog.qml:277
 #, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left-click"
 msgstr "Пстрыканне левай кнопкай мышы"
 
-#: ui/ActionDialog.qml:199
+#: ui/ActionDialog.qml:278
 #, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle-click"
 msgstr "Пстрыканне сярэдняй кнопкай мышы"
 
-#: ui/ActionDialog.qml:200
+#: ui/ActionDialog.qml:279
 #, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right-click"
 msgstr "Пстрыканне правай кнопкай мышы"
 
-#: ui/ActionDialog.qml:227
+#: ui/ActionDialog.qml:306
 #, kde-format
 msgctxt "@option:check The ctrl modifier on the keyboard"
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: ui/ActionDialog.qml:234
+#: ui/ActionDialog.qml:313
 #, kde-format
 msgctxt "@option:check The alt modifier on the keyboard"
 msgid "Alt"
 msgstr "Alt"
 
-#: ui/ActionDialog.qml:241
+#: ui/ActionDialog.qml:320
 #, kde-format
 msgctxt "@option:check The meta modifier on the keyboard"
 msgid "Meta"
 msgstr "Meta"
 
-#: ui/ActionDialog.qml:248
+#: ui/ActionDialog.qml:327
 #, kde-format
 msgctxt "@option:check The shift modifier on the keyboard"
 msgid "Shift"
 msgstr "Shift"
 
-#: ui/ActionDialog.qml:264
+#: ui/ActionDialog.qml:343
 #, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
 msgstr "Кнопка 1"
 
-#: ui/ActionDialog.qml:265
+#: ui/ActionDialog.qml:344
 #, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
 msgstr "Кнопка 2"
 
-#: ui/ActionDialog.qml:266
+#: ui/ActionDialog.qml:345
 #, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
 msgstr "Кнопка 3"
 
-#: ui/ActionDialog.qml:275
+#: ui/ActionDialog.qml:354
+#, kde-format
+msgctxt "@info"
+msgid "Act like a scroll wheel on a mouse."
+msgstr ""
+
+#: ui/ActionDialog.qml:363
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
@@ -410,11 +475,25 @@ msgid "Pad"
 msgstr "Планшэт:"
 
 #: ui/PadTab.qml:33
+#, fuzzy, kde-format
+#| msgid "Pad button %1:"
+msgid "Pad dial %1:"
+msgstr "Кнопка планшэта %1:"
+
+#: ui/PadTab.qml:35
+#, kde-format
+msgctxt ""
+"@info Meant to be inserted into an existing sentence like 'configuring pad "
+"button 0'"
+msgid "pad dial %1"
+msgstr ""
+
+#: ui/PadTab.qml:71
 #, kde-format
 msgid "Pad button %1:"
 msgstr "Кнопка планшэта %1:"
 
-#: ui/PadTab.qml:36
+#: ui/PadTab.qml:74
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
@@ -630,9 +709,6 @@ msgstr "Ачысціць"
 
 #~ msgid "Fit to Screen"
 #~ msgstr "Па памеры экрана"
-
-#~ msgid "None"
-#~ msgstr "Няма"
 
 #~ msgid "Pen button 2:"
 #~ msgstr "Кнопка стылуса 2:"
