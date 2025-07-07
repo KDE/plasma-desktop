@@ -167,7 +167,7 @@ if(BUILD_KCM_TABLET)
         TYPE REQUIRED
         PURPOSE "Required for building Tablet input KCM"
     )
-    pkg_check_modules(LIBWACOM libwacom REQUIRED IMPORTED_TARGET)
+    pkg_check_modules(LIBWACOM "libwacom>=2.14" REQUIRED IMPORTED_TARGET)
 endif()
 
 find_package(SDL2 2.0.16)
