@@ -1,26 +1,26 @@
 # Translation of kcm_access.po to Catalan
-# Copyright (C) 2000-2024 This_file_is_part_of_KDE
+# Copyright (C) 2000-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Sebastià Pla i Sanz <sps@sastia.com>, 2000, 2001, 2004, 2005, 2006.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2002, 2003, 2012, 2015, 2016, 2020, 2023.
-# SPDX-FileCopyrightText: 2007, 2008, 2009, 2014, 2015, 2017, 2019, 2020, 2021, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
 # Orestes Mas Casals <orestes@tsc.upc.edu>, 2008.
 # Alfredo Vicente <alviboi@gmail.com>, 2019.
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2014, 2015, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-05 05:54+0000\n"
-"PO-Revision-Date: 2024-10-28 11:30+0100\n"
+"PO-Revision-Date: 2025-07-06 11:26+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -91,212 +91,202 @@ msgstr "Error: No s'ha pogut llançar «orca --setup»"
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Ring the System Bell"
+#, kde-format
 msgid "Use System Bell"
-msgstr "Fes sonar el timbre del sistema"
+msgstr "Usa el timbre del sistema"
 
 #. i18n: ectx: label, entry (CustomBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Ring system bell:"
+#, kde-format
 msgid "Customize system bell"
-msgstr "Fes sonar el timbre del sistema:"
+msgstr "Personalitza el timbre del sistema"
 
 #. i18n: ectx: label, entry (CustomBellFile), group (Bell)
 #: kcmaccessibilitybell.kcfg:17
-#, fuzzy, kde-format
-#| msgid "Search audio file for the system bell"
+#, kde-format
 msgid "Sound file for the Bell"
-msgstr "Cerca un fitxer d'àudio per al timbre del sistema"
+msgstr "Fitxer de so per al timbre"
 
 #. i18n: ectx: label, entry (VisibleBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:20
 #, kde-format
 msgid "Use a visual bell instead of a sound"
-msgstr ""
+msgstr "Usa un timbre visual en lloc d'un so"
 
 #. i18n: ectx: label, entry (InvertScreen), group (Bell)
 #: kcmaccessibilitybell.kcfg:24
 #, kde-format
 msgid "Invert the system colors on the bell"
-msgstr ""
+msgstr "Inverteix els colors del sistema en el timbre"
 
 #. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
 #: kcmaccessibilitybell.kcfg:28
 #, kde-format
 msgid "Color of the Visible Bell"
-msgstr ""
+msgstr "Color del timbre visible"
 
 #. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
 #: kcmaccessibilitybell.kcfg:32
 #, kde-format
 msgid "Duration of the Visible Bell"
-msgstr ""
+msgstr "Durada del timbre visible"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Sticky keys:"
+#, kde-format
 msgid "Use sticky Keys"
-msgstr "Tecles permanents:"
+msgstr "Usa tecles permanents"
 
 #. i18n: ectx: label, entry (StickyKeysLatch), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Sticky keys:"
+#, kde-format
 msgid "Lock the sticky keys"
-msgstr "Tecles permanents:"
+msgstr "Bloqueja les tecles permanents"
 
 #. i18n: ectx: label, entry (StickyKeysAutoOff), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:17
 #, kde-format
 msgid "Turn sticky keys off when two keys are pressed simultaneously"
 msgstr ""
+"Activa les tecles permanents sempre que es premin dues tecles simultàniament"
 
 #. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:21
 #, kde-format
 msgid "Beep on a sticky key press"
-msgstr ""
+msgstr "Timbre en prémer una tecla permanent"
 
 #. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:25
 #, kde-format
 msgid "Toggle keys beep"
-msgstr ""
+msgstr "Timbre de commutar tecles"
 
 #. i18n: ectx: label, entry (KeyboardNotifyModifiers), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:29
-#, fuzzy, kde-format
-#| msgctxt "Use system bell when a key is pressed"
-#| msgid "when any key is &pressed"
+#, kde-format
 msgid "Notify when a keyboard modifier is pressed"
-msgstr "quan es &premi qualsevol tecla"
+msgstr "Notifica quan es prem un modificador de teclat"
 
 #. i18n: ectx: label, entry (AccessXTimeout), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:33
 #, kde-format
 msgid "Use a timeout delay"
-msgstr ""
+msgstr "Usa un retard de temps d'espera"
 
 #. i18n: ectx: label, entry (AccessXTimeoutDelay), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:37
 #, kde-format
 msgid "Delay for timeout"
-msgstr ""
+msgstr "Retard de temps d'espera"
 
 #. i18n: ectx: label, entry (AccessXBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:41
 #, kde-format
 msgid "Use a beep for access"
-msgstr ""
+msgstr "Usa un timbre per a accedir"
 
 #. i18n: ectx: label, entry (SlowKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:9
 #, kde-format
 msgid "Use slow keypresses"
-msgstr ""
+msgstr "Usa pulsacions lentes de tecles"
 
 #. i18n: ectx: label, entry (SlowKeysDelay), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:13
 #, kde-format
 msgid "Delay for the key press"
-msgstr ""
+msgstr "Retard en la pulsació de tecla"
 
 #. i18n: ectx: label, entry (SlowKeysPressBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:17
 #, kde-format
 msgid "Beep on a slow keypress"
-msgstr ""
+msgstr "Timbre en una pulsació lenta de tecla"
 
 #. i18n: ectx: label, entry (SlowKeysAcceptBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:21
 #, kde-format
 msgid "Beep on an accepted keypress"
-msgstr ""
+msgstr "Timbre en una pulsació acceptada de tecla"
 
 #. i18n: ectx: label, entry (SlowKeysRejectBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:25
 #, kde-format
 msgid "Beep on a rejected keypress"
-msgstr ""
+msgstr "Timbre en una pulsació rebutjada de tecla"
 
 #. i18n: ectx: label, entry (BounceKeys), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:29
-#, fuzzy, kde-format
-#| msgid "Bounce keys:"
+#, kde-format
 msgid "Bounce Keys"
-msgstr "Tecles de repetició:"
+msgstr "Tecles de repetició"
 
 #. i18n: ectx: label, entry (BounceKeysDelay), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:33
 #, kde-format
 msgid "Use a delay for bouncing"
-msgstr ""
+msgstr "Usa un retard per a la repetició"
 
 #. i18n: ectx: label, entry (BounceKeysRejectBeep), group (Keyboard)
 #: kcmaccessibilitykeyboardfilters.kcfg:37
-#, fuzzy, kde-format
-#| msgctxt "Use system bell when a key is rejected"
-#| msgid "when any key is &rejected"
+#, kde-format
 msgid "Beep if a bounce key event is rejected"
-msgstr "quan es &rebutgi qualsevol tecla"
+msgstr "Timbre si es rebutja un esdeveniment de repetició de tecla"
 
 #. i18n: ectx: label, entry (MouseKeys), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:9
 #, kde-format
 msgid "Use keys to control the mouse"
-msgstr ""
+msgstr "Usa tecles per a controlar el ratolí"
 
 #. i18n: ectx: label, entry (AccelerationDelay), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:13
 #, kde-format
 msgid "Delay for the mouse movement"
-msgstr ""
+msgstr "Retard del moviment del ratolí"
 
 #. i18n: ectx: label, entry (RepetitionInterval), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:17
 #, kde-format
 msgid "Repetition interval for the mouse movement"
-msgstr ""
+msgstr "Interval de repetició del moviment del ratolí"
 
 #. i18n: ectx: label, entry (AccelerationTime), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:21
 #, kde-format
 msgid "Time to hit maximum velocity"
-msgstr ""
+msgstr "Temps per a arribar a la velocitat màxima"
 
 #. i18n: ectx: label, entry (MaxSpeed), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:25
-#, fuzzy, kde-format
-#| msgid "Maximum speed:"
+#, kde-format
 msgid "Maximum Velocity"
-msgstr "Velocitat màxima:"
+msgstr "Velocitat màxima"
 
 #. i18n: ectx: label, entry (ProfileCurve), group (Mouse)
 #: kcmaccessibilitymouse.kcfg:29
 #, kde-format
 msgid "Mouse Key Curve"
-msgstr ""
+msgstr "Corba de la tecla del ratolí"
 
 #. i18n: ectx: label, entry (Gestures), group (Keyboard)
 #: kcmaccessibilitymouse.kcfg:35
 #, kde-format
 msgid "Use Gestures"
-msgstr ""
+msgstr "Usa gestos"
 
 #. i18n: ectx: label, entry (GestureConfirmation), group (Keyboard)
 #: kcmaccessibilitymouse.kcfg:39
 #, kde-format
 msgid "Ask for Confirmation for a gesture"
-msgstr ""
+msgstr "Demana confirmació d'un gest"
 
 #. i18n: ectx: label, entry (KeyboardNotifyAccess), group (Keyboard)
 #: kcmaccessibilitymouse.kcfg:43
 #, kde-format
 msgid "Confirm access to the Keyboard"
-msgstr ""
+msgstr "Confirma l'accés al teclat"
 
 #. i18n: ectx: label, entry (Enabled), group (ScreenReader)
 #: kcmaccessibilityscreenreader.kcfg:9 package/contents/ui/ScreenReader.qml:17

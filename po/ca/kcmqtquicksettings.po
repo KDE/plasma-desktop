@@ -1,9 +1,9 @@
 # Translation of kcmqtquicksettings.po to Catalan
-# Copyright (C) 2018-2020 This_file_is_part_of_KDE
+# Copyright (C) 2018-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2018.
+# Josep M. Ferrer <txemaq@gmail.com>, 2018, 2025.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2020.
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
 msgid ""
@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-05 05:54+0000\n"
-"PO-Revision-Date: 2020-07-30 12:15+0200\n"
-"Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
+"PO-Revision-Date: 2025-07-06 11:39+0200\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 20.04.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -59,58 +59,60 @@ msgid ""
 "These settings adjust the QtQuick settings used by Plasma. Only adjust if "
 "you know what you are doing."
 msgstr ""
+"Aquests paràmetres ajusten l'arranjament del «QtQuick» usat pel Plasma. "
+"Ajusteu-ho només si sabeu el que esteu fent."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcmqtquicksettingswidget.ui:38
 #, kde-format
 msgid "Rendering Backend:"
-msgstr ""
+msgstr "Dorsal de renderització:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
 #: kcmqtquicksettingswidget.ui:46 kcmqtquicksettingswidget.ui:79
 #, kde-format
 msgid "Automatic"
-msgstr ""
+msgstr "Automàtic"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
 #: kcmqtquicksettingswidget.ui:51
 #, kde-format
 msgid "Open GL"
-msgstr ""
+msgstr "Open GL"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_SceneGraphBackend)
 #: kcmqtquicksettingswidget.ui:56
 #, kde-format
 msgid "Software"
-msgstr ""
+msgstr "Programari"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcmqtquicksettingswidget.ui:64
 #, kde-format
 msgid "GL Core Profile:"
-msgstr ""
+msgstr "Perfil del nucli GL:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcmqtquicksettingswidget.ui:71
 #, kde-format
 msgid "Render Loop:"
-msgstr ""
+msgstr "Bucle del renderitzador:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
 #: kcmqtquicksettingswidget.ui:84
 #, kde-format
 msgid "Basic"
-msgstr ""
+msgstr "Bàsic"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kcfg_RenderLoop)
 #: kcmqtquicksettingswidget.ui:89
 #, kde-format
 msgid "Threaded"
-msgstr ""
+msgstr "Amb conversa"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_ForceGlCoreProfile)
 #: kcmqtquicksettingswidget.ui:97
 #, kde-format
 msgid "Force"
-msgstr ""
+msgstr "Força"

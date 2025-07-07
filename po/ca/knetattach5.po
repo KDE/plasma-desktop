@@ -1,11 +1,11 @@
 # Translation of knetattach5.po to Catalan
-# Copyright (C) 2004-2021 This_file_is_part_of_KDE
+# Copyright (C) 2004-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Albert Astals Cid <aacid@kde.org>, 2004, 2005.
 # Sebastià Pla i Sanz <sps@sastia.com>, 2005.
-# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2011, 2014, 2015, 2021.
+# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2011, 2014, 2015, 2021, 2025.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2012, 2014, 2020.
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
 msgid ""
@@ -13,14 +13,14 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-05 05:54+0000\n"
-"PO-Revision-Date: 2021-09-05 12:24+0200\n"
+"PO-Revision-Date: 2025-07-06 11:39+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -96,16 +96,15 @@ msgstr "C&onnecta"
 
 #. i18n: ectx: property (windowTitle), widget (QWizard, KNetAttach)
 #: knetattach.ui:14
-#, fuzzy, kde-format
-#| msgid "KDE Network Wizard"
+#, kde-format
 msgid "Network Folder Wizard"
-msgstr "Assistent de xarxa del KDE"
+msgstr "Assistent de carpetes de xarxa"
 
 #. i18n: ectx: property (title), widget (QWizardPage, _folderType)
 #: knetattach.ui:18
 #, kde-format
 msgid "Add Network Folder"
-msgstr ""
+msgstr "Afegeix una carpeta de xarxa"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
 #: knetattach.ui:24
@@ -114,96 +113,98 @@ msgid ""
 "Select the type of network folder you wish to connect to and press the Next "
 "button."
 msgstr ""
+"Seleccioneu el tipus de carpeta de xarxa al que voleu connectar-vos i premeu "
+"el botó Següent."
 
 #. i18n: ectx: property (text), widget (QRadioButton, _recent)
 #: knetattach.ui:65
 #, kde-format
 msgid "&Recent connection:"
-msgstr ""
+msgstr "Connexió &recent:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, _webfolder)
 #: knetattach.ui:72
 #, kde-format
 msgid "&WebFolder (webdav)"
-msgstr ""
+msgstr "Carpeta &web (webdav)"
 
 #. i18n: ectx: property (text), widget (QRadioButton, _fish)
 #: knetattach.ui:82
 #, kde-format
 msgid "&Secure shell (ssh)"
-msgstr ""
+msgstr "«Shell» &segura (ssh)"
 
 #. i18n: ectx: property (text), widget (QRadioButton, _ftp)
 #: knetattach.ui:111
 #, kde-format
 msgid "FT&P"
-msgstr ""
+msgstr "FT&P"
 
 #. i18n: ectx: property (text), widget (QRadioButton, _smb)
 #: knetattach.ui:118
 #, kde-format
 msgid "&Microsoft® Windows® network drive"
-msgstr ""
+msgstr "Unitat de xarxa &Microsoft® Windows®"
 
 #. i18n: ectx: property (title), widget (QWizardPage, _folderParameters)
 #: knetattach.ui:145
 #, kde-format
 msgid "Network Folder Information"
-msgstr ""
+msgstr "Informació de carpeta de xarxa"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel4_2)
 #: knetattach.ui:177
 #, kde-format
 msgid "&Name:"
-msgstr ""
+msgstr "&Nom:"
 
 #. i18n: ectx: property (text), widget (QLabel, _userText)
 #: knetattach.ui:196
 #, kde-format
 msgid "&User:"
-msgstr ""
+msgstr "&Usuari:"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel1)
 #: knetattach.ui:222
 #, kde-format
 msgid "Se&rver:"
-msgstr ""
+msgstr "Se&rvidor:"
 
 #. i18n: ectx: property (text), widget (QLabel, _portText)
 #: knetattach.ui:248
 #, kde-format
 msgid "&Port:"
-msgstr ""
+msgstr "&Port:"
 
 #. i18n: ectx: property (text), widget (QLabel, _protocol)
 #: knetattach.ui:283
 #, kde-format
 msgid "&Protocol:"
-msgstr ""
+msgstr "&Protocol:"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel3)
 #: knetattach.ui:313
 #, kde-format
 msgid "&Folder:"
-msgstr ""
+msgstr "&Carpeta:"
 
 #. i18n: ectx: property (text), widget (QLabel, _encodingText)
 #: knetattach.ui:335
 #, kde-format
 msgid "Encoding:"
-msgstr ""
+msgstr "Codificació:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _createIcon)
 #: knetattach.ui:351
 #, kde-format
 msgid "Cr&eate an icon for this remote folder"
-msgstr ""
+msgstr "C&rea una icona per a aquesta carpeta remota"
 
 #. i18n: ectx: property (text), widget (QCheckBox, _useEncryption)
 #: knetattach.ui:361
 #, kde-format
 msgid "&Use encryption"
-msgstr ""
+msgstr "&Usa encriptatge"
 
 #: main.cpp:21 main.cpp:23
 #, kde-format

@@ -1,9 +1,9 @@
 # Translation of kcm5_device_automounter.po to Catalan
-# Copyright (C) 2009-2022 This_file_is_part_of_KDE
+# Copyright (C) 2009-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2009, 2010, 2011, 2015, 2020, 2021, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2009, 2010, 2011, 2015, 2020, 2021, 2022, 2025.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2015, 2020, 2022.
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
 msgid ""
@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-05 05:54+0000\n"
-"PO-Revision-Date: 2022-10-11 13:33+0200\n"
+"PO-Revision-Date: 2025-07-06 11:36+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -71,6 +71,11 @@ msgid ""
 "\"Mount all removable media at login\" is unchecked. The same applies for "
 "\"Automount on Attach\"."
 msgstr ""
+"Aquesta llista conté els dispositius d'emmagatzematge coneguts pel sistema. "
+"Si està marcada l'opció «Munta automàticament en iniciar la sessió», el "
+"dispositiu es muntarà automàticament encara que «Munta tots els suports "
+"extraïbles en iniciar la sessió» no estigui marcada. El mateix s'aplica per "
+"a «Munta automàticament en connectar-los»."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:54
@@ -82,13 +87,17 @@ msgid ""
 "system is set to only automatically mount familiar devices, the device will "
 "not be automatically mounted."
 msgstr ""
+"Clicar aquest botó provoca que s'«oblidin» els dispositius seleccionats. "
+"Això només és útil si està marcada l'opció «Munta automàticament només els "
+"suports extraïbles que s'hagin muntat manualment abans». Una vegada s'oblida "
+"un dispositiu, i el sistema té configurat que només es muntin els "
+"dispositius reconeguts, el dispositiu no es tornarà a muntar automàticament."
 
 #. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:57
-#, fuzzy, kde-format
-#| msgid "Automount Device"
+#, kde-format
 msgid "Forget Device"
-msgstr "Dispositiu de muntatge automàtic"
+msgstr "Oblida el dispositiu"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, kcfg_AutomountUnknownDevices)
 #: DeviceAutomounterKCM.ui:67
@@ -101,12 +110,20 @@ msgid ""
 "mounted the next time it is seen. Once they have been accessed, however, the "
 "device's contents will be automatically made available to the system."
 msgstr ""
+"Quan no està activada, només es muntaran automàticament els dispositius "
+"recordats. Un dispositiu es «recorda» si ha estat muntat abans. Per exemple, "
+"endollant un reproductor multimèdia USB per a carregar-lo no és suficient "
+"per a «recordar-lo». Si no s'accedeix als fitxers, no es muntarà "
+"automàticament el reproductor la pròxima vegada que es connecti. Tanmateix, "
+"una vegada que s'hagi accedit, el contingut es farà accessible "
+"automàticament al sistema."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
 #: DeviceAutomounterKCM.ui:70
 #, kde-format
 msgid "Automatically mount removable media that have never been mounted before"
 msgstr ""
+"Munta automàticament els suports extraïbles que mai s'hagin muntat abans"
 
 #: DeviceModel.cpp:52
 #, kde-format

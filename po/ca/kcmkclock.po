@@ -1,10 +1,10 @@
 # Translation of kcmkclock.po to Catalan
-# Copyright (C) 2001-2021 This_file_is_part_of_KDE
+# Copyright (C) 2001-2025 This_file_is_part_of_KDE
 #
 # Sebastià Pla i Sanz <sps@sastia.com>, 2001, 2004, 2005.
 # Ivan Lloro Boada <antispam@wanadoo.es>, 2004.
 # Albert Astals Cid <aacid@kde.org>, 2005.
-# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2013, 2015, 2019, 2021.
+# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2013, 2015, 2019, 2021, 2025.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2014, 2020.
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
 msgid ""
@@ -12,14 +12,14 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-05 05:54+0000\n"
-"PO-Revision-Date: 2021-05-26 10:43+0100\n"
+"PO-Revision-Date: 2025-07-06 11:36+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -37,52 +37,51 @@ msgstr "sps@sastia.com,antispam@wanadoo.es"
 #: dateandtime.ui:22
 #, kde-format
 msgid "Date and Time"
-msgstr ""
+msgstr "Data i hora"
 
 #. i18n: ectx: property (text), widget (QCheckBox, setDateTimeAuto)
 #: dateandtime.ui:30
 #, kde-format
 msgid "Set date and time &automatically"
-msgstr ""
+msgstr "Estableix la data i hora &automàticament"
 
 #. i18n: ectx: property (text), widget (QLabel, timeServerLabel)
 #: dateandtime.ui:53
 #, kde-format
 msgid "&Time server:"
-msgstr ""
+msgstr "Servidor d'&hora:"
 
 #. i18n: ectx: property (whatsThis), widget (KDatePicker, cal)
 #: dateandtime.ui:86
 #, kde-format
 msgid "Here you can change the system date's day of the month, month and year."
-msgstr ""
+msgstr "Aquí podeu canviar el dia, el mes i l'any de la data del sistema."
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: dateandtime.ui:122
-#, fuzzy, kde-format
-#| msgid "Time zone Error"
+#, kde-format
 msgid "Time Zone"
-msgstr "Error en zona horària"
+msgstr "Zona horària"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: dateandtime.ui:128
 #, kde-format
 msgid "To change the local time zone, select your area from the list below."
 msgstr ""
+"Per a canviar la zona horària local, seleccioneu l'àrea de la llista que "
+"segueix."
 
 #. i18n: ectx: property (text), widget (QLabel, m_local)
 #: dateandtime.ui:151
-#, fuzzy, kde-format
-#| msgctxt "%1 is name of time zone"
-#| msgid "Current local time zone: %1"
+#, kde-format
 msgid "Current local time zone:"
-msgstr "Zona horària local actual: %1"
+msgstr "Zona horària local actual:"
 
 #. i18n: ectx: property (placeholderText), widget (KTreeWidgetSearchLine, tzonesearch)
 #: dateandtime.ui:161
 #, kde-format
 msgid "Search…"
-msgstr ""
+msgstr "Cerca…"
 
 #: dtime.cpp:61
 #, kde-format

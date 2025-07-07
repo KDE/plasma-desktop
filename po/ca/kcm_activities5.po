@@ -1,9 +1,9 @@
 # Translation of kcm_activities5.po to Catalan
-# Copyright (C) 2014-2022 This_file_is_part_of_KDE
+# Copyright (C) 2014-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2014, 2015, 2018, 2019, 2020, 2021.
+# Josep M. Ferrer <txemaq@gmail.com>, 2014, 2015, 2018, 2019, 2020, 2021, 2025.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2014, 2015, 2016, 2019, 2020, 2022.
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
 msgid ""
@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-05 05:54+0000\n"
-"PO-Revision-Date: 2022-03-26 20:28+0100\n"
-"Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
+"PO-Revision-Date: 2025-07-06 11:27+0200\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: ExtraActivitiesInterface.cpp:34 MainConfigurationWidget.cpp:32
 #, kde-format
@@ -104,25 +104,25 @@ msgstr "Drecera per a alternar:"
 #: kactivitymanagerd_plugins_settings.kcfg:10
 #, kde-format
 msgid "How many months keep the activity history"
-msgstr ""
+msgstr "Quants mesos cal mantenir l'historial d'activitat"
 
 #. i18n: ectx: label, entry (whatToRemember), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:17
 #, kde-format
 msgid "Which data to keep in activity history"
-msgstr ""
+msgstr "Quines dades cal mantenir a l'historial d'activitat"
 
 #. i18n: ectx: label, entry (allowedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:21
 #, kde-format
 msgid "List of Applications whose activity history to save"
-msgstr ""
+msgstr "Llista de les aplicacions de les quals es desarà l'historial"
 
 #. i18n: ectx: label, entry (blockedApplications), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:24
 #, kde-format
 msgid "List of Applications whose activity history not to save"
-msgstr ""
+msgstr "Llista de les aplicacions de les quals no es desarà l'historial"
 
 #: MainConfigurationWidget.cpp:33
 #, kde-format
@@ -167,17 +167,16 @@ msgstr "Recorre les activitats (invers)"
 #: ui/SwitchingTabBase.ui:22
 #, kde-format
 msgid "Remember for each activity (needs restart)"
-msgstr ""
+msgstr "Recorda per a cada activitat (cal reiniciar)"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: ui/SwitchingTabBase.ui:29
 #, kde-format
 msgid "Current virtual desktop:"
-msgstr ""
+msgstr "Escriptori virtual actual:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_1)
 #: ui/SwitchingTabBase.ui:38
-#, fuzzy, kde-format
-#| msgid "Shortcut for switching:"
+#, kde-format
 msgid "Shortcuts:"
-msgstr "Drecera per a alternar:"
+msgstr "Dreceres:"
