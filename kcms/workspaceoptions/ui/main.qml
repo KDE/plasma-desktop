@@ -400,8 +400,8 @@ KCM.SimpleKCM {
             rightPadding: Application.layoutDirection === Qt.RightToLeft ?
                 dndBehaviorMove.indicator.width + dndBehaviorMove.spacing : dndBehaviorMoveHelperText.padding
             text: xi18nc("@info", "Hold <shortcut>Shift</shortcut> when dropping to show other options.")
-            elide: Text.ElideRight
             font: Kirigami.Theme.smallFont
+            wrapMode: Text.WordWrap
         }
 
 
