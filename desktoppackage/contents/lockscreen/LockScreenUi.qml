@@ -108,6 +108,7 @@ Item {
         id: lockScreenRoot
 
         property bool uiVisible: false
+        property bool seenPositionChange: false
         property bool blockUI: containsMouse && (mainStack.depth > 1 || mainBlock.mainPasswordBox.text.length > 0 || inputPanel.keyboardActive)
 
         x: parent.x
@@ -118,7 +119,10 @@ Item {
         cursorShape: uiVisible ? Qt.ArrowCursor : Qt.BlankCursor
         drag.filterChildren: true
         onPressed: uiVisible = true;
-        onPositionChanged: uiVisible = true;
+        onPositionChanged: {
+            uiVisible = seenPositionChange;
+            seenPositionChange = true;
+        }
         onUiVisibleChanged: {
             if (blockUI) {
                 fadeoutTimer.running = false;
