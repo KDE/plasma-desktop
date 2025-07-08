@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-07 00:43+0000\n"
+"POT-Creation-Date: 2025-07-08 00:44+0000\n"
 "PO-Revision-Date: 2025-04-04 11:18+0200\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -659,7 +659,25 @@ msgstr "Penn opp: x = %1, y = %2"
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 msgstr "Flytt pennen x = %1, y = %2, t = %3, tx = %4, ty = %5"
 
-#: ui/Tester.qml:205
+#: ui/Tester.qml:75
+#, fuzzy, kde-format
+#| msgid "Pad button %1:"
+msgid "Pad button press B=%1"
+msgstr "Tegneplateknapp %1:"
+
+#: ui/Tester.qml:77
+#, fuzzy, kde-format
+#| msgid "Pad button %1:"
+msgid "Pad button release B=%1"
+msgstr "Tegneplateknapp %1:"
+
+#: ui/Tester.qml:84
+#, fuzzy, kde-format
+#| msgid "Pad button %1:"
+msgid "Pad dial moved V120=%1"
+msgstr "Tegneplateknapp %1:"
+
+#: ui/Tester.qml:220
 #, kde-format
 msgid ""
 "## Legend:\n"
@@ -672,7 +690,7 @@ msgstr ""
 "# t – trykk\n"
 "# tx,ty – tilbøyelighet\n"
 
-#: ui/Tester.qml:211
+#: ui/Tester.qml:226
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"

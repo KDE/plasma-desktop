@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-07 00:43+0000\n"
+"POT-Creation-Date: 2025-07-08 00:44+0000\n"
 "PO-Revision-Date: 2025-06-29 17:55+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -662,7 +662,25 @@ msgstr "Kalem bırakılışı X = %1 Y = %2"
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 msgstr "Kalem hareketi X = %1 Y = %2 P = %​%3 TX = %4 TY = %5"
 
-#: ui/Tester.qml:205
+#: ui/Tester.qml:75
+#, fuzzy, kde-format
+#| msgid "Pad button %1:"
+msgid "Pad button press B=%1"
+msgstr "Ped düğmesi %1:"
+
+#: ui/Tester.qml:77
+#, fuzzy, kde-format
+#| msgid "Pad button %1:"
+msgid "Pad button release B=%1"
+msgstr "Ped düğmesi %1:"
+
+#: ui/Tester.qml:84
+#, fuzzy, kde-format
+#| msgid "Pad button %1:"
+msgid "Pad dial moved V120=%1"
+msgstr "Ped düğmesi %1:"
+
+#: ui/Tester.qml:220
 #, kde-format
 msgid ""
 "## Legend:\n"
@@ -675,7 +693,7 @@ msgstr ""
 "# P — Basınç\n"
 "# TX, TY — Eğim\n"
 
-#: ui/Tester.qml:211
+#: ui/Tester.qml:226
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"

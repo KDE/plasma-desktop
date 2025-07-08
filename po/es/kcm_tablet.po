@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-07 00:43+0000\n"
-"PO-Revision-Date: 2025-05-26 00:48+0100\n"
+"POT-Creation-Date: 2025-07-08 00:44+0000\n"
+"PO-Revision-Date: 2025-07-07 17:39+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -29,21 +29,19 @@ msgstr "Desactivada"
 #, kde-format
 msgctxt "@action:button There is no keybinding"
 msgid "None"
-msgstr "Ninguno"
+msgstr "Ninguna"
 
 #: inputsequence.cpp:209
 #, kde-format
 msgctxt "@action:button Two keybinds for a dial, up & down"
 msgid "%1 && %2"
-msgstr ""
+msgstr "%1 y %2"
 
 #: inputsequence.cpp:216
-#, fuzzy, kde-format
-#| msgctxt "@action:button There is no keybinding"
-#| msgid "None"
+#, kde-format
 msgctxt "@action:button There is no keybindings"
 msgid "None"
-msgstr "Ninguno"
+msgstr "Ninguna"
 
 #: inputsequence.cpp:221
 #, kde-format
@@ -79,7 +77,7 @@ msgstr "Botón %1 del lápiz"
 #, kde-format
 msgctxt "@action:button"
 msgid "Scroll wheel"
-msgstr ""
+msgstr "Rueda de desplazamiento"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -155,12 +153,10 @@ msgid "pen button %1"
 msgstr "botón %1 del lápiz"
 
 #: ui/ActionDialog.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@title Select the action for the tablet button"
-#| msgid "Select Button Action"
+#, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial Action"
-msgstr "Seleccionar acción del botón"
+msgstr "Seleccionar acción del disco"
 
 #: ui/ActionDialog.qml:28
 #, kde-format
@@ -169,12 +165,10 @@ msgid "Select Button Action"
 msgstr "Seleccionar acción del botón"
 
 #: ui/ActionDialog.qml:86
-#, fuzzy, kde-format
-#| msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
-#| msgid "Choose what action will be taken when pressing %1:"
+#, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when rotating %1:"
-msgstr "Escoja la acción que se llevará a cabo al pulsar %1:"
+msgstr "Escoja la acción que se llevará a cabo al girar %1:"
 
 #: ui/ActionDialog.qml:87
 #, kde-format
@@ -195,12 +189,10 @@ msgid "Send keyboard key"
 msgstr "Enviar tecla del teclado"
 
 #: ui/ActionDialog.qml:132
-#, fuzzy, kde-format
-#| msgctxt "@option:radio Set this action to a keyboard type"
-#| msgid "Send keyboard key"
+#, kde-format
 msgctxt "@option:radio Set this action to a up/down keyboard type"
 msgid "Send keyboard keys"
-msgstr "Enviar tecla del teclado"
+msgstr "Enviar teclas del teclado"
 
 #: ui/ActionDialog.qml:147
 #, kde-format
@@ -218,7 +210,7 @@ msgstr "Enviar botón del lápiz"
 #, kde-format
 msgctxt "@option:radio Set this action to a scroll wheel type type"
 msgid "Act as scroll wheel"
-msgstr ""
+msgstr "Actuar como rueda de desplazamiento"
 
 #: ui/ActionDialog.qml:198
 #, kde-format
@@ -239,12 +231,12 @@ msgstr ""
 #: ui/ActionDialog.qml:249
 #, kde-format
 msgid "Up:"
-msgstr ""
+msgstr "Arriba:"
 
 #: ui/ActionDialog.qml:263
 #, kde-format
 msgid "Down:"
-msgstr ""
+msgstr "Abajo:"
 
 #: ui/ActionDialog.qml:277
 #, kde-format
@@ -310,7 +302,7 @@ msgstr "Botón 3"
 #, kde-format
 msgctxt "@info"
 msgid "Act like a scroll wheel on a mouse."
-msgstr ""
+msgstr "Actuar como la rueda de desplazamiento de un ratón."
 
 #: ui/ActionDialog.qml:363
 #, kde-format
@@ -469,10 +461,9 @@ msgid "Pad"
 msgstr "Panel táctil"
 
 #: ui/PadTab.qml:33
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad dial %1:"
-msgstr "Botón %1 del panel táctil:"
+msgstr "Disco %1 del panel táctil:"
 
 #: ui/PadTab.qml:35
 #, kde-format
@@ -480,7 +471,7 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad dial %1"
-msgstr ""
+msgstr "disco %1 del panel táctil"
 
 #: ui/PadTab.qml:71
 #, kde-format
@@ -661,7 +652,25 @@ msgstr "Liberación del lápiz óptico X=%1 Y=%2"
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 msgstr "Movimiento del lápiz óptico X=%1 Y=%2 P=%3% IX=%4 IY=%5"
 
-#: ui/Tester.qml:205
+#: ui/Tester.qml:75
+#, fuzzy, kde-format
+#| msgid "Pad button %1:"
+msgid "Pad button press B=%1"
+msgstr "Botón %1 del panel táctil:"
+
+#: ui/Tester.qml:77
+#, fuzzy, kde-format
+#| msgid "Pad button %1:"
+msgid "Pad button release B=%1"
+msgstr "Botón %1 del panel táctil:"
+
+#: ui/Tester.qml:84
+#, fuzzy, kde-format
+#| msgid "Pad dial %1:"
+msgid "Pad dial moved V120=%1"
+msgstr "Disco %1 del panel táctil:"
+
+#: ui/Tester.qml:220
 #, kde-format
 msgid ""
 "## Legend:\n"
@@ -674,7 +683,7 @@ msgstr ""
 "# P - presión\n"
 "# TX,TY - inclinación\n"
 
-#: ui/Tester.qml:211
+#: ui/Tester.qml:226
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-07 00:43+0000\n"
-"PO-Revision-Date: 2025-04-26 10:00+0200\n"
+"POT-Creation-Date: 2025-07-08 00:44+0000\n"
+"PO-Revision-Date: 2025-07-07 13:45+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -35,12 +35,10 @@ msgstr "Sense"
 #, kde-format
 msgctxt "@action:button Two keybinds for a dial, up & down"
 msgid "%1 && %2"
-msgstr ""
+msgstr "%1 i %2"
 
 #: inputsequence.cpp:216
-#, fuzzy, kde-format
-#| msgctxt "@action:button There is no keybinding"
-#| msgid "None"
+#, kde-format
 msgctxt "@action:button There is no keybindings"
 msgid "None"
 msgstr "Sense"
@@ -79,7 +77,7 @@ msgstr "Botó %1 del llapis"
 #, kde-format
 msgctxt "@action:button"
 msgid "Scroll wheel"
-msgstr ""
+msgstr "Roda de desplaçament"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -155,12 +153,10 @@ msgid "pen button %1"
 msgstr "botó %1 del llapis"
 
 #: ui/ActionDialog.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@title Select the action for the tablet button"
-#| msgid "Select Button Action"
+#, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial Action"
-msgstr "Selecció d'acció del botó"
+msgstr "Selecció d'acció de la rodeta"
 
 #: ui/ActionDialog.qml:28
 #, kde-format
@@ -169,12 +165,10 @@ msgid "Select Button Action"
 msgstr "Selecció d'acció del botó"
 
 #: ui/ActionDialog.qml:86
-#, fuzzy, kde-format
-#| msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
-#| msgid "Choose what action will be taken when pressing %1:"
+#, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when rotating %1:"
-msgstr "Trieu l'acció que s'efectuarà en prémer %1:"
+msgstr "Trieu l'acció que s'efectuarà en girar %1:"
 
 #: ui/ActionDialog.qml:87
 #, kde-format
@@ -195,12 +189,10 @@ msgid "Send keyboard key"
 msgstr "Envia la tecla del teclat"
 
 #: ui/ActionDialog.qml:132
-#, fuzzy, kde-format
-#| msgctxt "@option:radio Set this action to a keyboard type"
-#| msgid "Send keyboard key"
+#, kde-format
 msgctxt "@option:radio Set this action to a up/down keyboard type"
 msgid "Send keyboard keys"
-msgstr "Envia la tecla del teclat"
+msgstr "Envia les tecles del teclat"
 
 #: ui/ActionDialog.qml:147
 #, kde-format
@@ -218,7 +210,7 @@ msgstr "Envia al botó del llapis"
 #, kde-format
 msgctxt "@option:radio Set this action to a scroll wheel type type"
 msgid "Act as scroll wheel"
-msgstr ""
+msgstr "Actua com a roda de desplaçament"
 
 #: ui/ActionDialog.qml:198
 #, kde-format
@@ -239,12 +231,12 @@ msgstr ""
 #: ui/ActionDialog.qml:249
 #, kde-format
 msgid "Up:"
-msgstr ""
+msgstr "Amunt:"
 
 #: ui/ActionDialog.qml:263
 #, kde-format
 msgid "Down:"
-msgstr ""
+msgstr "Avall:"
 
 #: ui/ActionDialog.qml:277
 #, kde-format
@@ -310,7 +302,7 @@ msgstr "Botó 3"
 #, kde-format
 msgctxt "@info"
 msgid "Act like a scroll wheel on a mouse."
-msgstr ""
+msgstr "Actua com una roda de desplaçament en un ratolí."
 
 #: ui/ActionDialog.qml:363
 #, kde-format
@@ -469,10 +461,9 @@ msgid "Pad"
 msgstr "Tauleta gràfica"
 
 #: ui/PadTab.qml:33
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad dial %1:"
-msgstr "Botó de la tauleta gràfica %1:"
+msgstr "Rodeta de la tauleta gràfica %1:"
 
 #: ui/PadTab.qml:35
 #, kde-format
@@ -480,7 +471,7 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad dial %1"
-msgstr ""
+msgstr "rodeta de la tauleta gràfica %1"
 
 #: ui/PadTab.qml:71
 #, kde-format
@@ -662,7 +653,25 @@ msgstr "Llapis deixat anar X=%1 Y=%2"
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 msgstr "Moviment del llapis X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
-#: ui/Tester.qml:205
+#: ui/Tester.qml:75
+#, fuzzy, kde-format
+#| msgid "Pad button %1:"
+msgid "Pad button press B=%1"
+msgstr "Botó de la tauleta gràfica %1:"
+
+#: ui/Tester.qml:77
+#, fuzzy, kde-format
+#| msgid "Pad button %1:"
+msgid "Pad button release B=%1"
+msgstr "Botó de la tauleta gràfica %1:"
+
+#: ui/Tester.qml:84
+#, fuzzy, kde-format
+#| msgid "Pad dial %1:"
+msgid "Pad dial moved V120=%1"
+msgstr "Rodeta de la tauleta gràfica %1:"
+
+#: ui/Tester.qml:220
 #, kde-format
 msgid ""
 "## Legend:\n"
@@ -675,7 +684,7 @@ msgstr ""
 "# P - pressió\n"
 "# TX,TY - inclinació\n"
 
-#: ui/Tester.qml:211
+#: ui/Tester.qml:226
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"

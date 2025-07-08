@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-07 00:43+0000\n"
+"POT-Creation-Date: 2025-07-08 00:44+0000\n"
 "PO-Revision-Date: 2025-04-13 17:58+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -658,7 +658,25 @@ msgstr "எழுதுகோல் தூக்கப்பட்டது: X=%
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 msgstr "எழுதுகோல் நகர்த்தப்பட்டது: X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
-#: ui/Tester.qml:205
+#: ui/Tester.qml:75
+#, fuzzy, kde-format
+#| msgid "Pad button %1:"
+msgid "Pad button press B=%1"
+msgstr "வரைபலகை பட்டன் %1:"
+
+#: ui/Tester.qml:77
+#, fuzzy, kde-format
+#| msgid "Pad button %1:"
+msgid "Pad button release B=%1"
+msgstr "வரைபலகை பட்டன் %1:"
+
+#: ui/Tester.qml:84
+#, fuzzy, kde-format
+#| msgid "Pad button %1:"
+msgid "Pad dial moved V120=%1"
+msgstr "வரைபலகை பட்டன் %1:"
+
+#: ui/Tester.qml:220
 #, kde-format
 msgid ""
 "## Legend:\n"
@@ -671,7 +689,7 @@ msgstr ""
 "# P - அழுத்தம்\n"
 "# TX,TY - சாய்வுநிலை\n"
 
-#: ui/Tester.qml:211
+#: ui/Tester.qml:226
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"

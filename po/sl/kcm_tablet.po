@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-07 00:43+0000\n"
-"PO-Revision-Date: 2025-04-26 07:49+0200\n"
+"POT-Creation-Date: 2025-07-08 00:44+0000\n"
+"PO-Revision-Date: 2025-07-07 08:37+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -34,11 +34,10 @@ msgstr "Noben"
 #, kde-format
 msgctxt "@action:button Two keybinds for a dial, up & down"
 msgid "%1 && %2"
-msgstr ""
+msgstr "%1 && %2"
 
 #: inputsequence.cpp:216
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "@action:button There is no keybindings"
 msgid "None"
 msgstr "Noben"
@@ -77,7 +76,7 @@ msgstr "Gumb pisala %1"
 #, kde-format
 msgctxt "@action:button"
 msgid "Scroll wheel"
-msgstr ""
+msgstr "Kolesce za drsenje"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -153,12 +152,10 @@ msgid "pen button %1"
 msgstr "gumb pisala %1"
 
 #: ui/ActionDialog.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@title Select the action for the tablet button"
-#| msgid "Select Button Action"
+#, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial Action"
-msgstr "Izberi dejavnost gumba"
+msgstr "Izberi dejavnost številčnice"
 
 #: ui/ActionDialog.qml:28
 #, kde-format
@@ -167,12 +164,10 @@ msgid "Select Button Action"
 msgstr "Izberi dejavnost gumba"
 
 #: ui/ActionDialog.qml:86
-#, fuzzy, kde-format
-#| msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
-#| msgid "Choose what action will be taken when pressing %1:"
+#, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when rotating %1:"
-msgstr "Izberite dejanje, ki bo izvedeno ob pritisku %1:"
+msgstr "Izberite dejanje, ki bo izvedeno ob vrtenju %1:"
 
 #: ui/ActionDialog.qml:87
 #, kde-format
@@ -193,12 +188,10 @@ msgid "Send keyboard key"
 msgstr "Pošlji tipko tipkovnice"
 
 #: ui/ActionDialog.qml:132
-#, fuzzy, kde-format
-#| msgctxt "@option:radio Set this action to a keyboard type"
-#| msgid "Send keyboard key"
+#, kde-format
 msgctxt "@option:radio Set this action to a up/down keyboard type"
 msgid "Send keyboard keys"
-msgstr "Pošlji tipko tipkovnice"
+msgstr "Pošlji tipke tipkovnice"
 
 #: ui/ActionDialog.qml:147
 #, kde-format
@@ -216,7 +209,7 @@ msgstr "Pošlji gumb pisala"
 #, kde-format
 msgctxt "@option:radio Set this action to a scroll wheel type type"
 msgid "Act as scroll wheel"
-msgstr ""
+msgstr "Deluj kot kolesce za drsenje"
 
 #: ui/ActionDialog.qml:198
 #, kde-format
@@ -237,12 +230,12 @@ msgstr ""
 #: ui/ActionDialog.qml:249
 #, kde-format
 msgid "Up:"
-msgstr ""
+msgstr "Gor:"
 
 #: ui/ActionDialog.qml:263
 #, kde-format
 msgid "Down:"
-msgstr ""
+msgstr "Dol:"
 
 #: ui/ActionDialog.qml:277
 #, kde-format
@@ -308,7 +301,7 @@ msgstr "Gumb 3"
 #, kde-format
 msgctxt "@info"
 msgid "Act like a scroll wheel on a mouse."
-msgstr ""
+msgstr "Deluje kot kolesce za drsenje na miški."
 
 #: ui/ActionDialog.qml:363
 #, kde-format
@@ -467,10 +460,9 @@ msgid "Pad"
 msgstr "Podloga"
 
 #: ui/PadTab.qml:33
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad dial %1:"
-msgstr "Gumb tablice %1:"
+msgstr "Številčnica tablice %1:"
 
 #: ui/PadTab.qml:35
 #, kde-format
@@ -478,7 +470,7 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad dial %1"
-msgstr ""
+msgstr "številčnica tablice %1"
 
 #: ui/PadTab.qml:71
 #, kde-format
@@ -659,7 +651,25 @@ msgstr "Spustite pisalo X=%1 Y=%2"
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 msgstr "Premaknite pisalo X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
-#: ui/Tester.qml:205
+#: ui/Tester.qml:75
+#, fuzzy, kde-format
+#| msgid "Pad button %1:"
+msgid "Pad button press B=%1"
+msgstr "Gumb tablice %1:"
+
+#: ui/Tester.qml:77
+#, fuzzy, kde-format
+#| msgid "Pad button %1:"
+msgid "Pad button release B=%1"
+msgstr "Gumb tablice %1:"
+
+#: ui/Tester.qml:84
+#, fuzzy, kde-format
+#| msgid "Pad dial %1:"
+msgid "Pad dial moved V120=%1"
+msgstr "Številčnica tablice %1:"
+
+#: ui/Tester.qml:220
 #, kde-format
 msgid ""
 "## Legend:\n"
@@ -673,7 +683,7 @@ msgstr ""
 "# TX,TY - nagib\n"
 "\n"
 
-#: ui/Tester.qml:211
+#: ui/Tester.qml:226
 #, kde-format
 msgctxt "Clear the event log"
 msgid "Clear"
