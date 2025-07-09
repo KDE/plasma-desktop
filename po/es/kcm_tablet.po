@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-08 00:44+0000\n"
-"PO-Revision-Date: 2025-07-07 17:39+0100\n"
+"PO-Revision-Date: 2025-07-08 04:06+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -653,22 +653,19 @@ msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 msgstr "Movimiento del lápiz óptico X=%1 Y=%2 P=%3% IX=%4 IY=%5"
 
 #: ui/Tester.qml:75
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad button press B=%1"
-msgstr "Botón %1 del panel táctil:"
+msgstr "Pulsación de botón del panel táctil B=%1"
 
 #: ui/Tester.qml:77
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad button release B=%1"
-msgstr "Botón %1 del panel táctil:"
+msgstr "Liberación de botón del panel táctil B=%1"
 
 #: ui/Tester.qml:84
-#, fuzzy, kde-format
-#| msgid "Pad dial %1:"
+#, kde-format
 msgid "Pad dial moved V120=%1"
-msgstr "Disco %1 del panel táctil:"
+msgstr "Disco del panel táctil movido V120=%1"
 
 #: ui/Tester.qml:220
 #, kde-format

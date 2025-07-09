@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-08 00:44+0000\n"
-"PO-Revision-Date: 2025-07-07 05:30+0200\n"
+"PO-Revision-Date: 2025-07-08 04:19+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -301,7 +301,7 @@ msgstr "ღილაკი 3"
 #, kde-format
 msgctxt "@info"
 msgid "Act like a scroll wheel on a mouse."
-msgstr "ქცევა თაგუნას ბორბლის მსგავსად"
+msgstr "ქცევა თაგუნას ბორბლის მსგავსად."
 
 #: ui/ActionDialog.qml:363
 #, kde-format
@@ -651,22 +651,19 @@ msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 msgstr "სტილუსის გადაადგილების X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
 #: ui/Tester.qml:75
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad button press B=%1"
-msgstr "პადის ღილაკი %1:"
+msgstr "პადის ღილაკის დაჭერა B=%1"
 
 #: ui/Tester.qml:77
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad button release B=%1"
-msgstr "პადის ღილაკი %1:"
+msgstr "პადის ღილაკის გაშვება B=%1"
 
 #: ui/Tester.qml:84
-#, fuzzy, kde-format
-#| msgid "Pad dial %1:"
+#, kde-format
 msgid "Pad dial moved V120=%1"
-msgstr "პადის ღილაკი %1:"
+msgstr "პადის ღილაკი გადატანილია V120=%1"
 
 #: ui/Tester.qml:220
 #, kde-format

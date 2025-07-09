@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-08 00:44+0000\n"
-"PO-Revision-Date: 2025-07-07 13:45+0200\n"
+"PO-Revision-Date: 2025-07-08 11:43+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -654,22 +654,19 @@ msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 msgstr "Moviment del llapis X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
 #: ui/Tester.qml:75
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad button press B=%1"
-msgstr "Botó de la tauleta gràfica %1:"
+msgstr "Botó premut de la tauleta gràfica B=%1"
 
 #: ui/Tester.qml:77
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad button release B=%1"
-msgstr "Botó de la tauleta gràfica %1:"
+msgstr "Botó deixat anar de la tauleta gràfica B=%1"
 
 #: ui/Tester.qml:84
-#, fuzzy, kde-format
-#| msgid "Pad dial %1:"
+#, kde-format
 msgid "Pad dial moved V120=%1"
-msgstr "Rodeta de la tauleta gràfica %1:"
+msgstr "Rodeta de la tauleta moguda V120=%1"
 
 #: ui/Tester.qml:220
 #, kde-format

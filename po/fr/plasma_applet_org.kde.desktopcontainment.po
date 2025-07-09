@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-01 00:43+0000\n"
-"PO-Revision-Date: 2025-05-14 08:57+0200\n"
+"PO-Revision-Date: 2025-07-02 08:38+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.2\n"
 "X-Text-Markup: kde4\n"
 
 #: package/contents/config/config.qml:16
@@ -433,12 +433,10 @@ msgstr ""
 "certains d'entre eux ailleurs."
 
 #: package/contents/ui/FolderViewDialog.qml:87
-#, fuzzy, kde-format
-#| msgctxt "@option:check sort icons with folders first"
-#| msgid "Folders first"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Folder is empty"
-msgstr "Dossiers en premier"
+msgstr "Le dossier est vide."
 
 #: package/contents/ui/main.qml:398
 #, kde-format

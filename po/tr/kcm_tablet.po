@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-08 00:44+0000\n"
-"PO-Revision-Date: 2025-06-29 17:55+0300\n"
+"PO-Revision-Date: 2025-07-08 13:20+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -34,12 +34,10 @@ msgstr "Yok"
 #, kde-format
 msgctxt "@action:button Two keybinds for a dial, up & down"
 msgid "%1 && %2"
-msgstr ""
+msgstr "%1 ve %2"
 
 #: inputsequence.cpp:216
-#, fuzzy, kde-format
-#| msgctxt "@action:button There is no keybinding"
-#| msgid "None"
+#, kde-format
 msgctxt "@action:button There is no keybindings"
 msgid "None"
 msgstr "Yok"
@@ -78,7 +76,7 @@ msgstr "Kalem Düğmesi %1"
 #, kde-format
 msgctxt "@action:button"
 msgid "Scroll wheel"
-msgstr ""
+msgstr "Sarma Tekerleği"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -154,12 +152,10 @@ msgid "pen button %1"
 msgstr "Kalem düğmesi %1"
 
 #: ui/ActionDialog.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@title Select the action for the tablet button"
-#| msgid "Select Button Action"
+#, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial Action"
-msgstr "Düğme Eylemi Seç"
+msgstr "Kadran Eylemi Seç"
 
 #: ui/ActionDialog.qml:28
 #, kde-format
@@ -168,12 +164,10 @@ msgid "Select Button Action"
 msgstr "Düğme Eylemi Seç"
 
 #: ui/ActionDialog.qml:86
-#, fuzzy, kde-format
-#| msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
-#| msgid "Choose what action will be taken when pressing %1:"
+#, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when rotating %1:"
-msgstr "%1 düğmesine basıldığında uygulanacak eylemi seç:"
+msgstr "%1 döndürülürken gerçekleştirilecek eylemi seç:"
 
 #: ui/ActionDialog.qml:87
 #, kde-format
@@ -194,12 +188,10 @@ msgid "Send keyboard key"
 msgstr "Klavye düğmesi gönder"
 
 #: ui/ActionDialog.qml:132
-#, fuzzy, kde-format
-#| msgctxt "@option:radio Set this action to a keyboard type"
-#| msgid "Send keyboard key"
+#, kde-format
 msgctxt "@option:radio Set this action to a up/down keyboard type"
 msgid "Send keyboard keys"
-msgstr "Klavye düğmesi gönder"
+msgstr "Klavye düğmeleri gönder"
 
 #: ui/ActionDialog.qml:147
 #, kde-format
@@ -217,7 +209,7 @@ msgstr "Kalem düğmesi gönder"
 #, kde-format
 msgctxt "@option:radio Set this action to a scroll wheel type type"
 msgid "Act as scroll wheel"
-msgstr ""
+msgstr "Sarma tekerleği olarak davran"
 
 #: ui/ActionDialog.qml:198
 #, kde-format
@@ -238,12 +230,12 @@ msgstr ""
 #: ui/ActionDialog.qml:249
 #, kde-format
 msgid "Up:"
-msgstr ""
+msgstr "Yukarı:"
 
 #: ui/ActionDialog.qml:263
 #, kde-format
 msgid "Down:"
-msgstr ""
+msgstr "Aşağı:"
 
 #: ui/ActionDialog.qml:277
 #, kde-format
@@ -309,7 +301,7 @@ msgstr "Düğme 3"
 #, kde-format
 msgctxt "@info"
 msgid "Act like a scroll wheel on a mouse."
-msgstr ""
+msgstr "Bir faredeki sarma tekerleği gibi davranın."
 
 #: ui/ActionDialog.qml:363
 #, kde-format
@@ -468,10 +460,9 @@ msgid "Pad"
 msgstr "Ped"
 
 #: ui/PadTab.qml:33
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad dial %1:"
-msgstr "Ped düğmesi %1:"
+msgstr "Ped kadranı %1:"
 
 #: ui/PadTab.qml:35
 #, kde-format
@@ -479,7 +470,7 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad dial %1"
-msgstr ""
+msgstr "Ped kadranı %1"
 
 #: ui/PadTab.qml:71
 #, kde-format
@@ -663,22 +654,19 @@ msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 msgstr "Kalem hareketi X = %1 Y = %2 P = %​%3 TX = %4 TY = %5"
 
 #: ui/Tester.qml:75
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad button press B=%1"
-msgstr "Ped düğmesi %1:"
+msgstr "Ped düğmesi basımı B=%1"
 
 #: ui/Tester.qml:77
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad button release B=%1"
-msgstr "Ped düğmesi %1:"
+msgstr "Ped düğmesi bırakımı B=%1"
 
 #: ui/Tester.qml:84
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad dial moved V120=%1"
-msgstr "Ped düğmesi %1:"
+msgstr "Ped kadranı hareketi V120=%1"
 
 #: ui/Tester.qml:220
 #, kde-format
