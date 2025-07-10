@@ -71,9 +71,13 @@ Controller {
         const clients = [];
         for (let i = tasksModel.count - 1; i >= 0; i--) {
             const idx = tasksModel.makeModelIndex(i);
-            if (!tasksModel.data(idx, TaskManager.AbstractTasksModel.IsHidden) &
-                tasksModel.data(idx, TaskManager.AbstractTasksModel.Activities).includes(activityInfo.currentActivity) &
-                tasksModel.data(idx, TaskManager.AbstractTasksModel.VirtualDesktops).includes(virtualDesktopInfo.currentDesktop)
+            const activities = tasksModel.data(idx, TaskManager.AbstractTasksModel.Activities);
+            const desktops = tasksModel.data(idx, TaskManager.AbstractTasksModel.VirtualDesktops);
+
+            // When activities.length === 0 means on all activities. Same thing for desktops.length === 0 on wayland, wwhile on X11 [-1] means on all desktops
+            if (!tasksModel.data(idx, TaskManager.AbstractTasksModel.IsHidden) &&
+                (activities.length === 0 || activities.includes(activityInfo.currentActivity)) &&
+                (desktops.length === 0 || desktops[0] === -1 || desktops.includes(virtualDesktopInfo.currentDesktop))
             ) {
                 tasksModel.requestToggleMinimized(idx);
                 clients.push(tasksModel.makePersistentModelIndex(i));
