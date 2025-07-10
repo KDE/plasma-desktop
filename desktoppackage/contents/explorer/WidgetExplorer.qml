@@ -255,6 +255,7 @@ PC3.Page {
 
         contentItem: PC3.Button {
             id: uninstallButton
+            icon.name: "delete"
             text: i18ndcp("plasma_shell_org.kde.plasma.desktop", "@action:button uninstall widgets in widget explorer", "Uninstall (%1 Widget)", "Uninstall (%1 Widgets)", pendingUninstallTimer.applets.length)
             onClicked: pendingUninstallTimer.uninstall()
         }
