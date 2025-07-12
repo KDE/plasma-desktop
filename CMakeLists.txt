@@ -176,7 +176,6 @@ set_package_properties(SDL2 PROPERTIES
 find_package(LibKWorkspace ${PROJECT_DEP_VERSION} CONFIG REQUIRED)
 find_package(LibNotificationManager ${PROJECT_DEP_VERSION} CONFIG REQUIRED)
 find_package(LibTaskManager ${PROJECT_DEP_VERSION} CONFIG REQUIRED)
-find_package(LibColorCorrect ${PROJECT_DEP_VERSION} CONFIG REQUIRED)
 find_package(KWinDBusInterface CONFIG REQUIRED)
 find_package(ScreenSaverDBusInterface CONFIG REQUIRED)
 find_package(KRunnerAppDBusInterface CONFIG REQUIRED)
