@@ -7,7 +7,7 @@
 # Kim Enkovaara <kim.enkovaara@iki.fi>, 2006.
 # Teemu Rytilahti <tpr@d5k.net>, 2008.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2010, 2011, 2012, 2013, 2014, 2015.
-# SPDX-FileCopyrightText: 2017, 2019, 2020, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
 #
 # KDE Finnish translation sprint participants:
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-25 00:44+0000\n"
-"PO-Revision-Date: 2024-12-01 17:18+0200\n"
+"PO-Revision-Date: 2025-06-24 17:11+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -28,47 +28,47 @@ msgstr ""
 #: kcmaccess.cpp:127 kcmaccess.cpp:155
 #, kde-format
 msgid "KWin"
-msgstr ""
+msgstr "KWin"
 
 #: kcmaccess.cpp:130
 #, kde-format
 msgid "Toggle Invert Effect"
-msgstr ""
+msgstr "Vaihda Käännä värit -tehosteen tilaa"
 
 #: kcmaccess.cpp:136
 #, kde-format
 msgid "Toggle Invert Effect on Window"
-msgstr ""
+msgstr "Vaihda Käännä värit -tehosteen tilaa ikkunalle"
 
 #: kcmaccess.cpp:178
 #, kde-format
 msgid "Move Left"
-msgstr ""
+msgstr "Siirrä vasemmalle"
 
 #: kcmaccess.cpp:185
 #, kde-format
 msgid "Move Right"
-msgstr ""
+msgstr "Siirrä oikealle"
 
 #: kcmaccess.cpp:192
 #, kde-format
 msgid "Move Up"
-msgstr ""
+msgstr "Siirrä ylemmäs"
 
 #: kcmaccess.cpp:199
 #, kde-format
 msgid "Move Down"
-msgstr ""
+msgstr "Siirrä alemmas"
 
 #: kcmaccess.cpp:206
 #, kde-format
 msgid "Move Mouse to Focus"
-msgstr ""
+msgstr "Siirrä hiiri kohdistukseen"
 
 #: kcmaccess.cpp:213
 #, kde-format
 msgid "Move Mouse to Center"
-msgstr ""
+msgstr "Siirrä hiiri keskelle"
 
 #: kcmaccess.cpp:256
 #, kde-format
@@ -168,10 +168,9 @@ msgstr "Käytetäänkö värisokeuskorjausta"
 
 #. i18n: ectx: label, entry (Invert), group (Plugins)
 #: kcmaccessibilityinvert.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Invert effect is enabled"
-msgstr "Käytetäänkö osoittimen ravistamista"
+msgstr "Käytetäänkö värinkääntötehostetta"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
@@ -315,17 +314,15 @@ msgstr "Suurennus"
 
 #. i18n: ectx: label, entry (Zoom), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Zoom effect is enabled"
-msgstr "Käytetäänkö osoittimen ravistamista"
+msgstr "Käytetäänkö lähennystehostetta"
 
 #. i18n: ectx: label, entry (Magnifier), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Magnifier effect is enabled"
-msgstr "Käytetäänkö osoittimen ravistamista"
+msgstr "Käytetäänkö suurennuslasitehostetta"
 
 #: ui/ActivationShortcuts.qml:18
 #, kde-format
@@ -568,12 +565,10 @@ msgstr "Purppura"
 #, kde-format
 msgctxt "@label"
 msgid "Invert:"
-msgstr ""
+msgstr "Käännä:"
 
 #: ui/Invert.qml:23
-#, fuzzy, kde-format
-#| msgctxt "Enable activation shortcuts"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable invert effect"
 msgid "Enable"
 msgstr "Käytä"
@@ -582,14 +577,13 @@ msgstr "Käytä"
 #, kde-format
 msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
-msgstr ""
+msgstr "Käytä näyttö- ja ikkunavärien kääntämiseksi pikanäppäimiä"
 
 #: ui/Invert.qml:49 ui/ZoomMagnifier.qml:319
-#, fuzzy, kde-format
-#| msgid "Configure Notifications…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Shortcuts…"
-msgstr "Ilmoitusasetukset…"
+msgstr "Pikanäppäinasetukset…"
 
 #: ui/KeyboardFilters.qml:18
 #, kde-format
@@ -680,7 +674,7 @@ msgstr "Anna järjestelmän äänimerkki hylättäessä"
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Zoom & Magnifier"
-msgstr ""
+msgstr "Lähennys ja suurennuslasi"
 
 #: ui/main.qml:33
 #, kde-format
@@ -727,7 +721,7 @@ msgstr "Värisokeuskorjaus"
 #, kde-format
 msgctxt "@title Category name in sidebar, for inverting screen colors"
 msgid "Invert"
-msgstr ""
+msgstr "Käännä"
 
 #: ui/main.qml:73
 #, kde-format
@@ -932,160 +926,153 @@ msgstr "Suuri"
 #, kde-format
 msgctxt "@label, followed by 'full screen' or 'magnify region'"
 msgid "Zoom:"
-msgstr ""
+msgstr "Lähennys:"
 
 #: ui/ZoomMagnifier.qml:23
-#, fuzzy, kde-format
-#| msgctxt "@option:radio Flash screen when a system bell is rung"
-#| msgid "Flash screen"
+#, kde-format
 msgctxt "@option:check, enable zoom effect, following 'Zoom:'"
 msgid "Full screen"
-msgstr "Väläytä näyttöä"
+msgstr "Koko näyttö"
 
 #: ui/ZoomMagnifier.qml:52
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Show pixel grid at zoom level:"
-msgstr ""
+msgstr "Näytä kuvapisteruudukko lähennystasolla:"
 
 #: ui/ZoomMagnifier.qml:84
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Mouse pointer:"
-msgstr ""
+msgstr "Hiiriosoitin:"
 
 #: ui/ZoomMagnifier.qml:86
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scale"
-msgstr ""
+msgstr "Mittakaava"
 
 #: ui/ZoomMagnifier.qml:86
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Keep"
-msgstr ""
+msgstr "Säilytä"
 
 #: ui/ZoomMagnifier.qml:86
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Hide"
-msgstr ""
+msgstr "Piilota"
 
 #: ui/ZoomMagnifier.qml:97
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Mouse tracking:"
-msgstr ""
+msgstr "Hiiren jäljitys:"
 
 #: ui/ZoomMagnifier.qml:99
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Proportional"
-msgstr ""
+msgstr "Suhteellinen"
 
 #: ui/ZoomMagnifier.qml:99
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
-msgstr ""
+msgstr "Keskitetty"
 
 #: ui/ZoomMagnifier.qml:99
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Push"
-msgstr ""
+msgstr "Lähetä"
 
 #: ui/ZoomMagnifier.qml:99
-#, fuzzy, kde-format
-#| msgid "Disable After:"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Disabled"
-msgstr "Poista käytöstä ajassa:"
+msgstr "Ei käytössä"
 
 #: ui/ZoomMagnifier.qml:110
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable focus tracking"
-msgstr ""
+msgstr "Käytä kohdistuksen jäljitystä"
 
 #: ui/ZoomMagnifier.qml:121
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable text caret tracking"
-msgstr ""
+msgstr "Käytä tekstikohdistimen jäljitystä"
 
 #: ui/ZoomMagnifier.qml:132
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
-msgstr ""
+msgstr "Vierityseleen muuntonäppäimet:"
 
 #: ui/ZoomMagnifier.qml:170
 #, kde-format
 msgctxt "@info:tooltip, indicates feature unavailable on X11"
 msgid "Zoom scroll gestures are only available on Wayland."
-msgstr ""
+msgstr "Lähennysvierityseleet ovat käytettävissä vain Waylandissa."
 
 #: ui/ZoomMagnifier.qml:176
-#, fuzzy, kde-format
-#| msgid "Ring system bell when modifier keys are used"
+#, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
-msgstr "Käytä järjestelmän äänimerkkiä painettaessa muuntonäppäimiä"
+msgstr "Lähennä vierittämällä ja painamalla muuntonäppäintä"
 
 #: ui/ZoomMagnifier.qml:188
-#, fuzzy, kde-format
-#| msgid "Magnification"
+#, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
-msgstr "Suurennus"
+msgstr "Suurenna alue"
 
 #: ui/ZoomMagnifier.qml:215
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
-msgstr ""
+msgstr "Leveys:"
 
 #: ui/ZoomMagnifier.qml:226 ui/ZoomMagnifier.qml:251
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
 msgid_plural "%1 px"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 px"
+msgstr[1] "%1 px"
 
 #: ui/ZoomMagnifier.qml:227 ui/ZoomMagnifier.qml:252
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
-msgstr ""
+msgstr "px"
 
 #: ui/ZoomMagnifier.qml:240
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
-msgstr ""
+msgstr "Korkeus:"
 
 #: ui/ZoomMagnifier.qml:269
-#, fuzzy, kde-format
-#| msgid "Disable After:"
+#, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
-msgstr "Poista käytöstä ajassa:"
+msgstr "Ei käytössä"
 
 #: ui/ZoomMagnifier.qml:282
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
-msgstr ""
+msgstr "Lähennyskerroin:"
 
 #: ui/ZoomMagnifier.qml:329
-#, fuzzy, kde-format
-#| msgid "Use keys to control the mouse"
+#, kde-format
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
-msgstr "Ohjaa hiirtä näppäimin"
+msgstr "Käytä lähennykseen pikanäppäimiä"
 
 #~ msgid "AltGraph"
 #~ msgstr "AltGr"
