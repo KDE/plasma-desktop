@@ -127,6 +127,7 @@ void PagerModel::Private::refreshDataSource()
             }
         });
 
+        QObject::disconnect(virtualDesktopPositionsConn);
         virtualDesktopPositionsConn = QObject::connect(virtualDesktopInfo, &VirtualDesktopInfo::desktopPositionsChanged, q, [this]() {
             if (q->rowCount()) {
                 q->refresh();
