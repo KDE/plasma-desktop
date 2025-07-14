@@ -33,12 +33,10 @@ msgstr "无"
 #, kde-format
 msgctxt "@action:button Two keybinds for a dial, up & down"
 msgid "%1 && %2"
-msgstr ""
+msgstr "%1 和 %2"
 
 #: inputsequence.cpp:216
-#, fuzzy, kde-format
-#| msgctxt "@action:button There is no keybinding"
-#| msgid "None"
+#, kde-format
 msgctxt "@action:button There is no keybindings"
 msgid "None"
 msgstr "无"
@@ -77,7 +75,7 @@ msgstr "笔身按钮 %1"
 #, kde-format
 msgctxt "@action:button"
 msgid "Scroll wheel"
-msgstr ""
+msgstr "滚动滚轮"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -153,12 +151,10 @@ msgid "pen button %1"
 msgstr "笔身按钮 %1"
 
 #: ui/ActionDialog.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@title Select the action for the tablet button"
-#| msgid "Select Button Action"
+#, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial Action"
-msgstr "选择按钮操作"
+msgstr "选择转盘操作"
 
 #: ui/ActionDialog.qml:28
 #, kde-format
@@ -167,12 +163,10 @@ msgid "Select Button Action"
 msgstr "选择按钮操作"
 
 #: ui/ActionDialog.qml:86
-#, fuzzy, kde-format
-#| msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
-#| msgid "Choose what action will be taken when pressing %1:"
+#, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when rotating %1:"
-msgstr "选择按下 %1 时采取的操作："
+msgstr "选择旋转 %1 时采取的操作："
 
 #: ui/ActionDialog.qml:87
 #, kde-format
@@ -193,9 +187,7 @@ msgid "Send keyboard key"
 msgstr "发送键盘按键"
 
 #: ui/ActionDialog.qml:132
-#, fuzzy, kde-format
-#| msgctxt "@option:radio Set this action to a keyboard type"
-#| msgid "Send keyboard key"
+#, kde-format
 msgctxt "@option:radio Set this action to a up/down keyboard type"
 msgid "Send keyboard keys"
 msgstr "发送键盘按键"
@@ -216,7 +208,7 @@ msgstr "发送笔身按钮事件"
 #, kde-format
 msgctxt "@option:radio Set this action to a scroll wheel type type"
 msgid "Act as scroll wheel"
-msgstr ""
+msgstr "用作滚轮"
 
 #: ui/ActionDialog.qml:198
 #, kde-format
@@ -235,12 +227,12 @@ msgstr "此数位板按钮将被转发到位于焦点的应用程序，由该应
 #: ui/ActionDialog.qml:249
 #, kde-format
 msgid "Up:"
-msgstr ""
+msgstr "向上："
 
 #: ui/ActionDialog.qml:263
 #, kde-format
 msgid "Down:"
-msgstr ""
+msgstr "向下："
 
 #: ui/ActionDialog.qml:277
 #, kde-format
@@ -306,7 +298,7 @@ msgstr "按钮 3"
 #, kde-format
 msgctxt "@info"
 msgid "Act like a scroll wheel on a mouse."
-msgstr ""
+msgstr "用作鼠标滚轮。"
 
 #: ui/ActionDialog.qml:363
 #, kde-format
@@ -463,10 +455,9 @@ msgid "Pad"
 msgstr "板面"
 
 #: ui/PadTab.qml:33
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad dial %1:"
-msgstr "板面按钮 %1："
+msgstr "板面转盘 %1："
 
 #: ui/PadTab.qml:35
 #, kde-format
@@ -474,7 +465,7 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad dial %1"
-msgstr ""
+msgstr "板面转盘 %1"
 
 #: ui/PadTab.qml:71
 #, kde-format
@@ -649,22 +640,19 @@ msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 msgstr "笔尖移动 X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
 #: ui/Tester.qml:75
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad button press B=%1"
-msgstr "板面按钮 %1："
+msgstr "板面按钮按下 B=%1"
 
 #: ui/Tester.qml:77
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad button release B=%1"
-msgstr "板面按钮 %1："
+msgstr "板面按钮释放 B=%1"
 
 #: ui/Tester.qml:84
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad dial moved V120=%1"
-msgstr "板面按钮 %1："
+msgstr "板面转盘转动 V120=%1"
 
 #: ui/Tester.qml:220
 #, kde-format
