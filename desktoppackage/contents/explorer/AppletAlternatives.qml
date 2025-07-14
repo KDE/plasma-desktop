@@ -15,9 +15,13 @@ import org.kde.plasma.plasmoid
 import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.plasma.private.shell 2.0
+import org.kde.plasma.shell
 
 PlasmaCore.Dialog {
     id: dialog
+
+    required property AlternativesHelper alternativesHelper
+
     visualParent: alternativesHelper.applet
     location: alternativesHelper.applet.Plasmoid.location
     hideOnWindowDeactivate: true
@@ -57,7 +61,7 @@ PlasmaCore.Dialog {
 
         WidgetExplorer {
             id: widgetExplorer
-            provides: alternativesHelper.appletProvides
+            provides: dialog.alternativesHelper.appletProvides
         }
 
         PlasmaExtras.PlasmoidHeading {
@@ -83,7 +87,7 @@ PlasmaCore.Dialog {
         }
 
         function savePluginAndClose() {
-            alternativesHelper.loadAlternative(currentPlugin);
+            dialog.alternativesHelper.loadAlternative(currentPlugin);
             dialog.close();
         }
 
@@ -140,7 +144,7 @@ PlasmaCore.Dialog {
                     onClicked: root.savePluginAndClose()
 
                     Component.onCompleted: {
-                        if (model.pluginName === alternativesHelper.currentPlugin) {
+                        if (model.pluginName === dialog.alternativesHelper.currentPlugin) {
                             root.currentPlugin = model.pluginName
                             setAsCurrent.restart()
                         }
@@ -181,7 +185,7 @@ PlasmaCore.Dialog {
                                 text: model.name
                                 textFormat: Text.PlainText
                                 elide: Text.ElideRight
-                                type: model.pluginName === alternativesHelper.currentPlugin ? PlasmaExtras.Heading.Type.Primary : PlasmaExtras.Heading.Type.Normal
+                                type: model.pluginName === dialog.alternativesHelper.currentPlugin ? PlasmaExtras.Heading.Type.Primary : PlasmaExtras.Heading.Type.Normal
                                 color: labelLayout.textColor
                             }
 
@@ -191,7 +195,7 @@ PlasmaCore.Dialog {
                                 textFormat: Text.PlainText
                                 font.pointSize: Kirigami.Theme.smallFont.pointSize
                                 font.family: Kirigami.Theme.smallFont.family
-                                font.bold: model.pluginName === alternativesHelper.currentPlugin
+                                font.bold: model.pluginName === dialog.alternativesHelper.currentPlugin
                                 opacity: 0.75
                                 maximumLineCount: 2
                                 wrapMode: Text.WordWrap
