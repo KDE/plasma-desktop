@@ -45,7 +45,7 @@ QQC2.ApplicationWindow {
                 root.toolDown = true;
                 penPath.path = [];
 
-                penLogText.append(i18nd("kcm_tablet", "Stylus press X=%1 Y=%2", local.x, local.y));
+                penLogText.append(i18ndc("kcm_tablet", "A tablet stylus was pressed onto the surface X=[x position] Y=[y position]", "Stylus press X=%1 Y=%2", local.x, local.y));
                 scrollLogToBottom();
             }
         }
@@ -55,7 +55,7 @@ QQC2.ApplicationWindow {
 
             root.toolDown = false;
 
-            penLogText.append(i18nd("kcm_tablet", "Stylus release X=%1 Y=%2", local.x, local.y));
+            penLogText.append(i18ndc("kcm_tablet", "A tablet stylus has 'released' or was lifted from the surface X=[x position] Y=[y position]", "Stylus release X=%1 Y=%2", local.x, local.y));
             scrollLogToBottom();
         }
 
@@ -65,23 +65,23 @@ QQC2.ApplicationWindow {
             if (insideDrawingSquare(local.x, local.y) && root.toolDown) {
                 penPath.path.push(local);
 
-                penLogText.append(i18nd("kcm_tablet", "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5", local.x, local.y, pressure * 100.0, tilt_x, tilt_y));
+                penLogText.append(i18ndc("kcm_tablet", "A tablet stylus has moved over the surface X=[x position] Y=[y position] P=[pressure] TX=[tilt x] TY=[tilt y]", "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5", local.x, local.y, pressure * 100.0, tilt_x, tilt_y));
                 scrollLogToBottom();
             }
         }
 
         function onPadButtonReceived(path: string, button: int, pressed: bool): void {
             if (pressed) {
-                penLogText.append(i18nd("kcm_tablet", "Pad button press B=%1", button));
+                penLogText.append(i18ndc("kcm_tablet", "A tablet pad's button has been pressed B=[the button number]", "Pad button press B=%1", button));
             } else {
-                penLogText.append(i18nd("kcm_tablet", "Pad button release B=%1", button));
+                penLogText.append(i18ndc("kcm_tablet", "A tablet pad's button has been released B=[the button number]", "Pad button release B=%1", button));
             }
             scrollLogToBottom();
         }
 
         function onDialDelta(value120: int): void {
             console.info(value120);
-            penLogText.append(i18nd("kcm_tablet", "Pad dial moved V120=%1", value120));
+            penLogText.append(i18ndc("kcm_tablet", "A tablet pad's dial has moved, V120 here refers to 'Value 120' which is a technical term that should be kept as is", "Pad dial moved V120=%1", value120));
             scrollLogToBottom();
         }
     }
@@ -217,13 +217,13 @@ QQC2.ApplicationWindow {
                         Component.onCompleted: loadLegend()
 
                         function loadLegend(): void {
-                            text = i18nd("kcm_tablet", "## Legend:\n# X, Y - event coordinate\n# P - pressure\n# TX,TY - tilt\n");
+                            text = i18ndc("kcm_tablet", "The tablet tester legend which is shown on start-up", "## Legend:\n# X, Y - event coordinate\n# P - pressure\n# TX,TY - tilt\n");
                         }
                     }
                 }
 
                 QQC2.Button {
-                    text: i18ndc("kcm_tablet", "Clear the event log", "Clear")
+                    text: i18ndc("kcm_tablet", "Clear the tablet tester event log", "Clear")
                     icon.name: "edit-clear-symbolic"
 
                     onClicked: {
