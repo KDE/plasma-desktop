@@ -80,7 +80,6 @@ QQC2.ApplicationWindow {
         }
 
         function onDialDelta(value120: int): void {
-            console.info(value120);
             penLogText.append(i18ndc("kcm_tablet", "A tablet pad's dial has moved, V120 here refers to 'Value 120' which is a technical term that should be kept as is", "Pad dial moved V120=%1", value120));
             scrollLogToBottom();
         }
