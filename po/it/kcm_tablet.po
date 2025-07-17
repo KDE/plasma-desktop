@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-08 00:44+0000\n"
-"PO-Revision-Date: 2025-04-30 15:26+0200\n"
+"PO-Revision-Date: 2025-07-13 08:54+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -33,7 +33,7 @@ msgstr "Nessuno"
 #, kde-format
 msgctxt "@action:button Two keybinds for a dial, up & down"
 msgid "%1 && %2"
-msgstr ""
+msgstr "%1 &e %2"
 
 #: inputsequence.cpp:216
 #, fuzzy, kde-format
@@ -76,7 +76,7 @@ msgstr "Pulsante %1 della penna"
 #, kde-format
 msgctxt "@action:button"
 msgid "Scroll wheel"
-msgstr ""
+msgstr "Rotella di scorrimento"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -192,12 +192,10 @@ msgid "Send keyboard key"
 msgstr "Invia tasto della tastiera"
 
 #: ui/ActionDialog.qml:132
-#, fuzzy, kde-format
-#| msgctxt "@option:radio Set this action to a keyboard type"
-#| msgid "Send keyboard key"
+#, kde-format
 msgctxt "@option:radio Set this action to a up/down keyboard type"
 msgid "Send keyboard keys"
-msgstr "Invia tasto della tastiera"
+msgstr "Invia tasti della tastiera"
 
 #: ui/ActionDialog.qml:147
 #, kde-format
@@ -236,12 +234,12 @@ msgstr ""
 #: ui/ActionDialog.qml:249
 #, kde-format
 msgid "Up:"
-msgstr ""
+msgstr "Su:"
 
 #: ui/ActionDialog.qml:263
 #, kde-format
 msgid "Down:"
-msgstr ""
+msgstr "Giù:"
 
 #: ui/ActionDialog.qml:277
 #, kde-format

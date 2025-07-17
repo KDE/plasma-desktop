@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-08 00:44+0000\n"
-"PO-Revision-Date: 2025-07-14 20:10+0400\n"
+"PO-Revision-Date: 2025-07-16 10:21+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -34,7 +34,7 @@ msgstr "لا شيء"
 #, kde-format
 msgctxt "@action:button Two keybinds for a dial, up & down"
 msgid "%1 && %2"
-msgstr ""
+msgstr "%1 و %2"
 
 #: inputsequence.cpp:216
 #, kde-format
@@ -76,7 +76,7 @@ msgstr "زر القلم %1"
 #, kde-format
 msgctxt "@action:button"
 msgid "Scroll wheel"
-msgstr ""
+msgstr "عجلة التمرير"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -152,12 +152,10 @@ msgid "pen button %1"
 msgstr "زر القلم %1"
 
 #: ui/ActionDialog.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@title Select the action for the tablet button"
-#| msgid "Select Button Action"
+#, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial Action"
-msgstr "اختر إجراء الزّرّ"
+msgstr "حدد إجراء القرص الدوار"
 
 #: ui/ActionDialog.qml:28
 #, kde-format
@@ -166,12 +164,10 @@ msgid "Select Button Action"
 msgstr "اختر إجراء الزّرّ"
 
 #: ui/ActionDialog.qml:86
-#, fuzzy, kde-format
-#| msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
-#| msgid "Choose what action will be taken when pressing %1:"
+#, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when rotating %1:"
-msgstr "اختر الإجراء الذي سيأخذ عند الضغط على %1:"
+msgstr "اختر الإجراء الذي سيأخذ عند تدوير %1:"
 
 #: ui/ActionDialog.qml:87
 #, kde-format
@@ -192,12 +188,10 @@ msgid "Send keyboard key"
 msgstr "أرسل مفتاح لوحة المفاتيح"
 
 #: ui/ActionDialog.qml:132
-#, fuzzy, kde-format
-#| msgctxt "@option:radio Set this action to a keyboard type"
-#| msgid "Send keyboard key"
+#, kde-format
 msgctxt "@option:radio Set this action to a up/down keyboard type"
 msgid "Send keyboard keys"
-msgstr "أرسل مفتاح لوحة المفاتيح"
+msgstr "أرسل مفاتيح لوحة المفاتيح"
 
 #: ui/ActionDialog.qml:147
 #, kde-format
@@ -215,7 +209,7 @@ msgstr "أرسل زر القلم"
 #, kde-format
 msgctxt "@option:radio Set this action to a scroll wheel type type"
 msgid "Act as scroll wheel"
-msgstr ""
+msgstr "بمثابة عجلة تمرير"
 
 #: ui/ActionDialog.qml:198
 #, kde-format
@@ -307,7 +301,7 @@ msgstr "الزّرّ 3"
 #, kde-format
 msgctxt "@info"
 msgid "Act like a scroll wheel on a mouse."
-msgstr ""
+msgstr "بمثابة عجلة التمرير في الفأرة"
 
 #: ui/ActionDialog.qml:363
 #, kde-format
@@ -464,10 +458,9 @@ msgid "Pad"
 msgstr "اللوح"
 
 #: ui/PadTab.qml:33
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad dial %1:"
-msgstr "زر اللوحي %1:"
+msgstr "قرص اللوح %1:"
 
 #: ui/PadTab.qml:35
 #, kde-format
@@ -475,7 +468,7 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad dial %1"
-msgstr ""
+msgstr "قرص اللوح %1"
 
 #: ui/PadTab.qml:71
 #, kde-format
@@ -654,22 +647,19 @@ msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 msgstr "حركة قلم التأشير س=%1 ص=%2 ض=%3% TX=%4 TY=%5"
 
 #: ui/Tester.qml:75
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad button press B=%1"
-msgstr "زر اللوحي %1:"
+msgstr "الزر اللوحي ضغط B=%1"
 
 #: ui/Tester.qml:77
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad button release B=%1"
-msgstr "زر اللوحي %1:"
+msgstr "الزر اللوحي حرر B=%1"
 
 #: ui/Tester.qml:84
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad dial moved V120=%1"
-msgstr "زر اللوحي %1:"
+msgstr "تحرك قرص اللوح V120‏=%1"
 
 #: ui/Tester.qml:220
 #, kde-format
