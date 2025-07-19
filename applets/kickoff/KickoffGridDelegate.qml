@@ -76,6 +76,7 @@ AbstractKickoffItemDelegate {
             verticalAlignment: Text.AlignTop
             maximumLineCount: 2
             wrapMode: Text.Wrap
+            lineHeight: label.lineCount === 1 ? 0 : 1
             color: root.iconAndLabelsShouldlookSelected ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
         }
     }
