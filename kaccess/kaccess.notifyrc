@@ -259,8 +259,6 @@ Comment[zh_CN]=一个修饰键 (如 Shift 或 Ctrl) 已经切换为激活状态
 Comment[zh_TW]=一個組合鍵（如 Shift 或 Ctrl 等）已改變了它的狀態成為啟動
 Sound=bell-window-system
 
-nopresentation=236
-
 [Event/modifierkey-unlatched]
 Name=A modifier key has become inactive
 Name[af]='n Verandering sleutel was gedeaktiveer
@@ -423,8 +421,6 @@ Comment[x-test]=xxA modifier key (e.g. Shift or Ctrl) has changed its state and 
 Comment[zh_CN]=一个修饰键 (如 Shift 或 Ctrl) 已经切换为非激活状态
 Comment[zh_TW]=一個組合鍵（如 Shift 或 Ctrl 等）已改變了它的狀態成為放開
 Sound=bell-window-system
-
-nopresentation=236
 
 [Event/modifierkey-locked]
 Name=A modifier key has been locked
@@ -589,8 +585,6 @@ Comment[zh_CN]=一个修饰键 (如 Shift 或 Ctrl) 已经锁定为激活状态�
 Comment[zh_TW]=一個組合鍵（如 Shift 或 Ctrl 等）已被鎖定，現在再按任何鍵都視為快捷鍵組合
 Sound=bell-window-system
 
-nopresentation=236
-
 [Event/lockkey-locked]
 Name=A lock key has been activated
 Name[af]='n Sluitsleutel is geaktiveer
@@ -753,8 +747,6 @@ Comment[x-test]=xxA lock key (e.g. Caps Lock or Num Lock) has changed its state 
 Comment[zh_CN]=一个锁定键 (如 Caps Lock 或 Num Lock) 已经切换为激活状态
 Comment[zh_TW]=一個鎖定鍵（如 CapsLock 或 NumLock）已改變它的狀態為啟用
 Sound=bell-window-system
-
-nopresentation=236
 
 [Event/lockkey-unlocked]
 Name=A lock key has been deactivated
@@ -919,8 +911,6 @@ Comment[x-test]=xxA lock key (e.g. Caps Lock or Num Lock) has changed its state 
 Comment[zh_CN]=一个锁定键 (如 Caps Lock 或 Num Lock) 已经切换为非激活状态
 Comment[zh_TW]=一個鎖定鍵（如 CapsLock 或 NumLock）已改變它的狀態成為未啟用
 Sound=bell-window-system
-
-nopresentation=236
 
 [Event/stickykeys]
 Name=Sticky keys has been enabled or disabled
@@ -1087,7 +1077,6 @@ Comment[zh_CN]=启用或禁用了粘滞键
 Comment[zh_TW]=相黏鍵已啟動或關閉。
 Sound=bell-window-system
 Action=Popup
-nopresentation=236
 
 [Event/slowkeys]
 Name=Slow keys has been enabled or disabled
@@ -1252,7 +1241,6 @@ Comment[zh_CN]=慢速键已经启用/禁用
 Comment[zh_TW]=慢速鍵已啟動或關閉。
 Sound=bell-window-system
 Action=Popup
-nopresentation=236
 
 [Event/bouncekeys]
 Name=Bounce keys has been enabled or disabled
@@ -1414,8 +1402,6 @@ Comment[x-test]=xxBounce keys has been enabled or disabledxx
 Comment[zh_CN]=防抖键已经启用/禁用
 Comment[zh_TW]=彈回鍵已啟動或關閉。
 Sound=bell-window-system
-Action=PassivePopup
-nopresentation=236
 
 [Event/mousekeys]
 Name=Mouse keys has been enabled or disabled
@@ -1581,5 +1567,3 @@ Comment[x-test]=xxMouse keys has been enabled or disabledxx
 Comment[zh_CN]=启用或禁用了鼠标键
 Comment[zh_TW]=滑鼠鍵已啟動或關閉。
 Sound=bell-window-system
-Action=PassivePopup
-nopresentation=236
