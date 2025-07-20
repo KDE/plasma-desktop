@@ -1,6 +1,6 @@
 # Translation of kcmaccess to Korean.
 # Copyright (C) 2001, 2007 Free Software Foundation, Inc.
-# SPDX-FileCopyrightText: 2007, 2008, 2015, 2017, 2019, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2007, 2008, 2015, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
 # JungHee Lee <daemul72@gmail.com>, 2021.
 #
 # Yu-Chan, Park, 2001.
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-25 00:44+0000\n"
-"PO-Revision-Date: 2024-12-24 18:56+0100\n"
+"PO-Revision-Date: 2025-07-20 01:39+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -17,52 +17,52 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: kcmaccess.cpp:127 kcmaccess.cpp:155
 #, kde-format
 msgid "KWin"
-msgstr ""
+msgstr "KWin"
 
 #: kcmaccess.cpp:130
 #, kde-format
 msgid "Toggle Invert Effect"
-msgstr ""
+msgstr "반전 효과 전환"
 
 #: kcmaccess.cpp:136
 #, kde-format
 msgid "Toggle Invert Effect on Window"
-msgstr ""
+msgstr "창 반전 효과 전환"
 
 #: kcmaccess.cpp:178
 #, kde-format
 msgid "Move Left"
-msgstr ""
+msgstr "왼쪽으로 이동"
 
 #: kcmaccess.cpp:185
 #, kde-format
 msgid "Move Right"
-msgstr ""
+msgstr "오른쪽으로 이동"
 
 #: kcmaccess.cpp:192
 #, kde-format
 msgid "Move Up"
-msgstr ""
+msgstr "위로 이동"
 
 #: kcmaccess.cpp:199
 #, kde-format
 msgid "Move Down"
-msgstr ""
+msgstr "아래로 이동"
 
 #: kcmaccess.cpp:206
 #, kde-format
 msgid "Move Mouse to Focus"
-msgstr ""
+msgstr "마우스를 포커스로 이동"
 
 #: kcmaccess.cpp:213
 #, kde-format
 msgid "Move Mouse to Center"
-msgstr ""
+msgstr "마우스를 가운데로 이동"
 
 #: kcmaccess.cpp:256
 #, kde-format
@@ -142,17 +142,15 @@ msgstr "벨이 울릴 때 시스템 색상 반전"
 
 #. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
 #: kcmaccessibilitybell.kcfg:28
-#, fuzzy, kde-format
-#| msgid "Color of the Visible Bell"
+#, kde-format
 msgid "Color of the Visual Bell"
-msgstr "벨 시각화 색상"
+msgstr "시각적 벨 색상"
 
 #. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
 #: kcmaccessibilitybell.kcfg:32
-#, fuzzy, kde-format
-#| msgid "Duration of the Visible Bell"
+#, kde-format
 msgid "Duration of the Visual Bell"
-msgstr "벨 표시 시간"
+msgstr "시각적 벨 시간"
 
 #. i18n: ectx: label, entry (ColorblindnessCorrection), group (Plugins)
 #: kcmaccessibilitycolorblindnesscorrection.kcfg:13
@@ -162,10 +160,9 @@ msgstr "색각 이상 보정 활성화 여부"
 
 #. i18n: ectx: label, entry (Invert), group (Plugins)
 #: kcmaccessibilityinvert.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Invert effect is enabled"
-msgstr "커서 흔들기 활성화 여부"
+msgstr "반전 효과 활성화 여부"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
@@ -307,17 +304,15 @@ msgstr "확대"
 
 #. i18n: ectx: label, entry (Zoom), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Zoom effect is enabled"
-msgstr "커서 흔들기 활성화 여부"
+msgstr "크기 조정 효과 활성화 여부"
 
 #. i18n: ectx: label, entry (Magnifier), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Magnifier effect is enabled"
-msgstr "커서 흔들기 활성화 여부"
+msgstr "돋보기 효과 활성화 여부"
 
 #: ui/ActivationShortcuts.qml:18
 #, kde-format
@@ -555,12 +550,10 @@ msgstr "보라색"
 #, kde-format
 msgctxt "@label"
 msgid "Invert:"
-msgstr ""
+msgstr "반전:"
 
 #: ui/Invert.qml:23
-#, fuzzy, kde-format
-#| msgctxt "Enable activation shortcuts"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable invert effect"
 msgid "Enable"
 msgstr "활성화"
@@ -572,11 +565,10 @@ msgid "Use shortcuts to toggle inverting display and window colors"
 msgstr ""
 
 #: ui/Invert.qml:49 ui/ZoomMagnifier.qml:319
-#, fuzzy, kde-format
-#| msgid "Configure Notifications…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Shortcuts…"
-msgstr "알림 설정…"
+msgstr "단축키 설정…"
 
 #: ui/KeyboardFilters.qml:18
 #, kde-format
@@ -930,13 +922,13 @@ msgstr "화면 깜박이기"
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Show pixel grid at zoom level:"
-msgstr ""
+msgstr "다음 확대/축소 단계에서 픽셀 격자 표시:"
 
 #: ui/ZoomMagnifier.qml:84
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Mouse pointer:"
-msgstr ""
+msgstr "마우스 포인터:"
 
 #: ui/ZoomMagnifier.qml:86
 #, kde-format
@@ -948,7 +940,7 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Keep"
-msgstr ""
+msgstr "유지"
 
 #: ui/ZoomMagnifier.qml:86
 #, kde-format
@@ -960,7 +952,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Mouse tracking:"
-msgstr ""
+msgstr "마우스 추적:"
 
 #: ui/ZoomMagnifier.qml:99
 #, kde-format
@@ -990,7 +982,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable focus tracking"
-msgstr ""
+msgstr "포커스 위치 추적 활성화"
 
 #: ui/ZoomMagnifier.qml:121
 #, kde-format
@@ -1002,7 +994,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
-msgstr ""
+msgstr "스크롤 제스처 수정자 키:"
 
 #: ui/ZoomMagnifier.qml:170
 #, kde-format
@@ -1047,7 +1039,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
-msgstr ""
+msgstr "높이:"
 
 #: ui/ZoomMagnifier.qml:269
 #, kde-format
@@ -1059,7 +1051,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
-msgstr ""
+msgstr "확대/축소 배율:"
 
 #: ui/ZoomMagnifier.qml:329
 #, fuzzy, kde-format
