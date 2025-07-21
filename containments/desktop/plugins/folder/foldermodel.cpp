@@ -386,6 +386,9 @@ void FolderModel::setUrl(const QString &url)
         m_dirWatch->addFile(resolvedNewUrl.toLocalFile() + QStringLiteral("/.directory"));
     }
 
+    if (watcher) {
+        watcher->deleteLater();
+    }
     watcher = new QFileSystemWatcher(this);
     addDirectoriesRecursively(resolvedNewUrl.toString(), watcher);
     connect(watcher, &QFileSystemWatcher::directoryChanged, this, &FolderModel::refresh);
