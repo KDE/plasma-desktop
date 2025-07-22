@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-08 00:44+0000\n"
-"PO-Revision-Date: 2025-05-01 17:25+0200\n"
+"PO-Revision-Date: 2025-07-09 13:49+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -30,11 +30,10 @@ msgstr "Aucun"
 #, kde-format
 msgctxt "@action:button Two keybinds for a dial, up & down"
 msgid "%1 && %2"
-msgstr ""
+msgstr "%1 && %2"
 
 #: inputsequence.cpp:216
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "@action:button There is no keybindings"
 msgid "None"
 msgstr "Aucun"
@@ -73,7 +72,7 @@ msgstr "Bouton %1 du stylet"
 #, kde-format
 msgctxt "@action:button"
 msgid "Scroll wheel"
-msgstr ""
+msgstr "Molette de défilement"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -149,12 +148,10 @@ msgid "pen button %1"
 msgstr "Bouton %1 du stylet"
 
 #: ui/ActionDialog.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@title Select the action for the tablet button"
-#| msgid "Select Button Action"
+#, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial Action"
-msgstr "Sélectionner une action de bouton"
+msgstr "Sélectionner une action de numérotation"
 
 #: ui/ActionDialog.qml:28
 #, kde-format
@@ -163,12 +160,10 @@ msgid "Select Button Action"
 msgstr "Sélectionner une action de bouton"
 
 #: ui/ActionDialog.qml:86
-#, fuzzy, kde-format
-#| msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
-#| msgid "Choose what action will be taken when pressing %1:"
+#, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when rotating %1:"
-msgstr "Sélectionnez l'action qui sera prise lors d'un appui sur %1 :"
+msgstr "Sélectionnez l'action lors d'une rotation de %1 :"
 
 #: ui/ActionDialog.qml:87
 #, kde-format
@@ -189,12 +184,10 @@ msgid "Send keyboard key"
 msgstr "Envoyer une touche de clavier"
 
 #: ui/ActionDialog.qml:132
-#, fuzzy, kde-format
-#| msgctxt "@option:radio Set this action to a keyboard type"
-#| msgid "Send keyboard key"
+#, kde-format
 msgctxt "@option:radio Set this action to a up/down keyboard type"
 msgid "Send keyboard keys"
-msgstr "Envoyer une touche de clavier"
+msgstr "Envoyer les touches de clavier"
 
 #: ui/ActionDialog.qml:147
 #, kde-format
@@ -212,7 +205,7 @@ msgstr "Envoyer le bouton du stylet"
 #, kde-format
 msgctxt "@option:radio Set this action to a scroll wheel type type"
 msgid "Act as scroll wheel"
-msgstr ""
+msgstr "Agir comme avec une molette de défilement"
 
 #: ui/ActionDialog.qml:198
 #, kde-format
@@ -233,12 +226,12 @@ msgstr ""
 #: ui/ActionDialog.qml:249
 #, kde-format
 msgid "Up:"
-msgstr ""
+msgstr "Vers le haut :"
 
 #: ui/ActionDialog.qml:263
 #, kde-format
 msgid "Down:"
-msgstr ""
+msgstr "Vers le bas :"
 
 #: ui/ActionDialog.qml:277
 #, kde-format
@@ -304,7 +297,7 @@ msgstr "Bouton 3"
 #, kde-format
 msgctxt "@info"
 msgid "Act like a scroll wheel on a mouse."
-msgstr ""
+msgstr "Agir comme la molette de défilement d'une souris."
 
 #: ui/ActionDialog.qml:363
 #, kde-format
@@ -463,10 +456,9 @@ msgid "Pad"
 msgstr "Pavé"
 
 #: ui/PadTab.qml:33
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad dial %1:"
-msgstr "Bouton %1 du pavé tactile :"
+msgstr "Pavé de numérotation %1 :"
 
 #: ui/PadTab.qml:35
 #, kde-format
@@ -474,7 +466,7 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad dial %1"
-msgstr ""
+msgstr "pavé de numérotation %1"
 
 #: ui/PadTab.qml:71
 #, kde-format
@@ -659,22 +651,19 @@ msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 msgstr "Déplacement du stylet X = %1 Y = %2 P = %3 % TX = %4 TY = %5"
 
 #: ui/Tester.qml:75
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad button press B=%1"
-msgstr "Bouton %1 du pavé tactile :"
+msgstr "Appui de la touche « B » sur le bouton du pavé = %1"
 
 #: ui/Tester.qml:77
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad button release B=%1"
-msgstr "Bouton %1 du pavé tactile :"
+msgstr "Relâchement de la touche « B » sur le bouton du pavé = %1"
 
 #: ui/Tester.qml:84
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad dial moved V120=%1"
-msgstr "Bouton %1 du pavé tactile :"
+msgstr "Pavé de numérotation déplacé en V120 = %1"
 
 #: ui/Tester.qml:220
 #, kde-format
