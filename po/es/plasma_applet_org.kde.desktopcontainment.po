@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-01 00:43+0000\n"
+"POT-Creation-Date: 2025-07-23 00:45+0000\n"
 "PO-Revision-Date: 2025-07-01 12:30+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -414,7 +414,7 @@ msgstr "Eliminar"
 msgid "Preview Plugins"
 msgstr "Complementos de vista previa"
 
-#: package/contents/ui/FolderView.qml:1234
+#: package/contents/ui/FolderView.qml:1226
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -440,17 +440,17 @@ msgstr "Escritorio e imagen de fondo"
 msgid "Select Folder"
 msgstr "Seleccionar carpeta"
 
-#: plugins/folder/foldermodel.cpp:503
+#: plugins/folder/foldermodel.cpp:508
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "&Refrescar el escritorio"
 
-#: plugins/folder/foldermodel.cpp:503 plugins/folder/foldermodel.cpp:1716
+#: plugins/folder/foldermodel.cpp:508 plugins/folder/foldermodel.cpp:1721
 #, kde-format
 msgid "&Refresh View"
 msgstr "&Refrescar vista"
 
-#: plugins/folder/foldermodel.cpp:862
+#: plugins/folder/foldermodel.cpp:867
 #, kde-format
 msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
@@ -458,7 +458,7 @@ msgctxt ""
 msgid "Link Target Not Found"
 msgstr "Destino de enlace no encontrado"
 
-#: plugins/folder/foldermodel.cpp:864
+#: plugins/folder/foldermodel.cpp:869
 #, kde-kuit-format
 msgctxt "@info Body text of a system notification"
 msgid ""
@@ -468,23 +468,23 @@ msgstr ""
 "<filename>%1</filename> apunta a <filename>%2</filename>, pero este último "
 "no se ha encontrado. Es posible que se haya movido o borrado."
 
-#: plugins/folder/foldermodel.cpp:1725
+#: plugins/folder/foldermodel.cpp:1730
 #, kde-format
 msgid "&Empty Trash"
 msgstr "Vaciar la pap&elera"
 
-#: plugins/folder/foldermodel.cpp:1728
+#: plugins/folder/foldermodel.cpp:1733
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr "Restaurar a la ubicación anterior"
 
-#: plugins/folder/foldermodel.cpp:1731
+#: plugins/folder/foldermodel.cpp:1736
 #, kde-format
 msgid "&Open"
 msgstr "&Abrir"
 
-#: plugins/folder/foldermodel.cpp:1735
+#: plugins/folder/foldermodel.cpp:1740
 #, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -492,23 +492,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Mostrar destino"
 
-#: plugins/folder/foldermodel.cpp:1831
+#: plugins/folder/foldermodel.cpp:1836
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr "Eliminar el icono de la papelera"
 
-#: plugins/folder/foldermodel.cpp:1834
+#: plugins/folder/foldermodel.cpp:1839
 #, kde-format
 msgid "&Move to Trash"
 msgstr "&Mover a la Papelera"
 
-#: plugins/folder/foldermodel.cpp:1867
+#: plugins/folder/foldermodel.cpp:1872
 #, kde-format
 msgid "&Paste"
 msgstr "&Pegar"
 
-#: plugins/folder/foldermodel.cpp:2018
+#: plugins/folder/foldermodel.cpp:2023
 #, kde-format
 msgid "&Properties"
 msgstr "&Propiedades"
