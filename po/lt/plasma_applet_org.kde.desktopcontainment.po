@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 02:36+0000\n"
+"POT-Creation-Date: 2025-07-23 02:38+0000\n"
 "PO-Revision-Date: 2025-02-02 23:42+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -431,7 +431,7 @@ msgstr "Šalinti"
 msgid "Preview Plugins"
 msgstr "Peržiūros įskiepiai"
 
-#: package/contents/ui/FolderView.qml:1234
+#: package/contents/ui/FolderView.qml:1226
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -452,17 +452,17 @@ msgstr "Darbalaukis ir darbalaukio fonas"
 msgid "Select Folder"
 msgstr "Pasirinkite aplanką"
 
-#: plugins/folder/foldermodel.cpp:503
+#: plugins/folder/foldermodel.cpp:508
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "Į&kelti darbalaukį iš naujo"
 
-#: plugins/folder/foldermodel.cpp:503 plugins/folder/foldermodel.cpp:1716
+#: plugins/folder/foldermodel.cpp:508 plugins/folder/foldermodel.cpp:1721
 #, kde-format
 msgid "&Refresh View"
 msgstr "Įke&lti rodinį iš naujo"
 
-#: plugins/folder/foldermodel.cpp:862
+#: plugins/folder/foldermodel.cpp:867
 #, kde-format
 msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
@@ -470,7 +470,7 @@ msgctxt ""
 msgid "Link Target Not Found"
 msgstr "Nuorodos paskirtis nerasta"
 
-#: plugins/folder/foldermodel.cpp:864
+#: plugins/folder/foldermodel.cpp:869
 #, kde-kuit-format
 msgctxt "@info Body text of a system notification"
 msgid ""
@@ -480,23 +480,23 @@ msgstr ""
 "<filename>%1</filename> nurodo į <filename>%2</filename>, bet jo nepavyko "
 "surasti. Gali būti, kad jis perkeltas arba ištrintas."
 
-#: plugins/folder/foldermodel.cpp:1725
+#: plugins/folder/foldermodel.cpp:1730
 #, kde-format
 msgid "&Empty Trash"
 msgstr "&Išvalyti šiukšlinę"
 
-#: plugins/folder/foldermodel.cpp:1728
+#: plugins/folder/foldermodel.cpp:1733
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr "Atkurti į ankstesnę vietą"
 
-#: plugins/folder/foldermodel.cpp:1731
+#: plugins/folder/foldermodel.cpp:1736
 #, kde-format
 msgid "&Open"
 msgstr "At&verti"
 
-#: plugins/folder/foldermodel.cpp:1735
+#: plugins/folder/foldermodel.cpp:1740
 #, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -504,23 +504,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Rodyti paskirtį"
 
-#: plugins/folder/foldermodel.cpp:1831
+#: plugins/folder/foldermodel.cpp:1836
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr "Pašalinti šiukšlinės piktogramą"
 
-#: plugins/folder/foldermodel.cpp:1834
+#: plugins/folder/foldermodel.cpp:1839
 #, kde-format
 msgid "&Move to Trash"
 msgstr "Perkelti į šiu&kšliadėžę"
 
-#: plugins/folder/foldermodel.cpp:1867
+#: plugins/folder/foldermodel.cpp:1872
 #, kde-format
 msgid "&Paste"
 msgstr "Į&dėti"
 
-#: plugins/folder/foldermodel.cpp:2018
+#: plugins/folder/foldermodel.cpp:2023
 #, kde-format
 msgid "&Properties"
 msgstr "&Savybės"
