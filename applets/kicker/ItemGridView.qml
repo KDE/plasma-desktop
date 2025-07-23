@@ -445,10 +445,10 @@ FocusScope {
                 if (gridView.currentIndex !== -1) {
                     if (itemGrid.dragEnabled && pressX !== -1 && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
                         if ("pluginName" in item.m) {
-                            dragHelper.startDrag(kicker, item.url, item.icon,
+                            dragHelper.startDrag(kicker, Kicker.Utils.resolvedFile(item.url), item.icon,
                             "text/x-plasmoidservicename", item.m.pluginName);
                         } else {
-                            dragHelper.startDrag(kicker, item.url, item.icon);
+                            dragHelper.startDrag(kicker, Kicker.Utils.resolvedFile(item.url), item.icon);
                         }
 
                         kicker.dragSource = item;

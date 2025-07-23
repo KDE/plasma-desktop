@@ -20,6 +20,7 @@ import org.kde.plasma.components as PC3
 import org.kde.kirigami as Kirigami
 import "code/tools.js" as Tools
 import org.kde.plasma.plasmoid
+import org.kde.plasma.private.kicker as Kicker
 
 T.ItemDelegate {
     id: root
@@ -150,7 +151,7 @@ T.ItemDelegate {
             kickoff.dragSource.sourceItem = root;
             kickoff.dragSource.Drag.imageSource = result.url;
             kickoff.dragSource.Drag.mimeData = {
-                "text/uri-list" : [root.url]
+                "text/uri-list" : [Kicker.Utils.resolvedFile(root.url)]
             };
             kickoff.dragSource.Drag.active = handler.active;
         });

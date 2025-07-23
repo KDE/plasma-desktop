@@ -9,6 +9,7 @@ import QtQuick
 import org.kde.kirigami as Kirigami
 import org.kde.ksvg as KSvg
 import org.kde.plasma.components as PlasmaComponents3
+import org.kde.plasma.private.kicker as Kicker
 
 import "code/tools.js" as Tools
 
@@ -118,7 +119,7 @@ Item {
                 return;
             }
             if (pressX !== -1 && model.url && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
-                dragHelper.startDrag(kicker, model.url, model.decoration);
+                dragHelper.startDrag(kicker, Kicker.Utils.resolvedFile(model.url), model.decoration);
                 mousePressed = false;
                 pressX = -1;
                 pressY = -1;
