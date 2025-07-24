@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-29 02:41+0000\n"
-"PO-Revision-Date: 2025-05-25 17:22+0200\n"
+"PO-Revision-Date: 2025-07-23 13:51+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: inputsequence.cpp:172
 #, kde-format
@@ -377,7 +377,7 @@ msgstr "Konektatu marrazteko tableta bat"
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr "Tableta probatu..."
+msgstr "Tableta probatu…"
 
 #: ui/main.qml:97
 #, kde-format
@@ -401,12 +401,12 @@ msgstr "Arkatza"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
-msgstr "Teklatua"
+msgstr "Panela"
 
 #: ui/PadTab.qml:33
 #, kde-format
 msgid "Pad button %1:"
-msgstr "Kuxineko %1 botoia:"
+msgstr "Paneleko %1 botoia:"
 
 #: ui/PadTab.qml:36
 #, kde-format
@@ -414,7 +414,7 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad button %1"
-msgstr "kuxineko %1 botoia"
+msgstr "Paneleko %1 botoia"
 
 #: ui/StylusTab.qml:216
 #, kde-format
@@ -435,8 +435,8 @@ msgid ""
 "device, but often it reverses the pad buttonsʼ functionality so the tablet "
 "can be used upside-down."
 msgstr ""
-"Gailuari, erabiltzaile ezkertiarrentzako egokitzeko esaten dio. Gailuaren "
-"arabera ondorioak aldatuko dira, baina askotan, kuxineko botoien "
+"Gailuari erabiltzaile ezkertiarrentzako egokitzeko esaten dio. Gailuaren "
+"arabera efektuak aldatuko dira, baina askotan, Paneleko botoien "
 "funtzionaltasuna atzekoz aurrera ipintzen du tableta buruz behera erabili "
 "ahal izan dadin."
 
@@ -572,17 +572,17 @@ msgstr "Tableta probatzailea"
 #: ui/Tester.qml:48
 #, kde-format
 msgid "Stylus press X=%1 Y=%2"
-msgstr "Arkatza estutzea X=%1 Y=%2"
+msgstr "Arkatza estutu X=%1 Y=%2"
 
 #: ui/Tester.qml:58
 #, kde-format
 msgid "Stylus release X=%1 Y=%2"
-msgstr "Arkatza laxatzea X=%1 Y=%2"
+msgstr "Arkatza laxatu X=%1 Y=%2"
 
 #: ui/Tester.qml:68
 #, kde-format
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
-msgstr "Arkatza mugitzea X=%1 Y=%2 P=%3% TX=%4 TY=%5"
+msgstr "Arkatza mugitu X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
 #: ui/Tester.qml:205
 #, kde-format
