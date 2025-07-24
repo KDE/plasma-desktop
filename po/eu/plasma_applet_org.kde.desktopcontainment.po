@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-23 00:45+0000\n"
-"PO-Revision-Date: 2025-05-25 17:50+0200\n"
+"PO-Revision-Date: 2025-07-23 13:16+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -117,7 +117,7 @@ msgstr "Erabili ikono pertsonalizatua"
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
-msgstr "Hautatu..."
+msgstr "Hautatu…"
 
 #: package/contents/ui/ConfigIcons.qml:104
 #, kde-format
@@ -319,7 +319,7 @@ msgstr "Erakutsi aurreikuspegi koadro txikiak"
 #: package/contents/ui/ConfigIcons.qml:341
 #, kde-format
 msgid "Configure Preview Plugins…"
-msgstr "Konfiguratu aurreikuspegi pluginak..."
+msgstr "Konfiguratu aurreikuspegi pluginak…"
 
 #: package/contents/ui/ConfigLocation.qml:81
 #, kde-format
@@ -355,7 +355,7 @@ msgstr "Neurrira finkatutako kokalekua:"
 #, kde-format
 msgctxt "@info:placeholder custom location"
 msgid "Type path or URL…"
-msgstr "Tekleatu bide-izena edo URLa..."
+msgstr "Tekleatu bide-izena edo URLa…"
 
 #: package/contents/ui/ConfigLocation.qml:188
 #, kde-format
@@ -391,7 +391,7 @@ msgstr "Neurrira"
 #, kde-format
 msgctxt "@info:placeholder custom window title"
 msgid "Enter title…"
-msgstr "Sartu titulua..."
+msgstr "Sartu titulua…"
 
 #: package/contents/ui/ConfigOverlay.qml:98
 #, kde-format
@@ -430,11 +430,10 @@ msgstr ""
 "beste nonbaitera mugitzea."
 
 #: package/contents/ui/FolderViewDialog.qml:87
-#, fuzzy, kde-format
-#| msgid "This folder is empty."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Folder is empty"
-msgstr "Karpeta hau hutsik dago."
+msgstr "Karpeta hutsik dago"
 
 #: package/contents/ui/main.qml:398
 #, kde-format
