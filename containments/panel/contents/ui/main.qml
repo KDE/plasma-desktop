@@ -24,8 +24,8 @@ ContainmentItem {
     height: 48
 
 //BEGIN properties
-    Layout.preferredWidth: fixedWidth || currentLayout.implicitWidth + currentLayout.horizontalDisplacement
-    Layout.preferredHeight: fixedHeight || currentLayout.implicitHeight + currentLayout.verticalDisplacement
+    Layout.preferredWidth: fixedWidth || (isHorizontal ? currentLayout.preferredSize + layoutContainer.horizontalDisplacement : root.width)
+    Layout.preferredHeight: fixedHeight || (isHorizontal ? root.height : currentLayout.preferredSize + layoutContainer.verticalDisplacement)
     Layout.fillWidth: {
         return currentLayout.children
             .filter(child => child?.applet?.plasmoid?.pluginName === "org.kde.plasma.panelspacer")
@@ -381,46 +381,73 @@ ContainmentItem {
             id: appletsModel
         }
 
-        GridLayout {
-            id: currentLayout
-
-            Repeater {
-                model: appletsModel
-                delegate: appletContainerComponent
-            }
-
-            rowSpacing: Kirigami.Units.smallSpacing
-            columnSpacing: Kirigami.Units.smallSpacing
-
+        Flickable {
+            id: layoutContainer
             x: Qt.application.layoutDirection === Qt.RightToLeft && isHorizontal ? toolBoxSize : 0;
-            readonly property int toolBoxSize: !toolBox || !Plasmoid.containment.corona.editMode || Qt.application.layoutDirection === Qt.RightToLeft ? 0 : (isHorizontal ? toolBox.width : toolBox.height)
+            width: visibleWidth
+            height: visibleHeight
+            contentWidth: currentLayout.width
+            contentHeight: currentLayout.height
+            clip: true
 
-            property int horizontalDisplacement: dropArea.anchors.leftMargin + dropArea.anchors.rightMargin + (isHorizontal ? currentLayout.toolBoxSize : 0)
-            property int verticalDisplacement: dropArea.anchors.topMargin + dropArea.anchors.bottomMargin + (isHorizontal ? 0 : currentLayout.toolBoxSize)
-
-    // BEGIN BUG 454095: use lastSpacer to left align applets, as implicitWidth is updated too late
-            width: root.width - horizontalDisplacement
-            height: root.height - verticalDisplacement
-
-            Item {
-                id: lastSpacer
-                visible: !root.hasSpacer
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-
-                /**
-                * This index will be used when adding a new panel.
-                *
-                * @see LayoutManager.indexAtCoordinates
-                */
-                readonly property alias index: appletsModel.count
+            NumberAnimation {
+                id: contentCoordAnim
+                target: layoutContainer
+                property: root.isHorizontal ? "contentX" : "contentY"
+                duration: Kirigami.Units.mediumDuration
+                easing.type: Easing.InOutQuad
             }
-    // END BUG 454095
 
-            rows: isHorizontal ? 1 : currentLayout.children.length
-            columns: isHorizontal ? currentLayout.children.length : 1
-            flow: isHorizontal ? GridLayout.LeftToRight : GridLayout.TopToBottom
-            layoutDirection: Qt.application.layoutDirection
+            readonly property int toolBoxSize: !toolBox || !Plasmoid.containment.corona.editMode || Qt.application.layoutDirection === Qt.RightToLeft ? 0 : (isHorizontal ? toolBox.width : toolBox.height)
+            property int horizontalDisplacement: dropArea.anchors.leftMargin + dropArea.anchors.rightMargin + (isHorizontal ? layoutContainer.toolBoxSize : 0)
+            property int verticalDisplacement: dropArea.anchors.topMargin + dropArea.anchors.bottomMargin + (isHorizontal ? 0 : layoutContainer.toolBoxSize)
+            property real visibleWidth: root.width - horizontalDisplacement
+            property real visibleHeight: root.height - verticalDisplacement
+
+
+            GridLayout {
+                id: currentLayout
+
+                property real minimumSize: [...children].reduce(
+                    (sum, c) => sum + (root.isHorizontal ? c.Layout.minimumWidth : c.Layout.minimumHeight), 0
+                ) + (appletsModel.count - 1) * rowSpacing
+
+                property real preferredSize: [...children].reduce(
+                    (sum, c) => sum + (root.isHorizontal ? c.Layout.preferredWidth : c.Layout.preferredHeight), 0
+                ) + (appletsModel.count - 1) * rowSpacing
+
+                Repeater {
+                    model: appletsModel
+                    delegate: appletContainerComponent
+                }
+
+                width: root.isHorizontal ? Math.max(layoutContainer.visibleWidth, minimumSize) : layoutContainer.visibleWidth
+                height: root.isHorizontal ? layoutContainer.visibleHeight : Math.max(layoutContainer.visibleHeight, minimumSize)
+
+                rowSpacing: Kirigami.Units.smallSpacing
+                columnSpacing: Kirigami.Units.smallSpacing
+
+                // BEGIN BUG 454095: use lastSpacer to left align applets, as implicitWidth is updated too late
+                Item {
+                    id: lastSpacer
+                    visible: !root.hasSpacer
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+
+                    /**
+                    * This index will be used when adding a new panel.
+                    *
+                    * @see LayoutManager.indexAtCoordinates
+                    */
+                    readonly property alias index: appletsModel.count
+                }
+                // END BUG 454095
+
+                rows: isHorizontal ? 1 : currentLayout.children.length
+                columns: isHorizontal ? currentLayout.children.length : 1
+                flow: isHorizontal ? GridLayout.LeftToRight : GridLayout.TopToBottom
+                layoutDirection: Qt.application.layoutDirection
+            }
         }
     }
     MouseArea {
@@ -456,6 +483,50 @@ ContainmentItem {
         text: isHorizontal ? i18nd("plasma_shell_org.kde.plasma.desktop", "Add Widgets…") : undefined
         icon.name: "list-add-symbolic"
         onClicked: Plasmoid.internalAction("add widgets").trigger()
+    }
+    PC3.Button {
+        id: scrollTrailingButton
+        anchors.right: parent.right
+        anchors.top: root.isHorizontal ? parent.top : undefined
+        anchors.bottom: parent.bottom
+        anchors.left: root.isHorizontal ? undefined : parent.left
+        z: Math.max(root.toolBox?.z, root.configOverlay?.z) + 1 || null
+
+        property bool horizontalVisible: layoutContainer.contentWidth > layoutContainer.width && layoutContainer.contentX < layoutContainer.contentWidth - layoutContainer.width
+        property bool verticalVisible: layoutContainer.contentHeight > layoutContainer.height && layoutContainer.contentY < layoutContainer.contentHeight - layoutContainer.height
+
+        visible: root.isHorizontal ? horizontalVisible : verticalVisible
+        icon.name: root.isHorizontal ? "arrow-right" : "arrow-down"
+        onClicked: {
+            if (root.isHorizontal) {
+                contentCoordAnim.to = Math.min(layoutContainer.contentX + Kirigami.Units.gridUnit * 7, layoutContainer.contentWidth - layoutContainer.width)
+            } else {
+                contentCoordAnim.to = Math.min(layoutContainer.contentY + Kirigami.Units.gridUnit * 7, layoutContainer.contentHeight - layoutContainer.height)
+            }
+            contentCoordAnim.running = true
+        }
+    }
+    PC3.Button {
+        id: scrollLeadingButton
+        anchors.left: parent.left
+        anchors.top: parent.top
+        anchors.bottom: root.isHorizontal ? parent.bottom : undefined
+        anchors.right: root.isHorizontal ? undefined : parent.right
+        z: root.configOverlay?.z + 1 || null
+
+        property bool horizontalVisible: layoutContainer.contentWidth > layoutContainer.width && layoutContainer.contentX > 0
+        property bool verticalVisible: layoutContainer.contentHeight > layoutContainer.height && layoutContainer.contentY > 0
+
+        visible: root.isHorizontal ? horizontalVisible : verticalVisible
+        icon.name: root.isHorizontal ? "arrow-left" : "arrow-up"
+        onClicked: {
+            if (root.isHorizontal) {
+                contentCoordAnim.to = Math.max(layoutContainer.contentX - Kirigami.Units.gridUnit * 7, 0)
+            } else {
+                contentCoordAnim.to = Math.max(layoutContainer.contentY - Kirigami.Units.gridUnit * 7, 0)
+            }
+            contentCoordAnim.running = true
+        }
     }
 //END UI elements
 }
