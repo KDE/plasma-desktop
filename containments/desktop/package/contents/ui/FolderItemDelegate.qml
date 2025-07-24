@@ -36,7 +36,7 @@ Item {
     property Item hoverArea:       loader.item ? loader.item.hoverArea      : null
     property Item frame:           loader.item ? loader.item.frame          : null
     property Item toolTip:         loader.item ? loader.item.toolTip        : null
-    property int contentHeight: loader.item && !root.useListViewMode ? loader.item.contentHeight : null
+    property real contentHeight:   loader.item && !root.useListViewMode ? loader.item.contentHeight : null
     Accessible.name: name
     Accessible.role: Accessible.Canvas
 
