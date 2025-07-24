@@ -49,7 +49,7 @@ function optimumCapacity(width, height) {
 }
 
 function preferredMinWidth() {
-    let width = preferredMinLauncherWidth();
+    let width = preferredMinLauncherWidth() * taskRepeater.count;
 
     if (!tasks.vertical && !tasks.iconsOnly) {
       width +=
@@ -152,7 +152,7 @@ function spaceRequiredToShowText() {
 }
 
 function preferredMinLauncherWidth() {
-    const baseWidth = tasks.vertical ? preferredMinHeight() : Math.min(tasks.height, Kirigami.Units.iconSizes.small * 3);
+    const baseWidth = tasks.vertical ? preferredMinHeight() : tasks.height;
 
     return (baseWidth + horizontalMargins())
         - (adjustMargin(baseWidth, taskFrame.margins.top) + adjustMargin(baseWidth, taskFrame.margins.bottom));

@@ -24,8 +24,8 @@ ContainmentItem {
     height: 48
 
 //BEGIN properties
-    Layout.preferredWidth: fixedWidth || currentLayout.implicitWidth + currentLayout.horizontalDisplacement
-    Layout.preferredHeight: fixedHeight || currentLayout.implicitHeight + currentLayout.verticalDisplacement
+    Layout.preferredWidth: fixedWidth || (isHorizontal ? currentLayout.minimumSize + layoutContainer.horizontalDisplacement : root.width)
+    Layout.preferredHeight: fixedHeight || (isHorizontal ? root.height : layoutContainer.implicitHeight + layoutContainer.verticalDisplacement)
     Layout.fillWidth: {
         return currentLayout.children
             .filter(child => child?.applet?.plasmoid?.pluginName === "org.kde.plasma.panelspacer")
@@ -381,46 +381,60 @@ ContainmentItem {
             id: appletsModel
         }
 
-        GridLayout {
-            id: currentLayout
-
-            Repeater {
-                model: appletsModel
-                delegate: appletContainerComponent
-            }
-
-            rowSpacing: Kirigami.Units.smallSpacing
-            columnSpacing: Kirigami.Units.smallSpacing
-
+        Flickable {
+            id: layoutContainer
             x: Qt.application.layoutDirection === Qt.RightToLeft && isHorizontal ? toolBoxSize : 0;
+            width: visibleWidth
+            height: visibleHeight
+            contentWidth: currentLayout.width
+            contentHeight: currentLayout.height
+
             readonly property int toolBoxSize: !toolBox || !Plasmoid.containment.corona.editMode || Qt.application.layoutDirection === Qt.RightToLeft ? 0 : (isHorizontal ? toolBox.width : toolBox.height)
+            property int horizontalDisplacement: dropArea.anchors.leftMargin + dropArea.anchors.rightMargin + (isHorizontal ? layoutContainer.toolBoxSize : 0)
+            property int verticalDisplacement: dropArea.anchors.topMargin + dropArea.anchors.bottomMargin + (isHorizontal ? 0 : layoutContainer.toolBoxSize)
+            property real visibleWidth: root.width - horizontalDisplacement
+            property real visibleHeight: root.height - verticalDisplacement
 
-            property int horizontalDisplacement: dropArea.anchors.leftMargin + dropArea.anchors.rightMargin + (isHorizontal ? currentLayout.toolBoxSize : 0)
-            property int verticalDisplacement: dropArea.anchors.topMargin + dropArea.anchors.bottomMargin + (isHorizontal ? 0 : currentLayout.toolBoxSize)
 
-    // BEGIN BUG 454095: use lastSpacer to left align applets, as implicitWidth is updated too late
-            width: root.width - horizontalDisplacement
-            height: root.height - verticalDisplacement
+            GridLayout {
+                id: currentLayout
 
-            Item {
-                id: lastSpacer
-                visible: !root.hasSpacer
-                Layout.fillWidth: true
-                Layout.fillHeight: true
+                property real minimumSize: [...children].reduce(
+                    (sum, c) => sum + (root.isHorizontal ? c.Layout.minimumWidth : c.Layout.minimumHeight), 0
+                ) + (appletsModel.count - 1) * rowSpacing
 
-                /**
-                * This index will be used when adding a new panel.
-                *
-                * @see LayoutManager.indexAtCoordinates
-                */
-                readonly property alias index: appletsModel.count
+                Repeater {
+                    model: appletsModel
+                    delegate: appletContainerComponent
+                }
+
+                width: root.isHorizontal ? Math.max(layoutContainer.visibleWidth, minimumSize) : layoutContainer.visibleWidth
+                height: root.isHorizontal ? layoutContainer.visibleHeight : Math.max(layoutContainer.visibleHeight, minimumSize)
+
+                rowSpacing: Kirigami.Units.smallSpacing
+                columnSpacing: Kirigami.Units.smallSpacing
+
+                // BEGIN BUG 454095: use lastSpacer to left align applets, as implicitWidth is updated too late
+                Item {
+                    id: lastSpacer
+                    visible: !root.hasSpacer
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+
+                    /**
+                    * This index will be used when adding a new panel.
+                    *
+                    * @see LayoutManager.indexAtCoordinates
+                    */
+                    readonly property alias index: appletsModel.count
+                }
+                // END BUG 454095
+
+                rows: isHorizontal ? 1 : currentLayout.children.length
+                columns: isHorizontal ? currentLayout.children.length : 1
+                flow: isHorizontal ? GridLayout.LeftToRight : GridLayout.TopToBottom
+                layoutDirection: Qt.application.layoutDirection
             }
-    // END BUG 454095
-
-            rows: isHorizontal ? 1 : currentLayout.children.length
-            columns: isHorizontal ? currentLayout.children.length : 1
-            flow: isHorizontal ? GridLayout.LeftToRight : GridLayout.TopToBottom
-            layoutDirection: Qt.application.layoutDirection
         }
     }
     MouseArea {
@@ -457,5 +471,14 @@ ContainmentItem {
         icon.name: "list-add-symbolic"
         onClicked: Plasmoid.internalAction("add widgets").trigger()
     }
+    /*PC3.ToolButton {
+        id: scrollRightButton
+        anchors.right: parent.right
+        anchors.top: parent.top
+        anchors.bottom: parent.bottom
+        visible: layoutContainer.contentWidth > layoutContainer.width
+        icon.name: "arrow-right"
+        onClicked: console.log('ouch')
+    }*/
 //END UI elements
 }
