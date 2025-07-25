@@ -24,6 +24,7 @@ FocusScope {
     property bool dragEnabled: true
     property bool dropEnabled: false
     property bool showLabels: true
+    property var view: gridView
 
     property alias currentIndex: gridView.currentIndex
     property alias currentItem: gridView.currentItem
@@ -308,6 +309,14 @@ FocusScope {
                             (event.key === Qt.Key_Left) ? moveCurrentIndexLeft() : moveCurrentIndexRight()
                         } else {
                             itemGrid.keyNavRight();
+                        }
+                        event.accepted = true
+                    }
+
+                    if (event.key === Qt.Key_Enter || event.key === Qt.Key_Return) {
+                        if (gridView.model.trigger) {
+                            gridView.model.trigger(currentIndex, "", null)
+                            root.toggle()
                         }
                         event.accepted = true
                     }

@@ -69,7 +69,6 @@ Kicker.DashboardWindow {
         funnelModel.sourceModel = rootModel.modelForRow(0);
         mainGrid.model = funnelModel;
         mainGrid.currentIndex = -1;
-        filterListScrollArea.focus = true;
         filterList.model = rootModel;
     }
 
@@ -184,76 +183,32 @@ Kicker.DashboardWindow {
             id: containmentInterface
         }
 
-        TextInput {
+        PlasmaExtras.SearchField {
             id: searchField
-
-            width: 0
-            height: 0
-
-            visible: false
-
-            persistentSelection: true
-
-            onTextChanged: {
-                runnerModel.query = searchField.text;
-            }
-
-            function clear() {
-                text = "";
-            }
-
-            onSelectionStartChanged: Qt.callLater(searchHeading.updateSelection)
-            onSelectionEndChanged: Qt.callLater(searchHeading.updateSelection)
-        }
-
-        TextEdit {
-            id: searchHeading
 
             anchors {
                 horizontalCenter: parent.horizontalCenter
             }
 
             y: (middleRow.anchors.topMargin / 2) - (root.smallScreen ? (height/10) : 0)
-
+            width: Kirigami.Units.gridUnit * 24
             font.pointSize: dummyHeading.font.pointSize * 1.5
-            wrapMode: Text.NoWrap
-            opacity: 1.0
 
-            selectByMouse: false
-            cursorVisible: false
-
-            color: "white"
-
-            text: root.searching ? i18n("Searching for '%1'", searchField.text) : i18nc("@info:placeholder as in, 'start typing to initiate a search'", "Type to search…")
-
-            function updateSelection() {
-                if (!searchField.selectedText) {
-                    return;
-                }
-
-                var delta = text.lastIndexOf(searchField.text, text.length - 2);
-                searchHeading.select(searchField.selectionStart + delta, searchField.selectionEnd + delta);
-            }
-        }
-
-        PlasmaComponents.ToolButton {
-            id: cancelSearchButton
-
-            anchors {
-                left: searchHeading.right
-                leftMargin: Kirigami.Units.gridUnit
-                verticalCenter: searchHeading.verticalCenter
+            onTextChanged: {
+                runnerModel.query = searchField.text
+                this.forceActiveFocus()
             }
 
-            width: Kirigami.Units.iconSizes.large
-            height: width
+            onFocusChanged: {
+                if (!focus)
+                    runnerGrid.subGridAt(0).currentIndex = -1
+            }
 
-            visible: (searchField.text !== "")
+            Keys.forwardTo: runnerGrid.visible && runnerGrid.subGridAt(0) ? [runnerGrid.subGridAt(0).view] : []
 
-            icon.name: "edit-clear"
-            flat: false
-
-            onClicked: searchField.clear();
+            function clear() {
+                text = "";
+            }
 
             Keys.onPressed: event => {
                 if (event.key === Qt.Key_Tab) {
@@ -275,6 +230,7 @@ Kicker.DashboardWindow {
                 }
             }
         }
+
 
         Row {
             id: middleRow
@@ -644,7 +600,7 @@ Kicker.DashboardWindow {
 
                     model: runnerModel
 
-                    grabFocus: true
+                    grabFocus: false
 
                     opacity: root.searching ? 1.0 : 0.0
 
@@ -731,10 +687,6 @@ Kicker.DashboardWindow {
                         if (!enabled) {
                             filterList.currentIndex = -1;
                         }
-                    }
-
-                    onCurrentIndexChanged: {
-                        focus = (currentIndex !== -1);
                     }
 
                     ListView {

@@ -161,8 +161,9 @@ PlasmaComponents.ScrollView {
                         }
 
                         onCountChanged: {
-                            if (itemMultiGrid.grabFocus && index == 0 && count > 0) {
+                            if (index == 0)
                                 currentIndex = 0;
+                            if (itemMultiGrid.grabFocus && index == 0 && count > 0) {
                                 focus = true;
                             }
                         }
@@ -195,10 +196,12 @@ PlasmaComponents.ScrollView {
 
                         onKeyNavLeft: {
                             itemMultiGrid.keyNavLeft(index);
+                            currentIndex = -1
                         }
 
                         onKeyNavRight: {
                             itemMultiGrid.keyNavRight(index);
+                            currentIndex = -1
                         }
 
                         onKeyNavUp: {
@@ -208,6 +211,7 @@ PlasmaComponents.ScrollView {
                             } else {
                                 itemMultiGrid.keyNavUp();
                             }
+                            currentIndex = -1
                         }
 
                         onKeyNavDown: {
@@ -216,6 +220,7 @@ PlasmaComponents.ScrollView {
                             } else {
                                 itemMultiGrid.keyNavDown();
                             }
+                            currentIndex = -1
                         }
                     }
 
