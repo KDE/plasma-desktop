@@ -93,7 +93,7 @@ PlasmaExtras.Menu {
     }
 
     function loadDynamicLaunchActions(launcherUrl: url): void {
-        const sections = [];
+        let sections = [];
 
         const placesActions = backend.placesActions(launcherUrl, showAllPlaces, menu);
 
@@ -110,6 +110,9 @@ PlasmaExtras.Menu {
                 actions: backend.recentDocumentActions(launcherUrl, menu)
             });
         }
+
+        // We always have actions category.
+        sections = sections.filter(section => section.actions.length > 0);
 
         sections.push({
             title: i18n("Actions"),
@@ -134,10 +137,7 @@ PlasmaExtras.Menu {
             if (section["actions"].length > 0 || section["group"] === "actions") {
                 // Don't add the "Actions" header if the menu has nothing but actions
                 // in it, because then it's redundant (all menus have actions)
-                if (
-                    (section["group"] !== "actions") ||
-                    (section["group"] === "actions" && (sections[0]["actions"].length > 0 || sections[1]["actions"].length > 0))
-                ) {
+                if (section.group !== "actions" || sections.length > 1) {
                     var sectionHeader = newMenuItem(menu);
                     sectionHeader.text = section["title"];
                     sectionHeader.section = true;
