@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 00:44+0000\n"
+"POT-Creation-Date: 2025-07-26 00:44+0000\n"
 "PO-Revision-Date: 2023-06-18 19:33+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -171,18 +171,7 @@ msgstr "Incluír na busca marcadores, ficheiros e correos"
 msgid "Align search results to bottom"
 msgstr "Aliñar no fondo os resultados da busca"
 
-#: DashboardRepresentation.qml:227
-#, kde-format
-msgid "Searching for '%1'"
-msgstr "Buscando «%1»"
-
-#: DashboardRepresentation.qml:227
-#, kde-format
-msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
-msgid "Type to search…"
-msgstr "Escriba para buscar…"
-
-#: DashboardRepresentation.qml:323
+#: DashboardRepresentation.qml:279
 #, kde-format
 msgid "Favorites"
 msgstr "Favoritos"
@@ -191,6 +180,13 @@ msgstr "Favoritos"
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Editar as aplicacións…"
+
+#~ msgid "Searching for '%1'"
+#~ msgstr "Buscando «%1»"
+
+#~ msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
+#~ msgid "Type to search…"
+#~ msgstr "Escriba para buscar…"
 
 #~ msgid "Widgets"
 #~ msgstr "Trebellos"

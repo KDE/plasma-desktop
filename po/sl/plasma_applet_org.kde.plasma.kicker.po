@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 00:44+0000\n"
+"POT-Creation-Date: 2025-07-26 00:44+0000\n"
 "PO-Revision-Date: 2023-04-11 08:31+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -171,18 +171,7 @@ msgstr "Razširi iskanje na zaznamke, datoteke in e-pošto"
 msgid "Align search results to bottom"
 msgstr "Poravnaj rezultate iskanja na dno"
 
-#: DashboardRepresentation.qml:227
-#, kde-format
-msgid "Searching for '%1'"
-msgstr "Iskanje '%1'"
-
-#: DashboardRepresentation.qml:227
-#, kde-format
-msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
-msgid "Type to search…"
-msgstr "Tipkajte za iskanje…"
-
-#: DashboardRepresentation.qml:323
+#: DashboardRepresentation.qml:279
 #, kde-format
 msgid "Favorites"
 msgstr "Priljubljene"
@@ -191,6 +180,13 @@ msgstr "Priljubljene"
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Uredi aplikacije…"
+
+#~ msgid "Searching for '%1'"
+#~ msgstr "Iskanje '%1'"
+
+#~ msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
+#~ msgid "Type to search…"
+#~ msgstr "Tipkajte za iskanje…"
 
 #~ msgid "Widgets"
 #~ msgstr "Gradniki"

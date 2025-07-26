@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 00:44+0000\n"
+"POT-Creation-Date: 2025-07-26 00:44+0000\n"
 "PO-Revision-Date: 2023-05-02 18:22+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -168,18 +168,7 @@ msgstr "Laajenna haku kirjanmerkkeihin, tiedostoihin ja sähköposteihin"
 msgid "Align search results to bottom"
 msgstr "Tasaa hakutulokset alareunaan"
 
-#: DashboardRepresentation.qml:227
-#, kde-format
-msgid "Searching for '%1'"
-msgstr "Haetaan: %1"
-
-#: DashboardRepresentation.qml:227
-#, kde-format
-msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
-msgid "Type to search…"
-msgstr "Etsi kirjoittamalla…"
-
-#: DashboardRepresentation.qml:323
+#: DashboardRepresentation.qml:279
 #, kde-format
 msgid "Favorites"
 msgstr "Suosikit"
@@ -188,6 +177,13 @@ msgstr "Suosikit"
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Muokkaa sovelluksia…"
+
+#~ msgid "Searching for '%1'"
+#~ msgstr "Haetaan: %1"
+
+#~ msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
+#~ msgid "Type to search…"
+#~ msgstr "Etsi kirjoittamalla…"
 
 #~ msgid "Widgets"
 #~ msgstr "Sovelmat"

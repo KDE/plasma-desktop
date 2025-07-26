@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 00:44+0000\n"
+"POT-Creation-Date: 2025-07-26 00:44+0000\n"
 "PO-Revision-Date: 2024-03-18 15:43+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -168,18 +168,7 @@ msgstr "Víkka út leit til bókamerkja, skráa og tölvupósts"
 msgid "Align search results to bottom"
 msgstr "Jafna leitarniðurstöður neðst"
 
-#: DashboardRepresentation.qml:227
-#, kde-format
-msgid "Searching for '%1'"
-msgstr "Leita að '%1'"
-
-#: DashboardRepresentation.qml:227
-#, kde-format
-msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
-msgid "Type to search…"
-msgstr "Sláðu inn hér til að leita..."
-
-#: DashboardRepresentation.qml:323
+#: DashboardRepresentation.qml:279
 #, kde-format
 msgid "Favorites"
 msgstr "Eftirlæti"
@@ -188,3 +177,10 @@ msgstr "Eftirlæti"
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Breyta forritum…"
+
+#~ msgid "Searching for '%1'"
+#~ msgstr "Leita að '%1'"
+
+#~ msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
+#~ msgid "Type to search…"
+#~ msgstr "Sláðu inn hér til að leita..."

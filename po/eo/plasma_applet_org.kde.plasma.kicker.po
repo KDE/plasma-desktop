@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 00:44+0000\n"
+"POT-Creation-Date: 2025-07-26 00:44+0000\n"
 "PO-Revision-Date: 2023-04-12 07:00+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -169,18 +169,7 @@ msgstr "Pligrandigi serĉon al legosignoj, dosieroj kaj retpoŝtoj"
 msgid "Align search results to bottom"
 msgstr "Vicigi serĉrezultojn malsupre"
 
-#: DashboardRepresentation.qml:227
-#, kde-format
-msgid "Searching for '%1'"
-msgstr "Serĉante '%1'"
-
-#: DashboardRepresentation.qml:227
-#, kde-format
-msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
-msgid "Type to search…"
-msgstr "Tajpu por serĉi…"
-
-#: DashboardRepresentation.qml:323
+#: DashboardRepresentation.qml:279
 #, kde-format
 msgid "Favorites"
 msgstr "Plej ŝatataj"
@@ -189,6 +178,13 @@ msgstr "Plej ŝatataj"
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Redakti Aplikaĵojn…"
+
+#~ msgid "Searching for '%1'"
+#~ msgstr "Serĉante '%1'"
+
+#~ msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
+#~ msgid "Type to search…"
+#~ msgstr "Tajpu por serĉi…"
 
 #~ msgid "Widgets"
 #~ msgstr "Fenestraĵoj"

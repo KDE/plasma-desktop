@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 00:44+0000\n"
+"POT-Creation-Date: 2025-07-26 00:44+0000\n"
 "PO-Revision-Date: 2023-04-15 10:27+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -168,18 +168,7 @@ msgstr "Rozszerz wyszukiwanie na zakładki, pliki i pocztę"
 msgid "Align search results to bottom"
 msgstr "Wyrównaj wyniki wyszukiwania do dołu"
 
-#: DashboardRepresentation.qml:227
-#, kde-format
-msgid "Searching for '%1'"
-msgstr "Szukanie '%1'"
-
-#: DashboardRepresentation.qml:227
-#, kde-format
-msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
-msgid "Type to search…"
-msgstr "Zacznij pisać, aby zacząć szukać..."
-
-#: DashboardRepresentation.qml:323
+#: DashboardRepresentation.qml:279
 #, kde-format
 msgid "Favorites"
 msgstr "Ulubione"
@@ -188,6 +177,13 @@ msgstr "Ulubione"
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Edytuj programy..."
+
+#~ msgid "Searching for '%1'"
+#~ msgstr "Szukanie '%1'"
+
+#~ msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
+#~ msgid "Type to search…"
+#~ msgstr "Zacznij pisać, aby zacząć szukać..."
 
 #~ msgid "Widgets"
 #~ msgstr "Elementy interfejsu"

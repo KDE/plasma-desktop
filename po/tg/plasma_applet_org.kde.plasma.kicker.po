@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 00:44+0000\n"
+"POT-Creation-Date: 2025-07-26 00:44+0000\n"
 "PO-Revision-Date: 2019-09-16 14:24+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -171,19 +171,7 @@ msgstr ""
 msgid "Align search results to bottom"
 msgstr ""
 
-#: DashboardRepresentation.qml:227
-#, kde-format
-msgid "Searching for '%1'"
-msgstr ""
-
-#: DashboardRepresentation.qml:227
-#, fuzzy, kde-format
-#| msgid "Search..."
-msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
-msgid "Type to search…"
-msgstr "Ҷустуҷӯ..."
-
-#: DashboardRepresentation.qml:323
+#: DashboardRepresentation.qml:279
 #, kde-format
 msgid "Favorites"
 msgstr "Баргузидаҳо"
@@ -193,6 +181,12 @@ msgstr "Баргузидаҳо"
 #| msgid "Edit Applications..."
 msgid "Edit Applications…"
 msgstr "Таҳрир кардани барномаҳо..."
+
+#, fuzzy
+#~| msgid "Search..."
+#~ msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
+#~ msgid "Type to search…"
+#~ msgstr "Ҷустуҷӯ..."
 
 #~ msgid "Widgets"
 #~ msgstr "Виҷетҳо"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 00:44+0000\n"
+"POT-Creation-Date: 2025-07-26 00:44+0000\n"
 "PO-Revision-Date: 2020-10-08 11:46+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -171,19 +171,7 @@ msgstr "Otsingu laiendamine järjehoidjatele, failidele ja kirjadele"
 msgid "Align search results to bottom"
 msgstr "Otsingutulemuste joondamine alla"
 
-#: DashboardRepresentation.qml:227
-#, kde-format
-msgid "Searching for '%1'"
-msgstr "\"%1\" otsimine'"
-
-#: DashboardRepresentation.qml:227
-#, fuzzy, kde-format
-#| msgid "Type to search..."
-msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
-msgid "Type to search…"
-msgstr "Kirjuta otsimiseks ..."
-
-#: DashboardRepresentation.qml:323
+#: DashboardRepresentation.qml:279
 #, kde-format
 msgid "Favorites"
 msgstr "Lemmikud"
@@ -193,6 +181,15 @@ msgstr "Lemmikud"
 #| msgid "Edit Applications..."
 msgid "Edit Applications…"
 msgstr "Muuda rakendusi..."
+
+#~ msgid "Searching for '%1'"
+#~ msgstr "\"%1\" otsimine'"
+
+#, fuzzy
+#~| msgid "Type to search..."
+#~ msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
+#~ msgid "Type to search…"
+#~ msgstr "Kirjuta otsimiseks ..."
 
 #~ msgid "Widgets"
 #~ msgstr "Vidinad"

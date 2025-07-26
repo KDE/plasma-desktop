@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE Frameworks 5 Applications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 00:44+0000\n"
+"POT-Creation-Date: 2025-07-26 00:44+0000\n"
 "PO-Revision-Date: 2024-01-13 12:09+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -171,18 +171,7 @@ msgstr "Įtraukti į paiešką žymeles, failus ir el. laiškus"
 msgid "Align search results to bottom"
 msgstr "Lygiuoti paieškos rezultatus į apačią"
 
-#: DashboardRepresentation.qml:227
-#, kde-format
-msgid "Searching for '%1'"
-msgstr "Ieškoma „%1“"
-
-#: DashboardRepresentation.qml:227
-#, kde-format
-msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
-msgid "Type to search…"
-msgstr "Rašykite norėdami ieškoti…"
-
-#: DashboardRepresentation.qml:323
+#: DashboardRepresentation.qml:279
 #, kde-format
 msgid "Favorites"
 msgstr "Žymelės"
@@ -191,6 +180,13 @@ msgstr "Žymelės"
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Taisyti programas…"
+
+#~ msgid "Searching for '%1'"
+#~ msgstr "Ieškoma „%1“"
+
+#~ msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
+#~ msgid "Type to search…"
+#~ msgstr "Rašykite norėdami ieškoti…"
 
 #~ msgid "Widgets"
 #~ msgstr "Valdikliai"

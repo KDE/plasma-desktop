@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 00:44+0000\n"
+"POT-Creation-Date: 2025-07-26 00:44+0000\n"
 "PO-Revision-Date: 2021-06-07 15:28+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -165,19 +165,7 @@ msgstr "Expandir a pesquisa para os favoritos, ficheiros e e-mails"
 msgid "Align search results to bottom"
 msgstr "Alinhar os resultados da pesquisa ao fundo"
 
-#: DashboardRepresentation.qml:227
-#, kde-format
-msgid "Searching for '%1'"
-msgstr "A procurar por '%1'"
-
-#: DashboardRepresentation.qml:227
-#, fuzzy, kde-format
-#| msgid "Type to search…"
-msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
-msgid "Type to search…"
-msgstr "Escreva para procurar…"
-
-#: DashboardRepresentation.qml:323
+#: DashboardRepresentation.qml:279
 #, kde-format
 msgid "Favorites"
 msgstr "Favoritos"
@@ -186,6 +174,15 @@ msgstr "Favoritos"
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Editar as Aplicações…"
+
+#~ msgid "Searching for '%1'"
+#~ msgstr "A procurar por '%1'"
+
+#, fuzzy
+#~| msgid "Type to search…"
+#~ msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
+#~ msgid "Type to search…"
+#~ msgstr "Escreva para procurar…"
 
 #~ msgid "Widgets"
 #~ msgstr "Elementos"

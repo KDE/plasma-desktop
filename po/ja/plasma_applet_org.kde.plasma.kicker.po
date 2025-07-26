@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 00:44+0000\n"
+"POT-Creation-Date: 2025-07-26 00:44+0000\n"
 "PO-Revision-Date: 2024-02-10 23:00+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -170,18 +170,7 @@ msgstr "検索対象をブックマークとファイル、メールに拡大す
 msgid "Align search results to bottom"
 msgstr "検索結果を下部に配置する"
 
-#: DashboardRepresentation.qml:227
-#, kde-format
-msgid "Searching for '%1'"
-msgstr "'%1' で検索中"
-
-#: DashboardRepresentation.qml:227
-#, kde-format
-msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
-msgid "Type to search…"
-msgstr "タイプして検索..."
-
-#: DashboardRepresentation.qml:323
+#: DashboardRepresentation.qml:279
 #, kde-format
 msgid "Favorites"
 msgstr "お気に入り"
@@ -190,3 +179,10 @@ msgstr "お気に入り"
 #, kde-format
 msgid "Edit Applications…"
 msgstr "アプリケーションを編集..."
+
+#~ msgid "Searching for '%1'"
+#~ msgstr "'%1' で検索中"
+
+#~ msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
+#~ msgid "Type to search…"
+#~ msgstr "タイプして検索..."

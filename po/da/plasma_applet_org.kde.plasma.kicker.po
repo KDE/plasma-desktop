@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 00:44+0000\n"
+"POT-Creation-Date: 2025-07-26 00:44+0000\n"
 "PO-Revision-Date: 2024-07-08 12:39+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -169,18 +169,7 @@ msgstr "Udvid søgning til bogmærker, filer og e-mails"
 msgid "Align search results to bottom"
 msgstr "Justér søgeresultater nederst"
 
-#: DashboardRepresentation.qml:227
-#, kde-format
-msgid "Searching for '%1'"
-msgstr "Søger efter \"%1\""
-
-#: DashboardRepresentation.qml:227
-#, kde-format
-msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
-msgid "Type to search…"
-msgstr "Skriv for at søge..."
-
-#: DashboardRepresentation.qml:323
+#: DashboardRepresentation.qml:279
 #, kde-format
 msgid "Favorites"
 msgstr "Favoritter"
@@ -189,6 +178,13 @@ msgstr "Favoritter"
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Redigér programmer…"
+
+#~ msgid "Searching for '%1'"
+#~ msgstr "Søger efter \"%1\""
+
+#~ msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
+#~ msgid "Type to search…"
+#~ msgstr "Skriv for at søge..."
 
 #~ msgid "Widgets"
 #~ msgstr "Widgets"

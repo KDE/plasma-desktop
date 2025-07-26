@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 00:44+0000\n"
+"POT-Creation-Date: 2025-07-26 00:44+0000\n"
 "PO-Revision-Date: 2017-09-25 19:53+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -198,20 +198,7 @@ msgstr "Претражуј и обележиваче, фајлове и е‑п�
 msgid "Align search results to bottom"
 msgstr "Равнај резултате претраге уз дно"
 
-# >> @info:progress
-#: DashboardRepresentation.qml:227
-#, kde-format
-msgid "Searching for '%1'"
-msgstr "Тражим „%1“..."
-
-#: DashboardRepresentation.qml:227
-#, fuzzy, kde-format
-#| msgid "Type to search."
-msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
-msgid "Type to search…"
-msgstr "Унесите нешто за тражење."
-
-#: DashboardRepresentation.qml:323
+#: DashboardRepresentation.qml:279
 #, kde-format
 msgid "Favorites"
 msgstr "Омиљено"
@@ -221,6 +208,16 @@ msgstr "Омиљено"
 #| msgid "Edit Applications..."
 msgid "Edit Applications…"
 msgstr "Уреди програме..."
+
+# >> @info:progress
+#~ msgid "Searching for '%1'"
+#~ msgstr "Тражим „%1“..."
+
+#, fuzzy
+#~| msgid "Type to search."
+#~ msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
+#~ msgid "Type to search…"
+#~ msgstr "Унесите нешто за тражење."
 
 #~ msgid "Widgets"
 #~ msgstr "Виџети"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 00:44+0000\n"
+"POT-Creation-Date: 2025-07-26 00:44+0000\n"
 "PO-Revision-Date: 2023-04-14 21:56+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -171,18 +171,7 @@ msgstr "Rozšířit hledání na záložky, soubory a emaily"
 msgid "Align search results to bottom"
 msgstr "Zarovnat výsledky hledání dolů"
 
-#: DashboardRepresentation.qml:227
-#, kde-format
-msgid "Searching for '%1'"
-msgstr "Vyhledávám %1'"
-
-#: DashboardRepresentation.qml:227
-#, kde-format
-msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
-msgid "Type to search…"
-msgstr "Text k vyhledání…"
-
-#: DashboardRepresentation.qml:323
+#: DashboardRepresentation.qml:279
 #, kde-format
 msgid "Favorites"
 msgstr "Oblíbené"
@@ -191,3 +180,10 @@ msgstr "Oblíbené"
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Upravit aplikace…"
+
+#~ msgid "Searching for '%1'"
+#~ msgstr "Vyhledávám %1'"
+
+#~ msgctxt "@info:placeholder as in, 'start typing to initiate a search'"
+#~ msgid "Type to search…"
+#~ msgstr "Text k vyhledání…"
