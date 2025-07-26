@@ -205,6 +205,12 @@ Item {
                 actionItemsVisible: !inputPanel.keyboardActive
                 actionItems: [
                     ActionButton {
+                        icon.name: "system-hibernate"
+                        text: i18ndc("plasma-desktop-sddm-theme", "Suspend to disk", "Hibernate")
+                        onClicked: sddm.hibernate()
+                        enabled: sddm.canHibernate
+                    },
+                    ActionButton {
                         icon.name: "system-suspend"
                         text: i18ndc("plasma-desktop-sddm-theme", "Suspend to RAM", "Sleep")
                         onClicked: sddm.suspend()
