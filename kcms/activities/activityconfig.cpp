@@ -7,8 +7,6 @@
 
 #include "activityconfig.h"
 
-#include "utils/continue_with.h"
-
 #include <PlasmaActivities/Info>
 
 #include <KConfig>
@@ -174,12 +172,9 @@ void ActivityConfig::save()
 
 void ActivityConfig::createActivity()
 {
-    using namespace kamd::utils;
-    continue_with(KActivities::Controller().addActivity(m_name), [this](const optional_view<QString> &activityId) {
-        if (activityId.is_initialized()) {
-            m_activityId = activityId.get();
-            save();
-        }
+    KActivities::Controller().addActivity(m_name).then([this](QString activityId) {
+        m_activityId = std::move(activityId);
+        save();
     });
 }
 
