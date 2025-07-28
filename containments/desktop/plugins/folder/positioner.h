@@ -114,7 +114,6 @@ Q_SIGNALS:
     void appletChanged() const;
 
 private Q_SLOTS:
-    void updateResolution();
     void sourceStatusChanged();
     void sourceDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight, const QList<int> &roles);
     void sourceModelAboutToBeReset();
@@ -129,6 +128,7 @@ private Q_SLOTS:
     void sourceLayoutChanged(const QList<QPersistentModelIndex> &parents, QAbstractItemModel::LayoutChangeHint hint);
     void onItemRenamed();
     void onListingCompleted();
+    void slotScreenGeometryChanged();
 
 private:
     void initMaps(int size = -1);
@@ -145,6 +145,7 @@ private:
     void disconnectSignals(FolderModel *model);
     bool configurationHasResolution(const QString &resolution) const;
     QString loadConfigData() const;
+    void updateResolution();
 
     bool m_enabled;
     FolderModel *m_folderModel;
