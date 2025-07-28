@@ -87,14 +87,15 @@ int Positioner::perStripe() const
 
 void Positioner::setPerStripe(int perStripe)
 {
-    if (m_perStripe != perStripe && perStripe > 0) {
+    // Make sure we have screen in use before perStripe update
+    // to make sure we update correct positions
+    if (m_perStripe != perStripe && perStripe > 0 && screenInUse()) {
         m_perStripe = perStripe;
-        // Make sure we have the correct resolution and positions
-        // loaded before changing the stripe, so we modify the right positions
-        updateResolution();
         Q_EMIT perStripeChanged();
-        if (m_enabled && screenInUse()) {
-            loadAndApplyPositionsConfig(LoadAndApplyFlags::SkipPerStripeUpdate);
+        if (m_enabled) {
+            if (configurationHasResolution(m_resolution)) {
+                loadAndApplyPositionsConfig(SkipPerStripeUpdate);
+            }
             // If no longer defering positions, update them
             if (!m_deferApplyPositions) {
                 updatePositionsList();
@@ -823,8 +824,10 @@ void Positioner::convertFolderModelData()
     m_proxyToSource.clear();
     m_sourceToProxy.clear();
 
+    // Ignore the first two items, which are for stripes and items per stripe
     const QStringList positions = m_positions.mid(2);
 
+    // Make sure the items per row have 3 items: (filename, row, stripe-pos)
     if (positions.size() % 3 != 0) {
         return;
     }
@@ -1009,16 +1012,11 @@ void Positioner::updateResolution()
     if (m_folderModel) {
         QString resolution = QStringLiteral("%1x%2").arg(QString::number(floor(m_folderModel->screenGeometry().width())),
                                                          QString::number(floor(m_folderModel->screenGeometry().height())));
-        if (resolution != QStringLiteral("0x0")) {
-            if (m_resolution != resolution) {
-                m_resolution = resolution;
-                if (configurationHasResolution(m_resolution)) {
-                    loadAndApplyPositionsConfig();
-                }
-                if (!m_deferApplyPositions) {
-                    updatePositionsList();
-                }
-            }
+        if (!screenInUse()) {
+            m_resolution = QStringLiteral("0x0");
+        }
+        if (m_resolution != resolution) {
+            m_resolution = resolution;
         }
     }
 }
@@ -1059,6 +1057,20 @@ void Positioner::onListingCompleted()
     }
 }
 
+void Positioner::slotScreenGeometryChanged()
+{
+    if (!screenInUse()) {
+        return;
+    }
+    updateResolution();
+    if (configurationHasResolution(m_resolution)) {
+        loadAndApplyPositionsConfig();
+    }
+    if (!m_deferApplyPositions) {
+        updatePositionsList();
+    }
+}
+
 void Positioner::connectSignals(FolderModel *model)
 {
     connect(model, &QAbstractItemModel::dataChanged, this, &Positioner::sourceDataChanged, Qt::UniqueConnection);
@@ -1073,7 +1085,7 @@ void Positioner::connectSignals(FolderModel *model)
     connect(m_folderModel, &FolderModel::urlChanged, this, &Positioner::reset, Qt::UniqueConnection);
     connect(m_folderModel, &FolderModel::statusChanged, this, &Positioner::sourceStatusChanged, Qt::UniqueConnection);
     connect(m_folderModel, &FolderModel::itemRenamed, this, &Positioner::onItemRenamed, Qt::UniqueConnection);
-    connect(m_folderModel, &FolderModel::screenGeometryChanged, this, &Positioner::updateResolution, Qt::UniqueConnection);
+    connect(m_folderModel, &FolderModel::screenGeometryChanged, this, &Positioner::slotScreenGeometryChanged, Qt::UniqueConnection);
     connect(m_folderModel, &FolderModel::listingCompleted, this, &Positioner::onListingCompleted, Qt::UniqueConnection);
 }
 
@@ -1091,7 +1103,7 @@ void Positioner::disconnectSignals(FolderModel *model)
     disconnect(m_folderModel, &FolderModel::urlChanged, this, &Positioner::reset);
     disconnect(m_folderModel, &FolderModel::statusChanged, this, &Positioner::sourceStatusChanged);
     disconnect(m_folderModel, &FolderModel::itemRenamed, this, &Positioner::onItemRenamed);
-    disconnect(m_folderModel, &FolderModel::screenGeometryChanged, this, &Positioner::updateResolution);
+    disconnect(m_folderModel, &FolderModel::screenGeometryChanged, this, &Positioner::slotScreenGeometryChanged);
     disconnect(m_folderModel, &FolderModel::listingCompleted, this, &Positioner::onListingCompleted);
 }
 
