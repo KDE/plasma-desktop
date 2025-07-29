@@ -47,6 +47,18 @@ ContainmentItem {
         return 0;
     }
 
+    // Make sure we have the folderViewLayer size loaded before we load panels
+    onAvailableScreenRectChanged: {
+        //TODO would be cool if we had a signal that told us how many panels
+        // are still left to create. and then when it reaches 0, we can set the sizes
+        // and fade-in the icons. Could be done in shellcorona createWaitingPanels
+        if (folderViewLayer.ready) {
+            // We skip x and y since that is handled by the parent of folderViewLayer
+            folderViewLayer.width = root.availableScreenRect.width;
+            folderViewLayer.height = root.availableScreenRect.height;
+        }
+    }
+
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
@@ -363,7 +375,6 @@ ContainmentItem {
             Loader {
                 id: folderViewLayer
 
-                anchors.fill: parent
 
                 property bool ready: status === Loader.Ready
                 property Item view: item?.view ?? null
