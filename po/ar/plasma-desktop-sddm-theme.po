@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-18 00:43+0000\n"
+"POT-Creation-Date: 2025-07-29 00:43+0000\n"
 "PO-Revision-Date: 2025-05-17 17:55+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -38,38 +38,43 @@ msgstr "لِج"
 msgid "Caps Lock is on"
 msgstr "مفتاح Caps Lock مفعّل"
 
-#: Main.qml:209 Main.qml:348
+#: Main.qml:209
+msgctxt "Suspend to disk"
+msgid "Hibernate"
+msgstr ""
+
+#: Main.qml:215 Main.qml:354
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "علّق"
 
-#: Main.qml:215 Main.qml:354
+#: Main.qml:221 Main.qml:360
 msgid "Restart"
 msgstr "أعد التّشغيل"
 
-#: Main.qml:221 Main.qml:360
+#: Main.qml:227 Main.qml:366
 msgid "Shut Down"
 msgstr "أطفئ"
 
-#: Main.qml:227
+#: Main.qml:233
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "الآخرين..."
 
-#: Main.qml:334
+#: Main.qml:340
 msgid "Type in Username and Password"
 msgstr "اكُتب اسم المستخدم و كلمة السر"
 
-#: Main.qml:366
+#: Main.qml:372
 msgid "List Users"
 msgstr "اسرد المستخدمين"
 
-#: Main.qml:440
+#: Main.qml:446
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "لوحة المفاتيح الوهميّة"
 
-#: Main.qml:507
+#: Main.qml:513
 msgid "Login Failed"
 msgstr "فشل الولوج"
 

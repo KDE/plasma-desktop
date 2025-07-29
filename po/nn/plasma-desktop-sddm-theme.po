@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-18 00:43+0000\n"
+"POT-Creation-Date: 2025-07-29 00:43+0000\n"
 "PO-Revision-Date: 2024-03-09 18:30+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -39,39 +39,44 @@ msgstr "Logg inn"
 msgid "Caps Lock is on"
 msgstr "«Caps Lock» er på"
 
-#: Main.qml:209 Main.qml:348
+#: Main.qml:209
+msgctxt "Suspend to disk"
+msgid "Hibernate"
+msgstr ""
+
+#: Main.qml:215 Main.qml:354
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Kvilemodus"
 
-#: Main.qml:215 Main.qml:354
+#: Main.qml:221 Main.qml:360
 msgid "Restart"
 msgstr "Start på nytt"
 
 # Teksten bør vera kort, for å unngå å bli delt over fleire linjer (så «Slå av maskina», som stod før, er gjerne hakket for langt), sidan dei andre tekstane er på éi linje.
-#: Main.qml:221 Main.qml:360
+#: Main.qml:227 Main.qml:366
 msgid "Shut Down"
 msgstr "Slå av"
 
-#: Main.qml:227
+#: Main.qml:233
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "Anna …"
 
-#: Main.qml:334
+#: Main.qml:340
 msgid "Type in Username and Password"
 msgstr "Skriv inn brukarnamn og passord"
 
-#: Main.qml:366
+#: Main.qml:372
 msgid "List Users"
 msgstr "Vis brukarar"
 
-#: Main.qml:440
+#: Main.qml:446
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Virtuelt tastatur"
 
-#: Main.qml:507
+#: Main.qml:513
 msgid "Login Failed"
 msgstr "Feil ved innlogging"
 

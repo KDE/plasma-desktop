@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-18 00:43+0000\n"
+"POT-Creation-Date: 2025-07-29 00:43+0000\n"
 "PO-Revision-Date: 2025-03-22 11:33+0100\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -37,38 +37,43 @@ msgstr "Log ind"
 msgid "Caps Lock is on"
 msgstr "Caps Lock er slået til"
 
-#: Main.qml:209 Main.qml:348
+#: Main.qml:209
+msgctxt "Suspend to disk"
+msgid "Hibernate"
+msgstr ""
+
+#: Main.qml:215 Main.qml:354
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Slumre"
 
-#: Main.qml:215 Main.qml:354
+#: Main.qml:221 Main.qml:360
 msgid "Restart"
 msgstr "Genstart"
 
-#: Main.qml:221 Main.qml:360
+#: Main.qml:227 Main.qml:366
 msgid "Shut Down"
 msgstr "Luk ned"
 
-#: Main.qml:227
+#: Main.qml:233
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "Anden…"
 
-#: Main.qml:334
+#: Main.qml:340
 msgid "Type in Username and Password"
 msgstr "Indtast brugernavn og adgangskode"
 
-#: Main.qml:366
+#: Main.qml:372
 msgid "List Users"
 msgstr "Vis brugere"
 
-#: Main.qml:440
+#: Main.qml:446
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Virtuelt tastatur"
 
-#: Main.qml:507
+#: Main.qml:513
 msgid "Login Failed"
 msgstr "Kunne ikke logge ind"
 

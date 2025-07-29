@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-18 00:43+0000\n"
+"POT-Creation-Date: 2025-07-29 00:43+0000\n"
 "PO-Revision-Date: 2024-01-31 21:23+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -44,38 +44,43 @@ msgstr "Connexion"
 msgid "Caps Lock is on"
 msgstr "Verrouillage des majuscules activé"
 
-#: Main.qml:209 Main.qml:348
+#: Main.qml:209
+msgctxt "Suspend to disk"
+msgid "Hibernate"
+msgstr ""
+
+#: Main.qml:215 Main.qml:354
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Veille"
 
-#: Main.qml:215 Main.qml:354
+#: Main.qml:221 Main.qml:360
 msgid "Restart"
 msgstr "Redémarrer"
 
-#: Main.qml:221 Main.qml:360
+#: Main.qml:227 Main.qml:366
 msgid "Shut Down"
 msgstr "Éteindre"
 
-#: Main.qml:227
+#: Main.qml:233
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "Autre…"
 
-#: Main.qml:334
+#: Main.qml:340
 msgid "Type in Username and Password"
 msgstr "Saisissez votre nom d'utilisateur et votre mot de passe"
 
-#: Main.qml:366
+#: Main.qml:372
 msgid "List Users"
 msgstr "Lister les utilisateurs"
 
-#: Main.qml:440
+#: Main.qml:446
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Clavier virtuel"
 
-#: Main.qml:507
+#: Main.qml:513
 msgid "Login Failed"
 msgstr "Échec de la connexion"
 

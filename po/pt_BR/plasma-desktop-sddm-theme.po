@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-18 00:43+0000\n"
+"POT-Creation-Date: 2025-07-29 00:43+0000\n"
 "PO-Revision-Date: 2024-07-12 09:27-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -37,38 +37,43 @@ msgstr "Entrar"
 msgid "Caps Lock is on"
 msgstr "Caps Lock está ativo"
 
-#: Main.qml:209 Main.qml:348
+#: Main.qml:209
+msgctxt "Suspend to disk"
+msgid "Hibernate"
+msgstr ""
+
+#: Main.qml:215 Main.qml:354
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Suspender"
 
-#: Main.qml:215 Main.qml:354
+#: Main.qml:221 Main.qml:360
 msgid "Restart"
 msgstr "Reiniciar"
 
-#: Main.qml:221 Main.qml:360
+#: Main.qml:227 Main.qml:366
 msgid "Shut Down"
 msgstr "Desligar"
 
-#: Main.qml:227
+#: Main.qml:233
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "Outros..."
 
-#: Main.qml:334
+#: Main.qml:340
 msgid "Type in Username and Password"
 msgstr "Digite o nome de usuário e a senha"
 
-#: Main.qml:366
+#: Main.qml:372
 msgid "List Users"
 msgstr "Listar usuários"
 
-#: Main.qml:440
+#: Main.qml:446
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Teclado virtual"
 
-#: Main.qml:507
+#: Main.qml:513
 msgid "Login Failed"
 msgstr "Falha ao entrar"
 
