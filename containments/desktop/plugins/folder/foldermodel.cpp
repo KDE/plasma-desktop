@@ -228,6 +228,11 @@ FolderModel::FolderModel(QObject *parent)
 
     connect(this, &QAbstractItemModel::rowsInserted, this, [this](const QModelIndex &parent, int first, int last) {
         for (int i = first; i <= last; ++i) {
+            // If screen is not used, we should just clear the positions and return.
+            if (!screenUsed()) {
+                m_dropTargetPositions.clear();
+                return;
+            }
             const auto idx = index(i, 0, parent);
             const auto url = itemForIndex(idx).url();
             auto it = m_dropTargetPositions.find(url.fileName());
@@ -1159,6 +1164,9 @@ void FolderModel::dragSelectedInternal(int x, int y)
         // TODO: Optimize to Q_EMIT contiguous groups.
         Q_EMIT dataChanged(first, last, {BlankRole});
     }
+    // After drag is done, we should clear the dropTargetPositions or they will be
+    // reused during rowsInserted
+    m_dropTargetPositions.clear();
 }
 
 static bool isDropBetweenSharedViews(const QList<QUrl> &urls, const QUrl &folderUrl)
