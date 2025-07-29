@@ -988,7 +988,7 @@ void Positioner::loadAndApplyPositionsConfig(const LoadAndApplyFlags flags)
 
 void Positioner::savePositionsConfig()
 {
-    if (m_applet && screenInUse()) {
+    if (m_applet && screenInUse() && m_resolution != QStringLiteral("0x0")) {
         auto confdata = loadConfigData();
         auto doc = QJsonDocument::fromJson(confdata.toUtf8());
         QJsonObject root;
