@@ -1258,7 +1258,7 @@ FocusScope {
                 var rows = (gridView.flow === GridView.FlowLeftToRight);
                 var axis = rows ? gridView.width : gridView.height;
                 var step = rows ? cellWidth : cellHeight;
-                var perStripe = Math.floor(axis / step);
+                var perStripe = positioner.perStripe;
                 var dropPos = mapToItem(gridView.contentItem, x, y);
                 var leftEdge = Math.min(gridView.contentX, gridView.originX);
 
@@ -1295,7 +1295,7 @@ FocusScope {
                     col = Math.floor(itemX / gridView.cellWidth);
                     row = Math.floor(itemY / gridView.cellHeight);
 
-                    if ((rows ? col : row) < perStripe) {
+                    if ((rows ? col : row) <= perStripe) {
                         to = ((rows ? row : col) * perStripe) + (rows ? col : row);
 
                         if (to < 0) {
