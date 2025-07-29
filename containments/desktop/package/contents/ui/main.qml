@@ -47,6 +47,20 @@ ContainmentItem {
         return 0;
     }
 
+    // When adding panels, sizes change. We want to make sure all panels
+    // are loaded, and when they all are loaded, we tell the folderViewLayer loader
+    // to start loading the folderViewLayer.
+    onAvailableScreenRectChanged: {
+        // TODO: is this always desktop? can it be something else?
+        if (!isContainment){
+            return;
+        }
+        if (Plasmoid.containment.corona.panelsToBeLoaded == 0 && !folderViewLayer.ready) {
+            // We skip x and y since that is handled by the parent of folderViewLayer
+            folderViewLayer.active = true;
+        }
+    }
+
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
@@ -371,7 +385,8 @@ ContainmentItem {
 
                 focus: true
 
-                active: isFolder
+                // TODO: again need a solid way to check if this is always desktop
+                active: !root.isContainment && root.isFolder
                 asynchronous: false
 
                 source: "FolderViewLayer.qml"
