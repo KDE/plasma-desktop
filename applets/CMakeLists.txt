@@ -5,7 +5,7 @@ add_subdirectory(kickoff)
 add_subdirectory(trash)
 
 add_subdirectory(taskmanager)
-plasma_install_package(window-list org.kde.plasma.windowlist)
+add_subdirectory(window-list)
 plasma_install_package(icontasks org.kde.plasma.icontasks)
 plasma_install_package(margins-separator org.kde.plasma.marginsseparator)
 
