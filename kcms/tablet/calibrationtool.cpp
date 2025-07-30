@@ -14,7 +14,7 @@
 
 CalibrationTool::CalibrationTool()
 {
-    m_resetTimer.setInterval(1000);
+    m_resetTimer.setInterval(1000); // Call every second
     connect(&m_resetTimer, &QTimer::timeout, this, [this] {
         m_resetCountdown -= 1;
         Q_EMIT resetSecondsLeftChanged();
@@ -84,6 +84,13 @@ void CalibrationTool::calibrate(const double touchX, const double touchY, const 
     if (m_state == State::Calibrating) {
         m_screenPoints[m_calibratedTargets] = {screenX, screenY};
         m_touchPoints[m_calibratedTargets] = {touchX, touchY};
+    }
+
+    // Reset the countdown on each action
+    if (m_state == State::Confirming) {
+        m_resetCountdown = actionResetSeconds;
+        m_resetTimer.start();
+        Q_EMIT resetSecondsLeftChanged();
     }
 
     playSound(QStringLiteral("completion-partial"));
@@ -234,7 +241,7 @@ void CalibrationTool::checkIfFinished()
 
             // Start the countdown
             m_resetTimer.start();
-            m_resetCountdown = 10;
+            m_resetCountdown = actionResetSeconds;
             Q_EMIT resetSecondsLeftChanged();
 
             playSound(QStringLiteral("completion-success"));

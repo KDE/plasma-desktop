@@ -146,4 +146,7 @@ private:
     QTimer m_resetTimer;
 
     ca_context *m_canberraContext = nullptr;
+
+    /// Number of seconds before the calibration tool resets if no action is taken.
+    const int actionResetSeconds = 15;
 };

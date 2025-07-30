@@ -95,7 +95,7 @@ QQC2.ApplicationWindow {
 
             text: {
                 if (tool.state === KCM.CalibrationTool.Confirming) {
-                    return xi18nc("@info", "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will revert to default calibration in %1 seconds.</b>", tool.resetSecondsLeft)
+                    return xi18nc("@info", "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will revert to default calibration in %1 seconds unless further action is taken.</b>", tool.resetSecondsLeft)
                 }
 
                 if (tool.state === KCM.CalibrationTool.Testing) {
