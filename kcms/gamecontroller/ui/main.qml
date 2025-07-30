@@ -123,6 +123,10 @@ KCM.SimpleKCM {
                     valueRole: "type"
 
                     Layout.fillWidth: true
+
+                    onActivated: {
+                        gamepadgui.resize();
+                    }
                 }
             }
         }

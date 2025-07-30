@@ -23,6 +23,10 @@ Rectangle {
     required property var device
     required property string svgPath
 
+    function resize() {
+        image.resize(root.width, root.height)
+    }
+    
     KSvg.Svg {
         id: image
 
@@ -42,8 +46,7 @@ Rectangle {
         id: base
 
         visible: false
-        width: root.width
-        height: root.height
+        anchors.fill: parent
 
         svg: image
         elementId: "base"
