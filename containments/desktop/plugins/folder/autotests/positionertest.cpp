@@ -207,6 +207,9 @@ void PositionerTest::tst_changePerStripe()
     QCOMPARE(positioner.perStripe(), 0);
     QSignalSpy s(&positioner, &Positioner::perStripeChanged);
     positioner.setPerStripe(1);
+    QCOMPARE(s.count(), 0); // No change without foldermodel, since foldermodel holds screen information
+    positioner.setFolderModel(m_folderModel);
+    positioner.setPerStripe(1);
     QCOMPARE(s.count(), 1);
 
     // No change
