@@ -24,6 +24,8 @@ Item {
     readonly property bool calibrationWindowOpen: calibrationWindow !== null
     property Calibration calibrationWindow
     property string currentCalibrationSysName
+    // TODO: don't allow calibration across multiple screens again
+    readonly property bool supportsCalibration: root.device.supportsCalibrationMatrix
 
     signal settingsRestored
 
@@ -477,11 +479,8 @@ Item {
                 spacing: Kirigami.Units.smallSpacing
 
                 QQC2.Button {
-                    // TODO: don't allow calibration across multiple screens again
-                    readonly property bool supportsCalibration: root.device.supportsCalibrationMatrix
-
                     text: {
-                        if (supportsCalibration) {
+                        if (root.supportsCalibration) {
                             if (root.calibrationWindowOpen) {
                                 return i18nc("@action:button Calibration in progress", "Calibration in Progress");
                             } else {
@@ -492,7 +491,7 @@ Item {
                         }
                     }
                     icon.name: "crosshairs"
-                    enabled: supportsCalibration && !root.calibrationWindowOpen
+                    enabled: root.supportsCalibration && !root.calibrationWindowOpen
                     onClicked: {
                         const component = Qt.createComponent("Calibration.qml");
                         if (component.status === Component.Ready) {
@@ -532,6 +531,7 @@ Item {
                     text: i18nc("@action:button", "Reset Custom Calibration")
                     icon.name: "edit-undo-symbolic"
                     enabled: !root.device.calibrationMatrixIsDefault
+                    visible: root.supportsCalibration
                     display: QQC2.AbstractButton.IconOnly
 
                     onClicked: root.device.resetCalibrationMatrix()
@@ -544,7 +544,7 @@ Item {
 
             QQC2.Label {
                 text: i18nc("@info", "You have manually calibrated this tablet. If it's no longer working correctly, try resetting this first.")
-                visible: !root.device.calibrationMatrixIsDefault
+                visible: !root.device.calibrationMatrixIsDefault && root.supportsCalibration
                 textFormat: Text.PlainText
                 wrapMode: Text.WordWrap
                 font: Kirigami.Theme.smallFont
