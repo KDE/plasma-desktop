@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2025 Nicolas Fella <nicolas.fella@gmx.de>
+# SPDX-License-Identifier: BSD-3-Clause
+
 plasma_add_applet(org.kde.plasma.windowlist
     QML_SOURCES
         ConfigGeneral.qml
