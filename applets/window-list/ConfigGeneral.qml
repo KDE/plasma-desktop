@@ -14,6 +14,8 @@ import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kcmutils as KCM
 
 KCM.SimpleKCM {
+    id: root
+
     property bool cfg_showText: Plasmoid.configuration.showText
 
     Kirigami.FormLayout {
@@ -31,8 +33,8 @@ KCM.SimpleKCM {
             // alias property because we want to force the checkbox to look
             // unchecked when it's disabled, regardless of its actual underlying
             // state.
-            checked: enabled ? cfg_showText : false
-            onToggled: cfg_showText = checked
+            checked: enabled ? root.cfg_showText : false
+            onToggled: root.cfg_showText = checked
         }
 
         QQC2.Label {

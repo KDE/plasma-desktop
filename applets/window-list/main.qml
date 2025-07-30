@@ -3,6 +3,7 @@
     SPDX-FileCopyrightText: 2022 Carson Black <uhhadd@gmail.com>
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick 2.15
 import QtQuick.Layouts 1.10
@@ -16,6 +17,8 @@ import org.kde.kirigami 2.20 as Kirigami
 import org.kde.taskmanager 0.1 as TaskManager
 
 PlasmoidItem {
+    id: root
+
     Plasmoid.constraintHints: Plasmoid.CanFillArea
     compactRepresentation: windowListButton
     fullRepresentation: windowList
@@ -41,6 +44,11 @@ PlasmoidItem {
             model: tasksModel
 
             delegate: PlasmaComponents.ItemDelegate {
+                id: delegate
+
+                required property var model
+                required property var decoration
+
 
                 width: ListView.view.width
 
@@ -50,7 +58,7 @@ PlasmoidItem {
                     Kirigami.Icon {
                         id: iconItem
 
-                        source: model.decoration
+                        source: delegate.decoration
                         visible: source !== "" && iconItem.valid
 
                         implicitWidth: Kirigami.Units.iconSizes.sizeForLabels
@@ -66,7 +74,7 @@ PlasmoidItem {
                     }
                     PlasmaComponents.Label {
                         Layout.fillWidth: true
-                        text: model.display
+                        text: delegate.model.display
                         textFormat: Text.PlainText
                         elide: Text.ElideRight
                     }
@@ -102,7 +110,7 @@ PlasmoidItem {
             down: pressed || tasksMenu.status === PlasmaExtras.Menu.Open
 
             Accessible.name: Plasmoid.title
-            Accessible.description: toolTipSubText
+            Accessible.description: root.toolTipSubText
 
             text: if (tasksModel.activeTask.valid) {
                 return tasksModel.data(tasksModel.activeTask, TaskManager.AbstractTasksModel.AppName) ||
