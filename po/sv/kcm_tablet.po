@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-08 00:44+0000\n"
+"POT-Creation-Date: 2025-07-30 00:44+0000\n"
 "PO-Revision-Date: 2025-07-28 22:55+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -637,37 +637,62 @@ msgid "Tablet Tester"
 msgstr "Testa ritplatta"
 
 #: ui/Tester.qml:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Stylus press X=%1 Y=%2"
+msgctxt ""
+"A tablet stylus was pressed onto the surface X=[x position] Y=[y position]"
 msgid "Stylus press X=%1 Y=%2"
 msgstr "Tryck penna X=%1 Y=%2"
 
 #: ui/Tester.qml:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Stylus release X=%1 Y=%2"
+msgctxt ""
+"A tablet stylus has 'released' or was lifted from the surface X=[x position] "
+"Y=[y position]"
 msgid "Stylus release X=%1 Y=%2"
 msgstr "Släpp penna X=%1 Y=%2"
 
 #: ui/Tester.qml:68
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
+msgctxt ""
+"A tablet stylus has moved over the surface X=[x position] Y=[y position] "
+"P=[pressure] TX=[tilt x] TY=[tilt y]"
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 msgstr "Flytta penna X=%1 Y=%2 P=%3 % TX=%4 TY=%5"
 
 #: ui/Tester.qml:75
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pad button press B=%1"
+msgctxt "A tablet pad's button has been pressed B=[the button number]"
 msgid "Pad button press B=%1"
 msgstr "Plattans knapptryck B=%1"
 
 #: ui/Tester.qml:77
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pad button release B=%1"
+msgctxt "A tablet pad's button has been released B=[the button number]"
 msgid "Pad button release B=%1"
 msgstr "Plattans knappfrigöring B=%1"
 
-#: ui/Tester.qml:84
-#, kde-format
+#: ui/Tester.qml:83
+#, fuzzy, kde-format
+#| msgid "Pad dial moved V120=%1"
+msgctxt ""
+"A tablet pad's dial has moved, V120 here refers to 'Value 120' which is a "
+"technical term that should be kept as is"
 msgid "Pad dial moved V120=%1"
 msgstr "Plattans vridreglage flyttat V120=%1"
 
-#: ui/Tester.qml:220
-#, kde-format
+#: ui/Tester.qml:219
+#, fuzzy, kde-format
+#| msgid ""
+#| "## Legend:\n"
+#| "# X, Y - event coordinate\n"
+#| "# P - pressure\n"
+#| "# TX,TY - tilt\n"
+msgctxt "The tablet tester legend which is shown on start-up"
 msgid ""
 "## Legend:\n"
 "# X, Y - event coordinate\n"
@@ -679,9 +704,11 @@ msgstr ""
 "# P - tryck\n"
 "# TX, TY - lutning\n"
 
-#: ui/Tester.qml:226
-#, kde-format
-msgctxt "Clear the event log"
+#: ui/Tester.qml:225
+#, fuzzy, kde-format
+#| msgctxt "Clear the event log"
+#| msgid "Clear"
+msgctxt "Clear the tablet tester event log"
 msgid "Clear"
 msgstr "Rensa"
 
