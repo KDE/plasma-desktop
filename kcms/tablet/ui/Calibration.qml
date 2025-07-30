@@ -42,7 +42,7 @@ QQC2.ApplicationWindow {
     HoverHandler {
         cursorShape: Qt.BlankCursor
         acceptedDevices: PointerDevice.Stylus
-        enabled: !tool.finishedCalibration
+        enabled: tool.state !== KCM.CalibrationTool.Testing
     }
 
     Connections {
@@ -71,7 +71,7 @@ QQC2.ApplicationWindow {
                 return;
             }
 
-            if (tool.finishedCalibration) {
+            if (tool.state === KCM.CalibrationTool.Testing) {
                 root.currentPenToolX = x;
                 root.currentPenToolY = y;
             } else {
@@ -151,7 +151,7 @@ QQC2.ApplicationWindow {
         HoverHandler {
             cursorShape: Qt.BlankCursor
             acceptedDevices: PointerDevice.Stylus
-            enabled: !tool.finishedCalibration
+            enabled: tool.state !== KCM.CalibrationTool.Testing
         }
 
         down: {
