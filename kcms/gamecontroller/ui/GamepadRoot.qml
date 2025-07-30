@@ -26,7 +26,7 @@ Rectangle {
     function resize() {
         image.resize(root.width, root.height)
     }
-    
+
     KSvg.Svg {
         id: image
 
@@ -86,6 +86,13 @@ Rectangle {
         device: root.device
         svgItem: image
         elementId: "mid-left"
+    }
+
+    GamepadButton {
+        idx: GamepadButton.SDL_CONTROLLER_BUTTON_MISC1
+        device: root.device
+        svgItem: image
+        elementId: "share-button"
     }
 
     GamepadButton {
