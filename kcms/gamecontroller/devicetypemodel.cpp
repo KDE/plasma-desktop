@@ -19,10 +19,10 @@ DeviceTypeModel::DeviceTypeModel()
             i18nc("@label Unknown controller", "Unknown Gamepad"),
             DeviceType::Unknown,
             QStringLiteral("qrc://kcm/kcm_gamecontroller/artwork/generic-gamepad.svg"));
-    // addType(SDL_CONTROLLER_TYPE_XBOXONE,
-    // i18nc("@label XBox controller", "XBox Gamepad"),
-    // DeviceType::Xbox,
-    // QStringLiteral("qrc://kcm/kcm_gamecontroller/artwork/xbox.svg"));
+    addType(SDL_CONTROLLER_TYPE_XBOXONE,
+            i18nc("@label XBox controller", "XBox Gamepad"),
+            DeviceType::Xbox,
+            QStringLiteral("qrc://kcm/kcm_gamecontroller/artwork/xbox.svg"));
     addType(SDL_CONTROLLER_TYPE_PS5,
             i18nc("@label Playstation 5 controller", "DualSense"),
             DeviceType::DualSense,
