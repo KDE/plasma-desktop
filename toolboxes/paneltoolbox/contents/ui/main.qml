@@ -60,7 +60,6 @@ Item {
         }
     }
 
-    LayoutMirroring.enabled: (Qt.application.layoutDirection === Qt.RightToLeft)
     anchors {
         left: undefined
         top: undefined

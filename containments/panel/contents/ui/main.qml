@@ -46,6 +46,7 @@ ContainmentItem {
     property bool dragAndDropping: false
     // True when e.g. the task manager is drag and dropping tasks.
     property bool appletRequestsInhibitDnD: false
+    property bool reverse: Qt.application.layoutDirection === Qt.RightToLeft
 
 //END properties
 
@@ -53,7 +54,7 @@ ContainmentItem {
     function checkLastSpacer() {
         for (var i = 0; i < appletsModel.count; ++i) {
             const applet = appletsModel.get(i).applet;
-            if (!applet || !applet.visible || !applet.Layout) {
+            if (!applet || !applet.visible || !applet.Layout || applet.isPlaceholder) {
                 continue;
             }
             if ((isHorizontal && applet.Layout.fillWidth) ||
@@ -114,8 +115,8 @@ ContainmentItem {
         const component = Qt.createComponent("ConfigOverlay.qml");
         configOverlay = component.createObject(this, {
             "anchors.fill": dropArea,
-            "anchors.rightMargin": Qt.binding(() => isHorizontal ? toolBox.width : 0),
-            "anchors.bottomMargin": Qt.binding(() => !isHorizontal ? toolBox.height : 0),
+            "anchors.rightMargin": Qt.binding(() => isHorizontal ? toolBox.height : 0),
+            "anchors.bottomMargin": Qt.binding(() => !isHorizontal ? toolBox.height : 0)
         });
         component.destroy();
     }
@@ -392,8 +393,8 @@ ContainmentItem {
             rowSpacing: Kirigami.Units.smallSpacing
             columnSpacing: Kirigami.Units.smallSpacing
 
-            x: Qt.application.layoutDirection === Qt.RightToLeft && isHorizontal ? toolBoxSize : 0;
-            readonly property int toolBoxSize: !toolBox || !Plasmoid.containment.corona.editMode || Qt.application.layoutDirection === Qt.RightToLeft ? 0 : (isHorizontal ? toolBox.width : toolBox.height)
+            x: 0
+            readonly property int toolBoxSize: !toolBox || !Plasmoid.containment.corona.editMode ? 0 : (isHorizontal ? toolBox.width : toolBox.height)
 
             property int horizontalDisplacement: dropArea.anchors.leftMargin + dropArea.anchors.rightMargin + (isHorizontal ? currentLayout.toolBoxSize : 0)
             property int verticalDisplacement: dropArea.anchors.topMargin + dropArea.anchors.bottomMargin + (isHorizontal ? 0 : currentLayout.toolBoxSize)
