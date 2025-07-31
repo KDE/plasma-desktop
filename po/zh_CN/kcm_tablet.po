@@ -625,61 +625,50 @@ msgid "Tablet Tester"
 msgstr "数位板测试工具"
 
 #: ui/Tester.qml:48
-#, fuzzy, kde-format
-#| msgid "Stylus press X=%1 Y=%2"
+#, kde-format
 msgctxt ""
 "A tablet stylus was pressed onto the surface X=[x position] Y=[y position]"
 msgid "Stylus press X=%1 Y=%2"
-msgstr "压感笔按压 X=%1 Y=%2"
+msgstr ""
 
 #: ui/Tester.qml:58
-#, fuzzy, kde-format
-#| msgid "Stylus release X=%1 Y=%2"
+#, kde-format
 msgctxt ""
 "A tablet stylus has 'released' or was lifted from the surface X=[x position] "
 "Y=[y position]"
 msgid "Stylus release X=%1 Y=%2"
-msgstr "压感笔释放 X=%1 Y=%2"
+msgstr ""
 
 #: ui/Tester.qml:68
-#, fuzzy, kde-format
-#| msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
+#, kde-format
 msgctxt ""
 "A tablet stylus has moved over the surface X=[x position] Y=[y position] "
 "P=[pressure] TX=[tilt x] TY=[tilt y]"
 msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
-msgstr "笔尖移动 X=%1 Y=%2 P=%3% TX=%4 TY=%5"
+msgstr ""
 
 #: ui/Tester.qml:75
-#, fuzzy, kde-format
-#| msgid "Pad button press B=%1"
+#, kde-format
 msgctxt "A tablet pad's button has been pressed B=[the button number]"
 msgid "Pad button press B=%1"
-msgstr "板面按钮按下 B=%1"
+msgstr ""
 
 #: ui/Tester.qml:77
-#, fuzzy, kde-format
-#| msgid "Pad button release B=%1"
+#, kde-format
 msgctxt "A tablet pad's button has been released B=[the button number]"
 msgid "Pad button release B=%1"
-msgstr "板面按钮释放 B=%1"
+msgstr ""
 
 #: ui/Tester.qml:83
-#, fuzzy, kde-format
-#| msgid "Pad dial moved V120=%1"
+#, kde-format
 msgctxt ""
 "A tablet pad's dial has moved, V120 here refers to 'Value 120' which is a "
 "technical term that should be kept as is"
 msgid "Pad dial moved V120=%1"
-msgstr "板面转盘转动 V120=%1"
+msgstr ""
 
 #: ui/Tester.qml:219
-#, fuzzy, kde-format
-#| msgid ""
-#| "## Legend:\n"
-#| "# X, Y - event coordinate\n"
-#| "# P - pressure\n"
-#| "# TX,TY - tilt\n"
+#, kde-format
 msgctxt "The tablet tester legend which is shown on start-up"
 msgid ""
 "## Legend:\n"
@@ -687,15 +676,9 @@ msgid ""
 "# P - pressure\n"
 "# TX,TY - tilt\n"
 msgstr ""
-"## 图例：\n"
-"# X, Y - 事件坐标\n"
-"# P - 压力\n"
-"# TX,TY - 倾斜\n"
 
 #: ui/Tester.qml:225
-#, fuzzy, kde-format
-#| msgctxt "Clear the event log"
-#| msgid "Clear"
+#, kde-format
 msgctxt "Clear the tablet tester event log"
 msgid "Clear"
-msgstr "清除"
+msgstr ""
