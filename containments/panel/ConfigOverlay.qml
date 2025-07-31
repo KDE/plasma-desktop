@@ -70,6 +70,9 @@ MouseArea {
                 var posInItem = mapToItem(item, mouse.x, mouse.y)
                 var pos = root.isHorizontal ? posInItem.x : posInItem.y
                 var size = root.isHorizontal ? item.width : item.height
+                if (root.reverse) {
+                    pos = size - pos
+                }
                 if (pos < size / 3) {
                     root.layoutManager.move(placeHolder.parent, item.index)
                 } else if (pos > size / 3 * 2) {
@@ -155,6 +158,7 @@ MouseArea {
         id: placeHolder
         property Item dragging
         property bool busy: false
+        property bool isPlaceholder: true
         visible: configurationArea.containsMouse
         Layout.preferredWidth: configurationArea.currentApplet?.Layout.preferredWidth ?? 0
         Layout.preferredHeight: configurationArea.currentApplet?.Layout.preferredHeight ?? 0
