@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-30 00:44+0000\n"
-"PO-Revision-Date: 2025-05-27 23:27+0300\n"
+"PO-Revision-Date: 2025-07-13 17:55+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -34,11 +34,10 @@ msgstr "Ei mitään"
 #, kde-format
 msgctxt "@action:button Two keybinds for a dial, up & down"
 msgid "%1 && %2"
-msgstr ""
+msgstr "%1 ja %2"
 
 #: inputsequence.cpp:216
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "@action:button There is no keybindings"
 msgid "None"
 msgstr "Ei mitään"
@@ -77,7 +76,7 @@ msgstr "Kynäpainike %1"
 #, kde-format
 msgctxt "@action:button"
 msgid "Scroll wheel"
-msgstr ""
+msgstr "Vieritysrulla"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -153,12 +152,10 @@ msgid "pen button %1"
 msgstr "kynäpainike %1"
 
 #: ui/ActionDialog.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@title Select the action for the tablet button"
-#| msgid "Select Button Action"
+#, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial Action"
-msgstr "Valitse painikkeen toiminto"
+msgstr "Valitse valintatoiminto"
 
 #: ui/ActionDialog.qml:28
 #, kde-format
@@ -168,12 +165,10 @@ msgstr "Valitse painikkeen toiminto"
 
 # Tässä täytyy hieman taiteilla, jottei %1 joutuisi asemaan, jossa sitä pitäisi taivuttaa (vrt. ”painettaessa *hiiren oikeaa painiketta*”)
 #: ui/ActionDialog.qml:86
-#, fuzzy, kde-format
-#| msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
-#| msgid "Choose what action will be taken when pressing %1:"
+#, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when rotating %1:"
-msgstr "Valitse, minkä toiminnon %1 toteuttaa:"
+msgstr "Valitse, mitä tehdään, kun %1 pyörii:"
 
 # Tässä täytyy hieman taiteilla, jottei %1 joutuisi asemaan, jossa sitä pitäisi taivuttaa (vrt. ”painettaessa *hiiren oikeaa painiketta*”)
 #: ui/ActionDialog.qml:87
@@ -195,12 +190,10 @@ msgid "Send keyboard key"
 msgstr "Lähetä näppäimistön näppäin"
 
 #: ui/ActionDialog.qml:132
-#, fuzzy, kde-format
-#| msgctxt "@option:radio Set this action to a keyboard type"
-#| msgid "Send keyboard key"
+#, kde-format
 msgctxt "@option:radio Set this action to a up/down keyboard type"
 msgid "Send keyboard keys"
-msgstr "Lähetä näppäimistön näppäin"
+msgstr "Lähetä näppäimistön näppäimiä"
 
 #: ui/ActionDialog.qml:147
 #, kde-format
@@ -218,7 +211,7 @@ msgstr "Lähetä kynäpainike"
 #, kde-format
 msgctxt "@option:radio Set this action to a scroll wheel type type"
 msgid "Act as scroll wheel"
-msgstr ""
+msgstr "Toimi vieritysrullana"
 
 #: ui/ActionDialog.qml:198
 #, kde-format
@@ -239,12 +232,12 @@ msgstr ""
 #: ui/ActionDialog.qml:249
 #, kde-format
 msgid "Up:"
-msgstr ""
+msgstr "Ylös:"
 
 #: ui/ActionDialog.qml:263
 #, kde-format
 msgid "Down:"
-msgstr ""
+msgstr "Alas:"
 
 #: ui/ActionDialog.qml:277
 #, kde-format
@@ -310,7 +303,7 @@ msgstr "Painike 3"
 #, kde-format
 msgctxt "@info"
 msgid "Act like a scroll wheel on a mouse."
-msgstr ""
+msgstr "Toimi kuin hiiren vieritysrulla."
 
 #: ui/ActionDialog.qml:363
 #, kde-format
@@ -469,10 +462,9 @@ msgid "Pad"
 msgstr "Kosketusalusta"
 
 #: ui/PadTab.qml:33
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad dial %1:"
-msgstr "Alustan painike %1:"
+msgstr "Alustan valintakiekko %1:"
 
 #: ui/PadTab.qml:35
 #, kde-format
@@ -480,7 +472,7 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad dial %1"
-msgstr ""
+msgstr "alustan valintakiekko %1"
 
 #: ui/PadTab.qml:71
 #, kde-format

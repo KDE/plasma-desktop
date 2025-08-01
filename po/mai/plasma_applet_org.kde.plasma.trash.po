@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_trash\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-16 00:43+0000\n"
+"POT-Creation-Date: 2025-08-01 00:45+0000\n"
 "PO-Revision-Date: 2010-01-29 16:16+0530\n"
 "Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Maithili <maithili.sf.net>\n"
@@ -22,14 +22,14 @@ msgstr ""
 "\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: contents/ui/main.qml:32
+#: main.qml:32
 #, fuzzy, kde-format
 #| msgid "Trash"
 msgctxt "@title the name of the Trash widget"
 msgid "Trash"
 msgstr "रदी"
 
-#: contents/ui/main.qml:35
+#: main.qml:35
 #, fuzzy, kde-format
 #| msgctxt "The trash is empty. This is not an action, but a state"
 #| msgid "Empty"
@@ -37,7 +37,7 @@ msgctxt "@info:status The trash is being emptied"
 msgid "Emptying…"
 msgstr "खाली"
 
-#: contents/ui/main.qml:37
+#: main.qml:37
 #, fuzzy, kde-format
 #| msgid "One item"
 #| msgid_plural "%1 items"
@@ -47,7 +47,7 @@ msgid_plural "%1 items"
 msgstr[0] "एकटा मद"
 msgstr[1] "%1 मद"
 
-#: contents/ui/main.qml:39
+#: main.qml:39
 #, fuzzy, kde-format
 #| msgctxt "The trash is empty. This is not an action, but a state"
 #| msgid "Empty"
@@ -55,14 +55,14 @@ msgctxt "@info:status The trash is empty"
 msgid "Empty"
 msgstr "खाली"
 
-#: contents/ui/main.qml:79
+#: main.qml:79
 #, fuzzy, kde-format
 #| msgid "&Open"
 msgctxt "@action:inmenu Open the trash"
 msgid "Open"
 msgstr "खोलू (&O)"
 
-#: contents/ui/main.qml:84
+#: main.qml:84
 #, fuzzy, kde-format
 #| msgctxt "The trash is empty. This is not an action, but a state"
 #| msgid "Empty"
@@ -70,7 +70,7 @@ msgctxt "@action:inmenu Empty the trash"
 msgid "Empty"
 msgstr "खाली"
 
-#: contents/ui/main.qml:90
+#: main.qml:90
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Trash Settings…"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.trash\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-16 00:43+0000\n"
+"POT-Creation-Date: 2025-08-01 00:45+0000\n"
 "PO-Revision-Date: 2025-05-16 09:12+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -20,19 +20,19 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: contents/ui/main.qml:32
+#: main.qml:32
 #, kde-format
 msgctxt "@title the name of the Trash widget"
 msgid "Trash"
 msgstr "Смітник"
 
-#: contents/ui/main.qml:35
+#: main.qml:35
 #, kde-format
 msgctxt "@info:status The trash is being emptied"
 msgid "Emptying…"
 msgstr "Спорожнення…"
 
-#: contents/ui/main.qml:37
+#: main.qml:37
 #, kde-format
 msgctxt "@info:status The trash contains this many items in it"
 msgid "One item"
@@ -42,25 +42,25 @@ msgstr[1] "%1 об’єкти"
 msgstr[2] "%1 об’єктів"
 msgstr[3] "Один об’єкт"
 
-#: contents/ui/main.qml:39
+#: main.qml:39
 #, kde-format
 msgctxt "@info:status The trash is empty"
 msgid "Empty"
 msgstr "Порожній"
 
-#: contents/ui/main.qml:79
+#: main.qml:79
 #, kde-format
 msgctxt "@action:inmenu Open the trash"
 msgid "Open"
 msgstr "Відкрити"
 
-#: contents/ui/main.qml:84
+#: main.qml:84
 #, kde-format
 msgctxt "@action:inmenu Empty the trash"
 msgid "Empty"
 msgstr "Спорожнити"
 
-#: contents/ui/main.qml:90
+#: main.qml:90
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Trash Settings…"

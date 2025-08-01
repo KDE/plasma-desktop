@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-16 00:43+0000\n"
+"POT-Creation-Date: 2025-08-01 00:45+0000\n"
 "PO-Revision-Date: 2023-12-15 20:51+0100\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -20,13 +20,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 23.08.3\n"
 
-#: contents/ui/main.qml:32
+#: main.qml:32
 #, kde-format
 msgctxt "@title the name of the Trash widget"
 msgid "Trash"
 msgstr "Kuka"
 
-#: contents/ui/main.qml:35
+#: main.qml:35
 #, fuzzy, kde-format
 #| msgctxt "@info:status The trash is empty"
 #| msgid "Empty"
@@ -34,7 +34,7 @@ msgctxt "@info:status The trash is being emptied"
 msgid "Emptying…"
 msgstr "Üres"
 
-#: contents/ui/main.qml:37
+#: main.qml:37
 #, kde-format
 msgctxt "@info:status The trash contains this many items in it"
 msgid "One item"
@@ -42,25 +42,25 @@ msgid_plural "%1 items"
 msgstr[0] "Egy elem"
 msgstr[1] " %1 elem"
 
-#: contents/ui/main.qml:39
+#: main.qml:39
 #, kde-format
 msgctxt "@info:status The trash is empty"
 msgid "Empty"
 msgstr "Üres"
 
-#: contents/ui/main.qml:79
+#: main.qml:79
 #, kde-format
 msgctxt "@action:inmenu Open the trash"
 msgid "Open"
 msgstr "Megnyitás"
 
-#: contents/ui/main.qml:84
+#: main.qml:84
 #, kde-format
 msgctxt "@action:inmenu Empty the trash"
 msgid "Empty"
 msgstr "Ürítés"
 
-#: contents/ui/main.qml:90
+#: main.qml:90
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Trash Settings…"

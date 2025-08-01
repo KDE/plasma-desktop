@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_trash\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-16 00:43+0000\n"
+"POT-Creation-Date: 2025-08-01 00:45+0000\n"
 "PO-Revision-Date: 2025-05-28 16:54+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -20,19 +20,19 @@ msgstr ""
 "2);\n"
 "X-Generator: Lokalize 25.04.1\n"
 
-#: contents/ui/main.qml:32
+#: main.qml:32
 #, kde-format
 msgctxt "@title the name of the Trash widget"
 msgid "Trash"
 msgstr "Atkritne"
 
-#: contents/ui/main.qml:35
+#: main.qml:35
 #, kde-format
 msgctxt "@info:status The trash is being emptied"
 msgid "Emptying…"
 msgstr "Iztukšo…"
 
-#: contents/ui/main.qml:37
+#: main.qml:37
 #, kde-format
 msgctxt "@info:status The trash contains this many items in it"
 msgid "One item"
@@ -41,25 +41,25 @@ msgstr[0] "%1 vienums"
 msgstr[1] "%1 vienumi"
 msgstr[2] "%1 vienumu"
 
-#: contents/ui/main.qml:39
+#: main.qml:39
 #, kde-format
 msgctxt "@info:status The trash is empty"
 msgid "Empty"
 msgstr "Tukša"
 
-#: contents/ui/main.qml:79
+#: main.qml:79
 #, kde-format
 msgctxt "@action:inmenu Open the trash"
 msgid "Open"
 msgstr "Atvērt"
 
-#: contents/ui/main.qml:84
+#: main.qml:84
 #, kde-format
 msgctxt "@action:inmenu Empty the trash"
 msgid "Empty"
 msgstr "Tukša"
 
-#: contents/ui/main.qml:90
+#: main.qml:90
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Trash Settings…"
