@@ -1237,6 +1237,7 @@ FocusScope {
             parseDesktopFiles: (Plasmoid.configuration.url === "desktop:/")
             previews: Plasmoid.configuration.previews
             previewPlugins: Plasmoid.configuration.previewPlugins
+            layoutDirection: main.layoutDirection
             applet: Plasmoid
 
             onListingCompleted: {

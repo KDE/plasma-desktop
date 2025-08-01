@@ -93,6 +93,7 @@ class FolderModel : public QSortFilterProxyModel, public QQmlParserStatus
     Q_PROPERTY(QObject *newMenu READ newMenu CONSTANT)
     Q_PROPERTY(Plasma::Applet *applet READ applet WRITE setApplet NOTIFY appletChanged)
     Q_PROPERTY(bool showHiddenFiles READ showHiddenFiles WRITE setShowHiddenFiles NOTIFY showHiddenFilesChanged)
+    Q_PROPERTY(Qt::LayoutDirection layoutDirection READ layoutDirection WRITE setLayoutDirection NOTIFY layoutDirectionChanged)
 
 public:
     enum DataRole {
@@ -189,6 +190,9 @@ public:
     bool showHiddenFiles() const;
     void setShowHiddenFiles(bool enable);
 
+    Qt::LayoutDirection layoutDirection() const;
+    void setLayoutDirection(Qt::LayoutDirection layoutDirection);
+
     KFileItem rootItem() const;
 
     Q_INVOKABLE void up();
@@ -283,7 +287,8 @@ Q_SIGNALS:
     void showHiddenFilesChanged() const;
     void itemRenamed() const;
     void screenGeometryChanged() const;
-    void selectionDone();
+    void selectionDone() const;
+    void layoutDirectionChanged() const;
 
 protected:
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
@@ -318,6 +323,7 @@ private:
     void createActions();
     void addDragImage(QDrag *drag, int x, int y);
     void setStatus(Status status);
+    Qt::SortOrder sortOrderFromLayout(Qt::LayoutDirection layoutDirection);
     static bool isTrashEmpty();
     static bool isDeleteCommandShown();
     QList<QUrl> selectedUrls() const;
@@ -367,6 +373,7 @@ private:
     Plasma::Applet *m_applet = nullptr;
     bool m_complete;
     QPoint m_menuPosition;
+    Qt::LayoutDirection m_layoutDirection;
     QFileSystemWatcher *watcher;
     void addDirectoriesRecursively(const QString &resolvedNewUrl, QFileSystemWatcher *watcher);
 

@@ -172,6 +172,7 @@ FolderModel::FolderModel(QObject *parent)
     , m_screenUsed(false)
     , m_screenMapper(ScreenMapper::instance())
     , m_complete(false)
+    , m_layoutDirection(Qt::LeftToRight)
     , watcher(nullptr)
     , m_currentActivity(KActivities::Consumer().currentActivity())
     , m_showHiddenFiles(false)
@@ -223,6 +224,9 @@ FolderModel::FolderModel(QObject *parent)
     m_selectionModel = new QItemSelectionModel(this, this);
     connect(m_selectionModel, &QItemSelectionModel::selectionChanged, this, &FolderModel::changeSelection);
     connect(m_selectionModel, &QItemSelectionModel::selectionChanged, this, &FolderModel::selectionChanged);
+    connect(this, &FolderModel::layoutDirectionChanged, this, [this]() {
+        sort(m_sortMode, sortOrderFromLayout(layoutDirection()));
+    });
 
     setSourceModel(m_dirModel);
 
@@ -257,7 +261,7 @@ FolderModel::FolderModel(QObject *parent)
     setFilterCaseSensitivity(Qt::CaseInsensitive);
     setDynamicSortFilter(true);
 
-    sort(m_sortMode, m_sortDesc ? Qt::DescendingOrder : Qt::AscendingOrder);
+    sort(m_sortMode, sortOrderFromLayout(layoutDirection()));
 
     createActions();
 }
@@ -556,7 +560,7 @@ void FolderModel::setSortMode(int mode)
             setDynamicSortFilter(false);
         } else {
             invalidateIfComplete();
-            sort(m_sortMode, m_sortDesc ? Qt::DescendingOrder : Qt::AscendingOrder);
+            sort(m_sortMode, sortOrderFromLayout(layoutDirection()));
             setDynamicSortFilter(true);
         }
 
@@ -576,7 +580,7 @@ void FolderModel::setSortDesc(bool desc)
 
         if (m_sortMode != -1 /* Unsorted */) {
             invalidateIfComplete();
-            sort(m_sortMode, m_sortDesc ? Qt::DescendingOrder : Qt::AscendingOrder);
+            sort(m_sortMode, sortOrderFromLayout(layoutDirection()));
         }
 
         Q_EMIT sortDescChanged();
@@ -595,7 +599,7 @@ void FolderModel::setSortDirsFirst(bool enable)
 
         if (m_sortMode != -1 /* Unsorted */) {
             invalidateIfComplete();
-            sort(m_sortMode, m_sortDesc ? Qt::DescendingOrder : Qt::AscendingOrder);
+            sort(m_sortMode, sortOrderFromLayout(layoutDirection()));
         }
 
         Q_EMIT sortDirsFirstChanged();
@@ -1561,15 +1565,16 @@ bool FolderModel::lessThan(const QModelIndex &left, const QModelIndex &right) co
     const KDirModel *dirModel = static_cast<KDirModel *>(sourceModel());
 
     if (m_sortDirsFirst || left.column() == KDirModel::Size) {
-        bool leftIsDir = isDir(left, dirModel);
-        bool rightIsDir = isDir(right, dirModel);
+        const bool leftIsDir = isDir(left, dirModel);
+        const bool rightIsDir = isDir(right, dirModel);
+        const Qt::LayoutDirection layoutDir = m_layoutDirection;
 
         if (leftIsDir && !rightIsDir) {
-            return (sortOrder() == Qt::AscendingOrder);
+            return (sortOrder() == (layoutDir == Qt::LayoutDirection::LeftToRight ? Qt::AscendingOrder : Qt::DescendingOrder));
         }
 
         if (!leftIsDir && rightIsDir) {
-            return (sortOrder() == Qt::DescendingOrder);
+            return (sortOrder() == (layoutDir == Qt::LayoutDirection::LeftToRight ? Qt::DescendingOrder : Qt::AscendingOrder));
         }
     }
 
@@ -2321,6 +2326,28 @@ bool FolderModel::isDeleteCommandShown()
 {
     KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("KDE"));
     return cg.readEntry("ShowDeleteCommand", false);
+}
+
+Qt::LayoutDirection FolderModel::layoutDirection() const
+{
+    return m_layoutDirection;
+}
+
+void FolderModel::setLayoutDirection(Qt::LayoutDirection layoutDirection)
+{
+    if (m_layoutDirection != layoutDirection) {
+        m_layoutDirection = layoutDirection;
+        Q_EMIT layoutDirectionChanged();
+    }
+}
+
+Qt::SortOrder FolderModel::sortOrderFromLayout(Qt::LayoutDirection layoutDirection)
+{
+    if (m_sortDesc) {
+        return layoutDirection == Qt::LayoutDirection::LeftToRight ? Qt::DescendingOrder : Qt::AscendingOrder;
+    } else {
+        return layoutDirection == Qt::LayoutDirection::LeftToRight ? Qt::AscendingOrder : Qt::DescendingOrder;
+    }
 }
 
 #include "moc_foldermodel.cpp"
