@@ -10,6 +10,8 @@
 
 #include <KLocalizedString>
 
+#include <QStandardPaths>
+
 #include <QtConcurrentFilter>
 
 #include <xkbcommon/xkbregistry.h>
@@ -123,6 +125,12 @@ Rules &Rules::self()
 
 Rules Rules::readRules()
 {
+    const QString localeDirPath =
+        QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("locale-langpack"), QStandardPaths::LocateDirectory);
+    if (!localeDirPath.isEmpty()) {
+        KLocalizedString::addDomainLocaleDir("xkeyboard-config", localeDirPath);
+    }
+
     rxkb_context *context = rxkb_context_new(RXKB_CONTEXT_LOAD_EXOTIC_RULES);
     if (!context) {
         qCDebug(KCM_KEYBOARD) << "Could not create xkb-registry context";
