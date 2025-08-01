@@ -67,25 +67,26 @@ ViewPropertiesMenu::ViewPropertiesMenu(QObject *parent)
     m_arrangementMenu = m_menu->addMenu(QIcon::fromTheme(QStringLiteral("object-rows")), i18nc("@item:inmenu arrangement of icons", "Arrange"));
     m_arrangement = new QActionGroup(this);
     connect(m_arrangement, &QActionGroup::triggered, this, &ViewPropertiesMenu::arrangementChanged);
-    const auto isLtR = qApp->layoutDirection() == Qt::LeftToRight;
-    action = m_arrangementMenu->addAction(isLtR ? i18nc("@item:inmenu arrangement of icons", "Left to Right")
-                                                : i18nc("@item:inmenu arrangement of icons", "Right to Left"));
+    action = m_arrangementMenu->addAction(i18nc("@item:inmenu arrangement of icons", "In Columns"));
     action->setCheckable(true);
     action->setData(0);
     m_arrangement->addAction(action);
-    action = m_arrangementMenu->addAction(i18nc("@item:inmenu arrangement of icons", "Top to Bottom"));
+    action = m_arrangementMenu->addAction(i18nc("@item:inmenu arrangement of icons", "In Rows"));
     action->setData(1);
     action->setCheckable(true);
     m_arrangement->addAction(action);
 
-    m_alignmentMenu = m_menu->addMenu(QIcon::fromTheme(QStringLiteral("align-horizontal-left")), i18n("Align"));
+    m_alignmentMenu = m_menu->addMenu(QIcon::fromTheme(QStringLiteral("align-horizontal-left")), i18n("Sort Alignment"));
     m_alignment = new QActionGroup(this);
     connect(m_alignment, &QActionGroup::triggered, this, &ViewPropertiesMenu::alignmentChanged);
-    action = m_alignmentMenu->addAction(i18nc("@item:inmenu alignment of icons", "Left"));
+    const auto isLtR = qApp->layoutDirection() == Qt::LeftToRight;
+    auto LtRText = i18nc("@item:inmenu alignment of icons", "Left-to-Right");
+    auto RtLText = i18nc("@item:inmenu alignment of icons", "Right-to-Left");
+    action = m_alignmentMenu->addAction(isLtR ? LtRText : RtLText);
     action->setCheckable(true);
     action->setData(0);
     m_alignment->addAction(action);
-    action = m_alignmentMenu->addAction(i18nc("@item:inmenu alignment of icons", "Right"));
+    action = m_alignmentMenu->addAction(isLtR ? RtLText : LtRText);
     action->setCheckable(true);
     action->setData(1);
     m_alignment->addAction(action);

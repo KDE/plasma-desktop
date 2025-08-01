@@ -124,10 +124,8 @@ KCM.SimpleKCM {
             Kirigami.FormData.label: i18n("Arrangement:")
 
             model: [
-                Qt.application.layoutDirection === Qt.LeftToRight ?
-                    i18nc("@item:inlistbox arrangement of icons", "Left to Right") :
-                    i18nc("@item:inlistbox arrangement of icons", "Right to Left"),
-                i18nc("@item:inlistbox arrangement of icons", "Top to Bottom"),
+                i18nc("@item:inlistbox arrangement of icons", "In Columns"),
+                i18nc("@item:inlistbox arrangement of icons", "In Rows"),
             ]
         }
 
@@ -136,8 +134,18 @@ KCM.SimpleKCM {
             Layout.fillWidth: true
             visible: !isPopup || viewMode.currentIndex === 1 /* Icons mode */
 
-            model: [i18nc("@item:inlistbox alignment of icons", "Align left"),
-                    i18nc("@item:inlistbox alignment of icons", "Align right")]
+            Kirigami.FormData.label: i18n("Sort Alignment:")
+
+            model: {
+                const ltrText = i18nc("@item:inlistbox alignment of icons", "Left-to-Right");
+                const rtlText = i18nc("@item:inlistbox alignment of icons", "Right-to-Left");
+                if (Qt.application.layoutDirection === Qt.LeftToRight) {
+                    return [ltrText, rtlText];
+                }
+                else {
+                    return [rtlText, ltrText];
+                }
+            }
         }
 
         CheckBox {
@@ -166,7 +174,7 @@ KCM.SimpleKCM {
             id: sortMode
             Layout.fillWidth: true
 
-            Kirigami.FormData.label: i18n("Sorting:")
+            Kirigami.FormData.label: i18n("Sort by:")
 
             property int mode
             // FIXME TODO HACK: This maps the combo box list model to the KDirModel::ModelColumns
