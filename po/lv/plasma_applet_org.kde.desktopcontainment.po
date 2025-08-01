@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-28 02:34+0000\n"
+"POT-Creation-Date: 2025-08-01 02:45+0000\n"
 "PO-Revision-Date: 2025-02-18 18:37+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -450,17 +450,17 @@ msgstr "Darbvirsma un ekrāntapete"
 msgid "Select Folder"
 msgstr "Atlasīt mapi"
 
-#: plugins/folder/foldermodel.cpp:508
+#: plugins/folder/foldermodel.cpp:513
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "&Pārlādēt darbvirsmu"
 
-#: plugins/folder/foldermodel.cpp:508 plugins/folder/foldermodel.cpp:1721
+#: plugins/folder/foldermodel.cpp:513 plugins/folder/foldermodel.cpp:1729
 #, kde-format
 msgid "&Refresh View"
 msgstr "&Pārlādēt skatu"
 
-#: plugins/folder/foldermodel.cpp:867
+#: plugins/folder/foldermodel.cpp:872
 #, kde-format
 msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
@@ -468,7 +468,7 @@ msgctxt ""
 msgid "Link Target Not Found"
 msgstr "Saites mērķis nav atrasts"
 
-#: plugins/folder/foldermodel.cpp:869
+#: plugins/folder/foldermodel.cpp:874
 #, kde-kuit-format
 msgctxt "@info Body text of a system notification"
 msgid ""
@@ -478,23 +478,23 @@ msgstr ""
 "„<filename>%1</filename>“ norāda uz „<filename>%2</filename>“, tomēr šo "
 "galamērķi neizdodas atrast. Iespējams, tas ir pārvietots vai dzēsts."
 
-#: plugins/folder/foldermodel.cpp:1730
+#: plugins/folder/foldermodel.cpp:1738
 #, kde-format
 msgid "&Empty Trash"
 msgstr "&Iztukšot atkritni"
 
-#: plugins/folder/foldermodel.cpp:1733
+#: plugins/folder/foldermodel.cpp:1741
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr "Atjaunot uz iepriekšējo vietu"
 
-#: plugins/folder/foldermodel.cpp:1736
+#: plugins/folder/foldermodel.cpp:1744
 #, kde-format
 msgid "&Open"
 msgstr "&Atvērt"
 
-#: plugins/folder/foldermodel.cpp:1740
+#: plugins/folder/foldermodel.cpp:1748
 #, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -502,23 +502,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Rādīt mērķi"
 
-#: plugins/folder/foldermodel.cpp:1836
+#: plugins/folder/foldermodel.cpp:1844
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr "Noņemt atkritnes ikonu"
 
-#: plugins/folder/foldermodel.cpp:1839
+#: plugins/folder/foldermodel.cpp:1847
 #, kde-format
 msgid "&Move to Trash"
 msgstr "&Pārvietot uz atkritni"
 
-#: plugins/folder/foldermodel.cpp:1872
+#: plugins/folder/foldermodel.cpp:1880
 #, kde-format
 msgid "&Paste"
 msgstr "&Ielīmēt"
 
-#: plugins/folder/foldermodel.cpp:2023
+#: plugins/folder/foldermodel.cpp:2031
 #, kde-format
 msgid "&Properties"
 msgstr "Ī&pašības"
