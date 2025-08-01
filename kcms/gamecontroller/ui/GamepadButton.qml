@@ -31,7 +31,7 @@ Item {
     required property var svgItem
     required property var elementId
 
-//    visible: root.device.hasButton(idx)
+    visible: root.device.hasButton(idx)
 
     KSvg.SvgItem {
         id: icon

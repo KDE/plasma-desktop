@@ -61,6 +61,8 @@ public:
     bool isVirtual() const;
 
     int buttonCount() const;
+    // Whether this controller has the given button
+    Q_INVOKABLE bool hasButton(int index) const;
     bool buttonState(int index) const;
     // The name of a given button if known
     QString buttonName(int index) const;

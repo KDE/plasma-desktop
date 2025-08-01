@@ -269,6 +269,18 @@ int Device::buttonCount() const
     return m_buttonCount;
 }
 
+bool Device::hasButton(int index) const
+{
+    // If we are a joystick, just do a numeric comparison
+    if (!m_controller) {
+        return index >= 0 && index < SDL_JoystickNumButtons(m_joystick);
+    }
+
+    // If we are a controller, ask SDL
+    else {
+        return SDL_GameControllerHasButton(m_controller, SDL_GameControllerButton(index));
+    }
+}
 bool Device::buttonState(int index) const
 {
     // Invalid index
@@ -362,7 +374,7 @@ void Device::onControllerButtonEvent(const SDL_ControllerButtonEvent &event)
     qCDebug(KCM_GAMECONTROLLER) << "Got controller button event for button: " << ButtonToButtonName(SDL_GameControllerButton(event.button));
     Q_EMIT buttonStateChanged(event.button);
     if (m_buttons.contains(event.button)) {
-        qDebug() << "Setting button " << event.button << " to state: " << event.state;
+        qDebug() << "Setting controller button " << event.button << " to state: " << event.state;
         m_buttons.value(event.button)->setState(event.state);
     }
 }
