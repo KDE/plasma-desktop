@@ -20,8 +20,8 @@ import org.kde.plasma.plasmoid 2.0
 Rectangle {
     id: root
 
-    implicitWidth: Kirigami.Units.gridUnit * 40
-    implicitHeight: Kirigami.Units.gridUnit * 30
+    implicitWidth: Kirigami.Units.gridUnit * 45
+    implicitHeight: Kirigami.Units.gridUnit * 35
 
     Layout.minimumWidth: Kirigami.Units.gridUnit * 30
     Layout.minimumHeight: Kirigami.Units.gridUnit * 21
