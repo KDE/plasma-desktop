@@ -27,6 +27,8 @@ Item {
 
     signal settingsRestored
 
+    implicitHeight: layout.implicitHeight + Kirigami.Units.largeSpacing * 2
+
     Repeater {
         id: buttonLineConnectionRepeater
 
@@ -102,6 +104,8 @@ Item {
     }
 
     RowLayout {
+        id: layout
+
         anchors.fill: parent
 
         spacing: 0
