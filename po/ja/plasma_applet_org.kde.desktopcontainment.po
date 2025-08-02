@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-31 00:43+0000\n"
+"POT-Creation-Date: 2025-08-02 00:45+0000\n"
 "PO-Revision-Date: 2024-05-04 22:45+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -127,192 +127,197 @@ msgstr "アイコンをクリア"
 msgid "Arrangement:"
 msgstr "配置:"
 
+#: package/contents/ui/ConfigIcons.qml:127
+#, kde-format
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "In Columns"
+msgstr ""
+
 #: package/contents/ui/ConfigIcons.qml:128
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
-msgid "Left to Right"
-msgstr "左から右"
+msgid "In Rows"
+msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:129
-#, kde-format
-msgctxt "@item:inlistbox arrangement of icons"
-msgid "Right to Left"
-msgstr "右から左"
-
-#: package/contents/ui/ConfigIcons.qml:130
-#, kde-format
-msgctxt "@item:inlistbox arrangement of icons"
-msgid "Top to Bottom"
-msgstr "上から下"
-
-#: package/contents/ui/ConfigIcons.qml:139
-#, kde-format
-msgctxt "@item:inlistbox alignment of icons"
-msgid "Align left"
-msgstr "左揃え"
+#: package/contents/ui/ConfigIcons.qml:137
+#, fuzzy, kde-format
+#| msgid "Sorting:"
+msgid "Sort Alignment:"
+msgstr "ソート:"
 
 #: package/contents/ui/ConfigIcons.qml:140
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox arrangement of icons"
+#| msgid "Left to Right"
 msgctxt "@item:inlistbox alignment of icons"
-msgid "Align right"
-msgstr "右揃え"
+msgid "Left-to-Right"
+msgstr "左から右"
 
-#: package/contents/ui/ConfigIcons.qml:155
+#: package/contents/ui/ConfigIcons.qml:141
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox arrangement of icons"
+#| msgid "Right to Left"
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Right-to-Left"
+msgstr "右から左"
+
+#: package/contents/ui/ConfigIcons.qml:163
 #, kde-format
 msgid "Lock in place"
 msgstr "位置を固定する"
 
-#: package/contents/ui/ConfigIcons.qml:169
-#, kde-format
-msgid "Sorting:"
-msgstr "ソート:"
-
 #: package/contents/ui/ConfigIcons.qml:177
+#, fuzzy, kde-format
+#| msgid "Sort By"
+msgid "Sort by:"
+msgstr "ソート基準"
+
+#: package/contents/ui/ConfigIcons.qml:185
 #, kde-format
 msgctxt "@item:inlistbox sort icons manually"
 msgid "Manual"
 msgstr "手動"
 
-#: package/contents/ui/ConfigIcons.qml:178
+#: package/contents/ui/ConfigIcons.qml:186
 #, kde-format
 msgctxt "@item:inlistbox sort icons by name"
 msgid "Name"
 msgstr "名前"
 
-#: package/contents/ui/ConfigIcons.qml:179
+#: package/contents/ui/ConfigIcons.qml:187
 #, kde-format
 msgctxt "@item:inlistbox sort icons by size"
 msgid "Size"
 msgstr "サイズ"
 
-#: package/contents/ui/ConfigIcons.qml:180
+#: package/contents/ui/ConfigIcons.qml:188
 #, kde-format
 msgctxt "@item:inlistbox sort icons by file type"
 msgid "Type"
 msgstr "種類"
 
-#: package/contents/ui/ConfigIcons.qml:181
+#: package/contents/ui/ConfigIcons.qml:189
 #, kde-format
 msgctxt "@item:inlistbox sort icons by date"
 msgid "Date"
 msgstr "日付"
 
-#: package/contents/ui/ConfigIcons.qml:192
+#: package/contents/ui/ConfigIcons.qml:200
 #, kde-format
 msgctxt "@option:check sort icons in descending order"
 msgid "Descending"
 msgstr "降順"
 
-#: package/contents/ui/ConfigIcons.qml:200
+#: package/contents/ui/ConfigIcons.qml:208
 #, kde-format
 msgctxt "@option:check sort icons with folders first"
 msgid "Folders first"
 msgstr "フォルダを先に"
 
-#: package/contents/ui/ConfigIcons.qml:214
+#: package/contents/ui/ConfigIcons.qml:222
 #, kde-format
 msgctxt "whether to use icon or list view"
 msgid "View mode:"
 msgstr "表示モード:"
 
-#: package/contents/ui/ConfigIcons.qml:216
+#: package/contents/ui/ConfigIcons.qml:224
 #, kde-format
 msgctxt "@item:inlistbox show icons in a list"
 msgid "List"
 msgstr "リスト"
 
-#: package/contents/ui/ConfigIcons.qml:217
+#: package/contents/ui/ConfigIcons.qml:225
 #, kde-format
 msgctxt "@item:inlistbox show icons in a grid"
 msgid "Grid"
 msgstr "グリッド"
 
-#: package/contents/ui/ConfigIcons.qml:228
+#: package/contents/ui/ConfigIcons.qml:236
 #, kde-format
 msgid "Icon size:"
 msgstr "アイコンサイズ:"
 
-#: package/contents/ui/ConfigIcons.qml:243
+#: package/contents/ui/ConfigIcons.qml:251
 #, kde-format
 msgctxt "@label:slider smallest icon size"
 msgid "Small"
 msgstr "小"
 
-#: package/contents/ui/ConfigIcons.qml:252
+#: package/contents/ui/ConfigIcons.qml:260
 #, kde-format
 msgctxt "@label:slider largest icon size"
 msgid "Large"
 msgstr "大"
 
-#: package/contents/ui/ConfigIcons.qml:261
+#: package/contents/ui/ConfigIcons.qml:269
 #, kde-format
 msgid "Label width:"
 msgstr "ラベルの幅:"
 
-#: package/contents/ui/ConfigIcons.qml:264
+#: package/contents/ui/ConfigIcons.qml:272
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Narrow"
 msgstr "狭め"
 
-#: package/contents/ui/ConfigIcons.qml:265
+#: package/contents/ui/ConfigIcons.qml:273
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Medium"
 msgstr "普通"
 
-#: package/contents/ui/ConfigIcons.qml:266
+#: package/contents/ui/ConfigIcons.qml:274
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Wide"
 msgstr "広め"
 
-#: package/contents/ui/ConfigIcons.qml:274
+#: package/contents/ui/ConfigIcons.qml:282
 #, kde-format
 msgid "Text lines:"
 msgstr "テキスト行数:"
 
-#: package/contents/ui/ConfigIcons.qml:290
+#: package/contents/ui/ConfigIcons.qml:298
 #, kde-format
 msgid "When hovering over icons:"
 msgstr "アイコンにカーソルを重ねたとき:"
 
-#: package/contents/ui/ConfigIcons.qml:292
+#: package/contents/ui/ConfigIcons.qml:300
 #, kde-format
 msgid "Show tooltips"
 msgstr "ツールチップを表示"
 
-#: package/contents/ui/ConfigIcons.qml:299
+#: package/contents/ui/ConfigIcons.qml:307
 #, kde-format
 msgid "Show selection markers"
 msgstr "選択マーカーを表示"
 
-#: package/contents/ui/ConfigIcons.qml:306
+#: package/contents/ui/ConfigIcons.qml:314
 #, kde-format
 msgid "Show folder preview popups"
 msgstr "フォルダプレビューポップアップを表示"
 
-#: package/contents/ui/ConfigIcons.qml:316
+#: package/contents/ui/ConfigIcons.qml:324
 #, kde-format
 msgid "Rename:"
 msgstr "名前変更:"
 
-#: package/contents/ui/ConfigIcons.qml:320
+#: package/contents/ui/ConfigIcons.qml:328
 #, kde-format
 msgid "Rename inline by clicking selected item's text"
 msgstr "選択されたアイテムのテキストをクリックして名前を変更"
 
-#: package/contents/ui/ConfigIcons.qml:331
+#: package/contents/ui/ConfigIcons.qml:339
 #, kde-format
 msgid "Previews:"
 msgstr "プレビュー:"
 
-#: package/contents/ui/ConfigIcons.qml:333
+#: package/contents/ui/ConfigIcons.qml:341
 #, kde-format
 msgid "Show preview thumbnails"
 msgstr "プレビューのサムネイルを表示"
 
-#: package/contents/ui/ConfigIcons.qml:341
+#: package/contents/ui/ConfigIcons.qml:349
 #, kde-format
 msgid "Configure Preview Plugins…"
 msgstr "プレビュー用のプラグインを設定..."
@@ -628,51 +633,84 @@ msgctxt "@item:inmenu arrangement of icons"
 msgid "Arrange"
 msgstr "整列"
 
-#: plugins/folder/viewpropertiesmenu.cpp:71
+#: plugins/folder/viewpropertiesmenu.cpp:70
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
-msgid "Left to Right"
+msgid "In Columns"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:74
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "In Rows"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:79
+#, kde-format
+msgid "Sort Alignment"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:83
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox arrangement of icons"
+#| msgid "Left to Right"
+msgctxt "@item:inmenu alignment of icons"
+msgid "Left-to-Right"
 msgstr "左から右"
 
-#: plugins/folder/viewpropertiesmenu.cpp:72
-#, kde-format
-msgctxt "@item:inmenu arrangement of icons"
-msgid "Right to Left"
+#: plugins/folder/viewpropertiesmenu.cpp:84
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox arrangement of icons"
+#| msgid "Right to Left"
+msgctxt "@item:inmenu alignment of icons"
+msgid "Right-to-Left"
 msgstr "右から左"
 
-#: plugins/folder/viewpropertiesmenu.cpp:76
-#, kde-format
-msgctxt "@item:inmenu arrangement of icons"
-msgid "Top to Bottom"
-msgstr "上から下"
-
-#: plugins/folder/viewpropertiesmenu.cpp:81
-#, kde-format
-msgid "Align"
-msgstr "整列"
-
-#: plugins/folder/viewpropertiesmenu.cpp:84
-#, kde-format
-msgctxt "@item:inmenu alignment of icons"
-msgid "Left"
-msgstr "左"
-
-#: plugins/folder/viewpropertiesmenu.cpp:88
-#, kde-format
-msgctxt "@item:inmenu alignment of icons"
-msgid "Right"
-msgstr "右"
-
-#: plugins/folder/viewpropertiesmenu.cpp:93
+#: plugins/folder/viewpropertiesmenu.cpp:94
 #, kde-format
 msgid "Show Previews"
 msgstr "プレビューを表示"
 
-#: plugins/folder/viewpropertiesmenu.cpp:97
+#: plugins/folder/viewpropertiesmenu.cpp:98
 #, kde-format
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "ロック"
+
+#~ msgctxt "@item:inlistbox arrangement of icons"
+#~ msgid "Top to Bottom"
+#~ msgstr "上から下"
+
+#~ msgctxt "@item:inlistbox alignment of icons"
+#~ msgid "Align left"
+#~ msgstr "左揃え"
+
+#~ msgctxt "@item:inlistbox alignment of icons"
+#~ msgid "Align right"
+#~ msgstr "右揃え"
+
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Left to Right"
+#~ msgstr "左から右"
+
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Right to Left"
+#~ msgstr "右から左"
+
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Top to Bottom"
+#~ msgstr "上から下"
+
+#~ msgid "Align"
+#~ msgstr "整列"
+
+#~ msgctxt "@item:inmenu alignment of icons"
+#~ msgid "Left"
+#~ msgstr "左"
+
+#~ msgctxt "@item:inmenu alignment of icons"
+#~ msgid "Right"
+#~ msgstr "右"
 
 #~ msgctxt "Restore from trash"
 #~ msgid "Restore"

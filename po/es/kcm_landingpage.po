@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_landingpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-30 00:42+0000\n"
+"POT-Creation-Date: 2025-08-02 00:45+0000\n"
 "PO-Revision-Date: 2025-05-26 00:45+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -31,90 +31,114 @@ msgstr "Nombre del esquema de color"
 msgid "Single click to open files"
 msgstr "Un solo clic para abrir archivos"
 
-#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#. i18n: ectx: label, entry (automaticLookAndFeel), group (KDE)
 #: landingpage_kdeglobalssettings.kcfg:19
+#, kde-format
+msgid "Switch the look and feel package depending on time of day"
+msgstr ""
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:23
 #, kde-format
 msgid "Global Look and Feel package"
 msgstr "Paquete de aspecto visual global"
 
 #. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
 #. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
-#: landingpage_kdeglobalssettings.kcfg:23
 #: landingpage_kdeglobalssettings.kcfg:27
+#: landingpage_kdeglobalssettings.kcfg:31
 #, kde-format
 msgid "Global Look and Feel package, alternate"
 msgstr "Paquete de aspecto visual global, alternativo"
 
 #. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
-#: landingpage_kdeglobalssettings.kcfg:31
+#: landingpage_kdeglobalssettings.kcfg:35
 #, kde-format
 msgid "Animation speed"
 msgstr "Velocidad de animación"
 
-#: ui/main.qml:33
+#: ui/LookAndFeelBox.qml:101
+#, kde-format
+msgctxt "@action:button"
+msgid "Change global theme"
+msgstr ""
+
+#: ui/LookAndFeelBox.qml:178
+#, kde-format
+msgctxt "@label accessible"
+msgid "Global theme"
+msgstr ""
+
+#: ui/main.qml:35
 #, kde-format
 msgid "Theme:"
 msgstr "Tema:"
 
-#: ui/main.qml:76
+#: ui/main.qml:91
+#, kde-format
+msgctxt "Switch between dark and light look and feel packages automatically"
+msgid "Automatic"
+msgstr ""
+
+#: ui/main.qml:136
 #, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More appearance settings:"
 msgstr "Más preferencias de aspecto visual:"
 
-#: ui/main.qml:120
+#: ui/main.qml:180
 #, kde-format
 msgid "Animation speed:"
 msgstr "Velocidad de las animaciones:"
 
-#: ui/main.qml:129
+#: ui/main.qml:189
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "Lenta"
 
-#: ui/main.qml:136
+#: ui/main.qml:196
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr "Instantánea"
 
-#: ui/main.qml:150
+#: ui/main.qml:210
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Al pulsar archivos o carpetas:"
 
-#: ui/main.qml:158
+#: ui/main.qml:218
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "Se seleccionan"
 
-#: ui/main.qml:163
+#: ui/main.qml:223
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Abrir con doble clic"
 
-#: ui/main.qml:191
+#: ui/main.qml:251
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "Se abren"
 
-#: ui/main.qml:196
+#: ui/main.qml:256
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "Seleccionar pulsando la marca de selección de los elementos"
 
-#: ui/main.qml:222
+#: ui/main.qml:282
 #, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More behavior settings:"
 msgstr "Más preferencias de comportamiento:"
 
-#: ui/main.qml:235
+#: ui/main.qml:295
 #, kde-format
 msgid "Most used pages:"
 msgstr "Páginas más usadas:"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-31 00:43+0000\n"
+"POT-Creation-Date: 2025-08-02 00:45+0000\n"
 "PO-Revision-Date: 2025-06-06 22:21+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -129,192 +129,199 @@ msgstr "Ikon visszaállítása"
 msgid "Arrangement:"
 msgstr "Elrendezés:"
 
+#: package/contents/ui/ConfigIcons.qml:127
+#, fuzzy, kde-format
+#| msgid "Columns"
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "In Columns"
+msgstr "Oszlopok"
+
 #: package/contents/ui/ConfigIcons.qml:128
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rows"
 msgctxt "@item:inlistbox arrangement of icons"
-msgid "Left to Right"
-msgstr "Balról jobbra"
+msgid "In Rows"
+msgstr "Sorok"
 
-#: package/contents/ui/ConfigIcons.qml:129
-#, kde-format
-msgctxt "@item:inlistbox arrangement of icons"
-msgid "Right to Left"
-msgstr "Jobbról balra"
-
-#: package/contents/ui/ConfigIcons.qml:130
-#, kde-format
-msgctxt "@item:inlistbox arrangement of icons"
-msgid "Top to Bottom"
-msgstr "Fentről le"
-
-#: package/contents/ui/ConfigIcons.qml:139
-#, kde-format
-msgctxt "@item:inlistbox alignment of icons"
-msgid "Align left"
-msgstr "Balra igazítás"
+#: package/contents/ui/ConfigIcons.qml:137
+#, fuzzy, kde-format
+#| msgid "Sorting:"
+msgid "Sort Alignment:"
+msgstr "Rendezés:"
 
 #: package/contents/ui/ConfigIcons.qml:140
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox arrangement of icons"
+#| msgid "Left to Right"
 msgctxt "@item:inlistbox alignment of icons"
-msgid "Align right"
-msgstr "Jobbra igazítás"
+msgid "Left-to-Right"
+msgstr "Balról jobbra"
 
-#: package/contents/ui/ConfigIcons.qml:155
+#: package/contents/ui/ConfigIcons.qml:141
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox arrangement of icons"
+#| msgid "Right to Left"
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Right-to-Left"
+msgstr "Jobbról balra"
+
+#: package/contents/ui/ConfigIcons.qml:163
 #, kde-format
 msgid "Lock in place"
 msgstr "Rögzítés"
 
-#: package/contents/ui/ConfigIcons.qml:169
-#, kde-format
-msgid "Sorting:"
-msgstr "Rendezés:"
-
 #: package/contents/ui/ConfigIcons.qml:177
+#, fuzzy, kde-format
+#| msgid "Sort By"
+msgid "Sort by:"
+msgstr "Rendezés"
+
+#: package/contents/ui/ConfigIcons.qml:185
 #, kde-format
 msgctxt "@item:inlistbox sort icons manually"
 msgid "Manual"
 msgstr "Kézi"
 
-#: package/contents/ui/ConfigIcons.qml:178
+#: package/contents/ui/ConfigIcons.qml:186
 #, kde-format
 msgctxt "@item:inlistbox sort icons by name"
 msgid "Name"
 msgstr "Név"
 
-#: package/contents/ui/ConfigIcons.qml:179
+#: package/contents/ui/ConfigIcons.qml:187
 #, kde-format
 msgctxt "@item:inlistbox sort icons by size"
 msgid "Size"
 msgstr "Méret"
 
-#: package/contents/ui/ConfigIcons.qml:180
+#: package/contents/ui/ConfigIcons.qml:188
 #, kde-format
 msgctxt "@item:inlistbox sort icons by file type"
 msgid "Type"
 msgstr "Típus"
 
-#: package/contents/ui/ConfigIcons.qml:181
+#: package/contents/ui/ConfigIcons.qml:189
 #, kde-format
 msgctxt "@item:inlistbox sort icons by date"
 msgid "Date"
 msgstr "Dátum"
 
-#: package/contents/ui/ConfigIcons.qml:192
+#: package/contents/ui/ConfigIcons.qml:200
 #, kde-format
 msgctxt "@option:check sort icons in descending order"
 msgid "Descending"
 msgstr "Csökkenő"
 
-#: package/contents/ui/ConfigIcons.qml:200
+#: package/contents/ui/ConfigIcons.qml:208
 #, kde-format
 msgctxt "@option:check sort icons with folders first"
 msgid "Folders first"
 msgstr "Mappák előre"
 
-#: package/contents/ui/ConfigIcons.qml:214
+#: package/contents/ui/ConfigIcons.qml:222
 #, kde-format
 msgctxt "whether to use icon or list view"
 msgid "View mode:"
 msgstr "Nézetmód:"
 
-#: package/contents/ui/ConfigIcons.qml:216
+#: package/contents/ui/ConfigIcons.qml:224
 #, kde-format
 msgctxt "@item:inlistbox show icons in a list"
 msgid "List"
 msgstr "Lista"
 
-#: package/contents/ui/ConfigIcons.qml:217
+#: package/contents/ui/ConfigIcons.qml:225
 #, kde-format
 msgctxt "@item:inlistbox show icons in a grid"
 msgid "Grid"
 msgstr "Rács"
 
-#: package/contents/ui/ConfigIcons.qml:228
+#: package/contents/ui/ConfigIcons.qml:236
 #, kde-format
 msgid "Icon size:"
 msgstr "Ikonméret:"
 
-#: package/contents/ui/ConfigIcons.qml:243
+#: package/contents/ui/ConfigIcons.qml:251
 #, kde-format
 msgctxt "@label:slider smallest icon size"
 msgid "Small"
 msgstr "Kicsi"
 
-#: package/contents/ui/ConfigIcons.qml:252
+#: package/contents/ui/ConfigIcons.qml:260
 #, kde-format
 msgctxt "@label:slider largest icon size"
 msgid "Large"
 msgstr "Nagy"
 
-#: package/contents/ui/ConfigIcons.qml:261
+#: package/contents/ui/ConfigIcons.qml:269
 #, kde-format
 msgid "Label width:"
 msgstr "Címkeszélesség:"
 
-#: package/contents/ui/ConfigIcons.qml:264
+#: package/contents/ui/ConfigIcons.qml:272
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Narrow"
 msgstr "Keskeny"
 
-#: package/contents/ui/ConfigIcons.qml:265
+#: package/contents/ui/ConfigIcons.qml:273
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Medium"
 msgstr "Közepes"
 
-#: package/contents/ui/ConfigIcons.qml:266
+#: package/contents/ui/ConfigIcons.qml:274
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Wide"
 msgstr "Széles"
 
-#: package/contents/ui/ConfigIcons.qml:274
+#: package/contents/ui/ConfigIcons.qml:282
 #, kde-format
 msgid "Text lines:"
 msgstr "Szövegsorok:"
 
-#: package/contents/ui/ConfigIcons.qml:290
+#: package/contents/ui/ConfigIcons.qml:298
 #, kde-format
 msgid "When hovering over icons:"
 msgstr "Ikonokra rámutatáskor:"
 
-#: package/contents/ui/ConfigIcons.qml:292
+#: package/contents/ui/ConfigIcons.qml:300
 #, kde-format
 msgid "Show tooltips"
 msgstr "Tippek megjelenítése"
 
-#: package/contents/ui/ConfigIcons.qml:299
+#: package/contents/ui/ConfigIcons.qml:307
 #, kde-format
 msgid "Show selection markers"
 msgstr "Kijelölésjelzők megjelenítése"
 
-#: package/contents/ui/ConfigIcons.qml:306
+#: package/contents/ui/ConfigIcons.qml:314
 #, kde-format
 msgid "Show folder preview popups"
 msgstr "Mappaelőnézeti felugrók megjelenítése"
 
-#: package/contents/ui/ConfigIcons.qml:316
+#: package/contents/ui/ConfigIcons.qml:324
 #, kde-format
 msgid "Rename:"
 msgstr "Átnevezés:"
 
-#: package/contents/ui/ConfigIcons.qml:320
+#: package/contents/ui/ConfigIcons.qml:328
 #, kde-format
 msgid "Rename inline by clicking selected item's text"
 msgstr "Átnevezés helyben a kijelölt elem szövegére kattintva"
 
-#: package/contents/ui/ConfigIcons.qml:331
+#: package/contents/ui/ConfigIcons.qml:339
 #, kde-format
 msgid "Previews:"
 msgstr "Előnézetek:"
 
-#: package/contents/ui/ConfigIcons.qml:333
+#: package/contents/ui/ConfigIcons.qml:341
 #, kde-format
 msgid "Show preview thumbnails"
 msgstr "Előnézeti bélyegképek megjelenítése"
 
-#: package/contents/ui/ConfigIcons.qml:341
+#: package/contents/ui/ConfigIcons.qml:349
 #, kde-format
 msgid "Configure Preview Plugins…"
 msgstr "Előnézet bővítmény beállítása…"
@@ -617,51 +624,86 @@ msgctxt "@item:inmenu arrangement of icons"
 msgid "Arrange"
 msgstr "Elrendezés"
 
-#: plugins/folder/viewpropertiesmenu.cpp:71
-#, kde-format
+#: plugins/folder/viewpropertiesmenu.cpp:70
+#, fuzzy, kde-format
+#| msgid "Columns"
 msgctxt "@item:inmenu arrangement of icons"
-msgid "Left to Right"
+msgid "In Columns"
+msgstr "Oszlopok"
+
+#: plugins/folder/viewpropertiesmenu.cpp:74
+#, fuzzy, kde-format
+#| msgid "Rows"
+msgctxt "@item:inmenu arrangement of icons"
+msgid "In Rows"
+msgstr "Sorok"
+
+#: plugins/folder/viewpropertiesmenu.cpp:79
+#, kde-format
+msgid "Sort Alignment"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:83
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox arrangement of icons"
+#| msgid "Left to Right"
+msgctxt "@item:inmenu alignment of icons"
+msgid "Left-to-Right"
 msgstr "Balról jobbra"
 
-#: plugins/folder/viewpropertiesmenu.cpp:72
-#, kde-format
-msgctxt "@item:inmenu arrangement of icons"
-msgid "Right to Left"
+#: plugins/folder/viewpropertiesmenu.cpp:84
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox arrangement of icons"
+#| msgid "Right to Left"
+msgctxt "@item:inmenu alignment of icons"
+msgid "Right-to-Left"
 msgstr "Jobbról balra"
 
-#: plugins/folder/viewpropertiesmenu.cpp:76
-#, kde-format
-msgctxt "@item:inmenu arrangement of icons"
-msgid "Top to Bottom"
-msgstr "Fentről le"
-
-#: plugins/folder/viewpropertiesmenu.cpp:81
-#, kde-format
-msgid "Align"
-msgstr "Igazítás"
-
-#: plugins/folder/viewpropertiesmenu.cpp:84
-#, kde-format
-msgctxt "@item:inmenu alignment of icons"
-msgid "Left"
-msgstr "Balra"
-
-#: plugins/folder/viewpropertiesmenu.cpp:88
-#, kde-format
-msgctxt "@item:inmenu alignment of icons"
-msgid "Right"
-msgstr "Jobbra"
-
-#: plugins/folder/viewpropertiesmenu.cpp:93
+#: plugins/folder/viewpropertiesmenu.cpp:94
 #, kde-format
 msgid "Show Previews"
 msgstr "Előnézet mutatása"
 
-#: plugins/folder/viewpropertiesmenu.cpp:97
+#: plugins/folder/viewpropertiesmenu.cpp:98
 #, kde-format
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Zárolt"
+
+#~ msgctxt "@item:inlistbox arrangement of icons"
+#~ msgid "Top to Bottom"
+#~ msgstr "Fentről le"
+
+#~ msgctxt "@item:inlistbox alignment of icons"
+#~ msgid "Align left"
+#~ msgstr "Balra igazítás"
+
+#~ msgctxt "@item:inlistbox alignment of icons"
+#~ msgid "Align right"
+#~ msgstr "Jobbra igazítás"
+
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Left to Right"
+#~ msgstr "Balról jobbra"
+
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Right to Left"
+#~ msgstr "Jobbról balra"
+
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Top to Bottom"
+#~ msgstr "Fentről le"
+
+#~ msgid "Align"
+#~ msgstr "Igazítás"
+
+#~ msgctxt "@item:inmenu alignment of icons"
+#~ msgid "Left"
+#~ msgstr "Balra"
+
+#~ msgctxt "@item:inmenu alignment of icons"
+#~ msgid "Right"
+#~ msgstr "Jobbra"
 
 #~ msgctxt "Restore from trash"
 #~ msgid "Restore"
@@ -678,30 +720,6 @@ msgstr "Zárolt"
 
 #~ msgid "Cancel"
 #~ msgstr "Mégse"
-
-#, fuzzy
-#~| msgid "Rows"
-#~ msgctxt "@item:inlistbox arrangement of icons"
-#~ msgid "Rows"
-#~ msgstr "Sorok"
-
-#, fuzzy
-#~| msgid "Columns"
-#~ msgctxt "@item:inlistbox arrangement of icons"
-#~ msgid "Columns"
-#~ msgstr "Oszlopok"
-
-#, fuzzy
-#~| msgid "Rows"
-#~ msgctxt "@item:inmenu arrangement of icons"
-#~ msgid "Rows"
-#~ msgstr "Sorok"
-
-#, fuzzy
-#~| msgid "Columns"
-#~ msgctxt "@item:inmenu arrangement of icons"
-#~ msgid "Columns"
-#~ msgstr "Oszlopok"
 
 #~ msgid "Features:"
 #~ msgstr "Funkciók:"
@@ -750,11 +768,6 @@ msgstr "Zárolt"
 #~| msgid "Arrange in:"
 #~ msgid "Arrange in"
 #~ msgstr "Elrendezés ebben:"
-
-#, fuzzy
-#~| msgid "Sort By"
-#~ msgid "Sort by"
-#~ msgstr "Rendezés"
 
 #, fuzzy
 #~| msgid "Appearance"

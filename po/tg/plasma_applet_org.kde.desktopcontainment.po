@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-31 00:43+0000\n"
+"POT-Creation-Date: 2025-08-02 00:45+0000\n"
 "PO-Revision-Date: 2021-09-05 11:41-0700\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik Language Support\n"
@@ -129,216 +129,216 @@ msgstr "Тоза кардани нишона"
 msgid "Arrangement:"
 msgstr "Мураттабсозӣ:"
 
+#: package/contents/ui/ConfigIcons.qml:127
+#, fuzzy, kde-format
+#| msgid "Columns"
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "In Columns"
+msgstr "Сутунҳо"
+
 #: package/contents/ui/ConfigIcons.qml:128
 #, fuzzy, kde-format
-#| msgid "Top to Bottom, Left to Right"
+#| msgid "Rows"
 msgctxt "@item:inlistbox arrangement of icons"
-msgid "Left to Right"
-msgstr "Сверху вниз, слева направо"
+msgid "In Rows"
+msgstr "Қаторҳо"
 
-#: package/contents/ui/ConfigIcons.qml:129
+#: package/contents/ui/ConfigIcons.qml:137
 #, fuzzy, kde-format
-#| msgid "Top to Bottom, Right to Left"
-msgctxt "@item:inlistbox arrangement of icons"
-msgid "Right to Left"
-msgstr "Сверху вниз, справа налево"
-
-#: package/contents/ui/ConfigIcons.qml:130
-#, fuzzy, kde-format
-#| msgid "Top to Bottom, Left to Right"
-msgctxt "@item:inlistbox arrangement of icons"
-msgid "Top to Bottom"
-msgstr "Сверху вниз, слева направо"
-
-#: package/contents/ui/ConfigIcons.qml:139
-#, fuzzy, kde-format
-#| msgid "Align left"
-msgctxt "@item:inlistbox alignment of icons"
-msgid "Align left"
-msgstr "Аз тарафи чап мос кардан"
+#| msgid "Sorting:"
+msgid "Sort Alignment:"
+msgstr "Тартибдиҳӣ:"
 
 #: package/contents/ui/ConfigIcons.qml:140
 #, fuzzy, kde-format
-#| msgid "Align right"
+#| msgid "Top to Bottom, Left to Right"
 msgctxt "@item:inlistbox alignment of icons"
-msgid "Align right"
-msgstr "Аз тарафи рост мос кардан"
+msgid "Left-to-Right"
+msgstr "Сверху вниз, слева направо"
 
-#: package/contents/ui/ConfigIcons.qml:155
+#: package/contents/ui/ConfigIcons.qml:141
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Right to Left"
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Right-to-Left"
+msgstr "Сверху вниз, справа налево"
+
+#: package/contents/ui/ConfigIcons.qml:163
 #, kde-format
 msgid "Lock in place"
 msgstr "Дар ин ҷо бастан"
 
-#: package/contents/ui/ConfigIcons.qml:169
-#, kde-format
-msgid "Sorting:"
+#: package/contents/ui/ConfigIcons.qml:177
+#, fuzzy, kde-format
+#| msgid "Sorting:"
+msgid "Sort by:"
 msgstr "Тартибдиҳӣ:"
 
-#: package/contents/ui/ConfigIcons.qml:177
+#: package/contents/ui/ConfigIcons.qml:185
 #, fuzzy, kde-format
 #| msgid "Manual"
 msgctxt "@item:inlistbox sort icons manually"
 msgid "Manual"
 msgstr "Ба таври дастӣ"
 
-#: package/contents/ui/ConfigIcons.qml:178
+#: package/contents/ui/ConfigIcons.qml:186
 #, fuzzy, kde-format
 #| msgid "Name"
 msgctxt "@item:inlistbox sort icons by name"
 msgid "Name"
 msgstr "Ном"
 
-#: package/contents/ui/ConfigIcons.qml:179
+#: package/contents/ui/ConfigIcons.qml:187
 #, fuzzy, kde-format
 #| msgid "Size"
 msgctxt "@item:inlistbox sort icons by size"
 msgid "Size"
 msgstr "Андоза"
 
-#: package/contents/ui/ConfigIcons.qml:180
+#: package/contents/ui/ConfigIcons.qml:188
 #, fuzzy, kde-format
 #| msgid "Type"
 msgctxt "@item:inlistbox sort icons by file type"
 msgid "Type"
 msgstr "Навъ"
 
-#: package/contents/ui/ConfigIcons.qml:181
+#: package/contents/ui/ConfigIcons.qml:189
 #, fuzzy, kde-format
 #| msgid "Date"
 msgctxt "@item:inlistbox sort icons by date"
 msgid "Date"
 msgstr "Сана"
 
-#: package/contents/ui/ConfigIcons.qml:192
+#: package/contents/ui/ConfigIcons.qml:200
 #, fuzzy, kde-format
 #| msgid "Descending"
 msgctxt "@option:check sort icons in descending order"
 msgid "Descending"
 msgstr "Пастшаванда"
 
-#: package/contents/ui/ConfigIcons.qml:200
+#: package/contents/ui/ConfigIcons.qml:208
 #, fuzzy, kde-format
 #| msgid "Folders first"
 msgctxt "@option:check sort icons with folders first"
 msgid "Folders first"
 msgstr "Аввал ҷузвадонҳо"
 
-#: package/contents/ui/ConfigIcons.qml:214
+#: package/contents/ui/ConfigIcons.qml:222
 #, kde-format
 msgctxt "whether to use icon or list view"
 msgid "View mode:"
 msgstr "Реҷаи намуд:"
 
-#: package/contents/ui/ConfigIcons.qml:216
+#: package/contents/ui/ConfigIcons.qml:224
 #, fuzzy, kde-format
 #| msgid "List"
 msgctxt "@item:inlistbox show icons in a list"
 msgid "List"
 msgstr "Рӯйхат"
 
-#: package/contents/ui/ConfigIcons.qml:217
+#: package/contents/ui/ConfigIcons.qml:225
 #, kde-format
 msgctxt "@item:inlistbox show icons in a grid"
 msgid "Grid"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:228
+#: package/contents/ui/ConfigIcons.qml:236
 #, kde-format
 msgid "Icon size:"
 msgstr "Андозаи нишона:"
 
-#: package/contents/ui/ConfigIcons.qml:243
+#: package/contents/ui/ConfigIcons.qml:251
 #, fuzzy, kde-format
 #| msgid "Small"
 msgctxt "@label:slider smallest icon size"
 msgid "Small"
 msgstr "Хурд"
 
-#: package/contents/ui/ConfigIcons.qml:252
+#: package/contents/ui/ConfigIcons.qml:260
 #, fuzzy, kde-format
 #| msgid "Large"
 msgctxt "@label:slider largest icon size"
 msgid "Large"
 msgstr "Калон"
 
-#: package/contents/ui/ConfigIcons.qml:261
+#: package/contents/ui/ConfigIcons.qml:269
 #, kde-format
 msgid "Label width:"
 msgstr "Бари тамға:"
 
-#: package/contents/ui/ConfigIcons.qml:264
+#: package/contents/ui/ConfigIcons.qml:272
 #, fuzzy, kde-format
 #| msgid "Narrow"
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Narrow"
 msgstr "Танг"
 
-#: package/contents/ui/ConfigIcons.qml:265
+#: package/contents/ui/ConfigIcons.qml:273
 #, fuzzy, kde-format
 #| msgid "Medium"
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Medium"
 msgstr "Миёна"
 
-#: package/contents/ui/ConfigIcons.qml:266
+#: package/contents/ui/ConfigIcons.qml:274
 #, fuzzy, kde-format
 #| msgid "Wide"
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Wide"
 msgstr "Васеъ"
 
-#: package/contents/ui/ConfigIcons.qml:274
+#: package/contents/ui/ConfigIcons.qml:282
 #, kde-format
 msgid "Text lines:"
 msgstr "Сатрҳои матн:"
 
-#: package/contents/ui/ConfigIcons.qml:290
+#: package/contents/ui/ConfigIcons.qml:298
 #, kde-format
 msgid "When hovering over icons:"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:292
+#: package/contents/ui/ConfigIcons.qml:300
 #, fuzzy, kde-format
 #| msgid "Tooltips"
 msgid "Show tooltips"
 msgstr "Маслиҳатҳо"
 
-#: package/contents/ui/ConfigIcons.qml:299
+#: package/contents/ui/ConfigIcons.qml:307
 #, fuzzy, kde-format
 #| msgid "Selection markers"
 msgid "Show selection markers"
 msgstr "Нишонагузори интихоб"
 
-#: package/contents/ui/ConfigIcons.qml:306
+#: package/contents/ui/ConfigIcons.qml:314
 #, fuzzy, kde-format
 #| msgid "Folder preview popups"
 msgid "Show folder preview popups"
 msgstr "Пешнамоиши пайдошавандаи ҷузвадон"
 
-#: package/contents/ui/ConfigIcons.qml:316
+#: package/contents/ui/ConfigIcons.qml:324
 #, fuzzy, kde-format
 #| msgid "&Rename"
 msgid "Rename:"
 msgstr "&Ивази ном..."
 
-#: package/contents/ui/ConfigIcons.qml:320
+#: package/contents/ui/ConfigIcons.qml:328
 #, kde-format
 msgid "Rename inline by clicking selected item's text"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:331
+#: package/contents/ui/ConfigIcons.qml:339
 #, fuzzy, kde-format
 #| msgid "Previews:"
 msgid "Previews:"
 msgstr "Пешнамоиш:"
 
-#: package/contents/ui/ConfigIcons.qml:333
+#: package/contents/ui/ConfigIcons.qml:341
 #, fuzzy, kde-format
 #| msgid "Preview thumbnails"
 msgid "Show preview thumbnails"
 msgstr "Аксҳои пешнамоиш"
 
-#: package/contents/ui/ConfigIcons.qml:341
+#: package/contents/ui/ConfigIcons.qml:349
 #, fuzzy, kde-format
 #| msgid "Configure Preview Plugins..."
 msgid "Configure Preview Plugins…"
@@ -666,57 +666,101 @@ msgctxt "@item:inmenu arrangement of icons"
 msgid "Arrange"
 msgstr "Мураттабсозӣ дар"
 
-#: plugins/folder/viewpropertiesmenu.cpp:71
+#: plugins/folder/viewpropertiesmenu.cpp:70
 #, fuzzy, kde-format
-#| msgid "Top to Bottom, Left to Right"
+#| msgid "Columns"
 msgctxt "@item:inmenu arrangement of icons"
-msgid "Left to Right"
-msgstr "Сверху вниз, слева направо"
+msgid "In Columns"
+msgstr "Сутунҳо"
 
-#: plugins/folder/viewpropertiesmenu.cpp:72
+#: plugins/folder/viewpropertiesmenu.cpp:74
 #, fuzzy, kde-format
-#| msgid "Top to Bottom, Right to Left"
+#| msgid "Rows"
 msgctxt "@item:inmenu arrangement of icons"
-msgid "Right to Left"
-msgstr "Сверху вниз, справа налево"
+msgid "In Rows"
+msgstr "Қаторҳо"
 
-#: plugins/folder/viewpropertiesmenu.cpp:76
-#, fuzzy, kde-format
-#| msgid "Top to Bottom, Left to Right"
-msgctxt "@item:inmenu arrangement of icons"
-msgid "Top to Bottom"
-msgstr "Сверху вниз, слева направо"
-
-#: plugins/folder/viewpropertiesmenu.cpp:81
+#: plugins/folder/viewpropertiesmenu.cpp:79
 #, kde-format
-msgid "Align"
-msgstr "Москунӣ"
+msgid "Sort Alignment"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:83
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Left to Right"
+msgctxt "@item:inmenu alignment of icons"
+msgid "Left-to-Right"
+msgstr "Сверху вниз, слева направо"
 
 #: plugins/folder/viewpropertiesmenu.cpp:84
 #, fuzzy, kde-format
-#| msgid "Left"
+#| msgid "Top to Bottom, Right to Left"
 msgctxt "@item:inmenu alignment of icons"
-msgid "Left"
-msgstr "Чап"
+msgid "Right-to-Left"
+msgstr "Сверху вниз, справа налево"
 
-#: plugins/folder/viewpropertiesmenu.cpp:88
-#, fuzzy, kde-format
-#| msgid "Right"
-msgctxt "@item:inmenu alignment of icons"
-msgid "Right"
-msgstr "Рост"
-
-#: plugins/folder/viewpropertiesmenu.cpp:93
+#: plugins/folder/viewpropertiesmenu.cpp:94
 #, kde-format
 msgid "Show Previews"
 msgstr "Пешнамоиш"
 
-#: plugins/folder/viewpropertiesmenu.cpp:97
+#: plugins/folder/viewpropertiesmenu.cpp:98
 #, fuzzy, kde-format
 #| msgid "Locked"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Қулфшуда"
+
+#, fuzzy
+#~| msgid "Top to Bottom, Left to Right"
+#~ msgctxt "@item:inlistbox arrangement of icons"
+#~ msgid "Top to Bottom"
+#~ msgstr "Сверху вниз, слева направо"
+
+#, fuzzy
+#~| msgid "Align left"
+#~ msgctxt "@item:inlistbox alignment of icons"
+#~ msgid "Align left"
+#~ msgstr "Аз тарафи чап мос кардан"
+
+#, fuzzy
+#~| msgid "Align right"
+#~ msgctxt "@item:inlistbox alignment of icons"
+#~ msgid "Align right"
+#~ msgstr "Аз тарафи рост мос кардан"
+
+#, fuzzy
+#~| msgid "Top to Bottom, Left to Right"
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Left to Right"
+#~ msgstr "Сверху вниз, слева направо"
+
+#, fuzzy
+#~| msgid "Top to Bottom, Right to Left"
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Right to Left"
+#~ msgstr "Сверху вниз, справа налево"
+
+#, fuzzy
+#~| msgid "Top to Bottom, Left to Right"
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Top to Bottom"
+#~ msgstr "Сверху вниз, слева направо"
+
+#~ msgid "Align"
+#~ msgstr "Москунӣ"
+
+#, fuzzy
+#~| msgid "Left"
+#~ msgctxt "@item:inmenu alignment of icons"
+#~ msgid "Left"
+#~ msgstr "Чап"
+
+#, fuzzy
+#~| msgid "Right"
+#~ msgctxt "@item:inmenu alignment of icons"
+#~ msgid "Right"
+#~ msgstr "Рост"
 
 #~ msgctxt "Restore from trash"
 #~ msgid "Restore"
@@ -733,30 +777,6 @@ msgstr "Қулфшуда"
 
 #~ msgid "Cancel"
 #~ msgstr "Бекор кардан"
-
-#, fuzzy
-#~| msgid "Rows"
-#~ msgctxt "@item:inlistbox arrangement of icons"
-#~ msgid "Rows"
-#~ msgstr "Қаторҳо"
-
-#, fuzzy
-#~| msgid "Columns"
-#~ msgctxt "@item:inlistbox arrangement of icons"
-#~ msgid "Columns"
-#~ msgstr "Сутунҳо"
-
-#, fuzzy
-#~| msgid "Rows"
-#~ msgctxt "@item:inmenu arrangement of icons"
-#~ msgid "Rows"
-#~ msgstr "Қаторҳо"
-
-#, fuzzy
-#~| msgid "Columns"
-#~ msgctxt "@item:inmenu arrangement of icons"
-#~ msgid "Columns"
-#~ msgstr "Сутунҳо"
 
 #~ msgid "Features:"
 #~ msgstr "Хосиятҳо:"
@@ -814,11 +834,6 @@ msgstr "Қулфшуда"
 #~| msgid "Arrangement:"
 #~ msgid "Arrange in"
 #~ msgstr "Расположение:"
-
-#, fuzzy
-#~| msgid "Sorting:"
-#~ msgid "Sort by"
-#~ msgstr "Тартибдиҳӣ:"
 
 #, fuzzy
 #~| msgctxt ""

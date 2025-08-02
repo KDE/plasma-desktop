@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-31 00:43+0000\n"
+"POT-Creation-Date: 2025-08-02 00:45+0000\n"
 "PO-Revision-Date: 2008-11-13 01:06+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -138,60 +138,56 @@ msgstr "Piktogramy sortěrować"
 msgid "Arrangement:"
 msgstr ""
 
+#: package/contents/ui/ConfigIcons.qml:127
+#, kde-format
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "In Columns"
+msgstr ""
+
 #: package/contents/ui/ConfigIcons.qml:128
-#, fuzzy, kde-format
-#| msgid "Top to Bottom"
+#, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
-msgid "Left to Right"
-msgstr "Wot horjeka dele"
+msgid "In Rows"
+msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:129
-#, fuzzy, kde-format
-#| msgid "Top to Bottom"
-msgctxt "@item:inlistbox arrangement of icons"
-msgid "Right to Left"
-msgstr "Wot horjeka dele"
-
-#: package/contents/ui/ConfigIcons.qml:130
-#, fuzzy, kde-format
-#| msgid "Top to Bottom"
-msgctxt "@item:inlistbox arrangement of icons"
-msgid "Top to Bottom"
-msgstr "Wot horjeka dele"
-
-#: package/contents/ui/ConfigIcons.qml:139
-#, fuzzy, kde-format
-#| msgid "Align to Grid"
-msgctxt "@item:inlistbox alignment of icons"
-msgid "Align left"
-msgstr "Po rastru wusměrić"
+#: package/contents/ui/ConfigIcons.qml:137
+#, kde-format
+msgid "Sort Alignment:"
+msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:140
 #, fuzzy, kde-format
-#| msgid "Align to Grid"
+#| msgid "Top to Bottom"
 msgctxt "@item:inlistbox alignment of icons"
-msgid "Align right"
-msgstr "Po rastru wusměrić"
+msgid "Left-to-Right"
+msgstr "Wot horjeka dele"
 
-#: package/contents/ui/ConfigIcons.qml:155
+#: package/contents/ui/ConfigIcons.qml:141
+#, fuzzy, kde-format
+#| msgid "Top to Bottom"
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Right-to-Left"
+msgstr "Wot horjeka dele"
+
+#: package/contents/ui/ConfigIcons.qml:163
 #, fuzzy, kde-format
 #| msgctxt "Icons on the desktop"
 #| msgid "Lock in Place"
 msgid "Lock in place"
 msgstr "Na městno přiwjazać"
 
-#: package/contents/ui/ConfigIcons.qml:169
+#: package/contents/ui/ConfigIcons.qml:177
 #, kde-format
-msgid "Sorting:"
+msgid "Sort by:"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:177
+#: package/contents/ui/ConfigIcons.qml:185
 #, kde-format
 msgctxt "@item:inlistbox sort icons manually"
 msgid "Manual"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:178
+#: package/contents/ui/ConfigIcons.qml:186
 #, fuzzy, kde-format
 #| msgctxt "Sort icons"
 #| msgid "By Name"
@@ -199,7 +195,7 @@ msgctxt "@item:inlistbox sort icons by name"
 msgid "Name"
 msgstr "Po mjenach"
 
-#: package/contents/ui/ConfigIcons.qml:179
+#: package/contents/ui/ConfigIcons.qml:187
 #, fuzzy, kde-format
 #| msgctxt "Sort icons"
 #| msgid "By Size"
@@ -207,7 +203,7 @@ msgctxt "@item:inlistbox sort icons by size"
 msgid "Size"
 msgstr "Po wulkosći"
 
-#: package/contents/ui/ConfigIcons.qml:180
+#: package/contents/ui/ConfigIcons.qml:188
 #, fuzzy, kde-format
 #| msgctxt "Sort icons"
 #| msgid "By Type"
@@ -215,7 +211,7 @@ msgctxt "@item:inlistbox sort icons by file type"
 msgid "Type"
 msgstr "Po družinje"
 
-#: package/contents/ui/ConfigIcons.qml:181
+#: package/contents/ui/ConfigIcons.qml:189
 #, fuzzy, kde-format
 #| msgctxt "Sort icons"
 #| msgid "By Date"
@@ -223,13 +219,13 @@ msgctxt "@item:inlistbox sort icons by date"
 msgid "Date"
 msgstr "Po datumje"
 
-#: package/contents/ui/ConfigIcons.qml:192
+#: package/contents/ui/ConfigIcons.qml:200
 #, kde-format
 msgctxt "@option:check sort icons in descending order"
 msgid "Descending"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:200
+#: package/contents/ui/ConfigIcons.qml:208
 #, fuzzy, kde-format
 #| msgctxt "Sort icons"
 #| msgid "Folders First"
@@ -237,119 +233,119 @@ msgctxt "@option:check sort icons with folders first"
 msgid "Folders first"
 msgstr "Najprjedy zapiski"
 
-#: package/contents/ui/ConfigIcons.qml:214
+#: package/contents/ui/ConfigIcons.qml:222
 #, kde-format
 msgctxt "whether to use icon or list view"
 msgid "View mode:"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:216
+#: package/contents/ui/ConfigIcons.qml:224
 #, kde-format
 msgctxt "@item:inlistbox show icons in a list"
 msgid "List"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:217
+#: package/contents/ui/ConfigIcons.qml:225
 #, kde-format
 msgctxt "@item:inlistbox show icons in a grid"
 msgid "Grid"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:228
+#: package/contents/ui/ConfigIcons.qml:236
 #, fuzzy, kde-format
 #| msgid "Icon size:"
 msgid "Icon size:"
 msgstr "Wulkosć piktogramow:"
 
-#: package/contents/ui/ConfigIcons.qml:243
+#: package/contents/ui/ConfigIcons.qml:251
 #, fuzzy, kde-format
 #| msgid "Small"
 msgctxt "@label:slider smallest icon size"
 msgid "Small"
 msgstr "Małe"
 
-#: package/contents/ui/ConfigIcons.qml:252
+#: package/contents/ui/ConfigIcons.qml:260
 #, fuzzy, kde-format
 #| msgid "Large"
 msgctxt "@label:slider largest icon size"
 msgid "Large"
 msgstr "Wulke"
 
-#: package/contents/ui/ConfigIcons.qml:261
+#: package/contents/ui/ConfigIcons.qml:269
 #, fuzzy, kde-format
 #| msgid "Label:"
 msgid "Label width:"
 msgstr "Etiket:"
 
-#: package/contents/ui/ConfigIcons.qml:264
+#: package/contents/ui/ConfigIcons.qml:272
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Narrow"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:265
+#: package/contents/ui/ConfigIcons.qml:273
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Medium"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:266
+#: package/contents/ui/ConfigIcons.qml:274
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Wide"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:274
+#: package/contents/ui/ConfigIcons.qml:282
 #, kde-format
 msgid "Text lines:"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:290
+#: package/contents/ui/ConfigIcons.qml:298
 #, kde-format
 msgid "When hovering over icons:"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:292
+#: package/contents/ui/ConfigIcons.qml:300
 #, kde-format
 msgid "Show tooltips"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:299
+#: package/contents/ui/ConfigIcons.qml:307
 #, fuzzy, kde-format
 #| msgid "Desktop Folder"
 msgid "Show selection markers"
 msgstr "Zapisk na dźěłowym powjerchu"
 
-#: package/contents/ui/ConfigIcons.qml:306
+#: package/contents/ui/ConfigIcons.qml:314
 #, fuzzy, kde-format
 #| msgid "Show previews"
 msgid "Show folder preview popups"
 msgstr "Přehladki pokazać"
 
-#: package/contents/ui/ConfigIcons.qml:316
+#: package/contents/ui/ConfigIcons.qml:324
 #, fuzzy, kde-format
 #| msgid "&Rename"
 msgid "Rename:"
 msgstr "&Hinak pomjenować"
 
-#: package/contents/ui/ConfigIcons.qml:320
+#: package/contents/ui/ConfigIcons.qml:328
 #, kde-format
 msgid "Rename inline by clicking selected item's text"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:331
+#: package/contents/ui/ConfigIcons.qml:339
 #, fuzzy, kde-format
 #| msgid "Show previews"
 msgid "Previews:"
 msgstr "Přehladki pokazać"
 
-#: package/contents/ui/ConfigIcons.qml:333
+#: package/contents/ui/ConfigIcons.qml:341
 #, fuzzy, kde-format
 #| msgid "Show previews"
 msgid "Show preview thumbnails"
 msgstr "Přehladki pokazać"
 
-#: package/contents/ui/ConfigIcons.qml:341
+#: package/contents/ui/ConfigIcons.qml:349
 #, fuzzy, kde-format
 #| msgid "Show previews"
 msgid "Configure Preview Plugins…"
@@ -678,56 +674,89 @@ msgctxt "@item:inmenu arrangement of icons"
 msgid "Arrange"
 msgstr ""
 
-#: plugins/folder/viewpropertiesmenu.cpp:71
+#: plugins/folder/viewpropertiesmenu.cpp:70
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "In Columns"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:74
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "In Rows"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:79
+#, kde-format
+msgid "Sort Alignment"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:83
 #, fuzzy, kde-format
 #| msgid "Top to Bottom"
-msgctxt "@item:inmenu arrangement of icons"
-msgid "Left to Right"
+msgctxt "@item:inmenu alignment of icons"
+msgid "Left-to-Right"
 msgstr "Wot horjeka dele"
-
-#: plugins/folder/viewpropertiesmenu.cpp:72
-#, fuzzy, kde-format
-#| msgid "Top to Bottom"
-msgctxt "@item:inmenu arrangement of icons"
-msgid "Right to Left"
-msgstr "Wot horjeka dele"
-
-#: plugins/folder/viewpropertiesmenu.cpp:76
-#, fuzzy, kde-format
-#| msgid "Top to Bottom"
-msgctxt "@item:inmenu arrangement of icons"
-msgid "Top to Bottom"
-msgstr "Wot horjeka dele"
-
-#: plugins/folder/viewpropertiesmenu.cpp:81
-#, fuzzy, kde-format
-#| msgid "Align to Grid"
-msgid "Align"
-msgstr "Po rastru wusměrić"
 
 #: plugins/folder/viewpropertiesmenu.cpp:84
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Top to Bottom"
 msgctxt "@item:inmenu alignment of icons"
-msgid "Left"
-msgstr ""
+msgid "Right-to-Left"
+msgstr "Wot horjeka dele"
 
-#: plugins/folder/viewpropertiesmenu.cpp:88
-#, kde-format
-msgctxt "@item:inmenu alignment of icons"
-msgid "Right"
-msgstr ""
-
-#: plugins/folder/viewpropertiesmenu.cpp:93
+#: plugins/folder/viewpropertiesmenu.cpp:94
 #, fuzzy, kde-format
 #| msgid "Show previews"
 msgid "Show Previews"
 msgstr "Přehladki pokazać"
 
-#: plugins/folder/viewpropertiesmenu.cpp:97
+#: plugins/folder/viewpropertiesmenu.cpp:98
 #, kde-format
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Top to Bottom"
+#~ msgctxt "@item:inlistbox arrangement of icons"
+#~ msgid "Top to Bottom"
+#~ msgstr "Wot horjeka dele"
+
+#, fuzzy
+#~| msgid "Align to Grid"
+#~ msgctxt "@item:inlistbox alignment of icons"
+#~ msgid "Align left"
+#~ msgstr "Po rastru wusměrić"
+
+#, fuzzy
+#~| msgid "Align to Grid"
+#~ msgctxt "@item:inlistbox alignment of icons"
+#~ msgid "Align right"
+#~ msgstr "Po rastru wusměrić"
+
+#, fuzzy
+#~| msgid "Top to Bottom"
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Left to Right"
+#~ msgstr "Wot horjeka dele"
+
+#, fuzzy
+#~| msgid "Top to Bottom"
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Right to Left"
+#~ msgstr "Wot horjeka dele"
+
+#, fuzzy
+#~| msgid "Top to Bottom"
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Top to Bottom"
+#~ msgstr "Wot horjeka dele"
+
+#, fuzzy
+#~| msgid "Align to Grid"
+#~ msgid "Align"
+#~ msgstr "Po rastru wusměrić"
 
 #, fuzzy
 #~| msgid "Create &Folder..."

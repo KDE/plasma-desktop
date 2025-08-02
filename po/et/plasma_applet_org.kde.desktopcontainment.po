@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-31 00:43+0000\n"
+"POT-Creation-Date: 2025-08-02 00:45+0000\n"
 "PO-Revision-Date: 2020-10-08 11:43+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -131,216 +131,216 @@ msgstr "Puhasta ikoon"
 msgid "Arrangement:"
 msgstr "Paigutus:"
 
+#: package/contents/ui/ConfigIcons.qml:127
+#, fuzzy, kde-format
+#| msgid "Columns"
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "In Columns"
+msgstr "Veergudes"
+
 #: package/contents/ui/ConfigIcons.qml:128
 #, fuzzy, kde-format
-#| msgid "Top to Bottom, Left to Right"
+#| msgid "Rows"
 msgctxt "@item:inlistbox arrangement of icons"
-msgid "Left to Right"
-msgstr "Ülalt alla, vasakult paremale"
+msgid "In Rows"
+msgstr "Ridades"
 
-#: package/contents/ui/ConfigIcons.qml:129
+#: package/contents/ui/ConfigIcons.qml:137
 #, fuzzy, kde-format
-#| msgid "Top to Bottom, Right to Left"
-msgctxt "@item:inlistbox arrangement of icons"
-msgid "Right to Left"
-msgstr "Ülalt alla, paremalt vasakule"
-
-#: package/contents/ui/ConfigIcons.qml:130
-#, fuzzy, kde-format
-#| msgid "Top to Bottom, Left to Right"
-msgctxt "@item:inlistbox arrangement of icons"
-msgid "Top to Bottom"
-msgstr "Ülalt alla, vasakult paremale"
-
-#: package/contents/ui/ConfigIcons.qml:139
-#, fuzzy, kde-format
-#| msgid "Align left"
-msgctxt "@item:inlistbox alignment of icons"
-msgid "Align left"
-msgstr "Joondamine vasakule"
+#| msgid "Sorting:"
+msgid "Sort Alignment:"
+msgstr "Sortimine:"
 
 #: package/contents/ui/ConfigIcons.qml:140
 #, fuzzy, kde-format
-#| msgid "Align right"
+#| msgid "Top to Bottom, Left to Right"
 msgctxt "@item:inlistbox alignment of icons"
-msgid "Align right"
-msgstr "Joondamine paremale"
+msgid "Left-to-Right"
+msgstr "Ülalt alla, vasakult paremale"
 
-#: package/contents/ui/ConfigIcons.qml:155
+#: package/contents/ui/ConfigIcons.qml:141
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Right to Left"
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Right-to-Left"
+msgstr "Ülalt alla, paremalt vasakule"
+
+#: package/contents/ui/ConfigIcons.qml:163
 #, kde-format
 msgid "Lock in place"
 msgstr "Lukustamine asukohale"
 
-#: package/contents/ui/ConfigIcons.qml:169
-#, kde-format
-msgid "Sorting:"
-msgstr "Sortimine:"
-
 #: package/contents/ui/ConfigIcons.qml:177
+#, fuzzy, kde-format
+#| msgid "Sort By"
+msgid "Sort by:"
+msgstr "Sortimine"
+
+#: package/contents/ui/ConfigIcons.qml:185
 #, fuzzy, kde-format
 #| msgid "Manual"
 msgctxt "@item:inlistbox sort icons manually"
 msgid "Manual"
 msgstr "Käsitsi"
 
-#: package/contents/ui/ConfigIcons.qml:178
+#: package/contents/ui/ConfigIcons.qml:186
 #, fuzzy, kde-format
 #| msgid "Name"
 msgctxt "@item:inlistbox sort icons by name"
 msgid "Name"
 msgstr "Nime järgi"
 
-#: package/contents/ui/ConfigIcons.qml:179
+#: package/contents/ui/ConfigIcons.qml:187
 #, fuzzy, kde-format
 #| msgid "Size"
 msgctxt "@item:inlistbox sort icons by size"
 msgid "Size"
 msgstr "Suuruse järgi"
 
-#: package/contents/ui/ConfigIcons.qml:180
+#: package/contents/ui/ConfigIcons.qml:188
 #, fuzzy, kde-format
 #| msgid "Type"
 msgctxt "@item:inlistbox sort icons by file type"
 msgid "Type"
 msgstr "Tüübi järgi"
 
-#: package/contents/ui/ConfigIcons.qml:181
+#: package/contents/ui/ConfigIcons.qml:189
 #, fuzzy, kde-format
 #| msgid "Date"
 msgctxt "@item:inlistbox sort icons by date"
 msgid "Date"
 msgstr "Kuupäeva järgi"
 
-#: package/contents/ui/ConfigIcons.qml:192
+#: package/contents/ui/ConfigIcons.qml:200
 #, fuzzy, kde-format
 #| msgid "Descending"
 msgctxt "@option:check sort icons in descending order"
 msgid "Descending"
 msgstr "Alanevalt"
 
-#: package/contents/ui/ConfigIcons.qml:200
+#: package/contents/ui/ConfigIcons.qml:208
 #, fuzzy, kde-format
 #| msgid "Folders first"
 msgctxt "@option:check sort icons with folders first"
 msgid "Folders first"
 msgstr "Kataloogid esimesena"
 
-#: package/contents/ui/ConfigIcons.qml:214
+#: package/contents/ui/ConfigIcons.qml:222
 #, kde-format
 msgctxt "whether to use icon or list view"
 msgid "View mode:"
 msgstr "Vaaterežiim:"
 
-#: package/contents/ui/ConfigIcons.qml:216
+#: package/contents/ui/ConfigIcons.qml:224
 #, fuzzy, kde-format
 #| msgid "List"
 msgctxt "@item:inlistbox show icons in a list"
 msgid "List"
 msgstr "Loend"
 
-#: package/contents/ui/ConfigIcons.qml:217
+#: package/contents/ui/ConfigIcons.qml:225
 #, kde-format
 msgctxt "@item:inlistbox show icons in a grid"
 msgid "Grid"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:228
+#: package/contents/ui/ConfigIcons.qml:236
 #, kde-format
 msgid "Icon size:"
 msgstr "Ikooni suurus:"
 
-#: package/contents/ui/ConfigIcons.qml:243
+#: package/contents/ui/ConfigIcons.qml:251
 #, fuzzy, kde-format
 #| msgid "Small"
 msgctxt "@label:slider smallest icon size"
 msgid "Small"
 msgstr "Väike"
 
-#: package/contents/ui/ConfigIcons.qml:252
+#: package/contents/ui/ConfigIcons.qml:260
 #, fuzzy, kde-format
 #| msgid "Large"
 msgctxt "@label:slider largest icon size"
 msgid "Large"
 msgstr "Suur"
 
-#: package/contents/ui/ConfigIcons.qml:261
+#: package/contents/ui/ConfigIcons.qml:269
 #, kde-format
 msgid "Label width:"
 msgstr "Pealdise laius:"
 
-#: package/contents/ui/ConfigIcons.qml:264
+#: package/contents/ui/ConfigIcons.qml:272
 #, fuzzy, kde-format
 #| msgid "Narrow"
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Narrow"
 msgstr "Kitsas"
 
-#: package/contents/ui/ConfigIcons.qml:265
+#: package/contents/ui/ConfigIcons.qml:273
 #, fuzzy, kde-format
 #| msgid "Medium"
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Medium"
 msgstr "Keskmine"
 
-#: package/contents/ui/ConfigIcons.qml:266
+#: package/contents/ui/ConfigIcons.qml:274
 #, fuzzy, kde-format
 #| msgid "Wide"
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Wide"
 msgstr "Lai"
 
-#: package/contents/ui/ConfigIcons.qml:274
+#: package/contents/ui/ConfigIcons.qml:282
 #, kde-format
 msgid "Text lines:"
 msgstr "Tekstiread:"
 
-#: package/contents/ui/ConfigIcons.qml:290
+#: package/contents/ui/ConfigIcons.qml:298
 #, kde-format
 msgid "When hovering over icons:"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:292
+#: package/contents/ui/ConfigIcons.qml:300
 #, fuzzy, kde-format
 #| msgid "Tooltips"
 msgid "Show tooltips"
 msgstr "Kohtspikrid"
 
-#: package/contents/ui/ConfigIcons.qml:299
+#: package/contents/ui/ConfigIcons.qml:307
 #, fuzzy, kde-format
 #| msgid "Selection markers"
 msgid "Show selection markers"
 msgstr "Valikumarkerid"
 
-#: package/contents/ui/ConfigIcons.qml:306
+#: package/contents/ui/ConfigIcons.qml:314
 #, fuzzy, kde-format
 #| msgid "Folder preview popups"
 msgid "Show folder preview popups"
 msgstr "Kataloogi hüpikeelvaatlused"
 
-#: package/contents/ui/ConfigIcons.qml:316
+#: package/contents/ui/ConfigIcons.qml:324
 #, fuzzy, kde-format
 #| msgid "&Rename"
 msgid "Rename:"
 msgstr "&Nimeta ümber"
 
-#: package/contents/ui/ConfigIcons.qml:320
+#: package/contents/ui/ConfigIcons.qml:328
 #, kde-format
 msgid "Rename inline by clicking selected item's text"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:331
+#: package/contents/ui/ConfigIcons.qml:339
 #, fuzzy, kde-format
 #| msgid "Preview In"
 msgid "Previews:"
 msgstr "Eelvaatlus rakenduses"
 
-#: package/contents/ui/ConfigIcons.qml:333
+#: package/contents/ui/ConfigIcons.qml:341
 #, fuzzy, kde-format
 #| msgid "Preview thumbnails"
 msgid "Show preview thumbnails"
 msgstr "Eelvaatluse pisipildid"
 
-#: package/contents/ui/ConfigIcons.qml:341
+#: package/contents/ui/ConfigIcons.qml:349
 #, fuzzy, kde-format
 #| msgid "Configure Preview Plugins..."
 msgid "Configure Preview Plugins…"
@@ -668,57 +668,101 @@ msgctxt "@item:inmenu arrangement of icons"
 msgid "Arrange"
 msgstr "Paigutus"
 
-#: plugins/folder/viewpropertiesmenu.cpp:71
+#: plugins/folder/viewpropertiesmenu.cpp:70
 #, fuzzy, kde-format
-#| msgid "Top to Bottom, Left to Right"
+#| msgid "Columns"
 msgctxt "@item:inmenu arrangement of icons"
-msgid "Left to Right"
-msgstr "Ülalt alla, vasakult paremale"
+msgid "In Columns"
+msgstr "Veergudes"
 
-#: plugins/folder/viewpropertiesmenu.cpp:72
+#: plugins/folder/viewpropertiesmenu.cpp:74
 #, fuzzy, kde-format
-#| msgid "Top to Bottom, Right to Left"
+#| msgid "Rows"
 msgctxt "@item:inmenu arrangement of icons"
-msgid "Right to Left"
-msgstr "Ülalt alla, paremalt vasakule"
+msgid "In Rows"
+msgstr "Ridades"
 
-#: plugins/folder/viewpropertiesmenu.cpp:76
-#, fuzzy, kde-format
-#| msgid "Top to Bottom, Left to Right"
-msgctxt "@item:inmenu arrangement of icons"
-msgid "Top to Bottom"
-msgstr "Ülalt alla, vasakult paremale"
-
-#: plugins/folder/viewpropertiesmenu.cpp:81
+#: plugins/folder/viewpropertiesmenu.cpp:79
 #, kde-format
-msgid "Align"
-msgstr "Joondamine"
+msgid "Sort Alignment"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:83
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Left to Right"
+msgctxt "@item:inmenu alignment of icons"
+msgid "Left-to-Right"
+msgstr "Ülalt alla, vasakult paremale"
 
 #: plugins/folder/viewpropertiesmenu.cpp:84
 #, fuzzy, kde-format
-#| msgid "Left"
+#| msgid "Top to Bottom, Right to Left"
 msgctxt "@item:inmenu alignment of icons"
-msgid "Left"
-msgstr "Vasakule"
+msgid "Right-to-Left"
+msgstr "Ülalt alla, paremalt vasakule"
 
-#: plugins/folder/viewpropertiesmenu.cpp:88
-#, fuzzy, kde-format
-#| msgid "Right"
-msgctxt "@item:inmenu alignment of icons"
-msgid "Right"
-msgstr "Paremale"
-
-#: plugins/folder/viewpropertiesmenu.cpp:93
+#: plugins/folder/viewpropertiesmenu.cpp:94
 #, kde-format
 msgid "Show Previews"
 msgstr "Eelvaatluse näitamine"
 
-#: plugins/folder/viewpropertiesmenu.cpp:97
+#: plugins/folder/viewpropertiesmenu.cpp:98
 #, fuzzy, kde-format
 #| msgid "Locked"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Lukustatud"
+
+#, fuzzy
+#~| msgid "Top to Bottom, Left to Right"
+#~ msgctxt "@item:inlistbox arrangement of icons"
+#~ msgid "Top to Bottom"
+#~ msgstr "Ülalt alla, vasakult paremale"
+
+#, fuzzy
+#~| msgid "Align left"
+#~ msgctxt "@item:inlistbox alignment of icons"
+#~ msgid "Align left"
+#~ msgstr "Joondamine vasakule"
+
+#, fuzzy
+#~| msgid "Align right"
+#~ msgctxt "@item:inlistbox alignment of icons"
+#~ msgid "Align right"
+#~ msgstr "Joondamine paremale"
+
+#, fuzzy
+#~| msgid "Top to Bottom, Left to Right"
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Left to Right"
+#~ msgstr "Ülalt alla, vasakult paremale"
+
+#, fuzzy
+#~| msgid "Top to Bottom, Right to Left"
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Right to Left"
+#~ msgstr "Ülalt alla, paremalt vasakule"
+
+#, fuzzy
+#~| msgid "Top to Bottom, Left to Right"
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Top to Bottom"
+#~ msgstr "Ülalt alla, vasakult paremale"
+
+#~ msgid "Align"
+#~ msgstr "Joondamine"
+
+#, fuzzy
+#~| msgid "Left"
+#~ msgctxt "@item:inmenu alignment of icons"
+#~ msgid "Left"
+#~ msgstr "Vasakule"
+
+#, fuzzy
+#~| msgid "Right"
+#~ msgctxt "@item:inmenu alignment of icons"
+#~ msgid "Right"
+#~ msgstr "Paremale"
 
 #~ msgctxt "Restore from trash"
 #~ msgid "Restore"
@@ -735,30 +779,6 @@ msgstr "Lukustatud"
 
 #~ msgid "Cancel"
 #~ msgstr "Loobu"
-
-#, fuzzy
-#~| msgid "Rows"
-#~ msgctxt "@item:inlistbox arrangement of icons"
-#~ msgid "Rows"
-#~ msgstr "Ridades"
-
-#, fuzzy
-#~| msgid "Columns"
-#~ msgctxt "@item:inlistbox arrangement of icons"
-#~ msgid "Columns"
-#~ msgstr "Veergudes"
-
-#, fuzzy
-#~| msgid "Rows"
-#~ msgctxt "@item:inmenu arrangement of icons"
-#~ msgid "Rows"
-#~ msgstr "Ridades"
-
-#, fuzzy
-#~| msgid "Columns"
-#~ msgctxt "@item:inmenu arrangement of icons"
-#~ msgid "Columns"
-#~ msgstr "Veergudes"
 
 #~ msgid "Features:"
 #~ msgstr "Omadused:"
@@ -808,11 +828,6 @@ msgstr "Lukustatud"
 #~| msgid "Arrange in:"
 #~ msgid "Arrange in"
 #~ msgstr "Paigutus::"
-
-#, fuzzy
-#~| msgid "Sort By"
-#~ msgid "Sort by"
-#~ msgstr "Sortimine"
 
 #, fuzzy
 #~| msgid "Appearance"

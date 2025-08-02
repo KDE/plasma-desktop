@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-30 00:44+0000\n"
+"POT-Creation-Date: 2025-08-02 00:45+0000\n"
 "PO-Revision-Date: 2025-01-10 00:59+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -328,7 +328,8 @@ msgstr "Rašiklio kalibravimas"
 msgctxt "@info"
 msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
-"revert to default calibration in %1 seconds.</b>"
+"revert to default calibration in %1 seconds unless further action is taken.</"
+"b>"
 msgstr ""
 
 #: ui/Calibration.qml:102
@@ -492,18 +493,18 @@ msgctxt ""
 msgid "pad button %1"
 msgstr "kilimėlio mygtukas %1"
 
-#: ui/StylusTab.qml:216
+#: ui/StylusTab.qml:218
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "Kairės rankos veiksena:"
 
-#: ui/StylusTab.qml:222
+#: ui/StylusTab.qml:224
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
 msgstr "Įjungti"
 
-#: ui/StylusTab.qml:228
+#: ui/StylusTab.qml:230
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -515,14 +516,14 @@ msgstr ""
 "kiekviename įrenginyje skirtingas, bet dažnu atveju tai apkeičia kilimėlio "
 "mygtukų funkcionalumą taip, kad planšetę galima būtų naudoti aukštyn kojomis."
 
-#: ui/StylusTab.qml:240
+#: ui/StylusTab.qml:242
 #, kde-format
 msgctxt ""
 "'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)"
 msgid "Mode:"
 msgstr ""
 
-#: ui/StylusTab.qml:248
+#: ui/StylusTab.qml:250
 #, fuzzy, kde-format
 #| msgctxt "@title:tab"
 #| msgid "Pen"
@@ -531,54 +532,54 @@ msgctxt ""
 msgid "Pen"
 msgstr "Rašiklis"
 
-#: ui/StylusTab.qml:253
+#: ui/StylusTab.qml:255
 #, kde-format
 msgid "The cursor follows where you touch the pen on the surface"
 msgstr ""
 
-#: ui/StylusTab.qml:274
+#: ui/StylusTab.qml:276
 #, kde-format
 msgctxt "Mouse mode, or like using the tablet like a giant touchpad"
 msgid "Mouse"
 msgstr ""
 
-#: ui/StylusTab.qml:279
+#: ui/StylusTab.qml:281
 #, kde-format
 msgid ""
 "Moving the pen on the surface moves the cursor relative to where it was, "
 "like a mouse"
 msgstr ""
 
-#: ui/StylusTab.qml:349
+#: ui/StylusTab.qml:351
 #, kde-format
 msgid "Pen Pressure:"
 msgstr "Rašiklio spaudimas:"
 
-#: ui/StylusTab.qml:409
+#: ui/StylusTab.qml:411
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/StylusTab.qml:417
+#: ui/StylusTab.qml:419
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/StylusTab.qml:428
+#: ui/StylusTab.qml:430
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr "100%"
 
-#: ui/StylusTab.qml:436
+#: ui/StylusTab.qml:438
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr "0%"
 
-#: ui/StylusTab.qml:440
+#: ui/StylusTab.qml:442
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -588,13 +589,13 @@ msgstr ""
 "Ši kreivė valdo santykį tarp spaudimo ant rašiklio ir spaudimo reikšmių, "
 "kurias gauna programos."
 
-#: ui/StylusTab.qml:445
+#: ui/StylusTab.qml:447
 #, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
 msgstr "Spaudimo rėžis:"
 
-#: ui/StylusTab.qml:472
+#: ui/StylusTab.qml:474
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -604,25 +605,25 @@ msgstr ""
 "Aukščiau ar žemiau slenksčio esantis spaudimas bus apribotas ir tai taps "
 "nauju įsigaliojusiu rėžiu."
 
-#: ui/StylusTab.qml:486
+#: ui/StylusTab.qml:485
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "Vyksta kalibravimas"
 
-#: ui/StylusTab.qml:488
+#: ui/StylusTab.qml:487
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "Kalibruoti"
 
-#: ui/StylusTab.qml:491
+#: ui/StylusTab.qml:490
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "Kalibravimas nepalaikomas"
 
-#: ui/StylusTab.qml:532
+#: ui/StylusTab.qml:531
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Refine Existing Calibration"

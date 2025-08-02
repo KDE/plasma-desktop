@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-31 00:43+0000\n"
+"POT-Creation-Date: 2025-08-02 00:45+0000\n"
 "PO-Revision-Date: 2010-07-23 21:17+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -137,198 +137,196 @@ msgstr "Susun Ikon"
 msgid "Arrangement:"
 msgstr ""
 
+#: package/contents/ui/ConfigIcons.qml:127
+#, kde-format
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "In Columns"
+msgstr ""
+
 #: package/contents/ui/ConfigIcons.qml:128
-#, fuzzy, kde-format
-#| msgid "Top to Bottom, Left to Right"
+#, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
-msgid "Left to Right"
-msgstr "Atas ke Bawah, Kiri ke Kanan"
+msgid "In Rows"
+msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:129
-#, fuzzy, kde-format
-#| msgid "Top to Bottom, Right to Left"
-msgctxt "@item:inlistbox arrangement of icons"
-msgid "Right to Left"
-msgstr "Atas ke Bawah, Kanan ke Kiri"
-
-#: package/contents/ui/ConfigIcons.qml:130
-#, fuzzy, kde-format
-#| msgid "Top to Bottom, Left to Right"
-msgctxt "@item:inlistbox arrangement of icons"
-msgid "Top to Bottom"
-msgstr "Atas ke Bawah, Kiri ke Kanan"
-
-#: package/contents/ui/ConfigIcons.qml:139
-#, fuzzy, kde-format
-msgctxt "@item:inlistbox alignment of icons"
-msgid "Align left"
-msgstr "Jajar ikut Grid"
+#: package/contents/ui/ConfigIcons.qml:137
+#, kde-format
+msgid "Sort Alignment:"
+msgstr ""
 
 #: package/contents/ui/ConfigIcons.qml:140
 #, fuzzy, kde-format
+#| msgid "Top to Bottom, Left to Right"
 msgctxt "@item:inlistbox alignment of icons"
-msgid "Align right"
-msgstr "Jajar ikut Grid"
+msgid "Left-to-Right"
+msgstr "Atas ke Bawah, Kiri ke Kanan"
 
-#: package/contents/ui/ConfigIcons.qml:155
+#: package/contents/ui/ConfigIcons.qml:141
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Right to Left"
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Right-to-Left"
+msgstr "Atas ke Bawah, Kanan ke Kiri"
+
+#: package/contents/ui/ConfigIcons.qml:163
 #, kde-format
 msgid "Lock in place"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:169
+#: package/contents/ui/ConfigIcons.qml:177
 #, kde-format
-msgid "Sorting:"
+msgid "Sort by:"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:177
+#: package/contents/ui/ConfigIcons.qml:185
 #, kde-format
 msgctxt "@item:inlistbox sort icons manually"
 msgid "Manual"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:178
+#: package/contents/ui/ConfigIcons.qml:186
 #, fuzzy, kde-format
 msgctxt "@item:inlistbox sort icons by name"
 msgid "Name"
 msgstr "Mengikut Nama"
 
-#: package/contents/ui/ConfigIcons.qml:179
+#: package/contents/ui/ConfigIcons.qml:187
 #, fuzzy, kde-format
 msgctxt "@item:inlistbox sort icons by size"
 msgid "Size"
 msgstr "Saiz:"
 
-#: package/contents/ui/ConfigIcons.qml:180
+#: package/contents/ui/ConfigIcons.qml:188
 #, fuzzy, kde-format
 msgctxt "@item:inlistbox sort icons by file type"
 msgid "Type"
 msgstr "Mengikut Jenis"
 
-#: package/contents/ui/ConfigIcons.qml:181
+#: package/contents/ui/ConfigIcons.qml:189
 #, fuzzy, kde-format
 msgctxt "@item:inlistbox sort icons by date"
 msgid "Date"
 msgstr "Mengikut Tarikh"
 
-#: package/contents/ui/ConfigIcons.qml:192
+#: package/contents/ui/ConfigIcons.qml:200
 #, kde-format
 msgctxt "@option:check sort icons in descending order"
 msgid "Descending"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:200
+#: package/contents/ui/ConfigIcons.qml:208
 #, fuzzy, kde-format
 msgctxt "@option:check sort icons with folders first"
 msgid "Folders first"
 msgstr "Folder Pertama"
 
-#: package/contents/ui/ConfigIcons.qml:214
+#: package/contents/ui/ConfigIcons.qml:222
 #, kde-format
 msgctxt "whether to use icon or list view"
 msgid "View mode:"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:216
+#: package/contents/ui/ConfigIcons.qml:224
 #, kde-format
 msgctxt "@item:inlistbox show icons in a list"
 msgid "List"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:217
+#: package/contents/ui/ConfigIcons.qml:225
 #, kde-format
 msgctxt "@item:inlistbox show icons in a grid"
 msgid "Grid"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:228
+#: package/contents/ui/ConfigIcons.qml:236
 #, fuzzy, kde-format
 msgid "Icon size:"
 msgstr "Saiz ikon:"
 
-#: package/contents/ui/ConfigIcons.qml:243
+#: package/contents/ui/ConfigIcons.qml:251
 #, fuzzy, kde-format
 msgctxt "@label:slider smallest icon size"
 msgid "Small"
 msgstr "Kecil"
 
-#: package/contents/ui/ConfigIcons.qml:252
+#: package/contents/ui/ConfigIcons.qml:260
 #, fuzzy, kde-format
 msgctxt "@label:slider largest icon size"
 msgid "Large"
 msgstr "Besar"
 
-#: package/contents/ui/ConfigIcons.qml:261
+#: package/contents/ui/ConfigIcons.qml:269
 #, kde-format
 msgid "Label width:"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:264
+#: package/contents/ui/ConfigIcons.qml:272
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Narrow"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:265
+#: package/contents/ui/ConfigIcons.qml:273
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Medium"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:266
+#: package/contents/ui/ConfigIcons.qml:274
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Wide"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:274
+#: package/contents/ui/ConfigIcons.qml:282
 #, fuzzy, kde-format
 msgid "Text lines:"
 msgstr "1 fail"
 
-#: package/contents/ui/ConfigIcons.qml:290
+#: package/contents/ui/ConfigIcons.qml:298
 #, kde-format
 msgid "When hovering over icons:"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:292
+#: package/contents/ui/ConfigIcons.qml:300
 #, kde-format
 msgid "Show tooltips"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:299
+#: package/contents/ui/ConfigIcons.qml:307
 #, fuzzy, kde-format
 msgid "Show selection markers"
 msgstr "Pilih Semua"
 
-#: package/contents/ui/ConfigIcons.qml:306
+#: package/contents/ui/ConfigIcons.qml:314
 #, fuzzy, kde-format
 #| msgid "Preview In"
 msgid "Show folder preview popups"
 msgstr "Pralihat Dalam"
 
-#: package/contents/ui/ConfigIcons.qml:316
+#: package/contents/ui/ConfigIcons.qml:324
 #, fuzzy, kde-format
 msgid "Rename:"
 msgstr "&Namakan semula"
 
-#: package/contents/ui/ConfigIcons.qml:320
+#: package/contents/ui/ConfigIcons.qml:328
 #, kde-format
 msgid "Rename inline by clicking selected item's text"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:331
+#: package/contents/ui/ConfigIcons.qml:339
 #, fuzzy, kde-format
 #| msgid "Preview In"
 msgid "Previews:"
 msgstr "Pralihat Dalam"
 
-#: package/contents/ui/ConfigIcons.qml:333
+#: package/contents/ui/ConfigIcons.qml:341
 #, fuzzy, kde-format
 #| msgid "Preview In"
 msgid "Show preview thumbnails"
 msgstr "Pralihat Dalam"
 
-#: package/contents/ui/ConfigIcons.qml:341
+#: package/contents/ui/ConfigIcons.qml:349
 #, kde-format
 msgid "Configure Preview Plugins…"
 msgstr ""
@@ -631,55 +629,86 @@ msgctxt "@item:inmenu arrangement of icons"
 msgid "Arrange"
 msgstr ""
 
-#: plugins/folder/viewpropertiesmenu.cpp:71
+#: plugins/folder/viewpropertiesmenu.cpp:70
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "In Columns"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:74
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "In Rows"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:79
+#, kde-format
+msgid "Sort Alignment"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:83
 #, fuzzy, kde-format
 #| msgid "Top to Bottom, Left to Right"
-msgctxt "@item:inmenu arrangement of icons"
-msgid "Left to Right"
+msgctxt "@item:inmenu alignment of icons"
+msgid "Left-to-Right"
 msgstr "Atas ke Bawah, Kiri ke Kanan"
-
-#: plugins/folder/viewpropertiesmenu.cpp:72
-#, fuzzy, kde-format
-#| msgid "Top to Bottom, Right to Left"
-msgctxt "@item:inmenu arrangement of icons"
-msgid "Right to Left"
-msgstr "Atas ke Bawah, Kanan ke Kiri"
-
-#: plugins/folder/viewpropertiesmenu.cpp:76
-#, fuzzy, kde-format
-#| msgid "Top to Bottom, Left to Right"
-msgctxt "@item:inmenu arrangement of icons"
-msgid "Top to Bottom"
-msgstr "Atas ke Bawah, Kiri ke Kanan"
-
-#: plugins/folder/viewpropertiesmenu.cpp:81
-#, fuzzy, kde-format
-msgid "Align"
-msgstr "Jajar ikut Grid"
 
 #: plugins/folder/viewpropertiesmenu.cpp:84
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Right to Left"
 msgctxt "@item:inmenu alignment of icons"
-msgid "Left"
-msgstr ""
+msgid "Right-to-Left"
+msgstr "Atas ke Bawah, Kanan ke Kiri"
 
-#: plugins/folder/viewpropertiesmenu.cpp:88
-#, kde-format
-msgctxt "@item:inmenu alignment of icons"
-msgid "Right"
-msgstr ""
-
-#: plugins/folder/viewpropertiesmenu.cpp:93
+#: plugins/folder/viewpropertiesmenu.cpp:94
 #, fuzzy, kde-format
 #| msgid "Preview In"
 msgid "Show Previews"
 msgstr "Pralihat Dalam"
 
-#: plugins/folder/viewpropertiesmenu.cpp:97
+#: plugins/folder/viewpropertiesmenu.cpp:98
 #, kde-format
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Top to Bottom, Left to Right"
+#~ msgctxt "@item:inlistbox arrangement of icons"
+#~ msgid "Top to Bottom"
+#~ msgstr "Atas ke Bawah, Kiri ke Kanan"
+
+#, fuzzy
+#~ msgctxt "@item:inlistbox alignment of icons"
+#~ msgid "Align left"
+#~ msgstr "Jajar ikut Grid"
+
+#, fuzzy
+#~ msgctxt "@item:inlistbox alignment of icons"
+#~ msgid "Align right"
+#~ msgstr "Jajar ikut Grid"
+
+#, fuzzy
+#~| msgid "Top to Bottom, Left to Right"
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Left to Right"
+#~ msgstr "Atas ke Bawah, Kiri ke Kanan"
+
+#, fuzzy
+#~| msgid "Top to Bottom, Right to Left"
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Right to Left"
+#~ msgstr "Atas ke Bawah, Kanan ke Kiri"
+
+#, fuzzy
+#~| msgid "Top to Bottom, Left to Right"
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Top to Bottom"
+#~ msgstr "Atas ke Bawah, Kiri ke Kanan"
+
+#, fuzzy
+#~ msgid "Align"
+#~ msgstr "Jajar ikut Grid"
 
 #, fuzzy
 #~| msgid "&Restore"

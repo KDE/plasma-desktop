@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-30 00:42+0000\n"
+"POT-Creation-Date: 2025-08-02 00:45+0000\n"
 "PO-Revision-Date: 2024-10-18 10:41+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -29,90 +29,114 @@ msgstr "Väriteeman nimi"
 msgid "Single click to open files"
 msgstr "Avaa tiedostot kertanapsautuksella"
 
-#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#. i18n: ectx: label, entry (automaticLookAndFeel), group (KDE)
 #: landingpage_kdeglobalssettings.kcfg:19
+#, kde-format
+msgid "Switch the look and feel package depending on time of day"
+msgstr ""
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: landingpage_kdeglobalssettings.kcfg:23
 #, kde-format
 msgid "Global Look and Feel package"
 msgstr "Yleisulkoasun ja -tuntuman paketti"
 
 #. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
 #. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
-#: landingpage_kdeglobalssettings.kcfg:23
 #: landingpage_kdeglobalssettings.kcfg:27
+#: landingpage_kdeglobalssettings.kcfg:31
 #, kde-format
 msgid "Global Look and Feel package, alternate"
 msgstr "Yleisulkoasun ja -tuntuman paketti, vaihtoehtoinen"
 
 #. i18n: ectx: label, entry (animationDurationFactor), group (KDE)
-#: landingpage_kdeglobalssettings.kcfg:31
+#: landingpage_kdeglobalssettings.kcfg:35
 #, kde-format
 msgid "Animation speed"
 msgstr "Animointinopeus"
 
-#: ui/main.qml:33
+#: ui/LookAndFeelBox.qml:101
+#, kde-format
+msgctxt "@action:button"
+msgid "Change global theme"
+msgstr ""
+
+#: ui/LookAndFeelBox.qml:178
+#, kde-format
+msgctxt "@label accessible"
+msgid "Global theme"
+msgstr ""
+
+#: ui/main.qml:35
 #, kde-format
 msgid "Theme:"
 msgstr "Teema:"
 
-#: ui/main.qml:76
+#: ui/main.qml:91
+#, kde-format
+msgctxt "Switch between dark and light look and feel packages automatically"
+msgid "Automatic"
+msgstr ""
+
+#: ui/main.qml:136
 #, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More appearance settings:"
 msgstr "Lisää ulkoasuasetuksia:"
 
-#: ui/main.qml:120
+#: ui/main.qml:180
 #, kde-format
 msgid "Animation speed:"
 msgstr "Animointinopeus:"
 
-#: ui/main.qml:129
+#: ui/main.qml:189
 #, kde-format
 msgctxt "Animation speed"
 msgid "Slow"
 msgstr "Hidas"
 
-#: ui/main.qml:136
+#: ui/main.qml:196
 #, kde-format
 msgctxt "Animation speed"
 msgid "Instant"
 msgstr "Välitön"
 
-#: ui/main.qml:150
+#: ui/main.qml:210
 #, kde-format
 msgctxt ""
 "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
 msgid "Clicking files or folders:"
 msgstr "Tiedostojen ja kansioiden napsauttaminen:"
 
-#: ui/main.qml:158
+#: ui/main.qml:218
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders selects them'"
 msgid "Selects them"
 msgstr "valitsee ne"
 
-#: ui/main.qml:163
+#: ui/main.qml:223
 #, kde-format
 msgid "Open by double-clicking instead"
 msgstr "Avaaminen tapahtuu kaksoisnapsautuksella"
 
-#: ui/main.qml:191
+#: ui/main.qml:251
 #, kde-format
 msgctxt "part of a sentence: 'Clicking files or folders opens them'"
 msgid "Opens them"
 msgstr "avaa ne"
 
-#: ui/main.qml:196
+#: ui/main.qml:256
 #, kde-format
 msgid "Select by clicking on item's selection marker"
 msgstr "Valitse napsauttamalla tietueen valintamerkkiä"
 
-#: ui/main.qml:222
+#: ui/main.qml:282
 #, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More behavior settings:"
 msgstr "Lisää toiminta-asetuksia:"
 
-#: ui/main.qml:235
+#: ui/main.qml:295
 #, kde-format
 msgid "Most used pages:"
 msgstr "Käytetyimmät sivut:"

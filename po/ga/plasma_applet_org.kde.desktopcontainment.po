@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase/plasma_applet_folderview.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-31 00:43+0000\n"
+"POT-Creation-Date: 2025-08-02 00:45+0000\n"
 "PO-Revision-Date: 2008-05-19 07:19-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -144,60 +144,57 @@ msgstr "Sórtáil na Deilbhíní"
 msgid "Arrangement:"
 msgstr "Leagan Amach:"
 
+#: package/contents/ui/ConfigIcons.qml:127
+#, kde-format
+msgctxt "@item:inlistbox arrangement of icons"
+msgid "In Columns"
+msgstr ""
+
 #: package/contents/ui/ConfigIcons.qml:128
-#, fuzzy, kde-format
-#| msgid "Top to Bottom, Left to Right"
+#, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
-msgid "Left to Right"
-msgstr "Barr go Bun, Clé go Deas"
+msgid "In Rows"
+msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:129
+#: package/contents/ui/ConfigIcons.qml:137
 #, fuzzy, kde-format
-#| msgid "Top to Bottom, Right to Left"
-msgctxt "@item:inlistbox arrangement of icons"
-msgid "Right to Left"
-msgstr "Barr go Bun, Deas go Clé"
-
-#: package/contents/ui/ConfigIcons.qml:130
-#, fuzzy, kde-format
-#| msgid "Top to Bottom, Left to Right"
-msgctxt "@item:inlistbox arrangement of icons"
-msgid "Top to Bottom"
-msgstr "Barr go Bun, Clé go Deas"
-
-#: package/contents/ui/ConfigIcons.qml:139
-#, fuzzy, kde-format
-#| msgid "Align to grid:"
-msgctxt "@item:inlistbox alignment of icons"
-msgid "Align left"
-msgstr "Ailínigh i ngreille:"
+#| msgid "Sorting:"
+msgid "Sort Alignment:"
+msgstr "Sórtáil:"
 
 #: package/contents/ui/ConfigIcons.qml:140
 #, fuzzy, kde-format
-#| msgid "Align to grid:"
+#| msgid "Top to Bottom, Left to Right"
 msgctxt "@item:inlistbox alignment of icons"
-msgid "Align right"
-msgstr "Ailínigh i ngreille:"
+msgid "Left-to-Right"
+msgstr "Barr go Bun, Clé go Deas"
 
-#: package/contents/ui/ConfigIcons.qml:155
+#: package/contents/ui/ConfigIcons.qml:141
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Right to Left"
+msgctxt "@item:inlistbox alignment of icons"
+msgid "Right-to-Left"
+msgstr "Barr go Bun, Deas go Clé"
+
+#: package/contents/ui/ConfigIcons.qml:163
 #, fuzzy, kde-format
 #| msgid "Lock in place:"
 msgid "Lock in place"
 msgstr "Glasáil ina ionad:"
 
-#: package/contents/ui/ConfigIcons.qml:169
+#: package/contents/ui/ConfigIcons.qml:177
 #, fuzzy, kde-format
 #| msgid "Sorting:"
-msgid "Sorting:"
+msgid "Sort by:"
 msgstr "Sórtáil:"
 
-#: package/contents/ui/ConfigIcons.qml:177
+#: package/contents/ui/ConfigIcons.qml:185
 #, kde-format
 msgctxt "@item:inlistbox sort icons manually"
 msgid "Manual"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:178
+#: package/contents/ui/ConfigIcons.qml:186
 #, fuzzy, kde-format
 #| msgctxt "Sort icons"
 #| msgid "By Name"
@@ -205,14 +202,14 @@ msgctxt "@item:inlistbox sort icons by name"
 msgid "Name"
 msgstr "De Réir Ainm"
 
-#: package/contents/ui/ConfigIcons.qml:179
+#: package/contents/ui/ConfigIcons.qml:187
 #, fuzzy, kde-format
 #| msgid "Size:"
 msgctxt "@item:inlistbox sort icons by size"
 msgid "Size"
 msgstr "Méid:"
 
-#: package/contents/ui/ConfigIcons.qml:180
+#: package/contents/ui/ConfigIcons.qml:188
 #, fuzzy, kde-format
 #| msgctxt "Sort icons"
 #| msgid "By Type"
@@ -220,7 +217,7 @@ msgctxt "@item:inlistbox sort icons by file type"
 msgid "Type"
 msgstr "De Réir Cineáil"
 
-#: package/contents/ui/ConfigIcons.qml:181
+#: package/contents/ui/ConfigIcons.qml:189
 #, fuzzy, kde-format
 #| msgctxt "Sort icons"
 #| msgid "By Date"
@@ -228,7 +225,7 @@ msgctxt "@item:inlistbox sort icons by date"
 msgid "Date"
 msgstr "De Réir Dáta"
 
-#: package/contents/ui/ConfigIcons.qml:192
+#: package/contents/ui/ConfigIcons.qml:200
 #, fuzzy, kde-format
 #| msgctxt "Sort icons"
 #| msgid "Descending"
@@ -236,7 +233,7 @@ msgctxt "@option:check sort icons in descending order"
 msgid "Descending"
 msgstr "Ag dul síos"
 
-#: package/contents/ui/ConfigIcons.qml:200
+#: package/contents/ui/ConfigIcons.qml:208
 #, fuzzy, kde-format
 #| msgctxt "Sort icons"
 #| msgid "Folders First"
@@ -244,120 +241,120 @@ msgctxt "@option:check sort icons with folders first"
 msgid "Folders first"
 msgstr "Fillteáin Ar dTús"
 
-#: package/contents/ui/ConfigIcons.qml:214
+#: package/contents/ui/ConfigIcons.qml:222
 #, kde-format
 msgctxt "whether to use icon or list view"
 msgid "View mode:"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:216
+#: package/contents/ui/ConfigIcons.qml:224
 #, kde-format
 msgctxt "@item:inlistbox show icons in a list"
 msgid "List"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:217
+#: package/contents/ui/ConfigIcons.qml:225
 #, kde-format
 msgctxt "@item:inlistbox show icons in a grid"
 msgid "Grid"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:228
+#: package/contents/ui/ConfigIcons.qml:236
 #, fuzzy, kde-format
 #| msgid "Icon size:"
 msgid "Icon size:"
 msgstr "Méid na ndeilbhíní:"
 
-#: package/contents/ui/ConfigIcons.qml:243
+#: package/contents/ui/ConfigIcons.qml:251
 #, fuzzy, kde-format
 #| msgid "Small"
 msgctxt "@label:slider smallest icon size"
 msgid "Small"
 msgstr "Beag"
 
-#: package/contents/ui/ConfigIcons.qml:252
+#: package/contents/ui/ConfigIcons.qml:260
 #, fuzzy, kde-format
 #| msgid "Large"
 msgctxt "@label:slider largest icon size"
 msgid "Large"
 msgstr "Mór"
 
-#: package/contents/ui/ConfigIcons.qml:261
+#: package/contents/ui/ConfigIcons.qml:269
 #, fuzzy, kde-format
 #| msgid "Label:"
 msgid "Label width:"
 msgstr "Lipéad:"
 
-#: package/contents/ui/ConfigIcons.qml:264
+#: package/contents/ui/ConfigIcons.qml:272
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Narrow"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:265
+#: package/contents/ui/ConfigIcons.qml:273
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Medium"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:266
+#: package/contents/ui/ConfigIcons.qml:274
 #, kde-format
 msgctxt "@item:inlistbox how long a text label should be"
 msgid "Wide"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:274
+#: package/contents/ui/ConfigIcons.qml:282
 #, fuzzy, kde-format
 #| msgid " lines"
 msgid "Text lines:"
 msgstr " líne"
 
-#: package/contents/ui/ConfigIcons.qml:290
+#: package/contents/ui/ConfigIcons.qml:298
 #, kde-format
 msgid "When hovering over icons:"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:292
+#: package/contents/ui/ConfigIcons.qml:300
 #, kde-format
 msgid "Show tooltips"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:299
+#: package/contents/ui/ConfigIcons.qml:307
 #, fuzzy, kde-format
 #| msgid "Select All"
 msgid "Show selection markers"
 msgstr "Roghnaigh Uile"
 
-#: package/contents/ui/ConfigIcons.qml:306
+#: package/contents/ui/ConfigIcons.qml:314
 #, fuzzy, kde-format
 #| msgid "Previews:"
 msgid "Show folder preview popups"
 msgstr "Réamhamhairc:"
 
-#: package/contents/ui/ConfigIcons.qml:316
+#: package/contents/ui/ConfigIcons.qml:324
 #, fuzzy, kde-format
 #| msgid "&Rename"
 msgid "Rename:"
 msgstr "&Athainmnigh"
 
-#: package/contents/ui/ConfigIcons.qml:320
+#: package/contents/ui/ConfigIcons.qml:328
 #, kde-format
 msgid "Rename inline by clicking selected item's text"
 msgstr ""
 
-#: package/contents/ui/ConfigIcons.qml:331
+#: package/contents/ui/ConfigIcons.qml:339
 #, fuzzy, kde-format
 #| msgid "Previews:"
 msgid "Previews:"
 msgstr "Réamhamhairc:"
 
-#: package/contents/ui/ConfigIcons.qml:333
+#: package/contents/ui/ConfigIcons.qml:341
 #, fuzzy, kde-format
 #| msgid "Previews:"
 msgid "Show preview thumbnails"
 msgstr "Réamhamhairc:"
 
-#: package/contents/ui/ConfigIcons.qml:341
+#: package/contents/ui/ConfigIcons.qml:349
 #, fuzzy, kde-format
 #| msgid "More Preview Options..."
 msgid "Configure Preview Plugins…"
@@ -692,56 +689,89 @@ msgctxt "@item:inmenu arrangement of icons"
 msgid "Arrange"
 msgstr "Eagraigh na deilbhíní:"
 
-#: plugins/folder/viewpropertiesmenu.cpp:71
+#: plugins/folder/viewpropertiesmenu.cpp:70
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "In Columns"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:74
+#, kde-format
+msgctxt "@item:inmenu arrangement of icons"
+msgid "In Rows"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:79
+#, kde-format
+msgid "Sort Alignment"
+msgstr ""
+
+#: plugins/folder/viewpropertiesmenu.cpp:83
 #, fuzzy, kde-format
 #| msgid "Top to Bottom, Left to Right"
-msgctxt "@item:inmenu arrangement of icons"
-msgid "Left to Right"
+msgctxt "@item:inmenu alignment of icons"
+msgid "Left-to-Right"
 msgstr "Barr go Bun, Clé go Deas"
-
-#: plugins/folder/viewpropertiesmenu.cpp:72
-#, fuzzy, kde-format
-#| msgid "Top to Bottom, Right to Left"
-msgctxt "@item:inmenu arrangement of icons"
-msgid "Right to Left"
-msgstr "Barr go Bun, Deas go Clé"
-
-#: plugins/folder/viewpropertiesmenu.cpp:76
-#, fuzzy, kde-format
-#| msgid "Top to Bottom, Left to Right"
-msgctxt "@item:inmenu arrangement of icons"
-msgid "Top to Bottom"
-msgstr "Barr go Bun, Clé go Deas"
-
-#: plugins/folder/viewpropertiesmenu.cpp:81
-#, fuzzy, kde-format
-#| msgid "Align to grid:"
-msgid "Align"
-msgstr "Ailínigh i ngreille:"
 
 #: plugins/folder/viewpropertiesmenu.cpp:84
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Top to Bottom, Right to Left"
 msgctxt "@item:inmenu alignment of icons"
-msgid "Left"
-msgstr ""
+msgid "Right-to-Left"
+msgstr "Barr go Bun, Deas go Clé"
 
-#: plugins/folder/viewpropertiesmenu.cpp:88
-#, kde-format
-msgctxt "@item:inmenu alignment of icons"
-msgid "Right"
-msgstr ""
-
-#: plugins/folder/viewpropertiesmenu.cpp:93
+#: plugins/folder/viewpropertiesmenu.cpp:94
 #, fuzzy, kde-format
 #| msgid "Previews:"
 msgid "Show Previews"
 msgstr "Réamhamhairc:"
 
-#: plugins/folder/viewpropertiesmenu.cpp:97
+#: plugins/folder/viewpropertiesmenu.cpp:98
 #, kde-format
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Top to Bottom, Left to Right"
+#~ msgctxt "@item:inlistbox arrangement of icons"
+#~ msgid "Top to Bottom"
+#~ msgstr "Barr go Bun, Clé go Deas"
+
+#, fuzzy
+#~| msgid "Align to grid:"
+#~ msgctxt "@item:inlistbox alignment of icons"
+#~ msgid "Align left"
+#~ msgstr "Ailínigh i ngreille:"
+
+#, fuzzy
+#~| msgid "Align to grid:"
+#~ msgctxt "@item:inlistbox alignment of icons"
+#~ msgid "Align right"
+#~ msgstr "Ailínigh i ngreille:"
+
+#, fuzzy
+#~| msgid "Top to Bottom, Left to Right"
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Left to Right"
+#~ msgstr "Barr go Bun, Clé go Deas"
+
+#, fuzzy
+#~| msgid "Top to Bottom, Right to Left"
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Right to Left"
+#~ msgstr "Barr go Bun, Deas go Clé"
+
+#, fuzzy
+#~| msgid "Top to Bottom, Left to Right"
+#~ msgctxt "@item:inmenu arrangement of icons"
+#~ msgid "Top to Bottom"
+#~ msgstr "Barr go Bun, Clé go Deas"
+
+#, fuzzy
+#~| msgid "Align to grid:"
+#~ msgid "Align"
+#~ msgstr "Ailínigh i ngreille:"
 
 #, fuzzy
 #~| msgid "&Restore"
@@ -782,11 +812,6 @@ msgstr ""
 #~| msgid "Arrange icons:"
 #~ msgid "Arrange in"
 #~ msgstr "Eagraigh na deilbhíní:"
-
-#, fuzzy
-#~| msgid "Sorting:"
-#~ msgid "Sort by"
-#~ msgstr "Sórtáil:"
 
 #, fuzzy
 #~| msgctxt ""
