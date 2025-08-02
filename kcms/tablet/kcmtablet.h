@@ -51,6 +51,8 @@ public:
     // QML does not support QPair, so let's use a QList as a workaround
     Q_SCRIPTABLE QList<QPointF> fromSerializedCurve(const QString &curve);
 
+    Q_SCRIPTABLE void configureBuiltInScreen(InputDevice *device);
+
     WacomDeviceDatabase *db() const;
 
 Q_SIGNALS:

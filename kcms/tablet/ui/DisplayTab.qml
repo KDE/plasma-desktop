@@ -18,6 +18,7 @@ Kirigami.FormLayout {
     id: root
 
     required property KCM.InputDevice device
+    required property bool hasBuiltInScreen
 
     function settingsRestored(): void {
         // we have to reload this manually because it's function-based
@@ -116,6 +117,15 @@ Kirigami.FormLayout {
         displayVisible: outputsCombo.currentIndex !== 0
         device: root.device
         mode: outputAreaCombo.currentIndex
+
+        Layout.fillWidth: true
+    }
+
+    QQC2.Button {
+        icon.name: "preferences-desktop-display"
+        text: i18nc("@action:button", "Configure Built-In Display…")
+        onClicked: kcm.configureBuiltInScreen(root.device)
+        visible: root.hasBuiltInScreen
 
         Layout.fillWidth: true
     }
