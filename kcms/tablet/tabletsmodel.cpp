@@ -58,28 +58,12 @@ QVariant TabletsModel::data(const QModelIndex &index, int role) const
     case Qt::DisplayRole:
         const auto &tablet = m_devices.at(index.row());
 
+        if (tablet.wacomDevice) {
+            return libwacom_get_name(tablet.wacomDevice);
+        }
+
         const bool hasPenDevice = tablet.penDevice != nullptr;
         const bool hasPadDevice = tablet.padDevice != nullptr;
-
-        QString sysPath;
-        // Prefer grabbing the sysPath from the pen, not the pad (if available)
-        if (hasPenDevice) {
-            sysPath = QStringLiteral("/dev/input/%1").arg(tablet.penDevice->sysName());
-        } else if (hasPadDevice) {
-            sysPath = QStringLiteral("/dev/input/%1").arg(tablet.padDevice->sysName());
-        } else {
-            Q_UNREACHABLE();
-        }
-
-        WacomError *error = libwacom_error_new();
-        auto device = libwacom_new_from_path(m_db, sysPath.toLatin1().constData(), WFALLBACK_NONE, error);
-        if (device == nullptr) {
-            qCWarning(KCM_TABLET()) << "Failed to find device in libwacom:" << libwacom_error_get_message(error);
-            libwacom_error_free(&error);
-        } else {
-            libwacom_error_free(&error);
-            return libwacom_get_name(device);
-        }
 
         if (hasPenDevice) {
             return m_devices.at(index.row()).penDevice->name();
@@ -219,6 +203,29 @@ void TabletsModel::addDevice(const QString &sysName, bool tellModel)
                 tablet.padDevice = std::move(dev);
             }
 
+            const bool hasPenDevice = tablet.penDevice != nullptr;
+            const bool hasPadDevice = tablet.padDevice != nullptr;
+
+            QString sysPath;
+            // Prefer grabbing the sysPath from the pen, not the pad (if available)
+            if (hasPenDevice) {
+                sysPath = QStringLiteral("/dev/input/%1").arg(tablet.penDevice->sysName());
+            } else if (hasPadDevice) {
+                sysPath = QStringLiteral("/dev/input/%1").arg(tablet.padDevice->sysName());
+            } else {
+                Q_UNREACHABLE();
+            }
+
+            WacomError *error = libwacom_error_new();
+            auto device = libwacom_new_from_path(m_db, sysPath.toLatin1().constData(), WFALLBACK_NONE, error);
+            if (device == nullptr) {
+                qCWarning(KCM_TABLET()) << "Failed to find device in libwacom:" << libwacom_error_get_message(error);
+                libwacom_error_free(&error);
+            } else {
+                libwacom_error_free(&error);
+                tablet.wacomDevice = device;
+            }
+
             if (tellModel) {
                 beginInsertRows({}, m_devices.size(), m_devices.size());
             }
@@ -295,6 +302,20 @@ InputDevice *TabletsModel::padAt(int row) const
     }
 
     return m_devices[row].padDevice;
+}
+
+bool TabletsModel::hasBuiltInScreen(int row) const
+{
+    if (row == -1) {
+        return false;
+    }
+
+    auto wacomDevice = m_devices[row].wacomDevice;
+    if (wacomDevice == nullptr) {
+        return false;
+    }
+
+    return libwacom_get_integration_flags(wacomDevice) & WACOM_DEVICE_INTEGRATED_DISPLAY;
 }
 
 QHash<int, QByteArray> TabletsModel::roleNames() const

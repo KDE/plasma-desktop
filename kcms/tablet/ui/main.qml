@@ -20,6 +20,7 @@ SimpleKCM {
     property bool testerWindowOpen: false
     property KCM.InputDevice device
     property KCM.InputDevice padDevice
+    property bool hasBuiltInScreen: false
 
     ConfigModule.buttons: ConfigModule.Default | ConfigModule.Apply
 
@@ -115,6 +116,7 @@ SimpleKCM {
                 function reload(): void {
                     root.device = kcm.tabletsModel.penAt(combo.currentIndex);
                     root.padDevice = kcm.tabletsModel.padAt(combo.currentIndex);
+                    root.hasBuiltInScreen = kcm.tabletsModel.hasBuiltInScreen(combo.currentIndex);
 
                     // If it is a pen device, prefer the display tab first.
                     // Otherwise, if it's a lonely pad then we only have the pad tab available.
@@ -223,6 +225,7 @@ SimpleKCM {
             id: tab
 
             device: root.device
+            hasBuiltInScreen: root.hasBuiltInScreen
 
             Connections {
                 target: kcm

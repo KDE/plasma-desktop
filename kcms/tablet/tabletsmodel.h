@@ -22,6 +22,7 @@ struct TabletDevice {
     QString deviceGroup;
     InputDevice *padDevice = nullptr;
     InputDevice *penDevice = nullptr;
+    WacomDevice *wacomDevice = nullptr;
 };
 
 class TabletsModel : public QAbstractListModel
@@ -44,6 +45,7 @@ public:
 public Q_SLOTS:
     InputDevice *penAt(int row) const;
     InputDevice *padAt(int row) const;
+    bool hasBuiltInScreen(int row) const;
 
 private Q_SLOTS:
     void onDeviceAdded(const QString &sysName);

@@ -18,6 +18,7 @@
 #include <QMatrix4x4>
 #include <QScreen>
 #include <QStandardItemModel>
+#include <QtCore/QStringList>
 
 K_PLUGIN_FACTORY_WITH_JSON(TabletFactory, "kcm_tablet.json", registerPlugin<Tablet>(); registerPlugin<TabletModuleData>();)
 
@@ -488,6 +489,53 @@ QList<QPointF> Tablet::fromSerializedCurve(const QString &curve)
     }
 
     return points;
+}
+
+void Tablet::configureBuiltInScreen(InputDevice *device)
+{
+    QStringList deviceNameSplit;
+
+    const QString sysPath = QStringLiteral("/dev/input/%1").arg(device->sysName());
+    WacomError *error = libwacom_error_new();
+    auto wacomDevice = libwacom_new_from_path(m_db, sysPath.toLatin1().constData(), WFALLBACK_GENERIC, error);
+    if (wacomDevice == nullptr) {
+        qCWarning(KCM_TABLET()) << "Failed to find device in libwacom:" << libwacom_error_get_message(error) << "we won't attempt to match by name";
+    } else {
+        deviceNameSplit = QString::fromLatin1(libwacom_get_name(wacomDevice)).split(QLatin1Char(' '));
+    }
+
+    // Try to find the built-in display for the tablet, and fallback to selecting nothing if not found.
+    // Currently there isn't a great heuristic or API to associate tablets with their display.
+    // So the best we can do is match it based on what we have!
+    auto screens = qApp->screens();
+    int displayIndex = -1;
+    int i = 0;
+    for (const auto screen : screens) {
+        const auto screenSize = screen->physicalSize();
+
+        if (!deviceNameSplit.isEmpty()) {
+            // Try walking the name and seeing if it lines up.
+            // Unfortunately the names can be somewhat messy, for example the XP-Pen Artist 22R Pro is named "Artist22R Pro".
+            // So the best way to do this is to split up both names, and see if *anything* matches.
+            const auto screenNameSplit = screen->model().split(QLatin1Char(' '));
+            for (const auto &screenNamePart : screenNameSplit) {
+                if (deviceNameSplit.contains(screenNamePart)) {
+                    displayIndex = i;
+                    break;
+                }
+            }
+        }
+
+        // If name matching fails, try to see if we can match it based on size.
+        // We need to round up from libinput who reports it in sub-mm to QScreen who reports it in integer mm
+        if (screenSize == QSizeF(qRound(device->size().width()), qRound(device->size().height()))) {
+            displayIndex = i;
+            break;
+        }
+        i++;
+    }
+    QProcess::startDetached(QStringLiteral("systemsettings"),
+                            QStringList({QStringLiteral("kcm_kscreen"), QStringLiteral("--args"), QString::number(displayIndex)}));
 }
 
 WacomDeviceDatabase *Tablet::db() const
