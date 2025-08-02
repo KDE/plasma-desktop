@@ -97,8 +97,17 @@ SimpleKCM {
                 Kirigami.FormData.label: i18ndc("kcm_tablet", "@label:listbox The device we are configuring", "Device:")
                 model: kcm.tabletsModel
 
-                onCountChanged: if (count > 0 && currentIndex < 0) {
-                    currentIndex = 0;
+                onCountChanged: {
+                    // If a device is added, select that device first.
+                    if (count > 0 && currentIndex < 0) {
+                        currentIndex = 0;
+                        return;
+                    }
+
+                    // If we had previously selected the last device (that was removed) then go back one.
+                    if (currentIndex >= count) {
+                        currentIndex = count - 1;
+                    }
                 }
 
                 onCurrentIndexChanged: reload()
