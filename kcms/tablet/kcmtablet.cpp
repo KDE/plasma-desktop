@@ -173,7 +173,7 @@ class StylusButtonsModel : public QStandardItemModel
     Q_OBJECT
 
     Q_PROPERTY(WacomDeviceDatabase *db READ db WRITE setDb NOTIFY dbChanged REQUIRED)
-    Q_PROPERTY(InputDevice *device READ device WRITE setDevice NOTIFY deviceChanged)
+    Q_PROPERTY(InputDevice *device READ device WRITE setDevice NOTIFY deviceChanged REQUIRED)
 
 public:
     enum CustomRoles {
@@ -227,27 +227,29 @@ Q_SIGNALS:
 private:
     void recalculateItems()
     {
+        if (!m_device || !m_db) {
+            return;
+        }
+
         // When there's no stylus detected in the database, fallback to 3.
         int numButtons = 3;
-        if (m_device && m_db) {
-            const QString sysPath = QStringLiteral("/dev/input/%1").arg(m_device->sysName());
+        const QString sysPath = QStringLiteral("/dev/input/%1").arg(m_device->sysName());
 
-            WacomError *error = libwacom_error_new();
-            auto device = libwacom_new_from_path(m_db, sysPath.toLatin1().constData(), WFALLBACK_GENERIC, error);
-            if (device == nullptr) {
-                qCWarning(KCM_TABLET()) << "Failed to find device in libwacom:" << libwacom_error_get_message(error);
-            } else {
-                int num_styli = 0;
-                const int *styli = libwacom_get_supported_styli(device, &num_styli);
-                if (num_styli > 0) {
-                    const auto stylus = libwacom_stylus_get_for_id(m_db, styli[0]);
-                    if (stylus != nullptr) {
-                        numButtons = libwacom_stylus_get_num_buttons(stylus);
-                    }
+        WacomError *error = libwacom_error_new();
+        auto device = libwacom_new_from_path(m_db, sysPath.toLatin1().constData(), WFALLBACK_GENERIC, error);
+        if (device == nullptr) {
+            qCWarning(KCM_TABLET()) << "Failed to find device in libwacom:" << libwacom_error_get_message(error);
+        } else {
+            int num_styli = 0;
+            const int *styli = libwacom_get_supported_styli(device, &num_styli);
+            if (num_styli > 0) {
+                const auto stylus = libwacom_stylus_get_for_id(m_db, styli[0]);
+                if (stylus != nullptr) {
+                    numButtons = libwacom_stylus_get_num_buttons(stylus);
                 }
             }
-            libwacom_error_free(&error);
         }
+        libwacom_error_free(&error);
 
         // We currently don't support more than 3 stylus buttons, at the moment
         if (numButtons > 3) {
