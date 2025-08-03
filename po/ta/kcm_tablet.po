@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-29 02:41+0000\n"
+"POT-Creation-Date: 2025-08-03 02:38+0000\n"
 "PO-Revision-Date: 2025-04-13 17:58+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -413,18 +413,18 @@ msgctxt ""
 msgid "pad button %1"
 msgstr "வரைபலகை பட்டன் %1"
 
-#: ui/StylusTab.qml:216
+#: ui/StylusTab.qml:220
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "இடதுகை பயன்முறை:"
 
-#: ui/StylusTab.qml:222
+#: ui/StylusTab.qml:226
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
 msgstr "இயக்கு"
 
-#: ui/StylusTab.qml:228
+#: ui/StylusTab.qml:232
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -435,14 +435,14 @@ msgstr ""
 "இடக்கை பயனர்களுக்கு இணங்குமாறு சாதனத்திறுக் கட்டளையிடும். பெரும்பாலும், இது வரைபலகையைத் "
 "தலைகீழாக பயன்படுத்தும் விதத்தில் பட்டன்களை புரட்டும்."
 
-#: ui/StylusTab.qml:240
+#: ui/StylusTab.qml:244
 #, kde-format
 msgctxt ""
 "'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)"
 msgid "Mode:"
 msgstr ""
 
-#: ui/StylusTab.qml:248
+#: ui/StylusTab.qml:252
 #, fuzzy, kde-format
 #| msgctxt "@title:tab"
 #| msgid "Pen"
@@ -451,54 +451,54 @@ msgctxt ""
 msgid "Pen"
 msgstr "பேனா"
 
-#: ui/StylusTab.qml:253
+#: ui/StylusTab.qml:257
 #, kde-format
 msgid "The cursor follows where you touch the pen on the surface"
 msgstr ""
 
-#: ui/StylusTab.qml:274
+#: ui/StylusTab.qml:278
 #, kde-format
 msgctxt "Mouse mode, or like using the tablet like a giant touchpad"
 msgid "Mouse"
 msgstr ""
 
-#: ui/StylusTab.qml:279
+#: ui/StylusTab.qml:283
 #, kde-format
 msgid ""
 "Moving the pen on the surface moves the cursor relative to where it was, "
 "like a mouse"
 msgstr ""
 
-#: ui/StylusTab.qml:349
+#: ui/StylusTab.qml:353
 #, kde-format
 msgid "Pen Pressure:"
 msgstr "பேனா அழுத்தம்:"
 
-#: ui/StylusTab.qml:409
+#: ui/StylusTab.qml:413
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/StylusTab.qml:417
+#: ui/StylusTab.qml:421
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/StylusTab.qml:428
+#: ui/StylusTab.qml:432
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr "100%"
 
-#: ui/StylusTab.qml:436
+#: ui/StylusTab.qml:440
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr "0%"
 
-#: ui/StylusTab.qml:440
+#: ui/StylusTab.qml:444
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -508,13 +508,13 @@ msgstr ""
 "பேனாமீத் நீங்கள் இடும் அழுத்தம், செயலிக்கு எவ்வாறு மாற்றி அனுப்பப்பட வேண்டுமென்பதை இது "
 "தீர்மானிக்கும்"
 
-#: ui/StylusTab.qml:445
+#: ui/StylusTab.qml:449
 #, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
 msgstr "அழுத்த வீச்சு:"
 
-#: ui/StylusTab.qml:472
+#: ui/StylusTab.qml:476
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -524,31 +524,31 @@ msgstr ""
 "அமைக்கப்பட்டுள்ள வரம்பில் அடங்கா அழுத்தத்தின் விளைவு, வரம்பின் எல்லை மதிப்பிற்கான விளைவுபோல் "
 "இருக்கும். அதாவது இந்த வரம்பிற்குள் உள்ள அழுத்த மாறுபாடுகளே கணினியால் பொருட்படுத்தப்படும்."
 
-#: ui/StylusTab.qml:486
+#: ui/StylusTab.qml:490
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "அளதிருத்தம் செயலிலுள்ளது"
 
-#: ui/StylusTab.qml:488
+#: ui/StylusTab.qml:492
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "அளவொப்புமை"
 
-#: ui/StylusTab.qml:491
+#: ui/StylusTab.qml:495
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "அளதிருத்தம் ஆதரிக்கப்படவில்லை"
 
-#: ui/StylusTab.qml:532
+#: ui/StylusTab.qml:536
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
 msgstr "தனிப்பயன் அளதிருத்தத்தை செயல்நீக்கு"
 
-#: ui/StylusTab.qml:546
+#: ui/StylusTab.qml:550
 #, kde-format
 msgctxt "@info"
 msgid ""

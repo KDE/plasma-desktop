@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-29 02:41+0000\n"
+"POT-Creation-Date: 2025-08-03 02:38+0000\n"
 "PO-Revision-Date: 2025-04-28 17:32+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -412,18 +412,18 @@ msgctxt ""
 msgid "pad button %1"
 msgstr "زر اللوحي %1"
 
-#: ui/StylusTab.qml:216
+#: ui/StylusTab.qml:220
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "وضع الأعسر:"
 
-#: ui/StylusTab.qml:222
+#: ui/StylusTab.qml:226
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
 msgstr "مكّن"
 
-#: ui/StylusTab.qml:228
+#: ui/StylusTab.qml:232
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -435,68 +435,68 @@ msgstr ""
 "ولكنها غالبًا ما تؤدي إلى عكس وظيفة أزرار اللوحة بحيث يمكن استخدام الجهاز "
 "اللوحي رأسًا على عقب."
 
-#: ui/StylusTab.qml:240
+#: ui/StylusTab.qml:244
 #, kde-format
 msgctxt ""
 "'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)"
 msgid "Mode:"
 msgstr "الوضع:"
 
-#: ui/StylusTab.qml:248
+#: ui/StylusTab.qml:252
 #, kde-format
 msgctxt ""
 "Pen mode, where the point on the screen is always where you touch the stylus"
 msgid "Pen"
 msgstr "القلم"
 
-#: ui/StylusTab.qml:253
+#: ui/StylusTab.qml:257
 #, kde-format
 msgid "The cursor follows where you touch the pen on the surface"
 msgstr "يتبع المؤشر المكان الذي يلمسُ القلمُ فيه السطحَ"
 
-#: ui/StylusTab.qml:274
+#: ui/StylusTab.qml:278
 #, kde-format
 msgctxt "Mouse mode, or like using the tablet like a giant touchpad"
 msgid "Mouse"
 msgstr "الفأرة"
 
-#: ui/StylusTab.qml:279
+#: ui/StylusTab.qml:283
 #, kde-format
 msgid ""
 "Moving the pen on the surface moves the cursor relative to where it was, "
 "like a mouse"
 msgstr "تحريك القلم على السطح يحرك المؤشر بالنسبة إلى مكانه، مثل الفأرة"
 
-#: ui/StylusTab.qml:349
+#: ui/StylusTab.qml:353
 #, kde-format
 msgid "Pen Pressure:"
 msgstr "ضغط القلم:"
 
-#: ui/StylusTab.qml:409
+#: ui/StylusTab.qml:413
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
 msgstr "%1٪"
 
-#: ui/StylusTab.qml:417
+#: ui/StylusTab.qml:421
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
 msgstr "%1٪"
 
-#: ui/StylusTab.qml:428
+#: ui/StylusTab.qml:432
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr "100٪"
 
-#: ui/StylusTab.qml:436
+#: ui/StylusTab.qml:440
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr "0٪"
 
-#: ui/StylusTab.qml:440
+#: ui/StylusTab.qml:444
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -506,13 +506,13 @@ msgstr ""
 "يتحكم هذا المنحنى في العلاقة بين الضغط على القلم وقيم الضغط التي تتلقاها "
 "التطبيقات."
 
-#: ui/StylusTab.qml:445
+#: ui/StylusTab.qml:449
 #, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
 msgstr "نطاق الضغط:"
 
-#: ui/StylusTab.qml:472
+#: ui/StylusTab.qml:476
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -520,31 +520,31 @@ msgid ""
 "new effective range."
 msgstr "سيثبت الضغط أعلى أو أسفل العتبة، ويصبح هذا هو النطاق الفعال الجديد."
 
-#: ui/StylusTab.qml:486
+#: ui/StylusTab.qml:490
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "معايرة قيد التقدم"
 
-#: ui/StylusTab.qml:488
+#: ui/StylusTab.qml:492
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "عاير"
 
-#: ui/StylusTab.qml:491
+#: ui/StylusTab.qml:495
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "المعايرة غير مدعومة"
 
-#: ui/StylusTab.qml:532
+#: ui/StylusTab.qml:536
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
 msgstr "صفّر المعايرة الحالية"
 
-#: ui/StylusTab.qml:546
+#: ui/StylusTab.qml:550
 #, kde-format
 msgctxt "@info"
 msgid ""

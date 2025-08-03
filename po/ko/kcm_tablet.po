@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-29 02:41+0000\n"
+"POT-Creation-Date: 2025-08-03 02:38+0000\n"
 "PO-Revision-Date: 2025-06-10 22:29+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -413,18 +413,18 @@ msgctxt ""
 msgid "pad button %1"
 msgstr "패드 단추 %1"
 
-#: ui/StylusTab.qml:216
+#: ui/StylusTab.qml:220
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "왼손잡이 모드"
 
-#: ui/StylusTab.qml:222
+#: ui/StylusTab.qml:226
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
 msgstr "활성화"
 
-#: ui/StylusTab.qml:228
+#: ui/StylusTab.qml:232
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -435,68 +435,68 @@ msgstr ""
 "장치에 왼손잡이 사용자 고려 모드를 활성화합니다. 장치에 따라서 동작 방식은 다"
 "르지만, 패드 단추 기능을 반전하여 태블릿을 거꾸로 놓고 쓸 수 있도록 합니다."
 
-#: ui/StylusTab.qml:240
+#: ui/StylusTab.qml:244
 #, kde-format
 msgctxt ""
 "'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)"
 msgid "Mode:"
 msgstr "모드:"
 
-#: ui/StylusTab.qml:248
+#: ui/StylusTab.qml:252
 #, kde-format
 msgctxt ""
 "Pen mode, where the point on the screen is always where you touch the stylus"
 msgid "Pen"
 msgstr "펜"
 
-#: ui/StylusTab.qml:253
+#: ui/StylusTab.qml:257
 #, kde-format
 msgid "The cursor follows where you touch the pen on the surface"
 msgstr "펜이 표면에 닿는 위치로 커서를 이동"
 
-#: ui/StylusTab.qml:274
+#: ui/StylusTab.qml:278
 #, kde-format
 msgctxt "Mouse mode, or like using the tablet like a giant touchpad"
 msgid "Mouse"
 msgstr "마우스"
 
-#: ui/StylusTab.qml:279
+#: ui/StylusTab.qml:283
 #, kde-format
 msgid ""
 "Moving the pen on the surface moves the cursor relative to where it was, "
 "like a mouse"
 msgstr "펜을 표면에서 이동하면 마우스처럼 기존 위치에 상대적으로 커서 이동"
 
-#: ui/StylusTab.qml:349
+#: ui/StylusTab.qml:353
 #, kde-format
 msgid "Pen Pressure:"
 msgstr "펜 압력:"
 
-#: ui/StylusTab.qml:409
+#: ui/StylusTab.qml:413
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/StylusTab.qml:417
+#: ui/StylusTab.qml:421
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/StylusTab.qml:428
+#: ui/StylusTab.qml:432
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr "100%"
 
-#: ui/StylusTab.qml:436
+#: ui/StylusTab.qml:440
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr "0%"
 
-#: ui/StylusTab.qml:440
+#: ui/StylusTab.qml:444
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -506,13 +506,13 @@ msgstr ""
 "이 커브를 사용하여 스타일러스의 입력 압력과 앱에서 받는 압력값의 대응을 조정"
 "합니다."
 
-#: ui/StylusTab.qml:445
+#: ui/StylusTab.qml:449
 #, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
 msgstr "압력 범위:"
 
-#: ui/StylusTab.qml:472
+#: ui/StylusTab.qml:476
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -522,31 +522,31 @@ msgstr ""
 "한계 범위 이상이나 이하의 압력은 최댓값 및 최솟값으로 제한되며, 새로운 압력 "
 "범위가 됩니다."
 
-#: ui/StylusTab.qml:486
+#: ui/StylusTab.qml:490
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "조정 진행 중"
 
-#: ui/StylusTab.qml:488
+#: ui/StylusTab.qml:492
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "조정"
 
-#: ui/StylusTab.qml:491
+#: ui/StylusTab.qml:495
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "조정을 지원하지 않음"
 
-#: ui/StylusTab.qml:532
+#: ui/StylusTab.qml:536
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
 msgstr "미세 조정 초기화"
 
-#: ui/StylusTab.qml:546
+#: ui/StylusTab.qml:550
 #, kde-format
 msgctxt "@info"
 msgid ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-29 02:41+0000\n"
+"POT-Creation-Date: 2025-08-03 02:38+0000\n"
 "PO-Revision-Date: 2025-06-06 22:12+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -413,18 +413,18 @@ msgctxt ""
 msgid "pad button %1"
 msgstr "%1. táblagomb"
 
-#: ui/StylusTab.qml:216
+#: ui/StylusTab.qml:220
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "Balkezes mód:"
 
-#: ui/StylusTab.qml:222
+#: ui/StylusTab.qml:226
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
 msgstr "Bekapcsolás"
 
-#: ui/StylusTab.qml:228
+#: ui/StylusTab.qml:232
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -436,32 +436,32 @@ msgstr ""
 "hatások eszközönként változnak, de gyakran megfordítja a rajztábla "
 "gombjainak működését, így a tábla fejjel lefelé is használható."
 
-#: ui/StylusTab.qml:240
+#: ui/StylusTab.qml:244
 #, kde-format
 msgctxt ""
 "'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)"
 msgid "Mode:"
 msgstr "Mód:"
 
-#: ui/StylusTab.qml:248
+#: ui/StylusTab.qml:252
 #, kde-format
 msgctxt ""
 "Pen mode, where the point on the screen is always where you touch the stylus"
 msgid "Pen"
 msgstr "Toll"
 
-#: ui/StylusTab.qml:253
+#: ui/StylusTab.qml:257
 #, kde-format
 msgid "The cursor follows where you touch the pen on the surface"
 msgstr "A kurzor követi, hogy hol érinti a tollat a felülethez"
 
-#: ui/StylusTab.qml:274
+#: ui/StylusTab.qml:278
 #, kde-format
 msgctxt "Mouse mode, or like using the tablet like a giant touchpad"
 msgid "Mouse"
 msgstr "Egér"
 
-#: ui/StylusTab.qml:279
+#: ui/StylusTab.qml:283
 #, kde-format
 msgid ""
 "Moving the pen on the surface moves the cursor relative to where it was, "
@@ -470,36 +470,36 @@ msgstr ""
 "A tollat a felületen mozgatva a kurzor a korábbi helyéhez képest mozog, mint "
 "az egér"
 
-#: ui/StylusTab.qml:349
+#: ui/StylusTab.qml:353
 #, kde-format
 msgid "Pen Pressure:"
 msgstr "Tollnyomás:"
 
-#: ui/StylusTab.qml:409
+#: ui/StylusTab.qml:413
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/StylusTab.qml:417
+#: ui/StylusTab.qml:421
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/StylusTab.qml:428
+#: ui/StylusTab.qml:432
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr "100%"
 
-#: ui/StylusTab.qml:436
+#: ui/StylusTab.qml:440
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr "0%"
 
-#: ui/StylusTab.qml:440
+#: ui/StylusTab.qml:444
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -509,13 +509,13 @@ msgstr ""
 "Ez a görbe szabályozza a kapcsolatot a tollra gyakorolt nyomás és az "
 "alkalmazások által kapott nyomásértékek között."
 
-#: ui/StylusTab.qml:445
+#: ui/StylusTab.qml:449
 #, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
 msgstr "Nyomástartomány:"
 
-#: ui/StylusTab.qml:472
+#: ui/StylusTab.qml:476
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -525,31 +525,31 @@ msgstr ""
 "A küszöbérték feletti vagy alatti nyomás rögzítésre kerül, és ez lesz az új "
 "effektív tartomány."
 
-#: ui/StylusTab.qml:486
+#: ui/StylusTab.qml:490
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "Kalibráció folyamatban"
 
-#: ui/StylusTab.qml:488
+#: ui/StylusTab.qml:492
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "Kalibrálás"
 
-#: ui/StylusTab.qml:491
+#: ui/StylusTab.qml:495
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "Kalibráció nem támogatott"
 
-#: ui/StylusTab.qml:532
+#: ui/StylusTab.qml:536
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
 msgstr "Egyéni kalibráció visszaállítása"
 
-#: ui/StylusTab.qml:546
+#: ui/StylusTab.qml:550
 #, kde-format
 msgctxt "@info"
 msgid ""

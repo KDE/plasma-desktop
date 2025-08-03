@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-29 02:41+0000\n"
+"POT-Creation-Date: 2025-08-03 02:38+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -409,18 +409,18 @@ msgctxt ""
 msgid "pad button %1"
 msgstr "板面按钮 %1："
 
-#: ui/StylusTab.qml:216
+#: ui/StylusTab.qml:220
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "左手模式："
 
-#: ui/StylusTab.qml:222
+#: ui/StylusTab.qml:226
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
 msgstr "启用"
 
-#: ui/StylusTab.qml:228
+#: ui/StylusTab.qml:232
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -431,68 +431,68 @@ msgstr ""
 "要求设备针对左手用户进行相应调整。效果因设备而异，但一般都会翻转数位板板面按"
 "钮的方向，以便在旋转 180 度后使用。"
 
-#: ui/StylusTab.qml:240
+#: ui/StylusTab.qml:244
 #, kde-format
 msgctxt ""
 "'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)"
 msgid "Mode:"
 msgstr "模式："
 
-#: ui/StylusTab.qml:248
+#: ui/StylusTab.qml:252
 #, kde-format
 msgctxt ""
 "Pen mode, where the point on the screen is always where you touch the stylus"
 msgid "Pen"
 msgstr "压感笔"
 
-#: ui/StylusTab.qml:253
+#: ui/StylusTab.qml:257
 #, kde-format
 msgid "The cursor follows where you touch the pen on the surface"
 msgstr "光标将始终跟随笔尖与板面接触位置移动"
 
-#: ui/StylusTab.qml:274
+#: ui/StylusTab.qml:278
 #, kde-format
 msgctxt "Mouse mode, or like using the tablet like a giant touchpad"
 msgid "Mouse"
 msgstr "鼠标"
 
-#: ui/StylusTab.qml:279
+#: ui/StylusTab.qml:283
 #, kde-format
 msgid ""
 "Moving the pen on the surface moves the cursor relative to where it was, "
 "like a mouse"
 msgstr "在板面上移动笔尖时，光标将相对它之前的位置发生位移，与鼠标类似"
 
-#: ui/StylusTab.qml:349
+#: ui/StylusTab.qml:353
 #, kde-format
 msgid "Pen Pressure:"
 msgstr "笔压："
 
-#: ui/StylusTab.qml:409
+#: ui/StylusTab.qml:413
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/StylusTab.qml:417
+#: ui/StylusTab.qml:421
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/StylusTab.qml:428
+#: ui/StylusTab.qml:432
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr "100%"
 
-#: ui/StylusTab.qml:436
+#: ui/StylusTab.qml:440
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr "0%"
 
-#: ui/StylusTab.qml:440
+#: ui/StylusTab.qml:444
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -500,13 +500,13 @@ msgid ""
 "the pressure values received by applications."
 msgstr "此曲线控制实际笔压和应用程序接收到压力值的关系。"
 
-#: ui/StylusTab.qml:445
+#: ui/StylusTab.qml:449
 #, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
 msgstr "压力范围："
 
-#: ui/StylusTab.qml:472
+#: ui/StylusTab.qml:476
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -515,31 +515,31 @@ msgid ""
 msgstr ""
 "超过或低于阈值的压力将被压制到阈值内，此处设置的压力范围将成为新的有效范围。"
 
-#: ui/StylusTab.qml:486
+#: ui/StylusTab.qml:490
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "正在校准"
 
-#: ui/StylusTab.qml:488
+#: ui/StylusTab.qml:492
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "校准"
 
-#: ui/StylusTab.qml:491
+#: ui/StylusTab.qml:495
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "不支持校准"
 
-#: ui/StylusTab.qml:532
+#: ui/StylusTab.qml:536
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
 msgstr "重置自定义校准"
 
-#: ui/StylusTab.qml:546
+#: ui/StylusTab.qml:550
 #, kde-format
 msgctxt "@info"
 msgid ""
