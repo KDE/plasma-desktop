@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
-"PO-Revision-Date: 2025-07-30 17:05+0100\n"
+"POT-Creation-Date: 2025-08-03 00:43+0000\n"
+"PO-Revision-Date: 2025-08-02 11:44+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -138,13 +138,13 @@ msgctxt "@item:inlistbox Map to portion of the screen"
 msgid "Map to Portion"
 msgstr "Mapear a una porción"
 
-#: kcmtablet.cpp:263
+#: kcmtablet.cpp:265
 #, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
 msgstr "Botón %1 del lápiz:"
 
-#: kcmtablet.cpp:264
+#: kcmtablet.cpp:266
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
@@ -317,11 +317,7 @@ msgid "Pen Calibration"
 msgstr "Calibración del lápiz"
 
 #: ui/Calibration.qml:98
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
-#| "revert to default calibration in %1 seconds.</b>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
@@ -329,7 +325,8 @@ msgid ""
 "b>"
 msgstr ""
 "Toque los puntos de nuevo para confirmar la nueva calibración.<nl/><nl/"
-"><b>Se volverá a la calibración predeterminada en %1 segundos.</b>"
+"><b>Se volverá a la calibración predeterminada en %1 segundos a menos que "
+"realice alguna acción más.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -491,18 +488,18 @@ msgctxt ""
 msgid "pad button %1"
 msgstr "botón %1 del panel táctil"
 
-#: ui/StylusTab.qml:218
+#: ui/StylusTab.qml:222
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "Modo para zurdos:"
 
-#: ui/StylusTab.qml:224
+#: ui/StylusTab.qml:228
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
 msgstr "Activar"
 
-#: ui/StylusTab.qml:230
+#: ui/StylusTab.qml:234
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -514,32 +511,32 @@ msgstr ""
 "variarán según el dispositivo, pero a menudo invierten la funcionalidad de "
 "los botones del panel táctil para que la tableta se pueda usar al revés."
 
-#: ui/StylusTab.qml:242
+#: ui/StylusTab.qml:246
 #, kde-format
 msgctxt ""
 "'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)"
 msgid "Mode:"
 msgstr "Modo:"
 
-#: ui/StylusTab.qml:250
+#: ui/StylusTab.qml:254
 #, kde-format
 msgctxt ""
 "Pen mode, where the point on the screen is always where you touch the stylus"
 msgid "Pen"
 msgstr "Lápiz"
 
-#: ui/StylusTab.qml:255
+#: ui/StylusTab.qml:259
 #, kde-format
 msgid "The cursor follows where you touch the pen on the surface"
 msgstr "El cursor irá al punto de la superficie donde toque con el lápiz"
 
-#: ui/StylusTab.qml:276
+#: ui/StylusTab.qml:280
 #, kde-format
 msgctxt "Mouse mode, or like using the tablet like a giant touchpad"
 msgid "Mouse"
 msgstr "Ratón"
 
-#: ui/StylusTab.qml:281
+#: ui/StylusTab.qml:285
 #, kde-format
 msgid ""
 "Moving the pen on the surface moves the cursor relative to where it was, "
@@ -547,36 +544,36 @@ msgid ""
 msgstr ""
 "Mueva el lápiz sobre la superficie para mover el cursor, como con el ratón"
 
-#: ui/StylusTab.qml:351
+#: ui/StylusTab.qml:355
 #, kde-format
 msgid "Pen Pressure:"
 msgstr "Presión del lápiz:"
 
-#: ui/StylusTab.qml:411
+#: ui/StylusTab.qml:415
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
 msgstr "%1 %"
 
-#: ui/StylusTab.qml:419
+#: ui/StylusTab.qml:423
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
 msgstr "%1 %"
 
-#: ui/StylusTab.qml:430
+#: ui/StylusTab.qml:434
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr "100 %"
 
-#: ui/StylusTab.qml:438
+#: ui/StylusTab.qml:442
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr "0 %"
 
-#: ui/StylusTab.qml:442
+#: ui/StylusTab.qml:446
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -586,13 +583,13 @@ msgstr ""
 "Esta curva controla la relación entre la presión del lápiz y los valores de "
 "presión que reciben las aplicaciones."
 
-#: ui/StylusTab.qml:447
+#: ui/StylusTab.qml:451
 #, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
 msgstr "Intervalo de presión del lápiz:"
 
-#: ui/StylusTab.qml:474
+#: ui/StylusTab.qml:478
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -602,31 +599,31 @@ msgstr ""
 "La presión por encima o por debajo del umbral se mantendrá fija y este se "
 "convertirá en el nuevo intervalo efectivo."
 
-#: ui/StylusTab.qml:485
+#: ui/StylusTab.qml:489
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "Calibración en curso"
 
-#: ui/StylusTab.qml:487
+#: ui/StylusTab.qml:491
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "Calibrar"
 
-#: ui/StylusTab.qml:490
+#: ui/StylusTab.qml:494
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "No se permite calibración"
 
-#: ui/StylusTab.qml:531
+#: ui/StylusTab.qml:535
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
 msgstr "Restaurar la calibración predeterminada"
 
-#: ui/StylusTab.qml:546
+#: ui/StylusTab.qml:550
 #, kde-format
 msgctxt "@info"
 msgid ""

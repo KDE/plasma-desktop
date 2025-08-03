@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-02 00:45+0000\n"
-"PO-Revision-Date: 2025-07-01 12:30+0100\n"
+"PO-Revision-Date: 2025-08-02 11:45+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -131,32 +131,27 @@ msgstr "Organización:"
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "In Columns"
-msgstr ""
+msgstr "En columnas"
 
 #: package/contents/ui/ConfigIcons.qml:128
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "In Rows"
-msgstr ""
+msgstr "En filas"
 
 #: package/contents/ui/ConfigIcons.qml:137
-#, fuzzy, kde-format
-#| msgid "Sorting:"
+#, kde-format
 msgid "Sort Alignment:"
-msgstr "Orden:"
+msgstr "Alineación al ordenar:"
 
 #: package/contents/ui/ConfigIcons.qml:140
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Left to Right"
+#, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Left-to-Right"
 msgstr "De izquierda a derecha"
 
 #: package/contents/ui/ConfigIcons.qml:141
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Right to Left"
+#, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Right-to-Left"
 msgstr "De derecha a izquierda"
@@ -167,10 +162,9 @@ msgid "Lock in place"
 msgstr "Bloquear en el lugar"
 
 #: package/contents/ui/ConfigIcons.qml:177
-#, fuzzy, kde-format
-#| msgid "Sort By"
+#, kde-format
 msgid "Sort by:"
-msgstr "Ordenar por"
+msgstr "Ordenar por:"
 
 #: package/contents/ui/ConfigIcons.qml:185
 #, kde-format
@@ -622,31 +616,27 @@ msgstr "Organizar"
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Columns"
-msgstr ""
+msgstr "En columnas"
 
 #: plugins/folder/viewpropertiesmenu.cpp:74
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Rows"
-msgstr ""
+msgstr "En filas"
 
 #: plugins/folder/viewpropertiesmenu.cpp:79
 #, kde-format
 msgid "Sort Alignment"
-msgstr ""
+msgstr "Alineación al ordenar"
 
 #: plugins/folder/viewpropertiesmenu.cpp:83
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Left to Right"
+#, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Left-to-Right"
 msgstr "De izquierda a derecha"
 
 #: plugins/folder/viewpropertiesmenu.cpp:84
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Right to Left"
+#, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Right-to-Left"
 msgstr "De derecha a izquierda"
@@ -661,38 +651,3 @@ msgstr "Mostrar vistas previas"
 msgctxt "@item:inmenu lock icon positions in place"
 msgid "Locked"
 msgstr "Bloqueado"
-
-#~ msgctxt "@item:inlistbox arrangement of icons"
-#~ msgid "Top to Bottom"
-#~ msgstr "De arriba a abajo"
-
-#~ msgctxt "@item:inlistbox alignment of icons"
-#~ msgid "Align left"
-#~ msgstr "Alinear a la izquierda"
-
-#~ msgctxt "@item:inlistbox alignment of icons"
-#~ msgid "Align right"
-#~ msgstr "Alinear a la derecha"
-
-#~ msgctxt "@item:inmenu arrangement of icons"
-#~ msgid "Left to Right"
-#~ msgstr "De izquierda a derecha"
-
-#~ msgctxt "@item:inmenu arrangement of icons"
-#~ msgid "Right to Left"
-#~ msgstr "De derecha a izquierda"
-
-#~ msgctxt "@item:inmenu arrangement of icons"
-#~ msgid "Top to Bottom"
-#~ msgstr "De arriba a abajo"
-
-#~ msgid "Align"
-#~ msgstr "Alinear"
-
-#~ msgctxt "@item:inmenu alignment of icons"
-#~ msgid "Left"
-#~ msgstr "Izquierda"
-
-#~ msgctxt "@item:inmenu alignment of icons"
-#~ msgid "Right"
-#~ msgstr "Derecha"

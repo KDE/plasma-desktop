@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-08-03 00:43+0000\n"
 "PO-Revision-Date: 2025-04-30 02:14+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -140,13 +140,13 @@ msgctxt "@item:inlistbox Map to portion of the screen"
 msgid "Map to Portion"
 msgstr "映射到區域"
 
-#: kcmtablet.cpp:263
+#: kcmtablet.cpp:265
 #, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
 msgstr "畫筆按鈕 %1："
 
-#: kcmtablet.cpp:264
+#: kcmtablet.cpp:266
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
@@ -496,18 +496,18 @@ msgctxt ""
 msgid "pad button %1"
 msgstr "繪圖板按鈕 %1"
 
-#: ui/StylusTab.qml:218
+#: ui/StylusTab.qml:222
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "左手模式："
 
-#: ui/StylusTab.qml:224
+#: ui/StylusTab.qml:228
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
 msgstr "啟用"
 
-#: ui/StylusTab.qml:230
+#: ui/StylusTab.qml:234
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -518,68 +518,68 @@ msgstr ""
 "告訴裝置使用為慣用左手使用者設計的模式。每個裝置的效果不同，但通常會反轉按鈕"
 "功能的順序讓繪圖板能夠反過來使用。"
 
-#: ui/StylusTab.qml:242
+#: ui/StylusTab.qml:246
 #, kde-format
 msgctxt ""
 "'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)"
 msgid "Mode:"
 msgstr "模式："
 
-#: ui/StylusTab.qml:250
+#: ui/StylusTab.qml:254
 #, kde-format
 msgctxt ""
 "Pen mode, where the point on the screen is always where you touch the stylus"
 msgid "Pen"
 msgstr "畫筆"
 
-#: ui/StylusTab.qml:255
+#: ui/StylusTab.qml:259
 #, kde-format
 msgid "The cursor follows where you touch the pen on the surface"
 msgstr "游標跟隨您的筆在繪圖板上的位置"
 
-#: ui/StylusTab.qml:276
+#: ui/StylusTab.qml:280
 #, kde-format
 msgctxt "Mouse mode, or like using the tablet like a giant touchpad"
 msgid "Mouse"
 msgstr "滑鼠"
 
-#: ui/StylusTab.qml:281
+#: ui/StylusTab.qml:285
 #, kde-format
 msgid ""
 "Moving the pen on the surface moves the cursor relative to where it was, "
 "like a mouse"
 msgstr "在繪圖板上移動筆刷會讓游標從它先前的位置開始移動，就像滑鼠一樣"
 
-#: ui/StylusTab.qml:351
+#: ui/StylusTab.qml:355
 #, kde-format
 msgid "Pen Pressure:"
 msgstr "筆壓："
 
-#: ui/StylusTab.qml:411
+#: ui/StylusTab.qml:415
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/StylusTab.qml:419
+#: ui/StylusTab.qml:423
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
 msgstr "%1%"
 
-#: ui/StylusTab.qml:430
+#: ui/StylusTab.qml:434
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr "100%"
 
-#: ui/StylusTab.qml:438
+#: ui/StylusTab.qml:442
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr "0%"
 
-#: ui/StylusTab.qml:442
+#: ui/StylusTab.qml:446
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -587,13 +587,13 @@ msgid ""
 "the pressure values received by applications."
 msgstr "這個曲線控制筆尖上的壓力與應用程式實際收到的壓力值之間的關係。"
 
-#: ui/StylusTab.qml:447
+#: ui/StylusTab.qml:451
 #, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
 msgstr "筆壓範圍："
 
-#: ui/StylusTab.qml:474
+#: ui/StylusTab.qml:478
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -601,31 +601,31 @@ msgid ""
 "new effective range."
 msgstr "高於或低於閥值的筆壓會視為最高值或最低值，而這會變成新的實際範圍。"
 
-#: ui/StylusTab.qml:485
+#: ui/StylusTab.qml:489
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "校準進行中"
 
-#: ui/StylusTab.qml:487
+#: ui/StylusTab.qml:491
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "校準"
 
-#: ui/StylusTab.qml:490
+#: ui/StylusTab.qml:494
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "不支援校準"
 
-#: ui/StylusTab.qml:531
+#: ui/StylusTab.qml:535
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
 msgstr "重設自訂校準"
 
-#: ui/StylusTab.qml:546
+#: ui/StylusTab.qml:550
 #, kde-format
 msgctxt "@info"
 msgid ""

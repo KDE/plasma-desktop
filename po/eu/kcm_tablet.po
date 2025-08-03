@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
-"PO-Revision-Date: 2025-07-31 12:26+0200\n"
+"POT-Creation-Date: 2025-08-03 00:43+0000\n"
+"PO-Revision-Date: 2025-08-03 00:48+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -139,13 +139,13 @@ msgctxt "@item:inlistbox Map to portion of the screen"
 msgid "Map to Portion"
 msgstr "Mapatu zatira"
 
-#: kcmtablet.cpp:263
+#: kcmtablet.cpp:265
 #, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
 msgstr "Arkatzaren %1 botoia:"
 
-#: kcmtablet.cpp:264
+#: kcmtablet.cpp:266
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
@@ -318,19 +318,16 @@ msgid "Pen Calibration"
 msgstr "Arkatzaren kalibrazioa"
 
 #: ui/Calibration.qml:98
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
-#| "revert to default calibration in %1 seconds.</b>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
 "revert to default calibration in %1 seconds unless further action is taken.</"
 "b>"
 msgstr ""
-"Jomugetan berriz tak egin kalibrazioa berresteko.<nl/><nl/><b>%1 segundotan "
-"lehenetsitako kalibraziora lehengoratuko du.</b>"
+"Jomugetan berriz tak egin kalibrazioa berresteko.<nl/><nl/><b>Ekintza "
+"gehiago egin ezean, %1 segundotan lehenetsitako kalibraziora lehengoratuko "
+"du.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -492,18 +489,18 @@ msgctxt ""
 msgid "pad button %1"
 msgstr "Paneleko %1 botoia"
 
-#: ui/StylusTab.qml:218
+#: ui/StylusTab.qml:222
 #, kde-format
 msgid "Left-handed mode:"
 msgstr "Ezkerti modua:"
 
-#: ui/StylusTab.qml:224
+#: ui/StylusTab.qml:228
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
 msgstr "Gaitu"
 
-#: ui/StylusTab.qml:230
+#: ui/StylusTab.qml:234
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -516,32 +513,32 @@ msgstr ""
 "funtzionaltasuna atzekoz aurrera ipintzen du tableta buruz behera erabili "
 "ahal izan dadin."
 
-#: ui/StylusTab.qml:242
+#: ui/StylusTab.qml:246
 #, kde-format
 msgctxt ""
 "'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)"
 msgid "Mode:"
 msgstr "Modua:"
 
-#: ui/StylusTab.qml:250
+#: ui/StylusTab.qml:254
 #, kde-format
 msgctxt ""
 "Pen mode, where the point on the screen is always where you touch the stylus"
 msgid "Pen"
 msgstr "Arkatza"
 
-#: ui/StylusTab.qml:255
+#: ui/StylusTab.qml:259
 #, kde-format
 msgid "The cursor follows where you touch the pen on the surface"
 msgstr "Kurtsoreak arkatza gainazalean ukitzen duzun lekua jarraitzen du"
 
-#: ui/StylusTab.qml:276
+#: ui/StylusTab.qml:280
 #, kde-format
 msgctxt "Mouse mode, or like using the tablet like a giant touchpad"
 msgid "Mouse"
 msgstr "Sagua"
 
-#: ui/StylusTab.qml:281
+#: ui/StylusTab.qml:285
 #, kde-format
 msgid ""
 "Moving the pen on the surface moves the cursor relative to where it was, "
@@ -550,36 +547,36 @@ msgstr ""
 "Arkatza gainazalean mugitzean kurtsorea zegoen tokiarekiko erlatibo mugitzen "
 "du, sagu batekin bezala"
 
-#: ui/StylusTab.qml:351
+#: ui/StylusTab.qml:355
 #, kde-format
 msgid "Pen Pressure:"
 msgstr "Arkatzaren presioa:"
 
-#: ui/StylusTab.qml:411
+#: ui/StylusTab.qml:415
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
 msgstr "%%1"
 
-#: ui/StylusTab.qml:419
+#: ui/StylusTab.qml:423
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
 msgstr "%%1"
 
-#: ui/StylusTab.qml:430
+#: ui/StylusTab.qml:434
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
 msgstr "% 100"
 
-#: ui/StylusTab.qml:438
+#: ui/StylusTab.qml:442
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
 msgstr "% 0"
 
-#: ui/StylusTab.qml:442
+#: ui/StylusTab.qml:446
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -589,13 +586,13 @@ msgstr ""
 "Kurba honek, arkatzaren presioaren eta aplikazioak jasotako presio-balioen "
 "arteko erlazioa kontrolatzen du."
 
-#: ui/StylusTab.qml:447
+#: ui/StylusTab.qml:451
 #, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
 msgstr "Presio-tartea:"
 
-#: ui/StylusTab.qml:474
+#: ui/StylusTab.qml:478
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -605,31 +602,31 @@ msgstr ""
 "Atalasearen gaineko edo azpiko presioa estutu egingo da, eta hori bihurtuko "
 "da tarte eraginkor berria."
 
-#: ui/StylusTab.qml:485
+#: ui/StylusTab.qml:489
 #, kde-format
 msgctxt "@action:button Calibration in progress"
 msgid "Calibration in Progress"
 msgstr "Kalibratzen ari da"
 
-#: ui/StylusTab.qml:487
+#: ui/StylusTab.qml:491
 #, kde-format
 msgctxt "@action:button Calibrate the pen display"
 msgid "Calibrate"
 msgstr "Kalibratu"
 
-#: ui/StylusTab.qml:490
+#: ui/StylusTab.qml:494
 #, kde-format
 msgctxt "@action:button Pen display doesn't support calibration"
 msgid "Calibration Not Supported"
 msgstr "Kalibratzea ez da onartzen"
 
-#: ui/StylusTab.qml:531
+#: ui/StylusTab.qml:535
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset Custom Calibration"
 msgstr "Berrezarri neurrira eginiko kalibrazioa"
 
-#: ui/StylusTab.qml:546
+#: ui/StylusTab.qml:550
 #, kde-format
 msgctxt "@info"
 msgid ""
