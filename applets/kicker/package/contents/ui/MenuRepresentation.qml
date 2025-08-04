@@ -311,9 +311,11 @@ PlasmaComponents3.ScrollView {
     PlasmaExtras.SearchField {
         id: searchField
 
+        readonly property int spacing: sideBar.width ? mainRow.spacing : 0
+
         anchors.bottom: mainRow.bottom
         anchors.left: parent.left
-        anchors.leftMargin: sideBar.width + (sideBar.width ? mainRow.spacing : Kirigami.Units.smallSpacing)
+        anchors.leftMargin: sideBar.width + spacing
 
         readonly property real defaultWidth: Kirigami.Units.gridUnit * 14
 
@@ -355,7 +357,7 @@ PlasmaComponents3.ScrollView {
 
                 PropertyChanges {
                     target: searchField
-                    anchors.leftMargin: sideBar.width + mainRow.spacing + Kirigami.Units.smallSpacing
+                    anchors.leftMargin: sideBar.width + spacing
                     anchors.rightMargin: undefined
                 }
             },
@@ -375,7 +377,7 @@ PlasmaComponents3.ScrollView {
                 PropertyChanges {
                     target: searchField
                     anchors.leftMargin: undefined
-                    anchors.rightMargin: sideBar.width + mainRow.spacing + Kirigami.Units.smallSpacing
+                    anchors.rightMargin: sideBar.width + spacing
                 }
             }
         ]
