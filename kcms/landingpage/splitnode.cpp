@@ -195,15 +195,18 @@ void SoftwareSplitNode::preprocess()
     if (m_first) {
         const auto texture = m_first->texture();
         const QSize textureSize = texture->textureSize();
+        const bool creatingNode = !m_firstNode;
 
-        if (!m_firstNode) {
+        if (creatingNode) {
             m_firstNode = m_window->createImageNode();
             m_firstNode->setFlag(OwnedByParent);
-            appendChildNode(m_firstNode);
         }
         m_firstNode->setTexture(texture);
         m_firstNode->setRect(0, 0, m_rect.width() * 0.5, m_rect.height());
         m_firstNode->setSourceRect(0, 0, textureSize.width() * 0.5, textureSize.height());
+        if (creatingNode) {
+            appendChildNode(m_firstNode);
+        }
 
         if (QSGDynamicTexture *dynamicTexture = qobject_cast<QSGDynamicTexture *>(m_first->texture())) {
             dynamicTexture->updateTexture();
@@ -216,15 +219,18 @@ void SoftwareSplitNode::preprocess()
     if (m_second) {
         const QSGTexture *texture = m_second->texture();
         const QSize textureSize = texture->textureSize();
+        const bool creatingNode = !m_secondNode;
 
-        if (!m_secondNode) {
+        if (creatingNode) {
             m_secondNode = m_window->createImageNode();
             m_secondNode->setFlag(OwnedByParent);
-            appendChildNode(m_secondNode);
         }
         m_secondNode->setTexture(m_second->texture());
         m_secondNode->setRect(m_rect.width() * 0.5, 0, m_rect.width() * 0.5, m_rect.height());
         m_secondNode->setSourceRect(textureSize.width() * 0.5, 0, textureSize.width() * 0.5, textureSize.height());
+        if (creatingNode) {
+            appendChildNode(m_secondNode);
+        }
 
         if (QSGDynamicTexture *dynamicTexture = qobject_cast<QSGDynamicTexture *>(m_second->texture())) {
             dynamicTexture->updateTexture();
