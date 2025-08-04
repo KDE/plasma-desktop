@@ -313,18 +313,13 @@ msgid "Pen Calibration"
 msgstr "压感笔校准"
 
 #: ui/Calibration.qml:98
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
-#| "revert to default calibration in %1 seconds.</b>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
 "revert to default calibration in %1 seconds unless further action is taken.</"
 "b>"
 msgstr ""
-"再次点击目标以确认新的校准。<nl/><nl/><b>无操作 %1 秒后将恢复默认校准。</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format

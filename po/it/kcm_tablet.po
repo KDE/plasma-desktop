@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-03 00:43+0000\n"
-"PO-Revision-Date: 2025-07-13 08:54+0200\n"
+"PO-Revision-Date: 2025-08-03 16:02+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -36,11 +36,10 @@ msgid "%1 && %2"
 msgstr "%1 &e %2"
 
 #: inputsequence.cpp:216
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "@action:button There is no keybindings"
 msgid "None"
-msgstr "Nessuna"
+msgstr "Nessuno"
 
 #: inputsequence.cpp:221
 #, kde-format
@@ -166,12 +165,10 @@ msgid "Select Button Action"
 msgstr "Seleziona azione del pulsante"
 
 #: ui/ActionDialog.qml:86
-#, fuzzy, kde-format
-#| msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
-#| msgid "Choose what action will be taken when pressing %1:"
+#, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when rotating %1:"
-msgstr "Scegli quale azione verrà eseguita alla pressione del %1:"
+msgstr "Scegli quale azione verrà eseguita alla rotazione di %1:"
 
 #: ui/ActionDialog.qml:87
 #, kde-format
@@ -213,7 +210,7 @@ msgstr "Invia pulsante della penna"
 #, kde-format
 msgctxt "@option:radio Set this action to a scroll wheel type type"
 msgid "Act as scroll wheel"
-msgstr ""
+msgstr "Agisci come rotella di scorrimento"
 
 #: ui/ActionDialog.qml:198
 #, kde-format
@@ -305,7 +302,7 @@ msgstr "Pulsante 3"
 #, kde-format
 msgctxt "@info"
 msgid "Act like a scroll wheel on a mouse."
-msgstr ""
+msgstr "Agisci come la rotella di scorrimento di un mouse."
 
 #: ui/ActionDialog.qml:363
 #, kde-format
@@ -320,11 +317,7 @@ msgid "Pen Calibration"
 msgstr "Calibrazione della penna"
 
 #: ui/Calibration.qml:98
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
-#| "revert to default calibration in %1 seconds.</b>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
@@ -332,7 +325,8 @@ msgid ""
 "b>"
 msgstr ""
 "Tocca di nuovo i bersagli per confermare la nuova calibrazione.<nl/><nl/"
-"><b>Ritorno alla calibrazione predefinita tra %1 secondi.</b>"
+"><b>Ritorno alla calibrazione predefinita tra %1 secondi, a meno che non "
+"venga compiuta un'altra azione.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -469,10 +463,9 @@ msgid "Pad"
 msgstr "Tavoletta"
 
 #: ui/PadTab.qml:33
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad dial %1:"
-msgstr "Pulsante %1 della tavoletta:"
+msgstr "Rotella sensibile al tocco %1:"
 
 #: ui/PadTab.qml:35
 #, kde-format
@@ -480,7 +473,7 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad dial %1"
-msgstr ""
+msgstr "rotella sensibile al tocco %1"
 
 #: ui/PadTab.qml:71
 #, kde-format
@@ -648,16 +641,14 @@ msgid "Tablet Tester"
 msgstr "Tester della tavoletta grafica"
 
 #: ui/Tester.qml:48
-#, fuzzy, kde-format
-#| msgid "Stylus press X=%1 Y=%2"
+#, kde-format
 msgctxt ""
 "A tablet stylus was pressed onto the surface X=[x position] Y=[y position]"
 msgid "Stylus press X=%1 Y=%2"
 msgstr "Pressione sullo stilo X=%1 Y=%2"
 
 #: ui/Tester.qml:58
-#, fuzzy, kde-format
-#| msgid "Stylus release X=%1 Y=%2"
+#, kde-format
 msgctxt ""
 "A tablet stylus has 'released' or was lifted from the surface X=[x position] "
 "Y=[y position]"
@@ -665,8 +656,7 @@ msgid "Stylus release X=%1 Y=%2"
 msgstr "Rilascio dello stilo X=%1 Y=%2"
 
 #: ui/Tester.qml:68
-#, fuzzy, kde-format
-#| msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
+#, kde-format
 msgctxt ""
 "A tablet stylus has moved over the surface X=[x position] Y=[y position] "
 "P=[pressure] TX=[tilt x] TY=[tilt y]"
@@ -674,35 +664,27 @@ msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 msgstr "Movimento dello stilo X=%1 Y=%2 P=%3% IX=%4 IY=%5"
 
 #: ui/Tester.qml:75
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt "A tablet pad's button has been pressed B=[the button number]"
 msgid "Pad button press B=%1"
-msgstr "Pulsante %1 della tavoletta:"
+msgstr "Rotella sensibile al tocco premuta B=%1"
 
 #: ui/Tester.qml:77
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt "A tablet pad's button has been released B=[the button number]"
 msgid "Pad button release B=%1"
-msgstr "Pulsante %1 della tavoletta:"
+msgstr "Rotella sensibile al tocco rilasciata B=%1"
 
 #: ui/Tester.qml:83
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt ""
 "A tablet pad's dial has moved, V120 here refers to 'Value 120' which is a "
 "technical term that should be kept as is"
 msgid "Pad dial moved V120=%1"
-msgstr "Pulsante %1 della tavoletta:"
+msgstr "Rotella sensibile al tocco spostata V120=%1"
 
 #: ui/Tester.qml:219
-#, fuzzy, kde-format
-#| msgid ""
-#| "## Legend:\n"
-#| "# X, Y - event coordinate\n"
-#| "# P - pressure\n"
-#| "# TX,TY - tilt\n"
+#, kde-format
 msgctxt "The tablet tester legend which is shown on start-up"
 msgid ""
 "## Legend:\n"
@@ -716,9 +698,7 @@ msgstr ""
 "# IX,IY - inclinazione\n"
 
 #: ui/Tester.qml:225
-#, fuzzy, kde-format
-#| msgctxt "Clear the event log"
-#| msgid "Clear"
+#, kde-format
 msgctxt "Clear the tablet tester event log"
 msgid "Clear"
 msgstr "Pulisci"
