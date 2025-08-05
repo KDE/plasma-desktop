@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_windowlist\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-19 00:43+0000\n"
+"POT-Creation-Date: 2025-08-05 00:45+0000\n"
 "PO-Revision-Date: 2025-02-25 09:35+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -19,33 +19,33 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 25.03.70\n"
 
-#: contents/config/config.qml:13
+#: config.qml:13
 #, kde-format
 msgid "General"
 msgstr "Genel"
 
-#: contents/ui/ConfigGeneral.qml:28
+#: ConfigGeneral.qml:30
 #, kde-format
 msgid "Show active application's name on Panel button"
 msgstr "Panel düğmesinde etkin uygulamanın adını göster"
 
-#: contents/ui/ConfigGeneral.qml:48
+#: ConfigGeneral.qml:50
 #, kde-format
 msgid "Only icons can be shown when the Panel is vertical."
 msgstr "Panel dikeyken, yalnızca simgeler gösterilebilir."
 
-#: contents/ui/ConfigGeneral.qml:50
+#: ConfigGeneral.qml:52
 #, kde-format
 msgid "Not applicable when the widget is on the Desktop."
 msgstr "Araç takımı Masaüstü’ndeyken kullanılabilir değildir."
 
-#: contents/ui/main.qml:84
+#: main.qml:92
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No open windows"
 msgstr "Açık pencere yok"
 
-#: contents/ui/main.qml:111
+#: main.qml:119
 #, kde-format
 msgid "Plasma Desktop"
 msgstr "Plasma Masaüstü"

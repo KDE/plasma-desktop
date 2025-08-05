@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.windowlist\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-19 00:43+0000\n"
+"POT-Creation-Date: 2025-08-05 00:45+0000\n"
 "PO-Revision-Date: 2025-05-30 20:37+0200\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -17,33 +17,33 @@ msgstr ""
 "X-Generator: Lokalize 25.04.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: contents/config/config.qml:13
+#: config.qml:13
 #, kde-format
 msgid "General"
 msgstr "Všeobecné"
 
-#: contents/ui/ConfigGeneral.qml:28
+#: ConfigGeneral.qml:30
 #, kde-format
 msgid "Show active application's name on Panel button"
 msgstr "Zobrazenie názvu aktívnej aplikácie na tlačidle panelu"
 
-#: contents/ui/ConfigGeneral.qml:48
+#: ConfigGeneral.qml:50
 #, kde-format
 msgid "Only icons can be shown when the Panel is vertical."
 msgstr "Keď je panel vertikálny, môžu sa zobrazovať len ikony."
 
-#: contents/ui/ConfigGeneral.qml:50
+#: ConfigGeneral.qml:52
 #, kde-format
 msgid "Not applicable when the widget is on the Desktop."
 msgstr "Neplatí keď je widget na ploche."
 
-#: contents/ui/main.qml:84
+#: main.qml:92
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No open windows"
 msgstr "Žiadne otvorené okná"
 
-#: contents/ui/main.qml:111
+#: main.qml:119
 #, kde-format
 msgid "Plasma Desktop"
 msgstr "Pracovná plocha Plasma"

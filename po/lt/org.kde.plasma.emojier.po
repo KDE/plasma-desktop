@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-18 00:44+0000\n"
-"PO-Revision-Date: 2023-02-04 19:58+0200\n"
+"PO-Revision-Date: 2025-08-05 00:58+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.6\n"
 
 #: app/emojier.cpp:42 app/emojier.cpp:44
 #, kde-format
@@ -47,8 +47,7 @@ msgid "Replace an existing instance"
 msgstr "Pakeisti esamą egzempliorių"
 
 #: app/ui/CategoryPage.qml:33 app/ui/CategoryPage.qml:87 app/ui/Emojier.qml:67
-#, fuzzy, kde-format
-#| msgid "All"
+#, kde-format
 msgctxt "@title:page All emojis"
 msgid "All"
 msgstr "Visi"

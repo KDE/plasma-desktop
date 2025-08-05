@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_trash\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-01 00:45+0000\n"
-"PO-Revision-Date: 2024-01-13 12:19+0200\n"
+"PO-Revision-Date: 2025-08-05 00:56+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.6\n"
 
 #: main.qml:32
 #, kde-format
@@ -26,12 +26,10 @@ msgid "Trash"
 msgstr "Šiukšlinė"
 
 #: main.qml:35
-#, fuzzy, kde-format
-#| msgctxt "@info:status The trash is empty"
-#| msgid "Empty"
+#, kde-format
 msgctxt "@info:status The trash is being emptied"
 msgid "Emptying…"
-msgstr "Tuščia"
+msgstr "Išvaloma…"
 
 #: main.qml:37
 #, kde-format

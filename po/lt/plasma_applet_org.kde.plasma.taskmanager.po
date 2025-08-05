@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-27 00:43+0000\n"
-"PO-Revision-Date: 2025-04-28 13:49+0300\n"
+"PO-Revision-Date: 2025-08-05 01:19+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: backend.cpp:284
 #, kde-format
@@ -476,49 +476,34 @@ msgid "Brings it to the current virtual desktop"
 msgstr "Pristato ją į dabartinį virtualų darbalaukį"
 
 #: package/contents/ui/ConfigBehavior.qml:205
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label for checkbox group, completes sentence like: … from current screen"
-#| msgid "Show only tasks:"
+#, kde-format
 msgctxt ""
 "@label:listbox Part of a sentence: 'Scrolling behavior does nothing/cycles "
 "through tasks/cycles through the selected task's windows'"
 msgid "Scrolling behavior:"
-msgstr "Rodyti tik užduotis:"
+msgstr "Slinkimo elgsena:"
 
 #: package/contents/ui/ConfigBehavior.qml:209
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Part of a sentence: 'Middle-clicking any task does "
-#| "nothing'"
-#| msgid "Does nothing"
+#, kde-format
 msgctxt "@item:inlistbox Part of a sentence: 'Scrolling behavior does nothing'"
 msgid "Does nothing"
 msgstr "Nieko nedaro"
 
 #: package/contents/ui/ConfigBehavior.qml:210
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Completes the sentence 'Clicking grouped task cycles "
-#| "through tasks' "
-#| msgid "Cycles through tasks"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through all "
 "tasks'"
 msgid "Cycles through all tasks"
-msgstr "Perjunginėja per užduotis"
+msgstr "Perjunginėja per visas užduotis"
 
 #: package/contents/ui/ConfigBehavior.qml:211
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Completes the sentence 'Clicking grouped task cycles "
-#| "through tasks' "
-#| msgid "Cycles through tasks"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through the "
 "hovered task's windows'"
 msgid "Cycles through the hovered task’s windows"
-msgstr "Perjunginėja per užduotis"
+msgstr "Perjunginėja per užduoties, virš kurios yra pelės rodyklė, langus"
 
 #: package/contents/ui/ConfigBehavior.qml:219
 #, kde-format
@@ -534,25 +519,19 @@ msgid "Show only tasks:"
 msgstr "Rodyti tik užduotis:"
 
 #: package/contents/ui/ConfigBehavior.qml:230
-#, fuzzy, kde-format
-#| msgctxt "@option:check completes sentence: show only tasks"
-#| msgid "From current desktop"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current desktop"
 msgstr "Dabartinio darbalaukio"
 
 #: package/contents/ui/ConfigBehavior.qml:235
-#, fuzzy, kde-format
-#| msgctxt "@option:check completes sentence: show only tasks"
-#| msgid "From current activity"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current activity"
 msgstr "Dabartinės veiklos"
 
 #: package/contents/ui/ConfigBehavior.qml:240
-#, fuzzy, kde-format
-#| msgctxt "@option:check completes sentence: show only tasks"
-#| msgid "From current screen"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current screen"
 msgstr "Dabartinio ekrano"

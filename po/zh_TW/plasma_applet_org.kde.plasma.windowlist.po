@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_windowlist\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-19 00:43+0000\n"
+"POT-Creation-Date: 2025-08-05 00:45+0000\n"
 "PO-Revision-Date: 2025-03-05 19:49+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -19,33 +19,33 @@ msgstr ""
 "X-Generator: Lokalize 25.03.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: contents/config/config.qml:13
+#: config.qml:13
 #, kde-format
 msgid "General"
 msgstr "一般"
 
-#: contents/ui/ConfigGeneral.qml:28
+#: ConfigGeneral.qml:30
 #, kde-format
 msgid "Show active application's name on Panel button"
 msgstr "在面板按鈕上顯示作用中應用程式的名稱"
 
-#: contents/ui/ConfigGeneral.qml:48
+#: ConfigGeneral.qml:50
 #, kde-format
 msgid "Only icons can be shown when the Panel is vertical."
 msgstr "面板垂直時只能顯示圖示。"
 
-#: contents/ui/ConfigGeneral.qml:50
+#: ConfigGeneral.qml:52
 #, kde-format
 msgid "Not applicable when the widget is on the Desktop."
 msgstr "元件在桌面上時不適用。"
 
-#: contents/ui/main.qml:84
+#: main.qml:92
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No open windows"
 msgstr "無已開啟視窗"
 
-#: contents/ui/main.qml:111
+#: main.qml:119
 #, kde-format
 msgid "Plasma Desktop"
 msgstr "Plasma 桌面"

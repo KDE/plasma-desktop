@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-19 00:43+0000\n"
+"POT-Creation-Date: 2025-08-05 00:45+0000\n"
 "PO-Revision-Date: 2025-03-25 07:17+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -19,33 +19,33 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: contents/config/config.qml:13
+#: config.qml:13
 #, kde-format
 msgid "General"
 msgstr "Generelt"
 
-#: contents/ui/ConfigGeneral.qml:28
+#: ConfigGeneral.qml:30
 #, kde-format
 msgid "Show active application's name on Panel button"
 msgstr "Vis navnet til gjeldende programmer på panelknappen"
 
-#: contents/ui/ConfigGeneral.qml:48
+#: ConfigGeneral.qml:50
 #, kde-format
 msgid "Only icons can be shown when the Panel is vertical."
 msgstr "Bare ikon kan vises når panelet er loddrett."
 
-#: contents/ui/ConfigGeneral.qml:50
+#: ConfigGeneral.qml:52
 #, kde-format
 msgid "Not applicable when the widget is on the Desktop."
 msgstr "Ikke aktuell når skjermelementet er plassert på skrivebordet."
 
-#: contents/ui/main.qml:84
+#: main.qml:92
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No open windows"
 msgstr "Ingen åpne vinduer"
 
-#: contents/ui/main.qml:111
+#: main.qml:119
 #, kde-format
 msgid "Plasma Desktop"
 msgstr "Plasma-skrivebord"
