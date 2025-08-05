@@ -38,9 +38,9 @@ msgid ""
 "\"Automount on Attach\"."
 msgstr ""
 "هذه القائمة تحتوي على الأجهزة المعروفة لكِيدِي إذا كان \"اوصل عند الولوج\" "
-"مُعلم عليه فإن الأجهزة ستوصل تلقائياً  حتى لو كان \"اوصل الأجهزة القابلة للحمل "
-"عند الولوج\" غير مُعلم عليه، وسيتم تطبيق الإجراء نفسه على \"إلحاق الإجهزة "
-"تلقائياً\"."
+"مُعلم عليه فإن الأجهزة ستوصل آليّاً  حتى لو كان \"اوصل الأجهزة القابلة للحمل "
+"عند الولوج\" غير مُعلم عليه، وسيتم تطبيق الإجراء نفسه على \"إلحاق الإجهزة آليّاً"
+"\"."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:54
@@ -54,8 +54,8 @@ msgid ""
 msgstr ""
 "النقر على هذا الزر يجعل كِيدِي 'تنسى' الأجهزة المحدّدة. هذا مفيد فقط إذا كان "
 "الخيار \"أوصل فقط الأجهزة القابلة للحمل التي سبق وصلها يدوياً من قبل\" مُحدّداً. "
-"في حال نسيان الجهاز وضبط كِيدِي على الوصل التلقائي للأجهزة المألوفة فقط، فلن "
-"يتم وصل الجهاز المنسي تلقائياً."
+"في حال نسيان الجهاز وضبط كِيدِي على الوصل الآليّ للأجهزة المألوفة فقط، فلن يتم "
+"وصل الجهاز المنسي آليّاً."
 
 #. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:57
@@ -76,20 +76,20 @@ msgid ""
 msgstr ""
 "عند عدم تعيين هذا الخيار، سيتم ضمّ الأجهزة التي تتذكرها كِيدِي فقط.الأجهزة "
 "\"المُتذكرة\" هي التي سبق وصلها من قبل. فمثلاً ليس كافياً وصل مشغلات وسائط USB "
-"لتذكرها طالما لم يتم النفاذ إلى الملفات بداخلها. ستقوم كِيدِي بضمّ الجهاز "
-"تلقائيًّا في المرة القادمة التي تراه فيها. لكن عند النفاذ إلى ملفات الجهاز، "
-"فسيصير محتوى الجهاز متوفّراً للنظام."
+"لتذكرها طالما لم يتم النفاذ إلى الملفات بداخلها. ستقوم كِيدِي بضمّ الجهاز آليًّا "
+"في المرة القادمة التي تراه فيها. لكن عند النفاذ إلى ملفات الجهاز، فسيصير "
+"محتوى الجهاز متوفّراً للنظام."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_AutomountUnknownDevices)
 #: DeviceAutomounterKCM.ui:70
 #, kde-format
 msgid "Automatically mount removable media that have never been mounted before"
-msgstr "أوصل آليا الأجهزة القابلة للحمل التي لم يسبق وصلها من قبل قط."
+msgstr "أوصل آليّا الأجهزة القابلة للحمل التي لم يسبق وصلها من قبل قط."
 
 #: DeviceModel.cpp:52
 #, kde-format
 msgid "Automount Device"
-msgstr "جهاز قابل للوصل تلقائياً"
+msgstr "جهاز قابل للوصل آليّاً"
 
 #: DeviceModel.cpp:54
 #, kde-format
@@ -131,22 +131,22 @@ msgstr "UDI: %1"
 #: DeviceModel.cpp:318
 #, kde-format
 msgid "This device will be automatically mounted at login."
-msgstr "هذا الجهاز سيوصل تلقائياً عند الولوج."
+msgstr "هذا الجهاز سيوصل آليّاً عند الولوج."
 
 #: DeviceModel.cpp:318
 #, kde-format
 msgid "This device will not be automatically mounted at login."
-msgstr "هذا الجهاز لن يوصل تلقائياً عند الولوج."
+msgstr "هذا الجهاز لن يوصل آليّاً عند الولوج."
 
 #: DeviceModel.cpp:326
 #, kde-format
 msgid "This device will be automatically mounted when attached."
-msgstr "هذا الجهاز سيوصل تلقائياً عند الإلحاق"
+msgstr "هذا الجهاز سيوصل آليّاً عند الإلحاق"
 
 #: DeviceModel.cpp:327
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
-msgstr "هذا الجهاز لن يوصل تلقائياً عند الإلحاق"
+msgstr "هذا الجهاز لن يوصل آليّاً عند الإلحاق"
 
 #~ msgid "Device Automounter"
 #~ msgstr "موصل الأجهزة التلقائي"

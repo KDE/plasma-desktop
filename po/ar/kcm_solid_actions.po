@@ -1,12 +1,12 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2009, 2021.
+# SPDX-FileCopyrightText: 2009, 2021, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-08 01:58+0000\n"
-"PO-Revision-Date: 2021-06-26 21:15+0400\n"
+"PO-Revision-Date: 2025-08-04 13:43+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -15,6 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -109,7 +110,7 @@ msgstr "يحوي"
 #: ActionEditor.ui:208
 #, kde-format
 msgid "Reset Parameter"
-msgstr "صفر المعاملات"
+msgstr "صفّر المعاملات"
 
 #. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
 #: ActionEditor.ui:215
