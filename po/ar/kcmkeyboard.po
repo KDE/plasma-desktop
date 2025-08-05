@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-05 05:54+0000\n"
-"PO-Revision-Date: 2021-11-16 20:08+0400\n"
+"PO-Revision-Date: 2025-08-04 18:43+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -137,7 +137,7 @@ msgstr ""
 #: kcm_keyboard.ui:94
 #, kde-format
 msgid "Layouts"
-msgstr "التّخطيطات"
+msgstr "التخطيطات"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, switchingPolicyGroupBox)
 #: kcm_keyboard.ui:102
@@ -183,7 +183,7 @@ msgstr "ال&نّافذة"
 #: kcm_keyboard.ui:157
 #, kde-format
 msgid "Shortcuts for Switching Layout"
-msgstr "اختصارات تغيير التّخطيط"
+msgstr "اختصارات تغيير التخطيط"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcm_keyboard.ui:163
@@ -198,7 +198,7 @@ msgid ""
 "This is a shortcut for switching layouts which is handled by X.org. It "
 "allows modifier-only shortcuts."
 msgstr ""
-"هذا الاختصار هو لتبديل التّخطيطات، حيث يتعامل X.org معه. يسمح الاختصار "
+"هذا الاختصار هو لتبديل التخطيطات، حيث يتعامل X.org معه. يسمح الاختصار "
 "باختصارات المعدِّل فقط."
 
 #. i18n: ectx: property (text), widget (QPushButton, xkbGrpShortcutBtn)
@@ -246,14 +246,14 @@ msgid ""
 "shortcuts and also may not work in some situations (e.g. if popup is active "
 "or from screensaver)."
 msgstr ""
-"هذا الاختصار هو لتبديل التّخطيطات. لا يدعم الاختصار اختصارات المعدِّل فقط وقد "
+"هذا الاختصار هو لتبديل التخطيطات. لا يدعم الاختصار اختصارات المعدِّل فقط وقد "
 "لا يعمل في بعض الحالات (مثلًا إن كانت هناك منبثقة نشطة أو كنت في حافظ شاشة)."
 
 #. i18n: ectx: property (title), widget (QGroupBox, kcfg_configureLayouts)
 #: kcm_keyboard.ui:261
 #, kde-format
 msgid "Configure layouts"
-msgstr "اضبط التّخطيطات"
+msgstr "اضبط التخطيطات"
 
 #. i18n: ectx: property (text), widget (QPushButton, addLayoutBtn)
 #: kcm_keyboard.ui:275
@@ -283,13 +283,13 @@ msgstr "انقل لأسفل"
 #: kcm_keyboard.ui:350
 #, kde-format
 msgid "Spare layouts"
-msgstr "التّخطيطات الاحتياطيّة"
+msgstr "التخطيطات الاحتياطيّة"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: kcm_keyboard.ui:382
 #, kde-format
 msgid "Main layout count:"
-msgstr "عدد التّخطيط الرّئيسيّ:"
+msgstr "عدد التخطيط الرّئيسيّ:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tabAdvanced)
 #: kcm_keyboard.ui:412
@@ -341,7 +341,7 @@ msgstr "الخريطة"
 #: kcm_view_models.cpp:200
 #, kde-format
 msgid "Layout"
-msgstr "التّخطيط"
+msgstr "التخطيط"
 
 #: kcm_view_models.cpp:200
 #, kde-format
@@ -362,7 +362,7 @@ msgstr "الاختصار"
 #, kde-format
 msgctxt "variant"
 msgid "Default"
-msgstr "الافتراضيّ"
+msgstr "المبدئيّ"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kcmmiscwidget.ui:31

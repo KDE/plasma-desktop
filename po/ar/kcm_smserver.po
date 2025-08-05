@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kcmsmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-05 05:54+0000\n"
-"PO-Revision-Date: 2022-12-27 20:38+0400\n"
+"PO-Revision-Date: 2025-01-09 17:15+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -36,7 +36,7 @@ msgid ""
 msgstr ""
 "<h1>مدير الجلسة</h1>  يمكنك ضبط مدير الجلسة هنا. هذا يتضمن خيارات مثل ضرورة "
 "أو عدم ضرورة التأكيد على تسجيل الخروج و إذا كان واجباً استعادة الجلسة عند "
-"الدخول أو إيقاف تشغيل الحاسوب تلقائياً عند الخروج من الجلسة."
+"الدخول أو إيقاف تشغيل الحاسوب آليّاً عند الخروج من الجلسة."
 
 #: package/contents/ui/main.qml:30
 #, kde-format
@@ -156,8 +156,8 @@ msgid ""
 "autostarting along with other session-restored apps."
 msgstr ""
 "اكتب أسماء التطبيقات القابلة للتنفيذ هنا (مفصولة بفاصلة أو فاصلة منقوطة، على "
-"سبيل المثال \"Xterm: konsole\" أو \"‎Xterm,konsole\") لمنعها من التشغيل "
-"التلقائي مع التطبيقات الأخرى المحفوظة في الجلسة."
+"سبيل المثال \"Xterm: konsole\" أو \"‎Xterm,konsole\") لمنعها من التشغيل الآليّ "
+"مع التطبيقات الأخرى المحفوظة في الجلسة."
 
 #: package/contents/ui/main.qml:177
 #, kde-format

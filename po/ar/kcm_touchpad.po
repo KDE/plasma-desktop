@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-05 05:54+0000\n"
-"PO-Revision-Date: 2024-10-14 20:23+0400\n"
+"PO-Revision-Date: 2025-08-03 22:49+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -38,7 +38,7 @@ msgstr "لوحة اللمس"
 #: actions.cpp:22
 #, kde-format
 msgid "Enable Touchpad"
-msgstr "فعّل لوحة اللمس"
+msgstr "مكّن لوحة اللمس"
 
 #: actions.cpp:30
 #, kde-format
@@ -98,7 +98,7 @@ msgstr "عام:"
 #: kcm/libinput/touchpad.qml:139
 #, kde-format
 msgid "Device enabled"
-msgstr "الجهاز مفعّل"
+msgstr "الجهاز ممكّن"
 
 #: kcm/libinput/touchpad.qml:143
 #, kde-format
@@ -560,14 +560,14 @@ msgstr "لن تأخذ هذه الإعدادات مفعولها في منطقة �
 #: kcm/xlib/touchpadconfigxlib.cpp:164
 #, kde-format
 msgid "Enable/Disable Touchpad"
-msgstr "فعّل/عطّل لوحة اللمس"
+msgstr "مكّن/عطّل لوحة اللمس"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, KdedForm)
 #: kcm/xlib/ui/kded.ui:14
 #, kde-format
 msgctxt "@title:window"
 msgid "Enable/Disable Touchpad"
-msgstr "فعّل/عطّل لوحة اللمس"
+msgstr "مكّن/عطّل لوحة اللمس"
 
 #. i18n: ectx: property (text), widget (QPushButton, configureShortcutsButton)
 #. i18n: ectx: property (text), widget (QPushButton, configureNotificationsButton)
@@ -601,7 +601,7 @@ msgid ""
 "If there was no keyboard activity for more than specified\n"
 "number of milliseconds, touchpad will be enabled again"
 msgstr ""
-"إن لم تنشط لوحة المفاتيح خلال الزّمن المحدّد (بالملّي ثانية)، ستُفعّل لوحة اللمس "
+"إن لم تنشط لوحة المفاتيح خلال الزّمن المحدّد (بالملّي ثانية)، ستُمكّن لوحة اللمس "
 "مجدّدًا"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_LockedDragTimeout)
@@ -1313,8 +1313,8 @@ msgid ""
 "How long it takes (in milliseconds) for the \"Locked Drags\" mode to be "
 "automatically turned off after the finger is released from the touchpad"
 msgstr ""
-"المدة التي يستغرقها (بالمللي ثانية) لإيقاف تشغيل وضع \"السحب المقفل\" "
-"تلقائيًا بعد تحرير الإصبع من لوحة اللمس"
+"المدة التي يستغرقها (بالمللي ثانية) لإيقاف تشغيل وضع \"السحب المقفل\" آليًّا "
+"بعد تحرير الإصبع من لوحة اللمس"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_3)
 #: kcm/xlib/ui/tap.ui:325
