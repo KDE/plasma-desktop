@@ -1,24 +1,25 @@
 # translation of joystick.po to Arabic
 # translation of joystick.po to
+# SPDX-FileCopyrightText: 2008, 2025 zayed <zayed.alsaidi@gmail.com>
 # محمد سعد  Mohamed SAAD <metehyi@free.fr>, 2006.
 # AbdulAziz AlSharif <a.a-a.s@hotmail.com>, 2007.
 # Youssef Chahibi <chahibi@gmail.com>, 2007.
-# zayed <zayed.alsaidi@gmail.com>, 2008.
 # Abdalrahim Fakhouri <abdilra7eem@yahoo.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: joystick\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-04 03:17+0000\n"
-"PO-Revision-Date: 2012-02-09 14:09+0200\n"
-"Last-Translator: Abdalrahim Fakhouri <abdilra7eem@yahoo.com>\n"
-"Language-Team: Arabic <linuxac-kde-arabic-team@googlegroups.com>\n"
+"PO-Revision-Date: 2025-08-05 18:24+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -124,7 +125,7 @@ msgstr "إنّ الجهاز %1 المعطى ليس عصا ألعاب."
 #: joydevice.cpp:49
 #, kde-format
 msgid "Could not get kernel driver version for joystick device %1: %2"
-msgstr "لم أتمكن من الحصول على إصدار سوّاق النواة لجهاز عصا الألعاب %1: %2"
+msgstr "لم أتمكن من الحصول على إصدار مشغل النواة لجهاز عصا الألعاب %1: %2"
 
 #: joydevice.cpp:60
 #, kde-format
@@ -132,7 +133,7 @@ msgid ""
 "The current running kernel driver version (%1.%2.%3) is not the one this "
 "module was compiled for (%4.%5.%6)."
 msgstr ""
-"إنّ إصدار سوّاق النواة الجاري حالياً (%1.%2.%3) ليس هو ذلك الذي تم تصريف الوحدة "
+"إنّ إصدار سوّاق النواة الجاري حالياً (%1.%2.%3) ليس هو ذلك الذي بُنيت الوحدة "
 "النمطية (%4.%5.%6) له."
 
 #: joydevice.cpp:71
@@ -153,7 +154,7 @@ msgstr "لم أتمكن من الحصول على قيم المُعَايَرَة
 #: joydevice.cpp:83
 #, kde-format
 msgid "Could not restore calibration values for joystick device %1: %2"
-msgstr "لم أتمكن من إستعادة قيم المُعَايَرَة لجهاز عصا الألعاب %1: %2"
+msgstr "لم أتمكن من استعاده قيم المُعَايَرَة لجهاز عصا الألعاب %1: %2"
 
 #: joydevice.cpp:87
 #, kde-format
@@ -200,16 +201,16 @@ msgid ""
 "joystick</li><li>Saitek Cyborg 'digital' joysticks</li></ul>(For details you "
 "can check your Linux source/Documentation/input/joystick.txt)"
 msgstr ""
-"<h1>عصى الألعاب</h1>تساعد هذه الوحدة على تأكد من أن عصى الألعاب تعمل "
-"بشكلصحيح.<br /> إذا أعطتك نتائج خاطئة للمحاور ، بإمكان محاولة حل هذه المشكلة "
+"<h1>عصى الألعاب</h1>تساعد هذه الوحدة على تأكد من أن عصى الألعاب تعمل بشكل "
+"صحيح.<br /> إذا أعطتك نتائج خاطئة للمحاور ، بإمكان محاولة حل هذه المشكلة "
 "بالمعايرة. <br />هذه الوحدة تحاول إيجاد جميع أجهزة عصى الألعاب بالتأكد من /"
-"dev/js[0-4]  و /dev/input/js[0-4] <br />إذا كنت تملك جهاز أخرى فأدخلة في "
-"المربع المدمج.<br />قائمة الأزرارتعرض حالة الأزرار في عصى الألعابك ، وقائمة "
-"المحاورتعرض القيمة الراهنة لجميع المحاور.<br />ملاحظة: حاليا يمكن لنواة "
-"اللينكس(2.4 ، 2.6) التعرف بشكل آليّ على <ul><li>عصى الألعاب ذات محورين و "
-"أربعة أزرار </li><li>عصى الألعاب ذات ثلاثة محاور و أربعة أزرار</li><li>عصى "
-"الألعاب ذات أربعة محاوروأربعة أزرار</li><li>عصى ألعاب الرقمية من Saitek "
-"Cyborg </li></ul>(لمزيد من التفاصيل تأكد من التوثيق الموجود في نواة اللينكس /"
+"dev/js[0-4]  و /dev/input/js[0-4] <br />إذا كنت تملك جهاز أخرى فادخله في "
+"المربع المدمج.<br />قائمة الأزرار تعرض حالة الأزرار في عصى ألألعابك ، وقائمة "
+"المحاور تعرض القيمة الراهنة لجميع المحاور.<br />ملاحظة: حاليا يمكن لنواة "
+"لينكس (2.4 ، 2.6) التعرف بشكل آليّ على <ul><li>عصى الألعاب ذات محورين و أربعة "
+"أزرار </li><li>عصى الألعاب ذات ثلاثة محاور و أربعة أزرار</li><li>عصى الألعاب "
+"ذات أربعة محاور وأربعة أزرار</li><li>عصى ألعاب الرقمية من Saitek Cyborg </"
+"li></ul>(لمزيد من التفاصيل تأكد من التوثيق الموجود في نواة لينكس /"
 "Documentation/input/joystick.txt)"
 
 #: joywidget.cpp:67
@@ -265,7 +266,7 @@ msgid ""
 "done in /dev/js[0-4] and /dev/input/js[0-4]<br />If you know that there is "
 "one attached, please enter the correct device file."
 msgstr ""
-"لم يكتشف أي عصى ألعاب بشكل الآليّ في هذا  الحاسوب.<br /> الفحص تمفي /dev/"
+"لم يكتشف أي عصى ألعاب بشكل الآليّ في هذا  الحاسوب.<br /> الفحص شمل /dev/"
 "js[0-4] و /dev/input/js[0-4]<br /> إذا كنت تعرف واحدة موصول فرجاءا أدخل اسم "
 "ملف الجهاز."
 
@@ -307,11 +308,11 @@ msgid ""
 "all axes to their center position and then do not touch the joystick anymore."
 "</b><br /><br />Click OK to start the calibration.</qt>"
 msgstr ""
-"<qt>تفحص المعايرة الدقة.<br /><br /><b>الرجاء تحريكجميع المحاور إلى موضعها "
+"<qt>تفحص المعايرة الدقة.<br /><br /><b>الرجاء تحريك جميع المحاور إلى موضعها "
 "الوسطي ، ثم لا تحرك عصى الألعاب بعد ذلك.</b><br /><br />انقر موافق لبدأ "
 "المعايرة.</qt>"
 
 #: joywidget.cpp:367
 #, kde-format
 msgid "Restored all calibration values for joystick device %1."
-msgstr "قمت بإستعادة كل قيم المُعَايَرَة لجهاز عصا الألعاب %1."
+msgstr "قمت باستعادة كل قيم المُعَايَرَة لجهاز عصا الألعاب %1."
