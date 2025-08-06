@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-02-02 23:40+0200\n"
+"PO-Revision-Date: 2025-08-05 11:53+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
@@ -224,10 +224,10 @@ msgid "Invert scroll direction"
 msgstr "Atvirkštinė slinkimo kryptis"
 
 #: ui/main.qml:330
-#, fuzzy, kde-format
-#| msgid "Press middle button and move mouse to scroll"
+#, kde-format
 msgid "Hold down middle button and move mouse to scroll"
-msgstr "Paspausti vidurinįjį mygtuką ir judinti pelę, kad būtų slenkama"
+msgstr ""
+"Laikyti nuspaustą vidurinįjį mygtuką ir judinti pelę, kad būtų slenkama"
 
 #: ui/main.qml:342
 #, kde-format
@@ -238,6 +238,10 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+"Tai trukdys programose, kurios naudoja vidurinįjį pelės mygtuką vilkimui, "
+"tokiose kaip paveikslų redaktoriai, dokumentų žiūryklės ar video žaidimai. "
+"Tai gali būti naudojama bet kuriame įrenginyje, bet, visų pirma, skirta kaip "
+"slinkimo ratukų pakaitalas įrenginiuose, kuriuose jų nėra."
 
 #~ msgid "Accept input through this device."
 #~ msgstr "Priimti įvestį per šį įrenginį."

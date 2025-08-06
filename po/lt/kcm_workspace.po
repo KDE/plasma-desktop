@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-01 00:43+0000\n"
-"PO-Revision-Date: 2024-09-19 01:54+0300\n"
+"PO-Revision-Date: 2025-08-05 14:02+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.6\n"
 
 #: ui/main.qml:25
 #, kde-format
@@ -38,19 +38,19 @@ msgstr "Paleisti iš naujo"
 #, kde-format
 msgctxt "@title:group"
 msgid "Plasma"
-msgstr ""
+msgstr "Plasma"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
-msgstr ""
+msgstr "Leisti, kad Plasma būtų rodomi:"
 
 #: ui/main.qml:59
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr ""
+msgstr "Skydelių ir valdiklių paaiškinimai"
 
 #: ui/main.qml:69
 #, kde-format
@@ -60,14 +60,17 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"Leidžia visiems Plasma skydeliams ir darbalaukio valdikliams, užvedus ant jų "
+"pelę, rodyti aprašomuosius paaiškinimus. Ši nuostata negalioja mažiems "
+"paaiškinimams, kurie rodomi, kai pelė užvedama ant atskirų mygtukų ar kitų "
+"naudotojo sąsajos elementų."
 
 #: ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
-msgstr "Rodyti iškylantįjį langą keičiant išdėstymą"
+msgstr "Iškylančiuosius pranešimus ekrane apie būsenos pokyčius"
 
 #: ui/main.qml:87
 #, kde-format
@@ -75,14 +78,15 @@ msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
+"Leidžia visiems Plasma valdikliams rodyti ekraninius iškylančiuosius "
+"pranešimus, susijusius su garsumo ar ryškumo pokyčiais ar garso įrenginio "
+"perjungimu."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling"
-msgstr "Slinkimas:"
+msgstr "Slinkimas"
 
 #: ui/main.qml:100
 #, kde-format
@@ -134,7 +138,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "Spustelėjimas"
 
 #: ui/main.qml:175
 #, kde-format
@@ -163,7 +167,7 @@ msgstr "Juos atveria"
 #: ui/main.qml:232
 #, kde-format
 msgid "Select by clicking on item's selection marker"
-msgstr "Žymėti, spustelėjant ant elemento žymėjimo žymeklio"
+msgstr "Žymėti spustelėjant ant elemento žymėjimo žymeklio"
 
 #: ui/main.qml:246
 #, kde-format
@@ -218,24 +222,23 @@ msgid ""
 "Double-click the folder to test. If it does not change its appearance, "
 "increase double-click interval."
 msgstr ""
+"Norėdami išbandyti, spustelėkite du kartus ant aplanko. Jeigu jo išvaizda "
+"nepasikeičia, padidinkite dvikarčio spustelėjimo intervalą."
 
 #: ui/main.qml:354
 #, kde-format
 msgid "Drag and Drop"
-msgstr ""
+msgstr "Tempimas"
 
 #: ui/main.qml:361
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
-#| msgid "Clicking files or folders:"
+#, kde-format
 msgid "When dragging files or folders:"
-msgstr "Spustelėjimas ant failų ar aplankų:"
+msgstr "Tempiant failus ar aplankus:"
 
 #: ui/main.qml:362
 #, kde-format
 msgid "Always ask what to do"
-msgstr ""
+msgstr "Visada klausti, ką daryti"
 
 #: ui/main.qml:378
 #, kde-kuit-format
@@ -245,30 +248,34 @@ msgid ""
 "and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise show a "
 "dialog."
 msgstr ""
+"Laikyti nuspaudus <shortcut>Lyg2</shortcut>, kad būtų perkelta, "
+"<shortcut>Vald</shortcut>, kad būtų nukopijuota ir <shortcut>Lyg2+Vald</"
+"shortcut>, kad būtų sukurta simbolinė nuoroda. Priešingu atveju, rodyti "
+"dialogą."
 
 #: ui/main.qml:386
 #, kde-format
 msgid "Move if on the same device"
-msgstr ""
+msgstr "Perkelti, jeigu jie tame pačiame įrenginyje"
 
 #: ui/main.qml:402
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
 msgstr ""
+"Tempiant laikyti nuspaudus <shortcut>Lyg2</shortcut>, kad būtų rodomos kitos "
+"parinktys."
 
 #: ui/main.qml:410
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Touch"
-msgstr "Lietimo veiksena:"
+msgstr "Lietimas"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgid "Enable Touch Mode:"
-msgstr "Lietimo veiksena:"
+msgstr "Įjungti lietimo veiksena:"
 
 #: ui/main.qml:418
 #, kde-format
@@ -295,18 +302,16 @@ msgstr ""
 "atjungiama."
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always enabled"
+#, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always active"
-msgstr "Visada įjungta"
+msgstr "Visada aktyvi"
 
 #: ui/main.qml:463
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Disabled"
-msgstr ""
+msgstr "Išjungta"
 
 #: ui/main.qml:486
 #, kde-format
@@ -315,7 +320,7 @@ msgid ""
 "more easily accommodate touch interaction."
 msgstr ""
 "Lietimo veiksenoje daugelis naudotojo sąsajos elementų taps didesni, kad "
-"būtų lengviau pritaikyti lietimo integraciją."
+"galima būtų lengviau parūpinti lietimo sąveiką."
 
 #. i18n: ectx: label, entry (singleClick), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:9
@@ -330,6 +335,8 @@ msgid ""
 "For local files on the same device, whether dragging and dropping will "
 "perform a move operation instead of showing the options menu"
 msgstr ""
+"Tempiant vietinius tame pačiame įrenginyje esančius failus bus atliekama "
+"perkėlimo operacija, o ne rodomas parinkčių meniu"
 
 #. i18n: ectx: label, entry (smoothScroll), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21
@@ -367,7 +374,7 @@ msgstr "Įjungti žymėto teksto įdėjimą viduriniuoju pelės mygtuku"
 #: workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display large panel and widget tooltips"
-msgstr ""
+msgstr "Rodyti didelius skydelių ir valdiklių paaiškinimus"
 
 #. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:10
@@ -375,26 +382,24 @@ msgstr ""
 msgid ""
 "Allow Plasma widgets to display large panel and widget tooltips on hover"
 msgstr ""
+"Leisti Plasma, užvedus pelę, rodyti didelius skydelių ir valdiklių "
+"paaiškinimus"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
-#, fuzzy, kde-format
-#| msgid "Display visual feedback for status changes"
+#, kde-format
 msgid "Display small popups for status changes"
-msgstr "Rodyti vaizdinį grįžtamąjį ryšį apie būsenos pasikeitimus"
+msgstr "Rodyti mažus iškylančiuosius langus, susijusius su būsenos pokyčiais"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show an on-screen display to indicate status changes such as brightness "
-#| "or volume"
+#, kde-format
 msgid ""
 "Allow Plasma widgets to display small popups for status changes such as "
 "brightness or volume"
 msgstr ""
-"Rodyti ekraninį pranešimą, nurodant tokius pakeitimus kaip ryškumo ar "
-"garsumo keitimas"
+"Leisti Plasma valdikliams rodyti mažus iškylančiuosius langus susijusius su "
+"būsenos pokyčiais, tokiais kaip ryškumo ar garsumo keitimas"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21
