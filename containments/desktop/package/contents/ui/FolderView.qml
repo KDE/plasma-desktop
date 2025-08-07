@@ -1261,7 +1261,7 @@ FocusScope {
                 // We need to update the perStripe when moving due to panel changes etc.
                 positioner.perStripe = Math.floor(axis / step);
                 var perStripe = positioner.perStripe;
-                var dropPos = mapToItem(gridView.contentItem, x, y);
+                var dropPos = gridView.mapToItem(gridView.contentItem, x, y);
                 var leftEdge = Math.min(gridView.contentX, gridView.originX);
 
                 var moves = []
@@ -1286,19 +1286,29 @@ FocusScope {
                         continue;
                     }
 
-                    itemX = dropPos.x + offset.x + (listener.dragX % cellWidth) + (cellWidth / 2);
-                    itemY = dropPos.y + offset.y + (listener.dragY % cellHeight) + gridView.verticalDropHitscanOffset;
+                    // The +(gridView.cellWidth / 2) is kept here to make it easier to drag items between cells.
+                    itemX = dropPos.x + offset.x + (listener.dragX % gridView.cellWidth) + (gridView.cellWidth / 2);
+                    itemY = dropPos.y + offset.y + (listener.dragY % gridView.cellHeight) + gridView.verticalDropHitscanOffset;
+
 
                     if (gridView.effectiveLayoutDirection === Qt.RightToLeft) {
                         itemX -= (rows ? gridView.contentX : gridView.originX);
                         itemX = (rows ? gridView.width : gridView.contentItem.width) - itemX;
                     }
 
-                    col = Math.floor(itemX / gridView.cellWidth);
-                    row = Math.floor(itemY / gridView.cellHeight);
+                    col = rows ? Math.floor(itemX / gridView.cellWidth) : Math.floor(itemY / gridView.cellHeight);
+                    row = rows ? Math.floor(itemY / gridView.cellHeight) : Math.floor(itemX / gridView.cellWidth);
 
-                    if ((rows ? col : row) <= perStripe) {
-                        to = ((rows ? row : col) * perStripe) + (rows ? col : row);
+
+                    if (col <= perStripe) {
+                        // We have somehow moved the item outside of the available
+                        // areas (usually during file creation), so make sure
+                        // the col is within perStripe
+                        if (col === perStripe) {
+                            col -= 1;
+                        }
+
+                        to = (row * perStripe) + col;
 
                         if (to < 0) {
                             return;
