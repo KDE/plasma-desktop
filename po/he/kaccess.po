@@ -16,30 +16,31 @@
 # Diego Iastrubni <elcuco@kde.org>, 2007, 2008, 2010, 2012.
 # elkana bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2025 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-16 02:45+0000\n"
-"PO-Revision-Date: 2017-05-23 10:18-0400\n"
-"Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2025-08-06 10:32+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Lokalize 25.04.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "צוות התרגום של KDE ישראל"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "kde-l10n-he@kde.org"
 
 #: kaccess.cpp:69
 msgid ""
@@ -180,7 +181,7 @@ msgstr "מקש ה־Scroll Lock כובה."
 #: kaccess.cpp:302
 #, kde-format
 msgid "Toggle Screen Reader On and Off"
-msgstr "שנה את מצב קורא המסך"
+msgstr "שינוי מצב קורא המסך"
 
 #: kaccess.cpp:304
 #, kde-format
@@ -231,7 +232,7 @@ msgstr "הצג בקשת אישור זו"
 #: kaccess.cpp:650
 #, kde-format
 msgid "Deactivate All AccessX Features & Gestures"
-msgstr "בטל את כל האפשרויות וקיצורי המקשים של AccessX"
+msgstr "להשבית את כל האפשרויות וקיצורי המקשים של AccessX"
 
 #: kaccess.cpp:693 kaccess.cpp:695
 #, kde-format
@@ -256,88 +257,80 @@ msgstr "מקשי עכבר"
 #: kaccess.cpp:717
 #, kde-format
 msgid "Do you really want to deactivate \"%1\"?"
-msgstr "האם אתה בטוח שברצונך להפסיק את הפעולה \"%1\"?"
+msgstr "להשבית את „%1”?"
 
 #: kaccess.cpp:720
 #, kde-format
 msgid "Do you really want to deactivate \"%1\" and \"%2\"?"
-msgstr "האם אתה בטוח שברצונך להפסיק את הפעולות \"%1\" ו־\"%2\"?"
+msgstr "להשבית את „%1” ואת „%2”?"
 
 #: kaccess.cpp:724
 #, kde-format
 msgid "Do you really want to deactivate \"%1\", \"%2\" and \"%3\"?"
-msgstr "האם אתה בטוח שברצונך להפסיק את הפעולות \"%1\", \"%2\" ו־\"%3\"?"
+msgstr "להשבית את „%1’, „%2” ואת „%3”?"
 
 #: kaccess.cpp:727
 #, kde-format
 msgid "Do you really want to deactivate \"%1\", \"%2\", \"%3\" and \"%4\"?"
-msgstr "האם אתה בטוח שברצונך להפסיק את פעולות \"%1\", \"%2\", \"%3\" ו־\"%4\"?"
+msgstr "להשבית את „%1”, „%2”, „%3” ואת „%4”?"
 
 #: kaccess.cpp:738
 #, kde-format
 msgid "Do you really want to activate \"%1\"?"
-msgstr "האם אתה בטוח שברצונך להפעיל את \"%1\"?"
+msgstr "להפעיל את „%1”?"
 
 #: kaccess.cpp:741
 #, kde-format
 msgid "Do you really want to activate \"%1\" and to deactivate \"%2\"?"
-msgstr "האם אתה בטוח שברצונך להפעיל את \"%1\" ולהפסיק את הפעולה \"%2\"?"
+msgstr "להפעיל את „%1” ולהשבית את „%2”?"
 
 #: kaccess.cpp:744
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\" and to deactivate \"%2\" and \"%3\"?"
-msgstr ""
-"האם אתה בטוח שברצונך להפעיל את \"%1\" ולהפסיק את הפעולות \"%2\" וגם \"%3\"?"
+msgstr "להפעיל את „%1” ולהשבית את „%2” ואת „%3”?"
 
 #: kaccess.cpp:750
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\" and to deactivate \"%2\", \"%3\" and "
 "\"%4\"?"
-msgstr ""
-"האם אתה בטוח שברצונך להפעיל את \"%1\" ולהפסיק את הפעולות \"%2\", \"%3\" וגם "
-"\"%4\"?"
+msgstr "להפעיל את „%1” ולהשבית את „%2”, „%3” ואת „%4”?"
 
 #: kaccess.cpp:761
 #, kde-format
 msgid "Do you really want to activate \"%1\" and \"%2\"?"
-msgstr "האם אתה בטוח שברצונך להפעיל את \"%1\" וגם \"%2\"?"
+msgstr "להפעיל את „%1” ואת „%2”?"
 
 #: kaccess.cpp:764
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\" and \"%2\" and to deactivate \"%3\"?"
-msgstr ""
-"האם אתה בטוח שברצונך להפעיל את \"%1\" ו־\"%2\" ולהפסיק את הפעולה \"%3\"?"
+msgstr "להפעיל את „%1” ואת „%2” ולהשבית את „%3”?"
 
 #: kaccess.cpp:770
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\", and \"%2\" and to deactivate \"%3\" "
 "and \"%4\"?"
-msgstr ""
-"האם אתה בטוח שברצונך להפעיל את \"%1\" ו־\"%2\" ולהפסיק את הפעולות \"%3\" וגם "
-"\"%4\"?"
+msgstr "להפעיל את „%1” ואת „%2” ולהשבית את „%3” ואת „%4”?"
 
 #: kaccess.cpp:781
 #, kde-format
 msgid "Do you really want to activate \"%1\", \"%2\" and \"%3\"?"
-msgstr "האם אתה בטוח שברצונך להפעיל את \"%1\", \"%2\" וגם \"%3\"?"
+msgstr "להפעיל את „%1”, „%2” ואת „%3”?"
 
 #: kaccess.cpp:784
 #, kde-format
 msgid ""
 "Do you really want to activate \"%1\", \"%2\" and \"%3\" and to deactivate "
 "\"%4\"?"
-msgstr ""
-"האם אתה בטוח שברצונך להפעיל את \"%1\", \"%2\" וגם \"%3\" ולהפסיק את הפעולה "
-"\"%4\"?"
+msgstr "להפעיל את „%1”, „%2” ואת „%3” ולהשבית את „%4”?"
 
 #: kaccess.cpp:793
 #, kde-format
 msgid "Do you really want to activate \"%1\", \"%2\", \"%3\" and \"%4\"?"
-msgstr "האם אתה בטוח שברצונך להפעיל את \"%1\", \"%2\", \"%3\" וגם \"%4\"?"
+msgstr "להפעיל את „%1”, „%2”, „%3” ואת „%4”?"
 
 #: kaccess.cpp:802
 #, kde-format
@@ -388,11 +381,11 @@ msgid ""
 "and gestures\"."
 msgstr ""
 "הגדרות AccessX אלו נצרכות עבור משתמשים מסוימים עם מגבלות תנועה ויכולות להיות "
-"מוגדרות במרכז הבקרה של KDE. באפשרותך גם להפעיל ולכבות אותן באמצעות קיצורי "
-"המקלדת הסטנדרטיים.\n"
+"מוגדרות במרכז הבקרה של KDE. אפשר גם להפעיל ולכבות אותן באמצעות קיצורי המקלדת "
+"התקניים.\n"
 "\n"
-"אם אין לך צורך בהן באפשרותך לבחור ב\"בטל את כל האפשרויות וקיצורי המקשים של "
-"AccessX\"."
+"אם אין לך צורך בהן אפשר לבחור ב„ביטול כל האפשרויות וקיצורי המקשים של "
+"AccessX”."
 
 #: kaccess.cpp:845
 #, kde-format
@@ -400,13 +393,13 @@ msgid ""
 "Slow keys has been enabled. From now on, you need to press each key for a "
 "certain length of time before it gets accepted."
 msgstr ""
-"מקשים אטיים הופעלו. מעכשיו הלאה, אתה תצטרך ללחוץ על כל מקש זמן מסוים לפני "
-"שהוא מאושר."
+"מקשים אטיים הופעלו. מעכשיו הלאה, יש ללחוץ על כל מקש זמן מסוים לפני שהוא "
+"מתקבל."
 
 #: kaccess.cpp:847
 #, kde-format
 msgid "Slow keys has been disabled."
-msgstr "מקשים אטיים בוטלו."
+msgstr "מקשים אטיים הושבתו."
 
 #: kaccess.cpp:851
 #, kde-format
@@ -414,12 +407,12 @@ msgid ""
 "Bounce keys has been enabled. From now on, each key will be blocked for a "
 "certain length of time after it was used."
 msgstr ""
-"מקשים קופצים הופעלו. מעכשיו הלאה, כל מקש יחסם זמן מסוים אחרי שהוא היה בשימוש."
+"מקשים חוזרים הופעלו. מעכשיו הלאה, כל מקש ייחסם לזמן מסוים לאחר שהיה בשימוש."
 
 #: kaccess.cpp:853
 #, kde-format
 msgid "Bounce keys has been disabled."
-msgstr "מקשים קופצים בוטלו."
+msgstr "מקשים חוזרים הושבתו."
 
 #: kaccess.cpp:857
 #, kde-format
@@ -427,13 +420,13 @@ msgid ""
 "Sticky keys has been enabled. From now on, modifier keys will stay latched "
 "after you have released them."
 msgstr ""
-"אפשרות המקשים הדביקים פעילה כעת. מעתה מקשים דוגמת Shift, Ctrl, Alt וכו', "
-"יתפקדו כלחוצים, גם לאחר שהסרת את אצבעך מהם."
+"אפשרות המקשים הדביקים פעילה כעת. מעתה מקשים כדוגמת Shift,‏ Ctrl,‏ Alt וכו׳ "
+"יתפקדו כלחוצים, גם לאחר הפסקת הלחיצה עליהם."
 
 #: kaccess.cpp:859
 #, kde-format
 msgid "Sticky keys has been disabled."
-msgstr "מקשים דביקים בוטלו."
+msgstr "מקשים דביקים הושבתו."
 
 #: kaccess.cpp:863
 #, kde-format
@@ -441,35 +434,33 @@ msgid ""
 "Mouse keys has been enabled. From now on, you can use the number pad of your "
 "keyboard in order to control the mouse."
 msgstr ""
-"מקשי עכבר הופעלו. מעכשיו הלאה, תוכל להשתמש בפאד המספרים של המקלדת כדי לשלוט "
+"מקשי עכבר הופעלו. מעכשיו והלאה, אפשר להשתמש בלוח המספרים של המקלדת כדי לשלוט "
 "בעכבר."
 
 #: kaccess.cpp:865
 #, kde-format
 msgid "Mouse keys has been disabled."
-msgstr "מקשי עכבר בוטלו."
+msgstr "מקשי עכבר הושבתו."
 
 #: main.cpp:49
-#, fuzzy, kde-format
-#| msgctxt "Name for kaccess shortcuts category"
-#| msgid "Accessibility"
+#, kde-format
 msgid "Accessibility"
 msgstr "נגישות"
 
 #: main.cpp:49
 #, kde-format
 msgid "(c) 2000, Matthias Hoelzer-Kluepfel"
-msgstr "(c) 2000, Matthias Hoelzer-Kluepfel"
+msgstr "(c) 2000, מתיאס הולצר-קלופּפל"
 
 #: main.cpp:51
 #, kde-format
 msgid "Matthias Hoelzer-Kluepfel"
-msgstr "Matthias Hoelzer-Kluepfel"
+msgstr "מתיאס הולצר-קלופּפל"
 
 #: main.cpp:51
 #, kde-format
 msgid "Author"
-msgstr "כותב"
+msgstr "יוצר"
 
 #~ msgid "KDE Accessibility Tool"
 #~ msgstr "כלי הנגישות של KDE"
