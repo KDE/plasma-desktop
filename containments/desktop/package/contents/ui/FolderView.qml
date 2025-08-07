@@ -1257,7 +1257,9 @@ FocusScope {
                 }
                 var rows = (gridView.flow === GridView.FlowLeftToRight);
                 var axis = rows ? gridView.width : gridView.height;
-                var step = rows ? cellWidth : cellHeight;
+                var step = rows ? gridView.cellWidth : gridView.cellHeight;
+                // We need to update the perStripe when moving due to panel changes etc.
+                positioner.perStripe = Math.floor(axis / step);
                 var perStripe = positioner.perStripe;
                 var dropPos = mapToItem(gridView.contentItem, x, y);
                 var leftEdge = Math.min(gridView.contentX, gridView.originX);
