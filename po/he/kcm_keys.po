@@ -1,0 +1,325 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# SPDX-FileCopyrightText: 2025 Yaron Shahrabani <sh.yaron@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-04-29 02:54+0000\n"
+"PO-Revision-Date: 2025-08-07 11:23+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 25.04.3\n"
+
+#: globalaccelmodel.cpp:202
+#, kde-format
+msgctxt ""
+"%1 is the name of the component, %2 is the action for which saving failed"
+msgid "Error while saving shortcut %1: %2"
+msgstr "שגיאה בשמירת מקשי הקיצור %1:‏ %2"
+
+#: globalaccelmodel.cpp:314
+#, kde-format
+msgctxt "%1 is the name of an application"
+msgid "Error while adding %1, it seems it has no actions."
+msgstr "שגיאה בהוספת %1, נראה שאין לו אף פעולה."
+
+#: globalaccelmodel.cpp:357
+#, kde-format
+msgid "Error while communicating with the global shortcuts service"
+msgstr "שגיאה בהתקשרות עם שירות קיצורי המקשים המקיף"
+
+#: kcm_keys.cpp:57
+#, kde-format
+msgid "Failed to communicate with global shortcuts daemon"
+msgstr "התקשורת מול סוכן קיצורי המקשים המקיפים נכשלה"
+
+#: kcm_keys.cpp:312
+#, kde-format
+msgctxt "%2 is the name of a category inside the 'Common Actions' section"
+msgid ""
+"Shortcut %1 is already assigned to the common %2 action '%3'.\n"
+"Do you want to reassign it?"
+msgstr ""
+"קיצור המקשים %1 כבר משויך לפעולה המשותפת %2 אצל ‚%3’.\n"
+"לשייך מחדש?"
+
+#: kcm_keys.cpp:316
+#, kde-format
+msgid ""
+"Shortcut %1 is already assigned to action '%2' of %3.\n"
+"Do you want to reassign it?"
+msgstr ""
+"קיצור המקשים %1 כבר משויך לפעולה ‚%2’ אצל %3.\n"
+"לשייך מחדש?"
+
+#: kcm_keys.cpp:317
+#, kde-format
+msgctxt "@title:window"
+msgid "Found conflict"
+msgstr "נמצאה סתירה"
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid "Applications"
+msgstr "יישומים"
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid "Commands"
+msgstr "פקודות"
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid "System Settings"
+msgstr "הגדרות מערכת"
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid "Common Actions"
+msgstr "פעולות משותפות"
+
+#: package/contents/ui/main.qml:50
+#, kde-format
+msgid "Cannot export scheme while there are unsaved changes"
+msgstr "לא ניתן לייצא את הסכמה לפני שמירת השינויים"
+
+#: package/contents/ui/main.qml:62
+#, kde-format
+msgid ""
+"Select the components below that should be included in the exported scheme"
+msgstr "נא לבחור את הרכיבים שייכללו בסכמה שתיוצא"
+
+#: package/contents/ui/main.qml:68
+#, kde-format
+msgid "Save scheme"
+msgstr "שמירת סכמה"
+
+#: package/contents/ui/main.qml:168
+#, kde-format
+msgctxt "@tooltip:button %1 is the text of a custom command"
+msgid "Edit command for %1"
+msgstr "עריכת פקודה עבור %1"
+
+#: package/contents/ui/main.qml:184
+#, kde-format
+msgid "Remove all shortcuts for %1"
+msgstr "הסרת כל קיצורי המקשים עבור %1"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Undo deletion"
+msgstr "ביטול מחיקה"
+
+#: package/contents/ui/main.qml:246
+#, kde-format
+msgid "No items matched the search terms"
+msgstr "אין פריטים שעונים על תנאי החיפוש"
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Select an item from the list to view its shortcuts here"
+msgstr "נא לבחור פריט מהרשימה כדי לצפות כאן בקיצורי המקשים שלו"
+
+#: package/contents/ui/main.qml:304
+#, kde-format
+msgctxt "@action:button Keep translated text as short as possible"
+msgid "Add Application…"
+msgstr "הוספת יישום…"
+
+#: package/contents/ui/main.qml:314
+#, kde-format
+msgctxt "@action:button Keep translated text as short as possible"
+msgid "Add Command…"
+msgstr "הוספת פקודה…"
+
+#: package/contents/ui/main.qml:333
+#, kde-format
+msgid "Import Scheme…"
+msgstr "ייבוא ערכת צבעים…"
+
+#: package/contents/ui/main.qml:338
+#, kde-format
+msgid "Cancel Export"
+msgstr "ביטול ייצוא"
+
+#: package/contents/ui/main.qml:338
+#, kde-format
+msgid "Export Scheme…"
+msgstr "ייצוא ערכה…"
+
+#: package/contents/ui/main.qml:358
+#, kde-format
+msgid "Export Shortcut Scheme"
+msgstr "ייצוא ערכת קיצורי מקשים"
+
+#: package/contents/ui/main.qml:358 package/contents/ui/main.qml:468
+#, kde-format
+msgid "Import Shortcut Scheme"
+msgstr "ייבוא ערכת קיצורי מקשים"
+
+#: package/contents/ui/main.qml:360
+#, kde-format
+msgctxt "Template for file dialog"
+msgid "Shortcut Scheme (*.kksrc)"
+msgstr "ערכת קיצורי מקשים (‎*.kksrc)"
+
+#: package/contents/ui/main.qml:388
+#, kde-format
+msgid "Edit Command"
+msgstr "עריכת פקודה"
+
+#: package/contents/ui/main.qml:388
+#, kde-format
+msgid "Add Command"
+msgstr "הוספת פקודה"
+
+#: package/contents/ui/main.qml:401
+#, kde-format
+msgid "Save"
+msgstr "שמירה"
+
+#: package/contents/ui/main.qml:401
+#, kde-format
+msgid "Add"
+msgstr "הוספה"
+
+#: package/contents/ui/main.qml:426
+#, kde-format
+msgid "Enter a command or choose a script file:"
+msgstr "נא למלא פקודה או לבחור בקובץ סקריפט:"
+
+#: package/contents/ui/main.qml:440
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose…"
+msgstr "בחירה…"
+
+#: package/contents/ui/main.qml:453
+#, kde-format
+msgctxt "@title:window"
+msgid "Choose Script File"
+msgstr "בחירת קובץ סקריפט"
+
+#: package/contents/ui/main.qml:455
+#, kde-format
+msgctxt "Template for file dialog"
+msgid "Script file (*.*sh)"
+msgstr "קובץ סקריפט (‎*.*sh)"
+
+#: package/contents/ui/main.qml:475
+#, kde-format
+msgid "Select the scheme to import:"
+msgstr "נא לבחור ערכה לייבוא:"
+
+#: package/contents/ui/main.qml:489
+#, kde-format
+msgid "Custom Scheme"
+msgstr "ערכה מותאמת אישית"
+
+#: package/contents/ui/main.qml:494
+#, kde-format
+msgid "Select File…"
+msgstr "בחירת קובץ…"
+
+#: package/contents/ui/main.qml:494
+#, kde-format
+msgid "Import"
+msgstr "ייבוא"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:31
+#, kde-format
+msgid "Editing shortcut: %1"
+msgstr "עריכת קיצור מקשים: %1"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:43
+#, kde-format
+msgctxt ""
+"%1 is the name action that is triggered by the key sequences following "
+"after :"
+msgid "%1:"
+msgstr "%1:"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:56
+#, kde-format
+msgid "No active shortcuts"
+msgstr "אין קיצורי מקשים פעילים"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:96
+#, kde-format
+msgctxt "%1 decides if singular or plural will be used"
+msgid "Default shortcut"
+msgid_plural "Default shortcuts"
+msgstr[0] "קיצור ברירת מחדל"
+msgstr[1] "קיצורי ברירת מחדל"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:98
+#, kde-format
+msgid "No default shortcuts"
+msgstr "אין קיצורים כברירת מחדל"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:106
+#, kde-format
+msgid "Default shortcut %1 is enabled."
+msgstr "קיצור ברירת המחדל %1 פעיל."
+
+#: package/contents/ui/ShortcutActionDelegate.qml:106
+#, kde-format
+msgid "Default shortcut %1 is disabled."
+msgstr "קיצור ברירת המחדל %1 מושבת."
+
+#: package/contents/ui/ShortcutActionDelegate.qml:127
+#, kde-format
+msgid "Custom shortcuts"
+msgstr "קיצורי מקשים מותאמים אישית"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:152
+#, kde-format
+msgid "Delete this shortcut"
+msgstr "מחיקת קיצור המקשים הזה"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:158
+#, kde-format
+msgid "Add custom shortcut"
+msgstr "הוספת קיצור מקשים משלך"
+
+#: package/contents/ui/ShortcutActionDelegate.qml:193
+#, kde-format
+msgid "Cancel capturing of new shortcut"
+msgstr "ביטול לכידת קיצור מקשים חדש"
+
+#: standardshortcutsmodel.cpp:34
+#, kde-format
+msgid "File"
+msgstr "קובץ"
+
+#: standardshortcutsmodel.cpp:35
+#, kde-format
+msgid "Edit"
+msgstr "עריכה"
+
+#: standardshortcutsmodel.cpp:37
+#, kde-format
+msgid "Navigation"
+msgstr "ניווט"
+
+#: standardshortcutsmodel.cpp:38
+#, kde-format
+msgid "View"
+msgstr "תצוגה"
+
+#: standardshortcutsmodel.cpp:39
+#, kde-format
+msgid "Settings"
+msgstr "הגדרות"
+
+#: standardshortcutsmodel.cpp:40
+#, kde-format
+msgid "Help"
+msgstr "עזרה"
