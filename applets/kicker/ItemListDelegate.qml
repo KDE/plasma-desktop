@@ -32,6 +32,7 @@ Item {
         || (("hasActionList" in model) && (model.hasActionList === true)))
     property QtObject childDialog: null
     property ActionMenu menu: actionMenu
+    property bool dialogDefaultRight: Qt.application.layoutDirection !== Qt.RightToLeft
     readonly property bool pressed: mouseArea.pressed
     readonly property bool iconAndLabelsShouldlookSelected: mouseArea.pressed && !hasChildren
     readonly property alias hovered: mouseArea.containsMouse
@@ -234,7 +235,7 @@ Item {
             visible: item.hasChildren
             opacity: (item.ListView.view.currentIndex === index) ? 1.0 : 0.4
             selected: item.iconAndLabelsShouldlookSelected
-            source: Qt.application.layoutDirection !== Qt.RightToLeft
+            source: item.dialogDefaultRight
                 ? "go-next-symbolic"
                 : "go-next-rtl-symbolic"
         }

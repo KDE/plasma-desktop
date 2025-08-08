@@ -64,6 +64,7 @@ Kicker.SubMenu {
         }
 
         iconsEnabled: true
+        LayoutMirroring.enabled: itemDialog.LayoutMirroring.enabled
 
         dialog: itemDialog
 

@@ -19,7 +19,7 @@ FocusScope {
     property real maximumWidth: minimumWidth * 2
 
     width: minimumWidth
-    height: listView.contentHeight
+    implicitHeight: listView.contentHeight
 
     signal exited
     signal keyNavigationAtListEnd
@@ -79,6 +79,7 @@ FocusScope {
                                             model: model.modelForRow(listView.currentIndex),
                                             visible: true
                                         });
+            itemList.childDialog.LayoutMirroring.enabled = itemList.LayoutMirroring.enabled
 
             windowSystem.forceActive(itemList.childDialog.mainItem);
             itemList.childDialog.mainItem.focus = true;
@@ -149,6 +150,7 @@ FocusScope {
                 keyNavigationEnabled: false
 
                 delegate: ItemListDelegate {
+                    dialogDefaultRight: !itemList.LayoutMirroring.enabled
                     onFullTextWidthChanged: {
                         if (itemList && fullTextWidth > itemList.width) {
                             itemList.width = Math.min(fullTextWidth, itemList.maximumWidth);
@@ -210,10 +212,10 @@ FocusScope {
             }
 
             Keys.onPressed: event => {
-                let backArrowKey = (event.key === Qt.Key_Left && Application.layoutDirection === Qt.LeftToRight) ||
-                    (event.key === Qt.Key_Right && Application.layoutDirection === Qt.RightToLeft)
-                let forwardArrowKey = (event.key === Qt.Key_Right && Application.layoutDirection === Qt.LeftToRight) ||
-                    (event.key === Qt.Key_Left && Application.layoutDirection === Qt.RightToLeft)
+                let backArrowKey = (event.key === Qt.Key_Left && !itemList.LayoutMirroring.enabled) ||
+                    (event.key === Qt.Key_Right && itemList.LayoutMirroring.enabled)
+                let forwardArrowKey = (event.key === Qt.Key_Right && !itemList.LayoutMirroring.enabled) ||
+                    (event.key === Qt.Key_Left && itemList.LayoutMirroring.enabled)
                 if (listView.currentItem !== null && listView.currentItem.hasChildren &&
                     (forwardArrowKey || event.key === Qt.Key_Return || event.key === Qt.Key_Enter)) {
                     if (itemList.childDialog === null) {
