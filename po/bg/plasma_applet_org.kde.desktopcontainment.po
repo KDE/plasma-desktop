@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-08-10 00:44+0000\n"
 "PO-Revision-Date: 2025-07-21 00:12+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -446,17 +446,17 @@ msgstr "Работен плот и тапет…"
 msgid "Select Folder"
 msgstr "Избиране на папка"
 
-#: plugins/folder/foldermodel.cpp:513
+#: plugins/folder/foldermodel.cpp:519
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "Обнов&яване на работния плот"
 
-#: plugins/folder/foldermodel.cpp:513 plugins/folder/foldermodel.cpp:1729
+#: plugins/folder/foldermodel.cpp:519 plugins/folder/foldermodel.cpp:1735
 #, kde-format
 msgid "&Refresh View"
 msgstr "Оп&ресняване на изгледа"
 
-#: plugins/folder/foldermodel.cpp:872
+#: plugins/folder/foldermodel.cpp:878
 #, kde-format
 msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
@@ -464,7 +464,7 @@ msgctxt ""
 msgid "Link Target Not Found"
 msgstr "Не е намерена целта на връзката"
 
-#: plugins/folder/foldermodel.cpp:874
+#: plugins/folder/foldermodel.cpp:880
 #, kde-kuit-format
 msgctxt "@info Body text of a system notification"
 msgid ""
@@ -474,23 +474,23 @@ msgstr ""
 "<filename>%1</filename> сочи към <filename>%2</filename>, но не можеда бъде "
 "намерен. Може би е преместен или изтрит."
 
-#: plugins/folder/foldermodel.cpp:1738
+#: plugins/folder/foldermodel.cpp:1744
 #, kde-format
 msgid "&Empty Trash"
 msgstr "&Изпразване на кошчето"
 
-#: plugins/folder/foldermodel.cpp:1741
+#: plugins/folder/foldermodel.cpp:1747
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr "Възстановяване в първоначалното местоположение"
 
-#: plugins/folder/foldermodel.cpp:1744
+#: plugins/folder/foldermodel.cpp:1750
 #, kde-format
 msgid "&Open"
 msgstr "&Отваряне"
 
-#: plugins/folder/foldermodel.cpp:1748
+#: plugins/folder/foldermodel.cpp:1754
 #, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -498,23 +498,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Показване на целта"
 
-#: plugins/folder/foldermodel.cpp:1844
+#: plugins/folder/foldermodel.cpp:1850
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr "Премахване на иконата на кошчето"
 
-#: plugins/folder/foldermodel.cpp:1847
+#: plugins/folder/foldermodel.cpp:1853
 #, kde-format
 msgid "&Move to Trash"
 msgstr "П&реместване в кошчето"
 
-#: plugins/folder/foldermodel.cpp:1880
+#: plugins/folder/foldermodel.cpp:1886
 #, kde-format
 msgid "&Paste"
 msgstr "&Поставяне"
 
-#: plugins/folder/foldermodel.cpp:2031
+#: plugins/folder/foldermodel.cpp:2037
 #, kde-format
 msgid "&Properties"
 msgstr "&Свойства"

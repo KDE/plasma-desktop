@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-08-10 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -438,17 +438,17 @@ msgstr "桌面和壁纸"
 msgid "Select Folder"
 msgstr "选择文件夹"
 
-#: plugins/folder/foldermodel.cpp:513
+#: plugins/folder/foldermodel.cpp:519
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "刷新桌面(&R)"
 
-#: plugins/folder/foldermodel.cpp:513 plugins/folder/foldermodel.cpp:1729
+#: plugins/folder/foldermodel.cpp:519 plugins/folder/foldermodel.cpp:1735
 #, kde-format
 msgid "&Refresh View"
 msgstr "刷新视图(&R)"
 
-#: plugins/folder/foldermodel.cpp:872
+#: plugins/folder/foldermodel.cpp:878
 #, kde-format
 msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
@@ -456,7 +456,7 @@ msgctxt ""
 msgid "Link Target Not Found"
 msgstr "找不到链接目标"
 
-#: plugins/folder/foldermodel.cpp:874
+#: plugins/folder/foldermodel.cpp:880
 #, kde-kuit-format
 msgctxt "@info Body text of a system notification"
 msgid ""
@@ -466,23 +466,23 @@ msgstr ""
 "<filename>%1</filename> 指向 <filename>%2</filename>，但系统无法找到它。它可"
 "能已被移动或者删除。"
 
-#: plugins/folder/foldermodel.cpp:1738
+#: plugins/folder/foldermodel.cpp:1744
 #, kde-format
 msgid "&Empty Trash"
 msgstr "清空回收站(&E)"
 
-#: plugins/folder/foldermodel.cpp:1741
+#: plugins/folder/foldermodel.cpp:1747
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr "还原到之前位置"
 
-#: plugins/folder/foldermodel.cpp:1744
+#: plugins/folder/foldermodel.cpp:1750
 #, kde-format
 msgid "&Open"
 msgstr "打开(&O)"
 
-#: plugins/folder/foldermodel.cpp:1748
+#: plugins/folder/foldermodel.cpp:1754
 #, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -490,23 +490,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "显示目标"
 
-#: plugins/folder/foldermodel.cpp:1844
+#: plugins/folder/foldermodel.cpp:1850
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr "移除回收站图标"
 
-#: plugins/folder/foldermodel.cpp:1847
+#: plugins/folder/foldermodel.cpp:1853
 #, kde-format
 msgid "&Move to Trash"
 msgstr "移动到回收站(&M)"
 
-#: plugins/folder/foldermodel.cpp:1880
+#: plugins/folder/foldermodel.cpp:1886
 #, kde-format
 msgid "&Paste"
 msgstr "粘贴(&P)"
 
-#: plugins/folder/foldermodel.cpp:2031
+#: plugins/folder/foldermodel.cpp:2037
 #, kde-format
 msgid "&Properties"
 msgstr "属性(&P)"

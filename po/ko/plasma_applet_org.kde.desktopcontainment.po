@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-08-10 00:44+0000\n"
 "PO-Revision-Date: 2025-07-20 01:37+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -448,17 +448,17 @@ msgstr "바탕 화면 및 배경 그림"
 msgid "Select Folder"
 msgstr "폴더 선택"
 
-#: plugins/folder/foldermodel.cpp:513
+#: plugins/folder/foldermodel.cpp:519
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "바탕 화면 새로 고침(&R)"
 
-#: plugins/folder/foldermodel.cpp:513 plugins/folder/foldermodel.cpp:1729
+#: plugins/folder/foldermodel.cpp:519 plugins/folder/foldermodel.cpp:1735
 #, kde-format
 msgid "&Refresh View"
 msgstr "보기 새로 고침(&R)"
 
-#: plugins/folder/foldermodel.cpp:872
+#: plugins/folder/foldermodel.cpp:878
 #, kde-format
 msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
@@ -466,7 +466,7 @@ msgctxt ""
 msgid "Link Target Not Found"
 msgstr "링크 대상을 찾을 수 없음"
 
-#: plugins/folder/foldermodel.cpp:874
+#: plugins/folder/foldermodel.cpp:880
 #, kde-kuit-format
 msgctxt "@info Body text of a system notification"
 msgid ""
@@ -476,23 +476,23 @@ msgstr ""
 "<filename>%1</filename>이(가) <filename>%2</filename>을(를) 가리키지만 대상"
 "을 찾을 수 없습니다. 이동이나 삭제되었을 수도 있습니다."
 
-#: plugins/folder/foldermodel.cpp:1738
+#: plugins/folder/foldermodel.cpp:1744
 #, kde-format
 msgid "&Empty Trash"
 msgstr "휴지통 비우기(&E)"
 
-#: plugins/folder/foldermodel.cpp:1741
+#: plugins/folder/foldermodel.cpp:1747
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr "이전 위치로 복원"
 
-#: plugins/folder/foldermodel.cpp:1744
+#: plugins/folder/foldermodel.cpp:1750
 #, kde-format
 msgid "&Open"
 msgstr "열기(&O)"
 
-#: plugins/folder/foldermodel.cpp:1748
+#: plugins/folder/foldermodel.cpp:1754
 #, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -500,23 +500,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "대상 표시"
 
-#: plugins/folder/foldermodel.cpp:1844
+#: plugins/folder/foldermodel.cpp:1850
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr "휴지통 아이콘 삭제"
 
-#: plugins/folder/foldermodel.cpp:1847
+#: plugins/folder/foldermodel.cpp:1853
 #, kde-format
 msgid "&Move to Trash"
 msgstr "휴지통으로 이동(&M)"
 
-#: plugins/folder/foldermodel.cpp:1880
+#: plugins/folder/foldermodel.cpp:1886
 #, kde-format
 msgid "&Paste"
 msgstr "붙여넣기(&P)"
 
-#: plugins/folder/foldermodel.cpp:2031
+#: plugins/folder/foldermodel.cpp:2037
 #, kde-format
 msgid "&Properties"
 msgstr "속성(&P)"

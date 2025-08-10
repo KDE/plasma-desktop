@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-08-10 00:44+0000\n"
 "PO-Revision-Date: 2025-08-02 10:14+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -441,17 +441,17 @@ msgstr "Namizje in ozadje"
 msgid "Select Folder"
 msgstr "Izberi mapo"
 
-#: plugins/folder/foldermodel.cpp:513
+#: plugins/folder/foldermodel.cpp:519
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "Osveži namizje"
 
-#: plugins/folder/foldermodel.cpp:513 plugins/folder/foldermodel.cpp:1729
+#: plugins/folder/foldermodel.cpp:519 plugins/folder/foldermodel.cpp:1735
 #, kde-format
 msgid "&Refresh View"
 msgstr "Osveži prikaz"
 
-#: plugins/folder/foldermodel.cpp:872
+#: plugins/folder/foldermodel.cpp:878
 #, kde-format
 msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
@@ -459,7 +459,7 @@ msgctxt ""
 msgid "Link Target Not Found"
 msgstr "Cilja povezave ni bilo mogoče najti"
 
-#: plugins/folder/foldermodel.cpp:874
+#: plugins/folder/foldermodel.cpp:880
 #, kde-kuit-format
 msgctxt "@info Body text of a system notification"
 msgid ""
@@ -469,23 +469,23 @@ msgstr ""
 "<filename>%1</filename> kaže na <filename>%2</filename>, vendar je ni bilo "
 "mogoče najti. Morda je bila premaknjena ali izbrisana."
 
-#: plugins/folder/foldermodel.cpp:1738
+#: plugins/folder/foldermodel.cpp:1744
 #, kde-format
 msgid "&Empty Trash"
 msgstr "Izprazni Sm&eti"
 
-#: plugins/folder/foldermodel.cpp:1741
+#: plugins/folder/foldermodel.cpp:1747
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr "Obnovi na prejšnjo lokacijo"
 
-#: plugins/folder/foldermodel.cpp:1744
+#: plugins/folder/foldermodel.cpp:1750
 #, kde-format
 msgid "&Open"
 msgstr "&Odpri"
 
-#: plugins/folder/foldermodel.cpp:1748
+#: plugins/folder/foldermodel.cpp:1754
 #, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -493,23 +493,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Pokaži cilj"
 
-#: plugins/folder/foldermodel.cpp:1844
+#: plugins/folder/foldermodel.cpp:1850
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr "Odstrani ikono smeti"
 
-#: plugins/folder/foldermodel.cpp:1847
+#: plugins/folder/foldermodel.cpp:1853
 #, kde-format
 msgid "&Move to Trash"
 msgstr "Pre&makni v smeti"
 
-#: plugins/folder/foldermodel.cpp:1880
+#: plugins/folder/foldermodel.cpp:1886
 #, kde-format
 msgid "&Paste"
 msgstr "&Prilepi"
 
-#: plugins/folder/foldermodel.cpp:2031
+#: plugins/folder/foldermodel.cpp:2037
 #, kde-format
 msgid "&Properties"
 msgstr "Lastnosti"
