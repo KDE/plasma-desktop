@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-05 05:54+0000\n"
-"PO-Revision-Date: 2025-08-05 12:41+0400\n"
+"PO-Revision-Date: 2025-08-09 15:29+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -439,7 +439,7 @@ msgstr "لوح اللمس غير متصل. أغلقت مربع حوار الإع
 #: kcm/libinput/touchpadconfiglibinput.cpp:167
 #, kde-format
 msgid "Touchpad disconnected. No other touchpads found."
-msgstr "لوح اللمس غير متصل. لم يتم العثور على أجهزة لمس أخرى."
+msgstr "لوح اللمس غير متصل. لم يعثر على أجهزة لمس أخرى."
 
 #: kcm/xlib/testarea.cpp:20
 #, kde-format
@@ -753,13 +753,13 @@ msgstr "المعامل الأعلى:"
 #: kcm/xlib/ui/pointermotion.ui:153
 #, kde-format
 msgid "Finger pressure at which minimum pressure motion factor is applied"
-msgstr "ضغط الإصبع الذي يتم عنده تطبيق معامل حركة الضغط الأدنى"
+msgstr "ضغط الإصبع الذي يُطبق عنده معامل حركة الضغط الأدنى"
 
 #. i18n: ectx: property (toolTip), widget (QSlider, kcfg_PressureMotionMaxZ)
 #: kcm/xlib/ui/pointermotion.ui:166
 #, kde-format
 msgid "Finger pressure at which maximum pressure motion factor is applied"
-msgstr "ضغط الإصبع الذي يتم عنده تطبيق معامل حركة الضغط الأعلى"
+msgstr "ضغط الإصبع الذي يُطبق عنده معامل حركة الضغط الأعلى"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, kcfg_PressureMotionMinFactor)
 #: kcm/xlib/ui/pointermotion.ui:179
@@ -1178,7 +1178,7 @@ msgstr "أصبع واحد:"
 #: kcm/xlib/ui/tap.ui:53
 #, kde-format
 msgid "Which mouse button is reported on a non-corner one-finger tap"
-msgstr "زر الفأرة الذي يتم الإبلاغ عنه عند الطَرق بإصبع واحد باستثناء الزوايا"
+msgstr "زر الفأرة الذي يُبلّغ عنه عند الطَرق بإصبع واحد باستثناء الزوايا"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: kcm/xlib/ui/tap.ui:60
@@ -1191,7 +1191,7 @@ msgstr "بالأصبعين:"
 #: kcm/xlib/ui/tap.ui:70
 #, kde-format
 msgid "Which mouse button is reported on a non-corner two-finger tap"
-msgstr "زر الفأرة الذي يتم الإبلاغ عنه عند الطَرق بأصبعين باستثناء الزوايا"
+msgstr "زر الفأرة الذي يُبلّغ عنه عند الطَرق بأصبعين باستثناء الزوايا"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: kcm/xlib/ui/tap.ui:77
@@ -1204,7 +1204,7 @@ msgstr "ثلاثة أصابع:"
 #: kcm/xlib/ui/tap.ui:87
 #, kde-format
 msgid "Which mouse button is reported on a non-corner three-finger tap"
-msgstr "زر الفأرة الذي يتم الإبلاغ عنه عند الطَرق بثلاث أصابع باستثناء الزوايا"
+msgstr "زر الفأرة الذي يُبلّغ عنه عند الطَرق بثلاث أصابع باستثناء الزوايا"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #: kcm/xlib/ui/tap.ui:107
@@ -1224,7 +1224,7 @@ msgstr "اليسرى العليا:"
 #: kcm/xlib/ui/tap.ui:144
 #, kde-format
 msgid "Which mouse button is reported on a left top corner tap"
-msgstr "زر الفأرة الذي يتم الإبلاغ عنه عند الطَرق على الزاوية اليسرى العليا"
+msgstr "زر الفأرة الذي يُبلّغ عنه عند الطَرق على الزاوية اليسرى العليا"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: kcm/xlib/ui/tap.ui:151
@@ -1244,19 +1244,19 @@ msgstr "اليمنى العليا:"
 #: kcm/xlib/ui/tap.ui:177
 #, kde-format
 msgid "Which mouse button is reported on a left bottom corner tap"
-msgstr "زر الفأرة الذي يتم الإبلاغ عنه عند الطَرق على الزاوية اليسرى الدنيا"
+msgstr "زر الفأرة الذي يُبلّغ عنه عند الطَرق على الزاوية اليسرى الدنيا"
 
 #. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_RTCornerButton)
 #: kcm/xlib/ui/tap.ui:184
 #, kde-format
 msgid "Which mouse button is reported on a right top corner tap"
-msgstr "زر الفأرة الذي يتم الإبلاغ عنه عند الطَرق على الزاوية اليمنى العليا"
+msgstr "زر الفأرة الذي يُبلّغ عنه عند الطَرق على الزاوية اليمنى العليا"
 
 #. i18n: ectx: property (toolTip), widget (KComboBox, kcfg_RBCornerButton)
 #: kcm/xlib/ui/tap.ui:191
 #, kde-format
 msgid "Which mouse button is reported on a right bottom corner tap"
-msgstr "زر الفأرة الذي يتم الإبلاغ عنه عند الطَرق على الزاوية اليمنى الدنيا"
+msgstr "زر الفأرة الذي يُبلّغ عنه عند الطَرق على الزاوية اليمنى الدنيا"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: kcm/xlib/ui/tap.ui:214
