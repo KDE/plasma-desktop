@@ -72,7 +72,7 @@ PlasmaComponents3.ScrollView {
 
             property bool onTopPanel: Plasmoid.location === PlasmaCore.Types.TopEdge
 
-            visible: width > 0
+            visible: runnerColumns.visible || width > 0 // workaround for bug 507398
 
             width: (globalFavorites && systemFavorites
                 && (globalFavorites.count + systemFavorites.count)
