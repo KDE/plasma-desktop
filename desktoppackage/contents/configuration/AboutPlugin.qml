@@ -134,6 +134,16 @@ KCM.SimpleKCM {
 
             Kirigami.Heading {
                 Layout.topMargin: Kirigami.Units.smallSpacing
+                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@title:group", "Website")
+                textFormat: Text.PlainText
+            }
+            Kirigami.UrlButton {
+                url: page.metaData.website
+                visible: url.length > 0
+            }
+
+            Kirigami.Heading {
+                Layout.topMargin: Kirigami.Units.smallSpacing
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Copyright")
                 textFormat: Text.PlainText
             }
@@ -146,10 +156,6 @@ KCM.SimpleKCM {
                     text: page.metaData.copyrightText
                     textFormat: Text.PlainText
                     visible: text.length > 0
-                }
-                Kirigami.UrlButton {
-                    url: page.metaData.website
-                    visible: url.length > 0
                 }
 
                 RowLayout {
