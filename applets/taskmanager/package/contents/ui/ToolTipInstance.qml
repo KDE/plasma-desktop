@@ -185,6 +185,9 @@ ColumnLayout {
                     tasks.cancelHighlightWindows();
                     tasksModel.requestClose(root.submodelIndex);
                 }
+                PlasmaComponents3.ToolTip.text: i18nc("@info:tooltip Close this window", "Close window")
+                PlasmaComponents3.ToolTip.visible: root.visible && hovered
+                PlasmaComponents3.ToolTip.delay: Kirigami.Units.toolTipDelay
             }
         }
 
