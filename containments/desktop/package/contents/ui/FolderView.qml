@@ -1394,4 +1394,11 @@ FocusScope {
             backButton = makeBackButton();
         }
     }
+
+    onActiveFocusChanged: {
+        // We only want the selections to be cleared on desktop
+        if (dir.usedByContainment && !activeFocus) {
+            dir.clearSelection();
+        }
+    }
 }

@@ -376,12 +376,6 @@ ContainmentItem {
 
                 source: "FolderViewLayer.qml"
 
-                onFocusChanged: {
-                    if (!focus && model) {
-                        model.clearSelection();
-                    }
-                }
-
                 Connections {
                     target: folderViewLayer.view
 
