@@ -7,13 +7,15 @@
 # Frederik Schwarzer <schwarzer@kde.org>, 2011, 2015, 2022, 2023.
 # Burkhard Lück <lueck@hube-lueck.de>, 2014, 2015, 2016, 2017, 2019, 2021.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n@prly.mozmail.com>
+# SPDX-FileCopyrightText: 2025 Alexander Becker <alex-at-kde-l10n-de@freenet.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_access\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-05 05:54+0000\n"
-"PO-Revision-Date: 2024-05-30 22:06+0200\n"
-"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
+"PO-Revision-Date: 2025-08-09 16:01+0200\n"
+"Last-Translator: Alexander Becker <alex-at-kde-l10n-de@freenet.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +27,7 @@ msgstr ""
 #: kcmaccess.cpp:116
 #, kde-format
 msgid "AltGraph"
-msgstr "Alt Gr"
+msgstr "AltGr"
 
 #: kcmaccess.cpp:118
 #, kde-format
@@ -146,13 +148,13 @@ msgstr "„Klebende“ Tasten einrasten"
 #, kde-format
 msgid "Turn sticky keys off when two keys are pressed simultaneously"
 msgstr ""
-"„Klebende Tasten“ abschalten, wenn zwei Tasten gleichzeitig gedrückt werden"
+"„Klebende“ Tasten abschalten, wenn zwei Tasten gleichzeitig gedrückt werden"
 
 #. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:21
 #, kde-format
 msgid "Beep on a sticky key press"
-msgstr "Signalton bei „klebender“ Taste"
+msgstr "Signalton beim Drücken einer „klebender“ Taste"
 
 #. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:25
@@ -523,7 +525,7 @@ msgstr ""
 #: package/contents/ui/ModifierKeys.qml:95
 #, kde-format
 msgid "Configure Notifications…"
-msgstr "Benachrichtigungen festlegen ..."
+msgstr "Benachrichtigungen festlegen …"
 
 #: package/contents/ui/MouseNavigation.qml:17
 #, kde-format
@@ -583,7 +585,7 @@ msgstr "Beschleunigungsprofil:"
 #: package/contents/ui/ScreenReader.qml:28
 #, kde-format
 msgid "Launch Orca Screen Reader Configuration…"
-msgstr "Orca-Screenreader-Einrichtung starten ..."
+msgstr "Orca-Screenreader-Einrichtung starten …"
 
 #: package/contents/ui/ScreenReader.qml:41
 #, kde-format
@@ -591,7 +593,7 @@ msgid ""
 "Please note that you may have to log out or reboot once to allow the screen "
 "reader to work properly."
 msgstr ""
-"Bitte beachten Sie, dass Sie sich neu anmelden oder dem Rechner neu starten "
+"Bitte beachten Sie, dass Sie sich neu anmelden oder den Rechner neu starten "
 "müssen, damit der Screenreader richtig funktioniert."
 
 #: package/contents/ui/ScreenReader.qml:42
