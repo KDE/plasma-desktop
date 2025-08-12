@@ -21,6 +21,8 @@ import org.kde.kquickcontrols as KQuickControls
 import org.kde.plasma.private.kcm_mouse as Mouse
 
 import org.kde.kirigami.layouts // TODO: gesture demo only, for DisplayHint
+import org.kde.kirigami.platform as KirigamiPlatform
+import org.kde.kirigami.primitives as KirigamiPrimitives // TODO: gesture demo only, for Primitives.Icon
 
 KCMUtils.ScrollViewKCM {
 //KCMUtils.SimpleKCM {
@@ -215,27 +217,35 @@ KCMUtils.ScrollViewKCM {
             clip: true
 
             model: ListModel {
-                ListElement { trigger: "Swipe up with 3 fingers"; triggerSection: "Touchpad Swipe"; component: "Window Management"; componentIcon: "kwin"; actionText: "Cycle through Window Overview and Desktop Grid" }
-                ListElement { trigger: "Swipe right with 3 fingers"; triggerSection: "Touchpad Swipe"; component: "Window Management"; componentIcon: "kwin"; actionText: "Walk through Windows" }
-                ListElement { trigger: "Swipe left with 3 fingers"; triggerSection: "Touchpad Swipe"; component: "Window Management"; componentIcon: "kwin"; actionText: "Walk through Windows - backwards" }
-                ListElement { trigger: "Swipe up with 4 fingers"; triggerSection: "Touchpad Swipe"; component: "Window Management"; componentIcon: "kwin"; actionText: "Cycle through Desktop Grid and Window Overview" }
-                ListElement { trigger: "Swipe right with 4 fingers"; triggerSection: "Touchpad Swipe"; component: "Window Management"; componentIcon: "kwin"; actionText: "Switch to Next Desktop" }
-                ListElement { trigger: "Swipe left with 4 fingers"; triggerSection: "Touchpad Swipe"; component: "Window Management"; componentIcon: "kwin"; actionText: "Switch to Previous Desktop" }
-                ListElement { trigger: "Spread with 3 fingers"; triggerSection: "Touchpad Pinch"; component: "Window Management"; componentIcon: "kwin"; actionText: "Zoom In Screen" }
-                ListElement { trigger: "Pinch with 3 fingers"; triggerSection: "Touchpad Pinch"; component: "Window Management"; componentIcon: "kwin"; actionText: "Peek at Desktop" }
-                ListElement { trigger: "Pinch with 4 fingers"; triggerSection: "Touchpad Pinch"; component: "Session Management"; componentIcon: "preferences-system-login"; actionText: "Lock Session" }
-                ListElement { trigger: "Rotate clockwise with 3 fingers"; triggerSection: "Touchpad Rotate"; component: "Audio Volume"; componentIcon: "kmix"; actionText: "Increase Volume" }
-                ListElement { trigger: "Rotate counter-clockwise with 3 fingers"; triggerSection: "Touchpad Rotate"; component: "Audio Volume"; componentIcon: "kmix"; actionText: "Decrease Volume" }
-                ListElement { trigger: "Rotate clockwise with 4 fingers"; triggerSection: "Touchpad Rotate"; component: "Power Management"; componentIcon: "preferences-system-power-management"; actionText: "Increase Screen Brightness" }
-                ListElement { trigger: "Rotate counter-clockwise with 4 fingers"; triggerSection: "Touchpad Rotate"; component: "Power Management"; componentIcon: "preferences-system-power-management"; actionText: "Decrease Screen Brightness" }
+                ListElement { trigger: "Rotate clockwise with 3 fingers"; triggerPreviewIcon: "gesture-rotate-cw-3f"; triggerSection: "Touchpad Rotate"; component: "Audio Volume"; componentIcon: "kmix"; actionText: "Increase Volume" }
+                ListElement { trigger: "Rotate counter-clockwise with 3 fingers"; triggerPreviewIcon: "gesture-rotate-ccw-3f"; triggerSection: "Touchpad Rotate"; component: "Audio Volume"; componentIcon: "kmix"; actionText: "Decrease Volume" }
+                ListElement { trigger: "Swipe up with 3 fingers"; triggerPreviewIcon: "gesture-swipe-up-3f"; triggerSection: "Touchpad Swipe"; component: "Window Management"; componentIcon: "kwin"; actionText: "Cycle through Window Overview and Desktop Grid" }
+                ListElement { trigger: "Swipe up with 4 fingers"; triggerPreviewIcon: "gesture-swipe-up-4f"; triggerSection: "Touchpad Swipe"; component: "Window Management"; componentIcon: "kwin"; actionText: "Cycle through Desktop Grid and Window Overview" }
+                ListElement { trigger: "Swipe right with 3 fingers"; triggerPreviewIcon: "gesture-swipe-right-3f"; triggerSection: "Touchpad Swipe"; component: "Window Management"; componentIcon: "kwin"; actionText: "Walk through Windows" }
+                ListElement { trigger: "Swipe left with 3 fingers"; triggerPreviewIcon: "gesture-swipe-left-3f"; triggerSection: "Touchpad Swipe"; component: "Window Management"; componentIcon: "kwin"; actionText: "Walk through Windows - backwards" }
+                ListElement { trigger: "Swipe right with 4 fingers"; triggerPreviewIcon: "gesture-swipe-right-4f"; triggerSection: "Touchpad Swipe"; component: "Window Management"; componentIcon: "kwin"; actionText: "Switch to Next Desktop" }
+                ListElement { trigger: "Swipe left with 4 fingers"; triggerPreviewIcon: "gesture-swipe-left-4f"; triggerSection: "Touchpad Swipe"; component: "Window Management"; componentIcon: "kwin"; actionText: "Switch to Previous Desktop" }
+                ListElement { trigger: "Spread with 3 fingers"; triggerPreviewIcon: ""; triggerSection: "Touchpad Pinch"; component: "Window Management"; componentIcon: "kwin"; actionText: "Zoom In Screen" }
+                ListElement { trigger: "Pinch with 3 fingers"; triggerPreviewIcon: ""; triggerSection: "Touchpad Pinch"; component: "Window Management"; componentIcon: "kwin"; actionText: "Peek at Desktop" }
+                ListElement { trigger: "Rotate clockwise with 4 fingers"; triggerPreviewIcon: ""; triggerSection: "Touchpad Rotate"; component: "Power Management"; componentIcon: "preferences-system-power-management"; actionText: "Increase Screen Brightness" }
+                ListElement { trigger: "Rotate counter-clockwise with 4 fingers"; triggerPreviewIcon: ""; triggerSection: "Touchpad Rotate"; component: "Power Management"; componentIcon: "preferences-system-power-management"; actionText: "Decrease Screen Brightness" }
+                ListElement { trigger: "Pinch with 4 fingers"; triggerPreviewIcon: ""; triggerSection: "Touchpad Pinch"; component: "Session Management"; componentIcon: "preferences-system-login"; actionText: "Lock Session" }
             }
 
-            section.property: "triggerSection"
+            section.property: "component"
             section.delegate: Kirigami.ListSectionHeader {
                 required property string section
 
                 width: ListView.view.width
                 text: section
+                icon.name: {
+                    return {
+                        "Audio Volume": "kmix",
+                        "Window Management": "kwin",
+                        "Power Management": "preferences-system-power-management",
+                        "Session Management": "preferences-system-login",
+                    }[section];
+                }
             }
 
             delegate: QQC2.ItemDelegate {
@@ -248,17 +258,18 @@ KCMUtils.ScrollViewKCM {
 
                 required property string index
                 required property string trigger
+                required property string triggerPreviewIcon
                 required property string actionText
-                required property string componentIcon
 
                 contentItem: RowLayout {
                     Layout.fillWidth: true
                     spacing: Kirigami.Units.smallSpacing
 
                     Kirigami.IconTitleSubtitle {
+                        id: delegateTitleSubtitle
                         title: delegate.actionText
                         subtitle: delegate.trigger
-                        icon.name: delegate.componentIcon
+                        icon.name: delegate.triggerPreviewIcon
                         Layout.fillWidth: true
                         selected: delegate.highlighted || delegate.down
                     }
