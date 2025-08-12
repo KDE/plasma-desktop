@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-27 00:43+0000\n"
+"POT-Creation-Date: 2025-08-12 00:45+0000\n"
 "PO-Revision-Date: 2025-06-10 08:32+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -815,61 +815,71 @@ msgstr "Apri l'elenco testuale di finestre per %1"
 msgid "Activate %1"
 msgstr "Attiva %1"
 
-#: package/contents/ui/ToolTipInstance.qml:435
+#: package/contents/ui/ToolTipInstance.qml:188
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@item:inlistbox Part of a sentence: 'Middle-clicking any task closes "
+#| "window or group'"
+#| msgid "Closes window or group"
+msgctxt "@info:tooltip Close this window"
+msgid "Close window"
+msgstr "Chiude la finestra o il gruppo"
+
+#: package/contents/ui/ToolTipInstance.qml:438
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
 msgstr "Rimuovi silenzio per %1"
 
-#: package/contents/ui/ToolTipInstance.qml:436
+#: package/contents/ui/ToolTipInstance.qml:439
 #, kde-format
 msgctxt "button to mute app"
 msgid "Mute %1"
 msgstr "Silenzia %1"
 
-#: package/contents/ui/ToolTipInstance.qml:454
+#: package/contents/ui/ToolTipInstance.qml:457
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
 msgstr "Regola il volume per %1"
 
-#: package/contents/ui/ToolTipInstance.qml:470
+#: package/contents/ui/ToolTipInstance.qml:473
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/ToolTipInstance.qml:474
+#: package/contents/ui/ToolTipInstance.qml:477
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
 msgstr "100%"
 
-#: package/contents/ui/ToolTipInstance.qml:490
+#: package/contents/ui/ToolTipInstance.qml:493
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "On %1"
 msgstr "Su %1"
 
-#: package/contents/ui/ToolTipInstance.qml:493
+#: package/contents/ui/ToolTipInstance.qml:496
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
 msgstr "Bloccata su tutti i desktop"
 
-#: package/contents/ui/ToolTipInstance.qml:499
+#: package/contents/ui/ToolTipInstance.qml:502
 #, kde-format
 msgctxt "Which virtual desktop a window is currently on"
 msgid "Available on all activities"
 msgstr "Disponibile su tutte le attività"
 
-#: package/contents/ui/ToolTipInstance.qml:509
+#: package/contents/ui/ToolTipInstance.qml:512
 #, kde-format
 msgctxt "Activities a window is currently on (apart from the current one)"
 msgid "Also available on %1"
 msgstr "Disponibile anche su %1"
 
-#: package/contents/ui/ToolTipInstance.qml:513
+#: package/contents/ui/ToolTipInstance.qml:516
 #, kde-format
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"

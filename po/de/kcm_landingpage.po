@@ -3,20 +3,22 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2021.
 # Frederik Schwarzer <schwarzer@kde.org>, 2022.
 # SPDX-FileCopyrightText: 2024 2025 Flori G <Renner03@protonmail.com>
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n@prly.mozmail.com>
+# SPDX-FileCopyrightText: 2025 Alexander Becker <alex-at-kde-l10n-de@freenet.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_landingpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-02 00:45+0000\n"
-"PO-Revision-Date: 2025-01-21 14:48+0100\n"
-"Last-Translator: Flori G <Renner03@protonmail.com>\n"
+"PO-Revision-Date: 2025-08-08 08:36+0200\n"
+"Last-Translator: Alexander Becker <alex-at-kde-l10n-de@freenet.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: landingpage_kdeglobalssettings.kcfg:9
@@ -34,7 +36,7 @@ msgstr "Einfachklick zum Öffnen von Dateien"
 #: landingpage_kdeglobalssettings.kcfg:19
 #, kde-format
 msgid "Switch the look and feel package depending on time of day"
-msgstr ""
+msgstr "Erscheinungsbild-Paket tageszeitabhängig wechseln"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: landingpage_kdeglobalssettings.kcfg:23
@@ -60,13 +62,13 @@ msgstr "Animationsgeschwindigkeit"
 #, kde-format
 msgctxt "@action:button"
 msgid "Change global theme"
-msgstr ""
+msgstr "Globales Design ändern"
 
 #: ui/LookAndFeelBox.qml:178
 #, kde-format
 msgctxt "@label accessible"
 msgid "Global theme"
-msgstr ""
+msgstr "Globales Design"
 
 #: ui/main.qml:35
 #, kde-format
@@ -77,7 +79,7 @@ msgstr "Design:"
 #, kde-format
 msgctxt "Switch between dark and light look and feel packages automatically"
 msgid "Automatic"
-msgstr ""
+msgstr "Automatisch"
 
 #: ui/main.qml:136
 #, kde-format
@@ -129,7 +131,7 @@ msgstr "Öffnet sie"
 #: ui/main.qml:256
 #, kde-format
 msgid "Select by clicking on item's selection marker"
-msgstr "Auswahl durch Klicken auf die Auswahlmarkierung eines Eintrags"
+msgstr "Auswahl durch Anklicken der Auswahlmarkierung eines Eintrags"
 
 #: ui/main.qml:282
 #, kde-format

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-16 00:44+0000\n"
+"POT-Creation-Date: 2025-08-12 00:45+0000\n"
 "PO-Revision-Date: 2025-06-08 23:54+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -112,36 +112,42 @@ msgstr "開啟網站 %1"
 
 #: contents/configuration/AboutPlugin.qml:137
 #, kde-format
+msgctxt "@title:group"
+msgid "Website"
+msgstr ""
+
+#: contents/configuration/AboutPlugin.qml:147
+#, kde-format
 msgid "Copyright"
 msgstr "版權"
 
-#: contents/configuration/AboutPlugin.qml:158
+#: contents/configuration/AboutPlugin.qml:164
 #, kde-format
 msgid "License:"
 msgstr "授權條款："
 
-#: contents/configuration/AboutPlugin.qml:163
+#: contents/configuration/AboutPlugin.qml:169
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "View license text"
 msgstr "檢視授權文字"
 
-#: contents/configuration/AboutPlugin.qml:177
+#: contents/configuration/AboutPlugin.qml:183
 #, kde-format
 msgid "Authors"
 msgstr "作者群"
 
-#: contents/configuration/AboutPlugin.qml:189
+#: contents/configuration/AboutPlugin.qml:195
 #, kde-format
 msgid "Credits"
 msgstr "致謝"
 
-#: contents/configuration/AboutPlugin.qml:202
+#: contents/configuration/AboutPlugin.qml:208
 #, kde-format
 msgid "Translators"
 msgstr "翻譯者"
 
-#: contents/configuration/AboutPlugin.qml:220
+#: contents/configuration/AboutPlugin.qml:226
 #, kde-format
 msgid "Report a Bug…"
 msgstr "回報問題…"

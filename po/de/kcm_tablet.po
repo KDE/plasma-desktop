@@ -3,6 +3,8 @@
 # This file is distributed under the same license as the plasma-desktop package.
 # Frederik Schwarzer <schwarzer@kde.org>, 2022, 2023.
 # SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Alois Spitzbart <spitz234@hotmail.com>
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n@prly.mozmail.com>
+# SPDX-FileCopyrightText: 2025 Alexander Becker <alex-at-kde-l10n-de@freenet.de>
 #
 # Automatically generated, 2022.
 msgid ""
@@ -10,15 +12,15 @@ msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-06 00:46+0000\n"
-"PO-Revision-Date: 2025-06-14 20:00+0200\n"
-"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
+"PO-Revision-Date: 2025-08-09 16:44+0200\n"
+"Last-Translator: Alexander Becker <alex-at-kde-l10n-de@freenet.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -36,11 +38,10 @@ msgstr "Keine"
 #, kde-format
 msgctxt "@action:button Two keybinds for a dial, up & down"
 msgid "%1 && %2"
-msgstr ""
+msgstr "%1 && %2"
 
 #: inputsequence.cpp:216
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "@action:button There is no keybindings"
 msgid "None"
 msgstr "Keine"
@@ -79,7 +80,7 @@ msgstr "Stiftknopf %1"
 #, kde-format
 msgctxt "@action:button"
 msgid "Scroll wheel"
-msgstr ""
+msgstr "Mausrad"
 
 #: kcmtablet.cpp:35
 #, kde-format
@@ -155,12 +156,10 @@ msgid "pen button %1"
 msgstr "Stiftknopf %1"
 
 #: ui/ActionDialog.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@title Select the action for the tablet button"
-#| msgid "Select Button Action"
+#, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial Action"
-msgstr "Aktion des Knopfes auswählen"
+msgstr "Aktion des Drehreglers auswählen"
 
 #: ui/ActionDialog.qml:28
 #, kde-format
@@ -169,12 +168,10 @@ msgid "Select Button Action"
 msgstr "Aktion des Knopfes auswählen"
 
 #: ui/ActionDialog.qml:86
-#, fuzzy, kde-format
-#| msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
-#| msgid "Choose what action will be taken when pressing %1:"
+#, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when rotating %1:"
-msgstr "Wählen Sie, welche Aktion beim Drücken von %1 ausgeführt werden soll:"
+msgstr "Wählen Sie, welche Aktion beim Drehen von %1 ausgeführt werden soll:"
 
 #: ui/ActionDialog.qml:87
 #, kde-format
@@ -195,12 +192,10 @@ msgid "Send keyboard key"
 msgstr "Tastatureingabe senden"
 
 #: ui/ActionDialog.qml:132
-#, fuzzy, kde-format
-#| msgctxt "@option:radio Set this action to a keyboard type"
-#| msgid "Send keyboard key"
+#, kde-format
 msgctxt "@option:radio Set this action to a up/down keyboard type"
 msgid "Send keyboard keys"
-msgstr "Tastatureingabe senden"
+msgstr "Tastatureingaben senden"
 
 #: ui/ActionDialog.qml:147
 #, kde-format
@@ -218,7 +213,7 @@ msgstr "Drücken von Stiftknopf senden"
 #, kde-format
 msgctxt "@option:radio Set this action to a scroll wheel type type"
 msgid "Act as scroll wheel"
-msgstr ""
+msgstr "Als Scroll-Rad fungieren"
 
 #: ui/ActionDialog.qml:198
 #, kde-format
@@ -239,12 +234,12 @@ msgstr ""
 #: ui/ActionDialog.qml:249
 #, kde-format
 msgid "Up:"
-msgstr ""
+msgstr "Aufwärts:"
 
 #: ui/ActionDialog.qml:263
 #, kde-format
 msgid "Down:"
-msgstr ""
+msgstr "Abwärts:"
 
 #: ui/ActionDialog.qml:277
 #, kde-format
@@ -310,7 +305,7 @@ msgstr "Knopf 3"
 #, kde-format
 msgctxt "@info"
 msgid "Act like a scroll wheel on a mouse."
-msgstr ""
+msgstr "Als Mausrad fungieren."
 
 #: ui/ActionDialog.qml:363
 #, kde-format
@@ -325,11 +320,7 @@ msgid "Pen Calibration"
 msgstr "Stiftkalibrierung"
 
 #: ui/Calibration.qml:98
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
-#| "revert to default calibration in %1 seconds.</b>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
@@ -337,7 +328,8 @@ msgid ""
 "b>"
 msgstr ""
 "Tippen Sie erneut auf die Ziele, um die neue Kalibrierung zu bestätigen.<nl/"
-"><nl/><b>Wird in %1 Sekunden auf die Standardkalibrierung zurückgesetzt.</b>"
+"><nl/><b>Wenn Sie nichts weiter tun, wird in %1 Sekunden auf die "
+"Standardkalibrierung zurückgesetzt.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -447,7 +439,7 @@ msgstr "Verbinden Sie ein Grafiktablett"
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr "Tablett testen …"
+msgstr "Tablett testen …"
 
 #: ui/main.qml:97
 #, kde-format
@@ -474,10 +466,9 @@ msgid "Pad"
 msgstr "Pad"
 
 #: ui/PadTab.qml:33
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad dial %1:"
-msgstr "Tablettknopf %1:"
+msgstr "Tablett-Drehregler %1:"
 
 #: ui/PadTab.qml:35
 #, kde-format
@@ -485,7 +476,7 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad dial %1"
-msgstr ""
+msgstr "Tablett-Drehregler %1"
 
 #: ui/PadTab.qml:71
 #, kde-format
@@ -654,16 +645,14 @@ msgid "Tablet Tester"
 msgstr "Tablett-Tester"
 
 #: ui/Tester.qml:48
-#, fuzzy, kde-format
-#| msgid "Stylus press X=%1 Y=%2"
+#, kde-format
 msgctxt ""
 "A tablet stylus was pressed onto the surface X=[x position] Y=[y position]"
 msgid "Stylus press X=%1 Y=%2"
 msgstr "Stift gesenkt X=%1 Y=%2"
 
 #: ui/Tester.qml:58
-#, fuzzy, kde-format
-#| msgid "Stylus release X=%1 Y=%2"
+#, kde-format
 msgctxt ""
 "A tablet stylus has 'released' or was lifted from the surface X=[x position] "
 "Y=[y position]"
@@ -671,8 +660,7 @@ msgid "Stylus release X=%1 Y=%2"
 msgstr "Stift gehoben X=%1 Y=%2"
 
 #: ui/Tester.qml:68
-#, fuzzy, kde-format
-#| msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
+#, kde-format
 msgctxt ""
 "A tablet stylus has moved over the surface X=[x position] Y=[y position] "
 "P=[pressure] TX=[tilt x] TY=[tilt y]"
@@ -680,35 +668,27 @@ msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 msgstr "Stiftbewegung X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
 #: ui/Tester.qml:75
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt "A tablet pad's button has been pressed B=[the button number]"
 msgid "Pad button press B=%1"
-msgstr "Tablettknopf %1:"
+msgstr "Tablettknopf gedrückt, K=%1"
 
 #: ui/Tester.qml:77
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt "A tablet pad's button has been released B=[the button number]"
 msgid "Pad button release B=%1"
-msgstr "Tablettknopf %1:"
+msgstr "Tablettknopf losgelassen, K=%1"
 
 #: ui/Tester.qml:83
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt ""
 "A tablet pad's dial has moved, V120 here refers to 'Value 120' which is a "
 "technical term that should be kept as is"
 msgid "Pad dial moved V120=%1"
-msgstr "Tablettknopf %1:"
+msgstr "Tablett-Drehregler hat sich bewegt, V120=%1"
 
 #: ui/Tester.qml:219
-#, fuzzy, kde-format
-#| msgid ""
-#| "## Legend:\n"
-#| "# X, Y - event coordinate\n"
-#| "# P - pressure\n"
-#| "# TX,TY - tilt\n"
+#, kde-format
 msgctxt "The tablet tester legend which is shown on start-up"
 msgid ""
 "## Legend:\n"
@@ -722,9 +702,7 @@ msgstr ""
 "# TX,TY - Neigung\n"
 
 #: ui/Tester.qml:225
-#, fuzzy, kde-format
-#| msgctxt "Clear the event log"
-#| msgid "Clear"
+#, kde-format
 msgctxt "Clear the tablet tester event log"
 msgid "Clear"
 msgstr "Leeren"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-16 00:44+0000\n"
+"POT-Creation-Date: 2025-08-12 00:45+0000\n"
 "PO-Revision-Date: 2025-06-06 09:20+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -114,36 +114,42 @@ msgstr "Obri el lloc web %1"
 
 #: contents/configuration/AboutPlugin.qml:137
 #, kde-format
+msgctxt "@title:group"
+msgid "Website"
+msgstr ""
+
+#: contents/configuration/AboutPlugin.qml:147
+#, kde-format
 msgid "Copyright"
 msgstr "Drets d'autoria"
 
-#: contents/configuration/AboutPlugin.qml:158
+#: contents/configuration/AboutPlugin.qml:164
 #, kde-format
 msgid "License:"
 msgstr "Llicència:"
 
-#: contents/configuration/AboutPlugin.qml:163
+#: contents/configuration/AboutPlugin.qml:169
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "View license text"
 msgstr "Vista del text de la llicència"
 
-#: contents/configuration/AboutPlugin.qml:177
+#: contents/configuration/AboutPlugin.qml:183
 #, kde-format
 msgid "Authors"
 msgstr "Autoria"
 
-#: contents/configuration/AboutPlugin.qml:189
+#: contents/configuration/AboutPlugin.qml:195
 #, kde-format
 msgid "Credits"
 msgstr "Atribucions"
 
-#: contents/configuration/AboutPlugin.qml:202
+#: contents/configuration/AboutPlugin.qml:208
 #, kde-format
 msgid "Translators"
 msgstr "Equip de traducció"
 
-#: contents/configuration/AboutPlugin.qml:220
+#: contents/configuration/AboutPlugin.qml:226
 #, kde-format
 msgid "Report a Bug…"
 msgstr "Informeu d'un error…"

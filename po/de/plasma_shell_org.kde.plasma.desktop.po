@@ -4,20 +4,22 @@
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
 # SPDX-FileCopyrightText: 2024, 2025 Flori G <Renner03@protonmail.com>
 # SPDX-FileCopyrightText: 2025 Alois Spitzbart <spitz234@hotmail.com>
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n@prly.mozmail.com>
+# SPDX-FileCopyrightText: 2025 Alexander Becker <alex-at-kde-l10n-de@freenet.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-16 00:44+0000\n"
-"PO-Revision-Date: 2025-06-07 11:59+0200\n"
-"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
+"POT-Creation-Date: 2025-08-12 00:45+0000\n"
+"PO-Revision-Date: 2025-08-06 21:29+0200\n"
+"Last-Translator: Alexander Becker <alex-at-kde-l10n-de@freenet.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: contents/activitymanager/ActivityItem.qml:204
 #, kde-format
@@ -60,7 +62,7 @@ msgstr "Angehaltene Aktivitäten:"
 #: contents/activitymanager/ActivityManager.qml:122
 #, kde-format
 msgid "Create activity…"
-msgstr "Aktivität erstellen …"
+msgstr "Aktivität erstellen …"
 
 #: contents/activitymanager/Heading.qml:59
 #, kde-format
@@ -85,7 +87,7 @@ msgstr "In die Zwischenablage kopieren"
 #: contents/applet/AppletError.qml:187
 #, kde-format
 msgid "View Error Details…"
-msgstr "Fehlerdetails anzeigen …"
+msgstr "Fehlerdetails anzeigen …"
 
 #: contents/applet/CompactApplet.qml:76
 #, kde-format
@@ -111,39 +113,45 @@ msgstr "Webseite „%1“ öffnen"
 
 #: contents/configuration/AboutPlugin.qml:137
 #, kde-format
+msgctxt "@title:group"
+msgid "Website"
+msgstr ""
+
+#: contents/configuration/AboutPlugin.qml:147
+#, kde-format
 msgid "Copyright"
 msgstr "Copyright"
 
-#: contents/configuration/AboutPlugin.qml:158
+#: contents/configuration/AboutPlugin.qml:164
 #, kde-format
 msgid "License:"
 msgstr "Lizenz:"
 
-#: contents/configuration/AboutPlugin.qml:163
+#: contents/configuration/AboutPlugin.qml:169
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "View license text"
 msgstr "Lizenztext ansehen"
 
-#: contents/configuration/AboutPlugin.qml:177
+#: contents/configuration/AboutPlugin.qml:183
 #, kde-format
 msgid "Authors"
 msgstr "Autoren"
 
-#: contents/configuration/AboutPlugin.qml:189
+#: contents/configuration/AboutPlugin.qml:195
 #, kde-format
 msgid "Credits"
 msgstr "Danksagungen"
 
-#: contents/configuration/AboutPlugin.qml:202
+#: contents/configuration/AboutPlugin.qml:208
 #, kde-format
 msgid "Translators"
 msgstr "Übersetzer"
 
-#: contents/configuration/AboutPlugin.qml:220
+#: contents/configuration/AboutPlugin.qml:226
 #, kde-format
 msgid "Report a Bug…"
-msgstr "Ein Problem melden …"
+msgstr "Ein Problem melden …"
 
 #: contents/configuration/AppletConfiguration.qml:90
 #, kde-format
@@ -268,7 +276,7 @@ msgstr "Hintergrundbild-Typ:"
 #: contents/configuration/ConfigurationContainmentAppearance.qml:154
 #, kde-format
 msgid "Get New Plugins…"
-msgstr "Neue Module holen …"
+msgstr "Neue Module holen …"
 
 #: contents/configuration/ConfigurationContainmentAppearance.qml:244
 #, kde-format
@@ -331,7 +339,7 @@ msgstr "Abstandhalter"
 #, kde-format
 msgctxt "@action:menu add a widget"
 msgid "Widgets…"
-msgstr "Miniprogramme …"
+msgstr "Miniprogramme …"
 
 #: contents/configuration/PanelConfiguration.qml:163
 #, kde-format
@@ -365,7 +373,7 @@ msgstr "Unten"
 #: contents/configuration/PanelConfiguration.qml:191
 #, kde-format
 msgid "Set Position…"
-msgstr "Position festlegen …"
+msgstr "Position festlegen …"
 
 #: contents/configuration/PanelConfiguration.qml:218
 #, kde-format
@@ -722,13 +730,13 @@ msgstr "Miniprogramme"
 #, kde-format
 msgctxt "@action:button The word 'new' refers to widgets"
 msgid "Get New…"
-msgstr "Neue Module holen …"
+msgstr "Neue holen …"
 
 #: contents/explorer/WidgetExplorer.qml:179
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Widgets…"
-msgstr "Neue Miniprogramme holen …"
+msgstr "Neue Miniprogramme holen …"
 
 #: contents/explorer/WidgetExplorer.qml:192
 #, kde-format
@@ -808,9 +816,7 @@ msgid "Never show clock"
 msgstr "Uhr niemals anzeigen"
 
 #: contents/lockscreen/config.qml:71
-#, fuzzy, kde-format
-#| msgctxt "@title: group"
-#| msgid "Media controls:"
+#, kde-format
 msgctxt "@title: group UI controls for playback of multimedia content"
 msgid "Media controls:"
 msgstr "Mediensteuerung:"
@@ -872,7 +878,7 @@ msgstr "Entsperren"
 #: contents/lockscreen/MainBlock.qml:163
 #, kde-format
 msgid "(or scan your fingerprint on the reader)"
-msgstr "(oder Fingerabdruck vom -scanner einlesen)"
+msgstr "(alternativ: Fingerabdruckscanner verwenden)"
 
 #: contents/lockscreen/MainBlock.qml:167
 #, kde-format

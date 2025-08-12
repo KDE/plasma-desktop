@@ -7,28 +7,30 @@
 # Frank Steinmetzger <dev-kde@felsenfleischer.de>, 2022.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
 # SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n@prly.mozmail.com>
+# SPDX-FileCopyrightText: 2025 Alexander Becker <alex-at-kde-l10n-de@freenet.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-27 00:43+0000\n"
-"PO-Revision-Date: 2025-06-14 20:58+0200\n"
-"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
+"POT-Creation-Date: 2025-08-12 00:45+0000\n"
+"PO-Revision-Date: 2025-08-09 16:27+0200\n"
+"Last-Translator: Alexander Becker <alex-at-kde-l10n-de@freenet.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: backend.cpp:284
 #, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place…"
 msgid_plural "%1 more Places…"
-msgstr[0] "Ein weiterer Ort"
-msgstr[1] "%1 weitere Orte …"
+msgstr[0] "Ein weiterer Ort …"
+msgstr[1] "%1 weitere Orte …"
 
 #: backend.cpp:368
 #, kde-format
@@ -137,19 +139,19 @@ msgstr "Andere Fenster beim Überfahren von Vorschauen ausblenden"
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show an indicator when a task is playing audio"
-msgstr ""
+msgstr "Einen Indikator anzeigen, wenn ein Programm Audio abspielt"
 
 #: package/contents/ui/ConfigAppearance.qml:69
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Mute task when clicking indicator"
-msgstr ""
+msgstr "Programm stummschalten, wenn Indikator angeklickt wird"
 
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show media and volume controls in tooltip"
-msgstr ""
+msgstr "Medien- und Lautstärkeregler in der Kurzinfo anzeigen"
 
 #: package/contents/ui/ConfigAppearance.qml:85
 #, kde-format
@@ -266,6 +268,11 @@ msgid ""
 "behavior. If you don't find one, consider reporting this as a bug to the "
 "app's developer."
 msgstr ""
+"Wenn Sie diese Einstellung als Abhilfe für ein zu mitteilungsbedürftiges "
+"Programm verwenden, dann prüfen Sie zuerst in den Einstellungen des "
+"Programms nach, ob dieses Verhalten dort abgestellt werden kann. Sollte so "
+"eine Option nicht vorhanden sein, melden Sie dies den Programmentwicklern "
+"als einen Fehler."
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
@@ -385,7 +392,7 @@ msgstr "Nach Aktivität"
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By horizontal window position"
-msgstr ""
+msgstr "Nach horizontaler Fensterposition"
 
 #: package/contents/ui/ConfigBehavior.qml:163
 #, kde-format
@@ -468,15 +475,12 @@ msgid "Brings it to the current virtual desktop"
 msgstr "Verschiebt es auf die aktuelle virtuelle Arbeitsfläche"
 
 #: package/contents/ui/ConfigBehavior.qml:205
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label for checkbox group, completes sentence like: … from current screen"
-#| msgid "Show only tasks:"
+#, kde-format
 msgctxt ""
 "@label:listbox Part of a sentence: 'Scrolling behavior does nothing/cycles "
 "through tasks/cycles through the selected task's windows'"
 msgid "Scrolling behavior:"
-msgstr "Nur Anwendungen anzeigen:"
+msgstr "Scroll-Verhalten:"
 
 #: package/contents/ui/ConfigBehavior.qml:209
 #, kde-format
@@ -485,28 +489,20 @@ msgid "Does nothing"
 msgstr "Tut nichts"
 
 #: package/contents/ui/ConfigBehavior.qml:210
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Completes the sentence 'Clicking grouped task cycles "
-#| "through tasks' "
-#| msgid "Cycles through tasks"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through all "
 "tasks'"
 msgid "Cycles through all tasks"
-msgstr "Zwischen Anwendungen wechseln"
+msgstr "Zwischen allen Anwendungen wechseln"
 
 #: package/contents/ui/ConfigBehavior.qml:211
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Completes the sentence 'Clicking grouped task cycles "
-#| "through tasks' "
-#| msgid "Cycles through tasks"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through the "
 "hovered task's windows'"
 msgid "Cycles through the hovered task’s windows"
-msgstr "Zwischen Anwendungen wechseln"
+msgstr "Zwischen den vom Mauszeiger überfahrenen Anwendungsfenstern wechseln"
 
 #: package/contents/ui/ConfigBehavior.qml:219
 #, kde-format
@@ -522,25 +518,19 @@ msgid "Show only tasks:"
 msgstr "Nur Anwendungen anzeigen:"
 
 #: package/contents/ui/ConfigBehavior.qml:230
-#, fuzzy, kde-format
-#| msgctxt "@option:check completes sentence: show only tasks"
-#| msgid "From current desktop"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current desktop"
 msgstr "Von aktueller Arbeitsfläche"
 
 #: package/contents/ui/ConfigBehavior.qml:235
-#, fuzzy, kde-format
-#| msgctxt "@option:check completes sentence: show only tasks"
-#| msgid "From current activity"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current activity"
 msgstr "Von aktueller Aktivität"
 
 #: package/contents/ui/ConfigBehavior.qml:240
-#, fuzzy, kde-format
-#| msgctxt "@option:check completes sentence: show only tasks"
-#| msgid "From current screen"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current screen"
 msgstr "Vom aktuellen Bildschirm"
@@ -828,61 +818,71 @@ msgstr "Liste der Fenster von %1 öffnen"
 msgid "Activate %1"
 msgstr "%1 aktivieren"
 
-#: package/contents/ui/ToolTipInstance.qml:435
+#: package/contents/ui/ToolTipInstance.qml:188
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@item:inlistbox Part of a sentence: 'Middle-clicking any task closes "
+#| "window or group'"
+#| msgid "Closes window or group"
+msgctxt "@info:tooltip Close this window"
+msgid "Close window"
+msgstr "Schließt Fenster oder Gruppe"
+
+#: package/contents/ui/ToolTipInstance.qml:438
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
 msgstr "Stummschaltung von %1 aufheben"
 
-#: package/contents/ui/ToolTipInstance.qml:436
+#: package/contents/ui/ToolTipInstance.qml:439
 #, kde-format
 msgctxt "button to mute app"
 msgid "Mute %1"
 msgstr "%1 stummschalten"
 
-#: package/contents/ui/ToolTipInstance.qml:454
+#: package/contents/ui/ToolTipInstance.qml:457
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
 msgstr "Lautstärke für %1 anpassen"
 
-#: package/contents/ui/ToolTipInstance.qml:470
+#: package/contents/ui/ToolTipInstance.qml:473
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
 msgstr "%1 %"
 
-#: package/contents/ui/ToolTipInstance.qml:474
+#: package/contents/ui/ToolTipInstance.qml:477
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
 msgstr "100 %"
 
-#: package/contents/ui/ToolTipInstance.qml:490
+#: package/contents/ui/ToolTipInstance.qml:493
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "On %1"
 msgstr "Auf %1"
 
-#: package/contents/ui/ToolTipInstance.qml:493
+#: package/contents/ui/ToolTipInstance.qml:496
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
 msgstr "Auf allen Arbeitsflächen"
 
-#: package/contents/ui/ToolTipInstance.qml:499
+#: package/contents/ui/ToolTipInstance.qml:502
 #, kde-format
 msgctxt "Which virtual desktop a window is currently on"
 msgid "Available on all activities"
 msgstr "In allen Aktivitäten verfügbar"
 
-#: package/contents/ui/ToolTipInstance.qml:509
+#: package/contents/ui/ToolTipInstance.qml:512
 #, kde-format
 msgctxt "Activities a window is currently on (apart from the current one)"
 msgid "Also available on %1"
 msgstr "Auch verfügbar in %1"
 
-#: package/contents/ui/ToolTipInstance.qml:513
+#: package/contents/ui/ToolTipInstance.qml:516
 #, kde-format
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"

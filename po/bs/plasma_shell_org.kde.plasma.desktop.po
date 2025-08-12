@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-16 00:44+0000\n"
+"POT-Creation-Date: 2025-08-12 00:45+0000\n"
 "PO-Revision-Date: 2014-12-28 11:53+0000\n"
 "Last-Translator: Ajla Alic <aalic2@etf.unsa.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -112,37 +112,43 @@ msgstr ""
 
 #: contents/configuration/AboutPlugin.qml:137
 #, kde-format
+msgctxt "@title:group"
+msgid "Website"
+msgstr ""
+
+#: contents/configuration/AboutPlugin.qml:147
+#, kde-format
 msgid "Copyright"
 msgstr ""
 
-#: contents/configuration/AboutPlugin.qml:158
+#: contents/configuration/AboutPlugin.qml:164
 #, kde-format
 msgid "License:"
 msgstr "Dozvola:"
 
-#: contents/configuration/AboutPlugin.qml:163
+#: contents/configuration/AboutPlugin.qml:169
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "View license text"
 msgstr ""
 
-#: contents/configuration/AboutPlugin.qml:177
+#: contents/configuration/AboutPlugin.qml:183
 #, fuzzy, kde-format
 #| msgid "Author:"
 msgid "Authors"
 msgstr "Autor:"
 
-#: contents/configuration/AboutPlugin.qml:189
+#: contents/configuration/AboutPlugin.qml:195
 #, kde-format
 msgid "Credits"
 msgstr ""
 
-#: contents/configuration/AboutPlugin.qml:202
+#: contents/configuration/AboutPlugin.qml:208
 #, kde-format
 msgid "Translators"
 msgstr ""
 
-#: contents/configuration/AboutPlugin.qml:220
+#: contents/configuration/AboutPlugin.qml:226
 #, kde-format
 msgid "Report a Bug…"
 msgstr ""
