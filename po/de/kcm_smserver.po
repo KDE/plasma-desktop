@@ -6,20 +6,22 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2013, 2015, 2019, 2020, 2021.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
 # SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n@prly.mozmail.com>
+# SPDX-FileCopyrightText: 2025 Alexander Becker <alex-at-kde-l10n-de@freenet.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_smserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-25 00:42+0000\n"
-"PO-Revision-Date: 2024-09-29 16:30+0200\n"
-"Last-Translator: Flori G <Renner03@protonmail.com>\n"
+"PO-Revision-Date: 2025-08-09 16:16+0200\n"
+"Last-Translator: Alexander Becker <alex-at-kde-l10n-de@freenet.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -148,21 +150,18 @@ msgid "Ignored applications:"
 msgstr "Ignorierte Anwendungen:"
 
 #: ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid ""
-#| "Write apps' executable names here (separated by commas or colons, for "
-#| "example 'xterm:konsole' or 'xterm,konsole') to prevent them from "
-#| "autostarting along with other session-restored apps."
+#, kde-format
 msgid ""
 "Write apps' desktop file identifier or, on X11, executable names here "
 "(separated by commas or colons, for example 'xterm:org.kde.konsole.desktop' "
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
-"Schreiben Sie hier die Namen der ausführbaren Anwendungen (getrennt durch "
-"Kommas oder Doppelpunkte, z. B. 'xterm:konsole' oder 'xterm,konsole'), um zu "
-"verhindern, dass sie zusammen mit anderen wiederhergestellten Anwendungen "
-"automatisch gestartet werden."
+"Schreiben Sie hier desktop-Dateikennungen oder, unter X11, die Namen der "
+"ausführbaren Anwendungen (getrennt durch Kommas oder Doppelpunkte, z. B. "
+"'xterm:org.kde.konsole.desktop' oder 'xterm,org.kde.konsole.desktop'), um zu "
+"verhindern, dass sie zusammen mit anderen aus der letzten Sitzung "
+"wiederhergestellten Anwendungen automatisch gestartet werden."
 
 #: ui/main.qml:138
 #, kde-format

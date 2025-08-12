@@ -7,13 +7,15 @@
 # Frederik Schwarzer <schwarzer@kde.org>, 2011, 2015, 2022, 2023.
 # Burkhard Lück <lueck@hube-lueck.de>, 2014, 2015, 2016, 2017, 2019, 2021.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n@prly.mozmail.com>
+# SPDX-FileCopyrightText: 2025 Alexander Becker <alex-at-kde-l10n-de@freenet.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_access\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-28 00:42+0000\n"
-"PO-Revision-Date: 2025-04-27 16:14+0200\n"
-"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
+"PO-Revision-Date: 2025-08-09 16:01+0200\n"
+"Last-Translator: Alexander Becker <alex-at-kde-l10n-de@freenet.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +27,7 @@ msgstr ""
 #: kcmaccess.cpp:118
 #, kde-format
 msgid "AltGraph"
-msgstr "Alt Gr"
+msgstr "AltGr"
 
 #: kcmaccess.cpp:120
 #, kde-format
@@ -188,13 +190,13 @@ msgstr "„Klebende“ Tasten einrasten"
 #, kde-format
 msgid "Turn sticky keys off when two keys are pressed simultaneously"
 msgstr ""
-"„Klebende Tasten“ abschalten, wenn zwei Tasten gleichzeitig gedrückt werden"
+"„Klebende“ Tasten abschalten, wenn zwei Tasten gleichzeitig gedrückt werden"
 
 #. i18n: ectx: label, entry (StickyKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:21
 #, kde-format
 msgid "Beep on a sticky key press"
-msgstr "Signalton bei „klebender“ Taste"
+msgstr "Signalton beim Drücken einer „klebender“ Taste"
 
 #. i18n: ectx: label, entry (ToggleKeysBeep), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:25
@@ -302,7 +304,7 @@ msgstr "Screenreader aktivieren"
 #: kcmaccessibilityshakecursor.kcfg:9
 #, kde-format
 msgid "Whether Shake Cursor is enabled"
-msgstr "Ob Zeigerschütteln aktiviert ist"
+msgstr "Ob das Zeigerschütteln aktiviert ist"
 
 #. i18n: ectx: label, entry (ShakeCursorMagnification), group (Effect-shakecursor)
 #: kcmaccessibilityshakecursor.kcfg:15
@@ -378,7 +380,7 @@ msgstr "Benachrichtigung anzeigen"
 #: ui/ActivationShortcuts.qml:123
 #, kde-format
 msgid "Configure Notifications…"
-msgstr "Benachrichtigungen festlegen ..."
+msgstr "Benachrichtigungen festlegen …"
 
 #: ui/Bell.qml:19
 #, kde-format
@@ -761,7 +763,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Notifications…"
-msgstr "Benachrichtigungen festlegen ..."
+msgstr "Benachrichtigungen festlegen …"
 
 #: ui/MouseNavigation.qml:17
 #, kde-format
@@ -846,7 +848,7 @@ msgstr "Screenreader aktivieren"
 #, kde-format
 msgctxt "@action:button"
 msgid "Launch Orca Screen Reader Configuration…"
-msgstr "Orca-Screenreader-Einrichtung starten ..."
+msgstr "Orca-Screenreader-Einrichtung starten …"
 
 #: ui/ShakeCursor.qml:15
 #, kde-format

@@ -7,28 +7,30 @@
 # Frank Steinmetzger <dev-kde@felsenfleischer.de>, 2022.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
 # SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n@prly.mozmail.com>
+# SPDX-FileCopyrightText: 2025 Alexander Becker <alex-at-kde-l10n-de@freenet.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-30 00:44+0000\n"
-"PO-Revision-Date: 2025-06-14 20:58+0200\n"
-"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
+"PO-Revision-Date: 2025-08-09 16:27+0200\n"
+"Last-Translator: Alexander Becker <alex-at-kde-l10n-de@freenet.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: backend.cpp:284
 #, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place…"
 msgid_plural "%1 more Places…"
-msgstr[0] "Ein weiterer Ort"
-msgstr[1] "%1 weitere Orte …"
+msgstr[0] "Ein weiterer Ort …"
+msgstr[1] "%1 weitere Orte …"
 
 #: backend.cpp:368
 #, kde-format
@@ -137,19 +139,19 @@ msgstr "Andere Fenster beim Überfahren von Vorschauen ausblenden"
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show an indicator when a task is playing audio"
-msgstr ""
+msgstr "Einen Indikator anzeigen, wenn ein Programm Audio abspielt"
 
 #: package/contents/ui/ConfigAppearance.qml:69
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Mute task when clicking indicator"
-msgstr ""
+msgstr "Programm stummschalten, wenn Indikator angeklickt wird"
 
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show media and volume controls in tooltip"
-msgstr ""
+msgstr "Medien- und Lautstärkeregler in der Kurzinfo anzeigen"
 
 #: package/contents/ui/ConfigAppearance.qml:85
 #, kde-format
@@ -266,6 +268,11 @@ msgid ""
 "behavior. If you don't find one, consider reporting this as a bug to the "
 "app's developer."
 msgstr ""
+"Wenn Sie diese Einstellung als Abhilfe für ein zu mitteilungsbedürftiges "
+"Programm verwenden, dann prüfen Sie zuerst in den Einstellungen des "
+"Programms nach, ob dieses Verhalten dort abgestellt werden kann. Sollte so "
+"eine Option nicht vorhanden sein, melden Sie dies den Programmentwicklern "
+"als einen Fehler."
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
@@ -385,7 +392,7 @@ msgstr "Nach Aktivität"
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By horizontal window position"
-msgstr ""
+msgstr "Nach horizontaler Fensterposition"
 
 #: package/contents/ui/ConfigBehavior.qml:163
 #, kde-format
