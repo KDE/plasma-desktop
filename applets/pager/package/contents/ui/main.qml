@@ -600,7 +600,12 @@ PlasmoidItem {
         PlasmaCore.Action {
             text: i18nc("@action:inmenu widget context menu", "Configure Virtual Desktops…")
             visible: !root.isActivityPager && KConfig.KAuthorized.authorize("kcm_kwin_virtualdesktops")
-            onTriggered: KCM.KCMLauncher.openSystemSettings("kcm_kwin_virtualdesktops")
+            onTriggered: {
+                if (Qt.platform.pluginName.includes("wayland"))
+                    KCM.KCMLauncher.openSystemSettings("kcm_kwin_virtualdesktops")
+                else
+                    KCM.KCMLauncher.openSystemSettings("kcm_kwin_virtualdesktops_x11")
+            }
         }
     ]
 }
