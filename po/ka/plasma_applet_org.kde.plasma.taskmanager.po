@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-12 00:45+0000\n"
-"PO-Revision-Date: 2025-06-06 05:16+0200\n"
+"PO-Revision-Date: 2025-08-12 05:13+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -812,14 +812,10 @@ msgid "Activate %1"
 msgstr "%1-ის აქტივაცია"
 
 #: package/contents/ui/ToolTipInstance.qml:188
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Part of a sentence: 'Middle-clicking any task closes "
-#| "window or group'"
-#| msgid "Closes window or group"
+#, kde-format
 msgctxt "@info:tooltip Close this window"
 msgid "Close window"
-msgstr "დახურავს ფანჯარას ან ჯგუფს"
+msgstr "ფანჯრის დახურვა"
 
 #: package/contents/ui/ToolTipInstance.qml:438
 #, kde-format

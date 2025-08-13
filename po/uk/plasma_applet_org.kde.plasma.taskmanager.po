@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-12 00:45+0000\n"
-"PO-Revision-Date: 2025-06-06 13:59+0300\n"
+"PO-Revision-Date: 2025-08-12 09:55+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -819,14 +819,10 @@ msgid "Activate %1"
 msgstr "Задіяти %1"
 
 #: package/contents/ui/ToolTipInstance.qml:188
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Part of a sentence: 'Middle-clicking any task closes "
-#| "window or group'"
-#| msgid "Closes window or group"
+#, kde-format
 msgctxt "@info:tooltip Close this window"
 msgid "Close window"
-msgstr "Закриває вікно або групу"
+msgstr "Закрити вікно"
 
 #: package/contents/ui/ToolTipInstance.qml:438
 #, kde-format
