@@ -122,8 +122,19 @@ PlasmaComponents3.ScrollView {
                 LayoutItemProxy {
                     target: sideBar.onTopPanel ? favoriteSystemActions : favoriteApps
                 }
-                LayoutItemProxy {
-                    target: sidebarSeparator
+                KSvg.SvgItem {
+                    id: sidebarSeparator
+
+                    Layout.fillWidth: true
+                    Layout.leftMargin: Kirigami.Units.smallSpacing
+                    Layout.rightMargin: Layout.leftMargin
+                    Layout.alignment: Qt.AlignHCenter
+
+                    visible: (favoriteApps.model && favoriteApps.model.count
+                        && favoriteSystemActions.model && favoriteSystemActions.model.count)
+
+                    imagePath: "widgets/line"
+                    elementId: "horizontal-line"
                 }
                 LayoutItemProxy {
                     target: sideBar.onTopPanel ? favoriteApps : favoriteSystemActions
@@ -145,21 +156,6 @@ PlasmaComponents3.ScrollView {
                         value: Kirigami.Units.iconSizes.medium
                         restoreMode: Binding.RestoreBinding
                     }
-                }
-
-                KSvg.SvgItem {
-                    id: sidebarSeparator
-
-                    Layout.fillWidth: true
-                    Layout.leftMargin: Kirigami.Units.smallSpacing
-                    Layout.rightMargin: Layout.leftMargin
-                    Layout.alignment: Qt.AlignHCenter
-
-                    visible: (favoriteApps.model && favoriteApps.model.count
-                        && favoriteSystemActions.model && favoriteSystemActions.model.count)
-
-                    imagePath: "widgets/line"
-                    elementId: "horizontal-line"
                 }
 
                 SideBarSection {
