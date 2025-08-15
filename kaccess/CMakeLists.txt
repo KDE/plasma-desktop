@@ -11,7 +11,6 @@ target_link_libraries(kaccess
     KF6::CoreAddons
     KF6::ConfigCore
     KF6::Completion
-    KF6::GlobalAccel
     KF6::I18n
     KF6::Notifications
     KF6::WidgetsAddons

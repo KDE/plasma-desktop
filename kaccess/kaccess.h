@@ -12,7 +12,6 @@
 #include "kcmaccessibilitykeyboard.h"
 #include "kcmaccessibilitykeyboardfilters.h"
 #include "kcmaccessibilitymouse.h"
-#include "kcmaccessibilityscreenreader.h"
 
 #include <QAbstractNativeEventFilter>
 #include <QColor>
@@ -59,18 +58,15 @@ private Q_SLOTS:
     void yesClicked();
     void noClicked();
     void dialogClosed();
-    void toggleScreenReader();
 
 private:
     void createDialogContents();
     void initMasks();
-    void setScreenReaderEnabled(bool enabled);
 
     BellSettings m_bellSettings;
     KeyboardSettings m_keyboardSettings;
     KeyboardFiltersSettings m_keyboardFiltersSettings;
     MouseSettings m_mouseSettings;
-    ScreenReaderSettings m_screenReaderSettings;
     ActivationGesturesSettings m_activationGesturesSettings;
     KConfig m_kdeglobals;
 
@@ -85,6 +81,5 @@ private:
     int keys[8];
     int state;
 
-    QAction *toggleScreenReaderAction;
     bool m_error;
 };

@@ -13,6 +13,7 @@
 #include <QApplication>
 #include <QDBusConnection>
 #include <QDBusMessage>
+#include <QDBusReply>
 #include <QFileDialog>
 #include <QProcess>
 #include <QQuickItem>
@@ -42,6 +43,8 @@
 #include "kcmaccessibilityscreenreader.h"
 #include "kcmaccessibilityshakecursor.h"
 #include "kcmaccessibilityzoommagnifier.h"
+
+using namespace Qt::StringLiterals;
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMAccessFactory, "kcm_access.json", registerPlugin<KAccessConfig>(); registerPlugin<AccessibilityData>();)
 
@@ -245,23 +248,8 @@ void KAccessConfig::configureZoomMagnifyShortcuts()
 
 void KAccessConfig::launchOrcaConfiguration()
 {
-    const QStringList gsettingArgs = {QStringLiteral("set"),
-                                      QStringLiteral("org.gnome.desktop.a11y.applications"),
-                                      QStringLiteral("screen-reader-enabled"),
-                                      QStringLiteral("true")};
-
-    int ret = QProcess::execute(QStringLiteral("gsettings"), gsettingArgs);
-    if (ret) {
-        const QString errorStr = QLatin1String("gsettings ") + gsettingArgs.join(QLatin1Char(' '));
-        setOrcaLaunchFeedback(i18n("Could not set gsettings for Orca: \"%1\" failed", errorStr));
-        return;
-    }
-
-    qint64 pid = 0;
-    bool started = QProcess::startDetached(QStringLiteral("orca"), {QStringLiteral("--setup")}, QString(), &pid);
-    if (!started) {
-        setOrcaLaunchFeedback(i18n("Error: Could not launch \"orca --setup\""));
-    }
+    auto msg = QDBusMessage::createMethodCall(u"org.gnome.Orca.Service"_s, u"/org/gnome/Orca/Service"_s, u"org.gnome.Orca.Service"_s, u"ShowPreferences"_s);
+    QDBusReply<void> reply = QDBusConnection::sessionBus().call(msg);
 }
 
 void KAccessConfig::save()
