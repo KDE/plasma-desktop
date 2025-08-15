@@ -47,20 +47,6 @@ ContainmentItem {
         return 0;
     }
 
-    // When adding panels, sizes change. We want to make sure all panels
-    // are loaded, and when they all are loaded, we tell the folderViewLayer loader
-    // to start loading the folderViewLayer.
-    onAvailableScreenRectChanged: {
-        // According to Plasmoid API, isContainment is true for desktops and panels
-        if (!isContainment){
-            return;
-        }
-        if (Plasmoid.containment.corona.allPanelsVisible(Plasmoid.containment.screen) && !folderViewLayer.ready) {
-            // We skip x and y since that is handled by the parent of folderViewLayer
-            folderViewLayer.active = true;
-        }
-    }
-
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
@@ -287,6 +273,15 @@ ContainmentItem {
             function onEditModeChanged() {
                 appletsLayout.editMode = Plasmoid.containment.corona.editMode;
             }
+
+            // When adding panels, sizes change. We want to make sure all panels
+            // are loaded, and when they all are loaded, we tell the folderViewLayer loader to start.
+            function onAllPanelsReady() {
+                if (root.isContainment && !folderViewLayer.ready){
+                    // We skip x and y since that is handled by the parent of folderViewLayer
+                    folderViewLayer.active = true;
+                }
+            }
         }
 
         ContainmentLayoutManager.AppletsLayout {
@@ -395,10 +390,6 @@ ContainmentItem {
                     if (!focus && model) {
                         model.clearSelection();
                     }
-                }
-
-                onActiveChanged: {
-                    console.warn(Plasmoid.containment.screenGeometry);
                 }
 
                 Connections {
