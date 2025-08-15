@@ -15,7 +15,6 @@ class MouseSettings;
 class BellSettings;
 class KeyboardSettings;
 class KeyboardFiltersSettings;
-class ScreenReaderSettings;
 class AccessibilityData;
 class ShakeCursorSettings;
 class ColorblindnessCorrectionSettings;
@@ -29,7 +28,6 @@ class KAccessConfig : public KQuickManagedConfigModule
     Q_PROPERTY(BellSettings *bellSettings READ bellSettings CONSTANT)
     Q_PROPERTY(KeyboardSettings *keyboardSettings READ keyboardSettings CONSTANT)
     Q_PROPERTY(KeyboardFiltersSettings *keyboardFiltersSettings READ keyboardFiltersSettings CONSTANT)
-    Q_PROPERTY(ScreenReaderSettings *screenReaderSettings READ screenReaderSettings CONSTANT)
     Q_PROPERTY(ShakeCursorSettings *shakeCursorSettings READ shakeCursorSettings CONSTANT)
     Q_PROPERTY(ColorblindnessCorrectionSettings *colorblindnessCorrectionSettings READ colorblindnessCorrectionSettings CONSTANT)
     Q_PROPERTY(InvertSettings *invertSettings READ invertSettings CONSTANT)
@@ -45,12 +43,17 @@ class KAccessConfig : public KQuickManagedConfigModule
     Q_PROPERTY(bool colorblindnessCorrectionIsDefaults READ colorblindnessCorrectionIsDefaults NOTIFY colorblindnessCorrectionIsDefaultsChanged)
     Q_PROPERTY(bool invertIsDefaults READ invertIsDefaults NOTIFY invertIsDefaultsChanged)
     Q_PROPERTY(bool zoomMagnifierIsDefaults READ zoomMagnifierIsDefaults NOTIFY zoomMagnifierIsDefaultsChanged)
+    Q_PROPERTY(bool screenReaderEnabled READ screenReaderEnabled WRITE setScreenReaderEnabled NOTIFY screenReaderEnabledChanged)
 
 public:
     KAccessConfig(QObject *parent, const KPluginMetaData &);
     ~KAccessConfig() override;
 
+    void load() override;
     void save() override;
+    void defaults() override;
+    bool isDefaults() const override;
+    bool isSaveNeeded() const override;
 
     Q_INVOKABLE void configureKNotify();
     Q_INVOKABLE void configureInvertShortcuts();
@@ -64,7 +67,6 @@ public:
     BellSettings *bellSettings() const;
     KeyboardSettings *keyboardSettings() const;
     KeyboardFiltersSettings *keyboardFiltersSettings() const;
-    ScreenReaderSettings *screenReaderSettings() const;
     ShakeCursorSettings *shakeCursorSettings() const;
     ColorblindnessCorrectionSettings *colorblindnessCorrectionSettings() const;
     InvertSettings *invertSettings() const;
@@ -80,6 +82,9 @@ public:
     bool invertIsDefaults() const;
     bool zoomMagnifierIsDefaults() const;
 
+    bool screenReaderEnabled() const;
+    void setScreenReaderEnabled(bool enabled);
+
 Q_SIGNALS:
     void orcaLaunchFeedbackChanged();
     void bellIsDefaultsChanged();
@@ -91,6 +96,7 @@ Q_SIGNALS:
     void colorblindnessCorrectionIsDefaultsChanged();
     void invertIsDefaultsChanged();
     void zoomMagnifierIsDefaultsChanged();
+    void screenReaderEnabledChanged();
 
 private:
     void setOrcaLaunchFeedback(const QString &value);
@@ -98,4 +104,5 @@ private:
     AccessibilityData *m_data;
     QString m_orcaLaunchFeedback;
     bool m_screenReaderInstalled;
+    bool m_screenReaderEnabled = false;
 };

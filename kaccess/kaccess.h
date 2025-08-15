@@ -8,7 +8,6 @@
 #pragma once
 
 #include "kcmaccessibilitybell.h"
-#include "kcmaccessibilityscreenreader.h"
 
 #include <QAbstractNativeEventFilter>
 #include <QAction>
@@ -35,17 +34,9 @@ protected:
 
     void xkbBellNotify(xcb_xkb_bell_notify_event_t *event);
 
-private Q_SLOTS:
-    void toggleScreenReader();
-
 private:
-    void setScreenReaderEnabled(bool enabled);
-
     BellSettings m_bellSettings;
-    ScreenReaderSettings m_screenReaderSettings;
     KConfig m_kdeglobals;
 
     int xkb_opcode;
-
-    QAction *toggleScreenReaderAction;
 };

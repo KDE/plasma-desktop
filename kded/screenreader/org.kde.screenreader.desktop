@@ -1,0 +1,16 @@
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-FileCopyrightText: None
+
+[Desktop Entry]
+Type=Application
+Name=Accessibility
+Icon=preferences-desktop-accessibility
+Actions=toggleScreenReader
+StartupNotify=false
+X-KDE-GlobalShortcutType=Service
+
+[Desktop Action toggleScreenReader]
+Name=Toggle Screen Reader On and Off
+Exec=dbus-send --type=method_call --print-reply --dest=org.kde.kded6 /modules/screenreader org.kde.screenreader.toggle
+X-KDE-Shortcuts=Meta+Alt+S
+X-KDE-Migrate-Shortcut=kaccess,Toggle Screen Reader On and Off

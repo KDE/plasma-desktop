@@ -9,5 +9,9 @@
       <label>Enable Screen Reader</label>
       <default>false</default>
     </entry>
+    <entry name="SystemdManaged" key="SystemdManaged" type="Bool">
+      <label>Whether the screen reader service is managed by systemd. If true the Enabled key is ignored</label>
+      <default>false</default>
+    </entry>
   </group>
 </kcfg>

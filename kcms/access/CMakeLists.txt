@@ -42,14 +42,6 @@ kconfig_target_kcfg_file(kaccess_settings
 
 kconfig_target_kcfg_file(kaccess_settings
     GENERATE_MOC
-    FILE kcmaccessibilityscreenreader.kcfg
-    HEADER kcmaccessibilityscreenreader.h
-    CLASS_NAME ScreenReaderSettings
-    MUTATORS DEFAULT_VALUE_GETTERS GENERATE_PROPERTIES PARENT_IN_CONSTRUCTOR NOTIFIERS
-)
-
-kconfig_target_kcfg_file(kaccess_settings
-    GENERATE_MOC
     FILE kcmaccessibilityshakecursor.kcfg
     HEADER kcmaccessibilityshakecursor.h
     CLASS_NAME ShakeCursorSettings
@@ -83,8 +75,26 @@ kconfig_target_kcfg_file(kaccess_settings
 kcmutils_generate_module_data(kcm_access
     MODULE_DATA_HEADER kcmaccessibilitydata.h
     MODULE_DATA_CLASS_NAME AccessibilityData
-    SETTINGS_HEADERS kcmaccessibilitybell.h kcmaccessibilitykeyboard.h kcmaccessibilitykeyboardfilters.h kcmaccessibilitymouse.h  kcmaccessibilityscreenreader.h kcmaccessibilityshakecursor.h kcmaccessibilitycolorblindnesscorrection.h kcmaccessibilityinvert.h kcmaccessibilityzoommagnifier.h
-    SETTINGS_CLASSES BellSettings KeyboardSettings KeyboardFiltersSettings MouseSettings ScreenReaderSettings ShakeCursorSettings ColorblindnessCorrectionSettings InvertSettings ZoomMagnifierSettings
+    SETTINGS_HEADERS kcmaccessibilitybell.h kcmaccessibilitykeyboard.h kcmaccessibilitykeyboardfilters.h kcmaccessibilitymouse.h kcmaccessibilityshakecursor.h kcmaccessibilitycolorblindnesscorrection.h kcmaccessibilityinvert.h kcmaccessibilityzoommagnifier.h
+    SETTINGS_CLASSES BellSettings KeyboardSettings KeyboardFiltersSettings MouseSettings ShakeCursorSettings ColorblindnessCorrectionSettings InvertSettings ZoomMagnifierSettings
+)
+
+ecm_qt_declare_logging_category(kcm_access
+    HEADER
+        logging.h
+    IDENTIFIER
+        KCM_ACCESS
+    CATEGORY_NAME
+        kcm_access
+    DESCRIPTION
+        "Accessibility KCM"
+    EXPORT
+        kcm_access
+)
+
+ecm_qt_install_logging_categories(
+    EXPORT kcm_access
+    DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}"
 )
 
 target_link_libraries(kcm_access PRIVATE
@@ -107,7 +117,6 @@ install(
         kcmaccessibilitybell.kcfg
         kcmaccessibilitykeyboard.kcfg
         kcmaccessibilitymouse.kcfg
-        kcmaccessibilityscreenreader.kcfg
         kcmaccessibilityshakecursor.kcfg
         kcmaccessibilitycolorblindnesscorrection.kcfg
         kcmaccessibilityinvert.kcfg
