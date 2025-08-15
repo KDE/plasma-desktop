@@ -176,6 +176,7 @@ KCM.AbstractKCM {
                     clip: true
                     model: kcm.filteredModel
                     activeFocusOnTab: true
+                    onActiveFocusChanged: currentIndex = Math.max(currentIndex, 0)
                     add: Transition {
                         id: transition
                         PropertyAction {
@@ -342,6 +343,7 @@ KCM.AbstractKCM {
                     clip:true
                     id: shortcutsList
                     property int selectedIndex: -1
+                    activeFocusOnTab: true
                     model: DelegateModel {
                         id: dm
                         model: rootIndex.valid ?  kcm.filteredModel : undefined
