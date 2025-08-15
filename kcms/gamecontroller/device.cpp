@@ -264,6 +264,10 @@ int Device::buttonCount() const
 
 bool Device::buttonState(int index) const
 {
+    // Invalid index
+    if (index < 0 || index > m_buttonCount)
+        return false;
+
     // If we are a game controller, use that api to get button state
     if (m_controller) {
         return SDL_GameControllerGetButton(m_controller, static_cast<SDL_GameControllerButton>(m_buttonType.value(index))) != 0;
@@ -336,6 +340,7 @@ void Device::onButtonEvent(const SDL_JoyButtonEvent &event)
 
 void Device::onControllerButtonEvent(const SDL_ControllerButtonEvent &event)
 {
+    qCDebug(KCM_GAMECONTROLLER) << "Got controller button event for button: " << ButtonToButtonName(SDL_GameControllerButton(event.button));
     Q_EMIT buttonStateChanged(event.button);
 }
 
