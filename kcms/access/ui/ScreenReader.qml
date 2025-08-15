@@ -29,13 +29,12 @@ Loader {
                     id: enableScreenReader
                     text: i18nc("@option:check", "Enable Screen Reader")
 
-                    KCMUtils.SettingStateBinding {
-                        configObject: kcm.screenReaderSettings
-                        settingName: "Enabled"
+                    KCMUtils.SettingHighlighter {
+                        highlight: !kcm.screenReaderIsDefaults
                     }
 
-                    checked: kcm.screenReaderSettings.enabled
-                    onToggled: kcm.screenReaderSettings.enabled = checked
+                    checked: kcm.screenReaderEnabled
+                    onToggled: kcm.screenReaderEnabled = checked
                 }
             }
             Kirigami.FormAction {
@@ -43,7 +42,6 @@ Loader {
                 subtitle: kcm.orcaLaunchFeedback
                 action: QQC2.Action {
                     text: i18nc("@action:button", "Launch Orca Screen Reader Configuration…")
-                    enabled: !kcm.screenReaderSettings.isImmutable("Enabled")
                     onTriggered: kcm.launchOrcaConfiguration()
                 }
             }
