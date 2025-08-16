@@ -39,7 +39,7 @@ msgid ""
 "Therefore, changes will not be applied."
 msgstr ""
 "操作名称、命令、图标或者条件无效。\n"
-"未能应用更改。"
+"更改不会被应用。"
 
 #: ActionEditor.cpp:163
 #, kde-format
@@ -68,13 +68,13 @@ msgstr "属性匹配"
 #: ActionEditor.ui:56
 #, kde-format
 msgid "Content Conjunction"
-msgstr "内容关联"
+msgstr "内容合取 (AND)"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
 #: ActionEditor.ui:61
 #, kde-format
 msgid "Content Disjunction"
-msgstr "内容无关"
+msgstr "内容析取 (OR)"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
 #: ActionEditor.ui:66
@@ -92,13 +92,13 @@ msgstr "设备类型："
 #: ActionEditor.ui:135
 #, kde-format
 msgid "Value name:"
-msgstr "数值名称："
+msgstr "值名称："
 
 #. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
 #: ActionEditor.ui:175
 #, kde-format
 msgid "Equals"
-msgstr "等同"
+msgstr "等于"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, CbValueMatch)
 #: ActionEditor.ui:180
@@ -148,17 +148,17 @@ msgid ""
 "%i: The identifier of the device"
 msgstr ""
 "用于触发操作的命令\n"
-"这里面可以包含任意或全部下面的扩展符，不区分大小写：\n"
+"可以包含以下任意或全部扩展符，不区分大小写：\n"
 "\n"
-"%f：设备的挂载点，仅针对访问存储功能的设备\n"
-"%d：设备节点的路径，仅针对块设备\n"
-"%i：设备标识符"
+"%f：设备的挂载点 - 仅针对访问存储功能的设备\n"
+"%d：设备节点的路径 - 仅针对块设备\n"
+"%i：设备的标识符"
 
 #. i18n: ectx: property (text), widget (QLabel, TlPredicateTree)
 #: ActionEditor.ui:300
 #, kde-format
 msgid "Devices must match the following parameters for this action:"
-msgstr "设备操作必须符合以下参数："
+msgstr "设备操作必须匹配以下参数："
 
 #. i18n: ectx: property (text), widget (QLabel, LblActionName)
 #: AddAction.ui:19
@@ -175,7 +175,7 @@ msgstr "输入新操作的名称"
 #: DesktopFileGenerator.cpp:25
 #, kde-format
 msgid "Solid Action Desktop File Generator"
-msgstr "Solid 操作 desktop 文件生成器"
+msgstr "Solid 操作 Desktop 文件生成器"
 
 #: DesktopFileGenerator.cpp:27
 #, kde-format
@@ -207,17 +207,17 @@ msgstr "设备类型必须是 %1"
 #: PredicateItem.cpp:122
 #, kde-format
 msgid "Any of the contained properties must match"
-msgstr "必须符合任一包含的属性"
+msgstr "必须匹配任意一个包含的属性"
 
 #: PredicateItem.cpp:125
 #, kde-format
 msgid "All of the contained properties must match"
-msgstr "必须符合所有包含的属性"
+msgstr "必须匹配所有包含的属性"
 
 #: PredicateItem.cpp:134
 #, kde-format
 msgid "The device property %1 must equal %2"
-msgstr "设备属性 %1 必须等同于 %2"
+msgstr "设备属性 %1 必须等于 %2"
 
 #: PredicateItem.cpp:137
 #, kde-format
@@ -227,7 +227,7 @@ msgstr "设备属性 %1 必须包含 %2"
 #: SolidActions.cpp:137
 #, kde-format
 msgid "It appears that the predicate for this action is not valid."
-msgstr "此操作的述词无效。"
+msgstr "此操作的条件无效。"
 
 #: SolidActions.cpp:137
 #, kde-format
@@ -237,7 +237,7 @@ msgstr "解析设备状态出错"
 #: SolidActions.cpp:185
 #, kde-format
 msgid "No Action Selected"
-msgstr "未选择操作"
+msgstr "没有选择操作"
 
 #: SolidActions.cpp:206
 #, kde-format
