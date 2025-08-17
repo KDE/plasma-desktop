@@ -1,33 +1,31 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-30 00:44+0000\n"
-"PO-Revision-Date: 2024-12-07 12:38+0100\n"
+"PO-Revision-Date: 2025-08-16 07:19+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
-"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language-Team: pl\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: backend.cpp:284
-#, fuzzy, kde-format
-#| msgctxt "Show all user Places"
-#| msgid "%1 more Place"
-#| msgid_plural "%1 more Places"
+#, kde-format
 msgctxt "Show all user Places"
 msgid "%1 more Place…"
 msgid_plural "%1 more Places…"
-msgstr[0] "%1 miejsce więcej"
-msgstr[1] "%1 miejsca więcej"
-msgstr[2] "%1 miejsc więcej"
+msgstr[0] "%1 miejsce więcej…"
+msgstr[1] "%1 miejsca więcej…"
+msgstr[2] "%1 miejsc więcej…"
 
 #: backend.cpp:368
 #, kde-format
@@ -136,19 +134,19 @@ msgstr "Ukryj pozostałe okna po najechaniu na podgląd"
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show an indicator when a task is playing audio"
-msgstr ""
+msgstr "Dodaj znacznik do zadania, gdy odtwarza dźwięk"
 
 #: package/contents/ui/ConfigAppearance.qml:69
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Mute task when clicking indicator"
-msgstr ""
+msgstr "Wycisz zadanie po naciśnięciu na jego znacznik"
 
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show media and volume controls in tooltip"
-msgstr ""
+msgstr "Pokaż sterowanie nośnikami i głośnością w podpowiedzi"
 
 #: package/contents/ui/ConfigAppearance.qml:85
 #, kde-format
@@ -265,6 +263,10 @@ msgid ""
 "behavior. If you don't find one, consider reporting this as a bug to the "
 "app's developer."
 msgstr ""
+"Jeśli używasz tego ustawienia do obejścia aplikacji, które wymagają uwagi "
+"zbyt często, to lepiej najpierw zajrzeć do jej ustawień i wyłączyć to "
+"zachowanie. Jeśli nie ma takiego ustawienia, to zalecamy zgłoszenie tego "
+"twórcy danej aplikacji."
 
 #: package/contents/ui/ConfigBehavior.qml:64
 #, kde-format
@@ -384,7 +386,7 @@ msgstr "Wg aktywności"
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By horizontal window position"
-msgstr ""
+msgstr "Wg położenia okna w poziomie"
 
 #: package/contents/ui/ConfigBehavior.qml:163
 #, kde-format
@@ -424,7 +426,7 @@ msgstr "Gdy nacisnę środkowym na dowolne zadanie:"
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task does nothing'"
 msgid "Does nothing"
-msgstr "Nic nie rób"
+msgstr "Nic nie robi"
 
 #: package/contents/ui/ConfigBehavior.qml:191
 #, kde-format
@@ -432,7 +434,7 @@ msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task closes window "
 "or group'"
 msgid "Closes window or group"
-msgstr "Zamknij jego okno lub grupę"
+msgstr "Zamyka jego okno lub grupę"
 
 #: package/contents/ui/ConfigBehavior.qml:192
 #, kde-format
@@ -440,7 +442,7 @@ msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task opens a new "
 "window'"
 msgid "Opens a new window"
-msgstr "Otwórz nowe okno"
+msgstr "Otwiera nowe okno"
 
 #: package/contents/ui/ConfigBehavior.qml:193
 #, kde-format
@@ -448,7 +450,7 @@ msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task minimizes/"
 "restores window or group'"
 msgid "Minimizes/Restores window or group"
-msgstr "Zminimalizuj/przywróć jego okno lub grupę"
+msgstr "Minimalizuje/przywraca jego okno lub grupę"
 
 #: package/contents/ui/ConfigBehavior.qml:194
 #, kde-format
@@ -456,7 +458,7 @@ msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task toggles "
 "grouping'"
 msgid "Toggles grouping"
-msgstr "Przełącz jego grupowanie"
+msgstr "Przełącza jego grupowanie"
 
 #: package/contents/ui/ConfigBehavior.qml:195
 #, kde-format
@@ -464,51 +466,36 @@ msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task brings it to "
 "the current virtual desktop'"
 msgid "Brings it to the current virtual desktop"
-msgstr "Przywołaj je do bieżącego pulpitu wirtualnego"
+msgstr "Przywołuje je do bieżącego pulpitu wirtualnego"
 
 #: package/contents/ui/ConfigBehavior.qml:205
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label for checkbox group, completes sentence like: … from current screen"
-#| msgid "Show only tasks:"
+#, kde-format
 msgctxt "@label:listbox completes sentence like: … does nothing"
 msgid "Scrolling on a task:"
-msgstr "Pokaż zadania tylko:"
+msgstr "Przewijanie na zadaniu:"
 
 #: package/contents/ui/ConfigBehavior.qml:209
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Part of a sentence: 'Middle-clicking any task does "
-#| "nothing'"
-#| msgid "Does nothing"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling on any task does nothing'"
 msgid "Does nothing"
-msgstr "Nic nie rób"
+msgstr "Nic nie robi"
 
 #: package/contents/ui/ConfigBehavior.qml:210
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Completes the sentence 'Clicking grouped task cycles "
-#| "through tasks' "
-#| msgid "Cycles through tasks"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
 "all tasks'"
 msgid "Cycles through all tasks"
-msgstr "Krąż pomiędzy zadaniami"
+msgstr "Krąży pomiędzy wszystkimi zadaniami"
 
 #: package/contents/ui/ConfigBehavior.qml:211
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Completes the sentence 'Clicking grouped task cycles "
-#| "through tasks' "
-#| msgid "Cycles through tasks"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling on any task cycles through "
 "that task's windows only'"
 msgid "Cycles through that task's windows"
-msgstr "Krąż pomiędzy zadaniami"
+msgstr "Krąży pomiędzy zadaniami okna"
 
 #: package/contents/ui/ConfigBehavior.qml:219
 #, kde-format
@@ -769,7 +756,7 @@ msgstr "&Zwiń"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
-msgstr ""
+msgstr "Bez paska &nazwy i obramowania"
 
 #: package/contents/ui/ContextMenu.qml:729
 #, kde-format
