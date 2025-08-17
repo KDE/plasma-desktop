@@ -7,15 +7,16 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-12 00:45+0000\n"
-"PO-Revision-Date: 2025-02-15 11:13+0100\n"
+"PO-Revision-Date: 2025-08-16 07:28+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
-"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language-Team: pl\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: contents/activitymanager/ActivityItem.qml:204
 #, kde-format
@@ -111,7 +112,7 @@ msgstr "Otwórz stronę sieciową %1"
 #, kde-format
 msgctxt "@title:group"
 msgid "Website"
-msgstr ""
+msgstr "Strona sieciowa"
 
 #: contents/configuration/AboutPlugin.qml:147
 #, kde-format
@@ -291,7 +292,7 @@ msgstr "Skróty"
 #, kde-format
 msgctxt "@action:button set keyboard shortcut for"
 msgid "Activate widget as if clicked:"
-msgstr ""
+msgstr "Przywołaj element jak po naciśnięciu na niego:"
 
 #: contents/configuration/ContainmentConfiguration.qml:27
 #, kde-format
@@ -319,21 +320,19 @@ msgctxt ""
 "@action:button label of button to open a menu that lets you add widgets or "
 "spacers"
 msgid "Add New"
-msgstr ""
+msgstr "Dodaj nowy"
 
 #: contents/configuration/PanelConfiguration.qml:127
-#, fuzzy, kde-format
-#| msgid "Add Spacer"
+#, kde-format
 msgctxt "@action:menu add a spacer"
 msgid "Spacer"
-msgstr "Dodaj wypełniacz"
+msgstr "Wypełniacz"
 
 #: contents/configuration/PanelConfiguration.qml:134
-#, fuzzy, kde-format
-#| msgid "Widgets"
+#, kde-format
 msgctxt "@action:menu add a widget"
 msgid "Widgets…"
-msgstr "Elementy interfejsu"
+msgstr "Elementy interfejsu…"
 
 #: contents/configuration/PanelConfiguration.qml:163
 #, kde-format
@@ -638,7 +637,7 @@ msgstr "Zamienny wygląd obsługi"
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Add %1"
-msgstr ""
+msgstr "Dodaj %1"
 
 #: contents/explorer/AppletDelegate.qml:47
 #, kde-format
@@ -652,44 +651,42 @@ msgid "New!"
 msgstr "Nowy!"
 
 #: contents/explorer/AppletDelegate.qml:204
-#, fuzzy, kde-format
-#| msgid "No widgets available"
+#, kde-format
 msgctxt "@info:other accessible for badge showing applet count"
 msgid "%1 widget active"
 msgid_plural "%1 widgets active"
-msgstr[0] "Brak elementów interfejsu"
-msgstr[1] "Brak elementów interfejsu"
-msgstr[2] "Brak elementów interfejsu"
+msgstr[0] "%1 włączony element interfejsu"
+msgstr[1] "%1 włączone elementy interfejsu"
+msgstr[2] "%1 włączonych elementów interfejsu"
 
 #: contents/explorer/AppletDelegate.qml:205
 #, kde-format
 msgctxt " @info:other accessible for badge indicating new widget"
 msgid "Recently installed"
-msgstr ""
+msgstr "Ostatnio wgrane"
 
 #: contents/explorer/AppletDelegate.qml:217
-#, fuzzy, kde-format
-#| msgid "Uninstall"
+#, kde-format
 msgid "Cancel Uninstallation"
-msgstr "Usuń "
+msgstr "Przerwij usuwanie"
 
 #: contents/explorer/AppletDelegate.qml:218
 #, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Mark for Uninstallation"
-msgstr ""
+msgstr "Oznacz do usunięcia"
 
 #: contents/explorer/AppletDelegate.qml:222
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Cancel pending uninstallation for widget %1"
-msgstr ""
+msgstr "Przerwij oczekujące usunięcie elementu interfejsu %1"
 
 #: contents/explorer/AppletDelegate.qml:223
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Mark widget %1 for uninstallation. Requires confirmation"
-msgstr ""
+msgstr "Oznacza element interfejsu %1 do usunięcia. Wymaga potwierdzenia"
 
 #: contents/explorer/AppletDelegate.qml:265
 #, kde-format
@@ -703,9 +700,9 @@ msgctxt ""
 "name"
 msgid "Remove running instance of widget %2"
 msgid_plural "Remove all %1 running instances of widget %2"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Usuń uruchomione wystąpienie elementu interfejsu %2"
+msgstr[1] "Usuń wszystkie %1 uruchomione wystąpienia elementu interfejsu %2"
+msgstr[2] "Usuń wszystkich %1 uruchomionych wystąpień elementu interfejsu %2"
 
 #: contents/explorer/WidgetExplorer.qml:140
 #: contents/explorer/WidgetExplorer.qml:223
@@ -728,20 +725,19 @@ msgstr "Pobierz nowe…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Widgets…"
-msgstr "Pobierz nowe elementy interfejsu..."
+msgstr "Pobierz nowe elementy interfejsu…"
 
 #: contents/explorer/WidgetExplorer.qml:192
 #, kde-format
 msgctxt "@action:button accessible for close button"
 msgid "Close Widget Explorer"
-msgstr ""
+msgstr "Zamknij przeglądarkę elementów interfejsu"
 
 #: contents/explorer/WidgetExplorer.qml:208
-#, fuzzy, kde-format
-#| msgid "Lock Widgets"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Search through widgets"
-msgstr "Zablokuj elementy interfejsu"
+msgstr "Poszukaj w elementach interfejsu"
 
 #: contents/explorer/WidgetExplorer.qml:237
 #, kde-format
@@ -749,14 +745,13 @@ msgid "Categories"
 msgstr "Kategorie"
 
 #: contents/explorer/WidgetExplorer.qml:259
-#, fuzzy, kde-format
-#| msgid "Uninstall widget"
+#, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Uninstall (%1 Widget)"
 msgid_plural "Uninstall (%1 Widgets)"
-msgstr[0] "Usuń element interfejsu"
-msgstr[1] "Usuń element interfejsu"
-msgstr[2] "Usuń element interfejsu"
+msgstr[0] "Usuń (%1 element interfejsu)"
+msgstr[1] "Usuń (%1 elementy interfejsu)"
+msgstr[2] "Usuń (%1 elementów interfejsu)"
 
 #: contents/explorer/WidgetExplorer.qml:370
 #, kde-format
@@ -769,62 +764,49 @@ msgid "No widgets available"
 msgstr "Brak elementów interfejsu"
 
 #: contents/lockscreen/config.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@title: group"
 msgid "Show clock:"
-msgstr "Pokaż zegar"
+msgstr "Pokaż zegar:"
 
 #: contents/lockscreen/config.qml:25
-#, fuzzy, kde-format
-#| msgid "Always visible"
+#, kde-format
 msgctxt "@option:radio Clock always shown"
 msgid "Always"
-msgstr "Zawsze widoczny"
+msgstr "Zawsze"
 
 #: contents/lockscreen/config.qml:26
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Always show clock"
-msgstr "Pokaż zegar"
+msgstr "Zawsze pokazuj zegar"
 
 #: contents/lockscreen/config.qml:41
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio Clock shown only while unlock prompt is visible"
 msgid "On unlocking prompt"
-msgstr "Pokaż pod pytaniem o odblokowanie"
+msgstr "Przy zapytaniu o odblokowanie"
 
 #: contents/lockscreen/config.qml:42
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show clock only on unlocking prompt"
-msgstr "Pokaż pod pytaniem o odblokowanie"
+msgstr "Pokaż zegar tylko przy zapytaniu o odblokowanie"
 
 #: contents/lockscreen/config.qml:55
 #, kde-format
 msgctxt "@option:radio Clock never shown"
 msgid "Never"
-msgstr ""
+msgstr "Nigdy"
 
 #: contents/lockscreen/config.qml:56
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Never show clock"
-msgstr "Pokaż zegar"
+msgstr "Nigdy nie pokazuj zegara"
 
 #: contents/lockscreen/config.qml:71
-#, fuzzy, kde-format
-#| msgctxt "@title: group"
-#| msgid "Media controls:"
+#, kde-format
 msgctxt "@title: group UI controls for playback of multimedia content"
 msgid "Media controls:"
 msgstr "Obsługa odtwarzacza:"

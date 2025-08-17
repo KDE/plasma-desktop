@@ -1,21 +1,22 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2021, 2022, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-02 00:45+0000\n"
-"PO-Revision-Date: 2024-10-05 12:24+0200\n"
+"PO-Revision-Date: 2025-08-16 06:57+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
-"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language-Team: pl\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: landingpage_kdeglobalssettings.kcfg:9
@@ -33,7 +34,7 @@ msgstr "Jednokrotne kliknięcie otwiera pliki"
 #: landingpage_kdeglobalssettings.kcfg:19
 #, kde-format
 msgid "Switch the look and feel package depending on time of day"
-msgstr ""
+msgstr "Zmień wygląd na podstawie pory dnia"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: landingpage_kdeglobalssettings.kcfg:23
@@ -59,13 +60,13 @@ msgstr "Szybkość animacji"
 #, kde-format
 msgctxt "@action:button"
 msgid "Change global theme"
-msgstr ""
+msgstr "Zmień wygląd globalny"
 
 #: ui/LookAndFeelBox.qml:178
 #, kde-format
 msgctxt "@label accessible"
 msgid "Global theme"
-msgstr ""
+msgstr "Globalny wygląd"
 
 #: ui/main.qml:35
 #, kde-format
@@ -76,7 +77,7 @@ msgstr "Tryb:"
 #, kde-format
 msgctxt "Switch between dark and light look and feel packages automatically"
 msgid "Automatic"
-msgstr ""
+msgstr "Samoczynnie"
 
 #: ui/main.qml:136
 #, kde-format
