@@ -269,6 +269,10 @@ MouseArea {
             onEntered: hideTimer.stop();
             onExited:  hideTimer.restart();
 
+            Keys.onEscapePressed: {
+                tooltip.close()
+            }
+
             ColumnLayout {
                 id: handleButtons
                 spacing: Kirigami.Units.smallSpacing
