@@ -101,6 +101,9 @@ ContainmentItem {
     Plasmoid.onUserConfiguringChanged: {
         if (!Plasmoid.userConfiguring) {
             if (root.configOverlay) {
+                if (root.dragAndDropping) {
+                    root.configOverlay.finishDragOperation()
+                }
                 root.configOverlay.destroy();
                 root.configOverlay = null;
             }
