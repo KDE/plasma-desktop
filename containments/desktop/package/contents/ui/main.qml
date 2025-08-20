@@ -61,6 +61,9 @@ ContainmentItem {
     property int handleDelay: 800
     property real haloOpacity: 0.5
 
+    readonly property int screen: Plasmoid.containment.screen
+    readonly property bool isUiReady: Plasmoid.containment.corona.isScreenUiReady(root.screen)
+
     readonly property int hoverActivateDelay: 750 // Magic number that matches Dolphin's auto-expand folders delay.
 
     readonly property Loader folderViewLayer: fullRepresentationItem.folderViewLayer
@@ -273,6 +276,15 @@ ContainmentItem {
             function onEditModeChanged() {
                 appletsLayout.editMode = Plasmoid.containment.corona.editMode;
             }
+
+            // When adding panels, sizes change. We want to make sure all panels
+            // are loaded, and when they all are loaded, we tell the folderViewLayer loader to start.
+            function onScreenUiReadyChanged(screen: int, newLayoutReady: bool) {
+                if (root.isContainment && root.isFolder && !folderViewLayer.ready && Plasmoid.containment.screen === screen && newLayoutReady){
+                    // We skip x and y since that is handled by the parent of folderViewLayer
+                    folderViewLayer.active = true;
+                }
+            }
         }
 
         ContainmentLayoutManager.AppletsLayout {
@@ -371,7 +383,19 @@ ContainmentItem {
 
                 focus: true
 
-                active: isFolder
+                // Do not set this active by default for desktop, and disable it when folderMode is not used
+                active: {
+                    if (root.isFolder){
+                        if (!root.isContainment) {
+                            // We are a folder widget
+                            return true;
+                        } else {
+                            // For desktop, test if the screen is ready
+                            return root.isUiReady;
+                        }
+                    }
+                    return false;
+                }
                 asynchronous: false
 
                 source: "FolderViewLayer.qml"
