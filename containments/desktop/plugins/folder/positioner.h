@@ -62,7 +62,7 @@ public:
      * @param flags is used for handling if the PerStripe value is updated
      * on load.
      */
-    void loadAndApplyPositionsConfig(const LoadAndApplyFlags flags = LoadAndApplyFlags::None);
+    Q_INVOKABLE void loadAndApplyPositionsConfig(const LoadAndApplyFlags flags = LoadAndApplyFlags::None);
 
     /**
      * Saves the positions in m_positions to a configuration file
@@ -95,6 +95,8 @@ public:
     void setApplet(Plasma::Applet *applet);
 
     bool screenInUse() const;
+
+    Q_INVOKABLE void updateResolution();
 
 #ifdef BUILD_TESTING
     QHash<int, int> proxyToSourceMapping() const
@@ -145,7 +147,6 @@ private:
     void disconnectSignals(FolderModel *model);
     bool configurationHasResolution(const QString &resolution) const;
     QString loadConfigData() const;
-    void updateResolution();
 
     bool m_enabled;
     FolderModel *m_folderModel;
