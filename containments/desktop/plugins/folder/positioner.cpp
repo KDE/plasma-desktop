@@ -967,7 +967,7 @@ bool Positioner::screenInUse() const
 
 void Positioner::loadAndApplyPositionsConfig(const LoadAndApplyFlags flags)
 {
-    if (m_applet && screenInUse() && !m_resolution.isEmpty()) {
+    if (m_applet && m_enabled && screenInUse() && !m_resolution.isEmpty()) {
         // The old configuration has commas with escape characters, so clean up those from the config
         auto confdata = loadConfigData();
         const QJsonDocument doc = QJsonDocument::fromJson(confdata.toUtf8());
@@ -988,7 +988,7 @@ void Positioner::loadAndApplyPositionsConfig(const LoadAndApplyFlags flags)
 
 void Positioner::savePositionsConfig()
 {
-    if (m_applet && screenInUse() && m_resolution != QStringLiteral("0x0")) {
+    if (m_applet && m_enabled && screenInUse() && m_resolution != QStringLiteral("0x0")) {
         auto confdata = loadConfigData();
         auto doc = QJsonDocument::fromJson(confdata.toUtf8());
         QJsonObject root;
@@ -1012,7 +1012,7 @@ void Positioner::updateResolution()
     if (m_folderModel) {
         QString resolution = QStringLiteral("%1x%2").arg(QString::number(floor(m_folderModel->screenGeometry().width())),
                                                          QString::number(floor(m_folderModel->screenGeometry().height())));
-        if (!screenInUse()) {
+        if (!screenInUse() || !m_enabled) {
             m_resolution = QStringLiteral("0x0");
         }
         if (m_resolution != resolution) {
