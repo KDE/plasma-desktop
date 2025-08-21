@@ -53,11 +53,11 @@ void PositionerTest::init()
     m_folderModel->setUsedByContainment(true);
     m_folderModel->componentComplete();
     m_positioner = new Positioner(this);
-    m_positioner->m_resolution = defaultResolution;
     m_positioner->setApplet(m_applet);
     m_positioner->setEnabled(true);
     m_positioner->setFolderModel(m_folderModel);
     m_positioner->setPerStripe(3);
+    m_positioner->m_resolution = defaultResolution;
 
     m_folderModel->setUrl(m_folderDir->path() + QDir::separator() + desktop);
     QSignalSpy s(m_folderModel, &FolderModel::listingCompleted);
