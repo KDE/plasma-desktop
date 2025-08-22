@@ -44,5 +44,5 @@ target_link_libraries(kcm_gamecontroller PRIVATE
     Qt6::Quick
     Qt6::QuickWidgets
     SDL2::SDL2
-    udev
+    UDev::UDev
 )
