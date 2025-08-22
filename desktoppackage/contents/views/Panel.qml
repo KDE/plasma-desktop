@@ -188,27 +188,34 @@ Item {
     property bool isAdaptive: panel.opacityMode === Panel.Global.Adaptive
     property bool floating: panel.floating
     property bool hasCompositing: KWindowSystem.isPlatformX11 ? KX11Extras.compositingActive : true
-    readonly property bool screenCovered: touchingWindow && panel.visibilityMode == Panel.Global.NormalPanel
-    property var stateTriggers: [floating, screenCovered, isOpaque, isAdaptive, isTransparent, hasCompositing, containment, panel.floatingApplets]
+    property var stateTriggers: [floating, touchingWindow, isOpaque, isAdaptive, isTransparent, hasCompositing, containment, panel.floatingApplets]
     onStateTriggersChanged: {
         let opaqueApplets = false
         let floatingApplets = false
-        if ((!floating || screenCovered) && (isOpaque || (screenCovered && isAdaptive))) {
+        if ((!floating || touchingWindow) && (isOpaque || (touchingWindow && isAdaptive))) {
             panelOpacity = 1
             opaqueApplets = true
             floatingnessTarget = 0
             floatingApplets = (panel.floatingApplets && !floating)
-        } else if ((!floating || screenCovered) && (isTransparent || (!screenCovered && isAdaptive))) {
+        } else if ((!floating || touchingWindow) && (isTransparent || (!touchingWindow && isAdaptive))) {
             panelOpacity = 0
             floatingnessTarget = 0
             floatingApplets = (panel.floatingApplets && !floating)
-        } else if ((floating && !screenCovered) && (isTransparent || isAdaptive)) {
+        } else if ((floating && !touchingWindow) && (isTransparent || isAdaptive)) {
             panelOpacity = 0
             floatingnessTarget = 1
             floatingApplets = true
-        } else if (floating && !screenCovered && isOpaque) {
+        } else if (floating && !touchingWindow && isOpaque) {
             panelOpacity = 1
             opaqueApplets = true
+            floatingnessTarget = 1
+            floatingApplets = true
+        }
+
+        // Exceptions: panels with not NormalPanel visibilityMode
+        // should never de-float, and we should not have transparent
+        // panels when on X11 with compositing not active.
+        if (panel.visibilityMode != Panel.Global.NormalPanel && floating) {
             floatingnessTarget = 1
             floatingApplets = true
         }
@@ -216,6 +223,7 @@ Item {
             opaqueApplets = false
             panelOpacity = 0
         }
+
         // Not using panelOpacity to check as it has a NumberAnimation, and it will thus
         // be still read as the initial value here, before the animation starts.
         if (containment) {
