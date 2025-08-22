@@ -20,6 +20,8 @@ KCM.SimpleKCM {
 
     required property var device
 
+    title: device.controllerTypeName
+
     ColumnLayout {
         anchors.fill: parent
 

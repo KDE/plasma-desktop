@@ -64,8 +64,9 @@ QVariant DeviceModel::data(const QModelIndex &index, int role) const
     const SDL_JoystickID id = m_devices.keys().at(index.row());
 
     switch (role) {
+    case Qt::DisplayRole:
     case CustomRoles::TextRole:
-        return i18nc("Device name and path", "%1 (%2)", m_devices.value(id)->name(), m_devices.value(id)->path());
+        return m_devices.value(id)->name();
     case CustomRoles::IDRole:
         return id;
     }
