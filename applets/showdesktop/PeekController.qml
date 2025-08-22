@@ -4,7 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import org.kde.plasma.private.showdesktop 0.1
+import plasma.applet.org.kde.plasma.showdesktop
 import org.kde.plasma.plasmoid 2.0
 
 
