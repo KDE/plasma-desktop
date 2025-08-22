@@ -215,7 +215,7 @@ set_package_properties(UDev PROPERTIES
     DESCRIPTION "API for enumerating and introspecting local devices (part of systemd)"
     URL "https://www.freedesktop.org/wiki/Software/systemd/"
     PURPOSE "Required for device discovery in keyboard daemon and game controller kcm"
-    TYPE OPTIONAL
+    TYPE REQUIRED
 )
 
 find_package(XCB
