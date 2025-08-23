@@ -12,14 +12,14 @@ msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-22 00:44+0000\n"
-"PO-Revision-Date: 2025-05-28 16:58+0300\n"
+"PO-Revision-Date: 2025-08-17 10:22+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.3\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -135,32 +135,27 @@ msgstr "Izkārtojums:"
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "In Columns"
-msgstr ""
+msgstr "Kolonnās"
 
 #: package/contents/ui/ConfigIcons.qml:128
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "In Rows"
-msgstr ""
+msgstr "Rindās"
 
 #: package/contents/ui/ConfigIcons.qml:137
-#, fuzzy, kde-format
-#| msgid "Sorting:"
+#, kde-format
 msgid "Sort Alignment:"
 msgstr "Kārtošana:"
 
 #: package/contents/ui/ConfigIcons.qml:140
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Left to Right"
+#, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Left-to-Right"
 msgstr "No kreisās uz labo"
 
 #: package/contents/ui/ConfigIcons.qml:141
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Right to Left"
+#, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Right-to-Left"
 msgstr "No labās uz kreiso"
@@ -171,10 +166,9 @@ msgid "Lock in place"
 msgstr "Slēgt vietā"
 
 #: package/contents/ui/ConfigIcons.qml:177
-#, fuzzy, kde-format
-#| msgid "Sorting:"
+#, kde-format
 msgid "Sort by:"
-msgstr "Kārtība:"
+msgstr "Kārtot pēc:"
 
 #: package/contents/ui/ConfigIcons.qml:185
 #, kde-format
@@ -434,11 +428,10 @@ msgstr ""
 "veiktspēju, tāpēc ir ieteicams tos pārvietot citur."
 
 #: package/contents/ui/FolderViewDialog.qml:87
-#, fuzzy, kde-format
-#| msgid "This folder is empty."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Folder is empty"
-msgstr "Šī mape ir tukša."
+msgstr "Šī mape ir tukša"
 
 #: package/contents/ui/main.qml:422
 #, kde-format
@@ -627,31 +620,27 @@ msgstr "Izkārtojums"
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Columns"
-msgstr ""
+msgstr "Kolonnās"
 
 #: plugins/folder/viewpropertiesmenu.cpp:74
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Rows"
-msgstr ""
+msgstr "Rindās"
 
 #: plugins/folder/viewpropertiesmenu.cpp:79
 #, kde-format
 msgid "Sort Alignment"
-msgstr ""
+msgstr "Kārtošana"
 
 #: plugins/folder/viewpropertiesmenu.cpp:83
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Left to Right"
+#, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Left-to-Right"
 msgstr "No kreisās uz labo"
 
 #: plugins/folder/viewpropertiesmenu.cpp:84
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Right to Left"
+#, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Right-to-Left"
 msgstr "No labās uz kreiso"

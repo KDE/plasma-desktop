@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-14 00:44+0000\n"
+"POT-Creation-Date: 2025-08-23 00:44+0000\n"
 "PO-Revision-Date: 2025-03-15 05:46+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -220,143 +220,143 @@ msgctxt "@action:button Export shortcut scheme"
 msgid "Export"
 msgstr "Ekspor"
 
-#: ui/main.qml:216
+#: ui/main.qml:217
 #, kde-format
 msgctxt ""
 "@option:check accessible export shortcuts %1 is application/group name"
 msgid "Export %1"
 msgstr "Ekspor %1"
 
-#: ui/main.qml:225
+#: ui/main.qml:226
 #, kde-format
 msgctxt "@action:button accessible %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "Edit perintah untuk %1"
 
-#: ui/main.qml:241
+#: ui/main.qml:242
 #, kde-format
 msgctxt "@info:tooltip %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "Edit perintah untuk %1"
 
-#: ui/main.qml:249
+#: ui/main.qml:250
 #, kde-format
 msgctxt "@action:button accessible %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Hapus semua pintasan untuk %1"
 
-#: ui/main.qml:259
+#: ui/main.qml:260
 #, kde-format
 msgctxt "@info:tooltip %1 is the text of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Hapus semua pintasan untuk %1"
 
-#: ui/main.qml:266
+#: ui/main.qml:267
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Undo deletion"
 msgstr "Urung penghapusan"
 
-#: ui/main.qml:271
+#: ui/main.qml:272
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo deletion"
 msgstr "Urung penghapusan"
 
-#: ui/main.qml:325
+#: ui/main.qml:326
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "Tidak ada item yang cocok dengan pencarian yang ditentukan"
 
-#: ui/main.qml:358
+#: ui/main.qml:360
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Pilih sebuah item dari daftar untuk menampilkan pintasannya di sini"
 
-#: ui/main.qml:370
+#: ui/main.qml:372
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "Ekspor Skema Pintasan"
 
-#: ui/main.qml:370 ui/main.qml:512
+#: ui/main.qml:372 ui/main.qml:514
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Impor Skema Pintasan"
 
-#: ui/main.qml:372
+#: ui/main.qml:374
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Skema Puntasan (*.kksrc)"
 
-#: ui/main.qml:399
+#: ui/main.qml:401
 #, kde-format
 msgid "Edit Command"
 msgstr "Edit Perintah"
 
-#: ui/main.qml:399
+#: ui/main.qml:401
 #, kde-format
 msgid "Add Command"
 msgstr "Tambahkan Perintah"
 
-#: ui/main.qml:421
+#: ui/main.qml:423
 #, kde-format
 msgid "Save"
 msgstr "Simpan"
 
-#: ui/main.qml:421
+#: ui/main.qml:423
 #, kde-format
 msgid "Add"
 msgstr "Tambah"
 
-#: ui/main.qml:451
+#: ui/main.qml:453
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "Masukkan perintah atau pilih file skrip:"
 
-#: ui/main.qml:460
+#: ui/main.qml:462
 #, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
 msgstr "Perintah:"
 
-#: ui/main.qml:466
+#: ui/main.qml:468
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "Perintah"
 
-#: ui/main.qml:473
+#: ui/main.qml:475
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Pilih…"
 
-#: ui/main.qml:474
+#: ui/main.qml:476
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Pilih file skrip"
 
-#: ui/main.qml:482
+#: ui/main.qml:484
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
 msgstr "Nama:"
 
-#: ui/main.qml:483
+#: ui/main.qml:485
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
 msgstr "Masukkan nama di sini"
 
-#: ui/main.qml:495
+#: ui/main.qml:497
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Pilih File Skrip"
 
-#: ui/main.qml:497
+#: ui/main.qml:499
 #, kde-format
 msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
@@ -364,22 +364,22 @@ msgctxt ""
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "File skrip (.sh, .bash, .zsh, etc.) (*.*sh)"
 
-#: ui/main.qml:520
+#: ui/main.qml:522
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "PIlih skema untuk diimpor:"
 
-#: ui/main.qml:539
+#: ui/main.qml:541
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Skema Kustom"
 
-#: ui/main.qml:547
+#: ui/main.qml:549
 #, kde-format
 msgid "Select File…"
 msgstr "Pilih File..."
 
-#: ui/main.qml:547
+#: ui/main.qml:549
 #, kde-format
 msgid "Import"
 msgstr "Impor"

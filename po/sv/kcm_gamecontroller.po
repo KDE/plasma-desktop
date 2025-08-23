@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-22 00:44+0000\n"
-"PO-Revision-Date: 2025-05-31 12:42+0200\n"
+"PO-Revision-Date: 2025-08-22 15:25+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: axesmodel.cpp:122 hatmodel.cpp:80
 #, kde-format
@@ -38,221 +38,207 @@ msgstr "Tillstånd"
 #: device.cpp:17 device.cpp:30
 #, kde-format
 msgid "Unknown"
-msgstr ""
+msgstr "Okänt"
 
 #: device.cpp:18
-#, fuzzy, kde-format
-#| msgid "No game controllers found"
+#, kde-format
 msgid "Game Controller"
-msgstr "Ingen spelkontroll hittades"
+msgstr "Spelkontroll"
 
 #: device.cpp:19
 #, kde-format
 msgid "Wheel"
-msgstr ""
+msgstr "Hjul"
 
 #: device.cpp:20
 #, kde-format
 msgid "Arcade Stick"
-msgstr ""
+msgstr "Arkadspak"
 
 #: device.cpp:21
 #, kde-format
 msgid "Flight Stick"
-msgstr ""
+msgstr "Flygspak"
 
 #: device.cpp:22
 #, kde-format
 msgid "Dance Pad"
-msgstr ""
+msgstr "Dansplatta"
 
 #: device.cpp:23
 #, kde-format
 msgid "Guitar"
-msgstr ""
+msgstr "Gitarr"
 
 #: device.cpp:24
 #, kde-format
 msgid "Drum Kit"
-msgstr ""
+msgstr "Trumset"
 
 #: device.cpp:25
 #, kde-format
 msgid "Arcade Pad"
-msgstr ""
+msgstr "Arkadplatta"
 
 #: device.cpp:26
 #, kde-format
 msgid "Throttle"
-msgstr ""
+msgstr "Gasreglage"
 
 #: device.cpp:31
 #, kde-format
 msgid "XBox 360"
-msgstr ""
+msgstr "XBox 360"
 
 #: device.cpp:32
 #, kde-format
 msgid "XBox One"
-msgstr ""
+msgstr "XBox One"
 
 #: device.cpp:33
 #, kde-format
 msgid "Sony Dualshock 3"
-msgstr ""
+msgstr "Sony Dualshock 3"
 
 #: device.cpp:34
 #, kde-format
 msgid "Sony Dualshock 4"
-msgstr ""
+msgstr "Sony Dualshock 4"
 
 #: device.cpp:35
 #, kde-format
 msgid "Switch Pro"
-msgstr ""
+msgstr "Switch Pro"
 
 #: device.cpp:36
 #, kde-format
 msgid "Virtual"
-msgstr ""
+msgstr "Virtual"
 
 #: device.cpp:37
 #, kde-format
 msgid "Sony Dualsense"
-msgstr ""
+msgstr "Sony Dualsense"
 
 #: device.cpp:38
 #, kde-format
 msgid "Amazon Luna"
-msgstr ""
+msgstr "Amazon Luna"
 
 #: device.cpp:39
 #, kde-format
 msgid "Google Stadia"
-msgstr ""
+msgstr "Google Stadia"
 
 #: device.cpp:40
 #, kde-format
 msgid "NVidia Shield"
-msgstr ""
+msgstr "NVidia Shield"
 
 #: device.cpp:41
 #, kde-format
 msgid "Switch Left Joycon"
-msgstr ""
+msgstr "Switch Joycon vänster"
 
 #: device.cpp:42
 #, kde-format
 msgid "Switch Right Joycon"
-msgstr ""
+msgstr "Switch Joycon höger"
 
 #: device.cpp:43
 #, kde-format
 msgid "Switch Paired Joycon"
-msgstr ""
+msgstr "Switch Joycon parad"
 
 #: device.cpp:48
-#, fuzzy, kde-format
-#| msgctxt "@label Gamepad buttons"
-#| msgid "Buttons:"
+#, kde-format
 msgctxt "The game controller button with a letter A on it"
 msgid "A button"
-msgstr "Knappar:"
+msgstr "A-knapp"
 
 #: device.cpp:49
-#, fuzzy, kde-format
-#| msgctxt "@label Gamepad buttons"
-#| msgid "Buttons:"
+#, kde-format
 msgctxt "The game controller button with a letter B on it"
 msgid "B button"
-msgstr "Knappar:"
+msgstr "B-knapp"
 
 #: device.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@label Gamepad buttons"
-#| msgid "Buttons:"
+#, kde-format
 msgctxt "The game controller button with a letter X on it"
 msgid "X button"
-msgstr "Knappar:"
+msgstr "X-knapp"
 
 #: device.cpp:51
-#, fuzzy, kde-format
-#| msgctxt "@label Gamepad buttons"
-#| msgid "Buttons:"
+#, kde-format
 msgctxt "The game controller button with a letter Y on it"
 msgid "Y button"
-msgstr "Knappar:"
+msgstr "Y-knapp"
 
 #: device.cpp:52
-#, fuzzy, kde-format
-#| msgctxt "@label Gamepad buttons"
-#| msgid "Buttons:"
+#, kde-format
 msgctxt "The back game controller button"
 msgid "Back button"
-msgstr "Knappar:"
+msgstr "Bakåtknapp"
 
 #: device.cpp:53
 #, kde-format
 msgctxt "The guide game controller button"
 msgid "Guide button"
-msgstr ""
+msgstr "Styrknapp"
 
 #: device.cpp:54
 #, kde-format
 msgctxt "The start game controller button"
 msgid "Start button"
-msgstr ""
+msgstr "Startknapp"
 
 #: device.cpp:55
 #, kde-format
 msgctxt "The button under the game controller's left analog stick"
 msgid "Left analog stick"
-msgstr ""
+msgstr "Vänster analog spak"
 
 #: device.cpp:56
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label Visual representation of the axis position for the right axis"
-#| msgid "Right position:"
+#, kde-format
 msgctxt "The button under the game controller's right analog stick"
 msgid "Right analog stick"
-msgstr "Höger position:"
+msgstr "Höger analog spak"
 
 #: device.cpp:57
 #, kde-format
 msgctxt "The game controller's left shoulder button"
 msgid "Left shoulder button"
-msgstr ""
+msgstr "Vänster axelknapp"
 
 #: device.cpp:58
 #, kde-format
 msgctxt "The game controller's right shoulder button"
 msgid "Right shoulder button"
-msgstr ""
+msgstr "Höger axelknapp"
 
 #: device.cpp:59
 #, kde-format
 msgctxt "The game controller's d-pad Up button"
 msgid "D-pad up button"
-msgstr ""
+msgstr "D-platta uppåtknapp"
 
 #: device.cpp:60
 #, kde-format
 msgctxt "The game controller's d-pad down button"
 msgid "D-pad down button"
-msgstr ""
+msgstr "D-platta neråtknapp"
 
 #: device.cpp:61
 #, kde-format
 msgctxt "The game controller's d-pad left button"
 msgid "D-pad left button"
-msgstr ""
+msgstr "D-platta vänsterknapp"
 
 #: device.cpp:62
 #, kde-format
 msgctxt "The game controller's d-pad right button"
 msgid "D-pad right button"
-msgstr ""
+msgstr "D-platta högerknapp"
 
 #: device.cpp:64
 #, kde-format
@@ -260,66 +246,65 @@ msgctxt ""
 "The game controller's miscellaneous button (Share on Xbox, mic on "
 "Playstation/Luna, capture on Switch)"
 msgid "Miscellaneous button"
-msgstr ""
+msgstr "Diverseknapp"
 
 #: device.cpp:65
 #, kde-format
 msgctxt "The game controller's 1st paddle button"
 msgid "Paddle button 1"
-msgstr ""
+msgstr "Paddelknapp 1"
 
 #: device.cpp:66
 #, kde-format
 msgctxt "The game controller's 2nd paddle button"
 msgid "Paddle button 2"
-msgstr ""
+msgstr "Paddelknapp 2"
 
 #: device.cpp:67
 #, kde-format
 msgctxt "The game controller's 3rd paddle button"
 msgid "Paddle button 3"
-msgstr ""
+msgstr "Paddelknapp 3"
 
 #: device.cpp:68
 #, kde-format
 msgctxt "The game controller's 4th paddle button"
 msgid "Paddle button 4"
-msgstr ""
+msgstr "Paddelknapp 4"
 
 #: device.cpp:69
 #, kde-format
 msgctxt "The button under the game controller's touchpad"
 msgid "Touchpad button"
-msgstr ""
+msgstr "Tryckplatteknapp"
 
 #: device.cpp:73
 #, kde-format
 msgctxt "Unknown controller connection type"
 msgid "Unknown"
-msgstr ""
+msgstr "Okänd"
 
 #: device.cpp:74
 #, kde-format
 msgctxt "USB connected controller"
 msgid "USB"
-msgstr ""
+msgstr "USB"
 
 #: device.cpp:75
 #, kde-format
 msgctxt "Bluetooth connected controller"
 msgid "Bluetooth"
-msgstr ""
+msgstr "Blåtand"
 
 #: device.cpp:83
 #, kde-format
 msgid "Invalid button value"
-msgstr ""
+msgstr "Ogiltigt knappvärde"
 
 #: device.cpp:246
-#, fuzzy, kde-format
-#| msgid "No game controllers found"
+#, kde-format
 msgid "Not a controller"
-msgstr "Ingen spelkontroll hittades"
+msgstr "Inte en spelkontroll"
 
 #: devicemodel.cpp:68
 #, kde-format
@@ -344,25 +329,23 @@ msgid "Device:"
 msgstr "Enhet:"
 
 #: ui/main.qml:84
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Device:"
+#, kde-format
 msgctxt ""
 "@label game controller device type (wheel, joystick, game controller, etc.)"
 msgid "Device type:"
-msgstr "Enhet:"
+msgstr "Enhetstyp:"
 
 #: ui/main.qml:100
 #, kde-format
 msgctxt "@label game controller controller type (which brand, etc.)"
 msgid "Controller type:"
-msgstr ""
+msgstr "Kontrolltyp:"
 
 #: ui/main.qml:116
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Connection type:"
-msgstr ""
+msgstr "Anslutningstyp:"
 
 #: ui/main.qml:137
 #, kde-format

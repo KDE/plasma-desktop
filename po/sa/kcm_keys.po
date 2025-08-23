@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-14 00:44+0000\n"
+"POT-Creation-Date: 2025-08-23 00:44+0000\n"
 "PO-Revision-Date: 2024-12-25 19:37+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -224,143 +224,143 @@ msgctxt "@action:button Export shortcut scheme"
 msgid "Export"
 msgstr "निर्यात"
 
-#: ui/main.qml:216
+#: ui/main.qml:217
 #, kde-format
 msgctxt ""
 "@option:check accessible export shortcuts %1 is application/group name"
 msgid "Export %1"
 msgstr "निर्यातं %1"
 
-#: ui/main.qml:225
+#: ui/main.qml:226
 #, kde-format
 msgctxt "@action:button accessible %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "%1 कृते आदेशं सम्पादयन्तु"
 
-#: ui/main.qml:241
+#: ui/main.qml:242
 #, kde-format
 msgctxt "@info:tooltip %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "%1 कृते आदेशं सम्पादयन्तु"
 
-#: ui/main.qml:249
+#: ui/main.qml:250
 #, kde-format
 msgctxt "@action:button accessible %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "%1 कृते सर्वाणि शॉर्टकट् अपसारयन्तु"
 
-#: ui/main.qml:259
+#: ui/main.qml:260
 #, kde-format
 msgctxt "@info:tooltip %1 is the text of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "%1 कृते सर्वाणि शॉर्टकट् अपसारयन्तु"
 
-#: ui/main.qml:266
+#: ui/main.qml:267
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Undo deletion"
 msgstr "लोपं पूर्ववत कुर्वन्तु"
 
-#: ui/main.qml:271
+#: ui/main.qml:272
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo deletion"
 msgstr "लोपं पूर्ववत कुर्वन्तु"
 
-#: ui/main.qml:325
+#: ui/main.qml:326
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "अन्वेषणपदैः सह कोऽपि द्रव्यः न मेलति स्म"
 
-#: ui/main.qml:358
+#: ui/main.qml:360
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "अत्र तस्य शॉर्टकट् द्रष्टुं सूचीतः एकं द्रव्यं चिनोतु"
 
-#: ui/main.qml:370
+#: ui/main.qml:372
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "निर्यात शॉर्टकट योजना"
 
-#: ui/main.qml:370 ui/main.qml:512
+#: ui/main.qml:372 ui/main.qml:514
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "आयात शॉर्टकट योजना"
 
-#: ui/main.qml:372
+#: ui/main.qml:374
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "शॉर्टकट योजना (*.kksrc) 1.1."
 
-#: ui/main.qml:399
+#: ui/main.qml:401
 #, kde-format
 msgid "Edit Command"
 msgstr "सम्पादन आदेश"
 
-#: ui/main.qml:399
+#: ui/main.qml:401
 #, kde-format
 msgid "Add Command"
 msgstr "Add Command इति"
 
-#: ui/main.qml:421
+#: ui/main.qml:423
 #, kde-format
 msgid "Save"
 msgstr "रक्ष्"
 
-#: ui/main.qml:421
+#: ui/main.qml:423
 #, kde-format
 msgid "Add"
 msgstr "संयोजयति"
 
-#: ui/main.qml:451
+#: ui/main.qml:453
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "आदेशं प्रविशतु अथवा स्क्रिप्ट् सञ्चिकां चिनोतु:"
 
-#: ui/main.qml:460
+#: ui/main.qml:462
 #, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
 msgstr "आदेश:"
 
-#: ui/main.qml:466
+#: ui/main.qml:468
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "आदेश"
 
-#: ui/main.qml:473
+#: ui/main.qml:475
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "चिनोतु…"
 
-#: ui/main.qml:474
+#: ui/main.qml:476
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "स्क्रिप्ट् सञ्चिकां चिनोतु"
 
-#: ui/main.qml:482
+#: ui/main.qml:484
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
 msgstr "नामः:"
 
-#: ui/main.qml:483
+#: ui/main.qml:485
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
 msgstr "अत्र नाम प्रविशतु"
 
-#: ui/main.qml:495
+#: ui/main.qml:497
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Script File इति चिनोतु"
 
-#: ui/main.qml:497
+#: ui/main.qml:499
 #, kde-format
 msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
@@ -368,22 +368,22 @@ msgctxt ""
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "स्क्रिप्ट् सञ्चिकाः (.sh, .bash, .zsh इत्यादयः) (*.*sh)"
 
-#: ui/main.qml:520
+#: ui/main.qml:522
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "आयातार्थं योजनां चिनोतु :"
 
-#: ui/main.qml:539
+#: ui/main.qml:541
 #, kde-format
 msgid "Custom Scheme"
 msgstr "कस्टम योजना"
 
-#: ui/main.qml:547
+#: ui/main.qml:549
 #, kde-format
 msgid "Select File…"
 msgstr "सञ्चिकां चिनोतु..."
 
-#: ui/main.qml:547
+#: ui/main.qml:549
 #, kde-format
 msgid "Import"
 msgstr "आयात"

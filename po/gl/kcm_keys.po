@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-14 00:44+0000\n"
+"POT-Creation-Date: 2025-08-23 00:44+0000\n"
 "PO-Revision-Date: 2025-05-16 11:25+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -218,143 +218,143 @@ msgctxt "@action:button Export shortcut scheme"
 msgid "Export"
 msgstr "Exportar"
 
-#: ui/main.qml:216
+#: ui/main.qml:217
 #, kde-format
 msgctxt ""
 "@option:check accessible export shortcuts %1 is application/group name"
 msgid "Export %1"
 msgstr "Exportar %1"
 
-#: ui/main.qml:225
+#: ui/main.qml:226
 #, kde-format
 msgctxt "@action:button accessible %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "Editar a orde de %1"
 
-#: ui/main.qml:241
+#: ui/main.qml:242
 #, kde-format
 msgctxt "@info:tooltip %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "Editar a orde de %1"
 
-#: ui/main.qml:249
+#: ui/main.qml:250
 #, kde-format
 msgctxt "@action:button accessible %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Retirar todos os atallos de %1"
 
-#: ui/main.qml:259
+#: ui/main.qml:260
 #, kde-format
 msgctxt "@info:tooltip %1 is the text of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Retirar todos os atallos de %1"
 
-#: ui/main.qml:266
+#: ui/main.qml:267
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Undo deletion"
 msgstr "Desfacer a eliminación"
 
-#: ui/main.qml:271
+#: ui/main.qml:272
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo deletion"
 msgstr "Desfacer a eliminación"
 
-#: ui/main.qml:325
+#: ui/main.qml:326
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "Ningún elemento coincide cos termos de busca."
 
-#: ui/main.qml:358
+#: ui/main.qml:360
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Seleccione un elemento da lista para ver aquí os seus atallos."
 
-#: ui/main.qml:370
+#: ui/main.qml:372
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "Exportar o esquema de atallos"
 
-#: ui/main.qml:370 ui/main.qml:512
+#: ui/main.qml:372 ui/main.qml:514
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Importar o esquema de atallos"
 
-#: ui/main.qml:372
+#: ui/main.qml:374
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Esquema de atallos (*.kksrc)"
 
-#: ui/main.qml:399
+#: ui/main.qml:401
 #, kde-format
 msgid "Edit Command"
 msgstr "Editar a orde"
 
-#: ui/main.qml:399
+#: ui/main.qml:401
 #, kde-format
 msgid "Add Command"
 msgstr "Engadir unha orde"
 
-#: ui/main.qml:421
+#: ui/main.qml:423
 #, kde-format
 msgid "Save"
 msgstr "Gardar"
 
-#: ui/main.qml:421
+#: ui/main.qml:423
 #, kde-format
 msgid "Add"
 msgstr "Engadir"
 
-#: ui/main.qml:451
+#: ui/main.qml:453
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "Introduza unha orde ou escolla un ficheiro de guión:"
 
-#: ui/main.qml:460
+#: ui/main.qml:462
 #, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
 msgstr "Orde:"
 
-#: ui/main.qml:466
+#: ui/main.qml:468
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "Orde"
 
-#: ui/main.qml:473
+#: ui/main.qml:475
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Escoller…"
 
-#: ui/main.qml:474
+#: ui/main.qml:476
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Escolla un ficheiro de guión"
 
-#: ui/main.qml:482
+#: ui/main.qml:484
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
 msgstr "Nome:"
 
-#: ui/main.qml:483
+#: ui/main.qml:485
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
 msgstr "Insira aquí o nome."
 
-#: ui/main.qml:495
+#: ui/main.qml:497
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Escolla un ficheiro de guión"
 
-#: ui/main.qml:497
+#: ui/main.qml:499
 #, kde-format
 msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
@@ -362,22 +362,22 @@ msgctxt ""
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "Ficheiros de guión (.sh, .bash, .zsh, etc.) (*.*sh)"
 
-#: ui/main.qml:520
+#: ui/main.qml:522
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Seleccione o esquema a importar:"
 
-#: ui/main.qml:539
+#: ui/main.qml:541
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Esquema personalizado"
 
-#: ui/main.qml:547
+#: ui/main.qml:549
 #, kde-format
 msgid "Select File…"
 msgstr "Seleccionar un ficheiro…"
 
-#: ui/main.qml:547
+#: ui/main.qml:549
 #, kde-format
 msgid "Import"
 msgstr "Importar"

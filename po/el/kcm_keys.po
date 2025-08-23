@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-14 00:44+0000\n"
+"POT-Creation-Date: 2025-08-23 00:44+0000\n"
 "PO-Revision-Date: 2024-09-13 18:18+0300\n"
 "Last-Translator: Antonis G. <capoiosct@gmail.com>\n"
 "Language-Team: el <kde-i18n-el@kde.org>\n"
@@ -223,144 +223,144 @@ msgctxt "@action:button Export shortcut scheme"
 msgid "Export"
 msgstr "Εξαγωγή"
 
-#: ui/main.qml:216
+#: ui/main.qml:217
 #, kde-format
 msgctxt ""
 "@option:check accessible export shortcuts %1 is application/group name"
 msgid "Export %1"
 msgstr "Εξαγωγή %1"
 
-#: ui/main.qml:225
+#: ui/main.qml:226
 #, kde-format
 msgctxt "@action:button accessible %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "Επεξεργασία εντολής για %1"
 
-#: ui/main.qml:241
+#: ui/main.qml:242
 #, kde-format
 msgctxt "@info:tooltip %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "Επεξεργασία εντολής για %1"
 
-#: ui/main.qml:249
+#: ui/main.qml:250
 #, kde-format
 msgctxt "@action:button accessible %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Κατάργηση όλων των συντομεύσεων για %1"
 
-#: ui/main.qml:259
+#: ui/main.qml:260
 #, kde-format
 msgctxt "@info:tooltip %1 is the text of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Κατάργηση όλων των συντομεύσεων για %1"
 
-#: ui/main.qml:266
+#: ui/main.qml:267
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Undo deletion"
 msgstr "Αναίρεση διαγραφής"
 
-#: ui/main.qml:271
+#: ui/main.qml:272
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo deletion"
 msgstr "Αναίρεση διαγραφής"
 
-#: ui/main.qml:325
+#: ui/main.qml:326
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "Δεν ταιριάζουν αντικείμενα με τους όρους αναζήτησης"
 
-#: ui/main.qml:358
+#: ui/main.qml:360
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr ""
 "Επιλέξτε ένα αντικείμενο από τη λίστα για να δείτε τις συντομεύσεις του εδώ"
 
-#: ui/main.qml:370
+#: ui/main.qml:372
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "Εξαγωγή σχεδίου συντόμευσης"
 
-#: ui/main.qml:370 ui/main.qml:512
+#: ui/main.qml:372 ui/main.qml:514
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Εισαγωγή σχεδίου συντόμευσης"
 
-#: ui/main.qml:372
+#: ui/main.qml:374
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Συντόμευση σχεδίου (*.kksrc)"
 
-#: ui/main.qml:399
+#: ui/main.qml:401
 #, kde-format
 msgid "Edit Command"
 msgstr "Επεξεργασία εντολής"
 
-#: ui/main.qml:399
+#: ui/main.qml:401
 #, kde-format
 msgid "Add Command"
 msgstr "Προσθήκη εντολής"
 
-#: ui/main.qml:421
+#: ui/main.qml:423
 #, kde-format
 msgid "Save"
 msgstr "Αποθήκευση"
 
-#: ui/main.qml:421
+#: ui/main.qml:423
 #, kde-format
 msgid "Add"
 msgstr "Προσθήκη"
 
-#: ui/main.qml:451
+#: ui/main.qml:453
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "Εισάγετε μια εντολή ή επιλέξτε ένα αρχείο δέσμης ενεργειών:"
 
-#: ui/main.qml:460
+#: ui/main.qml:462
 #, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
 msgstr ""
 
-#: ui/main.qml:466
+#: ui/main.qml:468
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "Εντολή"
 
-#: ui/main.qml:473
+#: ui/main.qml:475
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Επιλογή…"
 
-#: ui/main.qml:474
+#: ui/main.qml:476
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Επιλογή αρχείου δέσμης ενεργειών"
 
-#: ui/main.qml:482
+#: ui/main.qml:484
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
 msgstr ""
 
-#: ui/main.qml:483
+#: ui/main.qml:485
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
 msgstr ""
 
-#: ui/main.qml:495
+#: ui/main.qml:497
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Επιλογή αρχείου σεναρίου"
 
-#: ui/main.qml:497
+#: ui/main.qml:499
 #, kde-format
 msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
@@ -368,22 +368,22 @@ msgctxt ""
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "Αρχεία σεναρίου (.sh, .bash, .zsh, etc.) (*.*sh)"
 
-#: ui/main.qml:520
+#: ui/main.qml:522
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Επιλογή του σχεδίου για εισαγωγή:"
 
-#: ui/main.qml:539
+#: ui/main.qml:541
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Προσαρμοσμένο σχέδιο"
 
-#: ui/main.qml:547
+#: ui/main.qml:549
 #, kde-format
 msgid "Select File…"
 msgstr "Επιλογή αρχείου…"
 
-#: ui/main.qml:547
+#: ui/main.qml:549
 #, kde-format
 msgid "Import"
 msgstr "Εισαγωγή"
