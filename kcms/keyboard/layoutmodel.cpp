@@ -23,7 +23,7 @@ LayoutModel::LayoutModel() noexcept
     }
 }
 
-int LayoutModel::rowCount(const QModelIndex &parent) const
+int LayoutModel::rowCount(const QModelIndex & /*parent*/) const
 {
     return m_data.count();
 }
