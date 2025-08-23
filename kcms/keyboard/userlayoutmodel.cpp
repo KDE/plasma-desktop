@@ -20,7 +20,7 @@ UserLayoutModel::UserLayoutModel(KeyboardConfig *config, QObject *parent) noexce
 {
 }
 
-int UserLayoutModel::rowCount(const QModelIndex &parent) const
+int UserLayoutModel::rowCount(const QModelIndex & /*parent*/) const
 {
     return m_config->layouts().count();
 }

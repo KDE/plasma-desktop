@@ -15,7 +15,7 @@ KeyboardModel::KeyboardModel() noexcept
 {
 }
 
-int KeyboardModel::rowCount(const QModelIndex &parent) const
+int KeyboardModel::rowCount(const QModelIndex & /*parent*/) const
 {
     return Rules::self().modelInfos.count();
 }
