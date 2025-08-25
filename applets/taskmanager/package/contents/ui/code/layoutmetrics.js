@@ -118,8 +118,12 @@ function preferredMaxWidth() {
 }
 
 function preferredMinHeight() {
-    // TODO FIXME UPSTREAM: Port to proper font metrics for descenders once we have access to them.
-    return Math.max(tasks.width * taskRepeater.count * squeezeFactor, Kirigami.Units.iconSizes.sizeForLabels + 4)
+    if (tasks.vertical) {
+        return Math.max(tasks.width * taskRepeater.count * squeezeFactor, Kirigami.Units.iconSizes.sizeForLabels + 4)
+    } else {
+        // TODO FIXME UPSTREAM: Port to proper font metrics for descenders once we have access to them.
+        return Kirigami.Units.iconSizes.sizeForLabels + 4;
+    }
 }
 
 function preferredMaxHeight() {
