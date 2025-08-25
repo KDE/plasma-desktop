@@ -15,7 +15,7 @@ DropArea {
     implicitWidth: Kirigami.Units.iconSizes.medium + Kirigami.Units.smallSpacing * 2
     implicitHeight: contentHeight
 
-    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.horizontalCenter: parent?.horizontalCenter
 
     property int contentHeight: model ? (model.count * implicitWidth) + ((model.count - 1) * flow.spacing) : 0
 
@@ -23,7 +23,7 @@ DropArea {
 
     readonly property SideBarItem bottomSideBarItem: repeater.itemAt(repeater.count - 1)
 
-    onActiveFocusChanged: repeater.itemAt(0).forceActiveFocus(Qt.TabFocusReason)
+    onActiveFocusChanged: (repeater.itemAt(0) ?? KeyNavigation.down).forceActiveFocus(Qt.TabFocusReason)
 
     onPositionChanged: event => {
         if (flow.animating) {

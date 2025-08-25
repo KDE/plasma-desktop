@@ -44,6 +44,28 @@ PlasmaComponents3.ScrollView {
         contentItem.returnToBounds()
     }
 
+    function focusRunnerColumn(column, focusTopElement = true) : void {
+        if (runnerColumns.visibleChildren.length <= column + 1) { // visibleChildren includes repeater
+            return
+        }
+        const targetList = runnerColumns.visibleChildren[column]
+        targetList.currentIndex = focusTopElement ? 0 : (targetList.count - 1)
+        targetList.forceActiveFocus(Qt.TabFocusReason)
+        root.ensureVisible(targetList)
+    }
+
+    function focusRootList(focusTopElement = true) : void {
+        rootList.showChildDialogs = false;
+        rootList.currentIndex = focusTopElement ? 0 : (rootList.model.count - 1)
+        rootList.forceActiveFocus(Qt.TabFocusReason)
+        rootList.showChildDialogs = true;
+    }
+
+    function focusSideBar() : void {
+        sideBar.forceActiveFocus(Qt.TabFocusReason)
+        root.ensureVisible(sideBar)
+    }
+
 
     function reset() {
         kicker.hideOnWindowDeactivate = true;
@@ -84,7 +106,8 @@ PlasmaComponents3.ScrollView {
 
             activeFocusOnTab: true
             onActiveFocusChanged: if (activeFocus) {
-                (onTopPanel ? favoriteSystemActions : favoriteApps).forceActiveFocus(Qt.TabFocusReason)
+                let target = (onTopPanel && favoriteSystemActions.model.count) ? favoriteSystemActions : favoriteApps
+                target.forceActiveFocus(Qt.TabFocusReason)
             }
             KeyNavigation.right: rootList
             Keys.onPressed: event => {
@@ -94,23 +117,18 @@ PlasmaComponents3.ScrollView {
                     (event.key === Qt.Key_Left && mainRow.LayoutMirroring.enabled)
 
                 if (backArrowKey & runnerColumns.visibleChildren.length > 1) {
-                    const targetList = runnerColumns.visibleChildren[runnerColumns.visibleChildren.length-2]
-                    targetList.currentIndex = 0
-                    targetList.forceActiveFocus(Qt.BacktabFocusReason)
-                    root.ensureVisible(targetList)
+                    root.focusRunnerColumn(runnerColumns.visibleChildren.length - 2, true)
                     event.accepted = true
                 }
                 if (forwardArrowKey) {
-                    if (runnerColumns.visible) {
-                        runnerColumns.visibleChildren[0].currentIndex = 0
-                        runnerColumns.visibleChildren[0].forceActiveFocus(Qt.TabFocusReason)
-                        root.ensureVisible(runnerColumns.visibleChildren[0])
+                    if (runnerColumns.visibleChildren.length > 1) {
+                        root.focusRunnerColumn(0, true)
+                    } else if (rootList.visible) {
+                        root.focusRootList(true)
                     } else {
-                        rootList.showChildDialogs = false;
-                        rootList.currentIndex = 0
-                        rootList.forceActiveFocus(Qt.TabFocusReason)
-                        rootList.showChildDialogs = true;
+                        searchField.forceActiveFocus(Qt.TabFocusReason)
                     }
+                    event.accepted = true
                 }
             }
 
@@ -189,10 +207,16 @@ PlasmaComponents3.ScrollView {
 
             LayoutMirroring.enabled: mainRow.LayoutMirroring.enabled
 
+            onKeyNavigationAtListEnd: {
+                searchField.focus = true;
+            }
+
             onNavigateLeftRequested: {
+                if (!sideBar.visible) {
+                    return
+                }
                 currentIndex = -1
-                sideBar.forceActiveFocus(Qt.TabFocusReason)
-                root.ensureVisible(sideBar)
+                root.focusSideBar()
             }
 
             states: State {
@@ -235,8 +259,20 @@ PlasmaComponents3.ScrollView {
 
                     LayoutMirroring.enabled: runnerColumns.LayoutMirroring.enabled
 
-                    onKeyNavigationAtListEnd: {
-                        searchField.focus = true;
+                    function navigateToAdjacentColumn(forward = true) {
+                        let currentColumnIndex = runnerColumns.visibleChildren.indexOf(runnerMatches)
+                        let targetColumnIndex = currentColumnIndex + (forward ? 1 : -1)
+                        if (currentColumnIndex < 0 || runnerColumns.visibleChildren.length <= 2) {
+                            return
+                        }
+                        currentIndex = -1
+                        if (targetColumnIndex >= 0 && targetColumnIndex < (runnerColumns.visibleChildren.length - 1)) {
+                            root.focusRunnerColumn(targetColumnIndex)
+                        } else if (sideBar.visible) {
+                            root.focusSideBar()
+                        } else {
+                            root.focusRunnerColumn(forward ? 0 : runnerColumns.visibleChildren.length - 2)
+                        }
                     }
 
                     onContainsMouseChanged: {
@@ -251,59 +287,8 @@ PlasmaComponents3.ScrollView {
                         }
                     }
 
-                    onNavigateLeftRequested: {
-                        let target = null;
-                        const targets = [];
-
-                        for (let i = index - 1; i >= 0; --i) {
-                            targets.push(i);
-                        }
-
-                        for (const i of targets) {
-                            if (runnerModel.modelForRow(i).count) {
-                                target = runnerColumnsRepeater.itemAt(i);
-                                break;
-                            }
-                        }
-
-                        if (target) {
-                            currentIndex = -1;
-                            target.currentIndex = 0;
-                            target.focus = true;
-                            root.ensureVisible(target)
-                        } else {
-                            currentIndex = -1;
-                            sideBar.forceActiveFocus(Qt.TabFocusReason)
-                            root.ensureVisible(sideBar)
-                        }
-                    }
-
-                    onNavigateRightRequested: {
-                        let target = null;
-                        const targets = [];
-
-                        for (let i = index + 1; i < runnerModel.count; ++i) {
-                            targets.push(i);
-                        }
-
-                        for (const i of targets) {
-                            if (runnerModel.modelForRow(i).count) {
-                                target = runnerColumnsRepeater.itemAt(i);
-                                break;
-                            }
-                        }
-
-                        if (target) {
-                            currentIndex = -1;
-                            target.currentIndex = 0;
-                            target.focus = true;
-                            root.ensureVisible(target)
-                        } else {
-                            currentIndex = -1;
-                            sideBar.forceActiveFocus(Qt.TabFocusReason)
-                            root.ensureVisible(sideBar)
-                        }
-                    }
+                    onNavigateLeftRequested: navigateToAdjacentColumn(false)
+                    onNavigateRightRequested: navigateToAdjacentColumn(true)
                 }
             }
         }
@@ -389,48 +374,30 @@ PlasmaComponents3.ScrollView {
                 (event.key === Qt.Key_Right && mainRow.LayoutMirroring.enabled)
             let forwardArrowKey = (event.key === Qt.Key_Right && !mainRow.LayoutMirroring.enabled) ||
                 (event.key === Qt.Key_Left && mainRow.LayoutMirroring.enabled)
-            if (event.key === Qt.Key_Up) {
+            if (event.key === Qt.Key_Up || event.key === Qt.Key_Down) {
                 if (rootList.visible) {
-                    rootList.showChildDialogs = false;
-                    rootList.currentIndex = rootList.model.count - 1;
-                    rootList.forceActiveFocus();
-                    rootList.showChildDialogs = true;
-                }
-
-                if (runnerColumns.visible) {
-                    const targetList =  runnerColumns.visibleChildren[0];
-                    targetList.currentIndex = targetList.count-1;
-                    targetList.currentItem.forceActiveFocus();
-                    root.ensureVisible(targetList)
-                }
-                event.accepted = true;
-            } else if (event.key === Qt.Key_Down) {
-                if (rootList.visible) {
-                    rootList.showChildDialogs = false;
-                    rootList.currentIndex = Math.min(rootList.currentIndex + 1, rootList.count);
-                    rootList.forceActiveFocus();
-                    rootList.showChildDialogs = true;
-                }
-
-                if (runnerColumns.visible) {
-                    const targetList =  runnerColumns.visibleChildren[0];
-                    targetList.currentIndex = Math.min(targetList.currentIndex + 1, targetList.count);
-                    targetList.currentItem.forceActiveFocus();
-                    root.ensureVisible(targetList)
+                    root.focusRootList(event.key === Qt.Key_Down);
+                } else if (runnerColumns.visible) {
+                    root.focusRunnerColumn(0, event.key === Qt.Key_Down)
                 }
                 event.accepted = true;
             } else if (backArrowKey) {
-                if (runnerColumns.visible) {
+                if (!sideBar.visible && !runnerColumns.visible) {
+                    return;
+                }
+                if (runnerColumns.visibleChildren[0].length > 1) {
                     runnerColumns.visibleChildren[0].currentIndex = -1;
                 }
-                sideBar.forceActiveFocus(Qt.TabFocusReason)
-                root.ensureVisible(sideBar)
-                event.accepted = true;
+                if (sideBar.visible) {
+                    root.focusSideBar(true)
+                    event.accepted = true;
+                } else {
+                    root.focusRunnerColumn(runnerColumns.visibleChildren.length - 2, true)
+                }
+
             } else if (forwardArrowKey && runnerColumns.visibleChildren.length > 2) {
                 runnerColumns.visibleChildren[0].currentIndex = -1;
-                runnerColumns.visibleChildren[1].currentIndex = 0;
-                runnerColumns.visibleChildren[1].forceActiveFocus(Qt.TabFocusReason);
-                root.ensureVisible(runnerColumns.visibleChildren[1])
+                root.focusRunnerColumn(1, true)
                 event.accepted = true;
             } else if (event.key === Qt.Key_Enter || event.key === Qt.Key_Return) {
                 if (runnerColumns.visible) {

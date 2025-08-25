@@ -88,7 +88,7 @@ FocusScope {
                     focus: true
 
                     iconsEnabled: true
-                    keyNavigationWraps: (index != 0)
+                    keyNavigationWraps: !searchFieldPlaceholder.visible
                     LayoutMirroring.enabled: runnerResultsList.LayoutMirroring.enabled
 
                     resetOnExitDelay: 0
