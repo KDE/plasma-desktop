@@ -95,6 +95,11 @@ KCM.SimpleKCM {
         height: childrenRect.height
 
         ColumnLayout {
+            id: column
+
+            readonly property int headingTopSpacing: Kirigami.Units.smallSpacing
+            readonly property int dataLeftSpacing: Kirigami.Units.smallSpacing
+
             anchors.horizontalCenter: parent.horizontalCenter
             spacing: Kirigami.Units.largeSpacing
 
@@ -133,25 +138,25 @@ KCM.SimpleKCM {
             }
 
             Kirigami.Heading {
-                Layout.topMargin: Kirigami.Units.smallSpacing
+                Layout.topMargin: column.headingTopSpacing
                 text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@title:group", "Website")
                 textFormat: Text.PlainText
             }
             Kirigami.UrlButton {
-                Layout.leftMargin: Kirigami.Units.smallSpacing
+                Layout.leftMargin: column.dataLeftSpacing
                 url: page.metaData.website
                 visible: url.length > 0
             }
 
             Kirigami.Heading {
-                Layout.topMargin: Kirigami.Units.smallSpacing
+                Layout.topMargin: column.headingTopSpacing
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Copyright")
                 textFormat: Text.PlainText
             }
 
             ColumnLayout {
                 spacing: Kirigami.Units.smallSpacing
-                Layout.leftMargin: Kirigami.Units.smallSpacing
+                Layout.leftMargin: column.dataLeftSpacing
 
                 QQC2.Label {
                     text: page.metaData.copyrightText
@@ -180,7 +185,7 @@ KCM.SimpleKCM {
 
             Kirigami.Heading {
                 Layout.fillWidth: true
-                Layout.topMargin: Kirigami.Units.smallSpacing
+                Layout.topMargin: column.headingTopSpacing
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Authors")
                 textFormat: Text.PlainText
                 visible: page.metaData.authors.length > 0
@@ -192,7 +197,7 @@ KCM.SimpleKCM {
 
             Kirigami.Heading {
                 height: visible ? implicitHeight : 0
-                Layout.topMargin: Kirigami.Units.smallSpacing
+                Layout.topMargin: column.headingTopSpacing
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Credits")
                 textFormat: Text.PlainText
                 visible: repCredits.count > 0
@@ -205,7 +210,7 @@ KCM.SimpleKCM {
 
             Kirigami.Heading {
                 height: visible ? implicitHeight : 0
-                Layout.topMargin: Kirigami.Units.smallSpacing
+                Layout.topMargin: column.headingTopSpacing
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Translators")
                 textFormat: Text.PlainText
                 visible: repTranslators.count > 0
