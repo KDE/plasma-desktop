@@ -138,6 +138,7 @@ KCM.SimpleKCM {
                 textFormat: Text.PlainText
             }
             Kirigami.UrlButton {
+                Layout.leftMargin: Kirigami.Units.smallSpacing
                 url: page.metaData.website
                 visible: url.length > 0
             }
