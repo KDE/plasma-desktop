@@ -191,6 +191,7 @@ KCM.SimpleKCM {
                 visible: page.metaData.authors.length > 0
             }
             Repeater {
+                Layout.leftMargin: column.dataLeftSpacing
                 model: page.metaData.authors
                 delegate: personDelegate
             }
@@ -204,6 +205,7 @@ KCM.SimpleKCM {
             }
             Repeater {
                 id: repCredits
+                Layout.leftMargin: column.dataLeftSpacing
                 model: page.metaData.otherContributors
                 delegate: personDelegate
             }
@@ -217,6 +219,7 @@ KCM.SimpleKCM {
             }
             Repeater {
                 id: repTranslators
+                Layout.leftMargin: column.dataLeftSpacing
                 model: page.metaData.translators
                 delegate: personDelegate
             }
