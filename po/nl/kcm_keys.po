@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-23 00:44+0000\n"
+"POT-Creation-Date: 2025-08-27 00:45+0000\n"
 "PO-Revision-Date: 2025-05-09 12:23+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -46,30 +46,30 @@ msgctxt "@item:intable"
 msgid "Plasma Workspace"
 msgstr "Plasma-werkruimte"
 
-#: globalaccelmodel.cpp:235
+#: globalaccelmodel.cpp:245
 #, kde-format
 msgctxt ""
 "%1 is the name of the component, %2 is the action for which saving failed"
 msgid "Error while saving shortcut %1: %2"
 msgstr "Fout bij opslaan van sneltoets %1: %2"
 
-#: globalaccelmodel.cpp:347
+#: globalaccelmodel.cpp:362
 #, kde-format
 msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
 msgstr "Fout tijdens toevoegen van %1, er lijken geen acties te zijn."
 
-#: globalaccelmodel.cpp:398
+#: globalaccelmodel.cpp:413
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Fout bij communicatie met de globale sneltoetsservice"
 
-#: kcm_keys.cpp:58
+#: kcm_keys.cpp:56
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Communiceren met de globale daemon voor sneltoetsen is mislukt"
 
-#: kcm_keys.cpp:379
+#: kcm_keys.cpp:372
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -80,7 +80,7 @@ msgstr ""
 "Sneltoets <shortcut>%1</shortcut> is al toegekend aan de algemene actie %2 "
 "<interface>%3</interface>.<nl/><nl/>Wilt u het opnieuw toekennen aan %4?"
 
-#: kcm_keys.cpp:385
+#: kcm_keys.cpp:378
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -92,13 +92,13 @@ msgstr ""
 "interface> van <application>%3</application>.<nl/><nl/>Het opnieuw toekennen "
 "aan actie <interface>%4</interface> van <application>%5</application>?"
 
-#: kcm_keys.cpp:394
+#: kcm_keys.cpp:387
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "Sneltoetsconflict oplossen"
 
-#: kcm_keys.cpp:404
+#: kcm_keys.cpp:397
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"

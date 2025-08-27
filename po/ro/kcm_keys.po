@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-23 00:44+0000\n"
+"POT-Creation-Date: 2025-08-27 00:45+0000\n"
 "PO-Revision-Date: 2024-01-07 18:23+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -46,30 +46,30 @@ msgctxt "@item:intable"
 msgid "Plasma Workspace"
 msgstr ""
 
-#: globalaccelmodel.cpp:235
+#: globalaccelmodel.cpp:245
 #, kde-format
 msgctxt ""
 "%1 is the name of the component, %2 is the action for which saving failed"
 msgid "Error while saving shortcut %1: %2"
 msgstr "Eroare la salvarea scurtăturii %1: %2"
 
-#: globalaccelmodel.cpp:347
+#: globalaccelmodel.cpp:362
 #, kde-format
 msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
 msgstr "Eroare la adăugarea %1, se pare că nu are acțiuni."
 
-#: globalaccelmodel.cpp:398
+#: globalaccelmodel.cpp:413
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Eroare la comunicarea cu serviciul de scurtături globale"
 
-#: kcm_keys.cpp:58
+#: kcm_keys.cpp:56
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Comunicarea cu demonul de scurtături globale a eșuat"
 
-#: kcm_keys.cpp:379
+#: kcm_keys.cpp:372
 #, fuzzy, kde-kuit-format
 #| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 #| msgid ""
@@ -84,7 +84,7 @@ msgstr ""
 "Scurtătura %1 e atribuită deja acțiunii comune %2 „%3”.\n"
 "Doriți să o reatribuiți?"
 
-#: kcm_keys.cpp:385
+#: kcm_keys.cpp:378
 #, fuzzy, kde-kuit-format
 #| msgctxt "%2 is the name of a category inside the 'Common Actions' section"
 #| msgid ""
@@ -99,13 +99,13 @@ msgstr ""
 "Scurtătura %1 e atribuită deja acțiunii comune %2 „%3”.\n"
 "Doriți să o reatribuiți?"
 
-#: kcm_keys.cpp:394
+#: kcm_keys.cpp:387
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr ""
 
-#: kcm_keys.cpp:404
+#: kcm_keys.cpp:397
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"

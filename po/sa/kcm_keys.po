@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-23 00:44+0000\n"
+"POT-Creation-Date: 2025-08-27 00:45+0000\n"
 "PO-Revision-Date: 2024-12-25 19:37+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -47,30 +47,30 @@ msgctxt "@item:intable"
 msgid "Plasma Workspace"
 msgstr ""
 
-#: globalaccelmodel.cpp:235
+#: globalaccelmodel.cpp:245
 #, kde-format
 msgctxt ""
 "%1 is the name of the component, %2 is the action for which saving failed"
 msgid "Error while saving shortcut %1: %2"
 msgstr "शॉर्टकट् %1 रक्षन् त्रुटिः: %2"
 
-#: globalaccelmodel.cpp:347
+#: globalaccelmodel.cpp:362
 #, kde-format
 msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
 msgstr "%1 योजयन् त्रुटिः, तस्य क्रियाः नास्ति इति भाति ।"
 
-#: globalaccelmodel.cpp:398
+#: globalaccelmodel.cpp:413
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr "वैश्विकशॉर्टकटसेवाया सह संवादं कुर्वन् त्रुटिः"
 
-#: kcm_keys.cpp:58
+#: kcm_keys.cpp:56
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "वैश्विकशॉर्टकट् डेमन् इत्यनेन सह संवादं कर्तुं असफलम्"
 
-#: kcm_keys.cpp:379
+#: kcm_keys.cpp:372
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -81,7 +81,7 @@ msgstr ""
 "शॉर्टकट् <shortcut>%1</shortcut> इत्येतत् पूर्वमेव सामान्ये %2 क्रियायां <interface>%3</"
 "interface> इत्यत्र नियुक्तम् अस्ति।<nl/><nl/>पुनः %4 इत्यत्र नियुक्तं कुर्वन्तु?"
 
-#: kcm_keys.cpp:385
+#: kcm_keys.cpp:378
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -94,13 +94,13 @@ msgstr ""
 "<interface> इत्यत्र पुनः नियुक्तं कुर्वन्तु <application>%5</application> इत्यस्य %4</"
 "interface>?"
 
-#: kcm_keys.cpp:394
+#: kcm_keys.cpp:387
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "शॉर्टकट संघर्षस्य समाधानं कुर्वन्तु"
 
-#: kcm_keys.cpp:404
+#: kcm_keys.cpp:397
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"

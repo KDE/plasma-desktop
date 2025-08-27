@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-23 00:44+0000\n"
+"POT-Creation-Date: 2025-08-27 00:45+0000\n"
 "PO-Revision-Date: 2025-03-30 09:46+0200\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -46,14 +46,14 @@ msgctxt "@item:intable"
 msgid "Plasma Workspace"
 msgstr ""
 
-#: globalaccelmodel.cpp:235
+#: globalaccelmodel.cpp:245
 #, kde-format
 msgctxt ""
 "%1 is the name of the component, %2 is the action for which saving failed"
 msgid "Error while saving shortcut %1: %2"
 msgstr "Feil ved lagring av hurtigtasten %1: %2"
 
-#: globalaccelmodel.cpp:347
+#: globalaccelmodel.cpp:362
 #, kde-format
 msgctxt "%1 is the name of an application"
 msgid "Error while adding %1, it seems it has no actions."
@@ -61,17 +61,17 @@ msgstr ""
 "Feil ved forsøk på å legge til %1. Det ser ut til at programmet ikke har "
 "noen handlinger."
 
-#: globalaccelmodel.cpp:398
+#: globalaccelmodel.cpp:413
 #, kde-format
 msgid "Error while communicating with the global shortcuts service"
 msgstr "Feil ved kommunikasjon med tjenesten for globale hurtigtaster"
 
-#: kcm_keys.cpp:58
+#: kcm_keys.cpp:56
 #, kde-format
 msgid "Failed to communicate with global shortcuts daemon"
 msgstr "Klarte ikke kommunisere med tjenesten for globale hurtigtaster"
 
-#: kcm_keys.cpp:379
+#: kcm_keys.cpp:372
 #, kde-kuit-format
 msgctxt ""
 "@info %2 is the name of a category inside the 'Common Actions' section"
@@ -83,7 +83,7 @@ msgstr ""
 "handlinga <interface>%3</interface>.<nl/> <nl/> Vil du tildele den på nytt "
 "til %4?"
 
-#: kcm_keys.cpp:385
+#: kcm_keys.cpp:378
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -96,13 +96,13 @@ msgstr ""
 "den på nytt til <application>%5</application>-handlinga <interface>%4</"
 "interface>?"
 
-#: kcm_keys.cpp:394
+#: kcm_keys.cpp:387
 #, kde-format
 msgctxt "@title:window"
 msgid "Resolve Shortcut Conflict"
 msgstr "Løs hurtigtastkonflikt"
 
-#: kcm_keys.cpp:404
+#: kcm_keys.cpp:397
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"

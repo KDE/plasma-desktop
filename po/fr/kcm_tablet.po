@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-20 00:45+0000\n"
-"PO-Revision-Date: 2025-07-09 13:49+0200\n"
+"PO-Revision-Date: 2025-08-03 09:02+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.07.90\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -312,11 +312,7 @@ msgid "Pen Calibration"
 msgstr "Calibration du stylo"
 
 #: ui/Calibration.qml:98
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
-#| "revert to default calibration in %1 seconds.</b>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
@@ -324,7 +320,8 @@ msgid ""
 "b>"
 msgstr ""
 "Tapotez à nouveau sur les cibles pour confirmer la nouvelle calibration.<nl/"
-"><nl/><b>Cela basculera vers la calibration par défaut dans %1 secondes.</b>"
+"><nl/><b>Si aucune action n'est effectuée durant %1 secondes, la calibration "
+"par défaut sera appliquée.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -641,16 +638,14 @@ msgid "Tablet Tester"
 msgstr "Testeur de tablettes"
 
 #: ui/Tester.qml:48
-#, fuzzy, kde-format
-#| msgid "Stylus press X=%1 Y=%2"
+#, kde-format
 msgctxt ""
 "A tablet stylus was pressed onto the surface X=[x position] Y=[y position]"
 msgid "Stylus press X=%1 Y=%2"
 msgstr "Appui du stylet X = %1 Y = %2"
 
 #: ui/Tester.qml:58
-#, fuzzy, kde-format
-#| msgid "Stylus release X=%1 Y=%2"
+#, kde-format
 msgctxt ""
 "A tablet stylus has 'released' or was lifted from the surface X=[x position] "
 "Y=[y position]"
@@ -658,8 +653,7 @@ msgid "Stylus release X=%1 Y=%2"
 msgstr "Relâchement du stylet X = %1 Y = %2"
 
 #: ui/Tester.qml:68
-#, fuzzy, kde-format
-#| msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
+#, kde-format
 msgctxt ""
 "A tablet stylus has moved over the surface X=[x position] Y=[y position] "
 "P=[pressure] TX=[tilt x] TY=[tilt y]"
@@ -667,35 +661,27 @@ msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 msgstr "Déplacement du stylet X = %1 Y = %2 P = %3 % TX = %4 TY = %5"
 
 #: ui/Tester.qml:75
-#, fuzzy, kde-format
-#| msgid "Pad button press B=%1"
+#, kde-format
 msgctxt "A tablet pad's button has been pressed B=[the button number]"
 msgid "Pad button press B=%1"
 msgstr "Appui de la touche « B » sur le bouton du pavé = %1"
 
 #: ui/Tester.qml:77
-#, fuzzy, kde-format
-#| msgid "Pad button release B=%1"
+#, kde-format
 msgctxt "A tablet pad's button has been released B=[the button number]"
 msgid "Pad button release B=%1"
 msgstr "Relâchement de la touche « B » sur le bouton du pavé = %1"
 
 #: ui/Tester.qml:83
-#, fuzzy, kde-format
-#| msgid "Pad dial moved V120=%1"
+#, kde-format
 msgctxt ""
 "A tablet pad's dial has moved, V120 here refers to 'Value 120' which is a "
 "technical term that should be kept as is"
 msgid "Pad dial moved V120=%1"
-msgstr "Pavé de numérotation déplacé en V120 = %1"
+msgstr "Pavé de numérotation déplacé vers V120 = %1"
 
 #: ui/Tester.qml:219
-#, fuzzy, kde-format
-#| msgid ""
-#| "## Legend:\n"
-#| "# X, Y - event coordinate\n"
-#| "# P - pressure\n"
-#| "# TX,TY - tilt\n"
+#, kde-format
 msgctxt "The tablet tester legend which is shown on start-up"
 msgid ""
 "## Legend:\n"
@@ -704,14 +690,12 @@ msgid ""
 "# TX,TY - tilt\n"
 msgstr ""
 "## Légende :\n"
-"# X, Y - Coordonnée de l'évènement\n"
+"# X, Y - Coordonnées de l'évènement\n"
 "# P - Pression\n"
 "# TX, TY - Inclinaison\n"
 
 #: ui/Tester.qml:225
-#, fuzzy, kde-format
-#| msgctxt "Clear the event log"
-#| msgid "Clear"
+#, kde-format
 msgctxt "Clear the tablet tester event log"
 msgid "Clear"
 msgstr "Effacer"

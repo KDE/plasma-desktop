@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-12 00:45+0000\n"
-"PO-Revision-Date: 2025-06-10 14:51+0200\n"
+"PO-Revision-Date: 2025-08-13 09:13+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.07.90\n"
 "X-Text-Markup: kde4\n"
 
 #: backend.cpp:284
@@ -825,14 +825,10 @@ msgid "Activate %1"
 msgstr "Activer %1"
 
 #: package/contents/ui/ToolTipInstance.qml:188
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Part of a sentence: 'Middle-clicking any task closes "
-#| "window or group'"
-#| msgid "Closes window or group"
+#, kde-format
 msgctxt "@info:tooltip Close this window"
 msgid "Close window"
-msgstr "Ferme la fenêtre ou le groupe"
+msgstr "Fermer la fenêtre"
 
 #: package/contents/ui/ToolTipInstance.qml:438
 #, kde-format

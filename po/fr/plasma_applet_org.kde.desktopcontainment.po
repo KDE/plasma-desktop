@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-22 00:44+0000\n"
-"PO-Revision-Date: 2025-07-02 08:38+0200\n"
+"PO-Revision-Date: 2025-08-03 09:04+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.07.90\n"
 "X-Text-Markup: kde4\n"
 
 #: package/contents/config/config.qml:16
@@ -134,39 +134,30 @@ msgid "Arrangement:"
 msgstr "Disposition :"
 
 #: package/contents/ui/ConfigIcons.qml:127
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Columns"
+#, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "In Columns"
-msgstr "Colonnes"
+msgstr "En colonne"
 
 #: package/contents/ui/ConfigIcons.qml:128
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Rows"
+#, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "In Rows"
-msgstr "Lignes"
+msgstr "En ligne"
 
 #: package/contents/ui/ConfigIcons.qml:137
-#, fuzzy, kde-format
-#| msgid "Sorting:"
+#, kde-format
 msgid "Sort Alignment:"
-msgstr "Tri :"
+msgstr "Alignement du tri :"
 
 #: package/contents/ui/ConfigIcons.qml:140
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Left to Right"
+#, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Left-to-Right"
 msgstr "De gauche à droite"
 
 #: package/contents/ui/ConfigIcons.qml:141
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Right to Left"
+#, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Right-to-Left"
 msgstr "De droite à gauche"
@@ -177,10 +168,9 @@ msgid "Lock in place"
 msgstr "Verrouiller sur place"
 
 #: package/contents/ui/ConfigIcons.qml:177
-#, fuzzy, kde-format
-#| msgid "Sort by"
+#, kde-format
 msgid "Sort by:"
-msgstr "Trier par"
+msgstr "Trier par :"
 
 #: package/contents/ui/ConfigIcons.qml:185
 #, kde-format
@@ -631,38 +621,30 @@ msgid "Arrange"
 msgstr "Disposer"
 
 #: plugins/folder/viewpropertiesmenu.cpp:70
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu arrangement of icons"
-#| msgid "Columns"
+#, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Columns"
-msgstr "Colonnes"
+msgstr "En colonne"
 
 #: plugins/folder/viewpropertiesmenu.cpp:74
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu arrangement of icons"
-#| msgid "Rows"
+#, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Rows"
-msgstr "Lignes"
+msgstr "En ligne"
 
 #: plugins/folder/viewpropertiesmenu.cpp:79
 #, kde-format
 msgid "Sort Alignment"
-msgstr ""
+msgstr "Alignement du tri"
 
 #: plugins/folder/viewpropertiesmenu.cpp:83
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Left to Right"
+#, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Left-to-Right"
 msgstr "De gauche à droite"
 
 #: plugins/folder/viewpropertiesmenu.cpp:84
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Right to Left"
+#, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Right-to-Left"
 msgstr "De droite à gauche"
