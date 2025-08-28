@@ -28,7 +28,6 @@ SimpleKCM {
 
     leftPadding: 0
     rightPadding: 0
-    topPadding: 0
     bottomPadding: 0
 
     // So it doesn't scroll while dragging
@@ -80,6 +79,14 @@ SimpleKCM {
                 cancelCalibration();
             }
         }
+    }
+
+    header: Kirigami.InlineMessage {
+        position: Kirigami.InlineMessage.Position.Header
+        type: Kirigami.MessageType.Warning
+        text: i18ndc("kcm_tablet", "@info", "This device is managed by a user-space driver that you installed. Use that driver to configure the tablet instead of using the settings here, unless specifically instructed otherwise.")
+        visible: root.device?.isVirtual ?? false
+        showCloseButton: false
     }
 
     ColumnLayout {

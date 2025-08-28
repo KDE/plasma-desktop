@@ -48,6 +48,7 @@ class InputDevice : public QObject
     Q_PROPERTY(quint32 tabletPadRingCount READ tabletPadRingCount CONSTANT)
     Q_PROPERTY(QList<unsigned int> numModes READ numModes CONSTANT)
     Q_PROPERTY(QList<unsigned int> currentModes READ currentModes NOTIFY currentModesChanged)
+    Q_PROPERTY(bool isVirtual READ isVirtual CONSTANT)
 
 public:
     InputDevice(const QString &dbusName, QObject *parent);
@@ -234,6 +235,11 @@ public:
     }
 
     void setRelative(bool relative);
+
+    bool isVirtual() const
+    {
+        return m_isVirtual.value();
+    }
 
 Q_SIGNALS:
     void needsSaveChanged();
@@ -438,6 +444,7 @@ private:
     Prop<QString> m_deviceGroup = Prop<QString>(this, "deviceGroupId");
     Prop<bool> m_tabletPad = Prop<bool>(this, "tabletPad");
     Prop<bool> m_tabletTool = Prop<bool>(this, "tabletTool");
+    Prop<bool> m_isVirtual = Prop<bool>(this, "isVirtual");
 
     std::unique_ptr<OrgKdeKWinInputDeviceInterface> m_iface;
 };
