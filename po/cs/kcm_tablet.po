@@ -36,14 +36,11 @@ msgctxt "@action:button Two keybinds for a dial, up & down"
 msgid "%1 && %2"
 msgstr ""
 
-# žádné parametry funkce v inspektoru funkcí
 #: inputsequence.cpp:216
-#, fuzzy, kde-format
-#| msgctxt "@action:button There is no keybinding"
-#| msgid "None"
+#, kde-format
 msgctxt "@action:button There is no keybindings"
 msgid "None"
-msgstr "Nic"
+msgstr ""
 
 #: inputsequence.cpp:221
 #, kde-format
@@ -155,12 +152,10 @@ msgid "pen button %1"
 msgstr ""
 
 #: ui/ActionDialog.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@title Select the action for the tablet button"
-#| msgid "Select Button Action"
+#, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial Action"
-msgstr "Vybrat činnost tlačítka"
+msgstr ""
 
 #: ui/ActionDialog.qml:28
 #, kde-format
@@ -460,10 +455,9 @@ msgid "Pad"
 msgstr ""
 
 #: ui/PadTab.qml:33
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad dial %1:"
-msgstr "Tlačítko tabletu %1:"
+msgstr ""
 
 #: ui/PadTab.qml:35
 #, kde-format
@@ -651,27 +645,24 @@ msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 msgstr ""
 
 #: ui/Tester.qml:75
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt "A tablet pad's button has been pressed B=[the button number]"
 msgid "Pad button press B=%1"
-msgstr "Tlačítko tabletu %1:"
+msgstr ""
 
 #: ui/Tester.qml:77
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt "A tablet pad's button has been released B=[the button number]"
 msgid "Pad button release B=%1"
-msgstr "Tlačítko tabletu %1:"
+msgstr ""
 
 #: ui/Tester.qml:83
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt ""
 "A tablet pad's dial has moved, V120 here refers to 'Value 120' which is a "
 "technical term that should be kept as is"
 msgid "Pad dial moved V120=%1"
-msgstr "Tlačítko tabletu %1:"
+msgstr ""
 
 #: ui/Tester.qml:219
 #, kde-format
@@ -684,9 +675,7 @@ msgid ""
 msgstr ""
 
 #: ui/Tester.qml:225
-#, fuzzy, kde-format
-#| msgctxt "Clear the event log"
-#| msgid "Clear"
+#, kde-format
 msgctxt "Clear the tablet tester event log"
 msgid "Clear"
-msgstr "Vyprázdnit"
+msgstr ""
