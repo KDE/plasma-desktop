@@ -2,12 +2,15 @@
     "KPlugin": {
         "Authors": [
             {
-                "Name": "Fushan Wen"
+                "Name": "Fushan Wen",
+                "Name[x-test]": "xxFushan Wenxx"
             }
         ],
         "Description": "Find global shortcuts and perform their associated actions",
+        "Description[x-test]": "xxFind global shortcuts and perform their associated actionsxx",
         "Icon": "configure-shortcuts",
         "License": "GPL-2.0+",
-        "Name": "Global Shortcuts"
+        "Name": "Global Shortcuts",
+        "Name[x-test]": "xxGlobal Shortcutsxx"
     }
 }
