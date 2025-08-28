@@ -45,6 +45,7 @@ class InputDevice : public QObject
     Q_PROPERTY(bool supportsPressureRange READ supportsPressureRange CONSTANT)
     Q_PROPERTY(bool relative READ isRelative WRITE setRelative NOTIFY relativeChanged)
     Q_PROPERTY(quint32 tabletPadDialCount READ tabletPadDialCount CONSTANT)
+    Q_PROPERTY(bool isVirtual READ isVirtual CONSTANT)
 
 public:
     InputDevice(const QString &dbusName, QObject *parent);
@@ -216,6 +217,11 @@ public:
     }
 
     void setRelative(bool relative);
+
+    bool isVirtual() const
+    {
+        return m_isVirtual.value();
+    }
 
 Q_SIGNALS:
     void needsSaveChanged();
@@ -416,6 +422,7 @@ private:
     Prop<QString> m_deviceGroup = Prop<QString>(this, "deviceGroupId");
     Prop<bool> m_tabletPad = Prop<bool>(this, "tabletPad");
     Prop<bool> m_tabletTool = Prop<bool>(this, "tabletTool");
+    Prop<bool> m_isVirtual = Prop<bool>(this, "isVirtual");
 
     std::unique_ptr<OrgKdeKWinInputDeviceInterface> m_iface;
 };
