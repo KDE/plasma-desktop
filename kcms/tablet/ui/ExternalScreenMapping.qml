@@ -97,7 +97,7 @@ Item {
     }
 
     enabled: outputAreaView.device
-    implicitHeight: outputItem.height + tabletItem.height + Kirigami.Units.largeSpacing + (keepAspectRatio.visible ? keepAspectRatio.implicitHeight + keepAspectRatio.anchors.topMargin : 0)
+    implicitHeight: outputItem.height + tabletItem.height + Kirigami.Units.largeSpacing + (keepAspectRatio.visible ? keepAspectRatio.implicitHeight + keepAspectRatio.anchors.topMargin : 0) + Kirigami.Units.gridUnit * 3
 
     QQC2.CheckBox {
         id: keepAspectRatio
