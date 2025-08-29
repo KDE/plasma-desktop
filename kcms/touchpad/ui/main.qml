@@ -446,7 +446,7 @@ KCM.SimpleKCM {
         QQC2.CheckBox {
             id: tapToClick
             Kirigami.FormData.label: i18ndc("kcm_touchpad", "@label for checkbox, tap-to-click", "Tapping:")
-            text: i18ndc("kcm_touchpad", "@option:check", "Tap-to-click")
+            text: i18ndc("kcm_touchpad", "@option:check", "Tap to click")
             enabled: root.device?.tapFingerCount > 0
             checked: enabled && (root.device?.tapToClick ?? false)
 
@@ -496,12 +496,16 @@ KCM.SimpleKCM {
 
         ColumnLayout {
             id: multiTap
-            Kirigami.FormData.label: i18nd("kcm_touchpad", "Two-finger tap:")
+            Kirigami.FormData.label: (root.device?.tapFingerCount > 2
+                ? i18nd("kcm_touchpad", "Tap to right-click:")
+                : i18nd("kcm_touchpad", "Two-finger tap:") // right-click is only supported by one of the options
+            )
             Kirigami.FormData.buddyFor: multiTapRightClick
             visible: root.device?.supportsLmrTapButtonMap
             enabled: root.device?.supportsLmrTapButtonMap && tapToClick.checked
 
-            spacing: Kirigami.Units.smallSpacing
+            // spacing only on top of radio buttons, not between radio and help text label
+            spacing: 0
 
             QQC2.ButtonGroup {
                 buttons: [multiTapRightClick, multiTapMiddleClick]
@@ -516,19 +520,50 @@ KCM.SimpleKCM {
             QQC2.RadioButton {
                 id: multiTapRightClick
                 text: (root.device?.tapFingerCount > 2
-                    ? i18nd("kcm_touchpad", "Right-click (three-finger tap to middle-click)")
+                    ? i18ndc("kcm_touchpad", "@option:radio touchpad tap to right-click", "Tap with two fingers")
                     : i18nd("kcm_touchpad", "Right-click")
                 )
+                Accessible.description: i18nd("kcm_touchpad", "Right-click by tapping with two fingers")
                 checked: multiTap.enabled && !(root.device?.lmrTapButtonMap ?? false)
+            }
+
+            QQC2.Label {
+                Layout.fillWidth: true
+                visible: root.device?.tapFingerCount > 2
+                leftPadding: Application.layoutDirection === Qt.LeftToRight ?
+                    multiTapRightClick.contentItem.leftPadding : multiTapRightClick.padding
+                rightPadding: Application.layoutDirection === Qt.RightToLeft ?
+                    multiTapRightClick.contentItem.rightPadding : multiTapRightClick.padding
+                text: i18ndc("kcm_touchpad", "@info shown below radio button", "Middle-click by tapping with three fingers.")
+                textFormat: Text.PlainText
+                elide: Text.ElideRight
+                font: Kirigami.Theme.smallFont
             }
 
             QQC2.RadioButton {
                 id: multiTapMiddleClick
                 text: (root.device?.tapFingerCount > 2
-                    ? i18nd("kcm_touchpad", "Middle-click (three-finger tap to right-click)")
+                    ? i18ndc("kcm_touchpad", "@option:radio touchpad tap to right-click", "Tap with three fingers")
                     : i18nd("kcm_touchpad", "Middle-click")
                 )
+                Accessible.description: root.device?.tapFingerCount > 2
+                    ? i18nd("kcm_touchpad", "Right-click by tapping with three fingers")
+                    : i18nd("kcm_touchpad", "Middle-click")
+                topPadding: Kirigami.Units.smallSpacing // in lieu of multiTap.spacing
                 checked: multiTap.enabled && (root.device?.lmrTapButtonMap ?? false)
+            }
+
+            QQC2.Label {
+                Layout.fillWidth: true
+                visible: root.device?.tapFingerCount > 2
+                leftPadding: Application.layoutDirection === Qt.LeftToRight ?
+                    multiTapMiddleClick.contentItem.leftPadding : multiTapMiddleClick.padding
+                rightPadding: Application.layoutDirection === Qt.RightToLeft ?
+                    multiTapMiddleClick.contentItem.rightPadding : multiTapMiddleClick.padding
+                text: i18ndc("kcm_touchpad", "@info shown below radio button", "Middle-click by tapping with two fingers.")
+                textFormat: Text.PlainText
+                elide: Text.ElideRight
+                font: Kirigami.Theme.smallFont
             }
         }
 
@@ -538,7 +573,7 @@ KCM.SimpleKCM {
 
         ColumnLayout {
             id: rightClickMethod
-            Kirigami.FormData.label: i18ndc("kcm_touchpad", "@label for radiobutton group, configure right-click with touch-pad integrated button (pressing into the touchpad)", "Integrated right-click:")
+            Kirigami.FormData.label: i18ndc("kcm_touchpad", "@label for radiobutton group, configure right-click with touch-pad integrated button (pressing into the touchpad)", "Press to right-click:")
             Kirigami.FormData.buddyFor: rightClickMethodAreas
             enabled: (root.device?.supportsClickMethodAreas && root.device?.supportsClickMethodClickfinger) ?? false
             visible: (root.device?.supportsClickMethodAreas || root.device?.supportsClickMethodClickfinger) ?? false
@@ -607,7 +642,7 @@ KCM.SimpleKCM {
 
         ColumnLayout {
             id: middleClickMethod
-            Kirigami.FormData.label: i18ndc("kcm_touchpad", "@label for radiobutton group, configure middle-click with touch-pad integrated button (pressing into the touchpad)", "Integrated middle-click:")
+            Kirigami.FormData.label: i18ndc("kcm_touchpad", "@label for radiobutton group, configure middle-click with touch-pad integrated button (pressing into the touchpad)", "Press to middle-click:")
             Kirigami.FormData.buddyFor: middleSoftwareEmulation
             enabled: root.device?.supportsMiddleEmulation ?? false
 
