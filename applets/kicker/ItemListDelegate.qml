@@ -37,7 +37,7 @@ Item {
     required property string decoration
     required property string display
 
-    property alias pressed: mouseArea.pressed
+    property alias pressed: tapHandler.pressed
     property alias hovered: mouseArea.containsMouse
 
     readonly property bool sorted: item.ListView.view.model.sorted ?? false
@@ -82,59 +82,45 @@ Item {
         }
     }
 
+    DragHandler {
+        target: null
+        onActiveChanged: {
+            if (active && url) {
+                // we need dragHelper and can't use attached Drag; submenus are destroyed too soon and Plasma crashes
+                dragHelper.startDrag(kicker, url, decoration)
+            }
+        }
+    }
+
+    TapHandler {
+        id: tapHandler
+        onTapped: {
+            if (!item.hasChildren) {
+                item.ListView.view.model.trigger(index, "", null);
+                kicker.expanded = false;
+            }
+        }
+    }
+
     MouseArea {
         id: mouseArea
 
-        anchors {
-            left: parent.left
-            right: parent.right
-            verticalCenter: parent.verticalCenter
-        }
-
-        height: parent.height
+        anchors.fill: parent
 
         property int mouseCol
-        property bool mousePressed: false
-        property int pressX: -1
-        property int pressY: -1
 
         hoverEnabled: true
-        acceptedButtons: Qt.LeftButton | Qt.RightButton
+        acceptedButtons: Qt.RightButton
 
         onPressed: mouse => {
-            if (mouse.buttons & Qt.RightButton) {
-                if (item.hasActionList) {
-                    item.openActionMenu(mouseArea, mouse.x, mouse.y);
-                }
-            } else {
-                mousePressed = true;
-                pressX = mouse.x;
-                pressY = mouse.y;
+            if (item.hasActionList) {
+                item.openActionMenu(mouseArea, mouse.x, mouse.y);
             }
-        }
-
-        onReleased: mouse => {
-            if (mousePressed && !item.hasChildren) {
-                item.ListView.view.model.trigger(item.index, "", null);
-                kicker.expanded = false;
-            }
-
-            mousePressed = false;
-            pressX = -1;
-            pressY = -1;
         }
 
         onPositionChanged: mouse => {
             if (!item.ListView.view.mouseMoved) {
                 item.ListView.view.mouseMoved = true;
-                return;
-            }
-            if (pressX !== -1 && item.url && dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y)) {
-                dragHelper.startDrag(kicker, item.url, item.decoration);
-                mousePressed = false;
-                pressX = -1;
-                pressY = -1;
-
                 return;
             }
 
@@ -164,9 +150,6 @@ Item {
 
         onContainsMouseChanged: {
             if (!containsMouse) {
-                mousePressed = false;
-                pressX = -1;
-                pressY = -1;
                 updateCurrentItemTimer.stop();
             }
         }
