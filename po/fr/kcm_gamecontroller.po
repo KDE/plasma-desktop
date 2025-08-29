@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-22 00:44+0000\n"
-"PO-Revision-Date: 2025-08-23 16:40+0200\n"
+"PO-Revision-Date: 2025-08-26 15:48+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -135,17 +135,17 @@ msgstr "NVidia Shield"
 #: device.cpp:41
 #, kde-format
 msgid "Switch Left Joycon"
-msgstr ""
+msgstr "Basculer le bouton gauche du joystick"
 
 #: device.cpp:42
 #, kde-format
 msgid "Switch Right Joycon"
-msgstr ""
+msgstr "Basculer le bouton droit du joystick"
 
 #: device.cpp:43
 #, kde-format
 msgid "Switch Paired Joycon"
-msgstr ""
+msgstr "Basculer les boutons associés du joystick"
 
 #: device.cpp:48
 #, kde-format
@@ -193,52 +193,49 @@ msgstr "Bouton de démarrage"
 #, kde-format
 msgctxt "The button under the game controller's left analog stick"
 msgid "Left analog stick"
-msgstr ""
+msgstr "Joystick analogique gauche"
 
 #: device.cpp:56
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label Visual representation of the axis position for the right axis"
-#| msgid "Right position:"
+#, kde-format
 msgctxt "The button under the game controller's right analog stick"
 msgid "Right analog stick"
-msgstr "Position à droite :"
+msgstr "Joystick analogique droite"
 
 #: device.cpp:57
 #, kde-format
 msgctxt "The game controller's left shoulder button"
 msgid "Left shoulder button"
-msgstr ""
+msgstr "Bouton gauche de gâchette"
 
 #: device.cpp:58
 #, kde-format
 msgctxt "The game controller's right shoulder button"
 msgid "Right shoulder button"
-msgstr ""
+msgstr "Bouton  droit de gâchette"
 
 #: device.cpp:59
 #, kde-format
 msgctxt "The game controller's d-pad Up button"
 msgid "D-pad up button"
-msgstr ""
+msgstr "Bouton D vers le haut du pavé"
 
 #: device.cpp:60
 #, kde-format
 msgctxt "The game controller's d-pad down button"
 msgid "D-pad down button"
-msgstr ""
+msgstr "Bouton D vers le bas du pavé"
 
 #: device.cpp:61
 #, kde-format
 msgctxt "The game controller's d-pad left button"
 msgid "D-pad left button"
-msgstr ""
+msgstr "Bouton D vers la gauche du pavé"
 
 #: device.cpp:62
 #, kde-format
 msgctxt "The game controller's d-pad right button"
 msgid "D-pad right button"
-msgstr ""
+msgstr "Bouton D vers la droite du pavé"
 
 #: device.cpp:64
 #, kde-format
@@ -252,25 +249,25 @@ msgstr "Bouton divers"
 #, kde-format
 msgctxt "The game controller's 1st paddle button"
 msgid "Paddle button 1"
-msgstr ""
+msgstr "Bouton 1 de la poignée"
 
 #: device.cpp:66
 #, kde-format
 msgctxt "The game controller's 2nd paddle button"
 msgid "Paddle button 2"
-msgstr ""
+msgstr "Bouton 2 de la poignée"
 
 #: device.cpp:67
 #, kde-format
 msgctxt "The game controller's 3rd paddle button"
 msgid "Paddle button 3"
-msgstr ""
+msgstr "Bouton 3 de la poignée"
 
 #: device.cpp:68
 #, kde-format
 msgctxt "The game controller's 4th paddle button"
 msgid "Paddle button 4"
-msgstr ""
+msgstr "Bouton 4 de la poignée"
 
 #: device.cpp:69
 #, kde-format
@@ -339,7 +336,7 @@ msgstr "Type de périphérique :"
 #, kde-format
 msgctxt "@label game controller controller type (which brand, etc.)"
 msgid "Controller type:"
-msgstr ""
+msgstr "Type de manette :"
 
 #: ui/main.qml:116
 #, kde-format
