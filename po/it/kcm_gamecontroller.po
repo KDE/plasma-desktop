@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-22 00:44+0000\n"
-"PO-Revision-Date: 2025-04-30 14:55+0200\n"
+"PO-Revision-Date: 2025-08-27 17:49+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: axesmodel.cpp:122 hatmodel.cpp:80
 #, kde-format
@@ -38,18 +38,17 @@ msgstr "Stato"
 #: device.cpp:17 device.cpp:30
 #, kde-format
 msgid "Unknown"
-msgstr ""
+msgstr "Sconosciuto"
 
 #: device.cpp:18
-#, fuzzy, kde-format
-#| msgid "No game controllers found"
+#, kde-format
 msgid "Game Controller"
-msgstr "Nessun controller di gioco trovato"
+msgstr "Controller di gioco"
 
 #: device.cpp:19
 #, kde-format
 msgid "Wheel"
-msgstr ""
+msgstr "Rotellina"
 
 #: device.cpp:20
 #, kde-format
@@ -69,7 +68,7 @@ msgstr ""
 #: device.cpp:23
 #, kde-format
 msgid "Guitar"
-msgstr ""
+msgstr "Chitarra"
 
 #: device.cpp:24
 #, kde-format
@@ -89,47 +88,47 @@ msgstr ""
 #: device.cpp:31
 #, kde-format
 msgid "XBox 360"
-msgstr ""
+msgstr "XBox 360"
 
 #: device.cpp:32
 #, kde-format
 msgid "XBox One"
-msgstr ""
+msgstr "XBox One"
 
 #: device.cpp:33
 #, kde-format
 msgid "Sony Dualshock 3"
-msgstr ""
+msgstr "Sony Dualshock 3"
 
 #: device.cpp:34
 #, kde-format
 msgid "Sony Dualshock 4"
-msgstr ""
+msgstr "Sony Dualshock 4"
 
 #: device.cpp:35
 #, kde-format
 msgid "Switch Pro"
-msgstr ""
+msgstr "Switch Pro"
 
 #: device.cpp:36
 #, kde-format
 msgid "Virtual"
-msgstr ""
+msgstr "Virtuale"
 
 #: device.cpp:37
 #, kde-format
 msgid "Sony Dualsense"
-msgstr ""
+msgstr "Sony Dualsense"
 
 #: device.cpp:38
 #, kde-format
 msgid "Amazon Luna"
-msgstr ""
+msgstr "Amazon Luna"
 
 #: device.cpp:39
 #, kde-format
 msgid "Google Stadia"
-msgstr ""
+msgstr "Google Stadia"
 
 #: device.cpp:40
 #, kde-format
@@ -152,56 +151,46 @@ msgid "Switch Paired Joycon"
 msgstr ""
 
 #: device.cpp:48
-#, fuzzy, kde-format
-#| msgctxt "@label Gamepad buttons"
-#| msgid "Buttons:"
+#, kde-format
 msgctxt "The game controller button with a letter A on it"
 msgid "A button"
-msgstr "Pulsanti:"
+msgstr "Pulsante A"
 
 #: device.cpp:49
-#, fuzzy, kde-format
-#| msgctxt "@label Gamepad buttons"
-#| msgid "Buttons:"
+#, kde-format
 msgctxt "The game controller button with a letter B on it"
 msgid "B button"
-msgstr "Pulsanti:"
+msgstr "Pulsante B"
 
 #: device.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@label Gamepad buttons"
-#| msgid "Buttons:"
+#, kde-format
 msgctxt "The game controller button with a letter X on it"
 msgid "X button"
-msgstr "Pulsanti:"
+msgstr "Pulsante X"
 
 #: device.cpp:51
-#, fuzzy, kde-format
-#| msgctxt "@label Gamepad buttons"
-#| msgid "Buttons:"
+#, kde-format
 msgctxt "The game controller button with a letter Y on it"
 msgid "Y button"
-msgstr "Pulsanti:"
+msgstr "Pulsante Y"
 
 #: device.cpp:52
-#, fuzzy, kde-format
-#| msgctxt "@label Gamepad buttons"
-#| msgid "Buttons:"
+#, kde-format
 msgctxt "The back game controller button"
 msgid "Back button"
-msgstr "Pulsanti:"
+msgstr "Pulsante indietro"
 
 #: device.cpp:53
 #, kde-format
 msgctxt "The guide game controller button"
 msgid "Guide button"
-msgstr ""
+msgstr "Pulsante della guida"
 
 #: device.cpp:54
 #, kde-format
 msgctxt "The start game controller button"
 msgid "Start button"
-msgstr ""
+msgstr "Pulsante di inizio"
 
 #: device.cpp:55
 #, kde-format
@@ -296,30 +285,29 @@ msgstr ""
 #, kde-format
 msgctxt "Unknown controller connection type"
 msgid "Unknown"
-msgstr ""
+msgstr "Sconosciuto"
 
 #: device.cpp:74
 #, kde-format
 msgctxt "USB connected controller"
 msgid "USB"
-msgstr ""
+msgstr "USB"
 
 #: device.cpp:75
 #, kde-format
 msgctxt "Bluetooth connected controller"
 msgid "Bluetooth"
-msgstr ""
+msgstr "Bluetooth"
 
 #: device.cpp:83
 #, kde-format
 msgid "Invalid button value"
-msgstr ""
+msgstr "Valore del pulsante non valido"
 
 #: device.cpp:246
-#, fuzzy, kde-format
-#| msgid "No game controllers found"
+#, kde-format
 msgid "Not a controller"
-msgstr "Nessun controller di gioco trovato"
+msgstr "Non è un controller"
 
 #: devicemodel.cpp:68
 #, kde-format
@@ -344,25 +332,23 @@ msgid "Device:"
 msgstr "Dispositivo:"
 
 #: ui/main.qml:84
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Device:"
+#, kde-format
 msgctxt ""
 "@label game controller device type (wheel, joystick, game controller, etc.)"
 msgid "Device type:"
-msgstr "Dispositivo:"
+msgstr "Tipo di dispositivo:"
 
 #: ui/main.qml:100
 #, kde-format
 msgctxt "@label game controller controller type (which brand, etc.)"
 msgid "Controller type:"
-msgstr ""
+msgstr "Tipo di controller:"
 
 #: ui/main.qml:116
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Connection type:"
-msgstr ""
+msgstr "Tipo di connessione:"
 
 #: ui/main.qml:137
 #, kde-format
