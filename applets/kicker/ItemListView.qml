@@ -45,8 +45,8 @@ FocusScope {
     property alias count: listView.count
     property alias containsMouse: listener.containsMouse
     property alias resetOnExitDelay: resetIndexTimer.interval
-    property alias mouseMoved: listView.mouseMoved
     property alias showSeparators: listView.showSeparators
+    property alias hoverEnabled: listView.hoverEnabled
 
     property KSvg.SvgItem lineMetrics: KSvg.SvgItem {
         imagePath: "widgets/line"
@@ -140,8 +140,8 @@ FocusScope {
 
                 property bool showChildDialogs: true
                 property int eligibleWidth: width
-                property bool mouseMoved: true // child dialogs can activate immediately
                 property bool showSeparators: !model.sorted // separators are mostly useless when sorted
+                property bool hoverEnabled: true
 
                 currentIndex: -1
                 focus: true
@@ -155,6 +155,7 @@ FocusScope {
                 delegate: ItemListDelegate {
                     showSeparators: listView.showSeparators
                     dialogDefaultRight: !itemList.LayoutMirroring.enabled
+                    hoverEnabled: listView.hoverEnabled
                     onFullTextWidthChanged: {
                         if (itemList && fullTextWidth > itemList.width) {
                             itemList.width = Math.min(fullTextWidth, itemList.maximumWidth);

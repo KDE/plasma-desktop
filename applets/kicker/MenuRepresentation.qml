@@ -71,7 +71,7 @@ PlasmaComponents3.ScrollView {
         kicker.hideOnWindowDeactivate = true;
 
         rootList.currentIndex = -1;
-        rootList.mouseMoved = false;
+        hoverBlock.reset();
 
         searchField.text = "";
         searchField.focus = true;
@@ -198,7 +198,7 @@ PlasmaComponents3.ScrollView {
 
             iconsEnabled: Plasmoid.configuration.showIconsRootLevel
 
-            mouseMoved: false // don't hover-activate until mouse is moved to not interfere with keyboard use
+            hoverEnabled: !hoverBlock.enabled
 
             mainSearchField: searchField
 
@@ -437,5 +437,26 @@ PlasmaComponents3.ScrollView {
         windowSystem.hidden.connect(reset);
 
         rootModel.refresh();
+    }
+
+    MouseArea {
+        id: hoverBlock  // don't hover-activate until mouse is moved to not interfere with keyboard use
+        anchors.fill: parent
+        hoverEnabled: true
+        propagateComposedEvents: true // clicking should still work if hovering is blocked
+
+        property bool mouseMoved: false
+
+        function reset() {
+            mouseMoved = false
+            enabled = true
+        }
+
+        onPositionChanged: if (!mouseMoved) {
+            mouseMoved = true
+        } else {
+            enabled = false // this immediately triggers other hover events when bound to their hoverEnabled
+        }
+
     }
 }

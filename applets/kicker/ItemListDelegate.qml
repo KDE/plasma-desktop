@@ -39,6 +39,7 @@ Item {
 
     property alias pressed: tapHandler.pressed
     property alias hovered: mouseArea.containsMouse
+    property alias hoverEnabled: mouseArea.hoverEnabled
 
     readonly property bool iconAndLabelsShouldlookSelected: pressed && !hasChildren
     readonly property real fullTextWidth: Math.ceil(icon.width + label.implicitWidth + arrow.width + row.anchors.leftMargin + row.anchors.rightMargin + row.actualSpacing)
@@ -119,11 +120,6 @@ Item {
         }
 
         onPositionChanged: mouse => {
-            if (!item.ListView.view.mouseMoved) {
-                item.ListView.view.mouseMoved = true;
-                return;
-            }
-
             // FIXME: Correct escape angle calc for right screen edge.
             if (justOpenedTimer.running || !item.hasChildren) {
                 item.ListView.view.currentIndex = item.index;
