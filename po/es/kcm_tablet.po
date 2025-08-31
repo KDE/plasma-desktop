@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-20 00:45+0000\n"
+"POT-Creation-Date: 2025-08-31 00:44+0000\n"
 "PO-Revision-Date: 2025-08-02 11:44+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -153,9 +153,11 @@ msgid "pen button %1"
 msgstr "botón %1 del lápiz"
 
 #: ui/ActionDialog.qml:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title Select the action for the tablet dial"
+#| msgid "Select Dial Action"
 msgctxt "@title Select the action for the tablet dial"
-msgid "Select Dial Action"
+msgid "Select Dial/Ring Action"
 msgstr "Seleccionar acción del disco"
 
 #: ui/ActionDialog.qml:28
@@ -164,61 +166,61 @@ msgctxt "@title Select the action for the tablet button"
 msgid "Select Button Action"
 msgstr "Seleccionar acción del botón"
 
-#: ui/ActionDialog.qml:86
+#: ui/ActionDialog.qml:87
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when rotating %1:"
 msgstr "Escoja la acción que se llevará a cabo al girar %1:"
 
-#: ui/ActionDialog.qml:87
+#: ui/ActionDialog.qml:88
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when pressing %1:"
 msgstr "Escoja la acción que se llevará a cabo al pulsar %1:"
 
-#: ui/ActionDialog.qml:101
+#: ui/ActionDialog.qml:102
 #, kde-format
 msgctxt "@option:radio Set this action to an application-defined type"
 msgid "Defer to application"
 msgstr "Diferir a la aplicación"
 
-#: ui/ActionDialog.qml:116
+#: ui/ActionDialog.qml:117
 #, kde-format
 msgctxt "@option:radio Set this action to a keyboard type"
 msgid "Send keyboard key"
 msgstr "Enviar tecla del teclado"
 
-#: ui/ActionDialog.qml:132
+#: ui/ActionDialog.qml:133
 #, kde-format
 msgctxt "@option:radio Set this action to a up/down keyboard type"
 msgid "Send keyboard keys"
 msgstr "Enviar teclas del teclado"
 
-#: ui/ActionDialog.qml:147
+#: ui/ActionDialog.qml:148
 #, kde-format
 msgctxt "@option:radio Set this action to a mouse type"
 msgid "Send mouse button click"
 msgstr "Enviar clic de botón del ratón"
 
-#: ui/ActionDialog.qml:163
+#: ui/ActionDialog.qml:164
 #, kde-format
 msgctxt "@option:radio Set this action to a pen button type"
 msgid "Send pen button"
 msgstr "Enviar botón del lápiz"
 
-#: ui/ActionDialog.qml:180
+#: ui/ActionDialog.qml:181
 #, kde-format
 msgctxt "@option:radio Set this action to a scroll wheel type type"
 msgid "Act as scroll wheel"
 msgstr "Actuar como rueda de desplazamiento"
 
-#: ui/ActionDialog.qml:198
+#: ui/ActionDialog.qml:199
 #, kde-format
 msgctxt "@option:radio Disable this action"
 msgid "Do nothing"
 msgstr "No hacer nada"
 
-#: ui/ActionDialog.qml:218
+#: ui/ActionDialog.qml:219
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -228,83 +230,88 @@ msgstr ""
 "Este botón de la tableta se reenvía a la aplicación que tiene el foco, que "
 "puede decidir cómo se maneja."
 
-#: ui/ActionDialog.qml:249
+#: ui/ActionDialog.qml:250
 #, kde-format
 msgid "Up:"
 msgstr "Arriba:"
 
-#: ui/ActionDialog.qml:263
+#: ui/ActionDialog.qml:264
 #, kde-format
 msgid "Down:"
 msgstr "Abajo:"
 
 #: ui/ActionDialog.qml:277
 #, kde-format
+msgid "Speed:"
+msgstr ""
+
+#: ui/ActionDialog.qml:292
+#, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left-click"
 msgstr "Clic izquierdo"
 
-#: ui/ActionDialog.qml:278
+#: ui/ActionDialog.qml:293
 #, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle-click"
 msgstr "Clic central"
 
-#: ui/ActionDialog.qml:279
+#: ui/ActionDialog.qml:294
 #, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right-click"
 msgstr "Clic derecho"
 
-#: ui/ActionDialog.qml:306
+#: ui/ActionDialog.qml:321
 #, kde-format
 msgctxt "@option:check The ctrl modifier on the keyboard"
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: ui/ActionDialog.qml:313
+#: ui/ActionDialog.qml:328
 #, kde-format
 msgctxt "@option:check The alt modifier on the keyboard"
 msgid "Alt"
 msgstr "Alt"
 
-#: ui/ActionDialog.qml:320
+#: ui/ActionDialog.qml:335
 #, kde-format
 msgctxt "@option:check The meta modifier on the keyboard"
 msgid "Meta"
 msgstr "Meta"
 
-#: ui/ActionDialog.qml:327
+#: ui/ActionDialog.qml:342
 #, kde-format
 msgctxt "@option:check The shift modifier on the keyboard"
 msgid "Shift"
 msgstr "Mayúsculas"
 
-#: ui/ActionDialog.qml:343
+#: ui/ActionDialog.qml:358
 #, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
 msgstr "Botón 1"
 
-#: ui/ActionDialog.qml:344
+#: ui/ActionDialog.qml:359
 #, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
 msgstr "Botón 2"
 
-#: ui/ActionDialog.qml:345
+#: ui/ActionDialog.qml:360
 #, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
 msgstr "Botón 3"
 
-#: ui/ActionDialog.qml:354
+#: ui/ActionDialog.qml:369
 #, kde-format
 msgctxt "@info"
 msgid "Act like a scroll wheel on a mouse."
 msgstr "Actuar como la rueda de desplazamiento de un ratón."
 
-#: ui/ActionDialog.qml:363
+#: ui/ActionDialog.qml:378
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
@@ -462,12 +469,30 @@ msgctxt "@title:tab"
 msgid "Pad"
 msgstr "Panel táctil"
 
-#: ui/PadTab.qml:33
+#: ui/PadTab.qml:37
+#, fuzzy, kde-format
+#| msgid "Pad dial %1:"
+msgid "Pad ring %1:"
+msgstr "Disco %1 del panel táctil:"
+
+#: ui/PadTab.qml:60
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@info Meant to be inserted into an existing sentence like 'configuring "
+#| "pad button 0'"
+#| msgid "pad dial %1"
+msgctxt ""
+"@info Meant to be inserted into an existing sentence like 'configuring pad "
+"ring/dial 0'"
+msgid "pad ring/dial %1"
+msgstr "disco %1 del panel táctil"
+
+#: ui/PadTab.qml:100
 #, kde-format
 msgid "Pad dial %1:"
 msgstr "Disco %1 del panel táctil:"
 
-#: ui/PadTab.qml:35
+#: ui/PadTab.qml:102
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
@@ -475,12 +500,12 @@ msgctxt ""
 msgid "pad dial %1"
 msgstr "disco %1 del panel táctil"
 
-#: ui/PadTab.qml:71
+#: ui/PadTab.qml:138
 #, kde-format
 msgid "Pad button %1:"
 msgstr "Botón %1 del panel táctil:"
 
-#: ui/PadTab.qml:74
+#: ui/PadTab.qml:141
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "

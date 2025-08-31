@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-20 00:45+0000\n"
-"PO-Revision-Date: 2025-07-13 17:55+0300\n"
+"POT-Creation-Date: 2025-08-31 00:44+0000\n"
+"PO-Revision-Date: 2025-08-14 18:35+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -152,9 +152,11 @@ msgid "pen button %1"
 msgstr "kynäpainike %1"
 
 #: ui/ActionDialog.qml:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title Select the action for the tablet dial"
+#| msgid "Select Dial Action"
 msgctxt "@title Select the action for the tablet dial"
-msgid "Select Dial Action"
+msgid "Select Dial/Ring Action"
 msgstr "Valitse valintatoiminto"
 
 #: ui/ActionDialog.qml:28
@@ -164,62 +166,62 @@ msgid "Select Button Action"
 msgstr "Valitse painikkeen toiminto"
 
 # Tässä täytyy hieman taiteilla, jottei %1 joutuisi asemaan, jossa sitä pitäisi taivuttaa (vrt. ”painettaessa *hiiren oikeaa painiketta*”)
-#: ui/ActionDialog.qml:86
+#: ui/ActionDialog.qml:87
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when rotating %1:"
 msgstr "Valitse, mitä tehdään, kun %1 pyörii:"
 
 # Tässä täytyy hieman taiteilla, jottei %1 joutuisi asemaan, jossa sitä pitäisi taivuttaa (vrt. ”painettaessa *hiiren oikeaa painiketta*”)
-#: ui/ActionDialog.qml:87
+#: ui/ActionDialog.qml:88
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when pressing %1:"
 msgstr "Valitse, minkä toiminnon %1 toteuttaa:"
 
-#: ui/ActionDialog.qml:101
+#: ui/ActionDialog.qml:102
 #, kde-format
 msgctxt "@option:radio Set this action to an application-defined type"
 msgid "Defer to application"
 msgstr "Välitä sovellukselle"
 
-#: ui/ActionDialog.qml:116
+#: ui/ActionDialog.qml:117
 #, kde-format
 msgctxt "@option:radio Set this action to a keyboard type"
 msgid "Send keyboard key"
 msgstr "Lähetä näppäimistön näppäin"
 
-#: ui/ActionDialog.qml:132
+#: ui/ActionDialog.qml:133
 #, kde-format
 msgctxt "@option:radio Set this action to a up/down keyboard type"
 msgid "Send keyboard keys"
 msgstr "Lähetä näppäimistön näppäimiä"
 
-#: ui/ActionDialog.qml:147
+#: ui/ActionDialog.qml:148
 #, kde-format
 msgctxt "@option:radio Set this action to a mouse type"
 msgid "Send mouse button click"
 msgstr "Lähetä hiiripainikkeen napsautus"
 
-#: ui/ActionDialog.qml:163
+#: ui/ActionDialog.qml:164
 #, kde-format
 msgctxt "@option:radio Set this action to a pen button type"
 msgid "Send pen button"
 msgstr "Lähetä kynäpainike"
 
-#: ui/ActionDialog.qml:180
+#: ui/ActionDialog.qml:181
 #, kde-format
 msgctxt "@option:radio Set this action to a scroll wheel type type"
 msgid "Act as scroll wheel"
 msgstr "Toimi vieritysrullana"
 
-#: ui/ActionDialog.qml:198
+#: ui/ActionDialog.qml:199
 #, kde-format
 msgctxt "@option:radio Disable this action"
 msgid "Do nothing"
 msgstr "Älä tee mitään"
 
-#: ui/ActionDialog.qml:218
+#: ui/ActionDialog.qml:219
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -229,83 +231,88 @@ msgstr ""
 "Piirtoalustan tämä painike välitetään kohdistettuun sovellukseen, joka voi "
 "päättää, miten se käsitellään."
 
-#: ui/ActionDialog.qml:249
+#: ui/ActionDialog.qml:250
 #, kde-format
 msgid "Up:"
 msgstr "Ylös:"
 
-#: ui/ActionDialog.qml:263
+#: ui/ActionDialog.qml:264
 #, kde-format
 msgid "Down:"
 msgstr "Alas:"
 
 #: ui/ActionDialog.qml:277
 #, kde-format
+msgid "Speed:"
+msgstr ""
+
+#: ui/ActionDialog.qml:292
+#, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left-click"
 msgstr "Vasen napsautus"
 
-#: ui/ActionDialog.qml:278
+#: ui/ActionDialog.qml:293
 #, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle-click"
 msgstr "Keskinapsautus"
 
-#: ui/ActionDialog.qml:279
+#: ui/ActionDialog.qml:294
 #, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right-click"
 msgstr "Oikea napsautus"
 
-#: ui/ActionDialog.qml:306
+#: ui/ActionDialog.qml:321
 #, kde-format
 msgctxt "@option:check The ctrl modifier on the keyboard"
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: ui/ActionDialog.qml:313
+#: ui/ActionDialog.qml:328
 #, kde-format
 msgctxt "@option:check The alt modifier on the keyboard"
 msgid "Alt"
 msgstr "Alt"
 
-#: ui/ActionDialog.qml:320
+#: ui/ActionDialog.qml:335
 #, kde-format
 msgctxt "@option:check The meta modifier on the keyboard"
 msgid "Meta"
 msgstr "Meta"
 
-#: ui/ActionDialog.qml:327
+#: ui/ActionDialog.qml:342
 #, kde-format
 msgctxt "@option:check The shift modifier on the keyboard"
 msgid "Shift"
 msgstr "Vaihto"
 
-#: ui/ActionDialog.qml:343
+#: ui/ActionDialog.qml:358
 #, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
 msgstr "Painike 1"
 
-#: ui/ActionDialog.qml:344
+#: ui/ActionDialog.qml:359
 #, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
 msgstr "Painike 2"
 
-#: ui/ActionDialog.qml:345
+#: ui/ActionDialog.qml:360
 #, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
 msgstr "Painike 3"
 
-#: ui/ActionDialog.qml:354
+#: ui/ActionDialog.qml:369
 #, kde-format
 msgctxt "@info"
 msgid "Act like a scroll wheel on a mouse."
 msgstr "Toimi kuin hiiren vieritysrulla."
 
-#: ui/ActionDialog.qml:363
+#: ui/ActionDialog.qml:378
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
@@ -466,12 +473,30 @@ msgctxt "@title:tab"
 msgid "Pad"
 msgstr "Kosketusalusta"
 
-#: ui/PadTab.qml:33
+#: ui/PadTab.qml:37
+#, fuzzy, kde-format
+#| msgid "Pad dial %1:"
+msgid "Pad ring %1:"
+msgstr "Alustan valintakiekko %1:"
+
+#: ui/PadTab.qml:60
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@info Meant to be inserted into an existing sentence like 'configuring "
+#| "pad button 0'"
+#| msgid "pad dial %1"
+msgctxt ""
+"@info Meant to be inserted into an existing sentence like 'configuring pad "
+"ring/dial 0'"
+msgid "pad ring/dial %1"
+msgstr "alustan valintakiekko %1"
+
+#: ui/PadTab.qml:100
 #, kde-format
 msgid "Pad dial %1:"
 msgstr "Alustan valintakiekko %1:"
 
-#: ui/PadTab.qml:35
+#: ui/PadTab.qml:102
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
@@ -479,12 +504,12 @@ msgctxt ""
 msgid "pad dial %1"
 msgstr "alustan valintakiekko %1"
 
-#: ui/PadTab.qml:71
+#: ui/PadTab.qml:138
 #, kde-format
 msgid "Pad button %1:"
 msgstr "Alustan painike %1:"
 
-#: ui/PadTab.qml:74
+#: ui/PadTab.qml:141
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
@@ -645,16 +670,14 @@ msgid "Tablet Tester"
 msgstr "Piirtoalustan kokeilu"
 
 #: ui/Tester.qml:48
-#, fuzzy, kde-format
-#| msgid "Stylus press X=%1 Y=%2"
+#, kde-format
 msgctxt ""
 "A tablet stylus was pressed onto the surface X=[x position] Y=[y position]"
 msgid "Stylus press X=%1 Y=%2"
 msgstr "Kynän painallus X=%1 Y=%2"
 
 #: ui/Tester.qml:58
-#, fuzzy, kde-format
-#| msgid "Stylus release X=%1 Y=%2"
+#, kde-format
 msgctxt ""
 "A tablet stylus has 'released' or was lifted from the surface X=[x position] "
 "Y=[y position]"
@@ -662,8 +685,7 @@ msgid "Stylus release X=%1 Y=%2"
 msgstr "Kynän vapautus X=%1 Y=%2"
 
 #: ui/Tester.qml:68
-#, fuzzy, kde-format
-#| msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
+#, kde-format
 msgctxt ""
 "A tablet stylus has moved over the surface X=[x position] Y=[y position] "
 "P=[pressure] TX=[tilt x] TY=[tilt y]"
@@ -671,35 +693,27 @@ msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 msgstr "Kynän liike X=%1 Y=%2 P=%3 % TX=%4 TY=%5"
 
 #: ui/Tester.qml:75
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt "A tablet pad's button has been pressed B=[the button number]"
 msgid "Pad button press B=%1"
-msgstr "Alustan painike %1:"
+msgstr "Alustan painikkeen painallus B=%1"
 
 #: ui/Tester.qml:77
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt "A tablet pad's button has been released B=[the button number]"
 msgid "Pad button release B=%1"
-msgstr "Alustan painike %1:"
+msgstr "Alustan painikkeen vapautus B=%1"
 
 #: ui/Tester.qml:83
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt ""
 "A tablet pad's dial has moved, V120 here refers to 'Value 120' which is a "
 "technical term that should be kept as is"
 msgid "Pad dial moved V120=%1"
-msgstr "Alustan painike %1:"
+msgstr "Alustan valintakiekko liikkui V120=%1"
 
 #: ui/Tester.qml:219
-#, fuzzy, kde-format
-#| msgid ""
-#| "## Legend:\n"
-#| "# X, Y - event coordinate\n"
-#| "# P - pressure\n"
-#| "# TX,TY - tilt\n"
+#, kde-format
 msgctxt "The tablet tester legend which is shown on start-up"
 msgid ""
 "## Legend:\n"
@@ -713,9 +727,7 @@ msgstr ""
 "# TX, TY – kallistus\n"
 
 #: ui/Tester.qml:225
-#, fuzzy, kde-format
-#| msgctxt "Clear the event log"
-#| msgid "Clear"
+#, kde-format
 msgctxt "Clear the tablet tester event log"
 msgid "Clear"
 msgstr "Tyhjennä"

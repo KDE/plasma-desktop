@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-20 00:45+0000\n"
+"POT-Creation-Date: 2025-08-31 00:44+0000\n"
 "PO-Revision-Date: 2025-03-30 19:12+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -156,7 +156,7 @@ msgstr "ペンボタン %1"
 #| msgctxt "@title Select the action for the tablet button"
 #| msgid "Select Button Action"
 msgctxt "@title Select the action for the tablet dial"
-msgid "Select Dial Action"
+msgid "Select Dial/Ring Action"
 msgstr "ボタンアクションを選択"
 
 #: ui/ActionDialog.qml:28
@@ -165,7 +165,7 @@ msgctxt "@title Select the action for the tablet button"
 msgid "Select Button Action"
 msgstr "ボタンアクションを選択"
 
-#: ui/ActionDialog.qml:86
+#: ui/ActionDialog.qml:87
 #, fuzzy, kde-format
 #| msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 #| msgid "Choose what action will be taken when pressing %1:"
@@ -173,25 +173,25 @@ msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when rotating %1:"
 msgstr "%1 を押した際に実行されるアクションを選択してください:"
 
-#: ui/ActionDialog.qml:87
+#: ui/ActionDialog.qml:88
 #, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when pressing %1:"
 msgstr "%1 を押した際に実行されるアクションを選択してください:"
 
-#: ui/ActionDialog.qml:101
+#: ui/ActionDialog.qml:102
 #, kde-format
 msgctxt "@option:radio Set this action to an application-defined type"
 msgid "Defer to application"
 msgstr "アプリケーションの設定に従う"
 
-#: ui/ActionDialog.qml:116
+#: ui/ActionDialog.qml:117
 #, kde-format
 msgctxt "@option:radio Set this action to a keyboard type"
 msgid "Send keyboard key"
 msgstr "キーボードキー入力を送信"
 
-#: ui/ActionDialog.qml:132
+#: ui/ActionDialog.qml:133
 #, fuzzy, kde-format
 #| msgctxt "@option:radio Set this action to a keyboard type"
 #| msgid "Send keyboard key"
@@ -199,31 +199,31 @@ msgctxt "@option:radio Set this action to a up/down keyboard type"
 msgid "Send keyboard keys"
 msgstr "キーボードキー入力を送信"
 
-#: ui/ActionDialog.qml:147
+#: ui/ActionDialog.qml:148
 #, kde-format
 msgctxt "@option:radio Set this action to a mouse type"
 msgid "Send mouse button click"
 msgstr "マウスボタンのクリックを送信"
 
-#: ui/ActionDialog.qml:163
+#: ui/ActionDialog.qml:164
 #, kde-format
 msgctxt "@option:radio Set this action to a pen button type"
 msgid "Send pen button"
 msgstr "ペンボタン入力を送信"
 
-#: ui/ActionDialog.qml:180
+#: ui/ActionDialog.qml:181
 #, kde-format
 msgctxt "@option:radio Set this action to a scroll wheel type type"
 msgid "Act as scroll wheel"
 msgstr ""
 
-#: ui/ActionDialog.qml:198
+#: ui/ActionDialog.qml:199
 #, kde-format
 msgctxt "@option:radio Disable this action"
 msgid "Do nothing"
 msgstr "何もしない"
 
-#: ui/ActionDialog.qml:218
+#: ui/ActionDialog.qml:219
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -233,83 +233,88 @@ msgstr ""
 "このタブレットボタンの動作は、フォーカスされたアプリケーションによって決定さ"
 "れます。"
 
-#: ui/ActionDialog.qml:249
+#: ui/ActionDialog.qml:250
 #, kde-format
 msgid "Up:"
 msgstr ""
 
-#: ui/ActionDialog.qml:263
+#: ui/ActionDialog.qml:264
 #, kde-format
 msgid "Down:"
 msgstr ""
 
 #: ui/ActionDialog.qml:277
 #, kde-format
+msgid "Speed:"
+msgstr ""
+
+#: ui/ActionDialog.qml:292
+#, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left-click"
 msgstr "左クリック"
 
-#: ui/ActionDialog.qml:278
+#: ui/ActionDialog.qml:293
 #, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle-click"
 msgstr "中クリック"
 
-#: ui/ActionDialog.qml:279
+#: ui/ActionDialog.qml:294
 #, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right-click"
 msgstr "右クリック"
 
-#: ui/ActionDialog.qml:306
+#: ui/ActionDialog.qml:321
 #, kde-format
 msgctxt "@option:check The ctrl modifier on the keyboard"
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: ui/ActionDialog.qml:313
+#: ui/ActionDialog.qml:328
 #, kde-format
 msgctxt "@option:check The alt modifier on the keyboard"
 msgid "Alt"
 msgstr "Alt"
 
-#: ui/ActionDialog.qml:320
+#: ui/ActionDialog.qml:335
 #, kde-format
 msgctxt "@option:check The meta modifier on the keyboard"
 msgid "Meta"
 msgstr "Meta"
 
-#: ui/ActionDialog.qml:327
+#: ui/ActionDialog.qml:342
 #, kde-format
 msgctxt "@option:check The shift modifier on the keyboard"
 msgid "Shift"
 msgstr "Shift"
 
-#: ui/ActionDialog.qml:343
+#: ui/ActionDialog.qml:358
 #, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
 msgstr "ボタン 1"
 
-#: ui/ActionDialog.qml:344
+#: ui/ActionDialog.qml:359
 #, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
 msgstr "ボタン 2"
 
-#: ui/ActionDialog.qml:345
+#: ui/ActionDialog.qml:360
 #, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
 msgstr "ボタン 3"
 
-#: ui/ActionDialog.qml:354
+#: ui/ActionDialog.qml:369
 #, kde-format
 msgctxt "@info"
 msgid "Act like a scroll wheel on a mouse."
 msgstr ""
 
-#: ui/ActionDialog.qml:363
+#: ui/ActionDialog.qml:378
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
@@ -464,13 +469,28 @@ msgctxt "@title:tab"
 msgid "Pad"
 msgstr "パッド"
 
-#: ui/PadTab.qml:33
+#: ui/PadTab.qml:37
+#, fuzzy, kde-format
+#| msgid "Pad button %1:"
+msgid "Pad ring %1:"
+msgstr "ペンボタン %1:"
+
+#: ui/PadTab.qml:60
+#, fuzzy, kde-format
+#| msgid "Pad button %1:"
+msgctxt ""
+"@info Meant to be inserted into an existing sentence like 'configuring pad "
+"ring/dial 0'"
+msgid "pad ring/dial %1"
+msgstr "ペンボタン %1:"
+
+#: ui/PadTab.qml:100
 #, fuzzy, kde-format
 #| msgid "Pad button %1:"
 msgid "Pad dial %1:"
 msgstr "ペンボタン %1:"
 
-#: ui/PadTab.qml:35
+#: ui/PadTab.qml:102
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
@@ -478,12 +498,12 @@ msgctxt ""
 msgid "pad dial %1"
 msgstr ""
 
-#: ui/PadTab.qml:71
+#: ui/PadTab.qml:138
 #, kde-format
 msgid "Pad button %1:"
 msgstr "ペンボタン %1:"
 
-#: ui/PadTab.qml:74
+#: ui/PadTab.qml:141
 #, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
