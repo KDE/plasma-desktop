@@ -99,8 +99,7 @@ Item {
             KQuickControls.KeySequenceItem {
                 id: keySequenceItem
                 showCancelButton: true
-                modifierlessAllowed: false
-                modifierOnlyAllowed: true
+                patterns: ShortcutPattern.Modifier | ShortcutPattern.ModifierAndKey
                 keySequence: itemDelegate.shortcut
                 onKeySequenceChanged: itemDelegate.view.maxKeySequenceItemWidthChanged()
                 onCaptureFinished: itemDelegate.model.shortcut = keySequence

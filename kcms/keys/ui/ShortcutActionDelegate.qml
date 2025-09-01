@@ -170,7 +170,7 @@ QQC2.ItemDelegate {
                                 Layout.alignment: Qt.AlignRight
                                 keySequence: modelData
                                 showClearButton: false
-                                modifierOnlyAllowed: true
+                                patterns: ShortcutPattern.ModifierAndKey | ShortcutPattern.Modifier
                                 multiKeyShortcutsAllowed: supportsMultipleKeys
                                 checkForConflictsAgainst: ShortcutType.None
                                 onCaptureFinished: {
@@ -218,7 +218,7 @@ QQC2.ItemDelegate {
                             spacing: Kirigami.Units.smallSpacing
                             KeySequenceItem {
                                 showClearButton: false
-                                modifierOnlyAllowed: true
+                                patterns: ShortcutPattern.Modifier | ShortcutPattern.ModifierAndKey
                                 multiKeyShortcutsAllowed: model.supportsMultipleKeys
                                 checkForConflictsAgainst: ShortcutType.None
                                 onCaptureFinished: {

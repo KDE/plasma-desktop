@@ -226,8 +226,7 @@ Kirigami.Dialog {
                 id: seq
 
                 showCancelButton: true
-                modifierlessAllowed: true
-                modifierOnlyAllowed: true
+                patterns: ShortcutPattern.Modifier | ShortcutPattern.Key | ShortcutPattern.ModifierAndKey
                 multiKeyShortcutsAllowed: false
                 checkForConflictsAgainst: ShortcutType.None
 
@@ -240,8 +239,7 @@ Kirigami.Dialog {
                     id: upSeq
 
                     showCancelButton: true
-                    modifierlessAllowed: true
-                    modifierOnlyAllowed: true
+                    patterns: ShortcutPattern.Modifier | ShortcutPattern.Key | ShortcutPattern.ModifierAndKey
                     multiKeyShortcutsAllowed: false
                     checkForConflictsAgainst: ShortcutType.None
 
@@ -254,8 +252,7 @@ Kirigami.Dialog {
                     id: downSeq
 
                     showCancelButton: true
-                    modifierlessAllowed: true
-                    modifierOnlyAllowed: true
+                    patterns: ShortcutPattern.Modifier | ShortcutPattern.Key | ShortcutPattern.ModifierAndKey
                     multiKeyShortcutsAllowed: false
                     checkForConflictsAgainst: ShortcutType.None
 

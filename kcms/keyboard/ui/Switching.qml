@@ -89,8 +89,7 @@ KCM.AbstractKCM {
         KQuickControls.KeySequenceItem {
             id: alternativeShortcut
             Kirigami.FormData.label: i18nc("@option:textbox", "Change layout:")
-            modifierlessAllowed: false
-            modifierOnlyAllowed: true
+            patterns: ShortcutPattern.Modifier | ShortcutPattern.ModifierAndKey
 
             keySequence: kcm.shortcutHelper.alternativeShortcut
             onKeySequenceModified: kcm.shortcutHelper.alternativeShortcut = keySequence
@@ -110,8 +109,7 @@ KCM.AbstractKCM {
         KQuickControls.KeySequenceItem {
             id: lastUsedShortcut
             Kirigami.FormData.label: i18nc("@option:textbox", "Switch to last used layout:")
-            modifierlessAllowed: false
-            modifierOnlyAllowed: true
+            patterns: ShortcutPattern.Modifier | ShortcutPattern.ModifierAndKey
 
             keySequence: kcm.shortcutHelper.lastUsedShortcut
             onCaptureFinished: kcm.shortcutHelper.lastUsedShortcut = keySequence

@@ -30,7 +30,7 @@ KCM.SimpleKCM {
             id: button
             Kirigami.FormData.label: i18nc("@action:button set keyboard shortcut for", "Activate widget as if clicked:")
             keySequence: Plasmoid.globalShortcut
-            modifierOnlyAllowed: true
+            patterns: ShortcutPattern.Modifier | ShortcutPattern.ModifierAndKey
             onKeySequenceModified: root.unsavedChanges = keySequence !== Plasmoid.globalShortcut
         }
     }
