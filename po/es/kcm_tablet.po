@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-31 00:44+0000\n"
-"PO-Revision-Date: 2025-08-02 11:44+0100\n"
+"PO-Revision-Date: 2025-08-31 04:20+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -153,12 +153,10 @@ msgid "pen button %1"
 msgstr "botón %1 del lápiz"
 
 #: ui/ActionDialog.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@title Select the action for the tablet dial"
-#| msgid "Select Dial Action"
+#, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial/Ring Action"
-msgstr "Seleccionar acción del disco"
+msgstr "Seleccionar acción del disco/anillo"
 
 #: ui/ActionDialog.qml:28
 #, kde-format
@@ -243,7 +241,7 @@ msgstr "Abajo:"
 #: ui/ActionDialog.qml:277
 #, kde-format
 msgid "Speed:"
-msgstr ""
+msgstr "Velocidad:"
 
 #: ui/ActionDialog.qml:292
 #, kde-format
@@ -470,22 +468,17 @@ msgid "Pad"
 msgstr "Panel táctil"
 
 #: ui/PadTab.qml:37
-#, fuzzy, kde-format
-#| msgid "Pad dial %1:"
+#, kde-format
 msgid "Pad ring %1:"
-msgstr "Disco %1 del panel táctil:"
+msgstr "Anillo %1 del panel táctil:"
 
 #: ui/PadTab.qml:60
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pad button 0'"
-#| msgid "pad dial %1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "ring/dial 0'"
 msgid "pad ring/dial %1"
-msgstr "disco %1 del panel táctil"
+msgstr "disco/anillo %1 del panel táctil"
 
 #: ui/PadTab.qml:100
 #, kde-format

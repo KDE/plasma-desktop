@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-31 00:44+0000\n"
-"PO-Revision-Date: 2025-08-02 05:11+0200\n"
+"PO-Revision-Date: 2025-08-31 06:27+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.7\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -152,12 +152,10 @@ msgid "pen button %1"
 msgstr "კალმის ღილაკი %1"
 
 #: ui/ActionDialog.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@title Select the action for the tablet dial"
-#| msgid "Select Dial Action"
+#, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial/Ring Action"
-msgstr "აირჩიეთ დარეკვის მოქმედება"
+msgstr "აირჩიეთ დარეკვის/ზარის ქმედება"
 
 #: ui/ActionDialog.qml:28
 #, kde-format
@@ -242,7 +240,7 @@ msgstr "დაბლა:"
 #: ui/ActionDialog.qml:277
 #, kde-format
 msgid "Speed:"
-msgstr ""
+msgstr "სიჩქარე:"
 
 #: ui/ActionDialog.qml:292
 #, kde-format
@@ -468,22 +466,17 @@ msgid "Pad"
 msgstr "პედი"
 
 #: ui/PadTab.qml:37
-#, fuzzy, kde-format
-#| msgid "Pad dial %1:"
+#, kde-format
 msgid "Pad ring %1:"
 msgstr "პადის ღილაკი %1:"
 
 #: ui/PadTab.qml:60
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pad button 0'"
-#| msgid "pad dial %1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "ring/dial 0'"
 msgid "pad ring/dial %1"
-msgstr "დარეკვა %1"
+msgstr "ციფერბლატით დარეკვა %1"
 
 #: ui/PadTab.qml:100
 #, kde-format

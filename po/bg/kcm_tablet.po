@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-31 00:44+0000\n"
-"PO-Revision-Date: 2025-07-21 00:18+0200\n"
+"PO-Revision-Date: 2025-08-31 23:48+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -151,12 +151,10 @@ msgid "pen button %1"
 msgstr "бутон на показалец %1"
 
 #: ui/ActionDialog.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@title Select the action for the tablet dial"
-#| msgid "Select Dial Action"
+#, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial/Ring Action"
-msgstr "Изберете действие за набиране"
+msgstr "Изберете действие за набиране/звънене"
 
 #: ui/ActionDialog.qml:28
 #, kde-format
@@ -241,7 +239,7 @@ msgstr "Надолу:"
 #: ui/ActionDialog.qml:277
 #, kde-format
 msgid "Speed:"
-msgstr ""
+msgstr "Скорост:"
 
 #: ui/ActionDialog.qml:292
 #, kde-format
@@ -322,11 +320,7 @@ msgid "Pen Calibration"
 msgstr "Калибриране на писалка"
 
 #: ui/Calibration.qml:98
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
-#| "revert to default calibration in %1 seconds.</b>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
@@ -334,7 +328,8 @@ msgid ""
 "b>"
 msgstr ""
 "Докоснете мишените отново, за да потвърдите новото калибриране.<nl/><nl/"
-"><b>Връщане към калибрирането по подразбиране след %1 секунди.</b>"
+"><b>Връщане към калибрирането по подразбиране след %1 секунди, освен ако не "
+"бъдат предприети допълнителни действия.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format

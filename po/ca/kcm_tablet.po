@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-31 00:44+0000\n"
-"PO-Revision-Date: 2025-08-02 11:17+0200\n"
+"PO-Revision-Date: 2025-08-31 12:17+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -153,12 +153,10 @@ msgid "pen button %1"
 msgstr "botó %1 del llapis"
 
 #: ui/ActionDialog.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@title Select the action for the tablet dial"
-#| msgid "Select Dial Action"
+#, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial/Ring Action"
-msgstr "Selecció d'acció de la rodeta"
+msgstr "Selecció d'acció de la rodeta/anella"
 
 #: ui/ActionDialog.qml:28
 #, kde-format
@@ -243,7 +241,7 @@ msgstr "Avall:"
 #: ui/ActionDialog.qml:277
 #, kde-format
 msgid "Speed:"
-msgstr ""
+msgstr "Velocitat:"
 
 #: ui/ActionDialog.qml:292
 #, kde-format
@@ -470,22 +468,17 @@ msgid "Pad"
 msgstr "Tauleta gràfica"
 
 #: ui/PadTab.qml:37
-#, fuzzy, kde-format
-#| msgid "Pad dial %1:"
+#, kde-format
 msgid "Pad ring %1:"
-msgstr "Rodeta de la tauleta gràfica %1:"
+msgstr "Anella de la tauleta gràfica %1:"
 
 #: ui/PadTab.qml:60
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pad button 0'"
-#| msgid "pad dial %1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "ring/dial 0'"
 msgid "pad ring/dial %1"
-msgstr "rodeta de la tauleta gràfica %1"
+msgstr "rodeta/anella de la tauleta gràfica %1"
 
 #: ui/PadTab.qml:100
 #, kde-format

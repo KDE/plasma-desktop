@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-31 00:44+0000\n"
-"PO-Revision-Date: 2025-08-02 19:29+0300\n"
+"PO-Revision-Date: 2025-08-31 07:40+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.08.0\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
 
@@ -152,12 +152,10 @@ msgid "pen button %1"
 msgstr "כפתור עט %1"
 
 #: ui/ActionDialog.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@title Select the action for the tablet dial"
-#| msgid "Select Dial Action"
+#, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial/Ring Action"
-msgstr "בחירת פעולת חיוג"
+msgstr "בחירת פעולת חוגה/טבעת"
 
 #: ui/ActionDialog.qml:28
 #, kde-format
@@ -240,7 +238,7 @@ msgstr "למטה:"
 #: ui/ActionDialog.qml:277
 #, kde-format
 msgid "Speed:"
-msgstr ""
+msgstr "מהירות:"
 
 #: ui/ActionDialog.qml:292
 #, kde-format
@@ -465,27 +463,22 @@ msgid "Pad"
 msgstr "לוח"
 
 #: ui/PadTab.qml:37
-#, fuzzy, kde-format
-#| msgid "Pad dial %1:"
+#, kde-format
 msgid "Pad ring %1:"
-msgstr "%1 במקשי חיוג:"
+msgstr "%1 במקשי חוגה:"
 
 #: ui/PadTab.qml:60
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pad button 0'"
-#| msgid "pad dial %1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "ring/dial 0'"
 msgid "pad ring/dial %1"
-msgstr "%1 במקשי חיוג"
+msgstr "%1 במקשי חוגה/טבעת"
 
 #: ui/PadTab.qml:100
 #, kde-format
 msgid "Pad dial %1:"
-msgstr "%1 במקשי חיוג:"
+msgstr "%1 במקשי חוגה:"
 
 #: ui/PadTab.qml:102
 #, kde-format
@@ -493,7 +486,7 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad dial %1"
-msgstr "%1 במקשי חיוג"
+msgstr "%1 במקשי חוגה"
 
 #: ui/PadTab.qml:138
 #, kde-format

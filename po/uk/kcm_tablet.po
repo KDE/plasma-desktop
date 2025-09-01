@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-31 00:44+0000\n"
-"PO-Revision-Date: 2025-08-02 18:06+0300\n"
+"PO-Revision-Date: 2025-08-31 19:47+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -152,12 +152,10 @@ msgid "pen button %1"
 msgstr "кнопка пера %1"
 
 #: ui/ActionDialog.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@title Select the action for the tablet dial"
-#| msgid "Select Dial Action"
+#, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial/Ring Action"
-msgstr "Вибрати дію для кнопки"
+msgstr "Виберіть дію набирання на панелі"
 
 #: ui/ActionDialog.qml:28
 #, kde-format
@@ -242,7 +240,7 @@ msgstr "Вниз:"
 #: ui/ActionDialog.qml:277
 #, kde-format
 msgid "Speed:"
-msgstr ""
+msgstr "Швидкість:"
 
 #: ui/ActionDialog.qml:292
 #, kde-format
@@ -469,22 +467,17 @@ msgid "Pad"
 msgstr "Панель"
 
 #: ui/PadTab.qml:37
-#, fuzzy, kde-format
-#| msgid "Pad dial %1:"
+#, kde-format
 msgid "Pad ring %1:"
-msgstr "Цифрова панель %1:"
+msgstr "Набирання на панелі %1:"
 
 #: ui/PadTab.qml:60
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pad button 0'"
-#| msgid "pad dial %1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "ring/dial 0'"
 msgid "pad ring/dial %1"
-msgstr "цифрова панель %1"
+msgstr "набирання на панелі %1"
 
 #: ui/PadTab.qml:100
 #, kde-format
