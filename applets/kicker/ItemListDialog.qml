@@ -17,6 +17,7 @@ Kicker.SubMenu {
     property alias focusParent: itemListView.focusParent
     property alias model: funnelModel.sourceModel
 
+    property int index: -1
     property bool aboutToBeDestroyed: false
 
     property alias mainSearchField: itemListView.mainSearchField

@@ -40,7 +40,6 @@ FocusScope {
     property alias currentIndex: listView.currentIndex
     property alias currentItem: listView.currentItem
     property alias keyNavigationWraps: listView.keyNavigationWraps
-    property alias showChildDialogs: listView.showChildDialogs
     property alias model: listView.model
     property alias count: listView.count
     property alias containsMouse: listener.containsMouse
@@ -53,45 +52,54 @@ FocusScope {
         elementId: "horizontal-line"
     }
 
-    Timer {
-        id: dialogSpawnTimer
-
-        property bool focusOnSpawn: false
-
-        interval: 70
-        repeat: false
-
-        onTriggered: {
-            if (!kicker.expanded || itemList.model === undefined || itemList.currentIndex == -1) {
-                return;
-            }
-
-            if (itemList.childDialog != null) {
-                itemList.childDialog.delayedDestroy();
-            }
-
+    function subMenuForCurrentItem(focusOnSpawn=false) {
+        if (!kicker.expanded || !itemList.model || itemList.currentIndex === -1) {
+            return;
+        }
+        if (itemList && !itemList.currentItem.hasChildren) {
+            clearChildDialog();
+        } else if (!itemList.childDialog) {
             // Gets reenabled after the dialog spawn causes a focus-in on the dialog window.
             kicker.hideOnWindowDeactivate = false;
 
-            itemList.childDialog = itemListDialogComponent.createObject(itemList,
-                                        {
-                                            mainSearchField: itemList.mainSearchField,
-                                            focusParent: itemList,
-                                            visualParent: listView.currentItem,
-                                            model: itemList.model.modelForRow(listView.currentIndex),
-                                            visible: true
-                                        });
+            itemList.childDialog = itemListDialogComponent.createObject(itemList, {
+                mainSearchField: mainSearchField,
+                focusParent: itemList,
+                visualParent: listView.currentItem,
+                model: model.modelForRow(listView.currentIndex),
+                visible: true,
+            });
             itemList.childDialog.LayoutMirroring.enabled = itemList.LayoutMirroring.enabled
+            itemList.childDialog.index = listView.currentIndex;
 
             windowSystem.forceActive(itemList.childDialog.mainItem);
             itemList.childDialog.mainItem.focus = true;
 
             if (focusOnSpawn) {
-                itemList.childDialog.mainItem.showChildDialogs = false;
                 itemList.childDialog.mainItem.currentIndex = 0;
-                itemList.childDialog.mainItem.showChildDialogs = true;
             }
+        } else {
+            itemList.childDialog.mainItem.width = itemList.minimumWidth;
+            itemList.childDialog.model = model.modelForRow(itemList.currentIndex);
+            itemList.childDialog.visualParent = listView.currentItem;
+            itemList.childDialog.index = listView.currentIndex;
         }
+    }
+
+    function clearChildDialog() {
+        if (childDialog) {
+            childDialog.delayedDestroy()
+            childDialog = null
+        }
+    }
+
+    Timer {
+        id: dialogSpawnTimer
+
+        interval: 100
+        repeat: false
+
+        onTriggered: subMenuForCurrentItem()
     }
 
     Timer {
@@ -119,11 +127,11 @@ FocusScope {
         hoverEnabled: true
 
         onContainsMouseChanged: containsMouseChanged => {
-            listView.eligibleWidth = listView.width;
-
             if (containsMouse) {
                 resetIndexTimer.stop();
                 itemList.forceActiveFocus();
+            } else if (itemList.childDialog && listView.currentIndex != itemList.childDialog?.index) {
+                listView.currentIndex = childDialog.index
             } else if ((!itemList.childDialog || !itemList.dialog)
                 && (!itemList.currentItem || !itemList.currentItem.menu.opened)) {
                 resetIndexTimer.start();
@@ -138,8 +146,7 @@ FocusScope {
             ListView {
                 id: listView
 
-                property bool showChildDialogs: true
-                property int eligibleWidth: width
+                property bool mouseMoved: true // child dialogs can activate immediately
                 property bool showSeparators: !model.sorted // separators are mostly useless when sorted
                 property bool hoverEnabled: true
 
@@ -156,6 +163,14 @@ FocusScope {
                     showSeparators: listView.showSeparators
                     dialogDefaultRight: !itemList.LayoutMirroring.enabled
                     hoverEnabled: listView.hoverEnabled
+                    onHoveredChanged: {
+                        if (hovered & !isSeparator) {
+                            listView.currentIndex = index
+                            dialogSpawnTimer.restart()
+                        } else if (listView.currentIndex === index) {
+                            dialogSpawnTimer.stop()
+                        }
+                    }
                     onFullTextWidthChanged: {
                         if (itemList && fullTextWidth > itemList.width) {
                             itemList.width = Math.min(fullTextWidth, itemList.maximumWidth);
@@ -180,32 +195,13 @@ FocusScope {
                 }
 
                 onCurrentIndexChanged: {
-                    if (currentIndex != -1) {
-                        if (itemList.childDialog) {
-                            if (currentItem && currentItem.hasChildren) {
-                                itemList.childDialog.mainItem.width = itemList.minimumWidth;
-                                itemList.childDialog.model = model.modelForRow(currentIndex);
-                                itemList.childDialog.visualParent = listView.currentItem;
-                            } else {
-                                itemList.childDialog.delayedDestroy();
-                            }
-
-                            return;
-                        }
-
-                        if (currentItem == null || !currentItem.hasChildren || !kicker.expanded) {
-                            dialogSpawnTimer.stop();
-
-                            return;
-                        }
-
-                        if (showChildDialogs) {
-                            dialogSpawnTimer.focusOnSpawn = false;
-                            dialogSpawnTimer.restart();
-                        }
-                    } else if (itemList.childDialog != null) {
-                        itemList.childDialog.delayedDestroy();
-                        itemList.childDialog = null;
+                    if (currentIndex === childDialog?.index) {
+                        return;
+                    } else if (currentIndex === -1  || !currentItem.hasChildren || !kicker.expanded) {
+                        dialogSpawnTimer.stop();
+                        itemList.clearChildDialog();
+                    } else if (itemList.childDialog) {
+                        dialogSpawnTimer.restart();
                     }
                 }
 
@@ -224,8 +220,7 @@ FocusScope {
                 if (listView.currentItem !== null && listView.currentItem.hasChildren &&
                     (forwardArrowKey || event.key === Qt.Key_Return || event.key === Qt.Key_Enter)) {
                     if (itemList.childDialog === null) {
-                        dialogSpawnTimer.focusOnSpawn = true;
-                        dialogSpawnTimer.restart();
+                        subMenuForCurrentItem(true)
                     } else {
                         windowSystem.forceActive(itemList.childDialog.mainItem);
                         itemList.childDialog.mainItem.focus = true;
@@ -240,7 +235,6 @@ FocusScope {
                         return;
                     }
 
-                    itemList.showChildDialogs = false;
                     listView.decrementCurrentIndex();
 
                     if (listView.currentItem !== null) {
@@ -249,8 +243,6 @@ FocusScope {
                         }
                         listView.currentItem.forceActiveFocus();
                     }
-
-                    itemList.showChildDialogs = true;
                 } else if (event.key === Qt.Key_Down) {
                     event.accepted = true;
 
@@ -260,7 +252,6 @@ FocusScope {
                         return;
                     }
 
-                    itemList.showChildDialogs = false;
                     listView.incrementCurrentIndex();
 
                     if (listView.currentItem !== null) {
@@ -270,7 +261,6 @@ FocusScope {
                         listView.currentItem.forceActiveFocus();
                     }
 
-                    itemList.showChildDialogs = true;
                 } else if (backArrowKey && itemList.dialog != null) {
                     itemList.dialog.destroy();
                 } else if (event.key === Qt.Key_Escape) {

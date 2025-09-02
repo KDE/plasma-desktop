@@ -55,10 +55,8 @@ PlasmaComponents3.ScrollView {
     }
 
     function focusRootList(focusTopElement = true) : void {
-        rootList.showChildDialogs = false;
         rootList.currentIndex = focusTopElement ? 0 : (rootList.model.count - 1)
         rootList.forceActiveFocus(Qt.TabFocusReason)
-        rootList.showChildDialogs = true;
     }
 
     function focusSideBar() : void {

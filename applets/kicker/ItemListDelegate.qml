@@ -108,8 +108,6 @@ Item {
 
         anchors.fill: parent
 
-        property int mouseCol
-
         hoverEnabled: true
         acceptedButtons: Qt.RightButton
 
@@ -117,51 +115,6 @@ Item {
             if (item.hasActionList || favoriteId !== null) {
                 item.openActionMenu(mouseArea, mouse.x, mouse.y);
             }
-        }
-
-        onPositionChanged: mouse => {
-            // FIXME: Correct escape angle calc for right screen edge.
-            if (justOpenedTimer.running || !item.hasChildren) {
-                item.ListView.view.currentIndex = item.index;
-            } else {
-                mouseCol = mouse.x;
-
-                if (item.index === item.ListView.view.currentIndex) {
-                    updateCurrentItem();
-                } else if ((item.index === item.ListView.view.currentIndex - 1) && mouse.y < (itemHeight - 6)
-                    || (item.index === item.ListView.view.currentIndex + 1) && mouse.y > 5) {
-
-                    if ((item.childDialog && item.childDialog.facingLeft)
-                        ? mouse.x > item.ListView.view.eligibleWidth - 5 : mouse.x < item.ListView.view.eligibleWidth + 5) {
-                        updateCurrentItem();
-                    }
-                } else if ((item.childDialog && item.childDialog.facingLeft)
-                    ? mouse.x > item.ListView.view.eligibleWidth : mouse.x < item.ListView.view.eligibleWidth) {
-                    updateCurrentItem();
-                }
-
-                updateCurrentItemTimer.start();
-            }
-        }
-
-        onContainsMouseChanged: {
-            if (!containsMouse) {
-                updateCurrentItemTimer.stop();
-            }
-        }
-
-        function updateCurrentItem() {
-            item.ListView.view.currentIndex = item.index;
-            item.ListView.view.eligibleWidth = Math.min(width, mouseCol);
-        }
-
-        Timer {
-            id: updateCurrentItemTimer
-
-            interval: 50
-            repeat: false
-
-            onTriggered: parent.updateCurrentItem()
         }
     }
 
