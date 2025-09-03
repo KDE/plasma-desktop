@@ -207,6 +207,8 @@ PlasmaComponents3.ScrollView {
 
             LayoutMirroring.enabled: mainRow.LayoutMirroring.enabled
 
+            showSeparators: true // keep even if sorted, the one between recents and categories works
+
             onKeyNavigationAtListEnd: {
                 searchField.focus = true;
             }

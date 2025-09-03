@@ -34,7 +34,7 @@ FocusScope {
     property int itemHeight: Math.ceil((Math.max(Kirigami.Units.iconSizes.sizeForLabels, Kirigami.Units.iconSizes.small)
         + Math.max(highlightItemSvg.margins.top + highlightItemSvg.margins.bottom,
         listItemSvg.margins.top + listItemSvg.margins.bottom)) / 2) * 2
-    property int separatorHeight: model.sorted === true ? 0 : lineMetrics.elementRect.height + (2 * Kirigami.Units.smallSpacing)
+    property int separatorHeight: showSeparators ? lineMetrics.elementRect.height + (2 * Kirigami.Units.smallSpacing) : 0
 
     property alias currentIndex: listView.currentIndex
     property alias currentItem: listView.currentItem
@@ -45,6 +45,7 @@ FocusScope {
     property alias containsMouse: listener.containsMouse
     property alias resetOnExitDelay: resetIndexTimer.interval
     property alias mouseMoved: listView.mouseMoved
+    property alias showSeparators: listView.showSeparators
 
     property KSvg.SvgItem lineMetrics: KSvg.SvgItem {
         imagePath: "widgets/line"
@@ -139,6 +140,7 @@ FocusScope {
                 property bool showChildDialogs: true
                 property int eligibleWidth: width
                 property bool mouseMoved: true // child dialogs can activate immediately
+                property bool showSeparators: !model.sorted // separators are mostly useless when sorted
 
                 currentIndex: -1
                 focus: true
@@ -150,6 +152,7 @@ FocusScope {
                 keyNavigationEnabled: false
 
                 delegate: ItemListDelegate {
+                    showSeparators: listView.showSeparators
                     dialogDefaultRight: !itemList.LayoutMirroring.enabled
                     onFullTextWidthChanged: {
                         if (itemList && fullTextWidth > itemList.width) {

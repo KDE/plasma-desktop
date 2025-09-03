@@ -40,10 +40,10 @@ Item {
     property alias pressed: tapHandler.pressed
     property alias hovered: mouseArea.containsMouse
 
-    readonly property bool sorted: item.ListView.view.model.sorted ?? false
     readonly property bool iconAndLabelsShouldlookSelected: pressed && !hasChildren
     readonly property real fullTextWidth: Math.ceil(icon.width + label.implicitWidth + arrow.width + row.anchors.leftMargin + row.anchors.rightMargin + row.actualSpacing)
 
+    property bool showSeparators: true
     property QtObject childDialog: null
     property ActionMenu menu: actionMenu
     property bool dialogDefaultRight: Qt.application.layoutDirection !== Qt.RightToLeft
@@ -256,7 +256,7 @@ Item {
         anchors.verticalCenter: parent.verticalCenter
 
         // Separator positions don't make sense when sorting everything alphabetically
-        active: item.isSeparator && !item.sorted
+        active: item.isSeparator && item.showSeparators
 
         asynchronous: false
         sourceComponent: separatorComponent
