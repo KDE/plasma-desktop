@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-27 00:45+0000\n"
-"PO-Revision-Date: 2025-08-27 00:45+0000\n"
+"PO-Revision-Date: 2025-09-02 23:00+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
-"Language: \n"
+"Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
-"%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 3.6\n"
 
 #: keysrunner.cpp:52
 #, kde-format
@@ -25,9 +26,11 @@ msgid ""
 "Finds shortcuts with names or descriptions matching :q: or gets the name of "
 "a shortcut"
 msgstr ""
+"Randa sparčiuosius klavišus, kurių pavadinimai ar aprašai atitinka :q: arba "
+"gauna sparčiojo klavišo pavadinimą"
 
 #: keysrunner.cpp:108
 #, kde-format
 msgctxt "@label action - app"
 msgid "%1 - %2"
-msgstr ""
+msgstr "%1 – %2"
