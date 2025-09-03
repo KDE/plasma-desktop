@@ -366,11 +366,6 @@ void SwitcherBackend::setCurrentActivity(const QString &activity)
     m_activities.setCurrentActivity(activity);
 }
 
-void SwitcherBackend::stopActivity(const QString &activity)
-{
-    m_activities.stopActivity(activity);
-}
-
 void SwitcherBackend::removeActivity(const QString &activity)
 {
     m_activities.removeActivity(activity);

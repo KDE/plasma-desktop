@@ -64,7 +64,6 @@ public Q_SLOTS:
     QAbstractItemModel *stoppedActivitiesModel() const;
 
     void setCurrentActivity(const QString &activity);
-    void stopActivity(const QString &activity);
     void removeActivity(const QString &activity);
 
     bool dragContainsWindows(QMimeData *mimeData) const;

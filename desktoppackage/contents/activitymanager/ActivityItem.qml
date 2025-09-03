@@ -22,7 +22,6 @@ Item {
 
     property bool current      : false
     property bool selected     : false
-    property bool stoppable    : true
 
     property alias title       : title.text
     property alias icon        : icon.source
@@ -342,25 +341,6 @@ Item {
                     top        : parent.top
                     leftMargin : 2 * Kirigami.Units.smallSpacing + 2
                     topMargin  : 2 * Kirigami.Units.smallSpacing
-                }
-            }
-
-            PlasmaComponents.Button {
-                id: stopButton
-
-                visible: stoppable
-                icon.name: "process-stop"
-                PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
-                PlasmaComponents.ToolTip.visible: hovered
-                PlasmaComponents.ToolTip.text: i18nd("plasma_shell_org.kde.plasma.desktop", "Stop activity")
-
-                onClicked: ActivitySwitcher.Backend.stopActivity(activityId);
-
-                anchors {
-                    right       : parent.right
-                    top         : parent.top
-                    rightMargin : 2 * Kirigami.Units.smallSpacing + 2
-                    topMargin   : 2 * Kirigami.Units.smallSpacing
                 }
             }
         }

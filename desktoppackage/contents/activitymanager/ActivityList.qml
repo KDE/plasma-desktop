@@ -126,7 +126,6 @@ Flickable {
                 current      : model.isCurrent
                 hasWindows   : model.hasWindows
                 innerPadding : 2 * Kirigami.Units.smallSpacing
-                stoppable    : activitiesList.count > 1
 
                 onClicked    : {
                     ActivitySwitcher.Backend.setCurrentActivity(model.id);
