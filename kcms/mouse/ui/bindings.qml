@@ -77,7 +77,7 @@ KCMUtils.SimpleKCM {
 
                     keySequence: root.backend.buttonMapping[modelData.buttonName]
 
-                    patterns: ShortcutPattern.Modifier | ShortcutPattern.Key | ShortcutPattern.ModifierAndKey
+                    patterns: KQuickControls.ShortcutPattern.Modifier | KQuickControls.ShortcutPattern.Key | KQuickControls.ShortcutPattern.ModifierAndKey
                     multiKeyShortcutsAllowed: false
                     checkForConflictsAgainst: KQuickControls.ShortcutType.None
 
@@ -129,7 +129,7 @@ KCMUtils.SimpleKCM {
                 id: newKeySequenceItem
                 visible: false
 
-                patterns: ShortcutPattern.Modifier | ShortcutPattern.Key | ShortcutPattern.ModifierAndKey
+                patterns: KQuickControls.ShortcutPattern.Modifier | KQuickControls.ShortcutPattern.Key | KQuickControls.ShortcutPattern.ModifierAndKey
                 multiKeyShortcutsAllowed: false
                 checkForConflictsAgainst: KQuickControls.ShortcutType.None
 
