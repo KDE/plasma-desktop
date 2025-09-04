@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-22 00:43+0000\n"
+"POT-Creation-Date: 2025-09-04 00:44+0000\n"
 "PO-Revision-Date: 2025-05-18 21:03+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -406,7 +406,7 @@ msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
 msgstr "Комбинация клавиш для переключения раскладки:"
 
-#: ui/main.qml:411
+#: ui/main.qml:410
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
@@ -466,25 +466,25 @@ msgctxt "@title:group"
 msgid "Shortcuts"
 msgstr "Комбинации клавиш"
 
-#: ui/Switching.qml:91 ui/Switching.qml:153
+#: ui/Switching.qml:91 ui/Switching.qml:151
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Change layout:"
 msgstr "Сменить раскладку:"
 
-#: ui/Switching.qml:112
+#: ui/Switching.qml:111
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Switch to last used layout:"
 msgstr "Выбрать последнюю использованную раскладку:"
 
-#: ui/Switching.qml:133
+#: ui/Switching.qml:131
 #, kde-format
 msgctxt "@title:group"
 msgid "Legacy Shortcuts"
 msgstr "Устаревшие комбинации клавиш"
 
-#: ui/Switching.qml:141
+#: ui/Switching.qml:139
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -499,13 +499,13 @@ msgstr ""
 "Wayland.<nl/><nl/>Настройка этих комбинаций клавиш выполняется в разделе "
 "«Комбинации клавиш»."
 
-#: ui/Switching.qml:182
+#: ui/Switching.qml:180
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Alternative symbols:"
 msgstr "Альтернативные символы:"
 
-#: ui/Switching.qml:208
+#: ui/Switching.qml:206
 #, kde-format
 msgctxt "@info"
 msgid ""

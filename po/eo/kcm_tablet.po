@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-31 00:44+0000\n"
+"POT-Creation-Date: 2025-09-04 00:44+0000\n"
 "PO-Revision-Date: 2024-12-29 19:47+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -235,88 +235,88 @@ msgstr ""
 "Ĉi tiu tabuleta butono estas plusendita al la fokusita aplikaĵo, kiu povas "
 "decidi kiel trakti ĝin."
 
-#: ui/ActionDialog.qml:250
+#: ui/ActionDialog.qml:248
 #, kde-format
 msgid "Up:"
 msgstr ""
 
-#: ui/ActionDialog.qml:264
+#: ui/ActionDialog.qml:261
 #, kde-format
 msgid "Down:"
 msgstr ""
 
-#: ui/ActionDialog.qml:277
+#: ui/ActionDialog.qml:274
 #, kde-format
 msgid "Speed:"
 msgstr ""
 
-#: ui/ActionDialog.qml:292
+#: ui/ActionDialog.qml:289
 #, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left-click"
 msgstr "Maldesktra klako"
 
-#: ui/ActionDialog.qml:293
+#: ui/ActionDialog.qml:290
 #, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle-click"
 msgstr "Meza klako"
 
-#: ui/ActionDialog.qml:294
+#: ui/ActionDialog.qml:291
 #, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right-click"
 msgstr "Desktra klako"
 
-#: ui/ActionDialog.qml:321
+#: ui/ActionDialog.qml:318
 #, kde-format
 msgctxt "@option:check The ctrl modifier on the keyboard"
 msgid "Ctrl"
 msgstr "Ktrl"
 
-#: ui/ActionDialog.qml:328
+#: ui/ActionDialog.qml:325
 #, kde-format
 msgctxt "@option:check The alt modifier on the keyboard"
 msgid "Alt"
 msgstr "Alt"
 
-#: ui/ActionDialog.qml:335
+#: ui/ActionDialog.qml:332
 #, kde-format
 msgctxt "@option:check The meta modifier on the keyboard"
 msgid "Meta"
 msgstr "Meta"
 
-#: ui/ActionDialog.qml:342
+#: ui/ActionDialog.qml:339
 #, kde-format
 msgctxt "@option:check The shift modifier on the keyboard"
 msgid "Shift"
 msgstr "Majuskl"
 
-#: ui/ActionDialog.qml:358
+#: ui/ActionDialog.qml:355
 #, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
 msgstr "Butono 1"
 
-#: ui/ActionDialog.qml:359
+#: ui/ActionDialog.qml:356
 #, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
 msgstr "Butono 2"
 
-#: ui/ActionDialog.qml:360
+#: ui/ActionDialog.qml:357
 #, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
 msgstr "Butono 3"
 
-#: ui/ActionDialog.qml:369
+#: ui/ActionDialog.qml:366
 #, kde-format
 msgctxt "@info"
 msgid "Act like a scroll wheel on a mouse."
 msgstr ""
 
-#: ui/ActionDialog.qml:378
+#: ui/ActionDialog.qml:375
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
@@ -431,41 +431,50 @@ msgstr "%1%,%2% - %3%×%4%"
 msgid "Resize the tablet area"
 msgstr "Aligrandigi la tabuletan areon"
 
-#: ui/main.qml:39
+#: ui/main.qml:38
 #, kde-format
 msgid "No drawing tablets found"
 msgstr "Trovis neniujn desegnotabulojn"
 
-#: ui/main.qml:40
+#: ui/main.qml:39
 #, kde-format
 msgid "Connect a drawing tablet"
 msgstr "Konekti desegnotabulon"
 
-#: ui/main.qml:48
+#: ui/main.qml:47
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
 msgstr "Testi Tabuleton…"
 
-#: ui/main.qml:97
+#: ui/main.qml:87
+#, kde-format
+msgctxt "@info"
+msgid ""
+"This device is managed by a user-space driver that you installed. Use that "
+"driver to configure the tablet instead of using the settings here, unless "
+"specifically instructed otherwise."
+msgstr ""
+
+#: ui/main.qml:104
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Aparato:"
 
-#: ui/main.qml:165
+#: ui/main.qml:172
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
 msgstr "Ekrano"
 
-#: ui/main.qml:178
+#: ui/main.qml:185
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
 msgstr "Skribilo"
 
-#: ui/main.qml:190
+#: ui/main.qml:197
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pad"

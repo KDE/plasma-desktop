@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-31 00:44+0000\n"
-"PO-Revision-Date: 2025-08-31 23:48+0200\n"
+"POT-Creation-Date: 2025-09-04 00:44+0000\n"
+"PO-Revision-Date: 2025-09-03 20:25+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -226,88 +226,88 @@ msgstr ""
 "Този бутон на таблета се препраща към приложението, което решава какво да се "
 "извърши с него."
 
-#: ui/ActionDialog.qml:250
+#: ui/ActionDialog.qml:248
 #, kde-format
 msgid "Up:"
 msgstr "Нагоре:"
 
-#: ui/ActionDialog.qml:264
+#: ui/ActionDialog.qml:261
 #, kde-format
 msgid "Down:"
 msgstr "Надолу:"
 
-#: ui/ActionDialog.qml:277
+#: ui/ActionDialog.qml:274
 #, kde-format
 msgid "Speed:"
 msgstr "Скорост:"
 
-#: ui/ActionDialog.qml:292
+#: ui/ActionDialog.qml:289
 #, kde-format
 msgctxt "@action:inmenu Left mouse click"
 msgid "Left-click"
 msgstr "Кликване с ляв бутон"
 
-#: ui/ActionDialog.qml:293
+#: ui/ActionDialog.qml:290
 #, kde-format
 msgctxt "@action:inmenu Middle mouse click"
 msgid "Middle-click"
 msgstr "Кликване със среден бутон"
 
-#: ui/ActionDialog.qml:294
+#: ui/ActionDialog.qml:291
 #, kde-format
 msgctxt "@action:inmenu Right mouse click"
 msgid "Right-click"
 msgstr "Кликване с десен бутон"
 
-#: ui/ActionDialog.qml:321
+#: ui/ActionDialog.qml:318
 #, kde-format
 msgctxt "@option:check The ctrl modifier on the keyboard"
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: ui/ActionDialog.qml:328
+#: ui/ActionDialog.qml:325
 #, kde-format
 msgctxt "@option:check The alt modifier on the keyboard"
 msgid "Alt"
 msgstr "Alt"
 
-#: ui/ActionDialog.qml:335
+#: ui/ActionDialog.qml:332
 #, kde-format
 msgctxt "@option:check The meta modifier on the keyboard"
 msgid "Meta"
 msgstr "Мета"
 
-#: ui/ActionDialog.qml:342
+#: ui/ActionDialog.qml:339
 #, kde-format
 msgctxt "@option:check The shift modifier on the keyboard"
 msgid "Shift"
 msgstr "Shift"
 
-#: ui/ActionDialog.qml:358
+#: ui/ActionDialog.qml:355
 #, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
 msgstr "Бутон 1"
 
-#: ui/ActionDialog.qml:359
+#: ui/ActionDialog.qml:356
 #, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
 msgstr "Бутон 2"
 
-#: ui/ActionDialog.qml:360
+#: ui/ActionDialog.qml:357
 #, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
 msgstr "Бутон 3"
 
-#: ui/ActionDialog.qml:369
+#: ui/ActionDialog.qml:366
 #, kde-format
 msgctxt "@info"
 msgid "Act like a scroll wheel on a mouse."
 msgstr "Действа като колелце за превъртане на мишка."
 
-#: ui/ActionDialog.qml:378
+#: ui/ActionDialog.qml:375
 #, kde-format
 msgctxt "@info"
 msgid "This button is disabled and will not do anything."
@@ -425,63 +425,67 @@ msgstr "%1%,%2% - %3%×%4%"
 msgid "Resize the tablet area"
 msgstr "Преоразмеряване на екранната област"
 
-#: ui/main.qml:39
+#: ui/main.qml:38
 #, kde-format
 msgid "No drawing tablets found"
 msgstr "Не е намерен таблет за чертане."
 
-#: ui/main.qml:40
+#: ui/main.qml:39
 #, kde-format
 msgid "Connect a drawing tablet"
 msgstr "Свързване на таблет за чертане."
 
-#: ui/main.qml:48
+#: ui/main.qml:47
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
 msgstr "Тестване на таблета…"
 
-#: ui/main.qml:97
+#: ui/main.qml:87
+#, kde-format
+msgctxt "@info"
+msgid ""
+"This device is managed by a user-space driver that you installed. Use that "
+"driver to configure the tablet instead of using the settings here, unless "
+"specifically instructed otherwise."
+msgstr ""
+
+#: ui/main.qml:104
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Устройство:"
 
-#: ui/main.qml:165
+#: ui/main.qml:172
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
 msgstr "Дисплей"
 
-#: ui/main.qml:178
+#: ui/main.qml:185
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
 msgstr "Писалка"
 
-#: ui/main.qml:190
+#: ui/main.qml:197
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
 msgstr "Подложка"
 
 #: ui/PadTab.qml:37
-#, fuzzy, kde-format
-#| msgid "Pad dial %1:"
+#, kde-format
 msgid "Pad ring %1:"
-msgstr "Циферблат на таблет %1:"
+msgstr "Pad ring %1:"
 
 #: ui/PadTab.qml:60
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pad button 0'"
-#| msgid "pad dial %1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "ring/dial 0'"
 msgid "pad ring/dial %1"
-msgstr "циферблат на таблет %1"
+msgstr "pad ring/dial %1"
 
 #: ui/PadTab.qml:100
 #, kde-format
@@ -661,16 +665,14 @@ msgid "Tablet Tester"
 msgstr "Тестване на таблет"
 
 #: ui/Tester.qml:48
-#, fuzzy, kde-format
-#| msgid "Stylus press X=%1 Y=%2"
+#, kde-format
 msgctxt ""
 "A tablet stylus was pressed onto the surface X=[x position] Y=[y position]"
 msgid "Stylus press X=%1 Y=%2"
 msgstr "Натиск с писец X=%1 Y=%2"
 
 #: ui/Tester.qml:58
-#, fuzzy, kde-format
-#| msgid "Stylus release X=%1 Y=%2"
+#, kde-format
 msgctxt ""
 "A tablet stylus has 'released' or was lifted from the surface X=[x position] "
 "Y=[y position]"
@@ -678,8 +680,7 @@ msgid "Stylus release X=%1 Y=%2"
 msgstr "Отпускане на писец X=%1 Y=%2"
 
 #: ui/Tester.qml:68
-#, fuzzy, kde-format
-#| msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
+#, kde-format
 msgctxt ""
 "A tablet stylus has moved over the surface X=[x position] Y=[y position] "
 "P=[pressure] TX=[tilt x] TY=[tilt y]"
@@ -687,22 +688,19 @@ msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 msgstr "Преместване с писец X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
 #: ui/Tester.qml:75
-#, fuzzy, kde-format
-#| msgid "Pad button press B=%1"
+#, kde-format
 msgctxt "A tablet pad's button has been pressed B=[the button number]"
 msgid "Pad button press B=%1"
 msgstr "Бутон на таблет натискане на B=%1"
 
 #: ui/Tester.qml:77
-#, fuzzy, kde-format
-#| msgid "Pad button release B=%1"
+#, kde-format
 msgctxt "A tablet pad's button has been released B=[the button number]"
 msgid "Pad button release B=%1"
 msgstr "Бутон на таблет освобождаване на B=%1"
 
 #: ui/Tester.qml:83
-#, fuzzy, kde-format
-#| msgid "Pad dial moved V120=%1"
+#, kde-format
 msgctxt ""
 "A tablet pad's dial has moved, V120 here refers to 'Value 120' which is a "
 "technical term that should be kept as is"
@@ -710,12 +708,7 @@ msgid "Pad dial moved V120=%1"
 msgstr "Циферблат на таблет преместване V120=%1"
 
 #: ui/Tester.qml:219
-#, fuzzy, kde-format
-#| msgid ""
-#| "## Legend:\n"
-#| "# X, Y - event coordinate\n"
-#| "# P - pressure\n"
-#| "# TX,TY - tilt\n"
+#, kde-format
 msgctxt "The tablet tester legend which is shown on start-up"
 msgid ""
 "## Legend:\n"
@@ -729,9 +722,7 @@ msgstr ""
 "# TX,TY - наклон\n"
 
 #: ui/Tester.qml:225
-#, fuzzy, kde-format
-#| msgctxt "Clear the event log"
-#| msgid "Clear"
+#, kde-format
 msgctxt "Clear the tablet tester event log"
 msgid "Clear"
 msgstr "Изчистване"

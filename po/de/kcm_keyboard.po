@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-22 00:43+0000\n"
+"POT-Creation-Date: 2025-09-04 00:44+0000\n"
 "PO-Revision-Date: 2025-08-03 22:14+0200\n"
 "Last-Translator: Philipp Kiemle <l10n@prly.mozmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -407,7 +407,7 @@ msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
 msgstr "Belegungskürzel ändern:"
 
-#: ui/main.qml:411
+#: ui/main.qml:410
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
@@ -469,25 +469,25 @@ msgid "Shortcuts"
 msgstr "Kurzbefehle"
 
 # bearbeiten?
-#: ui/Switching.qml:91 ui/Switching.qml:153
+#: ui/Switching.qml:91 ui/Switching.qml:151
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Change layout:"
 msgstr "Tastaturbelegung ändern:"
 
-#: ui/Switching.qml:112
+#: ui/Switching.qml:111
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Switch to last used layout:"
 msgstr "Auf zuletzt verwendete Tastaturbelegung umschalten:"
 
-#: ui/Switching.qml:133
+#: ui/Switching.qml:131
 #, kde-format
 msgctxt "@title:group"
 msgid "Legacy Shortcuts"
 msgstr "Ältere Kurzbefehle"
 
-#: ui/Switching.qml:141
+#: ui/Switching.qml:139
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -502,13 +502,13 @@ msgstr ""
 ">Wenn Sie diese Kurzbefehle festlegen, gelangen Sie auf die Seite mit den "
 "Tastenzuordnungen."
 
-#: ui/Switching.qml:182
+#: ui/Switching.qml:180
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Alternative symbols:"
 msgstr "Alternative Symbole:"
 
-#: ui/Switching.qml:208
+#: ui/Switching.qml:206
 #, kde-format
 msgctxt "@info"
 msgid ""
