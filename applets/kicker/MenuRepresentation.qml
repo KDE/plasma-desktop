@@ -293,6 +293,39 @@ PlasmaComponents3.ScrollView {
                 }
             }
         }
+
+        Item {
+            height: parent.height
+            width: searchField.defaultWidth
+
+            PlasmaExtras.PlaceholderMessage {
+                id: noMatchesPlaceholder
+
+                property bool searchRunning: false
+
+                anchors.centerIn: parent
+                visible: searchField.text !== "" && runnerColumns.width < 1 && (!searchRunning || visible)
+
+                iconName: "edit-none"
+                text: i18nc("@info:status", "No matches")
+
+                Connections {
+                    target: runnerModel
+
+                    function onQueryFinished() {
+                        noMatchesPlaceholder.searchRunning = false
+                    }
+                }
+
+                Connections {
+                    target: searchField
+
+                    function onTextChanged() {
+                        noMatchesPlaceholder.searchRunning = searchField.text !== ""
+                    }
+                }
+            }
+        }
     }
 
     PlasmaExtras.SearchField {
