@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-04 00:44+0000\n"
-"PO-Revision-Date: 2025-08-08 02:01+0900\n"
+"PO-Revision-Date: 2025-09-05 17:11+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.07.70\n"
+"X-Generator: Lokalize 25.11.70\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -154,12 +154,10 @@ msgid "pen button %1"
 msgstr "畫筆按鈕 %1"
 
 #: ui/ActionDialog.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@title Select the action for the tablet dial"
-#| msgid "Select Dial Action"
+#, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial/Ring Action"
-msgstr "選擇旋鈕動作"
+msgstr "選擇旋鈕/觸控環動作"
 
 #: ui/ActionDialog.qml:28
 #, kde-format
@@ -242,7 +240,7 @@ msgstr "下："
 #: ui/ActionDialog.qml:274
 #, kde-format
 msgid "Speed:"
-msgstr ""
+msgstr "速度："
 
 #: ui/ActionDialog.qml:289
 #, kde-format
@@ -449,6 +447,8 @@ msgid ""
 "driver to configure the tablet instead of using the settings here, unless "
 "specifically instructed otherwise."
 msgstr ""
+"這台裝置由您所安裝的使用者驅動程式所管理。請使用該驅動程式的設定來配置繪圖"
+"板，除非該驅動程式有請您使用此處的設定。"
 
 #: ui/main.qml:104
 #, kde-format
@@ -475,22 +475,17 @@ msgid "Pad"
 msgstr "繪圖板"
 
 #: ui/PadTab.qml:37
-#, fuzzy, kde-format
-#| msgid "Pad dial %1:"
+#, kde-format
 msgid "Pad ring %1:"
-msgstr "繪圖板旋鈕 %1："
+msgstr "繪圖板觸控環 %1："
 
 #: ui/PadTab.qml:60
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pad button 0'"
-#| msgid "pad dial %1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "ring/dial 0'"
 msgid "pad ring/dial %1"
-msgstr "繪圖板旋鈕 %1"
+msgstr "繪圖板觸控環/旋鈕 %1"
 
 #: ui/PadTab.qml:100
 #, kde-format
