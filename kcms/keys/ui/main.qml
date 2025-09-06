@@ -41,18 +41,16 @@ KCM.AbstractKCM {
             enabled: !exportActive
             icon.name: "document-import-symbolic"
             text: i18nc("@action:button Import shortcut scheme", "Import…")
-            // TODO: enable once Kirigami actions can have Accessible.name set (QT 6.8)
-            // Accessible.name: i18nc("@action:button accessible", "Import shortcut scheme")
+            Accessible.name: i18nc("@action:button accessible", "Import shortcut scheme")
             onTriggered: importSheet.open()
         }, Kirigami.Action {
             icon.name: exportActive ? "dialog-cancel-symbolic" : "document-export-symbolic"
             text: exportActive
                   ? i18nc("@action:button", "Cancel Export")
                   : i18nc("@action:button Export shortcut scheme", "Export…")
-            // TODO: enable once Kirigami actions can have Accessible.name set  (QT 6.8)
-            // Accessible.name: exportActive
-            //     ? text
-            //     : i18nc("@action:button accessible", "Export shortcut scheme")
+            Accessible.name: exportActive
+                 ? text
+                 : i18nc("@action:button accessible", "Export shortcut scheme")
             onTriggered: {
                 if (exportActive) {
                     exportActive = false
@@ -124,8 +122,7 @@ KCM.AbstractKCM {
                 Kirigami.Action {
                     icon.name: "document-export-symbolic"
                     text: i18nc("@action:button Export shortcut scheme", "Export")
-                    // TODO: enable once Kirigami actions can have Accessible.name set  (QT 6.8)
-                    // Accessible.name: i18nc("@action:button accessible", "Export shortcut scheme")
+                    Accessible.name: i18nc("@action:button accessible", "Export shortcut scheme")
 
                     onTriggered: {
                         shortcutSchemeFileDialogLoader.save = true
@@ -421,10 +418,9 @@ KCM.AbstractKCM {
 
         property Kirigami.Action addCommandAction: Kirigami.Action {
             text: addCommandDialog.editing ? i18n("Save") : i18n("Add")
-            // TODO: enable once Kirigami actions can have Accessible.name set  (QT 6.8)
-            // Accessible.Name: addCommandDialog.editing
-            //                  ? i18nc("@action:button accessible", "Save command")
-            //                  : i18nc("@action:button accessible", "Add command")
+            Accessible.name: addCommandDialog.editing
+                             ? i18nc("@action:button accessible", "Save command")
+                             : i18nc("@action:button accessible", "Add command")
             icon.name: addCommandDialog.editing ? "dialog-ok" : "list-add"
             enabled: cmdField.length > 0
             onTriggered: {
@@ -547,11 +543,10 @@ KCM.AbstractKCM {
          customFooterActions: [
              Kirigami.Action {
                 text: schemeBox.customSchemeSelected ? i18n("Select File…") : i18n("Import")
-                // TODO: enable once Kirigami actions can have Accessible.name set  (QT 6.8)
-                // Accessible.Name: schemeBox.customSchemeSelected
-                //                  ? i18nc("@action:button accessible", "Select shortcut scheme file")
-                //                  : i18nc("@action:button accessible", "Add shortcut scheme")
-                // Accessible.Role: Accessible.MenuItem
+                Accessible.name: schemeBox.customSchemeSelected
+                                 ? i18nc("@action:button accessible", "Select shortcut scheme file")
+                                 : i18nc("@action:button accessible", "Add shortcut scheme")
+                Accessible.role: Accessible.MenuItem
 
                 onTriggered: {
                     if (schemeBox.customSchemeSelected) {

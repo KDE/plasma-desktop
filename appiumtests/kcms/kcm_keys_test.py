@@ -130,7 +130,7 @@ class KCMTest(unittest.TestCase):
         command = "echo appiumtest > /dev/null"
         self.driver.find_element(AppiumBy.NAME, "Command").send_keys(command)
         time.sleep(1)
-        self.driver.find_element(AppiumBy.NAME, "Add").click()
+        self.driver.find_element(AppiumBy.NAME, "Add command").click()
 
         # Assign a shortcut
         self.driver.find_element(AppiumBy.NAME, f"{command}:")
