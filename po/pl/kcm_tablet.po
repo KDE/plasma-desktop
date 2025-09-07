@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-04 00:44+0000\n"
-"PO-Revision-Date: 2025-08-16 07:04+0200\n"
+"PO-Revision-Date: 2025-09-06 05:15+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -152,12 +152,10 @@ msgid "pen button %1"
 msgstr "przycisk rysika %1"
 
 #: ui/ActionDialog.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@title Select the action for the tablet dial"
-#| msgid "Select Dial Action"
+#, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial/Ring Action"
-msgstr "Wybierz działanie pokrętła"
+msgstr "Wybierz działanie pokrętła/pierścienia"
 
 #: ui/ActionDialog.qml:28
 #, kde-format
@@ -242,7 +240,7 @@ msgstr "Na dół:"
 #: ui/ActionDialog.qml:274
 #, kde-format
 msgid "Speed:"
-msgstr ""
+msgstr "Szybkość:"
 
 #: ui/ActionDialog.qml:289
 #, kde-format
@@ -452,6 +450,9 @@ msgid ""
 "driver to configure the tablet instead of using the settings here, unless "
 "specifically instructed otherwise."
 msgstr ""
+"To urządzenie jest zarządzane przez sterownik użytkownika, który sam "
+"wgrałeś. Użyj tego sterownika, aby ustawić tablet zamiast ustawień tutaj, "
+"chyba że ktoś wyraźnie powiedział inaczej."
 
 #: ui/main.qml:104
 #, kde-format
@@ -478,22 +479,17 @@ msgid "Pad"
 msgstr "Wypełnienie"
 
 #: ui/PadTab.qml:37
-#, fuzzy, kde-format
-#| msgid "Pad dial %1:"
+#, kde-format
 msgid "Pad ring %1:"
-msgstr "Pokrętło płytki %1:"
+msgstr "Pierścień płytki %1:"
 
 #: ui/PadTab.qml:60
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pad button 0'"
-#| msgid "pad dial %1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "ring/dial 0'"
 msgid "pad ring/dial %1"
-msgstr "pokrętło płytki %1"
+msgstr "pokrętło/pierścień płytki %1"
 
 #: ui/PadTab.qml:100
 #, kde-format
