@@ -11,6 +11,7 @@ import QtQuick.Controls as QQC2
 import org.kde.kcmutils as KCM
 import org.kde.kirigami as Kirigami
 import org.kde.kquickcontrols as KQuickControls
+import org.kde.kwindowsystem
 
 Kirigami.FormLayout {
     id: pageLayout
@@ -110,6 +111,7 @@ Kirigami.FormLayout {
                 text: i18nc("@option:check", "Enable focus tracking")
                 checked: kcm.zoomMagnifierSettings.zoomEnableFocusTracking
                 onCheckedChanged: kcm.zoomMagnifierSettings.zoomEnableFocusTracking = checked
+                visible: KWindowSystem.isPlatformX11
 
                 KCM.SettingStateBinding {
                     configObject: kcm.zoomMagnifierSettings
