@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-27 00:45+0000\n"
-"PO-Revision-Date: 2025-05-18 20:57+0530\n"
+"PO-Revision-Date: 2025-09-07 18:41+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
-"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: contents/activitymanager/ActivityItem.qml:204
 #, kde-format
@@ -111,7 +111,7 @@ msgstr "%1 எனும் இணையதளத்தைத் திற"
 #, kde-format
 msgctxt "@title:group"
 msgid "Website"
-msgstr ""
+msgstr "இணையதளம்"
 
 #: contents/configuration/AboutPlugin.qml:153
 #, kde-format
@@ -733,12 +733,10 @@ msgid "Close Widget Explorer"
 msgstr "பிளாஸ்மாய்ட் உலாவியை மூடு"
 
 #: contents/explorer/WidgetExplorer.qml:208
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox accessible"
-#| msgid "Search Widgets"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Search through widgets"
-msgstr "பிளாஸ்மாய்டுகளில் தேடு"
+msgstr "பிளாஸ்மாய்டுகளின் பட்டியலில் தேடு"
 
 #: contents/explorer/WidgetExplorer.qml:237
 #, kde-format
@@ -806,9 +804,7 @@ msgid "Never show clock"
 msgstr "கடிகாரத்தை ஒருபோதும் காட்டாதே"
 
 #: contents/lockscreen/config.qml:71
-#, fuzzy, kde-format
-#| msgctxt "@title: group"
-#| msgid "Media controls:"
+#, kde-format
 msgctxt "@title: group UI controls for playback of multimedia content"
 msgid "Media controls:"
 msgstr "ஊடக‍ கட்டுப்படுத்திகள்:"

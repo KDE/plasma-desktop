@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-22 00:44+0000\n"
-"PO-Revision-Date: 2025-08-27 17:49+0200\n"
+"PO-Revision-Date: 2025-09-01 14:11+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -53,17 +53,17 @@ msgstr "Rotellina"
 #: device.cpp:20
 #, kde-format
 msgid "Arcade Stick"
-msgstr ""
+msgstr "Joystick da sala giochi"
 
 #: device.cpp:21
 #, kde-format
 msgid "Flight Stick"
-msgstr ""
+msgstr "Joystick per il volo"
 
 #: device.cpp:22
 #, kde-format
 msgid "Dance Pad"
-msgstr ""
+msgstr "Tappetino da ballo"
 
 #: device.cpp:23
 #, kde-format
@@ -73,7 +73,7 @@ msgstr "Chitarra"
 #: device.cpp:24
 #, kde-format
 msgid "Drum Kit"
-msgstr ""
+msgstr "Batteria"
 
 #: device.cpp:25
 #, kde-format
@@ -83,7 +83,7 @@ msgstr ""
 #: device.cpp:26
 #, kde-format
 msgid "Throttle"
-msgstr ""
+msgstr "Acceleratore"
 
 #: device.cpp:31
 #, kde-format
@@ -133,22 +133,22 @@ msgstr "Google Stadia"
 #: device.cpp:40
 #, kde-format
 msgid "NVidia Shield"
-msgstr ""
+msgstr "NVidia Shield"
 
 #: device.cpp:41
 #, kde-format
 msgid "Switch Left Joycon"
-msgstr ""
+msgstr "Controller sinistro per Switch"
 
 #: device.cpp:42
 #, kde-format
 msgid "Switch Right Joycon"
-msgstr ""
+msgstr "Controller destro per Switch"
 
 #: device.cpp:43
 #, kde-format
 msgid "Switch Paired Joycon"
-msgstr ""
+msgstr "Controller per Switch accoppiato"
 
 #: device.cpp:48
 #, kde-format
@@ -196,16 +196,13 @@ msgstr "Pulsante di inizio"
 #, kde-format
 msgctxt "The button under the game controller's left analog stick"
 msgid "Left analog stick"
-msgstr ""
+msgstr "Levetta analogica sinistra"
 
 #: device.cpp:56
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label Visual representation of the axis position for the right axis"
-#| msgid "Right position:"
+#, kde-format
 msgctxt "The button under the game controller's right analog stick"
 msgid "Right analog stick"
-msgstr "Posizione a destra:"
+msgstr "Levetta analogica destra"
 
 #: device.cpp:57
 #, kde-format
@@ -249,7 +246,7 @@ msgctxt ""
 "The game controller's miscellaneous button (Share on Xbox, mic on "
 "Playstation/Luna, capture on Switch)"
 msgid "Miscellaneous button"
-msgstr ""
+msgstr "Pulsante vario"
 
 #: device.cpp:65
 #, kde-format
@@ -279,7 +276,7 @@ msgstr ""
 #, kde-format
 msgctxt "The button under the game controller's touchpad"
 msgid "Touchpad button"
-msgstr ""
+msgstr "Pulsante del touchpad"
 
 #: device.cpp:73
 #, kde-format
