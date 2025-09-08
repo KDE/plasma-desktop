@@ -54,7 +54,6 @@ Name[tg]=Лавҳаи ламсӣ
 Name[tr]=Dokunmatik Yüzey
 Name[uk]=Сенсорна панель
 Name[vi]=Bàn cảm ứng
-Name[x-test]=xxTouchpadxx
 Name[zh_CN]=触摸板
 Name[zh_TW]=觸控板
 Icon=preferences-desktop-touchpad
@@ -93,7 +92,6 @@ Name[sv]=Aktivera tryckplatta
 Name[ta]=தொடுபலகையை இயக்கு
 Name[tr]=Dokunmatik Yüzeyi Etkinleştir
 Name[uk]=Увімкнути сенсорну панель
-Name[x-test]=xxEnable Touchpadxx
 Name[zh_CN]=启用触摸板
 Name[zh_TW]=開啟觸控板
 Exec=dbus-send --type=method_call --print-reply --dest=org.kde.touchpad /modules/kded_touchpad org.kde.touchpad.enable
@@ -131,7 +129,6 @@ Name[sv]=Aktivera tryckplatta
 Name[ta]=தொடுபலகையை இயக்கு
 Name[tr]=Dokunmatik Yüzeyi Etkinleştir
 Name[uk]=Увімкнути сенсорну панель
-Name[x-test]=xxEnable Touchpadxx
 Name[zh_CN]=启用触摸板
 Name[zh_TW]=開啟觸控板
 Exec=dbus-send --type=method_call --print-reply --dest=org.kde.touchpad /modules/kded_touchpad org.kde.touchpad.disable
@@ -169,7 +166,6 @@ Name[sv]=Aktivera tryckplatta
 Name[ta]=தொடுபலகையை இயக்கு
 Name[tr]=Dokunmatik Yüzeyi Etkinleştir
 Name[uk]=Увімкнути сенсорну панель
-Name[x-test]=xxEnable Touchpadxx
 Name[zh_CN]=启用触摸板
 Name[zh_TW]=開啟觸控板
 Exec=dbus-send --type=method_call --print-reply --dest=org.kde.touchpad /modules/kded_touchpad org.kde.touchpad.toggle
