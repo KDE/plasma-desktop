@@ -192,7 +192,6 @@ PlasmaComponents3.ScrollView {
             anchors.top: parent.top
 
             minimumWidth: searchField.defaultWidth
-            maximumWidth: Math.round(minimumWidth * 1.5)
             height: ((rootModel.count - rootModel.separatorCount) * itemHeight) + (rootModel.separatorCount * separatorHeight)
 
             visible: searchField.text === ""

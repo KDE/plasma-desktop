@@ -17,7 +17,7 @@ FocusScope {
     id: itemList
 
     property real minimumWidth: Kirigami.Units.gridUnit * 14
-    property real maximumWidth: minimumWidth * 2
+    property real maximumWidth: Math.round(minimumWidth * 1.5)
 
     width: minimumWidth
     implicitHeight: listView.contentHeight
