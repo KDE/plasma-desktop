@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.16)
 
 project(plasma-desktop)
 
-set(PROJECT_VERSION "6.4.4")
+set(PROJECT_VERSION "6.4.5")
 
 set(PROJECT_DEP_VERSION "6.4.4")
 set(QT_MIN_VERSION "6.8.0")
