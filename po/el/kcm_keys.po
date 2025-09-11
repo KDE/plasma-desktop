@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-27 00:45+0000\n"
+"POT-Creation-Date: 2025-09-11 00:44+0000\n"
 "PO-Revision-Date: 2024-09-13 18:18+0300\n"
 "Last-Translator: Antonis G. <capoiosct@gmail.com>\n"
 "Language-Team: el <kde-i18n-el@kde.org>\n"
@@ -159,44 +159,58 @@ msgctxt "@action:button Import shortcut scheme"
 msgid "Import…"
 msgstr "Εισαγωγή…"
 
-#: ui/main.qml:50
+#: ui/main.qml:44
+#, fuzzy, kde-format
+#| msgid "Import Shortcut Scheme"
+msgctxt "@action:button accessible"
+msgid "Import shortcut scheme"
+msgstr "Εισαγωγή σχεδίου συντόμευσης"
+
+#: ui/main.qml:49
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Export"
 msgstr "Ακύρωση εξαγωγής"
 
-#: ui/main.qml:51
+#: ui/main.qml:50
 #, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export…"
 msgstr "Εξαγωγή…"
 
-#: ui/main.qml:68
+#: ui/main.qml:53 ui/main.qml:125
+#, fuzzy, kde-format
+#| msgid "Export Shortcut Scheme"
+msgctxt "@action:button accessible"
+msgid "Export shortcut scheme"
+msgstr "Εξαγωγή σχεδίου συντόμευσης"
+
+#: ui/main.qml:66
 #, kde-format
 msgctxt "@action:button Add new shortcut"
 msgid "Add New"
 msgstr "Προσθήκη νέου"
 
-#: ui/main.qml:76
+#: ui/main.qml:74
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Application…'"
 msgid "Application…"
 msgstr "Εφαρμογή…"
 
-#: ui/main.qml:77
+#: ui/main.qml:75
 #, fuzzy, kde-format
 #| msgid "Applications"
 msgctxt "@action:menu accessible"
 msgid "Add new application"
 msgstr "Εφαρμογές"
 
-#: ui/main.qml:84
+#: ui/main.qml:82
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
 msgid "Command or Script…"
 msgstr "Εντολή ή σενάριο…"
 
-#: ui/main.qml:85
+#: ui/main.qml:83
 #, fuzzy, kde-format
 #| msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
 #| msgid "Command or Script…"
@@ -204,12 +218,12 @@ msgctxt "@action:menu accessible"
 msgid "Add new command or script"
 msgstr "Εντολή ή σενάριο…"
 
-#: ui/main.qml:106
+#: ui/main.qml:104
 #, kde-format
 msgid "Cannot export scheme while there are unsaved changes"
 msgstr "Αδυναμία εξαγωγής σχεδίου ενώ υπάρχουν μη αποθηκευμένες αλλαγές"
 
-#: ui/main.qml:119
+#: ui/main.qml:117
 #, kde-format
 msgid ""
 "Select the components below that should be included in the exported scheme"
@@ -217,150 +231,165 @@ msgstr ""
 "Επιλογή των παρακάτω εξαρτημάτων που πρέπει να συμπεριληφθούν στο εξαγόμενο "
 "σχήμα"
 
-#: ui/main.qml:126
+#: ui/main.qml:124
 #, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export"
 msgstr "Εξαγωγή"
 
-#: ui/main.qml:217
+#: ui/main.qml:214
 #, kde-format
 msgctxt ""
 "@option:check accessible export shortcuts %1 is application/group name"
 msgid "Export %1"
 msgstr "Εξαγωγή %1"
 
-#: ui/main.qml:226
+#: ui/main.qml:223
 #, kde-format
 msgctxt "@action:button accessible %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "Επεξεργασία εντολής για %1"
 
-#: ui/main.qml:242
+#: ui/main.qml:239
 #, kde-format
 msgctxt "@info:tooltip %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "Επεξεργασία εντολής για %1"
 
-#: ui/main.qml:250
+#: ui/main.qml:247
 #, kde-format
 msgctxt "@action:button accessible %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Κατάργηση όλων των συντομεύσεων για %1"
 
-#: ui/main.qml:260
+#: ui/main.qml:257
 #, kde-format
 msgctxt "@info:tooltip %1 is the text of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Κατάργηση όλων των συντομεύσεων για %1"
 
-#: ui/main.qml:267
+#: ui/main.qml:264
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Undo deletion"
 msgstr "Αναίρεση διαγραφής"
 
-#: ui/main.qml:272
+#: ui/main.qml:269
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo deletion"
 msgstr "Αναίρεση διαγραφής"
 
-#: ui/main.qml:326
+#: ui/main.qml:323
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "Δεν ταιριάζουν αντικείμενα με τους όρους αναζήτησης"
 
-#: ui/main.qml:360
+#: ui/main.qml:357
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr ""
 "Επιλέξτε ένα αντικείμενο από τη λίστα για να δείτε τις συντομεύσεις του εδώ"
 
-#: ui/main.qml:372
+#: ui/main.qml:369
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "Εξαγωγή σχεδίου συντόμευσης"
 
-#: ui/main.qml:372 ui/main.qml:514
+#: ui/main.qml:369 ui/main.qml:510
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Εισαγωγή σχεδίου συντόμευσης"
 
-#: ui/main.qml:374
+#: ui/main.qml:371
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Συντόμευση σχεδίου (*.kksrc)"
 
-#: ui/main.qml:401
+#: ui/main.qml:398
 #, kde-format
 msgid "Edit Command"
 msgstr "Επεξεργασία εντολής"
 
-#: ui/main.qml:401
+#: ui/main.qml:398
 #, kde-format
 msgid "Add Command"
 msgstr "Προσθήκη εντολής"
 
-#: ui/main.qml:423
+#: ui/main.qml:420
 #, kde-format
 msgid "Save"
 msgstr "Αποθήκευση"
 
-#: ui/main.qml:423
+#: ui/main.qml:420
 #, kde-format
 msgid "Add"
 msgstr "Προσθήκη"
 
-#: ui/main.qml:453
+#: ui/main.qml:422
+#, fuzzy, kde-format
+#| msgctxt "@label:textbox accessible"
+#| msgid "Command"
+msgctxt "@action:button accessible"
+msgid "Save command"
+msgstr "Εντολή"
+
+#: ui/main.qml:423
+#, fuzzy, kde-format
+#| msgid "Add Command"
+msgctxt "@action:button accessible"
+msgid "Add command"
+msgstr "Προσθήκη εντολής"
+
+#: ui/main.qml:449
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "Εισάγετε μια εντολή ή επιλέξτε ένα αρχείο δέσμης ενεργειών:"
 
-#: ui/main.qml:462
+#: ui/main.qml:458
 #, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
 msgstr ""
 
-#: ui/main.qml:468
+#: ui/main.qml:464
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "Εντολή"
 
-#: ui/main.qml:475
+#: ui/main.qml:471
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Επιλογή…"
 
-#: ui/main.qml:476
+#: ui/main.qml:472
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Επιλογή αρχείου δέσμης ενεργειών"
 
-#: ui/main.qml:484
+#: ui/main.qml:480
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
 msgstr ""
 
-#: ui/main.qml:485
+#: ui/main.qml:481
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
 msgstr ""
 
-#: ui/main.qml:497
+#: ui/main.qml:493
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Επιλογή αρχείου σεναρίου"
 
-#: ui/main.qml:499
+#: ui/main.qml:495
 #, kde-format
 msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
@@ -368,25 +397,40 @@ msgctxt ""
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "Αρχεία σεναρίου (.sh, .bash, .zsh, etc.) (*.*sh)"
 
-#: ui/main.qml:522
+#: ui/main.qml:518
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Επιλογή του σχεδίου για εισαγωγή:"
 
-#: ui/main.qml:541
+#: ui/main.qml:537
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Προσαρμοσμένο σχέδιο"
 
-#: ui/main.qml:549
+#: ui/main.qml:545
 #, kde-format
 msgid "Select File…"
 msgstr "Επιλογή αρχείου…"
 
-#: ui/main.qml:549
+#: ui/main.qml:545
 #, kde-format
 msgid "Import"
 msgstr "Εισαγωγή"
+
+#: ui/main.qml:547
+#, fuzzy, kde-format
+#| msgctxt "@action:button accessible"
+#| msgid "Delete shortcut"
+msgctxt "@action:button accessible"
+msgid "Select shortcut scheme file"
+msgstr "Διαγραφή συντόμευσης"
+
+#: ui/main.qml:548
+#, fuzzy, kde-format
+#| msgid "Export Shortcut Scheme"
+msgctxt "@action:button accessible"
+msgid "Add shortcut scheme"
+msgstr "Εξαγωγή σχεδίου συντόμευσης"
 
 #: ui/ShortcutActionDelegate.qml:34
 #, kde-format

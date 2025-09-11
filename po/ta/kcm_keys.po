@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-27 00:45+0000\n"
+"POT-Creation-Date: 2025-09-11 00:44+0000\n"
 "PO-Revision-Date: 2025-05-18 20:35+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -161,202 +161,231 @@ msgctxt "@action:button Import shortcut scheme"
 msgid "Import…"
 msgstr "இறக்குமதி செய்…"
 
-#: ui/main.qml:50
+#: ui/main.qml:44
+#, fuzzy, kde-format
+#| msgid "Import Shortcut Scheme"
+msgctxt "@action:button accessible"
+msgid "Import shortcut scheme"
+msgstr "சுருக்குவழி திட்டத்தை இறக்குமதி செய்"
+
+#: ui/main.qml:49
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel Export"
 msgstr "ஏற்றுமதியை ரத்து செய்"
 
-#: ui/main.qml:51
+#: ui/main.qml:50
 #, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export…"
 msgstr "ஏற்றுமதி செய்…"
 
-#: ui/main.qml:68
+#: ui/main.qml:53 ui/main.qml:125
+#, fuzzy, kde-format
+#| msgid "Export Shortcut Scheme"
+msgctxt "@action:button accessible"
+msgid "Export shortcut scheme"
+msgstr "சுருக்குவழி திட்டத்தை ஏற்றுமதி செய்"
+
+#: ui/main.qml:66
 #, kde-format
 msgctxt "@action:button Add new shortcut"
 msgid "Add New"
 msgstr "புதியதைச் சேர்"
 
-#: ui/main.qml:76
+#: ui/main.qml:74
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Application…'"
 msgid "Application…"
 msgstr "செயலி…"
 
-#: ui/main.qml:77
+#: ui/main.qml:75
 #, kde-format
 msgctxt "@action:menu accessible"
 msgid "Add new application"
 msgstr "புதிய செயலியை சேர்"
 
-#: ui/main.qml:84
+#: ui/main.qml:82
 #, kde-format
 msgctxt "@action:menu End of the sentence 'Add New Command or Script…'"
 msgid "Command or Script…"
 msgstr "சிறுநிரல் அல்லது கட்டளை…"
 
-#: ui/main.qml:85
+#: ui/main.qml:83
 #, kde-format
 msgctxt "@action:menu accessible"
 msgid "Add new command or script"
 msgstr "புதிய கட்டளையை அல்லது சிறுநிரலை சேர்"
 
-#: ui/main.qml:106
+#: ui/main.qml:104
 #, kde-format
 msgid "Cannot export scheme while there are unsaved changes"
 msgstr "சேமிக்கப்படாத மாற்றங்கள் இருக்கும்போது திட்டத்தை ஏற்றுமதி செய்ய முடியாது"
 
-#: ui/main.qml:119
+#: ui/main.qml:117
 #, kde-format
 msgid ""
 "Select the components below that should be included in the exported scheme"
 msgstr "ஏற்றுமதி செய்யும் திட்டத்தில் இருக்க வேண்டிய கூறுகளை தேர்ந்தெடுக்கவும்"
 
-#: ui/main.qml:126
+#: ui/main.qml:124
 #, kde-format
 msgctxt "@action:button Export shortcut scheme"
 msgid "Export"
 msgstr "ஏற்றுமதி செய்…"
 
-#: ui/main.qml:217
+#: ui/main.qml:214
 #, kde-format
 msgctxt ""
 "@option:check accessible export shortcuts %1 is application/group name"
 msgid "Export %1"
 msgstr "%1 தனை ஏற்றுமதி செய்…"
 
-#: ui/main.qml:226
+#: ui/main.qml:223
 #, kde-format
 msgctxt "@action:button accessible %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "%1-க்கான கட்டளையை திருத்து"
 
-#: ui/main.qml:242
+#: ui/main.qml:239
 #, kde-format
 msgctxt "@info:tooltip %1 is the text of a custom command"
 msgid "Edit command for %1"
 msgstr "%1-க்கான கட்டளையை திருத்த விடும்"
 
-#: ui/main.qml:250
+#: ui/main.qml:247
 #, kde-format
 msgctxt "@action:button accessible %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "%1-க்கான அனைத்து சுருக்குவழிகளையும் நீக்கு"
 
-#: ui/main.qml:260
+#: ui/main.qml:257
 #, kde-format
 msgctxt "@info:tooltip %1 is the text of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "%1 எனும் பகுப்புக்கான் அனைத்து சுருக்குவழிகளையும் நீக்கும்"
 
-#: ui/main.qml:267
+#: ui/main.qml:264
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Undo deletion"
 msgstr "நீக்கியதை திரும்பப்பெறு"
 
-#: ui/main.qml:272
+#: ui/main.qml:269
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Undo deletion"
 msgstr "நீக்கியதை திரும்பப்பெற விடும்"
 
-#: ui/main.qml:326
+#: ui/main.qml:323
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "தேடலுக்கு எதுவும் பொருந்தவில்லை"
 
-#: ui/main.qml:360
+#: ui/main.qml:357
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "ஒன்றன் சுருக்குவழிகளை இங்கு காண, பட்டியலிலிருந்து அதை தேர்ந்தெடுக்கவும்"
 
-#: ui/main.qml:372
+#: ui/main.qml:369
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "சுருக்குவழி திட்டத்தை ஏற்றுமதி செய்"
 
-#: ui/main.qml:372 ui/main.qml:514
+#: ui/main.qml:369 ui/main.qml:510
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "சுருக்குவழி திட்டத்தை இறக்குமதி செய்"
 
-#: ui/main.qml:374
+#: ui/main.qml:371
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "சுருக்குவழி திட்டம் (*.kksrc)"
 
-#: ui/main.qml:401
+#: ui/main.qml:398
 #, kde-format
 msgid "Edit Command"
 msgstr "கட்டளையைத் திருத்து"
 
-#: ui/main.qml:401
+#: ui/main.qml:398
 #, kde-format
 msgid "Add Command"
 msgstr "கட்டளையை சேர்"
 
-#: ui/main.qml:423
+#: ui/main.qml:420
 #, kde-format
 msgid "Save"
 msgstr "சேமி"
 
-#: ui/main.qml:423
+#: ui/main.qml:420
 #, kde-format
 msgid "Add"
 msgstr "சேர்"
 
-#: ui/main.qml:453
+#: ui/main.qml:422
+#, fuzzy, kde-format
+#| msgctxt "@label:textbox accessible"
+#| msgid "Command"
+msgctxt "@action:button accessible"
+msgid "Save command"
+msgstr "கட்டளை"
+
+#: ui/main.qml:423
+#, fuzzy, kde-format
+#| msgid "Add Command"
+msgctxt "@action:button accessible"
+msgid "Add command"
+msgstr "கட்டளையை சேர்"
+
+#: ui/main.qml:449
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "கட்டளையையோ சிறுநிரல்கோப்பையோ தேர்ந்தெடுக்கவும்:"
 
-#: ui/main.qml:462
+#: ui/main.qml:458
 #, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
 msgstr "கட்டளை:"
 
-#: ui/main.qml:468
+#: ui/main.qml:464
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "கட்டளை"
 
-#: ui/main.qml:475
+#: ui/main.qml:471
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "தேர்ந்தெடு…"
 
-#: ui/main.qml:476
+#: ui/main.qml:472
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "சிறுநிரல் கோப்பைத் தேர்ந்தெடு"
 
-#: ui/main.qml:484
+#: ui/main.qml:480
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
 msgstr "பெயர்:"
 
-#: ui/main.qml:485
+#: ui/main.qml:481
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
 msgstr "பெயரை இங்கு உள்ளிடவும்"
 
-#: ui/main.qml:497
+#: ui/main.qml:493
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "சிறுநிரல் கோப்பைத் தேர்ந்தெடுப்பது"
 
-#: ui/main.qml:499
+#: ui/main.qml:495
 #, kde-format
 msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
@@ -364,25 +393,40 @@ msgctxt ""
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "சிறுநிரல் கோப்புகள் (.sh, .bash, .zsh போன்றவை) (*.*sh)"
 
-#: ui/main.qml:522
+#: ui/main.qml:518
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "இறக்குமதி செய்யவேண்டியதை தேர்வு செய்யவும்:"
 
-#: ui/main.qml:541
+#: ui/main.qml:537
 #, kde-format
 msgid "Custom Scheme"
 msgstr "தனிப்பட்ட திட்டம்"
 
-#: ui/main.qml:549
+#: ui/main.qml:545
 #, kde-format
 msgid "Select File…"
 msgstr "கோப்பை தேர்ந்தெடு…"
 
-#: ui/main.qml:549
+#: ui/main.qml:545
 #, kde-format
 msgid "Import"
 msgstr "இறக்குமதி"
+
+#: ui/main.qml:547
+#, fuzzy, kde-format
+#| msgctxt "@action:button accessible"
+#| msgid "Delete shortcut"
+msgctxt "@action:button accessible"
+msgid "Select shortcut scheme file"
+msgstr "சுருக்குவழியை நீக்கு"
+
+#: ui/main.qml:548
+#, fuzzy, kde-format
+#| msgid "Export Shortcut Scheme"
+msgctxt "@action:button accessible"
+msgid "Add shortcut scheme"
+msgstr "சுருக்குவழி திட்டத்தை ஏற்றுமதி செய்"
 
 #: ui/ShortcutActionDelegate.qml:34
 #, kde-format
