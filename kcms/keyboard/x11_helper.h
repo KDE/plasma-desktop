@@ -106,6 +106,7 @@ public:
             m_variant = other.m_variant;
             displayName = other.displayName;
             shortcut = other.shortcut;
+            m_inputMethod = other.m_inputMethod;
         }
         return *this;
     }
@@ -143,9 +144,25 @@ public:
     {
         return m_variant;
     }
+
+    QString layoutAndVariant() const
+    {
+        return m_layout + u'_' + m_variant;
+    }
+
     void setVariant(const QString &variant)
     {
         m_variant = variant;
+    }
+
+    QString inputMethod() const
+    {
+        return m_inputMethod;
+    }
+
+    void setInputMethod(const QString &im)
+    {
+        m_inputMethod = im;
     }
 
     bool isEmpty() const
@@ -172,6 +189,7 @@ private:
     QKeySequence shortcut;
     QString m_layout;
     QString m_variant;
+    QString m_inputMethod;
 };
 
 struct LayoutSet {

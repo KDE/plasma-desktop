@@ -23,6 +23,7 @@ class UserLayoutModel final : public QAbstractListModel
         VariantNameRole,
         DisplayNameRole,
         ShortcutRole,
+        InputMethodRole,
     };
 
 public:

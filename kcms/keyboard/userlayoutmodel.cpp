@@ -13,6 +13,9 @@
 #include "x11_helper.h"
 #include "xkb_rules.h"
 
+#include <KConfigGroup>
+#include <KSharedConfig>
+
 UserLayoutModel::UserLayoutModel(KeyboardConfig *config, QObject *parent) noexcept
     : QAbstractListModel(parent)
     , m_selectionModel(new QItemSelectionModel(this))
@@ -56,6 +59,8 @@ QVariant UserLayoutModel::data(const QModelIndex &index, int role) const
         return QVariant::fromValue(layout.getDisplayName());
     } else if (role == Roles::ShortcutRole) {
         return QVariant::fromValue(layout.getShortcut());
+    } else if (role == Roles::InputMethodRole) {
+        return layout.inputMethod();
     }
 
     return QVariant();
@@ -63,7 +68,8 @@ QVariant UserLayoutModel::data(const QModelIndex &index, int role) const
 
 bool UserLayoutModel::setData(const QModelIndex &index, const QVariant &value, int role)
 {
-    if (role != Roles::DisplayNameRole && role != Roles::ShortcutRole && role != Roles::VariantRole) {
+    if (role != Roles::DisplayNameRole && role != Roles::ShortcutRole && role != Roles::VariantRole && role != Roles::InputMethodRole) {
+        qCWarning(KCM_KEYBOARD) << "Cannot set role in UserLayoutModel" << role;
         return false;
     }
 
@@ -92,6 +98,11 @@ bool UserLayoutModel::setData(const QModelIndex &index, const QVariant &value, i
         return true;
     }
 
+    if (role == Roles::InputMethodRole) {
+        layoutUnit.setInputMethod(value.toString());
+        Q_EMIT dataChanged(index, index, {Roles::InputMethodRole});
+        return true;
+    }
     return false;
 }
 
@@ -104,6 +115,7 @@ QHash<int, QByteArray> UserLayoutModel::roleNames() const
         {Roles::VariantNameRole, QByteArrayLiteral("variantName")},
         {Roles::DisplayNameRole, QByteArrayLiteral("displayName")},
         {Roles::ShortcutRole, QByteArrayLiteral("shortcut")},
+        {Roles::InputMethodRole, QByteArrayLiteral("inputMethod")},
     };
 }
 
