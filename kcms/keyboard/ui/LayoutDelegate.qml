@@ -31,6 +31,7 @@ Item {
     required property string variantName
     required property string shortcut
     required property string displayName
+    required property string inputMethod
 
     readonly property var view: ListView.view
     readonly property int keySequenceItemWidth : keySequenceItem.implicitWidth
@@ -103,6 +104,16 @@ Item {
                 keySequence: itemDelegate.shortcut
                 onKeySequenceChanged: itemDelegate.view.maxKeySequenceItemWidthChanged()
                 onCaptureFinished: itemDelegate.model.shortcut = keySequence
+            }
+
+            QQC2.ComboBox {
+                model: KCMKeyboard.VirtualKeyboardsModel
+                currentIndex: Math.max(KCMKeyboard.VirtualKeyboardsModel.inputMethodIndex(itemDelegate.inputMethod), 0)
+                textRole: "display"
+                onActivated: (index) => {
+                    const newOne = model.data(model.index(index, 0), KCMKeyboard.VirtualKeyboardsModel.DesktopFileNameRole);
+                    itemDelegate.model.inputMethod = newOne;
+                }
             }
 
             Kirigami.ActionToolBar {
