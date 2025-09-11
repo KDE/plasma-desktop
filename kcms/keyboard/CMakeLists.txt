@@ -26,8 +26,7 @@ set( kded_keyboard_SRCS
     xkb_rules.cpp
     layoutnames.cpp
 )
-
-kconfig_add_kcfg_files(kded_keyboard_SRCS keyboardsettings.kcfgc GENERATE_MOC)
+kconfig_add_kcfg_files(kded_keyboard_SRCS keyboardsettings.kcfgc virtualkeyboardsettings.kcfgc GENERATE_MOC)
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
@@ -96,6 +95,7 @@ ecm_qt_install_logging_categories(
 kconfig_add_kcfg_files(kcm_keyboard_PART_SRCS workspace_options.kcfgc GENERATE_MOC)
 kconfig_add_kcfg_files(kcm_keyboard_PART_SRCS keyboardsettings.kcfgc GENERATE_MOC)
 kconfig_add_kcfg_files(kcm_keyboard_PART_SRCS keyboardmiscsettings.kcfgc GENERATE_MOC)
+kconfig_add_kcfg_files(kcm_keyboard_PART_SRCS virtualkeyboardsettings.kcfgc GENERATE_MOC)
 
 kcmutils_generate_module_data(kcm_keyboard
     MODULE_DATA_HEADER keyboardsettingsdata.h
@@ -139,12 +139,13 @@ ecm_add_qml_module(kcm_keyboard_declarative
     SOURCES
         keyboardmodel.cpp
         layoutmodel.cpp
+        virtualkeyboardmodel.cpp
         types.h
     DEPENDENCIES
         QtCore
 )
 
-target_link_libraries(kcm_keyboard_declarative PRIVATE kcm_keyboard_static)
+target_link_libraries(kcm_keyboard_declarative PRIVATE kcm_keyboard_static KF6::Service)
 
 ecm_finalize_qml_module(kcm_keyboard_declarative)
 
