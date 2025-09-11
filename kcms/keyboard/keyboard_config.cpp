@@ -117,6 +117,7 @@ bool KeyboardConfig::layoutsSaveNeeded() const
         isSaveNeeded |= m_layouts.at(i).getDisplayName() != m_referenceLayouts.at(i).getDisplayName();
         isSaveNeeded |= m_layouts.at(i).layout() != m_referenceLayouts.at(i).layout();
         isSaveNeeded |= m_layouts.at(i).variant() != m_referenceLayouts.at(i).variant();
+        isSaveNeeded |= m_layouts.at(i).inputMethod() != m_referenceLayouts.at(i).inputMethod();
 
         if (isSaveNeeded) {
             return isSaveNeeded;
@@ -138,10 +139,15 @@ void KeyboardConfig::save()
     QStringList layoutList;
     QStringList variants;
     QStringList displayNames;
+
+    auto inputConfig = KSharedConfig::openConfig(QStringLiteral("kcminputrc"));
+    KConfigGroup config(inputConfig, QStringLiteral("KeyboardInputMethod"));
+
     for (const LayoutUnit &layoutUnit : std::as_const(m_layouts)) {
         layoutList.append(layoutUnit.layout());
         variants.append(layoutUnit.variant());
         displayNames.append(layoutUnit.getRawDisplayName());
+        config.writeEntry(layoutUnit.layoutAndVariant(), layoutUnit.inputMethod());
     }
 
     // QStringLists with a single empty string are serialized as "\\0", avoid that
@@ -169,6 +175,8 @@ void KeyboardConfig::load()
     const QStringList variants = m_settings->variantList();
     const QStringList names = m_settings->displayNames();
 
+    auto inputConfig = KSharedConfig::openConfig(QStringLiteral("kcminputrc"));
+    KConfigGroup config(inputConfig, QStringLiteral("KeyboardInputMethod"));
     m_layouts.clear();
     for (int i = 0; i < layoutStrings.size(); ++i) {
         if (i < variants.size()) {
@@ -180,6 +188,7 @@ void KeyboardConfig::load()
         if (i < names.size() && !names[i].isEmpty() && names[i] != m_layouts[i].layout()) {
             m_layouts[i].setDisplayName(names[i]);
         }
+        m_layouts[i].setInputMethod(config.readEntry(m_layouts[i].layoutAndVariant(), QString()));
     }
 
     // layouts' shortcuts are retrieved from GlobalShortcuts in KCMKeyboardWidget
