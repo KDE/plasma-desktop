@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-04 00:44+0000\n"
-"PO-Revision-Date: 2025-08-14 18:35+0300\n"
+"PO-Revision-Date: 2025-09-11 18:05+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -325,11 +325,7 @@ msgid "Pen Calibration"
 msgstr "Kynän kalibrointi"
 
 #: ui/Calibration.qml:98
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
-#| "revert to default calibration in %1 seconds.</b>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
@@ -337,7 +333,7 @@ msgid ""
 "b>"
 msgstr ""
 "Vahvista uusi kalibrointi napauttamalla kohteita uudestaan.<nl/><nl/"
-"><b>Oletuskalibrointiin palataan %1 sekunnissa.</b>"
+"><b>Oletuskalibrointiin palataan %1 sekunnissa ellei mitään tehdä.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
