@@ -61,7 +61,6 @@ public Q_SLOTS:
     void setShouldShowSwitcher(bool shouldShowSwitcher);
 
     QAbstractItemModel *runningActivitiesModel() const;
-    QAbstractItemModel *stoppedActivitiesModel() const;
 
     void setCurrentActivity(const QString &activity);
     void removeActivity(const QString &activity);
@@ -108,5 +107,4 @@ private:
     QTimer m_dropModeHider;
 
     SortedActivitiesModel *m_runningActivitiesModel = nullptr;
-    SortedActivitiesModel *m_stoppedActivitiesModel = nullptr;
 };
