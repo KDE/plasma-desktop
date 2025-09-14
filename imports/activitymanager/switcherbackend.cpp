@@ -162,8 +162,7 @@ SwitcherBackend::SwitcherBackend(QObject *parent)
     : QObject(parent)
     , m_shouldShowSwitcher(false)
     , m_dropModeActive(false)
-    , m_runningActivitiesModel(new SortedActivitiesModel({KActivities::Info::Running, KActivities::Info::Stopping}, this))
-    , m_stoppedActivitiesModel(new SortedActivitiesModel({KActivities::Info::Stopped, KActivities::Info::Starting}, this))
+    , m_runningActivitiesModel(new SortedActivitiesModel(this))
 {
     registerShortcut(QString::fromLatin1(s_action_name_next_activity),
                      i18n("Walk through activities"),
@@ -356,11 +355,6 @@ QAbstractItemModel *SwitcherBackend::runningActivitiesModel() const
     return m_runningActivitiesModel;
 }
 
-QAbstractItemModel *SwitcherBackend::stoppedActivitiesModel() const
-{
-    return m_stoppedActivitiesModel;
-}
-
 void SwitcherBackend::setCurrentActivity(const QString &activity)
 {
     m_activities.setCurrentActivity(activity);
@@ -404,7 +398,7 @@ void SwitcherBackend::drop(QMimeData *mimeData, int modifiers, const QVariant &a
         }
 
         const QString newActivity = activityId.toString();
-        const QStringList runningActivities = m_activities.runningActivities();
+        const QStringList runningActivities = m_activities.activities();
 
         if (!runningActivities.contains(newActivity)) {
             return;

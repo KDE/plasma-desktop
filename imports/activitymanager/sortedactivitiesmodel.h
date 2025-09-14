@@ -27,7 +27,7 @@ class SortedActivitiesModel : public QSortFilterProxyModel
     Q_PROPERTY(bool inhibitUpdates READ inhibitUpdates WRITE setInhibitUpdates NOTIFY inhibitUpdatesChanged)
 
 public:
-    SortedActivitiesModel(const QList<KActivities::Info::State> &states, QObject *parent = nullptr);
+    SortedActivitiesModel(QObject *parent = nullptr);
     ~SortedActivitiesModel() override;
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
