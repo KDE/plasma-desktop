@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-11 00:44+0000\n"
-"PO-Revision-Date: 2025-09-01 17:41+0300\n"
+"PO-Revision-Date: 2025-09-15 02:11+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -164,8 +164,7 @@ msgid "Import…"
 msgstr "Importuoti…"
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid "Import Shortcut Scheme"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Import shortcut scheme"
 msgstr "Importuoti sparčiųjų klavišų schemą"
@@ -183,8 +182,7 @@ msgid "Export…"
 msgstr "Eksportuoti…"
 
 #: ui/main.qml:53 ui/main.qml:125
-#, fuzzy, kde-format
-#| msgid "Export Shortcut Scheme"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Export shortcut scheme"
 msgstr "Eksportuoti sparčiųjų klavišų schemą"
@@ -330,16 +328,13 @@ msgid "Add"
 msgstr "Pridėti"
 
 #: ui/main.qml:422
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox accessible"
-#| msgid "Command"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Save command"
-msgstr "Komanda"
+msgstr "Įrašyti komandą"
 
 #: ui/main.qml:423
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add command"
 msgstr "Pridėti komandą"
@@ -420,19 +415,16 @@ msgid "Import"
 msgstr "Importuoti"
 
 #: ui/main.qml:547
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible"
-#| msgid "Delete shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Select shortcut scheme file"
-msgstr "Ištrinti spartųjį klavišą"
+msgstr "Pasirinkti sparčiųjų klavišų schemos failą"
 
 #: ui/main.qml:548
-#, fuzzy, kde-format
-#| msgid "Export Shortcut Scheme"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add shortcut scheme"
-msgstr "Eksportuoti sparčiųjų klavišų schemą"
+msgstr "Pridėti sparčiųjų klavišų schemą"
 
 #: ui/ShortcutActionDelegate.qml:34
 #, kde-format
