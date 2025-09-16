@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-27 00:45+0000\n"
+"POT-Creation-Date: 2025-09-16 00:43+0000\n"
 "PO-Revision-Date: 2025-08-06 21:29+0200\n"
 "Last-Translator: Alexander Becker <alex-at-kde-l10n-de@freenet.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -21,12 +21,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.12.3\n"
 
-#: contents/activitymanager/ActivityItem.qml:204
+#: contents/activitymanager/ActivityItem.qml:203
 #, kde-format
 msgid "Currently being used"
 msgstr "Zurzeit verwendet"
 
-#: contents/activitymanager/ActivityItem.qml:244
+#: contents/activitymanager/ActivityItem.qml:243
 #, kde-format
 msgid ""
 "Move to\n"
@@ -35,7 +35,7 @@ msgstr ""
 "Verschieben in\n"
 "diese Aktivität"
 
-#: contents/activitymanager/ActivityItem.qml:274
+#: contents/activitymanager/ActivityItem.qml:273
 #, kde-format
 msgid ""
 "Show also\n"
@@ -44,17 +44,12 @@ msgstr ""
 "Auch anzeigen\n"
 "in dieser Aktivität"
 
-#: contents/activitymanager/ActivityItem.qml:336
+#: contents/activitymanager/ActivityItem.qml:335
 #, kde-format
 msgid "Configure"
 msgstr "Einrichtung"
 
-#: contents/activitymanager/ActivityItem.qml:355
-#, kde-format
-msgid "Stop activity"
-msgstr "Aktivität anhalten"
-
-#: contents/activitymanager/ActivityList.qml:148
+#: contents/activitymanager/ActivityList.qml:147
 #, kde-format
 msgid "Stopped activities:"
 msgstr "Angehaltene Aktivitäten:"
@@ -925,6 +920,9 @@ msgstr "Bearbeitungsmodus beenden"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Fokus der Kontrollleiste sichtbar machen"
+
+#~ msgid "Stop activity"
+#~ msgstr "Aktivität anhalten"
 
 #~ msgid "Author:"
 #~ msgstr "Autor:"

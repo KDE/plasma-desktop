@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-27 00:45+0000\n"
+"POT-Creation-Date: 2025-09-16 00:43+0000\n"
 "PO-Revision-Date: 2020-10-08 11:52+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.08.1\n"
 
-#: contents/activitymanager/ActivityItem.qml:204
+#: contents/activitymanager/ActivityItem.qml:203
 #, kde-format
 msgid "Currently being used"
 msgstr "Kasutatakse praegu"
 
-#: contents/activitymanager/ActivityItem.qml:244
+#: contents/activitymanager/ActivityItem.qml:243
 #, kde-format
 msgid ""
 "Move to\n"
@@ -32,7 +32,7 @@ msgstr ""
 "Liiguta\n"
 "sellesse tegevusse"
 
-#: contents/activitymanager/ActivityItem.qml:274
+#: contents/activitymanager/ActivityItem.qml:273
 #, kde-format
 msgid ""
 "Show also\n"
@@ -41,17 +41,12 @@ msgstr ""
 "Näita ka\n"
 "selles tegevuses"
 
-#: contents/activitymanager/ActivityItem.qml:336
+#: contents/activitymanager/ActivityItem.qml:335
 #, kde-format
 msgid "Configure"
 msgstr "Seadista"
 
-#: contents/activitymanager/ActivityItem.qml:355
-#, kde-format
-msgid "Stop activity"
-msgstr "Peata tegevus"
-
-#: contents/activitymanager/ActivityList.qml:148
+#: contents/activitymanager/ActivityList.qml:147
 #, kde-format
 msgid "Stopped activities:"
 msgstr "Peatatud tegevused:"
@@ -949,6 +944,9 @@ msgstr ""
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr ""
+
+#~ msgid "Stop activity"
+#~ msgstr "Peata tegevus"
 
 #~ msgid "Author:"
 #~ msgstr "Autor:"

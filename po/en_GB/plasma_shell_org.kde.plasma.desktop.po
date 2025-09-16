@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-27 00:45+0000\n"
+"POT-Creation-Date: 2025-09-16 00:43+0000\n"
 "PO-Revision-Date: 2024-10-18 17:02+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: contents/activitymanager/ActivityItem.qml:204
+#: contents/activitymanager/ActivityItem.qml:203
 #, kde-format
 msgid "Currently being used"
 msgstr "Currently being used"
 
-#: contents/activitymanager/ActivityItem.qml:244
+#: contents/activitymanager/ActivityItem.qml:243
 #, kde-format
 msgid ""
 "Move to\n"
@@ -31,7 +31,7 @@ msgstr ""
 "Move to\n"
 "this activity"
 
-#: contents/activitymanager/ActivityItem.qml:274
+#: contents/activitymanager/ActivityItem.qml:273
 #, kde-format
 msgid ""
 "Show also\n"
@@ -40,17 +40,12 @@ msgstr ""
 "Show also\n"
 "in this activity"
 
-#: contents/activitymanager/ActivityItem.qml:336
+#: contents/activitymanager/ActivityItem.qml:335
 #, kde-format
 msgid "Configure"
 msgstr "Configure"
 
-#: contents/activitymanager/ActivityItem.qml:355
-#, kde-format
-msgid "Stop activity"
-msgstr "Stop activity"
-
-#: contents/activitymanager/ActivityList.qml:148
+#: contents/activitymanager/ActivityList.qml:147
 #, kde-format
 msgid "Stopped activities:"
 msgstr "Stopped activities:"
@@ -944,6 +939,9 @@ msgstr "Exit Edit Mode"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Panel Focus Indicator"
+
+#~ msgid "Stop activity"
+#~ msgstr "Stop activity"
 
 #~ msgid "Author:"
 #~ msgstr "Author:"

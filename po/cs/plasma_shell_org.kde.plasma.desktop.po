@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-27 00:45+0000\n"
+"POT-Creation-Date: 2025-09-16 00:43+0000\n"
 "PO-Revision-Date: 2024-10-15 11:00+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -19,12 +19,12 @@ msgstr ""
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
-#: contents/activitymanager/ActivityItem.qml:204
+#: contents/activitymanager/ActivityItem.qml:203
 #, kde-format
 msgid "Currently being used"
 msgstr "V současnosti používaný"
 
-#: contents/activitymanager/ActivityItem.qml:244
+#: contents/activitymanager/ActivityItem.qml:243
 #, kde-format
 msgid ""
 "Move to\n"
@@ -33,7 +33,7 @@ msgstr ""
 "Přesunout\n"
 "do této aktivity"
 
-#: contents/activitymanager/ActivityItem.qml:274
+#: contents/activitymanager/ActivityItem.qml:273
 #, kde-format
 msgid ""
 "Show also\n"
@@ -42,17 +42,12 @@ msgstr ""
 "Zobrazit také\n"
 "v této aktivitě"
 
-#: contents/activitymanager/ActivityItem.qml:336
+#: contents/activitymanager/ActivityItem.qml:335
 #, kde-format
 msgid "Configure"
 msgstr "Nastavit"
 
-#: contents/activitymanager/ActivityItem.qml:355
-#, kde-format
-msgid "Stop activity"
-msgstr "Zastavit aktivitu"
-
-#: contents/activitymanager/ActivityList.qml:148
+#: contents/activitymanager/ActivityList.qml:147
 #, kde-format
 msgid "Stopped activities:"
 msgstr "Zastavené aktivity:"
@@ -916,3 +911,6 @@ msgstr "Ukončit režim úprav"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr ""
+
+#~ msgid "Stop activity"
+#~ msgstr "Zastavit aktivitu"

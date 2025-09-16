@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-27 00:45+0000\n"
+"POT-Creation-Date: 2025-09-16 00:43+0000\n"
 "PO-Revision-Date: 2025-02-23 13:13+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -19,12 +19,12 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Generator: Lokalize 24.12.2\n"
 
-#: contents/activitymanager/ActivityItem.qml:204
+#: contents/activitymanager/ActivityItem.qml:203
 #, kde-format
 msgid "Currently being used"
 msgstr "現在使用中"
 
-#: contents/activitymanager/ActivityItem.qml:244
+#: contents/activitymanager/ActivityItem.qml:243
 #, kde-format
 msgid ""
 "Move to\n"
@@ -33,7 +33,7 @@ msgstr ""
 "このアクティビティ\n"
 "に移動"
 
-#: contents/activitymanager/ActivityItem.qml:274
+#: contents/activitymanager/ActivityItem.qml:273
 #, kde-format
 msgid ""
 "Show also\n"
@@ -42,17 +42,12 @@ msgstr ""
 "このアクティビティ\n"
 "にも表示"
 
-#: contents/activitymanager/ActivityItem.qml:336
+#: contents/activitymanager/ActivityItem.qml:335
 #, kde-format
 msgid "Configure"
 msgstr "設定"
 
-#: contents/activitymanager/ActivityItem.qml:355
-#, kde-format
-msgid "Stop activity"
-msgstr "アクティビティを停止"
-
-#: contents/activitymanager/ActivityList.qml:148
+#: contents/activitymanager/ActivityList.qml:147
 #, kde-format
 msgid "Stopped activities:"
 msgstr "停止したアクティビティ:"
@@ -930,6 +925,9 @@ msgstr "編集モードを終了"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "パネルフォーカスインジケータ"
+
+#~ msgid "Stop activity"
+#~ msgstr "アクティビティを停止"
 
 #~ msgid "Author:"
 #~ msgstr "作者:"

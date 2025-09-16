@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-27 00:45+0000\n"
+"POT-Creation-Date: 2025-09-16 00:43+0000\n"
 "PO-Revision-Date: 2025-09-07 18:41+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 25.08.0\n"
 
-#: contents/activitymanager/ActivityItem.qml:204
+#: contents/activitymanager/ActivityItem.qml:203
 #, kde-format
 msgid "Currently being used"
 msgstr "இப்போது பயன்படுத்தப்படுவது"
 
-#: contents/activitymanager/ActivityItem.qml:244
+#: contents/activitymanager/ActivityItem.qml:243
 #, kde-format
 msgid ""
 "Move to\n"
@@ -31,7 +31,7 @@ msgstr ""
 "இந்த செயல்பாட்டிற்கு\n"
 "நகர்த்து"
 
-#: contents/activitymanager/ActivityItem.qml:274
+#: contents/activitymanager/ActivityItem.qml:273
 #, kde-format
 msgid ""
 "Show also\n"
@@ -40,17 +40,12 @@ msgstr ""
 "இந்த செயல்பாட்டிலும்\n"
 "காட்டு"
 
-#: contents/activitymanager/ActivityItem.qml:336
+#: contents/activitymanager/ActivityItem.qml:335
 #, kde-format
 msgid "Configure"
 msgstr "அமை"
 
-#: contents/activitymanager/ActivityItem.qml:355
-#, kde-format
-msgid "Stop activity"
-msgstr "செயல்பாட்டை நிறுத்து"
-
-#: contents/activitymanager/ActivityList.qml:148
+#: contents/activitymanager/ActivityList.qml:147
 #, kde-format
 msgid "Stopped activities:"
 msgstr "நிறுத்திய செயல்பாட்டுகள்:"
@@ -913,6 +908,9 @@ msgstr "திருத்தும் பயன்முறையிலிர�
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "பலகைக் குவியக்காட்டி"
+
+#~ msgid "Stop activity"
+#~ msgstr "செயல்பாட்டை நிறுத்து"
 
 #~ msgid "Author:"
 #~ msgstr "இயற்றியவர்:"

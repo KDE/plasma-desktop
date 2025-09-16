@@ -1,7 +1,7 @@
 # translation of kcmaccess.po to Slovenian
 # Translation of kcmaccess.po to Slovenian
 # SLOVENIAN TRANSLATION OF KCMACCESS.
-# $Id: kcm_access.po 1712075 2025-06-26 01:23:47Z scripty $
+# $Id: kcm_access.po 1718193 2025-09-16 01:23:10Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2005, 2006 Free Software Foundation, Inc.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-09-16 00:43+0000\n"
 "PO-Revision-Date: 2025-06-25 06:41+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -584,7 +584,7 @@ msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
 msgstr "Uporabi bližnjice za preklop invertiranja barv zaslona in okna"
 
-#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:319
+#: ui/Invert.qml:49 ui/ZoomMagnifier.qml:321
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Shortcuts…"
@@ -929,121 +929,121 @@ msgctxt "@label Large cursor size"
 msgid "Large"
 msgstr "Veliko"
 
-#: ui/ZoomMagnifier.qml:21
+#: ui/ZoomMagnifier.qml:22
 #, kde-format
 msgctxt "@label, followed by 'full screen' or 'magnify region'"
 msgid "Zoom:"
 msgstr "Zoom:"
 
-#: ui/ZoomMagnifier.qml:23
+#: ui/ZoomMagnifier.qml:24
 #, kde-format
 msgctxt "@option:check, enable zoom effect, following 'Zoom:'"
 msgid "Full screen"
 msgstr "Celotni zaslon"
 
-#: ui/ZoomMagnifier.qml:52
+#: ui/ZoomMagnifier.qml:53
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Show pixel grid at zoom level:"
 msgstr "Prikaži mrežo slikovnih pik pri ravni zooma:"
 
-#: ui/ZoomMagnifier.qml:84
+#: ui/ZoomMagnifier.qml:85
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Mouse pointer:"
 msgstr "Kazalec miške:"
 
-#: ui/ZoomMagnifier.qml:86
+#: ui/ZoomMagnifier.qml:87
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scale"
 msgstr "Lestvica"
 
-#: ui/ZoomMagnifier.qml:86
+#: ui/ZoomMagnifier.qml:87
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Keep"
 msgstr "Obdrži"
 
-#: ui/ZoomMagnifier.qml:86
+#: ui/ZoomMagnifier.qml:87
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Hide"
 msgstr "Skrij"
 
-#: ui/ZoomMagnifier.qml:97
+#: ui/ZoomMagnifier.qml:98
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Mouse tracking:"
 msgstr "Sledenje miške:"
 
-#: ui/ZoomMagnifier.qml:99
+#: ui/ZoomMagnifier.qml:100
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Proportional"
 msgstr "Proporcionalno"
 
-#: ui/ZoomMagnifier.qml:99
+#: ui/ZoomMagnifier.qml:100
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Sredinsko"
 
-#: ui/ZoomMagnifier.qml:99
+#: ui/ZoomMagnifier.qml:100
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Push"
 msgstr "Porini"
 
-#: ui/ZoomMagnifier.qml:99
+#: ui/ZoomMagnifier.qml:100
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Disabled"
 msgstr "Onemogočeno"
 
-#: ui/ZoomMagnifier.qml:110
+#: ui/ZoomMagnifier.qml:111
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable focus tracking"
 msgstr "Omogoči sledenje fokusa"
 
-#: ui/ZoomMagnifier.qml:121
+#: ui/ZoomMagnifier.qml:123
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable text caret tracking"
 msgstr "Omogoči sledenje kazalke besedila"
 
-#: ui/ZoomMagnifier.qml:132
+#: ui/ZoomMagnifier.qml:134
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
 msgstr "Tipke za spreminjanje kretnje pomikanja:"
 
-#: ui/ZoomMagnifier.qml:170
+#: ui/ZoomMagnifier.qml:172
 #, kde-format
 msgctxt "@info:tooltip, indicates feature unavailable on X11"
 msgid "Zoom scroll gestures are only available on Wayland."
 msgstr "Kretnje pomikanja za zoom so na voljo samo na Waylandu."
 
-#: ui/ZoomMagnifier.qml:176
+#: ui/ZoomMagnifier.qml:178
 #, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "Premakni med pritiskom na spremenilne tipke za zoom"
 
-#: ui/ZoomMagnifier.qml:188
+#: ui/ZoomMagnifier.qml:190
 #, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
 msgstr "Povečaj območje"
 
-#: ui/ZoomMagnifier.qml:215
+#: ui/ZoomMagnifier.qml:217
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
 msgstr "Širina:"
 
-#: ui/ZoomMagnifier.qml:226 ui/ZoomMagnifier.qml:251
+#: ui/ZoomMagnifier.qml:228 ui/ZoomMagnifier.qml:253
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
@@ -1053,31 +1053,31 @@ msgstr[1] "%1 px"
 msgstr[2] "%1 px"
 msgstr[3] "%1 px"
 
-#: ui/ZoomMagnifier.qml:227 ui/ZoomMagnifier.qml:252
+#: ui/ZoomMagnifier.qml:229 ui/ZoomMagnifier.qml:254
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
 msgstr "px"
 
-#: ui/ZoomMagnifier.qml:240
+#: ui/ZoomMagnifier.qml:242
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
 msgstr "Višina:"
 
-#: ui/ZoomMagnifier.qml:269
+#: ui/ZoomMagnifier.qml:271
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
 msgstr "Onemogočeno"
 
-#: ui/ZoomMagnifier.qml:282
+#: ui/ZoomMagnifier.qml:284
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
 msgstr "Faktor zooma:"
 
-#: ui/ZoomMagnifier.qml:329
+#: ui/ZoomMagnifier.qml:331
 #, kde-format
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
