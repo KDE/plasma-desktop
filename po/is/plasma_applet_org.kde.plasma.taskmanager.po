@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-12 00:45+0000\n"
-"PO-Revision-Date: 2025-04-17 15:39+0000\n"
+"PO-Revision-Date: 2025-09-16 23:54+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.3\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -471,49 +471,34 @@ msgid "Brings it to the current virtual desktop"
 msgstr "Færir á núverandi sýndarskjáborð"
 
 #: package/contents/ui/ConfigBehavior.qml:205
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label for checkbox group, completes sentence like: … from current screen"
-#| msgid "Show only tasks:"
+#, kde-format
 msgctxt ""
 "@label:listbox Part of a sentence: 'Scrolling behavior does nothing/cycles "
 "through tasks/cycles through the selected task's windows'"
 msgid "Scrolling behavior:"
-msgstr "Sýna einungis verkefni:"
+msgstr "Skrunhegðun:"
 
 #: package/contents/ui/ConfigBehavior.qml:209
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Part of a sentence: 'Middle-clicking any task does "
-#| "nothing'"
-#| msgid "Does nothing"
+#, kde-format
 msgctxt "@item:inlistbox Part of a sentence: 'Scrolling behavior does nothing'"
 msgid "Does nothing"
-msgstr "Gerir ekkert"
+msgstr "gerir ekkert"
 
 #: package/contents/ui/ConfigBehavior.qml:210
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Completes the sentence 'Clicking grouped task cycles "
-#| "through tasks' "
-#| msgid "Cycles through tasks"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through all "
 "tasks'"
 msgid "Cycles through all tasks"
-msgstr "Flettir í gegnum verkefnin"
+msgstr "flettir í gegnum öll verkefni"
 
 #: package/contents/ui/ConfigBehavior.qml:211
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Completes the sentence 'Clicking grouped task cycles "
-#| "through tasks' "
-#| msgid "Cycles through tasks"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through the "
 "hovered task's windows'"
 msgid "Cycles through the hovered task’s windows"
-msgstr "Flettir í gegnum verkefnin"
+msgstr "flettir í gegnum glugga verkefnis sem bendill er yfir"
 
 #: package/contents/ui/ConfigBehavior.qml:219
 #, kde-format
@@ -529,28 +514,22 @@ msgid "Show only tasks:"
 msgstr "Sýna einungis verkefni:"
 
 #: package/contents/ui/ConfigBehavior.qml:230
-#, fuzzy, kde-format
-#| msgctxt "@option:check completes sentence: show only tasks"
-#| msgid "From current desktop"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current desktop"
-msgstr "Af núverandi skjáborði"
+msgstr "af núverandi skjáborði"
 
 #: package/contents/ui/ConfigBehavior.qml:235
-#, fuzzy, kde-format
-#| msgctxt "@option:check completes sentence: show only tasks"
-#| msgid "From current activity"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current activity"
-msgstr "Úr núverandi athöfn"
+msgstr "úr núverandi athöfn"
 
 #: package/contents/ui/ConfigBehavior.qml:240
-#, fuzzy, kde-format
-#| msgctxt "@option:check completes sentence: show only tasks"
-#| msgid "From current screen"
+#, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current screen"
-msgstr "Af núverandi skjá"
+msgstr "af núverandi skjá"
 
 #: package/contents/ui/ConfigBehavior.qml:245
 #, kde-format
@@ -836,14 +815,10 @@ msgid "Activate %1"
 msgstr "Virkja %1"
 
 #: package/contents/ui/ToolTipInstance.qml:188
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Part of a sentence: 'Middle-clicking any task closes "
-#| "window or group'"
-#| msgid "Closes window or group"
+#, kde-format
 msgctxt "@info:tooltip Close this window"
 msgid "Close window"
-msgstr "Lokar glugga eða flokki"
+msgstr "Loka glugga"
 
 #: package/contents/ui/ToolTipInstance.qml:438
 #, kde-format

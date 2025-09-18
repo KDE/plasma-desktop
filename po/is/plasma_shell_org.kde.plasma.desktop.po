@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-16 00:43+0000\n"
-"PO-Revision-Date: 2025-04-17 15:45+0000\n"
+"PO-Revision-Date: 2025-09-16 23:54+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: contents/activitymanager/ActivityItem.qml:203
 #, kde-format
@@ -106,7 +106,7 @@ msgstr "Opna vefsíðu %1"
 #, kde-format
 msgctxt "@title:group"
 msgid "Website"
-msgstr ""
+msgstr "Vefsvæði"
 
 #: contents/configuration/AboutPlugin.qml:153
 #, kde-format
@@ -289,7 +289,7 @@ msgstr "Flýtilyklar"
 #, kde-format
 msgctxt "@action:button set keyboard shortcut for"
 msgid "Activate widget as if clicked:"
-msgstr ""
+msgstr "Virkja græju eins smellt hafi verið á hana:"
 
 #: contents/configuration/ContainmentConfiguration.qml:27
 #, kde-format
@@ -312,28 +312,24 @@ msgid "Panel Settings"
 msgstr "Stillingar skjáborðsstiku"
 
 #: contents/configuration/PanelConfiguration.qml:109
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible only, %1 is widget name"
-#| msgid "Add %1"
+#, kde-format
 msgctxt ""
 "@action:button label of button to open a menu that lets you add widgets or "
 "spacers"
 msgid "Add New"
-msgstr "Bæta við %1"
+msgstr "Bæta við nýju"
 
 #: contents/configuration/PanelConfiguration.qml:127
-#, fuzzy, kde-format
-#| msgid "Add Spacer"
+#, kde-format
 msgctxt "@action:menu add a spacer"
 msgid "Spacer"
-msgstr "Bæta við bili"
+msgstr "Bil"
 
 #: contents/configuration/PanelConfiguration.qml:134
-#, fuzzy, kde-format
-#| msgid "Widgets"
+#, kde-format
 msgctxt "@action:menu add a widget"
 msgid "Widgets…"
-msgstr "Græjur"
+msgstr "Græjur…"
 
 #: contents/configuration/PanelConfiguration.qml:163
 #, kde-format
@@ -734,12 +730,10 @@ msgid "Close Widget Explorer"
 msgstr "Loka græjuskoðara"
 
 #: contents/explorer/WidgetExplorer.qml:208
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox accessible"
-#| msgid "Search Widgets"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Search through widgets"
-msgstr "Leita að græjum"
+msgstr "Leita í græjum"
 
 #: contents/explorer/WidgetExplorer.qml:237
 #, kde-format
@@ -807,12 +801,10 @@ msgid "Never show clock"
 msgstr "Aldrei sýna klukku"
 
 #: contents/lockscreen/config.qml:71
-#, fuzzy, kde-format
-#| msgctxt "@title: group"
-#| msgid "Media controls:"
+#, kde-format
 msgctxt "@title: group UI controls for playback of multimedia content"
 msgid "Media controls:"
-msgstr "Spilunarstýringar:"
+msgstr "Miðlastýringar:"
 
 #: contents/lockscreen/config.qml:74
 #, kde-format

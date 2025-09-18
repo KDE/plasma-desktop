@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-04 00:44+0000\n"
-"PO-Revision-Date: 2025-04-17 14:28+0000\n"
+"PO-Revision-Date: 2025-09-16 23:49+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -27,20 +27,19 @@ msgstr "Óvirkt"
 #, kde-format
 msgctxt "@action:button There is no keybinding"
 msgid "None"
-msgstr "Engin"
+msgstr "Enginn"
 
 #: inputsequence.cpp:209
 #, kde-format
 msgctxt "@action:button Two keybinds for a dial, up & down"
 msgid "%1 && %2"
-msgstr ""
+msgstr "%1 && %2"
 
 #: inputsequence.cpp:216
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "@action:button There is no keybindings"
 msgid "None"
-msgstr "Ekkert"
+msgstr "Enginn"
 
 #: inputsequence.cpp:221
 #, kde-format
@@ -76,7 +75,7 @@ msgstr "Pennahnappur %1"
 #, kde-format
 msgctxt "@action:button"
 msgid "Scroll wheel"
-msgstr ""
+msgstr "Skrunhjól"
 
 #: kcmtablet.cpp:36
 #, kde-format
@@ -152,12 +151,10 @@ msgid "pen button %1"
 msgstr "pennahnappur %1"
 
 #: ui/ActionDialog.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@title Select the action for the tablet button"
-#| msgid "Select Button Action"
+#, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial/Ring Action"
-msgstr "Velja hnappaaðgerð"
+msgstr "Velja númervals-/hringiaðgerð"
 
 #: ui/ActionDialog.qml:28
 #, kde-format
@@ -166,12 +163,10 @@ msgid "Select Button Action"
 msgstr "Velja hnappaaðgerð"
 
 #: ui/ActionDialog.qml:87
-#, fuzzy, kde-format
-#| msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
-#| msgid "Choose what action will be taken when pressing %1:"
+#, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when rotating %1:"
-msgstr "Velja hvað gerist þegar ýtt er á %1:"
+msgstr "Velja hvað gerist þegar %1 er snúið:"
 
 #: ui/ActionDialog.qml:88
 #, kde-format
@@ -192,12 +187,10 @@ msgid "Send keyboard key"
 msgstr "Senda lyklaborðslykil"
 
 #: ui/ActionDialog.qml:133
-#, fuzzy, kde-format
-#| msgctxt "@option:radio Set this action to a keyboard type"
-#| msgid "Send keyboard key"
+#, kde-format
 msgctxt "@option:radio Set this action to a up/down keyboard type"
 msgid "Send keyboard keys"
-msgstr "Senda lyklaborðslykil"
+msgstr "Senda lyklaborðslykla"
 
 #: ui/ActionDialog.qml:148
 #, kde-format
@@ -215,7 +208,7 @@ msgstr "Senda pennahnapp"
 #, kde-format
 msgctxt "@option:radio Set this action to a scroll wheel type type"
 msgid "Act as scroll wheel"
-msgstr ""
+msgstr "Virka eins og skrunhjól"
 
 #: ui/ActionDialog.qml:199
 #, kde-format
@@ -236,17 +229,17 @@ msgstr ""
 #: ui/ActionDialog.qml:248
 #, kde-format
 msgid "Up:"
-msgstr ""
+msgstr "Upp:"
 
 #: ui/ActionDialog.qml:261
 #, kde-format
 msgid "Down:"
-msgstr ""
+msgstr "Niður:"
 
 #: ui/ActionDialog.qml:274
 #, kde-format
 msgid "Speed:"
-msgstr ""
+msgstr "Hraði:"
 
 #: ui/ActionDialog.qml:289
 #, kde-format
@@ -312,7 +305,7 @@ msgstr "Hnappur 3"
 #, kde-format
 msgctxt "@info"
 msgid "Act like a scroll wheel on a mouse."
-msgstr ""
+msgstr "Virka eins og skrunhjól á mús."
 
 #: ui/ActionDialog.qml:375
 #, kde-format
@@ -327,11 +320,7 @@ msgid "Pen Calibration"
 msgstr "Pennakvörðun"
 
 #: ui/Calibration.qml:98
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
-#| "revert to default calibration in %1 seconds.</b>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
@@ -339,7 +328,8 @@ msgid ""
 "b>"
 msgstr ""
 "Pikkaðu aftur á markpunktana til að staðfesta nýju kvörðunina.<nl/><nl/"
-"><b>Stillir aftur á sjálfgefna kvörðun eftir %1 sekúndur.</b>"
+"><b>Stillir aftur á sjálfgefna kvörðun eftir %1 sekúndur nema annað sé gert "
+"fyrst.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -459,6 +449,9 @@ msgid ""
 "driver to configure the tablet instead of using the settings here, unless "
 "specifically instructed otherwise."
 msgstr ""
+"Þessu tæki er stjórnað af rekli í notandarými sem þú settir upp. Notaðu "
+"þennan rekil til að grunnstilla teikniborðið í stað stillinganna hér, nema "
+"sérstök fyrirmæli séu um annað."
 
 #: ui/main.qml:104
 #, kde-format
@@ -485,25 +478,22 @@ msgid "Pad"
 msgstr "Bakki"
 
 #: ui/PadTab.qml:37
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad ring %1:"
-msgstr "Bakkahnappur %1:"
+msgstr "Bakkahringur %1:"
 
 #: ui/PadTab.qml:60
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "ring/dial 0'"
 msgid "pad ring/dial %1"
-msgstr "Bakkahnappur %1:"
+msgstr "bakkahringur/skífa %1:"
 
 #: ui/PadTab.qml:100
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad dial %1:"
-msgstr "Bakkahnappur %1:"
+msgstr "Bakkaskífa %1:"
 
 #: ui/PadTab.qml:102
 #, kde-format
@@ -511,7 +501,7 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad dial %1"
-msgstr ""
+msgstr "bakkaskífa %1"
 
 #: ui/PadTab.qml:138
 #, kde-format
@@ -554,12 +544,10 @@ msgstr ""
 msgctxt ""
 "'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)"
 msgid "Mode:"
-msgstr ""
+msgstr "Snið:"
 
 #: ui/StylusTab.qml:254
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "Pen"
+#, kde-format
 msgctxt ""
 "Pen mode, where the point on the screen is always where you touch the stylus"
 msgid "Pen"
@@ -568,13 +556,13 @@ msgstr "Penni"
 #: ui/StylusTab.qml:259
 #, kde-format
 msgid "The cursor follows where you touch the pen on the surface"
-msgstr ""
+msgstr "Bendillinn fer þangað sem þú snertir með pennanum á borðið"
 
 #: ui/StylusTab.qml:280
 #, kde-format
 msgctxt "Mouse mode, or like using the tablet like a giant touchpad"
 msgid "Mouse"
-msgstr ""
+msgstr "Mús"
 
 #: ui/StylusTab.qml:285
 #, kde-format
@@ -582,6 +570,8 @@ msgid ""
 "Moving the pen on the surface moves the cursor relative to where it was, "
 "like a mouse"
 msgstr ""
+"Ef penninn er færður til á borðinu færist bendillinn til samræmis, eins og "
+"mús"
 
 #: ui/StylusTab.qml:355
 #, kde-format
@@ -679,16 +669,14 @@ msgid "Tablet Tester"
 msgstr "Teikniborðsprófun"
 
 #: ui/Tester.qml:48
-#, fuzzy, kde-format
-#| msgid "Stylus press X=%1 Y=%2"
+#, kde-format
 msgctxt ""
 "A tablet stylus was pressed onto the surface X=[x position] Y=[y position]"
 msgid "Stylus press X=%1 Y=%2"
 msgstr "Pennaþrýstingur X=%1 Y=%2"
 
 #: ui/Tester.qml:58
-#, fuzzy, kde-format
-#| msgid "Stylus release X=%1 Y=%2"
+#, kde-format
 msgctxt ""
 "A tablet stylus has 'released' or was lifted from the surface X=[x position] "
 "Y=[y position]"
@@ -696,8 +684,7 @@ msgid "Stylus release X=%1 Y=%2"
 msgstr "Pennaslepping X=%1 Y=%2"
 
 #: ui/Tester.qml:68
-#, fuzzy, kde-format
-#| msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
+#, kde-format
 msgctxt ""
 "A tablet stylus has moved over the surface X=[x position] Y=[y position] "
 "P=[pressure] TX=[tilt x] TY=[tilt y]"
@@ -705,35 +692,27 @@ msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 msgstr "Pennahreyfing X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
 #: ui/Tester.qml:75
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt "A tablet pad's button has been pressed B=[the button number]"
 msgid "Pad button press B=%1"
-msgstr "Bakkahnappur %1:"
+msgstr "Ýtt á bakkahnapp B=%1"
 
 #: ui/Tester.qml:77
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt "A tablet pad's button has been released B=[the button number]"
 msgid "Pad button release B=%1"
-msgstr "Bakkahnappur %1:"
+msgstr "Bakkahnappi sleppt B=%1"
 
 #: ui/Tester.qml:83
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt ""
 "A tablet pad's dial has moved, V120 here refers to 'Value 120' which is a "
 "technical term that should be kept as is"
 msgid "Pad dial moved V120=%1"
-msgstr "Bakkahnappur %1:"
+msgstr "Bakkaskífa færð V120=%1:"
 
 #: ui/Tester.qml:219
-#, fuzzy, kde-format
-#| msgid ""
-#| "## Legend:\n"
-#| "# X, Y - event coordinate\n"
-#| "# P - pressure\n"
-#| "# TX,TY - tilt\n"
+#, kde-format
 msgctxt "The tablet tester legend which is shown on start-up"
 msgid ""
 "## Legend:\n"
@@ -747,9 +726,7 @@ msgstr ""
 "# TX,TY - halli\n"
 
 #: ui/Tester.qml:225
-#, fuzzy, kde-format
-#| msgctxt "Clear the event log"
-#| msgid "Clear"
+#, kde-format
 msgctxt "Clear the tablet tester event log"
 msgid "Clear"
 msgstr "Hreinsa"

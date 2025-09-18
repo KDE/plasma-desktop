@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-01 00:43+0000\n"
-"PO-Revision-Date: 2025-04-17 14:47+0000\n"
+"PO-Revision-Date: 2025-09-16 23:51+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: ui/main.qml:25
 #, kde-format
@@ -35,7 +35,7 @@ msgstr "Endurræsa"
 #, kde-format
 msgctxt "@title:group"
 msgid "Plasma"
-msgstr ""
+msgstr "Plasma"
 
 #: ui/main.qml:52
 #, kde-format
@@ -79,12 +79,10 @@ msgstr ""
 "eins og á hljóðstyrk og birtustigi eða þegar skipt er um hljóðtæki."
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling"
-msgstr "Skrun:"
+msgstr "Skrun"
 
 #: ui/main.qml:100
 #, kde-format
@@ -136,7 +134,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "Smellur"
 
 #: ui/main.qml:175
 #, kde-format
@@ -224,20 +222,17 @@ msgstr ""
 #: ui/main.qml:354
 #, kde-format
 msgid "Drag and Drop"
-msgstr ""
+msgstr "Draga og sleppa"
 
 #: ui/main.qml:361
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
-#| msgid "Clicking files or folders:"
+#, kde-format
 msgid "When dragging files or folders:"
-msgstr "Smellt á skrár eða möppur:"
+msgstr "Þegar skrár eða möppur eru dregnar:"
 
 #: ui/main.qml:362
 #, kde-format
 msgid "Always ask what to do"
-msgstr ""
+msgstr "Alltaf spyrja hvað eigi að gera"
 
 #: ui/main.qml:378
 #, kde-kuit-format
@@ -247,30 +242,33 @@ msgid ""
 "and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise show a "
 "dialog."
 msgstr ""
+"Haltu inni <shortcut>Shift</shortcut> til að færa, <shortcut>Ctrl</shortcut> "
+"til að afrita og <shortcut>Shift+Ctrl</shortcut> til að búa til tákntengil. "
+"Annars á að birta þennan svarglugga."
 
 #: ui/main.qml:386
 #, kde-format
 msgid "Move if on the same device"
-msgstr ""
+msgstr "Færa ef á sama tæki"
 
 #: ui/main.qml:402
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
 msgstr ""
+"Haltu inni <shortcut>Shift</shortcut> þegar þú sleppir til að sjá aðra "
+"valkosti."
 
 #: ui/main.qml:410
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Touch"
-msgstr "Snertistilling:"
+msgstr "Snerting"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgid "Enable Touch Mode:"
-msgstr "Snertistilling:"
+msgstr "Virkja snertistillingu:"
 
 #: ui/main.qml:418
 #, kde-format
@@ -296,9 +294,7 @@ msgstr ""
 "spjaldtölvu með því að snúa lyklaborðinu eða losa það af."
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always enabled"
+#, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always active"
 msgstr "Alltaf virk"
@@ -307,7 +303,7 @@ msgstr "Alltaf virk"
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Disabled"
-msgstr ""
+msgstr "Óvirk"
 
 #: ui/main.qml:486
 #, kde-format
@@ -331,6 +327,8 @@ msgid ""
 "For local files on the same device, whether dragging and dropping will "
 "perform a move operation instead of showing the options menu"
 msgstr ""
+"Fyrir staðbundnar skrár á sama tæki, hvort þær séu færðar þegar þær eru "
+"dregnar og þeim sleppt í stað þess að sýna valkostavalmynd."
 
 #. i18n: ectx: label, entry (smoothScroll), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-22 00:44+0000\n"
-"PO-Revision-Date: 2025-04-17 14:49+0000\n"
+"PO-Revision-Date: 2025-09-16 23:53+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -133,35 +133,30 @@ msgstr "Uppstilling:"
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "In Columns"
-msgstr ""
+msgstr "Í dálkum"
 
 #: package/contents/ui/ConfigIcons.qml:128
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "In Rows"
-msgstr ""
+msgstr "Í röðum"
 
 #: package/contents/ui/ConfigIcons.qml:137
-#, fuzzy, kde-format
-#| msgid "Sorting:"
+#, kde-format
 msgid "Sort Alignment:"
-msgstr "Röðun:"
+msgstr "Röðunarstilling:"
 
 #: package/contents/ui/ConfigIcons.qml:140
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Left to Right"
+#, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Left-to-Right"
-msgstr "Vinstri til hægri"
+msgstr "Vinstri-til-hægri"
 
 #: package/contents/ui/ConfigIcons.qml:141
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Right to Left"
+#, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Right-to-Left"
-msgstr "Hægri til vinstri"
+msgstr "Hægri-til-vinstri"
 
 #: package/contents/ui/ConfigIcons.qml:163
 #, kde-format
@@ -169,10 +164,9 @@ msgid "Lock in place"
 msgstr "Festa á staðnum"
 
 #: package/contents/ui/ConfigIcons.qml:177
-#, fuzzy, kde-format
-#| msgid "Sorting:"
+#, kde-format
 msgid "Sort by:"
-msgstr "Röðun:"
+msgstr "Raða eftir:"
 
 #: package/contents/ui/ConfigIcons.qml:185
 #, kde-format
@@ -325,88 +319,76 @@ msgid "Configure Preview Plugins…"
 msgstr "Grunnstilla forskoðunarviðbætur…"
 
 #: package/contents/ui/ConfigLocation.qml:81
-#, fuzzy, kde-format
-#| msgid "Show:"
+#, kde-format
 msgctxt "@title:group form label for radiobutton group"
 msgid "Show:"
 msgstr "Sýna:"
 
 #: package/contents/ui/ConfigLocation.qml:83
-#, fuzzy, kde-format
-#| msgid "Desktop folder"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Desktop folder"
 msgstr "Skjáborðsmappa"
 
 #: package/contents/ui/ConfigLocation.qml:91
-#, fuzzy, kde-format
-#| msgid "Files linked to the current activity"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Files linked to the current activity"
 msgstr "Skrár tengdar við núverandi athöfn"
 
 #: package/contents/ui/ConfigLocation.qml:100
-#, fuzzy, kde-format
-#| msgid "Places panel item:"
+#, kde-format
 msgctxt "@option:radio also label for combobox"
 msgid "Places panel item:"
 msgstr "Atriði á spjaldinu Staðir:"
 
 #: package/contents/ui/ConfigLocation.qml:137
-#, fuzzy, kde-format
-#| msgid "Custom location:"
+#, kde-format
 msgctxt "@option:radio also label for text field"
 msgid "Custom location:"
 msgstr "Sérsniðin staðsetning:"
 
 #: package/contents/ui/ConfigLocation.qml:145
-#, fuzzy, kde-format
-#| msgid "Type path or URL…"
+#, kde-format
 msgctxt "@info:placeholder custom location"
 msgid "Type path or URL…"
 msgstr "Sláðu inn slóð…"
 
 #: package/contents/ui/ConfigLocation.qml:188
-#, fuzzy, kde-format
-#| msgid "Title:"
+#, kde-format
 msgctxt "@label:textbox custom widget title"
 msgid "Title:"
 msgstr "Titill:"
 
 #: package/contents/ui/ConfigLocation.qml:197
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "@item:inlistbox no title"
 msgid "None"
 msgstr "Ekkert"
 
 #: package/contents/ui/ConfigLocation.qml:198
-#, fuzzy, kde-format
-#| msgid "Default"
+#, kde-format
 msgctxt "@item:inlistbox default title"
 msgid "Default"
 msgstr "Sjálfgefið"
 
 #: package/contents/ui/ConfigLocation.qml:199
-#, fuzzy, kde-format
-#| msgid "Full path"
+#, kde-format
 msgctxt "@item:inlistbox full path as title"
 msgid "Full path"
 msgstr "Öll slóðin"
 
 #: package/contents/ui/ConfigLocation.qml:200
-#, fuzzy, kde-format
-#| msgid "Custom title"
+#, kde-format
 msgctxt "@item:inlistbox title from text input field"
 msgid "Custom"
-msgstr "Sérsniðinn titill"
+msgstr "Sérsniðið"
 
 #: package/contents/ui/ConfigLocation.qml:209
-#, fuzzy, kde-format
-#| msgid "Enter custom title…"
+#, kde-format
 msgctxt "@info:placeholder custom window title"
 msgid "Enter title…"
-msgstr "Sláðu inn sérsniðinn titil…"
+msgstr "Sláðu inn titil…"
 
 #: package/contents/ui/ConfigOverlay.qml:98
 #, kde-format
@@ -444,11 +426,10 @@ msgstr ""
 "og hægri vinnslu. Þú mátt gjarnan færa þær eitthvert annað."
 
 #: package/contents/ui/FolderViewDialog.qml:87
-#, fuzzy, kde-format
-#| msgid "This folder is empty."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Folder is empty"
-msgstr "Þessi mappa er tóm."
+msgstr "Mappan er tóm"
 
 #: package/contents/ui/main.qml:422
 #, kde-format
@@ -637,34 +618,30 @@ msgstr "Raða upp"
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Columns"
-msgstr ""
+msgstr "Í dálkum"
 
 #: plugins/folder/viewpropertiesmenu.cpp:74
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Rows"
-msgstr ""
+msgstr "Í röðum"
 
 #: plugins/folder/viewpropertiesmenu.cpp:79
 #, kde-format
 msgid "Sort Alignment"
-msgstr ""
+msgstr "Röðunarstilling"
 
 #: plugins/folder/viewpropertiesmenu.cpp:83
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Left to Right"
+#, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Left-to-Right"
-msgstr "Vinstri til hægri"
+msgstr "Vinstri-til-hægri"
 
 #: plugins/folder/viewpropertiesmenu.cpp:84
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Right to Left"
+#, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Right-to-Left"
-msgstr "Hægri til vinstri"
+msgstr "Hægri-til-vinstri"
 
 #: plugins/folder/viewpropertiesmenu.cpp:94
 #, kde-format

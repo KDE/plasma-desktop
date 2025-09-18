@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-11 00:44+0000\n"
-"PO-Revision-Date: 2025-08-07 11:23+0300\n"
+"PO-Revision-Date: 2025-09-17 07:59+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -161,8 +161,7 @@ msgid "Import…"
 msgstr "ייבוא…"
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid "Import Shortcut Scheme"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Import shortcut scheme"
 msgstr "ייבוא ערכת קיצורי מקשים"
@@ -180,8 +179,7 @@ msgid "Export…"
 msgstr "ייצוא…"
 
 #: ui/main.qml:53 ui/main.qml:125
-#, fuzzy, kde-format
-#| msgid "Export Shortcut Scheme"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Export shortcut scheme"
 msgstr "ייצוא ערכת קיצורי מקשים"
@@ -323,16 +321,13 @@ msgid "Add"
 msgstr "הוספה"
 
 #: ui/main.qml:422
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox accessible"
-#| msgid "Command"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Save command"
-msgstr "פקודה"
+msgstr "שמירת פקודה"
 
 #: ui/main.qml:423
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add command"
 msgstr "הוספת פקודה"
@@ -413,19 +408,16 @@ msgid "Import"
 msgstr "ייבוא"
 
 #: ui/main.qml:547
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible"
-#| msgid "Delete shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Select shortcut scheme file"
-msgstr "מחיקת קיצור המקשים"
+msgstr "נא לבחור קובץ ערכת קיצורי מקשים"
 
 #: ui/main.qml:548
-#, fuzzy, kde-format
-#| msgid "Export Shortcut Scheme"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add shortcut scheme"
-msgstr "ייצוא ערכת קיצורי מקשים"
+msgstr "הוספת ערכת קיצורי מקשים"
 
 #: ui/ShortcutActionDelegate.qml:34
 #, kde-format
