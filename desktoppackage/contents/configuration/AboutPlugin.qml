@@ -35,13 +35,14 @@ KCM.SimpleKCM {
                 source: "user"
             }
             QQC2.Label {
+                Layout.fillWidth: true
                 text: modelData.name
                 textFormat: Text.PlainText
             }
             Row {
                 // Group action buttons together
                 spacing: 0
-                QQC2.ToolButton {
+                QQC2.Button {
                     visible: modelData.emailAddress
                     width: height
                     icon.name: "mail-sent"
@@ -55,7 +56,7 @@ KCM.SimpleKCM {
 
                     onClicked: Qt.openUrlExternally("mailto:%1".arg(modelData.emailAddress))
                 }
-                QQC2.ToolButton {
+                QQC2.Button {
                     visible: modelData.webAddress
                     width: height
                     icon.name: "globe"
@@ -150,6 +151,21 @@ KCM.SimpleKCM {
 
             Kirigami.Heading {
                 Layout.topMargin: column.headingTopSpacing
+                text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@title:group", "Get Help")
+                textFormat: Text.PlainText
+            }
+            Kirigami.UrlButton {
+                Layout.leftMargin: column.dataLeftSpacing
+                textFormat: Text.PlainText
+
+                url: page.metaData.bugReportUrl
+                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Report an issue")
+
+                visible: page.metaData.bugReportUrl.length > 0
+            }
+
+            Kirigami.Heading {
+                Layout.topMargin: column.headingTopSpacing
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Copyright")
                 textFormat: Text.PlainText
             }
@@ -166,13 +182,16 @@ KCM.SimpleKCM {
 
                 RowLayout {
                     spacing: Kirigami.Units.smallSpacing
+
                     QQC2.Label {
-                        text: i18nd("plasma_shell_org.kde.plasma.desktop", "License:")
+                        Layout.fillWidth: true
+                        text: i18nd("plasma_shell_org.kde.plasma.desktop %1 is the short SPDX text for the license", "License: %1", page.metaData.license)
                         textFormat: Text.PlainText
                     }
-                    Kirigami.LinkButton {
-                        text: page.metaData.license
-                        Accessible.description: i18ndc("plasma_shell_org.kde.plasma.desktop", "@info:whatsthis", "View license text")
+
+                    QQC2.Button {
+                        icon.name: "view-readermode"
+                        text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button", "Read License")
                         onClicked: {
                             licenseComponent.incubateObject(page.Window.window.contentItem, {
                                 "text": page.metaData.licenseText,
@@ -222,21 +241,6 @@ KCM.SimpleKCM {
                 Layout.leftMargin: column.dataLeftSpacing
                 model: page.metaData.translators
                 delegate: personDelegate
-            }
-
-            Item {
-                Layout.fillWidth: true
-            }
-
-            QQC2.Button {
-                Layout.alignment: Qt.AlignHCenter
-
-                icon.name: "tools-report-bug"
-                text: i18nd("plasma_shell_org.kde.plasma.desktop", "Report a Bug…")
-
-                visible: page.metaData.bugReportUrl.length > 0
-
-                onClicked: Qt.openUrlExternally(page.metaData.bugReportUrl)
             }
         }
     }
