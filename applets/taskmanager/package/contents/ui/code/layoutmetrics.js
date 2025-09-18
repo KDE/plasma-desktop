@@ -9,12 +9,6 @@
 const iconMargin = Math.round(Kirigami.Units.smallSpacing / 4);
 const labelMargin = Kirigami.Units.smallSpacing;
 
-// This is the ratio between the preferred width/height, which will
-// give enough space to all tasks to take their preferred amount of
-// space, and the minimum width/height, where the tasks will be
-// squeezed together to save some space.
-const squeezeFactor = 0.75;
-
 function horizontalMargins() {
     const spacingAdjustment = (tasks.plasmoid.pluginName === "org.kde.plasma.icontasks") ? (Kirigami.Settings.tabletMode ? 3 : tasks.plasmoid.configuration.iconSpacing) : 1
     return (taskFrame.margins.left + taskFrame.margins.right) * (tasks.vertical ? 1 : spacingAdjustment);
@@ -55,7 +49,7 @@ function optimumCapacity(width, height) {
 }
 
 function preferredMinWidth() {
-    let width = preferredMinLauncherWidth() * taskRepeater.count * squeezeFactor;
+    let width = preferredMinLauncherWidth();
 
     if (!tasks.vertical && !tasks.iconsOnly) {
       width +=
@@ -118,12 +112,8 @@ function preferredMaxWidth() {
 }
 
 function preferredMinHeight() {
-    if (tasks.vertical) {
-        return Math.max(tasks.width * taskRepeater.count * squeezeFactor, Kirigami.Units.iconSizes.sizeForLabels + 4)
-    } else {
-        // TODO FIXME UPSTREAM: Port to proper font metrics for descenders once we have access to them.
-        return Kirigami.Units.iconSizes.sizeForLabels + 4;
-    }
+    // TODO FIXME UPSTREAM: Port to proper font metrics for descenders once we have access to them.
+    return Kirigami.Units.iconSizes.sizeForLabels + 4;
 }
 
 function preferredMaxHeight() {
@@ -162,7 +152,7 @@ function spaceRequiredToShowText() {
 }
 
 function preferredMinLauncherWidth() {
-    const baseWidth = tasks.vertical ? preferredMinHeight() : tasks.height;
+    const baseWidth = tasks.vertical ? preferredMinHeight() : Math.min(tasks.height, Kirigami.Units.iconSizes.small * 3);
 
     return (baseWidth + horizontalMargins())
         - (adjustMargin(baseWidth, taskFrame.margins.top) + adjustMargin(baseWidth, taskFrame.margins.bottom));

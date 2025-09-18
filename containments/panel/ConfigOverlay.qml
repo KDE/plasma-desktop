@@ -45,20 +45,6 @@ MouseArea {
     onPositionChanged: mouse => {
         if (pressed) {
 
-            if (root.isHorizontal) {
-                if (mouse.x < scrollLeadingButton.width && scrollLeadingButton.visible) {
-                    layoutContainer.contentX = Math.max(0, layoutContainer.contentX - 2)
-                } else if (mouse.x > configurationArea.width && scrollTrailingButton.visible) {
-                    layoutContainer.contentX = Math.min(layoutContainer.contentWidth - layoutContainer.width, layoutContainer.contentX + 2)
-                }
-            } else {
-                if (mouse.y < scrollLeadingButton.height && scrollLeadingButton.visible) {
-                    layoutContainer.contentY = Math.max(0, layoutContainer.contentY - 2)
-                } else if (mouse.y > configurationArea.height && scrollTrailingButton.visible) {
-                    layoutContainer.contentY = Math.min(layoutContainer.contentHeight - layoutContainer.height, layoutContainer.contentY + 2)
-                }
-            }
-
             // If the object has been dragged outside of the panel and there's
             // a different containment there, we remove it from the panel
             // containment and add it to the new one.
@@ -78,11 +64,10 @@ MouseArea {
                 currentApplet.x = mouse.x - startDragOffset;
             }
 
-            let newPos = layoutContainer.mapToItem(currentLayout, mouse.x, mouse.y);
-            const item = root.layoutManager.childAtCoordinates(newPos.x, newPos.y);
+            const item = root.layoutManager.childAtCoordinates(mouse.x, mouse.y);
 
             if (item && item.applet !== placeHolder) {
-                var posInItem = mapToItem(item, newPos.x, newPos.y)
+                var posInItem = mapToItem(item, mouse.x, mouse.y)
                 var pos = root.isHorizontal ? posInItem.x : posInItem.y
                 var size = root.isHorizontal ? item.width : item.height
                 if (root.reverse) {
@@ -96,8 +81,7 @@ MouseArea {
             }
 
         } else {
-            let pos = layoutContainer.mapToItem(currentLayout, mouse.x, mouse.y);
-            const item = currentLayout.childAt(pos.x, pos.y);
+            const item = currentLayout.childAt(mouse.x, mouse.y);
             if (item && item !== lastSpacer) {
                 currentApplet = item;
             }
@@ -124,8 +108,7 @@ MouseArea {
         // Need to set currentApplet here too, to make touch selection + drag
         // with with a touchscreen, because there are no entered events in that
         // case
-        let pos = layoutContainer.mapToItem(currentLayout, mouse.x, mouse.y);
-        let item = currentLayout.childAt(pos.x, pos.y);
+        let item = currentLayout.childAt(mouse.x, mouse.y);
         // BUG 454095: Don't allow dragging lastSpacer as it's not a real applet
         if (!item || item == lastSpacer || item == addWidgetsButton) {
             configurationArea.currentApplet = null
@@ -138,8 +121,8 @@ MouseArea {
         // to be able to read its properties from the LayoutManager
         appletsModel.insert(item.index, {applet: placeHolder});
         placeHolder.parent.inThickArea = item.inThickArea
-        currentApplet = appletContainerComponent.createObject(dropArea, {applet: item.applet, x: item.x - layoutContainer.contentX,
-                                                                     y: item.y - layoutContainer.contentY, z: 900,
+        currentApplet = appletContainerComponent.createObject(dropArea, {applet: item.applet, x: item.x,
+                                                                     y: item.y, z: 900,
                                                                      width: item.width, height: item.height, index: -1})
         placeHolder.parent.dragging = currentApplet
         configurationArea.draggedItemIndex = item.index
@@ -147,9 +130,9 @@ MouseArea {
         root.dragAndDropping = true
 
         if (Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
-            startDragOffset = mouse.y - item.y + layoutContainer.contentY;
+            startDragOffset = mouse.y - currentApplet.y;
         } else {
-            startDragOffset = mouse.x - item.x + layoutContainer.contentX;
+            startDragOffset = mouse.x - currentApplet.x;
         }
     }
 
@@ -164,7 +147,7 @@ MouseArea {
         }
         appletsModel.set(placeHolder.parent.index, {applet: currentApplet.applet})
         let newCurrentApplet = currentApplet.applet.parent
-        newCurrentApplet.animateFrom(currentApplet.x + layoutContainer.contentX, currentApplet.y + layoutContainer.contentY)
+        newCurrentApplet.animateFrom(currentApplet.x, currentApplet.y)
         newCurrentApplet.dragging = null
         placeHolder.parent = this
         currentApplet.destroy()
@@ -196,8 +179,8 @@ MouseArea {
     Rectangle {
         id: handle
 
-        x: configurationArea.currentApplet?.x - layoutContainer.contentX * !root.dragAndDropping ?? 0
-        y: configurationArea.currentApplet?.y - layoutContainer.contentY * !root.dragAndDropping ?? 0
+        x: configurationArea.currentApplet?.x ?? 0
+        y: configurationArea.currentApplet?.y ?? 0
         width: configurationArea.currentApplet?.width ?? 0
         height: configurationArea.currentApplet?.height ?? 0
 
