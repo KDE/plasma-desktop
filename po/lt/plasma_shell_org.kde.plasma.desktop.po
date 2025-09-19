@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-16 00:43+0000\n"
+"POT-Creation-Date: 2025-09-19 00:44+0000\n"
 "PO-Revision-Date: 2025-09-01 17:38+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -95,58 +95,67 @@ msgstr "Atverti %1"
 msgid "About"
 msgstr "Apie"
 
-#: contents/configuration/AboutPlugin.qml:50
+#: contents/configuration/AboutPlugin.qml:51
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Siųsti el. laišką, adresu %1"
 
-#: contents/configuration/AboutPlugin.qml:64
+#: contents/configuration/AboutPlugin.qml:65
 #, kde-format
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
 msgstr "Atverti internetinę svetainę %1"
 
-#: contents/configuration/AboutPlugin.qml:142
+#: contents/configuration/AboutPlugin.qml:143
 #, kde-format
 msgctxt "@title:group"
 msgid "Website"
 msgstr "Internetinė svetainė"
 
-#: contents/configuration/AboutPlugin.qml:153
+#: contents/configuration/AboutPlugin.qml:154
+#, kde-format
+msgctxt "@title:group"
+msgid "Get Help"
+msgstr ""
+
+#: contents/configuration/AboutPlugin.qml:162
+#, fuzzy, kde-format
+#| msgid "Report a Bug…"
+msgid "Report an issue"
+msgstr "Pranešti apie klaidą…"
+
+#: contents/configuration/AboutPlugin.qml:169
 #, kde-format
 msgid "Copyright"
 msgstr "Autorių teisės"
 
-#: contents/configuration/AboutPlugin.qml:170
-#, kde-format
-msgid "License:"
+#: contents/configuration/AboutPlugin.qml:188
+#, fuzzy, kde-format
+#| msgid "License:"
+msgid "License: %1"
 msgstr "Licencija:"
 
-#: contents/configuration/AboutPlugin.qml:175
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "View license text"
-msgstr "Rodyti licencijos tekstą"
+#: contents/configuration/AboutPlugin.qml:194
+#, fuzzy, kde-format
+#| msgid "License:"
+msgctxt "@action:button"
+msgid "Read License"
+msgstr "Licencija:"
 
-#: contents/configuration/AboutPlugin.qml:189
+#: contents/configuration/AboutPlugin.qml:208
 #, kde-format
 msgid "Authors"
 msgstr "Autoriai"
 
-#: contents/configuration/AboutPlugin.qml:202
+#: contents/configuration/AboutPlugin.qml:221
 #, kde-format
 msgid "Credits"
 msgstr "Padėkos"
 
-#: contents/configuration/AboutPlugin.qml:216
+#: contents/configuration/AboutPlugin.qml:235
 #, kde-format
 msgid "Translators"
 msgstr "Vertėjai"
-
-#: contents/configuration/AboutPlugin.qml:235
-#, kde-format
-msgid "Report a Bug…"
-msgstr "Pranešti apie klaidą…"
 
 #: contents/configuration/AppletConfiguration.qml:90
 #, kde-format
@@ -920,6 +929,10 @@ msgstr "Išjungti taisymo veikseną"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Skydelio fokusavimo indikatorius"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "View license text"
+#~ msgstr "Rodyti licencijos tekstą"
 
 #~ msgid "Stop activity"
 #~ msgstr "Stabdyti veiklą"

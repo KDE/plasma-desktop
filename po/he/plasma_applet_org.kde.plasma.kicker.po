@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-26 00:44+0000\n"
+"POT-Creation-Date: 2025-09-19 00:44+0000\n"
 "PO-Revision-Date: 2023-09-30 14:56+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -179,6 +179,12 @@ msgstr "מועדפים"
 #, kde-format
 msgid "Edit Applications…"
 msgstr "עריכת יישומים…"
+
+#: MenuRepresentation.qml:310
+#, kde-format
+msgctxt "@info:status"
+msgid "No matches"
+msgstr ""
 
 #~ msgid "Searching for '%1'"
 #~ msgstr "בחיפוש אחר „%1”"

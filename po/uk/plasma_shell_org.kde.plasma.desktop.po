@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-16 00:43+0000\n"
+"POT-Creation-Date: 2025-09-19 00:44+0000\n"
 "PO-Revision-Date: 2025-08-12 09:56+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -94,58 +94,67 @@ msgstr "Відкрити %1"
 msgid "About"
 msgstr "Відомості"
 
-#: contents/configuration/AboutPlugin.qml:50
+#: contents/configuration/AboutPlugin.qml:51
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Надіслати повідомлення ел. пошти до %1"
 
-#: contents/configuration/AboutPlugin.qml:64
+#: contents/configuration/AboutPlugin.qml:65
 #, kde-format
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
 msgstr "Відкрити сайт %1"
 
-#: contents/configuration/AboutPlugin.qml:142
+#: contents/configuration/AboutPlugin.qml:143
 #, kde-format
 msgctxt "@title:group"
 msgid "Website"
 msgstr "Сайт"
 
-#: contents/configuration/AboutPlugin.qml:153
+#: contents/configuration/AboutPlugin.qml:154
+#, kde-format
+msgctxt "@title:group"
+msgid "Get Help"
+msgstr ""
+
+#: contents/configuration/AboutPlugin.qml:162
+#, fuzzy, kde-format
+#| msgid "Report a Bug…"
+msgid "Report an issue"
+msgstr "Повідомити про ваду…"
+
+#: contents/configuration/AboutPlugin.qml:169
 #, kde-format
 msgid "Copyright"
 msgstr "Авторські права"
 
-#: contents/configuration/AboutPlugin.qml:170
-#, kde-format
-msgid "License:"
+#: contents/configuration/AboutPlugin.qml:188
+#, fuzzy, kde-format
+#| msgid "License:"
+msgid "License: %1"
 msgstr "Ліцензування:"
 
-#: contents/configuration/AboutPlugin.qml:175
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "View license text"
-msgstr "Переглянути умови ліцензування"
+#: contents/configuration/AboutPlugin.qml:194
+#, fuzzy, kde-format
+#| msgid "License:"
+msgctxt "@action:button"
+msgid "Read License"
+msgstr "Ліцензування:"
 
-#: contents/configuration/AboutPlugin.qml:189
+#: contents/configuration/AboutPlugin.qml:208
 #, kde-format
 msgid "Authors"
 msgstr "Автори"
 
-#: contents/configuration/AboutPlugin.qml:202
+#: contents/configuration/AboutPlugin.qml:221
 #, kde-format
 msgid "Credits"
 msgstr "Подяки"
 
-#: contents/configuration/AboutPlugin.qml:216
+#: contents/configuration/AboutPlugin.qml:235
 #, kde-format
 msgid "Translators"
 msgstr "Перекладачі"
-
-#: contents/configuration/AboutPlugin.qml:235
-#, kde-format
-msgid "Report a Bug…"
-msgstr "Повідомити про ваду…"
 
 #: contents/configuration/AppletConfiguration.qml:90
 #, kde-format
@@ -916,6 +925,10 @@ msgstr "Вийти з режиму редагування"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Індикатор фокусування панелі"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "View license text"
+#~ msgstr "Переглянути умови ліцензування"
 
 #~ msgid "Stop activity"
 #~ msgstr "Зупинити простір дій"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-26 00:44+0000\n"
+"POT-Creation-Date: 2025-09-19 00:44+0000\n"
 "PO-Revision-Date: 2020-10-08 11:46+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -181,6 +181,12 @@ msgstr "Lemmikud"
 #| msgid "Edit Applications..."
 msgid "Edit Applications…"
 msgstr "Muuda rakendusi..."
+
+#: MenuRepresentation.qml:310
+#, kde-format
+msgctxt "@info:status"
+msgid "No matches"
+msgstr ""
 
 #~ msgid "Searching for '%1'"
 #~ msgstr "\"%1\" otsimine'"

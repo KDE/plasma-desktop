@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-16 00:43+0000\n"
+"POT-Creation-Date: 2025-09-19 00:44+0000\n"
 "PO-Revision-Date: 2025-06-19 09:46+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -93,58 +93,67 @@ msgstr "Abrir %1"
 msgid "About"
 msgstr "Sobre"
 
-#: contents/configuration/AboutPlugin.qml:50
+#: contents/configuration/AboutPlugin.qml:51
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Enviar unha mensaxe de correo electrónico a %1"
 
-#: contents/configuration/AboutPlugin.qml:64
+#: contents/configuration/AboutPlugin.qml:65
 #, kde-format
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
 msgstr "Abrir sitio web %1"
 
-#: contents/configuration/AboutPlugin.qml:142
+#: contents/configuration/AboutPlugin.qml:143
 #, kde-format
 msgctxt "@title:group"
 msgid "Website"
 msgstr ""
 
-#: contents/configuration/AboutPlugin.qml:153
+#: contents/configuration/AboutPlugin.qml:154
+#, kde-format
+msgctxt "@title:group"
+msgid "Get Help"
+msgstr ""
+
+#: contents/configuration/AboutPlugin.qml:162
+#, fuzzy, kde-format
+#| msgid "Report a Bug…"
+msgid "Report an issue"
+msgstr "Informar dun fallo…"
+
+#: contents/configuration/AboutPlugin.qml:169
 #, kde-format
 msgid "Copyright"
 msgstr "Dereitos de copia"
 
-#: contents/configuration/AboutPlugin.qml:170
-#, kde-format
-msgid "License:"
+#: contents/configuration/AboutPlugin.qml:188
+#, fuzzy, kde-format
+#| msgid "License:"
+msgid "License: %1"
 msgstr "Licenza:"
 
-#: contents/configuration/AboutPlugin.qml:175
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "View license text"
-msgstr "Ver o texto da licenza."
+#: contents/configuration/AboutPlugin.qml:194
+#, fuzzy, kde-format
+#| msgid "License:"
+msgctxt "@action:button"
+msgid "Read License"
+msgstr "Licenza:"
 
-#: contents/configuration/AboutPlugin.qml:189
+#: contents/configuration/AboutPlugin.qml:208
 #, kde-format
 msgid "Authors"
 msgstr "Autoría"
 
-#: contents/configuration/AboutPlugin.qml:202
+#: contents/configuration/AboutPlugin.qml:221
 #, kde-format
 msgid "Credits"
 msgstr "Recoñecementos"
 
-#: contents/configuration/AboutPlugin.qml:216
+#: contents/configuration/AboutPlugin.qml:235
 #, kde-format
 msgid "Translators"
 msgstr "Tradución"
-
-#: contents/configuration/AboutPlugin.qml:235
-#, kde-format
-msgid "Report a Bug…"
-msgstr "Informar dun fallo…"
 
 #: contents/configuration/AppletConfiguration.qml:90
 #, kde-format
@@ -910,6 +919,10 @@ msgstr "Desactivar o modo de edición"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Indicador de foco do panel"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "View license text"
+#~ msgstr "Ver o texto da licenza."
 
 #~ msgid "Stop activity"
 #~ msgstr "Deter a actividade"

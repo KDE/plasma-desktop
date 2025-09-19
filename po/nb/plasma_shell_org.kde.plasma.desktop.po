@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-16 00:43+0000\n"
+"POT-Creation-Date: 2025-09-19 00:44+0000\n"
 "PO-Revision-Date: 2025-03-30 09:51+0200\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -93,58 +93,67 @@ msgstr "Åpne %1"
 msgid "About"
 msgstr "Om"
 
-#: contents/configuration/AboutPlugin.qml:50
+#: contents/configuration/AboutPlugin.qml:51
 #, kde-format
 msgid "Send an email to %1"
 msgstr "Send e-post til %1"
 
-#: contents/configuration/AboutPlugin.qml:64
+#: contents/configuration/AboutPlugin.qml:65
 #, kde-format
 msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
 msgstr "Åpne hjemmeside: %1"
 
-#: contents/configuration/AboutPlugin.qml:142
+#: contents/configuration/AboutPlugin.qml:143
 #, kde-format
 msgctxt "@title:group"
 msgid "Website"
 msgstr ""
 
-#: contents/configuration/AboutPlugin.qml:153
+#: contents/configuration/AboutPlugin.qml:154
+#, kde-format
+msgctxt "@title:group"
+msgid "Get Help"
+msgstr ""
+
+#: contents/configuration/AboutPlugin.qml:162
+#, fuzzy, kde-format
+#| msgid "Report a Bug…"
+msgid "Report an issue"
+msgstr "Meld fra om feil …"
+
+#: contents/configuration/AboutPlugin.qml:169
 #, kde-format
 msgid "Copyright"
 msgstr "Opphavsrett"
 
-#: contents/configuration/AboutPlugin.qml:170
-#, kde-format
-msgid "License:"
+#: contents/configuration/AboutPlugin.qml:188
+#, fuzzy, kde-format
+#| msgid "License:"
+msgid "License: %1"
 msgstr "Lisens:"
 
-#: contents/configuration/AboutPlugin.qml:175
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "View license text"
-msgstr "Vis lisenstekst"
+#: contents/configuration/AboutPlugin.qml:194
+#, fuzzy, kde-format
+#| msgid "License:"
+msgctxt "@action:button"
+msgid "Read License"
+msgstr "Lisens:"
 
-#: contents/configuration/AboutPlugin.qml:189
+#: contents/configuration/AboutPlugin.qml:208
 #, kde-format
 msgid "Authors"
 msgstr "Opphavspersoner"
 
-#: contents/configuration/AboutPlugin.qml:202
+#: contents/configuration/AboutPlugin.qml:221
 #, kde-format
 msgid "Credits"
 msgstr "Bidragsytere"
 
-#: contents/configuration/AboutPlugin.qml:216
+#: contents/configuration/AboutPlugin.qml:235
 #, kde-format
 msgid "Translators"
 msgstr "Oversettere"
-
-#: contents/configuration/AboutPlugin.qml:235
-#, kde-format
-msgid "Report a Bug…"
-msgstr "Meld fra om feil …"
 
 #: contents/configuration/AppletConfiguration.qml:90
 #, kde-format
@@ -917,5 +926,6 @@ msgstr "Avslutt tilpasning"
 msgid "Panel Focus Indicator"
 msgstr "Panelfokus-markør"
 
-#~ msgid "Stop activity"
-#~ msgstr "Stopp aktivitet"
+#~ msgctxt "@info:whatsthis"
+#~ msgid "View license text"
+#~ msgstr "Vis lisenstekst"
