@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-desktop/kcm_device_automounter."
+"X-Crowdin-File: /kf6-stable/messages/plasma-desktop/kcm_device_automounter."
 "pot\n"
-"X-Crowdin-File-ID: 49124\n"
+"X-Crowdin-File-ID: 51650\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -37,9 +37,9 @@ msgid ""
 "\"Mount all removable media at login\" is unchecked. The same applies for "
 "\"Automount on Attach\"."
 msgstr ""
-"此列表包含了系统已知的所有存储设备。如果勾选了设备的“登录时”选框，系统将在登"
-"录到桌面时自动挂载它，即使您没有勾选“登录时自动挂载所有可移动设备”选框。此规"
-"则同样适用于设备的“插入时”选框。"
+"此列表包含系统已知的存储设备。如果选中一个设备的“登录时”选框，它将在系统登录"
+"到桌面时被自动挂载，不管您是否勾选了“登录时自动挂载所有可移动设备”选框。“连接"
+"时”选框的规则也是如此。"
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:54
@@ -97,7 +97,7 @@ msgstr "登录时"
 #, kde-format
 msgctxt "As in automount on attach"
 msgid "On Attach"
-msgstr "插入时"
+msgstr "连接时"
 
 #: DeviceModel.cpp:258
 #, kde-format
@@ -137,9 +137,9 @@ msgstr "登录时不自动挂载此设备。"
 #: DeviceModel.cpp:326
 #, kde-format
 msgid "This device will be automatically mounted when attached."
-msgstr "设备插入时自动挂载。"
+msgstr "设备连接时自动挂载。"
 
 #: DeviceModel.cpp:327
 #, kde-format
 msgid "This device will not be automatically mounted when attached."
-msgstr "设备插入时不自动挂载。"
+msgstr "设备连接时不自动挂载。"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-26 00:44+0000\n"
+"POT-Creation-Date: 2025-09-19 02:39+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-desktop/plasma_applet_org.kde."
+"X-Crowdin-File: /kf6-stable/messages/plasma-desktop/plasma_applet_org.kde."
 "plasma.kicker.pot\n"
-"X-Crowdin-File-ID: 43741\n"
+"X-Crowdin-File-ID: 52832\n"
 
 #: code/tools.js:43
 #, kde-format
@@ -178,3 +178,9 @@ msgstr "常用程序"
 #, kde-format
 msgid "Edit Applications…"
 msgstr "编辑应用程序…"
+
+#: MenuRepresentation.qml:310
+#, kde-format
+msgctxt "@info:status"
+msgid "No matches"
+msgstr ""
