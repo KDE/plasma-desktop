@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-09 00:43+0000\n"
+"POT-Creation-Date: 2025-09-20 00:44+0000\n"
 "PO-Revision-Date: 2024-09-12 10:32+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -21,54 +21,54 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
-#: package/contents/ui/main.qml:118
+#: main.qml:118
 #, kde-format
 msgid "Minimize All Applet Active Indicator"
 msgstr "Minimitza tots els indicadors actius de miniaplicació"
 
-#: package/contents/ui/MinimizeAllController.qml:17
+#: MinimizeAllController.qml:17
 #, kde-format
 msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Restore Windows"
 msgstr "Restaura les finestres"
 
-#: package/contents/ui/MinimizeAllController.qml:18
+#: MinimizeAllController.qml:18
 #, kde-format
 msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Minimize All Windows"
 msgstr "Minimitza totes les finestres"
 
-#: package/contents/ui/MinimizeAllController.qml:20
+#: MinimizeAllController.qml:20
 #, kde-format
 msgctxt "@info:tooltip shown as subtitle"
 msgid "Restores the previously minimized windows"
 msgstr "Restaura les finestres minimitzades anteriorment"
 
-#: package/contents/ui/MinimizeAllController.qml:21
+#: MinimizeAllController.qml:21
 #, kde-format
 msgctxt "@info:tooltip shown as subtitle"
 msgid "Shows the Desktop by minimizing all windows"
 msgstr "Mostra l'escriptori minimitzant totes les finestres"
 
-#: package/contents/ui/PeekController.qml:14
+#: PeekController.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Peek at Desktop"
 msgstr "Ullada a l'escriptori"
 
-#: package/contents/ui/PeekController.qml:15
+#: PeekController.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Peeking at Desktop"
 msgstr "Para la ullada a l'escriptori"
 
-#: package/contents/ui/PeekController.qml:17
+#: PeekController.qml:17
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Moves windows back to their original positions"
 msgstr "Retorna les finestres a les seues posicions originals"
 
-#: package/contents/ui/PeekController.qml:18
+#: PeekController.qml:18
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Temporarily shows the desktop by moving windows away"

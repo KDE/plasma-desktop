@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-19 00:44+0000\n"
-"PO-Revision-Date: 2025-08-12 19:57+0100\n"
+"PO-Revision-Date: 2025-09-19 14:03+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: contents/activitymanager/ActivityItem.qml:203
 #, kde-format
@@ -114,13 +114,12 @@ msgstr "Sitio web"
 #, kde-format
 msgctxt "@title:group"
 msgid "Get Help"
-msgstr ""
+msgstr "Obtener ayuda"
 
 #: contents/configuration/AboutPlugin.qml:162
-#, fuzzy, kde-format
-#| msgid "Report a Bug…"
+#, kde-format
 msgid "Report an issue"
-msgstr "Informar de fallo…"
+msgstr "Informar de un fallo"
 
 #: contents/configuration/AboutPlugin.qml:169
 #, kde-format
@@ -128,17 +127,15 @@ msgid "Copyright"
 msgstr "Copyright"
 
 #: contents/configuration/AboutPlugin.qml:188
-#, fuzzy, kde-format
-#| msgid "License:"
+#, kde-format
 msgid "License: %1"
-msgstr "Licencia:"
+msgstr "Licencia: %1"
 
 #: contents/configuration/AboutPlugin.qml:194
-#, fuzzy, kde-format
-#| msgid "License:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Read License"
-msgstr "Licencia:"
+msgstr "Leer la licencia"
 
 #: contents/configuration/AboutPlugin.qml:208
 #, kde-format
@@ -924,10 +921,3 @@ msgstr "Salir del modo de edición"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Indicador de foco del panel"
-
-#~ msgctxt "@info:whatsthis"
-#~ msgid "View license text"
-#~ msgstr "Ver texto de la licencia"
-
-#~ msgid "Stop activity"
-#~ msgstr "Detener actividad"

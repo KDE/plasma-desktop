@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-09 00:43+0000\n"
+"POT-Creation-Date: 2025-09-20 00:44+0000\n"
 "PO-Revision-Date: 2024-10-09 21:36+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -17,54 +17,54 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.08.1\n"
 
-#: package/contents/ui/main.qml:118
+#: main.qml:118
 #, kde-format
 msgid "Minimize All Applet Active Indicator"
 msgstr "அனைத்து சாளரங்களையும் ஒதுக்கும் பிளாஸ்மாய்ட் செயலிலுள்ளதா எனக் காட்டும் நிலைகாட்டி"
 
-#: package/contents/ui/MinimizeAllController.qml:17
+#: MinimizeAllController.qml:17
 #, kde-format
 msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Restore Windows"
 msgstr "ஒதுக்கப்பட்ட சாளரங்களை மீட்டெடு"
 
-#: package/contents/ui/MinimizeAllController.qml:18
+#: MinimizeAllController.qml:18
 #, kde-format
 msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Minimize All Windows"
 msgstr "அனைத்து சாளரங்களையும் ஒதுக்கு"
 
-#: package/contents/ui/MinimizeAllController.qml:20
+#: MinimizeAllController.qml:20
 #, kde-format
 msgctxt "@info:tooltip shown as subtitle"
 msgid "Restores the previously minimized windows"
 msgstr "முன்பு ஒதுப்பட்ட அனைத்து சாளரங்களையும் மீண்டும் காட்டும்"
 
-#: package/contents/ui/MinimizeAllController.qml:21
+#: MinimizeAllController.qml:21
 #, kde-format
 msgctxt "@info:tooltip shown as subtitle"
 msgid "Shows the Desktop by minimizing all windows"
 msgstr "அனைத்து சாளரங்களையும் ஒதுக்கி பணிமேடையை காட்டும்"
 
-#: package/contents/ui/PeekController.qml:14
+#: PeekController.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Peek at Desktop"
 msgstr "பணிமேடையைக் காட்டு"
 
-#: package/contents/ui/PeekController.qml:15
+#: PeekController.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Peeking at Desktop"
 msgstr "பணிமேடையைக் காட்டுவதை நிறுத்து"
 
-#: package/contents/ui/PeekController.qml:17
+#: PeekController.qml:17
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Moves windows back to their original positions"
 msgstr "சாளரங்களை அவற்றின் முந்தைய இருப்பிடங்களுக்கு நகர்த்தும்"
 
-#: package/contents/ui/PeekController.qml:18
+#: PeekController.qml:18
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Temporarily shows the desktop by moving windows away"

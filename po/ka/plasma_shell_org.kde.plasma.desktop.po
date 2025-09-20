@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-19 00:44+0000\n"
-"PO-Revision-Date: 2025-08-12 05:13+0200\n"
+"PO-Revision-Date: 2025-09-19 07:11+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.7\n"
 
 #: contents/activitymanager/ActivityItem.qml:203
 #, kde-format
@@ -109,13 +109,12 @@ msgstr "ვებგვერდი"
 #, kde-format
 msgctxt "@title:group"
 msgid "Get Help"
-msgstr ""
+msgstr "დახმარების მიღება"
 
 #: contents/configuration/AboutPlugin.qml:162
-#, fuzzy, kde-format
-#| msgid "Report a Bug…"
+#, kde-format
 msgid "Report an issue"
-msgstr "შეცდომის პატაკი…"
+msgstr "პრობლემის ანგარიში"
 
 #: contents/configuration/AboutPlugin.qml:169
 #, kde-format
@@ -123,17 +122,15 @@ msgid "Copyright"
 msgstr "საავტორო უფლებები"
 
 #: contents/configuration/AboutPlugin.qml:188
-#, fuzzy, kde-format
-#| msgid "License:"
+#, kde-format
 msgid "License: %1"
-msgstr "ლიცენზია:"
+msgstr "ლიცენზია: %1"
 
 #: contents/configuration/AboutPlugin.qml:194
-#, fuzzy, kde-format
-#| msgid "License:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Read License"
-msgstr "ლიცენზია:"
+msgstr "ლიცენზიის წაკითხვა"
 
 #: contents/configuration/AboutPlugin.qml:208
 #, kde-format

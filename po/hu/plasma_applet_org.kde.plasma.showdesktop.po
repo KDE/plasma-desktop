@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-09 00:43+0000\n"
+"POT-Creation-Date: 2025-09-20 00:44+0000\n"
 "PO-Revision-Date: 2024-09-23 22:03+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -20,54 +20,54 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.08.0\n"
 
-#: package/contents/ui/main.qml:118
+#: main.qml:118
 #, kde-format
 msgid "Minimize All Applet Active Indicator"
 msgstr "Összes minimalizálása kisalkalmazás aktív jelző"
 
-#: package/contents/ui/MinimizeAllController.qml:17
+#: MinimizeAllController.qml:17
 #, kde-format
 msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Restore Windows"
 msgstr "Ablakok visszaállítása"
 
-#: package/contents/ui/MinimizeAllController.qml:18
+#: MinimizeAllController.qml:18
 #, kde-format
 msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Minimize All Windows"
 msgstr "Összes ablak minimalizálása"
 
-#: package/contents/ui/MinimizeAllController.qml:20
+#: MinimizeAllController.qml:20
 #, kde-format
 msgctxt "@info:tooltip shown as subtitle"
 msgid "Restores the previously minimized windows"
 msgstr "Visszaállítja a korábban minimalizált ablakokat"
 
-#: package/contents/ui/MinimizeAllController.qml:21
+#: MinimizeAllController.qml:21
 #, kde-format
 msgctxt "@info:tooltip shown as subtitle"
 msgid "Shows the Desktop by minimizing all windows"
 msgstr "Az asztal megjelenítése az összes ablak minimalizálásával"
 
-#: package/contents/ui/PeekController.qml:14
+#: PeekController.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Peek at Desktop"
 msgstr "Pillantás az asztalra"
 
-#: package/contents/ui/PeekController.qml:15
+#: PeekController.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Peeking at Desktop"
 msgstr "Leállítás"
 
-#: package/contents/ui/PeekController.qml:17
+#: PeekController.qml:17
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Moves windows back to their original positions"
 msgstr "Visszahelyezi az ablakokat az eredeti pozíciójukba"
 
-#: package/contents/ui/PeekController.qml:18
+#: PeekController.qml:18
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Temporarily shows the desktop by moving windows away"

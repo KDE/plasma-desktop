@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-09 00:43+0000\n"
+"POT-Creation-Date: 2025-09-20 00:44+0000\n"
 "PO-Revision-Date: 2024-09-12 03:29+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,54 +18,54 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.3.2\n"
 
-#: package/contents/ui/main.qml:118
+#: main.qml:118
 #, kde-format
 msgid "Minimize All Applet Active Indicator"
 msgstr "ყველა აპლეტის აქტიურობის მაჩვენებლის ჩაკეცვა"
 
-#: package/contents/ui/MinimizeAllController.qml:17
+#: MinimizeAllController.qml:17
 #, kde-format
 msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Restore Windows"
 msgstr "ფანჯრების აღდგენა"
 
-#: package/contents/ui/MinimizeAllController.qml:18
+#: MinimizeAllController.qml:18
 #, kde-format
 msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Minimize All Windows"
 msgstr "ყველა ფანჯრის ჩაკეცვა"
 
-#: package/contents/ui/MinimizeAllController.qml:20
+#: MinimizeAllController.qml:20
 #, kde-format
 msgctxt "@info:tooltip shown as subtitle"
 msgid "Restores the previously minimized windows"
 msgstr "უკვე ჩაკეცილი ფანჯრების აღდგენა"
 
-#: package/contents/ui/MinimizeAllController.qml:21
+#: MinimizeAllController.qml:21
 #, kde-format
 msgctxt "@info:tooltip shown as subtitle"
 msgid "Shows the Desktop by minimizing all windows"
 msgstr "სამუშაო მაგიდის ჩვენება ყველა ფანჯრის ჩაკეცვით"
 
-#: package/contents/ui/PeekController.qml:14
+#: PeekController.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Peek at Desktop"
 msgstr "სამუშაო მაგიდაზე გაჭვრეტა"
 
-#: package/contents/ui/PeekController.qml:15
+#: PeekController.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Peeking at Desktop"
 msgstr "სამუშაო მაგიდაზე ჭვრიტინის დასრულება"
 
-#: package/contents/ui/PeekController.qml:17
+#: PeekController.qml:17
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Moves windows back to their original positions"
 msgstr "ფანჯრების მათ საწყის მდებარეობაზე დაბრუნება"
 
-#: package/contents/ui/PeekController.qml:18
+#: PeekController.qml:18
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Temporarily shows the desktop by moving windows away"

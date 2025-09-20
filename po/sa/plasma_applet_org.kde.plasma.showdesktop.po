@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-09 00:43+0000\n"
+"POT-Creation-Date: 2025-09-20 00:44+0000\n"
 "PO-Revision-Date: 2024-12-13 19:10+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -17,54 +17,54 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
 
-#: package/contents/ui/main.qml:118
+#: main.qml:118
 #, kde-format
 msgid "Minimize All Applet Active Indicator"
 msgstr "सर्वाणि एप्लेट् सक्रियसूचकं न्यूनीकरोतु"
 
-#: package/contents/ui/MinimizeAllController.qml:17
+#: MinimizeAllController.qml:17
 #, kde-format
 msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Restore Windows"
 msgstr "विण्डोज पुनःस्थापयन्तु"
 
-#: package/contents/ui/MinimizeAllController.qml:18
+#: MinimizeAllController.qml:18
 #, kde-format
 msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Minimize All Windows"
 msgstr "सर्वाणि विण्डोजानि न्यूनीकरोतु"
 
-#: package/contents/ui/MinimizeAllController.qml:20
+#: MinimizeAllController.qml:20
 #, kde-format
 msgctxt "@info:tooltip shown as subtitle"
 msgid "Restores the previously minimized windows"
 msgstr "पूर्वं न्यूनीकृतानि विण्डोस् पुनः स्थापयति"
 
-#: package/contents/ui/MinimizeAllController.qml:21
+#: MinimizeAllController.qml:21
 #, kde-format
 msgctxt "@info:tooltip shown as subtitle"
 msgid "Shows the Desktop by minimizing all windows"
 msgstr "सर्वाणि विण्डोस् न्यूनीकृत्य Desktop दर्शयति"
 
-#: package/contents/ui/PeekController.qml:14
+#: PeekController.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Peek at Desktop"
 msgstr "डेस्कटॉप् इत्यत्र दृष्टिपातं कुर्वन्तु"
 
-#: package/contents/ui/PeekController.qml:15
+#: PeekController.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Peeking at Desktop"
 msgstr "डेस्कटॉप् इत्यत्र दृष्टिपातं त्यजन्तु"
 
-#: package/contents/ui/PeekController.qml:17
+#: PeekController.qml:17
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Moves windows back to their original positions"
 msgstr "खिडकयः पुनः स्वस्य मूलस्थानेषु स्थानान्तरयति"
 
-#: package/contents/ui/PeekController.qml:18
+#: PeekController.qml:18
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Temporarily shows the desktop by moving windows away"

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-19 00:44+0000\n"
-"PO-Revision-Date: 2025-08-12 09:56+0300\n"
+"PO-Revision-Date: 2025-09-19 20:25+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -115,13 +115,12 @@ msgstr "Сайт"
 #, kde-format
 msgctxt "@title:group"
 msgid "Get Help"
-msgstr ""
+msgstr "Довідка"
 
 #: contents/configuration/AboutPlugin.qml:162
-#, fuzzy, kde-format
-#| msgid "Report a Bug…"
+#, kde-format
 msgid "Report an issue"
-msgstr "Повідомити про ваду…"
+msgstr "Повідомити про ваду"
 
 #: contents/configuration/AboutPlugin.qml:169
 #, kde-format
@@ -129,17 +128,15 @@ msgid "Copyright"
 msgstr "Авторські права"
 
 #: contents/configuration/AboutPlugin.qml:188
-#, fuzzy, kde-format
-#| msgid "License:"
+#, kde-format
 msgid "License: %1"
-msgstr "Ліцензування:"
+msgstr "Ліцензування: %1"
 
 #: contents/configuration/AboutPlugin.qml:194
-#, fuzzy, kde-format
-#| msgid "License:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Read License"
-msgstr "Ліцензування:"
+msgstr "Прочитати умови ліцензування"
 
 #: contents/configuration/AboutPlugin.qml:208
 #, kde-format

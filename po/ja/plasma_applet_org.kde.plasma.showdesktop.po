@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_showdesktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-09 00:43+0000\n"
+"POT-Creation-Date: 2025-09-20 00:44+0000\n"
 "PO-Revision-Date: 2024-02-09 02:54+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -20,14 +20,14 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Generator: Lokalize 23.08.4\n"
 
-#: package/contents/ui/main.qml:118
+#: main.qml:118
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Minimize All Windows"
 msgid "Minimize All Applet Active Indicator"
 msgstr "ウィンドウ最小化"
 
-#: package/contents/ui/MinimizeAllController.qml:17
+#: MinimizeAllController.qml:17
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Restore All Minimized Windows"
@@ -35,7 +35,7 @@ msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Restore Windows"
 msgstr "すべての最小化されたウィンドウを復元する"
 
-#: package/contents/ui/MinimizeAllController.qml:18
+#: MinimizeAllController.qml:18
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Minimize All Windows"
@@ -43,7 +43,7 @@ msgctxt "@action:button shown as tooltip and @action:inmenu"
 msgid "Minimize All Windows"
 msgstr "ウィンドウ最小化"
 
-#: package/contents/ui/MinimizeAllController.qml:20
+#: MinimizeAllController.qml:20
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Restores the previously minimized windows"
@@ -51,7 +51,7 @@ msgctxt "@info:tooltip shown as subtitle"
 msgid "Restores the previously minimized windows"
 msgstr "最小化したウィンドウを復元する"
 
-#: package/contents/ui/MinimizeAllController.qml:21
+#: MinimizeAllController.qml:21
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Shows the Desktop by minimizing all windows"
@@ -59,25 +59,25 @@ msgctxt "@info:tooltip shown as subtitle"
 msgid "Shows the Desktop by minimizing all windows"
 msgstr "すべてのウィンドウを最小化してデスクトップを表示"
 
-#: package/contents/ui/PeekController.qml:14
+#: PeekController.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Peek at Desktop"
 msgstr "ウィンドウを隠す"
 
-#: package/contents/ui/PeekController.qml:15
+#: PeekController.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Peeking at Desktop"
 msgstr "元に戻す"
 
-#: package/contents/ui/PeekController.qml:17
+#: PeekController.qml:17
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Moves windows back to their original positions"
 msgstr "ウィンドウを元の位置に戻す"
 
-#: package/contents/ui/PeekController.qml:18
+#: PeekController.qml:18
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Temporarily shows the desktop by moving windows away"
