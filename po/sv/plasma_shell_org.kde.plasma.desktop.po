@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-19 00:44+0000\n"
-"PO-Revision-Date: 2025-08-12 07:16+0200\n"
+"POT-Creation-Date: 2025-09-21 00:44+0000\n"
+"PO-Revision-Date: 2025-09-20 10:02+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: contents/activitymanager/ActivityItem.qml:203
 #, kde-format
@@ -44,11 +44,6 @@ msgstr ""
 #, kde-format
 msgid "Configure"
 msgstr "Anpassa"
-
-#: contents/activitymanager/ActivityList.qml:147
-#, kde-format
-msgid "Stopped activities:"
-msgstr "Stoppade aktiviteter:"
 
 #: contents/activitymanager/ActivityManager.qml:122
 #, kde-format
@@ -112,13 +107,12 @@ msgstr "Webbplats"
 #, kde-format
 msgctxt "@title:group"
 msgid "Get Help"
-msgstr ""
+msgstr "Hämta hjälp"
 
 #: contents/configuration/AboutPlugin.qml:162
-#, fuzzy, kde-format
-#| msgid "Report a Bug…"
+#, kde-format
 msgid "Report an issue"
-msgstr "Rapportera ett fel…"
+msgstr "Rapportera ett fel"
 
 #: contents/configuration/AboutPlugin.qml:169
 #, kde-format
@@ -126,17 +120,15 @@ msgid "Copyright"
 msgstr "Copyright"
 
 #: contents/configuration/AboutPlugin.qml:188
-#, fuzzy, kde-format
-#| msgid "License:"
+#, kde-format
 msgid "License: %1"
-msgstr "Licens:"
+msgstr "Licens: %1"
 
 #: contents/configuration/AboutPlugin.qml:194
-#, fuzzy, kde-format
-#| msgid "License:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Read License"
-msgstr "Licens:"
+msgstr "Läs licens"
 
 #: contents/configuration/AboutPlugin.qml:208
 #, kde-format
@@ -918,6 +910,9 @@ msgstr "Avsluta redigeringsläge"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Panelfokuseringsindikator"
+
+#~ msgid "Stopped activities:"
+#~ msgstr "Stoppade aktiviteter:"
 
 #~ msgctxt "@info:whatsthis"
 #~ msgid "View license text"

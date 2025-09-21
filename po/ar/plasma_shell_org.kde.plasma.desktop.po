@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-19 00:44+0000\n"
-"PO-Revision-Date: 2025-08-17 21:58+0400\n"
+"POT-Creation-Date: 2025-09-21 00:44+0000\n"
+"PO-Revision-Date: 2025-09-20 20:23+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -47,11 +47,6 @@ msgstr ""
 #, kde-format
 msgid "Configure"
 msgstr "اضبط"
-
-#: contents/activitymanager/ActivityList.qml:147
-#, kde-format
-msgid "Stopped activities:"
-msgstr "الأنشطة الموقفة:"
 
 #: contents/activitymanager/ActivityManager.qml:122
 #, kde-format
@@ -115,13 +110,12 @@ msgstr "موقع الوبّ"
 #, kde-format
 msgctxt "@title:group"
 msgid "Get Help"
-msgstr ""
+msgstr "احصل على المساعدة"
 
 #: contents/configuration/AboutPlugin.qml:162
-#, fuzzy, kde-format
-#| msgid "Report a Bug…"
+#, kde-format
 msgid "Report an issue"
-msgstr "بلغ عن علة…"
+msgstr "أبلغ عن مشكلة"
 
 #: contents/configuration/AboutPlugin.qml:169
 #, kde-format
@@ -129,17 +123,15 @@ msgid "Copyright"
 msgstr "حقوق النسخ"
 
 #: contents/configuration/AboutPlugin.qml:188
-#, fuzzy, kde-format
-#| msgid "License:"
+#, kde-format
 msgid "License: %1"
-msgstr "الرّخصة:"
+msgstr "الترخيص: %1"
 
 #: contents/configuration/AboutPlugin.qml:194
-#, fuzzy, kde-format
-#| msgid "License:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Read License"
-msgstr "الرّخصة:"
+msgstr "اقرأ الرّخصة"
 
 #: contents/configuration/AboutPlugin.qml:208
 #, kde-format
@@ -930,6 +922,9 @@ msgstr "اخرج من نمط التحرير"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "مؤشر التركيز على اللوحة"
+
+#~ msgid "Stopped activities:"
+#~ msgstr "الأنشطة الموقفة:"
 
 #~ msgctxt "@info:whatsthis"
 #~ msgid "View license text"

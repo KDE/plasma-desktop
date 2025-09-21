@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-19 00:44+0000\n"
-"PO-Revision-Date: 2025-08-31 23:31+0200\n"
+"POT-Creation-Date: 2025-09-21 00:44+0000\n"
+"PO-Revision-Date: 2025-09-20 22:13+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -44,11 +44,6 @@ msgstr ""
 #, kde-format
 msgid "Configure"
 msgstr "Настройване"
-
-#: contents/activitymanager/ActivityList.qml:147
-#, kde-format
-msgid "Stopped activities:"
-msgstr "Преустановени дейности:"
 
 #: contents/activitymanager/ActivityManager.qml:122
 #, kde-format
@@ -112,13 +107,12 @@ msgstr "Уебсайт"
 #, kde-format
 msgctxt "@title:group"
 msgid "Get Help"
-msgstr ""
+msgstr "Помощ"
 
 #: contents/configuration/AboutPlugin.qml:162
-#, fuzzy, kde-format
-#| msgid "Report a Bug…"
+#, kde-format
 msgid "Report an issue"
-msgstr "Сигнал за грешка…"
+msgstr "Докладване на проблем"
 
 #: contents/configuration/AboutPlugin.qml:169
 #, kde-format
@@ -126,17 +120,15 @@ msgid "Copyright"
 msgstr "Авторско право"
 
 #: contents/configuration/AboutPlugin.qml:188
-#, fuzzy, kde-format
-#| msgid "License:"
+#, kde-format
 msgid "License: %1"
-msgstr "Лиценз:"
+msgstr "Лиценз: %1"
 
 #: contents/configuration/AboutPlugin.qml:194
-#, fuzzy, kde-format
-#| msgid "License:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Read License"
-msgstr "Лиценз:"
+msgstr "Прочитане на лиценза"
 
 #: contents/configuration/AboutPlugin.qml:208
 #, kde-format
@@ -920,6 +912,9 @@ msgstr "Излизане от режим на редактиране"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Индикатор за фокус на панела"
+
+#~ msgid "Stopped activities:"
+#~ msgstr "Преустановени дейности:"
 
 #~ msgctxt "@info:whatsthis"
 #~ msgid "View license text"
