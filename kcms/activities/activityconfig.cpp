@@ -148,6 +148,7 @@ void ActivityConfig::save()
     QAction action(nullptr);
     action.setProperty("isConfigurationAction", true);
     action.setProperty("componentName", QStringLiteral("ActivityManager"));
+    action.setProperty("componentDisplayName", i18n("Activity Manager"));
     action.setObjectName(QStringLiteral("switch-to-activity-%1").arg(m_activityId));
     KGlobalAccel::self()->setShortcut(&action, {m_shortcut}, KGlobalAccel::NoAutoloading);
 
