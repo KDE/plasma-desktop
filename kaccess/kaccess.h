@@ -59,12 +59,13 @@ private Q_SLOTS:
     void yesClicked();
     void noClicked();
     void dialogClosed();
-    void toggleScreenReader();
+    void screenReaderPropertiesChanged(const QString&, const QVariantMap&, const QStringList&);
+    void setScreenReaderEnabled(bool enabled);
+    void startOrcaScreenReader();
 
 private:
     void createDialogContents();
     void initMasks();
-    void setScreenReaderEnabled(bool enabled);
 
     BellSettings m_bellSettings;
     KeyboardSettings m_keyboardSettings;

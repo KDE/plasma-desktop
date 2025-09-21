@@ -38,6 +38,7 @@ class KAccessConfig : public KQuickManagedConfigModule
     Q_PROPERTY(ZoomMagnifierSettings *zoomMagnifierSettings READ zoomMagnifierSettings CONSTANT)
     Q_PROPERTY(QString orcaLaunchFeedback READ orcaLaunchFeedback WRITE setOrcaLaunchFeedback NOTIFY orcaLaunchFeedbackChanged)
     Q_PROPERTY(bool screenReaderInstalled MEMBER m_screenReaderInstalled CONSTANT)
+    Q_PROPERTY(bool screenReaderEnabled READ screenReaderEnabled WRITE setScreenReaderEnabled NOTIFY screenReaderEnabledChanged)
     Q_PROPERTY(bool bellIsDefaults READ bellIsDefaults NOTIFY bellIsDefaultsChanged)
     Q_PROPERTY(bool mouseIsDefaults READ mouseIsDefaults NOTIFY mouseIsDefaultsChanged)
     Q_PROPERTY(bool keyboardFiltersIsDefaults READ keyboardFiltersIsDefaults NOTIFY keyboardFiltersIsDefaultsChanged)
@@ -60,7 +61,6 @@ public:
     Q_INVOKABLE void configureInvertShortcuts();
     Q_INVOKABLE void configureZoomMagnifyShortcuts();
     Q_INVOKABLE void launchOrcaConfiguration();
-    Q_INVOKABLE bool orcaInstalled();
 
     QString orcaLaunchFeedback() const;
 
@@ -88,6 +88,12 @@ public:
     bool invertIsDefaults() const;
     bool zoomMagnifierIsDefaults() const;
 
+    bool screenReaderEnabled() const;
+    void setScreenReaderEnabled(bool enable);
+
+private Q_SLOTS:
+    void screenReaderPropertiesChanged(const QString&, const QVariantMap&, const QStringList&);
+
 Q_SIGNALS:
     void orcaLaunchFeedbackChanged();
     void bellIsDefaultsChanged();
@@ -100,11 +106,13 @@ Q_SIGNALS:
     void colorblindnessCorrectionIsDefaultsChanged();
     void invertIsDefaultsChanged();
     void zoomMagnifierIsDefaultsChanged();
+    void screenReaderEnabledChanged(bool enabled);
 
 private:
     void setOrcaLaunchFeedback(const QString &value);
 
     AccessibilityData *m_data;
     QString m_orcaLaunchFeedback;
-    bool m_screenReaderInstalled;
+    bool m_screenReaderInstalled = false;
+    bool m_screenReaderEnabled = false;
 };

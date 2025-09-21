@@ -13,6 +13,7 @@
 #include <QApplication>
 #include <QDBusConnection>
 #include <QDBusMessage>
+#include <QDBusReply>
 #include <QFileDialog>
 #include <QProcess>
 #include <QQuickItem>
@@ -80,8 +81,29 @@ KAccessConfig::KAccessConfig(QObject *parent, const KPluginMetaData &metaData)
     qmlRegisterAnonymousType<ZoomMagnifierSettings>("org.kde.plasma.access.kcm", 0);
     qmlRegisterType<IntValidatorWithSuffix>("org.kde.plasma.access.kcm", 0, 0, "IntValidatorWithSuffix");
 
-    int tryOrcaRun = QProcess::execute(QStringLiteral("orca"), {QStringLiteral("--version")});
-    m_screenReaderInstalled = tryOrcaRun != -2;
+    QDBusConnection c = QDBusConnection::sessionBus();
+    const bool a11yBusOk = c.connect(
+        QLatin1String("org.a11y.Bus"),
+        QLatin1String("/org/a11y/bus"),
+        QLatin1String("org.freedesktop.DBus.Properties"),
+        QLatin1String("PropertiesChanged"),
+        this, SLOT(screenReaderPropertiesChanged(QString,QVariantMap,QStringList)));
+    if (!a11yBusOk) {
+        qWarning() << Q_FUNC_INFO << "Failed to connect with PropertiesChanged on org.a11y.Bus";
+    } else {
+        QDBusMessage m = QDBusMessage::createMethodCall(QLatin1String("org.a11y.Bus"), QLatin1String("/org/a11y/bus"), QLatin1String("org.freedesktop.DBus.Properties"), QLatin1String("Get"));
+        m.setArguments(QVariantList() << QLatin1String("org.a11y.Status") << QLatin1String("ScreenReaderEnabled"));
+        const int timeoutInMs = 2000;
+        QDBusReply<QVariant> r = c.call(m, QDBus::Block, timeoutInMs);
+        if (!r.isValid()) {
+            qWarning() << Q_FUNC_INFO << "Failed to get ScreenReaderEnabled on org.a11y.Bus" << r.error().name() << r.error().message();
+        } else {
+            m_screenReaderEnabled = r.value().toBool();
+
+            int tryOrcaRun = QProcess::execute(QStringLiteral("orca"), {QStringLiteral("--version")});
+            m_screenReaderInstalled = tryOrcaRun != -2;
+        }
+    }
 
     setButtons(KAbstractConfigModule::Apply | KAbstractConfigModule::Default | KAbstractConfigModule::Help);
 
@@ -245,21 +267,11 @@ void KAccessConfig::configureZoomMagnifyShortcuts()
 
 void KAccessConfig::launchOrcaConfiguration()
 {
-    const QStringList gsettingArgs = {QStringLiteral("set"),
-                                      QStringLiteral("org.gnome.desktop.a11y.applications"),
-                                      QStringLiteral("screen-reader-enabled"),
-                                      QStringLiteral("true")};
-
-    int ret = QProcess::execute(QStringLiteral("gsettings"), gsettingArgs);
-    if (ret) {
-        const QString errorStr = QLatin1String("gsettings ") + gsettingArgs.join(QLatin1Char(' '));
-        setOrcaLaunchFeedback(i18n("Could not set gsettings for Orca: \"%1\" failed", errorStr));
-        return;
-    }
-
     qint64 pid = 0;
-    bool started = QProcess::startDetached(QStringLiteral("orca"), {QStringLiteral("--setup")}, QString(), &pid);
-    if (!started) {
+    bool started = QProcess::startDetached(QStringLiteral("orca"), {QStringLiteral("--setup"), QStringLiteral("--replace")}, QString(), &pid);
+    if (started) {
+        qDebug() << Q_FUNC_INFO << "Launched Orca, pid:" << pid;
+    } else {
         setOrcaLaunchFeedback(i18n("Error: Could not launch \"orca --setup\""));
     }
 }
@@ -402,13 +414,6 @@ void KAccessConfig::setOrcaLaunchFeedback(const QString &value)
     }
 }
 
-bool KAccessConfig::orcaInstalled()
-{
-    int tryOrcaRun = QProcess::execute(QStringLiteral("orca"), {QStringLiteral("--version")});
-    // If the process cannot be started, -2 is returned.
-    return tryOrcaRun != -2;
-}
-
 bool KAccessConfig::isPlatformX11() const
 {
     return KWindowSystem::isPlatformX11();
@@ -512,6 +517,34 @@ bool KAccessConfig::invertIsDefaults() const
 bool KAccessConfig::zoomMagnifierIsDefaults() const
 {
     return zoomMagnifierSettings()->isDefaults();
+}
+
+bool KAccessConfig::screenReaderEnabled() const
+{
+    return m_screenReaderEnabled;
+}
+
+void KAccessConfig::setScreenReaderEnabled(bool enable)
+{
+    qDebug() << Q_FUNC_INFO << enable;
+    QDBusMessage m = QDBusMessage::createMethodCall(QLatin1String("org.a11y.Bus"), QLatin1String("/org/a11y/bus"), QLatin1String("org.freedesktop.DBus.Properties"), QLatin1String("Set"));
+    m.setArguments(QVariantList() << QLatin1String("org.a11y.Status") << QLatin1String("ScreenReaderEnabled") << QVariant::fromValue(QDBusVariant(enable)));
+    const int timeoutInMs = 2000;
+    QDBusMessage r = QDBusConnection::sessionBus().call(m, QDBus::Block, timeoutInMs);
+    if (r.type() == QDBusMessage::ErrorMessage) {
+        qWarning() << Q_FUNC_INFO << "Failed to set ScreenReaderEnabled on org.a11y.Bus" << r.errorName() << r.errorMessage();
+    }
+}
+
+void KAccessConfig::screenReaderPropertiesChanged(const QString&, const QVariantMap& m, const QStringList&)
+{
+    for(auto [n, v]: m.asKeyValueRange()) {
+        qDebug() << Q_FUNC_INFO << n << v;
+        if (n == "ScreenReaderEnabled") {
+            m_screenReaderEnabled = v.toBool();
+            Q_EMIT screenReaderEnabledChanged(m_screenReaderEnabled);
+        }
+    }
 }
 
 #include "kcmaccess.moc"

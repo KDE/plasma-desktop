@@ -14,6 +14,7 @@
 #include <QApplication>
 #include <QDBusConnection>
 #include <QDBusMessage>
+#include <QDBusReply>
 #include <QDialog>
 #include <QDialogButtonBox>
 #include <QFile>
@@ -172,167 +173,205 @@ void KAccessApp::readSettings()
 
     // get keyboard state
     XkbDescPtr xkb = XkbGetMap(QX11Info::display(), 0, XkbUseCoreKbd);
-    if (!xkb)
-        return;
-    if (XkbGetControls(QX11Info::display(), XkbAllControlsMask, xkb) != Success)
-        return;
-
-    // sticky keys
-    if (m_keyboardSettings.stickyKeys()) {
-        if (m_keyboardSettings.stickyKeysLatch())
-            xkb->ctrls->ax_options |= XkbAX_LatchToLockMask;
-        else
-            xkb->ctrls->ax_options &= ~XkbAX_LatchToLockMask;
-        if (m_keyboardSettings.stickyKeysAutoOff())
-            xkb->ctrls->ax_options |= XkbAX_TwoKeysMask;
-        else
-            xkb->ctrls->ax_options &= ~XkbAX_TwoKeysMask;
-        if (m_keyboardSettings.stickyKeysBeep())
-            xkb->ctrls->ax_options |= XkbAX_StickyKeysFBMask;
-        else
-            xkb->ctrls->ax_options &= ~XkbAX_StickyKeysFBMask;
-        xkb->ctrls->enabled_ctrls |= XkbStickyKeysMask;
-    } else
-        xkb->ctrls->enabled_ctrls &= ~XkbStickyKeysMask;
-
-    // toggle keys
-    if (m_keyboardSettings.toggleKeysBeep())
-        xkb->ctrls->ax_options |= XkbAX_IndicatorFBMask;
-    else
-        xkb->ctrls->ax_options &= ~XkbAX_IndicatorFBMask;
-
-    // slow keys
-    if (m_keyboardFiltersSettings.slowKeys()) {
-        if (m_keyboardFiltersSettings.slowKeysPressBeep())
-            xkb->ctrls->ax_options |= XkbAX_SKPressFBMask;
-        else
-            xkb->ctrls->ax_options &= ~XkbAX_SKPressFBMask;
-        if (m_keyboardFiltersSettings.slowKeysAcceptBeep())
-            xkb->ctrls->ax_options |= XkbAX_SKAcceptFBMask;
-        else
-            xkb->ctrls->ax_options &= ~XkbAX_SKAcceptFBMask;
-        if (m_keyboardFiltersSettings.slowKeysRejectBeep())
-            xkb->ctrls->ax_options |= XkbAX_SKRejectFBMask;
-        else
-            xkb->ctrls->ax_options &= ~XkbAX_SKRejectFBMask;
-        xkb->ctrls->enabled_ctrls |= XkbSlowKeysMask;
-    } else
-        xkb->ctrls->enabled_ctrls &= ~XkbSlowKeysMask;
-    xkb->ctrls->slow_keys_delay = m_keyboardFiltersSettings.slowKeysDelay();
-
-    // bounce keys
-    if (m_keyboardFiltersSettings.bounceKeys()) {
-        if (m_keyboardFiltersSettings.bounceKeysRejectBeep())
-            xkb->ctrls->ax_options |= XkbAX_BKRejectFBMask;
-        else
-            xkb->ctrls->ax_options &= ~XkbAX_BKRejectFBMask;
-        xkb->ctrls->enabled_ctrls |= XkbBounceKeysMask;
-    } else
-        xkb->ctrls->enabled_ctrls &= ~XkbBounceKeysMask;
-    xkb->ctrls->debounce_delay = m_keyboardFiltersSettings.bounceKeysDelay();
-
-    // gestures for enabling the other features
-    if (m_activationGesturesSettings.gestures())
-        xkb->ctrls->enabled_ctrls |= XkbAccessXKeysMask;
-    else
-        xkb->ctrls->enabled_ctrls &= ~XkbAccessXKeysMask;
-
-    // timeout
-    if (m_activationGesturesSettings.accessXTimeout()) {
-        xkb->ctrls->ax_timeout = m_activationGesturesSettings.accessXTimeoutDelay() * 60;
-        xkb->ctrls->axt_opts_mask = 0;
-        xkb->ctrls->axt_opts_values = 0;
-        xkb->ctrls->axt_ctrls_mask = XkbStickyKeysMask | XkbSlowKeysMask;
-        xkb->ctrls->axt_ctrls_values = 0;
-        xkb->ctrls->enabled_ctrls |= XkbAccessXTimeoutMask;
-    } else
-        xkb->ctrls->enabled_ctrls &= ~XkbAccessXTimeoutMask;
-
-    // gestures for enabling the other features
-    if (m_activationGesturesSettings.accessXBeep())
-        xkb->ctrls->ax_options |= XkbAX_FeatureFBMask | XkbAX_SlowWarnFBMask;
-    else
-        xkb->ctrls->ax_options &= ~(XkbAX_FeatureFBMask | XkbAX_SlowWarnFBMask);
-
-    // mouse-by-keyboard
-
-    if (m_mouseSettings.mouseKeys()) {
-        xkb->ctrls->mk_delay = m_mouseSettings.accelerationDelay();
-
-        const int interval = m_mouseSettings.repetitionInterval();
-        xkb->ctrls->mk_interval = interval;
-
-        xkb->ctrls->mk_time_to_max = m_mouseSettings.accelerationTime();
-
-        xkb->ctrls->mk_max_speed = m_mouseSettings.maxSpeed();
-
-        xkb->ctrls->mk_curve = m_mouseSettings.profileCurve();
-        xkb->ctrls->mk_dflt_btn = 0;
-
-        xkb->ctrls->enabled_ctrls |= XkbMouseKeysMask;
-    } else
-        xkb->ctrls->enabled_ctrls &= ~XkbMouseKeysMask;
-
-    features = xkb->ctrls->enabled_ctrls & (XkbSlowKeysMask | XkbBounceKeysMask | XkbStickyKeysMask | XkbMouseKeysMask);
-    if (dialog == nullptr)
-        requestedFeatures = features;
-    // set state
-    XkbSetControls(QX11Info::display(),
-                   XkbControlsEnabledMask | XkbMouseKeysAccelMask | XkbStickyKeysMask | XkbSlowKeysMask | XkbBounceKeysMask | XkbAccessXKeysMask
-                       | XkbAccessXTimeoutMask,
-                   xkb);
-
-    // select AccessX events
-    XkbSelectEvents(QX11Info::display(), XkbUseCoreKbd, XkbAllEventsMask, XkbAllEventsMask);
-
-    if (!(m_activationGesturesSettings.gestures() && m_activationGesturesSettings.gestureConfirmation()) && !m_keyboardSettings.keyboardNotifyModifiers()
-        && !m_activationGesturesSettings.keyboardNotifyAccess()) {
-        uint ctrls = XkbStickyKeysMask | XkbSlowKeysMask | XkbBounceKeysMask | XkbMouseKeysMask | XkbAudibleBellMask | XkbControlsNotifyMask;
-        uint values = xkb->ctrls->enabled_ctrls & ctrls;
-        XkbSetAutoResetControls(QX11Info::display(), ctrls, &ctrls, &values);
+    if (!xkb) {
+        qWarning() << Q_FUNC_INFO << "Failed to XkbGetMap";
+    } else if (XkbGetControls(QX11Info::display(), XkbAllControlsMask, xkb) != Success) {
+        qWarning() << Q_FUNC_INFO << "Failed to XkbGetControls";
     } else {
-        // reset them after program exit
-        uint ctrls = XkbStickyKeysMask | XkbSlowKeysMask | XkbBounceKeysMask | XkbMouseKeysMask | XkbAudibleBellMask | XkbControlsNotifyMask;
-        uint values = XkbAudibleBellMask;
-        XkbSetAutoResetControls(QX11Info::display(), ctrls, &ctrls, &values);
-    }
 
-    setScreenReaderEnabled(m_screenReaderSettings.enabled());
+        // sticky keys
+        if (m_keyboardSettings.stickyKeys()) {
+            if (m_keyboardSettings.stickyKeysLatch())
+                xkb->ctrls->ax_options |= XkbAX_LatchToLockMask;
+            else
+                xkb->ctrls->ax_options &= ~XkbAX_LatchToLockMask;
+            if (m_keyboardSettings.stickyKeysAutoOff())
+                xkb->ctrls->ax_options |= XkbAX_TwoKeysMask;
+            else
+                xkb->ctrls->ax_options &= ~XkbAX_TwoKeysMask;
+            if (m_keyboardSettings.stickyKeysBeep())
+                xkb->ctrls->ax_options |= XkbAX_StickyKeysFBMask;
+            else
+                xkb->ctrls->ax_options &= ~XkbAX_StickyKeysFBMask;
+            xkb->ctrls->enabled_ctrls |= XkbStickyKeysMask;
+        } else
+            xkb->ctrls->enabled_ctrls &= ~XkbStickyKeysMask;
+
+        // toggle keys
+        if (m_keyboardSettings.toggleKeysBeep())
+            xkb->ctrls->ax_options |= XkbAX_IndicatorFBMask;
+        else
+            xkb->ctrls->ax_options &= ~XkbAX_IndicatorFBMask;
+
+        // slow keys
+        if (m_keyboardFiltersSettings.slowKeys()) {
+            if (m_keyboardFiltersSettings.slowKeysPressBeep())
+                xkb->ctrls->ax_options |= XkbAX_SKPressFBMask;
+            else
+                xkb->ctrls->ax_options &= ~XkbAX_SKPressFBMask;
+            if (m_keyboardFiltersSettings.slowKeysAcceptBeep())
+                xkb->ctrls->ax_options |= XkbAX_SKAcceptFBMask;
+            else
+                xkb->ctrls->ax_options &= ~XkbAX_SKAcceptFBMask;
+            if (m_keyboardFiltersSettings.slowKeysRejectBeep())
+                xkb->ctrls->ax_options |= XkbAX_SKRejectFBMask;
+            else
+                xkb->ctrls->ax_options &= ~XkbAX_SKRejectFBMask;
+            xkb->ctrls->enabled_ctrls |= XkbSlowKeysMask;
+        } else
+            xkb->ctrls->enabled_ctrls &= ~XkbSlowKeysMask;
+        xkb->ctrls->slow_keys_delay = m_keyboardFiltersSettings.slowKeysDelay();
+
+        // bounce keys
+        if (m_keyboardFiltersSettings.bounceKeys()) {
+            if (m_keyboardFiltersSettings.bounceKeysRejectBeep())
+                xkb->ctrls->ax_options |= XkbAX_BKRejectFBMask;
+            else
+                xkb->ctrls->ax_options &= ~XkbAX_BKRejectFBMask;
+            xkb->ctrls->enabled_ctrls |= XkbBounceKeysMask;
+        } else
+            xkb->ctrls->enabled_ctrls &= ~XkbBounceKeysMask;
+        xkb->ctrls->debounce_delay = m_keyboardFiltersSettings.bounceKeysDelay();
+
+        // gestures for enabling the other features
+        if (m_activationGesturesSettings.gestures())
+            xkb->ctrls->enabled_ctrls |= XkbAccessXKeysMask;
+        else
+            xkb->ctrls->enabled_ctrls &= ~XkbAccessXKeysMask;
+
+        // timeout
+        if (m_activationGesturesSettings.accessXTimeout()) {
+            xkb->ctrls->ax_timeout = m_activationGesturesSettings.accessXTimeoutDelay() * 60;
+            xkb->ctrls->axt_opts_mask = 0;
+            xkb->ctrls->axt_opts_values = 0;
+            xkb->ctrls->axt_ctrls_mask = XkbStickyKeysMask | XkbSlowKeysMask;
+            xkb->ctrls->axt_ctrls_values = 0;
+            xkb->ctrls->enabled_ctrls |= XkbAccessXTimeoutMask;
+        } else
+            xkb->ctrls->enabled_ctrls &= ~XkbAccessXTimeoutMask;
+
+        // gestures for enabling the other features
+        if (m_activationGesturesSettings.accessXBeep())
+            xkb->ctrls->ax_options |= XkbAX_FeatureFBMask | XkbAX_SlowWarnFBMask;
+        else
+            xkb->ctrls->ax_options &= ~(XkbAX_FeatureFBMask | XkbAX_SlowWarnFBMask);
+
+        // mouse-by-keyboard
+
+        if (m_mouseSettings.mouseKeys()) {
+            xkb->ctrls->mk_delay = m_mouseSettings.accelerationDelay();
+
+            const int interval = m_mouseSettings.repetitionInterval();
+            xkb->ctrls->mk_interval = interval;
+
+            xkb->ctrls->mk_time_to_max = m_mouseSettings.accelerationTime();
+
+            xkb->ctrls->mk_max_speed = m_mouseSettings.maxSpeed();
+
+            xkb->ctrls->mk_curve = m_mouseSettings.profileCurve();
+            xkb->ctrls->mk_dflt_btn = 0;
+
+            xkb->ctrls->enabled_ctrls |= XkbMouseKeysMask;
+        } else
+            xkb->ctrls->enabled_ctrls &= ~XkbMouseKeysMask;
+
+        features = xkb->ctrls->enabled_ctrls & (XkbSlowKeysMask | XkbBounceKeysMask | XkbStickyKeysMask | XkbMouseKeysMask);
+        if (dialog == nullptr)
+            requestedFeatures = features;
+        // set state
+        XkbSetControls(QX11Info::display(),
+                    XkbControlsEnabledMask | XkbMouseKeysAccelMask | XkbStickyKeysMask | XkbSlowKeysMask | XkbBounceKeysMask | XkbAccessXKeysMask
+                        | XkbAccessXTimeoutMask,
+                    xkb);
+
+        // select AccessX events
+        XkbSelectEvents(QX11Info::display(), XkbUseCoreKbd, XkbAllEventsMask, XkbAllEventsMask);
+
+        if (!(m_activationGesturesSettings.gestures() && m_activationGesturesSettings.gestureConfirmation()) && !m_keyboardSettings.keyboardNotifyModifiers()
+            && !m_activationGesturesSettings.keyboardNotifyAccess()) {
+            uint ctrls = XkbStickyKeysMask | XkbSlowKeysMask | XkbBounceKeysMask | XkbMouseKeysMask | XkbAudibleBellMask | XkbControlsNotifyMask;
+            uint values = xkb->ctrls->enabled_ctrls & ctrls;
+            XkbSetAutoResetControls(QX11Info::display(), ctrls, &ctrls, &values);
+        } else {
+            // reset them after program exit
+            uint ctrls = XkbStickyKeysMask | XkbSlowKeysMask | XkbBounceKeysMask | XkbMouseKeysMask | XkbAudibleBellMask | XkbControlsNotifyMask;
+            uint values = XkbAudibleBellMask;
+            XkbSetAutoResetControls(QX11Info::display(), ctrls, &ctrls, &values);
+        }
+    }
 
     toggleScreenReaderAction->setText(i18n("Toggle Screen Reader On and Off"));
     toggleScreenReaderAction->setObjectName(QStringLiteral("Toggle Screen Reader On and Off"));
     toggleScreenReaderAction->setProperty("componentDisplayName", i18nc("Name for kaccess shortcuts category", "Accessibility"));
+    toggleScreenReaderAction->setCheckable(true);
     KGlobalAccel::self()->setGlobalShortcut(toggleScreenReaderAction, Qt::META | Qt::ALT | Qt::Key_S);
-    connect(toggleScreenReaderAction, &QAction::triggered, this, &KAccessApp::toggleScreenReader);
+    connect(toggleScreenReaderAction, &QAction::toggled, this, &KAccessApp::setScreenReaderEnabled);
+
+    QDBusConnection c = QDBusConnection::sessionBus();
+    const bool a11yBusOk = c.connect(
+        QLatin1String("org.a11y.Bus"),
+        QLatin1String("/org/a11y/bus"),
+        QLatin1String("org.freedesktop.DBus.Properties"),
+        QLatin1String("PropertiesChanged"),
+        this,
+        SLOT(screenReaderPropertiesChanged(QString,QVariantMap,QStringList)));
+    if (!a11yBusOk) {
+        qWarning() << Q_FUNC_INFO << "Failed to connect with PropertiesChanged on org.a11y.Bus";
+        toggleScreenReaderAction->setEnabled(false);
+    } else {
+        QDBusMessage m = QDBusMessage::createMethodCall(QLatin1String("org.a11y.Bus"), QLatin1String("/org/a11y/bus"), QLatin1String("org.freedesktop.DBus.Properties"), QLatin1String("Get"));
+        m.setArguments(QVariantList() << QLatin1String("org.a11y.Status") << QLatin1String("ScreenReaderEnabled"));
+        const int timeoutInMs = 2000;
+        QDBusReply<QVariant> r = c.call(m, QDBus::Block, timeoutInMs);
+        if (!r.isValid()) {
+            qWarning() << Q_FUNC_INFO << "Failed to get ScreenReaderEnabled on org.a11y.Bus" << r.error().name() << r.error().message();
+            toggleScreenReaderAction->setEnabled(false);
+        } else {
+            toggleScreenReaderAction->setChecked(r.value().toBool());
+
+            // The user is able to define if we should start orca direct on startup
+            if (m_screenReaderSettings.enabled()) {
+                startOrcaScreenReader();
+            }
+        }
+    }
 }
 
-void KAccessApp::toggleScreenReader()
+void KAccessApp::screenReaderPropertiesChanged(const QString&, const QVariantMap& m, const QStringList&)
 {
-    KSharedConfig::Ptr _config = KSharedConfig::openConfig();
-    KConfigGroup screenReaderGroup(_config, QStringLiteral("ScreenReader"));
-    bool enabled = !screenReaderGroup.readEntry("Enabled", false);
-    screenReaderGroup.writeEntry("Enabled", enabled);
-    setScreenReaderEnabled(enabled);
+    for(auto [n, v]: m.asKeyValueRange()) {
+        qCDebug(logKAccess) << Q_FUNC_INFO << n << v;
+        if (n == QLatin1String("ScreenReaderEnabled")) {
+            toggleScreenReaderAction->setChecked(v.toBool());
+        }
+    }
 }
 
 void KAccessApp::setScreenReaderEnabled(bool enabled)
 {
-    if (enabled) {
-        QStringList args = {QStringLiteral("set"),
-                            QStringLiteral("org.gnome.desktop.a11y.applications"),
-                            QStringLiteral("screen-reader-enabled"),
-                            QStringLiteral("true")};
-        int ret = QProcess::execute(QStringLiteral("gsettings"), args);
-        if (ret == 0) {
-            qint64 pid = 0;
-            QProcess::startDetached(QStringLiteral("orca"), {QStringLiteral("--replace")}, QString(), &pid);
-            qCDebug(logKAccess) << "Launching Orca, pid:" << pid;
-        }
+    qCDebug(logKAccess) << Q_FUNC_INFO << enabled;
+    QDBusMessage m = QDBusMessage::createMethodCall(QLatin1String("org.a11y.Bus"), QLatin1String("/org/a11y/bus"), QLatin1String("org.freedesktop.DBus.Properties"), QLatin1String("Set"));
+    m.setArguments(QVariantList() << QLatin1String("org.a11y.Status") << QLatin1String("ScreenReaderEnabled") << QVariant::fromValue(QDBusVariant(enabled)));
+    const int timeoutInMs = 2000;
+    QDBusMessage r = QDBusConnection::sessionBus().call(m, QDBus::Block, timeoutInMs);
+    if (r.type() == QDBusMessage::ErrorMessage) {
+        qWarning() << Q_FUNC_INFO << "Failed to set ScreenReaderEnabled on org.a11y.Bus" << r.errorName() << r.errorMessage();
     } else {
-        QProcess::startDetached(
-            QStringLiteral("gsettings"),
-            {QStringLiteral("set"), QStringLiteral("org.gnome.desktop.a11y.applications"), QStringLiteral("screen-reader-enabled"), QStringLiteral("false")});
+        if (enabled) {
+            // Orca will not start itself when ScreenReaderEnabled is set to true so we start it.
+            startOrcaScreenReader();
+        } else {
+            // Orca will quit itself when ScreenReaderEnabled is set to false so nothing for us to do here.
+        }
     }
+}
+
+void KAccessApp::startOrcaScreenReader()
+{
+    // When Orca is started it will also set ScreenReaderEnabled to true.
+    qint64 pid = 0;
+    QProcess::startDetached(QStringLiteral("orca"), {QStringLiteral("--replace")}, QString(), &pid);
+    qCDebug(logKAccess) << Q_FUNC_INFO << "Launched Orca, pid:" << pid;
 }
 
 static int maskToBit(int mask)
