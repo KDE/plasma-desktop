@@ -42,11 +42,10 @@ kcmutils_generate_module_data(
     KAMD_KCM_SRCS
     MODULE_DATA_HEADER kactivitiesdata.h
     MODULE_DATA_CLASS_NAME KActivitiesData
-    SETTINGS_HEADERS kactivitymanagerd_settings.h kactivitymanagerd_plugins_settings.h
-    SETTINGS_CLASSES KActivityManagerdSettings KActivityManagerdPluginsSettings
+    SETTINGS_HEADERS kactivitymanagerd_plugins_settings.h
+    SETTINGS_CLASSES KActivityManagerdPluginsSettings
 )
 
-kconfig_add_kcfg_files(KAMD_KCM_SRCS kactivitymanagerd_settings.kcfgc GENERATE_MOC)
 kconfig_add_kcfg_files(KAMD_KCM_SRCS kactivitymanagerd_plugins_settings.kcfgc GENERATE_MOC)
 
 add_library (kcm_recentFiles MODULE ${KAMD_KCM_SRCS})
@@ -79,7 +78,6 @@ install (
    DESTINATION ${KAMD_KCM_DATADIR}/qml
    )
 
-install(FILES kactivitymanagerd_settings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES kactivitymanagerd_plugins_settings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 
 include(ECMQtDeclareLoggingCategory)
