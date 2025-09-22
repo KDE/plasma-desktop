@@ -278,7 +278,7 @@ PC3.Page {
             bottomMargin: footerContainer.visible ? 0 : - main.sidePanel.margins.bottom
         }
 
-        // The scrollbar changing visibiliy can lead to the content size changing due to word wrap
+        // The scrollbar changing visibility can lead to the content size changing due to word wrap
         // A delayed binding gives some extra time, it'll come to a stop as there's only one scroll bar
         property bool scrollBarVisible: false
         Binding on scrollBarVisible {

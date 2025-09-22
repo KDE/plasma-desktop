@@ -48,7 +48,7 @@ PlasmaExtras.PlasmoidHeading {
         implicitWidth: contentWidth + leftPadding + rightPadding
         implicitHeight: contentHeight + topPadding + bottomPadding
 
-        // This is needed to keep the sparators horizontally aligned
+        // This is needed to keep the separators horizontally aligned
         leftPadding: mirrored ? root.spacing : 0
         rightPadding: !mirrored ? root.spacing : 0
 

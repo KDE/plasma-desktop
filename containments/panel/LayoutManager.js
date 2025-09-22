@@ -107,7 +107,7 @@ function childAtCoordinates(x, y) {
     while (!child) {
         if (root.isHorizontal) {
             // Only yields incorrect results for widgets smaller than the
-            // row/column spacing, which is luckly fairly unrealistic
+            // row/column spacing, which is luckily fairly unrealistic
             x -= layout.rowSpacing
         } else {
             y -= layout.columnSpacing

@@ -33,7 +33,7 @@ void EmojiDict::load(const QString &path)
     // We use a fixed version to keep it binary compatible.
     // Also we do not use advanced data type so it does not matter.
     stream.setVersion(QDataStream::Qt_5_15);
-    // Explicitly set endianess to ensure it's not relevant to architecture.
+    // Explicitly set endianness to ensure it's not relevant to architecture.
     stream.setByteOrder(QDataStream::LittleEndian);
     QList<Emoji> emojis;
     stream >> emojis;

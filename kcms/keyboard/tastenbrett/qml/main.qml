@@ -97,7 +97,7 @@ Window {
                 visible: hoverArea.containsMouse
 
                 contentItem: Item {
-                    scale: kbd.scale * 3 // make keys easily redable at 2.5 times the regular size
+                    scale: kbd.scale * 3 // make keys easily readable at 2.5 times the regular size
 
                     Key {
                         id: keyItem

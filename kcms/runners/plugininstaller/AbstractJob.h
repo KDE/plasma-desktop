@@ -18,7 +18,7 @@ public:
     /**
      * @param fileInfo QFileInfo of the file or directory
      * @param mimeType Mime type of the file
-     * @param install Set to true if the entry should be installed, flase if it should be uninstalled
+     * @param install Set to true if the entry should be installed, false if it should be uninstalled
      */
     virtual void executeOperation(const QFileInfo &fileInfo, const QString &mimeType, bool install) = 0;
 

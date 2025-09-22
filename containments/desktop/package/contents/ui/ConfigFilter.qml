@@ -152,7 +152,7 @@ KCM.ScrollViewKCM {
                         Layout.fillHeight: true
                         implicitWidth: Kirigami.Units.iconSizes.small
                         implicitHeight: Kirigami.Units.iconSizes.small
-                        animated: false // TableView re-uses delegates, avoid animation when sorting/filtering.
+                        animated: false // TableView reuses delegates, avoid animation when sorting/filtering.
                         source: decoration
                     }
                     Label {

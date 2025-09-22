@@ -130,7 +130,7 @@ void PositionerTest::tst_move()
     if (configChanged) {
         QCOMPARE_NE(baselineConfig, getCurrentConfig());
     } else {
-        // If our movement doesnt change anything, config is equal
+        // If our movement doesn't change anything, config is equal
         QCOMPARE(baselineConfig, getCurrentConfig());
     }
 }

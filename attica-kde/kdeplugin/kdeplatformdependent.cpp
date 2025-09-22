@@ -234,7 +234,7 @@ bool Attica::KdePlatformDependent::isReady()
 }
 
 // TODO Don't just cache it forever, so reset to nullptr every so often, so we pick up potential new stuff the user's done
-// NOTE The above todo is nonesense. Whatever changes the credentials should broadcast that something changed and then we
+// NOTE The above todo is nonsense. Whatever changes the credentials should broadcast that something changed and then we
 //   should reload. Also reloading shouldn't clear the m_accessToken but simply overwrite with a new one - sitter, 2024
 void Attica::KdePlatformDependent::loadAccessToken()
 {

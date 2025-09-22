@@ -251,7 +251,7 @@ void ScreenMapperTest::tst_readAndSaveItemsOnActivitiesOnDisabledScreens()
     // clang-format on
     QStringList seralizedMap;
 
-    // Create a seralized QStringList from expectedMapping
+    // Create a serialized QStringList from expectedMapping
     for (const auto &l : expectedMapping) {
         for (const auto &s : l) {
             seralizedMap.append(s);

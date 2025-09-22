@@ -163,7 +163,7 @@ void KCMKeys::loadScheme(const QUrl &url)
     KConfig copy(QString(), KConfig::SimpleConfig);
     file.copyTo(QString(), &copy);
     KConfigGroup commandsGroup(&copy, QStringLiteral("Custom Commands"));
-    // Importing Custom Commmands:
+    // Importing Custom Commands:
     // - check if the command already exists
     // - if yes, and its the same component, there is nothing to do
     // - otherwise need to add command and/or migrate config

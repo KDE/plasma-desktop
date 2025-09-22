@@ -66,7 +66,7 @@ PlasmaCore.PopupPlasmaWindow {
 
     Component.onCompleted: {
         // Don't bind visible at creation, otherwise it
-        // vill be made visible before assigning the visual partent
+        // will be made visible before assigning the visual partent
         // making the window flickering in the center of the screen before being moved
         // in the correct position
         visible = true

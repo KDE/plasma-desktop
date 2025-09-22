@@ -12,7 +12,7 @@
 
 /**
  * @brief Represents an input sequence that happens on a tablet button action, which could be a variety of types.
- * Currently suppoerted is "Disabled", "Keyboard", "Mouse" or "Application-defined".
+ * Currently supported is "Disabled", "Keyboard", "Mouse" or "Application-defined".
  */
 class InputSequence
 {
