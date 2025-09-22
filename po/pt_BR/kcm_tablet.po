@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-04 00:44+0000\n"
-"PO-Revision-Date: 2025-09-04 05:09-0300\n"
+"PO-Revision-Date: 2025-09-21 17:51-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -226,8 +226,8 @@ msgid ""
 "This tablet button is forwarded to the focused application, which can decide "
 "how to handle it."
 msgstr ""
-"Este botão do tablet é repassado ao aplicativo em foco, que pode decidir o "
-"que fazer com ele."
+"Este botão da mesa digitalizadora é repassado ao aplicativo em foco, que "
+"pode decidir o que fazer com ele."
 
 #: ui/ActionDialog.qml:248
 #, kde-format
@@ -426,23 +426,23 @@ msgstr "%1%,%2% - %3%×%4%"
 #: ui/ExternalScreenMapping.qml:299
 #, kde-format
 msgid "Resize the tablet area"
-msgstr "Redimensionar a área do tablet"
+msgstr "Redimensionar a área da mesa digitalizadora"
 
 #: ui/main.qml:38
 #, kde-format
 msgid "No drawing tablets found"
-msgstr "Nenhum tablet de desenho encontrado"
+msgstr "Nenhuma mesa digitalizadora encontrada"
 
 #: ui/main.qml:39
 #, kde-format
 msgid "Connect a drawing tablet"
-msgstr "Conectar a um tablet de desenho"
+msgstr "Conectar a uma mesa digitalizadora"
 
 #: ui/main.qml:47
 #, kde-format
 msgctxt "Tests tablet functionality like the pen"
 msgid "Test Tablet…"
-msgstr "Testar tablet…"
+msgstr "Testar mesa digitalizadora…"
 
 #: ui/main.qml:87
 #, kde-format
@@ -453,9 +453,9 @@ msgid ""
 "specifically instructed otherwise."
 msgstr ""
 "Este dispositivo é gerenciado por um driver de espaço do usuário que você "
-"instalou. Use esse driver para configurar o tablet em vez de usar as "
-"configurações aqui, a menos que seja especificamente instruído de outra "
-"forma."
+"instalou. Use esse driver para configurar a mesa digitalizadora em vez de "
+"usar as configurações aqui, a menos que seja especificamente instruído de "
+"outra forma."
 
 #: ui/main.qml:104
 #, kde-format
@@ -541,7 +541,8 @@ msgid ""
 msgstr ""
 "Instrui o dispositivo a acomodar usuários canhotos. Os efeitos variam de "
 "acordo com o dispositivo, mas geralmente invertem a funcionalidade dos "
-"botões do painel, permitindo que o tablet seja usado de cabeça para baixo."
+"botões do painel, permitindo que a mesa digitalizadora seja usada de cabeça "
+"para baixo."
 
 #: ui/StylusTab.qml:246
 #, kde-format
@@ -663,14 +664,14 @@ msgid ""
 "You have manually calibrated this tablet. If it's no longer working "
 "correctly, try resetting this first."
 msgstr ""
-"Você calibrou manualmente este tablet. Se ele não estiver mais funcionando "
-"corretamente, tente reiniciá-lo primeiro."
+"Você calibrou manualmente esta mesa digitalizadora. Se ela não estiver mais "
+"funcionando corretamente, tente reiniciá-la primeiro."
 
 #: ui/Tester.qml:25
 #, kde-format
 msgctxt "@title"
 msgid "Tablet Tester"
-msgstr "Testador de tablet"
+msgstr "Testador de mesa digitalizadora"
 
 #: ui/Tester.qml:48
 #, kde-format

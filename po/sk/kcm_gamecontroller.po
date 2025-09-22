@@ -1,19 +1,20 @@
 # translation of kcm_gamecontroller.po to Slovak
 # SPDX-FileCopyrightText: 2023 Roman Paholík <wizzardsk@gmail.com>
 # SPDX-FileCopyrightText: 2024 Matej Mrenica <matejm98mthw@gmail.com>
+# SPDX-FileCopyrightText: 2025 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_gamecontroller\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-22 00:44+0000\n"
-"PO-Revision-Date: 2024-06-26 14:10+0200\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"PO-Revision-Date: 2025-09-21 11:20+0200\n"
+"Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 25.08.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: axesmodel.cpp:122 hatmodel.cpp:80
@@ -37,18 +38,17 @@ msgstr "Stav"
 #: device.cpp:17 device.cpp:30
 #, kde-format
 msgid "Unknown"
-msgstr ""
+msgstr "Neznáme"
 
 #: device.cpp:18
-#, fuzzy, kde-format
-#| msgid "No game controllers found"
+#, kde-format
 msgid "Game Controller"
-msgstr "Nenašli sa herné ovládače"
+msgstr "Herný ovládač"
 
 #: device.cpp:19
 #, kde-format
 msgid "Wheel"
-msgstr ""
+msgstr "Koliesko"
 
 #: device.cpp:20
 #, kde-format
@@ -113,7 +113,7 @@ msgstr ""
 #: device.cpp:36
 #, kde-format
 msgid "Virtual"
-msgstr ""
+msgstr "Virtuálny"
 
 #: device.cpp:37
 #, kde-format
@@ -294,19 +294,19 @@ msgstr ""
 #, kde-format
 msgctxt "Unknown controller connection type"
 msgid "Unknown"
-msgstr ""
+msgstr "Neznáme"
 
 #: device.cpp:74
 #, kde-format
 msgctxt "USB connected controller"
 msgid "USB"
-msgstr ""
+msgstr "USB"
 
 #: device.cpp:75
 #, kde-format
 msgctxt "Bluetooth connected controller"
 msgid "Bluetooth"
-msgstr ""
+msgstr "Bluetooth"
 
 #: device.cpp:83
 #, kde-format
@@ -342,13 +342,11 @@ msgid "Device:"
 msgstr "Zariadenie:"
 
 #: ui/main.qml:84
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid "Device:"
+#, kde-format
 msgctxt ""
 "@label game controller device type (wheel, joystick, game controller, etc.)"
 msgid "Device type:"
-msgstr "Zariadenie:"
+msgstr "Typ zariadenia:"
 
 #: ui/main.qml:100
 #, kde-format
@@ -360,7 +358,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Connection type:"
-msgstr ""
+msgstr "Typ pripojenia:"
 
 #: ui/main.qml:137
 #, fuzzy, kde-format

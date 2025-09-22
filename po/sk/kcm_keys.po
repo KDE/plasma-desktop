@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-11 00:44+0000\n"
-"PO-Revision-Date: 2025-05-30 20:41+0200\n"
+"PO-Revision-Date: 2025-09-21 11:19+0200\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #, kde-format
@@ -43,7 +43,7 @@ msgstr "Správa okien"
 #, kde-format
 msgctxt "@item:intable"
 msgid "Plasma Workspace"
-msgstr ""
+msgstr "Pracovná plocha"
 
 #: globalaccelmodel.cpp:245
 #, kde-format
@@ -339,8 +339,7 @@ msgid "Save command"
 msgstr "Príkaz"
 
 #: ui/main.qml:423
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add command"
 msgstr "Pridať príkaz"
