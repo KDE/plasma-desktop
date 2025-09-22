@@ -6,7 +6,6 @@
 */
 #include "kcm_recentFiles.h"
 #include "kactivitymanagerd_plugins_settings.h"
-#include "kactivitymanagerd_settings.h"
 #include "resourcescoring_interface.h"
 
 #include <QDBusConnection>
@@ -40,14 +39,12 @@ K_PLUGIN_FACTORY_WITH_JSON(KActivityManagerKCMFactory, "kcm_recentFiles.json", r
 class RecentFilesKcm::Private : public Ui::RecentFiles
 {
 public:
-    KActivityManagerdSettings *mainConfig;
     KActivityManagerdPluginsSettings *pluginConfig;
 
     ExcludedApplicationsModel *excludedApplicationsModel;
 
     explicit Private(QObject *parent)
-        : mainConfig(new KActivityManagerdSettings(parent))
-        , pluginConfig(new KActivityManagerdPluginsSettings(parent))
+        : pluginConfig(new KActivityManagerdPluginsSettings(parent))
         , excludedApplicationsModel(new ExcludedApplicationsModel(parent))
     {
     }
@@ -133,7 +130,6 @@ RecentFilesKcm::RecentFilesKcm(QObject *parent, const KPluginMetaData &data)
     });
 
     addConfig(d->pluginConfig, widget());
-    addConfig(d->mainConfig, widget());
 }
 
 RecentFilesKcm::~RecentFilesKcm()
@@ -186,14 +182,6 @@ void RecentFilesKcm::whatToRememberWidgetChanged(bool)
 void RecentFilesKcm::save()
 {
     d->excludedApplicationsModel->save();
-    // clang-format off
-    const auto whatToRemember =
-        d->radioRememberSpecificApplications->isChecked() ? SpecificApplications :
-        d->radioDontRememberApplications->isChecked()     ? NoApplications :
-        /* otherwise */                                     AllApplications;
-    // clang-format on
-    d->mainConfig->setResourceScoringEnabled(whatToRemember != NoApplications);
-    d->mainConfig->save();
 
     KCModule::save();
 }
