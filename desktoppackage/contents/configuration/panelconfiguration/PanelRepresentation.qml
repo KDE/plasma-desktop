@@ -23,8 +23,8 @@ Item {
 
     property bool isTop: !!(alignment & Qt.AlignTop)
     property bool isBottom: !!(alignment & Qt.AlignBottom)
-    property bool isLeft: !!(alignment & Qt.AlignLeft)
-    property bool isRight: !!(alignment & Qt.AlignRight)
+    property bool isLeft: !!(alignment & __visualAlignLeft)
+    property bool isRight: !!(alignment & __visualAlignRight)
 
     property bool translucentPanel: false
     property bool sunkenPanel: false
@@ -40,6 +40,9 @@ Item {
     property bool floatingApplet: false
 
     readonly property bool iconAndLabelsShouldlookSelected: checked || mouseArea.pressed
+
+    property int __visualAlignLeft: LayoutMirroring.enabled ? Qt.AlignRight : Qt.AlignLeft
+    property int __visualAlignRight: LayoutMirroring.enabled ? Qt.AlignLeft : Qt.AlignRight
 
     function maximizeWindow() {
 
@@ -221,7 +224,7 @@ Item {
             }
 
             Rectangle {
-                x: panelImage.x + root.isLeft * panelImage.width - root.isRight * width + root.isVertical * panelSpacing
+                x: panelImage.x + root.isLeft * panelImage.width - root.isRight * width + root.isVertical * panelSpacing + root.isHorizontal * LayoutMirroring.enabled * (panelImage.width - width)
                 y: panelImage.y + root.isTop * panelImage.height - root.isBottom * height + (root.isHorizontal) * panelSpacing
                 height: Math.round(parent.height / 2)
                 width: Math.round(parent.width / 3)

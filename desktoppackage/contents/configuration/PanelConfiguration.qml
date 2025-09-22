@@ -171,6 +171,8 @@ ColumnLayout {
                        i18nd("plasma_shell_org.kde.plasma.desktop", "Bottom"))
                 Layout.alignment: Qt.AlignHCenter
                 alignment: (panel.location === PlasmaCore.Types.TopEdge ? Qt.AlignHCenter | Qt.AlignTop :
+                            LayoutMirroring.enabled && panel.location === PlasmaCore.Types.RightEdge ? Qt.AlignVCenter | Qt.AlignLeft :
+                            LayoutMirroring.enabled && panel.location === PlasmaCore.Types.LeftEdge ? Qt.AlignVCenter | Qt.AlignRight :
                             panel.location === PlasmaCore.Types.RightEdge ? Qt.AlignVCenter | Qt.AlignRight :
                             panel.location === PlasmaCore.Types.LeftEdge ? Qt.AlignVCenter | Qt.AlignLeft :
                             Qt.AlignHCenter | Qt.AlignBottom)
@@ -250,7 +252,8 @@ ColumnLayout {
                         } else {
                             first = Qt.AlignBottom
                         }
-                        if (panel.location === PlasmaCore.Types.LeftEdge) {
+                        if ((!LayoutMirroring.enabled && panel.location === PlasmaCore.Types.LeftEdge)
+                            || (LayoutMirroring.enabled && panel.location === PlasmaCore.Types.RightEdge)) {
                             second = Qt.AlignLeft
                         } else {
                             second = Qt.AlignRight
