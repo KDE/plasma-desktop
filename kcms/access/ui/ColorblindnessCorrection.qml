@@ -13,13 +13,21 @@ import org.kde.kcmutils as KCM
 import org.kde.kirigami as Kirigami
 
 ColumnLayout {
-    spacing: Kirigami.Units.smallSpacing
+    spacing: Kirigami.Units.gridUnit
+
+    QQC2.Label {
+        Layout.fillWidth: true
+
+        text: i18nc("@info", "If you have trouble with certain colors on the screen, these filters can change them into other colors.")
+        textFormat: Text.PlainText
+        wrapMode: Text.WordWrap
+        horizontalAlignment: Text.AlignHCenter
+    }
 
     Kirigami.FormLayout {
         id: formLayout
 
         QQC2.CheckBox {
-            Kirigami.FormData.label: i18nc("@label", "Color blindness correction:")
             text: i18nc("@option check, Enable color blindness correction effect", "Enable")
 
             KCM.SettingStateBinding {
@@ -33,15 +41,15 @@ ColumnLayout {
 
         QQC2.ComboBox {
             id: colorComboBox
-            Kirigami.FormData.label: i18nc("@label", "Mode:")
+            Kirigami.FormData.label: i18nc("@label:listbox Difficulty seeing any of the following colors on the screen", "Problematic colors:")
             currentIndex: kcm.colorblindnessCorrectionSettings.mode
             textRole: "text"
             valueRole: "value"
             model: [
-                { value: 0, text: i18nc("@option", "Protanopia (red weak)") },
-                { value: 1, text: i18nc("@option", "Deuteranopia (green weak)") },
-                { value: 2, text: i18nc("@option", "Tritanopia (blue-yellow)") },
-                { value: 3, text: i18nc("@option", "Monochrome (grayscale)") },
+                { value: 0, text: i18nc("@option", "Red & purple (Protanopia)") },
+                { value: 1, text: i18nc("@option", "Green & purple (Deuteranopia)") },
+                { value: 2, text: i18nc("@option", "Yellow, green & purple (Tritanopia)") },
+                { value: 3, text: i18nc("@option", "All (grayscale mode)") },
             ]
 
             Layout.preferredWidth: Kirigami.Units.gridUnit * 15
@@ -91,51 +99,64 @@ ColumnLayout {
                 }
             }
         }
-
-        Kirigami.Separator {
-            Kirigami.FormData.isSection: true
-        }
     }
 
-    RowLayout {
-        id: previewArea
+    Kirigami.Separator {
+        Layout.fillWidth: true
+    }
+
+    ColumnLayout {
         Layout.fillWidth: true
         spacing: Kirigami.Units.smallSpacing
-        Layout.topMargin: Kirigami.Units.largeSpacing
 
-        Item {
+        QQC2.Label {
             Layout.fillWidth: true
+
+            text: i18nc("@info", "Adjusted colors:")
+            textFormat: Text.PlainText
+            wrapMode: Text.WordWrap
+            horizontalAlignment: Text.AlignHCenter
         }
 
-        Repeater {
-            model: [
-                { name: i18n("Red"), colors: ["Red", "Orange", "Yellow"] },
-                { name: i18n("Green"), colors: ["Green", "LimeGreen", "Lime"] },
-                { name: i18n("Blue"), colors: ["Blue", "DeepSkyBlue", "Aqua"] },
-                { name: i18n("Purple"), colors: ["Purple", "Fuchsia", "Violet"] },
-            ]
+        RowLayout {
+            id: previewArea
+            Layout.fillWidth: true
+            spacing: Kirigami.Units.smallSpacing
 
-            delegate: Column {
-                spacing: 0
+            Item {
+                Layout.fillWidth: true
+            }
 
-                Repeater {
-                    model: modelData.colors
-                    delegate: Rectangle {
-                        width: Kirigami.Units.gridUnit * 5
-                        height: Kirigami.Units.gridUnit * 5
-                        color: modelData
+            Repeater {
+                model: [
+                    { name: i18n("Reds:"), colors: ["Red", "Orange", "Yellow"] },
+                    { name: i18n("Greens:"), colors: ["Green", "LimeGreen", "Lime"] },
+                    { name: i18n("Blues:"), colors: ["Blue", "DeepSkyBlue", "Aqua"] },
+                    { name: i18n("Purples:"), colors: ["Purple", "Fuchsia", "Violet"] },
+                ]
+
+                delegate: Column {
+                    spacing: Kirigami.Units.smallSpacing
+
+                    QQC2.Label {
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        text: modelData.name
+                    }
+
+                    Repeater {
+                        model: modelData.colors
+                        delegate: Rectangle {
+                            width: Kirigami.Units.gridUnit * 4
+                            height: Kirigami.Units.gridUnit * 4
+                            color: modelData
+                        }
                     }
                 }
-
-                QQC2.Label {
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    text: modelData.name
-                }
             }
-        }
 
-        Item {
-            Layout.fillWidth: true
+            Item {
+                Layout.fillWidth: true
+            }
         }
     }
 }
