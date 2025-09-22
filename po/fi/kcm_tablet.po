@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-04 00:44+0000\n"
-"PO-Revision-Date: 2025-09-11 18:05+0300\n"
+"PO-Revision-Date: 2025-09-12 16:31+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -152,12 +152,10 @@ msgid "pen button %1"
 msgstr "kynäpainike %1"
 
 #: ui/ActionDialog.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@title Select the action for the tablet dial"
-#| msgid "Select Dial Action"
+#, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial/Ring Action"
-msgstr "Valitse valintatoiminto"
+msgstr "Valitse kiekon tai renkaan toiminto"
 
 #: ui/ActionDialog.qml:28
 #, kde-format
@@ -244,7 +242,7 @@ msgstr "Alas:"
 #: ui/ActionDialog.qml:274
 #, kde-format
 msgid "Speed:"
-msgstr ""
+msgstr "Nopeus:"
 
 #: ui/ActionDialog.qml:289
 #, kde-format
@@ -453,6 +451,9 @@ msgid ""
 "driver to configure the tablet instead of using the settings here, unless "
 "specifically instructed otherwise."
 msgstr ""
+"Laitetta hallinnoi asentamasi käyttäjätason ajuri. Käytä tabletin asetusten "
+"muuttamiseksi näiden asetusten sijaan sitä, ellei nimenomaisesti ohjeisteta "
+"toisin."
 
 #: ui/main.qml:104
 #, kde-format
@@ -479,22 +480,17 @@ msgid "Pad"
 msgstr "Kosketusalusta"
 
 #: ui/PadTab.qml:37
-#, fuzzy, kde-format
-#| msgid "Pad dial %1:"
+#, kde-format
 msgid "Pad ring %1:"
-msgstr "Alustan valintakiekko %1:"
+msgstr "Alustan kiekko %1:"
 
 #: ui/PadTab.qml:60
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pad button 0'"
-#| msgid "pad dial %1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "ring/dial 0'"
 msgid "pad ring/dial %1"
-msgstr "alustan valintakiekko %1"
+msgstr "alustan rengas tai kiekko %1"
 
 #: ui/PadTab.qml:100
 #, kde-format

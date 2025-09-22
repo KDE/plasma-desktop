@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-21 00:44+0000\n"
-"PO-Revision-Date: 2025-09-07 18:41+0530\n"
+"PO-Revision-Date: 2025-09-21 13:26+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: contents/activitymanager/ActivityItem.qml:203
 #, kde-format
@@ -107,13 +107,12 @@ msgstr "இணையதளம்"
 #, kde-format
 msgctxt "@title:group"
 msgid "Get Help"
-msgstr ""
+msgstr "உதவி பெறுவது"
 
 #: contents/configuration/AboutPlugin.qml:162
-#, fuzzy, kde-format
-#| msgid "Report a Bug…"
+#, kde-format
 msgid "Report an issue"
-msgstr "பிழையை தெரிவி…"
+msgstr "பிழையை தெரிவி"
 
 #: contents/configuration/AboutPlugin.qml:169
 #, kde-format
@@ -121,17 +120,15 @@ msgid "Copyright"
 msgstr "பதிப்புரிமை"
 
 #: contents/configuration/AboutPlugin.qml:188
-#, fuzzy, kde-format
-#| msgid "License:"
+#, kde-format
 msgid "License: %1"
-msgstr "உரிமம்:"
+msgstr "உரிமம்: %1"
 
 #: contents/configuration/AboutPlugin.qml:194
-#, fuzzy, kde-format
-#| msgid "License:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Read License"
-msgstr "உரிமம்:"
+msgstr "உரிமத்தைக் காட்டு"
 
 #: contents/configuration/AboutPlugin.qml:208
 #, kde-format
