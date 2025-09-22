@@ -19,6 +19,7 @@
 #include <qqmlregistration.h>
 
 // KDE
+#include <KModifierKeyInfo>
 #include <PlasmaActivities/Controller>
 
 // Local
@@ -97,7 +98,7 @@ private Q_SLOTS:
 private:
     QHash<QString, QKeySequence> m_actionShortcut;
     QAction *m_lastInvokedAction = nullptr;
-    QRasterWindow *m_inputWindow = nullptr;
+    KModifierKeyInfo m_modifierInfo;
     KActivities::Controller m_activities;
     bool m_shouldShowSwitcher;
     QTimer m_modKeyPollingTimer;
