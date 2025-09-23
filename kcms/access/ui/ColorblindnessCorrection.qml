@@ -41,6 +41,7 @@ ColumnLayout {
                 { value: 0, text: i18nc("@option", "Protanopia (red weak)") },
                 { value: 1, text: i18nc("@option", "Deuteranopia (green weak)") },
                 { value: 2, text: i18nc("@option", "Tritanopia (blue-yellow)") },
+                { value: 3, text: i18nc("@option", "Monochrome (grayscale)") },
             ]
 
             Layout.preferredWidth: Kirigami.Units.gridUnit * 15
