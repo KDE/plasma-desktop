@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"POT-Creation-Date: 2025-09-23 00:45+0000\n"
 "PO-Revision-Date: 2024-06-04 18:23+0400\n"
 "Last-Translator: Xəyyam Qocayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -17,6 +17,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.05.0\n"
+
+#: activityconfig.cpp:151
+#, fuzzy, kde-format
+#| msgid "Activity switching"
+msgid "Activity Manager"
+msgstr "Başqa İş otağına keçid"
 
 #: ui/ActivityEditor.qml:22
 #, kde-format
@@ -151,9 +157,6 @@ msgstr "İş otaqlarını silmək"
 
 #~ msgid "Switching"
 #~ msgstr "Keçid"
-
-#~ msgid "Activity switching"
-#~ msgstr "Başqa İş otağına keçid"
 
 #~ msgctxt "@action"
 #~ msgid "Walk through activities"

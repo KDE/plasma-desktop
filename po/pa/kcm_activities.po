@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"POT-Creation-Date: 2025-09-23 00:45+0000\n"
 "PO-Revision-Date: 2024-01-01 11:17-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -16,6 +16,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.4\n"
+
+#: activityconfig.cpp:151
+#, fuzzy, kde-format
+#| msgid "Activity switching"
+msgid "Activity Manager"
+msgstr "ਸਰਗਰਮੀ ਨੂੰ ਬਦਲੋ"
 
 #: ui/ActivityEditor.qml:22
 #, kde-format
@@ -150,9 +156,6 @@ msgstr "ਸਰਗਰਮੀ ਨੂੰ ਹਟਾਓ"
 
 #~ msgid "Switching"
 #~ msgstr "ਬਦਲਣਾ"
-
-#~ msgid "Activity switching"
-#~ msgstr "ਸਰਗਰਮੀ ਨੂੰ ਬਦਲੋ"
 
 #~ msgctxt "@action"
 #~ msgid "Walk through activities"

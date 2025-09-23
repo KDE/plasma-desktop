@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"POT-Creation-Date: 2025-09-23 00:45+0000\n"
 "PO-Revision-Date: 2024-06-11 20:15\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -21,6 +21,12 @@ msgstr ""
 "X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/plasma-desktop/"
 "kcm_activities.po\n"
 "X-Crowdin-File-ID: 10596\n"
+
+#: activityconfig.cpp:151
+#, fuzzy, kde-format
+#| msgid "Activity switching"
+msgid "Activity Manager"
+msgstr "Пераключэнне пакояў"
 
 #: ui/ActivityEditor.qml:22
 #, kde-format
@@ -155,9 +161,6 @@ msgstr "Выдаліць пакой"
 
 #~ msgid "Switching"
 #~ msgstr "Пераключэнне"
-
-#~ msgid "Activity switching"
-#~ msgstr "Пераключэнне пакояў"
 
 #~ msgctxt "@action"
 #~ msgid "Walk through activities"

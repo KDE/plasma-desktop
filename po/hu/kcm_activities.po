@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"POT-Creation-Date: 2025-09-23 00:45+0000\n"
 "PO-Revision-Date: 2023-12-12 21:38+0100\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -17,6 +17,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 23.08.3\n"
+
+#: activityconfig.cpp:151
+#, fuzzy, kde-format
+#| msgid "Activity switching"
+msgid "Activity Manager"
+msgstr "Aktivitásváltás"
 
 #: ui/ActivityEditor.qml:22
 #, kde-format
@@ -154,9 +160,6 @@ msgstr "Aktivitás törlése"
 
 #~ msgid "Switching"
 #~ msgstr "Váltás"
-
-#~ msgid "Activity switching"
-#~ msgstr "Aktivitásváltás"
 
 #~ msgctxt "@action"
 #~ msgid "Walk through activities"
