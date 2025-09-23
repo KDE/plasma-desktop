@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"POT-Creation-Date: 2025-09-23 02:47+0000\n"
 "PO-Revision-Date: 2024-07-04 09:47+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -16,6 +16,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.5\n"
+
+#: activityconfig.cpp:151
+#, fuzzy, kde-format
+#| msgid "Activity switching"
+msgid "Activity Manager"
+msgstr "Skipt á milli athafna"
 
 #: ui/ActivityEditor.qml:22
 #, kde-format
@@ -148,9 +154,6 @@ msgstr "Eyða athöfn"
 
 #~ msgid "Switching"
 #~ msgstr "Skipt á milli"
-
-#~ msgid "Activity switching"
-#~ msgstr "Skipt á milli athafna"
 
 #~ msgctxt "@action"
 #~ msgid "Walk through activities"

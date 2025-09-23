@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_activities5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"POT-Creation-Date: 2025-09-23 02:47+0000\n"
 "PO-Revision-Date: 2023-11-10 23:29+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -19,6 +19,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 23.08.2\n"
+
+#: activityconfig.cpp:151
+#, fuzzy, kde-format
+#| msgid "Activity switching"
+msgid "Activity Manager"
+msgstr "活動切換"
 
 #: ui/ActivityEditor.qml:22
 #, kde-format
@@ -151,9 +157,6 @@ msgstr "刪除活動"
 
 #~ msgid "Switching"
 #~ msgstr "切換"
-
-#~ msgid "Activity switching"
-#~ msgstr "活動切換"
 
 #~ msgctxt "@action"
 #~ msgid "Walk through activities"

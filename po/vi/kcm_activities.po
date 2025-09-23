@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"POT-Creation-Date: 2025-09-23 02:47+0000\n"
 "PO-Revision-Date: 2021-08-03 11:28+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -16,6 +16,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 20.12.2\n"
+
+#: activityconfig.cpp:151
+#, fuzzy, kde-format
+#| msgid "Activity switching"
+msgid "Activity Manager"
+msgstr "Chuyển Hoạt động"
 
 #: ui/ActivityEditor.qml:22
 #, fuzzy, kde-format
@@ -158,9 +164,6 @@ msgstr "Xoá Hoạt động"
 
 #~ msgid "Switching"
 #~ msgstr "Chuyển"
-
-#~ msgid "Activity switching"
-#~ msgstr "Chuyển Hoạt động"
 
 #~ msgctxt "@action"
 #~ msgid "Walk through activities"

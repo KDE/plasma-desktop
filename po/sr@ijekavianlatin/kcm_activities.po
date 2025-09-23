@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_activities\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"POT-Creation-Date: 2025-09-23 02:47+0000\n"
 "PO-Revision-Date: 2016-04-03 12:10+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -17,6 +17,12 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
+
+#: activityconfig.cpp:151
+#, fuzzy, kde-format
+#| msgid "Activity switching"
+msgid "Activity Manager"
+msgstr "Menjanje aktivnosti"
 
 #: ui/ActivityEditor.qml:22
 #, fuzzy, kde-format
@@ -158,9 +164,6 @@ msgstr "Brisanje aktivnosti"
 # >> @title:tab
 #~ msgid "Switching"
 #~ msgstr "Menjanje"
-
-#~ msgid "Activity switching"
-#~ msgstr "Menjanje aktivnosti"
 
 #~ msgctxt "@action"
 #~ msgid "Walk through activities"

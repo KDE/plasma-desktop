@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"POT-Creation-Date: 2025-09-23 02:47+0000\n"
 "PO-Revision-Date: 2023-11-06 10:27+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -16,6 +16,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.2\n"
+
+#: activityconfig.cpp:151
+#, fuzzy, kde-format
+#| msgid "Activity switching"
+msgid "Activity Manager"
+msgstr "Overschakelen van Activiteit"
 
 #: ui/ActivityEditor.qml:22
 #, kde-format
@@ -152,9 +158,6 @@ msgstr "Activiteit Verwijderen"
 
 #~ msgid "Switching"
 #~ msgstr "Schakelen"
-
-#~ msgid "Activity switching"
-#~ msgstr "Overschakelen van Activiteit"
 
 #~ msgctxt "@action"
 #~ msgid "Walk through activities"

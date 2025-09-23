@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"POT-Creation-Date: 2025-09-23 02:47+0000\n"
 "PO-Revision-Date: 2023-11-19 20:50+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -17,6 +17,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: activityconfig.cpp:151
+#, fuzzy, kde-format
+#| msgid "Activity switching"
+msgid "Activity Manager"
+msgstr "Aktiviteettien vaihto"
 
 #: ui/ActivityEditor.qml:22
 #, kde-format
@@ -149,9 +155,6 @@ msgstr "Poista aktiviteetti"
 
 #~ msgid "Switching"
 #~ msgstr "Vaihto"
-
-#~ msgid "Activity switching"
-#~ msgstr "Aktiviteettien vaihto"
 
 #~ msgctxt "@action"
 #~ msgid "Walk through activities"
