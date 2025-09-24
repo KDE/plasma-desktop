@@ -25,6 +25,19 @@ Item {
     width: list.cellWidth
     height: list.cellHeight
 
+    // This makes sure that the cell height is as tall as the
+    // tallest AppletDelegate within the grid view. The height
+    // of the content of the AppletDelegate does not depend on
+    // the cellHeight, as it overflows if there's not enough
+    // space in the grid. This assumes the height of the delegate
+    // not to change over time.
+    Component.onCompleted: {
+        let layoutHeight = mainLayout.height + Kirigami.Units.largeSpacing * 2
+        if (layoutHeight > list.cellHeight) {
+            list.cellHeight = layoutHeight
+        }
+    }
+
     Accessible.name: i18nc("@action:button accessible only, %1 is widget name", "Add %1", model.name)  + (model.isSupported ? "" : unsupportedTooltip.mainText)
     Accessible.description: (model.isSupported ? "" : model.unsupportedMessage) + model.description + (overlayedBadge.visible ? countLabel.Accessible.name : "")
     Accessible.role: Accessible.Button
