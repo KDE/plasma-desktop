@@ -314,7 +314,25 @@ PC3.Page {
 
             activeFocusOnTab: true
             cellWidth: Math.floor(effectiveWidth / 3)
-            cellHeight: cellWidth + Kirigami.Units.gridUnit * 4 + Kirigami.Units.smallSpacing * 3
+            cellHeight: Kirigami.Units.iconSizes.enormous + Kirigami.Units.smallSpacing * 4 + headingFontMetrics.height * 3 * referenceHeading.lineHeight + descriptionFontMetrics.height * 2
+
+            // This element is used as a reference to size the
+            // cellHeight and should be kept in sync with the
+            // heading within the AppletDelegate.
+            Kirigami.Heading {
+                id: referenceHeading
+                visible: false
+                level: 4
+                lineHeight: 0.95
+            }
+            FontMetrics {
+                id: headingFontMetrics
+                font: referenceHeading.font
+            }
+            FontMetrics {
+                id: descriptionFontMetrics
+                font: Kirigami.Theme.smallFont
+            }
 
             delegate: AppletDelegate {}
             highlight: PlasmaExtras.Highlight {
