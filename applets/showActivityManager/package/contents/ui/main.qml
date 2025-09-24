@@ -22,16 +22,8 @@ import org.kde.config as KConfig
 PlasmoidItem {
     id: root
 
-    width: Kirigami.Units.iconSizes.large
-    height: Kirigami.Units.iconSizes.large
-
-    Layout.maximumWidth: Infinity
-    Layout.maximumHeight: Infinity
-
-    Layout.preferredWidth : height + (root.showActivityName ? name.implicitWidth + 2 * Kirigami.Units.smallSpacing : 0)
-
-    Layout.minimumWidth: 0
-    Layout.minimumHeight: 0
+    Layout.preferredHeight: Kirigami.Units.iconSizes.large
+    Layout.preferredWidth: icon.width + (root.showActivityName ? name.implicitWidth + 2 * Kirigami.Units.smallSpacing : 0)
 
     readonly property bool inVertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
     readonly property bool showActivityName: Plasmoid.configuration.showActivityName
@@ -89,6 +81,8 @@ PlasmoidItem {
             id: icon
 
             anchors.verticalCenter: parent.verticalCenter
+            anchors.horizontalCenter: root.showActivityName && !root.inVertical ? undefined : parent.horizontalCenter
+            anchors.left: root.showActivityName && !root.inVertical ? parent.left : undefined
 
             height: Math.min(parent.height,
                              parent.width,
