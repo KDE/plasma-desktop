@@ -590,6 +590,9 @@ FocusScope {
         onContainsMouseChanged: {
             if (!containsMouse && !main.rubberBand) {
                 clearPressState();
+                if (!(hoveredItem?.popupDialog?.visible ?? false)) {
+                    hoveredItem = null;
+                }
             }
         }
 
