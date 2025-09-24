@@ -1,7 +1,7 @@
 # translation of kcmaccess.po to Slovenian
 # Translation of kcmaccess.po to Slovenian
 # SLOVENIAN TRANSLATION OF KCMACCESS.
-# $Id: kcm_access.po 1718193 2025-09-16 01:23:10Z scripty $
+# $Id: kcm_access.po 1718945 2025-09-24 01:24:54Z scripty $
 # $Source$
 #
 # Copyright (C) 2001, 2003, 2005, 2006 Free Software Foundation, Inc.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-16 00:43+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2025-06-25 06:41+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -528,40 +528,46 @@ msgctxt "@option"
 msgid "Tritanopia (blue-yellow)"
 msgstr "Tritanopia (modra-rumena)"
 
-#: ui/ColorblindnessCorrection.qml:58
+#: ui/ColorblindnessCorrection.qml:44
+#, kde-format
+msgctxt "@option"
+msgid "Monochrome (grayscale)"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:59
 #, kde-format
 msgctxt "@label"
 msgid "Intensity:"
 msgstr "Intenzivnost:"
 
-#: ui/ColorblindnessCorrection.qml:81
+#: ui/ColorblindnessCorrection.qml:82
 #, kde-format
 msgctxt "@label Mild color blindness correction intensity"
 msgid "Mild"
 msgstr "Blaga"
 
-#: ui/ColorblindnessCorrection.qml:88
+#: ui/ColorblindnessCorrection.qml:89
 #, kde-format
 msgctxt "@label Intense color blindness correction intensity"
 msgid "Intense"
 msgstr "Intenzivna"
 
-#: ui/ColorblindnessCorrection.qml:111
+#: ui/ColorblindnessCorrection.qml:112
 #, kde-format
 msgid "Red"
 msgstr "Rdeča"
 
-#: ui/ColorblindnessCorrection.qml:112
+#: ui/ColorblindnessCorrection.qml:113
 #, kde-format
 msgid "Green"
 msgstr "Zelena"
 
-#: ui/ColorblindnessCorrection.qml:113
+#: ui/ColorblindnessCorrection.qml:114
 #, kde-format
 msgid "Blue"
 msgstr "Modra"
 
-#: ui/ColorblindnessCorrection.qml:114
+#: ui/ColorblindnessCorrection.qml:115
 #, kde-format
 msgid "Purple"
 msgstr "Vijolična"

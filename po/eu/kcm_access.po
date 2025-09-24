@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-16 00:43+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2025-06-25 20:19+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -517,40 +517,46 @@ msgctxt "@option"
 msgid "Tritanopia (blue-yellow)"
 msgstr "Tritanopia (urdina-horia)"
 
-#: ui/ColorblindnessCorrection.qml:58
+#: ui/ColorblindnessCorrection.qml:44
+#, kde-format
+msgctxt "@option"
+msgid "Monochrome (grayscale)"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:59
 #, kde-format
 msgctxt "@label"
 msgid "Intensity:"
 msgstr "Intentsitatea:"
 
-#: ui/ColorblindnessCorrection.qml:81
+#: ui/ColorblindnessCorrection.qml:82
 #, kde-format
 msgctxt "@label Mild color blindness correction intensity"
 msgid "Mild"
 msgstr "Arina"
 
-#: ui/ColorblindnessCorrection.qml:88
+#: ui/ColorblindnessCorrection.qml:89
 #, kde-format
 msgctxt "@label Intense color blindness correction intensity"
 msgid "Intense"
 msgstr "Bizia"
 
-#: ui/ColorblindnessCorrection.qml:111
+#: ui/ColorblindnessCorrection.qml:112
 #, kde-format
 msgid "Red"
 msgstr "Gorria"
 
-#: ui/ColorblindnessCorrection.qml:112
+#: ui/ColorblindnessCorrection.qml:113
 #, kde-format
 msgid "Green"
 msgstr "Berdea"
 
-#: ui/ColorblindnessCorrection.qml:113
+#: ui/ColorblindnessCorrection.qml:114
 #, kde-format
 msgid "Blue"
 msgstr "Urdina"
 
-#: ui/ColorblindnessCorrection.qml:114
+#: ui/ColorblindnessCorrection.qml:115
 #, kde-format
 msgid "Purple"
 msgstr "Purpura"

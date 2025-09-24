@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-16 00:43+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2024-09-03 08:35+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -518,40 +518,46 @@ msgctxt "@option"
 msgid "Tritanopia (blue-yellow)"
 msgstr ""
 
-#: ui/ColorblindnessCorrection.qml:58
+#: ui/ColorblindnessCorrection.qml:44
+#, kde-format
+msgctxt "@option"
+msgid "Monochrome (grayscale)"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:59
 #, kde-format
 msgctxt "@label"
 msgid "Intensity:"
 msgstr "Intenzita:"
 
-#: ui/ColorblindnessCorrection.qml:81
+#: ui/ColorblindnessCorrection.qml:82
 #, kde-format
 msgctxt "@label Mild color blindness correction intensity"
 msgid "Mild"
 msgstr "Mírná"
 
-#: ui/ColorblindnessCorrection.qml:88
+#: ui/ColorblindnessCorrection.qml:89
 #, kde-format
 msgctxt "@label Intense color blindness correction intensity"
 msgid "Intense"
 msgstr "Intenzivní"
 
-#: ui/ColorblindnessCorrection.qml:111
+#: ui/ColorblindnessCorrection.qml:112
 #, kde-format
 msgid "Red"
 msgstr "Červená"
 
-#: ui/ColorblindnessCorrection.qml:112
+#: ui/ColorblindnessCorrection.qml:113
 #, kde-format
 msgid "Green"
 msgstr "Zelená"
 
-#: ui/ColorblindnessCorrection.qml:113
+#: ui/ColorblindnessCorrection.qml:114
 #, kde-format
 msgid "Blue"
 msgstr "Modrá"
 
-#: ui/ColorblindnessCorrection.qml:114
+#: ui/ColorblindnessCorrection.qml:115
 #, kde-format
 msgid "Purple"
 msgstr "Nachová"
