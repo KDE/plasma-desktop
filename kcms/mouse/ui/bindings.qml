@@ -31,6 +31,13 @@ KCMUtils.SimpleKCM {
         hotplugMessage: root.KCMUtils.ConfigModule.hotplugMessage
     }
 
+    Kirigami.ColumnView.onViewChanged: {
+        const view = Kirigami.ColumnView.view
+        if (view) {
+            view.interactive = Qt.binding(() => !newBinding.checked)
+        }
+    }
+
     MouseArea {
         // Deliberately using MouseArea on the page instead of a TapHandler on the button, so we can capture clicks anywhere
         id: buttonCapture
