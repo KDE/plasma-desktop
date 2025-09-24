@@ -222,6 +222,12 @@ FocusScope {
         id: eventGenerator
     }
 
+    onEnabledChanged: {
+        if (!main.enabled) {
+            listener.clearPressState();
+        }
+    }
+
     MouseEventListener {
         id: listener
 
