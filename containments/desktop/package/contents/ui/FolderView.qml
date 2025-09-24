@@ -534,7 +534,7 @@ FocusScope {
                     clearPressState();
                 } else {
                     // Disable rubberband in popup list view mode or while renaming
-                    if (root.useListViewMode || (editor && editor.targetItem)) {
+                    if (root.useListViewMode || (editor && editor.targetItem) || (verticalScrollBar.active || horizontalScrollBar.active)) {
                         return;
                     }
 
@@ -732,7 +732,9 @@ FocusScope {
                 PlasmaComponents.ScrollBar.vertical: PlasmaComponents.ScrollBar {
                     id: verticalScrollBar
                 }
-                PlasmaComponents.ScrollBar.horizontal: PlasmaComponents.ScrollBar {}
+                PlasmaComponents.ScrollBar.horizontal: PlasmaComponents.ScrollBar {
+                    id: horizontalScrollBar
+                }
 
                 function calcExtraSpacing(cellSize, containerSize) {
                     var availableColumns = Math.floor(containerSize / cellSize);
