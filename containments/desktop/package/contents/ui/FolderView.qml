@@ -939,20 +939,20 @@ FocusScope {
                 }
 
                 function rectangleSelect(x, y, width, height, rubberBand) {
-                    var rows = (gridView.flow === GridView.FlowLeftToRight);
-                    var axis = rows ? gridView.width : gridView.height;
-                    var step = rows ? cellWidth : cellHeight;
-                    var perStripe = Math.floor(axis / step);
-                    var stripes = Math.ceil(gridView.count / perStripe);
-                    var cWidth = gridView.cellWidth - (2 * Kirigami.Units.smallSpacing);
-                    var cHeight = gridView.cellHeight - (2 * Kirigami.Units.smallSpacing);
-                    var midWidth = gridView.cellWidth / 2;
-                    var midHeight = gridView.cellHeight / 2;
-                    var indices = [];
+                    let rows = (gridView.flow === GridView.FlowLeftToRight);
+                    let axis = rows ? gridView.width : gridView.height;
+                    let step = rows ? cellWidth : cellHeight;
+                    let perStripe = Math.floor(axis / step);
+                    let stripes = Math.ceil(gridView.count / perStripe);
+                    let cWidth = gridView.cellWidth - (2 * Kirigami.Units.smallSpacing);
+                    let cHeight = gridView.cellHeight - (2 * Kirigami.Units.smallSpacing);
+                    let midWidth = gridView.cellWidth / 2;
+                    let midHeight = gridView.cellHeight / 2;
+                    let indices = [];
 
-                    for (var s = 0; s < stripes; s++) {
-                        for (var i = 0; i < perStripe; i++) {
-                            var index = (s * perStripe) + i;
+                    for (let s = 0; s < stripes; s++) {
+                        for (let i = 0; i < perStripe; i++) {
+                            let index = (s * perStripe) + i;
 
                             if (index >= gridView.count) {
                                 break;
@@ -962,8 +962,8 @@ FocusScope {
                                 continue;
                             }
 
-                            var itemX = ((rows ? i : s) * gridView.cellWidth);
-                            var itemY = ((rows ? s : i) * gridView.cellHeight);
+                            let itemX = ((rows ? i : s) * gridView.cellWidth);
+                            let itemY = ((rows ? s : i) * gridView.cellHeight);
 
                             if (gridView.effectiveLayoutDirection === Qt.RightToLeft) {
                                 itemX -= (rows ? gridView.contentX : gridView.originX);
@@ -971,10 +971,11 @@ FocusScope {
                                 itemX = (rows ? gridView.width : gridView.contentItem.width) - itemX;
                             }
 
-                            var item = gridView.contentItem.childAt(itemX + midWidth, itemY + midHeight);
-                            if (rubberBand.intersects(Qt.rect(item.x, item.y, item.width, item.height))) {
+                            let item = gridView.contentItem.childAt(itemX + midWidth, itemY + midHeight);
+                            if (item && rubberBand.intersects(Qt.rect(item.x, item.y, item.width, item.height))) {
                                 indices.push(index)
                             }
+
                         }
                     }
 
