@@ -228,12 +228,10 @@ T.ItemDelegate {
                 root.action.trigger()
             }
         }
-        // MouseEvents for pressAndHold use Qt.MouseEventSynthesizedByQt for mouse.source,
-        // which makes checking mouse.source for whether or not touch input is used useless.
-        onPressAndHold: mouse => {
-            if (mouse.button === Qt.LeftButton) {
-                root.openActionMenu(mouseX, mouseY)
-            }
+
+        TapHandler {
+            acceptedDevices: PointerDevice.TouchScreen
+            onLongPressed: root.openActionMenu(point.position.x, point.position.y)
         }
     }
 
