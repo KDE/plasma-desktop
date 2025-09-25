@@ -71,7 +71,7 @@ ContainmentItem {
 
     // Plasmoid.title is set by a Binding {} in FolderViewLayer
     toolTipSubText: ""
-    Plasmoid.icon: (!Plasmoid.configuration.useCustomIcon && folderViewLayer.ready) ? symbolicizeIconName(folderViewLayer.view.model.iconName) : Plasmoid.configuration.icon
+    Plasmoid.icon: (!Plasmoid.configuration.useCustomIcon && folderViewLayer.ready) ? symbolicizeIconName(folderViewLayer.view?.model.iconName) : Plasmoid.configuration.icon
 
     // We want to do this here rather than in the model because we don't always want
     // symbolic icons everywhere, but we do know that we always want them in this
@@ -127,7 +127,7 @@ ContainmentItem {
 
     onFocusChanged: {
         if (focus && isFolder) {
-            folderViewLayer.item.forceActiveFocus();
+            folderViewLayer.item?.forceActiveFocus();
         }
     }
 
