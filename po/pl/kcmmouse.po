@@ -1,4 +1,4 @@
-# Version: $Revision: 1717458 $
+# Version: $Revision: 1719011 $
 # translation of kcminput.po to
 # SPDX-FileCopyrightText: 2011, 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Piotr Roszatycki <dexter@debian.org>, 1998-2000.
@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-04 00:44+0000\n"
+"POT-Creation-Date: 2025-09-25 02:40+0000\n"
 "PO-Revision-Date: 2025-08-16 07:07+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -97,37 +97,37 @@ msgctxt "@title"
 msgid "Extra Mouse Buttons"
 msgstr "Dodatkowe przyciski myszy"
 
-#: ui/bindings.qml:70
+#: ui/bindings.qml:77
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
 msgstr "Dodatkowy przycisk %1:"
 
-#: ui/bindings.qml:99
+#: ui/bindings.qml:106
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
 msgstr "Naciśnij przycisk myszy, którego chcesz powiązać z klawiszem"
 
-#: ui/bindings.qml:101
+#: ui/bindings.qml:108
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
 msgstr "Wpisz nowe połączenie klawiszy dla %1"
 
-#: ui/bindings.qml:105
+#: ui/bindings.qml:112
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Anuluj"
 
-#: ui/bindings.qml:123
+#: ui/bindings.qml:130
 #, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button"
 msgstr "Naciśnij przycisk myszy"
 
-#: ui/bindings.qml:124
+#: ui/bindings.qml:131
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"
