@@ -234,7 +234,7 @@ Item {
                 property string prefix: ""
 
                 sourceComponent: frameComponent
-                active: impl.iconAndLabelsShouldlookSelected || model.selected
+                active: impl.iconAndLabelsShouldlookSelected || (model?.selected ?? false)
                 asynchronous: true
 
                 width: {
@@ -366,7 +366,7 @@ Item {
                     opacity: model.isHidden ? 0.6 : 1
 
                     text: main.nameWrapped
-                    font.italic: model?.isLink
+                    font.italic: (model?.isLink ?? false)
                     wrapMode: (maximumLineCount === 1) ? Text.NoWrap : Text.Wrap
                     horizontalAlignment: Text.AlignHCenter
                 }
