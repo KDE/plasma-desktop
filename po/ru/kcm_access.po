@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-24 00:45+0000\n"
+"POT-Creation-Date: 2025-09-25 00:44+0000\n"
 "PO-Revision-Date: 2025-02-13 12:44+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -502,84 +502,96 @@ msgstr[1] "мс"
 msgstr[2] "мс"
 msgstr[3] "мс"
 
-#: ui/ColorblindnessCorrection.qml:22
+#: ui/ColorblindnessCorrection.qml:21
 #, kde-format
-msgctxt "@label"
-msgid "Color blindness correction:"
-msgstr "Коррекция при неспособности различать цвета:"
+msgctxt "@info"
+msgid ""
+"If you have trouble with certain colors on the screen, these filters can "
+"change them into other colors."
+msgstr ""
 
-#: ui/ColorblindnessCorrection.qml:23
+#: ui/ColorblindnessCorrection.qml:31
 #, kde-format
 msgctxt "@option check, Enable color blindness correction effect"
 msgid "Enable"
 msgstr "Включить"
 
-#: ui/ColorblindnessCorrection.qml:36
-#, kde-format
-msgctxt "@label"
-msgid "Mode:"
-msgstr "Режим:"
-
-#: ui/ColorblindnessCorrection.qml:41
-#, kde-format
-msgctxt "@option"
-msgid "Protanopia (red weak)"
-msgstr "Протанопия (пониженная чувствительность к красному)"
-
-#: ui/ColorblindnessCorrection.qml:42
-#, kde-format
-msgctxt "@option"
-msgid "Deuteranopia (green weak)"
-msgstr "Дейтеранопия (пониженная чувствительность к зелёному)"
-
-#: ui/ColorblindnessCorrection.qml:43
-#, kde-format
-msgctxt "@option"
-msgid "Tritanopia (blue-yellow)"
-msgstr "Тританопия (сине-жёлтый)"
-
 #: ui/ColorblindnessCorrection.qml:44
 #, kde-format
-msgctxt "@option"
-msgid "Monochrome (grayscale)"
+msgctxt ""
+"@label:listbox Difficulty seeing any of the following colors on the screen"
+msgid "Problematic colors:"
 msgstr ""
 
-#: ui/ColorblindnessCorrection.qml:59
+#: ui/ColorblindnessCorrection.qml:49
+#, kde-format
+msgctxt "@option"
+msgid "Red & purple (Protanopia)"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:50
+#, kde-format
+msgctxt "@option"
+msgid "Green & purple (Deuteranopia)"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:51
+#, kde-format
+msgctxt "@option"
+msgid "Yellow, green & purple (Tritanopia)"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:52
+#, kde-format
+msgctxt "@option"
+msgid "All (grayscale mode)"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:67
 #, kde-format
 msgctxt "@label"
 msgid "Intensity:"
 msgstr "Интенсивность:"
 
-#: ui/ColorblindnessCorrection.qml:82
+#: ui/ColorblindnessCorrection.qml:90
 #, kde-format
 msgctxt "@label Mild color blindness correction intensity"
 msgid "Mild"
 msgstr "Умеренная"
 
-#: ui/ColorblindnessCorrection.qml:89
+#: ui/ColorblindnessCorrection.qml:97
 #, kde-format
 msgctxt "@label Intense color blindness correction intensity"
 msgid "Intense"
 msgstr "Высокая"
 
-#: ui/ColorblindnessCorrection.qml:112
-#, kde-format
-msgid "Red"
-msgstr "Красный"
-
-#: ui/ColorblindnessCorrection.qml:113
-#, kde-format
-msgid "Green"
-msgstr "Зелёный"
-
-#: ui/ColorblindnessCorrection.qml:114
-#, kde-format
-msgid "Blue"
-msgstr "Синий"
-
 #: ui/ColorblindnessCorrection.qml:115
 #, kde-format
-msgid "Purple"
+msgctxt "@info"
+msgid "Adjusted colors:"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:132
+#, kde-format
+msgid "Reds:"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:133
+#, fuzzy, kde-format
+#| msgid "Green"
+msgid "Greens:"
+msgstr "Зелёный"
+
+#: ui/ColorblindnessCorrection.qml:134
+#, fuzzy, kde-format
+#| msgid "Blue"
+msgid "Blues:"
+msgstr "Синий"
+
+#: ui/ColorblindnessCorrection.qml:135
+#, fuzzy, kde-format
+#| msgid "Purple"
+msgid "Purples:"
 msgstr "Фиолетовый"
 
 #: ui/Invert.qml:22
@@ -1111,6 +1123,29 @@ msgstr ""
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
 msgstr "Управлять мышкой при помощи клавиш"
+
+#~ msgctxt "@label"
+#~ msgid "Color blindness correction:"
+#~ msgstr "Коррекция при неспособности различать цвета:"
+
+#~ msgctxt "@label"
+#~ msgid "Mode:"
+#~ msgstr "Режим:"
+
+#~ msgctxt "@option"
+#~ msgid "Protanopia (red weak)"
+#~ msgstr "Протанопия (пониженная чувствительность к красному)"
+
+#~ msgctxt "@option"
+#~ msgid "Deuteranopia (green weak)"
+#~ msgstr "Дейтеранопия (пониженная чувствительность к зелёному)"
+
+#~ msgctxt "@option"
+#~ msgid "Tritanopia (blue-yellow)"
+#~ msgstr "Тританопия (сине-жёлтый)"
+
+#~ msgid "Red"
+#~ msgstr "Красный"
 
 #~ msgid "AltGraph"
 #~ msgstr "Alt Gr"

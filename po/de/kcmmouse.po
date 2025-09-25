@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-04 00:44+0000\n"
+"POT-Creation-Date: 2025-09-25 00:44+0000\n"
 "PO-Revision-Date: 2025-06-06 21:56+0200\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -103,13 +103,13 @@ msgctxt "@title"
 msgid "Extra Mouse Buttons"
 msgstr "Zusätzliche Maustasten"
 
-#: ui/bindings.qml:70
+#: ui/bindings.qml:77
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
 msgstr "Zusatztaste %1:"
 
-#: ui/bindings.qml:99
+#: ui/bindings.qml:106
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
@@ -117,25 +117,25 @@ msgstr ""
 "Drücken Sie die Maustaste, der Sie eine Taste auf der Tastatur zuordnen "
 "möchten"
 
-#: ui/bindings.qml:101
+#: ui/bindings.qml:108
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
 msgstr "Neue Tastenkombination für %1 eingeben"
 
-#: ui/bindings.qml:105
+#: ui/bindings.qml:112
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: ui/bindings.qml:123
+#: ui/bindings.qml:130
 #, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button"
 msgstr "Drücken Sie eine Maustaste"
 
-#: ui/bindings.qml:124
+#: ui/bindings.qml:131
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"

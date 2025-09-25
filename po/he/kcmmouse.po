@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-04 00:44+0000\n"
+"POT-Creation-Date: 2025-09-25 00:44+0000\n"
 "PO-Revision-Date: 2025-05-16 13:55+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -103,37 +103,37 @@ msgctxt "@title"
 msgid "Extra Mouse Buttons"
 msgstr "כפתורים נוספים בעכבר"
 
-#: ui/bindings.qml:70
+#: ui/bindings.qml:77
 #, kde-format
 msgctxt "@label for assigning an action to a numbered button"
 msgid "Extra Button %1:"
 msgstr "כפתור נוסף %1:"
 
-#: ui/bindings.qml:99
+#: ui/bindings.qml:106
 #, kde-format
 msgctxt "@action:button"
 msgid "Press the mouse button for which you want to add a key binding"
 msgstr "נא ללחוץ על כפתור העכבר להוספת צירוף מקשים"
 
-#: ui/bindings.qml:101
+#: ui/bindings.qml:108
 #, kde-format
 msgctxt "@action:button, %1 is the translation of 'Extra Button %1' from above"
 msgid "Enter the new key combination for %1"
 msgstr "נא למלא את צירוף המקשרים החדש עבור %1"
 
-#: ui/bindings.qml:105
+#: ui/bindings.qml:112
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "ביטול"
 
-#: ui/bindings.qml:123
+#: ui/bindings.qml:130
 #, kde-format
 msgctxt "@action:button"
 msgid "Press a mouse button"
 msgstr "נא ללחוץ על כפתור בעכבר"
 
-#: ui/bindings.qml:124
+#: ui/bindings.qml:131
 #, kde-format
 msgctxt "@action:button, Bind a mousebutton to keyboard key(s)"
 msgid "Add Binding…"

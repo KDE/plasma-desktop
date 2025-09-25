@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-24 00:45+0000\n"
+"POT-Creation-Date: 2025-09-25 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -470,84 +470,96 @@ msgid "ms"
 msgid_plural "ms"
 msgstr[0] "毫秒"
 
-#: ui/ColorblindnessCorrection.qml:22
+#: ui/ColorblindnessCorrection.qml:21
 #, kde-format
-msgctxt "@label"
-msgid "Color blindness correction:"
-msgstr "色盲校正："
+msgctxt "@info"
+msgid ""
+"If you have trouble with certain colors on the screen, these filters can "
+"change them into other colors."
+msgstr ""
 
-#: ui/ColorblindnessCorrection.qml:23
+#: ui/ColorblindnessCorrection.qml:31
 #, kde-format
 msgctxt "@option check, Enable color blindness correction effect"
 msgid "Enable"
 msgstr "启用"
 
-#: ui/ColorblindnessCorrection.qml:36
-#, kde-format
-msgctxt "@label"
-msgid "Mode:"
-msgstr "模式："
-
-#: ui/ColorblindnessCorrection.qml:41
-#, kde-format
-msgctxt "@option"
-msgid "Protanopia (red weak)"
-msgstr "甲型色盲 (红色盲)"
-
-#: ui/ColorblindnessCorrection.qml:42
-#, kde-format
-msgctxt "@option"
-msgid "Deuteranopia (green weak)"
-msgstr "乙型色盲 (绿色盲)"
-
-#: ui/ColorblindnessCorrection.qml:43
-#, kde-format
-msgctxt "@option"
-msgid "Tritanopia (blue-yellow)"
-msgstr "丙型色盲 (蓝黄色盲)"
-
 #: ui/ColorblindnessCorrection.qml:44
 #, kde-format
-msgctxt "@option"
-msgid "Monochrome (grayscale)"
+msgctxt ""
+"@label:listbox Difficulty seeing any of the following colors on the screen"
+msgid "Problematic colors:"
 msgstr ""
 
-#: ui/ColorblindnessCorrection.qml:59
+#: ui/ColorblindnessCorrection.qml:49
+#, kde-format
+msgctxt "@option"
+msgid "Red & purple (Protanopia)"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:50
+#, kde-format
+msgctxt "@option"
+msgid "Green & purple (Deuteranopia)"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:51
+#, kde-format
+msgctxt "@option"
+msgid "Yellow, green & purple (Tritanopia)"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:52
+#, kde-format
+msgctxt "@option"
+msgid "All (grayscale mode)"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:67
 #, kde-format
 msgctxt "@label"
 msgid "Intensity:"
 msgstr "强度："
 
-#: ui/ColorblindnessCorrection.qml:82
+#: ui/ColorblindnessCorrection.qml:90
 #, kde-format
 msgctxt "@label Mild color blindness correction intensity"
 msgid "Mild"
 msgstr "轻度"
 
-#: ui/ColorblindnessCorrection.qml:89
+#: ui/ColorblindnessCorrection.qml:97
 #, kde-format
 msgctxt "@label Intense color blindness correction intensity"
 msgid "Intense"
 msgstr "重度"
 
-#: ui/ColorblindnessCorrection.qml:112
-#, kde-format
-msgid "Red"
-msgstr "红"
-
-#: ui/ColorblindnessCorrection.qml:113
-#, kde-format
-msgid "Green"
-msgstr "绿"
-
-#: ui/ColorblindnessCorrection.qml:114
-#, kde-format
-msgid "Blue"
-msgstr "蓝"
-
 #: ui/ColorblindnessCorrection.qml:115
 #, kde-format
-msgid "Purple"
+msgctxt "@info"
+msgid "Adjusted colors:"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:132
+#, kde-format
+msgid "Reds:"
+msgstr ""
+
+#: ui/ColorblindnessCorrection.qml:133
+#, fuzzy, kde-format
+#| msgid "Green"
+msgid "Greens:"
+msgstr "绿"
+
+#: ui/ColorblindnessCorrection.qml:134
+#, fuzzy, kde-format
+#| msgid "Blue"
+msgid "Blues:"
+msgstr "蓝"
+
+#: ui/ColorblindnessCorrection.qml:135
+#, fuzzy, kde-format
+#| msgid "Purple"
+msgid "Purples:"
 msgstr "紫"
 
 #: ui/Invert.qml:22
@@ -1056,3 +1068,26 @@ msgstr "缩放倍数："
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
 msgstr "使用快捷键控制缩放"
+
+#~ msgctxt "@label"
+#~ msgid "Color blindness correction:"
+#~ msgstr "色盲校正："
+
+#~ msgctxt "@label"
+#~ msgid "Mode:"
+#~ msgstr "模式："
+
+#~ msgctxt "@option"
+#~ msgid "Protanopia (red weak)"
+#~ msgstr "甲型色盲 (红色盲)"
+
+#~ msgctxt "@option"
+#~ msgid "Deuteranopia (green weak)"
+#~ msgstr "乙型色盲 (绿色盲)"
+
+#~ msgctxt "@option"
+#~ msgid "Tritanopia (blue-yellow)"
+#~ msgstr "丙型色盲 (蓝黄色盲)"
+
+#~ msgid "Red"
+#~ msgstr "红"
