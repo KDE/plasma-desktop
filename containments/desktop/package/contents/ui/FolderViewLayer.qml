@@ -23,8 +23,7 @@ FocusScope {
 
     property Item view: folderView
     property Item label: null
-    property int labelHeight: Kirigami.Units.iconSizes.sizeForLabels
-        + (root.isPopup ? (Kirigami.Units.smallSpacing * 2) : 0)
+    property int labelHeight: Kirigami.Units.iconSizes.sizeForLabels + (Kirigami.Units.smallSpacing * 2)
 
     property alias model: folderView.model
     property alias overflowing: folderView.overflowing
