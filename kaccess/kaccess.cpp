@@ -141,6 +141,12 @@ KAccessApp::KAccessApp()
     unsigned char locked = XkbModLocks(&state_return);
     state = ((int)locked) << 8 | latched;
 
+    toggleScreenReaderAction->setText(i18n("Toggle Screen Reader On and Off"));
+    toggleScreenReaderAction->setObjectName(QStringLiteral("Toggle Screen Reader On and Off"));
+    toggleScreenReaderAction->setProperty("componentDisplayName", i18nc("Name for kaccess shortcuts category", "Accessibility"));
+    KGlobalAccel::self()->setGlobalShortcut(toggleScreenReaderAction, Qt::META | Qt::ALT | Qt::Key_S);
+    connect(toggleScreenReaderAction, &QAction::triggered, this, &KAccessApp::toggleScreenReader);
+
     auto service = new KDBusService(KDBusService::Unique, this);
     connect(service, &KDBusService::activateRequested, this, &KAccessApp::newInstance);
 
@@ -298,12 +304,6 @@ void KAccessApp::readSettings()
     }
 
     setScreenReaderEnabled(m_screenReaderSettings.enabled());
-
-    toggleScreenReaderAction->setText(i18n("Toggle Screen Reader On and Off"));
-    toggleScreenReaderAction->setObjectName(QStringLiteral("Toggle Screen Reader On and Off"));
-    toggleScreenReaderAction->setProperty("componentDisplayName", i18nc("Name for kaccess shortcuts category", "Accessibility"));
-    KGlobalAccel::self()->setGlobalShortcut(toggleScreenReaderAction, Qt::META | Qt::ALT | Qt::Key_S);
-    connect(toggleScreenReaderAction, &QAction::triggered, this, &KAccessApp::toggleScreenReader);
 }
 
 void KAccessApp::toggleScreenReader()
