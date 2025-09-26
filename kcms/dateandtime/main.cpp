@@ -18,7 +18,6 @@
 #include <QDBusConnection>
 
 #include "dtime.h"
-#include "helper.h"
 
 #include <KAuth/Action>
 #include <KAuth/ExecuteJob>
@@ -30,67 +29,17 @@ K_PLUGIN_CLASS_WITH_JSON(KclockModule, "kcm_clock.json")
 KclockModule::KclockModule(QObject *parent, const KPluginMetaData &metaData)
     : KCModule(parent, metaData)
 {
-    auto reply = QDBusConnection::systemBus().call(QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.DBus"),
-                                                                                  QStringLiteral("/org/freedesktop/DBus"),
-                                                                                  QStringLiteral("org.freedesktop.DBus"),
-                                                                                  QStringLiteral("ListActivatableNames")));
-
-    if (!reply.arguments().isEmpty() && reply.arguments().constFirst().value<QStringList>().contains(QLatin1String("org.freedesktop.timedate1"))) {
-        m_haveTimedated = true;
-    }
-
     QVBoxLayout *layout = new QVBoxLayout(widget());
     layout->setContentsMargins(0, 0, 0, 0);
 
-    dtime = new Dtime(widget(), m_haveTimedated);
+    dtime = new Dtime(widget());
     layout->addWidget(dtime);
     connect(dtime, &Dtime::timeChanged, this, &KCModule::setNeedsSave);
     connect(dtime, &Dtime::selectedTimeZoneChanged, this, &KCModule::setNeedsSave);
 
     setButtons(Help | Apply);
 
-    if (m_haveTimedated) {
-        setAuthActionName(QStringLiteral("org.freedesktop.timedate1.set-time"));
-    } else {
-        // auth action name will be automatically guessed from the KCM name
-        qWarning() << "Timedated not found, using legacy saving mode";
-        setAuthActionName(QStringLiteral("org.kde.kcontrol.kcmclock.save"));
-    }
-}
-
-bool KclockModule::kauthSave()
-{
-    QVariantMap helperargs;
-    helperargs[QStringLiteral("ntp")] = true;
-    helperargs[QStringLiteral("ntpServers")] = dtime->ntpServers();
-    helperargs[QStringLiteral("ntpEnabled")] = dtime->ntpEnabled();
-
-    if (!dtime->ntpEnabled()) {
-        QDateTime newTime = dtime->userTime();
-        qDebug() << "Set date to " << dtime->userTime();
-        helperargs[QStringLiteral("date")] = true;
-        helperargs[QStringLiteral("newdate")] = QString::number(newTime.toSecsSinceEpoch());
-        helperargs[QStringLiteral("olddate")] = QString::number(QDateTime::currentSecsSinceEpoch());
-    }
-
-    QString selectedTimeZone = dtime->selectedTimeZone();
-    if (!selectedTimeZone.isEmpty()) {
-        helperargs[QStringLiteral("tz")] = true;
-        helperargs[QStringLiteral("tzone")] = selectedTimeZone;
-    } else {
-        helperargs[QStringLiteral("tzreset")] = true; // make the helper reset the timezone
-    }
-
-    Action action(authActionName());
-    action.setHelperId(QStringLiteral("org.kde.kcontrol.kcmclock"));
-    action.setArguments(helperargs);
-
-    ExecuteJob *job = action.execute();
-    bool rc = job->exec();
-    if (!rc) {
-        KMessageBox::error(widget(), i18n("Unable to authenticate/execute the action: %1, %2", job->error(), job->errorString()));
-    }
-    return rc;
+    setAuthActionName(QStringLiteral("org.freedesktop.timedate1.set-time"));
 }
 
 bool KclockModule::timedatedSave()
@@ -147,32 +96,14 @@ void KclockModule::save()
 {
     widget()->setDisabled(true);
 
-    bool success = false;
-    if (m_haveTimedated) {
-        success = timedatedSave();
-    } else {
-        success = kauthSave();
-    }
-
-    if (success) {
+    if (timedatedSave()) {
         QDBusMessage msg = QDBusMessage::createSignal(QStringLiteral("/org/kde/kcmshell_clock"), //
                                                       QStringLiteral("org.kde.kcmshell_clock"),
                                                       QStringLiteral("clockUpdated"));
         QDBusConnection::sessionBus().send(msg);
     }
 
-    // NOTE: super nasty hack #1
-    // Try to work around time mismatch between KSystemTimeZones' update of local
-    // timezone and reloading of data, so that the new timezone is taken into account.
-    // The Ultimate solution to this would be if KSTZ emitted a signal when a new
-    // local timezone was found.
-
-    // setDisabled(false) happens in load(), since QTimer::singleShot is non-blocking
-    if (!m_haveTimedated) {
-        QTimer::singleShot(5000, this, &KclockModule::load);
-    } else {
-        load();
-    }
+    load();
 }
 
 void KclockModule::load()
