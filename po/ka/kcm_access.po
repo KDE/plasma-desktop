@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-25 00:44+0000\n"
-"PO-Revision-Date: 2025-09-24 07:21+0200\n"
+"PO-Revision-Date: 2025-09-25 06:00+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -482,6 +482,8 @@ msgid ""
 "If you have trouble with certain colors on the screen, these filters can "
 "change them into other colors."
 msgstr ""
+"თუ ეკრანზე რომელიმე ფერებთან პრობლემა გაქვს, ამ ფილტრებს მათი შეცვლა სხვა "
+"ფილტრებით შეუძლია."
 
 #: ui/ColorblindnessCorrection.qml:31
 #, kde-format
@@ -494,31 +496,31 @@ msgstr "ჩართვა"
 msgctxt ""
 "@label:listbox Difficulty seeing any of the following colors on the screen"
 msgid "Problematic colors:"
-msgstr ""
+msgstr "პრობლემური ფერები:"
 
 #: ui/ColorblindnessCorrection.qml:49
 #, kde-format
 msgctxt "@option"
 msgid "Red & purple (Protanopia)"
-msgstr ""
+msgstr "წითელი და მეწამული (პროტანოპია)"
 
 #: ui/ColorblindnessCorrection.qml:50
 #, kde-format
 msgctxt "@option"
 msgid "Green & purple (Deuteranopia)"
-msgstr ""
+msgstr "მწვანე და მეწამული (დეიტერანოპია)"
 
 #: ui/ColorblindnessCorrection.qml:51
 #, kde-format
 msgctxt "@option"
 msgid "Yellow, green & purple (Tritanopia)"
-msgstr ""
+msgstr "ყვითელი, მწვანე და მეწამული (ტრიტანოპია)"
 
 #: ui/ColorblindnessCorrection.qml:52
 #, kde-format
 msgctxt "@option"
 msgid "All (grayscale mode)"
-msgstr ""
+msgstr "ყველა (ნაცრისფრის რეჟიმი)"
 
 #: ui/ColorblindnessCorrection.qml:67
 #, kde-format
@@ -542,30 +544,27 @@ msgstr "ინტენსიური"
 #, kde-format
 msgctxt "@info"
 msgid "Adjusted colors:"
-msgstr ""
+msgstr "მორგებული ფერები:"
 
 #: ui/ColorblindnessCorrection.qml:132
 #, kde-format
 msgid "Reds:"
-msgstr ""
+msgstr "წითლები:"
 
 #: ui/ColorblindnessCorrection.qml:133
-#, fuzzy, kde-format
-#| msgid "Green"
+#, kde-format
 msgid "Greens:"
-msgstr "მწვანე"
+msgstr "მწვანეები:"
 
 #: ui/ColorblindnessCorrection.qml:134
-#, fuzzy, kde-format
-#| msgid "Blue"
+#, kde-format
 msgid "Blues:"
-msgstr "ლურჯი"
+msgstr "ლურჯები:"
 
 #: ui/ColorblindnessCorrection.qml:135
-#, fuzzy, kde-format
-#| msgid "Purple"
+#, kde-format
 msgid "Purples:"
-msgstr "იისფერი"
+msgstr "იასამნისფრები:"
 
 #: ui/Invert.qml:22
 #, kde-format

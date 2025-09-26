@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kcm_access\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-25 00:44+0000\n"
-"PO-Revision-Date: 2025-09-25 00:13+0100\n"
+"PO-Revision-Date: 2025-09-25 16:45+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -489,6 +489,8 @@ msgid ""
 "If you have trouble with certain colors on the screen, these filters can "
 "change them into other colors."
 msgstr ""
+"Si tiene problemas con ciertos colores de la pantalla, estos filtros pueden "
+"cambiarlos a otros colores."
 
 #: ui/ColorblindnessCorrection.qml:31
 #, kde-format
@@ -501,31 +503,31 @@ msgstr "Activar"
 msgctxt ""
 "@label:listbox Difficulty seeing any of the following colors on the screen"
 msgid "Problematic colors:"
-msgstr ""
+msgstr "Colores problemáticos:"
 
 #: ui/ColorblindnessCorrection.qml:49
 #, kde-format
 msgctxt "@option"
 msgid "Red & purple (Protanopia)"
-msgstr ""
+msgstr "Rojo y morado (protanopia)"
 
 #: ui/ColorblindnessCorrection.qml:50
 #, kde-format
 msgctxt "@option"
 msgid "Green & purple (Deuteranopia)"
-msgstr ""
+msgstr "Verde y morado (deuteranopia)"
 
 #: ui/ColorblindnessCorrection.qml:51
 #, kde-format
 msgctxt "@option"
 msgid "Yellow, green & purple (Tritanopia)"
-msgstr ""
+msgstr "Amarillo, verde y morado (tritanopia)"
 
 #: ui/ColorblindnessCorrection.qml:52
 #, kde-format
 msgctxt "@option"
 msgid "All (grayscale mode)"
-msgstr ""
+msgstr "Todos (modo de escala de grises)"
 
 #: ui/ColorblindnessCorrection.qml:67
 #, kde-format
@@ -549,30 +551,27 @@ msgstr "Intensa"
 #, kde-format
 msgctxt "@info"
 msgid "Adjusted colors:"
-msgstr ""
+msgstr "Colores ajustados:"
 
 #: ui/ColorblindnessCorrection.qml:132
 #, kde-format
 msgid "Reds:"
-msgstr ""
+msgstr "Rojos:"
 
 #: ui/ColorblindnessCorrection.qml:133
-#, fuzzy, kde-format
-#| msgid "Green"
+#, kde-format
 msgid "Greens:"
-msgstr "Verde"
+msgstr "Verdes:"
 
 #: ui/ColorblindnessCorrection.qml:134
-#, fuzzy, kde-format
-#| msgid "Blue"
+#, kde-format
 msgid "Blues:"
-msgstr "Azul"
+msgstr "Azules:"
 
 #: ui/ColorblindnessCorrection.qml:135
-#, fuzzy, kde-format
-#| msgid "Purple"
+#, kde-format
 msgid "Purples:"
-msgstr "Violeta"
+msgstr "Morados:"
 
 #: ui/Invert.qml:22
 #, kde-format
@@ -1098,30 +1097,3 @@ msgstr "Factor de ampliación:"
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
 msgstr "Usar atajos de teclado para controlar la ampliación"
-
-#~ msgctxt "@label"
-#~ msgid "Color blindness correction:"
-#~ msgstr "Corrección para daltonismo:"
-
-#~ msgctxt "@label"
-#~ msgid "Mode:"
-#~ msgstr "Modo:"
-
-#~ msgctxt "@option"
-#~ msgid "Protanopia (red weak)"
-#~ msgstr "Protanopia (rojo débil)"
-
-#~ msgctxt "@option"
-#~ msgid "Deuteranopia (green weak)"
-#~ msgstr "Deuteranopia (verde débil)"
-
-#~ msgctxt "@option"
-#~ msgid "Tritanopia (blue-yellow)"
-#~ msgstr "Tritanopia (azul-amarillo)"
-
-#~ msgctxt "@option"
-#~ msgid "Monochrome (grayscale)"
-#~ msgstr "Monocromo (escala de grises)"
-
-#~ msgid "Red"
-#~ msgstr "Rojo"
