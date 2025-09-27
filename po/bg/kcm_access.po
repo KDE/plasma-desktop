@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-25 00:44+0000\n"
-"PO-Revision-Date: 2025-06-29 20:27+0200\n"
+"PO-Revision-Date: 2025-09-26 15:35+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -336,7 +336,7 @@ msgstr "Натиснете Shift 5 пъти, за да активирате Stic
 #, kde-format
 msgctxt "@label"
 msgid "Hold Shift for 8 seconds to enable Slow Keys"
-msgstr " Задръжте Shift за 8 секунди, за да активирате бавните клавиши"
+msgstr "Задръжте Shift за 8 секунди, за да активирате бавните клавиши"
 
 #: ui/ActivationShortcuts.qml:47
 #, kde-format
@@ -483,6 +483,8 @@ msgid ""
 "If you have trouble with certain colors on the screen, these filters can "
 "change them into other colors."
 msgstr ""
+"Ако имате проблеми с определени цветове на екрана, тези филтри могат да ги "
+"променят в други цветове."
 
 #: ui/ColorblindnessCorrection.qml:31
 #, kde-format
@@ -495,43 +497,43 @@ msgstr "Активиране"
 msgctxt ""
 "@label:listbox Difficulty seeing any of the following colors on the screen"
 msgid "Problematic colors:"
-msgstr ""
+msgstr "Проблемни цветове:"
 
 #: ui/ColorblindnessCorrection.qml:49
 #, kde-format
 msgctxt "@option"
 msgid "Red & purple (Protanopia)"
-msgstr ""
+msgstr "Червено и лилаво (Протанопия)"
 
 #: ui/ColorblindnessCorrection.qml:50
 #, kde-format
 msgctxt "@option"
 msgid "Green & purple (Deuteranopia)"
-msgstr ""
+msgstr "Зелено и лилаво (Деутеранопия)"
 
 #: ui/ColorblindnessCorrection.qml:51
 #, kde-format
 msgctxt "@option"
 msgid "Yellow, green & purple (Tritanopia)"
-msgstr ""
+msgstr "Жълто, зелено и лилаво (Тританопия)"
 
 #: ui/ColorblindnessCorrection.qml:52
 #, kde-format
 msgctxt "@option"
 msgid "All (grayscale mode)"
-msgstr ""
+msgstr "Всички (черно-бял режим)"
 
 #: ui/ColorblindnessCorrection.qml:67
 #, kde-format
 msgctxt "@label"
 msgid "Intensity:"
-msgstr " Интензивност:"
+msgstr "Интензивност:"
 
 #: ui/ColorblindnessCorrection.qml:90
 #, kde-format
 msgctxt "@label Mild color blindness correction intensity"
 msgid "Mild"
-msgstr " Леко изразено"
+msgstr "Леко изразено"
 
 #: ui/ColorblindnessCorrection.qml:97
 #, kde-format
@@ -543,30 +545,27 @@ msgstr "Силно изразено"
 #, kde-format
 msgctxt "@info"
 msgid "Adjusted colors:"
-msgstr ""
+msgstr "Коригирани цветове:"
 
 #: ui/ColorblindnessCorrection.qml:132
 #, kde-format
 msgid "Reds:"
-msgstr ""
+msgstr "Червено:"
 
 #: ui/ColorblindnessCorrection.qml:133
-#, fuzzy, kde-format
-#| msgid "Green"
+#, kde-format
 msgid "Greens:"
-msgstr " Зелено"
+msgstr "Зелено:"
 
 #: ui/ColorblindnessCorrection.qml:134
-#, fuzzy, kde-format
-#| msgid "Blue"
+#, kde-format
 msgid "Blues:"
-msgstr " Синьо"
+msgstr "Синьо:"
 
 #: ui/ColorblindnessCorrection.qml:135
-#, fuzzy, kde-format
-#| msgid "Purple"
+#, kde-format
 msgid "Purples:"
-msgstr " Лилаво"
+msgstr "Лилаво:"
 
 #: ui/Invert.qml:22
 #, kde-format
@@ -613,7 +612,7 @@ msgid ""
 "Useful if you accidentally type more than one key at a time or have "
 "difficulty pressing the key you want the first time."
 msgstr ""
-" За да бъде приет ключ, той трябва да бъде задържан до зададения период от "
+"За да бъде приет ключ, той трябва да бъде задържан до зададения период от "
 "време. Полезно, ако случайно въведете повече от един клавиш наведнъж или "
 "имате затруднения с натискането на желания клавиш за първи път."
 
@@ -665,7 +664,7 @@ msgid ""
 "tremors that cause you to press a key multiple times when you only intend to "
 "press once."
 msgstr ""
-" Игнориране на бързите, многократни натискания на един и същи клавиш. "
+"Игнориране на бързите, многократни натискания на един и същи клавиш. "
 "Полезно, ако имате треперене на ръцете, което ви кара да натискате клавиш "
 "няколко пъти, когато възнамерявате да натиснете само веднъж."
 
@@ -725,7 +724,7 @@ msgstr "Екранен четец"
 #, kde-format
 msgctxt "Correction for color blindness"
 msgid "Color Blindness Correction"
-msgstr " Корекция на цветната слепота"
+msgstr "Корекция на цветната слепота"
 
 #: ui/main.qml:68
 #, kde-format
@@ -808,7 +807,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The locking keys are Caps Lock, Num Lock, and Scroll Lock."
-msgstr " Заключващите клавиши са Caps Lock, Num Lock и Scroll Lock."
+msgstr "Заключващите клавиши са Caps Lock, Num Lock и Scroll Lock."
 
 #: ui/ModifierKeys.qml:108
 #, kde-format
@@ -845,7 +844,7 @@ msgid ""
 "up). The keys <shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</"
 "shortcut>, and <shortcut>9</shortcut> allow for diagonal movement."
 msgstr ""
-" Клавишът на цифровата клавиатура <shortcut>5</shortcut> функционира като "
+"Клавишът на цифровата клавиатура <shortcut>5</shortcut> функционира като "
 "щракване с мишката. Клавишите <shortcut>2</shortcut>, <shortcut>4</"
 "shortcut>, <shortcut>6</shortcut> и <shortcut>8</shortcut> позволяват "
 "кардинално движение (надолу, наляво, надясно и нагоре). Клавишите "
@@ -893,7 +892,7 @@ msgstr "Екранният четец Orca не е инсталиран"
 msgctxt "@info Placeholder message explanation"
 msgid "Please install it, then close and reopen this window"
 msgstr ""
-" Моля, инсталирайте го, след това затворете и отворете отново този прозорец"
+"Моля, инсталирайте го, след това затворете и отворете отново този прозорец"
 
 #: ui/ScreenReader.qml:27
 #, kde-format

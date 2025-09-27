@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-11 00:44+0000\n"
-"PO-Revision-Date: 2025-05-18 21:25+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"POT-Creation-Date: 2025-09-27 00:44+0000\n"
+"PO-Revision-Date: 2025-09-26 09:34+0200\n"
+"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -166,8 +166,7 @@ msgid "Import…"
 msgstr "Импорт…"
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid "Import Shortcut Scheme"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Import shortcut scheme"
 msgstr "Импорт схемы комбинаций клавиш"
@@ -186,8 +185,7 @@ msgstr "Экспорт…"
 
 # BUGME: please add 'title:window' context --ayavorsky 20200502
 #: ui/main.qml:53 ui/main.qml:125
-#, fuzzy, kde-format
-#| msgid "Export Shortcut Scheme"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Export shortcut scheme"
 msgstr "Экспорт схемы комбинаций клавиш"
@@ -333,19 +331,16 @@ msgid "Add"
 msgstr "Добавить"
 
 #: ui/main.qml:422
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox accessible"
-#| msgid "Command"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Save command"
-msgstr "Команда"
+msgstr "Сохранить команду"
 
 #: ui/main.qml:423
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add command"
-msgstr "Добавление команды"
+msgstr "Добавить команду"
 
 #: ui/main.qml:449
 #, kde-format
@@ -423,20 +418,17 @@ msgid "Import"
 msgstr "Импорт"
 
 #: ui/main.qml:547
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible"
-#| msgid "Delete shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Select shortcut scheme file"
-msgstr "Удалить комбинацию клавиш"
+msgstr "Выбрать файл со схемой комбинаций клавиш"
 
 # BUGME: please add 'title:window' context --ayavorsky 20200502
 #: ui/main.qml:548
-#, fuzzy, kde-format
-#| msgid "Export Shortcut Scheme"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add shortcut scheme"
-msgstr "Экспорт схемы комбинаций клавиш"
+msgstr "Добавить схему комбинаций клавиш"
 
 #: ui/ShortcutActionDelegate.qml:34
 #, kde-format
@@ -451,12 +443,12 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: ui/ShortcutActionDelegate.qml:81
+#: ui/ShortcutActionDelegate.qml:82
 #, kde-format
 msgid "No active shortcuts"
 msgstr "Не назначено"
 
-#: ui/ShortcutActionDelegate.qml:124
+#: ui/ShortcutActionDelegate.qml:125
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -466,57 +458,57 @@ msgstr[1] "Комбинации по умолчанию"
 msgstr[2] "Комбинации по умолчанию"
 msgstr[3] "Комбинация по умолчанию"
 
-#: ui/ShortcutActionDelegate.qml:126
+#: ui/ShortcutActionDelegate.qml:127
 #, kde-format
 msgid "No default shortcuts"
 msgstr "Отсутствуют комбинации по умолчанию"
 
-#: ui/ShortcutActionDelegate.qml:135
+#: ui/ShortcutActionDelegate.qml:136
 #, kde-format
 msgid "Default shortcut %1 is enabled."
 msgstr "Комбинация клавиш по умолчанию %1 включена."
 
-#: ui/ShortcutActionDelegate.qml:135
+#: ui/ShortcutActionDelegate.qml:136
 #, kde-format
 msgid "Default shortcut %1 is disabled."
 msgstr "Комбинация клавиш по умолчанию %1 отключена."
 
-#: ui/ShortcutActionDelegate.qml:158
+#: ui/ShortcutActionDelegate.qml:159
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "Пользовательские комбинации"
 
-#: ui/ShortcutActionDelegate.qml:184
+#: ui/ShortcutActionDelegate.qml:185
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
 msgstr "Удалить комбинацию клавиш"
 
-#: ui/ShortcutActionDelegate.qml:188
+#: ui/ShortcutActionDelegate.qml:189
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete this shortcut"
 msgstr "Удалить эту комбинацию клавиш"
 
-#: ui/ShortcutActionDelegate.qml:194
+#: ui/ShortcutActionDelegate.qml:195
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
 msgstr "Добавить…"
 
-#: ui/ShortcutActionDelegate.qml:195
+#: ui/ShortcutActionDelegate.qml:196
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr "Назначить свою комбинацию"
 
-#: ui/ShortcutActionDelegate.qml:230
+#: ui/ShortcutActionDelegate.qml:231
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
 msgstr "Отменить назначение комбинации клавиш"
 
-#: ui/ShortcutActionDelegate.qml:234
+#: ui/ShortcutActionDelegate.qml:235
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cancel capturing of new shortcut"

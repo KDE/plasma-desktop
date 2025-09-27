@@ -1,7 +1,7 @@
 # KDE3 - kcmaccess.po Russian translation
 # Copyright (C) 2005, KDE Team.
 #
-# SPDX-FileCopyrightText: 2019, 2021, 2022, 2023, 2024 Alexander Yavorsky <kekcuha@gmail.com>
+# SPDX-FileCopyrightText: 2019, 2021, 2022, 2023, 2024, 2025 Alexander Yavorsky <kekcuha@gmail.com>
 # SPDX-FileCopyrightText: 2024 Olesya Gerasimenko <translation-team@basealt.ru>
 # Hermann Zheboldov <Hermann.Zheboldov@shq.ru>, 2000.
 # Leonid Kanter <leon@asplinux.ru>, 2005.
@@ -16,14 +16,14 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-25 00:44+0000\n"
-"PO-Revision-Date: 2025-02-13 12:44+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2025-09-26 09:13+0200\n"
+"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Environment: kde\n"
@@ -33,47 +33,47 @@ msgstr ""
 #: kcmaccess.cpp:127 kcmaccess.cpp:155
 #, kde-format
 msgid "KWin"
-msgstr ""
+msgstr "KWin"
 
 #: kcmaccess.cpp:130
 #, kde-format
 msgid "Toggle Invert Effect"
-msgstr ""
+msgstr "Инвертировать"
 
 #: kcmaccess.cpp:136
 #, kde-format
 msgid "Toggle Invert Effect on Window"
-msgstr ""
+msgstr "Включить или выключить режим инверсии окна"
 
 #: kcmaccess.cpp:178
 #, kde-format
 msgid "Move Left"
-msgstr ""
+msgstr "Переместить влево"
 
 #: kcmaccess.cpp:185
 #, kde-format
 msgid "Move Right"
-msgstr ""
+msgstr "Переместить вправо"
 
 #: kcmaccess.cpp:192
 #, kde-format
 msgid "Move Up"
-msgstr ""
+msgstr "Переместить вверх"
 
 #: kcmaccess.cpp:199
 #, kde-format
 msgid "Move Down"
-msgstr ""
+msgstr "Вниз"
 
 #: kcmaccess.cpp:206
 #, kde-format
 msgid "Move Mouse to Focus"
-msgstr ""
+msgstr "Переместить мышь в фокус ввода"
 
 #: kcmaccess.cpp:213
 #, kde-format
 msgid "Move Mouse to Center"
-msgstr ""
+msgstr "Переместить мышь в центр"
 
 #: kcmaccess.cpp:256
 #, kde-format
@@ -153,30 +153,27 @@ msgstr "Инвертировать системные цвета при увед
 
 #. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
 #: kcmaccessibilitybell.kcfg:28
-#, fuzzy, kde-format
-#| msgid "Color of the Visible Bell"
+#, kde-format
 msgid "Color of the Visual Bell"
-msgstr "Цвет системного сигнала"
+msgstr "Цвет визуального сигнала"
 
 #. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
 #: kcmaccessibilitybell.kcfg:32
-#, fuzzy, kde-format
-#| msgid "Duration of the Visible Bell"
+#, kde-format
 msgid "Duration of the Visual Bell"
-msgstr "Длительность системного сигнала"
+msgstr "Длительность визуального сигнала"
 
 #. i18n: ectx: label, entry (ColorblindnessCorrection), group (Plugins)
 #: kcmaccessibilitycolorblindnesscorrection.kcfg:13
 #, kde-format
 msgid "Whether Colorblindness Correction is enabled"
-msgstr "Включена ли опция «Коррекция при неспособности различать цвета»"
+msgstr "Состояние функции «Коррекция при неспособности различать цвета»"
 
 #. i18n: ectx: label, entry (Invert), group (Plugins)
 #: kcmaccessibilityinvert.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Invert effect is enabled"
-msgstr "Включен ли параметра «Поиск курсора»"
+msgstr "Состояние функции параметр «Инвертировать»"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
@@ -308,7 +305,7 @@ msgstr "Включить средство чтения с экрана"
 #: kcmaccessibilityshakecursor.kcfg:9
 #, kde-format
 msgid "Whether Shake Cursor is enabled"
-msgstr "Включен ли параметра «Поиск курсора»"
+msgstr "Состояние функции «Поиск курсора»"
 
 #. i18n: ectx: label, entry (ShakeCursorMagnification), group (Effect-shakecursor)
 #: kcmaccessibilityshakecursor.kcfg:15
@@ -318,17 +315,15 @@ msgstr "Увеличение"
 
 #. i18n: ectx: label, entry (Zoom), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Zoom effect is enabled"
-msgstr "Включен ли параметра «Поиск курсора»"
+msgstr "Состояние функции «Поиск курсора»"
 
 #. i18n: ectx: label, entry (Magnifier), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Magnifier effect is enabled"
-msgstr "Включен ли параметра «Поиск курсора»"
+msgstr "Состояние функции «Поиск курсора»"
 
 #: ui/ActivationShortcuts.qml:18
 #, kde-format
@@ -509,6 +504,8 @@ msgid ""
 "If you have trouble with certain colors on the screen, these filters can "
 "change them into other colors."
 msgstr ""
+"Если у вас проблемы с восприятием определённых цветов , эти фильтры могут "
+"заменить их на другие цвета."
 
 #: ui/ColorblindnessCorrection.qml:31
 #, kde-format
@@ -521,31 +518,31 @@ msgstr "Включить"
 msgctxt ""
 "@label:listbox Difficulty seeing any of the following colors on the screen"
 msgid "Problematic colors:"
-msgstr ""
+msgstr "Проблемные цвета:"
 
 #: ui/ColorblindnessCorrection.qml:49
 #, kde-format
 msgctxt "@option"
 msgid "Red & purple (Protanopia)"
-msgstr ""
+msgstr "Красный и фиолетовый (протанопия)"
 
 #: ui/ColorblindnessCorrection.qml:50
 #, kde-format
 msgctxt "@option"
 msgid "Green & purple (Deuteranopia)"
-msgstr ""
+msgstr "Зелёный и фиолетовый (дейтеранопия )"
 
 #: ui/ColorblindnessCorrection.qml:51
 #, kde-format
 msgctxt "@option"
 msgid "Yellow, green & purple (Tritanopia)"
-msgstr ""
+msgstr "Жёлтый, зелёный и фиолетовый (тританопия)"
 
 #: ui/ColorblindnessCorrection.qml:52
 #, kde-format
 msgctxt "@option"
 msgid "All (grayscale mode)"
-msgstr ""
+msgstr "Все цвета (оттенки серого)"
 
 #: ui/ColorblindnessCorrection.qml:67
 #, kde-format
@@ -569,41 +566,36 @@ msgstr "Высокая"
 #, kde-format
 msgctxt "@info"
 msgid "Adjusted colors:"
-msgstr ""
+msgstr "Изменение цветов:"
 
 #: ui/ColorblindnessCorrection.qml:132
 #, kde-format
 msgid "Reds:"
-msgstr ""
+msgstr "Красные тона:"
 
 #: ui/ColorblindnessCorrection.qml:133
-#, fuzzy, kde-format
-#| msgid "Green"
+#, kde-format
 msgid "Greens:"
-msgstr "Зелёный"
+msgstr "Зелёные тона:"
 
 #: ui/ColorblindnessCorrection.qml:134
-#, fuzzy, kde-format
-#| msgid "Blue"
+#, kde-format
 msgid "Blues:"
-msgstr "Синий"
+msgstr "Синие тона:"
 
 #: ui/ColorblindnessCorrection.qml:135
-#, fuzzy, kde-format
-#| msgid "Purple"
+#, kde-format
 msgid "Purples:"
-msgstr "Фиолетовый"
+msgstr "Фиолетовые тона:"
 
 #: ui/Invert.qml:22
 #, kde-format
 msgctxt "@label"
 msgid "Invert:"
-msgstr ""
+msgstr "Инвертирование цветов:"
 
 #: ui/Invert.qml:23
-#, fuzzy, kde-format
-#| msgctxt "Enable activation shortcuts"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable invert effect"
 msgid "Enable"
 msgstr "Включить"
@@ -613,13 +605,14 @@ msgstr "Включить"
 msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
 msgstr ""
+"Используйте комбинации клавиш для переключения инвертирования цветов дисплея "
+"и окна"
 
 #: ui/Invert.qml:49 ui/ZoomMagnifier.qml:321
-#, fuzzy, kde-format
-#| msgid "Configure Notifications…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Shortcuts…"
-msgstr "Настроить уведомления..."
+msgstr "Настроить комбинации клавиш…"
 
 #: ui/KeyboardFilters.qml:18
 #, kde-format
@@ -712,7 +705,7 @@ msgstr "Воспроизводить системный сигнал при от
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Zoom & Magnifier"
-msgstr ""
+msgstr "Масштаб и экранная лупа"
 
 #: ui/main.qml:33
 #, kde-format
@@ -759,7 +752,7 @@ msgstr "Коррекция при неспособности различать 
 #, kde-format
 msgctxt "@title Category name in sidebar, for inverting screen colors"
 msgid "Invert"
-msgstr ""
+msgstr "Инвертирование"
 
 #: ui/main.qml:73
 #, kde-format
@@ -967,88 +960,85 @@ msgstr "Большое"
 #, kde-format
 msgctxt "@label, followed by 'full screen' or 'magnify region'"
 msgid "Zoom:"
-msgstr ""
+msgstr "Масштаб:"
 
 #: ui/ZoomMagnifier.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@option:radio Flash screen when a system bell is rung"
-#| msgid "Flash screen"
+#, kde-format
 msgctxt "@option:check, enable zoom effect, following 'Zoom:'"
 msgid "Full screen"
-msgstr "Мигание экрана"
+msgstr "Весь экран"
 
 #: ui/ZoomMagnifier.qml:53
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Show pixel grid at zoom level:"
-msgstr ""
+msgstr "Пиксельная сетка при уровне масштабирования:"
 
 #: ui/ZoomMagnifier.qml:85
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Mouse pointer:"
-msgstr ""
+msgstr "Курсор мыши:"
 
 #: ui/ZoomMagnifier.qml:87
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scale"
-msgstr ""
+msgstr "Масштаб"
 
 #: ui/ZoomMagnifier.qml:87
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Keep"
-msgstr ""
+msgstr "Оставить как есть"
 
 #: ui/ZoomMagnifier.qml:87
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Hide"
-msgstr ""
+msgstr "Скрыть"
 
 #: ui/ZoomMagnifier.qml:98
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Mouse tracking:"
-msgstr ""
+msgstr "Отслеживание курсора мыши:"
 
 #: ui/ZoomMagnifier.qml:100
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Proportional"
-msgstr ""
+msgstr "Пропорционально"
 
 #: ui/ZoomMagnifier.qml:100
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
-msgstr ""
+msgstr "По центру"
 
 #: ui/ZoomMagnifier.qml:100
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Push"
-msgstr ""
+msgstr "Выдвижением"
 
 #: ui/ZoomMagnifier.qml:100
-#, fuzzy, kde-format
-#| msgid "Disable After:"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Disabled"
-msgstr "Отключить после:"
+msgstr "Отключено"
 
 #: ui/ZoomMagnifier.qml:111
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable focus tracking"
-msgstr ""
+msgstr "Включить слежение за фокусом"
 
 #: ui/ZoomMagnifier.qml:123
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable text caret tracking"
-msgstr ""
+msgstr "Включить слежение за текстовым курсором"
 
 #: ui/ZoomMagnifier.qml:134
 #, kde-format
@@ -1070,59 +1060,56 @@ msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "Воспроизводить системный сигнал при использовании клавиш-модификаторов"
 
 #: ui/ZoomMagnifier.qml:190
-#, fuzzy, kde-format
-#| msgid "Magnification"
+#, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
-msgstr "Увеличение"
+msgstr "Область масштабирования"
 
 #: ui/ZoomMagnifier.qml:217
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
-msgstr ""
+msgstr "Ширина:"
 
 #: ui/ZoomMagnifier.qml:228 ui/ZoomMagnifier.qml:253
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
 msgid_plural "%1 px"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%1 пикс."
+msgstr[1] "%1 пикс."
+msgstr[2] "%1 пикс."
+msgstr[3] "%1 пикс."
 
 #: ui/ZoomMagnifier.qml:229 ui/ZoomMagnifier.qml:254
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
-msgstr ""
+msgstr "пикс."
 
 #: ui/ZoomMagnifier.qml:242
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
-msgstr ""
+msgstr "Высота:"
 
 #: ui/ZoomMagnifier.qml:271
-#, fuzzy, kde-format
-#| msgid "Disable After:"
+#, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
-msgstr "Отключить после:"
+msgstr "Отключено"
 
 #: ui/ZoomMagnifier.qml:284
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
-msgstr ""
+msgstr "Коэффициент масштабирования:"
 
 #: ui/ZoomMagnifier.qml:331
-#, fuzzy, kde-format
-#| msgid "Use keys to control the mouse"
+#, kde-format
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
-msgstr "Управлять мышкой при помощи клавиш"
+msgstr "Используйте комбинации клавиш для управления масштабированием"
 
 #~ msgctxt "@label"
 #~ msgid "Color blindness correction:"

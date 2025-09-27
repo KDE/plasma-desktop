@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2018, 2020, 2021, 2022, 2023, 2024 Alexander Yavorsky <kekcuha@gmail.com>
+# SPDX-FileCopyrightText: 2018, 2020, 2021, 2022, 2023, 2024, 2025 Alexander Yavorsky <kekcuha@gmail.com>
 # Leonid Kanter <leon@asplinux.ru>, 2008.
 # Артём Середа <overmind88@gmail.com>, 2008.
 # Nick Shaforostoff <shafff@ukr.net>, 2008, 2009.
@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-22 00:44+0000\n"
-"PO-Revision-Date: 2025-05-29 15:40+0200\n"
+"POT-Creation-Date: 2025-09-27 00:44+0000\n"
+"PO-Revision-Date: 2025-09-26 20:23+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: package/contents/config/config.qml:16
 #, kde-format
@@ -32,7 +32,7 @@ msgid "Location"
 msgstr "Путь"
 
 #: package/contents/config/config.qml:23
-#: package/contents/ui/FolderViewLayer.qml:359
+#: package/contents/ui/FolderViewLayer.qml:358
 #, kde-format
 msgid "Icons"
 msgstr "Значки"
@@ -135,39 +135,30 @@ msgid "Arrangement:"
 msgstr "Расположение:"
 
 #: package/contents/ui/ConfigIcons.qml:127
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Columns"
+#, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "In Columns"
 msgstr "По столбцам"
 
 #: package/contents/ui/ConfigIcons.qml:128
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Rows"
+#, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "In Rows"
 msgstr "По строкам"
 
 #: package/contents/ui/ConfigIcons.qml:137
-#, fuzzy, kde-format
-#| msgid "Sorting:"
+#, kde-format
 msgid "Sort Alignment:"
-msgstr "Сортировка:"
+msgstr "Упорядочивание:"
 
 #: package/contents/ui/ConfigIcons.qml:140
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Left to Right"
+#, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Left-to-Right"
 msgstr "Слева направо"
 
 #: package/contents/ui/ConfigIcons.qml:141
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Right to Left"
+#, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Right-to-Left"
 msgstr "Справа налево"
@@ -178,10 +169,9 @@ msgid "Lock in place"
 msgstr "Зафиксировать значки"
 
 #: package/contents/ui/ConfigIcons.qml:177
-#, fuzzy, kde-format
-#| msgid "Sort by"
+#, kde-format
 msgid "Sort by:"
-msgstr "Сортировать"
+msgstr "Сортировка:"
 
 #: package/contents/ui/ConfigIcons.qml:185
 #, kde-format
@@ -430,7 +420,7 @@ msgstr "Удалить"
 msgid "Preview Plugins"
 msgstr "Модули предварительного просмотра"
 
-#: package/contents/ui/FolderView.qml:1218
+#: package/contents/ui/FolderView.qml:1230
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -442,12 +432,10 @@ msgstr ""
 "расположение."
 
 #: package/contents/ui/FolderViewDialog.qml:87
-#, fuzzy, kde-format
-#| msgctxt "@option:check sort icons with folders first"
-#| msgid "Folders first"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Folder is empty"
-msgstr "Папки в начале"
+msgstr "В этой папке ничего нет."
 
 #: package/contents/ui/main.qml:422
 #, kde-format
@@ -633,17 +621,13 @@ msgid "Arrange"
 msgstr "Упорядочить"
 
 #: plugins/folder/viewpropertiesmenu.cpp:70
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu arrangement of icons"
-#| msgid "Columns"
+#, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Columns"
 msgstr "По столбцам"
 
 #: plugins/folder/viewpropertiesmenu.cpp:74
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu arrangement of icons"
-#| msgid "Rows"
+#, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Rows"
 msgstr "По строкам"
@@ -651,20 +635,16 @@ msgstr "По строкам"
 #: plugins/folder/viewpropertiesmenu.cpp:79
 #, kde-format
 msgid "Sort Alignment"
-msgstr ""
+msgstr "Упорядочивание"
 
 #: plugins/folder/viewpropertiesmenu.cpp:83
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Left to Right"
+#, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Left-to-Right"
 msgstr "Слева направо"
 
 #: plugins/folder/viewpropertiesmenu.cpp:84
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Right to Left"
+#, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Right-to-Left"
 msgstr "Справа налево"
