@@ -39,10 +39,14 @@ void EmojiDict::load(const QString &path)
     stream >> emojis;
     for (const auto &emoji : emojis) {
         if (auto iter = m_processedEmojis.find(emoji.content); iter != m_processedEmojis.end()) {
-            // Overwrite with new data.
-            m_emojis[iter.value()] = emoji;
+            // Overwrite with new data but keep previous description as fallback.
+            auto &foundEmoji = m_emojis[iter.value()];
+            const QString fallbackDescription = foundEmoji.description;
+            foundEmoji = emoji;
+            foundEmoji.fallbackDescription = fallbackDescription;
         } else {
             m_processedEmojis[emoji.content] = m_emojis.size();
+
             m_emojis.append(emoji);
         }
     }
