@@ -21,6 +21,7 @@ public:
     enum EmojiRole {
         CategoryRole = Qt::UserRole + 1,
         AnnotationsRole,
+        FallbackDescriptionRole,
     };
 
     int rowCount(const QModelIndex &parent = {}) const override;

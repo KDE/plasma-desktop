@@ -14,6 +14,7 @@
 struct Emoji {
     QString content;
     QString description;
+    QString fallbackDescription;
     qint32 category;
     QStringList annotations;
 

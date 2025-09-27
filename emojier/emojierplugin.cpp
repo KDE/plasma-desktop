@@ -38,6 +38,8 @@ QVariant AbstractEmojiModel::data(const QModelIndex &index, int role) const
         return emoji.categoryName();
     case AnnotationsRole:
         return emoji.annotations;
+    case FallbackDescriptionRole:
+        return emoji.fallbackDescription;
     }
     return {};
 }
@@ -122,7 +124,7 @@ void RecentEmojiModel::includeRecent(const QString &emoji, const QString &emojiD
         Q_EMIT beginInsertRows(QModelIndex(), 0, 0);
         recent.prepend(emoji);
         recentDescriptions.prepend(emojiDescription);
-        m_emoji.prepend(Emoji{emoji, emojiDescription, 0, {}});
+        m_emoji.prepend(Emoji{emoji, emojiDescription, {}, 0, {}});
         Q_EMIT endInsertRows();
 
         if (recent.size() > 50) {
@@ -162,7 +164,7 @@ void RecentEmojiModel::refresh()
     int i = 0;
     m_emoji.clear();
     for (const QString &c : recent) {
-        m_emoji += {c, recentDescriptions.at(i++), 0, {}};
+        m_emoji += {c, recentDescriptions.at(i++), {}, 0, {}};
     }
     endResetModel();
 
@@ -204,6 +206,7 @@ bool SearchModelFilter::filterAcceptsRow(int source_row, const QModelIndex &sour
 {
     const auto idx = sourceModel()->index(source_row, 0, source_parent);
     return idx.data(Qt::ToolTipRole).toString().contains(m_search, Qt::CaseInsensitive)
+        || idx.data(AbstractEmojiModel::FallbackDescriptionRole).toString().contains(m_search, Qt::CaseInsensitive)
         || !idx.data(AbstractEmojiModel::AnnotationsRole).toStringList().filter(m_search, Qt::CaseInsensitive).isEmpty();
 }
 
