@@ -13,8 +13,11 @@
 
 // Qt
 #include <QColor>
+#include <QDir>
+#include <QFileInfo>
 #include <QObject>
 #include <QTimer>
+#include <QUrl>
 
 // KDE
 #include <KConfigGroup>
@@ -23,6 +26,8 @@
 #include <KSharedConfig>
 
 static const char *s_plasma_config = "plasma-org.kde.plasma.desktop-appletsrc";
+
+using namespace Qt::Literals;
 
 namespace
 {
@@ -74,20 +79,80 @@ public:
         }
     }
 
+    QSize resSize(QStringView str) const
+    {
+        const int index = str.indexOf(QLatin1Char('x'));
+
+        if (index != -1) {
+            return QSize(str.left(index).toInt(), str.mid(index + 1).toInt());
+        }
+
+        return QSize();
+    }
+
+    double distance(const QSize &size, const QSize &desired) const
+    {
+        const double desiredAspectRatio = (desired.height() > 0) ? desired.width() / static_cast<double>(desired.height()) : 0;
+        const double candidateAspectRatio = (size.height() > 0) ? size.width() / static_cast<double>(size.height()) : std::numeric_limits<double>::max();
+
+        double delta = size.width() - desired.width();
+        delta = delta >= 0.0 ? delta : -delta * 2; // Penalize for scaling up
+
+        return std::abs(candidateAspectRatio - desiredAspectRatio) * 25000 + delta;
+    }
+
+    QString findImageInWallpaperPackage(const QString &folderName) const
+    {
+        QString preferred;
+        const QStringList images = QDir(folderName).entryList();
+
+        if (images.empty()) {
+            return preferred;
+        }
+
+        double best = std::numeric_limits<double>::max();
+
+        for (const QString &entry : images) {
+            QSize candidate = resSize(QFileInfo(entry).baseName());
+
+            if (candidate.isEmpty()) {
+                continue;
+            }
+
+            const double dist = distance(candidate, QSize(1920, 1080));
+
+            if (preferred.isEmpty() || dist < best) {
+                preferred = entry;
+                best = dist;
+            }
+        }
+
+        return folderName + u"/" + preferred;
+    }
+
     QString backgroundFromConfig(const KConfigGroup &config) const
     {
         auto wallpaperPlugin = config.readEntry("wallpaperplugin");
         auto wallpaperConfig = config.group(QStringLiteral("Wallpaper")).group(wallpaperPlugin).group(QStringLiteral("General"));
 
-        if (wallpaperConfig.hasKey("Image")) {
-            // Trying for the wallpaper
-            auto wallpaper = wallpaperConfig.readEntry("Image", QString());
-            if (!wallpaper.isEmpty()) {
-                return wallpaper;
+        if (wallpaperPlugin == u"org.kde.image") {
+            // we can have three cases:
+            // - Image is a URL to a specific image -> use that
+            // - Image is a URL to a wallpaper package folder -> pick one image from that folder
+            // - Image is empty -> use default wallpaper
+
+            const QUrl defaultWallpaper =
+                QUrl::fromLocalFile(QStandardPaths::locate(QStandardPaths::GenericDataLocation, u"wallpapers/Next"_s, QStandardPaths::LocateDirectory));
+
+            const QUrl wallpaper = wallpaperConfig.readEntry("Image", defaultWallpaper);
+
+            if (QFileInfo(wallpaper.toLocalFile()).isDir()) {
+                return findImageInWallpaperPackage(wallpaper.toLocalFile() + u"/contents/images");
+            } else {
+                return wallpaper.toString();
             }
-        }
-        if (wallpaperConfig.hasKey("Color")) {
-            auto backgroundColor = wallpaperConfig.readEntry("Color", QColor(0, 0, 0));
+        } else if (wallpaperPlugin == u"org.kde.color") {
+            auto backgroundColor = wallpaperConfig.readEntry("Color", QColor(29, 153, 243));
             return backgroundColor.name();
         }
 
