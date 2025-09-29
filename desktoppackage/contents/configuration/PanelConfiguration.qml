@@ -503,7 +503,7 @@ ColumnLayout {
             }
             PanelRepresentation {
                 Layout.alignment: Qt.AlignHCenter
-                floatingGap: Kirigami.Units.smallSpacing * (floatingBox.previewIndex === 2)
+                floatingGap: Kirigami.Units.smallSpacing * (floatingBox.previewIndex === 2 || floatingBox.previewIndex === 3)
                 onClicked: floatingBox.popup.visible = true
                 visibleApplet: true
                 floatingApplet: floatingBox.previewIndex !== 0
@@ -516,20 +516,25 @@ ColumnLayout {
                 model: [
                     i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox Option to disable floating panels or applets", "Disabled"),
                     i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox Option to make only panel applets always float", "Applets only"),
-                    i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox Option to make panel and applets floating", "Panel and applets")
+                    i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox Option to make panel float and applets follow", "Panel (applets follow)"),
+                    i18ndc("plasma_shell_org.kde.plasma.desktop", "@item:inlistbox Option to make panel float and applets always float", "Panel and applets")
                 ]
                 Layout.alignment: Qt.AlignHCenter
                 Layout.minimumHeight: transparencyBox.height
                 Layout.minimumWidth: opacityRepresentation.width
-                currentIndex: (panel.floating ? 2 : panel.floatingApplets ? 1 : 0)
+                currentIndex: (panel.floating && panel.floatingApplets ? 3 : panel.floating && !panel.floatingApplets ? 2 : !panel.floating && panel.floatingApplets ? 1 : 0)
                 onActivated: (index) => {
                     if (index === 0) {
                         panel.floating = panel.floatingApplets = false
                     } else if (index === 1) {
                         panel.floating = false
                         panel.floatingApplets = true
+                    } else if (index === 2) {
+                        panel.floating = true
+                        panel.floatingApplets = false
                     } else {
                         panel.floating = true
+                        panel.floatingApplets = true
                     }
                 }
             }

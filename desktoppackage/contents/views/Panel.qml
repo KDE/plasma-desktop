@@ -196,20 +196,20 @@ Item {
             panelOpacity = 1
             opaqueApplets = true
             floatingnessTarget = 0
-            floatingApplets = (panel.floatingApplets && !floating)
+            floatingApplets = panel.floatingApplets
         } else if ((!floating || touchingWindow) && (isTransparent || (!touchingWindow && isAdaptive))) {
             panelOpacity = 0
             floatingnessTarget = 0
-            floatingApplets = (panel.floatingApplets && !floating)
+            floatingApplets = panel.floatingApplets
         } else if ((floating && !touchingWindow) && (isTransparent || isAdaptive)) {
             panelOpacity = 0
             floatingnessTarget = 1
-            floatingApplets = true
+            floatingApplets = panel.floatingApplets || floating
         } else if (floating && !touchingWindow && isOpaque) {
             panelOpacity = 1
             opaqueApplets = true
             floatingnessTarget = 1
-            floatingApplets = true
+            floatingApplets = panel.floatingApplets || floating
         }
 
         // Exceptions: panels with not NormalPanel visibilityMode
