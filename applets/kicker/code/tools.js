@@ -36,7 +36,7 @@ function createFavoriteActions(i18n, favoriteModel, favoriteId) {
     }
 
     if (favoriteModel.activities === undefined ||
-        favoriteModel.activities.runningActivities.length <= 1) {
+        favoriteModel.activities.activities.length <= 1) {
         const action = {};
 
         if (favoriteModel.isFavorite(favoriteId)) {
@@ -63,7 +63,7 @@ function createFavoriteActions(i18n, favoriteModel, favoriteId) {
 
         const linkedActivities = favoriteModel.linkedActivitiesFor(favoriteId);
 
-        const activities = favoriteModel.activities.runningActivities;
+        const activities = favoriteModel.activities.activities;
 
         // Adding the item to link/unlink to all activities
 
