@@ -353,8 +353,12 @@ ContainmentItem {
                 onUserDrag: (newPosition, dragCenter) => {
                     const pos = mapToItem(root.parent, dragCenter.x, dragCenter.y);
                     const newCont = root.containmentItemAt(pos.x, pos.y);
+                    // User likely touched screen edges, so ignore that.
+                    if (!newCont) {
+                        return;
+                    }
 
-                    if (!newCont || newCont.plasmoid !== Plasmoid) {
+                    if (newCont.plasmoid !== Plasmoid) {
                         // First go out of applet edit mode, get rid of the config overlay, release mouse grabs in preparation of applet reparenting
                         cancelEdit();
                         appletsLayout.hidePlaceHolder();
