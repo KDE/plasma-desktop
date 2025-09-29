@@ -11,6 +11,13 @@ import org.kde.plasma.workspace.timezoneselector as TimeZone
 TimeZone.TimezoneSelector {
     selectedTimeZone: DTime.selectedTimeZone
 
+    Connections {
+        target: DTime
+        onSelectedTimeZoneChanged: {
+            selectedTimeZone = DTime.selectedTimeZone
+        }
+    }
+
     onSelectedTimeZoneChanged: {
         DTime.selectedTimeZone = selectedTimeZone
     }
