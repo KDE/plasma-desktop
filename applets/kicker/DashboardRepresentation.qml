@@ -45,6 +45,12 @@ Kicker.DashboardWindow {
         }
     }
 
+    onActiveChanged: {
+        if (!active && visible) {
+            root.toggle();
+        }
+    }
+
     onVisibleChanged: {
         reset();
 
