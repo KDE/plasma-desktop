@@ -151,12 +151,10 @@ msgid "pen button %1"
 msgstr "笔身按钮 %1"
 
 #: ui/ActionDialog.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@title Select the action for the tablet dial"
-#| msgid "Select Dial Action"
+#, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial/Ring Action"
-msgstr "选择转盘操作"
+msgstr "选择转盘/触控环操作"
 
 #: ui/ActionDialog.qml:28
 #, kde-format
@@ -239,7 +237,7 @@ msgstr "向下："
 #: ui/ActionDialog.qml:274
 #, kde-format
 msgid "Speed:"
-msgstr ""
+msgstr "速度："
 
 #: ui/ActionDialog.qml:289
 #, kde-format
@@ -447,6 +445,8 @@ msgid ""
 "driver to configure the tablet instead of using the settings here, unless "
 "specifically instructed otherwise."
 msgstr ""
+"此设备由您安装的用户空间驱动程序管理，请使用该驱动程序来配置此数位板。除非得"
+"到了明确指示，否则不要使用此处的设置。"
 
 #: ui/main.qml:104
 #, kde-format
@@ -473,22 +473,17 @@ msgid "Pad"
 msgstr "板面"
 
 #: ui/PadTab.qml:37
-#, fuzzy, kde-format
-#| msgid "Pad dial %1:"
+#, kde-format
 msgid "Pad ring %1:"
-msgstr "板面转盘 %1："
+msgstr "板面转环 %1："
 
 #: ui/PadTab.qml:60
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pad button 0'"
-#| msgid "pad dial %1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "ring/dial 0'"
 msgid "pad ring/dial %1"
-msgstr "板面转盘 %1"
+msgstr "板面转盘/转环 %1"
 
 #: ui/PadTab.qml:100
 #, kde-format

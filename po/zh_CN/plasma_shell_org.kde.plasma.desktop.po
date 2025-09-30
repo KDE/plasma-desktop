@@ -108,13 +108,12 @@ msgstr "网站"
 #, kde-format
 msgctxt "@title:group"
 msgid "Get Help"
-msgstr ""
+msgstr "获取帮助"
 
 #: contents/configuration/AboutPlugin.qml:162
-#, fuzzy, kde-format
-#| msgid "Report a Bug…"
+#, kde-format
 msgid "Report an issue"
-msgstr "报告程序缺陷…"
+msgstr "报告问题"
 
 #: contents/configuration/AboutPlugin.qml:169
 #, kde-format
@@ -122,17 +121,15 @@ msgid "Copyright"
 msgstr "版权信息"
 
 #: contents/configuration/AboutPlugin.qml:188
-#, fuzzy, kde-format
-#| msgid "License:"
+#, kde-format
 msgid "License: %1"
-msgstr "许可证："
+msgstr "许可证：%1"
 
 #: contents/configuration/AboutPlugin.qml:194
-#, fuzzy, kde-format
-#| msgid "License:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Read License"
-msgstr "许可证："
+msgstr "查看许可证"
 
 #: contents/configuration/AboutPlugin.qml:208
 #, kde-format
@@ -907,13 +904,3 @@ msgstr "退出编辑模式"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "面板焦点指示器"
-
-#~ msgid "Stopped activities:"
-#~ msgstr "已停止的活动："
-
-#~ msgctxt "@info:whatsthis"
-#~ msgid "View license text"
-#~ msgstr "查看许可证"
-
-#~ msgid "Stop activity"
-#~ msgstr "停止活动"

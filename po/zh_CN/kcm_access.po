@@ -477,6 +477,7 @@ msgid ""
 "If you have trouble with certain colors on the screen, these filters can "
 "change them into other colors."
 msgstr ""
+"如果您在区分屏幕上的某些颜色时有困难，可以使用这些滤镜将其转换为其他颜色。"
 
 #: ui/ColorblindnessCorrection.qml:31
 #, kde-format
@@ -489,31 +490,31 @@ msgstr "启用"
 msgctxt ""
 "@label:listbox Difficulty seeing any of the following colors on the screen"
 msgid "Problematic colors:"
-msgstr ""
+msgstr "区分困难的颜色："
 
 #: ui/ColorblindnessCorrection.qml:49
 #, kde-format
 msgctxt "@option"
 msgid "Red & purple (Protanopia)"
-msgstr ""
+msgstr "红/紫 (红色盲/第一色盲)"
 
 #: ui/ColorblindnessCorrection.qml:50
 #, kde-format
 msgctxt "@option"
 msgid "Green & purple (Deuteranopia)"
-msgstr ""
+msgstr "绿/紫 (绿色盲/第二色盲)"
 
 #: ui/ColorblindnessCorrection.qml:51
 #, kde-format
 msgctxt "@option"
 msgid "Yellow, green & purple (Tritanopia)"
-msgstr ""
+msgstr "黄/绿/紫 (蓝黄色盲/第三色盲)"
 
 #: ui/ColorblindnessCorrection.qml:52
 #, kde-format
 msgctxt "@option"
 msgid "All (grayscale mode)"
-msgstr ""
+msgstr "全部颜色 (灰阶模式)"
 
 #: ui/ColorblindnessCorrection.qml:67
 #, kde-format
@@ -537,30 +538,27 @@ msgstr "重度"
 #, kde-format
 msgctxt "@info"
 msgid "Adjusted colors:"
-msgstr ""
+msgstr "调整后的颜色："
 
 #: ui/ColorblindnessCorrection.qml:132
 #, kde-format
 msgid "Reds:"
-msgstr ""
+msgstr "红："
 
 #: ui/ColorblindnessCorrection.qml:133
-#, fuzzy, kde-format
-#| msgid "Green"
+#, kde-format
 msgid "Greens:"
-msgstr "绿"
+msgstr "绿："
 
 #: ui/ColorblindnessCorrection.qml:134
-#, fuzzy, kde-format
-#| msgid "Blue"
+#, kde-format
 msgid "Blues:"
-msgstr "蓝"
+msgstr "蓝："
 
 #: ui/ColorblindnessCorrection.qml:135
-#, fuzzy, kde-format
-#| msgid "Purple"
+#, kde-format
 msgid "Purples:"
-msgstr "紫"
+msgstr "紫："
 
 #: ui/Invert.qml:22
 #, kde-format
@@ -1068,26 +1066,3 @@ msgstr "缩放倍数："
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
 msgstr "使用快捷键控制缩放"
-
-#~ msgctxt "@label"
-#~ msgid "Color blindness correction:"
-#~ msgstr "色盲校正："
-
-#~ msgctxt "@label"
-#~ msgid "Mode:"
-#~ msgstr "模式："
-
-#~ msgctxt "@option"
-#~ msgid "Protanopia (red weak)"
-#~ msgstr "甲型色盲 (红色盲)"
-
-#~ msgctxt "@option"
-#~ msgid "Deuteranopia (green weak)"
-#~ msgstr "乙型色盲 (绿色盲)"
-
-#~ msgctxt "@option"
-#~ msgid "Tritanopia (blue-yellow)"
-#~ msgstr "丙型色盲 (蓝黄色盲)"
-
-#~ msgid "Red"
-#~ msgstr "红"
