@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-04 00:44+0000\n"
-"PO-Revision-Date: 2025-09-04 15:50+0200\n"
+"PO-Revision-Date: 2025-09-28 17:18+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -151,12 +151,10 @@ msgid "pen button %1"
 msgstr "pulsante %1 della penna"
 
 #: ui/ActionDialog.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@title Select the action for the tablet button"
-#| msgid "Select Button Action"
+#, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial/Ring Action"
-msgstr "Seleziona azione del pulsante"
+msgstr "Seleziona azione dial/anello"
 
 #: ui/ActionDialog.qml:28
 #, kde-format
@@ -485,16 +483,12 @@ msgid "Pad ring %1:"
 msgstr "Rotella sensibile al tocco %1:"
 
 #: ui/PadTab.qml:60
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pad button 0'"
-#| msgid "pad dial %1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "ring/dial 0'"
 msgid "pad ring/dial %1"
-msgstr "rotella sensibile al tocco %1"
+msgstr "rotella sensibile al tocco/dial %1"
 
 #: ui/PadTab.qml:100
 #, kde-format
