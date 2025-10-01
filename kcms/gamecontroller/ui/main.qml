@@ -35,7 +35,7 @@ KCM.SimpleKCM {
             QQC2.CheckBox {
                 Kirigami.FormData.label: i18n("Plugin behavior:")
                 text: i18n("Enable game controller plugin by default")
-                onToggled: KCMGameController.pluginEnabled = checked
+                onToggled: KCMGameController.pluginEnabled = true
             }
         }
 
