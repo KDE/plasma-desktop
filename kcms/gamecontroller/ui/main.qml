@@ -57,8 +57,8 @@ KCM.SimpleKCM {
             Kirigami.FormLayout {
                 QQC2.CheckBox {
                     text: i18n("Enable KWin Game Controller Recognition")
-                    checked: KCMGameController.pluginEnabled
-                    onToggled: KCMGameController.pluginEnabled = checked
+                    checked: KWinIntegrationPlugin.pluginEnabled
+                    onToggled: KWinIntegrationPlugin.pluginEnabled = checked
                 }
             }
         }
