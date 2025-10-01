@@ -8,13 +8,23 @@
 
 #pragma once
 
-#include <KQuickManagedConfigModule>
+#include <KQuickConfigModule>
 
-class KCMGameController : public KQuickManagedConfigModule
+class KCMGameController : public KQuickConfigModule
 {
     Q_OBJECT
+    Q_PROPERTY(bool pluginEnabled READ isPluginEnabled WRITE setPluginEnabled NOTIFY pluginEnabledChanged)
 
 public:
     KCMGameController(QObject *parent, const KPluginMetaData &metaData);
     ~KCMGameController() override;
+
+    Q_INVOKABLE bool isPluginEnabled() const;
+    Q_INVOKABLE void setPluginEnabled(bool enabled);
+
+Q_SIGNALS:
+    void pluginEnabledChanged();
+
+private:
+    QString m_pluginId = QStringLiteral("gamecontroller");
 };

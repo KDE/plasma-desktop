@@ -30,6 +30,20 @@ KCM.SimpleKCM {
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
     }
 
+    header: ColumnLayout {
+        Kirigami.FormLayout {
+            QQC2.CheckBox {
+                Kirigami.FormData.label: i18n("Plugin behavior:")
+                text: i18n("Enable game controller plugin by default")
+                onToggled: KCMGameController.pluginEnabled = checked
+            }
+        }
+
+        Kirigami.Separator {
+            Layout.fillWidth: true
+        }
+    }
+
     DeviceModel {
         id: deviceModel
 
