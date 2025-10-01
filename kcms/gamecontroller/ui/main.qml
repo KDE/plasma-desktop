@@ -30,20 +30,6 @@ KCM.SimpleKCM {
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
     }
 
-    header: ColumnLayout {
-        Kirigami.FormLayout {
-            QQC2.CheckBox {
-                Kirigami.FormData.label: i18n("Plugin behavior:")
-                text: i18n("Enable game controller plugin by default")
-                onToggled: KCMGameController.pluginEnabled = true
-            }
-        }
-
-        Kirigami.Separator {
-            Layout.fillWidth: true
-        }
-    }
-
     DeviceModel {
         id: deviceModel
 
@@ -66,6 +52,16 @@ KCM.SimpleKCM {
 
         visible: deviceCombo.count !== 0
         spacing: Kirigami.Units.largeSpacing
+
+        ColumnLayout {
+            Kirigami.FormLayout {
+                QQC2.CheckBox {
+                    text: i18n("Enable KWin Game Controller Recognition")
+                    checked: KCMGameController.pluginEnabled
+                    onToggled: KCMGameController.pluginEnabled = checked
+                }
+            }
+        }
 
         RowLayout {
             spacing: Kirigami.Units.largeSpacing
@@ -104,7 +100,7 @@ KCM.SimpleKCM {
                 text: deviceType
             }
         }
-        
+
         RowLayout {
             spacing: Kirigami.Units.largeSpacing
 
@@ -215,5 +211,6 @@ KCM.SimpleKCM {
                 }
             }
         }
+
     }
 }
