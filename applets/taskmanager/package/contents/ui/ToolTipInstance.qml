@@ -421,14 +421,24 @@ ColumnLayout {
             PlasmaComponents3.ToolButton { // Mute button
                 icon.width: Kirigami.Units.iconSizes.small
                 icon.height: Kirigami.Units.iconSizes.small
-                icon.name: if (checked) {
-                    "audio-volume-muted"
-                } else if (slider.displayValue <= 25) {
-                    "audio-volume-low"
-                } else if (slider.displayValue <= 75) {
-                    "audio-volume-medium"
-                } else {
-                    "audio-volume-high"
+                icon.name: {
+                    let finalIcon = ""
+
+                    if (checked) {
+                        finalIcon = "audio-volume-muted"
+                    } else if (slider.displayValue <= 25) {
+                        finalIcon = "audio-volume-low"
+                    } else if (slider.displayValue <= 75) {
+                        finalIcon = "audio-volume-medium"
+                    } else {
+                        finalIcon = "audio-volume-high"
+                    }
+
+                    if (mirrored) {
+                        finalIcon = finalIcon + "-rtl"
+                    }
+
+                    return finalIcon
                 }
                 onClicked: toolTipDelegate.parentTask.toggleMuted()
                 checked: toolTipDelegate.parentTask.muted

@@ -39,7 +39,7 @@ Item {
             }
             PropertyChanges {
                 target: audioStreamIcon
-                source: "audio-volume-high-symbolic"
+                source: "audio-volume-high-symbolic" + (Qt.application.layoutDirection === Qt.RightToLeft ? "-rtl" : "")
             }
         },
         State {
@@ -51,7 +51,7 @@ Item {
             }
             PropertyChanges {
                 target: audioStreamIcon
-                source: "audio-volume-muted-symbolic"
+                source: "audio-volume-muted-symbolic" + (Qt.application.layoutDirection === Qt.RightToLeft ? "-rtl" : "")
             }
         }
     ]
@@ -128,7 +128,7 @@ Item {
         readonly property real requiredSpace: Math.min(iconBox.width, iconBox.height)
             + Math.min(Math.min(iconBox.width, iconBox.height), Kirigami.Units.iconSizes.smallMedium) * 2
 
-        source: "audio-volume-high-symbolic"
+        source: "audio-volume-high-symbolic" + (Qt.application.layoutDirection === Qt.RightToLeft ? "-rtl" : "")
         selected: tapHandler.pressed
 
         height: Math.round(Math.min(parent.height * indicatorScale, Kirigami.Units.iconSizes.smallMedium))
