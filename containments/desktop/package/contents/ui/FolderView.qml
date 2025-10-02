@@ -66,7 +66,7 @@ FocusScope {
 
     function rename() {
         if (gridView.currentIndex !== -1) {
-            var renameAction = folderView.model.action("rename");
+            let renameAction = folderView.model.action("rename");
             if (renameAction && !renameAction.enabled) {
                 return;
             }
@@ -90,7 +90,7 @@ FocusScope {
     }
 
     function handleDragMove(x, y) {
-        var child = childAt(x, y);
+        let child = childAt(x, y);
 
         if (child !== null && child === backButton) {
             hoveredItem = null;
@@ -100,8 +100,8 @@ FocusScope {
                 backButton.endDragMove();
             }
 
-            var pos = mapToItem(gridView.contentItem, x, y);
-            var item = gridView.safeItemAt(pos.x, pos.y);
+            let pos = mapToItem(gridView.contentItem, x, y);
+            let item = gridView.safeItemAt(pos.x, pos.y);
 
             if (item && item.isDir) {
                 hoveredItem = item;
@@ -120,7 +120,7 @@ FocusScope {
     }
 
     function dropItemAt(pos) {
-        var item = gridView.safeItemAt(pos.x, pos.y);
+        let item = gridView.safeItemAt(pos.x, pos.y);
 
         if (item && !item.blank) {
             gridView.currentIndex = item.index
@@ -131,10 +131,10 @@ FocusScope {
     }
 
     function drop(target, event, pos) {
-        var dropPos = mapToItem(gridView.contentItem, pos.x, pos.y);
-        var dropIndex = gridView.safeIndexAt(dropPos.x, dropPos.y);
-        var dragPos = mapToItem(gridView.contentItem, listener.dragX, listener.dragY);
-        var dragIndex = gridView.safeIndexAt(dragPos.x, dragPos.y);
+        let dropPos = mapToItem(gridView.contentItem, pos.x, pos.y);
+        let dropIndex = gridView.safeIndexAt(dropPos.x, dropPos.y);
+        let dragPos = mapToItem(gridView.contentItem, listener.dragX, listener.dragY);
+        let dragIndex = gridView.safeIndexAt(dragPos.x, dragPos.y);
 
         if (listener.dragX === -1 || dragIndex !== dropIndex) {
             dir.drop(target, event, dropItemAt(dropPos), root.isContainment && !Plasmoid.immutable);
@@ -142,8 +142,8 @@ FocusScope {
     }
 
     function generateDragImage() {
-        for (var i = 0; i < gridView.count; i++) {
-            var item = gridView.itemAtIndex(i);
+        for (let i = 0; i < gridView.count; i++) {
+            let item = gridView.itemAtIndex(i);
             if (item) {
                 item.updateDragImage();
             }
@@ -295,8 +295,8 @@ FocusScope {
             }
 
             const mappedPos = mapToItem(gridView.contentItem, mouse.x, mouse.y)
-            var index = gridView.safeIndexAt(mappedPos.x, mappedPos.y);
-            var indexItem = gridView.itemAtIndex(index);
+            const index = gridView.safeIndexAt(mappedPos.x, mappedPos.y);
+            const indexItem = gridView.itemAtIndex(index);
 
             if (indexItem && indexItem.iconArea) { // update position in case of touch or untriggered hover
                 gridView.currentIndex = index;
@@ -318,7 +318,7 @@ FocusScope {
             if (!hoveredItem || hoveredItem.blank) {
                 if (!gridView.ctrlPressed) {
                     gridView.currentIndex = -1;
-                    previouslySelectedItemIndex = -1;
+                    main.previouslySelectedItemIndex = -1;
                     dir.clearSelection();
                 }
 
@@ -334,7 +334,7 @@ FocusScope {
             } else {
                 pressedItem = hoveredItem;
 
-                var pos = mapToItem(hoveredItem.actionsOverlay, mouse.x, mouse.y);
+                let pos = mapToItem(hoveredItem.actionsOverlay, mouse.x, mouse.y);
 
                 if (!(pos.x <= hoveredItem.actionsOverlay.width && pos.y <= hoveredItem.actionsOverlay.height)) {
                     if (gridView.shiftPressed && gridView.currentIndex !== -1) {
@@ -342,7 +342,7 @@ FocusScope {
                     } else {
                         // Deselecting everything else when one item is clicked is handled in onReleased in order to distinguish between drag and click
                         if (!gridView.ctrlPressed && !dir.isSelected(positioner.map(hoveredItem.index))) {
-                            previouslySelectedItemIndex = -1;
+                            main.previouslySelectedItemIndex = -1;
                             dir.clearSelection();
                         }
 
@@ -377,7 +377,7 @@ FocusScope {
             // if we click on an item, cancel the current selection and select just the clicked icon
             // the cachedRectangleSelection guards this release being associated with an existing drag
             if (!gridView.cachedRectangleSelection && hoveredItem && !hoveredItem.blank && mouse.button !== Qt.RightButton) {
-                var pos = mapToItem(hoveredItem.actionsOverlay, mouse.x, mouse.y);
+                const pos = mapToItem(hoveredItem.actionsOverlay, mouse.x, mouse.y);
                 if (!(pos.x <= hoveredItem.actionsOverlay.width && pos.y <= hoveredItem.actionsOverlay.height)
                     && (!(gridView.shiftPressed && gridView.currentIndex !== -1) && !gridView.ctrlPressed)) {
                         dir.clearSelection();
@@ -415,7 +415,7 @@ FocusScope {
                 return;
             }
 
-            var pos = mapToItem(hoveredItem, mouse.x, mouse.y);
+            let pos = mapToItem(hoveredItem, mouse.x, mouse.y);
 
             // Moving from an item to its preview popup dialog doesn't unset hoveredItem
             // even though the cursor has left it, so we need to check whether the click
@@ -455,7 +455,7 @@ FocusScope {
                 // double-click mode and double-clicked on the item: open it
                 if (Qt.styleHints.singleClickActivation || doubleClickInProgress || mouse.source === Qt.MouseEventSynthesizedByQt) {
                     doubleClickInProgress = false
-                    var func = root.useListViewMode && mouse.button === Qt.LeftButton && hoveredItem.isDir ? doCd : dir.run;
+                    let func = root.useListViewMode && mouse.button === Qt.LeftButton && hoveredItem.isDir ? doCd : dir.run;
 
                     func(positioner.map(gridView.currentIndex));
                     previouslySelectedItemIndex = gridView.currentIndex;
@@ -475,8 +475,8 @@ FocusScope {
             gridView.shiftPressed = (mouse.modifiers & Qt.ShiftModifier);
 
             const mappedPos = mapToItem(gridView.contentItem, mouse.x, mouse.y)
-            var item = gridView.safeItemAt(mappedPos.x, mappedPos.y);
-            var leftEdge = Math.min(gridView.contentX, gridView.originX);
+            const item = gridView.safeItemAt(mappedPos.x, mappedPos.y);
+            const leftEdge = Math.min(gridView.contentX, gridView.originX);
 
             if (!item || item.blank) {
                 if (gridView.hoveredItem && !root.containsDrag && (!dialog || !dialog.containsDrag) && !gridView.hoveredItem.popupDialog) {
@@ -496,15 +496,15 @@ FocusScope {
 
             // Update rubberband geometry.
             if (main.rubberBand) {
-                var rB = main.rubberBand;
-                var cPos = mapToItem(gridView.contentItem, mouse.x, mouse.y);
+                let rB = main.rubberBand;
+                let cPos = mapToItem(gridView.contentItem, mouse.x, mouse.y);
 
                 if (cPos.x < cPress.x) {
                     rB.x = Math.max(leftEdge, cPos.x);
                     rB.width = Math.abs(rB.x - cPress.x);
                 } else {
                     rB.x = cPress.x;
-                    var ceil = Math.max(gridView.width, gridView.contentItem.width) + leftEdge;
+                    let ceil = Math.max(gridView.width, gridView.contentItem.width) + leftEdge;
                     rB.width = Math.min(ceil - rB.x, Math.abs(rB.x - cPos.x));
                 }
 
@@ -513,7 +513,7 @@ FocusScope {
                     rB.height = Math.abs(rB.y - cPress.y);
                 } else {
                     rB.y = cPress.y;
-                    var ceil = Math.max(gridView.height, gridView.contentItem.height);
+                    let ceil = Math.max(gridView.height, gridView.contentItem.height);
                     rB.height = Math.min(ceil - rB.y, Math.abs(rB.y - cPos.y));
                 }
 
@@ -743,11 +743,11 @@ FocusScope {
                 }
 
                 function calcExtraSpacing(cellSize, containerSize) {
-                    var availableColumns = Math.floor(containerSize / cellSize);
-                    var extraSpacing = 0;
+                    const availableColumns = Math.floor(containerSize / cellSize);
+                    let extraSpacing = 0;
                     if (availableColumns > 0) {
-                        var allColumnSize = availableColumns * cellSize;
-                        var extraSpace = Math.max(containerSize - allColumnSize, 0);
+                        let allColumnSize = availableColumns * cellSize;
+                        let extraSpace = Math.max(containerSize - allColumnSize, 0);
                         extraSpacing = extraSpace / availableColumns;
                     }
                     return Math.floor(extraSpacing);
@@ -757,10 +757,10 @@ FocusScope {
                     if (root.useListViewMode) {
                         return gridView.width - (verticalScrollBar.visible ? verticalScrollBar.width : 0);
                     } else {
-                        var iconWidth = iconSize + (2 * Kirigami.Units.gridUnit) + (2 * Kirigami.Units.smallSpacing);
+                        const iconWidth = iconSize + (2 * Kirigami.Units.gridUnit) + (2 * Kirigami.Units.smallSpacing);
                         if (root.isContainment && isRootView && scrollArea.viewportWidth > 0) {
-                            var minIconWidth = Math.max(iconWidth, Kirigami.Units.iconSizes.small * ((Plasmoid.configuration.labelWidth * 2) + 4));
-                            var extraWidth = calcExtraSpacing(minIconWidth, scrollArea.viewportWidth);
+                            const minIconWidth = Math.max(iconWidth, Kirigami.Units.iconSizes.small * ((Plasmoid.configuration.labelWidth * 2) + 4));
+                            const extraWidth = calcExtraSpacing(minIconWidth, scrollArea.viewportWidth);
                             return minIconWidth + extraWidth;
                         } else {
                             return iconWidth;
@@ -775,9 +775,9 @@ FocusScope {
                             listItemSvg.margins.top + listItemSvg.margins.bottom)) / 2) * 2;
                     } else {
                         // the smallSpacings are for padding
-                        var iconHeight = iconSize + (Kirigami.Units.gridUnit * Plasmoid.configuration.textLines) + (Kirigami.Units.smallSpacing * 3);
+                        const iconHeight = iconSize + (Kirigami.Units.gridUnit * Plasmoid.configuration.textLines) + (Kirigami.Units.smallSpacing * 3);
                         if (root.isContainment && isRootView && scrollArea.viewportHeight > 0) {
-                            var extraHeight = calcExtraSpacing(iconHeight, scrollArea.viewportHeight);
+                            let extraHeight = calcExtraSpacing(iconHeight, scrollArea.viewportHeight);
                             return iconHeight + extraHeight;
                         } else {
                             return iconHeight;
@@ -810,7 +810,7 @@ FocusScope {
 
                     // Update rubberband geometry.
                     if (main.rubberBand) {
-                        var rB = main.rubberBand;
+                        const rB = main.rubberBand;
 
                         if (scrollLeft) {
                             rB.x = Math.min(gridView.contentX, gridView.originX);
@@ -818,7 +818,7 @@ FocusScope {
                         }
 
                         if (scrollRight) {
-                            var lastCol = gridView.contentX + gridView.width;
+                            const lastCol = gridView.contentX + gridView.width;
                             rB.width = lastCol - rB.x;
                         }
 
@@ -845,7 +845,7 @@ FocusScope {
 
                     // Update rubberband geometry.
                     if (main.rubberBand) {
-                        var rB = main.rubberBand;
+                        const rB = main.rubberBand;
 
                         if (scrollUp) {
                             rB.y = 0;
@@ -853,7 +853,7 @@ FocusScope {
                         }
 
                         if (scrollDown) {
-                            var lastRow = gridView.contentY + gridView.height;
+                            const lastRow = gridView.contentY + gridView.height;
                             rB.height = lastRow - rB.y;
                         }
 
@@ -950,20 +950,19 @@ FocusScope {
                 }
 
                 function rectangleSelect(x, y, width, height, rubberBand) {
-                    let rows = (gridView.flow === GridView.FlowLeftToRight);
-                    let axis = rows ? gridView.width : gridView.height;
-                    let step = rows ? cellWidth : cellHeight;
-                    let perStripe = Math.floor(axis / step);
-                    let stripes = Math.ceil(gridView.count / perStripe);
-                    let cWidth = gridView.cellWidth - (2 * Kirigami.Units.smallSpacing);
-                    let cHeight = gridView.cellHeight - (2 * Kirigami.Units.smallSpacing);
-                    let midWidth = gridView.cellWidth / 2;
-                    let midHeight = gridView.cellHeight / 2;
+                    const rows = (gridView.flow === GridView.FlowLeftToRight);
+                    const axis = rows ? gridView.width : gridView.height;
+                    const step = rows ? cellWidth : cellHeight;
+                    const stripes = Math.ceil(gridView.count / positioner.perStripe);
+                    const cWidth = gridView.cellWidth - (2 * Kirigami.Units.smallSpacing);
+                    const cHeight = gridView.cellHeight - (2 * Kirigami.Units.smallSpacing);
+                    const midWidth = gridView.cellWidth / 2;
+                    const midHeight = gridView.cellHeight / 2;
                     let indices = [];
 
                     for (let s = 0; s < stripes; s++) {
-                        for (let i = 0; i < perStripe; i++) {
-                            let index = (s * perStripe) + i;
+                        for (let i = 0; i < positioner.perStripe; i++) {
+                            let index = (s * positioner.perStripe) + i;
 
                             if (index >= gridView.count) {
                                 break;
@@ -982,7 +981,7 @@ FocusScope {
                                 itemX = (rows ? gridView.width : gridView.contentItem.width) - itemX;
                             }
 
-                            let item = gridView.contentItem.childAt(itemX + midWidth, itemY + midHeight);
+                            const item = gridView.contentItem.childAt(itemX + midWidth, itemY + midHeight);
                             if (item && rubberBand.intersects(Qt.rect(item.x, item.y, item.width, item.height))) {
                                 indices.push(index)
                             }
@@ -1108,7 +1107,7 @@ FocusScope {
                             doBack();
                         }
                     } else if (positioner.enabled) {
-                        var newIndex = positioner.nearestItem(currentIndex,
+                        const newIndex = positioner.nearestItem(currentIndex,
                             FolderTools.effectiveNavDirection(gridView.flow, gridView.effectiveLayoutDirection, Qt.LeftArrow));
 
                         if (newIndex !== -1) {
@@ -1116,7 +1115,7 @@ FocusScope {
                             updateSelection(event.modifiers);
                         }
                     } else {
-                        var oldIndex = currentIndex;
+                        const oldIndex = currentIndex;
 
                         moveCurrentIndexLeft();
 
@@ -1134,7 +1133,7 @@ FocusScope {
                             doCd(positioner.map(currentIndex));
                         }
                     } else if (positioner.enabled) {
-                        var newIndex = positioner.nearestItem(currentIndex,
+                        const newIndex = positioner.nearestItem(currentIndex,
                             FolderTools.effectiveNavDirection(gridView.flow, gridView.effectiveLayoutDirection, Qt.RightArrow));
 
                         if (newIndex !== -1) {
@@ -1142,7 +1141,7 @@ FocusScope {
                             updateSelection(event.modifiers);
                         }
                     } else {
-                        var oldIndex = currentIndex;
+                        const oldIndex = currentIndex;
 
                         moveCurrentIndexRight();
 
@@ -1156,7 +1155,7 @@ FocusScope {
 
                 Keys.onUpPressed: event => {
                     if (positioner.enabled) {
-                        var newIndex = positioner.nearestItem(currentIndex,
+                        const newIndex = positioner.nearestItem(currentIndex,
                             FolderTools.effectiveNavDirection(gridView.flow, gridView.effectiveLayoutDirection, Qt.UpArrow));
 
                         if (newIndex !== -1) {
@@ -1164,7 +1163,7 @@ FocusScope {
                             updateSelection(event.modifiers);
                         }
                     } else {
-                        var oldIndex = currentIndex;
+                        const oldIndex = currentIndex;
 
                         moveCurrentIndexUp();
 
@@ -1178,7 +1177,7 @@ FocusScope {
 
                 Keys.onDownPressed: event => {
                     if (positioner.enabled) {
-                        var newIndex = positioner.nearestItem(currentIndex,
+                        const newIndex = positioner.nearestItem(currentIndex,
                             FolderTools.effectiveNavDirection(gridView.flow, gridView.effectiveLayoutDirection, Qt.DownArrow));
 
                         if (newIndex !== -1) {
@@ -1186,7 +1185,7 @@ FocusScope {
                             updateSelection(event.modifiers);
                         }
                     } else {
-                        var oldIndex = currentIndex;
+                        const oldIndex = currentIndex;
 
                         moveCurrentIndexDown();
 
@@ -1267,24 +1266,23 @@ FocusScope {
                 if (!positioner.enabled) {
                     return;
                 }
-                var rows = (gridView.flow === GridView.FlowLeftToRight);
-                var axis = rows ? gridView.width : gridView.height;
-                var step = rows ? gridView.cellWidth : gridView.cellHeight;
+                const rows = (gridView.flow === GridView.FlowLeftToRight);
+                const axis = rows ? gridView.width : gridView.height;
+                const step = rows ? gridView.cellWidth : gridView.cellHeight;
                 // We need to update the perStripe when moving due to panel changes etc.
                 positioner.perStripe = Math.floor(axis / step);
-                var perStripe = positioner.perStripe;
-                var dropPos = gridView.mapToItem(gridView.contentItem, x, y);
-                var leftEdge = Math.min(gridView.contentX, gridView.originX);
+                const dropPos = gridView.mapToItem(gridView.contentItem, x, y);
+                const leftEdge = Math.min(gridView.contentX, gridView.originX);
 
-                var moves = []
-                var itemX = -1;
-                var itemY = -1;
-                var col = -1;
-                var row = -1;
-                var from = -1;
-                var to = -1;
+                let moves = []
+                let itemX = -1;
+                let itemY = -1;
+                let col = -1;
+                let row = -1;
+                let from = -1;
+                let to = -1;
 
-                for (var i = 0; i < urls.length; i++) {
+                for (let i = 0; i < urls.length; i++) {
                     from = positioner.indexForUrl(urls[i]);
                     to = -1;
 
@@ -1292,7 +1290,7 @@ FocusScope {
                         continue;
                     }
 
-                    var offset = dir.dragCursorOffset(positioner.map(from));
+                    let offset = dir.dragCursorOffset(positioner.map(from));
 
                     if (offset.x === -1) {
                         continue;
@@ -1312,15 +1310,15 @@ FocusScope {
                     row = rows ? Math.floor(itemY / gridView.cellHeight) : Math.floor(itemX / gridView.cellWidth);
 
 
-                    if (col <= perStripe) {
+                    if (col <= positioner.perStripe) {
                         // We have somehow moved the item outside of the available
                         // areas (usually during file creation), so make sure
                         // the col is within perStripe
-                        if (col === perStripe) {
+                        if (col === positioner.perStripe) {
                             col -= 1;
                         }
 
-                        to = (row * perStripe) + col;
+                        to = (row * positioner.perStripe) + col;
 
                         if (to < 0) {
                             return;
@@ -1340,7 +1338,7 @@ FocusScope {
                     gridView.forceLayout();
                 }
 
-                previouslySelectedItemIndex = -1;
+                main.previouslySelectedItemIndex = -1;
             }
         }
 
