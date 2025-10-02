@@ -207,10 +207,10 @@ Kicker.DashboardWindow {
 
             onFocusChanged: {
                 if (!focus)
-                    runnerGrid.subGridAt(0).currentIndex = -1
+                    runnerGrid.firstGrid.currentIndex = -1
             }
 
-            Keys.forwardTo: runnerGrid.visible && runnerGrid.subGridAt(0) ? [runnerGrid.subGridAt(0).view] : []
+            Keys.forwardTo: runnerGrid.visible && runnerGrid.firstGrid ? [runnerGrid.firstGrid.view] : []
 
             function clear() {
                 text = "";

@@ -32,9 +32,32 @@ PlasmaComponents.ScrollView {
     property alias model: repeater.model
     property alias count: repeater.count
     property alias flickableItem: flickable
+    property var firstGrid
 
     function subGridAt(index) {
-        return repeater.itemAt(index).itemGrid;
+        let subgrid = repeater.itemAt(index)
+        if (subgrid) {
+            return subgrid.itemGrid
+        }
+    }
+
+    function selectFirstElement() {
+        let foundAny = false
+        for (var i = 0; i < repeater.count; i++) {
+            let grid = subGridAt(i)
+            if (grid && grid.count > 0) {
+                if (!foundAny) {
+                    itemMultiGrid.firstGrid = grid
+                    grid.currentIndex = 0
+                    if (itemMultiGrid.grabFocus) {
+                        grid.focus = true
+                    }
+                    foundAny = true
+                } else {
+                    grid.currentIndex = -1
+                }
+            }
+        }
     }
 
     function tryActivate(row, col) { // FIXME TODO: Cleanup messy algo.
@@ -160,13 +183,7 @@ PlasmaComponents.ScrollView {
                             }
                         }
 
-                        onCountChanged: {
-                            if (index == 0)
-                                currentIndex = 0;
-                            if (itemMultiGrid.grabFocus && index == 0 && count > 0) {
-                                focus = true;
-                            }
-                        }
+                        onCountChanged: selectFirstElement()
 
                         onCurrentItemChanged: {
                             if (!currentItem) {
@@ -206,8 +223,12 @@ PlasmaComponents.ScrollView {
 
                         onKeyNavUp: {
                             if (index > 0) {
-                                var prevGrid = subGridAt(index - 1);
-                                prevGrid.tryActivate(prevGrid.lastRow(), currentCol());
+                                for (var i = index - 1; i >= 0; i--) {
+                                    if (subGridAt(i).count > 0) {
+                                        subGridAt(i).tryActivate(subGridAt(i).lastRow(), currentCol());
+                                        break;
+                                    }
+                                }
                             } else {
                                 itemMultiGrid.keyNavUp();
                             }
@@ -216,7 +237,12 @@ PlasmaComponents.ScrollView {
 
                         onKeyNavDown: {
                             if (index < repeater.count - 1) {
-                                subGridAt(index + 1).tryActivate(0, currentCol());
+                                for (var i = index + 1; i < repeater.count; i++) {
+                                    if (subGridAt(i).count > 0) {
+                                        subGridAt(i).tryActivate(0, currentCol());
+                                        break;
+                                    }
+                                }
                             } else {
                                 itemMultiGrid.keyNavDown();
                             }
