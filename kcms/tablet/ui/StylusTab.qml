@@ -297,6 +297,12 @@ Item {
                 }
             }
 
+            QQC2.CheckBox {
+                text: i18n("Sync with mouse cursor")
+                checked: kcm.syncWithMouse
+                onCheckedChanged: kcm.syncWithMouse = checked
+            }
+
             Repeater {
                 id: buttonRepeater
 

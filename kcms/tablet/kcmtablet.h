@@ -27,6 +27,7 @@ class Tablet : public KQuickManagedConfigModule
     Q_OBJECT
     Q_PROPERTY(TabletsModel *tabletsModel READ tabletsModel CONSTANT)
     Q_PROPERTY(WacomDeviceDatabase *db READ db CONSTANT)
+    Q_PROPERTY(bool syncWithMouse READ syncWithMouse WRITE setSyncWithMouse NOTIFY syncWithMouseChanged)
 
 public:
     explicit Tablet(QObject *parent, const KPluginMetaData &metaData);
@@ -55,8 +56,12 @@ public:
 
     WacomDeviceDatabase *db() const;
 
+    bool syncWithMouse() const;
+    void setSyncWithMouse(bool value);
+
 Q_SIGNALS:
     void settingsRestored();
+    void syncWithMouseChanged();
 
 private:
     void refreshNeedsSave();
@@ -64,4 +69,5 @@ private:
     TabletsModel *m_tabletsModel;
     QHash<QString, QHash<QString, QHash<QPair<uint, uint>, InputSequence>>> m_unsavedMappings;
     WacomDeviceDatabase *m_db = nullptr;
+    bool m_syncWithMouse;
 };
