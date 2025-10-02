@@ -54,99 +54,51 @@ KCM.SimpleKCM {
         visible: deviceCombo.count !== 0
         spacing: Kirigami.Units.largeSpacing
 
-        RowLayout {
-            spacing: Kirigami.Units.largeSpacing
-
-            Layout.fillWidth: true
-
-            QQC2.Label {
-                text: i18nc("@label:textbox", "Device:")
-                textFormat: Text.PlainText
-            }
-
-            QQC2.ComboBox {
-                id: deviceCombo
-
-                model: deviceModel
-
-                textRole: "text"
-                valueRole: "id"
-
-                Layout.fillWidth: true
-            }
-
-        }
-
         ColumnLayout {
-            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-
-            RowLayout {
-                spacing: Kirigami.Units.largeSpacing
-
-                Layout.fillWidth: true
-
-                QQC2.Label {
-                    text: i18nc("@label game controller device type (wheel, joystick, game controller, etc.)", "Device type:")
-                    textFormat: Text.PlainText
-                }
-
-                QQC2.Label {
-                    id: typeLabel
-                    text: deviceType
-                }
-            }
-            
-            RowLayout {
-                spacing: Kirigami.Units.largeSpacing
-
-                Layout.fillWidth: true
-
-                QQC2.Label {
-                    text: i18nc("@label game controller controller type (which brand, etc.)", "Controller type:")
-                    textFormat: Text.PlainText
-                }
-
-                QQC2.Label {
-                    id: controllerTypeLabel
-                    text: deviceControllerType
-                }
-            }
-
-            RowLayout {
-                spacing: Kirigami.Units.largeSpacing
-
-                Layout.fillWidth: true
-
-                QQC2.Label {
-                    text: i18nc("@label:textbox", "Connection type:")
-                    textFormat: Text.PlainText
-                }
-
-                QQC2.Label {
-                    id: connectionTypeLabel
-                    text: deviceConnectionType
-                }
-            }
-
-            RowLayout {
-                spacing: Kirigami.Units.largeSpacing
-
-                Layout.fillWidth: true
-
-                QQC2.Switch {
-                    checked: KWinPlugin.pluginEnabled
-                    text: i18nc("@label:textbox", "Enable KWin Game Controller Recognition:")
-                    anchors.leftMargin: Kirigami.Units.largeSpacing * 2
-
-                    onToggled: {
-                        KWinPlugin.pluginEnabled = checked
-                    }
-                }
-            }
-        }
-
-        Kirigami.Separator {
             Layout.fillWidth: true
+            Layout.alignment: Qt.AlignHCenter
+            spacing: Kirigami.Units.smallSpacing
+
+            AddonFormCard.FormCard {
+                AddonFormCard.FormHeader {
+                    title: i18nc("@label:textbox", "Device:")
+                }
+
+                AddonFormCard.FormComboBoxDelegate {
+                    id: deviceCombo
+                    model: deviceModel
+                    textRole: "text"
+                    valueRole: "id"
+                }
+
+                AddonFormCard.FormTextDelegate {
+                    text: i18nc("@label game controller device type (wheel, joystick, game controller, etc.)", "Device type:")
+                    description: root.deviceType
+                }
+
+                AddonFormCard.FormTextDelegate {
+                    text: i18nc("@label game controller controller type (which brand, etc.)", "Controller type:")
+                    description: root.deviceControllerType
+                }
+
+                AddonFormCard.FormTextDelegate {
+                    text: i18nc("@label:textbox", "Connection type:")
+                    description: root.deviceConnectionType
+                }
+            }
+
+            AddonFormCard.FormCard {
+                AddonFormCard.FormHeader {
+                    title: i18n("KWin Integration")
+                }
+
+                AddonFormCard.FormSwitchDelegate {
+                    text: i18n("Enable KWin Game Controller Recognition")
+                    description: i18n("Let KWin map gamepad input at the desktop level.")
+                    checked: KWinIntegrationPlugin.pluginEnabled
+                    onToggled: KWinIntegrationPlugin.pluginEnabled = checked
+                }
+            }
         }
 
         RowLayout {
@@ -182,6 +134,7 @@ KCM.SimpleKCM {
                     device: root.device
                     leftAxis: false
                 }
+
             }
 
             ColumnLayout {
@@ -228,5 +181,6 @@ KCM.SimpleKCM {
                 }
             }
         }
+
     }
 }
