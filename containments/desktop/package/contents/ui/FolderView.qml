@@ -71,17 +71,17 @@ FocusScope {
                 return;
             }
 
-            if (!editor) {
+            if (!main.editor) {
                 editor = editorComponent.createObject(listener);
             }
 
-            editor.targetItem = gridView.currentItem;
+            main.editor.targetItem = gridView.currentItem;
         }
     }
 
     function cancelRename() {
-        if (editor) {
-            editor.targetItem = null;
+        if (main.editor) {
+            main.editor.targetItem = null;
         }
     }
 
@@ -92,12 +92,12 @@ FocusScope {
     function handleDragMove(x, y) {
         let child = childAt(x, y);
 
-        if (child !== null && child === backButton) {
+        if (child !== null && child === main.backButton) {
             hoveredItem = null;
-            backButton.handleDragMove();
+            main.backButton.handleDragMove();
         } else {
-            if (backButton && backButton.containsDrag) {
-                backButton.endDragMove();
+            if (main.backButton && main.backButton.containsDrag) {
+                main.backButton.endDragMove();
             }
 
             let pos = mapToItem(gridView.contentItem, x, y);
@@ -112,8 +112,8 @@ FocusScope {
     }
 
     function endDragMove() {
-        if (backButton && backButton.active) {
-            backButton.endDragMove();
+        if (main.backButton && main.backButton.active) {
+            main.backButton.endDragMove();
         } else if (hoveredItem && !hoveredItem.popupDialog) {
             hoveredItem = null;
         }
@@ -210,10 +210,10 @@ FocusScope {
         target: root
 
         function onIsPopupChanged() {
-            if (backButton === null && root.useListViewMode) {
-                backButton = makeBackButton();
-            } else if (backButton !== null) {
-                backButton.destroy();
+            if (main.backButton === null && root.useListViewMode) {
+                main.backButton = main.makeBackButton();
+            } else if (main.backButton !== null) {
+                main.backButton.destroy();
             }
         }
     }
@@ -232,7 +232,7 @@ FocusScope {
         id: listener
 
         anchors {
-            topMargin: backButton !== null ? backButton.height : undefined
+            topMargin: main.backButton !== null ? main.backButton.height : undefined
             fill: parent
         }
 
@@ -273,9 +273,9 @@ FocusScope {
                 return;
             }
 
-            // Ignore clicks if editor is enabled and we click on that
+            // Ignore clicks if main.editor is enabled and we click on that
             // BUG:494558
-            if (editor && childAt(mouse.x, mouse.y) === editor) {
+            if (main.editor && childAt(mouse.x, mouse.y) === main.editor) {
                 return;
             }
 
@@ -283,15 +283,15 @@ FocusScope {
 
             if (mouse.buttons & Qt.BackButton) {
                 if (root.isPopup && dir.resolvedUrl !== dir.resolve(Plasmoid.configuration.url)) {
-                    doBack();
+                    main.doBack();
                     mouse.accepted = true;
                 }
 
                 return;
             }
 
-            if (editor && childAt(mouse.x, mouse.y) !== editor) {
-                editor.commit();
+            if (main.editor && childAt(mouse.x, mouse.y) !== main.editor) {
+                main.editor.commit();
             }
 
             const mappedPos = mapToItem(gridView.contentItem, mouse.x, mouse.y)
@@ -405,7 +405,7 @@ FocusScope {
             clearPressState();
 
             if (mouse.button === Qt.RightButton ||
-                (editor && childAt(mouse.x, mouse.y) === editor)) {
+                (main.editor && childAt(mouse.x, mouse.y) === main.editor)) {
                 return;
             }
 
@@ -424,7 +424,7 @@ FocusScope {
             // hoveredItem) and abort.
             if (pos.x < 0 || pos.x > hoveredItem.width || pos.y < 0 || pos.y > hoveredItem.height) {
                 hoveredItem = null;
-                previouslySelectedItemIndex = -1;
+                main.previouslySelectedItemIndex = -1;
                 dir.clearSelection();
 
                 return;
@@ -445,7 +445,7 @@ FocusScope {
                     && pos.x <= hoveredItem.labelArea.x + hoveredItem.labelArea.width
                     && pos.y > hoveredItem.labelArea.y
                     && pos.y <= hoveredItem.labelArea.y + hoveredItem.labelArea.height
-                    && previouslySelectedItemIndex === gridView.currentIndex
+                    && main.previouslySelectedItemIndex === gridView.currentIndex
                     && gridView.currentIndex !== -1
                     && !Qt.styleHints.singleClickActivation
                     && Plasmoid.configuration.renameInline
@@ -455,17 +455,17 @@ FocusScope {
                 // double-click mode and double-clicked on the item: open it
                 if (Qt.styleHints.singleClickActivation || doubleClickInProgress || mouse.source === Qt.MouseEventSynthesizedByQt) {
                     doubleClickInProgress = false
-                    let func = root.useListViewMode && mouse.button === Qt.LeftButton && hoveredItem.isDir ? doCd : dir.run;
+                    let func = root.useListViewMode && mouse.button === Qt.LeftButton && hoveredItem.isDir ? main.doCd : dir.run;
 
                     func(positioner.map(gridView.currentIndex));
-                    previouslySelectedItemIndex = gridView.currentIndex;
+                    main.previouslySelectedItemIndex = gridView.currentIndex;
                     hoveredItem = null;
                 } else {
                     // None of the above: select it
                     doubleClickInProgress = true;
                     doubleClickTimer.interval = Qt.styleHints.mouseDoubleClickInterval;
                     doubleClickTimer.start();
-                    previouslySelectedItemIndex = gridView.currentIndex;
+                    main.previouslySelectedItemIndex = gridView.currentIndex;
                 }
             }
         }
@@ -479,7 +479,7 @@ FocusScope {
             const leftEdge = Math.min(gridView.contentX, gridView.originX);
 
             if (!item || item.blank) {
-                if (gridView.hoveredItem && !root.containsDrag && (!dialog || !dialog.containsDrag) && !gridView.hoveredItem.popupDialog) {
+                if (gridView.hoveredItem && !root.containsDrag && (!main.dialog || !main.dialog.containsDrag) && !gridView.hoveredItem.popupDialog) {
                     gridView.hoveredItem = null;
                 }
             }
@@ -540,7 +540,7 @@ FocusScope {
                     clearPressState();
                 } else {
                     // Disable rubberband in popup list view mode or while renaming
-                    if (root.useListViewMode || (editor && editor.targetItem) || (verticalScrollBar.active || horizontalScrollBar.active)) {
+                    if (root.useListViewMode || (main.editor && main.editor.targetItem) || (verticalScrollBar.active || horizontalScrollBar.active)) {
                         return;
                     }
 
@@ -648,12 +648,12 @@ FocusScope {
             interval: root.hoverActivateDelay
 
             onTriggered: {
-                if (!hoveredItem) {
+                if (!main.hoveredItem) {
                     return;
                 }
 
                 if (root.useListViewMode) {
-                    doCd(index);
+                    main.doCd(index);
                 } else if (Plasmoid.configuration.popups) {
                     hoveredItem.openPopup();
                 }
@@ -831,7 +831,7 @@ FocusScope {
                         hoverActivateTimer.stop();
                     }
 
-                    cancelRename();
+                    main.cancelRename();
 
                     dir.setDragHotSpotScrollOffset(contentX, contentY);
 
@@ -936,9 +936,9 @@ FocusScope {
                         dir.clearSelection();
                         dir.setSelected(positioner.map(currentIndex));
                         if (currentIndex === -1) {
-                            previouslySelectedItemIndex = -1;
+                            main.previouslySelectedItemIndex = -1;
                         }
-                        previouslySelectedItemIndex = currentIndex;
+                        main.previouslySelectedItemIndex = currentIndex;
                     }
                 }
 
@@ -995,7 +995,7 @@ FocusScope {
                 function runOrCdSelected() {
                     if (currentIndex !== -1 && dir.hasSelection()) {
                         if (root.useListViewMode && currentItem.isDir) {
-                            doCd(positioner.map(currentIndex));
+                            main.doCd(positioner.map(currentIndex));
                         } else {
                             dir.runSelected();
                         }
@@ -1026,8 +1026,8 @@ FocusScope {
                 }
 
                 Keys.onEscapePressed: event => {
-                    if (!editor || !editor.targetItem) {
-                        previouslySelectedItemIndex = -1;
+                    if (!main.editor || !main.editor.targetItem) {
+                        main.previouslySelectedItemIndex = -1;
                         dir.clearSelection();
                         event.accepted = false;
                     }
@@ -1043,7 +1043,7 @@ FocusScope {
                     }
 
                     onRenameFile: {
-                        rename();
+                        main.rename();
                     }
 
                     onMoveToTrash: {
@@ -1104,7 +1104,7 @@ FocusScope {
                 Keys.onLeftPressed: event => {
                     if (root.isPopup && root.useListViewMode) {
                         if (dir.resolvedUrl !== dir.resolve(Plasmoid.configuration.url)) {
-                            doBack();
+                            main.doBack();
                         }
                     } else if (positioner.enabled) {
                         const newIndex = positioner.nearestItem(currentIndex,
@@ -1130,7 +1130,7 @@ FocusScope {
                 Keys.onRightPressed: event => {
                     if (root.isPopup && root.useListViewMode) {
                         if (currentIndex !== -1 && dir.hasSelection() && currentItem.isDir) {
-                            doCd(positioner.map(currentIndex));
+                            main.doCd(positioner.map(currentIndex));
                         }
                     } else if (positioner.enabled) {
                         const newIndex = positioner.nearestItem(currentIndex,
@@ -1199,7 +1199,7 @@ FocusScope {
 
                 Keys.onBackPressed: event => {
                     if (root.isPopup && dir.resolvedUrl !== dir.resolve(Plasmoid.configuration.url)) {
-                        doBack();
+                        main.doBack();
                     }
                 }
 
@@ -1215,8 +1215,8 @@ FocusScope {
                     }
 
                     function onUrlChanged() {
-                        history = [];
-                        updateHistory();
+                        main.history = [];
+                        main.updateHistory();
                     }
                 }
             }
@@ -1228,7 +1228,7 @@ FocusScope {
                 text: i18nc("@info",
                     "There are a lot of files and folders on the desktop. This can cause bugs and performance issues. Please consider moving some of them elsewhere.")
                 // Note: the trigger amount is intentionally lower than the screen mapping cap. We want to warn ahead of hitting our caps.
-                visible: isRootView && gridView.count > 2048
+                visible: main.isRootView && gridView.count > 2048
             }
         }
 
@@ -1254,11 +1254,11 @@ FocusScope {
                 if (!gridView.model && root.expanded) {
                     gridView.model = positioner;
                     gridView.currentIndex = isPopup ? 0 : -1;
-                } else if (goingBack) {
-                    goingBack = false;
-                    gridView.currentIndex = Math.min(lastPosition.index, gridView.count - 1);
+                } else if (main.goingBack) {
+                    main.goingBack = false;
+                    gridView.currentIndex = Math.min(main.lastPosition.index, gridView.count - 1);
                     setSelected(positioner.map(gridView.currentIndex));
-                    gridView.contentY = lastPosition.yPosition * gridView.contentHeight;
+                    gridView.contentY = main.lastPosition.yPosition * gridView.contentHeight;
                 }
             }
 
@@ -1400,13 +1400,13 @@ FocusScope {
         }
 
         Component.onCompleted: {
-            dir.requestRename.connect(rename);
+            dir.requestRename.connect(main.rename);
         }
     }
 
     Component.onCompleted: {
-        if (backButton === null && root.useListViewMode) {
-            backButton = makeBackButton();
+        if (main.backButton === null && root.useListViewMode) {
+            main.backButton = makeBackButton();
         }
     }
 }
