@@ -24,9 +24,9 @@
 K_PLUGIN_CLASS_WITH_JSON(KCMGameController, "kcm_gamecontroller.json")
 
 KCMGameController::KCMGameController(QObject *parent, const KPluginMetaData &metaData)
-    : KQuickManagedConfigModule(parent, metaData)
+    : KQuickConfigModule(parent, metaData)
 {
-    setButtons(Help | Apply);
+    setButtons(Help);
 
     constexpr const char *uri{"org.kde.plasma.gamecontroller.kcm"};
 
@@ -35,8 +35,7 @@ KCMGameController::KCMGameController(QObject *parent, const KPluginMetaData &met
     qmlRegisterType<AxesProxyModel>(uri, 1, 0, "AxesProxyModel");
     qmlRegisterType<ButtonModel>(uri, 1, 0, "ButtonModel");
     qmlRegisterType<HatModel>(uri, 1, 0, "HatModel");
-
-    qmlRegisterSingletonInstance(uri, 1, 0, "KWinIntegrationPlugin", this);
+    qmlRegisterSingletonInstance(uri, 1, 0, "KWinPlugin", this);
 
     load();
 }
@@ -45,41 +44,23 @@ KCMGameController::~KCMGameController()
 {
 }
 
-void KCMGameController::load()
+bool KCMGameController::isPluginEnabled() const
 {
-    KQuickManagedConfigModule::load();
-
     KConfigGroup plugins(KSharedConfig::openConfig("kwinrc"), QStringLiteral("Plugins"));
-    m_pluginEnabled = plugins.readEntry(m_pluginId + QStringLiteral("Enabled"), false);
-    Q_EMIT pluginEnabledChanged();
+    return plugins.readEntry(m_pluginId + QStringLiteral("Enabled"), false);
 }
 
-void KCMGameController::save()
+void KCMGameController::setPluginEnabled(bool enabled)
 {
-    KQuickManagedConfigModule::save();
-
     KConfigGroup plugins(KSharedConfig::openConfig("kwinrc"), QStringLiteral("Plugins"));
-    plugins.writeEntry(m_pluginId + QStringLiteral("Enabled"), m_pluginEnabled, KConfig::Notify);
+    plugins.writeEntry(m_pluginId + QStringLiteral("Enabled"), enabled, KConfig::Notify);
     plugins.sync();
 
     QDBusMessage message =
         QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"), QStringLiteral("/KWin"), QStringLiteral("org.kde.KWin"), QStringLiteral("reconfigure"));
     QDBusConnection::sessionBus().asyncCall(message);
-    // QDBusConnection::sessionBus().send(message);
-}
 
-bool KCMGameController::isPluginEnabled() const
-{
-    return m_pluginEnabled;
-}
-
-void KCMGameController::setPluginEnabled(bool enabled)
-{
-    if (m_pluginEnabled != enabled) {
-        m_pluginEnabled = enabled;
-        setNeedsSave(true);
-        Q_EMIT pluginEnabledChanged();
-    }
+    Q_EMIT pluginEnabledChanged();
 }
 
 #include "kcm.moc"
