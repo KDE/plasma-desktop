@@ -94,6 +94,8 @@ SimpleKCM {
         visible: combo.count > 0
         enabled: combo.count > 0
 
+        anchors.fill: parent
+
         Kirigami.FormLayout {
             visible: combo.count > 1
 
@@ -195,10 +197,9 @@ SimpleKCM {
 
                     icon.name: "tablet-symbolic"
                     text: i18nc("@title:tab", "Pad")
-                    visible: root.padDevice
-                    checked: contentLoader.sourceComponent === padTab
+                    checked: contentLoader.sourceComponent === padTab || contentLoader.sourceComponent === missingPadTab
                     onTriggered: {
-                        contentLoader.sourceComponent = padTab;
+                        contentLoader.sourceComponent = root.padDevice ? padTab : missingPadTab;
                         checked = true;
                     }
                 }
@@ -267,5 +268,11 @@ SimpleKCM {
             padDevice: root.padDevice
             tabletEvents: events
         }
+    }
+
+    Component {
+        id: missingPadTab
+
+        MissingPadTab {}
     }
 }
