@@ -195,7 +195,6 @@ SimpleKCM {
 
                     icon.name: "tablet-symbolic"
                     text: i18nc("@title:tab", "Pad")
-                    visible: root.padDevice
                     checked: contentLoader.sourceComponent === padTab
                     onTriggered: {
                         contentLoader.sourceComponent = padTab;
