@@ -278,7 +278,7 @@ Kicker.DashboardWindow {
 
                 width: (columns * root.cellSize) + Kirigami.Units.gridUnit
 
-                property int columns: 3
+                property int columns: Plasmoid.configuration.favoritesColumns
 
                 Kirigami.Heading {
                     id: favoritesColumnLabel
@@ -436,6 +436,38 @@ Kicker.DashboardWindow {
                             } else {
                                 mainColumn.tryActivate(0, 0);
                             }
+                        }
+                    }
+                }
+            }
+
+            Item {
+                id: splitter
+                width: Math.round(Kirigami.Units.gridUnit / 2)
+                anchors.top: parent.top
+                anchors.bottom: parent.bottom
+
+                MouseArea {
+                    anchors.fill: parent
+                    anchors.leftMargin: -middleRow.spacing
+                    anchors.rightMargin: -middleRow.spacing
+                    cursorShape: Qt.SizeHorCursor
+                    drag.target: parent
+                    drag.axis: Drag.XAxis
+
+                    property int startX
+                    property int startFavCols
+
+                    onPressed: {
+                        startX = splitter.x
+                        startFavCols = favoritesColumn.columns
+                    }
+                    onPositionChanged: {
+                        let deltaCols = Math.round((splitter.x - startX) / root.cellSize)
+                        let newFavCols = startFavCols + deltaCols
+                        if (newFavCols >= 1 && newFavCols < root.columns - filterListColumn.columns) {
+                            favoritesColumn.columns = newFavCols
+                            Plasmoid.configuration.favoritesColumns = newFavCols
                         }
                     }
                 }

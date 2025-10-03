@@ -83,6 +83,10 @@
       <label>Whether to force dark mode for the Dashboard.</label>
       <default>true</default>
     </entry>
+    <entry name="favoritesColumns" type="Int">
+      <label>The amount of columns in the Favorites Dashboard grid.</label>
+      <default>3</default>
+    </entry>
 
   </group>
 </kcfg>
