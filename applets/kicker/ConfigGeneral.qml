@@ -5,6 +5,7 @@
 */
 
 import QtQuick
+import QtQuick.Layouts
 import QtQuick.Controls as QQC2
 
 import org.kde.draganddrop as DragDrop
@@ -35,6 +36,7 @@ KCMUtils.SimpleKCM {
 
     property alias cfg_useExtraRunners: useExtraRunners.checked
     property alias cfg_alignResultsToBottom: alignResultsToBottom.checked
+    property alias cfg_forceDarkMode: forceDarkMode.checked
 
     Kirigami.FormLayout {
         anchors.left: parent.left
@@ -232,6 +234,21 @@ KCMUtils.SimpleKCM {
             visible: !configGeneral.isDash
 
             text: i18n("Align search results to bottom")
+        }
+
+        RowLayout {
+            visible: configGeneral.isDash
+            Kirigami.FormData.label: i18nc("@label:textbox for a checkbox toggling Dark Mode", "Appearance:")
+            spacing: Kirigami.Units.smallSpacing
+
+            QQC2.CheckBox {
+                id: forceDarkMode
+                text: i18n("Prefer Dark Mode when available")
+            }
+
+            Kirigami.ContextualHelpButton {
+                toolTipText: xi18nc("@info:tooltip", "This feature uses the complementary colors from your colorscheme, which usually feature a dark background.")
+            }
         }
     }
 }

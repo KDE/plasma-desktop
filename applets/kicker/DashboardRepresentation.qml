@@ -35,7 +35,8 @@ Kicker.DashboardWindow {
     property bool searching: searchField.text !== ""
 
     keyEventProxy: searchField
-    backgroundColor: Qt.rgba(0, 0, 0, 0.737)
+
+    backgroundColor: "transparent"
 
     onKeyEscapePressed: {
         if (searching) {
@@ -83,10 +84,24 @@ Kicker.DashboardWindow {
 
         anchors.fill: parent
 
+        Kirigami.Theme.colorSet: Plasmoid.configuration.forceDarkMode ? Kirigami.Theme.Complementary : Kirigami.Theme.Window
+        Kirigami.Theme.inherit: false
+
         acceptedButtons: Qt.LeftButton | Qt.RightButton
 
         LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
         LayoutMirroring.childrenInherit: true
+
+        // We draw the background color here instead of in the
+        // DashboardWindow as transparent background window
+        // color do not play well with non-black backgrounds,
+        // as the color spills in the blur effect even with
+        // complete transparency.
+        Rectangle {
+            anchors.fill: parent
+            color: Kirigami.Theme.backgroundColor
+            opacity: 0.737
+        }
 
         Connections {
             target: kicker
@@ -278,7 +293,7 @@ Kicker.DashboardWindow {
                     elide: Text.ElideRight
                     wrapMode: Text.NoWrap
 
-                    color: "white"
+                    color: Kirigami.Theme.textColor
 
                     level: 1
 
@@ -314,9 +329,6 @@ Kicker.DashboardWindow {
                         top: favoritesColumnLabelUnderline.bottom
                         topMargin: Kirigami.Units.gridUnit
                     }
-
-                    Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
-                    Kirigami.Theme.inherit: false
 
                     property int rows: (Math.floor((parent.height - favoritesColumnLabel.height
                         - favoritesColumnLabelUnderline.height - Kirigami.Units.gridUnit) / root.cellSize)
@@ -374,8 +386,6 @@ Kicker.DashboardWindow {
 
                 ItemGridView {
                     id: systemFavoritesGrid
-                    Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
-                    Kirigami.Theme.inherit: false
                     anchors {
                         top: globalFavoritesGrid.bottom
                     }
@@ -439,9 +449,6 @@ Kicker.DashboardWindow {
                 width: (columns * root.cellSize) + Kirigami.Units.gridUnit
                 height: Math.floor(parent.height / root.cellSize) * root.cellSize + mainGridContainer.headerHeight
 
-                Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
-                    Kirigami.Theme.inherit: false
-
                 property int columns: root.columns - favoritesColumn.columns - filterListColumn.columns
                 property Item visibleGrid: mainGrid
 
@@ -493,7 +500,7 @@ Kicker.DashboardWindow {
                         wrapMode: Text.NoWrap
                         opacity: 1.0
 
-                        color: "white"
+                        color: Kirigami.Theme.textColor
 
                         level: 1
 
@@ -830,7 +837,7 @@ Kicker.DashboardWindow {
                                 wrapMode: Text.NoWrap
                                 opacity: 1.0
 
-                                color: "white"
+                                color: Kirigami.Theme.textColor
 
                                 level: 1
 
