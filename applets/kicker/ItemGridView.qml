@@ -430,17 +430,26 @@ FocusScope {
             onReleased: mouse => {
                 mouse.accepted = true;
                 updatePositionProperties(mouse.x, mouse.y);
+                let keepDashboard = mouse.modifiers & Qt.ShiftModifier
 
                 if (!dragHelper.dragging) {
                     if (pressedItem) {
                         if ("trigger" in gridView.model) {
                             gridView.model.trigger(pressedItem.itemIndex, "", null);
-                            root.toggle();
+                            if (!keepDashboard) {
+                                root.toggle();
+                            } else {
+                                root.inhibitFocus = true
+                            }
                         }
 
                         itemGrid.itemActivated(pressedItem.itemIndex, "", null);
                     } else if (mouse.button === Qt.LeftButton) {
-                        root.toggle();
+                        if (!keepDashboard) {
+                            root.toggle();
+                        } else {
+                            root.inhibitFocus = true
+                        }
                     }
                 }
 
