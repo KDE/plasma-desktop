@@ -2178,6 +2178,7 @@ void FolderModel::setApplet(Plasma::Applet *applet)
         m_applet = applet;
 
         if (applet) {
+            setParent(applet);
             Plasma::Containment *containment = applet->containment();
 
             if (containment) {
