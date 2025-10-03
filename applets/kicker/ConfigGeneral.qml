@@ -35,6 +35,7 @@ KCMUtils.SimpleKCM {
 
     property alias cfg_useExtraRunners: useExtraRunners.checked
     property alias cfg_alignResultsToBottom: alignResultsToBottom.checked
+    property alias cfg_forceDarkMode: forceDarkMode.checked
 
     Kirigami.FormLayout {
         anchors.left: parent.left
@@ -232,6 +233,16 @@ KCMUtils.SimpleKCM {
             visible: !configGeneral.isDash
 
             text: i18n("Align search results to bottom")
+        }
+
+        QQC2.CheckBox {
+            id: forceDarkMode
+
+            visible: configGeneral.isDash
+
+            Kirigami.FormData.label: i18n("Appearance:")
+
+            text: i18n("Prefer Dark Mode when available")
         }
     }
 }
