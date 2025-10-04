@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Sergiu Bivol <sergiu@cip.md>, 2020, 2021, 2023, 2024.
+# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024, 2025 Sergiu Bivol <sergiu@cip.md>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-23 00:45+0000\n"
-"PO-Revision-Date: 2024-01-07 18:17+0000\n"
+"PO-Revision-Date: 2025-10-03 13:39+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -16,13 +16,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: activityconfig.cpp:151
-#, fuzzy, kde-format
-#| msgid "Activity switching"
+#, kde-format
 msgid "Activity Manager"
-msgstr "Schimbare activități"
+msgstr "Gestionar de activități"
 
 #: ui/ActivityEditor.qml:22
 #, kde-format

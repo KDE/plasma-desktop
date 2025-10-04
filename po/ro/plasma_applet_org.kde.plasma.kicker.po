@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the plasma-desktop package.
-# Sergiu Bivol <sergiu@cip.md>, 2012, 2013, 2020, 2021, 2022, 2024.
+# SPDX-FileCopyrightText: 2012, 2013, 2020, 2021, 2022, 2024, 2025 Sergiu Bivol <sergiu@cip.md>
 #
 # Tatiana Țurcanu <turcanu DOT tatiana91 AT gmail DOT com>, 2015.
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-02 00:44+0000\n"
-"PO-Revision-Date: 2024-01-07 18:32+0000\n"
+"PO-Revision-Date: 2025-10-03 13:54+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: code/tools.js:43
 #, kde-format
@@ -184,7 +184,7 @@ msgstr "Modifică aplicații…"
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"
-msgstr ""
+msgstr "Nicio potrivire"
 
 #~ msgid "Searching for '%1'"
 #~ msgstr "Se caută „%1”"

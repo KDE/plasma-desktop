@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Sergiu Bivol <sergiu@cip.md>, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2025 Sergiu Bivol <sergiu@cip.md>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-18 00:44+0000\n"
-"PO-Revision-Date: 2023-04-10 18:49+0100\n"
+"PO-Revision-Date: 2025-10-03 13:54+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: app/emojier.cpp:42 app/emojier.cpp:44
 #, kde-format
@@ -46,8 +46,7 @@ msgid "Replace an existing instance"
 msgstr "Înlocuiește o instanță existentă"
 
 #: app/ui/CategoryPage.qml:33 app/ui/CategoryPage.qml:87 app/ui/Emojier.qml:67
-#, fuzzy, kde-format
-#| msgid "All"
+#, kde-format
 msgctxt "@title:page All emojis"
 msgid "All"
 msgstr "Toate"
