@@ -1,22 +1,22 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Sergiu Bivol <sergiu@cip.md>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2025 Sergiu Bivol <sergiu@cip.md>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-02 00:45+0000\n"
-"PO-Revision-Date: 2022-02-17 10:37+0000\n"
+"PO-Revision-Date: 2025-10-03 13:34+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
-"Language-Team: Romanian\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: landingpage_kdeglobalssettings.kcfg:9
@@ -34,7 +34,7 @@ msgstr "Un clic pentru deschiderea fișierelor"
 #: landingpage_kdeglobalssettings.kcfg:19
 #, kde-format
 msgid "Switch the look and feel package depending on time of day"
-msgstr ""
+msgstr "Schimbă pachetul de aspect și comportament conform orei din zi"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: landingpage_kdeglobalssettings.kcfg:23
@@ -60,13 +60,13 @@ msgstr "Viteza animației"
 #, kde-format
 msgctxt "@action:button"
 msgid "Change global theme"
-msgstr ""
+msgstr "Schimbă tematica globală"
 
 #: ui/LookAndFeelBox.qml:178
 #, kde-format
 msgctxt "@label accessible"
 msgid "Global theme"
-msgstr ""
+msgstr "Tematică globală"
 
 #: ui/main.qml:35
 #, kde-format
@@ -77,14 +77,13 @@ msgstr "Tematică:"
 #, kde-format
 msgctxt "Switch between dark and light look and feel packages automatically"
 msgid "Automatic"
-msgstr ""
+msgstr "Automat"
 
 #: ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "More Appearance Settings…"
+#, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More appearance settings:"
-msgstr "Configurări de aspect suplimentare…"
+msgstr "Configurări de aspect suplimentare:"
 
 #: ui/main.qml:180
 #, kde-format
@@ -133,15 +132,13 @@ msgid "Select by clicking on item's selection marker"
 msgstr "Se alege apăsând pe marcatorul de selecție al elementului"
 
 #: ui/main.qml:282
-#, fuzzy, kde-format
-#| msgid "More Behavior Settings…"
+#, kde-format
 msgctxt "@title:group translate as short as possible"
 msgid "More behavior settings:"
-msgstr "Configurări de comportament suplimentare…"
+msgstr "Configurări de comportament suplimentare:"
 
 #: ui/main.qml:295
-#, fuzzy, kde-format
-#| msgid "Most Used Pages:"
+#, kde-format
 msgid "Most used pages:"
 msgstr "Pagini folosite frecvent:"
 

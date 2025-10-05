@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Sergiu Bivol <sergiu@cip.md>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2025 Sergiu Bivol <sergiu@cip.md>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-25 00:42+0000\n"
-"PO-Revision-Date: 2023-04-10 19:02+0100\n"
+"PO-Revision-Date: 2025-10-03 13:53+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #. i18n: ectx: label, entry (confirmLogout), group (General)
 #: smserversettings.kcfg:9
@@ -69,11 +69,10 @@ msgid "Restart Now"
 msgstr "Repornește acum"
 
 #: ui/main.qml:46
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group"
 msgid "General"
-msgstr "Generale:"
+msgstr "Generale"
 
 #: ui/main.qml:51
 #, kde-format
@@ -81,7 +80,7 @@ msgctxt ""
 "@label beginning of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "Ask for confirmation:"
-msgstr ""
+msgstr "Cere confirmarea:"
 
 #: ui/main.qml:52
 #, kde-format
@@ -89,7 +88,7 @@ msgctxt ""
 "@option:check end of the logical sentence 'Ask for confirmation on shutdown, "
 "restart, and logout.'"
 msgid "On shutdown, restart, and logout"
-msgstr ""
+msgstr "La oprire, repornire și ieșire"
 
 #: ui/main.qml:63
 #, kde-format
@@ -123,6 +122,9 @@ msgid ""
 "will remember the apps that are open and restore them on the next login. "
 "Click it again to replace the set of remembered apps."
 msgstr ""
+"Un buton <interface>Salvează sesiunea</interface> va apărea în meniul "
+"<interface>Lansatorului de aplicații</interface>. Când îl apăsați, Plasma va "
+"memoriza aplicațiile deschise și le va restabili la următoarea autentificare."
 
 #: ui/main.qml:99
 #, kde-format
@@ -146,6 +148,11 @@ msgid ""
 "or 'xterm,org.kde.konsole.desktop') to prevent them from autostarting along "
 "with other session-restored apps."
 msgstr ""
+"Scrieți aici identificatorul de fișier „desktop” al aplicațiilor sau, pe "
+"X11, denumirile de executabil (separate prin virgulă sau două puncte, de "
+"exemplu „xterm:org.kde.konsole.desktop” sau „xterm,org.kde.konsole.desktop”) "
+"pentru a preveni pornirea automată a acestora împreună  cu alte aplicații "
+"restabilite de către sesiune."
 
 #: ui/main.qml:138
 #, kde-format

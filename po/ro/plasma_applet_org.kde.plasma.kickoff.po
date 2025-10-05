@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the plasma-desktop package.
-# Sergiu Bivol <sergiu@cip.md>, 2013, 2020, 2021, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2013, 2020, 2021, 2022, 2023, 2024, 2025 Sergiu Bivol <sergiu@cip.md>
 # Ovidiu-Florin Bogdan <ovidiu.b13@gmail.com>, 2015.
 #
 # Viorel-Cătălin Răpițeanu <rapiteanu DOT catalin AT gmail DOT com>, 2015.
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-07 18:31+0000\n"
-"PO-Revision-Date: 2024-01-07 18:32+0000\n"
+"PO-Revision-Date: 2025-10-03 13:57+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: code/tools.js:32
 #, kde-format
@@ -102,30 +102,29 @@ msgid "Remove icon"
 msgstr "Elimină pictograma"
 
 #: ConfigGeneral.qml:121
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgid "Show applications as:"
-msgstr "Arată alte aplicații:"
+msgstr "Arată aplicațiile ca:"
 
 #: ConfigGeneral.qml:123
 #, kde-format
 msgid "Name only"
-msgstr ""
+msgstr "Doar denumirea"
 
 #: ConfigGeneral.qml:123
 #, kde-format
 msgid "Description only"
-msgstr ""
+msgstr "Doar descrierea"
 
 #: ConfigGeneral.qml:123
 #, kde-format
 msgid "Name (Description)"
-msgstr ""
+msgstr "Denumire (descriere)"
 
 #: ConfigGeneral.qml:123
 #, kde-format
 msgid "Description (Name)"
-msgstr ""
+msgstr "Descriere (denumire)"
 
 #: ConfigGeneral.qml:133
 #, kde-format
@@ -158,11 +157,10 @@ msgid "General:"
 msgstr "Generale:"
 
 #: ConfigGeneral.qml:176
-#, fuzzy, kde-format
-#| msgid "Always sort applications alphabetically"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
-msgstr "Sortează aplicațiile alfabetic întotdeauna"
+msgstr "Sortează aplicațiile alfabetic"
 
 #: ConfigGeneral.qml:180
 #, kde-format
@@ -171,6 +169,8 @@ msgid ""
 "This doesn't affect how applications are sorted in either search results or "
 "the favorites page."
 msgstr ""
+"Aceasta nu afectează sortarea aplicațiilor în rezultatele căutării sau "
+"pagina cu favorite."
 
 #: ConfigGeneral.qml:186
 #, kde-format
@@ -186,20 +186,18 @@ msgstr "Dezactivată automat în regim tactil"
 #: ConfigGeneral.qml:200
 #, kde-format
 msgid "Highlight newly installed applications"
-msgstr ""
+msgstr "Evidențiază aplicațiile instalate recent"
 
 #: ConfigGeneral.qml:205
 #, kde-format
 msgid "Switch sidebar categories when hovering over them"
-msgstr ""
+msgstr "Schimbă categoriile barei laterale la planarea deasupra lor"
 
 #: ConfigGeneral.qml:211
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Enabled Search Plugins…"
+#, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
-msgstr "Configurează extensiile de căutare active…"
+msgstr "Configurează extensiile de căutare…"
 
 #: ConfigGeneral.qml:221
 #, kde-format
@@ -305,13 +303,12 @@ msgstr "Ține deschis"
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
-msgstr ""
+msgstr "Nouă!"
 
 #: KickoffGridDelegate.qml:61 KickoffListDelegate.qml:121
-#, fuzzy, kde-format
-#| msgid "Show other applications:"
+#, kde-format
 msgid "Newly installed application"
-msgstr "Arată alte aplicații:"
+msgstr "Aplicație instalată recent"
 
 #: KickoffGridView.qml:102
 #, kde-format
@@ -321,7 +318,7 @@ msgstr "Grilă cu %1 rânduri, %2 coloane"
 #: KickoffListDelegate.qml:120
 #, kde-format
 msgid "There is a newly installed application in this category"
-msgstr ""
+msgstr "În această categorie este o aplicație instalată recent"
 
 #: LeaveButtons.qml:169
 #, kde-format
@@ -331,7 +328,7 @@ msgstr "Mai multe"
 #: LeaveButtons.qml:169
 #, kde-format
 msgid "Session and Power"
-msgstr ""
+msgstr "Sesiune și alimentare"
 
 #: main.qml:356
 #, kde-format
