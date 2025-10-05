@@ -150,6 +150,8 @@ RowLayout {
                         nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
                     }
                 }
+                Keys.onEnterPressed: clicked()
+                Keys.onReturnPressed: clicked()
             }
         }
     }
