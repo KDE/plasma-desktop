@@ -20,7 +20,7 @@ using namespace TaskManager;
 class WindowModel::Private
 {
 public:
-    Private(WindowModel *q);
+    explicit Private(WindowModel *q);
 
     PagerModel *pagerModel = nullptr;
 

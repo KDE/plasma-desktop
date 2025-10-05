@@ -33,7 +33,7 @@ class XdgPathsSettingsStore : public QObject
     Q_PROPERTY(QUrl publicLocation READ publicLocation WRITE setPublicLocation)
     Q_PROPERTY(QUrl templatesLocation READ templatesLocation WRITE setTemplatesLocation)
 public:
-    XdgPathsSettingsStore(DesktopPathsSettings *parent = nullptr)
+    explicit XdgPathsSettingsStore(DesktopPathsSettings *parent = nullptr)
         : QObject(parent)
         , m_settings(parent)
     {

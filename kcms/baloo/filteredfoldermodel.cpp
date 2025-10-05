@@ -151,8 +151,8 @@ bool FilteredFolderModel::setData(const QModelIndex &idx, const QVariant &value,
     if (!idx.isValid() || idx.row() >= m_folderList.size()) {
         return false;
     }
-    FolderInfo &entry = m_folderList[idx.row()];
     if (role == EnableIndex) {
+        FolderInfo &entry = m_folderList[idx.row()];
         entry.enableIndex = value.toBool();
         syncFolderConfig(entry);
         Q_EMIT dataChanged(idx, idx);

@@ -47,7 +47,7 @@ static InstallerInfo getInstallerInfo(const QFileInfo &info)
 void KRunnerPluginInstallerRcJob::executeOperation(const QFileInfo &fileInfo, const QString & /*mimeType*/, bool install)
 {
     const InstallerInfo info = getInstallerInfo(fileInfo);
-    if (info.exec.isEmpty() || info.desktopFilePath.isEmpty() || info.desktopFilePath.isEmpty()) {
+    if (info.exec.isEmpty() || info.desktopFilePath.isEmpty()) {
         Q_EMIT error("The provided installer file is invalid. Please contact the author.");
         return;
     }
