@@ -11,7 +11,7 @@
 class ShortcutsModelPrivate
 {
 public:
-    ShortcutsModelPrivate(ShortcutsModel *model)
+    explicit ShortcutsModelPrivate(ShortcutsModel *model)
         : q(model)
     {
     }

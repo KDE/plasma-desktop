@@ -18,7 +18,7 @@ class KWinWaylandTouchpad : public LibinputCommon
     Q_PROPERTY(qreal scrollFactor READ scrollFactor WRITE setScrollFactor NOTIFY scrollFactorChanged)
 
 public:
-    KWinWaylandTouchpad(QString dbusName);
+    explicit KWinWaylandTouchpad(const QString &dbusName);
     ~KWinWaylandTouchpad() override;
 
     bool init();

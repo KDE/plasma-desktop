@@ -12,7 +12,7 @@
 
 #include "logging.h"
 
-KWinWaylandTouchpad::KWinWaylandTouchpad(QString dbusName)
+KWinWaylandTouchpad::KWinWaylandTouchpad(const QString &dbusName)
     : LibinputCommon()
 {
     m_iface = new QDBusInterface(QStringLiteral("org.kde.KWin"),

@@ -48,8 +48,7 @@ bool InputDevice::isSaveNeeded() const
 {
     return m_leftHanded.changed() || m_orientation.changed() || m_outputName.changed() || m_outputArea.changed() || m_enabled.changed()
         || m_mapToWorkspace.changed() || m_pressureCurve.changed() || m_inputArea.changed() || m_pressureRangeMin.changed() || m_pressureRangeMax.changed()
-        || m_mapToWorkspace.changed() || m_pressureCurve.changed() || m_inputArea.changed() || m_mapToWorkspace.changed() || m_pressureCurve.changed()
-        || m_relative.changed();
+        || m_mapToWorkspace.changed() || m_relative.changed();
 }
 
 void InputDevice::defaults()
