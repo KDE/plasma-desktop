@@ -106,9 +106,9 @@ QModelIndex BaseModel::index(int row, int column, const QModelIndex &parent) con
     if (row < 0 || column != 0) {
         return QModelIndex();
     }
-    if (parent.isValid() && row < rowCount(parent) && column == 0) {
+    if (parent.isValid() && row < rowCount(parent)) {
         return createIndex(row, column, parent.row() + 1);
-    } else if (column == 0 && row < m_components.size()) {
+    } else if (row < m_components.size()) {
         return createIndex(row, column, nullptr);
     }
     return QModelIndex();

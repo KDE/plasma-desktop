@@ -16,7 +16,7 @@
 class IsoCodesPrivate
 {
 public:
-    IsoCodesPrivate(const QString &isoCode_)
+    explicit IsoCodesPrivate(const QString &isoCode_)
         : isoCode(isoCode_)
         , loaded(false)
     {

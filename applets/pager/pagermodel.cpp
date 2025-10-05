@@ -34,7 +34,7 @@ using namespace TaskManager;
 class PagerModel::Private
 {
 public:
-    Private(PagerModel *q);
+    explicit Private(PagerModel *q);
     ~Private();
 
     static int instanceCount;

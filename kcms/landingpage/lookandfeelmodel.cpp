@@ -36,7 +36,7 @@ QHash<int, QByteArray> LookAndFeelModel::roleNames() const
 QVariant LookAndFeelModel::data(const QModelIndex &modelIndex, int role) const
 {
     const int index = modelIndex.row();
-    if (index > m_lnfs.size()) {
+    if (index >= m_lnfs.size()) {
         return QVariant();
     }
 

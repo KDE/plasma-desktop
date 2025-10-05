@@ -141,7 +141,7 @@ bool LayoutMemoryPersister::saveToFile(const QFile &file_)
 class MapHandler
 {
 public:
-    MapHandler(const KeyboardConfig::SwitchingPolicy &switchingPolicy_)
+    explicit MapHandler(const KeyboardConfig::SwitchingPolicy &switchingPolicy_)
         : verified(false)
         , switchingPolicy(switchingPolicy_)
     {

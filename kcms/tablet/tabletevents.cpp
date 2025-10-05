@@ -172,7 +172,7 @@ public:
 class TabletManager : public QWaylandClientExtensionTemplate<TabletManager>, public QtWayland::zwp_tablet_manager_v2
 {
 public:
-    TabletManager(TabletEvents *q)
+    explicit TabletManager(TabletEvents *q)
         : QWaylandClientExtensionTemplate<TabletManager>(2)
         , q(q)
     {
