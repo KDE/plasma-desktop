@@ -817,13 +817,6 @@ void Positioner::convertFolderModelData()
 
         return;
     }
-
-    // Do not allow saving during this operation
-    beginResetModel();
-
-    m_proxyToSource.clear();
-    m_sourceToProxy.clear();
-
     // Ignore the first two items, which are for stripes and items per stripe
     const QStringList positions = m_positions.mid(2);
 
@@ -831,6 +824,12 @@ void Positioner::convertFolderModelData()
     if (positions.size() % 3 != 0) {
         return;
     }
+
+    // Do not allow saving during this operation
+    beginResetModel();
+
+    m_proxyToSource.clear();
+    m_sourceToProxy.clear();
 
     QHash<QString, int> sourceIndices;
 
