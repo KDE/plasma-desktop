@@ -68,4 +68,17 @@ QRect SubDialog::availableScreenRectForItem(QQuickItem *item) const
     return screen->availableGeometry();
 }
 
+bool SubDialog::allowClosing() const
+{
+    return m_allowClosing;
+}
+
+void SubDialog::setAllowClosing(bool allow)
+{
+    if (m_allowClosing != allow) {
+        m_allowClosing = allow;
+        Q_EMIT allowClosingChanged();
+    }
+}
+
 #include "moc_subdialog.cpp"

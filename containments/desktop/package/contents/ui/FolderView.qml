@@ -41,6 +41,7 @@ FocusScope {
     property alias filterPattern: dir.filterPattern
     property alias filterMimeTypes: dir.filterMimeTypes
     property alias showHiddenFiles: dir.showHiddenFiles
+    property alias creatingNewItems: dir.creatingNewItems
     property alias flow: gridView.flow
     property alias layoutDirection: gridView.layoutDirection
     property alias cellWidth: gridView.cellWidth
@@ -326,7 +327,8 @@ FocusScope {
                     clearPressState();
 
                     // If it's the desktop, fall through to the desktop context menu plugin
-                    if (!dir.usedByContainment) {
+                    // Disallow opening contextmenu if we're already creating new items
+                    if (!dir.usedByContainment && !dir.creatingNewItems) {
                         dir.openContextMenu(main, mouse.modifiers);
                         mouse.accepted = true;
                     }
