@@ -93,6 +93,7 @@ class FolderModel : public QSortFilterProxyModel, public QQmlParserStatus
     Q_PROPERTY(QObject *newMenu READ newMenu CONSTANT)
     Q_PROPERTY(Plasma::Applet *applet READ applet WRITE setApplet NOTIFY appletChanged)
     Q_PROPERTY(bool showHiddenFiles READ showHiddenFiles WRITE setShowHiddenFiles NOTIFY showHiddenFilesChanged)
+    Q_PROPERTY(bool creatingNewItems READ creatingNewItems NOTIFY creatingNewItemsChanged)
 
 public:
     enum DataRole {
@@ -189,6 +190,9 @@ public:
     bool showHiddenFiles() const;
     void setShowHiddenFiles(bool enable);
 
+    bool creatingNewItems() const;
+    void setCreatingNewItems(bool enabled);
+
     KFileItem rootItem() const;
 
     Q_INVOKABLE void up();
@@ -284,6 +288,7 @@ Q_SIGNALS:
     void itemRenamed() const;
     void screenGeometryChanged() const;
     void selectionDone();
+    void creatingNewItemsChanged() const;
 
 protected:
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
@@ -303,7 +308,9 @@ private Q_SLOTS:
     void undoTextChanged(const QString &text);
     void invalidateIfComplete();
     void invalidateFilterIfComplete();
+    void newFileMenuItemCreationStarted(const QUrl &url);
     void newFileMenuItemCreated(const QUrl &url);
+    void newFileMenuItemRejected(const QUrl &url);
 
 private:
     struct DragImage {
@@ -369,6 +376,7 @@ private:
     QPoint m_menuPosition;
     QFileSystemWatcher *watcher;
     void addDirectoriesRecursively(const QString &resolvedNewUrl, QFileSystemWatcher *watcher);
+    bool m_creatingNewItems = false;
 
     /**
      * This property is used to save the current activity when FolderModel is initialized.

@@ -15,6 +15,8 @@ class SubDialog : public PlasmaQuick::Dialog
     Q_OBJECT
     QML_ELEMENT
 
+    Q_PROPERTY(bool allowClosing READ allowClosing WRITE setAllowClosing NOTIFY allowClosingChanged)
+
 public:
     explicit SubDialog(QQuickItem *parent = nullptr);
     ~SubDialog() override;
@@ -22,4 +24,13 @@ public:
     Q_INVOKABLE QRect availableScreenRectForItem(QQuickItem *item) const;
 
     QPoint popupPosition(QQuickItem *item, const QSize &size) override;
+
+    bool allowClosing() const;
+    void setAllowClosing(bool allow);
+
+Q_SIGNALS:
+    void allowClosingChanged();
+
+private:
+    bool m_allowClosing = true;
 };
