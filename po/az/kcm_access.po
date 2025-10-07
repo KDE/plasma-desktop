@@ -4,65 +4,66 @@
 # SPDX-FileCopyrightText: 2024 X əyyam
 # SPDX-FileCopyrightText: 2024 X əyyam
 # SPDX-FileCopyrightText: 2024 X əyyam
+# SPDX-FileCopyrightText: 2025 linux <xxmn77@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-25 00:44+0000\n"
-"PO-Revision-Date: 2024-06-04 18:20+0400\n"
-"Last-Translator: Xəyyam Qocayev <xxmn77@gmail.com>\n"
+"PO-Revision-Date: 2025-10-06 21:59+0400\n"
+"Last-Translator: linux <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: kcmaccess.cpp:127 kcmaccess.cpp:155
 #, kde-format
 msgid "KWin"
-msgstr ""
+msgstr "KWin"
 
 #: kcmaccess.cpp:130
 #, kde-format
 msgid "Toggle Invert Effect"
-msgstr ""
+msgstr "Rəng çevirmə effekti"
 
 #: kcmaccess.cpp:136
 #, kde-format
 msgid "Toggle Invert Effect on Window"
-msgstr ""
+msgstr "POəncərədə rəng çevirmə effekti"
 
 #: kcmaccess.cpp:178
 #, kde-format
 msgid "Move Left"
-msgstr ""
+msgstr "Sola köçürmək"
 
 #: kcmaccess.cpp:185
 #, kde-format
 msgid "Move Right"
-msgstr ""
+msgstr "Sağa köçürmək"
 
 #: kcmaccess.cpp:192
 #, kde-format
 msgid "Move Up"
-msgstr ""
+msgstr "Yuxarı köçürmək"
 
 #: kcmaccess.cpp:199
 #, kde-format
 msgid "Move Down"
-msgstr ""
+msgstr "Aşağı köçürmək"
 
 #: kcmaccess.cpp:206
 #, kde-format
 msgid "Move Mouse to Focus"
-msgstr ""
+msgstr "Siçanı fokusa gətirmək"
 
 #: kcmaccess.cpp:213
 #, kde-format
 msgid "Move Mouse to Center"
-msgstr ""
+msgstr "Siçanı mərkəzə gətirmək"
 
 #: kcmaccess.cpp:256
 #, kde-format
@@ -142,31 +143,27 @@ msgstr "Sistem rənglərini səs siqnalına çevirmək"
 
 #. i18n: ectx: label, entry (VisibleBellColor), group (Bell)
 #: kcmaccessibilitybell.kcfg:28
-#, fuzzy, kde-format
-#| msgid "Color of the Visible Bell"
+#, kde-format
 msgid "Color of the Visual Bell"
-msgstr "Vizual Siqnalın Rəngi"
+msgstr "Vizual siqnal rəngi"
 
 #. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
 #: kcmaccessibilitybell.kcfg:32
-#, fuzzy, kde-format
-#| msgid "Duration of the Visible Bell"
+#, kde-format
 msgid "Duration of the Visual Bell"
-msgstr "Vizual Siqnalın Müddəti"
+msgstr "Vizual siqnal müddəti"
 
 #. i18n: ectx: label, entry (ColorblindnessCorrection), group (Plugins)
 #: kcmaccessibilitycolorblindnesscorrection.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether Colorblindness Correction is enabled"
-msgstr "Kursoru silkələmənin aktiv olub-olmaması"
+msgstr "Rəng korluğu funksiyasının aktiv olub-olmaması"
 
 #. i18n: ectx: label, entry (Invert), group (Plugins)
 #: kcmaccessibilityinvert.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Invert effect is enabled"
-msgstr "Kursoru silkələmənin aktiv olub-olmaması"
+msgstr "Rəng çevirməsi effektininn aktiv olub-olmaması"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
@@ -308,28 +305,24 @@ msgstr "Böyütmə"
 
 #. i18n: ectx: label, entry (Zoom), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Zoom effect is enabled"
-msgstr "Kursoru silkələmənin aktiv olub-olmaması"
+msgstr "miqyas effektinin aktiv olub-olmaması"
 
 #. i18n: ectx: label, entry (Magnifier), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Magnifier effect is enabled"
-msgstr "Kursoru silkələmənin aktiv olub-olmaması"
+msgstr "Böyüdücü effektinin aktiv olub-olmaması"
 
 #: ui/ActivationShortcuts.qml:18
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgctxt "@option:check"
 msgid "Activation shortcuts:"
-msgstr "Aktivetmə Jestləri"
+msgstr "Aktivetmə qısayolları:"
 
 #: ui/ActivationShortcuts.qml:19
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "Enable activation shortcuts"
 msgid "Enable"
 msgstr "Aktiv etmək"
@@ -338,20 +331,20 @@ msgstr "Aktiv etmək"
 #, kde-format
 msgctxt "@label"
 msgid "Press Shift 5 times to enable Sticky Keys"
-msgstr ""
+msgstr "Yapışqan düymələri aktiv etmək üçün Shift düyməsinə 5 dəfə vurun"
 
 #: ui/ActivationShortcuts.qml:38
 #, kde-format
 msgctxt "@label"
 msgid "Hold Shift for 8 seconds to enable Slow Keys"
 msgstr ""
+"Yavaş düymələri aktiv etmək üçün Shift düyməsini 8 saniyə basılı saxlayın"
 
 #: ui/ActivationShortcuts.qml:47
-#, fuzzy, kde-format
-#| msgid "Turn sticky keys and slow keys off after inactivity:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable sticky and slow keys after:"
-msgstr "Qeyri-aktiv olduqdan sonra yapışqan və yavaş düymələri söndürmək:"
+msgstr "Yapışqan və yavaş düymələrin sönmə vaxtı:"
 
 #: ui/ActivationShortcuts.qml:71
 #, kde-format
@@ -361,8 +354,7 @@ msgstr[0] "%1 dəq"
 msgstr[1] "%1 dəq"
 
 #: ui/ActivationShortcuts.qml:80
-#, fuzzy, kde-format
-#| msgid "min"
+#, kde-format
 msgctxt "short for minute(s)"
 msgid "min"
 msgid_plural "min"
@@ -370,10 +362,9 @@ msgstr[0] "dəq"
 msgstr[1] "dəq"
 
 #: ui/ActivationShortcuts.qml:89
-#, fuzzy, kde-format
-#| msgid "When a gesture is used:"
+#, kde-format
 msgid "When a shortcut is used:"
-msgstr "Jest istifadə edildikdə:"
+msgstr "Qısayol istifadə edildikdə:"
 
 #: ui/ActivationShortcuts.qml:90
 #, kde-format
@@ -381,10 +372,9 @@ msgid "Display a confirmation dialog"
 msgstr "Təsdiqləmə dialoqunu göstərmək"
 
 #: ui/ActivationShortcuts.qml:101
-#, fuzzy, kde-format
-#| msgid "Ring the System Bell"
+#, kde-format
 msgid "Ring the system bell"
-msgstr "Sistem səs siqnalını istiafadə etmək"
+msgstr "Sistemin zəngini səsləndirmək"
 
 #: ui/ActivationShortcuts.qml:112
 #, kde-format
@@ -402,12 +392,10 @@ msgid "Please choose an audio file"
 msgstr "Səs faylını seçin"
 
 #: ui/Bell.qml:21
-#, fuzzy, kde-format
-#| msgctxt "Name filters in a file dialog"
-#| msgid "Audio Files (*.ogg *.wav)"
+#, kde-format
 msgctxt "Name filters in a file dialog. Do not translate `(*.ogg *.oga *.wav)`"
 msgid "ogg, oga, and wav audio files (*.ogg *.oga *.wav)"
-msgstr "Səs faylları (*.ogg *.wav)"
+msgstr "ogg, oga, və wav səs faylları (*.ogg *.oga *.wav)"
 
 #: ui/Bell.qml:30
 #, kde-format
@@ -448,19 +436,16 @@ msgid "Enable"
 msgstr "Aktiv etmək"
 
 #: ui/Bell.qml:107
-#, fuzzy, kde-format
-#| msgctxt "Invert screen on a system bell"
-#| msgid "Invert Screen"
+#, kde-format
 msgctxt "@option:radio Invert screen colors when a system bell is rung"
 msgid "Invert screen colors"
-msgstr "Ekranın əksi"
+msgstr "Ekranın rəngini çevirmək"
 
 #: ui/Bell.qml:125
-#, fuzzy, kde-format
-#| msgid "F&lash screen"
+#, kde-format
 msgctxt "@option:radio Flash screen when a system bell is rung"
 msgid "Flash screen"
-msgstr "E&kranın sayrışması"
+msgstr "Ekranın sayrışması"
 
 #: ui/Bell.qml:136
 #, kde-format
@@ -477,9 +462,7 @@ msgstr "Müddəti:"
 #: ui/Bell.qml:165 ui/KeyboardFilters.qml:56 ui/KeyboardFilters.qml:157
 #: ui/MouseNavigation.qml:53 ui/MouseNavigation.qml:84
 #: ui/MouseNavigation.qml:110
-#, fuzzy, kde-format
-#| msgid "%1 min"
-#| msgid_plural "%1 min"
+#, kde-format
 msgid "%1 ms"
 msgid_plural "%1 ms"
 msgstr[0] "%1 dəq"
@@ -492,7 +475,7 @@ msgstr[1] "%1 dəq"
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
-msgstr[0] ""
+msgstr[0] "msan"
 msgstr[1] ""
 
 #: ui/ColorblindnessCorrection.qml:21
@@ -502,10 +485,11 @@ msgid ""
 "If you have trouble with certain colors on the screen, these filters can "
 "change them into other colors."
 msgstr ""
+"Əgər ekrandakı müəyyən rəng ilə çətinliyiniz varsa bu süzgəc onu başqa "
+"rənglər ilə əvəzləyə bilər."
 
 #: ui/ColorblindnessCorrection.qml:31
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable color blindness correction effect"
 msgid "Enable"
 msgstr "Aktiv etmək"
@@ -515,85 +499,84 @@ msgstr "Aktiv etmək"
 msgctxt ""
 "@label:listbox Difficulty seeing any of the following colors on the screen"
 msgid "Problematic colors:"
-msgstr ""
+msgstr "Problemli rənglər"
 
 #: ui/ColorblindnessCorrection.qml:49
 #, kde-format
 msgctxt "@option"
 msgid "Red & purple (Protanopia)"
-msgstr ""
+msgstr "Qırmızı və bənövşəyi (Protanopiya)"
 
 #: ui/ColorblindnessCorrection.qml:50
 #, kde-format
 msgctxt "@option"
 msgid "Green & purple (Deuteranopia)"
-msgstr ""
+msgstr "Yaşıl və bənövşəyi (Deyteranopiya)"
 
 #: ui/ColorblindnessCorrection.qml:51
 #, kde-format
 msgctxt "@option"
 msgid "Yellow, green & purple (Tritanopia)"
-msgstr ""
+msgstr "Sarı, yaşıl və bənövşəyi (Tritanopiya)"
 
 #: ui/ColorblindnessCorrection.qml:52
 #, kde-format
 msgctxt "@option"
 msgid "All (grayscale mode)"
-msgstr ""
+msgstr "Hamısı (boz çalar)"
 
 #: ui/ColorblindnessCorrection.qml:67
 #, kde-format
 msgctxt "@label"
 msgid "Intensity:"
-msgstr ""
+msgstr "Sıxlığı:"
 
 #: ui/ColorblindnessCorrection.qml:90
 #, kde-format
 msgctxt "@label Mild color blindness correction intensity"
 msgid "Mild"
-msgstr ""
+msgstr "Mülayim"
 
 #: ui/ColorblindnessCorrection.qml:97
 #, kde-format
 msgctxt "@label Intense color blindness correction intensity"
 msgid "Intense"
-msgstr ""
+msgstr "Yüksək"
 
 #: ui/ColorblindnessCorrection.qml:115
 #, kde-format
 msgctxt "@info"
 msgid "Adjusted colors:"
-msgstr ""
+msgstr "Tənzimlənən rənglər:"
 
 #: ui/ColorblindnessCorrection.qml:132
 #, kde-format
 msgid "Reds:"
-msgstr ""
+msgstr "Qırmızı:"
 
 #: ui/ColorblindnessCorrection.qml:133
 #, kde-format
 msgid "Greens:"
-msgstr ""
+msgstr "Yaşıl tonlar:"
 
 #: ui/ColorblindnessCorrection.qml:134
 #, kde-format
 msgid "Blues:"
-msgstr ""
+msgstr "Mavi tonlar:"
 
 #: ui/ColorblindnessCorrection.qml:135
 #, kde-format
 msgid "Purples:"
-msgstr ""
+msgstr "Bənövşəyi tonlar:"
 
 #: ui/Invert.qml:22
 #, kde-format
 msgctxt "@label"
 msgid "Invert:"
-msgstr ""
+msgstr "Rəng çevirməsi:"
 
 #: ui/Invert.qml:23
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable invert effect"
 msgid "Enable"
 msgstr "Aktiv etmək"
@@ -603,13 +586,14 @@ msgstr "Aktiv etmək"
 msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
 msgstr ""
+"Ekranın və pəncərənin rənglərinin tərsinə çevrilməsi üçün qısayollardan "
+"istifadə"
 
 #: ui/Invert.qml:49 ui/ZoomMagnifier.qml:321
-#, fuzzy, kde-format
-#| msgid "Configure Notifications…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Shortcuts…"
-msgstr "Bildirişlərin Tənzimlənməsi..."
+msgstr "Qısayolları ayarlamaq..."
 
 #: ui/KeyboardFilters.qml:18
 #, kde-format
@@ -630,6 +614,9 @@ msgid ""
 "Useful if you accidentally type more than one key at a time or have "
 "difficulty pressing the key you want the first time."
 msgstr ""
+"Düymənin qəbul edilməsi üçün o, verilmiş vaxt müddətində basılı "
+"tutulmalıdır. Bu, təsadüfən eyni anda bir neçə düyməni basdığınız və ya "
+"lazımi düyməni ilk dəfə basmaqda çətinlik çəkdiyiniz zaman faydalı ola bilər."
 
 #: ui/KeyboardFilters.qml:41
 #, kde-format
