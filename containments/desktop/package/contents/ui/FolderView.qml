@@ -1273,7 +1273,6 @@ FocusScope {
                 const axis = rows ? gridView.width : gridView.height;
                 const step = rows ? gridView.cellWidth : gridView.cellHeight;
                 positioner.perStripe = Math.floor(axis / step);
-                positioner.loadAndApplyPositionsConfig();
             }
 
             onMove: (x, y, urls) => {
