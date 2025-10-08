@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-03 02:41+0000\n"
+"POT-Creation-Date: 2025-10-08 02:39+0000\n"
 "PO-Revision-Date: 2025-08-02 11:45+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -413,7 +413,7 @@ msgstr "Eliminar"
 msgid "Preview Plugins"
 msgstr "Complementos de vista previa"
 
-#: package/contents/ui/FolderView.qml:1229
+#: package/contents/ui/FolderView.qml:1231
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -423,7 +423,7 @@ msgstr ""
 "Hay muchos archivos y carpetas en el escritorio. Esto puede ocasionar fallos "
 "y problemas de rendimiento. Considere mover algunos de ellos a otro lugar."
 
-#: package/contents/ui/FolderViewDialog.qml:87
+#: package/contents/ui/FolderViewDialog.qml:90
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Folder is empty"
@@ -439,17 +439,17 @@ msgstr "Escritorio e imagen de fondo"
 msgid "Select Folder"
 msgstr "Seleccionar carpeta"
 
-#: plugins/folder/foldermodel.cpp:519
+#: plugins/folder/foldermodel.cpp:532
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "&Refrescar el escritorio"
 
-#: plugins/folder/foldermodel.cpp:519 plugins/folder/foldermodel.cpp:1735
+#: plugins/folder/foldermodel.cpp:532 plugins/folder/foldermodel.cpp:1748
 #, kde-format
 msgid "&Refresh View"
 msgstr "&Refrescar vista"
 
-#: plugins/folder/foldermodel.cpp:878
+#: plugins/folder/foldermodel.cpp:891
 #, kde-format
 msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
@@ -457,7 +457,7 @@ msgctxt ""
 msgid "Link Target Not Found"
 msgstr "Destino de enlace no encontrado"
 
-#: plugins/folder/foldermodel.cpp:880
+#: plugins/folder/foldermodel.cpp:893
 #, kde-kuit-format
 msgctxt "@info Body text of a system notification"
 msgid ""
@@ -467,23 +467,23 @@ msgstr ""
 "<filename>%1</filename> apunta a <filename>%2</filename>, pero este último "
 "no se ha encontrado. Es posible que se haya movido o borrado."
 
-#: plugins/folder/foldermodel.cpp:1744
+#: plugins/folder/foldermodel.cpp:1757
 #, kde-format
 msgid "&Empty Trash"
 msgstr "Vaciar la pap&elera"
 
-#: plugins/folder/foldermodel.cpp:1747
+#: plugins/folder/foldermodel.cpp:1760
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr "Restaurar a la ubicación anterior"
 
-#: plugins/folder/foldermodel.cpp:1750
+#: plugins/folder/foldermodel.cpp:1763
 #, kde-format
 msgid "&Open"
 msgstr "&Abrir"
 
-#: plugins/folder/foldermodel.cpp:1754
+#: plugins/folder/foldermodel.cpp:1767
 #, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -491,23 +491,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Mostrar destino"
 
-#: plugins/folder/foldermodel.cpp:1850
+#: plugins/folder/foldermodel.cpp:1868
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr "Eliminar el icono de la papelera"
 
-#: plugins/folder/foldermodel.cpp:1853
+#: plugins/folder/foldermodel.cpp:1871
 #, kde-format
 msgid "&Move to Trash"
 msgstr "&Mover a la Papelera"
 
-#: plugins/folder/foldermodel.cpp:1886
+#: plugins/folder/foldermodel.cpp:1904
 #, kde-format
 msgid "&Paste"
 msgstr "&Pegar"
 
-#: plugins/folder/foldermodel.cpp:2037
+#: plugins/folder/foldermodel.cpp:2055
 #, kde-format
 msgid "&Properties"
 msgstr "&Propiedades"

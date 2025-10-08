@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-03 02:41+0000\n"
+"POT-Creation-Date: 2025-10-08 02:39+0000\n"
 "PO-Revision-Date: 2025-09-03 18:39+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -412,7 +412,7 @@ msgstr "Poista"
 msgid "Preview Plugins"
 msgstr "Esikatseluliitännäiset"
 
-#: package/contents/ui/FolderView.qml:1229
+#: package/contents/ui/FolderView.qml:1231
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -422,7 +422,7 @@ msgstr ""
 "Työpöydällä on paljon tiedostoja ja kansioita. Tämä voi aiheuttaa virheitä "
 "ja suorituskykyongelmia. Harkitse niiden siirtämistä muualle."
 
-#: package/contents/ui/FolderViewDialog.qml:87
+#: package/contents/ui/FolderViewDialog.qml:90
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Folder is empty"
@@ -438,17 +438,17 @@ msgstr "Työpöytä ja tausta"
 msgid "Select Folder"
 msgstr "Valitse kansio"
 
-#: plugins/folder/foldermodel.cpp:519
+#: plugins/folder/foldermodel.cpp:532
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "&Päivitä työpöytä"
 
-#: plugins/folder/foldermodel.cpp:519 plugins/folder/foldermodel.cpp:1735
+#: plugins/folder/foldermodel.cpp:532 plugins/folder/foldermodel.cpp:1748
 #, kde-format
 msgid "&Refresh View"
 msgstr "&Päivitä näkymä"
 
-#: plugins/folder/foldermodel.cpp:878
+#: plugins/folder/foldermodel.cpp:891
 #, kde-format
 msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
@@ -456,7 +456,7 @@ msgctxt ""
 msgid "Link Target Not Found"
 msgstr "Linkin kohdetta ei löydy"
 
-#: plugins/folder/foldermodel.cpp:880
+#: plugins/folder/foldermodel.cpp:893
 #, kde-kuit-format
 msgctxt "@info Body text of a system notification"
 msgid ""
@@ -466,23 +466,23 @@ msgstr ""
 "<filename>%1</filename> osoittaa tiedostoon <filename>%2</filename>, jota ei "
 "löydy. Se on ehkä siirretty tai poistettu."
 
-#: plugins/folder/foldermodel.cpp:1744
+#: plugins/folder/foldermodel.cpp:1757
 #, kde-format
 msgid "&Empty Trash"
 msgstr "&Tyhjennä roskakori"
 
-#: plugins/folder/foldermodel.cpp:1747
+#: plugins/folder/foldermodel.cpp:1760
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr "Palauta aiempaan sijaintiin"
 
-#: plugins/folder/foldermodel.cpp:1750
+#: plugins/folder/foldermodel.cpp:1763
 #, kde-format
 msgid "&Open"
 msgstr "&Avaa"
 
-#: plugins/folder/foldermodel.cpp:1754
+#: plugins/folder/foldermodel.cpp:1767
 #, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -490,23 +490,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Näytä kohde"
 
-#: plugins/folder/foldermodel.cpp:1850
+#: plugins/folder/foldermodel.cpp:1868
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr "Poista roskakorikuvake"
 
-#: plugins/folder/foldermodel.cpp:1853
+#: plugins/folder/foldermodel.cpp:1871
 #, kde-format
 msgid "&Move to Trash"
 msgstr "Siirrä &roskakoriin"
 
-#: plugins/folder/foldermodel.cpp:1886
+#: plugins/folder/foldermodel.cpp:1904
 #, kde-format
 msgid "&Paste"
 msgstr "&Liitä"
 
-#: plugins/folder/foldermodel.cpp:2037
+#: plugins/folder/foldermodel.cpp:2055
 #, kde-format
 msgid "&Properties"
 msgstr "&Ominaisuudet"
