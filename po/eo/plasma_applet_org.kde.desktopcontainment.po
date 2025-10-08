@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-03 00:45+0000\n"
+"POT-Creation-Date: 2025-10-08 00:45+0000\n"
 "PO-Revision-Date: 2025-03-22 22:36+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: eo <kde-i18n-doc@kde.org>\n"
@@ -431,7 +431,7 @@ msgstr "Forigi"
 msgid "Preview Plugins"
 msgstr "Antaŭrigardaj Kromprogramoj"
 
-#: package/contents/ui/FolderView.qml:1229
+#: package/contents/ui/FolderView.qml:1231
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -442,7 +442,7 @@ msgstr ""
 "cimojn kaj rendimentajn problemojn. Bonvolu konsideri movi kelkajn el ili "
 "aliloken."
 
-#: package/contents/ui/FolderViewDialog.qml:87
+#: package/contents/ui/FolderViewDialog.qml:90
 #, fuzzy, kde-format
 #| msgctxt "@option:check sort icons with folders first"
 #| msgid "Folders first"
@@ -460,17 +460,17 @@ msgstr "Labortablo kaj Ekranfono"
 msgid "Select Folder"
 msgstr "Elekti Dosierujon"
 
-#: plugins/folder/foldermodel.cpp:519
+#: plugins/folder/foldermodel.cpp:532
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "&Aktualigi labortablon"
 
-#: plugins/folder/foldermodel.cpp:519 plugins/folder/foldermodel.cpp:1735
+#: plugins/folder/foldermodel.cpp:532 plugins/folder/foldermodel.cpp:1748
 #, kde-format
 msgid "&Refresh View"
 msgstr "&Aktualigi vidon"
 
-#: plugins/folder/foldermodel.cpp:878
+#: plugins/folder/foldermodel.cpp:891
 #, kde-format
 msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
@@ -478,7 +478,7 @@ msgctxt ""
 msgid "Link Target Not Found"
 msgstr "Celo de Ligilo ne Troviĝis"
 
-#: plugins/folder/foldermodel.cpp:880
+#: plugins/folder/foldermodel.cpp:893
 #, kde-kuit-format
 msgctxt "@info Body text of a system notification"
 msgid ""
@@ -488,23 +488,23 @@ msgstr ""
 "<filename>%1</filename> montras al <filename>%2</filename>, sed ne eblis "
 "trovi tiun. Ĝi eble estis movita aŭ forigita."
 
-#: plugins/folder/foldermodel.cpp:1744
+#: plugins/folder/foldermodel.cpp:1757
 #, kde-format
 msgid "&Empty Trash"
 msgstr "Malpl&enigi Rubujon"
 
-#: plugins/folder/foldermodel.cpp:1747
+#: plugins/folder/foldermodel.cpp:1760
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr "Restaŭri al Antaŭa Loko"
 
-#: plugins/folder/foldermodel.cpp:1750
+#: plugins/folder/foldermodel.cpp:1763
 #, kde-format
 msgid "&Open"
 msgstr "&Malfermi"
 
-#: plugins/folder/foldermodel.cpp:1754
+#: plugins/folder/foldermodel.cpp:1767
 #, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -512,23 +512,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Montri Celon"
 
-#: plugins/folder/foldermodel.cpp:1850
+#: plugins/folder/foldermodel.cpp:1868
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr "Forigi Piktogramon de Rubujo"
 
-#: plugins/folder/foldermodel.cpp:1853
+#: plugins/folder/foldermodel.cpp:1871
 #, kde-format
 msgid "&Move to Trash"
 msgstr "&Movi al Rubujo"
 
-#: plugins/folder/foldermodel.cpp:1886
+#: plugins/folder/foldermodel.cpp:1904
 #, kde-format
 msgid "&Paste"
 msgstr "&Alglui"
 
-#: plugins/folder/foldermodel.cpp:2037
+#: plugins/folder/foldermodel.cpp:2055
 #, kde-format
 msgid "&Properties"
 msgstr "&Ecoj"

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-25 00:44+0000\n"
-"PO-Revision-Date: 2025-10-06 21:59+0400\n"
+"PO-Revision-Date: 2025-10-08 03:15+0400\n"
 "Last-Translator: linux <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
@@ -666,6 +666,8 @@ msgid ""
 "tremors that cause you to press a key multiple times when you only intend to "
 "press once."
 msgstr ""
+"Eyni düymənin sürətli və təkrar basılmasını yox sayır. Əllərin titrəməsi "
+"səbəbilə bir düyməni təsadüfən bir neçə dəfə basanlar üçün faydalıdır."
 
 #: ui/KeyboardFilters.qml:142
 #, kde-format
@@ -682,14 +684,13 @@ msgstr "Düymə basılması rədd edildiyində sistem siqnalı"
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Zoom & Magnifier"
-msgstr ""
+msgstr "Miqyas və böyüdücü"
 
 #: ui/main.qml:33
-#, fuzzy, kde-format
-#| msgid "Use System Bell"
+#, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "System Bell"
-msgstr "Sistem səs siqnalını istiafadə etmək"
+msgstr "Sistem siqnalı"
 
 #: ui/main.qml:38
 #, kde-format
@@ -710,10 +711,9 @@ msgid "Mouse Navigation"
 msgstr "Siçan Naviqasiyası"
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgid "Activation Gestures"
+#, kde-format
 msgid "Activation Shortcuts"
-msgstr "Aktivetmə Jestləri"
+msgstr "Aktivetmə qısa yolları"
 
 #: ui/main.qml:58
 #, kde-format
@@ -725,13 +725,13 @@ msgstr "Ekran Oxuyucu"
 #, kde-format
 msgctxt "Correction for color blindness"
 msgid "Color Blindness Correction"
-msgstr ""
+msgstr "Rəng korluğu düzəlişi"
 
 #: ui/main.qml:68
 #, kde-format
 msgctxt "@title Category name in sidebar, for inverting screen colors"
 msgid "Invert"
-msgstr ""
+msgstr "Tərsinə çevirmək"
 
 #: ui/main.qml:73
 #, kde-format
@@ -740,18 +740,16 @@ msgid "Shake Cursor"
 msgstr "Kursoru silkələmək"
 
 #: ui/ModifierKeys.qml:17
-#, fuzzy, kde-format
-#| msgid "Sticky keys:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sticky keys:"
-msgstr "Yapışqan Düymələr:"
+msgstr "Yapışan düymələr:"
 
 #: ui/ModifierKeys.qml:22
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable sticky keys"
 msgid "Enable"
-msgstr "Aktiv etmək"
+msgstr "Aktiv edin"
 
 #: ui/ModifierKeys.qml:33
 #, kde-format

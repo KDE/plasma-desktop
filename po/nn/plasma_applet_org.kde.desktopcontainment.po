@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-03 00:45+0000\n"
+"POT-Creation-Date: 2025-10-08 00:45+0000\n"
 "PO-Revision-Date: 2024-05-15 20:45+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -432,7 +432,7 @@ msgstr "Fjern"
 msgid "Preview Plugins"
 msgstr "Tillegg for førehandsvising"
 
-#: package/contents/ui/FolderView.qml:1229
+#: package/contents/ui/FolderView.qml:1231
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -442,7 +442,7 @@ msgstr ""
 "Du har mange filer og mapper på skrivebordet. Dette kan føra til feil og "
 "dårleg yting. Vurder derfor å flytta nokre av filene/mappene ein annan stad."
 
-#: package/contents/ui/FolderViewDialog.qml:87
+#: package/contents/ui/FolderViewDialog.qml:90
 #, fuzzy, kde-format
 #| msgctxt "@option:check sort icons with folders first"
 #| msgid "Folders first"
@@ -461,17 +461,17 @@ msgstr "Skrivebord og bakgrunn"
 msgid "Select Folder"
 msgstr "Vel mappe"
 
-#: plugins/folder/foldermodel.cpp:519
+#: plugins/folder/foldermodel.cpp:532
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "&Last skrivebordet om att"
 
-#: plugins/folder/foldermodel.cpp:519 plugins/folder/foldermodel.cpp:1735
+#: plugins/folder/foldermodel.cpp:532 plugins/folder/foldermodel.cpp:1748
 #, kde-format
 msgid "&Refresh View"
 msgstr "&Last visinga om att"
 
-#: plugins/folder/foldermodel.cpp:878
+#: plugins/folder/foldermodel.cpp:891
 #, kde-format
 msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
@@ -479,7 +479,7 @@ msgctxt ""
 msgid "Link Target Not Found"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:880
+#: plugins/folder/foldermodel.cpp:893
 #, kde-kuit-format
 msgctxt "@info Body text of a system notification"
 msgid ""
@@ -487,23 +487,23 @@ msgid ""
 "not be found. It may have been moved or deleted."
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1744
+#: plugins/folder/foldermodel.cpp:1757
 #, kde-format
 msgid "&Empty Trash"
 msgstr "&Tøm papirkorga"
 
-#: plugins/folder/foldermodel.cpp:1747
+#: plugins/folder/foldermodel.cpp:1760
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1750
+#: plugins/folder/foldermodel.cpp:1763
 #, kde-format
 msgid "&Open"
 msgstr "&Opna"
 
-#: plugins/folder/foldermodel.cpp:1754
+#: plugins/folder/foldermodel.cpp:1767
 #, fuzzy, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -511,23 +511,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Vis alle"
 
-#: plugins/folder/foldermodel.cpp:1850
+#: plugins/folder/foldermodel.cpp:1868
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1853
+#: plugins/folder/foldermodel.cpp:1871
 #, fuzzy, kde-format
 msgid "&Move to Trash"
 msgstr "&Tøm papirkorga"
 
-#: plugins/folder/foldermodel.cpp:1886
+#: plugins/folder/foldermodel.cpp:1904
 #, kde-format
 msgid "&Paste"
 msgstr "&Lim inn"
 
-#: plugins/folder/foldermodel.cpp:2037
+#: plugins/folder/foldermodel.cpp:2055
 #, kde-format
 msgid "&Properties"
 msgstr "&Eigenskapar"

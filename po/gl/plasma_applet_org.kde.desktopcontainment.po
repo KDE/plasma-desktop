@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-03 00:45+0000\n"
+"POT-Creation-Date: 2025-10-08 00:45+0000\n"
 "PO-Revision-Date: 2025-05-17 13:22+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -420,7 +420,7 @@ msgstr "Retirar"
 msgid "Preview Plugins"
 msgstr "Vistas previas dos complementos"
 
-#: package/contents/ui/FolderView.qml:1229
+#: package/contents/ui/FolderView.qml:1231
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -430,7 +430,7 @@ msgstr ""
 "Hai moitos ficheiros e cartafoles no escritorio. Isto pode causar fallos e "
 "problemas de rendemento. Baralle mover algúns a outra parte."
 
-#: package/contents/ui/FolderViewDialog.qml:87
+#: package/contents/ui/FolderViewDialog.qml:90
 #, fuzzy, kde-format
 #| msgctxt "@option:check sort icons with folders first"
 #| msgid "Folders first"
@@ -448,17 +448,17 @@ msgstr "Escritorio e fondo"
 msgid "Select Folder"
 msgstr "Seleccionar o cartafol"
 
-#: plugins/folder/foldermodel.cpp:519
+#: plugins/folder/foldermodel.cpp:532
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "&Actualizar o escritorio"
 
-#: plugins/folder/foldermodel.cpp:519 plugins/folder/foldermodel.cpp:1735
+#: plugins/folder/foldermodel.cpp:532 plugins/folder/foldermodel.cpp:1748
 #, kde-format
 msgid "&Refresh View"
 msgstr "&Actualizar a vista"
 
-#: plugins/folder/foldermodel.cpp:878
+#: plugins/folder/foldermodel.cpp:891
 #, kde-format
 msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
@@ -466,7 +466,7 @@ msgctxt ""
 msgid "Link Target Not Found"
 msgstr "Non se atopou o destino da ligazón"
 
-#: plugins/folder/foldermodel.cpp:880
+#: plugins/folder/foldermodel.cpp:893
 #, kde-kuit-format
 msgctxt "@info Body text of a system notification"
 msgid ""
@@ -476,23 +476,23 @@ msgstr ""
 "<filename>%1</filename> apunta a <filename>%2</filename>, que non se atopou. "
 "Pode que se movese ou eliminase."
 
-#: plugins/folder/foldermodel.cpp:1744
+#: plugins/folder/foldermodel.cpp:1757
 #, kde-format
 msgid "&Empty Trash"
 msgstr "Bal&eirar o lixo"
 
-#: plugins/folder/foldermodel.cpp:1747
+#: plugins/folder/foldermodel.cpp:1760
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr "Restaurar na localización orixinal"
 
-#: plugins/folder/foldermodel.cpp:1750
+#: plugins/folder/foldermodel.cpp:1763
 #, kde-format
 msgid "&Open"
 msgstr "&Abrir"
 
-#: plugins/folder/foldermodel.cpp:1754
+#: plugins/folder/foldermodel.cpp:1767
 #, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -500,23 +500,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Amosar o destino"
 
-#: plugins/folder/foldermodel.cpp:1850
+#: plugins/folder/foldermodel.cpp:1868
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr "Retirar a icona do lixo"
 
-#: plugins/folder/foldermodel.cpp:1853
+#: plugins/folder/foldermodel.cpp:1871
 #, kde-format
 msgid "&Move to Trash"
 msgstr "&Botar no lixo"
 
-#: plugins/folder/foldermodel.cpp:1886
+#: plugins/folder/foldermodel.cpp:1904
 #, kde-format
 msgid "&Paste"
 msgstr "&Pegar"
 
-#: plugins/folder/foldermodel.cpp:2037
+#: plugins/folder/foldermodel.cpp:2055
 #, kde-format
 msgid "&Properties"
 msgstr "&Propiedades"

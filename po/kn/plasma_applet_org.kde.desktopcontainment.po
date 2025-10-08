@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-03 00:45+0000\n"
+"POT-Creation-Date: 2025-10-08 00:45+0000\n"
 "PO-Revision-Date: 2010-01-12 21:50+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <kde-l10n-kn@kde.org>\n"
@@ -463,7 +463,7 @@ msgstr ""
 msgid "Preview Plugins"
 msgstr "ಮುನ್ನೋಟಗಳು:"
 
-#: package/contents/ui/FolderView.qml:1229
+#: package/contents/ui/FolderView.qml:1231
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -471,7 +471,7 @@ msgid ""
 "performance issues. Please consider moving some of them elsewhere."
 msgstr ""
 
-#: package/contents/ui/FolderViewDialog.qml:87
+#: package/contents/ui/FolderViewDialog.qml:90
 #, fuzzy, kde-format
 #| msgid "This folder is empty."
 msgctxt "@info:placeholder"
@@ -490,17 +490,17 @@ msgstr "ಗಣಕತೆರೆಯನ್ನು ಪುನಶ್ಚೇತನಗೊ�
 msgid "Select Folder"
 msgstr "ಎಲ್ಲವನ್ನೂ ಆರಿಸು"
 
-#: plugins/folder/foldermodel.cpp:519
+#: plugins/folder/foldermodel.cpp:532
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "ಗಣಕತೆರೆಯನ್ನು ಪುನಶ್ಚೇತನಗೊಳಿಸು(&R)"
 
-#: plugins/folder/foldermodel.cpp:519 plugins/folder/foldermodel.cpp:1735
+#: plugins/folder/foldermodel.cpp:532 plugins/folder/foldermodel.cpp:1748
 #, kde-format
 msgid "&Refresh View"
 msgstr "ನೋಟವನ್ನು ಪುನಶ್ಚೇತನಗೊಳಿಸು(&R)"
 
-#: plugins/folder/foldermodel.cpp:878
+#: plugins/folder/foldermodel.cpp:891
 #, kde-format
 msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
@@ -508,7 +508,7 @@ msgctxt ""
 msgid "Link Target Not Found"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:880
+#: plugins/folder/foldermodel.cpp:893
 #, kde-kuit-format
 msgctxt "@info Body text of a system notification"
 msgid ""
@@ -516,24 +516,24 @@ msgid ""
 "not be found. It may have been moved or deleted."
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1744
+#: plugins/folder/foldermodel.cpp:1757
 #, fuzzy, kde-format
 #| msgid "&Empty Trash Bin"
 msgid "&Empty Trash"
 msgstr "ಕಸಬುಟ್ಟಿಯನ್ನು ಖಾಲಿಮಾಡು (&E)"
 
-#: plugins/folder/foldermodel.cpp:1747
+#: plugins/folder/foldermodel.cpp:1760
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1750
+#: plugins/folder/foldermodel.cpp:1763
 #, kde-format
 msgid "&Open"
 msgstr "(&ತ)ತೆರೆ"
 
-#: plugins/folder/foldermodel.cpp:1754
+#: plugins/folder/foldermodel.cpp:1767
 #, fuzzy, kde-format
 #| msgid "Show a place:"
 msgctxt ""
@@ -542,23 +542,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "ಸ್ಥಳವನ್ನು ತೋರಿಸು:"
 
-#: plugins/folder/foldermodel.cpp:1850
+#: plugins/folder/foldermodel.cpp:1868
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr ""
 
-#: plugins/folder/foldermodel.cpp:1853
+#: plugins/folder/foldermodel.cpp:1871
 #, kde-format
 msgid "&Move to Trash"
 msgstr "ಕಸದ ಬುಟ್ಟಿಗೆ ಸ್ಥಳಾಂತರಿಸು(&M)"
 
-#: plugins/folder/foldermodel.cpp:1886
+#: plugins/folder/foldermodel.cpp:1904
 #, kde-format
 msgid "&Paste"
 msgstr "ಅಂಟಿಸು(&P)"
 
-#: plugins/folder/foldermodel.cpp:2037
+#: plugins/folder/foldermodel.cpp:2055
 #, kde-format
 msgid "&Properties"
 msgstr "(&ಗ)ಗುಣಗಳು"
