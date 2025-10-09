@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-08 02:39+0000\n"
-"PO-Revision-Date: 2025-07-20 01:37+0200\n"
+"POT-Creation-Date: 2025-10-09 02:42+0000\n"
+"PO-Revision-Date: 2025-10-09 01:18+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -127,39 +127,30 @@ msgid "Arrangement:"
 msgstr "배치:"
 
 #: package/contents/ui/ConfigIcons.qml:127
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Columns"
+#, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "In Columns"
-msgstr "열"
+msgstr "열 우선"
 
 #: package/contents/ui/ConfigIcons.qml:128
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Rows"
+#, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "In Rows"
-msgstr "행"
+msgstr "행 우선"
 
 #: package/contents/ui/ConfigIcons.qml:137
-#, fuzzy, kde-format
-#| msgid "Sorting:"
+#, kde-format
 msgid "Sort Alignment:"
-msgstr "정렬:"
+msgstr "정렬 기준:"
 
 #: package/contents/ui/ConfigIcons.qml:140
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Left to Right"
+#, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Left-to-Right"
 msgstr "왼쪽에서 오른쪽으로"
 
 #: package/contents/ui/ConfigIcons.qml:141
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Right to Left"
+#, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Right-to-Left"
 msgstr "오른쪽에서 왼쪽으로"
@@ -170,10 +161,9 @@ msgid "Lock in place"
 msgstr "위치에 고정"
 
 #: package/contents/ui/ConfigIcons.qml:177
-#, fuzzy, kde-format
-#| msgid "Sort by"
+#, kde-format
 msgid "Sort by:"
-msgstr "정렬 순서"
+msgstr "정렬 순서:"
 
 #: package/contents/ui/ConfigIcons.qml:185
 #, kde-format
@@ -422,7 +412,7 @@ msgstr "삭제"
 msgid "Preview Plugins"
 msgstr "미리 보기 플러그인"
 
-#: package/contents/ui/FolderView.qml:1231
+#: package/contents/ui/FolderView.qml:1233
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -622,38 +612,30 @@ msgid "Arrange"
 msgstr "배열"
 
 #: plugins/folder/viewpropertiesmenu.cpp:70
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu arrangement of icons"
-#| msgid "Columns"
+#, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Columns"
-msgstr "열"
+msgstr "열 우선"
 
 #: plugins/folder/viewpropertiesmenu.cpp:74
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu arrangement of icons"
-#| msgid "Rows"
+#, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Rows"
-msgstr "행"
+msgstr "행 우선"
 
 #: plugins/folder/viewpropertiesmenu.cpp:79
 #, kde-format
 msgid "Sort Alignment"
-msgstr ""
+msgstr "정렬 기준"
 
 #: plugins/folder/viewpropertiesmenu.cpp:83
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Left to Right"
+#, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Left-to-Right"
 msgstr "왼쪽에서 오른쪽으로"
 
 #: plugins/folder/viewpropertiesmenu.cpp:84
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Right to Left"
+#, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Right-to-Left"
 msgstr "오른쪽에서 왼쪽으로"
