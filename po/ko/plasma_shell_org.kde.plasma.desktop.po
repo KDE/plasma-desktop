@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-03 00:45+0000\n"
-"PO-Revision-Date: 2025-06-10 22:36+0200\n"
+"PO-Revision-Date: 2025-10-09 01:19+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -102,19 +102,18 @@ msgstr "%1 웹사이트 열기"
 #, kde-format
 msgctxt "@title:group"
 msgid "Website"
-msgstr ""
+msgstr "웹사이트"
 
 #: contents/configuration/AboutPlugin.qml:154
 #, kde-format
 msgctxt "@title:group"
 msgid "Get Help"
-msgstr ""
+msgstr "도움 받기"
 
 #: contents/configuration/AboutPlugin.qml:162
-#, fuzzy, kde-format
-#| msgid "Report a Bug…"
+#, kde-format
 msgid "Report an issue"
-msgstr "버그 보고…"
+msgstr "문제점 보고"
 
 #: contents/configuration/AboutPlugin.qml:169
 #, kde-format
@@ -122,17 +121,15 @@ msgid "Copyright"
 msgstr "저작권"
 
 #: contents/configuration/AboutPlugin.qml:188
-#, fuzzy, kde-format
-#| msgid "License:"
+#, kde-format
 msgid "License: %1"
-msgstr "라이선스:"
+msgstr "라이선스: %1"
 
 #: contents/configuration/AboutPlugin.qml:194
-#, fuzzy, kde-format
-#| msgid "License:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Read License"
-msgstr "라이선스:"
+msgstr "라이선스 읽기"
 
 #: contents/configuration/AboutPlugin.qml:208
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-04 00:44+0000\n"
-"PO-Revision-Date: 2025-07-20 01:38+0200\n"
+"PO-Revision-Date: 2025-10-09 01:17+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -151,12 +151,10 @@ msgid "pen button %1"
 msgstr "펜 단추 %1"
 
 #: ui/ActionDialog.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@title Select the action for the tablet dial"
-#| msgid "Select Dial Action"
+#, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial/Ring Action"
-msgstr "다이얼 동작 선택"
+msgstr "다이얼/링 동작 선택"
 
 #: ui/ActionDialog.qml:28
 #, kde-format
@@ -241,7 +239,7 @@ msgstr "아래:"
 #: ui/ActionDialog.qml:274
 #, kde-format
 msgid "Speed:"
-msgstr ""
+msgstr "속도:"
 
 #: ui/ActionDialog.qml:289
 #, kde-format
@@ -322,19 +320,15 @@ msgid "Pen Calibration"
 msgstr "펜 조정"
 
 #: ui/Calibration.qml:98
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
-#| "revert to default calibration in %1 seconds.</b>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
 "revert to default calibration in %1 seconds unless further action is taken.</"
 "b>"
 msgstr ""
-"대상을 다시 탭하여 새 조정을 확인하십시오.<nl/><nl/><b>%1초 후 기존 조정으로 "
-"되돌아갑니다.</b>"
+"대상을 다시 탭하여 새 조정을 확인하십시오.<nl/><nl/><b>추가 작업을 수행하지 "
+"않으면 %1초 후 기존 조정으로 되돌아갑니다.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -454,6 +448,9 @@ msgid ""
 "driver to configure the tablet instead of using the settings here, unless "
 "specifically instructed otherwise."
 msgstr ""
+"이 장치는 별도로 설치한 사용자 공간 드라이버에서 관리되고 있습니다. 특별한 경"
+"우가 아니라면 여기에 있는 설정이 아닌 해당 드라이버 설정에서 태블릿을 설정하"
+"십시오."
 
 #: ui/main.qml:104
 #, kde-format
@@ -480,22 +477,17 @@ msgid "Pad"
 msgstr "패드"
 
 #: ui/PadTab.qml:37
-#, fuzzy, kde-format
-#| msgid "Pad dial %1:"
+#, kde-format
 msgid "Pad ring %1:"
-msgstr "패드 다이얼 %1:"
+msgstr "패드 링 %1:"
 
 #: ui/PadTab.qml:60
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pad button 0'"
-#| msgid "pad dial %1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "ring/dial 0'"
 msgid "pad ring/dial %1"
-msgstr "패드 다이얼 %1"
+msgstr "패드 링/다이얼 %1"
 
 #: ui/PadTab.qml:100
 #, kde-format
@@ -673,16 +665,14 @@ msgid "Tablet Tester"
 msgstr "태블릿 시험 도구"
 
 #: ui/Tester.qml:48
-#, fuzzy, kde-format
-#| msgid "Stylus press X=%1 Y=%2"
+#, kde-format
 msgctxt ""
 "A tablet stylus was pressed onto the surface X=[x position] Y=[y position]"
 msgid "Stylus press X=%1 Y=%2"
 msgstr "스타일러스 누름 X=%1 Y=%2"
 
 #: ui/Tester.qml:58
-#, fuzzy, kde-format
-#| msgid "Stylus release X=%1 Y=%2"
+#, kde-format
 msgctxt ""
 "A tablet stylus has 'released' or was lifted from the surface X=[x position] "
 "Y=[y position]"
@@ -690,8 +680,7 @@ msgid "Stylus release X=%1 Y=%2"
 msgstr "스타일러스 놓음 X=%1 Y=%2"
 
 #: ui/Tester.qml:68
-#, fuzzy, kde-format
-#| msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
+#, kde-format
 msgctxt ""
 "A tablet stylus has moved over the surface X=[x position] Y=[y position] "
 "P=[pressure] TX=[tilt x] TY=[tilt y]"
@@ -699,22 +688,19 @@ msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 msgstr "스타일러스 이동 X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
 #: ui/Tester.qml:75
-#, fuzzy, kde-format
-#| msgid "Pad button press B=%1"
+#, kde-format
 msgctxt "A tablet pad's button has been pressed B=[the button number]"
 msgid "Pad button press B=%1"
 msgstr "패드 단추 누름 B=%1"
 
 #: ui/Tester.qml:77
-#, fuzzy, kde-format
-#| msgid "Pad button release B=%1"
+#, kde-format
 msgctxt "A tablet pad's button has been released B=[the button number]"
 msgid "Pad button release B=%1"
 msgstr "패드 단추 놓기 B=%1"
 
 #: ui/Tester.qml:83
-#, fuzzy, kde-format
-#| msgid "Pad dial moved V120=%1"
+#, kde-format
 msgctxt ""
 "A tablet pad's dial has moved, V120 here refers to 'Value 120' which is a "
 "technical term that should be kept as is"
@@ -722,12 +708,7 @@ msgid "Pad dial moved V120=%1"
 msgstr "패드 다이얼 이동됨 V120=%1"
 
 #: ui/Tester.qml:219
-#, fuzzy, kde-format
-#| msgid ""
-#| "## Legend:\n"
-#| "# X, Y - event coordinate\n"
-#| "# P - pressure\n"
-#| "# TX,TY - tilt\n"
+#, kde-format
 msgctxt "The tablet tester legend which is shown on start-up"
 msgid ""
 "## Legend:\n"
@@ -741,9 +722,7 @@ msgstr ""
 "# TX,TY - 기울기\n"
 
 #: ui/Tester.qml:225
-#, fuzzy, kde-format
-#| msgctxt "Clear the event log"
-#| msgid "Clear"
+#, kde-format
 msgctxt "Clear the tablet tester event log"
 msgid "Clear"
 msgstr "지우기"

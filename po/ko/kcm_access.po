@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-25 00:44+0000\n"
-"PO-Revision-Date: 2025-07-20 01:39+0200\n"
+"PO-Revision-Date: 2025-10-09 01:15+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -479,6 +479,8 @@ msgid ""
 "If you have trouble with certain colors on the screen, these filters can "
 "change them into other colors."
 msgstr ""
+"화면에 표시된 특정 색상을 보는 데 문제가 있다면 이 필터를 사용하여 색상을 변"
+"경할 수 있습니다."
 
 #: ui/ColorblindnessCorrection.qml:31
 #, kde-format
@@ -491,31 +493,31 @@ msgstr "활성화"
 msgctxt ""
 "@label:listbox Difficulty seeing any of the following colors on the screen"
 msgid "Problematic colors:"
-msgstr ""
+msgstr "문제가 있는 색상:"
 
 #: ui/ColorblindnessCorrection.qml:49
 #, kde-format
 msgctxt "@option"
 msgid "Red & purple (Protanopia)"
-msgstr ""
+msgstr "빨간색과 보라색(적색약)"
 
 #: ui/ColorblindnessCorrection.qml:50
 #, kde-format
 msgctxt "@option"
 msgid "Green & purple (Deuteranopia)"
-msgstr ""
+msgstr "녹색과 보라색(녹색약)"
 
 #: ui/ColorblindnessCorrection.qml:51
 #, kde-format
 msgctxt "@option"
 msgid "Yellow, green & purple (Tritanopia)"
-msgstr ""
+msgstr "노란색과 녹색, 보라색(청색약)"
 
 #: ui/ColorblindnessCorrection.qml:52
 #, kde-format
 msgctxt "@option"
 msgid "All (grayscale mode)"
-msgstr ""
+msgstr "모두(그레이스케일 모드)"
 
 #: ui/ColorblindnessCorrection.qml:67
 #, kde-format
@@ -539,30 +541,27 @@ msgstr "강함"
 #, kde-format
 msgctxt "@info"
 msgid "Adjusted colors:"
-msgstr ""
+msgstr "조정된 색상:"
 
 #: ui/ColorblindnessCorrection.qml:132
 #, kde-format
 msgid "Reds:"
-msgstr ""
+msgstr "빨간색:"
 
 #: ui/ColorblindnessCorrection.qml:133
-#, fuzzy, kde-format
-#| msgid "Green"
+#, kde-format
 msgid "Greens:"
-msgstr "녹색"
+msgstr "녹색:"
 
 #: ui/ColorblindnessCorrection.qml:134
-#, fuzzy, kde-format
-#| msgid "Blue"
+#, kde-format
 msgid "Blues:"
-msgstr "파란색"
+msgstr "파란색:"
 
 #: ui/ColorblindnessCorrection.qml:135
-#, fuzzy, kde-format
-#| msgid "Purple"
+#, kde-format
 msgid "Purples:"
-msgstr "보라색"
+msgstr "보라색:"
 
 #: ui/Invert.qml:22
 #, kde-format
@@ -580,7 +579,7 @@ msgstr "활성화"
 #, kde-format
 msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
-msgstr ""
+msgstr "디스플레이와 창 색상 전환 단축키 사용"
 
 #: ui/Invert.qml:49 ui/ZoomMagnifier.qml:321
 #, kde-format
@@ -677,7 +676,7 @@ msgstr "거부되었을 때 시스템 벨 울리기"
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Zoom & Magnifier"
-msgstr ""
+msgstr "확대와 돋보기"
 
 #: ui/main.qml:33
 #, kde-format
@@ -724,7 +723,7 @@ msgstr "색각 이상 보정"
 #, kde-format
 msgctxt "@title Category name in sidebar, for inverting screen colors"
 msgid "Invert"
-msgstr ""
+msgstr "반전"
 
 #: ui/main.qml:73
 #, kde-format
@@ -926,15 +925,13 @@ msgstr "크게"
 #, kde-format
 msgctxt "@label, followed by 'full screen' or 'magnify region'"
 msgid "Zoom:"
-msgstr ""
+msgstr "확대/축소:"
 
 #: ui/ZoomMagnifier.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@option:radio Flash screen when a system bell is rung"
-#| msgid "Flash screen"
+#, kde-format
 msgctxt "@option:check, enable zoom effect, following 'Zoom:'"
 msgid "Full screen"
-msgstr "화면 깜박이기"
+msgstr "전체 화면"
 
 #: ui/ZoomMagnifier.qml:53
 #, kde-format
@@ -952,7 +949,7 @@ msgstr "마우스 포인터:"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scale"
-msgstr ""
+msgstr "크기 조정"
 
 #: ui/ZoomMagnifier.qml:87
 #, kde-format
@@ -964,7 +961,7 @@ msgstr "유지"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Hide"
-msgstr ""
+msgstr "숨기기"
 
 #: ui/ZoomMagnifier.qml:98
 #, kde-format
@@ -976,25 +973,25 @@ msgstr "마우스 추적:"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Proportional"
-msgstr ""
+msgstr "비례"
 
 #: ui/ZoomMagnifier.qml:100
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
-msgstr ""
+msgstr "가운데"
 
 #: ui/ZoomMagnifier.qml:100
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Push"
-msgstr ""
+msgstr "밀기"
 
 #: ui/ZoomMagnifier.qml:100
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Disabled"
-msgstr ""
+msgstr "사용 안 함"
 
 #: ui/ZoomMagnifier.qml:111
 #, kde-format
@@ -1006,7 +1003,7 @@ msgstr "포커스 위치 추적 활성화"
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable text caret tracking"
-msgstr ""
+msgstr "텍스트 캐럿 추적 활성화"
 
 #: ui/ZoomMagnifier.qml:134
 #, kde-format
@@ -1018,40 +1015,38 @@ msgstr "스크롤 제스처 수정자 키:"
 #, kde-format
 msgctxt "@info:tooltip, indicates feature unavailable on X11"
 msgid "Zoom scroll gestures are only available on Wayland."
-msgstr ""
+msgstr "확대/축소 스크롤 제스처는 Wayland에서만 사용할 수 있습니다."
 
 #: ui/ZoomMagnifier.qml:178
-#, fuzzy, kde-format
-#| msgid "Ring system bell when modifier keys are used"
+#, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
-msgstr "수정자 키를 사용할 때 시스템 벨 울리기"
+msgstr "수정자 키를 누르면서 스크롤 시 확대/축소로 전달"
 
 #: ui/ZoomMagnifier.qml:190
-#, fuzzy, kde-format
-#| msgid "Magnification"
+#, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
-msgstr "확대"
+msgstr "확대 영역"
 
 #: ui/ZoomMagnifier.qml:217
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
-msgstr ""
+msgstr "너비:"
 
 #: ui/ZoomMagnifier.qml:228 ui/ZoomMagnifier.qml:253
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
 msgid_plural "%1 px"
-msgstr[0] ""
+msgstr[0] "%1픽셀"
 
 #: ui/ZoomMagnifier.qml:229 ui/ZoomMagnifier.qml:254
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
-msgstr ""
+msgstr "픽셀"
 
 #: ui/ZoomMagnifier.qml:242
 #, kde-format
@@ -1063,7 +1058,7 @@ msgstr "높이:"
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
-msgstr ""
+msgstr "사용 안 함"
 
 #: ui/ZoomMagnifier.qml:284
 #, kde-format
@@ -1072,11 +1067,10 @@ msgid "Zoom factor:"
 msgstr "확대/축소 배율:"
 
 #: ui/ZoomMagnifier.qml:331
-#, fuzzy, kde-format
-#| msgid "Use keys to control the mouse"
+#, kde-format
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
-msgstr "키를 사용하여 마우스 제어"
+msgstr "단축키를 사용하여 확대/축소 제어"
 
 #~ msgctxt "@label"
 #~ msgid "Color blindness correction:"
