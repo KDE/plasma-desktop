@@ -148,5 +148,11 @@ void UserLayoutModel::addLayout(const QString &layout, const QString &variant, c
     endInsertRows();
 }
 
+void UserLayoutModel::setSingleLayout(const QString &layout, const QString &variant, const QKeySequence &shortcut, const QString &displayName)
+{
+    clear();
+    addLayout(layout, variant, shortcut, displayName);
+}
+
 #include "moc_userlayoutmodel.cpp"
 #include "userlayoutmodel.moc"
