@@ -1,230 +1,161 @@
 /*
-    SPDX-FileCopyrightText: 2023 Joshua Goins <josh@redstrate.com>
+    SPDX-FileCopyrightText: 2018 Tomaz Canabrava <tcanabrava@kde.org>
+    SPDX-FileCopyrightText: 2025 Yelsin Sepulveda <yelsin.sepulveda@kdemail.org>
 
-    SPDX-License-Identifier: GPL-2.0-or-later
+    SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Layouts
+import QtQuick.Window
 import QtQuick.Controls as QQC2
 
-import org.kde.kcmutils as KCM
+import org.kde.kcmutils as KCMUtils
 import org.kde.kirigami as Kirigami
-import org.kde.kirigamiaddons.formcard as AddonFormCard
-
+import org.kde.kirigami.delegates as KD
+import org.kde.kwindowsystem
 import org.kde.plasma.gamecontroller.kcm
 
-KCM.SimpleKCM {
+KCMUtils.AbstractKCM {
     id: root
 
-    readonly property var device: deviceCombo.currentValue !== null ? deviceModel.device(deviceCombo.currentValue) : null
-    readonly property var deviceType: device?.type ?? ""
-    readonly property var deviceControllerType: device?.controllerTypeName ?? ""
-    readonly property var deviceConnectionType: device?.connectionType ?? ""
+    implicitWidth: Kirigami.Units.gridUnit * 45
+    implicitHeight: Kirigami.Units.gridUnit * 25
 
-    Kirigami.PlaceholderMessage {
-        icon.name: "input-gamepad"
-        text: i18n("No game controllers found")
-        explanation: i18n("Connect a wired or wireless controller")
-        anchors.centerIn: parent
-        visible: deviceModel.count === 0
-        width: parent.width - (Kirigami.Units.largeSpacing * 4)
-    }
+    framedView: false
 
+    // Shared device model - just the data source
     DeviceModel {
-        id: deviceModel
-
-        onDevicesChanged: {
-            // If there are no devices, make sure the combo box is set to no selection
-            if (deviceModel.count === 0) {
-                deviceCombo.currentIndex = -1;
-            } else if (deviceCombo.currentIndex === -1) {
-                // However if we didn't have a selection before, and now have a device
-                deviceCombo.currentIndex = 0;
-            } else if (deviceCombo.currentIndex >= deviceModel.count) {
-                // If the last device in the popup list was disconnected, select a previous one
-                deviceCombo.currentIndex = deviceModel.count - 1;
-            }
-        }
+        id: sharedDeviceModel
     }
 
-    ColumnLayout {
-        anchors.fill: parent
+    // Shared selected device - this is what gets passed around
+    property var sharedSelectedDevice: null
 
-        visible: deviceCombo.count !== 0
-        spacing: Kirigami.Units.largeSpacing
-
-        RowLayout {
-            spacing: Kirigami.Units.largeSpacing
-
-            Layout.fillWidth: true
-
-            QQC2.Label {
-                text: i18nc("@label:textbox", "Device:")
-                textFormat: Text.PlainText
-            }
-
-            QQC2.ComboBox {
-                id: deviceCombo
-
-                model: deviceModel
-
-                textRole: "text"
-                valueRole: "id"
-
-                Layout.fillWidth: true
-            }
-
+    property var elements: [
+        {
+            icon: "games-config-custom",
+            title: i18nc("@title Category name in sidebar", "General Settings"),
+            defaultnessKey: "generalSettingsIsDefaults"
+        },
+        {
+            icon: "applications-games-symbolic",
+            title: i18nc("@title Category name in sidebar", "Input Detection"),
+            defaultnessKey: "inputDetectionIsDefaults"
         }
+    ]
 
-        ColumnLayout {
-            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+    RowLayout {
+        id: mainLayout
+        anchors.fill: parent
+        spacing: 0
 
-            RowLayout {
-                spacing: Kirigami.Units.largeSpacing
+        QQC2.ScrollView {
+            id: leftSidePaneBackground
+            Layout.fillHeight: true
+            Layout.minimumWidth: Kirigami.Units.gridUnit * 13
 
-                Layout.fillWidth: true
+            Kirigami.Theme.colorSet: Kirigami.Theme.View
+            Kirigami.Theme.inherit: false
 
-                QQC2.Label {
-                    text: i18nc("@label game controller device type (wheel, joystick, game controller, etc.)", "Device type:")
-                    textFormat: Text.PlainText
-                }
+            ListView {
+                id: listView
+                activeFocusOnTab: true
+                clip: true
+                keyNavigationEnabled: true
+                model: root.elements
 
-                QQC2.Label {
-                    id: typeLabel
-                    text: deviceType
-                }
-            }
-            
-            RowLayout {
-                spacing: Kirigami.Units.largeSpacing
+                delegate: QQC2.ItemDelegate {
+                    id: baseDelegate
 
-                Layout.fillWidth: true
+                    required property int index
+                    required property var modelData
 
-                QQC2.Label {
-                    text: i18nc("@label game controller controller type (which brand, etc.)", "Controller type:")
-                    textFormat: Text.PlainText
-                }
+                    width: listView.width
 
-                QQC2.Label {
-                    id: controllerTypeLabel
-                    text: deviceControllerType
-                }
-            }
+                    highlighted: listView.currentIndex === index
 
-            RowLayout {
-                spacing: Kirigami.Units.largeSpacing
+                    icon.name: modelData.icon
+                    text: modelData.title
+                    visible: modelData.available === undefined || modelData.available
 
-                Layout.fillWidth: true
+                    onClicked: {
+                        listView.currentIndex = index
+                        listView.forceActiveFocus()
+                    }
 
-                QQC2.Label {
-                    text: i18nc("@label:textbox", "Connection type:")
-                    textFormat: Text.PlainText
-                }
+                    contentItem: RowLayout {
+                        spacing: Kirigami.Units.smallSpacing
 
-                QQC2.Label {
-                    id: connectionTypeLabel
-                    text: deviceConnectionType
-                }
-            }
+                        KD.IconTitleSubtitle {
+                            Layout.fillWidth: true
+                            icon.name: baseDelegate.icon.name
+                            title: baseDelegate.text
+                            selected: baseDelegate.highlighted || baseDelegate.down
+                        }
 
-            RowLayout {
-                spacing: Kirigami.Units.largeSpacing
-
-                Layout.fillWidth: true
-
-                QQC2.Switch {
-                    text: i18nc("@label:textbox", "Enable KWin Game Controller Recognition")
-                    checked: KWinPlugin.pluginEnabled
-                    anchors.leftMargin: Kirigami.Units.largeSpacing * 2
-
-                    onToggled: {
-                        KWinPlugin.pluginEnabled = checked
+                        Rectangle {
+                            radius: width * 0.5
+                            implicitWidth: Kirigami.Units.largeSpacing
+                            implicitHeight: Kirigami.Units.largeSpacing
+                            visible: kcm.defaultsIndicatorsVisible
+                            opacity: !kcm[modelData.defaultnessKey]
+                            color: Kirigami.Theme.neutralTextColor
+                        }
                     }
                 }
             }
         }
 
         Kirigami.Separator {
-            Layout.fillWidth: true
+            Layout.fillHeight: true
         }
 
-        RowLayout {
-            spacing: Kirigami.Units.largeSpacing
-
+        Rectangle {
             Layout.fillWidth: true
             Layout.fillHeight: true
+            Kirigami.Theme.colorSet: Kirigami.Theme.Window
+            Kirigami.Theme.inherit: false
+            color: Kirigami.Theme.backgroundColor
 
-            ColumnLayout {
-                spacing: Kirigami.Units.largeSpacing
+            QQC2.ScrollView {
+                id: scrollView
+                anchors.fill: parent
 
-                Layout.alignment: Qt.AlignTop
+                Item {
+                    id: containerItem
+                    // Ensures we have correct margins on our content, which should
+                    // fill the scrollView or scroll vertically when larger
 
-                QQC2.Label {
-                    text: i18nc("@label Visual representation of the axis position for the left axis", "Left position:")
-                    textFormat: Text.PlainText
-                }
+                    readonly property int margins: Kirigami.Units.gridUnit
 
-                PositionWidget {
-                    id: leftPosWidget
+                    width: scrollView.availableWidth
+                    height: Math.max(implicitHeight, scrollView.availableHeight)
+                    // NOTE: No need to calculate implicitWidth, as we don't use it for sizing and
+                    //       if present, the ScrollView will use it to show horizontal scroll bars
+                    //implicitWidth: stackLayout.implicitWidth + margins * 2
+                    implicitHeight: stackLayout.implicitHeight + margins * 2
 
-                    device: root.device
-                    leftAxis: true
-                }
-                
-                QQC2.Label {
-                    text: i18nc("@label Visual representation of the axis position for the right axis", "Right position:")
-                    textFormat: Text.PlainText
-                }
+                    StackLayout {
+                        id: stackLayout
+                        anchors.fill: parent
+                        anchors.margins: containerItem.margins
 
-                PositionWidget {
-                    id: rightPosWidget
-                    device: root.device
-                    leftAxis: false
-                }
-            }
+                        currentIndex: listView.currentIndex
 
-            ColumnLayout {
-                spacing: Kirigami.Units.largeSpacing
-
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-                Layout.preferredWidth: 50 // Same space for the two columns
-
-                QQC2.Label {
-                    text: i18nc("@label Gamepad buttons", "Buttons:")
-                    textFormat: Text.PlainText
-                }
-
-                Table {
-                    model: ButtonModel {
-                        device: root.device
-                    }
-
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                }
-            }
-
-            ColumnLayout {
-                spacing: Kirigami.Units.largeSpacing
-
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-                Layout.preferredWidth: 50 // Same space for the two columns
-
-                QQC2.Label {
-                    text: i18nc("@label Gamepad axes (sticks)", "Axes:")
-                    textFormat: Text.PlainText
-                }
-
-                Table {
-                    model: AxesProxyModel {
-                        device: root.device
-                    }
-
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
+                        GeneralSettings {
+                            deviceModel: sharedDeviceModel
+                            // Two-way binding: GeneralSettings updates this, InputDetection reads it
+                            selectedDevice: root.sharedSelectedDevice
+                            onSelectedDeviceChanged: {
+                                root.sharedSelectedDevice = selectedDevice
+                            }
+                        }
+                        InputDetection {
+                            deviceModel: sharedDeviceModel
+                            device: root.sharedSelectedDevice
+                        }                    }
                 }
             }
         }
