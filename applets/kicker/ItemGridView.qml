@@ -367,6 +367,7 @@ FocusScope {
             id: hoverArea
 
             anchors.fill: parent
+            anchors.rightMargin: scrollArea.effectiveScrollBarWidth
 
             property int pressX: -1
             property int pressY: -1
