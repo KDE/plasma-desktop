@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-25 00:44+0000\n"
-"PO-Revision-Date: 2025-10-08 03:15+0400\n"
+"PO-Revision-Date: 2025-10-12 15:04+0400\n"
 "Last-Translator: linux <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: kcmaccess.cpp:127 kcmaccess.cpp:155
 #, kde-format
@@ -476,7 +476,7 @@ msgctxt "short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
 msgstr[0] "msan"
-msgstr[1] ""
+msgstr[1] "msan"
 
 #: ui/ColorblindnessCorrection.qml:21
 #, kde-format
@@ -761,11 +761,10 @@ msgid ""
 msgstr ""
 
 #: ui/ModifierKeys.qml:39
-#, fuzzy, kde-format
-#| msgid "Lock the sticky keys"
+#, kde-format
 msgctxt "@option:check"
 msgid "Lock sticky keys"
-msgstr "Yapışqan düymələri kiilidləmək"
+msgstr "Yapışqan düymələri kilidləmək"
 
 #: ui/ModifierKeys.qml:51
 #, kde-format
@@ -774,6 +773,8 @@ msgid ""
 "Pressing a modifier key twice will keep it in active state until pressed "
 "again."
 msgstr ""
+"Dəyişdirici düyməni iki dəfə basmaq onu yenidən basılana qədər aktiv "
+"vəziyyətdə saxlayır."
 
 #: ui/ModifierKeys.qml:57
 #, kde-format
@@ -786,50 +787,44 @@ msgid "Ring system bell when modifier keys are used"
 msgstr "Dəyişdirici düyməi stifadə edildikdə sistem siqnalını səsləndirmək"
 
 #: ui/ModifierKeys.qml:88
-#, fuzzy, kde-format
-#| msgid "Feedback:"
+#, kde-format
 msgctxt "@option:check Feedback options:"
 msgid "Feedback:"
-msgstr "Rəy bildirişi:"
+msgstr "Əks əlaqə:"
 
 #: ui/ModifierKeys.qml:93
-#, fuzzy, kde-format
-#| msgid "Ring system bell when locking keys are toggled"
+#, kde-format
 msgctxt "@option:check"
 msgid "Ring system bell when locking keys are used"
-msgstr "Dəyişdirici düymələri dəyişdirdikdə sistem siqnalından istifadə etmək"
+msgstr "Kilid açarı istifadə olunduğu zaman sistem zəngi səslənir"
 
 #: ui/ModifierKeys.qml:104
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "The locking keys are Caps Lock, Num Lock, and Scroll Lock."
-msgstr ""
+msgstr "Kilid açarları Caps Lock, Num Lock, və Scroll Lock."
 
 #: ui/ModifierKeys.qml:108
-#, fuzzy, kde-format
-#| msgid "Show notification when modifier or locking keys are used"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show notification when modifier or locking keys are used"
 msgstr ""
-"Kilidləmə və ya dəyişdirici düymələr istifadə edildikdə bidirişləri göstərmək"
+"Dəyişdirici və kilid açarları istifadə olunan zaman bildirişi göstərmək"
 
 #: ui/ModifierKeys.qml:120
-#, fuzzy, kde-format
-#| msgid "Configure Notifications…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Notifications…"
-msgstr "Bildirişlərin Tənzimlənməsi..."
+msgstr "Bildirişləri tənzimləmək.."
 
 #: ui/MouseNavigation.qml:17
-#, fuzzy, kde-format
-#| msgid "Use number pad to move cursor:"
+#, kde-format
 msgctxt "@option:check"
 msgid "Use number pad to move cursor:"
 msgstr "Rəqəm düymələri ilə kursorun hərəkəti:"
 
 #: ui/MouseNavigation.qml:22
-#, fuzzy, kde-format
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option:check Enable mouse navigation"
 msgid "Enable"
 msgstr "Aktiv etmək"
@@ -844,68 +839,66 @@ msgid ""
 "up). The keys <shortcut>1</shortcut>, <shortcut>3</shortcut>, <shortcut>7</"
 "shortcut>, and <shortcut>9</shortcut> allow for diagonal movement."
 msgstr ""
+"Rəqəm paneli düymələri <shortcut>5</shortcut> funksiya siçan kliki kimi. "
+"Düymələr <shortcut>2</shortcut>, <shortcut>4</shortcut>,<shortcut>6</"
+"shortcut> və <shortcut>8</shortcut>müxtəlif istiqamətlərə (aşağı, sol, sağ, "
+"və yuxarı) hərəkət etdirməyə icazə verir. <shortcut>1</shortcut>, "
+"<shortcut>7</shortcut> və <shortcut>9</shortcut> düymələri diaqonal üzrə "
+"hərəkət etdirməyə icazə verir."
 
 #: ui/MouseNavigation.qml:39
-#, fuzzy, kde-format
-#| msgid "Acceleration delay:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration delay:"
 msgstr "Sürətlənmə gecikməsi:"
 
 #: ui/MouseNavigation.qml:66
-#, fuzzy, kde-format
-#| msgid "Repeat interval:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Repeat interval:"
-msgstr "Təkraretmə intervalı:"
+msgstr "Təkrarlanma intervalı:"
 
 #: ui/MouseNavigation.qml:93
-#, fuzzy, kde-format
-#| msgid "Acceleration time:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Acceleration time:"
 msgstr "Sürətlənmə vaxtı:"
 
 #: ui/MouseNavigation.qml:118
-#, fuzzy, kde-format
-#| msgid "Maximum speed:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Maximum speed:"
 msgstr "Maksimum sütət:"
 
 #: ui/MouseNavigation.qml:132
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Pointer acceleration:"
 msgstr "Kursorun sürətlənməsi:"
 
 #: ui/ScreenReader.qml:20
-#, fuzzy, kde-format
-#| msgid "Launch Orca Screen Reader Configuration…"
+#, kde-format
 msgctxt "@info Placeholder message title"
 msgid "The Orca Screen Reader is not installed"
-msgstr "Orca Ekran Oxuyucu Tənzimləmələrinini başlatmaq..."
+msgstr "Orca Ekran Oxuyucu quraşdırılmayıb"
 
 #: ui/ScreenReader.qml:21
 #, kde-format
 msgctxt "@info Placeholder message explanation"
 msgid "Please install it, then close and reopen this window"
-msgstr ""
+msgstr "Lütfən onu quraşdırıın, bu pəncərəni açın və yenidən bağlayın"
 
 #: ui/ScreenReader.qml:27
-#, fuzzy, kde-format
-#| msgid "Enable Screen Reader"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable Screen Reader"
-msgstr "Ekran Oxuyucunu Aktiv etmək"
+msgstr "Ekran Oxuyucunu aktiv edin"
 
 #: ui/ScreenReader.qml:39
-#, fuzzy, kde-format
-#| msgid "Launch Orca Screen Reader Configuration…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Launch Orca Screen Reader Configuration…"
-msgstr "Orca Ekran Oxuyucu Tənzimləmələrinini başlatmaq..."
+msgstr "Orca Ekran Oxuyucu tənzimlənməsini başlatmaq..."
 
 #: ui/ShakeCursor.qml:15
 #, kde-format
@@ -941,159 +934,153 @@ msgstr "Böyük"
 #, kde-format
 msgctxt "@label, followed by 'full screen' or 'magnify region'"
 msgid "Zoom:"
-msgstr ""
+msgstr "Miqyas:"
 
 #: ui/ZoomMagnifier.qml:24
-#, fuzzy, kde-format
-#| msgid "F&lash screen"
+#, kde-format
 msgctxt "@option:check, enable zoom effect, following 'Zoom:'"
 msgid "Full screen"
-msgstr "E&kranın sayrışması"
+msgstr "Tam ekran"
 
 #: ui/ZoomMagnifier.qml:53
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Show pixel grid at zoom level:"
-msgstr ""
+msgstr "Miqyas səviyyəsində piksel toru:"
 
 #: ui/ZoomMagnifier.qml:85
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Mouse pointer:"
-msgstr ""
+msgstr "Siçan göstəricisi:"
 
 #: ui/ZoomMagnifier.qml:87
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scale"
-msgstr ""
+msgstr "Miqyas"
 
 #: ui/ZoomMagnifier.qml:87
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Keep"
-msgstr ""
+msgstr "Saxlamaq"
 
 #: ui/ZoomMagnifier.qml:87
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Hide"
-msgstr ""
+msgstr "Gizlətmək"
 
 #: ui/ZoomMagnifier.qml:98
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Mouse tracking:"
-msgstr ""
+msgstr "Siçanın izlənilməsi:"
 
 #: ui/ZoomMagnifier.qml:100
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Proportional"
-msgstr ""
+msgstr "Mütənasib"
 
 #: ui/ZoomMagnifier.qml:100
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
-msgstr ""
+msgstr "Mərkəzləşmiş"
 
 #: ui/ZoomMagnifier.qml:100
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Push"
-msgstr ""
+msgstr "İrəliləyən"
 
 #: ui/ZoomMagnifier.qml:100
-#, fuzzy, kde-format
-#| msgid "Disable After:"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Disabled"
-msgstr "Bundan sonra söndürmək:"
+msgstr "Söndürülüb"
 
 #: ui/ZoomMagnifier.qml:111
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable focus tracking"
-msgstr ""
+msgstr "Fokusun izlənməsini aktiv etmək"
 
 #: ui/ZoomMagnifier.qml:123
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable text caret tracking"
-msgstr ""
+msgstr "Mətn kursoru izlənməsini aktiv etmək"
 
 #: ui/ZoomMagnifier.qml:134
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
-msgstr ""
+msgstr "Sürüşdürmə dəyişdirici düymələri:"
 
 #: ui/ZoomMagnifier.qml:172
 #, kde-format
 msgctxt "@info:tooltip, indicates feature unavailable on X11"
 msgid "Zoom scroll gestures are only available on Wayland."
-msgstr ""
+msgstr "Miqyas sürüşdürmə jestləri yalnız Wayland-da mövcuddur."
 
 #: ui/ZoomMagnifier.qml:178
-#, fuzzy, kde-format
-#| msgid "Ring system bell when modifier keys are used"
+#, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
-msgstr "Dəyişdirici düyməi stifadə edildikdə sistem siqnalını səsləndirmək"
+msgstr "Miqyaslama üçün dəyişdirici düymə istifadə edən zaman sürüşdürmək"
 
 #: ui/ZoomMagnifier.qml:190
-#, fuzzy, kde-format
-#| msgid "Magnification"
+#, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
-msgstr "Böyütmə"
+msgstr "Böyütmə sahəsi"
 
 #: ui/ZoomMagnifier.qml:217
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
-msgstr ""
+msgstr "Eni:"
 
 #: ui/ZoomMagnifier.qml:228 ui/ZoomMagnifier.qml:253
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
 msgid_plural "%1 px"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 piks."
+msgstr[1] "%1 piks"
 
 #: ui/ZoomMagnifier.qml:229 ui/ZoomMagnifier.qml:254
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
-msgstr ""
+msgstr "piks."
 
 #: ui/ZoomMagnifier.qml:242
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
-msgstr ""
+msgstr "Hündürlüyü:"
 
 #: ui/ZoomMagnifier.qml:271
-#, fuzzy, kde-format
-#| msgid "Disable After:"
+#, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
-msgstr "Bundan sonra söndürmək:"
+msgstr "Söndürülüb"
 
 #: ui/ZoomMagnifier.qml:284
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
-msgstr ""
+msgstr "Miqyas əmsalı:"
 
 #: ui/ZoomMagnifier.qml:331
-#, fuzzy, kde-format
-#| msgid "Use keys to control the mouse"
+#, kde-format
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
-msgstr "Siçanın idarə edilməsi düymələrini istifadə etmək"
+msgstr "Miqyası idarə etmək üçün qısayollardan istifadə etmək"
 
 #~ msgid "AltGraph"
 #~ msgstr "AltGraph"
