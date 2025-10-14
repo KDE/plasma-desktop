@@ -47,6 +47,21 @@ PlasmaCore.ToolTipArea {
             fullRepresentation.anchors.fill = null;
             fullRepresentation.parent = appletParent;
             fullRepresentation.anchors.fill = appletParent;
+
+            // This avoids the content being drawn underneath the
+            // separator between the panel and the applet.
+            if (!separator.visible) {
+                return;
+            }
+            if (Plasmoid.location === PlasmaCore.Types.TopEdge) {
+                fullRepresentation.anchors.topMargin = separator.height
+            } else if (Plasmoid.location === PlasmaCore.Types.BottomEdge) {
+                fullRepresentation.anchors.bottomMargin = separator.height
+            } else if (Plasmoid.location === PlasmaCore.Types.LeftEdge) {
+                fullRepresentation.anchors.leftMargin = separator.width
+            } else if (Plasmoid.location === PlasmaCore.Types.RightEdge) {
+                fullRepresentation.anchors.rightMargin = separator.width
+            }
         }
     }
 
@@ -228,18 +243,21 @@ PlasmaCore.ToolTipArea {
                 root.plasmoidItem.expanded = false;
             }
 
-            Layout.minimumWidth: fullRepresentation ? fullRepresentation.Layout.minimumWidth : 0
-            Layout.minimumHeight: fullRepresentation ? fullRepresentation.Layout.minimumHeight : 0
+            property real extraWidth: root.vertical ? separator.width : 0
+            property real extraHeight: root.vertical ? 0 : separator.height
 
-            Layout.maximumWidth: fullRepresentation ? fullRepresentation.Layout.maximumWidth : Infinity
-            Layout.maximumHeight: fullRepresentation ? fullRepresentation.Layout.maximumHeight : Infinity
+            Layout.minimumWidth: fullRepresentation ? fullRepresentation.Layout.minimumWidth + extraWidth : 0
+            Layout.minimumHeight: fullRepresentation ? fullRepresentation.Layout.minimumHeight + extraHeight : 0
+
+            Layout.maximumWidth: fullRepresentation ? fullRepresentation.Layout.maximumWidth + extraWidth : Infinity
+            Layout.maximumHeight: fullRepresentation ? fullRepresentation.Layout.maximumHeight + extraHeight : Infinity
 
             implicitWidth: {
                 if (root.fullRepresentation !== null) {
                     /****/ if (root.fullRepresentation.Layout.preferredWidth > 0) {
-                        return root.fullRepresentation.Layout.preferredWidth;
+                        return root.fullRepresentation.Layout.preferredWidth + extraWidth;
                     } else if (root.fullRepresentation.implicitWidth > 0) {
-                        return root.fullRepresentation.implicitWidth;
+                        return root.fullRepresentation.implicitWidth + extraWidth;
                     }
                 }
                 return Kirigami.Units.iconSizes.sizeForLabels * 35;
@@ -247,9 +265,9 @@ PlasmaCore.ToolTipArea {
             implicitHeight: {
                 if (root.fullRepresentation !== null) {
                     /****/ if (fullRepresentation.Layout.preferredHeight > 0) {
-                        return fullRepresentation.Layout.preferredHeight;
+                        return fullRepresentation.Layout.preferredHeight + extraHeight;
                     } else if (fullRepresentation.implicitHeight > 0) {
-                        return fullRepresentation.implicitHeight;
+                        return fullRepresentation.implicitHeight + extraHeight;
                     }
                 }
                 return Kirigami.Units.iconSizes.sizeForLabels * 25;
