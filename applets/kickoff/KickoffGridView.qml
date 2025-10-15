@@ -242,7 +242,7 @@ EmptyPage {
             // Implements the keyboard navigation described in https://www.w3.org/TR/wai-aria-practices-1.2/#grid
             if (count > 1) {
                 switch (event.key) {
-                    case Qt.Key_Left: if (!atLeft && !kickoff.searchField.activeFocus) {
+                    case Qt.Key_Left: if (!atLeft) {
                         moveCurrentIndexLeft()
                         focusCurrentItem(event, Qt.BacktabFocusReason)
                     } break
@@ -258,7 +258,7 @@ EmptyPage {
                         moveCurrentIndexUp()
                         focusCurrentItem(event, Qt.BacktabFocusReason)
                     } break
-                    case Qt.Key_Right: if (!atRight && !kickoff.searchField.activeFocus) {
+                    case Qt.Key_Right: if (!atRight) {
                         moveCurrentIndexRight()
                         focusCurrentItem(event, Qt.TabFocusReason)
                     } break

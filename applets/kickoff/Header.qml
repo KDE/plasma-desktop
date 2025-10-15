@@ -98,16 +98,6 @@ PlasmaExtras.PlasmoidHeading {
                     Keys.onBacktabPressed: event => {
                         tabSetFocus(event, nextItemInFocusChain());
                     }
-                    Keys.onLeftPressed: event => {
-                        if (kickoff.sideBarOnRight) {
-                            searchField.forceActiveFocus(Qt.application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
-                        }
-                    }
-                    Keys.onRightPressed: event => {
-                        if (!kickoff.sideBarOnRight) {
-                            searchField.forceActiveFocus(Qt.application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
-                        }
-                    }
                     Keys.onDownPressed: event => {
                         if (kickoff.sideBar) {
                             kickoff.sideBar.forceActiveFocus(Qt.TabFocusReason)
@@ -203,6 +193,8 @@ PlasmaExtras.PlasmoidHeading {
                         function onExpandedChanged() {
                             if (!kickoff.expanded) {
                                 searchField.clear()
+                            } else {
+                                searchField.forceActiveFocus(Qt.ShortcutFocusReason)
                             }
                         }
                     }
@@ -216,18 +208,6 @@ PlasmaExtras.PlasmoidHeading {
                     }
                     Keys.onBacktabPressed: event => {
                         tabSetFocus(event, nextItemInFocusChain());
-                    }
-                    Keys.onLeftPressed: event => {
-                        if (activeFocus) {
-                            nextItemInFocusChain(kickoff.sideBarOnRight).forceActiveFocus(
-                                Qt.application.layoutDirection === Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
-                        }
-                    }
-                    Keys.onRightPressed: event => {
-                        if (activeFocus) {
-                            nextItemInFocusChain(!kickoff.sideBarOnRight).forceActiveFocus(
-                                Qt.application.layoutDirection === Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
-                        }
                     }
                 }
 
@@ -247,14 +227,6 @@ PlasmaExtras.PlasmoidHeading {
                     }
                     Keys.onBacktabPressed: event => {
                         tabSetFocus(event, nextItemInFocusChain());
-                    }
-                    Keys.onLeftPressed: event => {
-                        nextItemInFocusChain(kickoff.sideBarOnRight).forceActiveFocus(
-                            Qt.application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
-                    }
-                    Keys.onRightPressed: event => {
-                        nextItemInFocusChain(!kickoff.sideBarOnRight).forceActiveFocus(
-                            Qt.application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
                     }
                     onClicked: plasmoid.internalAction("configure").trigger()
                 }
@@ -280,16 +252,6 @@ PlasmaExtras.PlasmoidHeading {
                     }
                     Keys.onBacktabPressed: event => {
                         tabSetFocus(event, nameAndIcon.nextItemInFocusChain(false), nextItemInFocusChain(false));
-                    }
-                    Keys.onLeftPressed: event => {
-                        if (!kickoff.sideBarOnRight) {
-                            nextItemInFocusChain(false).forceActiveFocus(Qt.application.layoutDirection == Qt.RightToLeft ? Qt.TabFocusReason : Qt.BacktabFocusReason)
-                        }
-                    }
-                    Keys.onRightPressed: event => {
-                        if (kickoff.sideBarOnRight) {
-                            nextItemInFocusChain(false).forceActiveFocus(Qt.application.layoutDirection == Qt.RightToLeft ? Qt.BacktabFocusReason : Qt.TabFocusReason)
-                        }
                     }
                     onToggled: Plasmoid.configuration.pin = checked
                 }

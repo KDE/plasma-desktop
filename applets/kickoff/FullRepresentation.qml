@@ -79,7 +79,6 @@ EmptyPage {
 
     contentItem: VerticalStackView {
         id: contentItemStackView
-        focus: true
         movementTransitionsEnabled: true
         // Not using a component to prevent it from being destroyed
         initialItem: NormalPage {
