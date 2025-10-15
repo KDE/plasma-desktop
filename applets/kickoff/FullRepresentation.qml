@@ -15,6 +15,7 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Templates as T
 import QtQuick.Layouts
+import org.kde.milou as Milou
 import org.kde.plasma.plasmoid
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.extras as PlasmaExtras
@@ -90,19 +91,18 @@ EmptyPage {
 
         Component {
             id: searchViewComponent
-            KickoffListView {
+
+            Milou.ResultsView {
                 id: searchView
+                property var view: searchView
                 objectName: "searchView"
-                mainContentView: true
-                // Forces the function be re-run every time runnerModel.count changes.
-                // This is absolutely necessary to make the search view work reliably.
-                model: kickoff.runnerModel.count ? kickoff.runnerModel.modelForRow(0) : null
-                delegate: KickoffListDelegate {
-                    width: view.availableWidth
-                    isSearchResult: true
-                }
-                section.property: "group"
-                activeFocusOnTab: true
+                queryString: kickoff.searchField ? kickoff.searchField.text : ""
+                clip: true
+
+                // This keeps the minimum applet size the same whether you are
+                // searching or not.
+                implicitWidth: normalPage.implicitWidth
+
                 Keys.onTabPressed: event => {
                     kickoff.firstHeaderItem.forceActiveFocus(Qt.TabFocusReason);
                 }
@@ -117,36 +117,31 @@ EmptyPage {
                     kickoff.contentArea = searchView
                 }
 
-                Loader {
-                    anchors.centerIn: searchView.view
-                    width: searchView.view.width - (Kirigami.Units.gridUnit * 4)
+                property var interceptedPosition: null
+                Connections {
+                    target: blockHoverFocusHandler
+                    enabled: blockHoverFocusHandler.enabled && !searchView.interceptedPosition
+                    function onPointChanged() {
+                        searchView.interceptedPosition = blockHoverFocusHandler.point.position
+                    }
+                }
 
-                    active: searchView.view.count === 0
-                    visible: active
-                    asynchronous: true
-
-                    sourceComponent: PlasmaExtras.PlaceholderMessage {
-                        id: emptyHint
-
-                        iconName: "edit-none"
-                        opacity: 0
-                        text: i18nc("@info:status", "No matches") // qmllint disable unqualified
-
-                        Connections {
-                            target: kickoff.runnerModel
-                            function onQueryFinished() {
-                                showAnimation.restart()
-                            }
+                Connections {
+                    target: blockHoverFocusHandler
+                    enabled: blockHoverFocusHandler.enabled && searchView.interceptedPosition && root.blockingHoverFocus
+                    function onPointChanged() {
+                        if (blockHoverFocusHandler.point.position === searchView.interceptedPosition) {
+                            return;
                         }
+                        root.blockingHoverFocus = false
+                    }
+                }
 
-                        NumberAnimation {
-                            id: showAnimation
-                            duration: Kirigami.Units.longDuration
-                            easing.type: Easing.OutCubic
-                            property: "opacity"
-                            target: emptyHint
-                            to: 1
-                        }
+                Item {
+                    anchors.fill: parent
+                    HoverHandler {
+                        id: blockHoverFocusHandler
+                        enabled: !contentItemStackView.busy && (!searchView.interceptedPosition || root.blockingHoverFocus)
                     }
                 }
             }
@@ -200,12 +195,12 @@ EmptyPage {
                     contentItemStackView.reverseTransitions = true
                     contentItemStackView.replace(normalPage)
                 } else if ((root.header as Header).searchText.length > 0) {
+                    root.blockingHoverFocus = true
                     if (contentItemStackView.currentItem.objectName !== "searchView") {
                         contentItemStackView.reverseTransitions = false
                         contentItemStackView.replace(searchViewComponent)
                     } else {
-                        root.blockingHoverFocus = true
-                        root.interceptedPosition = null
+                        contentItemStackView.contentItem.interceptedPosition = null
                         contentItemStackView.contentItem.currentIndex = 0
                     }
                 }

@@ -86,8 +86,7 @@ AbstractKickoffItemDelegate {
                 Layout.fillWidth: true
                 visible: {
                     let isApplicationSearchResult = root.model?.group === "Applications" || root.model?.group === "System Settings"
-                    let isSearchResultWithDescription = root.isSearchResult && (Plasmoid.configuration?.appNameFormat > 1 || !isApplicationSearchResult)
-                    return text.length > 0 && (isSearchResultWithDescription || (text !== label.text && !root.isCategoryListItem && Plasmoid.configuration?.appNameFormat > 1))
+                    return text.length > 0 && (text !== label.text && !root.isCategoryListItem && Plasmoid.configuration?.appNameFormat > 1)
                 }
                 opacity: 0.75
                 text: root.description

@@ -80,18 +80,6 @@ PlasmoidItem {
         }
     }
 
-    readonly property Kicker.RunnerModel runnerModel: Kicker.RunnerModel {
-        query: kickoff.searchField ? kickoff.searchField.text : ""
-        onRequestUpdateQuery: query => {
-            if (kickoff.searchField) {
-                kickoff.searchField.text = query;
-            }
-        }
-        appletInterface: kickoff
-        mergeResults: true
-        favoritesModel: kickoff.rootModel.favoritesModel
-    }
-
     readonly property Kicker.ComputerModel computerModel: Kicker.ComputerModel {
         appletInterface: kickoff
         favoritesModel: kickoff.rootModel.favoritesModel

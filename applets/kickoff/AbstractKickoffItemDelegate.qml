@@ -41,7 +41,6 @@ T.ItemDelegate {
     readonly property Flickable view: ListView.view ?? GridView.view
     property bool isCategoryListItem: false
     readonly property bool hasActionList: model && (model.favoriteId !== null || ("hasActionList" in model && model.hasActionList === true))
-    property bool isSearchResult: false
 
     readonly property bool isSeparator: model && (model.isSeparator === true)
     property int separatorHeight: KickoffSingleton.lineSvg.horLineHeight + (2 * Kirigami.Units.smallSpacing)
@@ -132,7 +131,7 @@ T.ItemDelegate {
             // don't have focus, to prevent the return/enter key from
             // inappropriately activating unfocused items
             // Also block activation while dragging.
-            if ((!root.activeFocus && !root.isSearchResult) || dragHandler.active || touchDragHandler.active) {
+            if (!root.activeFocus || dragHandler.active || touchDragHandler.active) {
                 return;
             }
             root.view.currentIndex = root.index
@@ -249,8 +248,7 @@ T.ItemDelegate {
     PC3.ToolTip.text: {
         if (root.labelTruncated) {
             return model.display
-        } else if (root.descriptionTruncated || (!root.descriptionVisible && (root.isSearchResult
-                                                                              || Plasmoid.configuration.appNameFormat > 1))) {
+        } else if (root.descriptionTruncated || (!root.descriptionVisible && Plasmoid.configuration.appNameFormat > 1)) {
             return description
         }
         return ""
