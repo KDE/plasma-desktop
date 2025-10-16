@@ -2,22 +2,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 # SPDX-FileCopyrightText: 2010, 2013, 2015, 2016, 2017, 2018, 2019, 2020, 2023, 2024 Vít Pelčák <vit@pelcak.org>
 # Lukáš Tinkl <ltinkl@redhat.com>, 2011, 2013.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-12 00:45+0000\n"
-"PO-Revision-Date: 2024-08-29 13:38+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2025-10-02 09:27+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 25.08.1\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -26,9 +26,9 @@ msgstr ""
 msgctxt "Show all user Places"
 msgid "%1 more Place…"
 msgid_plural "%1 more Places…"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%1 další místo..."
+msgstr[1] "%1 další místa..."
+msgstr[2] "%1 dalších míst..."
 
 #: backend.cpp:368
 #, kde-format
@@ -149,7 +149,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show media and volume controls in tooltip"
-msgstr ""
+msgstr "Zobrazit média a ovládání hlasitosti v nástrojovém tipu"
 
 #: package/contents/ui/ConfigAppearance.qml:85
 #, kde-format
@@ -471,13 +471,13 @@ msgctxt ""
 "@label:listbox Part of a sentence: 'Scrolling behavior does nothing/cycles "
 "through tasks/cycles through the selected task's windows'"
 msgid "Scrolling behavior:"
-msgstr ""
+msgstr "Chování při rolování:"
 
 #: package/contents/ui/ConfigBehavior.qml:209
 #, kde-format
 msgctxt "@item:inlistbox Part of a sentence: 'Scrolling behavior does nothing'"
 msgid "Does nothing"
-msgstr ""
+msgstr "Nedělá nic"
 
 #: package/contents/ui/ConfigBehavior.qml:210
 #, kde-format
@@ -485,7 +485,7 @@ msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through all "
 "tasks'"
 msgid "Cycles through all tasks"
-msgstr ""
+msgstr "Postupně prochází mezi všemi úlohami"
 
 #: package/contents/ui/ConfigBehavior.qml:211
 #, kde-format
@@ -512,19 +512,19 @@ msgstr "Zobrazit pouze úlohy:"
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current desktop"
-msgstr ""
+msgstr "Ze současné plochy"
 
 #: package/contents/ui/ConfigBehavior.qml:235
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current activity"
-msgstr ""
+msgstr "Ze současné aktivity"
 
 #: package/contents/ui/ConfigBehavior.qml:240
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current screen"
-msgstr ""
+msgstr "Ze současné obrazovky"
 
 #: package/contents/ui/ConfigBehavior.qml:245
 #, kde-format
@@ -754,7 +754,7 @@ msgstr "Z&asunout"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
-msgstr ""
+msgstr "&Bez titulku a rámu"
 
 #: package/contents/ui/ContextMenu.qml:729
 #, kde-format
@@ -814,7 +814,7 @@ msgstr "Aktivovat %1"
 #, kde-format
 msgctxt "@info:tooltip Close this window"
 msgid "Close window"
-msgstr ""
+msgstr "Zavřít okno"
 
 #: package/contents/ui/ToolTipInstance.qml:438
 #, kde-format

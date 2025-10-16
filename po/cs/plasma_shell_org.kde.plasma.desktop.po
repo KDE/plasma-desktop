@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023, 2024 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-03 02:41+0000\n"
-"PO-Revision-Date: 2024-10-15 11:00+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2025-10-02 09:31+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.08.1\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -103,7 +103,7 @@ msgstr "Otevřít webovou stránku: %1"
 #, kde-format
 msgctxt "@title:group"
 msgid "Website"
-msgstr ""
+msgstr "Webová stránka"
 
 #: contents/configuration/AboutPlugin.qml:153
 #, kde-format
@@ -156,6 +156,7 @@ msgstr "Provést nastavení"
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
 msgstr ""
+"Současná činnost obsahuje neuložené změny. Přejete si je uložit nebo zahodit?"
 
 #: contents/configuration/AppletConfiguration.qml:401
 #, kde-format
@@ -311,19 +312,19 @@ msgctxt ""
 "@action:button label of button to open a menu that lets you add widgets or "
 "spacers"
 msgid "Add New"
-msgstr ""
+msgstr "Přidat nové"
 
 #: contents/configuration/PanelConfiguration.qml:127
 #, kde-format
 msgctxt "@action:menu add a spacer"
 msgid "Spacer"
-msgstr ""
+msgstr "Mezera"
 
 #: contents/configuration/PanelConfiguration.qml:134
 #, kde-format
 msgctxt "@action:menu add a widget"
 msgid "Widgets…"
-msgstr ""
+msgstr "Widgety…"
 
 #: contents/configuration/PanelConfiguration.qml:163
 #, kde-format
@@ -449,13 +450,13 @@ msgstr "Průhledné"
 #, kde-format
 msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
-msgstr ""
+msgstr "Plovoucí"
 
 #: contents/configuration/PanelConfiguration.qml:517
 #, kde-format
 msgctxt "@item:inlistbox Option to disable floating panels or applets"
 msgid "Disabled"
-msgstr ""
+msgstr "Zakázáno"
 
 #: contents/configuration/PanelConfiguration.qml:518
 #, kde-format
@@ -628,7 +629,7 @@ msgstr "Alternativní widgety"
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Add %1"
-msgstr ""
+msgstr "Přidat %1"
 
 #: contents/explorer/AppletDelegate.qml:47
 #, kde-format
@@ -654,7 +655,7 @@ msgstr[2] ""
 #, kde-format
 msgctxt " @info:other accessible for badge indicating new widget"
 msgid "Recently installed"
-msgstr ""
+msgstr "Nedávno nainstalované"
 
 #: contents/explorer/AppletDelegate.qml:217
 #, kde-format
@@ -758,13 +759,13 @@ msgstr "Nejsou dostupné žádné widgety"
 #, kde-format
 msgctxt "@title: group"
 msgid "Show clock:"
-msgstr ""
+msgstr "Ukázat hodiny:"
 
 #: contents/lockscreen/config.qml:25
 #, kde-format
 msgctxt "@option:radio Clock always shown"
 msgid "Always"
-msgstr ""
+msgstr "Vždy"
 
 #: contents/lockscreen/config.qml:26
 #, kde-format
@@ -788,7 +789,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:radio Clock never shown"
 msgid "Never"
-msgstr ""
+msgstr "Nikdy"
 
 #: contents/lockscreen/config.qml:56
 #, kde-format
@@ -800,7 +801,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title: group UI controls for playback of multimedia content"
 msgid "Media controls:"
-msgstr ""
+msgstr "Ovládání médií:"
 
 #: contents/lockscreen/config.qml:74
 #, kde-format
@@ -821,12 +822,12 @@ msgstr "CapsLock je zapnut"
 #: contents/lockscreen/LockScreenUi.qml:295
 #, kde-format
 msgid "Slee&p"
-msgstr ""
+msgstr "&Uspat"
 
 #: contents/lockscreen/LockScreenUi.qml:301
 #, kde-format
 msgid "&Hibernate"
-msgstr ""
+msgstr "&Hibernovat"
 
 #: contents/lockscreen/LockScreenUi.qml:307
 #, kde-format

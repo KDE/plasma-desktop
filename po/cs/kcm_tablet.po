@@ -1,21 +1,21 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2021, 2023, 2024 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2021, 2023, 2024, 2025 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-04 00:44+0000\n"
-"PO-Revision-Date: 2024-09-18 09:46+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2025-10-02 09:34+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -34,13 +34,14 @@ msgstr "Nic"
 #, kde-format
 msgctxt "@action:button Two keybinds for a dial, up & down"
 msgid "%1 && %2"
-msgstr ""
+msgstr "%1 && %2"
 
+# žádné parametry funkce v inspektoru funkcí
 #: inputsequence.cpp:216
 #, kde-format
 msgctxt "@action:button There is no keybindings"
 msgid "None"
-msgstr ""
+msgstr "Nic"
 
 #: inputsequence.cpp:221
 #, kde-format
@@ -70,7 +71,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Pen Button %1"
-msgstr ""
+msgstr "Tlačítko pera %1"
 
 #: inputsequence.cpp:235
 #, kde-format
@@ -233,7 +234,7 @@ msgstr "Nahoru:"
 #: ui/ActionDialog.qml:261
 #, kde-format
 msgid "Down:"
-msgstr ""
+msgstr "Dolů:"
 
 #: ui/ActionDialog.qml:274
 #, kde-format
@@ -286,19 +287,19 @@ msgstr "Shift"
 #, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 1"
-msgstr ""
+msgstr "Tlačítko 1"
 
 #: ui/ActionDialog.qml:356
 #, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 2"
-msgstr ""
+msgstr "Tlačítko 2"
 
 #: ui/ActionDialog.qml:357
 #, kde-format
 msgctxt "@action:inmenu Stylus button"
 msgid "Button 3"
-msgstr ""
+msgstr "Tlačítko 3"
 
 #: ui/ActionDialog.qml:366
 #, kde-format
@@ -460,7 +461,7 @@ msgstr "Zobrazit"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
-msgstr ""
+msgstr "Pero"
 
 #: ui/main.qml:197
 #, kde-format
@@ -516,7 +517,7 @@ msgstr "Režim pro leváka:"
 #, kde-format
 msgctxt "Enable left-handed mode"
 msgid "Enable"
-msgstr ""
+msgstr "Povolit"
 
 #: ui/StylusTab.qml:234
 #, kde-kuit-format
@@ -532,14 +533,14 @@ msgstr ""
 msgctxt ""
 "'Mode' is the mode the stylus is in, pen (absolute) or mouse (relative)"
 msgid "Mode:"
-msgstr ""
+msgstr "Režim:"
 
 #: ui/StylusTab.qml:254
 #, kde-format
 msgctxt ""
 "Pen mode, where the point on the screen is always where you touch the stylus"
 msgid "Pen"
-msgstr ""
+msgstr "Pero"
 
 #: ui/StylusTab.qml:259
 #, kde-format
@@ -550,7 +551,7 @@ msgstr ""
 #, kde-format
 msgctxt "Mouse mode, or like using the tablet like a giant touchpad"
 msgid "Mouse"
-msgstr ""
+msgstr "Myš"
 
 #: ui/StylusTab.qml:285
 #, kde-format
@@ -562,31 +563,31 @@ msgstr ""
 #: ui/StylusTab.qml:355
 #, kde-format
 msgid "Pen Pressure:"
-msgstr ""
+msgstr "Tlak pera:"
 
 #: ui/StylusTab.qml:415
 #, kde-format
 msgctxt "% of minimum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:423
 #, kde-format
 msgctxt "% of maximum pen pressure"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: ui/StylusTab.qml:434
 #, kde-format
 msgctxt "100% or maximum pen pressure"
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: ui/StylusTab.qml:442
 #, kde-format
 msgctxt "0% or zero pen pressure"
 msgid "0%"
-msgstr ""
+msgstr "0%"
 
 #: ui/StylusTab.qml:446
 #, kde-format
@@ -600,7 +601,7 @@ msgstr ""
 #, kde-format
 msgctxt "Pen pressure range"
 msgid "Pressure Range:"
-msgstr ""
+msgstr "Rozsah tlaku:"
 
 #: ui/StylusTab.qml:478
 #, kde-format
@@ -705,4 +706,4 @@ msgstr ""
 #, kde-format
 msgctxt "Clear the tablet tester event log"
 msgid "Clear"
-msgstr ""
+msgstr "Vyprázdnit"
