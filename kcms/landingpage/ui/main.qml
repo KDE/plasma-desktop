@@ -90,7 +90,7 @@ KCMUtils.SimpleKCM {
             Thumbnail {
                 text: i18nc("Switch between dark and light look and feel packages automatically", "Automatic")
                 checked: kcm.globalsSettings.automaticLookAndFeel
-                QQC2.ToolTip.text: i18nc("@info:tooltip 1 is the name of a light global theme, 2 is the name of a dark global theme", 'Use “%1” during the day and “%2” at night', lightLookAndFeelBox.text, darkLookAndFeelBox.text)
+                QQC2.ToolTip.text: i18nc("@info:tooltip 1 is the name of a light global theme, 2 is the name of a dark global theme", "Use “%1” during the day and “%2” at night", lightLookAndFeelBox.text, darkLookAndFeelBox.text)
                 QQC2.ToolTip.visible: autoLookAndFeelHoverHandler.hovered
                 QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                 QQC2.ButtonGroup.group: themeGroup
