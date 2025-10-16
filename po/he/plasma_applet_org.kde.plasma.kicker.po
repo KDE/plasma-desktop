@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-02 00:44+0000\n"
+"POT-Creation-Date: 2025-10-16 00:43+0000\n"
 "PO-Revision-Date: 2025-09-19 08:04+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -50,128 +50,147 @@ msgstr "הצגה במועדפים"
 msgid "General"
 msgstr "כללי"
 
-#: ConfigGeneral.qml:46
+#: ConfigGeneral.qml:48
 #, kde-format
 msgid "Icon:"
 msgstr "סמל:"
 
-#: ConfigGeneral.qml:131
+#: ConfigGeneral.qml:133
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "בחירה…"
 
-#: ConfigGeneral.qml:136
+#: ConfigGeneral.qml:138
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "פינוי הסמל"
 
-#: ConfigGeneral.qml:155
+#: ConfigGeneral.qml:157
 #, kde-format
 msgid "Show applications as:"
 msgstr "הצגת יישומים:"
 
-#: ConfigGeneral.qml:157
+#: ConfigGeneral.qml:159
 #, kde-format
 msgid "Name only"
 msgstr "כשם בלבד"
 
-#: ConfigGeneral.qml:157
+#: ConfigGeneral.qml:159
 #, kde-format
 msgid "Description only"
 msgstr "כתיאור בלבד"
 
-#: ConfigGeneral.qml:157
+#: ConfigGeneral.qml:159
 #, kde-format
 msgid "Name (Description)"
 msgstr "כשם (תיאור)"
 
-#: ConfigGeneral.qml:157
+#: ConfigGeneral.qml:159
 #, kde-format
 msgid "Description (Name)"
 msgstr "כתיאור (שם)"
 
-#: ConfigGeneral.qml:167
+#: ConfigGeneral.qml:169
 #, kde-format
 msgid "Behavior:"
 msgstr "התנהגות:"
 
-#: ConfigGeneral.qml:169
+#: ConfigGeneral.qml:171
 #, kde-format
 msgid "Sort applications alphabetically"
 msgstr "סידור יישומים לפי אלפבית"
 
-#: ConfigGeneral.qml:177
+#: ConfigGeneral.qml:179
 #, kde-format
 msgid "Flatten sub-menus to a single level"
 msgstr "שיטוח תת־תפריטים לרמה אחידה"
 
-#: ConfigGeneral.qml:185
+#: ConfigGeneral.qml:187
 #, kde-format
 msgid "Show icons on the root level of the menu"
 msgstr "הצגת סמלים ברמה העליונה של התפריט"
 
-#: ConfigGeneral.qml:195
+#: ConfigGeneral.qml:197
 #, kde-format
 msgid "Show categories:"
 msgstr "הצגת קטגוריות:"
 
-#: ConfigGeneral.qml:198
+#: ConfigGeneral.qml:200
 #, kde-format
 msgid "Recent applications"
 msgstr "יישומים אחרונים"
 
-#: ConfigGeneral.qml:199
+#: ConfigGeneral.qml:201
 #, kde-format
 msgid "Often used applications"
 msgstr "יישומים בשימוש תדיר"
 
-#: ConfigGeneral.qml:206
+#: ConfigGeneral.qml:208
 #, kde-format
 msgid "Recent files"
 msgstr "קבצים אחרונים"
 
-#: ConfigGeneral.qml:207
+#: ConfigGeneral.qml:209
 #, kde-format
 msgid "Often used files"
 msgstr "קבצים בשימוש תדיר"
 
-#: ConfigGeneral.qml:213
+#: ConfigGeneral.qml:215
 #, kde-format
 msgid "Sort items in categories by:"
 msgstr "מיון פריטים בקטגוריות לפי:"
 
-#: ConfigGeneral.qml:214
+#: ConfigGeneral.qml:216
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "בשימוש לאחרונה"
 
-#: ConfigGeneral.qml:214
+#: ConfigGeneral.qml:216
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
 msgid "Often used"
 msgstr "בשימוש לעיתים קרובות"
 
-#: ConfigGeneral.qml:224
+#: ConfigGeneral.qml:226
 #, kde-format
 msgid "Search:"
 msgstr "חיפוש:"
 
-#: ConfigGeneral.qml:226
+#: ConfigGeneral.qml:228
 #, kde-format
 msgid "Expand search to bookmarks, files and emails"
 msgstr "הרחבת החיפוש לסימניות, קבצים והודעות דוא״ל"
 
-#: ConfigGeneral.qml:234
+#: ConfigGeneral.qml:236
 #, kde-format
 msgid "Align search results to bottom"
 msgstr "יישור תוצאות חיפוש לתחתית"
 
-#: DashboardRepresentation.qml:285
+#: ConfigGeneral.qml:241
+#, kde-format
+msgctxt "@label:textbox for a checkbox toggling Dark Mode"
+msgid "Appearance:"
+msgstr ""
+
+#: ConfigGeneral.qml:246
+#, kde-format
+msgid "Prefer Dark Mode when available"
+msgstr ""
+
+#: ConfigGeneral.qml:250
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"This feature uses the complementary colors from your colorscheme, which "
+"usually feature a dark background."
+msgstr ""
+
+#: DashboardRepresentation.qml:300
 #, kde-format
 msgid "Favorites"
 msgstr "מועדפים"

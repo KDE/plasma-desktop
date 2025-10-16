@@ -1,22 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2019, 2020, 2023, 2024 Vít Pelčák <vit@pelcak.org>
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-09 00:44+0000\n"
-"PO-Revision-Date: 2024-08-29 16:39+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2025-10-02 09:30+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 25.08.1\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -132,13 +132,13 @@ msgstr "Uspořádání:"
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "In Columns"
-msgstr ""
+msgstr "Ve sloupcích"
 
 #: package/contents/ui/ConfigIcons.qml:128
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "In Rows"
-msgstr ""
+msgstr "V řádcích"
 
 #: package/contents/ui/ConfigIcons.qml:137
 #, kde-format
@@ -149,13 +149,13 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Left-to-Right"
-msgstr ""
+msgstr "Zleva doprava"
 
 #: package/contents/ui/ConfigIcons.qml:141
 #, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Right-to-Left"
-msgstr ""
+msgstr "Zprava doleva"
 
 #: package/contents/ui/ConfigIcons.qml:163
 #, kde-format
@@ -321,73 +321,73 @@ msgstr "Nastavit moduly náhledu…"
 #, kde-format
 msgctxt "@title:group form label for radiobutton group"
 msgid "Show:"
-msgstr ""
+msgstr "Zobrazit:"
 
 #: package/contents/ui/ConfigLocation.qml:83
 #, kde-format
 msgctxt "@option:radio"
 msgid "Desktop folder"
-msgstr ""
+msgstr "Složka plochy"
 
 #: package/contents/ui/ConfigLocation.qml:91
 #, kde-format
 msgctxt "@option:radio"
 msgid "Files linked to the current activity"
-msgstr ""
+msgstr "Soubory spojené s aktuální aktivitou"
 
 #: package/contents/ui/ConfigLocation.qml:100
 #, kde-format
 msgctxt "@option:radio also label for combobox"
 msgid "Places panel item:"
-msgstr ""
+msgstr "Položka panelu Místa:"
 
 #: package/contents/ui/ConfigLocation.qml:137
 #, kde-format
 msgctxt "@option:radio also label for text field"
 msgid "Custom location:"
-msgstr ""
+msgstr "Vlastní umístění:"
 
 #: package/contents/ui/ConfigLocation.qml:145
 #, kde-format
 msgctxt "@info:placeholder custom location"
 msgid "Type path or URL…"
-msgstr ""
+msgstr "Zadejte cestu nebo URL"
 
 #: package/contents/ui/ConfigLocation.qml:188
 #, kde-format
 msgctxt "@label:textbox custom widget title"
 msgid "Title:"
-msgstr ""
+msgstr "Název:"
 
 #: package/contents/ui/ConfigLocation.qml:197
 #, kde-format
 msgctxt "@item:inlistbox no title"
 msgid "None"
-msgstr ""
+msgstr "Žádný"
 
 #: package/contents/ui/ConfigLocation.qml:198
 #, kde-format
 msgctxt "@item:inlistbox default title"
 msgid "Default"
-msgstr ""
+msgstr "Výchozí"
 
 #: package/contents/ui/ConfigLocation.qml:199
 #, kde-format
 msgctxt "@item:inlistbox full path as title"
 msgid "Full path"
-msgstr ""
+msgstr "Celá cesta"
 
 #: package/contents/ui/ConfigLocation.qml:200
 #, kde-format
 msgctxt "@item:inlistbox title from text input field"
 msgid "Custom"
-msgstr ""
+msgstr "Vlastní"
 
 #: package/contents/ui/ConfigLocation.qml:209
 #, kde-format
 msgctxt "@info:placeholder custom window title"
 msgid "Enter title…"
-msgstr ""
+msgstr "Zadejte název..."
 
 #: package/contents/ui/ConfigOverlay.qml:98
 #, kde-format
@@ -428,7 +428,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Folder is empty"
-msgstr ""
+msgstr "Složka je prázdná"
 
 #: package/contents/ui/main.qml:426
 #, kde-format
@@ -475,7 +475,7 @@ msgstr "&Vyprázdnit koš"
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
-msgstr ""
+msgstr "Obnovit do předchozího umístění"
 
 #: plugins/folder/foldermodel.cpp:1763
 #, kde-format
@@ -488,13 +488,13 @@ msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
 "link points to"
 msgid "Show Target"
-msgstr ""
+msgstr "Zobrazit cíl"
 
 #: plugins/folder/foldermodel.cpp:1868
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
-msgstr ""
+msgstr "Odstranit ikonu koše"
 
 #: plugins/folder/foldermodel.cpp:1871
 #, kde-format
@@ -615,13 +615,13 @@ msgstr "Uspořádat"
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Columns"
-msgstr ""
+msgstr "Ve sloupcích"
 
 #: plugins/folder/viewpropertiesmenu.cpp:74
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Rows"
-msgstr ""
+msgstr "V řádcích"
 
 #: plugins/folder/viewpropertiesmenu.cpp:79
 #, kde-format
@@ -632,13 +632,13 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Left-to-Right"
-msgstr ""
+msgstr "Zleva doprava"
 
 #: plugins/folder/viewpropertiesmenu.cpp:84
 #, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Right-to-Left"
-msgstr ""
+msgstr "Zprava doleva"
 
 #: plugins/folder/viewpropertiesmenu.cpp:94
 #, kde-format

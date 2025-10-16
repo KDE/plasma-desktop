@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE Frameworks 5 Applications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-02 00:44+0000\n"
+"POT-Creation-Date: 2025-10-16 00:43+0000\n"
 "PO-Revision-Date: 2025-09-26 16:02+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -50,128 +50,147 @@ msgstr "Rodyti žymelėse"
 msgid "General"
 msgstr "Bendra"
 
-#: ConfigGeneral.qml:46
+#: ConfigGeneral.qml:48
 #, kde-format
 msgid "Icon:"
 msgstr "Piktograma:"
 
-#: ConfigGeneral.qml:131
+#: ConfigGeneral.qml:133
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Pasirinkti…"
 
-#: ConfigGeneral.qml:136
+#: ConfigGeneral.qml:138
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "Išvalyti piktogramą"
 
-#: ConfigGeneral.qml:155
+#: ConfigGeneral.qml:157
 #, kde-format
 msgid "Show applications as:"
 msgstr "Programų rodymo būdas:"
 
-#: ConfigGeneral.qml:157
+#: ConfigGeneral.qml:159
 #, kde-format
 msgid "Name only"
 msgstr "Tik pavadinimas"
 
-#: ConfigGeneral.qml:157
+#: ConfigGeneral.qml:159
 #, kde-format
 msgid "Description only"
 msgstr "TIk aprašas"
 
-#: ConfigGeneral.qml:157
+#: ConfigGeneral.qml:159
 #, kde-format
 msgid "Name (Description)"
 msgstr "Pavadinimas (aprašas)"
 
-#: ConfigGeneral.qml:157
+#: ConfigGeneral.qml:159
 #, kde-format
 msgid "Description (Name)"
 msgstr "Aprašas (pavadinimas)"
 
-#: ConfigGeneral.qml:167
+#: ConfigGeneral.qml:169
 #, kde-format
 msgid "Behavior:"
 msgstr "Elgsena:"
 
-#: ConfigGeneral.qml:169
+#: ConfigGeneral.qml:171
 #, kde-format
 msgid "Sort applications alphabetically"
 msgstr "Rikiuoti programas pagal abėcėlę"
 
-#: ConfigGeneral.qml:177
+#: ConfigGeneral.qml:179
 #, kde-format
 msgid "Flatten sub-menus to a single level"
 msgstr "Išlyginti submeniu iki vieno lygio"
 
-#: ConfigGeneral.qml:185
+#: ConfigGeneral.qml:187
 #, kde-format
 msgid "Show icons on the root level of the menu"
 msgstr "Rodyti piktogramas šakniniame meniu lygyje"
 
-#: ConfigGeneral.qml:195
+#: ConfigGeneral.qml:197
 #, kde-format
 msgid "Show categories:"
 msgstr "Rodyti kategorijas:"
 
-#: ConfigGeneral.qml:198
+#: ConfigGeneral.qml:200
 #, kde-format
 msgid "Recent applications"
 msgstr "Paskiausios programos"
 
-#: ConfigGeneral.qml:199
+#: ConfigGeneral.qml:201
 #, kde-format
 msgid "Often used applications"
 msgstr "Dažniausios programos"
 
-#: ConfigGeneral.qml:206
+#: ConfigGeneral.qml:208
 #, kde-format
 msgid "Recent files"
 msgstr "Paskiausiai naudoti failai"
 
-#: ConfigGeneral.qml:207
+#: ConfigGeneral.qml:209
 #, kde-format
 msgid "Often used files"
 msgstr "Dažnai naudojami failai"
 
-#: ConfigGeneral.qml:213
+#: ConfigGeneral.qml:215
 #, kde-format
 msgid "Sort items in categories by:"
 msgstr "Elementus kategorijose rikiuoti pagal:"
 
-#: ConfigGeneral.qml:214
+#: ConfigGeneral.qml:216
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "Paskiausiai naudoti"
 
-#: ConfigGeneral.qml:214
+#: ConfigGeneral.qml:216
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
 msgid "Often used"
 msgstr "Dažniausiai naudoti"
 
-#: ConfigGeneral.qml:224
+#: ConfigGeneral.qml:226
 #, kde-format
 msgid "Search:"
 msgstr "Paieška:"
 
-#: ConfigGeneral.qml:226
+#: ConfigGeneral.qml:228
 #, kde-format
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Įtraukti į paiešką žymeles, failus ir el. laiškus"
 
-#: ConfigGeneral.qml:234
+#: ConfigGeneral.qml:236
 #, kde-format
 msgid "Align search results to bottom"
 msgstr "Lygiuoti paieškos rezultatus į apačią"
 
-#: DashboardRepresentation.qml:285
+#: ConfigGeneral.qml:241
+#, kde-format
+msgctxt "@label:textbox for a checkbox toggling Dark Mode"
+msgid "Appearance:"
+msgstr ""
+
+#: ConfigGeneral.qml:246
+#, kde-format
+msgid "Prefer Dark Mode when available"
+msgstr ""
+
+#: ConfigGeneral.qml:250
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"This feature uses the complementary colors from your colorscheme, which "
+"usually feature a dark background."
+msgstr ""
+
+#: DashboardRepresentation.qml:300
 #, kde-format
 msgid "Favorites"
 msgstr "Žymelės"

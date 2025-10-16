@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-02 00:44+0000\n"
+"POT-Creation-Date: 2025-10-16 00:43+0000\n"
 "PO-Revision-Date: 2021-07-08 20:37+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -47,128 +47,147 @@ msgstr "पसंदीदा में प्रदर्शित करें
 msgid "General"
 msgstr "सामान्य"
 
-#: ConfigGeneral.qml:46
+#: ConfigGeneral.qml:48
 #, kde-format
 msgid "Icon:"
 msgstr "प्रतीकः"
 
-#: ConfigGeneral.qml:131
+#: ConfigGeneral.qml:133
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "चुनें…"
 
-#: ConfigGeneral.qml:136
+#: ConfigGeneral.qml:138
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "प्रतीक हटाएँ"
 
-#: ConfigGeneral.qml:155
+#: ConfigGeneral.qml:157
 #, kde-format
 msgid "Show applications as:"
 msgstr "अनुप्रयोगों को एसे प्रदर्शित करें:"
 
-#: ConfigGeneral.qml:157
+#: ConfigGeneral.qml:159
 #, kde-format
 msgid "Name only"
 msgstr "केवल नाम:"
 
-#: ConfigGeneral.qml:157
+#: ConfigGeneral.qml:159
 #, kde-format
 msgid "Description only"
 msgstr "केवल वर्णन"
 
-#: ConfigGeneral.qml:157
+#: ConfigGeneral.qml:159
 #, kde-format
 msgid "Name (Description)"
 msgstr "नाम (वर्णन)"
 
-#: ConfigGeneral.qml:157
+#: ConfigGeneral.qml:159
 #, kde-format
 msgid "Description (Name)"
 msgstr "वर्णन (नाम)"
 
-#: ConfigGeneral.qml:167
+#: ConfigGeneral.qml:169
 #, kde-format
 msgid "Behavior:"
 msgstr "बर्ताव:"
 
-#: ConfigGeneral.qml:169
+#: ConfigGeneral.qml:171
 #, kde-format
 msgid "Sort applications alphabetically"
 msgstr "अनुप्रयोगों को वर्णानुक्रम में क्रमबद्ध करें"
 
-#: ConfigGeneral.qml:177
+#: ConfigGeneral.qml:179
 #, kde-format
 msgid "Flatten sub-menus to a single level"
 msgstr "उप-मेनू को एक स्तर पर समतल करें"
 
-#: ConfigGeneral.qml:185
+#: ConfigGeneral.qml:187
 #, kde-format
 msgid "Show icons on the root level of the menu"
 msgstr "मेनू के मूल स्तर पर प्रतीक दिखाएं"
 
-#: ConfigGeneral.qml:195
+#: ConfigGeneral.qml:197
 #, kde-format
 msgid "Show categories:"
 msgstr "श्रेणीयाँ दिखाएँ"
 
-#: ConfigGeneral.qml:198
+#: ConfigGeneral.qml:200
 #, kde-format
 msgid "Recent applications"
 msgstr "हाल के अनुप्रयोग"
 
-#: ConfigGeneral.qml:199
+#: ConfigGeneral.qml:201
 #, kde-format
 msgid "Often used applications"
 msgstr "अक्सर उपयोग किए जाने वाले अनुप्रयोग "
 
-#: ConfigGeneral.qml:206
+#: ConfigGeneral.qml:208
 #, kde-format
 msgid "Recent files"
 msgstr "हाल हीं के फाइलें"
 
-#: ConfigGeneral.qml:207
+#: ConfigGeneral.qml:209
 #, kde-format
 msgid "Often used files"
 msgstr "अक्सर उपयोग की गइ फ़ाइलें"
 
-#: ConfigGeneral.qml:213
+#: ConfigGeneral.qml:215
 #, kde-format
 msgid "Sort items in categories by:"
 msgstr "वस्तुओं को श्रेणियों में क्रमबद्ध करें:"
 
-#: ConfigGeneral.qml:214
+#: ConfigGeneral.qml:216
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "हाल में प्रयुक्त"
 
-#: ConfigGeneral.qml:214
+#: ConfigGeneral.qml:216
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
 msgid "Often used"
 msgstr "अक्सर उपयोग किए गए"
 
-#: ConfigGeneral.qml:224
+#: ConfigGeneral.qml:226
 #, kde-format
 msgid "Search:"
 msgstr "खोजें :"
 
-#: ConfigGeneral.qml:226
+#: ConfigGeneral.qml:228
 #, kde-format
 msgid "Expand search to bookmarks, files and emails"
 msgstr "खोज को पुस्तचिह्न, फ़ाइलों और ईमेल तक विस्तृत करें"
 
-#: ConfigGeneral.qml:234
+#: ConfigGeneral.qml:236
 #, kde-format
 msgid "Align search results to bottom"
 msgstr "खोज परिणामों को नीचे से संरेखित करें"
 
-#: DashboardRepresentation.qml:285
+#: ConfigGeneral.qml:241
+#, kde-format
+msgctxt "@label:textbox for a checkbox toggling Dark Mode"
+msgid "Appearance:"
+msgstr ""
+
+#: ConfigGeneral.qml:246
+#, kde-format
+msgid "Prefer Dark Mode when available"
+msgstr ""
+
+#: ConfigGeneral.qml:250
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"This feature uses the complementary colors from your colorscheme, which "
+"usually feature a dark background."
+msgstr ""
+
+#: DashboardRepresentation.qml:300
 #, kde-format
 msgid "Favorites"
 msgstr "पसंदीदा"

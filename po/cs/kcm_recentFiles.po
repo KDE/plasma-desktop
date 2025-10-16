@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Vít Pelčák <vit@pelcak.org>, 2016, 2017, 2018, 2019, 2020.
-# Vit Pelcak <vit@pelcak.org>, 2021.
+# SPDX-FileCopyrightText: 2021, 2025 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2021-06-02 16:01+0200\n"
+"PO-Revision-Date: 2025-10-02 09:25+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.04.1\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #. i18n: ectx: label, entry (keepHistoryFor), group (Plugin-org.kde.ActivityManager.Resources.Scoring)
 #: kactivitymanagerd_plugins_settings.kcfg:10
@@ -129,4 +129,4 @@ msgstr "Zapamatovat si otevřené dokumenty:"
 #: ui/RecentFiles.ui:128
 #, kde-format
 msgid "Exclude applications not on the list"
-msgstr ""
+msgstr "Vyjmout všechny aplikace mimo tento seznam"

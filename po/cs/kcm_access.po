@@ -1,22 +1,22 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # SPDX-FileCopyrightText: 2014, 2015, 2017, 2019, 2020, 2024 Vít Pelčák <vit@pelcak.org>
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-25 00:44+0000\n"
-"PO-Revision-Date: 2024-09-03 08:35+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2025-10-02 09:33+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 25.08.1\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -575,13 +575,13 @@ msgstr ""
 #, kde-format
 msgctxt "@label"
 msgid "Invert:"
-msgstr ""
+msgstr "Invertovat:"
 
 #: ui/Invert.qml:23
 #, kde-format
 msgctxt "@option check, Enable invert effect"
 msgid "Enable"
-msgstr ""
+msgstr "Povolit"
 
 #: ui/Invert.qml:38
 #, kde-format
@@ -593,7 +593,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Shortcuts…"
-msgstr ""
+msgstr "Nastavit zkratky…"
 
 #: ui/KeyboardFilters.qml:18
 #, kde-format
@@ -726,7 +726,7 @@ msgstr "Oprava barvosleposti"
 #, kde-format
 msgctxt "@title Category name in sidebar, for inverting screen colors"
 msgid "Invert"
-msgstr ""
+msgstr "Invertovat"
 
 #: ui/main.qml:73
 #, kde-format
@@ -922,7 +922,7 @@ msgstr "Velká"
 #, kde-format
 msgctxt "@label, followed by 'full screen' or 'magnify region'"
 msgid "Zoom:"
-msgstr ""
+msgstr "Zvětšení:"
 
 #: ui/ZoomMagnifier.qml:24
 #, kde-format
@@ -946,19 +946,19 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scale"
-msgstr ""
+msgstr "Měřítko"
 
 #: ui/ZoomMagnifier.qml:87
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Keep"
-msgstr ""
+msgstr "Ponechat"
 
 #: ui/ZoomMagnifier.qml:87
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Hide"
-msgstr ""
+msgstr "Skrýt"
 
 #: ui/ZoomMagnifier.qml:98
 #, kde-format
@@ -970,7 +970,7 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Proportional"
-msgstr ""
+msgstr "Proporcionální"
 
 #: ui/ZoomMagnifier.qml:100
 #, kde-format
@@ -988,13 +988,13 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Disabled"
-msgstr ""
+msgstr "Zakázáno"
 
 #: ui/ZoomMagnifier.qml:111
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable focus tracking"
-msgstr ""
+msgstr "Povolit sledování zaměření"
 
 #: ui/ZoomMagnifier.qml:123
 #, kde-format
@@ -1037,15 +1037,15 @@ msgstr "Šířka:"
 msgctxt "short for pixel(s)"
 msgid "%1 px"
 msgid_plural "%1 px"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%1 px"
+msgstr[1] "%1 px"
+msgstr[2] "%1 px"
 
 #: ui/ZoomMagnifier.qml:229 ui/ZoomMagnifier.qml:254
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
-msgstr ""
+msgstr "px"
 
 #: ui/ZoomMagnifier.qml:242
 #, kde-format
@@ -1057,13 +1057,13 @@ msgstr "Výška:"
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
-msgstr ""
+msgstr "Zakázáno"
 
 #: ui/ZoomMagnifier.qml:284
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
-msgstr ""
+msgstr "Faktor zvětšení:"
 
 #: ui/ZoomMagnifier.qml:331
 #, kde-format

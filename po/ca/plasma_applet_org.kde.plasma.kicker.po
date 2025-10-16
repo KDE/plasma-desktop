@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-02 00:44+0000\n"
+"POT-Creation-Date: 2025-10-16 00:43+0000\n"
 "PO-Revision-Date: 2025-09-19 09:43+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -52,128 +52,147 @@ msgstr "Mostra als preferits"
 msgid "General"
 msgstr "General"
 
-#: ConfigGeneral.qml:46
+#: ConfigGeneral.qml:48
 #, kde-format
 msgid "Icon:"
 msgstr "Icona:"
 
-#: ConfigGeneral.qml:131
+#: ConfigGeneral.qml:133
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Trieu…"
 
-#: ConfigGeneral.qml:136
+#: ConfigGeneral.qml:138
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Clear Icon"
 msgstr "Neteja la icona"
 
-#: ConfigGeneral.qml:155
+#: ConfigGeneral.qml:157
 #, kde-format
 msgid "Show applications as:"
 msgstr "Mostra les aplicacions amb:"
 
-#: ConfigGeneral.qml:157
+#: ConfigGeneral.qml:159
 #, kde-format
 msgid "Name only"
 msgstr "Només el nom"
 
-#: ConfigGeneral.qml:157
+#: ConfigGeneral.qml:159
 #, kde-format
 msgid "Description only"
 msgstr "Només la descripció"
 
-#: ConfigGeneral.qml:157
+#: ConfigGeneral.qml:159
 #, kde-format
 msgid "Name (Description)"
 msgstr "Nom (Descripció)"
 
-#: ConfigGeneral.qml:157
+#: ConfigGeneral.qml:159
 #, kde-format
 msgid "Description (Name)"
 msgstr "Descripció (Nom)"
 
-#: ConfigGeneral.qml:167
+#: ConfigGeneral.qml:169
 #, kde-format
 msgid "Behavior:"
 msgstr "Comportament:"
 
-#: ConfigGeneral.qml:169
+#: ConfigGeneral.qml:171
 #, kde-format
 msgid "Sort applications alphabetically"
 msgstr "Ordena alfabèticament les aplicacions"
 
-#: ConfigGeneral.qml:177
+#: ConfigGeneral.qml:179
 #, kde-format
 msgid "Flatten sub-menus to a single level"
 msgstr "Aplana els submenús a un únic nivell"
 
-#: ConfigGeneral.qml:185
+#: ConfigGeneral.qml:187
 #, kde-format
 msgid "Show icons on the root level of the menu"
 msgstr "Mostra les icones al nivell arrel del menú"
 
-#: ConfigGeneral.qml:195
+#: ConfigGeneral.qml:197
 #, kde-format
 msgid "Show categories:"
 msgstr "Mostra les categories:"
 
-#: ConfigGeneral.qml:198
+#: ConfigGeneral.qml:200
 #, kde-format
 msgid "Recent applications"
 msgstr "Aplicacions recents"
 
-#: ConfigGeneral.qml:199
+#: ConfigGeneral.qml:201
 #, kde-format
 msgid "Often used applications"
 msgstr "Aplicacions usades sovint"
 
-#: ConfigGeneral.qml:206
+#: ConfigGeneral.qml:208
 #, kde-format
 msgid "Recent files"
 msgstr "Fitxers recents"
 
-#: ConfigGeneral.qml:207
+#: ConfigGeneral.qml:209
 #, kde-format
 msgid "Often used files"
 msgstr "Fitxers usats sovint"
 
-#: ConfigGeneral.qml:213
+#: ConfigGeneral.qml:215
 #, kde-format
 msgid "Sort items in categories by:"
 msgstr "Ordena els elements en categories per:"
 
-#: ConfigGeneral.qml:214
+#: ConfigGeneral.qml:216
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Often used]"
 msgid "Recently used"
 msgstr "Usats recentment"
 
-#: ConfigGeneral.qml:214
+#: ConfigGeneral.qml:216
 #, kde-format
 msgctxt ""
 "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
 msgid "Often used"
 msgstr "Usats sovint"
 
-#: ConfigGeneral.qml:224
+#: ConfigGeneral.qml:226
 #, kde-format
 msgid "Search:"
 msgstr "Cerca:"
 
-#: ConfigGeneral.qml:226
+#: ConfigGeneral.qml:228
 #, kde-format
 msgid "Expand search to bookmarks, files and emails"
 msgstr "Amplia la cerca a les adreces d'interès, fitxers i correus electrònics"
 
-#: ConfigGeneral.qml:234
+#: ConfigGeneral.qml:236
 #, kde-format
 msgid "Align search results to bottom"
 msgstr "Alinea els resultats de la cerca a la part inferior"
 
-#: DashboardRepresentation.qml:285
+#: ConfigGeneral.qml:241
+#, kde-format
+msgctxt "@label:textbox for a checkbox toggling Dark Mode"
+msgid "Appearance:"
+msgstr ""
+
+#: ConfigGeneral.qml:246
+#, kde-format
+msgid "Prefer Dark Mode when available"
+msgstr ""
+
+#: ConfigGeneral.qml:250
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"This feature uses the complementary colors from your colorscheme, which "
+"usually feature a dark background."
+msgstr ""
+
+#: DashboardRepresentation.qml:300
 #, kde-format
 msgid "Favorites"
 msgstr "Preferits"
