@@ -109,7 +109,7 @@ KCM.SimpleKCM {
                     text: deviceType
                 }
             }
-            
+
             RowLayout {
                 spacing: Kirigami.Units.largeSpacing
 
@@ -148,7 +148,7 @@ KCM.SimpleKCM {
                 Layout.fillWidth: true
 
                 QQC2.Switch {
-                    text: i18nc("@label:textbox", "Enable KWin Game Controller Recognition")
+                    text: i18nc("@label:textbox", "Enable KDE Game Controller Recognition")
                     checked: KWinPlugin.pluginEnabled
                     anchors.leftMargin: Kirigami.Units.largeSpacing * 2
 
