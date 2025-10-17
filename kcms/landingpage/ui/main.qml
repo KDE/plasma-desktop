@@ -17,18 +17,15 @@ import org.kde.kcmutils as KCMUtils
 
 import org.kde.plasma.landingpage.kcm
 
-import "formcard" as Form
-//import "formlayout" as Form
-
 KCMUtils.SimpleKCM {
     id: root
 
     implicitWidth: Kirigami.Units.gridUnit * 44
     implicitHeight: Kirigami.Units.gridUnit * 33
 
-    Form.FormLayout {
-        Form.FormGroup {
-            Form.FormEntry {
+    Kirigami.FormLayout2 {
+        Kirigami.FormGroup {
+            Kirigami.FormEntry {
                 title: i18n("Theme:")
                 contentItem: RowLayout {
                     Kirigami.FormData.label: i18n("Theme:")
@@ -125,7 +122,7 @@ KCMUtils.SimpleKCM {
                 }
             }
 
-            Form.FormEntry {
+            Kirigami.FormEntry {
                 title: i18nc("@title:group translate as short as possible", "More appearance settings:")
                 contentItem: RowLayout {
                     id: appearanceButtonsRow
@@ -151,9 +148,9 @@ KCMUtils.SimpleKCM {
             }
         }
 
-        Form.FormGroup {
+        Kirigami.FormGroup {
             //title: i18n("Behavior")
-            Form.FormEntry {
+            Kirigami.FormEntry {
                 title: slider.Accessible.name
                 contentItem: ColumnLayout {
                     // We want to show the slider in a logarithmic way. ie
@@ -200,7 +197,7 @@ KCMUtils.SimpleKCM {
                 }
             }
 
-            Form.FormEntry {
+            Kirigami.FormEntry {
                 //title: i18nc("part of a sentence: 'Clicking files or folders [opens them/selects them]'", "Clicking files or folders:")
                 // Click behavior settings
                 contentItem: ColumnLayout {
@@ -241,7 +238,7 @@ KCMUtils.SimpleKCM {
                 }
             }
 
-            Form.FormEntry {
+            Kirigami.FormEntry {
                 // Click behavior settings
                 contentItem: ColumnLayout {
                     Kirigami.FormData.buddyFor: singleClick
@@ -275,7 +272,7 @@ KCMUtils.SimpleKCM {
                 }
             }
 
-            Form.FormEntry {
+            Kirigami.FormEntry {
                 title: i18nc("@title:group translate as short as possible", "More behavior settings:")
                 contentItem: MostUsedIcon {
                     Kirigami.FormData.label: i18nc("@title:group translate as short as possible", "More behavior settings:")
@@ -286,8 +283,8 @@ KCMUtils.SimpleKCM {
             }
         }
 
-        Form.FormGroup {
-            Form.FormEntry {
+        Kirigami.FormGroup {
+            Kirigami.FormEntry {
                 title: i18n("Most used pages:")
                 contentItem: GridLayout {
                     id: mostUsedGrid
