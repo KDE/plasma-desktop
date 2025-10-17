@@ -28,8 +28,6 @@ KCMUtils.SimpleKCM {
             Kirigami.FormEntry {
                 title: i18n("Theme:")
                 contentItem: RowLayout {
-                    Kirigami.FormData.label: i18n("Theme:")
-
                     Layout.alignment: Qt.AlignCenter
                     spacing: Kirigami.Units.largeSpacing
 
@@ -181,18 +179,19 @@ KCMUtils.SimpleKCM {
                             settingName: "animationDurationFactor"
                         }
                     }
-                }
-                footer: RowLayout {
-                    QQC2.Label {
-                        text: i18nc("Animation speed", "Slow")
-                        textFormat: Text.PlainText
-                    }
-                    Item {
-                        Layout.fillWidth: true
-                    }
-                    QQC2.Label {
-                        text: i18nc("Animation speed", "Instant")
-                        textFormat: Text.PlainText
+
+                    RowLayout {
+                        QQC2.Label {
+                            text: i18nc("Animation speed", "Slow")
+                            textFormat: Text.PlainText
+                        }
+                        Item {
+                            Layout.fillWidth: true
+                        }
+                        QQC2.Label {
+                            text: i18nc("Animation speed", "Instant")
+                            textFormat: Text.PlainText
+                        }
                     }
                 }
             }
