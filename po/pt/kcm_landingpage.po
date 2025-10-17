@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-10-17 00:43+0000\n"
 "PO-Revision-Date: 2022-03-26 23:19+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -71,6 +71,14 @@ msgstr "Tema:"
 #, kde-format
 msgctxt "Switch between dark and light look and feel packages automatically"
 msgid "Automatic"
+msgstr ""
+
+#: ui/main.qml:93
+#, kde-format
+msgctxt ""
+"@info:tooltip 1 is the name of a light global theme, 2 is the name of a dark "
+"global theme"
+msgid "Use “%1” during the day and “%2” at night"
 msgstr ""
 
 #: ui/main.qml:136

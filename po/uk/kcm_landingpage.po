@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_landingpage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-10-17 00:43+0000\n"
 "PO-Revision-Date: 2025-08-02 18:05+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -80,6 +80,14 @@ msgstr "Тема:"
 msgctxt "Switch between dark and light look and feel packages automatically"
 msgid "Automatic"
 msgstr "Автоматично"
+
+#: ui/main.qml:93
+#, kde-format
+msgctxt ""
+"@info:tooltip 1 is the name of a light global theme, 2 is the name of a dark "
+"global theme"
+msgid "Use “%1” during the day and “%2” at night"
+msgstr ""
 
 #: ui/main.qml:136
 #, kde-format
