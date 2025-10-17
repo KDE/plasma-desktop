@@ -209,6 +209,7 @@ KCMUtils.SimpleKCM {
                 i18nc("@item:inlistbox Part of a sentence: 'Scrolling behavior does nothing'", "Does nothing"),
                 i18nc("@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through all tasks'", "Cycles through all tasks"),
                 i18nc("@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through the hovered task's windows'", "Cycles through the hovered task’s windows"),
+                i18nc("@item:inlistbox Part of a sentence: 'Scrolling behavior adjusts volume'", "Adjusts the hovered task’s volume"),
             ]
         }
 
