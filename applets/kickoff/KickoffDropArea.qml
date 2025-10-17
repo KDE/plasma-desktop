@@ -16,6 +16,13 @@ DropArea {
     property real scrollUpMargin: 0
     property real scrollDownMargin: 0
     enabled: Plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
+
+    // We keep track of the index changes as we drag and drop an item
+    // to be able to undo them if the drag and drop ends outside the
+    // DropArea, which allows to drag and drop items outside kickoff
+    // without changing their order within the view.
+    property var dragMoves: []
+
     onPositionChanged: drag => {
         if (drag.source === kickoff.dragSource) {
             const source = kickoff.dragSource.sourceItem
@@ -27,6 +34,7 @@ DropArea {
                 const pos = mapToItem(view.contentItem, drag.x, drag.y)
                 const targetIndex = view.indexAt(pos.x, pos.y)
                 if (targetIndex >= 0 && targetIndex !== source.index) {
+                    root.dragMoves.push([source.index, targetIndex])
                     view.model.moveRow(source.index, targetIndex)
                     // itemIndex changes directly after moving,
                     // we can just set the currentIndex to it then.
@@ -49,6 +57,16 @@ DropArea {
                 }
             }
         }
+    }
+    onEntered: {
+        root.dragMoves = []
+    }
+    onExited: {
+        while (root.dragMoves.length > 0) {
+            const [start, end] = root.dragMoves.pop()
+            view.model.moveRow(end, start)
+        }
+        view.currentIndex = -1
     }
 
     function moveRow(targetIndex) {
