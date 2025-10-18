@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-16 00:43+0000\n"
-"PO-Revision-Date: 2025-09-19 13:57+0100\n"
+"PO-Revision-Date: 2025-10-18 01:08+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: code/tools.js:43
 #, kde-format
@@ -174,12 +174,12 @@ msgstr "Alinear el resultado de la búsqueda al fondo"
 #, kde-format
 msgctxt "@label:textbox for a checkbox toggling Dark Mode"
 msgid "Appearance:"
-msgstr ""
+msgstr "Apariencia:"
 
 #: ConfigGeneral.qml:246
 #, kde-format
 msgid "Prefer Dark Mode when available"
-msgstr ""
+msgstr "Preferir el modo oscuro cuando esté disponible"
 
 #: ConfigGeneral.qml:250
 #, kde-kuit-format
@@ -188,6 +188,8 @@ msgid ""
 "This feature uses the complementary colors from your colorscheme, which "
 "usually feature a dark background."
 msgstr ""
+"Esta función usa los colores complementarios del esquema de color, que suele "
+"tener un fondo oscuro."
 
 #: DashboardRepresentation.qml:300
 #, kde-format
