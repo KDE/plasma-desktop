@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-25 00:44+0000\n"
-"PO-Revision-Date: 2025-07-17 18:17+0300\n"
+"PO-Revision-Date: 2025-10-13 21:13+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: kcmaccess.cpp:127 kcmaccess.cpp:155
 #, kde-format
@@ -492,6 +492,8 @@ msgid ""
 "If you have trouble with certain colors on the screen, these filters can "
 "change them into other colors."
 msgstr ""
+"Jos tiettyjen näyttövärien kanssa on ongelmia, näillä suodattimilla ne voi "
+"muuttaa muiksi."
 
 #: ui/ColorblindnessCorrection.qml:31
 #, kde-format
@@ -504,31 +506,31 @@ msgstr "Käytä"
 msgctxt ""
 "@label:listbox Difficulty seeing any of the following colors on the screen"
 msgid "Problematic colors:"
-msgstr ""
+msgstr "Ongelmavärit:"
 
 #: ui/ColorblindnessCorrection.qml:49
 #, kde-format
 msgctxt "@option"
 msgid "Red & purple (Protanopia)"
-msgstr ""
+msgstr "Punainen ja violetti (protanopia)"
 
 #: ui/ColorblindnessCorrection.qml:50
 #, kde-format
 msgctxt "@option"
 msgid "Green & purple (Deuteranopia)"
-msgstr ""
+msgstr "Vihreä ja violetti (deuteranopia)"
 
 #: ui/ColorblindnessCorrection.qml:51
 #, kde-format
 msgctxt "@option"
 msgid "Yellow, green & purple (Tritanopia)"
-msgstr ""
+msgstr "Keltainen, vihreä ja violetti (tritanopia)"
 
 #: ui/ColorblindnessCorrection.qml:52
 #, kde-format
 msgctxt "@option"
 msgid "All (grayscale mode)"
-msgstr ""
+msgstr "Kaikki (harmaasävytila)"
 
 #: ui/ColorblindnessCorrection.qml:67
 #, kde-format
@@ -552,30 +554,27 @@ msgstr "Vahva"
 #, kde-format
 msgctxt "@info"
 msgid "Adjusted colors:"
-msgstr ""
+msgstr "Mukautetut värit:"
 
 #: ui/ColorblindnessCorrection.qml:132
 #, kde-format
 msgid "Reds:"
-msgstr ""
+msgstr "Punaiset:"
 
 #: ui/ColorblindnessCorrection.qml:133
-#, fuzzy, kde-format
-#| msgid "Green"
+#, kde-format
 msgid "Greens:"
-msgstr "Vihreä"
+msgstr "Vihreät:"
 
 #: ui/ColorblindnessCorrection.qml:134
-#, fuzzy, kde-format
-#| msgid "Blue"
+#, kde-format
 msgid "Blues:"
-msgstr "Sininen"
+msgstr "Siniset:"
 
 #: ui/ColorblindnessCorrection.qml:135
-#, fuzzy, kde-format
-#| msgid "Purple"
+#, kde-format
 msgid "Purples:"
-msgstr "Purppura"
+msgstr "Violetit:"
 
 #: ui/Invert.qml:22
 #, kde-format
