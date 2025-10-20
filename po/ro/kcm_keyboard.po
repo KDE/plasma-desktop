@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-04 00:44+0000\n"
-"PO-Revision-Date: 2025-10-03 14:03+0100\n"
+"PO-Revision-Date: 2025-10-19 21:55+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -76,13 +76,7 @@ msgid "Keyboard layout visualization"
 msgstr "Vizualizarea aranjamentului tastaturii"
 
 #: tastenbrett/main.cpp:139
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid ""
-#| "The keyboard geometry failed to load. This often indicates that the "
-#| "selected model does not support a specific layout or layout variant. This "
-#| "problem will likely also present when you try to use this combination of "
-#| "model, layout and variant."
+#, kde-format
 msgctxt "@label"
 msgid ""
 "The keyboard geometry failed to load. This often indicates that the selected "
@@ -96,7 +90,10 @@ msgstr ""
 "Încărcarea geometriei tastaturii a eșuat. Aceasta indică adesea că modelul "
 "ales nu susține un anumit aranjament sau variantă de aranjament. Această "
 "problemă se poate manifesta și când încercați să folosiți această combinație "
-"de model, aranjament și variantă."
+"de model, aranjament și variantă.\n"
+"Previzualizarea aranjamentelor definite în afara dosarului „xcb” al "
+"sistemului nu e susținută și va declanșa acest mesaj. Aceasta ar putea, "
+"totuși, să funcționeze corect dacă sunt aplicate."
 
 #: ui/KeyBindings.qml:18
 #, kde-format
@@ -375,11 +372,10 @@ msgid "Number of spared main layouts"
 msgstr ""
 
 #: ui/main.qml:378
-#, fuzzy, kde-format
-#| msgid "Spare layouts"
+#, kde-format
 msgctxt "@label:textbox completes spinbox, x main layouts"
 msgid "main layouts"
-msgstr "Aranjamente de rezervă"
+msgstr "aranjamente primare"
 
 #: ui/main.qml:382
 #, kde-format
@@ -392,11 +388,10 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:387
-#, fuzzy, kde-format
-#| msgid "Main layout count:"
+#, kde-format
 msgctxt "@label:group Shortcut to change the keyboard layout. Keep it short"
 msgid "Change layout shortcut:"
-msgstr "Numărul de aranjamente principale:"
+msgstr "Scurtătură de schimbare a aranjamentului:"
 
 #: ui/main.qml:410
 #, kde-format
@@ -450,7 +445,7 @@ msgstr "Doar fereastra actuală"
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Show OSD popup on layout change"
-msgstr ""
+msgstr "Arată mesaj pe ecran la schimbarea aranjamentului"
 
 #: ui/Switching.qml:86
 #, kde-format
@@ -485,6 +480,10 @@ msgid ""
 "Wayland.<nl/><nl/>Setting these shortcuts will take you to the Key bindings "
 "page."
 msgstr ""
+"Scurtăturile X11 moștenite permit un control mai fin al scurtăturilor "
+"limitate la modificatori și oferă suport mai bun pe X11 în cazuri exotice. "
+"Acestea pot fi folosite și pe Wayland.<nl/><nl/>Configurarea acestor "
+"scurtături vă va duce la pagina pentru asocieri de taste."
 
 #: ui/Switching.qml:180
 #, kde-format
@@ -499,6 +498,8 @@ msgid ""
 "Modifier keys can be used to type additional characters, symbols, and "
 "diacritical marks."
 msgstr ""
+"Tastele modificatoare pot fi folosite pentru a introduce caractere "
+"suplimentare, simboluri și semne diacritice."
 
 #: xkboptionsmodel.cpp:165
 #, kde-format
