@@ -412,7 +412,13 @@ PlasmaComponents3.ScrollView {
                 if (rootList.visible) {
                     root.focusRootList(event.key === Qt.Key_Down);
                 } else if (runnerColumns.visible) {
+                    let index = runnerColumns.visibleChildren[0].currentIndex
                     root.focusRunnerColumn(0, event.key === Qt.Key_Down)
+                    // First column, first entry is initially selected even when focus is on the search
+                    // field, as Return will activate it. Down should immediately go to the second entry.
+                    if (index === 0 && event.key === Qt.Key_Down) {
+                        runnerColumns.visibleChildren[0].currentIndex = Math.min(index +1, runnerColumns.visibleChildren[0].length - 1)
+                    }
                 }
                 event.accepted = true;
             } else if (backArrowKey) {
