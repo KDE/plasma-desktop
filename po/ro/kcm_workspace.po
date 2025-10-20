@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Sergiu Bivol <sergiu@cip.md>, 2014, 2020, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2014, 2020, 2022, 2023, 2024, 2025 Sergiu Bivol <sergiu@cip.md>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-01 00:43+0000\n"
-"PO-Revision-Date: 2024-06-09 14:59+0100\n"
+"PO-Revision-Date: 2025-10-19 22:04+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: ui/main.qml:25
 #, kde-format
@@ -36,19 +36,19 @@ msgstr "Repornește"
 #, kde-format
 msgctxt "@title:group"
 msgid "Plasma"
-msgstr ""
+msgstr "Plasma"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
-msgstr ""
+msgstr "Permite Plasma să arate:"
 
 #: ui/main.qml:59
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr ""
+msgstr "Indicii pentru panou și controale grafice"
 
 #: ui/main.qml:69
 #, kde-format
@@ -75,12 +75,10 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling"
-msgstr "Derulare:"
+msgstr "Derulare"
 
 #: ui/main.qml:100
 #, kde-format
@@ -132,7 +130,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "Apăsare"
 
 #: ui/main.qml:175
 #, kde-format
@@ -164,10 +162,7 @@ msgid "Select by clicking on item's selection marker"
 msgstr "Se alege apăsând pe marcatorul de selecție al elementului"
 
 #: ui/main.qml:246
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@radio part of a complete sentence: 'Middle click pastes selected text'"
-#| msgid "Middle Click:"
+#, kde-format
 msgctxt ""
 "@label for checkbox, part of a complete sentence: 'Middle-click pastes "
 "selected text'"
@@ -175,10 +170,7 @@ msgid "Middle-click:"
 msgstr "Clic mijlociu:"
 
 #: ui/main.qml:248
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@radio part of a complete sentence: 'Middle click pastes selected text'"
-#| msgid "Pastes selected text"
+#, kde-format
 msgctxt ""
 "@option:check part of a complete sentence: 'Middle click pastes selected "
 "text'"
@@ -191,22 +183,19 @@ msgid "Double-click interval:"
 msgstr "Interval dublu-clic:"
 
 #: ui/main.qml:283
-#, fuzzy, kde-format
-#| msgid "%1 msec"
-#| msgid_plural "%1 msec"
+#, kde-format
 msgctxt "short for millisecond(s)"
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] "%1 msec"
-msgstr[1] "%1 msec"
-msgstr[2] "%1 de msec"
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
+msgstr[2] "%1 de ms"
 
 #: ui/main.qml:287
-#, fuzzy, kde-format
-#| msgid "msec"
+#, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
-msgstr "msec"
+msgstr "ms"
 
 #: ui/main.qml:301
 #, kde-format
@@ -224,24 +213,23 @@ msgid ""
 "Double-click the folder to test. If it does not change its appearance, "
 "increase double-click interval."
 msgstr ""
+"Faceți dublu-clic pe dosar pentru a testa. Dacă acesta nu-și schimbă "
+"aspectul, măriți intervalul pentru dublu-clic."
 
 #: ui/main.qml:354
 #, kde-format
 msgid "Drag and Drop"
-msgstr ""
+msgstr "Tragere și lăsare"
 
 #: ui/main.qml:361
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
-#| msgid "Clicking files or folders:"
+#, kde-format
 msgid "When dragging files or folders:"
-msgstr "Apăsarea pe fișiere sau dosare:"
+msgstr "La tragerea fișierelor sau dosarelor:"
 
 #: ui/main.qml:362
 #, kde-format
 msgid "Always ask what to do"
-msgstr ""
+msgstr "Întreabă mereu ce să facă"
 
 #: ui/main.qml:378
 #, kde-kuit-format
@@ -251,30 +239,32 @@ msgid ""
 "and <shortcut>Shift+Ctrl</shortcut> to create a symlink. Otherwise show a "
 "dialog."
 msgstr ""
+"Țineți <shortcut>Shift</shortcut> pentru a muta, <shortcut>Ctrl</shortcut> "
+"pentru a copia, și <shortcut>Shift+Ctrl</shortcut> pentru a crea o legătură "
+"simbolică. Altfel, arată un dialog."
 
 #: ui/main.qml:386
 #, kde-format
 msgid "Move if on the same device"
-msgstr ""
+msgstr "Mută dacă e pe același dispozitiv"
 
 #: ui/main.qml:402
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
 msgstr ""
+"Țineți <shortcut>Shift</shortcut> la lăsare pentru a arăta alte opțiuni."
 
 #: ui/main.qml:410
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Touch"
-msgstr "Regim tactil:"
+msgstr "Atingere"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgid "Enable Touch Mode:"
-msgstr "Regim tactil:"
+msgstr "Activează regim tactil:"
 
 #: ui/main.qml:418
 #, kde-format
@@ -300,18 +290,16 @@ msgstr ""
 "laptop transformabil e întoarsă invers sau detașată."
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always enabled"
+#, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always active"
-msgstr "Activat întotdeauna"
+msgstr "Activ întotdeauna"
 
 #: ui/main.qml:463
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Disabled"
-msgstr ""
+msgstr "Dezactivat"
 
 #: ui/main.qml:486
 #, kde-format
@@ -381,10 +369,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
-#, fuzzy, kde-format
-#| msgid "Display visual feedback for status changes"
+#, kde-format
 msgid "Display small popups for status changes"
-msgstr "Arată reacții vizuale pentru schimbări de stare"
+msgstr "Arată indicii mici pentru schimbări de stare"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:17

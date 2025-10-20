@@ -3,7 +3,7 @@
 # translation of @PACKAGE.po to @LANGUAGE
 # Copyright (C) 2003, 2004, 2005, 2008 Free Software Foundation, Inc.
 # Claudiu Costin <claudiuc@kde.org>, 2003, 2004, 2005.
-# Sergiu Bivol <sergiu@cip.md>, 2008, 2020, 2023, 2024.
+# SPDX-FileCopyrightText: 2008, 2020, 2023, 2024, 2025 Sergiu Bivol <sergiu@cip.md>
 # Laurenţiu Buzdugan <lbuz@rolix.org>, 2009.
 # Cristian Oneț <onet.cristian@gmail.com>, 2011.
 #
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-25 02:40+0000\n"
-"PO-Revision-Date: 2024-06-09 15:00+0100\n"
+"PO-Revision-Date: 2025-10-19 22:00+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
@@ -39,7 +39,7 @@ msgstr ""
 #: kcm.cpp:86
 #, kde-format
 msgid "Not able to select appropriate backend"
-msgstr ""
+msgstr "Platforma corectă nu poate fi aleasă"
 
 #: kcm.cpp:142
 #, kde-format
@@ -94,12 +94,10 @@ msgid "Pointer device disconnected. No other devices found."
 msgstr "Dispozitiv de indicare deconectat. Nu au fost găsite alte dispozitive."
 
 #: ui/bindings.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@label for assigning an action to a numbered button"
-#| msgid "Extra Button %1:"
+#, kde-format
 msgctxt "@title"
 msgid "Extra Mouse Buttons"
-msgstr "Buton extra %1:"
+msgstr "Butoane suplimentare ale mausului"
 
 #: ui/bindings.qml:77
 #, kde-format
@@ -142,7 +140,7 @@ msgstr "Adaugă legătură…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure Extra Buttons…"
-msgstr ""
+msgstr "Configurează butoane suplimentare…"
 
 #: ui/main.qml:64
 #, kde-format
@@ -160,32 +158,26 @@ msgid "Device enabled"
 msgstr "Dispozitiv activat"
 
 #: ui/main.qml:103
-#, fuzzy, kde-format
-#| msgid "Left handed mode"
+#, kde-format
 msgid "Left-handed mode"
 msgstr "Regim pentru stângaci"
 
 #: ui/main.qml:118
-#, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons for middle-click"
 msgstr "Apasă butoanele stâng și drept pentru clic mijlociu"
 
 #: ui/main.qml:130
-#, fuzzy, kde-format
-#| msgid ""
-#| "Activating this setting increases mouse click latency by 50ms. The extra "
-#| "delay is needed to correctly detect simultaneous left and right mouse "
-#| "clicks."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
-"Activarea acestei opțiuni mărește latența clicului de maus cu 50ms. Latența "
+"Activarea acestei opțiuni mărește latența clicului cu 50 ms. Latența "
 "suplimentară e necesară pentru a depista corect apăsarea simultană a "
-"clicului stâng și drept."
+"butonului stâng și drept."
 
 #: ui/main.qml:142
 #, kde-format
@@ -193,18 +185,18 @@ msgid "Pointer speed:"
 msgstr "Viteză indicator:"
 
 #: ui/main.qml:221
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgid "Enable pointer acceleration"
-msgstr "Accelerație indicator:"
+msgstr "Activează accelerația indicatorului"
 
 #: ui/main.qml:235
-#, fuzzy, kde-format
-#| msgid "Cursor travel distance depends on the mouse movement speed."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
-msgstr "Distanța traversată de cursor depinde de viteza de mișcare a mausului."
+msgstr ""
+"Când e activată, distanța traversată de indicator crește odată cu viteza de "
+"mișcare."
 
 #: ui/main.qml:245
 #, kde-format
@@ -236,7 +228,7 @@ msgstr "Inversează direcția derulării"
 #: ui/main.qml:330
 #, kde-format
 msgid "Hold down middle button and move mouse to scroll"
-msgstr ""
+msgstr "Ține apăsat butonul mijlociu și mișcă mausul pentru derulare"
 
 #: ui/main.qml:342
 #, kde-format
@@ -247,6 +239,10 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+"Aceasta va afecta aplicațiile ce folosesc tragerea cu butonul mijlociu, cum "
+"ar fi unii redactori de imagini, vizualizatori de documente, sau jocuri "
+"video. Poate fi folosită pe orice dispozitiv, dar e destinată în principal "
+"ca înlocuitor pentru roțile de derulare pe dispozitive ce nu le au."
 
 #~ msgid "Accept input through this device."
 #~ msgstr "Acceptă introducerea prin acest dispozitiv."
