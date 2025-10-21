@@ -72,15 +72,6 @@ AbstractKickoffItemDelegate {
                 id: label
                 Layout.fillWidth: !descriptionLabel.visible
                 Layout.maximumWidth: root.width - root.leftPadding - root.rightPadding - icon.width - row.spacing
-                Layout.preferredHeight: {
-                    if (root.isCategoryListItem) {
-                        return root.compact ? implicitHeight : Math.round(implicitHeight * 1.5);
-                    }
-                    if (!root.compact && !descriptionLabel.visible) {
-                        return implicitHeight + descriptionLabel.implicitHeight
-                    }
-                    return implicitHeight;
-                }
                 text: root.text
                 textFormat: root.isMultilineText ? Text.StyledText : Text.PlainText
                 elide: Text.ElideRight
