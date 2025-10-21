@@ -69,7 +69,7 @@ PlasmoidItem {
 
         autoPopulate: false
 
-        appNameFormat: Plasmoid.configuration.appNameFormat
+        appNameFormat: kicker.isDash ? 0 : Plasmoid.configuration.appNameFormat // appNameFormat = 0 -> AppName Only
         flat: kicker.isDash || Plasmoid.configuration.limitDepth
         sorted: Plasmoid.configuration.alphaSort
         showSeparators: !kicker.isDash
