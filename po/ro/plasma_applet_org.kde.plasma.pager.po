@@ -3,14 +3,14 @@
 # Copyright (C) 2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the plasma_applet_pager package.
 # Laurenţiu Buzdugan <lbuz@rolix.org>, 2008".
-# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2013, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2008, 2009, 2013, 2020, 2021, 2022, 2025 Sergiu Bivol <sergiu@cip.md>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-18 00:46+0000\n"
-"PO-Revision-Date: 2022-12-28 21:19+0000\n"
+"PO-Revision-Date: 2025-10-03 13:35+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -100,12 +100,12 @@ msgstr "Numele biroului"
 #: package/contents/ui/configGeneral.qml:113
 #, kde-format
 msgid "Selecting current Activity:"
-msgstr "Alegerea activității curente:"
+msgstr "Alegerea activității actuale:"
 
 #: package/contents/ui/configGeneral.qml:113
 #, kde-format
 msgid "Selecting current virtual desktop:"
-msgstr "Alegerea biroului virtual curent:"
+msgstr "Alegerea biroului virtual actual:"
 
 #: package/contents/ui/configGeneral.qml:116
 #, kde-format
@@ -170,7 +170,7 @@ msgstr "Elimină birou virtual"
 #: package/contents/ui/main.qml:602
 #, kde-format
 msgid "Configure Virtual Desktops…"
-msgstr "Configurare birouri virtuale…"
+msgstr "Configurează birouri virtuale…"
 
 #~ msgid "Activate %1"
 #~ msgstr "Activează %1"
