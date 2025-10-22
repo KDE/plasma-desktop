@@ -120,6 +120,8 @@ KCMUtils.SimpleKCM {
                 }
             }
 
+            Kirigami.FormSeparator {}
+
             Kirigami.FormEntry {
                 title: i18nc("@title:group translate as short as possible", "More appearance settings:")
                 contentItem: RowLayout {
@@ -196,6 +198,8 @@ KCMUtils.SimpleKCM {
                 }
             }
 
+            Kirigami.FormSeparator {}
+
             Kirigami.FormEntry {
                 //title: i18nc("part of a sentence: 'Clicking files or folders [opens them/selects them]'", "Clicking files or folders:")
                 // Click behavior settings
@@ -270,6 +274,8 @@ KCMUtils.SimpleKCM {
                     }
                 }
             }
+
+            Kirigami.FormSeparator {}
 
             Kirigami.FormEntry {
                 title: i18nc("@title:group translate as short as possible", "More behavior settings:")

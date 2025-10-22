@@ -134,7 +134,7 @@ KCM.SimpleKCM {
                 }
             }
 
-            Item {}
+            Kirigami.FormSeparator {}
 
             Kirigami.FormEntry {
                 contentItem: RowLayout {
@@ -200,7 +200,9 @@ KCM.SimpleKCM {
                 }
             }
 
-            Item {}
+            Kirigami.FormSeparator {
+                visible: KWindowSystem.isPlatformWayland
+            }
 
             Kirigami.FormEntry {
                 title: i18nc("@label for checkbox, part of a complete sentence: 'Middle-click pastes selected text'", "Middle-click:")
@@ -222,7 +224,7 @@ KCM.SimpleKCM {
             // middle-click functionality when using this; see
             // https://bugreports.qt.io/browse/QTBUG-80728
 
-            Item {}
+            Kirigami.FormSeparator {}
 
             Kirigami.FormEntry {
                 title: i18n("Double-click interval:")
