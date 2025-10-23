@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kickoff\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-06 00:44+0000\n"
+"POT-Creation-Date: 2025-10-23 00:44+0000\n"
 "PO-Revision-Date: 2025-08-03 22:03+0200\n"
 "Last-Translator: Philipp Kiemle <l10n@prly.mozmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -299,13 +299,13 @@ msgstr "Benutzereinstellungen öffnen"
 msgid "Keep Open"
 msgstr "Offen halten"
 
-#: KickoffGridDelegate.qml:60 KickoffListDelegate.qml:119
+#: KickoffGridDelegate.qml:60 KickoffListDelegate.qml:110
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
 msgstr "Neu!"
 
-#: KickoffGridDelegate.qml:61 KickoffListDelegate.qml:121
+#: KickoffGridDelegate.qml:61 KickoffListDelegate.qml:112
 #, kde-format
 msgid "Newly installed application"
 msgstr "Neu installierte Anwendung"
@@ -315,7 +315,7 @@ msgstr "Neu installierte Anwendung"
 msgid "Grid with %1 rows, %2 columns"
 msgstr "Gitter mit %1 Zeilen, %2 Spalten"
 
-#: KickoffListDelegate.qml:120
+#: KickoffListDelegate.qml:111
 #, kde-format
 msgid "There is a newly installed application in this category"
 msgstr "Es gibt eine neu installierte Anwendung in dieser Kategorie"

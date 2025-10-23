@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-06 00:44+0000\n"
+"POT-Creation-Date: 2025-10-23 00:44+0000\n"
 "PO-Revision-Date: 2021-10-11 11:33+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -297,13 +297,13 @@ msgstr "उपयोक्ता सेटिंग में जाएँ"
 msgid "Keep Open"
 msgstr "खुला रखें"
 
-#: KickoffGridDelegate.qml:60 KickoffListDelegate.qml:119
+#: KickoffGridDelegate.qml:60 KickoffListDelegate.qml:110
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
 msgstr ""
 
-#: KickoffGridDelegate.qml:61 KickoffListDelegate.qml:121
+#: KickoffGridDelegate.qml:61 KickoffListDelegate.qml:112
 #, fuzzy, kde-format
 #| msgid "Show other applications:"
 msgid "Newly installed application"
@@ -314,7 +314,7 @@ msgstr "अन्य अनुप्रयोगों को दिखाएँ
 msgid "Grid with %1 rows, %2 columns"
 msgstr "ग्रिड %1 पंक्तियों, %2 स्तंभों के साथ"
 
-#: KickoffListDelegate.qml:120
+#: KickoffListDelegate.qml:111
 #, kde-format
 msgid "There is a newly installed application in this category"
 msgstr ""

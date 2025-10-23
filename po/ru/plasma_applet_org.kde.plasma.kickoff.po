@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_launcher\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-06 00:44+0000\n"
+"POT-Creation-Date: 2025-10-23 00:44+0000\n"
 "PO-Revision-Date: 2025-07-04 18:14+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -311,13 +311,13 @@ msgstr "Открыть настройки пользователя"
 msgid "Keep Open"
 msgstr "Не закрывать"
 
-#: KickoffGridDelegate.qml:60 KickoffListDelegate.qml:119
+#: KickoffGridDelegate.qml:60 KickoffListDelegate.qml:110
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
 msgstr "Новое"
 
-#: KickoffGridDelegate.qml:61 KickoffListDelegate.qml:121
+#: KickoffGridDelegate.qml:61 KickoffListDelegate.qml:112
 #, kde-format
 msgid "Newly installed application"
 msgstr "Недавно установленные приложения"
@@ -327,7 +327,7 @@ msgstr "Недавно установленные приложения"
 msgid "Grid with %1 rows, %2 columns"
 msgstr "Сетка, строк: %1, столбцов: %2"
 
-#: KickoffListDelegate.qml:120
+#: KickoffListDelegate.qml:111
 #, kde-format
 msgid "There is a newly installed application in this category"
 msgstr "В этом разделе имеются недавно установленные приложения"

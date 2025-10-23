@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kickoff\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-06 00:44+0000\n"
+"POT-Creation-Date: 2025-10-23 00:44+0000\n"
 "PO-Revision-Date: 2025-05-30 20:37+0200\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -297,13 +297,13 @@ msgstr "Otvoriť používateľské nastavenia"
 msgid "Keep Open"
 msgstr "Ponechať otvorené"
 
-#: KickoffGridDelegate.qml:60 KickoffListDelegate.qml:119
+#: KickoffGridDelegate.qml:60 KickoffListDelegate.qml:110
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
 msgstr "Nové!"
 
-#: KickoffGridDelegate.qml:61 KickoffListDelegate.qml:121
+#: KickoffGridDelegate.qml:61 KickoffListDelegate.qml:112
 #, fuzzy, kde-format
 #| msgid "Recently Used Applications"
 msgid "Newly installed application"
@@ -314,7 +314,7 @@ msgstr "Naposledy použité aplikácie"
 msgid "Grid with %1 rows, %2 columns"
 msgstr "Mriežka s %1 riadkami, %2 stĺpcami"
 
-#: KickoffListDelegate.qml:120
+#: KickoffListDelegate.qml:111
 #, kde-format
 msgid "There is a newly installed application in this category"
 msgstr ""
