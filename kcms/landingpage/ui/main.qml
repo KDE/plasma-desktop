@@ -17,6 +17,8 @@ import org.kde.kcmutils as KCMUtils
 
 import org.kde.plasma.landingpage.kcm
 
+import org.kde.plasma.core as PlasmaCore
+
 KCMUtils.SimpleKCM {
     id: root
 
@@ -277,14 +279,12 @@ KCMUtils.SimpleKCM {
 
             Kirigami.FormSeparator {}
 
-            Kirigami.FormEntry {
+            Kirigami.FormAction {
+                readonly property PlasmaCore.Action kcmAction: kcm.kcmAction("kcm_workspace")
+                icon.source: kcmAction.icon
                 title: i18nc("@title:group translate as short as possible", "More behavior settings:")
-                contentItem: MostUsedIcon {
-                    Kirigami.FormData.label: i18nc("@title:group translate as short as possible", "More behavior settings:")
-                    Layout.preferredWidth: wallpaperKCMButton.width
-                    kcmId: "kcm_workspace"
-                    visible: kcmAction !== null
-                }
+                text: kcmAction.text
+                onClicked: kcmAction.trigger();
             }
         }
 
