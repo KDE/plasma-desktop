@@ -17,6 +17,8 @@ import org.kde.kcmutils as KCMUtils
 
 import org.kde.plasma.landingpage.kcm
 
+import org.kde.plasma.core as PlasmaCore
+
 KCMUtils.SimpleKCM {
     id: root
 
@@ -201,90 +203,54 @@ KCMUtils.SimpleKCM {
             Kirigami.FormSeparator {}
 
             Kirigami.FormEntry {
-                //title: i18nc("part of a sentence: 'Clicking files or folders [opens them/selects them]'", "Clicking files or folders:")
+                title: i18nc("part of a sentence: 'Clicking files or folders [opens them/selects them]'", "Clicking files or folders:")
+                subtitle: doubleClick.Accessible.description
                 // Click behavior settings
-                contentItem: ColumnLayout {
-                    QQC2.ButtonGroup { id: singleClickGroup }
-                    Kirigami.FormData.label: i18nc("part of a sentence: 'Clicking files or folders [opens them/selects them]'", "Clicking files or folders:")
-                    Kirigami.FormData.buddyFor: doubleClick
+                contentItem: QQC2.RadioButton {
+                    id: doubleClick
+                    text: i18nc("part of a sentence: 'Clicking files or folders selects them'", "Selects them")
+                    checked: !kcm.globalsSettings.singleClick
+                    onToggled: kcm.globalsSettings.singleClick = false
+                    QQC2.ButtonGroup.group: singleClickGroup
 
-                    Layout.fillWidth: true
-                    spacing: 0
+                    Accessible.description: i18n("Open by double-clicking instead")
 
-                    QQC2.RadioButton {
-                        id: doubleClick
-                        text: i18nc("part of a sentence: 'Clicking files or folders selects them'", "Selects them")
-                        checked: !kcm.globalsSettings.singleClick
-                        onToggled: kcm.globalsSettings.singleClick = false
-                        QQC2.ButtonGroup.group: singleClickGroup
-
-                        Accessible.description: i18n("Open by double-clicking instead")
-
-                        KCMUtils.SettingStateBinding {
-                            configObject: kcm.globalsSettings
-                            settingName: "singleClick"
-                            extraEnabledConditions: singleClick.enabled
-                        }
-                    }
-
-                    QQC2.Label {
-                        Layout.fillWidth: true
-                        leftPadding: Application.layoutDirection === Qt.LeftToRight ?
-                            doubleClick.indicator.width + doubleClick.spacing : padding
-                        rightPadding: Application.layoutDirection === Qt.RightToLeft ?
-                            doubleClick.indicator.width + doubleClick.spacing : padding
-                        text: doubleClick.Accessible.description
-                        textFormat: Text.PlainText
-                        elide: Text.ElideRight
-                        font: Kirigami.Theme.smallFont
+                    KCMUtils.SettingStateBinding {
+                        configObject: kcm.globalsSettings
+                        settingName: "singleClick"
+                        extraEnabledConditions: singleClick.enabled
                     }
                 }
             }
 
             Kirigami.FormEntry {
                 // Click behavior settings
-                contentItem: ColumnLayout {
-                    Kirigami.FormData.buddyFor: singleClick
-                    QQC2.RadioButton {
-                        id: singleClick
-                        Layout.topMargin: Kirigami.Units.mediumSpacing
-                        text: i18nc("part of a sentence: 'Clicking files or folders opens them'", "Opens them")
-                        checked: kcm.globalsSettings.singleClick
-                        onToggled: kcm.globalsSettings.singleClick = true
-                        QQC2.ButtonGroup.group: singleClickGroup
+                subtitle: singleClick.Accessible.description
+                contentItem: QQC2.RadioButton {
+                    id: singleClick
+                    Layout.topMargin: Kirigami.Units.mediumSpacing
+                    text: i18nc("part of a sentence: 'Clicking files or folders opens them'", "Opens them")
+                    checked: kcm.globalsSettings.singleClick
+                    onToggled: kcm.globalsSettings.singleClick = true
+                    QQC2.ButtonGroup.group: singleClickGroup
 
-                        Accessible.description: i18n("Select by clicking on item's selection marker")
+                    Accessible.description: i18n("Select by clicking on item's selection marker")
 
-                        KCMUtils.SettingStateBinding {
-                            configObject: kcm.globalsSettings
-                            settingName: "singleClick"
-                        }
-                    }
-
-                    QQC2.Label {
-                        Layout.fillWidth: true
-                        leftPadding: Application.layoutDirection === Qt.LeftToRight ?
-                            singleClick.indicator.width + singleClick.spacing : padding
-                        rightPadding: Application.layoutDirection === Qt.RightToLeft ?
-                            singleClick.indicator.width + singleClick.spacing : padding
-                        text: singleClick.Accessible.description
-                        textFormat: Text.PlainText
-                        elide: Text.ElideRight
-                        font: Kirigami.Theme.smallFont
+                    KCMUtils.SettingStateBinding {
+                        configObject: kcm.globalsSettings
+                        settingName: "singleClick"
                     }
                 }
             }
 
             Kirigami.FormSeparator {}
 
-            Kirigami.FormEntry {
+            Kirigami.FormAction {
+                readonly property PlasmaCore.Action kcmAction: kcm.kcmAction("kcm_workspace")
+                icon.source: kcmAction.icon
                 title: i18nc("@title:group translate as short as possible", "More behavior settings:")
-                contentItem: MostUsedIcon {
-                    Kirigami.FormData.label: i18nc("@title:group translate as short as possible", "More behavior settings:")
-                    Layout.preferredWidth: wallpaperKCMButton.width
-                    kcmId: "kcm_workspace"
-                    visible: kcmAction !== null
-                }
+                text: kcmAction.text
+                onClicked: kcmAction.trigger();
             }
         }
 
