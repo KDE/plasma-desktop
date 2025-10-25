@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-04 00:44+0000\n"
+"POT-Creation-Date: 2025-10-25 00:44+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -478,7 +478,8 @@ msgstr "نۆۋەتتىكى ئۈستەلئۈستىدىكى ۋەزىپىنىلا �
 #| msgid "Show tooltips"
 msgctxt ""
 "@label:listbox Part of a sentence: 'Scrolling behavior does nothing/cycles "
-"through tasks/cycles through the selected task's windows'"
+"through tasks/cycles through the selected task's windows/adjusts the hovered "
+"task’s volume''"
 msgid "Scrolling behavior:"
 msgstr "ئەسكەرتمىلەرنى كۆرسەت"
 
@@ -504,13 +505,21 @@ msgctxt ""
 msgid "Cycles through the hovered task’s windows"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:219
+#: package/contents/ui/ConfigBehavior.qml:212
+#, kde-format
+msgctxt ""
+"@item:inlistbox Part of a sentence: 'Scrolling behavior adjusts the hovered "
+"task’s volume'"
+msgid "Adjusts the hovered task’s volume"
+msgstr ""
+
+#: package/contents/ui/ConfigBehavior.qml:220
 #, kde-format
 msgctxt "@option:check mouse wheel task cycling"
 msgid "Skip minimized tasks"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:229
+#: package/contents/ui/ConfigBehavior.qml:230
 #, fuzzy, kde-format
 #| msgid "Show tooltips"
 msgctxt ""
@@ -518,74 +527,74 @@ msgctxt ""
 msgid "Show only tasks:"
 msgstr "ئەسكەرتمىلەرنى كۆرسەت"
 
-#: package/contents/ui/ConfigBehavior.qml:230
+#: package/contents/ui/ConfigBehavior.qml:231
 #, fuzzy, kde-format
 #| msgid "By Desktop"
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current desktop"
 msgstr "ئۈستەلئۈستى بويىچە"
 
-#: package/contents/ui/ConfigBehavior.qml:235
+#: package/contents/ui/ConfigBehavior.qml:236
 #, fuzzy, kde-format
 #| msgid "Only show tasks from the current activity"
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current activity"
 msgstr "نۆۋەتتىكى ئاكتىپ ۋەزىپىنىلا كۆرسەت"
 
-#: package/contents/ui/ConfigBehavior.qml:240
+#: package/contents/ui/ConfigBehavior.qml:241
 #, fuzzy, kde-format
 #| msgid "Only show tasks from the current screen"
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current screen"
 msgstr "نۆۋەتتىكى ئېكراندىكى ۋەزىپىنىلا كۆرسەت"
 
-#: package/contents/ui/ConfigBehavior.qml:245
+#: package/contents/ui/ConfigBehavior.qml:246
 #, fuzzy, kde-format
 #| msgid "Only show tasks that are minimized"
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "That are minimized"
 msgstr "كىچىكلىتىلگەن ۋەزىپىنىلا كۆرسەت"
 
-#: package/contents/ui/ConfigBehavior.qml:254
+#: package/contents/ui/ConfigBehavior.qml:255
 #, kde-format
 msgctxt ""
 "@label for checkbox, completes sentence: … unhide if window wants attention"
 msgid "When panel is hidden:"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:255
+#: package/contents/ui/ConfigBehavior.qml:256
 #, kde-format
 msgctxt "@option:check completes sentence: When panel is hidden"
 msgid "Unhide when a window wants attention"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:270
+#: package/contents/ui/ConfigBehavior.qml:271
 #, kde-format
 msgctxt "@label for radiobutton group completes sentence like: … on the bottom"
 msgid "New tasks appear:"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:274
+#: package/contents/ui/ConfigBehavior.qml:275
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the bottom"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:278
-#: package/contents/ui/ConfigBehavior.qml:297
+#: package/contents/ui/ConfigBehavior.qml:279
+#: package/contents/ui/ConfigBehavior.qml:298
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the right"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:280
-#: package/contents/ui/ConfigBehavior.qml:295
+#: package/contents/ui/ConfigBehavior.qml:281
+#: package/contents/ui/ConfigBehavior.qml:296
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the left"
 msgstr ""
 
-#: package/contents/ui/ConfigBehavior.qml:291
+#: package/contents/ui/ConfigBehavior.qml:292
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the top"

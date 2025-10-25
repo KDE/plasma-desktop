@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-04 00:44+0000\n"
+"POT-Creation-Date: 2025-10-25 00:44+0000\n"
 "PO-Revision-Date: 2024-12-20 22:01+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -474,7 +474,8 @@ msgstr "वर्तमान वर्चुअल् डेस्कटॉप�
 #| msgid "Show only tasks:"
 msgctxt ""
 "@label:listbox Part of a sentence: 'Scrolling behavior does nothing/cycles "
-"through tasks/cycles through the selected task's windows'"
+"through tasks/cycles through the selected task's windows/adjusts the hovered "
+"task’s volume''"
 msgid "Scrolling behavior:"
 msgstr "केवलं कार्याणि दर्शयतु :"
 
@@ -512,20 +513,32 @@ msgctxt ""
 msgid "Cycles through the hovered task’s windows"
 msgstr "कार्याणां माध्यमेन चक्रं करोति"
 
-#: package/contents/ui/ConfigBehavior.qml:219
+#: package/contents/ui/ConfigBehavior.qml:212
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@item:inlistbox Completes the sentence 'Clicking grouped task cycles "
+#| "through tasks' "
+#| msgid "Cycles through tasks"
+msgctxt ""
+"@item:inlistbox Part of a sentence: 'Scrolling behavior adjusts the hovered "
+"task’s volume'"
+msgid "Adjusts the hovered task’s volume"
+msgstr "कार्याणां माध्यमेन चक्रं करोति"
+
+#: package/contents/ui/ConfigBehavior.qml:220
 #, kde-format
 msgctxt "@option:check mouse wheel task cycling"
 msgid "Skip minimized tasks"
 msgstr "न्यूनतमकार्यं त्यजन्तु"
 
-#: package/contents/ui/ConfigBehavior.qml:229
+#: package/contents/ui/ConfigBehavior.qml:230
 #, kde-format
 msgctxt ""
 "@label for checkbox group, completes sentence like: … from current screen"
 msgid "Show only tasks:"
 msgstr "केवलं कार्याणि दर्शयतु :"
 
-#: package/contents/ui/ConfigBehavior.qml:230
+#: package/contents/ui/ConfigBehavior.qml:231
 #, fuzzy, kde-format
 #| msgctxt "@option:check completes sentence: show only tasks"
 #| msgid "From current desktop"
@@ -533,7 +546,7 @@ msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current desktop"
 msgstr "वर्तमान डेस्कटॉप् तः"
 
-#: package/contents/ui/ConfigBehavior.qml:235
+#: package/contents/ui/ConfigBehavior.qml:236
 #, fuzzy, kde-format
 #| msgctxt "@option:check completes sentence: show only tasks"
 #| msgid "From current activity"
@@ -541,7 +554,7 @@ msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current activity"
 msgstr "वर्तमानक्रियाकलापात्"
 
-#: package/contents/ui/ConfigBehavior.qml:240
+#: package/contents/ui/ConfigBehavior.qml:241
 #, fuzzy, kde-format
 #| msgctxt "@option:check completes sentence: show only tasks"
 #| msgid "From current screen"
@@ -549,52 +562,52 @@ msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current screen"
 msgstr "वर्तमानपर्दे"
 
-#: package/contents/ui/ConfigBehavior.qml:245
+#: package/contents/ui/ConfigBehavior.qml:246
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "That are minimized"
 msgstr "तानि न्यूनीकृतानि भवन्ति"
 
-#: package/contents/ui/ConfigBehavior.qml:254
+#: package/contents/ui/ConfigBehavior.qml:255
 #, kde-format
 msgctxt ""
 "@label for checkbox, completes sentence: … unhide if window wants attention"
 msgid "When panel is hidden:"
 msgstr "यदा पटलः गुप्तः भवति तदा :"
 
-#: package/contents/ui/ConfigBehavior.qml:255
+#: package/contents/ui/ConfigBehavior.qml:256
 #, kde-format
 msgctxt "@option:check completes sentence: When panel is hidden"
 msgid "Unhide when a window wants attention"
 msgstr "यदा खिडकी ध्यानं इच्छति तदा अनगोपयन्तु"
 
-#: package/contents/ui/ConfigBehavior.qml:270
+#: package/contents/ui/ConfigBehavior.qml:271
 #, kde-format
 msgctxt "@label for radiobutton group completes sentence like: … on the bottom"
 msgid "New tasks appear:"
 msgstr "नूतनानि कार्याणि दृश्यन्ते-"
 
-#: package/contents/ui/ConfigBehavior.qml:274
+#: package/contents/ui/ConfigBehavior.qml:275
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the bottom"
 msgstr "अधः"
 
-#: package/contents/ui/ConfigBehavior.qml:278
-#: package/contents/ui/ConfigBehavior.qml:297
+#: package/contents/ui/ConfigBehavior.qml:279
+#: package/contents/ui/ConfigBehavior.qml:298
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the right"
 msgstr "दक्षिणतः"
 
-#: package/contents/ui/ConfigBehavior.qml:280
-#: package/contents/ui/ConfigBehavior.qml:295
+#: package/contents/ui/ConfigBehavior.qml:281
+#: package/contents/ui/ConfigBehavior.qml:296
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the left"
 msgstr "वामतः"
 
-#: package/contents/ui/ConfigBehavior.qml:291
+#: package/contents/ui/ConfigBehavior.qml:292
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the top"
