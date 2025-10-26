@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-25 00:44+0000\n"
-"PO-Revision-Date: 2025-09-23 15:07+0300\n"
+"PO-Revision-Date: 2025-10-25 08:11+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: backend.cpp:284
 #, kde-format
@@ -471,11 +471,7 @@ msgid "Brings it to the current virtual desktop"
 msgstr "מקדמת אותה לשולחן העבודה הווירטואלי הנוכחי"
 
 #: package/contents/ui/ConfigBehavior.qml:205
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label:listbox Part of a sentence: 'Scrolling behavior does nothing/"
-#| "cycles through tasks/cycles through the selected task's windows'"
-#| msgid "Scrolling behavior:"
+#, kde-format
 msgctxt ""
 "@label:listbox Part of a sentence: 'Scrolling behavior does nothing/cycles "
 "through tasks/cycles through the selected task's windows/adjusts the hovered "
@@ -506,16 +502,12 @@ msgid "Cycles through the hovered task’s windows"
 msgstr "עוברת בלולאה בין חלונות המשימה שהעכבר עליה"
 
 #: package/contents/ui/ConfigBehavior.qml:212
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through "
-#| "the hovered task's windows'"
-#| msgid "Cycles through the hovered task’s windows"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling behavior adjusts the hovered "
 "task’s volume'"
 msgid "Adjusts the hovered task’s volume"
-msgstr "עוברת בלולאה בין חלונות המשימה שהעכבר עליה"
+msgstr "כיוון עוצמת השמע של המשימה שהעכבר מעליה"
 
 #: package/contents/ui/ConfigBehavior.qml:220
 #, kde-format

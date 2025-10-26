@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-25 00:44+0000\n"
-"PO-Revision-Date: 2025-09-16 23:13+0000\n"
+"PO-Revision-Date: 2025-10-25 12:06+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -112,7 +112,7 @@ msgstr "Töf fyrir tímamörk"
 #: kcmaccessibilityactivationgestures.kcfg:29
 #, kde-format
 msgid "Use a beep for access"
-msgstr "Nota píphljóð fyrir aðgang"
+msgstr "Nota píphljóð fyrir aðgengi"
 
 #. i18n: ectx: label, entry (SystemBell), group (Bell)
 #: kcmaccessibilitybell.kcfg:9
@@ -414,7 +414,7 @@ msgstr "Virkja"
 #, kde-format
 msgctxt "Defines if the system will use a sound system bell"
 msgid "Custom sound:"
-msgstr "Sérvalið hljóð:"
+msgstr "Sérsniðið hljóð:"
 
 #: ui/Bell.qml:75
 #, kde-format
@@ -487,6 +487,8 @@ msgid ""
 "If you have trouble with certain colors on the screen, these filters can "
 "change them into other colors."
 msgstr ""
+"Ef þú átt í vandræðum með tiltekna liti á skjánum geta þessar síur breytt "
+"þeim í aðra liti."
 
 #: ui/ColorblindnessCorrection.qml:31
 #, kde-format
@@ -499,31 +501,31 @@ msgstr "Virkja"
 msgctxt ""
 "@label:listbox Difficulty seeing any of the following colors on the screen"
 msgid "Problematic colors:"
-msgstr ""
+msgstr "Vandræðalitir:"
 
 #: ui/ColorblindnessCorrection.qml:49
 #, kde-format
 msgctxt "@option"
 msgid "Red & purple (Protanopia)"
-msgstr ""
+msgstr "Rauður og fjólublár (rauðblinda)"
 
 #: ui/ColorblindnessCorrection.qml:50
 #, kde-format
 msgctxt "@option"
 msgid "Green & purple (Deuteranopia)"
-msgstr ""
+msgstr "Grænn og fjólublár (grænblinda)"
 
 #: ui/ColorblindnessCorrection.qml:51
 #, kde-format
 msgctxt "@option"
 msgid "Yellow, green & purple (Tritanopia)"
-msgstr ""
+msgstr "Gulur, grænn og fjólublár (bláblinda)"
 
 #: ui/ColorblindnessCorrection.qml:52
 #, kde-format
 msgctxt "@option"
 msgid "All (grayscale mode)"
-msgstr ""
+msgstr "Allir (gráskalasnið)"
 
 #: ui/ColorblindnessCorrection.qml:67
 #, kde-format
@@ -547,30 +549,27 @@ msgstr "Sterkt"
 #, kde-format
 msgctxt "@info"
 msgid "Adjusted colors:"
-msgstr ""
+msgstr "Aðlagaðir litir:"
 
 #: ui/ColorblindnessCorrection.qml:132
 #, kde-format
 msgid "Reds:"
-msgstr ""
+msgstr "Rauðir:"
 
 #: ui/ColorblindnessCorrection.qml:133
-#, fuzzy, kde-format
-#| msgid "Green"
+#, kde-format
 msgid "Greens:"
-msgstr "Grænt"
+msgstr "Grænir:"
 
 #: ui/ColorblindnessCorrection.qml:134
-#, fuzzy, kde-format
-#| msgid "Blue"
+#, kde-format
 msgid "Blues:"
-msgstr "Blátt"
+msgstr "Bláir:"
 
 #: ui/ColorblindnessCorrection.qml:135
-#, fuzzy, kde-format
-#| msgid "Purple"
+#, kde-format
 msgid "Purples:"
-msgstr "Fjólublátt"
+msgstr "Fjólubláir:"
 
 #: ui/Invert.qml:22
 #, kde-format
@@ -588,7 +587,7 @@ msgstr "Virkja"
 #, kde-format
 msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
-msgstr "Nota flýtilykla til að víxla umsnúningi á skjá og gluggalitum"
+msgstr "Nota flýtilykla til að víxla umsnúningi á skjá- og gluggalitum"
 
 #: ui/Invert.qml:49 ui/ZoomMagnifier.qml:321
 #, kde-format
@@ -617,7 +616,7 @@ msgid ""
 msgstr ""
 "Til að lykill sé samþykktur þarf að halda honum niðri í tiltekinn tíma. "
 "Þetta er gagnlegt ef þú ýtir óvart á fleiri en einn lykil samtímis eða átt "
-"erfitt með að ýta á lykilinn sem þú vildir."
+"erfitt með að ýta á lykilinn sem þú vildir fyrst."
 
 #: ui/KeyboardFilters.qml:41
 #, kde-format
@@ -668,8 +667,8 @@ msgid ""
 "press once."
 msgstr ""
 "Hunsa þegar ýtt er hratt og endurtekið á sama lykilinn. Gagnlegt ef þú átt "
-"við handskjálfta að stríða sem veldur því að þú ýtir á oft lykil í einu "
-"þegar þú ætlar bara að ýta á hann einu sinni."
+"við handskjálfta að stríða sem veldur því að þú ýtir óvart oft á lykil þegar "
+"þú ætlar bara að ýta á hann einu sinni."
 
 #: ui/KeyboardFilters.qml:142
 #, kde-format
@@ -762,7 +761,7 @@ msgid ""
 "a keyboard shortcut."
 msgstr ""
 "Breytilyklar eins og Ctrl, Shift, Alt, og Meta/Super/Windows-lyklarnir virka "
-"þannig að þeir “standa í stað” og ekki þarf lengur að halda þeim inni þegar "
+"þannig að þeir „standa í stað“ og ekki þarf lengur að halda þeim inni þegar "
 "flýtilyklar eru slegnir inn."
 
 #: ui/ModifierKeys.qml:39
@@ -845,10 +844,10 @@ msgid ""
 msgstr ""
 "Talnaborðslykillinn <shortcut>5</shortcut> virkar eins og músarsmellur. Með "
 "lyklunum <shortcut>2</shortcut>, <shortcut>4</shortcut>, <shortcut>6</"
-"shortcut> og <shortcut>8</shortcut> er hægt að hreyfa bendilinn aðaláttirnar "
-"(niður, til vinstri, til hægri og upp). Með <shortcut>1</shortcut>, "
-"<shortcut>3</shortcut>, <shortcut>7</shortcut> og <shortcut>9</shortcut> er "
-"hægt að hreyfa hann á ská."
+"shortcut> og <shortcut>8</shortcut> er hægt að hreyfa bendilinn í "
+"aðaláttirnar (niður, til vinstri, til hægri og upp). Með <shortcut>1</"
+"shortcut>, <shortcut>3</shortcut>, <shortcut>7</shortcut> og <shortcut>9</"
+"shortcut> er hægt að hreyfa hann á ská."
 
 #: ui/MouseNavigation.qml:39
 #, kde-format
@@ -1034,7 +1033,7 @@ msgstr "Skrunhreyfiskipanir fyrir aðdrátt eru aðeins í boði í Wayland."
 #, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
-msgstr "Skruna þegar ýtt er á breytilykla til að breyta aðdrætti"
+msgstr "Skruna á meðan ýtt er á breytilykla til að breyta aðdrætti"
 
 #: ui/ZoomMagnifier.qml:190
 #, kde-format

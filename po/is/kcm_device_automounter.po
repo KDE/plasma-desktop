@@ -3,20 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Sveinn í Felli <sveinki@nett.is>, 2009, 2011, 2015.
-# SPDX-FileCopyrightText: 2022, 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2024, 2025 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_device_automounter\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-17 02:33+0000\n"
-"PO-Revision-Date: 2024-07-04 10:13+0000\n"
+"PO-Revision-Date: 2025-10-25 12:11+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.08.1\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -42,9 +42,9 @@ msgid ""
 "\"Automount on Attach\"."
 msgstr ""
 "Þetta er listi yfir þau geymslutæki sem kerfið veit af. Ef hakað er við "
-"\"Tengja við innskráningu\" verður tækið sjálfkrafa tengt jafnvel þótt ekki "
-"sé hakað við \"Tengja öll utanáliggjandi tæki við innskráningu\". Það sama á "
-"við um \"Tengja þegar stungið í samband\"."
+"\"Tengja sjálfkrafa við innskráningu\" verður tækið sjálfkrafa tengt jafnvel "
+"þótt ekki sé hakað við \"Tengja öll utanáliggjandi tæki við innskráningu\". "
+"Það sama á við um \"Tengja sjálfkrafa þegar stungið í samband\"."
 
 #. i18n: ectx: property (whatsThis), widget (QPushButton, forgetDevice)
 #: DeviceAutomounterKCM.ui:54
@@ -59,7 +59,7 @@ msgstr ""
 "Ef smellt er á þennan hnapp \"gleymir\" tölvan tækjunum sem eru valin. Þetta "
 "virkar bara ef hakað er við \"Aðeins tengja sjálfkrafa utanáliggjandi tæki "
 "sem hefur verið tengt handvirkt áður\". Þegar tæki er gleymt og kerfið er "
-"stillt á að tengja einungis sjálfkrafa þekkt tæki, þá verður tækið ekki "
+"stillt á að tengja einungis þekkt tæki sjálfkrafa, þá verður tækið ekki "
 "tengt sjálfkrafa inn í skráakerfið."
 
 #. i18n: ectx: property (text), widget (QPushButton, forgetDevice)
@@ -91,7 +91,7 @@ msgstr ""
 #: DeviceAutomounterKCM.ui:70
 #, kde-format
 msgid "Automatically mount removable media that have never been mounted before"
-msgstr "Tengja sjálfkrafa utanáliggjandi tæki sem hafa ekki tengst áður"
+msgstr "Tengja sjálfkrafa utanáliggjandi tæki sem hafa aldrei tengst áður"
 
 #: DeviceModel.cpp:52
 #, kde-format
@@ -128,7 +128,7 @@ msgstr "Tæki í sambandi"
 #: DeviceModel.cpp:262
 #, kde-format
 msgid "Disconnected Devices"
-msgstr "Tæki sem ekki eru í sambandi"
+msgstr "Tæki sem voru tekin úr sambandi"
 
 #: DeviceModel.cpp:298 DeviceModel.cpp:307
 #, kde-format

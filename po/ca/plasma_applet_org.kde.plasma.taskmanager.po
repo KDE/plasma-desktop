@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-25 00:44+0000\n"
-"PO-Revision-Date: 2025-08-12 09:01+0200\n"
+"PO-Revision-Date: 2025-10-25 08:59+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: backend.cpp:284
 #, kde-format
@@ -474,11 +474,7 @@ msgid "Brings it to the current virtual desktop"
 msgstr "La trasllada a l'escriptori virtual actual"
 
 #: package/contents/ui/ConfigBehavior.qml:205
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label:listbox Part of a sentence: 'Scrolling behavior does nothing/"
-#| "cycles through tasks/cycles through the selected task's windows'"
-#| msgid "Scrolling behavior:"
+#, kde-format
 msgctxt ""
 "@label:listbox Part of a sentence: 'Scrolling behavior does nothing/cycles "
 "through tasks/cycles through the selected task's windows/adjusts the hovered "
@@ -509,16 +505,12 @@ msgid "Cycles through the hovered task’s windows"
 msgstr "Circula entre les finestres de la tasca sobre la que està el ratolí"
 
 #: package/contents/ui/ConfigBehavior.qml:212
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through "
-#| "the hovered task's windows'"
-#| msgid "Cycles through the hovered task’s windows"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling behavior adjusts the hovered "
 "task’s volume'"
 msgid "Adjusts the hovered task’s volume"
-msgstr "Circula entre les finestres de la tasca sobre la que està el ratolí"
+msgstr "Ajusta el volum de la tasca sobre la que està el ratolí"
 
 #: package/contents/ui/ConfigBehavior.qml:220
 #, kde-format

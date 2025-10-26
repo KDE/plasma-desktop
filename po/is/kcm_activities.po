@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2023, 2024 gummi <gudmundure@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 gummi <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-23 00:45+0000\n"
-"PO-Revision-Date: 2024-07-04 09:47+0000\n"
+"PO-Revision-Date: 2025-10-25 12:07+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -15,13 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: activityconfig.cpp:151
-#, fuzzy, kde-format
-#| msgid "Activity switching"
+#, kde-format
 msgid "Activity Manager"
-msgstr "Skipt á milli athafna"
+msgstr "Athafnastjóri"
 
 #: ui/ActivityEditor.qml:22
 #, kde-format
@@ -68,7 +67,7 @@ msgstr "Leyfa í þessari athöfn:"
 #: ui/ActivityEditor.qml:85
 #, kde-format
 msgid "Tracking file and app use"
-msgstr "rakningu á notkun skráa og forrita"
+msgstr "vöktun á notkun skráa og forrita"
 
 #: ui/ActivityEditor.qml:91
 #, kde-format
@@ -91,7 +90,7 @@ msgstr "Flýtilyklar til að skipta á milli:"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Delete %1 activity"
-msgstr "Eyða athöfn %1"
+msgstr "Eyða %1 athöfn"
 
 #: ui/main.qml:74
 #, kde-format
