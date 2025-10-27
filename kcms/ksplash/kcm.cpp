@@ -230,9 +230,9 @@ void KCMSplashScreen::test(const QString &plugin)
         Q_EMIT testingFailed(QString::fromLocal8Bit(m_testProcess->readAllStandardError()));
     });
     connect(m_testProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [this](int exitCode, QProcess::ExitStatus exitStatus) {
-        Q_UNUSED(exitCode)
-        Q_UNUSED(exitStatus)
-
+        if (exitCode != 0 || exitStatus != QProcess::NormalExit) {
+            Q_EMIT testingFailed(QString::fromLocal8Bit(m_testProcess->readAllStandardError()));
+        }
         m_testProcess->deleteLater();
         m_testProcess = nullptr;
         Q_EMIT testingChanged();
