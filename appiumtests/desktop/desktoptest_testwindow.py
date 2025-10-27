@@ -71,6 +71,7 @@ class TestWindow(Gtk.ApplicationWindow):
         self.button.connect("clicked", self.on_button_clicked)
         self.set_child(self.button)
 
+        print("Window shown", flush=True)
         GLib.timeout_add_seconds(120, self.close)
 
     def on_button_clicked(self, widget) -> None:
@@ -78,11 +79,13 @@ class TestWindow(Gtk.ApplicationWindow):
 
 
 def on_activate(_app: Gtk.Application) -> None:
+    print("Activated", flush=True)
     win = TestWindow(_app)
     win.present()
 
 
 if __name__ == "__main__":
+    print("Launched", flush=True)
     app = Gtk.Application(application_id=DesktopFileWrapper.APPLICATION_ID)
     app.connect('activate', on_activate)
     app.run(None)

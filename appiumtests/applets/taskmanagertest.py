@@ -90,7 +90,7 @@ class Bug487023Test(unittest.TestCase):
         """
         Can list running windows and show badge counts based on app id
         """
-        test_window = subprocess.Popen([self.wrapper.application_path], stdout=sys.stderr, stderr=sys.stderr)
+        test_window = subprocess.Popen([self.wrapper.application_path], stdout=sys.stdout, stderr=sys.stdout)
         assert test_window.poll() is None
         self.addCleanup(test_window.kill)
 
