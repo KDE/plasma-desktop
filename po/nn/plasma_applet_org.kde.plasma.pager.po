@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-06 00:44+0000\n"
-"PO-Revision-Date: 2024-09-22 16:39+0200\n"
+"PO-Revision-Date: 2025-10-26 12:30+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 25.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -101,8 +101,7 @@ msgid "Desktop name"
 msgstr "Skrivebordsnamn"
 
 #: package/contents/ui/configGeneral.qml:118
-#, fuzzy, kde-format
-#| msgid "Selecting current Activity:"
+#, kde-format
 msgctxt ""
 "@label Start of the sentence 'Selecting current activity does nothing/shows "
 "the desktop'"
@@ -110,8 +109,7 @@ msgid "Selecting current Activity:"
 msgstr "Vel gjeldande aktivitet:"
 
 #: package/contents/ui/configGeneral.qml:119
-#, fuzzy, kde-format
-#| msgid "Selecting current virtual desktop:"
+#, kde-format
 msgctxt ""
 "@label Start of the sentence 'Selecting current virtual desktop does nothing/"
 "shows the desktop'"
@@ -119,8 +117,7 @@ msgid "Selecting current virtual desktop:"
 msgstr "Vel gjeldande virtuelle skrivebord:"
 
 #: package/contents/ui/configGeneral.qml:122
-#, fuzzy, kde-format
-#| msgid "Does nothing"
+#, kde-format
 msgctxt ""
 "option:check completes the sentence 'Selecting current activity/virtual "
 "desktop does nothing'"
@@ -128,8 +125,7 @@ msgid "Does nothing"
 msgstr "Gjer ikkje noko"
 
 #: package/contents/ui/configGeneral.qml:130
-#, fuzzy, kde-format
-#| msgid "Shows the desktop"
+#, kde-format
 msgctxt ""
 "option:check completes the sentence 'Selecting current activity/virtual "
 "desktop shows the desktop'"

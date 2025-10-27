@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2024-07-10 21:51+0200\n"
+"PO-Revision-Date: 2025-10-26 12:16+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -128,10 +128,10 @@ msgid "Device enabled"
 msgstr "Eining tilgjengeleg"
 
 #: ui/main.qml:115
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check"
 msgid "Disable while mouse is connected"
-msgstr "Slå av styreplata under tasting"
+msgstr "Slå av når musa er tilkopla"
 
 #: ui/main.qml:137
 #, kde-format
@@ -145,18 +145,18 @@ msgid "This can interfere with video games."
 msgstr "Dette kan øydeleggja for dataspel."
 
 #: ui/main.qml:170
-#, fuzzy, kde-format
+#, kde-format
 msgid "Left-handed mode"
 msgstr "Venstrehandsmodus"
 
 #: ui/main.qml:186
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check"
 msgid "Press left and right buttons to middle-click"
 msgstr "Trykk venstre og høgre knapp samtidig for midtklikk"
 
 #: ui/main.qml:199
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
@@ -172,9 +172,9 @@ msgid "Pointer speed:"
 msgstr "Peikarfart:"
 
 #: ui/main.qml:289
-#, fuzzy, kde-format
+#, kde-format
 msgid "Enable pointer acceleration"
-msgstr "Peikarakselerasjon:"
+msgstr "Bruk peikarakselerasjon"
 
 #: ui/main.qml:304
 #, kde-format
@@ -182,6 +182,7 @@ msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
+"Når dette er slått på, vil peikaren flytta seg lenger ved raskare rørsle."
 
 #: ui/main.qml:314
 #, kde-format
@@ -226,13 +227,13 @@ msgid "Disable horizontal scrolling"
 msgstr "Slå av vassrett rulling"
 
 #: ui/main.qml:448
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Tapping:"
 
 #: ui/main.qml:449
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check"
 msgid "Tap-to-click"
 msgstr "Tapp for å klikka"
@@ -249,11 +250,13 @@ msgid ""
 "Tap, then tap and immediately slide finger over the touchpad to drag. Lift "
 "finger to drop."
 msgstr ""
+"Dra ved å tappa og straks tappa på nytt medan du dreg fingeren over "
+"styreplata. Løft fingeren for å sleppa."
 
 #: ui/main.qml:485
 #, kde-format
 msgid "Allow briefly lifting finger during tap-and-drag"
-msgstr ""
+msgstr "Tillatt kort løft av fingeren ved tapp-og-slepp-rørsle"
 
 #: ui/main.qml:499
 #, kde-format
@@ -281,15 +284,15 @@ msgid "Middle-click"
 msgstr "Midtklikk"
 
 #: ui/main.qml:541
-#, fuzzy, kde-format
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, configure right-click with touch-pad "
 "integrated button (pressing into the touchpad)"
 msgid "Integrated right-click:"
-msgstr "Høgreklikk:"
+msgstr "Integrert høgreklikk:"
 
 #: ui/main.qml:562
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
 msgstr "Trykk i hjørnet nede til høgre"
@@ -298,48 +301,48 @@ msgstr "Trykk i hjørnet nede til høgre"
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
-msgstr ""
+msgstr "Midtklikk ved å trykkja i begge nedre hjørne."
 
 #: ui/main.qml:578
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
-msgstr ""
+msgstr "Midtklikk for å trykk i midten nede."
 
 #: ui/main.qml:586
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press touchpad with two fingers"
-msgstr "Trykk med to fingrar kor som helst"
+msgstr "Trykk på styreplata med to fingrar"
 
 #: ui/main.qml:601
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
-msgstr "Trykk med tre fingrar kor som helst."
+msgstr "Midtlikk ved å trykkja med tre fingrar."
 
 #: ui/main.qml:610
-#, fuzzy, kde-format
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, configure middle-click with touch-pad "
 "integrated button (pressing into the touchpad)"
 msgid "Integrated middle-click:"
-msgstr "Midtklikk: "
+msgstr "Integrert midtklikk:"
 
 #: ui/main.qml:631
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom middle edge"
-msgstr "Trykk nede i midten"
+msgstr "Trykk på midten av nedre kant"
 
 #: ui/main.qml:638
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom left and bottom right corners"
-msgstr "Trykk i nedre venstre og høgre hjørne samtidig"
+msgstr "Trykk i nedre venstre og høgre hjørne"
 
 #: ui/main.qml:645
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
-msgstr "Trykk med tre fingrar kor som helst"
+msgstr "Trykk på styreplata med tre fingrar"

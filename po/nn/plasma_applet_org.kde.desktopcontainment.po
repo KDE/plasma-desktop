@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-09 02:42+0000\n"
-"PO-Revision-Date: 2024-05-15 20:45+0200\n"
+"PO-Revision-Date: 2025-10-26 12:01+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 25.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -131,13 +131,13 @@ msgstr "Ordning:"
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "In Columns"
-msgstr ""
+msgstr "I kolonnar"
 
 #: package/contents/ui/ConfigIcons.qml:128
 #, kde-format
 msgctxt "@item:inlistbox arrangement of icons"
 msgid "In Rows"
-msgstr ""
+msgstr "I rader"
 
 #: package/contents/ui/ConfigIcons.qml:137
 #, fuzzy, kde-format
@@ -146,17 +146,13 @@ msgid "Sort Alignment:"
 msgstr "Sortering:"
 
 #: package/contents/ui/ConfigIcons.qml:140
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Left to Right"
+#, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Left-to-Right"
 msgstr "Venstre til høgre"
 
 #: package/contents/ui/ConfigIcons.qml:141
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Right to Left"
+#, kde-format
 msgctxt "@item:inlistbox alignment of icons"
 msgid "Right-to-Left"
 msgstr "Høgre til venstre"
@@ -167,10 +163,9 @@ msgid "Lock in place"
 msgstr "Lås på plass"
 
 #: package/contents/ui/ConfigIcons.qml:177
-#, fuzzy, kde-format
-#| msgid "Sort By"
+#, kde-format
 msgid "Sort by:"
-msgstr "Sorter etter"
+msgstr "Sorter etter:"
 
 #: package/contents/ui/ConfigIcons.qml:185
 #, kde-format
@@ -324,88 +319,76 @@ msgid "Configure Preview Plugins…"
 msgstr "Set opp førehandsvisingstillegg …"
 
 #: package/contents/ui/ConfigLocation.qml:81
-#, fuzzy, kde-format
-#| msgid "Show:"
+#, kde-format
 msgctxt "@title:group form label for radiobutton group"
 msgid "Show:"
 msgstr "Vis:"
 
 #: package/contents/ui/ConfigLocation.qml:83
-#, fuzzy, kde-format
-#| msgid "Desktop folder"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Desktop folder"
 msgstr "Skrivebordsmappe"
 
 #: package/contents/ui/ConfigLocation.qml:91
-#, fuzzy, kde-format
-#| msgid "Files linked to the current activity"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Files linked to the current activity"
 msgstr "Filer kopla til den gjeldande aktiviteten"
 
 #: package/contents/ui/ConfigLocation.qml:100
-#, fuzzy, kde-format
-#| msgid "Places panel item:"
+#, kde-format
 msgctxt "@option:radio also label for combobox"
 msgid "Places panel item:"
 msgstr "Panelkategorien «Stadar»:"
 
 #: package/contents/ui/ConfigLocation.qml:137
-#, fuzzy, kde-format
-#| msgid "Custom location:"
+#, kde-format
 msgctxt "@option:radio also label for text field"
 msgid "Custom location:"
 msgstr "Tilpassa plassering:"
 
 #: package/contents/ui/ConfigLocation.qml:145
-#, fuzzy, kde-format
-#| msgid "Type path or URL…"
+#, kde-format
 msgctxt "@info:placeholder custom location"
 msgid "Type path or URL…"
 msgstr "Skriv inn adresse …"
 
 #: package/contents/ui/ConfigLocation.qml:188
-#, fuzzy, kde-format
-#| msgid "Title:"
+#, kde-format
 msgctxt "@label:textbox custom widget title"
 msgid "Title:"
 msgstr "Tittel:"
 
 #: package/contents/ui/ConfigLocation.qml:197
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "@item:inlistbox no title"
 msgid "None"
 msgstr "Ingen"
 
 #: package/contents/ui/ConfigLocation.qml:198
-#, fuzzy, kde-format
-#| msgid "Default"
+#, kde-format
 msgctxt "@item:inlistbox default title"
 msgid "Default"
 msgstr "Standard"
 
 #: package/contents/ui/ConfigLocation.qml:199
-#, fuzzy, kde-format
-#| msgid "Full path"
+#, kde-format
 msgctxt "@item:inlistbox full path as title"
 msgid "Full path"
 msgstr "Full adresse"
 
 #: package/contents/ui/ConfigLocation.qml:200
-#, fuzzy, kde-format
-#| msgid "Custom title"
+#, kde-format
 msgctxt "@item:inlistbox title from text input field"
 msgid "Custom"
-msgstr "Sjølvvald tittel"
+msgstr "Tilpassa"
 
 #: package/contents/ui/ConfigLocation.qml:209
-#, fuzzy, kde-format
-#| msgid "Enter custom title…"
+#, kde-format
 msgctxt "@info:placeholder custom window title"
 msgid "Enter title…"
-msgstr "Skriv inn sjølvvald tittel …"
+msgstr "Skriv inn tittel …"
 
 #: package/contents/ui/ConfigOverlay.qml:98
 #, kde-format
@@ -443,12 +426,10 @@ msgstr ""
 "dårleg yting. Vurder derfor å flytta nokre av filene/mappene ein annan stad."
 
 #: package/contents/ui/FolderViewDialog.qml:90
-#, fuzzy, kde-format
-#| msgctxt "@option:check sort icons with folders first"
-#| msgid "Folders first"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Folder is empty"
-msgstr "Mapper først"
+msgstr "Mappa er tom"
 
 # Vert vist i menyen når ein høgreklikkar på skrivebordet. Bør derfor vera kort, så brukar «bakgrunn» i staden for «bakgrunnsbilete».
 #: package/contents/ui/main.qml:426
@@ -477,7 +458,7 @@ msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
 "or folder"
 msgid "Link Target Not Found"
-msgstr ""
+msgstr "Fann ikkje lenkjemålet"
 
 #: plugins/folder/foldermodel.cpp:893
 #, kde-kuit-format
@@ -486,6 +467,8 @@ msgid ""
 "<filename>%1</filename> points to <filename>%2</filename>, but that could "
 "not be found. It may have been moved or deleted."
 msgstr ""
+"<filename>%1</filename> viser til <filename>%2</filename>, men denne fila/"
+"mappa finst ikkje. Det kan vera at ho er flytta er sletta."
 
 #: plugins/folder/foldermodel.cpp:1757
 #, kde-format
@@ -496,7 +479,7 @@ msgstr "&Tøm papirkorga"
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
-msgstr ""
+msgstr "Gjenopprett til tidligere plassering"
 
 #: plugins/folder/foldermodel.cpp:1763
 #, kde-format
@@ -504,12 +487,12 @@ msgid "&Open"
 msgstr "&Opna"
 
 #: plugins/folder/foldermodel.cpp:1767
-#, fuzzy, kde-format
+#, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
 "link points to"
 msgid "Show Target"
-msgstr "Vis alle"
+msgstr "Vis målet"
 
 #: plugins/folder/foldermodel.cpp:1868
 #, kde-format
@@ -518,9 +501,9 @@ msgid "Remove Trash Icon"
 msgstr ""
 
 #: plugins/folder/foldermodel.cpp:1871
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Move to Trash"
-msgstr "&Tøm papirkorga"
+msgstr "&Flytt til papirkorga"
 
 #: plugins/folder/foldermodel.cpp:1904
 #, kde-format
@@ -636,13 +619,13 @@ msgstr "Ordna"
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Columns"
-msgstr ""
+msgstr "I kolonnar"
 
 #: plugins/folder/viewpropertiesmenu.cpp:74
 #, kde-format
 msgctxt "@item:inmenu arrangement of icons"
 msgid "In Rows"
-msgstr ""
+msgstr "I rader"
 
 #: plugins/folder/viewpropertiesmenu.cpp:79
 #, kde-format
@@ -650,17 +633,13 @@ msgid "Sort Alignment"
 msgstr ""
 
 #: plugins/folder/viewpropertiesmenu.cpp:83
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Left to Right"
+#, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Left-to-Right"
 msgstr "Venstre til høgre"
 
 #: plugins/folder/viewpropertiesmenu.cpp:84
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox arrangement of icons"
-#| msgid "Right to Left"
+#, kde-format
 msgctxt "@item:inmenu alignment of icons"
 msgid "Right-to-Left"
 msgstr "Høgre til venstre"

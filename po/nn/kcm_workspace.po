@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-01 00:43+0000\n"
-"PO-Revision-Date: 2024-09-22 16:40+0200\n"
+"PO-Revision-Date: 2025-10-26 12:04+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 25.08.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -36,19 +36,19 @@ msgstr "Start på nytt"
 #, kde-format
 msgctxt "@title:group"
 msgid "Plasma"
-msgstr ""
+msgstr "Plasma"
 
 #: ui/main.qml:52
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Allow Plasma to show:"
-msgstr ""
+msgstr "Tillat at Plasma viser:"
 
 #: ui/main.qml:59
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr ""
+msgstr "Hjelpebobler for panel og element"
 
 #: ui/main.qml:69
 #, kde-format
@@ -74,12 +74,10 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:94
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Scrolling:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Scrolling"
-msgstr "Rulling:"
+msgstr "Rulling"
 
 #: ui/main.qml:100
 #, kde-format
@@ -131,7 +129,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Clicking"
-msgstr ""
+msgstr "Klikking"
 
 #: ui/main.qml:175
 #, kde-format
@@ -213,24 +211,23 @@ msgid ""
 "Double-click the folder to test. If it does not change its appearance, "
 "increase double-click interval."
 msgstr ""
+"Dobbeltklikk på mappa for å testa innstillinga. Viss mappa ikkje endrar "
+"utsjånad, auk dobbeltklikk­intervallet."
 
 #: ui/main.qml:354
 #, kde-format
 msgid "Drag and Drop"
-msgstr ""
+msgstr "Dra og slepp"
 
 #: ui/main.qml:361
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "part of a sentence: 'Clicking files or folders [opens them/selects them]'"
-#| msgid "Clicking files or folders:"
+#, kde-format
 msgid "When dragging files or folders:"
-msgstr "Trykk på filer og mapper:"
+msgstr "Ved draging av filer og mapper:"
 
 #: ui/main.qml:362
 #, kde-format
 msgid "Always ask what to do"
-msgstr ""
+msgstr "Spør alltid om kva som skal gjerast"
 
 #: ui/main.qml:378
 #, kde-kuit-format
@@ -244,26 +241,24 @@ msgstr ""
 #: ui/main.qml:386
 #, kde-format
 msgid "Move if on the same device"
-msgstr ""
+msgstr "Flytt viss der på same eining"
 
 #: ui/main.qml:402
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Hold <shortcut>Shift</shortcut> when dropping to show other options."
-msgstr ""
+msgstr "Hald inne <shortcut>Shift</shortcut> ved draging for å visa andre val."
 
 #: ui/main.qml:410
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Touch"
-msgstr "Trykkskjerm-modus:"
+msgstr "Trykkskjerm"
 
 #: ui/main.qml:416
-#, fuzzy, kde-format
-#| msgid "Touch Mode:"
+#, kde-format
 msgid "Enable Touch Mode:"
-msgstr "Trykkskjerm-modus:"
+msgstr "Slå på trykkskjerm-modus:"
 
 #: ui/main.qml:418
 #, kde-format
@@ -290,9 +285,7 @@ msgstr ""
 "fleksibelt tastatur på ei berbar maskin vert snudd eller kopla frå."
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgctxt "As in: 'Touch Mode is always enabled'"
-#| msgid "Always enabled"
+#, kde-format
 msgctxt "As in: 'Touch Mode is always enabled'"
 msgid "Always active"
 msgstr "Alltid på"
@@ -301,7 +294,7 @@ msgstr "Alltid på"
 #, kde-format
 msgctxt "As in: 'Touch Mode is never enabled'"
 msgid "Disabled"
-msgstr ""
+msgstr "Slått av"
 
 #: ui/main.qml:486
 #, kde-format
