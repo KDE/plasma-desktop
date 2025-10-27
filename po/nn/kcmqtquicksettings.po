@@ -1,12 +1,11 @@
 # Translation of kcmqtquicksettings to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2018, 2020, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-02 00:44+0000\n"
-"PO-Revision-Date: 2023-07-15 14:43+0200\n"
+"PO-Revision-Date: 2025-10-26 12:34+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -14,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 25.08.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -31,14 +30,15 @@ msgstr "karl@huftis.org"
 
 #. i18n: ectx: property (text), widget (KMessageWidget, kmessagewidget)
 #: kcmqtquicksettingswidget.ui:23
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "These settings adjust the QtQuick settings used by Plasma. Modifying these "
 "settings can break your desktop. Only adjust these settings if you know what "
 "you are doing."
 msgstr ""
-"Desse innstillingane justerer QtQuick-innstillingane som Plasma brukar. Gjer "
-"berre endringar her dersom du veit kva du gjer."
+"Desse innstillingane justerer QtQuick-innstillingane som Plasma brukar. Viss "
+"du endrar innstillingar her, kan det øydeleggja skrivebordet. Gjer berre "
+"endringar dersom du veit kva du gjer."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kcmqtquicksettingswidget.ui:41

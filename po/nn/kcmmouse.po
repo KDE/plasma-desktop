@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-25 00:44+0000\n"
-"PO-Revision-Date: 2024-09-22 16:39+0200\n"
+"PO-Revision-Date: 2025-10-26 12:29+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 25.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -180,16 +180,17 @@ msgid "Pointer speed:"
 msgstr "Peikarfart:"
 
 #: ui/main.qml:221
-#, fuzzy, kde-format
+#, kde-format
 msgid "Enable pointer acceleration"
-msgstr "Peikarakselerasjon:"
+msgstr "Bruk peikarakselerasjon"
 
 #: ui/main.qml:235
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
-msgstr "Kor langt peikaren flyttar seg, avheng av kor fort musa vert flytta."
+msgstr ""
+"Når dette er slått på, vil peikaren flytta seg lenger ved raskare rørsle."
 
 #: ui/main.qml:245
 #, kde-format
@@ -219,8 +220,7 @@ msgid "Invert scroll direction"
 msgstr "Omvend rulleretning"
 
 #: ui/main.qml:330
-#, fuzzy, kde-format
-#| msgid "Press middle button and move mouse to scroll"
+#, kde-format
 msgid "Hold down middle button and move mouse to scroll"
 msgstr "Hald inne midtknappen og flytt musa for å rulla"
 

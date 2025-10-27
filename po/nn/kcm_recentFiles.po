@@ -1,22 +1,20 @@
 # Translation of kcm_recentFiles to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2016, 2018, 2019, 2020.
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-17 00:41+0000\n"
-"PO-Revision-Date: 2021-12-15 12:28+0100\n"
-"Last-Translator: Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail."
-"com>\n"
+"PO-Revision-Date: 2025-10-26 12:35+0100\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.0\n"
+"X-Generator: Lokalize 25.08.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -129,6 +127,6 @@ msgstr "Hugs opna dokument:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_blockedByDefault)
 #: ui/RecentFiles.ui:128
-#, fuzzy, kde-format
+#, kde-format
 msgid "Exclude applications not on the list"
-msgstr "Svartelist alle programma som ikkje er på lista"
+msgstr "Utelat alle programma som ikkje er på lista"
