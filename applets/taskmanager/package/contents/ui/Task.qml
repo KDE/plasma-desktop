@@ -146,8 +146,12 @@ PlasmaCore.ToolTipArea {
         id: translateTransform
     }
 
+
     Accessible.name: model.display
     Accessible.description: {
+
+        console.log("DAAAAAAAAAAAAAAAVE", model.display)
+
         if (!model.display) {
             return "";
         }
