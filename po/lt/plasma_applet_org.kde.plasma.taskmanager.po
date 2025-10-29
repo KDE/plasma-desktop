@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-25 00:44+0000\n"
-"PO-Revision-Date: 2025-09-01 17:49+0300\n"
+"PO-Revision-Date: 2025-10-28 23:32+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.7\n"
 
 #: backend.cpp:284
 #, kde-format
@@ -476,11 +476,7 @@ msgid "Brings it to the current virtual desktop"
 msgstr "Pristato ją į dabartinį virtualų darbalaukį"
 
 #: package/contents/ui/ConfigBehavior.qml:205
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label:listbox Part of a sentence: 'Scrolling behavior does nothing/"
-#| "cycles through tasks/cycles through the selected task's windows'"
-#| msgid "Scrolling behavior:"
+#, kde-format
 msgctxt ""
 "@label:listbox Part of a sentence: 'Scrolling behavior does nothing/cycles "
 "through tasks/cycles through the selected task's windows/adjusts the hovered "
@@ -511,16 +507,12 @@ msgid "Cycles through the hovered task’s windows"
 msgstr "Perjunginėja per užduoties, virš kurios yra pelės rodyklė, langus"
 
 #: package/contents/ui/ConfigBehavior.qml:212
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through "
-#| "the hovered task's windows'"
-#| msgid "Cycles through the hovered task’s windows"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling behavior adjusts the hovered "
 "task’s volume'"
 msgid "Adjusts the hovered task’s volume"
-msgstr "Perjunginėja per užduoties, virš kurios yra pelės rodyklė, langus"
+msgstr "Reguliuoja garsumą tos užduoties, ant kurios užvesta pelė"
 
 #: package/contents/ui/ConfigBehavior.qml:220
 #, kde-format
