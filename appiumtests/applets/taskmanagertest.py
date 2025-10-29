@@ -87,6 +87,9 @@ class Bug487023Test(unittest.TestCase):
         self.driver.find_element(AppiumBy.NAME, "Icons-and-Text Task Manager")
 
     def test_1_badge_count(self) -> None:
+        print("Dave 1")
+        assert(False)
+        print("Dave 2")
         """
         Can list running windows and show badge counts based on app id
         """

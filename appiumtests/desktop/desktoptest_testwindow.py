@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-
-# SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
+# SPDX-FileCopyrightText: 2025 David Edmundson <davidedmundson@kde.org>
 # SPDX-License-Identifier: MIT
 
 import logging
@@ -10,82 +9,100 @@ import subprocess
 import sys
 from typing import Final, Self
 
-import gi
-
-gi.require_version('GdkPixbuf', '2.0')
-gi.require_version('Gtk', '4.0')
-from gi.repository import GdkPixbuf, GLib, Gtk
+from PySide6.QtCore import QStandardPaths, QTimer
+from PySide6.QtGui import QImage, QColor
+from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton
 
 KDE_VERSION: Final = 6
 
 
 class DesktopFileWrapper(object):
-
     APPLICATION_ID: Final = "org.kde.testwindow"
     APPLICATION_NAME: Final = "Software Center"
 
     def __init__(self) -> None:
-        self.path: str = os.path.join(GLib.get_user_data_dir(), "applications", f"{self.APPLICATION_ID}.desktop")
+        data_dir = QStandardPaths.writableLocation(QStandardPaths.GenericDataLocation)  # usually ~/.local/share
+        self.path: str = os.path.join(data_dir, "applications", f"{self.APPLICATION_ID}.desktop")
         self.application_path: str = os.path.realpath(__file__)
-        self.icon_path: str = os.path.join(GLib.get_user_data_dir(), "icons", "test.png")
+        self.icon_path: str = os.path.join(data_dir, "icons", "test.png")
 
     def create(self) -> None:
-        os.makedirs(os.path.join(GLib.get_user_data_dir(), "applications"))
-        os.makedirs(os.path.join(GLib.get_user_data_dir(), "icons"))
+        data_dir = QStandardPaths.writableLocation(QStandardPaths.GenericDataLocation)
+        os.makedirs(os.path.join(data_dir, "applications"), exist_ok=True)
+        os.makedirs(os.path.join(data_dir, "icons"), exist_ok=True)
 
-        pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 16, 16)
-        pixbuf.fill(0xff0000ff)
-        assert pixbuf.savev(self.icon_path, "png")
+        # Create a 16x16 red RGBA icon
+        img = QImage(16, 16, QImage.Format.Format_RGBA8888)
+        img.fill(QColor(255, 0, 0, 255))  # solid red
+        ok = img.save(self.icon_path, "PNG")
+        assert ok, "Failed to save icon"
 
-        with open(self.path, "w", encoding="utf-8") as file_handler:
-            file_handler.writelines([
+        with open(self.path, "w", encoding="utf-8") as fh:
+            fh.writelines([
                 "[Desktop Entry]\n",
                 "Type=Application\n",
                 f"Icon={self.icon_path}\n",
                 f"Name={self.APPLICATION_NAME}\n",
                 f"Exec={self.application_path}\n",
             ])
-            file_handler.flush()
+            fh.flush()
+
+        # Mark the .desktop file executable like the original script
         os.chmod(self.path, os.stat(self.path).st_mode | stat.S_IEXEC)
 
         logging.info(self.path)
         logging.info(self.icon_path)
 
-        subprocess.check_call([f"kbuildsycoca{KDE_VERSION}"], stdout=sys.stderr, stderr=sys.stderr, env=os.environ)
+        # Update KDE app cache
+        subprocess.check_call([f"kbuildsycoca{KDE_VERSION}"],
+                              stdout=sys.stderr, stderr=sys.stderr, env=os.environ)
 
     def __enter__(self) -> Self:
         self.create()
         return self
 
     def __exit__(self, *args) -> None:
-        os.remove(self.path)
-        os.remove(self.icon_path)
+        # Clean up the created files
+        try:
+            os.remove(self.path)
+        except FileNotFoundError:
+            pass
+        try:
+            os.remove(self.icon_path)
+        except FileNotFoundError:
+            pass
 
 
-class TestWindow(Gtk.ApplicationWindow):
+class TestWindow(QMainWindow):
+    def __init__(self) -> None:
+        super().__init__()
+        self.setWindowTitle("Test Window")
 
-    def __init__(self, _app: Gtk.Application) -> None:
-        super().__init__(application=_app, title="Test Window")
+        self.button = QPushButton("Install Software", self)
+        self.button.clicked.connect(self.on_button_clicked)
+        self.setCentralWidget(self.button)
 
-        self.button = Gtk.Button(label="Install Software")
-        self.button.connect("clicked", self.on_button_clicked)
-        self.set_child(self.button)
+        print("Window shown", file=sys.stderr)
+        QTimer.singleShot(120_000, self.close)
 
-        print("Window shown", flush=True)
-        GLib.timeout_add_seconds(120, self.close)
-
-    def on_button_clicked(self, widget) -> None:
+    def on_button_clicked(self) -> None:
         self.close()
 
 
-def on_activate(_app: Gtk.Application) -> None:
-    print("Activated", flush=True)
-    win = TestWindow(_app)
-    win.present()
+def main() -> None:
+    print("Launched", file=sys.stderr)
+    app = QApplication(sys.argv)
+
+    # (Optional) You can set desktop file name / app name if desired
+    # QApplication.setDesktopFileName(DesktopFileWrapper.APPLICATION_ID)
+    app.setApplicationName(DesktopFileWrapper.APPLICATION_NAME)
+
+    print("Activated", file=sys.stderr)
+    win = TestWindow()
+    win.show()
+
+    sys.exit(app.exec())
 
 
 if __name__ == "__main__":
-    print("Launched", flush=True)
-    app = Gtk.Application(application_id=DesktopFileWrapper.APPLICATION_ID)
-    app.connect('activate', on_activate)
-    app.run(None)
+    main()
