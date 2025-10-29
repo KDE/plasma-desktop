@@ -126,7 +126,7 @@ bool MostUsedModel::filterAcceptsRow(int source_row, const QModelIndex &source_p
     }
 
     KService::Ptr service = KService::serviceByStorageId(desktopName);
-    if (!service || !service->showOnCurrentPlatform()) {
+    if (!service || !service->showOnCurrentPlatform() || !service->exec().startsWith(u"systemsettings")) {
         ignoreKCM(desktopName);
         return false;
     }
