@@ -14,7 +14,7 @@ KItemModels.KSortFilterProxyModel {
     sortRoleName: "searchScore"
     sortOrder: Qt.DescendingOrder
 
-    filterRowCallback: function (row, parent) {
+    filterRowCallback: function (row, parent): bool {
         if (!layoutsView.currentItem) {
             return false;
         }

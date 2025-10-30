@@ -14,7 +14,7 @@ KItemModels.KSortFilterProxyModel {
     sortRoleName: "searchScore"
     sortOrder: Qt.DescendingOrder
 
-    filterRowCallback: function (row, parent) {
+    filterRowCallback: function (row, parent): bool {
         const modelIndex = sourceModel.index(row, 0, parent);
         const currentVariantName = sourceModel.data(modelIndex, KItemModels.KRoleNames.role("variantName"));
         const description = sourceModel.data(modelIndex, KItemModels.KRoleNames.role("description"));
