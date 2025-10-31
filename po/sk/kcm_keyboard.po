@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-04 00:44+0000\n"
+"POT-Creation-Date: 2025-10-31 00:44+0000\n"
 "PO-Revision-Date: 2025-05-30 20:42+0200\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -126,19 +126,27 @@ msgctxt "@info:tooltip"
 msgid "Reset selected options for this group"
 msgstr "Obnoviť vybrané možnosti pre túto skupinu"
 
-#: ui/LayoutDialog.qml:20
+#: ui/LayoutDialog.qml:22
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "Layout"
+msgctxt "@title:window"
+msgid "Set Layout"
+msgstr "Rozloženie"
+
+#: ui/LayoutDialog.qml:22
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Layout"
 msgstr "Pridať rozloženie"
 
-#: ui/LayoutDialog.qml:180
+#: ui/LayoutDialog.qml:129
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
 msgstr "Krátky názov rozloženia"
 
-#: ui/LayoutDialog.qml:190
+#: ui/LayoutDialog.qml:139
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -148,13 +156,13 @@ msgstr ""
 "Skrátený názov vybraného rozloženia, ktorý sa zobrazí v systémovej lište. "
 "Toto nastavenie môžete zmeniť sami."
 
-#: ui/LayoutDialog.qml:198
+#: ui/LayoutDialog.qml:147
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "Skratka:"
 
-#: ui/LayoutDialog.qml:209 ui/main.qml:287
+#: ui/LayoutDialog.qml:158 ui/main.qml:287
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview"
@@ -246,55 +254,55 @@ msgctxt "@label:checkbox"
 msgid "Key repeat:"
 msgstr "Opakovanie klávesov:"
 
-#: ui/main.qml:155
+#: ui/main.qml:155 ui/main_phone.qml:115
 #, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Key repeat"
 msgstr "Opakovanie klávesov"
 
-#: ui/main.qml:166
+#: ui/main.qml:166 ui/main_phone.qml:131
 #, kde-format
 msgctxt "@label:textbox Key repeat delay"
 msgid "Delay:"
 msgstr "Oneskorenie:"
 
-#: ui/main.qml:180
+#: ui/main.qml:180 ui/main_phone.qml:135
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat delay %1"
 msgstr "Oneskorenie opakovania klávesov %1"
 
-#: ui/main.qml:188
+#: ui/main.qml:188 ui/main_phone.qml:143
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "%1 ms"
 msgstr "%1 ms"
 
-#: ui/main.qml:192
+#: ui/main.qml:192 ui/main_phone.qml:147
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "ms"
 msgstr "ms"
 
-#: ui/main.qml:205
+#: ui/main.qml:205 ui/main_phone.qml:162
 #, kde-format
 msgctxt "@label:textbox Key repeat rate"
 msgid "Rate:"
 msgstr "Rýchlosť:"
 
-#: ui/main.qml:219
+#: ui/main.qml:219 ui/main_phone.qml:169
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat rate %1"
 msgstr "Rýchlosť opakovania klávesov %1"
 
-#: ui/main.qml:227
+#: ui/main.qml:227 ui/main_phone.qml:177
 #, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "%1 repeats/s"
 msgstr "%1 opakovaní/s"
 
-#: ui/main.qml:231
+#: ui/main.qml:231 ui/main_phone.qml:181
 #, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "repeats/s"
@@ -403,6 +411,51 @@ msgstr "Skratka zmeny rozloženia:"
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
 msgstr "alebo"
+
+#: ui/main_phone.qml:36
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add Layout"
+msgid "Model & Layout"
+msgstr "Pridať rozloženie"
+
+#: ui/main_phone.qml:43
+#, fuzzy, kde-format
+#| msgctxt "@title:group"
+#| msgid "Keyboard model:"
+msgctxt "@label:listbox"
+msgid "Keyboard Model"
+msgstr "Model klávesnice:"
+
+#: ui/main_phone.qml:72
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "Layout"
+msgctxt "@option:check"
+msgid "Custom Layout"
+msgstr "Rozloženie"
+
+#: ui/main_phone.qml:96
+#, fuzzy, kde-format
+#| msgctxt "@option:textbox"
+#| msgid "Change layout:"
+msgctxt "@action:button"
+msgid "Change Layout..."
+msgstr "Zmeniť rozloženie:"
+
+#: ui/main_phone.qml:103
+#, fuzzy, kde-format
+#| msgctxt "@label:checkbox accessible"
+#| msgid "Key repeat"
+msgctxt "@title:group"
+msgid "Key Repeat"
+msgstr "Opakovanie klávesov"
+
+#: ui/main_phone.qml:109
+#, kde-format
+msgctxt "@option:check"
+msgid "Customize Repeat"
+msgstr ""
 
 #: ui/Switching.qml:17
 #, kde-format
@@ -522,10 +575,6 @@ msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Žiadna"
 
-#~ msgctxt "@title:group"
-#~ msgid "Keyboard model:"
-#~ msgstr "Model klávesnice:"
-
 #~ msgctxt "@option:radio"
 #~ msgid "Turn Off"
 #~ msgstr "Vypnúť"
@@ -597,10 +646,6 @@ msgstr "Žiadna"
 #~ msgctxt "@title:column"
 #~ msgid "Label"
 #~ msgstr "Štítok"
-
-#~ msgctxt "@title:column"
-#~ msgid "Layout"
-#~ msgstr "Rozloženie"
 
 #~ msgctxt "@title:column"
 #~ msgid "Variant"

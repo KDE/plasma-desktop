@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-04 00:44+0000\n"
+"POT-Creation-Date: 2025-10-31 00:44+0000\n"
 "PO-Revision-Date: 2024-11-21 20:40\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -126,19 +126,27 @@ msgctxt "@info:tooltip"
 msgid "Reset selected options for this group"
 msgstr "Скінуць абраныя параметры для гэтай групы"
 
-#: ui/LayoutDialog.qml:20
+#: ui/LayoutDialog.qml:22
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "Layout"
+msgctxt "@title:window"
+msgid "Set Layout"
+msgstr "Размяшчэнне"
+
+#: ui/LayoutDialog.qml:22
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Layout"
 msgstr "Дадаць раскладку"
 
-#: ui/LayoutDialog.qml:180
+#: ui/LayoutDialog.qml:129
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
 msgstr "Скарочаная назва раскладкі"
 
-#: ui/LayoutDialog.qml:190
+#: ui/LayoutDialog.qml:139
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -148,13 +156,13 @@ msgstr ""
 "Скарочаная назва абранай раскладкі, якая будзе паказвацца на прасторы "
 "апавяшчэнняў. Вы можаце змяніць гэты параметр самастойна."
 
-#: ui/LayoutDialog.qml:198
+#: ui/LayoutDialog.qml:147
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "Спалучэнне клавіш:"
 
-#: ui/LayoutDialog.qml:209 ui/main.qml:287
+#: ui/LayoutDialog.qml:158 ui/main.qml:287
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview"
@@ -246,55 +254,55 @@ msgctxt "@label:checkbox"
 msgid "Key repeat:"
 msgstr "Паўтарэнне клавішы:"
 
-#: ui/main.qml:155
+#: ui/main.qml:155 ui/main_phone.qml:115
 #, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Key repeat"
 msgstr "Паўтарэнне клавішы"
 
-#: ui/main.qml:166
+#: ui/main.qml:166 ui/main_phone.qml:131
 #, kde-format
 msgctxt "@label:textbox Key repeat delay"
 msgid "Delay:"
 msgstr "Затрымліванне:"
 
-#: ui/main.qml:180
+#: ui/main.qml:180 ui/main_phone.qml:135
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat delay %1"
 msgstr "Затрымліванне паўтарэння клавішы %1"
 
-#: ui/main.qml:188
+#: ui/main.qml:188 ui/main_phone.qml:143
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "%1 ms"
 msgstr "%1 мс"
 
-#: ui/main.qml:192
+#: ui/main.qml:192 ui/main_phone.qml:147
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "ms"
 msgstr "мс"
 
-#: ui/main.qml:205
+#: ui/main.qml:205 ui/main_phone.qml:162
 #, kde-format
 msgctxt "@label:textbox Key repeat rate"
 msgid "Rate:"
 msgstr "Хуткасць:"
 
-#: ui/main.qml:219
+#: ui/main.qml:219 ui/main_phone.qml:169
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat rate %1"
 msgstr "Частата паўтарэння клавішы %1"
 
-#: ui/main.qml:227
+#: ui/main.qml:227 ui/main_phone.qml:177
 #, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "%1 repeats/s"
 msgstr "%1 паўтарэнняў/сек"
 
-#: ui/main.qml:231
+#: ui/main.qml:231 ui/main_phone.qml:181
 #, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "repeats/s"
@@ -403,6 +411,51 @@ msgstr "Змена спалучэння клавіш раскладкі:"
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
 msgstr "або"
+
+#: ui/main_phone.qml:36
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add Layout"
+msgid "Model & Layout"
+msgstr "Дадаць раскладку"
+
+#: ui/main_phone.qml:43
+#, fuzzy, kde-format
+#| msgctxt "@title:group"
+#| msgid "Keyboard model:"
+msgctxt "@label:listbox"
+msgid "Keyboard Model"
+msgstr "Мадэль клавіятуры:"
+
+#: ui/main_phone.qml:72
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "Layout"
+msgctxt "@option:check"
+msgid "Custom Layout"
+msgstr "Размяшчэнне"
+
+#: ui/main_phone.qml:96
+#, fuzzy, kde-format
+#| msgctxt "@option:textbox"
+#| msgid "Change layout:"
+msgctxt "@action:button"
+msgid "Change Layout..."
+msgstr "Змена раскладкі:"
+
+#: ui/main_phone.qml:103
+#, fuzzy, kde-format
+#| msgctxt "@label:checkbox accessible"
+#| msgid "Key repeat"
+msgctxt "@title:group"
+msgid "Key Repeat"
+msgstr "Паўтарэнне клавішы"
+
+#: ui/main_phone.qml:109
+#, kde-format
+msgctxt "@option:check"
+msgid "Customize Repeat"
+msgstr ""
 
 #: ui/Switching.qml:17
 #, kde-format
@@ -523,10 +576,6 @@ msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Няма"
 
-#~ msgctxt "@title:group"
-#~ msgid "Keyboard model:"
-#~ msgstr "Мадэль клавіятуры:"
-
 #~ msgctxt "@option:radio"
 #~ msgid "Turn Off"
 #~ msgstr "Выключыць"
@@ -598,10 +647,6 @@ msgstr "Няма"
 #~ msgctxt "@title:column"
 #~ msgid "Label"
 #~ msgstr "Адмеціна"
-
-#~ msgctxt "@title:column"
-#~ msgid "Layout"
-#~ msgstr "Размяшчэнне"
 
 #~ msgctxt "@title:column"
 #~ msgid "Variant"

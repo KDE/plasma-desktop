@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-04 00:44+0000\n"
+"POT-Creation-Date: 2025-10-31 00:44+0000\n"
 "PO-Revision-Date: 2008-01-30 13:35+0200\n"
 "Last-Translator: Petri Jooste <Petri.Jooste@nwu.ac.za>\n"
 "Language-Team: Afrikaans <translate-discuss-af@lists.sourceforge.net>\n"
@@ -119,20 +119,26 @@ msgctxt "@info:tooltip"
 msgid "Reset selected options for this group"
 msgstr ""
 
-#: ui/LayoutDialog.qml:20
+#: ui/LayoutDialog.qml:22
+#, fuzzy, kde-format
+msgctxt "@title:window"
+msgid "Set Layout"
+msgstr "Lao"
+
+#: ui/LayoutDialog.qml:22
 #, fuzzy, kde-format
 #| msgid "Keyboard Repeat"
 msgctxt "@title:window"
 msgid "Add Layout"
 msgstr "Sleutelbordherhaling"
 
-#: ui/LayoutDialog.qml:180
+#: ui/LayoutDialog.qml:129
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
 msgstr ""
 
-#: ui/LayoutDialog.qml:190
+#: ui/LayoutDialog.qml:139
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -140,13 +146,13 @@ msgid ""
 "system tray. You can change this setting yourself."
 msgstr ""
 
-#: ui/LayoutDialog.qml:198
+#: ui/LayoutDialog.qml:147
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr ""
 
-#: ui/LayoutDialog.qml:209 ui/main.qml:287
+#: ui/LayoutDialog.qml:158 ui/main.qml:287
 #, fuzzy, kde-format
 #| msgid "Keyboard Repeat"
 msgctxt "@action:button"
@@ -247,58 +253,58 @@ msgctxt "@label:checkbox"
 msgid "Key repeat:"
 msgstr "Sleutelbordherhaling"
 
-#: ui/main.qml:155
+#: ui/main.qml:155 ui/main_phone.qml:115
 #, fuzzy, kde-format
 #| msgid "Keyboard Repeat"
 msgctxt "@label:checkbox accessible"
 msgid "Key repeat"
 msgstr "Sleutelbordherhaling"
 
-#: ui/main.qml:166
+#: ui/main.qml:166 ui/main_phone.qml:131
 #, fuzzy, kde-format
 #| msgid "&Delay:"
 msgctxt "@label:textbox Key repeat delay"
 msgid "Delay:"
 msgstr "&Vertraging"
 
-#: ui/main.qml:180
+#: ui/main.qml:180 ui/main_phone.qml:135
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat delay %1"
 msgstr ""
 
-#: ui/main.qml:188
+#: ui/main.qml:188 ui/main_phone.qml:143
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "%1 ms"
 msgstr ""
 
-#: ui/main.qml:192
+#: ui/main.qml:192 ui/main_phone.qml:147
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "ms"
 msgstr ""
 
-#: ui/main.qml:205
+#: ui/main.qml:205 ui/main_phone.qml:162
 #, fuzzy, kde-format
 #| msgid "&Rate:"
 msgctxt "@label:textbox Key repeat rate"
 msgid "Rate:"
 msgstr "&Herhaaltempo:"
 
-#: ui/main.qml:219
+#: ui/main.qml:219 ui/main_phone.qml:169
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat rate %1"
 msgstr ""
 
-#: ui/main.qml:227
+#: ui/main.qml:227 ui/main_phone.qml:177
 #, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "%1 repeats/s"
 msgstr ""
 
-#: ui/main.qml:231
+#: ui/main.qml:231 ui/main_phone.qml:181
 #, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "repeats/s"
@@ -407,6 +413,45 @@ msgstr "&Skakel sleutelbordherhaling aan"
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
+msgstr ""
+
+#: ui/main_phone.qml:36
+#, fuzzy, kde-format
+#| msgid "Keyboard Repeat"
+msgid "Model & Layout"
+msgstr "Sleutelbordherhaling"
+
+#: ui/main_phone.qml:43
+#, fuzzy, kde-format
+#| msgid "Keyboard Repeat"
+msgctxt "@label:listbox"
+msgid "Keyboard Model"
+msgstr "Sleutelbordherhaling"
+
+#: ui/main_phone.qml:72
+#, fuzzy, kde-format
+msgctxt "@option:check"
+msgid "Custom Layout"
+msgstr "Lao"
+
+#: ui/main_phone.qml:96
+#, fuzzy, kde-format
+#| msgid "&Enable keyboard repeat"
+msgctxt "@action:button"
+msgid "Change Layout..."
+msgstr "&Skakel sleutelbordherhaling aan"
+
+#: ui/main_phone.qml:103
+#, fuzzy, kde-format
+#| msgid "Keyboard Repeat"
+msgctxt "@title:group"
+msgid "Key Repeat"
+msgstr "Sleutelbordherhaling"
+
+#: ui/main_phone.qml:109
+#, kde-format
+msgctxt "@option:check"
+msgid "Customize Repeat"
 msgstr ""
 
 #: ui/Switching.qml:17
@@ -523,12 +568,6 @@ msgid "None"
 msgstr "Geen"
 
 #, fuzzy
-#~| msgid "Keyboard Repeat"
-#~ msgctxt "@title:group"
-#~ msgid "Keyboard model:"
-#~ msgstr "Sleutelbordherhaling"
-
-#, fuzzy
 #~| msgid "Turn o&ff"
 #~ msgctxt "@option:radio"
 #~ msgid "Turn Off"
@@ -563,11 +602,6 @@ msgstr "Geen"
 #~ msgctxt "@option:radio"
 #~ msgid "Window"
 #~ msgstr "Venster"
-
-#, fuzzy
-#~ msgctxt "@title:column"
-#~ msgid "Layout"
-#~ msgstr "Lao"
 
 #, fuzzy
 #~ msgctxt "@title:column"

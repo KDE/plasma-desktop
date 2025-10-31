@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-04 00:44+0000\n"
+"POT-Creation-Date: 2025-10-31 00:44+0000\n"
 "PO-Revision-Date: 2025-03-22 15:18+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -127,19 +127,27 @@ msgctxt "@info:tooltip"
 msgid "Reset selected options for this group"
 msgstr "Bu grup için seçili olan seçenekleri sıfırla"
 
-#: ui/LayoutDialog.qml:20
+#: ui/LayoutDialog.qml:22
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "Layout"
+msgctxt "@title:window"
+msgid "Set Layout"
+msgstr "Yerleşim"
+
+#: ui/LayoutDialog.qml:22
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Layout"
 msgstr "Yerleşim Ekle"
 
-#: ui/LayoutDialog.qml:180
+#: ui/LayoutDialog.qml:129
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Short layout name"
 msgstr "Kısa yerleşim adı"
 
-#: ui/LayoutDialog.qml:190
+#: ui/LayoutDialog.qml:139
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -149,13 +157,13 @@ msgstr ""
 "Sistem tepsisinde görüntülenecek olan, seçili yerleşimin kısaltılmış adı. Bu "
 "ayarı kendiniz değiştirebilirsiniz."
 
-#: ui/LayoutDialog.qml:198
+#: ui/LayoutDialog.qml:147
 #, kde-format
 msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "Kısayol:"
 
-#: ui/LayoutDialog.qml:209 ui/main.qml:287
+#: ui/LayoutDialog.qml:158 ui/main.qml:287
 #, kde-format
 msgctxt "@action:button"
 msgid "Preview"
@@ -247,55 +255,55 @@ msgctxt "@label:checkbox"
 msgid "Key repeat:"
 msgstr "Düğme yinelemesi:"
 
-#: ui/main.qml:155
+#: ui/main.qml:155 ui/main_phone.qml:115
 #, kde-format
 msgctxt "@label:checkbox accessible"
 msgid "Key repeat"
 msgstr "Düğme yinelemesi"
 
-#: ui/main.qml:166
+#: ui/main.qml:166 ui/main_phone.qml:131
 #, kde-format
 msgctxt "@label:textbox Key repeat delay"
 msgid "Delay:"
 msgstr "Gecikme:"
 
-#: ui/main.qml:180
+#: ui/main.qml:180 ui/main_phone.qml:135
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat delay %1"
 msgstr "Düğme yinelemesi gecikmesi %1"
 
-#: ui/main.qml:188
+#: ui/main.qml:188 ui/main_phone.qml:143
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "%1 ms"
 msgstr "%1 ms"
 
-#: ui/main.qml:192
+#: ui/main.qml:192 ui/main_phone.qml:147
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "ms"
 msgstr "ms"
 
-#: ui/main.qml:205
+#: ui/main.qml:205 ui/main_phone.qml:162
 #, kde-format
 msgctxt "@label:textbox Key repeat rate"
 msgid "Rate:"
 msgstr "Hız:"
 
-#: ui/main.qml:219
+#: ui/main.qml:219 ui/main_phone.qml:169
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat rate %1"
 msgstr "Düğme yinelemesi hızı %1"
 
-#: ui/main.qml:227
+#: ui/main.qml:227 ui/main_phone.qml:177
 #, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "%1 repeats/s"
 msgstr "%1 yineleme/sn"
 
-#: ui/main.qml:231
+#: ui/main.qml:231 ui/main_phone.qml:181
 #, kde-format
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "repeats/s"
@@ -404,6 +412,51 @@ msgstr "Yerleşim değiştirme kısayolu:"
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
 msgstr "veya"
+
+#: ui/main_phone.qml:36
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add Layout"
+msgid "Model & Layout"
+msgstr "Yerleşim Ekle"
+
+#: ui/main_phone.qml:43
+#, fuzzy, kde-format
+#| msgctxt "@title:group"
+#| msgid "Keyboard model:"
+msgctxt "@label:listbox"
+msgid "Keyboard Model"
+msgstr "Klavye modeli:"
+
+#: ui/main_phone.qml:72
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "Layout"
+msgctxt "@option:check"
+msgid "Custom Layout"
+msgstr "Yerleşim"
+
+#: ui/main_phone.qml:96
+#, fuzzy, kde-format
+#| msgctxt "@option:textbox"
+#| msgid "Change layout:"
+msgctxt "@action:button"
+msgid "Change Layout..."
+msgstr "Yerleşimi değiştir:"
+
+#: ui/main_phone.qml:103
+#, fuzzy, kde-format
+#| msgctxt "@label:checkbox accessible"
+#| msgid "Key repeat"
+msgctxt "@title:group"
+msgid "Key Repeat"
+msgstr "Düğme yinelemesi"
+
+#: ui/main_phone.qml:109
+#, kde-format
+msgctxt "@option:check"
+msgid "Customize Repeat"
+msgstr ""
 
 #: ui/Switching.qml:17
 #, kde-format
@@ -521,10 +574,6 @@ msgid "None"
 msgstr "Yok"
 
 #~ msgctxt "@title:group"
-#~ msgid "Keyboard model:"
-#~ msgstr "Klavye modeli:"
-
-#~ msgctxt "@title:group"
 #~ msgid "When key is held:"
 #~ msgstr "Düğme basılı tutulduğunda:"
 
@@ -591,10 +640,6 @@ msgstr "Yok"
 #~ msgctxt "@title:column"
 #~ msgid "Label"
 #~ msgstr "Etiket"
-
-#~ msgctxt "@title:column"
-#~ msgid "Layout"
-#~ msgstr "Yerleşim"
 
 #~ msgctxt "@title:column"
 #~ msgid "Variant"

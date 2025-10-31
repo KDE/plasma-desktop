@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-04 00:44+0000\n"
+"POT-Creation-Date: 2025-10-31 00:44+0000\n"
 "PO-Revision-Date: 2010-06-24 14:36+0530\n"
 "Last-Translator: Sweta Kothari <swkothar@redhat.com>\n"
 "Language-Team: Gujarati\n"
@@ -124,21 +124,28 @@ msgctxt "@info:tooltip"
 msgid "Reset selected options for this group"
 msgstr ""
 
-#: ui/LayoutDialog.qml:20
+#: ui/LayoutDialog.qml:22
+#, fuzzy, kde-format
+#| msgid "Layout"
+msgctxt "@title:window"
+msgid "Set Layout"
+msgstr "લેઆઉટ"
+
+#: ui/LayoutDialog.qml:22
 #, fuzzy, kde-format
 #| msgid "Add Layout"
 msgctxt "@title:window"
 msgid "Add Layout"
 msgstr "લેઆઉટને ઉમેરો"
 
-#: ui/LayoutDialog.qml:180
+#: ui/LayoutDialog.qml:129
 #, fuzzy, kde-format
 #| msgid "Show layout indicator"
 msgctxt "@label:textbox"
 msgid "Short layout name"
 msgstr "લેઆઉટ સૂચકને બતાવો"
 
-#: ui/LayoutDialog.qml:190
+#: ui/LayoutDialog.qml:139
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -146,14 +153,14 @@ msgid ""
 "system tray. You can change this setting yourself."
 msgstr ""
 
-#: ui/LayoutDialog.qml:198
+#: ui/LayoutDialog.qml:147
 #, fuzzy, kde-format
 #| msgid "Main shortcuts:"
 msgctxt "@option:textbox"
 msgid "Shortcut:"
 msgstr "મુખ્ય ટૂંકાણો:"
 
-#: ui/LayoutDialog.qml:209 ui/main.qml:287
+#: ui/LayoutDialog.qml:158 ui/main.qml:287
 #, fuzzy, kde-format
 #| msgid "Keyboard Repeat"
 msgctxt "@action:button"
@@ -254,60 +261,60 @@ msgctxt "@label:checkbox"
 msgid "Key repeat:"
 msgstr "કીબોર્ડ ફરીથી (Repeat)"
 
-#: ui/main.qml:155
+#: ui/main.qml:155 ui/main_phone.qml:115
 #, fuzzy, kde-format
 #| msgid "Keyboard Repeat"
 msgctxt "@label:checkbox accessible"
 msgid "Key repeat"
 msgstr "કીબોર્ડ ફરીથી (Repeat)"
 
-#: ui/main.qml:166
+#: ui/main.qml:166 ui/main_phone.qml:131
 #, fuzzy, kde-format
 #| msgid "&Delay:"
 msgctxt "@label:textbox Key repeat delay"
 msgid "Delay:"
 msgstr "વિલંબ: (&D)"
 
-#: ui/main.qml:180
+#: ui/main.qml:180 ui/main_phone.qml:135
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat delay %1"
 msgstr ""
 
-#: ui/main.qml:188
+#: ui/main.qml:188 ui/main_phone.qml:143
 #, kde-format
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "%1 ms"
 msgstr ""
 
-#: ui/main.qml:192
+#: ui/main.qml:192 ui/main_phone.qml:147
 #, fuzzy, kde-format
 #| msgid " ms"
 msgctxt "@spinbox:value Repeat delay interval"
 msgid "ms"
 msgstr " ms"
 
-#: ui/main.qml:205
+#: ui/main.qml:205 ui/main_phone.qml:162
 #, fuzzy, kde-format
 #| msgid "&Rate:"
 msgctxt "@label:textbox Key repeat rate"
 msgid "Rate:"
 msgstr "દર: (&R)"
 
-#: ui/main.qml:219
+#: ui/main.qml:219 ui/main_phone.qml:169
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Key repeat rate %1"
 msgstr ""
 
-#: ui/main.qml:227
+#: ui/main.qml:227 ui/main_phone.qml:177
 #, fuzzy, kde-format
 #| msgid " repeats/s"
 msgctxt "@spinbox:value  Key repeat rate"
 msgid "%1 repeats/s"
 msgstr " repeats/s"
 
-#: ui/main.qml:231
+#: ui/main.qml:231 ui/main_phone.qml:181
 #, fuzzy, kde-format
 #| msgid " repeats/s"
 msgctxt "@spinbox:value  Key repeat rate"
@@ -418,6 +425,46 @@ msgstr "મુખ્ય ટૂંકાણો:"
 #, kde-format
 msgctxt "@label Change layout shortcut or \"Configure Switching\""
 msgid "or"
+msgstr ""
+
+#: ui/main_phone.qml:36
+#, fuzzy, kde-format
+#| msgid "Add Layout"
+msgid "Model & Layout"
+msgstr "લેઆઉટને ઉમેરો"
+
+#: ui/main_phone.qml:43
+#, fuzzy, kde-format
+#| msgid "Keyboard &model:"
+msgctxt "@label:listbox"
+msgid "Keyboard Model"
+msgstr "કિબોર્ડ મોડલ (&m):"
+
+#: ui/main_phone.qml:72
+#, fuzzy, kde-format
+#| msgid "Layout"
+msgctxt "@option:check"
+msgid "Custom Layout"
+msgstr "લેઆઉટ"
+
+#: ui/main_phone.qml:96
+#, fuzzy, kde-format
+#| msgid "Configure layouts"
+msgctxt "@action:button"
+msgid "Change Layout..."
+msgstr "લેઆઉટને રૂપરેખાંકિત કરો"
+
+#: ui/main_phone.qml:103
+#, fuzzy, kde-format
+#| msgid "Keyboard Repeat"
+msgctxt "@title:group"
+msgid "Key Repeat"
+msgstr "કીબોર્ડ ફરીથી (Repeat)"
+
+#: ui/main_phone.qml:109
+#, kde-format
+msgctxt "@option:check"
+msgid "Customize Repeat"
 msgstr ""
 
 #: ui/Switching.qml:17
@@ -540,12 +587,6 @@ msgid "None"
 msgstr "કઇ નહિં"
 
 #, fuzzy
-#~| msgid "Keyboard &model:"
-#~ msgctxt "@title:group"
-#~ msgid "Keyboard model:"
-#~ msgstr "કિબોર્ડ મોડલ (&m):"
-
-#, fuzzy
 #~| msgid "Turn o&ff"
 #~ msgctxt "@option:radio"
 #~ msgid "Turn Off"
@@ -617,12 +658,6 @@ msgstr "કઇ નહિં"
 #~ msgctxt "@title:column"
 #~ msgid "Label"
 #~ msgstr "શીર્ષક"
-
-#, fuzzy
-#~| msgid "Layout"
-#~ msgctxt "@title:column"
-#~ msgid "Layout"
-#~ msgstr "લેઆઉટ"
 
 #, fuzzy
 #~| msgid "Variant"
