@@ -19,6 +19,7 @@ BasePage {
         id: sideBar
         focus: true // needed for Loaders
         model: placesCategoryModel
+        isSidebar: true
         delegate: KickoffListDelegate {
             url: ""
             description: ""
