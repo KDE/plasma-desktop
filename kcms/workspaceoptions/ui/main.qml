@@ -40,7 +40,7 @@ KCM.SimpleKCM {
         }
     }
 
-    Kirigami.FormLayout2 {
+    Kirigami.Form {
         Layout.fillWidth: true
         Kirigami.FormGroup {
             title: i18nc("@title:group", "Plasma")
