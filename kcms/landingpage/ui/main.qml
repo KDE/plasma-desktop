@@ -25,7 +25,7 @@ KCMUtils.SimpleKCM {
     implicitWidth: Kirigami.Units.gridUnit * 44
     implicitHeight: Kirigami.Units.gridUnit * 33
 
-    Kirigami.FormLayout2 {
+    Kirigami.Form {
         Kirigami.FormGroup {
             Kirigami.FormEntry {
                 title: i18n("Theme:")
@@ -151,7 +151,6 @@ KCMUtils.SimpleKCM {
         }
 
         Kirigami.FormGroup {
-            //title: i18n("Behavior")
             Kirigami.FormEntry {
                 title: slider.Accessible.name
                 contentItem: ColumnLayout {
@@ -247,7 +246,7 @@ KCMUtils.SimpleKCM {
 
             Kirigami.FormAction {
                 readonly property PlasmaCore.Action kcmAction: kcm.kcmAction("kcm_workspace")
-                icon.source: kcmAction.icon
+                icon.source: kcmAction.iconName
                 title: i18nc("@title:group translate as short as possible", "More behavior settings:")
                 text: kcmAction.text
                 onClicked: kcmAction.trigger();
