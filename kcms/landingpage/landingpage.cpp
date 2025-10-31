@@ -11,6 +11,7 @@
 #include "lookandfeelmodel.h"
 #include "splititem.h"
 
+#include <KAuthorized>
 #include <KLocalizedString>
 #include <KPackage/PackageLoader>
 #include <KPluginFactory>
@@ -119,6 +120,11 @@ bool MostUsedModel::filterAcceptsRow(int source_row, const QModelIndex &source_p
         return false;
     }
 
+    if (!KAuthorized::authorizeControlModule(desktopName)) {
+        ignoreKCM(desktopName);
+        return false;
+    }
+
     KService::Ptr service = KService::serviceByStorageId(desktopName);
     if (!service || !service->showOnCurrentPlatform()) {
         ignoreKCM(desktopName);
@@ -221,6 +227,10 @@ Q_INVOKABLE void KCMLandingPage::openKCM(const QString &kcm)
 
 QAction *KCMLandingPage::kcmAction(const QString &storageId)
 {
+    if (!KAuthorized::authorizeControlModule(storageId)) {
+        return nullptr;
+    }
+
     if (KService::Ptr kcm = KService::serviceByStorageId(storageId)) {
         // Returning parent-less QObject from Q_INVOKABLE, QmlEngine will adopt it.
         auto *action = new QAction(QIcon::fromTheme(kcm->icon()), kcm->name());
