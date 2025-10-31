@@ -135,6 +135,8 @@ KCMUtils.SimpleKCM {
             spacing: Kirigami.Units.smallSpacing
             Kirigami.FormData.label: i18nc("@title:group translate as short as possible", "More appearance settings:")
 
+            visible: wallpaperKCMButton.visible || lookAndFeelKCMButton.visible
+
             MostUsedIcon {
                 id: wallpaperKCMButton
                 Layout.fillWidth: true
@@ -144,6 +146,7 @@ KCMUtils.SimpleKCM {
             }
 
             MostUsedIcon {
+                id: lookAndFeelKCMButton
                 Layout.fillWidth: true
                 Layout.preferredWidth: 50 // 50% of the available width
                 kcmId: "kcm_lookandfeel"
@@ -280,9 +283,10 @@ KCMUtils.SimpleKCM {
 
         MostUsedIcon {
             Kirigami.FormData.label: i18nc("@title:group translate as short as possible", "More behavior settings:")
-            Layout.preferredWidth: wallpaperKCMButton.width
             kcmId: "kcm_workspace"
             visible: kcmAction !== null
+            Layout.fillWidth: true
+            Layout.maximumWidth: (appearanceButtonsRow.width - appearanceButtonsRow.spacing) / 2
         }
 
         Kirigami.Separator {
