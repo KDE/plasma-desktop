@@ -47,50 +47,38 @@ KCM.SimpleKCM {
             // Visual behavior settings
             Kirigami.FormEntry {
                 title: i18nc("Part of the sentence 'Allow Plasma to show panel and widget tooltips'", "Allow Plasma to show:")
-                contentItem: RowLayout {
-                    Layout.fillWidth: false
-                    Kirigami.FormData.buddyFor: tooltipDisablerCheckbox
-                    spacing: 0
+                contentItem: QQC2.CheckBox {
+                    id: tooltipDisablerCheckbox
+                    text: i18nc("Part of the sentence 'Allow Plasma to show panel and widget tooltips'", "Panel and widget tooltips")
+                    checked: kcm.plasmaSettings.delay > 0
+                    onCheckedChanged: kcm.plasmaSettings.delay = (checked ? 0.7 : -1)
 
-                    QQC2.CheckBox {
-                        id: tooltipDisablerCheckbox
-                        text: i18nc("Part of the sentence 'Allow Plasma to show panel and widget tooltips'", "Panel and widget tooltips")
-                        checked: kcm.plasmaSettings.delay > 0
-                        onCheckedChanged: kcm.plasmaSettings.delay = (checked ? 0.7 : -1)
+                    KCM.SettingStateBinding {
+                        configObject: kcm.plasmaSettings
+                        settingName: "delay"
+                    }
+                }
 
-                        KCM.SettingStateBinding {
-                            configObject: kcm.plasmaSettings
-                            settingName: "delay"
-                        }
-                    }
-                    Kirigami.ContextualHelpButton {
-                        Layout.alignment: Qt.AlignRight
-                        toolTipText: i18n("Allows all Plasma panel and desktop widgets to show descriptive tooltips when hovered with the pointer. This setting has no effect on the small tooltips displayed when hovering over individual buttons and other user interface elements.")
-                    }
+                trailingItems: Kirigami.ContextualHelpButton {
+                    toolTipText: i18n("Allows all Plasma panel and desktop widgets to show descriptive tooltips when hovered with the pointer. This setting has no effect on the small tooltips displayed when hovering over individual buttons and other user interface elements.")
                 }
             }
 
             Kirigami.FormEntry {
-                contentItem: RowLayout {
-                    Layout.fillWidth: false
-                    Kirigami.FormData.buddyFor: osdDisablerCheckbox
-                    spacing: 0
+                contentItem: QQC2.CheckBox {
+                    id: osdDisablerCheckbox
+                    text: i18nc("Part of the sentence 'Allow Plasma to show OSD popups for status changes'", "OSD popups for status changes")
+                    checked: kcm.plasmaSettings.osdEnabled
+                    onCheckedChanged: kcm.plasmaSettings.osdEnabled = checked
 
-                    QQC2.CheckBox {
-                        id: osdDisablerCheckbox
-                        text: i18nc("Part of the sentence 'Allow Plasma to show OSD popups for status changes'", "OSD popups for status changes")
-                        checked: kcm.plasmaSettings.osdEnabled
-                        onCheckedChanged: kcm.plasmaSettings.osdEnabled = checked
-
-                        KCM.SettingStateBinding {
-                            configObject: kcm.plasmaSettings
-                            settingName: "osdEnabled"
-                        }
+                    KCM.SettingStateBinding {
+                        configObject: kcm.plasmaSettings
+                        settingName: "osdEnabled"
                     }
-                    Kirigami.ContextualHelpButton {
-                        Layout.alignment: Qt.AlignRight
-                        toolTipText: i18n("Allows all Plasma widgets to show on-screen display (OSD) popups for changes like volume and brightness level, or audio device switching.")
-                    }
+                }
+                trailingItems: Kirigami.ContextualHelpButton {
+                    Layout.alignment: Qt.AlignRight
+                    toolTipText: i18n("Allows all Plasma widgets to show on-screen display (OSD) popups for changes like volume and brightness level, or audio device switching.")
                 }
             }
         }
@@ -137,26 +125,20 @@ KCM.SimpleKCM {
             Kirigami.FormSeparator {}
 
             Kirigami.FormEntry {
-                contentItem: RowLayout {
-                    Layout.fillWidth: false
-                    Kirigami.FormData.buddyFor: smoothScrollingCheckbox
-                    spacing: 0
+                contentItem: QQC2.CheckBox {
+                    id: smoothScrollingCheckbox
+                    text: i18nc("@option:check", "Prefer smooth scrolling")
+                    checked: kcm.globalsSettings.smoothScroll
+                    onToggled: kcm.globalsSettings.smoothScroll = checked
 
-                    QQC2.CheckBox {
-                        id: smoothScrollingCheckbox
-                        text: i18nc("@option:check", "Prefer smooth scrolling")
-                        checked: kcm.globalsSettings.smoothScroll
-                        onToggled: kcm.globalsSettings.smoothScroll = checked
-
-                        KCM.SettingStateBinding {
-                            configObject: kcm.globalsSettings
-                            settingName: "smoothScroll"
-                        }
+                    KCM.SettingStateBinding {
+                        configObject: kcm.globalsSettings
+                        settingName: "smoothScroll"
                     }
-                    Kirigami.ContextualHelpButton {
-                        Layout.alignment: Qt.AlignRight
-                        toolTipText: i18nc("@info:tooltip", "This setting enables or disables animated transitions when scrolling with a mouse wheel or the keyboard. Some applications may not honor this setting because they either do not support smooth scrolling, or have their own setting for enabling and disabling it.")
-                    }
+                }
+                trailingItems: Kirigami.ContextualHelpButton {
+                    Layout.alignment: Qt.AlignRight
+                    toolTipText: i18nc("@info:tooltip", "This setting enables or disables animated transitions when scrolling with a mouse wheel or the keyboard. Some applications may not honor this setting because they either do not support smooth scrolling, or have their own setting for enabling and disabling it.")
                 }
             }
         }
@@ -362,30 +344,27 @@ KCM.SimpleKCM {
 
             Kirigami.FormEntry {
                 title: i18n("Enable Touch Mode:")
-                contentItem: RowLayout {
-                    Kirigami.FormData.buddyFor: touchEnabledRadio
-                    QQC2.RadioButton {
-                        id: touchEnabledRadio
-                        text: KWindowSystem.isPlatformWayland ? i18nc("As in: 'Touch Mode is automatically enabled as needed'", "Automatically enable as needed") : i18nc("As in: 'Touch Mode is never enabled'", "Never enabled")
-                        Accessible.description: touchModeAlwaysOffRadioButton.Accessible.description
-                        checked: kcm.kwinSettings.tabletMode === "auto"
-                        onToggled: {
-                            if (checked) {
-                                kcm.kwinSettings.tabletMode = "auto"
-                            }
+                contentItem: QQC2.RadioButton {
+                    id: touchEnabledRadio
+                    text: KWindowSystem.isPlatformWayland ? i18nc("As in: 'Touch Mode is automatically enabled as needed'", "Automatically enable as needed") : i18nc("As in: 'Touch Mode is never enabled'", "Never enabled")
+                    Accessible.description: touchModeAlwaysOffRadioButton.Accessible.description
+                    checked: kcm.kwinSettings.tabletMode === "auto"
+                    onToggled: {
+                        if (checked) {
+                            kcm.kwinSettings.tabletMode = "auto"
                         }
-                        QQC2.ButtonGroup.group: tabletModeBehaviorGroup
+                    }
+                    QQC2.ButtonGroup.group: tabletModeBehaviorGroup
 
-                        KCM.SettingStateBinding {
-                            configObject: kcm.kwinSettings
-                            settingName: "tabletMode"
-                        }
+                    KCM.SettingStateBinding {
+                        configObject: kcm.kwinSettings
+                        settingName: "tabletMode"
                     }
-                    Kirigami.ContextualHelpButton {
-                        Layout.alignment: Qt.AlignRight
-                        visible: KWindowSystem.isPlatformWayland
-                        toolTipText: i18n("Touch Mode will be automatically activated whenever the system detects a touchscreen but no mouse or touchpad. For example: when a transformable laptop's keyboard is flipped around or detached.")
-                    }
+                }
+                trailingItems: Kirigami.ContextualHelpButton {
+                    Layout.alignment: Qt.AlignRight
+                    visible: KWindowSystem.isPlatformWayland
+                    toolTipText: i18n("Touch Mode will be automatically activated whenever the system detects a touchscreen but no mouse or touchpad. For example: when a transformable laptop's keyboard is flipped around or detached.")
                 }
             }
 
