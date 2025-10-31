@@ -33,7 +33,7 @@ EmptyPage {
     property alias section: view.section
     property alias highlight: view.highlight
     property alias view: view
-    property bool showingCategories: false
+    property bool isSidebar: false
 
     property bool mainContentView: false
     property bool hasSectionView: false
@@ -147,7 +147,7 @@ EmptyPage {
 
         // Without switch-on-hover, it's possible for the selected category and the hovered category to be adjacent.
         // When this happens, their highlights tuoch and look ungly without some artificial spacing added.
-        spacing: root.showingCategories && !Plasmoid.configuration.switchCategoryOnHover ? Kirigami.Units.smallSpacing : 0
+        spacing: root.isSidebar && !Plasmoid.configuration.switchCategoryOnHover ? Kirigami.Units.smallSpacing : 0
 
         section {
             property: "group"
