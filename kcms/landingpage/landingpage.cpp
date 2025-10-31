@@ -33,6 +33,7 @@
 #include <PlasmaActivities/Stats/ResultModel>
 #include <PlasmaActivities/Stats/ResultSet>
 #include <PlasmaActivities/Stats/Terms>
+#include <qicon.h>
 
 namespace KAStats = KActivities::Stats;
 
@@ -154,17 +155,6 @@ QVariant MostUsedModel::data(const QModelIndex &index, int role) const
     }
 }
 
-ActionWithIcon::ActionWithIcon(const QString &icon, const QString &text, QObject *parent)
-    : QAction(QIcon::fromTheme(icon), text, parent)
-    , m_icon(icon)
-{
-}
-
-QString ActionWithIcon::iconName() const
-{
-    return m_icon;
-}
-
 KCMLandingPage::KCMLandingPage(QObject *parent, const KPluginMetaData &metaData)
     : KQuickManagedConfigModule(parent, metaData)
     , m_data(new LandingPageData(this))
@@ -230,11 +220,11 @@ Q_INVOKABLE void KCMLandingPage::openKCM(const QString &kcm)
     QProcess::startDetached(QStringLiteral("systemsettings"), QStringList({kcm}));
 }
 
-ActionWithIcon *KCMLandingPage::kcmAction(const QString &storageId)
+QAction *KCMLandingPage::kcmAction(const QString &storageId)
 {
     if (KService::Ptr kcm = KService::serviceByStorageId(storageId)) {
         // Returning parent-less QObject from Q_INVOKABLE, QmlEngine will adopt it.
-        auto *action = new ActionWithIcon(kcm->icon(), kcm->name());
+        auto *action = new QAction(QIcon::fromTheme(kcm->icon()), kcm->name());
         connect(action, &QAction::triggered, this, [this, storageId] {
             openKCM(storageId);
         });

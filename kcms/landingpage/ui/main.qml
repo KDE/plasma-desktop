@@ -210,6 +210,7 @@ KCMUtils.SimpleKCM {
                     text: i18nc("part of a sentence: 'Clicking files or folders selects them'", "Selects them")
                     checked: !kcm.globalsSettings.singleClick
                     onToggled: kcm.globalsSettings.singleClick = false
+                    QQC2.ButtonGroup { id: singleClickGroup }
                     QQC2.ButtonGroup.group: singleClickGroup
 
                     Accessible.description: i18n("Open by double-clicking instead")
@@ -245,11 +246,12 @@ KCMUtils.SimpleKCM {
             Kirigami.FormSeparator {}
 
             Kirigami.FormAction {
-                readonly property PlasmaCore.Action kcmAction: kcm.kcmAction("kcm_workspace")
-                icon.source: kcmAction.iconName
                 title: i18nc("@title:group translate as short as possible", "More behavior settings:")
-                text: kcmAction.text
-                onClicked: kcmAction.trigger();
+                action: Kirigami.Action {
+                    readonly property PlasmaCore.Action kcmAction: kcm.kcmAction("kcm_workspace")
+                    fromQAction: kcmAction
+                    onTriggered: kcmAction.trigger();
+                }
             }
         }
 
