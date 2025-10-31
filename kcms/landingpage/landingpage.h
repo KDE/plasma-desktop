@@ -50,20 +50,6 @@ private:
     mutable QStringList ignoredKCMs;
 };
 
-class ActionWithIcon : public QAction
-{
-    Q_OBJECT
-    Q_PROPERTY(QString iconName READ iconName CONSTANT)
-
-public:
-    ActionWithIcon(const QString &icon, const QString &text, QObject *parent = nullptr);
-
-    QString iconName() const;
-
-private:
-    QString m_icon;
-};
-
 class KCMLandingPage : public KQuickManagedConfigModule
 {
     Q_OBJECT
@@ -84,7 +70,7 @@ public:
 
     Q_INVOKABLE void openKCM(const QString &kcm);
 
-    Q_INVOKABLE ActionWithIcon *kcmAction(const QString &storageId);
+    Q_INVOKABLE QAction *kcmAction(const QString &storageId);
 
 public Q_SLOTS:
     void save() override;
