@@ -23,5 +23,11 @@
     <entry name="retainPriorSearch" key="RetainPriorSearch" type="Bool">
       <default>true</default>
     </entry>
+    <entry name="quitAfterHide" key="QuitAfterHide" type="Bool">
+      <default>true</default>
+    </entry>
+    <entry name="quitAfterHideInterval" key="QuitAfterHideInterval" type="UInt">
+      <default>5</default>
+    </entry>
   </group>
 </kcfg>

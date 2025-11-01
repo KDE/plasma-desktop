@@ -6,6 +6,7 @@
 
 import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
+import QtQuick.Layouts
 
 import org.kde.kirigami 2.19 as Kirigami
 import org.kde.kcmutils as KCM
@@ -60,6 +61,33 @@ KCM.SimpleKCM {
             KCM.SettingStateBinding {
                 configObject: kcm.krunnerSettings
                 settingName: "activateWhenTypingOnDesktop"
+            }
+        }
+
+        RowLayout {
+            QQC2.CheckBox {
+                checked: kcm.krunnerSettings.quitAfterHide
+                onToggled: kcm.krunnerSettings.quitAfterHide = checked
+                text: i18nc("@option:check part of sentence 'quit after being unused: N minutes'", "Quit after being unused:")
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.krunnerSettings
+                    settingName: "quitAfterHide"
+                }
+            }
+
+            QQC2.SpinBox {
+                from: 0
+                value: kcm.krunnerSettings.quitAfterHideInterval
+                textFromValue: (value, locale) => i18ncp("@item:valuesuffix", "%1 minute", "%1 minutes", value)
+                valueFromText: (text, locale) => parseInt(text)
+                onValueModified: kcm.krunnerSettings.quitAfterHideInterval = value
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.krunnerSettings
+                    settingName: "quitAfterHideInterval"
+                    extraEnabledConditions: kcm.krunnerSettings.quitAfterHide
+                }
             }
         }
 
