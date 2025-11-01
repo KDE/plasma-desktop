@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-31 00:44+0000\n"
-"PO-Revision-Date: 2025-03-22 03:54+0100\n"
+"PO-Revision-Date: 2025-10-31 04:23+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.8\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -123,12 +123,10 @@ msgid "Reset selected options for this group"
 msgstr "მონიშნული პარამეტრების ჩამოყრა ამ ჯგუფისთვის"
 
 #: ui/LayoutDialog.qml:22
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Layout"
+#, kde-format
 msgctxt "@title:window"
 msgid "Set Layout"
-msgstr "განლაგება"
+msgstr "განლაგების დაყენება"
 
 #: ui/LayoutDialog.qml:22
 #, kde-format
@@ -409,40 +407,30 @@ msgid "or"
 msgstr "ან"
 
 #: ui/main_phone.qml:36
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Layout"
+#, kde-format
 msgid "Model & Layout"
-msgstr "განლაგების დამატება"
+msgstr "მოდელი & განლაგება"
 
 #: ui/main_phone.qml:43
-#, fuzzy, kde-format
-#| msgctxt "@title:group"
-#| msgid "Keyboard model:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Keyboard Model"
-msgstr "კლავიატურის მოდელი:"
+msgstr "კლავიატურის მოდელი"
 
 #: ui/main_phone.qml:72
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Layout"
+#, kde-format
 msgctxt "@option:check"
 msgid "Custom Layout"
-msgstr "განლაგება"
+msgstr "ხელით განლაგება"
 
 #: ui/main_phone.qml:96
-#, fuzzy, kde-format
-#| msgctxt "@option:textbox"
-#| msgid "Change layout:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Layout..."
-msgstr "განლაგების შეცვლა:"
+msgstr "განლაგების შეცვლა..."
 
 #: ui/main_phone.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@label:checkbox accessible"
-#| msgid "Key repeat"
+#, kde-format
 msgctxt "@title:group"
 msgid "Key Repeat"
 msgstr "ღილაკის გამეორება"
@@ -451,7 +439,7 @@ msgstr "ღილაკის გამეორება"
 #, kde-format
 msgctxt "@option:check"
 msgid "Customize Repeat"
-msgstr ""
+msgstr "გამეორების მორგება"
 
 #: ui/Switching.qml:17
 #, kde-format
