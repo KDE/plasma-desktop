@@ -25,11 +25,6 @@ class Positioner : public QAbstractItemModel
     Q_PROPERTY(int perStripe READ perStripe WRITE setPerStripe NOTIFY perStripeChanged)
 
 public:
-    enum LoadAndApplyFlags {
-        None,
-        SkipPerStripeUpdate
-    };
-
     explicit Positioner(QObject *parent = nullptr);
     ~Positioner() override;
 
@@ -62,7 +57,7 @@ public:
      * @param flags is used for handling if the PerStripe value is updated
      * on load.
      */
-    Q_INVOKABLE void loadAndApplyPositionsConfig(const LoadAndApplyFlags flags = LoadAndApplyFlags::None);
+    void loadAndApplyPositionsConfig(const QString &resolution = QString());
 
     /**
      * Saves the positions in m_positions to a configuration file
@@ -96,7 +91,7 @@ public:
 
     bool screenInUse() const;
 
-    Q_INVOKABLE void updateResolution();
+    bool updateResolution();
 
 #ifdef BUILD_TESTING
     QHash<int, int> proxyToSourceMapping() const
@@ -130,7 +125,6 @@ private Q_SLOTS:
     void sourceLayoutChanged(const QList<QPersistentModelIndex> &parents, QAbstractItemModel::LayoutChangeHint hint);
     void onItemRenamed();
     void onListingCompleted();
-    void slotScreenGeometryChanged();
 
 private:
     void initMaps(int size = -1);
@@ -141,7 +135,7 @@ private:
     // Converts data from folderModel to proxy data
     void convertFolderModelData();
     // Turns proxyToSource data into positions QStringList
-    void updatePositionsList();
+    void updatePositionsList(int perStripeForPositions = 0);
     void flushPendingChanges();
     void connectSignals(FolderModel *model);
     void disconnectSignals(FolderModel *model);

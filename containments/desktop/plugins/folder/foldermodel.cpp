@@ -2216,8 +2216,6 @@ void FolderModel::setApplet(Plasma::Applet *applet)
                 }
                 setScreen(containment->screen());
                 connect(containment, &Plasma::Containment::screenChanged, this, &FolderModel::setScreen);
-                connect(containment, &Plasma::Containment::screenGeometryChanged, this, &FolderModel::screenGeometryChanged);
-                connect(containment, &Plasma::Containment::availableRelativeScreenRectChanged, this, &FolderModel::availableRelativeScreenRectChanged);
             }
         }
 
@@ -2225,8 +2223,20 @@ void FolderModel::setApplet(Plasma::Applet *applet)
     }
 }
 
+#ifdef BUILD_TESTING
+void FolderModel::setScreenResolution(const QSizeF &size)
+{
+    m_screenResolution = size;
+}
+#endif
+
 QRectF FolderModel::screenGeometry()
 {
+#ifdef BUILD_TESTING
+    if (m_screenResolution.isValid()) {
+        return QRectF(QPointF(), m_screenResolution);
+    }
+#endif
     if (m_applet) {
         Plasma::Containment *containment = m_applet->containment();
         if (containment) {

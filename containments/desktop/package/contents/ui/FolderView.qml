@@ -1266,26 +1266,11 @@ FocusScope {
                 }
             }
 
-            onAvailableRelativeScreenRectChanged: {
-                positioner.updateResolution();
-                if (!positioner.enabled) {
-                    return;
-                }
-                const rows = (gridView.flow === GridView.FlowLeftToRight);
-                const axis = rows ? gridView.width : gridView.height;
-                const step = rows ? gridView.cellWidth : gridView.cellHeight;
-                positioner.perStripe = Math.floor(axis / step);
-            }
-
             onMove: (x, y, urls) => {
                 if (!positioner.enabled) {
                     return;
                 }
                 const rows = (gridView.flow === GridView.FlowLeftToRight);
-                const axis = rows ? gridView.width : gridView.height;
-                const step = rows ? gridView.cellWidth : gridView.cellHeight;
-                // We need to update the perStripe when moving due to panel changes etc.
-                positioner.perStripe = Math.floor(axis / step);
                 const dropPos = gridView.mapToItem(gridView.contentItem, x, y);
                 const leftEdge = Math.min(gridView.contentX, gridView.originX);
 
@@ -1367,11 +1352,6 @@ FocusScope {
             perStripe: Math.floor((gridView.flow === GridView.FlowLeftToRight)
                 ? (gridView.width / gridView.cellWidth)
                 : (gridView.height / gridView.cellHeight))
-
-            Component.onCompleted: {
-                positioner.updateResolution();
-                positioner.loadAndApplyPositionsConfig();
-            }
         }
 
         Folder.ItemViewAdapter {

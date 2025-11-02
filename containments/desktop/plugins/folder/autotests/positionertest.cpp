@@ -19,7 +19,7 @@
 QTEST_MAIN(PositionerTest)
 
 static const QLatin1String desktop(QLatin1String("Desktop"));
-static const QLatin1String defaultResolution(QLatin1String("1920x1080"));
+static constexpr QSize defaultResolution(1920, 1080);
 
 void PositionerTest::initTestCase()
 {
@@ -52,12 +52,12 @@ void PositionerTest::init()
     m_folderModel->setScreen(0);
     m_folderModel->setUsedByContainment(true);
     m_folderModel->componentComplete();
+    m_folderModel->setScreenResolution(defaultResolution);
     m_positioner = new Positioner(this);
     m_positioner->setApplet(m_applet);
     m_positioner->setEnabled(true);
     m_positioner->setFolderModel(m_folderModel);
     m_positioner->setPerStripe(3);
-    m_positioner->m_resolution = defaultResolution;
 
     m_folderModel->setUrl(m_folderDir->path() + QDir::separator() + desktop);
     QSignalSpy s(m_folderModel, &FolderModel::listingCompleted);
@@ -344,7 +344,10 @@ void PositionerTest::tst_changeResolution()
     m_positioner->loadAndApplyPositionsConfig();
     auto baselineConfig = getCurrentConfig();
 
-    changeResolution(QStringLiteral("800x600"));
+    constexpr QSize newResolution(800, 600);
+    changeResolution(newResolution);
+    QCOMPARE(m_positioner->m_resolution, QStringLiteral("%1x%2").arg(newResolution.width()).arg(newResolution.height()));
+
     // Configuration should not be saved after resolution change, so its identical to baseline
     QCOMPARE(baselineConfig, getCurrentConfig());
 }
@@ -472,12 +475,10 @@ void PositionerTest::ensureFolderModelReady()
     }
 }
 
-void PositionerTest::changeResolution(QString resolution)
+void PositionerTest::changeResolution(const QSize &resolution)
 {
-    // Identical to updateResolution, except we input the resolution manually
-    // instead of reading a screen
-    m_positioner->m_resolution = resolution;
-    m_positioner->loadAndApplyPositionsConfig();
+    m_folderModel->setScreenResolution(resolution);
+    m_positioner->setPerStripe(m_positioner->m_perStripe);
 }
 
 #include "moc_positionertest.cpp"

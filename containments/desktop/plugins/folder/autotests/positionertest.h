@@ -54,7 +54,7 @@ private:
     void ensureFolderModelReady();
     QJsonDocument getCurrentConfig();
     QHash<QString, Pos> getPositionHash(QStringList positions);
-    void changeResolution(QString resolution);
+    void changeResolution(const QSize &resolution);
 
     QString m_currentActivity;
     Positioner *m_positioner;

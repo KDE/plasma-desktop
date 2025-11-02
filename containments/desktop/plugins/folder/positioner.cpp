@@ -47,6 +47,8 @@ void Positioner::setEnabled(bool enabled)
         endResetModel();
 
         Q_EMIT enabledChanged();
+
+        setPerStripe(m_perStripe);
     }
 }
 
@@ -68,7 +70,6 @@ void Positioner::setFolderModel(QObject *folderModel)
 
         if (m_folderModel) {
             connectSignals(m_folderModel);
-            updateResolution();
             if (m_enabled) {
                 initMaps();
             }
@@ -77,6 +78,8 @@ void Positioner::setFolderModel(QObject *folderModel)
         endResetModel();
 
         Q_EMIT folderModelChanged();
+
+        setPerStripe(m_perStripe);
     }
 }
 
@@ -89,16 +92,33 @@ void Positioner::setPerStripe(int perStripe)
 {
     // Make sure we have screen in use before perStripe update
     // to make sure we update correct positions
-    if (m_perStripe != perStripe && perStripe > 0 && screenInUse()) {
-        m_perStripe = perStripe;
-        Q_EMIT perStripeChanged();
-        if (m_enabled) {
-            if (configurationHasResolution(m_resolution)) {
-                loadAndApplyPositionsConfig(SkipPerStripeUpdate);
+    if (perStripe > 0 && screenInUse()) {
+        const bool perStripeUpdated = m_perStripe != perStripe;
+        const bool resolutionUpdated = updateResolution();
+        const int prevPerStripe = m_perStripe;
+        if (perStripeUpdated) {
+            m_perStripe = perStripe;
+            Q_EMIT perStripeChanged();
+        }
+        if (m_enabled && (perStripeUpdated || resolutionUpdated)) {
+            const bool existingResolution = configurationHasResolution(m_resolution);
+            if (existingResolution) {
+                loadAndApplyPositionsConfig();
+            } else if (m_applet && m_positions.isEmpty()) {
+                // We don't have any positions yet, restore them from last used resolution
+                const QString lastResolution = m_applet->config().group(QStringLiteral("General")).readEntry(QStringLiteral("lastResolution"));
+                if (configurationHasResolution(lastResolution)) {
+                    loadAndApplyPositionsConfig(lastResolution);
+                }
             }
             // If no longer deferring positions, update them
             if (!m_deferApplyPositions) {
-                updatePositionsList();
+                // If it's a new resolution, preserve icon positions by using previous "perStripe" (if available)
+                updatePositionsList(existingResolution ? 0 : prevPerStripe);
+                if (!existingResolution) {
+                    convertFolderModelData();
+                    savePositionsConfig();
+                }
             }
         }
     }
@@ -458,11 +478,16 @@ int Positioner::move(const QVariantList &moves, bool save)
     return toIndices.constFirst();
 }
 
-void Positioner::updatePositionsList()
+void Positioner::updatePositionsList(int perStripeForPositions)
 {
     QStringList positions;
 
     if (m_enabled && screenInUse() && m_perStripe > 0) {
+        if (perStripeForPositions <= 0)
+            perStripeForPositions = m_perStripe;
+
+        positions.reserve(2 + m_proxyToSource.size() * 3);
+
         positions.append(QString::number(1 + ((rowCount() - 1) / m_perStripe)));
         positions.append(QString::number(m_perStripe));
 
@@ -478,12 +503,10 @@ void Positioner::updatePositionsList()
             }
 
             positions.append(name);
-            positions.append(QString::number(qMax(0, it.key() / m_perStripe)));
-            positions.append(QString::number(qMax(0, it.key() % m_perStripe)));
+            positions.append(QString::number(qMax(0, it.key() / perStripeForPositions)));
+            positions.append(QString::number(qMax(0, it.key() % perStripeForPositions)));
         }
-        if (positions != m_positions) {
-            m_positions = positions;
-        }
+        m_positions = std::move(positions);
     }
 }
 
@@ -505,7 +528,7 @@ void Positioner::sourceStatusChanged()
         m_deferMovePositions.clear();
         // Load the configuration to make sure any of the moved items that are in the configuration
         // are in their correct place after deferred movements
-        loadAndApplyPositionsConfig(SkipPerStripeUpdate);
+        loadAndApplyPositionsConfig();
     }
 }
 
@@ -964,22 +987,14 @@ bool Positioner::screenInUse() const
     return m_folderModel->screenUsed();
 }
 
-void Positioner::loadAndApplyPositionsConfig(const LoadAndApplyFlags flags)
+void Positioner::loadAndApplyPositionsConfig(const QString &resolution)
 {
-    if (m_applet && m_enabled && screenInUse() && !m_resolution.isEmpty()) {
+    const QString &resolutionToLoad = resolution.isEmpty() ? m_resolution : resolution;
+    if (m_applet && m_enabled && screenInUse() && !resolutionToLoad.isEmpty()) {
         // The old configuration has commas with escape characters, so clean up those from the config
         auto confdata = loadConfigData();
         const QJsonDocument doc = QJsonDocument::fromJson(confdata.toUtf8());
-        QStringList positions = doc[m_resolution].toVariant().toStringList();
-
-        m_positions = positions;
-        // In case our row and m_perStripe values are out of sync, update them here
-        // The can get out of sync due to FolderView.qml and positioner.cpp both handling them
-        // If we have the first two values of positions, we have the perStripe value
-        if (flags != LoadAndApplyFlags::SkipPerStripeUpdate && m_positions.length() >= 2) {
-            m_perStripe = m_positions[1].toInt();
-            Q_EMIT perStripeChanged();
-        }
+        m_positions = doc[resolutionToLoad].toVariant().toStringList();
 
         convertFolderModelData();
     }
@@ -987,7 +1002,7 @@ void Positioner::loadAndApplyPositionsConfig(const LoadAndApplyFlags flags)
 
 void Positioner::savePositionsConfig()
 {
-    if (m_applet && m_enabled && screenInUse() && m_resolution != QStringLiteral("0x0")) {
+    if (m_applet && m_enabled && screenInUse() && !m_resolution.isEmpty()) {
         auto confdata = loadConfigData();
         auto doc = QJsonDocument::fromJson(confdata.toUtf8());
         QJsonObject root;
@@ -1001,27 +1016,35 @@ void Positioner::savePositionsConfig()
         root.insert(m_resolution, QJsonArray::fromStringList(m_positions));
 
         const QByteArray data = QJsonDocument(root).toJson(QJsonDocument::Compact);
-        m_applet->config().group(QStringLiteral("General")).writeEntry(QStringLiteral("positions"), data);
+        auto config = m_applet->config().group(QStringLiteral("General"));
+        config.writeEntry(QStringLiteral("lastResolution"), m_resolution);
+        config.writeEntry(QStringLiteral("positions"), data);
         Q_EMIT m_applet->configNeedsSaving();
     }
 }
 
-void Positioner::updateResolution()
+bool Positioner::updateResolution()
 {
-    if (m_folderModel) {
-        QString resolution = QStringLiteral("%1x%2").arg(QString::number(floor(m_folderModel->screenGeometry().width())),
-                                                         QString::number(floor(m_folderModel->screenGeometry().height())));
-        if (!screenInUse() || !m_enabled) {
-            m_resolution = QStringLiteral("0x0");
-        }
-        if (m_resolution != resolution) {
-            m_resolution = resolution;
-        }
+    const QString prevResolution = m_resolution;
+    QSize size;
+    if (m_enabled && screenInUse()) {
+        Q_ASSERT(m_folderModel);
+        const QSizeF sizeF = m_folderModel->screenGeometry().size();
+        size = QSize(std::floor(sizeF.width()), std::floor(sizeF.height()));
     }
+    if (size.isEmpty()) {
+        m_resolution.clear();
+    } else {
+        m_resolution = QStringLiteral("%1x%2").arg(size.width()).arg(size.height());
+    }
+    return m_resolution != prevResolution;
 }
 
 bool Positioner::configurationHasResolution(const QString &resolution) const
 {
+    if (resolution.isEmpty()) {
+        return false;
+    }
     auto confdata = loadConfigData();
     if (confdata.isEmpty()) {
         return false;
@@ -1056,20 +1079,6 @@ void Positioner::onListingCompleted()
     }
 }
 
-void Positioner::slotScreenGeometryChanged()
-{
-    if (!screenInUse()) {
-        return;
-    }
-    updateResolution();
-    if (configurationHasResolution(m_resolution)) {
-        loadAndApplyPositionsConfig();
-    }
-    if (!m_deferApplyPositions) {
-        updatePositionsList();
-    }
-}
-
 void Positioner::connectSignals(FolderModel *model)
 {
     connect(model, &QAbstractItemModel::dataChanged, this, &Positioner::sourceDataChanged, Qt::UniqueConnection);
@@ -1084,7 +1093,6 @@ void Positioner::connectSignals(FolderModel *model)
     connect(m_folderModel, &FolderModel::urlChanged, this, &Positioner::reset, Qt::UniqueConnection);
     connect(m_folderModel, &FolderModel::statusChanged, this, &Positioner::sourceStatusChanged, Qt::UniqueConnection);
     connect(m_folderModel, &FolderModel::itemRenamed, this, &Positioner::onItemRenamed, Qt::UniqueConnection);
-    connect(m_folderModel, &FolderModel::screenGeometryChanged, this, &Positioner::slotScreenGeometryChanged, Qt::UniqueConnection);
     connect(m_folderModel, &FolderModel::listingCompleted, this, &Positioner::onListingCompleted, Qt::UniqueConnection);
 }
 
@@ -1102,7 +1110,6 @@ void Positioner::disconnectSignals(FolderModel *model)
     disconnect(m_folderModel, &FolderModel::urlChanged, this, &Positioner::reset);
     disconnect(m_folderModel, &FolderModel::statusChanged, this, &Positioner::sourceStatusChanged);
     disconnect(m_folderModel, &FolderModel::itemRenamed, this, &Positioner::onItemRenamed);
-    disconnect(m_folderModel, &FolderModel::screenGeometryChanged, this, &Positioner::slotScreenGeometryChanged);
     disconnect(m_folderModel, &FolderModel::listingCompleted, this, &Positioner::onListingCompleted);
 }
 
