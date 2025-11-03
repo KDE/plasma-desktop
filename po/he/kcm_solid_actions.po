@@ -14,14 +14,14 @@ msgstr ""
 "Project-Id-Version: kcm_solid_actions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-05 05:54+0000\n"
-"PO-Revision-Date: 2025-06-21 15:47+0300\n"
+"PO-Revision-Date: 2025-11-01 16:31+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -37,7 +37,7 @@ msgstr "kde-l10n-he@kde.org,ttv200@gmail.com"
 #: ActionEditor.cpp:60
 #, kde-format
 msgid "Editing Action '%1'"
-msgstr "עורך פעולה '%1'"
+msgstr "הפעולה ‚%1’ נערכת"
 
 #: ActionEditor.cpp:162
 #, kde-format
@@ -57,19 +57,19 @@ msgstr "פעולה שגויה"
 #: ActionEditor.ui:17
 #, kde-format
 msgid "Edit Parameter"
-msgstr "ערוך ארגומנט"
+msgstr "עריכת משתנה"
 
 #. i18n: ectx: property (text), widget (QLabel, LblParameterType)
 #: ActionEditor.ui:43
 #, kde-format
 msgid "Parameter type:"
-msgstr "סוג הארגומנט:"
+msgstr "סוג המשתנה:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
 #: ActionEditor.ui:51
 #, kde-format
 msgid "Property Match"
-msgstr "התאמה של מאפיין"
+msgstr "התאמה של מאפיינים"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
 #: ActionEditor.ui:56
@@ -81,7 +81,7 @@ msgstr "צומת של תוכן"
 #: ActionEditor.ui:61
 #, kde-format
 msgid "Content Disjunction"
-msgstr "פיצל של תוכן"
+msgstr "פיצול תוכן"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, CbParameterType)
 #: ActionEditor.ui:66
@@ -117,25 +117,25 @@ msgstr "מכיל"
 #: ActionEditor.ui:208
 #, kde-format
 msgid "Reset Parameter"
-msgstr "אפס ארגומנט"
+msgstr "איפוס משתנה"
 
 #. i18n: ectx: property (text), widget (QPushButton, PbParameterSave)
 #: ActionEditor.ui:215
 #, kde-format
 msgid "Save Parameter Changes"
-msgstr "שמור את שינוי הארגומנט"
+msgstr "שמירת השינויים למשתנה"
 
 #. i18n: ectx: property (toolTip), widget (KIconButton, IbActionIcon)
 #: ActionEditor.ui:247
 #, kde-format
 msgid "Action icon, click to change it"
-msgstr "סמל פעולה, הקלק כדי לשנותו"
+msgstr "סמל פעולה, לחיצה תאפשר לשנות אותו"
 
 #. i18n: ectx: property (toolTip), widget (QLineEdit, LeActionFriendlyName)
 #: ActionEditor.ui:254
 #, kde-format
 msgid "Action name"
-msgstr "שם פעולה:"
+msgstr "שם פעולה"
 
 #. i18n: ectx: property (text), widget (QLabel, TlActionCommand)
 #: ActionEditor.ui:271
@@ -155,7 +155,7 @@ msgid ""
 "%i: The identifier of the device"
 msgstr ""
 "הפקודה שתפעיל את הפעולה\n"
-"הפעולה הזאת יכולה להכיל את אחד מההרחבות הבאת:\n"
+"הפעולה הזאת יכולה להכיל את אחת מההרחבות הבאת:\n"
 "\n"
 "%f: מיקום החיבור של ההתקן - התקני גישה בלבד\n"
 "%d: המיקום של ה־device node - רק התקני block\n"
@@ -177,7 +177,7 @@ msgstr "שם הפעולה:"
 #: AddAction.ui:26
 #, kde-format
 msgid "Enter the name for your new action"
-msgstr "הכנס שם לפעולה החדשה"
+msgstr "נא למלא שם לפעולה החדשה"
 
 #: DesktopFileGenerator.cpp:25
 #, kde-format
@@ -196,12 +196,12 @@ msgstr ""
 #: DesktopFileGenerator.cpp:29
 #, kde-format
 msgid "(c) 2009, Ben Cooksley"
-msgstr "(c) 2009, Ben Cooksley"
+msgstr "(c) 2009, בן קוקסלי"
 
 #: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
 #, kde-format
 msgid "Ben Cooksley"
-msgstr "Ben Cooksley"
+msgstr "בן קוקסלי"
 
 #: DesktopFileGenerator.cpp:30 SolidActions.cpp:38
 #, kde-format
@@ -211,17 +211,17 @@ msgstr "מתחזק"
 #: PredicateItem.cpp:119
 #, kde-format
 msgid "The device must be of the type %1"
-msgstr "ההתקן חייב להיות מהסוג %1"
+msgstr "ההתקן חייב להיות מסוג %1"
 
 #: PredicateItem.cpp:122
 #, kde-format
 msgid "Any of the contained properties must match"
-msgstr "כל אחד סוג של מאפיינים מוכלים חייבים להתאים"
+msgstr "כל אחד מהמאפיינים המוכלים חייב להיות תואם"
 
 #: PredicateItem.cpp:125
 #, kde-format
 msgid "All of the contained properties must match"
-msgstr "כל סוג של מאפיינים מוכלים חייבים להתאים"
+msgstr "כל המאפיינים המוכלים חייבים להיות תואמים"
 
 #: PredicateItem.cpp:134
 #, kde-format
@@ -236,7 +236,7 @@ msgstr "המאפיין %1 של התקן %2 חייב להכיל %2"
 #: SolidActions.cpp:33
 #, kde-format
 msgid "Solid Device Actions Editor"
-msgstr "עורך פעולות התקנים של ּSolid"
+msgstr "עורך פעולות התקנים של Solid"
 
 #: SolidActions.cpp:35
 #, kde-format
@@ -283,13 +283,13 @@ msgstr "הסר"
 #: SolidActions.ui:29
 #, kde-format
 msgid "Edit…"
-msgstr ""
+msgstr "עריכה…"
 
 #. i18n: ectx: property (text), widget (QPushButton, PbAddAction)
 #: SolidActions.ui:36
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "הוספה…"
 
 #~ msgid "Edit..."
 #~ msgstr "ערוך..."

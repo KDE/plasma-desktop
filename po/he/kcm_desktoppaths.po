@@ -13,19 +13,20 @@
 # Diego Iastrubni <elcuco@kde.org>, 2004.
 # Diego Iastrubni <elcuco@kde.org>, 2005, 2007, 2008, 2009, 2012.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2025 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoppaths\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-01 00:48+0000\n"
-"PO-Revision-Date: 2017-05-16 06:52-0400\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Hebrew <kde-i18n-he@kde.org>\n"
+"PO-Revision-Date: 2025-11-01 16:27+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Lokalize 25.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: desktoppathssettings.cpp:197
@@ -54,20 +55,19 @@ msgid "Pictures"
 msgstr "תמונות"
 
 #: desktoppathssettings.cpp:272
-#, fuzzy, kde-format
-#| msgid "Movies path:"
+#, kde-format
 msgid "Videos"
-msgstr "נתיב עבור סרט&ים"
+msgstr "סרטונים"
 
 #: desktoppathssettings.cpp:287
 #, kde-format
 msgid "Public"
-msgstr ""
+msgstr "ציבורי"
 
 #: desktoppathssettings.cpp:302
 #, kde-format
 msgid "Templates"
-msgstr ""
+msgstr "תבניות"
 
 #: globalpaths.cpp:32
 #, kde-format
@@ -80,13 +80,13 @@ msgstr ""
 "<h1>נתיבים</h1>\n"
 "מודול זה מאפשר לך לבחור את המיקומים במערכת הקבצים בהם יאוחסנו הקבצים שעל "
 "שולחן העבודה שלך.\n"
-"השתמש ב\"מה זה?\" (Shift+F1) כדי לקבל עזרה על אפשרויות ספציפיות."
+"אפשר להשתמש ב„מה זה?” (Shift+F1) כדי לקבל עזרה על אפשרויות מסוימות."
 
 #. i18n: ectx: property (text), widget (QLabel, label_1)
 #: globalpaths.ui:17
 #, kde-format
 msgid "Desktop path:"
-msgstr "נתיב לשולח&ן העבודה:"
+msgstr "נתיב שולח&ן העבודה:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_desktopLocation)
 #: globalpaths.ui:24
@@ -96,104 +96,98 @@ msgid ""
 "change the location of this folder if you want to, and the contents will "
 "move automatically to the new location as well."
 msgstr ""
-"תיקייה זו מכילה את כל הקבצים שאתה רואה על שולחן העבודה שלך. באפשרותך לשנות "
-"את מיקומה של תיקייה זו אם רצונך בכך, ואז גם תועבר תכולתה אוטומטית למיקום "
-"החדש."
+"התיקייה מכילה את כל הקבצים שמופיעים על שולחן העבודה שלך. אפשר לשנות את "
+"מיקומה של התיקייה הזאת כראות עיניך, ואז גם תועבר תכולתה אוטומטית למקום החדש."
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: globalpaths.ui:34
 #, kde-format
 msgid "Documents path:"
-msgstr "נתיב עבור מסמכי&ם:"
+msgstr "נתיב מסמכי&ם:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_documentsLocation)
 #: globalpaths.ui:41
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save documents from or to."
-msgstr "תיקייה זו תשמש כברירת מחדל לטעינה ולשמירה של מסמכים."
+msgstr "התיקייה הזאת תשמש כברירת מחדל לטעינה ולשמירה של מסמכים ממנה או אליה."
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: globalpaths.ui:51
 #, kde-format
 msgid "Downloads path:"
-msgstr "נתיב עבור הורד&ות:"
+msgstr "נתיב הורד&ות:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_downloadsLocation)
 #: globalpaths.ui:58
 #, kde-format
 msgid "This folder will be used by default to save your downloaded items."
-msgstr "תיקייה זו תשמש כברירת מחדל לטעינה ולשמירה של קבצים שהורדו."
+msgstr "התיקייה הזאת תשמש כברירת מחדל לטעינה ולשמירה של קבצים שהורדו."
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: globalpaths.ui:68
-#, fuzzy, kde-format
-#| msgid "Movies path:"
+#, kde-format
 msgid "Videos path:"
-msgstr "נתיב עבור סרט&ים"
+msgstr "נתיב סרטונים:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_videosLocation)
 #: globalpaths.ui:75
 #, kde-format
 msgid "This folder will be used by default to load or save movies from or to."
-msgstr "תיקייה זו תשמש כברירת מחדל לטעינה ולשמירה של סרטים."
+msgstr "התיקייה הזאת תשמש כברירת מחדל לטעינה ולשמירה של סרטים ממנה או אליה."
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: globalpaths.ui:85
 #, kde-format
 msgid "Pictures path:"
-msgstr "נתיב עבור תמונ&ות:"
+msgstr "נתיב תמונ&ות:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_picturesLocation)
 #: globalpaths.ui:92
 #, kde-format
 msgid ""
 "This folder will be used by default to load or save pictures from or to."
-msgstr "תיקייה זו תשמש כברירת מחדל לטעינה ולשמירה של תמונות."
+msgstr "התיקייה הזאת תשמש כברירת מחדל לטעינה ולשמירה של תמונות ממנה או אליה."
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: globalpaths.ui:102
 #, kde-format
 msgid "Music path:"
-msgstr "נתיב עבור מוז&יקה:"
+msgstr "נתיב מוז&יקה:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_musicLocation)
 #: globalpaths.ui:109
 #, kde-format
 msgid "This folder will be used by default to load or save music from or to."
-msgstr "תיקייה זו תשמש כברירת מחדל לטעינה ולשמירה של מוזיקה."
+msgstr "התיקייה הזאת תשמש כברירת מחדל לטעינה ולשמירה של מוזיקה ממנה או אליה."
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: globalpaths.ui:119
-#, fuzzy, kde-format
-#| msgid "Music path:"
+#, kde-format
 msgid "Public path:"
-msgstr "נתיב עבור מוז&יקה:"
+msgstr "נתיב ציבורי:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_publicLocation)
 #: globalpaths.ui:126
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save public shares from or to."
-msgstr "תיקייה זו תשמש כברירת מחדל לטעינה ולשמירה של תמונות."
+msgstr ""
+"התיקייה הזאת תשמש כברירת מחדל לטעינה או לשמירה של שיתופים ציבוריים ממנה או "
+"אליה."
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: globalpaths.ui:136
-#, fuzzy, kde-format
-#| msgid "Pictures path:"
+#, kde-format
 msgid "Templates path:"
-msgstr "נתיב עבור תמונ&ות:"
+msgstr "נתיב תבניות:"
 
 #. i18n: ectx: property (whatsThis), widget (KUrlRequester, kcfg_templatesLocation)
 #: globalpaths.ui:143
-#, fuzzy, kde-format
-#| msgid ""
-#| "This folder will be used by default to load or save pictures from or to."
+#, kde-format
 msgid ""
 "This folder will be used by default to load or save templates from or to."
-msgstr "תיקייה זו תשמש כברירת מחדל לטעינה ולשמירה של תמונות."
+msgstr "התיקייה הזאת תשמש כברירת המחדל לטעינת או שמירת תבניות ממנה או אליה."
 
 #~ msgid "Autostart path:"
 #~ msgstr "נתיב להפעלה או&טומטית:"
