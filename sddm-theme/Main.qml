@@ -148,6 +148,9 @@ Item {
             }
             height: root.height + Kirigami.Units.gridUnit * 3
 
+            // this isn't implicit, otherwise items still get processed for the scenegraph
+            visible: opacity > 0
+
             // If true (depends on the style and environment variables), hover events are always accepted
             // and propagation stopped. This means the parent MouseArea won't get them and the UI won't be shown.
             // Disable capturing those events while the UI is hidden to avoid that, while still passing events otherwise.
