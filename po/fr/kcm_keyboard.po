@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-31 00:44+0000\n"
-"PO-Revision-Date: 2025-03-24 09:48+0100\n"
+"PO-Revision-Date: 2025-11-01 13:21+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.08.2\n"
 "X-Text-Markup: kde4\n"
 
 #, kde-format
@@ -135,12 +135,10 @@ msgid "Reset selected options for this group"
 msgstr "Réinitialiser les options sélectionnées pour ce groupe"
 
 #: ui/LayoutDialog.qml:22
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Layout"
+#, kde-format
 msgctxt "@title:window"
 msgid "Set Layout"
-msgstr "Disposition"
+msgstr "Définir la mise en forme"
 
 #: ui/LayoutDialog.qml:22
 #, kde-format
@@ -422,40 +420,30 @@ msgid "or"
 msgstr "ou"
 
 #: ui/main_phone.qml:36
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Layout"
+#, kde-format
 msgid "Model & Layout"
-msgstr "Ajouter une disposition"
+msgstr "Modèle et disposition"
 
 #: ui/main_phone.qml:43
-#, fuzzy, kde-format
-#| msgctxt "@title:group"
-#| msgid "Keyboard model:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Keyboard Model"
-msgstr "Modèle de clavier :"
+msgstr "Modèle de clavier"
 
 #: ui/main_phone.qml:72
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Layout"
+#, kde-format
 msgctxt "@option:check"
 msgid "Custom Layout"
-msgstr "Disposition"
+msgstr "Disposition personnalisée"
 
 #: ui/main_phone.qml:96
-#, fuzzy, kde-format
-#| msgctxt "@option:textbox"
-#| msgid "Change layout:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Layout..."
-msgstr "Modifier une disposition :"
+msgstr "Modifier une disposition..."
 
 #: ui/main_phone.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@label:checkbox accessible"
-#| msgid "Key repeat"
+#, kde-format
 msgctxt "@title:group"
 msgid "Key Repeat"
 msgstr "Répétition des touches"
@@ -464,7 +452,7 @@ msgstr "Répétition des touches"
 #, kde-format
 msgctxt "@option:check"
 msgid "Customize Repeat"
-msgstr ""
+msgstr "Personnaliser la répétition"
 
 #: ui/Switching.qml:17
 #, kde-format
