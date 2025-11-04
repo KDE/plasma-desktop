@@ -68,3 +68,5 @@ QHash<int, QByteArray> LayoutSearchModel::roleNames() const
     newRoles.insert(m_searchScoreRole, "searchScore"_ba);
     return newRoles;
 }
+
+#include "moc_layoutsearchmodel.cpp"
