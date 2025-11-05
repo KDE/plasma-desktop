@@ -3,20 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Martin Schlander <mschlander@opensuse.org>, 2008, 2009, 2010, 2011, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2022.
-# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
+# SPDX-FileCopyrightText: 2024, 2025 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-12 00:45+0000\n"
-"PO-Revision-Date: 2024-10-26 12:01+0200\n"
-"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
+"PO-Revision-Date: 2025-11-04 22:01+0100\n"
+"Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: backend.cpp:284
@@ -27,8 +27,8 @@ msgstr ""
 msgctxt "Show all user Places"
 msgid "%1 more Place…"
 msgid_plural "%1 more Places…"
-msgstr[0] "%1 sted mere"
-msgstr[1] "%1 steder mere"
+msgstr[0] "%1 sted mere…"
+msgstr[1] "%1 steder mere…"
 
 #: backend.cpp:368
 #, kde-format
@@ -137,19 +137,19 @@ msgstr "Skjul andre vinduer når musen føres over forhåndsvisninger"
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show an indicator when a task is playing audio"
-msgstr ""
+msgstr "Vis en indikator når en opgave afspiller lyd"
 
 #: package/contents/ui/ConfigAppearance.qml:69
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Mute task when clicking indicator"
-msgstr ""
+msgstr "Gør opgave lydløs når indikatoren klikkes"
 
 #: package/contents/ui/ConfigAppearance.qml:77
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show media and volume controls in tooltip"
-msgstr ""
+msgstr "Vis medie- og lydstyrkekontroller i værktøjstip"
 
 #: package/contents/ui/ConfigAppearance.qml:85
 #, kde-format
@@ -385,7 +385,7 @@ msgstr "Efter aktivitet"
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By horizontal window position"
-msgstr ""
+msgstr "Efter lodret vindueposition"
 
 #: package/contents/ui/ConfigBehavior.qml:163
 #, kde-format
@@ -470,35 +470,29 @@ msgstr "Bringer den til det aktuelle virtuelle skrivebord"
 #: package/contents/ui/ConfigBehavior.qml:205
 #, fuzzy, kde-format
 #| msgctxt ""
-#| "@label for checkbox group, completes sentence like: … from current screen"
-#| msgid "Show only tasks:"
+#| "@label:listbox Part of a sentence: 'Scrolling behavior does nothing/"
+#| "cycles through tasks/cycles through the selected task's windows/adjusts "
+#| "the hovered task’s volume''"
+#| msgid "Scrolling behavior:"
 msgctxt ""
 "@label:listbox Part of a sentence: 'Scrolling behavior does nothing/cycles "
 "through tasks/cycles through the selected task's windows'"
 msgid "Scrolling behavior:"
-msgstr "Vis kun opgaver:"
+msgstr "Opførsel ved rulning:"
 
 #: package/contents/ui/ConfigBehavior.qml:209
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Part of a sentence: 'Middle-clicking any task does "
-#| "nothing'"
-#| msgid "Does nothing"
+#, kde-format
 msgctxt "@item:inlistbox Part of a sentence: 'Scrolling behavior does nothing'"
 msgid "Does nothing"
 msgstr "Gør intet"
 
 #: package/contents/ui/ConfigBehavior.qml:210
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Completes the sentence 'Clicking grouped task cycles "
-#| "through tasks' "
-#| msgid "Cycles through tasks"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through all "
 "tasks'"
 msgid "Cycles through all tasks"
-msgstr "Kør igennem opgaver"
+msgstr "Kør igennem alle opgaver"
 
 #: package/contents/ui/ConfigBehavior.qml:211
 #, fuzzy, kde-format
@@ -777,7 +771,7 @@ msgstr "&Skyg"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
-msgstr ""
+msgstr "&Ingen titellinje og ramme"
 
 #: package/contents/ui/ContextMenu.qml:729
 #, kde-format
@@ -901,6 +895,17 @@ msgstr "Også tilgængelig på %1"
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"
 msgstr "Tilgængelig på %1"
+
+#, fuzzy
+#~| msgctxt ""
+#~| "@item:inlistbox Completes the sentence 'Clicking grouped task cycles "
+#~| "through tasks' "
+#~| msgid "Cycles through tasks"
+#~ msgctxt ""
+#~ "@item:inlistbox Part of a sentence: 'Scrolling behavior adjusts the "
+#~ "hovered task’s volume'"
+#~ msgid "Adjusts the hovered task’s volume"
+#~ msgstr "Kør igennem opgaver"
 
 #, fuzzy
 #~| msgctxt ""
