@@ -123,7 +123,8 @@ private Q_SLOTS:
     void sourceRowsMoved(const QModelIndex &sourceParent, int sourceStart, int sourceEnd, const QModelIndex &destinationParent, int destinationRow);
     void sourceRowsRemoved(const QModelIndex &parent, int first, int last);
     void sourceLayoutChanged(const QList<QPersistentModelIndex> &parents, QAbstractItemModel::LayoutChangeHint hint);
-    void onItemRenamed();
+    void onItemAboutToRename(const QString &filename);
+    void onItemRenamed(const QString &filename, const QString &newFilename);
     void onListingCompleted();
 
 private:
@@ -143,6 +144,7 @@ private:
     QString loadConfigData() const;
     bool positionsEmpty() const;
     void iteratePositions(auto &&callback);
+    qsizetype findUrlInPositions(const QString &filename);
 
     bool m_enabled;
     FolderModel *m_folderModel;
@@ -163,6 +165,8 @@ private:
     QString m_resolution;
 
     Plasma::Applet *m_applet = nullptr;
+
+    QStringList m_toRename;
 
     friend class PositionerTest;
 };

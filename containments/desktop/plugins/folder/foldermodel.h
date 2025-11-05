@@ -288,7 +288,8 @@ Q_SIGNALS:
     void popupMenuAboutToShow(KIO::DropJob *dropJob, QMimeData *mimeData, int x, int y);
     void selectionChanged() const;
     void showHiddenFilesChanged() const;
-    void itemRenamed() const;
+    void itemAboutToRename(const QString &filename) const;
+    void itemRenamed(const QString &filename, const QString &newFilename) const;
     void selectionDone();
     void creatingNewItemsChanged() const;
 
