@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"POT-Creation-Date: 2025-11-05 00:46+0000\n"
 "PO-Revision-Date: 2025-01-25 21:09+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -43,33 +43,33 @@ msgid "List of Applications whose activity history not to save"
 msgstr ""
 "Azon alkalmazások listája, amelyek tevékenységi előzményeit nem kell menteni"
 
-#: kcm_recentFiles.cpp:77
+#: kcm_recentFiles.cpp:74
 #, kde-format
 msgctxt "unlimited number of months"
 msgid "Forever"
 msgstr "Örökre"
 
-#: kcm_recentFiles.cpp:86
+#: kcm_recentFiles.cpp:83
 #, kde-format
 msgid "Forget the last hour"
 msgstr "Az utolsó egy óra elfelejtése"
 
-#: kcm_recentFiles.cpp:87
+#: kcm_recentFiles.cpp:84
 #, kde-format
 msgid "Forget the last two hours"
 msgstr "Az utolsó két óra elfelejtése"
 
-#: kcm_recentFiles.cpp:88
+#: kcm_recentFiles.cpp:85
 #, kde-format
 msgid "Forget a day"
 msgstr "Egy nap elfelejtése"
 
-#: kcm_recentFiles.cpp:89
+#: kcm_recentFiles.cpp:86
 #, kde-format
 msgid "Forget everything"
 msgstr "Minden elfelejtése"
 
-#: kcm_recentFiles.cpp:233
+#: kcm_recentFiles.cpp:221
 #, kde-format
 msgctxt "unit of time. months to keep the history"
 msgid " month"
@@ -77,7 +77,7 @@ msgid_plural " months"
 msgstr[0] " hónapig"
 msgstr[1] " hónapig"
 
-#: kcm_recentFiles.cpp:236
+#: kcm_recentFiles.cpp:224
 #, kde-format
 msgctxt "for in 'keep history for 5 months'"
 msgid "For "

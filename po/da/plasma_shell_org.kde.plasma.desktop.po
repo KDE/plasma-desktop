@@ -2,21 +2,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Martin Schlander <mschlander@opensuse.org>, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2022.
-# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
+# SPDX-FileCopyrightText: 2024, 2025 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-18 00:44+0000\n"
-"PO-Revision-Date: 2024-10-26 11:54+0200\n"
-"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
+"PO-Revision-Date: 2025-11-04 21:59+0100\n"
+"Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:203
 #, kde-format
@@ -102,19 +102,18 @@ msgstr "Åbn hjemmeside %1"
 #, kde-format
 msgctxt "@title:group"
 msgid "Website"
-msgstr ""
+msgstr "Hjemmeside"
 
 #: contents/configuration/AboutPlugin.qml:154
 #, kde-format
 msgctxt "@title:group"
 msgid "Get Help"
-msgstr ""
+msgstr "Få hjælp"
 
 #: contents/configuration/AboutPlugin.qml:162
-#, fuzzy, kde-format
-#| msgid "Report a Bug…"
+#, kde-format
 msgid "Report an issue"
-msgstr "Rapportér en fejl..."
+msgstr "Rapportér en fejl"
 
 #: contents/configuration/AboutPlugin.qml:169
 #, kde-format
@@ -122,17 +121,15 @@ msgid "Copyright"
 msgstr "Ophavsret"
 
 #: contents/configuration/AboutPlugin.qml:188
-#, fuzzy, kde-format
-#| msgid "License:"
+#, kde-format
 msgid "License: %1"
-msgstr "Licens:"
+msgstr "Licens: %1"
 
 #: contents/configuration/AboutPlugin.qml:194
-#, fuzzy, kde-format
-#| msgid "License:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Read License"
-msgstr "Licens:"
+msgstr "Læs licens"
 
 #: contents/configuration/AboutPlugin.qml:208
 #, kde-format
@@ -160,15 +157,12 @@ msgid "Apply Settings"
 msgstr "Anvend indstillinger"
 
 #: contents/configuration/AppletConfiguration.qml:369
-#, fuzzy, kde-format
-#| msgid ""
-#| "The settings of the current module have changed. Do you want to apply the "
-#| "changes or discard them?"
+#, kde-format
 msgid ""
 "The current page has unsaved changes. Apply the changes or discard them?"
 msgstr ""
-"Indstillingerne i det aktuelle modul er blevet ændret. Vil du anvende "
-"ændringerne eller kassere dem?"
+"Den nuværende side har ikke-gemte ændringer. Anvend ændringerne eller "
+"forkast dem?"
 
 #: contents/configuration/AppletConfiguration.qml:401
 #, kde-format
@@ -296,7 +290,7 @@ msgstr "Tastaturgenveje"
 #, kde-format
 msgctxt "@action:button set keyboard shortcut for"
 msgid "Activate widget as if clicked:"
-msgstr ""
+msgstr "Aktivér widget, som hvis blev klikket:"
 
 #: contents/configuration/ContainmentConfiguration.qml:27
 #, kde-format
@@ -324,21 +318,19 @@ msgctxt ""
 "@action:button label of button to open a menu that lets you add widgets or "
 "spacers"
 msgid "Add New"
-msgstr ""
+msgstr "Tilføj ny"
 
 #: contents/configuration/PanelConfiguration.qml:127
-#, fuzzy, kde-format
-#| msgid "Add Spacer"
+#, kde-format
 msgctxt "@action:menu add a spacer"
 msgid "Spacer"
-msgstr "Tilføj afstandsstykke"
+msgstr "Afstandsstykke"
 
 #: contents/configuration/PanelConfiguration.qml:134
-#, fuzzy, kde-format
-#| msgid "Widgets"
+#, kde-format
 msgctxt "@action:menu add a widget"
 msgid "Widgets…"
-msgstr "Widgets"
+msgstr "Widgets…"
 
 #: contents/configuration/PanelConfiguration.qml:163
 #, kde-format
@@ -435,8 +427,7 @@ msgid "Dodge windows"
 msgstr "Undvig vinduer"
 
 #: contents/configuration/PanelConfiguration.qml:391
-#, fuzzy, kde-format
-#| msgid "Windows Go Below"
+#, kde-format
 msgid "Windows go below"
 msgstr "Vinduer går under"
 
@@ -461,31 +452,28 @@ msgid "Translucent"
 msgstr "Gennemsigtig"
 
 #: contents/configuration/PanelConfiguration.qml:501
-#, fuzzy, kde-format
-#| msgid "Floating"
+#, kde-format
 msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
 msgstr "Svævende"
 
 #: contents/configuration/PanelConfiguration.qml:517
-#, fuzzy, kde-format
-#| msgid "%1 (disabled)"
+#, kde-format
 msgctxt "@item:inlistbox Option to disable floating panels or applets"
 msgid "Disabled"
-msgstr "%1 (deaktiveret)"
+msgstr "Deaktiveret"
 
 #: contents/configuration/PanelConfiguration.qml:518
 #, kde-format
 msgctxt "@item:inlistbox Option to make only panel applets always float"
 msgid "Applets only"
-msgstr ""
+msgstr "Kun applets"
 
 #: contents/configuration/PanelConfiguration.qml:519
-#, fuzzy, kde-format
-#| msgid "Panel and Desktop Management"
+#, kde-format
 msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
-msgstr "Håndtering af panel og skrivebord"
+msgstr "Panel og applets"
 
 #: contents/configuration/PanelConfiguration.qml:562
 #, kde-format
@@ -526,17 +514,16 @@ msgid "Remove this panel; this action is undo-able"
 msgstr "Fjern dette panel; dette kan ikke fortrydes"
 
 #: contents/configuration/PanelConfiguration.qml:729
-#, fuzzy, kde-format
-#| msgid "Remove Panel"
+#, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
-msgstr "Fjern panel"
+msgstr "Klon panel"
 
 #: contents/configuration/PanelConfiguration.qml:733
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
-msgstr ""
+msgstr "Opret et nyt panel med samme indstillinger og applets"
 
 #: contents/configuration/PanelConfiguration.qml:742
 #, kde-format
@@ -598,10 +585,9 @@ msgstr ""
 "Dobbeltklik for at nulstille."
 
 #: contents/configuration/ShellContainmentConfiguration.qml:19
-#, fuzzy, kde-format
-#| msgid "Panel and Desktop Management"
+#, kde-format
 msgid "Manage Panels and Desktops"
-msgstr "Håndtering af panel og skrivebord"
+msgstr "Administrér paneler og skriveborde"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 #, kde-format
@@ -650,7 +636,7 @@ msgstr "Alternative widgets"
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Add %1"
-msgstr ""
+msgstr "Tilføj %1"
 
 #: contents/explorer/AppletDelegate.qml:47
 #, kde-format
@@ -664,43 +650,41 @@ msgid "New!"
 msgstr "Ny!"
 
 #: contents/explorer/AppletDelegate.qml:204
-#, fuzzy, kde-format
-#| msgid "No widgets available"
+#, kde-format
 msgctxt "@info:other accessible for badge showing applet count"
 msgid "%1 widget active"
 msgid_plural "%1 widgets active"
-msgstr[0] "Ingen widgets tilgængelige"
-msgstr[1] "Ingen widgets tilgængelige"
+msgstr[0] "%1 widget aktiv"
+msgstr[1] "%1 widgets aktive"
 
 #: contents/explorer/AppletDelegate.qml:205
 #, kde-format
 msgctxt " @info:other accessible for badge indicating new widget"
 msgid "Recently installed"
-msgstr ""
+msgstr "Installeret for nyligt"
 
 #: contents/explorer/AppletDelegate.qml:217
-#, fuzzy, kde-format
-#| msgid "Uninstall"
+#, kde-format
 msgid "Cancel Uninstallation"
-msgstr "Afinstallér"
+msgstr "Annullér afinstallation"
 
 #: contents/explorer/AppletDelegate.qml:218
 #, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Mark for Uninstallation"
-msgstr ""
+msgstr "Markér til afinstallation"
 
 #: contents/explorer/AppletDelegate.qml:222
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Cancel pending uninstallation for widget %1"
-msgstr ""
+msgstr "Annullér ventende afinstallation for widgetten %1"
 
 #: contents/explorer/AppletDelegate.qml:223
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Mark widget %1 for uninstallation. Requires confirmation"
-msgstr ""
+msgstr "Markér widgetten %1 til afinstallation. Kræver bekræftelse"
 
 #: contents/explorer/AppletDelegate.qml:265
 #, kde-format
@@ -714,8 +698,8 @@ msgctxt ""
 "name"
 msgid "Remove running instance of widget %2"
 msgid_plural "Remove all %1 running instances of widget %2"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Fjern kørende instans af widgetten %2"
+msgstr[1] "Fjern alle %1 kørende instanser af widgetten %2"
 
 #: contents/explorer/WidgetExplorer.qml:140
 #: contents/explorer/WidgetExplorer.qml:223
@@ -744,14 +728,13 @@ msgstr "Hent nye widgets…"
 #, kde-format
 msgctxt "@action:button accessible for close button"
 msgid "Close Widget Explorer"
-msgstr ""
+msgstr "Luk widgetudforsker"
 
 #: contents/explorer/WidgetExplorer.qml:208
-#, fuzzy, kde-format
-#| msgid "Lock Widgets"
+#, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Search through widgets"
-msgstr "Lås widgets"
+msgstr "Søg gennem widgets"
 
 #: contents/explorer/WidgetExplorer.qml:237
 #, kde-format
@@ -759,13 +742,12 @@ msgid "Categories"
 msgstr "Kategorier"
 
 #: contents/explorer/WidgetExplorer.qml:259
-#, fuzzy, kde-format
-#| msgid "Uninstall widget"
+#, kde-format
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Uninstall (%1 Widget)"
 msgid_plural "Uninstall (%1 Widgets)"
-msgstr[0] "Afinstallér widget"
-msgstr[1] "Afinstallér widget"
+msgstr[0] "Afinstallér (%1 widget)"
+msgstr[1] "Afinstallér (%1 widgets)"
 
 #: contents/explorer/WidgetExplorer.qml:388
 #, kde-format
@@ -778,62 +760,49 @@ msgid "No widgets available"
 msgstr "Ingen widgets tilgængelige"
 
 #: contents/lockscreen/config.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@title: group"
 msgid "Show clock:"
 msgstr "Vis ur"
 
 #: contents/lockscreen/config.qml:25
-#, fuzzy, kde-format
-#| msgid "Always visible"
+#, kde-format
 msgctxt "@option:radio Clock always shown"
 msgid "Always"
-msgstr "Altid synlig"
+msgstr "Altid"
 
 #: contents/lockscreen/config.qml:26
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Always show clock"
-msgstr "Vis ur"
+msgstr "Vis altid ur"
 
 #: contents/lockscreen/config.qml:41
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio Clock shown only while unlock prompt is visible"
 msgid "On unlocking prompt"
-msgstr "Vis under oplåsningsprompt"
+msgstr "Ved oplåsningsprompt"
 
 #: contents/lockscreen/config.qml:42
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show clock only on unlocking prompt"
-msgstr "Vis under oplåsningsprompt"
+msgstr "Vis kun ur ved oplåsningsprompt"
 
 #: contents/lockscreen/config.qml:55
 #, kde-format
 msgctxt "@option:radio Clock never shown"
 msgid "Never"
-msgstr ""
+msgstr "Aldrig"
 
 #: contents/lockscreen/config.qml:56
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show clock"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Never show clock"
-msgstr "Vis ur"
+msgstr "Vis aldrig ur"
 
 #: contents/lockscreen/config.qml:71
-#, fuzzy, kde-format
-#| msgctxt "@title: group"
-#| msgid "Media controls:"
+#, kde-format
 msgctxt "@title: group UI controls for playback of multimedia content"
 msgid "Media controls:"
 msgstr "Mediekontrol:"
@@ -855,22 +824,19 @@ msgid "Caps Lock is on"
 msgstr "Caps lock er slået til"
 
 #: contents/lockscreen/LockScreenUi.qml:295
-#, fuzzy, kde-format
-#| msgid "Sleep"
+#, kde-format
 msgid "Slee&p"
-msgstr "Slumre"
+msgstr "Slu&mre"
 
 #: contents/lockscreen/LockScreenUi.qml:301
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "&Hibernate"
-msgstr "Dvale"
+msgstr "&Dvale"
 
 #: contents/lockscreen/LockScreenUi.qml:307
-#, fuzzy, kde-format
-#| msgid "Switch User"
+#, kde-format
 msgid "Switch &User"
-msgstr "Skift bruger"
+msgstr "Skift &bruger"
 
 #: contents/lockscreen/LockScreenUi.qml:368
 #, kde-format

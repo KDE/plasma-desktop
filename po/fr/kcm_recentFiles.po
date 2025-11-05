@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-17 00:41+0000\n"
+"POT-Creation-Date: 2025-11-05 00:46+0000\n"
 "PO-Revision-Date: 2024-10-18 08:22+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -48,33 +48,33 @@ msgid "List of Applications whose activity history not to save"
 msgstr ""
 "Liste des applications dont l'historique d'activité n'est pas enregistré"
 
-#: kcm_recentFiles.cpp:77
+#: kcm_recentFiles.cpp:74
 #, kde-format
 msgctxt "unlimited number of months"
 msgid "Forever"
 msgstr "Illimité"
 
-#: kcm_recentFiles.cpp:86
+#: kcm_recentFiles.cpp:83
 #, kde-format
 msgid "Forget the last hour"
 msgstr "Effacer la dernière heure"
 
-#: kcm_recentFiles.cpp:87
+#: kcm_recentFiles.cpp:84
 #, kde-format
 msgid "Forget the last two hours"
 msgstr "Effacer les deux dernières heures"
 
-#: kcm_recentFiles.cpp:88
+#: kcm_recentFiles.cpp:85
 #, kde-format
 msgid "Forget a day"
 msgstr "Effacer la dernière journée"
 
-#: kcm_recentFiles.cpp:89
+#: kcm_recentFiles.cpp:86
 #, kde-format
 msgid "Forget everything"
 msgstr "Effacer tout"
 
-#: kcm_recentFiles.cpp:233
+#: kcm_recentFiles.cpp:221
 #, kde-format
 msgctxt "unit of time. months to keep the history"
 msgid " month"
@@ -82,7 +82,7 @@ msgid_plural " months"
 msgstr[0] " mois"
 msgstr[1] " mois"
 
-#: kcm_recentFiles.cpp:236
+#: kcm_recentFiles.cpp:224
 #, kde-format
 msgctxt "for in 'keep history for 5 months'"
 msgid "For "
