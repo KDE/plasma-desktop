@@ -141,6 +141,8 @@ private:
     void disconnectSignals(FolderModel *model);
     bool configurationHasResolution(const QString &resolution) const;
     QString loadConfigData() const;
+    bool positionsEmpty() const;
+    void iteratePositions(auto &&callback);
 
     bool m_enabled;
     FolderModel *m_folderModel;

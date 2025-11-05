@@ -14,6 +14,20 @@
 #include <QJsonObject>
 #include <QTimer>
 
+namespace PositionsConstants
+{
+// Stripes and items per stripe
+constexpr qsizetype headerSize = 2;
+
+// filename, stripe, pos
+constexpr qsizetype bucketSize = 3;
+
+// Offsets in bucket
+constexpr qsizetype filenameOffset = 0;
+constexpr qsizetype stripeOffset = 1;
+constexpr qsizetype posOffset = 2;
+}
+
 Positioner::Positioner(QObject *parent)
     : QAbstractItemModel(parent)
     , m_enabled(false)
@@ -486,7 +500,7 @@ void Positioner::updatePositionsList(int perStripeForPositions)
         if (perStripeForPositions <= 0)
             perStripeForPositions = m_perStripe;
 
-        positions.reserve(2 + m_proxyToSource.size() * 3);
+        positions.reserve(PositionsConstants::headerSize + m_proxyToSource.size() * PositionsConstants::bucketSize);
 
         positions.append(QString::number(1 + ((rowCount() - 1) / m_perStripe)));
         positions.append(QString::number(m_perStripe));
@@ -829,8 +843,8 @@ int Positioner::firstFreeRow() const
 
 void Positioner::convertFolderModelData()
 {
-    // if no screen or position count is 2 or smaller, we have no positions to convert
-    if (!screenInUse() && m_positions.count() <= 2) {
+    // If no screen or no positions, we have nothing to convert
+    if (!screenInUse() || positionsEmpty()) {
         return;
     }
     // We were called while the source model is listing. Defer applying positions
@@ -840,13 +854,6 @@ void Positioner::convertFolderModelData()
 
         return;
     }
-    // Ignore the first two items, which are for stripes and items per stripe
-    const QStringList positions = m_positions.mid(2);
-
-    // Make sure the items per row have 3 items: (filename, row, stripe-pos)
-    if (positions.size() % 3 != 0) {
-        return;
-    }
 
     // Do not allow saving during this operation
     beginResetModel();
@@ -854,70 +861,69 @@ void Positioner::convertFolderModelData()
     m_proxyToSource.clear();
     m_sourceToProxy.clear();
 
-    QHash<QString, int> sourceIndices;
+    const int folderModelRowCount = m_folderModel->rowCount();
 
-    for (int i = 0; i < m_folderModel->rowCount(); ++i) {
+    QHash<QString, int> sourceIndices;
+    sourceIndices.reserve(folderModelRowCount);
+
+    for (int i = 0; i < folderModelRowCount; ++i) {
         sourceIndices.insert(m_folderModel->data(m_folderModel->index(i, 0), FolderModel::UrlRole).toString(), i);
     }
 
-    QString name;
-    int stripe = -1;
-    int pos = -1;
-    int sourceIndex = -1;
-    int index = -1;
-    bool ok = false;
-    int offset = 0;
-
     // Restore positions for items that still fit.
-    for (int i = 0; i < positions.size() / 3; ++i) {
-        offset = i * 3;
-        pos = positions[offset + 2].toInt(&ok);
+    iteratePositions([&](qsizetype offset) {
+        bool ok = false;
+
+        const int pos = m_positions.at(offset + PositionsConstants::posOffset).toInt(&ok);
         if (!ok) {
-            return;
+            return true;
         }
 
         if (pos <= m_perStripe) {
-            name = positions[offset];
-            stripe = positions[offset + 1].toInt(&ok);
+            const QString name = m_positions.at(offset);
+            const int stripe = m_positions.at(offset + PositionsConstants::stripeOffset).toInt(&ok);
             if (!ok) {
-                return;
+                return true;
             }
 
             if (!sourceIndices.contains(name)) {
-                continue;
-            } else {
-                sourceIndex = sourceIndices.value(name);
+                return true;
             }
 
-            index = (stripe * m_perStripe) + pos;
+            const int sourceIndex = sourceIndices.value(name);
+
+            const int index = (stripe * m_perStripe) + pos;
 
             if (m_proxyToSource.contains(index)) {
-                continue;
+                return true;
             }
 
             updateMaps(index, sourceIndex);
             sourceIndices.remove(name);
         }
-    }
+
+        return true;
+    });
 
     // Find new positions for items that didn't fit.
-    for (int i = 0; i < positions.size() / 3; ++i) {
-        offset = i * 3;
-        pos = positions[offset + 2].toInt(&ok);
+    iteratePositions([&](qsizetype offset) {
+        bool ok = false;
+
+        const int pos = m_positions.at(offset + PositionsConstants::posOffset).toInt(&ok);
         if (!ok) {
-            return;
+            return true;
         }
 
         if (pos > m_perStripe) {
-            name = positions[offset];
+            const QString name = m_positions.at(offset);
 
             if (!sourceIndices.contains(name)) {
-                continue;
-            } else {
-                sourceIndex = sourceIndices.take(name);
+                return true;
             }
 
-            index = firstFreeRow();
+            const int sourceIndex = sourceIndices.take(name);
+
+            int index = firstFreeRow();
 
             if (index == -1) {
                 index = lastRow() + 1;
@@ -925,7 +931,9 @@ void Positioner::convertFolderModelData()
 
             updateMaps(index, sourceIndex);
         }
-    }
+
+        return true;
+    });
 
     QHashIterator<QString, int> it(sourceIndices);
 
@@ -933,7 +941,7 @@ void Positioner::convertFolderModelData()
     while (it.hasNext()) {
         it.next();
 
-        index = firstFreeRow();
+        int index = firstFreeRow();
 
         if (index == -1) {
             index = lastRow() + 1;
@@ -1061,6 +1069,24 @@ QString Positioner::loadConfigData() const
             m_applet->config().group(QStringLiteral("General")).readEntry(QStringLiteral("positions")).replace(QStringLiteral("\\,"), QStringLiteral(","));
     }
     return confdata;
+}
+
+bool Positioner::positionsEmpty() const
+{
+    // Make sure we have at least one position and the items per row have 3 items: filename, row, stripe-pos
+    return m_positions.size() <= PositionsConstants::headerSize || (m_positions.size() - PositionsConstants::headerSize) % PositionsConstants::bucketSize != 0;
+}
+
+void Positioner::iteratePositions(auto &&callback)
+{
+    // This function requires that "positionsEmpty()" is already checked
+    Q_ASSERT(!positionsEmpty());
+
+    for (qsizetype i = PositionsConstants::headerSize; i < m_positions.size(); i += PositionsConstants::bucketSize) {
+        if (!callback(i + PositionsConstants::filenameOffset)) {
+            break;
+        }
+    }
 }
 
 void Positioner::onItemRenamed()
