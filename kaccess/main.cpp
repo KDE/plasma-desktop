@@ -19,7 +19,7 @@
 
 int main(int argc, char *argv[])
 {
-    qunsetenv("SESSION_MANAGER");
+    QCoreApplication::setAttribute(Qt::AA_DisableSessionManager);
 
     // this application is currently only relevant on X, force to run under X
     // note if someone does port this we still need to run kaccess under X for xwayland apps
