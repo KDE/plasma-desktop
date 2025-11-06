@@ -17,14 +17,8 @@ int main(int argc, char *argv[])
     ibus_init();
     // we don't need im in this.
     qputenv("QT_IM_MODULE", "compose");
+    QCoreApplication::setAttribute(Qt::AA_DisableSessionManager);
     App app(argc, argv);
-
-    auto disableSessionManagement = [](QSessionManager &sm) {
-        sm.setRestartHint(QSessionManager::RestartNever);
-    };
-
-    QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
-    QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
     return app.exec();
 }

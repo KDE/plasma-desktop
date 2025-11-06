@@ -32,6 +32,7 @@
 
 int main(int argc, char **argv)
 {
+    QCoreApplication::setAttribute(Qt::AA_DisableSessionManager);
     QApplication app(argc, argv);
     app.setWindowIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-emoticons")));
     KCrash::initialize();
@@ -49,12 +50,6 @@ int main(int argc, char **argv)
     //     about.setProductName("");
     about.setProgramLogo(app.windowIcon());
     KAboutData::setApplicationData(about);
-
-    auto disableSessionManagement = [](QSessionManager &sm) {
-        sm.setRestartHint(QSessionManager::RestartNever);
-    };
-    QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
-    QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
     KDBusService::StartupOptions startup = {};
     {
