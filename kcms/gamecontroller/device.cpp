@@ -38,9 +38,9 @@ static QStringList kControllerTypeNames = {
     i18n("Amazon Luna"),
     i18n("Google Stadia"),
     i18n("NVidia Shield"),
-    i18n("Switch Left Joycon"),
-    i18n("Switch Right Joycon"),
-    i18n("Switch Paired Joycon"),
+    i18n("Switch Left Joy-Con"),
+    i18n("Switch Right Joy-Con"),
+    i18n("Switch Paired Joy-Con"),
 };
 
 // NOTE: Keep in sync with SDL_GameControllerButton from SDL_gamecontroller.h
