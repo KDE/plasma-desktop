@@ -3,20 +3,21 @@
 #
 # Elkana Bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2025 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_search\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-11 00:46+0000\n"
-"PO-Revision-Date: 2017-05-16 11:55-0400\n"
-"Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2025-11-08 22:06+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: plasmasearch/kcm.cpp:87
 #, kde-format
@@ -28,66 +29,66 @@ msgstr "תוספים זמינים"
 msgid ""
 "Enable or disable plugins (used in KRunner, Application Launcher, and the "
 "Overview effect)"
-msgstr ""
+msgstr "הפעלה או השבתה של תוספים (לשימוש ב־KRunner, משגר יישומים ואפקט הסקירה)"
 
 #: plasmasearch/package/contents/ui/main.qml:49
 #, kde-format
 msgid "Configure KRunner…"
-msgstr ""
+msgstr "הגדרת KRunner…"
 
 #: plasmasearch/package/contents/ui/main.qml:53
 #, kde-format
 msgid "Get New Plugins…"
-msgstr ""
+msgstr "הורדת תוספים חדשים…"
 
 #: plugininstaller/AbstractJob.cpp:18
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "Failed to run install script in terminal <message>%1</message>"
-msgstr ""
+msgstr "הרצת סקריפט ההתקנה <message>%1</message> במסוף נכשלה"
 
 #: plugininstaller/AbstractJob.cpp:29
 #, kde-format
 msgctxt "@info"
 msgid "Installation executed successfully, you may now close this window"
-msgstr ""
+msgstr "הרצת ההתקנה הצליחה, ניתן לסגור את החלון הזה כעת"
 
 #: plugininstaller/AbstractJob.cpp:31
 #, kde-format
 msgctxt "@info"
 msgid "Uninstallation executed successfully, you may now close this window"
-msgstr ""
+msgstr "הרצת ההסרה הצליחה, ניתן לסגור את החלון הזה כעת"
 
 #: plugininstaller/main.cpp:31
 #, kde-format
 msgctxt "@info"
 msgid "KRunner plugin installation failed"
-msgstr ""
+msgstr "התקנת תוסף KRunner נכשלה"
 
 #: plugininstaller/main.cpp:43
 #, kde-format
 msgctxt "@info:shell"
 msgid "Command to execute: install or uninstall."
-msgstr ""
+msgstr "פקודה להרצה: התקנה או הסרה."
 
 #: plugininstaller/main.cpp:44
 #, kde-format
 msgctxt "@info:shell"
 msgid "Path to archive."
-msgstr ""
+msgstr "נתיב לארכיון."
 
 #: plugininstaller/main.cpp:84
 #, kde-format
 msgctxt "@info"
 msgid "No PackageKit support"
-msgstr ""
+msgstr "אין תמיכה ב־PackageKit"
 
 #: plugininstaller/PackageKitConfirmationDialog.h:23
 #: plugininstaller/ScriptConfirmationDialog.h:25
 #, kde-format
 msgctxt "@title:window"
 msgid "Confirm Installation"
-msgstr ""
+msgstr "אישור התקנה"
 
 #: plugininstaller/PackageKitConfirmationDialog.h:26
 #, kde-kuit-format
@@ -95,26 +96,26 @@ msgctxt "@info"
 msgid ""
 "You are about to install a binary package. You should only install these "
 "from a trusted author/packager."
-msgstr ""
+msgstr "פעולה זו תתקין חבילה בינרית. יש להתקין אותן ממקורות מהימנים בלבד."
 
 #: plugininstaller/PackageKitConfirmationDialog.h:33
 #: plugininstaller/ScriptConfirmationDialog.h:79
 #, kde-format
 msgctxt "@action:button"
 msgid "Accept Risk And Continue"
-msgstr ""
+msgstr "קבלת הסיכון והמשך"
 
 #: plugininstaller/PackageKitConfirmationDialog.h:37
 #, kde-format
 msgctxt "@action:button"
 msgid "View File"
-msgstr ""
+msgstr "הצגת קובץ"
 
 #: plugininstaller/PackageKitJob.cpp:24
 #, kde-format
 msgctxt "@info"
 msgid "The mime type %1 is not supported by the packagekit backend"
-msgstr ""
+msgstr "סוג ה־MIME‏ %1 לא נתמך על ידי מנגנון PackageKit"
 
 #: plugininstaller/ScriptConfirmationDialog.h:32
 #, kde-kuit-format
@@ -124,6 +125,9 @@ msgid ""
 "author. You can try to uninstall the plugin manually.<nl/>If you do not feel "
 "capable or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"תוסף זה לא מספק סקריפט הסרה. נא ליצור קשר עם היוצר. אפשר לנסות להסיר את "
+"התוסף ידנית.<nl/>אם זאת לא פעולה שנוח לך מספיק לבצע, כדאי ללחוץ על "
+"<interface>ביטול</interface> כעת."
 
 #: plugininstaller/ScriptConfirmationDialog.h:37
 #, kde-kuit-format
@@ -134,6 +138,9 @@ msgid ""
 "the README for instructions from the author.<nl/>If you do not feel capable "
 "or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"תוסף זה לא מספק סקריפט הסרה. נא ליצור קשר עם היוצר. אפשר לנסות להסיר את "
+"התוסף ידנית. נא לעיין ב־README לקבלת הנחיות ישירות מהיוצר.<nl/>אם זאת לא "
+"פעולה שנוח לך מספיק לבצע, כדאי ללחוץ על <interface>ביטול</interface> כעת."
 
 #: plugininstaller/ScriptConfirmationDialog.h:43
 #, kde-kuit-format
@@ -143,6 +150,9 @@ msgid ""
 "author. You can try to install the plugin manually.<nl/>If you do not feel "
 "capable or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"תוסף זה לא מספק סקריפט התקנה. נא ליצור קשר עם היוצר. אפשר לנסות להתקין את "
+"התוסף ידנית.<nl/>אם זאת לא פעולה שנוח לך מספיק לבצע, כדאי ללחוץ על "
+"<interface>ביטול</interface> כעת."
 
 #: plugininstaller/ScriptConfirmationDialog.h:48
 #, kde-kuit-format
@@ -153,6 +163,9 @@ msgid ""
 "the README for instructions from the author.<nl/>If you do not feel capable "
 "or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"תוסף זה לא מספק סקריפט התקנה. נא ליצור קשר עם היוצר. אפשר לנסות להתקין את "
+"התוסף ידנית. נא לעיין ב־README לקבלת הנחיות ישירות מהיוצר.<nl/>אם זאת לא "
+"פעולה שנוח לך מספיק לבצע, כדאי ללחוץ על <interface>ביטול</interface> כעת."
 
 #: plugininstaller/ScriptConfirmationDialog.h:54
 #, kde-kuit-format
@@ -163,6 +176,9 @@ msgid ""
 "read the script's source code.<nl/>If you do not feel capable or comfortable "
 "with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"תוסף זה משתמש בסקריפט לטובת ההתקנה שיכול להוות סכנת אבטחת מידע. נא לחקור את "
+"כל תוכן התוסף בטרם ההתקנה או לפחות לקרוא את קוד המקור של הסקריפט.<nl/>אם זאת "
+"לא פעולה שנוח לך מספיק לבצע, כדאי ללחוץ על <interface>ביטול</interface> כעת."
 
 #: plugininstaller/ScriptConfirmationDialog.h:60
 #, kde-kuit-format
@@ -173,48 +189,52 @@ msgid ""
 "read the README file and the script's source code.<nl/>If you do not feel "
 "capable or comfortable with this, click <interface>Cancel</interface>  now."
 msgstr ""
+"תוסף זה משתמש בסקריפט לטובת ההתקנה שיכול להוות סכנת אבטחת מידע. נא לחקור את "
+"כל תוכן התוסף בטרם ההתקנה או לפחות לקרוא את קובץ ה־README ואת קוד המקור של "
+"הסקריפט.<nl/>אם זאת לא פעולה שנוח לך מספיק לבצע, כדאי ללחוץ על "
+"<interface>ביטול</interface> כעת."
 
 #: plugininstaller/ScriptConfirmationDialog.h:75
 #, kde-format
 msgctxt "@action:button"
 msgid "Mark entry as uninstalled"
-msgstr ""
+msgstr "סימון רשומה כהוסרה"
 
 #: plugininstaller/ScriptConfirmationDialog.h:77
 #, kde-format
 msgctxt "@action:button"
 msgid "Mark entry as installed"
-msgstr ""
+msgstr "סימון רשומה כמותקנת"
 
 #: plugininstaller/ScriptConfirmationDialog.h:85
 #, kde-format
 msgctxt "@action:button"
 msgid "View Script"
-msgstr ""
+msgstr "הצגת סקריפט"
 
 #: plugininstaller/ScriptConfirmationDialog.h:91
 #, kde-format
 msgctxt "@action:button"
 msgid "View Source Directory"
-msgstr ""
+msgstr "הצגת תיקיית המקור"
 
 #: plugininstaller/ScriptConfirmationDialog.h:102
 #, kde-format
 msgctxt "@action:button"
 msgid "View %1"
-msgstr ""
+msgstr "הצגת %1"
 
 #: plugininstaller/ZypperRPMJob.cpp:30
 #, kde-format
 msgctxt "@info"
 msgid "Could not resolve package name of %1"
-msgstr ""
+msgstr "לא ניתן לפתור את שם החבילה של %1"
 
 #: plugininstaller/ZypperRPMJob.cpp:37
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Failed to run install command: <message>%1</message>"
-msgstr ""
+msgstr "הפעלת פקודת ההתקנה נכשלה: <message>%1</message>"
 
 #, fuzzy
 #~| msgid "Clear History"

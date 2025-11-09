@@ -1,0 +1,50 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# SPDX-FileCopyrightText: 2025 Yaron Shahrabani <sh.yaron@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-12-19 00:48+0000\n"
+"PO-Revision-Date: 2025-11-08 21:51+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 25.08.2\n"
+
+#: kcmtouchscreen.cpp:44
+#, kde-format
+msgid "Automatic"
+msgstr "אוטומטי"
+
+#: kcmtouchscreen.cpp:50
+#, kde-format
+msgctxt "model - (x,y widthxheight)"
+msgid "%1 - (%2,%3 %4×%5)"
+msgstr "%1 - (%2,%3 %4×%5)"
+
+#: package/contents/ui/main.qml:28
+#, kde-format
+msgid "No touchscreens found"
+msgstr "לא נמצאו מסכי מגע"
+
+#: package/contents/ui/main.qml:44
+#, kde-format
+msgctxt "@label:listbox The device we are configuring"
+msgid "Device:"
+msgstr "התקן:"
+
+#: package/contents/ui/main.qml:57
+#, kde-format
+msgid "Enabled:"
+msgstr "פעיל:"
+
+#: package/contents/ui/main.qml:65
+#, kde-format
+msgid "Target display:"
+msgstr "תצוגת יעד:"

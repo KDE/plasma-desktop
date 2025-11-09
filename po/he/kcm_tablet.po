@@ -1,0 +1,148 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# SPDX-FileCopyrightText: 2025 Yaron Shahrabani <sh.yaron@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-12-19 00:48+0000\n"
+"PO-Revision-Date: 2025-11-08 21:53+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 25.08.2\n"
+
+#: kcmtablet.cpp:32
+#, kde-format
+msgid "Primary (default)"
+msgstr "עיקרי (ברירת מחדל)"
+
+#: kcmtablet.cpp:33
+#, kde-format
+msgid "Portrait"
+msgstr "לאורך"
+
+#: kcmtablet.cpp:34
+#, kde-format
+msgid "Landscape"
+msgstr "לרוחב"
+
+#: kcmtablet.cpp:35
+#, kde-format
+msgid "Inverted Portrait"
+msgstr "לאורך הפוך"
+
+#: kcmtablet.cpp:36
+#, kde-format
+msgid "Inverted Landscape"
+msgstr "לרוחב הפוך"
+
+#: kcmtablet.cpp:86
+#, kde-format
+msgid "Follow the active screen"
+msgstr "כמו המסך הפעיל"
+
+#: kcmtablet.cpp:94
+#, kde-format
+msgctxt "model - (x,y widthxheight)"
+msgid "%1 - (%2,%3 %4×%5)"
+msgstr "%1 - (%2,%3 %4×%5)"
+
+#: kcmtablet.cpp:137
+#, kde-format
+msgid "Fit to Output"
+msgstr "התאמה לפלט"
+
+#: kcmtablet.cpp:138
+#, kde-format
+msgid "Fit Output in tablet"
+msgstr "התאמה לפלט בלוח הציור"
+
+#: kcmtablet.cpp:139
+#, kde-format
+msgid "Custom size"
+msgstr "גודל מותאם"
+
+#: package/contents/ui/main.qml:31
+#, kde-format
+msgid "No drawing tablets found."
+msgstr "לא נמצאו לוחות ציור."
+
+#: package/contents/ui/main.qml:39
+#, kde-format
+msgctxt "@label:listbox The device we are configuring"
+msgid "Device:"
+msgstr "התקן:"
+
+#: package/contents/ui/main.qml:77
+#, kde-format
+msgid "Target display:"
+msgstr "תצוגת יעד:"
+
+#: package/contents/ui/main.qml:96
+#, kde-format
+msgid "Orientation:"
+msgstr "כיוון:"
+
+#: package/contents/ui/main.qml:108
+#, kde-format
+msgid "Left-handed mode:"
+msgstr "מצב לשמאליים:"
+
+#: package/contents/ui/main.qml:118
+#, kde-format
+msgid "Area:"
+msgstr "אזור:"
+
+#: package/contents/ui/main.qml:206
+#, kde-format
+msgid "Resize the tablet area"
+msgstr "שינוי גודל אזור הלוח"
+
+#: package/contents/ui/main.qml:230
+#, kde-format
+msgctxt "@option:check"
+msgid "Lock aspect ratio"
+msgstr "נעילת יחס גובה רוחב"
+
+#: package/contents/ui/main.qml:238
+#, kde-format
+msgctxt "tablet area position - size"
+msgid "%1,%2 - %3×%4"
+msgstr "%1,%2 - %3×%4"
+
+#: package/contents/ui/main.qml:246
+#, kde-format
+msgid "Tool Button 1"
+msgstr "כפתור כלי 1"
+
+#: package/contents/ui/main.qml:247
+#, kde-format
+msgid "Tool Button 2"
+msgstr "כפתור כלי 2"
+
+#: package/contents/ui/main.qml:248
+#, kde-format
+msgid "Tool Button 3"
+msgstr "כפתור כלי 3"
+
+#: package/contents/ui/main.qml:291
+#, kde-format
+msgctxt "@label:listbox The pad we are configuring"
+msgid "Pad:"
+msgstr "לוח:"
+
+#: package/contents/ui/main.qml:302
+#, kde-format
+msgid "None"
+msgstr "ללא"
+
+#: package/contents/ui/main.qml:324
+#, kde-format
+msgid "Button %1:"
+msgstr "כפתור %1:"
