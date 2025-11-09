@@ -114,7 +114,7 @@ Item {
         acceptedButtons: Qt.RightButton
 
         onPressed: mouse => {
-            if (item.hasActionList) {
+            if (item.hasActionList || favoriteId !== null) {
                 item.openActionMenu(mouseArea, mouse.x, mouse.y);
             }
         }
@@ -259,7 +259,7 @@ Item {
     }
 
     Keys.onPressed: event => {
-        if (event.key === Qt.Key_Menu && item.hasActionList) {
+        if (event.key === Qt.Key_Menu && (item.hasActionList || model.favoriteId !== null)) {
             event.accepted = true;
             item.openActionMenu(mouseArea);
         } else if ((event.key === Qt.Key_Enter || event.key === Qt.Key_Return) && !item.hasChildren) {
