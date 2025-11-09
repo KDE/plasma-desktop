@@ -185,7 +185,21 @@ Item {
                             }
                         }
 
-                        main.GridView.view.hoveredItem = main;
+                        Qt.callLater(() => {
+                            // Workaround for Qt Bug: https://bugreports.qt.io/browse/QTBUG-117444
+                            // In some cases the signal order is reversed:
+                            // - first it's delivered to the new object with "true" value
+                            // - next it's delivered to the old object with "false" value
+                            // In this case when the signal is emitted with "false" (to the old object),
+                            // it's also delivered to the "FolderView" which sets the "hoveredItem" to
+                            // "null" right after we set it here.
+                            // The solution is to call later and check again to make sure if we still contains
+                            // mouse and next set the "hoveredItem". In this approach the "FolderView" sets the
+                            // old "hoveredItem" to "null" and next we set it to the new item here.
+                            if (containsMouse && !model.blank) {
+                                main.GridView.view.hoveredItem = main;
+                            }
+                        })
                     }
                 }
 
