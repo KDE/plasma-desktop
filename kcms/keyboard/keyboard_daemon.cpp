@@ -160,7 +160,7 @@ void KeyboardDaemon::registerListeners()
     connect(xEventNotifier, &XInputEventNotifier::newKeyboardDevice, this, &KeyboardDaemon::configureKeyboard);
     connect(xEventNotifier, &XEventNotifier::layoutMapChanged, this, &KeyboardDaemon::layoutMapChanged);
     connect(xEventNotifier, &XEventNotifier::layoutChanged, this, &KeyboardDaemon::layoutChangedSlot);
-    connect(keyboardSettingsWatcher.data(), &KConfigWatcher::configChanged, this, &KeyboardDaemon::configureKeyboard);
+    connect(keyboardSettingsWatcher.data(), &KConfigWatcher::configChanged, this, &KeyboardDaemon::configChanged);
     xEventNotifier->start();
 }
 
@@ -173,7 +173,14 @@ void KeyboardDaemon::unregisterListeners()
         disconnect(xEventNotifier, &XEventNotifier::layoutChanged, this, &KeyboardDaemon::layoutChangedSlot);
         disconnect(xEventNotifier, &XEventNotifier::layoutMapChanged, this, &KeyboardDaemon::layoutMapChanged);
     }
-    disconnect(keyboardSettingsWatcher.data(), &KConfigWatcher::configChanged, this, &KeyboardDaemon::configureKeyboard);
+    disconnect(keyboardSettingsWatcher.data(), &KConfigWatcher::configChanged, this, &KeyboardDaemon::configChanged);
+}
+
+void KeyboardDaemon::configChanged(const KConfigGroup &group, const QByteArrayList & /*names*/)
+{
+    if (group.name() == QLatin1String("Layout")) {
+        configureKeyboard();
+    }
 }
 
 void KeyboardDaemon::layoutChangedSlot()
