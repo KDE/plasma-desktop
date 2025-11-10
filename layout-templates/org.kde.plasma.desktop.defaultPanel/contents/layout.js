@@ -4,9 +4,9 @@ var panelScreen = panel.screen
 // No need to set panel.location as ShellCorona::addPanel will automatically pick one available edge
 
 // For an Icons-Only Task Manager on the bottom, *3 is too much, *2 is too little
-// Round down to next highest even number since the Panel size widget only displays
+// Round up to next highest even number since the Panel size widget only displays
 // even numbers
-panel.height = 2 * Math.floor(gridUnit * 2.5 / 2)
+panel.height = 2 * Math.ceil(gridUnit * 2.5 / 2)
 
 // Restrict horizontal panel to a maximum size of a 21:9 monitor
 const maximumAspectRatio = 21/9;
