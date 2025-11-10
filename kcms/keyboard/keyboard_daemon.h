@@ -44,6 +44,7 @@ private Q_SLOTS:
     void layoutChangedSlot();
     void layoutMapChanged();
     bool setLayout(QAction *action);
+    void configChanged(const KConfigGroup &group, const QByteArrayList &names);
 
 public Q_SLOTS:
     Q_SCRIPTABLE void switchToNextLayout();
