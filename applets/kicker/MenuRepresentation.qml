@@ -98,7 +98,7 @@ PlasmaComponents3.ScrollView {
 
             width: (globalFavorites && systemFavorites
                 && (globalFavorites.count + systemFavorites.count)
-                ? Kirigami.Units.iconSizes.medium + margins.left + margins.right : 0)
+                ? Math.max(favoriteApps.implicitWidth, favoriteSystemActions.implicitWidth) + margins.left + margins.right : 0)
             height: parent.height
 
             imagePath: "widgets/frame"
@@ -140,6 +140,7 @@ PlasmaComponents3.ScrollView {
 
                 LayoutItemProxy {
                     target: sideBar.onTopPanel ? favoriteSystemActions : favoriteApps
+                    Layout.topMargin: sideBar.margins.top
                 }
                 KSvg.SvgItem {
                     id: sidebarSeparator
@@ -157,6 +158,7 @@ PlasmaComponents3.ScrollView {
                 }
                 LayoutItemProxy {
                     target: sideBar.onTopPanel ? favoriteApps : favoriteSystemActions
+                    Layout.topMargin: sideBar.margins.bottom
                 }
 
                 SideBarSection {

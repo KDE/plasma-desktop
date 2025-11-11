@@ -17,9 +17,6 @@ import "code/tools.js" as Tools
 PC3.ToolButton {
     id: item
 
-    width: root.width
-    height: root.width
-
     signal actionTriggered(string actionId, var actionArgument)
     signal aboutToShowActionMenu(var actionMenu)
     activeFocusOnTab: false
@@ -27,6 +24,8 @@ PC3.ToolButton {
     text: model.display
     display: PC3.AbstractButton.IconOnly
     icon.source: model.decoration
+    icon.width: Kirigami.Units.iconSizes.medium
+    icon.height: Kirigami.Units.iconSizes.medium
 
 
     property bool hasActionList: ((model.favoriteId !== null)

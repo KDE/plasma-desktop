@@ -12,7 +12,7 @@ import org.kde.kirigami as Kirigami
 DropArea {
     id: root
 
-    implicitWidth: Kirigami.Units.iconSizes.medium + Kirigami.Units.smallSpacing * 2
+    implicitWidth: repeater.count ? repeater.itemAt(0).implicitWidth : (Kirigami.Units.iconSizes.medium + Kirigami.Units.smallSpacing * 2)
     implicitHeight: contentHeight
 
     anchors.horizontalCenter: parent?.horizontalCenter
