@@ -697,6 +697,7 @@ PlasmaExtras.Menu {
 
                 checkable: true
                 checked: menu.visualParent && menu.get(atm.IsShaded)
+                visible: Qt.platform.pluginName !== "wayland"
 
                 text: i18n("&Shade")
                 icon: "window-shade"
