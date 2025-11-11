@@ -41,7 +41,7 @@ RowLayout {
         const collapseOverflowMenuButton = !collapseActionButtons && configuredImplicitWidth_TextBesideIcon > maximumWidth;
 
         // Can't rely on the transient Item::visible property
-        const overflowMenuButtonIsVisible = !allActionsArePrimary || collapseActionButtons;
+        const overflowMenuButtonIsVisible = collapseActionButtons || !allActionsArePrimary;
 
         return {
             allActionsArePrimary,
