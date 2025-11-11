@@ -171,9 +171,6 @@ RowLayout {
         text: [i18n("Session"), i18n("Power"), i18n("More"), i18n("Session and Power")][Plasmoid.configuration.primaryActions]
         // Make it look pressed while the menu is open
         down: contextMenu.status === PlasmaExtras.Menu.Open || pressed
-        PC3.ToolTip.text: text
-        PC3.ToolTip.visible: hovered
-        PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
         Keys.onTabPressed: event => {
             kickoff.firstHeaderItem.forceActiveFocus(Qt.TabFocusReason);
         }
@@ -203,6 +200,10 @@ RowLayout {
         id: overflowMenuButtonIconOnly
         display: PC3.AbstractButton.IconOnly
         visible: root.__layout.overflowMenuButtonIsVisible && root.__layout.collapseOverflowMenuButton
+
+        PC3.ToolTip.text: text
+        PC3.ToolTip.visible: hovered || activeFocus
+        PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
     }
 
     Instantiator {
