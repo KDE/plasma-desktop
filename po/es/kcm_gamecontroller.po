@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_gamecontroller\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-08 00:43+0000\n"
-"PO-Revision-Date: 2025-08-24 00:24+0100\n"
+"PO-Revision-Date: 2025-11-10 02:30+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: axesmodel.cpp:122 hatmodel.cpp:80
 #, kde-format
@@ -138,20 +138,17 @@ msgid "NVidia Shield"
 msgstr "NVidia Shield"
 
 #: device.cpp:41
-#, fuzzy, kde-format
-#| msgid "Switch Left Joycon"
+#, kde-format
 msgid "Switch Left Joy-Con"
 msgstr "Joy-Con izquierdo de Switch"
 
 #: device.cpp:42
-#, fuzzy, kde-format
-#| msgid "Switch Right Joycon"
+#, kde-format
 msgid "Switch Right Joy-Con"
 msgstr "Joy-Con derecho de Switch"
 
 #: device.cpp:43
-#, fuzzy, kde-format
-#| msgid "Switch Paired Joycon"
+#, kde-format
 msgid "Switch Paired Joy-Con"
 msgstr "Joy-Con emparejado de Switch"
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_folderview\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-09 00:44+0000\n"
+"POT-Creation-Date: 2025-11-11 00:44+0000\n"
 "PO-Revision-Date: 2025-03-25 07:27+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -465,7 +465,7 @@ msgstr "Velg mappe"
 msgid "&Refresh Desktop"
 msgstr "&Oppdater skrivebordet"
 
-#: plugins/folder/foldermodel.cpp:532 plugins/folder/foldermodel.cpp:1748
+#: plugins/folder/foldermodel.cpp:532 plugins/folder/foldermodel.cpp:1762
 #, kde-format
 msgid "&Refresh View"
 msgstr "&Oppdater visning"
@@ -488,23 +488,23 @@ msgstr ""
 "<filename>%1</filename> peker til <filename>%2</filename>, men klarte ikke å "
 "finne den. Den kan ha blitt flyttet eller slettet.v"
 
-#: plugins/folder/foldermodel.cpp:1757
+#: plugins/folder/foldermodel.cpp:1771
 #, kde-format
 msgid "&Empty Trash"
 msgstr "&Tøm papirkurven"
 
-#: plugins/folder/foldermodel.cpp:1760
+#: plugins/folder/foldermodel.cpp:1774
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr "Gjenopprett til tidligere adresse"
 
-#: plugins/folder/foldermodel.cpp:1763
+#: plugins/folder/foldermodel.cpp:1777
 #, kde-format
 msgid "&Open"
 msgstr "&Åpne"
 
-#: plugins/folder/foldermodel.cpp:1767
+#: plugins/folder/foldermodel.cpp:1781
 #, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -512,23 +512,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Vis mål"
 
-#: plugins/folder/foldermodel.cpp:1868
+#: plugins/folder/foldermodel.cpp:1882
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr "Fjern papirkurvikonet"
 
-#: plugins/folder/foldermodel.cpp:1871
+#: plugins/folder/foldermodel.cpp:1885
 #, kde-format
 msgid "&Move to Trash"
 msgstr "&Flytt til papirkurven"
 
-#: plugins/folder/foldermodel.cpp:1904
+#: plugins/folder/foldermodel.cpp:1918
 #, kde-format
 msgid "&Paste"
 msgstr "&Lim inn"
 
-#: plugins/folder/foldermodel.cpp:2055
+#: plugins/folder/foldermodel.cpp:2069
 #, kde-format
 msgid "&Properties"
 msgstr "&Egenskaper"

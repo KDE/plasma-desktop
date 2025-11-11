@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-27 00:44+0000\n"
-"PO-Revision-Date: 2025-05-27 22:04+0200\n"
+"PO-Revision-Date: 2025-11-10 22:31+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -164,8 +164,7 @@ msgid "Import…"
 msgstr "Importálás…"
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid "Import Shortcut Scheme"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Import shortcut scheme"
 msgstr "Gyorsbillentyűséma importálása"
@@ -183,8 +182,7 @@ msgid "Export…"
 msgstr "Exportálás…"
 
 #: ui/main.qml:53 ui/main.qml:125
-#, fuzzy, kde-format
-#| msgid "Export Shortcut Scheme"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Export shortcut scheme"
 msgstr "Gyorsbillentyűséma exportálása"
@@ -327,16 +325,13 @@ msgid "Add"
 msgstr "Hozzáadás"
 
 #: ui/main.qml:422
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox accessible"
-#| msgid "Command"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Save command"
-msgstr "Parancs"
+msgstr "Parancs mentése"
 
 #: ui/main.qml:423
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add command"
 msgstr "Parancs hozzáadása"
@@ -417,19 +412,16 @@ msgid "Import"
 msgstr "Importálás"
 
 #: ui/main.qml:547
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible"
-#| msgid "Delete shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Select shortcut scheme file"
-msgstr "Gyorsbillentyű törlése"
+msgstr "Gyorsbillentyűséma-fájl kiválasztása"
 
 #: ui/main.qml:548
-#, fuzzy, kde-format
-#| msgid "Export Shortcut Scheme"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add shortcut scheme"
-msgstr "Gyorsbillentyűséma exportálása"
+msgstr "Gyorsbillentyűséma hozzáadása"
 
 #: ui/ShortcutActionDelegate.qml:34
 #, kde-format
