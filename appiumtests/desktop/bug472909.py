@@ -78,7 +78,10 @@ class Bug472909Test(unittest.TestCase):
         self.assertGreater(len(launcher_shortcut_id), 0)
 
         # Start active indicator window
-        test_window = subprocess.Popen([os.path.join(os.path.dirname(os.path.abspath(__file__)), "bug472909_activewindow.py")], stdout=sys.stderr, stderr=sys.stderr)
+        test_env = os.environ.copy()
+        test_env["GDK_BACKEND"] = "wayland"
+        test_env["GSK_RENDERER"] = "cairo"
+        test_window = subprocess.Popen([os.path.join(os.path.dirname(os.path.abspath(__file__)), "bug472909_activewindow.py")], stdout=sys.stderr, stderr=sys.stderr, env=test_env)
         self.addCleanup(test_window.terminate)
 
         def activate_shortcut() -> None:
