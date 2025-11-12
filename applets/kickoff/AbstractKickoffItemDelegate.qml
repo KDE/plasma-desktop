@@ -205,8 +205,10 @@ T.ItemDelegate {
             }
 
             // forceActiveFocus() touches multiple items, so check for
-            // activeFocus first to be more efficient.
-            if (!root.activeFocus) {
+            // activeFocus first to be more efficient. Keep activeFocus
+            // stable if it's on the searchField to avoid unintentional
+            // activation with Space key presses.
+            if (!root.activeFocus && !kickoff.searchField?.activeFocus) {
                 root.forceActiveFocus(Qt.MouseFocusReason)
             }
             // No need to check currentIndex first because it's
