@@ -417,7 +417,7 @@ PlasmaComponents3.ScrollView {
                     // First column, first entry is initially selected even when focus is on the search
                     // field, as Return will activate it. Down should immediately go to the second entry.
                     if (index === 0 && event.key === Qt.Key_Down) {
-                        runnerColumns.visibleChildren[0].currentIndex = Math.min(index +1, runnerColumns.visibleChildren[0].length - 1)
+                        runnerColumns.visibleChildren[0].currentIndex = Math.min(index + 1, runnerColumns.visibleChildren[0].count - 1)
                     }
                 }
                 event.accepted = true;
