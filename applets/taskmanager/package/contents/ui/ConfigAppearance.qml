@@ -51,7 +51,7 @@ KCMUtils.SimpleKCM {
 
         QQC2.CheckBox {
             id: highlightWindows
-            text: i18nc("@option:check section General", "Hide other windows when hovering over previews")
+            text: showToolTips.checked ? i18nc("@option:check section General", "Hide other windows when hovering over previews") : i18nc("@option:check section General", "Hide other windows when hovering over tooltips")
         }
 
         QQC2.CheckBox {
