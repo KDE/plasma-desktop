@@ -14,14 +14,14 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-25 00:44+0000\n"
-"PO-Revision-Date: 2025-08-16 14:42+0900\n"
+"PO-Revision-Date: 2025-11-13 22:24+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.07.70\n"
+"X-Generator: Lokalize 25.11.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: backend.cpp:284
@@ -470,11 +470,7 @@ msgid "Brings it to the current virtual desktop"
 msgstr "將它移至目前虛擬桌面"
 
 #: package/contents/ui/ConfigBehavior.qml:205
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label:listbox Part of a sentence: 'Scrolling behavior does nothing/"
-#| "cycles through tasks/cycles through the selected task's windows'"
-#| msgid "Scrolling behavior:"
+#, kde-format
 msgctxt ""
 "@label:listbox Part of a sentence: 'Scrolling behavior does nothing/cycles "
 "through tasks/cycles through the selected task's windows/adjusts the hovered "
@@ -505,16 +501,12 @@ msgid "Cycles through the hovered task’s windows"
 msgstr "循環切換游標下工作的視窗"
 
 #: package/contents/ui/ConfigBehavior.qml:212
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through "
-#| "the hovered task's windows'"
-#| msgid "Cycles through the hovered task’s windows"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling behavior adjusts the hovered "
 "task’s volume'"
 msgid "Adjusts the hovered task’s volume"
-msgstr "循環切換游標下工作的視窗"
+msgstr "調整游標下工作的音量"
 
 #: package/contents/ui/ConfigBehavior.qml:220
 #, kde-format

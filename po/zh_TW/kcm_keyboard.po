@@ -15,14 +15,14 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-31 00:44+0000\n"
-"PO-Revision-Date: 2025-03-24 19:52+0900\n"
+"PO-Revision-Date: 2025-11-13 22:23+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.11.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #, kde-format
@@ -129,12 +129,10 @@ msgid "Reset selected options for this group"
 msgstr "為此群組重設所選的選項"
 
 #: ui/LayoutDialog.qml:22
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Layout"
+#, kde-format
 msgctxt "@title:window"
 msgid "Set Layout"
-msgstr "佈局"
+msgstr "設定佈局"
 
 #: ui/LayoutDialog.qml:22
 #, kde-format
@@ -411,40 +409,30 @@ msgid "or"
 msgstr "或"
 
 #: ui/main_phone.qml:36
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Layout"
+#, kde-format
 msgid "Model & Layout"
-msgstr "新增佈局"
+msgstr "型號與佈局"
 
 #: ui/main_phone.qml:43
-#, fuzzy, kde-format
-#| msgctxt "@title:group"
-#| msgid "Keyboard model:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Keyboard Model"
-msgstr "鍵盤型號："
+msgstr "鍵盤型號"
 
 #: ui/main_phone.qml:72
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Layout"
+#, kde-format
 msgctxt "@option:check"
 msgid "Custom Layout"
-msgstr "佈局"
+msgstr "自訂佈局"
 
 #: ui/main_phone.qml:96
-#, fuzzy, kde-format
-#| msgctxt "@option:textbox"
-#| msgid "Change layout:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Layout..."
-msgstr "變更佈局："
+msgstr "變更佈局…"
 
 #: ui/main_phone.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@label:checkbox accessible"
-#| msgid "Key repeat"
+#, kde-format
 msgctxt "@title:group"
 msgid "Key Repeat"
 msgstr "按鍵重複"
@@ -453,7 +441,7 @@ msgstr "按鍵重複"
 #, kde-format
 msgctxt "@option:check"
 msgid "Customize Repeat"
-msgstr ""
+msgstr "自訂按鍵重複"
 
 #: ui/Switching.qml:17
 #, kde-format
