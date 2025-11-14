@@ -429,7 +429,7 @@ PlasmaComponents3.ScrollView {
                 if (!sideBar.visible && !runnerColumns.visible) {
                     return;
                 }
-                if (runnerColumns.visibleChildren[0].length > 1) {
+                if (runnerColumns.visibleChildren[0]?.length > 1) {
                     runnerColumns.visibleChildren[0].currentIndex = -1;
                 }
                 if (sideBar.visible) {
