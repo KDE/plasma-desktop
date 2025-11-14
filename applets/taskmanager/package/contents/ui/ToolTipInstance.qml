@@ -300,14 +300,19 @@ ColumnLayout {
             // shadow can cover up the highlight
             anchors.margins: thumbnailLoader.anchors.margins
 
-            active: !toolTipDelegate.isLauncher && !albumArtImage.visible && KWindowSystem.isPlatformWayland && root.index !== -1
+            active: Plasmoid.configuration.showToolTips
+                && !toolTipDelegate.isLauncher
+                && !albumArtImage.visible
+                && KWindowSystem.isPlatformWayland
+                && root.index !== -1
             asynchronous: true
             //In a loader since we might not have PipeWire available yet (WITH_PIPEWIRE could be undefined in plasma-workspace/libtaskmanager/declarative/taskmanagerplugin.cpp)
             source: "PipeWireThumbnail.qml"
         }
 
         Loader {
-            active: (pipeWireLoader.item?.hasThumbnail ?? false) || (thumbnailLoader.status === Loader.Ready && !root.isMinimized)
+            active: Plasmoid.configuration.showToolTips
+                && ((pipeWireLoader.item?.hasThumbnail ?? false) || (thumbnailLoader.status === Loader.Ready && !root.isMinimized))
             asynchronous: true
             visible: active
             anchors.fill: pipeWireLoader.active ? pipeWireLoader : thumbnailLoader
@@ -323,7 +328,10 @@ ColumnLayout {
         }
 
         Loader {
-            active: albumArtImage.visible && albumArtImage.status === Image.Ready && root.index !== -1 // Avoid loading when the instance is going to be destroyed
+            active: Plasmoid.configuration.showToolTips
+                && albumArtImage.visible
+                && albumArtImage.status === Image.Ready
+                && root.index !== -1 // Avoid loading when the instance is going to be destroyed
             asynchronous: true
             visible: active
             anchors.centerIn: hoverHandler
