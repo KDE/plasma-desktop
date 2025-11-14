@@ -136,6 +136,7 @@ PlasmaComponents3.ScrollView {
                 anchors.top: parent.top
                 anchors.horizontalCenter: parent.horizontalCenter
                 height: Math.max(implicitHeight, parent.height)
+                width: parent.width
 
                 LayoutItemProxy {
                     target: sideBar.onTopPanel ? favoriteSystemActions : favoriteApps
@@ -162,6 +163,7 @@ PlasmaComponents3.ScrollView {
                     id: favoriteApps
 
                     Layout.fillHeight: true
+                    Layout.alignment: Qt.AlignHCenter
 
                     KeyNavigation.up: favoriteSystemActions.bottomSideBarItem
                     KeyNavigation.down: favoriteSystemActions
@@ -178,6 +180,8 @@ PlasmaComponents3.ScrollView {
 
                 SideBarSection {
                     id: favoriteSystemActions
+
+                    Layout.alignment: Qt.AlignHCenter
 
                     model: systemFavorites
                     KeyNavigation.up: favoriteApps.bottomSideBarItem
