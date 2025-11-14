@@ -99,6 +99,9 @@ FocusScope {
                         target: runnerModel
                         function onAnyRunnerFinished () {
                             Qt.callLater( () => { // these come in quickly at the start
+                                if (runnerResultsList.activeFocus) {
+                                    return; // don't interfere if the user has already moved focus
+                                }
                                 if (searchFieldPlaceholder.visible && searchField.focus) {
                                     currentIndex = 0;
                                 } else {
