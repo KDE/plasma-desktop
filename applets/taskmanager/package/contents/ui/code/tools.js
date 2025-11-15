@@ -111,22 +111,21 @@ function activateTask(index, model, modifiers, task, plasmoid, tasks, windowView
         // Option 1 (default): Cycle through this group's tasks
         // ====================================================
         // If the grouped task does not include the currently active task, bring
-        // forward the most recently used task in the group according to the
-        // Stacking order.
+        // forward the most recently used task in the group.
         // Otherwise cycle through all tasks in the group without paying attention
-        // to the stacking order, which otherwise would change with every click
+        // to the last activation time, which otherwise would change with every click
         if (plasmoid.configuration.groupedTaskVisualization === 0) {
             let childTaskList = [];
-            let highestStacking = -1;
+            let lastUsedTimestamp = 0;
             let lastUsedTask = undefined;
 
-            // Build list of child tasks and get stacking order data for them
+            // Build list of child tasks and get the last activation time for them
             for (let i = 0; i < tasks.tasksModel.rowCount(task.modelIndex(index)); ++i) {
                 const childTaskModelIndex = tasks.tasksModel.makeModelIndex(task.index, i);
                 childTaskList.push(childTaskModelIndex);
-                const stacking = tasks.tasksModel.data(childTaskModelIndex, TaskManager.AbstractTasksModel.StackingOrder);
-                if (stacking > highestStacking) {
-                    highestStacking = stacking;
+                const lastActivated = tasks.tasksModel.data(childTaskModelIndex, TaskManager.AbstractTasksModel.LastActivated);
+                if (lastActivated > lastUsedTimestamp) {
+                    lastUsedTimestamp = lastActivated;
                     lastUsedTask = childTaskModelIndex;
                 }
             }
