@@ -718,6 +718,19 @@ PlasmaExtras.Menu {
             }
 
             PlasmaExtras.MenuItem {
+                enabled: menu.visualParent
+
+                checkable: true
+                checked: menu.visualParent && menu.get(atm.IsExcludedFromCapture)
+                visible: Qt.platform.pluginName === "wayland"
+
+                text: i18nc("@action:inmenu", "&Hide from Screencast")
+                icon: "view-private"
+
+                onClicked: tasksModel.requestToggleExcludeFromCapture(menu.modelIndex)
+            }
+
+            PlasmaExtras.MenuItem {
                 separator: true
             }
 
