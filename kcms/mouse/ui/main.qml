@@ -85,7 +85,7 @@ KCMUtils.SimpleKCM {
         QQC2.CheckBox {
             id: deviceEnabled
             Kirigami.FormData.label: i18nd("kcmmouse", "General:")
-            text: i18nd("kcmmouse", "Device enabled")
+            text: i18nd("kcmmouse enable this mouse device", "Enable device")
             visible: !root.backend.isAnonymousInputDevice
             enabled: root.device?.supportsDisableEvents ?? false
             checked: root.device && (!root.device.supportsDisableEvents || root.device.enabled)
@@ -100,7 +100,7 @@ KCMUtils.SimpleKCM {
         QQC2.CheckBox {
             id: leftHanded
             Kirigami.FormData.label: deviceEnabled.visible ? null : deviceEnabled.Kirigami.FormData.label
-            text: i18nd("kcmmouse", "Left-handed mode")
+            text: i18nd("kcmmouse", "Enable left-handed mode")
             enabled: root.device?.supportsLeftHanded ?? false
             checked: enabled && (root.device?.leftHanded ?? false)
 
