@@ -103,7 +103,8 @@ KCM.ScrollViewKCM {
                 QQC2.CheckBox {
                     id: fileSearchEnabled
                     Kirigami.FormData.label: i18nc("@title:group", "File indexing:")
-                    text: i18nc("@action:check", "Enabled")
+                    text: i18nc("@option:check", "Enable")
+                    Accessible.name: i18nc("@option:check", "Enable file indexing")
                     checked: kcm.balooSettings.indexingEnabled
                     onCheckStateChanged: {
                         kcm.balooSettings.indexingEnabled = checked
@@ -265,8 +266,6 @@ KCM.ScrollViewKCM {
                     property bool indexingDisabled: !indexingModel.enableIndex
                     property bool fullContentIndexing: indexingModel.enableIndex
 
-                    flat: true
-
                     model: [
                         i18n("Not indexed"),
                         i18n("Indexed"),
@@ -291,16 +290,18 @@ KCM.ScrollViewKCM {
                 }
 
                 // Delete button to remove this folder entry
-                QQC2.ToolButton {
+                QQC2.Button {
                     enabled: model.deletable
 
                     icon.name: "edit-delete-remove"
+                    text: i18nc("Remove the list item for this filesystem path", "Remove entry")
+                    display: QQC2.AbstractButton.IconOnly
 
                     onClicked: kcm.filteredModel.removeFolder(index)
 
-                    QQC2.ToolTip {
-                        text: i18nc("Remove the list item for this filesystem path", "Remove entry")
-                    }
+                    QQC2.ToolTip.text: text
+                    QQC2.ToolTip.visible: hovered || activeFocus
+                    QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                 }
             }
         }
