@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-18 00:45+0000\n"
 "PO-Revision-Date: 2025-04-04 09:54+0200\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -131,6 +131,14 @@ msgstr "Vis miniversjon av vinduet når pekeren er over en oppgave"
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over previews"
+msgstr "Skjul andre vinduer når pekeren er over miniversjoner av vinduer"
+
+#: package/contents/ui/ConfigAppearance.qml:54
+#, fuzzy, kde-format
+#| msgctxt "@option:check section General"
+#| msgid "Hide other windows when hovering over previews"
+msgctxt "@option:check section General"
+msgid "Hide other windows when hovering over tooltips"
 msgstr "Skjul andre vinduer når pekeren er over miniversjoner av vinduer"
 
 #: package/contents/ui/ConfigAppearance.qml:59

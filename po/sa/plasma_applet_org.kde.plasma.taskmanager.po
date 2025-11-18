@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-18 00:45+0000\n"
 "PO-Revision-Date: 2024-12-20 22:01+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -131,6 +131,14 @@ msgstr "कार्याणां उपरि भ्रमन् लघु �
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over previews"
+msgstr "पूर्वावलोकनानां उपरि भ्रमन् अन्यविण्डोः गोपयन्तु"
+
+#: package/contents/ui/ConfigAppearance.qml:54
+#, fuzzy, kde-format
+#| msgctxt "@option:check section General"
+#| msgid "Hide other windows when hovering over previews"
+msgctxt "@option:check section General"
+msgid "Hide other windows when hovering over tooltips"
 msgstr "पूर्वावलोकनानां उपरि भ्रमन् अन्यविण्डोः गोपयन्तु"
 
 #: package/contents/ui/ConfigAppearance.qml:59

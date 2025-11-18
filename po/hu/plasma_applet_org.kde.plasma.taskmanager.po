@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-18 00:45+0000\n"
 "PO-Revision-Date: 2025-11-10 22:25+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -129,6 +129,14 @@ msgstr "Ablakok előnézetének megjelenítése az ikonokra rámutatáskor"
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over previews"
+msgstr "Egyéb ablakok elrejtése az előnézetekre mutatáskor"
+
+#: package/contents/ui/ConfigAppearance.qml:54
+#, fuzzy, kde-format
+#| msgctxt "@option:check section General"
+#| msgid "Hide other windows when hovering over previews"
+msgctxt "@option:check section General"
+msgid "Hide other windows when hovering over tooltips"
 msgstr "Egyéb ablakok elrejtése az előnézetekre mutatáskor"
 
 #: package/contents/ui/ConfigAppearance.qml:59

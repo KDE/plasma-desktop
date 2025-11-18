@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-18 00:45+0000\n"
 "PO-Revision-Date: 2025-11-04 22:01+0100\n"
 "Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -131,6 +131,14 @@ msgstr "Vis lille forhåndsvisning af vindue når musen føres over opgaver"
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over previews"
+msgstr "Skjul andre vinduer når musen føres over forhåndsvisninger"
+
+#: package/contents/ui/ConfigAppearance.qml:54
+#, fuzzy, kde-format
+#| msgctxt "@option:check section General"
+#| msgid "Hide other windows when hovering over previews"
+msgctxt "@option:check section General"
+msgid "Hide other windows when hovering over tooltips"
 msgstr "Skjul andre vinduer når musen føres over forhåndsvisninger"
 
 #: package/contents/ui/ConfigAppearance.qml:59

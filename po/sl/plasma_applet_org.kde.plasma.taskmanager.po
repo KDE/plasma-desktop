@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-18 00:45+0000\n"
 "PO-Revision-Date: 2025-11-09 18:51+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: LUGOS\n"
@@ -132,6 +132,14 @@ msgstr "Prikazuj majhne predoglede oken, ko je miška nad opravili"
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over previews"
+msgstr "Skrivaj ostala okna, kadar je miška nad predogledi"
+
+#: package/contents/ui/ConfigAppearance.qml:54
+#, fuzzy, kde-format
+#| msgctxt "@option:check section General"
+#| msgid "Hide other windows when hovering over previews"
+msgctxt "@option:check section General"
+msgid "Hide other windows when hovering over tooltips"
 msgstr "Skrivaj ostala okna, kadar je miška nad predogledi"
 
 #: package/contents/ui/ConfigAppearance.qml:59

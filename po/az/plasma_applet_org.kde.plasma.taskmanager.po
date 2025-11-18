@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-18 00:45+0000\n"
 "PO-Revision-Date: 2023-02-19 16:51+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -132,6 +132,13 @@ msgstr "Kursor tapşırığın üzərində dayandıqda pəncərəyə önbaxış�
 #| msgid "Hide other windows when hovering over previews"
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over previews"
+msgstr "Kursor pəncərəyə önbaxış üzərində durduqda başqa pəncərələri gizlətmək"
+
+#: package/contents/ui/ConfigAppearance.qml:54
+#, fuzzy, kde-format
+#| msgid "Hide other windows when hovering over previews"
+msgctxt "@option:check section General"
+msgid "Hide other windows when hovering over tooltips"
 msgstr "Kursor pəncərəyə önbaxış üzərində durduqda başqa pəncərələri gizlətmək"
 
 #: package/contents/ui/ConfigAppearance.qml:59

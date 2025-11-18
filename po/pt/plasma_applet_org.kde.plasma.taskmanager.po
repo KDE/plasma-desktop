@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-18 00:45+0000\n"
 "PO-Revision-Date: 2023-02-15 15:18+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -136,6 +136,13 @@ msgstr ""
 #| msgid "Hide other windows when hovering over previews"
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over previews"
+msgstr "Esconder as outras janelas ao passar o cursor sobre as antevisões"
+
+#: package/contents/ui/ConfigAppearance.qml:54
+#, fuzzy, kde-format
+#| msgid "Hide other windows when hovering over previews"
+msgctxt "@option:check section General"
+msgid "Hide other windows when hovering over tooltips"
 msgstr "Esconder as outras janelas ao passar o cursor sobre as antevisões"
 
 #: package/contents/ui/ConfigAppearance.qml:59
