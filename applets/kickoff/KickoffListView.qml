@@ -141,6 +141,14 @@ EmptyPage {
                     && kickoff.searchField.activeFocus)
         }
 
+        onCountChanged: {
+            if (!activeFocus) {
+                currentIndex = (count > 0 ? 0 : -1)
+            } else if (count > 0 && currentIndex !== -1) {
+                positionViewAtIndex(currentIndex, ListView.Contain)
+            }
+        }
+
         delegate: KickoffListDelegate {
             width: view.availableWidth
         }
