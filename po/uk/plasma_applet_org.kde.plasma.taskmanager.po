@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-18 00:45+0000\n"
-"PO-Revision-Date: 2025-10-25 17:43+0300\n"
+"PO-Revision-Date: 2025-11-18 09:56+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -134,12 +134,10 @@ msgid "Hide other windows when hovering over previews"
 msgstr "Сховати інші вікна при наведення на мініатюру"
 
 #: package/contents/ui/ConfigAppearance.qml:54
-#, fuzzy, kde-format
-#| msgctxt "@option:check section General"
-#| msgid "Hide other windows when hovering over previews"
+#, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over tooltips"
-msgstr "Сховати інші вікна при наведення на мініатюру"
+msgstr "Сховати інші вікна при наведення на підказки"
 
 #: package/contents/ui/ConfigAppearance.qml:59
 #, kde-format
