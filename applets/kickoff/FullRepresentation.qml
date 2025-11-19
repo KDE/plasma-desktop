@@ -109,6 +109,9 @@ EmptyPage {
                 Keys.onBacktabPressed: event => {
                     kickoff.lastHeaderItem.forceActiveFocus(Qt.BacktabFocusReason);
                 }
+                Keys.onUpPressed: event => {
+                    kickoff.searchField.forceActiveFocus(Qt.BacktabFocusReason)
+                }
                 T.StackView.onActivated: {
                     kickoff.sideBar = null
                     kickoff.contentArea = searchView
