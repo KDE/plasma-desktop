@@ -27,6 +27,9 @@ QQC2.ItemDelegate {
     width: shortcutsList.width
     action: QQC2.Action {
         id: expandAction
+        text: root.state === "expanded"
+            ? i18nc("@action:button Collapse shortcuts view", "Collapse")
+            : i18nc("@action:button", "Expand to configure shortcuts")
         icon.name: root.state === "expanded" ? "collapse" : "expand"
         onTriggered: {
             shortcutsList.selectedIndex = (root.state === "expanded") ? -1 : index;
@@ -102,6 +105,10 @@ QQC2.ItemDelegate {
                     display: QQC2.AbstractButton.IconOnly
                     action: expandAction
                     activeFocusOnTab: false
+
+                    QQC2.ToolTip.text: text
+                    QQC2.ToolTip.visible: hovered || activeFocus
+                    QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                 }
             }
         }
