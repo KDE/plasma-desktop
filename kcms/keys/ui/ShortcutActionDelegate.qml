@@ -99,7 +99,7 @@ QQC2.ItemDelegate {
                     opacity: !model.isDefault
                     color: Kirigami.Theme.neutralTextColor
                 }
-                QQC2.ToolButton {
+                QQC2.Button {
                     Layout.alignment: Qt.AlignRight
                     visible: root.showExpandButton
                     display: QQC2.AbstractButton.IconOnly
