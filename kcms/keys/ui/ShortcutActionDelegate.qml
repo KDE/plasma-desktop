@@ -27,6 +27,7 @@ QQC2.ItemDelegate {
     width: shortcutsList.width
     action: QQC2.Action {
         id: expandAction
+        icon.name: root.state === "expanded" ? "collapse" : "expand"
         onTriggered: {
             shortcutsList.selectedIndex = (root.state === "expanded") ? -1 : index;
         }
@@ -97,11 +98,10 @@ QQC2.ItemDelegate {
                 }
                 QQC2.ToolButton {
                     Layout.alignment: Qt.AlignRight
-                    id: expandButton
                     visible: root.showExpandButton
-                    icon.name: "expand"
+                    display: QQC2.AbstractButton.IconOnly
+                    action: expandAction
                     activeFocusOnTab: false
-                    onClicked: expandAction.trigger()
                 }
             }
         }
@@ -259,10 +259,6 @@ QQC2.ItemDelegate {
             PropertyChanges {
                 target: keySequenceList
                 visible: false
-            }
-            PropertyChanges {
-                target: expandButton
-                icon.name: "collapse"
             }
             PropertyChanges {
                 target: editLoader
