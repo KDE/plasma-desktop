@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2025-06-06 22:12+0200\n"
+"PO-Revision-Date: 2025-11-19 21:37+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -33,11 +33,10 @@ msgstr "Nincs"
 #, kde-format
 msgctxt "@action:button Two keybinds for a dial, up & down"
 msgid "%1 && %2"
-msgstr ""
+msgstr "%1 && %2"
 
 #: inputsequence.cpp:216
-#, fuzzy, kde-format
-#| msgid "None"
+#, kde-format
 msgctxt "@action:button There is no keybindings"
 msgid "None"
 msgstr "Nincs"
@@ -76,7 +75,7 @@ msgstr "%1. tollgomb"
 #, kde-format
 msgctxt "@action:button"
 msgid "Scroll wheel"
-msgstr ""
+msgstr "Görgetőkerék"
 
 #: kcmtablet.cpp:36
 #, kde-format
@@ -152,12 +151,10 @@ msgid "pen button %1"
 msgstr "%1. tollgomb"
 
 #: ui/ActionDialog.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@title Select the action for the tablet button"
-#| msgid "Select Button Action"
+#, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial/Ring Action"
-msgstr "Gombművelet kiválasztása"
+msgstr "Válassza ki a tárcsa-/gyűrűműveletet"
 
 #: ui/ActionDialog.qml:28
 #, kde-format
@@ -166,12 +163,10 @@ msgid "Select Button Action"
 msgstr "Gombművelet kiválasztása"
 
 #: ui/ActionDialog.qml:87
-#, fuzzy, kde-format
-#| msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
-#| msgid "Choose what action will be taken when pressing %1:"
+#, kde-format
 msgctxt "@info %1 is the 'pad button %1' or 'pen button 1/2/3' strings"
 msgid "Choose what action will be taken when rotating %1:"
-msgstr "Válassza ki a(z) %1 lenyomásakor végrehajtandó műveletet:"
+msgstr "Válassza ki, mi történjen a(z) %1 forgatásakor:"
 
 #: ui/ActionDialog.qml:88
 #, kde-format
@@ -192,12 +187,10 @@ msgid "Send keyboard key"
 msgstr "Billentyűleütés küldése"
 
 #: ui/ActionDialog.qml:133
-#, fuzzy, kde-format
-#| msgctxt "@option:radio Set this action to a keyboard type"
-#| msgid "Send keyboard key"
+#, kde-format
 msgctxt "@option:radio Set this action to a up/down keyboard type"
 msgid "Send keyboard keys"
-msgstr "Billentyűleütés küldése"
+msgstr "Billentyűleütések küldése"
 
 #: ui/ActionDialog.qml:148
 #, kde-format
@@ -215,7 +208,7 @@ msgstr "Tollgomb küldése"
 #, kde-format
 msgctxt "@option:radio Set this action to a scroll wheel type type"
 msgid "Act as scroll wheel"
-msgstr ""
+msgstr "Működés görgetőkerékként"
 
 #: ui/ActionDialog.qml:199
 #, kde-format
@@ -236,17 +229,17 @@ msgstr ""
 #: ui/ActionDialog.qml:248
 #, kde-format
 msgid "Up:"
-msgstr ""
+msgstr "Fel:"
 
 #: ui/ActionDialog.qml:261
 #, kde-format
 msgid "Down:"
-msgstr ""
+msgstr "Le:"
 
 #: ui/ActionDialog.qml:274
 #, kde-format
 msgid "Speed:"
-msgstr ""
+msgstr "Sebesség:"
 
 #: ui/ActionDialog.qml:289
 #, kde-format
@@ -312,7 +305,7 @@ msgstr "3. gomb"
 #, kde-format
 msgctxt "@info"
 msgid "Act like a scroll wheel on a mouse."
-msgstr ""
+msgstr "Működjön úgy, mint egy egér görgetőkereke."
 
 #: ui/ActionDialog.qml:375
 #, kde-format
@@ -327,19 +320,16 @@ msgid "Pen Calibration"
 msgstr "Tollkalibrálás"
 
 #: ui/Calibration.qml:98
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
-#| "revert to default calibration in %1 seconds.</b>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Tap the targets again to confirm the new calibration.<nl/><nl/><b>Will "
 "revert to default calibration in %1 seconds unless further action is taken.</"
 "b>"
 msgstr ""
-"Koppintson a célokra ismét az új kalibráció megerősítéséhez.<nl/><nl/><b>Az "
-"alapértelmezett kalibráció visszaállítása %1 másodperc múlva.</b>"
+"Koppintson a célokra ismét az új kalibráció megerősítéséhez.<nl/><nl/><b>%1 "
+"másodperc múlva visszaáll az alapértelmezett kalibrációra, hacsak nem "
+"történik további művelet.</b>"
 
 #: ui/Calibration.qml:102
 #, kde-kuit-format
@@ -459,6 +449,9 @@ msgid ""
 "driver to configure the tablet instead of using the settings here, unless "
 "specifically instructed otherwise."
 msgstr ""
+"Ezt az eszközt egy Ön által telepített, felhasználói térben futó "
+"illesztőprogram kezeli. Használja azt rajztábla beállításához az itteni "
+"beállítások helyett, hacsak kifejezetten nem utasítják ennek ellenkezőjére."
 
 #: ui/main.qml:104
 #, kde-format
@@ -485,25 +478,22 @@ msgid "Pad"
 msgstr "Tábla"
 
 #: ui/PadTab.qml:37
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad ring %1:"
-msgstr "%1. táblagomb:"
+msgstr "%1. táblagyűrű:"
 
 #: ui/PadTab.qml:60
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "ring/dial 0'"
 msgid "pad ring/dial %1"
-msgstr "%1. táblagomb:"
+msgstr "%1. táblagyűrű/tárcsa:"
 
 #: ui/PadTab.qml:100
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgid "Pad dial %1:"
-msgstr "%1. táblagomb:"
+msgstr "%1. táblatárcsa:"
 
 #: ui/PadTab.qml:102
 #, kde-format
@@ -511,7 +501,7 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "button 0'"
 msgid "pad dial %1"
-msgstr ""
+msgstr "%1. táblatárcsa"
 
 #: ui/PadTab.qml:138
 #, kde-format
@@ -679,16 +669,14 @@ msgid "Tablet Tester"
 msgstr "Rajztáblatesztelő"
 
 #: ui/Tester.qml:48
-#, fuzzy, kde-format
-#| msgid "Stylus press X=%1 Y=%2"
+#, kde-format
 msgctxt ""
 "A tablet stylus was pressed onto the surface X=[x position] Y=[y position]"
 msgid "Stylus press X=%1 Y=%2"
 msgstr "Tollérintés X=%1 Y=%2"
 
 #: ui/Tester.qml:58
-#, fuzzy, kde-format
-#| msgid "Stylus release X=%1 Y=%2"
+#, kde-format
 msgctxt ""
 "A tablet stylus has 'released' or was lifted from the surface X=[x position] "
 "Y=[y position]"
@@ -696,8 +684,7 @@ msgid "Stylus release X=%1 Y=%2"
 msgstr "Tollelengedés X=%1 Y=%2"
 
 #: ui/Tester.qml:68
-#, fuzzy, kde-format
-#| msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
+#, kde-format
 msgctxt ""
 "A tablet stylus has moved over the surface X=[x position] Y=[y position] "
 "P=[pressure] TX=[tilt x] TY=[tilt y]"
@@ -705,35 +692,27 @@ msgid "Stylus move X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 msgstr "Tollmozgatás X=%1 Y=%2 P=%3% TX=%4 TY=%5"
 
 #: ui/Tester.qml:75
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt "A tablet pad's button has been pressed B=[the button number]"
 msgid "Pad button press B=%1"
-msgstr "%1. táblagomb:"
+msgstr "Táblagomblenyomás B=%1"
 
 #: ui/Tester.qml:77
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt "A tablet pad's button has been released B=[the button number]"
 msgid "Pad button release B=%1"
-msgstr "%1. táblagomb:"
+msgstr "Táblagomb-elengedés B=%1"
 
 #: ui/Tester.qml:83
-#, fuzzy, kde-format
-#| msgid "Pad button %1:"
+#, kde-format
 msgctxt ""
 "A tablet pad's dial has moved, V120 here refers to 'Value 120' which is a "
 "technical term that should be kept as is"
 msgid "Pad dial moved V120=%1"
-msgstr "%1. táblagomb:"
+msgstr "Táblatárcsa elmozdítva V120=%1"
 
 #: ui/Tester.qml:219
-#, fuzzy, kde-format
-#| msgid ""
-#| "## Legend:\n"
-#| "# X, Y - event coordinate\n"
-#| "# P - pressure\n"
-#| "# TX,TY - tilt\n"
+#, kde-format
 msgctxt "The tablet tester legend which is shown on start-up"
 msgid ""
 "## Legend:\n"
@@ -747,9 +726,7 @@ msgstr ""
 "# TX,TX - dőlésszög\n"
 
 #: ui/Tester.qml:225
-#, fuzzy, kde-format
-#| msgctxt "Clear the event log"
-#| msgid "Clear"
+#, kde-format
 msgctxt "Clear the tablet tester event log"
 msgid "Clear"
 msgstr "Törlés"

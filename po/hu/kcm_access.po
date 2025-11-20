@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2025-11-10 22:40+0100\n"
+"PO-Revision-Date: 2025-11-19 22:23+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: kcmaccess.cpp:127 kcmaccess.cpp:155
 #, kde-format
@@ -159,10 +159,9 @@ msgstr "A Színtévesztés-korrekció be van-e kapcsolva"
 
 #. i18n: ectx: label, entry (Invert), group (Plugins)
 #: kcmaccessibilityinvert.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Invert effect is enabled"
-msgstr "A Kurzor rázása be van-e kapcsolva"
+msgstr "Az Invertálás effektus be van-e kapcsolva"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
@@ -300,21 +299,19 @@ msgstr "A Kurzor rázása be van-e kapcsolva"
 #: kcmaccessibilityshakecursor.kcfg:15
 #, kde-format
 msgid "Magnification"
-msgstr "Nagyítás"
+msgstr "Felnagyítás"
 
 #. i18n: ectx: label, entry (Zoom), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Zoom effect is enabled"
-msgstr "A Kurzor rázása be van-e kapcsolva"
+msgstr "A Nagyítás effektus be van-e kapcsolva"
 
 #. i18n: ectx: label, entry (Magnifier), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Whether Shake Cursor is enabled"
+#, kde-format
 msgid "Whether the Magnifier effect is enabled"
-msgstr "A Kurzor rázása be van-e kapcsolva"
+msgstr "A Felnagyítás effektus be van-e kapcsolva"
 
 #: ui/ActivationShortcuts.qml:18
 #, kde-format
@@ -385,7 +382,7 @@ msgstr "Értesítés megjelenítése"
 #: ui/ActivationShortcuts.qml:123
 #, kde-format
 msgid "Configure Notifications…"
-msgstr "Az értesítések beállítása…"
+msgstr "Értesítések beállítása…"
 
 #: ui/Bell.qml:19
 #, kde-format
@@ -575,12 +572,10 @@ msgstr "Lila"
 #, kde-format
 msgctxt "@label"
 msgid "Invert:"
-msgstr ""
+msgstr "Invertálás:"
 
 #: ui/Invert.qml:23
-#, fuzzy, kde-format
-#| msgctxt "Enable activation shortcuts"
-#| msgid "Enable"
+#, kde-format
 msgctxt "@option check, Enable invert effect"
 msgid "Enable"
 msgstr "Bekapcsolás"
@@ -590,13 +585,14 @@ msgstr "Bekapcsolás"
 msgctxt "@label Hint for invert effect enable button"
 msgid "Use shortcuts to toggle inverting display and window colors"
 msgstr ""
+"Gyorsbillentyűk használata a kijelző- és ablakszínek invertálásának be-/"
+"kikapcsolásához"
 
 #: ui/Invert.qml:49 ui/ZoomMagnifier.qml:321
-#, fuzzy, kde-format
-#| msgid "Configure Notifications…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Configure Shortcuts…"
-msgstr "Az értesítések beállítása…"
+msgstr "Gyorsbillentyűk beállítása…"
 
 #: ui/KeyboardFilters.qml:18
 #, kde-format
@@ -688,7 +684,7 @@ msgstr "Csengetés visszautasításkor"
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Zoom & Magnifier"
-msgstr ""
+msgstr "Nagyítás és felnagyítás"
 
 #: ui/main.qml:33
 #, kde-format
@@ -735,7 +731,7 @@ msgstr "Színvakság-korrekció"
 #, kde-format
 msgctxt "@title Category name in sidebar, for inverting screen colors"
 msgid "Invert"
-msgstr ""
+msgstr "Invertálás"
 
 #: ui/main.qml:73
 #, kde-format
@@ -765,7 +761,7 @@ msgid ""
 msgstr ""
 "Az olyan módosító billentyűk, mint a Ctrl, Shift, Alt és a Meta/Super/"
 "Windows, úgy működnek, mintha „a helyükön maradnának”, és nem kell többé "
-"lenyomva tartani azokat billentyűparancs használata közben."
+"lenyomva tartani azokat gyorsbillentyű használata közben."
 
 #: ui/ModifierKeys.qml:39
 #, kde-format
@@ -940,160 +936,153 @@ msgstr "Nagy"
 #, kde-format
 msgctxt "@label, followed by 'full screen' or 'magnify region'"
 msgid "Zoom:"
-msgstr ""
+msgstr "Nagyítás:"
 
 #: ui/ZoomMagnifier.qml:24
-#, fuzzy, kde-format
-#| msgctxt "@option:radio Flash screen when a system bell is rung"
-#| msgid "Flash screen"
+#, kde-format
 msgctxt "@option:check, enable zoom effect, following 'Zoom:'"
 msgid "Full screen"
-msgstr "Képernyő villogtatása"
+msgstr "Teljes képernyő"
 
 #: ui/ZoomMagnifier.qml:53
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Show pixel grid at zoom level:"
-msgstr ""
+msgstr "Képpontrács megjelenítése nagyítási szinten:"
 
 #: ui/ZoomMagnifier.qml:85
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Mouse pointer:"
-msgstr ""
+msgstr "Egérmutató:"
 
 #: ui/ZoomMagnifier.qml:87
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scale"
-msgstr ""
+msgstr "Méretezés"
 
 #: ui/ZoomMagnifier.qml:87
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Keep"
-msgstr ""
+msgstr "Megtartás"
 
 #: ui/ZoomMagnifier.qml:87
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Hide"
-msgstr ""
+msgstr "Elrejtés"
 
 #: ui/ZoomMagnifier.qml:98
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Mouse tracking:"
-msgstr ""
+msgstr "Egérkövetés:"
 
 #: ui/ZoomMagnifier.qml:100
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Proportional"
-msgstr ""
+msgstr "Arányosan"
 
 #: ui/ZoomMagnifier.qml:100
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
-msgstr ""
+msgstr "Középre igazítva"
 
 #: ui/ZoomMagnifier.qml:100
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Push"
-msgstr ""
+msgstr "Nyomásra"
 
 #: ui/ZoomMagnifier.qml:100
-#, fuzzy, kde-format
-#| msgid "Disable After:"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Disabled"
-msgstr "Kikapcsolás ennyi idő után:"
+msgstr "Kikapcsolva"
 
 #: ui/ZoomMagnifier.qml:111
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable focus tracking"
-msgstr ""
+msgstr "Fókuszkövetés bekapcsolása"
 
 #: ui/ZoomMagnifier.qml:123
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable text caret tracking"
-msgstr ""
+msgstr "Szövegkurzor követés bekapcsolása"
 
 #: ui/ZoomMagnifier.qml:134
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
-msgstr ""
+msgstr "Görgetési mozdulat módosítóbillentyűi:"
 
 #: ui/ZoomMagnifier.qml:172
 #, kde-format
 msgctxt "@info:tooltip, indicates feature unavailable on X11"
 msgid "Zoom scroll gestures are only available on Wayland."
-msgstr ""
+msgstr "A nagyítási görgetési mozdulatok csak Wayland alatt érhetők el."
 
 #: ui/ZoomMagnifier.qml:178
-#, fuzzy, kde-format
-#| msgid "Ring system bell when modifier keys are used"
+#, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
-msgstr "Csengetés módosítóbillentyűk használatakor"
+msgstr "Nagyításhoz görgessen a módosító billentyűk lenyomva tartásakor"
 
 #: ui/ZoomMagnifier.qml:190
-#, fuzzy, kde-format
-#| msgid "Magnification"
+#, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
-msgstr "Nagyítás"
+msgstr "Terület felnagyítása"
 
 #: ui/ZoomMagnifier.qml:217
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
-msgstr ""
+msgstr "Szélesség:"
 
 #: ui/ZoomMagnifier.qml:228 ui/ZoomMagnifier.qml:253
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
 msgid_plural "%1 px"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 képpont"
+msgstr[1] "%1 képpont"
 
 #: ui/ZoomMagnifier.qml:229 ui/ZoomMagnifier.qml:254
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
-msgstr ""
+msgstr "képpont"
 
 #: ui/ZoomMagnifier.qml:242
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
-msgstr ""
+msgstr "Magasság:"
 
 #: ui/ZoomMagnifier.qml:271
-#, fuzzy, kde-format
-#| msgid "Disable After:"
+#, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
-msgstr "Kikapcsolás ennyi idő után:"
+msgstr "Kikapcsolva"
 
 #: ui/ZoomMagnifier.qml:284
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
-msgstr ""
+msgstr "Nagyítási arány:"
 
 #: ui/ZoomMagnifier.qml:331
-#, fuzzy, kde-format
-#| msgid "Use keys to control the mouse"
+#, kde-format
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
-msgstr "Billentyűk használata az egér vezérléséhez"
+msgstr "Gyorsbillentyűk használata a nagyítás vezérléséhez"
 
 #~ msgctxt "@label"
 #~ msgid "Color blindness correction:"

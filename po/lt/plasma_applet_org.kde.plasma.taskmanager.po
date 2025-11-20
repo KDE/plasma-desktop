@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-18 00:45+0000\n"
-"PO-Revision-Date: 2025-10-28 23:32+0200\n"
+"PO-Revision-Date: 2025-11-19 19:47+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.8\n"
 
 #: backend.cpp:284
 #, kde-format
@@ -138,12 +138,10 @@ msgid "Hide other windows when hovering over previews"
 msgstr "Užvedant pelę virš peržiūrų, slėpti kitus langus"
 
 #: package/contents/ui/ConfigAppearance.qml:54
-#, fuzzy, kde-format
-#| msgctxt "@option:check section General"
-#| msgid "Hide other windows when hovering over previews"
+#, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over tooltips"
-msgstr "Užvedant pelę virš peržiūrų, slėpti kitus langus"
+msgstr "Užvedant pelę virš paaiškinimų, slėpti kitus langus"
 
 #: package/contents/ui/ConfigAppearance.qml:59
 #, kde-format
