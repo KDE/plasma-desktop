@@ -191,12 +191,14 @@ QQC2.ItemDelegate {
                                 }
                             }
                             QQC2.Button {
-                                Accessible.name: i18nc("@action:button accessible", "Delete shortcut")
                                 icon.name: "edit-delete"
+                                text: i18nc("@action:button accessible", "Delete shortcut")
+                                display: QQC2.AbstractButton.IconOnly
                                 onClicked: originalIndex.model.disableShortcut(originalIndex, modelData)
-                                QQC2.ToolTip {
-                                    text: i18nc("@info:tooltip", "Delete this shortcut")
-                                }
+
+                                QQC2.ToolTip.text: text
+                                QQC2.ToolTip.visible: hovered || activeFocus
+                                QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                             }
                         }
                     }
@@ -237,12 +239,14 @@ QQC2.ItemDelegate {
                                 }
                             }
                             QQC2.Button {
-                                Accessible.name: i18nc("@action:button accessible", "Cancel capturing shortcut")
                                 icon.name: "dialog-cancel"
+                                text: i18nc("@action:button accessible", "Cancel capturing shortcut")
+                                display: QQC2.AbstractButton.IconOnly
                                 onClicked: parent.finished()
-                                QQC2.ToolTip {
-                                    text: i18nc("@info:tooltip", "Cancel capturing of new shortcut")
-                                }
+
+                                QQC2.ToolTip.text: text
+                                QQC2.ToolTip.visible: hovered || activeFocus
+                                QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                             }
                         }
                     }

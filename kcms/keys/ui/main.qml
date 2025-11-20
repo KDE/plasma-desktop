@@ -220,13 +220,14 @@ KCM.AbstractKCM {
                                 implicitHeight: label.implicitHeight
                                 implicitWidth: implicitHeight
 
-                                Accessible.name: i18nc("@action:button accessible %1 is the name of a custom command", "Edit command for %1", model.display)
+                                icon.name: "edit-rename"
+                                text: i18nc("@action:button %1 is the name of a custom command", "Edit command for %1", model.display)
+                                display: QQC2.AbstractButton.IconOnly
 
                                 visible: model.section === Private.ComponentType.Command
                                          && !exportActive
                                          && !model.pendingDeletion
                                          && (componentDelegate.hovered || componentDelegate.ListView.isCurrentItem)
-                                icon.name: "edit-rename"
                                 onClicked: {
                                     addCommandDialog.editing = true;
                                     addCommandDialog.componentName = model.component;
@@ -235,39 +236,46 @@ KCM.AbstractKCM {
                                     addCommandDialog.commandListItemDelegate = componentDelegate;
                                     addCommandDialog.open();
                                 }
-                                QQC2.ToolTip {
-                                    text: i18nc("@info:tooltip %1 is the text of a custom command", "Edit command for %1", model.display)
-                                }
+
+                                QQC2.ToolTip.text: text
+                                QQC2.ToolTip.visible: hovered || activeFocus
+                                QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                             }
                             QQC2.Button {
                                 id: deleteButton
 
                                 implicitHeight: label.implicitHeight
                                 implicitWidth: implicitHeight
-                                Accessible.name: i18nc("@action:button accessible %1 is the name of a shortcut category", "Remove all shortcuts for %1", model.display)
+
+                                icon.name: "edit-delete"
+                                text: i18nc("@action:button %1 is the name of a shortcut category", "Remove all shortcuts for %1", model.display)
+                                display: QQC2.AbstractButton.IconOnly
 
                                 visible: model.section !== Private.ComponentType.CommonAction
                                          && model.isRemovable
                                          && !exportActive
                                          && !model.pendingDeletion
                                          && (componentDelegate.hovered || componentDelegate.ListView.isCurrentItem)
-                                icon.name: "edit-delete"
                                 onClicked: model.pendingDeletion = true
-                                QQC2.ToolTip {
-                                    text: i18nc("@info:tooltip %1 is the text of a shortcut category", "Remove all shortcuts for %1", model.display)
-                                }
+
+                                QQC2.ToolTip.text: text
+                                QQC2.ToolTip.visible: hovered || activeFocus
+                                QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                             }
                             QQC2.Button {
                                 implicitHeight: label.implicitHeight
                                 implicitWidth: implicitHeight
 
-                                Accessible.name: i18nc("@action:button accessible", "Undo deletion")
-                                visible: !exportActive && model.pendingDeletion
                                 icon.name: "edit-undo"
+                                text: i18nc("@action:button", "Undo deletion")
+                                display: QQC2.AbstractButton.IconOnly
+
+                                visible: !exportActive && model.pendingDeletion
                                 onClicked: model.pendingDeletion = false
-                                QQC2.ToolTip {
-                                    text: i18nc("@info:tooltip", "Undo deletion")
-                                }
+
+                                QQC2.ToolTip.text: text
+                                QQC2.ToolTip.visible: hovered || activeFocus
+                                QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                             }
                             Rectangle {
                                 id: defaultIndicator
