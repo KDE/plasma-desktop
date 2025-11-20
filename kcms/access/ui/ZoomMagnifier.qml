@@ -130,49 +130,6 @@ Kirigami.FormLayout {
                 }
             }
 
-            RowLayout {
-                Kirigami.FormData.label: i18nc("@label", "Scroll gesture modifier keys:")
-
-                spacing: Kirigami.Units.smallSpacing
-
-                Item {
-                    // For some reason, here setting enabled directly on
-                    // KeySequenceItem does not work, so we wrap it
-                    enabled: !kcm.isPlatformX11
-
-                    implicitWidth: zoomPointerAxisGestureModifiersBox.implicitWidth
-                    implicitHeight: zoomPointerAxisGestureModifiersBox.implicitHeight
-
-                    KQuickControls.KeySequenceItem {
-                        id: zoomPointerAxisGestureModifiersBox
-
-                        keySequence: kcm.zoomMagnifierSettings.zoomPointerAxisGestureModifiers
-                        onKeySequenceModified: kcm.zoomMagnifierSettings.zoomPointerAxisGestureModifiers = keySequence
-                        patterns: KQuickControls.ShortcutPattern.Modifier
-                        multiKeyShortcutsAllowed: false
-
-                        Connections {
-                            target: kcm.zoomMagnifierSettings
-
-                            // We have to do this because keySequence binding is broken
-                            function onZoomPointerAxisGestureModifiersChanged() {
-                                zoomPointerAxisGestureModifiersBox.keySequence = kcm.zoomMagnifierSettings.zoomPointerAxisGestureModifiers;
-                            }
-                        }
-
-                        KCM.SettingStateBinding {
-                            configObject: kcm.zoomMagnifierSettings
-                            settingName: "ZoomPointerAxisGestureModifiers"
-                        }
-                    }
-                }
-
-                Kirigami.ContextualHelpButton {
-                    visible: kcm.isPlatformX11
-                    toolTipText: i18nc("@info:tooltip, indicates feature unavailable on X11", "Zoom scroll gestures are only available on Wayland.")
-                }
-            }
-
             QQC2.Label {
                 enabled: !kcm.isPlatformX11 && zoomPointerAxisGestureModifiersBox.keySequence != ""
                 text: i18nc("@label Hint for scroll gestures", "Scroll while modifier keys are pressed to zoom")
@@ -310,6 +267,49 @@ Kirigami.FormLayout {
             configObject: kcm.zoomMagnifierSettings
             settingName: "SharedZoomFactor"
             extraEnabledConditions: kcm.zoomMagnifierSettings.zoom || kcm.zoomMagnifierSettings.magnifier
+        }
+    }
+
+    RowLayout {
+        Kirigami.FormData.label: i18nc("@label", "Scroll gesture modifier keys:")
+
+        spacing: Kirigami.Units.smallSpacing
+
+        Item {
+            // For some reason, here setting enabled directly on
+            // KeySequenceItem does not work, so we wrap it
+            enabled: !kcm.isPlatformX11 && (kcm.zoomMagnifierSettings.zoom || kcm.zoomMagnifierSettings.magnifier)
+
+            implicitWidth: zoomPointerAxisGestureModifiersBox.implicitWidth
+            implicitHeight: zoomPointerAxisGestureModifiersBox.implicitHeight
+
+            KQuickControls.KeySequenceItem {
+                id: zoomPointerAxisGestureModifiersBox
+
+                keySequence: kcm.zoomMagnifierSettings.zoomPointerAxisGestureModifiers
+                onKeySequenceModified: kcm.zoomMagnifierSettings.zoomPointerAxisGestureModifiers = keySequence
+                patterns: KQuickControls.ShortcutPattern.Modifier
+                multiKeyShortcutsAllowed: false
+
+                Connections {
+                    target: kcm.zoomMagnifierSettings
+
+                    // We have to do this because keySequence binding is broken
+                    function onZoomPointerAxisGestureModifiersChanged() {
+                        zoomPointerAxisGestureModifiersBox.keySequence = kcm.zoomMagnifierSettings.zoomPointerAxisGestureModifiers;
+                    }
+                }
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.zoomMagnifierSettings
+                    settingName: "ZoomPointerAxisGestureModifiers"
+                }
+            }
+        }
+
+        Kirigami.ContextualHelpButton {
+            visible: kcm.isPlatformX11
+            toolTipText: i18nc("@info:tooltip, indicates feature unavailable on X11", "Zoom scroll gestures are only available on Wayland.")
         }
     }
 
