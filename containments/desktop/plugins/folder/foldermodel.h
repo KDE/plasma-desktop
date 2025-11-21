@@ -9,7 +9,6 @@
 #pragma once
 
 #include <QAction>
-#include <QFileSystemWatcher>
 #include <QImage>
 #include <QItemSelection>
 #include <QMimeData>
@@ -382,8 +381,6 @@ private:
     Plasma::Applet *m_applet = nullptr;
     bool m_complete;
     QPoint m_menuPosition;
-    QFileSystemWatcher *watcher;
-    void addDirectoriesRecursively(const QString &resolvedNewUrl, QFileSystemWatcher *watcher);
     bool m_creatingNewItems = false;
     bool m_unsortedModeOnDrop = false;
 
