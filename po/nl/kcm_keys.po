@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-21 00:44+0000\n"
 "PO-Revision-Date: 2025-09-11 17:43+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -240,148 +240,136 @@ msgctxt ""
 msgid "Export %1"
 msgstr "%1 exporteren"
 
-#: ui/main.qml:223
-#, kde-format
-msgctxt "@action:button accessible %1 is the name of a custom command"
+#: ui/main.qml:224
+#, fuzzy, kde-format
+#| msgctxt "@action:button accessible %1 is the name of a custom command"
+#| msgid "Edit command for %1"
+msgctxt "@action:button %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "Commando voor %1 bewerken"
 
-#: ui/main.qml:239
-#, kde-format
-msgctxt "@info:tooltip %1 is the text of a custom command"
-msgid "Edit command for %1"
-msgstr "Commando voor %1 bewerken"
-
-#: ui/main.qml:247
-#, kde-format
-msgctxt "@action:button accessible %1 is the name of a shortcut category"
+#: ui/main.qml:251
+#, fuzzy, kde-format
+#| msgctxt "@action:button accessible %1 is the name of a shortcut category"
+#| msgid "Remove all shortcuts for %1"
+msgctxt "@action:button %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Alle sneltoetsen voor %1 verwijderen"
 
-#: ui/main.qml:257
-#, kde-format
-msgctxt "@info:tooltip %1 is the text of a shortcut category"
-msgid "Remove all shortcuts for %1"
-msgstr "Alle sneltoetsen voor %1 verwijderen"
-
-#: ui/main.qml:264
-#, kde-format
-msgctxt "@action:button accessible"
+#: ui/main.qml:270
+#, fuzzy, kde-format
+#| msgctxt "@action:button accessible"
+#| msgid "Undo deletion"
+msgctxt "@action:button"
 msgid "Undo deletion"
 msgstr "Verwijdering ongedaan maken"
 
-#: ui/main.qml:269
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Undo deletion"
-msgstr "Verwijdering ongedaan maken"
-
-#: ui/main.qml:323
+#: ui/main.qml:331
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "Geen items komen overeen met de zoektermen"
 
-#: ui/main.qml:357
+#: ui/main.qml:365
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Kies een item uit de lijst om de sneltoets te bekijken"
 
-#: ui/main.qml:369
+#: ui/main.qml:377
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "Sneltoetsschema exporteren"
 
-#: ui/main.qml:369 ui/main.qml:510
+#: ui/main.qml:377 ui/main.qml:518
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Sneltoetsschema importeren"
 
-#: ui/main.qml:371
+#: ui/main.qml:379
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Sneltoetsschema (*.kksrc)"
 
-#: ui/main.qml:398
+#: ui/main.qml:406
 #, kde-format
 msgid "Edit Command"
 msgstr "Commando bewerken"
 
-#: ui/main.qml:398
+#: ui/main.qml:406
 #, kde-format
 msgid "Add Command"
 msgstr "Commando toevoegen"
 
-#: ui/main.qml:420
+#: ui/main.qml:428
 #, kde-format
 msgid "Save"
 msgstr "Opslaan"
 
-#: ui/main.qml:420
+#: ui/main.qml:428
 #, kde-format
 msgid "Add"
 msgstr "Toevoegen"
 
-#: ui/main.qml:422
+#: ui/main.qml:430
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Save command"
 msgstr "Opdracht opslaan"
 
-#: ui/main.qml:423
+#: ui/main.qml:431
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add command"
 msgstr "Commando toevoegen"
 
-#: ui/main.qml:449
+#: ui/main.qml:457
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "Voer een commando in of kies een scriptbestand:"
 
-#: ui/main.qml:458
+#: ui/main.qml:466
 #, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
 msgstr "Commando:"
 
-#: ui/main.qml:464
+#: ui/main.qml:472
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "Opdracht"
 
-#: ui/main.qml:471
+#: ui/main.qml:479
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Kiezen…"
 
-#: ui/main.qml:472
+#: ui/main.qml:480
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Kies een scriptbestand"
 
-#: ui/main.qml:480
+#: ui/main.qml:488
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
 msgstr "Naam:"
 
-#: ui/main.qml:481
+#: ui/main.qml:489
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
 msgstr "Naam hier invoeren"
 
-#: ui/main.qml:493
+#: ui/main.qml:501
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Kies een scriptbestand"
 
-#: ui/main.qml:495
+#: ui/main.qml:503
 #, kde-format
 msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
@@ -389,44 +377,57 @@ msgctxt ""
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "Scriptbestanden (.sh, .bash, .zsh, etc.) (*.*sh)"
 
-#: ui/main.qml:518
+#: ui/main.qml:526
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Het te importeren schema selecteren:"
 
-#: ui/main.qml:537
+#: ui/main.qml:545
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Aangepast schema"
 
-#: ui/main.qml:545
+#: ui/main.qml:553
 #, kde-format
 msgid "Select File…"
 msgstr "Bestand selecteren…"
 
-#: ui/main.qml:545
+#: ui/main.qml:553
 #, kde-format
 msgid "Import"
 msgstr "Importeren"
 
-#: ui/main.qml:547
+#: ui/main.qml:555
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Select shortcut scheme file"
 msgstr "Bestand met sneltoetsenschema selecteren"
 
-#: ui/main.qml:548
+#: ui/main.qml:556
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add shortcut scheme"
 msgstr "Sneltoetsschema toevoegen"
 
-#: ui/ShortcutActionDelegate.qml:34
+#: ui/ShortcutActionDelegate.qml:31
+#, kde-format
+msgctxt "@action:button Collapse shortcuts view"
+msgid "Collapse"
+msgstr ""
+
+#: ui/ShortcutActionDelegate.qml:32
+#, fuzzy, kde-format
+#| msgid "No active shortcuts"
+msgctxt "@action:button"
+msgid "Expand to configure shortcuts"
+msgstr "Geen actieve sneltoetsen"
+
+#: ui/ShortcutActionDelegate.qml:38
 #, kde-format
 msgid "Editing shortcut: %1"
 msgstr "Sneltoets wordt bewerkt: %1"
 
-#: ui/ShortcutActionDelegate.qml:57
+#: ui/ShortcutActionDelegate.qml:63
 #, kde-format
 msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
@@ -434,12 +435,12 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: ui/ShortcutActionDelegate.qml:82
+#: ui/ShortcutActionDelegate.qml:88
 #, kde-format
 msgid "No active shortcuts"
 msgstr "Geen actieve sneltoetsen"
 
-#: ui/ShortcutActionDelegate.qml:125
+#: ui/ShortcutActionDelegate.qml:134
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -447,61 +448,69 @@ msgid_plural "Default shortcuts"
 msgstr[0] "Standaard sneltoets"
 msgstr[1] "Standaard sneltoetsen"
 
-#: ui/ShortcutActionDelegate.qml:127
+#: ui/ShortcutActionDelegate.qml:136
 #, kde-format
 msgid "No default shortcuts"
 msgstr "Geen standaard sneltoetsen"
 
-#: ui/ShortcutActionDelegate.qml:136
+#: ui/ShortcutActionDelegate.qml:145
 #, kde-format
 msgid "Default shortcut %1 is enabled."
 msgstr "Standaard sneltoets %1 is ingeschakeld"
 
-#: ui/ShortcutActionDelegate.qml:136
+#: ui/ShortcutActionDelegate.qml:145
 #, kde-format
 msgid "Default shortcut %1 is disabled."
 msgstr "Standaard sneltoets %1 is uitgeschakeld"
 
-#: ui/ShortcutActionDelegate.qml:159
+#: ui/ShortcutActionDelegate.qml:168
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "Aangepaste sneltoetsen"
 
-#: ui/ShortcutActionDelegate.qml:185
+#: ui/ShortcutActionDelegate.qml:195
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
 msgstr "Sneltoets verwijderen"
 
-#: ui/ShortcutActionDelegate.qml:189
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Delete this shortcut"
-msgstr "Deze sneltoets verwijderen"
-
-#: ui/ShortcutActionDelegate.qml:195
+#: ui/ShortcutActionDelegate.qml:206
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
 msgstr "Toevoegen…"
 
-#: ui/ShortcutActionDelegate.qml:196
+#: ui/ShortcutActionDelegate.qml:207
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr "Aangepaste sneltoets toevoegen"
 
-#: ui/ShortcutActionDelegate.qml:231
+#: ui/ShortcutActionDelegate.qml:243
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
 msgstr "Vangen van sneltoets annuleren"
 
-#: ui/ShortcutActionDelegate.qml:235
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Cancel capturing of new shortcut"
-msgstr "Vangen van nieuwe sneltoets annuleren"
+#~ msgctxt "@info:tooltip %1 is the text of a custom command"
+#~ msgid "Edit command for %1"
+#~ msgstr "Commando voor %1 bewerken"
+
+#~ msgctxt "@info:tooltip %1 is the text of a shortcut category"
+#~ msgid "Remove all shortcuts for %1"
+#~ msgstr "Alle sneltoetsen voor %1 verwijderen"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Undo deletion"
+#~ msgstr "Verwijdering ongedaan maken"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Delete this shortcut"
+#~ msgstr "Deze sneltoets verwijderen"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Cancel capturing of new shortcut"
+#~ msgstr "Vangen van nieuwe sneltoets annuleren"
 
 #~ msgctxt "Template for file dialog"
 #~ msgid "Script file (*.*sh)"

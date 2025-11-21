@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-21 00:44+0000\n"
 "PO-Revision-Date: 2025-09-16 23:33+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -239,148 +239,136 @@ msgctxt ""
 msgid "Export %1"
 msgstr "Flytja út %1"
 
-#: ui/main.qml:223
-#, kde-format
-msgctxt "@action:button accessible %1 is the name of a custom command"
+#: ui/main.qml:224
+#, fuzzy, kde-format
+#| msgctxt "@action:button accessible %1 is the name of a custom command"
+#| msgid "Edit command for %1"
+msgctxt "@action:button %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "Breyta skipun fyrir %1"
 
-#: ui/main.qml:239
-#, kde-format
-msgctxt "@info:tooltip %1 is the text of a custom command"
-msgid "Edit command for %1"
-msgstr "Breyta skipun fyrir %1"
-
-#: ui/main.qml:247
-#, kde-format
-msgctxt "@action:button accessible %1 is the name of a shortcut category"
+#: ui/main.qml:251
+#, fuzzy, kde-format
+#| msgctxt "@action:button accessible %1 is the name of a shortcut category"
+#| msgid "Remove all shortcuts for %1"
+msgctxt "@action:button %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Fjarlægja alla flýtilykla fyrir %1"
 
-#: ui/main.qml:257
-#, kde-format
-msgctxt "@info:tooltip %1 is the text of a shortcut category"
-msgid "Remove all shortcuts for %1"
-msgstr "Fjarlægja alla flýtilykla fyrir %1"
-
-#: ui/main.qml:264
-#, kde-format
-msgctxt "@action:button accessible"
+#: ui/main.qml:270
+#, fuzzy, kde-format
+#| msgctxt "@action:button accessible"
+#| msgid "Undo deletion"
+msgctxt "@action:button"
 msgid "Undo deletion"
 msgstr "Afturkalla eyðingu"
 
-#: ui/main.qml:269
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Undo deletion"
-msgstr "Afturkalla eyðingu"
-
-#: ui/main.qml:323
+#: ui/main.qml:331
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "Engin atriði pössuðu við leitarorðin"
 
-#: ui/main.qml:357
+#: ui/main.qml:365
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Veldu atriði á listanum til að sjá flýtilykla þess hér"
 
-#: ui/main.qml:369
+#: ui/main.qml:377
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "Flytja út flýtilyklaskema"
 
-#: ui/main.qml:369 ui/main.qml:510
+#: ui/main.qml:377 ui/main.qml:518
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Flytja inn flýtilyklaskema"
 
-#: ui/main.qml:371
+#: ui/main.qml:379
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Flýtilyklaskema (*.kksrc)"
 
-#: ui/main.qml:398
+#: ui/main.qml:406
 #, kde-format
 msgid "Edit Command"
 msgstr "Breyta skipun"
 
-#: ui/main.qml:398
+#: ui/main.qml:406
 #, kde-format
 msgid "Add Command"
 msgstr "Bæta við skipun"
 
-#: ui/main.qml:420
+#: ui/main.qml:428
 #, kde-format
 msgid "Save"
 msgstr "Vista"
 
-#: ui/main.qml:420
+#: ui/main.qml:428
 #, kde-format
 msgid "Add"
 msgstr "Bæta við"
 
-#: ui/main.qml:422
+#: ui/main.qml:430
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Save command"
 msgstr "Vista skipun"
 
-#: ui/main.qml:423
+#: ui/main.qml:431
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add command"
 msgstr "Bæta við skipun"
 
-#: ui/main.qml:449
+#: ui/main.qml:457
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "Sláðu inn skipun eða veldu skriftuskrá:"
 
-#: ui/main.qml:458
+#: ui/main.qml:466
 #, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
 msgstr "Skipun:"
 
-#: ui/main.qml:464
+#: ui/main.qml:472
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "Skipun"
 
-#: ui/main.qml:471
+#: ui/main.qml:479
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Velja…"
 
-#: ui/main.qml:472
+#: ui/main.qml:480
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Velja skriftuskrá"
 
-#: ui/main.qml:480
+#: ui/main.qml:488
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
 msgstr "Heiti:"
 
-#: ui/main.qml:481
+#: ui/main.qml:489
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
 msgstr "Sláðu inn heiti hér"
 
-#: ui/main.qml:493
+#: ui/main.qml:501
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Velja skriftuskrá"
 
-#: ui/main.qml:495
+#: ui/main.qml:503
 #, kde-format
 msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
@@ -388,44 +376,57 @@ msgctxt ""
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "Skriftuskrár (.sh, .bash, .zsh, etc.) (*.*sh)"
 
-#: ui/main.qml:518
+#: ui/main.qml:526
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Veldu skema sem á að flytja inn:"
 
-#: ui/main.qml:537
+#: ui/main.qml:545
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Sérsniðið skema"
 
-#: ui/main.qml:545
+#: ui/main.qml:553
 #, kde-format
 msgid "Select File…"
 msgstr "Veldu skrá..."
 
-#: ui/main.qml:545
+#: ui/main.qml:553
 #, kde-format
 msgid "Import"
 msgstr "Flytja inn"
 
-#: ui/main.qml:547
+#: ui/main.qml:555
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Select shortcut scheme file"
 msgstr "Velja skemaskrá fyrir flýtilykla"
 
-#: ui/main.qml:548
+#: ui/main.qml:556
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add shortcut scheme"
 msgstr "Bæta við flýtilyklaskema"
 
-#: ui/ShortcutActionDelegate.qml:34
+#: ui/ShortcutActionDelegate.qml:31
+#, kde-format
+msgctxt "@action:button Collapse shortcuts view"
+msgid "Collapse"
+msgstr ""
+
+#: ui/ShortcutActionDelegate.qml:32
+#, fuzzy, kde-format
+#| msgid "No active shortcuts"
+msgctxt "@action:button"
+msgid "Expand to configure shortcuts"
+msgstr "Engir virkir flýtilyklar"
+
+#: ui/ShortcutActionDelegate.qml:38
 #, kde-format
 msgid "Editing shortcut: %1"
 msgstr "Breyti flýtilykli: %1"
 
-#: ui/ShortcutActionDelegate.qml:57
+#: ui/ShortcutActionDelegate.qml:63
 #, kde-format
 msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
@@ -433,12 +434,12 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: ui/ShortcutActionDelegate.qml:82
+#: ui/ShortcutActionDelegate.qml:88
 #, kde-format
 msgid "No active shortcuts"
 msgstr "Engir virkir flýtilyklar"
 
-#: ui/ShortcutActionDelegate.qml:125
+#: ui/ShortcutActionDelegate.qml:134
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -446,61 +447,69 @@ msgid_plural "Default shortcuts"
 msgstr[0] "Sjálfgefinn flýtilykill"
 msgstr[1] "Sjálfgefnir flýtilyklar"
 
-#: ui/ShortcutActionDelegate.qml:127
+#: ui/ShortcutActionDelegate.qml:136
 #, kde-format
 msgid "No default shortcuts"
 msgstr "Engir sjálfgefnir flýtilyklar"
 
-#: ui/ShortcutActionDelegate.qml:136
+#: ui/ShortcutActionDelegate.qml:145
 #, kde-format
 msgid "Default shortcut %1 is enabled."
 msgstr "Sjálfgefinn flýtilykill %1 er virkur."
 
-#: ui/ShortcutActionDelegate.qml:136
+#: ui/ShortcutActionDelegate.qml:145
 #, kde-format
 msgid "Default shortcut %1 is disabled."
 msgstr "Sjálfgefinn flýtilykill %1 er óvirkur."
 
-#: ui/ShortcutActionDelegate.qml:159
+#: ui/ShortcutActionDelegate.qml:168
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "Sérsniðnir flýtilyklar"
 
-#: ui/ShortcutActionDelegate.qml:185
+#: ui/ShortcutActionDelegate.qml:195
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
 msgstr "Eyða flýtilykli"
 
-#: ui/ShortcutActionDelegate.qml:189
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Delete this shortcut"
-msgstr "Eyða þessum flýtilykli"
-
-#: ui/ShortcutActionDelegate.qml:195
+#: ui/ShortcutActionDelegate.qml:206
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
 msgstr "Bæta við…"
 
-#: ui/ShortcutActionDelegate.qml:196
+#: ui/ShortcutActionDelegate.qml:207
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr "Bæta við sérsniðnum flýtilykli"
 
-#: ui/ShortcutActionDelegate.qml:231
+#: ui/ShortcutActionDelegate.qml:243
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
 msgstr "Hætta við að fanga flýtilykil"
 
-#: ui/ShortcutActionDelegate.qml:235
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Cancel capturing of new shortcut"
-msgstr "Hætta við að fanga nýjan flýtilykil"
+#~ msgctxt "@info:tooltip %1 is the text of a custom command"
+#~ msgid "Edit command for %1"
+#~ msgstr "Breyta skipun fyrir %1"
+
+#~ msgctxt "@info:tooltip %1 is the text of a shortcut category"
+#~ msgid "Remove all shortcuts for %1"
+#~ msgstr "Fjarlægja alla flýtilykla fyrir %1"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Undo deletion"
+#~ msgstr "Afturkalla eyðingu"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Delete this shortcut"
+#~ msgstr "Eyða þessum flýtilykli"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Cancel capturing of new shortcut"
+#~ msgstr "Hætta við að fanga nýjan flýtilykil"
 
 #~ msgctxt "Template for file dialog"
 #~ msgid "Script file (*.*sh)"

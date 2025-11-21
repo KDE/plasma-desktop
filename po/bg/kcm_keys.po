@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-21 00:44+0000\n"
 "PO-Revision-Date: 2025-09-14 11:37+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -241,148 +241,136 @@ msgctxt ""
 msgid "Export %1"
 msgstr "Експортиране на %1"
 
-#: ui/main.qml:223
-#, kde-format
-msgctxt "@action:button accessible %1 is the name of a custom command"
+#: ui/main.qml:224
+#, fuzzy, kde-format
+#| msgctxt "@action:button accessible %1 is the name of a custom command"
+#| msgid "Edit command for %1"
+msgctxt "@action:button %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "Редактиране на команда за %1"
 
-#: ui/main.qml:239
-#, kde-format
-msgctxt "@info:tooltip %1 is the text of a custom command"
-msgid "Edit command for %1"
-msgstr "Редактиране на команда за %1"
-
-#: ui/main.qml:247
-#, kde-format
-msgctxt "@action:button accessible %1 is the name of a shortcut category"
+#: ui/main.qml:251
+#, fuzzy, kde-format
+#| msgctxt "@action:button accessible %1 is the name of a shortcut category"
+#| msgid "Remove all shortcuts for %1"
+msgctxt "@action:button %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Премахване на всички клавишни комбинации за %1"
 
-#: ui/main.qml:257
-#, kde-format
-msgctxt "@info:tooltip %1 is the text of a shortcut category"
-msgid "Remove all shortcuts for %1"
-msgstr "Премахване на всички клавишни комбинации за %1"
-
-#: ui/main.qml:264
-#, kde-format
-msgctxt "@action:button accessible"
+#: ui/main.qml:270
+#, fuzzy, kde-format
+#| msgctxt "@action:button accessible"
+#| msgid "Undo deletion"
+msgctxt "@action:button"
 msgid "Undo deletion"
 msgstr "Отмяна на изтриването"
 
-#: ui/main.qml:269
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Undo deletion"
-msgstr "Отмяна на изтриването"
-
-#: ui/main.qml:323
+#: ui/main.qml:331
 #, kde-format
 msgid "No items matched the search terms"
 msgstr "Нито една не съответства на думите за търсене"
 
-#: ui/main.qml:357
+#: ui/main.qml:365
 #, kde-format
 msgid "Select an item from the list to view its shortcuts here"
 msgstr "Изберете елемент от списъка, за да видите тук клавишните комбинации"
 
-#: ui/main.qml:369
+#: ui/main.qml:377
 #, kde-format
 msgid "Export Shortcut Scheme"
 msgstr "Експортиране схема на клавишна комбинация"
 
-#: ui/main.qml:369 ui/main.qml:510
+#: ui/main.qml:377 ui/main.qml:518
 #, kde-format
 msgid "Import Shortcut Scheme"
 msgstr "Импортиране схема на клавишна комбинация"
 
-#: ui/main.qml:371
+#: ui/main.qml:379
 #, kde-format
 msgctxt "Template for file dialog"
 msgid "Shortcut Scheme (*.kksrc)"
 msgstr "Схема за клавишна комбинация (* .kksrc)"
 
-#: ui/main.qml:398
+#: ui/main.qml:406
 #, kde-format
 msgid "Edit Command"
 msgstr "Редактиране на команда..."
 
-#: ui/main.qml:398
+#: ui/main.qml:406
 #, kde-format
 msgid "Add Command"
 msgstr "Добавяне на команда..."
 
-#: ui/main.qml:420
+#: ui/main.qml:428
 #, kde-format
 msgid "Save"
 msgstr "Запазване"
 
-#: ui/main.qml:420
+#: ui/main.qml:428
 #, kde-format
 msgid "Add"
 msgstr "Добавяне"
 
-#: ui/main.qml:422
+#: ui/main.qml:430
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Save command"
 msgstr "Запазване на команда"
 
-#: ui/main.qml:423
+#: ui/main.qml:431
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add command"
 msgstr "Добавяне на команда"
 
-#: ui/main.qml:449
+#: ui/main.qml:457
 #, kde-format
 msgid "Enter a command or choose a script file:"
 msgstr "Въведете команда или изберете скрипт:"
 
-#: ui/main.qml:458
+#: ui/main.qml:466
 #, kde-format
 msgctxt "@label:textbox A shell command"
 msgid "Command:"
 msgstr "Команда:"
 
-#: ui/main.qml:464
+#: ui/main.qml:472
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Command"
 msgstr "Команда"
 
-#: ui/main.qml:471
+#: ui/main.qml:479
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose…"
 msgstr "Избиране…"
 
-#: ui/main.qml:472
+#: ui/main.qml:480
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Choose script file"
 msgstr "Изберете скрипт"
 
-#: ui/main.qml:480
+#: ui/main.qml:488
 #, kde-format
 msgctxt "@label:textfield Human-readable name given to a shell command"
 msgid "Name:"
 msgstr "Име:"
 
-#: ui/main.qml:481
+#: ui/main.qml:489
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Enter name here"
 msgstr "Въведете името тук"
 
-#: ui/main.qml:493
+#: ui/main.qml:501
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Script File"
 msgstr "Изберете скрипт"
 
-#: ui/main.qml:495
+#: ui/main.qml:503
 #, kde-format
 msgctxt ""
 "Filename filters for file dialog. Do not translate any of the filename "
@@ -390,44 +378,57 @@ msgctxt ""
 msgid "Script files (.sh, .bash, .zsh, etc.) (*.*sh)"
 msgstr "Скриптови файлове (.sh, .bash, .zsh, etc.) (*.*sh)"
 
-#: ui/main.qml:518
+#: ui/main.qml:526
 #, kde-format
 msgid "Select the scheme to import:"
 msgstr "Избиране на схема за импортиране:"
 
-#: ui/main.qml:537
+#: ui/main.qml:545
 #, kde-format
 msgid "Custom Scheme"
 msgstr "Потребителска схема"
 
-#: ui/main.qml:545
+#: ui/main.qml:553
 #, kde-format
 msgid "Select File…"
 msgstr "Избиране на файл…"
 
-#: ui/main.qml:545
+#: ui/main.qml:553
 #, kde-format
 msgid "Import"
 msgstr "Внасяне"
 
-#: ui/main.qml:547
+#: ui/main.qml:555
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Select shortcut scheme file"
 msgstr "Избиране на файл на схема на клавишна комбинация"
 
-#: ui/main.qml:548
+#: ui/main.qml:556
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add shortcut scheme"
 msgstr "Добавяне на схема за клавишна комбинация"
 
-#: ui/ShortcutActionDelegate.qml:34
+#: ui/ShortcutActionDelegate.qml:31
+#, kde-format
+msgctxt "@action:button Collapse shortcuts view"
+msgid "Collapse"
+msgstr ""
+
+#: ui/ShortcutActionDelegate.qml:32
+#, fuzzy, kde-format
+#| msgid "No active shortcuts"
+msgctxt "@action:button"
+msgid "Expand to configure shortcuts"
+msgstr "Няма активни клавишни комбинации"
+
+#: ui/ShortcutActionDelegate.qml:38
 #, kde-format
 msgid "Editing shortcut: %1"
 msgstr "Редактиране на комбинация: %1"
 
-#: ui/ShortcutActionDelegate.qml:57
+#: ui/ShortcutActionDelegate.qml:63
 #, kde-format
 msgctxt ""
 "%1 is the name action that is triggered by the key sequences following "
@@ -435,12 +436,12 @@ msgctxt ""
 msgid "%1:"
 msgstr "%1:"
 
-#: ui/ShortcutActionDelegate.qml:82
+#: ui/ShortcutActionDelegate.qml:88
 #, kde-format
 msgid "No active shortcuts"
 msgstr "Няма активни клавишни комбинации"
 
-#: ui/ShortcutActionDelegate.qml:125
+#: ui/ShortcutActionDelegate.qml:134
 #, kde-format
 msgctxt "%1 decides if singular or plural will be used"
 msgid "Default shortcut"
@@ -448,58 +449,66 @@ msgid_plural "Default shortcuts"
 msgstr[0] "Комбинация по подразбиране"
 msgstr[1] "Комбинации по подразбиране"
 
-#: ui/ShortcutActionDelegate.qml:127
+#: ui/ShortcutActionDelegate.qml:136
 #, kde-format
 msgid "No default shortcuts"
 msgstr "Няма клавишни комбинации по подразбиране"
 
-#: ui/ShortcutActionDelegate.qml:136
+#: ui/ShortcutActionDelegate.qml:145
 #, kde-format
 msgid "Default shortcut %1 is enabled."
 msgstr "Стандартната комбинация %1 е активирана."
 
-#: ui/ShortcutActionDelegate.qml:136
+#: ui/ShortcutActionDelegate.qml:145
 #, kde-format
 msgid "Default shortcut %1 is disabled."
 msgstr "Стандартната комбинация %1 е деактивирана."
 
-#: ui/ShortcutActionDelegate.qml:159
+#: ui/ShortcutActionDelegate.qml:168
 #, kde-format
 msgid "Custom shortcuts"
 msgstr "Потребителски клавишни комбинации"
 
-#: ui/ShortcutActionDelegate.qml:185
+#: ui/ShortcutActionDelegate.qml:195
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Delete shortcut"
 msgstr "Изтриване на клавишната комбинация"
 
-#: ui/ShortcutActionDelegate.qml:189
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Delete this shortcut"
-msgstr "Изтриване на клавишната комбинация"
-
-#: ui/ShortcutActionDelegate.qml:195
+#: ui/ShortcutActionDelegate.qml:206
 #, kde-format
 msgctxt "@action:button Add custom shortcut"
 msgid "Add…"
 msgstr "Добавяне…"
 
-#: ui/ShortcutActionDelegate.qml:196
+#: ui/ShortcutActionDelegate.qml:207
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Add custom shortcut"
 msgstr "Добавяне на потребителска клавишна комбинация"
 
-#: ui/ShortcutActionDelegate.qml:231
+#: ui/ShortcutActionDelegate.qml:243
 #, kde-format
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
 msgstr "Анулиране на заснемането на клавишна комбинация"
 
-#: ui/ShortcutActionDelegate.qml:235
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Cancel capturing of new shortcut"
-msgstr "Анулиране на заснемането на нова клавишна комбинация"
+#~ msgctxt "@info:tooltip %1 is the text of a custom command"
+#~ msgid "Edit command for %1"
+#~ msgstr "Редактиране на команда за %1"
+
+#~ msgctxt "@info:tooltip %1 is the text of a shortcut category"
+#~ msgid "Remove all shortcuts for %1"
+#~ msgstr "Премахване на всички клавишни комбинации за %1"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Undo deletion"
+#~ msgstr "Отмяна на изтриването"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Delete this shortcut"
+#~ msgstr "Изтриване на клавишната комбинация"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Cancel capturing of new shortcut"
+#~ msgstr "Анулиране на заснемането на нова клавишна комбинация"
