@@ -456,12 +456,16 @@ FocusScope {
                 )
 
                 // Single-click mode and single-clicked on the item or
-                // double-click mode and double-clicked on the item: open it
+                // double-click mode and double-clicked on the item: activate it
                 if (Qt.styleHints.singleClickActivation || doubleClickInProgress || mouse.source === Qt.MouseEventSynthesizedByQt) {
                     doubleClickInProgress = false
-                    let func = root.useListViewMode && mouse.button === Qt.LeftButton && hoveredItem.isDir ? main.doCd : dir.run;
-
-                    func(positioner.map(gridView.currentIndex));
+                    if (mouse.modifiers & Qt.AltModifier) {
+                        dir.openPropertiesDialog();
+                    } else if (root.useListViewMode && mouse.button === Qt.LeftButton && hoveredItem.isDir) {
+                        main.doCd(positioner.map(gridView.currentIndex));
+                    } else {
+                        dir.run(positioner.map(gridView.currentIndex));
+                    }
                     main.previouslySelectedItemIndex = gridView.currentIndex;
                     hoveredItem = null;
                 } else {
