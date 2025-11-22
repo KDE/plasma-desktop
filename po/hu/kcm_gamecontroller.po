@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2025-11-19 22:48+0100\n"
+"PO-Revision-Date: 2025-11-21 19:36+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -43,47 +43,47 @@ msgstr "Ismeretlen"
 #: device.cpp:18
 #, kde-format
 msgid "Game Controller"
-msgstr "Játékvezérlők"
+msgstr "Játékvezérlő"
 
 #: device.cpp:19
 #, kde-format
 msgid "Wheel"
-msgstr "Görgő"
+msgstr "Kormány"
 
 #: device.cpp:20
 #, kde-format
 msgid "Arcade Stick"
-msgstr ""
+msgstr "Játékgép-botkormány"
 
 #: device.cpp:21
 #, kde-format
 msgid "Flight Stick"
-msgstr ""
+msgstr "Botkormány"
 
 #: device.cpp:22
 #, kde-format
 msgid "Dance Pad"
-msgstr ""
+msgstr "Táncszőnyeg"
 
 #: device.cpp:23
 #, kde-format
 msgid "Guitar"
-msgstr ""
+msgstr "Gitár"
 
 #: device.cpp:24
 #, kde-format
 msgid "Drum Kit"
-msgstr ""
+msgstr "Dobkészlet"
 
 #: device.cpp:25
 #, kde-format
 msgid "Arcade Pad"
-msgstr ""
+msgstr "Arcade vezérlő"
 
 #: device.cpp:26
 #, kde-format
 msgid "Throttle"
-msgstr ""
+msgstr "Gáz"
 
 #: device.cpp:31
 #, kde-format
@@ -113,7 +113,7 @@ msgstr "Switch Pro"
 #: device.cpp:36
 #, kde-format
 msgid "Virtual"
-msgstr "Virtuális"
+msgstr "Virtual"
 
 #: device.cpp:37
 #, kde-format
@@ -184,7 +184,7 @@ msgstr "Vissza gomb"
 #, kde-format
 msgctxt "The guide game controller button"
 msgid "Guide button"
-msgstr ""
+msgstr "Útmutató gomb"
 
 #: device.cpp:54
 #, kde-format
@@ -196,52 +196,49 @@ msgstr "Start gomb"
 #, kde-format
 msgctxt "The button under the game controller's left analog stick"
 msgid "Left analog stick"
-msgstr ""
+msgstr "Bal analóg kar"
 
 #: device.cpp:56
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label Visual representation of the axis position for the right axis"
-#| msgid "Right position:"
+#, kde-format
 msgctxt "The button under the game controller's right analog stick"
 msgid "Right analog stick"
-msgstr "Jobb pozíció:"
+msgstr "Jobb analóg kar"
 
 #: device.cpp:57
 #, kde-format
 msgctxt "The game controller's left shoulder button"
 msgid "Left shoulder button"
-msgstr ""
+msgstr "Bal vállgomb"
 
 #: device.cpp:58
 #, kde-format
 msgctxt "The game controller's right shoulder button"
 msgid "Right shoulder button"
-msgstr ""
+msgstr "Jobb vállgomb"
 
 #: device.cpp:59
 #, kde-format
 msgctxt "The game controller's d-pad Up button"
 msgid "D-pad up button"
-msgstr "D-pad fel gomb"
+msgstr "D-pad fel gombja"
 
 #: device.cpp:60
 #, kde-format
 msgctxt "The game controller's d-pad down button"
 msgid "D-pad down button"
-msgstr "D-pad le gomb"
+msgstr "D-pad le gombja"
 
 #: device.cpp:61
 #, kde-format
 msgctxt "The game controller's d-pad left button"
 msgid "D-pad left button"
-msgstr "D-pad balra gomb"
+msgstr "D-pad bal gombja"
 
 #: device.cpp:62
 #, kde-format
 msgctxt "The game controller's d-pad right button"
 msgid "D-pad right button"
-msgstr "D-pad jobbra gomb"
+msgstr "D-pad jobb gombja"
 
 #: device.cpp:64
 #, kde-format
@@ -249,7 +246,7 @@ msgctxt ""
 "The game controller's miscellaneous button (Share on Xbox, mic on "
 "Playstation/Luna, capture on Switch)"
 msgid "Miscellaneous button"
-msgstr "Egyebek gomb"
+msgstr "Speciális gomb"
 
 #: device.cpp:65
 #, kde-format
@@ -279,7 +276,7 @@ msgstr "4. hátsó gomb"
 #, kde-format
 msgctxt "The button under the game controller's touchpad"
 msgid "Touchpad button"
-msgstr "Érintőtáblagomb"
+msgstr "Érintőtábla gombja"
 
 #: device.cpp:73
 #, kde-format
@@ -307,7 +304,7 @@ msgstr "Érvénytelen gombérték"
 #: device.cpp:246
 #, kde-format
 msgid "Not a controller"
-msgstr "Nem vezérlő"
+msgstr "Nem játékvezérlő"
 
 #: devicemodel.cpp:68
 #, kde-format
@@ -318,7 +315,7 @@ msgstr "%1 (%2)"
 #: ui/main.qml:26
 #, kde-format
 msgid "No game controllers found"
-msgstr "Nem találhatók kontrollerek."
+msgstr "Nem található játékvezérlő"
 
 #: ui/main.qml:27
 #, kde-format
@@ -336,13 +333,13 @@ msgstr "Eszköz:"
 msgctxt ""
 "@label game controller device type (wheel, joystick, game controller, etc.)"
 msgid "Device type:"
-msgstr "Eszköztípus:"
+msgstr "Eszköz típusa:"
 
 #: ui/main.qml:100
 #, kde-format
 msgctxt "@label game controller controller type (which brand, etc.)"
 msgid "Controller type:"
-msgstr "Vezérlő típusa:"
+msgstr "Játékvezérlő típusa:"
 
 #: ui/main.qml:116
 #, kde-format
