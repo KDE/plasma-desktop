@@ -967,8 +967,6 @@ FocusScope {
 
                 function rectangleSelect(x, y, width, height, rubberBand) {
                     const rows = (gridView.flow === GridView.FlowLeftToRight);
-                    const axis = rows ? gridView.width : gridView.height;
-                    const step = rows ? cellWidth : cellHeight;
                     const stripes = Math.ceil(gridView.count / positioner.perStripe);
                     const cWidth = gridView.cellWidth - (2 * Kirigami.Units.smallSpacing);
                     const cHeight = gridView.cellHeight - (2 * Kirigami.Units.smallSpacing);
@@ -1361,6 +1359,9 @@ FocusScope {
 
             folderModel: dir
 
+            optimalStripes: Math.floor((gridView.flow === GridView.FlowLeftToRight)
+                ? (gridView.height / gridView.cellHeight)
+                : (gridView.width / gridView.cellWidth))
             perStripe: Math.floor((gridView.flow === GridView.FlowLeftToRight)
                 ? (gridView.width / gridView.cellWidth)
                 : (gridView.height / gridView.cellHeight))

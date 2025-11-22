@@ -296,6 +296,7 @@ Q_SIGNALS:
     void showHiddenFilesChanged() const;
     void itemAboutToRename(const QString &filename) const;
     void itemRenamed(const QString &filename, const QString &newFilename) const;
+    void screenGeometryChanged() const;
     void selectionDone();
     void creatingNewItemsChanged() const;
 

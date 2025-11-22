@@ -2210,6 +2210,7 @@ void FolderModel::setApplet(Plasma::Applet *applet)
                 connect(containment, &Plasma::Containment::screenChanged, this, [this](int newScreen) {
                     setScreen(newScreen, SetScreenActions::MoveIcons);
                 });
+                connect(containment, &Plasma::Containment::screenGeometryChanged, this, &FolderModel::screenGeometryChanged);
             }
         }
 
