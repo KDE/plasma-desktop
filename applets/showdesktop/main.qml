@@ -6,14 +6,14 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.1
+import QtQuick
+import QtQuick.Layouts
 
 import org.kde.plasma.core as PlasmaCore
-import org.kde.kirigami 2.20 as Kirigami
-import org.kde.ksvg 1.0 as KSvg
+import org.kde.kirigami as Kirigami
+import org.kde.ksvg as KSvg
 
-import org.kde.plasma.plasmoid 2.0
+import org.kde.plasma.plasmoid
 
 PlasmoidItem {
     id: root
@@ -70,7 +70,7 @@ PlasmoidItem {
 
         onClicked: Plasmoid.activated();
 
-        Keys.onPressed: {
+        Keys.onPressed: event => {
             switch (event.key) {
             case Qt.Key_Space:
             case Qt.Key_Enter:
@@ -82,7 +82,7 @@ PlasmoidItem {
         }
 
         Accessible.name: Plasmoid.title
-        Accessible.description: toolTipSubText
+        Accessible.description: root.toolTipSubText
         Accessible.role: Accessible.Button
         Accessible.onPressAction: Plasmoid.activated()
 
@@ -96,7 +96,7 @@ PlasmoidItem {
 
         Kirigami.Icon {
             anchors.fill: parent
-            active: mouseArea.containsMouse || activeController.active
+            active: mouseArea.containsMouse || root.activeController.active
             source: Plasmoid.icon
         }
 
@@ -115,7 +115,7 @@ PlasmoidItem {
 
         // Active/not active indicator
         KSvg.FrameSvgItem {
-            Accessible.name: i18n("Minimize All Applet Active Indicator")
+            Accessible.name: i18n("Minimize All Applet Active Indicator")  // qmllint disable unqualified
             property var containerMargins: {
                 let item = this;
                 while (item.parent) {
@@ -132,10 +132,10 @@ PlasmoidItem {
                 property bool returnAllMargins: true
                 // The above makes sure margin is returned even for side margins
                 // that would be otherwise turned off.
-                topMargin: !vertical && containerMargins ? -containerMargins('top', returnAllMargins) : 0
-                leftMargin: vertical && containerMargins ? -containerMargins('left', returnAllMargins) : 0
-                rightMargin: vertical && containerMargins ? -containerMargins('right', returnAllMargins) : 0
-                bottomMargin: !vertical && containerMargins ? -containerMargins('bottom', returnAllMargins) : 0
+                topMargin: !root.vertical && containerMargins ? -containerMargins('top', returnAllMargins) : 0
+                leftMargin: root.vertical && containerMargins ? -containerMargins('left', returnAllMargins) : 0
+                rightMargin: root.vertical && containerMargins ? -containerMargins('right', returnAllMargins) : 0
+                bottomMargin: !root.vertical && containerMargins ? -containerMargins('bottom', returnAllMargins) : 0
             }
             imagePath: "widgets/tabbar"
             visible: opacity > 0
@@ -159,7 +159,7 @@ PlasmoidItem {
                 }
                 return prefix;
             }
-            opacity: activeController.active ? 1 : 0
+            opacity: root.activeController.active ? 1 : 0
 
             Behavior on opacity {
                 NumberAnimation {
@@ -173,7 +173,7 @@ PlasmoidItem {
             id: toolTip
             anchors.fill: parent
             mainText: Plasmoid.title
-            subText: toolTipSubText
+            subText: root.toolTipSubText
             textFormat: Text.PlainText
         }
     }

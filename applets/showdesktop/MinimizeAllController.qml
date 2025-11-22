@@ -7,18 +7,18 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQml 2.15
+import QtQml
 
-import org.kde.taskmanager 0.1 as TaskManager
+import org.kde.taskmanager as TaskManager
 
 Controller {
     id: controller
 
-    titleActive: i18nc("@action:button shown as tooltip and @action:inmenu", "Restore Windows")
-    titleInactive: i18nc("@action:button shown as tooltip and @action:inmenu", "Minimize All Windows")
+    titleActive: i18nc("@action:button shown as tooltip and @action:inmenu", "Restore Windows")  // qmllint disable unqualified
+    titleInactive: i18nc("@action:button shown as tooltip and @action:inmenu", "Minimize All Windows")  // qmllint disable unqualified
 
-    descriptionActive: i18nc("@info:tooltip shown as subtitle", "Restores the previously minimized windows")
-    descriptionInactive: i18nc("@info:tooltip shown as subtitle", "Shows the Desktop by minimizing all windows")
+    descriptionActive: i18nc("@info:tooltip shown as subtitle", "Restores the previously minimized windows")  // qmllint disable unqualified
+    descriptionInactive: i18nc("@info:tooltip shown as subtitle", "Shows the Desktop by minimizing all windows")  // qmllint disable unqualified
     
     active: Boolean(activeByActivityDesktop[activityDesktopId])
 
@@ -53,8 +53,8 @@ Controller {
             var aDId = tasksModel.data(tasksModel.activeTask, TaskManager.AbstractTasksModel.Activities) + "_" +
                 tasksModel.data(tasksModel.activeTask, TaskManager.AbstractTasksModel.VirtualDesktops)
             if (tasksModel.activeTask.valid) { // to suppress changing focus to non windows, such as the desktop
-                activeByActivityDesktop[aDId] = false;
-                activeByActivityDesktopChanged();
+                controller.activeByActivityDesktop[aDId] = false;
+                controller.activeByActivityDesktopChanged();
                 
                 controller.minimizedClients[aDId] = [];
             }
