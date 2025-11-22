@@ -5,15 +5,16 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-import QtQuick 2.15
-import QtQuick.Layouts 1.1
+pragma ComponentBehavior: Bound
 
-import org.kde.plasma.plasmoid 2.0
+import QtQuick
+
+import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.extras as PlasmaExtras
-import org.kde.draganddrop 2.0 as DragDrop
+import org.kde.draganddrop as DragDrop
 import plasma.applet.org.kde.plasma.trash as TrashPrivate
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 
 import org.kde.kcmutils as KCM
 import org.kde.config as KConfig
@@ -29,14 +30,14 @@ PlasmoidItem {
 
     property bool containsAcceptableDrag: false
 
-    Plasmoid.title: i18nc("@title the name of the Trash widget", "Trash")
+    Plasmoid.title: i18nc("@title the name of the Trash widget", "Trash") // qmllint disable unqualified
     toolTipSubText: {
         if (TrashPrivate.Trash.emptying) {
-            return i18nc("@info:status The trash is being emptied", "Emptying…");
+            return i18nc("@info:status The trash is being emptied", "Emptying…"); // qmllint disable unqualified
         } else if (hasContents) {
-            return i18ncp("@info:status The trash contains this many items in it", "One item", "%1 items", dirModel.count);
+            return i18ncp("@info:status The trash contains this many items in it", "One item", "%1 items", dirModel.count); // qmllint disable unqualified
         } else {
-            return i18nc("@info:status The trash is empty", "Empty");
+            return i18nc("@info:status The trash is empty", "Empty"); // qmllint disable unqualified
         }
     }
 
@@ -76,18 +77,18 @@ PlasmoidItem {
 
     Plasmoid.contextualActions: [
         PlasmaCore.Action {
-            text: i18nc("@action:inmenu Open the trash", "Open")
+            text: i18nc("@action:inmenu Open the trash", "Open") // qmllint disable unqualified
             icon.name: "document-open-symbolic"
             onTriggered: Plasmoid.activated()
         },
         PlasmaCore.Action {
-            text: i18nc("@action:inmenu Empty the trash", "Empty")
+            text: i18nc("@action:inmenu Empty the trash", "Empty") // qmllint disable unqualified
             icon.name: "trash-empty-symbolic"
-            enabled: hasContents && !TrashPrivate.Trash.emptying
+            enabled: root.hasContents && !TrashPrivate.Trash.emptying
             onTriggered: TrashPrivate.Trash.emptyTrash()
         },
         PlasmaCore.Action {
-            text: i18nc("@action:inmenu", "Trash Settings…")
+            text: i18nc("@action:inmenu", "Trash Settings…") // qmllint disable unqualified
             icon.name: "configure-symbolic"
             visible: KConfig.KAuthorized.authorizeControlModule("kcm_trash")
             onTriggered: KCM.KCMLauncher.open("kcm_trash")
@@ -114,10 +115,10 @@ PlasmoidItem {
         DragDrop.DropArea {
             anchors.fill: parent
             preventStealing: true
-            onDragEnter: root.containsAcceptableDrag = TrashPrivate.Trash.trashableUrls(event.mimeData.urls).length > 0
+            onDragEnter: event => root.containsAcceptableDrag = TrashPrivate.Trash.trashableUrls(event.mimeData.urls).length > 0
             onDragLeave: root.containsAcceptableDrag = false
 
-            onDrop: {
+            onDrop: event => {
                 root.containsAcceptableDrag = false
 
                 var trashableUrls = TrashPrivate.Trash.trashableUrls(event.mimeData.urls)
