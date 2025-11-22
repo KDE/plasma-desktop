@@ -114,7 +114,7 @@ void Positioner::setPerStripe(int perStripe)
             m_perStripe = perStripe;
             Q_EMIT perStripeChanged();
         }
-        if (m_enabled && (perStripeUpdated || resolutionUpdated)) {
+        if (m_enabled && (perStripeUpdated || resolutionUpdated) && !m_folderModel->unsortedModeOnDrop()) {
             const bool existingResolution = configurationHasResolution(m_resolution);
             if (existingResolution) {
                 loadAndApplyPositionsConfig();

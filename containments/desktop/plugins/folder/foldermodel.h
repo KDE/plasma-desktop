@@ -259,6 +259,8 @@ public:
 #endif
     QRectF screenGeometry();
 
+    bool unsortedModeOnDrop();
+
 Q_SIGNALS:
     void urlChanged() const;
     void listingCompleted() const;
@@ -314,6 +316,9 @@ private Q_SLOTS:
     void newFileMenuItemCreationStarted(const QUrl &url);
     void newFileMenuItemCreated(const QUrl &url);
     void newFileMenuItemRejected(const QUrl &url);
+
+private:
+    void setUnsortedModeOnDrop();
 
 private:
     struct DragImage {
@@ -380,6 +385,7 @@ private:
     QFileSystemWatcher *watcher;
     void addDirectoriesRecursively(const QString &resolvedNewUrl, QFileSystemWatcher *watcher);
     bool m_creatingNewItems = false;
+    bool m_unsortedModeOnDrop = false;
 
     /**
      * This property is used to save the current activity when FolderModel is initialized.

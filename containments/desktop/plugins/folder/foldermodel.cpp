@@ -368,6 +368,17 @@ void FolderModel::newFileMenuItemRejected(const QUrl &url)
     setCreatingNewItems(false);
 }
 
+void FolderModel::setUnsortedModeOnDrop()
+{
+    // The positioner will override old icon layout by
+    // sorted icon layout after drag and drop operation.
+    if (m_sortMode != -1) {
+        m_unsortedModeOnDrop = true;
+        setSortMode(-1);
+        m_unsortedModeOnDrop = false;
+    }
+}
+
 QString FolderModel::url() const
 {
     return m_url;
@@ -1286,7 +1297,7 @@ void FolderModel::drop(QQuickItem *target, QObject *dropEvent, int row, bool sho
             return;
         }
 
-        setSortMode(-1);
+        setUnsortedModeOnDrop();
 
         for (const auto &url : mimeData->urls()) {
             m_dropTargetPositions.insert(url.fileName(), dropPos);
@@ -1310,7 +1321,7 @@ void FolderModel::drop(QQuickItem *target, QObject *dropEvent, int row, bool sho
 
     if (m_usedByContainment && !m_screenMapper->sharedDesktops()) {
         if (isDropBetweenSharedViews(mimeData->urls(), dropTargetFolderUrl)) {
-            setSortMode(-1);
+            setUnsortedModeOnDrop();
             const QList<QUrl> urls = mimeData->urls();
             for (const auto &url : urls) {
                 m_dropTargetPositions.insert(url.fileName(), dropPos);
@@ -2258,6 +2269,11 @@ QRectF FolderModel::screenGeometry()
         }
     }
     return QRectF();
+}
+
+bool FolderModel::unsortedModeOnDrop()
+{
+    return m_unsortedModeOnDrop;
 }
 
 bool FolderModel::creatingNewItems() const
