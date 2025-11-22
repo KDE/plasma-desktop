@@ -306,9 +306,10 @@ PlasmaComponents3.ScrollView {
                 id: noMatchesPlaceholder
 
                 property bool searchRunning: false
+                property string lastQuery: "" // copy to avoid timing conflicts with visible binding
 
                 anchors.centerIn: parent
-                visible: searchField.text !== "" && runnerColumns.width < 1 && (!searchRunning || visible)
+                visible: lastQuery !== "" && runnerColumns.width < 1 && (!searchRunning || visible)
 
                 iconName: "edit-none"
                 text: i18nc("@info:status", "No matches")
@@ -326,6 +327,7 @@ PlasmaComponents3.ScrollView {
 
                     function onTextChanged() {
                         noMatchesPlaceholder.searchRunning = searchField.text !== ""
+                        noMatchesPlaceholder.lastQuery = searchField.text
                     }
                 }
             }
