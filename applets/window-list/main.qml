@@ -101,6 +101,8 @@ PlasmoidItem {
         id: windowListButton
 
         MenuButton {
+            id: menuButton
+
             Layout.minimumWidth: implicitWidth
             Layout.maximumWidth: implicitWidth
             Layout.fillHeight: Plasmoid.formFactor === PlasmaCore.Types.Horizontal
@@ -152,6 +154,25 @@ PlasmoidItem {
                     if (tasksModel.count > 0) {
                         tasksModel.requestActivate(tasksModel.makeModelIndex(model.index));
                     }
+                }
+            }
+
+            Timer {
+                id: hoverOpenTimer
+                interval: Plasmoid?.configuration?.hoverOpenDelay ?? 300
+                repeat: false
+                onTriggered: {
+                    if (tasksMenu?.status === PlasmaExtras.Menu.Closed) {
+                        tasksMenu.open()
+                    }
+                }
+            }
+
+            onHoveredChanged: {
+                if (hovered && Plasmoid.configuration.openOnHover) {
+                    hoverOpenTimer.start()
+                } else {
+                    hoverOpenTimer.stop()
                 }
             }
         }

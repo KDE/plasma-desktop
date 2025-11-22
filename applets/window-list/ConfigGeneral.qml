@@ -18,8 +18,8 @@ KCM.SimpleKCM {
 
     property bool cfg_showText: Plasmoid.configuration.showText
     property bool cfg_showIcon: Plasmoid.configuration.showIcon
-    property bool cfg_openOnHover: Plasmoid.configuration.openOnHover
-    property int cfg_hoverOpenDelay: Plasmoid.configuration.hoverOpenDelay
+    property alias cfg_openOnHover: openOnHoverCheckbox.checked
+    property alias cfg_hoverOpenDelay: hoverDelaySpinBox.value
 
     Kirigami.FormLayout {
         anchors.right: parent.right
@@ -103,9 +103,6 @@ KCM.SimpleKCM {
                 id: openOnHoverCheckbox
 
                 text: i18nc("@option:check open-on-hover is enabled, with the following delay:", "Enabled, with delay:")
-
-                checked: root.cfg_openOnHover
-                onToggled: root.cfg_openOnHover = checked
             }
 
             QQC2.SpinBox {
@@ -116,10 +113,6 @@ KCM.SimpleKCM {
                 stepSize: 50
 
                 enabled: root.cfg_openOnHover
-
-                value: root.cfg_hoverOpenDelay
-
-                onValueChanged: root.cfg_hoverOpenDelay = value
 
                 textFromValue: function(value, locale) {
                     return i18np("%1 ms", "%1 ms", value)
@@ -135,12 +128,6 @@ KCM.SimpleKCM {
                 }
 
                 Accessible.name: i18nc("@label:spinbox accessible", "Hover open delay %1", textFromValue(value))
-
-                KCM.SettingStateBinding {
-                    configObject: Plasmoid.configuration
-                    settingName: "hoverOpenDelay"
-                    extraEnabledConditions: root.cfg_openOnHover
-                }
             }
         }
     }

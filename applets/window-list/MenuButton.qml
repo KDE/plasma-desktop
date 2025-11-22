@@ -7,10 +7,10 @@
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
+
 import org.kde.plasma.core as PlasmaCore
 import org.kde.ksvg as KSvg
 import org.kde.plasma.components as PC3
-import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.plasmoid
 
@@ -27,18 +27,6 @@ AbstractButton {
 
     // needed since icon property can't hold QIcon, which the tasks manager gives us
     property alias iconSource: iconItem.source
-    property int hoverOpenDelay: Plasmoid?.configuration?.hoverOpenDelay ?? 300
-
-    Timer {
-        id: hoverOpenTimer
-        interval: controlRoot.hoverOpenDelay
-        repeat: false
-        onTriggered: {
-            if (tasksMenu?.status === PlasmaExtras.Menu.Closed) {
-                tasksMenu.open()
-            }
-        }
-    }
 
     background: Item {
         id: background
@@ -97,14 +85,6 @@ AbstractButton {
             color: controlRoot.down || controlRoot.hovered ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
             verticalAlignment: Text.AlignVCenter
             Layout.fillHeight: true
-        }
-    }
-
-    onHoveredChanged: {
-        if (hovered && Plasmoid.configuration.openOnHover) {
-            hoverOpenTimer.start()
-        } else {
-            hoverOpenTimer.stop()
         }
     }
 }
