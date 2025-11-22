@@ -558,12 +558,20 @@ FocusScope {
         Component {
             id: rubberBandObject
 
-            Folder.RubberBand {
+            Rectangle {
                 id: rubberBand
 
                 width: 0
                 height: 0
                 z: 99999
+
+                radius: Kirigami.Units.cornerRadius
+                border.color: Kirigami.Theme.highlightColor
+                color: Qt.alpha(border.color, 0.3)
+
+                function intersects(rect) {
+                    return x + width >= rect.x && y + height >= rect.y && rect.x + rect.width >= x && rect.y + rect.height >= y;
+                }
 
                 function close() {
                     opacityAnimation.restart();

@@ -16,7 +16,6 @@ target_sources(folderplugin PRIVATE
     placesmodel.cpp
     positioner.cpp
     previewpluginsmodel.cpp
-    rubberband.cpp
     subdialog.cpp
     viewpropertiesmenu.cpp
     wheelinterceptor.cpp
