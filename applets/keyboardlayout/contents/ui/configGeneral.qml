@@ -112,16 +112,5 @@ SimpleKCM {
             icon.name: "configure"
             onClicked: KCMLauncher.openSystemSettings("kcm_keyboard", "--tab=layouts")
         }
-
-        Component.onCompleted: {
-            // hide Keyboard Shortcuts tab
-            var appletConfiguration = app
-            while (appletConfiguration.parent) {
-                appletConfiguration = appletConfiguration.parent
-            }
-            if (appletConfiguration && typeof appletConfiguration.globalConfigModel !== "undefined") {
-                appletConfiguration.globalConfigModel.removeCategoryAt(0)
-            }
-        }
     }
 }
