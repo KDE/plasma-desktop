@@ -38,37 +38,33 @@ SimpleKCM {
             id: showFlag
             checked: root.cfg_displayStyle === 1
             onToggled: root.cfg_displayStyle = 1;
-            contentItem: Item {
-                implicitWidth: childrenRect.width + showFlag.indicator.width
-                implicitHeight: childrenRect.height
+            contentItem: RowLayout {
+                id: flagMissing
+                spacing: Kirigami.Units.smallSpacing
+                anchors.left: parent.left
+                anchors.leftMargin: showFlag.indicator.width + showFlag.spacing
 
                 // Deliberately using this instead of Image to preserve visual fidelity
                 // with what the widget will show
                 Kirigami.Icon {
                     id: flagImage
-                    width: Kirigami.Units.iconSizes.medium
-                    height: Kirigami.Units.iconSizes.medium
-                    anchors.right: parent.right
-                    anchors.verticalCenter: parent.verticalCenter
+                    implicitWidth: Kirigami.Units.iconSizes.medium
+                    implicitHeight: Kirigami.Units.iconSizes.medium
                     source: KCMKeyboard.Flags.getIcon(root.layoutShortName)
                     visible: valid
                 }
-                RowLayout {
-                    anchors.right: parent.right
-                    anchors.verticalCenter: parent.verticalCenter
-                    spacing: Kirigami.Units.smallSpacing
-                    width: visible ? implicitWidth : 0
-                    height: visible ? implicitHeight : 0
+
+                Kirigami.Icon {
+                    implicitWidth: Kirigami.Units.iconSizes.smallMedium
+                    implicitHeight: Kirigami.Units.iconSizes.smallMedium
+                    source: "emblem-warning"
                     visible: !flagImage.visible
 
-                    Kirigami.Icon {
-                        implicitWidth: Kirigami.Units.iconSizes.smallMedium
-                        implicitHeight: Kirigami.Units.iconSizes.smallMedium
-                        source: "emblem-warning"
-                    }
-                    Label {
-                        text: i18nc("@info:placeholder Make this translation as short as possible", "No flag available") // qmllint disable unqualified
-                    }
+                }
+                Label {
+                    text: i18nc("@info:placeholder Make this translation as short as possible", "No flag available") // qmllint disable unqualified
+                    visible: !flagImage.visible
+
                 }
             }
         }
@@ -77,27 +73,23 @@ SimpleKCM {
             id: showLabelOverFlag
             checked: root.cfg_displayStyle === 2
             onToggled: root.cfg_displayStyle = 2;
-            contentItem: Item {
-                implicitWidth: childrenRect.width + showLabelOverFlag.indicator.width
-                implicitHeight: childrenRect.height
-
+            contentItem: Kirigami.Icon {
                 // Deliberately using this instead of Image to preserve visual fidelity
                 // with what the widget will show
-                Kirigami.Icon {
-                    width: Kirigami.Units.iconSizes.medium
-                    height: Kirigami.Units.iconSizes.medium
+                id: labelOverFlagImage
+                width: Kirigami.Units.iconSizes.medium
+                height: Kirigami.Units.iconSizes.medium
+                anchors.left: parent.left
+                anchors.leftMargin: showLabelOverFlag.indicator.width + showLabelOverFlag.spacing
+                source: KCMKeyboard.Flags.getIcon(root.layoutShortName)
+                visible: valid
+
+                WorkspaceComponents.BadgeOverlay {
+                    anchors.bottom: parent.bottom
                     anchors.right: parent.right
-                    anchors.verticalCenter: parent.verticalCenter
-                    source: KCMKeyboard.Flags.getIcon(root.layoutShortName)
-                    visible: valid
 
-                    WorkspaceComponents.BadgeOverlay {
-                        anchors.bottom: parent.bottom
-                        anchors.right: parent.right
-
-                        text: showLabel.text
-                        icon: parent
-                    }
+                    text: showLabel.text
+                    icon: parent
                 }
             }
         }
