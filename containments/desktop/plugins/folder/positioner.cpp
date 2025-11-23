@@ -140,7 +140,20 @@ void Positioner::setPerStripe(int perStripe)
 
 QStringList Positioner::positions() const
 {
-    return m_positions;
+    QStringList positions;
+
+    if (m_positionsHeader.has_value()) {
+        positions.reserve(PositionsConstants::headerSize + m_positions.size() * PositionsConstants::bucketSize);
+        positions.append(QString::number(m_positionsHeader->numStripes));
+        positions.append(QString::number(m_positionsHeader->perStripe));
+        for (auto &&[filename, gridPos] : std::as_const(m_positions).asKeyValueRange()) {
+            positions.append(filename);
+            positions.append(QString::number(gridPos.stripe));
+            positions.append(QString::number(gridPos.pos));
+        }
+    }
+
+    return positions;
 }
 
 int Positioner::map(int row) const
@@ -359,7 +372,7 @@ void Positioner::reset()
 
     endResetModel();
 
-    m_positions = QStringList();
+    m_positions.clear();
     updatePositionsList();
     savePositionsConfig();
 }
@@ -494,16 +507,12 @@ int Positioner::move(const QVariantList &moves, bool save)
 
 void Positioner::updatePositionsList(int perStripeForPositions)
 {
-    QStringList positions;
-
     if (m_enabled && screenInUse() && m_perStripe > 0) {
         if (perStripeForPositions <= 0)
             perStripeForPositions = m_perStripe;
 
-        positions.reserve(PositionsConstants::headerSize + m_proxyToSource.size() * PositionsConstants::bucketSize);
-
-        positions.append(QString::number(1 + ((rowCount() - 1) / m_perStripe)));
-        positions.append(QString::number(m_perStripe));
+        m_positionsHeader.emplace(PositionsHeader{.numStripes = 1 + ((rowCount() - 1) / m_perStripe), .perStripe = m_perStripe});
+        m_positions.clear();
 
         QHashIterator<int, int> it(m_proxyToSource);
 
@@ -516,11 +525,11 @@ void Positioner::updatePositionsList(int perStripeForPositions)
                 return;
             }
 
-            positions.append(name);
-            positions.append(QString::number(qMax(0, it.key() / perStripeForPositions)));
-            positions.append(QString::number(qMax(0, it.key() % perStripeForPositions)));
+            m_positions[name] = {
+                .stripe = qMax(0, it.key() / perStripeForPositions),
+                .pos = qMax(0, it.key() % perStripeForPositions),
+            };
         }
-        m_positions = std::move(positions);
     }
 }
 
@@ -844,7 +853,7 @@ int Positioner::firstFreeRow() const
 void Positioner::convertFolderModelData()
 {
     // If no screen or no positions, we have nothing to convert
-    if (!screenInUse() || positionsEmpty()) {
+    if (!screenInUse() || m_positions.isEmpty()) {
         return;
     }
     // We were called while the source model is listing. Defer applying positions
@@ -871,54 +880,30 @@ void Positioner::convertFolderModelData()
     }
 
     // Restore positions for items that still fit.
-    iteratePositions([&](qsizetype offset) {
-        bool ok = false;
-
-        const int pos = m_positions.at(offset + PositionsConstants::posOffset).toInt(&ok);
-        if (!ok) {
-            return true;
-        }
-
-        if (pos <= m_perStripe) {
-            const QString name = m_positions.at(offset);
-            const int stripe = m_positions.at(offset + PositionsConstants::stripeOffset).toInt(&ok);
-            if (!ok) {
-                return true;
-            }
-
+    for (auto &&[name, gridPos] : std::as_const(m_positions).asKeyValueRange()) {
+        if (gridPos.pos <= m_perStripe) {
             if (!sourceIndices.contains(name)) {
-                return true;
+                continue;
             }
 
             const int sourceIndex = sourceIndices.value(name);
 
-            const int index = (stripe * m_perStripe) + pos;
+            const int index = (gridPos.stripe * m_perStripe) + gridPos.pos;
 
             if (m_proxyToSource.contains(index)) {
-                return true;
+                continue;
             }
 
             updateMaps(index, sourceIndex);
             sourceIndices.remove(name);
         }
-
-        return true;
-    });
+    }
 
     // Find new positions for items that didn't fit.
-    iteratePositions([&](qsizetype offset) {
-        bool ok = false;
-
-        const int pos = m_positions.at(offset + PositionsConstants::posOffset).toInt(&ok);
-        if (!ok) {
-            return true;
-        }
-
-        if (pos > m_perStripe) {
-            const QString name = m_positions.at(offset);
-
+    for (auto &&[name, gridPos] : std::as_const(m_positions).asKeyValueRange()) {
+        if (gridPos.pos > m_perStripe) {
             if (!sourceIndices.contains(name)) {
-                return true;
+                continue;
             }
 
             const int sourceIndex = sourceIndices.take(name);
@@ -931,9 +916,7 @@ void Positioner::convertFolderModelData()
 
             updateMaps(index, sourceIndex);
         }
-
-        return true;
-    });
+    }
 
     QHashIterator<QString, int> it(sourceIndices);
 
@@ -1002,7 +985,32 @@ void Positioner::loadAndApplyPositionsConfig(const QString &resolution)
         // The old configuration has commas with escape characters, so clean up those from the config
         auto confdata = loadConfigData();
         const QJsonDocument doc = QJsonDocument::fromJson(confdata.toUtf8());
-        m_positions = doc[resolutionToLoad].toVariant().toStringList();
+
+        const auto positions = doc[resolutionToLoad].toVariant().toStringList();
+        m_positionsHeader.reset();
+        m_positions.clear();
+        if (positions.size() >= PositionsConstants::headerSize && (positions.size() - PositionsConstants::headerSize) % PositionsConstants::bucketSize == 0) {
+            bool okNumStripes = false;
+            bool okPerStripe = false;
+            m_positionsHeader = {.numStripes = positions[0].toInt(&okNumStripes), .perStripe = positions[1].toInt(&okPerStripe)};
+            if (okNumStripes && okPerStripe) {
+                for (qsizetype offset = PositionsConstants::headerSize; offset < positions.size(); offset += PositionsConstants::bucketSize) {
+                    bool okStripe = false;
+                    bool okPos = false;
+                    const auto name = positions[offset + PositionsConstants::filenameOffset];
+                    const auto stripe = positions[offset + PositionsConstants::stripeOffset].toInt(&okStripe);
+                    const auto pos = positions[offset + PositionsConstants::posOffset].toInt(&okPos);
+                    if (!name.isEmpty() && okStripe && okPos) {
+                        m_positions[name] = {
+                            .stripe = stripe,
+                            .pos = pos,
+                        };
+                    }
+                }
+            } else {
+                m_positionsHeader.reset();
+            }
+        }
 
         convertFolderModelData();
     }
@@ -1021,7 +1029,7 @@ void Positioner::savePositionsConfig()
             }
         }
         // Append our new item
-        root.insert(m_resolution, QJsonArray::fromStringList(m_positions));
+        root.insert(m_resolution, QJsonArray::fromStringList(positions()));
 
         const QByteArray data = QJsonDocument(root).toJson(QJsonDocument::Compact);
         auto config = m_applet->config().group(QStringLiteral("General"));
@@ -1071,49 +1079,11 @@ QString Positioner::loadConfigData() const
     return confdata;
 }
 
-bool Positioner::positionsEmpty() const
-{
-    // Make sure we have at least one position and the items per row have 3 items: filename, row, stripe-pos
-    return m_positions.size() <= PositionsConstants::headerSize || (m_positions.size() - PositionsConstants::headerSize) % PositionsConstants::bucketSize != 0;
-}
-
-void Positioner::iteratePositions(auto &&callback)
-{
-    // This function requires that "positionsEmpty()" is already checked
-    Q_ASSERT(!positionsEmpty());
-
-    for (qsizetype i = PositionsConstants::headerSize; i < m_positions.size(); i += PositionsConstants::bucketSize) {
-        if (!callback(i + PositionsConstants::filenameOffset)) {
-            break;
-        }
-    }
-}
-
-qsizetype Positioner::findUrlInPositions(const QString &filename)
-{
-    qsizetype pos = -1;
-
-    if (filename.isEmpty() || positionsEmpty()) {
-        return pos;
-    }
-
-    iteratePositions([&](qsizetype offset) {
-        if (m_positions.at(offset + PositionsConstants::filenameOffset) == filename) {
-            pos = offset;
-            return false;
-        }
-        return true;
-    });
-
-    return pos;
-}
-
 void Positioner::onItemAboutToRename(const QString &filename)
 {
     // Store old item position
-    if (const qsizetype i = findUrlInPositions(filename); i > -1) {
-        // Copy 3 items into "m_toRename": filename, row, stripe-pos
-        m_toRename = m_positions.mid(i, PositionsConstants::bucketSize);
+    if (auto positionsIt = m_positions.constFind(filename); positionsIt != m_positions.constEnd()) {
+        m_toRename = {filename, positionsIt.value()};
     }
 }
 
@@ -1121,16 +1091,16 @@ void Positioner::onItemRenamed(const QString &filename, const QString &newFilena
 {
     updatePositionsList();
     // "m_toRename" has 3 items: filename, row, stripe-pos
-    if (m_toRename.size() == PositionsConstants::bucketSize && m_toRename.at(PositionsConstants::filenameOffset) == filename && filename != newFilename) {
+    if (m_toRename.has_value() && m_toRename->first == filename && filename != newFilename) {
         // Restore item position after rename
-        if (const qsizetype i = findUrlInPositions(newFilename); i > -1) {
+        if (auto positionsIt = m_positions.find(newFilename); positionsIt != m_positions.end()) {
             // Assign two items: row, stripe-pos
-            m_positions[i + PositionsConstants::stripeOffset] = m_toRename.at(PositionsConstants::stripeOffset);
-            m_positions[i + PositionsConstants::posOffset] = m_toRename.at(PositionsConstants::posOffset);
+            positionsIt->stripe = m_toRename->second.stripe;
+            positionsIt->pos = m_toRename->second.pos;
             convertFolderModelData();
         }
     }
-    m_toRename.clear();
+    m_toRename.reset();
     savePositionsConfig();
 }
 

@@ -88,7 +88,8 @@ void PositionerTest::tst_default_positions()
     QVERIFY(m_positioner->screenInUse());
     // Since we are not using configs, make sure our positions is clean before test
     m_positioner->reset();
-    m_positioner->m_positions = QStringList();
+    m_positioner->m_positionsHeader.reset();
+    m_positioner->m_positions.clear();
     m_positioner->m_perStripe = perStripe;
     m_positioner->convertFolderModelData();
     m_positioner->updateResolution();

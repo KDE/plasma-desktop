@@ -24,6 +24,16 @@ class Positioner : public QAbstractItemModel
     Q_PROPERTY(FolderModel *folderModel READ folderModel WRITE setFolderModel NOTIFY folderModelChanged)
     Q_PROPERTY(int perStripe READ perStripe WRITE setPerStripe NOTIFY perStripeChanged)
 
+    struct PositionsHeader {
+        int numStripes;
+        int perStripe;
+    };
+
+    struct GridPosition {
+        int stripe;
+        int pos;
+    };
+
 public:
     explicit Positioner(QObject *parent = nullptr);
     ~Positioner() override;
@@ -37,7 +47,7 @@ public:
     int perStripe() const;
     void setPerStripe(int perStripe);
 
-    QStringList positions() const; // Used in unit tests
+    QStringList positions() const;
 
     Q_INVOKABLE int map(int row) const;
 
@@ -142,9 +152,6 @@ private:
     void disconnectSignals(FolderModel *model);
     bool configurationHasResolution(const QString &resolution) const;
     QString loadConfigData() const;
-    bool positionsEmpty() const;
-    void iteratePositions(auto &&callback);
-    qsizetype findUrlInPositions(const QString &filename);
 
     bool m_enabled;
     FolderModel *m_folderModel;
@@ -154,7 +161,8 @@ private:
     QModelIndexList m_pendingChanges;
     bool m_ignoreNextTransaction;
 
-    QStringList m_positions;
+    std::optional<PositionsHeader> m_positionsHeader;
+    QHash<QString, GridPosition> m_positions;
     bool m_deferApplyPositions;
     QVariantList m_deferMovePositions;
 
@@ -166,7 +174,7 @@ private:
 
     Plasma::Applet *m_applet = nullptr;
 
-    QStringList m_toRename;
+    std::optional<QPair<QString, GridPosition>> m_toRename;
 
     friend class PositionerTest;
 };
