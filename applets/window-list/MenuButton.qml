@@ -56,7 +56,8 @@ AbstractButton {
     contentItem: RowLayout {
         Kirigami.Icon {
             id: iconItem
-            visible: source !== "" && iconItem.valid
+            visible: (Plasmoid.formFactor !== PlasmaCore.Types.Horizontal
+              || Plasmoid.configuration.showIcon) && source !== "" && iconItem.valid
 
             implicitWidth: Kirigami.Units.iconSizes.sizeForLabels
             implicitHeight: Kirigami.Units.iconSizes.sizeForLabels
@@ -65,7 +66,8 @@ AbstractButton {
         }
         // Fall back to a generic icon if the application doesn't provide a valid one
         Kirigami.Icon {
-            visible: !iconItem.valid
+            visible: (Plasmoid.formFactor !== PlasmaCore.Types.Horizontal
+              || Plasmoid.configuration.showIcon) && !iconItem.valid
 
             source: "preferences-system-windows"
 

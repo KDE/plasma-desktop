@@ -10,6 +10,10 @@
         <label>Whether to show the window title when the applet is used on a horizontal panel</label>
         <default>true</default>
     </entry>
+    <entry name="showIcon" type="Bool">
+      <label>Whether to show the icon on the Panel button</label>
+      <default>true</default>
+    </entry>
   </group>
 
 </kcfg>
