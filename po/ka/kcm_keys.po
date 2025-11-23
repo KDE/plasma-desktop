@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-22 00:44+0000\n"
-"PO-Revision-Date: 2025-11-21 04:01+0100\n"
+"PO-Revision-Date: 2025-11-22 10:02+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -268,20 +268,19 @@ msgstr "თქვენს ძებნას პასუხები არ �
 #, kde-format
 msgctxt "@info"
 msgid "These shortcuts will be deleted when changes are applied."
-msgstr ""
+msgstr "ცვლილებების გადატარებისას ეს მალსახმობები წაიშლება."
 
 #: ui/main.qml:362
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo"
-msgstr ""
+msgstr "დაბრუნება"
 
 #: ui/main.qml:363
-#, fuzzy, kde-format
-#| msgid "No default shortcuts"
+#, kde-format
 msgctxt "@action:button"
 msgid "Undo deleting shortcuts"
-msgstr "ნაგულისხმევი მალსახმობების გარეშე"
+msgstr "მალსახმობების წაშლის გაუქმება"
 
 #: ui/main.qml:399
 #, kde-format

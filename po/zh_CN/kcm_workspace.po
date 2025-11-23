@@ -45,7 +45,7 @@ msgstr "允许 Plasma 显示："
 #, kde-format
 msgctxt "Part of the sentence 'Allow Plasma to show panel and widget tooltips'"
 msgid "Panel and widget tooltips"
-msgstr "面板和挂件悬停信息"
+msgstr "面板和小部件悬停信息"
 
 #: ui/main.qml:69
 #, kde-format
@@ -55,8 +55,8 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
-"允许所有 Plasma 面板和桌面挂件在光标悬停时显示描述性工具提示。此设置对悬停在"
-"单个按钮和其他用户界面元素上时显示的悬停信息没有影响。"
+"允许所有 Plasma 面板和桌面小部件在光标悬停时显示描述性工具提示。此设置对悬停"
+"在单个按钮和其他用户界面元素上时显示的悬停信息没有影响。"
 
 #: ui/main.qml:77
 #, kde-format
@@ -71,8 +71,8 @@ msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
-"允许所有 Plasma 挂件在音量、亮度发生更改或音频设备发生切换时显示屏显 (OSD) 弹"
-"窗。"
+"允许所有 Plasma 小部件在音量、亮度发生更改或音频设备发生切换时显示屏显 (OSD) "
+"弹窗。"
 
 #: ui/main.qml:94
 #, kde-format
@@ -349,14 +349,14 @@ msgstr "启用中键点击粘贴选中内容"
 #: workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display large panel and widget tooltips"
-msgstr "显示大面板和挂件的悬停信息"
+msgstr "显示大面板和小部件的悬停信息"
 
 #. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:10
 #, kde-format
 msgid ""
 "Allow Plasma widgets to display large panel and widget tooltips on hover"
-msgstr "允许 Plasma 挂件在光标悬停时显示大面板和挂件悬停信息"
+msgstr "允许 Plasma 小部件在光标悬停时显示大面板和小部件悬停信息"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
@@ -370,7 +370,7 @@ msgstr "显示反映状态变化的小弹窗"
 msgid ""
 "Allow Plasma widgets to display small popups for status changes such as "
 "brightness or volume"
-msgstr "允许 Plasma 挂件在亮度或音量等发生变化时显示小弹窗"
+msgstr "允许 Plasma 小部件在亮度或音量等发生变化时显示小弹窗"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21

@@ -2,21 +2,21 @@
 # Copyright (C) 2006, 2011 This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Sveinn í Felli <sveinki@nett.is>, 2008, 2010, 2011, 2016.
+# SPDX-FileCopyrightText: 2008, 2010, 2011, 2016, 2025 Sveinn í Felli <sveinki@nett.is>
 # SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2025-10-25 12:25+0000\n"
-"Last-Translator: Gummi <gudmundure@gmail.com>\n"
-"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2025-11-22 09:41+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -126,12 +126,10 @@ msgid "Reset selected options for this group"
 msgstr "Endurstilla valda valkosti fyrir þennan hóp"
 
 #: ui/LayoutDialog.qml:22
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Layout"
+#, kde-format
 msgctxt "@title:window"
 msgid "Set Layout"
-msgstr "Lyklaborðsskipan"
+msgstr "Stilla framsetningu"
 
 #: ui/LayoutDialog.qml:22
 #, kde-format
@@ -412,40 +410,30 @@ msgid "or"
 msgstr "eða"
 
 #: ui/main_phone.qml:36
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Layout"
+#, kde-format
 msgid "Model & Layout"
-msgstr "Bæta við lyklaborðsskipan"
+msgstr "Gerð og framsetning"
 
 #: ui/main_phone.qml:43
-#, fuzzy, kde-format
-#| msgctxt "@title:group"
-#| msgid "Keyboard model:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Keyboard Model"
-msgstr "Gerð lyklaborðs:"
+msgstr "Gerð lyklaborðs"
 
 #: ui/main_phone.qml:72
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Layout"
+#, kde-format
 msgctxt "@option:check"
 msgid "Custom Layout"
-msgstr "Lyklaborðsskipan"
+msgstr "Sérsniðin framsetning"
 
 #: ui/main_phone.qml:96
-#, fuzzy, kde-format
-#| msgctxt "@option:textbox"
-#| msgid "Change layout:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Layout..."
-msgstr "Skipta um skipan:"
+msgstr "Skipta um framsetningu..."
 
 #: ui/main_phone.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@label:checkbox accessible"
-#| msgid "Key repeat"
+#, kde-format
 msgctxt "@title:group"
 msgid "Key Repeat"
 msgstr "Endurtekning lykla"
@@ -454,7 +442,7 @@ msgstr "Endurtekning lykla"
 #, kde-format
 msgctxt "@option:check"
 msgid "Customize Repeat"
-msgstr ""
+msgstr "Sérsníða endurtekningu"
 
 #: ui/Switching.qml:17
 #, kde-format

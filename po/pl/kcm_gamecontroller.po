@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2025-08-30 08:04+0200\n"
+"PO-Revision-Date: 2025-11-22 21:24+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: axesmodel.cpp:122 hatmodel.cpp:80
 #, kde-format
@@ -137,22 +137,19 @@ msgid "NVidia Shield"
 msgstr "NVidia Shield"
 
 #: device.cpp:41
-#, fuzzy, kde-format
-#| msgid "Switch Left Joycon"
+#, kde-format
 msgid "Switch Left Joy-Con"
-msgstr "Lewy Joycon Switcha"
+msgstr "Lewy Joy-Con Switcha"
 
 #: device.cpp:42
-#, fuzzy, kde-format
-#| msgid "Switch Right Joycon"
+#, kde-format
 msgid "Switch Right Joy-Con"
-msgstr "Prawy Joycon Switcha"
+msgstr "Prawy Joy-Con Switcha"
 
 #: device.cpp:43
-#, fuzzy, kde-format
-#| msgid "Switch Paired Joycon"
+#, kde-format
 msgid "Switch Paired Joy-Con"
-msgstr "Sparowany Joycon Switcha"
+msgstr "Sparowany Joy-Con Switcha"
 
 #: device.cpp:48
 #, kde-format

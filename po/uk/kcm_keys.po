@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-22 00:44+0000\n"
-"PO-Revision-Date: 2025-11-21 12:51+0200\n"
+"PO-Revision-Date: 2025-11-22 15:20+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -269,20 +269,19 @@ msgstr "Не знайдено відповідників критеріям по
 #, kde-format
 msgctxt "@info"
 msgid "These shortcuts will be deleted when changes are applied."
-msgstr ""
+msgstr "Ці скорочення буде вилучено, коли зміни буде застосовано."
 
 #: ui/main.qml:362
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo"
-msgstr ""
+msgstr "Скасувати"
 
 #: ui/main.qml:363
-#, fuzzy, kde-format
-#| msgid "No default shortcuts"
+#, kde-format
 msgctxt "@action:button"
 msgid "Undo deleting shortcuts"
-msgstr "Немає типових скорочень"
+msgstr "Скасувати вилучення скорочень"
 
 #: ui/main.qml:399
 #, kde-format

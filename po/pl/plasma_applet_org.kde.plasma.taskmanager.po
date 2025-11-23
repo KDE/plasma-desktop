@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-18 00:45+0000\n"
-"PO-Revision-Date: 2025-08-16 07:19+0200\n"
+"PO-Revision-Date: 2025-11-22 21:25+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: backend.cpp:284
 #, kde-format
@@ -131,12 +131,10 @@ msgid "Hide other windows when hovering over previews"
 msgstr "Ukryj pozostałe okna po najechaniu na podgląd"
 
 #: package/contents/ui/ConfigAppearance.qml:54
-#, fuzzy, kde-format
-#| msgctxt "@option:check section General"
-#| msgid "Hide other windows when hovering over previews"
+#, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over tooltips"
-msgstr "Ukryj pozostałe okna po najechaniu na podgląd"
+msgstr "Ukryj pozostałe okna po najechaniu na wskazówki"
 
 #: package/contents/ui/ConfigAppearance.qml:59
 #, kde-format
@@ -477,11 +475,7 @@ msgid "Brings it to the current virtual desktop"
 msgstr "Przywołuje je do bieżącego pulpitu wirtualnego"
 
 #: package/contents/ui/ConfigBehavior.qml:205
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label:listbox Part of a sentence: 'Scrolling behavior does nothing/"
-#| "cycles through tasks/cycles through the selected task's windows'"
-#| msgid "Scrolling behavior:"
+#, kde-format
 msgctxt ""
 "@label:listbox Part of a sentence: 'Scrolling behavior does nothing/cycles "
 "through tasks/cycles through the selected task's windows/adjusts the hovered "
@@ -512,16 +506,12 @@ msgid "Cycles through the hovered task’s windows"
 msgstr "Krąży pomiędzy zadaniami okna pod wskaźnikiem"
 
 #: package/contents/ui/ConfigBehavior.qml:212
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through "
-#| "the hovered task's windows'"
-#| msgid "Cycles through the hovered task’s windows"
+#, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling behavior adjusts the hovered "
 "task’s volume'"
 msgid "Adjusts the hovered task’s volume"
-msgstr "Krąży pomiędzy zadaniami okna pod wskaźnikiem"
+msgstr "Dostosowuj głośność zadania pod wskaźnikiem"
 
 #: package/contents/ui/ConfigBehavior.qml:220
 #, kde-format

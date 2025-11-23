@@ -2,21 +2,21 @@
 # Copyright (C) 2010 This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Sveinn í Felli <sveinki@nett.is>, 2008, 2009, 2010, 2011, 2022.
+# SPDX-FileCopyrightText: 2008, 2009, 2010, 2011, 2022, 2025 Sveinn í Felli <sveinki@nett.is>
 # SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-18 00:45+0000\n"
-"PO-Revision-Date: 2025-10-25 13:14+0000\n"
-"Last-Translator: Gummi <gudmundure@gmail.com>\n"
-"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2025-11-22 09:44+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -133,12 +133,10 @@ msgid "Hide other windows when hovering over previews"
 msgstr "Fela aðra glugga þegar sveimað er yfir forskoðun"
 
 #: package/contents/ui/ConfigAppearance.qml:54
-#, fuzzy, kde-format
-#| msgctxt "@option:check section General"
-#| msgid "Hide other windows when hovering over previews"
+#, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over tooltips"
-msgstr "Fela aðra glugga þegar sveimað er yfir forskoðun"
+msgstr "Fela aðra glugga þegar sveimað er yfir vísbendingum"
 
 #: package/contents/ui/ConfigAppearance.qml:59
 #, kde-format
@@ -479,11 +477,7 @@ msgid "Brings it to the current virtual desktop"
 msgstr "Færir á núverandi sýndarskjáborð"
 
 #: package/contents/ui/ConfigBehavior.qml:205
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label:listbox Part of a sentence: 'Scrolling behavior does nothing/"
-#| "cycles through tasks/cycles through the selected task's windows'"
-#| msgid "Scrolling behavior:"
+#, kde-format
 msgctxt ""
 "@label:listbox Part of a sentence: 'Scrolling behavior does nothing/cycles "
 "through tasks/cycles through the selected task's windows/adjusts the hovered "

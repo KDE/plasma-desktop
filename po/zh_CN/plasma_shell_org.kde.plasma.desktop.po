@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-19 00:44+0000\n"
+"POT-Creation-Date: 2025-11-23 00:44+0000\n"
 "PO-Revision-Date: 2024-04-23 19:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -98,50 +98,50 @@ msgctxt "@info:tooltip %1 url"
 msgid "Open website %1"
 msgstr "打开网站 %1"
 
-#: contents/configuration/AboutPlugin.qml:145
+#: contents/configuration/AboutPlugin.qml:146
 #, kde-format
 msgctxt "@title:group"
 msgid "Website"
 msgstr "网站"
 
-#: contents/configuration/AboutPlugin.qml:156
+#: contents/configuration/AboutPlugin.qml:157
 #, kde-format
 msgctxt "@title:group"
 msgid "Get Help"
 msgstr "获取帮助"
 
-#: contents/configuration/AboutPlugin.qml:164
+#: contents/configuration/AboutPlugin.qml:165
 #, kde-format
 msgid "Report an issue"
 msgstr "报告问题"
 
-#: contents/configuration/AboutPlugin.qml:171
+#: contents/configuration/AboutPlugin.qml:172
 #, kde-format
 msgid "Copyright"
 msgstr "版权信息"
 
-#: contents/configuration/AboutPlugin.qml:190
+#: contents/configuration/AboutPlugin.qml:191
 #, kde-format
 msgid "License: %1"
 msgstr "许可证：%1"
 
-#: contents/configuration/AboutPlugin.qml:196
+#: contents/configuration/AboutPlugin.qml:197
 #, kde-format
 msgctxt "@action:button"
 msgid "Read License"
 msgstr "查看许可证"
 
-#: contents/configuration/AboutPlugin.qml:210
+#: contents/configuration/AboutPlugin.qml:211
 #, kde-format
 msgid "Authors"
 msgstr "作者"
 
-#: contents/configuration/AboutPlugin.qml:223
+#: contents/configuration/AboutPlugin.qml:224
 #, kde-format
 msgid "Credits"
 msgstr "致谢"
 
-#: contents/configuration/AboutPlugin.qml:237
+#: contents/configuration/AboutPlugin.qml:238
 #, kde-format
 msgid "Translators"
 msgstr "翻译人员"
@@ -328,7 +328,7 @@ msgstr "间隔"
 #, kde-format
 msgctxt "@action:menu add a widget"
 msgid "Widgets…"
-msgstr "挂件…"
+msgstr "小部件…"
 
 #: contents/configuration/PanelConfiguration.qml:163
 #, kde-format
@@ -626,7 +626,7 @@ msgstr "%1 (主要)"
 #: contents/explorer/AppletAlternatives.qml:70
 #, kde-format
 msgid "Alternative Widgets"
-msgstr "替代挂件"
+msgstr "替代小部件"
 
 #: contents/explorer/AppletDelegate.qml:28
 #, kde-format
@@ -637,7 +637,7 @@ msgstr "添加 %1"
 #: contents/explorer/AppletDelegate.qml:47
 #, kde-format
 msgid "Unsupported Widget"
-msgstr "不支持的挂件"
+msgstr "不支持的小部件"
 
 #: contents/explorer/AppletDelegate.qml:202
 #, kde-format
@@ -650,7 +650,7 @@ msgstr "新！"
 msgctxt "@info:other accessible for badge showing applet count"
 msgid "%1 widget active"
 msgid_plural "%1 widgets active"
-msgstr[0] "%1 个挂件已激活"
+msgstr[0] "%1 个小部件已激活"
 
 #: contents/explorer/AppletDelegate.qml:205
 #, kde-format
@@ -673,13 +673,13 @@ msgstr "标记为卸载"
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Cancel pending uninstallation for widget %1"
-msgstr "取消挂件 %1 的待定卸载操作"
+msgstr "取消小部件 %1 的待定卸载操作"
 
 #: contents/explorer/AppletDelegate.qml:223
 #, kde-format
 msgctxt "@action:button accessible only, %1 is widget name"
 msgid "Mark widget %1 for uninstallation. Requires confirmation"
-msgstr "标记挂件 %1 为卸载。需要确认"
+msgstr "标记小部件 %1 为卸载。需要确认"
 
 #: contents/explorer/AppletDelegate.qml:265
 #, kde-format
@@ -693,42 +693,42 @@ msgctxt ""
 "name"
 msgid "Remove running instance of widget %2"
 msgid_plural "Remove all %1 running instances of widget %2"
-msgstr[0] "移除所有 %2 挂件的 %1 个正在运行的的实例"
+msgstr[0] "移除所有 %2 小部件的 %1 个正在运行的的实例"
 
 #: contents/explorer/WidgetExplorer.qml:140
 #: contents/explorer/WidgetExplorer.qml:223
 #, kde-format
 msgid "All Widgets"
-msgstr "所有挂件"
+msgstr "所有小部件"
 
 #: contents/explorer/WidgetExplorer.qml:169
 #, kde-format
 msgid "Widgets"
-msgstr "挂件"
+msgstr "小部件"
 
 #: contents/explorer/WidgetExplorer.qml:178
 #, kde-format
 msgctxt "@action:button The word 'new' refers to widgets"
 msgid "Get New…"
-msgstr "获取新挂件…"
+msgstr "获取新小部件…"
 
 #: contents/explorer/WidgetExplorer.qml:179
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Widgets…"
-msgstr "获取新挂件…"
+msgstr "获取新小部件…"
 
 #: contents/explorer/WidgetExplorer.qml:192
 #, kde-format
 msgctxt "@action:button accessible for close button"
 msgid "Close Widget Explorer"
-msgstr "关闭挂件浏览器"
+msgstr "关闭小部件浏览器"
 
 #: contents/explorer/WidgetExplorer.qml:208
 #, kde-format
 msgctxt "@label:textbox accessible"
 msgid "Search through widgets"
-msgstr "搜索挂件"
+msgstr "搜索小部件"
 
 #: contents/explorer/WidgetExplorer.qml:237
 #, kde-format
@@ -740,17 +740,17 @@ msgstr "类别"
 msgctxt "@action:button uninstall widgets in widget explorer"
 msgid "Uninstall (%1 Widget)"
 msgid_plural "Uninstall (%1 Widgets)"
-msgstr[0] "卸载 (%1 个挂件)"
+msgstr[0] "卸载 (%1 个小部件)"
 
 #: contents/explorer/WidgetExplorer.qml:388
 #, kde-format
 msgid "No widgets matched the search terms"
-msgstr "没有匹配搜索条件的挂件"
+msgstr "没有匹配该搜索条件的小部件"
 
 #: contents/explorer/WidgetExplorer.qml:388
 #, kde-format
 msgid "No widgets available"
-msgstr "没有可用的挂件"
+msgstr "没有可用的小部件"
 
 #: contents/lockscreen/config.qml:24
 #, kde-format

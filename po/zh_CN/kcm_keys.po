@@ -238,28 +238,22 @@ msgid "Export %1"
 msgstr "导出 %1"
 
 #: ui/main.qml:231
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible %1 is the name of a custom command"
-#| msgid "Edit command for %1"
+#, kde-format
 msgctxt "@action:button %1 is the name of a custom command"
 msgid "Edit command for %1"
-msgstr "编辑 %1 的命令"
+msgstr ""
 
 #: ui/main.qml:258
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible %1 is the name of a shortcut category"
-#| msgid "Remove all shortcuts for %1"
+#, kde-format
 msgctxt "@action:button %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
-msgstr "移除 %1 的所有快捷键"
+msgstr ""
 
 #: ui/main.qml:280
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible"
-#| msgid "Undo deletion"
+#, kde-format
 msgctxt "@action:button"
 msgid "Undo deletion"
-msgstr "撤销删除"
+msgstr ""
 
 #: ui/main.qml:341
 #, kde-format
@@ -279,11 +273,10 @@ msgid "Undo"
 msgstr ""
 
 #: ui/main.qml:363
-#, fuzzy, kde-format
-#| msgid "No default shortcuts"
+#, kde-format
 msgctxt "@action:button"
 msgid "Undo deleting shortcuts"
-msgstr "没有默认快捷键"
+msgstr ""
 
 #: ui/main.qml:399
 #, kde-format
@@ -432,11 +425,10 @@ msgid "Collapse"
 msgstr ""
 
 #: ui/ShortcutActionDelegate.qml:32
-#, fuzzy, kde-format
-#| msgid "No active shortcuts"
+#, kde-format
 msgctxt "@action:button"
 msgid "Expand to configure shortcuts"
-msgstr "没有活动快捷键"
+msgstr ""
 
 #: ui/ShortcutActionDelegate.qml:38
 #, kde-format
@@ -506,23 +498,3 @@ msgstr "添加自定义快捷键"
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
 msgstr "取消捕获快捷键"
-
-#~ msgctxt "@info:tooltip %1 is the text of a custom command"
-#~ msgid "Edit command for %1"
-#~ msgstr "编辑 %1 的命令"
-
-#~ msgctxt "@info:tooltip %1 is the text of a shortcut category"
-#~ msgid "Remove all shortcuts for %1"
-#~ msgstr "移除 %1 的所有快捷键"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Undo deletion"
-#~ msgstr "撤销删除"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Delete this shortcut"
-#~ msgstr "删除此快捷键"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Cancel capturing of new shortcut"
-#~ msgstr "取消捕获新快捷键"
