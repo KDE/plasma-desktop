@@ -4,13 +4,13 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
-import QtQuick.Controls 2.15
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls
 
-import org.kde.kirigami 2.20 as Kirigami
-import org.kde.plasma.workspace.keyboardlayout 1.0
-import org.kde.plasma.workspace.components 2.0 as WorkspaceComponents
+import org.kde.kirigami as Kirigami
+import org.kde.plasma.workspace.keyboardlayout
+import org.kde.plasma.workspace.components as WorkspaceComponents
 import org.kde.plasma.private.kcm_keyboard as KCMKeyboard
 import org.kde.kcmutils
 
@@ -28,16 +28,16 @@ SimpleKCM {
     Kirigami.FormLayout {
         RadioButton {
             id: showLabel
-            Kirigami.FormData.label: i18n("Display style:")
+            Kirigami.FormData.label: i18n("Display style:") // qmllint disable unqualified
             text: root.displayName.length > 0 ? root.displayName: root.layoutShortName
-            checked: cfg_displayStyle === 0
-            onToggled: cfg_displayStyle = 0;
+            checked: root.cfg_displayStyle === 0
+            onToggled: root.cfg_displayStyle = 0;
         }
 
         RadioButton {
             id: showFlag
-            checked: cfg_displayStyle === 1
-            onToggled: cfg_displayStyle = 1;
+            checked: root.cfg_displayStyle === 1
+            onToggled: root.cfg_displayStyle = 1;
             contentItem: Item {
                 implicitWidth: childrenRect.width + showFlag.indicator.width
                 implicitHeight: childrenRect.height
@@ -67,7 +67,7 @@ SimpleKCM {
                         source: "emblem-warning"
                     }
                     Label {
-                        text: i18nc("@info:placeholder Make this translation as short as possible", "No flag available")
+                        text: i18nc("@info:placeholder Make this translation as short as possible", "No flag available") // qmllint disable unqualified
                     }
                 }
             }
@@ -75,8 +75,8 @@ SimpleKCM {
 
         RadioButton {
             id: showLabelOverFlag
-            checked: cfg_displayStyle === 2
-            onToggled: cfg_displayStyle = 2;
+            checked: root.cfg_displayStyle === 2
+            onToggled: root.cfg_displayStyle = 2;
             contentItem: Item {
                 implicitWidth: childrenRect.width + showLabelOverFlag.indicator.width
                 implicitHeight: childrenRect.height
@@ -107,8 +107,8 @@ SimpleKCM {
         }
 
         Button {
-            Kirigami.FormData.label: i18n("Layouts:")
-            text: i18n("Configure…")
+            Kirigami.FormData.label: i18n("Layouts:") // qmllint disable unqualified
+            text: i18n("Configure…") // qmllint disable unqualified
             icon.name: "configure"
             onClicked: KCMLauncher.openSystemSettings("kcm_keyboard", "--tab=layouts")
         }

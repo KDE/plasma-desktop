@@ -2,16 +2,16 @@
     SPDX-FileCopyrightText: 2020 Andrey Butirsky <butirsky@gmail.com>
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
-import QtQuick 2.15
-import Qt.labs.platform 1.1
+import QtQuick
 
-import org.kde.plasma.plasmoid 2.0
+import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
-import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.plasma.workspace.components 2.0
+import org.kde.plasma.components as PlasmaComponents3
+import org.kde.plasma.workspace.components
 import org.kde.plasma.private.kcm_keyboard as KCMKeyboard
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 
 PlasmoidItem {
     id: root
@@ -20,15 +20,19 @@ PlasmoidItem {
 
     preferredRepresentation: fullRepresentation
     toolTipMainText: Plasmoid.title
-    toolTipSubText: fullRepresentationItem ? fullRepresentationItem.layoutNames.longName : ""
+    toolTipSubText: "" // proper subtext is set by fullRepresentation
 
-    property bool inEmbeddedContainment: Plasmoid.containment.containmentType === PlasmaCore.Containment.CustomEmbedded
+    readonly property bool inEmbeddedContainment: Plasmoid.containment.containmentType === PlasmaCore.Containment.CustomEmbedded
 
     fullRepresentation: KeyboardLayoutSwitcher {
         id: switcher
 
         hoverEnabled: true
-        Plasmoid.status: hasMultipleKeyboardLayouts ? PlasmaCore.Types.ActiveStatus : inEmbeddedContainment ? PlasmaCore.Types.HiddenStatus : PlasmaCore.Types.PassiveStatus
+        Plasmoid.status: hasMultipleKeyboardLayouts ? PlasmaCore.Types.ActiveStatus : root.inEmbeddedContainment ? PlasmaCore.Types.HiddenStatus : PlasmaCore.Types.PassiveStatus
+
+        Binding {
+            root.toolTipSubText: switcher.layoutNames.longName
+        }
 
         PlasmaCore.ToolTipArea {
             anchors.fill: parent
@@ -40,10 +44,14 @@ PlasmoidItem {
             id: actionsInstantiator
             model: switcher.keyboardLayout.layoutsList
             delegate: PlasmaCore.Action {
-                text: modelData.longName
-                icon.icon: KCMKeyboard.Flags.getIcon(modelData.shortName)
+                required property string longName
+                required property string shortName
+                required property int index
+
+                text: longName
+                icon.icon: KCMKeyboard.Flags.getIcon(shortName)
                 onTriggered: {
-                    layoutSelected(index);
+                    root.layoutSelected(index);
                 }
             }
             onObjectAdded: (index, object) => {
@@ -62,6 +70,14 @@ PlasmoidItem {
             }
         }
 
+        Connections {
+            target: Plasmoid
+
+            function onActivated() {
+                switcher.keyboardLayout.switchToNextLayout()
+            }
+        }
+
         Kirigami.Icon {
             id: flag
 
@@ -69,8 +85,8 @@ PlasmoidItem {
 
             visible: valid && (Plasmoid.configuration.displayStyle === 1 || Plasmoid.configuration.displayStyle === 2)
 
-            active: containsMouse
-            source: KCMKeyboard.Flags.getIcon(layoutNames.shortName)
+            active: switcher.containsMouse
+            source: KCMKeyboard.Flags.getIcon(switcher.layoutNames.shortName)
 
             BadgeOverlay {
                 anchors.bottom: parent.bottom
@@ -96,12 +112,10 @@ PlasmoidItem {
             fontSizeMode: Text.Fit
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
-            text: layoutNames.displayName || layoutNames.shortName
+            text: switcher.layoutNames.displayName || switcher.layoutNames.shortName
             textFormat: Text.PlainText
         }
     }
-
-    Plasmoid.onActivated: fullRepresentationItem.keyboardLayout.switchToNextLayout()
 
     function actionTriggered(actionName) {
         const layoutIndex = parseInt(actionName);
