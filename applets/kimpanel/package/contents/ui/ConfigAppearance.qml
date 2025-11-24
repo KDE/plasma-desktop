@@ -62,12 +62,14 @@ KCM.SimpleKCM {
             QQC2.Button {
                 id: chooseFontButton
                 enabled: useCustomFont.checked
+                text: i18nc("@action:button opens font dialog", "Choose Font…") // qmllint disable unqualified
+                display: QQC2.AbstractButton.IconOnly
                 icon.name: "document-edit"
                 onClicked: fontDialog.open();
 
                 QQC2.ToolTip {
-                    text: i18n("Select Font…")
                     visible: chooseFontButton.hovered
+                    text: chooseFontButton.text
                 }
             }
         }
