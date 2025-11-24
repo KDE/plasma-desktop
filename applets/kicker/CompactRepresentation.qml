@@ -60,7 +60,7 @@ Item {
             ? implicitHeight / implicitWidth
             : implicitWidth / implicitHeight
 
-        active: mouseArea.containsMouse && !justOpenedTimer.running
+        active: mouseArea.containsMouse
         source: root.useCustomButtonImage ? Plasmoid.configuration.customButtonImage : Plasmoid.configuration.icon
 
         // A custom icon could also be rectangular. However, if a square, custom, icon is given, assume it
@@ -103,7 +103,6 @@ Item {
         onClicked: mouse => {
             if (kicker.isDash) {
                 root.dashWindow.toggle();
-                justOpenedTimer.start();
             } else {
                 kicker.expanded = !wasExpanded;
             }
@@ -116,7 +115,6 @@ Item {
 
         function onActivated(): void {
             root.dashWindow.toggle();
-            justOpenedTimer.start();
         }
     }
 }

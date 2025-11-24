@@ -202,20 +202,12 @@ PlasmoidItem {
         textFormat: Text.PlainText
     }
 
-    Timer {
-        id: justOpenedTimer
-
-        repeat: false
-        interval: 600
-    }
-
     Connections {
         target: kicker
 
         function onExpandedChanged(expanded) {
             if (expanded) {
                 windowSystem.monitorWindowVisibility(Plasmoid.fullRepresentationItem);
-                justOpenedTimer.start();
             } else {
                 kicker.reset();
             }

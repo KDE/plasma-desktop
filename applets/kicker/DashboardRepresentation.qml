@@ -786,7 +786,7 @@ Kicker.DashboardWindow {
                             onPositionChanged: mouse => { // Lazy menu implementation.
                                 mouseCol = mouse.x;
 
-                                if (justOpenedTimer.running || ListView.view.currentIndex === 0 || index === ListView.view.currentIndex) {
+                                if (ListView.view.currentIndex === 0 || index === ListView.view.currentIndex) {
                                     updateCurrentItem();
                                 } else if ((index === ListView.view.currentIndex - 1) && mouse.y < (height - 6)
                                     || (index === ListView.view.currentIndex + 1) && mouse.y > 5) {
