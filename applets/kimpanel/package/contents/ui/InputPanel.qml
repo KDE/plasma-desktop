@@ -4,14 +4,13 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.6
-import QtQuick.Layouts 1.1
-import org.kde.plasma.plasmoid 2.0
+import QtQuick
+import QtQuick.Layouts
 import org.kde.plasma.core as PlasmaCore
-import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.plasma.private.kimpanel 0.1 as Kimpanel
-import org.kde.kirigami 2.20 as Kirigami
-import org.kde.plasma.plasmoid 2.0
+import org.kde.plasma.components as PlasmaComponents3
+import org.kde.plasma.private.kimpanel as Kimpanel
+import org.kde.kirigami as Kirigami
+import org.kde.plasma.plasmoid
 
 PlasmaCore.Dialog {
     id: inputpanel
@@ -27,6 +26,7 @@ PlasmaCore.Dialog {
     }
     location: PlasmaCore.Types.Floating
     visible: helper.auxVisible || helper.preeditVisible || helper.lookupTableVisible
+    required property Kimpanel.Kimpanel helper
     readonly property bool verticalLayout: (helper.lookupTableLayout === 1) || (helper.lookupTableLayout === 0 && Plasmoid.configuration.vertical_lookup_table);
     property int highlightCandidate: helper.lookupTableCursor
     property int hoveredCandidate: -1
@@ -46,7 +46,7 @@ PlasmaCore.Dialog {
         Layout.maximumHeight: childrenRect.height
         FontMetrics {
             id: fontMetrics
-            font: preferredFont
+            font: inputpanel.preferredFont
         }
         Column {
             spacing: Kirigami.Units.smallSpacing
@@ -54,28 +54,28 @@ PlasmaCore.Dialog {
                 id: textLabel
                 width: auxLabel.width + preedit.width
                 height: inputpanel.labelHeight
-                visible: helper.auxVisible || helper.preeditVisible
+                visible: inputpanel.helper.auxVisible || inputpanel.helper.preeditVisible
                 baselineOffset: inputpanel.textOffset
                 PlasmaComponents3.Label {
                     id: auxLabel
                     anchors.baseline: parent.baseline
-                    font: preferredFont
-                    text: helper.auxText
+                    font: inputpanel.preferredFont
+                    text: inputpanel.helper.auxText
                     textFormat: Text.PlainText
-                    visible: helper.auxVisible
+                    visible: inputpanel.helper.auxVisible
                 }
                 Item {
                     id: preedit
                     width: preeditLabel1.width + preeditLabel2.width + 2
                     height: parent.height
                     clip: true
-                    visible: helper.preeditVisible
+                    visible: inputpanel.helper.preeditVisible
                     baselineOffset: inputpanel.textOffset
                     PlasmaComponents3.Label {
                         id: preeditLabel1
                         anchors.baseline: parent.baseline
                         anchors.left: parent.left
-                        font: preferredFont
+                        font: inputpanel.preferredFont
                         textFormat: Text.PlainText
                     }
                     Rectangle {
@@ -91,7 +91,7 @@ PlasmaCore.Dialog {
                         id: preeditLabel2
                         anchors.baseline: parent.baseline
                         anchors.left: preeditLabel1.right
-                        font: preferredFont
+                        font: inputpanel.preferredFont
                         textFormat: Text.PlainText
                     }
                 }
@@ -130,16 +130,16 @@ PlasmaCore.Dialog {
                                 id: tableLabel
                                 text: model.label
                                 textFormat: Text.PlainText
-                                font: preferredFont
+                                font: inputpanel.preferredFont
                                 opacity: 0.8
                                 color: Kirigami.Theme.textColor
                                 anchors.baseline: parent.baseline
                             }
                             PlasmaComponents3.Label {
-                                id: textLabel
                                 text: model.text
+                                id: candidateTextLabel
                                 textFormat: Text.PlainText
-                                font: preferredFont
+                                font: inputpanel.preferredFont
                                 color: Kirigami.Theme.textColor
                                 anchors.baseline: parent.baseline
                             }
@@ -184,7 +184,7 @@ PlasmaCore.Dialog {
                             id: prevButtonMouseArea
                             anchors.fill: parent
                             hoverEnabled: true
-                            onReleased: helper.lookupTablePageUp()
+                            onReleased: inputpanel.helper.lookupTablePageUp()
                         }
                     }
                     Kirigami.Icon {
@@ -198,7 +198,7 @@ PlasmaCore.Dialog {
                             id: nextButtonMouseArea
                             anchors.fill: parent
                             hoverEnabled: true
-                            onReleased: helper.lookupTablePageDown()
+                            onReleased: inputpanel.helper.lookupTablePageDown()
                         }
                     }
                 }
@@ -214,16 +214,16 @@ PlasmaCore.Dialog {
         Timer {
             id: timer
             interval: 1
-            onTriggered: updateLookupTable()
+            onTriggered: inputpanel.updateLookupTable()
         }
 
         Connections {
-            target: helper
+            target: inputpanel.helper
 
             function onPreeditTextChanged() {
-                var charArray = [...helper.preeditText];
-                preeditLabel1.text = charArray.slice(0, helper.caretPos).join('');
-                preeditLabel2.text = charArray.slice(helper.caretPos).join('');
+                var charArray = [...inputpanel.helper.preeditText];
+                preeditLabel1.text = charArray.slice(0, inputpanel.helper.caretPos).join('');
+                preeditLabel2.text = charArray.slice(inputpanel.helper.caretPos).join('');
             }
 
             function onLookupTableChanged() {

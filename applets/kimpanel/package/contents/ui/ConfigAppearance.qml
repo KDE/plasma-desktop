@@ -4,18 +4,19 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.5
-import QtQuick.Controls 2.5 as QQC2
-import QtQuick.Dialogs 6.3 as QtDialogs
-import QtQuick.Layouts 1.0
-import org.kde.plasma.plasmoid 2.0
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Dialogs as QtDialogs
+import QtQuick.Layouts
+import org.kde.plasma.plasmoid
 
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.plasma.core as PlasmaCore
 import org.kde.kcmutils as KCM
 
 KCM.SimpleKCM {
     property bool cfg_vertical_lookup_table
+    id: root
     property bool cfg_use_default_font
     property font cfg_font
     property bool cfg_scaleIconsToFit
@@ -28,14 +29,14 @@ KCM.SimpleKCM {
             id: verticalLayoutRadioButton
             Kirigami.FormData.label: i18n("Input method list:")
             text: i18n("Vertical")
-            checked: cfg_vertical_lookup_table == true
-            onToggled: cfg_vertical_lookup_table = checked
+            checked: root.cfg_vertical_lookup_table == true
+            onToggled: root.cfg_vertical_lookup_table = checked
             QQC2.ButtonGroup.group: layoutRadioGroup
         }
         QQC2.RadioButton {
             text: i18n("Horizontal")
-            checked: cfg_vertical_lookup_table == false
-            onToggled: cfg_vertical_lookup_table = !checked
+            checked: root.cfg_vertical_lookup_table == false
+            onToggled: root.cfg_vertical_lookup_table = !checked
             QQC2.ButtonGroup.group: layoutRadioGroup
         }
 
@@ -44,27 +45,28 @@ KCM.SimpleKCM {
 
             QQC2.CheckBox {
                 id: useCustomFont
-                checked: !cfg_use_default_font
-                onClicked: cfg_use_default_font = !checked
                 text: i18n("Use custom:")
+                checked: !root.cfg_use_default_font
+                onClicked: root.cfg_use_default_font = !checked
             }
 
             QQC2.TextField {
                 enabled: useCustomFont.checked
                 readOnly: true
                 text: i18nc("The selected font family and font size", font.family + " " + font.pointSize + "pt")
-                font: cfg_font
+                font: root.cfg_font
                 Layout.fillHeight: true
             }
 
             QQC2.Button {
+                id: chooseFontButton
                 enabled: useCustomFont.checked
                 icon.name: "document-edit"
                 onClicked: fontDialog.open();
 
                 QQC2.ToolTip {
-                    visible: parent.hovered
                     text: i18n("Select Font…")
+                    visible: chooseFontButton.hovered
                 }
             }
         }
@@ -72,16 +74,16 @@ KCM.SimpleKCM {
         QQC2.RadioButton {
             Kirigami.FormData.label: i18nc("The arrangement of icons in the Panel", "Panel icon size:")
             text: i18n("Small")
-            checked: cfg_scaleIconsToFit == false
-            onToggled: cfg_scaleIconsToFit = !checked
+            checked: root.cfg_scaleIconsToFit == false
+            onToggled: root.cfg_scaleIconsToFit = !checked
             QQC2.ButtonGroup.group: scaleRadioGroup
         }
         QQC2.RadioButton {
             id: automaticScaleRadioButton
             text: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? i18n("Scale with Panel height")
                                                                         : i18n("Scale with Panel width")
-            checked: cfg_scaleIconsToFit == true
-            onToggled: cfg_scaleIconsToFit = checked
+            checked: root.cfg_scaleIconsToFit == true
+            onToggled: root.cfg_scaleIconsToFit = checked
             QQC2.ButtonGroup.group: scaleRadioGroup
         }
 
@@ -89,10 +91,10 @@ KCM.SimpleKCM {
             id: fontDialog
             title: i18nc("@title:window", "Select Font")
 
-            selectedFont: !cfg_font || cfg_font.family === "" ? Kirigami.Theme.defaultFont : cfg_font
+            selectedFont: !root.cfg_font || root.cfg_font.family === "" ? Kirigami.Theme.defaultFont : root.cfg_font
 
             onAccepted: {
-                cfg_font = selectedFont
+                root.cfg_font = selectedFont
             }
         }
     }

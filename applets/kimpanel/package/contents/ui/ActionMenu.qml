@@ -4,17 +4,18 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
-import QtQuick 2.0
+import QtQuick
 
 import org.kde.plasma.core as PlasmaCore
-import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.plasma.plasmoid 2.0
+import org.kde.plasma.extras as PlasmaExtras
+import org.kde.plasma.plasmoid
 
 Item {
     id: root
 
-    property QtObject menu
+    property PlasmaExtras.Menu menu
     property Item visualParent
     property var actionList
 
@@ -80,7 +81,7 @@ Item {
             checked: actionItem.hint === "checked"
 
             onClicked: {
-                actionClicked(actionItem.actionId);
+                root.actionClicked(actionItem.actionId);
             }
         }
     }

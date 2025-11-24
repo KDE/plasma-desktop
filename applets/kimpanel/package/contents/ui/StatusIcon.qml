@@ -4,13 +4,10 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.0
-import QtQuick.Layouts 1.1
-import org.kde.plasma.plasmoid 2.0
+import QtQuick
 import org.kde.plasma.core as PlasmaCore
-import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.kquickcontrolsaddons 2.0
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.plasma.components as PlasmaComponents3
+import org.kde.kirigami as Kirigami
 
 Item {
     id: statusIcon
@@ -22,7 +19,7 @@ Item {
 
     signal triggered(int /*Qt::MouseButton*/ button)
 
-    property int iconSize: Kirigami.Units.iconSizes.roundedIconSize(Math.min(width, height))
+    readonly property int iconSize: Kirigami.Units.iconSizes.roundedIconSize(Math.min(width, height))
 
     opacity: hint === "disable" ? 0.3 : 1
 
@@ -37,8 +34,8 @@ Item {
     Kirigami.Icon {
         id: imageIcon
         anchors.centerIn: parent
-        width: iconSize
-        height: iconSize
+        width: statusIcon.iconSize
+        height: statusIcon.iconSize
         scale: mouseArea.pressed ? 0.9 : 1
         source: statusIcon.icon
         visible: statusIcon.icon.length > 0
@@ -48,8 +45,8 @@ Item {
     PlasmaComponents3.Label {
         id: textIcon
         anchors.centerIn: parent
-        width: iconSize
-        height: iconSize
+        width: statusIcon.iconSize
+        height: statusIcon.iconSize
         scale: mouseArea.pressed ? 0.9 : 1
         // a reasonable large size to make Text.Fit work
         minimumPointSize: 0
@@ -59,7 +56,7 @@ Item {
         horizontalAlignment: Text.AlignHCenter
         text: statusIcon.extractLabelString(statusIcon.label)
         textFormat: Text.PlainText
-        visible: icon.length === 0
+        visible: statusIcon.icon.length === 0
     }
 
     MouseArea {

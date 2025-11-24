@@ -3,15 +3,14 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.1
-import org.kde.plasma.plasmoid 2.0
+import QtQuick
+import QtQuick.Layouts
+import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
-import org.kde.kquickcontrolsaddons 2.0
-import org.kde.plasma.private.kimpanel 0.1 as Kimpanel
-import org.kde.kirigami 2.20 as Kirigami
-import org.kde.plasma.plasmoid 2.0
+import org.kde.plasma.private.kimpanel as Kimpanel
+import org.kde.kirigami as Kirigami
 
 PlasmoidItem {
     id: kimpanel
@@ -33,7 +32,7 @@ PlasmoidItem {
         timer.restart();
     }
 
-    InputPanel { }
+    InputPanel { helper: helper }
 
     GridLayout {
         id: mainLayout
@@ -95,6 +94,14 @@ PlasmoidItem {
             }
 
             delegate: Item {
+                id: delegate
+
+                required property string key
+                required property string label
+                required property string icon
+                required property string tip
+                required property string hint
+
                 width: items.cellWidth
                 height: items.cellHeight
 
@@ -124,20 +131,20 @@ PlasmoidItem {
 
                     width: items.iconSize
                     height: items.iconSize
-                    label: model.label
-                    tip: model.tip
-                    icon: model.icon
-                    hint: model.hint
+                    label: delegate.label
+                    tip: delegate.tip
+                    icon: delegate.icon
+                    hint: delegate.hint
 
                     onTriggered: button => {
                         if (button === Qt.LeftButton) {
-                            if (model.key === 'kimpanel-placeholder') {
+                            if (delegate.key === 'kimpanel-placeholder') {
                                 return;
                             }
-                            helper.triggerProperty(model.key);
+                            helper.triggerProperty(delegate.key);
                             actionMenu.visualParent = statusIcon;
                         } else {
-                            contextMenu.open(statusIcon, {key: model.key, label: model.label});
+                            contextMenu.open(statusIcon, {key: delegate.key, label: delegate.label});
                         }
                     }
                 }
@@ -186,13 +193,16 @@ PlasmoidItem {
 
     ActionMenu {
         id: actionMenu
-        onActionClicked: {
+        onActionClicked: actionId => {
             helper.triggerProperty(actionId);
         }
     }
 
     ContextMenu {
         id: contextMenu
+        helper: helper
+        onShowAction: key => kimpanel.showAction(key)
+        onHideAction: key => kimpanel.hideAction(key)
     }
 
     Timer {
@@ -259,7 +269,7 @@ PlasmoidItem {
             timer.restart();
         }
         function onMenuTriggered(menu) {
-            showMenu(actionMenu, menu);
+            kimpanel.showMenu(actionMenu, menu);
         }
     }
 }
