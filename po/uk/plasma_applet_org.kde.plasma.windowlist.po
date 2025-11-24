@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.windowlist\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-24 00:44+0000\n"
 "PO-Revision-Date: 2025-02-25 19:18+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -25,17 +25,39 @@ msgstr ""
 msgid "General"
 msgstr "Загальне"
 
-#: ConfigGeneral.qml:30
+#: ConfigGeneral.qml:29
 #, kde-format
-msgid "Show active application's name on Panel button"
-msgstr "Показувати назву активної програми на кнопці панелі"
+msgctxt "@label:listbox"
+msgid "For active application, show:"
+msgstr ""
 
-#: ConfigGeneral.qml:50
+#: ConfigGeneral.qml:34
+#, kde-format
+msgctxt ""
+"@item:inlistbox what to show for active application in horizontal panel"
+msgid "Icon and name"
+msgstr ""
+
+#: ConfigGeneral.qml:35
+#, kde-format
+msgctxt ""
+"@item:inlistbox what to show for active application in horizontal panel"
+msgid "Icon"
+msgstr ""
+
+#: ConfigGeneral.qml:36
+#, kde-format
+msgctxt ""
+"@item:inlistbox what to show for active application in horizontal panel"
+msgid "Name"
+msgstr ""
+
+#: ConfigGeneral.qml:83
 #, kde-format
 msgid "Only icons can be shown when the Panel is vertical."
 msgstr "Якщо панель є вертикальною, може бути показано лише піктограми"
 
-#: ConfigGeneral.qml:52
+#: ConfigGeneral.qml:85
 #, kde-format
 msgid "Not applicable when the widget is on the Desktop."
 msgstr "Не може бути застосовано, якщо віджет перебуває на стільниці."
@@ -50,6 +72,9 @@ msgstr "Немає відкритих вікон"
 #, kde-format
 msgid "Plasma Desktop"
 msgstr "Стільниця Плазми"
+
+#~ msgid "Show active application's name on Panel button"
+#~ msgstr "Показувати назву активної програми на кнопці панелі"
 
 #~ msgid "On all desktops"
 #~ msgstr "На всіх стільницях"

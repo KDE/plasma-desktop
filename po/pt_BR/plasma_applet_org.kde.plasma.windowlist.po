@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.windowlist\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-24 00:44+0000\n"
 "PO-Revision-Date: 2025-03-01 16:58-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -25,17 +25,39 @@ msgstr ""
 msgid "General"
 msgstr "Geral"
 
-#: ConfigGeneral.qml:30
+#: ConfigGeneral.qml:29
 #, kde-format
-msgid "Show active application's name on Panel button"
-msgstr "Mostrar nome do aplicativo ativo no botão do painel"
+msgctxt "@label:listbox"
+msgid "For active application, show:"
+msgstr ""
 
-#: ConfigGeneral.qml:50
+#: ConfigGeneral.qml:34
+#, kde-format
+msgctxt ""
+"@item:inlistbox what to show for active application in horizontal panel"
+msgid "Icon and name"
+msgstr ""
+
+#: ConfigGeneral.qml:35
+#, kde-format
+msgctxt ""
+"@item:inlistbox what to show for active application in horizontal panel"
+msgid "Icon"
+msgstr ""
+
+#: ConfigGeneral.qml:36
+#, kde-format
+msgctxt ""
+"@item:inlistbox what to show for active application in horizontal panel"
+msgid "Name"
+msgstr ""
+
+#: ConfigGeneral.qml:83
 #, kde-format
 msgid "Only icons can be shown when the Panel is vertical."
 msgstr "Somente ícones podem ser exibidos quando o painel é vertical."
 
-#: ConfigGeneral.qml:52
+#: ConfigGeneral.qml:85
 #, kde-format
 msgid "Not applicable when the widget is on the Desktop."
 msgstr "Não aplicável quando o widget está na área de trabalho."
@@ -50,6 +72,9 @@ msgstr "Nenhuma janela aberta"
 #, kde-format
 msgid "Plasma Desktop"
 msgstr "Área de trabalho Plasma"
+
+#~ msgid "Show active application's name on Panel button"
+#~ msgstr "Mostrar nome do aplicativo ativo no botão do painel"
 
 #~ msgid "On all desktops"
 #~ msgstr "Em todas as áreas de trabalho"

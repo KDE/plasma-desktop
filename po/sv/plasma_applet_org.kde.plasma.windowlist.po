@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-24 00:44+0000\n"
 "PO-Revision-Date: 2025-02-24 17:06+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -22,17 +22,39 @@ msgstr ""
 msgid "General"
 msgstr "Allmänt"
 
-#: ConfigGeneral.qml:30
+#: ConfigGeneral.qml:29
 #, kde-format
-msgid "Show active application's name on Panel button"
-msgstr "Visa det aktiva programmets namn på panelknapp"
+msgctxt "@label:listbox"
+msgid "For active application, show:"
+msgstr ""
 
-#: ConfigGeneral.qml:50
+#: ConfigGeneral.qml:34
+#, kde-format
+msgctxt ""
+"@item:inlistbox what to show for active application in horizontal panel"
+msgid "Icon and name"
+msgstr ""
+
+#: ConfigGeneral.qml:35
+#, kde-format
+msgctxt ""
+"@item:inlistbox what to show for active application in horizontal panel"
+msgid "Icon"
+msgstr ""
+
+#: ConfigGeneral.qml:36
+#, kde-format
+msgctxt ""
+"@item:inlistbox what to show for active application in horizontal panel"
+msgid "Name"
+msgstr ""
+
+#: ConfigGeneral.qml:83
 #, kde-format
 msgid "Only icons can be shown when the Panel is vertical."
 msgstr "Endast ikoner kan visas när panelen är vertikal."
 
-#: ConfigGeneral.qml:52
+#: ConfigGeneral.qml:85
 #, kde-format
 msgid "Not applicable when the widget is on the Desktop."
 msgstr "Inte tillämpligt när den grafiska komponenten finns på skrivbordet."
@@ -47,6 +69,9 @@ msgstr "Inga öppna fönster"
 #, kde-format
 msgid "Plasma Desktop"
 msgstr "Plasma skrivbord"
+
+#~ msgid "Show active application's name on Panel button"
+#~ msgstr "Visa det aktiva programmets namn på panelknapp"
 
 #~ msgid "On all desktops"
 #~ msgstr "På alla skrivbord"

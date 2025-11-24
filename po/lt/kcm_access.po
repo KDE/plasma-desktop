@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-24 00:44+0000\n"
 "PO-Revision-Date: 2025-10-24 21:18+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -1027,37 +1027,25 @@ msgctxt "@option:check"
 msgid "Enable text caret tracking"
 msgstr "Įjungti teksto žymeklio sekimą"
 
-#: ui/ZoomMagnifier.qml:134
-#, kde-format
-msgctxt "@label"
-msgid "Scroll gesture modifier keys:"
-msgstr "Slinkimo gesto modifikavimo klavišai:"
-
-#: ui/ZoomMagnifier.qml:172
-#, kde-format
-msgctxt "@info:tooltip, indicates feature unavailable on X11"
-msgid "Zoom scroll gestures are only available on Wayland."
-msgstr "Mastelio keitimo slinkimo gestai yra prieinami tik Wayland aplinkoje."
-
-#: ui/ZoomMagnifier.qml:178
+#: ui/ZoomMagnifier.qml:135
 #, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "Norėdami keisti mastelį, slinkite nuspaudę modifikavimo klavišus"
 
-#: ui/ZoomMagnifier.qml:190
+#: ui/ZoomMagnifier.qml:147
 #, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
 msgstr "Didinama sritis"
 
-#: ui/ZoomMagnifier.qml:217
+#: ui/ZoomMagnifier.qml:174
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
 msgstr "Plotis:"
 
-#: ui/ZoomMagnifier.qml:228 ui/ZoomMagnifier.qml:253
+#: ui/ZoomMagnifier.qml:185 ui/ZoomMagnifier.qml:210
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
@@ -1067,29 +1055,41 @@ msgstr[1] "%1 piks."
 msgstr[2] "%1 piks."
 msgstr[3] "%1 piks."
 
-#: ui/ZoomMagnifier.qml:229 ui/ZoomMagnifier.qml:254
+#: ui/ZoomMagnifier.qml:186 ui/ZoomMagnifier.qml:211
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
 msgstr "piks."
 
-#: ui/ZoomMagnifier.qml:242
+#: ui/ZoomMagnifier.qml:199
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
 msgstr "Aukštis:"
 
-#: ui/ZoomMagnifier.qml:271
+#: ui/ZoomMagnifier.qml:228
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
 msgstr "Išjungta"
 
-#: ui/ZoomMagnifier.qml:284
+#: ui/ZoomMagnifier.qml:241
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
 msgstr "Didinimo faktorius:"
+
+#: ui/ZoomMagnifier.qml:274
+#, kde-format
+msgctxt "@label"
+msgid "Scroll gesture modifier keys:"
+msgstr "Slinkimo gesto modifikavimo klavišai:"
+
+#: ui/ZoomMagnifier.qml:312
+#, kde-format
+msgctxt "@info:tooltip, indicates feature unavailable on X11"
+msgid "Zoom scroll gestures are only available on Wayland."
+msgstr "Mastelio keitimo slinkimo gestai yra prieinami tik Wayland aplinkoje."
 
 #: ui/ZoomMagnifier.qml:331
 #, kde-format

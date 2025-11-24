@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-24 00:44+0000\n"
 "PO-Revision-Date: 2025-09-25 08:27+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -1028,37 +1028,25 @@ msgctxt "@option:check"
 msgid "Enable text caret tracking"
 msgstr "הפעלת מעקב סמן טקסט"
 
-#: ui/ZoomMagnifier.qml:134
-#, kde-format
-msgctxt "@label"
-msgid "Scroll gesture modifier keys:"
-msgstr "מקשי החלפה למחוות גלילה:"
-
-#: ui/ZoomMagnifier.qml:172
-#, kde-format
-msgctxt "@info:tooltip, indicates feature unavailable on X11"
-msgid "Zoom scroll gestures are only available on Wayland."
-msgstr "מחוות גלילת תקריב זמינות רק ב־Wayland."
-
-#: ui/ZoomMagnifier.qml:178
+#: ui/ZoomMagnifier.qml:135
 #, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "אפשר לגלול תוך כדי לחיצה על מקשי ההחלפה כדי לשנות את התקריב"
 
-#: ui/ZoomMagnifier.qml:190
+#: ui/ZoomMagnifier.qml:147
 #, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
 msgstr "הגדלת אזור"
 
-#: ui/ZoomMagnifier.qml:217
+#: ui/ZoomMagnifier.qml:174
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
 msgstr "רוחב:"
 
-#: ui/ZoomMagnifier.qml:228 ui/ZoomMagnifier.qml:253
+#: ui/ZoomMagnifier.qml:185 ui/ZoomMagnifier.qml:210
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
@@ -1068,29 +1056,41 @@ msgstr[1] "שני פיקסלים"
 msgstr[2] "%1 פיקסלים"
 msgstr[3] "%1 פיקסלים"
 
-#: ui/ZoomMagnifier.qml:229 ui/ZoomMagnifier.qml:254
+#: ui/ZoomMagnifier.qml:186 ui/ZoomMagnifier.qml:211
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
 msgstr "פיקסלים"
 
-#: ui/ZoomMagnifier.qml:242
+#: ui/ZoomMagnifier.qml:199
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
 msgstr "גובה:"
 
-#: ui/ZoomMagnifier.qml:271
+#: ui/ZoomMagnifier.qml:228
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
 msgstr "מושבת"
 
-#: ui/ZoomMagnifier.qml:284
+#: ui/ZoomMagnifier.qml:241
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
 msgstr "מקדם תקריב:"
+
+#: ui/ZoomMagnifier.qml:274
+#, kde-format
+msgctxt "@label"
+msgid "Scroll gesture modifier keys:"
+msgstr "מקשי החלפה למחוות גלילה:"
+
+#: ui/ZoomMagnifier.qml:312
+#, kde-format
+msgctxt "@info:tooltip, indicates feature unavailable on X11"
+msgid "Zoom scroll gestures are only available on Wayland."
+msgstr "מחוות גלילת תקריב זמינות רק ב־Wayland."
 
 #: ui/ZoomMagnifier.qml:331
 #, kde-format

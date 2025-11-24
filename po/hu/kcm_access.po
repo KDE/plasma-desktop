@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-24 00:44+0000\n"
 "PO-Revision-Date: 2025-11-19 22:23+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -1016,37 +1016,25 @@ msgctxt "@option:check"
 msgid "Enable text caret tracking"
 msgstr "Szövegkurzor követés bekapcsolása"
 
-#: ui/ZoomMagnifier.qml:134
-#, kde-format
-msgctxt "@label"
-msgid "Scroll gesture modifier keys:"
-msgstr "Görgetési mozdulat módosítóbillentyűi:"
-
-#: ui/ZoomMagnifier.qml:172
-#, kde-format
-msgctxt "@info:tooltip, indicates feature unavailable on X11"
-msgid "Zoom scroll gestures are only available on Wayland."
-msgstr "A nagyítási görgetési mozdulatok csak Wayland alatt érhetők el."
-
-#: ui/ZoomMagnifier.qml:178
+#: ui/ZoomMagnifier.qml:135
 #, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "Nagyításhoz görgessen a módosító billentyűk lenyomva tartásakor"
 
-#: ui/ZoomMagnifier.qml:190
+#: ui/ZoomMagnifier.qml:147
 #, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
 msgstr "Terület felnagyítása"
 
-#: ui/ZoomMagnifier.qml:217
+#: ui/ZoomMagnifier.qml:174
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
 msgstr "Szélesség:"
 
-#: ui/ZoomMagnifier.qml:228 ui/ZoomMagnifier.qml:253
+#: ui/ZoomMagnifier.qml:185 ui/ZoomMagnifier.qml:210
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
@@ -1054,29 +1042,41 @@ msgid_plural "%1 px"
 msgstr[0] "%1 képpont"
 msgstr[1] "%1 képpont"
 
-#: ui/ZoomMagnifier.qml:229 ui/ZoomMagnifier.qml:254
+#: ui/ZoomMagnifier.qml:186 ui/ZoomMagnifier.qml:211
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
 msgstr "képpont"
 
-#: ui/ZoomMagnifier.qml:242
+#: ui/ZoomMagnifier.qml:199
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
 msgstr "Magasság:"
 
-#: ui/ZoomMagnifier.qml:271
+#: ui/ZoomMagnifier.qml:228
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
 msgstr "Kikapcsolva"
 
-#: ui/ZoomMagnifier.qml:284
+#: ui/ZoomMagnifier.qml:241
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
 msgstr "Nagyítási arány:"
+
+#: ui/ZoomMagnifier.qml:274
+#, kde-format
+msgctxt "@label"
+msgid "Scroll gesture modifier keys:"
+msgstr "Görgetési mozdulat módosítóbillentyűi:"
+
+#: ui/ZoomMagnifier.qml:312
+#, kde-format
+msgctxt "@info:tooltip, indicates feature unavailable on X11"
+msgid "Zoom scroll gestures are only available on Wayland."
+msgstr "A nagyítási görgetési mozdulatok csak Wayland alatt érhetők el."
 
 #: ui/ZoomMagnifier.qml:331
 #, kde-format

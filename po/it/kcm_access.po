@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-24 00:44+0000\n"
 "PO-Revision-Date: 2025-09-26 18:23+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -1024,38 +1024,25 @@ msgctxt "@option:check"
 msgid "Enable text caret tracking"
 msgstr "Abilita il tracciamento del cursore del testo"
 
-#: ui/ZoomMagnifier.qml:134
-#, kde-format
-msgctxt "@label"
-msgid "Scroll gesture modifier keys:"
-msgstr "Tasti modificatori del gesto di scorrimento:"
-
-#: ui/ZoomMagnifier.qml:172
-#, kde-format
-msgctxt "@info:tooltip, indicates feature unavailable on X11"
-msgid "Zoom scroll gestures are only available on Wayland."
-msgstr ""
-"I gesti di scorrimento per l'ingrandimento sono disponibili solo su Wayland."
-
-#: ui/ZoomMagnifier.qml:178
+#: ui/ZoomMagnifier.qml:135
 #, kde-format
 msgctxt "@label Hint for scroll gestures"
 msgid "Scroll while modifier keys are pressed to zoom"
 msgstr "Scorri durante la pressione dei tasti modificatori per ingrandire"
 
-#: ui/ZoomMagnifier.qml:190
+#: ui/ZoomMagnifier.qml:147
 #, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
 msgstr "Ingrandisci la regione"
 
-#: ui/ZoomMagnifier.qml:217
+#: ui/ZoomMagnifier.qml:174
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
 msgstr "Larghezza:"
 
-#: ui/ZoomMagnifier.qml:228 ui/ZoomMagnifier.qml:253
+#: ui/ZoomMagnifier.qml:185 ui/ZoomMagnifier.qml:210
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
@@ -1063,29 +1050,42 @@ msgid_plural "%1 px"
 msgstr[0] "%1 px"
 msgstr[1] "%1 px"
 
-#: ui/ZoomMagnifier.qml:229 ui/ZoomMagnifier.qml:254
+#: ui/ZoomMagnifier.qml:186 ui/ZoomMagnifier.qml:211
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
 msgstr "px"
 
-#: ui/ZoomMagnifier.qml:242
+#: ui/ZoomMagnifier.qml:199
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
 msgstr "Altezza:"
 
-#: ui/ZoomMagnifier.qml:271
+#: ui/ZoomMagnifier.qml:228
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
 msgstr "Disabilitato"
 
-#: ui/ZoomMagnifier.qml:284
+#: ui/ZoomMagnifier.qml:241
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
 msgstr "Fattore di ingrandimento:"
+
+#: ui/ZoomMagnifier.qml:274
+#, kde-format
+msgctxt "@label"
+msgid "Scroll gesture modifier keys:"
+msgstr "Tasti modificatori del gesto di scorrimento:"
+
+#: ui/ZoomMagnifier.qml:312
+#, kde-format
+msgctxt "@info:tooltip, indicates feature unavailable on X11"
+msgid "Zoom scroll gestures are only available on Wayland."
+msgstr ""
+"I gesti di scorrimento per l'ingrandimento sono disponibili solo su Wayland."
 
 #: ui/ZoomMagnifier.qml:331
 #, kde-format

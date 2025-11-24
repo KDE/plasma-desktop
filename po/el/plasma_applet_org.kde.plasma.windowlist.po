@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-24 00:44+0000\n"
 "PO-Revision-Date: 2024-08-13 10:52+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -24,18 +24,40 @@ msgstr ""
 msgid "General"
 msgstr "Γενικά"
 
-#: ConfigGeneral.qml:30
+#: ConfigGeneral.qml:29
 #, kde-format
-msgid "Show active application's name on Panel button"
-msgstr "Εμφάνιση του ονόματος της ενεργής εφαρμογής στο κουμπί πίνακας"
+msgctxt "@label:listbox"
+msgid "For active application, show:"
+msgstr ""
 
-#: ConfigGeneral.qml:50
+#: ConfigGeneral.qml:34
+#, kde-format
+msgctxt ""
+"@item:inlistbox what to show for active application in horizontal panel"
+msgid "Icon and name"
+msgstr ""
+
+#: ConfigGeneral.qml:35
+#, kde-format
+msgctxt ""
+"@item:inlistbox what to show for active application in horizontal panel"
+msgid "Icon"
+msgstr ""
+
+#: ConfigGeneral.qml:36
+#, kde-format
+msgctxt ""
+"@item:inlistbox what to show for active application in horizontal panel"
+msgid "Name"
+msgstr ""
+
+#: ConfigGeneral.qml:83
 #, kde-format
 msgid "Only icons can be shown when the Panel is vertical."
 msgstr ""
 "Μόνο τα εικονίδια μπορούν να εμφανιστούν όταν ο πίνακας είναι κατακόρυφος."
 
-#: ConfigGeneral.qml:52
+#: ConfigGeneral.qml:85
 #, kde-format
 msgid "Not applicable when the widget is on the Desktop."
 msgstr "Δεν εφαρμόζεται όταν το συστατικό βρίσκεται στην επιφάνεια εργασίας."
@@ -51,6 +73,9 @@ msgstr "Καθόλου παράθυρα"
 #, kde-format
 msgid "Plasma Desktop"
 msgstr "Επιφάνεια εργασίας Plasma"
+
+#~ msgid "Show active application's name on Panel button"
+#~ msgstr "Εμφάνιση του ονόματος της ενεργής εφαρμογής στο κουμπί πίνακας"
 
 #~ msgid "Show list of opened windows"
 #~ msgstr "Εμφάνιση λίστας ανοιχτών παραθύρων"

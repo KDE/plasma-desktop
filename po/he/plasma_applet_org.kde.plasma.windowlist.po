@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.windowlist\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-24 00:44+0000\n"
 "PO-Revision-Date: 2025-02-25 07:58+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -22,17 +22,39 @@ msgstr ""
 msgid "General"
 msgstr "כללי"
 
-#: ConfigGeneral.qml:30
+#: ConfigGeneral.qml:29
 #, kde-format
-msgid "Show active application's name on Panel button"
-msgstr "הצגת שם היישום הפעיל בכפתור הלוח."
+msgctxt "@label:listbox"
+msgid "For active application, show:"
+msgstr ""
 
-#: ConfigGeneral.qml:50
+#: ConfigGeneral.qml:34
+#, kde-format
+msgctxt ""
+"@item:inlistbox what to show for active application in horizontal panel"
+msgid "Icon and name"
+msgstr ""
+
+#: ConfigGeneral.qml:35
+#, kde-format
+msgctxt ""
+"@item:inlistbox what to show for active application in horizontal panel"
+msgid "Icon"
+msgstr ""
+
+#: ConfigGeneral.qml:36
+#, kde-format
+msgctxt ""
+"@item:inlistbox what to show for active application in horizontal panel"
+msgid "Name"
+msgstr ""
+
+#: ConfigGeneral.qml:83
 #, kde-format
 msgid "Only icons can be shown when the Panel is vertical."
 msgstr "אפשר להציג רק סמלים כאשר הלוח אנכי."
 
-#: ConfigGeneral.qml:52
+#: ConfigGeneral.qml:85
 #, kde-format
 msgid "Not applicable when the widget is on the Desktop."
 msgstr "לא תקף כאשר הווידג׳ט הוא על שולחן העבודה."
@@ -47,6 +69,9 @@ msgstr "אין חלונות פתוחים"
 #, kde-format
 msgid "Plasma Desktop"
 msgstr "שולחן העבודה פלזמה"
+
+#~ msgid "Show active application's name on Panel button"
+#~ msgstr "הצגת שם היישום הפעיל בכפתור הלוח."
 
 #~ msgid "On all desktops"
 #~ msgstr "על כל שולחנות העבודה"
