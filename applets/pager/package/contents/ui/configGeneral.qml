@@ -5,14 +5,15 @@
  *  SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-import QtQuick 2.5
-import QtQuick.Controls 2.5 as QQC2
+import QtQuick
+import QtQuick.Controls as QQC2
 
-import org.kde.kirigami 2.5 as Kirigami
-import org.kde.plasma.plasmoid 2.0
+import org.kde.kirigami as Kirigami
+import org.kde.plasma.plasmoid
 import org.kde.kcmutils as KCM
 
 KCM.SimpleKCM {
+    id: root
     readonly property bool isActivityPager: Plasmoid.pluginName === "org.kde.plasma.activitypager"
 
     property int cfg_displayedText
@@ -35,25 +36,25 @@ KCM.SimpleKCM {
         QQC2.CheckBox {
             id: showWindowOutlines
 
-            Kirigami.FormData.label: i18n("General:")
+            Kirigami.FormData.label: i18n("General:") // qmllint disable unqualified
 
-            text: i18n("Show window outlines")
+            text: i18n("Show window outlines") // qmllint disable unqualified
         }
 
         QQC2.CheckBox {
             id: showWindowIcons
-            text: i18n("Show application icons on window outlines")
+            text: i18n("Show application icons on window outlines") // qmllint disable unqualified
             enabled: showWindowOutlines.checked
         }
 
         QQC2.CheckBox {
             id: showOnlyCurrentScreen
-            text: i18n("Show only current screen")
+            text: i18n("Show only current screen") // qmllint disable unqualified
         }
 
         QQC2.CheckBox {
             id: wrapPage
-            text: i18n("Navigation wraps around")
+            text: i18n("Navigation wraps around") // qmllint disable unqualified
         }
 
 
@@ -65,44 +66,44 @@ KCM.SimpleKCM {
         QQC2.ComboBox {
             id: pagerLayout
 
-            Kirigami.FormData.label: i18n("Layout:")
+            Kirigami.FormData.label: i18n("Layout:") // qmllint disable unqualified
 
-            model: [i18nc("The pager layout", "Default"), i18n("Horizontal"), i18n("Vertical")]
-            visible: isActivityPager
+            model: [i18nc("The pager layout", "Default"), i18n("Horizontal"), i18n("Vertical")] // qmllint disable unqualified
+            visible: root.isActivityPager
         }
 
 
         Item {
             Kirigami.FormData.isSection: true
-            visible: isActivityPager
+            visible: root.isActivityPager
         }
 
 
         QQC2.RadioButton {
             id: noTextRadio
 
-            Kirigami.FormData.label: i18n("Text display:")
+            Kirigami.FormData.label: i18n("Text display:") // qmllint disable unqualified
 
             QQC2.ButtonGroup.group: displayedTextGroup
-            text: i18n("No text")
-            checked: cfg_displayedText === 2
-            onToggled: if (checked) cfg_displayedText = 2;
+            text: i18n("No text") // qmllint disable unqualified
+            checked: root.cfg_displayedText === 2
+            onToggled: if (checked) root.cfg_displayedText = 2;
         }
 
         QQC2.RadioButton {
             id: desktopNumberRadio
             QQC2.ButtonGroup.group: displayedTextGroup
-            text: isActivityPager ? i18n("Activity number") : i18n("Desktop number")
-            checked: cfg_displayedText === 0
-            onToggled: if (checked) cfg_displayedText = 0;
+            text: isActivityPager ? i18n("Activity number") : i18n("Desktop number") // qmllint disable unqualified
+            checked: root.cfg_displayedText === 0
+            onToggled: if (checked) root.cfg_displayedText = 0;
         }
 
         QQC2.RadioButton {
             id: desktopNameRadio
             QQC2.ButtonGroup.group: displayedTextGroup
-            text: isActivityPager ? i18n("Activity name") : i18n("Desktop name")
-            checked: cfg_displayedText === 1
-            onToggled: if (checked) cfg_displayedText = 1;
+            text: isActivityPager ? i18n("Activity name") : i18n("Desktop name") // qmllint disable unqualified
+            checked: root.cfg_displayedText === 1
+            onToggled: if (checked) root.cfg_displayedText = 1;
         }
 
 
@@ -114,22 +115,22 @@ KCM.SimpleKCM {
         QQC2.RadioButton {
             id: doesNothingRadio
 
-            Kirigami.FormData.label: isActivityPager
-                ? i18nc("@label Start of the sentence 'Selecting current activity does nothing/shows the desktop'", "Selecting current Activity:")
-                : i18nc("@label Start of the sentence 'Selecting current virtual desktop does nothing/shows the desktop'", "Selecting current virtual desktop:")
+            Kirigami.FormData.label: root.isActivityPager
+                ? i18nc("@label Start of the sentence 'Selecting current activity does nothing/shows the desktop'", "Selecting current Activity:") // qmllint disable unqualified
+                : i18nc("@label Start of the sentence 'Selecting current virtual desktop does nothing/shows the desktop'", "Selecting current virtual desktop:") // qmllint disable unqualified
 
             QQC2.ButtonGroup.group: currentDesktopSelectedGroup
-            text: i18nc("option:check completes the sentence 'Selecting current activity/virtual desktop does nothing'", "Does nothing")
-            checked: cfg_currentDesktopSelected === 0
-            onToggled: if (checked) cfg_currentDesktopSelected = 0;
+            text: i18nc("option:check completes the sentence 'Selecting current activity/virtual desktop does nothing'", "Does nothing") // qmllint disable unqualified
+            checked: root.cfg_currentDesktopSelected === 0
+            onToggled: if (checked) root.cfg_currentDesktopSelected = 0;
         }
 
         QQC2.RadioButton {
             id: showsDesktopRadio
             QQC2.ButtonGroup.group: currentDesktopSelectedGroup
-            text: i18nc("option:check completes the sentence 'Selecting current activity/virtual desktop shows the desktop'", "Shows the desktop")
-            checked: cfg_currentDesktopSelected === 1
-            onToggled: if (checked) cfg_currentDesktopSelected = 1;
+            text: i18nc("option:check completes the sentence 'Selecting current activity/virtual desktop shows the desktop'", "Shows the desktop") // qmllint disable unqualified
+            checked: root.cfg_currentDesktopSelected === 1
+            onToggled: if (checked) root.cfg_currentDesktopSelected = 1;
         }
     }
 }
