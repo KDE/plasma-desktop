@@ -117,7 +117,6 @@ T.ItemDelegate {
     // using `model` () instead of `root.model` leads to errors about
     // `model` not having the trigger() function
     action: T.Action {
-        Accessible.name: root.text // https://bugreports.qt.io/browse/QTBUG-130360
         onTriggered: {
             // Unless we're showing search results, eat the activation if we
             // don't have focus, to prevent the return/enter key from
