@@ -251,7 +251,7 @@ PlasmoidItem {
             if (list.count == 0 && !nodata) {
                 var itemData = {'key': 'kimpanel-placeholder',
                                 'icon': 'draw-freehand',
-                                'label': i18n("Input Method Panel"),
+                                'label': i18nc("@label placeholder for missing label", "Input Method Panel"), // qmllint disable unqualified
                                 'tip': '',
                                 'hint': ''};
                 list.append(itemData);
