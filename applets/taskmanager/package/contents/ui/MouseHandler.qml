@@ -125,7 +125,7 @@ DropArea {
 
         function onDragSourceChanged(): void {
             if (!dragSource) {
-                ignoredItem = null;
+                dropArea.ignoredItem = null;
                 ignoreItemTimer.stop();
             }
         }
@@ -138,7 +138,7 @@ DropArea {
         interval: 750
 
         onTriggered: {
-            ignoredItem = null;
+            dropArea.ignoredItem = null;
         }
     }
 

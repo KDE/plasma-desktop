@@ -19,6 +19,8 @@ import org.kde.kirigami as Kirigami
 import org.kde.plasma.private.mpris as Mpris
 
 RowLayout {
+    id: root
+
     enabled: toolTipDelegate.playerData?.canControl ?? false
     spacing: Kirigami.Units.smallSpacing
 
@@ -71,10 +73,10 @@ RowLayout {
     }
 
     PlasmaComponents3.ToolButton {
-        enabled: (isPlaying ? toolTipDelegate.playerData?.canPause : toolTipDelegate.playerData?.canPlay) ?? false
-        icon.name: isPlaying ? "media-playback-pause" : "media-playback-start"
+        enabled: (root.isPlaying ? toolTipDelegate.playerData?.canPause : toolTipDelegate.playerData?.canPlay) ?? false
+        icon.name: root.isPlaying ? "media-playback-pause" : "media-playback-start"
         onClicked: {
-            if (!isPlaying) {
+            if (!root.isPlaying) {
                 toolTipDelegate.playerData.Play();
             } else {
                 toolTipDelegate.playerData.Pause();

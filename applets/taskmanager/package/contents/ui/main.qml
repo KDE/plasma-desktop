@@ -3,6 +3,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Layouts
@@ -144,7 +145,7 @@ PlasmoidItem {
             let startupsWithLaunchers = 0;
 
             for (let i = 0; i < taskRepeater.count; ++i) {
-                const item = taskRepeater.itemAt(i);
+                const item = taskRepeater.itemAt(i) as Task;
 
                 // During destruction required properties such as item.model can go null for a while,
                 // so in paths that can trigger on those moments, they need to be guarded
@@ -180,7 +181,7 @@ PlasmoidItem {
         groupMode: groupModeEnumValue(Plasmoid.configuration.groupingStrategy)
         groupInline: !Plasmoid.configuration.groupPopups && !tasks.iconsOnly
         groupingWindowTasksThreshold: (Plasmoid.configuration.onlyGroupWhenFull && !tasks.iconsOnly
-            ? LayoutMetrics.optimumCapacity(width, height) + 1 : -1)
+            ? LayoutMetrics.optimumCapacity(tasks.width, tasks.height) + 1 : -1)
 
         onLauncherListChanged: {
             Plasmoid.configuration.launchers = launcherList;
@@ -236,7 +237,7 @@ PlasmoidItem {
     readonly property TaskManagerApplet.Backend backend: TaskManagerApplet.Backend {
         id: backend
 
-        onAddLauncher: {
+        onAddLauncher: url => {
             tasks.addLauncher(url);
         }
     }
@@ -255,7 +256,7 @@ PlasmoidItem {
             onTriggered: {
                 const task = parent as Task;
                 if (task) {
-                    tasksModel.requestPublishDelegateGeometry(task.modelIndex(), backend.globalRect(task), task);
+                    tasks.tasksModel.requestPublishDelegateGeometry(task.modelIndex(), tasks.backend.globalRect(task), task);
                 }
                 destroy();
             }
@@ -302,8 +303,8 @@ PlasmoidItem {
 
         Loader {
             id: pulseAudio
-            sourceComponent: pulseAudioComponent
-            active: pulseAudioComponent.status === Component.Ready
+            sourceComponent: tasks.pulseAudioComponent
+            active: tasks.pulseAudioComponent.status === Component.Ready
         }
 
         Timer {
@@ -373,7 +374,7 @@ PlasmoidItem {
 
             onUrlsDropped: urls => {
                 // If all dropped URLs point to application desktop files, we'll add a launcher for each of them.
-                const createLaunchers = urls.every(item => backend.isApplication(item));
+                const createLaunchers = urls.every(item => root.backend.isApplication(item));
 
                 if (createLaunchers) {
                     urls.forEach(item => addLauncher(item));
@@ -386,7 +387,7 @@ PlasmoidItem {
 
                 // Otherwise we'll just start a new instance of the application with the URLs as argument,
                 // as you probably don't expect some of your files to open in the app and others to spawn launchers.
-                tasksModel.requestOpenUrls(hoveredItem.modelIndex(), urls);
+                tasksModel.requestOpenUrls((hoveredItem as Task).modelIndex(), urls);
             }
         }
 
@@ -421,7 +422,7 @@ PlasmoidItem {
                 }
             }
 
-            LayoutMirroring.enabled: tasks.shouldBeMirrored(Plasmoid.configuration.reverseMode, Qt.application.layoutDirection, vertical)
+            LayoutMirroring.enabled: tasks.shouldBeMirrored(Plasmoid.configuration.reverseMode, Qt.application.layoutDirection, tasks.vertical)
             anchors {
                 left: parent.left
                 top: parent.top
@@ -433,11 +434,13 @@ PlasmoidItem {
             TaskList {
                 id: taskList
 
-                LayoutMirroring.enabled: tasks.shouldBeMirrored(Plasmoid.configuration.reverseMode, Qt.application.layoutDirection, vertical)
+                LayoutMirroring.enabled: tasks.shouldBeMirrored(Plasmoid.configuration.reverseMode, Qt.application.layoutDirection, tasks.vertical)
                 anchors {
                     left: parent.left
                     top: parent.top
                 }
+
+                count: tasksModel.count
 
                 readonly property real widthOccupation: taskRepeater.count / columns
                 readonly property real heightOccupation: taskRepeater.count / rows
@@ -533,7 +536,7 @@ PlasmoidItem {
             return;
         }
 
-        const task = taskRepeater.itemAt(index);
+        const task = taskRepeater.itemAt(index) as Task;
         if (task) {
             TaskTools.activateTask(task.modelIndex(), task.model, null, task, Plasmoid, this, effectWatcher.registered);
         }

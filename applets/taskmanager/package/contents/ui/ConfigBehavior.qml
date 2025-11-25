@@ -17,6 +17,8 @@ import org.kde.plasma.workspace.dbus as DBus
 import org.kde.taskmanager as TaskManager
 
 KCMUtils.SimpleKCM {
+    id: root
+
     property alias cfg_groupingStrategy: groupingStrategy.currentIndex
     property alias cfg_groupedTaskVisualization: groupedTaskVisualization.currentIndex
     property alias cfg_groupPopups: groupPopups.checked
@@ -153,8 +155,8 @@ KCMUtils.SimpleKCM {
                     "value": TaskManager.TasksModel.SortWindowPositionHorizontal,
                 },
             ]
-            onActivated: cfg_sortingStrategy = currentValue
-            Component.onCompleted: currentIndex = indexOfValue(cfg_sortingStrategy)
+            onActivated: root.cfg_sortingStrategy = currentValue
+            Component.onCompleted: currentIndex = indexOfValue(root.cfg_sortingStrategy)
         }
 
         QQC2.CheckBox {

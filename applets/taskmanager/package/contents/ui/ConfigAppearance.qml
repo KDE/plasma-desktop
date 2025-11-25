@@ -6,7 +6,6 @@
 
 import QtQuick
 import QtQuick.Controls as QQC2
-import QtQuick.Layouts
 
 import org.kde.kcmutils as KCMUtils
 import org.kde.kirigami as Kirigami
@@ -14,6 +13,8 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasmoid
 
 KCMUtils.SimpleKCM {
+    id: root
+
     readonly property bool plasmaPaAvailable: Qt.createComponent("PulseAudio.qml").status === Component.Ready
     readonly property bool plasmoidVertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
     readonly property bool iconOnly: Plasmoid.pluginName === "org.kde.plasma.icontasks"
@@ -57,9 +58,9 @@ KCMUtils.SimpleKCM {
         QQC2.CheckBox {
             id: indicateAudioStreams
             text: i18nc("@option:check section General", "Show an indicator when a task is playing audio")
-            checked: cfg_indicateAudioStreams && plasmaPaAvailable
-            onToggled: cfg_indicateAudioStreams = checked
-            enabled: plasmaPaAvailable
+            checked: root.cfg_indicateAudioStreams && root.plasmaPaAvailable
+            onToggled: root.cfg_indicateAudioStreams = checked
+            enabled: root.plasmaPaAvailable
         }
 
         QQC2.CheckBox {
@@ -67,17 +68,17 @@ KCMUtils.SimpleKCM {
             leftPadding: mirrored ? 0 : (indicateAudioStreams.indicator.width + indicateAudioStreams.spacing)
             rightPadding: mirrored ? (indicateAudioStreams.indicator.width + indicateAudioStreams.spacing) : 0
             text: i18nc("@option:check section General", "Mute task when clicking indicator")
-            checked: cfg_interactiveMute && plasmaPaAvailable
-            onToggled: cfg_interactiveMute = checked
-            enabled: indicateAudioStreams.checked && plasmaPaAvailable
+            checked: root.cfg_interactiveMute && root.plasmaPaAvailable
+            onToggled: root.cfg_interactiveMute = checked
+            enabled: indicateAudioStreams.checked && root.plasmaPaAvailable
         }
 
         QQC2.CheckBox {
             id: tooltipControls
             text: i18nc("@option:check section General", "Show media and volume controls in tooltip")
-            checked: cfg_tooltipControls && plasmaPaAvailable
-            onToggled: cfg_tooltipControls = checked
-            enabled: plasmaPaAvailable
+            checked: root.cfg_tooltipControls && root.plasmaPaAvailable
+            onToggled: root.cfg_tooltipControls = checked
+            enabled: root.plasmaPaAvailable
         }
 
         QQC2.CheckBox {
@@ -87,12 +88,12 @@ KCMUtils.SimpleKCM {
 
         Item {
             Kirigami.FormData.isSection: true
-            visible: !iconOnly
+            visible: !root.iconOnly
         }
 
         QQC2.ComboBox {
             id: taskMaxWidth
-            visible: !iconOnly && !plasmoidVertical
+            visible: !root.iconOnly && !root.plasmoidVertical
 
             Kirigami.FormData.label: i18nc("@label:listbox", "Maximum task width:")
 
@@ -109,7 +110,7 @@ KCMUtils.SimpleKCM {
 
         QQC2.RadioButton {
             id: forbidStripes
-            Kirigami.FormData.label: plasmoidVertical
+            Kirigami.FormData.label: root.plasmoidVertical
                 ? i18nc("@label for radio button group, completes sentence: … when panel is low on space etc.", "Use multi-column view:")
                 : i18nc("@label for radio button group, completes sentence: … when panel is low on space etc.", "Use multi-row view:")
             onToggled: {
@@ -143,9 +144,9 @@ KCMUtils.SimpleKCM {
         QQC2.SpinBox {
             id: maxStripes
             enabled: maxStripes.value > 1
-            Kirigami.FormData.label: plasmoidVertical
-            ? i18nc("@label:spinbox maximum number of columns for tasks", "Maximum columns:")
-            : i18nc("@label:spinbox maximum number of rows for tasks", "Maximum rows:")
+            Kirigami.FormData.label: root.plasmoidVertical
+                ? i18nc("@label:spinbox maximum number of columns for tasks", "Maximum columns:")
+                : i18nc("@label:spinbox maximum number of rows for tasks", "Maximum rows:")
             from: 1
         }
 
@@ -154,7 +155,7 @@ KCMUtils.SimpleKCM {
         }
 
         QQC2.ComboBox {
-            visible: iconOnly
+            visible: root.iconOnly
             Kirigami.FormData.label: i18nc("@label:listbox", "Spacing between icons:")
 
             model: [
@@ -180,14 +181,14 @@ KCMUtils.SimpleKCM {
                     return 2; // Large
                 }
 
-                switch (cfg_iconSpacing) {
+                switch (root.cfg_iconSpacing) {
                     case 0: return 0; // Small
                     case 1: return 1; // Normal
                     case 3: return 2; // Large
                 }
             }
             onActivated: index => {
-                cfg_iconSpacing = model[currentIndex]["spacing"];
+                root.cfg_iconSpacing = model[currentIndex]["spacing"];
             }
         }
 

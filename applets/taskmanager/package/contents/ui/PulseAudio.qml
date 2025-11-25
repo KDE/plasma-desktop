@@ -8,14 +8,14 @@ pragma ComponentBehavior: Bound
 
 import QtQuick
 
-import org.kde.plasma.private.volume
+import org.kde.plasma.private.volume as PlasmaPa
 
 QtObject {
     id: pulseAudio
 
     signal streamsChanged()
 
-    readonly property GlobalConfig globalConfig: GlobalConfig { }
+    readonly property PlasmaPa.GlobalConfig globalConfig: PlasmaPa.GlobalConfig { }
 
     // It's a JS object so we can do key lookup and don't need to take care of filtering duplicates.
     property var pidMatches: new Set()
@@ -67,7 +67,7 @@ QtObject {
 
         if (streams.length === 0) {
             for (let i = 0, length = instantiator.count; i < length; ++i) {
-                const stream = instantiator.objectAt(i);
+                const stream = instantiator.objectAt(i) as StreamDelegate;
 
                 if (stream.parentPid === -1) {
                     stream.parentPid = backend.parentPid(stream.pid);
@@ -84,12 +84,12 @@ QtObject {
 
     // QtObject has no default property, hence adding the Instantiator to one explicitly.
     readonly property Instantiator instantiator: Instantiator {
-        model: PulseObjectFilterModel {
+        model: PlasmaPa.PulseObjectFilterModel {
             filters: [ { role: "VirtualStream", value: false } ]
-            sourceModel: SinkInputModel {}
+            sourceModel: PlasmaPa.SinkInputModel {}
         }
 
-        delegate: QtObject {
+        component StreamDelegate: QtObject {
             id: delegate
             required property var model
             readonly property int pid: model.Client?.properties["application.process.id"] ?? 0
@@ -110,10 +110,12 @@ QtObject {
             }
         }
 
+        delegate: StreamDelegate { }
+
         onObjectAdded: (index, object) => pulseAudio.streamsChanged()
         onObjectRemoved: (index, object) => pulseAudio.streamsChanged()
     }
 
-    readonly property int minimalVolume: PulseAudio.MinimalVolume
-    readonly property int normalVolume: PulseAudio.NormalVolume
+    readonly property int minimalVolume: PlasmaPa.PulseAudio.MinimalVolume
+    readonly property int normalVolume: PlasmaPa.PulseAudio.NormalVolume
 }

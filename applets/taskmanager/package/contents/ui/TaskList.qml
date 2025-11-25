@@ -6,7 +6,10 @@
 
 import QtQuick
 import QtQuick.Layouts
+
 import org.kde.plasma.plasmoid
+import org.kde.plasma.core as PlasmaCore
+
 import "code/layoutmetrics.js" as LayoutMetrics
 
 GridLayout {
@@ -20,37 +23,41 @@ GridLayout {
         animating = animationsRunning > 0;
     }
 
+    required property int count
+
+    readonly property bool vertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
+
     readonly property real minimumWidth: children
         .filter(item => item.visible && item.width > 0)
         .reduce((minimumWidth, item) => Math.min(minimumWidth, item.width), Infinity)
 
     readonly property int stripeCount: {
-        if (tasks.plasmoid.configuration.maxStripes === 1) {
+        if (Plasmoid.configuration.maxStripes === 1) {
             return 1;
         }
 
         // The maximum number of stripes allowed by the applet's size
-        const stripeSizeLimit = tasks.vertical
-            ? Math.floor(tasks.width / children[0].implicitWidth)
-            : Math.floor(tasks.height / children[0].implicitHeight)
-        const maxStripes = Math.min(tasks.plasmoid.configuration.maxStripes, stripeSizeLimit)
+        const stripeSizeLimit = vertical
+            ? Math.floor(parent.width / children[0].implicitWidth)
+            : Math.floor(parent.height / children[0].implicitHeight)
+        const maxStripes = Math.min(Plasmoid.configuration.maxStripes, stripeSizeLimit)
 
-        if (tasks.plasmoid.configuration.forceStripes) {
+        if (Plasmoid.configuration.forceStripes) {
             return maxStripes;
         }
 
         // The number of tasks that will fill a "stripe" before starting the next one
-        const maxTasksPerStripe = tasks.vertical
-            ? Math.ceil(tasks.height / LayoutMetrics.preferredMinHeight())
-            : Math.ceil(tasks.width / LayoutMetrics.preferredMinWidth())
+        const maxTasksPerStripe = vertical
+            ? Math.ceil(parent.height / LayoutMetrics.preferredMinHeight())
+            : Math.ceil(parent.width / LayoutMetrics.preferredMinWidth())
 
-        return Math.min(Math.ceil(tasksModel.count / maxTasksPerStripe), maxStripes)
+        return Math.min(Math.ceil(count / maxTasksPerStripe), maxStripes)
     }
 
     readonly property int orthogonalCount: {
-        return Math.ceil(tasksModel.count / stripeCount);
+        return Math.ceil(count / stripeCount);
     }
 
-    rows: tasks.vertical ? orthogonalCount : stripeCount
-    columns: tasks.vertical ? stripeCount : orthogonalCount
+    rows: vertical ? orthogonalCount : stripeCount
+    columns: vertical ? stripeCount : orthogonalCount
 }

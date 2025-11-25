@@ -34,24 +34,16 @@ Item {
             name: "playing"
             when: task.playingAudio && !task.muted
             PropertyChanges {
-                target: audioStreamIconBox
-                opacity: 1
-            }
-            PropertyChanges {
-                target: audioStreamIcon
-                source: "audio-volume-high-symbolic" + (Qt.application.layoutDirection === Qt.RightToLeft ? "-rtl" : "")
+                audioStreamIconBox.opacity: 1
+                audioStreamIcon.source: "audio-volume-high-symbolic" + (Qt.application.layoutDirection === Qt.RightToLeft ? "-rtl" : "")
             }
         },
         State {
             name: "muted"
             when: task.muted
             PropertyChanges {
-                target: audioStreamIconBox
-                opacity: 1
-            }
-            PropertyChanges {
-                target: audioStreamIcon
-                source: "audio-volume-muted-symbolic" + (Qt.application.layoutDirection === Qt.RightToLeft ? "-rtl" : "")
+                audioStreamIconBox.opacity: 1
+                audioStreamIcon.source: "audio-volume-muted-symbolic" + (Qt.application.layoutDirection === Qt.RightToLeft ? "-rtl" : "")
             }
         }
     ]
@@ -131,7 +123,7 @@ Item {
         source: "audio-volume-high-symbolic" + (Qt.application.layoutDirection === Qt.RightToLeft ? "-rtl" : "")
         selected: tapHandler.pressed
 
-        height: Math.round(Math.min(parent.height * indicatorScale, Kirigami.Units.iconSizes.smallMedium))
+        height: Math.round(Math.min(parent.height * audioStreamIconBox.indicatorScale, Kirigami.Units.iconSizes.smallMedium))
         width: height
 
         anchors {
@@ -145,8 +137,7 @@ Item {
                 when: tasks.vertical && frame.width < audioStreamIcon.requiredSpace
 
                 PropertyChanges {
-                    target: audioStreamIconBox
-                    anchors.rightMargin: Math.round(taskFrame.margins.right * indicatorScale)
+                    audioStreamIconBox.anchors.rightMargin: Math.round(taskFrame.margins.right * indicatorScale)
                 }
             },
 
@@ -162,15 +153,9 @@ Item {
                 }
 
                 PropertyChanges {
-                    target: audioStreamIconBox
-                    width: Kirigami.Units.iconSizes.roundedIconSize(Math.min(Math.min(iconBox.width, iconBox.height), Kirigami.Units.iconSizes.smallMedium))
-                }
-
-                PropertyChanges {
-                    target: audioStreamIcon
-
-                    height: parent.height
-                    width: parent.width
+                    audioStreamIconBox.width: Kirigami.Units.iconSizes.roundedIconSize(Math.min(Math.min(iconBox.width, iconBox.height), Kirigami.Units.iconSizes.smallMedium))
+                    audioStreamIcon.height: parent.height
+                    audioStreamIcon.width: parent.width
                 }
             },
 
@@ -186,17 +171,10 @@ Item {
                 }
 
                 PropertyChanges {
-                    target: audioStreamIconBox
-
-                    anchors.topMargin: taskFrame.margins.top
-                    width: Kirigami.Units.iconSizes.roundedIconSize(Math.min(Math.min(iconBox.width, iconBox.height), Kirigami.Units.iconSizes.smallMedium))
-                }
-
-                PropertyChanges {
-                    target: audioStreamIcon
-
-                    height: parent.height
-                    width: parent.width
+                    audioStreamIconBox.anchors.topMargin: taskFrame.margins.top
+                    audioStreamIconBox.width: Kirigami.Units.iconSizes.roundedIconSize(Math.min(Math.min(iconBox.width, iconBox.height), Kirigami.Units.iconSizes.smallMedium))
+                    audioStreamIcon.height: parent.height
+                    audioStreamIcon.width: parent.width
                 }
             }
         ]

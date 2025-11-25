@@ -42,15 +42,13 @@ MouseArea {
         State {
             name: ""
             PropertyChanges {
-                target: root.textItem
-                x: 0
+                root.textItem.x: 0
             }
         },
         State {
             name: "ShowRight"
             PropertyChanges {
-                target: root.textItem
-                x: root.width - root.textItem.implicitWidth
+                root.textItem.x: root.width - root.textItem.implicitWidth
             }
         }
     ]

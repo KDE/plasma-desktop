@@ -12,7 +12,6 @@ pragma ComponentBehavior: Bound
 
 import QtQml.Models
 import QtQuick
-import QtQuick.Layouts
 
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components as PlasmaComponents3
@@ -78,6 +77,7 @@ Loader {
             isOnAllVirtualDesktops: toolTipDelegate.isOnAllVirtualDesktops
             virtualDesktops: toolTipDelegate.virtualDesktops
             activities: toolTipDelegate.activities
+            model: null
         }
     }
 
@@ -86,15 +86,15 @@ Loader {
 
         PlasmaComponents3.ScrollView {
             // 2 * Kirigami.Units.smallSpacing is for the margin of tooltipDialog
-            implicitWidth: leftPadding + rightPadding + Math.min(Screen.desktopAvailableWidth - 2 * Kirigami.Units.smallSpacing, Math.max(delegateModel.estimatedWidth, contentItem.contentItem.childrenRect.width))
-            implicitHeight: bottomPadding + Math.min(Screen.desktopAvailableHeight - 2 * Kirigami.Units.smallSpacing, Math.max(delegateModel.estimatedHeight, contentItem.contentItem.childrenRect.height))
+            implicitWidth: leftPadding + rightPadding + Math.min(Screen.desktopAvailableWidth - 2 * Kirigami.Units.smallSpacing, Math.max(delegateModel.estimatedWidth, (contentItem as Flickable).contentItem.childrenRect.width))
+            implicitHeight: bottomPadding + Math.min(Screen.desktopAvailableHeight - 2 * Kirigami.Units.smallSpacing, Math.max(delegateModel.estimatedHeight, (contentItem as Flickable).contentItem.childrenRect.height))
 
             ListView {
                 id: groupToolTipListView
 
                 model: delegateModel
 
-                orientation: isVerticalPanel || !Plasmoid.configuration.showToolTips ? ListView.Vertical : ListView.Horizontal
+                orientation: toolTipDelegate.isVerticalPanel || !Plasmoid.configuration.showToolTips ? ListView.Vertical : ListView.Horizontal
                 reuseItems: true
 
                 // Lots of spacing with no thumbnails looks bad
@@ -104,7 +104,7 @@ Loader {
                 property bool hasTrackInATitle: {
                     var found = false
                     for (var i=0; i<model.items.count && !found; i++) {
-                        found = model.items.get(i).model.display.includes(playerData?.track)
+                        found = model.items.get(i).model.display.includes(toolTipDelegate.playerData?.track)
                     }
                     return found
                 }
@@ -124,8 +124,6 @@ Loader {
                 onRootIndexChanged: groupToolTipListView.positionViewAtBeginning() // Fix a visual glitch (when the mouse moves from a tooltip with a moved scrollbar to another tooltip without a scrollbar)
 
                 delegate: ToolTipInstance {
-                    required property var model
-
                     submodelIndex: tasksModel.makeModelIndex(toolTipDelegate.rootIndex.row, index)
                     appPid: model.AppPid
                     // 'display' is required already
