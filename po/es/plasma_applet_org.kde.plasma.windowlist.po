@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.windowlist\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-24 00:44+0000\n"
-"PO-Revision-Date: 2025-05-26 00:54+0100\n"
+"PO-Revision-Date: 2025-11-25 00:47+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: config.qml:13
 #, kde-format
@@ -28,28 +28,28 @@ msgstr "General"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "For active application, show:"
-msgstr ""
+msgstr "Para la aplicación activa, mostrar:"
 
 #: ConfigGeneral.qml:34
 #, kde-format
 msgctxt ""
 "@item:inlistbox what to show for active application in horizontal panel"
 msgid "Icon and name"
-msgstr ""
+msgstr "Icono y nombre"
 
 #: ConfigGeneral.qml:35
 #, kde-format
 msgctxt ""
 "@item:inlistbox what to show for active application in horizontal panel"
 msgid "Icon"
-msgstr ""
+msgstr "Icono"
 
 #: ConfigGeneral.qml:36
 #, kde-format
 msgctxt ""
 "@item:inlistbox what to show for active application in horizontal panel"
 msgid "Name"
-msgstr ""
+msgstr "Nombre"
 
 #: ConfigGeneral.qml:83
 #, kde-format
@@ -71,6 +71,3 @@ msgstr "No hay ventanas abiertas"
 #, kde-format
 msgid "Plasma Desktop"
 msgstr "Escritorio Plasma"
-
-#~ msgid "Show active application's name on Panel button"
-#~ msgstr "Mostrar el nombre de la aplicación activa en el botón del panel"
