@@ -98,7 +98,7 @@ PlasmaExtras.PlasmoidHeading {
             icon.width: Kirigami.Units.iconSizes.smallMedium
             icon.height: Kirigami.Units.iconSizes.smallMedium
             icon.name: "applications-all-symbolic"
-            text: i18n("Applications")
+            text: i18n("Applications") // qmllint disable unqualified
             Keys.onBacktabPressed: event => {
                 (kickoff.lastCentralPane || nextItemInFocusChain(false))
                     .forceActiveFocus(Qt.BacktabFocusReason)
@@ -114,7 +114,7 @@ PlasmaExtras.PlasmoidHeading {
             icon.width: Kirigami.Units.iconSizes.smallMedium
             icon.height: Kirigami.Units.iconSizes.smallMedium
             icon.name: "compass"
-            text: i18n("Places") //Explore?
+            text: i18n("Places") //Explore? // qmllint disable unqualified
         }
 
         Connections {

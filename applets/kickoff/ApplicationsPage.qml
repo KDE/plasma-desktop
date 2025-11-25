@@ -6,7 +6,6 @@
 pragma ComponentBehavior: Bound
 
 import QtQuick
-import QtQuick.Layouts
 import QtQuick.Templates as T
 import org.kde.plasma.private.kicker as Kicker
 import org.kde.kirigami as Kirigami
@@ -24,15 +23,16 @@ BasePage {
         // needed otherwise app displayed at top-level will show a first character as group.
         section.property: ""
         delegate: KickoffListDelegate {
+            id: sideBarDelegate
             width: view.availableWidth
             isCategoryListItem: true
             background: PlasmaExtras.Highlight {
                 // I have to do this for it to actually fill the item for some reason
                 anchors.fill: parent
                 active: false
-                hovered: parent.mouseArea.containsMouse
+                hovered: sideBarDelegate.mouseArea.containsMouse
                 visible: !Plasmoid.configuration.switchCategoryOnHover
-                    && !parent.isSeparator && !parent.ListView.isCurrentItem
+                    && !sideBarDelegate.isSeparator && !sideBarDelegate.ListView.isCurrentItem
                     && hovered
             }
         }

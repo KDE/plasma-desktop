@@ -7,7 +7,6 @@
 pragma ComponentBehavior: Bound
 
 import QtQuick
-import QtQuick.Layouts
 import QtQuick.Templates as T
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.plasma.plasmoid
@@ -21,6 +20,7 @@ BasePage {
         model: placesCategoryModel
         isSidebar: true
         delegate: KickoffListDelegate {
+            id: delegate
             url: ""
             description: ""
             width: view.availableWidth
@@ -30,9 +30,9 @@ BasePage {
                 // I have to do this for it to actually fill the item for some reason
                 anchors.fill: parent
                 active: false
-                hovered: parent.mouseArea.containsMouse
+                hovered: delegate.mouseArea.containsMouse
                 visible: !Plasmoid.configuration.switchCategoryOnHover
-                    && !parent.isSeparator && !parent.ListView.isCurrentItem
+                    && !delegate.isSeparator && !parent.ListView.isCurrentItem
                     && hovered
             }
         }
@@ -49,7 +49,7 @@ BasePage {
             case 2: return kickoff.frequentUsageModel
         }
         onActiveFocusChanged: if (activeFocus && count < 1) {
-            root.sideBarItem.forceActiveFocus()
+            (root.sideBarItem as Item).forceActiveFocus()
         }
     }
 

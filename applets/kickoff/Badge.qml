@@ -5,7 +5,6 @@
  */
 
 import QtQuick
-import QtQuick.Templates as T
 import org.kde.plasma.components as PC3
 import org.kde.kirigami as Kirigami
 

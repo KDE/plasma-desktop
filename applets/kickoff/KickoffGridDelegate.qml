@@ -16,7 +16,6 @@ import QtQuick
 import QtQuick.Layouts
 import org.kde.plasma.components as PC3
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.plasmoid
 
 AbstractKickoffItemDelegate {
     id: root
@@ -57,8 +56,8 @@ AbstractKickoffItemDelegate {
                 active: root.model?.isNewlyInstalled ?? false
 
                 sourceComponent: Badge {
-                    text: i18nc("Newly installed app, badge, keep short", "New!")
-                    Accessible.name: i18n("Newly installed application")
+                    text: i18nc("Newly installed app, badge, keep short", "New!") // qmllint disable unqualified
+                    Accessible.name: i18n("Newly installed application") // qmllint disable unqualified
                 }
             }
         }

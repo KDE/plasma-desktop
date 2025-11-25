@@ -12,7 +12,6 @@ pragma ComponentBehavior: Bound
 pragma Singleton // NOTE: Singletons are shared between all instances of a plasmoid
 
 import QtQuick
-import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasmoid
 import org.kde.plasma.extras as PlasmaExtras
 import "code/tools.js" as Tools
@@ -57,7 +56,7 @@ Item {
 
             required property var modelData
             readonly property PlasmaExtras.Menu subMenu: modelData.subActions
-                ? menuComponent.createObject(this, { visualParent: action })
+                ? menuComponent.createObject(this, { visualParent: action }) as PlasmaExtras.Menu
                 : null
 
             text: modelData.text ?? ""

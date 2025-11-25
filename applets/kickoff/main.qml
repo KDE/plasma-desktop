@@ -89,12 +89,12 @@ PlasmoidItem {
         }
         appletInterface: kickoff
         mergeResults: true
-        favoritesModel: rootModel.favoritesModel
+        favoritesModel: kickoff.rootModel.favoritesModel
     }
 
     readonly property Kicker.ComputerModel computerModel: Kicker.ComputerModel {
         appletInterface: kickoff
-        favoritesModel: rootModel.favoritesModel
+        favoritesModel: kickoff.rootModel.favoritesModel
         systemApplications: Plasmoid.configuration.systemApplications
         Component.onCompleted: {
             //systemApplications = Plasmoid.configuration.systemApplications;
@@ -104,13 +104,13 @@ PlasmoidItem {
     readonly property alias recentUsageModel: recentUsageModel
     Kicker.RecentUsageModel {
         id: recentUsageModel
-        favoritesModel: rootModel.favoritesModel
+        favoritesModel: kickoff.rootModel.favoritesModel
     }
 
     readonly property alias frequentUsageModel: frequentUsageModel
     Kicker.RecentUsageModel {
         id: frequentUsageModel
-        favoritesModel: rootModel.favoritesModel
+        favoritesModel: kickoff.rootModel.favoritesModel
         ordering: 1 // Popular / Frequently Used
     }
     //END
@@ -353,7 +353,7 @@ PlasmoidItem {
 
     Plasmoid.contextualActions: [
         PlasmaCore.Action {
-            text: i18n("Edit Applications…")
+            text: i18n("Edit Applications…") // qmllint disable unqualified
             icon.name: "kmenuedit"
             visible: Plasmoid.immutability !== PlasmaCore.Types.SystemImmutable
             onTriggered: processRunner.runMenuEditor()

@@ -11,8 +11,6 @@ pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Layouts
-import QtQuick.Templates as T
-import Qt5Compat.GraphicalEffects
 import org.kde.plasma.components as PC3
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami as Kirigami
@@ -83,7 +81,7 @@ PlasmaExtras.PlasmoidHeading {
                     Layout.minimumWidth: height
                     Layout.maximumWidth: height
 
-                    text: i18n("Open user settings")
+                    text: i18n("Open user settings") // qmllint disable unqualified
                     name: kuser.fullName
 
                     // The icon property emits two signals in a row during which it
@@ -93,10 +91,10 @@ PlasmaExtras.PlasmoidHeading {
                     source: kuser.faceIconUrl
 
                     Keys.onTabPressed: event => {
-                        tabSetFocus(event, kickoff.firstCentralPane);
+                        root.tabSetFocus(event, kickoff.firstCentralPane);
                     }
                     Keys.onBacktabPressed: event => {
-                        tabSetFocus(event, nextItemInFocusChain());
+                        root.tabSetFocus(event, nextItemInFocusChain());
                     }
                     Keys.onLeftPressed: event => {
                         if (kickoff.sideBarOnRight) {
@@ -263,7 +261,7 @@ PlasmaExtras.PlasmoidHeading {
                     checkable: true
                     checked: Plasmoid.configuration.pin
                     icon.name: "window-pin"
-                    text: i18n("Keep Open")
+                    text: i18n("Keep Open") // qmllint disable unqualified
                     display: PC3.ToolButton.IconOnly
                     PC3.ToolTip.text: text
                     PC3.ToolTip.delay: Kirigami.Units.toolTipDelay

@@ -14,7 +14,6 @@ import QtQuick.Templates as T
 import org.kde.plasma.components as PC3
 import org.kde.plasma.extras as PlasmaExtras
 
-import org.kde.ksvg as KSvg
 import org.kde.kirigami as Kirigami
 
 // ScrollView makes it difficult to control implicit size using the contentItem.
@@ -315,7 +314,7 @@ EmptyPage {
                     case Qt.Key_Return:
                         /* Fall through*/
                     case Qt.Key_Enter:
-                        root.currentItem.action.triggered();
+                        (root.currentItem as AbstractKickoffItemDelegate).action.triggered();
                         root.currentItem.forceActiveFocus(Qt.ShortcutFocusReason);
                         event.accepted = true;
                         break;

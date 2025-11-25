@@ -17,7 +17,6 @@ import org.kde.plasma.plasmoid
 import org.kde.plasma.components as PC3
 import org.kde.plasma.extras as PlasmaExtras
 
-import org.kde.ksvg as KSvg
 import org.kde.kirigami as Kirigami
 
 // ScrollView makes it difficult to control implicit size using the contentItem.
@@ -47,7 +46,7 @@ EmptyPage {
 
     header: MouseArea {
         implicitHeight: KickoffSingleton.listItemMetrics.margins.top
-        hoverEnabled: mainContentView || Plasmoid.configuration.switchCategoryOnHover
+        hoverEnabled: root.mainContentView || Plasmoid.configuration.switchCategoryOnHover
         onEntered: {
             if (containsMouse) {
                 const targetIndex = view.indexAt(mouseX + view.contentX, view.contentY)
@@ -61,7 +60,7 @@ EmptyPage {
 
     footer: MouseArea {
         implicitHeight: KickoffSingleton.listItemMetrics.margins.bottom
-        hoverEnabled: mainContentView || Plasmoid.configuration.switchCategoryOnHover
+        hoverEnabled: root.mainContentView || Plasmoid.configuration.switchCategoryOnHover
         onEntered: {
             if (containsMouse) {
                 const targetIndex = view.indexAt(mouseX + view.contentX, view.height + view.contentY - 1)
@@ -93,7 +92,7 @@ EmptyPage {
 
         implicitWidth: {
             let totalMargins = leftMargin + rightMargin
-            if (mainContentView) {
+            if (root.mainContentView) {
                 if (kickoff.mayHaveGridWithScrollBar) {
                     totalMargins += verticalScrollBar.implicitWidth
                 }
@@ -258,7 +257,7 @@ EmptyPage {
                     case Qt.Key_Up: if (!atFirst) {
                         decrementCurrentIndex()
 
-                        if (currentItem.isSeparator) {
+                        if ((currentItem as AbstractKickoffItemDelegate).isSeparator) {
                             decrementCurrentIndex()
                         }
 
@@ -271,7 +270,7 @@ EmptyPage {
                     case Qt.Key_Down: if (!atLast) {
                         incrementCurrentIndex()
 
-                        if (currentItem.isSeparator) {
+                        if ((currentItem as AbstractKickoffItemDelegate).isSeparator) {
                             incrementCurrentIndex()
                         }
 
@@ -314,8 +313,8 @@ EmptyPage {
                     case Qt.Key_Return:
                         /* Fall through*/
                     case Qt.Key_Enter:
-                        root.currentItem.action.triggered();
-                        root.currentItem.forceActiveFocus(Qt.ShortcutFocusReason);
+                        (currentItem as AbstractKickoffItemDelegate).action.triggered();
+                        currentItem.forceActiveFocus(Qt.ShortcutFocusReason);
                         event.accepted = true;
                         break;
                 }

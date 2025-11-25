@@ -38,8 +38,8 @@ KickoffGridView {
         required property int firstIndex
         required property string section
 
-        width: view.cellWidth
-        height: view.cellHeight
+        width: root.view.cellWidth
+        height: root.view.cellHeight
 
         hoverEnabled: true
         onHoveredChanged: if (hovered) {

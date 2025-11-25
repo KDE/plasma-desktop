@@ -5,9 +5,7 @@
 pragma ComponentBehavior: Bound
 pragma Singleton // NOTE: Singletons are shared between all instances of a plasmoid
 
-import QtQml.Models
 import QtQuick
-import QtQuick.Templates as T
 import org.kde.kirigami as Kirigami
 import org.kde.ksvg as KSvg
 import org.kde.plasma.plasma5support as P5Support
@@ -36,8 +34,8 @@ Item {
     //BEGIN Reusable Objects
     readonly property KSvg.Svg lineSvg: KSvg.Svg {
         imagePath: "widgets/line"
-        property int horLineHeight: lineSvg.elementSize("horizontal-line").height
-        property int vertLineWidth: lineSvg.elementSize("vertical-line").width
+        property int horLineHeight: elementSize("horizontal-line").height
+        property int vertLineWidth: elementSize("vertical-line").width
     }
     //END
 

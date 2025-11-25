@@ -11,8 +11,6 @@ import QtQuick.Templates as T
 
 import org.kde.plasma.extras as PlasmaExtras
 
-import org.kde.ksvg as KSvg
-
 KickoffGridView {
     id: root
 
@@ -26,8 +24,8 @@ KickoffGridView {
     // When nested insdie a listivew, other items will still treat it as a delegate(because this was the truth always till now), so just call the appropriate function
     readonly property QtObject action: QtObject {
         function triggered(): void {
-            view.currentItem.action.triggered();
-            view.currentItem.forceActiveFocus();
+            root.view.currentItem.action.triggered();
+            root.view.currentItem.forceActiveFocus();
         }
     }
 
@@ -40,11 +38,11 @@ KickoffGridView {
         // The highlight gets a value of 3 while the drag is active and then goes back to the default value of 0.
         z: (root.currentItem?.Drag.active ?? false) ? 3 : 0
 
-        pressed: (view.currentItem as T.AbstractButton)?.down ?? false
+        pressed: (root.view.currentItem as T.AbstractButton)?.down ?? false
 
-        width: view.cellWidth
-        height: view.cellHeight
-        active: view.activeFocus
+        width: root.view.cellWidth
+        height: root.view.cellHeight
+        active: root.view.activeFocus
             || (kickoff.contentArea === root
                 && kickoff.searchField.activeFocus)
     }

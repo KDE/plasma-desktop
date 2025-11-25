@@ -10,7 +10,7 @@ import org.kde.plasma.configuration 2.0 as PlasmaConfig
 
 PlasmaConfig.ConfigModel {
     PlasmaConfig.ConfigCategory {
-        name: i18n("General")
+        name: i18n("General") // qmllint disable unqualified
         icon: "preferences-desktop-plasma"
         source: "ConfigGeneral.qml"
     }

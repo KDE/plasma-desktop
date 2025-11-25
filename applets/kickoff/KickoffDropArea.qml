@@ -79,29 +79,29 @@ DropArea {
     }
 
     Shortcut {
-        enabled: (targetView instanceof GridView && targetView.currentIndex >= targetView.columns)
-              || (targetView instanceof ListView && targetView.currentIndex > 0)
+        enabled: (root.targetView instanceof GridView && root.targetView.currentIndex >= root.targetView.columns)
+              || (root.targetView instanceof ListView && root.targetView.currentIndex > 0)
         sequence: "Ctrl+Shift+Up"
-        onActivated: moveRow(targetView.currentIndex - (targetView instanceof GridView ? targetView.columns : 1))
+        onActivated: root.moveRow(root.targetView.currentIndex - (root.targetView instanceof GridView ? root.targetView.columns : 1))
     }
 
     Shortcut {
-        enabled: (targetView instanceof GridView && targetView.currentIndex < targetView.count - targetView.columns)
-              || (targetView instanceof ListView && targetView.currentIndex + 1 < targetView.count)
+        enabled: (root.targetView instanceof GridView && root.targetView.currentIndex < root.targetView.count - root.targetView.columns)
+              || (root.targetView instanceof ListView && root.targetView.currentIndex + 1 < root.targetView.count)
         sequence: "Ctrl+Shift+Down"
-        onActivated: moveRow(targetView.currentIndex + (targetView instanceof GridView ? targetView.columns : 1))
+        onActivated: root.moveRow(root.targetView.currentIndex + (root.targetView instanceof GridView ? root.targetView.columns : 1))
     }
 
     Shortcut {
-        enabled: targetView instanceof GridView && targetView.currentIndex % targetView.columns > 0
+        enabled: root.targetView instanceof GridView && root.targetView.currentIndex % root.targetView.columns > 0
         sequence: "Ctrl+Shift+Left"
-        onActivated: moveRow(targetView.currentIndex - 1)
+        onActivated: root.moveRow(root.targetView.currentIndex - 1)
     }
 
     Shortcut {
-        enabled: targetView instanceof GridView && targetView.currentIndex % targetView.columns !== targetView.columns - 1
+        enabled: root.targetView instanceof GridView && root.targetView.currentIndex % root.targetView.columns !== root.targetView.columns - 1
         sequence: "Ctrl+Shift+Right"
-        onActivated: moveRow(targetView.currentIndex + 1)
+        onActivated: root.moveRow(root.targetView.currentIndex + 1)
     }
 
     SmoothedAnimation {
