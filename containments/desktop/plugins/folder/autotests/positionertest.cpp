@@ -47,6 +47,8 @@ void PositionerTest::cleanupTestCase()
 
 void PositionerTest::init()
 {
+    m_applet->config().deleteGroup(QStringLiteral("General"));
+
     m_folderModel = new FolderModel(this);
     m_folderModel->classBegin();
     m_folderModel->setScreen(0);
@@ -348,8 +350,8 @@ void PositionerTest::tst_changeResolution()
     changeResolution(newResolution);
     QCOMPARE(m_positioner->m_resolution, QStringLiteral("%1x%2").arg(newResolution.width()).arg(newResolution.height()));
 
-    // Configuration should not be saved after resolution change, so its identical to baseline
-    QCOMPARE(baselineConfig, getCurrentConfig());
+    // Configuration is saved after resolution change (icon layout is converted to a new resolution)
+    QCOMPARE_NE(baselineConfig, getCurrentConfig());
 }
 
 void PositionerTest::tst_renameFile()
