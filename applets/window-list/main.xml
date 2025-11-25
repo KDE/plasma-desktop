@@ -14,6 +14,14 @@
       <label>Whether to show the icon on the Panel button</label>
       <default>true</default>
     </entry>
+    <entry name="openOnHover" type="Bool">
+        <label>Whether to open the window list popup when hovering over the applet</label>
+        <default>false</default>
+    </entry>
+    <entry name="hoverOpenDelay" type="Int">
+      <label>Delay in milliseconds before opening the window list popup when hovering over the applet</label>
+      <default>300</default>
+    </entry>
   </group>
 
 </kcfg>
