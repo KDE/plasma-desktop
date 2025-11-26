@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_windowlist\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-24 00:44+0000\n"
+"POT-Creation-Date: 2025-11-26 00:45+0000\n"
 "PO-Revision-Date: 2025-03-15 07:00+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -25,42 +25,75 @@ msgstr ""
 msgid "General"
 msgstr "Umum"
 
-#: ConfigGeneral.qml:29
+#: ConfigGeneral.qml:31
 #, kde-format
 msgctxt "@label:listbox"
 msgid "For active application, show:"
-msgstr ""
-
-#: ConfigGeneral.qml:34
-#, kde-format
-msgctxt ""
-"@item:inlistbox what to show for active application in horizontal panel"
-msgid "Icon and name"
-msgstr ""
-
-#: ConfigGeneral.qml:35
-#, kde-format
-msgctxt ""
-"@item:inlistbox what to show for active application in horizontal panel"
-msgid "Icon"
 msgstr ""
 
 #: ConfigGeneral.qml:36
 #, kde-format
 msgctxt ""
 "@item:inlistbox what to show for active application in horizontal panel"
+msgid "Icon and name"
+msgstr ""
+
+#: ConfigGeneral.qml:37
+#, kde-format
+msgctxt ""
+"@item:inlistbox what to show for active application in horizontal panel"
+msgid "Icon"
+msgstr ""
+
+#: ConfigGeneral.qml:38
+#, kde-format
+msgctxt ""
+"@item:inlistbox what to show for active application in horizontal panel"
 msgid "Name"
 msgstr ""
 
-#: ConfigGeneral.qml:83
+#: ConfigGeneral.qml:85
 #, kde-format
 msgid "Only icons can be shown when the Panel is vertical."
 msgstr "Hanya ikon-ikon yang dapat ditampilkan ketika posisi Panel vertikal."
 
-#: ConfigGeneral.qml:85
+#: ConfigGeneral.qml:87
 #, kde-format
 msgid "Not applicable when the widget is on the Desktop."
 msgstr "Tidak berlaku ketika widget berada di Desktop."
+
+#: ConfigGeneral.qml:100
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Open on hover:"
+msgstr ""
+
+#: ConfigGeneral.qml:105
+#, kde-format
+msgctxt "@option:check open-on-hover is enabled, with the following delay:"
+msgid "Enabled, with delay:"
+msgstr ""
+
+#: ConfigGeneral.qml:125
+#, kde-format
+msgid "%1 ms"
+msgid_plural "%1 ms"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ConfigGeneral.qml:134
+#, kde-format
+msgctxt "short for millisecond(s)"
+msgid "ms"
+msgid_plural "ms"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ConfigGeneral.qml:137
+#, kde-format
+msgctxt "@label:spinbox accessible"
+msgid "Hover open delay %1"
+msgstr ""
 
 #: main.qml:92
 #, kde-format
