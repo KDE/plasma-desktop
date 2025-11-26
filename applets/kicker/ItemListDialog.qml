@@ -26,6 +26,7 @@ Kicker.SubMenu {
     hideOnWindowDeactivate: kicker.hideOnWindowDeactivate
     location: PlasmaCore.Types.Floating
     offset: Kirigami.Units.smallSpacing
+    LayoutMirroring.enabled: dialogMirrored
 
     onWindowDeactivated: {
         if (!aboutToBeDestroyed) {

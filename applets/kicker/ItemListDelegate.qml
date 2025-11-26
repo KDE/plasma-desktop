@@ -152,6 +152,7 @@ Item {
             id: label
 
             enabled: !item.isParent || (item.isParent && item.hasChildren)
+            LayoutMirroring.enabled: (Qt.application.layoutDirection === Qt.RightToLeft)
 
             anchors.verticalCenter: parent.verticalCenter
 

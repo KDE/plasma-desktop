@@ -68,8 +68,8 @@ FocusScope {
                 visualParent: listView.currentItem,
                 model: model.modelForRow(listView.currentIndex),
                 visible: true,
+                dialogMirrored: itemList.LayoutMirroring.enabled
             });
-            itemList.childDialog.LayoutMirroring.enabled = itemList.LayoutMirroring.enabled
             itemList.childDialog.index = listView.currentIndex;
 
             windowSystem.forceActive(itemList.childDialog.mainItem);
