@@ -430,7 +430,6 @@ PlasmaCore.ToolTipArea {
                 if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.NewInstance) {
                     tasksModel.requestNewInstance(modelIndex());
                 } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.Close) {
-                    tasksRoot.taskClosedWithMouseMiddleButton = model.WinIdList.slice()
                     tasksModel.requestClose(modelIndex());
                 } else if (Plasmoid.configuration.middleClickAction === TaskManagerApplet.Backend.ToggleMinimized) {
                     tasksModel.requestToggleMinimized(modelIndex());

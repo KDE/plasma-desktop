@@ -42,8 +42,6 @@ PlasmoidItem {
     readonly property Component contextMenuComponent: Qt.createComponent("ContextMenu.qml")
     readonly property Component pulseAudioComponent: Qt.createComponent("PulseAudio.qml")
 
-    property bool needLayoutRefresh: false
-    property /*list<WId> where WId = int|string*/ var taskClosedWithMouseMiddleButton: []
     property alias taskList: taskList
 
     preferredRepresentation: fullRepresentation
@@ -501,14 +499,6 @@ PlasmoidItem {
 
                     delegate: Task {
                         tasksRoot: tasks
-                    }
-                    onItemRemoved: (index, item) => {
-                        if (tasks.containsMouse && index !== taskRepeater.count &&
-                            item.model.WinIdList.length > 0 &&
-                            taskClosedWithMouseMiddleButton.includes(item.winIdList[0])) {
-                            needLayoutRefresh = true;
-                        }
-                        taskClosedWithMouseMiddleButton = [];
                     }
                 }
             }
