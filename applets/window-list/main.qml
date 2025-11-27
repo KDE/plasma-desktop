@@ -25,11 +25,29 @@ PlasmoidItem {
     switchWidth: Kirigami.Units.gridUnit * 8
     switchHeight: Kirigami.Units.gridUnit * 6
 
+    TaskManager.VirtualDesktopInfo {
+        id: virtualDesktopInfo
+    }
+
+    TaskManager.ActivityInfo {
+        id: activityInfo
+        readonly property string nullUuid: "00000000-0000-0000-0000-000000000000"
+    }
+
     TaskManager.TasksModel {
         id: tasksModel
 
+        virtualDesktop: virtualDesktopInfo.currentDesktop
+        screenGeometry: Plasmoid.containment.screenGeometry
+        activity: activityInfo.currentActivity
+
         sortMode: TaskManager.TasksModel.SortVirtualDesktop
         groupMode: TaskManager.TasksModel.GroupDisabled
+
+        filterByVirtualDesktop: Plasmoid.configuration.showOnlyCurrentDesktop
+        filterByScreen: Plasmoid.configuration.showOnlyCurrentScreen
+        filterByActivity: Plasmoid.configuration.showOnlyCurrentActivity
+        filterNotMinimized: Plasmoid.configuration.showOnlyMinimized
     }
 
     Component {

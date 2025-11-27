@@ -20,6 +20,10 @@ KCM.SimpleKCM {
     property bool cfg_showIcon: Plasmoid.configuration.showIcon
     property bool cfg_openOnHover: Plasmoid.configuration.openOnHover
     property int cfg_hoverOpenDelay: Plasmoid.configuration.hoverOpenDelay
+    property alias cfg_showOnlyCurrentScreen: showOnlyCurrentScreen.checked
+    property alias cfg_showOnlyCurrentDesktop: showOnlyCurrentDesktop.checked
+    property alias cfg_showOnlyCurrentActivity: showOnlyCurrentActivity.checked
+    property alias cfg_showOnlyMinimized: showOnlyMinimized.checked
 
     Kirigami.FormLayout {
         anchors.right: parent.right
@@ -142,6 +146,31 @@ KCM.SimpleKCM {
                     extraEnabledConditions: root.cfg_openOnHover
                 }
             }
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
+        QQC2.CheckBox {
+            id: showOnlyCurrentDesktop
+            Kirigami.FormData.label: i18nc("@label for checkbox group, completes sentence like: … from current screen", "Show only tasks:")
+            text: i18nc("@option:check completes sentence: show only tasks", "From the current desktop")
+        }
+
+        QQC2.CheckBox {
+            id: showOnlyCurrentActivity
+            text: i18nc("@option:check completes sentence: show only tasks", "From the current activity")
+        }
+
+        QQC2.CheckBox {
+            id: showOnlyCurrentScreen
+            text: i18nc("@option:check completes sentence: show only tasks", "From the current screen")
+        }
+
+        QQC2.CheckBox {
+            id: showOnlyMinimized
+            text: i18nc("@option:check completes sentence: show only tasks", "That are minimized")
         }
     }
 }
