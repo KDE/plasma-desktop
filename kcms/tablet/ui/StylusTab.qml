@@ -309,7 +309,7 @@ Item {
                     id: seq
 
                     required property string label
-                    required property int index
+                    required property int value // Gives us BTN_STYLUS, etc which KWin accepts
                     required name
 
                     Kirigami.FormData.label: (buttonPressed ? "<b>" : "") + label + (buttonPressed ? "</b>" : "")
@@ -319,7 +319,7 @@ Item {
                         target: root.tabletEvents
 
                         function onToolButtonReceived(hardware_serial_hi: int, hardware_serial_lo: int, button: int, pressed: bool): void {
-                            if (button !== seq.index) {
+                            if (button !== seq.value) {
                                 return;
                             }
                             seq.buttonPressed = pressed;
@@ -335,13 +335,13 @@ Item {
                     }
 
                     function refreshInputSequence(): void {
-                        seq.inputSequence = kcm.toolButtonMapping(root.device.name, seq.index);
+                        seq.inputSequence = kcm.toolButtonMapping(root.device.name, seq.value);
                     }
 
                     Component.onCompleted: refreshInputSequence()
 
                     onGotInputSequence: sequence => {
-                        kcm.assignToolButtonMapping(root.device.name, seq.index, sequence);
+                        kcm.assignToolButtonMapping(root.device.name, seq.value, sequence);
                     }
 
                     SettingHighlighter {
