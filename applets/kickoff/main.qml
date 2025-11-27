@@ -315,7 +315,7 @@ PlasmoidItem {
                 readonly property bool nonSquareImage: sourceSize.width != sourceSize.height
 
                 visible: nonSquareImage && status == Image.Ready
-                source: Plasmoid.icon.startsWith("/") ? Plasmoid.icon : ""
+                source: Plasmoid.icon.startsWith("/") ? "file:" + Plasmoid.icon.split("/").map(encodeURIComponent).join("/") : ""
 
                 Layout.fillWidth: kickoff.vertical
                 Layout.fillHeight: !kickoff.vertical
