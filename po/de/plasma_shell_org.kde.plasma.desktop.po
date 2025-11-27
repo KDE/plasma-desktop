@@ -1,25 +1,25 @@
-# SPDX-FileCopyrightText: 2023, 2024 Johannes Obermayr <johannesobermayr@gmx.de>
-# SPDX-FileCopyrightText: 2014, 2016, 2020, 2022, 2023 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021 Burkhard Lück <lueck@hube-lueck.de>
+# SPDX-FileCopyrightText: 2014, 2016, 2020, 2022, 2023 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
+# SPDX-FileCopyrightText: 2023, 2024 Johannes Obermayr <johannesobermayr@gmx.de>
 # SPDX-FileCopyrightText: 2024, 2025 Flori G <Renner03@protonmail.com>
+# SPDX-FileCopyrightText: 2025 Alexander Becker <alex-at-kde-l10n-de@freenet.de>
 # SPDX-FileCopyrightText: 2025 Alois Spitzbart <spitz234@hotmail.com>
 # SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
-# SPDX-FileCopyrightText: 2025 Alexander Becker <alex-at-kde-l10n-de@freenet.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_shell_org.kde.plasma.desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-23 00:44+0000\n"
-"PO-Revision-Date: 2025-08-06 21:29+0200\n"
-"Last-Translator: Alexander Becker <alex-at-kde-l10n-de@freenet.de>\n"
+"PO-Revision-Date: 2025-11-08 01:10+0100\n"
+"Last-Translator: Philipp Kiemle <l10n@prly.mozmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: contents/activitymanager/ActivityItem.qml:203
 #, kde-format
@@ -105,19 +105,18 @@ msgstr "Webseite „%1“ öffnen"
 #, kde-format
 msgctxt "@title:group"
 msgid "Website"
-msgstr ""
+msgstr "Webseite"
 
 #: contents/configuration/AboutPlugin.qml:157
 #, kde-format
 msgctxt "@title:group"
 msgid "Get Help"
-msgstr ""
+msgstr "Hilfe anfordern"
 
 #: contents/configuration/AboutPlugin.qml:165
-#, fuzzy, kde-format
-#| msgid "Report a Bug…"
+#, kde-format
 msgid "Report an issue"
-msgstr "Ein Problem melden …"
+msgstr "Ein Problem melden"
 
 #: contents/configuration/AboutPlugin.qml:172
 #, kde-format
@@ -125,17 +124,15 @@ msgid "Copyright"
 msgstr "Copyright"
 
 #: contents/configuration/AboutPlugin.qml:191
-#, fuzzy, kde-format
-#| msgid "License:"
+#, kde-format
 msgid "License: %1"
-msgstr "Lizenz:"
+msgstr "Lizenz: %1"
 
 #: contents/configuration/AboutPlugin.qml:197
-#, fuzzy, kde-format
-#| msgid "License:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Read License"
-msgstr "Lizenz:"
+msgstr "Lizenz lesen"
 
 #: contents/configuration/AboutPlugin.qml:211
 #, kde-format

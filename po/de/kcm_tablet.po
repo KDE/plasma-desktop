@@ -3,22 +3,22 @@
 # This file is distributed under the same license as the plasma-desktop package.
 # SPDX-FileCopyrightText: 2022, 2023 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Alois Spitzbart <spitz234@hotmail.com>
-# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
 # SPDX-FileCopyrightText: 2025 Alexander Becker <alex-at-kde-l10n-de@freenet.de>
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_tablet\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2025-08-09 16:44+0200\n"
-"Last-Translator: Alexander Becker <alex-at-kde-l10n-de@freenet.de>\n"
+"PO-Revision-Date: 2025-11-14 15:52+0100\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -154,12 +154,10 @@ msgid "pen button %1"
 msgstr "Stiftknopf %1"
 
 #: ui/ActionDialog.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@title Select the action for the tablet dial"
-#| msgid "Select Dial Action"
+#, kde-format
 msgctxt "@title Select the action for the tablet dial"
 msgid "Select Dial/Ring Action"
-msgstr "Aktion des Drehreglers auswählen"
+msgstr "Aktion des Drehreglers/Rings auswählen"
 
 #: ui/ActionDialog.qml:28
 #, kde-format
@@ -244,7 +242,7 @@ msgstr "Abwärts:"
 #: ui/ActionDialog.qml:274
 #, kde-format
 msgid "Speed:"
-msgstr ""
+msgstr "Geschwindigkeit:"
 
 #: ui/ActionDialog.qml:289
 #, kde-format
@@ -454,6 +452,10 @@ msgid ""
 "driver to configure the tablet instead of using the settings here, unless "
 "specifically instructed otherwise."
 msgstr ""
+"Dieses Gerät wird von einem Treiber im Benutzerbereich verwaltet, den Sie "
+"installiert haben. Verwenden Sie zur Einrichtung Ihres Tabletts diesen "
+"Treiber statt der hier aufgeführten Einstellungen, sofern nicht ausdrücklich "
+"anders angegeben."
 
 #: ui/main.qml:104
 #, kde-format
@@ -480,22 +482,17 @@ msgid "Pad"
 msgstr "Pad"
 
 #: ui/PadTab.qml:37
-#, fuzzy, kde-format
-#| msgid "Pad dial %1:"
+#, kde-format
 msgid "Pad ring %1:"
-msgstr "Tablett-Drehregler %1:"
+msgstr "Tablett-Ring %1:"
 
 #: ui/PadTab.qml:60
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info Meant to be inserted into an existing sentence like 'configuring "
-#| "pad button 0'"
-#| msgid "pad dial %1"
+#, kde-format
 msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pad "
 "ring/dial 0'"
 msgid "pad ring/dial %1"
-msgstr "Tablett-Drehregler %1"
+msgstr "Tablett-Ring/Drehregler %1"
 
 #: ui/PadTab.qml:100
 #, kde-format

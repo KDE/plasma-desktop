@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_trash\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2008-07-05 09:26+0530\n"
 "Last-Translator: ANI PETER|അനി പീറ്റര്‍ <peter.ani@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -18,20 +18,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: main.qml:32
+#: main.qml:33
 #, fuzzy, kde-format
 #| msgid "Trash"
 msgctxt "@title the name of the Trash widget"
 msgid "Trash"
 msgstr "ചവറ്റുകുട്ട"
 
-#: main.qml:35
+#: main.qml:36
 #, fuzzy, kde-format
 msgctxt "@info:status The trash is being emptied"
 msgid "Emptying…"
 msgstr "കാലി"
 
-#: main.qml:37
+#: main.qml:38
 #, fuzzy, kde-format
 msgctxt "@info:status The trash contains this many items in it"
 msgid "One item"
@@ -39,25 +39,25 @@ msgid_plural "%1 items"
 msgstr[0] "ഒരു വസ്തു"
 msgstr[1] "%1 വസ്തുക്കള്‍"
 
-#: main.qml:39
+#: main.qml:40
 #, fuzzy, kde-format
 msgctxt "@info:status The trash is empty"
 msgid "Empty"
 msgstr "കാലി"
 
-#: main.qml:79
+#: main.qml:80
 #, fuzzy, kde-format
 msgctxt "@action:inmenu Open the trash"
 msgid "Open"
 msgstr "&തുറക്കുക"
 
-#: main.qml:84
+#: main.qml:85
 #, fuzzy, kde-format
 msgctxt "@action:inmenu Empty the trash"
 msgid "Empty"
 msgstr "കാലി"
 
-#: main.qml:90
+#: main.qml:91
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Trash Settings…"

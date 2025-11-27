@@ -1,16 +1,16 @@
-# SPDX-FileCopyrightText: 2024, 2025 Alois Spitzbart <spitz234@hotmail.com>
 # SPDX-FileCopyrightText: 2007, 2008 Thomas Reitelbach <tr@erdfunkstelle.de>
-# SPDX-FileCopyrightText: 2010, 2011, 2012, 2016, 2022 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2010 Johannes Obermayr <johannesobermayr@gmx.de>
 # SPDX-FileCopyrightText: 2010 Panagiotis Papadopoulos <pano_90@gmx.net>
+# SPDX-FileCopyrightText: 2010, 2011, 2012, 2016, 2022 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2011, 2012, 2013, 2014, 2017, 2020, 2021 Burkhard Lück <lueck@hube-lueck.de>
+# SPDX-FileCopyrightText: 2024, 2025 Alois Spitzbart <spitz234@hotmail.com>
 # SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_keyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2025-08-03 22:14+0200\n"
+"PO-Revision-Date: 2025-11-08 01:00+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -126,11 +126,10 @@ msgid "Reset selected options for this group"
 msgstr "Ausgewählte Optionen für diese Gruppe zurücksetzen"
 
 #: ui/LayoutDialog.qml:22
-#, fuzzy, kde-format
-#| msgid "Layout"
+#, kde-format
 msgctxt "@title:window"
 msgid "Set Layout"
-msgstr "Belegung"
+msgstr "Belegung festlegen"
 
 #: ui/LayoutDialog.qml:22
 #, kde-format
@@ -421,39 +420,31 @@ msgid "or"
 msgstr "oder"
 
 #: ui/main_phone.qml:36
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Layout"
+#, kde-format
 msgid "Model & Layout"
-msgstr "Belegung hinzufügen"
+msgstr "Modell & Belegung"
 
 #: ui/main_phone.qml:43
-#, fuzzy, kde-format
-#| msgid "Keyboard &model:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Keyboard Model"
-msgstr "Tastatur-&Modell:"
+msgstr "Tastaturmodell"
 
 #: ui/main_phone.qml:72
-#, fuzzy, kde-format
-#| msgid "Layout"
+#, kde-format
 msgctxt "@option:check"
 msgid "Custom Layout"
-msgstr "Belegung"
+msgstr "Benutzerdefinierte Belegung"
 
 # bearbeiten?
 #: ui/main_phone.qml:96
-#, fuzzy, kde-format
-#| msgctxt "@option:textbox"
-#| msgid "Change layout:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Layout..."
-msgstr "Tastaturbelegung ändern:"
+msgstr "Belegung ändern …"
 
 #: ui/main_phone.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@label:checkbox accessible"
-#| msgid "Key repeat"
+#, kde-format
 msgctxt "@title:group"
 msgid "Key Repeat"
 msgstr "Tastenwiederholung"
@@ -462,7 +453,7 @@ msgstr "Tastenwiederholung"
 #, kde-format
 msgctxt "@option:check"
 msgid "Customize Repeat"
-msgstr ""
+msgstr "Wiederholung einrichten"
 
 # bearbeiten?
 #: ui/Switching.qml:17

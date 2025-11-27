@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.trash\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2023-11-11 15:46+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -16,13 +16,13 @@ msgstr ""
 "X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: main.qml:32
+#: main.qml:33
 #, kde-format
 msgctxt "@title the name of the Trash widget"
 msgid "Trash"
 msgstr "Kôš"
 
-#: main.qml:35
+#: main.qml:36
 #, fuzzy, kde-format
 #| msgctxt "@info:status The trash is empty"
 #| msgid "Empty"
@@ -30,7 +30,7 @@ msgctxt "@info:status The trash is being emptied"
 msgid "Emptying…"
 msgstr "Prázdny"
 
-#: main.qml:37
+#: main.qml:38
 #, kde-format
 msgctxt "@info:status The trash contains this many items in it"
 msgid "One item"
@@ -39,25 +39,25 @@ msgstr[0] "Jedna položka"
 msgstr[1] "%1 položky"
 msgstr[2] "%1 položiek"
 
-#: main.qml:39
+#: main.qml:40
 #, kde-format
 msgctxt "@info:status The trash is empty"
 msgid "Empty"
 msgstr "Prázdny"
 
-#: main.qml:79
+#: main.qml:80
 #, kde-format
 msgctxt "@action:inmenu Open the trash"
 msgid "Open"
 msgstr "Otvoriť"
 
-#: main.qml:84
+#: main.qml:85
 #, kde-format
 msgctxt "@action:inmenu Empty the trash"
 msgid "Empty"
 msgstr "Prázdny"
 
-#: main.qml:90
+#: main.qml:91
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Trash Settings…"

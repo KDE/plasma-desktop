@@ -1,7 +1,7 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2020, 2022 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2020, 2021 Burkhard Lück <lueck@hube-lueck.de>
+# SPDX-FileCopyrightText: 2020, 2022 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
 # SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
 # SPDX-FileCopyrightText: 2024, 2025 Alois Spitzbart <spitz234@hotmail.com>
@@ -12,15 +12,15 @@ msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-22 00:44+0000\n"
-"PO-Revision-Date: 2025-06-06 21:49+0200\n"
-"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
+"PO-Revision-Date: 2025-11-08 01:02+0100\n"
+"Last-Translator: Philipp Kiemle <l10n@prly.mozmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -168,8 +168,7 @@ msgid "Import…"
 msgstr "Importieren …"
 
 #: ui/main.qml:44
-#, fuzzy, kde-format
-#| msgid "Import Shortcut Scheme"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Import shortcut scheme"
 msgstr "Kurzbefehl-Schema importieren"
@@ -187,8 +186,7 @@ msgid "Export…"
 msgstr "Exportieren …"
 
 #: ui/main.qml:53 ui/main.qml:125
-#, fuzzy, kde-format
-#| msgid "Export Shortcut Scheme"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Export shortcut scheme"
 msgstr "Kurzbefehl-Schema exportieren"
@@ -342,16 +340,13 @@ msgid "Add"
 msgstr "Hinzufügen"
 
 #: ui/main.qml:465
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox accessible"
-#| msgid "Command"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Save command"
-msgstr "Befehl"
+msgstr "Befehl speichern"
 
 #: ui/main.qml:466
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add command"
 msgstr "Befehl hinzufügen"
@@ -432,19 +427,16 @@ msgid "Import"
 msgstr "Importieren"
 
 #: ui/main.qml:590
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible"
-#| msgid "Delete shortcut"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Select shortcut scheme file"
-msgstr "Kurzbefehl löschen"
+msgstr "Kurzbefehl-Schemadatei auswählen"
 
 #: ui/main.qml:591
-#, fuzzy, kde-format
-#| msgid "Export Shortcut Scheme"
+#, kde-format
 msgctxt "@action:button accessible"
 msgid "Add shortcut scheme"
-msgstr "Kurzbefehl-Schema exportieren"
+msgstr "Kurzbefehl-Schema hinzufügen"
 
 #: ui/ShortcutActionDelegate.qml:31
 #, kde-format

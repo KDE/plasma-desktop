@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_trash\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2016-07-27 17:50+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@linux.ee>\n"
@@ -18,21 +18,21 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: main.qml:32
+#: main.qml:33
 #, fuzzy, kde-format
 #| msgid "Trash"
 msgctxt "@title the name of the Trash widget"
 msgid "Trash"
 msgstr "Prügikast"
 
-#: main.qml:35
+#: main.qml:36
 #, fuzzy, kde-format
 #| msgid "Empty"
 msgctxt "@info:status The trash is being emptied"
 msgid "Emptying…"
 msgstr "Tühi"
 
-#: main.qml:37
+#: main.qml:38
 #, fuzzy, kde-format
 #| msgid "One item"
 #| msgid_plural "%1 items"
@@ -42,14 +42,14 @@ msgid_plural "%1 items"
 msgstr[0] "Üks element"
 msgstr[1] "%1 elementi"
 
-#: main.qml:39
+#: main.qml:40
 #, fuzzy, kde-format
 #| msgid "Empty"
 msgctxt "@info:status The trash is empty"
 msgid "Empty"
 msgstr "Tühi"
 
-#: main.qml:79
+#: main.qml:80
 #, fuzzy, kde-format
 #| msgctxt "a verb"
 #| msgid "Open"
@@ -57,14 +57,14 @@ msgctxt "@action:inmenu Open the trash"
 msgid "Open"
 msgstr "Ava"
 
-#: main.qml:84
+#: main.qml:85
 #, fuzzy, kde-format
 #| msgid "Empty"
 msgctxt "@action:inmenu Empty the trash"
 msgid "Empty"
 msgstr "Tühi"
 
-#: main.qml:90
+#: main.qml:91
 #, fuzzy, kde-format
 #| msgid "Trash Settings..."
 msgctxt "@action:inmenu"

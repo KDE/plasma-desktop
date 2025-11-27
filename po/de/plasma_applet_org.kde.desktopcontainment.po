@@ -1,16 +1,16 @@
-# SPDX-FileCopyrightText: 2024 Johannes Obermayr <johannesobermayr@gmx.de>
 # SPDX-FileCopyrightText: 2014, 2015, 2017, 2018, 2019, 2020, 2021 Burkhard Lück <lueck@hube-lueck.de>
 # SPDX-FileCopyrightText: 2015, 2016, 2020, 2022 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
 # SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
+# SPDX-FileCopyrightText: 2024 Johannes Obermayr <johannesobermayr@gmx.de>
+# SPDX-FileCopyrightText: 2025 Alexander Becker <alex-at-kde-l10n-de@freenet.de>
 # SPDX-FileCopyrightText: 2025 Alois Spitzbart <spitz234@hotmail.com>
 # SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
-# SPDX-FileCopyrightText: 2025 Alexander Becker <alex-at-kde-l10n-de@freenet.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.desktopcontainment\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-23 00:44+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2025-08-08 08:44+0200\n"
 "Last-Translator: Alexander Becker <alex-at-kde-l10n-de@freenet.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -443,17 +443,17 @@ msgstr "Arbeitsfläche und Hintergrundbild"
 msgid "Select Folder"
 msgstr "Ordner auswählen"
 
-#: plugins/folder/foldermodel.cpp:532
+#: plugins/folder/foldermodel.cpp:505
 #, kde-format
 msgid "&Refresh Desktop"
 msgstr "Arbeitsfläche neu &aufbauen"
 
-#: plugins/folder/foldermodel.cpp:532 plugins/folder/foldermodel.cpp:1762
+#: plugins/folder/foldermodel.cpp:505 plugins/folder/foldermodel.cpp:1735
 #, kde-format
 msgid "&Refresh View"
 msgstr "Ansicht a&ktualisieren"
 
-#: plugins/folder/foldermodel.cpp:891
+#: plugins/folder/foldermodel.cpp:864
 #, kde-format
 msgctxt ""
 "@title:notifications Here 'link' refers to a symbolic link to another file "
@@ -461,7 +461,7 @@ msgctxt ""
 msgid "Link Target Not Found"
 msgstr "Verknüpfungsziel nicht gefunden"
 
-#: plugins/folder/foldermodel.cpp:893
+#: plugins/folder/foldermodel.cpp:866
 #, kde-kuit-format
 msgctxt "@info Body text of a system notification"
 msgid ""
@@ -471,23 +471,23 @@ msgstr ""
 "<filename>%1</filename> zeigt auf <filename>%2</filename>, aber das konnte "
 "nicht gefunden werden. Es könnte verschoben oder gelöscht worden sein."
 
-#: plugins/folder/foldermodel.cpp:1771
+#: plugins/folder/foldermodel.cpp:1744
 #, kde-format
 msgid "&Empty Trash"
 msgstr "Papierkorb &leeren"
 
-#: plugins/folder/foldermodel.cpp:1774
+#: plugins/folder/foldermodel.cpp:1747
 #, kde-format
 msgctxt "Restore from trash"
 msgid "Restore to Former Location"
 msgstr "An ursprünglichem Ort wiederherstellen"
 
-#: plugins/folder/foldermodel.cpp:1777
+#: plugins/folder/foldermodel.cpp:1750
 #, kde-format
 msgid "&Open"
 msgstr "Ö&ffnen"
 
-#: plugins/folder/foldermodel.cpp:1781
+#: plugins/folder/foldermodel.cpp:1754
 #, kde-format
 msgctxt ""
 "@action:inmenu open file manager showing the target file or folder that this "
@@ -495,23 +495,23 @@ msgctxt ""
 msgid "Show Target"
 msgstr "Ziel anzeigen"
 
-#: plugins/folder/foldermodel.cpp:1882
+#: plugins/folder/foldermodel.cpp:1855
 #, kde-format
 msgctxt "@action:inmenu Removes the trash icon on the desktop"
 msgid "Remove Trash Icon"
 msgstr "Papierkorbsymbol entfernen"
 
-#: plugins/folder/foldermodel.cpp:1885
+#: plugins/folder/foldermodel.cpp:1858
 #, kde-format
 msgid "&Move to Trash"
 msgstr "In den &Papierkorb verschieben"
 
-#: plugins/folder/foldermodel.cpp:1918
+#: plugins/folder/foldermodel.cpp:1891
 #, kde-format
 msgid "&Paste"
 msgstr "&Einfügen"
 
-#: plugins/folder/foldermodel.cpp:2069
+#: plugins/folder/foldermodel.cpp:2042
 #, kde-format
 msgid "&Properties"
 msgstr "&Eigenschaften"

@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: 2024, 2025 Alois Spitzbart <spitz234@hotmail.com>
-# SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
 # SPDX-FileCopyrightText: 2002, 2003 Thomas Diehl <thd@kde.org>
 # SPDX-FileCopyrightText: 2005 Stephan Johach <hunsum@gmx.de>
 # SPDX-FileCopyrightText: 2005, 2006, 2007, 2008, 2010 Thomas Reitelbach <tr@erdfunkstelle.de>
@@ -7,22 +5,24 @@
 # SPDX-FileCopyrightText: 2011, 2015, 2022, 2023 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2019, 2021 Burkhard Lück <lueck@hube-lueck.de>
 # SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
-# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
+# SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
+# SPDX-FileCopyrightText: 2024, 2025 Alois Spitzbart <spitz234@hotmail.com>
 # SPDX-FileCopyrightText: 2025 Alexander Becker <alex-at-kde-l10n-de@freenet.de>
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_access\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-24 00:44+0000\n"
-"PO-Revision-Date: 2025-08-09 16:01+0200\n"
-"Last-Translator: Alexander Becker <alex-at-kde-l10n-de@freenet.de>\n"
+"PO-Revision-Date: 2025-11-08 00:58+0100\n"
+"Last-Translator: Philipp Kiemle <l10n@prly.mozmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: kcmaccess.cpp:127 kcmaccess.cpp:155
 #, kde-format
@@ -489,6 +489,8 @@ msgid ""
 "If you have trouble with certain colors on the screen, these filters can "
 "change them into other colors."
 msgstr ""
+"Wenn Sie mit bestimmten Farben auf dem Bildschirm Probleme haben, können "
+"diese Filter sie mit anderen Farben ersetzen."
 
 #: ui/ColorblindnessCorrection.qml:31
 #, kde-format
@@ -501,31 +503,31 @@ msgstr "Aktivieren"
 msgctxt ""
 "@label:listbox Difficulty seeing any of the following colors on the screen"
 msgid "Problematic colors:"
-msgstr ""
+msgstr "Problematische Farben:"
 
 #: ui/ColorblindnessCorrection.qml:49
 #, kde-format
 msgctxt "@option"
 msgid "Red & purple (Protanopia)"
-msgstr ""
+msgstr "Rot & Lila (Protanopie)"
 
 #: ui/ColorblindnessCorrection.qml:50
 #, kde-format
 msgctxt "@option"
 msgid "Green & purple (Deuteranopia)"
-msgstr ""
+msgstr "Grün & Lila (Deuteranopie)"
 
 #: ui/ColorblindnessCorrection.qml:51
 #, kde-format
 msgctxt "@option"
 msgid "Yellow, green & purple (Tritanopia)"
-msgstr ""
+msgstr "Gelb, Grün & Lila (Tritanopie)"
 
 #: ui/ColorblindnessCorrection.qml:52
 #, kde-format
 msgctxt "@option"
 msgid "All (grayscale mode)"
-msgstr ""
+msgstr "Alle (Graustufen-Modus)"
 
 #: ui/ColorblindnessCorrection.qml:67
 #, kde-format
@@ -549,30 +551,27 @@ msgstr "Kräftig"
 #, kde-format
 msgctxt "@info"
 msgid "Adjusted colors:"
-msgstr ""
+msgstr "Angepasste Farben:"
 
 #: ui/ColorblindnessCorrection.qml:132
 #, kde-format
 msgid "Reds:"
-msgstr ""
+msgstr "Rottöne:"
 
 #: ui/ColorblindnessCorrection.qml:133
-#, fuzzy, kde-format
-#| msgid "Green"
+#, kde-format
 msgid "Greens:"
-msgstr "Grün"
+msgstr "Grüntöne:"
 
 #: ui/ColorblindnessCorrection.qml:134
-#, fuzzy, kde-format
-#| msgid "Blue"
+#, kde-format
 msgid "Blues:"
-msgstr "Blau"
+msgstr "Blautöne:"
 
 #: ui/ColorblindnessCorrection.qml:135
-#, fuzzy, kde-format
-#| msgid "Purple"
+#, kde-format
 msgid "Purples:"
-msgstr "Lila"
+msgstr "Lilatöne:"
 
 #: ui/Invert.qml:22
 #, kde-format

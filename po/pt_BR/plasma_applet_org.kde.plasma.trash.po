@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.trash\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2025-11-08 21:10-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -20,19 +20,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 25.08.2\n"
 
-#: main.qml:32
+#: main.qml:33
 #, kde-format
 msgctxt "@title the name of the Trash widget"
 msgid "Trash"
 msgstr "Lixeira"
 
-#: main.qml:35
+#: main.qml:36
 #, kde-format
 msgctxt "@info:status The trash is being emptied"
 msgid "Emptying…"
 msgstr "Esvaziando…"
 
-#: main.qml:37
+#: main.qml:38
 #, kde-format
 msgctxt "@info:status The trash contains this many items in it"
 msgid "One item"
@@ -40,25 +40,25 @@ msgid_plural "%1 items"
 msgstr[0] "Um item"
 msgstr[1] "%1 itens"
 
-#: main.qml:39
+#: main.qml:40
 #, kde-format
 msgctxt "@info:status The trash is empty"
 msgid "Empty"
 msgstr "Vazia"
 
-#: main.qml:79
+#: main.qml:80
 #, kde-format
 msgctxt "@action:inmenu Open the trash"
 msgid "Open"
 msgstr "Abrir"
 
-#: main.qml:84
+#: main.qml:85
 #, kde-format
 msgctxt "@action:inmenu Empty the trash"
 msgid "Empty"
 msgstr "Esvaziar"
 
-#: main.qml:90
+#: main.qml:91
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Trash Settings…"
