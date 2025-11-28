@@ -54,6 +54,7 @@ class Bug487023Test(unittest.TestCase):
         cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
 
         os.environ["GDK_BACKEND"] = "wayland"
+        os.environ["GSK_RENDERER"] = "cairo"
         os.environ["AT_SPI_BUS_ADDRESS"] = "org:foo=bar"  # Disable atspi for the test window
 
     def tearDown(self) -> None:
