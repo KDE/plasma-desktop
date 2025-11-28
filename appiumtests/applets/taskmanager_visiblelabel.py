@@ -61,14 +61,12 @@ class VisibleLabelTest(unittest.TestCase):
 
         environ = os.environ.copy()
         environ["GDK_BACKEND"] = "wayland"
+        environ["GSK_RENDERER"] = "cairo"
         environ["AT_SPI_BUS_ADDRESS"] = "org:foo=bar"  # Disable atspi for the test window
         window_1 = subprocess.Popen(["python3", os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, "desktop", "desktoptest_testwindow.py")], env=environ)
         self.addCleanup(window_1.terminate)
 
-
-        WebDriverWait(self.driver, 10).until(
-            EC.visibility_of_element_located((AppiumBy.NAME, "Test Window-labelhint"))
-        )
+        WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((AppiumBy.NAME, "Test Window-labelhint")))
         r = self.driver.find_element(AppiumBy.NAME, "Test Window-labelhint").rect
         self.assertTrue(0 < r['x'] + r['width'] < 120)
 
