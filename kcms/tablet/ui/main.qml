@@ -85,7 +85,7 @@ SimpleKCM {
         position: Kirigami.InlineMessage.Position.Header
         type: Kirigami.MessageType.Warning
         text: i18ndc("kcm_tablet", "@info", "This device is managed by a user-space driver that you installed. Use that driver to configure the tablet instead of using the settings here, unless specifically instructed otherwise.")
-        visible: root.device?.isVirtual ?? false
+        visible: (root.device?.isVirtual ?? false) || (root.padDevice?.isVirtual ?? false)
         showCloseButton: false
     }
 
