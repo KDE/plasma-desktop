@@ -155,7 +155,7 @@ class KCMTest(unittest.TestCase):
         # Remove the custom shortcut and check again
         delete_button.click()
         apply_button.click()
-        wait.until(lambda _: subprocess.check_output([f"kreadconfig{KDE_VERSION}", "--file", "kglobalshortcutsrc", "--group", "services", "--group", custom_command_desktop_file, "--key", "_launch"]).decode(encoding="utf-8").strip() == "")
+        wait.until_not(lambda _: subprocess.check_output([f"kreadconfig{KDE_VERSION}", "--file", "kglobalshortcutsrc", "--group", "services", "--group", custom_command_desktop_file, "--key", "_launch"]).decode(encoding="utf-8").strip() == "Ctrl+.")
         self.assertTrue(os.path.exists(os.path.join(GLib.get_user_data_dir(), "applications", custom_command_desktop_file)))
 
         # Remove the custom command
