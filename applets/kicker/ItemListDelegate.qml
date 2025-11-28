@@ -5,6 +5,7 @@
 */
 
 import QtQuick
+import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 import org.kde.ksvg as KSvg
@@ -17,6 +18,7 @@ Item {
 
     height: isSeparator ? separatorHeight : itemHeight
     width: ListView.view.width
+    implicitWidth: row.implicitWidth + row.anchors.leftMargin + row.anchors.rightMargin
 
     // if it's not disabled and is either a leaf node or a node with children
     enabled: !isSeparator && !disabled && (!isParent || (isParent && hasChildren))
@@ -42,7 +44,6 @@ Item {
     property alias hoverEnabled: mouseArea.hoverEnabled
 
     readonly property bool iconAndLabelsShouldlookSelected: pressed && !hasChildren
-    readonly property real fullTextWidth: Math.ceil(icon.width + label.implicitWidth + arrow.width + row.anchors.leftMargin + row.anchors.rightMargin + row.actualSpacing)
 
     property bool showSeparators: true
     property QtObject childDialog: null
@@ -118,30 +119,25 @@ Item {
         }
     }
 
-    Row {
+    RowLayout {
         id: row
 
-        anchors.left: parent.left
+        anchors.fill: parent
         anchors.leftMargin: highlightItemSvg.margins.left
-        anchors.right: parent.right
         anchors.rightMargin: highlightItemSvg.margins.right
 
-        height: parent.height
-
         spacing: Kirigami.Units.smallSpacing * 2
-        readonly property real actualSpacing: ((icon.visible ? 1 : 0) * spacing) + ((arrow.visible ? 1 : 0) * spacing)
 
         LayoutMirroring.enabled: (Qt.application.layoutDirection === Qt.RightToLeft)
 
         Kirigami.Icon {
             id: icon
 
-            anchors.verticalCenter: parent.verticalCenter
+            Layout.alignment: Qt.AlignVCenter
+            implicitWidth: Kirigami.Units.iconSizes.small
+            implicitHeight: implicitWidth
 
-            width: visible ? Kirigami.Units.iconSizes.small : 0
-            height: width
-
-            visible: iconsEnabled
+            visible: iconsEnabled & !item.isSeparator
 
             animated: false
             selected: item.iconAndLabelsShouldlookSelected
@@ -153,10 +149,10 @@ Item {
 
             enabled: !item.isParent || (item.isParent && item.hasChildren)
             LayoutMirroring.enabled: (Qt.application.layoutDirection === Qt.RightToLeft)
+            visible: !item.isSeparator
 
-            anchors.verticalCenter: parent.verticalCenter
-
-            width: parent.width - icon.width - arrow.width - parent.actualSpacing
+            Layout.fillWidth: true
+            Layout.alignment: Qt.AlignVCenter
 
             verticalAlignment: Text.AlignVCenter
 
@@ -171,17 +167,31 @@ Item {
         Kirigami.Icon {
             id: arrow
 
-            anchors.verticalCenter: parent.verticalCenter
+            Layout.alignment: Qt.AlignVCenter
 
-            width: visible ? Kirigami.Units.iconSizes.small : 0
-            height: width
+            implicitWidth: visible ? Kirigami.Units.iconSizes.small : 0
+            implicitHeight: implicitWidth
 
-            visible: item.hasChildren
+            visible: item.hasChildren && !item.isSeparator
             opacity: (item.ListView.view.currentIndex === item.index) ? 1.0 : 0.4
             selected: item.iconAndLabelsShouldlookSelected
             source: item.dialogDefaultRight
                 ? "go-next-symbolic"
                 : "go-next-rtl-symbolic"
+        }
+
+        Loader {
+            id: separatorLoader
+
+            Layout.alignment: Qt.AlignVCenter
+            Layout.fillWidth: true
+
+            // Separator positions don't make sense when sorting everything alphabetically
+            active: item.isSeparator && !item.showSeparators
+            visible: active
+
+            asynchronous: false
+            sourceComponent: separatorComponent
         }
     }
 
@@ -194,22 +204,6 @@ Item {
             imagePath: "widgets/line"
             elementId: "horizontal-line"
         }
-    }
-
-    Loader {
-        id: separatorLoader
-
-        anchors.left: parent.left
-        anchors.leftMargin: highlightItemSvg.margins.left
-        anchors.right: parent.right
-        anchors.rightMargin: highlightItemSvg.margins.right
-        anchors.verticalCenter: parent.verticalCenter
-
-        // Separator positions don't make sense when sorting everything alphabetically
-        active: item.isSeparator && item.showSeparators
-
-        asynchronous: false
-        sourceComponent: separatorComponent
     }
 
     Keys.onPressed: event => {

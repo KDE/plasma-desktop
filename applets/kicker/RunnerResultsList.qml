@@ -15,7 +15,8 @@ import org.kde.plasma.plasmoid
 
 FocusScope {
     id: runnerResultsList
-    width: runnerColumnRowLayout.implicitWidth
+    implicitWidth: runnerColumnRowLayout.implicitWidth
+    width: implicitWidth
     height: parent.height
 
     signal keyNavigationAtListEnd
@@ -74,7 +75,7 @@ FocusScope {
 
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                implicitWidth: runnerMatches.width
+                implicitWidth: runnerMatches.implicitWidth
 
                 ItemListView {
                     id: runnerMatches

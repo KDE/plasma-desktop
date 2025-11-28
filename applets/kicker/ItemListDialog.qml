@@ -89,6 +89,7 @@ Kicker.SubMenu {
 
             onSourceModelChanged: {
                 itemListView.currentIndex = -1;
+                itemListView.resetDelegateSizing();
             }
         }
     }

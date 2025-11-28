@@ -19,7 +19,8 @@ FocusScope {
     property real minimumWidth: Kirigami.Units.gridUnit * 14
     property real maximumWidth: Math.round(minimumWidth * 1.5)
 
-    width: minimumWidth
+    width: implicitWidth
+    implicitWidth: Math.min(Math.max(minimumWidth, scrollView.implicitWidth), maximumWidth)
     implicitHeight: listView.contentHeight
 
     signal exited
@@ -52,6 +53,10 @@ FocusScope {
         elementId: "horizontal-line"
     }
 
+    function resetDelegateSizing() { // only needed when submenus are reused, called from ItemListDialog
+        listView.maxDelegateImplicitWidth = 0
+    }
+
     function subMenuForCurrentItem(focusOnSpawn=false) {
         if (!kicker.expanded || !itemList.model || itemList.currentIndex === -1) {
             return;
@@ -79,7 +84,6 @@ FocusScope {
                 itemList.childDialog.mainItem.currentIndex = 0;
             }
         } else {
-            itemList.childDialog.mainItem.width = itemList.minimumWidth;
             itemList.childDialog.model = model.modelForRow(itemList.currentIndex);
             itemList.childDialog.visualParent = listView.currentItem;
             itemList.childDialog.index = listView.currentIndex;
@@ -139,16 +143,28 @@ FocusScope {
         }
 
         PlasmaComponents3.ScrollView {
+            id: scrollView
             anchors.fill: parent
+            // can't use effectiveScrollBarWidth, it causes a binding loop if a submenu needs to be repositioned
+            implicitWidth: listView.implicitWidth + (contentHeight > height ? PlasmaComponents3.ScrollBar.vertical.width : 0)
 
             focus: true
 
             ListView {
                 id: listView
 
+                implicitWidth: itemList.minimumWidth
+
+                property int maxDelegateImplicitWidth: 0 // used to set implicitWidth
                 property bool mouseMoved: true // child dialogs can activate immediately
                 property bool showSeparators: !model.sorted // separators are mostly useless when sorted
                 property bool hoverEnabled: true
+
+                Binding on implicitWidth {
+                    value: listView.maxDelegateImplicitWidth
+                    delayed: true // only resize once all delegates are loaded
+                    when: listView.maxDelegateImplicitWidth > 0
+                }
 
                 currentIndex: -1
                 focus: true
@@ -158,6 +174,11 @@ FocusScope {
                 snapMode: ListView.SnapToItem
                 spacing: 0
                 keyNavigationEnabled: false
+                cacheBuffer: 10000 // try to load all delegates for sizing; krunner won't return too many anyway
+
+                function updateImplicitWidth () {
+                    implicitWidth = maxDelegateImplicitWidth
+                }
 
                 delegate: ItemListDelegate {
                     showSeparators: listView.showSeparators
@@ -171,10 +192,8 @@ FocusScope {
                             dialogSpawnTimer.stop()
                         }
                     }
-                    onFullTextWidthChanged: {
-                        if (itemList && fullTextWidth > itemList.width) {
-                            itemList.width = Math.min(fullTextWidth, itemList.maximumWidth);
-                        }
+                    onImplicitWidthChanged: {
+                        listView.maxDelegateImplicitWidth = Math.max(listView.maxDelegateImplicitWidth, implicitWidth)
                     }
                 }
 

@@ -80,7 +80,7 @@ PlasmaComponents3.ScrollView {
 
         height: parent.height
         width: sideBar.width + (sideBar.width ? mainRow.spacing : 0) +
-            Math.max((runnerColumns.visible ? runnerColumns.width : rootList.width), searchField.defaultWidth)
+            Math.max((runnerColumns.visible ? runnerColumns.implicitWidth : rootList.width), searchField.defaultWidth)
 
         spacing: Kirigami.Units.smallSpacing
 
