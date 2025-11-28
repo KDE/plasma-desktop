@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-23 00:44+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2025-06-08 10:26+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -50,18 +50,18 @@ msgstr "Erakutsi gogokoetan"
 msgid "General"
 msgstr "Orokorra"
 
-#: ConfigGeneral.qml:48
+#: ConfigGeneral.qml:47
 #, kde-format
 msgid "Icon:"
 msgstr "Ikonoa:"
 
-#: ConfigGeneral.qml:54
+#: ConfigGeneral.qml:53
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr "Aldatu aplikazio-abiarazlearen ikonoa"
 
-#: ConfigGeneral.qml:55
+#: ConfigGeneral.qml:54
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -71,98 +71,98 @@ msgstr ""
 "Uneko ikonoa %1 da. Egin klik uneko ikonoa aldatzeko menua irekitzeko edo "
 "berrezarri lehenetsitako ikonora."
 
-#: ConfigGeneral.qml:59
+#: ConfigGeneral.qml:58
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
 msgstr "Ikonoaren izena \"%1\" da"
 
-#: ConfigGeneral.qml:94
+#: ConfigGeneral.qml:93
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Hautatu..."
 
-#: ConfigGeneral.qml:96
+#: ConfigGeneral.qml:95
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr "Hautatu Aplikazio-abiarazlearentzako ikono bat"
 
-#: ConfigGeneral.qml:100
+#: ConfigGeneral.qml:99
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "Berrezarri lehenetsitako ikonora"
 
-#: ConfigGeneral.qml:106
+#: ConfigGeneral.qml:105
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "Kendu ikonoa"
 
-#: ConfigGeneral.qml:121
+#: ConfigGeneral.qml:120
 #, kde-format
 msgid "Show applications as:"
 msgstr "Erakutsi aplikazioak honela:"
 
-#: ConfigGeneral.qml:123
+#: ConfigGeneral.qml:122
 #, kde-format
 msgid "Name only"
 msgstr "Izena bakarrik"
 
-#: ConfigGeneral.qml:123
+#: ConfigGeneral.qml:122
 #, kde-format
 msgid "Description only"
 msgstr "Deskribapena bakarrik"
 
-#: ConfigGeneral.qml:123
+#: ConfigGeneral.qml:122
 #, kde-format
 msgid "Name (Description)"
 msgstr "Izena (deskribapena)"
 
-#: ConfigGeneral.qml:123
+#: ConfigGeneral.qml:122
 #, kde-format
 msgid "Description (Name)"
 msgstr "Deskribapena (Izena)"
 
-#: ConfigGeneral.qml:133
+#: ConfigGeneral.qml:132
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "Testu-etiketa:"
 
-#: ConfigGeneral.qml:135
+#: ConfigGeneral.qml:134
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "Tekleatu hemen testu-etiketa bat gehitzeko"
 
-#: ConfigGeneral.qml:149
+#: ConfigGeneral.qml:148
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr "Berrezarri menuko etiketa"
 
-#: ConfigGeneral.qml:162
+#: ConfigGeneral.qml:161
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "Testu etiketa bat ezin da ezarri panela bertikala denean."
 
-#: ConfigGeneral.qml:172
+#: ConfigGeneral.qml:171
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "Orokorra:"
 
-#: ConfigGeneral.qml:176
+#: ConfigGeneral.qml:175
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Sailkatu aplikazioak alfabetikoki"
 
-#: ConfigGeneral.qml:180
+#: ConfigGeneral.qml:179
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -172,103 +172,103 @@ msgstr ""
 "Honek ez dio eragiten aplikazioak sailkatzeko erari, ez bilaketa emaitzetan "
 "ez eta gogokoak orrian ere."
 
-#: ConfigGeneral.qml:186
+#: ConfigGeneral.qml:185
 #, kde-format
 msgid "Use compact list item style"
 msgstr "Erabili zerrenda-trinko elementu estiloa"
 
-#: ConfigGeneral.qml:192
+#: ConfigGeneral.qml:191
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "Automatikoki ezgaitua ukimen moduan"
 
-#: ConfigGeneral.qml:200
+#: ConfigGeneral.qml:199
 #, kde-format
 msgid "Highlight newly installed applications"
 msgstr "Nabarmendu aplikazio instalatu berriak"
 
-#: ConfigGeneral.qml:205
+#: ConfigGeneral.qml:204
 #, kde-format
 msgid "Switch sidebar categories when hovering over them"
 msgstr "Aldatu alboko-barra kategoriak haien gainetik igarotzean"
 
-#: ConfigGeneral.qml:211
+#: ConfigGeneral.qml:210
 #, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
 msgstr "Konfiguratu bilaketa-pluginak..."
 
-#: ConfigGeneral.qml:221
+#: ConfigGeneral.qml:220
 #, kde-format
 msgid "Sidebar position:"
 msgstr "Alboko barraren kokapena:"
 
-#: ConfigGeneral.qml:222 ConfigGeneral.qml:230
+#: ConfigGeneral.qml:221 ConfigGeneral.qml:229
 #, kde-format
 msgid "Right"
 msgstr "Eskuinean"
 
-#: ConfigGeneral.qml:222 ConfigGeneral.qml:230
+#: ConfigGeneral.qml:221 ConfigGeneral.qml:229
 #, kde-format
 msgid "Left"
 msgstr "Ezkerrean"
 
-#: ConfigGeneral.qml:238
+#: ConfigGeneral.qml:237
 #, kde-format
 msgid "Show favorites:"
 msgstr "Erakutsi gogokoak:"
 
-#: ConfigGeneral.qml:239
+#: ConfigGeneral.qml:238
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "Sareta batean"
 
-#: ConfigGeneral.qml:247
+#: ConfigGeneral.qml:246
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "Zerrenda batean"
 
-#: ConfigGeneral.qml:255
+#: ConfigGeneral.qml:254
 #, kde-format
 msgid "Show other applications:"
 msgstr "Erakutsi beste aplikazio batzuk:"
 
-#: ConfigGeneral.qml:256
+#: ConfigGeneral.qml:255
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "Sareta batean"
 
-#: ConfigGeneral.qml:264
+#: ConfigGeneral.qml:263
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "Zerrenda batean"
 
-#: ConfigGeneral.qml:276
+#: ConfigGeneral.qml:275
 #, kde-format
 msgid "Show buttons for:"
 msgstr "Erakutsi honetarako botoiak:"
 
-#: ConfigGeneral.qml:277 LeaveButtons.qml:171
+#: ConfigGeneral.qml:276 LeaveButtons.qml:171
 #, kde-format
 msgid "Power"
 msgstr "Energia"
 
-#: ConfigGeneral.qml:286 LeaveButtons.qml:171
+#: ConfigGeneral.qml:285 LeaveButtons.qml:171
 #, kde-format
 msgid "Session"
 msgstr "Saioa"
 
-#: ConfigGeneral.qml:295
+#: ConfigGeneral.qml:294
 #, kde-format
 msgid "Power and session"
 msgstr "Energia eta saioa"
 
-#: ConfigGeneral.qml:304
+#: ConfigGeneral.qml:303
 #, kde-format
 msgid "Show action button captions"
 msgstr "Erakutsi ekintza botoiko epigrafeak"
@@ -289,28 +289,28 @@ msgctxt "@info:status"
 msgid "No matches"
 msgstr "Ez dago bat datorrenik"
 
-#: Header.qml:86
+#: Header.qml:84
 #, kde-format
 msgid "Open user settings"
 msgstr "Ireki erabiltzailearen ezarpenak"
 
-#: Header.qml:266
+#: Header.qml:264
 #, kde-format
 msgid "Keep Open"
 msgstr "Eduki irekita"
 
-#: KickoffGridDelegate.qml:60 KickoffListDelegate.qml:110
+#: KickoffGridDelegate.qml:59 KickoffListDelegate.qml:110
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
 msgstr "Berria!"
 
-#: KickoffGridDelegate.qml:61 KickoffListDelegate.qml:112
+#: KickoffGridDelegate.qml:60 KickoffListDelegate.qml:112
 #, kde-format
 msgid "Newly installed application"
 msgstr "Aplikazio instalatu berria"
 
-#: KickoffGridView.qml:102
+#: KickoffGridView.qml:101
 #, kde-format
 msgid "Grid with %1 rows, %2 columns"
 msgstr "%1 errenkada, %2 zutabeko sareta"

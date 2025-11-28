@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-23 00:44+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2025-11-10 22:26+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -50,18 +50,18 @@ msgstr "Megjelenítés a Kedvenceknél"
 msgid "General"
 msgstr "Általános"
 
-#: ConfigGeneral.qml:48
+#: ConfigGeneral.qml:47
 #, kde-format
 msgid "Icon:"
 msgstr "Ikon:"
 
-#: ConfigGeneral.qml:54
+#: ConfigGeneral.qml:53
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr "Alkalmazásindító ikonjának módosítása"
 
-#: ConfigGeneral.qml:55
+#: ConfigGeneral.qml:54
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -71,98 +71,98 @@ msgstr ""
 "A jelenlegi ikon a(z) %1. Kattintson a menü megnyitásához a jelenlegi ikon "
 "megváltoztatására vagy az alapértelmezett ikon visszaállítására."
 
-#: ConfigGeneral.qml:59
+#: ConfigGeneral.qml:58
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
 msgstr "Ikonnév: „%1”"
 
-#: ConfigGeneral.qml:94
+#: ConfigGeneral.qml:93
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Kiválasztás…"
 
-#: ConfigGeneral.qml:96
+#: ConfigGeneral.qml:95
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr "Ikon választása az Alkalmazásindítóhoz"
 
-#: ConfigGeneral.qml:100
+#: ConfigGeneral.qml:99
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "Alapértelmezett ikon visszaállítása"
 
-#: ConfigGeneral.qml:106
+#: ConfigGeneral.qml:105
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "Ikon eltávolítása"
 
-#: ConfigGeneral.qml:121
+#: ConfigGeneral.qml:120
 #, kde-format
 msgid "Show applications as:"
 msgstr "Alkalmazások megjelenítése mint:"
 
-#: ConfigGeneral.qml:123
+#: ConfigGeneral.qml:122
 #, kde-format
 msgid "Name only"
 msgstr "Csak név"
 
-#: ConfigGeneral.qml:123
+#: ConfigGeneral.qml:122
 #, kde-format
 msgid "Description only"
 msgstr "Csak leírás"
 
-#: ConfigGeneral.qml:123
+#: ConfigGeneral.qml:122
 #, kde-format
 msgid "Name (Description)"
 msgstr "Név (leírás)"
 
-#: ConfigGeneral.qml:123
+#: ConfigGeneral.qml:122
 #, kde-format
 msgid "Description (Name)"
 msgstr "Leírás (név)"
 
-#: ConfigGeneral.qml:133
+#: ConfigGeneral.qml:132
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "Szövegcímke:"
 
-#: ConfigGeneral.qml:135
+#: ConfigGeneral.qml:134
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "Írjon ide szövegcímke hozzáadásához"
 
-#: ConfigGeneral.qml:149
+#: ConfigGeneral.qml:148
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr "Menücímke visszaállítása"
 
-#: ConfigGeneral.qml:162
+#: ConfigGeneral.qml:161
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "Nem állítható be szövegcímke függőleges panelhez."
 
-#: ConfigGeneral.qml:172
+#: ConfigGeneral.qml:171
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "Általános:"
 
-#: ConfigGeneral.qml:176
+#: ConfigGeneral.qml:175
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Alkalmazások rendezése betűrendben"
 
-#: ConfigGeneral.qml:180
+#: ConfigGeneral.qml:179
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -172,103 +172,103 @@ msgstr ""
 "Ez nem befolyásolja az alkalmazások rendezését a keresési eredményekben vagy "
 "a kedvencek oldalon."
 
-#: ConfigGeneral.qml:186
+#: ConfigGeneral.qml:185
 #, kde-format
 msgid "Use compact list item style"
 msgstr "Kompakt listaelemstílus használata"
 
-#: ConfigGeneral.qml:192
+#: ConfigGeneral.qml:191
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "Automatikus kikapcsolás Érintés módban"
 
-#: ConfigGeneral.qml:200
+#: ConfigGeneral.qml:199
 #, kde-format
 msgid "Highlight newly installed applications"
 msgstr "Újonnan telepített alkalmazások kiemelése"
 
-#: ConfigGeneral.qml:205
+#: ConfigGeneral.qml:204
 #, kde-format
 msgid "Switch sidebar categories when hovering over them"
 msgstr "Oldalsáv-kategóriák váltása rámutatáskor"
 
-#: ConfigGeneral.qml:211
+#: ConfigGeneral.qml:210
 #, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
 msgstr "Keresőbővítmények beállítása…"
 
-#: ConfigGeneral.qml:221
+#: ConfigGeneral.qml:220
 #, kde-format
 msgid "Sidebar position:"
 msgstr "Oldalsáv pozíció:"
 
-#: ConfigGeneral.qml:222 ConfigGeneral.qml:230
+#: ConfigGeneral.qml:221 ConfigGeneral.qml:229
 #, kde-format
 msgid "Right"
 msgstr "Jobbra"
 
-#: ConfigGeneral.qml:222 ConfigGeneral.qml:230
+#: ConfigGeneral.qml:221 ConfigGeneral.qml:229
 #, kde-format
 msgid "Left"
 msgstr "Balra"
 
-#: ConfigGeneral.qml:238
+#: ConfigGeneral.qml:237
 #, kde-format
 msgid "Show favorites:"
 msgstr "Kedvencek megjelenítése:"
 
-#: ConfigGeneral.qml:239
+#: ConfigGeneral.qml:238
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "Rácsban"
 
-#: ConfigGeneral.qml:247
+#: ConfigGeneral.qml:246
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "Listaként"
 
-#: ConfigGeneral.qml:255
+#: ConfigGeneral.qml:254
 #, kde-format
 msgid "Show other applications:"
 msgstr "Egyéb alkalmazások megjelenítése:"
 
-#: ConfigGeneral.qml:256
+#: ConfigGeneral.qml:255
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "Rácsban"
 
-#: ConfigGeneral.qml:264
+#: ConfigGeneral.qml:263
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "Listaként"
 
-#: ConfigGeneral.qml:276
+#: ConfigGeneral.qml:275
 #, kde-format
 msgid "Show buttons for:"
 msgstr "Gombok megjelenítése ehhez:"
 
-#: ConfigGeneral.qml:277 LeaveButtons.qml:171
+#: ConfigGeneral.qml:276 LeaveButtons.qml:171
 #, kde-format
 msgid "Power"
 msgstr "Főkapcsoló"
 
-#: ConfigGeneral.qml:286 LeaveButtons.qml:171
+#: ConfigGeneral.qml:285 LeaveButtons.qml:171
 #, kde-format
 msgid "Session"
 msgstr "Munkamenet"
 
-#: ConfigGeneral.qml:295
+#: ConfigGeneral.qml:294
 #, kde-format
 msgid "Power and session"
 msgstr "Főkapcsoló és munkamenet"
 
-#: ConfigGeneral.qml:304
+#: ConfigGeneral.qml:303
 #, kde-format
 msgid "Show action button captions"
 msgstr "Gombfeliratok megjelenítése"
@@ -289,28 +289,28 @@ msgctxt "@info:status"
 msgid "No matches"
 msgstr "Nincs találat"
 
-#: Header.qml:86
+#: Header.qml:84
 #, kde-format
 msgid "Open user settings"
 msgstr "Felhasználóbeállítások megnyitása"
 
-#: Header.qml:266
+#: Header.qml:264
 #, kde-format
 msgid "Keep Open"
 msgstr "Tartsa nyitva"
 
-#: KickoffGridDelegate.qml:60 KickoffListDelegate.qml:110
+#: KickoffGridDelegate.qml:59 KickoffListDelegate.qml:110
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
 msgstr "Új!"
 
-#: KickoffGridDelegate.qml:61 KickoffListDelegate.qml:112
+#: KickoffGridDelegate.qml:60 KickoffListDelegate.qml:112
 #, kde-format
 msgid "Newly installed application"
 msgstr "Frissen telepített alkalmazás"
 
-#: KickoffGridView.qml:102
+#: KickoffGridView.qml:101
 #, kde-format
 msgid "Grid with %1 rows, %2 columns"
 msgstr "Rács %1 sorral és %2 oszloppal"

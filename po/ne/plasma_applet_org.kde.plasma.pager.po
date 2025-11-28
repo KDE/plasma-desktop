@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2007-10-20 05:40+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -22,85 +22,85 @@ msgstr ""
 msgid "General"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:38
+#: package/contents/ui/configGeneral.qml:39
 #, kde-format
 msgid "General:"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:40
+#: package/contents/ui/configGeneral.qml:41
 #, kde-format
 msgid "Show window outlines"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:45
+#: package/contents/ui/configGeneral.qml:46
 #, kde-format
 msgid "Show application icons on window outlines"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:51
+#: package/contents/ui/configGeneral.qml:52
 #, kde-format
 msgid "Show only current screen"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:56
+#: package/contents/ui/configGeneral.qml:57
 #, kde-format
 msgid "Navigation wraps around"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:68
+#: package/contents/ui/configGeneral.qml:69
 #, kde-format
 msgid "Layout:"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:70
+#: package/contents/ui/configGeneral.qml:71
 #, kde-format
 msgctxt "The pager layout"
 msgid "Default"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:70
+#: package/contents/ui/configGeneral.qml:71
 #, kde-format
 msgid "Horizontal"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:70
+#: package/contents/ui/configGeneral.qml:71
 #, kde-format
 msgid "Vertical"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:84
+#: package/contents/ui/configGeneral.qml:85
 #, kde-format
 msgid "Text display:"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:87
+#: package/contents/ui/configGeneral.qml:88
 #, kde-format
 msgid "No text"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:95
+#: package/contents/ui/configGeneral.qml:96
 #, kde-format
 msgid "Activity number"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:95
+#: package/contents/ui/configGeneral.qml:96
 #, fuzzy, kde-format
 #| msgid "Display the desktop &number"
 msgid "Desktop number"
 msgstr "Display the desktop &number"
 
-#: package/contents/ui/configGeneral.qml:103
+#: package/contents/ui/configGeneral.qml:104
 #, kde-format
 msgid "Activity name"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:103
+#: package/contents/ui/configGeneral.qml:104
 #, fuzzy, kde-format
 #| msgid "Display the desktop &number"
 msgid "Desktop name"
 msgstr "Display the desktop &number"
 
-#: package/contents/ui/configGeneral.qml:118
+#: package/contents/ui/configGeneral.qml:119
 #, fuzzy, kde-format
 #| msgid "Configure Pager"
 msgctxt ""
@@ -109,7 +109,7 @@ msgctxt ""
 msgid "Selecting current Activity:"
 msgstr "Configure Pager"
 
-#: package/contents/ui/configGeneral.qml:119
+#: package/contents/ui/configGeneral.qml:120
 #, fuzzy, kde-format
 #| msgid "Configure Pager"
 msgctxt ""
@@ -118,7 +118,7 @@ msgctxt ""
 msgid "Selecting current virtual desktop:"
 msgstr "Configure Pager"
 
-#: package/contents/ui/configGeneral.qml:122
+#: package/contents/ui/configGeneral.qml:123
 #, kde-format
 msgctxt ""
 "option:check completes the sentence 'Selecting current activity/virtual "
@@ -126,7 +126,7 @@ msgctxt ""
 msgid "Does nothing"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:130
+#: package/contents/ui/configGeneral.qml:131
 #, kde-format
 msgctxt ""
 "option:check completes the sentence 'Selecting current activity/virtual "
@@ -134,67 +134,67 @@ msgctxt ""
 msgid "Shows the desktop"
 msgstr ""
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:87
 #, kde-format
 msgid "…and %1 other window"
 msgid_plural "…and %1 other windows"
 msgstr[0] ""
 msgstr[1] ""
 
-#: package/contents/ui/main.qml:344
+#: package/contents/ui/main.qml:351
 #, kde-format
 msgid "%1 Window:"
 msgid_plural "%1 Windows:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: package/contents/ui/main.qml:356
+#: package/contents/ui/main.qml:363
 #, kde-format
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: package/contents/ui/main.qml:432
+#: package/contents/ui/main.qml:439
 #, fuzzy, kde-format
 #| msgid "Display the desktop &number"
 msgid "Desktop %1"
 msgstr "Display the desktop &number"
 
-#: package/contents/ui/main.qml:433
+#: package/contents/ui/main.qml:440
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
 msgstr ""
 
-#: package/contents/ui/main.qml:577
+#: package/contents/ui/main.qml:592
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Show Activity Manager"
 msgstr ""
 
-#: package/contents/ui/main.qml:583
+#: package/contents/ui/main.qml:598
 #, fuzzy, kde-format
 #| msgid "Configure Pager"
 msgctxt "@action:inmenu widget context menu"
 msgid "Add Virtual Desktop"
 msgstr "Configure Pager"
 
-#: package/contents/ui/main.qml:589
+#: package/contents/ui/main.qml:604
 #, fuzzy, kde-format
 #| msgid "Configure Pager"
 msgctxt "@action:inmenu widget context menu"
 msgid "Remove Virtual Desktop"
 msgstr "Configure Pager"
 
-#: package/contents/ui/main.qml:596
+#: package/contents/ui/main.qml:611
 #, fuzzy, kde-format
 #| msgid "Configure Pager"
 msgctxt "@action:inmenu widget context menu"
 msgid "&Configure Activities…"
 msgstr "Configure Pager"
 
-#: package/contents/ui/main.qml:601
+#: package/contents/ui/main.qml:616
 #, fuzzy, kde-format
 #| msgid "Configure Pager"
 msgctxt "@action:inmenu widget context menu"

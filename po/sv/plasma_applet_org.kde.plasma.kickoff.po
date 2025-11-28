@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-23 00:44+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2025-06-06 11:46+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -47,18 +47,18 @@ msgstr "Visa i favoriter"
 msgid "General"
 msgstr "Allmänt"
 
-#: ConfigGeneral.qml:48
+#: ConfigGeneral.qml:47
 #, kde-format
 msgid "Icon:"
 msgstr "Ikon:"
 
-#: ConfigGeneral.qml:54
+#: ConfigGeneral.qml:53
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr "Ändra startprogrammets ikon"
 
-#: ConfigGeneral.qml:55
+#: ConfigGeneral.qml:54
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -68,98 +68,98 @@ msgstr ""
 "Nuvarande ikon är %1. Klicka för att visa menyn för att ändra nuvarande ikon "
 "eller återställa till standardikonen."
 
-#: ConfigGeneral.qml:59
+#: ConfigGeneral.qml:58
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
 msgstr "Ikonnamnet är \"%1\""
 
-#: ConfigGeneral.qml:94
+#: ConfigGeneral.qml:93
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "Välj…"
 
-#: ConfigGeneral.qml:96
+#: ConfigGeneral.qml:95
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr "Välj en ikon för startprogrammet"
 
-#: ConfigGeneral.qml:100
+#: ConfigGeneral.qml:99
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "Återställ till standardikon"
 
-#: ConfigGeneral.qml:106
+#: ConfigGeneral.qml:105
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "Ta bort ikon"
 
-#: ConfigGeneral.qml:121
+#: ConfigGeneral.qml:120
 #, kde-format
 msgid "Show applications as:"
 msgstr "Visa program med:"
 
-#: ConfigGeneral.qml:123
+#: ConfigGeneral.qml:122
 #, kde-format
 msgid "Name only"
 msgstr "Bara namn"
 
-#: ConfigGeneral.qml:123
+#: ConfigGeneral.qml:122
 #, kde-format
 msgid "Description only"
 msgstr "Bara beskrivning"
 
-#: ConfigGeneral.qml:123
+#: ConfigGeneral.qml:122
 #, kde-format
 msgid "Name (Description)"
 msgstr "Namn (Beskrivning)"
 
-#: ConfigGeneral.qml:123
+#: ConfigGeneral.qml:122
 #, kde-format
 msgid "Description (Name)"
 msgstr "Beskrivning (Namn)"
 
-#: ConfigGeneral.qml:133
+#: ConfigGeneral.qml:132
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "Textetikett:"
 
-#: ConfigGeneral.qml:135
+#: ConfigGeneral.qml:134
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "Skriv här för att lägga till en textetikett"
 
-#: ConfigGeneral.qml:149
+#: ConfigGeneral.qml:148
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr "Återställ menybeteckning"
 
-#: ConfigGeneral.qml:162
+#: ConfigGeneral.qml:161
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "En textetikett kan inte anges när panelen är vertikal."
 
-#: ConfigGeneral.qml:172
+#: ConfigGeneral.qml:171
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "Allmänt:"
 
-#: ConfigGeneral.qml:176
+#: ConfigGeneral.qml:175
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "Sortera program alfabetiskt"
 
-#: ConfigGeneral.qml:180
+#: ConfigGeneral.qml:179
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -169,103 +169,103 @@ msgstr ""
 "Det påverkar inte hur program sorteras varken i sökresultat eller på "
 "favoritsidan."
 
-#: ConfigGeneral.qml:186
+#: ConfigGeneral.qml:185
 #, kde-format
 msgid "Use compact list item style"
 msgstr "Använd kompakt stil för listalternativ"
 
-#: ConfigGeneral.qml:192
+#: ConfigGeneral.qml:191
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "Automatiskt inaktiverat i pekläge"
 
-#: ConfigGeneral.qml:200
+#: ConfigGeneral.qml:199
 #, kde-format
 msgid "Highlight newly installed applications"
 msgstr "Markera nyinstallerade program"
 
-#: ConfigGeneral.qml:205
+#: ConfigGeneral.qml:204
 #, kde-format
 msgid "Switch sidebar categories when hovering over them"
 msgstr "Ändra sidoradskategorier när muspekaren hålls över dem"
 
-#: ConfigGeneral.qml:211
+#: ConfigGeneral.qml:210
 #, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
 msgstr "Anpassa sökinsticksprogram…"
 
-#: ConfigGeneral.qml:221
+#: ConfigGeneral.qml:220
 #, kde-format
 msgid "Sidebar position:"
 msgstr "Sidoradens position:"
 
-#: ConfigGeneral.qml:222 ConfigGeneral.qml:230
+#: ConfigGeneral.qml:221 ConfigGeneral.qml:229
 #, kde-format
 msgid "Right"
 msgstr "Höger"
 
-#: ConfigGeneral.qml:222 ConfigGeneral.qml:230
+#: ConfigGeneral.qml:221 ConfigGeneral.qml:229
 #, kde-format
 msgid "Left"
 msgstr "Vänster"
 
-#: ConfigGeneral.qml:238
+#: ConfigGeneral.qml:237
 #, kde-format
 msgid "Show favorites:"
 msgstr "Visa favoriter:"
 
-#: ConfigGeneral.qml:239
+#: ConfigGeneral.qml:238
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "I ett rutnät"
 
-#: ConfigGeneral.qml:247
+#: ConfigGeneral.qml:246
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "I en lista"
 
-#: ConfigGeneral.qml:255
+#: ConfigGeneral.qml:254
 #, kde-format
 msgid "Show other applications:"
 msgstr "Visa övriga program:"
 
-#: ConfigGeneral.qml:256
+#: ConfigGeneral.qml:255
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "I ett rutnät"
 
-#: ConfigGeneral.qml:264
+#: ConfigGeneral.qml:263
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "I en lista"
 
-#: ConfigGeneral.qml:276
+#: ConfigGeneral.qml:275
 #, kde-format
 msgid "Show buttons for:"
 msgstr "Visa knappar för:"
 
-#: ConfigGeneral.qml:277 LeaveButtons.qml:171
+#: ConfigGeneral.qml:276 LeaveButtons.qml:171
 #, kde-format
 msgid "Power"
 msgstr "Strömhantering"
 
-#: ConfigGeneral.qml:286 LeaveButtons.qml:171
+#: ConfigGeneral.qml:285 LeaveButtons.qml:171
 #, kde-format
 msgid "Session"
 msgstr "Session"
 
-#: ConfigGeneral.qml:295
+#: ConfigGeneral.qml:294
 #, kde-format
 msgid "Power and session"
 msgstr "Strömhantering och session"
 
-#: ConfigGeneral.qml:304
+#: ConfigGeneral.qml:303
 #, kde-format
 msgid "Show action button captions"
 msgstr "Visa rubriker för åtgärdsknappar"
@@ -286,28 +286,28 @@ msgctxt "@info:status"
 msgid "No matches"
 msgstr "Inga träffar"
 
-#: Header.qml:86
+#: Header.qml:84
 #, kde-format
 msgid "Open user settings"
 msgstr "Visa användarinställningar"
 
-#: Header.qml:266
+#: Header.qml:264
 #, kde-format
 msgid "Keep Open"
 msgstr "Behåll öppet"
 
-#: KickoffGridDelegate.qml:60 KickoffListDelegate.qml:110
+#: KickoffGridDelegate.qml:59 KickoffListDelegate.qml:110
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
 msgstr "Ny!"
 
-#: KickoffGridDelegate.qml:61 KickoffListDelegate.qml:112
+#: KickoffGridDelegate.qml:60 KickoffListDelegate.qml:112
 #, kde-format
 msgid "Newly installed application"
 msgstr "Nyinstallerat program"
 
-#: KickoffGridView.qml:102
+#: KickoffGridView.qml:101
 #, kde-format
 msgid "Grid with %1 rows, %2 columns"
 msgstr "Rutnät med %1 rader, %2 kolumner"

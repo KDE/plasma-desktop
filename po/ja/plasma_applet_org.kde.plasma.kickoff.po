@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_kickoff\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-23 00:44+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2024-02-12 18:35+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -49,18 +49,18 @@ msgstr "お気に入りに表示"
 msgid "General"
 msgstr "全般"
 
-#: ConfigGeneral.qml:48
+#: ConfigGeneral.qml:47
 #, kde-format
 msgid "Icon:"
 msgstr "アイコン:"
 
-#: ConfigGeneral.qml:54
+#: ConfigGeneral.qml:53
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr "アプリケーションランチャーのアイコンを変更"
 
-#: ConfigGeneral.qml:55
+#: ConfigGeneral.qml:54
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -70,100 +70,100 @@ msgstr ""
 "現在のアイコンは %1 です。現在のアイコンを変更、もしくはデフォルトのアイコン"
 "にリセットするには、クリックしてメニューを開いてください。"
 
-#: ConfigGeneral.qml:59
+#: ConfigGeneral.qml:58
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
 msgstr "アイコンの名前は \"%1\" です。"
 
-#: ConfigGeneral.qml:94
+#: ConfigGeneral.qml:93
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "選択..."
 
-#: ConfigGeneral.qml:96
+#: ConfigGeneral.qml:95
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr "アプリケーションランチャーのアイコンを選択"
 
-#: ConfigGeneral.qml:100
+#: ConfigGeneral.qml:99
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "標準のアイコンに戻す"
 
-#: ConfigGeneral.qml:106
+#: ConfigGeneral.qml:105
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "アイコンを削除"
 
-#: ConfigGeneral.qml:121
+#: ConfigGeneral.qml:120
 #, fuzzy, kde-format
 #| msgid "Show other applications:"
 msgid "Show applications as:"
 msgstr "他のアプリケーション:"
 
-#: ConfigGeneral.qml:123
+#: ConfigGeneral.qml:122
 #, kde-format
 msgid "Name only"
 msgstr ""
 
-#: ConfigGeneral.qml:123
+#: ConfigGeneral.qml:122
 #, kde-format
 msgid "Description only"
 msgstr ""
 
-#: ConfigGeneral.qml:123
+#: ConfigGeneral.qml:122
 #, kde-format
 msgid "Name (Description)"
 msgstr ""
 
-#: ConfigGeneral.qml:123
+#: ConfigGeneral.qml:122
 #, kde-format
 msgid "Description (Name)"
 msgstr ""
 
-#: ConfigGeneral.qml:133
+#: ConfigGeneral.qml:132
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "テキストラベル:"
 
-#: ConfigGeneral.qml:135
+#: ConfigGeneral.qml:134
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "ここにタイプしてテキストラベルを追加"
 
-#: ConfigGeneral.qml:149
+#: ConfigGeneral.qml:148
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr "メニューラベルをリセット"
 
-#: ConfigGeneral.qml:162
+#: ConfigGeneral.qml:161
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "パネルが垂直なときはテキストラベルを設定できません。"
 
-#: ConfigGeneral.qml:172
+#: ConfigGeneral.qml:171
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "全般:"
 
-#: ConfigGeneral.qml:176
+#: ConfigGeneral.qml:175
 #, fuzzy, kde-format
 #| msgid "Always sort applications alphabetically"
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "常にアルファベット順でソート"
 
-#: ConfigGeneral.qml:180
+#: ConfigGeneral.qml:179
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -171,28 +171,28 @@ msgid ""
 "the favorites page."
 msgstr ""
 
-#: ConfigGeneral.qml:186
+#: ConfigGeneral.qml:185
 #, kde-format
 msgid "Use compact list item style"
 msgstr "コンパクトなリストを使用する"
 
-#: ConfigGeneral.qml:192
+#: ConfigGeneral.qml:191
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "タッチモード時自動的に無効化する"
 
-#: ConfigGeneral.qml:200
+#: ConfigGeneral.qml:199
 #, kde-format
 msgid "Highlight newly installed applications"
 msgstr ""
 
-#: ConfigGeneral.qml:205
+#: ConfigGeneral.qml:204
 #, kde-format
 msgid "Switch sidebar categories when hovering over them"
 msgstr ""
 
-#: ConfigGeneral.qml:211
+#: ConfigGeneral.qml:210
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Configure Enabled Search Plugins…"
@@ -200,76 +200,76 @@ msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
 msgstr "検索プラグインを設定..."
 
-#: ConfigGeneral.qml:221
+#: ConfigGeneral.qml:220
 #, kde-format
 msgid "Sidebar position:"
 msgstr "サイドバーの位置:"
 
-#: ConfigGeneral.qml:222 ConfigGeneral.qml:230
+#: ConfigGeneral.qml:221 ConfigGeneral.qml:229
 #, kde-format
 msgid "Right"
 msgstr "右"
 
-#: ConfigGeneral.qml:222 ConfigGeneral.qml:230
+#: ConfigGeneral.qml:221 ConfigGeneral.qml:229
 #, kde-format
 msgid "Left"
 msgstr "左"
 
-#: ConfigGeneral.qml:238
+#: ConfigGeneral.qml:237
 #, kde-format
 msgid "Show favorites:"
 msgstr "お気に入り:"
 
-#: ConfigGeneral.qml:239
+#: ConfigGeneral.qml:238
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "グリッドで表示する"
 
-#: ConfigGeneral.qml:247
+#: ConfigGeneral.qml:246
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "リストで表示する"
 
-#: ConfigGeneral.qml:255
+#: ConfigGeneral.qml:254
 #, kde-format
 msgid "Show other applications:"
 msgstr "他のアプリケーション:"
 
-#: ConfigGeneral.qml:256
+#: ConfigGeneral.qml:255
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "グリッドで表示する"
 
-#: ConfigGeneral.qml:264
+#: ConfigGeneral.qml:263
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "リストで表示する"
 
-#: ConfigGeneral.qml:276
+#: ConfigGeneral.qml:275
 #, kde-format
 msgid "Show buttons for:"
 msgstr "ボタンを表示:"
 
-#: ConfigGeneral.qml:277 LeaveButtons.qml:171
+#: ConfigGeneral.qml:276 LeaveButtons.qml:171
 #, kde-format
 msgid "Power"
 msgstr "電源"
 
-#: ConfigGeneral.qml:286 LeaveButtons.qml:171
+#: ConfigGeneral.qml:285 LeaveButtons.qml:171
 #, kde-format
 msgid "Session"
 msgstr "セッション"
 
-#: ConfigGeneral.qml:295
+#: ConfigGeneral.qml:294
 #, kde-format
 msgid "Power and session"
 msgstr "電源とセッション"
 
-#: ConfigGeneral.qml:304
+#: ConfigGeneral.qml:303
 #, kde-format
 msgid "Show action button captions"
 msgstr "アクションボタンにキャプションを表示"
@@ -290,29 +290,29 @@ msgctxt "@info:status"
 msgid "No matches"
 msgstr "一致なし"
 
-#: Header.qml:86
+#: Header.qml:84
 #, kde-format
 msgid "Open user settings"
 msgstr "ユーザ設定を開く"
 
-#: Header.qml:266
+#: Header.qml:264
 #, kde-format
 msgid "Keep Open"
 msgstr "開けたままにする"
 
-#: KickoffGridDelegate.qml:60 KickoffListDelegate.qml:110
+#: KickoffGridDelegate.qml:59 KickoffListDelegate.qml:110
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
 msgstr ""
 
-#: KickoffGridDelegate.qml:61 KickoffListDelegate.qml:112
+#: KickoffGridDelegate.qml:60 KickoffListDelegate.qml:112
 #, fuzzy, kde-format
 #| msgid "Show other applications:"
 msgid "Newly installed application"
 msgstr "他のアプリケーション:"
 
-#: KickoffGridView.qml:102
+#: KickoffGridView.qml:101
 #, kde-format
 msgid "Grid with %1 rows, %2 columns"
 msgstr "%1行、%2列のグリッド"

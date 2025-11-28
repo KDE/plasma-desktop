@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2024-09-01 17:43+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -22,83 +22,83 @@ msgstr ""
 msgid "General"
 msgstr "பொதுவானவை"
 
-#: package/contents/ui/configGeneral.qml:38
+#: package/contents/ui/configGeneral.qml:39
 #, kde-format
 msgid "General:"
 msgstr "பொதுவானவை:"
 
-#: package/contents/ui/configGeneral.qml:40
+#: package/contents/ui/configGeneral.qml:41
 #, kde-format
 msgid "Show window outlines"
 msgstr "சாளரங்களின் கோட்டோவியங்களைக் காட்டு"
 
-#: package/contents/ui/configGeneral.qml:45
+#: package/contents/ui/configGeneral.qml:46
 #, kde-format
 msgid "Show application icons on window outlines"
 msgstr "சாளரங்களின் கோட்டோவியங்களில் செயலிகளின் சின்னங்களை காட்டு"
 
-#: package/contents/ui/configGeneral.qml:51
+#: package/contents/ui/configGeneral.qml:52
 #, kde-format
 msgid "Show only current screen"
 msgstr "தற்போதைய திரையில் உள்ளவற்றை மட்டும் காட்டு"
 
-#: package/contents/ui/configGeneral.qml:56
+#: package/contents/ui/configGeneral.qml:57
 #, kde-format
 msgid "Navigation wraps around"
 msgstr "உலாவல் சுற்றி ஆரம்பத்திற்கே வரும்"
 
-#: package/contents/ui/configGeneral.qml:68
+#: package/contents/ui/configGeneral.qml:69
 #, kde-format
 msgid "Layout:"
 msgstr "தளவமைப்பு:"
 
-#: package/contents/ui/configGeneral.qml:70
+#: package/contents/ui/configGeneral.qml:71
 #, kde-format
 msgctxt "The pager layout"
 msgid "Default"
 msgstr "இயல்பிருப்பு"
 
-#: package/contents/ui/configGeneral.qml:70
+#: package/contents/ui/configGeneral.qml:71
 #, kde-format
 msgid "Horizontal"
 msgstr "கிடைமட்டமாக"
 
-#: package/contents/ui/configGeneral.qml:70
+#: package/contents/ui/configGeneral.qml:71
 #, kde-format
 msgid "Vertical"
 msgstr "நெடுக்காக"
 
-#: package/contents/ui/configGeneral.qml:84
+#: package/contents/ui/configGeneral.qml:85
 #, kde-format
 msgid "Text display:"
 msgstr "காட்டப்படும் உரை:"
 
-#: package/contents/ui/configGeneral.qml:87
+#: package/contents/ui/configGeneral.qml:88
 #, kde-format
 msgid "No text"
 msgstr "ஏதுமில்லை"
 
-#: package/contents/ui/configGeneral.qml:95
+#: package/contents/ui/configGeneral.qml:96
 #, kde-format
 msgid "Activity number"
 msgstr "செயல்பாட்டின் எண்"
 
-#: package/contents/ui/configGeneral.qml:95
+#: package/contents/ui/configGeneral.qml:96
 #, kde-format
 msgid "Desktop number"
 msgstr "பணிமேடையின் எண்"
 
-#: package/contents/ui/configGeneral.qml:103
+#: package/contents/ui/configGeneral.qml:104
 #, kde-format
 msgid "Activity name"
 msgstr "செயல்பாட்டின் பெயர்"
 
-#: package/contents/ui/configGeneral.qml:103
+#: package/contents/ui/configGeneral.qml:104
 #, kde-format
 msgid "Desktop name"
 msgstr "பணிமேடையின் பெயர்"
 
-#: package/contents/ui/configGeneral.qml:118
+#: package/contents/ui/configGeneral.qml:119
 #, fuzzy, kde-format
 #| msgid "Selecting current Activity:"
 msgctxt ""
@@ -107,7 +107,7 @@ msgctxt ""
 msgid "Selecting current Activity:"
 msgstr "தற்போதைய செயல்பாட்டை தேர்ந்தெடுத்தல்:"
 
-#: package/contents/ui/configGeneral.qml:119
+#: package/contents/ui/configGeneral.qml:120
 #, fuzzy, kde-format
 #| msgid "Selecting current virtual desktop:"
 msgctxt ""
@@ -116,7 +116,7 @@ msgctxt ""
 msgid "Selecting current virtual desktop:"
 msgstr "தற்போதைய மெய்நிகர் பணிமேடையை தேர்ந்தெடுத்தல்:"
 
-#: package/contents/ui/configGeneral.qml:122
+#: package/contents/ui/configGeneral.qml:123
 #, fuzzy, kde-format
 #| msgid "Does nothing"
 msgctxt ""
@@ -125,7 +125,7 @@ msgctxt ""
 msgid "Does nothing"
 msgstr "ஒன்றும் செய்யாது"
 
-#: package/contents/ui/configGeneral.qml:130
+#: package/contents/ui/configGeneral.qml:131
 #, fuzzy, kde-format
 #| msgid "Shows the desktop"
 msgctxt ""
@@ -134,63 +134,63 @@ msgctxt ""
 msgid "Shows the desktop"
 msgstr "பணிமேடையை காட்டும்"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:87
 #, kde-format
 msgid "…and %1 other window"
 msgid_plural "…and %1 other windows"
 msgstr[0] "… தவிர மேலும் %1 சாளரம்"
 msgstr[1] "… தவிர மேலும் %1 சாளரங்கள்"
 
-#: package/contents/ui/main.qml:344
+#: package/contents/ui/main.qml:351
 #, kde-format
 msgid "%1 Window:"
 msgid_plural "%1 Windows:"
 msgstr[0] "%1 சாளரம்:"
 msgstr[1] "%1 சாளரங்கள்:"
 
-#: package/contents/ui/main.qml:356
+#: package/contents/ui/main.qml:363
 #, kde-format
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
 msgstr[0] "%1 ஒதுக்கப்பட்ட சாளரம்:"
 msgstr[1] "%1 ஒதுக்கப்பட்ட சாளரங்கள்:"
 
-#: package/contents/ui/main.qml:432
+#: package/contents/ui/main.qml:439
 #, kde-format
 msgid "Desktop %1"
 msgstr "பணிமேடை %1"
 
-#: package/contents/ui/main.qml:433
+#: package/contents/ui/main.qml:440
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
 msgstr "%1-க்கு தாவு"
 
-#: package/contents/ui/main.qml:577
+#: package/contents/ui/main.qml:592
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Show Activity Manager"
 msgstr "செயல்பாடு மேலாளியைக் காட்டு"
 
-#: package/contents/ui/main.qml:583
+#: package/contents/ui/main.qml:598
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Add Virtual Desktop"
 msgstr "மெய்நிகர் பணிமேடையைச் சேர்"
 
-#: package/contents/ui/main.qml:589
+#: package/contents/ui/main.qml:604
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Remove Virtual Desktop"
 msgstr "மெய்நிகர் பணிமேடையை நீக்கு"
 
-#: package/contents/ui/main.qml:596
+#: package/contents/ui/main.qml:611
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "&Configure Activities…"
 msgstr "&செயல்பாடுகளை அமை…"
 
-#: package/contents/ui/main.qml:601
+#: package/contents/ui/main.qml:616
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Configure Virtual Desktops…"

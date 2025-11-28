@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2024-12-20 21:53+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -24,83 +24,83 @@ msgstr ""
 msgid "General"
 msgstr "सामान्य"
 
-#: package/contents/ui/configGeneral.qml:38
+#: package/contents/ui/configGeneral.qml:39
 #, kde-format
 msgid "General:"
 msgstr "सामान्य:"
 
-#: package/contents/ui/configGeneral.qml:40
+#: package/contents/ui/configGeneral.qml:41
 #, kde-format
 msgid "Show window outlines"
 msgstr "विण्डोरूपरेखाः दर्शयन्तु"
 
-#: package/contents/ui/configGeneral.qml:45
+#: package/contents/ui/configGeneral.qml:46
 #, kde-format
 msgid "Show application icons on window outlines"
 msgstr "विण्डोरूपरेखासु अनुप्रयोगचिह्नानि दर्शयन्तु"
 
-#: package/contents/ui/configGeneral.qml:51
+#: package/contents/ui/configGeneral.qml:52
 #, kde-format
 msgid "Show only current screen"
 msgstr "केवलं वर्तमानपटलं दर्शयतु"
 
-#: package/contents/ui/configGeneral.qml:56
+#: package/contents/ui/configGeneral.qml:57
 #, kde-format
 msgid "Navigation wraps around"
 msgstr "नेविगेशनं परितः वेष्टयति"
 
-#: package/contents/ui/configGeneral.qml:68
+#: package/contents/ui/configGeneral.qml:69
 #, kde-format
 msgid "Layout:"
 msgstr "प्रारूपं:"
 
-#: package/contents/ui/configGeneral.qml:70
+#: package/contents/ui/configGeneral.qml:71
 #, kde-format
 msgctxt "The pager layout"
 msgid "Default"
 msgstr "मूलभूतम्‌"
 
-#: package/contents/ui/configGeneral.qml:70
+#: package/contents/ui/configGeneral.qml:71
 #, kde-format
 msgid "Horizontal"
 msgstr "क्षैतिज"
 
-#: package/contents/ui/configGeneral.qml:70
+#: package/contents/ui/configGeneral.qml:71
 #, kde-format
 msgid "Vertical"
 msgstr "ऊर्ध्वाधर"
 
-#: package/contents/ui/configGeneral.qml:84
+#: package/contents/ui/configGeneral.qml:85
 #, kde-format
 msgid "Text display:"
 msgstr "पाठप्रदर्शनम् :"
 
-#: package/contents/ui/configGeneral.qml:87
+#: package/contents/ui/configGeneral.qml:88
 #, kde-format
 msgid "No text"
 msgstr "न पाठः"
 
-#: package/contents/ui/configGeneral.qml:95
+#: package/contents/ui/configGeneral.qml:96
 #, kde-format
 msgid "Activity number"
 msgstr "गतिविधि संख्या"
 
-#: package/contents/ui/configGeneral.qml:95
+#: package/contents/ui/configGeneral.qml:96
 #, kde-format
 msgid "Desktop number"
 msgstr "डेस्कटॉप सङ्ख्या"
 
-#: package/contents/ui/configGeneral.qml:103
+#: package/contents/ui/configGeneral.qml:104
 #, kde-format
 msgid "Activity name"
 msgstr "क्रियाकलापनाम"
 
-#: package/contents/ui/configGeneral.qml:103
+#: package/contents/ui/configGeneral.qml:104
 #, kde-format
 msgid "Desktop name"
 msgstr "डेस्कटॉप नाम"
 
-#: package/contents/ui/configGeneral.qml:118
+#: package/contents/ui/configGeneral.qml:119
 #, fuzzy, kde-format
 #| msgid "Selecting current Activity:"
 msgctxt ""
@@ -109,7 +109,7 @@ msgctxt ""
 msgid "Selecting current Activity:"
 msgstr "वर्तमान क्रियाकलापस्य चयनम् :"
 
-#: package/contents/ui/configGeneral.qml:119
+#: package/contents/ui/configGeneral.qml:120
 #, fuzzy, kde-format
 #| msgid "Selecting current virtual desktop:"
 msgctxt ""
@@ -118,7 +118,7 @@ msgctxt ""
 msgid "Selecting current virtual desktop:"
 msgstr "वर्तमान वर्चुअल् डेस्कटॉप् चयनम् :"
 
-#: package/contents/ui/configGeneral.qml:122
+#: package/contents/ui/configGeneral.qml:123
 #, fuzzy, kde-format
 #| msgid "Does nothing"
 msgctxt ""
@@ -127,7 +127,7 @@ msgctxt ""
 msgid "Does nothing"
 msgstr "न किमपि करोति"
 
-#: package/contents/ui/configGeneral.qml:130
+#: package/contents/ui/configGeneral.qml:131
 #, fuzzy, kde-format
 #| msgid "Shows the desktop"
 msgctxt ""
@@ -136,63 +136,63 @@ msgctxt ""
 msgid "Shows the desktop"
 msgstr "डेस्कटॉप् दर्शयति"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:87
 #, kde-format
 msgid "…and %1 other window"
 msgid_plural "…and %1 other windows"
 msgstr[0] "...तथा %1 अन्यविण्डो"
 msgstr[1] "...तथा %1 अन्ये विण्डोस्"
 
-#: package/contents/ui/main.qml:344
+#: package/contents/ui/main.qml:351
 #, kde-format
 msgid "%1 Window:"
 msgid_plural "%1 Windows:"
 msgstr[0] "%1 विण्डो: ."
 msgstr[1] "%1 विण्डोज: ."
 
-#: package/contents/ui/main.qml:356
+#: package/contents/ui/main.qml:363
 #, kde-format
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
 msgstr[0] "%1 न्यूनतमं विण्डो: ."
 msgstr[1] "%1 न्यूनतमं विण्डोज: ."
 
-#: package/contents/ui/main.qml:432
+#: package/contents/ui/main.qml:439
 #, kde-format
 msgid "Desktop %1"
 msgstr "डेस्कटॉप %1"
 
-#: package/contents/ui/main.qml:433
+#: package/contents/ui/main.qml:440
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
 msgstr "%1 इत्यत्र स्विच कुर्वन्तु"
 
-#: package/contents/ui/main.qml:577
+#: package/contents/ui/main.qml:592
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Show Activity Manager"
 msgstr "गतिविधिप्रबन्धकं दर्शयतु"
 
-#: package/contents/ui/main.qml:583
+#: package/contents/ui/main.qml:598
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Add Virtual Desktop"
 msgstr "वर्चुअल् डेस्कटॉप् योजयन्तु"
 
-#: package/contents/ui/main.qml:589
+#: package/contents/ui/main.qml:604
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Remove Virtual Desktop"
 msgstr "वर्चुअल् डेस्कटॉप् निष्कासयन्तु"
 
-#: package/contents/ui/main.qml:596
+#: package/contents/ui/main.qml:611
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "&Configure Activities…"
 msgstr "&क्रियाकलापाः विन्यस्तं कुर्वन्तु..."
 
-#: package/contents/ui/main.qml:601
+#: package/contents/ui/main.qml:616
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Configure Virtual Desktops…"

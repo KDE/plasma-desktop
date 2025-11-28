@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2016-11-28 01:33+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -23,95 +23,95 @@ msgstr ""
 msgid "General"
 msgstr "Opšte"
 
-#: package/contents/ui/configGeneral.qml:38
+#: package/contents/ui/configGeneral.qml:39
 #, fuzzy, kde-format
 #| msgid "General"
 msgid "General:"
 msgstr "Opšte"
 
-#: package/contents/ui/configGeneral.qml:40
+#: package/contents/ui/configGeneral.qml:41
 #, kde-format
 msgid "Show window outlines"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:45
+#: package/contents/ui/configGeneral.qml:46
 #, kde-format
 msgid "Show application icons on window outlines"
 msgstr ""
 
 # >> @option:check
-#: package/contents/ui/configGeneral.qml:51
+#: package/contents/ui/configGeneral.qml:52
 #, fuzzy, kde-format
 #| msgid "Only the current screen"
 msgid "Show only current screen"
 msgstr "Samo tekući ekran"
 
-#: package/contents/ui/configGeneral.qml:56
+#: package/contents/ui/configGeneral.qml:57
 #, kde-format
 msgid "Navigation wraps around"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:68
+#: package/contents/ui/configGeneral.qml:69
 #, kde-format
 msgid "Layout:"
 msgstr "Raspored:"
 
 # >> @item:inlistbox Layout:
-#: package/contents/ui/configGeneral.qml:70
+#: package/contents/ui/configGeneral.qml:71
 #, kde-format
 msgctxt "The pager layout"
 msgid "Default"
 msgstr "podrazumevani"
 
 # >> @item:inlistbox Layout:
-#: package/contents/ui/configGeneral.qml:70
+#: package/contents/ui/configGeneral.qml:71
 #, kde-format
 msgid "Horizontal"
 msgstr "vodoravni"
 
 # >> @item:inlistbox Layout:
-#: package/contents/ui/configGeneral.qml:70
+#: package/contents/ui/configGeneral.qml:71
 #, kde-format
 msgid "Vertical"
 msgstr "uspravni"
 
-#: package/contents/ui/configGeneral.qml:84
+#: package/contents/ui/configGeneral.qml:85
 #, fuzzy, kde-format
 #| msgid "Display:"
 msgid "Text display:"
 msgstr "Prikaz:"
 
 # >> @option:radio Display:
-#: package/contents/ui/configGeneral.qml:87
+#: package/contents/ui/configGeneral.qml:88
 #, kde-format
 msgid "No text"
 msgstr "bez teksta"
 
 # >> @option:radio Display:
-#: package/contents/ui/configGeneral.qml:95
+#: package/contents/ui/configGeneral.qml:96
 #, kde-format
 msgid "Activity number"
 msgstr "broj aktivnosti"
 
 # >> @option:radio Display:
-#: package/contents/ui/configGeneral.qml:95
+#: package/contents/ui/configGeneral.qml:96
 #, kde-format
 msgid "Desktop number"
 msgstr "broj površi"
 
 # >> @option:radio Display:
-#: package/contents/ui/configGeneral.qml:103
+#: package/contents/ui/configGeneral.qml:104
 #, kde-format
 msgid "Activity name"
 msgstr "ime aktivnosti"
 
 # >> @option:radio Display:
-#: package/contents/ui/configGeneral.qml:103
+#: package/contents/ui/configGeneral.qml:104
 #, kde-format
 msgid "Desktop name"
 msgstr "ime površi"
 
-#: package/contents/ui/configGeneral.qml:118
+#: package/contents/ui/configGeneral.qml:119
 #, fuzzy, kde-format
 #| msgid "Selecting current desktop:"
 msgctxt ""
@@ -120,7 +120,7 @@ msgctxt ""
 msgid "Selecting current Activity:"
 msgstr "Biranje tekuće površi:"
 
-#: package/contents/ui/configGeneral.qml:119
+#: package/contents/ui/configGeneral.qml:120
 #, fuzzy, kde-format
 #| msgid "Selecting current desktop:"
 msgctxt ""
@@ -130,7 +130,7 @@ msgid "Selecting current virtual desktop:"
 msgstr "Biranje tekuće površi:"
 
 # >> @option:radio Selecting current desktop:
-#: package/contents/ui/configGeneral.qml:122
+#: package/contents/ui/configGeneral.qml:123
 #, fuzzy, kde-format
 #| msgid "Does nothing"
 msgctxt ""
@@ -140,7 +140,7 @@ msgid "Does nothing"
 msgstr "nema efekta"
 
 # >> @option:radio Selecting current desktop:
-#: package/contents/ui/configGeneral.qml:130
+#: package/contents/ui/configGeneral.qml:131
 #, fuzzy, kde-format
 #| msgid "Shows desktop"
 msgctxt ""
@@ -149,7 +149,7 @@ msgctxt ""
 msgid "Shows the desktop"
 msgstr "prikazuje površ"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:87
 #, fuzzy, kde-format
 #| msgid "...and %1 other window"
 #| msgid_plural "...and %1 other windows"
@@ -160,7 +160,7 @@ msgstr[1] "...i %1 druga prozora"
 msgstr[2] "...i %1 drugih prozora"
 msgstr[3] "...i %1 drugi prozor"
 
-#: package/contents/ui/main.qml:344
+#: package/contents/ui/main.qml:351
 #, kde-format
 msgid "%1 Window:"
 msgid_plural "%1 Windows:"
@@ -169,7 +169,7 @@ msgstr[1] "%1 prozora:"
 msgstr[2] "%1 prozora:"
 msgstr[3] "%1 prozor:"
 
-#: package/contents/ui/main.qml:356
+#: package/contents/ui/main.qml:363
 #, kde-format
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
@@ -179,47 +179,47 @@ msgstr[2] "%1 minimizovan prozora:"
 msgstr[3] "%1 minimizovan prozor:"
 
 # >> @option:radio Display:
-#: package/contents/ui/main.qml:432
+#: package/contents/ui/main.qml:439
 #, fuzzy, kde-format
 #| msgid "Desktop name"
 msgid "Desktop %1"
 msgstr "ime površi"
 
-#: package/contents/ui/main.qml:433
+#: package/contents/ui/main.qml:440
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
 msgstr ""
 
-#: package/contents/ui/main.qml:577
+#: package/contents/ui/main.qml:592
 #, fuzzy, kde-format
 #| msgid "Show Activity Manager..."
 msgctxt "@action:inmenu widget context menu"
 msgid "Show Activity Manager"
 msgstr "Prikaži menadžer aktivnosti..."
 
-#: package/contents/ui/main.qml:583
+#: package/contents/ui/main.qml:598
 #, fuzzy, kde-format
 #| msgid "Add Virtual Desktop"
 msgctxt "@action:inmenu widget context menu"
 msgid "Add Virtual Desktop"
 msgstr "Dodaj virtuelnu površi"
 
-#: package/contents/ui/main.qml:589
+#: package/contents/ui/main.qml:604
 #, fuzzy, kde-format
 #| msgid "Remove Virtual Desktop"
 msgctxt "@action:inmenu widget context menu"
 msgid "Remove Virtual Desktop"
 msgstr "Ukloni virtuelnu površ"
 
-#: package/contents/ui/main.qml:596
+#: package/contents/ui/main.qml:611
 #, fuzzy, kde-format
 #| msgid "Configure Desktops..."
 msgctxt "@action:inmenu widget context menu"
 msgid "&Configure Activities…"
 msgstr "Podesi površi..."
 
-#: package/contents/ui/main.qml:601
+#: package/contents/ui/main.qml:616
 #, fuzzy, kde-format
 #| msgid "Configure Desktops..."
 msgctxt "@action:inmenu widget context menu"

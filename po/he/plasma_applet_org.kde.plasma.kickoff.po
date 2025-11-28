@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kickoff\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-23 00:44+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2025-06-06 11:51+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -50,18 +50,18 @@ msgstr "הצגה במועדפים"
 msgid "General"
 msgstr "כללי"
 
-#: ConfigGeneral.qml:48
+#: ConfigGeneral.qml:47
 #, kde-format
 msgid "Icon:"
 msgstr "סמל:"
 
-#: ConfigGeneral.qml:54
+#: ConfigGeneral.qml:53
 #, kde-format
 msgctxt "@action:button"
 msgid "Change Application Launcher's icon"
 msgstr "החלפת סמל המשגר של היישום"
 
-#: ConfigGeneral.qml:55
+#: ConfigGeneral.qml:54
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -71,98 +71,98 @@ msgstr ""
 "הסמל הנוכחי הוא %1. לחיצה תפתח את התפריט כדי לאפשר שינוי של הסמל הנוכחי או "
 "איפוס לסמל ברירת המחדל."
 
-#: ConfigGeneral.qml:59
+#: ConfigGeneral.qml:58
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Icon name is \"%1\""
 msgstr "שם הסמל הוא „%1”"
 
-#: ConfigGeneral.qml:94
+#: ConfigGeneral.qml:93
 #, kde-format
 msgctxt "@item:inmenu Open icon chooser dialog"
 msgid "Choose…"
 msgstr "בחירה…"
 
-#: ConfigGeneral.qml:96
+#: ConfigGeneral.qml:95
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Choose an icon for Application Launcher"
 msgstr "נא לבחור סמל למשגר היישומים"
 
-#: ConfigGeneral.qml:100
+#: ConfigGeneral.qml:99
 #, kde-format
 msgctxt "@item:inmenu Reset icon to default"
 msgid "Reset to default icon"
 msgstr "איפוס לסמל ברירת המחדל"
 
-#: ConfigGeneral.qml:106
+#: ConfigGeneral.qml:105
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove icon"
 msgstr "הסרת סמל"
 
-#: ConfigGeneral.qml:121
+#: ConfigGeneral.qml:120
 #, kde-format
 msgid "Show applications as:"
 msgstr "הצגת יישומים בתור:"
 
-#: ConfigGeneral.qml:123
+#: ConfigGeneral.qml:122
 #, kde-format
 msgid "Name only"
 msgstr "שם בלבד"
 
-#: ConfigGeneral.qml:123
+#: ConfigGeneral.qml:122
 #, kde-format
 msgid "Description only"
 msgstr "תיאור בלבד"
 
-#: ConfigGeneral.qml:123
+#: ConfigGeneral.qml:122
 #, kde-format
 msgid "Name (Description)"
 msgstr "שם (תיאור)"
 
-#: ConfigGeneral.qml:123
+#: ConfigGeneral.qml:122
 #, kde-format
 msgid "Description (Name)"
 msgstr "תיאור (שם)"
 
-#: ConfigGeneral.qml:133
+#: ConfigGeneral.qml:132
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text label:"
 msgstr "תווית טקסט:"
 
-#: ConfigGeneral.qml:135
+#: ConfigGeneral.qml:134
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type here to add a text label"
 msgstr "נא להקליד כאן כדי להוסיף תווית טקסט"
 
-#: ConfigGeneral.qml:149
+#: ConfigGeneral.qml:148
 #, kde-format
 msgctxt "@action:button"
 msgid "Reset menu label"
 msgstr "איפוס תווית תפריט"
 
-#: ConfigGeneral.qml:162
+#: ConfigGeneral.qml:161
 #, kde-format
 msgctxt "@info"
 msgid "A text label cannot be set when the Panel is vertical."
 msgstr "אי אפשר להגדיר תווית כאשר הלוח הוא אנכי."
 
-#: ConfigGeneral.qml:172
+#: ConfigGeneral.qml:171
 #, kde-format
 msgctxt "General options"
 msgid "General:"
 msgstr "כללי:"
 
-#: ConfigGeneral.qml:176
+#: ConfigGeneral.qml:175
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort applications alphabetically"
 msgstr "סידור יישומים לפי האלפבית"
 
-#: ConfigGeneral.qml:180
+#: ConfigGeneral.qml:179
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -170,103 +170,103 @@ msgid ""
 "the favorites page."
 msgstr "לא משפיע על איך שיישומים מסודרים בתוצאות החיפוש או בעמוד המועדפים."
 
-#: ConfigGeneral.qml:186
+#: ConfigGeneral.qml:185
 #, kde-format
 msgid "Use compact list item style"
 msgstr "להשתמש בסגנון פריטי תפריט מצומצם"
 
-#: ConfigGeneral.qml:192
+#: ConfigGeneral.qml:191
 #, kde-format
 msgctxt "@info:usagetip under a checkbox when Touch Mode is on"
 msgid "Automatically disabled when in Touch Mode"
 msgstr "מושבת אוטומטית במצב מגע"
 
-#: ConfigGeneral.qml:200
+#: ConfigGeneral.qml:199
 #, kde-format
 msgid "Highlight newly installed applications"
 msgstr "הדגשת יישומים חדשים שהותקנו"
 
-#: ConfigGeneral.qml:205
+#: ConfigGeneral.qml:204
 #, kde-format
 msgid "Switch sidebar categories when hovering over them"
 msgstr "החלפה בין קטגוריות בסרגל הצד בעת מעבר עליהן"
 
-#: ConfigGeneral.qml:211
+#: ConfigGeneral.qml:210
 #, kde-format
 msgctxt "@action:button opens plasmasearch kcm"
 msgid "Configure Search Plugins…"
 msgstr "הגדרת תוספי חיפוש…"
 
-#: ConfigGeneral.qml:221
+#: ConfigGeneral.qml:220
 #, kde-format
 msgid "Sidebar position:"
 msgstr "מקום סרגל צד:"
 
-#: ConfigGeneral.qml:222 ConfigGeneral.qml:230
+#: ConfigGeneral.qml:221 ConfigGeneral.qml:229
 #, kde-format
 msgid "Right"
 msgstr "ימין"
 
-#: ConfigGeneral.qml:222 ConfigGeneral.qml:230
+#: ConfigGeneral.qml:221 ConfigGeneral.qml:229
 #, kde-format
 msgid "Left"
 msgstr "שמאל"
 
-#: ConfigGeneral.qml:238
+#: ConfigGeneral.qml:237
 #, kde-format
 msgid "Show favorites:"
 msgstr "הצגת מועדפים:"
 
-#: ConfigGeneral.qml:239
+#: ConfigGeneral.qml:238
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a grid'"
 msgid "In a grid"
 msgstr "ברשת"
 
-#: ConfigGeneral.qml:247
+#: ConfigGeneral.qml:246
 #, kde-format
 msgctxt "Part of a sentence: 'Show favorites in a list'"
 msgid "In a list"
 msgstr "ברשימה"
 
-#: ConfigGeneral.qml:255
+#: ConfigGeneral.qml:254
 #, kde-format
 msgid "Show other applications:"
 msgstr "הצגת יישומים אחרים:"
 
-#: ConfigGeneral.qml:256
+#: ConfigGeneral.qml:255
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a grid'"
 msgid "In a grid"
 msgstr "ברשת"
 
-#: ConfigGeneral.qml:264
+#: ConfigGeneral.qml:263
 #, kde-format
 msgctxt "Part of a sentence: 'Show other applications in a list'"
 msgid "In a list"
 msgstr "ברשימה"
 
-#: ConfigGeneral.qml:276
+#: ConfigGeneral.qml:275
 #, kde-format
 msgid "Show buttons for:"
 msgstr "הצגת כפתורים עבור:"
 
-#: ConfigGeneral.qml:277 LeaveButtons.qml:171
+#: ConfigGeneral.qml:276 LeaveButtons.qml:171
 #, kde-format
 msgid "Power"
 msgstr "כיבוי"
 
-#: ConfigGeneral.qml:286 LeaveButtons.qml:171
+#: ConfigGeneral.qml:285 LeaveButtons.qml:171
 #, kde-format
 msgid "Session"
 msgstr "הפעלה"
 
-#: ConfigGeneral.qml:295
+#: ConfigGeneral.qml:294
 #, kde-format
 msgid "Power and session"
 msgstr "כיבוי והפעלה"
 
-#: ConfigGeneral.qml:304
+#: ConfigGeneral.qml:303
 #, kde-format
 msgid "Show action button captions"
 msgstr "הצגת תוויות כפתורי פעולה"
@@ -287,28 +287,28 @@ msgctxt "@info:status"
 msgid "No matches"
 msgstr "אין התאמות"
 
-#: Header.qml:86
+#: Header.qml:84
 #, kde-format
 msgid "Open user settings"
 msgstr "פתיחת הגדרות משתמש"
 
-#: Header.qml:266
+#: Header.qml:264
 #, kde-format
 msgid "Keep Open"
 msgstr "להשאיר פתוח"
 
-#: KickoffGridDelegate.qml:60 KickoffListDelegate.qml:110
+#: KickoffGridDelegate.qml:59 KickoffListDelegate.qml:110
 #, kde-format
 msgctxt "Newly installed app, badge, keep short"
 msgid "New!"
 msgstr "חדש!"
 
-#: KickoffGridDelegate.qml:61 KickoffListDelegate.qml:112
+#: KickoffGridDelegate.qml:60 KickoffListDelegate.qml:112
 #, kde-format
 msgid "Newly installed application"
 msgstr "יישום חדש שהותקן"
 
-#: KickoffGridView.qml:102
+#: KickoffGridView.qml:101
 #, kde-format
 msgid "Grid with %1 rows, %2 columns"
 msgstr "רשת עם %1 שורות ו־%2 עמודות"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2025-09-16 23:53+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -26,83 +26,83 @@ msgstr ""
 msgid "General"
 msgstr "Almennt"
 
-#: package/contents/ui/configGeneral.qml:38
+#: package/contents/ui/configGeneral.qml:39
 #, kde-format
 msgid "General:"
 msgstr "Almennt:"
 
-#: package/contents/ui/configGeneral.qml:40
+#: package/contents/ui/configGeneral.qml:41
 #, kde-format
 msgid "Show window outlines"
 msgstr "Sýna útlínur glugga"
 
-#: package/contents/ui/configGeneral.qml:45
+#: package/contents/ui/configGeneral.qml:46
 #, kde-format
 msgid "Show application icons on window outlines"
 msgstr "Sýna forritatákn á útlínum glugga"
 
-#: package/contents/ui/configGeneral.qml:51
+#: package/contents/ui/configGeneral.qml:52
 #, kde-format
 msgid "Show only current screen"
 msgstr "Sýna aðeins núverandi skjá"
 
-#: package/contents/ui/configGeneral.qml:56
+#: package/contents/ui/configGeneral.qml:57
 #, kde-format
 msgid "Navigation wraps around"
 msgstr "Fletting í gegn fer hringinn"
 
-#: package/contents/ui/configGeneral.qml:68
+#: package/contents/ui/configGeneral.qml:69
 #, kde-format
 msgid "Layout:"
 msgstr "Framsetning:"
 
-#: package/contents/ui/configGeneral.qml:70
+#: package/contents/ui/configGeneral.qml:71
 #, kde-format
 msgctxt "The pager layout"
 msgid "Default"
 msgstr "Sjálfgefið"
 
-#: package/contents/ui/configGeneral.qml:70
+#: package/contents/ui/configGeneral.qml:71
 #, kde-format
 msgid "Horizontal"
 msgstr "Lárétt"
 
-#: package/contents/ui/configGeneral.qml:70
+#: package/contents/ui/configGeneral.qml:71
 #, kde-format
 msgid "Vertical"
 msgstr "Lóðrétt"
 
-#: package/contents/ui/configGeneral.qml:84
+#: package/contents/ui/configGeneral.qml:85
 #, kde-format
 msgid "Text display:"
 msgstr "Birting texta:"
 
-#: package/contents/ui/configGeneral.qml:87
+#: package/contents/ui/configGeneral.qml:88
 #, kde-format
 msgid "No text"
 msgstr "Enginn texti"
 
-#: package/contents/ui/configGeneral.qml:95
+#: package/contents/ui/configGeneral.qml:96
 #, kde-format
 msgid "Activity number"
 msgstr "Númer athafnar"
 
-#: package/contents/ui/configGeneral.qml:95
+#: package/contents/ui/configGeneral.qml:96
 #, kde-format
 msgid "Desktop number"
 msgstr "Númer skjáborðs"
 
-#: package/contents/ui/configGeneral.qml:103
+#: package/contents/ui/configGeneral.qml:104
 #, kde-format
 msgid "Activity name"
 msgstr "Heiti athafnar"
 
-#: package/contents/ui/configGeneral.qml:103
+#: package/contents/ui/configGeneral.qml:104
 #, kde-format
 msgid "Desktop name"
 msgstr "Heiti skjáborðs"
 
-#: package/contents/ui/configGeneral.qml:118
+#: package/contents/ui/configGeneral.qml:119
 #, kde-format
 msgctxt ""
 "@label Start of the sentence 'Selecting current activity does nothing/shows "
@@ -110,7 +110,7 @@ msgctxt ""
 msgid "Selecting current Activity:"
 msgstr "Núverandi athöfn valin:"
 
-#: package/contents/ui/configGeneral.qml:119
+#: package/contents/ui/configGeneral.qml:120
 #, kde-format
 msgctxt ""
 "@label Start of the sentence 'Selecting current virtual desktop does nothing/"
@@ -118,7 +118,7 @@ msgctxt ""
 msgid "Selecting current virtual desktop:"
 msgstr "Núverandi sýndarskjáborð valið:"
 
-#: package/contents/ui/configGeneral.qml:122
+#: package/contents/ui/configGeneral.qml:123
 #, kde-format
 msgctxt ""
 "option:check completes the sentence 'Selecting current activity/virtual "
@@ -126,7 +126,7 @@ msgctxt ""
 msgid "Does nothing"
 msgstr "gerir ekkert"
 
-#: package/contents/ui/configGeneral.qml:130
+#: package/contents/ui/configGeneral.qml:131
 #, kde-format
 msgctxt ""
 "option:check completes the sentence 'Selecting current activity/virtual "
@@ -134,63 +134,63 @@ msgctxt ""
 msgid "Shows the desktop"
 msgstr "sýnir skjáborðið"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:87
 #, kde-format
 msgid "…and %1 other window"
 msgid_plural "…and %1 other windows"
 msgstr[0] "…og %1 gluggi í viðbót"
 msgstr[1] "…og %1 gluggar í viðbót"
 
-#: package/contents/ui/main.qml:344
+#: package/contents/ui/main.qml:351
 #, kde-format
 msgid "%1 Window:"
 msgid_plural "%1 Windows:"
 msgstr[0] "%1 gluggi:"
 msgstr[1] "%1 gluggar:"
 
-#: package/contents/ui/main.qml:356
+#: package/contents/ui/main.qml:363
 #, kde-format
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
 msgstr[0] "%1 falinn gluggi:"
 msgstr[1] "%1 faldir gluggar:"
 
-#: package/contents/ui/main.qml:432
+#: package/contents/ui/main.qml:439
 #, kde-format
 msgid "Desktop %1"
 msgstr "Skjáborð %1"
 
-#: package/contents/ui/main.qml:433
+#: package/contents/ui/main.qml:440
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
 msgstr "Skipta yfir í %1"
 
-#: package/contents/ui/main.qml:577
+#: package/contents/ui/main.qml:592
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Show Activity Manager"
 msgstr "Sýna athafnastjóra"
 
-#: package/contents/ui/main.qml:583
+#: package/contents/ui/main.qml:598
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Add Virtual Desktop"
 msgstr "Bæta við sýndarskjáborði"
 
-#: package/contents/ui/main.qml:589
+#: package/contents/ui/main.qml:604
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Remove Virtual Desktop"
 msgstr "Fjarlægja sýndarskjáborð"
 
-#: package/contents/ui/main.qml:596
+#: package/contents/ui/main.qml:611
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "&Configure Activities…"
 msgstr "Grunnstilla at&hafnir..."
 
-#: package/contents/ui/main.qml:601
+#: package/contents/ui/main.qml:616
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Configure Virtual Desktops…"

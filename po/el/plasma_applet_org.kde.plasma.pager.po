@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2024-08-12 23:32+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -29,83 +29,83 @@ msgstr ""
 msgid "General"
 msgstr "Γενικά"
 
-#: package/contents/ui/configGeneral.qml:38
+#: package/contents/ui/configGeneral.qml:39
 #, kde-format
 msgid "General:"
 msgstr "Γενικά:"
 
-#: package/contents/ui/configGeneral.qml:40
+#: package/contents/ui/configGeneral.qml:41
 #, kde-format
 msgid "Show window outlines"
 msgstr "Εμφάνιση περιγραμμάτων παραθύρων"
 
-#: package/contents/ui/configGeneral.qml:45
+#: package/contents/ui/configGeneral.qml:46
 #, kde-format
 msgid "Show application icons on window outlines"
 msgstr "Εμφάνιση εικονιδίων εφαρμογών στο περιγράμματα παραθύρων"
 
-#: package/contents/ui/configGeneral.qml:51
+#: package/contents/ui/configGeneral.qml:52
 #, kde-format
 msgid "Show only current screen"
 msgstr "Εμφάνιση μόνο της τρέχουσας οθόνης"
 
-#: package/contents/ui/configGeneral.qml:56
+#: package/contents/ui/configGeneral.qml:57
 #, kde-format
 msgid "Navigation wraps around"
 msgstr "Πλοήγηση περιτυλίγεται γύρω από"
 
-#: package/contents/ui/configGeneral.qml:68
+#: package/contents/ui/configGeneral.qml:69
 #, kde-format
 msgid "Layout:"
 msgstr "Διάταξη:"
 
-#: package/contents/ui/configGeneral.qml:70
+#: package/contents/ui/configGeneral.qml:71
 #, kde-format
 msgctxt "The pager layout"
 msgid "Default"
 msgstr "Προεπιλογή"
 
-#: package/contents/ui/configGeneral.qml:70
+#: package/contents/ui/configGeneral.qml:71
 #, kde-format
 msgid "Horizontal"
 msgstr "Οριζόντια"
 
-#: package/contents/ui/configGeneral.qml:70
+#: package/contents/ui/configGeneral.qml:71
 #, kde-format
 msgid "Vertical"
 msgstr "Κατακόρυφη"
 
-#: package/contents/ui/configGeneral.qml:84
+#: package/contents/ui/configGeneral.qml:85
 #, kde-format
 msgid "Text display:"
 msgstr "Εμφάνιση κειμένου:"
 
-#: package/contents/ui/configGeneral.qml:87
+#: package/contents/ui/configGeneral.qml:88
 #, kde-format
 msgid "No text"
 msgstr "Χωρίς κείμενο"
 
-#: package/contents/ui/configGeneral.qml:95
+#: package/contents/ui/configGeneral.qml:96
 #, kde-format
 msgid "Activity number"
 msgstr "Αριθμός δραστηριότητας"
 
-#: package/contents/ui/configGeneral.qml:95
+#: package/contents/ui/configGeneral.qml:96
 #, kde-format
 msgid "Desktop number"
 msgstr "Αριθμός επιφάνειας εργασίας"
 
-#: package/contents/ui/configGeneral.qml:103
+#: package/contents/ui/configGeneral.qml:104
 #, kde-format
 msgid "Activity name"
 msgstr "Όνομα δραστηριότητας"
 
-#: package/contents/ui/configGeneral.qml:103
+#: package/contents/ui/configGeneral.qml:104
 #, kde-format
 msgid "Desktop name"
 msgstr "Όνομα επιφάνειας εργασίας"
 
-#: package/contents/ui/configGeneral.qml:118
+#: package/contents/ui/configGeneral.qml:119
 #, fuzzy, kde-format
 #| msgid "Selecting current Activity:"
 msgctxt ""
@@ -114,7 +114,7 @@ msgctxt ""
 msgid "Selecting current Activity:"
 msgstr "Επιλογή τρέχουσας δραστηριότητας:"
 
-#: package/contents/ui/configGeneral.qml:119
+#: package/contents/ui/configGeneral.qml:120
 #, fuzzy, kde-format
 #| msgid "Selecting current virtual desktop:"
 msgctxt ""
@@ -123,7 +123,7 @@ msgctxt ""
 msgid "Selecting current virtual desktop:"
 msgstr "Επιλογή τρέχουσας εικονικής επιφάνειας εργασίας:"
 
-#: package/contents/ui/configGeneral.qml:122
+#: package/contents/ui/configGeneral.qml:123
 #, fuzzy, kde-format
 #| msgid "Does nothing"
 msgctxt ""
@@ -132,7 +132,7 @@ msgctxt ""
 msgid "Does nothing"
 msgstr "Καμία ενέργεια"
 
-#: package/contents/ui/configGeneral.qml:130
+#: package/contents/ui/configGeneral.qml:131
 #, fuzzy, kde-format
 #| msgid "Shows the desktop"
 msgctxt ""
@@ -141,64 +141,64 @@ msgctxt ""
 msgid "Shows the desktop"
 msgstr "Εμφάνιση επιφάνειας εργασίας"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:87
 #, kde-format
 msgid "…and %1 other window"
 msgid_plural "…and %1 other windows"
 msgstr[0] "…και άλλο %1 παράθυρο"
 msgstr[1] "…και άλλα %1 παράθυρα"
 
-#: package/contents/ui/main.qml:344
+#: package/contents/ui/main.qml:351
 #, kde-format
 msgid "%1 Window:"
 msgid_plural "%1 Windows:"
 msgstr[0] "%1 παράθυρο:"
 msgstr[1] "%1 παράθυρα:"
 
-#: package/contents/ui/main.qml:356
+#: package/contents/ui/main.qml:363
 #, kde-format
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
 msgstr[0] "%1 ελαχιστοποιημένο παράθυρο:"
 msgstr[1] "%1 ελαχιστοποιημένα παράθυρα:"
 
-#: package/contents/ui/main.qml:432
+#: package/contents/ui/main.qml:439
 #, fuzzy, kde-format
 #| msgid "Desktop name"
 msgid "Desktop %1"
 msgstr "Επιφάνεια εργασίας %1"
 
-#: package/contents/ui/main.qml:433
+#: package/contents/ui/main.qml:440
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
 msgstr "Εναλλαγή σε %1"
 
-#: package/contents/ui/main.qml:577
+#: package/contents/ui/main.qml:592
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Show Activity Manager"
 msgstr "Εμφάνιση διαχειριστή δραστηριοτήτων"
 
-#: package/contents/ui/main.qml:583
+#: package/contents/ui/main.qml:598
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Add Virtual Desktop"
 msgstr "Προσθήκη εικονικής επιφάνειας εργασίας"
 
-#: package/contents/ui/main.qml:589
+#: package/contents/ui/main.qml:604
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Remove Virtual Desktop"
 msgstr "Αφαίρεση εικονικής επιφάνειας εργασίας"
 
-#: package/contents/ui/main.qml:596
+#: package/contents/ui/main.qml:611
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "&Configure Activities…"
 msgstr "&Ρύθμιση επιφανειών εργασίας…"
 
-#: package/contents/ui/main.qml:601
+#: package/contents/ui/main.qml:616
 #, fuzzy, kde-format
 #| msgid "&Configure Desktops..."
 msgctxt "@action:inmenu widget context menu"

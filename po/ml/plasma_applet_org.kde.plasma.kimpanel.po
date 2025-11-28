@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2019-12-12 22:57+0000\n"
 "Last-Translator: Sabu Siyad <ssiyad@tuta.io>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -23,101 +23,117 @@ msgstr ""
 msgid "Appearance"
 msgstr ""
 
-#: package/contents/ui/ActionMenu.qml:91
+#: package/contents/ui/ActionMenu.qml:92
 #, kde-format
+msgctxt "@label placeholder for empty menu"
 msgid "(Empty)"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:29
+#: package/contents/ui/ConfigAppearance.qml:31
 #, kde-format
+msgctxt "@title:group for radiobuttons"
 msgid "Input method list:"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:30
+#: package/contents/ui/ConfigAppearance.qml:32
 #, kde-format
+msgctxt "@option:radio IM list orientation"
 msgid "Vertical"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:36
+#: package/contents/ui/ConfigAppearance.qml:38
 #, kde-format
+msgctxt "@option:radio IM list orientation"
 msgid "Horizontal"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:43
+#: package/contents/ui/ConfigAppearance.qml:45
 #, kde-format
+msgctxt "@title group font selection"
 msgid "Font:"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:49
+#: package/contents/ui/ConfigAppearance.qml:51
 #, kde-format
+msgctxt "@option:check use custom font"
 msgid "Use custom:"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:55
+#: package/contents/ui/ConfigAppearance.qml:57
 #, kde-format
-msgctxt "The selected font family and font size"
-msgid " "
+msgctxt "@info The selected font family (%1) and font size (%2)"
+msgid "%1 %2 pt"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:67
+#: package/contents/ui/ConfigAppearance.qml:65
 #, kde-format
-msgid "Select Font…"
+msgctxt "@action:button opens font dialog"
+msgid "Choose Font…"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:73
+#: package/contents/ui/ConfigAppearance.qml:78
 #, kde-format
-msgctxt "The arrangement of icons in the Panel"
+msgctxt "@title:group The arrangement of icons in the Panel"
 msgid "Panel icon size:"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:74
+#: package/contents/ui/ConfigAppearance.qml:79
 #, kde-format
+msgctxt "@option:radio panel icon size"
 msgid "Small"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:81
+#: package/contents/ui/ConfigAppearance.qml:87
 #, kde-format
+msgctxt "@option:radio panel icon size"
 msgid "Scale with Panel height"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:82
+#: package/contents/ui/ConfigAppearance.qml:88
 #, kde-format
+msgctxt "@option:radio panel icon size"
 msgid "Scale with Panel width"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:90
+#: package/contents/ui/ConfigAppearance.qml:96
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Font"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:83
+#: package/contents/ui/ContextMenu.qml:96
 #, kde-format
+msgctxt "@action:inmenu"
 msgid "Show"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:98
+#: package/contents/ui/ContextMenu.qml:111
 #, kde-format
+msgctxt "@action:inmenu"
 msgid "Hide %1"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:107
+#: package/contents/ui/ContextMenu.qml:120
 #, kde-format
+msgctxt "@action:inmenu"
 msgid "Configure Input Method"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:115
+#: package/contents/ui/ContextMenu.qml:128
 #, kde-format
+msgctxt "@action:inmenu"
 msgid "Reload Config"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:123
+#: package/contents/ui/ContextMenu.qml:136
 #, kde-format
+msgctxt "@action:inmenu"
 msgid "Exit Input Method"
 msgstr ""
 
-#: package/contents/ui/main.qml:244
+#: package/contents/ui/main.qml:254
 #, kde-format
+msgctxt "@label placeholder for missing label"
 msgid "Input Method Panel"
 msgstr ""
 

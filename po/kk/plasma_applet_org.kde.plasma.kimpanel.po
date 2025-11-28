@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2012-07-19 05:09+0600\n"
 "Last-Translator: Sairan Kikkarin\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -22,108 +22,127 @@ msgstr ""
 msgid "Appearance"
 msgstr ""
 
-#: package/contents/ui/ActionMenu.qml:91
+#: package/contents/ui/ActionMenu.qml:92
 #, kde-format
+msgctxt "@label placeholder for empty menu"
 msgid "(Empty)"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:29
+#: package/contents/ui/ConfigAppearance.qml:31
 #, fuzzy, kde-format
 #| msgid "Input Method"
+msgctxt "@title:group for radiobuttons"
 msgid "Input method list:"
 msgstr "Енгізу әдісі"
 
-#: package/contents/ui/ConfigAppearance.qml:30
+#: package/contents/ui/ConfigAppearance.qml:32
 #, fuzzy, kde-format
 #| msgid "Vertical List"
+msgctxt "@option:radio IM list orientation"
 msgid "Vertical"
 msgstr "Тік тізім"
 
-#: package/contents/ui/ConfigAppearance.qml:36
+#: package/contents/ui/ConfigAppearance.qml:38
 #, fuzzy, kde-format
 #| msgid "Expand horizontally."
+msgctxt "@option:radio IM list orientation"
 msgid "Horizontal"
 msgstr "Жатығынан жаю"
 
-#: package/contents/ui/ConfigAppearance.qml:43
+#: package/contents/ui/ConfigAppearance.qml:45
 #, fuzzy, kde-format
 #| msgid "Font"
+msgctxt "@title group font selection"
 msgid "Font:"
 msgstr "Қаріп"
 
-#: package/contents/ui/ConfigAppearance.qml:49
+#: package/contents/ui/ConfigAppearance.qml:51
 #, kde-format
+msgctxt "@option:check use custom font"
 msgid "Use custom:"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:55
+#: package/contents/ui/ConfigAppearance.qml:57
 #, kde-format
-msgctxt "The selected font family and font size"
-msgid " "
+msgctxt "@info The selected font family (%1) and font size (%2)"
+msgid "%1 %2 pt"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:67
+#: package/contents/ui/ConfigAppearance.qml:65
 #, fuzzy, kde-format
 #| msgid "Select Font"
-msgid "Select Font…"
+msgctxt "@action:button opens font dialog"
+msgid "Choose Font…"
 msgstr "Қаріпін таңдау"
 
-#: package/contents/ui/ConfigAppearance.qml:73
+#: package/contents/ui/ConfigAppearance.qml:78
 #, kde-format
-msgctxt "The arrangement of icons in the Panel"
+msgctxt "@title:group The arrangement of icons in the Panel"
 msgid "Panel icon size:"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:74
+#: package/contents/ui/ConfigAppearance.qml:79
 #, kde-format
+msgctxt "@option:radio panel icon size"
 msgid "Small"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:81
+#: package/contents/ui/ConfigAppearance.qml:87
 #, kde-format
+msgctxt "@option:radio panel icon size"
 msgid "Scale with Panel height"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:82
+#: package/contents/ui/ConfigAppearance.qml:88
 #, kde-format
+msgctxt "@option:radio panel icon size"
 msgid "Scale with Panel width"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:90
+#: package/contents/ui/ConfigAppearance.qml:96
 #, fuzzy, kde-format
 #| msgid "Select Font"
 msgctxt "@title:window"
 msgid "Select Font"
 msgstr "Қаріпін таңдау"
 
-#: package/contents/ui/ContextMenu.qml:83
+#: package/contents/ui/ContextMenu.qml:96
 #, kde-format
+msgctxt "@action:inmenu"
 msgid "Show"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:98
+#: package/contents/ui/ContextMenu.qml:111
 #, kde-format
+msgctxt "@action:inmenu"
 msgid "Hide %1"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:107
-#, kde-format
+#: package/contents/ui/ContextMenu.qml:120
+#, fuzzy, kde-format
+#| msgid "Configure Input Method"
+msgctxt "@action:inmenu"
 msgid "Configure Input Method"
 msgstr "Енгізу әдісін баптау "
 
-#: package/contents/ui/ContextMenu.qml:115
-#, kde-format
+#: package/contents/ui/ContextMenu.qml:128
+#, fuzzy, kde-format
+#| msgid "Reload Config"
+msgctxt "@action:inmenu"
 msgid "Reload Config"
 msgstr "Баптауларын қайта жуктеп алу"
 
-#: package/contents/ui/ContextMenu.qml:123
-#, kde-format
+#: package/contents/ui/ContextMenu.qml:136
+#, fuzzy, kde-format
+#| msgid "Exit Input Method"
+msgctxt "@action:inmenu"
 msgid "Exit Input Method"
 msgstr "Енгізу әдісітен шығу"
 
-#: package/contents/ui/main.qml:244
+#: package/contents/ui/main.qml:254
 #, fuzzy, kde-format
 #| msgid "Input Method"
+msgctxt "@label placeholder for missing label"
 msgid "Input Method Panel"
 msgstr "Енгізу әдісі"
 

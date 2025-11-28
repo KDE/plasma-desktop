@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2008-11-23 09:40+0530\n"
 "Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
 "Language-Team: Gujarati <kde-i18n-doc@kde.org>\n"
@@ -22,85 +22,85 @@ msgstr ""
 msgid "General"
 msgstr "સામાન્ય"
 
-#: package/contents/ui/configGeneral.qml:38
+#: package/contents/ui/configGeneral.qml:39
 #, fuzzy, kde-format
 #| msgid "General"
 msgid "General:"
 msgstr "સામાન્ય"
 
-#: package/contents/ui/configGeneral.qml:40
+#: package/contents/ui/configGeneral.qml:41
 #, kde-format
 msgid "Show window outlines"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:45
+#: package/contents/ui/configGeneral.qml:46
 #, kde-format
 msgid "Show application icons on window outlines"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:51
+#: package/contents/ui/configGeneral.qml:52
 #, kde-format
 msgid "Show only current screen"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:56
+#: package/contents/ui/configGeneral.qml:57
 #, kde-format
 msgid "Navigation wraps around"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:68
+#: package/contents/ui/configGeneral.qml:69
 #, kde-format
 msgid "Layout:"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:70
+#: package/contents/ui/configGeneral.qml:71
 #, kde-format
 msgctxt "The pager layout"
 msgid "Default"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:70
+#: package/contents/ui/configGeneral.qml:71
 #, kde-format
 msgid "Horizontal"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:70
+#: package/contents/ui/configGeneral.qml:71
 #, kde-format
 msgid "Vertical"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:84
+#: package/contents/ui/configGeneral.qml:85
 #, fuzzy, kde-format
 #| msgid "Display text:"
 msgid "Text display:"
 msgstr "લખાણ દર્શાવો:"
 
-#: package/contents/ui/configGeneral.qml:87
+#: package/contents/ui/configGeneral.qml:88
 #, kde-format
 msgid "No text"
 msgstr "લખાણ નહી"
 
-#: package/contents/ui/configGeneral.qml:95
+#: package/contents/ui/configGeneral.qml:96
 #, kde-format
 msgid "Activity number"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:95
+#: package/contents/ui/configGeneral.qml:96
 #, kde-format
 msgid "Desktop number"
 msgstr "ડેસ્કટોપ ક્રમ"
 
-#: package/contents/ui/configGeneral.qml:103
+#: package/contents/ui/configGeneral.qml:104
 #, kde-format
 msgid "Activity name"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:103
+#: package/contents/ui/configGeneral.qml:104
 #, kde-format
 msgid "Desktop name"
 msgstr "ડેસ્કટોપ નામ"
 
-#: package/contents/ui/configGeneral.qml:118
+#: package/contents/ui/configGeneral.qml:119
 #, fuzzy, kde-format
 #| msgid "Selecting current desktop:"
 msgctxt ""
@@ -109,7 +109,7 @@ msgctxt ""
 msgid "Selecting current Activity:"
 msgstr "હાલનું ડેસ્કટોપ પસંદ કરે છે:"
 
-#: package/contents/ui/configGeneral.qml:119
+#: package/contents/ui/configGeneral.qml:120
 #, fuzzy, kde-format
 #| msgid "Selecting current desktop:"
 msgctxt ""
@@ -118,7 +118,7 @@ msgctxt ""
 msgid "Selecting current virtual desktop:"
 msgstr "હાલનું ડેસ્કટોપ પસંદ કરે છે:"
 
-#: package/contents/ui/configGeneral.qml:122
+#: package/contents/ui/configGeneral.qml:123
 #, fuzzy, kde-format
 #| msgid "Does nothing"
 msgctxt ""
@@ -127,7 +127,7 @@ msgctxt ""
 msgid "Does nothing"
 msgstr "કંઈ કરતું નથી"
 
-#: package/contents/ui/configGeneral.qml:130
+#: package/contents/ui/configGeneral.qml:131
 #, fuzzy, kde-format
 #| msgid "Shows desktop"
 msgctxt ""
@@ -136,7 +136,7 @@ msgctxt ""
 msgid "Shows the desktop"
 msgstr "ડેસ્કટોપ બતાવે છે"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:87
 #, fuzzy, kde-format
 #| msgid "and 1 other"
 #| msgid_plural "and %1 others"
@@ -145,7 +145,7 @@ msgid_plural "…and %1 other windows"
 msgstr[0] "અને ૧ બીજું"
 msgstr[1] "અને ૧ બીજું"
 
-#: package/contents/ui/main.qml:344
+#: package/contents/ui/main.qml:351
 #, fuzzy, kde-format
 #| msgid "One window:"
 #| msgid_plural "%1 windows:"
@@ -154,53 +154,53 @@ msgid_plural "%1 Windows:"
 msgstr[0] "One window:"
 msgstr[1] "One window:"
 
-#: package/contents/ui/main.qml:356
+#: package/contents/ui/main.qml:363
 #, kde-format
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: package/contents/ui/main.qml:432
+#: package/contents/ui/main.qml:439
 #, fuzzy, kde-format
 #| msgid "Desktop name"
 msgid "Desktop %1"
 msgstr "ડેસ્કટોપ નામ"
 
-#: package/contents/ui/main.qml:433
+#: package/contents/ui/main.qml:440
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
 msgstr ""
 
-#: package/contents/ui/main.qml:577
+#: package/contents/ui/main.qml:592
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Show Activity Manager"
 msgstr ""
 
-#: package/contents/ui/main.qml:583
+#: package/contents/ui/main.qml:598
 #, fuzzy, kde-format
 #| msgid "&Add Virtual Desktop"
 msgctxt "@action:inmenu widget context menu"
 msgid "Add Virtual Desktop"
 msgstr "વર્ચ્યુઅલ ડેસ્કટોપ ઉમેરો (&A)"
 
-#: package/contents/ui/main.qml:589
+#: package/contents/ui/main.qml:604
 #, fuzzy, kde-format
 #| msgid "&Remove Last Virtual Desktop"
 msgctxt "@action:inmenu widget context menu"
 msgid "Remove Virtual Desktop"
 msgstr "છેલ્લું વર્ચ્યુઅલ ડેસ્કટોપ્સ દૂર કરો (&R)"
 
-#: package/contents/ui/main.qml:596
+#: package/contents/ui/main.qml:611
 #, fuzzy, kde-format
 #| msgid "&Configure Desktops..."
 msgctxt "@action:inmenu widget context menu"
 msgid "&Configure Activities…"
 msgstr "ડેસ્કટોપ્સ રૂપરેખાંકિત કરો (&C)..."
 
-#: package/contents/ui/main.qml:601
+#: package/contents/ui/main.qml:616
 #, fuzzy, kde-format
 #| msgid "&Configure Desktops..."
 msgctxt "@action:inmenu widget context menu"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.pager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2022-08-18 18:10+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -22,84 +22,84 @@ msgstr ""
 msgid "General"
 msgstr "全般"
 
-#: package/contents/ui/configGeneral.qml:38
+#: package/contents/ui/configGeneral.qml:39
 #, kde-format
 msgid "General:"
 msgstr "全般:"
 
-#: package/contents/ui/configGeneral.qml:40
+#: package/contents/ui/configGeneral.qml:41
 #, fuzzy, kde-format
 #| msgid "Show application icons on window outlines"
 msgid "Show window outlines"
 msgstr "ウィンドウ枠にアプリケーションのアイコンを表示する"
 
-#: package/contents/ui/configGeneral.qml:45
+#: package/contents/ui/configGeneral.qml:46
 #, kde-format
 msgid "Show application icons on window outlines"
 msgstr "ウィンドウ枠にアプリケーションのアイコンを表示する"
 
-#: package/contents/ui/configGeneral.qml:51
+#: package/contents/ui/configGeneral.qml:52
 #, kde-format
 msgid "Show only current screen"
 msgstr "現在のスクリーンのみを表示する"
 
-#: package/contents/ui/configGeneral.qml:56
+#: package/contents/ui/configGeneral.qml:57
 #, kde-format
 msgid "Navigation wraps around"
 msgstr "ナビゲーションを循環"
 
-#: package/contents/ui/configGeneral.qml:68
+#: package/contents/ui/configGeneral.qml:69
 #, kde-format
 msgid "Layout:"
 msgstr "レイアウト:"
 
-#: package/contents/ui/configGeneral.qml:70
+#: package/contents/ui/configGeneral.qml:71
 #, kde-format
 msgctxt "The pager layout"
 msgid "Default"
 msgstr "デフォルト"
 
-#: package/contents/ui/configGeneral.qml:70
+#: package/contents/ui/configGeneral.qml:71
 #, kde-format
 msgid "Horizontal"
 msgstr "水平"
 
-#: package/contents/ui/configGeneral.qml:70
+#: package/contents/ui/configGeneral.qml:71
 #, kde-format
 msgid "Vertical"
 msgstr "垂直"
 
-#: package/contents/ui/configGeneral.qml:84
+#: package/contents/ui/configGeneral.qml:85
 #, kde-format
 msgid "Text display:"
 msgstr "テキスト表示:"
 
-#: package/contents/ui/configGeneral.qml:87
+#: package/contents/ui/configGeneral.qml:88
 #, kde-format
 msgid "No text"
 msgstr "テキストなし"
 
-#: package/contents/ui/configGeneral.qml:95
+#: package/contents/ui/configGeneral.qml:96
 #, kde-format
 msgid "Activity number"
 msgstr "アクティビティ番号"
 
-#: package/contents/ui/configGeneral.qml:95
+#: package/contents/ui/configGeneral.qml:96
 #, kde-format
 msgid "Desktop number"
 msgstr "デスクトップ番号"
 
-#: package/contents/ui/configGeneral.qml:103
+#: package/contents/ui/configGeneral.qml:104
 #, kde-format
 msgid "Activity name"
 msgstr "アクティビティ名"
 
-#: package/contents/ui/configGeneral.qml:103
+#: package/contents/ui/configGeneral.qml:104
 #, kde-format
 msgid "Desktop name"
 msgstr "デスクトップ名"
 
-#: package/contents/ui/configGeneral.qml:118
+#: package/contents/ui/configGeneral.qml:119
 #, fuzzy, kde-format
 #| msgid "Selecting current Activity:"
 msgctxt ""
@@ -108,7 +108,7 @@ msgctxt ""
 msgid "Selecting current Activity:"
 msgstr "現在のアクティビティを選択:"
 
-#: package/contents/ui/configGeneral.qml:119
+#: package/contents/ui/configGeneral.qml:120
 #, fuzzy, kde-format
 #| msgid "Selecting current virtual desktop:"
 msgctxt ""
@@ -117,7 +117,7 @@ msgctxt ""
 msgid "Selecting current virtual desktop:"
 msgstr "現在の仮想デスクトップを選択:"
 
-#: package/contents/ui/configGeneral.qml:122
+#: package/contents/ui/configGeneral.qml:123
 #, fuzzy, kde-format
 #| msgid "Does nothing"
 msgctxt ""
@@ -126,7 +126,7 @@ msgctxt ""
 msgid "Does nothing"
 msgstr "何もしない"
 
-#: package/contents/ui/configGeneral.qml:130
+#: package/contents/ui/configGeneral.qml:131
 #, fuzzy, kde-format
 #| msgid "Shows the desktop"
 msgctxt ""
@@ -135,64 +135,64 @@ msgctxt ""
 msgid "Shows the desktop"
 msgstr "デスクトップを表示"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:87
 #, kde-format
 msgid "…and %1 other window"
 msgid_plural "…and %1 other windows"
 msgstr[0] "…と他 %1 個のウィンドウ"
 
-#: package/contents/ui/main.qml:344
+#: package/contents/ui/main.qml:351
 #, kde-format
 msgid "%1 Window:"
 msgid_plural "%1 Windows:"
 msgstr[0] "%1 個のウィンドウ:"
 
-#: package/contents/ui/main.qml:356
+#: package/contents/ui/main.qml:363
 #, kde-format
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
 msgstr[0] "%1 個の最小化されたウィンドウ:"
 
-#: package/contents/ui/main.qml:432
+#: package/contents/ui/main.qml:439
 #, kde-format
 msgid "Desktop %1"
 msgstr "デスクトップ %1"
 
-#: package/contents/ui/main.qml:433
+#: package/contents/ui/main.qml:440
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
 msgstr ""
 
-#: package/contents/ui/main.qml:577
+#: package/contents/ui/main.qml:592
 #, fuzzy, kde-format
 #| msgid "Show Activity Manager…"
 msgctxt "@action:inmenu widget context menu"
 msgid "Show Activity Manager"
 msgstr "アクティビティマネージャを表示..."
 
-#: package/contents/ui/main.qml:583
+#: package/contents/ui/main.qml:598
 #, fuzzy, kde-format
 #| msgid "Add Virtual Desktop"
 msgctxt "@action:inmenu widget context menu"
 msgid "Add Virtual Desktop"
 msgstr "仮想デスクトップを追加"
 
-#: package/contents/ui/main.qml:589
+#: package/contents/ui/main.qml:604
 #, fuzzy, kde-format
 #| msgid "Remove Virtual Desktop"
 msgctxt "@action:inmenu widget context menu"
 msgid "Remove Virtual Desktop"
 msgstr "仮想デスクトップを削除"
 
-#: package/contents/ui/main.qml:596
+#: package/contents/ui/main.qml:611
 #, fuzzy, kde-format
 #| msgid "Configure Virtual Desktops…"
 msgctxt "@action:inmenu widget context menu"
 msgid "&Configure Activities…"
 msgstr "仮想デスクトップを設定…"
 
-#: package/contents/ui/main.qml:601
+#: package/contents/ui/main.qml:616
 #, fuzzy, kde-format
 #| msgid "Configure Virtual Desktops…"
 msgctxt "@action:inmenu widget context menu"

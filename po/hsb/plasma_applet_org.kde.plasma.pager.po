@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2008-11-22 12:19+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -22,85 +22,85 @@ msgstr ""
 msgid "General"
 msgstr "Powšitkownje"
 
-#: package/contents/ui/configGeneral.qml:38
+#: package/contents/ui/configGeneral.qml:39
 #, fuzzy, kde-format
 #| msgid "General"
 msgid "General:"
 msgstr "Powšitkownje"
 
-#: package/contents/ui/configGeneral.qml:40
+#: package/contents/ui/configGeneral.qml:41
 #, kde-format
 msgid "Show window outlines"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:45
+#: package/contents/ui/configGeneral.qml:46
 #, kde-format
 msgid "Show application icons on window outlines"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:51
+#: package/contents/ui/configGeneral.qml:52
 #, kde-format
 msgid "Show only current screen"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:56
+#: package/contents/ui/configGeneral.qml:57
 #, kde-format
 msgid "Navigation wraps around"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:68
+#: package/contents/ui/configGeneral.qml:69
 #, kde-format
 msgid "Layout:"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:70
+#: package/contents/ui/configGeneral.qml:71
 #, kde-format
 msgctxt "The pager layout"
 msgid "Default"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:70
+#: package/contents/ui/configGeneral.qml:71
 #, kde-format
 msgid "Horizontal"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:70
+#: package/contents/ui/configGeneral.qml:71
 #, kde-format
 msgid "Vertical"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:84
+#: package/contents/ui/configGeneral.qml:85
 #, fuzzy, kde-format
 #| msgid "Display text:"
 msgid "Text display:"
 msgstr "Tekst pokazać:"
 
-#: package/contents/ui/configGeneral.qml:87
+#: package/contents/ui/configGeneral.qml:88
 #, kde-format
 msgid "No text"
 msgstr "Žadyn tekst"
 
-#: package/contents/ui/configGeneral.qml:95
+#: package/contents/ui/configGeneral.qml:96
 #, kde-format
 msgid "Activity number"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:95
+#: package/contents/ui/configGeneral.qml:96
 #, kde-format
 msgid "Desktop number"
 msgstr "Čisło dźěłoweho powjercha"
 
-#: package/contents/ui/configGeneral.qml:103
+#: package/contents/ui/configGeneral.qml:104
 #, kde-format
 msgid "Activity name"
 msgstr ""
 
-#: package/contents/ui/configGeneral.qml:103
+#: package/contents/ui/configGeneral.qml:104
 #, kde-format
 msgid "Desktop name"
 msgstr "Mjeno dźěłoweho powjercha"
 
-#: package/contents/ui/configGeneral.qml:118
+#: package/contents/ui/configGeneral.qml:119
 #, fuzzy, kde-format
 #| msgid "Select the current day"
 msgctxt ""
@@ -109,7 +109,7 @@ msgctxt ""
 msgid "Selecting current Activity:"
 msgstr "Aktualnu dźeń wubrać"
 
-#: package/contents/ui/configGeneral.qml:119
+#: package/contents/ui/configGeneral.qml:120
 #, fuzzy, kde-format
 #| msgid "Select the current day"
 msgctxt ""
@@ -118,7 +118,7 @@ msgctxt ""
 msgid "Selecting current virtual desktop:"
 msgstr "Aktualnu dźeń wubrać"
 
-#: package/contents/ui/configGeneral.qml:122
+#: package/contents/ui/configGeneral.qml:123
 #, fuzzy, kde-format
 #| msgctxt "@title job"
 #| msgid "Mounting"
@@ -128,7 +128,7 @@ msgctxt ""
 msgid "Does nothing"
 msgstr "Montuju"
 
-#: package/contents/ui/configGeneral.qml:130
+#: package/contents/ui/configGeneral.qml:131
 #, fuzzy, kde-format
 msgctxt ""
 "option:check completes the sentence 'Selecting current activity/virtual "
@@ -136,7 +136,7 @@ msgctxt ""
 msgid "Shows the desktop"
 msgstr "Name=Dźěłowy powjerch"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:87
 #, fuzzy, kde-format
 #| msgid "and 1 other"
 #| msgid_plural "and %1 others"
@@ -147,7 +147,7 @@ msgstr[1] "a %1 dalši"
 msgstr[2] "a %1 dalši"
 msgstr[3] "a %1 dalši"
 
-#: package/contents/ui/main.qml:344
+#: package/contents/ui/main.qml:351
 #, fuzzy, kde-format
 #| msgid "One window:"
 #| msgid_plural "%1 windows:"
@@ -158,7 +158,7 @@ msgstr[1] "%1 wokno:"
 msgstr[2] "%1 wokno:"
 msgstr[3] "%1 wokno:"
 
-#: package/contents/ui/main.qml:356
+#: package/contents/ui/main.qml:363
 #, kde-format
 msgid "%1 Minimized Window:"
 msgid_plural "%1 Minimized Windows:"
@@ -167,46 +167,46 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: package/contents/ui/main.qml:432
+#: package/contents/ui/main.qml:439
 #, fuzzy, kde-format
 #| msgid "Desktop name"
 msgid "Desktop %1"
 msgstr "Mjeno dźěłoweho powjercha"
 
-#: package/contents/ui/main.qml:433
+#: package/contents/ui/main.qml:440
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a virtual desktop or an activity"
 msgid "Switch to %1"
 msgstr ""
 
-#: package/contents/ui/main.qml:577
+#: package/contents/ui/main.qml:592
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Show Activity Manager"
 msgstr ""
 
-#: package/contents/ui/main.qml:583
+#: package/contents/ui/main.qml:598
 #, fuzzy, kde-format
 #| msgid "&Configure Desktops..."
 msgctxt "@action:inmenu widget context menu"
 msgid "Add Virtual Desktop"
 msgstr "Dźěłowy powjerch &konfigurować..."
 
-#: package/contents/ui/main.qml:589
+#: package/contents/ui/main.qml:604
 #, fuzzy, kde-format
 #| msgid "&Configure Desktops..."
 msgctxt "@action:inmenu widget context menu"
 msgid "Remove Virtual Desktop"
 msgstr "Dźěłowy powjerch &konfigurować..."
 
-#: package/contents/ui/main.qml:596
+#: package/contents/ui/main.qml:611
 #, fuzzy, kde-format
 #| msgid "&Configure Desktops..."
 msgctxt "@action:inmenu widget context menu"
 msgid "&Configure Activities…"
 msgstr "Dźěłowy powjerch &konfigurować..."
 
-#: package/contents/ui/main.qml:601
+#: package/contents/ui/main.qml:616
 #, fuzzy, kde-format
 #| msgid "&Configure Desktops..."
 msgctxt "@action:inmenu widget context menu"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2021-11-13 22:44+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -26,103 +26,141 @@ msgstr ""
 msgid "Appearance"
 msgstr "Itxura"
 
-#: package/contents/ui/ActionMenu.qml:91
-#, kde-format
+#: package/contents/ui/ActionMenu.qml:92
+#, fuzzy, kde-format
+#| msgid "(Empty)"
+msgctxt "@label placeholder for empty menu"
 msgid "(Empty)"
 msgstr "(Hutsik)"
 
-#: package/contents/ui/ConfigAppearance.qml:29
-#, kde-format
+#: package/contents/ui/ConfigAppearance.qml:31
+#, fuzzy, kde-format
+#| msgid "Input method list:"
+msgctxt "@title:group for radiobuttons"
 msgid "Input method list:"
 msgstr "Sarrera metodoen zerrenda:"
 
-#: package/contents/ui/ConfigAppearance.qml:30
-#, kde-format
+#: package/contents/ui/ConfigAppearance.qml:32
+#, fuzzy, kde-format
+#| msgid "Vertical"
+msgctxt "@option:radio IM list orientation"
 msgid "Vertical"
 msgstr "Bertikala"
 
-#: package/contents/ui/ConfigAppearance.qml:36
-#, kde-format
+#: package/contents/ui/ConfigAppearance.qml:38
+#, fuzzy, kde-format
+#| msgid "Horizontal"
+msgctxt "@option:radio IM list orientation"
 msgid "Horizontal"
 msgstr "Horizontala"
 
-#: package/contents/ui/ConfigAppearance.qml:43
-#, kde-format
+#: package/contents/ui/ConfigAppearance.qml:45
+#, fuzzy, kde-format
+#| msgid "Font:"
+msgctxt "@title group font selection"
 msgid "Font:"
 msgstr "Letra-tipoa:"
 
-#: package/contents/ui/ConfigAppearance.qml:49
-#, kde-format
+#: package/contents/ui/ConfigAppearance.qml:51
+#, fuzzy, kde-format
+#| msgid "Use custom:"
+msgctxt "@option:check use custom font"
 msgid "Use custom:"
 msgstr "Erabili norberak-finkatua:"
 
-#: package/contents/ui/ConfigAppearance.qml:55
+#: package/contents/ui/ConfigAppearance.qml:57
 #, kde-format
-msgctxt "The selected font family and font size"
-msgid " "
-msgstr " "
+msgctxt "@info The selected font family (%1) and font size (%2)"
+msgid "%1 %2 pt"
+msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:67
-#, kde-format
-msgid "Select Font…"
+#: package/contents/ui/ConfigAppearance.qml:65
+#, fuzzy, kde-format
+#| msgid "Select Font…"
+msgctxt "@action:button opens font dialog"
+msgid "Choose Font…"
 msgstr "Hautatu letra-tipoa..."
 
-#: package/contents/ui/ConfigAppearance.qml:73
-#, kde-format
-msgctxt "The arrangement of icons in the Panel"
+#: package/contents/ui/ConfigAppearance.qml:78
+#, fuzzy, kde-format
+#| msgctxt "The arrangement of icons in the Panel"
+#| msgid "Panel icon size:"
+msgctxt "@title:group The arrangement of icons in the Panel"
 msgid "Panel icon size:"
 msgstr "Paneleko ikonoen neurria:"
 
-#: package/contents/ui/ConfigAppearance.qml:74
-#, kde-format
+#: package/contents/ui/ConfigAppearance.qml:79
+#, fuzzy, kde-format
+#| msgid "Small"
+msgctxt "@option:radio panel icon size"
 msgid "Small"
 msgstr "Txikia"
 
-#: package/contents/ui/ConfigAppearance.qml:81
-#, kde-format
+#: package/contents/ui/ConfigAppearance.qml:87
+#, fuzzy, kde-format
+#| msgid "Scale with Panel height"
+msgctxt "@option:radio panel icon size"
 msgid "Scale with Panel height"
 msgstr "Eskalatu panelaren altuerarekin"
 
-#: package/contents/ui/ConfigAppearance.qml:82
-#, kde-format
+#: package/contents/ui/ConfigAppearance.qml:88
+#, fuzzy, kde-format
+#| msgid "Scale with Panel width"
+msgctxt "@option:radio panel icon size"
 msgid "Scale with Panel width"
 msgstr "Eskalatu panelaren zabalerarekin"
 
-#: package/contents/ui/ConfigAppearance.qml:90
+#: package/contents/ui/ConfigAppearance.qml:96
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Font"
 msgstr "Hautatu letra-tipoa"
 
-#: package/contents/ui/ContextMenu.qml:83
-#, kde-format
+#: package/contents/ui/ContextMenu.qml:96
+#, fuzzy, kde-format
+#| msgid "Show"
+msgctxt "@action:inmenu"
 msgid "Show"
 msgstr "Erakutsi"
 
-#: package/contents/ui/ContextMenu.qml:98
-#, kde-format
+#: package/contents/ui/ContextMenu.qml:111
+#, fuzzy, kde-format
+#| msgid "Hide %1"
+msgctxt "@action:inmenu"
 msgid "Hide %1"
 msgstr "Ezkutatu %1"
 
-#: package/contents/ui/ContextMenu.qml:107
-#, kde-format
+#: package/contents/ui/ContextMenu.qml:120
+#, fuzzy, kde-format
+#| msgid "Configure Input Method"
+msgctxt "@action:inmenu"
 msgid "Configure Input Method"
 msgstr "Konfiguratu sarrera metodoa"
 
-#: package/contents/ui/ContextMenu.qml:115
-#, kde-format
+#: package/contents/ui/ContextMenu.qml:128
+#, fuzzy, kde-format
+#| msgid "Reload Config"
+msgctxt "@action:inmenu"
 msgid "Reload Config"
 msgstr "Birzamatu konfigurazioa"
 
-#: package/contents/ui/ContextMenu.qml:123
-#, kde-format
+#: package/contents/ui/ContextMenu.qml:136
+#, fuzzy, kde-format
+#| msgid "Exit Input Method"
+msgctxt "@action:inmenu"
 msgid "Exit Input Method"
 msgstr "Utzi sarrera metodoa"
 
-#: package/contents/ui/main.qml:244
-#, kde-format
+#: package/contents/ui/main.qml:254
+#, fuzzy, kde-format
+#| msgid "Input Method Panel"
+msgctxt "@label placeholder for missing label"
 msgid "Input Method Panel"
 msgstr "Sarrera metodoen panela"
+
+#~ msgctxt "The selected font family and font size"
+#~ msgid " "
+#~ msgstr " "
 
 #~ msgid "Search"
 #~ msgstr "Bilatu"
