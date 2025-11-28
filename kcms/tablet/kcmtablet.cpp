@@ -244,9 +244,11 @@ private:
             int num_styli = 0;
             const int *styli = libwacom_get_supported_styli(device, &num_styli);
             if (num_styli > 0) {
-                const auto stylus = libwacom_stylus_get_for_id(m_db, styli[0]);
-                if (stylus != nullptr) {
-                    numButtons = libwacom_stylus_get_num_buttons(stylus);
+                for (int i = 0; i < num_styli; i++) {
+                    const auto stylus = libwacom_stylus_get_for_id(m_db, styli[i]);
+                    if (stylus != nullptr) {
+                        numButtons = std::max(numButtons, libwacom_stylus_get_num_buttons(stylus));
+                    }
                 }
             }
         }
