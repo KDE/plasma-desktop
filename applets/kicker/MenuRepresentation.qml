@@ -370,24 +370,6 @@ PlasmaComponents3.ScrollView {
 
         states: [
             State {
-                name: "top"
-                when: Plasmoid.location === PlasmaCore.Types.TopEdge
-
-                AnchorChanges {
-                    target: searchField
-                    anchors.top: undefined
-                    anchors.bottom: mainRow.bottom
-                    anchors.left: parent.left
-                    anchors.right: undefined
-                }
-
-                PropertyChanges {
-                    target: searchField
-                    anchors.leftMargin: sideBar.width + spacing
-                    anchors.rightMargin: undefined
-                }
-            },
-            State {
                 name: "right"
                 when: (Plasmoid.location === PlasmaCore.Types.RightEdge && Qt.application.layoutDirection === Qt.LeftToRight)
                     || (Plasmoid.location === PlasmaCore.Types.LeftEdge && Qt.application.layoutDirection === Qt.RightToLeft)
