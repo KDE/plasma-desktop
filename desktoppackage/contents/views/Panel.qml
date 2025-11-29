@@ -75,22 +75,33 @@ Item {
     // The point is read from panelview.cpp and is used as an offset for the mask
     readonly property point floatingTranslucentItemOffset: Qt.point(floatingTranslucentItem.x, floatingTranslucentItem.y)
 
-    // We need to have a little gap between the raw visibleWindowsModel count
+    // We need to have a little gap between the raw occlusion state updates
     // and actually determining if a window is touching.
     // This is because certain dialog windows start off with a position of (screenwidth/2, screenheight/2)
     // and they register as "touching" in the split-second before KWin can place them correctly.
     // This avoids the panel flashing if it is auto-hide etc and such a window is shown.
     // Examples of such windows: properties of a file on desktop, or portal "open with" dialog
+    property bool touchingWindow: false
+
     Timer {
         id: touchingWindowDebounceTimer
         interval: 10  // ms, I find that this value is enough while not causing unresponsiveness while dragging windows close
-        onTriggered: root.touchingWindow = !KWindowSystem.showingDesktop && occlusion.coveringAny
+        onTriggered: {
+            if (KWindowSystem.showingDesktop) {
+                root.touchingWindow = false;
+                panel.wantsToBeHidden = false;
+            } else {
+                root.touchingWindow = occlusion.coveringAny && !occlusion.coveringFullScreen;
+                panel.wantsToBeHidden = (panel.visibilityMode === Panel.Global.DodgeWindows && occlusion.coveringAny) || occlusion.coveringFullScreen;
+            }
+        }
     }
 
     Occlusion.Occlusion {
         id: occlusion
 
         onCoveringAnyChanged: touchingWindowDebounceTimer.start()
+        onCoveringFullScreenChanged: touchingWindowDebounceTimer.start()
 
         Binding on area {
             delayed: true
@@ -98,7 +109,6 @@ Item {
         }
     }
 
-    property bool touchingWindow: false
     property bool showingDesktop: KWindowSystem.showingDesktop
     onShowingDesktopChanged: touchingWindowDebounceTimer.start()
 
