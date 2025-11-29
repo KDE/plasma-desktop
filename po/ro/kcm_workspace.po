@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2025-10-19 22:04+0100\n"
+"PO-Revision-Date: 2025-11-27 12:48+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -58,14 +58,17 @@ msgid ""
 "tooltips displayed when hovering over individual buttons and other user "
 "interface elements."
 msgstr ""
+"Permite tuturor controalelor grafice Plasma pentru panou și birou să arate "
+"indicii descriptive la planarea cu indicatorul. Această opțiune nu are "
+"niciun efect asupra indiciilor mici afișate la planarea peste butoane "
+"individuale și alte elemente ale interfeței cu utilizatorul."
 
 #: ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "Show a popup on layout changes"
+#, kde-format
 msgctxt ""
 "Part of the sentence 'Allow Plasma to show OSD popups for status changes'"
 msgid "OSD popups for status changes"
-msgstr "Arată mesaj plutitor la schimbarea aranjamentului"
+msgstr "Indicii plutitoare la schimbarea stării"
 
 #: ui/main.qml:87
 #, kde-format
@@ -73,6 +76,8 @@ msgid ""
 "Allows all Plasma widgets to show on-screen display (OSD) popups for changes "
 "like volume and brightness level, or audio device switching."
 msgstr ""
+"Permite controalelor grafice Plasma să arate indicii plutitoare (OSD) pentru "
+"schimbările volumului, nivelului de luminozitate, sau a dispozitivului sonor."
 
 #: ui/main.qml:94
 #, kde-format
@@ -323,6 +328,8 @@ msgid ""
 "For local files on the same device, whether dragging and dropping will "
 "perform a move operation instead of showing the options menu"
 msgstr ""
+"Pentru fișiere locale aflate pe același dispozitiv, dacă tragerea și lăsarea "
+"va efectua o operațiune de mutare în loc de a afișa meniul cu opțiuni"
 
 #. i18n: ectx: label, entry (smoothScroll), group (KDE)
 #: workspaceoptions_kdeglobalssettings.kcfg:21
@@ -358,14 +365,14 @@ msgstr "Activează lipirea selecției cu clic mijlociu"
 #: workspaceoptions_plasmasettings.kcfg:9
 #, kde-format
 msgid "Display large panel and widget tooltips"
-msgstr ""
+msgstr "Arată indicii mari pentru panouri și controale"
 
 #. i18n: ectx: tooltip, entry (delay), group (PlasmaToolTips)
 #: workspaceoptions_plasmasettings.kcfg:10
 #, kde-format
 msgid ""
 "Allow Plasma widgets to display large panel and widget tooltips on hover"
-msgstr ""
+msgstr "Permite controalelor grafice Plasma să afișeze indicii mari la planare"
 
 #. i18n: ectx: label, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:16
@@ -375,16 +382,13 @@ msgstr "Arată indicii mici pentru schimbări de stare"
 
 #. i18n: ectx: tooltip, entry (osdEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show an on-screen display to indicate status changes such as brightness "
-#| "or volume"
+#, kde-format
 msgid ""
 "Allow Plasma widgets to display small popups for status changes such as "
 "brightness or volume"
 msgstr ""
-"Arată afișaj pe ecran pentru a indica schimbări de stare ca luminozitatea și "
-"volumul"
+"Permite controalelor grafice Plasma să afișeze indicii mici pentru schimbări "
+"de stare ca luminozitatea și volumul"
 
 #. i18n: ectx: label, entry (osdKbdLayoutChangedEnabled), group (OSD)
 #: workspaceoptions_plasmasettings.kcfg:21

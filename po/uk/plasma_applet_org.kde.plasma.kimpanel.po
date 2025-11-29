@@ -3,22 +3,22 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2014, 2015, 2017, 2019, 2020, 2021.
+# Yuri Chornoivan <yurchor@ukr.net>, 2014, 2015, 2017, 2019, 2020, 2021, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kimpanel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-28 00:44+0000\n"
-"PO-Revision-Date: 2021-10-20 09:10+0300\n"
+"PO-Revision-Date: 2025-11-28 10:46+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
-"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -26,43 +26,37 @@ msgid "Appearance"
 msgstr "Вигляд"
 
 #: package/contents/ui/ActionMenu.qml:92
-#, fuzzy, kde-format
-#| msgid "(Empty)"
+#, kde-format
 msgctxt "@label placeholder for empty menu"
 msgid "(Empty)"
 msgstr "(Порожньо)"
 
 #: package/contents/ui/ConfigAppearance.qml:31
-#, fuzzy, kde-format
-#| msgid "Input method list:"
+#, kde-format
 msgctxt "@title:group for radiobuttons"
 msgid "Input method list:"
 msgstr "Список способу введення:"
 
 #: package/contents/ui/ConfigAppearance.qml:32
-#, fuzzy, kde-format
-#| msgid "Vertical"
+#, kde-format
 msgctxt "@option:radio IM list orientation"
 msgid "Vertical"
-msgstr "Вертикальний"
+msgstr "Вертикально"
 
 #: package/contents/ui/ConfigAppearance.qml:38
-#, fuzzy, kde-format
-#| msgid "Horizontal"
+#, kde-format
 msgctxt "@option:radio IM list orientation"
 msgid "Horizontal"
-msgstr "Горизонтальний"
+msgstr "Горизонтально"
 
 #: package/contents/ui/ConfigAppearance.qml:45
-#, fuzzy, kde-format
-#| msgid "Font:"
+#, kde-format
 msgctxt "@title group font selection"
 msgid "Font:"
 msgstr "Шрифт:"
 
 #: package/contents/ui/ConfigAppearance.qml:51
-#, fuzzy, kde-format
-#| msgid "Use custom:"
+#, kde-format
 msgctxt "@option:check use custom font"
 msgid "Use custom:"
 msgstr "Нетиповий:"
@@ -71,40 +65,34 @@ msgstr "Нетиповий:"
 #, kde-format
 msgctxt "@info The selected font family (%1) and font size (%2)"
 msgid "%1 %2 pt"
-msgstr ""
+msgstr "%1 %2 пт"
 
 #: package/contents/ui/ConfigAppearance.qml:65
-#, fuzzy, kde-format
-#| msgid "Select Font…"
+#, kde-format
 msgctxt "@action:button opens font dialog"
 msgid "Choose Font…"
 msgstr "Вибрати шрифт…"
 
 #: package/contents/ui/ConfigAppearance.qml:78
-#, fuzzy, kde-format
-#| msgctxt "The arrangement of icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt "@title:group The arrangement of icons in the Panel"
 msgid "Panel icon size:"
 msgstr "Розмір піктограм на панелі:"
 
 #: package/contents/ui/ConfigAppearance.qml:79
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@option:radio panel icon size"
 msgid "Small"
 msgstr "Малий"
 
 #: package/contents/ui/ConfigAppearance.qml:87
-#, fuzzy, kde-format
-#| msgid "Scale with Panel height"
+#, kde-format
 msgctxt "@option:radio panel icon size"
 msgid "Scale with Panel height"
 msgstr "Масштабувати за висотою панелі"
 
 #: package/contents/ui/ConfigAppearance.qml:88
-#, fuzzy, kde-format
-#| msgid "Scale with Panel width"
+#, kde-format
 msgctxt "@option:radio panel icon size"
 msgid "Scale with Panel width"
 msgstr "Масштабувати за шириною панелі"
@@ -116,43 +104,37 @@ msgid "Select Font"
 msgstr "Виберіть шрифт"
 
 #: package/contents/ui/ContextMenu.qml:96
-#, fuzzy, kde-format
-#| msgid "Show"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show"
 msgstr "Показати"
 
 #: package/contents/ui/ContextMenu.qml:111
-#, fuzzy, kde-format
-#| msgid "Hide %1"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide %1"
-msgstr "Приховати %1"
+msgstr "Сховати %1"
 
 #: package/contents/ui/ContextMenu.qml:120
-#, fuzzy, kde-format
-#| msgid "Configure Input Method"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Input Method"
 msgstr "Налаштувати спосіб введення"
 
 #: package/contents/ui/ContextMenu.qml:128
-#, fuzzy, kde-format
-#| msgid "Reload Config"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Reload Config"
 msgstr "Перезавантажити налаштування"
 
 #: package/contents/ui/ContextMenu.qml:136
-#, fuzzy, kde-format
-#| msgid "Exit Input Method"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Exit Input Method"
 msgstr "Завершити роботу керування способом введення"
 
 #: package/contents/ui/main.qml:254
-#, fuzzy, kde-format
-#| msgid "Input Method Panel"
+#, kde-format
 msgctxt "@label placeholder for missing label"
 msgid "Input Method Panel"
 msgstr "Панель способів введення"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2025-10-18 15:20+0100\n"
+"PO-Revision-Date: 2025-11-27 13:06+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -157,19 +157,15 @@ msgid "Press left and right buttons to middle-click"
 msgstr "Apasă butoanele stâng și drept pentru clic mijlociu"
 
 #: ui/main.qml:199
-#, fuzzy, kde-format
-#| msgid ""
-#| "Activating this setting increases mouse click latency by 50ms. The extra "
-#| "delay is needed to correctly detect simultaneous left and right mouse "
-#| "clicks."
+#, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "Activating this setting increases click latency by 50ms. The extra delay is "
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
-"Activarea acestei opțiuni mărește latența clicului de maus cu 50ms. Latența "
+"Activarea acestei opțiuni mărește latența clicului cu 50ms. Latența "
 "suplimentară e necesară pentru a depista corect apăsarea simultană a "
-"clicului stâng și drept."
+"butoanelor stâng și drept."
 
 #: ui/main.qml:209
 #, kde-format
@@ -187,6 +183,8 @@ msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
+"Când e activată, distanța traversată de indicator crește odată cu viteza de "
+"mișcare."
 
 #: ui/main.qml:314
 #, kde-format
@@ -254,11 +252,13 @@ msgid ""
 "Tap, then tap and immediately slide finger over the touchpad to drag. Lift "
 "finger to drop."
 msgstr ""
+"Tapați, apoi tapați și glisați imediat degetul peste zona tactilă pentru a "
+"trage. Ridicați degetul pentru a lăsa."
 
 #: ui/main.qml:485
 #, kde-format
 msgid "Allow briefly lifting finger during tap-and-drag"
-msgstr ""
+msgstr "Permite ridicarea scurtă a degetului în timpul tapării-și-tragerii"
 
 #: ui/main.qml:499
 #, kde-format
@@ -276,8 +276,7 @@ msgid "Right-click"
 msgstr "Clic drept"
 
 #: ui/main.qml:528
-#, fuzzy, kde-format
-#| msgid "Middle-click (three-finger tap right-click)"
+#, kde-format
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "Clic mijlociu (tapare cu trei degete pentru clic drept)"
 
@@ -287,17 +286,15 @@ msgid "Middle-click"
 msgstr "Clic mijlociu"
 
 #: ui/main.qml:541
-#, fuzzy, kde-format
-#| msgid "Right-click:"
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, configure right-click with touch-pad "
 "integrated button (pressing into the touchpad)"
 msgid "Integrated right-click:"
-msgstr "Clic drept:"
+msgstr "Clic drept integrat:"
 
 #: ui/main.qml:562
-#, fuzzy, kde-format
-#| msgid "Press bottom-right corner"
+#, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press bottom-right corner"
 msgstr "Apasă colțul din dreapta-jos"
@@ -306,57 +303,51 @@ msgstr "Apasă colțul din dreapta-jos"
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing both bottom corners."
-msgstr ""
+msgstr "Clic mijlociu prin apăsarea ambelor colțuri de jos."
 
 #: ui/main.qml:578
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
-msgstr ""
+msgstr "Clic mijlociu prin apăsarea centrului de jos."
 
 #: ui/main.qml:586
-#, fuzzy, kde-format
-#| msgid "Press anywhere with two fingers"
+#, kde-format
 msgctxt "@option:radio touchpad integrated right-click"
 msgid "Press touchpad with two fingers"
-msgstr "Apasă oriunde cu două degete"
+msgstr "Apasă zona tactilă cu două degete"
 
 #: ui/main.qml:601
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers."
+#, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
-msgstr "Apăsați oriunde cu trei degete."
+msgstr "Clic mijlociu prin apăsare cu trei degete."
 
 #: ui/main.qml:610
-#, fuzzy, kde-format
-#| msgid "Middle-click: "
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, configure middle-click with touch-pad "
 "integrated button (pressing into the touchpad)"
 msgid "Integrated middle-click:"
-msgstr "Clic mijlociu: "
+msgstr "Clic mijlociu integrat:"
 
 #: ui/main.qml:631
-#, fuzzy, kde-format
-#| msgid "Press bottom-middle"
+#, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom middle edge"
-msgstr "Apasă colțul din mijloc-jos"
+msgstr "Apasă mijlocul muchiei de jos"
 
 #: ui/main.qml:638
-#, fuzzy, kde-format
-#| msgid "Press bottom left and bottom right corners simultaneously"
+#, kde-format
 msgctxt "@option:radio touchpad integrated middle-click"
 msgid "Press bottom left and bottom right corners"
-msgstr "Apasă colțurile din stânga-jos și dreapta-jos simultan"
+msgstr "Apasă colțurile din stânga-jos și dreapta-jos"
 
 #: ui/main.qml:645
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers"
+#, kde-format
 msgctxt "@option:check touchpad integrated middle-click"
 msgid "Press touchpad with three fingers"
-msgstr "Apasă oriunde cu trei degete"
+msgstr "Apasă zona tactilă cu trei degete"
 
 #~ msgid "Accept input through this device."
 #~ msgstr "Acceptă introducerea prin acest dispozitiv."

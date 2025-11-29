@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:53+0000\n"
-"PO-Revision-Date: 2025-10-19 21:55+0100\n"
+"PO-Revision-Date: 2025-11-27 12:53+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -126,11 +126,10 @@ msgid "Reset selected options for this group"
 msgstr "Reinițializează opțiunile alese pentru acest grup"
 
 #: ui/LayoutDialog.qml:22
-#, fuzzy, kde-format
-#| msgid "Layout"
+#, kde-format
 msgctxt "@title:window"
 msgid "Set Layout"
-msgstr "Aranjament"
+msgstr "Stabilirea aranjamentului"
 
 #: ui/LayoutDialog.qml:22
 #, kde-format
@@ -376,7 +375,7 @@ msgstr "Aranjamente de rezervă:"
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
-msgstr ""
+msgstr "Număr de aranjamente primare de rezervă"
 
 #: ui/main.qml:378
 #, kde-format
@@ -393,6 +392,10 @@ msgid ""
 "accessed through the keyboard indicator applet or by setting a custom "
 "shortcut."
 msgstr ""
+"Puteți avea până la 4 aranjamente primare, toate celelalte aranjamente fiind "
+"rezerve. Aranjamentele de rezervă nu sunt incluse la ciclarea printre "
+"aranjamente, dar pot fi accesate prin miniaplicația cu indicator de "
+"tastatură sau prin definirea unei scurtături personalizate."
 
 #: ui/main.qml:387
 #, kde-format
@@ -407,38 +410,30 @@ msgid "or"
 msgstr "sau"
 
 #: ui/main_phone.qml:36
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add Layout"
+#, kde-format
 msgid "Model & Layout"
-msgstr "Adaugă aranjament"
+msgstr "Model și aranjament"
 
 #: ui/main_phone.qml:43
-#, fuzzy, kde-format
-#| msgid "Keyboard &model:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Keyboard Model"
-msgstr "&Model tastatură:"
+msgstr "Model tastatură"
 
 #: ui/main_phone.qml:72
-#, fuzzy, kde-format
-#| msgid "Layout"
+#, kde-format
 msgctxt "@option:check"
 msgid "Custom Layout"
-msgstr "Aranjament"
+msgstr "Aranjament personalizat"
 
 #: ui/main_phone.qml:96
-#, fuzzy, kde-format
-#| msgctxt "@option:textbox"
-#| msgid "Change layout:"
+#, kde-format
 msgctxt "@action:button"
 msgid "Change Layout..."
-msgstr "Schimbă aranjamentul:"
+msgstr "Schimbă aranjamentul…"
 
 #: ui/main_phone.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@label:checkbox accessible"
-#| msgid "Key repeat"
+#, kde-format
 msgctxt "@title:group"
 msgid "Key Repeat"
 msgstr "Repetare taste"
@@ -447,7 +442,7 @@ msgstr "Repetare taste"
 #, kde-format
 msgctxt "@option:check"
 msgid "Customize Repeat"
-msgstr ""
+msgstr "Personalizează repetarea"
 
 #: ui/Switching.qml:17
 #, kde-format

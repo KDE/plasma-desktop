@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_windowlist\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-26 00:45+0000\n"
-"PO-Revision-Date: 2025-11-24 19:37+0100\n"
+"PO-Revision-Date: 2025-11-27 09:33+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -17,9 +17,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.11.80\n"
-"X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
+"X-Environment: kde\n"
+"X-Generator: Lokalize 25.11.80\n"
 "X-Text-Markup: kde4\n"
 
 #: config.qml:13
@@ -69,34 +69,34 @@ msgstr "Non applicable lorsque le composant graphique est sur le bureau."
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Open on hover:"
-msgstr ""
+msgstr "Ouvrir au survol :"
 
 #: ConfigGeneral.qml:105
 #, kde-format
 msgctxt "@option:check open-on-hover is enabled, with the following delay:"
 msgid "Enabled, with delay:"
-msgstr ""
+msgstr "Activé, avec délai :"
 
 #: ConfigGeneral.qml:125
 #, kde-format
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
 
 #: ConfigGeneral.qml:134
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ms"
+msgstr[1] "ms"
 
 #: ConfigGeneral.qml:137
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Hover open delay %1"
-msgstr ""
+msgstr "Retard d'ouverture au survol %1"
 
 #: main.qml:92
 #, kde-format

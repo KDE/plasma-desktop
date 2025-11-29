@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-22 00:44+0000\n"
-"PO-Revision-Date: 2025-10-19 22:12+0100\n"
+"PO-Revision-Date: 2025-11-27 12:50+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -241,25 +241,19 @@ msgid "Export %1"
 msgstr "Exportă %1"
 
 #: ui/main.qml:231
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible %1 is the name of a custom command"
-#| msgid "Edit command for %1"
+#, kde-format
 msgctxt "@action:button %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "Modifică comanda pentru %1"
 
 #: ui/main.qml:258
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible %1 is the name of a shortcut category"
-#| msgid "Remove all shortcuts for %1"
+#, kde-format
 msgctxt "@action:button %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Elimină toate scurtăturile pentru %1"
 
 #: ui/main.qml:280
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible"
-#| msgid "Undo deletion"
+#, kde-format
 msgctxt "@action:button"
 msgid "Undo deletion"
 msgstr "Desfă ștergerea"
@@ -273,20 +267,19 @@ msgstr "Niciun element nu se potrivește termenilor căutării"
 #, kde-format
 msgctxt "@info"
 msgid "These shortcuts will be deleted when changes are applied."
-msgstr ""
+msgstr "Aceste scurtături vor fi șterse la aplicarea modificărilor."
 
 #: ui/main.qml:362
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo"
-msgstr ""
+msgstr "Desfă"
 
 #: ui/main.qml:363
-#, fuzzy, kde-format
-#| msgid "No default shortcuts"
+#, kde-format
 msgctxt "@action:button"
 msgid "Undo deleting shortcuts"
-msgstr "Nicio scurtătură implicită"
+msgstr "Desfă ștergerea scurtăturilor"
 
 #: ui/main.qml:399
 #, kde-format
@@ -432,14 +425,13 @@ msgstr "Adaugă schemă de scurtături"
 #, kde-format
 msgctxt "@action:button Collapse shortcuts view"
 msgid "Collapse"
-msgstr ""
+msgstr "Restrânge"
 
 #: ui/ShortcutActionDelegate.qml:32
-#, fuzzy, kde-format
-#| msgid "No active shortcuts"
+#, kde-format
 msgctxt "@action:button"
 msgid "Expand to configure shortcuts"
-msgstr "Nicio scurtătură activă"
+msgstr "Desfășurați pentru a configura scurtăturile"
 
 #: ui/ShortcutActionDelegate.qml:38
 #, kde-format

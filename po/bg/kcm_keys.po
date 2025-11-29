@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-22 00:44+0000\n"
-"PO-Revision-Date: 2025-09-14 11:37+0200\n"
+"PO-Revision-Date: 2025-11-28 20:41+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -242,25 +242,19 @@ msgid "Export %1"
 msgstr "Експортиране на %1"
 
 #: ui/main.qml:231
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible %1 is the name of a custom command"
-#| msgid "Edit command for %1"
+#, kde-format
 msgctxt "@action:button %1 is the name of a custom command"
 msgid "Edit command for %1"
 msgstr "Редактиране на команда за %1"
 
 #: ui/main.qml:258
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible %1 is the name of a shortcut category"
-#| msgid "Remove all shortcuts for %1"
+#, kde-format
 msgctxt "@action:button %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
 msgstr "Премахване на всички клавишни комбинации за %1"
 
 #: ui/main.qml:280
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible"
-#| msgid "Undo deletion"
+#, kde-format
 msgctxt "@action:button"
 msgid "Undo deletion"
 msgstr "Отмяна на изтриването"
@@ -275,19 +269,19 @@ msgstr "Нито една не съответства на думите за т�
 msgctxt "@info"
 msgid "These shortcuts will be deleted when changes are applied."
 msgstr ""
+"Тези клавишни комбинации ще бъдат изтрити, когато промените бъдат приложени."
 
 #: ui/main.qml:362
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo"
-msgstr ""
+msgstr "Отмяна"
 
 #: ui/main.qml:363
-#, fuzzy, kde-format
-#| msgid "No default shortcuts"
+#, kde-format
 msgctxt "@action:button"
 msgid "Undo deleting shortcuts"
-msgstr "Няма клавишни комбинации по подразбиране"
+msgstr "Отмяна на изтриването на преки пътища"
 
 #: ui/main.qml:399
 #, kde-format
@@ -433,14 +427,13 @@ msgstr "Добавяне на схема за клавишна комбинац�
 #, kde-format
 msgctxt "@action:button Collapse shortcuts view"
 msgid "Collapse"
-msgstr ""
+msgstr "Свиване"
 
 #: ui/ShortcutActionDelegate.qml:32
-#, fuzzy, kde-format
-#| msgid "No active shortcuts"
+#, kde-format
 msgctxt "@action:button"
 msgid "Expand to configure shortcuts"
-msgstr "Няма активни клавишни комбинации"
+msgstr "Разширете, за да конфигурирате клавишни комбинации"
 
 #: ui/ShortcutActionDelegate.qml:38
 #, kde-format
