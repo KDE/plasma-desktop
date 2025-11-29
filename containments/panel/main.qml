@@ -220,7 +220,7 @@ ContainmentItem {
                 property bool isMarginSeparator: ((applet.plasmoid?.constraintHints & Plasmoid.MarginAreasSeparator) == Plasmoid.MarginAreasSeparator)
                 property int appletIndex: index // To make sure it's always readable even inside other models
                 property bool inThickArea: false
-                visible: applet.plasmoid?.status !== PlasmaCore.Types.HiddenStatus || (!Plasmoid.immutable && Plasmoid.userConfiguring);
+                visible: applet.plasmoid?.status !== PlasmaCore.Types.HiddenStatus || (!Plasmoid.immutable && Plasmoid.userConfiguring) || Plasmoid.corona.editMode;
 
                 //when the applet moves caused by its resize, don't animate.
                 //this is completely heuristic, but looks way less "jumpy"

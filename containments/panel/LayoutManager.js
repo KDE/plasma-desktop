@@ -24,7 +24,7 @@ function addApplet(applet, x, y) {
     var middle, new_element = {applet: appletItem}
 
     appletItem.visible = Qt.binding(function() {
-        return applet.status !== PlasmaCore.Types.HiddenStatus || (!root.plasmoid.immutable && root.plasmoid.userConfiguring);
+        return applet.status !== PlasmaCore.Types.HiddenStatus || (!root.plasmoid.immutable && root.plasmoid.userConfiguring) || root.plasmoid.corona.editMode;
     });
 
     // Insert icons to the left of whatever is at the center (usually a Task Manager),
