@@ -11,10 +11,10 @@ import QtQml
 
 import org.kde.plasma.core as PlasmaCore
 import org.kde.ksvg as KSvg
-import org.kde.taskmanager as TaskManager
 import org.kde.kwindowsystem
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.shell.panel as Panel
+import org.kde.plasma.workspace.occlusion as Occlusion
 
 import org.kde.plasma.plasmoid
 
@@ -75,51 +75,32 @@ Item {
     // The point is read from panelview.cpp and is used as an offset for the mask
     readonly property point floatingTranslucentItemOffset: Qt.point(floatingTranslucentItem.x, floatingTranslucentItem.y)
 
-    TaskManager.VirtualDesktopInfo {
-        id: virtualDesktopInfo
-    }
-
-    TaskManager.ActivityInfo {
-        id: activityInfo
-    }
-
     // We need to have a little gap between the raw visibleWindowsModel count
     // and actually determining if a window is touching.
     // This is because certain dialog windows start off with a position of (screenwidth/2, screenheight/2)
     // and they register as "touching" in the split-second before KWin can place them correctly.
     // This avoids the panel flashing if it is auto-hide etc and such a window is shown.
     // Examples of such windows: properties of a file on desktop, or portal "open with" dialog
-    property bool touchingWindow: false
-    property bool touchingWindowDirect: visibleWindowsModel.count > 0
-    property bool showingDesktop: KWindowSystem.showingDesktop
     Timer {
         id: touchingWindowDebounceTimer
         interval: 10  // ms, I find that this value is enough while not causing unresponsiveness while dragging windows close
-        onTriggered: root.touchingWindow = !KWindowSystem.showingDesktop && root.touchingWindowDirect
+        onTriggered: root.touchingWindow = !KWindowSystem.showingDesktop && occlusion.coveringAny
     }
-    onTouchingWindowDirectChanged: touchingWindowDebounceTimer.start()
-    onShowingDesktopChanged: touchingWindowDebounceTimer.start()
 
-    TaskManager.TasksModel {
-        id: visibleWindowsModel
-        filterByVirtualDesktop: true
-        filterByActivity: true
-        filterByScreen: false
-        filterByRegion: TaskManager.RegionFilterMode.Intersect
-        filterHidden: true
-        filterMinimized: true
+    Occlusion.Occlusion {
+        id: occlusion
 
-        screenGeometry: panel.screenGeometry
-        virtualDesktop: virtualDesktopInfo.currentDesktop
-        activity: activityInfo.currentActivity
+        onCoveringAnyChanged: touchingWindowDebounceTimer.start()
 
-        groupMode: TaskManager.TasksModel.GroupDisabled
-
-        Binding on regionGeometry {
+        Binding on area {
             delayed: true
             value: panel.width, panel.height, panel.x, panel.y, panel.dogdeGeometryByDistance(panel.visibilityMode === Panel.Global.DodgeWindows ? -1 : 1) // +1 is for overlap detection, -1 is for snapping to panel
         }
     }
+
+    property bool touchingWindow: false
+    property bool showingDesktop: KWindowSystem.showingDesktop
+    onShowingDesktopChanged: touchingWindowDebounceTimer.start()
 
     Connections {
         target: root.containment?.plasmoid ?? null
