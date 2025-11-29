@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:41+0000\n"
-"PO-Revision-Date: 2025-10-19 21:55+0100\n"
+"PO-Revision-Date: 2025-11-27 12:53+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -369,7 +369,7 @@ msgstr "Aranjamente de rezervă:"
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Number of spared main layouts"
-msgstr ""
+msgstr "Număr de aranjamente primare de rezervă"
 
 #: ui/main.qml:378
 #, kde-format
@@ -386,6 +386,10 @@ msgid ""
 "accessed through the keyboard indicator applet or by setting a custom "
 "shortcut."
 msgstr ""
+"Puteți avea până la 4 aranjamente primare, toate celelalte aranjamente fiind "
+"rezerve. Aranjamentele de rezervă nu sunt incluse la ciclarea printre "
+"aranjamente, dar pot fi accesate prin miniaplicația cu indicator de "
+"tastatură sau prin definirea unei scurtături personalizate."
 
 #: ui/main.qml:387
 #, kde-format
