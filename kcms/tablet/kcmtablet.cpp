@@ -385,7 +385,7 @@ void Tablet::save()
         }
     }
     // mode-based rebinds
-    for (const auto &device : QStringList{"TabletRing"}) {
+    for (const auto &device : QStringList{"TabletRing", "TabletStrip"}) {
         for (auto it = m_unsavedMappings[device].cbegin(), itEnd = m_unsavedMappings[device].cend(); it != itEnd; ++it) {
             auto configGroup = generalGroup.group(device).group(it.key());
             for (auto itDevice = it->cbegin(), itDeviceEnd = it->cend(); itDevice != itDeviceEnd; ++itDevice) {
@@ -435,6 +435,12 @@ void Tablet::assignPadDialMapping(const QString &deviceName, uint button, const 
 void Tablet::assignPadRingMapping(const QString &deviceName, uint button, uint group, const InputSequence &keySequence)
 {
     m_unsavedMappings["TabletRing"][deviceName][{button, group}] = keySequence;
+    Q_EMIT settingsRestored();
+}
+
+void Tablet::assignPadStripMapping(const QString &deviceName, uint button, uint group, const InputSequence &keySequence)
+{
+    m_unsavedMappings["TabletStrip"][deviceName][{button, group}] = keySequence;
     Q_EMIT settingsRestored();
 }
 
@@ -488,6 +494,22 @@ InputSequence Tablet::padRingMapping(const QString &deviceName, uint button, uin
 
     const auto cfg = KSharedConfig::openConfig("kcminputrc");
     const auto configGroup = cfg->group("ButtonRebinds").group("TabletRing").group(deviceName).group(QString::number(mode));
+    const auto sequence = configGroup.readEntry(QString::number(button), QStringList());
+    return InputSequence(sequence);
+}
+
+InputSequence Tablet::padStripMapping(const QString &deviceName, uint button, uint mode) const
+{
+    if (deviceName.isEmpty()) {
+        return {};
+    }
+
+    if (const auto &device = m_unsavedMappings["TabletStrip"][deviceName]; device.contains({button, mode})) {
+        return device.value({button, mode});
+    }
+
+    const auto cfg = KSharedConfig::openConfig("kcminputrc");
+    const auto configGroup = cfg->group("ButtonRebinds").group("TabletStrip").group(deviceName).group(QString::number(mode));
     const auto sequence = configGroup.readEntry(QString::number(button), QStringList());
     return InputSequence(sequence);
 }
