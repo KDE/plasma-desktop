@@ -190,11 +190,13 @@ Item {
                 text: i18nd("kcm_tablet", "Resize the screen area")
                 QQC2.ToolTip {
                     text: tabletSizeHandle.text
-                    visible: parent.hovered
+                    visible: parent.hovered && !screenResizeHandler.active
                     delay: Kirigami.Units.toolTipDelay
                 }
 
                 DragHandler {
+                    id: screenResizeHandler
+
                     cursorShape: Qt.SizeFDiagCursor
                     target: parent
                     onActiveChanged: { outputAreaView.inputChanged = true }
