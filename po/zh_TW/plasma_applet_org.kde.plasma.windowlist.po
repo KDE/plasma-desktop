@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_windowlist\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-26 00:45+0000\n"
-"PO-Revision-Date: 2025-11-24 17:11+0900\n"
+"PO-Revision-Date: 2025-11-29 17:59+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "dot tw>\n"
-"X-Generator: Lokalize 26.03.70\n"
+"X-Generator: Lokalize 25.08.3\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: config.qml:13
@@ -65,32 +65,32 @@ msgstr "元件在桌面上時不適用。"
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Open on hover:"
-msgstr ""
+msgstr "滑鼠懸停時開啟："
 
 #: ConfigGeneral.qml:105
 #, kde-format
 msgctxt "@option:check open-on-hover is enabled, with the following delay:"
 msgid "Enabled, with delay:"
-msgstr ""
+msgstr "啟用，在延遲一段時間後開啟："
 
 #: ConfigGeneral.qml:125
 #, kde-format
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] ""
+msgstr[0] "%1 毫秒"
 
 #: ConfigGeneral.qml:134
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
-msgstr[0] ""
+msgstr[0] "毫秒"
 
 #: ConfigGeneral.qml:137
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Hover open delay %1"
-msgstr ""
+msgstr "游標停駐開啟延遲 %1"
 
 #: main.qml:92
 #, kde-format
