@@ -46,6 +46,7 @@ class InputDevice : public QObject
     Q_PROPERTY(bool relative READ isRelative WRITE setRelative NOTIFY relativeChanged)
     Q_PROPERTY(quint32 tabletPadDialCount READ tabletPadDialCount CONSTANT)
     Q_PROPERTY(quint32 tabletPadRingCount READ tabletPadRingCount CONSTANT)
+    Q_PROPERTY(quint32 tabletPadStripCount READ tabletPadStripCount CONSTANT)
     Q_PROPERTY(QList<unsigned int> numModes READ numModes CONSTANT)
     Q_PROPERTY(QList<unsigned int> currentModes READ currentModes NOTIFY currentModesChanged)
     Q_PROPERTY(bool isVirtual READ isVirtual CONSTANT)
@@ -202,6 +203,11 @@ public:
     quint32 tabletPadRingCount() const
     {
         return m_tabletPadRingCount.value();
+    }
+
+    quint32 tabletPadStripCount() const
+    {
+        return m_tabletPadStripCount.value();
     }
 
     QList<unsigned int> numModes() const
@@ -427,6 +433,7 @@ private:
     Prop<quint32> m_tabletPadButtonCount = Prop<quint32>(this, "tabletPadButtonCount");
     Prop<quint32> m_tabletPadDialCount = Prop<quint32>(this, "tabletPadDialCount");
     Prop<quint32> m_tabletPadRingCount = Prop<quint32>(this, "tabletPadRingCount");
+    Prop<quint32> m_tabletPadStripCount = Prop<quint32>(this, "tabletPadStripCount");
     Prop<QList<unsigned int>> m_numModes = Prop<QList<unsigned int>>(this, "numModes");
     Prop<QList<unsigned int>> m_currentModes = Prop<QList<unsigned int>>(this, "currentModes", nullptr, nullptr, &InputDevice::currentModesChanged);
 

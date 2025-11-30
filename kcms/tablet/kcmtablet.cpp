@@ -421,6 +421,12 @@ void Tablet::assignPadRingMapping(const QString &deviceName, uint button, uint g
     Q_EMIT settingsRestored();
 }
 
+void Tablet::assignPadStripMapping(const QString &deviceName, uint button, uint group, const InputSequence &keySequence)
+{
+    m_unsavedMappings["TabletStrip"][deviceName][{button, group}] = keySequence;
+    Q_EMIT settingsRestored();
+}
+
 void Tablet::assignToolButtonMapping(const QString &deviceName, uint button, const InputSequence &keySequence)
 {
     m_unsavedMappings["TabletTool"][deviceName][{button, 0}] = keySequence;
@@ -471,6 +477,22 @@ InputSequence Tablet::padRingMapping(const QString &deviceName, uint button, uin
 
     const auto cfg = KSharedConfig::openConfig("kcminputrc");
     const auto configGroup = cfg->group("ButtonRebinds").group("TabletRing").group(deviceName).group(QString::number(mode));
+    const auto sequence = configGroup.readEntry(QString::number(button), QStringList());
+    return InputSequence(sequence);
+}
+
+InputSequence Tablet::padStripMapping(const QString &deviceName, uint button, uint mode) const
+{
+    if (deviceName.isEmpty()) {
+        return {};
+    }
+
+    if (const auto &device = m_unsavedMappings["TabletStrip"][deviceName]; device.contains({button, mode})) {
+        return device.value({button, mode});
+    }
+
+    const auto cfg = KSharedConfig::openConfig("kcminputrc");
+    const auto configGroup = cfg->group("ButtonRebinds").group("TabletStrip").group(deviceName).group(QString::number(mode));
     const auto sequence = configGroup.readEntry(QString::number(button), QStringList());
     return InputSequence(sequence);
 }

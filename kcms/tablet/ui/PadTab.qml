@@ -89,6 +89,71 @@ Kirigami.FormLayout {
     }
 
     Repeater {
+        id: stripRepeater
+        model: root.padDevice.tabletPadStripCount
+
+        delegate: ColumnLayout {
+            id: stripDelegate
+
+            spacing: Kirigami.Units.smallSpacing
+
+            required property int index
+
+            Kirigami.FormData.label: i18nd("kcm_tablet", "Pad strip %1:", index + 1)
+
+            Repeater {
+                id: modesRepeater
+
+                model: root.padDevice.numModes[0]
+
+                delegate: RowLayout {
+                    id: modeLayout
+
+                    required property int index
+
+                    spacing: Kirigami.Units.largeSpacing
+
+                    QQC2.Label {
+                        text: modeLayout.index + 1
+                        color: Kirigami.Theme.disabledTextColor
+                        font.bold: root.padDevice.currentModes[0] === modeLayout.index
+                    }
+
+                    ActionBinding {
+                        id: seq
+
+                        name: i18ndc("kcm_tablet", "@info Meant to be inserted into an existing sentence like 'configuring pad ring/dial/strip 0'", "pad ring/dial/strip %1", stripDelegate.index + 1)
+                        supportsPenButton: false
+                        supportsRelativeEvents: true
+
+                        function refreshInputSequence(): void {
+                            seq.inputSequence = kcm.padStripMapping(root.padDevice.name, stripDelegate.index, modeLayout.index)
+                        }
+
+                        inputSequence: kcm.padStripMapping(root.padDevice.name, stripDelegate.index, modeLayout.index)
+                        Connections {
+                            target: kcm
+
+                            function onSettingsRestored() {
+                                seq.refreshInputSequence();
+                            }
+                        }
+
+                        onGotInputSequence: sequence => {
+                            kcm.assignPadStripMapping(root.padDevice.name, stripDelegate.index, modeLayout.index, sequence)
+                        }
+
+                        SettingHighlighter {
+                            // Currently, application-defined is the default
+                            highlight: seq.inputSequence.type !== KCM.InputSequence.ApplicationDefined
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    Repeater {
         id: dialRepeater
         model: root.padDevice.tabletPadDialCount
 
