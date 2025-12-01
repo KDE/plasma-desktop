@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Sveinn í Felli <sveinki@nett.is>, 2009.
+# SPDX-FileCopyrightText: 2009, 2025 Sveinn í Felli <sveinki@nett.is>
 # SPDX-FileCopyrightText: 2022, 2025 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-26 00:45+0000\n"
-"PO-Revision-Date: 2025-10-25 13:15+0000\n"
-"Last-Translator: Gummi <gudmundure@gmail.com>\n"
-"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2025-11-30 11:18+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -29,28 +29,28 @@ msgstr "Almennt"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "For active application, show:"
-msgstr ""
+msgstr "Fyrir virk forrit, sýna:"
 
 #: ConfigGeneral.qml:36
 #, kde-format
 msgctxt ""
 "@item:inlistbox what to show for active application in horizontal panel"
 msgid "Icon and name"
-msgstr ""
+msgstr "Táknmynd og heiti"
 
 #: ConfigGeneral.qml:37
 #, kde-format
 msgctxt ""
 "@item:inlistbox what to show for active application in horizontal panel"
 msgid "Icon"
-msgstr ""
+msgstr "Táknmynd"
 
 #: ConfigGeneral.qml:38
 #, kde-format
 msgctxt ""
 "@item:inlistbox what to show for active application in horizontal panel"
 msgid "Name"
-msgstr ""
+msgstr "Heiti"
 
 #: ConfigGeneral.qml:85
 #, kde-format
@@ -66,34 +66,34 @@ msgstr "Á ekki við þegar græjan er á skjáborðinu."
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Open on hover:"
-msgstr ""
+msgstr "Opna við yfirsvif:"
 
 #: ConfigGeneral.qml:105
 #, kde-format
 msgctxt "@option:check open-on-hover is enabled, with the following delay:"
 msgid "Enabled, with delay:"
-msgstr ""
+msgstr "Virkt, með töf:"
 
 #: ConfigGeneral.qml:125
 #, kde-format
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
 
 #: ConfigGeneral.qml:134
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ms"
+msgstr[1] "ms"
 
 #: ConfigGeneral.qml:137
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Hover open delay %1"
-msgstr ""
+msgstr "Töf á opnun við yfirsvif %1"
 
 #: main.qml:92
 #, kde-format

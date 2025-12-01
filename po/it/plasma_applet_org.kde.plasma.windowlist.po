@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_windowlist\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-26 00:45+0000\n"
-"PO-Revision-Date: 2025-02-25 21:23+0100\n"
+"PO-Revision-Date: 2025-11-28 00:54+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.03.70\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: config.qml:13
 #, kde-format
@@ -27,28 +27,28 @@ msgstr "Generale"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "For active application, show:"
-msgstr ""
+msgstr "Per applicazioni attive, mostra:"
 
 #: ConfigGeneral.qml:36
 #, kde-format
 msgctxt ""
 "@item:inlistbox what to show for active application in horizontal panel"
 msgid "Icon and name"
-msgstr ""
+msgstr "Icona e nome"
 
 #: ConfigGeneral.qml:37
 #, kde-format
 msgctxt ""
 "@item:inlistbox what to show for active application in horizontal panel"
 msgid "Icon"
-msgstr ""
+msgstr "Icona"
 
 #: ConfigGeneral.qml:38
 #, kde-format
 msgctxt ""
 "@item:inlistbox what to show for active application in horizontal panel"
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 #: ConfigGeneral.qml:85
 #, kde-format
@@ -64,34 +64,34 @@ msgstr "Non valido se l'oggetto è sul desktop."
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Open on hover:"
-msgstr ""
+msgstr "Apri al passaggio del mouse:"
 
 #: ConfigGeneral.qml:105
 #, kde-format
 msgctxt "@option:check open-on-hover is enabled, with the following delay:"
 msgid "Enabled, with delay:"
-msgstr ""
+msgstr "Abilitato, con ritardo:"
 
 #: ConfigGeneral.qml:125
 #, kde-format
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
 
 #: ConfigGeneral.qml:134
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ms"
+msgstr[1] "ms"
 
 #: ConfigGeneral.qml:137
 #, kde-format
 msgctxt "@label:spinbox accessible"
 msgid "Hover open delay %1"
-msgstr ""
+msgstr "Ritardo apertura al passaggio del mouse %1"
 
 #: main.qml:92
 #, kde-format
