@@ -214,7 +214,12 @@ RowLayout {
 
             text: model.display
             icon: model.decoration
-            onClicked: filteredMenuItemsModel.trigger(index)
+            onClicked: {
+                filteredMenuItemsModel.trigger(index)
+                if (kickoff.hideOnWindowDeactivate) {
+                    kickoff.expanded = false;
+                }
+            }
         }
         onObjectAdded: (index, object) => contextMenu.addMenuItem(object)
         onObjectRemoved: (index, object) => contextMenu.removeMenuItem(object)
