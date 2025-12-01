@@ -99,7 +99,7 @@ KCM.SimpleKCM {
             spacing: Kirigami.Units.smallSpacing
             Kirigami.FormData.label: i18nc("@label:checkbox", "Open on hover:")
 
-             QQC2.CheckBox {
+            QQC2.CheckBox {
                 id: openOnHoverCheckbox
 
                 text: i18nc("@option:check open-on-hover is enabled, with the following delay:", "Enabled, with delay:")
@@ -127,7 +127,7 @@ KCM.SimpleKCM {
                     return Number.fromLocaleString(locale, text.replace(i18ncp("short for millisecond(s)", "ms", "ms"), ""))
                 }
 
-                Accessible.name: i18nc("@label:spinbox accessible", "Hover open delay %1", textFromValue(value))
+                Accessible.name: i18nc("@label:spinbox accessible %1 is milliseconds", "Hover open delay %1 ms", value)
             }
         }
     }

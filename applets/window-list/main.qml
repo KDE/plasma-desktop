@@ -118,7 +118,7 @@ PlasmoidItem {
                 return tasksModel.data(tasksModel.activeTask, TaskManager.AbstractTasksModel.AppName) ||
                        tasksModel.data(tasksModel.activeTask, 0 /* display name, window title if app name not present */)
             } else {
-                return i18n("Plasma Desktop")
+                return i18nc("@title:window title shown e.g. for desktop and expanded widgets", "Plasma Desktop")
             }
 
             iconSource: if (tasksModel.activeTask.valid) {
@@ -144,9 +144,10 @@ PlasmoidItem {
 
                 property ListModel noWindowModel: ListModel {
                     ListElement {
-                        display: "No open windows"
+                        display: "" // filled by Component.onCompleted
                         decoration: "edit-none"
                     }
+                    Component.onCompleted: noWindowModel[0].display = i18nc("@info:placeholder", "No open windows")
                 }
 
                 model: tasksModel.count === 0 ? noWindowModel : tasksModel
