@@ -1,5 +1,5 @@
-import QtQuick 2.12
-import org.kde.plasma.configuration 2.0
+import QtQuick
+import org.kde.plasma.configuration
 
 ConfigModel {
     ConfigCategory {

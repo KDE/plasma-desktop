@@ -5,11 +5,11 @@
     SPDX-License-Identifier: LGPL-2.0-only
 */
 
-import QtQuick 2.1
-import QtQuick.Window 2.2
-import QtQuick.Layouts 1.1
-import org.kde.kirigami 2.4 as Kirigami
-import org.kde.newstuff 1.91 as NewStuff
+import QtQuick
+import QtQuick.Window
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
+import org.kde.newstuff as NewStuff
 import org.kde.kcmutils as KCM
 
 KCM.GridViewKCM {

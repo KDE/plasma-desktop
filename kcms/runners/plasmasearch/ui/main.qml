@@ -4,14 +4,14 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Controls 2.15 as QQC2
-import QtQuick.Layouts 1.1
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
 
 import org.kde.config
 import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCMUtils
-import org.kde.newstuff 1.91 as NewStuff
+import org.kde.newstuff as NewStuff
 
 KCMUtils.ScrollViewKCM {
     id: root

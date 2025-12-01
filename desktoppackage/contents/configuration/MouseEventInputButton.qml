@@ -4,8 +4,8 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.0
-import QtQuick.Controls 2.3 as QQC2
+import QtQuick
+import QtQuick.Controls as QQC2
 
 
 QQC2.Button {

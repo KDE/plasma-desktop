@@ -4,7 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.12
+import QtQuick
 
 ShapeDoodad {
     lineWidth: 0 // indicators can be tiny. don't draw the stroke, it may overlap the fill

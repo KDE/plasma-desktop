@@ -1,4 +1,4 @@
-import QtQuick 2.15
+import QtQuick
 
 //NOTE: We do not implement a fully working dummy screenModel,
 //we only implement what's needed for a basic multi-monitor test

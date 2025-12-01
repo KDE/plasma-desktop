@@ -4,11 +4,11 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.0
+import QtQuick
 
-import org.kde.kirigami 2.20 as Kirigami
-import org.kde.draganddrop 2.0 as DND
-import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kirigami as Kirigami
+import org.kde.draganddrop as DND
+import org.kde.plasma.extras as PlasmaExtras
 
 DND.DropArea {
     id: root

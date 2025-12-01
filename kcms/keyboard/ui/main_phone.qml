@@ -11,7 +11,7 @@ import QtQuick.Controls as QQC2
 import org.kde.kquickcontrols as KQuickControls
 import org.kde.kitemmodels as KItemModels
 import org.kde.kirigami as Kirigami
-import org.kde.kirigamiaddons.formcard 1.0 as FormCard
+import org.kde.kirigamiaddons.formcard as FormCard
 import org.kde.kcmutils as KCM
 
 import org.kde.plasma.private.kcm_keyboard as KCMKeyboard

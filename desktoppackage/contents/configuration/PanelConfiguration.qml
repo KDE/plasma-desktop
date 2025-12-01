@@ -6,14 +6,14 @@
 
 import QtQuick
 import QtQuick.Layouts
-import QtQuick.Controls 2.4 as QQC2
+import QtQuick.Controls as QQC2
 import org.kde.plasma.core as PlasmaCore
-import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kirigami 2.20 as Kirigami
-import org.kde.ksvg 1.0 as KSvg
-import org.kde.plasma.components 3.0 as PC3
-import org.kde.plasma.shell.panel 0.1 as Panel
-import org.kde.kquickcontrols 2.0
+import org.kde.plasma.extras as PlasmaExtras
+import org.kde.kirigami as Kirigami
+import org.kde.ksvg as KSvg
+import org.kde.plasma.components as PC3
+import org.kde.plasma.shell.panel as Panel
+import org.kde.kquickcontrols
 import "panelconfiguration"
 
 ColumnLayout {

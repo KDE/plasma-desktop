@@ -4,19 +4,19 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQml 2.15
-import QtQuick 2.8
-import QtQuick.Controls 2.15
-import QtQuick.Layouts 1.1
+import QtQml
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
 import Qt5Compat.GraphicalEffects
 
-import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.plasma.workspace.components 2.0 as PW
+import org.kde.plasma.components as PlasmaComponents3
+import org.kde.plasma.workspace.components as PW
 import org.kde.plasma.private.keyboardindicator as KeyboardIndicator
-import org.kde.kirigami 2.20 as Kirigami
-import org.kde.kscreenlocker 1.0 as ScreenLocker
+import org.kde.kirigami as Kirigami
+import org.kde.kscreenlocker as ScreenLocker
 
-import org.kde.plasma.private.sessions 2.0
+import org.kde.plasma.private.sessions
 import org.kde.breeze.components
 
 Item {

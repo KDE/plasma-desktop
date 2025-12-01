@@ -7,15 +7,15 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Controls 2.15 as QQC2
-import QtQuick.Layouts 1.15
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
 
 import org.kde.kcmutils as KCMUtils
 import org.kde.kirigami as Kirigami
-import org.kde.kitemmodels 1.0 as KItemModels
-import org.kde.plasma.configuration 2.0
-import org.kde.plasma.plasmoid 2.0
+import org.kde.kitemmodels as KItemModels
+import org.kde.plasma.configuration
+import org.kde.plasma.plasmoid
 
 Rectangle {
     id: root

@@ -6,11 +6,11 @@
 */
 
 import QtQuick
-import QtQuick.Controls 2.4 as QQC2
-import QtQuick.Layouts 1.3
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
 
-import org.kde.plasma.plasmoid 2.0
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.plasma.plasmoid
+import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 
 /**

@@ -4,10 +4,10 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.4
+import QtQuick
 
-import org.kde.draganddrop 2.0 as DragDrop
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.draganddrop as DragDrop
+import org.kde.kirigami as Kirigami
 
 DragDrop.DropArea {
     id: dropArea

@@ -7,7 +7,7 @@
 import QtQuick
 
 import org.kde.plasma.extras as PlasmaExtras
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 
 Item {
     // Using childrenRect.width causes a binding loop since we can only get the

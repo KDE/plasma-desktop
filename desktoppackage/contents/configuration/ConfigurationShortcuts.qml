@@ -4,12 +4,12 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.0
-import QtQuick.Controls 2.3 as QQC2
-import QtQuick.Layouts 1.0
-import org.kde.kquickcontrols 2.0
-import org.kde.kirigami 2.14 as Kirigami
-import org.kde.plasma.plasmoid 2.0
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
+import org.kde.kquickcontrols
+import org.kde.kirigami as Kirigami
+import org.kde.plasma.plasmoid
 import org.kde.kcmutils as KCM
 
 KCM.SimpleKCM {

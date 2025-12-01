@@ -4,8 +4,8 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.5
-import org.kde.plasma.private.sessions 2.0
+import QtQuick
+import org.kde.plasma.private.sessions
 import org.kde.breeze.components
 
 Item {

@@ -4,12 +4,12 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.12
-import QtQuick.Window 2.12
-import QtQuick.Controls 2.5
-import QtQuick.Layouts 1.15
+import QtQuick
+import QtQuick.Window
+import QtQuick.Controls
+import QtQuick.Layouts
 
-import org.kde.tastenbrett.private 1.0 as XKB
+import org.kde.tastenbrett.private as XKB
 
 Window {
     id: window

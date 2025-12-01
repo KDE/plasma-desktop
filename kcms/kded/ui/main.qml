@@ -5,14 +5,14 @@
 */
 
 import QtQuick
-import QtQuick.Layouts 1.1
-import QtQuick.Controls 2.3 as QQC2
-import QtQml 2.15
+import QtQuick.Layouts
+import QtQuick.Controls as QQC2
+import QtQml
 
-import org.kde.kirigami 2.10 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.kirigami.delegates as KD
 import org.kde.kcmutils as KCM
-import org.kde.private.kcms.style 1.0 as Private
+import org.kde.private.kcms.style as Private
 
 KCM.ScrollViewKCM {
     id: root

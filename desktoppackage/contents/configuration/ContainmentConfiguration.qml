@@ -4,11 +4,11 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.0
-import QtQuick.Layouts 1.0
-import org.kde.kirigami 2.15 as Kirigami
-import org.kde.plasma.configuration 2.0
-import org.kde.plasma.plasmoid 2.0
+import QtQuick
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
+import org.kde.plasma.configuration
+import org.kde.plasma.plasmoid
 
 AppletConfiguration {
     id: root

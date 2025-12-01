@@ -4,13 +4,13 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtCore 6.5
-import QtQuick 2.15
-import QtQuick.Layouts 1.1
-import QtQuick.Controls 2.15 as QQC2
-import QtQuick.Dialogs 6.3 as QtDialogs
-import org.kde.baloo.experimental 0.1 as Baloo
-import org.kde.kirigami 2.20 as Kirigami
+import QtCore
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as QQC2
+import QtQuick.Dialogs as QtDialogs
+import org.kde.baloo.experimental as Baloo
+import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 
 KCM.ScrollViewKCM {

@@ -4,11 +4,11 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.10
-import QtQuick.Controls 2.10
-import QtQuick.Layouts 1.11
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
-import QtQuick.Dialogs 6.3
+import QtQuick.Dialogs
 import org.kde.kcmutils as KCM
 
 KCM.SimpleKCM {

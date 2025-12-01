@@ -4,17 +4,17 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.0
-import QtQuick.Controls 2.4 as QQC2
-import org.kde.plasma.plasmoid 2.0
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as QQC2
+import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
-import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kirigami 2.20 as Kirigami
-import org.kde.ksvg 1.0 as KSvg
-import org.kde.plasma.components 3.0 as PC3
-import org.kde.plasma.shell.panel 0.1 as Panel
-import org.kde.kquickcontrols 2.0
+import org.kde.plasma.extras as PlasmaExtras
+import org.kde.kirigami as Kirigami
+import org.kde.ksvg as KSvg
+import org.kde.plasma.components as PC3
+import org.kde.plasma.shell.panel as Panel
+import org.kde.kquickcontrols
 
 KSvg.SvgItem {
     id: root
