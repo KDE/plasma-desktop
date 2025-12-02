@@ -15,8 +15,6 @@ DropArea {
     implicitWidth: repeater.count ? repeater.itemAt(0).implicitWidth : (Kirigami.Units.iconSizes.medium + Kirigami.Units.smallSpacing * 2)
     implicitHeight: contentHeight
 
-    anchors.horizontalCenter: parent?.horizontalCenter
-
     property int contentHeight: model ? (model.count * implicitWidth) + ((model.count - 1) * flow.spacing) : 0
 
     property alias model: repeater.model

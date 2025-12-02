@@ -19,6 +19,7 @@ FocusScope {
     property real minimumWidth: Kirigami.Units.gridUnit * 14
     property real maximumWidth: Math.round(minimumWidth * 1.5)
 
+    height: implicitHeight
     width: implicitWidth
     implicitWidth: Math.min(Math.max(minimumWidth, scrollView.implicitWidth), maximumWidth)
     implicitHeight: listView.contentHeight
@@ -227,6 +228,14 @@ FocusScope {
                 onCurrentItemChanged: {
                     if (currentItem) {
                         currentItem.menu.closed.connect(resetIndexTimer.restart);
+                    }
+                }
+
+                Connections {
+                    target: searchField
+
+                    function onTextChanged() {
+                        listView.maxDelegateImplicitWidth = 0
                     }
                 }
             }

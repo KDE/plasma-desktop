@@ -16,8 +16,7 @@ import org.kde.plasma.plasmoid
 FocusScope {
     id: runnerResultsList
     implicitWidth: runnerColumnRowLayout.implicitWidth
-    width: implicitWidth
-    height: parent.height
+    implicitHeight: runnerColumnRowLayout.implicitHeight
 
     signal keyNavigationAtListEnd
     signal navigateLeftRequested
@@ -120,7 +119,7 @@ FocusScope {
             Item {
                 id: searchFieldPlaceholder
 
-                height: mainSearchField.height
+                implicitHeight: mainSearchField.height
                 Layout.fillWidth: true
                 visible: runnerResultsList.parent.visibleChildren[0] === runnerResultsList
             }
