@@ -273,12 +273,6 @@ PlasmaComponents3.ScrollView {
                         }
                     }
 
-                    onContainsMouseChanged: {
-                        if (containsMouse) {
-                            focus = true;
-                        }
-                    }
-
                     onFocusChanged: {
                         if (!focus) {
                             currentIndex = -1;
