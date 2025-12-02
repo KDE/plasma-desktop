@@ -6,6 +6,7 @@
 pragma ComponentBehavior: Bound
 
 import QtQuick
+import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.components as PlasmaComponents3
@@ -18,8 +19,6 @@ FocusScope {
     property real minimumWidth: Kirigami.Units.gridUnit * 14
     property real maximumWidth: Math.round(minimumWidth * 1.5)
 
-    height: implicitHeight
-    width: implicitWidth
     implicitWidth: Math.min(Math.max(minimumWidth, scrollView.implicitWidth), maximumWidth)
     implicitHeight: listView.contentHeight
 
@@ -129,7 +128,6 @@ FocusScope {
         onHoveredChanged: {
             if (hovered) {
                 resetIndexTimer.stop();
-                itemList.forceActiveFocus();
             } else if (itemList.childDialog && listView.currentIndex != itemList.childDialog?.index) {
                 listView.currentIndex = childDialog.index
             } else if ((!itemList.childDialog || !itemList.dialog)
@@ -141,7 +139,10 @@ FocusScope {
 
     PlasmaComponents3.ScrollView {
         id: scrollView
-        anchors.fill: parent
+        anchors.top: (itemList.Layout.alignment & Qt.AlignBottom) ? undefined : parent.top
+        anchors.bottom: (itemList.Layout.alignment & Qt.AlignBottom) ? parent.bottom : undefined
+        height: Math.min(itemList.height, listView.contentHeight)
+        width: parent.width
         // can't use effectiveScrollBarWidth, it causes a binding loop if a submenu needs to be repositioned
         implicitWidth: listView.implicitWidth + (contentHeight > height ? PlasmaComponents3.ScrollBar.vertical.width : 0)
 
@@ -183,6 +184,7 @@ FocusScope {
                 onHoveredChanged: {
                     if (hovered & !isSeparator) {
                         listView.currentIndex = index
+                        itemList.forceActiveFocus()
                         dialogSpawnTimer.restart()
                     } else if (listView.currentIndex === index) {
                         dialogSpawnTimer.stop()

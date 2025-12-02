@@ -68,51 +68,41 @@ FocusScope {
                 text: (runnerMatches.model !== null) ? runnerMatches.model.name : ""
             }
 
-            Item {
-                id: runnerListViewContainer
+            ItemListView {
+                id: runnerMatches
 
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                implicitWidth: runnerMatches.implicitWidth
+                Layout.alignment: Plasmoid.configuration.alignResultsToBottom ? Qt.AlignBottom : Qt.AlignTop
 
-                ItemListView {
-                    id: runnerMatches
+                focus: true
 
-                    anchors.left: parent.left
-                    anchors.top: Plasmoid.configuration.alignResultsToBottom ? undefined : parent.top
-                    anchors.bottom: Plasmoid.configuration.alignResultsToBottom ? parent.bottom : undefined
+                iconsEnabled: true
+                keyNavigationWraps: !searchFieldPlaceholder.visible
+                LayoutMirroring.enabled: runnerResultsList.LayoutMirroring.enabled
 
-                    height: Math.min(implicitHeight, runnerListViewContainer.height)
+                resetOnExitDelay: 0
 
-                    focus: true
+                model: runnerModel.modelForRow(index)
 
-                    iconsEnabled: true
-                    keyNavigationWraps: !searchFieldPlaceholder.visible
-                    LayoutMirroring.enabled: runnerResultsList.LayoutMirroring.enabled
-
-                    resetOnExitDelay: 0
-
-                    model: runnerModel.modelForRow(index)
-
-                    Connections {
-                        target: runnerModel
-                        function onAnyRunnerFinished () {
-                            Qt.callLater( () => { // these come in quickly at the start
-                                if (runnerResultsList.activeFocus) {
-                                    return; // don't interfere if the user has already moved focus
-                                }
-                                if (searchFieldPlaceholder.visible && searchField.focus) {
-                                    currentIndex = 0;
-                                } else {
-                                    currentIndex = -1;
-                                }
-                            })
-                        }
+                Connections {
+                    target: runnerModel
+                    function onAnyRunnerFinished () {
+                        Qt.callLater( () => { // these come in quickly at the start
+                            if (runnerResultsList.activeFocus) {
+                                return; // don't interfere if the user has already moved focus
+                            }
+                            if (searchFieldPlaceholder.visible && searchField.focus) {
+                                currentIndex = 0;
+                            } else {
+                                currentIndex = -1;
+                            }
+                        })
                     }
-                    onNavigateLeftRequested: runnerResultsList.navigateLeftRequested()
-                    onNavigateRightRequested: runnerResultsList.navigateRightRequested()
-                    onKeyNavigationAtListEnd: mainSearchField.forceActiveFocus(Qt.TabFocusReason)
                 }
+                onNavigateLeftRequested: runnerResultsList.navigateLeftRequested()
+                onNavigateRightRequested: runnerResultsList.navigateRightRequested()
+                onKeyNavigationAtListEnd: mainSearchField.forceActiveFocus(Qt.TabFocusReason)
             }
 
             Item {

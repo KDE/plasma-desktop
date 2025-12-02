@@ -36,6 +36,7 @@ Kicker.SubMenu {
 
     mainItem: ItemListView {
         id: itemListView
+        height: implicitHeight
 
         iconsEnabled: true
         LayoutMirroring.enabled: itemDialog.LayoutMirroring.enabled
