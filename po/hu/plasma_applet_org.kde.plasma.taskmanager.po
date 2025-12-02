@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-18 00:45+0000\n"
+"POT-Creation-Date: 2025-12-02 00:43+0000\n"
 "PO-Revision-Date: 2025-11-10 22:25+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -781,18 +781,24 @@ msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
 msgstr "&Nincs címsor és keret"
 
-#: package/contents/ui/ContextMenu.qml:730
+#: package/contents/ui/ContextMenu.qml:727
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Hide from Screencast"
+msgstr ""
+
+#: package/contents/ui/ContextMenu.qml:743
 #, kde-format
 msgid "Allow this program to be grouped"
 msgstr "A program legyen csoportosítható"
 
-#: package/contents/ui/ContextMenu.qml:776
+#: package/contents/ui/ContextMenu.qml:789
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
 msgstr "Össz&es bezárása"
 
-#: package/contents/ui/ContextMenu.qml:776
+#: package/contents/ui/ContextMenu.qml:789
 #, kde-format
 msgid "&Close"
 msgstr "&Bezárás"

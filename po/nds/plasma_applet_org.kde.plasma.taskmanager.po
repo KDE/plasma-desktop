@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-18 00:45+0000\n"
+"POT-Creation-Date: 2025-12-02 00:43+0000\n"
 "PO-Revision-Date: 2014-02-19 12:41+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -797,18 +797,24 @@ msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:730
+#: package/contents/ui/ContextMenu.qml:727
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Hide from Screencast"
+msgstr ""
+
+#: package/contents/ui/ContextMenu.qml:743
 #, kde-format
 msgid "Allow this program to be grouped"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:776
+#: package/contents/ui/ContextMenu.qml:789
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:776
+#: package/contents/ui/ContextMenu.qml:789
 #, kde-format
 msgid "&Close"
 msgstr ""

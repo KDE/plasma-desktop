@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-18 00:45+0000\n"
+"POT-Creation-Date: 2025-12-02 00:43+0000\n"
 "PO-Revision-Date: 2025-05-27 15:33+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -793,18 +793,24 @@ msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
 msgstr "&Nulle barra de titulo e quadro"
 
-#: package/contents/ui/ContextMenu.qml:730
+#: package/contents/ui/ContextMenu.qml:727
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Hide from Screencast"
+msgstr ""
+
+#: package/contents/ui/ContextMenu.qml:743
 #, kde-format
 msgid "Allow this program to be grouped"
 msgstr "Il permitte iste programma de esser gruppate"
 
-#: package/contents/ui/ContextMenu.qml:776
+#: package/contents/ui/ContextMenu.qml:789
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
 msgstr "&Claude omne"
 
-#: package/contents/ui/ContextMenu.qml:776
+#: package/contents/ui/ContextMenu.qml:789
 #, kde-format
 msgid "&Close"
 msgstr "&Claude"

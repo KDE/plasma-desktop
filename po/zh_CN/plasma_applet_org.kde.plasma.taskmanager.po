@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-18 00:45+0000\n"
+"POT-Creation-Date: 2025-12-02 00:43+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -769,18 +769,24 @@ msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
 msgstr "无标题栏和边框(&N)"
 
-#: package/contents/ui/ContextMenu.qml:730
+#: package/contents/ui/ContextMenu.qml:727
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Hide from Screencast"
+msgstr ""
+
+#: package/contents/ui/ContextMenu.qml:743
 #, kde-format
 msgid "Allow this program to be grouped"
 msgstr "允许将此程序的所有窗口合并成一个分组"
 
-#: package/contents/ui/ContextMenu.qml:776
+#: package/contents/ui/ContextMenu.qml:789
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
 msgstr "关闭所有(&C)"
 
-#: package/contents/ui/ContextMenu.qml:776
+#: package/contents/ui/ContextMenu.qml:789
 #, kde-format
 msgid "&Close"
 msgstr "关闭(&C)"
