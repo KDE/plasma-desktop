@@ -8,7 +8,6 @@ import QtQuick
 
 import org.kde.taskmanager as TaskManager
 import org.kde.plasma.plasmoid
-import org.kde.plasma.private.volume as PlasmaPa
 
 import "code/tools.js" as TaskTools
 
@@ -158,10 +157,6 @@ DropArea {
         }
     }
 
-    PlasmaPa.GlobalConfig {
-        id: plasmaPaConfig
-    }
-
     WheelHandler {
         id: wheelHandler
 
@@ -186,7 +181,7 @@ DropArea {
             const anchor = dropArea.target.childAt(event.x, event.y);
             if (Plasmoid.configuration.wheelEnabled === 3) {
                 const loudest = anchor?.audioStreams?.reduce((loudest, stream) => Math.max(loudest, stream.volume), 0)
-                const step = (pulseAudio.item.normalVolume - pulseAudio.item.minimalVolume) * plasmaPaConfig.volumeStep / 100;
+                const step = (pulseAudio.item.normalVolume - pulseAudio.item.minimalVolume) * pulseAudio.item.globalConfig.volumeStep / 100;
                 anchor?.audioStreams?.forEach((stream) => {
                     let delta = step * increment;
                     if (loudest > 0) {

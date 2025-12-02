@@ -15,6 +15,8 @@ QtObject {
 
     signal streamsChanged()
 
+    readonly property GlobalConfig globalConfig: GlobalConfig { }
+
     // It's a JS object so we can do key lookup and don't need to take care of filtering duplicates.
     property var pidMatches: new Set()
 
