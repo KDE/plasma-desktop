@@ -290,9 +290,9 @@ PlasmoidItem {
                 name: "vertical"
                 when: root.vertical
                 PropertyChanges {
-                    pagerItemGrid.innerSpacing: effectiveColumns
-                    pagerItemGrid.rowHeight: Math.floor(columnWidth / pagerItemSizeRatio)
-                    pagerItemGrid.columnWidth: Math.floor((root.width - innerSpacing) / effectiveColumns)
+                    pagerItemGrid.innerSpacing: pagerItemGrid.effectiveColumns
+                    pagerItemGrid.rowHeight: Math.floor(pagerItemGrid.columnWidth / pagerItemGrid.pagerItemSizeRatio)
+                    pagerItemGrid.columnWidth: Math.floor((root.width - pagerItemGrid.innerSpacing) / pagerItemGrid.effectiveColumns)
                 }
             }
         ]
