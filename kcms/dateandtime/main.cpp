@@ -99,7 +99,6 @@ bool KclockModule::timedatedSave()
                                                    QStringLiteral("/org/freedesktop/timedate1"),
                                                    QDBusConnection::systemBus());
 
-    bool rc = true;
     // final arg in each method is "user-interaction" i.e whether it's OK for polkit to ask for auth
 
     // we cannot send requests up front then block for all replies as we need NTP to be disabled before we can make a call to SetTime
@@ -108,9 +107,11 @@ bool KclockModule::timedatedSave()
     auto reply = timedateIface.SetNTP(dtime->ntpEnabled(), true);
     reply.waitForFinished();
     if (reply.isError()) {
-        KMessageBox::error(widget(), i18n("Unable to change NTP settings"));
+        if (reply.error().name() != QDBusError::errorString(QDBusError::AccessDenied)) {
+            KMessageBox::error(widget(), i18n("Unable to change NTP settings"));
+        }
         qWarning() << "Failed to enable NTP" << reply.error().name() << reply.error().message();
-        rc = false;
+        return false;
     }
 
     if (!dtime->ntpEnabled()) {
@@ -119,9 +120,11 @@ bool KclockModule::timedatedSave()
         auto reply = timedateIface.SetTime(timeDiff * 1000, true, true);
         reply.waitForFinished();
         if (reply.isError()) {
-            KMessageBox::error(widget(), i18n("Unable to set current time"));
-            qWarning() << "Failed to set current time" << reply.error().name() << reply.error().message();
-            rc = false;
+            if (reply.error().name() != QDBusError::errorString(QDBusError::AccessDenied)) {
+                KMessageBox::error(widget(), i18n("Unable to set current time"));
+            }
+            qWarning() << "Failed to set current time" << reply.error().name() << reply.error().message();            
+            return false;
         }
     }
     QString selectedTimeZone = dtime->selectedTimeZone();
@@ -129,13 +132,15 @@ bool KclockModule::timedatedSave()
         auto reply = timedateIface.SetTimezone(selectedTimeZone, true);
         reply.waitForFinished();
         if (reply.isError()) {
-            KMessageBox::error(widget(), i18n("Unable to set timezone"));
+            if (reply.error().name() != QDBusError::errorString(QDBusError::AccessDenied)) {
+                KMessageBox::error(widget(), i18n("Unable to set timezone"));
+            }
             qWarning() << "Failed to set timezone" << reply.error().name() << reply.error().message();
-            rc = false;
+            return false;
         }
     }
 
-    return rc;
+    return true;
 }
 
 void KclockModule::save()
