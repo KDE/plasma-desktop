@@ -54,7 +54,7 @@ KCM.ScrollViewKCM {
 
         Kirigami.InlineMessage {
             Layout.fillWidth: true
-            visible: !fileSearchEnabled.checked && kcm.needsSave
+            visible: fileSearchDisabled.checked && kcm.needsSave
             type: Kirigami.MessageType.Warning
             position: Kirigami.InlineMessage.Position.Header
             showCloseButton: true
@@ -99,51 +99,52 @@ KCM.ScrollViewKCM {
             }
 
             Kirigami.FormLayout {
+                QQC2.ButtonGroup {
+                    id: indexingStyleGroup
+                }
+                QQC2.RadioButton {
+                    id: fileSearchDisabled
 
-                QQC2.CheckBox {
-                    id: fileSearchEnabled
-                    Kirigami.FormData.label: i18nc("@title:group", "File indexing:")
-                    text: i18nc("@action:check", "Enabled")
-                    checked: kcm.balooSettings.indexingEnabled
-                    onCheckStateChanged: {
-                        kcm.balooSettings.indexingEnabled = checked
-                    }
+                    Kirigami.FormData.label: i18nc("@title:group", "Data to index:")
+                    text: i18n("Nothing (disable indexing entirely)")
+                    checked: !kcm.balooSettings.indexingEnabled
+                    onToggled: kcm.balooSettings.indexingEnabled = false
+
+                    QQC2.ButtonGroup.group: indexingStyleGroup
 
                     KCM.SettingStateBinding {
                         configObject: kcm.balooSettings
                         settingName: "indexingEnabled"
                     }
                 }
-
-                QQC2.ButtonGroup {
-                    id: indexingStyleGroup
-                }
                 QQC2.RadioButton {
-                    Kirigami.FormData.label: i18nc("@title:group", "Data to index:")
-
-                    text: i18n("File names and contents")
-                    checked: !kcm.balooSettings.onlyBasicIndexing
-                    onToggled: kcm.balooSettings.onlyBasicIndexing = !checked
+                    text: i18n("File names only")
+                    checked: kcm.balooSettings.indexingEnabled && kcm.balooSettings.onlyBasicIndexing
+                    onToggled: {
+                        kcm.balooSettings.indexingEnabled = true;
+                        kcm.balooSettings.onlyBasicIndexing = true;
+                    }
 
                     QQC2.ButtonGroup.group: indexingStyleGroup
 
                     KCM.SettingStateBinding {
                         configObject: kcm.balooSettings
                         settingName: "onlyBasicIndexing"
-                        extraEnabledConditions: fileSearchEnabled.checked
                     }
                 }
                 QQC2.RadioButton {
-                    text: i18n("File names only")
-                    checked: kcm.balooSettings.onlyBasicIndexing
-                    onToggled: kcm.balooSettings.onlyBasicIndexing = checked
+                    text: i18n("File names and contents")
+                    checked: kcm.balooSettings.indexingEnabled && !kcm.balooSettings.onlyBasicIndexing
+                    onToggled: {
+                        kcm.balooSettings.indexingEnabled = true;
+                        kcm.balooSettings.onlyBasicIndexing = false;
+                    }
 
                     QQC2.ButtonGroup.group: indexingStyleGroup
 
                     KCM.SettingStateBinding {
                         configObject: kcm.balooSettings
                         settingName: "onlyBasicIndexing"
-                        extraEnabledConditions: fileSearchEnabled.checked
                     }
                 }
 
@@ -153,14 +154,14 @@ KCM.ScrollViewKCM {
 
                 QQC2.CheckBox {
                     id: indexHiddenFolders
-                    text: i18n("Hidden files and folders")
+                    text: i18n("Also index hidden files and folders")
                     checked: kcm.balooSettings.indexHiddenFolders
                     onCheckStateChanged: kcm.balooSettings.indexHiddenFolders = checked
 
                     KCM.SettingStateBinding {
                         configObject: kcm.balooSettings
                         settingName: "indexHiddenFolders"
-                        extraEnabledConditions: fileSearchEnabled.checked
+                        extraEnabledConditions: !fileSearchDisabled.checked
                     }
                 }
             }
@@ -169,7 +170,7 @@ KCM.ScrollViewKCM {
 
     view: ListView {
         id: directoryConfigList
-        enabled: fileSearchEnabled.checked
+        enabled: !fileSearchDisabled.checked
         clip: true
         currentIndex: -1
 
@@ -203,7 +204,7 @@ KCM.ScrollViewKCM {
 
     extraFooterTopPadding: true // re-add separator line
     footer: ColumnLayout {
-        visible: fileSearchEnabled.checked
+        visible: !fileSearchDisabled.checked
         spacing: Kirigami.Units.smallSpacing
 
         QQC2.Label {
@@ -265,8 +266,6 @@ KCM.ScrollViewKCM {
                     property bool indexingDisabled: !indexingModel.enableIndex
                     property bool fullContentIndexing: indexingModel.enableIndex
 
-                    flat: true
-
                     model: [
                         i18n("Not indexed"),
                         i18n("Indexed"),
@@ -291,16 +290,18 @@ KCM.ScrollViewKCM {
                 }
 
                 // Delete button to remove this folder entry
-                QQC2.ToolButton {
+                QQC2.Button {
                     enabled: model.deletable
 
                     icon.name: "edit-delete-remove"
+                    text: i18nc("Remove the list item for this filesystem path", "Remove entry")
+                    display: QQC2.AbstractButton.IconOnly
 
                     onClicked: kcm.filteredModel.removeFolder(index)
 
-                    QQC2.ToolTip {
-                        text: i18nc("Remove the list item for this filesystem path", "Remove entry")
-                    }
+                    QQC2.ToolTip.text: text
+                    QQC2.ToolTip.visible: hovered || activeFocus
+                    QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                 }
             }
         }

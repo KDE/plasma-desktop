@@ -15,7 +15,7 @@ import org.kde.kcmutils as KCM
 import Qt.labs.qmlmodels
 
 KCM.ScrollViewKCM {
-    title: i18nc("@title", "Key Bindings")
+    title: i18nc("@title", "Configure Key Bindings…")
 
     Connections {
         target: kcm.xkbOptionsModel

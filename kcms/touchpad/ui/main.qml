@@ -98,7 +98,7 @@ KCM.SimpleKCM {
         QQC2.CheckBox {
             id: deviceEnabled
             Kirigami.FormData.label: i18nd("kcm_touchpad", "General:")
-            text: i18nd("kcm_touchpad", "Device enabled")
+            text: i18nd("kcm_touchpad", "Enable device")
             enabled: root.device?.supportsDisableEvents ?? false
             checked: root.device && (!root.device.supportsDisableEvents || root.device.enabled)
 
@@ -165,9 +165,14 @@ KCM.SimpleKCM {
             }
         }
 
+        Item {
+            Kirigami.FormData.isSection: false
+        }
+
         QQC2.CheckBox {
             id: leftHanded
-            text: i18nd("kcm_touchpad", "Left-handed mode")
+            Kirigami.FormData.label: i18ndc("kcm_touchpad", "@title:group", "Left and right buttons:")
+            text: i18nd("kcm_touchpad", "Swap (left-handed mode)")
             enabled: root.device?.supportsLeftHanded ?? false
             checked: enabled && (root.device?.leftHanded ?? false)
 
@@ -183,7 +188,7 @@ KCM.SimpleKCM {
             spacing: Kirigami.Units.smallSpacing
             QQC2.CheckBox {
                 id: middleEmulation
-                text: i18ndc("kcm_touchpad", "@option:check", "Press left and right buttons to middle-click")
+                text: i18ndc("kcm_touchpad", "@option:check 'both' refers to the left and right buttons'", "Press both simultaneously to middle-click")
                 enabled: root.device?.supportsMiddleEmulation ?? false
                 checked: enabled && (root.device?.middleEmulation ?? false)
 
@@ -200,8 +205,11 @@ KCM.SimpleKCM {
             }
         }
 
-        Item {
-            Kirigami.FormData.isSection: false
+
+        // Speed section
+        Kirigami.Separator {
+            Layout.fillWidth: true
+            Kirigami.FormData.isSection: true
         }
 
         // Acceleration
@@ -305,8 +313,11 @@ KCM.SimpleKCM {
             }
         }
 
-        Item {
-            Kirigami.FormData.isSection: false
+
+        // Scrolling section
+        Kirigami.Separator {
+            Layout.fillWidth: true
+            Kirigami.FormData.isSection: true
         }
 
         // Scroll Speed aka scroll Factor
@@ -374,10 +385,9 @@ KCM.SimpleKCM {
             }
         }
 
-        // Scrolling
         ColumnLayout {
             id: scrollMethod
-            Kirigami.FormData.label: i18nd("kcm_touchpad", "Scrolling:")
+            Kirigami.FormData.label: i18nd("kcm_touchpad begins the sentence 'Scroll by moving two fingers anywhere/moving one finger on edge'", "Scroll by:")
             Kirigami.FormData.buddyFor: scrollMethodTwoFingers
             visible: scrollMethodTwoFingers.enabled || scrollMethodTouchpadEdges.enabled
 
@@ -396,14 +406,14 @@ KCM.SimpleKCM {
 
             QQC2.RadioButton {
                 id: scrollMethodTwoFingers
-                text: i18nd("kcm_touchpad", "Two fingers")
+                text: i18nd("kcm_touchpad completes the sentence 'Scroll by moving two fingers anywhere'", "Moving two fingers anywhere")
                 enabled: root.device?.supportsScrollTwoFinger ?? false
                 checked: root.device?.scrollTwoFinger ?? false
             }
 
             QQC2.RadioButton {
                 id: scrollMethodTouchpadEdges
-                text: i18nd("kcm_touchpad", "Touchpad edges")
+                text: i18nd("kcm_touchpad begins the sentence 'Scroll by moving one finger on edge'", "Moving one finger on edge")
                 enabled: root.device?.supportsScrollEdge ?? false
                 checked: root.device?.scrollEdge ?? false
             }
@@ -438,15 +448,137 @@ KCM.SimpleKCM {
             }
         }
 
-        Item {
-            Kirigami.FormData.isSection: false
+
+        // Right-click/middle-click section
+        Kirigami.Separator {
+            Layout.fillWidth: true
+            Kirigami.FormData.isSection: true
         }
 
-        // Tapping
+        ColumnLayout {
+            id: rightClickMethod
+            Kirigami.FormData.label: i18ndc("kcm_touchpad", "@label for radiobutton group, begins the sentence 'right-click by pressing bottom-right corner/pressing with two fingers'", "Right-click by:")
+            Kirigami.FormData.buddyFor: rightClickMethodAreas
+            enabled: (root.device?.supportsClickMethodAreas && root.device?.supportsClickMethodClickfinger) ?? false
+            visible: (root.device?.supportsClickMethodAreas || root.device?.supportsClickMethodClickfinger) ?? false
+
+            // spacing only on top of radio buttons, not between radio and help text label
+            spacing: 0
+
+            QQC2.ButtonGroup {
+                buttons: [rightClickMethodAreas, rightClickMethodClickfinger]
+                onClicked: {
+                    if (root.device) {
+                        root.device.clickMethodAreas = rightClickMethodAreas.checked && rightClickMethodAreas.visible
+                        root.device.clickMethodClickfinger = rightClickMethodClickfinger.checked && rightClickMethodClickfinger.visible
+                        root.changeSignal()
+                    }
+                }
+            }
+
+            QQC2.RadioButton {
+                id: rightClickMethodAreas
+                text: i18ndc("kcm_touchpad", "@option:radio Completes the sentence 'right-click by pressing bottom-right corner'", "Pressing bottom-right corner")
+                enabled: root.device?.supportsClickMethodAreas ?? false
+                checked: enabled && (root.device?.clickMethodAreas ?? false)
+                Accessible.description: rightClickMethodAreasInfoLabel.visible ? rightClickMethodAreasInfoLabel.text : ""
+            }
+
+            QQC2.Label {
+                id: rightClickMethodAreasInfoLabel
+                Layout.fillWidth: true
+                visible: !middleClickMethod.visible
+                leftPadding: Application.layoutDirection === Qt.LeftToRight ?
+                    rightClickMethodAreas.contentItem.leftPadding : rightClickMethodAreas.padding
+                rightPadding: Application.layoutDirection === Qt.RightToLeft ?
+                    rightClickMethodAreas.contentItem.rightPadding : rightClickMethodAreas.padding
+                text: middleEmulation.checked
+                    ? i18ndc("kcm_touchpad", "@info shown below radio button", "Middle-click by pressing both bottom corners.")
+                    : i18ndc("kcm_touchpad", "@info shown below radio button", "Middle-click by pressing bottom center.")
+                textFormat: Text.PlainText
+                elide: Text.ElideRight
+                font: Kirigami.Theme.smallFont
+            }
+
+            QQC2.RadioButton {
+                id: rightClickMethodClickfinger
+                text: i18ndc("kcm_touchpad", "@option:radio Completes the sentence 'right-click by pressing with two fingers'", "Pressing anywhere with two fingers")
+                Accessible.description: rightClickMethodClickfingerInfoLabel.visible ? rightClickMethodClickfingerInfoLabel.text : ""
+                topPadding: Kirigami.Units.smallSpacing // in lieu of rightClickMethod.spacing
+                enabled: root.device?.supportsClickMethodClickfinger ?? false
+                checked: enabled && (root.device?.clickMethodClickfinger ?? false)
+            }
+
+            QQC2.Label {
+                id: rightClickMethodClickfingerInfoLabel
+                Layout.fillWidth: true
+                visible: !middleClickMethod.visible
+                leftPadding: Application.layoutDirection === Qt.LeftToRight ?
+                    rightClickMethodClickfinger.contentItem.leftPadding : rightClickMethodClickfinger.padding
+                rightPadding: Application.layoutDirection === Qt.RightToLeft ?
+                    rightClickMethodClickfinger.contentItem.rightPadding : rightClickMethodClickfinger.padding
+                text: i18ndc("kcm_touchpad", "@info shown below radio button", "Middle-click by pressing anywhere with three fingers.")
+                textFormat: Text.PlainText
+                elide: Text.ElideRight
+                font: Kirigami.Theme.smallFont
+            }
+        }
+
+        ColumnLayout {
+            id: middleClickMethod
+            Kirigami.FormData.label: i18ndc("kcm_touchpad", "@label for radiobutton group, begins the sentence 'middle-click by pressing bottom-middle edge/'", "Middle-click by middle-click:")
+            Kirigami.FormData.buddyFor: middleSoftwareEmulation
+            enabled: root.device?.supportsMiddleEmulation ?? false
+
+            spacing: Kirigami.Units.smallSpacing
+            visible: noMiddleSoftwareEmulation.visible ||
+                middleSoftwareEmulation.visible ||
+                clickfingerMiddleInfoBox.visible
+
+            QQC2.ButtonGroup {
+                buttons: [noMiddleSoftwareEmulation, middleSoftwareEmulation]
+                onClicked: {
+                    if (root.device) {
+                        root.device.middleEmulation = middleSoftwareEmulation.checked && middleSoftwareEmulation.visible
+                        root.changeSignal()
+                    }
+                }
+            }
+
+            QQC2.RadioButton {
+                id: noMiddleSoftwareEmulation
+                text: i18ndc("kcm_touchpad", "@option:radio completes the sentence 'middle-click by pressing bottom-middle edge'", "Pressing bottom-middle edge")
+                visible: rightClickMethodAreas.checked
+                checked: middleClickMethod.enabled && !(root.device?.middleEmulation ?? false)
+            }
+
+            QQC2.RadioButton {
+                id: middleSoftwareEmulation
+                text: i18ndc("kcm_touchpad", "@option:radio completes the sentence 'middle-click by pressing bottom-left and bottom-right corners'", "Pressing bottom-left and bottom-right corners")
+                visible: rightClickMethodAreas.checked
+                checked: middleClickMethod.enabled && (root.device?.middleEmulation ?? false)
+            }
+
+            QQC2.CheckBox {
+                id: clickfingerMiddleInfoBox
+                text: i18ndc("kcm_touchpad", "@option:check completes the sentence 'middle-click by pressing anywhere with three fingers'", "Pressing anywhere with three fingers")
+                checked: true
+                enabled: false
+                visible: rightClickMethodClickfinger.checked
+            }
+        }
+
+
+        // Tap-to-click section
+        Kirigami.Separator {
+            Layout.fillWidth: true
+            Kirigami.FormData.isSection: true
+        }
+
         QQC2.CheckBox {
             id: tapToClick
             Kirigami.FormData.label: i18ndc("kcm_touchpad", "@label for checkbox, tap-to-click", "Tapping:")
-            text: i18ndc("kcm_touchpad", "@option:check", "Tap-to-click")
+            text: i18ndc("kcm_touchpad", "@option:check", "Tap to click")
             enabled: root.device?.tapFingerCount > 0
             checked: enabled && (root.device?.tapToClick ?? false)
 
@@ -462,7 +594,7 @@ KCM.SimpleKCM {
             spacing: Kirigami.Units.smallSpacing
             QQC2.CheckBox {
                 id: tapAndDrag
-                text: i18nd("kcm_touchpad", "Tap-and-drag")
+                text: i18nd("kcm_touchpad", "Allow dragging after tapping")
                 enabled: root.device?.tapFingerCount > 0 && tapToClick.checked
                 checked: enabled && (root.device?.tapAndDrag ?? false)
 
@@ -478,7 +610,6 @@ KCM.SimpleKCM {
                 toolTipText: i18ndc("kcm_touchpad", "@info:tooltip from ContextualHelpButton", "Tap, then tap and immediately slide finger over the touchpad to drag. Lift finger to drop.")
             }
         }
-
 
         QQC2.CheckBox {
             id: tapAndDragLock
@@ -529,123 +660,6 @@ KCM.SimpleKCM {
                     : i18nd("kcm_touchpad", "Middle-click")
                 )
                 checked: multiTap.enabled && (root.device?.lmrTapButtonMap ?? false)
-            }
-        }
-
-        Item {
-            Kirigami.FormData.isSection: false
-        }
-
-        ColumnLayout {
-            id: rightClickMethod
-            Kirigami.FormData.label: i18ndc("kcm_touchpad", "@label for radiobutton group, configure right-click with touch-pad integrated button (pressing into the touchpad)", "Integrated right-click:")
-            Kirigami.FormData.buddyFor: rightClickMethodAreas
-            enabled: (root.device?.supportsClickMethodAreas && root.device?.supportsClickMethodClickfinger) ?? false
-            visible: (root.device?.supportsClickMethodAreas || root.device?.supportsClickMethodClickfinger) ?? false
-
-            // spacing only on top of radio buttons, not between radio and help text label
-            spacing: 0
-
-            QQC2.ButtonGroup {
-                buttons: [rightClickMethodAreas, rightClickMethodClickfinger]
-                onClicked: {
-                    if (root.device) {
-                        root.device.clickMethodAreas = rightClickMethodAreas.checked && rightClickMethodAreas.visible
-                        root.device.clickMethodClickfinger = rightClickMethodClickfinger.checked && rightClickMethodClickfinger.visible
-                        root.changeSignal()
-                    }
-                }
-            }
-
-            QQC2.RadioButton {
-                id: rightClickMethodAreas
-                text: i18ndc("kcm_touchpad", "@option:radio touchpad integrated right-click", "Press bottom-right corner")
-                enabled: root.device?.supportsClickMethodAreas ?? false
-                checked: enabled && (root.device?.clickMethodAreas ?? false)
-                Accessible.description: rightClickMethodAreasInfoLabel.visible ? rightClickMethodAreasInfoLabel.text : ""
-            }
-
-            QQC2.Label {
-                id: rightClickMethodAreasInfoLabel
-                Layout.fillWidth: true
-                visible: !middleClickMethod.visible
-                leftPadding: Application.layoutDirection === Qt.LeftToRight ?
-                    rightClickMethodAreas.contentItem.leftPadding : rightClickMethodAreas.padding
-                rightPadding: Application.layoutDirection === Qt.RightToLeft ?
-                    rightClickMethodAreas.contentItem.rightPadding : rightClickMethodAreas.padding
-                text: middleEmulation.checked
-                    ? i18ndc("kcm_touchpad", "@info shown below radio button", "Middle-click by pressing both bottom corners.")
-                    : i18ndc("kcm_touchpad", "@info shown below radio button", "Middle-click by pressing bottom center.")
-                textFormat: Text.PlainText
-                elide: Text.ElideRight
-                font: Kirigami.Theme.smallFont
-            }
-
-            QQC2.RadioButton {
-                id: rightClickMethodClickfinger
-                text: i18ndc("kcm_touchpad", "@option:radio touchpad integrated right-click", "Press touchpad with two fingers")
-                Accessible.description: rightClickMethodClickfingerInfoLabel.visible ? rightClickMethodClickfingerInfoLabel.text : ""
-                topPadding: Kirigami.Units.smallSpacing // in lieu of rightClickMethod.spacing
-                enabled: root.device?.supportsClickMethodClickfinger ?? false
-                checked: enabled && (root.device?.clickMethodClickfinger ?? false)
-            }
-
-            QQC2.Label {
-                id: rightClickMethodClickfingerInfoLabel
-                Layout.fillWidth: true
-                visible: !middleClickMethod.visible
-                leftPadding: Application.layoutDirection === Qt.LeftToRight ?
-                    rightClickMethodClickfinger.contentItem.leftPadding : rightClickMethodClickfinger.padding
-                rightPadding: Application.layoutDirection === Qt.RightToLeft ?
-                    rightClickMethodClickfinger.contentItem.rightPadding : rightClickMethodClickfinger.padding
-                text: i18ndc("kcm_touchpad", "@info shown below radio button", "Middle-click by pressing with three fingers.")
-                textFormat: Text.PlainText
-                elide: Text.ElideRight
-                font: Kirigami.Theme.smallFont
-            }
-        }
-
-        ColumnLayout {
-            id: middleClickMethod
-            Kirigami.FormData.label: i18ndc("kcm_touchpad", "@label for radiobutton group, configure middle-click with touch-pad integrated button (pressing into the touchpad)", "Integrated middle-click:")
-            Kirigami.FormData.buddyFor: middleSoftwareEmulation
-            enabled: root.device?.supportsMiddleEmulation ?? false
-
-            spacing: Kirigami.Units.smallSpacing
-            visible: noMiddleSoftwareEmulation.visible ||
-                     middleSoftwareEmulation.visible ||
-                     clickfingerMiddleInfoBox.visible
-
-            QQC2.ButtonGroup {
-                buttons: [noMiddleSoftwareEmulation, middleSoftwareEmulation]
-                onClicked: {
-                    if (root.device) {
-                        root.device.middleEmulation = middleSoftwareEmulation.checked && middleSoftwareEmulation.visible
-                        root.changeSignal()
-                    }
-                }
-            }
-
-            QQC2.RadioButton {
-                id: noMiddleSoftwareEmulation
-                text: i18ndc("kcm_touchpad", "@option:radio touchpad integrated middle-click", "Press bottom middle edge")
-                visible: rightClickMethodAreas.checked
-                checked: middleClickMethod.enabled && !(root.device?.middleEmulation ?? false)
-            }
-
-            QQC2.RadioButton {
-                id: middleSoftwareEmulation
-                text: i18ndc("kcm_touchpad", "@option:radio touchpad integrated middle-click", "Press bottom left and bottom right corners")
-                visible: rightClickMethodAreas.checked
-                checked: middleClickMethod.enabled && (root.device?.middleEmulation ?? false)
-            }
-
-            QQC2.CheckBox {
-                id: clickfingerMiddleInfoBox
-                text: i18ndc("kcm_touchpad", "@option:check touchpad integrated middle-click", "Press touchpad with three fingers")
-                checked: true
-                enabled: false
-                visible: rightClickMethodClickfinger.checked
             }
         }
     }
