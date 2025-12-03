@@ -186,10 +186,11 @@ KCM.SimpleKCM {
 
         RowLayout {
             spacing: Kirigami.Units.smallSpacing
+            enabled: root.device?.supportsMiddleEmulation ?? false
+
             QQC2.CheckBox {
                 id: middleEmulation
                 text: i18ndc("kcm_touchpad", "@option:check 'both' refers to the left and right buttons'", "Press both simultaneously to middle-click")
-                enabled: root.device?.supportsMiddleEmulation ?? false
                 checked: enabled && (root.device?.middleEmulation ?? false)
 
                 onToggled: {
@@ -291,11 +292,11 @@ KCM.SimpleKCM {
         RowLayout {
             Kirigami.FormData.buddyFor: accelProfileEnabled
             spacing: Kirigami.Units.smallSpacing
+            enabled: root.device?.supportsPointerAccelerationProfileAdaptive ?? false
 
             QQC2.CheckBox {
                 id: accelProfileEnabled
                 text: i18nd("kcm_touchpad", "Enable pointer acceleration")
-                enabled: root.device?.supportsPointerAccelerationProfileAdaptive ?? false
                 visible: enabled
                 checked: enabled && !(root.device?.pointerAccelerationProfileFlat ?? false)
 
@@ -592,10 +593,11 @@ KCM.SimpleKCM {
 
         RowLayout {
             spacing: Kirigami.Units.smallSpacing
+            enabled: root.device?.tapFingerCount > 0 && tapToClick.checked
+
             QQC2.CheckBox {
                 id: tapAndDrag
                 text: i18nd("kcm_touchpad", "Allow dragging after tapping")
-                enabled: root.device?.tapFingerCount > 0 && tapToClick.checked
                 checked: enabled && (root.device?.tapAndDrag ?? false)
 
                 onToggled: {

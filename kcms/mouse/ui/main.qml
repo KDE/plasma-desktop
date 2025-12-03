@@ -116,10 +116,10 @@ KCMUtils.SimpleKCM {
 
         RowLayout {
             spacing: Kirigami.Units.smallSpacing
+            enabled: root.device?.supportsMiddleEmulation ?? false
             QQC2.CheckBox {
                 id: middleEmulation
                 text: i18ndc("kcmmouse", "@option:check 'both' refers to the left and right buttons'", "Press both simultaneously to middle-click")
-                enabled: root.device?.supportsMiddleEmulation ?? false
                 checked: enabled && (root.device?.middleEmulation ?? false)
 
                 onToggled: {
@@ -221,11 +221,11 @@ KCMUtils.SimpleKCM {
         RowLayout {
             Kirigami.FormData.buddyFor: accelProfileEnabled
             spacing: Kirigami.Units.smallSpacing
+            enabled: root.device?.supportsPointerAccelerationProfileAdaptive ?? false
 
             QQC2.CheckBox {
                 id: accelProfileEnabled
                 text: i18nd("kcmmouse", "Enable pointer acceleration")
-                enabled: root.device?.supportsPointerAccelerationProfileAdaptive ?? false
                 visible: enabled
                 checked: enabled && !(root.device?.pointerAccelerationProfileFlat ?? false)
 
@@ -333,11 +333,11 @@ KCMUtils.SimpleKCM {
         RowLayout {
             Kirigami.FormData.buddyFor: scrollOnButtonDown
             spacing: Kirigami.Units.smallSpacing
+            enabled: root.device?.supportsScrollOnButtonDown ?? false
 
             QQC2.CheckBox {
                 id: scrollOnButtonDown
                 text: i18nd("kcmmouse", "Hold down middle button and move mouse to scroll")
-                enabled: root.device?.supportsScrollOnButtonDown ?? false
                 checked: enabled && (root.device?.scrollOnButtonDown ?? false)
 
                 onToggled: {
