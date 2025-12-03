@@ -14,7 +14,6 @@ import org.kde.plasma.private.kicker as Kicker
 Kicker.SubMenu {
     id: itemDialog
 
-    property alias focusParent: itemListView.focusParent
     property alias model: funnelModel.sourceModel
 
     property int index: -1

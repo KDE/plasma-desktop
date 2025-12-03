@@ -27,7 +27,6 @@ FocusScope {
     signal navigateLeftRequested
     signal navigateRightRequested
 
-    property Item focusParent: null
     property Item mainSearchField: null
     property QtObject dialog: null
     property QtObject childDialog: null
@@ -68,7 +67,6 @@ FocusScope {
 
             itemList.childDialog = itemListDialogComponent.createObject(itemList, {
                 mainSearchField: mainSearchField,
-                focusParent: itemList,
                 visualParent: listView.currentItem,
                 model: model.modelForRow(listView.currentIndex),
                 visible: true,
