@@ -65,7 +65,7 @@ RuntimeDependencies:
     'network/kio-extras': '@latest-kf6'
     'plasma/kactivitymanagerd': '@same'
     'plasma/plasma-pa': '@same'
-    'sdk/selenium-webdriver-at-spi': '@latest-kf6'
+    'sdk/selenium-webdriver-at-spi': '@same'
 
 Options:
  ctest-arguments: '--repeat until-pass:5'
