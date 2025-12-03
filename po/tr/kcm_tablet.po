@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-02 00:43+0000\n"
+"POT-Creation-Date: 2025-12-03 00:45+0000\n"
 "PO-Revision-Date: 2025-09-04 14:33+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -454,29 +454,42 @@ msgstr ""
 "Başka türlü söylenmediyse tableti yapılandırmak için buradaki ayarlar yerine "
 "o sürücü tarafından sağlanan ayarları kullanın."
 
-#: ui/main.qml:104
+#: ui/main.qml:106
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Aygıt:"
 
-#: ui/main.qml:172
+#: ui/main.qml:174
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
 msgstr "Görüntü"
 
-#: ui/main.qml:185
+#: ui/main.qml:187
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
 msgstr "Kalem"
 
-#: ui/main.qml:197
+#: ui/main.qml:199
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
 msgstr "Ped"
+
+#: ui/MissingPadTab.qml:15
+#, fuzzy, kde-format
+#| msgid "No drawing tablets found"
+msgid "No pad inputs found"
+msgstr "Çizim tableti bulunamadı"
+
+#: ui/MissingPadTab.qml:16
+#, kde-format
+msgid ""
+"There's no buttons or other inputs detected. This could mean you're missing "
+"a driver for this device."
+msgstr ""
 
 #: ui/PadTab.qml:37
 #, kde-format

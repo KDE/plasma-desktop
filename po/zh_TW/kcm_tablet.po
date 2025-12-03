@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-02 00:43+0000\n"
+"POT-Creation-Date: 2025-12-03 00:45+0000\n"
 "PO-Revision-Date: 2025-09-05 17:11+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -450,29 +450,42 @@ msgstr ""
 "這台裝置由您所安裝的使用者驅動程式所管理。請使用該驅動程式的設定來配置繪圖"
 "板，除非該驅動程式有請您使用此處的設定。"
 
-#: ui/main.qml:104
+#: ui/main.qml:106
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "裝置："
 
-#: ui/main.qml:172
+#: ui/main.qml:174
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
 msgstr "顯示器"
 
-#: ui/main.qml:185
+#: ui/main.qml:187
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
 msgstr "筆"
 
-#: ui/main.qml:197
+#: ui/main.qml:199
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
 msgstr "繪圖板"
+
+#: ui/MissingPadTab.qml:15
+#, fuzzy, kde-format
+#| msgid "No drawing tablets found"
+msgid "No pad inputs found"
+msgstr "沒有找到繪圖平板"
+
+#: ui/MissingPadTab.qml:16
+#, kde-format
+msgid ""
+"There's no buttons or other inputs detected. This could mean you're missing "
+"a driver for this device."
+msgstr ""
 
 #: ui/PadTab.qml:37
 #, kde-format

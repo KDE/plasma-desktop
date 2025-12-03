@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-02 00:43+0000\n"
+"POT-Creation-Date: 2025-12-03 00:45+0000\n"
 "PO-Revision-Date: 2025-09-04 09:54+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -456,29 +456,42 @@ msgstr ""
 "d'utilitzar aquesta configuració, tret que s'indiqui específicament el "
 "contrari."
 
-#: ui/main.qml:104
+#: ui/main.qml:106
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Dispositiu:"
 
-#: ui/main.qml:172
+#: ui/main.qml:174
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
 msgstr "Visualització"
 
-#: ui/main.qml:185
+#: ui/main.qml:187
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
 msgstr "Llapis"
 
-#: ui/main.qml:197
+#: ui/main.qml:199
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
 msgstr "Tauleta gràfica"
+
+#: ui/MissingPadTab.qml:15
+#, fuzzy, kde-format
+#| msgid "No drawing tablets found"
+msgid "No pad inputs found"
+msgstr "No s'ha trobat cap tauleta de dibuix"
+
+#: ui/MissingPadTab.qml:16
+#, kde-format
+msgid ""
+"There's no buttons or other inputs detected. This could mean you're missing "
+"a driver for this device."
+msgstr ""
 
 #: ui/PadTab.qml:37
 #, kde-format

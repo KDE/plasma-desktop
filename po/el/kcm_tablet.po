@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-02 00:43+0000\n"
+"POT-Creation-Date: 2025-12-03 00:45+0000\n"
 "PO-Revision-Date: 2024-09-13 18:18+0300\n"
 "Last-Translator: Antonis G. <capoiosct@gmail.com>\n"
 "Language-Team: el <kde-i18n-el@kde.org>\n"
@@ -481,29 +481,42 @@ msgid ""
 "specifically instructed otherwise."
 msgstr ""
 
-#: ui/main.qml:104
+#: ui/main.qml:106
 #, kde-format
 msgctxt "@label:listbox The device we are configuring"
 msgid "Device:"
 msgstr "Συσκευή:"
 
-#: ui/main.qml:172
+#: ui/main.qml:174
 #, kde-format
 msgctxt "@title:tab"
 msgid "Display"
 msgstr ""
 
-#: ui/main.qml:185
+#: ui/main.qml:187
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pen"
 msgstr ""
 
-#: ui/main.qml:197
+#: ui/main.qml:199
 #, kde-format
 msgctxt "@title:tab"
 msgid "Pad"
 msgstr "Επιφάνεια"
+
+#: ui/MissingPadTab.qml:15
+#, fuzzy, kde-format
+#| msgid "No drawing tablets found"
+msgid "No pad inputs found"
+msgstr "Δεν βρέθηκαν tablets σχεδίασης"
+
+#: ui/MissingPadTab.qml:16
+#, kde-format
+msgid ""
+"There's no buttons or other inputs detected. This could mean you're missing "
+"a driver for this device."
+msgstr ""
 
 #: ui/PadTab.qml:37
 #, fuzzy, kde-format
