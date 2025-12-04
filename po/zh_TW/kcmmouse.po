@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2025-05-16 16:03+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -146,21 +146,32 @@ msgstr "一般："
 
 #: ui/main.qml:88
 #, kde-format
-msgid "Device enabled"
-msgstr "裝置已啟用"
+msgid "Enable device"
+msgstr ""
 
-#: ui/main.qml:103
-#, kde-format
-msgid "Left-handed mode"
+#: ui/main.qml:105
+#, fuzzy, kde-format
+#| msgid "Swap left and right buttons."
+msgctxt "@title:group"
+msgid "Left and right buttons:"
+msgstr "交換左右鍵。"
+
+#: ui/main.qml:106
+#, fuzzy, kde-format
+#| msgid "Left-handed mode"
+msgid "Swap (left-handed mode)"
 msgstr "左手模式(&L)"
 
-#: ui/main.qml:118
-#, kde-format
-msgctxt "@option:check"
-msgid "Press left and right buttons for middle-click"
-msgstr "按下左右鍵傳出中鍵(&P)"
+#: ui/main.qml:121
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Pressing the left and right button simultaneously acts as middle-click."
+msgctxt "@option:check 'both' refers to the left and right buttons'"
+msgid "Press both simultaneously to middle-click"
+msgstr "同時按下左右鍵來進行中鍵點擊。"
 
-#: ui/main.qml:130
+#: ui/main.qml:133
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -169,56 +180,56 @@ msgid ""
 msgstr ""
 "啟用此設定會使點擊增加 50 毫秒的延遲。這個延遲用來偵測左右鍵的同時按下。"
 
-#: ui/main.qml:142
+#: ui/main.qml:148
 #, kde-format
 msgid "Pointer speed:"
 msgstr "指標速度："
 
-#: ui/main.qml:221
+#: ui/main.qml:227
 #, kde-format
 msgid "Enable pointer acceleration"
 msgstr "啟用指標加速"
 
-#: ui/main.qml:235
+#: ui/main.qml:241
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr "啟用時，滑鼠移動較快時會使指標移動距離較遠。"
 
-#: ui/main.qml:245
+#: ui/main.qml:254
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "捲動速度："
 
-#: ui/main.qml:295
+#: ui/main.qml:304
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "較慢"
 
-#: ui/main.qml:304
+#: ui/main.qml:313
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "較快"
 
-#: ui/main.qml:312
+#: ui/main.qml:321
 #, kde-format
 msgid "Scrolling:"
 msgstr "捲動："
 
-#: ui/main.qml:313
+#: ui/main.qml:322
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "反轉捲動方向(&I)"
 
-#: ui/main.qml:330
+#: ui/main.qml:339
 #, kde-format
 msgid "Hold down middle button and move mouse to scroll"
 msgstr "按住滑鼠中鍵並移動滑鼠來捲動(&R)"
 
-#: ui/main.qml:342
+#: ui/main.qml:351
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -231,16 +242,15 @@ msgstr ""
 "等。這個功能支援任何裝置，但主要的用意是在沒有滾輪的裝置上作為滾輪的替代使"
 "用。"
 
+#~ msgid "Device enabled"
+#~ msgstr "裝置已啟用"
+
+#~ msgctxt "@option:check"
+#~ msgid "Press left and right buttons for middle-click"
+#~ msgstr "按下左右鍵傳出中鍵(&P)"
+
 #~ msgid "Accept input through this device."
 #~ msgstr "透過此裝置同意輸入"
-
-#~ msgid "Swap left and right buttons."
-#~ msgstr "交換左右鍵。"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Pressing the left and right button simultaneously acts as middle-click."
-#~ msgstr "同時按下左右鍵來進行中鍵點擊。"
 
 #~ msgid "Touchscreen-like scrolling."
 #~ msgstr "像觸控螢幕的捲動。"

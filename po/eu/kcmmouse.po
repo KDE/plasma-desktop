@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2025-05-25 17:47+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -150,21 +150,33 @@ msgstr "Orokorra:"
 
 #: ui/main.qml:88
 #, kde-format
-msgid "Device enabled"
-msgstr "Gailua gaituta"
+msgid "Enable device"
+msgstr ""
 
-#: ui/main.qml:103
-#, kde-format
-msgid "Left-handed mode"
+#: ui/main.qml:105
+#, fuzzy, kde-format
+#| msgid "Swap left and right buttons."
+msgctxt "@title:group"
+msgid "Left and right buttons:"
+msgstr "Trukatu ezker eta eskuin botoiak"
+
+#: ui/main.qml:106
+#, fuzzy, kde-format
+#| msgid "Left-handed mode"
+msgid "Swap (left-handed mode)"
 msgstr "Ezkerti modua"
 
-#: ui/main.qml:118
-#, kde-format
-msgctxt "@option:check"
-msgid "Press left and right buttons for middle-click"
-msgstr "Sakatu ezker eta eskuin botoiak erdiko-klik eragiteko"
+#: ui/main.qml:121
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Pressing the left and right button simultaneously acts as middle-click."
+msgctxt "@option:check 'both' refers to the left and right buttons'"
+msgid "Press both simultaneously to middle-click"
+msgstr ""
+"Ezker eta eskuin botoiak aldi berean sakatzea erdiko klik gisa jokatzen du."
 
-#: ui/main.qml:130
+#: ui/main.qml:133
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -175,17 +187,17 @@ msgstr ""
 "gehigarria beharrezkoa da ezker eta eskuin botoien aldi bereko sakatzea "
 "antzemateko."
 
-#: ui/main.qml:142
+#: ui/main.qml:148
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Erakuslearen abiadura:"
 
-#: ui/main.qml:221
+#: ui/main.qml:227
 #, kde-format
 msgid "Enable pointer acceleration"
 msgstr "Gaitu erakuslearen azelerazioa"
 
-#: ui/main.qml:235
+#: ui/main.qml:241
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -194,39 +206,39 @@ msgstr ""
 "Gaituta dagoenean, erakuslearen desplazamendu-distantzia handitu egiten da "
 "mugimendu-abiadura azkarragoarekin."
 
-#: ui/main.qml:245
+#: ui/main.qml:254
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Kiribiltze abiadura:"
 
-#: ui/main.qml:295
+#: ui/main.qml:304
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Mantsoago"
 
-#: ui/main.qml:304
+#: ui/main.qml:313
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Bizkorrago"
 
-#: ui/main.qml:312
+#: ui/main.qml:321
 #, kde-format
 msgid "Scrolling:"
 msgstr "Kiribiltzea:"
 
-#: ui/main.qml:313
+#: ui/main.qml:322
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Alderantzizko kiribiltze-noranzkoa"
 
-#: ui/main.qml:330
+#: ui/main.qml:339
 #, kde-format
 msgid "Hold down middle button and move mouse to scroll"
 msgstr "Eutsi erdiko botoia sakatuta eta mugitu sagua kiribiltzeko"
 
-#: ui/main.qml:342
+#: ui/main.qml:351
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -241,18 +253,15 @@ msgstr ""
 "gurpilik ez duten gailuetan kiribiltzeko gurpilen ordezko gisa pentsatuta "
 "dago."
 
+#~ msgid "Device enabled"
+#~ msgstr "Gailua gaituta"
+
+#~ msgctxt "@option:check"
+#~ msgid "Press left and right buttons for middle-click"
+#~ msgstr "Sakatu ezker eta eskuin botoiak erdiko-klik eragiteko"
+
 #~ msgid "Accept input through this device."
 #~ msgstr "Onartu sarrera gailu honen bidez."
-
-#~ msgid "Swap left and right buttons."
-#~ msgstr "Trukatu ezker eta eskuin botoiak"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Pressing the left and right button simultaneously acts as middle-click."
-#~ msgstr ""
-#~ "Ezker eta eskuin botoiak aldi berean sakatzea erdiko klik gisa jokatzen "
-#~ "du."
 
 #~ msgid "Touchscreen-like scrolling."
 #~ msgstr "Ukimen-pantailakoa bezalako kiribiltzea."

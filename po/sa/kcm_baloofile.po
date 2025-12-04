@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2024-12-25 19:45+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -63,91 +63,93 @@ msgstr ""
 "File Search भवतः सञ्चिकानां शीघ्रं स्थानं ज्ञातुं साहाय्यं करोति । भवान् के के पुटे, के "
 "प्रकाराः सञ्चिकादत्तांशः अनुक्रमितः इति चिन्वितुं शक्नोति ।"
 
-#: ui/main.qml:105
-#, kde-format
-msgctxt "@title:group"
-msgid "File indexing:"
-msgstr "सञ्चिका अनुक्रमणिका :"
-
-#: ui/main.qml:106
-#, kde-format
-msgctxt "@action:check"
-msgid "Enabled"
-msgstr "सक्षमम्"
-
-#: ui/main.qml:122
+#: ui/main.qml:108
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
 msgstr "अनुक्रमणिकां कर्तुं दत्तांशः :"
 
-#: ui/main.qml:124
+#: ui/main.qml:109
 #, kde-format
-msgid "File names and contents"
-msgstr "सञ्चिकानामानि विषयवस्तु च"
+msgid "Nothing (disable indexing entirely)"
+msgstr ""
 
-#: ui/main.qml:137
+#: ui/main.qml:121
 #, kde-format
 msgid "File names only"
 msgstr "केवलं सञ्चिकानामानि"
 
-#: ui/main.qml:156
+#: ui/main.qml:136
 #, kde-format
-msgid "Hidden files and folders"
+msgid "File names and contents"
+msgstr "सञ्चिकानामानि विषयवस्तु च"
+
+#: ui/main.qml:157
+#, fuzzy, kde-format
+#| msgid "Hidden files and folders"
+msgid "Also index hidden files and folders"
 msgstr "गुप्तसञ्चिकाः पुटकानि च"
 
-#: ui/main.qml:182
+#: ui/main.qml:183
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr "स्थानानि"
 
-#: ui/main.qml:185
+#: ui/main.qml:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "एकस्य फोल्डरस्य अनुक्रमणं आरभत..."
 
-#: ui/main.qml:193
+#: ui/main.qml:194
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "समुच्चय अनुक्रमणं स्थगयन्तु..."
 
-#: ui/main.qml:211
+#: ui/main.qml:212
 #, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
 msgstr "%1, %2% पूर्णम्"
 
-#: ui/main.qml:218
+#: ui/main.qml:219
 #, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "Currently indexing: <filename>%1</filename>"
 msgstr "सम्प्रति अनुक्रमणिका: <filename>%1</filename>"
 
-#: ui/main.qml:271
+#: ui/main.qml:270
 #, kde-format
 msgid "Not indexed"
 msgstr "न अनुक्रमितम्"
 
-#: ui/main.qml:272
+#: ui/main.qml:271
 #, kde-format
 msgid "Indexed"
 msgstr "अनुक्रमितम्"
 
-#: ui/main.qml:302
+#: ui/main.qml:297
 #, kde-format
 msgctxt "Remove the list item for this filesystem path"
 msgid "Remove entry"
 msgstr "प्रविष्टिं निष्कासयन्तु"
 
-#: ui/main.qml:317
+#: ui/main.qml:318
 #, kde-format
 msgid "Select a folder to include"
 msgstr "समावेशार्थं एकं पुटं चिनोतु"
 
-#: ui/main.qml:317
+#: ui/main.qml:318
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "बहिष्कारार्थं एकं पुटं चिनोतु"
+
+#~ msgctxt "@title:group"
+#~ msgid "File indexing:"
+#~ msgstr "सञ्चिका अनुक्रमणिका :"
+
+#~ msgctxt "@action:check"
+#~ msgid "Enabled"
+#~ msgstr "सक्षमम्"

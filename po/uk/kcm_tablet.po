@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-03 00:45+0000\n"
-"PO-Revision-Date: 2025-09-04 08:21+0300\n"
+"PO-Revision-Date: 2025-12-03 15:15+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -479,10 +479,9 @@ msgid "Pad"
 msgstr "Панель"
 
 #: ui/MissingPadTab.qml:15
-#, fuzzy, kde-format
-#| msgid "No drawing tablets found"
+#, kde-format
 msgid "No pad inputs found"
-msgstr "Планшетів для малювання не знайдено"
+msgstr "Не знайдено жодної панелі для введення"
 
 #: ui/MissingPadTab.qml:16
 #, kde-format
@@ -490,6 +489,8 @@ msgid ""
 "There's no buttons or other inputs detected. This could mean you're missing "
 "a driver for this device."
 msgstr ""
+"Не виявлено ні кнопок, ні інших джерел вхідних даних. Це може вказувати на "
+"те, що у системі немає драйвера для цього пристрою."
 
 #: ui/PadTab.qml:37
 #, kde-format

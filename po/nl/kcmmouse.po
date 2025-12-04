@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2025-05-14 23:34+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -161,21 +161,32 @@ msgstr "Algemeen:"
 
 #: ui/main.qml:88
 #, kde-format
-msgid "Device enabled"
-msgstr "Apparaat ingeschakeld"
+msgid "Enable device"
+msgstr ""
 
-#: ui/main.qml:103
-#, kde-format
-msgid "Left-handed mode"
+#: ui/main.qml:105
+#, fuzzy, kde-format
+#| msgid "Swap left and right buttons."
+msgctxt "@title:group"
+msgid "Left and right buttons:"
+msgstr "Linker en rechter knop verwisselen."
+
+#: ui/main.qml:106
+#, fuzzy, kde-format
+#| msgid "Left-handed mode"
+msgid "Swap (left-handed mode)"
 msgstr "Modus linkshandig"
 
-#: ui/main.qml:118
-#, kde-format
-msgctxt "@option:check"
-msgid "Press left and right buttons for middle-click"
-msgstr "Linker en rechter knoppen indrukken voor middelste muisklik"
+#: ui/main.qml:121
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Pressing the left and right button simultaneously acts as middle-click."
+msgctxt "@option:check 'both' refers to the left and right buttons'"
+msgid "Press both simultaneously to middle-click"
+msgstr "Linker en rechter knop tegelijk indrukken werkt als midden-klik."
 
-#: ui/main.qml:130
+#: ui/main.qml:133
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -186,17 +197,17 @@ msgstr ""
 "De extra vertraging is nodig om gelijktijdig indrukken van de linker en "
 "rechter knop correct te detecteren."
 
-#: ui/main.qml:142
+#: ui/main.qml:148
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Snelheid van aanwijzer:"
 
-#: ui/main.qml:221
+#: ui/main.qml:227
 #, kde-format
 msgid "Enable pointer acceleration"
 msgstr "Aanwijzerversnelling inschakelen"
 
-#: ui/main.qml:235
+#: ui/main.qml:241
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -205,39 +216,39 @@ msgstr ""
 "Indien ingeschakeld, wordt de verplaatsingsafstand van de aanwijzer vergroot "
 "met snellere verplaatsingssnelheid."
 
-#: ui/main.qml:245
+#: ui/main.qml:254
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Scroll snelheid:"
 
-#: ui/main.qml:295
+#: ui/main.qml:304
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Langzamer"
 
-#: ui/main.qml:304
+#: ui/main.qml:313
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Sneller"
 
-#: ui/main.qml:312
+#: ui/main.qml:321
 #, kde-format
 msgid "Scrolling:"
 msgstr "Scrollen:"
 
-#: ui/main.qml:313
+#: ui/main.qml:322
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Scrollrichting omdraaien"
 
-#: ui/main.qml:330
+#: ui/main.qml:339
 #, kde-format
 msgid "Hold down middle button and move mouse to scroll"
 msgstr "Middelste muisknop ingedrukt houden en muis verplaatsen om te schuiven"
 
-#: ui/main.qml:342
+#: ui/main.qml:351
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -251,16 +262,15 @@ msgstr ""
 "videogames. Het kan gebruikt worden op elke apparaat, maar is primair "
 "bedoeld als een vervanger voor draaiwielen op apparaten die er geen hebben."
 
+#~ msgid "Device enabled"
+#~ msgstr "Apparaat ingeschakeld"
+
+#~ msgctxt "@option:check"
+#~ msgid "Press left and right buttons for middle-click"
+#~ msgstr "Linker en rechter knoppen indrukken voor middelste muisklik"
+
 #~ msgid "Accept input through this device."
 #~ msgstr "Invoer via dit apparaat accepteren."
-
-#~ msgid "Swap left and right buttons."
-#~ msgstr "Linker en rechter knop verwisselen."
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Pressing the left and right button simultaneously acts as middle-click."
-#~ msgstr "Linker en rechter knop tegelijk indrukken werkt als midden-klik."
 
 #~ msgid "Touchscreen-like scrolling."
 #~ msgstr "Schuiven zoals op aanraakscherm."

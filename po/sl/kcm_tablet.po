@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-03 00:45+0000\n"
-"PO-Revision-Date: 2025-09-04 07:02+0200\n"
+"PO-Revision-Date: 2025-12-03 07:09+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.8\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -479,10 +479,9 @@ msgid "Pad"
 msgstr "Podloga"
 
 #: ui/MissingPadTab.qml:15
-#, fuzzy, kde-format
-#| msgid "No drawing tablets found"
+#, kde-format
 msgid "No pad inputs found"
-msgstr "Ni najdenih risalnih tablic"
+msgstr "Ni najdenih vhodov za tablico"
 
 #: ui/MissingPadTab.qml:16
 #, kde-format
@@ -490,6 +489,8 @@ msgid ""
 "There's no buttons or other inputs detected. This could mean you're missing "
 "a driver for this device."
 msgstr ""
+"Ni zaznanih gumbov ali drugih vhodov. To lahko pomeni, da za to napravo "
+"manjka gonilnik."
 
 #: ui/PadTab.qml:37
 #, kde-format

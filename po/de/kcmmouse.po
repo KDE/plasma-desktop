@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2025-06-06 21:56+0200\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -159,21 +159,34 @@ msgstr "Allgemein:"
 
 #: ui/main.qml:88
 #, kde-format
-msgid "Device enabled"
-msgstr "Gerät aktiviert"
+msgid "Enable device"
+msgstr ""
 
-#: ui/main.qml:103
-#, kde-format
-msgid "Left-handed mode"
+#: ui/main.qml:105
+#, fuzzy, kde-format
+#| msgid "Swap left and right buttons."
+msgctxt "@title:group"
+msgid "Left and right buttons:"
+msgstr "Linke und Rechte Taste tauschen"
+
+#: ui/main.qml:106
+#, fuzzy, kde-format
+#| msgid "Left-handed mode"
+msgid "Swap (left-handed mode)"
 msgstr "Linkshändige Bedienung"
 
-#: ui/main.qml:118
-#, kde-format
-msgctxt "@option:check"
-msgid "Press left and right buttons for middle-click"
-msgstr "Linke und rechte Taste für Mittelklick drücken"
+#: ui/main.qml:121
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Pressing the left and right button simultaneously acts as middle-click."
+msgctxt "@option:check 'both' refers to the left and right buttons'"
+msgid "Press both simultaneously to middle-click"
+msgstr ""
+"Gleichzeitiges Klicken mit der linken und rechten Maustaste emuliert das "
+"Klicken mit der mittleren Maustaste."
 
-#: ui/main.qml:130
+#: ui/main.qml:133
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -184,17 +197,17 @@ msgstr ""
 "zusätzliche Verzögerung wird benötigt, um das gleichzeitige Drücken der "
 "linken und rechten Taste korrekt zu erkennen."
 
-#: ui/main.qml:142
+#: ui/main.qml:148
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Zeigergeschwindigkeit:"
 
-#: ui/main.qml:221
+#: ui/main.qml:227
 #, kde-format
 msgid "Enable pointer acceleration"
 msgstr "Zeigerbeschleunigung aktivieren"
 
-#: ui/main.qml:235
+#: ui/main.qml:241
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -203,40 +216,40 @@ msgstr ""
 "Ist dies aktiviert, legt der Zeiger mehr Weg zurück, wenn er schneller "
 "bewegt wird."
 
-#: ui/main.qml:245
+#: ui/main.qml:254
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Bildlaufgeschwindigkeit:"
 
-#: ui/main.qml:295
+#: ui/main.qml:304
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Langsamer"
 
-#: ui/main.qml:304
+#: ui/main.qml:313
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Schneller"
 
-#: ui/main.qml:312
+#: ui/main.qml:321
 #, kde-format
 msgid "Scrolling:"
 msgstr "Bildlauf:"
 
-#: ui/main.qml:313
+#: ui/main.qml:322
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Laufrichtung umkehren"
 
-#: ui/main.qml:330
+#: ui/main.qml:339
 #, kde-format
 msgid "Hold down middle button and move mouse to scroll"
 msgstr ""
 "Drücken Sie die mittlere Maustaste und bewegen Sie die Maus um zu scrollen"
 
-#: ui/main.qml:342
+#: ui/main.qml:351
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -250,18 +263,15 @@ msgstr ""
 "Videospiele. Es kann auf jedem Gerät verwendet werden, ist aber in erster "
 "Linie als Mausrad-Ersatz auf Geräten gedacht, die keines haben."
 
+#~ msgid "Device enabled"
+#~ msgstr "Gerät aktiviert"
+
+#~ msgctxt "@option:check"
+#~ msgid "Press left and right buttons for middle-click"
+#~ msgstr "Linke und rechte Taste für Mittelklick drücken"
+
 #~ msgid "Accept input through this device."
 #~ msgstr "Eingaben über dieses Gerät annehmen"
-
-#~ msgid "Swap left and right buttons."
-#~ msgstr "Linke und Rechte Taste tauschen"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Pressing the left and right button simultaneously acts as middle-click."
-#~ msgstr ""
-#~ "Gleichzeitiges Klicken mit der linken und rechten Maustaste emuliert das "
-#~ "Klicken mit der mittleren Maustaste."
 
 #, fuzzy
 #~| msgid "Touchscreen like scrolling."

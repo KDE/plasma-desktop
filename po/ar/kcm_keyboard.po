@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2025-11-05 18:27+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -97,10 +97,12 @@ msgstr ""
 "وستؤدي أيضًا إلى ظهور هذه الرسالة. قد تظل هذه تعمل بشكل جيد إذا  طبقت"
 
 #: ui/KeyBindings.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Configure Switching…"
 msgctxt "@title"
-msgid "Key Bindings"
-msgstr "ارتباطات المفاتيح"
+msgid "Configure Key Bindings…"
+msgstr "اضبط التبديل…"
 
 #: ui/KeyBindings.qml:62
 #, kde-format
@@ -559,6 +561,10 @@ msgstr[5] "%1 اختصار"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "بلا"
+
+#~ msgctxt "@title"
+#~ msgid "Key Bindings"
+#~ msgstr "ارتباطات المفاتيح"
 
 #~ msgctxt "@option:radio"
 #~ msgid "Turn Off"

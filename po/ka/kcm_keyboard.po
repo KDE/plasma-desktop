@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2025-10-31 04:23+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -93,10 +93,12 @@ msgstr ""
 "კიდევ იმუშაონ, თუ გამოიყენებთ"
 
 #: ui/KeyBindings.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Configure Switching…"
 msgctxt "@title"
-msgid "Key Bindings"
-msgstr "ღილაკების ასახვა"
+msgid "Configure Key Bindings…"
+msgstr "გადართვის მორგება…"
 
 #: ui/KeyBindings.qml:62
 #, kde-format
@@ -555,6 +557,10 @@ msgstr[1] "%1 მალსახმობი"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "არაფერი"
+
+#~ msgctxt "@title"
+#~ msgid "Key Bindings"
+#~ msgstr "ღილაკების ასახვა"
 
 #~ msgctxt "@title:group"
 #~ msgid "When key is held:"

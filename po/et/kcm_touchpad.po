@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2020-10-07 23:02+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -120,9 +120,11 @@ msgid "General:"
 msgstr "Üldine:"
 
 #: ui/main.qml:101
-#, kde-format
-msgid "Device enabled"
-msgstr "Seadme lubamine"
+#, fuzzy, kde-format
+#| msgctxt "Coasting"
+#| msgid "Enable"
+msgid "Enable device"
+msgstr "Lubatud"
 
 #: ui/main.qml:115
 #, fuzzy, kde-format
@@ -142,20 +144,27 @@ msgctxt "@label 'this' refers to the 'disable touchpad while typing' feature"
 msgid "This can interfere with video games."
 msgstr ""
 
-#: ui/main.qml:170
+#: ui/main.qml:174
+#, fuzzy, kde-format
+#| msgid "Swap left and right buttons."
+msgctxt "@title:group"
+msgid "Left and right buttons:"
+msgstr "Vasaku ja parema nupu vahetamine."
+
+#: ui/main.qml:175
 #, fuzzy, kde-format
 #| msgid "Left handed mode"
-msgid "Left-handed mode"
+msgid "Swap (left-handed mode)"
 msgstr "Vasaku käe režiim"
 
-#: ui/main.qml:186
+#: ui/main.qml:191
 #, fuzzy, kde-format
 #| msgid "Press left and right buttons for middle click"
-msgctxt "@option:check"
-msgid "Press left and right buttons to middle-click"
+msgctxt "@option:check 'both' refers to the left and right buttons'"
+msgid "Press both simultaneously to middle-click"
 msgstr "Vasaku ja parema nupu klõps asendab keskmise nupu klõpsu"
 
-#: ui/main.qml:199
+#: ui/main.qml:204
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -163,86 +172,168 @@ msgid ""
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
 
-#: ui/main.qml:209
+#: ui/main.qml:217
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Osutusseadme kiirus:"
 
-#: ui/main.qml:289
+#: ui/main.qml:297
 #, fuzzy, kde-format
 #| msgid "Pointer acceleration:"
 msgid "Enable pointer acceleration"
 msgstr "Kursori kiirendus:"
 
-#: ui/main.qml:304
+#: ui/main.qml:312
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
 
-#: ui/main.qml:314
+#: ui/main.qml:325
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Kerimiskiirus:"
 
-#: ui/main.qml:365
+#: ui/main.qml:376
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Aeglasem"
 
-#: ui/main.qml:372
+#: ui/main.qml:383
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Kiirem"
 
-#: ui/main.qml:380
-#, kde-format
-msgid "Scrolling:"
+#: ui/main.qml:390
+#, fuzzy, kde-format
+#| msgid "Scrolling:"
+msgid "Scroll by:"
 msgstr "Kerimine:"
 
-#: ui/main.qml:399
+#: ui/main.qml:409
 #, kde-format
-msgid "Two fingers"
-msgstr "Kahe sõrmega"
+msgid "Moving two fingers anywhere"
+msgstr ""
 
-#: ui/main.qml:406
+#: ui/main.qml:416
 #, kde-format
-msgid "Touchpad edges"
-msgstr "Puutepadja servadel"
+msgid "Moving one finger on edge"
+msgstr ""
 
-#: ui/main.qml:414
+#: ui/main.qml:424
 #, kde-format
 msgid "Invert scroll direction (Natural scrolling)"
 msgstr "Teistpidi kerimissuund (loomulik kerimine)"
 
-#: ui/main.qml:428
+#: ui/main.qml:438
 #, kde-format
 msgid "Disable horizontal scrolling"
 msgstr "Rõhtsuunas kerimise keelamine"
 
-#: ui/main.qml:448
+#: ui/main.qml:460
+#, fuzzy, kde-format
+#| msgid "Right-click"
+msgctxt ""
+"@label for radiobutton group, begins the sentence 'right-click by pressing "
+"bottom-right corner/pressing with two fingers'"
+msgid "Right-click by:"
+msgstr "Paremklõps"
+
+#: ui/main.qml:481
+#, fuzzy, kde-format
+#| msgid "Press bottom-right corner"
+msgctxt ""
+"@option:radio Completes the sentence 'right-click by pressing bottom-right "
+"corner'"
+msgid "Pressing bottom-right corner"
+msgstr "Vajutamine alumisse paremasse nurka"
+
+#: ui/main.qml:496
+#, kde-format
+msgctxt "@info shown below radio button"
+msgid "Middle-click by pressing both bottom corners."
+msgstr ""
+
+#: ui/main.qml:497
+#, kde-format
+msgctxt "@info shown below radio button"
+msgid "Middle-click by pressing bottom center."
+msgstr ""
+
+#: ui/main.qml:505
+#, fuzzy, kde-format
+#| msgid "Press anywhere with two fingers"
+msgctxt ""
+"@option:radio Completes the sentence 'right-click by pressing with two "
+"fingers'"
+msgid "Pressing anywhere with two fingers"
+msgstr "Vajutus ükspuha kuhu kahe sõrmega"
+
+#: ui/main.qml:520
+#, fuzzy, kde-format
+#| msgid "Press anywhere with three fingers."
+msgctxt "@info shown below radio button"
+msgid "Middle-click by pressing anywhere with three fingers."
+msgstr "Vajutamine ükspuha kuhu kolme sõrmega."
+
+#: ui/main.qml:529
+#, kde-format
+msgctxt ""
+"@label for radiobutton group, begins the sentence 'middle-click by pressing "
+"bottom-middle edge/'"
+msgid "Middle-click by middle-click:"
+msgstr ""
+
+#: ui/main.qml:550
+#, fuzzy, kde-format
+#| msgid "Press bottom-middle"
+msgctxt ""
+"@option:radio completes the sentence 'middle-click by pressing bottom-middle "
+"edge'"
+msgid "Pressing bottom-middle edge"
+msgstr "Vajutamine alla keskele"
+
+#: ui/main.qml:557
+#, fuzzy, kde-format
+#| msgid "Press bottom left and bottom right corners simultaneously"
+msgctxt ""
+"@option:radio completes the sentence 'middle-click by pressing bottom-left "
+"and bottom-right corners'"
+msgid "Pressing bottom-left and bottom-right corners"
+msgstr "Vajutamine korraga alumisse vasakusse ja paremasse nurka"
+
+#: ui/main.qml:564
+#, fuzzy, kde-format
+#| msgid "Press anywhere with three fingers"
+msgctxt ""
+"@option:check completes the sentence 'middle-click by pressing anywhere with "
+"three fingers'"
+msgid "Pressing anywhere with three fingers"
+msgstr "Vajutamine ükspuha kuhu kolme sõrmega"
+
+#: ui/main.qml:580
 #, fuzzy, kde-format
 #| msgid "Tapping:"
 msgctxt "@label for checkbox, tap-to-click"
 msgid "Tapping:"
 msgstr "Koputamine:"
 
-#: ui/main.qml:449
+#: ui/main.qml:581
 #, fuzzy, kde-format
-#| msgid "Tap-to-click"
+#| msgid "Tap to Click"
 msgctxt "@option:check"
-msgid "Tap-to-click"
-msgstr "Koputamine teeb klõpsu"
+msgid "Tap to click"
+msgstr "Koputamine klõpsamiseks"
 
-#: ui/main.qml:465
+#: ui/main.qml:597
 #, kde-format
-msgid "Tap-and-drag"
-msgstr "Koputamine ja lohistamine"
+msgid "Allow dragging after tapping"
+msgstr ""
 
-#: ui/main.qml:478
+#: ui/main.qml:610
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -250,108 +341,70 @@ msgid ""
 "finger to drop."
 msgstr ""
 
-#: ui/main.qml:485
+#: ui/main.qml:616
 #, kde-format
 msgid "Allow briefly lifting finger during tap-and-drag"
 msgstr ""
 
-#: ui/main.qml:499
+#: ui/main.qml:630
 #, kde-format
 msgid "Two-finger tap:"
 msgstr "Kahe sõrmega koputus:"
 
-#: ui/main.qml:519
+#: ui/main.qml:650
 #, kde-format
 msgid "Right-click (three-finger tap to middle-click)"
 msgstr "Paremklõps (kolme sõrmega koputus - keskklõps)"
 
-#: ui/main.qml:520
+#: ui/main.qml:651
 #, kde-format
 msgid "Right-click"
 msgstr "Paremklõps"
 
-#: ui/main.qml:528
+#: ui/main.qml:659
 #, fuzzy, kde-format
 #| msgid "Middle-click (three-finger tap right-click)"
 msgid "Middle-click (three-finger tap to right-click)"
 msgstr "Keskklõps (kolme sõrmega koputus - paremklõps)"
 
-#: ui/main.qml:529
+#: ui/main.qml:660
 #, kde-format
 msgid "Middle-click"
 msgstr "Keskklõps"
 
-#: ui/main.qml:541
-#, fuzzy, kde-format
-#| msgid "Right-click:"
-msgctxt ""
-"@label for radiobutton group, configure right-click with touch-pad "
-"integrated button (pressing into the touchpad)"
-msgid "Integrated right-click:"
-msgstr "Paremklõps:"
+#~ msgid "Device enabled"
+#~ msgstr "Seadme lubamine"
 
-#: ui/main.qml:562
-#, fuzzy, kde-format
-#| msgid "Press bottom-right corner"
-msgctxt "@option:radio touchpad integrated right-click"
-msgid "Press bottom-right corner"
-msgstr "Vajutamine alumisse paremasse nurka"
+#~ msgid "Two fingers"
+#~ msgstr "Kahe sõrmega"
 
-#: ui/main.qml:577
-#, kde-format
-msgctxt "@info shown below radio button"
-msgid "Middle-click by pressing both bottom corners."
-msgstr ""
+#~ msgid "Touchpad edges"
+#~ msgstr "Puutepadja servadel"
 
-#: ui/main.qml:578
-#, kde-format
-msgctxt "@info shown below radio button"
-msgid "Middle-click by pressing bottom center."
-msgstr ""
+#, fuzzy
+#~| msgid "Tap-to-click"
+#~ msgctxt "@option:check"
+#~ msgid "Tap-to-click"
+#~ msgstr "Koputamine teeb klõpsu"
 
-#: ui/main.qml:586
-#, fuzzy, kde-format
-#| msgid "Press anywhere with two fingers"
-msgctxt "@option:radio touchpad integrated right-click"
-msgid "Press touchpad with two fingers"
-msgstr "Vajutus ükspuha kuhu kahe sõrmega"
+#~ msgid "Tap-and-drag"
+#~ msgstr "Koputamine ja lohistamine"
 
-#: ui/main.qml:601
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers."
-msgctxt "@info shown below radio button"
-msgid "Middle-click by pressing with three fingers."
-msgstr "Vajutamine ükspuha kuhu kolme sõrmega."
+#, fuzzy
+#~| msgid "Right-click:"
+#~ msgctxt ""
+#~ "@label for radiobutton group, configure right-click with touch-pad "
+#~ "integrated button (pressing into the touchpad)"
+#~ msgid "Integrated right-click:"
+#~ msgstr "Paremklõps:"
 
-#: ui/main.qml:610
-#, fuzzy, kde-format
-#| msgid "Middle-click: "
-msgctxt ""
-"@label for radiobutton group, configure middle-click with touch-pad "
-"integrated button (pressing into the touchpad)"
-msgid "Integrated middle-click:"
-msgstr "Keskklõps: "
-
-#: ui/main.qml:631
-#, fuzzy, kde-format
-#| msgid "Press bottom-middle"
-msgctxt "@option:radio touchpad integrated middle-click"
-msgid "Press bottom middle edge"
-msgstr "Vajutamine alla keskele"
-
-#: ui/main.qml:638
-#, fuzzy, kde-format
-#| msgid "Press bottom left and bottom right corners simultaneously"
-msgctxt "@option:radio touchpad integrated middle-click"
-msgid "Press bottom left and bottom right corners"
-msgstr "Vajutamine korraga alumisse vasakusse ja paremasse nurka"
-
-#: ui/main.qml:645
-#, fuzzy, kde-format
-#| msgid "Press anywhere with three fingers"
-msgctxt "@option:check touchpad integrated middle-click"
-msgid "Press touchpad with three fingers"
-msgstr "Vajutamine ükspuha kuhu kolme sõrmega"
+#, fuzzy
+#~| msgid "Middle-click: "
+#~ msgctxt ""
+#~ "@label for radiobutton group, configure middle-click with touch-pad "
+#~ "integrated button (pressing into the touchpad)"
+#~ msgid "Integrated middle-click:"
+#~ msgstr "Keskklõps: "
 
 #~ msgid "Accept input through this device."
 #~ msgstr "Sisendi lubamine selle seadme abil."
@@ -359,9 +412,6 @@ msgstr "Vajutamine ükspuha kuhu kolme sõrmega"
 #~ msgid "Disable touchpad while typing to prevent accidental inputs."
 #~ msgstr ""
 #~ "Puutepadja keelamine kirjutamise ajal vältimaks juhuslikku sekkumist."
-
-#~ msgid "Swap left and right buttons."
-#~ msgstr "Vasaku ja parema nupu vahetamine."
 
 #, fuzzy
 #~| msgid ""
@@ -817,10 +867,6 @@ msgstr "Vajutamine ükspuha kuhu kolme sõrmega"
 #~ "Enable edge scrolling to continue while the finger stays in an edge corner"
 #~ msgstr "Servas kerimise jätkamise lubamine, kui sõrm jäetakse servanurka"
 
-#~ msgctxt "Coasting"
-#~ msgid "Enable"
-#~ msgstr "Lubatud"
-
 #~ msgid ""
 #~ "Scrolling is engaged when a drag starts in the given trigger region.\n"
 #~ "Moving your finger in clockwise circles around the center of the "
@@ -915,9 +961,6 @@ msgstr "Vajutamine ükspuha kuhu kolme sõrmega"
 #~ msgctxt "Touchpad gesture"
 #~ msgid "Taps"
 #~ msgstr "Koputused"
-
-#~ msgid "Tap to Click"
-#~ msgstr "Koputamine klõpsamiseks"
 
 #~ msgctxt "Tapping"
 #~ msgid "One finger:"

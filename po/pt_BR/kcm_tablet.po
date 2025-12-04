@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-03 00:45+0000\n"
-"PO-Revision-Date: 2025-09-21 17:44-0300\n"
+"PO-Revision-Date: 2025-12-03 08:26-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -482,10 +482,9 @@ msgid "Pad"
 msgstr "Painel:"
 
 #: ui/MissingPadTab.qml:15
-#, fuzzy, kde-format
-#| msgid "No drawing tablets found"
+#, kde-format
 msgid "No pad inputs found"
-msgstr "Nenhuma mesa digitalizadora encontrada"
+msgstr "Nenhuma entrada de painel encontrada"
 
 #: ui/MissingPadTab.qml:16
 #, kde-format
@@ -493,6 +492,8 @@ msgid ""
 "There's no buttons or other inputs detected. This could mean you're missing "
 "a driver for this device."
 msgstr ""
+"Não foram detectados botões ou outras entradas. Isso pode significar que "
+"você não tem um driver para este dispositivo."
 
 #: ui/PadTab.qml:37
 #, kde-format

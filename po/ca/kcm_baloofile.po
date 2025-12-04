@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2024-08-28 16:31+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -68,94 +68,96 @@ msgstr ""
 "La cerca de fitxers us ajuda a localitzar ràpidament els vostres fitxers. "
 "Podeu triar les carpetes i els tipus de dades de fitxer que s'indexaran."
 
-#: ui/main.qml:105
-#, kde-format
-msgctxt "@title:group"
-msgid "File indexing:"
-msgstr "Indexació de fitxers:"
-
-#: ui/main.qml:106
-#, kde-format
-msgctxt "@action:check"
-msgid "Enabled"
-msgstr "Activada"
-
-#: ui/main.qml:122
+#: ui/main.qml:108
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
 msgstr "Dades a indexar:"
 
-#: ui/main.qml:124
+#: ui/main.qml:109
 #, kde-format
-msgid "File names and contents"
-msgstr "Noms i contingut dels fitxers"
+msgid "Nothing (disable indexing entirely)"
+msgstr ""
 
-#: ui/main.qml:137
+#: ui/main.qml:121
 #, kde-format
 msgid "File names only"
 msgstr "Només els noms dels fitxers"
 
-#: ui/main.qml:156
+#: ui/main.qml:136
 #, kde-format
-msgid "Hidden files and folders"
+msgid "File names and contents"
+msgstr "Noms i contingut dels fitxers"
+
+#: ui/main.qml:157
+#, fuzzy, kde-format
+#| msgid "Hidden files and folders"
+msgid "Also index hidden files and folders"
 msgstr "Fitxers i carpetes ocults"
 
-#: ui/main.qml:182
+#: ui/main.qml:183
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr "Ubicacions"
 
-#: ui/main.qml:185
+#: ui/main.qml:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "Inicia la indexació d'una carpeta…"
 
-#: ui/main.qml:193
+#: ui/main.qml:194
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Atura la indexació d'una carpeta…"
 
-#: ui/main.qml:211
+#: ui/main.qml:212
 #, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
 msgstr "%1, %2% complet"
 
-#: ui/main.qml:218
+#: ui/main.qml:219
 #, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "Currently indexing: <filename>%1</filename>"
 msgstr "Actualment s'està indexant: <filename>%1</filename>"
 
-#: ui/main.qml:271
+#: ui/main.qml:270
 #, kde-format
 msgid "Not indexed"
 msgstr "No indexada"
 
-#: ui/main.qml:272
+#: ui/main.qml:271
 #, kde-format
 msgid "Indexed"
 msgstr "Indexada"
 
-#: ui/main.qml:302
+#: ui/main.qml:297
 #, kde-format
 msgctxt "Remove the list item for this filesystem path"
 msgid "Remove entry"
 msgstr "Elimina l'entrada"
 
-#: ui/main.qml:317
+#: ui/main.qml:318
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Seleccioneu una carpeta a incloure"
 
-#: ui/main.qml:317
+#: ui/main.qml:318
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Seleccioneu una carpeta a excloure"
+
+#~ msgctxt "@title:group"
+#~ msgid "File indexing:"
+#~ msgstr "Indexació de fitxers:"
+
+#~ msgctxt "@action:check"
+#~ msgid "Enabled"
+#~ msgstr "Activada"
 
 #~ msgctxt "@label indexing status"
 #~ msgid "Status:"

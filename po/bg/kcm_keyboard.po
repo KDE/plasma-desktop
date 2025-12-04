@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2025-11-07 22:53+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -93,10 +93,12 @@ msgstr ""
 "може да работят добре."
 
 #: ui/KeyBindings.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Configure Switching…"
 msgctxt "@title"
-msgid "Key Bindings"
-msgstr "Клавишни комбинации"
+msgid "Configure Key Bindings…"
+msgstr "Настройка на превключване на подредбите…"
 
 #: ui/KeyBindings.qml:62
 #, kde-format
@@ -555,3 +557,7 @@ msgstr[1] "%1 клавишни комбинации"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Без"
+
+#~ msgctxt "@title"
+#~ msgid "Key Bindings"
+#~ msgstr "Клавишни комбинации"

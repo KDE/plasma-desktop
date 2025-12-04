@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2024-11-21 20:40\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -97,10 +97,12 @@ msgstr ""
 "яшчэ могуць працаваць нармальна, калі іх ужыць"
 
 #: ui/KeyBindings.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Configure Switching…"
 msgctxt "@title"
-msgid "Key Bindings"
-msgstr "Прывязванне клавіш"
+msgid "Configure Key Bindings…"
+msgstr "Наладжванне пераключэння…"
 
 #: ui/KeyBindings.qml:62
 #, kde-format
@@ -575,6 +577,10 @@ msgstr[3] "%1 спалучэнні клавіш"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Няма"
+
+#~ msgctxt "@title"
+#~ msgid "Key Bindings"
+#~ msgstr "Прывязванне клавіш"
 
 #~ msgctxt "@option:radio"
 #~ msgid "Turn Off"

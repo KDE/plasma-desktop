@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2024-07-21 22:13-0500\n"
 "Last-Translator: aalam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -141,23 +141,31 @@ msgstr "ਆਮ:"
 
 #: ui/main.qml:88
 #, kde-format
-msgid "Device enabled"
-msgstr "ਡਿਵਾਈਸ ਸਮਰੱਥ ਹੈ"
+msgid "Enable device"
+msgstr ""
 
-#: ui/main.qml:103
+#: ui/main.qml:105
+#, fuzzy, kde-format
+#| msgid "Swap left and right buttons."
+msgctxt "@title:group"
+msgid "Left and right buttons:"
+msgstr "ਖੱਬੇ ਤੇ ਸੱਜੇ ਬਟਨਾਂ ਨੂੰ ਬਦਲੋ।"
+
+#: ui/main.qml:106
 #, fuzzy, kde-format
 #| msgid "Left handed mode"
-msgid "Left-handed mode"
+msgid "Swap (left-handed mode)"
 msgstr "ਖੱਬੇ ਹੱਥਾ ਢੰਗ"
 
-#: ui/main.qml:118
+#: ui/main.qml:121
 #, fuzzy, kde-format
-#| msgid "Press left and right buttons for middle-click"
-msgctxt "@option:check"
-msgid "Press left and right buttons for middle-click"
-msgstr "ਮਿਡਲ-ਕਲਿੱਕ ਲਈ ਖੱਬੇ ਅਤੇ ਸੱਜੇ ਦੋਵੇਂ ਬਟਨਾਂ ਨੂੰ ਦਬਾਓ"
+#| msgid ""
+#| "Clicking left and right button simultaneously sends middle button click."
+msgctxt "@option:check 'both' refers to the left and right buttons'"
+msgid "Press both simultaneously to middle-click"
+msgstr "ਮਿਡਲ ਬਟਨ ਕਲਿੱਕ ਕਰਨ ਲਈ ਖੱਬੇ ਅਤੇ ਸੱਜੇ ਬਟਨਾਂ ਨੂੰ ਇਕੱਠੇ ਕਲਿੱਕ ਕਰੋ।"
 
-#: ui/main.qml:130
+#: ui/main.qml:133
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -165,18 +173,18 @@ msgid ""
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
 
-#: ui/main.qml:142
+#: ui/main.qml:148
 #, kde-format
 msgid "Pointer speed:"
 msgstr "ਪੁਆਇੰਟਰ ਦੀ ਗਤੀ:"
 
-#: ui/main.qml:221
+#: ui/main.qml:227
 #, fuzzy, kde-format
 #| msgid "Pointer acceleration:"
 msgid "Enable pointer acceleration"
 msgstr "ਪੁਆਇੰਟਰ ਐਕਸਲੇਸ਼ਨ:"
 
-#: ui/main.qml:235
+#: ui/main.qml:241
 #, fuzzy, kde-format
 #| msgid "Cursor travel distance depends on the mouse movement speed."
 msgctxt "@info:tooltip from ContextualHelpButton"
@@ -184,39 +192,39 @@ msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr "ਕਰਸਰ ਹਿਲਜੁਲ ਦੀ ਦੂਰੀ ਮਾਊਸ ਦੀ ਹਿਲਜੁਲ ਦੀ ਸਪੀਡ ਉੱਤੇ ਨਿਰਭਰ ਕਰਦੀ ਹੈ।"
 
-#: ui/main.qml:245
+#: ui/main.qml:254
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "ਸਰਕਾਉਣ ਦੀ ਗਤੀ:"
 
-#: ui/main.qml:295
+#: ui/main.qml:304
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "ਵੱਧ ਹੌਲੀ"
 
-#: ui/main.qml:304
+#: ui/main.qml:313
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "ਵੱਧ ਤੇਜ਼"
 
-#: ui/main.qml:312
+#: ui/main.qml:321
 #, kde-format
 msgid "Scrolling:"
 msgstr "ਸਰਕਾਉਣਾ:"
 
-#: ui/main.qml:313
+#: ui/main.qml:322
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "ਉਲਟ ਸਕਰੋਲ ਦਿਸ਼ਾ"
 
-#: ui/main.qml:330
+#: ui/main.qml:339
 #, kde-format
 msgid "Hold down middle button and move mouse to scroll"
 msgstr ""
 
-#: ui/main.qml:342
+#: ui/main.qml:351
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -226,19 +234,17 @@ msgid ""
 "devices that do not have any."
 msgstr ""
 
-#~ msgid "Accept input through this device."
-#~ msgstr "ਇਸ ਡਿਵਾਈਸ ਰਾਹੀਂ ਇਨਪੁੱਟ ਮਨਜ਼ੂਰ ਕਰੋ।"
-
-#~ msgid "Swap left and right buttons."
-#~ msgstr "ਖੱਬੇ ਤੇ ਸੱਜੇ ਬਟਨਾਂ ਨੂੰ ਬਦਲੋ।"
+#~ msgid "Device enabled"
+#~ msgstr "ਡਿਵਾਈਸ ਸਮਰੱਥ ਹੈ"
 
 #, fuzzy
-#~| msgid ""
-#~| "Clicking left and right button simultaneously sends middle button click."
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Pressing the left and right button simultaneously acts as middle-click."
-#~ msgstr "ਮਿਡਲ ਬਟਨ ਕਲਿੱਕ ਕਰਨ ਲਈ ਖੱਬੇ ਅਤੇ ਸੱਜੇ ਬਟਨਾਂ ਨੂੰ ਇਕੱਠੇ ਕਲਿੱਕ ਕਰੋ।"
+#~| msgid "Press left and right buttons for middle-click"
+#~ msgctxt "@option:check"
+#~ msgid "Press left and right buttons for middle-click"
+#~ msgstr "ਮਿਡਲ-ਕਲਿੱਕ ਲਈ ਖੱਬੇ ਅਤੇ ਸੱਜੇ ਦੋਵੇਂ ਬਟਨਾਂ ਨੂੰ ਦਬਾਓ"
+
+#~ msgid "Accept input through this device."
+#~ msgstr "ਇਸ ਡਿਵਾਈਸ ਰਾਹੀਂ ਇਨਪੁੱਟ ਮਨਜ਼ੂਰ ਕਰੋ।"
 
 #, fuzzy
 #~| msgid "Touchscreen like scrolling."

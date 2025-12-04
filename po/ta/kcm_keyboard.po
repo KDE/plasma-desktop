@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2024-10-20 14:07+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -89,10 +89,12 @@ msgid ""
 msgstr ""
 
 #: ui/KeyBindings.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Configure Switching…"
 msgctxt "@title"
-msgid "Key Bindings"
-msgstr "விசைப்பிணைப்புகள்"
+msgid "Configure Key Bindings…"
+msgstr "மாற்றுவதை அமை…"
 
 #: ui/KeyBindings.qml:62
 #, kde-format
@@ -562,6 +564,10 @@ msgstr[1] "%1 சுருக்குவழிகள்"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "ஏதுமில்லை"
+
+#~ msgctxt "@title"
+#~ msgid "Key Bindings"
+#~ msgstr "விசைப்பிணைப்புகள்"
 
 #~ msgctxt "@option:radio"
 #~ msgid "Turn Off"

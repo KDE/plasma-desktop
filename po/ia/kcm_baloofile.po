@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2024-09-02 16:05+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -62,94 +62,96 @@ msgstr ""
 "Cerca de File adjuta te localisar rapidemente tu files. Tu pote seliger qual "
 "dossieres e que typos de datos de file es indicisate."
 
-#: ui/main.qml:105
-#, kde-format
-msgctxt "@title:group"
-msgid "File indexing:"
-msgstr "Indicisation de file:"
-
-#: ui/main.qml:106
-#, kde-format
-msgctxt "@action:check"
-msgid "Enabled"
-msgstr "Habilitate"
-
-#: ui/main.qml:122
+#: ui/main.qml:108
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
 msgstr "Datos a indice:"
 
-#: ui/main.qml:124
+#: ui/main.qml:109
 #, kde-format
-msgid "File names and contents"
-msgstr "Nomines de files e contentos"
+msgid "Nothing (disable indexing entirely)"
+msgstr ""
 
-#: ui/main.qml:137
+#: ui/main.qml:121
 #, kde-format
 msgid "File names only"
 msgstr "Solmente nomine de files"
 
-#: ui/main.qml:156
+#: ui/main.qml:136
 #, kde-format
-msgid "Hidden files and folders"
+msgid "File names and contents"
+msgstr "Nomines de files e contentos"
+
+#: ui/main.qml:157
+#, fuzzy, kde-format
+#| msgid "Hidden files and folders"
+msgid "Also index hidden files and folders"
 msgstr "Files e dossieres celate"
 
-#: ui/main.qml:182
+#: ui/main.qml:183
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr "Locationes"
 
-#: ui/main.qml:185
+#: ui/main.qml:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "Initia indicisar un dossier..."
 
-#: ui/main.qml:193
+#: ui/main.qml:194
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "Stoppa indicisar un dossier..."
 
-#: ui/main.qml:211
+#: ui/main.qml:212
 #, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
 msgstr "%1, %2% complete"
 
-#: ui/main.qml:218
+#: ui/main.qml:219
 #, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "Currently indexing: <filename>%1</filename>"
 msgstr "Indicisante currentemente <filename>%1</filename>"
 
-#: ui/main.qml:271
+#: ui/main.qml:270
 #, kde-format
 msgid "Not indexed"
 msgstr "Non indicisate"
 
-#: ui/main.qml:272
+#: ui/main.qml:271
 #, kde-format
 msgid "Indexed"
 msgstr "Indicisate"
 
-#: ui/main.qml:302
+#: ui/main.qml:297
 #, kde-format
 msgctxt "Remove the list item for this filesystem path"
 msgid "Remove entry"
 msgstr "Remove entrata"
 
-#: ui/main.qml:317
+#: ui/main.qml:318
 #, kde-format
 msgid "Select a folder to include"
 msgstr "Selige un dossier de includer"
 
-#: ui/main.qml:317
+#: ui/main.qml:318
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Selige un dossier de excluder"
+
+#~ msgctxt "@title:group"
+#~ msgid "File indexing:"
+#~ msgstr "Indicisation de file:"
+
+#~ msgctxt "@action:check"
+#~ msgid "Enabled"
+#~ msgstr "Habilitate"
 
 #~ msgctxt "@label indexing status"
 #~ msgid "Status:"

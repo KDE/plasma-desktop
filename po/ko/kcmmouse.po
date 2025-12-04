@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2025-06-10 22:33+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -145,21 +145,33 @@ msgstr "일반:"
 
 #: ui/main.qml:88
 #, kde-format
-msgid "Device enabled"
-msgstr "장치 활성화됨"
+msgid "Enable device"
+msgstr ""
 
-#: ui/main.qml:103
-#, kde-format
-msgid "Left-handed mode"
+#: ui/main.qml:105
+#, fuzzy, kde-format
+#| msgid "Swap left and right buttons."
+msgctxt "@title:group"
+msgid "Left and right buttons:"
+msgstr "왼쪽과 오른쪽 단추를 전환합니다."
+
+#: ui/main.qml:106
+#, fuzzy, kde-format
+#| msgid "Left-handed mode"
+msgid "Swap (left-handed mode)"
 msgstr "왼손잡이 모드"
 
-#: ui/main.qml:118
-#, kde-format
-msgctxt "@option:check"
-msgid "Press left and right buttons for middle-click"
-msgstr "왼쪽과 오른쪽 단추를 같이 클릭해서 가운데 단추 클릭"
+#: ui/main.qml:121
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Pressing the left and right button simultaneously acts as middle-click."
+msgctxt "@option:check 'both' refers to the left and right buttons'"
+msgid "Press both simultaneously to middle-click"
+msgstr ""
+"왼쪽과 오른쪽 단추를 같이 클릭하면 가운데 단추를 클릭한 것으로 취급합니다."
 
-#: ui/main.qml:130
+#: ui/main.qml:133
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -169,17 +181,17 @@ msgstr ""
 "이 설정을 사용하면 클릭 지연 시간을 50 ms 추가합니다. 마우스 왼쪽과 오른쪽 단"
 "추를 같이 누른 것을 올바르게 감지하기 위해서 추가 지연 시간이 필요합니다."
 
-#: ui/main.qml:142
+#: ui/main.qml:148
 #, kde-format
 msgid "Pointer speed:"
 msgstr "포인터 속도:"
 
-#: ui/main.qml:221
+#: ui/main.qml:227
 #, kde-format
 msgid "Enable pointer acceleration"
 msgstr "포인터 가속 활성화"
 
-#: ui/main.qml:235
+#: ui/main.qml:241
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -187,39 +199,39 @@ msgid ""
 msgstr ""
 "이 설정을 사용하면 포인터 이동 속도가 빨라지면 그만큼 이동 거리가 증가합니다."
 
-#: ui/main.qml:245
+#: ui/main.qml:254
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "스크롤 속도:"
 
-#: ui/main.qml:295
+#: ui/main.qml:304
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "느리게"
 
-#: ui/main.qml:304
+#: ui/main.qml:313
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "빠르게"
 
-#: ui/main.qml:312
+#: ui/main.qml:321
 #, kde-format
 msgid "Scrolling:"
 msgstr "스크롤:"
 
-#: ui/main.qml:313
+#: ui/main.qml:322
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "스크롤 방향 뒤집기"
 
-#: ui/main.qml:330
+#: ui/main.qml:339
 #, kde-format
 msgid "Hold down middle button and move mouse to scroll"
 msgstr "마우스 가운데 단추를 누르면서 이동하여 스크롤"
 
-#: ui/main.qml:342
+#: ui/main.qml:351
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -232,17 +244,15 @@ msgstr ""
 "의도한 대로 작동하지 않을 수도 있습니다. 장치에 관계 없이 사용할 수 있으나, "
 "스크롤 휠이 없는 장치에서 스크롤 휠 대체용으로 사용될 것을 가정했습니다."
 
+#~ msgid "Device enabled"
+#~ msgstr "장치 활성화됨"
+
+#~ msgctxt "@option:check"
+#~ msgid "Press left and right buttons for middle-click"
+#~ msgstr "왼쪽과 오른쪽 단추를 같이 클릭해서 가운데 단추 클릭"
+
 #~ msgid "Accept input through this device."
 #~ msgstr "이 장치가 보내는 입력을 받아 들입니다."
-
-#~ msgid "Swap left and right buttons."
-#~ msgstr "왼쪽과 오른쪽 단추를 전환합니다."
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Pressing the left and right button simultaneously acts as middle-click."
-#~ msgstr ""
-#~ "왼쪽과 오른쪽 단추를 같이 클릭하면 가운데 단추를 클릭한 것으로 취급합니다."
 
 #~ msgid "Touchscreen-like scrolling."
 #~ msgstr "터치스크린 형태 스크롤을 사용합니다."

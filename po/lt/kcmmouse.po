@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2025-08-05 11:53+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -150,23 +150,34 @@ msgstr "Bendri:"
 
 #: ui/main.qml:88
 #, kde-format
-msgid "Device enabled"
-msgstr "Įrenginys įjungtas"
+msgid "Enable device"
+msgstr ""
 
-#: ui/main.qml:103
-#, kde-format
-msgid "Left-handed mode"
+#: ui/main.qml:105
+#, fuzzy, kde-format
+#| msgid "Swap left and right buttons."
+msgctxt "@title:group"
+msgid "Left and right buttons:"
+msgstr "Apkeisti kairįjį ir dešinįjį mygtuką vietomis."
+
+#: ui/main.qml:106
+#, fuzzy, kde-format
+#| msgid "Left-handed mode"
+msgid "Swap (left-handed mode)"
 msgstr "Kairės rankos veiksena"
 
-#: ui/main.qml:118
-#, kde-format
-msgctxt "@option:check"
-msgid "Press left and right buttons for middle-click"
+#: ui/main.qml:121
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Pressing the left and right button simultaneously acts as middle-click."
+msgctxt "@option:check 'both' refers to the left and right buttons'"
+msgid "Press both simultaneously to middle-click"
 msgstr ""
-"Vidurinio mygtuko spustelėjimo inicijavimui paspausti dešinįjį ir kairįjį "
-"mygtukus kartu"
+"Kairiojo ir dešiniojo mygtukų paspaudimas vienu metu veikia kaip viduriniojo "
+"mygtuko spustelėjimas."
 
-#: ui/main.qml:130
+#: ui/main.qml:133
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -177,17 +188,17 @@ msgstr ""
 "papildoma delsa yra reikalinga, kad būtų teisingai aptinkami vienalaikiai "
 "kairiojo ir dešiniojo mygtuko spustelėjimai."
 
-#: ui/main.qml:142
+#: ui/main.qml:148
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Rodyklės greitis:"
 
-#: ui/main.qml:221
+#: ui/main.qml:227
 #, kde-format
 msgid "Enable pointer acceleration"
 msgstr "Įjungti rodyklės pagreitį"
 
-#: ui/main.qml:235
+#: ui/main.qml:241
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -196,40 +207,40 @@ msgstr ""
 "Kai įjungta, kuo greičiau judinama pelė, tuo labiau padidėja rodyklės "
 "nukeliautas atstumas."
 
-#: ui/main.qml:245
+#: ui/main.qml:254
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Slinkimo greitis:"
 
-#: ui/main.qml:295
+#: ui/main.qml:304
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Lėtesnis"
 
-#: ui/main.qml:304
+#: ui/main.qml:313
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Greitesnis"
 
-#: ui/main.qml:312
+#: ui/main.qml:321
 #, kde-format
 msgid "Scrolling:"
 msgstr "Slinkimas:"
 
-#: ui/main.qml:313
+#: ui/main.qml:322
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Atvirkštinė slinkimo kryptis"
 
-#: ui/main.qml:330
+#: ui/main.qml:339
 #, kde-format
 msgid "Hold down middle button and move mouse to scroll"
 msgstr ""
 "Laikyti nuspaustą vidurinįjį mygtuką ir judinti pelę, kad būtų slenkama"
 
-#: ui/main.qml:342
+#: ui/main.qml:351
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -243,18 +254,17 @@ msgstr ""
 "Tai gali būti naudojama bet kuriame įrenginyje, bet, visų pirma, skirta kaip "
 "slinkimo ratukų pakaitalas įrenginiuose, kuriuose jų nėra."
 
+#~ msgid "Device enabled"
+#~ msgstr "Įrenginys įjungtas"
+
+#~ msgctxt "@option:check"
+#~ msgid "Press left and right buttons for middle-click"
+#~ msgstr ""
+#~ "Vidurinio mygtuko spustelėjimo inicijavimui paspausti dešinįjį ir kairįjį "
+#~ "mygtukus kartu"
+
 #~ msgid "Accept input through this device."
 #~ msgstr "Priimti įvestį per šį įrenginį."
-
-#~ msgid "Swap left and right buttons."
-#~ msgstr "Apkeisti kairįjį ir dešinįjį mygtuką vietomis."
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Pressing the left and right button simultaneously acts as middle-click."
-#~ msgstr ""
-#~ "Kairiojo ir dešiniojo mygtukų paspaudimas vienu metu veikia kaip "
-#~ "viduriniojo mygtuko spustelėjimas."
 
 #~ msgid "Touchscreen-like scrolling."
 #~ msgstr "Jutiklinio ekrano tipo slinkimas."

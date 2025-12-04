@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2025-11-13 22:23+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -99,10 +99,12 @@ msgstr ""
 "的佈局可能套用後還是能正常使用"
 
 #: ui/KeyBindings.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Configure Switching…"
 msgctxt "@title"
-msgid "Key Bindings"
-msgstr "按鍵組合(&B)"
+msgid "Configure Key Bindings…"
+msgstr "設定切換(&C)…"
 
 #: ui/KeyBindings.qml:62
 #, kde-format
@@ -553,6 +555,10 @@ msgstr[0] "%1 捷徑："
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "無(&N)"
+
+#~ msgctxt "@title"
+#~ msgid "Key Bindings"
+#~ msgstr "按鍵組合(&B)"
 
 #~ msgctxt "@option:radio"
 #~ msgid "Turn Off"

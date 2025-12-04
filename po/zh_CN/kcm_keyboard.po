@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -89,10 +89,12 @@ msgstr ""
 "消息。这些键盘型号、布局、变种可能仍然能够在应用后正常工作。"
 
 #: ui/KeyBindings.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Configure Switching…"
 msgctxt "@title"
-msgid "Key Bindings"
-msgstr "键位绑定"
+msgid "Configure Key Bindings…"
+msgstr "配置切换方式…"
 
 #: ui/KeyBindings.qml:62
 #, kde-format
@@ -543,3 +545,7 @@ msgstr[0] "%1 个快捷键"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "无"
+
+#~ msgctxt "@title"
+#~ msgid "Key Bindings"
+#~ msgstr "键位绑定"

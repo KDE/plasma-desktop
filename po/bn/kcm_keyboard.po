@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kxkb\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2005-12-25 00:51-0600\n"
 "Last-Translator: Deepayan Sarkar <deepayan@bengalinux.org>\n"
 "Language-Team: Bengali <kde-translation@bengalinux.org>\n"
@@ -84,10 +84,11 @@ msgid ""
 msgstr ""
 
 #: ui/KeyBindings.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Active layouts:"
 msgctxt "@title"
-msgid "Key Bindings"
-msgstr ""
+msgid "Configure Key Bindings…"
+msgstr "সক্রিয় বিন্যাসসমূহ:"
 
 #: ui/KeyBindings.qml:62
 #, fuzzy, kde-format

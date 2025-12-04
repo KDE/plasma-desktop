@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2024-09-11 04:34+0900\n"
 "Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -104,10 +104,12 @@ msgstr ""
 "修正すると、正常に機能する可能性があります"
 
 #: ui/KeyBindings.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Configure Switching…"
 msgctxt "@title"
-msgid "Key Bindings"
-msgstr "キーバインディング"
+msgid "Configure Key Bindings…"
+msgstr "切り替えの設定..."
 
 #: ui/KeyBindings.qml:62
 #, kde-format
@@ -580,3 +582,7 @@ msgstr[0] "%1 ショートカット"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "なし"
+
+#~ msgctxt "@title"
+#~ msgid "Key Bindings"
+#~ msgstr "キーバインディング"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2025-04-07 00:14+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -92,10 +92,12 @@ msgstr ""
 "이 메시지를 표시합니다. 그대로 적용해도 작동할 수도 있습니다"
 
 #: ui/KeyBindings.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Configure Switching…"
 msgctxt "@title"
-msgid "Key Bindings"
-msgstr "키 바인딩"
+msgid "Configure Key Bindings…"
+msgstr "전환 설정…"
 
 #: ui/KeyBindings.qml:62
 #, kde-format
@@ -559,6 +561,10 @@ msgstr[0] "%1 단축키"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "없음"
+
+#~ msgctxt "@title"
+#~ msgid "Key Bindings"
+#~ msgstr "키 바인딩"
 
 #, fuzzy
 #~| msgid "&Turn off"

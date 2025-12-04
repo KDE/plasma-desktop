@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2021-01-26 10:29+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -94,10 +94,11 @@ msgstr ""
 "tentar usar esta combinação de modelo, disposição e variante."
 
 #: ui/KeyBindings.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure layouts"
 msgctxt "@title"
-msgid "Key Bindings"
-msgstr ""
+msgid "Configure Key Bindings…"
+msgstr "Configurar as disposições"
 
 #: ui/KeyBindings.qml:62
 #, fuzzy, kde-format

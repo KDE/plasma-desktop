@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -92,10 +92,12 @@ msgstr ""
 "नास्ति तथा च एतत् सन्देशं प्रेरयिष्यति । एते अद्यापि प्रयुक्ताः चेत् सम्यक् कार्यं कर्तुं शक्नुवन्ति"
 
 #: ui/KeyBindings.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Configure Switching…"
 msgctxt "@title"
-msgid "Key Bindings"
-msgstr "की बन्धन"
+msgid "Configure Key Bindings…"
+msgstr "स्विचिंग् विन्यस्तं कुर्वन्तु..."
 
 #: ui/KeyBindings.qml:62
 #, kde-format
@@ -565,3 +567,7 @@ msgstr[1] "%1 शॉर्टकट्"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "न कश्चित्"
+
+#~ msgctxt "@title"
+#~ msgid "Key Bindings"
+#~ msgstr "की बन्धन"

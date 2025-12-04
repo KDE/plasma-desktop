@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2025-08-09 15:34+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -152,21 +152,33 @@ msgstr "عام:"
 
 #: ui/main.qml:88
 #, kde-format
-msgid "Device enabled"
-msgstr "الجهاز ممكّن"
+msgid "Enable device"
+msgstr ""
 
-#: ui/main.qml:103
-#, kde-format
-msgid "Left-handed mode"
+#: ui/main.qml:105
+#, fuzzy, kde-format
+#| msgid "Swap left and right buttons."
+msgctxt "@title:group"
+msgid "Left and right buttons:"
+msgstr "بدّل الأزرار اليمنى واليسرى."
+
+#: ui/main.qml:106
+#, fuzzy, kde-format
+#| msgid "Left-handed mode"
+msgid "Swap (left-handed mode)"
 msgstr "وضع الأعسر"
 
-#: ui/main.qml:118
-#, kde-format
-msgctxt "@option:check"
-msgid "Press left and right buttons for middle-click"
-msgstr "اضغط على الزرين الأيمن والأيسر للنقر الأوسط"
+#: ui/main.qml:121
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Pressing the left and right button simultaneously acts as middle-click."
+msgctxt "@option:check 'both' refers to the left and right buttons'"
+msgid "Press both simultaneously to middle-click"
+msgstr ""
+"الضغط فوق الزر الأيمن والأيسر في نفس الوقت يعمل على إرسال نقرة الزر الأوسط."
 
-#: ui/main.qml:130
+#: ui/main.qml:133
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -177,56 +189,56 @@ msgstr ""
 "هذا التأخير الإضافي للكشف بشكل صحيح عن الضغطات المتزامنة على الزر الأيسر "
 "والأيمن."
 
-#: ui/main.qml:142
+#: ui/main.qml:148
 #, kde-format
 msgid "Pointer speed:"
 msgstr "سرعة المؤشر:"
 
-#: ui/main.qml:221
+#: ui/main.qml:227
 #, kde-format
 msgid "Enable pointer acceleration"
 msgstr "مكّن تسارع المؤشر"
 
-#: ui/main.qml:235
+#: ui/main.qml:241
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr "عند تمكين هذا الخيار، تزداد مسافة تحرك المؤشر مع زيادة سرعة الحركة."
 
-#: ui/main.qml:245
+#: ui/main.qml:254
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "سرعة المؤشر:"
 
-#: ui/main.qml:295
+#: ui/main.qml:304
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "أبطأ"
 
-#: ui/main.qml:304
+#: ui/main.qml:313
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "أسرع"
 
-#: ui/main.qml:312
+#: ui/main.qml:321
 #, kde-format
 msgid "Scrolling:"
 msgstr "التمرير:"
 
-#: ui/main.qml:313
+#: ui/main.qml:322
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "اعكس اتّجاه التّمرير"
 
-#: ui/main.qml:330
+#: ui/main.qml:339
 #, kde-format
 msgid "Hold down middle button and move mouse to scroll"
 msgstr "اضغط باستمرار على الزر الأوسط وحرك الفأرة للتمرير"
 
-#: ui/main.qml:342
+#: ui/main.qml:351
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -240,18 +252,15 @@ msgstr ""
 "ولكنه مخصص بشكل أساسي كبديل لعجلات التمرير على الأجهزة التي لا تحتوي على أي "
 "منها."
 
+#~ msgid "Device enabled"
+#~ msgstr "الجهاز ممكّن"
+
+#~ msgctxt "@option:check"
+#~ msgid "Press left and right buttons for middle-click"
+#~ msgstr "اضغط على الزرين الأيمن والأيسر للنقر الأوسط"
+
 #~ msgid "Accept input through this device."
 #~ msgstr "قبول الإدخال من خلال هذا الجهاز."
-
-#~ msgid "Swap left and right buttons."
-#~ msgstr "بدّل الأزرار اليمنى واليسرى."
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Pressing the left and right button simultaneously acts as middle-click."
-#~ msgstr ""
-#~ "الضغط فوق الزر الأيمن والأيسر في نفس الوقت يعمل على إرسال نقرة الزر "
-#~ "الأوسط."
 
 #~ msgid "Touchscreen-like scrolling."
 #~ msgstr "تمرير مثل الشاشة العاملة باللمس."

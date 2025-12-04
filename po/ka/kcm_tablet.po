@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-03 00:45+0000\n"
-"PO-Revision-Date: 2025-09-04 06:50+0200\n"
+"PO-Revision-Date: 2025-12-03 03:39+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.8\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -478,10 +478,9 @@ msgid "Pad"
 msgstr "პედი"
 
 #: ui/MissingPadTab.qml:15
-#, fuzzy, kde-format
-#| msgid "No drawing tablets found"
+#, kde-format
 msgid "No pad inputs found"
-msgstr "სახატავი ტაბლეტები ვერ ვიპოვე"
+msgstr "პადის შეყვანის წერტილები აღმოჩენილი არაა"
 
 #: ui/MissingPadTab.qml:16
 #, kde-format
@@ -489,6 +488,8 @@ msgid ""
 "There's no buttons or other inputs detected. This could mean you're missing "
 "a driver for this device."
 msgstr ""
+"ღილაკები, ან სხვა შეყვანის წერტილები აღმოჩენილი არაა. ეს შეიძლება ნიშნავდეს, "
+"რომ ამ მოწყობილობისთვის დრაივერი არ გაქვთ."
 
 #: ui/PadTab.qml:37
 #, kde-format

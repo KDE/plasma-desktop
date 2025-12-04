@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2012-06-13 15:26+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -140,23 +140,29 @@ msgstr "ទូទៅ"
 
 #: ui/main.qml:88
 #, kde-format
-msgid "Device enabled"
+msgid "Enable device"
+msgstr ""
+
+#: ui/main.qml:105
+#, kde-format
+msgctxt "@title:group"
+msgid "Left and right buttons:"
 msgstr ""
 
 #  i18n: file kmousedlg.ui line 100
-#: ui/main.qml:103
+#: ui/main.qml:106
 #, fuzzy, kde-format
 #| msgid "Le&ft handed"
-msgid "Left-handed mode"
+msgid "Swap (left-handed mode)"
 msgstr "ប្រើ​ដៃ​ឆ្វេង"
 
-#: ui/main.qml:118
+#: ui/main.qml:121
 #, kde-format
-msgctxt "@option:check"
-msgid "Press left and right buttons for middle-click"
+msgctxt "@option:check 'both' refers to the left and right buttons'"
+msgid "Press both simultaneously to middle-click"
 msgstr ""
 
-#: ui/main.qml:130
+#: ui/main.qml:133
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -164,61 +170,61 @@ msgid ""
 "needed to correctly detect simultaneous left and right button presses."
 msgstr ""
 
-#: ui/main.qml:142
+#: ui/main.qml:148
 #, fuzzy, kde-format
 #| msgid "Pointer threshold:"
 msgid "Pointer speed:"
 msgstr "កម្រិត​ពន្លឺ​របស់​ព្រួញ​កណ្តុរ ៖"
 
-#: ui/main.qml:221
+#: ui/main.qml:227
 #, fuzzy, kde-format
 #| msgid "Pointer acceleration:"
 msgid "Enable pointer acceleration"
 msgstr "ការ​បង្កើន​ល្បឿន​ព្រួញ ៖"
 
-#: ui/main.qml:235
+#: ui/main.qml:241
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
 
-#: ui/main.qml:245
+#: ui/main.qml:254
 #, fuzzy, kde-format
 #| msgid "Pointer threshold:"
 msgid "Scrolling speed:"
 msgstr "កម្រិត​ពន្លឺ​របស់​ព្រួញ​កណ្តុរ ៖"
 
-#: ui/main.qml:295
+#: ui/main.qml:304
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr ""
 
-#: ui/main.qml:304
+#: ui/main.qml:313
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr ""
 
-#: ui/main.qml:312
+#: ui/main.qml:321
 #, kde-format
 msgid "Scrolling:"
 msgstr ""
 
 #  i18n: file kmousedlg.ui line 132
-#: ui/main.qml:313
+#: ui/main.qml:322
 #, fuzzy, kde-format
 #| msgid "Re&verse scroll direction"
 msgid "Invert scroll direction"
 msgstr "បញ្ច្រាស​ទិស​រមូរ"
 
-#: ui/main.qml:330
+#: ui/main.qml:339
 #, kde-format
 msgid "Hold down middle button and move mouse to scroll"
 msgstr ""
 
-#: ui/main.qml:342
+#: ui/main.qml:351
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""

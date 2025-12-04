@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm5_baloofile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2024-08-28 11:13+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -64,94 +64,96 @@ msgstr ""
 "חיפוש קבצים מסייע לך למצוא את הקבצים שלך במהירות. ניתן לבחור אילו תיקיות "
 "ואילו סוגי נתוני קבצים יתועדו במפתח."
 
-#: ui/main.qml:105
-#, kde-format
-msgctxt "@title:group"
-msgid "File indexing:"
-msgstr "תיעוד קבצים:"
-
-#: ui/main.qml:106
-#, kde-format
-msgctxt "@action:check"
-msgid "Enabled"
-msgstr "פעיל"
-
-#: ui/main.qml:122
+#: ui/main.qml:108
 #, kde-format
 msgctxt "@title:group"
 msgid "Data to index:"
 msgstr "נתונים לתיעוד:"
 
-#: ui/main.qml:124
+#: ui/main.qml:109
 #, kde-format
-msgid "File names and contents"
-msgstr "שמות קבצים ותכנים"
+msgid "Nothing (disable indexing entirely)"
+msgstr ""
 
-#: ui/main.qml:137
+#: ui/main.qml:121
 #, kde-format
 msgid "File names only"
 msgstr "שמות קבצים בלבד"
 
-#: ui/main.qml:156
+#: ui/main.qml:136
 #, kde-format
-msgid "Hidden files and folders"
+msgid "File names and contents"
+msgstr "שמות קבצים ותכנים"
+
+#: ui/main.qml:157
+#, fuzzy, kde-format
+#| msgid "Hidden files and folders"
+msgid "Also index hidden files and folders"
 msgstr "תיקיות וקבצים נסתרים"
 
-#: ui/main.qml:182
+#: ui/main.qml:183
 #, kde-format
 msgctxt "@title:table Locations to include or exclude from indexing"
 msgid "Locations"
 msgstr "מקומות"
 
-#: ui/main.qml:185
+#: ui/main.qml:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Start Indexing a Folder…"
 msgstr "התחלת תיעוד תיקייה…"
 
-#: ui/main.qml:193
+#: ui/main.qml:194
 #, kde-format
 msgctxt "@action:button"
 msgid "Stop Indexing a Folder…"
 msgstr "עצירת תיעוד תיקייה…"
 
-#: ui/main.qml:211
+#: ui/main.qml:212
 #, kde-format
 msgctxt "State and a percentage of progress"
 msgid "%1, %2% complete"
 msgstr "%1, %2% הושלמו"
 
-#: ui/main.qml:218
+#: ui/main.qml:219
 #, kde-kuit-format
 msgctxt "@info Currently Indexing"
 msgid "Currently indexing: <filename>%1</filename>"
 msgstr "נשמר במפתח כעת: <filename>%1</filename>"
 
-#: ui/main.qml:271
+#: ui/main.qml:270
 #, kde-format
 msgid "Not indexed"
 msgstr "לא במפתח"
 
-#: ui/main.qml:272
+#: ui/main.qml:271
 #, kde-format
 msgid "Indexed"
 msgstr "מתועד במפתח"
 
-#: ui/main.qml:302
+#: ui/main.qml:297
 #, kde-format
 msgctxt "Remove the list item for this filesystem path"
 msgid "Remove entry"
 msgstr "הסרת רשומה"
 
-#: ui/main.qml:317
+#: ui/main.qml:318
 #, kde-format
 msgid "Select a folder to include"
 msgstr "נא לבחור תיקייה להכללה"
 
-#: ui/main.qml:317
+#: ui/main.qml:318
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "נא לבחור תיקייה להחרגה"
+
+#~ msgctxt "@title:group"
+#~ msgid "File indexing:"
+#~ msgstr "תיעוד קבצים:"
+
+#~ msgctxt "@action:check"
+#~ msgid "Enabled"
+#~ msgstr "פעיל"
 
 #~ msgctxt "@label indexing status"
 #~ msgid "Status:"

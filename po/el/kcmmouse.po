@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2024-08-12 22:00+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -160,21 +160,34 @@ msgstr "Γενικά:"
 
 #: ui/main.qml:88
 #, kde-format
-msgid "Device enabled"
-msgstr "Ενεργή συσκευή"
+msgid "Enable device"
+msgstr ""
 
-#: ui/main.qml:103
-#, kde-format
-msgid "Left-handed mode"
+#: ui/main.qml:105
+#, fuzzy, kde-format
+#| msgid "Swap left and right buttons."
+msgctxt "@title:group"
+msgid "Left and right buttons:"
+msgstr "Αλλαγή αριστερού και δεξιού κουμπιού."
+
+#: ui/main.qml:106
+#, fuzzy, kde-format
+#| msgid "Left-handed mode"
+msgid "Swap (left-handed mode)"
 msgstr "Λειτουργία αριστερόχειρα"
 
-#: ui/main.qml:118
-#, kde-format
-msgctxt "@option:check"
-msgid "Press left and right buttons for middle-click"
-msgstr "Πατήστε το αριστερό και το δεξί κουμπί για μεσαίο κλικ"
+#: ui/main.qml:121
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Pressing the left and right button simultaneously acts as middle-click."
+msgctxt "@option:check 'both' refers to the left and right buttons'"
+msgid "Press both simultaneously to middle-click"
+msgstr ""
+"Το ταυτόχρονο πάτημα του αριστερού και δεξιού κουμπιού στέλνει το κλικ του "
+"μεσαίου κουμπιού."
 
-#: ui/main.qml:130
+#: ui/main.qml:133
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -185,18 +198,18 @@ msgstr ""
 "κατά 50ms. Η επιπλέον καθυστέρηση είναι απαραίτητη για να ανιχνεύονται σωστά "
 "τα ταυτόχρονα αριστερά και δεξιά κλικ του ποντικιού."
 
-#: ui/main.qml:142
+#: ui/main.qml:148
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Ταχύτητα δείκτη:"
 
-#: ui/main.qml:221
+#: ui/main.qml:227
 #, fuzzy, kde-format
 #| msgid "Pointer acceleration:"
 msgid "Enable pointer acceleration"
 msgstr "Επιτάχυνση δείκτη:"
 
-#: ui/main.qml:235
+#: ui/main.qml:241
 #, fuzzy, kde-format
 #| msgid "Cursor travel distance depends on the mouse movement speed."
 msgctxt "@info:tooltip from ContextualHelpButton"
@@ -206,40 +219,40 @@ msgstr ""
 "Η απόσταση κίνησης του δρομέα εξαρτάται από την ταχύτητα κίνησης του "
 "ποντικιού."
 
-#: ui/main.qml:245
+#: ui/main.qml:254
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Ταχύτητα κύλισης:"
 
-#: ui/main.qml:295
+#: ui/main.qml:304
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Αργότερη"
 
-#: ui/main.qml:304
+#: ui/main.qml:313
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Ταχύτερη"
 
-#: ui/main.qml:312
+#: ui/main.qml:321
 #, kde-format
 msgid "Scrolling:"
 msgstr "Κύλιση:"
 
-#: ui/main.qml:313
+#: ui/main.qml:322
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Αντιστροφή κατεύθυνσης κύλισης"
 
-#: ui/main.qml:330
+#: ui/main.qml:339
 #, fuzzy, kde-format
 #| msgid "Press middle button and move mouse to scroll"
 msgid "Hold down middle button and move mouse to scroll"
 msgstr "Πατήστε το μεσαίο κουμπί και μετακινήστε το ποντίκι για κύλιση"
 
-#: ui/main.qml:342
+#: ui/main.qml:351
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -249,18 +262,15 @@ msgid ""
 "devices that do not have any."
 msgstr ""
 
+#~ msgid "Device enabled"
+#~ msgstr "Ενεργή συσκευή"
+
+#~ msgctxt "@option:check"
+#~ msgid "Press left and right buttons for middle-click"
+#~ msgstr "Πατήστε το αριστερό και το δεξί κουμπί για μεσαίο κλικ"
+
 #~ msgid "Accept input through this device."
 #~ msgstr "Αποδοχή εισόδου μέσω αυτής της συσκευής."
-
-#~ msgid "Swap left and right buttons."
-#~ msgstr "Αλλαγή αριστερού και δεξιού κουμπιού."
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Pressing the left and right button simultaneously acts as middle-click."
-#~ msgstr ""
-#~ "Το ταυτόχρονο πάτημα του αριστερού και δεξιού κουμπιού στέλνει το κλικ "
-#~ "του μεσαίου κουμπιού."
 
 #~ msgid "Touchscreen-like scrolling."
 #~ msgstr "Κύλιση σαν οθόνη αφής."

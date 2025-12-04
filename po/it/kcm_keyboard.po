@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2025-11-01 09:17+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -96,10 +96,12 @@ msgstr ""
 "correttamente, se applicate."
 
 #: ui/KeyBindings.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Configure Switching…"
 msgctxt "@title"
-msgid "Key Bindings"
-msgstr "Associazioni dei tasti"
+msgid "Configure Key Bindings…"
+msgstr "Configura lo scambio…"
 
 #: ui/KeyBindings.qml:62
 #, kde-format
@@ -560,6 +562,10 @@ msgstr[1] "%1 scorciatoie"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Nessuna"
+
+#~ msgctxt "@title"
+#~ msgid "Key Bindings"
+#~ msgstr "Associazioni dei tasti"
 
 #~ msgctxt "@option:radio"
 #~ msgid "Turn Off"

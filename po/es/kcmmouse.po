@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2025-05-26 00:49+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -160,21 +160,32 @@ msgstr "General:"
 
 #: ui/main.qml:88
 #, kde-format
-msgid "Device enabled"
-msgstr "Dispositivo activado"
+msgid "Enable device"
+msgstr ""
 
-#: ui/main.qml:103
-#, kde-format
-msgid "Left-handed mode"
-msgstr "Modo para zurdos"
-
-#: ui/main.qml:118
-#, kde-format
-msgctxt "@option:check"
-msgid "Press left and right buttons for middle-click"
+#: ui/main.qml:105
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Press left and right buttons for middle-click"
+msgctxt "@title:group"
+msgid "Left and right buttons:"
 msgstr "Pulsar los botones derecho e izquierdo para clic central"
 
-#: ui/main.qml:130
+#: ui/main.qml:106
+#, fuzzy, kde-format
+#| msgid "Left-handed mode"
+msgid "Swap (left-handed mode)"
+msgstr "Modo para zurdos"
+
+#: ui/main.qml:121
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Press left and right buttons for middle-click"
+msgctxt "@option:check 'both' refers to the left and right buttons'"
+msgid "Press both simultaneously to middle-click"
+msgstr "Pulsar los botones derecho e izquierdo para clic central"
+
+#: ui/main.qml:133
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -185,17 +196,17 @@ msgstr ""
 "retardo adicional es necesario para detectar correctamente la pulsación  "
 "simultánea de los botones derecho e izquierdo."
 
-#: ui/main.qml:142
+#: ui/main.qml:148
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Velocidad del puntero:"
 
-#: ui/main.qml:221
+#: ui/main.qml:227
 #, kde-format
 msgid "Enable pointer acceleration"
 msgstr "Activar aceleración del puntero"
 
-#: ui/main.qml:235
+#: ui/main.qml:241
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -204,39 +215,39 @@ msgstr ""
 "Cuando está activa, la distancia que recorre el puntero aumenta con un "
 "movimiento más rápido."
 
-#: ui/main.qml:245
+#: ui/main.qml:254
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Velocidad de desplazamiento:"
 
-#: ui/main.qml:295
+#: ui/main.qml:304
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Más lenta"
 
-#: ui/main.qml:304
+#: ui/main.qml:313
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Más rápida"
 
-#: ui/main.qml:312
+#: ui/main.qml:321
 #, kde-format
 msgid "Scrolling:"
 msgstr "Desplazamiento:"
 
-#: ui/main.qml:313
+#: ui/main.qml:322
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Invertir la dirección de desplazamiento"
 
-#: ui/main.qml:330
+#: ui/main.qml:339
 #, kde-format
 msgid "Hold down middle button and move mouse to scroll"
 msgstr "Mantener pulsado el botón central y mover el ratón para desplazar"
 
-#: ui/main.qml:342
+#: ui/main.qml:351
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -250,3 +261,6 @@ msgstr ""
 "videojuegos. Se puede usar en cualquier dispositivo, aunque está pensado "
 "principalmente como un sustituto de la rueda de desplazamiento en los "
 "dispositivos que no disponen de ella."
+
+#~ msgid "Device enabled"
+#~ msgstr "Dispositivo activado"

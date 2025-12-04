@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2025-11-22 09:41+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -96,10 +96,12 @@ msgstr ""
 "samt alveg virkað rétt ef þetta er valið"
 
 #: ui/KeyBindings.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Configure Switching…"
 msgctxt "@title"
-msgid "Key Bindings"
-msgstr "Lyklabindingar"
+msgid "Configure Key Bindings…"
+msgstr "Grunnstilla skipti..."
 
 #: ui/KeyBindings.qml:62
 #, kde-format
@@ -557,6 +559,10 @@ msgstr[1] "%1 flýtilyklar"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Engin"
+
+#~ msgctxt "@title"
+#~ msgid "Key Bindings"
+#~ msgstr "Lyklabindingar"
 
 #~ msgctxt "@option:radio"
 #~ msgid "Turn Off"

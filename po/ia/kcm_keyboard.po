@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2025-03-25 12:32+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -93,10 +93,12 @@ msgstr ""
 "poterea anque functionar ben si applicate "
 
 #: ui/KeyBindings.qml:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Configure Switching…"
 msgctxt "@title"
-msgid "Key Bindings"
-msgstr "Ligamines Clave"
+msgid "Configure Key Bindings…"
+msgstr "Configura commutar…"
 
 #: ui/KeyBindings.qml:62
 #, kde-format
@@ -568,6 +570,10 @@ msgstr[1] "%1 Vias breve:"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Necun"
+
+#~ msgctxt "@title"
+#~ msgid "Key Bindings"
+#~ msgstr "Ligamines Clave"
 
 #~ msgctxt "@option:radio"
 #~ msgid "Turn Off"

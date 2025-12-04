@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-04 00:45+0000\n"
 "PO-Revision-Date: 2025-05-25 09:14+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -155,21 +155,34 @@ msgstr "Yleistä"
 
 #: ui/main.qml:88
 #, kde-format
-msgid "Device enabled"
-msgstr "Laite käytössä"
+msgid "Enable device"
+msgstr ""
 
-#: ui/main.qml:103
-#, kde-format
-msgid "Left-handed mode"
+#: ui/main.qml:105
+#, fuzzy, kde-format
+#| msgid "Swap left and right buttons."
+msgctxt "@title:group"
+msgid "Left and right buttons:"
+msgstr "Vaihda vasen ja oikea painike keskenään."
+
+#: ui/main.qml:106
+#, fuzzy, kde-format
+#| msgid "Left-handed mode"
+msgid "Swap (left-handed mode)"
 msgstr "Vasenkätinen tila"
 
-#: ui/main.qml:118
-#, kde-format
-msgctxt "@option:check"
-msgid "Press left and right buttons for middle-click"
-msgstr "Vasen ja oikea painike toimivat yhdessä keskipainikkeena"
+#: ui/main.qml:121
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "Pressing the left and right button simultaneously acts as middle-click."
+msgctxt "@option:check 'both' refers to the left and right buttons'"
+msgid "Press both simultaneously to middle-click"
+msgstr ""
+"Vasemman ja oikean painikkeen yhteisnapsautus lähettää keskipainikkeen "
+"napsautuksen."
 
-#: ui/main.qml:130
+#: ui/main.qml:133
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -180,17 +193,17 @@ msgstr ""
 "tarvitaan yhtäaikaisen vasemman ja oikean hiiripainikkeen napsautuksen "
 "tunnistamiseksi."
 
-#: ui/main.qml:142
+#: ui/main.qml:148
 #, kde-format
 msgid "Pointer speed:"
 msgstr "Osoittimen nopeus:"
 
-#: ui/main.qml:221
+#: ui/main.qml:227
 #, kde-format
 msgid "Enable pointer acceleration"
 msgstr "Käytä osoittimen kiihdytystä"
 
-#: ui/main.qml:235
+#: ui/main.qml:241
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -198,39 +211,39 @@ msgid ""
 msgstr ""
 "Jos käytössä, osoittimen kulkema matka kasvaa sen liikkuessa nopeammin."
 
-#: ui/main.qml:245
+#: ui/main.qml:254
 #, kde-format
 msgid "Scrolling speed:"
 msgstr "Vieritysnopeus:"
 
-#: ui/main.qml:295
+#: ui/main.qml:304
 #, kde-format
 msgctxt "Slower Scroll"
 msgid "Slower"
 msgstr "Hitaampi"
 
-#: ui/main.qml:304
+#: ui/main.qml:313
 #, kde-format
 msgctxt "Faster Scroll Speed"
 msgid "Faster"
 msgstr "Nopeampi"
 
-#: ui/main.qml:312
+#: ui/main.qml:321
 #, kde-format
 msgid "Scrolling:"
 msgstr "Vieritys:"
 
-#: ui/main.qml:313
+#: ui/main.qml:322
 #, kde-format
 msgid "Invert scroll direction"
 msgstr "Käännä vierityssuunta"
 
-#: ui/main.qml:330
+#: ui/main.qml:339
 #, kde-format
 msgid "Hold down middle button and move mouse to scroll"
 msgstr "Vieritä painamalla keskipainiketta ja liikuttamalla hiirtä"
 
-#: ui/main.qml:342
+#: ui/main.qml:351
 #, kde-format
 msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
@@ -244,18 +257,15 @@ msgstr ""
 "käyttää millä tahansa laitteella, mutta ensisijaisesti sen on tarkoitettu "
 "korvaavan puuttuvaa hiiren rullaa."
 
+#~ msgid "Device enabled"
+#~ msgstr "Laite käytössä"
+
+#~ msgctxt "@option:check"
+#~ msgid "Press left and right buttons for middle-click"
+#~ msgstr "Vasen ja oikea painike toimivat yhdessä keskipainikkeena"
+
 #~ msgid "Accept input through this device."
 #~ msgstr "Hyväksy tältä laitteesta tuleva syöte."
-
-#~ msgid "Swap left and right buttons."
-#~ msgstr "Vaihda vasen ja oikea painike keskenään."
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "Pressing the left and right button simultaneously acts as middle-click."
-#~ msgstr ""
-#~ "Vasemman ja oikean painikkeen yhteisnapsautus lähettää keskipainikkeen "
-#~ "napsautuksen."
 
 #~ msgid "Touchscreen-like scrolling."
 #~ msgstr "Kosketusnäyttömäinen vieritys."
