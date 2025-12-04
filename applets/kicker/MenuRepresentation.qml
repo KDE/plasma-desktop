@@ -46,7 +46,7 @@ PlasmaComponents3.ScrollView {
         }
         const targetList = runnerColumns.visibleChildren[column]
         targetList.currentIndex = focusTopElement ? 0 : (targetList.count - 1)
-        targetList.forceActiveFocus(Qt.TabFocusReason)
+        targetList.giveFocus(Qt.TabFocusReason)
         root.ensureVisible(targetList)
     }
 
