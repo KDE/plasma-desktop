@@ -526,7 +526,7 @@ KCM.SimpleKCM {
 
         ColumnLayout {
             id: middleClickMethod
-            Kirigami.FormData.label: i18ndc("kcm_touchpad", "@label for radiobutton group, begins the sentence 'middle-click by pressing bottom-middle edge/'", "Middle-click by middle-click:")
+            Kirigami.FormData.label: i18ndc("kcm_touchpad", "@label for radiobutton group, begins the sentence 'middle-click by pressing bottom-middle edge/by pressing anywhere with three fingers'", "Middle-click by:")
             Kirigami.FormData.buddyFor: middleSoftwareEmulation
             enabled: root.device?.supportsMiddleEmulation ?? false
 
