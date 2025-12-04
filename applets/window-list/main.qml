@@ -147,7 +147,7 @@ PlasmoidItem {
                         display: "" // filled by Component.onCompleted
                         decoration: "edit-none"
                     }
-                    Component.onCompleted: noWindowModel[0].display = i18nc("@info:placeholder", "No open windows")
+                    Component.onCompleted: tasksMenu.noWindowModel.setProperty(0, "display", i18nc("@info:placeholder", "No open windows"))
                 }
 
                 model: tasksModel.count === 0 ? noWindowModel : tasksModel
