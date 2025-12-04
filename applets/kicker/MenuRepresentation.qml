@@ -19,10 +19,10 @@ PlasmaComponents3.ScrollView {
 
     focus: true
 
-    Layout.minimumWidth: Math.min(mainRow.implicitWidth, Screen.width - Kirigami.Units.largeSpacing * 4)
+    Layout.minimumWidth: Math.min(mainRow.width, mainRow.implicitWidth, Screen.width - Kirigami.Units.largeSpacing * 4)
     Layout.maximumWidth: Layout.minimumWidth
 
-    contentWidth: mainRow.width
+    contentWidth: mainRow.implicitWidth
 
     Layout.minimumHeight: Math.max(sideBar.implicitHeight, rootList.implicitHeight + rootList.Layout.bottomMargin)
     Layout.maximumHeight: Layout.minimumHeight
@@ -74,8 +74,7 @@ PlasmaComponents3.ScrollView {
     RowLayout {
         id: mainRow
 
-        height: parent.height
-        width: implicitWidth
+        anchors.fill: parent
 
         spacing: Kirigami.Units.smallSpacing
 
@@ -193,8 +192,9 @@ PlasmaComponents3.ScrollView {
             Layout.alignment: Qt.AlignTop
             Layout.bottomMargin: searchField.implicitHeight + Kirigami.Units.smallSpacing
             Layout.fillHeight: true
+            Layout.fillWidth: true
+            Layout.minimumWidth: searchField.defaultWidth
 
-            minimumWidth: searchField.defaultWidth
 
             visible: searchField.text === ""
 
@@ -250,6 +250,7 @@ PlasmaComponents3.ScrollView {
                     id: runnerMatches
 
                     Layout.fillHeight: true
+                    Layout.fillWidth: true
 
                     visible: runnerModel.modelForRow(index).count > 0
 

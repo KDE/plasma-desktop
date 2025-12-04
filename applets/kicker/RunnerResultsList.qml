@@ -50,6 +50,8 @@ FocusScope {
             id: runnerInnerColumn
             Layout.fillHeight: true
             Layout.fillWidth: true
+            Layout.minimumWidth: runnerMatches.Layout.minimumWidth
+            Layout.maximumWidth: runnerMatches.Layout.maximumWidth
             spacing: Kirigami.Units.smallSpacing
 
             PlasmaComponents3.Label {
@@ -68,12 +70,17 @@ FocusScope {
                 text: (runnerMatches.model !== null) ? runnerMatches.model.name : ""
             }
 
+            Item {
+                Layout.fillHeight: true
+                visible: Plasmoid.configuration.alignResultsToBottom
+            }
+
             ItemListView {
                 id: runnerMatches
 
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                Layout.alignment: Plasmoid.configuration.alignResultsToBottom ? Qt.AlignBottom : Qt.AlignTop
+                Layout.maximumHeight: Plasmoid.configuration.alignResultsToBottom ? contentHeight : -1
 
                 focus: true
 

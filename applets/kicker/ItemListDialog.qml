@@ -5,6 +5,7 @@
 */
 
 import QtQuick
+import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.core as PlasmaCore
@@ -36,6 +37,7 @@ Kicker.SubMenu {
     mainItem: ItemListView {
         id: itemListView
         height: implicitHeight
+        width: Math.min(Math.max(Layout.minimumWidth, implicitWidth), Layout.maximumWidth)
 
         iconsEnabled: true
         LayoutMirroring.enabled: itemDialog.LayoutMirroring.enabled
