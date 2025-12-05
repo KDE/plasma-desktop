@@ -126,6 +126,9 @@ PlasmaComponents3.ScrollView {
         keyNavigationEnabled: false
         cacheBuffer: 10000 // try to load all delegates for sizing; krunner won't return too many anyway
 
+        Accessible.name: itemList.Accessible.name
+        Accessible.role: Accessible.List
+
         function updateImplicitWidth () {
             implicitWidth = maxDelegateImplicitWidth
         }

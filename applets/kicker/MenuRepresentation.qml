@@ -131,6 +131,9 @@ PlasmaComponents3.ScrollView {
                 height: Math.max(implicitHeight, parent.height)
                 width: parent.width
 
+                Accessible.role: Accessible.List
+                Accessible.name: i18nc("@title:group accessible name for favorite group in sidebar", "Favorites")
+
                 LayoutItemProxy {
                     target: sideBar.onTopPanel ? favoriteSystemActions : favoriteApps
                     Layout.topMargin: sideBar.margins.top

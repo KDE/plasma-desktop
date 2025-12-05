@@ -25,9 +25,6 @@ RowLayout {
     property alias count: runnerMatches.count
     property alias mainSearchField: runnerMatches.mainSearchField
 
-    Accessible.name: header.text
-    Accessible.role: Accessible.MenuItem
-
     spacing: Kirigami.Units.smallSpacing
 
     function giveFocus(focusReason): void {
@@ -79,6 +76,8 @@ RowLayout {
             Layout.fillHeight: true
             Layout.fillWidth: true
             Layout.maximumHeight: Plasmoid.configuration.alignResultsToBottom ? contentHeight : -1
+
+            Accessible.name: header.text
 
             iconsEnabled: true
             keyNavigationWraps: !searchFieldPlaceholder.visible

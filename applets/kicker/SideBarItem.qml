@@ -21,6 +21,7 @@ PC3.ToolButton {
 
     text: model.display
     display: PC3.AbstractButton.IconOnly
+    Accessible.role: Accessible.ListItem
     icon.source: model.decoration
     icon.width: Kirigami.Units.iconSizes.medium
     icon.height: Kirigami.Units.iconSizes.medium

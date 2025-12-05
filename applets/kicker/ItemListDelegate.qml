@@ -41,8 +41,10 @@ PlasmaComponents3.ItemDelegate {
     property bool showSeparators: true
     property bool dialogDefaultRight: Application.layoutDirection !== Qt.RightToLeft
 
-    Accessible.role: isSeparator ? Accessible.Separator : Accessible.MenuItem
-    Accessible.name: label.text
+    Accessible.role: isSeparator ? Accessible.Separator : Accessible.ListItem
+    Accessible.description: isParent
+        ? i18nc("@action:inmenu accessible description for opening submenu", "Open category")
+        : i18nc("@action:inmenu accessible description for opening app or file", "Launch")
     text: model.display
     icon.name: decoration
 
@@ -61,7 +63,7 @@ PlasmaComponents3.ItemDelegate {
 
     function openActionMenu(visualParent, x, y) {
         const actionList = item.hasActionList ? item.actionList : [];
-        Tools.fillActionMenu(i18n, actionMenu, actionList, ListView.view.model.favoritesModel, item.favoriteId);
+        Tools.fillActionMenu(i18n, actionMenu, actionList, item.ListView.view.model.favoritesModel, item.favoriteId);
         actionMenu.visualParent = visualParent;
         actionMenu.open(x, y);
     }
@@ -70,7 +72,7 @@ PlasmaComponents3.ItemDelegate {
         id: actionMenu
 
         onActionClicked: (actionId, actionArgument) => {
-            if (Tools.triggerAction(ListView.view.model, item.index, actionId, actionArgument) === true) {
+            if (Tools.triggerAction(item.ListView.view.model, item.index, actionId, actionArgument) === true) {
                 kicker.expanded = false;
             }
         }
