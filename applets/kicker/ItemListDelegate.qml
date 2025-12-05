@@ -13,12 +13,11 @@ import org.kde.plasma.components as PlasmaComponents3
 
 import "code/tools.js" as Tools
 
-Item {
+PlasmaComponents3.ItemDelegate {
     id: item
 
-    height: isSeparator ? separatorHeight : itemHeight
     width: ListView.view.width
-    implicitWidth: row.implicitWidth + row.anchors.leftMargin + row.anchors.rightMargin
+    height: isSeparator && !showSeparators ? 0 : implicitHeight
 
     // if it's not disabled and is either a leaf node or a node with children
     enabled: !isSeparator && !disabled && (!isParent || (isParent && hasChildren))
@@ -37,11 +36,7 @@ Item {
     required property url url
     required property string description
     required property string decoration
-    required property string display
-
-    property alias pressed: tapHandler.pressed
-    property alias hovered: mouseArea.containsMouse
-    property alias hoverEnabled: mouseArea.hoverEnabled
+    required property var model // for display, which would shadow ItemDelegate
 
     readonly property bool iconAndLabelsShouldlookSelected: pressed && !hasChildren
 
@@ -52,6 +47,8 @@ Item {
 
     Accessible.role: isSeparator ? Accessible.Separator : Accessible.MenuItem
     Accessible.name: label.text
+    text: model.display
+    icon.name: decoration
 
     onHasChildrenChanged: {
         if (!hasChildren && ListView.view.currentItem === item) {
@@ -62,6 +59,13 @@ Item {
     onAboutToShowActionMenu: actionMenu => {
         var actionList = item.hasActionList ? item.actionList : [];
         Tools.fillActionMenu(i18n, actionMenu, actionList, ListView.view.model.favoritesModel, item.favoriteId);
+    }
+
+    onClicked: {
+        if (!item.hasChildren) {
+            item.ListView.view.model.trigger(index, "", null);
+            kicker.expanded = false;
+        }
     }
 
     onActionTriggered: (actionId, actionArgument) => {
@@ -94,37 +98,22 @@ Item {
         }
     }
 
-    TapHandler {
-        id: tapHandler
-        onTapped: {
-            if (!item.hasChildren) {
-                item.ListView.view.model.trigger(index, "", null);
-                kicker.expanded = false;
-            }
-        }
-    }
-
     MouseArea {
         id: mouseArea
 
         anchors.fill: parent
 
-        hoverEnabled: true
         acceptedButtons: Qt.RightButton
 
         onPressed: mouse => {
-            if (item.hasActionList || favoriteId !== null) {
+            if (item.hasActionList || item.favoriteId !== null) {
                 item.openActionMenu(mouseArea, mouse.x, mouse.y);
             }
         }
     }
 
-    RowLayout {
+    contentItem: RowLayout {
         id: row
-
-        anchors.fill: parent
-        anchors.leftMargin: highlightItemSvg.margins.left
-        anchors.rightMargin: highlightItemSvg.margins.right
 
         spacing: Kirigami.Units.smallSpacing * 2
 
@@ -141,7 +130,7 @@ Item {
 
             animated: false
             selected: item.iconAndLabelsShouldlookSelected
-            source: item.decoration
+            source: item.icon.name
         }
 
         PlasmaComponents3.Label {
@@ -161,7 +150,7 @@ Item {
             elide: Text.ElideRight
             color: item.iconAndLabelsShouldlookSelected ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
 
-            text: item.display ?? ""
+            text: item.model.display ?? ""
         }
 
         Kirigami.Icon {
@@ -187,7 +176,7 @@ Item {
             Layout.fillWidth: true
 
             // Separator positions don't make sense when sorting everything alphabetically
-            active: item.isSeparator && !item.showSeparators
+            active: item.isSeparator && item.showSeparators
             visible: active
 
             asynchronous: false
