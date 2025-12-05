@@ -762,14 +762,18 @@ void FolderModel::setFilterMimeTypes(const QStringList &mimeList)
     }
 }
 
-void FolderModel::setScreen(int screen)
+void FolderModel::setScreen(int screen, SetScreenActions screenActions)
 {
     bool screenUsed = (screen != -1);
 
     if (screenUsed && m_screen != screen) {
+        const int prevScreen = m_screen;
         m_screen = screen;
         if (m_usedByContainment && !m_screenMapper->sharedDesktops()) {
             m_screenMapper->addScreen(screen, m_currentActivity, resolvedUrl());
+            if (screenActions == SetScreenActions::MoveIcons && prevScreen > -1 && screen > -1) {
+                m_screenMapper->addScreenTransition(prevScreen, screen, m_currentActivity);
+            }
         }
     }
     m_screenUsed = screenUsed;
@@ -1708,6 +1712,7 @@ bool FolderModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParen
             // time we see it or the folderview was previously used as a regular applet.
             // Associated with this folderview if the view is on the first available screen
             if (m_screen == m_screenMapper->firstAvailableScreen(resolvedUrl(), m_currentActivity)) {
+                m_screenMapper->maybeMoveToDisabledScreens(url, m_currentActivity);
                 m_screenMapper->addMapping(url, m_screen, m_currentActivity, ScreenMapper::DelayedSignal);
             } else {
                 return false;
@@ -2215,9 +2220,11 @@ void FolderModel::setApplet(Plasma::Applet *applet)
                     m_screenMapper->setCorona(corona);
                 }
                 setScreen(containment->screen());
-                connect(containment, &Plasma::Containment::screenChanged, this, &FolderModel::setScreen);
                 connect(containment, &Plasma::Containment::screenGeometryChanged, this, &FolderModel::screenGeometryChanged);
                 connect(containment, &Plasma::Containment::availableRelativeScreenRectChanged, this, &FolderModel::availableRelativeScreenRectChanged);
+                connect(containment, &Plasma::Containment::screenChanged, this, [this](int newScreen) {
+                    setScreen(newScreen, SetScreenActions::MoveIcons);
+                });
             }
         }
 

@@ -382,4 +382,44 @@ void FolderModelTest::tst_multiScreenDifferenPath()
     QCOMPARE(secondFolderModel.rowCount(), count2 + 1);
 }
 
+void FolderModelTest::tst_initializeOnCorrectScreens()
+{
+    createTestFolder(desktop);
+    const QString path = m_folderDir->path() + QDir::separator() + desktop;
+
+    // Create screen_0
+    auto folderFirstScreen = new FolderModel(this);
+    folderFirstScreen->classBegin();
+    folderFirstScreen->setUrl(path);
+    folderFirstScreen->setUsedByContainment(true);
+    folderFirstScreen->setScreen(0);
+    folderFirstScreen->componentComplete();
+    QSignalSpy s1(folderFirstScreen, &FolderModel::listingCompleted);
+    QVERIFY(s1.wait(1000));
+
+    // Create a mapping where one file is already on disabled screen_1 for testing purposes
+    auto *screenMapper = ScreenMapper::instance();
+    auto newMap = screenMapper->screenMapping();
+    newMap[1] = QString::number(1);
+
+    // The item on disabled screen_1 should move to enabled screen_0
+    QSignalSpy screenMapSpy(screenMapper, &ScreenMapper::screenMappingChanged);
+    screenMapper->setScreenMapping(newMap);
+    QCOMPARE(screenMapSpy.count(), 1);
+    QCOMPARE(screenMapper->screenMapping()[1], QStringLiteral("0"));
+
+    // Create screen_1
+    auto folderSecondScreen = new FolderModel(this);
+    folderSecondScreen->classBegin();
+    folderSecondScreen->setUrl(path);
+    folderSecondScreen->setUsedByContainment(true);
+    folderSecondScreen->setScreen(1);
+    folderSecondScreen->componentComplete();
+    QSignalSpy s2(folderSecondScreen, &FolderModel::listingCompleted);
+    QVERIFY(s2.wait(1000));
+
+    // Now that the screen_1 is enabled again, the item should be back on the screen_1
+    QCOMPARE(screenMapper->screenMapping(), newMap);
+}
+
 #include "moc_foldermodeltest.cpp"

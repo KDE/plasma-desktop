@@ -44,6 +44,7 @@ public:
     void setScreenMapping(const QStringList &mapping);
 
     int screenForItem(const QUrl &url, const QString &activity) const;
+    void maybeMoveToDisabledScreens(const QUrl &url, const QString &activity);
     void addMapping(const QUrl &url, int screen, const QString &activity, MappingSignalBehavior behavior = ImmediateSignal);
     void removeFromMap(const QUrl &url, const QString &activity);
     void setCorona(Plasma::Corona *corona);
@@ -52,6 +53,8 @@ public:
     void removeScreen(int screenId, const QString &activity, const QUrl &screenUrl);
     int firstAvailableScreen(const QUrl &screenUrl, const QString &activity) const;
     void removeItemFromDisabledScreen(const QUrl &url);
+
+    void addScreenTransition(int screenSrc, int screenDst, const QString &activity);
 
     bool sharedDesktops() const
     {
@@ -70,6 +73,8 @@ Q_SIGNALS:
     void screensChanged() const;
 
 private:
+    void processScreenTransition();
+
     /**
      * The format of DisabledScreensMap is:
      * - Screen ID (controlled by readingScreenId)
@@ -93,6 +98,9 @@ private:
     QPointer<Plasma::Corona> m_corona;
     QTimer *const m_screenMappingChangedTimer;
     bool m_sharedDesktops = false; // all screens share the same desktops, disabling the screen mapping
+    bool m_disabledScreensMapDirty = false;
+    QList<std::tuple<int /* screen src */, int /* screen dst */, QString /* activity ID */>> m_screenTransitions;
+    QTimer *const m_screenTransitionTimer;
 
     friend class ScreenMapperTest;
 };

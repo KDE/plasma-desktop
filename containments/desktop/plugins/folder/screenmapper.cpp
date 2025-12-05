@@ -42,11 +42,17 @@ ScreenMapper *ScreenMapper::instance()
 ScreenMapper::ScreenMapper(QObject *parent)
     : QObject(parent)
     , m_screenMappingChangedTimer(new QTimer(this))
+    , m_screenTransitionTimer(new QTimer(this))
 
 {
     connect(m_screenMappingChangedTimer, &QTimer::timeout, this, &ScreenMapper::screenMappingChanged);
 
     connect(this, &ScreenMapper::screenMappingChanged, this, [this] {
+        if (m_disabledScreensMapDirty) {
+            saveDisabledScreensMap();
+            m_disabledScreensMapDirty = false;
+        }
+
         if (!m_corona)
             return;
 
@@ -61,6 +67,10 @@ ScreenMapper::ScreenMapper(QObject *parent)
     // that doesn't delay too much the signal, but still compresses as much as possible
     m_screenMappingChangedTimer->setInterval(100ms);
     m_screenMappingChangedTimer->setSingleShot(true);
+
+    m_screenTransitionTimer->setInterval(0);
+    m_screenTransitionTimer->setSingleShot(true);
+    m_screenTransitionTimer->callOnTimeout(this, &ScreenMapper::processScreenTransition);
 }
 
 void ScreenMapper::removeScreen(int screenId, const QString &activity, const QUrl &screenUrl)
@@ -160,6 +170,17 @@ void ScreenMapper::addScreen(int screenId, const QString &activity, const QUrl &
     Q_EMIT screensChanged();
 }
 
+void ScreenMapper::maybeMoveToDisabledScreens(const QUrl &url, const QString &activity)
+{
+    if (auto it = m_screenItemMap.find(std::make_pair(url, activity)); it != m_screenItemMap.end() && it.value() > -1) {
+        m_itemsOnDisabledScreensMap[std::make_pair(it.value(), activity)].insert(url);
+        m_screenItemMap.erase(it);
+        m_disabledScreensMapDirty = true;
+
+        m_screenMappingChangedTimer->start();
+    }
+}
+
 void ScreenMapper::addMapping(const QUrl &url, int screen, const QString &activity, MappingSignalBehavior behavior)
 {
     if (m_screenItemMap.count() > MAX_MAPPING_COUNT) {
@@ -218,6 +239,16 @@ void ScreenMapper::removeItemFromDisabledScreen(const QUrl &url)
         auto urls = &(*it);
         urls->remove(url);
     }
+}
+
+void ScreenMapper::addScreenTransition(int screenSrc, int screenDst, const QString &activity)
+{
+    Q_ASSERT(screenSrc > -1);
+    Q_ASSERT(screenDst > -1);
+
+    m_screenTransitions.push_back(std::make_tuple(screenSrc, screenDst, activity));
+
+    m_screenTransitionTimer->start();
 }
 
 void ScreenMapper::setSharedDesktop(bool sharedDesktops)
@@ -294,23 +325,12 @@ void ScreenMapper::setScreenMapping(const QStringList &mapping)
     Q_ASSERT(count % sizeOfParamGroup == 0);
 
     newMap.reserve(count / sizeOfParamGroup);
-    QMap<int, int> screenConsistencyMap;
     for (int i = 0; i < count - (sizeOfParamGroup - 1); i += sizeOfParamGroup) {
         if (i + (sizeOfParamGroup - 1) < count) {
             const QUrl url = QUrl::fromUserInput(mapping[i], {}, QUrl::AssumeLocalFile);
             const QString activity = mapping[i + 2];
             newMap[std::make_pair(url, activity)] = mapping[i + 1].toInt();
-            screenConsistencyMap[mapping[i + 1].toInt()] = -1;
         }
-    }
-
-    int lastMappedScreen = 0;
-    for (int key : screenConsistencyMap.keys()) {
-        screenConsistencyMap[key] = lastMappedScreen++;
-    }
-
-    for (auto it = newMap.begin(); it != newMap.end(); it++) {
-        newMap[it.key()] = screenConsistencyMap.value(it.value());
     }
 
     if (m_screenItemMap != newMap) {
@@ -332,6 +352,36 @@ int ScreenMapper::screenForItem(const QUrl &url, const QString &activity) const
 QUrl ScreenMapper::stringToUrl(const QString &path)
 {
     return QUrl::fromUserInput(path, {}, QUrl::AssumeLocalFile);
+}
+
+void ScreenMapper::processScreenTransition()
+{
+    auto cleaner = qScopeGuard([this] {
+        m_screenTransitions.clear();
+    });
+
+    if (m_screenTransitions.size() != 2) {
+        return;
+    }
+
+    auto &&[screen1, screen2, activity] = m_screenTransitions.constFirst();
+    auto &&[screenTmp2, screenTmp1, activityTmp] = m_screenTransitions.constLast();
+    if (screen1 != screenTmp1 || screen2 != screenTmp2 || activity != activityTmp) {
+        return;
+    }
+
+    for (auto &&[pair, screen] : m_screenItemMap.asKeyValueRange()) {
+        if (pair.second != activity) {
+            continue;
+        }
+        if (screen == screen1) {
+            screen = screen2;
+        } else if (screen == screen2) {
+            screen = screen1;
+        }
+    }
+
+    m_screenMappingChangedTimer->start();
 }
 
 QStringList ScreenMapper::disabledScreensMap() const

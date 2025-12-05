@@ -124,6 +124,11 @@ public:
     };
     Q_ENUM(Status)
 
+    enum class SetScreenActions {
+        None,
+        MoveIcons
+    };
+
     explicit FolderModel(QObject *parent = nullptr);
     ~FolderModel() override;
 
@@ -252,7 +257,7 @@ public:
 
     bool screenUsed();
 
-    void setScreen(int screen);
+    void setScreen(int screen, SetScreenActions screenActions = SetScreenActions::None);
 
     QRectF screenGeometry();
 
