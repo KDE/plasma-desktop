@@ -91,6 +91,7 @@ KCM.SimpleKCM {
             Layout.fillWidth: true
         }
 
+        Item { Layout.fillHeight: true }
         ColumnLayout {
             Layout.alignment: Qt.AlignHCenter
 
@@ -157,6 +158,7 @@ KCM.SimpleKCM {
                     }
                 }
             }
+            Item { Layout.fillHeight: true }
         }
     }
 }
