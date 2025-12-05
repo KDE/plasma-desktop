@@ -22,9 +22,6 @@ PlasmaComponents3.ItemDelegate {
     // if it's not disabled and is either a leaf node or a node with children
     enabled: !isSeparator && !disabled && (!isParent || (isParent && hasChildren))
 
-    signal actionTriggered(string actionId, var actionArgument)
-    signal aboutToShowActionMenu(var actionMenu)
-
     required property int index
     required property bool isSeparator
     required property bool hasChildren
@@ -39,10 +36,9 @@ PlasmaComponents3.ItemDelegate {
     required property var model // for display, which would shadow ItemDelegate
 
     readonly property bool iconAndLabelsShouldlookSelected: pressed && !hasChildren
+    readonly property ActionMenu menu: actionMenu
 
     property bool showSeparators: true
-    property QtObject childDialog: null
-    property ActionMenu menu: actionMenu
     property bool dialogDefaultRight: Application.layoutDirection !== Qt.RightToLeft
 
     Accessible.role: isSeparator ? Accessible.Separator : Accessible.MenuItem
@@ -56,11 +52,6 @@ PlasmaComponents3.ItemDelegate {
         }
     }
 
-    onAboutToShowActionMenu: actionMenu => {
-        var actionList = item.hasActionList ? item.actionList : [];
-        Tools.fillActionMenu(i18n, actionMenu, actionList, ListView.view.model.favoritesModel, item.favoriteId);
-    }
-
     onClicked: {
         if (!item.hasChildren) {
             item.ListView.view.model.trigger(index, "", null);
@@ -68,14 +59,9 @@ PlasmaComponents3.ItemDelegate {
         }
     }
 
-    onActionTriggered: (actionId, actionArgument) => {
-        if (Tools.triggerAction(ListView.view.model, item.index, actionId, actionArgument) === true) {
-            kicker.expanded = false;
-        }
-    }
-
     function openActionMenu(visualParent, x, y) {
-        aboutToShowActionMenu(actionMenu);
+        const actionList = item.hasActionList ? item.actionList : [];
+        Tools.fillActionMenu(i18n, actionMenu, actionList, ListView.view.model.favoritesModel, item.favoriteId);
         actionMenu.visualParent = visualParent;
         actionMenu.open(x, y);
     }
@@ -84,7 +70,9 @@ PlasmaComponents3.ItemDelegate {
         id: actionMenu
 
         onActionClicked: (actionId, actionArgument) => {
-            item.actionTriggered(actionId, actionArgument);
+            if (Tools.triggerAction(ListView.view.model, item.index, actionId, actionArgument) === true) {
+                kicker.expanded = false;
+            }
         }
     }
 
