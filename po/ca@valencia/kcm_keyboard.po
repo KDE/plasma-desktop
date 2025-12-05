@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-04 00:45+0000\n"
-"PO-Revision-Date: 2025-10-31 10:20+0100\n"
+"PO-Revision-Date: 2025-12-04 11:40+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -88,8 +88,8 @@ msgid ""
 "not supported and  will also trigger this message. These might still work "
 "fine if applied"
 msgstr ""
-"No s'ha pogut carregar la geometria del teclat. Sovint açò indica que el "
-"model seleccionat no accepta una disposició específica o una variant de "
+"Ha fallat mentre es carregava la geometria del teclat. Sovint açò indica que "
+"el model seleccionat no accepta una disposició específica o una variant de "
 "disposició. Este problema segurament també es produirà si intenteu utilitzar "
 "esta combinació de model, disposició i variant.\n"
 "No s'admet la previsualització de les disposicions que es definixen fora del "
@@ -97,12 +97,10 @@ msgstr ""
 "funcionar bé si s'apliquen"
 
 #: ui/KeyBindings.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Switching…"
+#, kde-format
 msgctxt "@title"
 msgid "Configure Key Bindings…"
-msgstr "Configura el canvi…"
+msgstr "Configura els lligams de tecles…"
 
 #: ui/KeyBindings.qml:62
 #, kde-format
@@ -561,7 +559,3 @@ msgstr[1] "%1 dreceres"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "Cap"
-
-#~ msgctxt "@title"
-#~ msgid "Key Bindings"
-#~ msgstr "Lligams de tecla"

@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-04 00:45+0000\n"
-"PO-Revision-Date: 2025-05-14 09:18+0300\n"
+"PO-Revision-Date: 2025-12-04 17:07+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -158,31 +158,24 @@ msgstr "Загальне:"
 #: ui/main.qml:88
 #, kde-format
 msgid "Enable device"
-msgstr ""
+msgstr "Увімкнути пристрій"
 
 #: ui/main.qml:105
-#, fuzzy, kde-format
-#| msgid "Swap left and right buttons."
+#, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
-msgstr "Поміняти місцями ліву і праву кнопки."
+msgstr "Ліва і права кнопки:"
 
 #: ui/main.qml:106
-#, fuzzy, kde-format
-#| msgid "Left-handed mode"
+#, kde-format
 msgid "Swap (left-handed mode)"
-msgstr "Режим шульги"
+msgstr "Поміняти місцями (режим шульги)"
 
 #: ui/main.qml:121
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Pressing the left and right button simultaneously acts as middle-click."
+#, kde-format
 msgctxt "@option:check 'both' refers to the left and right buttons'"
 msgid "Press both simultaneously to middle-click"
-msgstr ""
-"Одночасне натискання лівої і правої кнопок працюватиме як клацання середньою "
-"кнопкою."
+msgstr "Натискання обох кнопок для клацання середньою"
 
 #: ui/main.qml:133
 #, kde-format

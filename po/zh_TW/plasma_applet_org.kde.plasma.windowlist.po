@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_windowlist\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-26 00:45+0000\n"
+"POT-Creation-Date: 2025-12-05 00:44+0000\n"
 "PO-Revision-Date: 2025-11-29 17:59+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -20,7 +20,9 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: config.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "一般"
 
@@ -73,33 +75,37 @@ msgctxt "@option:check open-on-hover is enabled, with the following delay:"
 msgid "Enabled, with delay:"
 msgstr "啟用，在延遲一段時間後開啟："
 
-#: ConfigGeneral.qml:125
+#: ConfigGeneral.qml:118
 #, kde-format
 msgid "%1 ms"
 msgid_plural "%1 ms"
 msgstr[0] "%1 毫秒"
 
-#: ConfigGeneral.qml:134
+#: ConfigGeneral.qml:127
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
 msgstr[0] "毫秒"
 
-#: ConfigGeneral.qml:137
-#, kde-format
-msgctxt "@label:spinbox accessible"
-msgid "Hover open delay %1"
+#: ConfigGeneral.qml:130
+#, fuzzy, kde-format
+#| msgctxt "@label:spinbox accessible"
+#| msgid "Hover open delay %1"
+msgctxt "@label:spinbox accessible %1 is milliseconds"
+msgid "Hover open delay %1 ms"
 msgstr "游標停駐開啟延遲 %1"
 
-#: main.qml:92
+#: main.qml:92 main.qml:150
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No open windows"
 msgstr "無已開啟視窗"
 
-#: main.qml:119
-#, kde-format
+#: main.qml:121
+#, fuzzy, kde-format
+#| msgid "Plasma Desktop"
+msgctxt "@title:window title shown e.g. for desktop and expanded widgets"
 msgid "Plasma Desktop"
 msgstr "Plasma 桌面"
 

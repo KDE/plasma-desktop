@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-26 00:45+0000\n"
+"POT-Creation-Date: 2025-12-05 00:44+0000\n"
 "PO-Revision-Date: 2025-11-04 21:59+0100\n"
 "Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -19,7 +19,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: config.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Generelt"
 
@@ -72,14 +74,14 @@ msgctxt "@option:check open-on-hover is enabled, with the following delay:"
 msgid "Enabled, with delay:"
 msgstr ""
 
-#: ConfigGeneral.qml:125
+#: ConfigGeneral.qml:118
 #, kde-format
 msgid "%1 ms"
 msgid_plural "%1 ms"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ConfigGeneral.qml:134
+#: ConfigGeneral.qml:127
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
@@ -87,20 +89,22 @@ msgid_plural "ms"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ConfigGeneral.qml:137
+#: ConfigGeneral.qml:130
 #, kde-format
-msgctxt "@label:spinbox accessible"
-msgid "Hover open delay %1"
+msgctxt "@label:spinbox accessible %1 is milliseconds"
+msgid "Hover open delay %1 ms"
 msgstr ""
 
-#: main.qml:92
+#: main.qml:92 main.qml:150
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No open windows"
 msgstr "Ingen åbne vinduer"
 
-#: main.qml:119
-#, kde-format
+#: main.qml:121
+#, fuzzy, kde-format
+#| msgid "Plasma Desktop"
+msgctxt "@title:window title shown e.g. for desktop and expanded widgets"
 msgid "Plasma Desktop"
 msgstr "Plasma-skrivebordet"
 

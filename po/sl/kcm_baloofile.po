@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-04 00:45+0000\n"
-"PO-Revision-Date: 2024-08-28 06:47+0200\n"
+"PO-Revision-Date: 2025-12-04 06:54+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.8\n"
 
 #: ui/main.qml:44
 #, kde-format
@@ -74,7 +74,7 @@ msgstr "Podatki za indeksiranje:"
 #: ui/main.qml:109
 #, kde-format
 msgid "Nothing (disable indexing entirely)"
-msgstr ""
+msgstr "Nič (popolnoma onemogoči indeksiranje)"
 
 #: ui/main.qml:121
 #, kde-format
@@ -87,10 +87,9 @@ msgid "File names and contents"
 msgstr "Imena datotek in vsebina"
 
 #: ui/main.qml:157
-#, fuzzy, kde-format
-#| msgid "Hidden files and folders"
+#, kde-format
 msgid "Also index hidden files and folders"
-msgstr "Skrite datoteke in mape"
+msgstr "Indeksiraj tudi skrite datoteke in mape"
 
 #: ui/main.qml:183
 #, kde-format

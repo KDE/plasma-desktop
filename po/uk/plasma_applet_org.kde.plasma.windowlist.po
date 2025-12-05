@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.windowlist\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-26 00:45+0000\n"
+"POT-Creation-Date: 2025-12-05 00:44+0000\n"
 "PO-Revision-Date: 2025-11-26 16:48+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -21,7 +21,9 @@ msgstr ""
 "X-Generator: Lokalize 23.04.3\n"
 
 #: config.qml:13
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Загальне"
 
@@ -74,7 +76,7 @@ msgctxt "@option:check open-on-hover is enabled, with the following delay:"
 msgid "Enabled, with delay:"
 msgstr "Увімкнено, з затримкою:"
 
-#: ConfigGeneral.qml:125
+#: ConfigGeneral.qml:118
 #, kde-format
 msgid "%1 ms"
 msgid_plural "%1 ms"
@@ -83,7 +85,7 @@ msgstr[1] "%1 мс"
 msgstr[2] "%1 мс"
 msgstr[3] "%1 мс"
 
-#: ConfigGeneral.qml:134
+#: ConfigGeneral.qml:127
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
@@ -93,20 +95,24 @@ msgstr[1] "мс"
 msgstr[2] "мс"
 msgstr[3] "мс"
 
-#: ConfigGeneral.qml:137
-#, kde-format
-msgctxt "@label:spinbox accessible"
-msgid "Hover open delay %1"
+#: ConfigGeneral.qml:130
+#, fuzzy, kde-format
+#| msgctxt "@label:spinbox accessible"
+#| msgid "Hover open delay %1"
+msgctxt "@label:spinbox accessible %1 is milliseconds"
+msgid "Hover open delay %1 ms"
 msgstr "Затримка із відкриттям при наведенні %1"
 
-#: main.qml:92
+#: main.qml:92 main.qml:150
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No open windows"
 msgstr "Немає відкритих вікон"
 
-#: main.qml:119
-#, kde-format
+#: main.qml:121
+#, fuzzy, kde-format
+#| msgid "Plasma Desktop"
+msgctxt "@title:window title shown e.g. for desktop and expanded widgets"
 msgid "Plasma Desktop"
 msgstr "Стільниця Плазми"
 

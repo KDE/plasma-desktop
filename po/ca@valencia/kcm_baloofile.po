@@ -1,9 +1,9 @@
 # Translation of kcm_baloofile.po to Catalan (Valencian)
-# Copyright (C) 2014-2024 This_file_is_part_of_KDE
+# Copyright (C) 2014-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# SPDX-FileCopyrightText: 2014, 2017, 2019, 2020, 2021, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2014, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
 # SPDX-FileCopyrightText: 2019, 2020, 2021, 2023 Antoni Bella Pérez <antonibella5@yahoo.com>
 # SPDX-FileCopyrightText: 2019 Empar Montoro Martín <montoro_mde@gva.es>
 msgid ""
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-04 00:45+0000\n"
-"PO-Revision-Date: 2024-08-28 16:31+0200\n"
+"PO-Revision-Date: 2025-12-04 11:39+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: ui/main.qml:44
 #, kde-format
@@ -77,7 +77,7 @@ msgstr "Dades que s'han d'indexar:"
 #: ui/main.qml:109
 #, kde-format
 msgid "Nothing (disable indexing entirely)"
-msgstr ""
+msgstr "Res (desactiva completament la indexació)"
 
 #: ui/main.qml:121
 #, kde-format
@@ -90,10 +90,9 @@ msgid "File names and contents"
 msgstr "Noms i contingut dels fitxers"
 
 #: ui/main.qml:157
-#, fuzzy, kde-format
-#| msgid "Hidden files and folders"
+#, kde-format
 msgid "Also index hidden files and folders"
-msgstr "Fitxers i carpetes ocults"
+msgstr "Indexa també els fitxers i carpetes ocults"
 
 #: ui/main.qml:183
 #, kde-format
@@ -150,11 +149,3 @@ msgstr "Trieu una carpeta que s'haja d'incloure"
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Trieu una carpeta que calga excloure"
-
-#~ msgctxt "@title:group"
-#~ msgid "File indexing:"
-#~ msgstr "Indexació de fitxers:"
-
-#~ msgctxt "@action:check"
-#~ msgid "Enabled"
-#~ msgstr "Activada"

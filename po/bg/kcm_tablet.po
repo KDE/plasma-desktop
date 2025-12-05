@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-03 00:45+0000\n"
-"PO-Revision-Date: 2025-09-06 16:01+0200\n"
+"POT-Creation-Date: 2025-12-05 00:44+0000\n"
+"PO-Revision-Date: 2025-12-04 17:53+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -414,13 +414,13 @@ msgstr "%1,%2 - %3×%4"
 msgid "Resize the screen area"
 msgstr "Преоразмеряване на екранната област"
 
-#: ui/ExternalScreenMapping.qml:265
+#: ui/ExternalScreenMapping.qml:267
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1%,%2% - %3%×%4%"
 msgstr "%1%,%2% - %3%×%4%"
 
-#: ui/ExternalScreenMapping.qml:299
+#: ui/ExternalScreenMapping.qml:301
 #, kde-format
 msgid "Resize the tablet area"
 msgstr "Преоразмеряване на екранната област"
@@ -478,10 +478,9 @@ msgid "Pad"
 msgstr "Подложка"
 
 #: ui/MissingPadTab.qml:15
-#, fuzzy, kde-format
-#| msgid "No drawing tablets found"
+#, kde-format
 msgid "No pad inputs found"
-msgstr "Не е намерен таблет за чертане."
+msgstr "Не са намерени входни данни от подложка"
 
 #: ui/MissingPadTab.qml:16
 #, kde-format
@@ -489,6 +488,8 @@ msgid ""
 "There's no buttons or other inputs detected. This could mean you're missing "
 "a driver for this device."
 msgstr ""
+"Не са открити бутони или други входове. Това може да означава, че липсва "
+"драйвер за това устройство."
 
 #: ui/PadTab.qml:37
 #, kde-format

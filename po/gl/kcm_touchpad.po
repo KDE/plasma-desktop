@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-04 00:45+0000\n"
+"POT-Creation-Date: 2025-12-05 00:44+0000\n"
 "PO-Revision-Date: 2025-05-17 13:16+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -291,12 +291,13 @@ msgid "Middle-click by pressing anywhere with three fingers."
 msgstr "Premer con tres dedos para facer unha prema central."
 
 #: ui/main.qml:529
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Middle-click"
 msgctxt ""
 "@label for radiobutton group, begins the sentence 'middle-click by pressing "
-"bottom-middle edge/'"
-msgid "Middle-click by middle-click:"
-msgstr ""
+"bottom-middle edge/by pressing anywhere with three fingers'"
+msgid "Middle-click by:"
+msgstr "Clic central"
 
 #: ui/main.qml:550
 #, fuzzy, kde-format
