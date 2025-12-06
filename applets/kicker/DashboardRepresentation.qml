@@ -231,23 +231,18 @@ Kicker.DashboardWindow {
                 text = "";
             }
 
-            Keys.onPressed: event => {
-                if (event.key === Qt.Key_Tab) {
-                    event.accepted = true;
-
-                    if (runnerModel.count) {
-                        mainColumn.tryActivate(0, 0);
-                    } else {
-                        systemFavoritesGrid.tryActivate(0, 0);
-                    }
-                } else if (event.key === Qt.Key_Backtab) {
-                    event.accepted = true;
-
-                    if (globalFavoritesGrid.enabled) {
-                        globalFavoritesGrid.tryActivate(0, 0);
-                    } else {
-                        systemFavoritesGrid.tryActivate(0, 0);
-                    }
+            Keys.onTabPressed: {
+                if (runnerModel.count) {
+                    mainColumn.tryActivate(0, 0);
+                } else {
+                    systemFavoritesGrid.tryActivate(0, 0);
+                }
+            }
+            Keys.onBacktabPressed: {
+                if (globalFavoritesGrid.enabled) {
+                    globalFavoritesGrid.tryActivate(0, 0);
+                } else {
+                    systemFavoritesGrid.tryActivate(0, 0);
                 }
             }
         }
@@ -361,20 +356,14 @@ Kicker.DashboardWindow {
                         systemFavoritesGrid.tryActivate(0, currentCol());
                     }
 
-                    Keys.onPressed: event => {
-                        if (event.key === Qt.Key_Tab) {
-                            event.accepted = true;
-
-                            if (root.searching) {
-                                cancelSearchButton.focus = true;
-                            } else {
-                                mainColumn.tryActivate(0, 0);
-                            }
-                        } else if (event.key === Qt.Key_Backtab) {
-                            event.accepted = true;
-                            systemFavoritesGrid.tryActivate(0, 0);
+                    Keys.onTabPressed: {
+                        if (root.searching) {
+                            cancelSearchButton.focus = true;
+                        } else {
+                            mainColumn.tryActivate(0, 0);
                         }
                     }
+                    Keys.onBacktabPressed: systemFavoritesGrid.tryActivate(0, 0);
 
                     Binding {
                         target: globalFavorites
@@ -415,27 +404,22 @@ Kicker.DashboardWindow {
                         globalFavoritesGrid.tryActivate(globalFavoritesGrid.rows - 1, currentCol());
                     }
 
-                    Keys.onPressed: event => {
-                        if (event.key === Qt.Key_Tab) {
-                            event.accepted = true;
-
-                            if (globalFavoritesGrid.enabled) {
-                                globalFavoritesGrid.tryActivate(0, 0);
-                            } else if (root.searching && !runnerModel.count) {
-                                cancelSearchButton.focus = true;
-                            } else {
-                                mainColumn.tryActivate(0, 0);
-                            }
-                        } else if (event.key === Qt.Key_Backtab) {
-                            event.accepted = true;
-
-                            if (filterList.enabled) {
-                                filterList.forceActiveFocus();
-                            } else if (root.searching && !runnerModel.count) {
-                                cancelSearchButton.focus = true;
-                            } else {
-                                mainColumn.tryActivate(0, 0);
-                            }
+                    Keys.onTabPressed: {
+                        if (globalFavoritesGrid.enabled) {
+                            globalFavoritesGrid.tryActivate(0, 0);
+                        } else if (root.searching && !runnerModel.count) {
+                            cancelSearchButton.focus = true;
+                        } else {
+                            mainColumn.tryActivate(0, 0);
+                        }
+                    }
+                    Keys.onBacktabPressed: {
+                        if (filterList.enabled) {
+                            filterList.forceActiveFocus();
+                        } else if (root.searching && !runnerModel.count) {
+                            cancelSearchButton.focus = true;
+                        } else {
+                            mainColumn.tryActivate(0, 0);
                         }
                     }
                 }
@@ -670,27 +654,20 @@ Kicker.DashboardWindow {
                     }
                 }
 
-                Keys.onPressed: event => {
-                    if (event.key === Qt.Key_Tab) {
-                        event.accepted = true;
-
-                        if (filterList.enabled) {
-                            filterList.forceActiveFocus();
-                        } else {
-                            systemFavoritesGrid.tryActivate(0, 0);
-                        }
-                    } else if (event.key === Qt.Key_Backtab) {
-                        event.accepted = true;
-
-                        if (root.searching) {
-                            cancelSearchButton.focus = true;
-                        } else if (globalFavoritesGrid.enabled) {
-                            globalFavoritesGrid.tryActivate(0, 0);
-                        } else {
-                            systemFavoritesGrid.tryActivate(0, 0);
-                        }
+                Keys.onTabPressed: {
+                    if (filterList.enabled) {
+                        filterList.forceActiveFocus();
                     } else {
-                        event.accepted = false;
+                        systemFavoritesGrid.tryActivate(0, 0);
+                    }
+                }
+                Keys.onBacktabPressed: {
+                    if (root.searching) {
+                        cancelSearchButton.focus = true;
+                    } else if (globalFavoritesGrid.enabled) {
+                        globalFavoritesGrid.tryActivate(0, 0);
+                    } else {
+                        systemFavoritesGrid.tryActivate(0, 0);
                     }
                 }
             }
@@ -936,22 +913,21 @@ Kicker.DashboardWindow {
                             }
                         }
 
-                        Keys.onPressed: event => {
+                        function handleLeftRightArrow(event: KeyEvent) : void {
                             let backArrowKey = (event.key === Qt.Key_Left && Application.layoutDirection === Qt.LeftToRight) ||
                                 (event.key === Qt.Key_Right && Application.layoutDirection === Qt.RightToLeft)
                             if (backArrowKey) {
-                                event.accepted = true;
-
                                 const currentRow = Math.max(0, Math.ceil(currentItem.y / mainGrid.cellHeight) - 1);
                                 mainColumn.tryActivate(currentRow, mainColumn.columns - 1);
-                            } else if (event.key === Qt.Key_Tab) {
-                                event.accepted = true;
-                                systemFavoritesGrid.tryActivate(0, 0);
-                            } else if (event.key === Qt.Key_Backtab) {
-                                event.accepted = true;
-                                mainColumn.tryActivate(0, 0);
+                            } else {
+                                event.accepted = false
                             }
                         }
+
+                        Keys.onTabPressed:  systemFavoritesGrid.tryActivate(0, 0);
+                        Keys.onBacktabPressed: mainColumn.tryActivate(0, 0);
+                        Keys.onLeftPressed: event => handleLeftRightArrow(event)
+                        Keys.onRightPressed: event => handleLeftRightArrow(event)
                     }
                 }
             }

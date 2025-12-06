@@ -287,7 +287,7 @@ FocusScope {
                     currentIndex = -1;
                 }
 
-                Keys.onPressed: (event) => {
+                function handleLeftRightArrow(event: KeyEvent) : void {
                     let backArrowKey = (event.key === Qt.Key_Left && Application.layoutDirection === Qt.LeftToRight) ||
                         (event.key === Qt.Key_Right && Application.layoutDirection === Qt.RightToLeft)
                     let forwardArrowKey = (event.key === Qt.Key_Right && Application.layoutDirection === Qt.LeftToRight) ||
@@ -300,7 +300,6 @@ FocusScope {
                         } else {
                             itemGrid.keyNavLeft();
                         }
-                        event.accepted = true
                     } else if (forwardArrowKey) {
                         var columns = Math.floor(width / cellWidth);
 
@@ -310,15 +309,16 @@ FocusScope {
                         } else {
                             itemGrid.keyNavRight();
                         }
-                        event.accepted = true
                     }
+                }
 
-                    if (event.key === Qt.Key_Enter || event.key === Qt.Key_Return) {
-                        if (gridView.model.trigger) {
-                            gridView.model.trigger(currentIndex, "", null)
-                            root.toggle()
-                        }
-                        event.accepted = true
+                Keys.onLeftPressed: event => handleLeftRightArrow(event)
+                Keys.onRightPressed: event => handleLeftRightArrow(event)
+                Keys.onEnterPressed: Keys.returnPressed()
+                Keys.onReturnPressed: {
+                    if (gridView.model.trigger) {
+                        gridView.model.trigger(currentIndex, "", null)
+                        root.toggle()
                     }
                 }
 

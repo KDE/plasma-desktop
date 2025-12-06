@@ -206,16 +206,16 @@ Item {
         }
     }
 
-    Keys.onPressed: event => {
-        if (event.key === Qt.Key_Menu && (item.hasActionList || model.favoriteId !== null)) {
-            event.accepted = true;
-            item.openActionMenu(mouseArea);
-        } else if ((event.key === Qt.Key_Enter || event.key === Qt.Key_Return) && !item.hasChildren) {
-            if (!item.hasChildren) {
-                event.accepted = true;
-                item.ListView.view.model.trigger(item.index, "", null);
-                kicker.expanded = false;
-            }
+    Keys.onMenuPressed: {
+        if (item.hasActionList || item.favoriteId !== null) {
+            item.openActionMenu(mouseArea)
         }
     }
+    Keys.onReturnPressed: {
+        if (!item.hasChildren) {
+            item.ListView.view.model.trigger(item.index, "", null);
+            kicker.expanded = false;
+        }
+    }
+    Keys.onEnterPressed: Keys.returnPressed()
 }

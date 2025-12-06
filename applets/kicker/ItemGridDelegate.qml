@@ -99,19 +99,18 @@ Item {
         onContainsMouseChanged: item.GridView.view.itemContainsMouseChanged(containsMouse)
     }
 
-    Keys.onPressed: event => {
-        if (event.key === Qt.Key_Menu && hasActionList) {
-            event.accepted = true;
-            openActionMenu(item);
-        } else if ((event.key === Qt.Key_Enter || event.key === Qt.Key_Return)) {
-            event.accepted = true;
-
-            if ("trigger" in GridView.view.model) {
-                GridView.view.model.trigger(index, "", null);
-                root.toggle();
-            }
-
-            itemGrid.itemActivated(index, "", null);
+    Keys.onMenuPressed: {
+        if (item.hasActionList || item.favoriteId !== null) {
+            item.openActionMenu(item)
         }
+    }
+    Keys.onEnterPressed: Keys.returnPressed()
+    Keys.onReturnPressed: {
+        if ("trigger" in GridView.view.model) {
+            GridView.view.model.trigger(index, "", null);
+            root.toggle();
+        }
+
+        itemGrid.itemActivated(index, "", null);
     }
 }

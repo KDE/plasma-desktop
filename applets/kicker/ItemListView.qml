@@ -156,7 +156,7 @@ PlasmaComponents3.ScrollView {
             }
 
             Connections {
-                target: searchField
+                target: itemList.mainSearchField
 
                 function onTextChanged() {
                     listView.maxDelegateImplicitWidth = 0
@@ -201,69 +201,63 @@ PlasmaComponents3.ScrollView {
             }
         }
 
-        Keys.onPressed: event => {
+        function handleLeftRightArrowEnter(event: KeyEvent) : void {
             let backArrowKey = (event.key === Qt.Key_Left && !itemList.LayoutMirroring.enabled) ||
                 (event.key === Qt.Key_Right && itemList.LayoutMirroring.enabled)
             let forwardArrowKey = (event.key === Qt.Key_Right && !itemList.LayoutMirroring.enabled) ||
                 (event.key === Qt.Key_Left && itemList.LayoutMirroring.enabled)
-            if (listView.currentItem !== null && listView.currentItem.hasChildren &&
-                (forwardArrowKey || event.key === Qt.Key_Return || event.key === Qt.Key_Enter)) {
-                if (itemList.childDialog === null) {
-                    subMenuForCurrentItem(true)
+
+            if (backArrowKey) {
+                if (itemList.dialog != null) {
+                    itemList.dialog.destroy();
                 } else {
-                    windowSystem.forceActive(itemList.childDialog.mainItem);
-                    itemList.childDialog.mainItem.focus = true;
-                    itemList.childDialog.mainItem.currentIndex = 0;
+                    itemList.navigateLeftRequested();
                 }
-            } else if (event.key === Qt.Key_Up) {
-                event.accepted = true;
-
-                if (!listView.keyNavigationWraps && listView.currentIndex == 0) {
-                    itemList.keyNavigationAtListEnd();
-
-                    return;
+            } else if (forwardArrowKey || event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
+                if (listView.currentItem !== null && (listView.currentItem as ItemListDelegate).hasChildren) {
+                    if (itemList.childDialog === null) {
+                        itemList.subMenuForCurrentItem(true);
+                    } else {
+                        windowSystem.forceActive(itemList.childDialog.mainItem);
+                        itemList.childDialog.mainItem.forceActiveFocus(Qt.TabFocusReason);
+                        itemList.childDialog.mainItem.currentIndex = 0;
+                    }
+                } else if (forwardArrowKey) {
+                    itemList.navigateRightRequested();
+                } else {
+                    event.accepted = false;
                 }
+            }
+        }
 
-                listView.decrementCurrentIndex();
+        function handleUpDownArrow(event: KeyEvent) : void {
+            let moveIndex = (event.key === Qt.Key_Up) ? listView.decrementCurrentIndex : listView.incrementCurrentIndex
+
+            if (!listView.keyNavigationWraps && ((event.key === Qt.Key_Up && listView.currentIndex == 0) ||
+                                                 (event.key === Qt.Key_Down && listView.currentIndex == listView.count - 1))) {
+                itemList.keyNavigationAtListEnd();
+            } else {
+                moveIndex();
 
                 if (listView.currentItem !== null) {
-                    if (listView.currentItem.isSeparator) {
-                        listView.decrementCurrentIndex();
+                    if ((listView.currentItem as ItemListDelegate).isSeparator) {
+                        moveIndex();
                     }
-                    listView.currentItem.forceActiveFocus();
+                    listView.currentItem.forceActiveFocus(Qt.TabFocusReason);
                 }
-            } else if (event.key === Qt.Key_Down) {
-                event.accepted = true;
+            }
+        }
 
-                if (!listView.keyNavigationWraps && listView.currentIndex == listView.count - 1) {
-                    itemList.keyNavigationAtListEnd();
-
-                    return;
-                }
-
-                listView.incrementCurrentIndex();
-
-                if (listView.currentItem !== null) {
-                    if (listView.currentItem.isSeparator) {
-                        listView.incrementCurrentIndex();
-                    }
-                    listView.currentItem.forceActiveFocus();
-                }
-
-            } else if (backArrowKey && itemList.dialog != null) {
-                itemList.dialog.destroy();
-            } else if (event.key === Qt.Key_Escape) {
-                kicker.expanded = false;
-            } else if (event.key === Qt.Key_Tab) {
-                //do nothing, and skip appending text
-            } else if (event.text !== "") {
-                if (itemList.mainSearchField) {
-                    itemList.mainSearchField.forceActiveFocus();
-                }
-            } else if (backArrowKey) {
-                itemList.navigateLeftRequested();
-            } else if (forwardArrowKey) {
-                itemList.navigateRightRequested();
+        Keys.onLeftPressed: event => handleLeftRightArrowEnter(event)
+        Keys.onRightPressed: event => handleLeftRightArrowEnter(event)
+        Keys.onEnterPressed: event => handleLeftRightArrowEnter(event)
+        Keys.onReturnPressed: event => handleLeftRightArrowEnter(event)
+        Keys.onUpPressed: event => handleUpDownArrow(event)
+        Keys.onDownPressed: event => handleUpDownArrow(event)
+        Keys.onEscapePressed: kicker.expanded = false;
+        Keys.onPressed: event => {
+            if (event.key !== Qt.Key_Tab && event.text !== "") {
+                itemList.mainSearchField?.forceActiveFocus(Qt.ShortcutFocusReason);
             }
         }
 

@@ -80,16 +80,11 @@ Item {
         activeFocusOnTab: true
         hoverEnabled: !root.dashWindow || !root.dashWindow.visible
 
-        Keys.onPressed: event => {
-            switch (event.key) {
-            case Qt.Key_Space:
-            case Qt.Key_Enter:
-            case Qt.Key_Return:
-            case Qt.Key_Select:
-                Plasmoid.activated();
-                break;
-            }
-        }
+        Keys.onReturnPressed: Plasmoid.activated()
+        Keys.onEnterPressed: Plasmoid.activated()
+        Keys.onSpacePressed: Plasmoid.activated()
+        Keys.onSelectPressed: Plasmoid.activated()
+
         Accessible.name: Plasmoid.title
         Accessible.description: toolTipSubText
         Accessible.role: Accessible.Button

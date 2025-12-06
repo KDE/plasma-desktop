@@ -97,23 +97,14 @@ PlasmaComponents3.ScrollView {
             imagePath: "widgets/frame"
             prefix: "plain"
 
-            activeFocusOnTab: true
-            onActiveFocusChanged: if (activeFocus) {
-                let target = (onTopPanel && favoriteSystemActions.model.count) ? favoriteSystemActions : favoriteApps
-                target.forceActiveFocus(Qt.TabFocusReason)
-            }
-            KeyNavigation.right: rootList
-            Keys.onPressed: event => {
+            function handleLeftRightArrow(event: KeyEvent) : void {
                 let backArrowKey = (event.key === Qt.Key_Left && !mainRow.LayoutMirroring.enabled) ||
                     (event.key === Qt.Key_Right && mainRow.LayoutMirroring.enabled)
                 let forwardArrowKey = (event.key === Qt.Key_Right && !mainRow.LayoutMirroring.enabled) ||
                     (event.key === Qt.Key_Left && mainRow.LayoutMirroring.enabled)
-
                 if (backArrowKey & runnerColumns.visibleChildren.length > 1) {
                     root.focusRunnerColumn(runnerColumns.visibleChildren.length - 2, true)
-                    event.accepted = true
-                }
-                if (forwardArrowKey) {
+                } else if (forwardArrowKey) {
                     if (runnerColumns.visibleChildren.length > 1) {
                         root.focusRunnerColumn(0, true)
                     } else if (rootList.visible) {
@@ -121,9 +112,19 @@ PlasmaComponents3.ScrollView {
                     } else {
                         searchField.forceActiveFocus(Qt.TabFocusReason)
                     }
-                    event.accepted = true
+                } else {
+                    event.accepted = false
                 }
             }
+
+            activeFocusOnTab: true
+            onActiveFocusChanged: if (activeFocus) {
+                let target = (onTopPanel && favoriteSystemActions.model.count) ? favoriteSystemActions : favoriteApps
+                target.forceActiveFocus(Qt.TabFocusReason)
+            }
+            KeyNavigation.right: rootList
+            Keys.onLeftPressed: event => handleLeftRightArrow(event)
+            Keys.onRightPressed: event => handleLeftRightArrow(event)
 
             ColumnLayout {
                 id: sideBarLayout
@@ -374,26 +375,29 @@ PlasmaComponents3.ScrollView {
             }
         ]
 
-        Keys.priority: Keys.AfterItem // arrow keys should move cursor first
-        Keys.onPressed: event => {
+        function handleUpDownArrow(event: KeyEvent) : void {
+            if (rootList.visible) {
+                root.focusRootList(event.key === Qt.Key_Down);
+            } else if (runnerColumns.visible) {
+                let index = runnerColumns.visibleChildren[0].currentIndex
+                root.focusRunnerColumn(0, event.key === Qt.Key_Down)
+                // First column, first entry is initially selected even when focus is on the search
+                // field, as Return will activate it. Down should immediately go to the second entry.
+                if (index === 0 && event.key === Qt.Key_Down) {
+                    runnerColumns.visibleChildren[0].currentIndex = Math.min(index + 1, runnerColumns.visibleChildren[0].count - 1)
+                }
+            } else {
+                event.accepted = false
+            }
+        }
+
+        function handleLeftRightArrow(event: KeyEvent) : void {
             let backArrowKey = (event.key === Qt.Key_Left && !mainRow.LayoutMirroring.enabled) ||
                 (event.key === Qt.Key_Right && mainRow.LayoutMirroring.enabled)
             let forwardArrowKey = (event.key === Qt.Key_Right && !mainRow.LayoutMirroring.enabled) ||
                 (event.key === Qt.Key_Left && mainRow.LayoutMirroring.enabled)
-            if (event.key === Qt.Key_Up || event.key === Qt.Key_Down) {
-                if (rootList.visible) {
-                    root.focusRootList(event.key === Qt.Key_Down);
-                } else if (runnerColumns.visible) {
-                    let index = runnerColumns.visibleChildren[0].currentIndex
-                    root.focusRunnerColumn(0, event.key === Qt.Key_Down)
-                    // First column, first entry is initially selected even when focus is on the search
-                    // field, as Return will activate it. Down should immediately go to the second entry.
-                    if (index === 0 && event.key === Qt.Key_Down) {
-                        runnerColumns.visibleChildren[0].currentIndex = Math.min(index + 1, runnerColumns.visibleChildren[0].count - 1)
-                    }
-                }
-                event.accepted = true;
-            } else if (backArrowKey) {
+
+            if (backArrowKey) {
                 if (!sideBar.visible && !runnerColumns.visible) {
                     return;
                 }
@@ -402,38 +406,41 @@ PlasmaComponents3.ScrollView {
                 }
                 if (sideBar.visible) {
                     root.focusSideBar(true)
-                    event.accepted = true;
                 } else {
                     root.focusRunnerColumn(runnerColumns.visibleChildren.length - 2, true)
                 }
-
             } else if (forwardArrowKey && runnerColumns.visibleChildren.length > 2) {
                 runnerColumns.visibleChildren[0].currentIndex = -1;
                 root.focusRunnerColumn(1, true)
-                event.accepted = true;
-            } else if (event.key === Qt.Key_Enter || event.key === Qt.Key_Return) {
-                if (runnerColumns.visible) {
-                    for (let i = 0; i < runnerModel.count; ++i) {
-                        if (runnerModel.modelForRow(i).count) {
-                            runnerModel.modelForRow(i).trigger(0, "", null);
-                            kicker.expanded = false;
-                            break;
-                        }
-                    }
-                }
-                event.accepted = true;
+            } else {
+                event.accepted = false
             }
         }
+
+        function launchBestMatch() : void  {
+            if (runnerColumns.visible) {
+                for (let i = 0; i < runnerModel.count; ++i) {
+                    if (runnerModel.modelForRow(i).count) {
+                        runnerModel.modelForRow(i).trigger(0, "", null);
+                        kicker.expanded = false;
+                        break;
+                    }
+                }
+            }
+        }
+
+        Keys.priority: Keys.AfterItem // arrow keys should move cursor first
+        Keys.onUpPressed: event => handleUpDownArrow(event)
+        Keys.onDownPressed: event => handleUpDownArrow(event)
+        Keys.onLeftPressed: event => handleLeftRightArrow(event)
+        Keys.onRightPressed: event => handleLeftRightArrow(event)
+        Keys.onEnterPressed: launchBestMatch()
+        Keys.onReturnPressed: launchBestMatch()
+        Keys.onEscapePressed: kicker.expanded = false;
 
         function appendText(newText) {
             focus = true;
             text = text + newText;
-        }
-    }
-
-    Keys.onPressed: event => {
-        if (event.key === Qt.Key_Escape) {
-            kicker.expanded = false;
         }
     }
 
