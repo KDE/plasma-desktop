@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.windowlist\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-05 00:44+0000\n"
-"PO-Revision-Date: 2025-11-26 01:22-0300\n"
-"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
+"PO-Revision-Date: 2025-12-05 08:59-0300\n"
+"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -22,8 +22,7 @@ msgstr ""
 "X-Generator: Lokalize 25.08.3\n"
 
 #: config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Geral"
@@ -93,12 +92,10 @@ msgstr[0] "ms"
 msgstr[1] "ms"
 
 #: ConfigGeneral.qml:130
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox accessible"
-#| msgid "Hover open delay %1"
+#, kde-format
 msgctxt "@label:spinbox accessible %1 is milliseconds"
 msgid "Hover open delay %1 ms"
-msgstr "Atraso para abrir ao passar por cima %1"
+msgstr "Atraso para abrir ao passar por cima %1 ms"
 
 #: main.qml:92 main.qml:150
 #, kde-format
@@ -107,8 +104,7 @@ msgid "No open windows"
 msgstr "Nenhuma janela aberta"
 
 #: main.qml:121
-#, fuzzy, kde-format
-#| msgid "Plasma Desktop"
+#, kde-format
 msgctxt "@title:window title shown e.g. for desktop and expanded widgets"
 msgid "Plasma Desktop"
 msgstr "Área de trabalho Plasma"

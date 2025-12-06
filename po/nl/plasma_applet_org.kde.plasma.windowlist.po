@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-05 00:44+0000\n"
-"PO-Revision-Date: 2025-11-26 15:02+0100\n"
+"PO-Revision-Date: 2025-12-05 10:54+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -19,8 +19,7 @@ msgstr ""
 "X-Generator: Lokalize 25.08.3\n"
 
 #: config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Algemeen"
@@ -91,12 +90,10 @@ msgstr[0] "ms"
 msgstr[1] "ms"
 
 #: ConfigGeneral.qml:130
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox accessible"
-#| msgid "Hover open delay %1"
+#, kde-format
 msgctxt "@label:spinbox accessible %1 is milliseconds"
 msgid "Hover open delay %1 ms"
-msgstr "Er boven zweven open vertraging %1"
+msgstr "Er boven zweven open vertraging %1 ms"
 
 #: main.qml:92 main.qml:150
 #, kde-format
@@ -105,8 +102,7 @@ msgid "No open windows"
 msgstr "Geen open vensters"
 
 #: main.qml:121
-#, fuzzy, kde-format
-#| msgid "Plasma Desktop"
+#, kde-format
 msgctxt "@title:window title shown e.g. for desktop and expanded widgets"
 msgid "Plasma Desktop"
 msgstr "Plasma Bureaublad"

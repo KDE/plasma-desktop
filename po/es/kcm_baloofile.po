@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_baloofile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-04 00:45+0000\n"
-"PO-Revision-Date: 2025-05-26 00:44+0100\n"
+"PO-Revision-Date: 2025-12-04 11:28+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: ui/main.qml:44
 #, kde-format
@@ -73,7 +73,7 @@ msgstr "Datos que se van a indexar:"
 #: ui/main.qml:109
 #, kde-format
 msgid "Nothing (disable indexing entirely)"
-msgstr ""
+msgstr "Ninguno (desactivar la indexación completamente)"
 
 #: ui/main.qml:121
 #, kde-format
@@ -86,10 +86,9 @@ msgid "File names and contents"
 msgstr "Nombres de archivos y contenidos"
 
 #: ui/main.qml:157
-#, fuzzy, kde-format
-#| msgid "Hidden files and folders"
+#, kde-format
 msgid "Also index hidden files and folders"
-msgstr "Archivos y carpetas ocultos"
+msgstr "Indexar también archivos y carpetas ocultos"
 
 #: ui/main.qml:183
 #, kde-format
@@ -146,11 +145,3 @@ msgstr "Seleccionar una carpeta a incluir"
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Seleccionar una carpeta a excluir"
-
-#~ msgctxt "@title:group"
-#~ msgid "File indexing:"
-#~ msgstr "Indexación de archivos:"
-
-#~ msgctxt "@action:check"
-#~ msgid "Enabled"
-#~ msgstr "Activada"

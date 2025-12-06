@@ -82,10 +82,9 @@ msgid "File names and contents"
 msgstr "文件名和内容"
 
 #: ui/main.qml:157
-#, fuzzy, kde-format
-#| msgid "Hidden files and folders"
+#, kde-format
 msgid "Also index hidden files and folders"
-msgstr "隐藏的文件和文件夹"
+msgstr ""
 
 #: ui/main.qml:183
 #, kde-format
@@ -142,11 +141,3 @@ msgstr "选择要索引的文件夹"
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "选择不索引的文件夹"
-
-#~ msgctxt "@title:group"
-#~ msgid "File indexing:"
-#~ msgstr "文件索引："
-
-#~ msgctxt "@action:check"
-#~ msgid "Enabled"
-#~ msgstr "已启用"

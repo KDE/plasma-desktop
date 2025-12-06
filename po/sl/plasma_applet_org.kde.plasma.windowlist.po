@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-05 00:44+0000\n"
-"PO-Revision-Date: 2025-11-26 09:55+0100\n"
+"PO-Revision-Date: 2025-12-05 06:35+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -20,8 +20,7 @@ msgstr ""
 "X-Generator: Poedit 3.8\n"
 
 #: config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Splošno"
@@ -95,12 +94,10 @@ msgstr[2] "ms"
 msgstr[3] "ms"
 
 #: ConfigGeneral.qml:130
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox accessible"
-#| msgid "Hover open delay %1"
+#, kde-format
 msgctxt "@label:spinbox accessible %1 is milliseconds"
 msgid "Hover open delay %1 ms"
-msgstr "Zakasnitev odpiranja z lebdenjem %1"
+msgstr "Zakasnitev odpiranja pri lebdenju %1 ms"
 
 #: main.qml:92 main.qml:150
 #, kde-format
@@ -109,8 +106,7 @@ msgid "No open windows"
 msgstr "Ni odprtih oken"
 
 #: main.qml:121
-#, fuzzy, kde-format
-#| msgid "Plasma Desktop"
+#, kde-format
 msgctxt "@title:window title shown e.g. for desktop and expanded widgets"
 msgid "Plasma Desktop"
 msgstr "Namizje Plasma"

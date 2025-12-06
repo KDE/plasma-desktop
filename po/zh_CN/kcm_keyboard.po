@@ -89,12 +89,10 @@ msgstr ""
 "消息。这些键盘型号、布局、变种可能仍然能够在应用后正常工作。"
 
 #: ui/KeyBindings.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Configure Switching…"
+#, kde-format
 msgctxt "@title"
 msgid "Configure Key Bindings…"
-msgstr "配置切换方式…"
+msgstr ""
 
 #: ui/KeyBindings.qml:62
 #, kde-format
@@ -545,7 +543,3 @@ msgstr[0] "%1 个快捷键"
 msgctxt "no shortcuts defined"
 msgid "None"
 msgstr "无"
-
-#~ msgctxt "@title"
-#~ msgid "Key Bindings"
-#~ msgstr "键位绑定"

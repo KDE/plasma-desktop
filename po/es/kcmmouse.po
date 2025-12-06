@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmmouse\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-04 00:45+0000\n"
-"PO-Revision-Date: 2025-05-26 00:49+0100\n"
+"PO-Revision-Date: 2025-12-04 11:36+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
@@ -161,29 +161,24 @@ msgstr "General:"
 #: ui/main.qml:88
 #, kde-format
 msgid "Enable device"
-msgstr ""
+msgstr "Activar dispositivo"
 
 #: ui/main.qml:105
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Press left and right buttons for middle-click"
+#, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
-msgstr "Pulsar los botones derecho e izquierdo para clic central"
+msgstr "Botones derecho e izquierdo:"
 
 #: ui/main.qml:106
-#, fuzzy, kde-format
-#| msgid "Left-handed mode"
+#, kde-format
 msgid "Swap (left-handed mode)"
-msgstr "Modo para zurdos"
+msgstr "Intercambiar (modo para zurdos)"
 
 #: ui/main.qml:121
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Press left and right buttons for middle-click"
+#, kde-format
 msgctxt "@option:check 'both' refers to the left and right buttons'"
 msgid "Press both simultaneously to middle-click"
-msgstr "Pulsar los botones derecho e izquierdo para clic central"
+msgstr "Pulsar ambos botones simultáneamente para clic central"
 
 #: ui/main.qml:133
 #, kde-format
@@ -261,6 +256,3 @@ msgstr ""
 "videojuegos. Se puede usar en cualquier dispositivo, aunque está pensado "
 "principalmente como un sustituto de la rueda de desplazamiento en los "
 "dispositivos que no disponen de ella."
-
-#~ msgid "Device enabled"
-#~ msgstr "Dispositivo activado"

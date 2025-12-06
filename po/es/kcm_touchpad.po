@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_touchpad\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-05 00:44+0000\n"
-"PO-Revision-Date: 2025-05-26 00:48+0100\n"
+"PO-Revision-Date: 2025-12-05 18:56+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -128,7 +128,7 @@ msgstr "General:"
 #: ui/main.qml:101
 #, kde-format
 msgid "Enable device"
-msgstr ""
+msgstr "Activar dispositivo"
 
 #: ui/main.qml:115
 #, kde-format
@@ -148,26 +148,21 @@ msgid "This can interfere with video games."
 msgstr "Esto puede interferir con los videojuegos."
 
 #: ui/main.qml:174
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Press left and right buttons to middle-click"
+#, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
-msgstr "Pulse los botones izquierdo y derecho para clic central"
+msgstr "Botones izquierdo y derecho:"
 
 #: ui/main.qml:175
-#, fuzzy, kde-format
-#| msgid "Left-handed mode"
+#, kde-format
 msgid "Swap (left-handed mode)"
-msgstr "Modo para zurdos"
+msgstr "Intercambiar (modo para zurdos)"
 
 #: ui/main.qml:191
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Press left and right buttons to middle-click"
+#, kde-format
 msgctxt "@option:check 'both' refers to the left and right buttons'"
 msgid "Press both simultaneously to middle-click"
-msgstr "Pulse los botones izquierdo y derecho para clic central"
+msgstr "Pulsar ambos simultáneamente para clic central"
 
 #: ui/main.qml:204
 #, kde-format
@@ -217,20 +212,19 @@ msgid "Faster"
 msgstr "Más rápida"
 
 #: ui/main.qml:390
-#, fuzzy, kde-format
-#| msgid "Scrolling:"
+#, kde-format
 msgid "Scroll by:"
-msgstr "Desplazamiento:"
+msgstr "Desplazar:"
 
 #: ui/main.qml:409
 #, kde-format
 msgid "Moving two fingers anywhere"
-msgstr ""
+msgstr "Al mover dos dedos a cualquier lugar"
 
 #: ui/main.qml:416
 #, kde-format
 msgid "Moving one finger on edge"
-msgstr ""
+msgstr "Al mover un dedo sobre el borde"
 
 #: ui/main.qml:424
 #, kde-format
@@ -243,23 +237,20 @@ msgid "Disable horizontal scrolling"
 msgstr "Desactivar el desplazamiento horizontal"
 
 #: ui/main.qml:460
-#, fuzzy, kde-format
-#| msgid "Right-click"
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, begins the sentence 'right-click by pressing "
 "bottom-right corner/pressing with two fingers'"
 msgid "Right-click by:"
-msgstr "Clic derecho"
+msgstr "Clic derecho:"
 
 #: ui/main.qml:481
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated right-click"
-#| msgid "Press bottom-right corner"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-right "
 "corner'"
 msgid "Pressing bottom-right corner"
-msgstr "Pulsar la esquina inferior derecha"
+msgstr "Al pulsar la esquina inferior derecha"
 
 #: ui/main.qml:496
 #, kde-format
@@ -274,61 +265,50 @@ msgid "Middle-click by pressing bottom center."
 msgstr "Clic central al pulsar el centro de la zona inferior."
 
 #: ui/main.qml:505
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated right-click"
-#| msgid "Press touchpad with two fingers"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing with two "
 "fingers'"
 msgid "Pressing anywhere with two fingers"
-msgstr "Pulsar el panel central con dos dedos"
+msgstr "Al pulsar con dos dedos en cualquier lugar"
 
 #: ui/main.qml:520
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing with three fingers."
+#, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing anywhere with three fingers."
-msgstr "Clic central al pulsar con tres dedos."
+msgstr "Clic central al pulsar con tres dedos en cualquier lugar."
 
 #: ui/main.qml:529
-#, fuzzy, kde-format
-#| msgid "Middle-click"
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, begins the sentence 'middle-click by pressing "
 "bottom-middle edge/by pressing anywhere with three fingers'"
 msgid "Middle-click by:"
-msgstr "Clic central"
+msgstr "Clic central:"
 
 #: ui/main.qml:550
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated middle-click"
-#| msgid "Press bottom middle edge"
+#, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-middle "
 "edge'"
 msgid "Pressing bottom-middle edge"
-msgstr "Pulsar el centro del borde inferior"
+msgstr "Al pulsar el centro del borde inferior"
 
 #: ui/main.qml:557
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated middle-click"
-#| msgid "Press bottom left and bottom right corners"
+#, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-left "
 "and bottom-right corners'"
 msgid "Pressing bottom-left and bottom-right corners"
-msgstr "Pulsar las esquinas inferior derecha e inferior izquierda"
+msgstr "Al pulsar las esquinas inferior derecha e inferior izquierda"
 
 #: ui/main.qml:564
-#, fuzzy, kde-format
-#| msgctxt "@option:check touchpad integrated middle-click"
-#| msgid "Press touchpad with three fingers"
+#, kde-format
 msgctxt ""
 "@option:check completes the sentence 'middle-click by pressing anywhere with "
 "three fingers'"
 msgid "Pressing anywhere with three fingers"
-msgstr "Pulsar el panel táctil con tres dedos"
+msgstr "Al pulsar con tres dedos en cualquier lugar"
 
 #: ui/main.qml:580
 #, kde-format
@@ -337,9 +317,7 @@ msgid "Tapping:"
 msgstr "Toques:"
 
 #: ui/main.qml:581
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Tap-to-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Tap to click"
 msgstr "Tocar para hacer clic"
@@ -347,7 +325,7 @@ msgstr "Tocar para hacer clic"
 #: ui/main.qml:597
 #, kde-format
 msgid "Allow dragging after tapping"
-msgstr ""
+msgstr "Permitir arrastrar tras tocar"
 
 #: ui/main.qml:610
 #, kde-format
@@ -388,27 +366,3 @@ msgstr "Clic central (toque con tres dedos para hacer un clic derecho)."
 #, kde-format
 msgid "Middle-click"
 msgstr "Clic central"
-
-#~ msgid "Device enabled"
-#~ msgstr "Dispositivo activado"
-
-#~ msgid "Two fingers"
-#~ msgstr "Dos dedos"
-
-#~ msgid "Touchpad edges"
-#~ msgstr "Bordes del panel táctil"
-
-#~ msgid "Tap-and-drag"
-#~ msgstr "Tocar y arrastrar"
-
-#~ msgctxt ""
-#~ "@label for radiobutton group, configure right-click with touch-pad "
-#~ "integrated button (pressing into the touchpad)"
-#~ msgid "Integrated right-click:"
-#~ msgstr "Clic derecho integrado:"
-
-#~ msgctxt ""
-#~ "@label for radiobutton group, configure middle-click with touch-pad "
-#~ "integrated button (pressing into the touchpad)"
-#~ msgid "Integrated middle-click:"
-#~ msgstr "Clic central integrado:"

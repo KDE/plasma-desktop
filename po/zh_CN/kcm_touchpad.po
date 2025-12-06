@@ -133,26 +133,21 @@ msgid "This can interfere with video games."
 msgstr "这可能会干扰游戏体验。"
 
 #: ui/main.qml:174
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Press left and right buttons to middle-click"
+#, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
-msgstr "同时按下左键和右键时点击中键"
+msgstr ""
 
 #: ui/main.qml:175
-#, fuzzy, kde-format
-#| msgid "Left-handed mode"
+#, kde-format
 msgid "Swap (left-handed mode)"
-msgstr "左手模式"
+msgstr ""
 
 #: ui/main.qml:191
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Press left and right buttons to middle-click"
+#, kde-format
 msgctxt "@option:check 'both' refers to the left and right buttons'"
 msgid "Press both simultaneously to middle-click"
-msgstr "同时按下左键和右键时点击中键"
+msgstr ""
 
 #: ui/main.qml:204
 #, kde-format
@@ -199,10 +194,9 @@ msgid "Faster"
 msgstr "快"
 
 #: ui/main.qml:390
-#, fuzzy, kde-format
-#| msgid "Scrolling:"
+#, kde-format
 msgid "Scroll by:"
-msgstr "滚动："
+msgstr ""
 
 #: ui/main.qml:409
 #, kde-format
@@ -225,23 +219,20 @@ msgid "Disable horizontal scrolling"
 msgstr "禁用水平滚动"
 
 #: ui/main.qml:460
-#, fuzzy, kde-format
-#| msgid "Right-click"
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, begins the sentence 'right-click by pressing "
 "bottom-right corner/pressing with two fingers'"
 msgid "Right-click by:"
-msgstr "右键点击"
+msgstr ""
 
 #: ui/main.qml:481
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated right-click"
-#| msgid "Press bottom-right corner"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-right "
 "corner'"
 msgid "Pressing bottom-right corner"
-msgstr "按下触摸板的右下角"
+msgstr ""
 
 #: ui/main.qml:496
 #, kde-format
@@ -256,61 +247,50 @@ msgid "Middle-click by pressing bottom center."
 msgstr "按下底部中间位置时点击中键。"
 
 #: ui/main.qml:505
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated right-click"
-#| msgid "Press touchpad with two fingers"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing with two "
 "fingers'"
 msgid "Pressing anywhere with two fingers"
-msgstr "双指按下触摸板的任意位置"
+msgstr ""
 
 #: ui/main.qml:520
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing with three fingers."
+#, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing anywhere with three fingers."
-msgstr "三指按下时点击中键。"
+msgstr ""
 
 #: ui/main.qml:529
-#, fuzzy, kde-format
-#| msgid "Middle-click"
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, begins the sentence 'middle-click by pressing "
 "bottom-middle edge/by pressing anywhere with three fingers'"
 msgid "Middle-click by:"
-msgstr "中键点击"
+msgstr ""
 
 #: ui/main.qml:550
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated middle-click"
-#| msgid "Press bottom middle edge"
+#, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-middle "
 "edge'"
 msgid "Pressing bottom-middle edge"
-msgstr "按下触摸板底部的中间位置"
+msgstr ""
 
 #: ui/main.qml:557
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated middle-click"
-#| msgid "Press bottom left and bottom right corners"
+#, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-left "
 "and bottom-right corners'"
 msgid "Pressing bottom-left and bottom-right corners"
-msgstr "按下触摸板的左下角和右下角"
+msgstr ""
 
 #: ui/main.qml:564
-#, fuzzy, kde-format
-#| msgctxt "@option:check touchpad integrated middle-click"
-#| msgid "Press touchpad with three fingers"
+#, kde-format
 msgctxt ""
 "@option:check completes the sentence 'middle-click by pressing anywhere with "
 "three fingers'"
 msgid "Pressing anywhere with three fingers"
-msgstr "三指按下触摸板"
+msgstr ""
 
 #: ui/main.qml:580
 #, kde-format
@@ -319,12 +299,10 @@ msgid "Tapping:"
 msgstr "单指轻触："
 
 #: ui/main.qml:581
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Tap-to-click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Tap to click"
-msgstr "轻触点击"
+msgstr ""
 
 #: ui/main.qml:597
 #, kde-format
@@ -370,27 +348,3 @@ msgstr "中键点击 (三指轻触时点击右键)"
 #, kde-format
 msgid "Middle-click"
 msgstr "中键点击"
-
-#~ msgid "Device enabled"
-#~ msgstr "启用触摸板设备"
-
-#~ msgid "Two fingers"
-#~ msgstr "双指滚动"
-
-#~ msgid "Touchpad edges"
-#~ msgstr "触摸板边缘滚动"
-
-#~ msgid "Tap-and-drag"
-#~ msgstr "轻触拖动"
-
-#~ msgctxt ""
-#~ "@label for radiobutton group, configure right-click with touch-pad "
-#~ "integrated button (pressing into the touchpad)"
-#~ msgid "Integrated right-click:"
-#~ msgstr "触摸板集成的右键点击："
-
-#~ msgctxt ""
-#~ "@label for radiobutton group, configure middle-click with touch-pad "
-#~ "integrated button (pressing into the touchpad)"
-#~ msgid "Integrated middle-click:"
-#~ msgstr "触摸板集成的中键点击："
