@@ -1,25 +1,24 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.pager\")
-plasma_install_package(package org.kde.plasma.pager)
-
-ecm_add_qml_module(pagerplugin
-    URI "org.kde.plasma.private.pager"
-    VERSION 2.0
-    GENERATE_PLUGIN_SOURCE
-    DEPENDENCIES QtCore
+plasma_add_applet(org.kde.plasma.pager
+    QML_SOURCES
+        qml/main.qml
+        qml/config.qml
+        qml/configGeneral.qml
+    CPP_SOURCES
+        pagermodel.cpp
+        windowmodel.cpp
+    RESOURCES
+        main.xml
+    GENERATE_APPLET_CLASS
 )
 
-target_sources(pagerplugin PRIVATE
-    pagermodel.cpp
-    windowmodel.cpp)
-
-target_link_libraries(pagerplugin PRIVATE
-                      KF6::WindowSystem
-                      Plasma::Plasma
-                      Plasma::Activities
-                      PW::LibTaskManager
-                      Qt::Core
-                      Qt::DBus
-                      Qt::Qml
-                      Qt::Quick)
-
-ecm_finalize_qml_module(pagerplugin)
+target_link_libraries(org.kde.plasma.pager PRIVATE
+    KF6::WindowSystem
+    Plasma::Plasma
+    Plasma::Activities
+    PW::LibTaskManager
+    Qt::Core
+    Qt::DBus
+    Qt::Qml
+    Qt::Quick
+)

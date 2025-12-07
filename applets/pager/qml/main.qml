@@ -14,7 +14,7 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.ksvg as KSvg
 import org.kde.plasma.components as PlasmaComponents3
 import org.kde.draganddrop as DnD
-import org.kde.plasma.private.pager
+import plasma.applet.org.kde.plasma.pager
 import org.kde.plasma.activityswitcher as ActivitySwitcher
 import org.kde.kirigami as Kirigami
 
