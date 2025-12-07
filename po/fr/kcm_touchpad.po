@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-05 00:44+0000\n"
-"PO-Revision-Date: 2025-05-18 15:02+0200\n"
+"PO-Revision-Date: 2025-12-05 10:02+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.11.90\n"
 "X-Text-Markup: kde4\n"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
@@ -133,11 +133,9 @@ msgid "General:"
 msgstr "Général :"
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgctxt "Coasting"
-#| msgid "Enable"
+#, kde-format
 msgid "Enable device"
-msgstr "Activer"
+msgstr "Activer le périphérique"
 
 #: ui/main.qml:115
 #, kde-format
@@ -157,26 +155,21 @@ msgid "This can interfere with video games."
 msgstr "Cela peut interférer avec les jeux vidéo."
 
 #: ui/main.qml:174
-#, fuzzy, kde-format
-#| msgid "Swap left and right buttons."
+#, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
-msgstr "Inverser les boutons gauche et droite."
+msgstr "Boutons gauche et droite :"
 
 #: ui/main.qml:175
-#, fuzzy, kde-format
-#| msgid "Left-handed mode"
+#, kde-format
 msgid "Swap (left-handed mode)"
-msgstr "Mode gaucher"
+msgstr "Échanger (Mode pour personne gauchère)"
 
 #: ui/main.qml:191
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Press left and right buttons to middle-click"
+#, kde-format
 msgctxt "@option:check 'both' refers to the left and right buttons'"
 msgid "Press both simultaneously to middle-click"
-msgstr ""
-"Appuyer sur les boutons gauche et droite pour réaliser un clic central."
+msgstr "Appuyez simultanément et en même temps pour effectuer un clic central."
 
 #: ui/main.qml:204
 #, kde-format
@@ -226,20 +219,19 @@ msgid "Faster"
 msgstr "Plus rapide"
 
 #: ui/main.qml:390
-#, fuzzy, kde-format
-#| msgid "Scrolling:"
+#, kde-format
 msgid "Scroll by:"
-msgstr "Défilement :"
+msgstr "Défilement par :"
 
 #: ui/main.qml:409
 #, kde-format
 msgid "Moving two fingers anywhere"
-msgstr ""
+msgstr "Déplacement avec deux doigts n'importe où"
 
 #: ui/main.qml:416
 #, kde-format
 msgid "Moving one finger on edge"
-msgstr ""
+msgstr "Déplacement avec un doigt sur le bord"
 
 #: ui/main.qml:424
 #, kde-format
@@ -252,23 +244,20 @@ msgid "Disable horizontal scrolling"
 msgstr "Désactiver le défilement horizontal"
 
 #: ui/main.qml:460
-#, fuzzy, kde-format
-#| msgid "Right-click"
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, begins the sentence 'right-click by pressing "
 "bottom-right corner/pressing with two fingers'"
 msgid "Right-click by:"
-msgstr "Clic droit"
+msgstr "Clic droit par :"
 
 #: ui/main.qml:481
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated right-click"
-#| msgid "Press bottom-right corner"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-right "
 "corner'"
 msgid "Pressing bottom-right corner"
-msgstr "Appuyer sur le coin droit inférieur"
+msgstr "Par appui sur le coin inférieur droit"
 
 #: ui/main.qml:496
 #, kde-format
@@ -284,22 +273,19 @@ msgstr ""
 "Réaliser un clic central en appuyant sur la partie centrale inférieure."
 
 #: ui/main.qml:505
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated right-click"
-#| msgid "Press touchpad with two fingers"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing with two "
 "fingers'"
 msgid "Pressing anywhere with two fingers"
-msgstr "Appuyer sur le pavé tactile avec deux doigts"
+msgstr "Par appui n'importe où avec deux doigts"
 
 #: ui/main.qml:520
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing with three fingers."
+#, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing anywhere with three fingers."
-msgstr "Réaliser un clic central en appuyant avec trois doigts."
+msgstr ""
+"Réalisation d'un clic central par appui avec trois doigts n'importe où."
 
 #: ui/main.qml:529
 #, fuzzy, kde-format
@@ -311,35 +297,28 @@ msgid "Middle-click by:"
 msgstr "Clic central"
 
 #: ui/main.qml:550
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated middle-click"
-#| msgid "Press bottom middle edge"
+#, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-middle "
 "edge'"
 msgid "Pressing bottom-middle edge"
-msgstr "Appuyer sur le bord central inférieur"
+msgstr "Par appui sur le bord central inférieur"
 
 #: ui/main.qml:557
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated middle-click"
-#| msgid "Press bottom left and bottom right corners"
+#, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-left "
 "and bottom-right corners'"
 msgid "Pressing bottom-left and bottom-right corners"
-msgstr ""
-"Appuyer simultanément sur les coins inférieur gauche et inférieur droit"
+msgstr "Par appui sur les coins inférieur gauche et inférieur droit"
 
 #: ui/main.qml:564
-#, fuzzy, kde-format
-#| msgctxt "@option:check touchpad integrated middle-click"
-#| msgid "Press touchpad with three fingers"
+#, kde-format
 msgctxt ""
 "@option:check completes the sentence 'middle-click by pressing anywhere with "
 "three fingers'"
 msgid "Pressing anywhere with three fingers"
-msgstr "Appuyer sur le pavé tactile avec trois doigts"
+msgstr "Par appui n'importe où avec trois doigts"
 
 #: ui/main.qml:580
 #, kde-format
@@ -348,16 +327,15 @@ msgid "Tapping:"
 msgstr "Tape :"
 
 #: ui/main.qml:581
-#, fuzzy, kde-format
-#| msgid "Tap to Click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Tap to click"
-msgstr "Taper pour cliquer"
+msgstr "Tapoter pour effectuer un clic"
 
 #: ui/main.qml:597
 #, kde-format
 msgid "Allow dragging after tapping"
-msgstr ""
+msgstr "Autoriser le glisser après un tapotement"
 
 #: ui/main.qml:610
 #, kde-format

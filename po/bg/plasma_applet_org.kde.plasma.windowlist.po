@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-05 00:44+0000\n"
-"PO-Revision-Date: 2025-11-28 20:59+0100\n"
+"PO-Revision-Date: 2025-12-06 22:52+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -18,8 +18,7 @@ msgstr ""
 "X-Generator: Lokalize 25.07.70\n"
 
 #: config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Общи"
@@ -89,12 +88,10 @@ msgstr[0] "ms"
 msgstr[1] "ms"
 
 #: ConfigGeneral.qml:130
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox accessible"
-#| msgid "Hover open delay %1"
+#, kde-format
 msgctxt "@label:spinbox accessible %1 is milliseconds"
 msgid "Hover open delay %1 ms"
-msgstr "Закъснение на отварянето при посочване с %1"
+msgstr "Закъснение на отварянето при посочване с %1 ms"
 
 #: main.qml:92 main.qml:150
 #, kde-format
@@ -103,8 +100,7 @@ msgid "No open windows"
 msgstr "Няма отворени прозорци"
 
 #: main.qml:121
-#, fuzzy, kde-format
-#| msgid "Plasma Desktop"
+#, kde-format
 msgctxt "@title:window title shown e.g. for desktop and expanded widgets"
 msgid "Plasma Desktop"
 msgstr "Работна среда Plasma"

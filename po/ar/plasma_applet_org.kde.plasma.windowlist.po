@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-05 00:44+0000\n"
-"PO-Revision-Date: 2025-11-27 12:15+0400\n"
+"PO-Revision-Date: 2025-12-06 16:53+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -20,8 +20,7 @@ msgstr ""
 "X-Generator: Lokalize 23.08.5\n"
 
 #: config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "عام"
@@ -99,12 +98,10 @@ msgstr[4] "م‌ث"
 msgstr[5] "م‌ث"
 
 #: ConfigGeneral.qml:130
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox accessible"
-#| msgid "Hover open delay %1"
+#, kde-format
 msgctxt "@label:spinbox accessible %1 is milliseconds"
 msgid "Hover open delay %1 ms"
-msgstr "الفتح عند التحويم يتأخر %1"
+msgstr "الفتح عند التحويم يتأخر %1 ملّي ثانية"
 
 #: main.qml:92 main.qml:150
 #, kde-format
@@ -113,8 +110,7 @@ msgid "No open windows"
 msgstr "لا يوجد نوافذ مفتوحة"
 
 #: main.qml:121
-#, fuzzy, kde-format
-#| msgid "Plasma Desktop"
+#, kde-format
 msgctxt "@title:window title shown e.g. for desktop and expanded widgets"
 msgid "Plasma Desktop"
 msgstr "سطح مكتب بلازما"

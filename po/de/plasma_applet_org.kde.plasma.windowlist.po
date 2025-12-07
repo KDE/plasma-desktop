@@ -2,20 +2,21 @@
 # SPDX-FileCopyrightText: 2016 Burkhard Lück <lueck@hube-lueck.de>
 # SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
 # SPDX-FileCopyrightText: 2025 Alois Spitzbart <spitz234@hotmail.com>
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.windowlist\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-05 00:44+0000\n"
-"PO-Revision-Date: 2025-05-29 18:15+0200\n"
-"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
+"PO-Revision-Date: 2025-11-28 23:16+0100\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: config.qml:13
 #, fuzzy, kde-format
@@ -35,21 +36,21 @@ msgstr ""
 msgctxt ""
 "@item:inlistbox what to show for active application in horizontal panel"
 msgid "Icon and name"
-msgstr ""
+msgstr "Symbol und Name"
 
 #: ConfigGeneral.qml:37
 #, kde-format
 msgctxt ""
 "@item:inlistbox what to show for active application in horizontal panel"
 msgid "Icon"
-msgstr ""
+msgstr "Symbol"
 
 #: ConfigGeneral.qml:38
 #, kde-format
 msgctxt ""
 "@item:inlistbox what to show for active application in horizontal panel"
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
 #: ConfigGeneral.qml:85
 #, kde-format
@@ -67,28 +68,28 @@ msgstr "Nicht zutreffend, wenn das Miniprogramm auf der Arbeitsfläche ist."
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Open on hover:"
-msgstr ""
+msgstr "Beim Überfahren öffnen:"
 
 #: ConfigGeneral.qml:105
 #, kde-format
 msgctxt "@option:check open-on-hover is enabled, with the following delay:"
 msgid "Enabled, with delay:"
-msgstr ""
+msgstr "Aktiviert, mit Verzögerung:"
 
 #: ConfigGeneral.qml:118
 #, kde-format
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
 
 #: ConfigGeneral.qml:127
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ms"
+msgstr[1] "ms"
 
 #: ConfigGeneral.qml:130
 #, kde-format

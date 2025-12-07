@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.windowlist\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-05 00:44+0000\n"
-"PO-Revision-Date: 2025-11-26 16:48+0200\n"
+"PO-Revision-Date: 2025-12-05 09:08+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -21,8 +21,7 @@ msgstr ""
 "X-Generator: Lokalize 23.04.3\n"
 
 #: config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Загальне"
@@ -96,12 +95,10 @@ msgstr[2] "мс"
 msgstr[3] "мс"
 
 #: ConfigGeneral.qml:130
-#, fuzzy, kde-format
-#| msgctxt "@label:spinbox accessible"
-#| msgid "Hover open delay %1"
+#, kde-format
 msgctxt "@label:spinbox accessible %1 is milliseconds"
 msgid "Hover open delay %1 ms"
-msgstr "Затримка із відкриттям при наведенні %1"
+msgstr "Затримка із відкриттям при наведенні %1 мс"
 
 #: main.qml:92 main.qml:150
 #, kde-format
@@ -110,8 +107,7 @@ msgid "No open windows"
 msgstr "Немає відкритих вікон"
 
 #: main.qml:121
-#, fuzzy, kde-format
-#| msgid "Plasma Desktop"
+#, kde-format
 msgctxt "@title:window title shown e.g. for desktop and expanded widgets"
 msgid "Plasma Desktop"
 msgstr "Стільниця Плазми"

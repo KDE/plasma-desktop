@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:44+0000\n"
+"POT-Creation-Date: 2025-12-07 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -478,10 +478,13 @@ msgid "No pad inputs found"
 msgstr "找不到板面输入方式"
 
 #: ui/MissingPadTab.qml:16
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "There's no buttons or other inputs detected. This could mean you're "
+#| "missing a driver for this device."
 msgid ""
-"There's no buttons or other inputs detected. This could mean you're missing "
-"a driver for this device."
+"No buttons or other inputs were detected. This could mean the driver for "
+"this device is missing."
 msgstr "没有检测到按钮或其他输入方式。这可能意味着此没备缺少驱动程序。"
 
 #: ui/PadTab.qml:37

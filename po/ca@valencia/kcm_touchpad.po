@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-05 00:44+0000\n"
-"PO-Revision-Date: 2025-12-04 11:46+0100\n"
+"PO-Revision-Date: 2025-12-05 09:00+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -284,13 +284,12 @@ msgid "Middle-click by pressing anywhere with three fingers."
 msgstr "Clic del mig prement a qualsevol lloc amb tres dits."
 
 #: ui/main.qml:529
-#, fuzzy, kde-format
-#| msgid "Middle-click"
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, begins the sentence 'middle-click by pressing "
 "bottom-middle edge/by pressing anywhere with three fingers'"
 msgid "Middle-click by:"
-msgstr "Clic del mig"
+msgstr "Clic del mig amb:"
 
 #: ui/main.qml:550
 #, kde-format
@@ -372,9 +371,3 @@ msgstr "Clic del mig (un toc amb tres dits per al clic dret)"
 #, kde-format
 msgid "Middle-click"
 msgstr "Clic del mig"
-
-#~ msgctxt ""
-#~ "@label for radiobutton group, begins the sentence 'middle-click by "
-#~ "pressing bottom-middle edge/'"
-#~ msgid "Middle-click by middle-click:"
-#~ msgstr "Clic del mig amb clic del mig:"

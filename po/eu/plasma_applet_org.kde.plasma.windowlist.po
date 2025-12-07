@@ -12,19 +12,18 @@ msgstr ""
 "Project-Id-Version: plasma_applet_windowlist\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-05 00:44+0000\n"
-"PO-Revision-Date: 2025-03-30 16:22+0200\n"
+"PO-Revision-Date: 2025-12-06 15:29+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.08.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: config.qml:13
-#, fuzzy, kde-format
-#| msgid "General"
+#, kde-format
 msgctxt "@title:group for configuration dialog page"
 msgid "General"
 msgstr "Orokorra"
@@ -33,28 +32,28 @@ msgstr "Orokorra"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "For active application, show:"
-msgstr ""
+msgstr "Aplikazio aktiboarekin, erakutsi:"
 
 #: ConfigGeneral.qml:36
 #, kde-format
 msgctxt ""
 "@item:inlistbox what to show for active application in horizontal panel"
 msgid "Icon and name"
-msgstr ""
+msgstr "Ikonoa eta izena"
 
 #: ConfigGeneral.qml:37
 #, kde-format
 msgctxt ""
 "@item:inlistbox what to show for active application in horizontal panel"
 msgid "Icon"
-msgstr ""
+msgstr "Ikonoa"
 
 #: ConfigGeneral.qml:38
 #, kde-format
 msgctxt ""
 "@item:inlistbox what to show for active application in horizontal panel"
 msgid "Name"
-msgstr ""
+msgstr "Izena"
 
 #: ConfigGeneral.qml:85
 #, kde-format
@@ -70,34 +69,34 @@ msgstr "Ez da aplikagarria trepeta mahaigainean dagoenean."
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Open on hover:"
-msgstr ""
+msgstr "Ireki gainetik igarotzean:"
 
 #: ConfigGeneral.qml:105
 #, kde-format
 msgctxt "@option:check open-on-hover is enabled, with the following delay:"
 msgid "Enabled, with delay:"
-msgstr ""
+msgstr "Gaituta, atzerapenarekin:"
 
 #: ConfigGeneral.qml:118
 #, kde-format
 msgid "%1 ms"
 msgid_plural "%1 ms"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 ms"
+msgstr[1] "%1 ms"
 
 #: ConfigGeneral.qml:127
 #, kde-format
 msgctxt "short for millisecond(s)"
 msgid "ms"
 msgid_plural "ms"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ms"
+msgstr[1] "ms"
 
 #: ConfigGeneral.qml:130
 #, kde-format
 msgctxt "@label:spinbox accessible %1 is milliseconds"
 msgid "Hover open delay %1 ms"
-msgstr ""
+msgstr "Igaro irekitze atzerapena %1 ms"
 
 #: main.qml:92 main.qml:150
 #, kde-format
@@ -106,11 +105,10 @@ msgid "No open windows"
 msgstr "Ez dago irekitako leihorik"
 
 #: main.qml:121
-#, fuzzy, kde-format
-#| msgid "Plasma Desktop"
+#, kde-format
 msgctxt "@title:window title shown e.g. for desktop and expanded widgets"
 msgid "Plasma Desktop"
-msgstr "Plasma mahaigaina"
+msgstr "Plasma Mahaigaina"
 
 #~ msgid "Show active application's name on Panel button"
 #~ msgstr "Erakutsi aplikazioaren izena paneleko botoian"

@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-04 00:45+0000\n"
-"PO-Revision-Date: 2025-05-15 07:51+0200\n"
+"PO-Revision-Date: 2025-12-05 09:55+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -30,7 +30,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.11.90\n"
 "X-Text-Markup: kde4\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
@@ -170,31 +170,24 @@ msgstr "Général :"
 #: ui/main.qml:88
 #, kde-format
 msgid "Enable device"
-msgstr ""
+msgstr "Activer le périphérique"
 
 #: ui/main.qml:105
-#, fuzzy, kde-format
-#| msgid "Swap left and right buttons."
+#, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
-msgstr "Inverser les boutons gauche et droite."
+msgstr "Boutons gauche et droite :"
 
 #: ui/main.qml:106
-#, fuzzy, kde-format
-#| msgid "Left-handed mode"
+#, kde-format
 msgid "Swap (left-handed mode)"
-msgstr "Mode gaucher"
+msgstr "Échanger (Mode pour personne gauchère)"
 
 #: ui/main.qml:121
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Pressing the left and right button simultaneously acts as middle-click."
+#, kde-format
 msgctxt "@option:check 'both' refers to the left and right buttons'"
 msgid "Press both simultaneously to middle-click"
-msgstr ""
-"Un appui simultané sur le bouton gauche et le bouton droit est équivalent à "
-"un clic avec le bouton central."
+msgstr "Appuyez simultanément et en même temps pour effectuer un clic central."
 
 #: ui/main.qml:133
 #, kde-format

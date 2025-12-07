@@ -12,15 +12,15 @@ msgstr ""
 "Project-Id-Version: kcm_keys\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-22 00:44+0000\n"
-"PO-Revision-Date: 2025-11-08 01:02+0100\n"
-"Last-Translator: Philipp Kiemle <l10n@prly.mozmail.com>\n"
+"PO-Revision-Date: 2025-11-28 23:07+0100\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -250,28 +250,22 @@ msgid "Export %1"
 msgstr "%1 exportieren"
 
 #: ui/main.qml:231
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible %1 is the name of a custom command"
-#| msgid "Edit command for %1"
+#, kde-format
 msgctxt "@action:button %1 is the name of a custom command"
 msgid "Edit command for %1"
-msgstr "Befehl für %1 bearbeiten"
+msgstr "Befehl für „%1“ bearbeiten"
 
 #: ui/main.qml:258
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible %1 is the name of a shortcut category"
-#| msgid "Remove all shortcuts for %1"
+#, kde-format
 msgctxt "@action:button %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
-msgstr "Alle Kurzbefehle für %1 entfernen"
+msgstr "Alle Kurzbefehle für „%1“ entfernen"
 
 #: ui/main.qml:280
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible"
-#| msgid "Undo deletion"
+#, kde-format
 msgctxt "@action:button"
 msgid "Undo deletion"
-msgstr "Löschung zurücknehmen"
+msgstr "Löschen zurücknehmen"
 
 #: ui/main.qml:341
 #, kde-format
@@ -283,19 +277,19 @@ msgstr "Es passen keine Elemente auf die Suchbegriffe"
 msgctxt "@info"
 msgid "These shortcuts will be deleted when changes are applied."
 msgstr ""
+"Diese Kurzbefehle werden gelöscht, wenn die Änderungen angewendet werden."
 
 #: ui/main.qml:362
 #, kde-format
 msgctxt "@action:button"
 msgid "Undo"
-msgstr ""
+msgstr "Rückgängig"
 
 #: ui/main.qml:363
-#, fuzzy, kde-format
-#| msgid "No default shortcuts"
+#, kde-format
 msgctxt "@action:button"
 msgid "Undo deleting shortcuts"
-msgstr "Keine Standard-Kurzbefehle"
+msgstr "Löschen der Kurzbefehle zurücknehmen"
 
 #: ui/main.qml:399
 #, kde-format
@@ -442,14 +436,13 @@ msgstr "Kurzbefehl-Schema hinzufügen"
 #, kde-format
 msgctxt "@action:button Collapse shortcuts view"
 msgid "Collapse"
-msgstr ""
+msgstr "Einklappen"
 
 #: ui/ShortcutActionDelegate.qml:32
-#, fuzzy, kde-format
-#| msgid "No active shortcuts"
+#, kde-format
 msgctxt "@action:button"
 msgid "Expand to configure shortcuts"
-msgstr "Keine aktiven Kurzbefehle"
+msgstr "Ausklappen, um Kurzbefehle einzurichten"
 
 #: ui/ShortcutActionDelegate.qml:38
 #, kde-format

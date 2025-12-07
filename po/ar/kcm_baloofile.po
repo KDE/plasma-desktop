@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-04 00:45+0000\n"
-"PO-Revision-Date: 2025-08-03 22:59+0400\n"
+"PO-Revision-Date: 2025-12-06 16:52+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -73,7 +73,7 @@ msgstr "البيانات التي ستفهرس:"
 #: ui/main.qml:109
 #, kde-format
 msgid "Nothing (disable indexing entirely)"
-msgstr ""
+msgstr "لا شيء ( تعطيل الفهرسة بالكامل)"
 
 #: ui/main.qml:121
 #, kde-format
@@ -86,10 +86,9 @@ msgid "File names and contents"
 msgstr "أسماء الملفات ومحتوياتها"
 
 #: ui/main.qml:157
-#, fuzzy, kde-format
-#| msgid "Hidden files and folders"
+#, kde-format
 msgid "Also index hidden files and folders"
-msgstr "الملفات و المجلدات المخفية"
+msgstr "فهرس الملفات و المجلدات المخفية أيضا"
 
 #: ui/main.qml:183
 #, kde-format

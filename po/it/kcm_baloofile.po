@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Luigi Toscano <luigi.toscano@tiscali.it>, 2014, 2017.
-# SPDX-FileCopyrightText: 2017, 2019, 2020, 2021, 2022, 2023, 2024 Paolo Zamponi <feus73@gmail.com>
+# SPDX-FileCopyrightText: 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Paolo Zamponi <feus73@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-04 00:45+0000\n"
-"PO-Revision-Date: 2024-08-29 16:41+0200\n"
+"PO-Revision-Date: 2025-12-06 19:20+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: ui/main.qml:44
 #, kde-format
@@ -73,7 +73,7 @@ msgstr "Dati da indicizzare:"
 #: ui/main.qml:109
 #, kde-format
 msgid "Nothing (disable indexing entirely)"
-msgstr ""
+msgstr "Nessuna (disabilita completamente l´indicizzazione)"
 
 #: ui/main.qml:121
 #, kde-format
@@ -86,10 +86,9 @@ msgid "File names and contents"
 msgstr "Nomi e contenuti dei file"
 
 #: ui/main.qml:157
-#, fuzzy, kde-format
-#| msgid "Hidden files and folders"
+#, kde-format
 msgid "Also index hidden files and folders"
-msgstr "File e cartelle nascosti"
+msgstr "Indicizza anche i file e le cartelle nascoste"
 
 #: ui/main.qml:183
 #, kde-format
