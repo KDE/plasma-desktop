@@ -11,7 +11,7 @@ import QtQuick
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.plasma.plasmoid
-import org.kde.plasma.private.kimpanel as Kimpanel
+import plasma.applet.org.kde.plasma.kimpanel as Kimpanel
 
 Item {
     id: root

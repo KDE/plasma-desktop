@@ -9,7 +9,7 @@ import QtQuick
 import QtQuick.Layouts
 import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
-import org.kde.plasma.private.kimpanel as Kimpanel
+import plasma.applet.org.kde.plasma.kimpanel as Kimpanel
 import org.kde.kirigami as Kirigami
 
 PlasmoidItem {
