@@ -13,8 +13,7 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components as PlasmaComponents3
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.plasmoid
-
-import "code/layoutmetrics.js" as LayoutMetrics
+import plasma.applet.org.kde.plasma.taskmanager as TaskManagerApplet
 
 PlasmaCore.PopupPlasmaWindow {
     id: groupDialog
@@ -118,12 +117,12 @@ PlasmaCore.PopupPlasmaWindow {
                 id: groupListView
 
                 readonly property real maxWidth: groupFilter.maxTextWidth
-                                                + LayoutMetrics.horizontalMargins()
+                                                + TaskManagerApplet.LayoutMetrics.horizontalMargins()
                                                 + Kirigami.Units.iconSizes.medium
-                                                + 2 * (LayoutMetrics.labelMargin + LayoutMetrics.iconMargin)
+                                                + 2 * (TaskManagerApplet.LayoutMetrics.labelMargin + TaskManagerApplet.LayoutMetrics.iconMargin)
                                                 + scrollView.leftPadding + scrollView.rightPadding
                 // Use groupFilter.count because sometimes count is not updated in time (BUG 446105)
-                readonly property real maxHeight: groupFilter.count * (LayoutMetrics.verticalMargins() + Math.max(Kirigami.Units.iconSizes.sizeForLabels, Kirigami.Units.iconSizes.medium))
+                readonly property real maxHeight: groupFilter.count * (TaskManagerApplet.LayoutMetrics.verticalMargins() + Math.max(Kirigami.Units.iconSizes.sizeForLabels, Kirigami.Units.iconSizes.medium))
 
                 model: DelegateModel {
                     id: groupFilter
