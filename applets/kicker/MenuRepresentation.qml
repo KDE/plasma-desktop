@@ -62,8 +62,6 @@ PlasmaComponents3.ScrollView {
 
 
     function reset() {
-        kicker.hideOnWindowDeactivate = true;
-
         rootList.currentIndex = -1;
         hoverBlock.reset();
 
@@ -452,7 +450,6 @@ PlasmaComponents3.ScrollView {
             searchField.text = searchTerm
         });
         kicker.reset.connect(reset)
-        windowSystem.hidden.connect(reset);
 
         rootModel.refresh();
     }

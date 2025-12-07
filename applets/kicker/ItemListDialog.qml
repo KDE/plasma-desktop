@@ -23,7 +23,6 @@ Kicker.SubMenu {
     property alias mainSearchField: itemListView.mainSearchField
 
     visible: false
-    hideOnWindowDeactivate: kicker.hideOnWindowDeactivate
     location: PlasmaCore.Types.Floating
     offset: Kirigami.Units.smallSpacing
     LayoutMirroring.enabled: dialogMirrored
@@ -70,7 +69,6 @@ Kicker.SubMenu {
 
     function delayedDestroy() {
         aboutToBeDestroyed = true;
-        Plasmoid.hideOnWindowDeactivate = false;
 
         Qt.callLater(() => itemDialog.destroy());
     }

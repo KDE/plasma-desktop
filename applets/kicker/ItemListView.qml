@@ -65,9 +65,6 @@ PlasmaComponents3.ScrollView {
         if (itemList && !itemList.currentItem.hasChildren) {
             clearChildDialog();
         } else if (!itemList.childDialog) {
-            // Gets reenabled after the dialog spawn causes a focus-in on the dialog window.
-            kicker.hideOnWindowDeactivate = false;
-
             itemList.childDialog = itemListDialogComponent.createObject(itemList, {
                 mainSearchField: mainSearchField,
                 visualParent: listView.currentItem,
@@ -77,7 +74,7 @@ PlasmaComponents3.ScrollView {
             });
             itemList.childDialog.index = listView.currentIndex;
 
-            windowSystem.forceActive(itemList.childDialog.mainItem);
+            windowSystem.forceActive(itemList.childDialog.mainItem); // only for X11; TODO Plasma 6.8: remove
             itemList.childDialog.mainItem.focus = true;
 
             if (focusOnSpawn) {
@@ -218,7 +215,7 @@ PlasmaComponents3.ScrollView {
                     if (itemList.childDialog === null) {
                         itemList.subMenuForCurrentItem(true);
                     } else {
-                        windowSystem.forceActive(itemList.childDialog.mainItem);
+                        windowSystem.forceActive(itemList.childDialog.mainItem); // only for X11; TODO Plasma 6.8: remove
                         itemList.childDialog.mainItem.forceActiveFocus(Qt.TabFocusReason);
                         itemList.childDialog.mainItem.currentIndex = 0;
                     }
@@ -283,9 +280,5 @@ PlasmaComponents3.ScrollView {
                 }
             }
         }
-    }
-
-    Component.onCompleted: {
-        windowSystem.monitorWindowFocus(itemList);
     }
 }

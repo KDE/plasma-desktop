@@ -168,7 +168,7 @@ PlasmoidItem {
         id: processRunner
     }
 
-    Kicker.WindowSystem {
+    Kicker.WindowSystem { // only for X11; TODO Plasma 6.8: remove (also from plasma-workspace)
         id: windowSystem
     }
 
@@ -206,9 +206,7 @@ PlasmoidItem {
         target: kicker
 
         function onExpandedChanged(expanded) {
-            if (expanded) {
-                windowSystem.monitorWindowVisibility(Plasmoid.fullRepresentationItem);
-            } else {
+            if (!expanded) {
                 kicker.reset();
             }
         }
@@ -216,10 +214,6 @@ PlasmoidItem {
 
     function resetDragSource() {
         dragSource = null;
-    }
-
-    function enableHideOnWindowDeactivate() {
-        kicker.hideOnWindowDeactivate = true;
     }
 
     Plasmoid.contextualActions: [
@@ -235,9 +229,6 @@ PlasmoidItem {
         if (Plasmoid.hasOwnProperty("activationTogglesExpanded")) {
             Plasmoid.activationTogglesExpanded = !kicker.isDash
         }
-
-        windowSystem.focusIn.connect(enableHideOnWindowDeactivate);
-        kicker.hideOnWindowDeactivate = true;
 
         rootModel.refreshed.connect(modelRefreshed);
 
