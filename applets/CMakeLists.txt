@@ -7,7 +7,7 @@ add_subdirectory(trash)
 add_subdirectory(taskmanager)
 add_subdirectory(window-list)
 plasma_install_package(icontasks org.kde.plasma.icontasks)
-plasma_install_package(margins-separator org.kde.plasma.marginsseparator)
+add_subdirectory(margins-separator)
 
 if(PlasmaActivities_FOUND)
    add_subdirectory(pager)
