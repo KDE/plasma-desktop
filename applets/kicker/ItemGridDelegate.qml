@@ -95,15 +95,14 @@ Item {
         textFormat: Text.PlainText
     }
 
-    PlasmaCore.ToolTipArea {
-        id: toolTip
+    HoverHandler {
+        id: hoverHandler
+        onHoveredChanged: item.GridView.view.itemContainsMouseChanged(hovered)
+    }
 
-        mainText: item.description ?? ""
-
-        anchors.fill: parent
-        mainItem: toolTipDelegate
-
-        onContainsMouseChanged: item.GridView.view.itemContainsMouseChanged(containsMouse)
+    PlasmaComponents3.ToolTip {
+        text: item.model.description ?? ""
+        visible: hoverHandler.hovered
     }
 
     Keys.onMenuPressed: {

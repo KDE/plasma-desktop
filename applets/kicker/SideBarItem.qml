@@ -92,7 +92,7 @@ PC3.ToolButton {
         onPressed: mouse => item.openActionMenu(item, mouse.x, mouse.y)
     }
 
-    PC3.ToolTip.text: item.text
-    PC3.ToolTip.visible: item.hovered
-    PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
+    PC3.ToolTip {
+        text: item.text
+    }
 }
