@@ -264,7 +264,7 @@ PlasmaExtras.Menu {
                 menu.visualParent.toggleMuted();
             });
             muteItem.text = i18n("Mute");
-            muteItem.icon = "audio-volume-muted" + (Qt.application.layoutDirection === Qt.RightToLeft ? "-rtl" : "");
+            muteItem.icon = "audio-volume-muted" + (Application.layoutDirection === Qt.RightToLeft ? "-rtl" : "");
             menu.addMenuItem(muteItem, startNewInstanceItem);
 
             menu.addMenuItem(newSeparator(menu), startNewInstanceItem);

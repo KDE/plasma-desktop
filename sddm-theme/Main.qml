@@ -30,7 +30,7 @@ Item {
 
     property string notificationMessage
 
-    LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+    LayoutMirroring.enabled: Application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
     KeyboardIndicator.KeyState {

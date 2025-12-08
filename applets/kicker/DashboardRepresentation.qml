@@ -89,7 +89,7 @@ Kicker.DashboardWindow {
 
         acceptedButtons: Qt.LeftButton | Qt.RightButton
 
-        LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+        LayoutMirroring.enabled: Application.layoutDirection === Qt.RightToLeft
         LayoutMirroring.childrenInherit: true
 
         // We draw the background color here instead of in the

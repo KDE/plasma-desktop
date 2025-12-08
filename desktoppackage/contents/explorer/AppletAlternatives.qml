@@ -40,7 +40,7 @@ PlasmaCore.Dialog {
         Layout.minimumWidth: Kirigami.Units.gridUnit * 20
         Layout.minimumHeight: Math.min(Screen.height - Kirigami.Units.gridUnit * 10, implicitHeight)
 
-        LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+        LayoutMirroring.enabled: Application.layoutDirection === Qt.RightToLeft
         LayoutMirroring.childrenInherit: true
 
         property string currentPlugin: ""

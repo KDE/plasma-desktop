@@ -277,7 +277,7 @@ KCMUtils.SimpleKCM {
                     return i18nc("@option:check completes sentence: New tasks appear", "On the bottom")
                 }
                 // horizontal
-                if (Qt.application.layoutDirection === Qt.LeftToRight) {
+                if (Application.layoutDirection === Qt.LeftToRight) {
                     return i18nc("@option:check completes sentence: New tasks appear", "To the right");
                 } else {
                     return i18nc("@option:check completes sentence: New tasks appear", "To the left")
@@ -294,7 +294,7 @@ KCMUtils.SimpleKCM {
                     return i18nc("@option:check completes sentence: New tasks appear", "On the top")
                 }
                 // horizontal
-                if (Qt.application.layoutDirection === Qt.LeftToRight) {
+                if (Application.layoutDirection === Qt.LeftToRight) {
                     return i18nc("@option:check completes sentence: New tasks appear", "To the left");
                 } else {
                     return i18nc("@option:check completes sentence: New tasks appear", "To the right");

@@ -24,7 +24,7 @@ Item {
     signal suspendToDisk()
     signal suspendToRam()
 
-    LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+    LayoutMirroring.enabled: Application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
     implicitWidth: 800

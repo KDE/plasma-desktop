@@ -139,7 +139,7 @@ KCM.SimpleKCM {
             model: {
                 const ltrText = i18nc("@item:inlistbox alignment of icons", "Left-to-Right");
                 const rtlText = i18nc("@item:inlistbox alignment of icons", "Right-to-Left");
-                if (Qt.application.layoutDirection === Qt.LeftToRight) {
+                if (Application.layoutDirection === Qt.LeftToRight) {
                     return [ltrText, rtlText];
                 }
                 else {

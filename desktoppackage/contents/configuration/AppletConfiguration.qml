@@ -26,7 +26,7 @@ Rectangle {
     Layout.minimumWidth: Kirigami.Units.gridUnit * 30
     Layout.minimumHeight: Kirigami.Units.gridUnit * 21
 
-    LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+    LayoutMirroring.enabled: Application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
     color: Kirigami.Theme.backgroundColor

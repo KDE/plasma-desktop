@@ -71,7 +71,7 @@ Item {
             }
             RowLayout {
                 id: toolBar
-                LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+                LayoutMirroring.enabled: Application.layoutDirection === Qt.RightToLeft
                 LayoutMirroring.childrenInherit: true
                 spacing: Kirigami.Units.smallSpacing
                 anchors {

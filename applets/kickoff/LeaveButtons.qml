@@ -137,14 +137,14 @@ RowLayout {
                     }
                 }
                 Keys.onLeftPressed: event => {
-                    if (Qt.application.layoutDirection === Qt.LeftToRight) {
+                    if (Application.layoutDirection === Qt.LeftToRight) {
                         nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
                     } else if (index < buttonRepeater.count - 1 || root.__layout.overflowMenuButtonIsVisible) {
                         nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)
                     }
                 }
                 Keys.onRightPressed: event => {
-                    if (Qt.application.layoutDirection === Qt.RightToLeft) {
+                    if (Application.layoutDirection === Qt.RightToLeft) {
                         nextItemInFocusChain(false).forceActiveFocus(Qt.BacktabFocusReason)
                     } else if (index < buttonRepeater.count - 1 || root.__layout.overflowMenuButtonIsVisible) {
                         nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)

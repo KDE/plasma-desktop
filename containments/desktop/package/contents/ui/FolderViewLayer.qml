@@ -71,7 +71,7 @@ FocusScope {
         id: labelGenerator
 
         folderModel: folderView.model
-        rtl: (Qt.application.layoutDirection === Qt.RightToLeft)
+        rtl: (Application.layoutDirection === Qt.RightToLeft)
         labelMode: Plasmoid.configuration.labelMode || (isContainment ? 0 : 1)
         labelText: Plasmoid.configuration.labelText
     }

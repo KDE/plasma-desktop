@@ -46,7 +46,7 @@ ContainmentItem {
     property bool dragAndDropping: false
     // True when e.g. the task manager is drag and dropping tasks.
     property bool appletRequestsInhibitDnD: false
-    property bool reverse: Qt.application.layoutDirection === Qt.RightToLeft
+    property bool reverse: Application.layoutDirection === Qt.RightToLeft
 
 //END properties
 
@@ -424,7 +424,7 @@ ContainmentItem {
             rows: isHorizontal ? 1 : currentLayout.children.length
             columns: isHorizontal ? currentLayout.children.length : 1
             flow: isHorizontal ? GridLayout.LeftToRight : GridLayout.TopToBottom
-            layoutDirection: Qt.application.layoutDirection
+            layoutDirection: Application.layoutDirection
         }
     }
     MouseArea {

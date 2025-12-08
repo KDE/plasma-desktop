@@ -419,7 +419,7 @@ PlasmoidItem {
                 }
             }
 
-            LayoutMirroring.enabled: tasks.shouldBeMirrored(Plasmoid.configuration.reverseMode, Qt.application.layoutDirection, tasks.vertical)
+            LayoutMirroring.enabled: tasks.shouldBeMirrored(Plasmoid.configuration.reverseMode, Application.layoutDirection, tasks.vertical)
             anchors {
                 left: parent.left
                 top: parent.top
@@ -431,7 +431,7 @@ PlasmoidItem {
             TaskList {
                 id: taskList
 
-                LayoutMirroring.enabled: tasks.shouldBeMirrored(Plasmoid.configuration.reverseMode, Qt.application.layoutDirection, tasks.vertical)
+                LayoutMirroring.enabled: tasks.shouldBeMirrored(Plasmoid.configuration.reverseMode, Application.layoutDirection, tasks.vertical)
                 anchors {
                     left: parent.left
                     top: parent.top

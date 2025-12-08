@@ -79,7 +79,7 @@ PlasmaComponents3.ScrollView {
         spacing: Kirigami.Units.smallSpacing
 
         LayoutMirroring.enabled: ((Plasmoid.location === PlasmaCore.Types.RightEdge)
-            || (Qt.application.layoutDirection === Qt.RightToLeft && Plasmoid.location !== PlasmaCore.Types.LeftEdge))
+            || (Application.layoutDirection === Qt.RightToLeft && Plasmoid.location !== PlasmaCore.Types.LeftEdge))
 
         KSvg.FrameSvgItem {
             id: sideBar
@@ -356,8 +356,8 @@ PlasmaComponents3.ScrollView {
         states: [
             State {
                 name: "right"
-                when: (Plasmoid.location === PlasmaCore.Types.RightEdge && Qt.application.layoutDirection === Qt.LeftToRight)
-                    || (Plasmoid.location === PlasmaCore.Types.LeftEdge && Qt.application.layoutDirection === Qt.RightToLeft)
+                when: (Plasmoid.location === PlasmaCore.Types.RightEdge && Application.layoutDirection === Qt.LeftToRight)
+                    || (Plasmoid.location === PlasmaCore.Types.LeftEdge && Application.layoutDirection === Qt.RightToLeft)
 
                 AnchorChanges {
                     target: searchField

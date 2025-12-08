@@ -214,7 +214,7 @@ Item {
                                      && item.containment !== containment.plasmoid
                                      && item.containment.location == PlasmaCore.Types.RightEdge);
 
-            return rightEdgeParent || Qt.application.layoutDirection === Qt.RightToLeft;
+            return rightEdgeParent || Application.layoutDirection === Qt.RightToLeft;
         }
 
         location: sideBarOnRightEdge ? PlasmaCore.Types.RightEdge : PlasmaCore.Types.LeftEdge
@@ -261,7 +261,7 @@ Item {
                 });
             }
 
-            LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+            LayoutMirroring.enabled: Application.layoutDirection === Qt.RightToLeft
             LayoutMirroring.childrenInherit: true
 
             onLoaded: {

@@ -97,9 +97,9 @@ Kirigami.ApplicationWindow {
                 text: drawer.collapsed ? "" : qsTr("Close Sidebar")
                 icon.name: {
                     if (drawer.collapsed) {
-                        return Qt.application.layoutDirection === Qt.RightToLeft ? "sidebar-expand-right" : "sidebar-expand-left";
+                        return Application.layoutDirection === Qt.RightToLeft ? "sidebar-expand-right" : "sidebar-expand-left";
                     } else {
-                        return Qt.application.layoutDirection === Qt.RightToLeft ? "sidebar-collapse-right" : "sidebar-collapse-left";
+                        return Application.layoutDirection === Qt.RightToLeft ? "sidebar-collapse-right" : "sidebar-collapse-left";
                     }
                 }
 

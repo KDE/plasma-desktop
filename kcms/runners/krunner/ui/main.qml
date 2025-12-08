@@ -88,7 +88,7 @@ KCM.SimpleKCM {
             id: clearHistoryButton
             enabled: kcm.krunnerSettings.historyBehavior !== KRunnerSettings.Disabled && kcm.historyKeys.length > 0
 
-            icon.name: Qt.application.layoutDirection === Qt.LeftToRight ? "edit-clear-locationbar-ltr" : "edit-clear-locationbar-rtl"
+            icon.name: Application.layoutDirection === Qt.LeftToRight ? "edit-clear-locationbar-ltr" : "edit-clear-locationbar-rtl"
             text: i18n("Clear History…")
 
             checked: activityMenu.visible

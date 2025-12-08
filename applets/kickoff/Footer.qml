@@ -127,8 +127,8 @@ PlasmaExtras.PlasmoidHeading {
         }
 
         Keys.onPressed: event => {
-            const Key_Next = Qt.application.layoutDirection === Qt.RightToLeft ? Qt.Key_Left : Qt.Key_Right
-            const Key_Prev = Qt.application.layoutDirection === Qt.RightToLeft ? Qt.Key_Right : Qt.Key_Left
+            const Key_Next = Application.layoutDirection === Qt.RightToLeft ? Qt.Key_Left : Qt.Key_Right
+            const Key_Prev = Application.layoutDirection === Qt.RightToLeft ? Qt.Key_Right : Qt.Key_Left
             if (event.key === Key_Next) {
                 if (currentIndex === count - 1) {
                     leaveButtons.nextItemInFocusChain().forceActiveFocus(Qt.TabFocusReason)

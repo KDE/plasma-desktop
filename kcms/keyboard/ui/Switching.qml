@@ -167,7 +167,7 @@ KCM.AbstractKCM {
             }
 
             QQC2.Button {
-                icon.name: Qt.application.layoutDirection === Qt.LeftToRight ? "edit-clear-locationbar-rtl-symbolic" :
+                icon.name: Application.layoutDirection === Qt.LeftToRight ? "edit-clear-locationbar-rtl-symbolic" :
                                                                                "edit-clear-locationbar-ltr-symbolic"
                 onClicked: kcm.xkbOptionsModel.clearXkbGroup(__internal.mainShortcutGroupName);
             }
@@ -197,7 +197,7 @@ KCM.AbstractKCM {
             }
 
             QQC2.Button {
-                icon.name: Qt.application.layoutDirection === Qt.LeftToRight ? "edit-clear-locationbar-rtl-symbolic" :
+                icon.name: Application.layoutDirection === Qt.LeftToRight ? "edit-clear-locationbar-rtl-symbolic" :
                                                                                "edit-clear-locationbar-ltr-symbolic"
                 onClicked: kcm.xkbOptionsModel.clearXkbGroup(__internal.lvl3ShortcutGroupName)
             }

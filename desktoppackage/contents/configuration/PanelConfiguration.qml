@@ -20,7 +20,7 @@ ColumnLayout {
     id: dialogRoot
     spacing: Kirigami.Units.largeSpacing * 2
 
-    LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+    LayoutMirroring.enabled: Application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
     signal closeContextMenu

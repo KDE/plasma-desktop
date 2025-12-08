@@ -47,7 +47,7 @@ ContainmentItem {
         return 0;
     }
 
-    LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+    LayoutMirroring.enabled: Application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
     property bool isFolder: (Plasmoid.pluginName === "org.kde.plasma.folder")

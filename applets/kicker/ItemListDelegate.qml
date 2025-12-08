@@ -48,7 +48,7 @@ Item {
     property bool showSeparators: true
     property QtObject childDialog: null
     property ActionMenu menu: actionMenu
-    property bool dialogDefaultRight: Qt.application.layoutDirection !== Qt.RightToLeft
+    property bool dialogDefaultRight: Application.layoutDirection !== Qt.RightToLeft
 
     Accessible.role: isSeparator ? Accessible.Separator : Accessible.MenuItem
     Accessible.name: label.text
@@ -128,7 +128,7 @@ Item {
 
         spacing: Kirigami.Units.smallSpacing * 2
 
-        LayoutMirroring.enabled: (Qt.application.layoutDirection === Qt.RightToLeft)
+        LayoutMirroring.enabled: (Application.layoutDirection === Qt.RightToLeft)
 
         Kirigami.Icon {
             id: icon
@@ -148,7 +148,7 @@ Item {
             id: label
 
             enabled: !item.isParent || (item.isParent && item.hasChildren)
-            LayoutMirroring.enabled: (Qt.application.layoutDirection === Qt.RightToLeft)
+            LayoutMirroring.enabled: (Application.layoutDirection === Qt.RightToLeft)
             visible: !item.isSeparator
 
             Layout.fillWidth: true

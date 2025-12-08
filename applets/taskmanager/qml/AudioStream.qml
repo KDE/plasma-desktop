@@ -35,7 +35,7 @@ Item {
             when: task.playingAudio && !task.muted
             PropertyChanges {
                 audioStreamIconBox.opacity: 1
-                audioStreamIcon.source: "audio-volume-high-symbolic" + (Qt.application.layoutDirection === Qt.RightToLeft ? "-rtl" : "")
+                audioStreamIcon.source: "audio-volume-high-symbolic" + (Application.layoutDirection === Qt.RightToLeft ? "-rtl" : "")
             }
         },
         State {
@@ -43,7 +43,7 @@ Item {
             when: task.muted
             PropertyChanges {
                 audioStreamIconBox.opacity: 1
-                audioStreamIcon.source: "audio-volume-muted-symbolic" + (Qt.application.layoutDirection === Qt.RightToLeft ? "-rtl" : "")
+                audioStreamIcon.source: "audio-volume-muted-symbolic" + (Application.layoutDirection === Qt.RightToLeft ? "-rtl" : "")
             }
         }
     ]
@@ -120,7 +120,7 @@ Item {
         readonly property real requiredSpace: Math.min(iconBox.width, iconBox.height)
             + Math.min(Math.min(iconBox.width, iconBox.height), Kirigami.Units.iconSizes.smallMedium) * 2
 
-        source: "audio-volume-high-symbolic" + (Qt.application.layoutDirection === Qt.RightToLeft ? "-rtl" : "")
+        source: "audio-volume-high-symbolic" + (Application.layoutDirection === Qt.RightToLeft ? "-rtl" : "")
         selected: tapHandler.pressed
 
         height: Math.round(Math.min(parent.height * audioStreamIconBox.indicatorScale, Kirigami.Units.iconSizes.smallMedium))

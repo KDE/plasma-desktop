@@ -18,7 +18,7 @@ PlasmoidItem {
     property int visibleButtons: 0
     readonly property bool vertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
 
-    LayoutMirroring.enabled: !vertical && Qt.application.layoutDirection === Qt.RightToLeft
+    LayoutMirroring.enabled: !vertical && Application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
     Layout.minimumWidth: vertical ? Kirigami.Units.iconSizes.small : mainLayout.implicitWidth
