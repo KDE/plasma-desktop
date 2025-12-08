@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"POT-Creation-Date: 2025-12-08 00:45+0000\n"
 "PO-Revision-Date: 2024-09-20 12:33+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -20,55 +20,55 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: package/contents/config/config.qml:13
+#: qml/config.qml:13
 #, fuzzy, kde-format
 #| msgid "Appearance"
 msgctxt "@title page"
 msgid "Appearance"
 msgstr "Внешний вид"
 
-#: package/contents/ui/ConfigAppearance.qml:23
+#: qml/ConfigAppearance.qml:23
 #, kde-format
 msgid "Icon:"
 msgstr "Значок:"
 
-#: package/contents/ui/ConfigAppearance.qml:25
+#: qml/ConfigAppearance.qml:25
 #, kde-format
 msgid "Show the current activity icon"
 msgstr "Показывать значок текущей комнаты"
 
-#: package/contents/ui/ConfigAppearance.qml:31
+#: qml/ConfigAppearance.qml:31
 #, kde-format
 msgid "Show the generic activity icon"
 msgstr "Показывать общий значок комнаты"
 
-#: package/contents/ui/ConfigAppearance.qml:41
+#: qml/ConfigAppearance.qml:41
 #, kde-format
 msgid "Title:"
 msgstr "Заголовок:"
 
-#: package/contents/ui/ConfigAppearance.qml:43
+#: qml/ConfigAppearance.qml:43
 #, kde-format
 msgid "Show the current activity name"
 msgstr "Показывать название текущей комнаты"
 
-#: package/contents/ui/main.qml:66
+#: qml/main.qml:66
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Current activity is %1"
 msgstr "Текущая комната: %1"
 
-#: package/contents/ui/main.qml:76
+#: qml/main.qml:76
 #, kde-format
 msgid "Show Activity Manager"
 msgstr "Показать диспетчер комнат"
 
-#: package/contents/ui/main.qml:77
+#: qml/main.qml:77
 #, kde-format
 msgid "Click to show the activity manager"
 msgstr "Щёлкните для открытия диспетчера комнат"
 
-#: package/contents/ui/main.qml:119
+#: qml/main.qml:119
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "&Configure Activities…"

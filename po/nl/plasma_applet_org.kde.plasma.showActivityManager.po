@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"POT-Creation-Date: 2025-12-08 00:45+0000\n"
 "PO-Revision-Date: 2025-11-28 12:33+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -18,54 +18,54 @@ msgstr ""
 "X-Generator: Lokalize 25.08.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: package/contents/config/config.qml:13
+#: qml/config.qml:13
 #, kde-format
 msgctxt "@title page"
 msgid "Appearance"
 msgstr "Uiterlijk"
 
-#: package/contents/ui/ConfigAppearance.qml:23
+#: qml/ConfigAppearance.qml:23
 #, kde-format
 msgid "Icon:"
 msgstr "Pictogram:"
 
-#: package/contents/ui/ConfigAppearance.qml:25
+#: qml/ConfigAppearance.qml:25
 #, kde-format
 msgid "Show the current activity icon"
 msgstr "Het huidige pictogram van activiteit tonen"
 
-#: package/contents/ui/ConfigAppearance.qml:31
+#: qml/ConfigAppearance.qml:31
 #, kde-format
 msgid "Show the generic activity icon"
 msgstr "Het algemene pictogram van activiteit tonen"
 
-#: package/contents/ui/ConfigAppearance.qml:41
+#: qml/ConfigAppearance.qml:41
 #, kde-format
 msgid "Title:"
 msgstr "Titel:"
 
-#: package/contents/ui/ConfigAppearance.qml:43
+#: qml/ConfigAppearance.qml:43
 #, kde-format
 msgid "Show the current activity name"
 msgstr "De huidige naam van activiteit tonen"
 
-#: package/contents/ui/main.qml:66
+#: qml/main.qml:66
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Current activity is %1"
 msgstr "Huidige activiteit is %1"
 
-#: package/contents/ui/main.qml:76
+#: qml/main.qml:76
 #, kde-format
 msgid "Show Activity Manager"
 msgstr "Activiteitenbeheerder tonen"
 
-#: package/contents/ui/main.qml:77
+#: qml/main.qml:77
 #, kde-format
 msgid "Click to show the activity manager"
 msgstr "Klik om de activiteitenbeheerder te tonen"
 
-#: package/contents/ui/main.qml:119
+#: qml/main.qml:119
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "&Configure Activities…"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"POT-Creation-Date: 2025-12-08 00:45+0000\n"
 "PO-Revision-Date: 2025-12-06 15:57+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -22,54 +22,54 @@ msgstr ""
 "X-Generator: Lokalize 25.08.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: package/contents/config/config.qml:13
+#: qml/config.qml:13
 #, kde-format
 msgctxt "@title page"
 msgid "Appearance"
 msgstr "Itxura"
 
-#: package/contents/ui/ConfigAppearance.qml:23
+#: qml/ConfigAppearance.qml:23
 #, kde-format
 msgid "Icon:"
 msgstr "Ikonoa:"
 
-#: package/contents/ui/ConfigAppearance.qml:25
+#: qml/ConfigAppearance.qml:25
 #, kde-format
 msgid "Show the current activity icon"
 msgstr "Erakutsi uneko jardueraren ikonoa"
 
-#: package/contents/ui/ConfigAppearance.qml:31
+#: qml/ConfigAppearance.qml:31
 #, kde-format
 msgid "Show the generic activity icon"
 msgstr "Erakutsi jarduera generikoaren ikonoa"
 
-#: package/contents/ui/ConfigAppearance.qml:41
+#: qml/ConfigAppearance.qml:41
 #, kde-format
 msgid "Title:"
 msgstr "Titulua:"
 
-#: package/contents/ui/ConfigAppearance.qml:43
+#: qml/ConfigAppearance.qml:43
 #, kde-format
 msgid "Show the current activity name"
 msgstr "Erakutsi uneko jardueraren izena"
 
-#: package/contents/ui/main.qml:66
+#: qml/main.qml:66
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Current activity is %1"
 msgstr "Uneko jardueraren %1 da"
 
-#: package/contents/ui/main.qml:76
+#: qml/main.qml:76
 #, kde-format
 msgid "Show Activity Manager"
 msgstr "Erakutsi jarduera-kudeatzailea"
 
-#: package/contents/ui/main.qml:77
+#: qml/main.qml:77
 #, kde-format
 msgid "Click to show the activity manager"
 msgstr "Egin klik, jarduera-kudeatzailea erakusteko"
 
-#: package/contents/ui/main.qml:119
+#: qml/main.qml:119
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "&Configure Activities…"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"POT-Creation-Date: 2025-12-08 00:45+0000\n"
 "PO-Revision-Date: 2025-11-30 11:02+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -17,54 +17,54 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 25.08.3\n"
 
-#: package/contents/config/config.qml:13
+#: qml/config.qml:13
 #, kde-format
 msgctxt "@title page"
 msgid "Appearance"
 msgstr "தோற்றம்"
 
-#: package/contents/ui/ConfigAppearance.qml:23
+#: qml/ConfigAppearance.qml:23
 #, kde-format
 msgid "Icon:"
 msgstr "சின்னம்:"
 
-#: package/contents/ui/ConfigAppearance.qml:25
+#: qml/ConfigAppearance.qml:25
 #, kde-format
 msgid "Show the current activity icon"
 msgstr "தற்போதைய செயல்பாட்டின் சின்னத்தை காட்டு"
 
-#: package/contents/ui/ConfigAppearance.qml:31
+#: qml/ConfigAppearance.qml:31
 #, kde-format
 msgid "Show the generic activity icon"
 msgstr "பொதுவான செயல்பாடு சின்னத்தை காட்டு"
 
-#: package/contents/ui/ConfigAppearance.qml:41
+#: qml/ConfigAppearance.qml:41
 #, kde-format
 msgid "Title:"
 msgstr "தலைப்பு:"
 
-#: package/contents/ui/ConfigAppearance.qml:43
+#: qml/ConfigAppearance.qml:43
 #, kde-format
 msgid "Show the current activity name"
 msgstr "தற்போதைய செயல்பாட்டின் பெயரை காட்டு"
 
-#: package/contents/ui/main.qml:66
+#: qml/main.qml:66
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Current activity is %1"
 msgstr "தற்போதைய செயல்பாடு %1 ஆகும்"
 
-#: package/contents/ui/main.qml:76
+#: qml/main.qml:76
 #, kde-format
 msgid "Show Activity Manager"
 msgstr "செயல்பாடு மேலாளியை காட்டு"
 
-#: package/contents/ui/main.qml:77
+#: qml/main.qml:77
 #, kde-format
 msgid "Click to show the activity manager"
 msgstr "செயல்பாடு மேலாளியை காட்ட க்ளிக் செய்யவும்"
 
-#: package/contents/ui/main.qml:119
+#: qml/main.qml:119
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "&Configure Activities…"

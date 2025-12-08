@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"POT-Creation-Date: 2025-12-08 00:45+0000\n"
 "PO-Revision-Date: 2022-07-22 12:08+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -17,55 +17,55 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.04.3\n"
 
-#: package/contents/config/config.qml:13
+#: qml/config.qml:13
 #, fuzzy, kde-format
 #| msgid "Appearance"
 msgctxt "@title page"
 msgid "Appearance"
 msgstr "Xarici görünüşü"
 
-#: package/contents/ui/ConfigAppearance.qml:23
+#: qml/ConfigAppearance.qml:23
 #, kde-format
 msgid "Icon:"
 msgstr "İkon:"
 
-#: package/contents/ui/ConfigAppearance.qml:25
+#: qml/ConfigAppearance.qml:25
 #, kde-format
 msgid "Show the current activity icon"
 msgstr "Cari İş otağı ikonunu göstərmək"
 
-#: package/contents/ui/ConfigAppearance.qml:31
+#: qml/ConfigAppearance.qml:31
 #, kde-format
 msgid "Show the generic activity icon"
 msgstr "Əsas İş otağı nişanını göstərmək"
 
-#: package/contents/ui/ConfigAppearance.qml:41
+#: qml/ConfigAppearance.qml:41
 #, kde-format
 msgid "Title:"
 msgstr "Başlıq:"
 
-#: package/contents/ui/ConfigAppearance.qml:43
+#: qml/ConfigAppearance.qml:43
 #, kde-format
 msgid "Show the current activity name"
 msgstr "Cari İş otağının adını göstərmək"
 
-#: package/contents/ui/main.qml:66
+#: qml/main.qml:66
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Current activity is %1"
 msgstr "Cari İş otağı: %1"
 
-#: package/contents/ui/main.qml:76
+#: qml/main.qml:76
 #, kde-format
 msgid "Show Activity Manager"
 msgstr "İş otağı menecerini göstərmək"
 
-#: package/contents/ui/main.qml:77
+#: qml/main.qml:77
 #, kde-format
 msgid "Click to show the activity manager"
 msgstr "İş otağı menecerini göstərmək üçün klikləmək"
 
-#: package/contents/ui/main.qml:119
+#: qml/main.qml:119
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "&Configure Activities…"
