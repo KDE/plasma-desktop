@@ -110,7 +110,7 @@ FocusScope {
 
             var x = Math.max(0, event.x - (width % itemGrid.cellWidth));
             var cPos = mapToItem(gridView.contentItem, x, event.y);
-            var item = gridView.itemAt(cPos.x, cPos.y);
+            var item = gridView.itemAt(cPos.x, cPos.y) as ItemGridDelegate;
 
             if (item) {
                 if (kicker.dragSource.parent === gridView.contentItem) {
@@ -231,10 +231,11 @@ FocusScope {
                 }
 
                 highlight: Item {
+                    id: highlightItem
                     property bool isDropPlaceHolder: "dropPlaceholderIndex" in itemGrid.model && itemGrid.currentIndex === itemGrid.model.dropPlaceholderIndex
 
                     PlasmaExtras.Highlight {
-                        visible: gridView.currentItem && !isDropPlaceHolder
+                        visible: gridView.currentItem && !highlightItem.isDropPlaceHolder
                         hovered: true
                         pressed: hoverArea.pressed
 
@@ -242,7 +243,7 @@ FocusScope {
                     }
 
                     KSvg.FrameSvgItem {
-                        visible: gridView.currentItem && isDropPlaceHolder
+                        visible: gridView.currentItem && highlightItem.isDropPlaceHolder
 
                         anchors.fill: parent
 
@@ -373,7 +374,7 @@ FocusScope {
             property int pressY: -1
             property int lastX: -1
             property int lastY: -1
-            property Item pressedItem: null
+            property ItemGridDelegate pressedItem: null
 
             acceptedButtons: Qt.LeftButton | Qt.RightButton
 
@@ -392,7 +393,7 @@ FocusScope {
                 lastY = y;
 
                 var cPos = mapToItem(gridView.contentItem, x, y);
-                var item = gridView.itemAt(cPos.x, cPos.y);
+                var item = gridView.itemAt(cPos.x, cPos.y) as ItemGridDelegate;
 
                 if (!item) {
                     gridView.currentIndex = -1;
@@ -413,18 +414,20 @@ FocusScope {
                 pressX = mouse.x;
                 pressY = mouse.y;
 
+                const currentDelegate = gridView.currentItem as ItemGridDelegate
+
                 if (mouse.button === Qt.RightButton) {
-                    if (gridView.currentItem) {
-                        if (gridView.currentItem.hasActionList) {
-                            var mapped = mapToItem(gridView.currentItem, mouse.x, mouse.y);
-                            gridView.currentItem.openActionMenu(mapped.x, mapped.y);
+                    if (currentDelegate) {
+                        if (currentDelegate.hasActionList) {
+                            var mapped = mapToItem(currentDelegate, mouse.x, mouse.y);
+                            currentDelegate.openActionMenu(mapped.x, mapped.y);
                         }
                     } else {
                         var mapped = mapToItem(rootItem, mouse.x, mouse.y);
                         contextMenu.open(mapped.x, mapped.y);
                     }
                 } else {
-                    pressedItem = gridView.currentItem;
+                    pressedItem = currentDelegate;
                 }
             }
 

@@ -271,7 +271,7 @@ Kicker.DashboardWindow {
 
             anchors {
                 top: parent.top
-                topMargin: Kirigami.Units.gridUnit * (smallScreen ? 8 : 10)
+                topMargin: Kirigami.Units.gridUnit * (root.smallScreen ? 8 : 10)
                 bottom: parent.bottom
                 bottomMargin: (Kirigami.Units.gridUnit * 2)
                 horizontalCenter: parent.horizontalCenter
@@ -354,7 +354,7 @@ Kicker.DashboardWindow {
                     cellHeight: root.cellSize
                     iconSize: root.iconSize
 
-                    model: globalFavorites
+                    model: kicker.globalFavorites
 
                     dropEnabled: true
 
@@ -366,7 +366,7 @@ Kicker.DashboardWindow {
                         preloadAllAppsTimer.defer();
                     }
 
-                    onKeyNavRight: subGridIndex => {
+                    onKeyNavRight: {
                         mainColumn.tryActivate(currentRow(), 0);
                     }
 
@@ -374,17 +374,11 @@ Kicker.DashboardWindow {
                         systemFavoritesGrid.tryActivate(0, currentCol());
                     }
 
-                    Keys.onTabPressed: {
-                        if (root.searching) {
-                            cancelSearchButton.focus = true;
-                        } else {
-                            mainColumn.tryActivate(0, 0);
-                        }
-                    }
+                    Keys.onTabPressed: mainColumn.tryActivate(0, 0);
                     Keys.onBacktabPressed: systemFavoritesGrid.tryActivate(0, 0);
 
                     Binding {
-                        target: globalFavorites
+                        target: kicker.globalFavorites
                         property: "iconSize"
                         value: root.iconSize
                         restoreMode: Binding.RestoreBinding
@@ -406,7 +400,7 @@ Kicker.DashboardWindow {
                     cellHeight: root.cellSize
                     iconSize: root.iconSize
 
-                    model: systemFavorites
+                    model: kicker.systemFavorites
 
                     dropEnabled: true
 
@@ -425,8 +419,6 @@ Kicker.DashboardWindow {
                     Keys.onTabPressed: {
                         if (globalFavoritesGrid.enabled) {
                             globalFavoritesGrid.tryActivate(0, 0);
-                        } else if (root.searching && !runnerModel.count) {
-                            cancelSearchButton.focus = true;
                         } else {
                             mainColumn.tryActivate(0, 0);
                         }
@@ -434,8 +426,6 @@ Kicker.DashboardWindow {
                     Keys.onBacktabPressed: {
                         if (filterList.enabled) {
                             filterList.forceActiveFocus();
-                        } else if (root.searching && !runnerModel.count) {
-                            cancelSearchButton.focus = true;
                         } else {
                             mainColumn.tryActivate(0, 0);
                         }
@@ -680,9 +670,7 @@ Kicker.DashboardWindow {
                     }
                 }
                 Keys.onBacktabPressed: {
-                    if (root.searching) {
-                        cancelSearchButton.focus = true;
-                    } else if (globalFavoritesGrid.enabled) {
+                    if (globalFavoritesGrid.enabled) {
                         globalFavoritesGrid.tryActivate(0, 0);
                     } else {
                         systemFavoritesGrid.tryActivate(0, 0);
@@ -836,7 +824,7 @@ Kicker.DashboardWindow {
                                 id: actionMenu
 
                                 onActionClicked: (actionId, actionArgument) => {
-                                    actionTriggered(actionId, actionArgument);
+                                    item.actionTriggered(actionId, actionArgument);
                                 }
                             }
 

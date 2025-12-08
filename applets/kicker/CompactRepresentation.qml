@@ -17,13 +17,14 @@ import org.kde.plasma.private.kicker as Kicker
 Item {
     id: root
 
+    readonly property bool isDash: Plasmoid.pluginName === "org.kde.plasma.kickerdash"
     readonly property bool vertical: (Plasmoid.formFactor === PlasmaCore.Types.Vertical)
     readonly property bool useCustomButtonImage: (Plasmoid.configuration.useCustomButtonImage
         && Plasmoid.configuration.customButtonImage.length !== 0)
 
-    readonly property Component dashWindowComponent: kicker.isDash ? Qt.createComponent(Qt.resolvedUrl("./DashboardRepresentation.qml"), root) : null
+    readonly property Component dashWindowComponent: isDash ? Qt.createComponent(Qt.resolvedUrl("./DashboardRepresentation.qml"), root) : null
     readonly property Kicker.DashboardWindow dashWindow: dashWindowComponent && dashWindowComponent.status === Component.Ready
-        ? dashWindowComponent.createObject(root, { visualParent: root }) : null
+        ? dashWindowComponent.createObject(root, { visualParent: root }) as Kicker.DashboardWindow : null
 
     onWidthChanged: updateSizeHints()
     onHeightChanged: updateSizeHints()
@@ -31,13 +32,13 @@ Item {
     function updateSizeHints(): void {
         if (useCustomButtonImage) {
             if (vertical) {
-                const scaledHeight = Math.floor(parent.width * (buttonIcon.implicitHeight / buttonIcon.implicitWidth));
+                const scaledHeight = Math.floor(parent?.width * (buttonIcon.implicitHeight / buttonIcon.implicitWidth));
                 root.Layout.minimumWidth = -1;
                 root.Layout.minimumHeight = scaledHeight;
                 root.Layout.maximumWidth = Kirigami.Units.iconSizes.huge;
                 root.Layout.maximumHeight = scaledHeight;
             } else {
-                const scaledWidth = Math.floor(parent.height * (buttonIcon.implicitWidth / buttonIcon.implicitHeight));
+                const scaledWidth = Math.floor(parent?.height * (buttonIcon.implicitWidth / buttonIcon.implicitHeight));
                 root.Layout.minimumWidth = scaledWidth;
                 root.Layout.minimumHeight = -1;
                 root.Layout.maximumWidth = scaledWidth;
@@ -86,17 +87,17 @@ Item {
         Keys.onSelectPressed: Plasmoid.activated()
 
         Accessible.name: Plasmoid.title
-        Accessible.description: toolTipSubText
+        Accessible.description: kicker.toolTipSubText
         Accessible.role: Accessible.Button
 
         onPressed: mouse => {
-            if (!kicker.isDash) {
+            if (!root.isDash) {
                 wasExpanded = kicker.expanded
             }
         }
 
         onClicked: mouse => {
-            if (kicker.isDash) {
+            if (root.isDash) {
                 root.dashWindow.toggle();
             } else {
                 kicker.expanded = !wasExpanded;
@@ -106,7 +107,7 @@ Item {
 
     Connections {
         target: Plasmoid
-        enabled: kicker.isDash && root.dashWindow !== null
+        enabled: root.isDash && root.dashWindow !== null
 
         function onActivated(): void {
             root.dashWindow.toggle();

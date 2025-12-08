@@ -1,4 +1,4 @@
-    /*
+/*
     SPDX-FileCopyrightText: 2014-2015 Eike Hein <hein@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
@@ -22,7 +22,7 @@ PlasmoidItem {
     signal reset
     signal modelRefreshed
 
-    property bool isDash: Plasmoid.pluginName === "org.kde.plasma.kickerdash"
+    readonly property bool isDash: Plasmoid.pluginName === "org.kde.plasma.kickerdash"
 
     switchWidth: isDash || !fullRepresentationItem ? 0 : fullRepresentationItem.Layout.minimumWidth
     switchHeight: isDash || !fullRepresentationItem ? 0 : fullRepresentationItem.Layout.minimumHeight
@@ -39,8 +39,8 @@ PlasmoidItem {
 
     property Item dragSource: null
 
-    property QtObject globalFavorites: rootModel.favoritesModel
-    property QtObject systemFavorites: rootModel.systemFavoritesModel
+    property Kicker.KAStatsFavoritesModel globalFavorites: rootModel.favoritesModel as Kicker.KAStatsFavoritesModel
+    property Kicker.SimpleFavoritesModel systemFavorites: rootModel.systemFavoritesModel as Kicker.SimpleFavoritesModel
 
     Plasmoid.icon: Plasmoid.configuration.useCustomButtonImage ? Plasmoid.configuration.customButtonImage : Plasmoid.configuration.icon
 
@@ -96,11 +96,11 @@ PlasmoidItem {
         }
 
         Component.onCompleted: {
-            favoritesModel.initForClient("org.kde.plasma.kicker.favorites.instance-" + Plasmoid.id)
+            (favoritesModel as Kicker.KAStatsFavoritesModel).initForClient("org.kde.plasma.kicker.favorites.instance-" + Plasmoid.id)
 
             if (!Plasmoid.configuration.favoritesPortedToKAstats) {
                 if (favoritesModel.count < 1) {
-                    favoritesModel.portOldFavorites(Plasmoid.configuration.favoriteApps);
+                    (favoritesModel as Kicker.KAStatsFavoritesModel).portOldFavorites(Plasmoid.configuration.favoriteApps);
                 }
                 Plasmoid.configuration.favoritesPortedToKAstats = true;
             }
@@ -108,18 +108,18 @@ PlasmoidItem {
     }
 
     Connections {
-        target: globalFavorites
+        target: kicker.globalFavorites
 
         function onFavoritesChanged() {
-            Plasmoid.configuration.favoriteApps = target.favorites;
+            Plasmoid.configuration.favoriteApps = kicker.globalFavorites.favorites;
         }
     }
 
     Connections {
-        target: systemFavorites
+        target: kicker.systemFavorites
 
         function onFavoritesChanged() {
-            Plasmoid.configuration.favoriteSystemActions = target.favorites;
+            Plasmoid.configuration.favoriteSystemActions = kicker.systemFavorites.favorites;
         }
     }
 
@@ -127,11 +127,11 @@ PlasmoidItem {
         target: Plasmoid.configuration
 
         function onFavoriteAppsChanged() {
-            globalFavorites.favorites = Plasmoid.configuration.favoriteApps;
+            kicker.globalFavorites.favorites = Plasmoid.configuration.favoriteApps;
         }
 
         function onFavoriteSystemActionsChanged() {
-            systemFavorites.favorites = Plasmoid.configuration.favoriteSystemActions;
+            kicker.systemFavorites.favorites = Plasmoid.configuration.favoriteSystemActions;
         }
     }
 
@@ -140,7 +140,7 @@ PlasmoidItem {
 
         appletInterface: kicker
 
-        favoritesModel: globalFavorites
+        favoritesModel: kicker.globalFavorites as Kicker.KAStatsFavoritesModel
 
         runners: {
             const results = ["krunner_services",

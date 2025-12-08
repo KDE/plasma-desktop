@@ -224,8 +224,8 @@ PlasmaComponents.ScrollView {
                         onKeyNavUp: {
                             if (index > 0) {
                                 for (var i = index - 1; i >= 0; i--) {
-                                    if (subGridAt(i).count > 0) {
-                                        subGridAt(i).tryActivate(subGridAt(i).lastRow(), currentCol());
+                                    if (itemMultiGrid.subGridAt(i).count > 0) {
+                                        itemMultiGrid.subGridAt(i).tryActivate(itemMultiGrid.subGridAt(i).lastRow(), currentCol());
                                         break;
                                     }
                                 }

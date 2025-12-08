@@ -19,7 +19,7 @@ import org.kde.plasma.plasmoid
 KCMUtils.SimpleKCM {
     id: configGeneral
 
-    property bool isDash: (Plasmoid.pluginName === "org.kde.plasma.kickerdash")
+    readonly property bool isDash: (Plasmoid.pluginName === "org.kde.plasma.kickerdash")
 
     property string cfg_icon: Plasmoid.configuration.icon
     property bool cfg_useCustomButtonImage: Plasmoid.configuration.useCustomButtonImage
@@ -154,7 +154,7 @@ KCMUtils.SimpleKCM {
         QQC2.ComboBox {
             id: appNameFormat
 
-            visible: !isDash
+            visible: !configGeneral.isDash
 
             Kirigami.FormData.label: i18n("Show applications as:")
 
@@ -176,7 +176,7 @@ KCMUtils.SimpleKCM {
         QQC2.CheckBox {
             id: limitDepth
 
-            visible: !isDash
+            visible: !configGeneral.isDash
 
             text: i18n("Flatten sub-menus to a single level")
         }
