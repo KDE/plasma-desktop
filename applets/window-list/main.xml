@@ -6,6 +6,22 @@
   <kcfgfile name=""/>
 
   <group name="General">
+    <entry name="showOnlyCurrentScreen" type="Bool">
+      <label>Whether to show only window tasks that are on the same screen as the widget.</label>
+      <default>false</default>
+    </entry>
+    <entry name="showOnlyCurrentDesktop" type="Bool">
+      <label>Whether to only show tasks that are on the current virtual desktop.</label>
+      <default>true</default>
+    </entry>
+    <entry name="showOnlyCurrentActivity" type="Bool">
+      <label>Whether to show only tasks that are on the current activity.</label>
+      <default>true</default>
+    </entry>
+    <entry name="showOnlyMinimized" type="Bool">
+      <label>Whether to show only window tasks that are minmized.</label>
+      <default>false</default>
+    </entry>
     <entry name="showText" type="Bool">
         <label>Whether to show the window title when the applet is used on a horizontal panel</label>
         <default>true</default>

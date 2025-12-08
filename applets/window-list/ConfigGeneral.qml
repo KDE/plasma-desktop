@@ -20,6 +20,10 @@ KCM.SimpleKCM {
     property bool cfg_showIcon: Plasmoid.configuration.showIcon
     property alias cfg_openOnHover: openOnHoverCheckbox.checked
     property alias cfg_hoverOpenDelay: hoverDelaySpinBox.value
+    property alias cfg_showOnlyCurrentScreen: showOnlyCurrentScreen.checked
+    property alias cfg_showOnlyCurrentDesktop: showOnlyCurrentDesktop.checked
+    property alias cfg_showOnlyCurrentActivity: showOnlyCurrentActivity.checked
+    property alias cfg_showOnlyMinimized: showOnlyMinimized.checked
 
     Kirigami.FormLayout {
         anchors.right: parent.right
@@ -129,6 +133,31 @@ KCM.SimpleKCM {
 
                 Accessible.name: i18nc("@label:spinbox accessible %1 is milliseconds", "Hover open delay %1 ms", value)
             }
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
+        QQC2.CheckBox {
+            id: showOnlyCurrentDesktop
+            Kirigami.FormData.label: i18nc("@label for checkbox group, completes sentence like: … from current screen", "Show only windows:")
+            text: i18nc("@option:check completes sentence: show only windows", "From the current desktop")
+        }
+
+        QQC2.CheckBox {
+            id: showOnlyCurrentActivity
+            text: i18nc("@option:check completes sentence: show only windows", "From the current activity")
+        }
+
+        QQC2.CheckBox {
+            id: showOnlyCurrentScreen
+            text: i18nc("@option:check completes sentence: show only windows", "From the current screen")
+        }
+
+        QQC2.CheckBox {
+            id: showOnlyMinimized
+            text: i18nc("@option:check completes sentence: show only windows", "That are minimized")
         }
     }
 }
