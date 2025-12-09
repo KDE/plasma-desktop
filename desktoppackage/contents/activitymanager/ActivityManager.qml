@@ -17,10 +17,6 @@ FocusScope {
     id: root
     signal closed()
 
-    function parentClosed() {
-        activityBrowser.parentClosed();
-    }
-
     //this is used to perfectly align the filter field and delegates
     property int cellWidth: Kirigami.Units.iconSizes.sizeForLabels * 30
     property int spacing: 2 * Kirigami.Units.smallSpacing
@@ -127,19 +123,6 @@ FocusScope {
                 onClicked: KCMLauncher.openSystemSettings("kcm_activities", "newActivity")
 
                 visible: KConfig.KAuthorized.authorize("plasma-desktop/add_activities")
-                opacity: newActivityDialog.status == Loader.Ready ?
-                              1 - newActivityDialog.item.opacity : 1
-            }
-
-            Loader {
-                id: newActivityDialog
-
-                z: 100
-
-                anchors.bottom: newActivityButton.bottom
-                anchors.left:   newActivityButton.left
-                anchors.right:  newActivityButton.right
-
             }
         }
 
