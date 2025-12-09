@@ -172,24 +172,6 @@ PlasmoidItem {
         id: windowSystem
     }
 
-    KSvg.FrameSvgItem {
-        id: highlightItemSvg
-
-        visible: false
-
-        imagePath: "widgets/viewitem"
-        prefix: "hover"
-    }
-
-    KSvg.FrameSvgItem {
-        id: listItemSvg
-
-        visible: false
-
-        imagePath: "widgets/listitem"
-        prefix: "normal"
-    }
-
     PlasmaComponents3.Label {
         id: toolTipDelegate
 

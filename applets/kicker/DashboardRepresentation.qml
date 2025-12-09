@@ -158,6 +158,24 @@ Kicker.DashboardWindow {
             font: dummyHeading.font
         }
 
+        KSvg.FrameSvgItem {
+            id: highlightItemSvg
+
+            visible: false
+
+            imagePath: "widgets/viewitem"
+            prefix: "hover"
+        }
+
+        KSvg.FrameSvgItem {
+            id: listItemSvg
+
+            visible: false
+
+            imagePath: "widgets/listitem"
+            prefix: "normal"
+        }
+
         Kicker.FunnelModel {
             id: funnelModel
 
