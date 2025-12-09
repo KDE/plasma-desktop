@@ -10,7 +10,6 @@ import QtQuick.Layouts
 import QtQuick.Controls as QQC2
 import QtQuick.Window
 
-import org.kde.kquickcontrolsaddons
 import org.kde.kirigami as Kirigami
 
 QQC2.ItemDelegate {

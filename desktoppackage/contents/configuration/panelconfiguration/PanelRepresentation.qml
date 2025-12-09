@@ -1,11 +1,10 @@
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Layouts
 
 import org.kde.plasma.components as PC3
-import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.extras as PlasmaExtras
-import org.kde.ksvg as KSvg
-import org.kde.plasma.shell.panel as Panel
 import org.kde.kirigami as Kirigami
 
 Item {

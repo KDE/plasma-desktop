@@ -5,8 +5,6 @@
 */
 
 import QtQuick
-import QtQuick.Controls as QQC2
-import QtQuick.Layouts
 import org.kde.kquickcontrols
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.plasmoid

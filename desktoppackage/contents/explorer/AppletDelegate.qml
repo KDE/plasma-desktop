@@ -302,7 +302,6 @@ Item {
         PlasmaComponents.Label {
             Layout.fillWidth: true
             // otherwise causes binding loop due to the way the Plasma sets the height
-            height: implicitHeight
             text: model.description
             textFormat: Text.PlainText
             font: Kirigami.Theme.smallFont

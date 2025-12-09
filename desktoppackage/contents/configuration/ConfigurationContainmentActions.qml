@@ -5,10 +5,9 @@
 */
 
 import QtQuick
-import QtQuick.Controls 2.3 as QQC2
-import QtQuick.Layouts 1.0
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
 
-import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kcmutils as KCM
 
 KCM.SimpleKCM {
@@ -69,7 +68,7 @@ KCM.SimpleKCM {
                     modifiers.push(button);
 
                     return parts.map(function (item) {
-                        return prettyStrings[item] || item;
+                        return root.prettyStrings[item] || item;
                     }).join(i18ndc("plasma_shell_org.kde.plasma.desktop", "Concatenation sign for shortcuts, e.g. Ctrl+Shift", "+"));
                 }
                 eventString: model.action
@@ -122,7 +121,6 @@ KCM.SimpleKCM {
 
                 QQC2.Button {
                     icon.name: "configure"
-                    width: height
                     enabled: model.hasConfigurationInterface
                     onClicked: {
                         configDialog.currentContainmentActionsModel.showConfiguration(index, this);
@@ -130,7 +128,6 @@ KCM.SimpleKCM {
                 }
                 QQC2.Button {
                     icon.name: "list-remove"
-                    width: height
                     onClicked: {
                         configDialog.currentContainmentActionsModel.remove(index);
                     }

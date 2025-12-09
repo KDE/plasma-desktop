@@ -30,8 +30,8 @@ KCM.SimpleKCM {
 
             spacing: Kirigami.Units.smallSpacing * 2
             Kirigami.Icon {
-                width: Kirigami.Units.iconSizes.smallMedium
-                height: width
+                implicitWidth: Kirigami.Units.iconSizes.smallMedium
+                implicitHeight: implicitWidth
                 source: "user"
             }
             QQC2.Label {
@@ -219,7 +219,6 @@ KCM.SimpleKCM {
             }
 
             Kirigami.Heading {
-                height: visible ? implicitHeight : 0
                 Layout.topMargin: column.headingTopSpacing
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Credits")
                 textFormat: Text.PlainText
@@ -233,7 +232,6 @@ KCM.SimpleKCM {
             }
 
             Kirigami.Heading {
-                height: visible ? implicitHeight : 0
                 Layout.topMargin: column.headingTopSpacing
                 text: i18nd("plasma_shell_org.kde.plasma.desktop", "Translators")
                 textFormat: Text.PlainText

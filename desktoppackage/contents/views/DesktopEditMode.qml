@@ -16,6 +16,7 @@ import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 
 Item {
+    id: editModeItem
     property real centerX: Math.round(editModeUi.x + editModeUi.width/2)
     property real centerY: Math.round(editModeUi.y + editModeUi.height/2)
     property real roundedRootWidth: Math.round(root.width)
@@ -42,11 +43,11 @@ Item {
 
     Item {
         id: editModeUi
-        visible: open || xAnim.running
-        x: Math.round(open ? editModeRect.x + editModeRect.width/2 - zoomedWidth/2 : 0)
-        y: Math.round(open ? editModeRect.y + editModeRect.height/2 - zoomedHeight/2 + toolBar.height/2 : 0)
-        width: open ? zoomedWidth : roundedRootWidth
-        height: open ? zoomedHeight : roundedRootHeight
+        visible: editModeItem.open || xAnim.running
+        x: Math.round(editModeItem.open ? editModeRect.x + editModeRect.width/2 - zoomedWidth/2 : 0)
+        y: Math.round(editModeItem.open ? editModeRect.y + editModeRect.height/2 - zoomedHeight/2 + toolBar.height/2 : 0)
+        width: editModeItem.open ? zoomedWidth : editModeItem.roundedRootWidth
+        height: editModeItem.open ? zoomedHeight : editModeItem.roundedRootHeight
         property real zoomedWidth: Math.round(root.width * containmentParent.scaleFactor)
         property real zoomedHeight: Math.round(root.height * containmentParent.scaleFactor)
 
@@ -56,7 +57,7 @@ Item {
             height: Math.round(parent.height + toolBar.height + Kirigami.Units.largeSpacing)
             y: - toolBar.height - Kirigami.Units.largeSpacing
 
-            radius: open ? Kirigami.Units.cornerRadius : 0
+            radius: editModeItem.open ? Kirigami.Units.cornerRadius : 0
             Behavior on radius {
                 NumberAnimation {
                     duration: Kirigami.Units.longDuration
@@ -165,11 +166,11 @@ Item {
             layer.enabled: true
             layer.smooth: true
             layer.effect: Kirigami.ShadowedTexture {
-                width: roundedRootWidth
-                height: roundedRootHeight
+                width: editModeItem.roundedRootWidth
+                height: editModeItem.roundedRootHeight
                 color: "transparent"
 
-                radius: open ? Kirigami.Units.cornerRadius : 0
+                radius: editModeItem.open ? Kirigami.Units.cornerRadius : 0
                 Behavior on radius {
                     NumberAnimation {
                         duration: Kirigami.Units.longDuration

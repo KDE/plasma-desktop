@@ -5,16 +5,11 @@
 */
 
 import QtQuick
-import QtQuick.Layouts
-import QtQuick.Controls as QQC2
-import org.kde.plasma.plasmoid
-import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami as Kirigami
 import org.kde.ksvg as KSvg
 import org.kde.plasma.components as PC3
 import org.kde.plasma.shell.panel as Panel
-import org.kde.kquickcontrols
 
 KSvg.SvgItem {
     id: root
@@ -189,17 +184,17 @@ KSvg.SvgItem {
             root.hasEverBeenMoved = true
             if (dialogRoot.vertical) {
                 if (root.alignment === Qt.AlignRight) {
-                    root.value = root.parent.height - (root.y + offset + root.height/2)
-                } else if (alignment === Qt.AlignLeft) {
-                    root.value = root.y - offset + root.height/2
+                    root.value = root.parent.height - (root.y + root.offset + root.height/2)
+                } else if (root.alignment === Qt.AlignLeft) {
+                    root.value = root.y - root.offset + root.height/2
                 //Center
                 } else {
                     if (root.alignment & Qt.AlignRight) {
-                        root.value = (root.parent.height/2 - root.y + offset)*2  - root.height
+                        root.value = (root.parent.height/2 - root.y + root.offset)*2  - root.height
                     } else if (root.alignment & Qt.AlignLeft) {
-                        root.value = (root.y - offset - root.parent.height/2)*2  + root.height
+                        root.value = (root.y - root.offset - root.parent.height/2)*2  + root.height
                     } else {
-                        var value = root.y - root.parent.height/2 - offset + root.height/2
+                        var value = root.y - root.parent.height/2 - root.offset + root.height/2
                         //Snap
                         if (Math.abs(value) < 5) {
                             root.value = 0
@@ -210,17 +205,17 @@ KSvg.SvgItem {
                 }
             } else {
                 if (root.alignment === Qt.AlignRight) {
-                    root.value = root.parent.width - (root.x + offset + root.width/2)
-                } else if (alignment === Qt.AlignLeft) {
-                    root.value = root.x - offset + root.width/2
+                    root.value = root.parent.width - (root.x + root.offset + root.width/2)
+                } else if (root.alignment === Qt.AlignLeft) {
+                    root.value = root.x - root.offset + root.width/2
                 //Center
                 } else {
                     if (root.alignment & Qt.AlignRight) {
-                        root.value = (root.parent.width/2 - root.x + offset)*2 - root.width
+                        root.value = (root.parent.width/2 - root.x + root.offset)*2 - root.width
                     } else if (root.alignment & Qt.AlignLeft) {
-                        root.value = (root.x - offset - root.parent.width/2)*2  + root.width
+                        root.value = (root.x - root.offset - root.parent.width/2)*2  + root.width
                     } else {
-                        var value = root.x - root.parent.width/2 - offset + root.width/2
+                        var value = root.x - root.parent.width/2 - root.offset + root.width/2
                         //Snap
                         if (Math.abs(value) < 5) {
                             root.value = 0

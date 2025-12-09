@@ -206,7 +206,7 @@ Item {
             id: clockShadow
             anchors.fill: clock
             source: clock
-            visible: !softwareRendering && config.alwaysShowClock
+            visible: !lockScreenUi.softwareRendering && config.alwaysShowClock
             radius: 7
             verticalOffset: 0.8
             samples: 15

@@ -6,11 +6,8 @@
 */
 
 import QtQuick
-import QtQuick.Effects
-import QtQuick.Layouts
 
 import org.kde.plasma.core as PlasmaCore
-import org.kde.plasma.components as PC
 import org.kde.kwindowsystem
 import org.kde.plasma.activityswitcher as ActivitySwitcher
 import "../activitymanager"

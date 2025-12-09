@@ -151,7 +151,7 @@ PlasmaCore.ToolTipArea {
             }
             return prefix;
         }
-        opacity: plasmoidItem.expanded ? 1 : 0
+        opacity: root.plasmoidItem.expanded ? 1 : 0
         Behavior on opacity {
             NumberAnimation {
                 duration: Kirigami.Units.shortDuration
@@ -163,14 +163,14 @@ PlasmaCore.ToolTipArea {
     Timer {
         id: expandedSync
         interval: 100
-        onTriggered: plasmoidItem.expanded = dialog.visible;
+        onTriggered: root.plasmoidItem.expanded = dialog.visible;
     }
 
     Connections {
         target: Plasmoid.internalAction("configure")
         function onTriggered() {
             if (root.plasmoidItem.hideOnWindowDeactivate) {
-                plasmoidItem.expanded = false
+                root.plasmoidItem.expanded = false
             }
         }
     }
@@ -214,7 +214,7 @@ PlasmaCore.ToolTipArea {
             : PlasmaCore.AppletPopup.AtScreenEdges | PlasmaCore.AppletPopup.AtPanelEdges
 
         hideOnWindowDeactivate: root.plasmoidItem.hideOnWindowDeactivate
-        visible: root.plasmoidItem.expanded && fullRepresentation
+        visible: root.plasmoidItem.expanded && root.fullRepresentation
         visualParent: root.compactRepresentation
         backgroundHints: (Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentPrefersOpaqueBackground) ? PlasmaCore.AppletPopup.SolidBackground : PlasmaCore.AppletPopup.StandardBackground
         appletInterface: root.plasmoidItem
@@ -246,11 +246,11 @@ PlasmaCore.ToolTipArea {
             property real extraWidth: root.vertical ? separator.width : 0
             property real extraHeight: root.vertical ? 0 : separator.height
 
-            Layout.minimumWidth: fullRepresentation ? fullRepresentation.Layout.minimumWidth + extraWidth : 0
-            Layout.minimumHeight: fullRepresentation ? fullRepresentation.Layout.minimumHeight + extraHeight : 0
+            Layout.minimumWidth: root.fullRepresentation ? root.fullRepresentation.Layout.minimumWidth + extraWidth : 0
+            Layout.minimumHeight: root.fullRepresentation ? root.fullRepresentation.Layout.minimumHeight + extraHeight : 0
 
-            Layout.maximumWidth: fullRepresentation ? fullRepresentation.Layout.maximumWidth + extraWidth : Infinity
-            Layout.maximumHeight: fullRepresentation ? fullRepresentation.Layout.maximumHeight + extraHeight : Infinity
+            Layout.maximumWidth: root.fullRepresentation ? root.fullRepresentation.Layout.maximumWidth + extraWidth : Infinity
+            Layout.maximumHeight: root.fullRepresentation ? root.fullRepresentation.Layout.maximumHeight + extraHeight : Infinity
 
             implicitWidth: {
                 if (root.fullRepresentation !== null) {
@@ -264,18 +264,18 @@ PlasmaCore.ToolTipArea {
             }
             implicitHeight: {
                 if (root.fullRepresentation !== null) {
-                    /****/ if (fullRepresentation.Layout.preferredHeight > 0) {
-                        return fullRepresentation.Layout.preferredHeight + extraHeight;
-                    } else if (fullRepresentation.implicitHeight > 0) {
-                        return fullRepresentation.implicitHeight + extraHeight;
+                    /****/ if (root.fullRepresentation.Layout.preferredHeight > 0) {
+                        return root.fullRepresentation.Layout.preferredHeight + extraHeight;
+                    } else if (root.fullRepresentation.implicitHeight > 0) {
+                        return root.fullRepresentation.implicitHeight + extraHeight;
                     }
                 }
                 return Kirigami.Units.iconSizes.sizeForLabels * 25;
             }
 
             onActiveFocusChanged: {
-                if (activeFocus && fullRepresentation) {
-                    fullRepresentation.forceActiveFocus()
+                if (activeFocus && root.fullRepresentation) {
+                    root.fullRepresentation.forceActiveFocus()
                 }
             }
 
@@ -306,8 +306,7 @@ PlasmaCore.ToolTipArea {
                             }
                         }
                         PropertyChanges {
-                            target: separator
-                            height: 1
+                            separator.height: 1
                         }
                     },
                     State {
@@ -321,8 +320,7 @@ PlasmaCore.ToolTipArea {
                             }
                         }
                         PropertyChanges {
-                            target: separator
-                            width: 1
+                            separator.width: 1
                         }
                     },
                     State {
@@ -336,8 +334,7 @@ PlasmaCore.ToolTipArea {
                             }
                         }
                         PropertyChanges {
-                            target: separator
-                            width: 1
+                            separator.width: 1
                         }
                     },
                     State {
@@ -351,8 +348,7 @@ PlasmaCore.ToolTipArea {
                             }
                         }
                         PropertyChanges {
-                            target: separator
-                            height: 1
+                            separator.height: 1
                         }
                     }
                 ]

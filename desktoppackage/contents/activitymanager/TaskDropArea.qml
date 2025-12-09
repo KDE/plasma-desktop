@@ -62,7 +62,7 @@ DND.DropArea {
     preventStealing: true
     enabled: true
 
-    onDrop: {
+    onDrop: event => {
         root.taskDropped(event.mimeData, event.modifiers);
     }
 

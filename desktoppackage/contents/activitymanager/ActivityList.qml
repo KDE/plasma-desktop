@@ -7,7 +7,6 @@
 
 import QtQuick
 import org.kde.kirigami as Kirigami
-import org.kde.activities as Activities
 
 import org.kde.plasma.activityswitcher as ActivitySwitcher
 
@@ -77,14 +76,14 @@ Flickable {
         var selectedItem = null;
 
         if (selectedIndex >= 0 && selectedIndex < activitiesList.count) {
-            selectedItem = activitiesList.itemAt(selectedIndex);
+            selectedItem = activitiesList.itemAt(selectedIndex) as ActivityItem;
 
         } else if (root.filterString != "") {
             // If we have only one item shown, activate it. It doesn't matter
             // that it is not really selected
 
             for (var i = 0; i < activitiesList.count; i++) {
-                var item = activitiesList.itemAt(i);
+                var item = activitiesList.itemAt(i) as ActivityItem;
 
                 if (item.visible) {
                     selectedItem = item;

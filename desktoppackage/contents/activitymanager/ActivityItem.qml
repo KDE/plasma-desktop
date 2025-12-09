@@ -72,7 +72,7 @@ Item {
             anchors.fill: parent
 
             visible: !backgroundColor.visible
-            source: "image://wallpaperthumbnail/" + background
+            source: "image://wallpaperthumbnail/" + root.background
             sourceSize: Qt.size(width, height)
         }
 
@@ -242,7 +242,7 @@ Item {
 
             actionTitle: i18nd("plasma_shell_org.kde.plasma.desktop", "Move to\nthis activity")
 
-            onTaskDropped: {
+            onTaskDropped: mimeData => {
                 ActivitySwitcher.Backend.dropMove(mimeData, root.activityId);
             }
 
@@ -272,7 +272,7 @@ Item {
 
             actionTitle: i18nd("plasma_shell_org.kde.plasma.desktop", "Show also\nin this activity")
 
-            onTaskDropped: {
+            onTaskDropped: mimeData => {
                 ActivitySwitcher.Backend.dropCopy(mimeData, root.activityId);
             }
 
@@ -349,19 +349,19 @@ Item {
     states: [
         State {
             name: "plain"
-            PropertyChanges { target: shade; visible: true }
-            PropertyChanges { target: controlBar; opacity: 0 }
+            PropertyChanges { shade.visible: true }
+            PropertyChanges { controlBar.opacity: 0 }
         },
         State {
             name: "showingControls"
-            PropertyChanges { target: shade; visible: true }
-            PropertyChanges { target: controlBar; opacity: 1 }
+            PropertyChanges { shade.visible: true }
+            PropertyChanges { controlBar.opacity: 1 }
         },
         State {
             name: "dropAreasShown"
-            // PropertyChanges { target: shade; visible: false }
-            PropertyChanges { target: statsBar; visible: false }
-            PropertyChanges { target: controlBar; opacity: 0 }
+            // PropertyChanges { shade.visible: false }
+            PropertyChanges { statsBar.visible: false }
+            PropertyChanges { controlBar.opacity: 0 }
         }
     ]
 

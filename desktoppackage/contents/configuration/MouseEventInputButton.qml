@@ -30,9 +30,9 @@ QQC2.Button {
         onClicked: {
             var newEventString = configDialog.currentContainmentActionsModel.mouseEventString(mouse.button, mouse.modifiers);
 
-            if (eventString === newEventString || !configDialog.currentContainmentActionsModel.isTriggerUsed(newEventString)) {
-                eventString = newEventString;
-                mouseInputButton.text = defaultText;
+            if (mouseInputButton.eventString === newEventString || !configDialog.currentContainmentActionsModel.isTriggerUsed(newEventString)) {
+                mouseInputButton.eventString = newEventString;
+                mouseInputButton.text = mouseInputButton.defaultText;
                 mouseInputButton.checked = false;
                 enabled = false;
             }
@@ -41,9 +41,9 @@ QQC2.Button {
         onWheel: {
             var newEventString = configDialog.currentContainmentActionsModel.wheelEventString(wheel);
 
-            if (eventString === newEventString || !configDialog.currentContainmentActionsModel.isTriggerUsed(newEventString)) {
-                eventString = newEventString;
-                mouseInputButton.text = defaultText;
+            if (mouseInputButton.eventString === newEventString || !configDialog.currentContainmentActionsModel.isTriggerUsed(newEventString)) {
+                mouseInputButton.eventString = newEventString;
+                mouseInputButton.text = mouseInputButton.defaultText;
                 mouseInputButton.checked = false;
                 enabled = false;
             }

@@ -269,6 +269,7 @@ PC3.Page {
     }
 
     PC3.ScrollView {
+        id: scrollView
         anchors {
             fill: parent
             // Subtract page's own margins since we touch the left, right, and sometimes bottom
@@ -280,9 +281,9 @@ PC3.Page {
 
         // The scrollbar changing visibility can lead to the content size changing due to word wrap
         // A delayed binding gives some extra time, it'll come to a stop as there's only one scroll bar
-        property bool scrollBarVisible: false
+        property bool scrollBarVisible
         Binding on scrollBarVisible {
-            value: list.contentHeight > height
+            value: list.contentHeight > scrollView.height
             delayed: true
         }
 

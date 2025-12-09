@@ -3,6 +3,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Layouts
@@ -68,7 +69,7 @@ Kirigami.Icon {
 
         anchors.fill: parent
         hoverEnabled: true
-        onPressed: wasExpanded = plasmoidItem.expanded
+        onPressed: wasExpanded = defaultCompactRepresentation.plasmoidItem.expanded
         onClicked: mouse => {
             if (mouse.button === Qt.MiddleButton) {
                 Plasmoid.secondaryActivated();

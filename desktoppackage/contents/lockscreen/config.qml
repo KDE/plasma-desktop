@@ -1,6 +1,5 @@
 import QtQuick
 import QtQuick.Controls as QQC2
-import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 
@@ -74,7 +73,7 @@ Kirigami.FormLayout {
                      "Show under unlocking prompt")
 
         KCM.SettingHighlighter {
-            highlight: cfg_showMediaControlsDefault != cfg_showMediaControls
+            highlight: configForm.cfg_showMediaControlsDefault != configForm.cfg_showMediaControls
         }
     }
 }

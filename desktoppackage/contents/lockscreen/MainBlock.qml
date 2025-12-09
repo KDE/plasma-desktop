@@ -73,8 +73,8 @@ SessionManagementScreen {
             cursorVisible: visible
 
             onAccepted: {
-                if (lockScreenUiVisible) {
-                    startLogin();
+                if (sessionManager.lockScreenUiVisible) {
+                    sessionManager.startLogin();
                 }
             }
 
@@ -82,11 +82,11 @@ SessionManagementScreen {
             //this cannot be in keys.onLeftPressed as then it doesn't reach the password box
             Keys.onPressed: event => {
                 if (event.key === Qt.Key_Left && !text) {
-                    userList.decrementCurrentIndex();
+                    sessionManager.userList.decrementCurrentIndex();
                     event.accepted = true
                 }
                 if (event.key === Qt.Key_Right && !text) {
-                    userList.incrementCurrentIndex();
+                    sessionManager.userList.incrementCurrentIndex();
                     event.accepted = true
                 }
             }
@@ -117,7 +117,7 @@ SessionManagementScreen {
 
             icon.name: LayoutMirroring.enabled ? "go-previous" : "go-next"
 
-            onClicked: startLogin()
+            onClicked: sessionManager.startLogin()
             Keys.onEnterPressed: clicked()
             Keys.onReturnPressed: clicked()
         }

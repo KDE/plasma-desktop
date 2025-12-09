@@ -5,7 +5,6 @@
 */
 
 import QtQuick
-import org.kde.plasma.configuration
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 import QtQml

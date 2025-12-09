@@ -5,8 +5,6 @@
 */
 
 import QtQuick
-import org.kde.plasma.private.sessions
-import org.kde.breeze.components
 
 Item {
     id: root

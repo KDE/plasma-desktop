@@ -40,8 +40,8 @@ Item {
             }
 
             Item { // spacer
-                width: Kirigami.Units.smallSpacing
-                height: 1
+                implicitWidth: Kirigami.Units.smallSpacing
+                implicitHeight: 1
             }
 
             ColumnLayout {

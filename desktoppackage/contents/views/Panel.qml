@@ -148,32 +148,32 @@ Item {
 
     KSvg.FrameSvgItem {
         id: translucentItem
-        visible: floatingness === 0 && panelOpacity !== 1
+        visible: root.floatingness === 0 && root.panelOpacity !== 1
         enabledBorders: panel.enabledBorders
         anchors.fill: floatingTranslucentItem
         imagePath: containment?.plasmoid?.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "widgets/panel-background"
     }
     KSvg.FrameSvgItem {
         id: floatingTranslucentItem
-        visible: floatingness !== 0 && panelOpacity !== 1
-        x: root.rightEdge ? fixedLeftFloatingPadding + fixedRightFloatingPadding * (1 - floatingness) : leftFloatingPadding
-        y: root.bottomEdge ? fixedTopFloatingPadding + fixedBottomFloatingPadding * (1 - floatingness) : topFloatingPadding
-        width: verticalPanel ? panel.thickness : parent.width - leftFloatingPadding - rightFloatingPadding
-        height: verticalPanel ? parent.height - topFloatingPadding - bottomFloatingPadding : panel.thickness
+        visible: root.floatingness !== 0 && root.panelOpacity !== 1
+        x: root.rightEdge ? root.fixedLeftFloatingPadding + root.fixedRightFloatingPadding * (1 - root.floatingness) : root.leftFloatingPadding
+        y: root.bottomEdge ? root.fixedTopFloatingPadding + root.fixedBottomFloatingPadding * (1 - root.floatingness) : root.topFloatingPadding
+        width: root.verticalPanel ? panel.thickness : parent.width - root.leftFloatingPadding - root.rightFloatingPadding
+        height: root.verticalPanel ? parent.height - root.topFloatingPadding - root.bottomFloatingPadding : panel.thickness
 
         imagePath: containment?.plasmoid?.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "widgets/panel-background"
     }
     KSvg.FrameSvgItem {
         id: floatingOpaqueItem
-        visible: floatingness !== 0 && panelOpacity !== 0
-        opacity: panelOpacity
+        visible: root.floatingness !== 0 && root.panelOpacity !== 0
+        opacity: root.panelOpacity
         anchors.fill: floatingTranslucentItem
         imagePath: containment?.plasmoid?.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "solid/widgets/panel-background"
     }
     KSvg.FrameSvgItem {
         id: opaqueItem
-        visible: panelOpacity !== 0 && floatingness === 0
-        opacity: panelOpacity
+        visible: root.panelOpacity !== 0 && root.floatingness === 0
+        opacity: root.panelOpacity
         enabledBorders: panel.enabledBorders
         anchors.fill: floatingTranslucentItem
         imagePath: containment?.plasmoid?.backgroundHints === PlasmaCore.Types.NoBackground ? "" : "solid/widgets/panel-background"
@@ -284,7 +284,7 @@ Item {
             if (!containment) {
                 return;
             }
-            if (verticalPanel) {
+            if (root.verticalPanel) {
                 if (containment.Layout.fillHeight) {
                     if (panel.lengthMode == Panel.Global.Custom) {
                         return panel.maximumHeight
@@ -368,8 +368,8 @@ Item {
     }
     Item {
         id: containmentParent
-        anchors.centerIn: isOpaque ? floatingOpaqueItem : floatingTranslucentItem
-        width: root.verticalPanel ? panel.thickness : root.width - fixedLeftFloatingPadding - fixedRightFloatingPadding
-        height: root.verticalPanel ? root.height - fixedBottomFloatingPadding - fixedTopFloatingPadding : panel.thickness
+        anchors.centerIn: root.isOpaque ? floatingOpaqueItem : floatingTranslucentItem
+        width: root.verticalPanel ? panel.thickness : root.width - root.fixedLeftFloatingPadding - root.fixedRightFloatingPadding
+        height: root.verticalPanel ? root.height - root.fixedBottomFloatingPadding - root.fixedTopFloatingPadding : panel.thickness
     }
 }
