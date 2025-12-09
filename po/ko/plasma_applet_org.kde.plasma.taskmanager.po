@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_tasks\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-08 00:45+0000\n"
+"POT-Creation-Date: 2025-12-09 00:44+0000\n"
 "PO-Revision-Date: 2025-10-09 01:18+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -66,71 +66,71 @@ msgctxt "@action:inmenu"
 msgid "Forget Recent Files"
 msgstr "최근 파일 비우기"
 
-#: package/contents/config/config.qml:13
-#, kde-format
-msgid "Appearance"
-msgstr "모양"
-
-#: package/contents/config/config.qml:18
-#, kde-format
-msgid "Behavior"
-msgstr "행동"
-
-#: package/contents/ui/AudioStream.qml:94
+#: qml/AudioStream.qml:94
 #, kde-format
 msgctxt "@action:button"
 msgid "Unmute"
 msgstr "음소거 해제"
 
-#: package/contents/ui/AudioStream.qml:94
+#: qml/AudioStream.qml:94
 #, kde-format
 msgctxt "@action:button"
 msgid "Mute"
 msgstr "음소거"
 
-#: package/contents/ui/AudioStream.qml:95
+#: qml/AudioStream.qml:95
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Unmute %1"
 msgstr "%1 음소거 해제"
 
-#: package/contents/ui/AudioStream.qml:95
+#: qml/AudioStream.qml:95
 #, kde-format
 msgctxt "@info:tooltip %1 is the window title"
 msgid "Mute %1"
 msgstr "%1 음소거"
 
-#: package/contents/ui/Badge.qml:52
+#: qml/Badge.qml:52
 #, kde-format
 msgctxt "Invalid number of new messages, overlay, keep short"
 msgid "—"
 msgstr "—"
 
-#: package/contents/ui/Badge.qml:54
+#: qml/Badge.qml:54
 #, kde-format
 msgctxt "Over 9999 new messages, overlay, keep short"
 msgid "9,999+"
 msgstr "9,999+"
 
-#: package/contents/ui/ConfigAppearance.qml:49
+#: qml/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "모양"
+
+#: qml/config.qml:18
+#, kde-format
+msgid "Behavior"
+msgstr "행동"
+
+#: qml/ConfigAppearance.qml:49
 #, kde-format
 msgctxt "@label for several checkboxes"
 msgid "General:"
 msgstr "일반:"
 
-#: package/contents/ui/ConfigAppearance.qml:50
+#: qml/ConfigAppearance.qml:50
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show small window previews when hovering over tasks"
 msgstr "작업 도구 위로 마우스를 가져갈 때 작은 창 미리 보기 표시"
 
-#: package/contents/ui/ConfigAppearance.qml:55
+#: qml/ConfigAppearance.qml:55
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over previews"
 msgstr "미리 보기 위로 마우스를 가져갈 때 다른 창 숨기기"
 
-#: package/contents/ui/ConfigAppearance.qml:55
+#: qml/ConfigAppearance.qml:55
 #, fuzzy, kde-format
 #| msgctxt "@option:check section General"
 #| msgid "Hide other windows when hovering over previews"
@@ -138,55 +138,55 @@ msgctxt "@option:check section General"
 msgid "Hide other windows when hovering over tooltips"
 msgstr "미리 보기 위로 마우스를 가져갈 때 다른 창 숨기기"
 
-#: package/contents/ui/ConfigAppearance.qml:60
+#: qml/ConfigAppearance.qml:60
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show an indicator when a task is playing audio"
 msgstr "작업에서 오디오를 재생 중일 때 표시기 표시"
 
-#: package/contents/ui/ConfigAppearance.qml:70
+#: qml/ConfigAppearance.qml:70
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Mute task when clicking indicator"
 msgstr "표시기를 클릭했을 때 작업 음소거"
 
-#: package/contents/ui/ConfigAppearance.qml:78
+#: qml/ConfigAppearance.qml:78
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Show media and volume controls in tooltip"
 msgstr "풍선 도움말에 미디어와 음량 제어 표시"
 
-#: package/contents/ui/ConfigAppearance.qml:86
+#: qml/ConfigAppearance.qml:86
 #, kde-format
 msgctxt "@option:check section General"
 msgid "Fill free space on panel"
 msgstr "패널의 빈 공간 채우기"
 
-#: package/contents/ui/ConfigAppearance.qml:98
+#: qml/ConfigAppearance.qml:98
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Maximum task width:"
 msgstr "최대 작업 너비:"
 
-#: package/contents/ui/ConfigAppearance.qml:101
+#: qml/ConfigAppearance.qml:101
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Narrow"
 msgstr "좁게"
 
-#: package/contents/ui/ConfigAppearance.qml:102
+#: qml/ConfigAppearance.qml:102
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Medium"
 msgstr "중간"
 
-#: package/contents/ui/ConfigAppearance.qml:103
+#: qml/ConfigAppearance.qml:103
 #, kde-format
 msgctxt "@item:inlistbox how wide a task item should be"
 msgid "Wide"
 msgstr "넓게"
 
-#: package/contents/ui/ConfigAppearance.qml:114
+#: qml/ConfigAppearance.qml:114
 #, kde-format
 msgctxt ""
 "@label for radio button group, completes sentence: … when panel is low on "
@@ -194,7 +194,7 @@ msgctxt ""
 msgid "Use multi-column view:"
 msgstr "여러 열 보기 사용:"
 
-#: package/contents/ui/ConfigAppearance.qml:115
+#: qml/ConfigAppearance.qml:115
 #, kde-format
 msgctxt ""
 "@label for radio button group, completes sentence: … when panel is low on "
@@ -202,67 +202,67 @@ msgctxt ""
 msgid "Use multi-row view:"
 msgstr "여러 행 보기 사용:"
 
-#: package/contents/ui/ConfigAppearance.qml:121
+#: qml/ConfigAppearance.qml:121
 #, kde-format
 msgctxt "@option:radio Never use multi-column view for Task Manager"
 msgid "Never"
 msgstr "하지 않음"
 
-#: package/contents/ui/ConfigAppearance.qml:131
+#: qml/ConfigAppearance.qml:131
 #, kde-format
 msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "When panel is low on space and thick enough"
 msgstr "패널의 공간이 부족하고 두께가 충분할 때에만"
 
-#: package/contents/ui/ConfigAppearance.qml:141
+#: qml/ConfigAppearance.qml:141
 #, kde-format
 msgctxt "@option:radio completes sentence: Use multi-column/row view"
 msgid "Always when panel is thick enough"
 msgstr "패널의 두께가 충분할 때 항상"
 
-#: package/contents/ui/ConfigAppearance.qml:148
+#: qml/ConfigAppearance.qml:148
 #, kde-format
 msgctxt "@label:spinbox maximum number of columns for tasks"
 msgid "Maximum columns:"
 msgstr "최대 열 개수:"
 
-#: package/contents/ui/ConfigAppearance.qml:149
+#: qml/ConfigAppearance.qml:149
 #, kde-format
 msgctxt "@label:spinbox maximum number of rows for tasks"
 msgid "Maximum rows:"
 msgstr "최대 행 개수:"
 
-#: package/contents/ui/ConfigAppearance.qml:159
+#: qml/ConfigAppearance.qml:159
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Spacing between icons:"
 msgstr "아이콘 사이 간격:"
 
-#: package/contents/ui/ConfigAppearance.qml:163
+#: qml/ConfigAppearance.qml:163
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "작게"
 
-#: package/contents/ui/ConfigAppearance.qml:167
+#: qml/ConfigAppearance.qml:167
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "일반"
 
-#: package/contents/ui/ConfigAppearance.qml:171
+#: qml/ConfigAppearance.qml:171
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "크게"
 
-#: package/contents/ui/ConfigAppearance.qml:197
+#: qml/ConfigAppearance.qml:197
 #, kde-format
 msgctxt "@info:usagetip under a set of radio buttons when Touch Mode is on"
 msgid "Automatically set to Large when in Touch mode"
 msgstr "터치 모드에서 자동으로 크게 설정"
 
-#: package/contents/ui/ConfigBehavior.qml:50
+#: qml/ConfigBehavior.qml:50
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -275,31 +275,31 @@ msgstr ""
 "앱 설정을 통해서 행동을 변경해 보십시오. 적당한 설정을 찾을 수 없으면 앱 개발"
 "자에게 버그로 이 문제를 보고해 보십시오."
 
-#: package/contents/ui/ConfigBehavior.qml:66
+#: qml/ConfigBehavior.qml:66
 #, kde-format
 msgctxt "@label:listbox how to group tasks"
 msgid "Group:"
 msgstr "그룹:"
 
-#: package/contents/ui/ConfigBehavior.qml:70
+#: qml/ConfigBehavior.qml:70
 #, kde-format
 msgctxt "@item:inlistbox how to group tasks"
 msgid "Do not group"
 msgstr "그룹화하지 않음"
 
-#: package/contents/ui/ConfigBehavior.qml:71
+#: qml/ConfigBehavior.qml:71
 #, kde-format
 msgctxt "@item:inlistbox how to group tasks"
 msgid "By program name"
 msgstr "프로그램 이름으로"
 
-#: package/contents/ui/ConfigBehavior.qml:77
+#: qml/ConfigBehavior.qml:77
 #, kde-format
 msgctxt "@label:listbox completes sentence like: … cycles through tasks"
 msgid "Clicking grouped task:"
 msgstr "그룹화된 작업 클릭 시:"
 
-#: package/contents/ui/ConfigBehavior.qml:84
+#: qml/ConfigBehavior.qml:84
 #, kde-format
 msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task cycles through "
@@ -307,7 +307,7 @@ msgctxt ""
 msgid "Cycles through tasks"
 msgstr "작업 전환"
 
-#: package/contents/ui/ConfigBehavior.qml:85
+#: qml/ConfigBehavior.qml:85
 #, kde-format
 msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task shows small "
@@ -315,7 +315,7 @@ msgctxt ""
 msgid "Shows small window previews"
 msgstr "작은 창 미리 보기 표시"
 
-#: package/contents/ui/ConfigBehavior.qml:86
+#: qml/ConfigBehavior.qml:86
 #, kde-format
 msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task shows large "
@@ -323,7 +323,7 @@ msgctxt ""
 msgid "Shows large window previews"
 msgstr "큰 창 미리 보기 표시"
 
-#: package/contents/ui/ConfigBehavior.qml:87
+#: qml/ConfigBehavior.qml:87
 #, kde-format
 msgctxt ""
 "@item:inlistbox Completes the sentence 'Clicking grouped task shows textual "
@@ -331,7 +331,7 @@ msgctxt ""
 msgid "Shows textual list"
 msgstr "텍스트 목록 표시"
 
-#: package/contents/ui/ConfigBehavior.qml:98
+#: qml/ConfigBehavior.qml:98
 #, kde-format
 msgctxt "@info displayed as InlineMessage"
 msgid ""
@@ -340,73 +340,73 @@ msgid ""
 msgstr ""
 "컴포지터에서 창을 양쪽으로 표시할 수 없으므로 텍스트 목록을 대신 표시합니다."
 
-#: package/contents/ui/ConfigBehavior.qml:108
+#: qml/ConfigBehavior.qml:108
 #, kde-format
 msgctxt "@option:check grouped task"
 msgid "Combine into single button"
 msgstr "단일 단추로 합치기"
 
-#: package/contents/ui/ConfigBehavior.qml:115
+#: qml/ConfigBehavior.qml:115
 #, kde-format
 msgctxt "@option:check grouped task"
 msgid "Group only when the Task Manager is full"
 msgstr "작업 표시줄이 가득 찼을 때만 그룹화"
 
-#: package/contents/ui/ConfigBehavior.qml:127
+#: qml/ConfigBehavior.qml:127
 #, kde-format
 msgctxt "@label:listbox sort tasks in grouped task"
 msgid "Sort:"
 msgstr "정렬:"
 
-#: package/contents/ui/ConfigBehavior.qml:134
+#: qml/ConfigBehavior.qml:134
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Do not sort"
 msgstr "정렬하지 않음"
 
-#: package/contents/ui/ConfigBehavior.qml:138
+#: qml/ConfigBehavior.qml:138
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Manually"
 msgstr "수동으로"
 
-#: package/contents/ui/ConfigBehavior.qml:142
+#: qml/ConfigBehavior.qml:142
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "Alphabetically"
 msgstr "가나다순으로"
 
-#: package/contents/ui/ConfigBehavior.qml:146
+#: qml/ConfigBehavior.qml:146
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By desktop"
 msgstr "바탕 화면별로"
 
-#: package/contents/ui/ConfigBehavior.qml:150
+#: qml/ConfigBehavior.qml:150
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By activity"
 msgstr "활동별로"
 
-#: package/contents/ui/ConfigBehavior.qml:154
+#: qml/ConfigBehavior.qml:154
 #, kde-format
 msgctxt "@item:inlistbox sort tasks in grouped task"
 msgid "By horizontal window position"
 msgstr "수평 창 위치별로"
 
-#: package/contents/ui/ConfigBehavior.qml:165
+#: qml/ConfigBehavior.qml:165
 #, kde-format
 msgctxt "@option:check configure task sorting"
 msgid "Keep launchers separate"
 msgstr "실행기 분리 유지"
 
-#: package/contents/ui/ConfigBehavior.qml:172
+#: qml/ConfigBehavior.qml:172
 #, kde-format
 msgctxt "@option:check for icons-and-text task manager"
 msgid "Hide launchers after application startup"
 msgstr "앱 시작 이후 실행기 숨기기"
 
-#: package/contents/ui/ConfigBehavior.qml:182
+#: qml/ConfigBehavior.qml:182
 #, kde-format
 msgctxt ""
 "@label for checkbox Part of a sentence: 'Clicking active task minimizes the "
@@ -414,27 +414,27 @@ msgctxt ""
 msgid "Clicking active task:"
 msgstr "활성 작업 클릭 시:"
 
-#: package/contents/ui/ConfigBehavior.qml:183
+#: qml/ConfigBehavior.qml:183
 #, kde-format
 msgctxt ""
 "@option:check Part of a sentence: 'Clicking active task minimizes the task'"
 msgid "Minimizes the task"
 msgstr "작업 최소화"
 
-#: package/contents/ui/ConfigBehavior.qml:188
+#: qml/ConfigBehavior.qml:188
 #, kde-format
 msgctxt "@label:listbox completes sentence like: … does nothing"
 msgid "Middle-clicking any task:"
 msgstr "임의의 작업 가운데 단추 클릭 시:"
 
-#: package/contents/ui/ConfigBehavior.qml:192
+#: qml/ConfigBehavior.qml:192
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task does nothing'"
 msgid "Does nothing"
 msgstr "아무것도 하지 않음"
 
-#: package/contents/ui/ConfigBehavior.qml:193
+#: qml/ConfigBehavior.qml:193
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task closes window "
@@ -442,7 +442,7 @@ msgctxt ""
 msgid "Closes window or group"
 msgstr "창 또는 그룹 닫기"
 
-#: package/contents/ui/ConfigBehavior.qml:194
+#: qml/ConfigBehavior.qml:194
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task opens a new "
@@ -450,7 +450,7 @@ msgctxt ""
 msgid "Opens a new window"
 msgstr "새 창 열기"
 
-#: package/contents/ui/ConfigBehavior.qml:195
+#: qml/ConfigBehavior.qml:195
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task minimizes/"
@@ -458,7 +458,7 @@ msgctxt ""
 msgid "Minimizes/Restores window or group"
 msgstr "창이나 그룹 최소화/복원"
 
-#: package/contents/ui/ConfigBehavior.qml:196
+#: qml/ConfigBehavior.qml:196
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task toggles "
@@ -466,7 +466,7 @@ msgctxt ""
 msgid "Toggles grouping"
 msgstr "그룹화 전환"
 
-#: package/contents/ui/ConfigBehavior.qml:197
+#: qml/ConfigBehavior.qml:197
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Middle-clicking any task brings it to "
@@ -474,7 +474,7 @@ msgctxt ""
 msgid "Brings it to the current virtual desktop"
 msgstr "현재 가상 바탕 화면으로 가져오기"
 
-#: package/contents/ui/ConfigBehavior.qml:207
+#: qml/ConfigBehavior.qml:207
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@label:listbox Part of a sentence: 'Scrolling behavior does nothing/"
@@ -487,13 +487,13 @@ msgctxt ""
 msgid "Scrolling behavior:"
 msgstr "스크롤할 때:"
 
-#: package/contents/ui/ConfigBehavior.qml:211
+#: qml/ConfigBehavior.qml:211
 #, kde-format
 msgctxt "@item:inlistbox Part of a sentence: 'Scrolling behavior does nothing'"
 msgid "Does nothing"
 msgstr "아무것도 하지 않음"
 
-#: package/contents/ui/ConfigBehavior.qml:212
+#: qml/ConfigBehavior.qml:212
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through all "
@@ -501,7 +501,7 @@ msgctxt ""
 msgid "Cycles through all tasks"
 msgstr "모든 작업 사이 전환"
 
-#: package/contents/ui/ConfigBehavior.qml:213
+#: qml/ConfigBehavior.qml:213
 #, kde-format
 msgctxt ""
 "@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through the "
@@ -509,7 +509,7 @@ msgctxt ""
 msgid "Cycles through the hovered task’s windows"
 msgstr "마우스가 올라가 있는 작업의 창 사이 전환"
 
-#: package/contents/ui/ConfigBehavior.qml:214
+#: qml/ConfigBehavior.qml:214
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through "
@@ -521,386 +521,383 @@ msgctxt ""
 msgid "Adjusts the hovered task’s volume"
 msgstr "마우스가 올라가 있는 작업의 창 사이 전환"
 
-#: package/contents/ui/ConfigBehavior.qml:222
+#: qml/ConfigBehavior.qml:222
 #, kde-format
 msgctxt "@option:check mouse wheel task cycling"
 msgid "Skip minimized tasks"
 msgstr "최소화된 작업 건너뛰기"
 
-#: package/contents/ui/ConfigBehavior.qml:232
+#: qml/ConfigBehavior.qml:232
 #, kde-format
 msgctxt ""
 "@label for checkbox group, completes sentence like: … from current screen"
 msgid "Show only tasks:"
 msgstr "다음 작업만 표시:"
 
-#: package/contents/ui/ConfigBehavior.qml:233
+#: qml/ConfigBehavior.qml:233
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current desktop"
 msgstr "현재 바탕 화면에 있는 작업만"
 
-#: package/contents/ui/ConfigBehavior.qml:238
+#: qml/ConfigBehavior.qml:238
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current activity"
 msgstr "현재 활동에 있는 작업만"
 
-#: package/contents/ui/ConfigBehavior.qml:243
+#: qml/ConfigBehavior.qml:243
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "From the current screen"
 msgstr "현재 화면에 있는 작업만"
 
-#: package/contents/ui/ConfigBehavior.qml:248
+#: qml/ConfigBehavior.qml:248
 #, kde-format
 msgctxt "@option:check completes sentence: show only tasks"
 msgid "That are minimized"
 msgstr "최소화됨"
 
-#: package/contents/ui/ConfigBehavior.qml:257
+#: qml/ConfigBehavior.qml:257
 #, kde-format
 msgctxt ""
 "@label for checkbox, completes sentence: … unhide if window wants attention"
 msgid "When panel is hidden:"
 msgstr "패널이 숨겨졌을 때:"
 
-#: package/contents/ui/ConfigBehavior.qml:258
+#: qml/ConfigBehavior.qml:258
 #, kde-format
 msgctxt "@option:check completes sentence: When panel is hidden"
 msgid "Unhide when a window wants attention"
 msgstr "창이 주의를 끌 때 숨기기 취소"
 
-#: package/contents/ui/ConfigBehavior.qml:273
+#: qml/ConfigBehavior.qml:273
 #, kde-format
 msgctxt "@label for radiobutton group completes sentence like: … on the bottom"
 msgid "New tasks appear:"
 msgstr "새 작업이 나타날 때:"
 
-#: package/contents/ui/ConfigBehavior.qml:277
+#: qml/ConfigBehavior.qml:277
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the bottom"
 msgstr "아래쪽에"
 
-#: package/contents/ui/ConfigBehavior.qml:281
-#: package/contents/ui/ConfigBehavior.qml:300
+#: qml/ConfigBehavior.qml:281 qml/ConfigBehavior.qml:300
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the right"
 msgstr "오른쪽에"
 
-#: package/contents/ui/ConfigBehavior.qml:283
-#: package/contents/ui/ConfigBehavior.qml:298
+#: qml/ConfigBehavior.qml:283 qml/ConfigBehavior.qml:298
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "To the left"
 msgstr "왼쪽에"
 
-#: package/contents/ui/ConfigBehavior.qml:294
+#: qml/ConfigBehavior.qml:294
 #, kde-format
 msgctxt "@option:check completes sentence: New tasks appear"
 msgid "On the top"
 msgstr "위쪽에"
 
-#: package/contents/ui/ContextMenu.qml:102
+#: qml/ContextMenu.qml:100
 #, kde-format
 msgid "Places"
 msgstr "위치"
 
-#: package/contents/ui/ContextMenu.qml:108
+#: qml/ContextMenu.qml:106
 #, kde-format
 msgid "Recent Files"
 msgstr "최근 파일"
 
-#: package/contents/ui/ContextMenu.qml:118
+#: qml/ContextMenu.qml:116
 #, kde-format
 msgid "Actions"
 msgstr "동작"
 
-#: package/contents/ui/ContextMenu.qml:165
+#: qml/ContextMenu.qml:163
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "이전 트랙"
 
-#: package/contents/ui/ContextMenu.qml:179
+#: qml/ContextMenu.qml:177
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "일시 정지"
 
-#: package/contents/ui/ContextMenu.qml:179
+#: qml/ContextMenu.qml:177
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "재생"
 
-#: package/contents/ui/ContextMenu.qml:197
+#: qml/ContextMenu.qml:195
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "다음 트랙"
 
-#: package/contents/ui/ContextMenu.qml:208
+#: qml/ContextMenu.qml:206
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
 msgstr "정지"
 
-#: package/contents/ui/ContextMenu.qml:228
+#: qml/ContextMenu.qml:226
 #, kde-format
 msgctxt "Quit media player app"
 msgid "Quit"
 msgstr "끝내기"
 
-#: package/contents/ui/ContextMenu.qml:243
+#: qml/ContextMenu.qml:241
 #, kde-format
 msgctxt "Open or bring to the front window of media player app"
 msgid "Restore"
 msgstr "복원"
 
-#: package/contents/ui/ContextMenu.qml:268
+#: qml/ContextMenu.qml:266
 #, kde-format
 msgid "Mute"
 msgstr "음소거"
 
-#: package/contents/ui/ContextMenu.qml:279
+#: qml/ContextMenu.qml:277
 #, kde-format
 msgid "Open New Window"
 msgstr "새 창 열기"
 
-#: package/contents/ui/ContextMenu.qml:295
+#: qml/ContextMenu.qml:293
 #, kde-format
 msgid "Move to &Desktop"
 msgstr "다음 바탕 화면으로 이동(&D)"
 
-#: package/contents/ui/ContextMenu.qml:325
+#: qml/ContextMenu.qml:323
 #, kde-format
 msgid "Move &To Current Desktop"
 msgstr "현재 바탕 화면으로 이동(&T)"
 
-#: package/contents/ui/ContextMenu.qml:334
+#: qml/ContextMenu.qml:332
 #, kde-format
 msgid "&All Desktops"
 msgstr "모든 바탕 화면(&A)"
 
-#: package/contents/ui/ContextMenu.qml:362
+#: qml/ContextMenu.qml:360
 #, kde-format
 msgid "&New Desktop"
 msgstr "새 바탕 화면(&N)"
 
-#: package/contents/ui/ContextMenu.qml:382
+#: qml/ContextMenu.qml:380
 #, kde-format
 msgid "Show in &Activities"
 msgstr "다음 활동에 표시(&A)"
 
-#: package/contents/ui/ContextMenu.qml:406
+#: qml/ContextMenu.qml:404
 #, kde-format
 msgid "Add To Current Activity"
 msgstr "현재 활동에 추가"
 
-#: package/contents/ui/ContextMenu.qml:416
+#: qml/ContextMenu.qml:414
 #, kde-format
 msgid "All Activities"
 msgstr "모든 활동"
 
-#: package/contents/ui/ContextMenu.qml:472
+#: qml/ContextMenu.qml:470
 #, kde-format
 msgid "Move to %1"
 msgstr "%1(으)로 이동"
 
-#: package/contents/ui/ContextMenu.qml:498
-#: package/contents/ui/ContextMenu.qml:514
+#: qml/ContextMenu.qml:496 qml/ContextMenu.qml:512
 #, kde-format
 msgid "&Pin to Task Manager"
 msgstr "작업 관리자에 고정(&P)"
 
-#: package/contents/ui/ContextMenu.qml:566
+#: qml/ContextMenu.qml:564
 #, kde-format
 msgid "On All Activities"
 msgstr "모든 활동에"
 
-#: package/contents/ui/ContextMenu.qml:572
+#: qml/ContextMenu.qml:570
 #, kde-format
 msgid "On The Current Activity"
 msgstr "현재 활동에"
 
-#: package/contents/ui/ContextMenu.qml:596
+#: qml/ContextMenu.qml:594
 #, kde-format
 msgid "Unpin from Task Manager"
 msgstr "작업 관리자에서 고정 해제"
 
-#: package/contents/ui/ContextMenu.qml:611
+#: qml/ContextMenu.qml:609
 #, kde-format
 msgid "More"
 msgstr "더 보기"
 
-#: package/contents/ui/ContextMenu.qml:620
+#: qml/ContextMenu.qml:618
 #, kde-format
 msgid "&Move"
 msgstr "이동(&M)"
 
-#: package/contents/ui/ContextMenu.qml:629
+#: qml/ContextMenu.qml:627
 #, kde-format
 msgid "Re&size"
 msgstr "크기 조정(&S)"
 
-#: package/contents/ui/ContextMenu.qml:643
+#: qml/ContextMenu.qml:641
 #, kde-format
 msgid "Ma&ximize"
 msgstr "최대화(&X)"
 
-#: package/contents/ui/ContextMenu.qml:657
+#: qml/ContextMenu.qml:655
 #, kde-format
 msgid "Mi&nimize"
 msgstr "최소화(&N)"
 
-#: package/contents/ui/ContextMenu.qml:667
+#: qml/ContextMenu.qml:665
 #, kde-format
 msgid "Keep &Above Others"
 msgstr "항상 위(&A)"
 
-#: package/contents/ui/ContextMenu.qml:677
+#: qml/ContextMenu.qml:675
 #, kde-format
 msgid "Keep &Below Others"
 msgstr "항상 아래(&B)"
 
-#: package/contents/ui/ContextMenu.qml:689
+#: qml/ContextMenu.qml:687
 #, kde-format
 msgid "&Fullscreen"
 msgstr "전체 화면(&F)"
 
-#: package/contents/ui/ContextMenu.qml:702
+#: qml/ContextMenu.qml:700
 #, kde-format
 msgid "&Shade"
 msgstr "말아 올리기(&S)"
 
-#: package/contents/ui/ContextMenu.qml:714
+#: qml/ContextMenu.qml:712
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&No Titlebar and Frame"
 msgstr "제목 표시줄과 프레임 없음(&N)"
 
-#: package/contents/ui/ContextMenu.qml:727
+#: qml/ContextMenu.qml:725
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Hide from Screencast"
 msgstr ""
 
-#: package/contents/ui/ContextMenu.qml:743
+#: qml/ContextMenu.qml:741
 #, kde-format
 msgid "Allow this program to be grouped"
 msgstr "이 프로그램을 그룹으로 묶기"
 
-#: package/contents/ui/ContextMenu.qml:789
+#: qml/ContextMenu.qml:787
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "&Close All"
 msgstr "모두 닫기(&C)"
 
-#: package/contents/ui/ContextMenu.qml:789
+#: qml/ContextMenu.qml:787
 #, kde-format
 msgid "&Close"
 msgstr "닫기(&C)"
 
-#: package/contents/ui/Task.qml:156
+#: qml/Task.qml:153
 #, kde-format
 msgctxt "@info:usagetip %1 application name"
 msgid "Launch %1"
 msgstr "%1 실행"
 
-#: package/contents/ui/Task.qml:161
+#: qml/Task.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "There is %1 new message."
 msgid_plural "There are %1 new messages."
 msgstr[0] "새 메시지 %1개가 있습니다."
 
-#: package/contents/ui/Task.qml:169
+#: qml/Task.qml:166
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show Task tooltip for %1"
 msgstr "%1의 작업 풍선 도움말 표시"
 
-#: package/contents/ui/Task.qml:173
+#: qml/Task.qml:170
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Show windows side by side for %1"
 msgstr "%1의 창을 양쪽으로 표시"
 
-#: package/contents/ui/Task.qml:178
+#: qml/Task.qml:175
 #, kde-format
 msgctxt "@info:usagetip %1 task name"
 msgid "Open textual list of windows for %1"
 msgstr "%1의 창 텍스트 목록 표시"
 
-#: package/contents/ui/Task.qml:182
+#: qml/Task.qml:179
 #, kde-format
 msgid "Activate %1"
 msgstr "%1 활성화"
 
-#: package/contents/ui/ToolTipInstance.qml:189
+#: qml/ToolTipInstance.qml:189
 #, kde-format
 msgctxt "@info:tooltip Close this window"
 msgid "Close window"
 msgstr "창 닫기"
 
-#: package/contents/ui/ToolTipInstance.qml:459
+#: qml/ToolTipInstance.qml:459
 #, kde-format
 msgctxt "button to unmute app"
 msgid "Unmute %1"
 msgstr "%1 음소거 해제"
 
-#: package/contents/ui/ToolTipInstance.qml:460
+#: qml/ToolTipInstance.qml:460
 #, kde-format
 msgctxt "button to mute app"
 msgid "Mute %1"
 msgstr "%1 음소거"
 
-#: package/contents/ui/ToolTipInstance.qml:478
+#: qml/ToolTipInstance.qml:478
 #, kde-format
 msgctxt "Accessibility data on volume slider"
 msgid "Adjust volume for %1"
 msgstr "%1 음량 조정"
 
-#: package/contents/ui/ToolTipInstance.qml:494
+#: qml/ToolTipInstance.qml:494
 #, kde-format
 msgctxt "volume percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/ToolTipInstance.qml:498
+#: qml/ToolTipInstance.qml:498
 #, kde-format
 msgctxt "only used for sizing, should be widest possible string"
 msgid "100%"
 msgstr "100%"
 
-#: package/contents/ui/ToolTipInstance.qml:514
+#: qml/ToolTipInstance.qml:514
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "On %1"
 msgstr "%1에 있음"
 
-#: package/contents/ui/ToolTipInstance.qml:517
+#: qml/ToolTipInstance.qml:517
 #, kde-format
 msgctxt "Comma-separated list of desktops"
 msgid "Pinned to all desktops"
 msgstr "모든 바탕 화면에 고정됨"
 
-#: package/contents/ui/ToolTipInstance.qml:523
+#: qml/ToolTipInstance.qml:523
 #, kde-format
 msgctxt "Which virtual desktop a window is currently on"
 msgid "Available on all activities"
 msgstr "모든 활동에 있음"
 
-#: package/contents/ui/ToolTipInstance.qml:533
+#: qml/ToolTipInstance.qml:533
 #, kde-format
 msgctxt "Activities a window is currently on (apart from the current one)"
 msgid "Also available on %1"
 msgstr "활동 %1에도 있음"
 
-#: package/contents/ui/ToolTipInstance.qml:537
+#: qml/ToolTipInstance.qml:537
 #, kde-format
 msgctxt "Which activities a window is currently on"
 msgid "Available on %1"

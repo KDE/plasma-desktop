@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-07 00:44+0000\n"
-"PO-Revision-Date: 2025-12-03 16:36+0400\n"
+"PO-Revision-Date: 2025-12-08 16:40+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -481,15 +481,12 @@ msgid "No pad inputs found"
 msgstr "لم يُعثر على مدخلات لوحة"
 
 #: ui/MissingPadTab.qml:16
-#, fuzzy, kde-format
-#| msgid ""
-#| "There's no buttons or other inputs detected. This could mean you're "
-#| "missing a driver for this device."
+#, kde-format
 msgid ""
 "No buttons or other inputs were detected. This could mean the driver for "
 "this device is missing."
 msgstr ""
-"لم يكتشف أي أزرار أو مدخلات أخرى. قد يعني ذلك أن مشغل هذا الجهاز غير موجود."
+"لم يكتشف أي أزرار أو مدخلات أخرى. قد يعني ذلك أن مشغل هذا الجهاز مفقود."
 
 #: ui/PadTab.qml:37
 #, kde-format
