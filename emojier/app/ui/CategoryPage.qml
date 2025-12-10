@@ -3,6 +3,7 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Layouts
@@ -130,7 +131,7 @@ Kirigami.ScrollablePage {
 
         QQC2.Menu {
             id: menu
-            required property Text label
+            required property QQC2.ItemDelegate label
 
             onClosed: destroy()
 
@@ -175,26 +176,31 @@ Kirigami.ScrollablePage {
 
         delegate: QQC2.ItemDelegate {
             id: emojiLabel
+
+            required property var model
+            required property string toolTip
+
             width: emojiView.cellWidth
             height: emojiView.cellHeight
 
+            text: model.display
             highlighted: GridView.isCurrentItem
             contentItem: QQC2.Label {
                 font.pointSize: 25
                 font.family: 'emoji' // Avoid monochrome fonts like DejaVu Sans
-                fontSizeMode: model.display.length > 5 ? Text.Fit : Text.FixedSize
+                fontSizeMode: emojiLabel.text.length > 5 ? Text.Fit : Text.FixedSize
                 minimumPointSize: 10
-                text: model.display
+                text: emojiLabel.text
                 textFormat: Text.PlainText
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
             }
 
-            Accessible.name: model.toolTip
+            Accessible.name: emojiLabel.toolTip
             Accessible.onPressAction: tapHandler.action()
 
             QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
-            QQC2.ToolTip.text: model.toolTip
+            QQC2.ToolTip.text: emojiLabel.toolTip
             QQC2.ToolTip.visible: hoverHandler.hovered
 
             Keys.onMenuPressed: event => contextMenuHandler.action()
@@ -207,7 +213,7 @@ Kirigami.ScrollablePage {
             TapHandler {
                 id: tapHandler
                 function action() {
-                    window.report(model.display, model.toolTip);
+                    window.report(emojiLabel.text, emojiLabel.toolTip);
                 }
                 onTapped: (eventPoint, button) => action()
             }

@@ -3,6 +3,7 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Controls as QQC2
@@ -130,6 +131,8 @@ Kirigami.ApplicationWindow {
 
             model: emoji.categories
             delegate: CategoryAction {
+                required property string modelData
+
                 category: modelData
                 icon.name: drawer.getIcon(category)
             }

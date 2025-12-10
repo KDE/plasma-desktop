@@ -8,7 +8,7 @@ import QtQml
 import org.kde.kirigami as Kirigami
 
 Kirigami.Action {
-    property string category
+    required property string category
 
     checked: window.pageStack.get(0).title === text
     text: i18ndc("org.kde.plasma.emojier", "Emoji Category", category)
