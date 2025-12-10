@@ -6,7 +6,6 @@
 
 import QtQuick
 import QtQuick.Controls as QQC2
-import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 import org.kde.config as KConfig
@@ -51,7 +50,7 @@ Kirigami.ApplicationWindow {
         text: i18n("Recent")
 
         icon.name: "document-open-recent-symbolic"
-        onTriggered: source => {
+        onTriggered: {
             window.pageStack.replace(Qt.resolvedUrl("CategoryPage.qml"), {
                 title: text,
                 category: "",
@@ -67,7 +66,7 @@ Kirigami.ApplicationWindow {
         text: i18nc("@title:page All emojis", "All")
         icon.name: "view-list-icons"
 
-        onTriggered: source => {
+        onTriggered: {
             window.pageStack.replace(Qt.resolvedUrl("CategoryPage.qml"), {
                 title: text,
                 category: "",

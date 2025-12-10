@@ -6,8 +6,9 @@
 
 import QtQuick
 import QtQuick.Layouts
-import org.kde.kirigami as Kirigami
 import QtQuick.Controls as QQC2
+
+import org.kde.kirigami as Kirigami
 import org.kde.plasma.emoji
 
 Kirigami.ScrollablePage {
@@ -128,6 +129,7 @@ Kirigami.ScrollablePage {
         id: menuComponent
 
         QQC2.Menu {
+            id: menu
             required property Text label
 
             onClosed: destroy()
@@ -136,16 +138,16 @@ Kirigami.ScrollablePage {
                 icon.name: "edit-copy"
                 text: i18nc("@item:inmenu", "Copy Character")
                 onClicked: {
-                    CopyHelper.copyTextToClipboard(label.text);
-                    window.showPassiveNotification(i18n("%1 copied to the clipboard", label.text));
+                    CopyHelper.copyTextToClipboard(menu.label.text);
+                    window.showPassiveNotification(i18n("%1 copied to the clipboard", menu.label.text));
                 }
             }
             QQC2.MenuItem {
                 icon.name: "edit-copy"
                 text: i18nc("@item:inmenu", "Copy Description")
                 onClicked: {
-                    CopyHelper.copyTextToClipboard(label.QQC2.ToolTip.text);
-                    window.showPassiveNotification(i18n("%1 copied to the clipboard", label.QQC2.ToolTip.text));
+                    CopyHelper.copyTextToClipboard(menu.label.QQC2.ToolTip.text);
+                    window.showPassiveNotification(i18n("%1 copied to the clipboard", menu.label.QQC2.ToolTip.text));
                 }
             }
         }
@@ -222,7 +224,7 @@ Kirigami.ScrollablePage {
                 function action() {
                     const menu = menuComponent.createObject(emojiLabel, {
                         "label": emojiLabel,
-                    });
+                    }) as QQC2.Menu;
                     menu.popup();
                 }
                 onTapped: (eventPoint, button) => action()

@@ -4,6 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
+import QtQml
 import org.kde.kirigami as Kirigami
 
 Kirigami.Action {
@@ -12,7 +13,7 @@ Kirigami.Action {
     checked: window.pageStack.get(0).title === text
     text: i18ndc("org.kde.plasma.emojier", "Emoji Category", category)
 
-    onTriggered: source => {
+    onTriggered: {
         window.pageStack.replace(Qt.resolvedUrl("CategoryPage.qml"), {
             title: text,
             category,
