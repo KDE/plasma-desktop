@@ -284,8 +284,9 @@ QString CategoryModelFilter::category() const
 void CategoryModelFilter::setCategory(const QString &category)
 {
     if (m_category != category) {
+        beginFilterChange();
         m_category = category;
-        invalidateFilter();
+        endFilterChange(QSortFilterProxyModel::Direction::Rows);
     }
 }
 
@@ -301,8 +302,9 @@ QString SearchModelFilter::search() const
 void SearchModelFilter::setSearch(const QString &search)
 {
     if (m_search != search) {
+        beginFilterChange();
         m_search = search;
-        invalidateFilter();
+        endFilterChange(QSortFilterProxyModel::Direction::Rows);
     }
 }
 
