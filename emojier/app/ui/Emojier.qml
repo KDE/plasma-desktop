@@ -17,9 +17,7 @@ Kirigami.ApplicationWindow {
     id: window
 
     minimumWidth: Math.round(minimumHeight * 1.25)
-    // Correct height required for no scrolling — drawer's header's
-    // implicit height is used instead of height, so add the difference
-    minimumHeight: drawer.contentHeight + (drawer.header.height - drawer.header.implicitHeight)
+    // minimumHeight is set in Component.onCompleted to avoid a binding loop
 
     width: Kirigami.Units.gridUnit * 25
     height: Kirigami.Units.gridUnit * 25
@@ -178,5 +176,12 @@ Kirigami.ApplicationWindow {
         } else {
             allAction.trigger();
         }
+
+        // Correct height required for no scrolling — drawer's header's
+        // implicit height is used instead of height, so add the difference.
+        // Set imperatively to avoid binding loop
+        window.minimumHeight = Qt.binding( () => {
+            return drawer.contentHeight + (drawer.header.height - drawer.header.implicitHeight)
+        })
     }
 }
