@@ -23,19 +23,7 @@ Kirigami.ScrollablePage {
     leftPadding: undefined
     rightPadding: undefined
     horizontalPadding: 0
-
-    Keys.onPressed: event => {
-        if (event.key === Qt.Key_Escape) {
-            Qt.quit()
-        }
-        if (event.text.length > 0 && event.modifiers === Qt.NoModifier) {
-            // We want to prevent unprintable characters like backspace
-            model = emoji
-            searchText += /[\x00-\x1F\x7F]/.test(event.text) ? "" : event.text
-            text: i18nc("@title:page All emojis", "All")
-            category = ""
-        }
-    }
+    Keys.onEscapePressed: Qt.quit()
 
     titleDelegate: RowLayout {
         id: titleRowLayout
@@ -90,17 +78,30 @@ Kirigami.ScrollablePage {
                     }
                 }
             }
-            Component.onCompleted: {
-                Qt.callLater(forceActiveFocus);
-            }
+
             Keys.onEscapePressed: event => {
                 if (text) {
                     clear()
                 } else {
-                    Qt.quit()
+                    event.accepted = false
                 }
             }
-            Keys.forwardTo: emojiView
+            Keys.onEnterPressed: event => emojiView.currentItem?.Keys.enterPressed(event)
+            Keys.onReturnPressed: event => emojiView.currentItem?.Keys.returnPressed(event)
+            Keys.onDownPressed: event => {
+                emojiView.currentIndex = Math.max(emojiView.currentIndex, 0)
+                event.accepted = false
+            }
+            KeyNavigation.down: emojiView
+            KeyNavigation.right: clearHistoryButton
+            Binding {
+                view.Keys.forwardTo: [searchField]
+                view.KeyNavigation.up: searchField.KeyNavigation.down // explicitly set as this and clear button point there
+            }
+
+            Component.onCompleted: {
+                Qt.callLater(forceActiveFocus);
+            }
         }
 
         QQC2.ToolButton {
@@ -115,6 +116,7 @@ Kirigami.ScrollablePage {
             onClicked: {
                 recentEmojiModel.clearHistory();
             }
+            Keys.onDownPressed: event => searchField.Keys.downPressed(event)
         }
     }
 
@@ -173,6 +175,12 @@ Kirigami.ScrollablePage {
 
         currentIndex: -1
         reuseItems: true
+        Keys.onUpPressed: event => {
+            if (currentIndex < columnsToHave - 1) {
+                currentIndex = -1
+            }
+            event.accepted = false
+        }
 
         delegate: QQC2.ItemDelegate {
             id: emojiLabel
@@ -205,6 +213,7 @@ Kirigami.ScrollablePage {
 
             Keys.onMenuPressed: event => contextMenuHandler.action()
             Keys.onReturnPressed: event => tapHandler.action()
+            Keys.onEnterPressed: event => Keys.returnPressed()
 
             HoverHandler {
                 id: hoverHandler
