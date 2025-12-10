@@ -20,6 +20,10 @@ Kirigami.ScrollablePage {
     property alias category: filter.category
     property bool showClearHistoryButton: false
 
+    signal copyRequested(string text)
+    signal addToRecentsRequested(string text, string description)
+    signal clearHistoryRequested
+
     leftPadding: undefined
     rightPadding: undefined
     horizontalPadding: 0
@@ -113,9 +117,7 @@ Kirigami.ScrollablePage {
             enabled: emojiView.count > 0
             text: i18n("Clear History")
             icon.name: "edit-clear-history"
-            onClicked: {
-                recentEmojiModel.clearHistory();
-            }
+            onClicked: view.clearHistoryRequested()
             Keys.onDownPressed: event => searchField.Keys.downPressed(event)
         }
     }
@@ -140,18 +142,12 @@ Kirigami.ScrollablePage {
             QQC2.MenuItem {
                 icon.name: "edit-copy"
                 text: i18nc("@item:inmenu", "Copy Character")
-                onClicked: {
-                    CopyHelper.copyTextToClipboard(menu.label.text);
-                    window.showPassiveNotification(i18n("%1 copied to the clipboard", menu.label.text));
-                }
+                onClicked: view.copyRequested(menu.label.text)
             }
             QQC2.MenuItem {
                 icon.name: "edit-copy"
                 text: i18nc("@item:inmenu", "Copy Description")
-                onClicked: {
-                    CopyHelper.copyTextToClipboard(menu.label.QQC2.ToolTip.text);
-                    window.showPassiveNotification(i18n("%1 copied to the clipboard", menu.label.QQC2.ToolTip.text));
-                }
+                onClicked: view.copyRequested(menu.label.QQC2.ToolTip.text)
             }
         }
     }
@@ -222,7 +218,8 @@ Kirigami.ScrollablePage {
             TapHandler {
                 id: tapHandler
                 function action() {
-                    window.report(emojiLabel.text, emojiLabel.toolTip);
+                    view.copyRequested(emojiLabel.text)
+                    view.addToRecentsRequested(emojiLabel.text, emojiLabel.toolTip);
                 }
                 onTapped: (eventPoint, button) => action()
             }

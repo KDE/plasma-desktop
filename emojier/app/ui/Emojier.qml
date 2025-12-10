@@ -36,13 +36,17 @@ Kirigami.ApplicationWindow {
         id: recentEmojiModel
     }
 
-    function report(thing: string, description: string): void {
-        if (!visible) {
-            return;
-        }
-        CopyHelper.copyTextToClipboard(thing)
-        recentEmojiModel.includeRecent(thing, description);
-        window.showPassiveNotification(i18n("%1 copied to the clipboard", thing))
+    function copyAndReport(text: string) : void {
+        CopyHelper.copyTextToClipboard(text)
+        window.showPassiveNotification(i18n("%1 copied to the clipboard", text))
+    }
+
+    function addToRecents(text: string, description: string): void {
+        recentEmojiModel.includeRecent(text, description);
+    }
+
+    function clearHistory() : void {
+        recentEmojiModel.clearHistory();
     }
 
     Kirigami.Action {
@@ -150,6 +154,13 @@ Kirigami.ApplicationWindow {
                 drawer.actions.push(object);
             }
         }
+    }
+
+    Connections {
+        target: window.pageStack.currentItem
+        function onCopyRequested(text: string) : void { window.copyAndReport(text) }
+        function onAddToRecentsRequested(text: string, description: string) : void { window.addToRecents(text, description) }
+        function onClearHistoryRequested() : void { window.clearHistory() }
     }
 
     Component.onCompleted: {
