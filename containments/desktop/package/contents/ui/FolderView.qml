@@ -189,7 +189,7 @@ FocusScope {
 
     function doCd(row) {
         history.push({ url: url, index: gridView.currentIndex, yPosition: gridView.visibleArea.yPosition});
-        updateHistory();
+        historyChanged();
         dir.cd(row);
         gridView.currentIndex = -1;
     }
@@ -199,12 +199,7 @@ FocusScope {
         gridView.currentIndex = -1;
         lastPosition = history.pop();
         url = lastPosition.url;
-        updateHistory();
-    }
-
-    // QML doesn't detect change in the array(history) property, so update it explicitly.
-    function updateHistory() {
-        history = history;
+        historyChanged();
     }
 
     Connections {
@@ -1230,7 +1225,7 @@ FocusScope {
 
                     function onUrlChanged() {
                         main.history = [];
-                        main.updateHistory();
+                        main.historyChanged();
                     }
                 }
             }

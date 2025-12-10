@@ -56,7 +56,7 @@ FocusScope {
         if (folderView.url !== Plasmoid.configuration.url) {
             folderView.url = Qt.binding(() => Plasmoid.configuration.url);
             folderView.history = [];
-            folderView.updateHistory();
+            folderView.historyChanged();
         }
     }
 
