@@ -24,6 +24,7 @@ Kirigami.ScrollablePage {
     signal addToRecentsRequested(string text, string description)
     signal clearHistoryRequested
     signal allDataRequested
+    signal searchFieldFocusRequested
 
     leftPadding: undefined
     rightPadding: undefined
@@ -88,6 +89,12 @@ Kirigami.ScrollablePage {
             Binding {
                 view.Keys.forwardTo: [searchField]
                 view.KeyNavigation.up: searchField.KeyNavigation.down // explicitly set as this and clear button point there
+            }
+            Connections {
+                target: view
+                function onSearchFieldFocusRequested() {
+                    searchField.forceActiveFocus(Qt.TabFocusReason)
+                }
             }
 
             Component.onCompleted: {
@@ -233,7 +240,7 @@ Kirigami.ScrollablePage {
         Kirigami.PlaceholderMessage {
             anchors.centerIn: parent
             width: parent.width - (Kirigami.Units.largeSpacing * 8)
-            text: i18n("No recent Emojis")
+            text: view.showClearHistoryButton ? i18n("No recent Emojis") : i18nc("@label placeholder for no emoji found in category", "No matching emoji found")
             visible: emojiView.count === 0 && view.showClearHistoryButton
         }
     }

@@ -16,11 +16,16 @@ import org.kde.plasma.emoji
 Kirigami.ApplicationWindow {
     id: window
 
+    readonly property CategoryPage currentPage: window.pageStack.currentItem as CategoryPage
+
+
     minimumWidth: Math.round(minimumHeight * 1.25)
     // minimumHeight is set in Component.onCompleted to avoid a binding loop
 
     width: Kirigami.Units.gridUnit * 25
     height: Kirigami.Units.gridUnit * 25
+
+    pageStack.initialPage: Qt.resolvedUrl("CategoryPage.qml")// { }
 
     KConfig.WindowStateSaver {
         configGroupName: "MainWindow"
@@ -54,12 +59,11 @@ Kirigami.ApplicationWindow {
 
         icon.name: "document-open-recent-symbolic"
         onTriggered: {
-            window.pageStack.replace(Qt.resolvedUrl("CategoryPage.qml"), {
-                title: text,
-                category: "",
-                model: recentEmojiModel,
-                showClearHistoryButton: true,
-            });
+            window.currentPage.category = "";
+            window.currentPage.model = recentEmojiModel;
+            window.currentPage.title = text;
+            window.currentPage.showClearHistoryButton = true;
+            window.currentPage.searchFieldFocusRequested();
         }
     }
 
@@ -70,11 +74,11 @@ Kirigami.ApplicationWindow {
         icon.name: "view-list-icons"
 
         onTriggered: {
-            window.pageStack.replace(Qt.resolvedUrl("CategoryPage.qml"), {
-                title: text,
-                category: "",
-                model: emoji,
-            });
+            window.currentPage.category = "";
+            window.currentPage.model = emoji;
+            window.currentPage.title = text;
+            window.currentPage.showClearHistoryButton = false;
+            window.currentPage.searchFieldFocusRequested();
         }
     }
 
@@ -140,11 +144,11 @@ Kirigami.ApplicationWindow {
                 text: i18ndc("org.kde.plasma.emojier", "Emoji Category", modelData)
 
                 onTriggered: {
-                    window.pageStack.replace(Qt.resolvedUrl("CategoryPage.qml"), {
-                        title: text,
-                        category: modelData,
-                        model: emoji,
-                    });
+                    window.currentPage.category = modelData;
+                    window.currentPage.model = emoji;
+                    window.currentPage.title = text
+                    window.currentPage.showClearHistoryButton = true;
+                    window.currentPage.searchFieldFocusRequested();
                 }
             }
 
@@ -160,12 +164,11 @@ Kirigami.ApplicationWindow {
         function onAddToRecentsRequested(text: string, description: string) : void { window.addToRecents(text, description) }
         function onClearHistoryRequested() : void { window.clearHistory() }
         function onAllDataRequested() : void {
-            const currentPage = window.pageStack.currentItem as CategoryPage
-
-            if (currentPage.category.length > 0 || currentPage.model != emoji) {
-                currentPage.category = "";
-                currentPage.model = emoji;
-                currentPage.title = i18nc("@title:page All emojis", "All")
+            if (window.currentPage.category.length > 0 || window.currentPage.model != emoji) {
+                window.currentPage.category = "";
+                window.currentPage.model = emoji;
+                window.currentPage.title = allAction.text
+                window.currentPage.showClearHistoryButton = true;
             }
         }
     }
