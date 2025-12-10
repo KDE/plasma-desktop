@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2017, 2024 Vít Pelčák <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2014, 2017, 2024, 2025 Vít Pelčák <vit@pelcak.org>
 # SPDX-FileCopyrightText: 2017, 2018, 2019, 2020, 2023, 2024 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:41+0000\n"
-"PO-Revision-Date: 2024-10-31 16:07+0100\n"
+"PO-Revision-Date: 2025-12-01 09:56+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -132,7 +132,7 @@ msgstr "Zařízení je povolené"
 #, kde-format
 msgctxt "@option:check"
 msgid "Disable while mouse is connected"
-msgstr ""
+msgstr "Vypnout pokud je připojena myš"
 
 #: ui/main.qml:137
 #, kde-format
@@ -175,7 +175,7 @@ msgstr "Rychlost ukazatele:"
 #: ui/main.qml:289
 #, kde-format
 msgid "Enable pointer acceleration"
-msgstr ""
+msgstr "Povolit akceleraci ukazatele"
 
 #: ui/main.qml:304
 #, kde-format
@@ -183,6 +183,8 @@ msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
+"Pokud povoleno, vzdálenost posunu ukazatele se zvyšuje s rostoucí rychlostí "
+"pohybu myši."
 
 #: ui/main.qml:314
 #, kde-format
@@ -305,7 +307,7 @@ msgstr "Prostřední tlačítko stisknutím obou dolních rohů."
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing bottom center."
-msgstr ""
+msgstr "Prostřední tlačítko stisknutím na střed dole."
 
 #: ui/main.qml:586
 #, kde-format
@@ -317,7 +319,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing with three fingers."
-msgstr ""
+msgstr "Prostřední tlačítko dotekem tří prstů."
 
 #: ui/main.qml:610
 #, kde-format

@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:41+0000\n"
-"PO-Revision-Date: 2025-10-02 09:31+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"PO-Revision-Date: 2025-12-05 13:40+0100\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.08.3\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -284,7 +284,7 @@ msgstr "Zkratky"
 #, kde-format
 msgctxt "@action:button set keyboard shortcut for"
 msgid "Activate widget as if clicked:"
-msgstr ""
+msgstr "Aktivovat widget jako byste na něj klikli:"
 
 #: contents/configuration/ContainmentConfiguration.qml:27
 #, kde-format
@@ -462,13 +462,13 @@ msgstr "Zakázáno"
 #, kde-format
 msgctxt "@item:inlistbox Option to make only panel applets always float"
 msgid "Applets only"
-msgstr ""
+msgstr "Pouze applety"
 
 #: contents/configuration/PanelConfiguration.qml:519
 #, kde-format
 msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
-msgstr ""
+msgstr "Panel a applety"
 
 #: contents/configuration/PanelConfiguration.qml:562
 #, kde-format
@@ -512,13 +512,13 @@ msgstr "Odstranit tento panel, tento krok nelze vzít zpět"
 #, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
-msgstr ""
+msgstr "Klonovat panel"
 
 #: contents/configuration/PanelConfiguration.qml:733
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
-msgstr ""
+msgstr "Vytvořit nový panel se stejným nastavením a applety"
 
 #: contents/configuration/PanelConfiguration.qml:742
 #, kde-format
@@ -580,7 +580,7 @@ msgstr ""
 #: contents/configuration/ShellContainmentConfiguration.qml:19
 #, kde-format
 msgid "Manage Panels and Desktops"
-msgstr ""
+msgstr "Spravujte panely a pracovní plochy"
 
 #: contents/configuration/ShellContainmentConfiguration.qml:34
 #, kde-format
@@ -647,9 +647,9 @@ msgstr ""
 msgctxt "@info:other accessible for badge showing applet count"
 msgid "%1 widget active"
 msgid_plural "%1 widgets active"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "1 aktivní widget"
+msgstr[1] "%1 aktivní widgety"
+msgstr[2] "%1 aktivních widgetů"
 
 #: contents/explorer/AppletDelegate.qml:205
 #, kde-format
@@ -660,13 +660,13 @@ msgstr "Nedávno nainstalované"
 #: contents/explorer/AppletDelegate.qml:217
 #, kde-format
 msgid "Cancel Uninstallation"
-msgstr ""
+msgstr "Zrušit odinstalaci"
 
 #: contents/explorer/AppletDelegate.qml:218
 #, kde-format
 msgctxt "@info:tooltip uninstall a widget"
 msgid "Mark for Uninstallation"
-msgstr ""
+msgstr "Označit pro odinstalaci"
 
 #: contents/explorer/AppletDelegate.qml:222
 #, kde-format
