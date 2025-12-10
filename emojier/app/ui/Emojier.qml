@@ -130,11 +130,20 @@ Kirigami.ApplicationWindow {
             id: instantiator
 
             model: emoji.categories
-            delegate: CategoryAction {
+            delegate: Kirigami.Action {
                 required property string modelData
 
-                category: modelData
-                icon.name: drawer.getIcon(category)
+                checked: window.pageStack.get(0).title === text
+                icon.name: drawer.getIcon(modelData)
+                text: i18ndc("org.kde.plasma.emojier", "Emoji Category", modelData)
+
+                onTriggered: {
+                    window.pageStack.replace(Qt.resolvedUrl("CategoryPage.qml"), {
+                        title: text,
+                        category: modelData,
+                        model: emoji,
+                    });
+                }
             }
 
             onObjectAdded: (index, object) => {

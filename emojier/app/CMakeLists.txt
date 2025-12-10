@@ -4,7 +4,6 @@ ecm_add_qml_module(plasma-emojier URI org.kde.plasma.emoji.app)
 
 ecm_target_qml_sources(plasma-emojier SOURCES
     ui/Emojier.qml
-    ui/CategoryAction.qml
     ui/CategoryPage.qml
 )
 
