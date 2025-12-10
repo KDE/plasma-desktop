@@ -182,7 +182,6 @@ Kirigami.ScrollablePage {
             height: emojiView.cellHeight
 
             text: model.display
-            highlighted: GridView.isCurrentItem
             contentItem: QQC2.Label {
                 font.pointSize: 25
                 font.family: 'emoji' // Avoid monochrome fonts like DejaVu Sans
