@@ -1,6 +1,6 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2010, 2011, 2014, 2015, 2016, 2018, 2020, 2023, 2024 Vít Pelčák <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2010, 2011, 2014, 2015, 2016, 2018, 2020, 2023, 2024, 2025 Vít Pelčák <vit@pelcak.org>
 # Lukáš Tinkl <ltinkl@redhat.com>, 2010.
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2013.
 # SPDX-FileCopyrightText: 2024, 2025 Vit Pelcak <vit@pelcak.org>
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-04 00:45+0000\n"
-"PO-Revision-Date: 2024-10-15 11:01+0200\n"
+"PO-Revision-Date: 2025-12-01 10:02+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
@@ -36,7 +36,7 @@ msgstr ""
 #: kcm.cpp:86
 #, kde-format
 msgid "Not able to select appropriate backend"
-msgstr ""
+msgstr "Nelze vybrat vhodnou podpůrnou vrstvu"
 
 #: kcm.cpp:142
 #, kde-format
@@ -194,7 +194,7 @@ msgstr "Rychlost ukazatele:"
 #: ui/main.qml:227
 #, kde-format
 msgid "Enable pointer acceleration"
-msgstr ""
+msgstr "Povolit akceleraci ukazatele"
 
 #: ui/main.qml:241
 #, kde-format
@@ -202,6 +202,8 @@ msgctxt "@info:tooltip from ContextualHelpButton"
 msgid ""
 "When enabled, pointer travel distance increases with faster movement speed."
 msgstr ""
+"Pokud povoleno, vzdálenost posunu ukazatele se zvyšuje s rostoucí rychlostí "
+"pohybu myši."
 
 #: ui/main.qml:254
 #, kde-format
@@ -233,7 +235,7 @@ msgstr "Obrátit směr rolování"
 #: ui/main.qml:339
 #, kde-format
 msgid "Hold down middle button and move mouse to scroll"
-msgstr ""
+msgstr "Pro pohyb posuvníku podržte prostřední tlačítko a hněte myší"
 
 #: ui/main.qml:351
 #, kde-format
@@ -244,6 +246,10 @@ msgid ""
 "device, but is intended primarily as a substitute for scroll wheels on "
 "devices that do not have any."
 msgstr ""
+"Toto způsobí komplikace u aplikací, které používají přesun pomocí "
+"prostředního tlačítka jako jsou například editory obrázků, prohlížeče "
+"dokumentů nebo video hry. Lze použít na jakémkoliv zařízení ale má sloužit "
+"jako náhrada pokud zařízení nemá kolečko."
 
 #~ msgid "Device enabled"
 #~ msgstr "Zařízení je povolené"

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-23 00:44+0000\n"
+"POT-Creation-Date: 2025-12-10 00:45+0000\n"
 "PO-Revision-Date: 2025-10-12 20:04+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -56,7 +56,7 @@ msgstr ""
 msgid "Configure"
 msgstr "Настроить комнату"
 
-#: contents/activitymanager/ActivityManager.qml:122
+#: contents/activitymanager/ActivityManager.qml:118
 #, kde-format
 msgid "Create activity…"
 msgstr "Создать комнату..."
@@ -66,22 +66,12 @@ msgstr "Создать комнату..."
 msgid "Activities"
 msgstr "Комнаты"
 
-#: contents/activitymanager/StoppedActivityItem.qml:138
-#, kde-format
-msgid "Configure activity"
-msgstr "Настроить комнату"
-
-#: contents/activitymanager/StoppedActivityItem.qml:155
-#, kde-format
-msgid "Delete"
-msgstr "Удалить"
-
-#: contents/applet/AppletError.qml:164
+#: contents/applet/AppletError.qml:165
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Скопировать в буфер обмена"
 
-#: contents/applet/AppletError.qml:187
+#: contents/applet/AppletError.qml:188
 #, kde-format
 msgid "View Error Details…"
 msgstr "Подробные сведения об ошибке…"
@@ -146,12 +136,12 @@ msgstr "Читать лицензию"
 msgid "Authors"
 msgstr "Авторы"
 
-#: contents/configuration/AboutPlugin.qml:224
+#: contents/configuration/AboutPlugin.qml:223
 #, kde-format
 msgid "Credits"
 msgstr "Благодарности"
 
-#: contents/configuration/AboutPlugin.qml:238
+#: contents/configuration/AboutPlugin.qml:236
 #, kde-format
 msgid "Translators"
 msgstr "Переводчики"
@@ -187,128 +177,128 @@ msgstr "Применить"
 msgid "Cancel"
 msgstr "Отмена"
 
-#: contents/configuration/ConfigCategoryDelegate.qml:27
+#: contents/configuration/ConfigCategoryDelegate.qml:26
 #, kde-format
 msgid "Open configuration page"
 msgstr "Открыть страницу конфигурации"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:20
+#: contents/configuration/ConfigurationContainmentActions.qml:19
 #, kde-format
 msgid "Left-Button"
 msgstr "Левая кнопка"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:21
+#: contents/configuration/ConfigurationContainmentActions.qml:20
 #, kde-format
 msgid "Right-Button"
 msgstr "Правая кнопка"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:22
+#: contents/configuration/ConfigurationContainmentActions.qml:21
 #, kde-format
 msgid "Middle-Button"
 msgstr "Средняя кнопка"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:23
+#: contents/configuration/ConfigurationContainmentActions.qml:22
 #, kde-format
 msgid "Back-Button"
 msgstr "Кнопка «назад»"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:24
+#: contents/configuration/ConfigurationContainmentActions.qml:23
 #, kde-format
 msgid "Forward-Button"
 msgstr "Кнопка «вперёд»"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:26
+#: contents/configuration/ConfigurationContainmentActions.qml:25
 #, kde-format
 msgid "Vertical-Scroll"
 msgstr "Вертикальная прокрутка"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:27
+#: contents/configuration/ConfigurationContainmentActions.qml:26
 #, kde-format
 msgid "Horizontal-Scroll"
 msgstr "Горизонтальная прокрутка"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:29
+#: contents/configuration/ConfigurationContainmentActions.qml:28
 #, kde-format
 msgid "Shift"
 msgstr "Shift"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:30
+#: contents/configuration/ConfigurationContainmentActions.qml:29
 #, kde-format
 msgid "Ctrl"
 msgstr "Ctrl"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:31
+#: contents/configuration/ConfigurationContainmentActions.qml:30
 #, kde-format
 msgid "Alt"
 msgstr "Alt"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:32
+#: contents/configuration/ConfigurationContainmentActions.qml:31
 #, kde-format
 msgid "Meta"
 msgstr "Meta"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:73
+#: contents/configuration/ConfigurationContainmentActions.qml:72
 #, kde-format
 msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
 msgid "+"
 msgstr "+"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:142
+#: contents/configuration/ConfigurationContainmentActions.qml:139
 #: contents/configuration/MouseEventInputButton.qml:13
 #, kde-format
 msgid "Add Action"
 msgstr "Добавить действие"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:77
+#: contents/configuration/ConfigurationContainmentAppearance.qml:76
 #, kde-format
 msgid "Layout changes have been restricted by the system administrator"
 msgstr ""
 "Возможность изменения типа комнаты была ограничена системным администратором"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:92
+#: contents/configuration/ConfigurationContainmentAppearance.qml:91
 #, kde-format
 msgid "Layout:"
 msgstr "Тип комнаты:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:115
+#: contents/configuration/ConfigurationContainmentAppearance.qml:114
 #, kde-format
 msgid "Wallpaper type:"
 msgstr "Тип обоев:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:154
+#: contents/configuration/ConfigurationContainmentAppearance.qml:153
 #, kde-format
 msgid "Get New Plugins…"
 msgstr "Загрузить новые модули..."
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:244
+#: contents/configuration/ConfigurationContainmentAppearance.qml:243
 #, kde-format
 msgid "Layout changes must be applied before other changes can be made"
 msgstr ""
 "Изменение типа комнаты необходимо применить перед редактированием других "
 "параметров."
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:248
+#: contents/configuration/ConfigurationContainmentAppearance.qml:247
 #, kde-format
 msgid "Apply Now"
 msgstr "Применить сейчас"
 
-#: contents/configuration/ConfigurationShortcuts.qml:18
+#: contents/configuration/ConfigurationShortcuts.qml:16
 #, kde-format
 msgid "Shortcuts"
 msgstr "Комбинации клавиш"
 
-#: contents/configuration/ConfigurationShortcuts.qml:31
+#: contents/configuration/ConfigurationShortcuts.qml:29
 #, kde-format
 msgctxt "@action:button set keyboard shortcut for"
 msgid "Activate widget as if clicked:"
 msgstr "Активировать виджет по щелчку как:"
 
-#: contents/configuration/ContainmentConfiguration.qml:27
+#: contents/configuration/ContainmentConfiguration.qml:26
 #, kde-format
 msgid "Wallpaper"
 msgstr "Обои"
 
-#: contents/configuration/ContainmentConfiguration.qml:32
+#: contents/configuration/ContainmentConfiguration.qml:31
 #, kde-format
 msgid "Mouse Actions"
 msgstr "Действия мыши"
@@ -318,12 +308,12 @@ msgstr "Действия мыши"
 msgid "Input Here"
 msgstr "Нажимайте здесь"
 
-#: contents/configuration/PanelConfiguration.qml:100
+#: contents/configuration/PanelConfiguration.qml:99
 #, kde-format
 msgid "Panel Settings"
 msgstr "Параметры панели"
 
-#: contents/configuration/PanelConfiguration.qml:109
+#: contents/configuration/PanelConfiguration.qml:108
 #, kde-format
 msgctxt ""
 "@action:button label of button to open a menu that lets you add widgets or "
@@ -331,262 +321,262 @@ msgctxt ""
 msgid "Add New"
 msgstr "Добавить"
 
-#: contents/configuration/PanelConfiguration.qml:127
+#: contents/configuration/PanelConfiguration.qml:126
 #, kde-format
 msgctxt "@action:menu add a spacer"
 msgid "Spacer"
 msgstr "Разделитель"
 
-#: contents/configuration/PanelConfiguration.qml:134
+#: contents/configuration/PanelConfiguration.qml:133
 #, kde-format
 msgctxt "@action:menu add a widget"
 msgid "Widgets…"
 msgstr "Виджеты…"
 
-#: contents/configuration/PanelConfiguration.qml:163
+#: contents/configuration/PanelConfiguration.qml:162
 #, kde-format
 msgid "Position"
 msgstr "Расположение"
 
-#: contents/configuration/PanelConfiguration.qml:168
-#: contents/configuration/PanelConfiguration.qml:283
+#: contents/configuration/PanelConfiguration.qml:167
+#: contents/configuration/PanelConfiguration.qml:282
 #, kde-format
 msgid "Top"
 msgstr "Сверху"
 
-#: contents/configuration/PanelConfiguration.qml:169
-#: contents/configuration/PanelConfiguration.qml:285
+#: contents/configuration/PanelConfiguration.qml:168
+#: contents/configuration/PanelConfiguration.qml:284
 #, kde-format
 msgid "Right"
 msgstr "Справа"
 
-#: contents/configuration/PanelConfiguration.qml:170
-#: contents/configuration/PanelConfiguration.qml:283
+#: contents/configuration/PanelConfiguration.qml:169
+#: contents/configuration/PanelConfiguration.qml:282
 #, kde-format
 msgid "Left"
 msgstr "Слева"
 
-#: contents/configuration/PanelConfiguration.qml:171
-#: contents/configuration/PanelConfiguration.qml:285
+#: contents/configuration/PanelConfiguration.qml:170
+#: contents/configuration/PanelConfiguration.qml:284
 #, kde-format
 msgid "Bottom"
 msgstr "Снизу"
 
-#: contents/configuration/PanelConfiguration.qml:191
+#: contents/configuration/PanelConfiguration.qml:190
 #, kde-format
 msgid "Set Position…"
 msgstr "Расположение…"
 
-#: contents/configuration/PanelConfiguration.qml:218
+#: contents/configuration/PanelConfiguration.qml:217
 #, kde-format
 msgid "Alignment"
 msgstr "Выравнивание"
 
-#: contents/configuration/PanelConfiguration.qml:284
+#: contents/configuration/PanelConfiguration.qml:283
 #, kde-format
 msgid "Center"
 msgstr "По центру"
 
-#: contents/configuration/PanelConfiguration.qml:315
+#: contents/configuration/PanelConfiguration.qml:314
 #, kde-format
 msgid "Height"
 msgstr "Высота:"
 
-#: contents/configuration/PanelConfiguration.qml:316
+#: contents/configuration/PanelConfiguration.qml:315
 #, kde-format
 msgid "Width"
 msgstr "Ширина"
 
-#: contents/configuration/PanelConfiguration.qml:335
+#: contents/configuration/PanelConfiguration.qml:334
 #, kde-format
 msgid "Fill height"
 msgstr "Во всю высоту"
 
-#: contents/configuration/PanelConfiguration.qml:335
+#: contents/configuration/PanelConfiguration.qml:334
 #, kde-format
 msgid "Fill width"
 msgstr "Во всю ширину"
 
-#: contents/configuration/PanelConfiguration.qml:336
+#: contents/configuration/PanelConfiguration.qml:335
 #, kde-format
 msgid "Fit content"
 msgstr "По содержимому"
 
-#: contents/configuration/PanelConfiguration.qml:337
+#: contents/configuration/PanelConfiguration.qml:336
 #, kde-format
 msgid "Custom"
 msgstr "Другое"
 
-#: contents/configuration/PanelConfiguration.qml:370
+#: contents/configuration/PanelConfiguration.qml:369
 #, kde-format
 msgid "Visibility"
 msgstr "Видимость"
 
-#: contents/configuration/PanelConfiguration.qml:388
+#: contents/configuration/PanelConfiguration.qml:387
 #, kde-format
 msgid "Always visible"
 msgstr "Показывать всегда"
 
-#: contents/configuration/PanelConfiguration.qml:389
+#: contents/configuration/PanelConfiguration.qml:388
 #, kde-format
 msgid "Auto hide"
 msgstr "Автосокрытие"
 
-#: contents/configuration/PanelConfiguration.qml:390
+#: contents/configuration/PanelConfiguration.qml:389
 #, kde-format
 msgid "Dodge windows"
 msgstr "Скрывать под окнами"
 
-#: contents/configuration/PanelConfiguration.qml:391
+#: contents/configuration/PanelConfiguration.qml:390
 #, kde-format
 msgid "Windows go below"
 msgstr "Перекрывать другие окна"
 
-#: contents/configuration/PanelConfiguration.qml:451
+#: contents/configuration/PanelConfiguration.qml:450
 #, kde-format
 msgid "Opacity"
 msgstr "Непрозрачность"
 
-#: contents/configuration/PanelConfiguration.qml:467
+#: contents/configuration/PanelConfiguration.qml:466
 #, kde-format
 msgid "Adaptive"
 msgstr "Адаптивно"
 
-#: contents/configuration/PanelConfiguration.qml:468
+#: contents/configuration/PanelConfiguration.qml:467
 #, kde-format
 msgid "Opaque"
 msgstr "Непрозрачно"
 
-#: contents/configuration/PanelConfiguration.qml:469
+#: contents/configuration/PanelConfiguration.qml:468
 #, kde-format
 msgid "Translucent"
 msgstr "Полупрозрачно"
 
-#: contents/configuration/PanelConfiguration.qml:501
+#: contents/configuration/PanelConfiguration.qml:500
 #, kde-format
 msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
 msgstr "Плавание"
 
-#: contents/configuration/PanelConfiguration.qml:517
+#: contents/configuration/PanelConfiguration.qml:516
 #, kde-format
 msgctxt "@item:inlistbox Option to disable floating panels or applets"
 msgid "Disabled"
 msgstr "Отключено"
 
-#: contents/configuration/PanelConfiguration.qml:518
+#: contents/configuration/PanelConfiguration.qml:517
 #, kde-format
 msgctxt "@item:inlistbox Option to make only panel applets always float"
 msgid "Applets only"
 msgstr "Только виджеты"
 
-#: contents/configuration/PanelConfiguration.qml:519
+#: contents/configuration/PanelConfiguration.qml:518
 #, kde-format
 msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
 msgstr "Панель и виджеты"
 
-#: contents/configuration/PanelConfiguration.qml:562
+#: contents/configuration/PanelConfiguration.qml:561
 #, kde-format
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
 msgstr "Исправить"
 
-#: contents/configuration/PanelConfiguration.qml:648
+#: contents/configuration/PanelConfiguration.qml:647
 #, kde-format
 msgid "Panel Width:"
 msgstr "Ширина панели:"
 
-#: contents/configuration/PanelConfiguration.qml:649
+#: contents/configuration/PanelConfiguration.qml:648
 #, kde-format
 msgid "Panel Height:"
 msgstr "Высота панели:"
 
-#: contents/configuration/PanelConfiguration.qml:672
+#: contents/configuration/PanelConfiguration.qml:671
 #, kde-format
 msgid "Focus shortcut:"
 msgstr "Комбинация переключения в панель:"
 
-#: contents/configuration/PanelConfiguration.qml:683
+#: contents/configuration/PanelConfiguration.qml:682
 #, kde-format
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr ""
 "Используйте эту комбинацию клавиш для переключения фокуса ввода в панель"
 
-#: contents/configuration/PanelConfiguration.qml:717
+#: contents/configuration/PanelConfiguration.qml:716
 #, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Удалить панель"
 
-#: contents/configuration/PanelConfiguration.qml:720
+#: contents/configuration/PanelConfiguration.qml:719
 #, kde-format
 msgid "Remove this panel; this action is undo-able"
 msgstr "Удалить панель, необратимое действие"
 
-#: contents/configuration/PanelConfiguration.qml:729
+#: contents/configuration/PanelConfiguration.qml:728
 #, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
 msgstr "Дублировать панель"
 
-#: contents/configuration/PanelConfiguration.qml:733
+#: contents/configuration/PanelConfiguration.qml:732
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
 msgstr "Создать панель с такими же виджетами и настройками"
 
-#: contents/configuration/PanelConfiguration.qml:742
+#: contents/configuration/PanelConfiguration.qml:741
 #, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Закрыть"
 
-#: contents/configuration/PanelConfiguration.qml:742
+#: contents/configuration/PanelConfiguration.qml:741
 #, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
 msgstr "Выйти из режима редактирования"
 
-#: contents/configuration/PanelConfiguration.qml:745
+#: contents/configuration/PanelConfiguration.qml:744
 #, kde-format
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "Закрыть панель настройки и выйти из режима редактирования"
 
-#: contents/configuration/panelconfiguration/Ruler.qml:32
+#: contents/configuration/panelconfiguration/Ruler.qml:25
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum height."
 msgstr "Перетаскивайте для изменения максимальной высоты."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:33
+#: contents/configuration/panelconfiguration/Ruler.qml:26
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum width."
 msgstr "Перетаскивайте для изменения максимальной ширины."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:34
-#: contents/configuration/panelconfiguration/Ruler.qml:39
+#: contents/configuration/panelconfiguration/Ruler.qml:27
+#: contents/configuration/panelconfiguration/Ruler.qml:32
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Double-click to reset."
 msgstr "Двойной щелчок для отмены."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:37
+#: contents/configuration/panelconfiguration/Ruler.qml:30
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum height."
 msgstr "Перетаскивайте для изменения минимальной высоты."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:38
+#: contents/configuration/panelconfiguration/Ruler.qml:31
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr "Перетаскивайте для изменения минимальной ширины."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:87
+#: contents/configuration/panelconfiguration/Ruler.qml:80
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid ""
@@ -765,65 +755,65 @@ msgstr[1] "Удалить %1 виджета"
 msgstr[2] "Удалить %1 виджетов"
 msgstr[3] "Удалить виджет"
 
-#: contents/explorer/WidgetExplorer.qml:388
+#: contents/explorer/WidgetExplorer.qml:389
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "Не найдено ни одного виджета, удовлетворяющего критериям поиска"
 
-#: contents/explorer/WidgetExplorer.qml:388
+#: contents/explorer/WidgetExplorer.qml:389
 #, kde-format
 msgid "No widgets available"
 msgstr "Виджеты не найдены"
 
-#: contents/lockscreen/config.qml:24
+#: contents/lockscreen/config.qml:23
 #, kde-format
 msgctxt "@title: group"
 msgid "Show clock:"
 msgstr "Показывать часы:"
 
-#: contents/lockscreen/config.qml:25
+#: contents/lockscreen/config.qml:24
 #, kde-format
 msgctxt "@option:radio Clock always shown"
 msgid "Always"
 msgstr "Всегда"
 
-#: contents/lockscreen/config.qml:26
+#: contents/lockscreen/config.qml:25
 #, kde-format
 msgctxt "@option:radio"
 msgid "Always show clock"
 msgstr "Всегда показывать часы"
 
-#: contents/lockscreen/config.qml:41
+#: contents/lockscreen/config.qml:40
 #, kde-format
 msgctxt "@option:radio Clock shown only while unlock prompt is visible"
 msgid "On unlocking prompt"
 msgstr "Показывать под строкой ввода пароля"
 
-#: contents/lockscreen/config.qml:42
+#: contents/lockscreen/config.qml:41
 #, kde-format
 msgctxt "@option:radio"
 msgid "Show clock only on unlocking prompt"
 msgstr "Показывать только под строкой ввода пароля"
 
-#: contents/lockscreen/config.qml:55
+#: contents/lockscreen/config.qml:54
 #, kde-format
 msgctxt "@option:radio Clock never shown"
 msgid "Never"
 msgstr "Никогда"
 
-#: contents/lockscreen/config.qml:56
+#: contents/lockscreen/config.qml:55
 #, kde-format
 msgctxt "@option:radio"
 msgid "Never show clock"
 msgstr "Никогда не показывать часы"
 
-#: contents/lockscreen/config.qml:71
+#: contents/lockscreen/config.qml:70
 #, kde-format
 msgctxt "@title: group UI controls for playback of multimedia content"
 msgid "Media controls:"
 msgstr "Элементы управления проигрывателем:"
 
-#: contents/lockscreen/config.qml:74
+#: contents/lockscreen/config.qml:73
 #, kde-format
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
@@ -912,13 +902,13 @@ msgstr "Начать или приостановить воспроизведе�
 msgid "Next track"
 msgstr "Следующая дорожка"
 
-#: contents/views/DesktopEditMode.qml:121
+#: contents/views/DesktopEditMode.qml:122
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
 msgstr "Дополнительно"
 
-#: contents/views/DesktopEditMode.qml:130
+#: contents/views/DesktopEditMode.qml:131
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Выйти из режима редактирования"
@@ -927,6 +917,12 @@ msgstr "Выйти из режима редактирования"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Индикатор получения фокуса панелью"
+
+#~ msgid "Configure activity"
+#~ msgstr "Настроить комнату"
+
+#~ msgid "Delete"
+#~ msgstr "Удалить"
 
 #~ msgid "Stopped activities:"
 #~ msgstr "Остановленные комнаты:"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-23 00:44+0000\n"
+"POT-Creation-Date: 2025-12-10 00:45+0000\n"
 "PO-Revision-Date: 2025-09-20 02:43+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -48,7 +48,7 @@ msgstr ""
 msgid "Configure"
 msgstr "Konfiguratu"
 
-#: contents/activitymanager/ActivityManager.qml:122
+#: contents/activitymanager/ActivityManager.qml:118
 #, kde-format
 msgid "Create activity…"
 msgstr "Sortu jarduera…"
@@ -58,22 +58,12 @@ msgstr "Sortu jarduera…"
 msgid "Activities"
 msgstr "Jarduerak"
 
-#: contents/activitymanager/StoppedActivityItem.qml:138
-#, kde-format
-msgid "Configure activity"
-msgstr "Konfiguratu jarduera"
-
-#: contents/activitymanager/StoppedActivityItem.qml:155
-#, kde-format
-msgid "Delete"
-msgstr "Ezabatu"
-
-#: contents/applet/AppletError.qml:164
+#: contents/applet/AppletError.qml:165
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Kopiatu arbelera"
 
-#: contents/applet/AppletError.qml:187
+#: contents/applet/AppletError.qml:188
 #, kde-format
 msgid "View Error Details…"
 msgstr "Ikusi erroreen xehetasunak…"
@@ -138,12 +128,12 @@ msgstr "Irakurri lizentzia"
 msgid "Authors"
 msgstr "Egileak"
 
-#: contents/configuration/AboutPlugin.qml:224
+#: contents/configuration/AboutPlugin.qml:223
 #, kde-format
 msgid "Credits"
 msgstr "Merituak"
 
-#: contents/configuration/AboutPlugin.qml:238
+#: contents/configuration/AboutPlugin.qml:236
 #, kde-format
 msgid "Translators"
 msgstr "Itzultzaileak"
@@ -181,126 +171,126 @@ msgstr "Ezarri"
 msgid "Cancel"
 msgstr "Utzi"
 
-#: contents/configuration/ConfigCategoryDelegate.qml:27
+#: contents/configuration/ConfigCategoryDelegate.qml:26
 #, kde-format
 msgid "Open configuration page"
 msgstr "Ireki konfiguratzeko orria"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:20
+#: contents/configuration/ConfigurationContainmentActions.qml:19
 #, kde-format
 msgid "Left-Button"
 msgstr "Ezkerreko botoia"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:21
+#: contents/configuration/ConfigurationContainmentActions.qml:20
 #, kde-format
 msgid "Right-Button"
 msgstr "Eskuineko botoia"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:22
+#: contents/configuration/ConfigurationContainmentActions.qml:21
 #, kde-format
 msgid "Middle-Button"
 msgstr "Erdiko botoia"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:23
+#: contents/configuration/ConfigurationContainmentActions.qml:22
 #, kde-format
 msgid "Back-Button"
 msgstr "Atzera botoia"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:24
+#: contents/configuration/ConfigurationContainmentActions.qml:23
 #, kde-format
 msgid "Forward-Button"
 msgstr "Aurrera botoia"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:26
+#: contents/configuration/ConfigurationContainmentActions.qml:25
 #, kde-format
 msgid "Vertical-Scroll"
 msgstr "Labaintze bertikala"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:27
+#: contents/configuration/ConfigurationContainmentActions.qml:26
 #, kde-format
 msgid "Horizontal-Scroll"
 msgstr "Labaintze horizontala"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:29
+#: contents/configuration/ConfigurationContainmentActions.qml:28
 #, kde-format
 msgid "Shift"
 msgstr "Maius"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:30
+#: contents/configuration/ConfigurationContainmentActions.qml:29
 #, kde-format
 msgid "Ctrl"
 msgstr "Ktrl"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:31
+#: contents/configuration/ConfigurationContainmentActions.qml:30
 #, kde-format
 msgid "Alt"
 msgstr "Alt"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:32
+#: contents/configuration/ConfigurationContainmentActions.qml:31
 #, kde-format
 msgid "Meta"
 msgstr "Meta"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:73
+#: contents/configuration/ConfigurationContainmentActions.qml:72
 #, kde-format
 msgctxt "Concatenation sign for shortcuts, e.g. Ctrl+Shift"
 msgid "+"
 msgstr "+"
 
-#: contents/configuration/ConfigurationContainmentActions.qml:142
+#: contents/configuration/ConfigurationContainmentActions.qml:139
 #: contents/configuration/MouseEventInputButton.qml:13
 #, kde-format
 msgid "Add Action"
 msgstr "Gehitu ekintza"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:77
+#: contents/configuration/ConfigurationContainmentAppearance.qml:76
 #, kde-format
 msgid "Layout changes have been restricted by the system administrator"
 msgstr "Antolamendu aldaketak mugatu ditu sistemako administratzaileak"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:92
+#: contents/configuration/ConfigurationContainmentAppearance.qml:91
 #, kde-format
 msgid "Layout:"
 msgstr "Antolamendua:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:115
+#: contents/configuration/ConfigurationContainmentAppearance.qml:114
 #, kde-format
 msgid "Wallpaper type:"
 msgstr "Horma-paper mota:"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:154
+#: contents/configuration/ConfigurationContainmentAppearance.qml:153
 #, kde-format
 msgid "Get New Plugins…"
 msgstr "Lortu plugin berriak…"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:244
+#: contents/configuration/ConfigurationContainmentAppearance.qml:243
 #, kde-format
 msgid "Layout changes must be applied before other changes can be made"
 msgstr ""
 "Antolamendu aldaketak ezarri behar dira beste aldaketak egin ahal izateko"
 
-#: contents/configuration/ConfigurationContainmentAppearance.qml:248
+#: contents/configuration/ConfigurationContainmentAppearance.qml:247
 #, kde-format
 msgid "Apply Now"
 msgstr "Ezarri orain"
 
-#: contents/configuration/ConfigurationShortcuts.qml:18
+#: contents/configuration/ConfigurationShortcuts.qml:16
 #, kde-format
 msgid "Shortcuts"
 msgstr "Lasterbideak"
 
-#: contents/configuration/ConfigurationShortcuts.qml:31
+#: contents/configuration/ConfigurationShortcuts.qml:29
 #, kde-format
 msgctxt "@action:button set keyboard shortcut for"
 msgid "Activate widget as if clicked:"
 msgstr "Aktibatu trepeta klik egin balitzaio bezala:"
 
-#: contents/configuration/ContainmentConfiguration.qml:27
+#: contents/configuration/ContainmentConfiguration.qml:26
 #, kde-format
 msgid "Wallpaper"
 msgstr "Horma-papera"
 
-#: contents/configuration/ContainmentConfiguration.qml:32
+#: contents/configuration/ContainmentConfiguration.qml:31
 #, kde-format
 msgid "Mouse Actions"
 msgstr "Saguaren ekintzak"
@@ -310,12 +300,12 @@ msgstr "Saguaren ekintzak"
 msgid "Input Here"
 msgstr "Datu sarrera hemen"
 
-#: contents/configuration/PanelConfiguration.qml:100
+#: contents/configuration/PanelConfiguration.qml:99
 #, kde-format
 msgid "Panel Settings"
 msgstr "Panelaren ezarpenak"
 
-#: contents/configuration/PanelConfiguration.qml:109
+#: contents/configuration/PanelConfiguration.qml:108
 #, kde-format
 msgctxt ""
 "@action:button label of button to open a menu that lets you add widgets or "
@@ -323,261 +313,261 @@ msgctxt ""
 msgid "Add New"
 msgstr "Gehitu berria"
 
-#: contents/configuration/PanelConfiguration.qml:127
+#: contents/configuration/PanelConfiguration.qml:126
 #, kde-format
 msgctxt "@action:menu add a spacer"
 msgid "Spacer"
 msgstr "Bereizlea"
 
-#: contents/configuration/PanelConfiguration.qml:134
+#: contents/configuration/PanelConfiguration.qml:133
 #, kde-format
 msgctxt "@action:menu add a widget"
 msgid "Widgets…"
 msgstr "Trepetak…"
 
-#: contents/configuration/PanelConfiguration.qml:163
+#: contents/configuration/PanelConfiguration.qml:162
 #, kde-format
 msgid "Position"
 msgstr "kokapena"
 
-#: contents/configuration/PanelConfiguration.qml:168
-#: contents/configuration/PanelConfiguration.qml:283
+#: contents/configuration/PanelConfiguration.qml:167
+#: contents/configuration/PanelConfiguration.qml:282
 #, kde-format
 msgid "Top"
 msgstr "Goian"
 
-#: contents/configuration/PanelConfiguration.qml:169
-#: contents/configuration/PanelConfiguration.qml:285
+#: contents/configuration/PanelConfiguration.qml:168
+#: contents/configuration/PanelConfiguration.qml:284
 #, kde-format
 msgid "Right"
 msgstr "Eskuinean"
 
-#: contents/configuration/PanelConfiguration.qml:170
-#: contents/configuration/PanelConfiguration.qml:283
+#: contents/configuration/PanelConfiguration.qml:169
+#: contents/configuration/PanelConfiguration.qml:282
 #, kde-format
 msgid "Left"
 msgstr "Ezkerrean"
 
-#: contents/configuration/PanelConfiguration.qml:171
-#: contents/configuration/PanelConfiguration.qml:285
+#: contents/configuration/PanelConfiguration.qml:170
+#: contents/configuration/PanelConfiguration.qml:284
 #, kde-format
 msgid "Bottom"
 msgstr "Behean"
 
-#: contents/configuration/PanelConfiguration.qml:191
+#: contents/configuration/PanelConfiguration.qml:190
 #, kde-format
 msgid "Set Position…"
 msgstr "Ezarri kokapena…"
 
-#: contents/configuration/PanelConfiguration.qml:218
+#: contents/configuration/PanelConfiguration.qml:217
 #, kde-format
 msgid "Alignment"
 msgstr "Lerrokatzea"
 
-#: contents/configuration/PanelConfiguration.qml:284
+#: contents/configuration/PanelConfiguration.qml:283
 #, kde-format
 msgid "Center"
 msgstr "Erdian"
 
-#: contents/configuration/PanelConfiguration.qml:315
+#: contents/configuration/PanelConfiguration.qml:314
 #, kde-format
 msgid "Height"
 msgstr "Altuera"
 
-#: contents/configuration/PanelConfiguration.qml:316
+#: contents/configuration/PanelConfiguration.qml:315
 #, kde-format
 msgid "Width"
 msgstr "Zabalera"
 
-#: contents/configuration/PanelConfiguration.qml:335
+#: contents/configuration/PanelConfiguration.qml:334
 #, kde-format
 msgid "Fill height"
 msgstr "Bete altuera"
 
-#: contents/configuration/PanelConfiguration.qml:335
+#: contents/configuration/PanelConfiguration.qml:334
 #, kde-format
 msgid "Fill width"
 msgstr "Bete zabalera"
 
-#: contents/configuration/PanelConfiguration.qml:336
+#: contents/configuration/PanelConfiguration.qml:335
 #, kde-format
 msgid "Fit content"
 msgstr "Egokitu edukia"
 
-#: contents/configuration/PanelConfiguration.qml:337
+#: contents/configuration/PanelConfiguration.qml:336
 #, kde-format
 msgid "Custom"
 msgstr "Neurrira"
 
-#: contents/configuration/PanelConfiguration.qml:370
+#: contents/configuration/PanelConfiguration.qml:369
 #, kde-format
 msgid "Visibility"
 msgstr "Ikusgaitasuna"
 
-#: contents/configuration/PanelConfiguration.qml:388
+#: contents/configuration/PanelConfiguration.qml:387
 #, kde-format
 msgid "Always visible"
 msgstr "Beti ikusgai"
 
-#: contents/configuration/PanelConfiguration.qml:389
+#: contents/configuration/PanelConfiguration.qml:388
 #, kde-format
 msgid "Auto hide"
 msgstr "Automatikoki ezkutatzea"
 
-#: contents/configuration/PanelConfiguration.qml:390
+#: contents/configuration/PanelConfiguration.qml:389
 #, kde-format
 msgid "Dodge windows"
 msgstr "Saihestu leihoak"
 
-#: contents/configuration/PanelConfiguration.qml:391
+#: contents/configuration/PanelConfiguration.qml:390
 #, kde-format
 msgid "Windows go below"
 msgstr "Leihoak azpira doaz"
 
-#: contents/configuration/PanelConfiguration.qml:451
+#: contents/configuration/PanelConfiguration.qml:450
 #, kde-format
 msgid "Opacity"
 msgstr "Opakutasuna"
 
-#: contents/configuration/PanelConfiguration.qml:467
+#: contents/configuration/PanelConfiguration.qml:466
 #, kde-format
 msgid "Adaptive"
 msgstr "Moldakorra"
 
-#: contents/configuration/PanelConfiguration.qml:468
+#: contents/configuration/PanelConfiguration.qml:467
 #, kde-format
 msgid "Opaque"
 msgstr "Opakua"
 
-#: contents/configuration/PanelConfiguration.qml:469
+#: contents/configuration/PanelConfiguration.qml:468
 #, kde-format
 msgid "Translucent"
 msgstr "Zeharrargitsua"
 
-#: contents/configuration/PanelConfiguration.qml:501
+#: contents/configuration/PanelConfiguration.qml:500
 #, kde-format
 msgctxt "@title:group Degree of floatingness of panel and applets"
 msgid "Floating"
 msgstr "Higikorra"
 
-#: contents/configuration/PanelConfiguration.qml:517
+#: contents/configuration/PanelConfiguration.qml:516
 #, kde-format
 msgctxt "@item:inlistbox Option to disable floating panels or applets"
 msgid "Disabled"
 msgstr "Ezgaituta"
 
-#: contents/configuration/PanelConfiguration.qml:518
+#: contents/configuration/PanelConfiguration.qml:517
 #, kde-format
 msgctxt "@item:inlistbox Option to make only panel applets always float"
 msgid "Applets only"
 msgstr "Aplikaziotxoak bakarrik"
 
-#: contents/configuration/PanelConfiguration.qml:519
+#: contents/configuration/PanelConfiguration.qml:518
 #, kde-format
 msgctxt "@item:inlistbox Option to make panel and applets floating"
 msgid "Panel and applets"
 msgstr "Panelak eta aplikaziotxoak"
 
-#: contents/configuration/PanelConfiguration.qml:562
+#: contents/configuration/PanelConfiguration.qml:561
 #, kde-format
 msgctxt ""
 "@action:button Revert an unsupported configuration back to the defaults"
 msgid "Fix it"
 msgstr "Konpondu"
 
-#: contents/configuration/PanelConfiguration.qml:648
+#: contents/configuration/PanelConfiguration.qml:647
 #, kde-format
 msgid "Panel Width:"
 msgstr "Panelaren zabalera:"
 
-#: contents/configuration/PanelConfiguration.qml:649
+#: contents/configuration/PanelConfiguration.qml:648
 #, kde-format
 msgid "Panel Height:"
 msgstr "Panelaren altuera:"
 
-#: contents/configuration/PanelConfiguration.qml:672
+#: contents/configuration/PanelConfiguration.qml:671
 #, kde-format
 msgid "Focus shortcut:"
 msgstr "Fokuratzeko lasterbidea:"
 
-#: contents/configuration/PanelConfiguration.qml:683
+#: contents/configuration/PanelConfiguration.qml:682
 #, kde-format
 msgid "Press this keyboard shortcut to move focus to the Panel"
 msgstr "Sakatu teklatuko lasterbide hau fokua Panelera eramateko"
 
-#: contents/configuration/PanelConfiguration.qml:717
+#: contents/configuration/PanelConfiguration.qml:716
 #, kde-format
 msgctxt "@action:button Delete the panel"
 msgid "Delete Panel"
 msgstr "Ezabatu panela"
 
-#: contents/configuration/PanelConfiguration.qml:720
+#: contents/configuration/PanelConfiguration.qml:719
 #, kde-format
 msgid "Remove this panel; this action is undo-able"
 msgstr "Kendu panel hau; ekintza hau desegin daiteke"
 
-#: contents/configuration/PanelConfiguration.qml:729
+#: contents/configuration/PanelConfiguration.qml:728
 #, kde-format
 msgctxt "@action:button Clone the panel"
 msgid "Clone Panel"
 msgstr "Klonatu panela"
 
-#: contents/configuration/PanelConfiguration.qml:733
+#: contents/configuration/PanelConfiguration.qml:732
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Create a new panel with the same settings and applets"
 msgstr "Sortu panel berri bat ezarpen eta aplikaziotxo berdinekin"
 
-#: contents/configuration/PanelConfiguration.qml:742
+#: contents/configuration/PanelConfiguration.qml:741
 #, kde-format
 msgctxt "@action:button Close the panel configuration window"
 msgid "Close"
 msgstr "Itxi"
 
-#: contents/configuration/PanelConfiguration.qml:742
+#: contents/configuration/PanelConfiguration.qml:741
 #, kde-format
 msgctxt ""
 "@action:button Close the panel configuration window and exit edit mode"
 msgid "Exit Edit Mode"
 msgstr "Irten editatzeko modutik"
 
-#: contents/configuration/PanelConfiguration.qml:745
+#: contents/configuration/PanelConfiguration.qml:744
 #, kde-format
 msgid "Close Panel Settings window and exit Edit Mode"
 msgstr "Itxi Panelaren ezarpenak leihoa eta irten editatzeko modutik"
 
-#: contents/configuration/panelconfiguration/Ruler.qml:32
+#: contents/configuration/panelconfiguration/Ruler.qml:25
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum height."
 msgstr "Arrastatu gehienezko altuera aldatzeko."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:33
+#: contents/configuration/panelconfiguration/Ruler.qml:26
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change maximum width."
 msgstr "Arrastatu gehienezko zabalera aldatzeko."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:34
-#: contents/configuration/panelconfiguration/Ruler.qml:39
+#: contents/configuration/panelconfiguration/Ruler.qml:27
+#: contents/configuration/panelconfiguration/Ruler.qml:32
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Double-click to reset."
 msgstr "Egin klik bikoitza berrezartzeko."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:37
+#: contents/configuration/panelconfiguration/Ruler.qml:30
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum height."
 msgstr "Arrastatu gutxieneko altuera aldatzeko."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:38
+#: contents/configuration/panelconfiguration/Ruler.qml:31
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid "Drag to change minimum width."
 msgstr "Arrastatu gutxieneko zabalera aldatzeko."
 
-#: contents/configuration/panelconfiguration/Ruler.qml:87
+#: contents/configuration/panelconfiguration/Ruler.qml:80
 #, kde-format
 msgctxt "@info:tooltip slider handle"
 msgid ""
@@ -752,65 +742,65 @@ msgid_plural "Uninstall (%1 Widgets)"
 msgstr[0] "Desinstalatu (trepeta %1)"
 msgstr[1] "Desinstalatu (%1 trepeta)"
 
-#: contents/explorer/WidgetExplorer.qml:388
+#: contents/explorer/WidgetExplorer.qml:389
 #, kde-format
 msgid "No widgets matched the search terms"
 msgstr "Ez dago bilatutako terminoekin bat datorren trepetarik"
 
-#: contents/explorer/WidgetExplorer.qml:388
+#: contents/explorer/WidgetExplorer.qml:389
 #, kde-format
 msgid "No widgets available"
 msgstr "Ez dago trepeta erabilgarririk"
 
-#: contents/lockscreen/config.qml:24
+#: contents/lockscreen/config.qml:23
 #, kde-format
 msgctxt "@title: group"
 msgid "Show clock:"
 msgstr "Erakutsi erlojua:"
 
-#: contents/lockscreen/config.qml:25
+#: contents/lockscreen/config.qml:24
 #, kde-format
 msgctxt "@option:radio Clock always shown"
 msgid "Always"
 msgstr "Beti"
 
-#: contents/lockscreen/config.qml:26
+#: contents/lockscreen/config.qml:25
 #, kde-format
 msgctxt "@option:radio"
 msgid "Always show clock"
 msgstr "Erakutsi beti erlojua"
 
-#: contents/lockscreen/config.qml:41
+#: contents/lockscreen/config.qml:40
 #, kde-format
 msgctxt "@option:radio Clock shown only while unlock prompt is visible"
 msgid "On unlocking prompt"
 msgstr "Giltzapetik askatzeko gonbitean"
 
-#: contents/lockscreen/config.qml:42
+#: contents/lockscreen/config.qml:41
 #, kde-format
 msgctxt "@option:radio"
 msgid "Show clock only on unlocking prompt"
 msgstr "Erakutsi erlojua giltzapetik askatzeko gonbitean bakarrik"
 
-#: contents/lockscreen/config.qml:55
+#: contents/lockscreen/config.qml:54
 #, kde-format
 msgctxt "@option:radio Clock never shown"
 msgid "Never"
 msgstr "Inoiz ez"
 
-#: contents/lockscreen/config.qml:56
+#: contents/lockscreen/config.qml:55
 #, kde-format
 msgctxt "@option:radio"
 msgid "Never show clock"
 msgstr "Ez erakutsi erlojua inoiz"
 
-#: contents/lockscreen/config.qml:71
+#: contents/lockscreen/config.qml:70
 #, kde-format
 msgctxt "@title: group UI controls for playback of multimedia content"
 msgid "Media controls:"
 msgstr "Hedabide-aginteak:"
 
-#: contents/lockscreen/config.qml:74
+#: contents/lockscreen/config.qml:73
 #, kde-format
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
@@ -899,13 +889,13 @@ msgstr "Hedabidea jotzea edo etetea"
 msgid "Next track"
 msgstr "Hurrengo pista"
 
-#: contents/views/DesktopEditMode.qml:121
+#: contents/views/DesktopEditMode.qml:122
 #, kde-format
 msgctxt "@action:button"
 msgid "More"
 msgstr "Gehiago"
 
-#: contents/views/DesktopEditMode.qml:130
+#: contents/views/DesktopEditMode.qml:131
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Irten editatzeko modutik"
@@ -914,6 +904,12 @@ msgstr "Irten editatzeko modutik"
 #, kde-format
 msgid "Panel Focus Indicator"
 msgstr "Panelaren fokuaren adierazlea"
+
+#~ msgid "Configure activity"
+#~ msgstr "Konfiguratu jarduera"
+
+#~ msgid "Delete"
+#~ msgstr "Ezabatu"
 
 #~ msgid "Stopped activities:"
 #~ msgstr "Gelditutako jarduerak:"

@@ -1,6 +1,6 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2015, 2017, 2019, 2020, 2024 Vít Pelčák <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2014, 2015, 2017, 2019, 2020, 2024, 2025 Vít Pelčák <vit@pelcak.org>
 # SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-24 00:44+0000\n"
-"PO-Revision-Date: 2025-10-02 09:33+0200\n"
+"PO-Revision-Date: 2025-12-05 11:05+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.08.3\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -145,13 +145,13 @@ msgstr "Invertovat systémové barvy při zvonění"
 #: kcmaccessibilitybell.kcfg:28
 #, kde-format
 msgid "Color of the Visual Bell"
-msgstr ""
+msgstr "Barva viditelného zvonku"
 
 #. i18n: ectx: label, entry (VisibleBellPause), group (Bell)
 #: kcmaccessibilitybell.kcfg:32
 #, kde-format
 msgid "Duration of the Visual Bell"
-msgstr ""
+msgstr "Doba trvání viditelného zvonku"
 
 #. i18n: ectx: label, entry (ColorblindnessCorrection), group (Plugins)
 #: kcmaccessibilitycolorblindnesscorrection.kcfg:13
@@ -163,7 +163,7 @@ msgstr "Zda je povolena oprava barvosleposti"
 #: kcmaccessibilityinvert.kcfg:9
 #, kde-format
 msgid "Whether the Invert effect is enabled"
-msgstr ""
+msgstr "Zda je povolen efekt Inverze"
 
 #. i18n: ectx: label, entry (StickyKeys), group (Keyboard)
 #: kcmaccessibilitykeyboard.kcfg:9
@@ -308,13 +308,13 @@ msgstr "Zvětšení"
 #: kcmaccessibilityzoommagnifier.kcfg:9
 #, kde-format
 msgid "Whether the Zoom effect is enabled"
-msgstr ""
+msgstr "Zda je povolen efekt přiblížení"
 
 #. i18n: ectx: label, entry (Magnifier), group (Plugins)
 #: kcmaccessibilityzoommagnifier.kcfg:13
 #, kde-format
 msgid "Whether the Magnifier effect is enabled"
-msgstr ""
+msgstr "Zda je povolen efekt zvětšení"
 
 #: ui/ActivationShortcuts.qml:18
 #, kde-format
@@ -501,19 +501,19 @@ msgstr "Povolit"
 msgctxt ""
 "@label:listbox Difficulty seeing any of the following colors on the screen"
 msgid "Problematic colors:"
-msgstr ""
+msgstr "Problematické barvy:"
 
 #: ui/ColorblindnessCorrection.qml:49
 #, kde-format
 msgctxt "@option"
 msgid "Red & purple (Protanopia)"
-msgstr ""
+msgstr "Červená & fialová (Protanopie)"
 
 #: ui/ColorblindnessCorrection.qml:50
 #, kde-format
 msgctxt "@option"
 msgid "Green & purple (Deuteranopia)"
-msgstr ""
+msgstr "Zelená & fialová (Deuteranopie)"
 
 #: ui/ColorblindnessCorrection.qml:51
 #, kde-format
@@ -525,7 +525,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option"
 msgid "All (grayscale mode)"
-msgstr ""
+msgstr "Všechny (režim odstínů šedé)"
 
 #: ui/ColorblindnessCorrection.qml:67
 #, kde-format
@@ -549,27 +549,27 @@ msgstr "Intenzivní"
 #, kde-format
 msgctxt "@info"
 msgid "Adjusted colors:"
-msgstr ""
+msgstr "Upravené barvy:"
 
 #: ui/ColorblindnessCorrection.qml:132
 #, kde-format
 msgid "Reds:"
-msgstr ""
+msgstr "Červené:"
 
 #: ui/ColorblindnessCorrection.qml:133
 #, kde-format
 msgid "Greens:"
-msgstr ""
+msgstr "Zelené:"
 
 #: ui/ColorblindnessCorrection.qml:134
 #, kde-format
 msgid "Blues:"
-msgstr ""
+msgstr "Modré:"
 
 #: ui/ColorblindnessCorrection.qml:135
 #, kde-format
 msgid "Purples:"
-msgstr ""
+msgstr "Fialové:"
 
 #: ui/Invert.qml:22
 #, kde-format
@@ -679,7 +679,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title Category name in sidebar"
 msgid "Zoom & Magnifier"
-msgstr ""
+msgstr "Přiblížení &Lupa"
 
 #: ui/main.qml:33
 #, kde-format
@@ -928,19 +928,19 @@ msgstr "Zvětšení:"
 #, kde-format
 msgctxt "@option:check, enable zoom effect, following 'Zoom:'"
 msgid "Full screen"
-msgstr ""
+msgstr "Celá obrazovka"
 
 #: ui/ZoomMagnifier.qml:53
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Show pixel grid at zoom level:"
-msgstr ""
+msgstr "Zobrazit mřížku pixelů na úrovni přiblížení:"
 
 #: ui/ZoomMagnifier.qml:85
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Mouse pointer:"
-msgstr ""
+msgstr "Ukazatel myši:"
 
 #: ui/ZoomMagnifier.qml:87
 #, kde-format
@@ -964,7 +964,7 @@ msgstr "Skrýt"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Mouse tracking:"
-msgstr ""
+msgstr "Sledování myši:"
 
 #: ui/ZoomMagnifier.qml:100
 #, kde-format
@@ -1012,7 +1012,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
-msgstr ""
+msgstr "Zvětšit oblast"
 
 #: ui/ZoomMagnifier.qml:174
 #, kde-format
@@ -1069,4 +1069,4 @@ msgstr ""
 #, kde-format
 msgctxt "@label Hint for zoom/magnify effect usage"
 msgid "Use shortcuts to control zoom"
-msgstr ""
+msgstr "Použít zkratky pro ovládání přiblížení"

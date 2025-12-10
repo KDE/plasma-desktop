@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-09 00:44+0000\n"
-"PO-Revision-Date: 2025-12-05 05:39+0100\n"
+"PO-Revision-Date: 2025-12-09 09:06+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -96,37 +96,35 @@ msgid "Hover open delay %1 ms"
 msgstr "გახსნის დაყოვნება ზედ კურსორის გაჩერებისას %1 მწმ"
 
 #: ConfigGeneral.qml:144
-#, fuzzy, kde-format
-#| msgctxt "@info:placeholder"
-#| msgid "No open windows"
+#, kde-format
 msgctxt ""
 "@label for checkbox group, completes sentence like: … from current screen"
 msgid "Show only windows:"
-msgstr "ღია ფანრების გარეშე"
+msgstr "მხოლოდ ფანჯრების ჩვენება:"
 
 #: ConfigGeneral.qml:145
 #, kde-format
 msgctxt "@option:check completes sentence: show only windows"
 msgid "From the current desktop"
-msgstr ""
+msgstr "მიმდინარე სამუშაო მაგიდიდან"
 
 #: ConfigGeneral.qml:150
 #, kde-format
 msgctxt "@option:check completes sentence: show only windows"
 msgid "From the current activity"
-msgstr ""
+msgstr "მიმდინარე აქტივობიდად"
 
 #: ConfigGeneral.qml:155
 #, kde-format
 msgctxt "@option:check completes sentence: show only windows"
 msgid "From the current screen"
-msgstr ""
+msgstr "მიმდინარე ეკრანიდან"
 
 #: ConfigGeneral.qml:160
 #, kde-format
 msgctxt "@option:check completes sentence: show only windows"
 msgid "That are minimized"
-msgstr ""
+msgstr "ჩაკეცილები"
 
 #: main.qml:110 main.qml:168
 #, kde-format

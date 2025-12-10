@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-07 00:44+0000\n"
-"PO-Revision-Date: 2025-10-02 09:34+0200\n"
+"PO-Revision-Date: 2025-12-05 13:38+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: inputsequence.cpp:191
 #, kde-format
@@ -77,7 +77,7 @@ msgstr "Tlačítko pera %1"
 #, kde-format
 msgctxt "@action:button"
 msgid "Scroll wheel"
-msgstr ""
+msgstr "Rolovat kolečkem"
 
 #: kcmtablet.cpp:36
 #, kde-format
@@ -124,13 +124,13 @@ msgstr "%1 - (%2,%3 %4×%5)"
 #, kde-format
 msgctxt "@item:inlistbox Stretch and fill to the screen"
 msgid "Stretch and Fill"
-msgstr ""
+msgstr "Tah a výplň"
 
 #: kcmtablet.cpp:165 ui/DisplayTab.qml:99
 #, kde-format
 msgctxt "@item:inlistbox Keep aspect ratio and fit within the screen"
 msgid "Keep Aspect Ratio and Fit"
-msgstr ""
+msgstr "Zachovat poměr a vyplnit"
 
 #: kcmtablet.cpp:166 ui/DisplayTab.qml:100
 #, kde-format
@@ -142,7 +142,7 @@ msgstr ""
 #, kde-format
 msgctxt "Stylus pen button"
 msgid "Pen button %1:"
-msgstr ""
+msgstr "Tlačítko pera %1:"
 
 #: kcmtablet.cpp:269
 #, kde-format
@@ -150,7 +150,7 @@ msgctxt ""
 "@info Meant to be inserted into an existing sentence like 'configuring pen "
 "button X'"
 msgid "pen button %1"
-msgstr ""
+msgstr "tlačítko pera %1"
 
 #: ui/ActionDialog.qml:27
 #, kde-format
@@ -413,7 +413,7 @@ msgstr ""
 #, kde-format
 msgctxt "tablet area position - size"
 msgid "%1%,%2% - %3%×%4%"
-msgstr ""
+msgstr "%1%,%2% - %3%×%4%"
 
 #: ui/ExternalScreenMapping.qml:301
 #, kde-format
