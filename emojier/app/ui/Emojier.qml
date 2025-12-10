@@ -161,6 +161,15 @@ Kirigami.ApplicationWindow {
         function onCopyRequested(text: string) : void { window.copyAndReport(text) }
         function onAddToRecentsRequested(text: string, description: string) : void { window.addToRecents(text, description) }
         function onClearHistoryRequested() : void { window.clearHistory() }
+        function onAllDataRequested() : void {
+            const currentPage = window.pageStack.currentItem as CategoryPage
+
+            if (currentPage.category.length > 0 || currentPage.model != emoji) {
+                currentPage.category = "";
+                currentPage.model = emoji;
+                currentPage.title = i18nc("@title:page All emojis", "All")
+            }
+        }
     }
 
     Component.onCompleted: {

@@ -23,6 +23,7 @@ Kirigami.ScrollablePage {
     signal copyRequested(string text)
     signal addToRecentsRequested(string text, string description)
     signal clearHistoryRequested
+    signal allDataRequested
 
     leftPadding: undefined
     rightPadding: undefined
@@ -65,21 +66,7 @@ Kirigami.ScrollablePage {
 
                 // If nothing was found, try again with all emojis
                 if (emojiView.currentIndex < 0) {
-                    let anythingChanged = false;
-
-                    if (view.category.length > 0) {
-                        view.category = "";
-                        anythingChanged = true;
-                    }
-
-                    if (view.model != emoji) {
-                        view.model = emoji;
-                        anythingChanged = true;
-                    }
-
-                    if (anythingChanged) {
-                        view.title = i18nc("@title:page All emojis", "All");
-                    }
+                    view.allDataRequested()
                 }
             }
 
