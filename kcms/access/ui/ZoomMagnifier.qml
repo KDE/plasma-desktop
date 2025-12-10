@@ -88,18 +88,73 @@ Kirigami.FormLayout {
                 currentIndex: kcm.zoomMagnifierSettings.zoomMousePointer
                 onActivated: (index) => kcm.zoomMagnifierSettings.zoomMousePointer = index
 
+                Layout.preferredWidth: Kirigami.Units.gridUnit * 15
+
                 KCM.SettingStateBinding {
                     configObject: kcm.zoomMagnifierSettings
                     settingName: "ZoomMousePointer"
                 }
             }
 
+            Component {
+                id: mouseTrackingItemDelegate
+
+                QQC2.ItemDelegate {
+                    id: delegate
+
+                    required property string title
+                    required property string description
+
+                    width: parent?.width ?? 0
+
+                    text: delegate.title
+
+                    contentItem: Kirigami.TitleSubtitle {
+                        title: delegate.title
+                        subtitle: delegate.description
+                        font: delegate.font
+                        selected: delegate.highlighted || delegate.down
+                        wrapMode: Text.Wrap
+                    }
+                }
+            }
+
             QQC2.ComboBox {
                 Kirigami.FormData.label: i18nc("@label:listbox", "Mouse tracking:")
 
-                model: [i18nc("@item:inlistbox", "Proportional"), i18nc("@item:inlistbox", "Centered"), i18nc("@item:inlistbox", "Push"), i18nc("@item:inlistbox", "Disabled")]
-                currentIndex: kcm.zoomMagnifierSettings.zoomMouseTracking
-                onActivated: (index) => kcm.zoomMagnifierSettings.zoomMouseTracking = index
+                delegate: mouseTrackingItemDelegate
+                model: [
+                    {
+                        title: i18nc("@item:inlistbox", "Proportional"),
+                        description: i18nc("@item:inlistbox", "Zoom area moves in sync with mouse cursor"),
+                        settingIndex: 0
+                    },
+                    {
+                        title: i18nc("@item:inlistbox", "Centered"),
+                        description: i18nc("@item:inlistbox", "Mouse cursor stays centered on-screen, except near screen edges"),
+                        settingIndex: 1
+                    },
+                    {
+                        title: i18nc("@item:inlistbox", "Centered (Strict)"),
+                        description: i18nc("@item:inlistbox", "Mouse cursor stays centered on-screen, even near screen edges"),
+                        settingIndex: 4
+                    },
+                    {
+                        title: i18nc("@item:inlistbox", "Push"),
+                        description: i18nc("@item:inlistbox", "Mouse cursor pushes zoom area at screen edges"),
+                        settingIndex: 2
+                    },
+                    {
+                        title: i18nc("@item:inlistbox", "Disabled"),
+                        description: i18nc("@item:inlistbox", "Zoom area doesn't follow mouse cursor"),
+                        settingIndex: 3
+                    }
+                ]
+                textRole: "title"
+                currentIndex: model.findIndex(m => m.settingIndex === kcm.zoomMagnifierSettings.zoomMouseTracking)
+                onActivated: index => kcm.zoomMagnifierSettings.zoomMouseTracking = model[index].settingIndex
+
+                Layout.preferredWidth: Kirigami.Units.gridUnit * 15
 
                 KCM.SettingStateBinding {
                     configObject: kcm.zoomMagnifierSettings
