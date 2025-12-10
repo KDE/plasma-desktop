@@ -83,7 +83,7 @@ Kirigami.ApplicationWindow {
     globalDrawer: Kirigami.GlobalDrawer {
         id: drawer
 
-        collapsible: !topContent.activeFocus
+        collapsible: true
         showHeaderWhenCollapsed: true
         collapseButtonVisible: false
         collapsed: true
