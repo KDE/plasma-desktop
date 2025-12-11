@@ -774,10 +774,10 @@ Kicker.DashboardWindow {
                                 } else if ((index === ListView.view.currentIndex - 1) && mouse.y < (height - 6)
                                     || (index === ListView.view.currentIndex + 1) && mouse.y > 5) {
 
-                                    if (mouse.x > ListView.view.eligibleWidth - 5) {
+                                    if (mouse.x > filterList.eligibleWidth - 5) {
                                         updateCurrentItem();
                                     }
-                                } else if (mouse.x > ListView.view.eligibleWidth) {
+                                } else if (mouse.x > filterList.eligibleWidth) {
                                     updateCurrentItem();
                                 }
 

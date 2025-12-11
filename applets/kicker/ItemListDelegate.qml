@@ -34,6 +34,7 @@ PlasmaComponents3.ItemDelegate {
     required property string description
     required property string decoration
     required property var model // for display, which would shadow ItemDelegate
+    required property bool showIcons
 
     readonly property bool iconAndLabelsShouldlookSelected: pressed && !hasChildren
     readonly property ActionMenu menu: actionMenu
@@ -81,9 +82,9 @@ PlasmaComponents3.ItemDelegate {
     DragHandler {
         target: null
         onActiveChanged: {
-            if (active && url) {
+            if (active && item.url) {
                 // we need dragHelper and can't use attached Drag; submenus are destroyed too soon and Plasma crashes
-                dragHelper.startDrag(kicker, url, decoration)
+                dragHelper.startDrag(kicker, item.url, item.decoration)
             }
         }
     }
@@ -116,7 +117,7 @@ PlasmaComponents3.ItemDelegate {
             implicitWidth: Kirigami.Units.iconSizes.small
             implicitHeight: implicitWidth
 
-            visible: iconsEnabled & !item.isSeparator
+            visible: item.showIcons & !item.isSeparator
 
             animated: false
             selected: item.iconAndLabelsShouldlookSelected

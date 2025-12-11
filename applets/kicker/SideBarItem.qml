@@ -7,9 +7,6 @@
 import QtQuick
 
 import org.kde.kirigami as Kirigami
-import org.kde.kquickcontrolsaddons as KQuickControlsAddons
-import org.kde.plasma.core as PlasmaCore
-import org.kde.plasma.plasmoid
 import org.kde.plasma.components as PC3
 
 import "code/tools.js" as Tools
@@ -85,6 +82,6 @@ PC3.ToolButton {
     }
 
     PC3.ToolTip.text: item.text
-    PC3.ToolTip.visible: item,hovered
+    PC3.ToolTip.visible: item.hovered
     PC3.ToolTip.delay: Kirigami.Units.toolTipDelay
 }

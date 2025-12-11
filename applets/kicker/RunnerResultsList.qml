@@ -10,7 +10,6 @@ import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 import org.kde.ksvg as KSvg
 import org.kde.plasma.components as PlasmaComponents3
-import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasmoid
 
 RowLayout {
@@ -94,10 +93,10 @@ RowLayout {
                         if (runnerResultsList.activeFocus) {
                             return; // don't interfere if the user has already moved focus
                         }
-                        if (searchFieldPlaceholder.visible && searchField.focus) {
-                            currentIndex = 0;
+                        if (searchFieldPlaceholder.visible && runnerMatches.mainSearchField.focus) {
+                            runnerMatches.currentIndex = 0;
                         } else {
-                            currentIndex = -1;
+                            runnerMatches.currentIndex = -1;
                         }
                     })
                 }
@@ -110,7 +109,7 @@ RowLayout {
         Item {
             id: searchFieldPlaceholder
 
-            implicitHeight: mainSearchField.height
+            implicitHeight: runnerResultsList.mainSearchField.height
             Layout.fillWidth: true
             visible: runnerResultsList.parent.visibleChildren[0] === runnerResultsList
         }

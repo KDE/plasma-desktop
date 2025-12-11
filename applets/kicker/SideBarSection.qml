@@ -6,7 +6,6 @@
 
 import QtQuick
 
-import org.kde.draganddrop as DnD
 import org.kde.kirigami as Kirigami
 
 DropArea {
@@ -19,7 +18,7 @@ DropArea {
 
     property alias model: repeater.model
 
-    readonly property SideBarItem bottomSideBarItem: repeater.itemAt(repeater.count - 1)
+    readonly property SideBarItem bottomSideBarItem: repeater.itemAt(repeater.count - 1) as SideBarItem
 
     onActiveFocusChanged: (repeater.itemAt(0) ?? KeyNavigation.down).forceActiveFocus(Qt.TabFocusReason)
 
@@ -28,10 +27,11 @@ DropArea {
             return;
         }
 
-        const above = flow.childAt(event.x, event.y)
+        const above = flow.childAt(event.x, event.y) as SideBarItem
+        const eventSource = event.source as SideBarItem
 
-        if (above && event.source && above !== event.source && event.source.parent === flow) {
-            repeater.model.moveRow(event.source.itemIndex, above.itemIndex);
+        if (above && eventSource && above !== eventSource && eventSource.parent === flow) {
+            repeater.model.moveRow(eventSource.itemIndex, above.itemIndex);
         }
     }
 

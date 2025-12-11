@@ -11,7 +11,7 @@ import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.components as PlasmaComponents3
 import org.kde.plasma.extras as PlasmaExtras
-import org.kde.ksvg as KSvg
+import org.kde.plasma.private.kicker as Kicker
 
 PlasmaComponents3.ScrollView {
     id: itemList
@@ -24,8 +24,8 @@ PlasmaComponents3.ScrollView {
     // can't use effectiveScrollBarWidth, it causes binding loops
     readonly property var actualScrollBarWidth: (itemList.contentHeight > itemList.height ? PlasmaComponents3.ScrollBar.vertical.width : 0)
     property Item mainSearchField: null
-    property QtObject dialog: null
-    property QtObject childDialog: null
+    property Kicker.SubMenu dialog: null
+    property Kicker.SubMenu childDialog: null
     property bool iconsEnabled: false
 
     property alias currentIndex: listView.currentIndex
@@ -54,7 +54,7 @@ PlasmaComponents3.ScrollView {
         if (!kicker.expanded || !itemList.model || itemList.currentIndex === -1) {
             return;
         }
-        if (itemList && !itemList.currentItem.hasChildren) {
+        if (itemList && !(itemList.currentItem as ItemListDelegate).hasChildren) {
             clearChildDialog();
         } else if (!itemList.childDialog) {
             itemList.childDialog = itemListDialogComponent.createObject(itemList, {
@@ -67,7 +67,6 @@ PlasmaComponents3.ScrollView {
             itemList.childDialog.index = listView.currentIndex;
 
             windowSystem.forceActive(itemList.childDialog.mainItem); // only for X11; TODO Plasma 6.8: remove
-            itemList.childDialog.mainItem.focus = true;
 
             if (focusOnSpawn) {
                 itemList.childDialog.mainItem.currentIndex = 0;
@@ -95,7 +94,7 @@ PlasmaComponents3.ScrollView {
         } else if (itemList.childDialog && listView.currentIndex != itemList.childDialog?.index) {
             listView.currentIndex = childDialog.index
         } else if ((!itemList.childDialog || !itemList.dialog)
-            && (!itemList.currentItem || !itemList.currentItem.menu.opened)) {
+            && (!itemList.currentItem || !(itemList.currentItem as ItemListDelegate).menu.opened)) {
             resetIndexTimer.start();
         }
     }
@@ -103,7 +102,7 @@ PlasmaComponents3.ScrollView {
     ListView {
         id: listView
 
-        width: listView.availableWidth
+        width: itemList.availableWidth
         implicitHeight: contentHeight
         implicitWidth: itemList.Layout.minimumWidth
 
@@ -135,6 +134,7 @@ PlasmaComponents3.ScrollView {
 
         delegate: ItemListDelegate {
             showSeparators: listView.showSeparators
+            showIcons: itemList.iconsEnabled
             dialogDefaultRight: !itemList.LayoutMirroring.enabled
             hoverEnabled: itemList.hoverEnabled
             onHoveredChanged: {
@@ -161,9 +161,9 @@ PlasmaComponents3.ScrollView {
 
         highlight: PlasmaExtras.Highlight {
             width: listView.width
-            visible: !listView.currentItem || !listView.currentItem.isSeparator
-            pressed: listView.currentItem && listView.currentItem.pressed && !listView.currentItem.hasChildren
-            active: listView.currentItem && listView.currentItem.hovered
+            visible: !(listView.currentItem as ItemListDelegate)?.isSeparator
+            pressed: !!((listView.currentItem as ItemListDelegate)?.pressed && (listView.currentItem as ItemListDelegate)?.hasChildren)
+            active: !!(listView.currentItem as ItemListDelegate)?.hovered
         }
 
         highlightMoveDuration: 0
@@ -177,9 +177,9 @@ PlasmaComponents3.ScrollView {
         }
 
         onCurrentIndexChanged: {
-            if (currentIndex === childDialog?.index) {
+            if (currentIndex === itemList.childDialog?.index) {
                 return;
-            } else if (currentIndex === -1  || !currentItem.hasChildren || !kicker.expanded) {
+            } else if (currentIndex === -1  || !(currentItem as ItemListDelegate).hasChildren || !kicker.expanded) {
                 dialogSpawnTimer.stop();
                 itemList.clearChildDialog();
             } else if (itemList.childDialog) {
@@ -187,9 +187,10 @@ PlasmaComponents3.ScrollView {
             }
         }
 
-        onCurrentItemChanged: {
-            if (currentItem) {
-                currentItem.menu.closed.connect(resetIndexTimer.restart);
+        Connections {
+            target: (listView.currentItem as ItemListDelegate)?.menu ?? null
+            function onClosed() {
+                resetIndexTimer.restart()
             }
         }
 
@@ -211,8 +212,9 @@ PlasmaComponents3.ScrollView {
                         itemList.subMenuForCurrentItem(true);
                     } else {
                         windowSystem.forceActive(itemList.childDialog.mainItem); // only for X11; TODO Plasma 6.8: remove
-                        itemList.childDialog.mainItem.forceActiveFocus(Qt.TabFocusReason);
-                        itemList.childDialog.mainItem.currentIndex = 0;
+                        const childListView = itemList.childDialog.mainItem as ItemListView
+                        childListView.forceActiveFocus(Qt.TabFocusReason);
+                        childListView.currentIndex = 0;
                     }
                 } else if (forwardArrowKey) {
                     itemList.navigateRightRequested();
@@ -259,7 +261,7 @@ PlasmaComponents3.ScrollView {
             interval: 100
             repeat: false
 
-            onTriggered: subMenuForCurrentItem()
+            onTriggered: itemList.subMenuForCurrentItem()
         }
 
         Timer {
@@ -269,7 +271,7 @@ PlasmaComponents3.ScrollView {
             repeat: false
 
             onTriggered: {
-                if (itemList.focus && (!itemList.childDialog || !itemList.childDialog.mainItem.hovered)) {
+                if (itemList.focus && !(itemList.childDialog?.mainItem as ItemListView)?.hovered) {
                     itemList.currentIndex = -1;
                     itemList.exited();
                 }

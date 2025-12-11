@@ -28,16 +28,17 @@ PlasmaComponents3.ScrollView {
     Layout.maximumHeight: Layout.minimumHeight
 
     function ensureVisible(item: Item) : void {
-        var actualItemX = item.x
-        var viewXPosition = (item.width <= contentItem.width)
-        ? Math.round(actualItemX + item.width / 2 - contentItem.width / 2)
-        : actualItemX
-        if (actualItemX < contentItem.contentX) {
-            contentItem.contentX = Math.max(0, viewXPosition)
-        } else if ((actualItemX + item.width) > (contentItem.contentX + contentItem.width)) {
-            contentItem.contentX = Math.min(contentItem.contentWidth - contentItem.width, viewXPosition)
+        const actualItemX = item.x
+        const viewXPosition = (item.width <= contentItem.width)
+            ? Math.round(actualItemX + item.width / 2 - contentItem.width / 2)
+            : actualItemX
+        const flickable = contentItem as Flickable
+        if (actualItemX < flickable.contentX) {
+            flickable.contentX = Math.max(0, viewXPosition)
+        } else if ((actualItemX + item.width) > (flickable.contentX + flickable.width)) {
+            flickable.contentX = Math.min(flickable.contentWidth - flickable.width, viewXPosition)
         }
-        contentItem.returnToBounds()
+        flickable.returnToBounds()
     }
 
     function focusRunnerColumn(column, focusTopElement = true) : void {
@@ -90,7 +91,6 @@ PlasmaComponents3.ScrollView {
 
             implicitWidth: Math.max(favoriteApps.implicitWidth, favoriteSystemActions.implicitWidth) + margins.left + margins.right
             implicitHeight: sideBarLayout.implicitHeight + margins.top + margins.bottom
-            height: parent.height
 
             imagePath: "widgets/frame"
             prefix: "plain"
@@ -369,9 +369,8 @@ PlasmaComponents3.ScrollView {
                 }
 
                 PropertyChanges {
-                    target: searchField
-                    anchors.leftMargin: undefined
-                    anchors.rightMargin: sideBar.width + spacing
+                    searchField.anchors.leftMargin: undefined
+                    searchField.anchors.rightMargin: sideBar.width + searchField.spacing
                 }
             }
         ]
