@@ -23,6 +23,7 @@ KSvg.FrameSvgItem {
 
     property bool ignoreClick: false
     property bool containsDrag: false
+    property alias active: hoverActivateTimer.running
 
     imagePath: "widgets/viewitem"
 
