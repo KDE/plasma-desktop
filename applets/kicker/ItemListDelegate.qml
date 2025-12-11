@@ -64,9 +64,12 @@ PlasmaComponents3.ItemDelegate {
         }
     }
 
-    function openActionMenu(visualParent, x, y) {
+    function openActionMenu(visualParent: Item, x: real, y: real) : void {
         const actionList = item.hasActionList ? item.actionList : [];
         Tools.fillActionMenu(i18n, actionMenu, actionList, item.ListView.view.model.favoritesModel, item.favoriteId);
+        if (!actionMenu.actionList.length) {
+            return
+        }
         actionMenu.visualParent = visualParent;
         actionMenu.open(x, y);
     }
