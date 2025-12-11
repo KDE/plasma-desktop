@@ -12,18 +12,28 @@ function fillActionMenu(i18n, actionMenu, actionList, favoriteModel, favoriteId)
     // Accessing actionList can be a costly operation, so we don't
     // access it until we need the menu.
 
-    const actions = createFavoriteActions(i18n, favoriteModel, favoriteId);
+    const favoriteActions = createFavoriteActions(i18n, favoriteModel, favoriteId);
 
-    if (actions) {
+    if (favoriteActions) {
         if (actionList && actionList.length > 0) {
             const actionListCopy = Array.from(actionList);
-            const separator = { type: "separator" };
-            actionListCopy.push(separator);
+            // same logic as in kickoff's openActionMenu() in
+            // AbstractKickoffItemDelegate
+            // Insert favoriteActions before the "Add to" actions (called
+            // "addLauncherActions" by libkicker)
+            const firstAddToActionIndex = actionListCopy.findIndex((action) =>
+                ["addToDesktop", "addToTaskManager", "addToPanel"].includes(action?.actionId),
+            );
+            if (firstAddToActionIndex >= 0) {
+                actionListCopy.splice(firstAddToActionIndex, 0, ...favoriteActions);
+            } else {
+                // Or at the end (with a separator) if they're not found
+                actionListCopy.push({ type: "separator" }, ...favoriteActions);
+            }
             // actionList = actions.concat(actionList); // this crashes Qt O.o
-            actionListCopy.push.apply(actionListCopy, actions);
             actionList = actionListCopy;
         } else {
-            actionList = actions;
+            actionList = favoriteActions;
         }
     }
 

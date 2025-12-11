@@ -73,7 +73,18 @@ T.ItemDelegate {
         );
         if (favoriteActions) {
             if (actions && actions.length > 0) {
-                actions.push({ "type": "separator" }, ...favoriteActions);
+                // same logic as in kicker's fillActionMenu()
+                // Insert favoriteActions after the "Add to" actions (called
+                // "addLauncherActions" by libkicker)
+                const firstAddToActionIndex = actions.findIndex((action) =>
+                    ["addToDesktop", "addToTaskManager", "addToPanel"].includes(action?.actionId),
+                );
+                if (firstAddToActionIndex >= 0) {
+                    actions.splice(firstAddToActionIndex, 0, ...favoriteActions);
+                } else {
+                    // Or at the end (with a separator) if they're not found
+                    actions.push({ type: "separator" }, ...favoriteActions);
+                }
             } else {
                 actions = favoriteActions;
             }
