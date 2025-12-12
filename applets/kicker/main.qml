@@ -69,6 +69,7 @@ PlasmoidItem {
             systemFavorites: kicker.systemFavorites
             rootModel: rootModel
             runnerModel: runnerModel
+            onInteractionConcluded: kicker.expanded = false
         }
     }
 
@@ -79,6 +80,7 @@ PlasmoidItem {
             systemFavorites: kicker.systemFavorites
             rootModel: rootModel
             runnerModel: runnerModel
+            onInteractionConcluded: toggle()
         }
     }
 

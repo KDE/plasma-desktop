@@ -40,6 +40,8 @@ Kicker.DashboardWindow {
     property int columns: Math.floor(((smallScreen ? 85 : 80)/100) * Math.ceil(width / cellSize))
     property bool searching: searchField.text !== ""
 
+    signal interactionConcluded()
+
     keyEventProxy: searchField
 
     backgroundColor: "transparent"
@@ -48,13 +50,13 @@ Kicker.DashboardWindow {
         if (searching) {
             searchField.clear();
         } else {
-            root.toggle();
+            root.interactionConcluded()
         }
     }
 
     onActiveChanged: {
         if (!active && visible) {
-            root.toggle();
+            root.interactionConcluded()
         }
     }
 
@@ -368,6 +370,7 @@ Kicker.DashboardWindow {
 
                     Behavior on opacity { SmoothedAnimation { duration: Kirigami.Units.longDuration; velocity: 0.01 } }
 
+                    onInteractionConcluded: root.interactionConcluded()
                     onCurrentIndexChanged: {
                         preloadAllAppsTimer.defer();
                     }
@@ -410,6 +413,7 @@ Kicker.DashboardWindow {
 
                     dropEnabled: true
 
+                    onInteractionConcluded: root.interactionConcluded()
                     onCurrentIndexChanged: {
                         preloadAllAppsTimer.defer();
                     }
@@ -570,6 +574,7 @@ Kicker.DashboardWindow {
 
                         model: funnelModel
 
+                        onInteractionConcluded: root.interactionConcluded()
                         onCurrentIndexChanged: {
                             preloadAllAppsTimer.defer();
                         }
@@ -602,6 +607,7 @@ Kicker.DashboardWindow {
 
                     opacity: filterList.allApps ? 1.0 : 0.0
 
+                    onInteractionConcluded: root.interactionConcluded()
                     onOpacityChanged: {
                         if (opacity === 1.0) {
                             allAppsGrid.flickableItem.contentY = 0;
@@ -647,6 +653,7 @@ Kicker.DashboardWindow {
 
                     opacity: root.searching ? 1.0 : 0.0
 
+                    onInteractionConcluded: root.interactionConcluded()
                     onOpacityChanged: {
                         if (opacity === 1.0) {
                             mainColumn.visibleGrid = runnerGrid;
@@ -815,7 +822,7 @@ Kicker.DashboardWindow {
 
                             onActionTriggered: (actionId, actionArgument) => {
                                 if (Tools.triggerAction(ListView.view.model, item.index, actionId, actionArgument) === true) {
-                                    kicker.expanded = false;
+                                    root.interactionConcluded()
                                 }
                             }
 
@@ -957,7 +964,7 @@ Kicker.DashboardWindow {
 
         onClicked: mouse => {
             if (mouse.button === Qt.LeftButton) {
-                root.toggle();
+                root.interactionConcluded()
             }
         }
     }

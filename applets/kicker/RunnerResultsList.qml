@@ -18,6 +18,7 @@ RowLayout {
     signal keyNavigationAtListEnd
     signal navigateLeftRequested
     signal navigateRightRequested
+    signal interactionConcluded
 
     required property int index
 
@@ -105,6 +106,7 @@ RowLayout {
             onNavigateLeftRequested: runnerResultsList.navigateLeftRequested()
             onNavigateRightRequested: runnerResultsList.navigateRightRequested()
             onKeyNavigationAtListEnd: mainSearchField.forceActiveFocus(Qt.TabFocusReason)
+            onInteractionConcluded: runnerResultsList.interactionConcluded
         }
 
         Item {

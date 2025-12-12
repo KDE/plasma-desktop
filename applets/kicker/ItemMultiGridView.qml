@@ -15,6 +15,8 @@ import org.kde.plasma.private.kicker as Kicker
 PlasmaComponents.ScrollView {
     id: itemMultiGrid
 
+    signal interactionConcluded()
+
     anchors {
         top: parent.top
     }
@@ -160,7 +162,7 @@ PlasmaComponents.ScrollView {
                         width: parent.width
                         height: parent.height
 
-                        onClicked: root.toggle()
+                        onClicked: itemMultiGrid.interactionConcluded()
                     }
 
                     ItemGridView {
@@ -188,6 +190,7 @@ PlasmaComponents.ScrollView {
                             }
                         }
 
+                        onInteractionConcluded: itemMultiGrid.interactionConcluded()
                         onCountChanged: itemMultiGrid.selectFirstElement()
 
                         onCurrentItemChanged: {

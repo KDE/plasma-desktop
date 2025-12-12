@@ -42,6 +42,8 @@ PlasmaComponents3.ItemDelegate {
     property bool showSeparators: true
     property bool dialogDefaultRight: Application.layoutDirection !== Qt.RightToLeft
 
+    signal interactionConcluded
+
     Accessible.role: isSeparator ? Accessible.Separator : Accessible.ListItem
     Accessible.description: isParent
         ? i18nc("@action:inmenu accessible description for opening submenu", "Open category")
@@ -58,7 +60,7 @@ PlasmaComponents3.ItemDelegate {
     onClicked: {
         if (!item.hasChildren) {
             item.ListView.view.model.trigger(index, "", null);
-            kicker.expanded = false;
+            item.interactionConcluded()
         }
     }
 
@@ -74,7 +76,7 @@ PlasmaComponents3.ItemDelegate {
 
         onActionClicked: (actionId, actionArgument) => {
             if (Tools.triggerAction(item.ListView.view.model, item.index, actionId, actionArgument) === true) {
-                kicker.expanded = false;
+                item.interactionConcluded()
             }
         }
     }
@@ -191,11 +193,6 @@ PlasmaComponents3.ItemDelegate {
             item.openActionMenu(mouseArea)
         }
     }
-    Keys.onReturnPressed: {
-        if (!item.hasChildren) {
-            item.ListView.view.model.trigger(item.index, "", null);
-            kicker.expanded = false;
-        }
-    }
+    Keys.onReturnPressed: item.clicked()
     Keys.onEnterPressed: Keys.returnPressed()
 }

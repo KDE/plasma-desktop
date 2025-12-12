@@ -20,6 +20,7 @@ FocusScope {
     signal keyNavUp
     signal keyNavDown
 
+    signal interactionConcluded()
     signal itemActivated(int index, string actionId, string argument)
 
     property bool dragEnabled: true
@@ -229,6 +230,7 @@ FocusScope {
 
                 delegate: ItemGridDelegate {
                     showLabel: itemGrid.showLabels
+                    onInteractionConcluded: itemGrid.interactionConcluded()
                 }
 
                 highlight: Item {
@@ -320,7 +322,7 @@ FocusScope {
                 Keys.onReturnPressed: {
                     if (gridView.model.trigger) {
                         gridView.model.trigger(currentIndex, "", null)
-                        root.toggle()
+                        itemGrid.interactionConcluded()
                     }
                 }
 
@@ -440,12 +442,12 @@ FocusScope {
                     if (pressedItem) {
                         if ("trigger" in gridView.model) {
                             gridView.model.trigger(pressedItem.itemIndex, "", null);
-                            root.toggle();
+                            itemGrid.interactionConcluded()
                         }
 
                         itemGrid.itemActivated(pressedItem.itemIndex, "", null);
                     } else if (mouse.button === Qt.LeftButton) {
-                        root.toggle();
+                        itemGrid.interactionConcluded()
                     }
                 }
 

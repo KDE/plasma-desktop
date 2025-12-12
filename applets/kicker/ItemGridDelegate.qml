@@ -30,6 +30,8 @@ Item {
     property var icon: item.decoration !== undefined ? item.decoration : ""
     property var m: model
 
+    signal interactionConcluded()
+
     width: GridView.view.cellWidth
     height: width
 
@@ -49,7 +51,7 @@ Item {
         var close = (Tools.triggerAction(GridView.view.model, item.index, actionId, actionArgument) === true);
 
         if (close) {
-            root.toggle();
+            item.interactionConcluded()
         }
     }
 
@@ -113,7 +115,7 @@ Item {
     Keys.onReturnPressed: {
         if ("trigger" in GridView.view.model) {
             GridView.view.model.trigger(index, "", null);
-            root.toggle();
+            item.interactionConcluded()
         }
 
         itemGrid.itemActivated(index, "", null);

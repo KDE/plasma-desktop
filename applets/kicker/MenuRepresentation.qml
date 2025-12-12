@@ -24,6 +24,8 @@ PlasmaComponents3.ScrollView {
     required property Kicker.RootModel rootModel
     required property Kicker.RunnerModel runnerModel
 
+    signal interactionConcluded
+
     focus: true
 
     Layout.minimumWidth: Math.min(mainRow.width, mainRow.implicitWidth, Screen.width - Kirigami.Units.largeSpacing * 4)
@@ -174,6 +176,7 @@ PlasmaComponents3.ScrollView {
                     KeyNavigation.down: favoriteSystemActions
 
                     model: root.globalFavorites
+                    onInteractionConcluded: root.interactionConcluded()
 
                     Binding {
                         target: root.globalFavorites
@@ -189,6 +192,7 @@ PlasmaComponents3.ScrollView {
                     Layout.alignment: Qt.AlignHCenter
 
                     model: root.systemFavorites
+                    onInteractionConcluded: root.interactionConcluded()
                     KeyNavigation.up: favoriteApps.bottomSideBarItem
                     KeyNavigation.down: favoriteApps
                 }
@@ -219,6 +223,7 @@ PlasmaComponents3.ScrollView {
 
             showSeparators: true // keep even if sorted, the one between recents and categories works
 
+            onInteractionConcluded: root.interactionConcluded()
             onKeyNavigationAtListEnd: {
                 searchField.focus = true;
             }
@@ -290,6 +295,7 @@ PlasmaComponents3.ScrollView {
                         }
                     }
 
+                    onInteractionConcluded: root.interactionConcluded()
                     onNavigateLeftRequested: navigateToAdjacentColumn(false)
                     onNavigateRightRequested: navigateToAdjacentColumn(true)
                 }
@@ -430,7 +436,7 @@ PlasmaComponents3.ScrollView {
                 for (let i = 0; i < root.runnerModel.count; ++i) {
                     if (root.runnerModel.modelForRow(i).count) {
                         root.runnerModel.modelForRow(i).trigger(0, "", null);
-                        kicker.expanded = false;
+                        onInteractionConcluded: root.interactionConcluded()
                         break;
                     }
                 }
@@ -444,7 +450,7 @@ PlasmaComponents3.ScrollView {
         Keys.onRightPressed: event => handleLeftRightArrow(event)
         Keys.onEnterPressed: launchBestMatch()
         Keys.onReturnPressed: launchBestMatch()
-        Keys.onEscapePressed: kicker.expanded = false;
+        Keys.onEscapePressed: root.interactionConcluded()
 
         function appendText(newText) {
             focus = true;

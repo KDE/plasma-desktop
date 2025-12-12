@@ -22,14 +22,17 @@ Kicker.SubMenu {
 
     property alias mainSearchField: itemListView.mainSearchField
 
+    signal interactionConcluded
+
     visible: false
     location: PlasmaCore.Types.Floating
     offset: Kirigami.Units.smallSpacing
     LayoutMirroring.enabled: dialogMirrored
 
+    onInteractionConcluded: itemDialog.interactionConcluded()
     onWindowDeactivated: {
         if (!aboutToBeDestroyed) {
-            kicker.expanded = false;
+            interactionConcluded()
         }
     }
 

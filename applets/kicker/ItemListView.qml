@@ -20,6 +20,7 @@ PlasmaComponents3.ScrollView {
     signal keyNavigationAtListEnd
     signal navigateLeftRequested
     signal navigateRightRequested
+    signal interactionConcluded
 
     // can't use effectiveScrollBarWidth, it causes binding loops
     readonly property var actualScrollBarWidth: (itemList.contentHeight > itemList.height ? PlasmaComponents3.ScrollBar.vertical.width : 0)
@@ -137,6 +138,7 @@ PlasmaComponents3.ScrollView {
             showIcons: itemList.iconsEnabled
             dialogDefaultRight: !itemList.LayoutMirroring.enabled
             hoverEnabled: itemList.hoverEnabled
+            onInteractionConcluded: itemList.interactionConcluded()
             onHoveredChanged: {
                 if (hovered & !isSeparator) {
                     listView.currentIndex = index
@@ -248,7 +250,7 @@ PlasmaComponents3.ScrollView {
         Keys.onReturnPressed: event => handleLeftRightArrowEnter(event)
         Keys.onUpPressed: event => handleUpDownArrow(event)
         Keys.onDownPressed: event => handleUpDownArrow(event)
-        Keys.onEscapePressed: kicker.expanded = false;
+        Keys.onEscapePressed: itemList.interactionConcluded()
         Keys.onPressed: event => {
             if (event.key !== Qt.Key_Tab && event.text !== "") {
                 itemList.mainSearchField?.forceActiveFocus(Qt.ShortcutFocusReason);

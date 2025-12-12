@@ -26,6 +26,8 @@ PC3.ToolButton {
 
     readonly property int itemIndex: model.index
 
+    signal interactionConcluded
+
     activeFocusOnTab: false
 
     text: model.display
@@ -42,7 +44,7 @@ PC3.ToolButton {
             return
         }
         favoritesModel.trigger(index, "", null);
-        kicker.expanded = false;
+        item.interactionConcluded()
     }
 
     Keys.onSpacePressed: activate()
@@ -62,7 +64,7 @@ PC3.ToolButton {
 
         onActionClicked: (actionId, actionArgument) => {
             if (Tools.triggerAction(repeater.model, item.index, actionId, actionArgument) === true) {
-                kicker.expanded = false;
+                item.interactionConcluded()
             }
         }
     }
