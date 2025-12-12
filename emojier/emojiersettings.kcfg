@@ -4,5 +4,17 @@
   <group name="Emojier">
     <entry name="recent" type="StringList"/>
     <entry name="recentDescriptions" type="StringList"/>
+    <entry name="skinTone" type="Enum">
+      <choices name="SkinTone">
+        <choice name="HasNoVariants"/>
+        <choice name="Neutral"/>
+        <choice name="Light"/>
+        <choice name="MediumLight"/>
+        <choice name="Medium"/>
+        <choice name="MediumDark"/>
+        <choice name="Dark"/>
+      </choices>
+      <default>Neutral</default>
+    </entry>
   </group>
 </kcfg>

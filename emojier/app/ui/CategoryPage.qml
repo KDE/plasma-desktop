@@ -50,7 +50,7 @@ Kirigami.ScrollablePage {
             id: searchField
             Layout.fillWidth: true
             Layout.minimumWidth: Kirigami.Units.gridUnit * 5
-            Layout.maximumWidth: (Kirigami.Units.gridUnit * 15) - clearHistoryButton.effectiveWidth
+            Layout.maximumWidth: Math.max((Kirigami.Units.gridUnit * 15) - clearHistoryButton.effectiveWidth - skinToneButton.effectiveWidth, Layout.minimumWidth)
             text: view.searchText
             inputMethodHints: Qt.ImhNoPredictiveText
 
@@ -112,7 +112,133 @@ Kirigami.ScrollablePage {
             text: i18n("Clear History")
             icon.name: "edit-clear-history"
             onClicked: view.clearHistoryRequested()
+            KeyNavigation.right: skinToneButton
             Keys.onDownPressed: event => searchField.Keys.downPressed(event)
+        }
+
+
+        QQC2.ToolButton {
+            id: skinToneButton
+
+            readonly property int effectiveWidth: !visible ? 0 : implicitWidth + titleRowLayout.spacing
+            readonly property string label: i18nc("@action:button Button to open a menu that lets you choose a skin tone", "Skin tone:")
+
+            function openMenu() {
+                if (!skinToneMenu.visible) {
+                    skinToneMenu.open()
+                } else {
+                    skinToneMenu.dismiss()
+                }
+            }
+
+            down: pressed || skinToneMenu.visible
+            visible: view.title === i18nc("@title:page All emojis", "All") || view.category === "People and Body"
+
+            Accessible.name: label
+            Accessible.role: Accessible.ButtonMenu
+
+            contentItem: RowLayout {
+                spacing: Kirigami.Units.smallSpacing
+
+                QQC2.Label {
+                    text: skinToneButton.label
+                }
+                QQC2.Label {
+                    text: {
+                        switch (view.model.skinTone) {
+                        case SkinTone.Neutral:
+                            return "🖐️"
+                        case SkinTone.Light:
+                            return "🖐🏻"
+                        case SkinTone.MediumLight:
+                            return "🖐🏼"
+                        case SkinTone.Medium:
+                            return "🖐🏽"
+                        case SkinTone.MediumDark:
+                            return "🖐🏾"
+                        case SkinTone.Dark:
+                            return "🖐🏿"
+                        default:
+                            return ""
+                        }
+                    }
+                    font.pixelSize: Kirigami.Units.iconSizes.smallMedium
+                }
+            }
+
+            Layout.preferredHeight: clearHistoryButton.implicitHeight
+
+            leftPadding: LayoutMirroring.enabled ? Kirigami.Units.iconSizes.smallMedium : Kirigami.Units.largeSpacing
+            rightPadding: LayoutMirroring.enabled ? Kirigami.Units.largeSpacing : Kirigami.Units.iconSizes.smallMedium
+
+            onPressed: openMenu()
+            Keys.onReturnPressed: openMenu()
+            Keys.onEnterPressed: openMenu()
+
+            Keys.onDownPressed: event => searchField.Keys.downPressed(event)
+
+            QQC2.Menu {
+                id: skinToneMenu
+                y: skinToneButton.height
+                QQC2.ActionGroup {
+                    id: skinToneGroup
+                    exclusive: true
+                }
+                Kirigami.Action {
+                    QQC2.ActionGroup.group: skinToneGroup
+                    text: i18nc("@action:inmenu Skin Tone", "🖐️ Neutral")
+                    Accessible.name: i18nc("@action:inmenu Skin Tone", "Neutral")
+                    shortcut: "ctrl+1"
+                    checkable: true
+                    checked: view.model.skinTone == SkinTone.Neutral
+                    onTriggered: view.model.skinTone = SkinTone.Neutral
+                }
+                Kirigami.Action {
+                    QQC2.ActionGroup.group: skinToneGroup
+                    text: i18nc("@action:inmenu Skin Tone", "🖐🏻 Light")
+                    Accessible.name: i18nc("@action:inmenu Skin Tone", "Light")
+                    shortcut: "ctrl+2"
+                    checkable: true
+                    checked: view.model.skinTone == SkinTone.Light
+                    onTriggered: view.model.skinTone = SkinTone.Light
+                }
+                Kirigami.Action {
+                    QQC2.ActionGroup.group: skinToneGroup
+                    text: i18nc("@action:inmenu Skin Tone", "🖐🏼 Medium Light")
+                    Accessible.name: i18nc("@action:inmenu Skin Tone", "Medium Light")
+                    shortcut: "ctrl+3"
+                    checkable: true
+                    checked: view.model.skinTone == SkinTone.MediumLight
+                    onTriggered: view.model.skinTone = SkinTone.MediumLight
+                }
+                Kirigami.Action {
+                    QQC2.ActionGroup.group: skinToneGroup
+                    text: i18nc("@action:inmenu Skin Tone", "🖐🏽 Medium")
+                    Accessible.name: i18nc("@action:inmenu Skin Tone", "Medium")
+                    shortcut: "ctrl+4"
+                    checkable: true
+                    checked: view.model.skinTone == SkinTone.Medium
+                    onTriggered: view.model.skinTone = SkinTone.Medium
+                }
+                Kirigami.Action {
+                    QQC2.ActionGroup.group: skinToneGroup
+                    text: i18nc("@action:inmenu Skin Tone", "🖐🏾 Medium Dark")
+                    Accessible.name: i18nc("@action:inmenu Skin Tone", "Medium Dark")
+                    shortcut: "ctrl+5"
+                    checkable: true
+                    checked: view.model.skinTone == SkinTone.MediumDark
+                    onTriggered: view.model.skinTone = SkinTone.MediumDark
+                }
+                Kirigami.Action {
+                    QQC2.ActionGroup.group: skinToneGroup
+                    text: i18nc("@action:inmenu Skin Tone", "🖐🏿 Dark")
+                    Accessible.name: i18nc("@action:inmenu Skin Tone", "Dark")
+                    shortcut: "ctrl+6"
+                    checkable: true
+                    checked: view.model.skinTone == SkinTone.Dark
+                    onTriggered: view.model.skinTone = SkinTone.Dark
+                }
+            }
         }
     }
 

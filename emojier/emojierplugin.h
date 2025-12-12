@@ -14,6 +14,22 @@
 #include "emojidict.h"
 #include "emojiersettings.h"
 
+class SkinTone : public QObject
+{
+    Q_OBJECT
+    QML_ELEMENT
+public:
+    enum _SkinTone {
+        Neutral = Tone::Neutral,
+        Light = Tone::Light,
+        MediumLight = Tone::MediumLight,
+        Medium = Tone::Medium,
+        MediumDark = Tone::MediumDark,
+        Dark = Tone::Dark
+    };
+    Q_ENUM(_SkinTone)
+};
+
 class AbstractEmojiModel : public QAbstractListModel
 {
     Q_OBJECT
@@ -30,6 +46,8 @@ public:
 
 protected:
     QList<Emoji> m_emoji;
+    QList<Emoji> m_tonedEmojis;
+    EmojierSettings m_settings;
 };
 
 class EmojiModel : public AbstractEmojiModel
@@ -37,14 +55,22 @@ class EmojiModel : public AbstractEmojiModel
     Q_OBJECT
     QML_ELEMENT
     Q_PROPERTY(QStringList categories MEMBER m_categories CONSTANT)
+    Q_PROPERTY(int skinTone READ skinTone WRITE setSkinTone NOTIFY skinToneChanged)
 public:
     enum EmojiRole {
         CategoryRole = Qt::UserRole + 1,
     };
 
     EmojiModel();
+    ~EmojiModel();
 
     Q_SCRIPTABLE QString findFirstEmojiForCategory(const QString &category);
+
+    int skinTone() const;
+
+    void setSkinTone(int skinTone);
+
+    Q_SIGNAL void skinToneChanged();
 
 private:
     QStringList m_categories;
@@ -66,8 +92,6 @@ public:
 
 private:
     void refresh();
-
-    EmojierSettings m_settings;
 };
 
 class CategoryModelFilter : public QSortFilterProxyModel

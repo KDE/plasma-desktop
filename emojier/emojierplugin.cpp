@@ -28,18 +28,23 @@ QVariant AbstractEmojiModel::data(const QModelIndex &index, int role) const
         || index.column() != 0)
         return {};
 
-    const auto &emoji = m_emoji[index.row()];
+    const auto *emoji = &m_emoji[index.row()];
+
+    if (emoji->skinTone == Tone::Neutral && m_settings.skinTone() >= Tone::Light) {
+        emoji = &m_tonedEmojis[emoji->skinToneVariantIndex + m_settings.skinTone() - Tone::Light];
+    }
+
     switch (role) {
     case Qt::DisplayRole:
-        return emoji.content;
+        return emoji->content;
     case Qt::ToolTipRole:
-        return emoji.description;
+        return emoji->description;
     case CategoryRole:
-        return emoji.categoryName();
+        return emoji->categoryName();
     case AnnotationsRole:
-        return emoji.annotations;
+        return emoji->annotations;
     case FallbackDescriptionRole:
-        return emoji.fallbackDescription;
+        return emoji->fallbackDescription;
     }
     return {};
 }
@@ -85,11 +90,29 @@ EmojiModel::EmojiModel()
         dict.load(*iter);
     }
     m_emoji = std::move(dict.m_emojis);
+    m_tonedEmojis = std::move(dict.m_tonedEmojis);
     for (const auto &emoji : m_emoji) {
         categories.insert(emoji.categoryName());
     }
     m_categories = categories.values();
     m_categories.sort();
+
+    switch (skinTone()) {
+    case Tone::Neutral:
+    case Tone::Light:
+    case Tone::MediumLight:
+    case Tone::Medium:
+    case Tone::MediumDark:
+    case Tone::Dark:
+        break;
+    default:
+        setSkinTone(Tone::Neutral);
+    }
+}
+
+EmojiModel::~EmojiModel()
+{
+    m_settings.save();
 }
 
 QString EmojiModel::findFirstEmojiForCategory(const QString &category)
@@ -99,6 +122,18 @@ QString EmojiModel::findFirstEmojiForCategory(const QString &category)
             return emoji.content;
     }
     return {};
+}
+
+void EmojiModel::setSkinTone(int skinTone)
+{
+    m_settings.setSkinTone(skinTone);
+    Q_EMIT dataChanged(index(0, 0), index(rowCount() - 1, 0), {Qt::DisplayRole, Qt::ToolTipRole});
+    Q_EMIT skinToneChanged();
+}
+
+int EmojiModel::skinTone() const
+{
+    return m_settings.skinTone();
 }
 
 RecentEmojiModel::RecentEmojiModel()
