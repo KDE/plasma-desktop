@@ -3,6 +3,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 
@@ -63,6 +64,7 @@ DropArea {
             id: repeater
 
             delegate: SideBarItem {
+                favoritesModel: repeater.model
                 Keys.onUpPressed: event => {
                     if (index > 0) {
                         repeater.itemAt(index - 1).forceActiveFocus(Qt.TabFocusReason)

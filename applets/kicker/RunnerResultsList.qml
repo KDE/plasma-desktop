@@ -19,6 +19,8 @@ RowLayout {
     signal navigateLeftRequested
     signal navigateRightRequested
 
+    required property int index
+
     property alias currentIndex: runnerMatches.currentIndex
     property alias currentItem: runnerMatches.currentItem
     property alias count: runnerMatches.count

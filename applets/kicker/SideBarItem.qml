@@ -14,25 +14,34 @@ import "code/tools.js" as Tools
 PC3.ToolButton {
     id: item
 
+    required property int index
+    required property var model // for display, which conflicts with ToolButton
+    required property bool hasActionList
+    required property string favoriteId
+    required property string decoration
+    required property var /*QVariantList*/ actionList
+    required property url url
+
+    required property var favoritesModel
+
+    readonly property int itemIndex: model.index
+
     activeFocusOnTab: false
 
     text: model.display
     display: PC3.AbstractButton.IconOnly
     Accessible.role: Accessible.ListItem
-    icon.source: model.decoration
+    icon.source: item.decoration
     icon.width: Kirigami.Units.iconSizes.medium
     icon.height: Kirigami.Units.iconSizes.medium
 
 
-    property bool hasActionList: ((model.favoriteId !== null)
-        || (("hasActionList" in model) && (model.hasActionList !== null)))
-    property int itemIndex: model.index
 
     function activate() : void {
         if (dragHandler.active) {
             return
         }
-        repeater.model.trigger(index, "", null);
+        favoritesModel.trigger(index, "", null);
         kicker.expanded = false;
     }
 
@@ -42,8 +51,8 @@ PC3.ToolButton {
     onClicked: activate()
 
     function openActionMenu(visualParent, x, y) {
-        const actionList = (model.hasActionList !== null) ? model.actionList : [];
-        Tools.fillActionMenu(i18n, actionMenu, actionList, repeater.model, model.favoriteId);
+        const actionList = (item.hasActionList !== null) ? item.actionList : [];
+        Tools.fillActionMenu(i18n, actionMenu, actionList, favoritesModel, item.favoriteId);
         actionMenu.visualParent = visualParent;
         actionMenu.open(x, y);
     }
@@ -52,7 +61,7 @@ PC3.ToolButton {
         id: actionMenu
 
         onActionClicked: (actionId, actionArgument) => {
-            if (Tools.triggerAction(repeater.model, model.index, actionId, actionArgument) === true) {
+            if (Tools.triggerAction(repeater.model, item.index, actionId, actionArgument) === true) {
                 kicker.expanded = false;
             }
         }
@@ -72,7 +81,7 @@ PC3.ToolButton {
     }
     Drag.dragType: Drag.Automatic
     Drag.mimeData: {
-        "text/uri-list" : [model.url]
+        "text/uri-list" : [item.url]
     }
 
     MouseArea {

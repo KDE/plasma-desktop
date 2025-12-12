@@ -3,6 +3,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 
@@ -109,6 +110,10 @@ PlasmaComponents.ScrollView {
                 id: repeater
 
                 delegate: Item {
+                    id: gridDelegate
+
+                    required property int index
+
                     width: itemColumn.width - Kirigami.Units.gridUnit
                     height: headerHeight + gridView.height + (index == repeater.count - 1 ? 0 : footerHeight)
 
@@ -136,7 +141,7 @@ PlasmaComponents.ScrollView {
 
                         level: 1
 
-                        text: repeater.model.modelForRow(index).description
+                        text: repeater.model.modelForRow(gridDelegate.index).description
                         textFormat: Text.PlainText
                     }
 
@@ -175,7 +180,7 @@ PlasmaComponents.ScrollView {
 
                         verticalScrollBarPolicy: PlasmaComponents.ScrollBar.AlwaysOff
 
-                        model: repeater.model.modelForRow(index)
+                        model: repeater.model.modelForRow(gridDelegate.index)
 
                         onFocusChanged: {
                             if (focus) {
@@ -183,14 +188,14 @@ PlasmaComponents.ScrollView {
                             }
                         }
 
-                        onCountChanged: selectFirstElement()
+                        onCountChanged: itemMultiGrid.selectFirstElement()
 
                         onCurrentItemChanged: {
                             if (!currentItem) {
                                 return;
                             }
 
-                            if (index == 0 && currentRow() === 0) {
+                            if (gridDelegate.index == 0 && currentRow() === 0) {
                                 flickable.contentY = 0;
                                 return;
                             }
@@ -212,18 +217,18 @@ PlasmaComponents.ScrollView {
                         }
 
                         onKeyNavLeft: {
-                            itemMultiGrid.keyNavLeft(index);
+                            itemMultiGrid.keyNavLeft(gridDelegate.index);
                             currentIndex = -1
                         }
 
                         onKeyNavRight: {
-                            itemMultiGrid.keyNavRight(index);
+                            itemMultiGrid.keyNavRight(gridDelegate.index);
                             currentIndex = -1
                         }
 
                         onKeyNavUp: {
-                            if (index > 0) {
-                                for (var i = index - 1; i >= 0; i--) {
+                            if (gridDelegate.index > 0) {
+                                for (var i = gridDelegate.index - 1; i >= 0; i--) {
                                     if (itemMultiGrid.subGridAt(i).count > 0) {
                                         itemMultiGrid.subGridAt(i).tryActivate(itemMultiGrid.subGridAt(i).lastRow(), currentCol());
                                         break;
@@ -236,10 +241,10 @@ PlasmaComponents.ScrollView {
                         }
 
                         onKeyNavDown: {
-                            if (index < repeater.count - 1) {
-                                for (var i = index + 1; i < repeater.count; i++) {
-                                    if (subGridAt(i).count > 0) {
-                                        subGridAt(i).tryActivate(0, currentCol());
+                            if (gridDelegate.index < repeater.count - 1) {
+                                for (var i = gridDelegate.index + 1; i < repeater.count; i++) {
+                                    if (itemMultiGrid.subGridAt(i).count > 0) {
+                                        itemMultiGrid.subGridAt(i).tryActivate(0, currentCol());
                                         break;
                                     }
                                 }

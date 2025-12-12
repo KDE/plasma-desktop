@@ -3,6 +3,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 
@@ -743,14 +744,18 @@ Kicker.DashboardWindow {
                         delegate: MouseArea {
                             id: item
 
+                            required property int index
+                            required property bool hasActionList
+                            required property string favoriteId
+                            required property var /*QVariantList*/ actionList
+                            required property var model // for display, in case we port this to ItemDelegate
+
                             signal actionTriggered(string actionId, var actionArgument)
                             signal aboutToShowActionMenu(var actionMenu)
 
                             property var m: model
                             property int textWidth: label.contentWidth
                             property int mouseCol
-                            property bool hasActionList: ((model.favoriteId !== null)
-                                || (("hasActionList" in model) && (model.hasActionList === true)))
                             property ActionMenu menu: actionMenu
 
                             width: ListView.view.width
@@ -804,12 +809,12 @@ Kicker.DashboardWindow {
                             }
 
                             onAboutToShowActionMenu: actionMenu => {
-                                var actionList = hasActionList ? model.actionList : [];
-                                Tools.fillActionMenu(i18n, actionMenu, actionList, ListView.view.model.favoritesModel, model.favoriteId);
+                                var actionList = hasActionList ? item.actionList : [];
+                                Tools.fillActionMenu(i18n, actionMenu, actionList, ListView.view.model.favoritesModel, item.favoriteId);
                             }
 
                             onActionTriggered: (actionId, actionArgument) => {
-                                if (Tools.triggerAction(ListView.view.model, model.index, actionId, actionArgument) === true) {
+                                if (Tools.triggerAction(ListView.view.model, item.index, actionId, actionArgument) === true) {
                                     kicker.expanded = false;
                                 }
                             }
@@ -861,7 +866,7 @@ Kicker.DashboardWindow {
 
                                 level: 1
 
-                                text: model.display
+                                text: item.model.display
                                 textFormat: Text.PlainText
                             }
                         }

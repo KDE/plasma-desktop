@@ -15,33 +15,38 @@ import "code/tools.js" as Tools
 Item {
     id: item
 
+    required property int index
+    required property bool disabled
+    required property bool hasActionList
+    required property string favoriteId
+    required property var /*QVariantList*/ actionList
+    required property url url
+    required property string description
+    required property string decoration
+    required property var model // for display, in case we port this to ItemDelegate
+
+    property bool showLabel: true
+    property int itemIndex: item.index
+    property var icon: item.decoration !== undefined ? item.decoration : ""
+    property var m: model
+
     width: GridView.view.cellWidth
     height: width
 
-    enabled: !model.disabled
-
-    property bool showLabel: true
-
-    property int itemIndex: model.index
-    property string favoriteId: model.favoriteId !== undefined ? model.favoriteId : ""
-    property url url: model.url !== undefined ? model.url : ""
-    property var icon: model.decoration !== undefined ? model.decoration : ""
-    property var m: model
-    property bool hasActionList: ((model.favoriteId !== null)
-        || (("hasActionList" in model) && (model.hasActionList === true)))
+    enabled: !item.disabled
 
     Accessible.role: Accessible.MenuItem
     Accessible.name: model.display ?? ""
 
     function openActionMenu(x, y) {
-        var actionList = hasActionList ? model.actionList : [];
-        Tools.fillActionMenu(i18n, actionMenu, actionList, GridView.view.model.favoritesModel, model.favoriteId);
+        var actionList = hasActionList ? item.actionList : [];
+        Tools.fillActionMenu(i18n, actionMenu, actionList, GridView.view.model.favoritesModel, item.favoriteId);
         actionMenu.visualParent = item;
         actionMenu.open(x, y);
     }
 
     function actionTriggered(actionId, actionArgument) {
-        var close = (Tools.triggerAction(GridView.view.model, model.index, actionId, actionArgument) === true);
+        var close = (Tools.triggerAction(GridView.view.model, item.index, actionId, actionArgument) === true);
 
         if (close) {
             root.toggle();
@@ -61,7 +66,7 @@ Item {
 
         animated: false
 
-        source: model.decoration
+        source: item.decoration
     }
 
     PlasmaComponents3.Label {
@@ -84,14 +89,14 @@ Item {
         elide: Text.ElideMiddle
         wrapMode: Text.Wrap
 
-        text: model?.name ?? model.display ?? ""
+        text: item.model.display ?? ""
         textFormat: Text.PlainText
     }
 
     PlasmaCore.ToolTipArea {
         id: toolTip
 
-        mainText: model.description ?? ""
+        mainText: item.description ?? ""
 
         anchors.fill: parent
         mainItem: toolTipDelegate
