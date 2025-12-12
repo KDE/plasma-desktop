@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"POT-Creation-Date: 2025-12-12 00:44+0000\n"
 "PO-Revision-Date: 2025-12-06 15:08+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -21,120 +21,120 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.08.3\n"
 
-#: package/contents/config/config.qml:13
-#, kde-format
-msgid "Appearance"
-msgstr "Itxura"
-
-#: package/contents/ui/ActionMenu.qml:92
+#: qml/ActionMenu.qml:92
 #, kde-format
 msgctxt "@label placeholder for empty menu"
 msgid "(Empty)"
 msgstr "(Hutsik)"
 
-#: package/contents/ui/ConfigAppearance.qml:31
+#: qml/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Itxura"
+
+#: qml/ConfigAppearance.qml:31
 #, kde-format
 msgctxt "@title:group for radiobuttons"
 msgid "Input method list:"
 msgstr "Sarrera metodoen zerrenda:"
 
-#: package/contents/ui/ConfigAppearance.qml:32
+#: qml/ConfigAppearance.qml:32
 #, kde-format
 msgctxt "@option:radio IM list orientation"
 msgid "Vertical"
 msgstr "Bertikala"
 
-#: package/contents/ui/ConfigAppearance.qml:38
+#: qml/ConfigAppearance.qml:38
 #, kde-format
 msgctxt "@option:radio IM list orientation"
 msgid "Horizontal"
 msgstr "Horizontala"
 
-#: package/contents/ui/ConfigAppearance.qml:45
+#: qml/ConfigAppearance.qml:45
 #, kde-format
 msgctxt "@title group font selection"
 msgid "Font:"
 msgstr "Letra-tipoa:"
 
-#: package/contents/ui/ConfigAppearance.qml:51
+#: qml/ConfigAppearance.qml:51
 #, kde-format
 msgctxt "@option:check use custom font"
 msgid "Use custom:"
 msgstr "Erabili neurrikoa:"
 
-#: package/contents/ui/ConfigAppearance.qml:57
+#: qml/ConfigAppearance.qml:57
 #, kde-format
 msgctxt "@info The selected font family (%1) and font size (%2)"
 msgid "%1 %2 pt"
 msgstr "%1 %2 pt"
 
-#: package/contents/ui/ConfigAppearance.qml:65
+#: qml/ConfigAppearance.qml:65
 #, kde-format
 msgctxt "@action:button opens font dialog"
 msgid "Choose Font…"
 msgstr "Hautatu letra-tipoa…"
 
-#: package/contents/ui/ConfigAppearance.qml:78
+#: qml/ConfigAppearance.qml:78
 #, kde-format
 msgctxt "@title:group The arrangement of icons in the Panel"
 msgid "Panel icon size:"
 msgstr "Paneleko ikonoen neurria:"
 
-#: package/contents/ui/ConfigAppearance.qml:79
+#: qml/ConfigAppearance.qml:79
 #, kde-format
 msgctxt "@option:radio panel icon size"
 msgid "Small"
 msgstr "Txikia"
 
-#: package/contents/ui/ConfigAppearance.qml:87
+#: qml/ConfigAppearance.qml:87
 #, kde-format
 msgctxt "@option:radio panel icon size"
 msgid "Scale with Panel height"
 msgstr "Eskalatu panelaren altuerarekin"
 
-#: package/contents/ui/ConfigAppearance.qml:88
+#: qml/ConfigAppearance.qml:88
 #, kde-format
 msgctxt "@option:radio panel icon size"
 msgid "Scale with Panel width"
 msgstr "Eskalatu panelaren zabalerarekin"
 
-#: package/contents/ui/ConfigAppearance.qml:96
+#: qml/ConfigAppearance.qml:96
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Font"
 msgstr "Hautatu letra-tipoa"
 
-#: package/contents/ui/ContextMenu.qml:96
+#: qml/ContextMenu.qml:96
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show"
 msgstr "Erakutsi"
 
-#: package/contents/ui/ContextMenu.qml:111
+#: qml/ContextMenu.qml:111
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide %1"
 msgstr "Ezkutatu %1"
 
-#: package/contents/ui/ContextMenu.qml:120
+#: qml/ContextMenu.qml:120
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Input Method"
 msgstr "Konfiguratu sarrera metodoa"
 
-#: package/contents/ui/ContextMenu.qml:128
+#: qml/ContextMenu.qml:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Reload Config"
 msgstr "Birzamatu konfigurazioa"
 
-#: package/contents/ui/ContextMenu.qml:136
+#: qml/ContextMenu.qml:136
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Exit Input Method"
 msgstr "Irten sarrera metodotik"
 
-#: package/contents/ui/main.qml:254
+#: qml/main.qml:254
 #, kde-format
 msgctxt "@label placeholder for missing label"
 msgid "Input Method Panel"

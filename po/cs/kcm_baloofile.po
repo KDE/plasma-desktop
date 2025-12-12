@@ -86,10 +86,9 @@ msgid "File names and contents"
 msgstr "Názvy souborů a obsah"
 
 #: ui/main.qml:157
-#, fuzzy, kde-format
-#| msgid "Hidden files and folders"
+#, kde-format
 msgid "Also index hidden files and folders"
-msgstr "Skryté soubory a složky"
+msgstr ""
 
 #: ui/main.qml:183
 #, kde-format
@@ -146,11 +145,3 @@ msgstr "Zvolte složku pro zahrnutí"
 #, kde-format
 msgid "Select a folder to exclude"
 msgstr "Zvolte složku pro vyřazení"
-
-#~ msgctxt "@title:group"
-#~ msgid "File indexing:"
-#~ msgstr "Indexování souborů:"
-
-#~ msgctxt "@action:check"
-#~ msgid "Enabled"
-#~ msgstr "Povoleno"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.homerun\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-08 00:45+0000\n"
+"POT-Creation-Date: 2025-12-12 00:44+0000\n"
 "PO-Revision-Date: 2012-09-21 16:01-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -17,27 +17,27 @@ msgstr ""
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
 
-#: code/tools.js:43
+#: code/tools.js:53
 #, kde-format
 msgid "Remove from Favorites"
 msgstr ""
 
-#: code/tools.js:47
+#: code/tools.js:57
 #, kde-format
 msgid "Add to Favorites"
 msgstr ""
 
-#: code/tools.js:73
+#: code/tools.js:83
 #, kde-format
 msgid "On All Activities"
 msgstr ""
 
-#: code/tools.js:123
+#: code/tools.js:133
 #, kde-format
 msgid "On the Current Activity"
 msgstr ""
 
-#: code/tools.js:137
+#: code/tools.js:147
 #, fuzzy, kde-format
 #| msgid "Favorite Places"
 msgid "Show in Favorites"
@@ -194,19 +194,38 @@ msgid ""
 "usually feature a dark background."
 msgstr ""
 
-#: DashboardRepresentation.qml:295
+#: DashboardRepresentation.qml:313
 #, fuzzy, kde-format
 #| msgid "Favorite Places"
 msgid "Favorites"
 msgstr "Áiteanna Is Ansa Liom"
 
-#: main.qml:227
+#: ItemListDelegate.qml:46
+#, kde-format
+msgctxt "@action:inmenu accessible description for opening submenu"
+msgid "Open category"
+msgstr ""
+
+#: ItemListDelegate.qml:47
+#, kde-format
+msgctxt "@action:inmenu accessible description for opening app or file"
+msgid "Launch"
+msgstr ""
+
+#: main.qml:203
 #, fuzzy, kde-format
 #| msgid "Applications"
 msgid "Edit Applications…"
 msgstr "Feidhmchláir"
 
-#: MenuRepresentation.qml:300
+#: MenuRepresentation.qml:135
+#, fuzzy, kde-format
+#| msgid "Favorite Places"
+msgctxt "@title:group accessible name for favorite group in sidebar"
+msgid "Favorites"
+msgstr "Áiteanna Is Ansa Liom"
+
+#: MenuRepresentation.qml:301
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"

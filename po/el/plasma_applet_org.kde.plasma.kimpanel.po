@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"POT-Creation-Date: 2025-12-12 00:44+0000\n"
 "PO-Revision-Date: 2024-08-12 23:22+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -20,67 +20,67 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.05.2\n"
 
-#: package/contents/config/config.qml:13
-#, kde-format
-msgid "Appearance"
-msgstr "Εμφάνιση"
-
-#: package/contents/ui/ActionMenu.qml:92
+#: qml/ActionMenu.qml:92
 #, fuzzy, kde-format
 #| msgid "(Empty)"
 msgctxt "@label placeholder for empty menu"
 msgid "(Empty)"
 msgstr "(Άδειο)"
 
-#: package/contents/ui/ConfigAppearance.qml:31
+#: qml/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Εμφάνιση"
+
+#: qml/ConfigAppearance.qml:31
 #, fuzzy, kde-format
 #| msgid "Input method list:"
 msgctxt "@title:group for radiobuttons"
 msgid "Input method list:"
 msgstr "Λίστα μεθόδων εισόδου:"
 
-#: package/contents/ui/ConfigAppearance.qml:32
+#: qml/ConfigAppearance.qml:32
 #, fuzzy, kde-format
 #| msgid "Vertical"
 msgctxt "@option:radio IM list orientation"
 msgid "Vertical"
 msgstr "Κατακόρυφο"
 
-#: package/contents/ui/ConfigAppearance.qml:38
+#: qml/ConfigAppearance.qml:38
 #, fuzzy, kde-format
 #| msgid "Horizontal"
 msgctxt "@option:radio IM list orientation"
 msgid "Horizontal"
 msgstr "Οριζόντια"
 
-#: package/contents/ui/ConfigAppearance.qml:45
+#: qml/ConfigAppearance.qml:45
 #, fuzzy, kde-format
 #| msgid "Font:"
 msgctxt "@title group font selection"
 msgid "Font:"
 msgstr "Γραμματοσειρά:"
 
-#: package/contents/ui/ConfigAppearance.qml:51
+#: qml/ConfigAppearance.qml:51
 #, fuzzy, kde-format
 #| msgid "Use custom:"
 msgctxt "@option:check use custom font"
 msgid "Use custom:"
 msgstr "Χρήση προσαρμοσμένης:"
 
-#: package/contents/ui/ConfigAppearance.qml:57
+#: qml/ConfigAppearance.qml:57
 #, kde-format
 msgctxt "@info The selected font family (%1) and font size (%2)"
 msgid "%1 %2 pt"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:65
+#: qml/ConfigAppearance.qml:65
 #, fuzzy, kde-format
 #| msgid "Select Font…"
 msgctxt "@action:button opens font dialog"
 msgid "Choose Font…"
 msgstr "Επιλογή γραμματοσειράς…"
 
-#: package/contents/ui/ConfigAppearance.qml:78
+#: qml/ConfigAppearance.qml:78
 #, fuzzy, kde-format
 #| msgctxt "The arrangement of icons in the Panel"
 #| msgid "Panel icon size:"
@@ -88,69 +88,69 @@ msgctxt "@title:group The arrangement of icons in the Panel"
 msgid "Panel icon size:"
 msgstr "Μέγεθος εικονιδίου πίνακα:"
 
-#: package/contents/ui/ConfigAppearance.qml:79
+#: qml/ConfigAppearance.qml:79
 #, fuzzy, kde-format
 #| msgid "Small"
 msgctxt "@option:radio panel icon size"
 msgid "Small"
 msgstr "Μικρό"
 
-#: package/contents/ui/ConfigAppearance.qml:87
+#: qml/ConfigAppearance.qml:87
 #, fuzzy, kde-format
 #| msgid "Scale with Panel height"
 msgctxt "@option:radio panel icon size"
 msgid "Scale with Panel height"
 msgstr "Κλίμακα με το ύψος πίνακα"
 
-#: package/contents/ui/ConfigAppearance.qml:88
+#: qml/ConfigAppearance.qml:88
 #, fuzzy, kde-format
 #| msgid "Scale with Panel width"
 msgctxt "@option:radio panel icon size"
 msgid "Scale with Panel width"
 msgstr "Κλίμακα με το πλάτος πίνακα"
 
-#: package/contents/ui/ConfigAppearance.qml:96
+#: qml/ConfigAppearance.qml:96
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Font"
 msgstr "Επιλογή γραμματοσειράς"
 
-#: package/contents/ui/ContextMenu.qml:96
+#: qml/ContextMenu.qml:96
 #, fuzzy, kde-format
 #| msgid "Show"
 msgctxt "@action:inmenu"
 msgid "Show"
 msgstr "Εμφάνιση"
 
-#: package/contents/ui/ContextMenu.qml:111
+#: qml/ContextMenu.qml:111
 #, fuzzy, kde-format
 #| msgid "Hide %1"
 msgctxt "@action:inmenu"
 msgid "Hide %1"
 msgstr "Απόκρυψη %1"
 
-#: package/contents/ui/ContextMenu.qml:120
+#: qml/ContextMenu.qml:120
 #, fuzzy, kde-format
 #| msgid "Configure Input Method"
 msgctxt "@action:inmenu"
 msgid "Configure Input Method"
 msgstr "Διαμόρφωση μεθόδου εισαγωγής"
 
-#: package/contents/ui/ContextMenu.qml:128
+#: qml/ContextMenu.qml:128
 #, fuzzy, kde-format
 #| msgid "Reload Config"
 msgctxt "@action:inmenu"
 msgid "Reload Config"
 msgstr "Επαναφόρτωση διαμόρφωσης"
 
-#: package/contents/ui/ContextMenu.qml:136
+#: qml/ContextMenu.qml:136
 #, fuzzy, kde-format
 #| msgid "Exit Input Method"
 msgctxt "@action:inmenu"
 msgid "Exit Input Method"
 msgstr "Έξοδος από μέθοδο εισαγωγής"
 
-#: package/contents/ui/main.qml:254
+#: qml/main.qml:254
 #, fuzzy, kde-format
 #| msgid "Input Method Panel"
 msgctxt "@label placeholder for missing label"

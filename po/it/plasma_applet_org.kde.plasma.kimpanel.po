@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_kimpanel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"POT-Creation-Date: 2025-12-12 00:44+0000\n"
 "PO-Revision-Date: 2025-11-28 14:23+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -18,120 +18,120 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.08.3\n"
 
-#: package/contents/config/config.qml:13
-#, kde-format
-msgid "Appearance"
-msgstr "Aspetto"
-
-#: package/contents/ui/ActionMenu.qml:92
+#: qml/ActionMenu.qml:92
 #, kde-format
 msgctxt "@label placeholder for empty menu"
 msgid "(Empty)"
 msgstr "(Vuoto)"
 
-#: package/contents/ui/ConfigAppearance.qml:31
+#: qml/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Aspetto"
+
+#: qml/ConfigAppearance.qml:31
 #, kde-format
 msgctxt "@title:group for radiobuttons"
 msgid "Input method list:"
 msgstr "Elenco dei metodo di inserimento:"
 
-#: package/contents/ui/ConfigAppearance.qml:32
+#: qml/ConfigAppearance.qml:32
 #, kde-format
 msgctxt "@option:radio IM list orientation"
 msgid "Vertical"
 msgstr "Verticale"
 
-#: package/contents/ui/ConfigAppearance.qml:38
+#: qml/ConfigAppearance.qml:38
 #, kde-format
 msgctxt "@option:radio IM list orientation"
 msgid "Horizontal"
 msgstr "Orizzontale"
 
-#: package/contents/ui/ConfigAppearance.qml:45
+#: qml/ConfigAppearance.qml:45
 #, kde-format
 msgctxt "@title group font selection"
 msgid "Font:"
 msgstr "Carattere:"
 
-#: package/contents/ui/ConfigAppearance.qml:51
+#: qml/ConfigAppearance.qml:51
 #, kde-format
 msgctxt "@option:check use custom font"
 msgid "Use custom:"
 msgstr "Utilizza personalizzato:"
 
-#: package/contents/ui/ConfigAppearance.qml:57
+#: qml/ConfigAppearance.qml:57
 #, kde-format
 msgctxt "@info The selected font family (%1) and font size (%2)"
 msgid "%1 %2 pt"
 msgstr "%1 %2 pt"
 
-#: package/contents/ui/ConfigAppearance.qml:65
+#: qml/ConfigAppearance.qml:65
 #, kde-format
 msgctxt "@action:button opens font dialog"
 msgid "Choose Font…"
 msgstr "Scegli carattere…"
 
-#: package/contents/ui/ConfigAppearance.qml:78
+#: qml/ConfigAppearance.qml:78
 #, kde-format
 msgctxt "@title:group The arrangement of icons in the Panel"
 msgid "Panel icon size:"
 msgstr "Dimensione delle icone del pannello:"
 
-#: package/contents/ui/ConfigAppearance.qml:79
+#: qml/ConfigAppearance.qml:79
 #, kde-format
 msgctxt "@option:radio panel icon size"
 msgid "Small"
 msgstr "Piccola"
 
-#: package/contents/ui/ConfigAppearance.qml:87
+#: qml/ConfigAppearance.qml:87
 #, kde-format
 msgctxt "@option:radio panel icon size"
 msgid "Scale with Panel height"
 msgstr "Adatta all'altezza del pannello"
 
-#: package/contents/ui/ConfigAppearance.qml:88
+#: qml/ConfigAppearance.qml:88
 #, kde-format
 msgctxt "@option:radio panel icon size"
 msgid "Scale with Panel width"
 msgstr "Adatta alla larghezza del pannello"
 
-#: package/contents/ui/ConfigAppearance.qml:96
+#: qml/ConfigAppearance.qml:96
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Font"
 msgstr "Seleziona carattere"
 
-#: package/contents/ui/ContextMenu.qml:96
+#: qml/ContextMenu.qml:96
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show"
 msgstr "Mostra"
 
-#: package/contents/ui/ContextMenu.qml:111
+#: qml/ContextMenu.qml:111
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide %1"
 msgstr "Nascondi %1"
 
-#: package/contents/ui/ContextMenu.qml:120
+#: qml/ContextMenu.qml:120
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Input Method"
 msgstr "Configura metodo di inserimento"
 
-#: package/contents/ui/ContextMenu.qml:128
+#: qml/ContextMenu.qml:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Reload Config"
 msgstr "Ricarica configurazione"
 
-#: package/contents/ui/ContextMenu.qml:136
+#: qml/ContextMenu.qml:136
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Exit Input Method"
 msgstr "Chiudi metodo di inserimento"
 
-#: package/contents/ui/main.qml:254
+#: qml/main.qml:254
 #, kde-format
 msgctxt "@label placeholder for missing label"
 msgid "Input Method Panel"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"POT-Creation-Date: 2025-12-12 00:44+0000\n"
 "PO-Revision-Date: 2025-03-25 07:04+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -19,67 +19,67 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: package/contents/config/config.qml:13
-#, kde-format
-msgid "Appearance"
-msgstr "Utseende"
-
-#: package/contents/ui/ActionMenu.qml:92
+#: qml/ActionMenu.qml:92
 #, fuzzy, kde-format
 #| msgid "(Empty)"
 msgctxt "@label placeholder for empty menu"
 msgid "(Empty)"
 msgstr "(Tom)"
 
-#: package/contents/ui/ConfigAppearance.qml:31
+#: qml/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Utseende"
+
+#: qml/ConfigAppearance.qml:31
 #, fuzzy, kde-format
 #| msgid "Input method list:"
 msgctxt "@title:group for radiobuttons"
 msgid "Input method list:"
 msgstr "Inndatametode-liste:"
 
-#: package/contents/ui/ConfigAppearance.qml:32
+#: qml/ConfigAppearance.qml:32
 #, fuzzy, kde-format
 #| msgid "Vertical"
 msgctxt "@option:radio IM list orientation"
 msgid "Vertical"
 msgstr "Loddrett"
 
-#: package/contents/ui/ConfigAppearance.qml:38
+#: qml/ConfigAppearance.qml:38
 #, fuzzy, kde-format
 #| msgid "Horizontal"
 msgctxt "@option:radio IM list orientation"
 msgid "Horizontal"
 msgstr "Vannrett"
 
-#: package/contents/ui/ConfigAppearance.qml:45
+#: qml/ConfigAppearance.qml:45
 #, fuzzy, kde-format
 #| msgid "Font:"
 msgctxt "@title group font selection"
 msgid "Font:"
 msgstr "Skrift:"
 
-#: package/contents/ui/ConfigAppearance.qml:51
+#: qml/ConfigAppearance.qml:51
 #, fuzzy, kde-format
 #| msgid "Use custom:"
 msgctxt "@option:check use custom font"
 msgid "Use custom:"
 msgstr "Bruk tilpasset:"
 
-#: package/contents/ui/ConfigAppearance.qml:57
+#: qml/ConfigAppearance.qml:57
 #, kde-format
 msgctxt "@info The selected font family (%1) and font size (%2)"
 msgid "%1 %2 pt"
 msgstr ""
 
-#: package/contents/ui/ConfigAppearance.qml:65
+#: qml/ConfigAppearance.qml:65
 #, fuzzy, kde-format
 #| msgid "Select Font…"
 msgctxt "@action:button opens font dialog"
 msgid "Choose Font…"
 msgstr "Velg skrift …"
 
-#: package/contents/ui/ConfigAppearance.qml:78
+#: qml/ConfigAppearance.qml:78
 #, fuzzy, kde-format
 #| msgctxt "The arrangement of icons in the Panel"
 #| msgid "Panel icon size:"
@@ -87,69 +87,69 @@ msgctxt "@title:group The arrangement of icons in the Panel"
 msgid "Panel icon size:"
 msgstr "Størrelse på panelikon:"
 
-#: package/contents/ui/ConfigAppearance.qml:79
+#: qml/ConfigAppearance.qml:79
 #, fuzzy, kde-format
 #| msgid "Small"
 msgctxt "@option:radio panel icon size"
 msgid "Small"
 msgstr "Liten"
 
-#: package/contents/ui/ConfigAppearance.qml:87
+#: qml/ConfigAppearance.qml:87
 #, fuzzy, kde-format
 #| msgid "Scale with Panel height"
 msgctxt "@option:radio panel icon size"
 msgid "Scale with Panel height"
 msgstr "Skaler med panelhøyden"
 
-#: package/contents/ui/ConfigAppearance.qml:88
+#: qml/ConfigAppearance.qml:88
 #, fuzzy, kde-format
 #| msgid "Scale with Panel width"
 msgctxt "@option:radio panel icon size"
 msgid "Scale with Panel width"
 msgstr "Skaler med panelbredden"
 
-#: package/contents/ui/ConfigAppearance.qml:96
+#: qml/ConfigAppearance.qml:96
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Font"
 msgstr "Velg skrift"
 
-#: package/contents/ui/ContextMenu.qml:96
+#: qml/ContextMenu.qml:96
 #, fuzzy, kde-format
 #| msgid "Show"
 msgctxt "@action:inmenu"
 msgid "Show"
 msgstr "Vis"
 
-#: package/contents/ui/ContextMenu.qml:111
+#: qml/ContextMenu.qml:111
 #, fuzzy, kde-format
 #| msgid "Hide %1"
 msgctxt "@action:inmenu"
 msgid "Hide %1"
 msgstr "Skjul %1"
 
-#: package/contents/ui/ContextMenu.qml:120
+#: qml/ContextMenu.qml:120
 #, fuzzy, kde-format
 #| msgid "Configure Input Method"
 msgctxt "@action:inmenu"
 msgid "Configure Input Method"
 msgstr "Sett opp skrivemetode"
 
-#: package/contents/ui/ContextMenu.qml:128
+#: qml/ContextMenu.qml:128
 #, fuzzy, kde-format
 #| msgid "Reload Config"
 msgctxt "@action:inmenu"
 msgid "Reload Config"
 msgstr "Last inn oppsettet på nytt"
 
-#: package/contents/ui/ContextMenu.qml:136
+#: qml/ContextMenu.qml:136
 #, fuzzy, kde-format
 #| msgid "Exit Input Method"
 msgctxt "@action:inmenu"
 msgid "Exit Input Method"
 msgstr "Avslutt skrivemetode"
 
-#: package/contents/ui/main.qml:254
+#: qml/main.qml:254
 #, fuzzy, kde-format
 #| msgid "Input Method Panel"
 msgctxt "@label placeholder for missing label"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-08 00:45+0000\n"
+"POT-Creation-Date: 2025-12-12 00:44+0000\n"
 "PO-Revision-Date: 2025-11-22 09:43+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -18,27 +18,27 @@ msgstr ""
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: code/tools.js:43
+#: code/tools.js:53
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "Fjarlægja úr eftirlætum"
 
-#: code/tools.js:47
+#: code/tools.js:57
 #, kde-format
 msgid "Add to Favorites"
 msgstr "Bæta við eftirlæti"
 
-#: code/tools.js:73
+#: code/tools.js:83
 #, kde-format
 msgid "On All Activities"
 msgstr "Í öllum athöfnum"
 
-#: code/tools.js:123
+#: code/tools.js:133
 #, kde-format
 msgid "On the Current Activity"
 msgstr "Í núverandi athöfn"
 
-#: code/tools.js:137
+#: code/tools.js:147
 #, kde-format
 msgid "Show in Favorites"
 msgstr "Sýna í eftirlætum"
@@ -190,17 +190,36 @@ msgstr ""
 "Þessi eiginleiki notar gagnstæða liti úr litastefinu þínu, sem venjulega "
 "ættu að nota dökkan bakgrunn."
 
-#: DashboardRepresentation.qml:295
+#: DashboardRepresentation.qml:313
 #, kde-format
 msgid "Favorites"
 msgstr "Eftirlæti"
 
-#: main.qml:227
+#: ItemListDelegate.qml:46
+#, kde-format
+msgctxt "@action:inmenu accessible description for opening submenu"
+msgid "Open category"
+msgstr ""
+
+#: ItemListDelegate.qml:47
+#, kde-format
+msgctxt "@action:inmenu accessible description for opening app or file"
+msgid "Launch"
+msgstr ""
+
+#: main.qml:203
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Breyta forritum…"
 
-#: MenuRepresentation.qml:300
+#: MenuRepresentation.qml:135
+#, fuzzy, kde-format
+#| msgid "Favorites"
+msgctxt "@title:group accessible name for favorite group in sidebar"
+msgid "Favorites"
+msgstr "Eftirlæti"
+
+#: MenuRepresentation.qml:301
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"

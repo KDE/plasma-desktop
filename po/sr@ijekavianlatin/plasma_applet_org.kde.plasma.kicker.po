@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-08 00:45+0000\n"
+"POT-Creation-Date: 2025-12-12 00:44+0000\n"
 "PO-Revision-Date: 2017-09-25 19:53+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,28 +18,28 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: code/tools.js:43
+#: code/tools.js:53
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "Ukloni iz omiljenih"
 
-#: code/tools.js:47
+#: code/tools.js:57
 #, kde-format
 msgid "Add to Favorites"
 msgstr "Dodaj u omiljene"
 
-#: code/tools.js:73
+#: code/tools.js:83
 #, kde-format
 msgid "On All Activities"
 msgstr "Na svim aktivnostima"
 
-#: code/tools.js:123
+#: code/tools.js:133
 #, fuzzy, kde-format
 #| msgid "On The Current Activity"
 msgid "On the Current Activity"
 msgstr "Na tekućoj aktivnosti"
 
-#: code/tools.js:137
+#: code/tools.js:147
 #, fuzzy, kde-format
 #| msgid "Show In Favorites"
 msgid "Show in Favorites"
@@ -217,18 +217,37 @@ msgid ""
 "usually feature a dark background."
 msgstr ""
 
-#: DashboardRepresentation.qml:295
+#: DashboardRepresentation.qml:313
 #, kde-format
 msgid "Favorites"
 msgstr "Omiljeno"
 
-#: main.qml:227
+#: ItemListDelegate.qml:46
+#, kde-format
+msgctxt "@action:inmenu accessible description for opening submenu"
+msgid "Open category"
+msgstr ""
+
+#: ItemListDelegate.qml:47
+#, kde-format
+msgctxt "@action:inmenu accessible description for opening app or file"
+msgid "Launch"
+msgstr ""
+
+#: main.qml:203
 #, fuzzy, kde-format
 #| msgid "Edit Applications..."
 msgid "Edit Applications…"
 msgstr "Uredi programe..."
 
-#: MenuRepresentation.qml:300
+#: MenuRepresentation.qml:135
+#, fuzzy, kde-format
+#| msgid "Favorites"
+msgctxt "@title:group accessible name for favorite group in sidebar"
+msgid "Favorites"
+msgstr "Omiljeno"
+
+#: MenuRepresentation.qml:301
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"

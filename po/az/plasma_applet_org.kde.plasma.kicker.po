@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-08 00:45+0000\n"
+"POT-Creation-Date: 2025-12-12 00:44+0000\n"
 "PO-Revision-Date: 2022-07-06 17:49+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -17,27 +17,27 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.04.2\n"
 
-#: code/tools.js:43
+#: code/tools.js:53
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "Seçilmişlərdən silmək"
 
-#: code/tools.js:47
+#: code/tools.js:57
 #, kde-format
 msgid "Add to Favorites"
 msgstr "Seçilmişlərə əlavə etmək"
 
-#: code/tools.js:73
+#: code/tools.js:83
 #, kde-format
 msgid "On All Activities"
 msgstr "Bütün İş otaqlarında"
 
-#: code/tools.js:123
+#: code/tools.js:133
 #, kde-format
 msgid "On the Current Activity"
 msgstr "Cari İş otağında"
 
-#: code/tools.js:137
+#: code/tools.js:147
 #, kde-format
 msgid "Show in Favorites"
 msgstr "Seçilmişlərdə göstərmək"
@@ -187,17 +187,36 @@ msgid ""
 "usually feature a dark background."
 msgstr ""
 
-#: DashboardRepresentation.qml:295
+#: DashboardRepresentation.qml:313
 #, kde-format
 msgid "Favorites"
 msgstr "Seçilmişlər"
 
-#: main.qml:227
+#: ItemListDelegate.qml:46
+#, kde-format
+msgctxt "@action:inmenu accessible description for opening submenu"
+msgid "Open category"
+msgstr ""
+
+#: ItemListDelegate.qml:47
+#, kde-format
+msgctxt "@action:inmenu accessible description for opening app or file"
+msgid "Launch"
+msgstr ""
+
+#: main.qml:203
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Tətbiqər siyahısına düzəliş…"
 
-#: MenuRepresentation.qml:300
+#: MenuRepresentation.qml:135
+#, fuzzy, kde-format
+#| msgid "Favorites"
+msgctxt "@title:group accessible name for favorite group in sidebar"
+msgid "Favorites"
+msgstr "Seçilmişlər"
+
+#: MenuRepresentation.qml:301
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"

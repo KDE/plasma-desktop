@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-12 00:44+0000\n"
 "PO-Revision-Date: 2024-01-13 12:08+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,28 +19,28 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.0.1\n"
 
-#: contents/config/config.qml:6
+#: qml/config.qml:6
 #, kde-format
 msgid "General"
 msgstr "Bendra"
 
-#: contents/ui/configGeneral.qml:31
+#: qml/configGeneral.qml:31
 #, kde-format
 msgid "Display style:"
 msgstr "Atvaizdavimo stilius:"
 
-#: contents/ui/configGeneral.qml:70
+#: qml/configGeneral.qml:70
 #, kde-format
 msgctxt "@info:placeholder Make this translation as short as possible"
 msgid "No flag available"
 msgstr "Nėra vėliavos"
 
-#: contents/ui/configGeneral.qml:110
+#: qml/configGeneral.qml:110
 #, kde-format
 msgid "Layouts:"
 msgstr "Išdėstymai:"
 
-#: contents/ui/configGeneral.qml:111
+#: qml/configGeneral.qml:111
 #, kde-format
 msgid "Configure…"
 msgstr "Konfigūruoti…"

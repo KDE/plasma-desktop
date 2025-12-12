@@ -240,27 +240,22 @@ msgstr "Exportovat %1"
 
 #: ui/main.qml:231
 #, fuzzy, kde-format
-#| msgctxt "@action:button accessible %1 is the name of a custom command"
-#| msgid "Edit command for %1"
+#| msgid "Edit Command"
 msgctxt "@action:button %1 is the name of a custom command"
 msgid "Edit command for %1"
-msgstr "Upravit příkaz pro %1"
+msgstr "Příkaz pro úpravu"
 
 #: ui/main.qml:258
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible %1 is the name of a shortcut category"
-#| msgid "Remove all shortcuts for %1"
+#, kde-format
 msgctxt "@action:button %1 is the name of a shortcut category"
 msgid "Remove all shortcuts for %1"
-msgstr "Odstranit všechny klávesové zkratky pro %1"
+msgstr ""
 
 #: ui/main.qml:280
-#, fuzzy, kde-format
-#| msgctxt "@action:button accessible"
-#| msgid "Undo deletion"
+#, kde-format
 msgctxt "@action:button"
 msgid "Undo deletion"
-msgstr "Vrátit zpět smazání"
+msgstr ""
 
 #: ui/main.qml:341
 #, kde-format
@@ -509,23 +504,3 @@ msgstr "Přidat vlastní klávesovou zkratku"
 msgctxt "@action:button accessible"
 msgid "Cancel capturing shortcut"
 msgstr "Zrušit zadání klávesové zkratky"
-
-#~ msgctxt "@info:tooltip %1 is the text of a custom command"
-#~ msgid "Edit command for %1"
-#~ msgstr "Upravit příkaz pro %1"
-
-#~ msgctxt "@info:tooltip %1 is the text of a shortcut category"
-#~ msgid "Remove all shortcuts for %1"
-#~ msgstr "Odstranit všechny klávesové zkratky pro %1"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Undo deletion"
-#~ msgstr "Vrátit zpět smazání"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Delete this shortcut"
-#~ msgstr "Odstranit tuto klávesovou zkratku"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Cancel capturing of new shortcut"
-#~ msgstr "Zrušit zadání nové klávesové zkratky"

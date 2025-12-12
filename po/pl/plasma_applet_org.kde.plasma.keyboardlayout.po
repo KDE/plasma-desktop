@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-12 00:44+0000\n"
 "PO-Revision-Date: 2022-08-21 07:19+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -17,28 +17,28 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-#: contents/config/config.qml:6
+#: qml/config.qml:6
 #, kde-format
 msgid "General"
 msgstr "Ogólne"
 
-#: contents/ui/configGeneral.qml:31
+#: qml/configGeneral.qml:31
 #, kde-format
 msgid "Display style:"
 msgstr "Sposób wyświetlania:"
 
-#: contents/ui/configGeneral.qml:70
+#: qml/configGeneral.qml:70
 #, kde-format
 msgctxt "@info:placeholder Make this translation as short as possible"
 msgid "No flag available"
 msgstr "Nie jest dostępna żadna flaga"
 
-#: contents/ui/configGeneral.qml:110
+#: qml/configGeneral.qml:110
 #, kde-format
 msgid "Layouts:"
 msgstr "Układy:"
 
-#: contents/ui/configGeneral.qml:111
+#: qml/configGeneral.qml:111
 #, kde-format
 msgid "Configure…"
 msgstr "Ustawienia..."
