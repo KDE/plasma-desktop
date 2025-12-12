@@ -21,7 +21,6 @@ FocusScope {
     signal keyNavDown
 
     signal interactionConcluded()
-    signal itemActivated(int index, string actionId, string argument)
 
     property bool dragEnabled: true
     property bool dropEnabled: false
@@ -444,8 +443,6 @@ FocusScope {
                             gridView.model.trigger(pressedItem.itemIndex, "", null);
                             itemGrid.interactionConcluded()
                         }
-
-                        itemGrid.itemActivated(pressedItem.itemIndex, "", null);
                     } else if (mouse.button === Qt.LeftButton) {
                         itemGrid.interactionConcluded()
                     }

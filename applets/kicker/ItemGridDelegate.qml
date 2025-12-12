@@ -117,7 +117,5 @@ Item {
             GridView.view.model.trigger(index, "", null);
             item.interactionConcluded()
         }
-
-        itemGrid.itemActivated(index, "", null);
     }
 }
