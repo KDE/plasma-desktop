@@ -602,6 +602,8 @@ Kicker.DashboardWindow {
                     z: (opacity === 1.0) ? 1 : 0
                     width: parent.width
                     height: systemFavoritesGrid.y + systemFavoritesGrid.height
+                    cellSize: root.cellSize
+                    iconSize: root.iconSize
 
                     visible: opacity !== 0.0
 
@@ -644,6 +646,8 @@ Kicker.DashboardWindow {
                     z: (opacity === 1.0) ? 1 : 0
                     width: parent.width
                     height: Math.min(implicitHeight, systemFavoritesGrid.y + systemFavoritesGrid.height)
+                    cellSize: root.cellSize
+                    iconSize: root.iconSize
 
                     visible: opacity !== 0.0
 

@@ -22,6 +22,7 @@ Item {
     readonly property bool useCustomButtonImage: (Plasmoid.configuration.useCustomButtonImage
         && Plasmoid.configuration.customButtonImage.length !== 0)
 
+    property string toolTipSubText: ""
     property Component dashWindowComponent
     readonly property Kicker.DashboardWindow dashWindow: isDash && dashWindowComponent && dashWindowComponent.status === Component.Ready
         ? dashWindowComponent.createObject(root, { visualParent: root }) as Kicker.DashboardWindow : null
@@ -87,7 +88,7 @@ Item {
         Keys.onSelectPressed: Plasmoid.activated()
 
         Accessible.name: Plasmoid.title
-        Accessible.description: kicker.toolTipSubText
+        Accessible.description: root.toolTipSubText
         Accessible.role: Accessible.Button
 
         onPressed: mouse => {

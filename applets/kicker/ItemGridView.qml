@@ -229,6 +229,7 @@ FocusScope {
 
                 delegate: ItemGridDelegate {
                     showLabel: itemGrid.showLabels
+                    iconSize: gridView.iconSize
                     onInteractionConcluded: itemGrid.interactionConcluded()
                 }
 

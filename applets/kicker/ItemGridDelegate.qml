@@ -25,6 +25,7 @@ Item {
     required property string decoration
     required property var model // for display, in case we port this to ItemDelegate
 
+    property alias iconSize: icon.width
     property bool showLabel: true
     property int itemIndex: item.index
     property var icon: item.decoration !== undefined ? item.decoration : ""
@@ -63,7 +64,6 @@ Item {
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenter: item.showLabel ? undefined : parent.verticalCenter
 
-        width: iconSize
         height: width
 
         animated: false

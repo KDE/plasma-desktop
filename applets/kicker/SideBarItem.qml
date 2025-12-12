@@ -63,7 +63,7 @@ PC3.ToolButton {
         id: actionMenu
 
         onActionClicked: (actionId, actionArgument) => {
-            if (Tools.triggerAction(repeater.model, item.index, actionId, actionArgument) === true) {
+            if (Tools.triggerAction(item.favoritesModel, item.index, actionId, actionArgument) === true) {
                 item.interactionConcluded()
             }
         }

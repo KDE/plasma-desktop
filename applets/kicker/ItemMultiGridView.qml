@@ -32,6 +32,8 @@ PlasmaComponents.ScrollView {
 
     property bool grabFocus: false
 
+    property int cellSize
+    property int iconSize
     property alias model: repeater.model
     property alias count: repeater.count
     property alias flickableItem: flickable
@@ -121,7 +123,7 @@ PlasmaComponents.ScrollView {
 
                     property int headerHeight: (gridViewLabel.height
                         + gridViewLabelUnderline.height + Kirigami.Units.gridUnit)
-                    property int footerHeight: (Math.ceil(headerHeight / cellSize) * cellSize) - headerHeight
+                    property int footerHeight: (Math.ceil(headerHeight / itemMultiGrid.cellSize) * itemMultiGrid.cellSize) - headerHeight
 
                     property Item itemGrid: gridView
                     visible: gridView.count > 0
@@ -174,11 +176,11 @@ PlasmaComponents.ScrollView {
                         }
 
                         width: parent.width
-                        height: Math.ceil(count / Math.floor(width / cellSize)) * cellSize
+                        height: Math.ceil(count / Math.floor(width / itemMultiGrid.cellSize)) * itemMultiGrid.cellSize
 
-                        cellWidth: cellSize
-                        cellHeight: cellSize
-                        iconSize: root.iconSize
+                        cellWidth: itemMultiGrid.cellSize
+                        cellHeight: itemMultiGrid.cellSize
+                        iconSize: itemMultiGrid.iconSize
 
                         verticalScrollBarPolicy: PlasmaComponents.ScrollBar.AlwaysOff
 
@@ -209,7 +211,7 @@ PlasmaComponents.ScrollView {
                             if (y < flickable.contentY) {
                                 flickable.contentY = y;
                             } else {
-                                y += cellSize;
+                                y += itemMultiGrid.cellSize;
                                 y -= flickable.contentY;
                                 y -= itemMultiGrid.height;
 
