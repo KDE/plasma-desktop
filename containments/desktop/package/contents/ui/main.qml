@@ -60,7 +60,6 @@ ContainmentItem {
     property int handleDelay: 800
     property real haloOpacity: 0.5
 
-    readonly property int screen: Plasmoid.containment.screen
     readonly property bool isUiReady: Plasmoid.containment.corona.isScreenUiReady(root.screen)
 
     readonly property int hoverActivateDelay: 750 // Magic number that matches Dolphin's auto-expand folders delay.
@@ -279,7 +278,7 @@ ContainmentItem {
             // When adding panels, sizes change. We want to make sure all panels
             // are loaded, and when they all are loaded, we tell the folderViewLayer loader to start.
             function onScreenUiReadyChanged(screen: int, newLayoutReady: bool) {
-                if (root.isContainment && root.isFolder && !folderViewLayer.ready && Plasmoid.containment.screen === screen && newLayoutReady){
+                if (root.isContainment && root.isFolder && !folderViewLayer.ready && root.screen === screen && newLayoutReady){
                     // We skip x and y since that is handled by the parent of folderViewLayer
                     folderViewLayer.active = true;
                 }
