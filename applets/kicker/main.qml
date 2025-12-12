@@ -3,6 +3,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Layouts
@@ -56,12 +57,29 @@ PlasmoidItem {
 
     Component {
         id: compactRepresentationComponent
-        CompactRepresentation {}
+        CompactRepresentation {
+            dashWindowComponent: dashboardRepresentationComponent
+        }
     }
 
     Component {
         id: menuRepresentationComponent
-        MenuRepresentation {}
+        MenuRepresentation {
+            globalFavorites: kicker.globalFavorites
+            systemFavorites: kicker.systemFavorites
+            rootModel: rootModel
+            runnerModel: runnerModel
+        }
+    }
+
+    Component {
+        id: dashboardRepresentationComponent
+        DashboardRepresentation {
+            globalFavorites: kicker.globalFavorites
+            systemFavorites: kicker.systemFavorites
+            rootModel: rootModel
+            runnerModel: runnerModel
+        }
     }
 
     Kicker.RootModel {

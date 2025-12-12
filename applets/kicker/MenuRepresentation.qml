@@ -13,9 +13,15 @@ import org.kde.plasma.components as PlasmaComponents3
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.plasma.plasmoid
+import org.kde.plasma.private.kicker as Kicker
 
 PlasmaComponents3.ScrollView {
     id: root
+
+    required property Kicker.KAStatsFavoritesModel globalFavorites
+    required property Kicker.SimpleFavoritesModel systemFavorites
+    required property Kicker.RootModel rootModel
+    required property Kicker.RunnerModel runnerModel
 
     focus: true
 
@@ -85,7 +91,7 @@ PlasmaComponents3.ScrollView {
 
             property bool onTopPanel: Plasmoid.location === PlasmaCore.Types.TopEdge
 
-            visible: (globalFavorites.count + systemFavorites.count) > 0
+            visible: (root.globalFavorites.count + root.systemFavorites.count) > 0
 
             Layout.fillHeight: true
 
@@ -166,10 +172,10 @@ PlasmaComponents3.ScrollView {
                     KeyNavigation.up: favoriteSystemActions.bottomSideBarItem
                     KeyNavigation.down: favoriteSystemActions
 
-                    model: globalFavorites
+                    model: root.globalFavorites
 
                     Binding {
-                        target: globalFavorites
+                        target: root.globalFavorites
                         property: "iconSize"
                         value: Kirigami.Units.iconSizes.medium
                         restoreMode: Binding.RestoreBinding
@@ -181,7 +187,7 @@ PlasmaComponents3.ScrollView {
 
                     Layout.alignment: Qt.AlignHCenter
 
-                    model: systemFavorites
+                    model: root.systemFavorites
                     KeyNavigation.up: favoriteApps.bottomSideBarItem
                     KeyNavigation.down: favoriteApps
                 }
@@ -206,7 +212,7 @@ PlasmaComponents3.ScrollView {
 
             mainSearchField: searchField
 
-            model: rootModel
+            model: root.rootModel
 
             LayoutMirroring.enabled: mainRow.LayoutMirroring.enabled
 
@@ -237,7 +243,7 @@ PlasmaComponents3.ScrollView {
             Layout.minimumWidth: searchField.defaultWidth
             Layout.fillHeight: true
 
-            visible: searchField.text !== "" && runnerModel.count > 0
+            visible: searchField.text !== "" && root.runnerModel.count > 0
 
             spacing: Kirigami.Units.smallSpacing
 
@@ -246,7 +252,7 @@ PlasmaComponents3.ScrollView {
             Repeater {
                 id: runnerColumnsRepeater
 
-                model: runnerModel
+                model: root.runnerModel
 
                 delegate: RunnerResultsList {
                     id: runnerMatches
@@ -254,8 +260,9 @@ PlasmaComponents3.ScrollView {
                     Layout.fillHeight: true
                     Layout.fillWidth: true
 
-                    visible: runnerModel.modelForRow(index).count > 0
+                    visible: model.count > 0
 
+                    model: root.runnerModel.modelForRow(index)
                     mainSearchField: searchField
 
                     LayoutMirroring.enabled: runnerColumns.LayoutMirroring.enabled
@@ -301,7 +308,7 @@ PlasmaComponents3.ScrollView {
                 text: i18nc("@info:status", "No matches")
 
                 Connections {
-                    target: runnerModel
+                    target: root.runnerModel
 
                     function onQueryFinished() {
                         noMatchesPlaceholder.searchRunning = false
@@ -338,7 +345,7 @@ PlasmaComponents3.ScrollView {
         focus: !Kirigami.InputMethod.willShowOnActive
 
         onTextChanged: {
-            runnerModel.query = text;
+            root.runnerModel.query = text;
         }
 
         onFocusChanged: {
@@ -419,9 +426,9 @@ PlasmaComponents3.ScrollView {
 
         function launchBestMatch() : void  {
             if (runnerColumns.visible) {
-                for (let i = 0; i < runnerModel.count; ++i) {
-                    if (runnerModel.modelForRow(i).count) {
-                        runnerModel.modelForRow(i).trigger(0, "", null);
+                for (let i = 0; i < root.runnerModel.count; ++i) {
+                    if (root.runnerModel.modelForRow(i).count) {
+                        root.runnerModel.modelForRow(i).trigger(0, "", null);
                         kicker.expanded = false;
                         break;
                     }

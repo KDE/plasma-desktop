@@ -23,6 +23,7 @@ RowLayout {
     property alias currentItem: runnerMatches.currentItem
     property alias count: runnerMatches.count
     property alias mainSearchField: runnerMatches.mainSearchField
+    property alias model: runnerMatches.model
 
     spacing: Kirigami.Units.smallSpacing
 
@@ -83,8 +84,6 @@ RowLayout {
             LayoutMirroring.enabled: runnerResultsList.LayoutMirroring.enabled
 
             resetOnExitDelay: 0
-
-            model: runnerModel.modelForRow(index)
 
             Connections {
                 target: runnerModel

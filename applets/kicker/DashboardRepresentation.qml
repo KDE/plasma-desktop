@@ -24,6 +24,11 @@ import "code/tools.js" as Tools
 Kicker.DashboardWindow {
     id: root
 
+    required property Kicker.KAStatsFavoritesModel globalFavorites
+    required property Kicker.SimpleFavoritesModel systemFavorites
+    required property Kicker.RootModel rootModel
+    required property Kicker.RunnerModel runnerModel
+
     property bool smallScreen: ((Math.floor(width / Kirigami.Units.iconSizes.huge) <= 22) || (Math.floor(height / Kirigami.Units.iconSizes.huge) <= 14))
 
     property int iconSize: smallScreen ? Kirigami.Units.iconSizes.large : Kirigami.Units.iconSizes.huge
@@ -119,7 +124,7 @@ Kicker.DashboardWindow {
                     // mouse grab bug despite QQuickWindow::mouseGrabberItem==0x0.
                     // Needs a more involved hunt through Qt Quick sources later since
                     // it's not happening with near-identical code in the menu repr.
-                    rootModel.refresh();
+                    root.rootModel.refresh();
                 }
             }
         }
@@ -200,8 +205,8 @@ Kicker.DashboardWindow {
                     return;
                 }
 
-                for (var i = 0; i < rootModel.count; ++i) {
-                    var model = rootModel.modelForRow(i);
+                for (var i = 0; i < root.rootModel.count; ++i) {
+                    var model = root.rootModel.modelForRow(i);
 
                     if (model.description === "KICKER_ALL_MODEL") {
                         allAppsGrid.model = model;
@@ -234,7 +239,7 @@ Kicker.DashboardWindow {
             font.pointSize: dummyHeading.font.pointSize * 1.5
 
             onTextChanged: {
-                runnerModel.query = searchField.text
+                root.runnerModel.query = searchField.text
                 this.forceActiveFocus()
             }
 
@@ -250,7 +255,7 @@ Kicker.DashboardWindow {
             }
 
             Keys.onTabPressed: {
-                if (runnerModel.count) {
+                if (root.runnerModel.count) {
                     mainColumn.tryActivate(0, 0);
                 } else {
                     systemFavoritesGrid.tryActivate(0, 0);
@@ -354,7 +359,7 @@ Kicker.DashboardWindow {
                     cellHeight: root.cellSize
                     iconSize: root.iconSize
 
-                    model: kicker.globalFavorites
+                    model: root.globalFavorites
 
                     dropEnabled: true
 
@@ -378,7 +383,7 @@ Kicker.DashboardWindow {
                     Keys.onBacktabPressed: systemFavoritesGrid.tryActivate(0, 0);
 
                     Binding {
-                        target: kicker.globalFavorites
+                        target: root.globalFavorites
                         property: "iconSize"
                         value: root.iconSize
                         restoreMode: Binding.RestoreBinding
@@ -400,7 +405,7 @@ Kicker.DashboardWindow {
                     cellHeight: root.cellSize
                     iconSize: root.iconSize
 
-                    model: kicker.systemFavorites
+                    model: root.systemFavorites
 
                     dropEnabled: true
 
@@ -635,7 +640,7 @@ Kicker.DashboardWindow {
 
                     visible: opacity !== 0.0
 
-                    model: runnerModel
+                    model: root.runnerModel
 
                     grabFocus: false
 
@@ -727,7 +732,7 @@ Kicker.DashboardWindow {
                         property int hItemMargins: Math.max(highlightItemSvg.margins.left + highlightItemSvg.margins.right,
                             listItemSvg.margins.left + listItemSvg.margins.right)
 
-                        model: rootModel
+                        model: root.rootModel
 
                         clip: height < contentHeight + topMargin + bottomMargin
                         boundsBehavior: Flickable.StopAtBounds
@@ -884,8 +889,8 @@ Kicker.DashboardWindow {
                         onCountChanged: {
                             var width = 0;
 
-                            for (var i = 0; i < rootModel.count; ++i) {
-                                headingMetrics.text = rootModel.labelForRow(i);
+                            for (var i = 0; i < root.rootModel.count; ++i) {
+                                headingMetrics.text = root.rootModel.labelForRow(i);
 
                                 if (headingMetrics.width > width) {
                                     width = headingMetrics.width;
@@ -902,7 +907,7 @@ Kicker.DashboardWindow {
                                     preloadAllAppsTimer.stop();
                                 }
 
-                                var model = rootModel.modelForRow(currentIndex);
+                                var model = root.rootModel.modelForRow(currentIndex);
 
                                 if (model.description === "KICKER_ALL_MODEL") {
                                     allAppsGrid.model = model;
