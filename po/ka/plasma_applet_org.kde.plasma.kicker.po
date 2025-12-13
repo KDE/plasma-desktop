@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-12 00:44+0000\n"
-"PO-Revision-Date: 2025-10-16 05:31+0200\n"
+"PO-Revision-Date: 2025-12-12 05:34+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -21,7 +21,7 @@ msgstr ""
 #: code/tools.js:53
 #, kde-format
 msgid "Remove from Favorites"
-msgstr "რჩეულებიდან ამოშლა"
+msgstr "რჩეულებიდან წაშლა"
 
 #: code/tools.js:57
 #, kde-format
@@ -199,13 +199,13 @@ msgstr "რჩეულები"
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening submenu"
 msgid "Open category"
-msgstr ""
+msgstr "კატეგორიის გახსნა"
 
 #: ItemListDelegate.qml:47
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening app or file"
 msgid "Launch"
-msgstr ""
+msgstr "გაშვება"
 
 #: main.qml:203
 #, kde-format
@@ -213,8 +213,7 @@ msgid "Edit Applications…"
 msgstr "აპლიკაციების ჩასწორება…"
 
 #: MenuRepresentation.qml:135
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@title:group accessible name for favorite group in sidebar"
 msgid "Favorites"
 msgstr "რჩეულები"

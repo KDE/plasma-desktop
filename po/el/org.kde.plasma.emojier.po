@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-13 00:46+0000\n"
 "PO-Revision-Date: 2024-09-13 18:18+0300\n"
 "Last-Translator: Antonis G. <capoiosct@gmail.com>\n"
 "Language-Team: el <kde-i18n-el@kde.org>\n"
@@ -44,45 +44,50 @@ msgstr "demetresmeliates+i18n@gmail.com"
 msgid "Replace an existing instance"
 msgstr "Αντικατάσταση μιας υπάρχουσας περίπτωσης"
 
-#: app/ui/CategoryPage.qml:33 app/ui/CategoryPage.qml:87 app/ui/Emojier.qml:67
-#, fuzzy, kde-format
-#| msgid "All"
-msgctxt "@title:page All emojis"
-msgid "All"
-msgstr "Όλα"
-
-#: app/ui/CategoryPage.qml:111
+#: app/ui/CategoryPage.qml:112
 #, kde-format
 msgid "Clear History"
 msgstr "Εκκαθάριση ιστορικού"
 
-#: app/ui/CategoryPage.qml:137
+#: app/ui/CategoryPage.qml:138
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Character"
 msgstr "Αντιγραφή χαρακτήρα"
 
-#: app/ui/CategoryPage.qml:140 app/ui/CategoryPage.qml:148
-#: app/ui/Emojier.qml:45
-#, kde-format
-msgid "%1 copied to the clipboard"
-msgstr "%1 αντιγράφηκε στο πρόχειρο"
-
-#: app/ui/CategoryPage.qml:145
+#: app/ui/CategoryPage.qml:143
 #, kde-format
 msgctxt "@item:inmenu"
 msgid "Copy Description"
 msgstr "Αντιγραφή περιγραφής"
 
-#: app/ui/CategoryPage.qml:235
+#: app/ui/CategoryPage.qml:242
 #, kde-format
 msgid "No recent Emojis"
 msgstr "Κανένα πρόσφατο εμότζι"
 
-#: app/ui/Emojier.qml:51
+#: app/ui/CategoryPage.qml:242
+#, kde-format
+msgctxt "@label placeholder for no emoji found in category"
+msgid "No matching emoji found"
+msgstr ""
+
+#: app/ui/Emojier.qml:44
+#, kde-format
+msgid "%1 copied to the clipboard"
+msgstr "%1 αντιγράφηκε στο πρόχειρο"
+
+#: app/ui/Emojier.qml:58
 #, kde-format
 msgid "Recent"
 msgstr "Πρόσφατα"
+
+#: app/ui/Emojier.qml:73
+#, fuzzy, kde-format
+#| msgid "All"
+msgctxt "@title:page All emojis"
+msgid "All"
+msgstr "Όλα"
 
 #: emojicategory.cpp:14
 msgctxt "Emoji Category"
