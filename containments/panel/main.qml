@@ -4,6 +4,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Layouts
@@ -12,7 +13,6 @@ import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
 import org.kde.ksvg as KSvg
 import org.kde.plasma.components as PC3
-import org.kde.kquickcontrolsaddons
 import org.kde.draganddrop as DragDrop
 import org.kde.kirigami as Kirigami
 
@@ -36,7 +36,7 @@ ContainmentItem {
     property Item toolBox
     property var layoutManager: LayoutManager
 
-    property Item configOverlay
+    property ConfigOverlay configOverlay
 
     property bool isHorizontal: Plasmoid.formFactor !== PlasmaCore.Types.Vertical
     property int fixedWidth: 0
@@ -154,7 +154,7 @@ ContainmentItem {
         property var marginHighlightSvg: KSvg.Svg{imagePath: "widgets/margins-highlight"}
         //Margins are either the size of the margins in the SVG, unless that prevents the panel from being at least half a smallMedium icon) tall at which point we set the margin to whatever allows it to be that...or if it still won't fit, 1.
         //the size a margin should be to force a panel to be the required size above
-        readonly property real spacingAtMinSize: Math.floor(Math.max(1, (isHorizontal ? root.height : root.width) - Kirigami.Units.iconSizes.smallMedium)/2)
+        readonly property real spacingAtMinSize: Math.floor(Math.max(1, (root.isHorizontal ? root.height : root.width) - Kirigami.Units.iconSizes.smallMedium)/2)
 
         Component.onCompleted: {
             LayoutManager.plasmoid = root.Plasmoid;
@@ -207,6 +207,7 @@ ContainmentItem {
         }
 
 //BEGIN components
+
         Component {
             id: appletContainerComponent
             // This loader conditionally manages the BusyIndicator, it's not
@@ -234,8 +235,8 @@ ContainmentItem {
                     let fillArea = overrideFillArea === null ? applet && (applet.plasmoid.constraintHints & Plasmoid.CanFillArea) : overrideFillArea
                     let inThickArea = overrideThickArea === null ? container.inThickArea : overrideThickArea
                     var layout = {
-                        top: isHorizontal, bottom: isHorizontal,
-                        right: !isHorizontal, left: !isHorizontal
+                        top: root.isHorizontal, bottom: root.isHorizontal,
+                        right: !root.isHorizontal, left: !root.isHorizontal
                     };
                     return ((layout[side] || returnAllMargins) && !fillArea) ? Math.round(Math.min(dropArea.spacingAtMinSize, (inThickArea ? thickPanelSvg.fixedMargins[side] : panelSvg.fixedMargins[side]))) : 0;
                 }
@@ -252,8 +253,8 @@ ContainmentItem {
                 Layout.fillHeight: true
                 property bool wantsToFillWidth: applet?.Layout.fillWidth
                 property bool wantsToFillHeight: applet?.Layout.fillHeight
-                onWantsToFillWidthChanged: checkLastSpacer()
-                onWantsToFillHeightChanged: checkLastSpacer()
+                onWantsToFillWidthChanged: root.checkLastSpacer()
+                onWantsToFillHeightChanged: root.checkLastSpacer()
 
                 property int availWidth: root.width - Layout.leftMargin - Layout.rightMargin
                 property int availHeight: root.height - Layout.topMargin - Layout.bottomMargin
@@ -274,7 +275,7 @@ ContainmentItem {
                     id: marginHighlightElements
                     anchors.fill: parent
                     // index -1 is for floating applets, which do not need a margin highlight
-                    opacity: Plasmoid.containment.corona.editMode && dropArea.marginAreasEnabled && !root.dragAndDropping && index != -1 ? 1 : 0
+                    opacity: Plasmoid.containment.corona.editMode && dropArea.marginAreasEnabled && !root.dragAndDropping && container.index != -1 ? 1 : 0
                     Behavior on opacity {
                         NumberAnimation {
                             duration: Kirigami.Units.longDuration
@@ -297,30 +298,32 @@ ContainmentItem {
                             } else {
                                 width = padding;
                             }
-                            anchors[left+'Margin'] = - currentLayout.rowSpacing/2 - (appletIndex == 0 ? dropArea.anchors[left + 'Margin'] + currentLayout.x : 0)
-                            anchors[right+'Margin'] = - currentLayout.rowSpacing/2 - (appletIndex == appletsModel.count-1 ? dropArea.anchors[right + 'Margin'] + currentLayout.toolBoxSize : 0)
+                            anchors[left+'Margin'] = - currentLayout.rowSpacing/2 - (container.appletIndex == 0 ? dropArea.anchors[left + 'Margin'] + currentLayout.x : 0)
+                            anchors[right+'Margin'] = - currentLayout.rowSpacing/2 - (container.appletIndex == appletsModel.count-1 ? dropArea.anchors[right + 'Margin'] + currentLayout.toolBoxSize : 0)
                             anchors[side+'Margin'] = - inset
                         }
-                        elementId: fill ? 'fill' : (root.isHorizontal ? side + (inThickArea ? 'left' : 'right') : (inThickArea ? 'top' : 'bottom') + side)
+                        elementId: fill ? 'fill' : (root.isHorizontal ? side + (container.inThickArea ? 'left' : 'right') : (container.inThickArea ? 'top' : 'bottom') + side)
                         svg: dropArea.marginHighlightSvg
                         anchors {top: parent.top; left: parent.left; right: parent.right; bottom: parent.bottom}
                     }
                     Repeater {
                         model: ['top', 'bottom', 'right', 'left']
                         SideMargin {
+                            required property string modelData
                             side: modelData
                             inset: container.getMargins(side)
                             visible: (modelData === 'top' || modelData === 'bottom') === root.isHorizontal
-                            padding: container.getMargins(side, false, false, isMarginSeparator ? false : inThickArea)
+                            padding: container.getMargins(side, false, false, container.isMarginSeparator ? false : container.inThickArea)
                         }
                     }
                     Repeater {
                         model: ['top', 'bottom', 'right', 'left']
                         SideMargin {
+                            required property string modelData
                             side: modelData
                             inset: -container.getMargins(side, false, false, false)
                             padding: container.getMargins(side, false, false, true) + inset
-                            visible: isMarginSeparator && (modelData === 'top' || modelData === 'bottom') === root.isHorizontal
+                            visible: container.isMarginSeparator && (modelData === 'top' || modelData === 'bottom') === root.isHorizontal
                             fill: false
                         }
                     }
@@ -346,7 +349,7 @@ ContainmentItem {
                 onYChanged: if (oldY) animateFrom(x, oldY)
                 transform: Translate{id: translation}
                 function animateFrom(xa, ya) {
-                    if (isHorizontal) translation.x = xa - x
+                    if (root.isHorizontal) translation.x = xa - x
                     else translation.y = ya - y
                     oldX = oldY = 0
                     translAnim.running = true
@@ -366,10 +369,10 @@ ContainmentItem {
 //BEGIN UI elements
 
         anchors {
-            leftMargin: isHorizontal ? Math.min(dropArea.spacingAtMinSize, panelSvg.fixedMargins.left + currentLayout.rowSpacing) : 0
-            rightMargin: isHorizontal ? Math.min(dropArea.spacingAtMinSize, panelSvg.fixedMargins.right + currentLayout.rowSpacing) : 0
-            topMargin: isHorizontal ? 0 : Math.min(dropArea.spacingAtMinSize, panelSvg.fixedMargins.top + currentLayout.rowSpacing)
-            bottomMargin: isHorizontal ? 0 : Math.min(dropArea.spacingAtMinSize, panelSvg.fixedMargins.bottom + currentLayout.rowSpacing)
+            leftMargin: root.isHorizontal ? Math.min(dropArea.spacingAtMinSize, panelSvg.fixedMargins.left + currentLayout.rowSpacing) : 0
+            rightMargin: root.isHorizontal ? Math.min(dropArea.spacingAtMinSize, panelSvg.fixedMargins.right + currentLayout.rowSpacing) : 0
+            topMargin: root.isHorizontal ? 0 : Math.min(dropArea.spacingAtMinSize, panelSvg.fixedMargins.top + currentLayout.rowSpacing)
+            bottomMargin: root.isHorizontal ? 0 : Math.min(dropArea.spacingAtMinSize, panelSvg.fixedMargins.bottom + currentLayout.rowSpacing)
         }
 
         Item {
@@ -377,8 +380,8 @@ ContainmentItem {
             property bool busy: false
             Layout.preferredWidth: width
             Layout.preferredHeight: height
-            width: isHorizontal ? Kirigami.Units.iconSizes.sizeForLabels * 5 : currentLayout.width
-            height: isHorizontal ? currentLayout.height : Kirigami.Units.iconSizes.sizeForLabels * 5
+            width: root.isHorizontal ? Kirigami.Units.iconSizes.sizeForLabels * 5 : currentLayout.width
+            height: root.isHorizontal ? currentLayout.height : Kirigami.Units.iconSizes.sizeForLabels * 5
         }
 
         ListModel {
@@ -397,10 +400,10 @@ ContainmentItem {
             columnSpacing: Kirigami.Units.smallSpacing
 
             x: 0
-            readonly property int toolBoxSize: !toolBox || !Plasmoid.containment.corona.editMode ? 0 : (isHorizontal ? toolBox.width : toolBox.height)
+            readonly property int toolBoxSize: !root.toolBox || !Plasmoid.containment.corona.editMode ? 0 : (root.isHorizontal ? root.toolBox.width : root.toolBox.height)
 
-            property int horizontalDisplacement: dropArea.anchors.leftMargin + dropArea.anchors.rightMargin + (isHorizontal ? currentLayout.toolBoxSize : 0)
-            property int verticalDisplacement: dropArea.anchors.topMargin + dropArea.anchors.bottomMargin + (isHorizontal ? 0 : currentLayout.toolBoxSize)
+            property int horizontalDisplacement: dropArea.anchors.leftMargin + dropArea.anchors.rightMargin + (root.isHorizontal ? currentLayout.toolBoxSize : 0)
+            property int verticalDisplacement: dropArea.anchors.topMargin + dropArea.anchors.bottomMargin + (root.isHorizontal ? 0 : currentLayout.toolBoxSize)
 
     // BEGIN BUG 454095: use lastSpacer to left align applets, as implicitWidth is updated too late
             width: root.width - horizontalDisplacement
@@ -421,9 +424,9 @@ ContainmentItem {
             }
     // END BUG 454095
 
-            rows: isHorizontal ? 1 : currentLayout.children.length
-            columns: isHorizontal ? currentLayout.children.length : 1
-            flow: isHorizontal ? GridLayout.LeftToRight : GridLayout.TopToBottom
+            rows: root.isHorizontal ? 1 : currentLayout.children.length
+            columns: root.isHorizontal ? currentLayout.children.length : 1
+            flow: root.isHorizontal ? GridLayout.LeftToRight : GridLayout.TopToBottom
             layoutDirection: Application.layoutDirection
         }
     }
@@ -457,7 +460,7 @@ ContainmentItem {
         id: addWidgetsButton
         anchors.centerIn: parent
         visible: appletsModel.count === 0
-        text: isHorizontal ? i18nd("plasma_shell_org.kde.plasma.desktop", "Add Widgets…") : undefined
+        text: root.isHorizontal ? i18nd("plasma_shell_org.kde.plasma.desktop", "Add Widgets…") : undefined
         icon.name: "list-add-symbolic"
         onClicked: Plasmoid.internalAction("add widgets").trigger()
     }
