@@ -9,7 +9,7 @@
 <article id="clock" lang="&language;">
 <articleinfo>
 <title
->Data &amp; Hora</title>
+>Data e hora</title>
 <authorgroup>
 <author
 >&Mike.McBride; &Mike.McBride.mail;</author>
@@ -45,9 +45,9 @@
 </authorgroup>
 
 <date
->05/12/2013</date>
+>25/03/2018</date>
 <releaseinfo
->4.12</releaseinfo>
+>&plasma; 5.12</releaseinfo>
 
 <keywordset>
 <keyword
@@ -70,7 +70,7 @@
 <sect1 id="datetime">
 
 <title
->Data &amp; Hora</title>
+>Data e hora</title>
 
 <para
 >Você pode usar este módulo para alterar a data e hora do sistema, usando uma interface gráfica conveniente.</para>
@@ -87,49 +87,37 @@
 >Data e hora</title>
 
 <para
->Se você assinalar a opção <guilabel
->Ajustar a data e hora automaticamente</guilabel
->, você poderá selecionar um <guilabel
->Servidor de hora</guilabel
-> na lista e todas as outras configurações nesta janela serão desativadas.</para>
+>Se você marcar <guilabel
+>Configurar data e hora automaticamente</guilabel
+> este módulo usará <acronym
+>systemd</acronym
+> para obter a data e a hora.</para>
 
-<note>
 <para
->Os aplicativos <command
+>Em um computador sem o <acronym
+>systemd</acronym
+>, os utilitários <acronym
+>NTP</acronym
+> são usados: <command
 >rdate</command
 > ou <command
 >ntpdate</command
-> são usados neste módulo para obter a data e a hora a partir de um servidor de tempo. Isto acontece quando você se autentica no &kde; estando online ou quando você se conecta mais tarde à Internet e o acesso aos servidores de tempo se torna possível.</para
-> 
-<para
->Ambos os aplicativos são simplesmente clientes <acronym
->NTP</acronym
-> que fazem com que o horário do sistema corresponda ao horário obtido ao se comunicar com um ou mais servidores de <acronym
->NTP</acronym
->. No entanto, isto não é suficiente para manter a hora precisa durante uma longa execução. Isto é útil para configurar ocasionalmente a hora em máquinas que não possuem acesso permanente à redes, como laptops.</para>
-</note>
+>. Se esses utilitários estiverem faltando, instale-os. </para>
 
 <para
->Se você não usar um servidor de hora, você poderá ajustar a data manualmente usando a metade inferior da página. Basta escolher um mês e ano usando os controles acima do calendário e o dia do mês clicando no respectivo dia no calendário.</para>
+>Quando você faz login na sessão do &plasma; enquanto está online ou quando se conecta à Internet posteriormente, ocorre o acesso a um ou mais servidores <acronym
+>NTP</acronym
+>.</para>
+<para
+>Isto não é suficiente, no entanto, para manter a hora precisa durante uma longa execução. Isto é útil para configurar ocasionalmente a hora em máquinas que não possuem acesso permanente à redes, como laptops. </para>
+
+<para
+>Se você não usa um servidor de hora, você poderá definir a data manualmente no calendário.</para>
 <para
 >Use os controles no fundo do calendário para selecionar a data atual, inserir a data no campo de texto ou selecionar a semana do ano a partir da lista.</para>
 
 <para
 >Você ajusta a hora usando as caixas de contagem na base do relógio analógico. Você pode também digitar diretamente o valor.</para>
-<!--Outdated
-<note
-><para
->The time is represented in 24 hour format.  If you want
-the system time to be set to 8:00 PM, you need to set the hour spinbox
-to <guilabel
->20</guilabel
-> (8 + 12).  If you want the system time set
-to 8:00 AM, you should set the hour spinbox to
-<guilabel
->8</guilabel
->.</para
-></note>
--->
 </sect2>
 
 <sect2 id="date-time-tone">
