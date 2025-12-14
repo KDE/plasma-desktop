@@ -34,9 +34,9 @@
 </authorgroup>
 
 <date
->18/03/2016</date>
+>05/12/2020</date>
 <releaseinfo
->Plasma 5.7</releaseinfo>
+>Plasma 5.21</releaseinfo>
 
 <keywordset>
 <keyword
@@ -70,7 +70,7 @@
 ></term>
 <listitem>
 <para
->Aqui você poderá definir o modelo do seu teclado. Esta opção é independente da disposição do teclado e diz respeito ao modelo de &quot;hardware&quot;, i.e., a forma como o seu teclado foi fabricado. Os teclados modernos, que vêm hoje em dia com o seu computador, têm normalmente duas teclas extra, sendo referidos como modelos de &quot;104-teclas&quot;, que será o que provavelmente irá querer, caso não saiba qual o tipo de teclado que tem. </para>
+>Aqui você poderá definir o modelo do seu teclado. Esta opção é independente do layout do teclado e diz respeito ao modelo de &quot;hardware&quot;, &ie;, a forma como o seu teclado foi fabricado. Os teclados modernos, que vêm hoje em dia com o seu computador, têm normalmente duas teclas extra, sendo referidos como modelos de &quot;104-teclas&quot;, que será o que provavelmente irá querer, caso não saiba qual o tipo de teclado que tem. </para>
 </listitem>
 </varlistentry>
 
@@ -92,15 +92,47 @@
 <varlistentry>
 <term
 ><guilabel
->Repetição do teclado</guilabel
+>Quando uma tecla é mantida pressionada:</guilabel
 ></term>
 <listitem>
 <para
->Quando esta opção estiver ativada, ao manter uma tecla pressionada será emitido o mesmo caractere repetidamente, até que a tecla seja solta, ou seja, manter pressionada uma tecla terá o mesmo efeito que pressioná-la várias vezes sucessivamente.</para>
+>É possível selecionar uma das três opções aqui, a saber</para>
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Exibir caracteres acentuados e similares</guilabel
+></term>
+<listitem>
+<para
+>Se esta opção for selecionada, ao manter uma tecla pressionada enquanto digita o texto, uma janela pop-up será exibida, permitindo escolher entre várias formas acentuadas do caractere.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Não fazer nada</guilabel
+></term>
+<listitem>
+<para
+>Esta opção permite desativar qualquer atividade ao pressionar e manter pressionadas as teclas.</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Repetir a tecla</guilabel
+></term>
+<listitem>
+<para
+>Quando esta opção estiver selecionada, ao manter uma tecla pressionada será emitido o mesmo caractere repetidamente, até que a tecla seja solta, ou seja, manter pressionada uma tecla terá o mesmo efeito que pressioná-la várias vezes sucessivamente.</para>
 <tip
 ><para
 >Quase todos os usuários desejam ter esta opção habilitada, pois ela torna a navegação em documentos, com as teclas de flecha, significativamente mais fácil. </para
 ></tip>
+</listitem>
+</varlistentry>
+</variablelist>
 
 <variablelist>
 <varlistentry>
@@ -140,21 +172,21 @@
 
 <sect1 id="layouts">
 <title
->A página de disposições</title>
+>A aba de layouts</title>
 <para
->Esta página permite-lhe escolher as disposições de teclado que deseja usar, qual o indicador que deseja na área de notificação, como deseja mudar de disposições e que atalhos de teclado irá usar para isso.</para>
+>Esta página permite-lhe escolher os layouts de teclado que deseja usar, qual o indicador que deseja na área de notificação, como deseja mudar de layout e que atalhos de teclado irá usar para isso.</para>
 
 <variablelist>
 <varlistentry>
 <term
 ><guilabel
->Indicador da Disposição</guilabel
+>Indicador da layout</guilabel
 ></term>
 <listitem>
 <para
 >Você pode optar por <guilabel
->Mostrar o indicador de disposição</guilabel
->, o qual irá mostrar o nome ISO do idioma na área de notificação. É possível selecionar a opção para mostrar o indicador, mesmo que tenha apenas um único leiaute ativo e poderá também mostrar a bandeira do idioma, em vez de mostrar apenas o código ISO, assinalando a opção <guilabel
+>Mostrar o indicador de layout</guilabel
+>, o qual irá mostrar o nome ISO do idioma na área de notificação. É possível selecionar a opção para mostrar o indicador, mesmo que tenha apenas um único layout ativo e poderá também mostrar a bandeira do idioma, em vez de mostrar apenas o código ISO, assinalando a opção <guilabel
 >Mostrar a bandeira</guilabel
 >.</para>
 </listitem>
@@ -171,10 +203,10 @@
 >Aplicação</guilabel
 > ou <guilabel
 >Janela</guilabel
->, a alteração da disposição do teclado só irá afetar a aplicação ou janela atuais. A política <guilabel
+>, a alteração do layout do teclado só irá afetar a aplicação ou janela atuais. A política <guilabel
 >Global</guilabel
-> irá alterar a disposição do teclado a nível global e a <guilabel
->Área de Trabalho</guilabel
+> irá alterar o layout do teclado a nível global e a <guilabel
+>Área de trabalho</guilabel
 > irá mudá-la apenas para a área de trabalho virtual atual. </para>
 </listitem>
 </varlistentry>
@@ -182,7 +214,7 @@
 <varlistentry>
 <term
 ><guilabel
->Atalhos para mudança de leiaute</guilabel
+>Atalhos para mudança de layout</guilabel
 ></term>
 <listitem>
 <para
@@ -199,50 +231,50 @@
 <varlistentry>
 <term
 ><guilabel
->Configurar as disposições</guilabel
+>Configurar os layouts</guilabel
 ></term>
 <listitem>
 <para
 >Se você assinalar a opção <guilabel
->Configurar as disposições</guilabel
->, poderá adicionar e remover as disposições de teclado, de modo a poder mudar entre elas, quando for necessário. </para>
+>Configurar os layouts</guilabel
+>, poderá adicionar e remover os layouts de teclado, de modo a poder mudar entre elas, quando for necessário. </para>
 <para
 >Ao clicar em <guibutton
 >Adicionar</guibutton
->, será aberta uma janela onde poderá escolher o novo leiaute de teclado que deseja adicionar, assim como a sua variante, etiqueta e atalho. </para>
+>, será aberta uma janela onde poderá escolher o novo layout de teclado que deseja adicionar, assim como a sua variante, etiqueta e atalho. </para>
 <para
->A lista de leiautes à direita do campo <guilabel
->Leiaute</guilabel
+>A lista de layouts à direita do campo <guilabel
+>Layout</guilabel
 > na janela <guilabel
->Adicionar leiaute</guilabel
+>Adicionar layout</guilabel
 > poderá ser reduzida com a lista <guilabel
 >Limitar a seleção por idioma</guilabel
 >. Você pode clicar no botão <guibutton
 >Visualizar</guibutton
-> para ver o leiaute escolhido em uma janela separada. </para>
+> para ver o layout escolhido em uma janela separada. </para>
 <para
->Você poderá ordenar as disposições com as teclas para cima e para baixo, sendo a que estiver no topo a padrão. </para>
+>Você poderá ordenar os layouts com as teclas para cima e para baixo, sendo a que estiver no topo a padrão. </para>
 </listitem>
 </varlistentry>
 <varlistentry>
 <term
 ><guilabel
->Disposições adicionais</guilabel
+>Layouts adicionais</guilabel
 ></term>
 <listitem>
 <para
->Esta opção poderá ficar ativa apenas se tiver mais de duas disposições.</para>
+>Esta opção poderá ficar ativa apenas se tiver mais de dois layouts.</para>
 <para
->As disposições adicionais permitem-lhe mudar de disposição de forma simples, dentro de um conjunto relativamente pequeno, mantendo as mesmas disposições acessíveis rapidamente. Por exemplo, pode usar 3 línguas: Inglês, Ucraniano e Alemão, sendo que as duas primeiras são usadas com mais frequência e a terceira é usada apenas ocasionalmente. Neste caso, poderá configurar as duas primeiras como principais (definir o valor de <guilabel
->Número de disposições principais</guilabel
->: 2) e o Alemão como uma adicional - quando mudar com o teclado e o botão esquerdo, a mudança irá ocorrer apenas entre as disposições principais, podendo ainda escolher a terceira com o menu de contexto.</para>
+>Os layouts adicionais permitem-lhe mudar do layout de forma simples, dentro de um conjunto relativamente pequeno, mantendo os mesmos layouts acessíveis rapidamente. Por exemplo, pode usar 3 línguas: Inglês, Ucraniano e Alemão, sendo que as duas primeiras são usadas com mais frequência e a terceira é usada apenas ocasionalmente. Neste caso, poderá configurar as duas primeiras como principais (definir o valor de <guilabel
+>Número de layouts principais</guilabel
+>: 2) e o Alemão como uma adicional - quando mudar com o teclado e o botão esquerdo, a mudança irá ocorrer apenas entre os layouts principais, podendo ainda escolher a terceira com o menu de contexto.</para>
 <para
->Quando é escolhida uma disposição adicionado, ela irá substituir a última principal (isto é feito por razões técnicas - normalmente os atalhos globais funcionam com base na primeira disposição ativa, assim será mais confiável preservá-la, quando permitir a ativação de disposições adicionais).</para>
+>Quando é escolhido um layout adicional, ela irá substituir a última principal (isto é feito por razões técnicas - normalmente os atalhos globais funcionam com base no primeiro layout ativo, assim será mais confiável preservá-lo, quando permitir a ativação de layouts adicionais).</para>
 <!-- context menu ?-->
 <para
->Como o X.org só permite ter 4 disposições para escolha, a funcionalidade das <quote
->disposições adicionais</quote
-> permite também ultrapassar essa limitação: o usuário poderá ter até 4 disposições principais (gerenciadas pelo X.org) mas ainda mais 4 disposições adicionais (gerenciadas pelo seletor de disposições). Deste modo, o usuário poderá funcionar convenientemente com um máximo de 8 disposições (se bem que o limite de 4 disposições adicionais poderá ser aumentado no futuro). </para>
+>Como o X.org só permite ter 4 layouts para escolha, a funcionalidade dos <quote
+>layouts adicionais</quote
+> permite também ultrapassar essa limitação: o usuário poderá ter até 4 layouts principais (gerenciados pelo X.org) e ainda mais 4 layouts adicionais (gerenciados pelo seletor de layouts). Deste modo, o usuário poderá funcionar convenientemente com um máximo de 8 layouts (se bem que o limite de 4 layouts adicionais poderá ser aumentado no futuro). </para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -257,11 +289,11 @@
 >Configurar as opções do teclado</guilabel
 >, poderá definir algumas opções referentes a diferentes configurações especiais das teclas. Você poderá expandir essas opções ao clicar no símbolo &gt; que aparece à esquerda da opção, quando seleciona a sua definição na lista expandida.</para>
 <para
->Esta é uma &GUI; para ajudar na criação de leiautes de teclado padrão para X11 usando XKB. </para>
+>Esta é uma &GUI; para ajudar na criação de layouts de teclado padrão para &X11; usando XKB. </para>
 <para
 >Para mais informações, consulte a seção <emphasis
 >Links</emphasis
-> na <ulink url="http://www.freedesktop.org/wiki/Software/XKeyboardConfig"
+> na <ulink url="https://www.freedesktop.org/wiki/Software/XKeyboardConfig"
 >página XKeyboardConfig do freedesktop.org</ulink
 >. </para>
 </sect1>

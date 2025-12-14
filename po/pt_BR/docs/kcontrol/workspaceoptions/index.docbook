@@ -1,0 +1,245 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Brazilian-Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="workspaceoptions" lang="&language;">
+<articleinfo>
+<title
+>Comportamento geral</title>
+<authorgroup>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+<author
+><firstname
+>Natalie</firstname
+><surname
+>Clarius</surname
+><email
+>natalie_clarius@yahoo.de</email
+></author>
+<othercredit role="translator"
+><firstname
+>Marcus</firstname
+><surname
+>Gama</surname
+><affiliation
+><address
+><email
+>marcus.gama@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>30/01/2023</date>
+
+<releaseinfo
+>&plasma; 5.27</releaseinfo>
+
+<keywordset>
+<keyword
+>Configurações do sistema</keyword>
+<keyword
+>área de trabalho</keyword>
+<keyword
+>espaço de trabalho</keyword>
+</keywordset>
+
+</articleinfo>
+
+<para
+>Este é um módulo para configurar o comportamento do espaço de trabalho </para>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Permitir que o Plasma exiba dicas em painéis e widgets</guilabel
+></term>
+<listitem>
+<para
+>Se esta opção estiver marcada, as dicas serão exibidas ao passar o cursor sobre os itens no painel &plasma; ou na área de trabalho.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Permitir pop-ups OSD para mudanças de status</guilabel
+></term>
+<listitem>
+<para
+>Se esta opção estiver marcada, todos os widgets do Plasma poderão exibir pop-ups na tela (OSD) para alterações como nível de volume e brilho ou troca de dispositivo de áudio.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Velocidade da animação</guilabel
+></term>
+<listitem>
+    <para
+>Permite definir a velocidade das animações de efeitos na área de trabalho de <guilabel
+>Lento</guilabel
+> a <guilabel
+>Instantâneo</guilabel
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Clicar em arquivos ou pastas</guimenu
+><guimenuitem
+>Abre-os</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Se esta opção estiver marcada, os arquivos e pastas serão abertos com um único clique do botão <mousebutton
+>esquerdo</mousebutton
+> do mouse. Para selecionar arquivos e pastas, você pode clicar com o botão <mousebutton
+>esquerdo</mousebutton
+> do mouse nos marcadores de seleção, arrastar um retângulo de seleção ao redor deles ou clicar com a combinação de teclas <keycombo action="simul"
+>&Ctrl;<mousebutton
+>Esquerdo</mousebutton
+></keycombo
+>. Este é o comportamento padrão e foi projetado para ser consistente com o que você esperaria ao clicar em links em navegadores da web.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Clicar em arquivos ou pastas</guimenu
+><guimenuitem
+>Seleciona-os</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Se esta opção estiver marcada, será necessário clicar duas vezes em arquivos e pastas para abri-los, enquanto um único clique os selecionará. Este é o comportamento que você já deve conhecer de outros desktops ou sistemas operacionais.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Clicar na barra de rolagem</guimenu
+><guimenuitem
+>Rola uma página para cima e para baixo</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Esta é a configuração padrão. Clicar com o botão esquerdo do mouse na barra de rolagem move a barra de rolagem uma página.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Clicar na barra de rolagem</guimenu
+><guimenuitem
+>Rola até o local clicado</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Ativa o comportamento quando a posição da alça de rolagem salta diretamente para a posição no documento onde você clicou. Este é o comportamento que você pode conhecer de outros desktops ou sistemas operacionais.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Clique do meio</guimenu
+><guimenuitem
+>Cola texto selecionado</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Se esta opção estiver marcada, clicar com o botão do meio do mouse em um campo de texto colará o conteúdo da área de transferência, assim como você faria com <keycombo action="simul"
+>&Ctrl;<keysym
+>V</keysym
+></keycombo
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guimenuitem
+>Modo de toque</guimenuitem
+></term>
+<listitem>
+<para
+>No modo de toque muitos elementos da interface se tornarão maiores para acomodar mais facilmente as interações com os toques.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Modo de toque</guimenu
+><guimenuitem
+>Habilitar automaticamente quando necessário</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Se esta opção for selecionada, o modo de toque será ativado automaticamente sempre que o sistema detectar uma tela sensível ao toque, mas nenhum mouse ou touchpad. Por exemplo: quando o teclado de um laptop transformável for girado ou desconectado.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Modo de toque</guimenu
+><guimenuitem
+>Sempre habilitado</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Se esta opção for selecionada, o modo de toque estará sempre ativado. Use esta opção se você usa o &plasma; principalmente com uma tela sensível ao toque ou prefere alvos de clique maiores por outros motivos.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><menuchoice
+><guimenu
+>Modo de toque</guimenu
+><guimenuitem
+>Desabilitado</guimenuitem
+></menuchoice
+></term>
+<listitem>
+<para
+>Se esta opção for selecionada, o modo de toque ficará sempre desativado. Use esta opção se não precisar do modo de toque no seu dispositivo.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</article>

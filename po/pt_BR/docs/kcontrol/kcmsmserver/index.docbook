@@ -69,18 +69,16 @@
 
 <sect2 id="sessions-logoutscreen">
 <title
->Tela de saída</title>
+>Geral</title>
 <variablelist>
 <varlistentry>
 <term
 ><guilabel
->Mostrar</guilabel
+>Solicitar confirmação: Ao desligar, reiniciar e sair</guilabel
 ></term>
 <listitem>
 <para
->Se esta configuração estiver ativada, a tela de confirmação de saída será exibida quando você sair, desligar, reiniciar, pressionar o botão liga/desliga ou clicar em botões ou itens de menu rotulados como <guilabel
->Sair…</guilabel
->. Quando a configuração estiver desativada, seu computador será desconectado, desligado etc. imediatamente após clicar no respectivo botão.</para>
+>Se esta configuração estiver ativada, a tela de confirmação de logout será exibida quando você fizer logout, desligar ou reiniciar. Quando a configuração estiver desativada, seu computador fará logout, desligará, etc., imediatamente após clicar no botão correspondente.</para>
 </listitem>
 </varlistentry>
 </variablelist>
