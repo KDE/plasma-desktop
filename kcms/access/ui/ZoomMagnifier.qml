@@ -129,14 +129,6 @@ Kirigami.FormLayout {
                     settingName: "ZoomEnableTextCaretTracking"
                 }
             }
-
-            QQC2.Label {
-                enabled: !kcm.isPlatformX11 && zoomPointerAxisGestureModifiersBox.keySequence != ""
-                text: i18nc("@label Hint for scroll gestures", "Scroll while modifier keys are pressed to zoom")
-                textFormat: Text.PlainText
-                wrapMode: Text.Wrap
-                font: Kirigami.Theme.smallFont
-            }
         }
     }
 
@@ -311,6 +303,14 @@ Kirigami.FormLayout {
             visible: kcm.isPlatformX11
             toolTipText: i18nc("@info:tooltip, indicates feature unavailable on X11", "Zoom scroll gestures are only available on Wayland.")
         }
+    }
+
+    QQC2.Label {
+        enabled: !kcm.isPlatformX11 && zoomPointerAxisGestureModifiersBox.keySequence != ""
+        text: i18nc("@label Hint for scroll gestures", "Scroll while modifier keys are pressed to zoom")
+        textFormat: Text.PlainText
+        wrapMode: Text.Wrap
+        font: Kirigami.Theme.smallFont
     }
 
     Item {
