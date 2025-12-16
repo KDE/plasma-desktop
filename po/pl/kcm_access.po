@@ -1,4 +1,4 @@
-# Version: $Revision: 1723671 $
+# Version: $Revision: 1724966 $
 # translation of kcmaccess.po to
 # SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2019, 2021, 2022, 2023, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-24 00:44+0000\n"
+"POT-Creation-Date: 2025-12-16 13:26+0000\n"
 "PO-Revision-Date: 2025-10-25 09:28+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -1021,25 +1021,19 @@ msgctxt "@option:check"
 msgid "Enable text caret tracking"
 msgstr "Włącz śledzenie kursora tekstowego"
 
-#: ui/ZoomMagnifier.qml:135
-#, kde-format
-msgctxt "@label Hint for scroll gestures"
-msgid "Scroll while modifier keys are pressed to zoom"
-msgstr "Przewiń przy naciśniętym klawiszu odmieniającym, aby przybliżyć"
-
-#: ui/ZoomMagnifier.qml:147
+#: ui/ZoomMagnifier.qml:139
 #, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
 msgstr "Powiększenie regionu"
 
-#: ui/ZoomMagnifier.qml:174
+#: ui/ZoomMagnifier.qml:166
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
 msgstr "Szerokość:"
 
-#: ui/ZoomMagnifier.qml:185 ui/ZoomMagnifier.qml:210
+#: ui/ZoomMagnifier.qml:177 ui/ZoomMagnifier.qml:202
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
@@ -1048,42 +1042,48 @@ msgstr[0] "%1 px"
 msgstr[1] "%1 px"
 msgstr[2] "%1 px"
 
-#: ui/ZoomMagnifier.qml:186 ui/ZoomMagnifier.qml:211
+#: ui/ZoomMagnifier.qml:178 ui/ZoomMagnifier.qml:203
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
 msgstr "px"
 
-#: ui/ZoomMagnifier.qml:199
+#: ui/ZoomMagnifier.qml:191
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
 msgstr "Wysokość:"
 
-#: ui/ZoomMagnifier.qml:228
+#: ui/ZoomMagnifier.qml:220
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
 msgstr "Wyłączone"
 
-#: ui/ZoomMagnifier.qml:241
+#: ui/ZoomMagnifier.qml:233
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
 msgstr "Współczynnik powiększenia:"
 
-#: ui/ZoomMagnifier.qml:274
+#: ui/ZoomMagnifier.qml:266
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
 msgstr "Klawisze odmieniające do gestu przewijania:"
 
-#: ui/ZoomMagnifier.qml:312
+#: ui/ZoomMagnifier.qml:304
 #, kde-format
 msgctxt "@info:tooltip, indicates feature unavailable on X11"
 msgid "Zoom scroll gestures are only available on Wayland."
 msgstr ""
 "Gesty przybliżania poprzez przewijanie są dostępne tylko na Waylandzie."
+
+#: ui/ZoomMagnifier.qml:310
+#, kde-format
+msgctxt "@label Hint for scroll gestures"
+msgid "Scroll while modifier keys are pressed to zoom"
+msgstr "Przewiń przy naciśniętym klawiszu odmieniającym, aby przybliżyć"
 
 #: ui/ZoomMagnifier.qml:331
 #, kde-format

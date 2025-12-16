@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-24 00:44+0000\n"
+"POT-Creation-Date: 2025-12-16 13:26+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -1000,66 +1000,66 @@ msgctxt "@option:check"
 msgid "Enable text caret tracking"
 msgstr "启用文本光标跟踪"
 
-#: ui/ZoomMagnifier.qml:135
-#, kde-format
-msgctxt "@label Hint for scroll gestures"
-msgid "Scroll while modifier keys are pressed to zoom"
-msgstr "按住修饰键并滚动时缩放"
-
-#: ui/ZoomMagnifier.qml:147
+#: ui/ZoomMagnifier.qml:139
 #, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
 msgstr "放大区域"
 
-#: ui/ZoomMagnifier.qml:174
+#: ui/ZoomMagnifier.qml:166
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
 msgstr "宽度："
 
-#: ui/ZoomMagnifier.qml:185 ui/ZoomMagnifier.qml:210
+#: ui/ZoomMagnifier.qml:177 ui/ZoomMagnifier.qml:202
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
 msgid_plural "%1 px"
 msgstr[0] "%1 像素"
 
-#: ui/ZoomMagnifier.qml:186 ui/ZoomMagnifier.qml:211
+#: ui/ZoomMagnifier.qml:178 ui/ZoomMagnifier.qml:203
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
 msgstr "像素"
 
-#: ui/ZoomMagnifier.qml:199
+#: ui/ZoomMagnifier.qml:191
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
 msgstr "高度："
 
-#: ui/ZoomMagnifier.qml:228
+#: ui/ZoomMagnifier.qml:220
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
 msgstr "禁用"
 
-#: ui/ZoomMagnifier.qml:241
+#: ui/ZoomMagnifier.qml:233
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
 msgstr "缩放倍数："
 
-#: ui/ZoomMagnifier.qml:274
+#: ui/ZoomMagnifier.qml:266
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
 msgstr "滚动手势修饰键："
 
-#: ui/ZoomMagnifier.qml:312
+#: ui/ZoomMagnifier.qml:304
 #, kde-format
 msgctxt "@info:tooltip, indicates feature unavailable on X11"
 msgid "Zoom scroll gestures are only available on Wayland."
 msgstr "缩放滚动手势仅在 Wayland 环境下可用。"
+
+#: ui/ZoomMagnifier.qml:310
+#, kde-format
+msgctxt "@label Hint for scroll gestures"
+msgid "Scroll while modifier keys are pressed to zoom"
+msgstr "按住修饰键并滚动时缩放"
 
 #: ui/ZoomMagnifier.qml:331
 #, kde-format

@@ -4,13 +4,13 @@
 # Franklin Weng <franklin at goodhorse dot idv dot tw>, 2014.
 # Jeff Huang <s8321414@gmail.com>, 2017.
 # pan93412 <pan93412@gmail.com>, 2018, 2019, 2020.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-04 00:45+0000\n"
-"PO-Revision-Date: 2024-09-10 02:23+0900\n"
+"PO-Revision-Date: 2025-12-16 22:01+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 26.03.70\n"
 
 #: ui/main.qml:44
 #, kde-format
@@ -72,7 +72,7 @@ msgstr "要索引的資料："
 #: ui/main.qml:109
 #, kde-format
 msgid "Nothing (disable indexing entirely)"
-msgstr ""
+msgstr "什麼都不索引（完全停用索引）"
 
 #: ui/main.qml:121
 #, kde-format
@@ -85,10 +85,9 @@ msgid "File names and contents"
 msgstr "檔案名稱和內容"
 
 #: ui/main.qml:157
-#, fuzzy, kde-format
-#| msgid "Hidden files and folders"
+#, kde-format
 msgid "Also index hidden files and folders"
-msgstr "隱藏檔案及資料夾"
+msgstr "也索引隱藏檔案及資料夾"
 
 #: ui/main.qml:183
 #, kde-format

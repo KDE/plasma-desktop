@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-24 00:44+0000\n"
+"POT-Creation-Date: 2025-12-16 13:26+0000\n"
 "PO-Revision-Date: 2025-06-22 06:06+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -1024,25 +1024,19 @@ msgctxt "@option:check"
 msgid "Enable text caret tracking"
 msgstr "Activar o seguimento do cursor de texto."
 
-#: ui/ZoomMagnifier.qml:135
-#, kde-format
-msgctxt "@label Hint for scroll gestures"
-msgid "Scroll while modifier keys are pressed to zoom"
-msgstr "Desprace mentres preme as teclas modificadoras para ampliar."
-
-#: ui/ZoomMagnifier.qml:147
+#: ui/ZoomMagnifier.qml:139
 #, kde-format
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
 msgstr "Ampliar a rexión"
 
-#: ui/ZoomMagnifier.qml:174
+#: ui/ZoomMagnifier.qml:166
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
 msgstr "Anchura:"
 
-#: ui/ZoomMagnifier.qml:185 ui/ZoomMagnifier.qml:210
+#: ui/ZoomMagnifier.qml:177 ui/ZoomMagnifier.qml:202
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
@@ -1050,42 +1044,48 @@ msgid_plural "%1 px"
 msgstr[0] "%1 px"
 msgstr[1] "%1 px"
 
-#: ui/ZoomMagnifier.qml:186 ui/ZoomMagnifier.qml:211
+#: ui/ZoomMagnifier.qml:178 ui/ZoomMagnifier.qml:203
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
 msgstr "px"
 
-#: ui/ZoomMagnifier.qml:199
+#: ui/ZoomMagnifier.qml:191
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
 msgstr "Altura:"
 
-#: ui/ZoomMagnifier.qml:228
+#: ui/ZoomMagnifier.qml:220
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
 msgstr "Desactivado"
 
-#: ui/ZoomMagnifier.qml:241
+#: ui/ZoomMagnifier.qml:233
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
 msgstr "Factor de aumento:"
 
-#: ui/ZoomMagnifier.qml:274
+#: ui/ZoomMagnifier.qml:266
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
 msgstr "Teclas modificadoras de aceno de desprazamento:"
 
-#: ui/ZoomMagnifier.qml:312
+#: ui/ZoomMagnifier.qml:304
 #, kde-format
 msgctxt "@info:tooltip, indicates feature unavailable on X11"
 msgid "Zoom scroll gestures are only available on Wayland."
 msgstr ""
 "Os acenos de desprazamento de ampliación só están dispoñíbeis en Wayland."
+
+#: ui/ZoomMagnifier.qml:310
+#, kde-format
+msgctxt "@label Hint for scroll gestures"
+msgid "Scroll while modifier keys are pressed to zoom"
+msgstr "Desprace mentres preme as teclas modificadoras para ampliar."
 
 #: ui/ZoomMagnifier.qml:331
 #, kde-format

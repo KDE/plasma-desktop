@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmaccess\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-24 00:44+0000\n"
+"POT-Creation-Date: 2025-12-16 13:26+0000\n"
 "PO-Revision-Date: 2008-12-24 16:40+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -1045,27 +1045,20 @@ msgctxt "@option:check"
 msgid "Enable text caret tracking"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:135
-#, fuzzy, kde-format
-#| msgid "&Use system bell whenever a key is pressed"
-msgctxt "@label Hint for scroll gestures"
-msgid "Scroll while modifier keys are pressed to zoom"
-msgstr "Користи системско ѕв&онче секогаш кога е притиснат тастер"
-
-#: ui/ZoomMagnifier.qml:147
+#: ui/ZoomMagnifier.qml:139
 #, fuzzy, kde-format
 #| msgid "Notification"
 msgctxt "@option:check, enable magnify effect, following 'Zoom:'"
 msgid "Magnify region"
 msgstr "Известување"
 
-#: ui/ZoomMagnifier.qml:174
+#: ui/ZoomMagnifier.qml:166
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Width:"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:185 ui/ZoomMagnifier.qml:210
+#: ui/ZoomMagnifier.qml:177 ui/ZoomMagnifier.qml:202
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "%1 px"
@@ -1074,41 +1067,48 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: ui/ZoomMagnifier.qml:186 ui/ZoomMagnifier.qml:211
+#: ui/ZoomMagnifier.qml:178 ui/ZoomMagnifier.qml:203
 #, kde-format
 msgctxt "short for pixel(s)"
 msgid "px"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:199
+#: ui/ZoomMagnifier.qml:191
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Height:"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:228
+#: ui/ZoomMagnifier.qml:220
 #, kde-format
 msgctxt "@option:check, disable zoom/magnify effect"
 msgid "Disabled"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:241
+#: ui/ZoomMagnifier.qml:233
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Zoom factor:"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:274
+#: ui/ZoomMagnifier.qml:266
 #, kde-format
 msgctxt "@label"
 msgid "Scroll gesture modifier keys:"
 msgstr ""
 
-#: ui/ZoomMagnifier.qml:312
+#: ui/ZoomMagnifier.qml:304
 #, kde-format
 msgctxt "@info:tooltip, indicates feature unavailable on X11"
 msgid "Zoom scroll gestures are only available on Wayland."
 msgstr ""
+
+#: ui/ZoomMagnifier.qml:310
+#, fuzzy, kde-format
+#| msgid "&Use system bell whenever a key is pressed"
+msgctxt "@label Hint for scroll gestures"
+msgid "Scroll while modifier keys are pressed to zoom"
+msgstr "Користи системско ѕв&онче секогаш кога е притиснат тастер"
 
 #: ui/ZoomMagnifier.qml:331
 #, kde-format
