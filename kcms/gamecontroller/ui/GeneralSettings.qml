@@ -157,15 +157,9 @@ KCM.SimpleKCM {
                         KWinPlugin.pluginEnabled = checked
                     }
                 }
-            }
 
-            RowLayout {
-                spacing: Kirigami.Units.largeSpacing
-
-                Layout.fillWidth: true
-                QQC2.Label {
-                    id: switchContext
-                    text: i18nc("@label:textbox", "Apps may still use this controller while disabled, but Plasma desktop itself will not detect it.")
+                Kirigami.ContextualHelpButton {
+                    toolTipText: i18nc("@label:textbox", "Apps may still use the controller while this option is disabled, but Plasma Desktop itself will not detect or use it for desktop navigation or preventing system from entering suspend mode.")
                 }
             }
 

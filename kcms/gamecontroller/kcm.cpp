@@ -57,10 +57,21 @@ void KCMGameController::setPluginEnabled(bool enabled)
     plugins.writeEntry(m_pluginId + QStringLiteral("Enabled"), enabled, KConfig::Notify);
     plugins.sync();
 
-    // Load or unload the plugin dynamically
-    const QDBusMessage msg =
-        QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"), QStringLiteral("/KWin"), QStringLiteral("org.kde.KWin"), QStringLiteral("reconfigure"));
-    QDBusConnection::sessionBus().asyncCall(msg);
+    QDBusMessage message;
+    if (enabled) {
+        message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
+                                                 QStringLiteral("/Plugins"),
+                                                 QStringLiteral("org.kde.KWin.Plugins"),
+                                                 QStringLiteral("LoadPlugin"));
+        message << m_pluginId;
+    } else {
+        message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
+                                                 QStringLiteral("/Plugins"),
+                                                 QStringLiteral("org.kde.KWin.Plugins"),
+                                                 QStringLiteral("UnloadPlugin"));
+        message << m_pluginId;
+    }
+    QDBusConnection::sessionBus().asyncCall(message);
     Q_EMIT pluginEnabledChanged();
 }
 
