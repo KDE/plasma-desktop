@@ -170,7 +170,7 @@ Item {
     Timer {
         id: pendingUninstallTimer
         // keeps track of the applets the user wants to uninstall
-        property var applets: []
+        property list<string> applets: []
         function uninstall() {
             for (const applet of applets) {
                 widgetExplorer.uninstall(applet);

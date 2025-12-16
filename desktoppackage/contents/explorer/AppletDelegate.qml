@@ -236,9 +236,9 @@ Item {
                 }
 
                 onClicked: {
-                    var pending = pendingUninstallTimer.applets
+                    let pending = pendingUninstallTimer.applets
                     if (delegate.pendingUninstall) {
-                        var index = pending.indexOf(pluginName)
+                        let index = pending.indexOf(pluginName)
                         if (index > -1) {
                             pending.splice(index, 1)
                         }
