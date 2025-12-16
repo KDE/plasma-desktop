@@ -1,6 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2023 Joshua Goins <josh@redstrate.com>
-    SPDX-FileCopyrightText: 2025 Yelsin Sepulveda <yelsin.sepulveda@kdemail.org>
+    SPDX-FileCopyrightText: 2025 Yelsin Sepulveda <yelsin.sepulveda@kdemail.net>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -149,7 +149,7 @@ KCM.SimpleKCM {
                 Layout.fillWidth: true
 
                 QQC2.Switch {
-                    text: i18nc("@label:textbox", "Enable KDE Game Controller Recognition")
+                    text: i18nc("@label:textbox", "Enable")
                     checked: KWinPlugin.pluginEnabled
                     anchors.leftMargin: Kirigami.Units.largeSpacing * 2
 
@@ -158,6 +158,17 @@ KCM.SimpleKCM {
                     }
                 }
             }
+
+            RowLayout {
+                spacing: Kirigami.Units.largeSpacing
+
+                Layout.fillWidth: true
+                QQC2.Label {
+                    id: switchContext
+                    text: i18nc("@label:textbox", "Apps may still use this controller while disabled, but Plasma desktop itself will not detect it.")
+                }
+            }
+
             Item { Layout.fillHeight: true }
         }
     }

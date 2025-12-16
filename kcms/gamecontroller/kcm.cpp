@@ -2,6 +2,7 @@
     SPDX-FileCopyrightText: 2023 Joshua Goins <josh@redstrate.com>
     SPDX-FileCopyrightText: 2023 Jeremy Whiting <jpwhiting@kde.org>
     SPDX-FileCopyrightText: 2023 Niccolò Venerandi <niccolo@venerandi.com>
+    SPDX-FileCopyrightText: 2025 Yelsin Sepulveda <yelsin.sepulveda@kdemail.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -56,10 +57,10 @@ void KCMGameController::setPluginEnabled(bool enabled)
     plugins.writeEntry(m_pluginId + QStringLiteral("Enabled"), enabled, KConfig::Notify);
     plugins.sync();
 
-    QDBusMessage message =
+    // Load or unload the plugin dynamically
+    const QDBusMessage msg =
         QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"), QStringLiteral("/KWin"), QStringLiteral("org.kde.KWin"), QStringLiteral("reconfigure"));
-    QDBusConnection::sessionBus().asyncCall(message);
-
+    QDBusConnection::sessionBus().asyncCall(msg);
     Q_EMIT pluginEnabledChanged();
 }
 

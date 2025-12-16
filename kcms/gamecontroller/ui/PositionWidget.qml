@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2023 Joshua Goins <josh@redstrate.com>
+    SPDX-FileCopyrightText: 2025 Yelsin Sepulveda <yelsin.sepulveda@kdemail.net>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
