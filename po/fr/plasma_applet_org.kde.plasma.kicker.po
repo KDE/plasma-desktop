@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-12 00:44+0000\n"
-"PO-Revision-Date: 2025-10-17 18:14+0200\n"
+"PO-Revision-Date: 2025-12-13 07:25+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.11.90\n"
 "X-Text-Markup: kde4\n"
 
 #: code/tools.js:53
@@ -207,13 +207,13 @@ msgstr "Favoris"
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening submenu"
 msgid "Open category"
-msgstr ""
+msgstr "Ouvrir une catégorie"
 
 #: ItemListDelegate.qml:47
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening app or file"
 msgid "Launch"
-msgstr ""
+msgstr "Lancer"
 
 #: main.qml:203
 #, kde-format
@@ -221,11 +221,10 @@ msgid "Edit Applications…"
 msgstr "Éditer les applications…"
 
 #: MenuRepresentation.qml:135
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#, kde-format
 msgctxt "@title:group accessible name for favorite group in sidebar"
 msgid "Favorites"
-msgstr "Favoris"
+msgstr "Préférés"
 
 #: MenuRepresentation.qml:301
 #, kde-format
