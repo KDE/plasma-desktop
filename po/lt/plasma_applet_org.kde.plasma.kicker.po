@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE Frameworks 5 Applications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-12 00:44+0000\n"
-"PO-Revision-Date: 2025-10-24 21:20+0300\n"
+"POT-Creation-Date: 2025-12-17 00:45+0000\n"
+"PO-Revision-Date: 2025-12-16 21:36+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.8\n"
 
 #: code/tools.js:53
 #, kde-format
@@ -192,36 +192,35 @@ msgstr ""
 "Ši ypatybė naudoja iš spalvų rinkinio papildomas spalvas, kurios, įprastai, "
 "vaizduoja tamsų foną."
 
-#: DashboardRepresentation.qml:313
+#: DashboardRepresentation.qml:321
 #, kde-format
 msgid "Favorites"
 msgstr "Žymelės"
 
-#: ItemListDelegate.qml:46
+#: ItemListDelegate.qml:49
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening submenu"
 msgid "Open category"
-msgstr ""
+msgstr "Atverti kategoriją"
 
-#: ItemListDelegate.qml:47
+#: ItemListDelegate.qml:50
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening app or file"
 msgid "Launch"
-msgstr ""
+msgstr "Paleisti"
 
-#: main.qml:203
+#: main.qml:223
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Taisyti programas…"
 
-#: MenuRepresentation.qml:135
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#: MenuRepresentation.qml:144
+#, kde-format
 msgctxt "@title:group accessible name for favorite group in sidebar"
 msgid "Favorites"
 msgstr "Žymelės"
 
-#: MenuRepresentation.qml:301
+#: MenuRepresentation.qml:315
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"

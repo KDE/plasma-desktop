@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-12 00:44+0000\n"
-"PO-Revision-Date: 2025-10-19 11:13+0200\n"
+"POT-Creation-Date: 2025-12-17 00:45+0000\n"
+"PO-Revision-Date: 2025-12-16 22:02+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -189,36 +189,35 @@ msgstr ""
 "Тази функция използва допълващите цветове от вашата цветова схема, която "
 "обикновено предоставя възможност за тъмен фон."
 
-#: DashboardRepresentation.qml:313
+#: DashboardRepresentation.qml:321
 #, kde-format
 msgid "Favorites"
 msgstr "Предпочитани"
 
-#: ItemListDelegate.qml:46
+#: ItemListDelegate.qml:49
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening submenu"
 msgid "Open category"
-msgstr ""
+msgstr "Отваряне на категория"
 
-#: ItemListDelegate.qml:47
+#: ItemListDelegate.qml:50
 #, kde-format
 msgctxt "@action:inmenu accessible description for opening app or file"
 msgid "Launch"
-msgstr ""
+msgstr "Стартиране"
 
-#: main.qml:203
+#: main.qml:223
 #, kde-format
 msgid "Edit Applications…"
 msgstr "Редактиране на приложения…"
 
-#: MenuRepresentation.qml:135
-#, fuzzy, kde-format
-#| msgid "Favorites"
+#: MenuRepresentation.qml:144
+#, kde-format
 msgctxt "@title:group accessible name for favorite group in sidebar"
 msgid "Favorites"
 msgstr "Предпочитани"
 
-#: MenuRepresentation.qml:301
+#: MenuRepresentation.qml:315
 #, kde-format
 msgctxt "@info:status"
 msgid "No matches"

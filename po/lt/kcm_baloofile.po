@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-04 00:45+0000\n"
-"PO-Revision-Date: 2024-09-03 21:39+0300\n"
+"PO-Revision-Date: 2025-12-16 21:27+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.8\n"
 
 #: ui/main.qml:44
 #, kde-format
@@ -75,7 +75,7 @@ msgstr "Duomenys, kuriuos indeksuoti:"
 #: ui/main.qml:109
 #, kde-format
 msgid "Nothing (disable indexing entirely)"
-msgstr ""
+msgstr "Nieko (visiškai išjungti indeksavimą)"
 
 #: ui/main.qml:121
 #, kde-format
@@ -88,10 +88,9 @@ msgid "File names and contents"
 msgstr "Failų pavadinimai ir turinys"
 
 #: ui/main.qml:157
-#, fuzzy, kde-format
-#| msgid "Hidden files and folders"
+#, kde-format
 msgid "Also index hidden files and folders"
-msgstr "Paslėpti failai ir aplankai"
+msgstr "Taip pat indeksuoti paslėptus failus ir aplankus"
 
 #: ui/main.qml:183
 #, kde-format
