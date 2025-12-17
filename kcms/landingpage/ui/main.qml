@@ -87,18 +87,22 @@ KCMUtils.SimpleKCM {
                 }
             }
 
-            Thumbnail {
+            LookAndFeelBox {
+                id: automaticLookAndFeelBox
+                popupEnabled: false
+
+                group: themeGroup
+                packageId: ""
+                availablePackages: LookAndFeelModel { }
+
                 text: i18nc("Switch between dark and light look and feel packages automatically", "Automatic")
+
                 checked: kcm.globalsSettings.automaticLookAndFeel
-                QQC2.ToolTip.text: i18nc("@info:tooltip 1 is the name of a light global theme, 2 is the name of a dark global theme", "Use “%1” during the day and “%2” at night", lightLookAndFeelBox.text, darkLookAndFeelBox.text)
-                QQC2.ToolTip.visible: autoLookAndFeelHoverHandler.hovered
-                QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
-                QQC2.ButtonGroup.group: themeGroup
+                onToggled: kcm.globalsSettings.automaticLookAndFeel = true;
 
                 preview: SplitView {
-                    anchors.fill: parent
-                    first: lightLookAndFeelBox.preview
-                    second: darkLookAndFeelBox.preview
+                    first: lightLookAndFeelBox.previewImage
+                    second: darkLookAndFeelBox.previewImage
                     shutter: 0.15
 
                     Kirigami.Icon {
@@ -113,15 +117,13 @@ KCMUtils.SimpleKCM {
                     }
                 }
 
-                onToggled: {
-                    kcm.globalsSettings.automaticLookAndFeel = true;
-                }
-
                 KCMUtils.SettingHighlighter {
                     highlight: kcm.globalsSettings.automaticLookAndFeel || kcm.globalsSettings.lookAndFeelPackage != kcm.defaultLookAndFeelPackage
                 }
 
-                HoverHandler { id: autoLookAndFeelHoverHandler }
+                QQC2.ToolTip.text: i18nc("@info:tooltip 1 is the name of a light global theme, 2 is the name of a dark global theme", "Use “%1” during the day and “%2” at night", lightLookAndFeelBox.text, darkLookAndFeelBox.text)
+                QQC2.ToolTip.visible: automaticLookAndFeelBox.hovered
+                QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
             }
         }
 
