@@ -23,11 +23,14 @@ Column {
     required property Component availablePackages
 
     property alias checked: button.checked
+    property alias popupEnabled: indicator.visible
+    property alias preview: button.contentItem
+    property string text: metaData.name
 
-    readonly property alias preview: previewImage
-    readonly property string text: metaData.name
+    readonly property alias previewImage: previewImage
     readonly property int implicitButtonHeight: Kirigami.Units.gridUnit * 5
     readonly property int implicitButtonWidth: implicitButtonHeight * 1.6
+    readonly property alias hovered: button.hovered
 
     signal toggled()
     signal accepted(id: string)
