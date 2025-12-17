@@ -145,11 +145,10 @@ KCM.SimpleKCM {
 
             RowLayout {
                 spacing: Kirigami.Units.largeSpacing
-
                 Layout.fillWidth: true
 
                 QQC2.Switch {
-                    text: i18nc("@label:textbox", "Enable")
+                    text: i18nc("@label:textbox", "Plasma Enabled")
                     checked: KWinPlugin.pluginEnabled
                     anchors.leftMargin: Kirigami.Units.largeSpacing * 2
 
@@ -159,7 +158,22 @@ KCM.SimpleKCM {
                 }
 
                 Kirigami.ContextualHelpButton {
-                    toolTipText: i18nc("@label:textbox", "Apps may still use the controller while this option is disabled, but Plasma Desktop itself will not detect or use it for desktop navigation or preventing system from entering suspend mode.")
+                    toolTipText: i18nc("@label:textbox", "It cannot be used to control Plasma or most non-game applications, and using it will not stop the computer from going to sleep or turning off the screen.")
+                }
+            }
+
+            RowLayout {
+                spacing: Kirigami.Units.largeSpacing
+                Layout.fillWidth: true
+
+                Item {
+                    implicitWidth: Kirigami.Units.gridUnit * 2
+                }
+
+                QQC2.Label {
+                    text: i18nc("@label:textbox", "Apps may still use the controller even if not enabled")
+                    textFormat: Text.PlainText
+                    font: Kirigami.Theme.smallFont
                 }
             }
 
