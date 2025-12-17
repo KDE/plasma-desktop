@@ -145,30 +145,28 @@ Column {
 
     Popup {
         id: popup
-        y: delegate.height
-        x: delegate.width - width
-        implicitHeight: Math.min(contentItem.implicitHeight + topPadding + bottomPadding, Kirigami.Units.gridUnit * 40)
+        y: button.height
+        implicitHeight: Math.min(contentItem.implicitHeight + topPadding + bottomPadding, Kirigami.Units.gridUnit * 40, root.Window.height - Kirigami.Units.gridUnit * 10)
         focus: true
-        popupType: Popup.Native
+        popupType: Popup.Item
         padding: 1
+        clip: false
+
         contentItem: ScrollView {
             ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
             contentWidth: listView.implicitWidth
             contentHeight: listView.implicitHeight
             focus: true
+            clip: true
 
-            background: Rectangle {
-                Kirigami.Theme.inherit: false
-                Kirigami.Theme.colorSet: Kirigami.Theme.View
-                color: Kirigami.Theme.backgroundColor
-            }
+            bottomPadding: leftPadding > 0 ? leftPadding : Kirigami.Units.mediumSpacing
 
             ListView {
                 id: listView
                 Accessible.role: Accessible.List // TODO: remove once Qt sets this automatically
                 Accessible.name: i18nc("@label accessible", "Global theme")
                 focus: true
-                implicitWidth: radioButton.width
+                implicitWidth: button.width
                 implicitHeight: contentHeight
                 delegate: ItemDelegate {
                     id: delegate
@@ -179,6 +177,7 @@ Column {
                     text: model.name
 
                     width: ListView.view.width
+
                     contentItem: Column {
                         spacing: Kirigami.Units.smallSpacing
 
@@ -202,6 +201,24 @@ Column {
                         popup.close();
                     }
                 }
+            }
+        }
+
+        background: Kirigami.ShadowedRectangle {
+            Kirigami.Theme.inherit: false
+            Kirigami.Theme.colorSet: Kirigami.Theme.View
+
+            color: Kirigami.Theme.backgroundColor
+
+            radius: Kirigami.Units.cornerRadius
+
+            border.width: 1
+            border.color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, Kirigami.Theme.frameContrast)
+
+            shadow {
+                size: 10
+                yOffset: 2
+                color: Qt.rgba(0, 0, 0, 0.2)
             }
         }
 
