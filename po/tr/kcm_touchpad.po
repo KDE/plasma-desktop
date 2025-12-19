@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: playground-utils-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-05 00:44+0000\n"
-"PO-Revision-Date: 2025-05-15 13:46+0300\n"
+"PO-Revision-Date: 2025-12-18 15:31+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: backends/kwin_wayland/kwinwaylandbackend.cpp:59
 #, kde-format
@@ -125,11 +125,9 @@ msgid "General:"
 msgstr "Genel:"
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgctxt "Coasting"
-#| msgid "Enable"
+#, kde-format
 msgid "Enable device"
-msgstr "Etkinleştir"
+msgstr "Aygıtı etkinleştir"
 
 #: ui/main.qml:115
 #, kde-format
@@ -149,25 +147,21 @@ msgid "This can interfere with video games."
 msgstr "Bu ayar, oyun oynarken sorun çıkarabilir."
 
 #: ui/main.qml:174
-#, fuzzy, kde-format
-#| msgid "Swap left and right buttons."
+#, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
-msgstr "Sol ve sağ düğmeleri değiştirin."
+msgstr "Sol ve sağ düğmeleri:"
 
 #: ui/main.qml:175
-#, fuzzy, kde-format
-#| msgid "Left-handed mode"
+#, kde-format
 msgid "Swap (left-handed mode)"
-msgstr "Sol el kipi"
+msgstr "Birbirleriyle değiştir (sol el kipi)"
 
 #: ui/main.qml:191
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Press left and right buttons to middle-click"
+#, kde-format
 msgctxt "@option:check 'both' refers to the left and right buttons'"
 msgid "Press both simultaneously to middle-click"
-msgstr "Orta tık için sağ ve sol düğmelere bas"
+msgstr "Orta tık için her ikisine de aynı anda bas"
 
 #: ui/main.qml:204
 #, kde-format
@@ -217,20 +211,19 @@ msgid "Faster"
 msgstr "Daha hızlı"
 
 #: ui/main.qml:390
-#, fuzzy, kde-format
-#| msgid "Scrolling:"
+#, kde-format
 msgid "Scroll by:"
-msgstr "Sarma:"
+msgstr "Sarmak için:"
 
 #: ui/main.qml:409
 #, kde-format
 msgid "Moving two fingers anywhere"
-msgstr ""
+msgstr "İki parmağı herhangi bir yerde hareket ettir"
 
 #: ui/main.qml:416
 #, kde-format
 msgid "Moving one finger on edge"
-msgstr ""
+msgstr "Tek parmağı bir kenarda hareket ettir"
 
 #: ui/main.qml:424
 #, kde-format
@@ -243,18 +236,15 @@ msgid "Disable horizontal scrolling"
 msgstr "Yatay sarmayı devre dışı bırak"
 
 #: ui/main.qml:460
-#, fuzzy, kde-format
-#| msgid "Right-click"
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, begins the sentence 'right-click by pressing "
 "bottom-right corner/pressing with two fingers'"
 msgid "Right-click by:"
-msgstr "Sağ tık"
+msgstr "Sağ tık için:"
 
 #: ui/main.qml:481
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated right-click"
-#| msgid "Press bottom-right corner"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing bottom-right "
 "corner'"
@@ -274,36 +264,29 @@ msgid "Middle-click by pressing bottom center."
 msgstr "Orta tık için alt kısmın ortasına basın."
 
 #: ui/main.qml:505
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated right-click"
-#| msgid "Press touchpad with two fingers"
+#, kde-format
 msgctxt ""
 "@option:radio Completes the sentence 'right-click by pressing with two "
 "fingers'"
 msgid "Pressing anywhere with two fingers"
-msgstr "Dokunmatik yüzeye iki parmakla bas"
+msgstr "İki parmakla herhangi bir yere bas"
 
 #: ui/main.qml:520
-#, fuzzy, kde-format
-#| msgctxt "@info shown below radio button"
-#| msgid "Middle-click by pressing with three fingers."
+#, kde-format
 msgctxt "@info shown below radio button"
 msgid "Middle-click by pressing anywhere with three fingers."
-msgstr "Orta tık için üç parmakla basın."
+msgstr "Orta tık için herhangi bir yere üç parmakla basın."
 
 #: ui/main.qml:529
-#, fuzzy, kde-format
-#| msgid "Middle-click"
+#, kde-format
 msgctxt ""
 "@label for radiobutton group, begins the sentence 'middle-click by pressing "
 "bottom-middle edge/by pressing anywhere with three fingers'"
 msgid "Middle-click by:"
-msgstr "Orta tık"
+msgstr "Orta tık için:"
 
 #: ui/main.qml:550
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated middle-click"
-#| msgid "Press bottom middle edge"
+#, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-middle "
 "edge'"
@@ -311,9 +294,7 @@ msgid "Pressing bottom-middle edge"
 msgstr "Alt orta kenara bas"
 
 #: ui/main.qml:557
-#, fuzzy, kde-format
-#| msgctxt "@option:radio touchpad integrated middle-click"
-#| msgid "Press bottom left and bottom right corners"
+#, kde-format
 msgctxt ""
 "@option:radio completes the sentence 'middle-click by pressing bottom-left "
 "and bottom-right corners'"
@@ -321,14 +302,12 @@ msgid "Pressing bottom-left and bottom-right corners"
 msgstr "Sol alt ve sağ alt köşelere aynı anda bas"
 
 #: ui/main.qml:564
-#, fuzzy, kde-format
-#| msgctxt "@option:check touchpad integrated middle-click"
-#| msgid "Press touchpad with three fingers"
+#, kde-format
 msgctxt ""
 "@option:check completes the sentence 'middle-click by pressing anywhere with "
 "three fingers'"
 msgid "Pressing anywhere with three fingers"
-msgstr "Dokunmatik yüzeye üç parmakla bas"
+msgstr "Üç parmakla herhangi bir yere bas"
 
 #: ui/main.qml:580
 #, kde-format
@@ -337,8 +316,7 @@ msgid "Tapping:"
 msgstr "Vuruş:"
 
 #: ui/main.qml:581
-#, fuzzy, kde-format
-#| msgid "Tap to Click"
+#, kde-format
 msgctxt "@option:check"
 msgid "Tap to click"
 msgstr "Tıklamak için vur"
@@ -346,7 +324,7 @@ msgstr "Tıklamak için vur"
 #: ui/main.qml:597
 #, kde-format
 msgid "Allow dragging after tapping"
-msgstr ""
+msgstr "Vuruş sonrası sürüklemeye izin ver"
 
 #: ui/main.qml:610
 #, kde-format

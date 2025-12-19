@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:53+0000\n"
+"POT-Creation-Date: 2025-12-19 00:45+0000\n"
 "PO-Revision-Date: 2024-09-15 13:46+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.08.3\n"
 
-#: ConfigOverlay.qml:304 ConfigOverlay.qml:341
+#: ConfigOverlay.qml:304
 #, kde-format
 msgid "Remove"
 msgstr "Удалить"
@@ -34,12 +34,12 @@ msgstr "Настроить…"
 msgid "Show Alternatives…"
 msgstr "Взаимозаменяемые виджеты…"
 
-#: ConfigOverlay.qml:351
+#: ConfigOverlay.qml:344
 #, kde-format
 msgid "Spacer width"
 msgstr "Ширина разделителя"
 
-#: ConfigOverlay.qml:374
+#: ConfigOverlay.qml:367
 #, kde-format
 msgctxt ""
 "@option:check Whether to allow a spacer widget to fill available space"

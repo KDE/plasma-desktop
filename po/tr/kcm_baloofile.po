@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-04 00:45+0000\n"
-"PO-Revision-Date: 2025-03-08 14:48+0300\n"
-"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"PO-Revision-Date: 2025-12-18 15:33+0300\n"
+"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.03.70\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: ui/main.qml:44
 #, kde-format
@@ -72,7 +72,7 @@ msgstr "İndekslenecek veri:"
 #: ui/main.qml:109
 #, kde-format
 msgid "Nothing (disable indexing entirely)"
-msgstr ""
+msgstr "Hiçbir şey (indekslemeyi tümüyle devre dışı bırak)"
 
 #: ui/main.qml:121
 #, kde-format
@@ -85,10 +85,9 @@ msgid "File names and contents"
 msgstr "Dosya adları ve içeriği"
 
 #: ui/main.qml:157
-#, fuzzy, kde-format
-#| msgid "Hidden files and folders"
+#, kde-format
 msgid "Also index hidden files and folders"
-msgstr "Gizli dosyalar ve klasörler"
+msgstr "Ayrıca gizli dosyaları ve klasörleri de indeksle"
 
 #: ui/main.qml:183
 #, kde-format

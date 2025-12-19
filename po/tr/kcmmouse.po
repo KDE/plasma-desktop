@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-04 00:45+0000\n"
-"PO-Revision-Date: 2025-05-15 13:47+0300\n"
+"PO-Revision-Date: 2025-12-18 15:31+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -29,7 +29,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: backends/kwin_wl/kwin_wl_backend.cpp:61
 #, kde-format
@@ -160,29 +160,24 @@ msgstr "Genel:"
 #: ui/main.qml:88
 #, kde-format
 msgid "Enable device"
-msgstr ""
+msgstr "Aygıtı etkinleştir"
 
 #: ui/main.qml:105
-#, fuzzy, kde-format
-#| msgid "Swap left and right buttons."
+#, kde-format
 msgctxt "@title:group"
 msgid "Left and right buttons:"
-msgstr "Sol ve sağ düğmeleri değiştirin."
+msgstr "Sol ve sağ düğmeleri:"
 
 #: ui/main.qml:106
-#, fuzzy, kde-format
-#| msgid "Left-handed mode"
+#, kde-format
 msgid "Swap (left-handed mode)"
-msgstr "Sol el kipi"
+msgstr "Birbirleriyle değiştir (sol el kipi)"
 
 #: ui/main.qml:121
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "Pressing the left and right button simultaneously acts as middle-click."
+#, kde-format
 msgctxt "@option:check 'both' refers to the left and right buttons'"
 msgid "Press both simultaneously to middle-click"
-msgstr "Sol ve sağ düğmelere aynı anda basmak, orta tık olarak çalışır."
+msgstr "Orta tık için her ikisine de aynı anda bas"
 
 #: ui/main.qml:133
 #, kde-format
